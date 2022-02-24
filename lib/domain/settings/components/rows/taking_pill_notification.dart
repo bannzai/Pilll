@@ -32,7 +32,7 @@ class TakingPillNotification extends HookConsumerWidget {
           }
           ScaffoldMessenger.of(context).showSnackBar(
             SnackBar(
-              duration: Duration(seconds: 2),
+              duration: const Duration(seconds: 2),
               content: Text(
                 "服用通知を${setting.isOnReminder ? "ON" : "OFF"}にしました",
               ),
@@ -42,7 +42,7 @@ class TakingPillNotification extends HookConsumerWidget {
       },
       value: setting.isOnReminder,
       // NOTE: when configured subtitle, the space between elements becomes very narrow
-      contentPadding: EdgeInsets.fromLTRB(14, 4, 6, 0),
+      contentPadding: const EdgeInsets.fromLTRB(14, 4, 6, 0),
     );
   }
 }

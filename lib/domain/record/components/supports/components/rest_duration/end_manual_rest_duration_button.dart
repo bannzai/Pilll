@@ -36,7 +36,7 @@ class EndManualRestDurationButton extends StatelessWidget {
             restDuration: restDuration,
           );
           ScaffoldMessenger.of(context).showSnackBar(
-            SnackBar(
+            const SnackBar(
               duration: Duration(
                 seconds: 2,
               ),

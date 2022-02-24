@@ -29,7 +29,7 @@ class SettingAccountCooperationListPage extends HookConsumerWidget {
               backgroundColor: PilllColors.background,
               appBar: AppBar(
                 leading: IconButton(
-                  icon: Icon(Icons.arrow_back, color: Colors.black),
+                  icon: const Icon(Icons.arrow_back, color: Colors.black),
                   onPressed: () => Navigator.of(context).pop(),
                 ),
                 title: Text('アカウント設定', style: TextColorStyle.main),
@@ -39,7 +39,7 @@ class SettingAccountCooperationListPage extends HookConsumerWidget {
                 child: ListView(
                   children: [
                     Container(
-                      padding: EdgeInsets.only(top: 16, left: 15, right: 16),
+                      padding: const EdgeInsets.only(top: 16, left: 15, right: 16),
                       child: Text(
                         "アカウント登録",
                         style: FontType.assisting.merge(TextColorStyle.primary),
@@ -55,7 +55,7 @@ class SettingAccountCooperationListPage extends HookConsumerWidget {
                         _showSigninSheet(context);
                       },
                     ),
-                    Divider(indent: 16),
+                    const Divider(indent: 16),
                     SettingAccountCooperationRow(
                       accountType: LinkAccountType.google,
                       isLinked: () => state.isLinkedGoogle,
@@ -66,7 +66,7 @@ class SettingAccountCooperationListPage extends HookConsumerWidget {
                         _showSigninSheet(context);
                       },
                     ),
-                    Divider(indent: 16),
+                    const Divider(indent: 16),
                     DeleteUserButton(),
                   ],
                 ),
@@ -83,7 +83,7 @@ class SettingAccountCooperationListPage extends HookConsumerWidget {
       context,
       SigninSheetStateContext.setting,
       (accountType) async {
-        final snackBarDuration = Duration(seconds: 1);
+        final snackBarDuration = const Duration(seconds: 1);
         ScaffoldMessenger.of(context).showSnackBar(
           SnackBar(
             duration: snackBarDuration,
@@ -100,7 +100,7 @@ extension SettingAccountCooperationListPageRoute
     on SettingAccountCooperationListPage {
   static Route<dynamic> route() {
     return MaterialPageRoute(
-      settings: RouteSettings(name: "SettingAccountCooperationListPage"),
+      settings: const RouteSettings(name: "SettingAccountCooperationListPage"),
       builder: (_) => SettingAccountCooperationListPage(),
     );
   }
@@ -137,7 +137,7 @@ class SettingAccountCooperationRow extends StatelessWidget {
         mainAxisSize: MainAxisSize.min,
         children: [
           SvgPicture.asset("images/checkmark_green.svg"),
-          SizedBox(width: 6),
+          const SizedBox(width: 6),
           Text("連携済み",
               style: FontType.assisting.merge(TextColorStyle.darkGray)),
         ],

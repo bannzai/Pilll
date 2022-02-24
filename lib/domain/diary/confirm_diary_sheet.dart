@@ -28,14 +28,14 @@ class ConfirmDiarySheet extends HookConsumerWidget {
     final state = ref.watch(_confirmDiaryStoreProvider(_diary));
     final store = ref.watch(_confirmDiaryStoreProvider(_diary).notifier);
     return Container(
-      decoration: BoxDecoration(
+      decoration: const BoxDecoration(
         borderRadius: BorderRadius.only(
           topLeft: Radius.circular(10),
           topRight: Radius.circular(10),
         ),
         color: PilllColors.white,
       ),
-      padding: EdgeInsets.fromLTRB(16, 20, 16, 20),
+      padding: const EdgeInsets.fromLTRB(16, 20, 16, 20),
       child: Column(
           mainAxisSize: MainAxisSize.min,
           crossAxisAlignment: CrossAxisAlignment.start,
@@ -54,7 +54,7 @@ class ConfirmDiarySheet extends HookConsumerWidget {
   Widget _withContentSpacer(Widget content) {
     return Container(
       child: content,
-      padding: EdgeInsets.only(top: 10, bottom: 10),
+      padding: const EdgeInsets.only(top: 10, bottom: 10),
     );
   }
 
@@ -65,7 +65,7 @@ class ConfirmDiarySheet extends HookConsumerWidget {
       children: [
         Text(DateTimeFormatter.yearAndMonthAndDay(state.diary.date),
             style: FontType.sBigTitle.merge(TextColorStyle.main)),
-        Spacer(),
+        const Spacer(),
         IconButton(
           icon: SvgPicture.asset("images/edit.svg"),
           onPressed: () {
@@ -73,7 +73,7 @@ class ConfirmDiarySheet extends HookConsumerWidget {
                 .push(PostDiaryPageRoute.route(state.diary.date, state.diary));
           },
         ),
-        SizedBox(width: 12),
+        const SizedBox(width: 12),
         IconButton(
           icon: SvgPicture.asset("images/trash.svg"),
           onPressed: () {
@@ -128,7 +128,7 @@ class ConfirmDiarySheet extends HookConsumerWidget {
     return Row(
       children: [
         Text("体調", style: FontType.componentTitle.merge(TextColorStyle.black)),
-        SizedBox(width: 16),
+        const SizedBox(width: 16),
         _physicalConditionImage(state.diary.physicalConditionStatus),
       ],
     );
@@ -156,7 +156,7 @@ class ConfirmDiarySheet extends HookConsumerWidget {
 
   Widget _sex() {
     return Container(
-      padding: EdgeInsets.all(4),
+      padding: const EdgeInsets.all(4),
       width: 32,
       height: 32,
       decoration: BoxDecoration(

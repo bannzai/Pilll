@@ -45,14 +45,14 @@ class PremiumTrialModal extends HookConsumerWidget {
                       Align(
                         alignment: Alignment.topLeft,
                         child: IconButton(
-                          icon: Icon(Icons.close, color: Colors.black),
+                          icon: const Icon(Icons.close, color: Colors.black),
                           onPressed: () => Navigator.of(context).pop(),
                         ),
                       ),
                       Align(
                         alignment: Alignment.center,
                         child: Container(
-                          padding: EdgeInsets.only(top: 40),
+                          padding: const EdgeInsets.only(top: 40),
                           child: Column(
                             crossAxisAlignment: CrossAxisAlignment.center,
                             children: [
@@ -62,7 +62,7 @@ class PremiumTrialModal extends HookConsumerWidget {
                                   color: PilllColors.primary,
                                   borderRadius: BorderRadius.circular(50),
                                 ),
-                                padding: EdgeInsets.only(top: 4, bottom: 4),
+                                padding: const EdgeInsets.only(top: 4, bottom: 4),
                                 child: Center(
                                   child: Text(
                                     "30日間お試し",
@@ -75,7 +75,7 @@ class PremiumTrialModal extends HookConsumerWidget {
                                   ),
                                 ),
                               ),
-                              SizedBox(height: 8),
+                              const SizedBox(height: 8),
                               Text(
                                 "プレミアム体験プレゼント中",
                                 style: TextStyle(
@@ -99,7 +99,7 @@ class PremiumTrialModal extends HookConsumerWidget {
                       crossAxisAlignment: CrossAxisAlignment.center,
                       children: [
                         SvgPicture.asset("images/crown.svg"),
-                        SizedBox(height: 24),
+                        const SizedBox(height: 24),
                         RichText(
                           textAlign: TextAlign.center,
                           text: TextSpan(
@@ -113,7 +113,7 @@ class PremiumTrialModal extends HookConsumerWidget {
                                   fontSize: 14,
                                 ),
                               ),
-                              TextSpan(text: "\n"),
+                              const TextSpan(text: "\n"),
                               TextSpan(
                                 text: "自動で課金される事はありません。",
                                 style: TextStyle(
@@ -126,7 +126,7 @@ class PremiumTrialModal extends HookConsumerWidget {
                             ],
                           ),
                         ),
-                        SizedBox(height: 24),
+                        const SizedBox(height: 24),
                         PrimaryButton(
                           onPressed: () async {
                             analytics.logEvent(name: "pressed_trial_start");

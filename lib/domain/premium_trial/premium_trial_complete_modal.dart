@@ -30,14 +30,14 @@ class PremiumTrialCompleteModal extends StatelessWidget {
                   Align(
                     alignment: Alignment.topLeft,
                     child: IconButton(
-                      icon: Icon(Icons.close, color: Colors.black),
+                      icon: const Icon(Icons.close, color: Colors.black),
                       onPressed: () => Navigator.of(context).pop(),
                     ),
                   ),
                   Align(
                     alignment: Alignment.center,
                     child: Container(
-                      padding: EdgeInsets.only(top: 40),
+                      padding: const EdgeInsets.only(top: 40),
                       child: Text(
                         "プレミアム体験が始まりました！",
                         style: FontType.subTitle.merge(TextColorStyle.main),
@@ -60,7 +60,7 @@ class PremiumTrialCompleteModal extends StatelessWidget {
                     Image.asset(
                       "images/quick-record.gif",
                     ),
-                    SizedBox(height: 20),
+                    const SizedBox(height: 20),
                     Text(
                       '''
 通知を長押しすると服用記録ができます
@@ -81,7 +81,7 @@ class PremiumTrialCompleteModal extends StatelessWidget {
                     },
                     text: "プレミアム機能を見る"),
               ),
-              Spacer(),
+              const Spacer(),
             ],
           ),
         ),
@@ -95,7 +95,7 @@ showPremiumTrialCompleteModalPreDialog(BuildContext context) async {
   showDialog(
       context: context,
       builder: (context) {
-        return PremiumTrialCompleteModal();
+        return const PremiumTrialCompleteModal();
       });
 }
 

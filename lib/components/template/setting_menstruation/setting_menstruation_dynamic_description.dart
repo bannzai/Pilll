@@ -37,7 +37,7 @@ class SettingMenstruationDynamicDescription extends StatelessWidget {
       child: Column(
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: <Widget>[
-          SizedBox(height: 20),
+          const SizedBox(height: 20),
           Row(
             mainAxisAlignment: MainAxisAlignment.center,
             children: <Widget>[
@@ -53,7 +53,7 @@ class SettingMenstruationDynamicDescription extends StatelessWidget {
           ),
           Text("何日間生理が続く？",
               style: FontType.assistingBold.merge(TextColorStyle.main)),
-          SizedBox(height: 4),
+          const SizedBox(height: 4),
           Row(
             mainAxisAlignment: MainAxisAlignment.center,
             children: <Widget>[
@@ -81,7 +81,7 @@ class SettingMenstruationDynamicDescription extends StatelessWidget {
       width: 48,
       height: 48,
       decoration: BoxDecoration(
-        borderRadius: BorderRadius.all(Radius.circular(4)),
+        borderRadius: const BorderRadius.all(Radius.circular(4)),
         border: Border.all(
           width: 1,
           color: PilllColors.border,
@@ -105,7 +105,7 @@ class SettingMenstruationDynamicDescription extends StatelessWidget {
       width: 48,
       height: 48,
       decoration: BoxDecoration(
-        borderRadius: BorderRadius.all(Radius.circular(4)),
+        borderRadius: const BorderRadius.all(Radius.circular(4)),
         border: Border.all(
           width: 1,
           color: PilllColors.border,

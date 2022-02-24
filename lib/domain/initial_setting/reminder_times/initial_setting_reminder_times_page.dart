@@ -69,14 +69,14 @@ class InitialSettingReminderTimesPage extends HookConsumerWidget {
                   style: FontType.assisting.merge(TextColorStyle.main))
             ],
           ),
-          SizedBox(height: 8),
+          const SizedBox(height: 8),
           GestureDetector(
             onTap: () => _showDurationModalSheet(context, index, state, store),
             child: Container(
               width: 81,
               height: 48,
               decoration: BoxDecoration(
-                borderRadius: BorderRadius.all(Radius.circular(4)),
+                borderRadius: const BorderRadius.all(Radius.circular(4)),
                 border: Border.all(
                   width: 1,
                   color: PilllColors.border,
@@ -101,7 +101,7 @@ class InitialSettingReminderTimesPage extends HookConsumerWidget {
       backgroundColor: PilllColors.background,
       appBar: AppBar(
         leading: IconButton(
-          icon: Icon(Icons.arrow_back, color: Colors.black),
+          icon: const Icon(Icons.arrow_back, color: Colors.black),
           onPressed: () => Navigator.of(context).pop(),
         ),
         title: Text(
@@ -115,13 +115,13 @@ class InitialSettingReminderTimesPage extends HookConsumerWidget {
           child: Center(
             child: Column(
               children: <Widget>[
-                SizedBox(height: 24),
+                const SizedBox(height: 24),
                 Text(
                   "ピルの飲み忘れ通知",
                   style: FontType.title.merge(TextColorStyle.main),
                   textAlign: TextAlign.center,
                 ),
-                Spacer(),
+                const Spacer(),
                 Column(
                   children: [
                     Padding(
@@ -136,7 +136,7 @@ class InitialSettingReminderTimesPage extends HookConsumerWidget {
                         style: FontType.assisting.merge(TextColorStyle.main)),
                   ],
                 ),
-                Spacer(),
+                const Spacer(),
                 Column(
                   children: [
                     RichText(
@@ -177,7 +177,7 @@ class InitialSettingReminderTimesPage extends HookConsumerWidget {
                         ],
                       ),
                     ),
-                    SizedBox(height: 24),
+                    const SizedBox(height: 24),
                     PrimaryButton(
                       text: "設定完了",
                       onPressed: () async {
@@ -193,7 +193,7 @@ class InitialSettingReminderTimesPage extends HookConsumerWidget {
                     ),
                   ],
                 ),
-                SizedBox(height: 35),
+                const SizedBox(height: 35),
               ],
             ),
           ),
@@ -207,7 +207,7 @@ extension InitialSettingReminderTimesPageRoute
     on InitialSettingReminderTimesPage {
   static Route<dynamic> route() {
     return MaterialPageRoute(
-      settings: RouteSettings(name: "InitialSettingReminderTimesPage"),
+      settings: const RouteSettings(name: "InitialSettingReminderTimesPage"),
       builder: (_) => InitialSettingReminderTimesPage(),
     );
   }

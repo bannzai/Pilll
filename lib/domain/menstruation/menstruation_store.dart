@@ -124,7 +124,7 @@ class MenstruationStore extends StateNotifier<MenstruationState> {
   Future<Menstruation> recordFromToday() async {
     final setting = state.setting;
     if (setting == null) {
-      return Future.error(FormatException("unexpected setting is null"));
+      return Future.error(const FormatException("unexpected setting is null"));
     }
     final begin = now();
     var menstruation = Menstruation(
@@ -145,9 +145,9 @@ class MenstruationStore extends StateNotifier<MenstruationState> {
   Future<Menstruation> recordFromYesterday() async {
     final setting = state.setting;
     if (setting == null) {
-      return Future.error(FormatException("unexpected setting is null"));
+      return Future.error(const FormatException("unexpected setting is null"));
     }
-    final begin = today().subtract(Duration(days: 1));
+    final begin = today().subtract(const Duration(days: 1));
     var menstruation = Menstruation(
         beginDate: begin,
         endDate: begin.add(Duration(days: setting.durationMenstruation - 1)),

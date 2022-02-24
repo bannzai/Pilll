@@ -52,7 +52,7 @@ class BeginManualRestDurationButton extends StatelessWidget {
                   activedPillSheet: activedPillSheet,
                 );
                 ScaffoldMessenger.of(context).showSnackBar(
-                  SnackBar(
+                  const SnackBar(
                     duration: Duration(
                       seconds: 2,
                     ),

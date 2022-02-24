@@ -96,15 +96,15 @@ class MenstruationEditStore extends StateNotifier<MenstruationEditState> {
   Future<void> delete() async {
     var menstruation = this.initialMenstruation;
     if (menstruation == null) {
-      throw FormatException("menstruation is not exists from db when delete");
+      throw const FormatException("menstruation is not exists from db when delete");
     }
     final documentID = menstruation.documentID;
     if (documentID == null) {
-      throw FormatException(
+      throw const FormatException(
           "menstruation is not exists document id from db when delete");
     }
     if (state.menstruation != null) {
-      throw FormatException(
+      throw const FormatException(
           "missing condition about state.menstruation is exists when delete. state.menstruation should flushed on edit page");
     }
 
@@ -120,7 +120,7 @@ class MenstruationEditStore extends StateNotifier<MenstruationEditState> {
   Future<Menstruation> save() async {
     var menstruation = state.menstruation;
     if (menstruation == null) {
-      throw FormatException("menstruation is not exists when save");
+      throw const FormatException("menstruation is not exists when save");
     }
     final documentID = initialMenstruation?.documentID;
     if (documentID == null) {
@@ -208,7 +208,7 @@ class MenstruationEditStore extends StateNotifier<MenstruationEditState> {
     if (isSameDay(menstruation.endDate, date)) {
       state = state.copyWith(
           menstruation:
-              menstruation.copyWith(endDate: date.subtract(Duration(days: 1))));
+              menstruation.copyWith(endDate: date.subtract(const Duration(days: 1))));
       return;
     }
   }

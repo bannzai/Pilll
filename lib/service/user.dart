@@ -153,7 +153,7 @@ class UserService {
     return _database.userReference().set({
       UserFirestoreFieldKeys.isTrial: true,
       UserFirestoreFieldKeys.beginTrialDate: now(),
-      UserFirestoreFieldKeys.trialDeadlineDate: now().add(Duration(days: 30)),
+      UserFirestoreFieldKeys.trialDeadlineDate: now().add(const Duration(days: 30)),
       UserFirestoreFieldKeys.settings: setting.toJson(),
       UserFirestoreFieldKeys.hasDiscountEntitlement: true,
     }, SetOptions(merge: true));

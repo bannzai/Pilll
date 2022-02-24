@@ -37,7 +37,7 @@ class SettingTodayPillNumberPage extends HookConsumerWidget {
       backgroundColor: PilllColors.background,
       appBar: AppBar(
         leading: IconButton(
-          icon: Icon(Icons.arrow_back, color: Colors.black),
+          icon: const Icon(Icons.arrow_back, color: Colors.black),
           onPressed: () => Navigator.of(context).pop(),
         ),
         title: Text(
@@ -53,13 +53,13 @@ class SettingTodayPillNumberPage extends HookConsumerWidget {
               children: [
                 ListView(
                   children: [
-                    SizedBox(height: 20),
+                    const SizedBox(height: 20),
                     Text(
                       "今日(${_today()})\n飲む・飲んだピルの番号をタップ",
                       style: FontType.sBigTitle.merge(TextColorStyle.main),
                       textAlign: TextAlign.center,
                     ),
-                    SizedBox(height: 56),
+                    const SizedBox(height: 56),
                     Center(
                       child: SettingTodayPillNumberPillSheetList(
                         pillSheetTypes: pillSheetGroup.pillSheets
@@ -75,7 +75,7 @@ class SettingTodayPillNumberPage extends HookConsumerWidget {
                                     pillNumberIntoPillSheet),
                       ),
                     ),
-                    SizedBox(height: 20),
+                    const SizedBox(height: 20),
                   ],
                 ),
                 Align(
@@ -93,7 +93,7 @@ class SettingTodayPillNumberPage extends HookConsumerWidget {
                         },
                         text: "変更する",
                       ),
-                      SizedBox(height: 35),
+                      const SizedBox(height: 35),
                     ],
                   ),
                 )
@@ -116,7 +116,7 @@ extension SettingTodayPillNumberPageRoute on SettingTodayPillNumberPage {
     required PillSheet activedPillSheet,
   }) {
     return MaterialPageRoute(
-      settings: RouteSettings(name: "SettingTodayPillNumberPage"),
+      settings: const RouteSettings(name: "SettingTodayPillNumberPage"),
       builder: (_) => SettingTodayPillNumberPage(
         pillSheetGroup: pillSheetGroup,
         activedPillSheet: activedPillSheet,

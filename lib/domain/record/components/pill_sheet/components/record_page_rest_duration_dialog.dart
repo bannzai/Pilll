@@ -21,20 +21,20 @@ class RecordPageRestDurationDialog extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return AlertDialog(
-      shape: RoundedRectangleBorder(
+      shape: const RoundedRectangleBorder(
           borderRadius: BorderRadius.all(Radius.circular(20.0))),
-      contentPadding: EdgeInsets.only(left: 24, right: 24, top: 32),
-      actionsPadding: EdgeInsets.only(left: 24, right: 24),
+      contentPadding: const EdgeInsets.only(left: 24, right: 24, top: 32),
+      actionsPadding: const EdgeInsets.only(left: 24, right: 24),
       content: Column(
         mainAxisSize: MainAxisSize.min,
         children: <Widget>[
           title,
-          SizedBox(height: 24),
+          const SizedBox(height: 24),
           Text("休薬するとピル番号は進みません",
               style: FontType.assisting.merge(TextColorStyle.main)),
-          SizedBox(height: 24),
+          const SizedBox(height: 24),
           SvgPicture.asset("images/explain_rest_duration.svg"),
-          SizedBox(height: 24),
+          const SizedBox(height: 24),
           Text(
             "※休薬開始日を変えたい場合",
             style: TextStyle(
@@ -45,7 +45,7 @@ class RecordPageRestDurationDialog extends StatelessWidget {
             ),
             textAlign: TextAlign.left,
           ),
-          SizedBox(height: 8),
+          const SizedBox(height: 8),
           Text(
             "希望日まで未服用にする必要があります。服用済みのピルマークをタップすることで未服用にできます",
             style: TextStyle(
@@ -56,7 +56,7 @@ class RecordPageRestDurationDialog extends StatelessWidget {
             ),
             textAlign: TextAlign.left,
           ),
-          SizedBox(height: 24),
+          const SizedBox(height: 24),
         ],
       ),
       actions: <Widget>[

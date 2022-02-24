@@ -19,7 +19,7 @@ class PremiumTrialModalStateStore
   final UserService _userService;
   PremiumTrialModalStateStore(
     this._userService,
-  ) : super(PremiumTrialModalState()) {
+  ) : super(const PremiumTrialModalState()) {
     reset();
   }
 

@@ -96,10 +96,10 @@ class _UniversalErrorPageState extends State<UniversalErrorPage> {
                 width: 200,
                 height: 190,
               ),
-              SizedBox(height: 25),
+              const SizedBox(height: 25),
               Text(message,
                   style: FontType.assisting.merge(TextColorStyle.main)),
-              SizedBox(height: 25),
+              const SizedBox(height: 25),
               TextButton.icon(
                 icon: const Icon(
                   Icons.refresh,

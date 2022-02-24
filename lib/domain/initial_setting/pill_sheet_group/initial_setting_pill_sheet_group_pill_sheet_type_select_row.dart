@@ -41,12 +41,12 @@ class InitialSettingPillSheetGroupPillSheetTypeSelectRow
                 ),
               ),
               if (index != 0) ...[
-                Spacer(),
+                const Spacer(),
                 SizedBox(
                   width: 20,
                   height: 20,
                   child: IconButton(
-                      padding: EdgeInsets.all(0),
+                      padding: const EdgeInsets.all(0),
                       onPressed: () {
                         onDelete(index);
                       },
@@ -59,7 +59,7 @@ class InitialSettingPillSheetGroupPillSheetTypeSelectRow
               ],
             ],
           ),
-          SizedBox(height: 10),
+          const SizedBox(height: 10),
           GestureDetector(
             onTap: () {
               showSettingPillSheetGroupSelectPillSheetTypePage(
@@ -70,7 +70,7 @@ class InitialSettingPillSheetGroupPillSheetTypeSelectRow
                   });
             },
             child: Container(
-              padding: EdgeInsets.symmetric(vertical: 16, horizontal: 16),
+              padding: const EdgeInsets.symmetric(vertical: 16, horizontal: 16),
               constraints: BoxConstraints(
                   minWidth: MediaQuery.of(context).size.width - 80),
               decoration: BoxDecoration(

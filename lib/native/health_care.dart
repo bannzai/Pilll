@@ -16,10 +16,10 @@ Future<bool> isHealthDataAvailable() async {
 
 Future<bool> isAuthorizedReadAndShareToHealthKitData() async {
   if (!Platform.isIOS) {
-    throw FormatException("iOSアプリにのみ対応しています");
+    throw const FormatException("iOSアプリにのみ対応しています");
   }
   if (!await isHealthDataAvailable()) {
-    throw FormatException("ヘルスケアに対応していない端末ではご利用できません");
+    throw const FormatException("ヘルスケアに対応していない端末ではご利用できません");
   }
 
   final result = await methodChannel
@@ -73,13 +73,13 @@ Future<String> addMenstruationFlowHealthKitData(
   Menstruation menstruation,
 ) async {
   if (!Platform.isIOS) {
-    throw FormatException("iOSアプリにのみ対応しています");
+    throw const FormatException("iOSアプリにのみ対応しています");
   }
   if (!await isHealthDataAvailable()) {
-    throw FormatException("ヘルスケアに対応していない端末ではご利用できません");
+    throw const FormatException("ヘルスケアに対応していない端末ではご利用できません");
   }
   if (!await isAuthorizedReadAndShareToHealthKitData()) {
-    throw FormatException("設定アプリよりヘルスケアを有効にしてください");
+    throw const FormatException("設定アプリよりヘルスケアを有効にしてください");
   }
 
 // Avoid codec error
@@ -110,13 +110,13 @@ Future<String> updateOrAddMenstruationFlowHealthKitData(
   Menstruation menstruation,
 ) async {
   if (!Platform.isIOS) {
-    throw FormatException("iOSアプリにのみ対応しています");
+    throw const FormatException("iOSアプリにのみ対応しています");
   }
   if (!await isHealthDataAvailable()) {
-    throw FormatException("ヘルスケアに対応していない端末ではご利用できません");
+    throw const FormatException("ヘルスケアに対応していない端末ではご利用できません");
   }
   if (!await isAuthorizedReadAndShareToHealthKitData()) {
-    throw FormatException("設定アプリよりヘルスケアを有効にしてください");
+    throw const FormatException("設定アプリよりヘルスケアを有効にしてください");
   }
 
 // Avoid codec error
@@ -147,13 +147,13 @@ Future<void> deleteMenstruationFlowHealthKitData(
   Menstruation menstruation,
 ) async {
   if (!Platform.isIOS) {
-    throw FormatException("iOSアプリにのみ対応しています");
+    throw const FormatException("iOSアプリにのみ対応しています");
   }
   if (!await isHealthDataAvailable()) {
-    throw FormatException("ヘルスケアに対応していない端末ではご利用できません");
+    throw const FormatException("ヘルスケアに対応していない端末ではご利用できません");
   }
   if (!await isAuthorizedReadAndShareToHealthKitData()) {
-    throw FormatException("設定アプリよりヘルスケアを有効にしてください");
+    throw const FormatException("設定アプリよりヘルスケアを有効にしてください");
   }
 
 // Avoid codec error

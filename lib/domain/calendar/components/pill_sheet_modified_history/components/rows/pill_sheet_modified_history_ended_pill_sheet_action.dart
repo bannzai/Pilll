@@ -23,14 +23,14 @@ class PillSheetModifiedHistoryEndedPillSheetAction extends StatelessWidget {
       mainAxisAlignment: MainAxisAlignment.center,
       children: [
         LimitedBox(
-          child: DottedLine(),
+          child: const DottedLine(),
           maxWidth: MediaQuery.of(context).size.width / 4 - 1,
         ),
-        SizedBox(width: 12),
+        const SizedBox(width: 12),
         Text("ピルシート終了", style: _textStyle),
-        SizedBox(width: 12),
+        const SizedBox(width: 12),
         LimitedBox(
-          child: DottedLine(),
+          child: const DottedLine(),
           maxWidth: MediaQuery.of(context).size.width / 4 - 1,
         ),
       ],

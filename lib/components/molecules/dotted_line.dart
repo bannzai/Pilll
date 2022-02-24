@@ -52,7 +52,7 @@ class DottedLine extends StatelessWidget {
 
   Widget _buildDash() {
     return Container(
-      decoration: BoxDecoration(
+      decoration: const BoxDecoration(
         color: PilllColors.secondary,
       ),
       width: dashLength,
@@ -62,7 +62,7 @@ class DottedLine extends StatelessWidget {
 
   Widget _buildDashGap() {
     return Container(
-      decoration: BoxDecoration(
+      decoration: const BoxDecoration(
         color: Colors.transparent,
       ),
       width: dashGapLength,

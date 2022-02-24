@@ -16,14 +16,14 @@ class RecordPageAddingPillSheetGroupPage extends HookConsumerWidget {
     final state = ref.watch(recordPageStoreProvider);
     final setting = state.setting;
     if (setting == null) {
-      throw FormatException("ピルシートグループの設定が読み込めませんでした");
+      throw const FormatException("ピルシートグループの設定が読み込めませんでした");
     }
 
     return Scaffold(
       backgroundColor: PilllColors.background,
       appBar: AppBar(
         leading: IconButton(
-          icon: Icon(Icons.close, color: Colors.black),
+          icon: const Icon(Icons.close, color: Colors.black),
           onPressed: () => Navigator.of(context).pop(),
         ),
         title: Text(
@@ -34,7 +34,7 @@ class RecordPageAddingPillSheetGroupPage extends HookConsumerWidget {
       ),
       body: SafeArea(
         child: Container(
-          padding: EdgeInsets.symmetric(horizontal: 40),
+          padding: const EdgeInsets.symmetric(horizontal: 40),
           child: Stack(
             children: [
               SettingPillSheetGroup(
@@ -79,7 +79,7 @@ class RecordPageAddingPillSheetGroupPage extends HookConsumerWidget {
                   ),
                 ),
               ),
-              SizedBox(height: 35),
+              const SizedBox(height: 35),
             ],
           ),
         ),
@@ -93,7 +93,7 @@ extension RecordPageAddingPillSheetGroupPageRoute
   static Route<dynamic> route() {
     return MaterialPageRoute(
       fullscreenDialog: true,
-      settings: RouteSettings(name: "RecordPageAddingPillSheetGroupPage"),
+      settings: const RouteSettings(name: "RecordPageAddingPillSheetGroupPage"),
       builder: (_) => RecordPageAddingPillSheetGroupPage(),
     );
   }

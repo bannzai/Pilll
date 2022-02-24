@@ -13,7 +13,7 @@ class RestDurationNotificationBar extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      padding: EdgeInsets.only(top: 4, bottom: 4),
+      padding: const EdgeInsets.only(top: 4, bottom: 4),
       child: Center(
         child: Text(restDurationNotification,
             style: FontType.assistingBold.merge(TextColorStyle.white)),

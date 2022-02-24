@@ -28,7 +28,7 @@ void main() {
     test("when first selected", () {
       final batchFactory = MockBatchFactory();
       final authService = MockAuthService();
-      when(authService.stream()).thenAnswer((realInvocation) => Stream.empty());
+      when(authService.stream()).thenAnswer((realInvocation) => const Stream.empty());
       final settingService = MockSettingService();
       final pillSheetService = MockPillSheetService();
       final pillSheetModifiedHistoryService =
@@ -56,7 +56,7 @@ void main() {
     test("overwrite pill sheet type", () {
       final batchFactory = MockBatchFactory();
       final authService = MockAuthService();
-      when(authService.stream()).thenAnswer((realInvocation) => Stream.empty());
+      when(authService.stream()).thenAnswer((realInvocation) => const Stream.empty());
       final settingService = MockSettingService();
       final pillSheetService = MockPillSheetService();
       final pillSheetModifiedHistoryService =
@@ -89,7 +89,7 @@ void main() {
     test("reset todayPillNumber", () {
       final batchFactory = MockBatchFactory();
       final authService = MockAuthService();
-      when(authService.stream()).thenAnswer((realInvocation) => Stream.empty());
+      when(authService.stream()).thenAnswer((realInvocation) => const Stream.empty());
       final settingService = MockSettingService();
       final pillSheetService = MockPillSheetService();
       final pillSheetModifiedHistoryService =
@@ -111,11 +111,11 @@ void main() {
       final store = container.read(initialSettingStoreProvider.notifier);
       // ignore: invalid_use_of_protected_member
       store.state = store.state.copyWith(
-          todayPillNumber: InitialSettingTodayPillNumber(
+          todayPillNumber: const InitialSettingTodayPillNumber(
               pageIndex: 0, pillNumberIntoPillSheet: 28));
       expect(
           container.read(initialSettingStateProvider).todayPillNumber,
-          InitialSettingTodayPillNumber(
+          const InitialSettingTodayPillNumber(
               pageIndex: 0, pillNumberIntoPillSheet: 28));
 
       store.selectedPillSheetType(PillSheetType.pillsheet_24_0);
@@ -123,7 +123,7 @@ void main() {
           [PillSheetType.pillsheet_24_0]);
       expect(
           container.read(initialSettingStateProvider).todayPillNumber,
-          InitialSettingTodayPillNumber(
+          const InitialSettingTodayPillNumber(
               pageIndex: 0, pillNumberIntoPillSheet: 24));
     });
   });
@@ -131,7 +131,7 @@ void main() {
     test("add new one", () {
       final batchFactory = MockBatchFactory();
       final authService = MockAuthService();
-      when(authService.stream()).thenAnswer((realInvocation) => Stream.empty());
+      when(authService.stream()).thenAnswer((realInvocation) => const Stream.empty());
       final settingService = MockSettingService();
       final pillSheetService = MockPillSheetService();
       final pillSheetModifiedHistoryService =
@@ -162,7 +162,7 @@ void main() {
     test("replace with index", () {
       final batchFactory = MockBatchFactory();
       final authService = MockAuthService();
-      when(authService.stream()).thenAnswer((realInvocation) => Stream.empty());
+      when(authService.stream()).thenAnswer((realInvocation) => const Stream.empty());
       final settingService = MockSettingService();
       final pillSheetService = MockPillSheetService();
       final pillSheetModifiedHistoryService =
@@ -194,7 +194,7 @@ void main() {
     test("remove with index", () {
       final batchFactory = MockBatchFactory();
       final authService = MockAuthService();
-      when(authService.stream()).thenAnswer((realInvocation) => Stream.empty());
+      when(authService.stream()).thenAnswer((realInvocation) => const Stream.empty());
       final settingService = MockSettingService();
       final pillSheetService = MockPillSheetService();
       final pillSheetModifiedHistoryService =
@@ -227,7 +227,7 @@ void main() {
     test("replace default reminderTime", () {
       final batchFactory = MockBatchFactory();
       final authService = MockAuthService();
-      when(authService.stream()).thenAnswer((realInvocation) => Stream.empty());
+      when(authService.stream()).thenAnswer((realInvocation) => const Stream.empty());
       final settingService = MockSettingService();
       final pillSheetService = MockPillSheetService();
       final pillSheetModifiedHistoryService =
@@ -250,14 +250,14 @@ void main() {
 
       store.setReminderTime(index: 0, hour: 22, minute: 10);
       expect(container.read(initialSettingStateProvider).reminderTimes, [
-        ReminderTime(hour: 22, minute: 10),
-        ReminderTime(hour: 22, minute: 0)
+        const ReminderTime(hour: 22, minute: 10),
+        const ReminderTime(hour: 22, minute: 0)
       ]);
     });
     test("add reminderTime", () {
       final batchFactory = MockBatchFactory();
       final authService = MockAuthService();
-      when(authService.stream()).thenAnswer((realInvocation) => Stream.empty());
+      when(authService.stream()).thenAnswer((realInvocation) => const Stream.empty());
       final settingService = MockSettingService();
       final pillSheetService = MockPillSheetService();
       final pillSheetModifiedHistoryService =
@@ -280,9 +280,9 @@ void main() {
 
       store.setReminderTime(index: 2, hour: 22, minute: 10);
       expect(container.read(initialSettingStateProvider).reminderTimes, [
-        ReminderTime(hour: 21, minute: 0),
-        ReminderTime(hour: 22, minute: 0),
-        ReminderTime(hour: 22, minute: 10)
+        const ReminderTime(hour: 21, minute: 0),
+        const ReminderTime(hour: 22, minute: 0),
+        const ReminderTime(hour: 22, minute: 10)
       ]);
     });
   });
@@ -298,7 +298,7 @@ void main() {
       final batch = MockWriteBatch();
       when(batchFactory.batch()).thenReturn(batch);
       final authService = MockAuthService();
-      when(authService.stream()).thenAnswer((realInvocation) => Stream.empty());
+      when(authService.stream()).thenAnswer((realInvocation) => const Stream.empty());
 
       final pillSheet = PillSheet(
           typeInfo: PillSheetType.pillsheet_21.typeInfo, beginingDate: _today);
@@ -322,7 +322,7 @@ void main() {
       when(pillSheetModifiedHistoryService.add(batch, history))
           .thenReturn(null);
 
-      final setting = Setting(
+      final setting = const Setting(
         pillNumberForFromMenstruation: 24,
         durationMenstruation: 4,
         isOnReminder: true,
@@ -366,12 +366,12 @@ void main() {
       final batch = MockWriteBatch();
       when(batchFactory.batch()).thenReturn(batch);
       final authService = MockAuthService();
-      when(authService.stream()).thenAnswer((realInvocation) => Stream.empty());
+      when(authService.stream()).thenAnswer((realInvocation) => const Stream.empty());
 
       final pillSheet = PillSheet(
         typeInfo: PillSheetType.pillsheet_28_0.typeInfo,
         beginingDate: _today.subtract(
-          Duration(days: 28),
+          const Duration(days: 28),
         ),
         groupIndex: 0,
         lastTakenDate: DateTime.parse("2020-09-18"),
@@ -379,7 +379,7 @@ void main() {
       final pillSheet2 = PillSheet(
         typeInfo: PillSheetType.pillsheet_21.typeInfo,
         beginingDate: _today,
-        lastTakenDate: _today.subtract(Duration(days: 1)),
+        lastTakenDate: _today.subtract(const Duration(days: 1)),
         groupIndex: 1,
       );
       final pillSheetService = MockPillSheetService();
@@ -411,7 +411,7 @@ void main() {
       when(pillSheetModifiedHistoryService.add(batch, history))
           .thenReturn(null);
 
-      final setting = Setting(
+      final setting = const Setting(
         pillNumberForFromMenstruation: 52,
         durationMenstruation: 4,
         isOnReminder: true,

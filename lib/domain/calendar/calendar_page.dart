@@ -66,14 +66,14 @@ class CalendarPage extends HookConsumerWidget {
               child: PageView(
                 controller: pageController,
                 scrollDirection: Axis.horizontal,
-                physics: PageScrollPhysics(),
+                physics: const PageScrollPhysics(),
                 children:
                     List.generate(state.calendarDataSource.length, (index) {
                   return CalendarContainer(store: store, state: state);
                 }),
               ),
             ),
-            SizedBox(height: 30),
+            const SizedBox(height: 30),
             Padding(
               padding: const EdgeInsets.only(left: 16, right: 16),
               child: CalendarPillSheetModifiedHistoryCard(
@@ -86,7 +86,7 @@ class CalendarPage extends HookConsumerWidget {
                 ),
               ),
             ),
-            SizedBox(height: 120),
+            const SizedBox(height: 120),
           ],
         ),
       ),

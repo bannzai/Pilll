@@ -660,7 +660,7 @@ void main() {
         ),
       );
       expect(pillSheet.estimatedLastTakenDate,
-          DateTime.parse("2022-05-29").subtract(Duration(seconds: 1)));
+          DateTime.parse("2022-05-29").subtract(const Duration(seconds: 1)));
     });
 
     group("pillsheet has rest durations", () {
@@ -689,7 +689,7 @@ void main() {
           ),
         );
         expect(pillSheet.estimatedLastTakenDate,
-            DateTime.parse("2022-06-05").subtract(Duration(seconds: 1)));
+            DateTime.parse("2022-06-05").subtract(const Duration(seconds: 1)));
       });
       test("rest duration is ended", () {
         final mockTodayRepository = MockTodayService();
@@ -715,7 +715,7 @@ void main() {
           ),
         );
         expect(pillSheet.estimatedLastTakenDate,
-            DateTime.parse("2022-05-31").subtract(Duration(seconds: 1)));
+            DateTime.parse("2022-05-31").subtract(const Duration(seconds: 1)));
       });
 
       group("pillsheet has plural rest duration", () {
@@ -749,7 +749,7 @@ void main() {
             ),
           );
           expect(pillSheet.estimatedLastTakenDate,
-              DateTime.parse("2022-06-03").subtract(Duration(seconds: 1)));
+              DateTime.parse("2022-06-03").subtract(const Duration(seconds: 1)));
         });
         test("last rest duration is ended", () {
           final mockTodayRepository = MockTodayService();
@@ -782,7 +782,7 @@ void main() {
             ),
           );
           expect(pillSheet.estimatedLastTakenDate,
-              DateTime.parse("2022-06-01").subtract(Duration(seconds: 1)));
+              DateTime.parse("2022-06-01").subtract(const Duration(seconds: 1)));
         });
       });
     });

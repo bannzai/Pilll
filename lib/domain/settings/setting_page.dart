@@ -91,7 +91,7 @@ class SettingPage extends HookConsumerWidget {
                   return SettingSectionTitle(
                     text: "アカウント",
                     children: [
-                      ListExplainRow(
+                      const ListExplainRow(
                           text: "機種変更やスマホ紛失時など、データの引き継ぎ・復元には、アカウント登録が必要です。"),
                       AccountLinkRow(),
                       _separator(),

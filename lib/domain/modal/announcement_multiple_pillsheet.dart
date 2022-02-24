@@ -7,20 +7,20 @@ class AnnouncementMultiplePillSheet extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return AlertDialog(
-      shape: RoundedRectangleBorder(
+      shape: const RoundedRectangleBorder(
           borderRadius: BorderRadius.all(Radius.circular(20.0))),
-      contentPadding: EdgeInsets.only(left: 24, right: 24, top: 16),
+      contentPadding: const EdgeInsets.only(left: 24, right: 24, top: 16),
       content: Column(
         mainAxisSize: MainAxisSize.min,
         crossAxisAlignment: CrossAxisAlignment.center,
         children: [
           Row(children: [
             IconButton(
-              icon: Icon(Icons.close, color: Colors.black),
+              icon: const Icon(Icons.close, color: Colors.black),
               onPressed: () => Navigator.of(context).pop(),
-              padding: EdgeInsets.only(left: 0, right: 8, top: 0, bottom: 8),
+              padding: const EdgeInsets.only(left: 0, right: 8, top: 0, bottom: 8),
             ),
-            Spacer(),
+            const Spacer(),
           ]),
           Text(
             "ピルシートを\n服用日数表示にできます",
@@ -31,11 +31,11 @@ class AnnouncementMultiplePillSheet extends StatelessWidget {
                 fontFamily: FontFamily.japanese),
             textAlign: TextAlign.center,
           ),
-          SizedBox(height: 24),
+          const SizedBox(height: 24),
           Image.asset(
             "images/announcement_multiple_pill_sheet.png",
           ),
-          SizedBox(height: 24),
+          const SizedBox(height: 24),
           Text(
             "ヤーズフレックスなど連続服用する方におすすめです。",
             style: TextStyle(
@@ -46,7 +46,7 @@ class AnnouncementMultiplePillSheet extends StatelessWidget {
             ),
             textAlign: TextAlign.center,
           ),
-          SizedBox(height: 24),
+          const SizedBox(height: 24),
           Row(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
@@ -59,7 +59,7 @@ class AnnouncementMultiplePillSheet extends StatelessWidget {
                   fontWeight: FontWeight.w700,
                 ),
               ),
-              SizedBox(width: 6),
+              const SizedBox(width: 6),
               SvgPicture.asset("images/switching_appearance_mode.svg"),
               Text("から設定できます",
                   style: TextStyle(

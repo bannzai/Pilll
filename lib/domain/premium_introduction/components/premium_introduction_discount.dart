@@ -36,7 +36,7 @@ class PremiumIntroductionDiscountRow extends HookConsumerWidget {
     }
 
     return Container(
-      padding: EdgeInsets.only(left: 40, right: 40),
+      padding: const EdgeInsets.only(left: 40, right: 40),
       width: MediaQuery.of(context).size.width,
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.center,
@@ -53,7 +53,7 @@ class PremiumIntroductionDiscountRow extends HookConsumerWidget {
               ),
             ),
           ),
-          SizedBox(height: 4),
+          const SizedBox(height: 4),
           if (countdown != null)
             Text(
               countdown,
@@ -64,7 +64,7 @@ class PremiumIntroductionDiscountRow extends HookConsumerWidget {
                 fontSize: 16,
               ),
             ),
-          SizedBox(height: 20),
+          const SizedBox(height: 20),
           Text(
             "通常 月額プラン",
             textAlign: TextAlign.center,
@@ -76,7 +76,7 @@ class PremiumIntroductionDiscountRow extends HookConsumerWidget {
               ),
             ),
           ),
-          SizedBox(height: 4),
+          const SizedBox(height: 4),
           Stack(
             children: [
               Text(
@@ -96,7 +96,7 @@ class PremiumIntroductionDiscountRow extends HookConsumerWidget {
               ),
             ],
           ),
-          SizedBox(height: 8),
+          const SizedBox(height: 8),
           SvgPicture.asset("images/arrow_down.svg"),
         ],
       ),

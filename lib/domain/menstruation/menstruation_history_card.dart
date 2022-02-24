@@ -44,9 +44,9 @@ class MenstruationHistoryCard extends StatelessWidget {
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
               MenstruationHistoryCardTitle(state: state),
-              SizedBox(height: 32),
+              const SizedBox(height: 32),
               MenstruationHisotryCardAvarageInformation(state: state),
-              SizedBox(height: 32),
+              const SizedBox(height: 32),
               MenstruationHistoryCardList(state: state),
               MenstruationHistoryCardMoreButton(state: state),
             ],
@@ -105,7 +105,7 @@ class MenstruationHistoryCardList extends StatelessWidget {
     return Column(
       mainAxisSize: MainAxisSize.max,
       children: state.rows
-          .map((e) => [MenstruationListRow(state: e), SizedBox(height: 20)])
+          .map((e) => [MenstruationListRow(state: e), const SizedBox(height: 20)])
           .expand((e) => e)
           .toList(),
     );
@@ -124,7 +124,7 @@ class MenstruationHisotryCardAvarageInformation extends StatelessWidget {
   Widget build(BuildContext context) {
     return Row(
       children: [
-        Spacer(),
+        const Spacer(),
         CounterUnitLayout(
           title: "平均周期",
           number: (state.isPremium || state.isTrial)
@@ -132,14 +132,14 @@ class MenstruationHisotryCardAvarageInformation extends StatelessWidget {
               : "🔒",
           unit: "日",
         ),
-        SizedBox(width: 30),
+        const SizedBox(width: 30),
         Container(
             height: 64,
-            child: VerticalDivider(
+            child: const VerticalDivider(
               color: PilllColors.divider,
               width: 3,
             )),
-        SizedBox(width: 30),
+        const SizedBox(width: 30),
         CounterUnitLayout(
           title: "平均日数",
           number: (state.isPremium || state.isTrial)
@@ -147,7 +147,7 @@ class MenstruationHisotryCardAvarageInformation extends StatelessWidget {
               : "🔒",
           unit: "日",
         ),
-        Spacer(),
+        const Spacer(),
       ],
     );
   }
@@ -175,7 +175,7 @@ class MenstruationHistoryCardTitle extends StatelessWidget {
           ),
         ),
         if (!state.isPremium) ...[
-          SizedBox(width: 8),
+          const SizedBox(width: 8),
           PremiumBadge(),
         ],
       ],

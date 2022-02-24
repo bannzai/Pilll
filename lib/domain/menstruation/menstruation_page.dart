@@ -79,7 +79,7 @@ class MenstruationPage extends HookConsumerWidget {
                   Expanded(
                     child: MenstruationCardList(store: store),
                   ),
-                  SizedBox(height: 40),
+                  const SizedBox(height: 40),
                 ],
               ),
               Align(
@@ -121,7 +121,7 @@ class MenstruationRecordButton extends StatelessWidget {
 
         final setting = state.setting;
         if (setting == null) {
-          throw FormatException("生理記録前にデータの読み込みに失敗しました。再読み込みしてから再度お試しください");
+          throw const FormatException("生理記録前にデータの読み込みに失敗しました。再読み込みしてから再度お試しください");
         }
 
         if (setting.durationMenstruation == 0) {
@@ -138,7 +138,7 @@ class MenstruationRecordButton extends StatelessWidget {
                 final created = await store.recordFromToday();
                 ScaffoldMessenger.of(context).showSnackBar(
                   SnackBar(
-                    duration: Duration(seconds: 2),
+                    duration: const Duration(seconds: 2),
                     content: Text(
                         "${DateTimeFormatter.monthAndDay(created.beginDate)}から生理開始で記録しました"),
                   ),
@@ -151,7 +151,7 @@ class MenstruationRecordButton extends StatelessWidget {
                 final created = await store.recordFromYesterday();
                 ScaffoldMessenger.of(context).showSnackBar(
                   SnackBar(
-                    duration: Duration(seconds: 2),
+                    duration: const Duration(seconds: 2),
                     content: Text(
                         "${DateTimeFormatter.monthAndDay(created.beginDate)}から生理開始で記録しました"),
                   ),
@@ -185,12 +185,12 @@ class MenstruationCardList extends StatelessWidget {
     return Container(
       color: PilllColors.background,
       child: ListView(
-        padding: EdgeInsets.only(top: 16, left: 16, right: 16),
+        padding: const EdgeInsets.only(top: 16, left: 16, right: 16),
         scrollDirection: Axis.vertical,
         children: [
           if (cardState != null) ...[
             MenstruationCard(cardState),
-            SizedBox(height: 24),
+            const SizedBox(height: 24),
           ],
           if (historyCardState != null)
             MenstruationHistoryCard(state: historyCardState),

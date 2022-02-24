@@ -31,7 +31,7 @@ class ReminderNotificationCustomizeWord extends HookConsumerWidget {
         children: [
           Text("服用通知のカスタマイズ", style: FontType.listRow),
           if (!isPremium) ...[
-            SizedBox(width: 8),
+            const SizedBox(width: 8),
             PremiumBadge(),
           ]
         ],

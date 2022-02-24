@@ -49,7 +49,7 @@ class RecordPageStore extends StateNotifier<RecordPageState> {
     this._authService,
     this._pillSheetModifiedHistoryService,
     this._pillSheetGroupService,
-  ) : super(RecordPageState()) {
+  ) : super(const RecordPageState()) {
     reset();
   }
 
@@ -227,11 +227,11 @@ class RecordPageStore extends StateNotifier<RecordPageState> {
   Future<bool> _take(DateTime takenDate) async {
     final pillSheetGroup = state.pillSheetGroup;
     if (pillSheetGroup == null) {
-      throw FormatException("pill sheet group not found");
+      throw const FormatException("pill sheet group not found");
     }
     final activedPillSheet = pillSheetGroup.activedPillSheet;
     if (activedPillSheet == null) {
-      throw FormatException("active pill sheet not found");
+      throw const FormatException("active pill sheet not found");
     }
     if (activedPillSheet.todayPillIsAlreadyTaken) {
       return false;
@@ -288,11 +288,11 @@ class RecordPageStore extends StateNotifier<RecordPageState> {
   Future<void> cancelTaken() async {
     final pillSheetGroup = state.pillSheetGroup;
     if (pillSheetGroup == null) {
-      throw FormatException("現在有効なとなっているピルシートグループが見つかりませんでした");
+      throw const FormatException("現在有効なとなっているピルシートグループが見つかりませんでした");
     }
     final activedPillSheet = pillSheetGroup.activedPillSheet;
     if (activedPillSheet == null) {
-      throw FormatException("現在対象となっているピルシートが見つかりませんでした");
+      throw const FormatException("現在対象となっているピルシートが見つかりませんでした");
     }
     // キャンセルの場合は今日の服用のundo機能なので、服用済みじゃない場合はreturnする
     if (!activedPillSheet.todayPillIsAlreadyTaken ||
@@ -312,16 +312,16 @@ class RecordPageStore extends StateNotifier<RecordPageState> {
       required int pillNumberIntoPillSheet}) async {
     final activedPillSheet = pillSheetGroup.activedPillSheet;
     if (activedPillSheet == null) {
-      throw FormatException("現在対象となっているピルシートが見つかりませんでした");
+      throw const FormatException("現在対象となっているピルシートが見つかりませんでした");
     }
     if (activedPillSheet.activeRestDuration != null) {
-      throw FormatException("ピルの服用の取り消し操作は休薬期間中は実行できません");
+      throw const FormatException("ピルの服用の取り消し操作は休薬期間中は実行できません");
     }
 
     final targetPillSheet = pillSheetGroup.pillSheets[pageIndex];
     final takenDate = targetPillSheet
         .displayPillTakeDate(pillNumberIntoPillSheet)
-        .subtract(Duration(days: 1))
+        .subtract(const Duration(days: 1))
         .date();
 
     final updatedPillSheets = pillSheetGroup.pillSheets.map((pillSheet) {
@@ -344,7 +344,7 @@ class RecordPageStore extends StateNotifier<RecordPageState> {
         // reset pill sheet when back to one before pill sheet
         return pillSheet.copyWith(
             lastTakenDate:
-                pillSheet.beginingDate.subtract(Duration(days: 1)).date(),
+                pillSheet.beginingDate.subtract(const Duration(days: 1)).date(),
             restDurations: []);
       } else {
         // Revert対象の日付よりも後ろにある休薬期間のデータは消す
@@ -397,7 +397,7 @@ class RecordPageStore extends StateNotifier<RecordPageState> {
   }) {
     final activedPillSheet = state.pillSheetGroup?.activedPillSheet;
     if (activedPillSheet == null) {
-      throw FormatException("pill sheet not found");
+      throw const FormatException("pill sheet not found");
     }
     if (activedPillSheet.groupIndex < pillSheet.groupIndex) {
       return false;
@@ -441,7 +441,7 @@ class RecordPageStore extends StateNotifier<RecordPageState> {
     }
     final activedPillSheet = state.pillSheetGroup?.activedPillSheet;
     if (activedPillSheet == null) {
-      throw FormatException("pill sheet not found");
+      throw const FormatException("pill sheet not found");
     }
     if (activedPillSheet.groupIndex < pillSheet.groupIndex) {
       return false;
@@ -556,7 +556,7 @@ class RecordPageStore extends StateNotifier<RecordPageState> {
   switchingAppearanceMode(PillSheetAppearanceMode mode) {
     final setting = state.setting;
     if (setting == null) {
-      throw FormatException("setting entity not found");
+      throw const FormatException("setting entity not found");
     }
     final updated = setting.copyWith(pillSheetAppearanceMode: mode);
     return _settingService

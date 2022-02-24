@@ -51,7 +51,7 @@ class InitialSettingStateStore extends StateNotifier<InitialSettingState> {
     this._pillSheetModifiedHistoryService,
     this._pillSheetGroupService,
     this._authService,
-  ) : super(InitialSettingState());
+  ) : super(const InitialSettingState());
 
   StreamSubscription? _authServiceCanceller;
   fetch() {

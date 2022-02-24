@@ -44,7 +44,7 @@ Future<LinkValueContainer?> linkWithApple(User user) async {
 Future<UserCredential?> signInWithApple() async {
   final user = FirebaseAuth.instance.currentUser;
   if (user == null) {
-    throw FormatException("Anonymous User not found");
+    throw const FormatException("Anonymous User not found");
   }
   try {
     final rawNonce = generateNonce();

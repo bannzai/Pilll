@@ -18,9 +18,9 @@ class PremiumUserThanksRow extends StatelessWidget {
           ),
           textAlign: TextAlign.center,
         ),
-        SizedBox(height: 32),
+        const SizedBox(height: 32),
         SvgPicture.asset("images/jewel.svg"),
-        SizedBox(height: 24),
+        const SizedBox(height: 24),
         Text(
           "ご利用ありがとうございます。\nお陰様でPilllの運営を継続できています。",
           style: TextStyle(

@@ -54,21 +54,21 @@ class _HeaderLayout extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      padding: EdgeInsets.only(left: 8),
+      padding: const EdgeInsets.only(left: 8),
       child: Row(
         mainAxisAlignment: MainAxisAlignment.end,
         children: [
           day,
-          SizedBox(width: 8),
+          const SizedBox(width: 8),
           SizedBox(
             width: 79,
             child: effectiveNumbersOrHyphen,
           ),
-          SizedBox(width: 8),
+          const SizedBox(width: 8),
           Expanded(
             child: detail,
           ),
-          SizedBox(width: 8),
+          const SizedBox(width: 8),
           Container(
             width: 57,
             child: takenPillActionOList,

@@ -19,14 +19,14 @@ class ReminderTimesPage extends HookConsumerWidget {
     final setting = state.setting;
 
     if (setting == null) {
-      return Indicator();
+      return const Indicator();
     }
 
     return Scaffold(
       backgroundColor: PilllColors.background,
       appBar: AppBar(
         leading: IconButton(
-          icon: Icon(Icons.arrow_back, color: Colors.black),
+          icon: const Icon(Icons.arrow_back, color: Colors.black),
           onPressed: () => Navigator.of(context).pop(),
         ),
         title: Text(
@@ -157,7 +157,7 @@ class ReminderTimesPage extends HookConsumerWidget {
         return TimePicker(
           initialDateTime: isEditing
               ? setting.reminderTimes[index].dateTime()
-              : ReminderTime(hour: 22, minute: 0).dateTime(),
+              : const ReminderTime(hour: 22, minute: 0).dateTime(),
           done: (dateTime) {
             Navigator.pop(context);
             if (isEditing) {
@@ -177,7 +177,7 @@ class ReminderTimesPage extends HookConsumerWidget {
 extension ReminderTimesPageRoute on ReminderTimesPage {
   static Route<dynamic> route() {
     return MaterialPageRoute(
-      settings: RouteSettings(name: "ReminderTimesPage"),
+      settings: const RouteSettings(name: "ReminderTimesPage"),
       builder: (_) => ReminderTimesPage(),
     );
   }

@@ -19,7 +19,7 @@ class Indicator extends StatelessWidget {
       );
     }
     return Container(
-      child: Center(
+      child: const Center(
         child: CircularProgressIndicator(
             valueColor: AlwaysStoppedAnimation(PilllColors.primary)),
       ),
@@ -30,7 +30,7 @@ class Indicator extends StatelessWidget {
 class ScaffoldIndicator extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
+    return const Scaffold(
       backgroundColor: PilllColors.background,
       body: Indicator(),
     );
@@ -50,7 +50,7 @@ class DialogIndicator extends StatelessWidget {
           ),
           width: 200,
           height: 200,
-          child: Indicator(),
+          child: const Indicator(),
         ),
       ),
     );

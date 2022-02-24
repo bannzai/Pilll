@@ -57,7 +57,7 @@ void main() {
           lastTakenDate: today,
           beginingDate: today.subtract(
 // NOTE: Into rest duration and notification duration
-            Duration(days: 25),
+            const Duration(days: 25),
           ),
         );
         final pillSheetGroup = PillSheetGroup(
@@ -74,7 +74,7 @@ void main() {
           premiumTrialGuideNotificationIsClosed: false,
           recommendedSignupNotificationIsAlreadyShow: false,
           trialDeadlineDate: null,
-          discountEntitlementDeadlineDate: today.subtract(Duration(days: 1)),
+          discountEntitlementDeadlineDate: today.subtract(const Duration(days: 1)),
         );
 
         final recordPageState = RecordPageState(
@@ -93,7 +93,7 @@ void main() {
               isOverDiscountDeadlineProvider.overrideWithProvider(
                   (param) => Provider.autoDispose((_) => false)),
               durationToDiscountPriceDeadline.overrideWithProvider((param) =>
-                  Provider.autoDispose((_) => Duration(seconds: 1000))),
+                  Provider.autoDispose((_) => const Duration(seconds: 1000))),
             ],
             child: MaterialApp(
               home: Material(child: NotificationBar(recordPageState)),
@@ -120,7 +120,7 @@ void main() {
           lastTakenDate: today,
           beginingDate: today.subtract(
 // NOTE: Into rest duration and notification duration
-            Duration(days: 25),
+            const Duration(days: 25),
           ),
         );
         final pillSheetGroup = PillSheetGroup(
@@ -182,7 +182,7 @@ void main() {
           lastTakenDate: today,
           beginingDate: today.subtract(
 // NOTE: Not into rest duration and notification duration
-            Duration(days: 10),
+            const Duration(days: 10),
           ),
         );
         final pillSheetGroup = PillSheetGroup(
@@ -221,7 +221,7 @@ void main() {
             ),
           ),
         );
-        await tester.pumpAndSettle(Duration(milliseconds: 400));
+        await tester.pumpAndSettle(const Duration(milliseconds: 400));
 
         expect(
           find.byWidgetPredicate(
@@ -243,7 +243,7 @@ void main() {
           lastTakenDate: today,
           beginingDate: today.subtract(
 // NOTE: Not into rest duration and notification duration
-            Duration(days: 10),
+            const Duration(days: 10),
           ),
         );
         final pillSheetGroup = PillSheetGroup(
@@ -305,7 +305,7 @@ void main() {
           lastTakenDate: today,
           beginingDate: today.subtract(
 // NOTE: Not into rest duration and notification duration
-            Duration(days: 10),
+            const Duration(days: 10),
           ),
         );
         final pillSheetGroup = PillSheetGroup(
@@ -321,7 +321,7 @@ void main() {
           isLinkedLoginProvider: true,
           premiumTrialGuideNotificationIsClosed: false,
           recommendedSignupNotificationIsAlreadyShow: false,
-          trialDeadlineDate: today.add(Duration(days: 1)),
+          trialDeadlineDate: today.add(const Duration(days: 1)),
           discountEntitlementDeadlineDate: null,
         );
 
@@ -363,10 +363,10 @@ void main() {
 
         var pillSheet = PillSheet.create(PillSheetType.pillsheet_21);
         pillSheet = pillSheet.copyWith(
-          lastTakenDate: today.subtract(Duration(days: 1)),
+          lastTakenDate: today.subtract(const Duration(days: 1)),
           beginingDate: today.subtract(
 // NOTE: To deactive pill sheet
-            Duration(days: 30),
+            const Duration(days: 30),
           ),
         );
         final pillSheetGroup = PillSheetGroup(
@@ -429,7 +429,7 @@ void main() {
           lastTakenDate: today,
           beginingDate: today.subtract(
 // NOTE: Not into rest duration and notification duration
-            Duration(days: 10),
+            const Duration(days: 10),
           ),
         );
         final pillSheetGroup = PillSheetGroup(
@@ -490,7 +490,7 @@ void main() {
           lastTakenDate: today,
           beginingDate: today.subtract(
 // NOTE: Into rest duration and notification duration
-            Duration(days: 25),
+            const Duration(days: 25),
           ),
         );
         final pillSheetGroup = PillSheetGroup(
@@ -548,10 +548,10 @@ void main() {
 
         var pillSheet = PillSheet.create(PillSheetType.pillsheet_21);
         pillSheet = pillSheet.copyWith(
-          lastTakenDate: today.subtract(Duration(days: 1)),
+          lastTakenDate: today.subtract(const Duration(days: 1)),
           beginingDate: today.subtract(
 // NOTE: To deactive pill sheet
-            Duration(days: 30),
+            const Duration(days: 30),
           ),
         );
         final pillSheetGroup = PillSheetGroup(
@@ -611,10 +611,10 @@ void main() {
 
       var pillSheet = PillSheet.create(PillSheetType.pillsheet_21);
       pillSheet = pillSheet.copyWith(
-        lastTakenDate: today.subtract(Duration(days: 1)),
+        lastTakenDate: today.subtract(const Duration(days: 1)),
         beginingDate: today.subtract(
 // NOTE: To activate pill sheet
-          Duration(days: 1),
+          const Duration(days: 1),
         ),
       );
       final pillSheetGroup = PillSheetGroup(

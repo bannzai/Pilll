@@ -95,7 +95,7 @@ class _HUDState extends State<HUD> {
                   color: Colors.black.withOpacity(0.08),
                 ),
               ),
-            Center(child: Indicator()),
+            const Center(child: Indicator()),
           ],
         ],
       ),

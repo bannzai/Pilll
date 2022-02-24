@@ -22,7 +22,7 @@ class DiscountPriceDeadline extends HookConsumerWidget {
     }
     final countdown = discountPriceDeadlineCountdownString(difference);
     return Container(
-      padding: EdgeInsets.only(top: 10, bottom: 4),
+      padding: const EdgeInsets.only(top: 10, bottom: 4),
       child: GestureDetector(
         onTap: onTap,
         child: Stack(
@@ -44,7 +44,7 @@ class DiscountPriceDeadline extends HookConsumerWidget {
                 ),
                 onPressed: () {},
                 iconSize: 24,
-                padding: EdgeInsets.all(8),
+                padding: const EdgeInsets.all(8),
                 alignment: Alignment.centerRight,
               ),
             ),

@@ -15,7 +15,7 @@ class MigrateInfo extends StatelessWidget {
       body: SingleChildScrollView(
         child: Center(
           child: Container(
-            padding: EdgeInsets.only(left: 15, right: 15, bottom: 15, top: 24),
+            padding: const EdgeInsets.only(left: 15, right: 15, bottom: 15, top: 24),
             child: Column(
               mainAxisAlignment: MainAxisAlignment.center,
               crossAxisAlignment: CrossAxisAlignment.start,
@@ -24,7 +24,7 @@ class MigrateInfo extends StatelessWidget {
                   "お知らせとお詫び",
                   style: FontType.sBigTitle.merge(TextColorStyle.main),
                 ),
-                SizedBox(height: 20),
+                const SizedBox(height: 20),
                 RichText(
                   textAlign: TextAlign.start,
                   text: TextSpan(
@@ -46,12 +46,12 @@ class MigrateInfo extends StatelessWidget {
                     ],
                   ),
                 ),
-                SizedBox(height: 10),
+                const SizedBox(height: 10),
                 Text(
                   "先日の大型アップデート後に一部のユーザーの方から「アップデート前のデータが分からなくなり、今飲んでいるピル番号が把握できなくなった」と。お問い合わせをいただきました。アプリの作り直しの過程で自動でピル番号を自動的に移行することが困難になり、このような事態になってしまいました。",
                   style: FontType.assisting.merge(TextColorStyle.main),
                 ),
-                SizedBox(height: 10),
+                const SizedBox(height: 10),
                 RichText(
                   textAlign: TextAlign.start,
                   text: TextSpan(
@@ -73,12 +73,12 @@ class MigrateInfo extends StatelessWidget {
                     ],
                   ),
                 ),
-                SizedBox(height: 10),
+                const SizedBox(height: 10),
                 Text(
                   "なお現在服用している番号がすでに把握できている方は引き続きそのままアプリを使っていただいて構いません。",
                   style: FontType.assisting.merge(TextColorStyle.main),
                 ),
-                SizedBox(height: 10),
+                const SizedBox(height: 10),
                 Text(
                   "今回は以前からアプリを使っていただいているユーザーの方にご迷惑をおかけする形になり申し訳ありません。",
                   style: FontType.assisting.merge(TextColorStyle.main),
@@ -87,7 +87,7 @@ class MigrateInfo extends StatelessWidget {
                   "引き続きよろしくお願いいたします。",
                   style: FontType.assisting.merge(TextColorStyle.main),
                 ),
-                SizedBox(height: 32),
+                const SizedBox(height: 32),
                 Align(
                   alignment: Alignment.center,
                   child: Container(
@@ -95,7 +95,7 @@ class MigrateInfo extends StatelessWidget {
                       child: PrimaryButton(
                           onPressed: () async => onClose(), text: "閉じる")),
                 ),
-                SizedBox(height: 32),
+                const SizedBox(height: 32),
               ],
             ),
           ),

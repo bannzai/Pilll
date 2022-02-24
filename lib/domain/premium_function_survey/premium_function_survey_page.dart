@@ -22,7 +22,7 @@ class PremiumFunctionSurveyPage extends HookConsumerWidget {
       backgroundColor: PilllColors.background,
       appBar: AppBar(
         leading: IconButton(
-          icon: Icon(Icons.close, color: Colors.black),
+          icon: const Icon(Icons.close, color: Colors.black),
           onPressed: () => Navigator.of(context).pop(),
         ),
         elevation: 0,
@@ -31,7 +31,7 @@ class PremiumFunctionSurveyPage extends HookConsumerWidget {
       body: SafeArea(
         child: SingleChildScrollView(
           child: Container(
-            padding: EdgeInsets.symmetric(horizontal: 46.5),
+            padding: const EdgeInsets.symmetric(horizontal: 46.5),
             child: Center(
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.center,
@@ -45,7 +45,7 @@ class PremiumFunctionSurveyPage extends HookConsumerWidget {
                       fontSize: 20,
                     ),
                   ),
-                  SizedBox(height: 16),
+                  const SizedBox(height: 16),
                   Text(
                     "もしよければ、便利だと感じた機能を教えて下さい！ぜひ、あなたのご意見をお聞かせください。",
                     style: TextStyle(
@@ -55,7 +55,7 @@ class PremiumFunctionSurveyPage extends HookConsumerWidget {
                       fontSize: 14,
                     ),
                   ),
-                  SizedBox(height: 8),
+                  const SizedBox(height: 8),
                   GestureDetector(
                     onTap: () async {
                       analytics.logEvent(name: "premium_link_tapped_on_survey");
@@ -68,7 +68,7 @@ class PremiumFunctionSurveyPage extends HookConsumerWidget {
                             fontWeight: FontWeight.w400,
                             color: TextColor.primary)),
                   ),
-                  SizedBox(height: 24),
+                  const SizedBox(height: 24),
                   Column(
                     mainAxisAlignment: MainAxisAlignment.start,
                     children: [
@@ -81,7 +81,7 @@ class PremiumFunctionSurveyPage extends HookConsumerWidget {
                       ),
                     ],
                   ),
-                  SizedBox(height: 22),
+                  const SizedBox(height: 22),
                   Column(
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
@@ -93,7 +93,7 @@ class PremiumFunctionSurveyPage extends HookConsumerWidget {
                             fontSize: 12,
                             fontWeight: FontWeight.w500),
                       ),
-                      SizedBox(height: 10),
+                      const SizedBox(height: 10),
                       TextField(
                         decoration: const InputDecoration(
                           border: OutlineInputBorder(
@@ -113,7 +113,7 @@ class PremiumFunctionSurveyPage extends HookConsumerWidget {
                       ),
                     ],
                   ),
-                  SizedBox(height: 37),
+                  const SizedBox(height: 37),
                   Padding(
                     padding: const EdgeInsets.only(bottom: 44),
                     child: PrimaryButton(
@@ -143,7 +143,7 @@ class PremiumFunctionSurveyPage extends HookConsumerWidget {
 extension PremiumFunctionSurveyPageRoutes on PremiumFunctionSurveyPage {
   static Route<dynamic> route() {
     return MaterialPageRoute(
-      settings: RouteSettings(name: "PremiumFunctionSurveyPage"),
+      settings: const RouteSettings(name: "PremiumFunctionSurveyPage"),
       builder: (_) => PremiumFunctionSurveyPage(),
       fullscreenDialog: true,
     );

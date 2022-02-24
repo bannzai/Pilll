@@ -29,7 +29,7 @@ void main() {
   });
   group('appearance taken button type', () {
     testWidgets('today pill not taken', (WidgetTester tester) async {
-      final yesterday = today().subtract(Duration(days: 1));
+      final yesterday = today().subtract(const Duration(days: 1));
       final pillSheet = PillSheet(
         typeInfo: PillSheetType.pillsheet_21.typeInfo,
         beginingDate: yesterday,

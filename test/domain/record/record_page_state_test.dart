@@ -67,7 +67,7 @@ void main() {
         lastTakenDate: DateTime.parse("2020-11-23"),
         createdAt: DateTime.parse("2020-11-21"),
       );
-      final setting = Setting(
+      final setting = const Setting(
         pillSheetTypes: [PillSheetType.pillsheet_21],
         pillNumberForFromMenstruation: 22,
         durationMenstruation: 4,
@@ -84,23 +84,23 @@ void main() {
       when(settingService.fetch())
           .thenAnswer((realInvocation) => Future.value(setting));
       when(settingService.stream())
-          .thenAnswer((realInvocation) => Stream.empty());
+          .thenAnswer((realInvocation) => const Stream.empty());
 
       final authService = MockAuthService();
       when(authService.isLinkedApple()).thenReturn(false);
       when(authService.isLinkedGoogle()).thenReturn(false);
-      when(authService.stream()).thenAnswer((realInvocation) => Stream.empty());
+      when(authService.stream()).thenAnswer((realInvocation) => const Stream.empty());
       final userService = MockUserService();
       when(userService.fetch())
           .thenAnswer((reaInvocation) => Future.value(_FakeUser()));
-      when(userService.stream()).thenAnswer((realInvocation) => Stream.empty());
+      when(userService.stream()).thenAnswer((realInvocation) => const Stream.empty());
       final pillSheetModifedHistoryService =
           MockPillSheetModifiedHistoryService();
       final pillSheetGroupService = MockPillSheetGroupService();
       when(pillSheetGroupService.fetchLatest())
           .thenAnswer((realInvocation) => Future.value(pillSheetGroup));
       when(pillSheetGroupService.streamForLatest())
-          .thenAnswer((realInvocation) => Stream.empty());
+          .thenAnswer((realInvocation) => const Stream.empty());
       final store = RecordPageStore(
         batch,
         service,
@@ -140,7 +140,7 @@ void main() {
         lastTakenDate: DateTime.parse("2020-11-22"),
         createdAt: DateTime.parse("2020-11-21"),
       );
-      final setting = Setting(
+      final setting = const Setting(
         pillSheetTypes: [PillSheetType.pillsheet_21],
         pillNumberForFromMenstruation: 22,
         durationMenstruation: 4,
@@ -157,23 +157,23 @@ void main() {
       when(settingService.fetch())
           .thenAnswer((realInvocation) => Future.value(setting));
       when(settingService.stream())
-          .thenAnswer((realInvocation) => Stream.empty());
+          .thenAnswer((realInvocation) => const Stream.empty());
 
       final authService = MockAuthService();
       when(authService.isLinkedApple()).thenReturn(false);
       when(authService.isLinkedGoogle()).thenReturn(false);
-      when(authService.stream()).thenAnswer((realInvocation) => Stream.empty());
+      when(authService.stream()).thenAnswer((realInvocation) => const Stream.empty());
       final userService = MockUserService();
       when(userService.fetch())
           .thenAnswer((reaInvocation) => Future.value(_FakeUser()));
-      when(userService.stream()).thenAnswer((realInvocation) => Stream.empty());
+      when(userService.stream()).thenAnswer((realInvocation) => const Stream.empty());
       final pillSheetModifedHistoryService =
           MockPillSheetModifiedHistoryService();
       final pillSheetGroupService = MockPillSheetGroupService();
       when(pillSheetGroupService.fetchLatest())
           .thenAnswer((realInvocation) => Future.value(pillSheetGroup));
       when(pillSheetGroupService.streamForLatest())
-          .thenAnswer((realInvocation) => Stream.empty());
+          .thenAnswer((realInvocation) => const Stream.empty());
 
       final store = RecordPageStore(
         batch,
@@ -216,7 +216,7 @@ void main() {
         lastTakenDate: DateTime.parse("2020-11-23"),
         createdAt: DateTime.parse("2020-11-21"),
       );
-      final setting = Setting(
+      final setting = const Setting(
         pillSheetTypes: [PillSheetType.pillsheet_21],
         pillNumberForFromMenstruation: 22,
         durationMenstruation: 4,
@@ -233,23 +233,23 @@ void main() {
       when(settingService.fetch())
           .thenAnswer((realInvocation) => Future.value(setting));
       when(settingService.stream())
-          .thenAnswer((realInvocation) => Stream.empty());
+          .thenAnswer((realInvocation) => const Stream.empty());
 
       final authService = MockAuthService();
       when(authService.isLinkedApple()).thenReturn(false);
       when(authService.isLinkedGoogle()).thenReturn(false);
-      when(authService.stream()).thenAnswer((realInvocation) => Stream.empty());
+      when(authService.stream()).thenAnswer((realInvocation) => const Stream.empty());
       final userService = MockUserService();
       when(userService.fetch())
           .thenAnswer((reaInvocation) => Future.value(_FakeUser()));
-      when(userService.stream()).thenAnswer((realInvocation) => Stream.empty());
+      when(userService.stream()).thenAnswer((realInvocation) => const Stream.empty());
       final pillSheetModifedHistoryService =
           MockPillSheetModifiedHistoryService();
       final pillSheetGroupService = MockPillSheetGroupService();
       when(pillSheetGroupService.fetchLatest())
           .thenAnswer((realInvocation) => Future.value(pillSheetGroup));
       when(pillSheetGroupService.streamForLatest())
-          .thenAnswer((realInvocation) => Stream.empty());
+          .thenAnswer((realInvocation) => const Stream.empty());
 
       final store = RecordPageStore(
         batch,
@@ -286,7 +286,7 @@ void main() {
         lastTakenDate: DateTime.parse("2020-11-22"),
         createdAt: DateTime.parse("2020-11-21"),
       );
-      final setting = Setting(
+      final setting = const Setting(
         pillSheetTypes: [PillSheetType.pillsheet_21],
         pillNumberForFromMenstruation: 22,
         durationMenstruation: 4,
@@ -304,23 +304,23 @@ void main() {
       when(settingService.fetch())
           .thenAnswer((realInvocation) => Future.value(setting));
       when(settingService.stream())
-          .thenAnswer((realInvocation) => Stream.empty());
+          .thenAnswer((realInvocation) => const Stream.empty());
 
       final authService = MockAuthService();
       when(authService.isLinkedApple()).thenReturn(false);
       when(authService.isLinkedGoogle()).thenReturn(false);
-      when(authService.stream()).thenAnswer((realInvocation) => Stream.empty());
+      when(authService.stream()).thenAnswer((realInvocation) => const Stream.empty());
       final userService = MockUserService();
       when(userService.fetch())
           .thenAnswer((reaInvocation) => Future.value(_FakeUser()));
-      when(userService.stream()).thenAnswer((realInvocation) => Stream.empty());
+      when(userService.stream()).thenAnswer((realInvocation) => const Stream.empty());
       final pillSheetModifedHistoryService =
           MockPillSheetModifiedHistoryService();
       final pillSheetGroupService = MockPillSheetGroupService();
       when(pillSheetGroupService.fetchLatest())
           .thenAnswer((realInvocation) => Future.value(pillSheetGroup));
       when(pillSheetGroupService.streamForLatest())
-          .thenAnswer((realInvocation) => Stream.empty());
+          .thenAnswer((realInvocation) => const Stream.empty());
 
       final store = RecordPageStore(
         batch,

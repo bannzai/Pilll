@@ -37,7 +37,7 @@ void main() {
           ),
         ),
       );
-      await tester.pumpAndSettle(Duration(milliseconds: 500));
+      await tester.pumpAndSettle(const Duration(milliseconds: 500));
 
       expect(find.byWidgetPredicate((widget) => widget is NormalPillMark),
           findsNWidgets(21));
@@ -64,7 +64,7 @@ void main() {
           ),
         ),
       );
-      await tester.pumpAndSettle(Duration(milliseconds: 500));
+      await tester.pumpAndSettle(const Duration(milliseconds: 500));
 
       expect(find.byWidgetPredicate((widget) => widget is NormalPillMark),
           findsNWidgets(24));
@@ -91,7 +91,7 @@ void main() {
           ),
         ),
       );
-      await tester.pumpAndSettle(Duration(milliseconds: 500));
+      await tester.pumpAndSettle(const Duration(milliseconds: 500));
 
       expect(find.byWidgetPredicate((widget) => widget is NormalPillMark),
           findsNWidgets(27));
@@ -117,7 +117,7 @@ void main() {
           ),
         ),
       );
-      await tester.pumpAndSettle(Duration(milliseconds: 500));
+      await tester.pumpAndSettle(const Duration(milliseconds: 500));
 
       expect(find.byWidgetPredicate((widget) => widget is NormalPillMark),
           findsNWidgets(28));

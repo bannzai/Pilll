@@ -31,12 +31,12 @@ class HealthCareRow extends StatelessWidget {
         children: [
           Text("ヘルスケア連携", style: FontType.listRow),
           if (!isPremium) ...[
-            SizedBox(width: 8),
+            const SizedBox(width: 8),
             PremiumBadge(),
           ]
         ],
       ),
-      subtitle: Text("Pilllで記録した生理記録を自動でヘルスケアに記録できます"),
+      subtitle: const Text("Pilllで記録した生理記録を自動でヘルスケアに記録できます"),
       onTap: () async {
         analytics.logEvent(
           name: "did_select_health_care_row",

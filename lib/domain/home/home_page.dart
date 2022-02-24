@@ -54,7 +54,7 @@ class _HomePageState extends State<HomePage>
         backgroundColor: PilllColors.background,
         appBar: null,
         bottomNavigationBar: Container(
-          decoration: BoxDecoration(
+          decoration: const BoxDecoration(
             border:
                 Border(top: BorderSide(width: 1, color: PilllColors.border)),
           ),
@@ -64,7 +64,7 @@ class _HomePageState extends State<HomePage>
               child: TabBar(
                 controller: _tabController,
                 labelColor: PilllColors.secondary,
-                labelStyle: TextStyle(fontSize: 12),
+                labelStyle: const TextStyle(fontSize: 12),
                 indicatorColor: Colors.transparent,
                 unselectedLabelColor: TextColor.gray,
                 tabs: <Tab>[
@@ -102,7 +102,7 @@ class _HomePageState extends State<HomePage>
           ),
         ),
         body: TabBarView(
-          physics: NeverScrollableScrollPhysics(),
+          physics: const NeverScrollableScrollPhysics(),
           controller: _tabController,
           children: <Widget>[
             RecordPage(),

@@ -32,7 +32,7 @@ class InformationForBeforeMigrate132 extends StatelessWidget {
         elevation: 0.0,
         backgroundColor: PilllColors.white,
         leading: IconButton(
-          icon: Icon(Icons.arrow_back, color: Colors.black),
+          icon: const Icon(Icons.arrow_back, color: Colors.black),
           onPressed: () => Navigator.of(context).pop(),
         ),
       ),
@@ -40,7 +40,7 @@ class InformationForBeforeMigrate132 extends StatelessWidget {
       body: SingleChildScrollView(
         child: Center(
           child: Container(
-            padding: EdgeInsets.only(left: 15, right: 15),
+            padding: const EdgeInsets.only(left: 15, right: 15),
             child: Column(
               mainAxisAlignment: MainAxisAlignment.center,
               crossAxisAlignment: CrossAxisAlignment.start,
@@ -49,42 +49,42 @@ class InformationForBeforeMigrate132 extends StatelessWidget {
                   "大型アップデート前の情報",
                   style: FontType.sBigTitle.merge(TextColorStyle.main),
                 ),
-                SizedBox(height: 32),
+                const SizedBox(height: 32),
                 Text(
                   "下記の情報はversion 2.0.0以前のアプリの情報になります",
                   style: FontType.subTitle.merge(TextColorStyle.main),
                 ),
-                SizedBox(height: 8),
+                const SizedBox(height: 8),
                 Text(
                   "最後に飲んだ日: ${this.salvagedOldLastTakenDate}",
                   style: FontType.listRow.merge(TextColorStyle.main),
                 ),
-                SizedBox(height: 4),
+                const SizedBox(height: 4),
                 Text(
                   "※大型アップデート前のアプリで最後にピルの服用記録をつけた日です",
                   style: FontType.description.merge(TextColorStyle.gray),
                 ),
-                SizedBox(height: 4),
+                const SizedBox(height: 4),
                 Text(
                   "最後に飲んだピル番号: ${_latestPillNumber()}",
                   style: FontType.listRow.merge(TextColorStyle.main),
                 ),
-                SizedBox(height: 4),
+                const SizedBox(height: 4),
                 Text(
                   "※大型アップデート前のアプリで最後に服用したピル番号になります",
                   style: FontType.description.merge(TextColorStyle.gray),
                 ),
-                SizedBox(height: 4),
+                const SizedBox(height: 4),
                 Text(
                   "今日服用予定だったピル番号: ${_todayPillNumber()}",
                   style: FontType.listRow.merge(TextColorStyle.main),
                 ),
-                SizedBox(height: 4),
+                const SizedBox(height: 4),
                 Text(
                   "※大型アップデート前のアプリを使用していた場合の本日のピル番号になります",
                   style: FontType.description.merge(TextColorStyle.gray),
                 ),
-                SizedBox(height: 32),
+                const SizedBox(height: 32),
               ],
             ),
           ),
@@ -100,7 +100,7 @@ extension InformationForBeforeMigrate132Route
       {required String salvagedOldStartTakenDate,
       required String salvagedOldLastTakenDate}) {
     return MaterialPageRoute(
-      settings: RouteSettings(name: "InformationForBeforeMigrate132Route"),
+      settings: const RouteSettings(name: "InformationForBeforeMigrate132Route"),
       builder: (_) => InformationForBeforeMigrate132(
         salvagedOldStartTakenDate: salvagedOldStartTakenDate,
         salvagedOldLastTakenDate: salvagedOldLastTakenDate,

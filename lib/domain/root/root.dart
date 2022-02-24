@@ -105,7 +105,7 @@ class RootState extends State<Root> {
             _error = displayError;
           });
 
-          return Indicator();
+          return const Indicator();
         });
       }),
     );
@@ -121,8 +121,8 @@ class RootState extends State<Root> {
     if (Environment.isDevelopment) {
       await remoteConfig.setConfigSettings(
         RemoteConfigSettings(
-          minimumFetchInterval: Duration(seconds: 0),
-          fetchTimeout: Duration(seconds: 30),
+          minimumFetchInterval: const Duration(seconds: 0),
+          fetchTimeout: const Duration(seconds: 30),
         ),
       );
     }

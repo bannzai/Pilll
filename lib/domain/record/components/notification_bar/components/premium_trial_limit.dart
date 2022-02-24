@@ -17,7 +17,7 @@ class PremiumTrialLimitNotificationBar extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      padding: EdgeInsets.only(top: 10, bottom: 10),
+      padding: const EdgeInsets.only(top: 10, bottom: 10),
       child: GestureDetector(
         onTap: () async {
           analytics.logEvent(name: "pressed_trial_limited_notification_bar");
@@ -26,21 +26,21 @@ class PremiumTrialLimitNotificationBar extends StatelessWidget {
         child: Row(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            SizedBox(width: 24),
-            Spacer(),
+            const SizedBox(width: 24),
+            const Spacer(),
             Text(
               premiumTrialLimit,
               style: FontType.assistingBold.merge(TextColorStyle.white),
               textAlign: TextAlign.center,
             ),
-            Spacer(),
+            const Spacer(),
             SvgPicture.asset(
               "images/arrow_right.svg",
               color: Colors.white,
               width: 16,
               height: 16,
             ),
-            SizedBox(width: 8),
+            const SizedBox(width: 8),
           ],
         ),
       ),

@@ -33,10 +33,10 @@ class AnnualPurchaseButton extends StatelessWidget {
         clipBehavior: Clip.none,
         children: [
           Container(
-            padding: EdgeInsets.fromLTRB(33, 24, 33, 24),
+            padding: const EdgeInsets.fromLTRB(33, 24, 33, 24),
             decoration: BoxDecoration(
               color: PilllColors.blueBackground,
-              borderRadius: BorderRadius.all(Radius.circular(4)),
+              borderRadius: const BorderRadius.all(Radius.circular(4)),
               border: Border.all(
                 width: 2,
                 color: PilllColors.secondary,
@@ -97,7 +97,7 @@ class _DiscountBadge extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      padding: EdgeInsets.only(left: 8, right: 8, top: 4, bottom: 4),
+      padding: const EdgeInsets.only(left: 8, right: 8, top: 4, bottom: 4),
       decoration: BoxDecoration(
         borderRadius: BorderRadius.circular(12),
         color: PilllColors.primary,

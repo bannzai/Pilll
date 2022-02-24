@@ -40,7 +40,7 @@ void main() {
       final authService = MockAuthService();
       when(authService.isLinkedApple()).thenReturn(false);
       when(authService.isLinkedGoogle()).thenReturn(false);
-      when(authService.stream()).thenAnswer((realInvocation) => Stream.empty());
+      when(authService.stream()).thenAnswer((realInvocation) => const Stream.empty());
 
       final pillSheet = PillSheet(
         typeInfo: PillSheetType.pillsheet_28_0.typeInfo,
@@ -64,7 +64,7 @@ void main() {
       when(pillSheetGroupService.fetchLatest())
           .thenAnswer((realInvocation) async => pillSheetGroup);
       when(pillSheetGroupService.streamForLatest())
-          .thenAnswer((realInvocation) => Stream.empty());
+          .thenAnswer((realInvocation) => const Stream.empty());
       when(pillSheetGroupService.register(batch, pillSheetGroup))
           .thenReturn(pillSheetGroup.copyWith(id: "group_id"));
 
@@ -76,7 +76,7 @@ void main() {
       when(pillSheetModifiedHistoryService.add(batch, history))
           .thenReturn(null);
 
-      final setting = Setting(
+      final setting = const Setting(
         pillNumberForFromMenstruation: 22,
         durationMenstruation: 3,
         isOnReminder: true,
@@ -92,12 +92,12 @@ void main() {
       when(settingService.fetch())
           .thenAnswer((realInvocation) async => setting);
       when(settingService.stream())
-          .thenAnswer((realInvocation) => Stream.empty());
+          .thenAnswer((realInvocation) => const Stream.empty());
       when(settingService.updateWithBatch(batch, setting)).thenReturn(null);
 
-      final user = User();
+      final user = const User();
       final userService = MockUserService();
-      when(userService.stream()).thenAnswer((realInvocation) => Stream.empty());
+      when(userService.stream()).thenAnswer((realInvocation) => const Stream.empty());
       when(userService.fetch()).thenAnswer((realInvocation) async => user);
 
       final container = ProviderContainer(
@@ -115,7 +115,7 @@ void main() {
       );
       final store = container.read(recordPageStoreProvider.notifier);
 
-      await Future.delayed(Duration(seconds: 1));
+      await Future.delayed(const Duration(seconds: 1));
       await store.register(setting);
     });
     test("group has two pill sheet", () async {
@@ -131,7 +131,7 @@ void main() {
       final authService = MockAuthService();
       when(authService.isLinkedApple()).thenReturn(false);
       when(authService.isLinkedGoogle()).thenReturn(false);
-      when(authService.stream()).thenAnswer((realInvocation) => Stream.empty());
+      when(authService.stream()).thenAnswer((realInvocation) => const Stream.empty());
 
       final pillSheet = PillSheet(
         typeInfo: PillSheetType.pillsheet_28_0.typeInfo,
@@ -141,7 +141,7 @@ void main() {
       );
       final pillSheet2 = PillSheet(
         typeInfo: PillSheetType.pillsheet_21.typeInfo,
-        beginingDate: _today.add(Duration(days: 28)),
+        beginingDate: _today.add(const Duration(days: 28)),
         lastTakenDate: null,
         groupIndex: 1,
       );
@@ -164,7 +164,7 @@ void main() {
       when(pillSheetGroupService.fetchLatest())
           .thenAnswer((realInvocation) async => pillSheetGroup);
       when(pillSheetGroupService.streamForLatest())
-          .thenAnswer((realInvocation) => Stream.empty());
+          .thenAnswer((realInvocation) => const Stream.empty());
       when(pillSheetGroupService.register(batch, pillSheetGroup))
           .thenReturn(pillSheetGroup.copyWith(id: "group_id"));
 
@@ -177,7 +177,7 @@ void main() {
       when(pillSheetModifiedHistoryService.add(batch, history))
           .thenReturn(null);
 
-      final setting = Setting(
+      final setting = const Setting(
         pillNumberForFromMenstruation: 22,
         durationMenstruation: 3,
         isOnReminder: true,
@@ -194,12 +194,12 @@ void main() {
       when(settingService.fetch())
           .thenAnswer((realInvocation) async => setting);
       when(settingService.stream())
-          .thenAnswer((realInvocation) => Stream.empty());
+          .thenAnswer((realInvocation) => const Stream.empty());
       when(settingService.updateWithBatch(batch, setting)).thenReturn(null);
 
-      final user = User();
+      final user = const User();
       final userService = MockUserService();
-      when(userService.stream()).thenAnswer((realInvocation) => Stream.empty());
+      when(userService.stream()).thenAnswer((realInvocation) => const Stream.empty());
       when(userService.fetch()).thenAnswer((realInvocation) async => user);
 
       final container = ProviderContainer(
@@ -217,7 +217,7 @@ void main() {
       );
       final store = container.read(recordPageStoreProvider.notifier);
 
-      await Future.delayed(Duration(seconds: 1));
+      await Future.delayed(const Duration(seconds: 1));
       await store.register(setting);
     });
   });
@@ -235,7 +235,7 @@ void main() {
       final authService = MockAuthService();
       when(authService.isLinkedApple()).thenReturn(false);
       when(authService.isLinkedGoogle()).thenReturn(false);
-      when(authService.stream()).thenAnswer((realInvocation) => Stream.empty());
+      when(authService.stream()).thenAnswer((realInvocation) => const Stream.empty());
 
       final pillSheet = PillSheet(
         id: "sheet_id",
@@ -268,7 +268,7 @@ void main() {
       when(pillSheetGroupService.fetchLatest())
           .thenAnswer((realInvocation) async => pillSheetGroup);
       when(pillSheetGroupService.streamForLatest())
-          .thenAnswer((realInvocation) => Stream.empty());
+          .thenAnswer((realInvocation) => const Stream.empty());
       when(pillSheetGroupService.update(batch, updatedPillSheetGroup))
           .thenReturn(null);
 
@@ -286,7 +286,7 @@ void main() {
       when(pillSheetModifiedHistoryService.add(batch, history))
           .thenReturn(null);
 
-      final setting = Setting(
+      final setting = const Setting(
         pillNumberForFromMenstruation: 22,
         durationMenstruation: 3,
         isOnReminder: true,
@@ -302,12 +302,12 @@ void main() {
       when(settingService.fetch())
           .thenAnswer((realInvocation) async => setting);
       when(settingService.stream())
-          .thenAnswer((realInvocation) => Stream.empty());
+          .thenAnswer((realInvocation) => const Stream.empty());
       when(settingService.updateWithBatch(batch, setting)).thenReturn(null);
 
-      final user = User();
+      final user = const User();
       final userService = MockUserService();
-      when(userService.stream()).thenAnswer((realInvocation) => Stream.empty());
+      when(userService.stream()).thenAnswer((realInvocation) => const Stream.empty());
       when(userService.fetch()).thenAnswer((realInvocation) async => user);
 
       final container = ProviderContainer(
@@ -325,7 +325,7 @@ void main() {
       );
       final store = container.read(recordPageStoreProvider.notifier);
 
-      await Future.delayed(Duration(seconds: 1));
+      await Future.delayed(const Duration(seconds: 1));
       final result = await store.taken();
       expect(result, isTrue);
     });
@@ -342,7 +342,7 @@ void main() {
       final authService = MockAuthService();
       when(authService.isLinkedApple()).thenReturn(false);
       when(authService.isLinkedGoogle()).thenReturn(false);
-      when(authService.stream()).thenAnswer((realInvocation) => Stream.empty());
+      when(authService.stream()).thenAnswer((realInvocation) => const Stream.empty());
 
       final pillSheet = PillSheet(
         id: "sheet_id",
@@ -354,7 +354,7 @@ void main() {
       final pillSheet2 = PillSheet(
         id: "sheet_id_2",
         typeInfo: PillSheetType.pillsheet_21.typeInfo,
-        beginingDate: _today.add(Duration(days: 28)),
+        beginingDate: _today.add(const Duration(days: 28)),
         groupIndex: 1,
         lastTakenDate: null,
       );
@@ -386,7 +386,7 @@ void main() {
       when(pillSheetGroupService.fetchLatest())
           .thenAnswer((realInvocation) async => pillSheetGroup);
       when(pillSheetGroupService.streamForLatest())
-          .thenAnswer((realInvocation) => Stream.empty());
+          .thenAnswer((realInvocation) => const Stream.empty());
       when(pillSheetGroupService.update(batch, updatedPillSheetGroup))
           .thenReturn(null);
 
@@ -404,7 +404,7 @@ void main() {
       when(pillSheetModifiedHistoryService.add(batch, history))
           .thenReturn(null);
 
-      final setting = Setting(
+      final setting = const Setting(
         pillNumberForFromMenstruation: 22,
         durationMenstruation: 3,
         isOnReminder: true,
@@ -421,12 +421,12 @@ void main() {
       when(settingService.fetch())
           .thenAnswer((realInvocation) async => setting);
       when(settingService.stream())
-          .thenAnswer((realInvocation) => Stream.empty());
+          .thenAnswer((realInvocation) => const Stream.empty());
       when(settingService.updateWithBatch(batch, setting)).thenReturn(null);
 
-      final user = User();
+      final user = const User();
       final userService = MockUserService();
-      when(userService.stream()).thenAnswer((realInvocation) => Stream.empty());
+      when(userService.stream()).thenAnswer((realInvocation) => const Stream.empty());
       when(userService.fetch()).thenAnswer((realInvocation) async => user);
 
       final container = ProviderContainer(
@@ -444,7 +444,7 @@ void main() {
       );
       final store = container.read(recordPageStoreProvider.notifier);
 
-      await Future.delayed(Duration(seconds: 1));
+      await Future.delayed(const Duration(seconds: 1));
       final result = await store.taken();
       expect(result, isTrue);
     });
@@ -462,7 +462,7 @@ void main() {
       final authService = MockAuthService();
       when(authService.isLinkedApple()).thenReturn(false);
       when(authService.isLinkedGoogle()).thenReturn(false);
-      when(authService.stream()).thenAnswer((realInvocation) => Stream.empty());
+      when(authService.stream()).thenAnswer((realInvocation) => const Stream.empty());
 
       final pillSheet = PillSheet(
         id: "sheet_id",
@@ -506,7 +506,7 @@ void main() {
       when(pillSheetGroupService.fetchLatest())
           .thenAnswer((realInvocation) async => pillSheetGroup);
       when(pillSheetGroupService.streamForLatest())
-          .thenAnswer((realInvocation) => Stream.empty());
+          .thenAnswer((realInvocation) => const Stream.empty());
       when(pillSheetGroupService.update(batch, updatedPillSheetGroup))
           .thenReturn(null);
 
@@ -524,7 +524,7 @@ void main() {
       when(pillSheetModifiedHistoryService.add(batch, history))
           .thenReturn(null);
 
-      final setting = Setting(
+      final setting = const Setting(
         pillNumberForFromMenstruation: 22,
         durationMenstruation: 3,
         isOnReminder: true,
@@ -541,12 +541,12 @@ void main() {
       when(settingService.fetch())
           .thenAnswer((realInvocation) async => setting);
       when(settingService.stream())
-          .thenAnswer((realInvocation) => Stream.empty());
+          .thenAnswer((realInvocation) => const Stream.empty());
       when(settingService.updateWithBatch(batch, setting)).thenReturn(null);
 
-      final user = User();
+      final user = const User();
       final userService = MockUserService();
-      when(userService.stream()).thenAnswer((realInvocation) => Stream.empty());
+      when(userService.stream()).thenAnswer((realInvocation) => const Stream.empty());
       when(userService.fetch()).thenAnswer((realInvocation) async => user);
 
       final container = ProviderContainer(
@@ -564,7 +564,7 @@ void main() {
       );
       final store = container.read(recordPageStoreProvider.notifier);
 
-      await Future.delayed(Duration(seconds: 1));
+      await Future.delayed(const Duration(seconds: 1));
       final result = await store.taken();
       expect(result, isTrue);
     });
@@ -582,14 +582,14 @@ void main() {
       final authService = MockAuthService();
       when(authService.isLinkedApple()).thenReturn(false);
       when(authService.isLinkedGoogle()).thenReturn(false);
-      when(authService.stream()).thenAnswer((realInvocation) => Stream.empty());
+      when(authService.stream()).thenAnswer((realInvocation) => const Stream.empty());
 
       final pillSheet = PillSheet(
         id: "sheet_id",
         typeInfo: PillSheetType.pillsheet_28_0.typeInfo,
-        beginingDate: _today.subtract(Duration(days: 28)),
+        beginingDate: _today.subtract(const Duration(days: 28)),
         groupIndex: 0,
-        lastTakenDate: _today.subtract(Duration(days: 2)),
+        lastTakenDate: _today.subtract(const Duration(days: 2)),
       );
       final pillSheet2 = PillSheet(
         id: "sheet_id_2",
@@ -629,7 +629,7 @@ void main() {
       when(pillSheetGroupService.fetchLatest())
           .thenAnswer((realInvocation) async => pillSheetGroup);
       when(pillSheetGroupService.streamForLatest())
-          .thenAnswer((realInvocation) => Stream.empty());
+          .thenAnswer((realInvocation) => const Stream.empty());
       when(pillSheetGroupService.update(batch, updatedPillSheetGroup))
           .thenReturn(null);
 
@@ -647,7 +647,7 @@ void main() {
       when(pillSheetModifiedHistoryService.add(batch, history))
           .thenReturn(null);
 
-      final setting = Setting(
+      final setting = const Setting(
         pillNumberForFromMenstruation: 22,
         durationMenstruation: 3,
         isOnReminder: true,
@@ -664,12 +664,12 @@ void main() {
       when(settingService.fetch())
           .thenAnswer((realInvocation) async => setting);
       when(settingService.stream())
-          .thenAnswer((realInvocation) => Stream.empty());
+          .thenAnswer((realInvocation) => const Stream.empty());
       when(settingService.updateWithBatch(batch, setting)).thenReturn(null);
 
-      final user = User();
+      final user = const User();
       final userService = MockUserService();
-      when(userService.stream()).thenAnswer((realInvocation) => Stream.empty());
+      when(userService.stream()).thenAnswer((realInvocation) => const Stream.empty());
       when(userService.fetch()).thenAnswer((realInvocation) async => user);
 
       final container = ProviderContainer(
@@ -687,7 +687,7 @@ void main() {
       );
       final store = container.read(recordPageStoreProvider.notifier);
 
-      await Future.delayed(Duration(seconds: 1));
+      await Future.delayed(const Duration(seconds: 1));
       final result = await store.taken();
       expect(result, isTrue);
     });
@@ -710,7 +710,7 @@ void main() {
         when(authService.isLinkedApple()).thenReturn(false);
         when(authService.isLinkedGoogle()).thenReturn(false);
         when(authService.stream())
-            .thenAnswer((realInvocation) => Stream.empty());
+            .thenAnswer((realInvocation) => const Stream.empty());
 
         final pillSheet = PillSheet(
           id: "sheet_id",
@@ -722,7 +722,7 @@ void main() {
         final pillSheetService = MockPillSheetService();
         when(pillSheetService.update(batch, [
           pillSheet.copyWith(
-              lastTakenDate: yesterday.subtract(Duration(days: 1)))
+              lastTakenDate: yesterday.subtract(const Duration(days: 1)))
         ])).thenReturn(null);
 
         final pillSheetGroup = PillSheetGroup(
@@ -738,7 +738,7 @@ void main() {
           pillSheetIDs: ["sheet_id"],
           pillSheets: [
             pillSheet.copyWith(
-                lastTakenDate: yesterday.subtract(Duration(days: 1))),
+                lastTakenDate: yesterday.subtract(const Duration(days: 1))),
           ],
           createdAt: now(),
         );
@@ -746,7 +746,7 @@ void main() {
         when(pillSheetGroupService.fetchLatest())
             .thenAnswer((realInvocation) async => pillSheetGroup);
         when(pillSheetGroupService.streamForLatest())
-            .thenAnswer((realInvocation) => Stream.empty());
+            .thenAnswer((realInvocation) => const Stream.empty());
         when(pillSheetGroupService.update(batch, updatedPillSheetGroup))
             .thenReturn(null);
 
@@ -755,7 +755,7 @@ void main() {
           pillSheetGroupID: "group_id",
           before: pillSheet,
           after: pillSheet.copyWith(
-            lastTakenDate: yesterday.subtract(Duration(days: 1)),
+            lastTakenDate: yesterday.subtract(const Duration(days: 1)),
           ),
         );
         final pillSheetModifiedHistoryService =
@@ -763,7 +763,7 @@ void main() {
         when(pillSheetModifiedHistoryService.add(batch, history))
             .thenReturn(null);
 
-        final setting = Setting(
+        final setting = const Setting(
           pillNumberForFromMenstruation: 22,
           durationMenstruation: 3,
           isOnReminder: true,
@@ -779,13 +779,13 @@ void main() {
         when(settingService.fetch())
             .thenAnswer((realInvocation) async => setting);
         when(settingService.stream())
-            .thenAnswer((realInvocation) => Stream.empty());
+            .thenAnswer((realInvocation) => const Stream.empty());
         when(settingService.updateWithBatch(batch, setting)).thenReturn(null);
 
-        final user = User();
+        final user = const User();
         final userService = MockUserService();
         when(userService.stream())
-            .thenAnswer((realInvocation) => Stream.empty());
+            .thenAnswer((realInvocation) => const Stream.empty());
         when(userService.fetch()).thenAnswer((realInvocation) async => user);
 
         final container = ProviderContainer(
@@ -803,7 +803,7 @@ void main() {
         );
         final store = container.read(recordPageStoreProvider.notifier);
 
-        await Future.delayed(Duration(seconds: 1));
+        await Future.delayed(const Duration(seconds: 1));
         await store.revertTaken(
             pillSheetGroup: pillSheetGroup,
             pageIndex: 0,
@@ -825,7 +825,7 @@ void main() {
         when(authService.isLinkedApple()).thenReturn(false);
         when(authService.isLinkedGoogle()).thenReturn(false);
         when(authService.stream())
-            .thenAnswer((realInvocation) => Stream.empty());
+            .thenAnswer((realInvocation) => const Stream.empty());
 
         final pillSheet = PillSheet(
           id: "sheet_id",
@@ -859,7 +859,7 @@ void main() {
         when(pillSheetGroupService.fetchLatest())
             .thenAnswer((realInvocation) async => pillSheetGroup);
         when(pillSheetGroupService.streamForLatest())
-            .thenAnswer((realInvocation) => Stream.empty());
+            .thenAnswer((realInvocation) => const Stream.empty());
         when(pillSheetGroupService.update(batch, updatedPillSheetGroup))
             .thenReturn(null);
 
@@ -876,7 +876,7 @@ void main() {
         when(pillSheetModifiedHistoryService.add(batch, history))
             .thenReturn(null);
 
-        final setting = Setting(
+        final setting = const Setting(
           pillNumberForFromMenstruation: 22,
           durationMenstruation: 3,
           isOnReminder: true,
@@ -892,13 +892,13 @@ void main() {
         when(settingService.fetch())
             .thenAnswer((realInvocation) async => setting);
         when(settingService.stream())
-            .thenAnswer((realInvocation) => Stream.empty());
+            .thenAnswer((realInvocation) => const Stream.empty());
         when(settingService.updateWithBatch(batch, setting)).thenReturn(null);
 
-        final user = User();
+        final user = const User();
         final userService = MockUserService();
         when(userService.stream())
-            .thenAnswer((realInvocation) => Stream.empty());
+            .thenAnswer((realInvocation) => const Stream.empty());
         when(userService.fetch()).thenAnswer((realInvocation) async => user);
 
         final container = ProviderContainer(
@@ -916,7 +916,7 @@ void main() {
         );
         final store = container.read(recordPageStoreProvider.notifier);
 
-        await Future.delayed(Duration(seconds: 1));
+        await Future.delayed(const Duration(seconds: 1));
         await store.revertTaken(
             pillSheetGroup: pillSheetGroup,
             pageIndex: 0,
@@ -938,7 +938,7 @@ void main() {
         when(authService.isLinkedApple()).thenReturn(false);
         when(authService.isLinkedGoogle()).thenReturn(false);
         when(authService.stream())
-            .thenAnswer((realInvocation) => Stream.empty());
+            .thenAnswer((realInvocation) => const Stream.empty());
 
         final pillSheet = PillSheet(
           id: "sheet_id",
@@ -948,9 +948,9 @@ void main() {
           lastTakenDate: today(),
           restDurations: [
             RestDuration(
-              beginDate: _today.subtract(Duration(days: 2)),
-              createdDate: _today.subtract(Duration(days: 2)),
-              endDate: _today.subtract(Duration(days: 1)),
+              beginDate: _today.subtract(const Duration(days: 2)),
+              createdDate: _today.subtract(const Duration(days: 2)),
+              endDate: _today.subtract(const Duration(days: 1)),
             ),
           ],
         );
@@ -959,7 +959,7 @@ void main() {
           batch,
           [
             pillSheet.copyWith(
-                lastTakenDate: beginDate.subtract(Duration(days: 1)),
+                lastTakenDate: beginDate.subtract(const Duration(days: 1)),
                 restDurations: [])
           ],
         )).thenReturn(null);
@@ -977,7 +977,7 @@ void main() {
           pillSheetIDs: ["sheet_id"],
           pillSheets: [
             pillSheet.copyWith(
-                lastTakenDate: beginDate.subtract(Duration(days: 1)),
+                lastTakenDate: beginDate.subtract(const Duration(days: 1)),
                 restDurations: []),
           ],
           createdAt: now(),
@@ -986,7 +986,7 @@ void main() {
         when(pillSheetGroupService.fetchLatest())
             .thenAnswer((realInvocation) async => pillSheetGroup);
         when(pillSheetGroupService.streamForLatest())
-            .thenAnswer((realInvocation) => Stream.empty());
+            .thenAnswer((realInvocation) => const Stream.empty());
         when(pillSheetGroupService.update(batch, updatedPillSheetGroup))
             .thenReturn(null);
 
@@ -995,7 +995,7 @@ void main() {
           pillSheetGroupID: "group_id",
           before: pillSheet,
           after: pillSheet.copyWith(
-            lastTakenDate: beginDate.subtract(Duration(days: 1)),
+            lastTakenDate: beginDate.subtract(const Duration(days: 1)),
             restDurations: [],
           ),
         );
@@ -1004,7 +1004,7 @@ void main() {
         when(pillSheetModifiedHistoryService.add(batch, history))
             .thenReturn(null);
 
-        final setting = Setting(
+        final setting = const Setting(
           pillNumberForFromMenstruation: 22,
           durationMenstruation: 3,
           isOnReminder: true,
@@ -1020,13 +1020,13 @@ void main() {
         when(settingService.fetch())
             .thenAnswer((realInvocation) async => setting);
         when(settingService.stream())
-            .thenAnswer((realInvocation) => Stream.empty());
+            .thenAnswer((realInvocation) => const Stream.empty());
         when(settingService.updateWithBatch(batch, setting)).thenReturn(null);
 
-        final user = User();
+        final user = const User();
         final userService = MockUserService();
         when(userService.stream())
-            .thenAnswer((realInvocation) => Stream.empty());
+            .thenAnswer((realInvocation) => const Stream.empty());
         when(userService.fetch()).thenAnswer((realInvocation) async => user);
 
         final container = ProviderContainer(
@@ -1044,7 +1044,7 @@ void main() {
         );
         final store = container.read(recordPageStoreProvider.notifier);
 
-        await Future.delayed(Duration(seconds: 1));
+        await Future.delayed(const Duration(seconds: 1));
         await store.revertTaken(
             pillSheetGroup: pillSheetGroup,
             pageIndex: 0,
@@ -1067,7 +1067,7 @@ void main() {
         when(authService.isLinkedApple()).thenReturn(false);
         when(authService.isLinkedGoogle()).thenReturn(false);
         when(authService.stream())
-            .thenAnswer((realInvocation) => Stream.empty());
+            .thenAnswer((realInvocation) => const Stream.empty());
 
         final pillSheet = PillSheet(
           id: "sheet_id",
@@ -1077,9 +1077,9 @@ void main() {
           lastTakenDate: today(),
           restDurations: [
             RestDuration(
-              beginDate: _today.subtract(Duration(days: 8)),
-              createdDate: _today.subtract(Duration(days: 8)),
-              endDate: _today.subtract(Duration(days: 7)),
+              beginDate: _today.subtract(const Duration(days: 8)),
+              createdDate: _today.subtract(const Duration(days: 8)),
+              endDate: _today.subtract(const Duration(days: 7)),
             ),
           ],
         );
@@ -1109,7 +1109,7 @@ void main() {
         when(pillSheetGroupService.fetchLatest())
             .thenAnswer((realInvocation) async => pillSheetGroup);
         when(pillSheetGroupService.streamForLatest())
-            .thenAnswer((realInvocation) => Stream.empty());
+            .thenAnswer((realInvocation) => const Stream.empty());
         when(pillSheetGroupService.update(batch, updatedPillSheetGroup))
             .thenReturn(null);
 
@@ -1124,7 +1124,7 @@ void main() {
         when(pillSheetModifiedHistoryService.add(batch, history))
             .thenReturn(null);
 
-        final setting = Setting(
+        final setting = const Setting(
           pillNumberForFromMenstruation: 22,
           durationMenstruation: 3,
           isOnReminder: true,
@@ -1140,13 +1140,13 @@ void main() {
         when(settingService.fetch())
             .thenAnswer((realInvocation) async => setting);
         when(settingService.stream())
-            .thenAnswer((realInvocation) => Stream.empty());
+            .thenAnswer((realInvocation) => const Stream.empty());
         when(settingService.updateWithBatch(batch, setting)).thenReturn(null);
 
-        final user = User();
+        final user = const User();
         final userService = MockUserService();
         when(userService.stream())
-            .thenAnswer((realInvocation) => Stream.empty());
+            .thenAnswer((realInvocation) => const Stream.empty());
         when(userService.fetch()).thenAnswer((realInvocation) async => user);
 
         final container = ProviderContainer(
@@ -1164,7 +1164,7 @@ void main() {
         );
         final store = container.read(recordPageStoreProvider.notifier);
 
-        await Future.delayed(Duration(seconds: 1));
+        await Future.delayed(const Duration(seconds: 1));
         await store.revertTaken(
             pillSheetGroup: pillSheetGroup,
             pageIndex: 0,
@@ -1188,14 +1188,14 @@ void main() {
         when(authService.isLinkedApple()).thenReturn(false);
         when(authService.isLinkedGoogle()).thenReturn(false);
         when(authService.stream())
-            .thenAnswer((realInvocation) => Stream.empty());
+            .thenAnswer((realInvocation) => const Stream.empty());
 
         final pillSheet = PillSheet(
           id: "1",
           typeInfo: PillSheetType.pillsheet_28_0.typeInfo,
-          beginingDate: _today.subtract(Duration(days: 29)),
+          beginingDate: _today.subtract(const Duration(days: 29)),
           groupIndex: 0,
-          lastTakenDate: _today.subtract(Duration(days: 2)),
+          lastTakenDate: _today.subtract(const Duration(days: 2)),
         );
 
         // actived pill sheet
@@ -1232,7 +1232,7 @@ void main() {
         when(pillSheetGroupService.fetchLatest())
             .thenAnswer((realInvocation) async => pillSheetGroup);
         when(pillSheetGroupService.streamForLatest())
-            .thenAnswer((realInvocation) => Stream.empty());
+            .thenAnswer((realInvocation) => const Stream.empty());
         when(pillSheetGroupService.update(batch, updatedPillSheetGroup))
             .thenReturn(null);
 
@@ -1249,7 +1249,7 @@ void main() {
         when(pillSheetModifiedHistoryService.add(batch, history))
             .thenReturn(null);
 
-        final setting = Setting(
+        final setting = const Setting(
           pillNumberForFromMenstruation: 22,
           durationMenstruation: 3,
           isOnReminder: true,
@@ -1266,13 +1266,13 @@ void main() {
         when(settingService.fetch())
             .thenAnswer((realInvocation) async => setting);
         when(settingService.stream())
-            .thenAnswer((realInvocation) => Stream.empty());
+            .thenAnswer((realInvocation) => const Stream.empty());
         when(settingService.updateWithBatch(batch, setting)).thenReturn(null);
 
-        final user = User();
+        final user = const User();
         final userService = MockUserService();
         when(userService.stream())
-            .thenAnswer((realInvocation) => Stream.empty());
+            .thenAnswer((realInvocation) => const Stream.empty());
         when(userService.fetch()).thenAnswer((realInvocation) async => user);
 
         final container = ProviderContainer(
@@ -1290,7 +1290,7 @@ void main() {
         );
         final store = container.read(recordPageStoreProvider.notifier);
 
-        await Future.delayed(Duration(seconds: 1));
+        await Future.delayed(const Duration(seconds: 1));
         await store.revertTaken(
             pillSheetGroup: pillSheetGroup,
             pageIndex: 1,
@@ -1313,14 +1313,14 @@ void main() {
         when(authService.isLinkedApple()).thenReturn(false);
         when(authService.isLinkedGoogle()).thenReturn(false);
         when(authService.stream())
-            .thenAnswer((realInvocation) => Stream.empty());
+            .thenAnswer((realInvocation) => const Stream.empty());
 
         final pillSheet = PillSheet(
           id: "1",
           typeInfo: PillSheetType.pillsheet_28_0.typeInfo,
-          beginingDate: _today.subtract(Duration(days: 29)),
+          beginingDate: _today.subtract(const Duration(days: 29)),
           groupIndex: 0,
-          lastTakenDate: _today.subtract(Duration(days: 2)),
+          lastTakenDate: _today.subtract(const Duration(days: 2)),
         );
 
         // actived pill sheet
@@ -1334,10 +1334,10 @@ void main() {
 
         final pillSheetService = MockPillSheetService();
         when(pillSheetService.update(batch, [
-          pillSheet.copyWith(lastTakenDate: _today.subtract(Duration(days: 4))),
+          pillSheet.copyWith(lastTakenDate: _today.subtract(const Duration(days: 4))),
           pillSheet2.copyWith(
               lastTakenDate:
-                  pillSheet2.beginingDate.subtract(Duration(days: 1))),
+                  pillSheet2.beginingDate.subtract(const Duration(days: 1))),
         ])).thenReturn(null);
 
         final pillSheetGroup = PillSheetGroup(
@@ -1351,10 +1351,10 @@ void main() {
           pillSheetIDs: ["1", "2"],
           pillSheets: [
             pillSheet.copyWith(
-                lastTakenDate: _today.subtract(Duration(days: 4))),
+                lastTakenDate: _today.subtract(const Duration(days: 4))),
             pillSheet2.copyWith(
                 lastTakenDate:
-                    pillSheet2.beginingDate.subtract(Duration(days: 1))),
+                    pillSheet2.beginingDate.subtract(const Duration(days: 1))),
           ],
           createdAt: now(),
         );
@@ -1362,7 +1362,7 @@ void main() {
         when(pillSheetGroupService.fetchLatest())
             .thenAnswer((realInvocation) async => pillSheetGroup);
         when(pillSheetGroupService.streamForLatest())
-            .thenAnswer((realInvocation) => Stream.empty());
+            .thenAnswer((realInvocation) => const Stream.empty());
         when(pillSheetGroupService.update(batch, updatedPillSheetGroup))
             .thenReturn(null);
 
@@ -1371,13 +1371,13 @@ void main() {
                 pillSheetGroupID: "group_id",
                 before: pillSheet2,
                 after: pillSheet.copyWith(
-                    lastTakenDate: _today.subtract(Duration(days: 4))));
+                    lastTakenDate: _today.subtract(const Duration(days: 4))));
         final pillSheetModifiedHistoryService =
             MockPillSheetModifiedHistoryService();
         when(pillSheetModifiedHistoryService.add(batch, history))
             .thenReturn(null);
 
-        final setting = Setting(
+        final setting = const Setting(
           pillNumberForFromMenstruation: 22,
           durationMenstruation: 3,
           isOnReminder: true,
@@ -1394,13 +1394,13 @@ void main() {
         when(settingService.fetch())
             .thenAnswer((realInvocation) async => setting);
         when(settingService.stream())
-            .thenAnswer((realInvocation) => Stream.empty());
+            .thenAnswer((realInvocation) => const Stream.empty());
         when(settingService.updateWithBatch(batch, setting)).thenReturn(null);
 
-        final user = User();
+        final user = const User();
         final userService = MockUserService();
         when(userService.stream())
-            .thenAnswer((realInvocation) => Stream.empty());
+            .thenAnswer((realInvocation) => const Stream.empty());
         when(userService.fetch()).thenAnswer((realInvocation) async => user);
 
         final container = ProviderContainer(
@@ -1418,7 +1418,7 @@ void main() {
         );
         final store = container.read(recordPageStoreProvider.notifier);
 
-        await Future.delayed(Duration(seconds: 1));
+        await Future.delayed(const Duration(seconds: 1));
         await store.revertTaken(
             pillSheetGroup: pillSheetGroup,
             pageIndex: 0,
@@ -1439,14 +1439,14 @@ void main() {
         when(authService.isLinkedApple()).thenReturn(false);
         when(authService.isLinkedGoogle()).thenReturn(false);
         when(authService.stream())
-            .thenAnswer((realInvocation) => Stream.empty());
+            .thenAnswer((realInvocation) => const Stream.empty());
 
         final pillSheet = PillSheet(
           id: "1",
           typeInfo: PillSheetType.pillsheet_28_0.typeInfo,
-          beginingDate: _today.subtract(Duration(days: 29)),
+          beginingDate: _today.subtract(const Duration(days: 29)),
           groupIndex: 0,
-          lastTakenDate: _today.subtract(Duration(days: 2)),
+          lastTakenDate: _today.subtract(const Duration(days: 2)),
         );
 
         // actived pill sheet
@@ -1464,10 +1464,10 @@ void main() {
 
         final pillSheetService = MockPillSheetService();
         when(pillSheetService.update(batch, [
-          pillSheet.copyWith(lastTakenDate: _today.subtract(Duration(days: 4))),
+          pillSheet.copyWith(lastTakenDate: _today.subtract(const Duration(days: 4))),
           pillSheet2.copyWith(
               lastTakenDate:
-                  pillSheet2.beginingDate.subtract(Duration(days: 1)),
+                  pillSheet2.beginingDate.subtract(const Duration(days: 1)),
               restDurations: []),
         ])).thenReturn(null);
 
@@ -1482,10 +1482,10 @@ void main() {
           pillSheetIDs: ["1", "2"],
           pillSheets: [
             pillSheet.copyWith(
-                lastTakenDate: _today.subtract(Duration(days: 4))),
+                lastTakenDate: _today.subtract(const Duration(days: 4))),
             pillSheet2.copyWith(
                 lastTakenDate:
-                    pillSheet2.beginingDate.subtract(Duration(days: 1)),
+                    pillSheet2.beginingDate.subtract(const Duration(days: 1)),
                 restDurations: []),
           ],
           createdAt: now(),
@@ -1494,7 +1494,7 @@ void main() {
         when(pillSheetGroupService.fetchLatest())
             .thenAnswer((realInvocation) async => pillSheetGroup);
         when(pillSheetGroupService.streamForLatest())
-            .thenAnswer((realInvocation) => Stream.empty());
+            .thenAnswer((realInvocation) => const Stream.empty());
         when(pillSheetGroupService.update(batch, updatedPillSheetGroup))
             .thenReturn(null);
 
@@ -1503,14 +1503,14 @@ void main() {
                 pillSheetGroupID: "group_id",
                 before: pillSheet2,
                 after: pillSheet.copyWith(
-                    lastTakenDate: _today.subtract(Duration(days: 4)),
+                    lastTakenDate: _today.subtract(const Duration(days: 4)),
                     restDurations: []));
         final pillSheetModifiedHistoryService =
             MockPillSheetModifiedHistoryService();
         when(pillSheetModifiedHistoryService.add(batch, history))
             .thenReturn(null);
 
-        final setting = Setting(
+        final setting = const Setting(
           pillNumberForFromMenstruation: 22,
           durationMenstruation: 3,
           isOnReminder: true,
@@ -1527,13 +1527,13 @@ void main() {
         when(settingService.fetch())
             .thenAnswer((realInvocation) async => setting);
         when(settingService.stream())
-            .thenAnswer((realInvocation) => Stream.empty());
+            .thenAnswer((realInvocation) => const Stream.empty());
         when(settingService.updateWithBatch(batch, setting)).thenReturn(null);
 
-        final user = User();
+        final user = const User();
         final userService = MockUserService();
         when(userService.stream())
-            .thenAnswer((realInvocation) => Stream.empty());
+            .thenAnswer((realInvocation) => const Stream.empty());
         when(userService.fetch()).thenAnswer((realInvocation) async => user);
 
         final container = ProviderContainer(
@@ -1551,7 +1551,7 @@ void main() {
         );
         final store = container.read(recordPageStoreProvider.notifier);
 
-        await Future.delayed(Duration(seconds: 1));
+        await Future.delayed(const Duration(seconds: 1));
         await store.revertTaken(
             pillSheetGroup: pillSheetGroup,
             pageIndex: 0,

@@ -2,5 +2,5 @@
 // It is necessary to a few delay because reset called out of main thread.
 // `Reset` that prepare state from each service.
 Future<void> waitForResetStoreState() async {
-  await Future.delayed(Duration(milliseconds: 100));
+  await Future.delayed(const Duration(milliseconds: 100));
 }

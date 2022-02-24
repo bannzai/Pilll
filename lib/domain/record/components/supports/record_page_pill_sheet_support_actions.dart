@@ -32,7 +32,7 @@ class RecordPagePillSheetSupportActions extends StatelessWidget {
         children: [
           SwitchingAppearanceMode(
               store: store, mode: setting.pillSheetAppearanceMode),
-          Spacer(),
+          const Spacer(),
           if (restDuration != null) ...[
             EndManualRestDurationButton(
                 restDuration: restDuration,

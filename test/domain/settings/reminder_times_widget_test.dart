@@ -57,7 +57,7 @@ void main() {
       SupportedDeviceType.iPhone5SE2nd.binding(tester.binding.window);
 
       final settingService = MockSettingService();
-      final entity = Setting(
+      final entity = const Setting(
         pillNumberForFromMenstruation: 22,
         durationMenstruation: 2,
         isOnReminder: false,
@@ -116,7 +116,7 @@ void main() {
           child: MaterialApp(home: ReminderTimesPage()),
         ),
       );
-      await tester.pumpAndSettle(Duration(milliseconds: 500));
+      await tester.pumpAndSettle(const Duration(milliseconds: 500));
 
       expect(find.text("通知時間の追加"), findsOneWidget);
       expect(find.byWidgetPredicate((widget) => widget is Dismissible),
@@ -127,7 +127,7 @@ void main() {
       SupportedDeviceType.iPhone5SE2nd.binding(tester.binding.window);
 
       final settingService = MockSettingService();
-      final entity = Setting(
+      final entity = const Setting(
         pillNumberForFromMenstruation: 22,
         durationMenstruation: 2,
         isOnReminder: false,
@@ -188,7 +188,7 @@ void main() {
           child: MaterialApp(home: ReminderTimesPage()),
         ),
       );
-      await tester.pumpAndSettle(Duration(milliseconds: 500));
+      await tester.pumpAndSettle(const Duration(milliseconds: 500));
 
       expect(find.text("通知時間の追加"), findsNothing);
       expect(find.byWidgetPredicate((widget) => widget is Dismissible),

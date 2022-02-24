@@ -28,7 +28,7 @@ class DiscardDialog extends StatelessWidget {
               style: FontType.subTitle.merge(TextColorStyle.main),
               textAlign: TextAlign.center,
             ),
-            SizedBox(
+            const SizedBox(
               height: 15,
             ),
           ],

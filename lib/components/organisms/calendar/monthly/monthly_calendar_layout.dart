@@ -33,7 +33,7 @@ class MonthlyCalendarLayout extends StatelessWidget {
                     ),
                   )),
         ),
-        Divider(height: 1),
+        const Divider(height: 1),
         ...List.generate(CalendarConstants.constantLineCount, (offset) {
           final line = offset + 1;
           if (state.weeklineCount() < CalendarConstants.constantLineCount &&
@@ -46,7 +46,7 @@ class MonthlyCalendarLayout extends StatelessWidget {
           );
           return Column(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
-              children: [weeklyCalendar, Divider(height: 1)]);
+              children: [weeklyCalendar, const Divider(height: 1)]);
         }),
       ],
     );

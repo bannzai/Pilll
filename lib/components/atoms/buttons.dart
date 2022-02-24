@@ -17,7 +17,7 @@ class PrimaryButton extends StatelessWidget {
   Widget build(BuildContext context) {
     var isProcessing = false;
     return ConstrainedBox(
-      constraints: BoxConstraints(maxHeight: 44, minHeight: 44, minWidth: 180),
+      constraints: const BoxConstraints(maxHeight: 44, minHeight: 44, minWidth: 180),
       child: ElevatedButton(
         child: Text(text, style: ButtonTextStyle.main),
         style: ButtonStyle(
@@ -169,7 +169,7 @@ class SmallAppOutlinedButton extends StatelessWidget {
     var isProcessing = false;
     return OutlinedButton(
       child: Container(
-        padding: EdgeInsets.only(top: 8.5, bottom: 8.5),
+        padding: const EdgeInsets.only(top: 8.5, bottom: 8.5),
         child: Center(
           child: Text(
             text,
@@ -187,7 +187,7 @@ class SmallAppOutlinedButton extends StatelessWidget {
         shape: RoundedRectangleBorder(
           borderRadius: BorderRadius.circular(6),
         ),
-        side: BorderSide(color: PilllColors.secondary),
+        side: const BorderSide(color: PilllColors.secondary),
       ),
       onPressed: () async {
         if (isProcessing) {
@@ -220,7 +220,7 @@ class AppOutlinedButton extends StatelessWidget {
     var isProcessing = false;
     return OutlinedButton(
       child: Container(
-        padding: EdgeInsets.only(top: 12, bottom: 12),
+        padding: const EdgeInsets.only(top: 12, bottom: 12),
         child: Center(
           child: Text(
             text,
@@ -238,7 +238,7 @@ class AppOutlinedButton extends StatelessWidget {
         shape: RoundedRectangleBorder(
           borderRadius: BorderRadius.circular(6),
         ),
-        side: BorderSide(color: PilllColors.secondary),
+        side: const BorderSide(color: PilllColors.secondary),
       ),
       onPressed: () async {
         if (isProcessing) {

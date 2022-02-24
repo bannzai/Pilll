@@ -27,7 +27,7 @@ class InitialSettingSelectTodayPillNumberPage extends HookConsumerWidget {
       backgroundColor: PilllColors.background,
       appBar: AppBar(
         leading: IconButton(
-          icon: Icon(Icons.arrow_back, color: Colors.black),
+          icon: const Icon(Icons.arrow_back, color: Colors.black),
           onPressed: () => Navigator.of(context).pop(),
         ),
         title: Text(
@@ -44,22 +44,22 @@ class InitialSettingSelectTodayPillNumberPage extends HookConsumerWidget {
                 Expanded(
                   child: ListView(
                     children: [
-                      SizedBox(height: 24),
+                      const SizedBox(height: 24),
                       Text(
                         "今日(${todayString()})\n飲む・飲んだピルの番号をタップ",
                         style: FontType.sBigTitle.merge(TextColorStyle.main),
                         textAlign: TextAlign.center,
                       ),
-                      SizedBox(height: 44),
+                      const SizedBox(height: 44),
                       Center(
                         child: SelectTodayPillNumberPillSheetList(
                           state: state,
                           store: store,
                         ),
                       ),
-                      SizedBox(height: 24),
+                      const SizedBox(height: 24),
                       ExplainPillNumber(today: todayString()),
-                      SizedBox(height: 16),
+                      const SizedBox(height: 16),
                       InconspicuousButton(
                         onPressed: () async {
                           store.unsetTodayPillNumber();
@@ -76,7 +76,7 @@ class InitialSettingSelectTodayPillNumberPage extends HookConsumerWidget {
                 Column(
                   mainAxisAlignment: MainAxisAlignment.end,
                   children: [
-                    SizedBox(height: 30),
+                    const SizedBox(height: 30),
                     PrimaryButton(
                       text: "次へ",
                       onPressed: state.todayPillNumber == null
@@ -88,7 +88,7 @@ class InitialSettingSelectTodayPillNumberPage extends HookConsumerWidget {
                                   InitialSettingReminderTimesPageRoute.route());
                             },
                     ),
-                    SizedBox(height: 35),
+                    const SizedBox(height: 35),
                   ],
                 ),
               ],
@@ -104,8 +104,8 @@ extension InitialSettingSelectTodayPillNumberPageRoute
     on InitialSettingSelectTodayPillNumberPage {
   static Route<dynamic> route() {
     return MaterialPageRoute(
-      settings: RouteSettings(name: "InitialSettingSelectTodayPillNumberPage"),
-      builder: (_) => InitialSettingSelectTodayPillNumberPage(),
+      settings: const RouteSettings(name: "InitialSettingSelectTodayPillNumberPage"),
+      builder: (_) => const InitialSettingSelectTodayPillNumberPage(),
     );
   }
 }

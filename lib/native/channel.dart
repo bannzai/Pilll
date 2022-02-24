@@ -2,7 +2,7 @@ import 'package:flutter/services.dart';
 import 'package:pilll/native/legacy.dart';
 import 'package:pilll/native/pill.dart';
 
-final methodChannel = MethodChannel("method.channel.MizukiOhashi.Pilll");
+final methodChannel = const MethodChannel("method.channel.MizukiOhashi.Pilll");
 definedChannel() {
   methodChannel.setMethodCallHandler((MethodCall call) async {
     switch (call.method) {

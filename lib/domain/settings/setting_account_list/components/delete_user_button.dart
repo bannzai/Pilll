@@ -16,7 +16,7 @@ class DeleteUserButton extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      padding: EdgeInsets.only(top: 54),
+      padding: const EdgeInsets.only(top: 54),
       child: AlertButton(
         onPressed: () async {
           showDiscardDialog(
@@ -104,7 +104,7 @@ class _CompletedDialog extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return AlertDialog(
-      contentPadding: EdgeInsets.fromLTRB(24, 48, 24, 24),
+      contentPadding: const EdgeInsets.fromLTRB(24, 48, 24, 24),
       content: Container(
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
@@ -120,7 +120,7 @@ class _CompletedDialog extends StatelessWidget {
               ),
               textAlign: TextAlign.center,
             ),
-            SizedBox(height: 24),
+            const SizedBox(height: 24),
             Text(
               "初期設定画面に移動します。新しいアカウントとして引き続きご利用になる場合は再度設定をお願いいたします",
               style: TextStyle(
@@ -131,7 +131,7 @@ class _CompletedDialog extends StatelessWidget {
               ),
               textAlign: TextAlign.center,
             ),
-            SizedBox(height: 24),
+            const SizedBox(height: 24),
             PrimaryButton(
               onPressed: () async {
                 Navigator.of(context).pop();

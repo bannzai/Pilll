@@ -52,18 +52,18 @@ class PostDiaryPage extends HookConsumerWidget {
     focusNode.addListener(() {
       if (focusNode.hasFocus) {
         // NOTE: The final keyboard height cannot be got at the moment of focus via MediaQuery.of(context).viewInsets.bottom. so it is delayed.
-        Future.delayed(Duration(milliseconds: 100)).then((_) {
+        Future.delayed(const Duration(milliseconds: 100)).then((_) {
           final overwrapHeight = focusNode.rect.bottom -
               (MediaQuery.of(context).viewInsets.bottom +
                   PostDiaryPageConst.keyboardToobarHeight);
           if (overwrapHeight > 0) {
             scrollController.animateTo(overwrapHeight,
-                duration: Duration(milliseconds: 300), curve: Curves.easeInOut);
+                duration: const Duration(milliseconds: 300), curve: Curves.easeInOut);
           }
         });
       } else {
         scrollController.animateTo(scrollController.position.minScrollExtent,
-            duration: Duration(milliseconds: 300), curve: Curves.easeInOut);
+            duration: const Duration(milliseconds: 300), curve: Curves.easeInOut);
       }
     });
     return Scaffold(
@@ -72,7 +72,7 @@ class PostDiaryPage extends HookConsumerWidget {
       appBar: AppBar(
         elevation: 0.0,
         leading: IconButton(
-          icon: Icon(Icons.close, color: Colors.black),
+          icon: const Icon(Icons.close, color: Colors.black),
           onPressed: () => Navigator.of(context).pop(),
         ),
         actions: [
@@ -124,7 +124,7 @@ class PostDiaryPage extends HookConsumerWidget {
   Widget _withContentSpacer(Widget content) {
     return Container(
       child: content,
-      padding: EdgeInsets.only(top: 10, bottom: 10),
+      padding: const EdgeInsets.only(top: 10, bottom: 10),
     );
   }
 
@@ -133,7 +133,7 @@ class PostDiaryPage extends HookConsumerWidget {
       mainAxisAlignment: MainAxisAlignment.center,
       children: [
         Text("体調", style: FontType.componentTitle.merge(TextColorStyle.black)),
-        Spacer(),
+        const Spacer(),
         Container(
           height: 48,
           decoration: BoxDecoration(
@@ -147,7 +147,7 @@ class PostDiaryPage extends HookConsumerWidget {
             children: [
               Container(
                 decoration: BoxDecoration(
-                  borderRadius: BorderRadius.only(
+                  borderRadius: const BorderRadius.only(
                       topLeft: Radius.circular(8),
                       bottomLeft: Radius.circular(8)),
                   color: state.hasPhysicalConditionStatusFor(
@@ -168,10 +168,10 @@ class PostDiaryPage extends HookConsumerWidget {
               ),
               Container(
                   height: 48,
-                  child: VerticalDivider(width: 1, color: PilllColors.divider)),
+                  child: const VerticalDivider(width: 1, color: PilllColors.divider)),
               Container(
                 decoration: BoxDecoration(
-                  borderRadius: BorderRadius.only(
+                  borderRadius: const BorderRadius.only(
                       topRight: Radius.circular(8),
                       bottomRight: Radius.circular(8)),
                   color: state.hasPhysicalConditionStatusFor(
@@ -193,7 +193,7 @@ class PostDiaryPage extends HookConsumerWidget {
             ],
           ),
         ),
-        Spacer(),
+        const Spacer(),
       ],
     );
   }
@@ -204,7 +204,7 @@ class PostDiaryPage extends HookConsumerWidget {
       children: [
         Text("体調詳細",
             style: FontType.componentTitle.merge(TextColorStyle.black)),
-        SizedBox(height: 8),
+        const SizedBox(height: 8),
         Wrap(
           spacing: 10,
           children: Diary.allPhysicalConditions
@@ -234,13 +234,13 @@ class PostDiaryPage extends HookConsumerWidget {
       mainAxisAlignment: MainAxisAlignment.center,
       children: [
         Text("sex", style: FontType.componentTitle.merge(TextColorStyle.black)),
-        SizedBox(width: 80),
+        const SizedBox(width: 80),
         GestureDetector(
           onTap: () {
             store.toggleHasSex();
           },
           child: Container(
-              padding: EdgeInsets.all(4),
+              padding: const EdgeInsets.all(4),
               width: 32,
               height: 32,
               decoration: BoxDecoration(
@@ -253,7 +253,7 @@ class PostDiaryPage extends HookConsumerWidget {
                       ? PilllColors.secondary
                       : TextColor.darkGray)),
         ),
-        Spacer(),
+        const Spacer(),
       ],
     );
   }
@@ -266,7 +266,7 @@ class PostDiaryPage extends HookConsumerWidget {
         width: MediaQuery.of(context).size.width,
         child: Row(
           children: [
-            Spacer(),
+            const Spacer(),
             AlertButton(
               text: '完了',
               onPressed: () async {
@@ -276,7 +276,7 @@ class PostDiaryPage extends HookConsumerWidget {
             ),
           ],
         ),
-        decoration: BoxDecoration(color: PilllColors.white),
+        decoration: const BoxDecoration(color: PilllColors.white),
       ),
     );
   }
@@ -301,7 +301,7 @@ class PostDiaryPage extends HookConsumerWidget {
           onChanged: (text) {
             store.editedMemo(text);
           },
-          decoration: InputDecoration(
+          decoration: const InputDecoration(
             hintText: "メモ",
             border: OutlineInputBorder(),
           ),
@@ -319,7 +319,7 @@ class PostDiaryPage extends HookConsumerWidget {
 extension PostDiaryPageRoute on PostDiaryPage {
   static Route<dynamic> route(DateTime date, Diary? diary) {
     return MaterialPageRoute(
-      settings: RouteSettings(name: "PostDiaryPage"),
+      settings: const RouteSettings(name: "PostDiaryPage"),
       builder: (_) => PostDiaryPage(date, diary),
       fullscreenDialog: true,
     );

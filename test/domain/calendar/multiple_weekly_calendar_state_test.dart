@@ -25,7 +25,7 @@ void main() {
       final date = DateTime.parse("2020-09-14");
       final anyDate = date;
       final calendarState = CalendarTabWeeklyCalendarState(
-        dateRange: DateRange(anyDate, anyDate.add(Duration(days: 6))),
+        dateRange: DateRange(anyDate, anyDate.add(const Duration(days: 6))),
         targetDateOfMonth: date,
         diariesForMonth: [],
         allBandModels: [],

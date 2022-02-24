@@ -38,7 +38,7 @@ class RecordPage extends HookConsumerWidget {
     final activedPillSheet = pillSheetGroup?.activedPillSheet;
     final setting = state.setting;
     if (setting == null || !state.firstLoadIsEnded) {
-      return Indicator();
+      return const Indicator();
     }
 
     Future.microtask(() async {
@@ -76,9 +76,9 @@ class RecordPage extends HookConsumerWidget {
               child: ListView(
                 children: [
                   NotificationBar(state),
-                  SizedBox(height: 37),
+                  const SizedBox(height: 37),
                   _content(context, setting, state, store),
-                  SizedBox(height: 20),
+                  const SizedBox(height: 20),
                 ],
               ),
             ),
@@ -86,7 +86,7 @@ class RecordPage extends HookConsumerWidget {
                 pillSheetGroup != null &&
                 !pillSheetGroup.isDeactived) ...[
               RecordPageButton(currentPillSheet: activedPillSheet),
-              SizedBox(height: 40),
+              const SizedBox(height: 40),
             ],
           ],
         ),
@@ -120,7 +120,7 @@ class RecordPage extends HookConsumerWidget {
             activedPillSheet: activedPillSheet,
             setting: setting,
           ),
-          SizedBox(height: 16),
+          const SizedBox(height: 16),
           RecordPagePillSheetList(
             state: state,
             store: store,

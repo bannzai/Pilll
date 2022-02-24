@@ -20,13 +20,13 @@ class MenstruationRow extends HookConsumerWidget {
       title: Row(
         children: [
           Text("生理について", style: FontType.listRow),
-          SizedBox(width: 8),
+          const SizedBox(width: 8),
           if (_hasError)
             SvgPicture.asset("images/alert_24.svg", width: 24, height: 24),
         ],
       ),
       subtitle: _hasError
-          ? Text("生理開始日のピル番号をご確認ください。現在選択しているピルシートタイプには存在しないピル番号が設定されています")
+          ? const Text("生理開始日のピル番号をご確認ください。現在選択しているピルシートタイプには存在しないピル番号が設定されています")
           : null,
       onTap: () {
         analytics.logEvent(

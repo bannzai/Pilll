@@ -17,7 +17,7 @@ class MenstruationListStore extends StateNotifier<MenstruationListState> {
   final MenstruationService menstruationService;
   MenstruationListStore({
     required this.menstruationService,
-  }) : super(MenstruationListState()) {
+  }) : super(const MenstruationListState()) {
     _reset();
   }
 

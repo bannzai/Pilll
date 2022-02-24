@@ -20,7 +20,7 @@ class PillSheetTypeSelectBodyTemplate extends StatelessWidget {
         ..._chunckedPillSheetTypes()
             .map((pillSheetTypes) {
               return [
-                SizedBox(height: 16),
+                const SizedBox(height: 16),
                 Row(
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: pillSheetTypes
@@ -30,7 +30,7 @@ class PillSheetTypeSelectBodyTemplate extends StatelessWidget {
                           if (index == 0) {
                             return MapEntry(index, [
                               _pillSheet(pillSheetType),
-                              SizedBox(width: 16),
+                              const SizedBox(width: 16),
                             ]);
                           } else {
                             return MapEntry(index, [_pillSheet(pillSheetType)]);
