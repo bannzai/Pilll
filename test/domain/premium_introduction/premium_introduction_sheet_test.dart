@@ -57,6 +57,8 @@ class _FakePremiumIntroductionState extends Fake
   @override
   Package? get monthlyPackage => _MonthlyFakePackage();
   @override
+  Package? get monthlyPremiumPackage => _MonthlyFakePackage();
+  @override
   Package? get annualPackage => _AnnualFakePackage();
 
   final bool isPremium;
