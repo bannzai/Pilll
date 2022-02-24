@@ -109,19 +109,21 @@ void main() {
 
         final sheet = PremiumIntroductionSheet();
         await tester.pumpWidget(
-          ProviderScope(
-            overrides: [
-              premiumIntroductionStateProvider.overrideWithValue(state),
-              premiumIntroductionStoreProvider.overrideWithProvider(
-                  StateNotifierProvider.autoDispose(
-                      (ref) => MockPremiumIntroductionStore())),
-              isOverDiscountDeadlineProvider.overrideWithProvider(
-                  (param) => Provider.autoDispose((_) => true)),
-              durationToDiscountPriceDeadline.overrideWithProvider((param) =>
-                  Provider.autoDispose((_) => Duration(seconds: 1000))),
-            ],
-            child: MaterialApp(
-              home: sheet,
+          MaterialApp(
+            home: ProviderScope(
+              overrides: [
+                premiumIntroductionStateProvider.overrideWithValue(state),
+                premiumIntroductionStoreProvider.overrideWithProvider(
+                    StateNotifierProvider.autoDispose(
+                        (ref) => MockPremiumIntroductionStore())),
+                isOverDiscountDeadlineProvider.overrideWithProvider(
+                    (param) => Provider.autoDispose((_) => true)),
+                durationToDiscountPriceDeadline.overrideWithProvider((param) =>
+                    Provider.autoDispose((_) => Duration(seconds: 1000))),
+              ],
+              child: MaterialApp(
+                home: sheet,
+              ),
             ),
           ),
         );
@@ -151,19 +153,21 @@ void main() {
 
         final sheet = PremiumIntroductionSheet();
         await tester.pumpWidget(
-          ProviderScope(
-            overrides: [
-              premiumIntroductionStateProvider.overrideWithValue(state),
-              premiumIntroductionStoreProvider.overrideWithProvider(
-                  StateNotifierProvider.autoDispose(
-                      (ref) => MockPremiumIntroductionStore())),
-              isOverDiscountDeadlineProvider.overrideWithProvider((param) =>
-                  Provider.autoDispose((_) => isOverDiscountDeadline)),
-              durationToDiscountPriceDeadline.overrideWithProvider((param) =>
-                  Provider.autoDispose((_) => Duration(seconds: 1000))),
-            ],
-            child: MaterialApp(
-              home: sheet,
+          MaterialApp(
+            home: ProviderScope(
+              overrides: [
+                premiumIntroductionStateProvider.overrideWithValue(state),
+                premiumIntroductionStoreProvider.overrideWithProvider(
+                    StateNotifierProvider.autoDispose(
+                        (ref) => MockPremiumIntroductionStore())),
+                isOverDiscountDeadlineProvider.overrideWithProvider((param) =>
+                    Provider.autoDispose((_) => isOverDiscountDeadline)),
+                durationToDiscountPriceDeadline.overrideWithProvider((param) =>
+                    Provider.autoDispose((_) => Duration(seconds: 1000))),
+              ],
+              child: MaterialApp(
+                home: sheet,
+              ),
             ),
           ),
         );
@@ -195,19 +199,21 @@ void main() {
 
         final sheet = PremiumIntroductionSheet();
         await tester.pumpWidget(
-          ProviderScope(
-            overrides: [
-              premiumIntroductionStateProvider.overrideWithValue(state),
-              premiumIntroductionStoreProvider.overrideWithProvider(
-                  StateNotifierProvider.autoDispose(
-                      (ref) => MockPremiumIntroductionStore())),
-              isOverDiscountDeadlineProvider.overrideWithProvider(
-                  (param) => Provider.autoDispose((_) => false)),
-              durationToDiscountPriceDeadline.overrideWithProvider((param) =>
-                  Provider.autoDispose((_) => Duration(seconds: 1000))),
-            ],
-            child: MaterialApp(
-              home: sheet,
+          MaterialApp(
+            home: ProviderScope(
+              overrides: [
+                premiumIntroductionStateProvider.overrideWithValue(state),
+                premiumIntroductionStoreProvider.overrideWithProvider(
+                    StateNotifierProvider.autoDispose(
+                        (ref) => MockPremiumIntroductionStore())),
+                isOverDiscountDeadlineProvider.overrideWithProvider(
+                    (param) => Provider.autoDispose((_) => false)),
+                durationToDiscountPriceDeadline.overrideWithProvider((param) =>
+                    Provider.autoDispose((_) => Duration(seconds: 1000))),
+              ],
+              child: MaterialApp(
+                home: sheet,
+              ),
             ),
           ),
         );
@@ -239,19 +245,21 @@ void main() {
 
         final sheet = PremiumIntroductionSheet();
         await tester.pumpWidget(
-          ProviderScope(
-            overrides: [
-              premiumIntroductionStateProvider.overrideWithValue(state),
-              premiumIntroductionStoreProvider.overrideWithProvider(
-                  StateNotifierProvider.autoDispose(
-                      (ref) => MockPremiumIntroductionStore())),
-              isOverDiscountDeadlineProvider.overrideWithProvider((param) =>
-                  Provider.autoDispose((_) => isOverDiscountDeadline)),
-              durationToDiscountPriceDeadline.overrideWithProvider((param) =>
-                  Provider.autoDispose((_) => Duration(seconds: 1000))),
-            ],
-            child: MaterialApp(
-              home: sheet,
+          MaterialApp(
+            home: ProviderScope(
+              overrides: [
+                premiumIntroductionStateProvider.overrideWithValue(state),
+                premiumIntroductionStoreProvider.overrideWithProvider(
+                    StateNotifierProvider.autoDispose(
+                        (ref) => MockPremiumIntroductionStore())),
+                isOverDiscountDeadlineProvider.overrideWithProvider((param) =>
+                    Provider.autoDispose((_) => isOverDiscountDeadline)),
+                durationToDiscountPriceDeadline.overrideWithProvider((param) =>
+                    Provider.autoDispose((_) => Duration(seconds: 1000))),
+              ],
+              child: MaterialApp(
+                home: sheet,
+              ),
             ),
           ),
         );
@@ -281,19 +289,21 @@ void main() {
 
         final sheet = PremiumIntroductionSheet();
         await tester.pumpWidget(
-          ProviderScope(
-            overrides: [
-              premiumIntroductionStateProvider.overrideWithValue(state),
-              premiumIntroductionStoreProvider.overrideWithProvider(
-                  StateNotifierProvider.autoDispose(
-                      (ref) => MockPremiumIntroductionStore())),
-              isOverDiscountDeadlineProvider.overrideWithProvider(
-                  (param) => Provider.autoDispose((_) => false)),
-              durationToDiscountPriceDeadline.overrideWithProvider((param) =>
-                  Provider.autoDispose((_) => Duration(seconds: 1000))),
-            ],
-            child: MaterialApp(
-              home: sheet,
+          MaterialApp(
+            home: ProviderScope(
+              overrides: [
+                premiumIntroductionStateProvider.overrideWithValue(state),
+                premiumIntroductionStoreProvider.overrideWithProvider(
+                    StateNotifierProvider.autoDispose(
+                        (ref) => MockPremiumIntroductionStore())),
+                isOverDiscountDeadlineProvider.overrideWithProvider(
+                    (param) => Provider.autoDispose((_) => false)),
+                durationToDiscountPriceDeadline.overrideWithProvider((param) =>
+                    Provider.autoDispose((_) => Duration(seconds: 1000))),
+              ],
+              child: MaterialApp(
+                home: sheet,
+              ),
             ),
           ),
         );
