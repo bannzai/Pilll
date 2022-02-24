@@ -47,9 +47,9 @@ class _AnnualFakePackage extends Fake implements Package {
 class _FakePremiumIntroductionState extends Fake
     implements PremiumIntroductionState {
   _FakePremiumIntroductionState({
-    required this.isPremium,
-    required this.hasDiscountEntitlement,
-    required this.discountEntitlementDeadlineDate,
+    required this.fakeIsPremium,
+    required this.fakeHasDiscountEntitlement,
+    required this.fakeDiscountEntitlementDeadlineDate,
   });
 
   @override
@@ -61,9 +61,17 @@ class _FakePremiumIntroductionState extends Fake
   @override
   Package? get annualPackage => _AnnualFakePackage();
 
-  final bool isPremium;
-  final bool hasDiscountEntitlement;
-  final DateTime? discountEntitlementDeadlineDate;
+  final bool fakeIsPremium;
+  final bool fakeHasDiscountEntitlement;
+  final DateTime? fakeDiscountEntitlementDeadlineDate;
+
+  @override
+  bool get isPremium => this.fakeIsPremium;
+  @override
+  bool get hasDiscountEntitlement => this.fakeHasDiscountEntitlement;
+  @override
+  DateTime? get discountEntitlementDeadlineDate =>
+      this.fakeDiscountEntitlementDeadlineDate;
 }
 
 void main() {
@@ -90,9 +98,9 @@ void main() {
           '#PremiumIntroductionDiscountRow is not found and #PremiumUserThanksRow is found',
           (WidgetTester tester) async {
         final state = _FakePremiumIntroductionState(
-          isPremium: true,
-          hasDiscountEntitlement: true, // NOTE: Nasty data
-          discountEntitlementDeadlineDate: null,
+          fakeIsPremium: true,
+          fakeHasDiscountEntitlement: true, // NOTE: Nasty data
+          fakeDiscountEntitlementDeadlineDate: null,
         );
 
         final sheet = PremiumIntroductionSheet();
@@ -132,9 +140,9 @@ void main() {
       testWidgets('#PremiumIntroductionDiscountRow is found',
           (WidgetTester tester) async {
         var state = _FakePremiumIntroductionState(
-          isPremium: false,
-          hasDiscountEntitlement: hasDiscountEntitlement,
-          discountEntitlementDeadlineDate: discountEntitlementDeadlineDate,
+          fakeIsPremium: false,
+          fakeHasDiscountEntitlement: hasDiscountEntitlement,
+          fakeDiscountEntitlementDeadlineDate: discountEntitlementDeadlineDate,
         );
 
         final sheet = PremiumIntroductionSheet();
@@ -175,9 +183,10 @@ void main() {
         todayRepository = mockTodayRepository;
 
         final state = _FakePremiumIntroductionState(
-          isPremium: false,
-          hasDiscountEntitlement: hasDiscountEntitlement,
-          discountEntitlementDeadlineDate: today.subtract(Duration(days: 1)),
+          fakeIsPremium: false,
+          fakeHasDiscountEntitlement: hasDiscountEntitlement,
+          fakeDiscountEntitlementDeadlineDate:
+              today.subtract(Duration(days: 1)),
         );
 
         final sheet = PremiumIntroductionSheet();
@@ -218,9 +227,10 @@ void main() {
         todayRepository = mockTodayRepository;
 
         final state = _FakePremiumIntroductionState(
-          isPremium: false,
-          hasDiscountEntitlement: true,
-          discountEntitlementDeadlineDate: today.subtract(Duration(days: 1)),
+          fakeIsPremium: false,
+          fakeHasDiscountEntitlement: true,
+          fakeDiscountEntitlementDeadlineDate:
+              today.subtract(Duration(days: 1)),
         );
 
         final sheet = PremiumIntroductionSheet();
@@ -260,9 +270,9 @@ void main() {
         todayRepository = mockTodayRepository;
 
         var state = _FakePremiumIntroductionState(
-          isPremium: false,
-          hasDiscountEntitlement: true,
-          discountEntitlementDeadlineDate: null,
+          fakeIsPremium: false,
+          fakeHasDiscountEntitlement: true,
+          fakeDiscountEntitlementDeadlineDate: null,
         );
 
         final sheet = PremiumIntroductionSheet();
