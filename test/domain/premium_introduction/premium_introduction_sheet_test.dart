@@ -51,6 +51,9 @@ class _FakePremiumIntroductionState extends Fake
     required this.fakeHasDiscountEntitlement,
     required this.fakeDiscountEntitlementDeadlineDate,
   });
+  final bool fakeIsPremium;
+  final bool fakeHasDiscountEntitlement;
+  final DateTime? fakeDiscountEntitlementDeadlineDate;
 
   @override
   Offerings get offerings => _FakeOfferings();
@@ -60,11 +63,6 @@ class _FakePremiumIntroductionState extends Fake
   Package? get monthlyPremiumPackage => _MonthlyFakePackage();
   @override
   Package? get annualPackage => _AnnualFakePackage();
-
-  final bool fakeIsPremium;
-  final bool fakeHasDiscountEntitlement;
-  final DateTime? fakeDiscountEntitlementDeadlineDate;
-
   @override
   bool get isPremium => this.fakeIsPremium;
   @override
@@ -72,6 +70,12 @@ class _FakePremiumIntroductionState extends Fake
   @override
   DateTime? get discountEntitlementDeadlineDate =>
       this.fakeDiscountEntitlementDeadlineDate;
+  @override
+  OfferingType get currentOfferingType => OfferingType.premium;
+  @override
+  bool get isNotYetLoad => false;
+  @override
+  bool get isLoading => false;
 }
 
 void main() {
