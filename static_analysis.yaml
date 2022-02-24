@@ -1,0 +1,4 @@
+linter:
+  rules:
+    prefer_const_constructors: false
+
