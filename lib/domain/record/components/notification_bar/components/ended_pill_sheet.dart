@@ -23,7 +23,11 @@ class EndedPillSheet extends StatelessWidget {
   Widget build(BuildContext context) {
     return GestureDetector(
       onTap: () {
-        analytics.logEvent(name: "pill_ended_sheet_tap");
+        analytics.logEvent(name: "pill_ended_sheet_tap", parameters: {
+          "isTrial": isTrial,
+          "isPremium": isPremium,
+          "trialDeadlineDate": trialDeadlineDate,
+        });
 
         if (isPremium || isTrial) {
           Navigator.of(context)
