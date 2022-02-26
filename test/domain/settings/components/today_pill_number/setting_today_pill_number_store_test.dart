@@ -42,10 +42,10 @@ void main() {
       );
       final updatedPillSheet = pillSheet.copyWith(
         beginingDate: _today.subtract(
-          Duration(days: 1),
+          const Duration(days: 1),
         ),
         lastTakenDate: _today.subtract(
-          Duration(days: 1),
+          const Duration(days: 1),
         ),
       );
       final pillSheetService = MockPillSheetService();
@@ -126,10 +126,10 @@ void main() {
       );
       final updatedPillSheet = pillSheet.copyWith(
         beginingDate: _today.subtract(
-          Duration(days: 1),
+          const Duration(days: 1),
         ),
         lastTakenDate: _today.subtract(
-          Duration(days: 1),
+          const Duration(days: 1),
         ),
       );
       final pillSheetService = MockPillSheetService();

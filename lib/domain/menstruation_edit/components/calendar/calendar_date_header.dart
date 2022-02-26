@@ -21,13 +21,13 @@ class CalendarDateHeader extends StatelessWidget {
           BoxConstraints.expand(height: CalendarDateHeaderConst.headerHeight),
       child: Row(
         children: [
-          SizedBox(width: 16),
+          const SizedBox(width: 16),
           Text(
             DateTimeFormatter.yearAndMonth(date),
             textAlign: TextAlign.left,
             style: FontType.cardHeader.merge(TextColorStyle.noshime),
           ),
-          SizedBox(width: 16),
+          const SizedBox(width: 16),
         ],
       ),
     );

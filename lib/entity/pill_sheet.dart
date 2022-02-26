@@ -165,8 +165,8 @@ class PillSheet with _$PillSheet {
       .add(Duration(days: pillSheetType.totalCount - 1))
       .add(Duration(days: summarizedRestDuration(restDurations)))
       .date()
-      .add(Duration(days: 1))
-      .subtract(Duration(seconds: 1));
+      .add(const Duration(days: 1))
+      .subtract(const Duration(seconds: 1));
 
   RestDuration? get activeRestDuration {
     if (restDurations.isEmpty) {

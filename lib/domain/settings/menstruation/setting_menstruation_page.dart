@@ -18,7 +18,7 @@ class SettingMenstruationPage extends HookConsumerWidget {
     final settingState = ref.watch(settingStateProvider);
     final setting = settingState.setting;
     if (setting == null) {
-      throw FormatException("生理設定にはSettingのデータが必要です");
+      throw const FormatException("生理設定にはSettingのデータが必要です");
     }
     return SettingMenstruationPageTemplate(
       title: "生理について",
@@ -70,8 +70,8 @@ class SettingMenstruationPage extends HookConsumerWidget {
 extension SettingMenstruationPageRoute on SettingMenstruationPage {
   static Route<dynamic> route() {
     return MaterialPageRoute(
-      settings: RouteSettings(name: "SettingMenstruationPage"),
-      builder: (_) => SettingMenstruationPage(),
+      settings: const RouteSettings(name: "SettingMenstruationPage"),
+      builder: (_) => const SettingMenstruationPage(),
     );
   }
 }

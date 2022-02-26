@@ -39,7 +39,7 @@ class InitialSettingPillSheetGroupPage extends HookConsumerWidget {
           Future.microtask(() {
             ScaffoldMessenger.of(context).showSnackBar(
               SnackBar(
-                duration: Duration(seconds: 2),
+                duration: const Duration(seconds: 2),
                 content: Text("${accountType.providerName}でログインしました"),
               ),
             );
@@ -67,13 +67,13 @@ class InitialSettingPillSheetGroupPage extends HookConsumerWidget {
         ),
         body: SafeArea(
           child: Container(
-            padding: EdgeInsets.symmetric(horizontal: 40),
+            padding: const EdgeInsets.symmetric(horizontal: 40),
             child: Stack(
               children: [
                 SingleChildScrollView(
                   child: Column(
                     children: [
-                      SizedBox(height: 24),
+                      const SizedBox(height: 24),
                       Text(
                         "処方されるピルについて\n教えてください",
                         style: FontType.sBigTitle.merge(TextColorStyle.main),
@@ -81,7 +81,7 @@ class InitialSettingPillSheetGroupPage extends HookConsumerWidget {
                       ),
                       InitialSettingPillSheetGroupPageBody(
                           state: state, store: store),
-                      SizedBox(height: 100),
+                      const SizedBox(height: 100),
                     ],
                   ),
                 ),
@@ -105,7 +105,7 @@ class InitialSettingPillSheetGroupPage extends HookConsumerWidget {
                             },
                           ),
                         if (!state.userIsNotAnonymous) ...[
-                          SizedBox(height: 20),
+                          const SizedBox(height: 20),
                           AlertButton(
                             text: "すでにアカウントをお持ちの方はこちら",
                             onPressed: () async {
@@ -121,7 +121,7 @@ class InitialSettingPillSheetGroupPage extends HookConsumerWidget {
                             },
                           ),
                         ],
-                        SizedBox(height: 35),
+                        const SizedBox(height: 35),
                       ],
                     ),
                   ),
@@ -151,9 +151,9 @@ class InitialSettingPillSheetGroupPageBody extends StatelessWidget {
       return Center(
         child: Column(
           children: [
-            SizedBox(height: 80),
+            const SizedBox(height: 80),
             SvgPicture.asset("images/empty_pill_sheet_type.svg"),
-            SizedBox(height: 24),
+            const SizedBox(height: 24),
             PrimaryButton(
                 onPressed: () async {
                   analytics.logEvent(name: "empty_pill_sheet_type");
@@ -172,7 +172,7 @@ class InitialSettingPillSheetGroupPageBody extends StatelessWidget {
     } else {
       return Column(
         children: [
-          SizedBox(height: 6),
+          const SizedBox(height: 6),
           SettingPillSheetGroup(
               pillSheetTypes: state.pillSheetTypes,
               onAdd: (pillSheetType) {

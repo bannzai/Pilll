@@ -15,7 +15,7 @@ class SettingMenstruationStateStore
   final SettingService _settingService;
   SettingMenstruationStateStore(
     this._settingService,
-  ) : super(SettingMenstruationState());
+  ) : super(const SettingMenstruationState());
 
   Future<void> modifyFromMenstruation({
     required Setting setting,

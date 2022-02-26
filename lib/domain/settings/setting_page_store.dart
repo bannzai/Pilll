@@ -42,12 +42,12 @@ class SettingStateStore extends StateNotifier<SettingState> {
     this._userService,
     this._pillSheetModifiedHistoryService,
     this._pillSheetGroupService,
-  ) : super(SettingState()) {
+  ) : super(const SettingState()) {
     setup();
   }
 
   void reset() {
-    state = SettingState();
+    state = const SettingState();
     cancel();
     setup();
   }
@@ -115,7 +115,7 @@ class SettingStateStore extends StateNotifier<SettingState> {
   void _modifyReminderTimes(List<ReminderTime> reminderTimes) {
     final setting = state.setting;
     if (setting == null) {
-      throw FormatException("setting entity not found");
+      throw const FormatException("setting entity not found");
     }
     if (reminderTimes.length > ReminderTime.maximumCount) {
       throw Exception("登録できる上限に達しました。${ReminderTime.maximumCount}件以内に収めてください");
@@ -131,7 +131,7 @@ class SettingStateStore extends StateNotifier<SettingState> {
   void addReminderTimes(ReminderTime reminderTime) {
     final setting = state.setting;
     if (setting == null) {
-      throw FormatException("setting entity not found");
+      throw const FormatException("setting entity not found");
     }
     List<ReminderTime> copied = [...setting.reminderTimes];
     copied.add(reminderTime);
@@ -141,7 +141,7 @@ class SettingStateStore extends StateNotifier<SettingState> {
   void editReminderTime(int index, ReminderTime reminderTime) {
     final setting = state.setting;
     if (setting == null) {
-      throw FormatException("setting entity not found");
+      throw const FormatException("setting entity not found");
     }
     List<ReminderTime> copied = [...setting.reminderTimes];
     copied[index] = reminderTime;
@@ -151,7 +151,7 @@ class SettingStateStore extends StateNotifier<SettingState> {
   void deleteReminderTimes(int index) {
     final setting = state.setting;
     if (setting == null) {
-      throw FormatException("setting entity not found");
+      throw const FormatException("setting entity not found");
     }
     List<ReminderTime> copied = [...setting.reminderTimes];
     copied.removeAt(index);
@@ -161,7 +161,7 @@ class SettingStateStore extends StateNotifier<SettingState> {
   Future<SettingState> modifyIsOnReminder(bool isOnReminder) {
     final setting = state.setting;
     if (setting == null) {
-      throw FormatException("setting entity not found");
+      throw const FormatException("setting entity not found");
     }
     return _settingService
         .update(setting.copyWith(isOnReminder: isOnReminder))
@@ -171,7 +171,7 @@ class SettingStateStore extends StateNotifier<SettingState> {
   Future<SettingState> modifyIsOnNotifyInNotTakenDuration(bool isOn) {
     final setting = state.setting;
     if (setting == null) {
-      throw FormatException("setting entity not found");
+      throw const FormatException("setting entity not found");
     }
     return _settingService
         .update(setting.copyWith(isOnNotifyInNotTakenDuration: isOn))
@@ -185,11 +185,11 @@ class SettingStateStore extends StateNotifier<SettingState> {
   Future<void> deletePillSheet() {
     final pillSheetGroup = state.latestPillSheetGroup;
     if (pillSheetGroup == null) {
-      throw FormatException("pill sheet group not found");
+      throw const FormatException("pill sheet group not found");
     }
     final activedPillSheet = pillSheetGroup.activedPillSheet;
     if (activedPillSheet == null) {
-      throw FormatException("actived pill sheet not found");
+      throw const FormatException("actived pill sheet not found");
     }
 
     final batch = _batchFactory.batch();
@@ -209,7 +209,7 @@ class SettingStateStore extends StateNotifier<SettingState> {
   Future<SettingState> modifiyIsAutomaticallyCreatePillSheet(bool isOn) {
     final setting = state.setting;
     if (setting == null) {
-      throw FormatException("setting entity not found");
+      throw const FormatException("setting entity not found");
     }
     return _settingService
         .update(setting.copyWith(isAutomaticallyCreatePillSheet: isOn))
@@ -219,7 +219,7 @@ class SettingStateStore extends StateNotifier<SettingState> {
   Future<void> reminderNotificationWordSubmit(String word) {
     final setting = state.setting;
     if (setting == null) {
-      throw FormatException("setting entity not found");
+      throw const FormatException("setting entity not found");
     }
 
     var reminderNotificationCustomization =
@@ -237,7 +237,7 @@ class SettingStateStore extends StateNotifier<SettingState> {
   Future<void> setIsInVisibleReminderDate(bool isInVisibleReminderDate) {
     final setting = state.setting;
     if (setting == null) {
-      throw FormatException("setting entity not found");
+      throw const FormatException("setting entity not found");
     }
 
     var reminderNotificationCustomization =
@@ -255,7 +255,7 @@ class SettingStateStore extends StateNotifier<SettingState> {
   Future<void> setIsInVisiblePillNumber(bool isInVisiblePillNumber) {
     final setting = state.setting;
     if (setting == null) {
-      throw FormatException("setting entity not found");
+      throw const FormatException("setting entity not found");
     }
 
     var reminderNotificationCustomization =
@@ -273,7 +273,7 @@ class SettingStateStore extends StateNotifier<SettingState> {
   Future<void> setIsInVisibleDescription(bool isInVisibleDescription) {
     final setting = state.setting;
     if (setting == null) {
-      throw FormatException("setting entity not found");
+      throw const FormatException("setting entity not found");
     }
 
     var reminderNotificationCustomization =

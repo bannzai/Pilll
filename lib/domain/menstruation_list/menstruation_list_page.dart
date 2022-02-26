@@ -20,7 +20,7 @@ class MenstruationListPage extends HookConsumerWidget {
       backgroundColor: PilllColors.background,
       appBar: AppBar(
         leading: IconButton(
-          icon: Icon(Icons.arrow_back, color: Colors.black),
+          icon: const Icon(Icons.arrow_back, color: Colors.black),
           onPressed: () => Navigator.of(context).pop(),
         ),
         centerTitle: false,
@@ -40,7 +40,7 @@ class MenstruationListPage extends HookConsumerWidget {
               ...state.allRows.map((row) {
                 return [
                   MenstruationListRow(state: row),
-                  SizedBox(height: 8),
+                  const SizedBox(height: 8),
                 ];
               }).expand((element) => element),
             ],
@@ -54,7 +54,7 @@ class MenstruationListPage extends HookConsumerWidget {
 extension MenstruationListPageRoute on MenstruationListPage {
   static Route<dynamic> route() {
     return MaterialPageRoute(
-      settings: RouteSettings(name: "MenstruationListPage"),
+      settings: const RouteSettings(name: "MenstruationListPage"),
       builder: (_) => MenstruationListPage(),
     );
   }

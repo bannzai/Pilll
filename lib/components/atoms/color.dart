@@ -8,7 +8,7 @@ class PilllColors {
   static const Color calendarHeader = Color(0XFFB9D7F1);
   static const Color accent = Colors.white;
   static const Color pillSheet = Color(0xFFE8EBED);
-  static final Color mat = Color(0xFFFAFAFA).withAlpha(80);
+  static final Color mat = const Color(0xFFFAFAFA).withAlpha(80);
   static const Color sunday = Color(0xFFE17F7F);
   static const Color saturday = Color(0xFF7FB9E1);
   static const Color weekday = Color(0xFF7E7E7E);
@@ -35,13 +35,13 @@ class PilllColors {
   static final Color overlay = primary.withAlpha(20);
 
   static final Color modalBackground =
-      Color(0xFF333333).withAlpha((255 * 0.7).round());
+      const Color(0xFF333333).withAlpha((255 * 0.7).round());
   static const Color white = Colors.white;
 
   static Color get disabledSheet => PilllColors.pillSheet;
-  static final Color thinSecondary = Color(0xFF4E6287).withAlpha(20);
-  static final Color shadow = Color(0xFF212121).withOpacity(0.14);
-  static final Color tinBackground = Color(0xFF212121).withOpacity(0.08);
+  static final Color thinSecondary = const Color(0xFF4E6287).withAlpha(20);
+  static final Color shadow = const Color(0xFF212121).withOpacity(0.14);
+  static final Color tinBackground = const Color(0xFF212121).withOpacity(0.08);
 
   static const Color appleBlack = Color(0xFF231815);
 }

@@ -42,7 +42,7 @@ void main() {
           );
           var pillSheet2 = PillSheet(
             typeInfo: PillSheetType.pillsheet_24_0.typeInfo,
-            beginingDate: beginingDate.add(Duration(days: 28)),
+            beginingDate: beginingDate.add(const Duration(days: 28)),
             lastTakenDate: null,
           );
           final pillSheetGroup = PillSheetGroup(
@@ -50,7 +50,7 @@ void main() {
             pillSheets: [pillSheet, pillSheet2],
             createdAt: now(),
           );
-          var setting = Setting(
+          var setting = const Setting(
             pillSheetTypes: [
               PillSheetType.pillsheet_28_7,
               PillSheetType.pillsheet_24_0
@@ -98,7 +98,7 @@ void main() {
           );
           var pillSheet2 = PillSheet(
             typeInfo: PillSheetType.pillsheet_21_0.typeInfo,
-            beginingDate: beginingDate.add(Duration(days: 28)),
+            beginingDate: beginingDate.add(const Duration(days: 28)),
             lastTakenDate: null,
           );
           final pillSheetGroup = PillSheetGroup(
@@ -106,7 +106,7 @@ void main() {
             pillSheets: [pillSheet, pillSheet2],
             createdAt: now(),
           );
-          var setting = Setting(
+          var setting = const Setting(
             pillSheetTypes: [
               PillSheetType.pillsheet_28_7,
               PillSheetType.pillsheet_21_0
@@ -154,7 +154,7 @@ void main() {
           );
           var pillSheet2 = PillSheet(
             typeInfo: PillSheetType.pillsheet_24_0.typeInfo,
-            beginingDate: beginingDate.add(Duration(days: 28)),
+            beginingDate: beginingDate.add(const Duration(days: 28)),
             lastTakenDate: null,
           );
           final pillSheetGroup = PillSheetGroup(
@@ -162,7 +162,7 @@ void main() {
             pillSheets: [pillSheet, pillSheet2],
             createdAt: now(),
           );
-          var setting = Setting(
+          var setting = const Setting(
             pillSheetTypes: [
               PillSheetType.pillsheet_28_7,
               PillSheetType.pillsheet_24_0
@@ -244,7 +244,7 @@ void main() {
             pillNumberForFromMenstruation: fromMenstruation,
             durationMenstruation: durationMenstruation,
             isOnReminder: false,
-            reminderTimes: [ReminderTime(hour: 1, minute: 1)],
+            reminderTimes: [const ReminderTime(hour: 1, minute: 1)],
           );
           assert(pillSheetType.dosingPeriod == 21,
               "scheduledMenstruationDateRange adding value with dosingPeriod when it will create DateRange. pillsheet_28_7 type has 24 dosingPeriod");
@@ -291,7 +291,7 @@ void main() {
             pillNumberForFromMenstruation: fromMenstruation,
             durationMenstruation: durationMenstruation,
             isOnReminder: false,
-            reminderTimes: [ReminderTime(hour: 1, minute: 1)],
+            reminderTimes: [const ReminderTime(hour: 1, minute: 1)],
           );
           assert(pillSheetType.dosingPeriod == 21,
               "scheduledMenstruationDateRange adding value with dosingPeriod when it will create DateRange. pillsheet_28_7 type has 24 dosingPeriod");
@@ -341,7 +341,7 @@ void main() {
             pillNumberForFromMenstruation: fromMenstruation,
             durationMenstruation: durationMenstruation,
             isOnReminder: false,
-            reminderTimes: [ReminderTime(hour: 1, minute: 1)],
+            reminderTimes: [const ReminderTime(hour: 1, minute: 1)],
           );
           assert(pillSheetType.dosingPeriod == 21,
               "scheduledMenstruationDateRange adding value with dosingPeriod when it will create DateRange. pillsheet_28_7 type has 24 dosingPeriod");
@@ -395,7 +395,7 @@ void main() {
             pillNumberForFromMenstruation: fromMenstruation,
             durationMenstruation: durationMenstruation,
             isOnReminder: false,
-            reminderTimes: [ReminderTime(hour: 1, minute: 1)],
+            reminderTimes: [const ReminderTime(hour: 1, minute: 1)],
           );
           assert(pillSheetType.dosingPeriod == 28,
               "scheduledMenstruationDateRange adding value with dosingPeriod when it will create DateRange. pillsheet_28_7 type has 24 dosingPeriod");
@@ -439,7 +439,7 @@ void main() {
             pillNumberForFromMenstruation: 23,
             durationMenstruation: 3,
             isOnReminder: false,
-            reminderTimes: [ReminderTime(hour: 1, minute: 1)],
+            reminderTimes: [const ReminderTime(hour: 1, minute: 1)],
           );
           expect(
             scheduledOrInTheMiddleMenstruationDateRanges(
@@ -490,7 +490,7 @@ void main() {
             pillNumberForFromMenstruation: 0,
             durationMenstruation: durationMenstruation,
             isOnReminder: false,
-            reminderTimes: [ReminderTime(hour: 1, minute: 1)],
+            reminderTimes: [const ReminderTime(hour: 1, minute: 1)],
           );
           assert(pillSheetType.dosingPeriod == 28,
               "scheduledMenstruationDateRange adding value with dosingPeriod when it will create DateRange. pillsheet_28_7 type has 24 dosingPeriod");
@@ -527,7 +527,7 @@ void main() {
           );
           var pillSheet2 = PillSheet(
             typeInfo: PillSheetType.pillsheet_21_0.typeInfo,
-            beginingDate: beginingDate.add(Duration(days: 28)),
+            beginingDate: beginingDate.add(const Duration(days: 28)),
             lastTakenDate: null,
           );
           final pillSheetGroup = PillSheetGroup(

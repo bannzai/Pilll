@@ -24,7 +24,7 @@ void main() {
 
       final pillSheet = InitialSettingState.buildPillSheet(
         pageIndex: 0,
-        todayPillNumber: InitialSettingTodayPillNumber(
+        todayPillNumber: const InitialSettingTodayPillNumber(
             pageIndex: 0, pillNumberIntoPillSheet: 1),
         pillSheetTypes: [PillSheetType.pillsheet_21],
       );
@@ -46,7 +46,7 @@ void main() {
 
       final pillSheet = InitialSettingState.buildPillSheet(
         pageIndex: 1,
-        todayPillNumber: InitialSettingTodayPillNumber(
+        todayPillNumber: const InitialSettingTodayPillNumber(
             pageIndex: 0, pillNumberIntoPillSheet: 1),
         pillSheetTypes: [
           PillSheetType.pillsheet_21,
@@ -73,7 +73,7 @@ void main() {
 
       final pillSheet = InitialSettingState.buildPillSheet(
         pageIndex: 0,
-        todayPillNumber: InitialSettingTodayPillNumber(
+        todayPillNumber: const InitialSettingTodayPillNumber(
             pageIndex: 1, pillNumberIntoPillSheet: 1),
         pillSheetTypes: [
           PillSheetType.pillsheet_21,

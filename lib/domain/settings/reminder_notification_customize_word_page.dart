@@ -31,7 +31,7 @@ class ReminderNotificationCustomizeWordPage extends HookConsumerWidget {
       backgroundColor: PilllColors.background,
       appBar: AppBar(
         leading: IconButton(
-          icon: Icon(Icons.arrow_back, color: Colors.black),
+          icon: const Icon(Icons.arrow_back, color: Colors.black),
           onPressed: () => Navigator.of(context).pop(),
         ),
         title: Text(
@@ -47,7 +47,7 @@ class ReminderNotificationCustomizeWordPage extends HookConsumerWidget {
           child: ListView(
             children: [
               Container(
-                padding: EdgeInsets.symmetric(vertical: 20, horizontal: 16),
+                padding: const EdgeInsets.symmetric(vertical: 20, horizontal: 16),
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
@@ -57,10 +57,10 @@ class ReminderNotificationCustomizeWordPage extends HookConsumerWidget {
                       isInvisiblePillNumber: isInVisiblePillNumber.value,
                       isInvisibleDescription: isInVisibleDescription.value,
                     ),
-                    SizedBox(height: 20),
+                    const SizedBox(height: 20),
                     TextField(
                       decoration: InputDecoration(
-                        focusedBorder: UnderlineInputBorder(
+                        focusedBorder: const UnderlineInputBorder(
                           borderSide: BorderSide(color: PilllColors.primary),
                         ),
                         counter: Row(children: [
@@ -72,7 +72,7 @@ class ReminderNotificationCustomizeWordPage extends HookConsumerWidget {
                                 fontWeight: FontWeight.w400,
                                 color: TextColor.darkGray),
                           ),
-                          Spacer(),
+                          const Spacer(),
                           Text(
                             "${word.value.characters.length}/8",
                             style: TextStyle(
@@ -100,7 +100,7 @@ class ReminderNotificationCustomizeWordPage extends HookConsumerWidget {
                       controller: textFieldControlelr,
                       maxLength: 8,
                     ),
-                    SizedBox(height: 20),
+                    const SizedBox(height: 20),
                     Column(
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
@@ -111,7 +111,7 @@ class ReminderNotificationCustomizeWordPage extends HookConsumerWidget {
                                 .merge(TextColorStyle.primary),
                           ),
                         ),
-                        SizedBox(height: 4),
+                        const SizedBox(height: 4),
                         _switchRow(
                           "日付を表示",
                           !isInVisibleReminderDate.value,
@@ -122,7 +122,7 @@ class ReminderNotificationCustomizeWordPage extends HookConsumerWidget {
                             isInVisibleReminderDate.value = !value;
                           },
                         ),
-                        Divider(),
+                        const Divider(),
                         _switchRow(
                           "番号を表示",
                           !isInVisiblePillNumber.value,
@@ -133,7 +133,7 @@ class ReminderNotificationCustomizeWordPage extends HookConsumerWidget {
                             isInVisiblePillNumber.value = !value;
                           },
                         ),
-                        Divider(),
+                        const Divider(),
                         _switchRow(
                           "説明文の表示",
                           !isInVisibleDescription.value,
@@ -144,7 +144,7 @@ class ReminderNotificationCustomizeWordPage extends HookConsumerWidget {
                             isInVisibleDescription.value = !value;
                           },
                         ),
-                        Divider(),
+                        const Divider(),
                       ],
                     ),
                   ],
@@ -160,7 +160,7 @@ class ReminderNotificationCustomizeWordPage extends HookConsumerWidget {
   Widget _switchRow(
       String title, bool initialValue, ValueChanged<bool> onChanged) {
     return Container(
-      padding: EdgeInsets.symmetric(vertical: 2),
+      padding: const EdgeInsets.symmetric(vertical: 2),
       child: Row(
         children: [
           Text(
@@ -172,7 +172,7 @@ class ReminderNotificationCustomizeWordPage extends HookConsumerWidget {
               fontSize: 16,
             ),
           ),
-          Spacer(),
+          const Spacer(),
           Switch(
             value: initialValue,
             onChanged: onChanged,
@@ -187,7 +187,7 @@ extension ReminderNotificationCustomizeWordPageRoutes
     on ReminderNotificationCustomizeWordPage {
   static Route<dynamic> route({required Setting setting}) {
     return MaterialPageRoute(
-      settings: RouteSettings(name: "ReminderNotificationCustomizeWordPage"),
+      settings: const RouteSettings(name: "ReminderNotificationCustomizeWordPage"),
       builder: (_) => ReminderNotificationCustomizeWordPage(setting),
     );
   }
@@ -216,13 +216,13 @@ class _ReminderPushNotificationPreview extends StatelessWidget {
         color: Colors.white,
         borderRadius: BorderRadius.circular(8),
       ),
-      padding: EdgeInsets.all(8),
+      padding: const EdgeInsets.all(8),
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
           Row(children: [
             SvgPicture.asset("images/pilll_icon.svg"),
-            SizedBox(width: 8),
+            const SizedBox(width: 8),
             Text(
               "Pilll",
               style: TextStyle(
@@ -233,7 +233,7 @@ class _ReminderPushNotificationPreview extends StatelessWidget {
               ),
             ),
           ]),
-          SizedBox(height: 16),
+          const SizedBox(height: 16),
           Text(
             "$word${isInVisibleReminderDate ? "" : " 1/7"}${isInvisiblePillNumber ? "" : " 5番 ~ 8番"}",
             style: TextStyle(

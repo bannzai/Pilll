@@ -66,7 +66,7 @@ class CalendarPillSheetModifiedHistoryCard extends StatelessWidget {
   Widget build(BuildContext context) {
     return AppCard(
       child: Container(
-        padding: EdgeInsets.only(left: 16, top: 16, right: 16, bottom: 16),
+        padding: const EdgeInsets.only(left: 16, top: 16, right: 16, bottom: 16),
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
@@ -82,21 +82,21 @@ class CalendarPillSheetModifiedHistoryCard extends StatelessWidget {
                   ),
                 ),
                 if (!state.isPremium) ...[
-                  SizedBox(width: 8),
+                  const SizedBox(width: 8),
                   PremiumBadge(),
                 ],
               ],
             ),
-            SizedBox(height: 16),
-            PillSheetModifiedHisotiryListHeader(),
-            SizedBox(height: 4),
+            const SizedBox(height: 16),
+            const PillSheetModifiedHisotiryListHeader(),
+            const SizedBox(height: 4),
             ...() {
               if (state.isPremium || state.isTrial) {
                 return [
                   Container(
                     child: PillSheetModifiedHistoryList(
                       padding: null,
-                      scrollPhysics: NeverScrollableScrollPhysics(),
+                      scrollPhysics: const NeverScrollableScrollPhysics(),
                       pillSheetModifiedHistories:
                           state.pillSheetModifiedHistories,
                       onEditTakenPillAction: store.editTakenValue,
@@ -112,7 +112,7 @@ class CalendarPillSheetModifiedHistoryCard extends StatelessWidget {
                       Container(
                         child: PillSheetModifiedHistoryList(
                           padding: null,
-                          scrollPhysics: NeverScrollableScrollPhysics(),
+                          scrollPhysics: const NeverScrollableScrollPhysics(),
                           pillSheetModifiedHistories:
                               state.pillSheetModifiedHistories,
                           onEditTakenPillAction: null,
@@ -132,9 +132,9 @@ class CalendarPillSheetModifiedHistoryCard extends StatelessWidget {
                                 child: Column(
                                   mainAxisAlignment: MainAxisAlignment.center,
                                   children: [
-                                    Text(lockEmoji,
+                                    const Text(lockEmoji,
                                         style: TextStyle(fontSize: 40)),
-                                    SizedBox(height: 12),
+                                    const SizedBox(height: 12),
                                     Text(
                                       "服用履歴はプレミアム機能です",
                                       style: TextStyle(
@@ -144,7 +144,7 @@ class CalendarPillSheetModifiedHistoryCard extends StatelessWidget {
                                         fontWeight: FontWeight.w400,
                                       ),
                                     ),
-                                    SizedBox(height: 15),
+                                    const SizedBox(height: 15),
                                     SizedBox(
                                       width: 204,
                                       child: AppOutlinedButton(

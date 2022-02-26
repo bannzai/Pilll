@@ -30,7 +30,7 @@ class PremiumIntroductionStore extends StateNotifier<PremiumIntroductionState> {
   final PurchaseService _purchaseService;
   PremiumIntroductionStore(
       this._userService, this._authService, this._purchaseService)
-      : super(PremiumIntroductionState()) {
+      : super(const PremiumIntroductionState()) {
     reset();
   }
 

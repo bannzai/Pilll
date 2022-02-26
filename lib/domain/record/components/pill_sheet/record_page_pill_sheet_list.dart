@@ -51,7 +51,7 @@ class RecordPagePillSheetList extends HookConsumerWidget {
                 .map((pillSheet) {
                   return [
                     Container(
-                      padding: EdgeInsets.symmetric(horizontal: 10),
+                      padding: const EdgeInsets.symmetric(horizontal: 10),
                       child: RecordPagePillSheet(
                         pillSheetGroup: pillSheetGroup,
                         pillSheet: pillSheet,
@@ -67,14 +67,14 @@ class RecordPagePillSheetList extends HookConsumerWidget {
           ),
         ),
         if (pillSheetGroup.pillSheets.length > 1) ...[
-          SizedBox(height: 16),
+          const SizedBox(height: 16),
           DotsIndicator(
               controller: pageController,
               itemCount: pillSheetGroup.pillSheets.length,
               onDotTapped: (page) {
                 pageController.animateToPage(
                   page,
-                  duration: Duration(milliseconds: 300),
+                  duration: const Duration(milliseconds: 300),
                   curve: Curves.easeInOut,
                 );
               })

@@ -20,10 +20,10 @@ class MonthlyPurchaseButton extends StatelessWidget {
         onTap(monthlyPackage);
       },
       child: Container(
-        padding: EdgeInsets.fromLTRB(32, 24, 32, 45),
+        padding: const EdgeInsets.fromLTRB(32, 24, 32, 45),
         decoration: BoxDecoration(
           color: PilllColors.blueBackground,
-          borderRadius: BorderRadius.all(Radius.circular(4)),
+          borderRadius: const BorderRadius.all(Radius.circular(4)),
           border: Border.all(
             width: 2,
             color: PilllColors.secondary,

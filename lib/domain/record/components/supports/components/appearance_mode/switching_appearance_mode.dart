@@ -29,7 +29,7 @@ class SwitchingAppearanceMode extends StatelessWidget {
             fontWeight: FontWeight.w700,
           ),
         ),
-        SizedBox(width: 6),
+        const SizedBox(width: 6),
         SvgPicture.asset("images/switching_appearance_mode.svg"),
       ]),
       onTap: () {

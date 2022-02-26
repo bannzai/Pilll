@@ -36,7 +36,7 @@ class MenstruationCard extends StatelessWidget {
                             TextColorStyle.noshime.merge(FontType.assisting)),
                   ],
                 ),
-                SizedBox(width: 12),
+                const SizedBox(width: 12),
                 Text(
                   DateTimeFormatter.monthAndWeekday(state.scheduleDate),
                   style: TextStyle(
@@ -47,9 +47,9 @@ class MenstruationCard extends StatelessWidget {
                 ),
               ],
             ),
-            SizedBox(height: 8),
+            const SizedBox(height: 8),
             Container(
-              padding: EdgeInsets.only(left: 32, right: 32, top: 2, bottom: 2),
+              padding: const EdgeInsets.only(left: 32, right: 32, top: 2, bottom: 2),
               decoration: BoxDecoration(
                 color: PilllColors.secondary,
                 borderRadius: BorderRadius.circular(30),

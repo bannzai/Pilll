@@ -93,7 +93,7 @@ class MenstruationListRow extends StatelessWidget {
                   style: FontType.description.merge(TextColorStyle.main)),
             ],
           ),
-          SizedBox(height: 6),
+          const SizedBox(height: 6),
           Container(
             width: state.width,
             decoration: BoxDecoration(
@@ -108,10 +108,10 @@ class MenstruationListRow extends StatelessWidget {
                   ...List.generate(
                     state.menstruation.dateRange.days + 1,
                     (index) {
-                      return [_circle(), SizedBox(width: 4)];
+                      return [_circle(), const SizedBox(width: 4)];
                     },
                   ).expand((element) => element).toList(),
-                  Spacer(),
+                  const Spacer(),
                   Text(
                     state.duration,
                     textAlign: TextAlign.end,
@@ -122,7 +122,7 @@ class MenstruationListRow extends StatelessWidget {
                       fontWeight: FontWeight.w400,
                     ),
                   ),
-                  SizedBox(width: 10),
+                  const SizedBox(width: 10),
                 ],
               ),
             ),

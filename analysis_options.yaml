@@ -12,6 +12,7 @@ analyzer:
 
 linter:
   rules:
+    - prefer_const_constructors
     # these rules are documented on and in the same order as
     # the Dart Lint rules page to make maintenance easier
     # https://github.com/dart-lang/linter/blob/master/example/all.yaml

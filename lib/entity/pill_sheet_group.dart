@@ -43,7 +43,7 @@ class PillSheetGroup with _$PillSheetGroup {
 
   PillSheetGroup replaced(PillSheet pillSheet) {
     if (pillSheet.id == null) {
-      throw FormatException("ピルシートの置き換えによる更新できませんでした");
+      throw const FormatException("ピルシートの置き換えによる更新できませんでした");
     }
     final index =
         pillSheets.indexWhere((element) => element.id == pillSheet.id);

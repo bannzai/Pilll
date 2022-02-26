@@ -43,7 +43,7 @@ class PremiumTrialGuideNotificationBar extends HookConsumerWidget {
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
               SizedBox(width: _closeButtonIconWidth),
-              Spacer(),
+              const Spacer(),
               Padding(
                 padding: const EdgeInsets.only(top: 12, bottom: 12),
                 child: Text(
@@ -52,7 +52,7 @@ class PremiumTrialGuideNotificationBar extends HookConsumerWidget {
                   textAlign: TextAlign.center,
                 ),
               ),
-              Spacer(),
+              const Spacer(),
               Padding(
                 padding: const EdgeInsets.only(right: 8, left: 8),
                 child: SvgPicture.asset(

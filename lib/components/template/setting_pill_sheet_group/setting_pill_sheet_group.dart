@@ -28,7 +28,7 @@ class SettingPillSheetGroup extends StatelessWidget {
               return MapEntry(
                 index,
                 [
-                  SizedBox(height: 16),
+                  const SizedBox(height: 16),
                   InitialSettingPillSheetGroupPillSheetTypeSelectRow(
                     index: index,
                     pillSheetType: pillSheetType,
@@ -42,13 +42,13 @@ class SettingPillSheetGroup extends StatelessWidget {
             .expand((element) => element)
             .toList(),
         if (pillSheetTypes.length < 6) ...[
-          SizedBox(height: 24),
+          const SizedBox(height: 24),
           PillSheetTypeAddButton(
             pillSheetTypes: pillSheetTypes,
             onAdd: (pillSheetType) => onAdd(pillSheetType),
           ),
         ],
-        SizedBox(height: 80),
+        const SizedBox(height: 80),
       ],
     );
   }

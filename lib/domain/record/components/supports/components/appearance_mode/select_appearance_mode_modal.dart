@@ -34,7 +34,7 @@ class SelectAppearanceModeModal extends HookConsumerWidget {
                 color: TextColor.main,
               ),
             ),
-            SizedBox(height: 24),
+            const SizedBox(height: 24),
             Column(
               children: [
                 _row(
@@ -107,7 +107,7 @@ class SelectAppearanceModeModal extends HookConsumerWidget {
         child: Row(
           children: [
             SelectCircle(isSelected: mode == state.appearanceMode),
-            SizedBox(width: 34),
+            const SizedBox(width: 34),
             Text(
               text,
               style: TextStyle(
@@ -117,7 +117,7 @@ class SelectAppearanceModeModal extends HookConsumerWidget {
               ),
             ),
             if (isPremiumFunction) ...[
-              SizedBox(width: 12),
+              const SizedBox(width: 12),
               PremiumBadge(),
             ]
           ],

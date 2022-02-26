@@ -62,7 +62,7 @@ class _PillMarkState extends State<PillMark> with TickerProviderStateMixin {
           children: [
             _mark(widget.pillMarkType),
             if (widget.showsCheckmark)
-              Align(alignment: Alignment.center, child: PillMarkDoneMark()),
+              const Align(alignment: Alignment.center, child: PillMarkDoneMark()),
           ],
         ),
         if (widget.showsRippleAnimation)

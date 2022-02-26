@@ -44,7 +44,7 @@ class SettingTodayPillNumberPillSheetList extends HookConsumerWidget {
                 mainAxisSize: MainAxisSize.min,
                 children: [
                   Container(
-                    padding: EdgeInsets.symmetric(horizontal: 10),
+                    padding: const EdgeInsets.symmetric(horizontal: 10),
                     child: SettingPillSheetView(
                       pageIndex: pageIndex,
                       appearanceMode: appearanceMode,
@@ -62,21 +62,21 @@ class SettingTodayPillNumberPillSheetList extends HookConsumerWidget {
                       },
                     ),
                   ),
-                  Spacer(),
+                  const Spacer(),
                 ],
               );
             }).toList(),
           ),
         ),
         if (pillSheetTypes.length > 1) ...[
-          SizedBox(height: 16),
+          const SizedBox(height: 16),
           DotsIndicator(
             controller: pageController,
             itemCount: pillSheetTypes.length,
             onDotTapped: (page) {
               pageController.animateToPage(
                 page,
-                duration: Duration(milliseconds: 300),
+                duration: const Duration(milliseconds: 300),
                 curve: Curves.easeInOut,
               );
             },

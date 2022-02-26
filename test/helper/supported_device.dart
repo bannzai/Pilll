@@ -9,7 +9,7 @@ extension SupportedDeviceTypeExtension on SupportedDeviceType {
   Size get size {
     switch (this) {
       case SupportedDeviceType.iPhone5SE2nd:
-        return Size(375, 667);
+        return const Size(375, 667);
     }
   }
 

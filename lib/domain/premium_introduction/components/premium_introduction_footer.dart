@@ -16,7 +16,7 @@ class PremiumIntroductionFotter extends StatelessWidget {
   Widget build(BuildContext context) {
     final store = PremiumIntroductionFooterStateStore();
     return Container(
-      padding: EdgeInsets.only(bottom: 24),
+      padding: const EdgeInsets.only(bottom: 24),
       width: MediaQuery.of(context).size.width,
       color: PilllColors.white,
       child: Column(
@@ -33,35 +33,35 @@ class PremiumIntroductionFotter extends StatelessWidget {
                       fontFamily: FontFamily.japanese),
                 ),
                 children: [
-                  TextSpan(text: "・プレミアム契約期間は開始日から起算して1ヶ月または1年ごとの自動更新となります\n"),
-                  TextSpan(text: "・"),
+                  const TextSpan(text: "・プレミアム契約期間は開始日から起算して1ヶ月または1年ごとの自動更新となります\n"),
+                  const TextSpan(text: "・"),
                   TextSpan(
                     text: "プライバシーポリシー",
-                    style: TextStyle(decoration: TextDecoration.underline),
+                    style: const TextStyle(decoration: TextDecoration.underline),
                     recognizer: TapGestureRecognizer()
                       ..onTap = () {
                         launch("https://bannzai.github.io/Pilll/PrivacyPolicy",
                             forceSafariVC: true);
                       },
                   ),
-                  TextSpan(
+                  const TextSpan(
                     text: " / ",
                   ),
                   TextSpan(
                     text: "利用規約",
-                    style: TextStyle(decoration: TextDecoration.underline),
+                    style: const TextStyle(decoration: TextDecoration.underline),
                     recognizer: TapGestureRecognizer()
                       ..onTap = () {
                         launch("https://bannzai.github.io/Pilll/Terms",
                             forceSafariVC: true);
                       },
                   ),
-                  TextSpan(
+                  const TextSpan(
                     text: " / ",
                   ),
                   TextSpan(
                     text: "特定商取引法に基づく表示",
-                    style: TextStyle(decoration: TextDecoration.underline),
+                    style: const TextStyle(decoration: TextDecoration.underline),
                     recognizer: TapGestureRecognizer()
                       ..onTap = () {
                         launch(
@@ -69,10 +69,10 @@ class PremiumIntroductionFotter extends StatelessWidget {
                             forceSafariVC: true);
                       },
                   ),
-                  TextSpan(
+                  const TextSpan(
                     text: "をご確認のうえ登録してください\n",
                   ),
-                  TextSpan(
+                  const TextSpan(
                     text: "・プレミアム契約期間の終了日の24時間以上前に解約しない限り契約期間が自動更新されます\n",
                   ),
                   TextSpan(
@@ -83,7 +83,7 @@ class PremiumIntroductionFotter extends StatelessWidget {
               ),
             ),
           ),
-          SizedBox(height: 24),
+          const SizedBox(height: 24),
           GestureDetector(
             onTap: () async {
               try {
@@ -91,7 +91,7 @@ class PremiumIntroductionFotter extends StatelessWidget {
                 final shouldShowSnackbar = await store.restore();
                 if (shouldShowSnackbar) {
                   ScaffoldMessenger.of(context).showSnackBar(
-                    SnackBar(
+                    const SnackBar(
                       duration: Duration(
                         seconds: 2,
                       ),
@@ -111,7 +111,7 @@ class PremiumIntroductionFotter extends StatelessWidget {
             },
             child: Text(
               '以前購入した方はこちら',
-              style: TextStyle(
+              style: const TextStyle(
                 decoration: TextDecoration.underline,
               ).merge(TextColorStyle.main).merge(
                     TextStyle(

@@ -12,7 +12,7 @@ class PlainPillNumber extends StatelessWidget {
   Widget build(BuildContext context) {
     return Text(
       "$pillNumberIntoPillSheet",
-      style: FontType.smallTitle.merge(TextStyle(color: PilllColors.weekday)),
+      style: FontType.smallTitle.merge(const TextStyle(color: PilllColors.weekday)),
       textScaleFactor: 1,
     );
   }
@@ -29,7 +29,7 @@ class SequentialPillNumber extends StatelessWidget {
   Widget build(BuildContext context) {
     return Text(
       "${offset + pillNumberIntoPillSheet}",
-      style: FontType.smallTitle.merge(TextStyle(color: PilllColors.weekday)),
+      style: FontType.smallTitle.merge(const TextStyle(color: PilllColors.weekday)),
       textScaleFactor: 1,
     );
   }
@@ -43,7 +43,7 @@ class PlainPillDate extends StatelessWidget {
   Widget build(BuildContext context) {
     return Text(
       DateTimeFormatter.monthAndDay(date),
-      style: FontType.smallTitle.merge(TextStyle(color: PilllColors.weekday)),
+      style: FontType.smallTitle.merge(const TextStyle(color: PilllColors.weekday)),
       textScaleFactor: 1,
     );
   }
@@ -59,7 +59,7 @@ class MenstruationPillNumber extends StatelessWidget {
   Widget build(BuildContext context) {
     return Text(
       "$pillNumberIntoPillSheet",
-      style: FontType.smallTitle.merge(TextStyle(color: PilllColors.primary)),
+      style: FontType.smallTitle.merge(const TextStyle(color: PilllColors.primary)),
       textScaleFactor: 1,
     );
   }
@@ -76,7 +76,7 @@ class MenstruationSequentialPillNumber extends StatelessWidget {
   Widget build(BuildContext context) {
     return Text(
       "${offset + pillNumberIntoPillSheet}",
-      style: FontType.smallTitle.merge(TextStyle(color: PilllColors.primary)),
+      style: FontType.smallTitle.merge(const TextStyle(color: PilllColors.primary)),
       textScaleFactor: 1,
     );
   }
@@ -90,7 +90,7 @@ class MenstruationPillDate extends StatelessWidget {
   Widget build(BuildContext context) {
     return Text(
       DateTimeFormatter.monthAndDay(date),
-      style: FontType.smallTitle.merge(TextStyle(color: PilllColors.primary)),
+      style: FontType.smallTitle.merge(const TextStyle(color: PilllColors.primary)),
       textScaleFactor: 1,
     );
   }

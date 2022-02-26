@@ -10,11 +10,11 @@ class InvalidAlreadyTakenPillDialog extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return AlertDialog(
-      contentPadding: EdgeInsets.only(left: 24, right: 24, top: 4, bottom: 24),
-      actionsPadding: EdgeInsets.only(left: 24, right: 24, bottom: 32),
-      titlePadding: EdgeInsets.only(top: 32),
+      contentPadding: const EdgeInsets.only(left: 24, right: 24, top: 4, bottom: 24),
+      actionsPadding: const EdgeInsets.only(left: 24, right: 24, bottom: 32),
+      titlePadding: const EdgeInsets.only(top: 32),
       title: SvgPicture.asset("images/alert_24.svg", width: 24, height: 24),
-      shape: RoundedRectangleBorder(
+      shape: const RoundedRectangleBorder(
           borderRadius: BorderRadius.all(Radius.circular(20))),
       content: Column(
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -25,15 +25,15 @@ class InvalidAlreadyTakenPillDialog extends StatelessWidget {
             style: FontType.subTitle.merge(TextColorStyle.main),
             textAlign: TextAlign.center,
           ),
-          SizedBox(height: 24),
+          const SizedBox(height: 24),
           SvgPicture.asset("images/invalid_rest_duration.svg"),
-          SizedBox(
+          const SizedBox(
             height: 15,
           ),
           RichText(
             textAlign: TextAlign.center,
             text: TextSpan(
-              style: TextStyle(height: 1.7),
+              style: const TextStyle(height: 1.7),
               children: [
                 TextSpan(
                   text: "今日飲むピルを未服用にしてから",

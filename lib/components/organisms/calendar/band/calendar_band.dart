@@ -39,7 +39,7 @@ class CalendarBand extends StatelessWidget {
               size: Size(width, CalendarBandConst.height),
             ),
             Container(
-              padding: EdgeInsets.only(left: 10),
+              padding: const EdgeInsets.only(left: 10),
               child: Text(isLineBreaked ? "" : model.label,
                   style: FontType.sSmallTitle.merge(TextColorStyle.white)),
             ),

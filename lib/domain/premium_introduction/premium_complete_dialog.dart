@@ -12,7 +12,7 @@ class PremiumCompleteDialog extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return AlertDialog(
-      contentPadding: EdgeInsets.fromLTRB(24, 48, 24, 24),
+      contentPadding: const EdgeInsets.fromLTRB(24, 48, 24, 24),
       content: Container(
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
@@ -28,9 +28,9 @@ class PremiumCompleteDialog extends StatelessWidget {
               ),
               textAlign: TextAlign.center,
             ),
-            SizedBox(height: 24),
+            const SizedBox(height: 24),
             SvgPicture.asset("images/jewel.svg"),
-            SizedBox(height: 24),
+            const SizedBox(height: 24),
             Text(
               "ご登録ありがとうございます。\nすべての機能が使えるようになりました！",
               style: TextStyle(
@@ -41,7 +41,7 @@ class PremiumCompleteDialog extends StatelessWidget {
               ),
               textAlign: TextAlign.center,
             ),
-            SizedBox(height: 24),
+            const SizedBox(height: 24),
             PrimaryButton(
               onPressed: () async {
                 Navigator.of(context).pop();

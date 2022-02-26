@@ -66,13 +66,13 @@ class App extends StatelessWidget {
         FirebaseAnalyticsObserver(analytics: firebaseAnalytics)
       ],
       theme: ThemeData(
-        appBarTheme: AppBarTheme(
+        appBarTheme: const AppBarTheme(
           systemOverlayStyle: SystemUiOverlayStyle.dark,
           centerTitle: true,
           color: PilllColors.white,
           elevation: 3,
         ),
-        textSelectionTheme: TextSelectionThemeData(
+        textSelectionTheme: const TextSelectionThemeData(
           cursorColor: PilllColors.primary,
         ),
         primaryColor: PilllColors.primary,
@@ -80,7 +80,7 @@ class App extends StatelessWidget {
         toggleableActiveColor: PilllColors.primary,
         cupertinoOverrideTheme: NoDefaultCupertinoThemeData(
             textTheme: CupertinoTextThemeData(textStyle: FontType.xBigTitle)),
-        buttonTheme: ButtonThemeData(
+        buttonTheme: const ButtonThemeData(
           buttonColor: PilllColors.secondary,
           disabledColor: PilllColors.disable,
           textTheme: ButtonTextTheme.primary,
@@ -97,7 +97,7 @@ class App extends StatelessWidget {
       ),
       localizationsDelegates: AppLocalizations.localizationsDelegates,
       supportedLocales: AppLocalizations.supportedLocales,
-      locale: Locale('ja'),
+      locale: const Locale('ja'),
     );
   }
 }

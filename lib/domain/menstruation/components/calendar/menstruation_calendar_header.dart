@@ -41,7 +41,7 @@ class MenstruationCalendarHeader extends StatelessWidget {
               maxHeight: MenstruationPageConst.tileHeight,
               child: PageView.builder(
                 controller: pageController,
-                physics: PageScrollPhysics(),
+                physics: const PageScrollPhysics(),
                 scrollDirection: Axis.horizontal,
                 itemBuilder: (context, index) {
                   final days = state.calendarDataSource[index];

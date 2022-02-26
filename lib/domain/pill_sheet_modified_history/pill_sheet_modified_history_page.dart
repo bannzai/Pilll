@@ -22,7 +22,7 @@ class PillSheetModifiedHistoriesPage extends HookConsumerWidget {
       backgroundColor: PilllColors.white,
       appBar: AppBar(
         leading: IconButton(
-          icon: Icon(Icons.arrow_back, color: Colors.black),
+          icon: const Icon(Icons.arrow_back, color: Colors.black),
           onPressed: () => Navigator.of(context).pop(),
         ),
         title: Text(
@@ -43,16 +43,16 @@ class PillSheetModifiedHistoriesPage extends HookConsumerWidget {
             return true;
           },
           child: Container(
-            padding: EdgeInsets.only(left: 24, right: 24, top: 24),
+            padding: const EdgeInsets.only(left: 24, right: 24, top: 24),
             child: Column(
               mainAxisSize: MainAxisSize.min,
               children: [
-                PillSheetModifiedHisotiryListHeader(),
-                SizedBox(height: 4),
+                const PillSheetModifiedHisotiryListHeader(),
+                const SizedBox(height: 4),
                 Expanded(
                   child: PillSheetModifiedHistoryList(
-                    padding: EdgeInsets.only(bottom: 20),
-                    scrollPhysics: AlwaysScrollableScrollPhysics(),
+                    padding: const EdgeInsets.only(bottom: 20),
+                    scrollPhysics: const AlwaysScrollableScrollPhysics(),
                     pillSheetModifiedHistories:
                         state.pillSheetModifiedHistories,
                     onEditTakenPillAction: store.editTakenValue,
@@ -71,7 +71,7 @@ extension PillSheetModifiedHistoriesPageRoute
     on PillSheetModifiedHistoriesPage {
   static Route<dynamic> route() {
     return MaterialPageRoute(
-      settings: RouteSettings(name: "PillSheetModifiedHistoriesPage"),
+      settings: const RouteSettings(name: "PillSheetModifiedHistoriesPage"),
       builder: (_) => PillSheetModifiedHistoriesPage(),
     );
   }

@@ -27,7 +27,7 @@ class SettingMenstruationPageTemplate extends StatelessWidget {
       backgroundColor: PilllColors.background,
       appBar: AppBar(
         leading: IconButton(
-          icon: Icon(Icons.arrow_back, color: Colors.black),
+          icon: const Icon(Icons.arrow_back, color: Colors.black),
           onPressed: () => Navigator.of(context).pop(),
         ),
         title: Text(
@@ -42,17 +42,17 @@ class SettingMenstruationPageTemplate extends StatelessWidget {
             Expanded(
               child: ListView(
                 children: <Widget>[
-                  SizedBox(height: 24),
+                  const SizedBox(height: 24),
                   Text(
                     "生理がはじまるピル番号をタップ",
                     style: FontType.sBigTitle.merge(TextColorStyle.main),
                     textAlign: TextAlign.center,
                   ),
-                  SizedBox(height: 59),
+                  const SizedBox(height: 59),
                   pillSheetList,
-                  SizedBox(height: 24),
+                  const SizedBox(height: 24),
                   dynamicDescription,
-                  SizedBox(height: 20),
+                  const SizedBox(height: 20),
                 ],
               ),
             ),
@@ -61,7 +61,7 @@ class SettingMenstruationPageTemplate extends StatelessWidget {
                 mainAxisAlignment: MainAxisAlignment.end,
                 children: [
                   doneButton,
-                  SizedBox(height: 35),
+                  const SizedBox(height: 35),
                 ],
               ),
             ]

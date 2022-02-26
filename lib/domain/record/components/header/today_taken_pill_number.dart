@@ -59,7 +59,7 @@ class TodayTakenPillNumber extends StatelessWidget {
         pillSheetGroup.isDeactived ||
         activedPillSheet.activeRestDuration != null) {
       return Padding(
-          padding: EdgeInsets.only(top: 8),
+          padding: const EdgeInsets.only(top: 8),
           child: Text("-",
               style: FontType.assisting.merge(TextColorStyle.noshime)));
     }

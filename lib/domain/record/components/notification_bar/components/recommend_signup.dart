@@ -16,7 +16,7 @@ class RecommendSignupNotificationBar extends HookConsumerWidget {
   @override
   Widget build(BuildContext context, WidgetRef ref) {
     return Container(
-      padding: EdgeInsets.only(top: 8, bottom: 8),
+      padding: const EdgeInsets.only(top: 8, bottom: 8),
       child: GestureDetector(
         onTap: onTap,
         child: Row(
@@ -24,7 +24,7 @@ class RecommendSignupNotificationBar extends HookConsumerWidget {
           children: [
             IconButton(
               alignment: Alignment.topLeft,
-              icon: Icon(
+              icon: const Icon(
                 Icons.close,
                 color: Colors.white,
                 size: 24,
@@ -33,7 +33,7 @@ class RecommendSignupNotificationBar extends HookConsumerWidget {
               iconSize: 24,
               padding: EdgeInsets.zero,
             ),
-            Spacer(),
+            const Spacer(),
             Column(
               children: [
                 Text(
@@ -43,7 +43,7 @@ class RecommendSignupNotificationBar extends HookConsumerWidget {
                 ),
               ],
             ),
-            Spacer(),
+            const Spacer(),
             Column(
               children: [
                 IconButton(
@@ -53,7 +53,7 @@ class RecommendSignupNotificationBar extends HookConsumerWidget {
                   ),
                   onPressed: () {},
                   iconSize: 24,
-                  padding: EdgeInsets.all(8),
+                  padding: const EdgeInsets.all(8),
                   alignment: Alignment.centerRight,
                 ),
               ],

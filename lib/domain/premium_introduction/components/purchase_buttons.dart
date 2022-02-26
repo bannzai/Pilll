@@ -30,7 +30,7 @@ class PurchaseButtons extends HookConsumerWidget {
   Widget build(BuildContext context, WidgetRef ref) {
     return Row(
       children: [
-        Spacer(),
+        const Spacer(),
         MonthlyPurchaseButton(
           monthlyPackage: monthlyPackage,
           onTap: (monthlyPackage) async {
@@ -38,7 +38,7 @@ class PurchaseButtons extends HookConsumerWidget {
             await _purchase(context, monthlyPackage);
           },
         ),
-        SizedBox(width: 16),
+        const SizedBox(width: 16),
         AnnualPurchaseButton(
           annualPackage: annualPackage,
           offeringType: offeringType,
@@ -47,7 +47,7 @@ class PurchaseButtons extends HookConsumerWidget {
             await _purchase(context, annualPackage);
           },
         ),
-        Spacer(),
+        const Spacer(),
       ],
     );
   }

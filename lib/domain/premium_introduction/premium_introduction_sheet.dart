@@ -32,7 +32,7 @@ class PremiumIntroductionSheet extends HookConsumerWidget {
         .watch(isOverDiscountDeadlineProvider(discountEntitlementDeadlineDate));
     final monthlyPremiumPackage = state.monthlyPremiumPackage;
     if (state.isNotYetLoad) {
-      return Indicator();
+      return const Indicator();
     }
 
     return HUD(
@@ -51,24 +51,24 @@ class PremiumIntroductionSheet extends HookConsumerWidget {
                     decoration: BoxDecoration(
                       color: Colors.transparent,
                       image: !state.isPremium && !isOverDiscountDeadline
-                          ? DecorationImage(
+                          ? const DecorationImage(
                               image:
                                   AssetImage("images/premium_background.png"),
                               fit: BoxFit.cover,
                             )
                           : null,
                     ),
-                    padding: EdgeInsets.only(left: 40, right: 40, bottom: 40),
+                    padding: const EdgeInsets.only(left: 40, right: 40, bottom: 40),
                     width: MediaQuery.of(context).size.width,
                   ),
                   SingleChildScrollView(
-                    padding: EdgeInsets.only(bottom: 100),
+                    padding: const EdgeInsets.only(bottom: 100),
                     child: Column(
                       mainAxisSize: MainAxisSize.min,
                       children: [
                         PremiumIntroductionHeader(),
                         if (state.isPremium) ...[
-                          SizedBox(height: 32),
+                          const SizedBox(height: 32),
                           PremiumUserThanksRow(),
                         ],
                         if (!state.isPremium) ...[
@@ -82,7 +82,7 @@ class PremiumIntroductionSheet extends HookConsumerWidget {
                           if (offerings != null)
                             if (monthlyPackage != null)
                               if (annualPackage != null) ...[
-                                SizedBox(height: 32),
+                                const SizedBox(height: 32),
                                 PurchaseButtons(
                                   store: store,
                                   offeringType: offeringType,
@@ -91,7 +91,7 @@ class PremiumIntroductionSheet extends HookConsumerWidget {
                                 ),
                               ],
                         ],
-                        SizedBox(height: 24),
+                        const SizedBox(height: 24),
                         AlertButton(
                             onPressed: () async {
                               analytics.logEvent(
@@ -99,7 +99,7 @@ class PremiumIntroductionSheet extends HookConsumerWidget {
                               await launch(preimumLink);
                             },
                             text: "プレミアム機能を見る"),
-                        SizedBox(height: 24),
+                        const SizedBox(height: 24),
                         PremiumIntroductionFotter(),
                       ],
                     ),
@@ -108,7 +108,7 @@ class PremiumIntroductionSheet extends HookConsumerWidget {
                     left: 7,
                     top: 20,
                     child: IconButton(
-                      icon: Icon(Icons.close, color: Colors.black),
+                      icon: const Icon(Icons.close, color: Colors.black),
                       onPressed: () => Navigator.of(context).pop(),
                     ),
                   ),

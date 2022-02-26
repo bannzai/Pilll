@@ -12,7 +12,7 @@ class PremiumFunctionSurveyStateStore
     extends StateNotifier<PremiumFunctionSurveyState> {
   final UserService _userService;
   PremiumFunctionSurveyStateStore(this._userService)
-      : super(PremiumFunctionSurveyState());
+      : super(const PremiumFunctionSurveyState());
 
   handleCheckEvent(PremiumFunctionSurveyElementType element) {
     final copied = [...state.selectedElements];

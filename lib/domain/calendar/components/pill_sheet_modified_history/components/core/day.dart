@@ -31,7 +31,7 @@ class Day extends StatelessWidget {
             textAlign: TextAlign.end,
           ),
         ),
-        SizedBox(width: 4),
+        const SizedBox(width: 4),
         Text(
           "(${_weekday.weekdayString()})",
           style: TextStyle(

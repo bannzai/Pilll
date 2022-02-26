@@ -809,7 +809,7 @@ void main() {
         pillSheets: [pillSheet],
         createdAt: anyDate,
       );
-      final setting = Setting(
+      final setting = const Setting(
         pillSheetTypes: [PillSheetType.pillsheet_28_0],
         pillNumberForFromMenstruation: 22,
         durationMenstruation: 3,
@@ -852,7 +852,7 @@ void main() {
         pillSheets: [one, two, three],
         createdAt: anyDate,
       );
-      final setting = Setting(
+      final setting = const Setting(
         pillSheetTypes: [
           PillSheetType.pillsheet_28_0,
           PillSheetType.pillsheet_28_0,
@@ -911,7 +911,7 @@ void main() {
         pillSheets: [one, two, three],
         createdAt: anyDate,
       );
-      final setting = Setting(
+      final setting = const Setting(
         pillSheetTypes: [
           PillSheetType.pillsheet_28_0,
           PillSheetType.pillsheet_28_0,
@@ -979,7 +979,7 @@ void main() {
         pillSheets: [one, two, three, four, five],
         createdAt: anyDate,
       );
-      final setting = Setting(
+      final setting = const Setting(
         pillSheetTypes: [
           PillSheetType.pillsheet_28_0,
           PillSheetType.pillsheet_28_0,
@@ -1058,7 +1058,7 @@ void main() {
         pillSheets: [one, two, three, four, five],
         createdAt: anyDate,
       );
-      final setting = Setting(
+      final setting = const Setting(
         pillSheetTypes: [
           PillSheetType.pillsheet_28_0,
           PillSheetType.pillsheet_28_0,

@@ -67,7 +67,7 @@ class PillSheetModifiedHistoryTakenPillAction extends StatelessWidget {
                             dateTime);
                     ScaffoldMessenger.of(context).showSnackBar(
                       SnackBar(
-                        duration: Duration(seconds: 2),
+                        duration: const Duration(seconds: 2),
                         content: Text("$dateに変更しました"),
                       ),
                     );

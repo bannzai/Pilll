@@ -24,7 +24,7 @@ class SettingSectionTitle extends StatelessWidget {
 
   Widget _section() {
     return Container(
-      padding: EdgeInsets.only(top: 32, left: 15, right: 16),
+      padding: const EdgeInsets.only(top: 32, left: 15, right: 16),
       child: Text(
         text,
         style: FontType.assisting.merge(TextColorStyle.main),

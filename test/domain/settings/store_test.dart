@@ -52,7 +52,7 @@ void main() {
   group("#addReminderTimes", () {
     test("when added reminder times ${ReminderTime.maximumCount}", () {
       final settingService = MockSettingService();
-      final setting = Setting(
+      final setting = const Setting(
         reminderTimes: [
           ReminderTime(hour: 1, minute: 0),
           ReminderTime(hour: 2, minute: 0),
@@ -77,13 +77,13 @@ void main() {
       final userService = MockUserService();
       when(userService.fetch())
           .thenAnswer((realInvocation) => Future.value(_FakeUser()));
-      when(userService.stream()).thenAnswer((realInvocation) => Stream.empty());
+      when(userService.stream()).thenAnswer((realInvocation) => const Stream.empty());
       final pillSheetModifiedService = MockPillSheetModifiedHistoryService();
       final pillSheetGroupService = MockPillSheetGroupService();
       when(pillSheetGroupService.fetchLatest())
           .thenAnswer((realInvocation) => Future.value(pillSheetGroup));
       when(pillSheetGroupService.streamForLatest())
-          .thenAnswer((realInvocation) => Stream.empty());
+          .thenAnswer((realInvocation) => const Stream.empty());
 
       final store = SettingStateStore(
         batchFactory,
@@ -98,16 +98,16 @@ void main() {
       store.state = SettingState(setting: setting);
 
       when(settingService.update(setting.copyWith(reminderTimes: [
-        ReminderTime(hour: 1, minute: 0),
-        ReminderTime(hour: 2, minute: 0),
-        ReminderTime(hour: 3, minute: 0),
+        const ReminderTime(hour: 1, minute: 0),
+        const ReminderTime(hour: 2, minute: 0),
+        const ReminderTime(hour: 3, minute: 0),
       ]))).thenAnswer((realInvocation) => Future.value(setting));
 
-      store.addReminderTimes(ReminderTime(hour: 3, minute: 0));
+      store.addReminderTimes(const ReminderTime(hour: 3, minute: 0));
       verify(settingService.update(setting.copyWith(reminderTimes: [
-        ReminderTime(hour: 1, minute: 0),
-        ReminderTime(hour: 2, minute: 0),
-        ReminderTime(hour: 3, minute: 0),
+        const ReminderTime(hour: 1, minute: 0),
+        const ReminderTime(hour: 2, minute: 0),
+        const ReminderTime(hour: 3, minute: 0),
       ])));
     });
     test(
@@ -115,9 +115,9 @@ void main() {
         () {
       final settingService = MockSettingService();
       final setting = _FakeSetting([
-        ReminderTime(hour: 1, minute: 0),
-        ReminderTime(hour: 2, minute: 0),
-        ReminderTime(hour: 3, minute: 0)
+        const ReminderTime(hour: 1, minute: 0),
+        const ReminderTime(hour: 2, minute: 0),
+        const ReminderTime(hour: 3, minute: 0)
       ]);
       when(settingService.fetch())
           .thenAnswer((realInvocation) => Future.value(setting));
@@ -133,13 +133,13 @@ void main() {
       final userService = MockUserService();
       when(userService.fetch())
           .thenAnswer((realInvocation) => Future.value(_FakeUser()));
-      when(userService.stream()).thenAnswer((realInvocation) => Stream.empty());
+      when(userService.stream()).thenAnswer((realInvocation) => const Stream.empty());
       final pillSheetModifiedService = MockPillSheetModifiedHistoryService();
       final pillSheetGroupService = MockPillSheetGroupService();
       when(pillSheetGroupService.fetchLatest())
           .thenAnswer((realInvocation) => Future.value(pillSheetGroup));
       when(pillSheetGroupService.streamForLatest())
-          .thenAnswer((realInvocation) => Stream.empty());
+          .thenAnswer((realInvocation) => const Stream.empty());
 
       final store = SettingStateStore(
         batchFactory,
@@ -153,14 +153,14 @@ void main() {
       // ignore: invalid_use_of_protected_member
       store.state = SettingState(setting: setting);
 
-      expect(() => store.addReminderTimes(ReminderTime(hour: 4, minute: 0)),
+      expect(() => store.addReminderTimes(const ReminderTime(hour: 4, minute: 0)),
           throwsException);
     });
   });
   group("#deleteReminderTimes", () {
     test("when deleted reminder times ${ReminderTime.maximumCount}", () {
       final settingService = MockSettingService();
-      final setting = Setting(
+      final setting = const Setting(
         reminderTimes: [
           ReminderTime(hour: 1, minute: 0),
           ReminderTime(hour: 2, minute: 0),
@@ -184,13 +184,13 @@ void main() {
       final userService = MockUserService();
       when(userService.fetch())
           .thenAnswer((realInvocation) => Future.value(_FakeUser()));
-      when(userService.stream()).thenAnswer((realInvocation) => Stream.empty());
+      when(userService.stream()).thenAnswer((realInvocation) => const Stream.empty());
       final pillSheetModifiedService = MockPillSheetModifiedHistoryService();
       final pillSheetGroupService = MockPillSheetGroupService();
       when(pillSheetGroupService.fetchLatest())
           .thenAnswer((realInvocation) => Future.value(pillSheetGroup));
       when(pillSheetGroupService.streamForLatest())
-          .thenAnswer((realInvocation) => Stream.empty());
+          .thenAnswer((realInvocation) => const Stream.empty());
 
       final store = SettingStateStore(
         batchFactory,
@@ -205,12 +205,12 @@ void main() {
       store.state = SettingState(setting: setting);
 
       when(settingService.update(setting.copyWith(reminderTimes: [
-        ReminderTime(hour: 1, minute: 0),
+        const ReminderTime(hour: 1, minute: 0),
       ]))).thenAnswer((realInvocation) => Future.value(setting));
 
       store.deleteReminderTimes(1);
       verify(settingService.update(setting.copyWith(reminderTimes: [
-        ReminderTime(hour: 1, minute: 0),
+        const ReminderTime(hour: 1, minute: 0),
       ])));
     });
     test(
@@ -218,7 +218,7 @@ void main() {
         () {
       final settingService = MockSettingService();
       final setting = _FakeSetting([
-        ReminderTime(hour: 1, minute: 0),
+        const ReminderTime(hour: 1, minute: 0),
       ]);
       when(settingService.fetch())
           .thenAnswer((realInvocation) => Future.value(setting));
@@ -235,13 +235,13 @@ void main() {
       final userService = MockUserService();
       when(userService.fetch())
           .thenAnswer((realInvocation) => Future.value(_FakeUser()));
-      when(userService.stream()).thenAnswer((realInvocation) => Stream.empty());
+      when(userService.stream()).thenAnswer((realInvocation) => const Stream.empty());
       final pillSheetModifiedService = MockPillSheetModifiedHistoryService();
       final pillSheetGroupService = MockPillSheetGroupService();
       when(pillSheetGroupService.fetchLatest())
           .thenAnswer((realInvocation) => Future.value(pillSheetGroup));
       when(pillSheetGroupService.streamForLatest())
-          .thenAnswer((realInvocation) => Stream.empty());
+          .thenAnswer((realInvocation) => const Stream.empty());
 
       final store = SettingStateStore(
         batchFactory,

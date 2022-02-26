@@ -92,7 +92,7 @@ void main() {
   group('#PremiumIntroductionSheet', () {
     final mockTodayRepository = MockTodayService();
     final today = DateTime(2021, 04, 29);
-    final discountEntitlementDeadlineDate = today.subtract(Duration(days: 1));
+    final discountEntitlementDeadlineDate = today.subtract(const Duration(days: 1));
 
     when(mockTodayRepository.today()).thenReturn(today);
     todayRepository = mockTodayRepository;
@@ -119,7 +119,7 @@ void main() {
                 isOverDiscountDeadlineProvider.overrideWithProvider(
                     (param) => Provider.autoDispose((_) => true)),
                 durationToDiscountPriceDeadline.overrideWithProvider((param) =>
-                    Provider.autoDispose((_) => Duration(seconds: 1000))),
+                    Provider.autoDispose((_) => const Duration(seconds: 1000))),
               ],
               child: MaterialApp(
                 home: sheet,
@@ -163,7 +163,7 @@ void main() {
                 isOverDiscountDeadlineProvider.overrideWithProvider((param) =>
                     Provider.autoDispose((_) => isOverDiscountDeadline)),
                 durationToDiscountPriceDeadline.overrideWithProvider((param) =>
-                    Provider.autoDispose((_) => Duration(seconds: 1000))),
+                    Provider.autoDispose((_) => const Duration(seconds: 1000))),
               ],
               child: MaterialApp(
                 home: sheet,
@@ -194,7 +194,7 @@ void main() {
           fakeIsPremium: false,
           fakeHasDiscountEntitlement: hasDiscountEntitlement,
           fakeDiscountEntitlementDeadlineDate:
-              today.subtract(Duration(days: 1)),
+              today.subtract(const Duration(days: 1)),
         );
 
         final sheet = PremiumIntroductionSheet();
@@ -209,7 +209,7 @@ void main() {
                 isOverDiscountDeadlineProvider.overrideWithProvider(
                     (param) => Provider.autoDispose((_) => false)),
                 durationToDiscountPriceDeadline.overrideWithProvider((param) =>
-                    Provider.autoDispose((_) => Duration(seconds: 1000))),
+                    Provider.autoDispose((_) => const Duration(seconds: 1000))),
               ],
               child: MaterialApp(
                 home: sheet,
@@ -240,7 +240,7 @@ void main() {
           fakeIsPremium: false,
           fakeHasDiscountEntitlement: true,
           fakeDiscountEntitlementDeadlineDate:
-              today.subtract(Duration(days: 1)),
+              today.subtract(const Duration(days: 1)),
         );
 
         final sheet = PremiumIntroductionSheet();
@@ -255,7 +255,7 @@ void main() {
                 isOverDiscountDeadlineProvider.overrideWithProvider((param) =>
                     Provider.autoDispose((_) => isOverDiscountDeadline)),
                 durationToDiscountPriceDeadline.overrideWithProvider((param) =>
-                    Provider.autoDispose((_) => Duration(seconds: 1000))),
+                    Provider.autoDispose((_) => const Duration(seconds: 1000))),
               ],
               child: MaterialApp(
                 home: sheet,
@@ -299,7 +299,7 @@ void main() {
                 isOverDiscountDeadlineProvider.overrideWithProvider(
                     (param) => Provider.autoDispose((_) => false)),
                 durationToDiscountPriceDeadline.overrideWithProvider((param) =>
-                    Provider.autoDispose((_) => Duration(seconds: 1000))),
+                    Provider.autoDispose((_) => const Duration(seconds: 1000))),
               ],
               child: MaterialApp(
                 home: sheet,

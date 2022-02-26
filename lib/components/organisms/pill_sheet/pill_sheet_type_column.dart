@@ -22,7 +22,7 @@ class PillSheetTypeColumn extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      constraints: BoxConstraints(minWidth: 146, minHeight: 129),
+      constraints: const BoxConstraints(minWidth: 146, minHeight: 129),
       decoration: BoxDecoration(
         color: this.selected
             ? PilllColors.secondary.withOpacity(0.08)
@@ -46,10 +46,10 @@ class PillSheetTypeColumn extends StatelessWidget {
           children: <Widget>[
             Text("${_title(pillSheetType)}",
                 style: FontType.thinTitle.merge(TextColorStyle.main)),
-            SizedBox(height: 2),
+            const SizedBox(height: 2),
             Text("${_subtitle(pillSheetType)}",
                 style: FontType.assisting.merge(TextColorStyle.main)),
-            SizedBox(height: 9),
+            const SizedBox(height: 9),
             this.pillSheetType.image,
           ],
         ),

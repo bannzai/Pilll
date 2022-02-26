@@ -19,7 +19,7 @@ class PillSheetModifiedHistoryStateStore
   final PillSheetModifiedHistoryService _pillSheetModifiedHistoryService;
   PillSheetModifiedHistoryStateStore(
     this._pillSheetModifiedHistoryService,
-  ) : super(PillSheetModifiedHistoryState()) {
+  ) : super(const PillSheetModifiedHistoryState()) {
     reset();
   }
 

@@ -39,7 +39,7 @@ class NotificationInRestDuration extends HookConsumerWidget {
             .then((state) {
           ScaffoldMessenger.of(context).showSnackBar(
             SnackBar(
-              duration: Duration(seconds: 2),
+              duration: const Duration(seconds: 2),
               content: Text(
                 "${pillSheet.pillSheetType.notTakenWord}期間の通知を${state.setting!.isOnNotifyInNotTakenDuration ? "ON" : "OFF"}にしました",
               ),
@@ -49,7 +49,7 @@ class NotificationInRestDuration extends HookConsumerWidget {
       },
       value: setting.isOnNotifyInNotTakenDuration,
       // NOTE: when configured subtitle, the space between elements becomes very narrow
-      contentPadding: EdgeInsets.fromLTRB(14, 8, 6, 8),
+      contentPadding: const EdgeInsets.fromLTRB(14, 8, 6, 8),
     );
   }
 }

@@ -36,7 +36,7 @@ class MenstruationEditPage extends HookConsumerWidget {
       initialChildSize: 0.7,
       maxChildSize: 0.7,
       builder: (context, scrollController) {
-        Future.delayed(Duration(microseconds: 200)).then((value) {
+        Future.delayed(const Duration(microseconds: 200)).then((value) {
           if (state.isAlreadyAdjsutScrollOffset) {
             return;
           }
@@ -47,11 +47,11 @@ class MenstruationEditPage extends HookConsumerWidget {
               estimatedSectionTitleHeight);
         });
         return Container(
-          decoration: BoxDecoration(
+          decoration: const BoxDecoration(
               color: PilllColors.white,
               borderRadius: BorderRadius.only(
-                topLeft: const Radius.circular(20.0),
-                topRight: const Radius.circular(20.0),
+                topLeft: Radius.circular(20.0),
+                topRight: Radius.circular(20.0),
               )),
           child: Column(
             children: [
@@ -67,7 +67,7 @@ class MenstruationEditPage extends HookConsumerWidget {
                         Text(title,
                             style:
                                 FontType.sBigTitle.merge(TextColorStyle.main)),
-                        Spacer(),
+                        const Spacer(),
                         AlertButton(
                           onPressed: () async {
                             analytics.logEvent(
@@ -77,7 +77,7 @@ class MenstruationEditPage extends HookConsumerWidget {
                                 context: context,
                                 builder: (context) => DiscardDialog(
                                   title: "生理期間を削除しますか？",
-                                  message: Text(""),
+                                  message: const Text(""),
                                   actions: [
                                     AlertButton(
                                       text: "キャンセル",
@@ -114,7 +114,7 @@ class MenstruationEditPage extends HookConsumerWidget {
                       ],
                     ),
                     if (invalidMessage != null) ...[
-                      SizedBox(height: 12),
+                      const SizedBox(height: 12),
                       Text(invalidMessage,
                           style:
                               FontType.assisting.merge(TextColorStyle.danger)),
@@ -181,7 +181,7 @@ void showMenstruationEditPageForUpdate(
       didEndSave: (menstruation) {
         Navigator.of(context).pop();
         ScaffoldMessenger.of(context).showSnackBar(
-          SnackBar(
+          const SnackBar(
             duration: Duration(seconds: 2),
             content: Text("生理期間を編集しました"),
           ),
@@ -190,7 +190,7 @@ void showMenstruationEditPageForUpdate(
       didEndDelete: () {
         Navigator.of(context).pop();
         ScaffoldMessenger.of(context).showSnackBar(
-          SnackBar(
+          const SnackBar(
             duration: Duration(seconds: 2),
             content: Text("生理期間を削除しました"),
           ),
@@ -215,7 +215,7 @@ void showMenstruationEditPageForCreate(
         Navigator.of(context).pop();
         ScaffoldMessenger.of(context).showSnackBar(
           SnackBar(
-            duration: Duration(seconds: 2),
+            duration: const Duration(seconds: 2),
             content: Text(
                 "${DateTimeFormatter.monthAndDay(menstruation.beginDate)}から生理開始で記録しました"),
           ),
@@ -224,7 +224,7 @@ void showMenstruationEditPageForCreate(
       didEndDelete: () {
         Navigator.of(context).pop();
         ScaffoldMessenger.of(context).showSnackBar(
-          SnackBar(
+          const SnackBar(
             duration: Duration(seconds: 2),
             content: Text("生理期間を削除しました"),
           ),

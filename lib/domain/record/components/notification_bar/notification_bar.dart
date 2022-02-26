@@ -128,7 +128,7 @@ class NotificationBar extends HookConsumerWidget {
       }
     } else {
       if (state.shownRecommendSignupNotificationForPremium) {
-        return RecommendSignupForPremiumNotificationBar();
+        return const RecommendSignupForPremiumNotificationBar();
       }
 
       final restDurationNotification = state.restDurationNotification;

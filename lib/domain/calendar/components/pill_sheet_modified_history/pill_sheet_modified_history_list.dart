@@ -65,7 +65,7 @@ class PillSheetModifiedHistoryList extends StatelessWidget {
       PillSheetModifiedHistoryMonthlyHeader(
         dateTimeOfMonth: model.dateTimeOfMonth,
       ),
-      SizedBox(height: 16),
+      const SizedBox(height: 16),
       ...model.pillSheetModifiedHistories
           .map((history) {
             final actionType = history.enumActionType;
@@ -159,17 +159,17 @@ class PillSheetModifiedHistoryList extends StatelessWidget {
                       width: 56,
                       child: SvgPicture.asset("images/vertical_dash_line.svg"),
                     ),
-                    Spacer(),
+                    const Spacer(),
                   ],
                 ),
-                SizedBox(height: 16),
+                const SizedBox(height: 16),
                 body(),
               ]);
             } else {
               return body();
             }
           })
-          .map((e) => Column(children: [e, SizedBox(height: 16)]))
+          .map((e) => Column(children: [e, const SizedBox(height: 16)]))
           .toList(),
     ];
   }

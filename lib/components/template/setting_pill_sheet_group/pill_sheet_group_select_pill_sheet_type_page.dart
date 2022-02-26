@@ -22,20 +22,20 @@ class PillSheetGroupSelectPillSheetTypePage extends StatelessWidget {
         builder: (context, scrollController) {
           return Container(
             width: MediaQuery.of(context).size.width,
-            decoration: BoxDecoration(
+            decoration: const BoxDecoration(
               color: PilllColors.background,
               borderRadius: BorderRadius.only(
-                topLeft: const Radius.circular(20.0),
-                topRight: const Radius.circular(20.0),
+                topLeft: Radius.circular(20.0),
+                topRight: Radius.circular(20.0),
               ),
             ),
             child: Column(
               children: [
-                SizedBox(height: 25),
+                const SizedBox(height: 25),
                 Row(
                   mainAxisAlignment: MainAxisAlignment.start,
                   children: [
-                    SizedBox(width: 16),
+                    const SizedBox(width: 16),
                     Text(
                       "ピルの種類を選択",
                       style: TextStyle(
@@ -51,7 +51,7 @@ class PillSheetGroupSelectPillSheetTypePage extends StatelessWidget {
                   controller: scrollController,
                   child: Column(
                     children: [
-                      SizedBox(height: 24),
+                      const SizedBox(height: 24),
                       PillSheetTypeSelectBodyTemplate(
                         onSelect: (e) {
                           analytics.logEvent(

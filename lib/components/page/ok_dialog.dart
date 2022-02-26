@@ -18,7 +18,7 @@ class OKDialog extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return AlertDialog(
-      title: Icon(
+      title: const Icon(
         Icons.help,
         color: PilllColors.secondary,
       ),
@@ -28,7 +28,7 @@ class OKDialog extends StatelessWidget {
         children: <Widget>[
           if (title.isNotEmpty) ...[
             Text(title, style: FontType.subTitle.merge(TextColorStyle.main)),
-            SizedBox(
+            const SizedBox(
               height: 15,
             ),
           ],

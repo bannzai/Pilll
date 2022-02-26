@@ -28,7 +28,7 @@ class AccountLinkRow extends StatelessWidget {
         mainAxisSize: MainAxisSize.min,
         children: [
           SvgPicture.asset("images/checkmark_green.svg"),
-          SizedBox(width: 6),
+          const SizedBox(width: 6),
           Text("連携済み",
               style: FontType.assisting.merge(TextColorStyle.darkGray)),
         ],
@@ -38,7 +38,7 @@ class AccountLinkRow extends StatelessWidget {
         mainAxisSize: MainAxisSize.min,
         children: [
           SvgPicture.asset("images/alert_24.svg"),
-          SizedBox(width: 6),
+          const SizedBox(width: 6),
           Text("未登録", style: FontType.assisting.merge(TextColorStyle.darkGray)),
         ],
       );

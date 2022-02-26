@@ -13,7 +13,7 @@ import '../../../helper/supported_device.dart';
 class _TestWidget extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return Text("");
+    return const Text("");
   }
 }
 
@@ -30,7 +30,7 @@ void main() {
       SupportedDeviceType.iPhone5SE2nd.binding(tester.binding.window);
 
       final weekdayLines =
-          PillSheetViewWeekdayLine(firstWeekday: Weekday.Sunday);
+          const PillSheetViewWeekdayLine(firstWeekday: Weekday.Sunday);
       final pillSheetType = PillSheetType.pillsheet_21_0;
       final widget = PillSheetViewLayout(
         weekdayLines: weekdayLines,
@@ -48,7 +48,7 @@ void main() {
           ),
         ),
       );
-      await tester.pumpAndSettle(Duration(milliseconds: 500));
+      await tester.pumpAndSettle(const Duration(milliseconds: 500));
 
       expect(find.byWidgetPredicate((widget) => widget is _TestWidget),
           findsNWidgets(3));
@@ -58,7 +58,7 @@ void main() {
       (WidgetTester tester) async {
     SupportedDeviceType.iPhone5SE2nd.binding(tester.binding.window);
 
-    final weekdayLines = PillSheetViewWeekdayLine(firstWeekday: Weekday.Sunday);
+    final weekdayLines = const PillSheetViewWeekdayLine(firstWeekday: Weekday.Sunday);
     final pillSheetType = PillSheetType.pillsheet_28_0;
     final widget = PillSheetViewLayout(
       weekdayLines: weekdayLines,
@@ -76,7 +76,7 @@ void main() {
         ),
       ),
     );
-    await tester.pumpAndSettle(Duration(milliseconds: 500));
+    await tester.pumpAndSettle(const Duration(milliseconds: 500));
 
     expect(find.byWidgetPredicate((widget) => widget is _TestWidget),
         findsNWidgets(4));

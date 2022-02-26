@@ -10,7 +10,7 @@ class NormalPillMark extends StatelessWidget {
     return Container(
       width: PillMarkConst.edge,
       height: PillMarkConst.edge,
-      decoration: BoxDecoration(
+      decoration: const BoxDecoration(
         color: PilllColors.potti,
         shape: BoxShape.circle,
       ),
@@ -23,14 +23,14 @@ class RestPillMark extends StatelessWidget {
   Widget build(BuildContext context) {
     return DottedBorder(
       borderType: BorderType.RRect,
-      radius: Radius.circular(10),
+      radius: const Radius.circular(10),
       padding: EdgeInsets.zero,
       color: PilllColors.gray,
       strokeWidth: 1,
       child: Container(
         width: PillMarkConst.edge,
         height: PillMarkConst.edge,
-        decoration: BoxDecoration(
+        decoration: const BoxDecoration(
           color: PilllColors.blank,
           shape: BoxShape.circle,
         ),
@@ -45,7 +45,7 @@ class FakePillMark extends StatelessWidget {
     return Container(
       width: PillMarkConst.edge,
       height: PillMarkConst.edge,
-      decoration: BoxDecoration(
+      decoration: const BoxDecoration(
         color: PilllColors.blank,
         shape: BoxShape.circle,
       ),
@@ -59,7 +59,7 @@ class SelectedPillMark extends StatelessWidget {
     return Container(
       width: PillMarkConst.edge,
       height: PillMarkConst.edge,
-      decoration: BoxDecoration(
+      decoration: const BoxDecoration(
         color: PilllColors.enable,
         shape: BoxShape.circle,
       ),
@@ -73,7 +73,7 @@ class LightGrayPillMark extends StatelessWidget {
     return Container(
       width: PillMarkConst.edge,
       height: PillMarkConst.edge,
-      decoration: BoxDecoration(
+      decoration: const BoxDecoration(
         color: PilllColors.lightGray,
         shape: BoxShape.circle,
       ),

@@ -32,7 +32,7 @@ class CreatingNewPillSheetRow extends HookConsumerWidget {
         children: [
           Text("ピルシートグループの自動追加", style: FontType.listRow),
           if (!isPremium) ...[
-            SizedBox(width: 8),
+            const SizedBox(width: 8),
             PremiumBadge(),
           ]
         ],
@@ -56,7 +56,7 @@ class CreatingNewPillSheetRow extends HookConsumerWidget {
             }
             ScaffoldMessenger.of(context).showSnackBar(
               SnackBar(
-                duration: Duration(seconds: 2),
+                duration: const Duration(seconds: 2),
                 content: Text(
                   "ピルシートグループの自動追加を${setting.isAutomaticallyCreatePillSheet ? "ON" : "OFF"}にしました",
                 ),
@@ -72,7 +72,7 @@ class CreatingNewPillSheetRow extends HookConsumerWidget {
         }
       },
       value: setting.isAutomaticallyCreatePillSheet && (isPremium || isTrial),
-      contentPadding: EdgeInsets.fromLTRB(14, 8, 6, 8),
+      contentPadding: const EdgeInsets.fromLTRB(14, 8, 6, 8),
     );
   }
 }

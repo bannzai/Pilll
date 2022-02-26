@@ -40,20 +40,20 @@ class RecordPageInformationHeader extends StatelessWidget {
       height: RecordPageInformationHeaderConst.height,
       child: Column(
         children: <Widget>[
-          SizedBox(height: 34),
+          const SizedBox(height: 34),
           Row(
             mainAxisAlignment: MainAxisAlignment.center,
             children: <Widget>[
               _todayWidget(),
-              SizedBox(width: 28),
+              const SizedBox(width: 28),
               Container(
                 height: 64,
-                child: VerticalDivider(
+                child: const VerticalDivider(
                   width: 10,
                   color: PilllColors.divider,
                 ),
               ),
-              SizedBox(width: 28),
+              const SizedBox(width: 28),
               TodayTakenPillNumber(
                   pillSheetGroup: pillSheetGroup,
                   setting: setting,

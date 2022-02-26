@@ -8,7 +8,7 @@ class AppCard extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      margin: EdgeInsets.only(bottom: 2),
+      margin: const EdgeInsets.only(bottom: 2),
       decoration: BoxDecoration(
         color: PilllColors.white,
         borderRadius: BorderRadius.circular(12),
@@ -16,7 +16,7 @@ class AppCard extends StatelessWidget {
           BoxShadow(
             color: PilllColors.shadow,
             blurRadius: 6.0,
-            offset: Offset(0, 2),
+            offset: const Offset(0, 2),
           ),
         ],
       ),

@@ -102,7 +102,7 @@ List<DateRange> nextPillSheetDateRanges(
   return List.generate(count.toInt(), (groupPageIndex) {
     return pillSheetGroup.pillSheets.map((pillSheet) {
       final offset = groupPageIndex * totalPillCount;
-      final begin = pillSheet.estimatedLastTakenDate.add(Duration(days: 1));
+      final begin = pillSheet.estimatedLastTakenDate.add(const Duration(days: 1));
       final end = begin.add(Duration(days: Weekday.values.length - 1));
       return DateRange(
           begin.add(Duration(days: offset)), end.add(Duration(days: offset)));

@@ -56,11 +56,11 @@ class MenstruationSelectModifyTypeSheet extends StatelessWidget {
               child: Text("生理を記録",
                   style: FontType.sBigTitle.merge(TextColorStyle.main)),
             ),
-            SizedBox(height: 24),
+            const SizedBox(height: 24),
             SizedBox(
               height: _tileHeight * MenstruationSelectModifyType.values.length,
               child: ListView(
-                physics: NeverScrollableScrollPhysics(),
+                physics: const NeverScrollableScrollPhysics(),
                 children: MenstruationSelectModifyType.values
                     .map(
                       (e) => _tile(e),
