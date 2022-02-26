@@ -225,12 +225,10 @@ class MenstruationStore extends StateNotifier<MenstruationState> {
   }
 
   Future<bool> _canHealthkitDataSave() async {
-    if (state.isPremium || state.isTrial) {
-      if (Platform.isIOS) {
-        if (await isHealthDataAvailable()) {
-          if (await isAuthorizedReadAndShareToHealthKitData()) {
-            return true;
-          }
+    if (Platform.isIOS) {
+      if (await isHealthDataAvailable()) {
+        if (await isAuthorizedReadAndShareToHealthKitData()) {
+          return true;
         }
       }
     }

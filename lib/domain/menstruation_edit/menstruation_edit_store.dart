@@ -96,7 +96,8 @@ class MenstruationEditStore extends StateNotifier<MenstruationEditState> {
   Future<void> delete() async {
     var menstruation = this.initialMenstruation;
     if (menstruation == null) {
-      throw const FormatException("menstruation is not exists from db when delete");
+      throw const FormatException(
+          "menstruation is not exists from db when delete");
     }
     final documentID = menstruation.documentID;
     if (documentID == null) {
@@ -207,8 +208,8 @@ class MenstruationEditStore extends StateNotifier<MenstruationEditState> {
 
     if (isSameDay(menstruation.endDate, date)) {
       state = state.copyWith(
-          menstruation:
-              menstruation.copyWith(endDate: date.subtract(const Duration(days: 1))));
+          menstruation: menstruation.copyWith(
+              endDate: date.subtract(const Duration(days: 1))));
       return;
     }
   }
@@ -218,13 +219,11 @@ class MenstruationEditStore extends StateNotifier<MenstruationEditState> {
   }
 
   Future<bool> _canHealthKitDataSave() async {
-    if (state.isPremium || state.isTrial) {
-      if (Platform.isIOS) {
-        if (await isHealthDataAvailable()) {
-          if (await isAuthorizedReadAndShareToHealthKitData()) {
-            if (state.menstruation?.healthKitSampleDataUUID != null) {
-              return true;
-            }
+    if (Platform.isIOS) {
+      if (await isHealthDataAvailable()) {
+        if (await isAuthorizedReadAndShareToHealthKitData()) {
+          if (state.menstruation?.healthKitSampleDataUUID != null) {
+            return true;
           }
         }
       }

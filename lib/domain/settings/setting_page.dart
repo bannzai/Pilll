@@ -180,8 +180,6 @@ class SettingPage extends HookConsumerWidget {
                       _separator(),
                       if (Platform.isIOS && state.isHealthDataAvailable) ...[
                         HealthCareRow(
-                          isPremium: state.isPremium,
-                          isTrial: state.isTrial,
                           trialDeadlineDate: state.trialDeadlineDate,
                         ),
                         _separator(),
