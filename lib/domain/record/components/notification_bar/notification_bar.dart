@@ -127,6 +127,7 @@ class NotificationBar extends HookConsumerWidget {
         return EndedPillSheet(
           isPremium: state.isPremium,
           isTrial: state.isTrial,
+          trialDeadlineDate: state.trialDeadlineDate,
         );
       }
     } else {
@@ -146,6 +147,7 @@ class NotificationBar extends HookConsumerWidget {
         return EndedPillSheet(
           isPremium: state.isPremium,
           isTrial: state.isTrial,
+          trialDeadlineDate: state.trialDeadlineDate,
         );
       }
     }
