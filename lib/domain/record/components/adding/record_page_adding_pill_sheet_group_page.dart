@@ -26,7 +26,7 @@ class RecordPageAddingPillSheetGroupPage extends HookConsumerWidget {
           icon: const Icon(Icons.close, color: Colors.black),
           onPressed: () => Navigator.of(context).pop(),
         ),
-        title: const Text(
+        title: Text(
           "ピルシート追加",
           style: TextStyle(color: TextColor.black),
         ),

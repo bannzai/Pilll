@@ -29,7 +29,7 @@ class ReminderTimesPage extends HookConsumerWidget {
           icon: const Icon(Icons.arrow_back, color: Colors.black),
           onPressed: () => Navigator.of(context).pop(),
         ),
-        title: const Text(
+        title: Text(
           "通知時間",
           style: TextStyle(color: TextColor.black),
         ),

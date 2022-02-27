@@ -59,7 +59,7 @@ class InitialSettingPillSheetGroupPage extends HookConsumerWidget {
       child: Scaffold(
         backgroundColor: PilllColors.background,
         appBar: AppBar(
-          title: const Text(
+          title: Text(
             "1/3",
             style: TextStyle(color: TextColor.black),
           ),

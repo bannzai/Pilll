@@ -36,7 +36,7 @@ class RecordPageAddingPillSheet extends StatelessWidget {
                 child: Row(
               mainAxisAlignment: MainAxisAlignment.center,
               children: <Widget>[
-                const Icon(Icons.add, color: TextColor.noshime),
+                Icon(Icons.add, color: TextColor.noshime),
                 Text("ピルシートを追加",
                     style: FontType.assisting.merge(TextColorStyle.noshime)),
               ],

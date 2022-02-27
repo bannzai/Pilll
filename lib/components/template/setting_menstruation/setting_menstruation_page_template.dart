@@ -32,7 +32,7 @@ class SettingMenstruationPageTemplate extends StatelessWidget {
         ),
         title: Text(
           this.title,
-          style: const TextStyle(color: TextColor.black),
+          style: TextStyle(color: TextColor.black),
         ),
         backgroundColor: PilllColors.white,
       ),

@@ -60,7 +60,7 @@ class MenstruationPage extends HookConsumerWidget {
         title: SizedBox(
           child: Text(
             state.displayMonth,
-            style: const TextStyle(color: TextColor.black),
+            style: TextStyle(color: TextColor.black),
           ),
         ),
         backgroundColor: PilllColors.white,

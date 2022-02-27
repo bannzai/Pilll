@@ -25,7 +25,7 @@ class PillSheetModifiedHistoriesPage extends HookConsumerWidget {
           icon: const Icon(Icons.arrow_back, color: Colors.black),
           onPressed: () => Navigator.of(context).pop(),
         ),
-        title: const Text(
+        title: Text(
           "服用履歴",
           style: TextStyle(color: TextColor.main),
         ),

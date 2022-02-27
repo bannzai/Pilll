@@ -104,7 +104,7 @@ class InitialSettingReminderTimesPage extends HookConsumerWidget {
           icon: const Icon(Icons.arrow_back, color: Colors.black),
           onPressed: () => Navigator.of(context).pop(),
         ),
-        title: const Text(
+        title: Text(
           "3/3",
           style: TextStyle(color: TextColor.black),
         ),

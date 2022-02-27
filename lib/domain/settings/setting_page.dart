@@ -64,7 +64,7 @@ class SettingPage extends HookConsumerWidget {
       child: Scaffold(
         backgroundColor: PilllColors.background,
         appBar: AppBar(
-          title: const Text('設定', style: TextColorStyle.main),
+          title: Text('設定', style: TextColorStyle.main),
           backgroundColor: PilllColors.white,
         ),
         body: Container(child: _body(context, state, store)),
@@ -262,7 +262,7 @@ class SettingPage extends HookConsumerWidget {
     return Padding(
       padding: const EdgeInsets.only(left: 10, right: 10, bottom: 20, top: 20),
       child: GestureDetector(
-        child: const Center(
+        child: Center(
             child: Text("COPY DEBUG INFO", style: TextColorStyle.primary)),
         onTap: () async {
           Clipboard.setData(ClipboardData(text: await debugInfo("\n")));

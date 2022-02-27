@@ -30,7 +30,7 @@ class InitialSettingSelectTodayPillNumberPage extends HookConsumerWidget {
           icon: const Icon(Icons.arrow_back, color: Colors.black),
           onPressed: () => Navigator.of(context).pop(),
         ),
-        title: const Text(
+        title: Text(
           "2/3",
           style: TextStyle(color: TextColor.black),
         ),
