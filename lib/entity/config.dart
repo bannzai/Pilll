@@ -1,5 +1,6 @@
 import 'package:freezed_annotation/freezed_annotation.dart';
 
+part 'config.g.dart';
 part 'config.freezed.dart';
 
 @freezed
