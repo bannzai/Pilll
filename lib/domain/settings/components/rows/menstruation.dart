@@ -19,7 +19,7 @@ class MenstruationRow extends HookConsumerWidget {
     return ListTile(
       title: Row(
         children: [
-          Text("生理について", style: FontType.listRow),
+          const Text("生理について", style: FontType.listRow),
           const SizedBox(width: 8),
           if (_hasError)
             SvgPicture.asset("images/alert_24.svg", width: 24, height: 24),

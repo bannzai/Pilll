@@ -18,7 +18,7 @@ class PremiumCompleteDialog extends StatelessWidget {
           mainAxisAlignment: MainAxisAlignment.center,
           mainAxisSize: MainAxisSize.min,
           children: [
-            Text(
+            const Text(
               "Pilllプレミアム登録完了",
               style: TextStyle(
                 color: TextColor.main,
@@ -31,7 +31,7 @@ class PremiumCompleteDialog extends StatelessWidget {
             const SizedBox(height: 24),
             SvgPicture.asset("images/jewel.svg"),
             const SizedBox(height: 24),
-            Text(
+            const Text(
               "ご登録ありがとうございます。\nすべての機能が使えるようになりました！",
               style: TextStyle(
                 color: TextColor.main,

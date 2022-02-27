@@ -53,7 +53,7 @@ class EndedPillSheet extends StatelessWidget {
                   TextColorStyle.white,
                 ),
               ),
-              Text(
+              const Text(
                 "最後に服用した日を確認",
                 style: TextStyle(
                   color: TextColor.white,

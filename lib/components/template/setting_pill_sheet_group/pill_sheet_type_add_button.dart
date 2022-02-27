@@ -40,7 +40,7 @@ class PillSheetTypeAddButton extends StatelessWidget {
               size: 20,
             ),
             const SizedBox(width: 4),
-            Text(
+            const Text(
               "ピルシートを追加",
               style: TextStyle(
                 color: TextColor.main,

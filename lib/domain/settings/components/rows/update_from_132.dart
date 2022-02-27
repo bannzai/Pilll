@@ -10,7 +10,7 @@ class UpdateFrom132Row extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return ListTile(
-      title: Text("大型アップデート前の情報", style: FontType.listRow),
+      title: const Text("大型アップデート前の情報", style: FontType.listRow),
       onTap: () {
         analytics.logEvent(name: "did_select_migrate_132", parameters: {});
         SharedPreferences.getInstance().then((storage) {

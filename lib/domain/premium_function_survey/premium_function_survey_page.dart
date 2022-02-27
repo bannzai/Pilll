@@ -36,7 +36,7 @@ class PremiumFunctionSurveyPage extends HookConsumerWidget {
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.center,
                 children: [
-                  Text(
+                  const Text(
                     "プレミアム体験が終了しました",
                     style: TextStyle(
                       color: TextColor.main,
@@ -46,7 +46,7 @@ class PremiumFunctionSurveyPage extends HookConsumerWidget {
                     ),
                   ),
                   const SizedBox(height: 16),
-                  Text(
+                  const Text(
                     "もしよければ、便利だと感じた機能を教えて下さい！ぜひ、あなたのご意見をお聞かせください。",
                     style: TextStyle(
                       color: TextColor.main,
@@ -61,7 +61,7 @@ class PremiumFunctionSurveyPage extends HookConsumerWidget {
                       analytics.logEvent(name: "premium_link_tapped_on_survey");
                       await launch(preimumLink);
                     },
-                    child: Text("プレミアム機能の詳細はこちら",
+                    child: const Text("プレミアム機能の詳細はこちら",
                         style: TextStyle(
                             fontSize: 12,
                             fontFamily: FontFamily.japanese,
@@ -85,7 +85,7 @@ class PremiumFunctionSurveyPage extends HookConsumerWidget {
                   Column(
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
-                      Text(
+                      const Text(
                         "その他ご意見等あれば教えて下さい",
                         style: TextStyle(
                             color: TextColor.main,

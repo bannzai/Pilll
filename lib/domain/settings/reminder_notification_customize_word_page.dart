@@ -165,7 +165,7 @@ class ReminderNotificationCustomizeWordPage extends HookConsumerWidget {
         children: [
           Text(
             title,
-            style: TextStyle(
+            style: const TextStyle(
               color: TextColor.main,
               fontFamily: FontFamily.japanese,
               fontWeight: FontWeight.w400,
@@ -223,7 +223,7 @@ class _ReminderPushNotificationPreview extends StatelessWidget {
           Row(children: [
             SvgPicture.asset("images/pilll_icon.svg"),
             const SizedBox(width: 8),
-            Text(
+            const Text(
               "Pilll",
               style: TextStyle(
                 fontFamily: FontFamily.japanese,
@@ -236,7 +236,7 @@ class _ReminderPushNotificationPreview extends StatelessWidget {
           const SizedBox(height: 16),
           Text(
             "$word${isInVisibleReminderDate ? "" : " 1/7"}${isInvisiblePillNumber ? "" : " 5番 ~ 8番"}",
-            style: TextStyle(
+            style: const TextStyle(
               fontSize: 15,
               fontWeight: FontWeight.w600,
               fontFamily: FontFamily.japanese,
@@ -246,7 +246,7 @@ class _ReminderPushNotificationPreview extends StatelessWidget {
           if (!isInvisibleDescription)
             Text(
               "飲み忘れていませんか？\n服用記録がない日が複数あります$thinkingFace",
-              style: TextStyle(
+              style: const TextStyle(
                 fontSize: 14,
                 fontWeight: FontWeight.w400,
                 fontFamily: FontFamily.japanese,

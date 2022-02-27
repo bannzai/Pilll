@@ -22,7 +22,7 @@ class AnnouncementMultiplePillSheet extends StatelessWidget {
             ),
             const Spacer(),
           ]),
-          Text(
+          const Text(
             "ピルシートを\n服用日数表示にできます",
             style: TextStyle(
                 color: TextColor.main,
@@ -36,7 +36,7 @@ class AnnouncementMultiplePillSheet extends StatelessWidget {
             "images/announcement_multiple_pill_sheet.png",
           ),
           const SizedBox(height: 24),
-          Text(
+          const Text(
             "ヤーズフレックスなど連続服用する方におすすめです。",
             style: TextStyle(
               color: TextColor.main,
@@ -50,7 +50,7 @@ class AnnouncementMultiplePillSheet extends StatelessWidget {
           Row(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
-              Text(
+              const Text(
                 "表示モード",
                 style: TextStyle(
                   color: TextColor.main,
@@ -61,7 +61,7 @@ class AnnouncementMultiplePillSheet extends StatelessWidget {
               ),
               const SizedBox(width: 6),
               SvgPicture.asset("images/switching_appearance_mode.svg"),
-              Text("から設定できます",
+              const Text("から設定できます",
                   style: TextStyle(
                       color: TextColor.main,
                       fontSize: 14,

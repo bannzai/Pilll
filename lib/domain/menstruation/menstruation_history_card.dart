@@ -165,7 +165,7 @@ class MenstruationHistoryCardTitle extends StatelessWidget {
   Widget build(BuildContext context) {
     return Row(
       children: [
-        Text(
+        const Text(
           "生理履歴",
           style: TextStyle(
             color: TextColor.main,

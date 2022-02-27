@@ -23,7 +23,7 @@ class PillSheetModifiedHistoryDeletedPillSheetAction extends StatelessWidget {
           effectivePillNumber:
               PillSheetModifiedHistoryDateEffectivePillNumber.pillSheetCount(
                   value?.pillSheetIDs ?? [])),
-      detail: Text(
+      detail: const Text(
         "ピルシート破棄",
         style: TextStyle(
           color: TextColor.main,

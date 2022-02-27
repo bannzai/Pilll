@@ -3,142 +3,142 @@ import 'package:flutter/material.dart';
 class FontFamily {
   static String get standarad => japanese;
 
-  static final String number = "Avenir Next";
-  static final String japanese = "Noto Sans CJK JP";
-  static final String roboto = "Roboto";
+  static const String number = "Avenir Next";
+  static const String japanese = "Noto Sans CJK JP";
+  static const String roboto = "Roboto";
 }
 
 class FontSize {
-  static final double xHuge = 40;
-  static final double huge = 34;
-  static final double xBig = 24;
-  static final double big = 22;
-  static final double sBig = 20;
-  static final double large = 17;
-  static final double sLarge = 16;
-  static final double normal = 14;
-  static final double small = 12;
-  static final double sSmall = 10;
+  static const double xHuge = 40;
+  static const double huge = 34;
+  static const double xBig = 24;
+  static const double big = 22;
+  static const double sBig = 20;
+  static const double large = 17;
+  static const double sLarge = 16;
+  static const double normal = 14;
+  static const double small = 12;
+  static const double sSmall = 10;
 }
 
 class FontType {
-  static final TextStyle xHugeNumber = TextStyle(
+  static const TextStyle xHugeNumber = TextStyle(
     fontFamily: FontFamily.number,
     fontWeight: FontWeight.w500,
     fontSize: FontSize.xHuge,
   );
-  static final TextStyle largeNumber = TextStyle(
+  static const TextStyle largeNumber = TextStyle(
     fontFamily: FontFamily.japanese,
     fontWeight: FontWeight.w500,
     fontSize: FontSize.huge,
   );
-  static final TextStyle title = TextStyle(
+  static const TextStyle title = TextStyle(
     fontFamily: FontFamily.japanese,
     fontWeight: FontWeight.w600,
     fontSize: FontSize.large,
   );
-  static final TextStyle subTitle = TextStyle(
+  static const TextStyle subTitle = TextStyle(
     fontFamily: FontFamily.japanese,
     fontWeight: FontWeight.w600,
     fontSize: FontSize.sLarge,
   );
-  static final TextStyle xBigTitle = TextStyle(
+  static const TextStyle xBigTitle = TextStyle(
     fontFamily: FontFamily.number,
     fontWeight: FontWeight.w500,
     fontSize: FontSize.xBig,
   );
-  static final TextStyle xBigNumber = TextStyle(
+  static const TextStyle xBigNumber = TextStyle(
     fontFamily: FontFamily.number,
     fontWeight: FontWeight.w600,
     fontSize: FontSize.xBig,
   );
-  static final TextStyle sBigTitle = TextStyle(
+  static const TextStyle sBigTitle = TextStyle(
     fontFamily: FontFamily.japanese,
     fontWeight: FontWeight.w500,
     fontSize: FontSize.sBig,
   );
-  static final TextStyle cardHeader = TextStyle(
+  static const TextStyle cardHeader = TextStyle(
     fontFamily: FontFamily.number,
     fontWeight: FontWeight.w600,
     fontSize: FontSize.big,
   );
-  static final TextStyle thinTitle = TextStyle(
+  static const TextStyle thinTitle = TextStyle(
     fontFamily: FontFamily.japanese,
     fontWeight: FontWeight.w300,
     fontSize: FontSize.sLarge,
   );
-  static final TextStyle done = TextStyle(
+  static const TextStyle done = TextStyle(
     fontFamily: FontFamily.japanese,
     fontWeight: FontWeight.w600,
     fontSize: FontSize.sLarge,
   );
-  static final TextStyle close = TextStyle(
+  static const TextStyle close = TextStyle(
     fontFamily: FontFamily.japanese,
     fontWeight: FontWeight.w600,
     fontSize: FontSize.normal,
   );
-  static final TextStyle componentTitle = TextStyle(
+  static const TextStyle componentTitle = TextStyle(
     fontFamily: FontFamily.japanese,
     fontWeight: FontWeight.w300,
     fontSize: FontSize.sLarge,
   );
-  static final TextStyle gridElement = TextStyle(
+  static const TextStyle gridElement = TextStyle(
     fontFamily: FontFamily.number,
     fontWeight: FontWeight.w600,
     fontSize: FontSize.sLarge,
   );
 
-  static final TextStyle helpRow = TextStyle(
+  static const TextStyle helpRow = TextStyle(
     fontFamily: FontFamily.roboto,
     fontWeight: FontWeight.w400,
     fontSize: FontSize.normal,
   );
-  static final TextStyle listRow = TextStyle(
+  static const TextStyle listRow = TextStyle(
     fontFamily: FontFamily.roboto,
     fontWeight: FontWeight.w300,
     fontSize: FontSize.sLarge,
   );
-  static final TextStyle assisting = TextStyle(
+  static const TextStyle assisting = TextStyle(
     fontFamily: FontFamily.japanese,
     fontWeight: FontWeight.w300,
     fontSize: FontSize.normal,
   );
-  static final TextStyle assistingBold = TextStyle(
+  static const TextStyle assistingBold = TextStyle(
     fontFamily: FontFamily.japanese,
     fontWeight: FontWeight.w600,
     fontSize: FontSize.normal,
   );
-  static final TextStyle inputNumber = TextStyle(
+  static const TextStyle inputNumber = TextStyle(
     fontFamily: FontFamily.japanese,
     fontWeight: FontWeight.w700,
     fontSize: FontSize.sLarge,
   );
-  static final TextStyle description = TextStyle(
+  static const TextStyle description = TextStyle(
     fontFamily: FontFamily.japanese,
     fontWeight: FontWeight.w400,
     fontSize: FontSize.small,
   );
-  static final TextStyle descriptionBold = TextStyle(
+  static const TextStyle descriptionBold = TextStyle(
     fontFamily: FontFamily.japanese,
     fontWeight: FontWeight.w700,
     fontSize: FontSize.small,
   );
-  static final TextStyle smallTitle = TextStyle(
+  static const TextStyle smallTitle = TextStyle(
     fontFamily: FontFamily.number,
     fontWeight: FontWeight.w500,
     fontSize: FontSize.small,
   );
-  static final TextStyle sSmallTitle = TextStyle(
+  static const TextStyle sSmallTitle = TextStyle(
     fontFamily: FontFamily.japanese,
     fontWeight: FontWeight.w600,
     fontSize: FontSize.sSmall,
   );
-  static final TextStyle sSmallNumber = TextStyle(
+  static const TextStyle sSmallNumber = TextStyle(
     fontFamily: FontFamily.number,
     fontWeight: FontWeight.w600,
     fontSize: FontSize.sSmall,
   );
-  static final TextStyle sSmallSentence = TextStyle(
+  static const TextStyle sSmallSentence = TextStyle(
     fontFamily: FontFamily.japanese,
     fontWeight: FontWeight.w300,
     fontSize: FontSize.sSmall,

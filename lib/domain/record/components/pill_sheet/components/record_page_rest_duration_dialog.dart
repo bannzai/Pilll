@@ -35,7 +35,7 @@ class RecordPageRestDurationDialog extends StatelessWidget {
           const SizedBox(height: 24),
           SvgPicture.asset("images/explain_rest_duration.svg"),
           const SizedBox(height: 24),
-          Text(
+          const Text(
             "※休薬開始日を変えたい場合",
             style: TextStyle(
               color: TextColor.main,
@@ -46,7 +46,7 @@ class RecordPageRestDurationDialog extends StatelessWidget {
             textAlign: TextAlign.left,
           ),
           const SizedBox(height: 8),
-          Text(
+          const Text(
             "希望日まで未服用にする必要があります。服用済みのピルマークをタップすることで未服用にできます",
             style: TextStyle(
               color: TextColor.main,
@@ -111,7 +111,7 @@ class RecordPageRestDurationDialogTitle extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Text("$_numberから休薬しますか？",
-        style: TextStyle(
+        style: const TextStyle(
           color: TextColor.main,
           fontSize: 16,
           fontWeight: FontWeight.w600,

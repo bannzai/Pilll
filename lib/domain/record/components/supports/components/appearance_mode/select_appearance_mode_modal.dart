@@ -25,7 +25,7 @@ class SelectAppearanceModeModal extends HookConsumerWidget {
           mainAxisSize: MainAxisSize.min,
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            Text(
+            const Text(
               "表示モード",
               style: TextStyle(
                 fontSize: 20,

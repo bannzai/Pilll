@@ -20,7 +20,7 @@ class SwitchingAppearanceMode extends StatelessWidget {
   Widget build(BuildContext context) {
     return GestureDetector(
       child: Row(children: [
-        Text(
+        const Text(
           "表示モード",
           style: TextStyle(
             color: TextColor.main,

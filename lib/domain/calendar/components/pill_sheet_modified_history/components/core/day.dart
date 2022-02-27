@@ -22,7 +22,7 @@ class Day extends StatelessWidget {
           width: 28,
           child: Text(
             "$_day",
-            style: TextStyle(
+            style: const TextStyle(
               color: TextColor.main,
               fontFamily: FontFamily.number,
               fontSize: 23,
@@ -34,7 +34,7 @@ class Day extends StatelessWidget {
         const SizedBox(width: 4),
         Text(
           "(${_weekday.weekdayString()})",
-          style: TextStyle(
+          style: const TextStyle(
             color: TextColor.main,
             fontFamily: FontFamily.japanese,
             fontSize: 12,

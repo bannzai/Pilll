@@ -24,7 +24,7 @@ class TodayPllNumberRow extends HookConsumerWidget {
   Widget build(BuildContext context, WidgetRef ref) {
     final store = ref.watch(settingStoreProvider.notifier);
     return ListTile(
-      title: Text("今日飲むピル番号の変更", style: FontType.listRow),
+      title: const Text("今日飲むピル番号の変更", style: FontType.listRow),
       onTap: () => _onTap(context, store, setting, activedPillSheet),
     );
   }

@@ -39,7 +39,7 @@ class MenstruationCard extends StatelessWidget {
                 const SizedBox(width: 12),
                 Text(
                   DateTimeFormatter.monthAndWeekday(state.scheduleDate),
-                  style: TextStyle(
+                  style: const TextStyle(
                       color: TextColor.gray,
                       fontSize: 20,
                       fontWeight: FontWeight.w500,

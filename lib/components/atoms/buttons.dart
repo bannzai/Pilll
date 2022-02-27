@@ -173,7 +173,7 @@ class SmallAppOutlinedButton extends StatelessWidget {
         child: Center(
           child: Text(
             text,
-            style: TextStyle(
+            style: const TextStyle(
               color: TextColor.main,
               fontSize: 12,
               fontFamily: FontFamily.japanese,
@@ -224,7 +224,7 @@ class AppOutlinedButton extends StatelessWidget {
         child: Center(
           child: Text(
             text,
-            style: TextStyle(
+            style: const TextStyle(
               color: TextColor.main,
               fontSize: 16,
               fontFamily: FontFamily.japanese,
@@ -271,7 +271,7 @@ class AlertButton extends StatelessWidget {
     return TextButton(
       child: Text(
         text,
-        style: TextStyle(
+        style: const TextStyle(
           fontFamily: FontFamily.japanese,
           fontWeight: FontWeight.w600,
           fontSize: FontSize.normal,

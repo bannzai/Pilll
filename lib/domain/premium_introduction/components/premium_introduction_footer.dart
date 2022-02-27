@@ -27,7 +27,7 @@ class PremiumIntroductionFotter extends StatelessWidget {
               textAlign: TextAlign.start,
               text: TextSpan(
                 style: TextColorStyle.gray.merge(
-                  TextStyle(
+                  const TextStyle(
                       fontWeight: FontWeight.w400,
                       fontSize: 10,
                       fontFamily: FontFamily.japanese),
@@ -114,7 +114,7 @@ class PremiumIntroductionFotter extends StatelessWidget {
               style: const TextStyle(
                 decoration: TextDecoration.underline,
               ).merge(TextColorStyle.main).merge(
-                    TextStyle(
+                    const TextStyle(
                       fontWeight: FontWeight.w400,
                       fontSize: 12,
                       fontFamily: FontFamily.japanese,
