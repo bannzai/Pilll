@@ -27,7 +27,7 @@ class PillSheetModifiedHistoryAutomaticallyRecordedLastTakenDateAction
       effectiveNumbersOrHyphen: EffectivePillNumber(
           effectivePillNumber:
               PillSheetModifiedHistoryDateEffectivePillNumber.autoTaken(value)),
-      detail: Text(
+      detail: const Text(
         "-",
         style: TextStyle(
           color: TextColor.main,

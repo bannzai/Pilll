@@ -63,7 +63,7 @@ class PremiumTrialModal extends HookConsumerWidget {
                                   borderRadius: BorderRadius.circular(50),
                                 ),
                                 padding: const EdgeInsets.only(top: 4, bottom: 4),
-                                child: Center(
+                                child: const Center(
                                   child: Text(
                                     "30日間お試し",
                                     style: TextStyle(
@@ -76,7 +76,7 @@ class PremiumTrialModal extends HookConsumerWidget {
                                 ),
                               ),
                               const SizedBox(height: 8),
-                              Text(
+                              const Text(
                                 "プレミアム体験プレゼント中",
                                 style: TextStyle(
                                   color: TextColor.black,
@@ -102,7 +102,7 @@ class PremiumTrialModal extends HookConsumerWidget {
                         const SizedBox(height: 24),
                         RichText(
                           textAlign: TextAlign.center,
-                          text: TextSpan(
+                          text: const TextSpan(
                             children: [
                               TextSpan(
                                 text: "プレミアム機能がお試しできます。",
@@ -113,7 +113,7 @@ class PremiumTrialModal extends HookConsumerWidget {
                                   fontSize: 14,
                                 ),
                               ),
-                              const TextSpan(text: "\n"),
+                              TextSpan(text: "\n"),
                               TextSpan(
                                 text: "自動で課金される事はありません。",
                                 style: TextStyle(

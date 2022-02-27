@@ -14,7 +14,7 @@ class Time extends StatelessWidget {
   Widget build(BuildContext context) {
     return Text(
       time,
-      style: TextStyle(
+      style: const TextStyle(
         decoration: TextDecoration.underline,
         letterSpacing: 1.5,
         color: TextColor.main,

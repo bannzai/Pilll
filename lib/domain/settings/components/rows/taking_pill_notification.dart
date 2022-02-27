@@ -18,7 +18,7 @@ class TakingPillNotification extends HookConsumerWidget {
   Widget build(BuildContext context, WidgetRef ref) {
     final store = ref.watch(settingStoreProvider.notifier);
     return SwitchListTile(
-      title: Text("ピルの服用通知", style: FontType.listRow),
+      title: const Text("ピルの服用通知", style: FontType.listRow),
       activeColor: PilllColors.primary,
       onChanged: (bool value) {
         analytics.logEvent(

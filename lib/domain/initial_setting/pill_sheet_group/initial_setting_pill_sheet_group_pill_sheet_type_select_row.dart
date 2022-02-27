@@ -33,7 +33,7 @@ class InitialSettingPillSheetGroupPillSheetTypeSelectRow
             children: [
               Text(
                 "${index + 1}枚目",
-                style: TextStyle(
+                style: const TextStyle(
                   color: TextColor.main,
                   fontSize: 13,
                   fontWeight: FontWeight.w500,
@@ -80,7 +80,7 @@ class InitialSettingPillSheetGroupPillSheetTypeSelectRow
               ),
               child: Text(
                 pillSheetType.fullName,
-                style: TextStyle(
+                style: const TextStyle(
                   color: TextColor.main,
                   fontWeight: FontWeight.w400,
                   fontSize: 12,

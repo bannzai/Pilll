@@ -19,7 +19,7 @@ class CounterUnitLayout extends StatelessWidget {
       children: [
         Text(
           title,
-          style: TextStyle(
+          style: const TextStyle(
             color: TextColor.main,
             fontFamily: FontFamily.japanese,
             fontSize: 12,
@@ -33,7 +33,7 @@ class CounterUnitLayout extends StatelessWidget {
           children: [
             Text(
               number,
-              style: TextStyle(
+              style: const TextStyle(
                 color: TextColor.main,
                 fontFamily: FontFamily.number,
                 fontSize: 24,
@@ -42,7 +42,7 @@ class CounterUnitLayout extends StatelessWidget {
             ),
             Text(
               unit,
-              style: TextStyle(
+              style: const TextStyle(
                 color: TextColor.main,
                 fontFamily: FontFamily.japanese,
                 fontSize: 12,

@@ -23,7 +23,7 @@ class PillSheetModifiedHistoryCreatePillSheetAction extends StatelessWidget {
           effectivePillNumber:
               PillSheetModifiedHistoryDateEffectivePillNumber.pillSheetCount(
                   value?.pillSheetIDs ?? [])),
-      detail: Text(
+      detail: const Text(
         "ピルシート追加",
         style: TextStyle(
           color: TextColor.main,

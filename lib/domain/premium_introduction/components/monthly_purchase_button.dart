@@ -33,7 +33,7 @@ class MonthlyPurchaseButton extends StatelessWidget {
           mainAxisAlignment: MainAxisAlignment.start,
           mainAxisSize: MainAxisSize.min,
           children: [
-            Text(
+            const Text(
               "月額プラン",
               style: TextStyle(
                 color: TextColor.main,
@@ -44,7 +44,7 @@ class MonthlyPurchaseButton extends StatelessWidget {
             ),
             Text(
               "${monthlyPackage.product.priceString}/月",
-              style: TextStyle(
+              style: const TextStyle(
                 color: TextColor.main,
                 fontFamily: FontFamily.japanese,
                 fontSize: 16,

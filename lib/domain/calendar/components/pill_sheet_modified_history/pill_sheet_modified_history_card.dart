@@ -72,7 +72,7 @@ class CalendarPillSheetModifiedHistoryCard extends StatelessWidget {
           children: [
             Row(
               children: [
-                Text(
+                const Text(
                   "服用履歴",
                   style: TextStyle(
                     fontWeight: FontWeight.w500,
@@ -135,7 +135,7 @@ class CalendarPillSheetModifiedHistoryCard extends StatelessWidget {
                                     const Text(lockEmoji,
                                         style: TextStyle(fontSize: 40)),
                                     const SizedBox(height: 12),
-                                    Text(
+                                    const Text(
                                       "服用履歴はプレミアム機能です",
                                       style: TextStyle(
                                         color: TextColor.main,

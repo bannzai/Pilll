@@ -46,7 +46,7 @@ class PremiumIntroductionDiscountRow extends HookConsumerWidget {
             "今だけ！リリース記念価格",
             textAlign: TextAlign.center,
             style: TextColorStyle.main.merge(
-              TextStyle(
+              const TextStyle(
                 fontWeight: FontWeight.w700,
                 fontFamily: FontFamily.japanese,
                 fontSize: 20,
@@ -57,7 +57,7 @@ class PremiumIntroductionDiscountRow extends HookConsumerWidget {
           if (countdown != null)
             Text(
               countdown,
-              style: TextStyle(
+              style: const TextStyle(
                 color: TextColor.main,
                 fontFamily: FontFamily.japanese,
                 fontWeight: FontWeight.w700,
@@ -69,7 +69,7 @@ class PremiumIntroductionDiscountRow extends HookConsumerWidget {
             "通常 月額プラン",
             textAlign: TextAlign.center,
             style: TextColorStyle.black.merge(
-              TextStyle(
+              const TextStyle(
                 fontWeight: FontWeight.w400,
                 fontSize: 12,
                 fontFamily: FontFamily.japanese,
@@ -83,7 +83,7 @@ class PremiumIntroductionDiscountRow extends HookConsumerWidget {
                 "${monthlyPremiumPackage.product.priceString}",
                 textAlign: TextAlign.center,
                 style: TextColorStyle.main.merge(
-                  TextStyle(
+                  const TextStyle(
                     fontWeight: FontWeight.w700,
                     fontSize: 28,
                     fontFamily: FontFamily.japanese,

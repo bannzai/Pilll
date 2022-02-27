@@ -68,7 +68,7 @@ class App extends StatelessWidget {
         primaryColor: PilllColors.primary,
         visualDensity: VisualDensity.adaptivePlatformDensity,
         toggleableActiveColor: PilllColors.primary,
-        cupertinoOverrideTheme: NoDefaultCupertinoThemeData(
+        cupertinoOverrideTheme: const NoDefaultCupertinoThemeData(
             textTheme: CupertinoTextThemeData(textStyle: FontType.xBigTitle)),
         buttonTheme: const ButtonThemeData(
           buttonColor: PilllColors.secondary,

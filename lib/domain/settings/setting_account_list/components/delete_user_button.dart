@@ -110,7 +110,7 @@ class _CompletedDialog extends StatelessWidget {
           mainAxisAlignment: MainAxisAlignment.center,
           mainAxisSize: MainAxisSize.min,
           children: [
-            Text(
+            const Text(
               "退会しました",
               style: TextStyle(
                 color: TextColor.main,
@@ -121,7 +121,7 @@ class _CompletedDialog extends StatelessWidget {
               textAlign: TextAlign.center,
             ),
             const SizedBox(height: 24),
-            Text(
+            const Text(
               "初期設定画面に移動します。新しいアカウントとして引き続きご利用になる場合は再度設定をお願いいたします",
               style: TextStyle(
                 color: TextColor.main,

@@ -64,7 +64,7 @@ class SettingPage extends HookConsumerWidget {
       child: Scaffold(
         backgroundColor: PilllColors.background,
         appBar: AppBar(
-          title: Text('設定', style: TextColorStyle.main),
+          title: const Text('設定', style: TextColorStyle.main),
           backgroundColor: PilllColors.white,
         ),
         body: Container(child: _body(context, state, store)),
@@ -101,7 +101,7 @@ class SettingPage extends HookConsumerWidget {
                   return SettingSectionTitle(text: "Pilllプレミアム", children: [
                     if (state.isTrial) ...[
                       ListTile(
-                        title: Text("プレミアムお試し体験について", style: FontType.listRow),
+                        title: const Text("プレミアムお試し体験について", style: FontType.listRow),
                         onTap: () {
                           analytics.logEvent(
                               name: "did_select_about_trial", parameters: {});
@@ -195,7 +195,7 @@ class SettingPage extends HookConsumerWidget {
                         _separator(),
                       ],
                       ListTile(
-                          title: Text("利用規約", style: FontType.listRow),
+                          title: const Text("利用規約", style: FontType.listRow),
                           onTap: () {
                             analytics.logEvent(
                                 name: "did_select_terms", parameters: {});
@@ -204,7 +204,7 @@ class SettingPage extends HookConsumerWidget {
                           }),
                       _separator(),
                       ListTile(
-                          title: Text("プライバシーポリシー", style: FontType.listRow),
+                          title: const Text("プライバシーポリシー", style: FontType.listRow),
                           onTap: () {
                             analytics.logEvent(
                                 name: "did_select_privacy_policy",
@@ -215,7 +215,7 @@ class SettingPage extends HookConsumerWidget {
                           }),
                       _separator(),
                       ListTile(
-                          title: Text("FAQ", style: FontType.listRow),
+                          title: const Text("FAQ", style: FontType.listRow),
                           onTap: () {
                             analytics.logEvent(
                                 name: "did_select_faq", parameters: {});
@@ -225,7 +225,7 @@ class SettingPage extends HookConsumerWidget {
                           }),
                       _separator(),
                       ListTile(
-                          title: Text("新機能紹介", style: FontType.listRow),
+                          title: const Text("新機能紹介", style: FontType.listRow),
                           onTap: () {
                             analytics.logEvent(
                                 name: "setting_did_select_release_note",
@@ -235,7 +235,7 @@ class SettingPage extends HookConsumerWidget {
                           }),
                       _separator(),
                       ListTile(
-                          title: Text("お問い合わせ", style: FontType.listRow),
+                          title: const Text("お問い合わせ", style: FontType.listRow),
                           onTap: () {
                             analytics.logEvent(
                                 name: "did_select_inquiry", parameters: {});
@@ -262,7 +262,7 @@ class SettingPage extends HookConsumerWidget {
     return Padding(
       padding: const EdgeInsets.only(left: 10, right: 10, bottom: 20, top: 20),
       child: GestureDetector(
-        child: Center(
+        child: const Center(
             child: Text("COPY DEBUG INFO", style: TextColorStyle.primary)),
         onTap: () async {
           Clipboard.setData(ClipboardData(text: await debugInfo("\n")));
