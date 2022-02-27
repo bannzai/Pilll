@@ -8,4 +8,6 @@ class Config with _$Config {
     required String minimumSupportedAppVersion,
   }) = _Config;
   Config._();
+
+  factory Config.fromJson(Map<String, dynamic> json) => _$ConfigFromJson(json);
 }

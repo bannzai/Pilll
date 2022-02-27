@@ -14,6 +14,10 @@ T _$identity<T>(T value) => value;
 final _privateConstructorUsedError = UnsupportedError(
     'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more informations: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
 
+Config _$ConfigFromJson(Map<String, dynamic> json) {
+  return _Config.fromJson(json);
+}
+
 /// @nodoc
 class _$ConfigTearOff {
   const _$ConfigTearOff();
@@ -22,6 +26,10 @@ class _$ConfigTearOff {
     return _Config(
       minimumSupportedAppVersion: minimumSupportedAppVersion,
     );
+  }
+
+  Config fromJson(Map<String, Object?> json) {
+    return Config.fromJson(json);
   }
 }
 
@@ -32,6 +40,7 @@ const $Config = _$ConfigTearOff();
 mixin _$Config {
   String get minimumSupportedAppVersion => throw _privateConstructorUsedError;
 
+  Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
   $ConfigCopyWith<Config> get copyWith => throw _privateConstructorUsedError;
 }
@@ -95,9 +104,12 @@ class __$ConfigCopyWithImpl<$Res> extends _$ConfigCopyWithImpl<$Res>
 }
 
 /// @nodoc
-
+@JsonSerializable()
 class _$_Config extends _Config {
   _$_Config({required this.minimumSupportedAppVersion}) : super._();
+
+  factory _$_Config.fromJson(Map<String, dynamic> json) =>
+      _$$_ConfigFromJson(json);
 
   @override
   final String minimumSupportedAppVersion;
@@ -124,11 +136,18 @@ class _$_Config extends _Config {
   @override
   _$ConfigCopyWith<_Config> get copyWith =>
       __$ConfigCopyWithImpl<_Config>(this, _$identity);
+
+  @override
+  Map<String, dynamic> toJson() {
+    return _$$_ConfigToJson(this);
+  }
 }
 
 abstract class _Config extends Config {
   factory _Config({required String minimumSupportedAppVersion}) = _$_Config;
   _Config._() : super._();
+
+  factory _Config.fromJson(Map<String, dynamic> json) = _$_Config.fromJson;
 
   @override
   String get minimumSupportedAppVersion;
