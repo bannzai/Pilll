@@ -1,9 +1,11 @@
 import 'dart:async';
 
+import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:firebase_crashlytics/firebase_crashlytics.dart';
 import 'package:pilll/analytics.dart';
 import 'package:pilll/components/page/ok_dialog.dart';
 import 'package:pilll/domain/initial_setting/pill_sheet_group/initial_setting_pill_sheet_group_pill_sheet_type_select_row.dart';
+import 'package:pilll/entity/config.dart';
 import 'package:pilll/entrypoint.dart';
 import 'package:pilll/service/auth.dart';
 import 'package:pilll/database/database.dart';
@@ -14,13 +16,11 @@ import 'package:pilll/error/template.dart';
 import 'package:pilll/error/universal_error_page.dart';
 import 'package:pilll/error_log.dart';
 import 'package:pilll/service/user.dart';
-import 'package:pilll/util/environment.dart';
 import 'package:pilll/util/platform/platform.dart';
 import 'package:pilll/util/shared_preference/keys.dart';
 import 'package:flutter/material.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
 import 'package:shared_preferences/shared_preferences.dart';
-import 'package:firebase_remote_config/firebase_remote_config.dart';
 import 'package:pilll/util/version/version.dart';
 import 'package:url_launcher/url_launcher.dart';
 
@@ -112,30 +112,18 @@ class RootState extends State<Root> {
   }
 
   _decideScreenType() async {
-    const minimumSupportedAppVersionKey = "minimum_supported_app_version";
-    final remoteConfig = FirebaseRemoteConfig.instance;
-    remoteConfig.setDefaults({
-      minimumSupportedAppVersionKey: "3.4.0",
-    });
+    try {
+      final doc = await FirebaseFirestore.instance.doc("/globals/config").get();
+      final config = Config.fromJson(doc.data() as Map<String, dynamic>);
+      final packageVersion = await Version.fromPackage();
+      if (packageVersion
+          .isLessThan(Version.parse(config.minimumSupportedAppVersion))) {
+        setState(() {
+          screenType = ScreenType.forceUpdate;
+        });
+        return;
+      }
 
-    if (Environment.isDevelopment) {
-      await remoteConfig.setConfigSettings(
-        RemoteConfigSettings(
-          minimumFetchInterval: const Duration(seconds: 0),
-          fetchTimeout: const Duration(seconds: 30),
-        ),
-      );
-    }
-    await remoteConfig.fetchAndActivate();
-
-    final minimumSupportedAppVersion =
-        remoteConfig.getString(minimumSupportedAppVersionKey);
-    final packageVersion = await Version.fromPackage();
-    if (packageVersion.isLessThan(Version.parse(minimumSupportedAppVersion))) {
-      setState(() {
-        screenType = ScreenType.forceUpdate;
-      });
-    } else {
       cachedUserOrSignInAnonymously().then((firebaseUser) {
         unawaited(
             FirebaseCrashlytics.instance.setUserIdentifier(firebaseUser.uid));
@@ -186,6 +174,13 @@ class RootState extends State<Root> {
               "error: ${error.toString()}\n" +
               StackTrace.current.toString());
         });
+      });
+    } catch (error, stackTrace) {
+      errorLogger.recordError(error, stackTrace);
+
+      setState(() {
+        this._error = UserDisplayedError(
+            ErrorMessages.connection + "\n" + "起動処理でエラーが発生しました");
       });
     }
   }
