@@ -54,7 +54,7 @@ class EndedPillSheet extends StatelessWidget {
                 ),
               ),
               Text(
-                "前回の服用履歴を確認する",
+                "最後に服用した日を確認",
                 style: TextStyle(
                   color: TextColor.white,
                   fontSize: 12,
