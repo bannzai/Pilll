@@ -32,7 +32,7 @@ class SettingPillSheetGroupCardLayout extends StatelessWidget {
             ),
             child: Text(
               caption,
-              style: TextStyle(
+              style: const TextStyle(
                 color: TextColor.main,
                 fontSize: 10,
                 fontWeight: FontWeight.w500,

@@ -34,7 +34,7 @@ class ReminderNotificationCustomizeWordPage extends HookConsumerWidget {
           icon: const Icon(Icons.arrow_back, color: Colors.black),
           onPressed: () => Navigator.of(context).pop(),
         ),
-        title: Text(
+        title: const Text(
           "服用通知のカスタマイズ",
           style: TextStyle(
             color: TextColor.black,

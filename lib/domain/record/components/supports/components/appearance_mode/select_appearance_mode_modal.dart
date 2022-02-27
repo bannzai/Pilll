@@ -110,7 +110,7 @@ class SelectAppearanceModeModal extends HookConsumerWidget {
             const SizedBox(width: 34),
             Text(
               text,
-              style: TextStyle(
+              style: const TextStyle(
                 color: TextColor.main,
                 fontWeight: FontWeight.w500,
                 fontSize: 14,
