@@ -9,6 +9,15 @@ class Analytics {
     assert(name.length <= 40,
         "firebase analytics log event name limit length up to 40");
     print("[INFO] logEvent name: $name, parameters: $parameters");
+
+    if (parameters != null) {
+      for (final key in parameters.keys) {
+        final param = parameters[key];
+        if (param is DateTime) {
+          parameters[key] = param.toIso8601String();
+        }
+      }
+    }
     return firebaseAnalytics.logEvent(name: name, parameters: parameters);
   }
 

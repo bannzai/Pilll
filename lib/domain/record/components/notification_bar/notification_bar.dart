@@ -124,7 +124,11 @@ class NotificationBar extends HookConsumerWidget {
       if (state.latestPillSheetGroup != null &&
           state.latestPillSheetGroup?.activedPillSheet == null) {
         // ピルシートグループが存在していてactivedPillSheetが無い場合はピルシート終了が何かしらの理由がなくなったと見なし終了表示にする
-        return EndedPillSheet();
+        return EndedPillSheet(
+          isPremium: state.isPremium,
+          isTrial: state.isTrial,
+          trialDeadlineDate: state.trialDeadlineDate,
+        );
       }
     } else {
       if (state.shownRecommendSignupNotificationForPremium) {
@@ -140,7 +144,11 @@ class NotificationBar extends HookConsumerWidget {
       if (state.latestPillSheetGroup != null &&
           state.latestPillSheetGroup?.activedPillSheet == null) {
         // ピルシートグループが存在していてactivedPillSheetが無い場合はピルシート終了が何かしらの理由がなくなったと見なし終了表示にする
-        return EndedPillSheet();
+        return EndedPillSheet(
+          isPremium: state.isPremium,
+          isTrial: state.isTrial,
+          trialDeadlineDate: state.trialDeadlineDate,
+        );
       }
     }
 
