@@ -21,7 +21,7 @@ class HealthCareRow extends StatelessWidget {
       minVerticalPadding: 9,
       title: Row(
         children: [
-          Text("ヘルスケア連携", style: FontType.listRow),
+          const Text("ヘルスケア連携", style: FontType.listRow),
         ],
       ),
       subtitle: const Text("Pilllで記録した生理記録を自動でヘルスケアに記録できます"),

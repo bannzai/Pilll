@@ -11,7 +11,7 @@ class AccountLinkRow extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return ListTile(
-      title: Text("アカウント設定", style: FontType.listRow),
+      title: const Text("アカウント設定", style: FontType.listRow),
       trailing: _subtitle(),
       onTap: () {
         analytics.logEvent(name: "did_select_setting_account_cooperation");

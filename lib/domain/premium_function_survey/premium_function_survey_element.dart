@@ -44,7 +44,7 @@ class PremiumFunctionSurveyElement extends StatelessWidget {
               unselectedWidgetColor: PilllColors.secondary),
         ),
         Text(_word,
-            style: TextStyle(
+            style: const TextStyle(
                 fontFamily: FontFamily.japanese,
                 fontSize: 14,
                 fontWeight: FontWeight.w400,

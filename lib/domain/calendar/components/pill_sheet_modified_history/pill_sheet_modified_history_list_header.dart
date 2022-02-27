@@ -12,7 +12,7 @@ class PillSheetModifiedHisotiryListHeader extends StatelessWidget {
     return _HeaderLayout(
       day: Container(width: 64),
       effectiveNumbersOrHyphen: Container(),
-      detail: Text(
+      detail: const Text(
         "服用時間",
         style: TextStyle(
           color: TextColor.main,
@@ -22,7 +22,7 @@ class PillSheetModifiedHisotiryListHeader extends StatelessWidget {
         ),
         textAlign: TextAlign.left,
       ),
-      takenPillActionOList: Text(
+      takenPillActionOList: const Text(
         "服用済み",
         style: TextStyle(
           color: TextColor.main,

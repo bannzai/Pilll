@@ -115,7 +115,7 @@ class MenstruationListRow extends StatelessWidget {
                   Text(
                     state.duration,
                     textAlign: TextAlign.end,
-                    style: TextStyle(
+                    style: const TextStyle(
                       color: TextColor.main,
                       fontFamily: FontFamily.number,
                       fontSize: 13,

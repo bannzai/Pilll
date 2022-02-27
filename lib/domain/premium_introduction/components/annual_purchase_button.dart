@@ -46,7 +46,7 @@ class AnnualPurchaseButton extends StatelessWidget {
               mainAxisAlignment: MainAxisAlignment.start,
               mainAxisSize: MainAxisSize.min,
               children: [
-                Text(
+                const Text(
                   "年額プラン",
                   style: TextStyle(
                     color: TextColor.main,
@@ -57,7 +57,7 @@ class AnnualPurchaseButton extends StatelessWidget {
                 ),
                 Text(
                   "${annualPackage.product.priceString}/年",
-                  style: TextStyle(
+                  style: const TextStyle(
                     color: TextColor.main,
                     fontFamily: FontFamily.japanese,
                     fontSize: 16,
@@ -66,7 +66,7 @@ class AnnualPurchaseButton extends StatelessWidget {
                 ),
                 Text(
                   "（$monthlyPriceString/月）",
-                  style: TextStyle(
+                  style: const TextStyle(
                     color: TextColor.main,
                     fontFamily: FontFamily.japanese,
                     fontSize: 14,
@@ -105,7 +105,7 @@ class _DiscountBadge extends StatelessWidget {
       child: Text(
         offeringType == OfferingType.limited ? "通常月額と比べて48％OFF" : "37.5％OFF",
         style: TextColorStyle.white.merge(
-          TextStyle(
+          const TextStyle(
             fontWeight: FontWeight.w700,
             fontSize: 10,
             fontFamily: FontFamily.japanese,

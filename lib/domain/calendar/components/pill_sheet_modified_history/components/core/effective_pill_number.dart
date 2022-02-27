@@ -15,7 +15,7 @@ class EffectivePillNumber extends StatelessWidget {
   Widget build(BuildContext context) {
     return Text(
       "$effectivePillNumber",
-      style: TextStyle(
+      style: const TextStyle(
         color: TextColor.main,
         fontFamily: FontFamily.japanese,
         fontSize: 12,

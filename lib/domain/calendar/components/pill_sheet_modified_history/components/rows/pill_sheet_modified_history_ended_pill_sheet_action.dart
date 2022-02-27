@@ -11,7 +11,7 @@ class PillSheetModifiedHistoryEndedPillSheetAction extends StatelessWidget {
     required this.value,
   }) : super(key: key);
 
-  TextStyle get _textStyle => TextStyle(
+  TextStyle get _textStyle => const TextStyle(
         color: TextColor.main,
         fontFamily: FontFamily.japanese,
         fontSize: 12,

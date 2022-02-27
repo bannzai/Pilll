@@ -30,7 +30,7 @@ class CreatingNewPillSheetRow extends HookConsumerWidget {
     return SwitchListTile(
       title: Row(
         children: [
-          Text("ピルシートグループの自動追加", style: FontType.listRow),
+          const Text("ピルシートグループの自動追加", style: FontType.listRow),
           if (!isPremium) ...[
             const SizedBox(width: 8),
             PremiumBadge(),
@@ -38,7 +38,7 @@ class CreatingNewPillSheetRow extends HookConsumerWidget {
         ],
       ),
       subtitle:
-          Text("ピルをすべて服用済みの場合、新しいシートを自動で追加します", style: FontType.assisting),
+          const Text("ピルをすべて服用済みの場合、新しいシートを自動で追加します", style: FontType.assisting),
       activeColor: PilllColors.primary,
       onChanged: (bool value) {
         analytics.logEvent(

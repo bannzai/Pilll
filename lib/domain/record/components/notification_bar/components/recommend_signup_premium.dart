@@ -45,7 +45,7 @@ class RecommendSignupForPremiumNotificationBar extends StatelessWidget {
                     ],
                   ),
                   const SizedBox(height: 8),
-                  Text(
+                  const Text(
                     "機種変更やスマホ紛失時に、プレミアム機能を引き継げません",
                     style: TextStyle(
                       color: TextColor.white,

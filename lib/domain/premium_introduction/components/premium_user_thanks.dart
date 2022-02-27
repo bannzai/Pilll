@@ -8,7 +8,7 @@ class PremiumUserThanksRow extends StatelessWidget {
   Widget build(BuildContext context) {
     return Column(
       children: [
-        Text(
+        const Text(
           "あなたは\vプレミアムメンバーです",
           style: TextStyle(
             fontFamily: FontFamily.japanese,
@@ -21,7 +21,7 @@ class PremiumUserThanksRow extends StatelessWidget {
         const SizedBox(height: 32),
         SvgPicture.asset("images/jewel.svg"),
         const SizedBox(height: 24),
-        Text(
+        const Text(
           "ご利用ありがとうございます。\nお陰様でPilllの運営を継続できています。",
           style: TextStyle(
             fontFamily: FontFamily.japanese,
