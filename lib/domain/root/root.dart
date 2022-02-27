@@ -16,13 +16,11 @@ import 'package:pilll/error/template.dart';
 import 'package:pilll/error/universal_error_page.dart';
 import 'package:pilll/error_log.dart';
 import 'package:pilll/service/user.dart';
-import 'package:pilll/util/environment.dart';
 import 'package:pilll/util/platform/platform.dart';
 import 'package:pilll/util/shared_preference/keys.dart';
 import 'package:flutter/material.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
 import 'package:shared_preferences/shared_preferences.dart';
-import 'package:firebase_remote_config/firebase_remote_config.dart';
 import 'package:pilll/util/version/version.dart';
 import 'package:url_launcher/url_launcher.dart';
 
