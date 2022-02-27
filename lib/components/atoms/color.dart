@@ -8,7 +8,7 @@ class PilllColors {
   static const Color calendarHeader = Color(0XFFB9D7F1);
   static const Color accent = Colors.white;
   static const Color pillSheet = Color(0xFFE8EBED);
-  static final Color mat = const Color(0xFFFAFAFA).withAlpha(80);
+  static const Color mat = Color(0xFFE9F0F5);
   static const Color sunday = Color(0xFFE17F7F);
   static const Color saturday = Color(0xFF7FB9E1);
   static const Color weekday = Color(0xFF7E7E7E);
