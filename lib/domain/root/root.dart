@@ -112,7 +112,7 @@ class RootState extends State<Root> {
   }
 
   _decideScreenType() async {
-    final doc = await FirebaseFirestore.instance.doc("/globals/config").get();
+    final doc = await FirebaseFirestore.instance.doc("/configurations").get();
     final config = Config.fromJson(doc.data() as Map<String, dynamic>);
     final packageVersion = await Version.fromPackage();
     if (packageVersion
