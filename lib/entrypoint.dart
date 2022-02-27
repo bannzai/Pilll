@@ -10,15 +10,12 @@ import 'package:pilll/components/atoms/font.dart';
 import 'package:pilll/domain/root/root.dart';
 import 'package:pilll/error/universal_error_page.dart';
 import 'package:pilll/native/channel.dart';
-import 'package:pilll/service/purchase.dart';
 import 'package:pilll/util/environment.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'package:firebase_crashlytics/firebase_crashlytics.dart';
 import 'package:flutter/material.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
-import 'package:pilll/app/secret.dart';
-import 'package:purchases_flutter/purchases_flutter.dart';
 import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 
 Future<void> entrypoint() async {
@@ -43,13 +40,6 @@ Future<void> entrypoint() async {
   runZonedGuarded(() async {
     runApp(ProviderScope(child: App()));
   }, (error, stack) => FirebaseCrashlytics.instance.recordError(error, stack));
-}
-
-Future<void> initializePurchase(String uid) async {
-  await Purchases.setDebugLogsEnabled(Environment.isDevelopment);
-  await Purchases.setup(Secret.revenueCatPublicAPIKey, appUserId: uid);
-  Purchases.addPurchaserInfoUpdateListener(callUpdatePurchaseInfo);
-  await syncPurchaseInfo();
 }
 
 void connectToEmulator() {
