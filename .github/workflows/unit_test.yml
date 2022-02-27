@@ -59,5 +59,6 @@ jobs:
     - uses: subosito/flutter-action@v1
       with:
         flutter-version: '2.10.2'
+    - run: make secret
     - run: flutter pub get
     - run: flutter test 
