@@ -1,5 +1,7 @@
 import 'package:hooks_riverpod/hooks_riverpod.dart';
+import 'package:pilll/app/secret.dart';
 import 'package:pilll/error_log.dart';
+import 'package:pilll/util/environment.dart';
 import 'package:purchases_flutter/purchases_flutter.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:pilll/analytics.dart';
@@ -75,4 +77,11 @@ Future<void> syncPurchaseInfo() async {
   } catch (exception, stack) {
     errorLogger.recordError(exception, stack);
   }
+}
+
+Future<void> initializePurchase(String uid) async {
+  await Purchases.setDebugLogsEnabled(Environment.isDevelopment);
+  await Purchases.setup(Secret.revenueCatPublicAPIKey, appUserId: uid);
+  Purchases.addPurchaserInfoUpdateListener(callUpdatePurchaseInfo);
+  await syncPurchaseInfo();
 }
