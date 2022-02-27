@@ -112,65 +112,78 @@ class RootState extends State<Root> {
   }
 
   _decideScreenType() async {
-    final doc = await FirebaseFirestore.instance.doc("/configurations").get();
-    final config = Config.fromJson(doc.data() as Map<String, dynamic>);
-    final packageVersion = await Version.fromPackage();
-    if (packageVersion
-        .isLessThan(Version.parse(config.minimumSupportedAppVersion))) {
+    try {
+      final doc = await FirebaseFirestore.instance.doc("/configurations").get();
+      final config = Config.fromJson(doc.data() as Map<String, dynamic>);
+      final packageVersion = await Version.fromPackage();
+      if (packageVersion
+          .isLessThan(Version.parse(config.minimumSupportedAppVersion))) {
+        setState(() {
+          screenType = ScreenType.forceUpdate;
+        });
+      } else {
+        cachedUserOrSignInAnonymously().then((firebaseUser) {
+          unawaited(
+              FirebaseCrashlytics.instance.setUserIdentifier(firebaseUser.uid));
+          unawaited(firebaseAnalytics.setUserId(id: firebaseUser.uid));
+          unawaited(initializePurchase(firebaseUser.uid));
+
+          final userService = UserService(DatabaseConnection(firebaseUser.uid));
+          return userService.prepare(firebaseUser.uid).then((user) async {
+            userService.saveUserLaunchInfo();
+            unawaited(userService.temporarySyncronizeDiscountEntitlement(user));
+
+            if (!user.migratedFlutter) {
+              await userService.deleteSettings();
+              await userService.setFlutterMigrationFlag();
+              return ScreenType.initialSetting;
+            }
+            if (user.setting == null) {
+              return ScreenType.initialSetting;
+            }
+
+            final storage = await SharedPreferences.getInstance();
+            if (!storage
+                .getKeys()
+                .contains(StringKey.firebaseAnonymousUserID)) {
+              await storage.setString(
+                  StringKey.firebaseAnonymousUserID, firebaseUser.uid);
+            }
+
+            bool? didEndInitialSetting =
+                storage.getBool(BoolKey.didEndInitialSetting);
+            if (didEndInitialSetting == null) {
+              return ScreenType.initialSetting;
+            }
+            if (!didEndInitialSetting) {
+              return ScreenType.initialSetting;
+            }
+
+            return ScreenType.home;
+          });
+        }).then((screenType) {
+          setState(() {
+            this.screenType = screenType;
+          });
+        }).catchError((error) {
+          errorLogger.recordError(error, StackTrace.current);
+          setState(() {
+            this._error = UserDisplayedError(ErrorMessages.connection +
+                "\n" +
+                "errorType: ${error.runtimeType.toString()}\n" +
+                "error: ${error.toString()}\n" +
+                StackTrace.current.toString());
+          });
+        });
+      }
+    } catch (error) {
+      errorLogger.recordError(error, StackTrace.current);
       setState(() {
-        screenType = ScreenType.forceUpdate;
-      });
-    } else {
-      cachedUserOrSignInAnonymously().then((firebaseUser) {
-        unawaited(
-            FirebaseCrashlytics.instance.setUserIdentifier(firebaseUser.uid));
-        unawaited(firebaseAnalytics.setUserId(id: firebaseUser.uid));
-        unawaited(initializePurchase(firebaseUser.uid));
-
-        final userService = UserService(DatabaseConnection(firebaseUser.uid));
-        return userService.prepare(firebaseUser.uid).then((user) async {
-          userService.saveUserLaunchInfo();
-          unawaited(userService.temporarySyncronizeDiscountEntitlement(user));
-
-          if (!user.migratedFlutter) {
-            await userService.deleteSettings();
-            await userService.setFlutterMigrationFlag();
-            return ScreenType.initialSetting;
-          }
-          if (user.setting == null) {
-            return ScreenType.initialSetting;
-          }
-
-          final storage = await SharedPreferences.getInstance();
-          if (!storage.getKeys().contains(StringKey.firebaseAnonymousUserID)) {
-            await storage.setString(
-                StringKey.firebaseAnonymousUserID, firebaseUser.uid);
-          }
-
-          bool? didEndInitialSetting =
-              storage.getBool(BoolKey.didEndInitialSetting);
-          if (didEndInitialSetting == null) {
-            return ScreenType.initialSetting;
-          }
-          if (!didEndInitialSetting) {
-            return ScreenType.initialSetting;
-          }
-
-          return ScreenType.home;
-        });
-      }).then((screenType) {
-        setState(() {
-          this.screenType = screenType;
-        });
-      }).catchError((error) {
-        errorLogger.recordError(error, StackTrace.current);
-        setState(() {
-          this._error = UserDisplayedError(ErrorMessages.connection +
-              "\n" +
-              "errorType: ${error.runtimeType.toString()}\n" +
-              "error: ${error.toString()}\n" +
-              StackTrace.current.toString());
-        });
+        this._error = UserDisplayedError(ErrorMessages.connection +
+            "\n" +
+            "errorType: ${error.runtimeType.toString()}\n" +
+            "error: ${error.toString()}\n" +
+            StackTrace.current.toString());
       });
     }
   }
