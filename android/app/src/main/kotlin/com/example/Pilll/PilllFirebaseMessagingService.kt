@@ -2,6 +2,7 @@ package com.mizuki.Ohashi.Pilll
 
 import android.app.PendingIntent
 import android.content.Intent
+import android.net.Uri
 import android.util.Log
 import androidx.core.app.NotificationCompat
 import androidx.core.app.NotificationManagerCompat
@@ -38,6 +39,7 @@ public class PilllFirebaseMessagingService: FirebaseMessagingService() {
                 .addAction(0, "飲んだ",
                         snoozePendingIntent
                 )
+                .setSound(Uri.parse("android.resource://" + packageName + "/" + R.raw.becho))
                 .setAutoCancel(true)
         with(NotificationManagerCompat.from(this)) {
             // notificationId is a unique int for each notification that you must define
