@@ -10,14 +10,14 @@ import io.flutter.embedding.android.FlutterActivity
 
 class MainActivity: FlutterActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState);
+        super.onCreate(savedInstanceState)
         Log.d("android message: ", "onCreate")
     }
 
     override fun onStart() {
         super.onStart()
         Log.d("android message: ", "onStart")
-        createNotificationChannel();
+        createNotificationChannel()
     }
     private fun createNotificationChannel() {
         // Create the NotificationChannel, but only on API 26+ because
