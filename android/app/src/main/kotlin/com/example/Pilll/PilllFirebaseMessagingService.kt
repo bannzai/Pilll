@@ -22,28 +22,31 @@ public class PilllFirebaseMessagingService: FirebaseMessagingService() {
     fun send( data: Map<String, String>) {
         Log.d("android message: ", "send")
 
-        // Create an explicit intent for an Activity in your app
-        val snoozeIntent = Intent(this, BroadCastActionReceiver::class.java).apply {
-            action = "PILL_REMINDER"
-        }
-        val snoozePendingIntent: PendingIntent =
-                PendingIntent.getBroadcast(this, 0, snoozeIntent, 0)
+        if (data["action"] == "PILL_REMINDER") {
+// Create an explicit intent for an Activity in your app
+            val snoozeIntent = Intent(this, BroadCastActionReceiver::class.java).apply {
+                action = "PILL_REMINDER"
+            }
+            val snoozePendingIntent: PendingIntent =
+                    PendingIntent.getBroadcast(this, 0, snoozeIntent, 0)
 
-        val title = data["title"]
-        val body = data["body"]
-        val builder = NotificationCompat.Builder(this, "PILL_REMINDER")
-                .setSmallIcon(R.mipmap.ic_launcher)
-                .setContentTitle(title)
-                .setContentText(body)
-                .setPriority(NotificationCompat.PRIORITY_DEFAULT)
-                .addAction(0, "飲んだ",
-                        snoozePendingIntent
-                )
-                .setSound(Uri.parse("android.resource://" + packageName + "/" + R.raw.becho))
-                .setAutoCancel(true)
-        with(NotificationManagerCompat.from(this)) {
-            // notificationId is a unique int for each notification that you must define
-            notify(pillReminderID, builder.build())
+            val title = data["title"]
+            val body = data["body"]
+            val builder = NotificationCompat.Builder(this, "PILL_REMINDER")
+                    .setSmallIcon(R.mipmap.ic_launcher)
+                    .setContentTitle(title)
+                    .setContentText(body)
+                    .setPriority(NotificationCompat.PRIORITY_DEFAULT)
+                    .addAction(0, "飲んだ",
+                            snoozePendingIntent
+                    )
+                    .setSound(Uri.parse("android.resource://" + packageName + "/" + R.raw.becho))
+                    .setAutoCancel(true)
+            with(NotificationManagerCompat.from(this)) {
+                // notificationId is a unique int for each notification that you must define
+                notify(pillReminderID, builder.build())
+            }
         }
+
     }
 }
