@@ -32,7 +32,6 @@ public class PilllFirebaseMessagingService: FirebaseMessagingService() {
                 .setContentTitle(title)
                 .setContentText(body)
                 .setPriority(NotificationCompat.PRIORITY_DEFAULT)
-                .setSound(Uri.parse("android.resource://" + packageName + "/" + R.raw.becho))
                 .setAutoCancel(true)
 
         if (data["action"] == "PILL_REMINDER") {
