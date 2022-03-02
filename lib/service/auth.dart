@@ -103,13 +103,17 @@ Future<User> cachedUserOrSignInAnonymously() async {
 }
 
 Map<String, dynamic> _logginParameters(User? currentUser) {
+  if (currentUser == null) {
+    return {};
+  }
+
   return {
-    "uid": currentUser?.uid,
-    "isAnonymous": currentUser?.isAnonymous,
-    "hasGoogleProviderData": currentUser?.providerData
+    "uid": currentUser.uid,
+    "isAnonymous": currentUser.isAnonymous,
+    "hasGoogleProviderData": currentUser.providerData
         .where((element) => element.providerId == googleProviderID)
         .isNotEmpty,
-    "hasAppleProviderData": currentUser?.providerData
+    "hasAppleProviderData": currentUser.providerData
         .where((element) => element.providerId == appleProviderID)
         .isNotEmpty,
   };
