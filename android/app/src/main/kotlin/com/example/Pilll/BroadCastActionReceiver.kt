@@ -13,8 +13,10 @@ import io.flutter.plugin.common.MethodChannel
 public class BroadCastActionReceiver: BroadcastReceiver() {
     override fun onReceive(context: Context?, intent: Intent?) {
         Log.d("android message: ", "onReceive")
-        if (context != null) {
-            callRecordPill(context)
+        if (context != null && intent != null) {
+            if (intent.action == "PILL_REMINDER") {
+                callRecordPill(context)
+            }
         }
     }
     private fun methodChannel(context: Context): MethodChannel {
@@ -29,7 +31,7 @@ public class BroadCastActionReceiver: BroadcastReceiver() {
     private fun callRecordPill(context: Context) {
         methodChannel(context).invokeMethod("recordPill", "")
         with(NotificationManagerCompat.from(context)) {
-            cancel(PilllFirebaseMessagingService.pillReminderID)
+            cancel(PilllFirebaseMessagingService.regularlyMessageID)
         }
     }
 }
