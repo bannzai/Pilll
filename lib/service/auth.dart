@@ -1,4 +1,5 @@
 import 'dart:async';
+import 'package:async/async.dart';
 
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:pilll/analytics.dart';
@@ -38,7 +39,10 @@ class AuthService {
 }
 
 Stream<User?> _userAuthStateChanges() {
-  return FirebaseAuth.instance.userChanges();
+  return StreamGroup.merge([
+    FirebaseAuth.instance.userChanges(),
+    Stream.fromFuture(cachedUserOrSignInAnonymously()),
+  ]).asBroadcastStream();
 }
 
 // Obtain the latest users form FirebaseAuth.
