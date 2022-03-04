@@ -40,8 +40,8 @@ class AuthService {
 
 Stream<User?> _userAuthStateChanges() {
   return StreamGroup.merge([
-    FirebaseAuth.instance.userChanges(),
     Stream.fromFuture(cachedUserOrSignInAnonymously()),
+    FirebaseAuth.instance.userChanges(),
   ]).asBroadcastStream();
 }
 
