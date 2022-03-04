@@ -6,7 +6,7 @@ import 'package:pilll/service/auth.dart';
 final databaseProvider = Provider<DatabaseConnection>((ref) {
   final stream = ref.watch(authStateStreamProvider);
   final uid = stream.asData?.value.uid;
-  print("database uid is $uid");
+  print("[DEBUG] database uid is $uid");
   if (uid == null) {
     throw UnimplementedError("Must be called service/auth.dart callSignin");
   }
