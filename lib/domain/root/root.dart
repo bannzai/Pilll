@@ -145,11 +145,6 @@ class RootState extends State<Root> {
           }
 
           final storage = await SharedPreferences.getInstance();
-          if (!storage.getKeys().contains(StringKey.firebaseAnonymousUserID)) {
-            await storage.setString(
-                StringKey.firebaseAnonymousUserID, firebaseUser.uid);
-          }
-
           bool? didEndInitialSetting =
               storage.getBool(BoolKey.didEndInitialSetting);
           if (didEndInitialSetting == null) {
