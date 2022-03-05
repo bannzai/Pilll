@@ -95,7 +95,7 @@ class RootState extends State<Root> {
   }
 
   String _traceUUID() {
-    final uuid = Uuid();
+    final uuid = const Uuid();
     return uuid.v4();
   }
 
