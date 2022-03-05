@@ -130,6 +130,7 @@ class RootState extends State<Root> {
         });
 
         launchTrace.putAttribute("end_reason", "forceUpdate");
+        await launchTrace.stop();
         return;
       }
 
@@ -149,6 +150,7 @@ class RootState extends State<Root> {
         await userFetchTrace.start();
         return userService.prepare(firebaseUser.uid).then((user) async {
           await userFetchTrace.stop();
+          await launchTrace.stop();
 
           userService.saveUserLaunchInfo();
           unawaited(userService.temporarySyncronizeDiscountEntitlement(user));
