@@ -1,12 +1,14 @@
 import 'dart:async';
 
 import 'package:cloud_firestore/cloud_firestore.dart';
+import 'package:firebase_auth/firebase_auth.dart' as FirebaseAuth;
 import 'package:firebase_crashlytics/firebase_crashlytics.dart';
 import 'package:firebase_performance/firebase_performance.dart';
 import 'package:pilll/analytics.dart';
 import 'package:pilll/components/page/ok_dialog.dart';
 import 'package:pilll/domain/initial_setting/pill_sheet_group/initial_setting_pill_sheet_group_pill_sheet_type_select_row.dart';
 import 'package:pilll/entity/config.dart';
+import 'package:pilll/entity/user.dart';
 import 'package:pilll/performance.dart';
 import 'package:pilll/service/auth.dart';
 import 'package:pilll/database/database.dart';
@@ -38,8 +40,9 @@ class Root extends StatefulWidget {
 enum ScreenType { home, initialSetting, forceUpdate }
 
 class RootState extends State<Root> {
-  dynamic _error;
+  final String _traceUUID = const Uuid().v4();
 
+  dynamic _error;
   ScreenType? screenType;
   showHome() {
     setState(() {
@@ -70,7 +73,8 @@ class RootState extends State<Root> {
       Future.microtask(() async {
         await showOKDialog(context,
             title: "アプリをアップデートしてください",
-            message: "お使いのアプリのバージョンが古いため$storeNameから最新バージョンにアップデートしてください",
+            message:
+                "お使いのアプリのバージョンのアップデートをお願いしております。$storeNameから最新バージョンにアップデートしてください",
             ok: () async {
           await launch(storeURL, forceSafariVC: false, forceWebView: false);
         });
@@ -94,107 +98,122 @@ class RootState extends State<Root> {
     );
   }
 
-  String _traceUUID() {
-    final uuid = const Uuid();
-    return uuid.v4();
-  }
-
   Trace _trace({required String name, required String uuid}) {
     final trace = performance.newTrace(name);
     trace.putAttribute("uuid", uuid);
     return trace;
   }
 
-  _decideScreenType() async {
-    final uuid = _traceUUID();
+// Return false: should not force update
+// Return true: should force update
+  Future<bool> _checkForceUpdate() async {
+    final forceUpdateTrace = _trace(name: "forceUpdate", uuid: _traceUUID);
+    await forceUpdateTrace.start();
 
-    final launchTrace = _trace(name: "appLaunch", uuid: uuid);
-    await launchTrace.start();
+    final doc = await FirebaseFirestore.instance.doc("/globals/config").get();
+    final config = Config.fromJson(doc.data() as Map<String, dynamic>);
+    final packageVersion = await Version.fromPackage();
 
-    try {
-      final forceUpdateTrace = _trace(name: "forceUpdate", uuid: uuid);
-      await forceUpdateTrace.start();
+    await forceUpdateTrace.stop();
 
-      final doc = await FirebaseFirestore.instance.doc("/globals/config").get();
-      final config = Config.fromJson(doc.data() as Map<String, dynamic>);
-      final packageVersion = await Version.fromPackage();
+    return packageVersion
+        .isLessThan(Version.parse(config.minimumSupportedAppVersion));
+  }
 
-      await forceUpdateTrace.stop();
+  Future<FirebaseAuth.User> _signIn() async {
+    final signInTrace = _trace(name: "signInTrace", uuid: _traceUUID);
+    await signInTrace.start();
+    final firebaseUser = await cachedUserOrSignInAnonymously();
+    await signInTrace.stop();
 
-      if (packageVersion
-          .isLessThan(Version.parse(config.minimumSupportedAppVersion))) {
-        setState(() {
-          screenType = ScreenType.forceUpdate;
-        });
+    unawaited(FirebaseCrashlytics.instance.setUserIdentifier(firebaseUser.uid));
+    unawaited(firebaseAnalytics.setUserId(id: firebaseUser.uid));
+    unawaited(initializePurchase(firebaseUser.uid));
 
-        launchTrace.putAttribute("end_reason", "forceUpdate");
-        await launchTrace.stop();
-        return;
-      }
+    return firebaseUser;
+  }
 
-      final signInTrace = _trace(name: "signInTrace", uuid: uuid);
-      await signInTrace.start();
-      cachedUserOrSignInAnonymously().then((firebaseUser) async {
-        await signInTrace.stop();
+  Future<ScreenType> _screenType() async {
+    final sharedPreferences = await SharedPreferences.getInstance();
 
-        unawaited(
-            FirebaseCrashlytics.instance.setUserIdentifier(firebaseUser.uid));
-        unawaited(firebaseAnalytics.setUserId(id: firebaseUser.uid));
-        unawaited(initializePurchase(firebaseUser.uid));
-
-        final userService = UserService(DatabaseConnection(firebaseUser.uid));
-
-        final userFetchTrace = _trace(name: "userFetchTrace", uuid: uuid);
-        await userFetchTrace.start();
-        return userService.prepare(firebaseUser.uid).then((user) async {
-          await userFetchTrace.stop();
-          await launchTrace.stop();
-
-          userService.saveUserLaunchInfo();
-          unawaited(userService.temporarySyncronizeDiscountEntitlement(user));
-
-          if (!user.migratedFlutter) {
-            await userService.deleteSettings();
-            await userService.setFlutterMigrationFlag();
-            return ScreenType.initialSetting;
-          }
-          if (user.setting == null) {
-            return ScreenType.initialSetting;
-          }
-
-          final storage = await SharedPreferences.getInstance();
-          bool? didEndInitialSetting =
-              storage.getBool(BoolKey.didEndInitialSetting);
-          if (didEndInitialSetting == null) {
-            return ScreenType.initialSetting;
-          }
-          if (!didEndInitialSetting) {
-            return ScreenType.initialSetting;
-          }
-
-          return ScreenType.home;
-        });
-      }).then((screenType) {
-        setState(() {
-          this.screenType = screenType;
-        });
-      }).catchError((error) {
-        errorLogger.recordError(error, StackTrace.current);
-        setState(() {
-          this._error = UserDisplayedError(ErrorMessages.connection +
-              "\n" +
-              "errorType: ${error.runtimeType.toString()}\n" +
-              "error: ${error.toString()}\n" +
-              StackTrace.current.toString());
-        });
-      });
-    } catch (error, stackTrace) {
-      errorLogger.recordError(error, stackTrace);
-
-      setState(() {
-        this._error = UserDisplayedError(
-            ErrorMessages.connection + "\n" + "起動処理でエラーが発生しました");
-      });
+    bool? didEndInitialSetting =
+        sharedPreferences.getBool(BoolKey.didEndInitialSetting);
+    if (didEndInitialSetting == null) {
+      return ScreenType.initialSetting;
     }
+    if (!didEndInitialSetting) {
+      return ScreenType.initialSetting;
+    }
+
+    return screenType = ScreenType.home;
+  }
+
+  Future<User> _mutateUserWithLaunchInfoAnd(
+      FirebaseAuth.User firebaseUser) async {
+    final userService = UserService(DatabaseConnection(firebaseUser.uid));
+    userService.saveUserLaunchInfo();
+
+    final user = await userService.prepare(firebaseUser.uid);
+    unawaited(userService.temporarySyncronizeDiscountEntitlement(user));
+
+    return user;
+  }
+
+  Future<ScreenType?> _screenTypeForLegacyUser(
+      FirebaseAuth.User firebaseUser, User user) async {
+    if (!user.migratedFlutter) {
+      final userService = UserService(DatabaseConnection(firebaseUser.uid));
+      await userService.deleteSettings();
+      await userService.setFlutterMigrationFlag();
+      return ScreenType.initialSetting;
+    } else if (user.setting == null) {
+      return screenType = ScreenType.initialSetting;
+    }
+    return null;
+  }
+
+  // forceUpdate -> signIn -> decide initial setting or home screen -> after effect: mutate user launch info to db and salvage old version user
+  // save launch app time, Keep last of `after effect: mutate user launch info to db and salvage old version user`
+  void _decideScreenType() {
+    Future(() async {
+      final launchTrace = _trace(name: "appLaunch", uuid: _traceUUID);
+      await launchTrace.start();
+
+      try {
+        final shouldForceUpdate = await _checkForceUpdate();
+        if (shouldForceUpdate) {
+          setState(() {
+            this.screenType = ScreenType.forceUpdate;
+          });
+        } else {
+          final firebaseUser = await _signIn();
+
+          final screenType = await _screenType();
+          setState(() {
+            this.screenType = screenType;
+          });
+
+          // NOTE: Below code contains backward-compatible logic from version 1.3.2
+          // screenType is determined if necessary, but since it is a special pattern. So, it is determined last
+          final user = await _mutateUserWithLaunchInfoAnd(firebaseUser);
+          final screenTypeForLegacyUser =
+              await _screenTypeForLegacyUser(firebaseUser, user);
+          if (screenTypeForLegacyUser != null) {
+            setState(() {
+              this.screenType = screenTypeForLegacyUser;
+            });
+          }
+        }
+      } catch (error, stackTrace) {
+        errorLogger.recordError(error, stackTrace);
+
+        setState(() {
+          this._error = UserDisplayedError(
+              ErrorMessages.connection + "\n" + "起動処理でエラーが発生しました");
+        });
+      } finally {
+        await launchTrace.stop();
+      }
+    });
   }
 }

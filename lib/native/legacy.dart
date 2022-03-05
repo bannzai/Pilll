@@ -1,3 +1,5 @@
+import 'dart:io' show Platform;
+import 'package:pilll/util/shared_preference/keys.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
 Future<void> salvagedOldStartTakenDate(dynamic arguments) async {
@@ -40,4 +42,24 @@ Future<void> salvagedOldStartTakenDate(dynamic arguments) async {
     storage.setString(
         "salvagedOldLastTakenDate", formattedSalvagedOldLastTakenDate);
   });
+}
+
+Future<bool> shouldShowMigrateInfo() async {
+  if (!Platform.isIOS) {
+    return false;
+  }
+
+  final sharedPreferences = await SharedPreferences.getInstance();
+
+  if (sharedPreferences.getBool(BoolKey.migrateFrom132IsShown) ?? false) {
+    return false;
+  }
+  if (!sharedPreferences.containsKey(StringKey.salvagedOldStartTakenDate)) {
+    return false;
+  }
+  if (!sharedPreferences.containsKey(StringKey.salvagedOldLastTakenDate)) {
+    return false;
+  }
+
+  return true;
 }
