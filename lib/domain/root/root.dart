@@ -171,6 +171,8 @@ class RootState extends State<Root> {
     return null;
   }
 
+  // forceUpdate -> signIn -> decide initial setting or home screen -> after effect: mutate user launch info to db and salvage old version user
+  // save launch app time, Keep last of `after effect: mutate user launch info to db and salvage old version user`
   void _decideScreenType() {
     Future(() async {
       final launchTrace = _trace(name: "appLaunch", uuid: _traceUUID);
