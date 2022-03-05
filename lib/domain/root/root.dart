@@ -192,6 +192,8 @@ class RootState extends State<Root> {
           this.screenType = screenType;
         });
 
+        // NOTE: Below code contains backward-compatible logic from version 1.3.2
+        // screenType is determined if necessary, but since it is a special pattern. So, it is determined last
         final user = await _mutateUserWithLaunchInfoAnd(firebaseUser);
         final screenTypeForLegacyUser =
             await _screenTypeForLegacyUser(firebaseUser, user);
