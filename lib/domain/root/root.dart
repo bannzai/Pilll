@@ -171,7 +171,7 @@ class RootState extends State<Root> {
     return null;
   }
 
-  Future<void> _decideScreenType() async {
+  void _decideScreenType() {
     Future(() async {
       final launchTrace = _trace(name: "appLaunch", uuid: _traceUUID);
       await launchTrace.start();
