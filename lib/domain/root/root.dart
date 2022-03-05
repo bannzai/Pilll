@@ -110,7 +110,7 @@ class RootState extends State<Root> {
   _decideScreenType() async {
     final uuid = _traceUUID();
 
-    final launchTrace = _trace(name: "launch", uuid: uuid);
+    final launchTrace = _trace(name: "appLaunch", uuid: uuid);
     await launchTrace.start();
 
     try {
