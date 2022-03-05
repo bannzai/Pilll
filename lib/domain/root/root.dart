@@ -73,7 +73,8 @@ class RootState extends State<Root> {
       Future.microtask(() async {
         await showOKDialog(context,
             title: "アプリをアップデートしてください",
-            message: "お使いのアプリのバージョンが古いため$storeNameから最新バージョンにアップデートしてください",
+            message:
+                "お使いのアプリのバージョンのアップデートをお願いしております。$storeNameから最新バージョンにアップデートしてください",
             ok: () async {
           await launch(storeURL, forceSafariVC: false, forceWebView: false);
         });
