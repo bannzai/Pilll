@@ -7,6 +7,7 @@ import 'package:pilll/analytics.dart';
 import 'package:pilll/components/page/ok_dialog.dart';
 import 'package:pilll/domain/initial_setting/pill_sheet_group/initial_setting_pill_sheet_group_pill_sheet_type_select_row.dart';
 import 'package:pilll/entity/config.dart';
+import 'package:pilll/native/legacy.dart';
 import 'package:pilll/performance.dart';
 import 'package:pilll/service/auth.dart';
 import 'package:pilll/database/database.dart';
@@ -152,6 +153,11 @@ class RootState extends State<Root> {
 
           userService.saveUserLaunchInfo();
           unawaited(userService.temporarySyncronizeDiscountEntitlement(user));
+          final sharedPreferences = await SharedPreferences.getInstance();
+
+          if (await shouldShowMigrateInfo()) {
+            return ScreenType.initialSetting;
+          }
 
           if (!user.migratedFlutter) {
             await userService.deleteSettings();
@@ -162,9 +168,8 @@ class RootState extends State<Root> {
             return ScreenType.initialSetting;
           }
 
-          final storage = await SharedPreferences.getInstance();
           bool? didEndInitialSetting =
-              storage.getBool(BoolKey.didEndInitialSetting);
+              sharedPreferences.getBool(BoolKey.didEndInitialSetting);
           if (didEndInitialSetting == null) {
             return ScreenType.initialSetting;
           }
