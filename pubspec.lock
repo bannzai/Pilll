@@ -964,13 +964,6 @@ packages:
       url: "https://pub.dartlang.org"
     source: hosted
     version: "2.1.1"
-  version:
-    dependency: "direct main"
-    description:
-      name: version
-      url: "https://pub.dartlang.org"
-    source: hosted
-    version: "2.0.0"
   watcher:
     dependency: transitive
     description:
