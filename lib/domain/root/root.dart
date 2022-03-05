@@ -100,9 +100,7 @@ class RootState extends State<Root> {
   }
 
   Trace _trace({required String name, required String uuid}) {
-    final trace = performance.newTrace(
-      name,
-    );
+    final trace = performance.newTrace(name);
     trace.putAttribute("uuid", uuid);
     return trace;
   }
