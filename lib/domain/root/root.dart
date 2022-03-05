@@ -2,10 +2,12 @@ import 'dart:async';
 
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:firebase_crashlytics/firebase_crashlytics.dart';
+import 'package:intl/intl.dart';
 import 'package:pilll/analytics.dart';
 import 'package:pilll/components/page/ok_dialog.dart';
 import 'package:pilll/domain/initial_setting/pill_sheet_group/initial_setting_pill_sheet_group_pill_sheet_type_select_row.dart';
 import 'package:pilll/entity/config.dart';
+import 'package:pilll/performance.dart';
 import 'package:pilll/service/auth.dart';
 import 'package:pilll/database/database.dart';
 import 'package:pilll/domain/home/home_page.dart';
@@ -92,26 +94,49 @@ class RootState extends State<Root> {
   }
 
   _decideScreenType() async {
+    final trace = performance.newTrace("launch");
+    final measureTime = (String timing) {
+      final now = DateTime.now();
+      trace.putAttribute(timing, "$now");
+      trace.setMetric('time', now.millisecondsSinceEpoch);
+    };
+
+    await trace.start();
+    measureTime("start");
+
     try {
       final doc = await FirebaseFirestore.instance.doc("/globals/config").get();
       final config = Config.fromJson(doc.data() as Map<String, dynamic>);
       final packageVersion = await Version.fromPackage();
+
+      measureTime("forceUpdate");
+
       if (packageVersion
           .isLessThan(Version.parse(config.minimumSupportedAppVersion))) {
         setState(() {
           screenType = ScreenType.forceUpdate;
         });
+
+        await trace.stop();
         return;
       }
 
+      measureTime("beforeSignIn");
       cachedUserOrSignInAnonymously().then((firebaseUser) {
+        measureTime("afterSignIn");
+
         unawaited(
             FirebaseCrashlytics.instance.setUserIdentifier(firebaseUser.uid));
         unawaited(firebaseAnalytics.setUserId(id: firebaseUser.uid));
         unawaited(initializePurchase(firebaseUser.uid));
 
         final userService = UserService(DatabaseConnection(firebaseUser.uid));
+
+        measureTime("beforeFetchedUser");
         return userService.prepare(firebaseUser.uid).then((user) async {
+          measureTime("afterFetchedUser");
+          await trace.stop();
+
           userService.saveUserLaunchInfo();
           unawaited(userService.temporarySyncronizeDiscountEntitlement(user));
 
