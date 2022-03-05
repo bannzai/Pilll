@@ -106,7 +106,7 @@ class RootState extends State<Root> {
     return trace;
   }
 
-  _decideScreenType() async {
+  Future<void> _decideScreenType() async {
     final uuid = _traceUUID();
 
     final launchTrace = _trace(name: "appLaunch", uuid: uuid);
@@ -135,63 +135,53 @@ class RootState extends State<Root> {
 
       final signInTrace = _trace(name: "signInTrace", uuid: uuid);
       await signInTrace.start();
-      cachedUserOrSignInAnonymously().then((firebaseUser) async {
-        await signInTrace.stop();
+      final firebaseUser = await cachedUserOrSignInAnonymously();
+      await signInTrace.stop();
 
-        unawaited(
-            FirebaseCrashlytics.instance.setUserIdentifier(firebaseUser.uid));
-        unawaited(firebaseAnalytics.setUserId(id: firebaseUser.uid));
-        unawaited(initializePurchase(firebaseUser.uid));
+      unawaited(
+          FirebaseCrashlytics.instance.setUserIdentifier(firebaseUser.uid));
+      unawaited(firebaseAnalytics.setUserId(id: firebaseUser.uid));
+      unawaited(initializePurchase(firebaseUser.uid));
 
-        final userService = UserService(DatabaseConnection(firebaseUser.uid));
+      await launchTrace.stop();
 
-        final userFetchTrace = _trace(name: "userFetchTrace", uuid: uuid);
-        await userFetchTrace.start();
-        return userService.prepare(firebaseUser.uid).then((user) async {
-          await userFetchTrace.stop();
-          await launchTrace.stop();
+      final sharedPreferences = await SharedPreferences.getInstance();
 
-          userService.saveUserLaunchInfo();
-          unawaited(userService.temporarySyncronizeDiscountEntitlement(user));
-          final sharedPreferences = await SharedPreferences.getInstance();
-
-          if (await shouldShowMigrateInfo()) {
-            return ScreenType.initialSetting;
-          }
-
-          if (!user.migratedFlutter) {
-            await userService.deleteSettings();
-            await userService.setFlutterMigrationFlag();
-            return ScreenType.initialSetting;
-          }
-          if (user.setting == null) {
-            return ScreenType.initialSetting;
-          }
-
-          bool? didEndInitialSetting =
-              sharedPreferences.getBool(BoolKey.didEndInitialSetting);
-          if (didEndInitialSetting == null) {
-            return ScreenType.initialSetting;
-          }
-          if (!didEndInitialSetting) {
-            return ScreenType.initialSetting;
-          }
-
-          return ScreenType.home;
-        });
-      }).then((screenType) {
+      bool? didEndInitialSetting =
+          sharedPreferences.getBool(BoolKey.didEndInitialSetting);
+      if (didEndInitialSetting == null) {
         setState(() {
-          this.screenType = screenType;
+          screenType = ScreenType.initialSetting;
         });
-      }).catchError((error) {
-        errorLogger.recordError(error, StackTrace.current);
+        return;
+      }
+      if (!didEndInitialSetting) {
         setState(() {
-          this._error = UserDisplayedError(ErrorMessages.connection +
-              "\n" +
-              "errorType: ${error.runtimeType.toString()}\n" +
-              "error: ${error.toString()}\n" +
-              StackTrace.current.toString());
+          screenType = ScreenType.initialSetting;
         });
+        return;
+      }
+
+      setState(() {
+        screenType = ScreenType.home;
+      });
+
+      final userService = UserService(DatabaseConnection(firebaseUser.uid));
+      userService.prepare(firebaseUser.uid).then((user) async {
+        userService.saveUserLaunchInfo();
+        unawaited(userService.temporarySyncronizeDiscountEntitlement(user));
+
+        if (!user.migratedFlutter) {
+          await userService.deleteSettings();
+          await userService.setFlutterMigrationFlag();
+          setState(() {
+            screenType = ScreenType.initialSetting;
+          });
+        } else if (user.setting == null) {
+          setState(() {
+            screenType = ScreenType.initialSetting;
+          });
+        }
       });
     } catch (error, stackTrace) {
       errorLogger.recordError(error, stackTrace);
