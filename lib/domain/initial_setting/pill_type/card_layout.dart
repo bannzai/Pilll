@@ -6,14 +6,14 @@ class CardLayout extends StatelessWidget {
   final String caption;
   final Widget image;
   final String name;
-  final String supplement;
+  final List<String> pillNames;
 
   const CardLayout({
     Key? key,
     required this.caption,
     required this.image,
     required this.name,
-    required this.supplement,
+    required this.pillNames,
   }) : super(key: key);
 
   @override
@@ -38,6 +38,29 @@ class CardLayout extends StatelessWidget {
                 fontWeight: FontWeight.w500,
               ),
             ),
+          ),
+          const SizedBox(height: 12),
+          image,
+          Column(
+            children: [
+              Text(
+                name,
+                style: const TextStyle(
+                  color: TextColor.main,
+                  fontSize: 16,
+                  fontWeight: FontWeight.w500,
+                ),
+              ),
+              const SizedBox(height: 6),
+              Text(
+                pillNames.join("/"),
+                style: const TextStyle(
+                  color: TextColor.main,
+                  fontSize: 10,
+                  fontWeight: FontWeight.w400,
+                ),
+              ),
+            ],
           ),
         ],
       ),
