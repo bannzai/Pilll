@@ -24,6 +24,7 @@ class CardLayout extends StatelessWidget {
     return Container(
       padding: const EdgeInsets.only(top: 8, left: 12, right: 12, bottom: 16),
       child: Column(
+        mainAxisSize: MainAxisSize.min,
         mainAxisAlignment: MainAxisAlignment.start,
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [

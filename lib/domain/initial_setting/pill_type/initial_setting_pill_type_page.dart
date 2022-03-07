@@ -63,7 +63,7 @@ class InitialSettingPillTypePage extends HookConsumerWidget {
           backgroundColor: PilllColors.white,
         ),
         body: SafeArea(
-          child: SizedBox.shrink(
+          child: SizedBox.expand(
             child: Container(
               child: Column(
                 children: [
@@ -89,106 +89,101 @@ class InitialSettingPillTypePage extends HookConsumerWidget {
                               ),
                             ),
                             // Frame 5007
-                            SizedBox.shrink(
-                              child: Row(
-                                mainAxisSize: MainAxisSize.max,
-                                mainAxisAlignment: MainAxisAlignment.center,
-                                crossAxisAlignment: CrossAxisAlignment.start,
-                                children: [
-                                  Expanded(
-                                    child: Column(
-                                      mainAxisSize: MainAxisSize.min,
-                                      children: [
-                                        CardLayout(
-                                          pillType: PillType.pill_type_yaz_flex,
-                                          caption: "連続",
-                                          image: SvgPicture.asset(
-                                              "images/pill_type_yaz_flex.svg"),
-                                          name: "最長120日間",
-                                          pillNames: [
-                                            "ヤーズフレックス",
-                                          ],
-                                        ),
-                                        CardLayout(
-                                          pillType:
-                                              PillType.pill_type_21_rest_7,
-                                          caption: "周期",
-                                          image: SvgPicture.asset(
-                                              "images/pill_type_21_rest_7.svg"),
-                                          name: "21錠＋7日休薬",
-                                          pillNames: [
-                                            "ルナベル",
-                                            "フルウェル",
-                                            "マーベロン21",
-                                            "ラベルフィーユ21",
-                                            "アンジュ21",
-                                            "ジェミーナ"
-                                          ],
-                                        ),
-                                        CardLayout(
-                                          pillType:
-                                              PillType.pill_type_21_rest_7,
-                                          caption: "周期",
-                                          image: SvgPicture.asset(
-                                              "images/pill_type_24_rest_4.svg"),
-                                          name: "24錠＋4偽薬",
-                                          pillNames: [
-                                            "ヤーズ",
-                                          ],
-                                        ),
-                                      ],
-                                    ),
+                            Row(
+                              mainAxisSize: MainAxisSize.max,
+                              mainAxisAlignment: MainAxisAlignment.center,
+                              crossAxisAlignment: CrossAxisAlignment.start,
+                              children: [
+                                Expanded(
+                                  child: Column(
+                                    mainAxisSize: MainAxisSize.min,
+                                    crossAxisAlignment:
+                                        CrossAxisAlignment.stretch,
+                                    children: [
+                                      CardLayout(
+                                        pillType: PillType.pill_type_yaz_flex,
+                                        caption: "連続",
+                                        image: SvgPicture.asset(
+                                            "images/pill_type_yaz_flex.svg"),
+                                        name: "最長120日間",
+                                        pillNames: [
+                                          "ヤーズフレックス",
+                                        ],
+                                      ),
+                                      CardLayout(
+                                        pillType: PillType.pill_type_21_rest_7,
+                                        caption: "周期",
+                                        image: SvgPicture.asset(
+                                            "images/pill_type_21_rest_7.svg"),
+                                        name: "21錠＋7日休薬",
+                                        pillNames: [
+                                          "ルナベル",
+                                          "フルウェル",
+                                          "マーベロン21",
+                                          "ラベルフィーユ21",
+                                          "アンジュ21",
+                                          "ジェミーナ"
+                                        ],
+                                      ),
+                                      CardLayout(
+                                        pillType: PillType.pill_type_21_rest_7,
+                                        caption: "周期",
+                                        image: SvgPicture.asset(
+                                            "images/pill_type_24_rest_4.svg"),
+                                        name: "24錠＋4偽薬",
+                                        pillNames: [
+                                          "ヤーズ",
+                                        ],
+                                      ),
+                                    ],
                                   ),
-                                  Expanded(
-                                    child: Column(
-                                      mainAxisSize: MainAxisSize.min,
-                                      crossAxisAlignment:
-                                          CrossAxisAlignment.stretch,
-                                      children: [
-                                        CardLayout(
-                                          pillType: PillType.pill_type_jemina,
-                                          caption: "連続",
-                                          image: SvgPicture.asset(
-                                              "images/pill_type_jemina.svg"),
-                                          name: "77日+7日休薬",
-                                          pillNames: [
-                                            "ジェミーナ",
-                                          ],
-                                        ),
-                                        CardLayout(
-                                          pillType:
-                                              PillType.pill_type_24_rest_4,
-                                          caption: "周期",
-                                          image: SvgPicture.asset(
-                                              "images/pill_type_24_rest_4.svg"),
-                                          name: "24日+4日休薬",
-                                          pillNames: [
-                                            "ヤーズフレックス",
-                                          ],
-                                        ),
-                                        CardLayout(
-                                          pillType:
-                                              PillType.pill_type_21_fake_7,
-                                          caption: "周期",
-                                          image: SvgPicture.asset(
-                                              "images/pill_type_21_fake_7.svg"),
-                                          name: "21錠＋7偽薬",
-                                          pillNames: [
-                                            "マーベロン28",
-                                            "トリキュラー28",
-                                            "ラベルフィーユ28",
-                                            "アンジュ28",
-                                          ],
-                                        ),
-                                      ],
-                                    ),
+                                ),
+                                Expanded(
+                                  child: Column(
+                                    mainAxisSize: MainAxisSize.min,
+                                    crossAxisAlignment:
+                                        CrossAxisAlignment.stretch,
+                                    children: [
+                                      CardLayout(
+                                        pillType: PillType.pill_type_jemina,
+                                        caption: "連続",
+                                        image: SvgPicture.asset(
+                                            "images/pill_type_jemina.svg"),
+                                        name: "77日+7日休薬",
+                                        pillNames: [
+                                          "ジェミーナ",
+                                        ],
+                                      ),
+                                      CardLayout(
+                                        pillType: PillType.pill_type_24_rest_4,
+                                        caption: "周期",
+                                        image: SvgPicture.asset(
+                                            "images/pill_type_24_rest_4.svg"),
+                                        name: "24日+4日休薬",
+                                        pillNames: [
+                                          "ヤーズフレックス",
+                                        ],
+                                      ),
+                                      CardLayout(
+                                        pillType: PillType.pill_type_21_fake_7,
+                                        caption: "周期",
+                                        image: SvgPicture.asset(
+                                            "images/pill_type_21_fake_7.svg"),
+                                        name: "21錠＋7偽薬",
+                                        pillNames: [
+                                          "マーベロン28",
+                                          "トリキュラー28",
+                                          "ラベルフィーユ28",
+                                          "アンジュ28",
+                                        ],
+                                      ),
+                                    ],
                                   ),
-                                ],
-                              ),
+                                ),
+                              ],
                             ),
                           ],
                         ),
-                        const Spacer(),
                       ],
                     ),
                   ),
