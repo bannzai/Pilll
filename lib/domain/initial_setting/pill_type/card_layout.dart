@@ -2,13 +2,13 @@ import 'package:flutter/material.dart';
 import 'package:pilll/components/atoms/color.dart';
 import 'package:pilll/components/atoms/text_color.dart';
 
-class SettingPillSheetGroupCardLayout extends StatelessWidget {
+class CardLayout extends StatelessWidget {
   final String caption;
   final Widget image;
   final String name;
   final String supplement;
 
-  const SettingPillSheetGroupCardLayout({
+  const CardLayout({
     Key? key,
     required this.caption,
     required this.image,
