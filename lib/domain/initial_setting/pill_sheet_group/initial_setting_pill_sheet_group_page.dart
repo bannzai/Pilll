@@ -1,4 +1,3 @@
-import 'package:flutter_hooks/flutter_hooks.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:pilll/analytics.dart';
 import 'package:pilll/components/atoms/font.dart';
@@ -13,46 +12,15 @@ import 'package:pilll/components/atoms/color.dart';
 import 'package:pilll/components/atoms/text_color.dart';
 import 'package:flutter/material.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
-import 'package:pilll/router/router.dart';
-import 'package:pilll/service/auth.dart';
 import 'package:pilll/signin/signin_sheet.dart';
 import 'package:pilll/signin/signin_sheet_state.dart';
 import 'package:pilll/entity/pill_sheet_type.dart';
-import 'package:pilll/entity/link_account_type.dart';
 
 class InitialSettingPillSheetGroupPage extends HookConsumerWidget {
   @override
   Widget build(BuildContext context, WidgetRef ref) {
     final store = ref.watch(initialSettingStoreProvider.notifier);
     final state = ref.watch(initialSettingStoreProvider);
-    final authStream = ref.watch(authStateStreamProvider);
-
-    useEffect(() {
-      store.fetch();
-      return null;
-    }, [authStream]);
-
-    useEffect(() {
-      if (state.userIsNotAnonymous) {
-        final accountType = state.accountType;
-        if (accountType != null) {
-          Future.microtask(() {
-            ScaffoldMessenger.of(context).showSnackBar(
-              SnackBar(
-                duration: const Duration(seconds: 2),
-                content: Text("${accountType.providerName}でログインしました"),
-              ),
-            );
-          });
-        }
-
-        if (state.settingIsExist) {
-          AppRouter.signinAccount(context);
-        }
-      }
-
-      return null;
-    }, [state.userIsNotAnonymous, state.accountType, state.settingIsExist]);
 
     return HUD(
       shown: state.isLoading,
