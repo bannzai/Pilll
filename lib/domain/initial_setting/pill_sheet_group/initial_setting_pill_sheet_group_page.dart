@@ -72,23 +72,6 @@ class InitialSettingPillSheetGroupPage extends HookConsumerWidget {
                                       .route());
                             },
                           ),
-                        if (!state.userIsNotAnonymous) ...[
-                          const SizedBox(height: 20),
-                          AlertButton(
-                            text: "すでにアカウントをお持ちの方はこちら",
-                            onPressed: () async {
-                              analytics.logEvent(
-                                  name: "pressed_initial_setting_signin");
-                              showSigninSheet(
-                                context,
-                                SigninSheetStateContext.initialSetting,
-                                (accountType) async {
-                                  store.showHUD();
-                                },
-                              );
-                            },
-                          ),
-                        ],
                         const SizedBox(height: 35),
                       ],
                     ),
