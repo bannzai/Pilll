@@ -191,3 +191,10 @@ class InitialSettingPillTypePage extends HookConsumerWidget {
     );
   }
 }
+
+extension InitialSettingPillTypePageRoute on InitialSettingPillTypePage {
+  static InitialSettingPillTypePage screen() {
+    analytics.setCurrentScreen(screenName: "InitialSettingPillTypePage");
+    return InitialSettingPillTypePage();
+  }
+}
