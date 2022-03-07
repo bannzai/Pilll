@@ -1,8 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:pilll/components/atoms/color.dart';
 import 'package:pilll/components/atoms/text_color.dart';
+import 'package:pilll/entity/pill_type.dart';
 
 class CardLayout extends StatelessWidget {
+  final PillType pillType;
   final String caption;
   final Widget image;
   final String name;
@@ -10,6 +12,7 @@ class CardLayout extends StatelessWidget {
 
   const CardLayout({
     Key? key,
+    required this.pillType,
     required this.caption,
     required this.image,
     required this.name,
