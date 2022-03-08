@@ -109,7 +109,9 @@ class InitialSettingPillTypePage extends HookConsumerWidget {
                                           CrossAxisAlignment.stretch,
                                       children: [
                                         CardLayout(
-                                          pillType: InitialSettingPillCategoryType.pill_type_yaz_flex,
+                                          pillType:
+                                              InitialSettingPillCategoryType
+                                                  .pill_type_yaz_flex,
                                           caption: "連続",
                                           image: SvgPicture.asset(
                                               "images/pill_type_yaz_flex.svg"),
@@ -120,7 +122,7 @@ class InitialSettingPillTypePage extends HookConsumerWidget {
                                           onTap: (pillType) {
                                             analytics.logEvent(
                                                 name:
-                                                    "i_s_pill_type_yaz_flex_card_tap");
+                                                    "i_s_pill_c_t_yaz_flex_card_tap");
                                             store.selectedPillType(pillType);
                                             Navigator.of(context).push(
                                                 InitialSettingSelectTodayPillNumberPageRoute
@@ -130,7 +132,8 @@ class InitialSettingPillTypePage extends HookConsumerWidget {
                                         const SizedBox(height: 20),
                                         CardLayout(
                                           pillType:
-                                              InitialSettingPillCategoryType.pill_type_21_rest_7,
+                                              InitialSettingPillCategoryType
+                                                  .pill_type_21_rest_7,
                                           caption: "周期",
                                           image: SvgPicture.asset(
                                               "images/pill_type_21_rest_7.svg"),
@@ -146,7 +149,7 @@ class InitialSettingPillTypePage extends HookConsumerWidget {
                                           onTap: (pillType) {
                                             analytics.logEvent(
                                                 name:
-                                                    "i_s_pill_type_21_rest_7_card_tap");
+                                                    "i_s_pill_c_t_21_rest_7_card_tap");
                                             store.selectedPillType(pillType);
                                             Navigator.of(context).push(
                                                 InitialSettingPillSheetGroupPageRoute
@@ -156,7 +159,8 @@ class InitialSettingPillTypePage extends HookConsumerWidget {
                                         const SizedBox(height: 20),
                                         CardLayout(
                                           pillType:
-                                              InitialSettingPillCategoryType.pill_type_24_fake_4,
+                                              InitialSettingPillCategoryType
+                                                  .pill_type_24_fake_4,
                                           caption: "周期",
                                           image: SvgPicture.asset(
                                               "images/pill_type_24_fake_4.svg"),
@@ -176,7 +180,9 @@ class InitialSettingPillTypePage extends HookConsumerWidget {
                                           CrossAxisAlignment.stretch,
                                       children: [
                                         CardLayout(
-                                          pillType: InitialSettingPillCategoryType.pill_type_jemina,
+                                          pillType:
+                                              InitialSettingPillCategoryType
+                                                  .pill_type_jemina,
                                           caption: "連続",
                                           image: SvgPicture.asset(
                                               "images/pill_type_jemina.svg"),
@@ -188,7 +194,8 @@ class InitialSettingPillTypePage extends HookConsumerWidget {
                                         const SizedBox(height: 20),
                                         CardLayout(
                                           pillType:
-                                              InitialSettingPillCategoryType.pill_type_24_rest_4,
+                                              InitialSettingPillCategoryType
+                                                  .pill_type_24_rest_4,
                                           caption: "周期",
                                           image: SvgPicture.asset(
                                               "images/pill_type_24_rest_4.svg"),
@@ -200,7 +207,8 @@ class InitialSettingPillTypePage extends HookConsumerWidget {
                                         const SizedBox(height: 20),
                                         CardLayout(
                                           pillType:
-                                              InitialSettingPillCategoryType.pill_type_21_fake_7,
+                                              InitialSettingPillCategoryType
+                                                  .pill_type_21_fake_7,
                                           caption: "周期",
                                           image: SvgPicture.asset(
                                               "images/pill_type_21_fake_7.svg"),
