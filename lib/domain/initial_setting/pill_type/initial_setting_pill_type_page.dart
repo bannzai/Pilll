@@ -6,7 +6,7 @@ import 'package:pilll/components/atoms/font.dart';
 import 'package:pilll/components/page/hud.dart';
 import 'package:pilll/domain/initial_setting/initial_setting_state.dart';
 import 'package:pilll/domain/initial_setting/pill_sheet_group/initial_setting_pill_sheet_group_page.dart';
-import 'package:pilll/domain/initial_setting/pill_type/card_layout.dart';
+import 'package:pilll/domain/initial_setting/pill_category_type/card_layout.dart';
 import 'package:pilll/domain/initial_setting/initial_setting_store.dart';
 import 'package:pilll/components/atoms/color.dart';
 import 'package:pilll/components/atoms/text_color.dart';
@@ -111,10 +111,10 @@ class InitialSettingPillTypePage extends HookConsumerWidget {
                                         CardLayout(
                                           pillType:
                                               InitialSettingPillCategoryType
-                                                  .pill_type_yaz_flex,
+                                                  .pill_category_type_yaz_flex,
                                           caption: "連続",
                                           image: SvgPicture.asset(
-                                              "images/pill_type_yaz_flex.svg"),
+                                              "images/pill_category_type_yaz_flex.svg"),
                                           name: "最長120日間",
                                           pillNames: [
                                             "ヤーズフレックス",
@@ -133,10 +133,10 @@ class InitialSettingPillTypePage extends HookConsumerWidget {
                                         CardLayout(
                                           pillType:
                                               InitialSettingPillCategoryType
-                                                  .pill_type_21_rest_7,
+                                                  .pill_category_type_21_rest_7,
                                           caption: "周期",
                                           image: SvgPicture.asset(
-                                              "images/pill_type_21_rest_7.svg"),
+                                              "images/pill_category_type_21_rest_7.svg"),
                                           name: "21錠＋7日休薬",
                                           pillNames: [
                                             "ルナベル",
@@ -160,10 +160,10 @@ class InitialSettingPillTypePage extends HookConsumerWidget {
                                         CardLayout(
                                           pillType:
                                               InitialSettingPillCategoryType
-                                                  .pill_type_24_fake_4,
+                                                  .pill_category_type_24_fake_4,
                                           caption: "周期",
                                           image: SvgPicture.asset(
-                                              "images/pill_type_24_fake_4.svg"),
+                                              "images/pill_category_type_24_fake_4.svg"),
                                           name: "24錠＋4偽薬",
                                           pillNames: [
                                             "ヤーズ",
@@ -182,10 +182,10 @@ class InitialSettingPillTypePage extends HookConsumerWidget {
                                         CardLayout(
                                           pillType:
                                               InitialSettingPillCategoryType
-                                                  .pill_type_jemina,
+                                                  .pill_category_type_jemina,
                                           caption: "連続",
                                           image: SvgPicture.asset(
-                                              "images/pill_type_jemina.svg"),
+                                              "images/pill_category_type_jemina.svg"),
                                           name: "77日+7日休薬",
                                           pillNames: [
                                             "ジェミーナ",
@@ -195,10 +195,10 @@ class InitialSettingPillTypePage extends HookConsumerWidget {
                                         CardLayout(
                                           pillType:
                                               InitialSettingPillCategoryType
-                                                  .pill_type_24_rest_4,
+                                                  .pill_category_type_24_rest_4,
                                           caption: "周期",
                                           image: SvgPicture.asset(
-                                              "images/pill_type_24_rest_4.svg"),
+                                              "images/pill_category_type_24_rest_4.svg"),
                                           name: "24日+4日休薬",
                                           pillNames: [
                                             "ヤーズフレックス",
@@ -208,10 +208,10 @@ class InitialSettingPillTypePage extends HookConsumerWidget {
                                         CardLayout(
                                           pillType:
                                               InitialSettingPillCategoryType
-                                                  .pill_type_21_fake_7,
+                                                  .pill_category_type_21_fake_7,
                                           caption: "周期",
                                           image: SvgPicture.asset(
-                                              "images/pill_type_21_fake_7.svg"),
+                                              "images/pill_category_type_21_fake_7.svg"),
                                           name: "21錠＋7偽薬",
                                           pillNames: [
                                             "マーベロン28",

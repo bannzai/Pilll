@@ -86,7 +86,7 @@ class InitialSettingStateStore extends StateNotifier<InitialSettingState> {
     state = state.copyWith(pillType: pillType);
 
     switch (pillType) {
-      case InitialSettingPillCategoryType.pill_type_yaz_flex:
+      case InitialSettingPillCategoryType.pill_category_type_yaz_flex:
         state = state.copyWith(pillSheetTypes: [
           PillSheetType.pillsheet_28_0,
           PillSheetType.pillsheet_28_0,
@@ -95,23 +95,23 @@ class InitialSettingStateStore extends StateNotifier<InitialSettingState> {
           PillSheetType.pillsheet_28_0,
         ]);
         break;
-      case InitialSettingPillCategoryType.pill_type_jemina:
+      case InitialSettingPillCategoryType.pill_category_type_jemina:
         state = state.copyWith(pillSheetTypes: [
           PillSheetType.pillsheet_28_0,
           PillSheetType.pillsheet_28_0,
           PillSheetType.pillsheet_21,
         ]);
         break;
-      case InitialSettingPillCategoryType.pill_type_21_rest_7:
+      case InitialSettingPillCategoryType.pill_category_type_21_rest_7:
         // TODO: Handle this case.
         break;
-      case InitialSettingPillCategoryType.pill_type_28:
+      case InitialSettingPillCategoryType.pill_category_type_28:
         // TODO: Handle this case.
         break;
-      case InitialSettingPillCategoryType.pill_type_24_rest_4:
+      case InitialSettingPillCategoryType.pill_category_type_24_rest_4:
         // TODO: Handle this case.
         break;
-      case InitialSettingPillCategoryType.pill_type_21_fake_7:
+      case InitialSettingPillCategoryType.pill_category_type_21_fake_7:
         // TODO: Handle this case.
         break;
     }
