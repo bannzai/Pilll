@@ -6,7 +6,7 @@ final firebaseAnalytics = FirebaseAnalytics.instance;
 
 class Analytics {
   logEvent({required String name, Map<String, dynamic>? parameters}) async {
-    assert(name.length <= 40,
+    assert(name.length < 40,
         "firebase analytics log event name limit length up to 40");
     print("[INFO] logEvent name: $name, parameters: $parameters");
 
@@ -29,10 +29,16 @@ class Analytics {
         screenName: screenName, screenClassOverride: screenClassOverride);
   }
 
+  /// Up to 25 user property names are supported.
+  // The "firebase_" prefix is reserved and should not be used for
+  /// user property names.
   setUserProperties(String name, value) {
     assert(name.toLowerCase() != "age");
     assert(name.toLowerCase() != "gender");
     assert(name.toLowerCase() != "interest");
+    assert(name.length < 25,
+        "firebase setUserProperties name limit length up to 25");
+    assert(!name.startsWith("firebase_"));
 
     print("[INFO] setUserProperties name: $name, value: $value");
     firebaseAnalytics.setUserProperty(name: name, value: value);
