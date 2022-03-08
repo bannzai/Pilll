@@ -4,7 +4,7 @@ import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:firebase_crashlytics/firebase_crashlytics.dart';
 import 'package:pilll/analytics.dart';
 import 'package:pilll/components/page/ok_dialog.dart';
-import 'package:pilll/domain/initial_setting/pill_type/initial_setting_pill_type_page.dart';
+import 'package:pilll/domain/initial_setting/pill_type/initial_setting_pill_category_type_page.dart';
 import 'package:pilll/entity/config.dart';
 import 'package:pilll/service/auth.dart';
 import 'package:pilll/database/database.dart';
