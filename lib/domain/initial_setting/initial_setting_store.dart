@@ -10,6 +10,7 @@ import 'package:pilll/domain/initial_setting/initial_setting_state.dart';
 import 'package:pilll/entity/link_account_type.dart';
 import 'package:pilll/entity/pill_sheet_group.dart';
 import 'package:pilll/entity/pill_sheet_type.dart';
+import 'package:pilll/entity/pill_type.dart';
 import 'package:pilll/entity/setting.dart';
 import 'package:pilll/service/auth.dart';
 import 'package:pilll/service/pill_sheet.dart';
@@ -79,6 +80,26 @@ class InitialSettingStateStore extends StateNotifier<InitialSettingState> {
 
       _authServiceCanceller?.cancel();
     });
+  }
+
+  void selectedPillType(PillType pillType) {
+    state = state.copyWith(pillType: pillType);
+
+    if (pillType == PillType.pill_type_yaz_flex) {
+      state = state.copyWith(pillSheetTypes: [
+        PillSheetType.pillsheet_28_0,
+        PillSheetType.pillsheet_28_0,
+        PillSheetType.pillsheet_28_0,
+        PillSheetType.pillsheet_28_0,
+        PillSheetType.pillsheet_28_0,
+      ]);
+    } else if (pillType == PillType.pill_type_jemina) {
+      state = state.copyWith(pillSheetTypes: [
+        PillSheetType.pillsheet_28_0,
+        PillSheetType.pillsheet_28_0,
+        PillSheetType.pillsheet_21,
+      ]);
+    }
   }
 
   void selectedPillSheetType(PillSheetType pillSheetType) {
