@@ -269,6 +269,23 @@ class InitialSettingPillTypePage extends HookConsumerWidget {
       ),
     );
   }
+
+  String _logName(InitialSettingPillCategoryType pillCategoryType) {
+    switch (pillCategoryType) {
+      case InitialSettingPillCategoryType.pill_category_type_yaz_flex:
+        return "i_s_pill_c_t_yaz_flex_card_tap";
+      case InitialSettingPillCategoryType.pill_category_type_jemina:
+        return "i_s_pill_c_t_jemina_card_tap";
+      case InitialSettingPillCategoryType.pill_category_type_21_rest_7:
+        return "i_s_pill_c_t_21_rest_7_card_tap";
+      case InitialSettingPillCategoryType.pill_category_type_24_fake_4:
+        return "i_s_pill_c_t_24_fake_4_card_tap";
+      case InitialSettingPillCategoryType.pill_category_type_24_rest_4:
+        return "i_s_pill_c_t_24_rest_4_card_tap";
+      case InitialSettingPillCategoryType.pill_category_type_21_fake_7:
+        return "i_s_pill_c_t_21_fake_7_card_tap";
+    }
+  }
 }
 
 extension InitialSettingPillTypePageRoute on InitialSettingPillTypePage {
