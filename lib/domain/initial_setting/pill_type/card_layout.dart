@@ -44,28 +44,37 @@ class CardLayout extends StatelessWidget {
                 fontSize: 10,
                 fontWeight: FontWeight.w500,
               ),
+              textAlign: TextAlign.center,
             ),
           ),
           const SizedBox(height: 12),
-          image,
           Column(
+            crossAxisAlignment: CrossAxisAlignment.stretch,
             children: [
-              Text(
-                name,
-                style: const TextStyle(
-                  color: TextColor.main,
-                  fontSize: 16,
-                  fontWeight: FontWeight.w500,
-                ),
-              ),
-              const SizedBox(height: 6),
-              Text(
-                pillNames.join("/"),
-                style: const TextStyle(
-                  color: TextColor.main,
-                  fontSize: 10,
-                  fontWeight: FontWeight.w400,
-                ),
+              image,
+              const SizedBox(height: 12),
+              Column(
+                children: [
+                  Text(
+                    name,
+                    style: const TextStyle(
+                      color: TextColor.main,
+                      fontSize: 16,
+                      fontWeight: FontWeight.w500,
+                    ),
+                    textAlign: TextAlign.center,
+                  ),
+                  const SizedBox(height: 6),
+                  Text(
+                    pillNames.join("/"),
+                    style: const TextStyle(
+                      color: TextColor.main,
+                      fontSize: 10,
+                      fontWeight: FontWeight.w400,
+                    ),
+                    textAlign: TextAlign.center,
+                  ),
+                ],
               ),
             ],
           ),

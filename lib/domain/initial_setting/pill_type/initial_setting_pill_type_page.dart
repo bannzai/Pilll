@@ -69,6 +69,7 @@ class InitialSettingPillTypePage extends HookConsumerWidget {
               child: Column(
                 children: [
                   // onbording_1
+                  const SizedBox(height: 24),
                   Expanded(
                     child: Column(
                       mainAxisSize: MainAxisSize.max,
@@ -88,7 +89,9 @@ class InitialSettingPillTypePage extends HookConsumerWidget {
                                 fontFamily: FontFamily.japanese,
                                 fontWeight: FontWeight.w600,
                               ),
+                              textAlign: TextAlign.center,
                             ),
+                            const SizedBox(height: 24),
                             // Frame 5007
                             Row(
                               mainAxisSize: MainAxisSize.max,
