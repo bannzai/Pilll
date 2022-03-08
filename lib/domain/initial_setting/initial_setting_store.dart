@@ -103,16 +103,22 @@ class InitialSettingStateStore extends StateNotifier<InitialSettingState> {
         ]);
         break;
       case InitialSettingPillCategoryType.pill_category_type_21_rest_7:
-        // TODO: Handle this case.
+        state = state.copyWith(pillSheetTypes: [
+          PillSheetType.pillsheet_21,
+        ]);
         break;
       case InitialSettingPillCategoryType.pill_category_type_24_fake_4:
-        // TODO: Handle this case.
+        state = state.copyWith(pillSheetTypes: [
+          PillSheetType.pillsheet_28_4,
+        ]);
         break;
       case InitialSettingPillCategoryType.pill_category_type_24_rest_4:
-        // TODO: Handle this case.
+        // TODO:
         break;
       case InitialSettingPillCategoryType.pill_category_type_21_fake_7:
-        // TODO: Handle this case.
+        state = state.copyWith(pillSheetTypes: [
+          PillSheetType.pillsheet_28_7,
+        ]);
         break;
     }
   }
