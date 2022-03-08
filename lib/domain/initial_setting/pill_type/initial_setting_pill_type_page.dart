@@ -65,6 +65,7 @@ class InitialSettingPillTypePage extends HookConsumerWidget {
         body: SafeArea(
           child: SizedBox.expand(
             child: Container(
+              padding: const EdgeInsets.symmetric(horizontal: 32),
               child: Column(
                 children: [
                   // onbording_1
@@ -110,6 +111,7 @@ class InitialSettingPillTypePage extends HookConsumerWidget {
                                           "ヤーズフレックス",
                                         ],
                                       ),
+                                      const SizedBox(height: 20),
                                       CardLayout(
                                         pillType: PillType.pill_type_21_rest_7,
                                         caption: "周期",
@@ -125,6 +127,7 @@ class InitialSettingPillTypePage extends HookConsumerWidget {
                                           "ジェミーナ"
                                         ],
                                       ),
+                                      const SizedBox(height: 20),
                                       CardLayout(
                                         pillType: PillType.pill_type_21_rest_7,
                                         caption: "周期",
@@ -138,6 +141,7 @@ class InitialSettingPillTypePage extends HookConsumerWidget {
                                     ],
                                   ),
                                 ),
+                                const SizedBox(width: 20),
                                 Expanded(
                                   child: Column(
                                     mainAxisSize: MainAxisSize.min,
@@ -154,6 +158,7 @@ class InitialSettingPillTypePage extends HookConsumerWidget {
                                           "ジェミーナ",
                                         ],
                                       ),
+                                      const SizedBox(height: 20),
                                       CardLayout(
                                         pillType: PillType.pill_type_24_rest_4,
                                         caption: "周期",
@@ -164,6 +169,7 @@ class InitialSettingPillTypePage extends HookConsumerWidget {
                                           "ヤーズフレックス",
                                         ],
                                       ),
+                                      const SizedBox(height: 20),
                                       CardLayout(
                                         pillType: PillType.pill_type_21_fake_7,
                                         caption: "周期",
