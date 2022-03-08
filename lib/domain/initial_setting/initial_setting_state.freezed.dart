@@ -181,7 +181,8 @@ class _$InitialSettingStateTearOff {
   const _$InitialSettingStateTearOff();
 
   _InitialSettingState call(
-      {List<PillSheetType> pillSheetTypes = const [],
+      {PillType? pillType,
+      List<PillSheetType> pillSheetTypes = const [],
       InitialSettingTodayPillNumber? todayPillNumber,
       List<ReminderTime> reminderTimes = const [
         ReminderTime(hour: 21, minute: 0),
@@ -193,6 +194,7 @@ class _$InitialSettingStateTearOff {
       bool settingIsExist = false,
       LinkAccountType? accountType}) {
     return _InitialSettingState(
+      pillType: pillType,
       pillSheetTypes: pillSheetTypes,
       todayPillNumber: todayPillNumber,
       reminderTimes: reminderTimes,
@@ -210,6 +212,7 @@ const $InitialSettingState = _$InitialSettingStateTearOff();
 
 /// @nodoc
 mixin _$InitialSettingState {
+  PillType? get pillType => throw _privateConstructorUsedError;
   List<PillSheetType> get pillSheetTypes => throw _privateConstructorUsedError;
   InitialSettingTodayPillNumber? get todayPillNumber =>
       throw _privateConstructorUsedError;
@@ -231,7 +234,8 @@ abstract class $InitialSettingStateCopyWith<$Res> {
           InitialSettingState value, $Res Function(InitialSettingState) then) =
       _$InitialSettingStateCopyWithImpl<$Res>;
   $Res call(
-      {List<PillSheetType> pillSheetTypes,
+      {PillType? pillType,
+      List<PillSheetType> pillSheetTypes,
       InitialSettingTodayPillNumber? todayPillNumber,
       List<ReminderTime> reminderTimes,
       bool isOnReminder,
@@ -254,6 +258,7 @@ class _$InitialSettingStateCopyWithImpl<$Res>
 
   @override
   $Res call({
+    Object? pillType = freezed,
     Object? pillSheetTypes = freezed,
     Object? todayPillNumber = freezed,
     Object? reminderTimes = freezed,
@@ -264,6 +269,10 @@ class _$InitialSettingStateCopyWithImpl<$Res>
     Object? accountType = freezed,
   }) {
     return _then(_value.copyWith(
+      pillType: pillType == freezed
+          ? _value.pillType
+          : pillType // ignore: cast_nullable_to_non_nullable
+              as PillType?,
       pillSheetTypes: pillSheetTypes == freezed
           ? _value.pillSheetTypes
           : pillSheetTypes // ignore: cast_nullable_to_non_nullable
@@ -320,7 +329,8 @@ abstract class _$InitialSettingStateCopyWith<$Res>
       __$InitialSettingStateCopyWithImpl<$Res>;
   @override
   $Res call(
-      {List<PillSheetType> pillSheetTypes,
+      {PillType? pillType,
+      List<PillSheetType> pillSheetTypes,
       InitialSettingTodayPillNumber? todayPillNumber,
       List<ReminderTime> reminderTimes,
       bool isOnReminder,
@@ -346,6 +356,7 @@ class __$InitialSettingStateCopyWithImpl<$Res>
 
   @override
   $Res call({
+    Object? pillType = freezed,
     Object? pillSheetTypes = freezed,
     Object? todayPillNumber = freezed,
     Object? reminderTimes = freezed,
@@ -356,6 +367,10 @@ class __$InitialSettingStateCopyWithImpl<$Res>
     Object? accountType = freezed,
   }) {
     return _then(_InitialSettingState(
+      pillType: pillType == freezed
+          ? _value.pillType
+          : pillType // ignore: cast_nullable_to_non_nullable
+              as PillType?,
       pillSheetTypes: pillSheetTypes == freezed
           ? _value.pillSheetTypes
           : pillSheetTypes // ignore: cast_nullable_to_non_nullable
@@ -396,7 +411,8 @@ class __$InitialSettingStateCopyWithImpl<$Res>
 
 class _$_InitialSettingState extends _InitialSettingState {
   const _$_InitialSettingState(
-      {this.pillSheetTypes = const [],
+      {this.pillType,
+      this.pillSheetTypes = const [],
       this.todayPillNumber,
       this.reminderTimes = const [
         ReminderTime(hour: 21, minute: 0),
@@ -409,6 +425,8 @@ class _$_InitialSettingState extends _InitialSettingState {
       this.accountType})
       : super._();
 
+  @override
+  final PillType? pillType;
   @JsonKey()
   @override
   final List<PillSheetType> pillSheetTypes;
@@ -434,7 +452,7 @@ class _$_InitialSettingState extends _InitialSettingState {
 
   @override
   String toString() {
-    return 'InitialSettingState(pillSheetTypes: $pillSheetTypes, todayPillNumber: $todayPillNumber, reminderTimes: $reminderTimes, isOnReminder: $isOnReminder, isLoading: $isLoading, userIsNotAnonymous: $userIsNotAnonymous, settingIsExist: $settingIsExist, accountType: $accountType)';
+    return 'InitialSettingState(pillType: $pillType, pillSheetTypes: $pillSheetTypes, todayPillNumber: $todayPillNumber, reminderTimes: $reminderTimes, isOnReminder: $isOnReminder, isLoading: $isLoading, userIsNotAnonymous: $userIsNotAnonymous, settingIsExist: $settingIsExist, accountType: $accountType)';
   }
 
   @override
@@ -442,6 +460,7 @@ class _$_InitialSettingState extends _InitialSettingState {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _InitialSettingState &&
+            const DeepCollectionEquality().equals(other.pillType, pillType) &&
             const DeepCollectionEquality()
                 .equals(other.pillSheetTypes, pillSheetTypes) &&
             const DeepCollectionEquality()
@@ -462,6 +481,7 @@ class _$_InitialSettingState extends _InitialSettingState {
   @override
   int get hashCode => Object.hash(
       runtimeType,
+      const DeepCollectionEquality().hash(pillType),
       const DeepCollectionEquality().hash(pillSheetTypes),
       const DeepCollectionEquality().hash(todayPillNumber),
       const DeepCollectionEquality().hash(reminderTimes),
@@ -480,7 +500,8 @@ class _$_InitialSettingState extends _InitialSettingState {
 
 abstract class _InitialSettingState extends InitialSettingState {
   const factory _InitialSettingState(
-      {List<PillSheetType> pillSheetTypes,
+      {PillType? pillType,
+      List<PillSheetType> pillSheetTypes,
       InitialSettingTodayPillNumber? todayPillNumber,
       List<ReminderTime> reminderTimes,
       bool isOnReminder,
@@ -490,6 +511,8 @@ abstract class _InitialSettingState extends InitialSettingState {
       LinkAccountType? accountType}) = _$_InitialSettingState;
   const _InitialSettingState._() : super._();
 
+  @override
+  PillType? get pillType;
   @override
   List<PillSheetType> get pillSheetTypes;
   @override

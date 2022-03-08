@@ -1,4 +1,5 @@
 import 'package:pilll/entity/link_account_type.dart';
+import 'package:pilll/entity/pill_type.dart';
 import 'package:pilll/util/datetime/day.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';
 import 'package:pilll/entity/pill_sheet.dart';
@@ -19,6 +20,7 @@ class InitialSettingTodayPillNumber with _$InitialSettingTodayPillNumber {
 class InitialSettingState with _$InitialSettingState {
   const InitialSettingState._();
   const factory InitialSettingState({
+    PillType? pillType,
     @Default([])
         List<PillSheetType> pillSheetTypes,
     InitialSettingTodayPillNumber? todayPillNumber,
