@@ -1,15 +1,15 @@
 import 'package:flutter/material.dart';
 import 'package:pilll/components/atoms/color.dart';
 import 'package:pilll/components/atoms/text_color.dart';
-import 'package:pilll/entity/pill_type.dart';
+import 'package:pilll/entity/initial_setting_pill_category_type.dart';
 
 class CardLayout extends StatelessWidget {
-  final PillType pillType;
+  final InitialSettingPillCategoryType pillType;
   final String caption;
   final Widget image;
   final String name;
   final List<String> pillNames;
-  final Function(PillType) onTap;
+  final Function(InitialSettingPillCategoryType) onTap;
 
   const CardLayout({
     Key? key,

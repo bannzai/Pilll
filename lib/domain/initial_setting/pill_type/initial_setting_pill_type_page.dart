@@ -13,7 +13,7 @@ import 'package:pilll/components/atoms/text_color.dart';
 import 'package:flutter/material.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
 import 'package:pilll/domain/initial_setting/today_pill_number/initial_setting_select_today_pill_number_page.dart';
-import 'package:pilll/entity/pill_type.dart';
+import 'package:pilll/entity/initial_setting_pill_category_type.dart';
 import 'package:pilll/router/router.dart';
 import 'package:pilll/service/auth.dart';
 import 'package:pilll/entity/link_account_type.dart';
@@ -109,7 +109,7 @@ class InitialSettingPillTypePage extends HookConsumerWidget {
                                           CrossAxisAlignment.stretch,
                                       children: [
                                         CardLayout(
-                                          pillType: PillType.pill_type_yaz_flex,
+                                          pillType: InitialSettingPillCategoryType.pill_type_yaz_flex,
                                           caption: "連続",
                                           image: SvgPicture.asset(
                                               "images/pill_type_yaz_flex.svg"),
@@ -130,7 +130,7 @@ class InitialSettingPillTypePage extends HookConsumerWidget {
                                         const SizedBox(height: 20),
                                         CardLayout(
                                           pillType:
-                                              PillType.pill_type_21_rest_7,
+                                              InitialSettingPillCategoryType.pill_type_21_rest_7,
                                           caption: "周期",
                                           image: SvgPicture.asset(
                                               "images/pill_type_21_rest_7.svg"),
@@ -156,7 +156,7 @@ class InitialSettingPillTypePage extends HookConsumerWidget {
                                         const SizedBox(height: 20),
                                         CardLayout(
                                           pillType:
-                                              PillType.pill_type_24_fake_4,
+                                              InitialSettingPillCategoryType.pill_type_24_fake_4,
                                           caption: "周期",
                                           image: SvgPicture.asset(
                                               "images/pill_type_24_fake_4.svg"),
@@ -176,7 +176,7 @@ class InitialSettingPillTypePage extends HookConsumerWidget {
                                           CrossAxisAlignment.stretch,
                                       children: [
                                         CardLayout(
-                                          pillType: PillType.pill_type_jemina,
+                                          pillType: InitialSettingPillCategoryType.pill_type_jemina,
                                           caption: "連続",
                                           image: SvgPicture.asset(
                                               "images/pill_type_jemina.svg"),
@@ -188,7 +188,7 @@ class InitialSettingPillTypePage extends HookConsumerWidget {
                                         const SizedBox(height: 20),
                                         CardLayout(
                                           pillType:
-                                              PillType.pill_type_24_rest_4,
+                                              InitialSettingPillCategoryType.pill_type_24_rest_4,
                                           caption: "周期",
                                           image: SvgPicture.asset(
                                               "images/pill_type_24_rest_4.svg"),
@@ -200,7 +200,7 @@ class InitialSettingPillTypePage extends HookConsumerWidget {
                                         const SizedBox(height: 20),
                                         CardLayout(
                                           pillType:
-                                              PillType.pill_type_21_fake_7,
+                                              InitialSettingPillCategoryType.pill_type_21_fake_7,
                                           caption: "周期",
                                           image: SvgPicture.asset(
                                               "images/pill_type_21_fake_7.svg"),

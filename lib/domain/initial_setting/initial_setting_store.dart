@@ -10,7 +10,7 @@ import 'package:pilll/domain/initial_setting/initial_setting_state.dart';
 import 'package:pilll/entity/link_account_type.dart';
 import 'package:pilll/entity/pill_sheet_group.dart';
 import 'package:pilll/entity/pill_sheet_type.dart';
-import 'package:pilll/entity/pill_type.dart';
+import 'package:pilll/entity/initial_setting_pill_category_type.dart';
 import 'package:pilll/entity/setting.dart';
 import 'package:pilll/service/auth.dart';
 import 'package:pilll/service/pill_sheet.dart';
@@ -82,11 +82,11 @@ class InitialSettingStateStore extends StateNotifier<InitialSettingState> {
     });
   }
 
-  void selectedPillType(PillType pillType) {
+  void selectedPillType(InitialSettingPillCategoryType pillType) {
     state = state.copyWith(pillType: pillType);
 
     switch (pillType) {
-      case PillType.pill_type_yaz_flex:
+      case InitialSettingPillCategoryType.pill_type_yaz_flex:
         state = state.copyWith(pillSheetTypes: [
           PillSheetType.pillsheet_28_0,
           PillSheetType.pillsheet_28_0,
@@ -95,23 +95,23 @@ class InitialSettingStateStore extends StateNotifier<InitialSettingState> {
           PillSheetType.pillsheet_28_0,
         ]);
         break;
-      case PillType.pill_type_jemina:
+      case InitialSettingPillCategoryType.pill_type_jemina:
         state = state.copyWith(pillSheetTypes: [
           PillSheetType.pillsheet_28_0,
           PillSheetType.pillsheet_28_0,
           PillSheetType.pillsheet_21,
         ]);
         break;
-      case PillType.pill_type_21_rest_7:
+      case InitialSettingPillCategoryType.pill_type_21_rest_7:
         // TODO: Handle this case.
         break;
-      case PillType.pill_type_28:
+      case InitialSettingPillCategoryType.pill_type_28:
         // TODO: Handle this case.
         break;
-      case PillType.pill_type_24_rest_4:
+      case InitialSettingPillCategoryType.pill_type_24_rest_4:
         // TODO: Handle this case.
         break;
-      case PillType.pill_type_21_fake_7:
+      case InitialSettingPillCategoryType.pill_type_21_fake_7:
         // TODO: Handle this case.
         break;
     }

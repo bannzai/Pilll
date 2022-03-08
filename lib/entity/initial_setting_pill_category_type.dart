@@ -1,4 +1,4 @@
-enum PillType {
+enum InitialSettingPillCategoryType {
   // ヤーズフレックス 連続
   pill_type_yaz_flex,
   // 77日+7日休薬
