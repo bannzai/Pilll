@@ -122,11 +122,10 @@ class InitialSettingPillTypePage extends HookConsumerWidget {
                                           ],
                                           onTap: (pillType) {
                                             analytics.logEvent(
-                                                name:
-                                                    "i_s_pill_c_t_yaz_flex_card_tap");
+                                                name: _logName(pillType));
                                             analytics.setUserProperties(
                                                 initialSettingPillCategoryUserPropertyName,
-                                                "pill_category_type_yaz_flex");
+                                                _userPropertyValue(pillType));
 
                                             store.selectedPillType(pillType);
                                             Navigator.of(context).push(
@@ -153,11 +152,10 @@ class InitialSettingPillTypePage extends HookConsumerWidget {
                                           ],
                                           onTap: (pillType) {
                                             analytics.logEvent(
-                                                name:
-                                                    "i_s_pill_c_t_21_rest_7_card_tap");
+                                                name: _logName(pillType));
                                             analytics.setUserProperties(
                                                 initialSettingPillCategoryUserPropertyName,
-                                                "pill_category_type_21_rest_7");
+                                                _userPropertyValue(pillType));
 
                                             store.selectedPillType(pillType);
                                             Navigator.of(context).push(
@@ -177,6 +175,18 @@ class InitialSettingPillTypePage extends HookConsumerWidget {
                                           pillNames: [
                                             "ヤーズ",
                                           ],
+                                          onTap: (pillType) {
+                                            analytics.logEvent(
+                                                name: _logName(pillType));
+                                            analytics.setUserProperties(
+                                                initialSettingPillCategoryUserPropertyName,
+                                                _userPropertyValue(pillType));
+
+                                            store.selectedPillType(pillType);
+                                            Navigator.of(context).push(
+                                                InitialSettingPillSheetGroupPageRoute
+                                                    .route());
+                                          },
                                         ),
                                       ],
                                     ),
@@ -199,6 +209,18 @@ class InitialSettingPillTypePage extends HookConsumerWidget {
                                           pillNames: [
                                             "ジェミーナ",
                                           ],
+                                          onTap: (pillType) {
+                                            analytics.logEvent(
+                                                name: _logName(pillType));
+                                            analytics.setUserProperties(
+                                                initialSettingPillCategoryUserPropertyName,
+                                                _userPropertyValue(pillType));
+
+                                            store.selectedPillType(pillType);
+                                            Navigator.of(context).push(
+                                                InitialSettingSelectTodayPillNumberPageRoute
+                                                    .route());
+                                          },
                                         ),
                                         const SizedBox(height: 20),
                                         CardLayout(
@@ -212,6 +234,18 @@ class InitialSettingPillTypePage extends HookConsumerWidget {
                                           pillNames: [
                                             "ヤーズフレックス",
                                           ],
+                                          onTap: (pillType) {
+                                            analytics.logEvent(
+                                                name: _logName(pillType));
+                                            analytics.setUserProperties(
+                                                initialSettingPillCategoryUserPropertyName,
+                                                _userPropertyValue(pillType));
+
+                                            store.selectedPillType(pillType);
+                                            Navigator.of(context).push(
+                                                InitialSettingPillSheetGroupPageRoute
+                                                    .route());
+                                          },
                                         ),
                                         const SizedBox(height: 20),
                                         CardLayout(
@@ -228,6 +262,18 @@ class InitialSettingPillTypePage extends HookConsumerWidget {
                                             "ラベルフィーユ28",
                                             "アンジュ28",
                                           ],
+                                          onTap: (pillType) {
+                                            analytics.logEvent(
+                                                name: _logName(pillType));
+                                            analytics.setUserProperties(
+                                                initialSettingPillCategoryUserPropertyName,
+                                                _userPropertyValue(pillType));
+
+                                            store.selectedPillType(pillType);
+                                            Navigator.of(context).push(
+                                                InitialSettingPillSheetGroupPageRoute
+                                                    .route());
+                                          },
                                         ),
                                       ],
                                     ),
