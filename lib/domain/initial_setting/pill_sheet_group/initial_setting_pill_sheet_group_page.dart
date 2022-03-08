@@ -26,7 +26,7 @@ class InitialSettingPillSheetGroupPage extends HookConsumerWidget {
         backgroundColor: PilllColors.background,
         appBar: AppBar(
           title: const Text(
-            "1/3",
+            "2/4",
             style: TextStyle(color: TextColor.black),
           ),
           backgroundColor: PilllColors.white,
