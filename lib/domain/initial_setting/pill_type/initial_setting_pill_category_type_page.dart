@@ -21,7 +21,7 @@ import 'package:pilll/signin/signin_sheet_state.dart';
 
 const initialSettingPillCategoryUserPropertyName = "i_s_pill_category";
 
-class InitialSettingPillTypePage extends HookConsumerWidget {
+class InitialSettingPillCategoryTypePage extends HookConsumerWidget {
   @override
   Widget build(BuildContext context, WidgetRef ref) {
     final store = ref.watch(initialSettingStoreProvider.notifier);
@@ -338,9 +338,11 @@ class InitialSettingPillTypePage extends HookConsumerWidget {
   }
 }
 
-extension InitialSettingPillTypePageRoute on InitialSettingPillTypePage {
-  static InitialSettingPillTypePage screen() {
-    analytics.setCurrentScreen(screenName: "InitialSettingPillTypePage");
-    return InitialSettingPillTypePage();
+extension InitialSettingPillCategoryTypePageRoute
+    on InitialSettingPillCategoryTypePage {
+  static InitialSettingPillCategoryTypePage screen() {
+    analytics.setCurrentScreen(
+        screenName: "InitialSettingPillCategoryTypePage");
+    return InitialSettingPillCategoryTypePage();
   }
 }

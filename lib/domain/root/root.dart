@@ -85,7 +85,7 @@ class RootState extends State<Root> {
             case ScreenType.home:
               return HomePage(key: homeKey);
             case ScreenType.initialSetting:
-              return InitialSettingPillTypePageRoute.screen();
+              return InitialSettingPillCategoryTypePageRoute.screen();
             default:
               return ScaffoldIndicator();
           }
