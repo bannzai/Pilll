@@ -105,7 +105,7 @@ class InitialSettingStateStore extends StateNotifier<InitialSettingState> {
       case InitialSettingPillCategoryType.pill_category_type_21_rest_7:
         // TODO: Handle this case.
         break;
-      case InitialSettingPillCategoryType.pill_category_type_28:
+      case InitialSettingPillCategoryType.pill_category_type_24_fake_4:
         // TODO: Handle this case.
         break;
       case InitialSettingPillCategoryType.pill_category_type_24_rest_4:
