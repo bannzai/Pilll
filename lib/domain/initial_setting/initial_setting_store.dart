@@ -87,38 +87,53 @@ class InitialSettingStateStore extends StateNotifier<InitialSettingState> {
 
     switch (pillType) {
       case InitialSettingPillCategoryType.pill_category_type_yaz_flex:
-        state = state.copyWith(pillSheetTypes: [
-          PillSheetType.pillsheet_28_0,
-          PillSheetType.pillsheet_28_0,
-          PillSheetType.pillsheet_28_0,
-          PillSheetType.pillsheet_28_0,
-          PillSheetType.pillsheet_28_0,
-        ]);
+        state = state.copyWith(
+          pillSheetTypes: [
+            PillSheetType.pillsheet_28_0,
+            PillSheetType.pillsheet_28_0,
+            PillSheetType.pillsheet_28_0,
+            PillSheetType.pillsheet_28_0,
+            PillSheetType.pillsheet_28_0,
+          ],
+          pillSheetAppearanceMode: PillSheetAppearanceMode.sequential,
+        );
         break;
       case InitialSettingPillCategoryType.pill_category_type_jemina:
-        state = state.copyWith(pillSheetTypes: [
-          PillSheetType.pillsheet_28_0,
-          PillSheetType.pillsheet_28_0,
-          PillSheetType.pillsheet_21,
-        ]);
+        state = state.copyWith(
+          pillSheetTypes: [
+            PillSheetType.pillsheet_28_0,
+            PillSheetType.pillsheet_28_0,
+            PillSheetType.pillsheet_21,
+          ],
+          pillSheetAppearanceMode: PillSheetAppearanceMode.sequential,
+        );
         break;
       case InitialSettingPillCategoryType.pill_category_type_21_rest_7:
-        state = state.copyWith(pillSheetTypes: [
-          PillSheetType.pillsheet_21,
-        ]);
+        state = state.copyWith(
+          pillSheetTypes: [
+            PillSheetType.pillsheet_21,
+          ],
+          pillSheetAppearanceMode: PillSheetAppearanceMode.number,
+        );
         break;
       case InitialSettingPillCategoryType.pill_category_type_24_fake_4:
-        state = state.copyWith(pillSheetTypes: [
-          PillSheetType.pillsheet_28_4,
-        ]);
+        state = state.copyWith(
+          pillSheetTypes: [
+            PillSheetType.pillsheet_28_4,
+          ],
+          pillSheetAppearanceMode: PillSheetAppearanceMode.number,
+        );
         break;
       case InitialSettingPillCategoryType.pill_category_type_24_rest_4:
         // TODO:
         break;
       case InitialSettingPillCategoryType.pill_category_type_21_fake_7:
-        state = state.copyWith(pillSheetTypes: [
-          PillSheetType.pillsheet_28_7,
-        ]);
+        state = state.copyWith(
+          pillSheetTypes: [
+            PillSheetType.pillsheet_28_7,
+          ],
+          pillSheetAppearanceMode: PillSheetAppearanceMode.number,
+        );
         break;
     }
   }
