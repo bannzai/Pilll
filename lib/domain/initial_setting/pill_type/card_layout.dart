@@ -4,7 +4,7 @@ import 'package:pilll/components/atoms/text_color.dart';
 import 'package:pilll/entity/initial_setting_pill_category_type.dart';
 
 class CardLayout extends StatelessWidget {
-  final InitialSettingPillCategoryType pillType;
+  final InitialSettingPillCategoryType pillCategoryType;
   final String caption;
   final Widget image;
   final String name;
@@ -13,7 +13,7 @@ class CardLayout extends StatelessWidget {
 
   const CardLayout({
     Key? key,
-    required this.pillType,
+    required this.pillCategoryType,
     required this.caption,
     required this.image,
     required this.name,
@@ -25,7 +25,7 @@ class CardLayout extends StatelessWidget {
   Widget build(BuildContext context) {
     return GestureDetector(
       onTap: () {
-        onTap(pillType);
+        onTap(pillCategoryType);
       },
       child: Container(
         decoration: BoxDecoration(

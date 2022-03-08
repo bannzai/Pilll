@@ -110,7 +110,7 @@ class InitialSettingPillCategoryTypePage extends HookConsumerWidget {
                                           CrossAxisAlignment.stretch,
                                       children: [
                                         CardLayout(
-                                          pillType:
+                                          pillCategoryType:
                                               InitialSettingPillCategoryType
                                                   .pill_category_type_yaz_flex,
                                           caption: "連続",
@@ -135,7 +135,7 @@ class InitialSettingPillCategoryTypePage extends HookConsumerWidget {
                                         ),
                                         const SizedBox(height: 20),
                                         CardLayout(
-                                          pillType:
+                                          pillCategoryType:
                                               InitialSettingPillCategoryType
                                                   .pill_category_type_21_rest_7,
                                           caption: "周期",
@@ -165,7 +165,7 @@ class InitialSettingPillCategoryTypePage extends HookConsumerWidget {
                                         ),
                                         const SizedBox(height: 20),
                                         CardLayout(
-                                          pillType:
+                                          pillCategoryType:
                                               InitialSettingPillCategoryType
                                                   .pill_category_type_24_fake_4,
                                           caption: "周期",
@@ -199,7 +199,7 @@ class InitialSettingPillCategoryTypePage extends HookConsumerWidget {
                                           CrossAxisAlignment.stretch,
                                       children: [
                                         CardLayout(
-                                          pillType:
+                                          pillCategoryType:
                                               InitialSettingPillCategoryType
                                                   .pill_category_type_jemina,
                                           caption: "連続",
@@ -224,7 +224,7 @@ class InitialSettingPillCategoryTypePage extends HookConsumerWidget {
                                         ),
                                         const SizedBox(height: 20),
                                         CardLayout(
-                                          pillType:
+                                          pillCategoryType:
                                               InitialSettingPillCategoryType
                                                   .pill_category_type_24_rest_4,
                                           caption: "周期",
@@ -249,7 +249,7 @@ class InitialSettingPillCategoryTypePage extends HookConsumerWidget {
                                         ),
                                         const SizedBox(height: 20),
                                         CardLayout(
-                                          pillType:
+                                          pillCategoryType:
                                               InitialSettingPillCategoryType
                                                   .pill_category_type_21_fake_7,
                                           caption: "周期",
