@@ -56,6 +56,8 @@ class InitialSettingState with _$InitialSettingState {
   }
 
   Setting buildSetting() {
+    assert(pillSheetAppearanceMode != null);
+
     final menstruationDuration = 4;
     final maxPillCount = pillSheetTypes
         .map((e) => e.totalCount)
@@ -68,6 +70,8 @@ class InitialSettingState with _$InitialSettingState {
       pillSheetTypes: pillSheetTypes,
       reminderTimes: reminderTimes,
       isOnReminder: isOnReminder,
+      pillSheetAppearanceMode:
+          pillSheetAppearanceMode ?? PillSheetAppearanceMode.number,
     );
     return setting;
   }
