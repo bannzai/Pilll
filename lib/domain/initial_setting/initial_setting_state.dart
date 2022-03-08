@@ -21,6 +21,7 @@ class InitialSettingState with _$InitialSettingState {
   const InitialSettingState._();
   const factory InitialSettingState({
     InitialSettingPillCategoryType? pillType,
+    PillSheetAppearanceMode? pillSheetAppearanceMode,
     @Default([])
         List<PillSheetType> pillSheetTypes,
     InitialSettingTodayPillNumber? todayPillNumber,

@@ -181,7 +181,8 @@ class _$InitialSettingStateTearOff {
   const _$InitialSettingStateTearOff();
 
   _InitialSettingState call(
-      {PillType? pillType,
+      {InitialSettingPillCategoryType? pillType,
+      PillSheetAppearanceMode? pillSheetAppearanceMode,
       List<PillSheetType> pillSheetTypes = const [],
       InitialSettingTodayPillNumber? todayPillNumber,
       List<ReminderTime> reminderTimes = const [
@@ -195,6 +196,7 @@ class _$InitialSettingStateTearOff {
       LinkAccountType? accountType}) {
     return _InitialSettingState(
       pillType: pillType,
+      pillSheetAppearanceMode: pillSheetAppearanceMode,
       pillSheetTypes: pillSheetTypes,
       todayPillNumber: todayPillNumber,
       reminderTimes: reminderTimes,
@@ -212,7 +214,10 @@ const $InitialSettingState = _$InitialSettingStateTearOff();
 
 /// @nodoc
 mixin _$InitialSettingState {
-  PillType? get pillType => throw _privateConstructorUsedError;
+  InitialSettingPillCategoryType? get pillType =>
+      throw _privateConstructorUsedError;
+  PillSheetAppearanceMode? get pillSheetAppearanceMode =>
+      throw _privateConstructorUsedError;
   List<PillSheetType> get pillSheetTypes => throw _privateConstructorUsedError;
   InitialSettingTodayPillNumber? get todayPillNumber =>
       throw _privateConstructorUsedError;
@@ -234,7 +239,8 @@ abstract class $InitialSettingStateCopyWith<$Res> {
           InitialSettingState value, $Res Function(InitialSettingState) then) =
       _$InitialSettingStateCopyWithImpl<$Res>;
   $Res call(
-      {PillType? pillType,
+      {InitialSettingPillCategoryType? pillType,
+      PillSheetAppearanceMode? pillSheetAppearanceMode,
       List<PillSheetType> pillSheetTypes,
       InitialSettingTodayPillNumber? todayPillNumber,
       List<ReminderTime> reminderTimes,
@@ -259,6 +265,7 @@ class _$InitialSettingStateCopyWithImpl<$Res>
   @override
   $Res call({
     Object? pillType = freezed,
+    Object? pillSheetAppearanceMode = freezed,
     Object? pillSheetTypes = freezed,
     Object? todayPillNumber = freezed,
     Object? reminderTimes = freezed,
@@ -272,7 +279,11 @@ class _$InitialSettingStateCopyWithImpl<$Res>
       pillType: pillType == freezed
           ? _value.pillType
           : pillType // ignore: cast_nullable_to_non_nullable
-              as PillType?,
+              as InitialSettingPillCategoryType?,
+      pillSheetAppearanceMode: pillSheetAppearanceMode == freezed
+          ? _value.pillSheetAppearanceMode
+          : pillSheetAppearanceMode // ignore: cast_nullable_to_non_nullable
+              as PillSheetAppearanceMode?,
       pillSheetTypes: pillSheetTypes == freezed
           ? _value.pillSheetTypes
           : pillSheetTypes // ignore: cast_nullable_to_non_nullable
@@ -329,7 +340,8 @@ abstract class _$InitialSettingStateCopyWith<$Res>
       __$InitialSettingStateCopyWithImpl<$Res>;
   @override
   $Res call(
-      {PillType? pillType,
+      {InitialSettingPillCategoryType? pillType,
+      PillSheetAppearanceMode? pillSheetAppearanceMode,
       List<PillSheetType> pillSheetTypes,
       InitialSettingTodayPillNumber? todayPillNumber,
       List<ReminderTime> reminderTimes,
@@ -357,6 +369,7 @@ class __$InitialSettingStateCopyWithImpl<$Res>
   @override
   $Res call({
     Object? pillType = freezed,
+    Object? pillSheetAppearanceMode = freezed,
     Object? pillSheetTypes = freezed,
     Object? todayPillNumber = freezed,
     Object? reminderTimes = freezed,
@@ -370,7 +383,11 @@ class __$InitialSettingStateCopyWithImpl<$Res>
       pillType: pillType == freezed
           ? _value.pillType
           : pillType // ignore: cast_nullable_to_non_nullable
-              as PillType?,
+              as InitialSettingPillCategoryType?,
+      pillSheetAppearanceMode: pillSheetAppearanceMode == freezed
+          ? _value.pillSheetAppearanceMode
+          : pillSheetAppearanceMode // ignore: cast_nullable_to_non_nullable
+              as PillSheetAppearanceMode?,
       pillSheetTypes: pillSheetTypes == freezed
           ? _value.pillSheetTypes
           : pillSheetTypes // ignore: cast_nullable_to_non_nullable
@@ -412,6 +429,7 @@ class __$InitialSettingStateCopyWithImpl<$Res>
 class _$_InitialSettingState extends _InitialSettingState {
   const _$_InitialSettingState(
       {this.pillType,
+      this.pillSheetAppearanceMode,
       this.pillSheetTypes = const [],
       this.todayPillNumber,
       this.reminderTimes = const [
@@ -426,7 +444,9 @@ class _$_InitialSettingState extends _InitialSettingState {
       : super._();
 
   @override
-  final PillType? pillType;
+  final InitialSettingPillCategoryType? pillType;
+  @override
+  final PillSheetAppearanceMode? pillSheetAppearanceMode;
   @JsonKey()
   @override
   final List<PillSheetType> pillSheetTypes;
@@ -452,7 +472,7 @@ class _$_InitialSettingState extends _InitialSettingState {
 
   @override
   String toString() {
-    return 'InitialSettingState(pillType: $pillType, pillSheetTypes: $pillSheetTypes, todayPillNumber: $todayPillNumber, reminderTimes: $reminderTimes, isOnReminder: $isOnReminder, isLoading: $isLoading, userIsNotAnonymous: $userIsNotAnonymous, settingIsExist: $settingIsExist, accountType: $accountType)';
+    return 'InitialSettingState(pillType: $pillType, pillSheetAppearanceMode: $pillSheetAppearanceMode, pillSheetTypes: $pillSheetTypes, todayPillNumber: $todayPillNumber, reminderTimes: $reminderTimes, isOnReminder: $isOnReminder, isLoading: $isLoading, userIsNotAnonymous: $userIsNotAnonymous, settingIsExist: $settingIsExist, accountType: $accountType)';
   }
 
   @override
@@ -461,6 +481,8 @@ class _$_InitialSettingState extends _InitialSettingState {
         (other.runtimeType == runtimeType &&
             other is _InitialSettingState &&
             const DeepCollectionEquality().equals(other.pillType, pillType) &&
+            const DeepCollectionEquality().equals(
+                other.pillSheetAppearanceMode, pillSheetAppearanceMode) &&
             const DeepCollectionEquality()
                 .equals(other.pillSheetTypes, pillSheetTypes) &&
             const DeepCollectionEquality()
@@ -482,6 +504,7 @@ class _$_InitialSettingState extends _InitialSettingState {
   int get hashCode => Object.hash(
       runtimeType,
       const DeepCollectionEquality().hash(pillType),
+      const DeepCollectionEquality().hash(pillSheetAppearanceMode),
       const DeepCollectionEquality().hash(pillSheetTypes),
       const DeepCollectionEquality().hash(todayPillNumber),
       const DeepCollectionEquality().hash(reminderTimes),
@@ -500,7 +523,8 @@ class _$_InitialSettingState extends _InitialSettingState {
 
 abstract class _InitialSettingState extends InitialSettingState {
   const factory _InitialSettingState(
-      {PillType? pillType,
+      {InitialSettingPillCategoryType? pillType,
+      PillSheetAppearanceMode? pillSheetAppearanceMode,
       List<PillSheetType> pillSheetTypes,
       InitialSettingTodayPillNumber? todayPillNumber,
       List<ReminderTime> reminderTimes,
@@ -512,7 +536,9 @@ abstract class _InitialSettingState extends InitialSettingState {
   const _InitialSettingState._() : super._();
 
   @override
-  PillType? get pillType;
+  InitialSettingPillCategoryType? get pillType;
+  @override
+  PillSheetAppearanceMode? get pillSheetAppearanceMode;
   @override
   List<PillSheetType> get pillSheetTypes;
   @override
