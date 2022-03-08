@@ -94,11 +94,3 @@ class InitialSettingPillSheetGroupPillSheetTypeSelectRow
     );
   }
 }
-
-extension InitialSettingPillSheetCountPageRoute
-    on InitialSettingPillSheetGroupPage {
-  static InitialSettingPillSheetGroupPage screen() {
-    analytics.setCurrentScreen(screenName: "InitialSettingPillSheetGroupPage");
-    return InitialSettingPillSheetGroupPage();
-  }
-}

@@ -150,3 +150,11 @@ class InitialSettingPillSheetGroupPageBody extends StatelessWidget {
     }
   }
 }
+
+extension InitialSettingPillSheetGroupPageRoute
+    on InitialSettingPillSheetGroupPage {
+  static InitialSettingPillSheetGroupPage screen() {
+    analytics.setCurrentScreen(screenName: "InitialSettingPillSheetGroupPage");
+    return InitialSettingPillSheetGroupPage();
+  }
+}
