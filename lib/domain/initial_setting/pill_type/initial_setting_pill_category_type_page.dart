@@ -120,14 +120,17 @@ class InitialSettingPillCategoryTypePage extends HookConsumerWidget {
                                           pillNames: [
                                             "ヤーズフレックス",
                                           ],
-                                          onTap: (pillType) {
+                                          onTap: (pillCategoryType) {
                                             analytics.logEvent(
-                                                name: _logName(pillType));
+                                                name:
+                                                    _logName(pillCategoryType));
                                             analytics.setUserProperties(
                                                 initialSettingPillCategoryUserPropertyName,
-                                                _userPropertyValue(pillType));
+                                                _userPropertyValue(
+                                                    pillCategoryType));
 
-                                            store.selectedPillType(pillType);
+                                            store.selectedPillType(
+                                                pillCategoryType);
                                             Navigator.of(context).push(
                                                 InitialSettingSelectTodayPillNumberPageRoute
                                                     .route());
@@ -150,14 +153,17 @@ class InitialSettingPillCategoryTypePage extends HookConsumerWidget {
                                             "アンジュ21",
                                             "ジェミーナ"
                                           ],
-                                          onTap: (pillType) {
+                                          onTap: (pillCategoryType) {
                                             analytics.logEvent(
-                                                name: _logName(pillType));
+                                                name:
+                                                    _logName(pillCategoryType));
                                             analytics.setUserProperties(
                                                 initialSettingPillCategoryUserPropertyName,
-                                                _userPropertyValue(pillType));
+                                                _userPropertyValue(
+                                                    pillCategoryType));
 
-                                            store.selectedPillType(pillType);
+                                            store.selectedPillType(
+                                                pillCategoryType);
                                             Navigator.of(context).push(
                                                 InitialSettingPillSheetGroupPageRoute
                                                     .route());
@@ -175,14 +181,17 @@ class InitialSettingPillCategoryTypePage extends HookConsumerWidget {
                                           pillNames: [
                                             "ヤーズ",
                                           ],
-                                          onTap: (pillType) {
+                                          onTap: (pillCategoryType) {
                                             analytics.logEvent(
-                                                name: _logName(pillType));
+                                                name:
+                                                    _logName(pillCategoryType));
                                             analytics.setUserProperties(
                                                 initialSettingPillCategoryUserPropertyName,
-                                                _userPropertyValue(pillType));
+                                                _userPropertyValue(
+                                                    pillCategoryType));
 
-                                            store.selectedPillType(pillType);
+                                            store.selectedPillType(
+                                                pillCategoryType);
                                             Navigator.of(context).push(
                                                 InitialSettingPillSheetGroupPageRoute
                                                     .route());
@@ -209,14 +218,17 @@ class InitialSettingPillCategoryTypePage extends HookConsumerWidget {
                                           pillNames: [
                                             "ジェミーナ",
                                           ],
-                                          onTap: (pillType) {
+                                          onTap: (pillCategoryType) {
                                             analytics.logEvent(
-                                                name: _logName(pillType));
+                                                name:
+                                                    _logName(pillCategoryType));
                                             analytics.setUserProperties(
                                                 initialSettingPillCategoryUserPropertyName,
-                                                _userPropertyValue(pillType));
+                                                _userPropertyValue(
+                                                    pillCategoryType));
 
-                                            store.selectedPillType(pillType);
+                                            store.selectedPillType(
+                                                pillCategoryType);
                                             Navigator.of(context).push(
                                                 InitialSettingSelectTodayPillNumberPageRoute
                                                     .route());
@@ -234,14 +246,17 @@ class InitialSettingPillCategoryTypePage extends HookConsumerWidget {
                                           pillNames: [
                                             "ヤーズフレックス",
                                           ],
-                                          onTap: (pillType) {
+                                          onTap: (pillCategoryType) {
                                             analytics.logEvent(
-                                                name: _logName(pillType));
+                                                name:
+                                                    _logName(pillCategoryType));
                                             analytics.setUserProperties(
                                                 initialSettingPillCategoryUserPropertyName,
-                                                _userPropertyValue(pillType));
+                                                _userPropertyValue(
+                                                    pillCategoryType));
 
-                                            store.selectedPillType(pillType);
+                                            store.selectedPillType(
+                                                pillCategoryType);
                                             Navigator.of(context).push(
                                                 InitialSettingPillSheetGroupPageRoute
                                                     .route());
@@ -262,14 +277,17 @@ class InitialSettingPillCategoryTypePage extends HookConsumerWidget {
                                             "ラベルフィーユ28",
                                             "アンジュ28",
                                           ],
-                                          onTap: (pillType) {
+                                          onTap: (pillCategoryType) {
                                             analytics.logEvent(
-                                                name: _logName(pillType));
+                                                name:
+                                                    _logName(pillCategoryType));
                                             analytics.setUserProperties(
                                                 initialSettingPillCategoryUserPropertyName,
-                                                _userPropertyValue(pillType));
+                                                _userPropertyValue(
+                                                    pillCategoryType));
 
-                                            store.selectedPillType(pillType);
+                                            store.selectedPillType(
+                                                pillCategoryType);
                                             Navigator.of(context).push(
                                                 InitialSettingPillSheetGroupPageRoute
                                                     .route());
