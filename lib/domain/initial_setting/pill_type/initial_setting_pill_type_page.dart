@@ -19,6 +19,8 @@ import 'package:pilll/entity/link_account_type.dart';
 import 'package:pilll/signin/signin_sheet.dart';
 import 'package:pilll/signin/signin_sheet_state.dart';
 
+const initialSettingPillCategoryUserPropertyName = "i_s_pill_category";
+
 class InitialSettingPillTypePage extends HookConsumerWidget {
   @override
   Widget build(BuildContext context, WidgetRef ref) {
@@ -122,6 +124,10 @@ class InitialSettingPillTypePage extends HookConsumerWidget {
                                             analytics.logEvent(
                                                 name:
                                                     "i_s_pill_c_t_yaz_flex_card_tap");
+                                            analytics.setUserProperties(
+                                                initialSettingPillCategoryUserPropertyName,
+                                                "pill_category_type_yaz_flex");
+
                                             store.selectedPillType(pillType);
                                             Navigator.of(context).push(
                                                 InitialSettingSelectTodayPillNumberPageRoute
@@ -149,6 +155,10 @@ class InitialSettingPillTypePage extends HookConsumerWidget {
                                             analytics.logEvent(
                                                 name:
                                                     "i_s_pill_c_t_21_rest_7_card_tap");
+                                            analytics.setUserProperties(
+                                                initialSettingPillCategoryUserPropertyName,
+                                                "pill_category_type_21_rest_7");
+
                                             store.selectedPillType(pillType);
                                             Navigator.of(context).push(
                                                 InitialSettingPillSheetGroupPageRoute
