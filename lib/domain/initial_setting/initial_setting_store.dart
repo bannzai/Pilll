@@ -85,20 +85,35 @@ class InitialSettingStateStore extends StateNotifier<InitialSettingState> {
   void selectedPillType(PillType pillType) {
     state = state.copyWith(pillType: pillType);
 
-    if (pillType == PillType.pill_type_yaz_flex) {
-      state = state.copyWith(pillSheetTypes: [
-        PillSheetType.pillsheet_28_0,
-        PillSheetType.pillsheet_28_0,
-        PillSheetType.pillsheet_28_0,
-        PillSheetType.pillsheet_28_0,
-        PillSheetType.pillsheet_28_0,
-      ]);
-    } else if (pillType == PillType.pill_type_jemina) {
-      state = state.copyWith(pillSheetTypes: [
-        PillSheetType.pillsheet_28_0,
-        PillSheetType.pillsheet_28_0,
-        PillSheetType.pillsheet_21,
-      ]);
+    switch (pillType) {
+      case PillType.pill_type_yaz_flex:
+        state = state.copyWith(pillSheetTypes: [
+          PillSheetType.pillsheet_28_0,
+          PillSheetType.pillsheet_28_0,
+          PillSheetType.pillsheet_28_0,
+          PillSheetType.pillsheet_28_0,
+          PillSheetType.pillsheet_28_0,
+        ]);
+        break;
+      case PillType.pill_type_jemina:
+        state = state.copyWith(pillSheetTypes: [
+          PillSheetType.pillsheet_28_0,
+          PillSheetType.pillsheet_28_0,
+          PillSheetType.pillsheet_21,
+        ]);
+        break;
+      case PillType.pill_type_21_rest_7:
+        // TODO: Handle this case.
+        break;
+      case PillType.pill_type_28:
+        // TODO: Handle this case.
+        break;
+      case PillType.pill_type_24_rest_4:
+        // TODO: Handle this case.
+        break;
+      case PillType.pill_type_21_fake_7:
+        // TODO: Handle this case.
+        break;
     }
   }
 
