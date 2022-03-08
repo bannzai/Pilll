@@ -286,6 +286,10 @@ class InitialSettingPillTypePage extends HookConsumerWidget {
         return "i_s_pill_c_t_21_fake_7_card_tap";
     }
   }
+
+  String _userPropertyValue(InitialSettingPillCategoryType pillCategoryType) {
+    return pillCategoryType.toString();
+  }
 }
 
 extension InitialSettingPillTypePageRoute on InitialSettingPillTypePage {
