@@ -9,6 +9,7 @@ class CardLayout extends StatelessWidget {
   final Widget image;
   final String name;
   final List<String> pillNames;
+  final Function(PillType) onTap;
 
   const CardLayout({
     Key? key,
@@ -17,76 +18,82 @@ class CardLayout extends StatelessWidget {
     required this.image,
     required this.name,
     required this.pillNames,
+    required this.onTap,
   }) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
-    return Container(
-      decoration: BoxDecoration(
-        color: Colors.white,
-        borderRadius: const BorderRadius.all(Radius.circular(10)),
-        boxShadow: [
-          BoxShadow(
-            color: PilllColors.shadow,
-            blurRadius: 8.0,
-            offset: const Offset(0, 3),
-          ),
-        ],
-      ),
-      padding: const EdgeInsets.only(top: 8, left: 12, right: 12, bottom: 16),
-      child: Column(
-        mainAxisSize: MainAxisSize.min,
-        mainAxisAlignment: MainAxisAlignment.start,
-        crossAxisAlignment: CrossAxisAlignment.start,
-        children: [
-          Container(
-            padding: const EdgeInsets.symmetric(vertical: 4, horizontal: 8),
-            decoration: const BoxDecoration(
-              borderRadius: BorderRadius.all(Radius.circular(20)),
-              color: PilllColors.mat,
+    return GestureDetector(
+      onTap: () {
+        onTap(pillType);
+      },
+      child: Container(
+        decoration: BoxDecoration(
+          color: Colors.white,
+          borderRadius: const BorderRadius.all(Radius.circular(10)),
+          boxShadow: [
+            BoxShadow(
+              color: PilllColors.shadow,
+              blurRadius: 8.0,
+              offset: const Offset(0, 3),
             ),
-            child: Text(
-              caption,
-              style: const TextStyle(
-                color: TextColor.main,
-                fontSize: 10,
-                fontWeight: FontWeight.w500,
+          ],
+        ),
+        padding: const EdgeInsets.only(top: 8, left: 12, right: 12, bottom: 16),
+        child: Column(
+          mainAxisSize: MainAxisSize.min,
+          mainAxisAlignment: MainAxisAlignment.start,
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: [
+            Container(
+              padding: const EdgeInsets.symmetric(vertical: 4, horizontal: 8),
+              decoration: const BoxDecoration(
+                borderRadius: BorderRadius.all(Radius.circular(20)),
+                color: PilllColors.mat,
               ),
-              textAlign: TextAlign.center,
+              child: Text(
+                caption,
+                style: const TextStyle(
+                  color: TextColor.main,
+                  fontSize: 10,
+                  fontWeight: FontWeight.w500,
+                ),
+                textAlign: TextAlign.center,
+              ),
             ),
-          ),
-          const SizedBox(height: 12),
-          Column(
-            crossAxisAlignment: CrossAxisAlignment.stretch,
-            children: [
-              image,
-              const SizedBox(height: 12),
-              Column(
-                children: [
-                  Text(
-                    name,
-                    style: const TextStyle(
-                      color: TextColor.main,
-                      fontSize: 16,
-                      fontWeight: FontWeight.w500,
+            const SizedBox(height: 12),
+            Column(
+              crossAxisAlignment: CrossAxisAlignment.stretch,
+              children: [
+                image,
+                const SizedBox(height: 12),
+                Column(
+                  children: [
+                    Text(
+                      name,
+                      style: const TextStyle(
+                        color: TextColor.main,
+                        fontSize: 16,
+                        fontWeight: FontWeight.w500,
+                      ),
+                      textAlign: TextAlign.center,
                     ),
-                    textAlign: TextAlign.center,
-                  ),
-                  const SizedBox(height: 6),
-                  Text(
-                    pillNames.join("/"),
-                    style: const TextStyle(
-                      color: TextColor.main,
-                      fontSize: 10,
-                      fontWeight: FontWeight.w400,
+                    const SizedBox(height: 6),
+                    Text(
+                      pillNames.join("/"),
+                      style: const TextStyle(
+                        color: TextColor.main,
+                        fontSize: 10,
+                        fontWeight: FontWeight.w400,
+                      ),
+                      textAlign: TextAlign.center,
                     ),
-                    textAlign: TextAlign.center,
-                  ),
-                ],
-              ),
-            ],
-          ),
-        ],
+                  ],
+                ),
+              ],
+            ),
+          ],
+        ),
       ),
     );
   }
