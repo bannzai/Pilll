@@ -153,8 +153,10 @@ class InitialSettingPillSheetGroupPageBody extends StatelessWidget {
 
 extension InitialSettingPillSheetGroupPageRoute
     on InitialSettingPillSheetGroupPage {
-  static InitialSettingPillSheetGroupPage screen() {
-    analytics.setCurrentScreen(screenName: "InitialSettingPillSheetGroupPage");
-    return InitialSettingPillSheetGroupPage();
+  static Route<dynamic> route() {
+    return MaterialPageRoute(
+      settings: const RouteSettings(name: "InitialSettingPillSheetGroupPage"),
+      builder: (_) => InitialSettingPillSheetGroupPage(),
+    );
   }
 }
