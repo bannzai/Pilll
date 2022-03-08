@@ -4,12 +4,15 @@ import 'package:pilll/analytics.dart';
 import 'package:pilll/components/atoms/buttons.dart';
 import 'package:pilll/components/atoms/font.dart';
 import 'package:pilll/components/page/hud.dart';
+import 'package:pilll/domain/initial_setting/initial_setting_state.dart';
+import 'package:pilll/domain/initial_setting/pill_sheet_group/initial_setting_pill_sheet_group_page.dart';
 import 'package:pilll/domain/initial_setting/pill_type/card_layout.dart';
 import 'package:pilll/domain/initial_setting/initial_setting_store.dart';
 import 'package:pilll/components/atoms/color.dart';
 import 'package:pilll/components/atoms/text_color.dart';
 import 'package:flutter/material.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
+import 'package:pilll/domain/initial_setting/today_pill_number/initial_setting_select_today_pill_number_page.dart';
 import 'package:pilll/entity/pill_type.dart';
 import 'package:pilll/router/router.dart';
 import 'package:pilll/service/auth.dart';
@@ -114,6 +117,15 @@ class InitialSettingPillTypePage extends HookConsumerWidget {
                                           pillNames: [
                                             "ヤーズフレックス",
                                           ],
+                                          onTap: (pillType) {
+                                            analytics.logEvent(
+                                                name:
+                                                    "i_s_pill_type_yaz_flex_card_tap");
+                                            store.selectedPillType(pillType);
+                                            Navigator.of(context).push(
+                                                InitialSettingSelectTodayPillNumberPageRoute
+                                                    .route());
+                                          },
                                         ),
                                         const SizedBox(height: 20),
                                         CardLayout(
@@ -131,14 +143,23 @@ class InitialSettingPillTypePage extends HookConsumerWidget {
                                             "アンジュ21",
                                             "ジェミーナ"
                                           ],
+                                          onTap: (pillType) {
+                                            analytics.logEvent(
+                                                name:
+                                                    "i_s_pill_type_21_rest_7_card_tap");
+                                            store.selectedPillType(pillType);
+                                            Navigator.of(context).push(
+                                                InitialSettingPillSheetGroupPageRoute
+                                                    .route());
+                                          },
                                         ),
                                         const SizedBox(height: 20),
                                         CardLayout(
                                           pillType:
-                                              PillType.pill_type_21_rest_7,
+                                              PillType.pill_type_24_fake_4,
                                           caption: "周期",
                                           image: SvgPicture.asset(
-                                              "images/pill_type_24_rest_4.svg"),
+                                              "images/pill_type_24_fake_4.svg"),
                                           name: "24錠＋4偽薬",
                                           pillNames: [
                                             "ヤーズ",
