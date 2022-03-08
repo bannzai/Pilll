@@ -3,11 +3,17 @@ import 'package:flutter_svg/flutter_svg.dart';
 import 'package:pilll/entity/weekday.dart';
 
 enum PillSheetType {
+  // "21錠タイプ";
   pillsheet_21,
+  // "28錠タイプ(4錠偽薬)";
   pillsheet_28_4,
+  // "28錠タイプ(7錠偽薬)";
   pillsheet_28_7,
+  // "28錠タイプ(すべて実薬)";
   pillsheet_28_0,
+  // "24錠タイプ(すべて実薬)";
   pillsheet_24_0,
+  // "21錠タイプ(すべて実薬)";
   pillsheet_21_0,
 }
 
