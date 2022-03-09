@@ -1,6 +1,7 @@
 import 'package:pilll/database/batch.dart';
 import 'package:pilll/domain/initial_setting/initial_setting_state.dart';
 import 'package:pilll/domain/initial_setting/initial_setting_store.dart';
+import 'package:pilll/entity/initial_setting_pill_category_type.dart';
 import 'package:pilll/entity/pill_sheet.dart';
 import 'package:pilll/entity/pill_sheet_group.dart';
 import 'package:pilll/entity/pill_sheet_type.dart';
@@ -24,11 +25,12 @@ void main() {
     TestWidgetsFlutterBinding.ensureInitialized();
     SharedPreferences.setMockInitialValues({});
   });
-  group("#selectedPillSheetType", () {
+  group("#selectedPillCategoryType", () {
     test("when first selected", () {
       final batchFactory = MockBatchFactory();
       final authService = MockAuthService();
-      when(authService.stream()).thenAnswer((realInvocation) => const Stream.empty());
+      when(authService.stream())
+          .thenAnswer((realInvocation) => const Stream.empty());
       final settingService = MockSettingService();
       final pillSheetService = MockPillSheetService();
       final pillSheetModifiedHistoryService =
@@ -49,14 +51,19 @@ void main() {
       );
       final store = container.read(initialSettingStoreProvider.notifier);
 
-      store.selectedPillSheetType(PillSheetType.pillsheet_28_0);
-      expect(container.read(initialSettingStateProvider).pillSheetTypes,
-          [PillSheetType.pillsheet_28_0]);
+      store.selectedPillCategoryType(
+          InitialSettingPillCategoryType.pill_category_type_yaz_flex);
+      expect(container.read(initialSettingStateProvider).pillSheetTypes, [
+        PillSheetType.pillsheet_28_0,
+        PillSheetType.pillsheet_28_0,
+        PillSheetType.pillsheet_28_0,
+      ]);
     });
     test("overwrite pill sheet type", () {
       final batchFactory = MockBatchFactory();
       final authService = MockAuthService();
-      when(authService.stream()).thenAnswer((realInvocation) => const Stream.empty());
+      when(authService.stream())
+          .thenAnswer((realInvocation) => const Stream.empty());
       final settingService = MockSettingService();
       final pillSheetService = MockPillSheetService();
       final pillSheetModifiedHistoryService =
@@ -77,19 +84,28 @@ void main() {
       );
       final store = container.read(initialSettingStoreProvider.notifier);
 
-      store.selectedPillSheetType(PillSheetType.pillsheet_21);
-      expect(container.read(initialSettingStateProvider).pillSheetTypes,
-          [PillSheetType.pillsheet_21]);
+      store.selectedPillCategoryType(
+          InitialSettingPillCategoryType.pill_category_type_yaz_flex);
+      expect(container.read(initialSettingStateProvider).pillSheetTypes, [
+        PillSheetType.pillsheet_28_0,
+        PillSheetType.pillsheet_28_0,
+        PillSheetType.pillsheet_28_0,
+      ]);
 
-      store.selectedPillSheetType(PillSheetType.pillsheet_28_0);
-      expect(container.read(initialSettingStateProvider).pillSheetTypes,
-          [PillSheetType.pillsheet_28_0]);
+      store.selectedPillCategoryType(
+          InitialSettingPillCategoryType.pill_category_type_jemina);
+      expect(container.read(initialSettingStateProvider).pillSheetTypes, [
+        PillSheetType.pillsheet_28_0,
+        PillSheetType.pillsheet_28_0,
+        PillSheetType.pillsheet_21,
+      ]);
     });
 
     test("reset todayPillNumber", () {
       final batchFactory = MockBatchFactory();
       final authService = MockAuthService();
-      when(authService.stream()).thenAnswer((realInvocation) => const Stream.empty());
+      when(authService.stream())
+          .thenAnswer((realInvocation) => const Stream.empty());
       final settingService = MockSettingService();
       final pillSheetService = MockPillSheetService();
       final pillSheetModifiedHistoryService =
@@ -118,20 +134,22 @@ void main() {
           const InitialSettingTodayPillNumber(
               pageIndex: 0, pillNumberIntoPillSheet: 28));
 
-      store.selectedPillSheetType(PillSheetType.pillsheet_24_0);
-      expect(container.read(initialSettingStateProvider).pillSheetTypes,
-          [PillSheetType.pillsheet_24_0]);
-      expect(
-          container.read(initialSettingStateProvider).todayPillNumber,
-          const InitialSettingTodayPillNumber(
-              pageIndex: 0, pillNumberIntoPillSheet: 24));
+      store.selectedPillCategoryType(
+          InitialSettingPillCategoryType.pill_category_type_jemina);
+      expect(container.read(initialSettingStateProvider).pillSheetTypes, [
+        PillSheetType.pillsheet_28_0,
+        PillSheetType.pillsheet_28_0,
+        PillSheetType.pillsheet_21,
+      ]);
+      expect(container.read(initialSettingStateProvider).todayPillNumber, null);
     });
   });
   group("#addPillSheetType", () {
     test("add new one", () {
       final batchFactory = MockBatchFactory();
       final authService = MockAuthService();
-      when(authService.stream()).thenAnswer((realInvocation) => const Stream.empty());
+      when(authService.stream())
+          .thenAnswer((realInvocation) => const Stream.empty());
       final settingService = MockSettingService();
       final pillSheetService = MockPillSheetService();
       final pillSheetModifiedHistoryService =
@@ -152,17 +170,23 @@ void main() {
       );
       final store = container.read(initialSettingStoreProvider.notifier);
 
-      store.selectedPillSheetType(PillSheetType.pillsheet_21);
+      store.selectedPillCategoryType(
+          InitialSettingPillCategoryType.pill_category_type_yaz_flex);
       store.addPillSheetType(PillSheetType.pillsheet_28_0);
-      expect(container.read(initialSettingStateProvider).pillSheetTypes,
-          [PillSheetType.pillsheet_21, PillSheetType.pillsheet_28_0]);
+      expect(container.read(initialSettingStateProvider).pillSheetTypes, [
+        PillSheetType.pillsheet_28_0,
+        PillSheetType.pillsheet_28_0,
+        PillSheetType.pillsheet_28_0,
+        PillSheetType.pillsheet_28_0,
+      ]);
     });
   });
   group("#changePillSheetType", () {
     test("replace with index", () {
       final batchFactory = MockBatchFactory();
       final authService = MockAuthService();
-      when(authService.stream()).thenAnswer((realInvocation) => const Stream.empty());
+      when(authService.stream())
+          .thenAnswer((realInvocation) => const Stream.empty());
       final settingService = MockSettingService();
       final pillSheetService = MockPillSheetService();
       final pillSheetModifiedHistoryService =
@@ -183,18 +207,24 @@ void main() {
       );
       final store = container.read(initialSettingStoreProvider.notifier);
 
-      store.selectedPillSheetType(PillSheetType.pillsheet_21);
+      store.selectedPillCategoryType(
+          InitialSettingPillCategoryType.pill_category_type_yaz_flex);
       store.addPillSheetType(PillSheetType.pillsheet_28_0);
       store.changePillSheetType(1, PillSheetType.pillsheet_24_0);
-      expect(container.read(initialSettingStateProvider).pillSheetTypes,
-          [PillSheetType.pillsheet_21, PillSheetType.pillsheet_24_0]);
+      expect(container.read(initialSettingStateProvider).pillSheetTypes, [
+        PillSheetType.pillsheet_28_0,
+        PillSheetType.pillsheet_24_0,
+        PillSheetType.pillsheet_28_0,
+        PillSheetType.pillsheet_28_0,
+      ]);
     });
   });
   group("#removePillSheetType", () {
     test("remove with index", () {
       final batchFactory = MockBatchFactory();
       final authService = MockAuthService();
-      when(authService.stream()).thenAnswer((realInvocation) => const Stream.empty());
+      when(authService.stream())
+          .thenAnswer((realInvocation) => const Stream.empty());
       final settingService = MockSettingService();
       final pillSheetService = MockPillSheetService();
       final pillSheetModifiedHistoryService =
@@ -215,19 +245,24 @@ void main() {
       );
       final store = container.read(initialSettingStoreProvider.notifier);
 
-      store.selectedPillSheetType(PillSheetType.pillsheet_21);
+      store.selectedPillCategoryType(
+          InitialSettingPillCategoryType.pill_category_type_yaz_flex);
       store.addPillSheetType(PillSheetType.pillsheet_28_0);
       store.changePillSheetType(1, PillSheetType.pillsheet_24_0);
       store.removePillSheetType(0);
-      expect(container.read(initialSettingStateProvider).pillSheetTypes,
-          [PillSheetType.pillsheet_24_0]);
+      expect(container.read(initialSettingStateProvider).pillSheetTypes, [
+        PillSheetType.pillsheet_24_0,
+        PillSheetType.pillsheet_28_0,
+        PillSheetType.pillsheet_28_0,
+      ]);
     });
   });
   group("#setReminderTime", () {
     test("replace default reminderTime", () {
       final batchFactory = MockBatchFactory();
       final authService = MockAuthService();
-      when(authService.stream()).thenAnswer((realInvocation) => const Stream.empty());
+      when(authService.stream())
+          .thenAnswer((realInvocation) => const Stream.empty());
       final settingService = MockSettingService();
       final pillSheetService = MockPillSheetService();
       final pillSheetModifiedHistoryService =
@@ -257,7 +292,8 @@ void main() {
     test("add reminderTime", () {
       final batchFactory = MockBatchFactory();
       final authService = MockAuthService();
-      when(authService.stream()).thenAnswer((realInvocation) => const Stream.empty());
+      when(authService.stream())
+          .thenAnswer((realInvocation) => const Stream.empty());
       final settingService = MockSettingService();
       final pillSheetService = MockPillSheetService();
       final pillSheetModifiedHistoryService =
@@ -298,7 +334,8 @@ void main() {
       final batch = MockWriteBatch();
       when(batchFactory.batch()).thenReturn(batch);
       final authService = MockAuthService();
-      when(authService.stream()).thenAnswer((realInvocation) => const Stream.empty());
+      when(authService.stream())
+          .thenAnswer((realInvocation) => const Stream.empty());
 
       final pillSheet = PillSheet(
           typeInfo: PillSheetType.pillsheet_21.typeInfo, beginingDate: _today);
@@ -349,7 +386,10 @@ void main() {
       );
       final store = container.read(initialSettingStoreProvider.notifier);
 
-      store.selectedPillSheetType(PillSheetType.pillsheet_21);
+      store.selectedPillCategoryType(
+          InitialSettingPillCategoryType.pill_category_type_21_rest_7);
+      store.removePillSheetType(1);
+      store.removePillSheetType(1);
       store.setTodayPillNumber(pageIndex: 0, pillNumberIntoPillSheet: 1);
       store.setReminderTime(index: 0, hour: 21, minute: 20);
 
@@ -366,7 +406,8 @@ void main() {
       final batch = MockWriteBatch();
       when(batchFactory.batch()).thenReturn(batch);
       final authService = MockAuthService();
-      when(authService.stream()).thenAnswer((realInvocation) => const Stream.empty());
+      when(authService.stream())
+          .thenAnswer((realInvocation) => const Stream.empty());
 
       final pillSheet = PillSheet(
         typeInfo: PillSheetType.pillsheet_28_0.typeInfo,
@@ -412,6 +453,7 @@ void main() {
           .thenReturn(null);
 
       final setting = const Setting(
+        pillSheetAppearanceMode: PillSheetAppearanceMode.sequential,
         pillNumberForFromMenstruation: 52,
         durationMenstruation: 4,
         isOnReminder: true,
@@ -441,8 +483,11 @@ void main() {
       );
       final store = container.read(initialSettingStoreProvider.notifier);
 
-      store.selectedPillSheetType(PillSheetType.pillsheet_28_0);
+      store.selectedPillCategoryType(
+          InitialSettingPillCategoryType.pill_category_type_yaz_flex);
       store.addPillSheetType(PillSheetType.pillsheet_21);
+      store.removePillSheetType(1);
+      store.removePillSheetType(1);
       store.setTodayPillNumber(pageIndex: 1, pillNumberIntoPillSheet: 1);
       store.setReminderTime(index: 0, hour: 21, minute: 20);
 

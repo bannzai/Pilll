@@ -31,7 +31,7 @@ class InitialSettingSelectTodayPillNumberPage extends HookConsumerWidget {
           onPressed: () => Navigator.of(context).pop(),
         ),
         title: const Text(
-          "2/3",
+          "3/4",
           style: TextStyle(color: TextColor.black),
         ),
         backgroundColor: PilllColors.white,
@@ -104,7 +104,8 @@ extension InitialSettingSelectTodayPillNumberPageRoute
     on InitialSettingSelectTodayPillNumberPage {
   static Route<dynamic> route() {
     return MaterialPageRoute(
-      settings: const RouteSettings(name: "InitialSettingSelectTodayPillNumberPage"),
+      settings:
+          const RouteSettings(name: "InitialSettingSelectTodayPillNumberPage"),
       builder: (_) => const InitialSettingSelectTodayPillNumberPage(),
     );
   }

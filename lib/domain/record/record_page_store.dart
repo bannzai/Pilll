@@ -402,7 +402,8 @@ class RecordPageStore extends StateNotifier<RecordPageState> {
     required PillSheet pillSheet,
   }) {
     if (pillNumberIntoPillSheet > pillSheet.typeInfo.dosingPeriod) {
-      return pillSheet.pillSheetType == PillSheetType.pillsheet_21
+      return (pillSheet.pillSheetType == PillSheetType.pillsheet_21 ||
+              pillSheet.pillSheetType == PillSheetType.pillsheet_24_rest_4)
           ? PillMarkType.rest
           : PillMarkType.fake;
     }

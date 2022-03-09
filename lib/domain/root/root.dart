@@ -6,7 +6,7 @@ import 'package:firebase_crashlytics/firebase_crashlytics.dart';
 import 'package:firebase_performance/firebase_performance.dart';
 import 'package:pilll/analytics.dart';
 import 'package:pilll/components/page/ok_dialog.dart';
-import 'package:pilll/domain/initial_setting/pill_sheet_group/initial_setting_pill_sheet_group_pill_sheet_type_select_row.dart';
+import 'package:pilll/domain/initial_setting/pill_type/initial_setting_pill_category_type_page.dart';
 import 'package:pilll/entity/config.dart';
 import 'package:pilll/entity/user.dart';
 import 'package:pilll/performance.dart';
@@ -90,7 +90,7 @@ class RootState extends State<Root> {
           case ScreenType.home:
             return HomePage(key: homeKey);
           case ScreenType.initialSetting:
-            return InitialSettingPillSheetCountPageRoute.screen();
+            return InitialSettingPillCategoryTypePageRoute.screen();
           default:
             return ScaffoldIndicator();
         }

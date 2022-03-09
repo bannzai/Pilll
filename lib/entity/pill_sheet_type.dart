@@ -3,12 +3,20 @@ import 'package:flutter_svg/flutter_svg.dart';
 import 'package:pilll/entity/weekday.dart';
 
 enum PillSheetType {
+  // "21錠+休薬7日";
   pillsheet_21,
+  // "24錠+4日偽薬";
   pillsheet_28_4,
+  // "21錠+7日偽薬";
   pillsheet_28_7,
+  // "28錠タイプ(すべて実薬)";
   pillsheet_28_0,
+  // "24錠タイプ(すべて実薬)";
   pillsheet_24_0,
+  // "21錠タイプ(すべて実薬)";
   pillsheet_21_0,
+  // "24錠+4日休薬";
+  pillsheet_24_rest_4,
 }
 
 extension PillSheetTypeFunctions on PillSheetType {
@@ -27,6 +35,8 @@ extension PillSheetTypeFunctions on PillSheetType {
         return PillSheetType.pillsheet_24_0;
       case "pillsheet_21_0":
         return PillSheetType.pillsheet_21_0;
+      case "pillsheet_24_rest_4":
+        return PillSheetType.pillsheet_24_rest_4;
       default:
         throw ArgumentError.notNull("");
     }
@@ -46,6 +56,8 @@ extension PillSheetTypeFunctions on PillSheetType {
         return "24錠タイプ(すべて実薬)";
       case PillSheetType.pillsheet_21_0:
         return "21錠タイプ(すべて実薬)";
+      case PillSheetType.pillsheet_24_rest_4:
+        return "24錠タイプ";
     }
   }
 
@@ -63,6 +75,8 @@ extension PillSheetTypeFunctions on PillSheetType {
         return "pillsheet_24_0";
       case PillSheetType.pillsheet_21_0:
         return "pillsheet_21_0";
+      case PillSheetType.pillsheet_24_rest_4:
+        return "pillsheet_24_rest_4";
     }
   }
 
@@ -80,23 +94,8 @@ extension PillSheetTypeFunctions on PillSheetType {
         return SvgPicture.asset("images/pillsheet_24_0.svg");
       case PillSheetType.pillsheet_21_0:
         return SvgPicture.asset("images/pillsheet_21_0.svg");
-    }
-  }
-
-  String get firestorePath {
-    switch (this) {
-      case PillSheetType.pillsheet_21:
-        return "pillsheet_21";
-      case PillSheetType.pillsheet_28_4:
-        return "pillsheet_28_4";
-      case PillSheetType.pillsheet_28_7:
-        return "pillsheet_28_7";
-      case PillSheetType.pillsheet_28_0:
-        return "pillsheet_28_0";
-      case PillSheetType.pillsheet_24_0:
-        return "pillsheet_24_0";
-      case PillSheetType.pillsheet_21_0:
-        return "pillsheet_21_0";
+      case PillSheetType.pillsheet_24_rest_4:
+        return SvgPicture.asset("images/pillsheet_28_4.svg");
     }
   }
 
@@ -114,6 +113,8 @@ extension PillSheetTypeFunctions on PillSheetType {
         return 24;
       case PillSheetType.pillsheet_21_0:
         return 21;
+      case PillSheetType.pillsheet_24_rest_4:
+        return 28;
     }
   }
 
@@ -131,6 +132,8 @@ extension PillSheetTypeFunctions on PillSheetType {
         return 24;
       case PillSheetType.pillsheet_21_0:
         return 21;
+      case PillSheetType.pillsheet_24_rest_4:
+        return 24;
     }
   }
 
@@ -158,6 +161,8 @@ extension PillSheetTypeFunctions on PillSheetType {
         return "";
       case PillSheetType.pillsheet_21_0:
         return "";
+      case PillSheetType.pillsheet_24_rest_4:
+        return "休薬";
     }
   }
 

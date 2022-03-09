@@ -1,10 +1,8 @@
 import 'package:flutter_svg/svg.dart';
-import 'package:pilll/analytics.dart';
 import 'package:pilll/components/atoms/color.dart';
 import 'package:pilll/components/atoms/font.dart';
 import 'package:pilll/components/atoms/text_color.dart';
 import 'package:flutter/material.dart';
-import 'package:pilll/domain/initial_setting/pill_sheet_group/initial_setting_pill_sheet_group_page.dart';
 import 'package:pilll/components/template/setting_pill_sheet_group/pill_sheet_group_select_pill_sheet_type_page.dart';
 import 'package:pilll/entity/pill_sheet_type.dart';
 
@@ -92,13 +90,5 @@ class InitialSettingPillSheetGroupPillSheetTypeSelectRow
         ],
       ),
     );
-  }
-}
-
-extension InitialSettingPillSheetCountPageRoute
-    on InitialSettingPillSheetGroupPage {
-  static InitialSettingPillSheetGroupPage screen() {
-    analytics.setCurrentScreen(screenName: "InitialSettingPillSheetGroupPage");
-    return InitialSettingPillSheetGroupPage();
   }
 }

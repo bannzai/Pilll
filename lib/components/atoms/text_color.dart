@@ -14,6 +14,15 @@ class TextColor {
   static const Color main = const Color(0xFF29304D);
   static const Color link = primary;
   static const Color danger = PilllColors.red;
+
+  static Color highEmphasis(Color color) => color.withOpacity(0.87);
+  static Color mediumEmphasis(Color color) => color.withOpacity(0.6);
+  static Color disabled(Color color) => color.withOpacity(0.37);
+
+  static Color get highEmphasisMain => TextColor.highEmphasis(TextColor.main);
+  static Color get mediumEmphasisMain =>
+      TextColor.mediumEmphasis(TextColor.main);
+  static Color get disabledMain => TextColor.disabled(TextColor.main);
 }
 
 class TextColorStyle {
