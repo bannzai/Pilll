@@ -72,7 +72,6 @@ class InitialSettingPillCategoryTypePage extends HookConsumerWidget {
               padding: const EdgeInsets.symmetric(horizontal: 32),
               child: Column(
                 children: [
-                  // onbording_1
                   const SizedBox(height: 24),
                   Expanded(
                     child: SingleChildScrollView(
@@ -80,7 +79,6 @@ class InitialSettingPillCategoryTypePage extends HookConsumerWidget {
                         mainAxisSize: MainAxisSize.max,
                         crossAxisAlignment: CrossAxisAlignment.stretch,
                         children: [
-                          // Frame 5008
                           Column(
                             mainAxisSize: MainAxisSize.min,
                             mainAxisAlignment: MainAxisAlignment.center,
@@ -97,7 +95,6 @@ class InitialSettingPillCategoryTypePage extends HookConsumerWidget {
                                 textAlign: TextAlign.center,
                               ),
                               const SizedBox(height: 24),
-                              // Frame 5007
                               Row(
                                 mainAxisSize: MainAxisSize.max,
                                 mainAxisAlignment: MainAxisAlignment.center,
