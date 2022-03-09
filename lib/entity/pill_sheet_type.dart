@@ -95,7 +95,7 @@ extension PillSheetTypeFunctions on PillSheetType {
       case PillSheetType.pillsheet_21_0:
         return SvgPicture.asset("images/pillsheet_21_0.svg");
       case PillSheetType.pillsheet_24_rest_4:
-        return SvgPicture.asset("images/pillsheet_24_rest_4.svg");
+        return SvgPicture.asset("images/pillsheet_28_4.svg");
     }
   }
 
