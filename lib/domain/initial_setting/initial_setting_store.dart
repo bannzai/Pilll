@@ -84,6 +84,7 @@ class InitialSettingStateStore extends StateNotifier<InitialSettingState> {
 
   void selectedPillType(InitialSettingPillCategoryType pillType) {
     state = state.copyWith(pillType: pillType);
+    state = state.copyWith(todayPillNumber: null);
 
     switch (pillType) {
       case InitialSettingPillCategoryType.pill_category_type_yaz_flex:
@@ -151,6 +152,7 @@ class InitialSettingStateStore extends StateNotifier<InitialSettingState> {
 
   void selectedPillSheetType(PillSheetType pillSheetType) {
     state = state.copyWith(pillSheetTypes: [pillSheetType]);
+
     final todayPillNumber = state.todayPillNumber;
     if (todayPillNumber != null &&
         todayPillNumber.pillNumberIntoPillSheet >
