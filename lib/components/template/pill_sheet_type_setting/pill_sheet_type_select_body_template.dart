@@ -1,3 +1,4 @@
+import 'package:pilll/analytics.dart';
 import 'package:pilll/components/organisms/pill_sheet/pill_sheet_type_column.dart';
 import 'package:pilll/entity/pill_sheet_type.dart';
 import 'package:flutter/material.dart';
@@ -62,6 +63,10 @@ class PillSheetTypeSelectBodyTemplate extends StatelessWidget {
   Widget _pillSheet(PillSheetType type) {
     return GestureDetector(
       onTap: () {
+        analytics.logEvent(name: "pill_sheet_type_selected", parameters: {
+          "pill_sheet_type": type.toString(),
+          "pill_sheet_name": type.fullName,
+        });
         onSelect(type);
       },
       child: PillSheetTypeColumn(
