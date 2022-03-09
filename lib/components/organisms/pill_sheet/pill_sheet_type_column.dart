@@ -71,6 +71,8 @@ class PillSheetTypeColumn extends StatelessWidget {
         return "24錠";
       case PillSheetType.pillsheet_21_0:
         return "21錠";
+      case PillSheetType.pillsheet_24_rest_4:
+        return "28錠";
     }
   }
 
@@ -88,6 +90,8 @@ class PillSheetTypeColumn extends StatelessWidget {
         return "すべて実薬";
       case PillSheetType.pillsheet_21_0:
         return "すべて実薬";
+      case PillSheetType.pillsheet_24_rest_4:
+        return "24錠＋4錠休薬";
     }
   }
 }
