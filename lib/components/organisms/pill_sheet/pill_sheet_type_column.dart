@@ -19,10 +19,13 @@ class PillSheetTypeColumn extends StatelessWidget {
     required this.selected,
   }) : super(key: key);
 
+  static const boxConstraints =
+      const BoxConstraints(minWidth: 146, minHeight: 129);
+
   @override
   Widget build(BuildContext context) {
     return Container(
-      constraints: const BoxConstraints(minWidth: 146, minHeight: 129),
+      constraints: PillSheetTypeColumn.boxConstraints,
       decoration: BoxDecoration(
         color: this.selected
             ? PilllColors.secondary.withOpacity(0.08)
@@ -72,7 +75,7 @@ class PillSheetTypeColumn extends StatelessWidget {
       case PillSheetType.pillsheet_21_0:
         return "21錠";
       case PillSheetType.pillsheet_24_rest_4:
-        return "28錠";
+        return "24錠";
     }
   }
 

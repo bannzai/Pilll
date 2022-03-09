@@ -17,46 +17,46 @@ class PillSheetTypeSelectBodyTemplate extends StatelessWidget {
   Widget build(BuildContext context) {
     return Column(
       children: <Widget>[
-        ..._chunckedPillSheetTypes()
-            .map((pillSheetTypes) {
-              return [
-                const SizedBox(height: 16),
-                Row(
-                  mainAxisAlignment: MainAxisAlignment.center,
-                  children: pillSheetTypes
-                      .asMap()
-                      .map(
-                        (index, pillSheetType) {
-                          if (index == 0) {
-                            return MapEntry(index, [
-                              _pillSheet(pillSheetType),
-                              const SizedBox(width: 16),
-                            ]);
-                          } else {
-                            return MapEntry(index, [_pillSheet(pillSheetType)]);
-                          }
-                        },
-                      )
-                      .values
-                      .expand((element) => element)
-                      .toList(),
-                ),
-              ];
-            })
-            .expand((element) => element)
-            .toList(),
+        const SizedBox(height: 16),
+        Row(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+            _pillSheet(PillSheetType.pillsheet_21),
+            const SizedBox(width: 16),
+            _pillSheet(PillSheetType.pillsheet_28_4),
+          ],
+        ),
+        const SizedBox(height: 16),
+        Row(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+            _pillSheet(PillSheetType.pillsheet_28_7),
+            const SizedBox(width: 16),
+            _pillSheet(PillSheetType.pillsheet_28_0),
+          ],
+        ),
+        const SizedBox(height: 16),
+        Row(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+            _pillSheet(PillSheetType.pillsheet_24_rest_4),
+            const SizedBox(width: 16),
+            _pillSheet(PillSheetType.pillsheet_21_0),
+          ],
+        ),
+        const SizedBox(height: 16),
+        Row(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+            _pillSheet(PillSheetType.pillsheet_24_0),
+            const SizedBox(width: 16),
+            Container(
+              constraints: PillSheetTypeColumn.boxConstraints,
+            ),
+          ],
+        ),
       ],
     );
-  }
-
-  List<List<PillSheetType>> _chunckedPillSheetTypes() {
-    final List<List<PillSheetType>> chunkedPillSheetTypes = [];
-    final pillSheetTypes = PillSheetType.values;
-    for (int i = 0; i < pillSheetTypes.length; i += 2) {
-      chunkedPillSheetTypes.add(pillSheetTypes.sublist(
-          i, i + 2 > pillSheetTypes.length ? pillSheetTypes.length : i + 2));
-    }
-    return chunkedPillSheetTypes;
   }
 
   Widget _pillSheet(PillSheetType type) {

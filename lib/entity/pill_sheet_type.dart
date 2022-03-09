@@ -57,7 +57,7 @@ extension PillSheetTypeFunctions on PillSheetType {
       case PillSheetType.pillsheet_21_0:
         return "21錠タイプ(すべて実薬)";
       case PillSheetType.pillsheet_24_rest_4:
-        return "28錠タイプ(4錠休薬)";
+        return "24錠タイプ";
     }
   }
 
