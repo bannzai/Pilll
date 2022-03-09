@@ -1,4 +1,3 @@
-import 'dart:io' show Platform;
 import 'dart:async';
 import 'dart:math';
 
@@ -9,6 +8,7 @@ import 'package:pilll/entity/pill_sheet.dart';
 import 'package:pilll/entity/pill_sheet_group.dart';
 import 'package:pilll/entity/pill_sheet_type.dart';
 import 'package:pilll/entity/setting.dart';
+import 'package:pilll/native/legacy.dart';
 import 'package:pilll/service/auth.dart';
 import 'package:pilll/service/pill_sheet.dart';
 import 'package:pilll/domain/record/record_page_state.dart';
@@ -81,24 +81,7 @@ class RecordPageStore extends StateNotifier<RecordPageState> {
           final totalCountOfActionForTakenPill =
               sharedPreferences.getInt(IntKey.totalCountOfActionForTakenPill) ??
                   0;
-          final shouldShowMigrateInfo = () {
-            if (!Platform.isIOS) {
-              return false;
-            }
-            if (sharedPreferences.getBool(BoolKey.migrateFrom132IsShown) ??
-                false) {
-              return false;
-            }
-            if (!sharedPreferences
-                .containsKey(StringKey.salvagedOldStartTakenDate)) {
-              return false;
-            }
-            if (!sharedPreferences
-                .containsKey(StringKey.salvagedOldLastTakenDate)) {
-              return false;
-            }
-            return true;
-          }();
+          final _shouldShowMigrateInfo = await shouldShowMigrateInfo();
           final recommendedSignupNotificationIsAlreadyShow =
               sharedPreferences.getBool(
                       BoolKey.recommendedSignupNotificationIsAlreadyShow) ??
@@ -108,7 +91,7 @@ class RecordPageStore extends StateNotifier<RecordPageState> {
               false;
           state = state.copyWith(
             totalCountOfActionForTakenPill: totalCountOfActionForTakenPill,
-            shouldShowMigrateInfo: shouldShowMigrateInfo,
+            shouldShowMigrateInfo: _shouldShowMigrateInfo,
             isAlreadyShowTiral: sharedPreferences
                     .getBool(BoolKey.isAlreadyShowPremiumTrialModal) ??
                 false,

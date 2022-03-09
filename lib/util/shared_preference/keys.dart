@@ -15,7 +15,6 @@ extension BoolKey on String {
 }
 
 extension StringKey on String {
-  static final String firebaseAnonymousUserID = "firebaseAnonymousUserID";
   static final String salvagedOldStartTakenDate = "salvagedOldStartTakenDate";
   static final String salvagedOldLastTakenDate = "salvagedOldLastTakenDate";
   static final String beginingVersionKey = "beginingVersion";
