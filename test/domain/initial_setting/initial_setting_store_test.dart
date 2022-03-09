@@ -28,7 +28,8 @@ void main() {
     test("when first selected", () {
       final batchFactory = MockBatchFactory();
       final authService = MockAuthService();
-      when(authService.stream()).thenAnswer((realInvocation) => const Stream.empty());
+      when(authService.stream())
+          .thenAnswer((realInvocation) => const Stream.empty());
       final settingService = MockSettingService();
       final pillSheetService = MockPillSheetService();
       final pillSheetModifiedHistoryService =
@@ -56,7 +57,8 @@ void main() {
     test("overwrite pill sheet type", () {
       final batchFactory = MockBatchFactory();
       final authService = MockAuthService();
-      when(authService.stream()).thenAnswer((realInvocation) => const Stream.empty());
+      when(authService.stream())
+          .thenAnswer((realInvocation) => const Stream.empty());
       final settingService = MockSettingService();
       final pillSheetService = MockPillSheetService();
       final pillSheetModifiedHistoryService =
@@ -89,7 +91,8 @@ void main() {
     test("reset todayPillNumber", () {
       final batchFactory = MockBatchFactory();
       final authService = MockAuthService();
-      when(authService.stream()).thenAnswer((realInvocation) => const Stream.empty());
+      when(authService.stream())
+          .thenAnswer((realInvocation) => const Stream.empty());
       final settingService = MockSettingService();
       final pillSheetService = MockPillSheetService();
       final pillSheetModifiedHistoryService =
@@ -131,7 +134,8 @@ void main() {
     test("add new one", () {
       final batchFactory = MockBatchFactory();
       final authService = MockAuthService();
-      when(authService.stream()).thenAnswer((realInvocation) => const Stream.empty());
+      when(authService.stream())
+          .thenAnswer((realInvocation) => const Stream.empty());
       final settingService = MockSettingService();
       final pillSheetService = MockPillSheetService();
       final pillSheetModifiedHistoryService =
@@ -162,7 +166,8 @@ void main() {
     test("replace with index", () {
       final batchFactory = MockBatchFactory();
       final authService = MockAuthService();
-      when(authService.stream()).thenAnswer((realInvocation) => const Stream.empty());
+      when(authService.stream())
+          .thenAnswer((realInvocation) => const Stream.empty());
       final settingService = MockSettingService();
       final pillSheetService = MockPillSheetService();
       final pillSheetModifiedHistoryService =
@@ -194,7 +199,8 @@ void main() {
     test("remove with index", () {
       final batchFactory = MockBatchFactory();
       final authService = MockAuthService();
-      when(authService.stream()).thenAnswer((realInvocation) => const Stream.empty());
+      when(authService.stream())
+          .thenAnswer((realInvocation) => const Stream.empty());
       final settingService = MockSettingService();
       final pillSheetService = MockPillSheetService();
       final pillSheetModifiedHistoryService =
@@ -227,7 +233,8 @@ void main() {
     test("replace default reminderTime", () {
       final batchFactory = MockBatchFactory();
       final authService = MockAuthService();
-      when(authService.stream()).thenAnswer((realInvocation) => const Stream.empty());
+      when(authService.stream())
+          .thenAnswer((realInvocation) => const Stream.empty());
       final settingService = MockSettingService();
       final pillSheetService = MockPillSheetService();
       final pillSheetModifiedHistoryService =
@@ -257,7 +264,8 @@ void main() {
     test("add reminderTime", () {
       final batchFactory = MockBatchFactory();
       final authService = MockAuthService();
-      when(authService.stream()).thenAnswer((realInvocation) => const Stream.empty());
+      when(authService.stream())
+          .thenAnswer((realInvocation) => const Stream.empty());
       final settingService = MockSettingService();
       final pillSheetService = MockPillSheetService();
       final pillSheetModifiedHistoryService =
@@ -298,7 +306,8 @@ void main() {
       final batch = MockWriteBatch();
       when(batchFactory.batch()).thenReturn(batch);
       final authService = MockAuthService();
-      when(authService.stream()).thenAnswer((realInvocation) => const Stream.empty());
+      when(authService.stream())
+          .thenAnswer((realInvocation) => const Stream.empty());
 
       final pillSheet = PillSheet(
           typeInfo: PillSheetType.pillsheet_21.typeInfo, beginingDate: _today);
@@ -366,7 +375,8 @@ void main() {
       final batch = MockWriteBatch();
       when(batchFactory.batch()).thenReturn(batch);
       final authService = MockAuthService();
-      when(authService.stream()).thenAnswer((realInvocation) => const Stream.empty());
+      when(authService.stream())
+          .thenAnswer((realInvocation) => const Stream.empty());
 
       final pillSheet = PillSheet(
         typeInfo: PillSheetType.pillsheet_28_0.typeInfo,
