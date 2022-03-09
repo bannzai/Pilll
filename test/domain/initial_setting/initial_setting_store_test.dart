@@ -101,44 +101,6 @@ void main() {
       ]);
     });
 
-    group("#addPillSheetType", () {
-      test("simple case", () {
-        final batchFactory = MockBatchFactory();
-        final authService = MockAuthService();
-        when(authService.stream())
-            .thenAnswer((realInvocation) => const Stream.empty());
-        final settingService = MockSettingService();
-        final pillSheetService = MockPillSheetService();
-        final pillSheetModifiedHistoryService =
-            MockPillSheetModifiedHistoryService();
-        final pillSheetGroupService = MockPillSheetGroupService();
-
-        final container = ProviderContainer(
-          overrides: [
-            batchFactoryProvider.overrideWithValue(batchFactory),
-            authServiceProvider.overrideWithValue(authService),
-            settingServiceProvider.overrideWithValue(settingService),
-            pillSheetServiceProvider.overrideWithValue(pillSheetService),
-            pillSheetModifiedHistoryServiceProvider
-                .overrideWithValue(pillSheetModifiedHistoryService),
-            pillSheetGroupServiceProvider
-                .overrideWithValue(pillSheetGroupService),
-          ],
-        );
-        final store = container.read(initialSettingStoreProvider.notifier);
-
-        store.selectedPillCategoryType(
-            InitialSettingPillCategoryType.pill_category_type_yaz_flex);
-        store.addPillSheetType(PillSheetType.pillsheet_24_rest_4);
-        expect(container.read(initialSettingStateProvider).pillSheetTypes, [
-          PillSheetType.pillsheet_28_0,
-          PillSheetType.pillsheet_28_0,
-          PillSheetType.pillsheet_28_0,
-          PillSheetType.pillsheet_24_rest_4,
-        ]);
-      });
-    });
-
     test("reset todayPillNumber", () {
       final batchFactory = MockBatchFactory();
       final authService = MockAuthService();
@@ -211,10 +173,15 @@ void main() {
       );
       final store = container.read(initialSettingStoreProvider.notifier);
 
-      store.selectedPillSheetType(PillSheetType.pillsheet_21);
+      store.selectedPillCategoryType(
+          InitialSettingPillCategoryType.pill_category_type_yaz_flex);
       store.addPillSheetType(PillSheetType.pillsheet_28_0);
-      expect(container.read(initialSettingStateProvider).pillSheetTypes,
-          [PillSheetType.pillsheet_21, PillSheetType.pillsheet_28_0]);
+      expect(container.read(initialSettingStateProvider).pillSheetTypes, [
+        PillSheetType.pillsheet_28_0,
+        PillSheetType.pillsheet_28_0,
+        PillSheetType.pillsheet_28_0,
+        PillSheetType.pillsheet_28_0,
+      ]);
     });
   });
   group("#changePillSheetType", () {
