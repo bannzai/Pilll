@@ -130,7 +130,7 @@ class InitialSettingPillCategoryTypePage extends HookConsumerWidget {
                                                   initialSettingPillCategoryUserPropertyName,
                                                   pillCategoryType.toString());
 
-                                              store.selectedPillType(
+                                              store.selectedPillCategoryType(
                                                   pillCategoryType);
                                               Navigator.of(context).push(
                                                   InitialSettingPillSheetGroupPageRoute
@@ -166,7 +166,7 @@ class InitialSettingPillCategoryTypePage extends HookConsumerWidget {
                                                   initialSettingPillCategoryUserPropertyName,
                                                   pillCategoryType.toString());
 
-                                              store.selectedPillType(
+                                              store.selectedPillCategoryType(
                                                   pillCategoryType);
                                               Navigator.of(context).push(
                                                   InitialSettingPillSheetGroupPageRoute
@@ -197,7 +197,7 @@ class InitialSettingPillCategoryTypePage extends HookConsumerWidget {
                                                   initialSettingPillCategoryUserPropertyName,
                                                   pillCategoryType.toString());
 
-                                              store.selectedPillType(
+                                              store.selectedPillCategoryType(
                                                   pillCategoryType);
                                               Navigator.of(context).push(
                                                   InitialSettingPillSheetGroupPageRoute
@@ -240,7 +240,7 @@ class InitialSettingPillCategoryTypePage extends HookConsumerWidget {
                                                   initialSettingPillCategoryUserPropertyName,
                                                   pillCategoryType.toString());
 
-                                              store.selectedPillType(
+                                              store.selectedPillCategoryType(
                                                   pillCategoryType);
                                               Navigator.of(context).push(
                                                   InitialSettingSelectTodayPillNumberPageRoute
@@ -271,7 +271,7 @@ class InitialSettingPillCategoryTypePage extends HookConsumerWidget {
                                                   initialSettingPillCategoryUserPropertyName,
                                                   pillCategoryType.toString());
 
-                                              store.selectedPillType(
+                                              store.selectedPillCategoryType(
                                                   pillCategoryType);
                                               Navigator.of(context).push(
                                                   InitialSettingPillSheetGroupPageRoute
@@ -305,7 +305,7 @@ class InitialSettingPillCategoryTypePage extends HookConsumerWidget {
                                                   initialSettingPillCategoryUserPropertyName,
                                                   pillCategoryType.toString());
 
-                                              store.selectedPillType(
+                                              store.selectedPillCategoryType(
                                                   pillCategoryType);
                                               Navigator.of(context).push(
                                                   InitialSettingPillSheetGroupPageRoute
