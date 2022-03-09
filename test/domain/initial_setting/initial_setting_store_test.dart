@@ -141,10 +141,7 @@ void main() {
         PillSheetType.pillsheet_28_0,
         PillSheetType.pillsheet_21,
       ]);
-      expect(
-          container.read(initialSettingStateProvider).todayPillNumber,
-          const InitialSettingTodayPillNumber(
-              pageIndex: 0, pillNumberIntoPillSheet: 24));
+      expect(container.read(initialSettingStateProvider).todayPillNumber, null);
     });
   });
   group("#addPillSheetType", () {
@@ -456,6 +453,7 @@ void main() {
           .thenReturn(null);
 
       final setting = const Setting(
+        pillSheetAppearanceMode: PillSheetAppearanceMode.sequential,
         pillNumberForFromMenstruation: 52,
         durationMenstruation: 4,
         isOnReminder: true,
