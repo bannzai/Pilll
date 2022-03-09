@@ -92,8 +92,6 @@ class InitialSettingStateStore extends StateNotifier<InitialSettingState> {
             PillSheetType.pillsheet_28_0,
             PillSheetType.pillsheet_28_0,
             PillSheetType.pillsheet_28_0,
-            PillSheetType.pillsheet_28_0,
-            PillSheetType.pillsheet_28_0,
           ],
           pillSheetAppearanceMode: PillSheetAppearanceMode.sequential,
         );
@@ -112,6 +110,8 @@ class InitialSettingStateStore extends StateNotifier<InitialSettingState> {
         state = state.copyWith(
           pillSheetTypes: [
             PillSheetType.pillsheet_21,
+            PillSheetType.pillsheet_21,
+            PillSheetType.pillsheet_21,
           ],
           pillSheetAppearanceMode: PillSheetAppearanceMode.number,
         );
@@ -119,6 +119,8 @@ class InitialSettingStateStore extends StateNotifier<InitialSettingState> {
       case InitialSettingPillCategoryType.pill_category_type_24_fake_4:
         state = state.copyWith(
           pillSheetTypes: [
+            PillSheetType.pillsheet_28_4,
+            PillSheetType.pillsheet_28_4,
             PillSheetType.pillsheet_28_4,
           ],
           pillSheetAppearanceMode: PillSheetAppearanceMode.number,
@@ -128,6 +130,8 @@ class InitialSettingStateStore extends StateNotifier<InitialSettingState> {
         state = state.copyWith(
           pillSheetTypes: [
             PillSheetType.pillsheet_24_rest_4,
+            PillSheetType.pillsheet_24_rest_4,
+            PillSheetType.pillsheet_24_rest_4,
           ],
           pillSheetAppearanceMode: PillSheetAppearanceMode.number,
         );
@@ -135,6 +139,8 @@ class InitialSettingStateStore extends StateNotifier<InitialSettingState> {
       case InitialSettingPillCategoryType.pill_category_type_21_fake_7:
         state = state.copyWith(
           pillSheetTypes: [
+            PillSheetType.pillsheet_28_7,
+            PillSheetType.pillsheet_28_7,
             PillSheetType.pillsheet_28_7,
           ],
           pillSheetAppearanceMode: PillSheetAppearanceMode.number,
