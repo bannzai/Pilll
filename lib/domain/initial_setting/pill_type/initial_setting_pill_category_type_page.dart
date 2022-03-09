@@ -69,7 +69,6 @@ class InitialSettingPillCategoryTypePage extends HookConsumerWidget {
         body: SafeArea(
           child: SizedBox.expand(
             child: Container(
-              padding: const EdgeInsets.symmetric(horizontal: 32),
               child: Column(
                 children: [
                   const SizedBox(height: 24),
@@ -101,214 +100,220 @@ class InitialSettingPillCategoryTypePage extends HookConsumerWidget {
                                 crossAxisAlignment: CrossAxisAlignment.start,
                                 children: [
                                   Expanded(
-                                    child: Column(
-                                      mainAxisSize: MainAxisSize.min,
-                                      crossAxisAlignment:
-                                          CrossAxisAlignment.stretch,
-                                      children: [
-                                        CardLayout(
-                                          pillCategoryType:
-                                              InitialSettingPillCategoryType
-                                                  .pill_category_type_yaz_flex,
-                                          caption: "連続",
-                                          image: SvgPicture.asset(
-                                              "images/pill_category_type_yaz_flex.svg"),
-                                          name: "最長120日間",
-                                          pillNames: [
-                                            "ヤーズフレックス",
-                                          ],
-                                          onTap: (pillCategoryType) {
-                                            analytics.logEvent(
-                                                name: "i_s_pill_c_t_card_tap",
-                                                parameters: {
-                                                  "pill_category_type":
-                                                      pillCategoryType
-                                                          .toString(),
-                                                });
-                                            analytics.setUserProperties(
-                                                initialSettingPillCategoryUserPropertyName,
-                                                pillCategoryType.toString());
+                                    child: Container(
+                                      margin: const EdgeInsets.only(left: 32),
+                                      child: Column(
+                                        mainAxisSize: MainAxisSize.min,
+                                        crossAxisAlignment:
+                                            CrossAxisAlignment.stretch,
+                                        children: [
+                                          CardLayout(
+                                            pillCategoryType:
+                                                InitialSettingPillCategoryType
+                                                    .pill_category_type_yaz_flex,
+                                            caption: "連続",
+                                            image: SvgPicture.asset(
+                                                "images/pill_category_type_yaz_flex.svg"),
+                                            name: "最長120日間",
+                                            pillNames: [
+                                              "ヤーズフレックス",
+                                            ],
+                                            onTap: (pillCategoryType) {
+                                              analytics.logEvent(
+                                                  name: "i_s_pill_c_t_card_tap",
+                                                  parameters: {
+                                                    "pill_category_type":
+                                                        pillCategoryType
+                                                            .toString(),
+                                                  });
+                                              analytics.setUserProperties(
+                                                  initialSettingPillCategoryUserPropertyName,
+                                                  pillCategoryType.toString());
 
-                                            store.selectedPillType(
-                                                pillCategoryType);
-                                            Navigator.of(context).push(
-                                                InitialSettingPillSheetGroupPageRoute
-                                                    .route());
-                                          },
-                                        ),
-                                        const SizedBox(height: 20),
-                                        CardLayout(
-                                          pillCategoryType:
-                                              InitialSettingPillCategoryType
-                                                  .pill_category_type_21_rest_7,
-                                          caption: "周期",
-                                          image: SvgPicture.asset(
-                                              "images/pill_category_type_21_rest_7.svg"),
-                                          name: "21錠＋7日休薬",
-                                          pillNames: [
-                                            "ルナベル",
-                                            "フルウェル",
-                                            "マーベロン21",
-                                            "ラベルフィーユ21",
-                                            "アンジュ21",
-                                            "ジェミーナ"
-                                          ],
-                                          onTap: (pillCategoryType) {
-                                            analytics.logEvent(
-                                                name: "i_s_pill_c_t_card_tap",
-                                                parameters: {
-                                                  "pill_category_type":
-                                                      pillCategoryType
-                                                          .toString(),
-                                                });
-                                            analytics.setUserProperties(
-                                                initialSettingPillCategoryUserPropertyName,
-                                                pillCategoryType.toString());
+                                              store.selectedPillType(
+                                                  pillCategoryType);
+                                              Navigator.of(context).push(
+                                                  InitialSettingPillSheetGroupPageRoute
+                                                      .route());
+                                            },
+                                          ),
+                                          const SizedBox(height: 20),
+                                          CardLayout(
+                                            pillCategoryType:
+                                                InitialSettingPillCategoryType
+                                                    .pill_category_type_21_rest_7,
+                                            caption: "周期",
+                                            image: SvgPicture.asset(
+                                                "images/pill_category_type_21_rest_7.svg"),
+                                            name: "21錠＋7日休薬",
+                                            pillNames: [
+                                              "ルナベル",
+                                              "フルウェル",
+                                              "マーベロン21",
+                                              "ラベルフィーユ21",
+                                              "アンジュ21",
+                                              "ジェミーナ"
+                                            ],
+                                            onTap: (pillCategoryType) {
+                                              analytics.logEvent(
+                                                  name: "i_s_pill_c_t_card_tap",
+                                                  parameters: {
+                                                    "pill_category_type":
+                                                        pillCategoryType
+                                                            .toString(),
+                                                  });
+                                              analytics.setUserProperties(
+                                                  initialSettingPillCategoryUserPropertyName,
+                                                  pillCategoryType.toString());
 
-                                            store.selectedPillType(
-                                                pillCategoryType);
-                                            Navigator.of(context).push(
-                                                InitialSettingPillSheetGroupPageRoute
-                                                    .route());
-                                          },
-                                        ),
-                                        const SizedBox(height: 20),
-                                        CardLayout(
-                                          pillCategoryType:
-                                              InitialSettingPillCategoryType
-                                                  .pill_category_type_24_fake_4,
-                                          caption: "周期",
-                                          image: SvgPicture.asset(
-                                              "images/pill_category_type_24_fake_4.svg"),
-                                          name: "24錠＋4偽薬",
-                                          pillNames: [
-                                            "ヤーズ",
-                                          ],
-                                          onTap: (pillCategoryType) {
-                                            analytics.logEvent(
-                                                name: "i_s_pill_c_t_card_tap",
-                                                parameters: {
-                                                  "pill_category_type":
-                                                      pillCategoryType
-                                                          .toString(),
-                                                });
-                                            analytics.setUserProperties(
-                                                initialSettingPillCategoryUserPropertyName,
-                                                pillCategoryType.toString());
+                                              store.selectedPillType(
+                                                  pillCategoryType);
+                                              Navigator.of(context).push(
+                                                  InitialSettingPillSheetGroupPageRoute
+                                                      .route());
+                                            },
+                                          ),
+                                          const SizedBox(height: 20),
+                                          CardLayout(
+                                            pillCategoryType:
+                                                InitialSettingPillCategoryType
+                                                    .pill_category_type_24_fake_4,
+                                            caption: "周期",
+                                            image: SvgPicture.asset(
+                                                "images/pill_category_type_24_fake_4.svg"),
+                                            name: "24錠＋4偽薬",
+                                            pillNames: [
+                                              "ヤーズ",
+                                            ],
+                                            onTap: (pillCategoryType) {
+                                              analytics.logEvent(
+                                                  name: "i_s_pill_c_t_card_tap",
+                                                  parameters: {
+                                                    "pill_category_type":
+                                                        pillCategoryType
+                                                            .toString(),
+                                                  });
+                                              analytics.setUserProperties(
+                                                  initialSettingPillCategoryUserPropertyName,
+                                                  pillCategoryType.toString());
 
-                                            store.selectedPillType(
-                                                pillCategoryType);
-                                            Navigator.of(context).push(
-                                                InitialSettingPillSheetGroupPageRoute
-                                                    .route());
-                                          },
-                                        ),
-                                      ],
+                                              store.selectedPillType(
+                                                  pillCategoryType);
+                                              Navigator.of(context).push(
+                                                  InitialSettingPillSheetGroupPageRoute
+                                                      .route());
+                                            },
+                                          ),
+                                        ],
+                                      ),
                                     ),
                                   ),
                                   const SizedBox(width: 20),
                                   Expanded(
-                                    child: Column(
-                                      mainAxisSize: MainAxisSize.min,
-                                      crossAxisAlignment:
-                                          CrossAxisAlignment.stretch,
-                                      children: [
-                                        CardLayout(
-                                          pillCategoryType:
-                                              InitialSettingPillCategoryType
-                                                  .pill_category_type_jemina,
-                                          caption: "連続",
-                                          image: SvgPicture.asset(
-                                              "images/pill_category_type_jemina.svg"),
-                                          name: "77日+7日休薬",
-                                          pillNames: [
-                                            "ジェミーナ",
-                                          ],
-                                          onTap: (pillCategoryType) {
-                                            analytics.logEvent(
-                                                name: "i_s_pill_c_t_card_tap",
-                                                parameters: {
-                                                  "pill_category_type":
-                                                      pillCategoryType
-                                                          .toString(),
-                                                });
-                                            analytics.setUserProperties(
-                                                initialSettingPillCategoryUserPropertyName,
-                                                pillCategoryType.toString());
+                                    child: Container(
+                                      margin: const EdgeInsets.only(right: 32),
+                                      child: Column(
+                                        mainAxisSize: MainAxisSize.min,
+                                        crossAxisAlignment:
+                                            CrossAxisAlignment.stretch,
+                                        children: [
+                                          CardLayout(
+                                            pillCategoryType:
+                                                InitialSettingPillCategoryType
+                                                    .pill_category_type_jemina,
+                                            caption: "連続",
+                                            image: SvgPicture.asset(
+                                                "images/pill_category_type_jemina.svg"),
+                                            name: "77日+7日休薬",
+                                            pillNames: [
+                                              "ジェミーナ",
+                                            ],
+                                            onTap: (pillCategoryType) {
+                                              analytics.logEvent(
+                                                  name: "i_s_pill_c_t_card_tap",
+                                                  parameters: {
+                                                    "pill_category_type":
+                                                        pillCategoryType
+                                                            .toString(),
+                                                  });
+                                              analytics.setUserProperties(
+                                                  initialSettingPillCategoryUserPropertyName,
+                                                  pillCategoryType.toString());
 
-                                            store.selectedPillType(
-                                                pillCategoryType);
-                                            Navigator.of(context).push(
-                                                InitialSettingSelectTodayPillNumberPageRoute
-                                                    .route());
-                                          },
-                                        ),
-                                        const SizedBox(height: 20),
-                                        CardLayout(
-                                          pillCategoryType:
-                                              InitialSettingPillCategoryType
-                                                  .pill_category_type_24_rest_4,
-                                          caption: "周期",
-                                          image: SvgPicture.asset(
-                                              "images/pill_category_type_24_rest_4.svg"),
-                                          name: "24日+4日休薬",
-                                          pillNames: [
-                                            "ヤーズフレックス",
-                                          ],
-                                          onTap: (pillCategoryType) {
-                                            analytics.logEvent(
-                                                name: "i_s_pill_c_t_card_tap",
-                                                parameters: {
-                                                  "pill_category_type":
-                                                      pillCategoryType
-                                                          .toString(),
-                                                });
-                                            analytics.setUserProperties(
-                                                initialSettingPillCategoryUserPropertyName,
-                                                pillCategoryType.toString());
+                                              store.selectedPillType(
+                                                  pillCategoryType);
+                                              Navigator.of(context).push(
+                                                  InitialSettingSelectTodayPillNumberPageRoute
+                                                      .route());
+                                            },
+                                          ),
+                                          const SizedBox(height: 20),
+                                          CardLayout(
+                                            pillCategoryType:
+                                                InitialSettingPillCategoryType
+                                                    .pill_category_type_24_rest_4,
+                                            caption: "周期",
+                                            image: SvgPicture.asset(
+                                                "images/pill_category_type_24_rest_4.svg"),
+                                            name: "24日+4日休薬",
+                                            pillNames: [
+                                              "ヤーズフレックス",
+                                            ],
+                                            onTap: (pillCategoryType) {
+                                              analytics.logEvent(
+                                                  name: "i_s_pill_c_t_card_tap",
+                                                  parameters: {
+                                                    "pill_category_type":
+                                                        pillCategoryType
+                                                            .toString(),
+                                                  });
+                                              analytics.setUserProperties(
+                                                  initialSettingPillCategoryUserPropertyName,
+                                                  pillCategoryType.toString());
 
-                                            store.selectedPillType(
-                                                pillCategoryType);
-                                            Navigator.of(context).push(
-                                                InitialSettingPillSheetGroupPageRoute
-                                                    .route());
-                                          },
-                                        ),
-                                        const SizedBox(height: 20),
-                                        CardLayout(
-                                          pillCategoryType:
-                                              InitialSettingPillCategoryType
-                                                  .pill_category_type_21_fake_7,
-                                          caption: "周期",
-                                          image: SvgPicture.asset(
-                                              "images/pill_category_type_21_fake_7.svg"),
-                                          name: "21錠＋7偽薬",
-                                          pillNames: [
-                                            "マーベロン28",
-                                            "トリキュラー28",
-                                            "ラベルフィーユ28",
-                                            "アンジュ28",
-                                          ],
-                                          onTap: (pillCategoryType) {
-                                            analytics.logEvent(
-                                                name: "i_s_pill_c_t_card_tap",
-                                                parameters: {
-                                                  "pill_category_type":
-                                                      pillCategoryType
-                                                          .toString(),
-                                                });
-                                            analytics.setUserProperties(
-                                                initialSettingPillCategoryUserPropertyName,
-                                                pillCategoryType.toString());
+                                              store.selectedPillType(
+                                                  pillCategoryType);
+                                              Navigator.of(context).push(
+                                                  InitialSettingPillSheetGroupPageRoute
+                                                      .route());
+                                            },
+                                          ),
+                                          const SizedBox(height: 20),
+                                          CardLayout(
+                                            pillCategoryType:
+                                                InitialSettingPillCategoryType
+                                                    .pill_category_type_21_fake_7,
+                                            caption: "周期",
+                                            image: SvgPicture.asset(
+                                                "images/pill_category_type_21_fake_7.svg"),
+                                            name: "21錠＋7偽薬",
+                                            pillNames: [
+                                              "マーベロン28",
+                                              "トリキュラー28",
+                                              "ラベルフィーユ28",
+                                              "アンジュ28",
+                                            ],
+                                            onTap: (pillCategoryType) {
+                                              analytics.logEvent(
+                                                  name: "i_s_pill_c_t_card_tap",
+                                                  parameters: {
+                                                    "pill_category_type":
+                                                        pillCategoryType
+                                                            .toString(),
+                                                  });
+                                              analytics.setUserProperties(
+                                                  initialSettingPillCategoryUserPropertyName,
+                                                  pillCategoryType.toString());
 
-                                            store.selectedPillType(
-                                                pillCategoryType);
-                                            Navigator.of(context).push(
-                                                InitialSettingPillSheetGroupPageRoute
-                                                    .route());
-                                          },
-                                        ),
-                                      ],
+                                              store.selectedPillType(
+                                                  pillCategoryType);
+                                              Navigator.of(context).push(
+                                                  InitialSettingPillSheetGroupPageRoute
+                                                      .route());
+                                            },
+                                          ),
+                                        ],
+                                      ),
                                     ),
                                   ),
                                 ],
