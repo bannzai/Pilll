@@ -45,7 +45,7 @@ class InitialSettingPillSheetGroupPage extends HookConsumerWidget {
                     children: [
                       const SizedBox(height: 24),
                       Text(
-                        "処方されるピルについて\n教えてください",
+                        "処方されるシートについて\n教えてください",
                         style: FontType.sBigTitle.merge(TextColorStyle.main),
                         textAlign: TextAlign.center,
                       ),
