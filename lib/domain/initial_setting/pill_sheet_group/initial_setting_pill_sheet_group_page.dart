@@ -100,58 +100,34 @@ class InitialSettingPillSheetGroupPageBody extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    if (state.pillSheetTypes.isEmpty) {
-      return Center(
-        child: Column(
-          children: [
-            const SizedBox(height: 80),
-            SvgPicture.asset("images/empty_pill_sheet_type.svg"),
-            const SizedBox(height: 24),
-            PrimaryButton(
-                onPressed: () async {
-                  analytics.logEvent(name: "empty_pill_sheet_type");
-                  showSettingPillSheetGroupSelectPillSheetTypePage(
-                    context: context,
-                    pillSheetType: null,
-                    onSelect: (pillSheetType) {
-                      store.addPillSheetType(pillSheetType);
-                    },
-                  );
-                },
-                text: "ピルの種類を選ぶ"),
-          ],
-        ),
-      );
-    } else {
-      return Column(
-        children: [
-          const SizedBox(height: 6),
-          SettingPillSheetGroup(
-              pillSheetTypes: state.pillSheetTypes,
-              onAdd: (pillSheetType) {
-                analytics.logEvent(
-                    name: "initial_setting_add_pill_sheet_group",
-                    parameters: {"pill_sheet_type": pillSheetType.fullName});
-                store.addPillSheetType(pillSheetType);
-              },
-              onChange: (index, pillSheetType) {
-                analytics.logEvent(
-                    name: "initial_setting_change_pill_sheet_group",
-                    parameters: {
-                      "index": index,
-                      "pill_sheet_type": pillSheetType.fullName
-                    });
-                store.changePillSheetType(index, pillSheetType);
-              },
-              onDelete: (index) {
-                analytics.logEvent(
-                    name: "initial_setting_delete_pill_sheet_group",
-                    parameters: {"index": index});
-                store.removePillSheetType(index);
-              }),
-        ],
-      );
-    }
+    return Column(
+      children: [
+        const SizedBox(height: 6),
+        SettingPillSheetGroup(
+            pillSheetTypes: state.pillSheetTypes,
+            onAdd: (pillSheetType) {
+              analytics.logEvent(
+                  name: "initial_setting_add_pill_sheet_group",
+                  parameters: {"pill_sheet_type": pillSheetType.fullName});
+              store.addPillSheetType(pillSheetType);
+            },
+            onChange: (index, pillSheetType) {
+              analytics.logEvent(
+                  name: "initial_setting_change_pill_sheet_group",
+                  parameters: {
+                    "index": index,
+                    "pill_sheet_type": pillSheetType.fullName
+                  });
+              store.changePillSheetType(index, pillSheetType);
+            },
+            onDelete: (index) {
+              analytics.logEvent(
+                  name: "initial_setting_delete_pill_sheet_group",
+                  parameters: {"index": index});
+              store.removePillSheetType(index);
+            }),
+      ],
+    );
   }
 }
 
