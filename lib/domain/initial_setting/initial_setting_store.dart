@@ -125,7 +125,12 @@ class InitialSettingStateStore extends StateNotifier<InitialSettingState> {
         );
         break;
       case InitialSettingPillCategoryType.pill_category_type_24_rest_4:
-        // TODO:
+        state = state.copyWith(
+          pillSheetTypes: [
+            PillSheetType.pillsheet_24_rest_4,
+          ],
+          pillSheetAppearanceMode: PillSheetAppearanceMode.number,
+        );
         break;
       case InitialSettingPillCategoryType.pill_category_type_21_fake_7:
         state = state.copyWith(
