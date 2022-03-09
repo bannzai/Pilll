@@ -210,11 +210,16 @@ void main() {
       );
       final store = container.read(initialSettingStoreProvider.notifier);
 
-      store.selectedPillSheetType(PillSheetType.pillsheet_21);
+      store.selectedPillCategoryType(
+          InitialSettingPillCategoryType.pill_category_type_yaz_flex);
       store.addPillSheetType(PillSheetType.pillsheet_28_0);
       store.changePillSheetType(1, PillSheetType.pillsheet_24_0);
-      expect(container.read(initialSettingStateProvider).pillSheetTypes,
-          [PillSheetType.pillsheet_21, PillSheetType.pillsheet_24_0]);
+      expect(container.read(initialSettingStateProvider).pillSheetTypes, [
+        PillSheetType.pillsheet_28_0,
+        PillSheetType.pillsheet_24_0,
+        PillSheetType.pillsheet_28_0,
+        PillSheetType.pillsheet_28_0,
+      ]);
     });
   });
   group("#removePillSheetType", () {
@@ -243,12 +248,16 @@ void main() {
       );
       final store = container.read(initialSettingStoreProvider.notifier);
 
-      store.selectedPillSheetType(PillSheetType.pillsheet_21);
+      store.selectedPillCategoryType(
+          InitialSettingPillCategoryType.pill_category_type_yaz_flex);
       store.addPillSheetType(PillSheetType.pillsheet_28_0);
       store.changePillSheetType(1, PillSheetType.pillsheet_24_0);
       store.removePillSheetType(0);
-      expect(container.read(initialSettingStateProvider).pillSheetTypes,
-          [PillSheetType.pillsheet_24_0]);
+      expect(container.read(initialSettingStateProvider).pillSheetTypes, [
+        PillSheetType.pillsheet_24_0,
+        PillSheetType.pillsheet_28_0,
+        PillSheetType.pillsheet_28_0,
+      ]);
     });
   });
   group("#setReminderTime", () {
@@ -380,7 +389,10 @@ void main() {
       );
       final store = container.read(initialSettingStoreProvider.notifier);
 
-      store.selectedPillSheetType(PillSheetType.pillsheet_21);
+      store.selectedPillCategoryType(
+          InitialSettingPillCategoryType.pill_category_type_21_rest_7);
+      store.removePillSheetType(1);
+      store.removePillSheetType(1);
       store.setTodayPillNumber(pageIndex: 0, pillNumberIntoPillSheet: 1);
       store.setReminderTime(index: 0, hour: 21, minute: 20);
 
@@ -473,8 +485,11 @@ void main() {
       );
       final store = container.read(initialSettingStoreProvider.notifier);
 
-      store.selectedPillSheetType(PillSheetType.pillsheet_28_0);
+      store.selectedPillCategoryType(
+          InitialSettingPillCategoryType.pill_category_type_yaz_flex);
       store.addPillSheetType(PillSheetType.pillsheet_21);
+      store.removePillSheetType(1);
+      store.removePillSheetType(1);
       store.setTodayPillNumber(pageIndex: 1, pillNumberIntoPillSheet: 1);
       store.setReminderTime(index: 0, hour: 21, minute: 20);
 
