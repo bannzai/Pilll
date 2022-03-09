@@ -135,7 +135,7 @@ class InitialSettingPillCategoryTypePage extends HookConsumerWidget {
                                             store.selectedPillType(
                                                 pillCategoryType);
                                             Navigator.of(context).push(
-                                                InitialSettingSelectTodayPillNumberPageRoute
+                                                InitialSettingPillSheetGroupPageRoute
                                                     .route());
                                           },
                                         ),
