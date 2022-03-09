@@ -25,6 +25,10 @@ class InitialSettingPillSheetGroupPage extends HookConsumerWidget {
       child: Scaffold(
         backgroundColor: PilllColors.background,
         appBar: AppBar(
+          leading: IconButton(
+            icon: const Icon(Icons.arrow_back, color: Colors.black),
+            onPressed: () => Navigator.of(context).pop(),
+          ),
           title: const Text(
             "2/4",
             style: TextStyle(color: TextColor.black),
