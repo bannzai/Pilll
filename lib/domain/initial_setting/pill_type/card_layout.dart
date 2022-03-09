@@ -35,6 +35,7 @@ class CardLayout extends StatelessWidget {
             BoxShadow(
               color: PilllColors.shadow,
               blurRadius: 8.0,
+              spreadRadius: 2,
               offset: const Offset(0, 3),
             ),
           ],
