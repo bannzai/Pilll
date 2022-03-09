@@ -17,7 +17,8 @@ class PrimaryButton extends StatelessWidget {
   Widget build(BuildContext context) {
     var isProcessing = false;
     return ConstrainedBox(
-      constraints: const BoxConstraints(maxHeight: 44, minHeight: 44, minWidth: 180),
+      constraints:
+          const BoxConstraints(maxHeight: 44, minHeight: 44, minWidth: 180),
       child: ElevatedButton(
         child: Text(text, style: ButtonTextStyle.main),
         style: ButtonStyle(
@@ -27,20 +28,22 @@ class PrimaryButton extends StatelessWidget {
           }
           return PilllColors.secondary;
         })),
-        onPressed: () async {
-          if (isProcessing) {
-            return;
-          }
-          isProcessing = true;
+        onPressed: onPressed == null
+            ? null
+            : () async {
+                if (isProcessing) {
+                  return;
+                }
+                isProcessing = true;
 
-          try {
-            await onPressed?.call();
-          } catch (error) {
-            rethrow;
-          } finally {
-            isProcessing = false;
-          }
-        },
+                try {
+                  await onPressed?.call();
+                } catch (error) {
+                  rethrow;
+                } finally {
+                  isProcessing = false;
+                }
+              },
       ),
     );
   }
@@ -189,19 +192,21 @@ class SmallAppOutlinedButton extends StatelessWidget {
         ),
         side: const BorderSide(color: PilllColors.secondary),
       ),
-      onPressed: () async {
-        if (isProcessing) {
-          return;
-        }
-        isProcessing = true;
-        try {
-          await onPressed?.call();
-        } catch (error) {
-          rethrow;
-        } finally {
-          isProcessing = false;
-        }
-      },
+      onPressed: onPressed == null
+          ? null
+          : () async {
+              if (isProcessing) {
+                return;
+              }
+              isProcessing = true;
+              try {
+                await onPressed?.call();
+              } catch (error) {
+                rethrow;
+              } finally {
+                isProcessing = false;
+              }
+            },
     );
   }
 }
@@ -240,19 +245,21 @@ class AppOutlinedButton extends StatelessWidget {
         ),
         side: const BorderSide(color: PilllColors.secondary),
       ),
-      onPressed: () async {
-        if (isProcessing) {
-          return;
-        }
-        isProcessing = true;
-        try {
-          await onPressed?.call();
-        } catch (error) {
-          rethrow;
-        } finally {
-          isProcessing = false;
-        }
-      },
+      onPressed: onPressed == null
+          ? null
+          : () async {
+              if (isProcessing) {
+                return;
+              }
+              isProcessing = true;
+              try {
+                await onPressed?.call();
+              } catch (error) {
+                rethrow;
+              } finally {
+                isProcessing = false;
+              }
+            },
     );
   }
 }
