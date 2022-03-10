@@ -493,5 +493,80 @@ void main() {
 
       store.register();
     });
+
+    // ref: https://github.com/bannzai/Pilll/pull/534
+    test("state.pillSheetTypes is [PillSheetType.pillsheet_24_rest_4]", () {
+      var mockTodayRepository = MockTodayService();
+      final _today = DateTime.parse("2020-09-19");
+      todayRepository = mockTodayRepository;
+      when(mockTodayRepository.today()).thenReturn(_today);
+      when(mockTodayRepository.now()).thenReturn(_today);
+
+      final batchFactory = MockBatchFactory();
+      final batch = MockWriteBatch();
+      when(batchFactory.batch()).thenReturn(batch);
+      final authService = MockAuthService();
+      when(authService.stream())
+          .thenAnswer((realInvocation) => const Stream.empty());
+
+      final pillSheet = PillSheet(
+          typeInfo: PillSheetType.pillsheet_24_rest_4.typeInfo,
+          beginingDate: _today);
+      final pillSheetService = MockPillSheetService();
+      when(pillSheetService.register(batch, [pillSheet]))
+          .thenReturn([pillSheet.copyWith(id: "sheet_id")]);
+
+      final pillSheetGroup = PillSheetGroup(
+          pillSheetIDs: ["sheet_id"],
+          pillSheets: [pillSheet.copyWith(id: "sheet_id")],
+          createdAt: now());
+      final pillSheetGroupService = MockPillSheetGroupService();
+      when(pillSheetGroupService.register(batch, pillSheetGroup))
+          .thenReturn(pillSheetGroup.copyWith(id: "group_id"));
+
+      final history = PillSheetModifiedHistoryServiceActionFactory
+          .createCreatedPillSheetAction(
+              pillSheetGroupID: "group_id", pillSheetIDs: ["sheet_id"]);
+      final pillSheetModifiedHistoryService =
+          MockPillSheetModifiedHistoryService();
+      when(pillSheetModifiedHistoryService.add(batch, history))
+          .thenReturn(null);
+
+      final setting = const Setting(
+        pillNumberForFromMenstruation: 24,
+        durationMenstruation: 4,
+        isOnReminder: true,
+        reminderTimes: [
+          ReminderTime(hour: 21, minute: 20),
+          ReminderTime(hour: 22, minute: 0)
+        ],
+        pillSheetTypes: [PillSheetType.pillsheet_24_rest_4],
+      );
+      final settingService = MockSettingService();
+      when(settingService.updateWithBatch(batch, setting)).thenReturn(null);
+
+      final container = ProviderContainer(
+        overrides: [
+          batchFactoryProvider.overrideWithValue(batchFactory),
+          authServiceProvider.overrideWithValue(authService),
+          settingServiceProvider.overrideWithValue(settingService),
+          pillSheetServiceProvider.overrideWithValue(pillSheetService),
+          pillSheetModifiedHistoryServiceProvider
+              .overrideWithValue(pillSheetModifiedHistoryService),
+          pillSheetGroupServiceProvider
+              .overrideWithValue(pillSheetGroupService),
+        ],
+      );
+      final store = container.read(initialSettingStoreProvider.notifier);
+
+      store.selectedPillCategoryType(
+          InitialSettingPillCategoryType.pill_category_type_21_rest_7);
+      store.removePillSheetType(1);
+      store.removePillSheetType(1);
+      store.setTodayPillNumber(pageIndex: 0, pillNumberIntoPillSheet: 1);
+      store.setReminderTime(index: 0, hour: 21, minute: 20);
+
+      store.register();
+    });
   });
 }
