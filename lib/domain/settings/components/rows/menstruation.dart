@@ -39,7 +39,7 @@ class MenstruationRow extends HookConsumerWidget {
   }
 
   bool get _hasError {
-    if (setting.pillSheetTypes.isEmpty) {
+    if (setting.pillSheetEnumTypes.isEmpty) {
       return false;
     }
 

@@ -468,7 +468,7 @@ class RecordPageStore extends StateNotifier<RecordPageState> {
   }
 
   removePillSheetType(int index, Setting setting) {
-    final copied = [...setting.pillSheetTypes];
+    final copied = [...setting.pillSheetEnumTypes];
     copied.removeAt(index);
 
     final updatedSetting = setting.copyWith(pillSheetTypes: copied);
