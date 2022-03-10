@@ -77,7 +77,8 @@ void main() {
       final userService = MockUserService();
       when(userService.fetch())
           .thenAnswer((realInvocation) => Future.value(_FakeUser()));
-      when(userService.stream()).thenAnswer((realInvocation) => const Stream.empty());
+      when(userService.stream())
+          .thenAnswer((realInvocation) => const Stream.empty());
       final pillSheetModifiedService = MockPillSheetModifiedHistoryService();
       final pillSheetGroupService = MockPillSheetGroupService();
       when(pillSheetGroupService.fetchLatest())
@@ -133,7 +134,8 @@ void main() {
       final userService = MockUserService();
       when(userService.fetch())
           .thenAnswer((realInvocation) => Future.value(_FakeUser()));
-      when(userService.stream()).thenAnswer((realInvocation) => const Stream.empty());
+      when(userService.stream())
+          .thenAnswer((realInvocation) => const Stream.empty());
       final pillSheetModifiedService = MockPillSheetModifiedHistoryService();
       final pillSheetGroupService = MockPillSheetGroupService();
       when(pillSheetGroupService.fetchLatest())
@@ -153,7 +155,8 @@ void main() {
       // ignore: invalid_use_of_protected_member
       store.state = SettingState(setting: setting);
 
-      expect(() => store.addReminderTimes(const ReminderTime(hour: 4, minute: 0)),
+      expect(
+          () => store.addReminderTimes(const ReminderTime(hour: 4, minute: 0)),
           throwsException);
     });
   });
@@ -184,7 +187,8 @@ void main() {
       final userService = MockUserService();
       when(userService.fetch())
           .thenAnswer((realInvocation) => Future.value(_FakeUser()));
-      when(userService.stream()).thenAnswer((realInvocation) => const Stream.empty());
+      when(userService.stream())
+          .thenAnswer((realInvocation) => const Stream.empty());
       final pillSheetModifiedService = MockPillSheetModifiedHistoryService();
       final pillSheetGroupService = MockPillSheetGroupService();
       when(pillSheetGroupService.fetchLatest())
@@ -235,7 +239,8 @@ void main() {
       final userService = MockUserService();
       when(userService.fetch())
           .thenAnswer((realInvocation) => Future.value(_FakeUser()));
-      when(userService.stream()).thenAnswer((realInvocation) => const Stream.empty());
+      when(userService.stream())
+          .thenAnswer((realInvocation) => const Stream.empty());
       final pillSheetModifiedService = MockPillSheetModifiedHistoryService();
       final pillSheetGroupService = MockPillSheetGroupService();
       when(pillSheetGroupService.fetchLatest())

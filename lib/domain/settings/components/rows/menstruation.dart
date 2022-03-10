@@ -26,7 +26,8 @@ class MenstruationRow extends HookConsumerWidget {
         ],
       ),
       subtitle: _hasError
-          ? const Text("生理開始日のピル番号をご確認ください。現在選択しているピルシートタイプには存在しないピル番号が設定されています")
+          ? const Text(
+              "生理開始日のピル番号をご確認ください。現在選択しているピルシートタイプには存在しないピル番号が設定されています")
           : null,
       onTap: () {
         analytics.logEvent(
@@ -38,11 +39,11 @@ class MenstruationRow extends HookConsumerWidget {
   }
 
   bool get _hasError {
-    if (setting.pillSheetTypes.isEmpty) {
+    if (setting.pillSheetEnumTypes.isEmpty) {
       return false;
     }
 
-    final totalCount = setting.pillSheetTypes
+    final totalCount = setting.pillSheetEnumTypes
         .map((e) => e.totalCount)
         .reduce((value, element) => value + element);
     return totalCount < setting.pillNumberForFromMenstruation;

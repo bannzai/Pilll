@@ -40,7 +40,8 @@ void main() {
       final authService = MockAuthService();
       when(authService.isLinkedApple()).thenReturn(false);
       when(authService.isLinkedGoogle()).thenReturn(false);
-      when(authService.stream()).thenAnswer((realInvocation) => const Stream.empty());
+      when(authService.stream())
+          .thenAnswer((realInvocation) => const Stream.empty());
 
       final pillSheet = PillSheet(
         typeInfo: PillSheetType.pillsheet_28_0.typeInfo,
@@ -97,7 +98,8 @@ void main() {
 
       final user = const User();
       final userService = MockUserService();
-      when(userService.stream()).thenAnswer((realInvocation) => const Stream.empty());
+      when(userService.stream())
+          .thenAnswer((realInvocation) => const Stream.empty());
       when(userService.fetch()).thenAnswer((realInvocation) async => user);
 
       final container = ProviderContainer(
@@ -131,7 +133,8 @@ void main() {
       final authService = MockAuthService();
       when(authService.isLinkedApple()).thenReturn(false);
       when(authService.isLinkedGoogle()).thenReturn(false);
-      when(authService.stream()).thenAnswer((realInvocation) => const Stream.empty());
+      when(authService.stream())
+          .thenAnswer((realInvocation) => const Stream.empty());
 
       final pillSheet = PillSheet(
         typeInfo: PillSheetType.pillsheet_28_0.typeInfo,
@@ -199,7 +202,8 @@ void main() {
 
       final user = const User();
       final userService = MockUserService();
-      when(userService.stream()).thenAnswer((realInvocation) => const Stream.empty());
+      when(userService.stream())
+          .thenAnswer((realInvocation) => const Stream.empty());
       when(userService.fetch()).thenAnswer((realInvocation) async => user);
 
       final container = ProviderContainer(
@@ -235,7 +239,8 @@ void main() {
       final authService = MockAuthService();
       when(authService.isLinkedApple()).thenReturn(false);
       when(authService.isLinkedGoogle()).thenReturn(false);
-      when(authService.stream()).thenAnswer((realInvocation) => const Stream.empty());
+      when(authService.stream())
+          .thenAnswer((realInvocation) => const Stream.empty());
 
       final pillSheet = PillSheet(
         id: "sheet_id",
@@ -307,7 +312,8 @@ void main() {
 
       final user = const User();
       final userService = MockUserService();
-      when(userService.stream()).thenAnswer((realInvocation) => const Stream.empty());
+      when(userService.stream())
+          .thenAnswer((realInvocation) => const Stream.empty());
       when(userService.fetch()).thenAnswer((realInvocation) async => user);
 
       final container = ProviderContainer(
@@ -342,7 +348,8 @@ void main() {
       final authService = MockAuthService();
       when(authService.isLinkedApple()).thenReturn(false);
       when(authService.isLinkedGoogle()).thenReturn(false);
-      when(authService.stream()).thenAnswer((realInvocation) => const Stream.empty());
+      when(authService.stream())
+          .thenAnswer((realInvocation) => const Stream.empty());
 
       final pillSheet = PillSheet(
         id: "sheet_id",
@@ -426,7 +433,8 @@ void main() {
 
       final user = const User();
       final userService = MockUserService();
-      when(userService.stream()).thenAnswer((realInvocation) => const Stream.empty());
+      when(userService.stream())
+          .thenAnswer((realInvocation) => const Stream.empty());
       when(userService.fetch()).thenAnswer((realInvocation) async => user);
 
       final container = ProviderContainer(
@@ -462,7 +470,8 @@ void main() {
       final authService = MockAuthService();
       when(authService.isLinkedApple()).thenReturn(false);
       when(authService.isLinkedGoogle()).thenReturn(false);
-      when(authService.stream()).thenAnswer((realInvocation) => const Stream.empty());
+      when(authService.stream())
+          .thenAnswer((realInvocation) => const Stream.empty());
 
       final pillSheet = PillSheet(
         id: "sheet_id",
@@ -546,7 +555,8 @@ void main() {
 
       final user = const User();
       final userService = MockUserService();
-      when(userService.stream()).thenAnswer((realInvocation) => const Stream.empty());
+      when(userService.stream())
+          .thenAnswer((realInvocation) => const Stream.empty());
       when(userService.fetch()).thenAnswer((realInvocation) async => user);
 
       final container = ProviderContainer(
@@ -582,7 +592,8 @@ void main() {
       final authService = MockAuthService();
       when(authService.isLinkedApple()).thenReturn(false);
       when(authService.isLinkedGoogle()).thenReturn(false);
-      when(authService.stream()).thenAnswer((realInvocation) => const Stream.empty());
+      when(authService.stream())
+          .thenAnswer((realInvocation) => const Stream.empty());
 
       final pillSheet = PillSheet(
         id: "sheet_id",
@@ -669,7 +680,8 @@ void main() {
 
       final user = const User();
       final userService = MockUserService();
-      when(userService.stream()).thenAnswer((realInvocation) => const Stream.empty());
+      when(userService.stream())
+          .thenAnswer((realInvocation) => const Stream.empty());
       when(userService.fetch()).thenAnswer((realInvocation) async => user);
 
       final container = ProviderContainer(
@@ -1334,7 +1346,8 @@ void main() {
 
         final pillSheetService = MockPillSheetService();
         when(pillSheetService.update(batch, [
-          pillSheet.copyWith(lastTakenDate: _today.subtract(const Duration(days: 4))),
+          pillSheet.copyWith(
+              lastTakenDate: _today.subtract(const Duration(days: 4))),
           pillSheet2.copyWith(
               lastTakenDate:
                   pillSheet2.beginingDate.subtract(const Duration(days: 1))),
@@ -1464,7 +1477,8 @@ void main() {
 
         final pillSheetService = MockPillSheetService();
         when(pillSheetService.update(batch, [
-          pillSheet.copyWith(lastTakenDate: _today.subtract(const Duration(days: 4))),
+          pillSheet.copyWith(
+              lastTakenDate: _today.subtract(const Duration(days: 4))),
           pillSheet2.copyWith(
               lastTakenDate:
                   pillSheet2.beginingDate.subtract(const Duration(days: 1)),

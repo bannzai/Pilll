@@ -4,7 +4,8 @@ import 'package:pilll/entity/setting.dart';
 import 'package:pilll/service/setting.dart';
 import 'package:riverpod/riverpod.dart';
 
-final settingMenstruationStoreProvider = StateNotifierProvider.autoDispose<SettingMenstruationStateStore, SettingMenstruationState>(
+final settingMenstruationStoreProvider = StateNotifierProvider.autoDispose<
+    SettingMenstruationStateStore, SettingMenstruationState>(
   (ref) => SettingMenstruationStateStore(
     ref.watch(settingServiceProvider),
   ),
@@ -23,7 +24,7 @@ class SettingMenstruationStateStore
     required int fromMenstruation,
   }) {
     final offset = summarizedPillSheetTypeTotalCountToPageIndex(
-        pillSheetTypes: setting.pillSheetTypes, pageIndex: pageIndex);
+        pillSheetTypes: setting.pillSheetEnumTypes, pageIndex: pageIndex);
     return _settingService.update(setting.copyWith(
         pillNumberForFromMenstruation: fromMenstruation + offset));
   }
@@ -49,12 +50,12 @@ class SettingMenstruationStateStore
     int pageIndex,
   ) {
     final _passedTotalCount = summarizedPillSheetTypeTotalCountToPageIndex(
-        pillSheetTypes: setting.pillSheetTypes, pageIndex: pageIndex);
+        pillSheetTypes: setting.pillSheetEnumTypes, pageIndex: pageIndex);
     if (_passedTotalCount >= setting.pillNumberForFromMenstruation) {
       return setting.pillNumberForFromMenstruation;
     }
     final diff = setting.pillNumberForFromMenstruation - _passedTotalCount;
-    if (diff > setting.pillSheetTypes[pageIndex].totalCount) {
+    if (diff > setting.pillSheetEnumTypes[pageIndex].totalCount) {
       return null;
     }
     return diff;

@@ -23,7 +23,7 @@ class SettingMenstruationPage extends HookConsumerWidget {
     return SettingMenstruationPageTemplate(
       title: "生理について",
       pillSheetList: SettingMenstruationPillSheetList(
-        pillSheetTypes: setting.pillSheetTypes,
+        pillSheetTypes: setting.pillSheetEnumTypes,
         appearanceMode: PillSheetAppearanceMode.sequential,
         selectedPillNumber: (pageIndex) =>
             store.retrieveMenstruationSelectedPillNumber(setting, pageIndex),
@@ -40,7 +40,7 @@ class SettingMenstruationPage extends HookConsumerWidget {
         },
       ),
       dynamicDescription: SettingMenstruationDynamicDescription(
-        pillSheetTypes: setting.pillSheetTypes,
+        pillSheetTypes: setting.pillSheetEnumTypes,
         fromMenstruation: setting.pillNumberForFromMenstruation,
         fromMenstructionDidDecide: (number) {
           analytics.logEvent(

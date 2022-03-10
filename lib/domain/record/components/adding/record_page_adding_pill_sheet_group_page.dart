@@ -38,7 +38,7 @@ class RecordPageAddingPillSheetGroupPage extends HookConsumerWidget {
           child: Stack(
             children: [
               SettingPillSheetGroup(
-                pillSheetTypes: setting.pillSheetTypes,
+                pillSheetTypes: setting.pillSheetEnumTypes,
                 onAdd: (pillSheetType) {
                   analytics.logEvent(
                       name: "setting_add_pill_sheet_group",

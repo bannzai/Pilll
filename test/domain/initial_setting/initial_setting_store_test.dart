@@ -560,7 +560,8 @@ void main() {
       final store = container.read(initialSettingStoreProvider.notifier);
 
       store.selectedPillCategoryType(
-          InitialSettingPillCategoryType.pill_category_type_21_rest_7);
+          InitialSettingPillCategoryType.pill_category_type_24_rest_4);
+
       store.removePillSheetType(1);
       store.removePillSheetType(1);
       store.setTodayPillNumber(pageIndex: 0, pillNumberIntoPillSheet: 1);
