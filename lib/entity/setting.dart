@@ -47,7 +47,7 @@ class Setting with _$Setting {
   @JsonSerializable(explicitToJson: true)
   const factory Setting(
       {@Default([])
-          List<PillSheetType> pillSheetTypes,
+          List<PillSheetType?> pillSheetTypes,
       required int pillNumberForFromMenstruation,
       required int durationMenstruation,
       @Default([])
@@ -65,4 +65,6 @@ class Setting with _$Setting {
 
   factory Setting.fromJson(Map<String, dynamic> json) =>
       _$SettingFromJson(json);
+
+  }
 }

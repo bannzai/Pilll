@@ -20,7 +20,7 @@ Map<String, dynamic> _$$_ReminderTimeToJson(_$_ReminderTime instance) =>
 
 _$_Setting _$$_SettingFromJson(Map<String, dynamic> json) => _$_Setting(
       pillSheetTypes: (json['pillSheetTypes'] as List<dynamic>?)
-              ?.map((e) => $enumDecode(_$PillSheetTypeEnumMap, e))
+              ?.map((e) => $enumDecodeNullable(_$PillSheetTypeEnumMap, e))
               .toList() ??
           const [],
       pillNumberForFromMenstruation:

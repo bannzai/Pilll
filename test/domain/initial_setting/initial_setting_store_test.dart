@@ -367,7 +367,7 @@ void main() {
           ReminderTime(hour: 21, minute: 20),
           ReminderTime(hour: 22, minute: 0)
         ],
-        pillSheetTypes: [PillSheetType.pillsheet_21],
+        pillSheetEnumTypes: [PillSheetType.pillsheet_21],
       );
       final settingService = MockSettingService();
       when(settingService.updateWithBatch(batch, setting)).thenReturn(null);
@@ -461,7 +461,7 @@ void main() {
           ReminderTime(hour: 21, minute: 20),
           ReminderTime(hour: 22, minute: 0)
         ],
-        pillSheetTypes: [
+        pillSheetEnumTypes: [
           PillSheetType.pillsheet_28_0,
           PillSheetType.pillsheet_21
         ],

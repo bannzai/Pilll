@@ -68,7 +68,7 @@ void main() {
         createdAt: DateTime.parse("2020-11-21"),
       );
       final setting = const Setting(
-        pillSheetTypes: [PillSheetType.pillsheet_21],
+        pillSheetEnumTypes: [PillSheetType.pillsheet_21],
         pillNumberForFromMenstruation: 22,
         durationMenstruation: 4,
         isOnReminder: true,
@@ -141,7 +141,7 @@ void main() {
         createdAt: DateTime.parse("2020-11-21"),
       );
       final setting = const Setting(
-        pillSheetTypes: [PillSheetType.pillsheet_21],
+        pillSheetEnumTypes: [PillSheetType.pillsheet_21],
         pillNumberForFromMenstruation: 22,
         durationMenstruation: 4,
         isOnReminder: true,
@@ -217,7 +217,7 @@ void main() {
         createdAt: DateTime.parse("2020-11-21"),
       );
       final setting = const Setting(
-        pillSheetTypes: [PillSheetType.pillsheet_21],
+        pillSheetEnumTypes: [PillSheetType.pillsheet_21],
         pillNumberForFromMenstruation: 22,
         durationMenstruation: 4,
         isOnReminder: true,
@@ -287,7 +287,7 @@ void main() {
         createdAt: DateTime.parse("2020-11-21"),
       );
       final setting = const Setting(
-        pillSheetTypes: [PillSheetType.pillsheet_21],
+        pillSheetEnumTypes: [PillSheetType.pillsheet_21],
         pillNumberForFromMenstruation: 22,
         durationMenstruation: 4,
         isOnReminder: true,

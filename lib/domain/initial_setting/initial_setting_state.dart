@@ -67,7 +67,7 @@ class InitialSettingState with _$InitialSettingState {
     final setting = Setting(
       pillNumberForFromMenstruation: pillNumberForFromMenstruation,
       durationMenstruation: menstruationDuration,
-      pillSheetTypes: pillSheetTypes,
+      pillSheetEnumTypes: pillSheetTypes,
       reminderTimes: reminderTimes,
       isOnReminder: isOnReminder,
       pillSheetAppearanceMode:

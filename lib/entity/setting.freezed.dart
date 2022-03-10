@@ -201,7 +201,7 @@ class _$SettingTearOff {
   const _$SettingTearOff();
 
   _Setting call(
-      {List<PillSheetType> pillSheetTypes = const [],
+      {List<PillSheetType?> pillSheetTypes = const [],
       required int pillNumberForFromMenstruation,
       required int durationMenstruation,
       List<ReminderTime> reminderTimes = const [],
@@ -235,7 +235,7 @@ const $Setting = _$SettingTearOff();
 
 /// @nodoc
 mixin _$Setting {
-  List<PillSheetType> get pillSheetTypes => throw _privateConstructorUsedError;
+  List<PillSheetType?> get pillSheetTypes => throw _privateConstructorUsedError;
   int get pillNumberForFromMenstruation => throw _privateConstructorUsedError;
   int get durationMenstruation => throw _privateConstructorUsedError;
   List<ReminderTime> get reminderTimes => throw _privateConstructorUsedError;
@@ -257,7 +257,7 @@ abstract class $SettingCopyWith<$Res> {
   factory $SettingCopyWith(Setting value, $Res Function(Setting) then) =
       _$SettingCopyWithImpl<$Res>;
   $Res call(
-      {List<PillSheetType> pillSheetTypes,
+      {List<PillSheetType?> pillSheetTypes,
       int pillNumberForFromMenstruation,
       int durationMenstruation,
       List<ReminderTime> reminderTimes,
@@ -295,7 +295,7 @@ class _$SettingCopyWithImpl<$Res> implements $SettingCopyWith<$Res> {
       pillSheetTypes: pillSheetTypes == freezed
           ? _value.pillSheetTypes
           : pillSheetTypes // ignore: cast_nullable_to_non_nullable
-              as List<PillSheetType>,
+              as List<PillSheetType?>,
       pillNumberForFromMenstruation: pillNumberForFromMenstruation == freezed
           ? _value.pillNumberForFromMenstruation
           : pillNumberForFromMenstruation // ignore: cast_nullable_to_non_nullable
@@ -348,7 +348,7 @@ abstract class _$SettingCopyWith<$Res> implements $SettingCopyWith<$Res> {
       __$SettingCopyWithImpl<$Res>;
   @override
   $Res call(
-      {List<PillSheetType> pillSheetTypes,
+      {List<PillSheetType?> pillSheetTypes,
       int pillNumberForFromMenstruation,
       int durationMenstruation,
       List<ReminderTime> reminderTimes,
@@ -388,7 +388,7 @@ class __$SettingCopyWithImpl<$Res> extends _$SettingCopyWithImpl<$Res>
       pillSheetTypes: pillSheetTypes == freezed
           ? _value.pillSheetTypes
           : pillSheetTypes // ignore: cast_nullable_to_non_nullable
-              as List<PillSheetType>,
+              as List<PillSheetType?>,
       pillNumberForFromMenstruation: pillNumberForFromMenstruation == freezed
           ? _value.pillNumberForFromMenstruation
           : pillNumberForFromMenstruation // ignore: cast_nullable_to_non_nullable
@@ -448,7 +448,7 @@ class _$_Setting extends _Setting with DiagnosticableTreeMixin {
 
   @JsonKey()
   @override
-  final List<PillSheetType> pillSheetTypes;
+  final List<PillSheetType?> pillSheetTypes;
   @override
   final int pillNumberForFromMenstruation;
   @override
@@ -552,7 +552,7 @@ class _$_Setting extends _Setting with DiagnosticableTreeMixin {
 
 abstract class _Setting extends Setting {
   const factory _Setting(
-      {List<PillSheetType> pillSheetTypes,
+      {List<PillSheetType?> pillSheetTypes,
       required int pillNumberForFromMenstruation,
       required int durationMenstruation,
       List<ReminderTime> reminderTimes,
@@ -567,7 +567,7 @@ abstract class _Setting extends Setting {
   factory _Setting.fromJson(Map<String, dynamic> json) = _$_Setting.fromJson;
 
   @override
-  List<PillSheetType> get pillSheetTypes;
+  List<PillSheetType?> get pillSheetTypes;
   @override
   int get pillNumberForFromMenstruation;
   @override

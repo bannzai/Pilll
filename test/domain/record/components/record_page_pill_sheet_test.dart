@@ -810,7 +810,7 @@ void main() {
         createdAt: anyDate,
       );
       final setting = const Setting(
-        pillSheetTypes: [PillSheetType.pillsheet_28_0],
+        pillSheetEnumTypes: [PillSheetType.pillsheet_28_0],
         pillNumberForFromMenstruation: 22,
         durationMenstruation: 3,
         isOnReminder: true,
@@ -853,7 +853,7 @@ void main() {
         createdAt: anyDate,
       );
       final setting = const Setting(
-        pillSheetTypes: [
+        pillSheetEnumTypes: [
           PillSheetType.pillsheet_28_0,
           PillSheetType.pillsheet_28_0,
           PillSheetType.pillsheet_28_0
@@ -912,7 +912,7 @@ void main() {
         createdAt: anyDate,
       );
       final setting = const Setting(
-        pillSheetTypes: [
+        pillSheetEnumTypes: [
           PillSheetType.pillsheet_28_0,
           PillSheetType.pillsheet_28_0,
           PillSheetType.pillsheet_28_0
@@ -980,7 +980,7 @@ void main() {
         createdAt: anyDate,
       );
       final setting = const Setting(
-        pillSheetTypes: [
+        pillSheetEnumTypes: [
           PillSheetType.pillsheet_28_0,
           PillSheetType.pillsheet_28_0,
           PillSheetType.pillsheet_28_0,
@@ -1059,7 +1059,7 @@ void main() {
         createdAt: anyDate,
       );
       final setting = const Setting(
-        pillSheetTypes: [
+        pillSheetEnumTypes: [
           PillSheetType.pillsheet_28_0,
           PillSheetType.pillsheet_28_0,
           PillSheetType.pillsheet_28_0,
