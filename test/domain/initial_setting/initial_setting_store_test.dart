@@ -561,6 +561,7 @@ void main() {
 
       store.selectedPillCategoryType(
           InitialSettingPillCategoryType.pill_category_type_24_rest_4);
+
       store.removePillSheetType(1);
       store.removePillSheetType(1);
       store.setTodayPillNumber(pageIndex: 0, pillNumberIntoPillSheet: 1);
