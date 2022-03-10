@@ -74,5 +74,6 @@ jobs:
       with:
         flutter-version: '2.10.2'
     - run: make secret
+    - run: flutter pub get
     - run: flutter pub run build_runner build --delete-conflicting-outputs
     - run: git diff --quiet --exit-code
