@@ -71,6 +71,7 @@ const _$PillSheetTypeEnumMap = {
   PillSheetType.pillsheet_28_0: 'pillsheet_28_0',
   PillSheetType.pillsheet_24_0: 'pillsheet_24_0',
   PillSheetType.pillsheet_21_0: 'pillsheet_21_0',
+  PillSheetType.pillsheet_24_rest_4: 'pillsheet_24_rest_4',
 };
 
 const _$PillSheetAppearanceModeEnumMap = {
