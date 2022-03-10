@@ -68,7 +68,7 @@ void main() {
         createdAt: DateTime.parse("2020-11-21"),
       );
       final setting = const Setting(
-        pillSheetEnumTypes: [PillSheetType.pillsheet_21],
+        pillSheetTypes: [PillSheetType.pillsheet_21],
         pillNumberForFromMenstruation: 22,
         durationMenstruation: 4,
         isOnReminder: true,
@@ -89,11 +89,13 @@ void main() {
       final authService = MockAuthService();
       when(authService.isLinkedApple()).thenReturn(false);
       when(authService.isLinkedGoogle()).thenReturn(false);
-      when(authService.stream()).thenAnswer((realInvocation) => const Stream.empty());
+      when(authService.stream())
+          .thenAnswer((realInvocation) => const Stream.empty());
       final userService = MockUserService();
       when(userService.fetch())
           .thenAnswer((reaInvocation) => Future.value(_FakeUser()));
-      when(userService.stream()).thenAnswer((realInvocation) => const Stream.empty());
+      when(userService.stream())
+          .thenAnswer((realInvocation) => const Stream.empty());
       final pillSheetModifedHistoryService =
           MockPillSheetModifiedHistoryService();
       final pillSheetGroupService = MockPillSheetGroupService();
@@ -141,7 +143,7 @@ void main() {
         createdAt: DateTime.parse("2020-11-21"),
       );
       final setting = const Setting(
-        pillSheetEnumTypes: [PillSheetType.pillsheet_21],
+        pillSheetTypes: [PillSheetType.pillsheet_21],
         pillNumberForFromMenstruation: 22,
         durationMenstruation: 4,
         isOnReminder: true,
@@ -162,11 +164,13 @@ void main() {
       final authService = MockAuthService();
       when(authService.isLinkedApple()).thenReturn(false);
       when(authService.isLinkedGoogle()).thenReturn(false);
-      when(authService.stream()).thenAnswer((realInvocation) => const Stream.empty());
+      when(authService.stream())
+          .thenAnswer((realInvocation) => const Stream.empty());
       final userService = MockUserService();
       when(userService.fetch())
           .thenAnswer((reaInvocation) => Future.value(_FakeUser()));
-      when(userService.stream()).thenAnswer((realInvocation) => const Stream.empty());
+      when(userService.stream())
+          .thenAnswer((realInvocation) => const Stream.empty());
       final pillSheetModifedHistoryService =
           MockPillSheetModifiedHistoryService();
       final pillSheetGroupService = MockPillSheetGroupService();
@@ -217,7 +221,7 @@ void main() {
         createdAt: DateTime.parse("2020-11-21"),
       );
       final setting = const Setting(
-        pillSheetEnumTypes: [PillSheetType.pillsheet_21],
+        pillSheetTypes: [PillSheetType.pillsheet_21],
         pillNumberForFromMenstruation: 22,
         durationMenstruation: 4,
         isOnReminder: true,
@@ -238,11 +242,13 @@ void main() {
       final authService = MockAuthService();
       when(authService.isLinkedApple()).thenReturn(false);
       when(authService.isLinkedGoogle()).thenReturn(false);
-      when(authService.stream()).thenAnswer((realInvocation) => const Stream.empty());
+      when(authService.stream())
+          .thenAnswer((realInvocation) => const Stream.empty());
       final userService = MockUserService();
       when(userService.fetch())
           .thenAnswer((reaInvocation) => Future.value(_FakeUser()));
-      when(userService.stream()).thenAnswer((realInvocation) => const Stream.empty());
+      when(userService.stream())
+          .thenAnswer((realInvocation) => const Stream.empty());
       final pillSheetModifedHistoryService =
           MockPillSheetModifiedHistoryService();
       final pillSheetGroupService = MockPillSheetGroupService();
@@ -287,7 +293,7 @@ void main() {
         createdAt: DateTime.parse("2020-11-21"),
       );
       final setting = const Setting(
-        pillSheetEnumTypes: [PillSheetType.pillsheet_21],
+        pillSheetTypes: [PillSheetType.pillsheet_21],
         pillNumberForFromMenstruation: 22,
         durationMenstruation: 4,
         isOnReminder: true,
@@ -309,11 +315,13 @@ void main() {
       final authService = MockAuthService();
       when(authService.isLinkedApple()).thenReturn(false);
       when(authService.isLinkedGoogle()).thenReturn(false);
-      when(authService.stream()).thenAnswer((realInvocation) => const Stream.empty());
+      when(authService.stream())
+          .thenAnswer((realInvocation) => const Stream.empty());
       final userService = MockUserService();
       when(userService.fetch())
           .thenAnswer((reaInvocation) => Future.value(_FakeUser()));
-      when(userService.stream()).thenAnswer((realInvocation) => const Stream.empty());
+      when(userService.stream())
+          .thenAnswer((realInvocation) => const Stream.empty());
       final pillSheetModifedHistoryService =
           MockPillSheetModifiedHistoryService();
       final pillSheetGroupService = MockPillSheetGroupService();
