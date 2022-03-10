@@ -66,5 +66,9 @@ class Setting with _$Setting {
   factory Setting.fromJson(Map<String, dynamic> json) =>
       _$SettingFromJson(json);
 
+  List<PillSheetType> get pillSheetEnumTypes {
+    return pillSheetTypes
+        .map((e) => e == null ? PillSheetType.pillsheet_24_rest_4 : e)
+        .toList();
   }
 }
