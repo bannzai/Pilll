@@ -38,6 +38,8 @@ class Analytics {
     assert(name.toLowerCase() != "interest");
     assert(name.length < 25,
         "firebase setUserProperties name limit length up to 25");
+    assert(value.length <= 100,
+        "firebase setUserProperties value limit length until 100");
     assert(!name.startsWith("firebase_"));
 
     print("[INFO] setUserProperties name: $name, value: $value");
