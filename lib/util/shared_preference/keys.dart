@@ -19,7 +19,7 @@ extension StringKey on String {
   static final String salvagedOldLastTakenDate = "salvagedOldLastTakenDate";
   static final String beginingVersionKey = "beginingVersion";
   static final String currentUserUID = "currentUserUID";
-  static final String lastSigninAnonymousUID = "lastSigninAnonymousUID";
+  static final String lastSignInAnonymousUID = "lastSigninAnonymousUID";
 }
 
 extension ReleaseNoteKey on String {

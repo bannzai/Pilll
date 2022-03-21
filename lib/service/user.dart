@@ -110,7 +110,7 @@ class UserService {
     print("call create for $uid");
     final sharedPreferences = await SharedPreferences.getInstance();
     final anonymousUserID =
-        sharedPreferences.getString(StringKey.lastSigninAnonymousUID);
+        sharedPreferences.getString(StringKey.lastSignInAnonymousUID);
     return _database.userReference().set(
       {
         if (anonymousUserID != null)
@@ -213,7 +213,7 @@ extension SaveUserLaunchInfo on UserService {
       }
 
       final lastSignInAnonymousUID =
-          sharedPreferences.getString(StringKey.lastSigninAnonymousUID);
+          sharedPreferences.getString(StringKey.lastSignInAnonymousUID);
       List<String> anonymousUserIDSets = user.anonymousUserIDSets;
       if (lastSignInAnonymousUID != null &&
           !anonymousUserIDSets.contains(lastSignInAnonymousUID)) {
