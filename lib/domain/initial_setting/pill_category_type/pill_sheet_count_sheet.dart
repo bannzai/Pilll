@@ -5,7 +5,7 @@ import 'package:pilll/components/atoms/color.dart';
 import 'package:pilll/components/atoms/font.dart';
 import 'package:pilll/components/atoms/text_color.dart';
 import 'package:pilll/domain/initial_setting/initial_setting_store.dart';
-import 'package:pilll/domain/initial_setting/pill_sheet_group/initial_setting_pill_sheet_group_page.dart';
+import 'package:pilll/domain/initial_setting/today_pill_number/initial_setting_select_today_pill_number_page.dart';
 import 'package:pilll/entity/initial_setting_pill_category_type.dart';
 
 class PillSheetCountSheet extends StatelessWidget {
@@ -51,8 +51,8 @@ class PillSheetCountSheet extends StatelessWidget {
 
                     store.selectedPillCategoryType(pillCategoryType, number);
 
-                    Navigator.of(context)
-                        .push(InitialSettingPillSheetGroupPageRoute.route());
+                    Navigator.of(context).push(
+                        InitialSettingSelectTodayPillNumberPageRoute.route());
                   },
                   child: Container(
                     padding: const EdgeInsets.symmetric(
