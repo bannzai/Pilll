@@ -12,6 +12,7 @@ class TextColor {
   static const Color noshime = const Color(0xFF3D4662);
   static const Color primary = PilllColors.primary;
   static const Color main = const Color(0xFF29304D);
+  static const Color primaryDarkBlue = const Color(0xFF4E6287);
   static const Color link = primary;
   static const Color danger = PilllColors.red;
 
