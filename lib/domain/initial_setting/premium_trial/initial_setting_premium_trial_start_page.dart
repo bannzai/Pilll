@@ -88,13 +88,22 @@ class IntiialSettingPremiumTrialStartPage extends HookConsumerWidget {
                         ],
                       ),
                       const SizedBox(height: 12),
-                      Text(
-                        "通知を長押しすると服用記録ができます",
-                        style: FontType.assisting.merge(TextColorStyle.main),
+                      const Text(
+                        '''
+通知を長押しすると服用記録ができます
+ぜひお試しください
+''',
+                        style: TextStyle(
+                          color: TextColor.main,
+                          fontSize: 14,
+                          fontFamily: FontFamily.japanese,
+                          fontWeight: FontWeight.normal,
+                        ),
                       ),
                     ],
                   ),
                 ),
+                const SizedBox(height: 16),
                 const Text(
                   '''
 自動課金はされません。安心してお使いください
@@ -109,19 +118,25 @@ class IntiialSettingPremiumTrialStartPage extends HookConsumerWidget {
                 ),
               ],
             ),
-            const SizedBox(height: 24),
-            AppOutlinedButton(
-              text: "アプリをはじめる",
-              onPressed: () async {
-                analytics.logEvent(name: "pressed_start_app_preiun_trial");
-                try {
-                  await store.register();
-                  AppRouter.endInitialSetting(context);
-                } catch (error) {
-                  showErrorAlert(context, message: error.toString());
-                }
-              },
+            const Spacer(),
+            Padding(
+              padding: const EdgeInsets.symmetric(
+                horizontal: 39,
+              ),
+              child: AppOutlinedButton(
+                text: "アプリをはじめる",
+                onPressed: () async {
+                  analytics.logEvent(name: "pressed_start_app_preiun_trial");
+                  try {
+                    await store.register();
+                    AppRouter.endInitialSetting(context);
+                  } catch (error) {
+                    showErrorAlert(context, message: error.toString());
+                  }
+                },
+              ),
             ),
+            const SizedBox(height: 35),
           ],
         ),
       ),
