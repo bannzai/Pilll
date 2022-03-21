@@ -111,7 +111,7 @@ class IntiialSettingPremiumTrialStartPage extends HookConsumerWidget {
               ],
             ),
             const SizedBox(height: 24),
-            PrimaryButton(
+            AppOutlinedButton(
               text: "アプリをはじめる",
               onPressed: () async {
                 analytics.logEvent(name: "pressed_start_app_preiun_trial");
