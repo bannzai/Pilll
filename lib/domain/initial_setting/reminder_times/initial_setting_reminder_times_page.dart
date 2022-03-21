@@ -1,8 +1,6 @@
 import 'package:pilll/analytics.dart';
 import 'package:pilll/domain/initial_setting/initial_setting_state.dart';
 import 'package:pilll/domain/initial_setting/premium_trial/initial_setting_premium_trial_start_page.dart';
-import 'package:pilll/error/error_alert.dart';
-import 'package:pilll/router/router.dart';
 import 'package:pilll/domain/initial_setting/initial_setting_store.dart';
 import 'package:pilll/components/atoms/buttons.dart';
 import 'package:pilll/components/atoms/color.dart';
