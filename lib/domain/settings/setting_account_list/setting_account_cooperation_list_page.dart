@@ -39,7 +39,8 @@ class SettingAccountCooperationListPage extends HookConsumerWidget {
                 child: ListView(
                   children: [
                     Container(
-                      padding: const EdgeInsets.only(top: 16, left: 15, right: 16),
+                      padding:
+                          const EdgeInsets.only(top: 16, left: 15, right: 16),
                       child: Text(
                         "アカウント登録",
                         style: FontType.assisting.merge(TextColorStyle.primary),
@@ -52,7 +53,7 @@ class SettingAccountCooperationListPage extends HookConsumerWidget {
                         if (state.isLinkedApple) {
                           return;
                         }
-                        _showSigninSheet(context);
+                        _showSignInSheet(context);
                       },
                     ),
                     const Divider(indent: 16),
@@ -63,7 +64,7 @@ class SettingAccountCooperationListPage extends HookConsumerWidget {
                         if (state.isLinkedGoogle) {
                           return;
                         }
-                        _showSigninSheet(context);
+                        _showSignInSheet(context);
                       },
                     ),
                     const Divider(indent: 16),
@@ -78,7 +79,7 @@ class SettingAccountCooperationListPage extends HookConsumerWidget {
     );
   }
 
-  _showSigninSheet(BuildContext context) {
+  _showSignInSheet(BuildContext context) {
     showSignInSheet(
       context,
       SignInSheetStateContext.setting,
