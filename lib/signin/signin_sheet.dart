@@ -77,7 +77,7 @@ class SigninSheet extends HookConsumerWidget {
   Widget _appleButton(
     BuildContext context,
     SigninSheetStore store,
-    SigninSheetState state,
+    SignInSheetState state,
   ) {
     return OutlinedButton(
       style: ButtonStyle(
@@ -137,7 +137,7 @@ class SigninSheet extends HookConsumerWidget {
   Widget _googleButton(
     BuildContext context,
     SigninSheetStore store,
-    SigninSheetState state,
+    SignInSheetState state,
   ) {
     return OutlinedButton(
       style: ButtonStyle(
