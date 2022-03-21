@@ -15,15 +15,15 @@ import 'package:pilll/error/universal_error_page.dart';
 import 'package:pilll/signin/signin_sheet_state.dart';
 import 'package:pilll/signin/signin_sheet_store.dart';
 
-abstract class SigninSheetConst {
+abstract class SignInSheetConst {
   static final double height = 340;
 }
 
-class SigninSheet extends HookConsumerWidget {
+class SignInSheet extends HookConsumerWidget {
   final SignInSheetStateContext stateContext;
   final Function(LinkAccountType)? onSignIn;
 
-  SigninSheet({
+  SignInSheet({
     required this.stateContext,
     required this.onSignIn,
   });
@@ -201,7 +201,7 @@ showSignInSheet(BuildContext context, SignInSheetStateContext stateContext,
   analytics.setCurrentScreen(screenName: "SigninSheet");
   showModalBottomSheet(
     context: context,
-    builder: (context) => SigninSheet(
+    builder: (context) => SignInSheet(
       stateContext: stateContext,
       onSignIn: onSignIn,
     ),
