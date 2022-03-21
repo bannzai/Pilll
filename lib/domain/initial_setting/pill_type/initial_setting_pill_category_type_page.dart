@@ -48,7 +48,7 @@ class InitialSettingPillCategoryTypePage extends HookConsumerWidget {
         }
 
         if (state.settingIsExist) {
-          AppRouter.signinAccount(context);
+          AppRouter.signInAccount(context);
         }
       }
 
