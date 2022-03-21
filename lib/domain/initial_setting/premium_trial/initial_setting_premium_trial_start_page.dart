@@ -19,7 +19,8 @@ class IntiialSettingPremiumTrialStartPage extends HookConsumerWidget {
     return Scaffold(
       backgroundColor: PilllColors.background,
       appBar: AppBar(
-        backgroundColor: Colors.transparent,
+        leading: Container(),
+        backgroundColor: PilllColors.background,
         elevation: 0,
       ),
       body: SafeArea(
