@@ -19,11 +19,8 @@ class IntiialSettingPremiumTrialStartPage extends HookConsumerWidget {
     return Scaffold(
       backgroundColor: PilllColors.background,
       appBar: AppBar(
-        leading: IconButton(
-          icon: const Icon(Icons.arrow_back, color: Colors.white),
-          onPressed: () => Navigator.of(context).pop(),
-        ),
         backgroundColor: Colors.transparent,
+        elevation: 0,
       ),
       body: SafeArea(
         child: Column(
