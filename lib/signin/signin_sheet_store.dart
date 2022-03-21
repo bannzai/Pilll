@@ -7,13 +7,13 @@ import 'package:pilll/signin/signin_sheet_state.dart';
 import 'package:riverpod/riverpod.dart';
 
 final signinSheetStoreProvider = StateNotifierProvider.autoDispose
-    .family<SigninSheetStore, SigninSheetState, SigninSheetStateContext>(
+    .family<SigninSheetStore, SigninSheetState, SignInSheetStateContext>(
   (ref, context) => SigninSheetStore(context, ref.watch(userServiceProvider)),
 );
 
 class SigninSheetStore extends StateNotifier<SigninSheetState> {
   final UserService _userService;
-  SigninSheetStore(SigninSheetStateContext context, this._userService)
+  SigninSheetStore(SignInSheetStateContext context, this._userService)
       : super(SigninSheetState(context: context)) {
     reset();
   }
@@ -22,24 +22,24 @@ class SigninSheetStore extends StateNotifier<SigninSheetState> {
     state = state.copyWith(exception: null);
   }
 
-  Future<SigninWithAppleState> handleApple() {
+  Future<SignInWithAppleState> handleApple() {
     if (state.isLoginMode) {
       analytics.logEvent(name: "signin_sheet_sign_in_apple");
       return signInWithApple().then((value) => value == null
-          ? SigninWithAppleState.cancel
-          : SigninWithAppleState.determined);
+          ? SignInWithAppleState.cancel
+          : SignInWithAppleState.determined);
     } else {
       analytics.logEvent(name: "signin_sheet_link_with_apple");
       return callLinkWithApple(_userService);
     }
   }
 
-  Future<SigninWithGoogleState> handleGoogle() {
+  Future<SignInWithGoogleState> handleGoogle() {
     if (state.isLoginMode) {
       analytics.logEvent(name: "signin_sheet_sign_in_google");
       return signInWithGoogle().then((value) => value == null
-          ? SigninWithGoogleState.cancel
-          : SigninWithGoogleState.determined);
+          ? SignInWithGoogleState.cancel
+          : SignInWithGoogleState.determined);
     } else {
       analytics.logEvent(name: "signin_sheet_link_with_google");
       return callLinkWithGoogle(_userService);

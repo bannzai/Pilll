@@ -81,7 +81,7 @@ class SettingAccountCooperationListPage extends HookConsumerWidget {
   _showSigninSheet(BuildContext context) {
     showSignInSheet(
       context,
-      SigninSheetStateContext.setting,
+      SignInSheetStateContext.setting,
       (accountType) async {
         final snackBarDuration = const Duration(seconds: 1);
         ScaffoldMessenger.of(context).showSnackBar(

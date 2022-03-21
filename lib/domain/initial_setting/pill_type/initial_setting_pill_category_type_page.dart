@@ -336,7 +336,7 @@ class InitialSettingPillCategoryTypePage extends HookConsumerWidget {
                               name: "pressed_initial_setting_signin");
                           showSignInSheet(
                             context,
-                            SigninSheetStateContext.initialSetting,
+                            SignInSheetStateContext.initialSetting,
                             (accountType) async {
                               store.showHUD();
                             },

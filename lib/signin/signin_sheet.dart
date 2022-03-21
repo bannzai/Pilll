@@ -20,7 +20,7 @@ abstract class SigninSheetConst {
 }
 
 class SigninSheet extends HookConsumerWidget {
-  final SigninSheetStateContext stateContext;
+  final SignInSheetStateContext stateContext;
   final Function(LinkAccountType)? onSignIn;
 
   SigninSheet({
@@ -94,11 +94,11 @@ class SigninSheet extends HookConsumerWidget {
         try {
           final signinState = await store.handleApple();
           switch (signinState) {
-            case SigninWithAppleState.determined:
+            case SignInWithAppleState.determined:
               Navigator.of(context).pop();
               onSignIn?.call(LinkAccountType.apple);
               return;
-            case SigninWithAppleState.cancel:
+            case SignInWithAppleState.cancel:
               return;
           }
         } catch (error) {
@@ -155,11 +155,11 @@ class SigninSheet extends HookConsumerWidget {
         try {
           final signinState = await store.handleGoogle();
           switch (signinState) {
-            case SigninWithGoogleState.determined:
+            case SignInWithGoogleState.determined:
               Navigator.of(context).pop();
               onSignIn?.call(LinkAccountType.google);
               break;
-            case SigninWithGoogleState.cancel:
+            case SignInWithGoogleState.cancel:
               return;
           }
         } catch (error) {
@@ -196,7 +196,7 @@ class SigninSheet extends HookConsumerWidget {
   }
 }
 
-showSignInSheet(BuildContext context, SigninSheetStateContext stateContext,
+showSignInSheet(BuildContext context, SignInSheetStateContext stateContext,
     Function(LinkAccountType)? onSignIn) {
   analytics.setCurrentScreen(screenName: "SigninSheet");
   showModalBottomSheet(

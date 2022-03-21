@@ -51,14 +51,14 @@ class SettingAccountCooperationListPageStore
     super.dispose();
   }
 
-  Future<SigninWithAppleState> linkApple() {
+  Future<SignInWithAppleState> linkApple() {
     if (state.isLinkedApple) {
       throw AssertionError("unexpected already linked apple when link");
     }
     return callLinkWithApple(_userService);
   }
 
-  Future<SigninWithGoogleState> linkGoogle() {
+  Future<SignInWithGoogleState> linkGoogle() {
     if (state.isLinkedGoogle) {
       throw AssertionError("unexpected already linked google when link");
     }

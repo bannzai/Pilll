@@ -4,7 +4,7 @@ import 'package:pilll/auth/link_value_container.dart';
 
 final googleProviderID = 'google.com';
 
-enum SigninWithGoogleState { determined, cancel }
+enum SignInWithGoogleState { determined, cancel }
 
 Future<LinkValueContainer?> linkWithGoogle(User user) async {
   // NOTE: workaround https://github.com/flutter/flutter/issues/44564#issuecomment-655884103
