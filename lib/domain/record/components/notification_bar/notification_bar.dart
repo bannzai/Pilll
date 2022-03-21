@@ -85,9 +85,9 @@ class NotificationBar extends HookConsumerWidget {
             return RecommendSignupNotificationBar(
               onTap: () {
                 analytics.logEvent(name: "tapped_signup_notification_bar");
-                showSigninSheet(
+                showSignInSheet(
                   context,
-                  SigninSheetStateContext.recordPage,
+                  SignInSheetStateContext.recordPage,
                   null,
                 );
               },

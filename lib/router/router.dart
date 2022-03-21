@@ -22,7 +22,7 @@ class AppRouter {
     });
   }
 
-  static void signinAccount(BuildContext context) {
+  static void signInAccount(BuildContext context) {
     analytics.logEvent(
         name: "initial_setting_signin_account",
         parameters: {"uid": FirebaseAuth.instance.currentUser?.uid});

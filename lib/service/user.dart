@@ -110,7 +110,7 @@ class UserService {
     print("call create for $uid");
     final sharedPreferences = await SharedPreferences.getInstance();
     final anonymousUserID =
-        sharedPreferences.getString(StringKey.lastSigninAnonymousUID);
+        sharedPreferences.getString(StringKey.lastSignInAnonymousUID);
     return _database.userReference().set(
       {
         if (anonymousUserID != null)
@@ -153,7 +153,8 @@ class UserService {
     return _database.userReference().set({
       UserFirestoreFieldKeys.isTrial: true,
       UserFirestoreFieldKeys.beginTrialDate: now(),
-      UserFirestoreFieldKeys.trialDeadlineDate: now().add(const Duration(days: 30)),
+      UserFirestoreFieldKeys.trialDeadlineDate:
+          now().add(const Duration(days: 30)),
       UserFirestoreFieldKeys.settings: setting.toJson(),
       UserFirestoreFieldKeys.hasDiscountEntitlement: true,
     }, SetOptions(merge: true));
@@ -211,12 +212,12 @@ extension SaveUserLaunchInfo on UserService {
         userDocumentIDSets.add(documentID);
       }
 
-      final lastSigninAnonymousUID =
-          sharedPreferences.getString(StringKey.lastSigninAnonymousUID);
+      final lastSignInAnonymousUID =
+          sharedPreferences.getString(StringKey.lastSignInAnonymousUID);
       List<String> anonymousUserIDSets = user.anonymousUserIDSets;
-      if (lastSigninAnonymousUID != null &&
-          !anonymousUserIDSets.contains(lastSigninAnonymousUID)) {
-        anonymousUserIDSets.add(lastSigninAnonymousUID);
+      if (lastSignInAnonymousUID != null &&
+          !anonymousUserIDSets.contains(lastSignInAnonymousUID)) {
+        anonymousUserIDSets.add(lastSignInAnonymousUID);
       }
       final firebaseCurrentUserID =
           firebaseAuth.FirebaseAuth.instance.currentUser?.uid;

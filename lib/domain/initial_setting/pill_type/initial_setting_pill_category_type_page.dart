@@ -48,7 +48,7 @@ class InitialSettingPillCategoryTypePage extends HookConsumerWidget {
         }
 
         if (state.settingIsExist) {
-          AppRouter.signinAccount(context);
+          AppRouter.signInAccount(context);
         }
       }
 
@@ -334,9 +334,9 @@ class InitialSettingPillCategoryTypePage extends HookConsumerWidget {
                         onPressed: () async {
                           analytics.logEvent(
                               name: "pressed_initial_setting_signin");
-                          showSigninSheet(
+                          showSignInSheet(
                             context,
-                            SigninSheetStateContext.initialSetting,
+                            SignInSheetStateContext.initialSetting,
                             (accountType) async {
                               store.showHUD();
                             },
