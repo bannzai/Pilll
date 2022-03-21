@@ -334,7 +334,7 @@ class InitialSettingPillCategoryTypePage extends HookConsumerWidget {
                         onPressed: () async {
                           analytics.logEvent(
                               name: "pressed_initial_setting_signin");
-                          showSigninSheet(
+                          showSignInSheet(
                             context,
                             SigninSheetStateContext.initialSetting,
                             (accountType) async {

@@ -196,7 +196,7 @@ class SigninSheet extends HookConsumerWidget {
   }
 }
 
-showSigninSheet(BuildContext context, SigninSheetStateContext stateContext,
+showSignInSheet(BuildContext context, SigninSheetStateContext stateContext,
     Function(LinkAccountType)? onSignIn) {
   analytics.setCurrentScreen(screenName: "SigninSheet");
   showModalBottomSheet(

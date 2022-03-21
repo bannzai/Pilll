@@ -79,7 +79,7 @@ class SettingAccountCooperationListPage extends HookConsumerWidget {
   }
 
   _showSigninSheet(BuildContext context) {
-    showSigninSheet(
+    showSignInSheet(
       context,
       SigninSheetStateContext.setting,
       (accountType) async {
