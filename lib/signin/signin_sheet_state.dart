@@ -3,78 +3,78 @@ import 'package:pilll/entity/link_account_type.dart';
 
 part 'signin_sheet_state.freezed.dart';
 
-enum SigninSheetStateContext { initialSetting, recordPage, premium, setting }
+enum SignInSheetStateContext { initialSetting, recordPage, premium, setting }
 
 @freezed
-class SigninSheetState with _$SigninSheetState {
-  const SigninSheetState._();
-  const factory SigninSheetState({
+class SignInSheetState with _$SignInSheetState {
+  const SignInSheetState._();
+  const factory SignInSheetState({
     @Default(false) bool isLoading,
-    required SigninSheetStateContext context,
+    required SignInSheetStateContext context,
     Object? exception,
-  }) = _SigninSheetState;
+  }) = _SignInSheetState;
 
   bool get isLoginMode {
     switch (context) {
-      case SigninSheetStateContext.initialSetting:
+      case SignInSheetStateContext.initialSetting:
         return true;
-      case SigninSheetStateContext.recordPage:
+      case SignInSheetStateContext.recordPage:
         return false;
-      case SigninSheetStateContext.premium:
+      case SignInSheetStateContext.premium:
         return false;
-      case SigninSheetStateContext.setting:
+      case SignInSheetStateContext.setting:
         return false;
     }
   }
 
   String get title {
     switch (context) {
-      case SigninSheetStateContext.initialSetting:
+      case SignInSheetStateContext.initialSetting:
         return "ログイン";
-      case SigninSheetStateContext.recordPage:
+      case SignInSheetStateContext.recordPage:
         return "アカウント登録";
-      case SigninSheetStateContext.premium:
+      case SignInSheetStateContext.premium:
         return "プレミアム登録の前に…";
-      case SigninSheetStateContext.setting:
+      case SignInSheetStateContext.setting:
         return "アカウント登録";
     }
   }
 
   String get message {
     switch (context) {
-      case SigninSheetStateContext.initialSetting:
+      case SignInSheetStateContext.initialSetting:
         return "Pilllにまだログインしたことが無い場合は新しくアカウントが作成されます";
-      case SigninSheetStateContext.recordPage:
+      case SignInSheetStateContext.recordPage:
         return "アカウント登録するとデータの引き継ぎが可能になります";
-      case SigninSheetStateContext.premium:
+      case SignInSheetStateContext.premium:
         return "アカウント情報を保持するため、アカウント登録をお願いします";
-      case SigninSheetStateContext.setting:
+      case SignInSheetStateContext.setting:
         return "アカウント登録するとデータの引き継ぎが可能になります";
     }
   }
 
   String get appleButtonText {
     switch (context) {
-      case SigninSheetStateContext.initialSetting:
+      case SignInSheetStateContext.initialSetting:
         return LinkAccountType.apple.loginContentName + "でサインイン";
-      case SigninSheetStateContext.recordPage:
+      case SignInSheetStateContext.recordPage:
         return LinkAccountType.apple.loginContentName + "で登録";
-      case SigninSheetStateContext.premium:
+      case SignInSheetStateContext.premium:
         return LinkAccountType.apple.loginContentName + "で登録";
-      case SigninSheetStateContext.setting:
+      case SignInSheetStateContext.setting:
         return LinkAccountType.apple.loginContentName + "で登録";
     }
   }
 
   String get googleButtonText {
     switch (context) {
-      case SigninSheetStateContext.initialSetting:
+      case SignInSheetStateContext.initialSetting:
         return LinkAccountType.google.loginContentName + "でサインイン";
-      case SigninSheetStateContext.recordPage:
+      case SignInSheetStateContext.recordPage:
         return LinkAccountType.google.loginContentName + "で登録";
-      case SigninSheetStateContext.premium:
+      case SignInSheetStateContext.premium:
         return LinkAccountType.google.loginContentName + "で登録";
-      case SigninSheetStateContext.setting:
+      case SignInSheetStateContext.setting:
         return LinkAccountType.google.loginContentName + "で登録";
     }
   }

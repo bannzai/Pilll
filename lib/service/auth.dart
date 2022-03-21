@@ -1,5 +1,4 @@
-import 'dart:async'
-;
+import 'dart:async';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:pilll/analytics.dart';
 import 'package:pilll/auth/apple.dart';
@@ -73,12 +72,12 @@ Future<User> cachedUserOrSignInAnonymously() async {
 
     final sharedPreferences = await SharedPreferences.getInstance();
     final existsUID =
-        sharedPreferences.getString(StringKey.lastSigninAnonymousUID);
+        sharedPreferences.getString(StringKey.lastSignInAnonymousUID);
     if (existsUID == null || existsUID.isEmpty) {
       final user = anonymousUser.user;
       if (user != null) {
         await sharedPreferences.setString(
-            StringKey.lastSigninAnonymousUID, user.uid);
+            StringKey.lastSignInAnonymousUID, user.uid);
       }
     }
 

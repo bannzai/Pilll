@@ -15,15 +15,15 @@ import 'package:pilll/error/universal_error_page.dart';
 import 'package:pilll/signin/signin_sheet_state.dart';
 import 'package:pilll/signin/signin_sheet_store.dart';
 
-abstract class SigninSheetConst {
+abstract class SignInSheetConst {
   static final double height = 340;
 }
 
-class SigninSheet extends HookConsumerWidget {
-  final SigninSheetStateContext stateContext;
+class SignInSheet extends HookConsumerWidget {
+  final SignInSheetStateContext stateContext;
   final Function(LinkAccountType)? onSignIn;
 
-  SigninSheet({
+  SignInSheet({
     required this.stateContext,
     required this.onSignIn,
   });
@@ -76,8 +76,8 @@ class SigninSheet extends HookConsumerWidget {
 
   Widget _appleButton(
     BuildContext context,
-    SigninSheetStore store,
-    SigninSheetState state,
+    SignInSheetStore store,
+    SignInSheetState state,
   ) {
     return OutlinedButton(
       style: ButtonStyle(
@@ -94,11 +94,11 @@ class SigninSheet extends HookConsumerWidget {
         try {
           final signinState = await store.handleApple();
           switch (signinState) {
-            case SigninWithAppleState.determined:
+            case SignInWithAppleState.determined:
               Navigator.of(context).pop();
               onSignIn?.call(LinkAccountType.apple);
               return;
-            case SigninWithAppleState.cancel:
+            case SignInWithAppleState.cancel:
               return;
           }
         } catch (error) {
@@ -136,8 +136,8 @@ class SigninSheet extends HookConsumerWidget {
 
   Widget _googleButton(
     BuildContext context,
-    SigninSheetStore store,
-    SigninSheetState state,
+    SignInSheetStore store,
+    SignInSheetState state,
   ) {
     return OutlinedButton(
       style: ButtonStyle(
@@ -155,11 +155,11 @@ class SigninSheet extends HookConsumerWidget {
         try {
           final signinState = await store.handleGoogle();
           switch (signinState) {
-            case SigninWithGoogleState.determined:
+            case SignInWithGoogleState.determined:
               Navigator.of(context).pop();
               onSignIn?.call(LinkAccountType.google);
               break;
-            case SigninWithGoogleState.cancel:
+            case SignInWithGoogleState.cancel:
               return;
           }
         } catch (error) {
@@ -196,12 +196,12 @@ class SigninSheet extends HookConsumerWidget {
   }
 }
 
-showSigninSheet(BuildContext context, SigninSheetStateContext stateContext,
+showSignInSheet(BuildContext context, SignInSheetStateContext stateContext,
     Function(LinkAccountType)? onSignIn) {
   analytics.setCurrentScreen(screenName: "SigninSheet");
   showModalBottomSheet(
     context: context,
-    builder: (context) => SigninSheet(
+    builder: (context) => SignInSheet(
       stateContext: stateContext,
       onSignIn: onSignIn,
     ),

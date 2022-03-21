@@ -18,7 +18,7 @@ class RecommendSignupForPremiumNotificationBar extends StatelessWidget {
       child: GestureDetector(
         onTap: () {
           analytics.logEvent(name: "tapped_premium_signup_notification_bar");
-          showSigninSheet(context, SigninSheetStateContext.recordPage, null);
+          showSignInSheet(context, SignInSheetStateContext.recordPage, null);
         },
         child: Stack(
           children: [

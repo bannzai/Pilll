@@ -6,7 +6,7 @@ import 'package:sign_in_with_apple/sign_in_with_apple.dart';
 
 final appleProviderID = "apple.com";
 
-enum SigninWithAppleState { determined, cancel }
+enum SignInWithAppleState { determined, cancel }
 
 Future<LinkValueContainer?> linkWithApple(User user) async {
   try {
