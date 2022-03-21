@@ -129,3 +129,14 @@ class IntiialSettingPremiumTrialStartPage extends HookConsumerWidget {
     );
   }
 }
+
+extension IntiialSettingPremiumTrialStartPageRoute
+    on IntiialSettingPremiumTrialStartPage {
+  static Route<dynamic> route() {
+    return MaterialPageRoute(
+      settings:
+          const RouteSettings(name: "IntiialSettingPremiumTrialStartPage"),
+      builder: (_) => IntiialSettingPremiumTrialStartPage(),
+    );
+  }
+}
