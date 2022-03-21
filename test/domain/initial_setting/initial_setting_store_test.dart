@@ -52,7 +52,7 @@ void main() {
       final store = container.read(initialSettingStoreProvider.notifier);
 
       store.selectedPillCategoryType(
-          InitialSettingPillCategoryType.pill_category_type_yaz_flex);
+          InitialSettingPillCategoryType.pill_category_type_yaz_flex, 3);
       expect(container.read(initialSettingStateProvider).pillSheetTypes, [
         PillSheetType.pillsheet_28_0,
         PillSheetType.pillsheet_28_0,
@@ -85,7 +85,7 @@ void main() {
       final store = container.read(initialSettingStoreProvider.notifier);
 
       store.selectedPillCategoryType(
-          InitialSettingPillCategoryType.pill_category_type_yaz_flex);
+          InitialSettingPillCategoryType.pill_category_type_yaz_flex, 3);
       expect(container.read(initialSettingStateProvider).pillSheetTypes, [
         PillSheetType.pillsheet_28_0,
         PillSheetType.pillsheet_28_0,
@@ -93,7 +93,7 @@ void main() {
       ]);
 
       store.selectedPillCategoryType(
-          InitialSettingPillCategoryType.pill_category_type_jemina);
+          InitialSettingPillCategoryType.pill_category_type_jemina, null);
       expect(container.read(initialSettingStateProvider).pillSheetTypes, [
         PillSheetType.pillsheet_28_0,
         PillSheetType.pillsheet_28_0,
@@ -135,7 +135,7 @@ void main() {
               pageIndex: 0, pillNumberIntoPillSheet: 28));
 
       store.selectedPillCategoryType(
-          InitialSettingPillCategoryType.pill_category_type_jemina);
+          InitialSettingPillCategoryType.pill_category_type_jemina, null);
       expect(container.read(initialSettingStateProvider).pillSheetTypes, [
         PillSheetType.pillsheet_28_0,
         PillSheetType.pillsheet_28_0,
@@ -171,7 +171,7 @@ void main() {
       final store = container.read(initialSettingStoreProvider.notifier);
 
       store.selectedPillCategoryType(
-          InitialSettingPillCategoryType.pill_category_type_yaz_flex);
+          InitialSettingPillCategoryType.pill_category_type_yaz_flex, 3);
       store.addPillSheetType(PillSheetType.pillsheet_28_0);
       expect(container.read(initialSettingStateProvider).pillSheetTypes, [
         PillSheetType.pillsheet_28_0,
@@ -208,7 +208,7 @@ void main() {
       final store = container.read(initialSettingStoreProvider.notifier);
 
       store.selectedPillCategoryType(
-          InitialSettingPillCategoryType.pill_category_type_yaz_flex);
+          InitialSettingPillCategoryType.pill_category_type_yaz_flex, 3);
       store.addPillSheetType(PillSheetType.pillsheet_28_0);
       store.changePillSheetType(1, PillSheetType.pillsheet_24_0);
       expect(container.read(initialSettingStateProvider).pillSheetTypes, [
@@ -246,7 +246,7 @@ void main() {
       final store = container.read(initialSettingStoreProvider.notifier);
 
       store.selectedPillCategoryType(
-          InitialSettingPillCategoryType.pill_category_type_yaz_flex);
+          InitialSettingPillCategoryType.pill_category_type_yaz_flex, 3);
       store.addPillSheetType(PillSheetType.pillsheet_28_0);
       store.changePillSheetType(1, PillSheetType.pillsheet_24_0);
       store.removePillSheetType(0);
@@ -387,7 +387,7 @@ void main() {
       final store = container.read(initialSettingStoreProvider.notifier);
 
       store.selectedPillCategoryType(
-          InitialSettingPillCategoryType.pill_category_type_21_rest_7);
+          InitialSettingPillCategoryType.pill_category_type_21_rest_7, 3);
       store.removePillSheetType(1);
       store.removePillSheetType(1);
       store.setTodayPillNumber(pageIndex: 0, pillNumberIntoPillSheet: 1);
@@ -484,7 +484,7 @@ void main() {
       final store = container.read(initialSettingStoreProvider.notifier);
 
       store.selectedPillCategoryType(
-          InitialSettingPillCategoryType.pill_category_type_yaz_flex);
+          InitialSettingPillCategoryType.pill_category_type_yaz_flex, 3);
       store.addPillSheetType(PillSheetType.pillsheet_21);
       store.removePillSheetType(1);
       store.removePillSheetType(1);
@@ -560,7 +560,7 @@ void main() {
       final store = container.read(initialSettingStoreProvider.notifier);
 
       store.selectedPillCategoryType(
-          InitialSettingPillCategoryType.pill_category_type_24_rest_4);
+          InitialSettingPillCategoryType.pill_category_type_24_rest_4, 3);
 
       store.removePillSheetType(1);
       store.removePillSheetType(1);
