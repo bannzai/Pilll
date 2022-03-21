@@ -6,9 +6,8 @@ import 'package:flutter/material.dart';
 import 'package:pilll/components/template/setting_pill_sheet_group/pill_sheet_group_select_pill_sheet_type_page.dart';
 import 'package:pilll/entity/pill_sheet_type.dart';
 
-class InitialSettingPillSheetGroupPillSheetTypeSelectRow
-    extends StatelessWidget {
-  const InitialSettingPillSheetGroupPillSheetTypeSelectRow({
+class SettingPillSheetGroupPillSheetTypeSelectRow extends StatelessWidget {
+  const SettingPillSheetGroupPillSheetTypeSelectRow({
     Key? key,
     required this.index,
     required this.pillSheetType,
