@@ -178,7 +178,7 @@ class InitialSettingReminderTimesPage extends HookConsumerWidget {
                     ),
                     const SizedBox(height: 24),
                     PrimaryButton(
-                      text: "設定完了",
+                      text: "次へ",
                       onPressed: () async {
                         analytics.logEvent(
                             name: "next_initial_setting_reminder_times");
