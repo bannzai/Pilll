@@ -10,7 +10,7 @@ import 'package:pilll/components/atoms/color.dart';
 import 'package:pilll/components/atoms/text_color.dart';
 import 'package:flutter/material.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
-import 'package:pilll/domain/initial_setting/pill_type/card_layout.dart';
+import 'package:pilll/domain/initial_setting/pill_category_type/card_layout.dart';
 import 'package:pilll/domain/initial_setting/today_pill_number/initial_setting_select_today_pill_number_page.dart';
 import 'package:pilll/entity/initial_setting_pill_category_type.dart';
 import 'package:pilll/router/router.dart';
