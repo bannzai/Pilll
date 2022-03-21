@@ -6,13 +6,13 @@ part 'signin_sheet_state.freezed.dart';
 enum SignInSheetStateContext { initialSetting, recordPage, premium, setting }
 
 @freezed
-class SignInSheetState with _$SigninSheetState {
+class SignInSheetState with _$SignInSheetState {
   const SignInSheetState._();
   const factory SignInSheetState({
     @Default(false) bool isLoading,
     required SignInSheetStateContext context,
     Object? exception,
-  }) = _SigninSheetState;
+  }) = _SignInSheetState;
 
   bool get isLoginMode {
     switch (context) {
