@@ -4,13 +4,13 @@ import 'package:pilll/analytics.dart';
 import 'package:pilll/components/atoms/buttons.dart';
 import 'package:pilll/components/atoms/font.dart';
 import 'package:pilll/components/page/hud.dart';
-import 'package:pilll/domain/initial_setting/pill_sheet_group/initial_setting_pill_sheet_group_page.dart';
+import 'package:pilll/domain/initial_setting/pill_category_type/pill_sheet_count_sheet.dart';
 import 'package:pilll/domain/initial_setting/initial_setting_store.dart';
 import 'package:pilll/components/atoms/color.dart';
 import 'package:pilll/components/atoms/text_color.dart';
 import 'package:flutter/material.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
-import 'package:pilll/domain/initial_setting/pill_type/card_layout.dart';
+import 'package:pilll/domain/initial_setting/pill_category_type/card_layout.dart';
 import 'package:pilll/domain/initial_setting/today_pill_number/initial_setting_select_today_pill_number_page.dart';
 import 'package:pilll/entity/initial_setting_pill_category_type.dart';
 import 'package:pilll/router/router.dart';
@@ -61,7 +61,7 @@ class InitialSettingPillCategoryTypePage extends HookConsumerWidget {
         backgroundColor: PilllColors.background,
         appBar: AppBar(
           title: const Text(
-            "1/4",
+            "1/3",
             style: TextStyle(color: TextColor.black),
           ),
           backgroundColor: PilllColors.white,
@@ -130,11 +130,12 @@ class InitialSettingPillCategoryTypePage extends HookConsumerWidget {
                                                   initialSettingPillCategoryUserPropertyName,
                                                   pillCategoryType.toString());
 
-                                              store.selectedPillCategoryType(
-                                                  pillCategoryType);
-                                              Navigator.of(context).push(
-                                                  InitialSettingPillSheetGroupPageRoute
-                                                      .route());
+                                              showPillSheetCountSheet(
+                                                context,
+                                                pillCategoryType:
+                                                    pillCategoryType,
+                                                store: store,
+                                              );
                                             },
                                           ),
                                           const SizedBox(height: 20),
@@ -166,11 +167,12 @@ class InitialSettingPillCategoryTypePage extends HookConsumerWidget {
                                                   initialSettingPillCategoryUserPropertyName,
                                                   pillCategoryType.toString());
 
-                                              store.selectedPillCategoryType(
-                                                  pillCategoryType);
-                                              Navigator.of(context).push(
-                                                  InitialSettingPillSheetGroupPageRoute
-                                                      .route());
+                                              showPillSheetCountSheet(
+                                                context,
+                                                pillCategoryType:
+                                                    pillCategoryType,
+                                                store: store,
+                                              );
                                             },
                                           ),
                                           const SizedBox(height: 20),
@@ -197,11 +199,12 @@ class InitialSettingPillCategoryTypePage extends HookConsumerWidget {
                                                   initialSettingPillCategoryUserPropertyName,
                                                   pillCategoryType.toString());
 
-                                              store.selectedPillCategoryType(
-                                                  pillCategoryType);
-                                              Navigator.of(context).push(
-                                                  InitialSettingPillSheetGroupPageRoute
-                                                      .route());
+                                              showPillSheetCountSheet(
+                                                context,
+                                                pillCategoryType:
+                                                    pillCategoryType,
+                                                store: store,
+                                              );
                                             },
                                           ),
                                         ],
@@ -241,7 +244,7 @@ class InitialSettingPillCategoryTypePage extends HookConsumerWidget {
                                                   pillCategoryType.toString());
 
                                               store.selectedPillCategoryType(
-                                                  pillCategoryType);
+                                                  pillCategoryType, null);
                                               Navigator.of(context).push(
                                                   InitialSettingSelectTodayPillNumberPageRoute
                                                       .route());
@@ -271,11 +274,12 @@ class InitialSettingPillCategoryTypePage extends HookConsumerWidget {
                                                   initialSettingPillCategoryUserPropertyName,
                                                   pillCategoryType.toString());
 
-                                              store.selectedPillCategoryType(
-                                                  pillCategoryType);
-                                              Navigator.of(context).push(
-                                                  InitialSettingPillSheetGroupPageRoute
-                                                      .route());
+                                              showPillSheetCountSheet(
+                                                context,
+                                                pillCategoryType:
+                                                    pillCategoryType,
+                                                store: store,
+                                              );
                                             },
                                           ),
                                           const SizedBox(height: 20),
@@ -305,11 +309,12 @@ class InitialSettingPillCategoryTypePage extends HookConsumerWidget {
                                                   initialSettingPillCategoryUserPropertyName,
                                                   pillCategoryType.toString());
 
-                                              store.selectedPillCategoryType(
-                                                  pillCategoryType);
-                                              Navigator.of(context).push(
-                                                  InitialSettingPillSheetGroupPageRoute
-                                                      .route());
+                                              showPillSheetCountSheet(
+                                                context,
+                                                pillCategoryType:
+                                                    pillCategoryType,
+                                                store: store,
+                                              );
                                             },
                                           ),
                                         ],
