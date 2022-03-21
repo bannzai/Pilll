@@ -1,9 +1,19 @@
 import 'package:flutter/material.dart';
+import 'package:pilll/analytics.dart';
 import 'package:pilll/components/atoms/color.dart';
 import 'package:pilll/components/atoms/font.dart';
 import 'package:pilll/components/atoms/text_color.dart';
+import 'package:pilll/domain/initial_setting/initial_setting_store.dart';
+import 'package:pilll/domain/initial_setting/pill_sheet_group/initial_setting_pill_sheet_group_page.dart';
+import 'package:pilll/entity/initial_setting_pill_category_type.dart';
 
 class PillSheetCountSheet extends StatelessWidget {
+  final InitialSettingPillCategoryType pillCategoryType;
+  final InitialSettingStateStore store;
+
+  const PillSheetCountSheet(
+      {Key? key, required this.pillCategoryType, required this.store})
+      : super(key: key);
   @override
   Widget build(BuildContext context) {
     return Container(
@@ -19,23 +29,39 @@ class PillSheetCountSheet extends StatelessWidget {
           Row(
             children: [
               ...List.generate(6, (index) => index + 1).map((number) {
-                return Container(
-                  padding: const EdgeInsets.symmetric(
-                      horizontal: 16.5, vertical: 11),
-                  decoration: BoxDecoration(
-                    border: Border.all(
-                      color: PilllColors.secondary,
-                      width: 1,
+                return GestureDetector(
+                  onTap: () {
+                    analytics.logEvent(
+                        name: "i_s_pill_sheet_count_sheet_selected",
+                        parameters: {
+                          "pill_sheet_count": number,
+                          "pill_category_type": pillCategoryType.toString(),
+                        });
+                    Navigator.of(context).pop();
+
+                    store.selectedPillCategoryType(pillCategoryType, number);
+
+                    Navigator.of(context)
+                        .push(InitialSettingPillSheetGroupPageRoute.route());
+                  },
+                  child: Container(
+                    padding: const EdgeInsets.symmetric(
+                        horizontal: 16.5, vertical: 11),
+                    decoration: BoxDecoration(
+                      border: Border.all(
+                        color: PilllColors.secondary,
+                        width: 1,
+                      ),
+                      borderRadius: BorderRadius.circular(46),
                     ),
-                    borderRadius: BorderRadius.circular(46),
+                    child: Text("$number",
+                        style: const TextStyle(
+                          color: TextColor.main,
+                          fontSize: 16,
+                          fontFamily: FontFamily.number,
+                          fontWeight: FontWeight.bold,
+                        )),
                   ),
-                  child: Text("$number",
-                      style: const TextStyle(
-                        color: TextColor.main,
-                        fontSize: 16,
-                        fontFamily: FontFamily.number,
-                        fontWeight: FontWeight.bold,
-                      )),
                 );
               }).toList(),
             ],
@@ -44,4 +70,16 @@ class PillSheetCountSheet extends StatelessWidget {
       ),
     );
   }
+}
+
+void showPillSheetCountSheet(BuildContext context,
+    {required InitialSettingPillCategoryType pillCategoryType,
+    required InitialSettingStateStore store}) {
+  showModalBottomSheet(
+    context: context,
+    builder: (context) => PillSheetCountSheet(
+      pillCategoryType: pillCategoryType,
+      store: store,
+    ),
+  );
 }
