@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_svg/svg.dart';
 import 'package:pilll/analytics.dart';
 import 'package:pilll/components/atoms/color.dart';
 import 'package:pilll/components/atoms/font.dart';
@@ -17,8 +18,15 @@ class PillSheetCountSheet extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
+      padding: const EdgeInsets.symmetric(horizontal: 25, vertical: 15),
+      height: 235,
+      decoration: const BoxDecoration(
+          borderRadius: BorderRadius.all(Radius.circular(10))),
       child: Column(
+        crossAxisAlignment: CrossAxisAlignment.center,
         children: [
+          SvgPicture.asset("images/notch.svg"),
+          const SizedBox(height: 24),
           const Text("処方されるシート数は？",
               style: TextStyle(
                 color: TextColor.main,
@@ -26,7 +34,9 @@ class PillSheetCountSheet extends StatelessWidget {
                 fontFamily: FontFamily.japanese,
                 fontWeight: FontWeight.bold,
               )),
+          const SizedBox(height: 40),
           Row(
+            mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
               ...List.generate(6, (index) => index + 1).map((number) {
                 return GestureDetector(
