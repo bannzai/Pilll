@@ -61,7 +61,7 @@ class InitialSettingPillCategoryTypePage extends HookConsumerWidget {
         backgroundColor: PilllColors.background,
         appBar: AppBar(
           title: const Text(
-            "1/4",
+            "1/3",
             style: TextStyle(color: TextColor.black),
           ),
           backgroundColor: PilllColors.white,

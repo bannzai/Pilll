@@ -31,7 +31,7 @@ class InitialSettingSelectTodayPillNumberPage extends HookConsumerWidget {
           onPressed: () => Navigator.of(context).pop(),
         ),
         title: const Text(
-          "3/4",
+          "2/3",
           style: TextStyle(color: TextColor.black),
         ),
         backgroundColor: PilllColors.white,
