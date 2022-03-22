@@ -83,15 +83,18 @@ class InitialSettingStateStore extends StateNotifier<InitialSettingState> {
   }
 
   void selectedPillCategoryType(
-      InitialSettingPillCategoryType pillCategoryType, int? sheetCount) {
+      InitialSettingPillCategoryType pillCategoryType) {
     state = state.copyWith(pillType: pillCategoryType);
     state = state.copyWith(todayPillNumber: null);
 
     switch (pillCategoryType) {
       case InitialSettingPillCategoryType.pill_category_type_yaz_flex:
         state = state.copyWith(
-          pillSheetTypes:
-              List.generate(sheetCount!, (_) => PillSheetType.pillsheet_28_0),
+          pillSheetTypes: [
+            PillSheetType.pillsheet_28_0,
+            PillSheetType.pillsheet_28_0,
+            PillSheetType.pillsheet_28_0,
+          ],
           pillSheetAppearanceMode: PillSheetAppearanceMode.sequential,
         );
         break;
@@ -107,29 +110,41 @@ class InitialSettingStateStore extends StateNotifier<InitialSettingState> {
         break;
       case InitialSettingPillCategoryType.pill_category_type_21_rest_7:
         state = state.copyWith(
-          pillSheetTypes:
-              List.generate(sheetCount!, (_) => PillSheetType.pillsheet_21),
+          pillSheetTypes: [
+            PillSheetType.pillsheet_21,
+            PillSheetType.pillsheet_21,
+            PillSheetType.pillsheet_21,
+          ],
           pillSheetAppearanceMode: PillSheetAppearanceMode.number,
         );
         break;
       case InitialSettingPillCategoryType.pill_category_type_24_fake_4:
         state = state.copyWith(
-          pillSheetTypes:
-              List.generate(sheetCount!, (_) => PillSheetType.pillsheet_28_4),
+          pillSheetTypes: [
+            PillSheetType.pillsheet_28_4,
+            PillSheetType.pillsheet_28_4,
+            PillSheetType.pillsheet_28_4,
+          ],
           pillSheetAppearanceMode: PillSheetAppearanceMode.number,
         );
         break;
       case InitialSettingPillCategoryType.pill_category_type_24_rest_4:
         state = state.copyWith(
-          pillSheetTypes: List.generate(
-              sheetCount!, (_) => PillSheetType.pillsheet_24_rest_4),
+          pillSheetTypes: [
+            PillSheetType.pillsheet_24_rest_4,
+            PillSheetType.pillsheet_24_rest_4,
+            PillSheetType.pillsheet_24_rest_4,
+          ],
           pillSheetAppearanceMode: PillSheetAppearanceMode.number,
         );
         break;
       case InitialSettingPillCategoryType.pill_category_type_21_fake_7:
         state = state.copyWith(
-          pillSheetTypes:
-              List.generate(sheetCount!, (_) => PillSheetType.pillsheet_28_7),
+          pillSheetTypes: [
+            PillSheetType.pillsheet_28_7,
+            PillSheetType.pillsheet_28_7,
+            PillSheetType.pillsheet_28_7,
+          ],
           pillSheetAppearanceMode: PillSheetAppearanceMode.number,
         );
         break;

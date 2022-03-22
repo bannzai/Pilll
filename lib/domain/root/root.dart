@@ -6,7 +6,7 @@ import 'package:firebase_crashlytics/firebase_crashlytics.dart';
 import 'package:firebase_performance/firebase_performance.dart';
 import 'package:pilll/analytics.dart';
 import 'package:pilll/components/page/ok_dialog.dart';
-import 'package:pilll/domain/initial_setting/pill_category_type/initial_setting_pill_category_type_page.dart';
+import 'package:pilll/domain/initial_setting/pill_type/initial_setting_pill_category_type_page.dart';
 import 'package:pilll/entity/config.dart';
 import 'package:pilll/entity/user.dart';
 import 'package:pilll/performance.dart';
