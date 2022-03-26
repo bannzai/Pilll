@@ -141,9 +141,9 @@ class MockSettingService extends _i1.Mock implements _i15.SettingService {
               returnValue: Future<_i3.Setting>.value(_FakeSetting_2()))
           as _i16.Future<_i3.Setting>);
   @override
-  _i3.Setting updateWithBatch(_i12.WriteBatch? batch, _i3.Setting? setting) =>
-      (super.noSuchMethod(Invocation.method(#updateWithBatch, [batch, setting]),
-          returnValue: _FakeSetting_2()) as _i3.Setting);
+  void updateWithBatch(_i12.WriteBatch? batch, _i3.Setting? setting) =>
+      super.noSuchMethod(Invocation.method(#updateWithBatch, [batch, setting]),
+          returnValueForMissingStub: null);
 }
 
 /// A class which mocks [Analytics].
