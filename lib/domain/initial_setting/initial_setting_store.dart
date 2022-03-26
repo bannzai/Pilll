@@ -25,6 +25,7 @@ import 'package:riverpod/riverpod.dart';
 final initialSettingStoreProvider = StateNotifierProvider.autoDispose<
     InitialSettingStateStore, InitialSettingState>(
   (ref) => InitialSettingStateStore(
+    ref.watch(userServiceProvider),
     ref.watch(batchFactoryProvider),
     ref.watch(settingServiceProvider),
     ref.watch(pillSheetServiceProvider),
@@ -38,6 +39,7 @@ final initialSettingStateProvider =
     StateProvider.autoDispose((ref) => ref.watch(initialSettingStoreProvider));
 
 class InitialSettingStateStore extends StateNotifier<InitialSettingState> {
+  final UserService _userService;
   final BatchFactory _batchFactory;
   final SettingService _settingService;
   final PillSheetService _pillSheetService;
@@ -46,6 +48,7 @@ class InitialSettingStateStore extends StateNotifier<InitialSettingState> {
   final AuthService _authService;
 
   InitialSettingStateStore(
+    this._userService,
     this._batchFactory,
     this._settingService,
     this._pillSheetService,
@@ -237,9 +240,12 @@ class InitialSettingStateStore extends StateNotifier<InitialSettingState> {
       _pillSheetModifiedHistoryService.add(batch, history);
     }
 
-    _settingService.updateWithBatch(batch, state.buildSetting());
+    final setting =
+        _settingService.updateWithBatch(batch, state.buildSetting());
 
     await batch.commit();
+
+    await _userService.trial(setting);
   }
 
   showHUD() {
