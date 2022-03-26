@@ -26,6 +26,7 @@ class IntiialSettingPremiumTrialStartPage extends HookConsumerWidget {
       body: SafeArea(
         child: Column(
           children: [
+            const Spacer(),
             SvgPicture.asset("images/premium_trial_ribbon.svg"),
             Column(
               children: [
@@ -62,13 +63,17 @@ class IntiialSettingPremiumTrialStartPage extends HookConsumerWidget {
                         ],
                       ),
                       Stack(
+                        clipBehavior: Clip.none,
+                        alignment: AlignmentDirectional.topEnd,
                         children: [
                           Image.asset(
                             "images/quick-record.gif",
                           ),
-                          Align(
-                            alignment: Alignment.topRight,
+                          Positioned(
+                            right: -27,
+                            top: -27,
                             child: Stack(
+                              alignment: AlignmentDirectional.center,
                               children: [
                                 SvgPicture.asset("images/yellow_spike.svg"),
                                 const Text(
