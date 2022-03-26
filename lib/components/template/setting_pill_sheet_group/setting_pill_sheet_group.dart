@@ -1,7 +1,7 @@
 import 'package:pilll/components/template/setting_pill_sheet_group/pill_sheet_type_add_button.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:pilll/domain/initial_setting/pill_sheet_group/initial_setting_pill_sheet_group_pill_sheet_type_select_row.dart';
+import 'package:pilll/components/template/setting_pill_sheet_group/setting_pill_sheet_group_pill_sheet_type_select_row.dart';
 import 'package:pilll/entity/pill_sheet_type.dart';
 
 class SettingPillSheetGroup extends StatelessWidget {
@@ -29,7 +29,7 @@ class SettingPillSheetGroup extends StatelessWidget {
                 index,
                 [
                   const SizedBox(height: 16),
-                  InitialSettingPillSheetGroupPillSheetTypeSelectRow(
+                  SettingPillSheetGroupPillSheetTypeSelectRow(
                     index: index,
                     pillSheetType: pillSheetType,
                     onSelect: onChange,
