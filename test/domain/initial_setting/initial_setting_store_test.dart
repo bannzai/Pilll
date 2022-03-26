@@ -529,7 +529,7 @@ void main() {
       );
 
       final userService = MockUserService();
-      when(userService.trial(setting)).thenReturn(Future.value());
+      when(userService.trial(setting)).thenAnswer((_) => Future.value());
 
       var mockTodayRepository = MockTodayService();
       final _today = DateTime.parse("2020-09-19");
