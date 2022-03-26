@@ -33,7 +33,7 @@ class IntiialSettingPremiumTrialStartPage extends HookConsumerWidget {
                 Container(
                   padding: const EdgeInsets.symmetric(
                     vertical: 16,
-                    horizontal: 26,
+                    horizontal: 44.5,
                   ),
                   color: PilllColors.mat,
                   child: Column(
@@ -62,33 +62,37 @@ class IntiialSettingPremiumTrialStartPage extends HookConsumerWidget {
                           const SizedBox(height: 16),
                         ],
                       ),
-                      Stack(
-                        clipBehavior: Clip.none,
-                        alignment: AlignmentDirectional.topEnd,
-                        children: [
-                          Image.asset(
-                            "images/quick-record.gif",
-                          ),
-                          Positioned(
-                            right: -27,
-                            top: -27,
-                            child: Stack(
-                              alignment: AlignmentDirectional.center,
-                              children: [
-                                SvgPicture.asset("images/yellow_spike.svg"),
-                                const Text(
-                                  "人気の\n機能",
-                                  style: TextStyle(
-                                    color: TextColor.primaryDarkBlue,
-                                    fontSize: 10,
-                                    fontFamily: FontFamily.japanese,
-                                    fontWeight: FontWeight.bold,
-                                  ),
-                                ),
-                              ],
+                      Padding(
+                        padding: const EdgeInsets.only(
+                            left: 24.5, right: 24.5, top: 24),
+                        child: Stack(
+                          clipBehavior: Clip.none,
+                          alignment: AlignmentDirectional.topEnd,
+                          children: [
+                            Image.asset(
+                              "images/quick-record.gif",
                             ),
-                          ),
-                        ],
+                            Positioned(
+                              right: -27,
+                              top: -27,
+                              child: Stack(
+                                alignment: AlignmentDirectional.center,
+                                children: [
+                                  SvgPicture.asset("images/yellow_spike.svg"),
+                                  const Text(
+                                    "人気の\n機能",
+                                    style: TextStyle(
+                                      color: TextColor.primaryDarkBlue,
+                                      fontSize: 10,
+                                      fontFamily: FontFamily.japanese,
+                                      fontWeight: FontWeight.bold,
+                                    ),
+                                  ),
+                                ],
+                              ),
+                            ),
+                          ],
+                        ),
                       ),
                       const SizedBox(height: 12),
                       const Text(
@@ -102,6 +106,7 @@ class IntiialSettingPremiumTrialStartPage extends HookConsumerWidget {
                           fontFamily: FontFamily.japanese,
                           fontWeight: FontWeight.normal,
                         ),
+                        textAlign: TextAlign.center,
                       ),
                     ],
                   ),
@@ -118,6 +123,7 @@ class IntiialSettingPremiumTrialStartPage extends HookConsumerWidget {
                     fontFamily: FontFamily.japanese,
                     fontSize: 12,
                   ),
+                  textAlign: TextAlign.center,
                 ),
               ],
             ),
