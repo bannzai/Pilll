@@ -37,7 +37,7 @@ class SettingService {
             (_) => setting);
   }
 
-  updateWithBatch(WriteBatch batch, Setting setting) {
+  Setting updateWithBatch(WriteBatch batch, Setting setting) {
     batch.set(
       _database.userReference(),
       {UserFirestoreFieldKeys.settings: setting.toJson()},
