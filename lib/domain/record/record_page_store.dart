@@ -89,6 +89,9 @@ class RecordPageStore extends StateNotifier<RecordPageState> {
           final premiumTrialGuideNotificationIsClosed = sharedPreferences
                   .getBool(BoolKey.premiumTrialGuideNotificationIsClosed) ??
               false;
+          final premiumTrialBeginAnouncementIsClosed = sharedPreferences
+                  .getBool(BoolKey.premiumTrialBeginAnouncementIsClosed) ??
+              false;
           state = state.copyWith(
             totalCountOfActionForTakenPill: totalCountOfActionForTakenPill,
             shouldShowMigrateInfo: _shouldShowMigrateInfo,
@@ -106,6 +109,8 @@ class RecordPageStore extends StateNotifier<RecordPageState> {
                 recommendedSignupNotificationIsAlreadyShow,
             premiumTrialGuideNotificationIsClosed:
                 premiumTrialGuideNotificationIsClosed,
+            premiumTrialBeginAnouncementIsClosed:
+                premiumTrialBeginAnouncementIsClosed,
           );
         }),
         Future(() async {
