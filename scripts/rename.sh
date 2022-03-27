@@ -31,6 +31,8 @@ for codegen_file in $CODEGEN_FILES; do
     codegen_file_without_file_extension=$(echo $codegen_file | awk -F'\.' '{print $1}')
     echo $codegen_file_without_file_extension | xargs -I '{}' mv {}.dart {}.codegen.dart
     echo $codegen_file_without_file_extension | xargs -I '{}' mv {}.freezed.dart {}.codegen.freezed.dart
+    set +e
     echo $codegen_file_without_file_extension | xargs -I '{}' mv {}.g.dart {}.codegen.g.dart
+    set -e
   fi
 done
