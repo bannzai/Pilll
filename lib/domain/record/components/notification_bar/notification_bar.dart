@@ -10,6 +10,7 @@ import 'package:pilll/domain/premium_trial/premium_trial_modal.dart';
 import 'package:pilll/domain/record/components/notification_bar/components/announce_supported_multiple_pill_sheet.dart';
 import 'package:pilll/domain/record/components/notification_bar/components/discount_price_deadline.dart';
 import 'package:pilll/domain/record/components/notification_bar/components/ended_pill_sheet.dart';
+import 'package:pilll/domain/record/components/notification_bar/components/premium_trial_begin.dart';
 import 'package:pilll/domain/record/components/notification_bar/notification_bar_store.dart';
 import 'package:pilll/domain/record/components/notification_bar/components/premium_trial_guide.dart';
 import 'package:pilll/domain/record/components/notification_bar/components/premium_trial_limit.dart';
@@ -19,6 +20,7 @@ import 'package:pilll/domain/record/components/notification_bar/components/rest_
 import 'package:pilll/domain/record/record_page_state.codegen.dart';
 import 'package:pilll/signin/signin_sheet.dart';
 import 'package:pilll/signin/signin_sheet_state.codegen.dart';
+import 'package:pilll/util/datetime/day.dart';
 import 'package:pilll/util/shared_preference/keys.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
@@ -48,6 +50,18 @@ class NotificationBar extends HookConsumerWidget {
       if (premiumTrialLimit != null) {
         return PremiumTrialLimitNotificationBar(
             premiumTrialLimit: premiumTrialLimit);
+      }
+
+      if (!state.premiumTrialBeginAnouncementIsClosed) {
+        if (state.isTrial) {
+          final beginTrialDate = state.beginTrialDate;
+          if (beginTrialDate != null) {
+            final between = daysBetween(beginTrialDate, now());
+            if (between <= 3) {
+              return PremiumTrialBegin(latestDay: (30 - between), store: store);
+            }
+          }
+        }
       }
 
       if (state.hasDiscountEntitlement) {

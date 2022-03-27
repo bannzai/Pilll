@@ -73,6 +73,7 @@ class RecordPageStore extends StateNotifier<RecordPageState> {
             hasDiscountEntitlement: user.hasDiscountEntitlement,
             discountEntitlementDeadlineDate:
                 user.discountEntitlementDeadlineDate,
+            beginTrialDate: user.beginTrialDate,
             trialDeadlineDate: user.trialDeadlineDate,
           );
         }),
@@ -88,6 +89,9 @@ class RecordPageStore extends StateNotifier<RecordPageState> {
                   false;
           final premiumTrialGuideNotificationIsClosed = sharedPreferences
                   .getBool(BoolKey.premiumTrialGuideNotificationIsClosed) ??
+              false;
+          final premiumTrialBeginAnouncementIsClosed = sharedPreferences
+                  .getBool(BoolKey.premiumTrialBeginAnouncementIsClosed) ??
               false;
           state = state.copyWith(
             totalCountOfActionForTakenPill: totalCountOfActionForTakenPill,
@@ -106,6 +110,8 @@ class RecordPageStore extends StateNotifier<RecordPageState> {
                 recommendedSignupNotificationIsAlreadyShow,
             premiumTrialGuideNotificationIsClosed:
                 premiumTrialGuideNotificationIsClosed,
+            premiumTrialBeginAnouncementIsClosed:
+                premiumTrialBeginAnouncementIsClosed,
           );
         }),
         Future(() async {
@@ -144,6 +150,7 @@ class RecordPageStore extends StateNotifier<RecordPageState> {
         isPremium: event.isPremium,
         isTrial: event.isTrial,
         hasDiscountEntitlement: event.hasDiscountEntitlement,
+        beginTrialDate: event.beginTrialDate,
         trialDeadlineDate: event.trialDeadlineDate,
         discountEntitlementDeadlineDate: event.discountEntitlementDeadlineDate,
       );
