@@ -14,6 +14,7 @@ import 'package:pilll/service/pill_sheet.dart';
 import 'package:pilll/service/pill_sheet_group.dart';
 import 'package:pilll/service/pill_sheet_modified_history.dart';
 import 'package:pilll/service/setting.dart';
+import 'package:pilll/service/user.dart';
 import 'package:pilll/util/datetime/day.dart';
 import 'package:riverpod/riverpod.dart';
 import 'package:shared_preferences/shared_preferences.dart';
@@ -28,6 +29,7 @@ void main() {
   group("#selectedPillCategoryType", () {
     test("when first selected", () {
       final batchFactory = MockBatchFactory();
+      final userService = MockUserService();
       final authService = MockAuthService();
       when(authService.stream())
           .thenAnswer((realInvocation) => const Stream.empty());
@@ -39,6 +41,7 @@ void main() {
 
       final container = ProviderContainer(
         overrides: [
+          userServiceProvider.overrideWithValue(userService),
           batchFactoryProvider.overrideWithValue(batchFactory),
           authServiceProvider.overrideWithValue(authService),
           settingServiceProvider.overrideWithValue(settingService),
@@ -60,6 +63,7 @@ void main() {
       ]);
     });
     test("overwrite pill sheet type", () {
+      final userService = MockUserService();
       final batchFactory = MockBatchFactory();
       final authService = MockAuthService();
       when(authService.stream())
@@ -72,6 +76,7 @@ void main() {
 
       final container = ProviderContainer(
         overrides: [
+          userServiceProvider.overrideWithValue(userService),
           batchFactoryProvider.overrideWithValue(batchFactory),
           authServiceProvider.overrideWithValue(authService),
           settingServiceProvider.overrideWithValue(settingService),
@@ -102,6 +107,7 @@ void main() {
     });
 
     test("reset todayPillNumber", () {
+      final userService = MockUserService();
       final batchFactory = MockBatchFactory();
       final authService = MockAuthService();
       when(authService.stream())
@@ -114,6 +120,7 @@ void main() {
 
       final container = ProviderContainer(
         overrides: [
+          userServiceProvider.overrideWithValue(userService),
           batchFactoryProvider.overrideWithValue(batchFactory),
           authServiceProvider.overrideWithValue(authService),
           settingServiceProvider.overrideWithValue(settingService),
@@ -146,6 +153,7 @@ void main() {
   });
   group("#addPillSheetType", () {
     test("add new one", () {
+      final userService = MockUserService();
       final batchFactory = MockBatchFactory();
       final authService = MockAuthService();
       when(authService.stream())
@@ -158,6 +166,7 @@ void main() {
 
       final container = ProviderContainer(
         overrides: [
+          userServiceProvider.overrideWithValue(userService),
           batchFactoryProvider.overrideWithValue(batchFactory),
           authServiceProvider.overrideWithValue(authService),
           settingServiceProvider.overrideWithValue(settingService),
@@ -183,6 +192,7 @@ void main() {
   });
   group("#changePillSheetType", () {
     test("replace with index", () {
+      final userService = MockUserService();
       final batchFactory = MockBatchFactory();
       final authService = MockAuthService();
       when(authService.stream())
@@ -195,6 +205,7 @@ void main() {
 
       final container = ProviderContainer(
         overrides: [
+          userServiceProvider.overrideWithValue(userService),
           batchFactoryProvider.overrideWithValue(batchFactory),
           authServiceProvider.overrideWithValue(authService),
           settingServiceProvider.overrideWithValue(settingService),
@@ -221,6 +232,7 @@ void main() {
   });
   group("#removePillSheetType", () {
     test("remove with index", () {
+      final userService = MockUserService();
       final batchFactory = MockBatchFactory();
       final authService = MockAuthService();
       when(authService.stream())
@@ -233,6 +245,7 @@ void main() {
 
       final container = ProviderContainer(
         overrides: [
+          userServiceProvider.overrideWithValue(userService),
           batchFactoryProvider.overrideWithValue(batchFactory),
           authServiceProvider.overrideWithValue(authService),
           settingServiceProvider.overrideWithValue(settingService),
@@ -259,6 +272,7 @@ void main() {
   });
   group("#setReminderTime", () {
     test("replace default reminderTime", () {
+      final userService = MockUserService();
       final batchFactory = MockBatchFactory();
       final authService = MockAuthService();
       when(authService.stream())
@@ -271,6 +285,7 @@ void main() {
 
       final container = ProviderContainer(
         overrides: [
+          userServiceProvider.overrideWithValue(userService),
           batchFactoryProvider.overrideWithValue(batchFactory),
           authServiceProvider.overrideWithValue(authService),
           settingServiceProvider.overrideWithValue(settingService),
@@ -290,6 +305,7 @@ void main() {
       ]);
     });
     test("add reminderTime", () {
+      final userService = MockUserService();
       final batchFactory = MockBatchFactory();
       final authService = MockAuthService();
       when(authService.stream())
@@ -302,6 +318,7 @@ void main() {
 
       final container = ProviderContainer(
         overrides: [
+          userServiceProvider.overrideWithValue(userService),
           batchFactoryProvider.overrideWithValue(batchFactory),
           authServiceProvider.overrideWithValue(authService),
           settingServiceProvider.overrideWithValue(settingService),
@@ -324,6 +341,7 @@ void main() {
   });
   group("#register", () {
     test("state.pillSheetTypes has one pillSheetType", () {
+      final userService = MockUserService();
       var mockTodayRepository = MockTodayService();
       final _today = DateTime.parse("2020-09-19");
       todayRepository = mockTodayRepository;
@@ -374,6 +392,7 @@ void main() {
 
       final container = ProviderContainer(
         overrides: [
+          userServiceProvider.overrideWithValue(userService),
           batchFactoryProvider.overrideWithValue(batchFactory),
           authServiceProvider.overrideWithValue(authService),
           settingServiceProvider.overrideWithValue(settingService),
@@ -396,6 +415,7 @@ void main() {
       store.register();
     });
     test("state.pillSheetTypes has two pillSheetType", () {
+      final userService = MockUserService();
       var mockTodayRepository = MockTodayService();
       final _today = DateTime.parse("2020-09-19");
       todayRepository = mockTodayRepository;
@@ -471,6 +491,7 @@ void main() {
 
       final container = ProviderContainer(
         overrides: [
+          userServiceProvider.overrideWithValue(userService),
           batchFactoryProvider.overrideWithValue(batchFactory),
           authServiceProvider.overrideWithValue(authService),
           settingServiceProvider.overrideWithValue(settingService),
@@ -496,6 +517,20 @@ void main() {
 
     // ref: https://github.com/bannzai/Pilll/pull/534
     test("state.pillSheetTypes is [PillSheetType.pillsheet_24_rest_4]", () {
+      final setting = const Setting(
+        pillNumberForFromMenstruation: 24,
+        durationMenstruation: 4,
+        isOnReminder: true,
+        reminderTimes: [
+          ReminderTime(hour: 21, minute: 20),
+          ReminderTime(hour: 22, minute: 0)
+        ],
+        pillSheetTypes: [PillSheetType.pillsheet_24_rest_4],
+      );
+
+      final userService = MockUserService();
+      when(userService.trial(setting)).thenAnswer((_) => Future.value());
+
       var mockTodayRepository = MockTodayService();
       final _today = DateTime.parse("2020-09-19");
       todayRepository = mockTodayRepository;
@@ -532,21 +567,12 @@ void main() {
       when(pillSheetModifiedHistoryService.add(batch, history))
           .thenReturn(null);
 
-      final setting = const Setting(
-        pillNumberForFromMenstruation: 24,
-        durationMenstruation: 4,
-        isOnReminder: true,
-        reminderTimes: [
-          ReminderTime(hour: 21, minute: 20),
-          ReminderTime(hour: 22, minute: 0)
-        ],
-        pillSheetTypes: [PillSheetType.pillsheet_24_rest_4],
-      );
       final settingService = MockSettingService();
       when(settingService.updateWithBatch(batch, setting)).thenReturn(null);
 
       final container = ProviderContainer(
         overrides: [
+          userServiceProvider.overrideWithValue(userService),
           batchFactoryProvider.overrideWithValue(batchFactory),
           authServiceProvider.overrideWithValue(authService),
           settingServiceProvider.overrideWithValue(settingService),

@@ -1,7 +1,6 @@
 import 'package:pilll/analytics.dart';
 import 'package:pilll/domain/initial_setting/initial_setting_state.dart';
-import 'package:pilll/error/error_alert.dart';
-import 'package:pilll/router/router.dart';
+import 'package:pilll/domain/initial_setting/premium_trial/initial_setting_premium_trial_start_page.dart';
 import 'package:pilll/domain/initial_setting/initial_setting_store.dart';
 import 'package:pilll/components/atoms/buttons.dart';
 import 'package:pilll/components/atoms/color.dart';
@@ -179,16 +178,12 @@ class InitialSettingReminderTimesPage extends HookConsumerWidget {
                     ),
                     const SizedBox(height: 24),
                     PrimaryButton(
-                      text: "設定完了",
+                      text: "次へ",
                       onPressed: () async {
                         analytics.logEvent(
                             name: "next_initial_setting_reminder_times");
-                        try {
-                          await store.register();
-                          AppRouter.endInitialSetting(context);
-                        } catch (error) {
-                          showErrorAlert(context, message: error.toString());
-                        }
+                        Navigator.of(context).push(
+                            IntiialSettingPremiumTrialStartPageRoute.route());
                       },
                     ),
                   ],
