@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:pilll/analytics.dart';
 import 'package:pilll/components/atoms/font.dart';
 import 'package:pilll/domain/settings/reminder_times_page.dart';
-import 'package:pilll/entity/setting.codegen.dart';
+import 'package:pilll/entity/setting.dart';
 import 'package:pilll/util/formatter/date_time_formatter.dart';
 
 class NotificationTimeRow extends StatelessWidget {

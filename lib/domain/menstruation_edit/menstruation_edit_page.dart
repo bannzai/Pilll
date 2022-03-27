@@ -11,7 +11,7 @@ import 'package:pilll/domain/menstruation_edit/components/calendar/calendar_date
 import 'package:pilll/components/organisms/calendar/weekly/weekly_calendar.dart';
 import 'package:pilll/domain/menstruation_edit/components/calendar/weekly_calendar_state.dart';
 import 'package:pilll/domain/menstruation_edit/components/monthly_calendar_state.dart';
-import 'package:pilll/entity/menstruation.codegen.dart';
+import 'package:pilll/entity/menstruation.dart';
 import 'package:pilll/domain/menstruation_edit/menstruation_edit_store.dart';
 import 'package:pilll/util/formatter/date_time_formatter.dart';
 

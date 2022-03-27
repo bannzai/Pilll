@@ -7,7 +7,7 @@ import 'package:pilll/domain/premium_introduction/premium_introduction_sheet.dar
 import 'package:pilll/domain/premium_trial/premium_trial_complete_modal.dart';
 import 'package:pilll/domain/premium_trial/premium_trial_modal.dart';
 import 'package:pilll/domain/settings/reminder_notification_customize_word_page.dart';
-import 'package:pilll/entity/setting.codegen.dart';
+import 'package:pilll/entity/setting.dart';
 
 class ReminderNotificationCustomizeWord extends HookConsumerWidget {
   final Setting setting;
