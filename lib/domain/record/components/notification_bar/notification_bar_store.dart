@@ -56,6 +56,13 @@ class NotificationBarStateStore extends StateNotifier<NotificationBarState> {
     state = state.copyWith(premiumTrialGuideNotificationIsClosed: true);
   }
 
+  Future<void> closePremiumTrialBeginNotification() async {
+    final sharedPreferences = await SharedPreferences.getInstance();
+    sharedPreferences.setBool(
+        BoolKey.premiumTrialBeginAnouncementIsClosed, true);
+    state = state.copyWith(premiumTrialBeginAnouncementIsClosed: true);
+  }
+
   Future<void>
       setTrueIsAlreadyShowAnnouncementSupportedMultilplePillSheet() async {
     final sharedPreferences = await SharedPreferences.getInstance();
