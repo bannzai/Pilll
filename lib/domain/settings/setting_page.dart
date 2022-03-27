@@ -20,7 +20,7 @@ import 'package:pilll/domain/settings/components/rows/taking_pill_notification.d
 import 'package:pilll/domain/settings/components/rows/today_pill_number.dart';
 import 'package:pilll/domain/settings/components/rows/update_from_132.dart';
 import 'package:pilll/domain/settings/components/setting_section_title.dart';
-import 'package:pilll/domain/settings/setting_page_state.dart';
+import 'package:pilll/domain/settings/setting_page_state.codegen.dart';
 import 'package:pilll/error/universal_error_page.dart';
 import 'package:pilll/hooks/automatic_keep_alive_client_mixin.dart';
 import 'package:pilll/inquiry/inquiry.dart';

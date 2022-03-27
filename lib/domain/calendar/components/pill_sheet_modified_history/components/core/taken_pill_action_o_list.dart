@@ -2,9 +2,9 @@ import 'dart:math';
 
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
-import 'package:pilll/entity/pill_sheet.dart';
+import 'package:pilll/entity/pill_sheet.codegen.dart';
 import 'package:pilll/entity/pill_sheet_type.dart';
-import 'package:pilll/entity/pill_sheet_modified_history_value.dart';
+import 'package:pilll/entity/pill_sheet_modified_history_value.codegen.dart';
 
 class TakenPillActionOList extends StatelessWidget {
   final TakenPillValue value;

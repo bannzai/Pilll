@@ -1,9 +1,9 @@
 import 'package:flutter_hooks/flutter_hooks.dart';
 import 'package:pilll/analytics.dart';
-import 'package:pilll/domain/diary/diary_state.dart';
+import 'package:pilll/domain/diary/diary_state.codegen.dart';
 import 'package:pilll/domain/diary/post_diary_store.dart';
-import 'package:pilll/domain/diary/post_diary_store_provider_family.dart';
-import 'package:pilll/entity/diary.dart';
+import 'package:pilll/domain/diary/post_diary_store_provider_family.codegen.dart';
+import 'package:pilll/entity/diary.codegen.dart';
 import 'package:pilll/service/diary.dart';
 import 'package:pilll/components/atoms/buttons.dart';
 import 'package:pilll/components/atoms/color.dart';
