@@ -21,7 +21,7 @@ class PremiumTrialBegin extends HookConsumerWidget {
   @override
   Widget build(BuildContext context, WidgetRef ref) {
     return Container(
-      padding: const EdgeInsets.symmetric(vertical: 10, horizontal: 8),
+      padding: const EdgeInsets.symmetric(horizontal: 8),
       child: GestureDetector(
         onTap: () async {
           analytics.logEvent(name: "p_premium_trial_begin_n_b");
@@ -30,18 +30,19 @@ class PremiumTrialBegin extends HookConsumerWidget {
         child: Row(
           crossAxisAlignment: CrossAxisAlignment.center,
           children: [
-            IconButton(
-              icon: const Icon(
-                Icons.close,
-                color: Colors.white,
-                size: 24,
-              ),
-              onPressed: () {
+            GestureDetector(
+              onTap: () {
                 analytics.logEvent(name: "p_premium_trial_begin_n_b_close");
                 store.closePremiumTrialBeginNotification();
               },
-              iconSize: 24,
-              padding: EdgeInsets.zero,
+              child: const Padding(
+                padding: const EdgeInsets.symmetric(vertical: 10),
+                child: const Icon(
+                  Icons.close,
+                  color: Colors.white,
+                  size: 24,
+                ),
+              ),
             ),
             const Spacer(),
             Text(
