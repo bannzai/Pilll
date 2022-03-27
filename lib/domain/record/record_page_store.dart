@@ -1,6 +1,7 @@
 import 'dart:async';
 import 'dart:math';
 
+import 'package:flutter/material.dart';
 import 'package:pilll/database/batch.dart';
 import 'package:pilll/domain/record/util/take.dart';
 import 'package:pilll/entity/pill_mark_type.dart';
@@ -357,7 +358,7 @@ class RecordPageStore extends StateNotifier<RecordPageState> {
       batch,
       updatedPillSheets,
     );
-    _pillSheetGroupService.update(batch, updatedPillSheetGroup);
+    _pillSheetGroupService.updateWithBatch(batch, updatedPillSheetGroup);
 
     final before = pillSheetGroup.pillSheets[updatedIndexses.last];
     final after = updatedPillSheetGroup.pillSheets[updatedIndexses.first];
@@ -490,7 +491,7 @@ class RecordPageStore extends StateNotifier<RecordPageState> {
 
     final batch = _batchFactory.batch();
     _pillSheetService.update(batch, updatedPillSheetGroup.pillSheets);
-    _pillSheetGroupService.update(batch, updatedPillSheetGroup);
+    _pillSheetGroupService.updateWithBatch(batch, updatedPillSheetGroup);
     _pillSheetModifiedHistoryService.add(
       batch,
       PillSheetModifiedHistoryServiceActionFactory
@@ -523,7 +524,7 @@ class RecordPageStore extends StateNotifier<RecordPageState> {
 
     final batch = _batchFactory.batch();
     _pillSheetService.update(batch, updatedPillSheetGroup.pillSheets);
-    _pillSheetGroupService.update(batch, updatedPillSheetGroup);
+    _pillSheetGroupService.updateWithBatch(batch, updatedPillSheetGroup);
     _pillSheetModifiedHistoryService.add(
       batch,
       PillSheetModifiedHistoryServiceActionFactory
@@ -577,6 +578,8 @@ class RecordPageStore extends StateNotifier<RecordPageState> {
           pillSheetGroup.copyWith(offsetPillNumber: newOffsetPillNumber);
       state = state.copyWith(pillSheetGroup: updatedPillSheetGroup);
     }
+    
+    _pillSheetGroupService.updateWithBatch(batch, pillSheetGroup)
   }
 
   switchingAppearanceMode(PillSheetAppearanceMode mode) {

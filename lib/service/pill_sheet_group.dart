@@ -61,7 +61,7 @@ class PillSheetGroupService {
     return updated;
   }
 
-  update(WriteBatch batch, PillSheetGroup pillSheetGroup) {
+  updateWithBatch(WriteBatch batch, PillSheetGroup pillSheetGroup) {
     final json = pillSheetGroup.toJson();
     batch.update(_database.pillSheetGroupReference(pillSheetGroup.id!), json);
   }

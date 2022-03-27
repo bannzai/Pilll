@@ -738,7 +738,7 @@ class MockPillSheetGroupService extends _i1.Mock
       (super.noSuchMethod(Invocation.method(#delete, [batch, pillSheetGroup]),
           returnValue: _FakePillSheetGroup_9()) as _i10.PillSheetGroup);
   @override
-  dynamic update(_i12.WriteBatch? batch, _i10.PillSheetGroup? pillSheetGroup) =>
+  dynamic updateWithBatch(_i12.WriteBatch? batch, _i10.PillSheetGroup? pillSheetGroup) =>
       super.noSuchMethod(Invocation.method(#update, [batch, pillSheetGroup]));
 }
 

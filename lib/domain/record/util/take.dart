@@ -97,7 +97,7 @@ Future<PillSheetGroup?> take({
     batch,
     updatedPillSheets,
   );
-  pillSheetGroupService.update(batch, updatedPillSheetGroup);
+  pillSheetGroupService.updateWithBatch(batch, updatedPillSheetGroup);
 
   final before = pillSheetGroup.pillSheets[updatedIndexses.first];
   final after = updatedPillSheetGroup.pillSheets[updatedIndexses.last];

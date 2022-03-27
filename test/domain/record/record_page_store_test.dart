@@ -274,7 +274,7 @@ void main() {
           .thenAnswer((realInvocation) async => pillSheetGroup);
       when(pillSheetGroupService.streamForLatest())
           .thenAnswer((realInvocation) => const Stream.empty());
-      when(pillSheetGroupService.update(batch, updatedPillSheetGroup))
+      when(pillSheetGroupService.updateWithBatch(batch, updatedPillSheetGroup))
           .thenReturn(null);
 
       final history =
@@ -394,7 +394,7 @@ void main() {
           .thenAnswer((realInvocation) async => pillSheetGroup);
       when(pillSheetGroupService.streamForLatest())
           .thenAnswer((realInvocation) => const Stream.empty());
-      when(pillSheetGroupService.update(batch, updatedPillSheetGroup))
+      when(pillSheetGroupService.updateWithBatch(batch, updatedPillSheetGroup))
           .thenReturn(null);
 
       final history =
@@ -516,7 +516,7 @@ void main() {
           .thenAnswer((realInvocation) async => pillSheetGroup);
       when(pillSheetGroupService.streamForLatest())
           .thenAnswer((realInvocation) => const Stream.empty());
-      when(pillSheetGroupService.update(batch, updatedPillSheetGroup))
+      when(pillSheetGroupService.updateWithBatch(batch, updatedPillSheetGroup))
           .thenReturn(null);
 
       final history =
@@ -641,7 +641,7 @@ void main() {
           .thenAnswer((realInvocation) async => pillSheetGroup);
       when(pillSheetGroupService.streamForLatest())
           .thenAnswer((realInvocation) => const Stream.empty());
-      when(pillSheetGroupService.update(batch, updatedPillSheetGroup))
+      when(pillSheetGroupService.updateWithBatch(batch, updatedPillSheetGroup))
           .thenReturn(null);
 
       final history =
@@ -759,7 +759,7 @@ void main() {
             .thenAnswer((realInvocation) async => pillSheetGroup);
         when(pillSheetGroupService.streamForLatest())
             .thenAnswer((realInvocation) => const Stream.empty());
-        when(pillSheetGroupService.update(batch, updatedPillSheetGroup))
+        when(pillSheetGroupService.updateWithBatch(batch, updatedPillSheetGroup))
             .thenReturn(null);
 
         final history = PillSheetModifiedHistoryServiceActionFactory
@@ -872,7 +872,7 @@ void main() {
             .thenAnswer((realInvocation) async => pillSheetGroup);
         when(pillSheetGroupService.streamForLatest())
             .thenAnswer((realInvocation) => const Stream.empty());
-        when(pillSheetGroupService.update(batch, updatedPillSheetGroup))
+        when(pillSheetGroupService.updateWithBatch(batch, updatedPillSheetGroup))
             .thenReturn(null);
 
         final history = PillSheetModifiedHistoryServiceActionFactory
@@ -999,7 +999,7 @@ void main() {
             .thenAnswer((realInvocation) async => pillSheetGroup);
         when(pillSheetGroupService.streamForLatest())
             .thenAnswer((realInvocation) => const Stream.empty());
-        when(pillSheetGroupService.update(batch, updatedPillSheetGroup))
+        when(pillSheetGroupService.updateWithBatch(batch, updatedPillSheetGroup))
             .thenReturn(null);
 
         final history = PillSheetModifiedHistoryServiceActionFactory
@@ -1122,7 +1122,7 @@ void main() {
             .thenAnswer((realInvocation) async => pillSheetGroup);
         when(pillSheetGroupService.streamForLatest())
             .thenAnswer((realInvocation) => const Stream.empty());
-        when(pillSheetGroupService.update(batch, updatedPillSheetGroup))
+        when(pillSheetGroupService.updateWithBatch(batch, updatedPillSheetGroup))
             .thenReturn(null);
 
         final history = PillSheetModifiedHistoryServiceActionFactory
@@ -1245,7 +1245,7 @@ void main() {
             .thenAnswer((realInvocation) async => pillSheetGroup);
         when(pillSheetGroupService.streamForLatest())
             .thenAnswer((realInvocation) => const Stream.empty());
-        when(pillSheetGroupService.update(batch, updatedPillSheetGroup))
+        when(pillSheetGroupService.updateWithBatch(batch, updatedPillSheetGroup))
             .thenReturn(null);
 
         final history = PillSheetModifiedHistoryServiceActionFactory
@@ -1376,7 +1376,7 @@ void main() {
             .thenAnswer((realInvocation) async => pillSheetGroup);
         when(pillSheetGroupService.streamForLatest())
             .thenAnswer((realInvocation) => const Stream.empty());
-        when(pillSheetGroupService.update(batch, updatedPillSheetGroup))
+        when(pillSheetGroupService.updateWithBatch(batch, updatedPillSheetGroup))
             .thenReturn(null);
 
         final history = PillSheetModifiedHistoryServiceActionFactory
@@ -1509,7 +1509,7 @@ void main() {
             .thenAnswer((realInvocation) async => pillSheetGroup);
         when(pillSheetGroupService.streamForLatest())
             .thenAnswer((realInvocation) => const Stream.empty());
-        when(pillSheetGroupService.update(batch, updatedPillSheetGroup))
+        when(pillSheetGroupService.updateWithBatch(batch, updatedPillSheetGroup))
             .thenReturn(null);
 
         final history = PillSheetModifiedHistoryServiceActionFactory
