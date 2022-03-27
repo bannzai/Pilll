@@ -1,10 +1,14 @@
 targets:
   $default:
     builders:
-      freezed:freezed:
+      freezed:
         generate_for:
           include:
-            - lib/**.codegen.dart
+            - lib/**/*.codegen.dart
+      json_serializable:
+        generate_for:
+          include:
+            - lib/**/*.codegen.dart
       mockito:mockBuilder:
         generate_for:
-          - test/*/*.dart
+          - test/helper/mock.dart
