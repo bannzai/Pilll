@@ -242,178 +242,6 @@ abstract class _PillSheetTypeInfo implements PillSheetTypeInfo {
       throw _privateConstructorUsedError;
 }
 
-OffsetPillNumber _$OffsetPillNumberFromJson(Map<String, dynamic> json) {
-  return _OffsetPillNumber.fromJson(json);
-}
-
-/// @nodoc
-class _$OffsetPillNumberTearOff {
-  const _$OffsetPillNumberTearOff();
-
-  _OffsetPillNumber call({int? beginPillNumber, int? endPillNumber}) {
-    return _OffsetPillNumber(
-      beginPillNumber: beginPillNumber,
-      endPillNumber: endPillNumber,
-    );
-  }
-
-  OffsetPillNumber fromJson(Map<String, Object?> json) {
-    return OffsetPillNumber.fromJson(json);
-  }
-}
-
-/// @nodoc
-const $OffsetPillNumber = _$OffsetPillNumberTearOff();
-
-/// @nodoc
-mixin _$OffsetPillNumber {
-  int? get beginPillNumber => throw _privateConstructorUsedError;
-  int? get endPillNumber => throw _privateConstructorUsedError;
-
-  Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
-  $OffsetPillNumberCopyWith<OffsetPillNumber> get copyWith =>
-      throw _privateConstructorUsedError;
-}
-
-/// @nodoc
-abstract class $OffsetPillNumberCopyWith<$Res> {
-  factory $OffsetPillNumberCopyWith(
-          OffsetPillNumber value, $Res Function(OffsetPillNumber) then) =
-      _$OffsetPillNumberCopyWithImpl<$Res>;
-  $Res call({int? beginPillNumber, int? endPillNumber});
-}
-
-/// @nodoc
-class _$OffsetPillNumberCopyWithImpl<$Res>
-    implements $OffsetPillNumberCopyWith<$Res> {
-  _$OffsetPillNumberCopyWithImpl(this._value, this._then);
-
-  final OffsetPillNumber _value;
-  // ignore: unused_field
-  final $Res Function(OffsetPillNumber) _then;
-
-  @override
-  $Res call({
-    Object? beginPillNumber = freezed,
-    Object? endPillNumber = freezed,
-  }) {
-    return _then(_value.copyWith(
-      beginPillNumber: beginPillNumber == freezed
-          ? _value.beginPillNumber
-          : beginPillNumber // ignore: cast_nullable_to_non_nullable
-              as int?,
-      endPillNumber: endPillNumber == freezed
-          ? _value.endPillNumber
-          : endPillNumber // ignore: cast_nullable_to_non_nullable
-              as int?,
-    ));
-  }
-}
-
-/// @nodoc
-abstract class _$OffsetPillNumberCopyWith<$Res>
-    implements $OffsetPillNumberCopyWith<$Res> {
-  factory _$OffsetPillNumberCopyWith(
-          _OffsetPillNumber value, $Res Function(_OffsetPillNumber) then) =
-      __$OffsetPillNumberCopyWithImpl<$Res>;
-  @override
-  $Res call({int? beginPillNumber, int? endPillNumber});
-}
-
-/// @nodoc
-class __$OffsetPillNumberCopyWithImpl<$Res>
-    extends _$OffsetPillNumberCopyWithImpl<$Res>
-    implements _$OffsetPillNumberCopyWith<$Res> {
-  __$OffsetPillNumberCopyWithImpl(
-      _OffsetPillNumber _value, $Res Function(_OffsetPillNumber) _then)
-      : super(_value, (v) => _then(v as _OffsetPillNumber));
-
-  @override
-  _OffsetPillNumber get _value => super._value as _OffsetPillNumber;
-
-  @override
-  $Res call({
-    Object? beginPillNumber = freezed,
-    Object? endPillNumber = freezed,
-  }) {
-    return _then(_OffsetPillNumber(
-      beginPillNumber: beginPillNumber == freezed
-          ? _value.beginPillNumber
-          : beginPillNumber // ignore: cast_nullable_to_non_nullable
-              as int?,
-      endPillNumber: endPillNumber == freezed
-          ? _value.endPillNumber
-          : endPillNumber // ignore: cast_nullable_to_non_nullable
-              as int?,
-    ));
-  }
-}
-
-/// @nodoc
-
-@JsonSerializable(explicitToJson: true)
-class _$_OffsetPillNumber implements _OffsetPillNumber {
-  const _$_OffsetPillNumber({this.beginPillNumber, this.endPillNumber});
-
-  factory _$_OffsetPillNumber.fromJson(Map<String, dynamic> json) =>
-      _$$_OffsetPillNumberFromJson(json);
-
-  @override
-  final int? beginPillNumber;
-  @override
-  final int? endPillNumber;
-
-  @override
-  String toString() {
-    return 'OffsetPillNumber(beginPillNumber: $beginPillNumber, endPillNumber: $endPillNumber)';
-  }
-
-  @override
-  bool operator ==(dynamic other) {
-    return identical(this, other) ||
-        (other.runtimeType == runtimeType &&
-            other is _OffsetPillNumber &&
-            const DeepCollectionEquality()
-                .equals(other.beginPillNumber, beginPillNumber) &&
-            const DeepCollectionEquality()
-                .equals(other.endPillNumber, endPillNumber));
-  }
-
-  @override
-  int get hashCode => Object.hash(
-      runtimeType,
-      const DeepCollectionEquality().hash(beginPillNumber),
-      const DeepCollectionEquality().hash(endPillNumber));
-
-  @JsonKey(ignore: true)
-  @override
-  _$OffsetPillNumberCopyWith<_OffsetPillNumber> get copyWith =>
-      __$OffsetPillNumberCopyWithImpl<_OffsetPillNumber>(this, _$identity);
-
-  @override
-  Map<String, dynamic> toJson() {
-    return _$$_OffsetPillNumberToJson(this);
-  }
-}
-
-abstract class _OffsetPillNumber implements OffsetPillNumber {
-  const factory _OffsetPillNumber({int? beginPillNumber, int? endPillNumber}) =
-      _$_OffsetPillNumber;
-
-  factory _OffsetPillNumber.fromJson(Map<String, dynamic> json) =
-      _$_OffsetPillNumber.fromJson;
-
-  @override
-  int? get beginPillNumber;
-  @override
-  int? get endPillNumber;
-  @override
-  @JsonKey(ignore: true)
-  _$OffsetPillNumberCopyWith<_OffsetPillNumber> get copyWith =>
-      throw _privateConstructorUsedError;
-}
-
 RestDuration _$RestDurationFromJson(Map<String, dynamic> json) {
   return _RestDuration.fromJson(json);
 }
@@ -679,8 +507,7 @@ class _$PillSheetTearOff {
       @JsonKey(fromJson: TimestampConverter.timestampToDateTime, toJson: TimestampConverter.dateTimeToTimestamp)
           DateTime? deletedAt,
       int groupIndex = 0,
-      List<RestDuration> restDurations = const [],
-      OffsetPillNumber? offsetPillNumber}) {
+      List<RestDuration> restDurations = const []}) {
     return _PillSheet(
       id: id,
       typeInfo: typeInfo,
@@ -690,7 +517,6 @@ class _$PillSheetTearOff {
       deletedAt: deletedAt,
       groupIndex: groupIndex,
       restDurations: restDurations,
-      offsetPillNumber: offsetPillNumber,
     );
   }
 
@@ -726,7 +552,6 @@ mixin _$PillSheet {
   DateTime? get deletedAt => throw _privateConstructorUsedError;
   int get groupIndex => throw _privateConstructorUsedError;
   List<RestDuration> get restDurations => throw _privateConstructorUsedError;
-  OffsetPillNumber? get offsetPillNumber => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
@@ -752,11 +577,9 @@ abstract class $PillSheetCopyWith<$Res> {
       @JsonKey(fromJson: TimestampConverter.timestampToDateTime, toJson: TimestampConverter.dateTimeToTimestamp)
           DateTime? deletedAt,
       int groupIndex,
-      List<RestDuration> restDurations,
-      OffsetPillNumber? offsetPillNumber});
+      List<RestDuration> restDurations});
 
   $PillSheetTypeInfoCopyWith<$Res> get typeInfo;
-  $OffsetPillNumberCopyWith<$Res>? get offsetPillNumber;
 }
 
 /// @nodoc
@@ -777,7 +600,6 @@ class _$PillSheetCopyWithImpl<$Res> implements $PillSheetCopyWith<$Res> {
     Object? deletedAt = freezed,
     Object? groupIndex = freezed,
     Object? restDurations = freezed,
-    Object? offsetPillNumber = freezed,
   }) {
     return _then(_value.copyWith(
       id: id == freezed
@@ -812,10 +634,6 @@ class _$PillSheetCopyWithImpl<$Res> implements $PillSheetCopyWith<$Res> {
           ? _value.restDurations
           : restDurations // ignore: cast_nullable_to_non_nullable
               as List<RestDuration>,
-      offsetPillNumber: offsetPillNumber == freezed
-          ? _value.offsetPillNumber
-          : offsetPillNumber // ignore: cast_nullable_to_non_nullable
-              as OffsetPillNumber?,
     ));
   }
 
@@ -823,17 +641,6 @@ class _$PillSheetCopyWithImpl<$Res> implements $PillSheetCopyWith<$Res> {
   $PillSheetTypeInfoCopyWith<$Res> get typeInfo {
     return $PillSheetTypeInfoCopyWith<$Res>(_value.typeInfo, (value) {
       return _then(_value.copyWith(typeInfo: value));
-    });
-  }
-
-  @override
-  $OffsetPillNumberCopyWith<$Res>? get offsetPillNumber {
-    if (_value.offsetPillNumber == null) {
-      return null;
-    }
-
-    return $OffsetPillNumberCopyWith<$Res>(_value.offsetPillNumber!, (value) {
-      return _then(_value.copyWith(offsetPillNumber: value));
     });
   }
 }
@@ -858,13 +665,10 @@ abstract class _$PillSheetCopyWith<$Res> implements $PillSheetCopyWith<$Res> {
       @JsonKey(fromJson: TimestampConverter.timestampToDateTime, toJson: TimestampConverter.dateTimeToTimestamp)
           DateTime? deletedAt,
       int groupIndex,
-      List<RestDuration> restDurations,
-      OffsetPillNumber? offsetPillNumber});
+      List<RestDuration> restDurations});
 
   @override
   $PillSheetTypeInfoCopyWith<$Res> get typeInfo;
-  @override
-  $OffsetPillNumberCopyWith<$Res>? get offsetPillNumber;
 }
 
 /// @nodoc
@@ -886,7 +690,6 @@ class __$PillSheetCopyWithImpl<$Res> extends _$PillSheetCopyWithImpl<$Res>
     Object? deletedAt = freezed,
     Object? groupIndex = freezed,
     Object? restDurations = freezed,
-    Object? offsetPillNumber = freezed,
   }) {
     return _then(_PillSheet(
       id: id == freezed
@@ -921,10 +724,6 @@ class __$PillSheetCopyWithImpl<$Res> extends _$PillSheetCopyWithImpl<$Res>
           ? _value.restDurations
           : restDurations // ignore: cast_nullable_to_non_nullable
               as List<RestDuration>,
-      offsetPillNumber: offsetPillNumber == freezed
-          ? _value.offsetPillNumber
-          : offsetPillNumber // ignore: cast_nullable_to_non_nullable
-              as OffsetPillNumber?,
     ));
   }
 }
@@ -947,8 +746,7 @@ class _$_PillSheet extends _PillSheet {
       @JsonKey(fromJson: TimestampConverter.timestampToDateTime, toJson: TimestampConverter.dateTimeToTimestamp)
           this.deletedAt,
       this.groupIndex = 0,
-      this.restDurations = const [],
-      this.offsetPillNumber})
+      this.restDurations = const []})
       : super._();
 
   factory _$_PillSheet.fromJson(Map<String, dynamic> json) =>
@@ -986,12 +784,10 @@ class _$_PillSheet extends _PillSheet {
   @JsonKey()
   @override
   final List<RestDuration> restDurations;
-  @override
-  final OffsetPillNumber? offsetPillNumber;
 
   @override
   String toString() {
-    return 'PillSheet(id: $id, typeInfo: $typeInfo, beginingDate: $beginingDate, lastTakenDate: $lastTakenDate, createdAt: $createdAt, deletedAt: $deletedAt, groupIndex: $groupIndex, restDurations: $restDurations, offsetPillNumber: $offsetPillNumber)';
+    return 'PillSheet(id: $id, typeInfo: $typeInfo, beginingDate: $beginingDate, lastTakenDate: $lastTakenDate, createdAt: $createdAt, deletedAt: $deletedAt, groupIndex: $groupIndex, restDurations: $restDurations)';
   }
 
   @override
@@ -1010,9 +806,7 @@ class _$_PillSheet extends _PillSheet {
             const DeepCollectionEquality()
                 .equals(other.groupIndex, groupIndex) &&
             const DeepCollectionEquality()
-                .equals(other.restDurations, restDurations) &&
-            const DeepCollectionEquality()
-                .equals(other.offsetPillNumber, offsetPillNumber));
+                .equals(other.restDurations, restDurations));
   }
 
   @override
@@ -1025,8 +819,7 @@ class _$_PillSheet extends _PillSheet {
       const DeepCollectionEquality().hash(createdAt),
       const DeepCollectionEquality().hash(deletedAt),
       const DeepCollectionEquality().hash(groupIndex),
-      const DeepCollectionEquality().hash(restDurations),
-      const DeepCollectionEquality().hash(offsetPillNumber));
+      const DeepCollectionEquality().hash(restDurations));
 
   @JsonKey(ignore: true)
   @override
@@ -1054,8 +847,7 @@ abstract class _PillSheet extends PillSheet {
       @JsonKey(fromJson: TimestampConverter.timestampToDateTime, toJson: TimestampConverter.dateTimeToTimestamp)
           DateTime? deletedAt,
       int groupIndex,
-      List<RestDuration> restDurations,
-      OffsetPillNumber? offsetPillNumber}) = _$_PillSheet;
+      List<RestDuration> restDurations}) = _$_PillSheet;
   const _PillSheet._() : super._();
 
   factory _PillSheet.fromJson(Map<String, dynamic> json) =
@@ -1091,8 +883,6 @@ abstract class _PillSheet extends PillSheet {
   int get groupIndex;
   @override
   List<RestDuration> get restDurations;
-  @override
-  OffsetPillNumber? get offsetPillNumber;
   @override
   @JsonKey(ignore: true)
   _$PillSheetCopyWith<_PillSheet> get copyWith =>

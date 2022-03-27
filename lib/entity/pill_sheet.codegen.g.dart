@@ -23,18 +23,6 @@ Map<String, dynamic> _$$_PillSheetTypeInfoToJson(
       'dosingPeriod': instance.dosingPeriod,
     };
 
-_$_OffsetPillNumber _$$_OffsetPillNumberFromJson(Map<String, dynamic> json) =>
-    _$_OffsetPillNumber(
-      beginPillNumber: json['beginPillNumber'] as int?,
-      endPillNumber: json['endPillNumber'] as int?,
-    );
-
-Map<String, dynamic> _$$_OffsetPillNumberToJson(_$_OffsetPillNumber instance) =>
-    <String, dynamic>{
-      'beginPillNumber': instance.beginPillNumber,
-      'endPillNumber': instance.endPillNumber,
-    };
-
 _$_RestDuration _$$_RestDurationFromJson(Map<String, dynamic> json) =>
     _$_RestDuration(
       beginDate: NonNullTimestampConverter.timestampToDateTime(
@@ -71,10 +59,6 @@ _$_PillSheet _$$_PillSheetFromJson(Map<String, dynamic> json) => _$_PillSheet(
               ?.map((e) => RestDuration.fromJson(e as Map<String, dynamic>))
               .toList() ??
           const [],
-      offsetPillNumber: json['offsetPillNumber'] == null
-          ? null
-          : OffsetPillNumber.fromJson(
-              json['offsetPillNumber'] as Map<String, dynamic>),
     );
 
 Map<String, dynamic> _$$_PillSheetToJson(_$_PillSheet instance) {
@@ -96,6 +80,5 @@ Map<String, dynamic> _$$_PillSheetToJson(_$_PillSheet instance) {
   val['deletedAt'] = TimestampConverter.dateTimeToTimestamp(instance.deletedAt);
   val['groupIndex'] = instance.groupIndex;
   val['restDurations'] = instance.restDurations.map((e) => e.toJson()).toList();
-  val['offsetPillNumber'] = instance.offsetPillNumber?.toJson();
   return val;
 }

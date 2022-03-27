@@ -30,13 +30,15 @@ class _$PillSheetGroupTearOff {
       @JsonKey(fromJson: NonNullTimestampConverter.timestampToDateTime, toJson: NonNullTimestampConverter.dateTimeToTimestamp)
           required DateTime createdAt,
       @JsonKey(fromJson: TimestampConverter.timestampToDateTime, toJson: TimestampConverter.dateTimeToTimestamp)
-          DateTime? deletedAt}) {
+          DateTime? deletedAt,
+      OffsetPillNumber? offsetPillNumber}) {
     return _PillSheetGroup(
       id: id,
       pillSheetIDs: pillSheetIDs,
       pillSheets: pillSheets,
       createdAt: createdAt,
       deletedAt: deletedAt,
+      offsetPillNumber: offsetPillNumber,
     );
   }
 
@@ -62,6 +64,7 @@ mixin _$PillSheetGroup {
       fromJson: TimestampConverter.timestampToDateTime,
       toJson: TimestampConverter.dateTimeToTimestamp)
   DateTime? get deletedAt => throw _privateConstructorUsedError;
+  OffsetPillNumber? get offsetPillNumber => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
@@ -82,7 +85,10 @@ abstract class $PillSheetGroupCopyWith<$Res> {
       @JsonKey(fromJson: NonNullTimestampConverter.timestampToDateTime, toJson: NonNullTimestampConverter.dateTimeToTimestamp)
           DateTime createdAt,
       @JsonKey(fromJson: TimestampConverter.timestampToDateTime, toJson: TimestampConverter.dateTimeToTimestamp)
-          DateTime? deletedAt});
+          DateTime? deletedAt,
+      OffsetPillNumber? offsetPillNumber});
+
+  $OffsetPillNumberCopyWith<$Res>? get offsetPillNumber;
 }
 
 /// @nodoc
@@ -101,6 +107,7 @@ class _$PillSheetGroupCopyWithImpl<$Res>
     Object? pillSheets = freezed,
     Object? createdAt = freezed,
     Object? deletedAt = freezed,
+    Object? offsetPillNumber = freezed,
   }) {
     return _then(_value.copyWith(
       id: id == freezed
@@ -123,7 +130,22 @@ class _$PillSheetGroupCopyWithImpl<$Res>
           ? _value.deletedAt
           : deletedAt // ignore: cast_nullable_to_non_nullable
               as DateTime?,
+      offsetPillNumber: offsetPillNumber == freezed
+          ? _value.offsetPillNumber
+          : offsetPillNumber // ignore: cast_nullable_to_non_nullable
+              as OffsetPillNumber?,
     ));
+  }
+
+  @override
+  $OffsetPillNumberCopyWith<$Res>? get offsetPillNumber {
+    if (_value.offsetPillNumber == null) {
+      return null;
+    }
+
+    return $OffsetPillNumberCopyWith<$Res>(_value.offsetPillNumber!, (value) {
+      return _then(_value.copyWith(offsetPillNumber: value));
+    });
   }
 }
 
@@ -142,7 +164,11 @@ abstract class _$PillSheetGroupCopyWith<$Res>
       @JsonKey(fromJson: NonNullTimestampConverter.timestampToDateTime, toJson: NonNullTimestampConverter.dateTimeToTimestamp)
           DateTime createdAt,
       @JsonKey(fromJson: TimestampConverter.timestampToDateTime, toJson: TimestampConverter.dateTimeToTimestamp)
-          DateTime? deletedAt});
+          DateTime? deletedAt,
+      OffsetPillNumber? offsetPillNumber});
+
+  @override
+  $OffsetPillNumberCopyWith<$Res>? get offsetPillNumber;
 }
 
 /// @nodoc
@@ -163,6 +189,7 @@ class __$PillSheetGroupCopyWithImpl<$Res>
     Object? pillSheets = freezed,
     Object? createdAt = freezed,
     Object? deletedAt = freezed,
+    Object? offsetPillNumber = freezed,
   }) {
     return _then(_PillSheetGroup(
       id: id == freezed
@@ -185,6 +212,10 @@ class __$PillSheetGroupCopyWithImpl<$Res>
           ? _value.deletedAt
           : deletedAt // ignore: cast_nullable_to_non_nullable
               as DateTime?,
+      offsetPillNumber: offsetPillNumber == freezed
+          ? _value.offsetPillNumber
+          : offsetPillNumber // ignore: cast_nullable_to_non_nullable
+              as OffsetPillNumber?,
     ));
   }
 }
@@ -201,7 +232,8 @@ class _$_PillSheetGroup extends _PillSheetGroup {
       @JsonKey(fromJson: NonNullTimestampConverter.timestampToDateTime, toJson: NonNullTimestampConverter.dateTimeToTimestamp)
           required this.createdAt,
       @JsonKey(fromJson: TimestampConverter.timestampToDateTime, toJson: TimestampConverter.dateTimeToTimestamp)
-          this.deletedAt})
+          this.deletedAt,
+      this.offsetPillNumber})
       : super._();
 
   factory _$_PillSheetGroup.fromJson(Map<String, dynamic> json) =>
@@ -224,10 +256,12 @@ class _$_PillSheetGroup extends _PillSheetGroup {
       fromJson: TimestampConverter.timestampToDateTime,
       toJson: TimestampConverter.dateTimeToTimestamp)
   final DateTime? deletedAt;
+  @override
+  final OffsetPillNumber? offsetPillNumber;
 
   @override
   String toString() {
-    return 'PillSheetGroup(id: $id, pillSheetIDs: $pillSheetIDs, pillSheets: $pillSheets, createdAt: $createdAt, deletedAt: $deletedAt)';
+    return 'PillSheetGroup(id: $id, pillSheetIDs: $pillSheetIDs, pillSheets: $pillSheets, createdAt: $createdAt, deletedAt: $deletedAt, offsetPillNumber: $offsetPillNumber)';
   }
 
   @override
@@ -241,7 +275,9 @@ class _$_PillSheetGroup extends _PillSheetGroup {
             const DeepCollectionEquality()
                 .equals(other.pillSheets, pillSheets) &&
             const DeepCollectionEquality().equals(other.createdAt, createdAt) &&
-            const DeepCollectionEquality().equals(other.deletedAt, deletedAt));
+            const DeepCollectionEquality().equals(other.deletedAt, deletedAt) &&
+            const DeepCollectionEquality()
+                .equals(other.offsetPillNumber, offsetPillNumber));
   }
 
   @override
@@ -251,7 +287,8 @@ class _$_PillSheetGroup extends _PillSheetGroup {
       const DeepCollectionEquality().hash(pillSheetIDs),
       const DeepCollectionEquality().hash(pillSheets),
       const DeepCollectionEquality().hash(createdAt),
-      const DeepCollectionEquality().hash(deletedAt));
+      const DeepCollectionEquality().hash(deletedAt),
+      const DeepCollectionEquality().hash(offsetPillNumber));
 
   @JsonKey(ignore: true)
   @override
@@ -273,7 +310,8 @@ abstract class _PillSheetGroup extends PillSheetGroup {
       @JsonKey(fromJson: NonNullTimestampConverter.timestampToDateTime, toJson: NonNullTimestampConverter.dateTimeToTimestamp)
           required DateTime createdAt,
       @JsonKey(fromJson: TimestampConverter.timestampToDateTime, toJson: TimestampConverter.dateTimeToTimestamp)
-          DateTime? deletedAt}) = _$_PillSheetGroup;
+          DateTime? deletedAt,
+      OffsetPillNumber? offsetPillNumber}) = _$_PillSheetGroup;
   const _PillSheetGroup._() : super._();
 
   factory _PillSheetGroup.fromJson(Map<String, dynamic> json) =
@@ -297,7 +335,181 @@ abstract class _PillSheetGroup extends PillSheetGroup {
       toJson: TimestampConverter.dateTimeToTimestamp)
   DateTime? get deletedAt;
   @override
+  OffsetPillNumber? get offsetPillNumber;
+  @override
   @JsonKey(ignore: true)
   _$PillSheetGroupCopyWith<_PillSheetGroup> get copyWith =>
+      throw _privateConstructorUsedError;
+}
+
+OffsetPillNumber _$OffsetPillNumberFromJson(Map<String, dynamic> json) {
+  return _OffsetPillNumber.fromJson(json);
+}
+
+/// @nodoc
+class _$OffsetPillNumberTearOff {
+  const _$OffsetPillNumberTearOff();
+
+  _OffsetPillNumber call({int? beginPillNumber, int? endPillNumber}) {
+    return _OffsetPillNumber(
+      beginPillNumber: beginPillNumber,
+      endPillNumber: endPillNumber,
+    );
+  }
+
+  OffsetPillNumber fromJson(Map<String, Object?> json) {
+    return OffsetPillNumber.fromJson(json);
+  }
+}
+
+/// @nodoc
+const $OffsetPillNumber = _$OffsetPillNumberTearOff();
+
+/// @nodoc
+mixin _$OffsetPillNumber {
+  int? get beginPillNumber => throw _privateConstructorUsedError;
+  int? get endPillNumber => throw _privateConstructorUsedError;
+
+  Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
+  @JsonKey(ignore: true)
+  $OffsetPillNumberCopyWith<OffsetPillNumber> get copyWith =>
+      throw _privateConstructorUsedError;
+}
+
+/// @nodoc
+abstract class $OffsetPillNumberCopyWith<$Res> {
+  factory $OffsetPillNumberCopyWith(
+          OffsetPillNumber value, $Res Function(OffsetPillNumber) then) =
+      _$OffsetPillNumberCopyWithImpl<$Res>;
+  $Res call({int? beginPillNumber, int? endPillNumber});
+}
+
+/// @nodoc
+class _$OffsetPillNumberCopyWithImpl<$Res>
+    implements $OffsetPillNumberCopyWith<$Res> {
+  _$OffsetPillNumberCopyWithImpl(this._value, this._then);
+
+  final OffsetPillNumber _value;
+  // ignore: unused_field
+  final $Res Function(OffsetPillNumber) _then;
+
+  @override
+  $Res call({
+    Object? beginPillNumber = freezed,
+    Object? endPillNumber = freezed,
+  }) {
+    return _then(_value.copyWith(
+      beginPillNumber: beginPillNumber == freezed
+          ? _value.beginPillNumber
+          : beginPillNumber // ignore: cast_nullable_to_non_nullable
+              as int?,
+      endPillNumber: endPillNumber == freezed
+          ? _value.endPillNumber
+          : endPillNumber // ignore: cast_nullable_to_non_nullable
+              as int?,
+    ));
+  }
+}
+
+/// @nodoc
+abstract class _$OffsetPillNumberCopyWith<$Res>
+    implements $OffsetPillNumberCopyWith<$Res> {
+  factory _$OffsetPillNumberCopyWith(
+          _OffsetPillNumber value, $Res Function(_OffsetPillNumber) then) =
+      __$OffsetPillNumberCopyWithImpl<$Res>;
+  @override
+  $Res call({int? beginPillNumber, int? endPillNumber});
+}
+
+/// @nodoc
+class __$OffsetPillNumberCopyWithImpl<$Res>
+    extends _$OffsetPillNumberCopyWithImpl<$Res>
+    implements _$OffsetPillNumberCopyWith<$Res> {
+  __$OffsetPillNumberCopyWithImpl(
+      _OffsetPillNumber _value, $Res Function(_OffsetPillNumber) _then)
+      : super(_value, (v) => _then(v as _OffsetPillNumber));
+
+  @override
+  _OffsetPillNumber get _value => super._value as _OffsetPillNumber;
+
+  @override
+  $Res call({
+    Object? beginPillNumber = freezed,
+    Object? endPillNumber = freezed,
+  }) {
+    return _then(_OffsetPillNumber(
+      beginPillNumber: beginPillNumber == freezed
+          ? _value.beginPillNumber
+          : beginPillNumber // ignore: cast_nullable_to_non_nullable
+              as int?,
+      endPillNumber: endPillNumber == freezed
+          ? _value.endPillNumber
+          : endPillNumber // ignore: cast_nullable_to_non_nullable
+              as int?,
+    ));
+  }
+}
+
+/// @nodoc
+
+@JsonSerializable(explicitToJson: true)
+class _$_OffsetPillNumber implements _OffsetPillNumber {
+  const _$_OffsetPillNumber({this.beginPillNumber, this.endPillNumber});
+
+  factory _$_OffsetPillNumber.fromJson(Map<String, dynamic> json) =>
+      _$$_OffsetPillNumberFromJson(json);
+
+  @override
+  final int? beginPillNumber;
+  @override
+  final int? endPillNumber;
+
+  @override
+  String toString() {
+    return 'OffsetPillNumber(beginPillNumber: $beginPillNumber, endPillNumber: $endPillNumber)';
+  }
+
+  @override
+  bool operator ==(dynamic other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _OffsetPillNumber &&
+            const DeepCollectionEquality()
+                .equals(other.beginPillNumber, beginPillNumber) &&
+            const DeepCollectionEquality()
+                .equals(other.endPillNumber, endPillNumber));
+  }
+
+  @override
+  int get hashCode => Object.hash(
+      runtimeType,
+      const DeepCollectionEquality().hash(beginPillNumber),
+      const DeepCollectionEquality().hash(endPillNumber));
+
+  @JsonKey(ignore: true)
+  @override
+  _$OffsetPillNumberCopyWith<_OffsetPillNumber> get copyWith =>
+      __$OffsetPillNumberCopyWithImpl<_OffsetPillNumber>(this, _$identity);
+
+  @override
+  Map<String, dynamic> toJson() {
+    return _$$_OffsetPillNumberToJson(this);
+  }
+}
+
+abstract class _OffsetPillNumber implements OffsetPillNumber {
+  const factory _OffsetPillNumber({int? beginPillNumber, int? endPillNumber}) =
+      _$_OffsetPillNumber;
+
+  factory _OffsetPillNumber.fromJson(Map<String, dynamic> json) =
+      _$_OffsetPillNumber.fromJson;
+
+  @override
+  int? get beginPillNumber;
+  @override
+  int? get endPillNumber;
+  @override
+  @JsonKey(ignore: true)
+  _$OffsetPillNumberCopyWith<_OffsetPillNumber> get copyWith =>
       throw _privateConstructorUsedError;
 }

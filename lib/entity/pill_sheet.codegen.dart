@@ -31,18 +31,6 @@ class PillSheetTypeInfo with _$PillSheetTypeInfo {
 }
 
 @freezed
-class OffsetPillNumber with _$OffsetPillNumber {
-  @JsonSerializable(explicitToJson: true)
-  const factory OffsetPillNumber({
-    int? beginPillNumber,
-    int? endPillNumber,
-  }) = _OffsetPillNumber;
-
-  factory OffsetPillNumber.fromJson(Map<String, dynamic> json) =>
-      _$OffsetPillNumberFromJson(json);
-}
-
-@freezed
 class RestDuration with _$RestDuration {
   @JsonSerializable(explicitToJson: true)
   const factory RestDuration({
@@ -105,7 +93,6 @@ class PillSheet with _$PillSheet {
         int groupIndex,
     @Default([])
         List<RestDuration> restDurations,
-    OffsetPillNumber? offsetPillNumber,
   }) = _PillSheet;
   factory PillSheet.create(PillSheetType type) => PillSheet(
         typeInfo: type.typeInfo,
