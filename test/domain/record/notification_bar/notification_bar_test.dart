@@ -75,6 +75,7 @@ void main() {
           premiumTrialBeginAnouncementIsClosed: true,
           recommendedSignupNotificationIsAlreadyShow: false,
           trialDeadlineDate: null,
+          beginTrialDate: null,
           discountEntitlementDeadlineDate:
               today.subtract(const Duration(days: 1)),
         );
@@ -140,6 +141,7 @@ void main() {
           premiumTrialBeginAnouncementIsClosed: true,
           recommendedSignupNotificationIsAlreadyShow: false,
           trialDeadlineDate: null,
+          beginTrialDate: null,
           discountEntitlementDeadlineDate: null,
         );
 
@@ -203,6 +205,7 @@ void main() {
           premiumTrialBeginAnouncementIsClosed: true,
           recommendedSignupNotificationIsAlreadyShow: false,
           trialDeadlineDate: null,
+          beginTrialDate: null,
           discountEntitlementDeadlineDate: null,
         );
 
@@ -265,6 +268,7 @@ void main() {
           premiumTrialBeginAnouncementIsClosed: true,
           recommendedSignupNotificationIsAlreadyShow: false,
           trialDeadlineDate: null,
+          beginTrialDate: null,
           discountEntitlementDeadlineDate: null,
         );
 
@@ -328,6 +332,7 @@ void main() {
           premiumTrialBeginAnouncementIsClosed: true,
           recommendedSignupNotificationIsAlreadyShow: false,
           trialDeadlineDate: today.add(const Duration(days: 1)),
+          beginTrialDate: null,
           discountEntitlementDeadlineDate: null,
         );
 
@@ -390,6 +395,7 @@ void main() {
           premiumTrialBeginAnouncementIsClosed: true,
           recommendedSignupNotificationIsAlreadyShow: false,
           trialDeadlineDate: null,
+          beginTrialDate: null,
           discountEntitlementDeadlineDate: null,
         );
 
@@ -454,6 +460,7 @@ void main() {
           premiumTrialBeginAnouncementIsClosed: true,
           recommendedSignupNotificationIsAlreadyShow: false,
           trialDeadlineDate: null,
+          beginTrialDate: null,
           discountEntitlementDeadlineDate: null,
         );
 
@@ -516,6 +523,7 @@ void main() {
           premiumTrialBeginAnouncementIsClosed: true,
           recommendedSignupNotificationIsAlreadyShow: false,
           trialDeadlineDate: null,
+          beginTrialDate: null,
           discountEntitlementDeadlineDate: null,
         );
 
@@ -578,6 +586,7 @@ void main() {
           premiumTrialBeginAnouncementIsClosed: true,
           recommendedSignupNotificationIsAlreadyShow: false,
           trialDeadlineDate: null,
+          beginTrialDate: null,
           discountEntitlementDeadlineDate: null,
         );
 
@@ -642,6 +651,7 @@ void main() {
         premiumTrialBeginAnouncementIsClosed: true,
         recommendedSignupNotificationIsAlreadyShow: false,
         trialDeadlineDate: null,
+        beginTrialDate: null,
         discountEntitlementDeadlineDate: null,
       );
 

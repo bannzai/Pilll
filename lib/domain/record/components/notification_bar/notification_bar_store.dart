@@ -31,6 +31,7 @@ class NotificationBarStateStore extends StateNotifier<NotificationBarState> {
             isAlreadyShowAnnouncementSupportedMultilplePillSheet:
                 parameter.isAlreadyShowAnnouncementSupportedMultilplePillSheet,
             trialDeadlineDate: parameter.trialDeadlineDate,
+            beginTrialDate: parameter.beginTrialDate,
             discountEntitlementDeadlineDate:
                 parameter.discountEntitlementDeadlineDate,
             isLinkedLoginProvider: parameter.isLinkedLoginProvider,
