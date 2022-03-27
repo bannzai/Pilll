@@ -545,18 +545,21 @@ class RecordPageStore extends StateNotifier<RecordPageState> {
     }
 
     final offsetPillNumber = pillSheetGroup.offsetPillNumber;
+    final PillSheetGroup updatedPillSheetGroup;
     if (offsetPillNumber == null) {
       final newOffsetPillNumber = OffsetPillNumber(beginPillNumber: begin);
-      final copiedPillSheetGroup =
+      updatedPillSheetGroup =
           pillSheetGroup.copyWith(offsetPillNumber: newOffsetPillNumber);
-      state = state.copyWith(pillSheetGroup: copiedPillSheetGroup);
+      state = state.copyWith(pillSheetGroup: updatedPillSheetGroup);
     } else {
       final newOffsetPillNumber =
           offsetPillNumber.copyWith(beginPillNumber: begin);
-      final copiedPillSheetGroup =
+      updatedPillSheetGroup =
           pillSheetGroup.copyWith(offsetPillNumber: newOffsetPillNumber);
-      state = state.copyWith(pillSheetGroup: copiedPillSheetGroup);
+      state = state.copyWith(pillSheetGroup: updatedPillSheetGroup);
     }
+
+    _pillSheetGroupService.update(updatedPillSheetGroup);
   }
 
   void setOffsetPillNumberEnd(int end) {
