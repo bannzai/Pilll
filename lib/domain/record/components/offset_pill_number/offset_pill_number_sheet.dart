@@ -4,6 +4,7 @@ import 'package:hooks_riverpod/hooks_riverpod.dart';
 import 'package:pilll/components/atoms/color.dart';
 import 'package:pilll/components/atoms/font.dart';
 import 'package:pilll/components/atoms/text_color.dart';
+import 'package:pilll/domain/record/record_page_store.dart';
 import 'package:pilll/entity/pill_sheet_group.codegen.dart';
 
 const _defaultBegin = 3;
@@ -11,8 +12,12 @@ const _defaultEnd = 120;
 
 class OffsetPillNumberSheet extends HookConsumerWidget {
   final OffsetPillNumber? offsetPillNumber;
+  final RecordPageStore store;
 
-  OffsetPillNumberSheet({required this.offsetPillNumber});
+  OffsetPillNumberSheet({
+    required this.offsetPillNumber,
+    required this.store,
+  });
   @override
   Widget build(BuildContext context, WidgetRef ref) {
     final begin = useState(offsetPillNumber?.beginPillNumber ?? _defaultBegin);
@@ -74,6 +79,7 @@ class OffsetPillNumberSheet extends HookConsumerWidget {
                     onChanged: (_begin) {
                       try {
                         begin.value = int.parse(_begin);
+                        store.setOffsetPillNumberBegin(begin.value);
                       } catch (_) {}
                     },
                     controller: beginTextFieldController,
@@ -112,6 +118,7 @@ class OffsetPillNumberSheet extends HookConsumerWidget {
                     onChanged: (_end) {
                       try {
                         end.value = int.parse(_end);
+                        store.setOffsetPillNumberEnd(end.value);
                       } catch (_) {}
                     },
                     controller: endTextFieldController,
