@@ -29,6 +29,7 @@ class _$NotificationBarStateTearOff {
       required DateTime? discountEntitlementDeadlineDate,
       required bool recommendedSignupNotificationIsAlreadyShow,
       required bool premiumTrialGuideNotificationIsClosed,
+      required bool premiumTrialBeginAnouncementIsClosed,
       required bool isLinkedLoginProvider}) {
     return _NotificationBarState(
       latestPillSheetGroup: latestPillSheetGroup,
@@ -44,6 +45,8 @@ class _$NotificationBarStateTearOff {
           recommendedSignupNotificationIsAlreadyShow,
       premiumTrialGuideNotificationIsClosed:
           premiumTrialGuideNotificationIsClosed,
+      premiumTrialBeginAnouncementIsClosed:
+          premiumTrialBeginAnouncementIsClosed,
       isLinkedLoginProvider: isLinkedLoginProvider,
     );
   }
@@ -69,6 +72,8 @@ mixin _$NotificationBarState {
       throw _privateConstructorUsedError;
   bool get premiumTrialGuideNotificationIsClosed =>
       throw _privateConstructorUsedError;
+  bool get premiumTrialBeginAnouncementIsClosed =>
+      throw _privateConstructorUsedError;
   bool get isLinkedLoginProvider => throw _privateConstructorUsedError;
 
   @JsonKey(ignore: true)
@@ -92,6 +97,7 @@ abstract class $NotificationBarStateCopyWith<$Res> {
       DateTime? discountEntitlementDeadlineDate,
       bool recommendedSignupNotificationIsAlreadyShow,
       bool premiumTrialGuideNotificationIsClosed,
+      bool premiumTrialBeginAnouncementIsClosed,
       bool isLinkedLoginProvider});
 
   $PillSheetGroupCopyWith<$Res>? get latestPillSheetGroup;
@@ -118,6 +124,7 @@ class _$NotificationBarStateCopyWithImpl<$Res>
     Object? discountEntitlementDeadlineDate = freezed,
     Object? recommendedSignupNotificationIsAlreadyShow = freezed,
     Object? premiumTrialGuideNotificationIsClosed = freezed,
+    Object? premiumTrialBeginAnouncementIsClosed = freezed,
     Object? isLinkedLoginProvider = freezed,
   }) {
     return _then(_value.copyWith(
@@ -165,6 +172,11 @@ class _$NotificationBarStateCopyWithImpl<$Res>
               ? _value.premiumTrialGuideNotificationIsClosed
               : premiumTrialGuideNotificationIsClosed // ignore: cast_nullable_to_non_nullable
                   as bool,
+      premiumTrialBeginAnouncementIsClosed: premiumTrialBeginAnouncementIsClosed ==
+              freezed
+          ? _value.premiumTrialBeginAnouncementIsClosed
+          : premiumTrialBeginAnouncementIsClosed // ignore: cast_nullable_to_non_nullable
+              as bool,
       isLinkedLoginProvider: isLinkedLoginProvider == freezed
           ? _value.isLinkedLoginProvider
           : isLinkedLoginProvider // ignore: cast_nullable_to_non_nullable
@@ -202,6 +214,7 @@ abstract class _$NotificationBarStateCopyWith<$Res>
       DateTime? discountEntitlementDeadlineDate,
       bool recommendedSignupNotificationIsAlreadyShow,
       bool premiumTrialGuideNotificationIsClosed,
+      bool premiumTrialBeginAnouncementIsClosed,
       bool isLinkedLoginProvider});
 
   @override
@@ -231,6 +244,7 @@ class __$NotificationBarStateCopyWithImpl<$Res>
     Object? discountEntitlementDeadlineDate = freezed,
     Object? recommendedSignupNotificationIsAlreadyShow = freezed,
     Object? premiumTrialGuideNotificationIsClosed = freezed,
+    Object? premiumTrialBeginAnouncementIsClosed = freezed,
     Object? isLinkedLoginProvider = freezed,
   }) {
     return _then(_NotificationBarState(
@@ -278,6 +292,11 @@ class __$NotificationBarStateCopyWithImpl<$Res>
               ? _value.premiumTrialGuideNotificationIsClosed
               : premiumTrialGuideNotificationIsClosed // ignore: cast_nullable_to_non_nullable
                   as bool,
+      premiumTrialBeginAnouncementIsClosed: premiumTrialBeginAnouncementIsClosed ==
+              freezed
+          ? _value.premiumTrialBeginAnouncementIsClosed
+          : premiumTrialBeginAnouncementIsClosed // ignore: cast_nullable_to_non_nullable
+              as bool,
       isLinkedLoginProvider: isLinkedLoginProvider == freezed
           ? _value.isLinkedLoginProvider
           : isLinkedLoginProvider // ignore: cast_nullable_to_non_nullable
@@ -300,6 +319,7 @@ class _$_NotificationBarState extends _NotificationBarState {
       required this.discountEntitlementDeadlineDate,
       required this.recommendedSignupNotificationIsAlreadyShow,
       required this.premiumTrialGuideNotificationIsClosed,
+      required this.premiumTrialBeginAnouncementIsClosed,
       required this.isLinkedLoginProvider})
       : super._();
 
@@ -324,11 +344,13 @@ class _$_NotificationBarState extends _NotificationBarState {
   @override
   final bool premiumTrialGuideNotificationIsClosed;
   @override
+  final bool premiumTrialBeginAnouncementIsClosed;
+  @override
   final bool isLinkedLoginProvider;
 
   @override
   String toString() {
-    return 'NotificationBarState(latestPillSheetGroup: $latestPillSheetGroup, totalCountOfActionForTakenPill: $totalCountOfActionForTakenPill, isPremium: $isPremium, isTrial: $isTrial, isAlreadyShowAnnouncementSupportedMultilplePillSheet: $isAlreadyShowAnnouncementSupportedMultilplePillSheet, hasDiscountEntitlement: $hasDiscountEntitlement, trialDeadlineDate: $trialDeadlineDate, discountEntitlementDeadlineDate: $discountEntitlementDeadlineDate, recommendedSignupNotificationIsAlreadyShow: $recommendedSignupNotificationIsAlreadyShow, premiumTrialGuideNotificationIsClosed: $premiumTrialGuideNotificationIsClosed, isLinkedLoginProvider: $isLinkedLoginProvider)';
+    return 'NotificationBarState(latestPillSheetGroup: $latestPillSheetGroup, totalCountOfActionForTakenPill: $totalCountOfActionForTakenPill, isPremium: $isPremium, isTrial: $isTrial, isAlreadyShowAnnouncementSupportedMultilplePillSheet: $isAlreadyShowAnnouncementSupportedMultilplePillSheet, hasDiscountEntitlement: $hasDiscountEntitlement, trialDeadlineDate: $trialDeadlineDate, discountEntitlementDeadlineDate: $discountEntitlementDeadlineDate, recommendedSignupNotificationIsAlreadyShow: $recommendedSignupNotificationIsAlreadyShow, premiumTrialGuideNotificationIsClosed: $premiumTrialGuideNotificationIsClosed, premiumTrialBeginAnouncementIsClosed: $premiumTrialBeginAnouncementIsClosed, isLinkedLoginProvider: $isLinkedLoginProvider)';
   }
 
   @override
@@ -359,6 +381,9 @@ class _$_NotificationBarState extends _NotificationBarState {
             const DeepCollectionEquality().equals(
                 other.premiumTrialGuideNotificationIsClosed,
                 premiumTrialGuideNotificationIsClosed) &&
+            const DeepCollectionEquality().equals(
+                other.premiumTrialBeginAnouncementIsClosed,
+                premiumTrialBeginAnouncementIsClosed) &&
             const DeepCollectionEquality()
                 .equals(other.isLinkedLoginProvider, isLinkedLoginProvider));
   }
@@ -379,6 +404,7 @@ class _$_NotificationBarState extends _NotificationBarState {
           .hash(recommendedSignupNotificationIsAlreadyShow),
       const DeepCollectionEquality()
           .hash(premiumTrialGuideNotificationIsClosed),
+      const DeepCollectionEquality().hash(premiumTrialBeginAnouncementIsClosed),
       const DeepCollectionEquality().hash(isLinkedLoginProvider));
 
   @JsonKey(ignore: true)
@@ -400,6 +426,7 @@ abstract class _NotificationBarState extends NotificationBarState {
       required DateTime? discountEntitlementDeadlineDate,
       required bool recommendedSignupNotificationIsAlreadyShow,
       required bool premiumTrialGuideNotificationIsClosed,
+      required bool premiumTrialBeginAnouncementIsClosed,
       required bool isLinkedLoginProvider}) = _$_NotificationBarState;
   const _NotificationBarState._() : super._();
 
@@ -423,6 +450,8 @@ abstract class _NotificationBarState extends NotificationBarState {
   bool get recommendedSignupNotificationIsAlreadyShow;
   @override
   bool get premiumTrialGuideNotificationIsClosed;
+  @override
+  bool get premiumTrialBeginAnouncementIsClosed;
   @override
   bool get isLinkedLoginProvider;
   @override
