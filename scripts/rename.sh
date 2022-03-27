@@ -13,7 +13,12 @@ for codegen_file in $CODEGEN_FILES; do
     for include_codegen_file in $include_codegen_files; do
       sed -i '' -e "s|$codegen_file_without_lib_package_and_file_extension.dart|$codegen_file_without_lib_package_and_file_extension.codegen.dart|" $include_codegen_file
     done
+  fi
+done
 
+for codegen_file in $CODEGEN_FILES; do 
+  if [[ $codegen_file == *.dart ]]; then
+    codegen_file_without_file_extension=$(echo $codegen_file | awk -F'\.' '{print $1}')
     echo $codegen_file_without_file_extension | xargs -I '{}' mv {}.dart {}.codegen.dart
   fi
 done
