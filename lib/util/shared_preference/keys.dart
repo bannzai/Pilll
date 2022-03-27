@@ -4,6 +4,8 @@ extension BoolKey on String {
       "recommendedSignupNotificationIsAlreadyShow";
   static final premiumTrialGuideNotificationIsClosed =
       "premiumTrialGuideNotificationIsClosed";
+  static final premiumTrialBeginAnouncementIsClosed =
+      "premiumTrialBeginAnouncementIsClosed";
   static final isAlreadyShowAnnouncementSupportedMultilplePillSheet =
       "isAlreadyShowAnnouncementSupportedMultilplePillSheet";
   static final isAlreadyShowDemography = "isAlreadyShowDemography";
