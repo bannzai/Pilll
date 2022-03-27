@@ -67,7 +67,7 @@ void main() {
           totalCountOfActionForTakenPill:
               totalCountOfActionForTakenPillForLongTimeUser,
           isPremium: false,
-          isTrial: false,
+          isTrial: true,
           hasDiscountEntitlement: true,
           isAlreadyShowAnnouncementSupportedMultilplePillSheet: false,
           isLinkedLoginProvider: false,
