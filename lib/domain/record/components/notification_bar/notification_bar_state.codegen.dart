@@ -19,6 +19,7 @@ class NotificationBarState with _$NotificationBarState {
     required DateTime? discountEntitlementDeadlineDate,
     required bool recommendedSignupNotificationIsAlreadyShow,
     required bool premiumTrialGuideNotificationIsClosed,
+    required bool premiumTrialBeginAnouncementIsClosed,
     required bool isLinkedLoginProvider,
   }) = _NotificationBarState;
 

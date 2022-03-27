@@ -25,6 +25,7 @@ class RecordPageState with _$RecordPageState {
     DateTime? discountEntitlementDeadlineDate,
     @Default(true) bool recommendedSignupNotificationIsAlreadyShow,
     @Default(true) bool premiumTrialGuideNotificationIsClosed,
+    @Default(true) bool premiumTrialBeginAnouncementIsClosed,
     Object? exception,
   }) = _RecordPageState;
 
