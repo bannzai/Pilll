@@ -58,8 +58,7 @@ class NotificationBar extends HookConsumerWidget {
           if (beginTrialDate != null) {
             final between = daysBetween(beginTrialDate, now());
             if (between <= 3) {
-              return PremiumTrialBegin(
-                  latestDay: (30 - between) + 1, store: store);
+              return PremiumTrialBegin(latestDay: (30 - between), store: store);
             }
           }
         }
