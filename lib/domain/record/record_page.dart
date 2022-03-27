@@ -5,6 +5,7 @@ import 'package:pilll/domain/premium_trial/premium_trial_complete_modal.dart';
 import 'package:pilll/domain/record/components/adding/record_page_adding_pill_sheet.dart';
 import 'package:pilll/domain/record/components/button/record_page_button.dart';
 import 'package:pilll/domain/record/components/notification_bar/notification_bar.dart';
+import 'package:pilll/domain/record/components/offset_pill_number/offset_pill_number_sheet.dart';
 import 'package:pilll/domain/record/components/supports/record_page_pill_sheet_support_actions.dart';
 import 'package:pilll/domain/record/components/pill_sheet/record_page_pill_sheet_list.dart';
 import 'package:pilll/domain/record/record_page_state.dart';
@@ -63,11 +64,30 @@ class RecordPage extends HookConsumerWidget {
           titleSpacing: 0,
           backgroundColor: PilllColors.white,
           toolbarHeight: RecordPageInformationHeaderConst.height,
-          title: RecordPageInformationHeader(
-            today: DateTime.now(),
-            pillSheetGroup: state.pillSheetGroup,
-            setting: setting,
-            store: store,
+          title: Stack(
+            children: [
+              RecordPageInformationHeader(
+                today: DateTime.now(),
+                pillSheetGroup: state.pillSheetGroup,
+                setting: setting,
+                store: store,
+              ),
+              Align(
+                alignment: Alignment.topRight,
+                child: IconButton(
+                  onPressed: () {
+                    showModalBottomSheet(
+                        context: context,
+                        builder: (context) {
+                          return OffsetPillNumberSheet();
+                        });
+                  },
+                  icon: const Icon(Icons.edit),
+                  iconSize: 24,
+                  color: Colors.black,
+                ),
+              ),
+            ],
           ),
         ),
         body: Column(
