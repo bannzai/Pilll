@@ -1,4 +1,4 @@
-import 'package:pilll/domain/settings/menstruation/setting_menstruation_state.dart';
+import 'package:pilll/domain/settings/menstruation/setting_menstruation_state.codegen.dart';
 import 'package:pilll/entity/pill_sheet_type.dart';
 import 'package:pilll/entity/setting.dart';
 import 'package:pilll/service/setting.dart';

@@ -1,5 +1,5 @@
 import 'package:pilll/analytics.dart';
-import 'package:pilll/domain/initial_setting/initial_setting_state.dart';
+import 'package:pilll/domain/initial_setting/initial_setting_state.codegen.dart';
 import 'package:pilll/domain/initial_setting/premium_trial/initial_setting_premium_trial_start_page.dart';
 import 'package:pilll/domain/initial_setting/initial_setting_store.dart';
 import 'package:pilll/components/atoms/buttons.dart';

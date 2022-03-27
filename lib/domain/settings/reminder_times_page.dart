@@ -1,5 +1,5 @@
 import 'package:pilll/components/molecules/indicator.dart';
-import 'package:pilll/domain/settings/setting_page_state.dart';
+import 'package:pilll/domain/settings/setting_page_state.codegen.dart';
 import 'package:pilll/entity/setting.dart';
 import 'package:pilll/domain/settings/setting_page_store.dart';
 import 'package:pilll/components/atoms/color.dart';

@@ -3,14 +3,14 @@ import 'dart:async';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
 import 'package:pilll/domain/calendar/calendar_card_state.dart';
 import 'package:pilll/domain/calendar/components/pill_sheet_modified_history/pill_sheet_modified_history_card.dart';
-import 'package:pilll/entity/pill_sheet_modified_history.dart';
-import 'package:pilll/entity/pill_sheet_modified_history_value.dart';
+import 'package:pilll/entity/pill_sheet_modified_history.codegen.dart';
+import 'package:pilll/entity/pill_sheet_modified_history_value.codegen.dart';
 import 'package:pilll/service/diary.dart';
 import 'package:pilll/service/menstruation.dart';
 import 'package:pilll/service/pill_sheet_group.dart';
 import 'package:pilll/service/pill_sheet_modified_history.dart';
 import 'package:pilll/service/setting.dart';
-import 'package:pilll/domain/calendar/calendar_page_state.dart';
+import 'package:pilll/domain/calendar/calendar_page_state.codegen.dart';
 import 'package:pilll/service/user.dart';
 import 'package:pilll/util/datetime/date_compare.dart';
 
