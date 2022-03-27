@@ -2,9 +2,9 @@ import 'package:pilll/entity/link_account_type.dart';
 import 'package:pilll/entity/initial_setting_pill_category_type.dart';
 import 'package:pilll/util/datetime/day.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';
-import 'package:pilll/entity/pill_sheet.dart';
+import 'package:pilll/entity/pill_sheet.codegen.dart';
 import 'package:pilll/entity/pill_sheet_type.dart';
-import 'package:pilll/entity/setting.dart';
+import 'package:pilll/entity/setting.codegen.dart';
 
 part 'initial_setting_state.freezed.dart';
 

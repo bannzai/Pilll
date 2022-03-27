@@ -1,5 +1,5 @@
 import 'package:freezed_annotation/freezed_annotation.dart';
-import 'package:pilll/entity/setting.dart';
+import 'package:pilll/entity/setting.codegen.dart';
 
 part 'setting_today_pill_number_state.freezed.dart';
 
