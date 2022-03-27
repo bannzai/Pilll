@@ -5,7 +5,7 @@ set -o pipefail
 CODEGEN_FILES=$(git grep --files-with-matches '@freezed')
 
 for codegen_file in $CODEGEN_FILES; do 
-  if [[ $codegen_file == "*.dart" ]]; then
+  if [[ $codegen_file == *.dart ]]; then
     codegen_file_without_file_extension=$(echo $codegen_file | awk -F'\.' '{print $1}')
     echo $codegen_file_without_file_extension | xargs -I '{}' mv {}.dart {}.codegen.dart
 
