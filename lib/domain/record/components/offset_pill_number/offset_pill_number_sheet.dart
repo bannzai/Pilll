@@ -4,19 +4,23 @@ import 'package:hooks_riverpod/hooks_riverpod.dart';
 import 'package:pilll/components/atoms/color.dart';
 import 'package:pilll/components/atoms/font.dart';
 import 'package:pilll/components/atoms/text_color.dart';
+import 'package:pilll/entity/pill_sheet_group.codegen.dart';
 
 const _defaultBegin = 3;
 const _defaultEnd = 120;
 
 class OffsetPillNumberSheet extends HookConsumerWidget {
+  final OffsetPillNumber? offsetPillNumber;
+
+  OffsetPillNumberSheet({required this.offsetPillNumber});
   @override
   Widget build(BuildContext context, WidgetRef ref) {
-    final begin = useState(_defaultBegin);
-    final end = useState(_defaultEnd);
+    final begin = useState(offsetPillNumber?.beginPillNumber ?? _defaultBegin);
+    final end = useState(offsetPillNumber?.endPillNumber ?? _defaultEnd);
     final beginTextFieldController =
-        useTextEditingController(text: "$_defaultBegin");
+        useTextEditingController(text: "${begin.value}");
     final endTextFieldController =
-        useTextEditingController(text: "$_defaultEnd");
+        useTextEditingController(text: "${end.value}");
 
     return Container(
       decoration: const BoxDecoration(
