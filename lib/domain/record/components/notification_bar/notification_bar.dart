@@ -56,7 +56,7 @@ class NotificationBar extends HookConsumerWidget {
         if (state.isTrial) {
           final beginTrialDate = state.beginTrialDate;
           if (beginTrialDate != null) {
-            final between = daysBetween(beginTrialDate, today());
+            final between = daysBetween(beginTrialDate, now());
             if (between <= 3) {
               return PremiumTrialBegin(
                   latestDay: (30 - between) + 1, store: store);
