@@ -578,8 +578,8 @@ class RecordPageStore extends StateNotifier<RecordPageState> {
           pillSheetGroup.copyWith(offsetPillNumber: newOffsetPillNumber);
       state = state.copyWith(pillSheetGroup: updatedPillSheetGroup);
     }
-    
-    _pillSheetGroupService.updateWithBatch(batch, pillSheetGroup)
+
+    _pillSheetGroupService.update(updatedPillSheetGroup);
   }
 
   switchingAppearanceMode(PillSheetAppearanceMode mode) {

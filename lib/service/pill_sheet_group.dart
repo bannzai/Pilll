@@ -61,6 +61,12 @@ class PillSheetGroupService {
     return updated;
   }
 
+  Future<void> update(PillSheetGroup pillSheetGroup) async {
+    await _database
+        .pillSheetGroupReference(pillSheetGroup.id!)
+        .update(pillSheetGroup.toJson());
+  }
+
   void updateWithBatch(WriteBatch batch, PillSheetGroup pillSheetGroup) {
     final json = pillSheetGroup.toJson();
     batch.update(_database.pillSheetGroupReference(pillSheetGroup.id!), json);
