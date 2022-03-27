@@ -1,6 +1,6 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:pilll/database/database.dart';
-import 'package:pilll/entity/pill_sheet_group.codegen.dart';
+import 'package:pilll/entity/pill_sheet_group.dart';
 import 'package:riverpod/riverpod.dart';
 
 final pillSheetGroupServiceProvider = Provider<PillSheetGroupService>(

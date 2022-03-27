@@ -1,6 +1,6 @@
 import 'dart:async';
 
-import 'package:pilll/domain/premium_trial/premium_trial_modal_state.codegen.dart';
+import 'package:pilll/domain/premium_trial/premium_trial_modal_state.dart';
 import 'package:pilll/entity/user_error.dart';
 import 'package:pilll/error_log.dart';
 import 'package:pilll/service/user.dart';

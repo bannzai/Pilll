@@ -1,10 +1,10 @@
 import 'dart:async';
 
 import 'package:pilll/database/batch.dart';
-import 'package:pilll/domain/settings/today_pill_number/setting_today_pill_number_state.codegen.dart';
-import 'package:pilll/domain/settings/today_pill_number/setting_today_pill_number_store_parameter.codegen.dart';
-import 'package:pilll/entity/pill_sheet.codegen.dart';
-import 'package:pilll/entity/pill_sheet_group.codegen.dart';
+import 'package:pilll/domain/settings/today_pill_number/setting_today_pill_number_state.dart';
+import 'package:pilll/domain/settings/today_pill_number/setting_today_pill_number_store_parameter.dart';
+import 'package:pilll/entity/pill_sheet.dart';
+import 'package:pilll/entity/pill_sheet_group.dart';
 import 'package:pilll/entity/pill_sheet_type.dart';
 import 'package:pilll/service/pill_sheet.dart';
 import 'package:pilll/service/pill_sheet_group.dart';
