@@ -19,10 +19,10 @@ done
 for codegen_file in $CODEGEN_FILES; do 
   if [[ $codegen_file == *.dart ]]; then
     codegen_file_without_file_extension=$(echo $codegen_file | awk -F'\.' '{print $1}')
-    sed -i '' -r -e "s|part '(.+).freezed.dart'|part '$1.freezed.dart'|" $codegen_file
-    sed -i '' -r -e "s|part '(.+).g.dart'|part '$1.g.dart'|" $codegen_file
-    sed -i '' -r -e "s|part \"(.+).freezed.dart\"|part \"$1.freezed.dart\"|" $codegen_file
-    sed -i '' -r -e "s|part \"(.+).g.dart\"|part \"$1.g.dart\"|" $codegen_file
+    sed -i '' -r -e "s|part '(.+).freezed.dart'|part '\1.freezed.dart'|" $codegen_file
+    sed -i '' -r -e "s|part '(.+).g.dart'|part '\1.g.dart'|" $codegen_file
+    sed -i '' -r -e "s|part \"(.+).freezed.dart\"|part \"\1.freezed.dart\"|" $codegen_file
+    sed -i '' -r -e "s|part \"(.+).g.dart\"|part \"\1.g.dart\"|" $codegen_file
   fi
 done
 
