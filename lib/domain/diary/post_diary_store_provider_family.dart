@@ -15,7 +15,7 @@ class PostDiaryStoreProviderFamily extends Equatable {
   });
 
 // NOTE: When diary.physicalConditions did change, PostDiaryPage can not changed for sex,memo,physical condition status.
-// if PostDiaryStoreProviderFamily with @freezed object or props contains [diary].
+// if PostDiaryStoreProviderFamily with @\freezed object or props contains [diary].
   @override
   List<Object?> get props => [date];
 }
