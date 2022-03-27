@@ -1,8 +1,8 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:pilll/database/database.dart';
-import 'package:pilll/entity/pill_sheet.dart';
-import 'package:pilll/entity/pill_sheet_modified_history.dart';
-import 'package:pilll/entity/pill_sheet_modified_history_value.dart';
+import 'package:pilll/entity/pill_sheet.codegen.dart';
+import 'package:pilll/entity/pill_sheet_modified_history.codegen.dart';
+import 'package:pilll/entity/pill_sheet_modified_history_value.codegen.dart';
 import 'package:pilll/util/datetime/day.dart';
 import 'package:riverpod/riverpod.dart';
 

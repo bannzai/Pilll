@@ -12,7 +12,7 @@ import 'package:pilll/entity/link_account_type.dart';
 import 'package:pilll/entity/user_error.dart';
 import 'package:pilll/error/error_alert.dart';
 import 'package:pilll/error/universal_error_page.dart';
-import 'package:pilll/signin/signin_sheet_state.dart';
+import 'package:pilll/signin/signin_sheet_state.codegen.dart';
 import 'package:pilll/signin/signin_sheet_store.dart';
 
 abstract class SignInSheetConst {
