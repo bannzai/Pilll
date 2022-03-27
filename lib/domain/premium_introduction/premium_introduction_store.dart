@@ -1,7 +1,7 @@
 import 'dart:async';
 
 import 'package:hooks_riverpod/hooks_riverpod.dart';
-import 'package:pilll/domain/premium_introduction/premium_introduction_state.dart';
+import 'package:pilll/domain/premium_introduction/premium_introduction_state.codegen.dart';
 import 'package:pilll/service/auth.dart';
 import 'package:pilll/service/purchase.dart';
 import 'package:pilll/service/user.dart';

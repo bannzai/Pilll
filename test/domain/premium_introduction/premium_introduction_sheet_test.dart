@@ -2,7 +2,7 @@ import 'package:pilll/analytics.dart';
 import 'package:pilll/domain/premium_introduction/components/premium_introduction_discount.dart';
 import 'package:pilll/domain/premium_introduction/components/premium_user_thanks.dart';
 import 'package:pilll/domain/premium_introduction/premium_introduction_sheet.dart';
-import 'package:pilll/domain/premium_introduction/premium_introduction_state.dart';
+import 'package:pilll/domain/premium_introduction/premium_introduction_state.codegen.dart';
 import 'package:pilll/domain/premium_introduction/premium_introduction_store.dart';
 import 'package:pilll/domain/premium_introduction/util/discount_deadline.dart';
 import 'package:pilll/service/day.dart';

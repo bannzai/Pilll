@@ -1,10 +1,10 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:pilll/entity/firestore_timestamp_converter.dart';
-import 'package:pilll/entity/setting.dart';
+import 'package:pilll/entity/setting.codegen.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';
 
-part 'user.g.dart';
-part 'user.freezed.dart';
+part 'user.codegen.g.dart';
+part 'user.codegen.freezed.dart';
 
 class UserNotFound with Exception {
   toString() {

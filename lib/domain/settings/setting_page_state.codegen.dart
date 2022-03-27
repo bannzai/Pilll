@@ -1,8 +1,8 @@
-import 'package:pilll/entity/pill_sheet_group.dart';
-import 'package:pilll/entity/setting.dart';
+import 'package:pilll/entity/pill_sheet_group.codegen.dart';
+import 'package:pilll/entity/setting.codegen.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';
 
-part 'setting_page_state.freezed.dart';
+part 'setting_page_state.codegen.freezed.dart';
 
 @freezed
 class SettingState with _$SettingState {

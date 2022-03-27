@@ -5,8 +5,8 @@ import 'package:pilll/util/datetime/date_compare.dart';
 import 'package:pilll/util/datetime/day.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';
-part 'pill_sheet.g.dart';
-part 'pill_sheet.freezed.dart';
+part 'pill_sheet.codegen.g.dart';
+part 'pill_sheet.codegen.freezed.dart';
 
 class PillSheetFirestoreKey {
   static final String typeInfo = "typeInfo";

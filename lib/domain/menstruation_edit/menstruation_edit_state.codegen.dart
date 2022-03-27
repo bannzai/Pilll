@@ -1,7 +1,7 @@
 import 'package:freezed_annotation/freezed_annotation.dart';
-import 'package:pilll/entity/menstruation.dart';
+import 'package:pilll/entity/menstruation.codegen.dart';
 
-part 'menstruation_edit_state.freezed.dart';
+part 'menstruation_edit_state.codegen.freezed.dart';
 
 @freezed
 class MenstruationEditState with _$MenstruationEditState {

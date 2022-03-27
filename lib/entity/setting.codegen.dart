@@ -1,10 +1,10 @@
 import 'package:pilll/entity/pill_sheet_type.dart';
 import 'package:flutter/foundation.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';
-import 'package:pilll/entity/reminder_notification_customization.dart';
+import 'package:pilll/entity/reminder_notification_customization.codegen.dart';
 
-part 'setting.g.dart';
-part 'setting.freezed.dart';
+part 'setting.codegen.g.dart';
+part 'setting.codegen.freezed.dart';
 
 @freezed
 class ReminderTime with _$ReminderTime {

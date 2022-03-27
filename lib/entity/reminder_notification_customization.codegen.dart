@@ -1,8 +1,8 @@
 import 'package:freezed_annotation/freezed_annotation.dart';
 import 'package:pilll/emoji/emoji.dart';
 
-part 'reminder_notification_customization.g.dart';
-part 'reminder_notification_customization.freezed.dart';
+part 'reminder_notification_customization.codegen.g.dart';
+part 'reminder_notification_customization.codegen.freezed.dart';
 
 @freezed
 class ReminderNotificationCustomization

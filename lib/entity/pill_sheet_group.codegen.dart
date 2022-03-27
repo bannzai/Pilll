@@ -1,12 +1,12 @@
 import 'package:pilll/entity/firestore_document_id_escaping_to_json.dart';
 import 'package:pilll/entity/firestore_timestamp_converter.dart';
-import 'package:pilll/entity/pill_sheet.dart';
+import 'package:pilll/entity/pill_sheet.codegen.dart';
 import 'package:pilll/entity/pill_sheet_type.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';
 
-part 'pill_sheet_group.g.dart';
-part 'pill_sheet_group.freezed.dart';
+part 'pill_sheet_group.codegen.g.dart';
+part 'pill_sheet_group.codegen.freezed.dart';
 
 class PillSheetGroupFirestoreKeys {
   static final createdAt = "createdAt";

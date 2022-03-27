@@ -3,7 +3,7 @@ import 'package:pilll/auth/apple.dart' as apple;
 import 'package:pilll/auth/google.dart' as google;
 import 'package:freezed_annotation/freezed_annotation.dart';
 
-part 'setting_account_cooperation_list_page_state.freezed.dart';
+part 'setting_account_cooperation_list_page_state.codegen.freezed.dart';
 
 @freezed
 class SettingAccountCooperationListState

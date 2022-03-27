@@ -4,7 +4,7 @@ import 'package:pilll/analytics.dart';
 import 'package:pilll/components/atoms/color.dart';
 import 'package:pilll/components/atoms/font.dart';
 import 'package:pilll/domain/settings/setting_page_store.dart';
-import 'package:pilll/entity/setting.dart';
+import 'package:pilll/entity/setting.codegen.dart';
 
 class TakingPillNotification extends HookConsumerWidget {
   final Setting setting;

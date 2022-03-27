@@ -1,7 +1,7 @@
 import 'package:freezed_annotation/freezed_annotation.dart';
 
-part 'package.g.dart';
-part 'package.freezed.dart';
+part 'package.codegen.g.dart';
+part 'package.codegen.freezed.dart';
 
 class PackageFirestoreKey {
   static final latestOS = "latestOS";

@@ -1,7 +1,7 @@
 import 'package:freezed_annotation/freezed_annotation.dart';
-import 'package:pilll/entity/pill_sheet_modified_history.dart';
+import 'package:pilll/entity/pill_sheet_modified_history.codegen.dart';
 
-part 'pill_sheet_modified_history_state.freezed.dart';
+part 'pill_sheet_modified_history_state.codegen.freezed.dart';
 
 @freezed
 class PillSheetModifiedHistoryState with _$PillSheetModifiedHistoryState {

@@ -1,8 +1,8 @@
 import 'package:freezed_annotation/freezed_annotation.dart';
 import 'package:pilll/domain/premium_function_survey/premium_function_survey_element_type.dart';
 
-part 'premium_function_survey.g.dart';
-part 'premium_function_survey.freezed.dart';
+part 'premium_function_survey.codegen.g.dart';
+part 'premium_function_survey.codegen.freezed.dart';
 
 @freezed
 class PremiumFunctionSurvey with _$PremiumFunctionSurvey {

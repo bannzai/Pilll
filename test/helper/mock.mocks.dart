@@ -12,25 +12,25 @@ import 'package:pilll/database/batch.dart' as _i35;
 import 'package:pilll/database/database.dart' as _i11;
 import 'package:pilll/domain/premium_function_survey/premium_function_survey_element_type.dart'
     as _i23;
-import 'package:pilll/domain/premium_introduction/premium_introduction_state.dart'
+import 'package:pilll/domain/premium_introduction/premium_introduction_state.codegen.dart'
     as _i9;
 import 'package:pilll/domain/premium_introduction/premium_introduction_store.dart'
     as _i30;
-import 'package:pilll/domain/record/components/notification_bar/notification_bar_state.dart'
+import 'package:pilll/domain/record/components/notification_bar/notification_bar_state.codegen.dart'
     as _i8;
 import 'package:pilll/domain/record/components/notification_bar/notification_bar_store.dart'
     as _i29;
-import 'package:pilll/domain/record/record_page_state.dart' as _i7;
+import 'package:pilll/domain/record/record_page_state.codegen.dart' as _i7;
 import 'package:pilll/domain/record/record_page_store.dart' as _i24;
-import 'package:pilll/entity/diary.dart' as _i4;
-import 'package:pilll/entity/menstruation.dart' as _i5;
+import 'package:pilll/entity/diary.codegen.dart' as _i4;
+import 'package:pilll/entity/menstruation.codegen.dart' as _i5;
 import 'package:pilll/entity/pill_mark_type.dart' as _i26;
-import 'package:pilll/entity/pill_sheet.dart' as _i2;
-import 'package:pilll/entity/pill_sheet_group.dart' as _i10;
-import 'package:pilll/entity/pill_sheet_modified_history.dart' as _i33;
+import 'package:pilll/entity/pill_sheet.codegen.dart' as _i2;
+import 'package:pilll/entity/pill_sheet_group.codegen.dart' as _i10;
+import 'package:pilll/entity/pill_sheet_modified_history.codegen.dart' as _i33;
 import 'package:pilll/entity/pill_sheet_type.dart' as _i27;
-import 'package:pilll/entity/setting.dart' as _i3;
-import 'package:pilll/entity/user.dart' as _i6;
+import 'package:pilll/entity/setting.codegen.dart' as _i3;
+import 'package:pilll/entity/user.codegen.dart' as _i6;
 import 'package:pilll/service/auth.dart' as _i20;
 import 'package:pilll/service/day.dart' as _i14;
 import 'package:pilll/service/diary.dart' as _i18;

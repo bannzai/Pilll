@@ -4,8 +4,8 @@ import 'package:pilll/util/formatter/date_time_formatter.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
 
-part 'diary.g.dart';
-part 'diary.freezed.dart';
+part 'diary.codegen.g.dart';
+part 'diary.codegen.freezed.dart';
 
 class DiaryFirestoreKey {
   static final String date = "date";

@@ -1,7 +1,7 @@
 import 'package:freezed_annotation/freezed_annotation.dart';
 import 'package:purchases_flutter/purchases_flutter.dart';
 
-part 'premium_introduction_state.freezed.dart';
+part 'premium_introduction_state.codegen.freezed.dart';
 
 @freezed
 class PremiumIntroductionState with _$PremiumIntroductionState {

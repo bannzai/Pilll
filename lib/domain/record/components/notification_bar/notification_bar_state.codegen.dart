@@ -1,9 +1,9 @@
 import 'package:freezed_annotation/freezed_annotation.dart';
-import 'package:pilll/entity/pill_sheet_group.dart';
+import 'package:pilll/entity/pill_sheet_group.codegen.dart';
 import 'package:pilll/entity/pill_sheet_type.dart';
 import 'package:pilll/util/datetime/day.dart';
 
-part 'notification_bar_state.freezed.dart';
+part 'notification_bar_state.codegen.freezed.dart';
 
 @freezed
 class NotificationBarState with _$NotificationBarState {
