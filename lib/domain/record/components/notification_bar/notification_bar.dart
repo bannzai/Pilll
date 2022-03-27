@@ -52,7 +52,7 @@ class NotificationBar extends HookConsumerWidget {
             premiumTrialLimit: premiumTrialLimit);
       }
 
-      if (!state.premiumTrialGuideNotificationIsClosed) {
+      if (!state.premiumTrialBeginAnouncementIsClosed) {
         if (state.isTrial) {
           final beginTrialDate = state.beginTrialDate;
           if (beginTrialDate != null) {
