@@ -79,7 +79,11 @@ class RecordPage extends HookConsumerWidget {
                     showModalBottomSheet(
                         context: context,
                         builder: (context) {
-                          return OffsetPillNumberSheet();
+                          return OffsetPillNumberSheet(
+                            offsetPillNumber:
+                                state.pillSheetGroup?.offsetPillNumber,
+                            store: store,
+                          );
                         });
                   },
                   icon: const Icon(Icons.edit),
