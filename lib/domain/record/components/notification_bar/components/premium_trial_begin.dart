@@ -24,16 +24,24 @@ class PremiumTrialBegin extends HookConsumerWidget {
       padding: const EdgeInsets.symmetric(vertical: 10, horizontal: 8),
       child: GestureDetector(
         onTap: () async {
-          analytics.logEvent(name: "p_premium_trial_begin_notification_bar");
+          analytics.logEvent(name: "p_premium_trial_begin_n_b");
           await launch(preimumLink);
         },
         child: Row(
           crossAxisAlignment: CrossAxisAlignment.center,
           children: [
-            const Icon(
-              Icons.close,
-              color: Colors.white,
-              size: 24,
+            IconButton(
+              icon: const Icon(
+                Icons.close,
+                color: Colors.white,
+                size: 24,
+              ),
+              onPressed: () {
+                analytics.logEvent(name: "p_premium_trial_begin_n_b_close");
+                store.closePremiumTrialBeginNotification();
+              },
+              iconSize: 24,
+              padding: EdgeInsets.zero,
             ),
             const Spacer(),
             Text(
