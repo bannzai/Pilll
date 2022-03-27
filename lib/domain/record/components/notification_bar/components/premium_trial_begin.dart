@@ -21,7 +21,7 @@ class PremiumTrialBegin extends HookConsumerWidget {
   @override
   Widget build(BuildContext context, WidgetRef ref) {
     return Container(
-      padding: const EdgeInsets.only(top: 8, bottom: 8),
+      padding: const EdgeInsets.symmetric(vertical: 10, horizontal: 8),
       child: GestureDetector(
         onTap: () async {
           analytics.logEvent(name: "p_premium_trial_begin_notification_bar");
@@ -30,43 +30,21 @@ class PremiumTrialBegin extends HookConsumerWidget {
         child: Row(
           crossAxisAlignment: CrossAxisAlignment.center,
           children: [
-            IconButton(
-              alignment: Alignment.topLeft,
-              icon: const Icon(
-                Icons.close,
-                color: Colors.white,
-                size: 24,
-              ),
-              onPressed: () {
-                store.closePremiumTrialBeginNotification();
-              },
-              iconSize: 24,
-              padding: EdgeInsets.zero,
+            const Icon(
+              Icons.close,
+              color: Colors.white,
+              size: 24,
             ),
             const Spacer(),
-            Column(
-              children: [
-                Text(
-                  "プレミアムお試し体験中（残り$latestDay日）",
-                  style: TextColorStyle.white.merge(FontType.descriptionBold),
-                  textAlign: TextAlign.center,
-                ),
-              ],
+            Text(
+              "プレミアムお試し体験中（残り$latestDay日）",
+              style: TextColorStyle.white.merge(FontType.descriptionBold),
+              textAlign: TextAlign.center,
             ),
             const Spacer(),
-            Column(
-              children: [
-                IconButton(
-                  icon: SvgPicture.asset(
-                    "images/arrow_right.svg",
-                    color: Colors.white,
-                  ),
-                  onPressed: () {},
-                  iconSize: 24,
-                  padding: const EdgeInsets.all(8),
-                  alignment: Alignment.centerRight,
-                ),
-              ],
+            SvgPicture.asset(
+              "images/arrow_right.svg",
+              color: Colors.white,
             ),
           ],
         ),
