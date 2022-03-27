@@ -1,5 +1,5 @@
 import 'package:equatable/equatable.dart';
-import 'package:pilll/entity/diary.dart';
+import 'package:pilll/entity/diary.codegen.dart';
 
 // ref: https://riverpod.dev/docs/concepts/modifiers/family/
 // > A tuple from tuple
@@ -15,7 +15,7 @@ class PostDiaryStoreProviderFamily extends Equatable {
   });
 
 // NOTE: When diary.physicalConditions did change, PostDiaryPage can not changed for sex,memo,physical condition status.
-// if PostDiaryStoreProviderFamily with @freezed object or props contains [diary].
+// if PostDiaryStoreProviderFamily with @\freezed object or props contains [diary].
   @override
   List<Object?> get props => [date];
 }
