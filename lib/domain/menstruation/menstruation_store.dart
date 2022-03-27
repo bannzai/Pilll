@@ -3,16 +3,16 @@ import 'dart:io';
 
 import 'package:hooks_riverpod/hooks_riverpod.dart';
 import 'package:pilll/components/organisms/calendar/utility.dart';
-import 'package:pilll/domain/menstruation/menstruation_card_state.dart';
+import 'package:pilll/domain/menstruation/menstruation_card_state.codegen.dart';
 import 'package:pilll/domain/menstruation/menstruation_history_card_state.dart';
-import 'package:pilll/entity/menstruation.dart';
+import 'package:pilll/entity/menstruation.codegen.dart';
 import 'package:pilll/native/health_care.dart';
 import 'package:pilll/service/diary.dart';
 import 'package:pilll/service/menstruation.dart';
 import 'package:pilll/service/pill_sheet.dart';
 import 'package:pilll/service/pill_sheet_group.dart';
 import 'package:pilll/service/setting.dart';
-import 'package:pilll/domain/menstruation/menstruation_state.dart';
+import 'package:pilll/domain/menstruation/menstruation_state.codegen.dart';
 import 'package:pilll/service/user.dart';
 import 'package:pilll/util/datetime/day.dart';
 

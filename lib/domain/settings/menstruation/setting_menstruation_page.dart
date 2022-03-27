@@ -6,7 +6,7 @@ import 'package:pilll/components/template/setting_menstruation/setting_menstruat
 import 'package:pilll/components/template/setting_menstruation/setting_menstruation_pill_sheet_list.dart';
 import 'package:pilll/domain/settings/menstruation/setting_menstruation_store.dart';
 import 'package:pilll/domain/settings/setting_page_store.dart';
-import 'package:pilll/entity/setting.dart';
+import 'package:pilll/entity/setting.codegen.dart';
 
 class SettingMenstruationPage extends HookConsumerWidget {
   const SettingMenstruationPage({
