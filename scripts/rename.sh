@@ -4,6 +4,7 @@ set -o pipefail
 
 CODEGEN_FILES=$(git grep --files-with-matches '@freezed')
 
+echo "First"
 for codegen_file in $CODEGEN_FILES; do
   if [[ $codegen_file == *.dart ]]; then
     codegen_file_without_file_extension=$(echo $codegen_file | awk -F'\.' '{print $1}')
@@ -16,7 +17,7 @@ for codegen_file in $CODEGEN_FILES; do
   fi
 done
 
-
+echo "Second"
 for codegen_file in $CODEGEN_FILES; do
   if [[ $codegen_file == *.dart ]]; then
     codegen_file_without_file_extension=$(echo $codegen_file | awk -F'\.' '{print $1}')
@@ -27,6 +28,7 @@ for codegen_file in $CODEGEN_FILES; do
   fi
 done
 
+echo "Third"
 for codegen_file in $CODEGEN_FILES; do
   if [[ $codegen_file == *.dart ]]; then
     echo "codegen_file: $codegen_file"
