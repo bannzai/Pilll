@@ -11,7 +11,7 @@ for codegen_file in $CODEGEN_FILES; do
     codegen_file_without_lib_package_and_file_extension=$(echo $codegen_file_without_file_extension | sed 's|lib/||')
     include_codegen_files=$(git grep $codegen_file_without_lib_package_and_file_extension | awk -F':' '{print $1}')
 
-    if [[ ! -z "$include_codegen_file" ]]; then
+    if [[ ! -z "$include_codegen_files" ]]; then
       for include_codegen_file in $include_codegen_files; do
         sed -i '' -e "s|$codegen_file_without_lib_package_and_file_extension.dart|$codegen_file_without_lib_package_and_file_extension.codegen.dart|" $include_codegen_file
       done
