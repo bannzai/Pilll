@@ -5,6 +5,6 @@ targets:
         generate_for:
           include:
             - lib/**.codegen.dart
-       mockito|mockBuilder:
+      mockito:mockBuilder:
         generate_for:
           - test/*/*.dart
