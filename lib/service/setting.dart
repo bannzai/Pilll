@@ -2,8 +2,8 @@ import 'dart:async';
 
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:pilll/database/database.dart';
-import 'package:pilll/entity/setting.codegen.dart';
-import 'package:pilll/entity/user.codegen.dart';
+import 'package:pilll/entity/setting.dart';
+import 'package:pilll/entity/user.dart';
 import 'package:riverpod/riverpod.dart';
 
 final settingServiceProvider =

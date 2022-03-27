@@ -1,5 +1,5 @@
 import 'package:freezed_annotation/freezed_annotation.dart';
-import 'package:pilll/entity/pill_sheet_modified_history.codegen.dart';
+import 'package:pilll/entity/pill_sheet_modified_history.dart';
 
 part 'pill_sheet_modified_history_state.freezed.dart';
 

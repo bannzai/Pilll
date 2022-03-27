@@ -1,6 +1,6 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:pilll/database/database.dart';
-import 'package:pilll/entity/menstruation.codegen.dart';
+import 'package:pilll/entity/menstruation.dart';
 import 'package:riverpod/riverpod.dart';
 
 final menstruationServiceProvider = Provider<MenstruationService>(

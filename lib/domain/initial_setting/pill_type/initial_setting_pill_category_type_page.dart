@@ -17,7 +17,7 @@ import 'package:pilll/router/router.dart';
 import 'package:pilll/service/auth.dart';
 import 'package:pilll/entity/link_account_type.dart';
 import 'package:pilll/signin/signin_sheet.dart';
-import 'package:pilll/signin/signin_sheet_state.codegen.dart';
+import 'package:pilll/signin/signin_sheet_state.dart';
 
 const initialSettingPillCategoryUserPropertyName = "i_s_pill_category";
 

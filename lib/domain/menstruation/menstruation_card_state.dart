@@ -1,4 +1,4 @@
-import 'package:pilll/entity/menstruation.codegen.dart';
+import 'package:pilll/entity/menstruation.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';
 import 'package:pilll/util/datetime/day.dart';
 

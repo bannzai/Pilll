@@ -2,13 +2,13 @@ import 'dart:async';
 import 'dart:io';
 
 import 'package:pilll/database/batch.dart';
-import 'package:pilll/entity/setting.codegen.dart';
+import 'package:pilll/entity/setting.dart';
 import 'package:pilll/native/health_care.dart';
 import 'package:pilll/service/pill_sheet.dart';
 import 'package:pilll/service/pill_sheet_group.dart';
 import 'package:pilll/service/pill_sheet_modified_history.dart';
 import 'package:pilll/service/setting.dart';
-import 'package:pilll/domain/settings/setting_page_state.codegen.dart';
+import 'package:pilll/domain/settings/setting_page_state.dart';
 import 'package:pilll/service/user.dart';
 import 'package:pilll/util/shared_preference/keys.dart';
 import 'package:riverpod/riverpod.dart';

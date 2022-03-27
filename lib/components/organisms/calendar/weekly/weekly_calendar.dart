@@ -8,7 +8,7 @@ import 'package:pilll/components/organisms/calendar/weekly/weekly_calendar_state
 import 'package:pilll/domain/diary/post_diary_page.dart';
 import 'package:flutter/material.dart';
 import 'package:pilll/domain/menstruation_edit/menstruation_edit_page.dart';
-import 'package:pilll/entity/diary.codegen.dart';
+import 'package:pilll/entity/diary.dart';
 import 'package:pilll/entity/weekday.dart';
 import 'package:pilll/domain/diary/confirm_diary_sheet.dart';
 import 'package:pilll/util/datetime/date_compare.dart';

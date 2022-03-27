@@ -1,6 +1,6 @@
 import 'package:pilll/components/atoms/color.dart';
 import 'package:pilll/components/molecules/app_card.dart';
-import 'package:pilll/domain/menstruation/menstruation_card_state.codegen.dart';
+import 'package:pilll/domain/menstruation/menstruation_card_state.dart';
 import 'package:pilll/util/formatter/date_time_formatter.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:flutter/material.dart';

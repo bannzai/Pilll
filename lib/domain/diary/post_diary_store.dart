@@ -1,5 +1,5 @@
-import 'package:pilll/domain/diary/diary_state.codegen.dart';
-import 'package:pilll/entity/diary.codegen.dart';
+import 'package:pilll/domain/diary/diary_state.dart';
+import 'package:pilll/entity/diary.dart';
 import 'package:pilll/service/diary.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
 

@@ -1,5 +1,5 @@
 import 'package:equatable/equatable.dart';
-import 'package:pilll/entity/diary.codegen.dart';
+import 'package:pilll/entity/diary.dart';
 
 // ref: https://riverpod.dev/docs/concepts/modifiers/family/
 // > A tuple from tuple
