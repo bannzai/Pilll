@@ -1,6 +1,6 @@
 import 'dart:async';
 
-import 'package:pilll/domain/diary/diary_state.codegen.dart';
+import 'package:pilll/domain/diary/diary_state.dart';
 import 'package:pilll/service/diary.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
 import 'package:pilll/util/datetime/date_compare.dart';

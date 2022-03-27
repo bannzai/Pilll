@@ -1,5 +1,5 @@
 import 'package:freezed_annotation/freezed_annotation.dart';
-import 'package:pilll/entity/menstruation.codegen.dart';
+import 'package:pilll/entity/menstruation.dart';
 
 part 'menstruation_edit_state.freezed.dart';
 

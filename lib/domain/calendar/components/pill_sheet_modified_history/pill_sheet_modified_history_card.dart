@@ -15,7 +15,7 @@ import 'package:pilll/domain/premium_introduction/premium_introduction_sheet.dar
 import 'package:pilll/domain/premium_trial/premium_trial_complete_modal.dart';
 import 'package:pilll/domain/premium_trial/premium_trial_modal.dart';
 import 'package:pilll/emoji/emoji.dart';
-import 'package:pilll/entity/pill_sheet_modified_history.codegen.dart';
+import 'package:pilll/entity/pill_sheet_modified_history.dart';
 
 class CalendarPillSheetModifiedHistoryCardState {
   static final pillSheetModifiedHistoriesThreshold = 6;

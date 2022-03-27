@@ -1,9 +1,9 @@
 import 'package:pilll/analytics.dart';
-import 'package:pilll/domain/record/record_page_state.codegen.dart';
+import 'package:pilll/domain/record/record_page_state.dart';
 import 'package:pilll/domain/record/record_page_store.dart';
 import 'package:pilll/entity/pill_mark_type.dart';
-import 'package:pilll/entity/pill_sheet.codegen.dart';
-import 'package:pilll/entity/pill_sheet_group.codegen.dart';
+import 'package:pilll/entity/pill_sheet.dart';
+import 'package:pilll/entity/pill_sheet_group.dart';
 import 'package:pilll/entity/pill_sheet_type.dart';
 import 'package:pilll/entity/setting.dart';
 import 'package:pilll/entity/user.dart';

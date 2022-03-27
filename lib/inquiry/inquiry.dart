@@ -1,7 +1,7 @@
 import 'package:firebase_auth/firebase_auth.dart';
-import 'package:pilll/entity/pill_sheet_group.codegen.dart';
+import 'package:pilll/entity/pill_sheet_group.dart';
 import 'package:pilll/database/database.dart';
-import 'package:pilll/entity/menstruation.codegen.dart';
+import 'package:pilll/entity/menstruation.dart';
 import 'package:pilll/entity/setting.dart';
 import 'package:pilll/service/menstruation.dart';
 import 'package:pilll/service/pill_sheet_group.dart';

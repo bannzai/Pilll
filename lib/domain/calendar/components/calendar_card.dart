@@ -7,7 +7,7 @@ import 'package:pilll/domain/calendar/calendar_card_state.dart';
 import 'package:pilll/domain/calendar/weekly_calendar_state.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:pilll/entity/diary.codegen.dart';
+import 'package:pilll/entity/diary.dart';
 
 class CalendarCard extends StatelessWidget {
   final CalendarCardState state;

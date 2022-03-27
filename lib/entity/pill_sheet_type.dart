@@ -1,4 +1,4 @@
-import 'package:pilll/entity/pill_sheet.codegen.dart';
+import 'package:pilll/entity/pill_sheet.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:pilll/entity/weekday.dart';
 
