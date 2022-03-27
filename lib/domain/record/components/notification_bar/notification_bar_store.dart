@@ -36,6 +36,8 @@ class NotificationBarStateStore extends StateNotifier<NotificationBarState> {
             isLinkedLoginProvider: parameter.isLinkedLoginProvider,
             premiumTrialGuideNotificationIsClosed:
                 parameter.premiumTrialGuideNotificationIsClosed,
+            premiumTrialBeginAnouncementIsClosed:
+                parameter.premiumTrialBeginAnouncementIsClosed,
             recommendedSignupNotificationIsAlreadyShow:
                 parameter.recommendedSignupNotificationIsAlreadyShow,
           ),
