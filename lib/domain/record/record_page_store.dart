@@ -537,6 +537,47 @@ class RecordPageStore extends StateNotifier<RecordPageState> {
     await batch.commit();
   }
 
+  void setOffsetPillNumberBegin(int begin) {
+    final pillSheetGroup = state.pillSheetGroup;
+    if (pillSheetGroup == null) {
+      return;
+    }
+
+    final offsetPillNumber = pillSheetGroup.offsetPillNumber;
+    if (offsetPillNumber == null) {
+      final newOffsetPillNumber = OffsetPillNumber(beginPillNumber: begin);
+      final copiedPillSheetGroup =
+          pillSheetGroup.copyWith(offsetPillNumber: newOffsetPillNumber);
+      state = state.copyWith(pillSheetGroup: copiedPillSheetGroup);
+    } else {
+      final newOffsetPillNumber =
+          offsetPillNumber.copyWith(beginPillNumber: begin);
+      final copiedPillSheetGroup =
+          pillSheetGroup.copyWith(offsetPillNumber: newOffsetPillNumber);
+      state = state.copyWith(pillSheetGroup: copiedPillSheetGroup);
+    }
+  }
+
+  void setOffsetPillNumberEnd(int end) {
+    final pillSheetGroup = state.pillSheetGroup;
+    if (pillSheetGroup == null) {
+      return;
+    }
+
+    final offsetPillNumber = pillSheetGroup.offsetPillNumber;
+    if (offsetPillNumber == null) {
+      final newOffsetPillNumber = OffsetPillNumber(endPillNumber: end);
+      final copiedPillSheetGroup =
+          pillSheetGroup.copyWith(offsetPillNumber: newOffsetPillNumber);
+      state = state.copyWith(pillSheetGroup: copiedPillSheetGroup);
+    } else {
+      final newOffsetPillNumber = offsetPillNumber.copyWith(endPillNumber: end);
+      final copiedPillSheetGroup =
+          pillSheetGroup.copyWith(offsetPillNumber: newOffsetPillNumber);
+      state = state.copyWith(pillSheetGroup: copiedPillSheetGroup);
+    }
+  }
+
   switchingAppearanceMode(PillSheetAppearanceMode mode) {
     final setting = state.setting;
     if (setting == null) {
