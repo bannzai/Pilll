@@ -43,7 +43,9 @@ class SequentialPillNumber extends StatelessWidget {
 
       final endPillNumberOffset = offsetPillNumber.endPillNumber;
       if (endPillNumberOffset != null) {
+        final divided = number ~/ endPillNumberOffset;
         number %= endPillNumberOffset;
+        number += endPillNumberOffset * divided;
       }
     }
 
@@ -111,7 +113,9 @@ class MenstruationSequentialPillNumber extends StatelessWidget {
 
       final endPillNumberOffset = offsetPillNumber.endPillNumber;
       if (endPillNumberOffset != null) {
+        final divided = number ~/ endPillNumberOffset;
         number %= endPillNumberOffset;
+        number += endPillNumberOffset * divided;
       }
     }
 
