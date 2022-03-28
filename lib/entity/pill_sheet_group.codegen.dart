@@ -67,14 +67,8 @@ class PillSheetGroup with _$PillSheetGroup {
     if (activedPillSheet == null) {
       return 0;
     }
-    if (activedPillSheet.groupIndex == 0) {
-      return activedPillSheet.todayPillNumber;
-    }
-    final passedPillSheets = pillSheets.sublist(0, activedPillSheet.groupIndex);
-    if (passedPillSheets.isEmpty) {
-      return activedPillSheet.todayPillNumber;
-    }
 
+    final passedPillSheets = pillSheets.sublist(0, activedPillSheet.groupIndex);
     final passedPillCountForPillSheetTypes =
         summarizedPillSheetTypeTotalCountToPageIndex(
             pillSheetTypes:
@@ -91,14 +85,8 @@ class PillSheetGroup with _$PillSheetGroup {
     if (activedPillSheet == null) {
       return 0;
     }
-    if (activedPillSheet.groupIndex == 0) {
-      return activedPillSheet.lastTakenPillNumber;
-    }
-    final passedPillSheets = pillSheets.sublist(0, activedPillSheet.groupIndex);
-    if (passedPillSheets.isEmpty) {
-      return activedPillSheet.lastTakenPillNumber;
-    }
 
+    final passedPillSheets = pillSheets.sublist(0, activedPillSheet.groupIndex);
     final passedPillCountForPillSheetTypes =
         summarizedPillSheetTypeTotalCountToPageIndex(
             pillSheetTypes:
