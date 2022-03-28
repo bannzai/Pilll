@@ -220,6 +220,47 @@ void main() {
         });
       });
     });
+    group("has three pill sheets", () {
+      test("it is plane pattern", () {
+        final mockTodayRepository = MockTodayService();
+        todayRepository = mockTodayRepository;
+        when(mockTodayRepository.today())
+            .thenReturn(DateTime.parse("2022-03-29"));
+        when(mockTodayRepository.now())
+            .thenReturn(DateTime.parse("2022-03-29"));
+
+        final sheetType = PillSheetType.pillsheet_21;
+        final pillSheet1 = PillSheet(
+          beginingDate: DateTime.parse("2022-03-01"),
+          lastTakenDate: DateTime.parse("2020-03-28"),
+          groupIndex: 0,
+          typeInfo: PillSheetTypeInfo(
+            dosingPeriod: sheetType.dosingPeriod,
+            name: sheetType.fullName,
+            totalCount: sheetType.totalCount,
+            pillSheetTypeReferencePath: sheetType.rawPath,
+          ),
+        );
+        final pillSheet2 = PillSheet(
+          beginingDate: DateTime.parse("2022-03-29"),
+          lastTakenDate: null,
+          groupIndex: 1,
+          typeInfo: PillSheetTypeInfo(
+            dosingPeriod: sheetType.dosingPeriod,
+            name: sheetType.fullName,
+            totalCount: sheetType.totalCount,
+            pillSheetTypeReferencePath: sheetType.rawPath,
+          ),
+        );
+        // created at and id are anything value
+        final pillSheetGroup = PillSheetGroup(
+          pillSheetIDs: ["sheet_id", "sheet_id2"],
+          pillSheets: [pillSheet1, pillSheet2],
+          createdAt: DateTime.now(),
+        );
+        expect(pillSheetGroup.sequentialTodayPillNumber, 29);
+      });
+    });
   });
 
   group("#sequentialLastTakenPillNumber", () {
