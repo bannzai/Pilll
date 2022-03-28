@@ -86,6 +86,7 @@ class IntiialSettingPremiumTrialStartPage extends HookConsumerWidget {
                                       fontFamily: FontFamily.japanese,
                                       fontWeight: FontWeight.bold,
                                     ),
+                                    textAlign: TextAlign.center,
                                   ),
                                 ],
                               ),
