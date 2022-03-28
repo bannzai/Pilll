@@ -104,7 +104,7 @@ void main() {
         );
         expect(model.todayPillNumber, 25);
       });
-      group("rest duration has plural rest duration. ", () {
+      group("pill sheet has plural rest duration. ", () {
         test("last rest duration is not ended", () {
           final mockTodayRepository = MockTodayService();
           todayRepository = mockTodayRepository;
