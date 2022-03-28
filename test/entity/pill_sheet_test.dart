@@ -441,7 +441,7 @@ void main() {
       expect(model.isBegan, false);
     });
   });
-  group("#lastTakenDate", () {
+  group("#lastTakenPillNumber", () {
     test("it is not taken yet", () {
       final mockTodayRepository = MockTodayService();
       todayRepository = mockTodayRepository;
@@ -748,8 +748,10 @@ void main() {
               pillSheetTypeReferencePath: sheetType.rawPath,
             ),
           );
-          expect(pillSheet.estimatedLastTakenDate,
-              DateTime.parse("2022-06-03").subtract(const Duration(seconds: 1)));
+          expect(
+              pillSheet.estimatedLastTakenDate,
+              DateTime.parse("2022-06-03")
+                  .subtract(const Duration(seconds: 1)));
         });
         test("last rest duration is ended", () {
           final mockTodayRepository = MockTodayService();
@@ -781,8 +783,10 @@ void main() {
               pillSheetTypeReferencePath: sheetType.rawPath,
             ),
           );
-          expect(pillSheet.estimatedLastTakenDate,
-              DateTime.parse("2022-06-01").subtract(const Duration(seconds: 1)));
+          expect(
+              pillSheet.estimatedLastTakenDate,
+              DateTime.parse("2022-06-01")
+                  .subtract(const Duration(seconds: 1)));
         });
       });
     });
