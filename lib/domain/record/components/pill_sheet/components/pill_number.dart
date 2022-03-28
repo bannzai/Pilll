@@ -33,9 +33,8 @@ class SequentialPillNumber extends StatelessWidget {
       : super(key: key);
   @override
   Widget build(BuildContext context) {
-    final originalNumber = pageOffset + pillNumberIntoPillSheet;
+    var number = pageOffset + pillNumberIntoPillSheet;
 
-    var number = originalNumber;
     final offsetPillNumber = this.offsetPillNumber;
     if (offsetPillNumber != null) {
       final beginPillNumberOffset = offsetPillNumber.beginPillNumber;
@@ -46,9 +45,8 @@ class SequentialPillNumber extends StatelessWidget {
       final endPillNumberOffset = offsetPillNumber.endPillNumber;
       if (endPillNumberOffset != null) {
         number %= endPillNumberOffset;
-        number += 1;
-        if (endPillNumberOffset < originalNumber) {
-          number += endPillNumberOffset;
+        if (number == 0) {
+          number = endPillNumberOffset;
         }
       }
     }
@@ -108,6 +106,7 @@ class MenstruationSequentialPillNumber extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     var number = pageOffset + pillNumberIntoPillSheet;
+
     final offsetPillNumber = this.offsetPillNumber;
     if (offsetPillNumber != null) {
       final beginPillNumberOffset = offsetPillNumber.beginPillNumber;
@@ -117,10 +116,10 @@ class MenstruationSequentialPillNumber extends StatelessWidget {
 
       final endPillNumberOffset = offsetPillNumber.endPillNumber;
       if (endPillNumberOffset != null) {
-        number %= (endPillNumberOffset + 1);
-
-        final divided = number ~/ endPillNumberOffset;
-        number += divided == 0 ? 0 : endPillNumberOffset;
+        number %= endPillNumberOffset;
+        if (number == 0) {
+          number = endPillNumberOffset;
+        }
       }
     }
 
