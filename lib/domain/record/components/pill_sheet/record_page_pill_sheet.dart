@@ -171,17 +171,22 @@ class RecordPagePillSheet extends StatelessWidget {
       if (setting.pillNumberForFromMenstruation == 0 ||
           setting.durationMenstruation == 0) {
         return SequentialPillNumber(
-            pageOffset: pageOffset, pillNumberIntoPillSheet: pillNumberIntoPillSheet);
+          pageOffset: pageOffset,
+          pillNumberIntoPillSheet: pillNumberIntoPillSheet,
+        );
       }
 
       if (isPremiumOrTrial) {
         if (containedMenstruationDuration) {
           return MenstruationSequentialPillNumber(
-              pageOffset: pageOffset, pillNumberIntoPillSheet: pillNumberIntoPillSheet);
+            pageOffset: pageOffset,
+            pillNumberIntoPillSheet: pillNumberIntoPillSheet,
+          );
         }
       }
       return SequentialPillNumber(
-          pageOffset: pageOffset, pillNumberIntoPillSheet: pillNumberIntoPillSheet);
+          pageOffset: pageOffset,
+          pillNumberIntoPillSheet: pillNumberIntoPillSheet);
     } else {
       if (setting.pillNumberForFromMenstruation == 0 ||
           setting.durationMenstruation == 0) {
