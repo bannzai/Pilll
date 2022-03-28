@@ -38,7 +38,7 @@ class SequentialPillNumber extends StatelessWidget {
     if (offsetPillNumber != null) {
       final beginPillNumberOffset = offsetPillNumber.beginPillNumber;
       if (beginPillNumberOffset != null) {
-        number += beginPillNumberOffset;
+        number += (beginPillNumberOffset - 1);
       }
 
       final endPillNumberOffset = offsetPillNumber.endPillNumber;
@@ -106,7 +106,7 @@ class MenstruationSequentialPillNumber extends StatelessWidget {
     if (offsetPillNumber != null) {
       final beginPillNumberOffset = offsetPillNumber.beginPillNumber;
       if (beginPillNumberOffset != null) {
-        number += beginPillNumberOffset;
+        number += (beginPillNumberOffset - 1);
       }
 
       final endPillNumberOffset = offsetPillNumber.endPillNumber;
