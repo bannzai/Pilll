@@ -220,7 +220,7 @@ void main() {
         });
       });
     });
-    group("has three pill sheets", () {
+    group("has two pill sheets", () {
       test("it is plane pattern", () {
         final mockTodayRepository = MockTodayService();
         todayRepository = mockTodayRepository;
