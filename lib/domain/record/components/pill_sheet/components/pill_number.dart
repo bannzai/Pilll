@@ -22,17 +22,33 @@ class PlainPillNumber extends StatelessWidget {
 
 class SequentialPillNumber extends StatelessWidget {
   final int pageOffset;
+  final OffsetPillNumber? offsetPillNumber;
   final int pillNumberIntoPillSheet;
 
   const SequentialPillNumber(
       {Key? key,
       required this.pageOffset,
+      required this.offsetPillNumber,
       required this.pillNumberIntoPillSheet})
       : super(key: key);
   @override
   Widget build(BuildContext context) {
+    var number = pageOffset + pillNumberIntoPillSheet;
+    final offsetPillNumber = this.offsetPillNumber;
+    if (offsetPillNumber != null) {
+      final beginPillNumberOffset = offsetPillNumber.beginPillNumber;
+      if (beginPillNumberOffset != null) {
+        number += beginPillNumberOffset;
+      }
+
+      final endPillNumberOffset = offsetPillNumber.endPillNumber;
+      if (endPillNumberOffset != null) {
+        number %= endPillNumberOffset;
+      }
+    }
+
     return Text(
-      "${pageOffset + pillNumberIntoPillSheet}",
+      "$number",
       style: FontType.smallTitle
           .merge(const TextStyle(color: PilllColors.weekday)),
       textScaleFactor: 1,
@@ -74,17 +90,33 @@ class MenstruationPillNumber extends StatelessWidget {
 
 class MenstruationSequentialPillNumber extends StatelessWidget {
   final int pageOffset;
+  final OffsetPillNumber? offsetPillNumber;
   final int pillNumberIntoPillSheet;
 
   const MenstruationSequentialPillNumber(
       {Key? key,
       required this.pageOffset,
+      required this.offsetPillNumber,
       required this.pillNumberIntoPillSheet})
       : super(key: key);
   @override
   Widget build(BuildContext context) {
+    var number = pageOffset + pillNumberIntoPillSheet;
+    final offsetPillNumber = this.offsetPillNumber;
+    if (offsetPillNumber != null) {
+      final beginPillNumberOffset = offsetPillNumber.beginPillNumber;
+      if (beginPillNumberOffset != null) {
+        number += beginPillNumberOffset;
+      }
+
+      final endPillNumberOffset = offsetPillNumber.endPillNumber;
+      if (endPillNumberOffset != null) {
+        number %= endPillNumberOffset;
+      }
+    }
+
     return Text(
-      "${pageOffset + pillNumberIntoPillSheet}",
+      "$number",
       style: FontType.smallTitle
           .merge(const TextStyle(color: PilllColors.primary)),
       textScaleFactor: 1,

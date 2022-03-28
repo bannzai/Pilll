@@ -172,6 +172,7 @@ class RecordPagePillSheet extends StatelessWidget {
           setting.durationMenstruation == 0) {
         return SequentialPillNumber(
           pageOffset: pageOffset,
+          offsetPillNumber: state.pillSheetGroup?.offsetPillNumber,
           pillNumberIntoPillSheet: pillNumberIntoPillSheet,
         );
       }
@@ -180,12 +181,14 @@ class RecordPagePillSheet extends StatelessWidget {
         if (containedMenstruationDuration) {
           return MenstruationSequentialPillNumber(
             pageOffset: pageOffset,
+            offsetPillNumber: state.pillSheetGroup?.offsetPillNumber,
             pillNumberIntoPillSheet: pillNumberIntoPillSheet,
           );
         }
       }
       return SequentialPillNumber(
           pageOffset: pageOffset,
+          offsetPillNumber: state.pillSheetGroup?.offsetPillNumber,
           pillNumberIntoPillSheet: pillNumberIntoPillSheet);
     } else {
       if (setting.pillNumberForFromMenstruation == 0 ||
