@@ -19,16 +19,16 @@ class PlainPillNumber extends StatelessWidget {
 }
 
 class SequentialPillNumber extends StatelessWidget {
-  final int offset;
+  final int pageOffset;
   final int pillNumberIntoPillSheet;
 
   const SequentialPillNumber(
-      {Key? key, required this.offset, required this.pillNumberIntoPillSheet})
+      {Key? key, required this.pageOffset, required this.pillNumberIntoPillSheet})
       : super(key: key);
   @override
   Widget build(BuildContext context) {
     return Text(
-      "${offset + pillNumberIntoPillSheet}",
+      "${pageOffset + pillNumberIntoPillSheet}",
       style: FontType.smallTitle.merge(const TextStyle(color: PilllColors.weekday)),
       textScaleFactor: 1,
     );
@@ -66,16 +66,16 @@ class MenstruationPillNumber extends StatelessWidget {
 }
 
 class MenstruationSequentialPillNumber extends StatelessWidget {
-  final int offset;
+  final int pageOffset;
   final int pillNumberIntoPillSheet;
 
   const MenstruationSequentialPillNumber(
-      {Key? key, required this.offset, required this.pillNumberIntoPillSheet})
+      {Key? key, required this.pageOffset, required this.pillNumberIntoPillSheet})
       : super(key: key);
   @override
   Widget build(BuildContext context) {
     return Text(
-      "${offset + pillNumberIntoPillSheet}",
+      "${pageOffset + pillNumberIntoPillSheet}",
       style: FontType.smallTitle.merge(const TextStyle(color: PilllColors.primary)),
       textScaleFactor: 1,
     );
