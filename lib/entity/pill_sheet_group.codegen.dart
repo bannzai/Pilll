@@ -74,7 +74,27 @@ class PillSheetGroup with _$PillSheetGroup {
             pillSheetTypes:
                 passedPillSheets.map((e) => e.pillSheetType).toList(),
             pageIndex: activedPillSheet.groupIndex);
-    return passedPillCountForPillSheetTypes + activedPillSheet.todayPillNumber;
+
+    var sequentialTodayPillNumber =
+        passedPillCountForPillSheetTypes + activedPillSheet.todayPillNumber;
+
+    final offsetPillNumber = this.offsetPillNumber;
+    if (offsetPillNumber != null) {
+      final beginPillNumberOffset = offsetPillNumber.beginPillNumber;
+      if (beginPillNumberOffset != null) {
+        sequentialTodayPillNumber += (beginPillNumberOffset - 1);
+      }
+
+      final endPillNumberOffset = offsetPillNumber.endPillNumber;
+      if (endPillNumberOffset != null) {
+        sequentialTodayPillNumber %= endPillNumberOffset;
+        if (sequentialTodayPillNumber == 0) {
+          sequentialTodayPillNumber = endPillNumberOffset;
+        }
+      }
+    }
+
+    return sequentialTodayPillNumber;
   }
 
   int get sequentialLastTakenPillNumber {
@@ -92,8 +112,27 @@ class PillSheetGroup with _$PillSheetGroup {
             pillSheetTypes:
                 passedPillSheets.map((e) => e.pillSheetType).toList(),
             pageIndex: activedPillSheet.groupIndex);
-    return passedPillCountForPillSheetTypes +
-        activedPillSheet.lastTakenPillNumber;
+
+    var sequentialLastTakenPillNumber =
+        passedPillCountForPillSheetTypes + activedPillSheet.lastTakenPillNumber;
+
+    final offsetPillNumber = this.offsetPillNumber;
+    if (offsetPillNumber != null) {
+      final beginPillNumberOffset = offsetPillNumber.beginPillNumber;
+      if (beginPillNumberOffset != null) {
+        sequentialLastTakenPillNumber += (beginPillNumberOffset - 1);
+      }
+
+      final endPillNumberOffset = offsetPillNumber.endPillNumber;
+      if (endPillNumberOffset != null) {
+        sequentialLastTakenPillNumber %= endPillNumberOffset;
+        if (sequentialTodayPillNumber == 0) {
+          sequentialLastTakenPillNumber = endPillNumberOffset;
+        }
+      }
+    }
+
+    return sequentialLastTakenPillNumber;
   }
 }
 
