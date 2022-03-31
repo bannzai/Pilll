@@ -202,7 +202,7 @@ class InitialSettingPillSheetGroupPageBody extends StatelessWidget {
   }
 }
 
-extension InitialSettingPillSheetCountPageRoute
+extension InitialSettingPillSheetGroupPageRoute
     on InitialSettingPillSheetGroupPage {
   static InitialSettingPillSheetGroupPage screen() {
     analytics.setCurrentScreen(screenName: "InitialSettingPillSheetGroupPage");
