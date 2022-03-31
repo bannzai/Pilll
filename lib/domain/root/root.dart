@@ -7,7 +7,6 @@ import 'package:firebase_performance/firebase_performance.dart';
 import 'package:pilll/analytics.dart';
 import 'package:pilll/components/page/ok_dialog.dart';
 import 'package:pilll/domain/initial_setting/pill_sheet_group/initial_setting_pill_sheet_group_page.dart';
-import 'package:pilll/domain/initial_setting/pill_type/initial_setting_pill_category_type_page.dart';
 import 'package:pilll/entity/config.codegen.dart';
 import 'package:pilll/entity/user.codegen.dart';
 import 'package:pilll/performance.dart';
