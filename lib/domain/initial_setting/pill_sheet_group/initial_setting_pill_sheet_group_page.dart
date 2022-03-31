@@ -161,7 +161,7 @@ class InitialSettingPillSheetGroupPageBody extends StatelessWidget {
                     context: context,
                     pillSheetType: null,
                     onSelect: (pillSheetType) {
-                      store.addPillSheetType(pillSheetType);
+                      store.selectedPillSheetType(pillSheetType);
                     },
                   );
                 },
