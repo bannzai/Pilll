@@ -61,7 +61,7 @@ class PillSheetGroupSelectPillSheetTypePage extends StatelessWidget {
                           Navigator.of(context).pop();
                           onSelect(e);
                         },
-                        selectedPillSheetType: pillSheetType,
+                        selectedFirstPillSheetType: pillSheetType,
                       ),
                     ],
                   ),
