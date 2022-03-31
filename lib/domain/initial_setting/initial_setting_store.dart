@@ -84,7 +84,7 @@ class InitialSettingStateStore extends StateNotifier<InitialSettingState> {
     });
   }
 
-  void selectedPillSheetType(PillSheetType pillSheetType) {
+  void selectedPillCategoryType(PillSheetType pillSheetType) {
     state = state.copyWith(pillSheetTypes: [pillSheetType]);
     final todayPillNumber = state.todayPillNumber;
     if (todayPillNumber != null &&
