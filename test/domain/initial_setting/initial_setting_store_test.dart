@@ -101,50 +101,6 @@ void main() {
         PillSheetType.pillsheet_28_0,
       ]);
     });
-
-    test("reset todayPillNumber", () {
-      final userService = MockUserService();
-      final batchFactory = MockBatchFactory();
-      final authService = MockAuthService();
-      when(authService.stream())
-          .thenAnswer((realInvocation) => const Stream.empty());
-      final settingService = MockSettingService();
-      final pillSheetService = MockPillSheetService();
-      final pillSheetModifiedHistoryService =
-          MockPillSheetModifiedHistoryService();
-      final pillSheetGroupService = MockPillSheetGroupService();
-
-      final container = ProviderContainer(
-        overrides: [
-          userServiceProvider.overrideWithValue(userService),
-          batchFactoryProvider.overrideWithValue(batchFactory),
-          authServiceProvider.overrideWithValue(authService),
-          settingServiceProvider.overrideWithValue(settingService),
-          pillSheetServiceProvider.overrideWithValue(pillSheetService),
-          pillSheetModifiedHistoryServiceProvider
-              .overrideWithValue(pillSheetModifiedHistoryService),
-          pillSheetGroupServiceProvider
-              .overrideWithValue(pillSheetGroupService),
-        ],
-      );
-      final store = container.read(initialSettingStoreProvider.notifier);
-      // ignore: invalid_use_of_protected_member
-      store.state = store.state.copyWith(
-          todayPillNumber: const InitialSettingTodayPillNumber(
-              pageIndex: 0, pillNumberIntoPillSheet: 28));
-      expect(
-          container.read(initialSettingStateProvider).todayPillNumber,
-          const InitialSettingTodayPillNumber(
-              pageIndex: 0, pillNumberIntoPillSheet: 28));
-
-      store.selectedFirstPillSheetType(PillSheetType.pillsheet_24_rest_4);
-      expect(container.read(initialSettingStateProvider).pillSheetTypes, [
-        PillSheetType.pillsheet_24_rest_4,
-        PillSheetType.pillsheet_24_rest_4,
-        PillSheetType.pillsheet_24_rest_4,
-      ]);
-      expect(container.read(initialSettingStateProvider).todayPillNumber, null);
-    });
   });
   group("#addPillSheetType", () {
     test("add new one", () {
