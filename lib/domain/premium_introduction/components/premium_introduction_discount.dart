@@ -43,7 +43,7 @@ class PremiumIntroductionDiscountRow extends HookConsumerWidget {
         mainAxisSize: MainAxisSize.min,
         children: [
           Text(
-            "今だけ！リリース記念価格",
+            "今なら限定価格でずっと使える",
             textAlign: TextAlign.center,
             style: TextColorStyle.main.merge(
               const TextStyle(
