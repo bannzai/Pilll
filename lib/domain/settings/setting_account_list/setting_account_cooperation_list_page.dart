@@ -1,6 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
+import 'package:pilll/analytics.dart';
+import 'package:pilll/auth/apple.dart';
+import 'package:pilll/auth/google.dart';
 import 'package:pilll/components/atoms/buttons.dart';
 import 'package:pilll/components/atoms/color.dart';
 import 'package:pilll/components/atoms/font.dart';
@@ -50,10 +53,26 @@ class SettingAccountCooperationListPage extends HookConsumerWidget {
                       accountType: LinkAccountType.apple,
                       isLinked: () => state.isLinkedApple,
                       onTap: () async {
+                        analytics.logEvent(
+                          name: 'a_c_l_apple_tapped',
+                        );
                         if (state.isLinkedApple) {
                           return;
                         }
                         _showSignInSheet(context);
+                      },
+                      onLongPress: () async {
+                        analytics.logEvent(
+                          name: 'a_c_l_apple_long_press',
+                        );
+                        if (state.isLinkedApple) {
+                          return;
+                        }
+
+                        final isSuccess = await appleReauthentification();
+                        analytics.logEvent(
+                            name: 'a_c_l_apple_long_press_result',
+                            parameters: {"success": isSuccess});
                       },
                     ),
                     const Divider(indent: 16),
@@ -61,10 +80,26 @@ class SettingAccountCooperationListPage extends HookConsumerWidget {
                       accountType: LinkAccountType.google,
                       isLinked: () => state.isLinkedGoogle,
                       onTap: () async {
+                        analytics.logEvent(
+                          name: 'a_c_l_google_tapped',
+                        );
                         if (state.isLinkedGoogle) {
                           return;
                         }
                         _showSignInSheet(context);
+                      },
+                      onLongPress: () async {
+                        analytics.logEvent(
+                          name: 'a_c_l_google_long_press',
+                        );
+
+                        if (state.isLinkedGoogle) {
+                          return;
+                        }
+                        final isSuccess = await googleReauthentification();
+                        analytics.logEvent(
+                            name: 'a_c_l_google_long_press_result',
+                            parameters: {"success": isSuccess});
                       },
                     ),
                     const Divider(indent: 16),
@@ -111,25 +146,34 @@ class SettingAccountCooperationRow extends StatelessWidget {
   final LinkAccountType accountType;
   final bool Function() isLinked;
   final Future<void> Function() onTap;
+  final Future<void> Function() onLongPress;
 
   SettingAccountCooperationRow({
     required this.accountType,
     required this.isLinked,
     required this.onTap,
+    required this.onLongPress,
   });
 
   @override
   Widget build(BuildContext context) {
     return ListTile(
-        title: Text(accountType.loginContentName, style: FontType.listRow),
-        trailing: _trailing(),
-        horizontalTitleGap: 4,
-        onTap: () async {
-          if (isLinked()) {
-            return;
-          }
-          await onTap();
-        });
+      title: Text(accountType.loginContentName, style: FontType.listRow),
+      trailing: _trailing(),
+      horizontalTitleGap: 4,
+      onTap: () async {
+        if (isLinked()) {
+          return;
+        }
+        await onTap();
+      },
+      onLongPress: () async {
+        if (isLinked()) {
+          return;
+        }
+        await onLongPress();
+      },
+    );
   }
 
   Widget _trailing() {
