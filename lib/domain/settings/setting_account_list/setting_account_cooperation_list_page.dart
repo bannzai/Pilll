@@ -8,10 +8,12 @@ import 'package:pilll/components/atoms/buttons.dart';
 import 'package:pilll/components/atoms/color.dart';
 import 'package:pilll/components/atoms/font.dart';
 import 'package:pilll/components/atoms/text_color.dart';
+import 'package:pilll/components/page/discard_dialog.dart';
 import 'package:pilll/components/page/hud.dart';
 import 'package:pilll/domain/settings/setting_account_list/components/delete_user_button.dart';
 import 'package:pilll/domain/settings/setting_account_list/setting_account_cooperation_list_page_store.dart';
 import 'package:pilll/entity/link_account_type.dart';
+import 'package:pilll/error/error_alert.dart';
 import 'package:pilll/error/universal_error_page.dart';
 import 'package:pilll/signin/signin_sheet.dart';
 import 'package:pilll/signin/signin_sheet_state.codegen.dart';
@@ -66,10 +68,45 @@ class SettingAccountCooperationListPage extends HookConsumerWidget {
                           name: 'a_c_l_apple_long_press',
                         );
 
-                        final isSuccess = await appleReauthentification();
-                        analytics.logEvent(
-                            name: 'a_c_l_apple_long_press_result',
-                            parameters: {"success": isSuccess});
+                        showDiscardDialog(
+                          context,
+                          title: "認証情報を更新します",
+                          message: "再度ログインをして認証情報を更新します",
+                          actions: [
+                            AlertButton(
+                              text: "キャンセル",
+                              onPressed: () async {
+                                Navigator.of(context).pop();
+                              },
+                            ),
+                            AlertButton(
+                              text: "再ログイン",
+                              onPressed: () async {
+                                try {
+                                  final isSuccess =
+                                      await appleReauthentification();
+                                  analytics.logEvent(
+                                      name: 'a_c_l_apple_long_press_result',
+                                      parameters: {"success": isSuccess});
+
+                                  Navigator.of(context).pop();
+
+                                  ScaffoldMessenger.of(context).showSnackBar(
+                                    SnackBar(
+                                      duration: const Duration(seconds: 2),
+                                      content: Text(isSuccess
+                                          ? "認証情報を更新しました"
+                                          : "認証情報を更新に失敗しました"),
+                                    ),
+                                  );
+                                } catch (error) {
+                                  showErrorAlert(context,
+                                      message: error.toString());
+                                }
+                              },
+                            ),
+                          ],
+                        );
                       },
                     ),
                     const Divider(indent: 16),
@@ -89,11 +126,45 @@ class SettingAccountCooperationListPage extends HookConsumerWidget {
                         analytics.logEvent(
                           name: 'a_c_l_google_long_press',
                         );
+                        showDiscardDialog(
+                          context,
+                          title: "認証情報を更新します",
+                          message: "再度ログインをして認証情報を更新します",
+                          actions: [
+                            AlertButton(
+                              text: "キャンセル",
+                              onPressed: () async {
+                                Navigator.of(context).pop();
+                              },
+                            ),
+                            AlertButton(
+                              text: "再ログイン",
+                              onPressed: () async {
+                                try {
+                                  final isSuccess =
+                                      await googleReauthentification();
+                                  analytics.logEvent(
+                                      name: 'a_c_l_google_long_press_result',
+                                      parameters: {"success": isSuccess});
 
-                        final isSuccess = await googleReauthentification();
-                        analytics.logEvent(
-                            name: 'a_c_l_google_long_press_result',
-                            parameters: {"success": isSuccess});
+                                  Navigator.of(context).pop();
+
+                                  ScaffoldMessenger.of(context).showSnackBar(
+                                    SnackBar(
+                                      duration: const Duration(seconds: 2),
+                                      content: Text(isSuccess
+                                          ? "認証情報を更新しました"
+                                          : "認証情報を更新に失敗しました"),
+                                    ),
+                                  );
+                                } catch (error) {
+                                  showErrorAlert(context,
+                                      message: error.toString());
+                                }
+                              },
+                            ),
+                          ],
+                        );
                       },
                     ),
                     const Divider(indent: 16),
