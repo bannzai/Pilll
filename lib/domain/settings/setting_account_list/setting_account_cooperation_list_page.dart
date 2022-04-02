@@ -65,9 +65,6 @@ class SettingAccountCooperationListPage extends HookConsumerWidget {
                         analytics.logEvent(
                           name: 'a_c_l_apple_long_press',
                         );
-                        if (state.isLinkedApple) {
-                          return;
-                        }
 
                         final isSuccess = await appleReauthentification();
                         analytics.logEvent(
@@ -93,9 +90,6 @@ class SettingAccountCooperationListPage extends HookConsumerWidget {
                           name: 'a_c_l_google_long_press',
                         );
 
-                        if (state.isLinkedGoogle) {
-                          return;
-                        }
                         final isSuccess = await googleReauthentification();
                         analytics.logEvent(
                             name: 'a_c_l_google_long_press_result',
@@ -168,9 +162,6 @@ class SettingAccountCooperationRow extends StatelessWidget {
         await onTap();
       },
       onLongPress: () async {
-        if (isLinked()) {
-          return;
-        }
         await onLongPress();
       },
     );
