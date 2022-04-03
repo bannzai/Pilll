@@ -28,6 +28,9 @@ Future<void> recordPill() async {
   if (activedPillSheet == null) {
     return Future.value();
   }
+  if (activedPillSheet.todayPillIsAlreadyTaken) {
+    return Future.value();
+  }
 
   final takenDate = now();
   final batchFactory = BatchFactory(database);
