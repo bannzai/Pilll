@@ -5,13 +5,13 @@ import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 
 class PillSheetTypeSelectBodyTemplate extends StatelessWidget {
-  final PillSheetType? selectedPillSheetType;
+  final PillSheetType? selectedFirstPillSheetType;
   final void Function(PillSheetType type) onSelect;
 
   const PillSheetTypeSelectBodyTemplate({
     Key? key,
     required this.onSelect,
-    required this.selectedPillSheetType,
+    required this.selectedFirstPillSheetType,
   }) : super(key: key);
 
   @override
@@ -71,7 +71,7 @@ class PillSheetTypeSelectBodyTemplate extends StatelessWidget {
       },
       child: PillSheetTypeColumn(
         pillSheetType: type,
-        selected: selectedPillSheetType == type,
+        selected: selectedFirstPillSheetType == type,
       ),
     );
   }

@@ -1,7 +1,6 @@
 import 'package:pilll/database/batch.dart';
 import 'package:pilll/domain/initial_setting/initial_setting_state.codegen.dart';
 import 'package:pilll/domain/initial_setting/initial_setting_store.dart';
-import 'package:pilll/entity/initial_setting_pill_category_type.dart';
 import 'package:pilll/entity/pill_sheet.codegen.dart';
 import 'package:pilll/entity/pill_sheet_group.codegen.dart';
 import 'package:pilll/entity/pill_sheet_type.dart';
@@ -26,7 +25,7 @@ void main() {
     TestWidgetsFlutterBinding.ensureInitialized();
     SharedPreferences.setMockInitialValues({});
   });
-  group("#selectedPillCategoryType", () {
+  group("#selectedFirstPillSheetType", () {
     test("when first selected", () {
       final batchFactory = MockBatchFactory();
       final userService = MockUserService();
@@ -54,15 +53,14 @@ void main() {
       );
       final store = container.read(initialSettingStoreProvider.notifier);
 
-      store.selectedPillCategoryType(
-          InitialSettingPillCategoryType.pill_category_type_yaz_flex);
+      store.selectedFirstPillSheetType(PillSheetType.pillsheet_28_0);
       expect(container.read(initialSettingStateProvider).pillSheetTypes, [
         PillSheetType.pillsheet_28_0,
         PillSheetType.pillsheet_28_0,
         PillSheetType.pillsheet_28_0,
       ]);
     });
-    test("overwrite pill sheet type", () {
+    test("re select first pill sheet type", () {
       final userService = MockUserService();
       final batchFactory = MockBatchFactory();
       final authService = MockAuthService();
@@ -89,66 +87,19 @@ void main() {
       );
       final store = container.read(initialSettingStoreProvider.notifier);
 
-      store.selectedPillCategoryType(
-          InitialSettingPillCategoryType.pill_category_type_yaz_flex);
+      store.selectedFirstPillSheetType(PillSheetType.pillsheet_28_0);
       expect(container.read(initialSettingStateProvider).pillSheetTypes, [
         PillSheetType.pillsheet_28_0,
         PillSheetType.pillsheet_28_0,
         PillSheetType.pillsheet_28_0,
       ]);
 
-      store.selectedPillCategoryType(
-          InitialSettingPillCategoryType.pill_category_type_jemina);
+      store.changePillSheetType(0, PillSheetType.pillsheet_21_0);
       expect(container.read(initialSettingStateProvider).pillSheetTypes, [
+        PillSheetType.pillsheet_21_0,
         PillSheetType.pillsheet_28_0,
         PillSheetType.pillsheet_28_0,
-        PillSheetType.pillsheet_21,
       ]);
-    });
-
-    test("reset todayPillNumber", () {
-      final userService = MockUserService();
-      final batchFactory = MockBatchFactory();
-      final authService = MockAuthService();
-      when(authService.stream())
-          .thenAnswer((realInvocation) => const Stream.empty());
-      final settingService = MockSettingService();
-      final pillSheetService = MockPillSheetService();
-      final pillSheetModifiedHistoryService =
-          MockPillSheetModifiedHistoryService();
-      final pillSheetGroupService = MockPillSheetGroupService();
-
-      final container = ProviderContainer(
-        overrides: [
-          userServiceProvider.overrideWithValue(userService),
-          batchFactoryProvider.overrideWithValue(batchFactory),
-          authServiceProvider.overrideWithValue(authService),
-          settingServiceProvider.overrideWithValue(settingService),
-          pillSheetServiceProvider.overrideWithValue(pillSheetService),
-          pillSheetModifiedHistoryServiceProvider
-              .overrideWithValue(pillSheetModifiedHistoryService),
-          pillSheetGroupServiceProvider
-              .overrideWithValue(pillSheetGroupService),
-        ],
-      );
-      final store = container.read(initialSettingStoreProvider.notifier);
-      // ignore: invalid_use_of_protected_member
-      store.state = store.state.copyWith(
-          todayPillNumber: const InitialSettingTodayPillNumber(
-              pageIndex: 0, pillNumberIntoPillSheet: 28));
-      expect(
-          container.read(initialSettingStateProvider).todayPillNumber,
-          const InitialSettingTodayPillNumber(
-              pageIndex: 0, pillNumberIntoPillSheet: 28));
-
-      store.selectedPillCategoryType(
-          InitialSettingPillCategoryType.pill_category_type_jemina);
-      expect(container.read(initialSettingStateProvider).pillSheetTypes, [
-        PillSheetType.pillsheet_28_0,
-        PillSheetType.pillsheet_28_0,
-        PillSheetType.pillsheet_21,
-      ]);
-      expect(container.read(initialSettingStateProvider).todayPillNumber, null);
     });
   });
   group("#addPillSheetType", () {
@@ -179,8 +130,7 @@ void main() {
       );
       final store = container.read(initialSettingStoreProvider.notifier);
 
-      store.selectedPillCategoryType(
-          InitialSettingPillCategoryType.pill_category_type_yaz_flex);
+      store.selectedFirstPillSheetType(PillSheetType.pillsheet_28_0);
       store.addPillSheetType(PillSheetType.pillsheet_28_0);
       expect(container.read(initialSettingStateProvider).pillSheetTypes, [
         PillSheetType.pillsheet_28_0,
@@ -218,8 +168,7 @@ void main() {
       );
       final store = container.read(initialSettingStoreProvider.notifier);
 
-      store.selectedPillCategoryType(
-          InitialSettingPillCategoryType.pill_category_type_yaz_flex);
+      store.selectedFirstPillSheetType(PillSheetType.pillsheet_28_0);
       store.addPillSheetType(PillSheetType.pillsheet_28_0);
       store.changePillSheetType(1, PillSheetType.pillsheet_24_0);
       expect(container.read(initialSettingStateProvider).pillSheetTypes, [
@@ -258,8 +207,7 @@ void main() {
       );
       final store = container.read(initialSettingStoreProvider.notifier);
 
-      store.selectedPillCategoryType(
-          InitialSettingPillCategoryType.pill_category_type_yaz_flex);
+      store.selectedFirstPillSheetType(PillSheetType.pillsheet_28_0);
       store.addPillSheetType(PillSheetType.pillsheet_28_0);
       store.changePillSheetType(1, PillSheetType.pillsheet_24_0);
       store.removePillSheetType(0);
@@ -405,8 +353,7 @@ void main() {
       );
       final store = container.read(initialSettingStoreProvider.notifier);
 
-      store.selectedPillCategoryType(
-          InitialSettingPillCategoryType.pill_category_type_21_rest_7);
+      store.selectedFirstPillSheetType(PillSheetType.pillsheet_21);
       store.removePillSheetType(1);
       store.removePillSheetType(1);
       store.setTodayPillNumber(pageIndex: 0, pillNumberIntoPillSheet: 1);
@@ -504,8 +451,7 @@ void main() {
       );
       final store = container.read(initialSettingStoreProvider.notifier);
 
-      store.selectedPillCategoryType(
-          InitialSettingPillCategoryType.pill_category_type_yaz_flex);
+      store.selectedFirstPillSheetType(PillSheetType.pillsheet_28_0);
       store.addPillSheetType(PillSheetType.pillsheet_21);
       store.removePillSheetType(1);
       store.removePillSheetType(1);
@@ -585,9 +531,7 @@ void main() {
       );
       final store = container.read(initialSettingStoreProvider.notifier);
 
-      store.selectedPillCategoryType(
-          InitialSettingPillCategoryType.pill_category_type_24_rest_4);
-
+      store.selectedFirstPillSheetType(PillSheetType.pillsheet_24_rest_4);
       store.removePillSheetType(1);
       store.removePillSheetType(1);
       store.setTodayPillNumber(pageIndex: 0, pillNumberIntoPillSheet: 1);
