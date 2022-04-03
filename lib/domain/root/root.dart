@@ -145,7 +145,7 @@ class RootState extends State<Root> {
       return ScreenType.initialSetting;
     }
 
-    return screenType = ScreenType.home;
+    return ScreenType.home;
   }
 
   Future<User> _mutateUserWithLaunchInfoAnd(
@@ -167,7 +167,7 @@ class RootState extends State<Root> {
       await userService.setFlutterMigrationFlag();
       return ScreenType.initialSetting;
     } else if (user.setting == null) {
-      return screenType = ScreenType.initialSetting;
+      return ScreenType.initialSetting;
     }
     return null;
   }
