@@ -116,8 +116,18 @@ class RootState extends State<Root> {
 
     await forceUpdateTrace.stop();
 
-    return packageVersion
+    final forceUpdate = packageVersion
         .isLessThan(Version.parse(config.minimumSupportedAppVersion));
+    if (forceUpdate) {
+      analytics.logEvent(
+        name: "screen_type_force_update",
+        parameters: {
+          "package_version": packageVersion.toString(),
+          "minimum_app_version": config.minimumSupportedAppVersion,
+        },
+      );
+    }
+    return forceUpdate;
   }
 
   Future<FirebaseAuth.User> _signIn() async {
@@ -139,12 +149,15 @@ class RootState extends State<Root> {
     bool? didEndInitialSetting =
         sharedPreferences.getBool(BoolKey.didEndInitialSetting);
     if (didEndInitialSetting == null) {
+      analytics.logEvent(name: "did_end_i_s_is_null");
       return ScreenType.initialSetting;
     }
     if (!didEndInitialSetting) {
+      analytics.logEvent(name: "did_end_i_s_is_false");
       return ScreenType.initialSetting;
     }
 
+    analytics.logEvent(name: "screen_type_is_home");
     return ScreenType.home;
   }
 
@@ -165,8 +178,13 @@ class RootState extends State<Root> {
       final userService = UserService(DatabaseConnection(firebaseUser.uid));
       await userService.deleteSettings();
       await userService.setFlutterMigrationFlag();
+      analytics.logEvent(
+          name: "user_is_not_migrated_flutter",
+          parameters: {"uid": firebaseUser.uid});
       return ScreenType.initialSetting;
     } else if (user.setting == null) {
+      analytics.logEvent(
+          name: "uset_setting_is_null", parameters: {"uid": firebaseUser.uid});
       return ScreenType.initialSetting;
     }
     return null;
