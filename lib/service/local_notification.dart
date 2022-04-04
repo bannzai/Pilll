@@ -1,15 +1,24 @@
 import 'package:flutter_local_notifications/flutter_local_notifications.dart';
+import 'package:pilll/domain/record/util/take.dart';
+import 'package:pilll/native/pill.dart';
 import 'package:pilll/util/datetime/day.dart';
 import 'package:timezone/data/latest_all.dart' as tz;
 import 'package:timezone/timezone.dart' as tz;
 import 'package:flutter_native_timezone/flutter_native_timezone.dart';
 
-// NOTE: Unixtime is 13 digits
+// NOTE: Unixtime is 10 digits
 const millisecondsMaxUnixtime = 9999999999999;
 const maxUnixtimePlusOne = millisecondsMaxUnixtime + 1;
 
 // Concrete identifier offsets
 const reminderNotificationIdentifierOffset = 1 * maxUnixtimePlusOne;
+
+callback(NotificationActionDetails details) {
+  print("aaaa");
+  if (details.actionId == "RECORD_PILL_1") {
+    recordPill();
+  }
+}
 
 class LocalNotification {
   final plugin = FlutterLocalNotificationsPlugin();
@@ -18,6 +27,25 @@ class LocalNotification {
     tz.initializeTimeZones();
     tz.setLocalLocation(
         tz.getLocation(await FlutterNativeTimezone.getLocalTimezone()));
+  }
+
+  void initialize() {
+    plugin.initialize(
+      InitializationSettings(
+        iOS: DarwinInitializationSettings(
+          notificationCategories: [
+            DarwinNotificationCategory(
+              "Pill_REMINDER",
+              actions: [
+                DarwinNotificationAction.plain(
+                    "RECORD_PILL_1", "飲んだ？ from local"),
+              ],
+            ),
+          ],
+        ),
+      ),
+      onSelectNotificationAction: callback,
+    );
   }
 
   Future<void> scheduleRemiderNotification({
@@ -30,11 +58,10 @@ class LocalNotification {
     final processes = List.generate(totalPillNumberOfPillSheetGroup, (index) {
       final date = tzFrom.add(Duration(days: index)).tzDate();
       final reminderDate =
-          date.add(Duration(hours: hour)).add(Duration(minutes: minute));
+          date.add(Duration(hours: hour)).add(Duration(minutes: 46));
 
       return plugin.zonedSchedule(
-        reminderNotificationIdentifierOffset +
-            reminderDate.millisecondsSinceEpoch,
+        1 + index,
         'scheduled title',
         'scheduled body',
         reminderDate,

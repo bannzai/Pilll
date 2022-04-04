@@ -30,8 +30,8 @@ class TakenButton extends HookConsumerWidget {
         });
         await localNotification.scheduleRemiderNotification(
           hour: 8,
-          minute: 9,
-          totalPillNumberOfPillSheetGroup: 3,
+          minute: 14,
+          totalPillNumberOfPillSheetGroup: 1,
           tzFrom: tz.TZDateTime.now(tz.local),
           isTrialOrPremium: true,
         );
