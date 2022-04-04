@@ -41,7 +41,9 @@ Stream<User?> _userAuthStateChanges() {
 }
 
 // Obtain the latest users form FirebaseAuth.
-// If it is not exists, return result of signin anonymous;
+// If it is not exists:
+//   -> wait userAuthStateChanges stream complete that firebase auth setup complete:
+//     -> return result of signin anonymous;
 Future<User> cachedUserOrSignInAnonymously() async {
   analytics.logEvent(name: "call_sign_in");
   final currentUser = FirebaseAuth.instance.currentUser;
