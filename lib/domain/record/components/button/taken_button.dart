@@ -7,6 +7,7 @@ import 'package:pilll/domain/record/util/take.dart';
 import 'package:pilll/entity/pill_sheet.codegen.dart';
 import 'package:pilll/service/local_notification.dart';
 import 'package:pilll/util/datetime/day.dart';
+import 'package:timezone/timezone.dart' as tz;
 
 class TakenButton extends HookConsumerWidget {
   final BuildContext parentContext;
@@ -28,10 +29,11 @@ class TakenButton extends HookConsumerWidget {
           "today_pill_number": pillSheet.todayPillNumber,
         });
         await localNotification.scheduleRemiderNotification(
-          hour: 0,
-          minute: 0,
-          from: now(),
-          to: now(),
+          hour: 8,
+          minute: 9,
+          totalPillNumberOfPillSheetGroup: 3,
+          tzFrom: tz.TZDateTime.now(tz.local),
+          isTrialOrPremium: true,
         );
         // await effectAfterTakenPillAction(
         //   context: parentContext,
