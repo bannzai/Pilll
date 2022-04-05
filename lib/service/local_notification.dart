@@ -55,13 +55,15 @@ class LocalNotification {
     required bool isTrialOrPremium,
     required tz.TZDateTime tzFrom,
   }) async {
-    final processes = List.generate(totalPillNumberOfPillSheetGroup, (index) {
-      final date = tzFrom.add(Duration(days: index)).tzDate();
+    for (var index = 0; index < 10; index++) {
+      final date = tzFrom.tzDate();
       final reminderDate = date
           .add(Duration(hours: tzFrom.hour))
-          .add(Duration(minutes: tzFrom.minute + 1));
+          .add(Duration(minutes: tzFrom.minute + index + 1));
+      print("$reminderDate");
 
-      return plugin.zonedSchedule(
+      await plugin.cancelAll();
+      await plugin.zonedSchedule(
         1 + index,
         'scheduled title',
         'scheduled body',
@@ -80,9 +82,7 @@ class LocalNotification {
         uiLocalNotificationDateInterpretation:
             UILocalNotificationDateInterpretation.absoluteTime,
       );
-    });
-
-    await Future.wait(processes);
+    }
   }
 }
 
