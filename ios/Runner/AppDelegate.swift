@@ -1,6 +1,7 @@
 import UIKit
 import ObjectiveC
 import Flutter
+import flutter_local_notifications
 import HealthKit
 
 @UIApplicationMain
@@ -103,6 +104,9 @@ import HealthKit
         UNUserNotificationCenter.current().removePendingNotificationRequests(withIdentifiers: ["repeat_notification_for_taken_pill", "remind_notification_for_taken_pill"])
         UNUserNotificationCenter.current().delegate = self as UNUserNotificationCenterDelegate
         GeneratedPluginRegistrant.register(with: self)
+        FlutterLocalNotificationsPlugin.setPluginRegistrantCallback { (registry) in
+            GeneratedPluginRegistrant.register(with: registry)
+        }
         return super.application(application, didFinishLaunchingWithOptions: launchOptions)
     }
 }
