@@ -14,8 +14,8 @@ const maxUnixtimePlusOne = millisecondsMaxUnixtime + 1;
 const reminderNotificationIdentifierOffset = 1 * maxUnixtimePlusOne;
 
 callback(NotificationActionDetails details) {
-  print("aaaa");
-  if (details.actionId == "RECORD_PILL_1") {
+  print("[DEBUG] ${details.actionId}");
+  if (details.actionId == "RECORD_PILL_LOCAL") {
     recordPill();
   }
 }
@@ -29,16 +29,16 @@ class LocalNotification {
         tz.getLocation(await FlutterNativeTimezone.getLocalTimezone()));
   }
 
-  void initialize() {
-    plugin.initialize(
+  Future<void> initialize() async {
+    await plugin.initialize(
       InitializationSettings(
         iOS: DarwinInitializationSettings(
           notificationCategories: [
             DarwinNotificationCategory(
-              "Pill_REMINDER",
+              "Pill_REMINDER_LOCAL",
               actions: [
                 DarwinNotificationAction.plain(
-                    "RECORD_PILL_1", "飲んだ？ from local"),
+                    "RECORD_PILL_LOCAL", "飲んだ？ from local"),
               ],
             ),
           ],
@@ -57,8 +57,9 @@ class LocalNotification {
   }) async {
     final processes = List.generate(totalPillNumberOfPillSheetGroup, (index) {
       final date = tzFrom.add(Duration(days: index)).tzDate();
-      final reminderDate =
-          date.add(Duration(hours: hour)).add(Duration(minutes: 46));
+      final reminderDate = date
+          .add(Duration(hours: tzFrom.hour))
+          .add(Duration(minutes: tzFrom.minute + 1));
 
       return plugin.zonedSchedule(
         1 + index,
@@ -72,7 +73,7 @@ class LocalNotification {
             channelDescription: 'your channel description',
           ),
           iOS: DarwinNotificationDetails(
-            categoryIdentifier: "PILL_REMINDER",
+            categoryIdentifier: "PILL_REMINDER_LOCAL",
           ),
         ),
         androidAllowWhileIdle: true,
