@@ -35,7 +35,7 @@ class LocalNotification {
         iOS: DarwinInitializationSettings(
           notificationCategories: [
             DarwinNotificationCategory(
-              "Pill_REMINDER_LOCAL",
+              "PILL_REMINDER_LOCAL",
               actions: [
                 DarwinNotificationAction.plain(
                     "RECORD_PILL_LOCAL", "飲んだ？ from local"),
