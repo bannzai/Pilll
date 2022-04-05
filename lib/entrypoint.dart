@@ -23,7 +23,6 @@ Future<void> entrypoint() async {
   WidgetsFlutterBinding.ensureInitialized();
   await Firebase.initializeApp();
   await LocalNotification.setupTimeZone();
-  await localNotification.initialize();
 
   if (Environment.isLocal) {
     connectToEmulator();

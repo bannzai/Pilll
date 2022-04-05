@@ -6,6 +6,7 @@ import 'package:pilll/domain/record/record_page.dart';
 import 'package:pilll/domain/settings/setting_page.dart';
 import 'package:pilll/components/atoms/color.dart';
 import 'package:pilll/components/atoms/text_color.dart';
+import 'package:pilll/service/local_notification.dart';
 import 'package:pilll/service/push_notification.dart';
 import 'package:pilll/util/datetime/day.dart';
 import 'package:flutter/material.dart';
@@ -43,7 +44,10 @@ class _HomePageState extends State<HomePage>
         initialIndex: _selectedIndex);
     _tabController.addListener(_handleTabSelection);
 
-    requestNotificationPermissions();
+    Future(() async {
+      await requestNotificationPermissions();
+      await localNotification.initialize();
+    });
   }
 
   @override
