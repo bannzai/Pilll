@@ -1,10 +1,20 @@
+import 'dart:async';
+import 'dart:convert';
+
 import 'package:flutter_local_notifications/flutter_local_notifications.dart';
 import 'package:pilll/domain/record/util/take.dart';
+import 'package:pilll/entity/local_notification_schedule_id.codegen.dart';
 import 'package:pilll/native/pill.dart';
 import 'package:pilll/util/datetime/day.dart';
+import 'package:pilll/util/shared_preference/shared_preference.dart';
+import 'package:shared_preferences/shared_preferences.dart';
 import 'package:timezone/data/latest_all.dart' as tz;
 import 'package:timezone/timezone.dart' as tz;
 import 'package:flutter_native_timezone/flutter_native_timezone.dart';
+
+// General purpose
+const _sharedPreferenceKeyLocalNotificationScheduleIDs =
+    'local_notification_schedule_ids';
 
 // NOTE: Unixtime is 10 digits
 const millisecondsMaxUnixtime = 9999999999999;
@@ -13,6 +23,7 @@ const maxUnixtimePlusOne = millisecondsMaxUnixtime + 1;
 // Concrete identifier offsets
 const reminderNotificationIdentifierOffset = 1 * maxUnixtimePlusOne;
 
+// iOS specific
 const iOSRecordPillActionIdentifier = "RECORD_PILL_LOCAL";
 const iOSQuickRecordPillCategoryIdentifier = "PILL_REMINDER_LOCAL";
 
@@ -51,6 +62,42 @@ class LocalNotification {
     );
   }
 
+  // _createScheduleID does not contains exclusion control.
+  // You must call _createScheduleID sequentially that means you must await _createScheduleID result;
+  // for example, don't use Future.wait([processes])
+  Future<LocalNotificationScheduleID> _createScheduleID(
+      {required String functionName,
+      required DateTime scheduleDateTime}) async {
+    final sharedPreferences = await SharedPreferences.getInstance();
+    final scheduleIDsJSON = sharedPreferences
+        .getString(_sharedPreferenceKeyLocalNotificationScheduleIDs);
+
+    final LocalNotificationScheduleIDs scheduleIDs;
+    if (scheduleIDsJSON != null) {
+      scheduleIDs =
+          LocalNotificationScheduleIDs.fromJson(json.decode(scheduleIDsJSON));
+    } else {
+      scheduleIDs = LocalNotificationScheduleIDs(ids: []);
+    }
+
+    final timestamp = scheduleDateTime.millisecondsSinceEpoch;
+    final localNotificationID = scheduleIDs.ids.length;
+    final key = "${functionName}_${timestamp}_${scheduleIDs.ids.length}";
+    final scheduleID = LocalNotificationScheduleID(
+      key: key,
+      localNotificationID: localNotificationID,
+      scheduleDateTime: scheduleDateTime,
+    );
+
+    final updated = scheduleIDs.copyWith(ids: scheduleIDs.ids + [scheduleID]);
+
+    await sharedPreferences.setString(
+        _sharedPreferenceKeyLocalNotificationScheduleIDs,
+        json.encode(updated.toJson()));
+
+    return scheduleID;
+  }
+
   Future<void> scheduleRemiderNotification({
     required int hour,
     required int minute,
@@ -65,9 +112,13 @@ class LocalNotification {
           .add(Duration(minutes: tzFrom.minute + index + 1));
       print("$reminderDate");
 
-      await plugin.cancelAll();
+      final id = await _createScheduleID(
+        functionName: 'scheduleRemiderNotification',
+        scheduleDateTime: reminderDate,
+      );
+
       await plugin.zonedSchedule(
-        1 + index,
+        id.localNotificationID,
         'scheduled title',
         'scheduled body',
         reminderDate,
