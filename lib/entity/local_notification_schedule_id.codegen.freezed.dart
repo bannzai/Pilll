@@ -24,10 +24,13 @@ class _$LocalNotificationScheduleIDTearOff {
   const _$LocalNotificationScheduleIDTearOff();
 
   _LocalNotificationScheduleID call(
-      {required int key, required int localNotificaationID}) {
+      {required String key,
+      required int localNotificationID,
+      required DateTime scheduleDateTime}) {
     return _LocalNotificationScheduleID(
       key: key,
-      localNotificaationID: localNotificaationID,
+      localNotificationID: localNotificationID,
+      scheduleDateTime: scheduleDateTime,
     );
   }
 
@@ -41,8 +44,9 @@ const $LocalNotificationScheduleID = _$LocalNotificationScheduleIDTearOff();
 
 /// @nodoc
 mixin _$LocalNotificationScheduleID {
-  int get key => throw _privateConstructorUsedError;
-  int get localNotificaationID => throw _privateConstructorUsedError;
+  String get key => throw _privateConstructorUsedError;
+  int get localNotificationID => throw _privateConstructorUsedError;
+  DateTime get scheduleDateTime => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
@@ -56,7 +60,7 @@ abstract class $LocalNotificationScheduleIDCopyWith<$Res> {
           LocalNotificationScheduleID value,
           $Res Function(LocalNotificationScheduleID) then) =
       _$LocalNotificationScheduleIDCopyWithImpl<$Res>;
-  $Res call({int key, int localNotificaationID});
+  $Res call({String key, int localNotificationID, DateTime scheduleDateTime});
 }
 
 /// @nodoc
@@ -71,17 +75,22 @@ class _$LocalNotificationScheduleIDCopyWithImpl<$Res>
   @override
   $Res call({
     Object? key = freezed,
-    Object? localNotificaationID = freezed,
+    Object? localNotificationID = freezed,
+    Object? scheduleDateTime = freezed,
   }) {
     return _then(_value.copyWith(
       key: key == freezed
           ? _value.key
           : key // ignore: cast_nullable_to_non_nullable
+              as String,
+      localNotificationID: localNotificationID == freezed
+          ? _value.localNotificationID
+          : localNotificationID // ignore: cast_nullable_to_non_nullable
               as int,
-      localNotificaationID: localNotificaationID == freezed
-          ? _value.localNotificaationID
-          : localNotificaationID // ignore: cast_nullable_to_non_nullable
-              as int,
+      scheduleDateTime: scheduleDateTime == freezed
+          ? _value.scheduleDateTime
+          : scheduleDateTime // ignore: cast_nullable_to_non_nullable
+              as DateTime,
     ));
   }
 }
@@ -94,7 +103,7 @@ abstract class _$LocalNotificationScheduleIDCopyWith<$Res>
           $Res Function(_LocalNotificationScheduleID) then) =
       __$LocalNotificationScheduleIDCopyWithImpl<$Res>;
   @override
-  $Res call({int key, int localNotificaationID});
+  $Res call({String key, int localNotificationID, DateTime scheduleDateTime});
 }
 
 /// @nodoc
@@ -113,17 +122,22 @@ class __$LocalNotificationScheduleIDCopyWithImpl<$Res>
   @override
   $Res call({
     Object? key = freezed,
-    Object? localNotificaationID = freezed,
+    Object? localNotificationID = freezed,
+    Object? scheduleDateTime = freezed,
   }) {
     return _then(_LocalNotificationScheduleID(
       key: key == freezed
           ? _value.key
           : key // ignore: cast_nullable_to_non_nullable
+              as String,
+      localNotificationID: localNotificationID == freezed
+          ? _value.localNotificationID
+          : localNotificationID // ignore: cast_nullable_to_non_nullable
               as int,
-      localNotificaationID: localNotificaationID == freezed
-          ? _value.localNotificaationID
-          : localNotificaationID // ignore: cast_nullable_to_non_nullable
-              as int,
+      scheduleDateTime: scheduleDateTime == freezed
+          ? _value.scheduleDateTime
+          : scheduleDateTime // ignore: cast_nullable_to_non_nullable
+              as DateTime,
     ));
   }
 }
@@ -133,20 +147,24 @@ class __$LocalNotificationScheduleIDCopyWithImpl<$Res>
 @JsonSerializable(explicitToJson: true)
 class _$_LocalNotificationScheduleID extends _LocalNotificationScheduleID {
   _$_LocalNotificationScheduleID(
-      {required this.key, required this.localNotificaationID})
+      {required this.key,
+      required this.localNotificationID,
+      required this.scheduleDateTime})
       : super._();
 
   factory _$_LocalNotificationScheduleID.fromJson(Map<String, dynamic> json) =>
       _$$_LocalNotificationScheduleIDFromJson(json);
 
   @override
-  final int key;
+  final String key;
   @override
-  final int localNotificaationID;
+  final int localNotificationID;
+  @override
+  final DateTime scheduleDateTime;
 
   @override
   String toString() {
-    return 'LocalNotificationScheduleID(key: $key, localNotificaationID: $localNotificaationID)';
+    return 'LocalNotificationScheduleID(key: $key, localNotificationID: $localNotificationID, scheduleDateTime: $scheduleDateTime)';
   }
 
   @override
@@ -156,14 +174,17 @@ class _$_LocalNotificationScheduleID extends _LocalNotificationScheduleID {
             other is _LocalNotificationScheduleID &&
             const DeepCollectionEquality().equals(other.key, key) &&
             const DeepCollectionEquality()
-                .equals(other.localNotificaationID, localNotificaationID));
+                .equals(other.localNotificationID, localNotificationID) &&
+            const DeepCollectionEquality()
+                .equals(other.scheduleDateTime, scheduleDateTime));
   }
 
   @override
   int get hashCode => Object.hash(
       runtimeType,
       const DeepCollectionEquality().hash(key),
-      const DeepCollectionEquality().hash(localNotificaationID));
+      const DeepCollectionEquality().hash(localNotificationID),
+      const DeepCollectionEquality().hash(scheduleDateTime));
 
   @JsonKey(ignore: true)
   @override
@@ -180,19 +201,184 @@ class _$_LocalNotificationScheduleID extends _LocalNotificationScheduleID {
 abstract class _LocalNotificationScheduleID
     extends LocalNotificationScheduleID {
   factory _LocalNotificationScheduleID(
-      {required int key,
-      required int localNotificaationID}) = _$_LocalNotificationScheduleID;
+      {required String key,
+      required int localNotificationID,
+      required DateTime scheduleDateTime}) = _$_LocalNotificationScheduleID;
   _LocalNotificationScheduleID._() : super._();
 
   factory _LocalNotificationScheduleID.fromJson(Map<String, dynamic> json) =
       _$_LocalNotificationScheduleID.fromJson;
 
   @override
-  int get key;
+  String get key;
   @override
-  int get localNotificaationID;
+  int get localNotificationID;
+  @override
+  DateTime get scheduleDateTime;
   @override
   @JsonKey(ignore: true)
   _$LocalNotificationScheduleIDCopyWith<_LocalNotificationScheduleID>
+      get copyWith => throw _privateConstructorUsedError;
+}
+
+LocalNotificationScheduleIDs _$LocalNotificationScheduleIDsFromJson(
+    Map<String, dynamic> json) {
+  return _LocalNotificationScheduleIDs.fromJson(json);
+}
+
+/// @nodoc
+class _$LocalNotificationScheduleIDsTearOff {
+  const _$LocalNotificationScheduleIDsTearOff();
+
+  _LocalNotificationScheduleIDs call(
+      {required List<LocalNotificationScheduleID> ids}) {
+    return _LocalNotificationScheduleIDs(
+      ids: ids,
+    );
+  }
+
+  LocalNotificationScheduleIDs fromJson(Map<String, Object?> json) {
+    return LocalNotificationScheduleIDs.fromJson(json);
+  }
+}
+
+/// @nodoc
+const $LocalNotificationScheduleIDs = _$LocalNotificationScheduleIDsTearOff();
+
+/// @nodoc
+mixin _$LocalNotificationScheduleIDs {
+  List<LocalNotificationScheduleID> get ids =>
+      throw _privateConstructorUsedError;
+
+  Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
+  @JsonKey(ignore: true)
+  $LocalNotificationScheduleIDsCopyWith<LocalNotificationScheduleIDs>
+      get copyWith => throw _privateConstructorUsedError;
+}
+
+/// @nodoc
+abstract class $LocalNotificationScheduleIDsCopyWith<$Res> {
+  factory $LocalNotificationScheduleIDsCopyWith(
+          LocalNotificationScheduleIDs value,
+          $Res Function(LocalNotificationScheduleIDs) then) =
+      _$LocalNotificationScheduleIDsCopyWithImpl<$Res>;
+  $Res call({List<LocalNotificationScheduleID> ids});
+}
+
+/// @nodoc
+class _$LocalNotificationScheduleIDsCopyWithImpl<$Res>
+    implements $LocalNotificationScheduleIDsCopyWith<$Res> {
+  _$LocalNotificationScheduleIDsCopyWithImpl(this._value, this._then);
+
+  final LocalNotificationScheduleIDs _value;
+  // ignore: unused_field
+  final $Res Function(LocalNotificationScheduleIDs) _then;
+
+  @override
+  $Res call({
+    Object? ids = freezed,
+  }) {
+    return _then(_value.copyWith(
+      ids: ids == freezed
+          ? _value.ids
+          : ids // ignore: cast_nullable_to_non_nullable
+              as List<LocalNotificationScheduleID>,
+    ));
+  }
+}
+
+/// @nodoc
+abstract class _$LocalNotificationScheduleIDsCopyWith<$Res>
+    implements $LocalNotificationScheduleIDsCopyWith<$Res> {
+  factory _$LocalNotificationScheduleIDsCopyWith(
+          _LocalNotificationScheduleIDs value,
+          $Res Function(_LocalNotificationScheduleIDs) then) =
+      __$LocalNotificationScheduleIDsCopyWithImpl<$Res>;
+  @override
+  $Res call({List<LocalNotificationScheduleID> ids});
+}
+
+/// @nodoc
+class __$LocalNotificationScheduleIDsCopyWithImpl<$Res>
+    extends _$LocalNotificationScheduleIDsCopyWithImpl<$Res>
+    implements _$LocalNotificationScheduleIDsCopyWith<$Res> {
+  __$LocalNotificationScheduleIDsCopyWithImpl(
+      _LocalNotificationScheduleIDs _value,
+      $Res Function(_LocalNotificationScheduleIDs) _then)
+      : super(_value, (v) => _then(v as _LocalNotificationScheduleIDs));
+
+  @override
+  _LocalNotificationScheduleIDs get _value =>
+      super._value as _LocalNotificationScheduleIDs;
+
+  @override
+  $Res call({
+    Object? ids = freezed,
+  }) {
+    return _then(_LocalNotificationScheduleIDs(
+      ids: ids == freezed
+          ? _value.ids
+          : ids // ignore: cast_nullable_to_non_nullable
+              as List<LocalNotificationScheduleID>,
+    ));
+  }
+}
+
+/// @nodoc
+
+@JsonSerializable(explicitToJson: true)
+class _$_LocalNotificationScheduleIDs extends _LocalNotificationScheduleIDs {
+  _$_LocalNotificationScheduleIDs({required this.ids}) : super._();
+
+  factory _$_LocalNotificationScheduleIDs.fromJson(Map<String, dynamic> json) =>
+      _$$_LocalNotificationScheduleIDsFromJson(json);
+
+  @override
+  final List<LocalNotificationScheduleID> ids;
+
+  @override
+  String toString() {
+    return 'LocalNotificationScheduleIDs(ids: $ids)';
+  }
+
+  @override
+  bool operator ==(dynamic other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _LocalNotificationScheduleIDs &&
+            const DeepCollectionEquality().equals(other.ids, ids));
+  }
+
+  @override
+  int get hashCode =>
+      Object.hash(runtimeType, const DeepCollectionEquality().hash(ids));
+
+  @JsonKey(ignore: true)
+  @override
+  _$LocalNotificationScheduleIDsCopyWith<_LocalNotificationScheduleIDs>
+      get copyWith => __$LocalNotificationScheduleIDsCopyWithImpl<
+          _LocalNotificationScheduleIDs>(this, _$identity);
+
+  @override
+  Map<String, dynamic> toJson() {
+    return _$$_LocalNotificationScheduleIDsToJson(this);
+  }
+}
+
+abstract class _LocalNotificationScheduleIDs
+    extends LocalNotificationScheduleIDs {
+  factory _LocalNotificationScheduleIDs(
+          {required List<LocalNotificationScheduleID> ids}) =
+      _$_LocalNotificationScheduleIDs;
+  _LocalNotificationScheduleIDs._() : super._();
+
+  factory _LocalNotificationScheduleIDs.fromJson(Map<String, dynamic> json) =
+      _$_LocalNotificationScheduleIDs.fromJson;
+
+  @override
+  List<LocalNotificationScheduleID> get ids;
+  @override
+  @JsonKey(ignore: true)
+  _$LocalNotificationScheduleIDsCopyWith<_LocalNotificationScheduleIDs>
       get copyWith => throw _privateConstructorUsedError;
 }
