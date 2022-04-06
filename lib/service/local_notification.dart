@@ -13,9 +13,12 @@ const maxUnixtimePlusOne = millisecondsMaxUnixtime + 1;
 // Concrete identifier offsets
 const reminderNotificationIdentifierOffset = 1 * maxUnixtimePlusOne;
 
+const iOSRecordPillActionIdentifier = "RECORD_PILL_LOCAL";
+const iOSQuickRecordPillCategoryIdentifier = "PILL_REMINDER_LOCAL";
+
 callback(NotificationActionDetails details) {
   print("[DEBUG] ${details.actionId}");
-  if (details.actionId == "RECORD_PILL_LOCAL") {
+  if (details.actionId == iOSRecordPillActionIdentifier) {
     recordPill();
   }
 }
@@ -35,10 +38,10 @@ class LocalNotification {
         iOS: DarwinInitializationSettings(
           notificationCategories: [
             DarwinNotificationCategory(
-              "PILL_REMINDER_LOCAL",
+              iOSQuickRecordPillCategoryIdentifier,
               actions: [
                 DarwinNotificationAction.plain(
-                    "RECORD_PILL_LOCAL", "飲んだ？ from local"),
+                    iOSRecordPillActionIdentifier, "飲んだ？ from local"),
               ],
             ),
           ],
@@ -75,7 +78,7 @@ class LocalNotification {
             channelDescription: 'your channel description',
           ),
           iOS: DarwinNotificationDetails(
-            categoryIdentifier: "PILL_REMINDER_LOCAL",
+            categoryIdentifier: iOSQuickRecordPillCategoryIdentifier,
           ),
         ),
         androidAllowWhileIdle: true,
