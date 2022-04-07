@@ -2,6 +2,7 @@ import 'package:firebase_auth/firebase_auth.dart';
 import 'package:pilll/entity/diary.codegen.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
+import 'package:pilll/entity/local_notification_schedule.codegen.dart';
 import 'package:pilll/service/auth.dart';
 
 final databaseProvider = Provider<DatabaseConnection>((ref) {
@@ -25,6 +26,8 @@ abstract class _CollectionPath {
   static String menstruations(String userID) => "$users/$userID/menstruations";
   static String pillSheetModifiedHistories(String userID) =>
       "$users/$userID/pill_sheet_modified_histories";
+  static String localNotificationSchedule(String userID) =>
+      "$users/$userID/local_notification_schedules";
 }
 
 class DatabaseConnection {
@@ -78,6 +81,15 @@ class DatabaseConnection {
       FirebaseFirestore.instance
           .collection(_CollectionPath.pillSheetGroups(_userID))
           .doc(pillSheetGroupID);
+
+  CollectionReference<LocalNotificationSchedule> localNotificationSchedules() =>
+      FirebaseFirestore.instance
+          .collection(_CollectionPath.localNotificationSchedule(_userID))
+          .withConverter(
+            fromFirestore: (snapshot, _) =>
+                LocalNotificationSchedule.fromJson(snapshot.data()!),
+            toFirestore: (value, _) => value.toJson(),
+          );
 
   WriteBatch batch() {
     return FirebaseFirestore.instance.batch();
