@@ -21,8 +21,6 @@ void main() {
         todayRepository = mockTodayRepository;
         when(mockTodayRepository.now())
             .thenReturn(DateTime.parse("2020-09-19"));
-        when(mockTodayRepository.now())
-            .thenReturn(DateTime.parse("2020-09-19"));
 
         final sheetType = PillSheetType.pillsheet_21;
         final pillSheet = PillSheet(
@@ -48,8 +46,6 @@ void main() {
         todayRepository = mockTodayRepository;
         when(mockTodayRepository.now())
             .thenReturn(DateTime.parse("2020-09-28"));
-        when(mockTodayRepository.now())
-            .thenReturn(DateTime.parse("2020-09-19"));
 
         final sheetType = PillSheetType.pillsheet_21;
         final pillSheet = PillSheet(
@@ -76,8 +72,6 @@ void main() {
           todayRepository = mockTodayRepository;
           when(mockTodayRepository.now())
               .thenReturn(DateTime.parse("2020-09-28"));
-          when(mockTodayRepository.now())
-              .thenReturn(DateTime.parse("2020-09-19"));
 
           final sheetType = PillSheetType.pillsheet_21;
           final pillSheet = PillSheet(
@@ -110,8 +104,6 @@ void main() {
           todayRepository = mockTodayRepository;
           when(mockTodayRepository.now())
               .thenReturn(DateTime.parse("2020-09-28"));
-          when(mockTodayRepository.now())
-              .thenReturn(DateTime.parse("2020-09-19"));
 
           final sheetType = PillSheetType.pillsheet_21;
           final pillSheet = PillSheet(
@@ -145,8 +137,6 @@ void main() {
             todayRepository = mockTodayRepository;
             when(mockTodayRepository.now())
                 .thenReturn(DateTime.parse("2020-09-28"));
-            when(mockTodayRepository.now())
-                .thenReturn(DateTime.parse("2020-09-19"));
 
             final sheetType = PillSheetType.pillsheet_21;
             final pillSheet = PillSheet(
@@ -183,8 +173,6 @@ void main() {
             todayRepository = mockTodayRepository;
             when(mockTodayRepository.now())
                 .thenReturn(DateTime.parse("2020-09-28"));
-            when(mockTodayRepository.now())
-                .thenReturn(DateTime.parse("2020-09-19"));
 
             final sheetType = PillSheetType.pillsheet_21;
             final pillSheet = PillSheet(
@@ -224,8 +212,6 @@ void main() {
       test("it is plane pattern", () {
         final mockTodayRepository = MockTodayService();
         todayRepository = mockTodayRepository;
-        when(mockTodayRepository.now())
-            .thenReturn(DateTime.parse("2022-03-29"));
         when(mockTodayRepository.now())
             .thenReturn(DateTime.parse("2022-03-29"));
 
@@ -345,8 +331,6 @@ void main() {
           todayRepository = mockTodayRepository;
           when(mockTodayRepository.now())
               .thenReturn(DateTime.parse("2020-09-28"));
-          when(mockTodayRepository.now())
-              .thenReturn(DateTime.parse("2020-09-28"));
 
           final sheetType = PillSheetType.pillsheet_21;
           final pillSheet = PillSheet(
@@ -444,8 +428,6 @@ void main() {
             todayRepository = mockTodayRepository;
             when(mockTodayRepository.now())
                 .thenReturn(DateTime.parse("2020-09-28"));
-            when(mockTodayRepository.now())
-                .thenReturn(DateTime.parse("2020-09-28"));
 
             final sheetType = PillSheetType.pillsheet_21;
             final pillSheet = PillSheet(
@@ -520,8 +502,6 @@ void main() {
         test("it is plane pattern", () {
           final mockTodayRepository = MockTodayService();
           todayRepository = mockTodayRepository;
-          when(mockTodayRepository.now())
-              .thenReturn(DateTime.parse("2022-03-30"));
           when(mockTodayRepository.now())
               .thenReturn(DateTime.parse("2022-03-30"));
 
