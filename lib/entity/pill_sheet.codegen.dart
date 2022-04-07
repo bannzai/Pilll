@@ -224,3 +224,14 @@ int summarizedRestDuration(List<RestDuration> restDurations) {
     }
   }).reduce((value, element) => value + element);
 }
+
+int? pillSheetPillNumber(
+    {required PillSheet pillSheet, required DateTime? targetDate}) {
+  if (targetDate == null) {
+    return null;
+  }
+
+  return daysBetween(pillSheet.beginingDate.date(), targetDate) -
+      summarizedRestDuration(pillSheet.restDurations) +
+      1;
+}
