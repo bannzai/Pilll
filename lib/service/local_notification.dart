@@ -1,9 +1,13 @@
 import 'dart:async';
 import 'dart:convert';
+import 'package:collection/collection.dart';
 
 import 'package:flutter_local_notifications/flutter_local_notifications.dart';
 import 'package:pilll/domain/record/util/take.dart';
 import 'package:pilll/entity/local_notification_schedule.codegen.dart';
+import 'package:pilll/entity/pill_sheet_group.codegen.dart';
+import 'package:pilll/entity/setting.codegen.dart';
+import 'package:pilll/entity/weekday.dart';
 import 'package:pilll/native/pill.dart';
 import 'package:pilll/util/datetime/day.dart';
 import 'package:pilll/util/shared_preference/shared_preference.dart';
@@ -16,12 +20,8 @@ import 'package:flutter_native_timezone/flutter_native_timezone.dart';
 const _sharedPreferenceKeyLocalNotificationScheduleIDs =
     'local_notification_schedule_ids';
 
-// NOTE: Unixtime is 10 digits
-const millisecondsMaxUnixtime = 9999999999999;
-const maxUnixtimePlusOne = millisecondsMaxUnixtime + 1;
-
 // Concrete identifier offsets
-const reminderNotificationIdentifierOffset = 1 * maxUnixtimePlusOne;
+const reminderNotificationIdentifierOffset = 1 * 10000000;
 
 // iOS specific
 const iOSRecordPillActionIdentifier = "RECORD_PILL_LOCAL";
@@ -65,11 +65,21 @@ class LocalNotification {
   Future<void> scheduleRemiderNotification({
     required int hour,
     required int minute,
-    required int initialCountOfLocalNotificationScheduleIDs,
-    required int totalPillNumberOfPillSheetGroup,
+    required List<LocalNotificationSchedule>
+        reminderNotificationLocalNotificationSchedules,
+    required PillSheetGroup pillSheetGroup,
     required bool isTrialOrPremium,
+    required Setting setting,
     required tz.TZDateTime tzFrom,
   }) async {
+    final lastID = reminderNotificationLocalNotificationSchedules
+        .sorted(
+            (a, b) => a.localNotificationID.compareTo(b.localNotificationID))
+        .lastOrNull
+        ?.localNotificationID;
+    int localNotificationIDOffset =
+        reminderNotificationIdentifierOffset + (lastID ?? 0);
+
     for (var index = 0; index < 10; index++) {
       final date = tzFrom.tzDate();
       final reminderDate = date
@@ -81,12 +91,29 @@ class LocalNotification {
         kind: LocalNotificationScheduleKind.reminderNotification,
         scheduleDateTime: reminderDate,
         currentLocalNotificationScheduleCount:
-            initialCountOfLocalNotificationScheduleIDs,
+            localNotificationIDOffset + index,
       );
+
+      final title = () {
+        if (isTrialOrPremium) {
+          var result = "";
+          if (!setting
+              .reminderNotificationCustomization.isInVisiblePillNumber) {
+            result += " ";
+            result +=
+                "${reminderDate.month}/${reminderDate.day} (${WeekdayFunctions.weekdayFromDate(reminderDate).weekdayString()})";
+          }
+          if (!setting
+              .reminderNotificationCustomization.isInVisiblePillNumber) {
+            result += " ";
+                result += pillSheetGroup.sequentialLastTakenPillNumber
+              }
+        }
+      }();
 
       await plugin.zonedSchedule(
         localNotificationSchedule.localNotificationID,
-        'scheduled title',
+        '',
         'scheduled body',
         reminderDate,
         const NotificationDetails(
