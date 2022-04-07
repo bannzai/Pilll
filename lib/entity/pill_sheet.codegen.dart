@@ -263,9 +263,14 @@ int summarizedPillSheetsCountToEndIndex(
   if (endIndex == 0) {
     return 0;
   }
+
   final sublist = pillSheets.sublist(0, endIndex);
   final passedTotalCount = sublist
       .map((e) => e.typeInfo.totalCount)
       .reduce((value, element) => value + element);
-  return passedTotalCount;
+  final restDurationCount = sublist
+      .map((e) => summarizedRestDuration(
+          restDurations: e.restDurations, upperDate: e.estimatedLastTakenDate))
+      .reduce((value, element) => value + element);
+  return passedTotalCount + restDurationCount;
 }
