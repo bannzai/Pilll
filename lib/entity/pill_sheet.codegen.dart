@@ -128,17 +128,18 @@ class PillSheet with _$PillSheet {
     }
 
     final summarizedRestDuration = restDurations.map((e) {
-      if (!e.beginDate.isBefore(lastTakenDate)) {
+      if (!lastTakenDate.isAfter(e.beginDate)) {
+        // ignore summarized
         return 0;
       }
       final endDate = e.endDate;
       if (endDate == null) {
-        return daysBetween(e.beginDate, today());
-      } else if (lastTakenDate.isAfter(e.beginDate)) {
-        return daysBetween(e.beginDate, endDate);
-      } else {
+        // when lastTakenDate.isAfter(e.beginDate) and endDate is not null is unexpected pattern
+        assert(false);
         return 0;
       }
+
+      return daysBetween(e.beginDate, endDate);
     }).reduce((value, element) => value + element);
 
     return lastTakenPillNumber - summarizedRestDuration;
