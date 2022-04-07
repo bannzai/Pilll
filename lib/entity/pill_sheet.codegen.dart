@@ -218,7 +218,8 @@ class PillSheet with _$PillSheet {
   }
 }
 
-// upperDate is assumed to be lastTakenDate(when calculate lastTakenPillNumber) or today(when calculate todayPillNumber).
+// upperDate までの休薬期間を集計する
+// upperDate にはlastTakenDate(lastTakenPillNumberを集計したい時)やtoday(todayPillNumberを集計したい時）が入る想定
 int summarizedRestDuration({
   required List<RestDuration> restDurations,
   required DateTime upperDate,
@@ -227,13 +228,16 @@ int summarizedRestDuration({
     return 0;
   }
   return restDurations.map((e) {
-    if (!upperDate.isAfter(e.beginDate)) {
-      // ignore summarized
+    // upperDate よりも後の休薬期間の場合は無視する。同一日は無視しないので、!upperDate.isAfter(e.beginDate)では無い
+    if (!e.beginDate.isBefore(upperDate)) {
       return 0;
     }
+
     final endDate = e.endDate;
     if (endDate == null) {
-      return daysBetween(e.beginDate, today());
+      // 実質upperDate == todayの場合にのみここを通る。本来であれば別の関数にした方が良いかも
+      assert(isSameDay(today(), upperDate));
+      return daysBetween(e.beginDate, upperDate);
     }
 
     return daysBetween(e.beginDate, endDate);
