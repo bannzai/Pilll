@@ -3,6 +3,7 @@ import 'package:pilll/entity/pill_sheet_type.dart';
 import 'package:pilll/service/day.dart';
 import 'package:flutter_test/flutter_test.dart';
 import 'package:mockito/mockito.dart';
+import 'package:pilll/util/datetime/day.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
 import '../helper/mock.mocks.dart';
@@ -799,7 +800,8 @@ void main() {
         when(mockTodayRepository.today())
             .thenReturn(DateTime.parse("2022-05-10"));
 
-        expect(summarizedRestDuration([]), 0);
+        expect(
+            summarizedRestDuration(restDurations: [], upperDate: today()), 0);
       });
       test("last restDuration is not ended", () {
         final mockTodayRepository = MockTodayService();
@@ -813,7 +815,10 @@ void main() {
             createdDate: DateTime.parse("2022-05-07"),
           ),
         ];
-        expect(summarizedRestDuration(restDurations), 3);
+        expect(
+            summarizedRestDuration(
+                restDurations: restDurations, upperDate: today()),
+            3);
       });
       test("last restDuration is ended", () {
         final mockTodayRepository = MockTodayService();
@@ -828,7 +833,10 @@ void main() {
             endDate: DateTime.parse("2022-05-08"),
           ),
         ];
-        expect(summarizedRestDuration(restDurations), 1);
+        expect(
+            summarizedRestDuration(
+                restDurations: restDurations, upperDate: today()),
+            1);
       });
     });
   });
