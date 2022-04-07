@@ -3,7 +3,6 @@ import 'dart:math';
 import 'package:pilll/components/organisms/calendar/band/calendar_band_model.dart';
 import 'package:pilll/domain/calendar/date_range.dart';
 import 'package:pilll/entity/menstruation.codegen.dart';
-import 'package:pilll/entity/pill_sheet.codegen.dart';
 import 'package:pilll/entity/pill_sheet_group.codegen.dart';
 import 'package:pilll/entity/pill_sheet_type.dart';
 import 'package:pilll/entity/setting.codegen.dart';
@@ -35,8 +34,10 @@ List<DateRange> scheduledOrInTheMiddleMenstruationDateRanges(
         pageIndex < pillSheetGroup.pillSheets.length;
         pageIndex++) {
       final pillSheet = pillSheetGroup.pillSheets[pageIndex];
-      final passedCount = summarizedPillSheetsCountToEndIndex(
-          pillSheets: pillSheetGroup.pillSheets, endIndex: pageIndex);
+      final pillSheetTypes =
+          pillSheetGroup.pillSheets.map((e) => e.pillSheetType).toList();
+      final passedCount = summarizedPillSheetTypesCountToEndIndex(
+          pillSheetTypes: pillSheetTypes, endIndex: pageIndex);
       final serializedTotalPillNumber =
           passedCount + pillSheet.typeInfo.totalCount;
       if (serializedTotalPillNumber < setting.pillNumberForFromMenstruation) {
