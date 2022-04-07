@@ -111,9 +111,6 @@ class MockTodayService extends _i1.Mock implements _i14.TodayService {
   }
 
   @override
-  DateTime today() => (super.noSuchMethod(Invocation.method(#today, []),
-      returnValue: _FakeDateTime_1()) as DateTime);
-  @override
   DateTime now() => (super.noSuchMethod(Invocation.method(#now, []),
       returnValue: _FakeDateTime_1()) as DateTime);
 }
