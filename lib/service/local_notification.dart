@@ -4,6 +4,7 @@ import 'package:collection/collection.dart';
 
 import 'package:flutter_local_notifications/flutter_local_notifications.dart';
 import 'package:pilll/domain/record/util/take.dart';
+import 'package:pilll/emoji/emoji.dart';
 import 'package:pilll/entity/local_notification_schedule.codegen.dart';
 import 'package:pilll/entity/pill_sheet_group.codegen.dart';
 import 'package:pilll/entity/setting.codegen.dart';
@@ -96,9 +97,9 @@ class LocalNotification {
 
       final title = () {
         if (isTrialOrPremium) {
-          var result = "";
+          var result = setting.reminderNotificationCustomization.word ;
           if (!setting
-              .reminderNotificationCustomization.isInVisiblePillNumber) {
+              .reminderNotificationCustomization.isInVisibleReminderDate) {
             result += " ";
             result +=
                 "${reminderDate.month}/${reminderDate.day} (${WeekdayFunctions.weekdayFromDate(reminderDate).weekdayString()})";
@@ -109,11 +110,12 @@ class LocalNotification {
                 result += pillSheetGroup.sequentialLastTakenPillNumber
               }
         }
+              return result;
       }();
 
       await plugin.zonedSchedule(
         localNotificationSchedule.localNotificationID,
-        '',
+        title,
         'scheduled body',
         reminderDate,
         const NotificationDetails(
