@@ -181,3 +181,15 @@ int summarizedPillSheetsCountToEndIndex(
       .reduce((value, element) => value + element);
   return passedTotalCount;
 }
+
+int summarizedPillSheetTypesCountToEndIndex(
+    {required List<PillSheetType> pillSheetTypes, required int endIndex}) {
+  if (endIndex == 0) {
+    return 0;
+  }
+  final passed = pillSheetTypes.sublist(0, endIndex);
+  final passedTotalCount = passed
+      .map((e) => e.totalCount)
+      .reduce((value, element) => value + element);
+  return passedTotalCount;
+}
