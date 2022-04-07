@@ -67,7 +67,7 @@ class PillSheetGroup with _$PillSheetGroup {
     }
 
     final passedPillCountForPillSheetTypes =
-        summarizedPillSheetsCountToEndIndex(
+        summarizedPillSheetsCountContainRestDurationToEndIndex(
             pillSheets: pillSheets, endIndex: activedPillSheet.groupIndex);
     return passedPillCountForPillSheetTypes + activedPillSheet.todayPillNumber;
   }
@@ -82,7 +82,7 @@ class PillSheetGroup with _$PillSheetGroup {
     }
 
     final passedPillCountForPillSheetTypes =
-        summarizedPillSheetsCountToEndIndex(
+        summarizedPillSheetsCountContainRestDurationToEndIndex(
             pillSheets: pillSheets, endIndex: activedPillSheet.groupIndex);
     return passedPillCountForPillSheetTypes +
         activedPillSheet.lastTakenPillNumber;
