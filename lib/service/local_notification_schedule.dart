@@ -1,0 +1,25 @@
+import 'dart:async';
+
+import 'package:cloud_firestore/cloud_firestore.dart';
+import 'package:pilll/database/database.dart';
+import 'package:pilll/entity/local_notification_schedule.codegen.dart';
+import 'package:pilll/entity/setting.codegen.dart';
+import 'package:pilll/entity/user.codegen.dart';
+import 'package:riverpod/riverpod.dart';
+
+final localNotificationScheduleServiceProvider = Provider(
+    (ref) => LocalNotificationScheduleService(ref.watch(databaseProvider)));
+
+class LocalNotificationScheduleService {
+  final DatabaseConnection _database;
+  LocalNotificationScheduleService(this._database);
+
+  Future<List<LocalNotificationSchedule>> fetchListWithKind(
+      LocalNotificationScheduleKind kind) {
+    return _database
+        .localNotificationSchedules()
+        .where(LocalNotificationScheduleFirestoreField.kind, isEqualTo: kind)
+        .get()
+        .then((value) => value.docs.map((e) => e.data()).toList());
+  }
+}
