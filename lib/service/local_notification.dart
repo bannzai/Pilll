@@ -3,7 +3,7 @@ import 'dart:convert';
 
 import 'package:flutter_local_notifications/flutter_local_notifications.dart';
 import 'package:pilll/domain/record/util/take.dart';
-import 'package:pilll/entity/local_notification_schedule_id.codegen.dart';
+import 'package:pilll/entity/local_notification_schedule.codegen.dart';
 import 'package:pilll/native/pill.dart';
 import 'package:pilll/util/datetime/day.dart';
 import 'package:pilll/util/shared_preference/shared_preference.dart';
