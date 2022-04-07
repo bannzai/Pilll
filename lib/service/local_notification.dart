@@ -62,42 +62,6 @@ class LocalNotification {
     );
   }
 
-  // _createScheduleID does not contains exclusion control.
-  // You must call _createScheduleID sequentially that means you must await _createScheduleID result;
-  // for example, don't use Future.wait([processes])
-  Future<LocalNotificationScheduleID> _createScheduleID(
-      {required String functionName,
-      required DateTime scheduleDateTime}) async {
-    final sharedPreferences = await SharedPreferences.getInstance();
-    final scheduleIDsJSON = sharedPreferences
-        .getString(_sharedPreferenceKeyLocalNotificationScheduleIDs);
-
-    final LocalNotificationScheduleIDs scheduleIDs;
-    if (scheduleIDsJSON != null) {
-      scheduleIDs =
-          LocalNotificationScheduleIDs.fromJson(json.decode(scheduleIDsJSON));
-    } else {
-      scheduleIDs = LocalNotificationScheduleIDs(ids: []);
-    }
-
-    final timestamp = scheduleDateTime.millisecondsSinceEpoch;
-    final localNotificationID = scheduleIDs.ids.length;
-    final key = "${functionName}_${timestamp}_${scheduleIDs.ids.length}";
-    final scheduleID = LocalNotificationScheduleID(
-      key: key,
-      localNotificationID: localNotificationID,
-      scheduleDateTime: scheduleDateTime,
-    );
-
-    final updated = scheduleIDs.copyWith(ids: scheduleIDs.ids + [scheduleID]);
-
-    await sharedPreferences.setString(
-        _sharedPreferenceKeyLocalNotificationScheduleIDs,
-        json.encode(updated.toJson()));
-
-    return scheduleID;
-  }
-
   Future<void> scheduleRemiderNotification({
     required int hour,
     required int minute,
