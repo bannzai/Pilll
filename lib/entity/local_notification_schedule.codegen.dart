@@ -14,8 +14,9 @@ class LocalNotificationSchedule with _$LocalNotificationSchedule {
   @JsonSerializable(explicitToJson: true)
   factory LocalNotificationSchedule({
     required LocalNotificationScheduleKind kind,
-    required int localNotification,
     required DateTime scheduleDateTime,
+    // NOTE: localNotificationID set  to count of all local notification schedules
+    required int localNotificationID,
   }) = _LocalNotificationSchedule;
   LocalNotificationSchedule._();
 
@@ -25,7 +26,7 @@ class LocalNotificationSchedule with _$LocalNotificationSchedule {
   // createSchedule does not contains exclusion control.
   // You must call _createSchedule sequentially that means you must await createSchedule result;
   // for example, don't use Future.wait([processes])
-  static Future<LocalNotificationSchedule> createSchedule({
+  static LocalNotificationSchedule createSchedule({
     required LocalNotificationScheduleKind kind,
     required DateTime scheduleDateTime,
     required int currentLocalNotificationScheduleCount,
@@ -34,7 +35,7 @@ class LocalNotificationSchedule with _$LocalNotificationSchedule {
     final schedule = LocalNotificationSchedule(
       kind: kind,
       scheduleDateTime: scheduleDateTime,
-      localNotification: localNotificationID,
+      localNotificationID: localNotificationID,
     );
 
     return schedule;

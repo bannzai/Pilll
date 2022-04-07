@@ -65,6 +65,7 @@ class LocalNotification {
   Future<void> scheduleRemiderNotification({
     required int hour,
     required int minute,
+    required int initialCountOfLocalNotificationScheduleIDs,
     required int totalPillNumberOfPillSheetGroup,
     required bool isTrialOrPremium,
     required tz.TZDateTime tzFrom,
@@ -74,15 +75,17 @@ class LocalNotification {
       final reminderDate = date
           .add(Duration(hours: tzFrom.hour))
           .add(Duration(minutes: tzFrom.minute + index + 1));
-      print("$reminderDate");
 
-      final id = await _createScheduleID(
-        functionName: 'scheduleRemiderNotification',
+      final localNotificationSchedule =
+          LocalNotificationSchedule.createSchedule(
+        kind: LocalNotificationScheduleKind.reminderNotification,
         scheduleDateTime: reminderDate,
+        currentLocalNotificationScheduleCount:
+            initialCountOfLocalNotificationScheduleIDs,
       );
 
       await plugin.zonedSchedule(
-        id.localNotificationID,
+        localNotificationSchedule.localNotificationID,
         'scheduled title',
         'scheduled body',
         reminderDate,
