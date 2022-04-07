@@ -2,7 +2,7 @@ import 'package:pilll/entity/weekday.dart';
 import 'package:pilll/service/day.dart';
 
 DateTime today() {
-  return todayRepository.today();
+  return todayRepository.now().date();
 }
 
 DateTime now() {
