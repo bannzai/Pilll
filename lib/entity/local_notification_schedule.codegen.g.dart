@@ -10,7 +10,7 @@ _$_LocalNotificationSchedule _$$_LocalNotificationScheduleFromJson(
         Map<String, dynamic> json) =>
     _$_LocalNotificationSchedule(
       key: json['key'] as String,
-      type: $enumDecode(_$LocalNotificationScheduleKindEnumMap, json['type']),
+      kind: $enumDecode(_$LocalNotificationScheduleKindEnumMap, json['kind']),
       localNotification: json['localNotification'] as int,
       scheduleDateTime: DateTime.parse(json['scheduleDateTime'] as String),
     );
@@ -19,7 +19,7 @@ Map<String, dynamic> _$$_LocalNotificationScheduleToJson(
         _$_LocalNotificationSchedule instance) =>
     <String, dynamic>{
       'key': instance.key,
-      'type': _$LocalNotificationScheduleKindEnumMap[instance.type],
+      'kind': _$LocalNotificationScheduleKindEnumMap[instance.kind],
       'localNotification': instance.localNotification,
       'scheduleDateTime': instance.scheduleDateTime.toIso8601String(),
     };

@@ -25,12 +25,12 @@ class _$LocalNotificationScheduleTearOff {
 
   _LocalNotificationSchedule call(
       {required String key,
-      required LocalNotificationScheduleKind type,
+      required LocalNotificationScheduleKind kind,
       required int localNotification,
       required DateTime scheduleDateTime}) {
     return _LocalNotificationSchedule(
       key: key,
-      type: type,
+      kind: kind,
       localNotification: localNotification,
       scheduleDateTime: scheduleDateTime,
     );
@@ -47,7 +47,7 @@ const $LocalNotificationSchedule = _$LocalNotificationScheduleTearOff();
 /// @nodoc
 mixin _$LocalNotificationSchedule {
   String get key => throw _privateConstructorUsedError;
-  LocalNotificationScheduleKind get type => throw _privateConstructorUsedError;
+  LocalNotificationScheduleKind get kind => throw _privateConstructorUsedError;
   int get localNotification => throw _privateConstructorUsedError;
   DateTime get scheduleDateTime => throw _privateConstructorUsedError;
 
@@ -64,7 +64,7 @@ abstract class $LocalNotificationScheduleCopyWith<$Res> {
       _$LocalNotificationScheduleCopyWithImpl<$Res>;
   $Res call(
       {String key,
-      LocalNotificationScheduleKind type,
+      LocalNotificationScheduleKind kind,
       int localNotification,
       DateTime scheduleDateTime});
 }
@@ -81,7 +81,7 @@ class _$LocalNotificationScheduleCopyWithImpl<$Res>
   @override
   $Res call({
     Object? key = freezed,
-    Object? type = freezed,
+    Object? kind = freezed,
     Object? localNotification = freezed,
     Object? scheduleDateTime = freezed,
   }) {
@@ -90,9 +90,9 @@ class _$LocalNotificationScheduleCopyWithImpl<$Res>
           ? _value.key
           : key // ignore: cast_nullable_to_non_nullable
               as String,
-      type: type == freezed
-          ? _value.type
-          : type // ignore: cast_nullable_to_non_nullable
+      kind: kind == freezed
+          ? _value.kind
+          : kind // ignore: cast_nullable_to_non_nullable
               as LocalNotificationScheduleKind,
       localNotification: localNotification == freezed
           ? _value.localNotification
@@ -115,7 +115,7 @@ abstract class _$LocalNotificationScheduleCopyWith<$Res>
   @override
   $Res call(
       {String key,
-      LocalNotificationScheduleKind type,
+      LocalNotificationScheduleKind kind,
       int localNotification,
       DateTime scheduleDateTime});
 }
@@ -135,7 +135,7 @@ class __$LocalNotificationScheduleCopyWithImpl<$Res>
   @override
   $Res call({
     Object? key = freezed,
-    Object? type = freezed,
+    Object? kind = freezed,
     Object? localNotification = freezed,
     Object? scheduleDateTime = freezed,
   }) {
@@ -144,9 +144,9 @@ class __$LocalNotificationScheduleCopyWithImpl<$Res>
           ? _value.key
           : key // ignore: cast_nullable_to_non_nullable
               as String,
-      type: type == freezed
-          ? _value.type
-          : type // ignore: cast_nullable_to_non_nullable
+      kind: kind == freezed
+          ? _value.kind
+          : kind // ignore: cast_nullable_to_non_nullable
               as LocalNotificationScheduleKind,
       localNotification: localNotification == freezed
           ? _value.localNotification
@@ -166,7 +166,7 @@ class __$LocalNotificationScheduleCopyWithImpl<$Res>
 class _$_LocalNotificationSchedule extends _LocalNotificationSchedule {
   _$_LocalNotificationSchedule(
       {required this.key,
-      required this.type,
+      required this.kind,
       required this.localNotification,
       required this.scheduleDateTime})
       : super._();
@@ -177,7 +177,7 @@ class _$_LocalNotificationSchedule extends _LocalNotificationSchedule {
   @override
   final String key;
   @override
-  final LocalNotificationScheduleKind type;
+  final LocalNotificationScheduleKind kind;
   @override
   final int localNotification;
   @override
@@ -185,7 +185,7 @@ class _$_LocalNotificationSchedule extends _LocalNotificationSchedule {
 
   @override
   String toString() {
-    return 'LocalNotificationSchedule(key: $key, type: $type, localNotification: $localNotification, scheduleDateTime: $scheduleDateTime)';
+    return 'LocalNotificationSchedule(key: $key, kind: $kind, localNotification: $localNotification, scheduleDateTime: $scheduleDateTime)';
   }
 
   @override
@@ -194,7 +194,7 @@ class _$_LocalNotificationSchedule extends _LocalNotificationSchedule {
         (other.runtimeType == runtimeType &&
             other is _LocalNotificationSchedule &&
             const DeepCollectionEquality().equals(other.key, key) &&
-            const DeepCollectionEquality().equals(other.type, type) &&
+            const DeepCollectionEquality().equals(other.kind, kind) &&
             const DeepCollectionEquality()
                 .equals(other.localNotification, localNotification) &&
             const DeepCollectionEquality()
@@ -205,7 +205,7 @@ class _$_LocalNotificationSchedule extends _LocalNotificationSchedule {
   int get hashCode => Object.hash(
       runtimeType,
       const DeepCollectionEquality().hash(key),
-      const DeepCollectionEquality().hash(type),
+      const DeepCollectionEquality().hash(kind),
       const DeepCollectionEquality().hash(localNotification),
       const DeepCollectionEquality().hash(scheduleDateTime));
 
@@ -225,7 +225,7 @@ class _$_LocalNotificationSchedule extends _LocalNotificationSchedule {
 abstract class _LocalNotificationSchedule extends LocalNotificationSchedule {
   factory _LocalNotificationSchedule(
       {required String key,
-      required LocalNotificationScheduleKind type,
+      required LocalNotificationScheduleKind kind,
       required int localNotification,
       required DateTime scheduleDateTime}) = _$_LocalNotificationSchedule;
   _LocalNotificationSchedule._() : super._();
@@ -236,7 +236,7 @@ abstract class _LocalNotificationSchedule extends LocalNotificationSchedule {
   @override
   String get key;
   @override
-  LocalNotificationScheduleKind get type;
+  LocalNotificationScheduleKind get kind;
   @override
   int get localNotification;
   @override
