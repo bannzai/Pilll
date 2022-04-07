@@ -108,8 +108,7 @@ class PillSheet with _$PillSheet {
 
   int get todayPillNumber {
     return daysBetween(beginingDate.date(), today()) -
-        summarizedRestDuration(
-            restDurations: restDurations, targetDate: today(), today: today()) +
+        summarizedRestDuration(restDurations) +
         1;
   }
 
@@ -128,21 +127,7 @@ class PillSheet with _$PillSheet {
       return lastTakenPillNumber;
     }
 
-    final summarizedRestDuration = restDurations.map((e) {
-      if (!e.beginDate.isBefore(lastTakenDate)) {
-        return 0;
-      }
-      final endDate = e.endDate;
-      if (endDate == null) {
-        return daysBetween(e.beginDate, today());
-      } else if (lastTakenDate.isAfter(e.beginDate)) {
-        return daysBetween(e.beginDate, endDate);
-      } else {
-        return 0;
-      }
-    }).reduce((value, element) => value + element);
-
-    return lastTakenPillNumber - summarizedRestDuration;
+    return lastTakenPillNumber - summarizedRestDuration(restDurations);
   }
 
   bool get todayPillIsAlreadyTaken => todayPillNumber == lastTakenPillNumber;
@@ -158,15 +143,7 @@ class PillSheet with _$PillSheet {
     final begin = beginingDate.date();
     final totalCount = typeInfo.totalCount;
     final end = begin.add(
-      Duration(
-        days: totalCount +
-            summarizedRestDuration(
-                restDurations: restDurations,
-                targetDate: today(),
-                today: today()) -
-            1,
-      ),
-    );
+        Duration(days: totalCount + summarizedRestDuration(restDurations) - 1));
     return DateRange(begin, end).inRange(n);
   }
 
@@ -220,27 +197,16 @@ class PillSheet with _$PillSheet {
   }
 }
 
-int summarizedRestDuration({
-  required List<RestDuration> restDurations,
-  required DateTime targetDate,
-  required DateTime today,
-}) {
+int summarizedRestDuration(List<RestDuration> restDurations) {
   if (restDurations.isEmpty) {
     return 0;
   }
-
   return restDurations.map((e) {
-    if (!e.beginDate.isBefore(targetDate)) {
-      return 0;
-    }
-
     final endDate = e.endDate;
     if (endDate == null) {
-      return daysBetween(e.beginDate, today);
-    } else if (targetDate.isAfter(e.beginDate)) {
-      return daysBetween(e.beginDate, endDate);
+      return daysBetween(e.beginDate, today());
     } else {
-      return 0;
+      return daysBetween(e.beginDate, endDate);
     }
   }).reduce((value, element) => value + element);
 }
