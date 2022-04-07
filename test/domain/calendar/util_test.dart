@@ -28,7 +28,7 @@ void main() {
           todayRepository = mockTodayRepository;
           when(mockTodayRepository.now())
               .thenReturn(DateTime.parse("2020-09-01"));
-          when(mockTodayRepository.today())
+          when(mockTodayRepository.now())
               .thenReturn(DateTime.parse("2020-09-01"));
           addTearDown(() {
             todayRepository = originalTodayRepository;
@@ -84,7 +84,7 @@ void main() {
           todayRepository = mockTodayRepository;
           when(mockTodayRepository.now())
               .thenReturn(DateTime.parse("2020-09-01"));
-          when(mockTodayRepository.today())
+          when(mockTodayRepository.now())
               .thenReturn(DateTime.parse("2020-09-01"));
           addTearDown(() {
             todayRepository = originalTodayRepository;
@@ -140,7 +140,7 @@ void main() {
           todayRepository = mockTodayRepository;
           when(mockTodayRepository.now())
               .thenReturn(DateTime.parse("2020-09-01"));
-          when(mockTodayRepository.today())
+          when(mockTodayRepository.now())
               .thenReturn(DateTime.parse("2020-09-01"));
           addTearDown(() {
             todayRepository = originalTodayRepository;
@@ -222,7 +222,7 @@ void main() {
           todayRepository = mockTodayRepository;
           when(mockTodayRepository.now())
               .thenReturn(DateTime.parse("2020-09-01"));
-          when(mockTodayRepository.today())
+          when(mockTodayRepository.now())
               .thenReturn(DateTime.parse("2020-09-01"));
           addTearDown(() {
             todayRepository = originalTodayRepository;
@@ -268,7 +268,7 @@ void main() {
           todayRepository = mockTodayRepository;
           when(mockTodayRepository.now())
               .thenReturn(DateTime.parse("2020-09-01"));
-          when(mockTodayRepository.today())
+          when(mockTodayRepository.now())
               .thenReturn(DateTime.parse("2020-09-01"));
           addTearDown(() {
             todayRepository = originalTodayRepository;
@@ -319,7 +319,7 @@ void main() {
           todayRepository = mockTodayRepository;
           when(mockTodayRepository.now())
               .thenReturn(DateTime.parse("2020-09-01"));
-          when(mockTodayRepository.today())
+          when(mockTodayRepository.now())
               .thenReturn(DateTime.parse("2020-09-01"));
           addTearDown(() {
             todayRepository = originalTodayRepository;
@@ -373,7 +373,7 @@ void main() {
           todayRepository = mockTodayRepository;
           when(mockTodayRepository.now())
               .thenReturn(DateTime.parse("2021-01-18"));
-          when(mockTodayRepository.today())
+          when(mockTodayRepository.now())
               .thenReturn(DateTime.parse("2021-01-18"));
           addTearDown(() {
             todayRepository = originalTodayRepository;
@@ -419,7 +419,7 @@ void main() {
           todayRepository = mockTodayRepository;
           when(mockTodayRepository.now())
               .thenReturn(DateTime.parse("2021-01-01"));
-          when(mockTodayRepository.today())
+          when(mockTodayRepository.now())
               .thenReturn(DateTime.parse("2021-01-01"));
           addTearDown(() {
             todayRepository = originalTodayRepository;
@@ -469,7 +469,7 @@ void main() {
           todayRepository = mockTodayRepository;
           when(mockTodayRepository.now())
               .thenReturn(DateTime.parse("2021-01-18"));
-          when(mockTodayRepository.today())
+          when(mockTodayRepository.now())
               .thenReturn(DateTime.parse("2021-01-18"));
           addTearDown(() {
             todayRepository = originalTodayRepository;
@@ -513,7 +513,7 @@ void main() {
           todayRepository = mockTodayRepository;
           when(mockTodayRepository.now())
               .thenReturn(DateTime.parse("2020-09-01"));
-          when(mockTodayRepository.today())
+          when(mockTodayRepository.now())
               .thenReturn(DateTime.parse("2020-09-01"));
           addTearDown(() {
             todayRepository = originalTodayRepository;
@@ -578,7 +578,7 @@ void main() {
           todayRepository = mockTodayRepository;
           when(mockTodayRepository.now())
               .thenReturn(DateTime.parse("2020-09-01"));
-          when(mockTodayRepository.today())
+          when(mockTodayRepository.now())
               .thenReturn(DateTime.parse("2020-09-01"));
           addTearDown(() {
             todayRepository = originalTodayRepository;
@@ -612,7 +612,7 @@ void main() {
           todayRepository = mockTodayRepository;
           when(mockTodayRepository.now())
               .thenReturn(DateTime.parse("2020-09-01"));
-          when(mockTodayRepository.today())
+          when(mockTodayRepository.now())
               .thenReturn(DateTime.parse("2020-09-01"));
           addTearDown(() {
             todayRepository = originalTodayRepository;
@@ -650,7 +650,7 @@ void main() {
           todayRepository = mockTodayRepository;
           when(mockTodayRepository.now())
               .thenReturn(DateTime.parse("2020-09-01"));
-          when(mockTodayRepository.today())
+          when(mockTodayRepository.now())
               .thenReturn(DateTime.parse("2020-09-01"));
           addTearDown(() {
             todayRepository = originalTodayRepository;
@@ -709,7 +709,7 @@ void main() {
           todayRepository = mockTodayRepository;
           when(mockTodayRepository.now())
               .thenReturn(DateTime.parse("2020-09-01"));
-          when(mockTodayRepository.today())
+          when(mockTodayRepository.now())
               .thenReturn(DateTime.parse("2020-09-01"));
           addTearDown(() {
             todayRepository = originalTodayRepository;

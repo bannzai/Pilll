@@ -31,7 +31,7 @@ void main() {
       var mockTodayRepository = MockTodayService();
       final _today = DateTime.parse("2020-09-19");
       todayRepository = mockTodayRepository;
-      when(mockTodayRepository.today()).thenReturn(_today);
+      when(mockTodayRepository.now()).thenReturn(_today);
       when(mockTodayRepository.now()).thenReturn(_today);
 
       final batchFactory = MockBatchFactory();
@@ -124,7 +124,7 @@ void main() {
       var mockTodayRepository = MockTodayService();
       final _today = DateTime.parse("2020-09-19");
       todayRepository = mockTodayRepository;
-      when(mockTodayRepository.today()).thenReturn(_today);
+      when(mockTodayRepository.now()).thenReturn(_today);
       when(mockTodayRepository.now()).thenReturn(_today);
 
       final batchFactory = MockBatchFactory();
@@ -230,7 +230,7 @@ void main() {
       var mockTodayRepository = MockTodayService();
       final _today = DateTime.parse("2020-09-19");
       todayRepository = mockTodayRepository;
-      when(mockTodayRepository.today()).thenReturn(_today);
+      when(mockTodayRepository.now()).thenReturn(_today);
       when(mockTodayRepository.now()).thenReturn(_today);
 
       final batchFactory = MockBatchFactory();
@@ -339,7 +339,7 @@ void main() {
       var mockTodayRepository = MockTodayService();
       final _today = DateTime.parse("2020-09-19");
       todayRepository = mockTodayRepository;
-      when(mockTodayRepository.today()).thenReturn(_today);
+      when(mockTodayRepository.now()).thenReturn(_today);
       when(mockTodayRepository.now()).thenReturn(_today);
 
       final batchFactory = MockBatchFactory();
@@ -461,7 +461,7 @@ void main() {
       var mockTodayRepository = MockTodayService();
       final _today = DateTime.parse("2022-05-29");
       todayRepository = mockTodayRepository;
-      when(mockTodayRepository.today()).thenReturn(_today);
+      when(mockTodayRepository.now()).thenReturn(_today);
       when(mockTodayRepository.now()).thenReturn(_today);
 
       final batchFactory = MockBatchFactory();
@@ -583,7 +583,7 @@ void main() {
       var mockTodayRepository = MockTodayService();
       final _today = DateTime.parse("2020-09-19");
       todayRepository = mockTodayRepository;
-      when(mockTodayRepository.today()).thenReturn(_today);
+      when(mockTodayRepository.now()).thenReturn(_today);
       when(mockTodayRepository.now()).thenReturn(_today);
 
       final batchFactory = MockBatchFactory();
@@ -711,7 +711,7 @@ void main() {
         var mockTodayRepository = MockTodayService();
         final _today = DateTime.parse("2022-01-17");
         todayRepository = mockTodayRepository;
-        when(mockTodayRepository.today()).thenReturn(_today);
+        when(mockTodayRepository.now()).thenReturn(_today);
         when(mockTodayRepository.now()).thenReturn(_today);
         final yesterday = DateTime.parse("2022-01-16");
 
@@ -826,7 +826,7 @@ void main() {
         var mockTodayRepository = MockTodayService();
         final _today = DateTime.parse("2022-01-17");
         todayRepository = mockTodayRepository;
-        when(mockTodayRepository.today()).thenReturn(_today);
+        when(mockTodayRepository.now()).thenReturn(_today);
         when(mockTodayRepository.now()).thenReturn(_today);
         final yesterday = DateTime.parse("2022-01-16");
 
@@ -939,7 +939,7 @@ void main() {
         var mockTodayRepository = MockTodayService();
         final _today = DateTime.parse("2022-01-17");
         todayRepository = mockTodayRepository;
-        when(mockTodayRepository.today()).thenReturn(_today);
+        when(mockTodayRepository.now()).thenReturn(_today);
         when(mockTodayRepository.now()).thenReturn(_today);
         final beginDate = DateTime.parse("2022-01-06");
 
@@ -1067,7 +1067,7 @@ void main() {
         var mockTodayRepository = MockTodayService();
         final _today = DateTime.parse("2022-01-17");
         todayRepository = mockTodayRepository;
-        when(mockTodayRepository.today()).thenReturn(_today);
+        when(mockTodayRepository.now()).thenReturn(_today);
         when(mockTodayRepository.now()).thenReturn(_today);
         final beginDate = DateTime.parse("2022-01-06");
         final yesterday = DateTime.parse("2022-01-16");
@@ -1189,7 +1189,7 @@ void main() {
         var mockTodayRepository = MockTodayService();
         final _today = DateTime.parse("2022-01-17");
         todayRepository = mockTodayRepository;
-        when(mockTodayRepository.today()).thenReturn(_today);
+        when(mockTodayRepository.now()).thenReturn(_today);
         when(mockTodayRepository.now()).thenReturn(_today);
         final yesterday = DateTime.parse("2022-01-16");
 
@@ -1314,7 +1314,7 @@ void main() {
         var mockTodayRepository = MockTodayService();
         final _today = DateTime.parse("2022-01-31");
         todayRepository = mockTodayRepository;
-        when(mockTodayRepository.today()).thenReturn(_today);
+        when(mockTodayRepository.now()).thenReturn(_today);
         when(mockTodayRepository.now()).thenReturn(_today);
         final yesterday = DateTime.parse("2022-01-30");
 
@@ -1441,7 +1441,7 @@ void main() {
         var mockTodayRepository = MockTodayService();
         final _today = DateTime.parse("2022-01-31");
         todayRepository = mockTodayRepository;
-        when(mockTodayRepository.today()).thenReturn(_today);
+        when(mockTodayRepository.now()).thenReturn(_today);
         when(mockTodayRepository.now()).thenReturn(_today);
         final yesterday = DateTime.parse("2022-01-30");
 

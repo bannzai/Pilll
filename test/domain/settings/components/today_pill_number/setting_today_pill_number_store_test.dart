@@ -27,7 +27,7 @@ void main() {
       var mockTodayRepository = MockTodayService();
       final _today = DateTime.parse("2020-09-19");
       todayRepository = mockTodayRepository;
-      when(mockTodayRepository.today()).thenReturn(_today);
+      when(mockTodayRepository.now()).thenReturn(_today);
       when(mockTodayRepository.now()).thenReturn(_today);
 
       final batchFactory = MockBatchFactory();
@@ -92,8 +92,8 @@ void main() {
         pillSheetGroup: pillSheetGroup,
         activedPillSheet: pillSheet,
       );
-      final store =
-          container.read(settingTodayPillNumberStoreProvider(parameter).notifier);
+      final store = container
+          .read(settingTodayPillNumberStoreProvider(parameter).notifier);
 
       expect(pillSheet.todayPillNumber, 1);
 
@@ -111,7 +111,7 @@ void main() {
       var mockTodayRepository = MockTodayService();
       final _today = DateTime.parse("2020-09-19");
       todayRepository = mockTodayRepository;
-      when(mockTodayRepository.today()).thenReturn(_today);
+      when(mockTodayRepository.now()).thenReturn(_today);
       when(mockTodayRepository.now()).thenReturn(_today);
 
       final batchFactory = MockBatchFactory();
@@ -176,8 +176,8 @@ void main() {
         pillSheetGroup: pillSheetGroup,
         activedPillSheet: pillSheet,
       );
-      final store =
-          container.read(settingTodayPillNumberStoreProvider(parameter).notifier);
+      final store = container
+          .read(settingTodayPillNumberStoreProvider(parameter).notifier);
 
       expect(pillSheet.todayPillNumber, 1);
 
@@ -197,7 +197,7 @@ void main() {
       var mockTodayRepository = MockTodayService();
       final _today = DateTime.parse("2022-05-01");
       todayRepository = mockTodayRepository;
-      when(mockTodayRepository.today()).thenReturn(_today);
+      when(mockTodayRepository.now()).thenReturn(_today);
       when(mockTodayRepository.now()).thenReturn(_today);
 
       final batchFactory = MockBatchFactory();
@@ -287,8 +287,8 @@ void main() {
         pillSheetGroup: pillSheetGroup,
         activedPillSheet: middle,
       );
-      final store =
-          container.read(settingTodayPillNumberStoreProvider(parameter).notifier);
+      final store = container
+          .read(settingTodayPillNumberStoreProvider(parameter).notifier);
 
       expect(middle.todayPillNumber, 1);
 
@@ -307,7 +307,7 @@ void main() {
       var mockTodayRepository = MockTodayService();
       final _today = DateTime.parse("2022-05-01");
       todayRepository = mockTodayRepository;
-      when(mockTodayRepository.today()).thenReturn(_today);
+      when(mockTodayRepository.now()).thenReturn(_today);
       when(mockTodayRepository.now()).thenReturn(_today);
 
       final batchFactory = MockBatchFactory();
@@ -398,8 +398,8 @@ void main() {
         pillSheetGroup: pillSheetGroup,
         activedPillSheet: middle,
       );
-      final store =
-          container.read(settingTodayPillNumberStoreProvider(parameter).notifier);
+      final store = container
+          .read(settingTodayPillNumberStoreProvider(parameter).notifier);
 
       expect(middle.todayPillNumber, 1);
 
@@ -418,7 +418,7 @@ void main() {
       var mockTodayRepository = MockTodayService();
       final _today = DateTime.parse("2022-05-01");
       todayRepository = mockTodayRepository;
-      when(mockTodayRepository.today()).thenReturn(_today);
+      when(mockTodayRepository.now()).thenReturn(_today);
       when(mockTodayRepository.now()).thenReturn(_today);
 
       final batchFactory = MockBatchFactory();
@@ -510,8 +510,8 @@ void main() {
         pillSheetGroup: pillSheetGroup,
         activedPillSheet: middle,
       );
-      final store =
-          container.read(settingTodayPillNumberStoreProvider(parameter).notifier);
+      final store = container
+          .read(settingTodayPillNumberStoreProvider(parameter).notifier);
 
       expect(middle.todayPillNumber, 1);
 
@@ -532,7 +532,7 @@ void main() {
       var mockTodayRepository = MockTodayService();
       final _today = DateTime.parse("2022-05-02");
       todayRepository = mockTodayRepository;
-      when(mockTodayRepository.today()).thenReturn(_today);
+      when(mockTodayRepository.now()).thenReturn(_today);
       when(mockTodayRepository.now()).thenReturn(_today);
 
       final batchFactory = MockBatchFactory();
@@ -630,8 +630,8 @@ void main() {
         pillSheetGroup: pillSheetGroup,
         activedPillSheet: middle,
       );
-      final store =
-          container.read(settingTodayPillNumberStoreProvider(parameter).notifier);
+      final store = container
+          .read(settingTodayPillNumberStoreProvider(parameter).notifier);
 
       expect(middle.todayPillNumber, 1);
 
