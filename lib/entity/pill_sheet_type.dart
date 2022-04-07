@@ -171,11 +171,11 @@ extension PillSheetTypeFunctions on PillSheetType {
 }
 
 int summarizedPillSheetsCountToEndIndex(
-    {required List<PillSheetType> pillSheetTypes, required int endIndex}) {
+    {required List<PillSheetType> pillSheets, required int endIndex}) {
   if (endIndex == 0) {
     return 0;
   }
-  final passed = pillSheetTypes.sublist(0, endIndex);
+  final passed = pillSheets.sublist(0, endIndex);
   final passedTotalCount = passed
       .map((e) => e.totalCount)
       .reduce((value, element) => value + element);

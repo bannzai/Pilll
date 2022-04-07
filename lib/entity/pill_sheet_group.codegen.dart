@@ -70,7 +70,7 @@ class PillSheetGroup with _$PillSheetGroup {
     final passedPillSheets = pillSheets.sublist(0, activedPillSheet.groupIndex);
     final passedPillCountForPillSheetTypes =
         summarizedPillSheetsCountToEndIndex(
-            pillSheetTypes:
+            pillSheets:
                 passedPillSheets.map((e) => e.pillSheetType).toList(),
             endIndex: activedPillSheet.groupIndex);
     return passedPillCountForPillSheetTypes + activedPillSheet.todayPillNumber;
@@ -88,7 +88,7 @@ class PillSheetGroup with _$PillSheetGroup {
     final passedPillSheets = pillSheets.sublist(0, activedPillSheet.groupIndex);
     final passedPillCountForPillSheetTypes =
         summarizedPillSheetsCountToEndIndex(
-            pillSheetTypes:
+            pillSheets:
                 passedPillSheets.map((e) => e.pillSheetType).toList(),
             endIndex: activedPillSheet.groupIndex);
     return passedPillCountForPillSheetTypes +
