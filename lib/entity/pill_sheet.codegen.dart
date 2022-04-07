@@ -244,8 +244,10 @@ int summarizedRestDuration({
   }).reduce((value, element) => value + element);
 }
 
-int? pillSheetPillNumber(
-    {required PillSheet pillSheet, required DateTime? targetDate}) {
+int? pillSheetPillNumber({
+  required PillSheet pillSheet,
+  required DateTime? targetDate,
+}) {
   if (targetDate == null) {
     return null;
   }
