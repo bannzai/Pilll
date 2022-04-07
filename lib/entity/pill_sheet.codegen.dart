@@ -108,7 +108,8 @@ class PillSheet with _$PillSheet {
 
   int get todayPillNumber {
     return daysBetween(beginingDate.date(), today()) -
-        summarizedRestDuration(restDurations) +
+        summarizedRestDuration(
+            restDurations: restDurations, upperDate: today()) +
         1;
   }
 
@@ -157,14 +158,19 @@ class PillSheet with _$PillSheet {
     final n = now();
     final begin = beginingDate.date();
     final totalCount = typeInfo.totalCount;
-    final end = begin.add(
-        Duration(days: totalCount + summarizedRestDuration(restDurations) - 1));
+    final end = begin.add(Duration(
+        days: totalCount +
+            summarizedRestDuration(
+                restDurations: restDurations, upperDate: today()) -
+            1));
     return DateRange(begin, end).inRange(n);
   }
 
   DateTime get estimatedLastTakenDate => beginingDate
       .add(Duration(days: pillSheetType.totalCount - 1))
-      .add(Duration(days: summarizedRestDuration(restDurations)))
+      .add(Duration(
+          days: summarizedRestDuration(
+              restDurations: restDurations, upperDate: today())))
       .date()
       .add(const Duration(days: 1))
       .subtract(const Duration(seconds: 1));
@@ -212,17 +218,25 @@ class PillSheet with _$PillSheet {
   }
 }
 
-int summarizedRestDuration(List<RestDuration> restDurations) {
+// upperDate is assumed to be lastTakenDate(when calculate lastTakenPillNumber) or today(when calculate todayPillNumber).
+int summarizedRestDuration({
+  required List<RestDuration> restDurations,
+  required DateTime upperDate,
+}) {
   if (restDurations.isEmpty) {
     return 0;
   }
   return restDurations.map((e) {
+    if (!upperDate.isAfter(e.beginDate)) {
+      // ignore summarized
+      return 0;
+    }
     final endDate = e.endDate;
     if (endDate == null) {
       return daysBetween(e.beginDate, today());
-    } else {
-      return daysBetween(e.beginDate, endDate);
     }
+
+    return daysBetween(e.beginDate, endDate);
   }).reduce((value, element) => value + element);
 }
 
@@ -233,6 +247,7 @@ int? pillSheetPillNumber(
   }
 
   return daysBetween(pillSheet.beginingDate.date(), targetDate) -
-      summarizedRestDuration(pillSheet.restDurations) +
+      summarizedRestDuration(
+          restDurations: pillSheet.restDurations, upperDate: targetDate) +
       1;
 }
