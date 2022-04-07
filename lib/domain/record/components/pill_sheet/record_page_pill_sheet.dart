@@ -164,8 +164,7 @@ class RecordPagePillSheet extends StatelessWidget {
       }
     } else if (state.appearanceMode == PillSheetAppearanceMode.sequential) {
       final offset = summarizedPillSheetsCountToEndIndex(
-        pillSheets:
-            pillSheetGroup.pillSheets.map((e) => e.pillSheetType).toList(),
+        pillSheets: pillSheetGroup.pillSheets,
         endIndex: pageIndex,
       );
       if (setting.pillNumberForFromMenstruation == 0 ||
@@ -232,10 +231,8 @@ class RecordPagePillSheet extends StatelessWidget {
       return left <= pillNumberIntoPillSheet &&
           pillNumberIntoPillSheet <= right;
     }
-    final pillSheetTypes =
-        pillSheetGroup.pillSheets.map((e) => e.pillSheetType).toList();
     final passedCount = summarizedPillSheetsCountToEndIndex(
-        pillSheets: pillSheetTypes, endIndex: pageIndex);
+        pillSheets: pillSheetGroup.pillSheets, endIndex: pageIndex);
     final serialiedPillNumber = passedCount + pillNumberIntoPillSheet;
 
     final menstruationRangeList =

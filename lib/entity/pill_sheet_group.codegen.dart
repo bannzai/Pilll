@@ -67,12 +67,9 @@ class PillSheetGroup with _$PillSheetGroup {
       return 0;
     }
 
-    final passedPillSheets = pillSheets.sublist(0, activedPillSheet.groupIndex);
     final passedPillCountForPillSheetTypes =
         summarizedPillSheetsCountToEndIndex(
-            pillSheets:
-                passedPillSheets.map((e) => e.pillSheetType).toList(),
-            endIndex: activedPillSheet.groupIndex);
+            pillSheets: pillSheets, endIndex: activedPillSheet.groupIndex);
     return passedPillCountForPillSheetTypes + activedPillSheet.todayPillNumber;
   }
 
@@ -85,12 +82,9 @@ class PillSheetGroup with _$PillSheetGroup {
       return 0;
     }
 
-    final passedPillSheets = pillSheets.sublist(0, activedPillSheet.groupIndex);
     final passedPillCountForPillSheetTypes =
         summarizedPillSheetsCountToEndIndex(
-            pillSheets:
-                passedPillSheets.map((e) => e.pillSheetType).toList(),
-            endIndex: activedPillSheet.groupIndex);
+            pillSheets: pillSheets, endIndex: activedPillSheet.groupIndex);
     return passedPillCountForPillSheetTypes +
         activedPillSheet.lastTakenPillNumber;
   }

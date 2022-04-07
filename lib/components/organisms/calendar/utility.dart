@@ -34,10 +34,8 @@ List<DateRange> scheduledOrInTheMiddleMenstruationDateRanges(
         pageIndex < pillSheetGroup.pillSheets.length;
         pageIndex++) {
       final pillSheet = pillSheetGroup.pillSheets[pageIndex];
-      final pillSheetTypes =
-          pillSheetGroup.pillSheets.map((e) => e.pillSheetType).toList();
       final passedCount = summarizedPillSheetsCountToEndIndex(
-          pillSheets: pillSheetTypes, endIndex: pageIndex);
+          pillSheets: pillSheetGroup.pillSheets, endIndex: pageIndex);
       final serializedTotalPillNumber =
           passedCount + pillSheet.typeInfo.totalCount;
       if (serializedTotalPillNumber < setting.pillNumberForFromMenstruation) {
@@ -102,7 +100,8 @@ List<DateRange> nextPillSheetDateRanges(
   return List.generate(count.toInt(), (groupPageIndex) {
     return pillSheetGroup.pillSheets.map((pillSheet) {
       final offset = groupPageIndex * totalPillCount;
-      final begin = pillSheet.estimatedLastTakenDate.add(const Duration(days: 1));
+      final begin =
+          pillSheet.estimatedLastTakenDate.add(const Duration(days: 1));
       final end = begin.add(Duration(days: Weekday.values.length - 1));
       return DateRange(
           begin.add(Duration(days: offset)), end.add(Duration(days: offset)));

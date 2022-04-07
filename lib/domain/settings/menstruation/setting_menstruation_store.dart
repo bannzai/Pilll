@@ -23,8 +23,8 @@ class SettingMenstruationStateStore
     required int pageIndex,
     required int fromMenstruation,
   }) {
-    final offset = summarizedPillSheetsCountToEndIndex(
-        pillSheets: setting.pillSheetEnumTypes, endIndex: pageIndex);
+    final offset = summarizedPillSheetTypesCountToEndIndex(
+        pillSheetTypes: setting.pillSheetEnumTypes, endIndex: pageIndex);
     return _settingService.update(setting.copyWith(
         pillNumberForFromMenstruation: fromMenstruation + offset));
   }
@@ -49,8 +49,8 @@ class SettingMenstruationStateStore
     Setting setting,
     int pageIndex,
   ) {
-    final _passedTotalCount = summarizedPillSheetsCountToEndIndex(
-        pillSheets: setting.pillSheetEnumTypes, endIndex: pageIndex);
+    final _passedTotalCount = summarizedPillSheetTypesCountToEndIndex(
+        pillSheetTypes: setting.pillSheetEnumTypes, endIndex: pageIndex);
     if (_passedTotalCount >= setting.pillNumberForFromMenstruation) {
       return setting.pillNumberForFromMenstruation;
     }
