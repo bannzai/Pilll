@@ -127,21 +127,7 @@ class PillSheet with _$PillSheet {
       return lastTakenPillNumber;
     }
 
-    final summarizedRestDuration = restDurations.map((e) {
-      if (!e.beginDate.isBefore(lastTakenDate)) {
-        return 0;
-      }
-      final endDate = e.endDate;
-      if (endDate == null) {
-        return daysBetween(e.beginDate, today());
-      } else if (lastTakenDate.isAfter(e.beginDate)) {
-        return daysBetween(e.beginDate, endDate);
-      } else {
-        return 0;
-      }
-    }).reduce((value, element) => value + element);
-
-    return lastTakenPillNumber - summarizedRestDuration;
+    return lastTakenPillNumber - summarizedRestDuration(restDurations);
   }
 
   bool get todayPillIsAlreadyTaken => todayPillNumber == lastTakenPillNumber;
