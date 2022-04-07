@@ -257,3 +257,15 @@ int? pillSheetPillNumber({
           restDurations: pillSheet.restDurations, upperDate: targetDate) +
       1;
 }
+
+int summarizedPillSheetsCountToEndIndex(
+    {required List<PillSheet> pillSheets, required int endIndex}) {
+  if (endIndex == 0) {
+    return 0;
+  }
+  final sublist = pillSheets.sublist(0, endIndex);
+  final passedTotalCount = sublist
+      .map((e) => e.typeInfo.totalCount)
+      .reduce((value, element) => value + element);
+  return passedTotalCount;
+}

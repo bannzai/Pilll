@@ -170,18 +170,6 @@ extension PillSheetTypeFunctions on PillSheetType {
       (totalCount / Weekday.values.length).ceil();
 }
 
-int summarizedPillSheetsCountToEndIndex(
-    {required List<PillSheet> pillSheets, required int endIndex}) {
-  if (endIndex == 0) {
-    return 0;
-  }
-  final sublist = pillSheets.sublist(0, endIndex);
-  final passedTotalCount = sublist
-      .map((e) => e.typeInfo.totalCount)
-      .reduce((value, element) => value + element);
-  return passedTotalCount;
-}
-
 int summarizedPillSheetTypesCountToEndIndex(
     {required List<PillSheetType> pillSheetTypes, required int endIndex}) {
   if (endIndex == 0) {
