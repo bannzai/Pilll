@@ -95,6 +95,18 @@ class DatabaseConnection {
                 toFirestore: (value, _) => value.toJson(),
               );
 
+  Stream<List<LocalNotificationScheduleCollection>>
+      localNotificationScheduleCollectionStream() => FirebaseFirestore.instance
+          .collection(
+              _CollectionPath.localNotificationScheduleCollection(_userID))
+          .withConverter<LocalNotificationScheduleCollection>(
+            fromFirestore: (snapshot, _) =>
+                LocalNotificationScheduleCollection.fromJson(snapshot.data()!),
+            toFirestore: (value, _) => value.toJson(),
+          )
+          .snapshots()
+          .map((event) => event.docs.map((e) => e.data()).toList());
+
   WriteBatch batch() {
     return FirebaseFirestore.instance.batch();
   }
