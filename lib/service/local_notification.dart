@@ -35,7 +35,7 @@ class LocalNotification {
               iOSQuickRecordPillCategoryIdentifier,
               actions: [
                 DarwinNotificationAction.plain(
-                    iOSRecordPillActionIdentifier, "飲んだ？ from local"),
+                    iOSRecordPillActionIdentifier, "飲んだ"),
               ],
             ),
           ],
