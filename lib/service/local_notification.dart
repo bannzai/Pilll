@@ -80,6 +80,8 @@ class LocalNotification {
     }
 
     final lastID = reminderNotificationLocalNotificationSchedules
+        .where((element) =>
+            element.kind == LocalNotificationScheduleKind.reminderNotification)
         .sorted(
             (a, b) => a.localNotificationID.compareTo(b.localNotificationID))
         .lastOrNull
