@@ -112,7 +112,7 @@ class SettingStateStore extends StateNotifier<SettingState> {
     super.dispose();
   }
 
-  void _modifyReminderTimes(List<ReminderTime> reminderTimes) {
+  Future<void> _modifyReminderTimes(List<ReminderTime> reminderTimes) async {
     final setting = state.setting;
     if (setting == null) {
       throw const FormatException("setting entity not found");
@@ -123,9 +123,9 @@ class SettingStateStore extends StateNotifier<SettingState> {
     if (reminderTimes.length < ReminderTime.minimumCount) {
       throw Exception("通知時刻は最低${ReminderTime.minimumCount}件必要です");
     }
-    _settingService
-        .update(setting.copyWith(reminderTimes: reminderTimes))
-        .then((entity) => state = state.copyWith(setting: entity));
+    final updated = await _settingService
+        .update(setting.copyWith(reminderTimes: reminderTimes));
+    state = state.copyWith(setting: updated);
   }
 
   void addReminderTimes(ReminderTime reminderTime) {
