@@ -77,6 +77,10 @@ class SettingStateStore extends StateNotifier<SettingState> {
         }
       });
 
+      Future(() async {
+        final _localNotificationScheduleCollectionService.fetchReminderNotification();
+      });
+
       _subscribe();
     } catch (exception) {
       state = state.copyWith(exception: exception);

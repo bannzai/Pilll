@@ -26,6 +26,7 @@ class _$SettingStateTearOff {
       bool isTrial = false,
       bool isHealthDataAvailable = false,
       DateTime? trialDeadlineDate,
+      LocalNotificationScheduleCollection? reminderlNotificationSchedules,
       Object? exception}) {
     return _SettingState(
       setting: setting,
@@ -35,6 +36,7 @@ class _$SettingStateTearOff {
       isTrial: isTrial,
       isHealthDataAvailable: isHealthDataAvailable,
       trialDeadlineDate: trialDeadlineDate,
+      reminderlNotificationSchedules: reminderlNotificationSchedules,
       exception: exception,
     );
   }
@@ -53,6 +55,8 @@ mixin _$SettingState {
   bool get isTrial => throw _privateConstructorUsedError;
   bool get isHealthDataAvailable => throw _privateConstructorUsedError;
   DateTime? get trialDeadlineDate => throw _privateConstructorUsedError;
+  LocalNotificationScheduleCollection? get reminderlNotificationSchedules =>
+      throw _privateConstructorUsedError;
   Object? get exception => throw _privateConstructorUsedError;
 
   @JsonKey(ignore: true)
@@ -73,10 +77,13 @@ abstract class $SettingStateCopyWith<$Res> {
       bool isTrial,
       bool isHealthDataAvailable,
       DateTime? trialDeadlineDate,
+      LocalNotificationScheduleCollection? reminderlNotificationSchedules,
       Object? exception});
 
   $SettingCopyWith<$Res>? get setting;
   $PillSheetGroupCopyWith<$Res>? get latestPillSheetGroup;
+  $LocalNotificationScheduleCollectionCopyWith<$Res>?
+      get reminderlNotificationSchedules;
 }
 
 /// @nodoc
@@ -96,6 +103,7 @@ class _$SettingStateCopyWithImpl<$Res> implements $SettingStateCopyWith<$Res> {
     Object? isTrial = freezed,
     Object? isHealthDataAvailable = freezed,
     Object? trialDeadlineDate = freezed,
+    Object? reminderlNotificationSchedules = freezed,
     Object? exception = freezed,
   }) {
     return _then(_value.copyWith(
@@ -127,6 +135,10 @@ class _$SettingStateCopyWithImpl<$Res> implements $SettingStateCopyWith<$Res> {
           ? _value.trialDeadlineDate
           : trialDeadlineDate // ignore: cast_nullable_to_non_nullable
               as DateTime?,
+      reminderlNotificationSchedules: reminderlNotificationSchedules == freezed
+          ? _value.reminderlNotificationSchedules
+          : reminderlNotificationSchedules // ignore: cast_nullable_to_non_nullable
+              as LocalNotificationScheduleCollection?,
       exception: exception == freezed ? _value.exception : exception,
     ));
   }
@@ -152,6 +164,19 @@ class _$SettingStateCopyWithImpl<$Res> implements $SettingStateCopyWith<$Res> {
       return _then(_value.copyWith(latestPillSheetGroup: value));
     });
   }
+
+  @override
+  $LocalNotificationScheduleCollectionCopyWith<$Res>?
+      get reminderlNotificationSchedules {
+    if (_value.reminderlNotificationSchedules == null) {
+      return null;
+    }
+
+    return $LocalNotificationScheduleCollectionCopyWith<$Res>(
+        _value.reminderlNotificationSchedules!, (value) {
+      return _then(_value.copyWith(reminderlNotificationSchedules: value));
+    });
+  }
 }
 
 /// @nodoc
@@ -169,12 +194,16 @@ abstract class _$SettingStateCopyWith<$Res>
       bool isTrial,
       bool isHealthDataAvailable,
       DateTime? trialDeadlineDate,
+      LocalNotificationScheduleCollection? reminderlNotificationSchedules,
       Object? exception});
 
   @override
   $SettingCopyWith<$Res>? get setting;
   @override
   $PillSheetGroupCopyWith<$Res>? get latestPillSheetGroup;
+  @override
+  $LocalNotificationScheduleCollectionCopyWith<$Res>?
+      get reminderlNotificationSchedules;
 }
 
 /// @nodoc
@@ -196,6 +225,7 @@ class __$SettingStateCopyWithImpl<$Res> extends _$SettingStateCopyWithImpl<$Res>
     Object? isTrial = freezed,
     Object? isHealthDataAvailable = freezed,
     Object? trialDeadlineDate = freezed,
+    Object? reminderlNotificationSchedules = freezed,
     Object? exception = freezed,
   }) {
     return _then(_SettingState(
@@ -227,6 +257,10 @@ class __$SettingStateCopyWithImpl<$Res> extends _$SettingStateCopyWithImpl<$Res>
           ? _value.trialDeadlineDate
           : trialDeadlineDate // ignore: cast_nullable_to_non_nullable
               as DateTime?,
+      reminderlNotificationSchedules: reminderlNotificationSchedules == freezed
+          ? _value.reminderlNotificationSchedules
+          : reminderlNotificationSchedules // ignore: cast_nullable_to_non_nullable
+              as LocalNotificationScheduleCollection?,
       exception: exception == freezed ? _value.exception : exception,
     ));
   }
@@ -243,6 +277,7 @@ class _$_SettingState extends _SettingState {
       this.isTrial = false,
       this.isHealthDataAvailable = false,
       this.trialDeadlineDate,
+      this.reminderlNotificationSchedules,
       this.exception})
       : super._();
 
@@ -265,11 +300,13 @@ class _$_SettingState extends _SettingState {
   @override
   final DateTime? trialDeadlineDate;
   @override
+  final LocalNotificationScheduleCollection? reminderlNotificationSchedules;
+  @override
   final Object? exception;
 
   @override
   String toString() {
-    return 'SettingState(setting: $setting, latestPillSheetGroup: $latestPillSheetGroup, userIsUpdatedFrom132: $userIsUpdatedFrom132, isPremium: $isPremium, isTrial: $isTrial, isHealthDataAvailable: $isHealthDataAvailable, trialDeadlineDate: $trialDeadlineDate, exception: $exception)';
+    return 'SettingState(setting: $setting, latestPillSheetGroup: $latestPillSheetGroup, userIsUpdatedFrom132: $userIsUpdatedFrom132, isPremium: $isPremium, isTrial: $isTrial, isHealthDataAvailable: $isHealthDataAvailable, trialDeadlineDate: $trialDeadlineDate, reminderlNotificationSchedules: $reminderlNotificationSchedules, exception: $exception)';
   }
 
   @override
@@ -288,6 +325,9 @@ class _$_SettingState extends _SettingState {
                 .equals(other.isHealthDataAvailable, isHealthDataAvailable) &&
             const DeepCollectionEquality()
                 .equals(other.trialDeadlineDate, trialDeadlineDate) &&
+            const DeepCollectionEquality().equals(
+                other.reminderlNotificationSchedules,
+                reminderlNotificationSchedules) &&
             const DeepCollectionEquality().equals(other.exception, exception));
   }
 
@@ -301,6 +341,7 @@ class _$_SettingState extends _SettingState {
       const DeepCollectionEquality().hash(isTrial),
       const DeepCollectionEquality().hash(isHealthDataAvailable),
       const DeepCollectionEquality().hash(trialDeadlineDate),
+      const DeepCollectionEquality().hash(reminderlNotificationSchedules),
       const DeepCollectionEquality().hash(exception));
 
   @JsonKey(ignore: true)
@@ -318,6 +359,7 @@ abstract class _SettingState extends SettingState {
       bool isTrial,
       bool isHealthDataAvailable,
       DateTime? trialDeadlineDate,
+      LocalNotificationScheduleCollection? reminderlNotificationSchedules,
       Object? exception}) = _$_SettingState;
   const _SettingState._() : super._();
 
@@ -335,6 +377,8 @@ abstract class _SettingState extends SettingState {
   bool get isHealthDataAvailable;
   @override
   DateTime? get trialDeadlineDate;
+  @override
+  LocalNotificationScheduleCollection? get reminderlNotificationSchedules;
   @override
   Object? get exception;
   @override

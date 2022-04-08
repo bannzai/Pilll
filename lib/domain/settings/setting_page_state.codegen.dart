@@ -1,3 +1,4 @@
+import 'package:pilll/entity/local_notification_schedule.codegen.dart';
 import 'package:pilll/entity/pill_sheet_group.codegen.dart';
 import 'package:pilll/entity/setting.codegen.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';
@@ -15,6 +16,7 @@ class SettingState with _$SettingState {
     @Default(false) bool isTrial,
     @Default(false) bool isHealthDataAvailable,
     DateTime? trialDeadlineDate,
+    LocalNotificationScheduleCollection? reminderlNotificationSchedules,
     Object? exception,
   }) = _SettingState;
 }
