@@ -34,6 +34,9 @@ class LocalNotification {
   Future<void> initialize() async {
     await plugin.initialize(
       InitializationSettings(
+        android: const AndroidInitializationSettings(
+          "@mipmap/ic_launcher",
+        ),
         iOS: DarwinInitializationSettings(
           notificationCategories: [
             DarwinNotificationCategory(
