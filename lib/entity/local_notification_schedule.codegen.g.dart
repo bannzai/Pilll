@@ -34,20 +34,22 @@ const _$LocalNotificationScheduleKindEnumMap = {
   LocalNotificationScheduleKind.reminderNotification: 'reminderNotification',
 };
 
-_$_LocalNotificationSchedules _$$_LocalNotificationSchedulesFromJson(
-        Map<String, dynamic> json) =>
-    _$_LocalNotificationSchedules(
-      kind: $enumDecode(_$LocalNotificationScheduleKindEnumMap, json['kind']),
-      schedules: (json['schedules'] as List<dynamic>)
-          .map((e) =>
-              LocalNotificationSchedule.fromJson(e as Map<String, dynamic>))
-          .toList(),
-      createdDate: NonNullTimestampConverter.timestampToDateTime(
-          json['createdDate'] as Timestamp),
-    );
+_$_LocalNotificationScheduleCollection
+    _$$_LocalNotificationScheduleCollectionFromJson(
+            Map<String, dynamic> json) =>
+        _$_LocalNotificationScheduleCollection(
+          kind:
+              $enumDecode(_$LocalNotificationScheduleKindEnumMap, json['kind']),
+          schedules: (json['schedules'] as List<dynamic>)
+              .map((e) =>
+                  LocalNotificationSchedule.fromJson(e as Map<String, dynamic>))
+              .toList(),
+          createdDate: NonNullTimestampConverter.timestampToDateTime(
+              json['createdDate'] as Timestamp),
+        );
 
-Map<String, dynamic> _$$_LocalNotificationSchedulesToJson(
-        _$_LocalNotificationSchedules instance) =>
+Map<String, dynamic> _$$_LocalNotificationScheduleCollectionToJson(
+        _$_LocalNotificationScheduleCollection instance) =>
     <String, dynamic>{
       'kind': _$LocalNotificationScheduleKindEnumMap[instance.kind],
       'schedules': instance.schedules.map((e) => e.toJson()).toList(),
