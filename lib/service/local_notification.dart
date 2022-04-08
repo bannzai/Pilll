@@ -46,91 +46,29 @@ class LocalNotification {
   }
 
   Future<void> scheduleRemiderNotification({
-    required int hour,
-    required int minute,
-    required List<LocalNotificationSchedule>
-        reminderNotificationLocalNotificationSchedules,
-    required PillSheetGroup pillSheetGroup,
-    required PillSheet activedPillSheet,
-    required bool isTrialOrPremium,
-    required Setting setting,
-    required tz.TZDateTime tzFrom,
+    required LocalNotificationScheduleCollection
+        localNotificationScheduleCollection,
   }) async {
-    final lastID = reminderNotificationLocalNotificationSchedules
-        .where((element) =>
-            element.kind == LocalNotificationScheduleKind.reminderNotification)
-        .sorted(
-            (a, b) => a.localNotificationID.compareTo(b.localNotificationID))
-        .lastOrNull
-        ?.localNotificationID;
-    final localNotificationIDOffset =
-        reminderNotificationIdentifierOffset + (lastID ?? 0);
-
-    for (final pillSheet in pillSheetGroup.pillSheets) {
-      for (var pillIndex = 0;
-          pillIndex < pillSheet.typeInfo.totalCount;
-          pillIndex++) {
-        final reminderDate = tzFrom
-            .tzDate()
-            .add(Duration(days: pillIndex))
-            .add(Duration(hours: hour))
-            .add(Duration(minutes: minute));
-        final beforePillCount = summarizedPillCountWithPillSheetsToEndIndex(
-          pillSheets: pillSheetGroup.pillSheets,
-          endIndex: pillSheet.groupIndex,
-        );
-        final title = () {
-          if (isTrialOrPremium) {
-            var result = setting.reminderNotificationCustomization.word;
-            if (!setting
-                .reminderNotificationCustomization.isInVisibleReminderDate) {
-              result += " ";
-              result +=
-                  "${reminderDate.month}/${reminderDate.day} (${WeekdayFunctions.weekdayFromDate(reminderDate).weekdayString()})";
-            }
-            if (!setting
-                .reminderNotificationCustomization.isInVisiblePillNumber) {
-              result += " ";
-              result +=
-                  "${pillSheetPillNumber(pillSheet: pillSheet, targetDate: reminderDate)}番";
-            }
-            return result;
-          } else {
-            return "💊の時間です";
-          }
-        }();
-        final message = '';
-
-        final localNotificationSchedule = LocalNotificationSchedule(
-          kind: LocalNotificationScheduleKind.reminderNotification,
-          scheduleDateTime: reminderDate,
-          title: title,
-          message: message,
-          localNotificationID:
-              localNotificationIDOffset + beforePillCount + pillIndex,
-          createdDate: now(),
-        );
-
-        await plugin.zonedSchedule(
-          localNotificationSchedule.localNotificationID,
-          title,
-          message,
-          reminderDate,
-          const NotificationDetails(
-            android: AndroidNotificationDetails(
-              'your channel id',
-              'your channel name',
-              channelDescription: 'your channel description',
-            ),
-            iOS: DarwinNotificationDetails(
-              categoryIdentifier: iOSQuickRecordPillCategoryIdentifier,
-            ),
+    for (final schedule in localNotificationScheduleCollection.schedules) {
+      await plugin.zonedSchedule(
+        schedule.localNotificationID,
+        schedule.title,
+        schedule.message,
+        tz.TZDateTime.from(schedule.scheduleDateTime, tz.local),
+        const NotificationDetails(
+          android: AndroidNotificationDetails(
+            'your channel id',
+            'your channel name',
+            channelDescription: 'your channel description',
           ),
-          androidAllowWhileIdle: true,
-          uiLocalNotificationDateInterpretation:
-              UILocalNotificationDateInterpretation.absoluteTime,
-        );
-      }
+          iOS: DarwinNotificationDetails(
+            categoryIdentifier: iOSQuickRecordPillCategoryIdentifier,
+          ),
+        ),
+        androidAllowWhileIdle: true,
+        uiLocalNotificationDateInterpretation:
+            UILocalNotificationDateInterpretation.absoluteTime,
+      );
     }
   }
 }

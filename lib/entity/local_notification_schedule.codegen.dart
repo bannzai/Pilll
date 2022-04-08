@@ -34,11 +34,15 @@ class LocalNotificationSchedule with _$LocalNotificationSchedule {
   @JsonSerializable(explicitToJson: true)
   factory LocalNotificationSchedule({
     required LocalNotificationScheduleKind kind,
-    required DateTime scheduleDateTime,
     required String title,
     required String message,
     // NOTE: localNotificationID set  to count of all local notification schedules
     required int localNotificationID,
+    @JsonKey(
+      fromJson: NonNullTimestampConverter.timestampToDateTime,
+      toJson: NonNullTimestampConverter.dateTimeToTimestamp,
+    )
+        required DateTime scheduleDateTime,
     @JsonKey(
       fromJson: NonNullTimestampConverter.timestampToDateTime,
       toJson: NonNullTimestampConverter.dateTimeToTimestamp,
