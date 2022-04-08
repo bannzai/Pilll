@@ -5,9 +5,6 @@ import 'package:pilll/components/atoms/buttons.dart';
 import 'package:pilll/domain/record/record_page_store.dart';
 import 'package:pilll/domain/record/util/take.dart';
 import 'package:pilll/entity/pill_sheet.codegen.dart';
-import 'package:pilll/service/local_notification.dart';
-import 'package:pilll/util/datetime/day.dart';
-import 'package:timezone/timezone.dart' as tz;
 
 class TakenButton extends HookConsumerWidget {
   final BuildContext parentContext;
@@ -28,18 +25,11 @@ class TakenButton extends HookConsumerWidget {
           "last_taken_pill_number": pillSheet.lastTakenPillNumber,
           "today_pill_number": pillSheet.todayPillNumber,
         });
-        await localNotification.scheduleRemiderNotification(
-          hour: 8,
-          minute: 14,
-          totalPillNumberOfPillSheetGroup: 1,
-          tzFrom: tz.TZDateTime.now(tz.local),
-          isTrialOrPremium: true,
+        await effectAfterTakenPillAction(
+          context: parentContext,
+          taken: store.taken(),
+          store: store,
         );
-        // await effectAfterTakenPillAction(
-        //   context: parentContext,
-        //   taken: store.taken(),
-        //   store: store,
-        // );
       },
     );
   }

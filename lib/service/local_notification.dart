@@ -1,10 +1,7 @@
 import 'dart:async';
-import 'dart:convert';
 import 'package:collection/collection.dart';
 
 import 'package:flutter_local_notifications/flutter_local_notifications.dart';
-import 'package:pilll/domain/record/util/take.dart';
-import 'package:pilll/emoji/emoji.dart';
 import 'package:pilll/entity/local_notification_schedule.codegen.dart';
 import 'package:pilll/entity/pill_sheet.codegen.dart';
 import 'package:pilll/entity/pill_sheet_group.codegen.dart';
@@ -12,8 +9,6 @@ import 'package:pilll/entity/setting.codegen.dart';
 import 'package:pilll/entity/weekday.dart';
 import 'package:pilll/native/pill.dart';
 import 'package:pilll/util/datetime/day.dart';
-import 'package:pilll/util/shared_preference/shared_preference.dart';
-import 'package:shared_preferences/shared_preferences.dart';
 import 'package:timezone/data/latest_all.dart' as tz;
 import 'package:timezone/timezone.dart' as tz;
 import 'package:flutter_native_timezone/flutter_native_timezone.dart';
