@@ -70,11 +70,6 @@ class LocalNotification {
     required Setting setting,
     required tz.TZDateTime tzFrom,
   }) async {
-    final activedPillSheet = pillSheetGroup.activedPillSheet;
-    if (activedPillSheet == null) {
-      return;
-    }
-
     final lastID = reminderNotificationLocalNotificationSchedules
         .where((element) =>
             element.kind == LocalNotificationScheduleKind.reminderNotification)
@@ -82,21 +77,22 @@ class LocalNotification {
             (a, b) => a.localNotificationID.compareTo(b.localNotificationID))
         .lastOrNull
         ?.localNotificationID;
-    int localNotificationIDOffset =
+    final localNotificationIDOffset =
         reminderNotificationIdentifierOffset + (lastID ?? 0);
 
-    for (var index = 0; index < 10; index++) {
-      final date = tzFrom.tzDate();
-      final reminderDate = date
-          .add(Duration(hours: tzFrom.hour))
-          .add(Duration(minutes: tzFrom.minute + index + 1));
+    for (var index = 0; index < pillSheetGroup.pillSheets.length; index++) {
+      final pillSheet = pillSheetGroup.pillSheets[index];
 
-      final localNotificationSchedule =
-          LocalNotificationSchedule.createSchedule(
+      final reminderDate = tzFrom
+          .tzDate()
+          .add(Duration(days: index))
+          .add(Duration(hours: hour))
+          .add(Duration(minutes: minute));
+
+      final localNotificationSchedule = LocalNotificationSchedule(
         kind: LocalNotificationScheduleKind.reminderNotification,
         scheduleDateTime: reminderDate,
-        currentLocalNotificationScheduleCount:
-            localNotificationIDOffset + index,
+        localNotificationID: localNotificationIDOffset + index,
       );
 
       final title = () {
@@ -112,7 +108,7 @@ class LocalNotification {
               .reminderNotificationCustomization.isInVisiblePillNumber) {
             result += " ";
             result +=
-                "${pillSheetPillNumber(pillSheet: activedPillSheet, targetDate: reminderDate)}番";
+                "${pillSheetPillNumber(pillSheet: pillSheet, targetDate: reminderDate)}番";
           }
           return result;
         } else {

@@ -22,22 +22,4 @@ class LocalNotificationSchedule with _$LocalNotificationSchedule {
 
   factory LocalNotificationSchedule.fromJson(Map<String, dynamic> json) =>
       _$LocalNotificationScheduleFromJson(json);
-
-  // createSchedule does not contains exclusion control.
-  // You must call _createSchedule sequentially that means you must await createSchedule result;
-  // for example, don't use Future.wait([processes])
-  static LocalNotificationSchedule createSchedule({
-    required LocalNotificationScheduleKind kind,
-    required DateTime scheduleDateTime,
-    required int currentLocalNotificationScheduleCount,
-  }) async {
-    final localNotificationID = currentLocalNotificationScheduleCount;
-    final schedule = LocalNotificationSchedule(
-      kind: kind,
-      scheduleDateTime: scheduleDateTime,
-      localNotificationID: localNotificationID,
-    );
-
-    return schedule;
-  }
 }
