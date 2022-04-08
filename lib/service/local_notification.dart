@@ -25,13 +25,6 @@ const reminderNotificationIdentifierOffset = 1 * 10000000;
 const iOSRecordPillActionIdentifier = "RECORD_PILL_LOCAL";
 const iOSQuickRecordPillCategoryIdentifier = "PILL_REMINDER_LOCAL";
 
-// onSelectNotificationAction must be static method or global method
-void onSelectNotificationAction(NotificationActionDetails details) {
-  if (details.actionId == iOSRecordPillActionIdentifier) {
-    recordPill();
-  }
-}
-
 class LocalNotification {
   final plugin = FlutterLocalNotificationsPlugin();
 
@@ -141,3 +134,10 @@ class LocalNotification {
 }
 
 final localNotification = LocalNotification();
+
+// onSelectNotificationAction must be static method or global method
+void onSelectNotificationAction(NotificationActionDetails details) {
+  if (details.actionId == iOSRecordPillActionIdentifier) {
+    recordPill();
+  }
+}
