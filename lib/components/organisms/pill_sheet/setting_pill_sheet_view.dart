@@ -59,7 +59,7 @@ class SettingPillSheetView extends StatelessWidget {
       final pillNumberIntoPillSheet =
           PillMarkWithNumberLayoutHelper.calcPillNumberIntoPillSheet(
               index, lineIndex);
-      final offset = summarizedPillSheetTypesCountToEndIndex(
+      final offset = summarizedPillCountWithPillSheetTypesToEndIndex(
           pillSheetTypes: pillSheetTypes, endIndex: pageIndex);
 
       return Container(

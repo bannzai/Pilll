@@ -36,7 +36,7 @@ List<DateRange> scheduledOrInTheMiddleMenstruationDateRanges(
       final pillSheet = pillSheetGroup.pillSheets[pageIndex];
       final pillSheetTypes =
           pillSheetGroup.pillSheets.map((e) => e.pillSheetType).toList();
-      final passedCount = summarizedPillSheetTypesCountToEndIndex(
+      final passedCount = summarizedPillCountWithPillSheetTypesToEndIndex(
           pillSheetTypes: pillSheetTypes, endIndex: pageIndex);
       final serializedTotalPillNumber =
           passedCount + pillSheet.typeInfo.totalCount;

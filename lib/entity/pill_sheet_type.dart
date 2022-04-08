@@ -170,7 +170,7 @@ extension PillSheetTypeFunctions on PillSheetType {
       (totalCount / Weekday.values.length).ceil();
 }
 
-int summarizedPillSheetTypesCountToEndIndex(
+int summarizedPillCountWithPillSheetTypesToEndIndex(
     {required List<PillSheetType> pillSheetTypes, required int endIndex}) {
   if (endIndex == 0) {
     return 0;
