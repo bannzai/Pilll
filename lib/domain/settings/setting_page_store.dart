@@ -1,7 +1,9 @@
 import 'dart:async';
 import 'dart:io';
+import 'package:collection/collection.dart';
 
 import 'package:pilll/database/batch.dart';
+import 'package:pilll/entity/local_notification_schedule.codegen.dart';
 import 'package:pilll/entity/setting.codegen.dart';
 import 'package:pilll/native/health_care.dart';
 import 'package:pilll/service/local_notification_schedule.dart';
@@ -78,7 +80,12 @@ class SettingStateStore extends StateNotifier<SettingState> {
       });
 
       Future(() async {
-        final _localNotificationScheduleCollectionService.fetchReminderNotification();
+        final reminderNotificationSchedule =
+            await _localNotificationScheduleCollectionService
+                .fetchReminderNotification();
+        state = state.copyWith(
+            reminderlNotificationScheduleCollection:
+                reminderNotificationSchedule);
       });
 
       _subscribe();
@@ -90,6 +97,7 @@ class SettingStateStore extends StateNotifier<SettingState> {
   StreamSubscription? _settingCanceller;
   StreamSubscription? _pillSheetGroupCanceller;
   StreamSubscription? _userSubscribeCanceller;
+  StreamSubscription? _localNotificationScheduleCanceller;
   void _subscribe() {
     cancel();
 
@@ -107,12 +115,19 @@ class SettingStateStore extends StateNotifier<SettingState> {
         trialDeadlineDate: event.trialDeadlineDate,
       );
     });
+    _localNotificationScheduleCanceller =
+        _localNotificationScheduleCollectionService
+            .stream(LocalNotificationScheduleKind.reminderNotification)
+            .listen((event) {
+      state.copyWith(reminderlNotificationScheduleCollection: event.lastOrNull);
+    });
   }
 
   void cancel() {
     _settingCanceller?.cancel();
     _pillSheetGroupCanceller?.cancel();
     _userSubscribeCanceller?.cancel();
+    _localNotificationScheduleCanceller?.cancel();
   }
 
   @override
