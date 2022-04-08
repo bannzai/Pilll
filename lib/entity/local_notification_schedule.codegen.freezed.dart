@@ -309,14 +309,14 @@ abstract class _LocalNotificationSchedule extends LocalNotificationSchedule {
       get copyWith => throw _privateConstructorUsedError;
 }
 
-LocalNotificationSchedules _$LocalNotificationSchedulesFromJson(
-    Map<String, dynamic> json) {
+LocalNotificationScheduleCollection
+    _$LocalNotificationScheduleCollectionFromJson(Map<String, dynamic> json) {
   return _LocalNotificationSchedules.fromJson(json);
 }
 
 /// @nodoc
-class _$LocalNotificationSchedulesTearOff {
-  const _$LocalNotificationSchedulesTearOff();
+class _$LocalNotificationScheduleCollectionTearOff {
+  const _$LocalNotificationScheduleCollectionTearOff();
 
   _LocalNotificationSchedules call(
       {required LocalNotificationScheduleKind kind,
@@ -330,16 +330,17 @@ class _$LocalNotificationSchedulesTearOff {
     );
   }
 
-  LocalNotificationSchedules fromJson(Map<String, Object?> json) {
-    return LocalNotificationSchedules.fromJson(json);
+  LocalNotificationScheduleCollection fromJson(Map<String, Object?> json) {
+    return LocalNotificationScheduleCollection.fromJson(json);
   }
 }
 
 /// @nodoc
-const $LocalNotificationSchedules = _$LocalNotificationSchedulesTearOff();
+const $LocalNotificationScheduleCollection =
+    _$LocalNotificationScheduleCollectionTearOff();
 
 /// @nodoc
-mixin _$LocalNotificationSchedules {
+mixin _$LocalNotificationScheduleCollection {
   LocalNotificationScheduleKind get kind => throw _privateConstructorUsedError;
   List<LocalNotificationSchedule> get schedules =>
       throw _privateConstructorUsedError;
@@ -350,15 +351,17 @@ mixin _$LocalNotificationSchedules {
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
-  $LocalNotificationSchedulesCopyWith<LocalNotificationSchedules>
+  $LocalNotificationScheduleCollectionCopyWith<
+          LocalNotificationScheduleCollection>
       get copyWith => throw _privateConstructorUsedError;
 }
 
 /// @nodoc
-abstract class $LocalNotificationSchedulesCopyWith<$Res> {
-  factory $LocalNotificationSchedulesCopyWith(LocalNotificationSchedules value,
-          $Res Function(LocalNotificationSchedules) then) =
-      _$LocalNotificationSchedulesCopyWithImpl<$Res>;
+abstract class $LocalNotificationScheduleCollectionCopyWith<$Res> {
+  factory $LocalNotificationScheduleCollectionCopyWith(
+          LocalNotificationScheduleCollection value,
+          $Res Function(LocalNotificationScheduleCollection) then) =
+      _$LocalNotificationScheduleCollectionCopyWithImpl<$Res>;
   $Res call(
       {LocalNotificationScheduleKind kind,
       List<LocalNotificationSchedule> schedules,
@@ -367,13 +370,13 @@ abstract class $LocalNotificationSchedulesCopyWith<$Res> {
 }
 
 /// @nodoc
-class _$LocalNotificationSchedulesCopyWithImpl<$Res>
-    implements $LocalNotificationSchedulesCopyWith<$Res> {
-  _$LocalNotificationSchedulesCopyWithImpl(this._value, this._then);
+class _$LocalNotificationScheduleCollectionCopyWithImpl<$Res>
+    implements $LocalNotificationScheduleCollectionCopyWith<$Res> {
+  _$LocalNotificationScheduleCollectionCopyWithImpl(this._value, this._then);
 
-  final LocalNotificationSchedules _value;
+  final LocalNotificationScheduleCollection _value;
   // ignore: unused_field
-  final $Res Function(LocalNotificationSchedules) _then;
+  final $Res Function(LocalNotificationScheduleCollection) _then;
 
   @override
   $Res call({
@@ -400,7 +403,7 @@ class _$LocalNotificationSchedulesCopyWithImpl<$Res>
 
 /// @nodoc
 abstract class _$LocalNotificationSchedulesCopyWith<$Res>
-    implements $LocalNotificationSchedulesCopyWith<$Res> {
+    implements $LocalNotificationScheduleCollectionCopyWith<$Res> {
   factory _$LocalNotificationSchedulesCopyWith(
           _LocalNotificationSchedules value,
           $Res Function(_LocalNotificationSchedules) then) =
@@ -415,7 +418,7 @@ abstract class _$LocalNotificationSchedulesCopyWith<$Res>
 
 /// @nodoc
 class __$LocalNotificationSchedulesCopyWithImpl<$Res>
-    extends _$LocalNotificationSchedulesCopyWithImpl<$Res>
+    extends _$LocalNotificationScheduleCollectionCopyWithImpl<$Res>
     implements _$LocalNotificationSchedulesCopyWith<$Res> {
   __$LocalNotificationSchedulesCopyWithImpl(_LocalNotificationSchedules _value,
       $Res Function(_LocalNotificationSchedules) _then)
@@ -474,7 +477,7 @@ class _$_LocalNotificationSchedules extends _LocalNotificationSchedules {
 
   @override
   String toString() {
-    return 'LocalNotificationSchedules(kind: $kind, schedules: $schedules, createdDate: $createdDate)';
+    return 'LocalNotificationScheduleCollection(kind: $kind, schedules: $schedules, createdDate: $createdDate)';
   }
 
   @override
@@ -507,7 +510,8 @@ class _$_LocalNotificationSchedules extends _LocalNotificationSchedules {
   }
 }
 
-abstract class _LocalNotificationSchedules extends LocalNotificationSchedules {
+abstract class _LocalNotificationSchedules
+    extends LocalNotificationScheduleCollection {
   factory _LocalNotificationSchedules(
       {required LocalNotificationScheduleKind kind,
       required List<LocalNotificationSchedule> schedules,
