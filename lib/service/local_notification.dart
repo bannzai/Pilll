@@ -14,6 +14,12 @@ const AndroidReminderNotificationChannelID =
     "AndroidReminderNotificationChannelID";
 const AndroidReminderNotificationActionIdentifier =
     "AndroidReminderNotificationActionIdentifier";
+const AndroidReminderNotificationGroupKey =
+    "AndroidReminderNotificationGroupKey";
+
+// General Android Notification Setting
+// Doc: https://developer.android.com/reference/androidx/core/app/NotificationCompat#CATEGORY_REMINDER()
+const AndroidNotificationCategory = "CATEGORY_REMINDER";
 
 // NOTE: It can not be use Future.wait(processes) when register notification.
 class LocalNotification {
@@ -64,6 +70,9 @@ class LocalNotification {
               AndroidReminderNotificationChannelID,
               "服用通知",
               channelShowBadge: true,
+              setAsGroupSummary: true,
+              groupKey: AndroidReminderNotificationGroupKey,
+              category: AndroidNotificationCategory,
               actions: [
                 AndroidNotificationAction(
                   AndroidReminderNotificationActionIdentifier,
@@ -95,6 +104,9 @@ class LocalNotification {
               AndroidReminderNotificationChannelID,
               "服用通知",
               channelShowBadge: true,
+              setAsGroupSummary: true,
+              groupKey: AndroidReminderNotificationGroupKey,
+              category: AndroidNotificationCategory,
             ),
             iOS: DarwinNotificationDetails(
               categoryIdentifier: iOSQuickRecordPillCategoryIdentifier,
