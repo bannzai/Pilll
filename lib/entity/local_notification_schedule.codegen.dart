@@ -42,10 +42,10 @@ class LocalNotificationSchedule with _$LocalNotificationSchedule {
 }
 
 @freezed
-class LocalNotificationScheduleDocument
-    with _$LocalNotificationScheduleDocument {
+class LocalNotificationSchedules
+    with _$LocalNotificationSchedules {
   @JsonSerializable(explicitToJson: true)
-  factory LocalNotificationScheduleDocument({
+  factory LocalNotificationSchedules({
     required LocalNotificationScheduleKind kind,
     required List<LocalNotificationSchedule> schedules,
     @JsonKey(
@@ -53,10 +53,10 @@ class LocalNotificationScheduleDocument
       toJson: NonNullTimestampConverter.dateTimeToTimestamp,
     )
         required DateTime createdDate,
-  }) = _LocalNotificationScheduleDocument;
-  LocalNotificationScheduleDocument._();
+  }) = _LocalNotificationSchedules;
+  LocalNotificationSchedules._();
 
-  factory LocalNotificationScheduleDocument.reminderNotification({
+  factory LocalNotificationSchedules.reminderNotification({
     required int hour,
     required int minute,
     required List<LocalNotificationSchedule>
@@ -135,14 +135,14 @@ class LocalNotificationScheduleDocument
       }
     }
 
-    return LocalNotificationScheduleDocument(
+    return LocalNotificationSchedules(
       kind: LocalNotificationScheduleKind.reminderNotification,
       schedules: schedules,
       createdDate: now(),
     );
   }
 
-  factory LocalNotificationScheduleDocument.fromJson(
+  factory LocalNotificationSchedules.fromJson(
           Map<String, dynamic> json) =>
-      _$LocalNotificationScheduleDocumentFromJson(json);
+      _$LocalNotificationSchedulesFromJson(json);
 }

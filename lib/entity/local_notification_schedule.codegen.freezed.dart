@@ -309,38 +309,37 @@ abstract class _LocalNotificationSchedule extends LocalNotificationSchedule {
       get copyWith => throw _privateConstructorUsedError;
 }
 
-LocalNotificationScheduleDocument _$LocalNotificationScheduleDocumentFromJson(
+LocalNotificationSchedules _$LocalNotificationSchedulesFromJson(
     Map<String, dynamic> json) {
-  return _LocalNotificationScheduleDocument.fromJson(json);
+  return _LocalNotificationSchedules.fromJson(json);
 }
 
 /// @nodoc
-class _$LocalNotificationScheduleDocumentTearOff {
-  const _$LocalNotificationScheduleDocumentTearOff();
+class _$LocalNotificationSchedulesTearOff {
+  const _$LocalNotificationSchedulesTearOff();
 
-  _LocalNotificationScheduleDocument call(
+  _LocalNotificationSchedules call(
       {required LocalNotificationScheduleKind kind,
       required List<LocalNotificationSchedule> schedules,
       @JsonKey(fromJson: NonNullTimestampConverter.timestampToDateTime, toJson: NonNullTimestampConverter.dateTimeToTimestamp)
           required DateTime createdDate}) {
-    return _LocalNotificationScheduleDocument(
+    return _LocalNotificationSchedules(
       kind: kind,
       schedules: schedules,
       createdDate: createdDate,
     );
   }
 
-  LocalNotificationScheduleDocument fromJson(Map<String, Object?> json) {
-    return LocalNotificationScheduleDocument.fromJson(json);
+  LocalNotificationSchedules fromJson(Map<String, Object?> json) {
+    return LocalNotificationSchedules.fromJson(json);
   }
 }
 
 /// @nodoc
-const $LocalNotificationScheduleDocument =
-    _$LocalNotificationScheduleDocumentTearOff();
+const $LocalNotificationSchedules = _$LocalNotificationSchedulesTearOff();
 
 /// @nodoc
-mixin _$LocalNotificationScheduleDocument {
+mixin _$LocalNotificationSchedules {
   LocalNotificationScheduleKind get kind => throw _privateConstructorUsedError;
   List<LocalNotificationSchedule> get schedules =>
       throw _privateConstructorUsedError;
@@ -351,16 +350,15 @@ mixin _$LocalNotificationScheduleDocument {
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
-  $LocalNotificationScheduleDocumentCopyWith<LocalNotificationScheduleDocument>
+  $LocalNotificationSchedulesCopyWith<LocalNotificationSchedules>
       get copyWith => throw _privateConstructorUsedError;
 }
 
 /// @nodoc
-abstract class $LocalNotificationScheduleDocumentCopyWith<$Res> {
-  factory $LocalNotificationScheduleDocumentCopyWith(
-          LocalNotificationScheduleDocument value,
-          $Res Function(LocalNotificationScheduleDocument) then) =
-      _$LocalNotificationScheduleDocumentCopyWithImpl<$Res>;
+abstract class $LocalNotificationSchedulesCopyWith<$Res> {
+  factory $LocalNotificationSchedulesCopyWith(LocalNotificationSchedules value,
+          $Res Function(LocalNotificationSchedules) then) =
+      _$LocalNotificationSchedulesCopyWithImpl<$Res>;
   $Res call(
       {LocalNotificationScheduleKind kind,
       List<LocalNotificationSchedule> schedules,
@@ -369,13 +367,13 @@ abstract class $LocalNotificationScheduleDocumentCopyWith<$Res> {
 }
 
 /// @nodoc
-class _$LocalNotificationScheduleDocumentCopyWithImpl<$Res>
-    implements $LocalNotificationScheduleDocumentCopyWith<$Res> {
-  _$LocalNotificationScheduleDocumentCopyWithImpl(this._value, this._then);
+class _$LocalNotificationSchedulesCopyWithImpl<$Res>
+    implements $LocalNotificationSchedulesCopyWith<$Res> {
+  _$LocalNotificationSchedulesCopyWithImpl(this._value, this._then);
 
-  final LocalNotificationScheduleDocument _value;
+  final LocalNotificationSchedules _value;
   // ignore: unused_field
-  final $Res Function(LocalNotificationScheduleDocument) _then;
+  final $Res Function(LocalNotificationSchedules) _then;
 
   @override
   $Res call({
@@ -401,12 +399,12 @@ class _$LocalNotificationScheduleDocumentCopyWithImpl<$Res>
 }
 
 /// @nodoc
-abstract class _$LocalNotificationScheduleDocumentCopyWith<$Res>
-    implements $LocalNotificationScheduleDocumentCopyWith<$Res> {
-  factory _$LocalNotificationScheduleDocumentCopyWith(
-          _LocalNotificationScheduleDocument value,
-          $Res Function(_LocalNotificationScheduleDocument) then) =
-      __$LocalNotificationScheduleDocumentCopyWithImpl<$Res>;
+abstract class _$LocalNotificationSchedulesCopyWith<$Res>
+    implements $LocalNotificationSchedulesCopyWith<$Res> {
+  factory _$LocalNotificationSchedulesCopyWith(
+          _LocalNotificationSchedules value,
+          $Res Function(_LocalNotificationSchedules) then) =
+      __$LocalNotificationSchedulesCopyWithImpl<$Res>;
   @override
   $Res call(
       {LocalNotificationScheduleKind kind,
@@ -416,17 +414,16 @@ abstract class _$LocalNotificationScheduleDocumentCopyWith<$Res>
 }
 
 /// @nodoc
-class __$LocalNotificationScheduleDocumentCopyWithImpl<$Res>
-    extends _$LocalNotificationScheduleDocumentCopyWithImpl<$Res>
-    implements _$LocalNotificationScheduleDocumentCopyWith<$Res> {
-  __$LocalNotificationScheduleDocumentCopyWithImpl(
-      _LocalNotificationScheduleDocument _value,
-      $Res Function(_LocalNotificationScheduleDocument) _then)
-      : super(_value, (v) => _then(v as _LocalNotificationScheduleDocument));
+class __$LocalNotificationSchedulesCopyWithImpl<$Res>
+    extends _$LocalNotificationSchedulesCopyWithImpl<$Res>
+    implements _$LocalNotificationSchedulesCopyWith<$Res> {
+  __$LocalNotificationSchedulesCopyWithImpl(_LocalNotificationSchedules _value,
+      $Res Function(_LocalNotificationSchedules) _then)
+      : super(_value, (v) => _then(v as _LocalNotificationSchedules));
 
   @override
-  _LocalNotificationScheduleDocument get _value =>
-      super._value as _LocalNotificationScheduleDocument;
+  _LocalNotificationSchedules get _value =>
+      super._value as _LocalNotificationSchedules;
 
   @override
   $Res call({
@@ -434,7 +431,7 @@ class __$LocalNotificationScheduleDocumentCopyWithImpl<$Res>
     Object? schedules = freezed,
     Object? createdDate = freezed,
   }) {
-    return _then(_LocalNotificationScheduleDocument(
+    return _then(_LocalNotificationSchedules(
       kind: kind == freezed
           ? _value.kind
           : kind // ignore: cast_nullable_to_non_nullable
@@ -454,18 +451,16 @@ class __$LocalNotificationScheduleDocumentCopyWithImpl<$Res>
 /// @nodoc
 
 @JsonSerializable(explicitToJson: true)
-class _$_LocalNotificationScheduleDocument
-    extends _LocalNotificationScheduleDocument {
-  _$_LocalNotificationScheduleDocument(
+class _$_LocalNotificationSchedules extends _LocalNotificationSchedules {
+  _$_LocalNotificationSchedules(
       {required this.kind,
       required this.schedules,
       @JsonKey(fromJson: NonNullTimestampConverter.timestampToDateTime, toJson: NonNullTimestampConverter.dateTimeToTimestamp)
           required this.createdDate})
       : super._();
 
-  factory _$_LocalNotificationScheduleDocument.fromJson(
-          Map<String, dynamic> json) =>
-      _$$_LocalNotificationScheduleDocumentFromJson(json);
+  factory _$_LocalNotificationSchedules.fromJson(Map<String, dynamic> json) =>
+      _$$_LocalNotificationSchedulesFromJson(json);
 
   @override
   final LocalNotificationScheduleKind kind;
@@ -479,14 +474,14 @@ class _$_LocalNotificationScheduleDocument
 
   @override
   String toString() {
-    return 'LocalNotificationScheduleDocument(kind: $kind, schedules: $schedules, createdDate: $createdDate)';
+    return 'LocalNotificationSchedules(kind: $kind, schedules: $schedules, createdDate: $createdDate)';
   }
 
   @override
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _LocalNotificationScheduleDocument &&
+            other is _LocalNotificationSchedules &&
             const DeepCollectionEquality().equals(other.kind, kind) &&
             const DeepCollectionEquality().equals(other.schedules, schedules) &&
             const DeepCollectionEquality()
@@ -502,30 +497,26 @@ class _$_LocalNotificationScheduleDocument
 
   @JsonKey(ignore: true)
   @override
-  _$LocalNotificationScheduleDocumentCopyWith<
-          _LocalNotificationScheduleDocument>
-      get copyWith => __$LocalNotificationScheduleDocumentCopyWithImpl<
-          _LocalNotificationScheduleDocument>(this, _$identity);
+  _$LocalNotificationSchedulesCopyWith<_LocalNotificationSchedules>
+      get copyWith => __$LocalNotificationSchedulesCopyWithImpl<
+          _LocalNotificationSchedules>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_LocalNotificationScheduleDocumentToJson(this);
+    return _$$_LocalNotificationSchedulesToJson(this);
   }
 }
 
-abstract class _LocalNotificationScheduleDocument
-    extends LocalNotificationScheduleDocument {
-  factory _LocalNotificationScheduleDocument(
+abstract class _LocalNotificationSchedules extends LocalNotificationSchedules {
+  factory _LocalNotificationSchedules(
       {required LocalNotificationScheduleKind kind,
       required List<LocalNotificationSchedule> schedules,
       @JsonKey(fromJson: NonNullTimestampConverter.timestampToDateTime, toJson: NonNullTimestampConverter.dateTimeToTimestamp)
-          required DateTime
-              createdDate}) = _$_LocalNotificationScheduleDocument;
-  _LocalNotificationScheduleDocument._() : super._();
+          required DateTime createdDate}) = _$_LocalNotificationSchedules;
+  _LocalNotificationSchedules._() : super._();
 
-  factory _LocalNotificationScheduleDocument.fromJson(
-          Map<String, dynamic> json) =
-      _$_LocalNotificationScheduleDocument.fromJson;
+  factory _LocalNotificationSchedules.fromJson(Map<String, dynamic> json) =
+      _$_LocalNotificationSchedules.fromJson;
 
   @override
   LocalNotificationScheduleKind get kind;
@@ -538,7 +529,6 @@ abstract class _LocalNotificationScheduleDocument
   DateTime get createdDate;
   @override
   @JsonKey(ignore: true)
-  _$LocalNotificationScheduleDocumentCopyWith<
-          _LocalNotificationScheduleDocument>
+  _$LocalNotificationSchedulesCopyWith<_LocalNotificationSchedules>
       get copyWith => throw _privateConstructorUsedError;
 }
