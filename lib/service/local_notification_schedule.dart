@@ -11,12 +11,11 @@ class LocalNotificationScheduleCollectionService {
   final DatabaseConnection _database;
   LocalNotificationScheduleCollectionService(this._database);
 
-  Future<List<LocalNotificationSchedule>> fetchListWithKind(
-      LocalNotificationScheduleKind kind) {
+  Future<LocalNotificationScheduleCollection?> fetchReminderNotification() {
     return _database
-        .localNotificationScheduleCollections()
-        .where(LocalNotificationScheduleFirestoreField.kind, isEqualTo: kind)
+        .localNotificationScheduleCollection(
+            LocalNotificationScheduleKind.reminderNotification)
         .get()
-        .then((value) => value.docs.map((e) => e.data()).toList());
+        .then((e) => e.data());
   }
 }

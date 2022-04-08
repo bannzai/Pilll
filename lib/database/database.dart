@@ -82,15 +82,18 @@ class DatabaseConnection {
           .collection(_CollectionPath.pillSheetGroups(_userID))
           .doc(pillSheetGroupID);
 
-  CollectionReference<LocalNotificationScheduleCollection>
-      localNotificationScheduleCollections() => FirebaseFirestore.instance
-          .collection(
-              _CollectionPath.localNotificationScheduleCollection(_userID))
-          .withConverter(
-            fromFirestore: (snapshot, _) =>
-                LocalNotificationScheduleCollection.fromJson(snapshot.data()!),
-            toFirestore: (value, _) => value.toJson(),
-          );
+  DocumentReference<LocalNotificationScheduleCollection>
+      localNotificationScheduleCollection(LocalNotificationScheduleKind kind) =>
+          FirebaseFirestore.instance
+              .collection(
+                  _CollectionPath.localNotificationScheduleCollection(_userID))
+              .doc(kind.collectionID)
+              .withConverter(
+                fromFirestore: (snapshot, _) =>
+                    LocalNotificationScheduleCollection.fromJson(
+                        snapshot.data()!),
+                toFirestore: (value, _) => value.toJson(),
+              );
 
   WriteBatch batch() {
     return FirebaseFirestore.instance.batch();

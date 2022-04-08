@@ -12,6 +12,16 @@ part 'local_notification_schedule.codegen.g.dart';
 
 enum LocalNotificationScheduleKind { reminderNotification }
 
+extension LocalNotificationScheduleKindExtension
+    on LocalNotificationScheduleKind {
+  String get collectionID {
+    switch (this) {
+      case LocalNotificationScheduleKind.reminderNotification:
+        return 'reminder_notification';
+    }
+  }
+}
+
 abstract class LocalNotificationScheduleFirestoreField {
   static const String kind = 'kind';
 }
