@@ -5,7 +5,6 @@ import 'package:flutter_local_notifications/flutter_local_notifications.dart';
 import 'package:pilll/entity/local_notification_schedule.codegen.dart';
 import 'package:pilll/entity/pill_sheet.codegen.dart';
 import 'package:pilll/entity/pill_sheet_group.codegen.dart';
-import 'package:pilll/entity/pill_sheet_type.dart';
 import 'package:pilll/entity/setting.codegen.dart';
 import 'package:pilll/entity/weekday.dart';
 import 'package:pilll/native/pill.dart';
@@ -78,11 +77,15 @@ class LocalNotification {
             .add(Duration(days: pillIndex))
             .add(Duration(hours: hour))
             .add(Duration(minutes: minute));
-
+        final beforePillCount = summarizedPillCountWithPillSheetsToEndIndex(
+          pillSheets: pillSheetGroup.pillSheets,
+          endIndex: pillSheet.groupIndex,
+        );
         final localNotificationSchedule = LocalNotificationSchedule(
           kind: LocalNotificationScheduleKind.reminderNotification,
           scheduleDateTime: reminderDate,
-          localNotificationID: localNotificationIDOffset + index,
+          localNotificationID:
+              localNotificationIDOffset + beforePillCount + pillIndex,
         );
 
         final title = () {
