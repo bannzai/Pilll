@@ -18,10 +18,6 @@ import 'package:timezone/data/latest_all.dart' as tz;
 import 'package:timezone/timezone.dart' as tz;
 import 'package:flutter_native_timezone/flutter_native_timezone.dart';
 
-// General purpose
-const _sharedPreferenceKeyLocalNotificationScheduleIDs =
-    'local_notification_schedule_ids';
-
 // Concrete identifier offsets
 const reminderNotificationIdentifierOffset = 1 * 10000000;
 
