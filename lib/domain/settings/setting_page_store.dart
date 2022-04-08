@@ -4,6 +4,7 @@ import 'dart:io';
 import 'package:pilll/database/batch.dart';
 import 'package:pilll/entity/setting.codegen.dart';
 import 'package:pilll/native/health_care.dart';
+import 'package:pilll/service/local_notification_schedule.dart';
 import 'package:pilll/service/pill_sheet.dart';
 import 'package:pilll/service/pill_sheet_group.dart';
 import 'package:pilll/service/pill_sheet_modified_history.dart';
@@ -23,6 +24,7 @@ final settingStoreProvider =
     ref.watch(userServiceProvider),
     ref.watch(pillSheetModifiedHistoryServiceProvider),
     ref.watch(pillSheetGroupServiceProvider),
+    ref.watch(localNotificationScheduleCollectionServiceProvider),
   ),
 );
 
@@ -35,6 +37,8 @@ class SettingStateStore extends StateNotifier<SettingState> {
   final UserService _userService;
   final PillSheetModifiedHistoryService _pillSheetModifiedHistoryService;
   final PillSheetGroupService _pillSheetGroupService;
+  final LocalNotificationScheduleCollectionService
+      _localNotificationScheduleCollectionService;
   SettingStateStore(
     this._batchFactory,
     this._settingService,
@@ -42,6 +46,7 @@ class SettingStateStore extends StateNotifier<SettingState> {
     this._userService,
     this._pillSheetModifiedHistoryService,
     this._pillSheetGroupService,
+    this._localNotificationScheduleCollectionService,
   ) : super(const SettingState()) {
     setup();
   }
