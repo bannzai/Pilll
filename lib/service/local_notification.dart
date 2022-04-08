@@ -7,10 +7,15 @@ import 'package:timezone/data/latest_all.dart' as tz;
 import 'package:timezone/timezone.dart' as tz;
 import 'package:flutter_native_timezone/flutter_native_timezone.dart';
 
-// iOS specific
+// Reminder Notification
 const iOSRecordPillActionIdentifier = "RECORD_PILL_LOCAL";
 const iOSQuickRecordPillCategoryIdentifier = "PILL_REMINDER_LOCAL";
+const AndroidReminderNotificationChannelID =
+    "AndroidReminderNotificationChannelID";
+const AndroidReminderNotificationActionIdentifier =
+    "AndroidReminderNotificationActionIdentifier";
 
+// NOTE: It can not be use Future.wait(processes) when register notification.
 class LocalNotification {
   final plugin = FlutterLocalNotificationsPlugin();
 
@@ -42,30 +47,67 @@ class LocalNotification {
   Future<void> scheduleRemiderNotification({
     required LocalNotificationScheduleCollection
         localNotificationScheduleCollection,
+    required bool isTrialOrPremium,
   }) async {
     assert(localNotificationScheduleCollection.kind ==
         LocalNotificationScheduleKind.reminderNotification);
 
-    for (final schedule in localNotificationScheduleCollection.schedules) {
-      await plugin.zonedSchedule(
-        schedule.localNotificationID,
-        schedule.title,
-        schedule.message,
-        tz.TZDateTime.from(schedule.scheduleDateTime, tz.local),
-        const NotificationDetails(
-          android: AndroidNotificationDetails(
-            'your channel id',
-            'your channel name',
-            channelDescription: 'your channel description',
+    if (isTrialOrPremium) {
+      for (final schedule in localNotificationScheduleCollection.schedules) {
+        await plugin.zonedSchedule(
+          schedule.localNotificationID,
+          schedule.title,
+          schedule.message,
+          tz.TZDateTime.from(schedule.scheduleDateTime, tz.local),
+          const NotificationDetails(
+            android: AndroidNotificationDetails(
+              AndroidReminderNotificationChannelID,
+              "服用通知",
+              channelShowBadge: true,
+              actions: [
+                AndroidNotificationAction(
+                  AndroidReminderNotificationActionIdentifier,
+                  "飲んだ",
+                )
+              ],
+            ),
+            iOS: DarwinNotificationDetails(
+              categoryIdentifier: iOSQuickRecordPillCategoryIdentifier,
+              presentBadge: true,
+              sound: "becho.caf",
+              presentSound: true,
+            ),
           ),
-          iOS: DarwinNotificationDetails(
-            categoryIdentifier: iOSQuickRecordPillCategoryIdentifier,
+          androidAllowWhileIdle: true,
+          uiLocalNotificationDateInterpretation:
+              UILocalNotificationDateInterpretation.absoluteTime,
+        );
+      }
+    } else {
+      for (final schedule in localNotificationScheduleCollection.schedules) {
+        await plugin.zonedSchedule(
+          schedule.localNotificationID,
+          schedule.title,
+          schedule.message,
+          tz.TZDateTime.from(schedule.scheduleDateTime, tz.local),
+          const NotificationDetails(
+            android: AndroidNotificationDetails(
+              AndroidReminderNotificationChannelID,
+              "服用通知",
+              channelShowBadge: true,
+            ),
+            iOS: DarwinNotificationDetails(
+              categoryIdentifier: iOSQuickRecordPillCategoryIdentifier,
+              presentBadge: true,
+              sound: "becho.caf",
+              presentSound: true,
+            ),
           ),
-        ),
-        androidAllowWhileIdle: true,
-        uiLocalNotificationDateInterpretation:
-            UILocalNotificationDateInterpretation.absoluteTime,
-      );
+          androidAllowWhileIdle: true,
+          uiLocalNotificationDateInterpretation:
+              UILocalNotificationDateInterpretation.absoluteTime,
+        );
+      }
     }
   }
 }
