@@ -107,10 +107,7 @@ class PillSheet with _$PillSheet {
       PillSheetTypeFunctions.fromRawPath(typeInfo.pillSheetTypeReferencePath);
 
   int get todayPillNumber {
-    return daysBetween(beginingDate.date(), today()) -
-        summarizedRestDuration(
-            restDurations: restDurations, upperDate: today()) +
-        1;
+    return pillSheetPillNumber(pillSheet: this, targetDate: today());
   }
 
   // NOTE: if pill sheet is not yet taken, lastTakenNumber return 0;
@@ -122,28 +119,7 @@ class PillSheet with _$PillSheet {
       return 0;
     }
 
-    final lastTakenPillNumber =
-        daysBetween(beginingDate.date(), lastTakenDate.date()) + 1;
-    if (restDurations.isEmpty) {
-      return lastTakenPillNumber;
-    }
-
-    final summarizedRestDuration = restDurations.map((e) {
-      if (!lastTakenDate.isAfter(e.beginDate)) {
-        // ignore summarized
-        return 0;
-      }
-      final endDate = e.endDate;
-      if (endDate == null) {
-        // when lastTakenDate.isAfter(e.beginDate) and endDate is not null is unexpected pattern
-        assert(false);
-        return 0;
-      }
-
-      return daysBetween(e.beginDate, endDate);
-    }).reduce((value, element) => value + element);
-
-    return lastTakenPillNumber - summarizedRestDuration;
+    return pillSheetPillNumber(pillSheet: this, targetDate: lastTakenDate);
   }
 
   bool get todayPillIsAlreadyTaken => todayPillNumber == lastTakenPillNumber;
@@ -244,14 +220,10 @@ int summarizedRestDuration({
   }).reduce((value, element) => value + element);
 }
 
-int? pillSheetPillNumber({
+int pillSheetPillNumber({
   required PillSheet pillSheet,
-  required DateTime? targetDate,
+  required DateTime targetDate,
 }) {
-  if (targetDate == null) {
-    return null;
-  }
-
   return daysBetween(pillSheet.beginingDate.date(), targetDate) -
       summarizedRestDuration(
           restDurations: pillSheet.restDurations, upperDate: targetDate) +
