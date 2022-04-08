@@ -13,9 +13,6 @@ import 'package:timezone/data/latest_all.dart' as tz;
 import 'package:timezone/timezone.dart' as tz;
 import 'package:flutter_native_timezone/flutter_native_timezone.dart';
 
-// Concrete identifier offsets
-const reminderNotificationIdentifierOffset = 1 * 10000000;
-
 // iOS specific
 const iOSRecordPillActionIdentifier = "RECORD_PILL_LOCAL";
 const iOSQuickRecordPillCategoryIdentifier = "PILL_REMINDER_LOCAL";
@@ -54,6 +51,7 @@ class LocalNotification {
     required List<LocalNotificationSchedule>
         reminderNotificationLocalNotificationSchedules,
     required PillSheetGroup pillSheetGroup,
+    required PillSheet activedPillSheet,
     required bool isTrialOrPremium,
     required Setting setting,
     required tz.TZDateTime tzFrom,
