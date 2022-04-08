@@ -6,6 +6,7 @@ import 'package:pilll/entity/setting.codegen.dart';
 import 'package:pilll/entity/weekday.dart';
 import 'package:pilll/util/datetime/day.dart';
 import 'package:timezone/timezone.dart' as tz;
+import 'package:cloud_firestore/cloud_firestore.dart';
 
 part 'local_notification_schedule.codegen.freezed.dart';
 part 'local_notification_schedule.codegen.g.dart';
