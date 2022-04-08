@@ -6,6 +6,7 @@ import 'package:flutter_local_notifications/flutter_local_notifications.dart';
 import 'package:pilll/domain/record/util/take.dart';
 import 'package:pilll/emoji/emoji.dart';
 import 'package:pilll/entity/local_notification_schedule.codegen.dart';
+import 'package:pilll/entity/pill_sheet.codegen.dart';
 import 'package:pilll/entity/pill_sheet_group.codegen.dart';
 import 'package:pilll/entity/setting.codegen.dart';
 import 'package:pilll/entity/weekday.dart';
@@ -73,6 +74,11 @@ class LocalNotification {
     required Setting setting,
     required tz.TZDateTime tzFrom,
   }) async {
+    final activedPillSheet = pillSheetGroup.activedPillSheet;
+    if (activedPillSheet == null) {
+      return;
+    }
+
     final lastID = reminderNotificationLocalNotificationSchedules
         .sorted(
             (a, b) => a.localNotificationID.compareTo(b.localNotificationID))
@@ -97,7 +103,7 @@ class LocalNotification {
 
       final title = () {
         if (isTrialOrPremium) {
-          var result = setting.reminderNotificationCustomization.word ;
+          var result = setting.reminderNotificationCustomization.word;
           if (!setting
               .reminderNotificationCustomization.isInVisibleReminderDate) {
             result += " ";
@@ -107,16 +113,20 @@ class LocalNotification {
           if (!setting
               .reminderNotificationCustomization.isInVisiblePillNumber) {
             result += " ";
-                result += pillSheetGroup.sequentialLastTakenPillNumber
-              }
+            result +=
+                "${pillSheetPillNumber(pillSheet: activedPillSheet, targetDate: reminderDate)}番";
+          }
+          return result;
+        } else {
+          return "💊の時間です";
         }
-              return result;
       }();
+      final body = '';
 
       await plugin.zonedSchedule(
         localNotificationSchedule.localNotificationID,
         title,
-        'scheduled body',
+        body,
         reminderDate,
         const NotificationDetails(
           android: AndroidNotificationDetails(
