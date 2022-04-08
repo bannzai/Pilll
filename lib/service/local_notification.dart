@@ -81,14 +81,6 @@ class LocalNotification {
           pillSheets: pillSheetGroup.pillSheets,
           endIndex: pillSheet.groupIndex,
         );
-        final localNotificationSchedule = LocalNotificationSchedule(
-          kind: LocalNotificationScheduleKind.reminderNotification,
-          scheduleDateTime: reminderDate,
-          localNotificationID:
-              localNotificationIDOffset + beforePillCount + pillIndex,
-          createdDate: now(),
-        );
-
         final title = () {
           if (isTrialOrPremium) {
             var result = setting.reminderNotificationCustomization.word;
@@ -109,12 +101,22 @@ class LocalNotification {
             return "💊の時間です";
           }
         }();
-        final body = '';
+        final message = '';
+
+        final localNotificationSchedule = LocalNotificationSchedule(
+          kind: LocalNotificationScheduleKind.reminderNotification,
+          scheduleDateTime: reminderDate,
+          title: title,
+          message: message,
+          localNotificationID:
+              localNotificationIDOffset + beforePillCount + pillIndex,
+          createdDate: now(),
+        );
 
         await plugin.zonedSchedule(
           localNotificationSchedule.localNotificationID,
           title,
-          body,
+          message,
           reminderDate,
           const NotificationDetails(
             android: AndroidNotificationDetails(
