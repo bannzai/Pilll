@@ -25,7 +25,8 @@ const reminderNotificationIdentifierOffset = 1 * 10000000;
 const iOSRecordPillActionIdentifier = "RECORD_PILL_LOCAL";
 const iOSQuickRecordPillCategoryIdentifier = "PILL_REMINDER_LOCAL";
 
-onSelectNotificationAction(NotificationActionDetails details) {
+// onSelectNotificationAction must be static method or global method
+void onSelectNotificationAction(NotificationActionDetails details) {
   print("[DEBUG] ${details.actionId}");
   if (details.actionId == iOSRecordPillActionIdentifier) {
     recordPill();
