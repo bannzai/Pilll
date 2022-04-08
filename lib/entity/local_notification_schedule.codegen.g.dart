@@ -33,9 +33,12 @@ const _$LocalNotificationScheduleKindEnumMap = {
 _$_LocalNotificationScheduleDocument
     _$$_LocalNotificationScheduleDocumentFromJson(Map<String, dynamic> json) =>
         _$_LocalNotificationScheduleDocument(
-          id: $enumDecode(_$LocalNotificationScheduleKindEnumMap, json['id']),
-          schedules: LocalNotificationSchedule.fromJson(
-              json['schedules'] as Map<String, dynamic>),
+          kind:
+              $enumDecode(_$LocalNotificationScheduleKindEnumMap, json['kind']),
+          schedules: (json['schedules'] as List<dynamic>)
+              .map((e) =>
+                  LocalNotificationSchedule.fromJson(e as Map<String, dynamic>))
+              .toList(),
           createdDate: NonNullTimestampConverter.timestampToDateTime(
               json['createdDate'] as Timestamp),
         );
@@ -43,8 +46,8 @@ _$_LocalNotificationScheduleDocument
 Map<String, dynamic> _$$_LocalNotificationScheduleDocumentToJson(
         _$_LocalNotificationScheduleDocument instance) =>
     <String, dynamic>{
-      'id': _$LocalNotificationScheduleKindEnumMap[instance.id],
-      'schedules': instance.schedules.toJson(),
+      'kind': _$LocalNotificationScheduleKindEnumMap[instance.kind],
+      'schedules': instance.schedules.map((e) => e.toJson()).toList(),
       'createdDate':
           NonNullTimestampConverter.dateTimeToTimestamp(instance.createdDate),
     };

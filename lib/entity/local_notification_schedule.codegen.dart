@@ -36,7 +36,7 @@ class LocalNotificationScheduleDocument
   @JsonSerializable(explicitToJson: true)
   factory LocalNotificationScheduleDocument({
     required LocalNotificationScheduleKind kind,
-    required LocalNotificationSchedule schedules,
+    required List<LocalNotificationSchedule> schedules,
     @JsonKey(
       fromJson: NonNullTimestampConverter.timestampToDateTime,
       toJson: NonNullTimestampConverter.dateTimeToTimestamp,

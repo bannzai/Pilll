@@ -273,12 +273,12 @@ class _$LocalNotificationScheduleDocumentTearOff {
   const _$LocalNotificationScheduleDocumentTearOff();
 
   _LocalNotificationScheduleDocument call(
-      {required LocalNotificationScheduleKind id,
-      required LocalNotificationSchedule schedules,
+      {required LocalNotificationScheduleKind kind,
+      required List<LocalNotificationSchedule> schedules,
       @JsonKey(fromJson: NonNullTimestampConverter.timestampToDateTime, toJson: NonNullTimestampConverter.dateTimeToTimestamp)
           required DateTime createdDate}) {
     return _LocalNotificationScheduleDocument(
-      id: id,
+      kind: kind,
       schedules: schedules,
       createdDate: createdDate,
     );
@@ -295,8 +295,9 @@ const $LocalNotificationScheduleDocument =
 
 /// @nodoc
 mixin _$LocalNotificationScheduleDocument {
-  LocalNotificationScheduleKind get id => throw _privateConstructorUsedError;
-  LocalNotificationSchedule get schedules => throw _privateConstructorUsedError;
+  LocalNotificationScheduleKind get kind => throw _privateConstructorUsedError;
+  List<LocalNotificationSchedule> get schedules =>
+      throw _privateConstructorUsedError;
   @JsonKey(
       fromJson: NonNullTimestampConverter.timestampToDateTime,
       toJson: NonNullTimestampConverter.dateTimeToTimestamp)
@@ -315,12 +316,10 @@ abstract class $LocalNotificationScheduleDocumentCopyWith<$Res> {
           $Res Function(LocalNotificationScheduleDocument) then) =
       _$LocalNotificationScheduleDocumentCopyWithImpl<$Res>;
   $Res call(
-      {LocalNotificationScheduleKind id,
-      LocalNotificationSchedule schedules,
+      {LocalNotificationScheduleKind kind,
+      List<LocalNotificationSchedule> schedules,
       @JsonKey(fromJson: NonNullTimestampConverter.timestampToDateTime, toJson: NonNullTimestampConverter.dateTimeToTimestamp)
           DateTime createdDate});
-
-  $LocalNotificationScheduleCopyWith<$Res> get schedules;
 }
 
 /// @nodoc
@@ -334,31 +333,24 @@ class _$LocalNotificationScheduleDocumentCopyWithImpl<$Res>
 
   @override
   $Res call({
-    Object? id = freezed,
+    Object? kind = freezed,
     Object? schedules = freezed,
     Object? createdDate = freezed,
   }) {
     return _then(_value.copyWith(
-      id: id == freezed
-          ? _value.id
-          : id // ignore: cast_nullable_to_non_nullable
+      kind: kind == freezed
+          ? _value.kind
+          : kind // ignore: cast_nullable_to_non_nullable
               as LocalNotificationScheduleKind,
       schedules: schedules == freezed
           ? _value.schedules
           : schedules // ignore: cast_nullable_to_non_nullable
-              as LocalNotificationSchedule,
+              as List<LocalNotificationSchedule>,
       createdDate: createdDate == freezed
           ? _value.createdDate
           : createdDate // ignore: cast_nullable_to_non_nullable
               as DateTime,
     ));
-  }
-
-  @override
-  $LocalNotificationScheduleCopyWith<$Res> get schedules {
-    return $LocalNotificationScheduleCopyWith<$Res>(_value.schedules, (value) {
-      return _then(_value.copyWith(schedules: value));
-    });
   }
 }
 
@@ -371,13 +363,10 @@ abstract class _$LocalNotificationScheduleDocumentCopyWith<$Res>
       __$LocalNotificationScheduleDocumentCopyWithImpl<$Res>;
   @override
   $Res call(
-      {LocalNotificationScheduleKind id,
-      LocalNotificationSchedule schedules,
+      {LocalNotificationScheduleKind kind,
+      List<LocalNotificationSchedule> schedules,
       @JsonKey(fromJson: NonNullTimestampConverter.timestampToDateTime, toJson: NonNullTimestampConverter.dateTimeToTimestamp)
           DateTime createdDate});
-
-  @override
-  $LocalNotificationScheduleCopyWith<$Res> get schedules;
 }
 
 /// @nodoc
@@ -395,19 +384,19 @@ class __$LocalNotificationScheduleDocumentCopyWithImpl<$Res>
 
   @override
   $Res call({
-    Object? id = freezed,
+    Object? kind = freezed,
     Object? schedules = freezed,
     Object? createdDate = freezed,
   }) {
     return _then(_LocalNotificationScheduleDocument(
-      id: id == freezed
-          ? _value.id
-          : id // ignore: cast_nullable_to_non_nullable
+      kind: kind == freezed
+          ? _value.kind
+          : kind // ignore: cast_nullable_to_non_nullable
               as LocalNotificationScheduleKind,
       schedules: schedules == freezed
           ? _value.schedules
           : schedules // ignore: cast_nullable_to_non_nullable
-              as LocalNotificationSchedule,
+              as List<LocalNotificationSchedule>,
       createdDate: createdDate == freezed
           ? _value.createdDate
           : createdDate // ignore: cast_nullable_to_non_nullable
@@ -422,7 +411,7 @@ class __$LocalNotificationScheduleDocumentCopyWithImpl<$Res>
 class _$_LocalNotificationScheduleDocument
     extends _LocalNotificationScheduleDocument {
   _$_LocalNotificationScheduleDocument(
-      {required this.id,
+      {required this.kind,
       required this.schedules,
       @JsonKey(fromJson: NonNullTimestampConverter.timestampToDateTime, toJson: NonNullTimestampConverter.dateTimeToTimestamp)
           required this.createdDate})
@@ -433,9 +422,9 @@ class _$_LocalNotificationScheduleDocument
       _$$_LocalNotificationScheduleDocumentFromJson(json);
 
   @override
-  final LocalNotificationScheduleKind id;
+  final LocalNotificationScheduleKind kind;
   @override
-  final LocalNotificationSchedule schedules;
+  final List<LocalNotificationSchedule> schedules;
   @override
   @JsonKey(
       fromJson: NonNullTimestampConverter.timestampToDateTime,
@@ -444,7 +433,7 @@ class _$_LocalNotificationScheduleDocument
 
   @override
   String toString() {
-    return 'LocalNotificationScheduleDocument(id: $id, schedules: $schedules, createdDate: $createdDate)';
+    return 'LocalNotificationScheduleDocument(kind: $kind, schedules: $schedules, createdDate: $createdDate)';
   }
 
   @override
@@ -452,7 +441,7 @@ class _$_LocalNotificationScheduleDocument
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _LocalNotificationScheduleDocument &&
-            const DeepCollectionEquality().equals(other.id, id) &&
+            const DeepCollectionEquality().equals(other.kind, kind) &&
             const DeepCollectionEquality().equals(other.schedules, schedules) &&
             const DeepCollectionEquality()
                 .equals(other.createdDate, createdDate));
@@ -461,7 +450,7 @@ class _$_LocalNotificationScheduleDocument
   @override
   int get hashCode => Object.hash(
       runtimeType,
-      const DeepCollectionEquality().hash(id),
+      const DeepCollectionEquality().hash(kind),
       const DeepCollectionEquality().hash(schedules),
       const DeepCollectionEquality().hash(createdDate));
 
@@ -481,8 +470,8 @@ class _$_LocalNotificationScheduleDocument
 abstract class _LocalNotificationScheduleDocument
     extends LocalNotificationScheduleDocument {
   factory _LocalNotificationScheduleDocument(
-      {required LocalNotificationScheduleKind id,
-      required LocalNotificationSchedule schedules,
+      {required LocalNotificationScheduleKind kind,
+      required List<LocalNotificationSchedule> schedules,
       @JsonKey(fromJson: NonNullTimestampConverter.timestampToDateTime, toJson: NonNullTimestampConverter.dateTimeToTimestamp)
           required DateTime
               createdDate}) = _$_LocalNotificationScheduleDocument;
@@ -493,9 +482,9 @@ abstract class _LocalNotificationScheduleDocument
       _$_LocalNotificationScheduleDocument.fromJson;
 
   @override
-  LocalNotificationScheduleKind get id;
+  LocalNotificationScheduleKind get kind;
   @override
-  LocalNotificationSchedule get schedules;
+  List<LocalNotificationSchedule> get schedules;
   @override
   @JsonKey(
       fromJson: NonNullTimestampConverter.timestampToDateTime,
