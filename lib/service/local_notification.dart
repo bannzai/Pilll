@@ -86,6 +86,7 @@ class LocalNotification {
           scheduleDateTime: reminderDate,
           localNotificationID:
               localNotificationIDOffset + beforePillCount + pillIndex,
+          createdDate: now(),
         );
 
         final title = () {
