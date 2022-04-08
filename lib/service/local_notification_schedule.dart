@@ -14,7 +14,7 @@ class LocalNotificationScheduleService {
   Future<List<LocalNotificationSchedule>> fetchListWithKind(
       LocalNotificationScheduleKind kind) {
     return _database
-        .localNotificationSchedules()
+        .localNotificationScheduleCollections()
         .where(LocalNotificationScheduleFirestoreField.kind, isEqualTo: kind)
         .get()
         .then((value) => value.docs.map((e) => e.data()).toList());

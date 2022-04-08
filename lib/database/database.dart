@@ -26,8 +26,8 @@ abstract class _CollectionPath {
   static String menstruations(String userID) => "$users/$userID/menstruations";
   static String pillSheetModifiedHistories(String userID) =>
       "$users/$userID/pill_sheet_modified_histories";
-  static String localNotificationSchedule(String userID) =>
-      "$users/$userID/local_notification_schedules";
+  static String localNotificationScheduleCollection(String userID) =>
+      "$users/$userID/local_notification_schedule_collections";
 }
 
 class DatabaseConnection {
@@ -82,12 +82,13 @@ class DatabaseConnection {
           .collection(_CollectionPath.pillSheetGroups(_userID))
           .doc(pillSheetGroupID);
 
-  CollectionReference<LocalNotificationSchedule> localNotificationSchedules() =>
-      FirebaseFirestore.instance
-          .collection(_CollectionPath.localNotificationSchedule(_userID))
+  CollectionReference<LocalNotificationScheduleCollection>
+      localNotificationScheduleCollections() => FirebaseFirestore.instance
+          .collection(
+              _CollectionPath.localNotificationScheduleCollection(_userID))
           .withConverter(
             fromFirestore: (snapshot, _) =>
-                LocalNotificationSchedule.fromJson(snapshot.data()!),
+                LocalNotificationScheduleCollection.fromJson(snapshot.data()!),
             toFirestore: (value, _) => value.toJson(),
           );
 

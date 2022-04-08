@@ -43,7 +43,7 @@ class LocalNotificationSchedule with _$LocalNotificationSchedule {
 
 @freezed
 class LocalNotificationScheduleCollection
-    with _$LocalNotificationSchedules {
+    with _$LocalNotificationScheduleCollection {
   @JsonSerializable(explicitToJson: true)
   factory LocalNotificationScheduleCollection({
     required LocalNotificationScheduleKind kind,
@@ -53,21 +53,21 @@ class LocalNotificationScheduleCollection
       toJson: NonNullTimestampConverter.dateTimeToTimestamp,
     )
         required DateTime createdDate,
-  }) = _LocalNotificationSchedules;
+  }) = _LocalNotificationScheduleCollection;
   LocalNotificationScheduleCollection._();
 
   factory LocalNotificationScheduleCollection.reminderNotification({
     required int hour,
     required int minute,
     required List<LocalNotificationSchedule>
-        reminderNotificationLocalNotificationSchedules,
+        reminderNotificationLocalNotificationScheduleCollection,
     required PillSheetGroup pillSheetGroup,
     required PillSheet activedPillSheet,
     required bool isTrialOrPremium,
     required Setting setting,
     required tz.TZDateTime tzFrom,
   }) {
-    final lastID = reminderNotificationLocalNotificationSchedules
+    final lastID = reminderNotificationLocalNotificationScheduleCollection
         .where((element) =>
             element.kind == LocalNotificationScheduleKind.reminderNotification)
         .sorted(
@@ -144,5 +144,5 @@ class LocalNotificationScheduleCollection
 
   factory LocalNotificationScheduleCollection.fromJson(
           Map<String, dynamic> json) =>
-      _$LocalNotificationSchedulesFromJson(json);
+      _$LocalNotificationScheduleCollectionFromJson(json);
 }
