@@ -27,7 +27,6 @@ const iOSQuickRecordPillCategoryIdentifier = "PILL_REMINDER_LOCAL";
 
 // onSelectNotificationAction must be static method or global method
 void onSelectNotificationAction(NotificationActionDetails details) {
-  print("[DEBUG] ${details.actionId}");
   if (details.actionId == iOSRecordPillActionIdentifier) {
     recordPill();
   }
