@@ -5,6 +5,7 @@ import 'package:flutter_local_notifications/flutter_local_notifications.dart';
 import 'package:pilll/entity/local_notification_schedule.codegen.dart';
 import 'package:pilll/entity/pill_sheet.codegen.dart';
 import 'package:pilll/entity/pill_sheet_group.codegen.dart';
+import 'package:pilll/entity/pill_sheet_type.dart';
 import 'package:pilll/entity/setting.codegen.dart';
 import 'package:pilll/entity/weekday.dart';
 import 'package:pilll/native/pill.dart';
@@ -68,62 +69,64 @@ class LocalNotification {
     final localNotificationIDOffset =
         reminderNotificationIdentifierOffset + (lastID ?? 0);
 
-    for (var index = 0; index < pillSheetGroup.pillSheets.length; index++) {
-      final pillSheet = pillSheetGroup.pillSheets[index];
+    for (final pillSheet in pillSheetGroup.pillSheets) {
+      for (var pillIndex = 0;
+          pillIndex < pillSheet.typeInfo.totalCount;
+          pillIndex++) {
+        final reminderDate = tzFrom
+            .tzDate()
+            .add(Duration(days: pillIndex))
+            .add(Duration(hours: hour))
+            .add(Duration(minutes: minute));
 
-      final reminderDate = tzFrom
-          .tzDate()
-          .add(Duration(days: index))
-          .add(Duration(hours: hour))
-          .add(Duration(minutes: minute));
+        final localNotificationSchedule = LocalNotificationSchedule(
+          kind: LocalNotificationScheduleKind.reminderNotification,
+          scheduleDateTime: reminderDate,
+          localNotificationID: localNotificationIDOffset + index,
+        );
 
-      final localNotificationSchedule = LocalNotificationSchedule(
-        kind: LocalNotificationScheduleKind.reminderNotification,
-        scheduleDateTime: reminderDate,
-        localNotificationID: localNotificationIDOffset + index,
-      );
-
-      final title = () {
-        if (isTrialOrPremium) {
-          var result = setting.reminderNotificationCustomization.word;
-          if (!setting
-              .reminderNotificationCustomization.isInVisibleReminderDate) {
-            result += " ";
-            result +=
-                "${reminderDate.month}/${reminderDate.day} (${WeekdayFunctions.weekdayFromDate(reminderDate).weekdayString()})";
+        final title = () {
+          if (isTrialOrPremium) {
+            var result = setting.reminderNotificationCustomization.word;
+            if (!setting
+                .reminderNotificationCustomization.isInVisibleReminderDate) {
+              result += " ";
+              result +=
+                  "${reminderDate.month}/${reminderDate.day} (${WeekdayFunctions.weekdayFromDate(reminderDate).weekdayString()})";
+            }
+            if (!setting
+                .reminderNotificationCustomization.isInVisiblePillNumber) {
+              result += " ";
+              result +=
+                  "${pillSheetPillNumber(pillSheet: pillSheet, targetDate: reminderDate)}番";
+            }
+            return result;
+          } else {
+            return "💊の時間です";
           }
-          if (!setting
-              .reminderNotificationCustomization.isInVisiblePillNumber) {
-            result += " ";
-            result +=
-                "${pillSheetPillNumber(pillSheet: pillSheet, targetDate: reminderDate)}番";
-          }
-          return result;
-        } else {
-          return "💊の時間です";
-        }
-      }();
-      final body = '';
+        }();
+        final body = '';
 
-      await plugin.zonedSchedule(
-        localNotificationSchedule.localNotificationID,
-        title,
-        body,
-        reminderDate,
-        const NotificationDetails(
-          android: AndroidNotificationDetails(
-            'your channel id',
-            'your channel name',
-            channelDescription: 'your channel description',
+        await plugin.zonedSchedule(
+          localNotificationSchedule.localNotificationID,
+          title,
+          body,
+          reminderDate,
+          const NotificationDetails(
+            android: AndroidNotificationDetails(
+              'your channel id',
+              'your channel name',
+              channelDescription: 'your channel description',
+            ),
+            iOS: DarwinNotificationDetails(
+              categoryIdentifier: iOSQuickRecordPillCategoryIdentifier,
+            ),
           ),
-          iOS: DarwinNotificationDetails(
-            categoryIdentifier: iOSQuickRecordPillCategoryIdentifier,
-          ),
-        ),
-        androidAllowWhileIdle: true,
-        uiLocalNotificationDateInterpretation:
-            UILocalNotificationDateInterpretation.absoluteTime,
-      );
+          androidAllowWhileIdle: true,
+          uiLocalNotificationDateInterpretation:
+              UILocalNotificationDateInterpretation.absoluteTime,
+        );
+      }
     }
   }
 }
