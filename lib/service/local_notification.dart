@@ -49,6 +49,9 @@ class LocalNotification {
     required LocalNotificationScheduleCollection
         localNotificationScheduleCollection,
   }) async {
+    assert(localNotificationScheduleCollection.kind ==
+        LocalNotificationScheduleKind.reminderNotification);
+
     for (final schedule in localNotificationScheduleCollection.schedules) {
       await plugin.zonedSchedule(
         schedule.localNotificationID,
