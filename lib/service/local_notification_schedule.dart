@@ -4,12 +4,12 @@ import 'package:pilll/database/database.dart';
 import 'package:pilll/entity/local_notification_schedule.codegen.dart';
 import 'package:riverpod/riverpod.dart';
 
-final localNotificationScheduleServiceProvider = Provider(
-    (ref) => LocalNotificationScheduleService(ref.watch(databaseProvider)));
+final localNotificationScheduleCollectionServiceProvider = Provider((ref) =>
+    LocalNotificationScheduleCollectionService(ref.watch(databaseProvider)));
 
-class LocalNotificationScheduleService {
+class LocalNotificationScheduleCollectionService {
   final DatabaseConnection _database;
-  LocalNotificationScheduleService(this._database);
+  LocalNotificationScheduleCollectionService(this._database);
 
   Future<List<LocalNotificationSchedule>> fetchListWithKind(
       LocalNotificationScheduleKind kind) {
