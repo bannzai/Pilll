@@ -11,6 +11,7 @@ import 'package:pilll/domain/root/root.dart';
 import 'package:pilll/error/universal_error_page.dart';
 import 'package:pilll/native/channel.dart';
 import 'package:pilll/service/local_notification.dart';
+import 'package:pilll/util/datetime/debug_print.dart';
 import 'package:pilll/util/environment.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:firebase_core/firebase_core.dart';
@@ -23,6 +24,7 @@ Future<void> entrypoint() async {
   WidgetsFlutterBinding.ensureInitialized();
   await Firebase.initializeApp();
   await LocalNotification.setupTimeZone();
+  overrideDebugPrint();
 
   if (Environment.isLocal) {
     connectToEmulator();
