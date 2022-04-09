@@ -70,8 +70,7 @@ class LocalNotification {
           schedule.actualLocalNotificationID,
           schedule.title,
           schedule.message,
-          tz.TZDateTime.from(
-              _castToDateTimeIfNeeded(schedule.scheduleDateTime), tz.local),
+          tz.TZDateTime.from(schedule.scheduleDateTime, tz.local),
           const NotificationDetails(
             android: AndroidNotificationDetails(
               AndroidReminderNotificationChannelID,
@@ -106,8 +105,7 @@ class LocalNotification {
           schedule.actualLocalNotificationID,
           schedule.title,
           schedule.message,
-          tz.TZDateTime.from(
-              _castToDateTimeIfNeeded(schedule.scheduleDateTime), tz.local),
+          tz.TZDateTime.from(schedule.scheduleDateTime, tz.local),
           const NotificationDetails(
             android: AndroidNotificationDetails(
               AndroidReminderNotificationChannelID,
@@ -158,22 +156,6 @@ class LocalNotification {
       uiLocalNotificationDateInterpretation:
           UILocalNotificationDateInterpretation.absoluteTime,
     );
-  }
-
-  // NOTE: tz.TZDateTime.from に渡す値がtz.TZDateTimeだとエラーになる
-  DateTime _castToDateTimeIfNeeded(DateTime scheduleDateTime) {
-    if (scheduleDateTime is tz.TZDateTime) {
-      return DateTime(
-        scheduleDateTime.year,
-        scheduleDateTime.month,
-        scheduleDateTime.day,
-        scheduleDateTime.hour,
-        scheduleDateTime.minute,
-        scheduleDateTime.second,
-      );
-    } else {
-      return scheduleDateTime;
-    }
   }
 }
 
