@@ -3,6 +3,7 @@ import 'dart:async';
 import 'package:flutter_local_notifications/flutter_local_notifications.dart';
 import 'package:pilll/entity/local_notification_schedule.codegen.dart';
 import 'package:pilll/native/pill.dart';
+import 'package:pilll/util/datetime/day.dart';
 import 'package:timezone/data/latest_all.dart' as tz;
 import 'package:timezone/timezone.dart' as tz;
 import 'package:flutter_native_timezone/flutter_native_timezone.dart';
@@ -124,6 +125,34 @@ class LocalNotification {
         );
       }
     }
+  }
+
+  Future<void> test() async {
+    await plugin.zonedSchedule(
+      0,
+      'test title',
+      'test body',
+      tz.TZDateTime.from(now().add(const Duration(minute: 1)), tz.local),
+      const NotificationDetails(
+        android: AndroidNotificationDetails(
+          AndroidReminderNotificationChannelID,
+          "服用通知",
+          channelShowBadge: true,
+          setAsGroupSummary: true,
+          groupKey: AndroidReminderNotificationGroupKey,
+          category: AndroidNotificationCategory,
+        ),
+        iOS: DarwinNotificationDetails(
+          categoryIdentifier: iOSQuickRecordPillCategoryIdentifier,
+          presentBadge: true,
+          sound: "becho.caf",
+          presentSound: true,
+        ),
+      ),
+      androidAllowWhileIdle: true,
+      uiLocalNotificationDateInterpretation:
+          UILocalNotificationDateInterpretation.absoluteTime,
+    );
   }
 }
 
