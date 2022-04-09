@@ -70,7 +70,7 @@ class LocalNotification {
           schedule.actualLocalNotificationID,
           schedule.title,
           schedule.message,
-          tz.TZDateTime.from(schedule.scheduleDateTime, tz.local),
+          _mappedTZDateTime(schedule.scheduleDateTime),
           const NotificationDetails(
             android: AndroidNotificationDetails(
               AndroidReminderNotificationChannelID,
@@ -105,7 +105,7 @@ class LocalNotification {
           schedule.actualLocalNotificationID,
           schedule.title,
           schedule.message,
-          tz.TZDateTime.from(schedule.scheduleDateTime, tz.local),
+          _mappedTZDateTime(schedule.scheduleDateTime),
           const NotificationDetails(
             android: AndroidNotificationDetails(
               AndroidReminderNotificationChannelID,
@@ -156,6 +156,17 @@ class LocalNotification {
       uiLocalNotificationDateInterpretation:
           UILocalNotificationDateInterpretation.absoluteTime,
     );
+  }
+
+  // NOTE: tz.TZDateTime.from に渡す値がtz.TZDateTimeだとエラーになる
+  // DateTimeにダウンキャストするとtimezoneが失われてしまうためこの方法は取らない
+  // ここでは、scheduleDateTimeに正しいtz.TZDateTimeが入る想定、もしくはFirsetoreから変換されたDateTimeが入ることを想定している
+  tz.TZDateTime _mappedTZDateTime(DateTime scheduleDateTime) {
+    if (scheduleDateTime is tz.TZDateTime) {
+      return scheduleDateTime;
+    } else {
+      return tz.TZDateTime.from(scheduleDateTime, tz.local);
+    }
   }
 }
 
