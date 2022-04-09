@@ -1,5 +1,6 @@
 import 'dart:async';
 
+import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:pilll/database/database.dart';
 import 'package:pilll/entity/local_notification_schedule.codegen.dart';
 import 'package:riverpod/riverpod.dart';
@@ -32,5 +33,15 @@ class LocalNotificationScheduleCollectionService {
       LocalNotificationScheduleKind kind) {
     return _stream.map(
         (event) => event.where((element) => element.kind == kind).toList());
+  }
+
+  Future<void> updateWithBatch(
+      WriteBatch batch,
+      LocalNotificationScheduleCollection
+          localNotificationScheduleCollection) async {
+    await _database
+        .localNotificationScheduleCollection(
+            localNotificationScheduleCollection.kind)
+        .set(localNotificationScheduleCollection, SetOptions(merge: true));
   }
 }

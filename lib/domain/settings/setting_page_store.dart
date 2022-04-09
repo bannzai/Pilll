@@ -147,8 +147,21 @@ class SettingStateStore extends StateNotifier<SettingState> {
     if (reminderTimes.length < ReminderTime.minimumCount) {
       throw Exception("通知時刻は最低${ReminderTime.minimumCount}件必要です");
     }
-    final updated = await _settingService
-        .update(setting.copyWith(reminderTimes: reminderTimes));
+    final batch = _batchFactory.batch();
+    _settingService.updateWithBatch(
+        batch, setting.copyWith(reminderTimes: reminderTimes));
+    final localNotificationScheduleCollection = LocalNotificationScheduleCollection
+    .reminderNotification(
+      hour: hour,
+     minute: minute,
+      reminderNotificationLocalNotificationScheduleCollection: reminderNotificationLocalNotificationScheduleCollection,
+       pillSheetGroup: pillSheetGroup, 
+       activedPillSheet: activedPillSheet, 
+       isTrialOrPremium: isTrialOrPremium,
+        setting: setting,
+         tzFrom: tzFrom
+         );
+    _localNotificationScheduleCollectionService.updateWithBatch(batch, localNotificationScheduleCollection)
     state = state.copyWith(setting: updated);
   }
 
