@@ -13,6 +13,7 @@ import 'package:pilll/service/pill_sheet_modified_history.dart';
 import 'package:pilll/service/setting.dart';
 import 'package:pilll/domain/settings/setting_page_state.codegen.dart';
 import 'package:pilll/service/user.dart';
+import 'package:pilll/util/datetime/day.dart';
 import 'package:pilll/util/shared_preference/keys.dart';
 import 'package:riverpod/riverpod.dart';
 import 'package:shared_preferences/shared_preferences.dart';
@@ -137,8 +138,8 @@ class SettingStateStore extends StateNotifier<SettingState> {
   }
 
   Future<void> _modifyReminderTimes(List<ReminderTime> reminderTimes) async {
-    final setting = state.setting;
-    if (setting == null) {
+    final _setting = state.setting;
+    if (_setting == null) {
       throw const FormatException("setting entity not found");
     }
     if (reminderTimes.length > ReminderTime.maximumCount) {
@@ -147,25 +148,32 @@ class SettingStateStore extends StateNotifier<SettingState> {
     if (reminderTimes.length < ReminderTime.minimumCount) {
       throw Exception("通知時刻は最低${ReminderTime.minimumCount}件必要です");
     }
-    state =
-        state.copyWith(setting: setting.copyWith(reminderTimes: reminderTimes));
-    _settingService.update(state.setting!);
-    //final batch = _batchFactory.batch();
-    //_settingService.updateWithBatch(
-    //    batch, setting.copyWith(reminderTimes: reminderTimes));
-    //final localNotificationScheduleCollection = LocalNotificationScheduleCollection
-    //.reminderNotification(
-    //  hour: hour,
-    // minute: minute,
-    //  reminderNotificationLocalNotificationScheduleCollection: reminderNotificationLocalNotificationScheduleCollection,
-    //   pillSheetGroup: pillSheetGroup,
-    //   activedPillSheet: activedPillSheet,
-    //   isTrialOrPremium: isTrialOrPremium,
-    //    setting: setting,
-    //     tzFrom: tzFrom
-    //     );
-    //_localNotificationScheduleCollectionService.updateWithBatch(batch, localNotificationScheduleCollection)
-    //state = state.copyWith(setting: updated);
+//    state =
+//        state.copyWith(setting: setting.copyWith(reminderTimes: reminderTimes));
+//    _settingService.update(setting);
+    final setting = _setting.copyWith(reminderTimes: reminderTimes);
+
+    final batch = _batchFactory.batch();
+
+    final pillSheetGroup = state.latestPillSheetGroup;
+    final activedPillSheet = state.latestPillSheetGroup?.activedPillSheet;
+    if (pillSheetGroup != null && activedPillSheet != null) {
+      final localNotificationScheduleCollection =
+          LocalNotificationScheduleCollection.reminderNotification(
+        reminderNotificationLocalNotificationScheduleCollection:
+            state.reminderlNotificationScheduleCollection?.schedules ?? [],
+        pillSheetGroup: pillSheetGroup,
+        activedPillSheet: activedPillSheet,
+        isTrialOrPremium: state.isTrial || state.isPremium,
+        setting: setting,
+        tzFrom: now().tzDate(),
+      );
+      _localNotificationScheduleCollectionService.updateWithBatch(
+          batch, localNotificationScheduleCollection);
+    }
+
+    _settingService.updateWithBatch(batch, setting);
+    state = state.copyWith(setting: setting);
   }
 
   void addReminderTimes(ReminderTime reminderTime) {

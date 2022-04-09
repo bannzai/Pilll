@@ -72,8 +72,6 @@ class LocalNotificationScheduleCollection
   LocalNotificationScheduleCollection._();
 
   factory LocalNotificationScheduleCollection.reminderNotification({
-    required int hour,
-    required int minute,
     required List<LocalNotificationSchedule>
         reminderNotificationLocalNotificationScheduleCollection,
     required PillSheetGroup pillSheetGroup,
@@ -93,63 +91,63 @@ class LocalNotificationScheduleCollection
         reminderNotificationIdentifierOffset + (lastID ?? 0);
 
     final schedules = <LocalNotificationSchedule>[];
-    for (final pillSheet in pillSheetGroup.pillSheets) {
-      if (pillSheet.groupIndex < activedPillSheet.groupIndex) {
-        continue;
-      }
-
-      for (var pillIndex = 0;
-          pillIndex < pillSheet.typeInfo.totalCount;
-          pillIndex++) {
-        if (activedPillSheet.groupIndex == pillSheet.groupIndex &&
-            activedPillSheet.todayPillNumber <= pillIndex) {
+    for (final reminderTime in setting.reminderTimes) {
+      for (final pillSheet in pillSheetGroup.pillSheets) {
+        if (pillSheet.groupIndex < activedPillSheet.groupIndex) {
           continue;
         }
-
-        final reminderDate = tzFrom
-            .tzDate()
-            .add(Duration(days: pillIndex))
-            .add(Duration(hours: hour))
-            .add(Duration(minutes: minute));
-        final beforePillCount = summarizedPillCountWithPillSheetsToEndIndex(
-          pillSheets: pillSheetGroup.pillSheets,
-          endIndex: pillSheet.groupIndex,
-        );
-        final title = () {
-          if (isTrialOrPremium) {
-            var result = setting.reminderNotificationCustomization.word;
-            if (!setting
-                .reminderNotificationCustomization.isInVisibleReminderDate) {
-              result += " ";
-              result +=
-                  "${reminderDate.month}/${reminderDate.day} (${WeekdayFunctions.weekdayFromDate(reminderDate).weekdayString()})";
-            }
-            if (!setting
-                .reminderNotificationCustomization.isInVisiblePillNumber) {
-              result += " ";
-              result +=
-                  "${pillSheetPillNumber(pillSheet: pillSheet, targetDate: reminderDate)}番";
-            }
-            return result;
-          } else {
-            return "💊の時間です";
+        for (var pillIndex = 0;
+            pillIndex < pillSheet.typeInfo.totalCount;
+            pillIndex++) {
+          if (activedPillSheet.groupIndex == pillSheet.groupIndex &&
+              activedPillSheet.todayPillNumber <= pillIndex) {
+            continue;
           }
-        }();
-        final message = '';
 
-        final localNotificationSchedule = LocalNotificationSchedule(
-          kind: LocalNotificationScheduleKind.reminderNotification,
-          scheduleDateTime: reminderDate,
-          title: title,
-          message: message,
-          localNotificationID:
-              localNotificationIDOffset + beforePillCount + pillIndex,
-          createdDate: now(),
-        );
-        schedules.add(localNotificationSchedule);
+          final reminderDate = tzFrom
+              .tzDate()
+              .add(Duration(days: pillIndex))
+              .add(Duration(hours: reminderTime.hour))
+              .add(Duration(minutes: reminderTime.minute));
+          final beforePillCount = summarizedPillCountWithPillSheetsToEndIndex(
+            pillSheets: pillSheetGroup.pillSheets,
+            endIndex: pillSheet.groupIndex,
+          );
+          final title = () {
+            if (isTrialOrPremium) {
+              var result = setting.reminderNotificationCustomization.word;
+              if (!setting
+                  .reminderNotificationCustomization.isInVisibleReminderDate) {
+                result += " ";
+                result +=
+                    "${reminderDate.month}/${reminderDate.day} (${WeekdayFunctions.weekdayFromDate(reminderDate).weekdayString()})";
+              }
+              if (!setting
+                  .reminderNotificationCustomization.isInVisiblePillNumber) {
+                result += " ";
+                result +=
+                    "${pillSheetPillNumber(pillSheet: pillSheet, targetDate: reminderDate)}番";
+              }
+              return result;
+            } else {
+              return "💊の時間です";
+            }
+          }();
+          final message = '';
+
+          final localNotificationSchedule = LocalNotificationSchedule(
+            kind: LocalNotificationScheduleKind.reminderNotification,
+            scheduleDateTime: reminderDate,
+            title: title,
+            message: message,
+            localNotificationID:
+                localNotificationIDOffset + beforePillCount + pillIndex,
+            createdDate: now(),
+          );
+          schedules.add(localNotificationSchedule);
+        }
       }
     }
-
     return LocalNotificationScheduleCollection(
       kind: LocalNotificationScheduleKind.reminderNotification,
       schedules: schedules,
