@@ -89,8 +89,8 @@ class LocalNotificationScheduleCollection
                 .where((element) =>
                     element.kind ==
                     LocalNotificationScheduleKind.reminderNotification)
-                .sorted((a, b) => b.localNotificationIDWithoutOffset
-                    .compareTo(a.localNotificationIDWithoutOffset))
+                .sorted((a, b) => a.localNotificationIDWithoutOffset
+                    .compareTo(b.localNotificationIDWithoutOffset))
                 .lastOrNull
                 ?.localNotificationIDWithoutOffset ??
             0;
@@ -115,12 +115,15 @@ class LocalNotificationScheduleCollection
               .tzDate()
               .add(Duration(days: pillIndex))
               .add(Duration(hours: reminderTime.hour))
-              .add(Duration(minutes: now().minute + 1));
-//          if (!reminderDate
-//              .add(const Duration(minutes: 1))
-//              .isAfter(tzFrom.tzDate())) {
-//            continue;
-//          }
+              .add(Duration(minutes: reminderTime.minute));
+
+          // NOTE: LocalNotification must be scheduled at least 3 minutes after the current time (in iOS, Android not confirm).
+          // Delay five minutes just to be sure.
+          if (!reminderDate
+              .add(const Duration(minutes: 5))
+              .isAfter(tzFrom.tzDate())) {
+            continue;
+          }
 
           final beforePillCount = summarizedPillCountWithPillSheetsToEndIndex(
             pillSheets: pillSheetGroup.pillSheets,
