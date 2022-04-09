@@ -174,34 +174,34 @@ class SettingStateStore extends StateNotifier<SettingState> {
     state = state.copyWith(setting: setting);
   }
 
-  void addReminderTimes(ReminderTime reminderTime) {
+  Future<void> addReminderTimes(ReminderTime reminderTime) async {
     final setting = state.setting;
     if (setting == null) {
       throw const FormatException("setting entity not found");
     }
     List<ReminderTime> copied = [...setting.reminderTimes];
     copied.add(reminderTime);
-    _modifyReminderTimes(copied);
+    await _modifyReminderTimes(copied);
   }
 
-  void editReminderTime(int index, ReminderTime reminderTime) {
+  Future<void> editReminderTime(int index, ReminderTime reminderTime) async {
     final setting = state.setting;
     if (setting == null) {
       throw const FormatException("setting entity not found");
     }
     List<ReminderTime> copied = [...setting.reminderTimes];
     copied[index] = reminderTime;
-    _modifyReminderTimes(copied);
+    await _modifyReminderTimes(copied);
   }
 
-  void deleteReminderTimes(int index) {
+  Future<void> deleteReminderTimes(int index) async {
     final setting = state.setting;
     if (setting == null) {
       throw const FormatException("setting entity not found");
     }
     List<ReminderTime> copied = [...setting.reminderTimes];
     copied.removeAt(index);
-    _modifyReminderTimes(copied);
+    await _modifyReminderTimes(copied);
   }
 
   Future<SettingState> modifyIsOnReminder(bool isOnReminder) {
