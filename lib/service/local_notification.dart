@@ -1,4 +1,5 @@
 import 'dart:async';
+import 'dart:math';
 
 import 'package:flutter_local_notifications/flutter_local_notifications.dart';
 import 'package:pilll/entity/local_notification_schedule.codegen.dart';
@@ -128,9 +129,8 @@ class LocalNotification {
   }
 
   Future<void> test() async {
-    await plugin.cancelAll();
     await plugin.zonedSchedule(
-      103,
+      Random().nextInt(1000000),
       'test title',
       'test body',
       tz.TZDateTime.from(now().add(const Duration(minutes: 1)), tz.local),
