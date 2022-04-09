@@ -6,6 +6,7 @@ import 'package:pilll/database/batch.dart';
 import 'package:pilll/entity/local_notification_schedule.codegen.dart';
 import 'package:pilll/entity/setting.codegen.dart';
 import 'package:pilll/native/health_care.dart';
+import 'package:pilll/service/local_notification.dart';
 import 'package:pilll/service/local_notification_schedule.dart';
 import 'package:pilll/service/pill_sheet.dart';
 import 'package:pilll/service/pill_sheet_group.dart';
@@ -157,8 +158,9 @@ class SettingStateStore extends StateNotifier<SettingState> {
 
     final pillSheetGroup = state.latestPillSheetGroup;
     final activedPillSheet = state.latestPillSheetGroup?.activedPillSheet;
+    LocalNotificationScheduleCollection? localNotificationScheduleCollection;
     if (pillSheetGroup != null && activedPillSheet != null) {
-      final localNotificationScheduleCollection =
+      localNotificationScheduleCollection =
           LocalNotificationScheduleCollection.reminderNotification(
         reminderNotificationLocalNotificationScheduleCollection:
             state.reminderlNotificationScheduleCollection?.schedules ?? [],
@@ -168,12 +170,20 @@ class SettingStateStore extends StateNotifier<SettingState> {
         setting: setting,
         tzFrom: now().tzDate(),
       );
+
       _localNotificationScheduleCollectionService.updateWithBatch(
           batch, localNotificationScheduleCollection);
     }
 
     _settingService.updateWithBatch(batch, setting);
     await batch.commit();
+
+    if (localNotificationScheduleCollection != null) {
+      await localNotification.scheduleRemiderNotification(
+          localNotificationScheduleCollection:
+              localNotificationScheduleCollection,
+          isTrialOrPremium: state.isTrial || state.isPremium);
+    }
 
     state = state.copyWith(setting: setting);
   }
