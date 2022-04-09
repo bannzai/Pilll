@@ -109,6 +109,12 @@ class LocalNotificationScheduleCollection
               .add(Duration(days: pillIndex))
               .add(Duration(hours: reminderTime.hour))
               .add(Duration(minutes: reminderTime.minute));
+          if (!reminderDate
+              .add(const Duration(minutes: 1))
+              .isAfter(tzFrom.tzDate())) {
+            continue;
+          }
+
           final beforePillCount = summarizedPillCountWithPillSheetsToEndIndex(
             pillSheets: pillSheetGroup.pillSheets,
             endIndex: pillSheet.groupIndex,
