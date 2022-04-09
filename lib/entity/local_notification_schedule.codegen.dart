@@ -81,17 +81,19 @@ class LocalNotificationScheduleCollection
     required Setting setting,
     required tz.TZDateTime tzFrom,
   }) {
-    final lastID = reminderNotificationLocalNotificationScheduleCollection
-        .where((element) =>
-            element.kind == LocalNotificationScheduleKind.reminderNotification)
-        .sorted(
-            (a, b) => a.localNotificationID.compareTo(b.localNotificationID))
-        .lastOrNull
-        ?.localNotificationID;
-    final localNotificationIDOffset =
-        reminderNotificationIdentifierOffset + (lastID ?? 0);
-    debugPrint(
-        'lastID: $lastID, localNotificationIDOffset: $localNotificationIDOffset');
+    final offsetWithLastID =
+        reminderNotificationLocalNotificationScheduleCollection
+                .where(
+                    (element) =>
+                        element
+                            .kind ==
+                        LocalNotificationScheduleKind.reminderNotification)
+                .sorted((a, b) =>
+                    b.localNotificationID.compareTo(a.localNotificationID))
+                .lastOrNull
+                ?.localNotificationID ??
+            0;
+    debugPrint('offsetWithLastID: $offsetWithLastID');
 
     final schedules = <LocalNotificationSchedule>[];
     for (final reminderTime in setting.reminderTimes) {
@@ -111,12 +113,12 @@ class LocalNotificationScheduleCollection
               .tzDate()
               .add(Duration(days: pillIndex))
               .add(Duration(hours: reminderTime.hour))
-              .add(Duration(minutes: reminderTime.minute));
-          if (!reminderDate
-              .add(const Duration(minutes: 1))
-              .isAfter(tzFrom.tzDate())) {
-            continue;
-          }
+              .add(Duration(minutes: now().minute + 1));
+//          if (!reminderDate
+//              .add(const Duration(minutes: 1))
+//              .isAfter(tzFrom.tzDate())) {
+//            continue;
+//          }
 
           final beforePillCount = summarizedPillCountWithPillSheetsToEndIndex(
             pillSheets: pillSheetGroup.pillSheets,
@@ -149,8 +151,10 @@ class LocalNotificationScheduleCollection
             scheduleDateTime: reminderDate,
             title: title,
             message: message,
-            localNotificationID:
-                localNotificationIDOffset + beforePillCount + pillIndex,
+            localNotificationID: reminderNotificationIdentifierOffset +
+                offsetWithLastID +
+                beforePillCount +
+                pillIndex,
             createdDate: now(),
           );
           schedules.add(localNotificationSchedule);
