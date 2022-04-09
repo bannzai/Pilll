@@ -65,6 +65,7 @@ class LocalNotification {
 
     if (isTrialOrPremium) {
       for (final schedule in localNotificationScheduleCollection.schedules) {
+        await plugin.cancel(schedule.actualLocalNotificationID);
         await plugin.zonedSchedule(
           schedule.actualLocalNotificationID,
           schedule.title,
@@ -99,6 +100,7 @@ class LocalNotification {
       }
     } else {
       for (final schedule in localNotificationScheduleCollection.schedules) {
+        await plugin.cancel(schedule.actualLocalNotificationID);
         await plugin.zonedSchedule(
           schedule.actualLocalNotificationID,
           schedule.title,
