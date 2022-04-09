@@ -128,6 +128,7 @@ class LocalNotification {
   }
 
   Future<void> test() async {
+    await plugin.cancelAll();
     await plugin.zonedSchedule(
       103,
       'test title',
