@@ -129,7 +129,7 @@ class LocalNotification {
 
   Future<void> test() async {
     await plugin.zonedSchedule(
-      0,
+      103,
       'test title',
       'test body',
       tz.TZDateTime.from(now().add(const Duration(minutes: 1)), tz.local),

@@ -147,6 +147,9 @@ class SettingStateStore extends StateNotifier<SettingState> {
     if (reminderTimes.length < ReminderTime.minimumCount) {
       throw Exception("通知時刻は最低${ReminderTime.minimumCount}件必要です");
     }
+    state =
+        state.copyWith(setting: setting.copyWith(reminderTimes: reminderTimes));
+    _settingService.update(state.setting!);
     //final batch = _batchFactory.batch();
     //_settingService.updateWithBatch(
     //    batch, setting.copyWith(reminderTimes: reminderTimes));
