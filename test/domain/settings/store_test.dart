@@ -1,3 +1,4 @@
+import 'package:pilll/entity/local_notification_schedule.codegen.dart';
 import 'package:pilll/entity/pill_sheet.codegen.dart';
 import 'package:pilll/entity/pill_sheet_group.codegen.dart';
 import 'package:pilll/entity/pill_sheet_type.dart';
@@ -85,15 +86,23 @@ void main() {
           .thenAnswer((realInvocation) => Future.value(pillSheetGroup));
       when(pillSheetGroupService.streamForLatest())
           .thenAnswer((realInvocation) => const Stream.empty());
+      final localNotificationScheduleCollectionService =
+          MockLocalNotificationScheduleCollectionService();
+      when(localNotificationScheduleCollectionService
+              .fetchReminderNotification())
+          .thenAnswer((realInvocation) => Future.value(null));
+      when(localNotificationScheduleCollectionService
+              .stream(LocalNotificationScheduleKind.reminderNotification))
+          .thenAnswer((realInvocation) => Stream.value([]));
 
       final store = SettingStateStore(
-        batchFactory,
-        settingService,
-        pillSheetService,
-        userService,
-        pillSheetModifiedService,
-        pillSheetGroupService,
-      );
+          batchFactory,
+          settingService,
+          pillSheetService,
+          userService,
+          pillSheetModifiedService,
+          pillSheetGroupService,
+          localNotificationScheduleCollectionService);
 
       // ignore: invalid_use_of_protected_member
       store.state = SettingState(setting: setting);
@@ -142,6 +151,14 @@ void main() {
           .thenAnswer((realInvocation) => Future.value(pillSheetGroup));
       when(pillSheetGroupService.streamForLatest())
           .thenAnswer((realInvocation) => const Stream.empty());
+      final localNotificationScheduleCollectionService =
+          MockLocalNotificationScheduleCollectionService();
+      when(localNotificationScheduleCollectionService
+              .fetchReminderNotification())
+          .thenAnswer((realInvocation) => Future.value(null));
+      when(localNotificationScheduleCollectionService
+              .stream(LocalNotificationScheduleKind.reminderNotification))
+          .thenAnswer((realInvocation) => Stream.value([]));
 
       final store = SettingStateStore(
         batchFactory,
@@ -150,6 +167,7 @@ void main() {
         userService,
         pillSheetModifiedService,
         pillSheetGroupService,
+        localNotificationScheduleCollectionService,
       );
 
       // ignore: invalid_use_of_protected_member
@@ -195,6 +213,14 @@ void main() {
           .thenAnswer((realInvocation) => Future.value(pillSheetGroup));
       when(pillSheetGroupService.streamForLatest())
           .thenAnswer((realInvocation) => const Stream.empty());
+      final localNotificationScheduleCollectionService =
+          MockLocalNotificationScheduleCollectionService();
+      when(localNotificationScheduleCollectionService
+              .fetchReminderNotification())
+          .thenAnswer((realInvocation) => Future.value(null));
+      when(localNotificationScheduleCollectionService
+              .stream(LocalNotificationScheduleKind.reminderNotification))
+          .thenAnswer((realInvocation) => Stream.value([]));
 
       final store = SettingStateStore(
         batchFactory,
@@ -203,6 +229,7 @@ void main() {
         userService,
         pillSheetModifiedService,
         pillSheetGroupService,
+        localNotificationScheduleCollectionService,
       );
 
       // ignore: invalid_use_of_protected_member
@@ -247,6 +274,14 @@ void main() {
           .thenAnswer((realInvocation) => Future.value(pillSheetGroup));
       when(pillSheetGroupService.streamForLatest())
           .thenAnswer((realInvocation) => const Stream.empty());
+      final localNotificationScheduleCollectionService =
+          MockLocalNotificationScheduleCollectionService();
+      when(localNotificationScheduleCollectionService
+              .fetchReminderNotification())
+          .thenAnswer((realInvocation) => Future.value(null));
+      when(localNotificationScheduleCollectionService
+              .stream(LocalNotificationScheduleKind.reminderNotification))
+          .thenAnswer((realInvocation) => Stream.value([]));
 
       final store = SettingStateStore(
         batchFactory,
@@ -255,6 +290,7 @@ void main() {
         userService,
         pillSheetModifiedService,
         pillSheetGroupService,
+        localNotificationScheduleCollectionService,
       );
 
       // ignore: invalid_use_of_protected_member

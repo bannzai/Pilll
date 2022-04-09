@@ -1,4 +1,5 @@
 import 'package:pilll/domain/settings/setting_page_state.codegen.dart';
+import 'package:pilll/entity/local_notification_schedule.codegen.dart';
 import 'package:pilll/entity/pill_sheet.codegen.dart';
 import 'package:pilll/entity/pill_sheet_group.codegen.dart';
 import 'package:pilll/entity/pill_sheet_type.dart';
@@ -80,6 +81,14 @@ void main() {
           pillSheetIDs: ["1"], pillSheets: [pillSheet], createdAt: now());
       when(pillSheetGroupService.streamForLatest()).thenAnswer(
           (realInvocation) => Stream.fromIterable([pillSheetGroup]));
+      final localNotificationScheduleCollectionService =
+          MockLocalNotificationScheduleCollectionService();
+      when(localNotificationScheduleCollectionService
+              .fetchReminderNotification())
+          .thenAnswer((realInvocation) => Future.value(null));
+      when(localNotificationScheduleCollectionService
+              .stream(LocalNotificationScheduleKind.reminderNotification))
+          .thenAnswer((realInvocation) => Stream.value([]));
 
       final batchFactory = MockBatchFactory();
       final pillSheetModifiedService = MockPillSheetModifiedHistoryService();
@@ -91,6 +100,7 @@ void main() {
         userService,
         pillSheetModifiedService,
         pillSheetGroupService,
+        localNotificationScheduleCollectionService,
       );
       store.setup();
 
@@ -151,6 +161,14 @@ void main() {
       final pillSheetGroupService = MockPillSheetGroupService();
       when(pillSheetGroupService.streamForLatest())
           .thenAnswer((realInvocation) => Stream.value(pillSheetGroup));
+      final localNotificationScheduleCollectionService =
+          MockLocalNotificationScheduleCollectionService();
+      when(localNotificationScheduleCollectionService
+              .fetchReminderNotification())
+          .thenAnswer((realInvocation) => Future.value(null));
+      when(localNotificationScheduleCollectionService
+              .stream(LocalNotificationScheduleKind.reminderNotification))
+          .thenAnswer((realInvocation) => Stream.value([]));
 
       final batchFactory = MockBatchFactory();
       final pillSheetService = MockPillSheetService();
@@ -163,6 +181,7 @@ void main() {
         userService,
         pillSheetModifiedService,
         pillSheetGroupService,
+        localNotificationScheduleCollectionService,
       );
       store.setup();
 
