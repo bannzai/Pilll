@@ -132,7 +132,7 @@ class LocalNotification {
       0,
       'test title',
       'test body',
-      tz.TZDateTime.from(now().add(const Duration(minute: 1)), tz.local),
+      tz.TZDateTime.from(now().add(const Duration(minutes: 1)), tz.local),
       const NotificationDetails(
         android: AndroidNotificationDetails(
           AndroidReminderNotificationChannelID,
