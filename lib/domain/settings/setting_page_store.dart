@@ -173,6 +173,7 @@ class SettingStateStore extends StateNotifier<SettingState> {
     }
 
     _settingService.updateWithBatch(batch, setting);
+    await batch.commit();
     state = state.copyWith(setting: setting);
   }
 
