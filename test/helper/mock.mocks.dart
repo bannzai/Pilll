@@ -769,6 +769,17 @@ class MockLocalNotificationScheduleCollectionService extends _i1.Mock
               returnValue: Stream<
                   List<_i36.LocalNotificationScheduleCollection>>.empty())
           as _i16.Stream<List<_i36.LocalNotificationScheduleCollection>>);
+  @override
+  _i16.Future<void> updateWithBatch(
+          _i12.WriteBatch? batch,
+          _i36.LocalNotificationScheduleCollection?
+              localNotificationScheduleCollection) =>
+      (super.noSuchMethod(
+          Invocation.method(
+              #updateWithBatch, [batch, localNotificationScheduleCollection]),
+          returnValue: Future<void>.value(),
+          returnValueForMissingStub:
+              Future<void>.value()) as _i16.Future<void>);
 }
 
 /// A class which mocks [BatchFactory].

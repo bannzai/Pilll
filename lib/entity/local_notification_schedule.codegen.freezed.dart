@@ -27,7 +27,8 @@ class _$LocalNotificationScheduleTearOff {
       {required LocalNotificationScheduleKind kind,
       required String title,
       required String message,
-      required int localNotificationID,
+      required int localNotificationIDWithoutOffset,
+      required int localNotificationIDOffset,
       @JsonKey(fromJson: NonNullTimestampConverter.timestampToDateTime, toJson: NonNullTimestampConverter.dateTimeToTimestamp)
           required DateTime scheduleDateTime,
       @JsonKey(fromJson: NonNullTimestampConverter.timestampToDateTime, toJson: NonNullTimestampConverter.dateTimeToTimestamp)
@@ -36,7 +37,8 @@ class _$LocalNotificationScheduleTearOff {
       kind: kind,
       title: title,
       message: message,
-      localNotificationID: localNotificationID,
+      localNotificationIDWithoutOffset: localNotificationIDWithoutOffset,
+      localNotificationIDOffset: localNotificationIDOffset,
       scheduleDateTime: scheduleDateTime,
       createdDate: createdDate,
     );
@@ -54,9 +56,10 @@ const $LocalNotificationSchedule = _$LocalNotificationScheduleTearOff();
 mixin _$LocalNotificationSchedule {
   LocalNotificationScheduleKind get kind => throw _privateConstructorUsedError;
   String get title => throw _privateConstructorUsedError;
-  String get message =>
-      throw _privateConstructorUsedError; // NOTE: localNotificationID set  to count of all local notification schedules
-  int get localNotificationID => throw _privateConstructorUsedError;
+  String get message => throw _privateConstructorUsedError;
+  int get localNotificationIDWithoutOffset =>
+      throw _privateConstructorUsedError;
+  int get localNotificationIDOffset => throw _privateConstructorUsedError;
   @JsonKey(
       fromJson: NonNullTimestampConverter.timestampToDateTime,
       toJson: NonNullTimestampConverter.dateTimeToTimestamp)
@@ -81,7 +84,8 @@ abstract class $LocalNotificationScheduleCopyWith<$Res> {
       {LocalNotificationScheduleKind kind,
       String title,
       String message,
-      int localNotificationID,
+      int localNotificationIDWithoutOffset,
+      int localNotificationIDOffset,
       @JsonKey(fromJson: NonNullTimestampConverter.timestampToDateTime, toJson: NonNullTimestampConverter.dateTimeToTimestamp)
           DateTime scheduleDateTime,
       @JsonKey(fromJson: NonNullTimestampConverter.timestampToDateTime, toJson: NonNullTimestampConverter.dateTimeToTimestamp)
@@ -102,7 +106,8 @@ class _$LocalNotificationScheduleCopyWithImpl<$Res>
     Object? kind = freezed,
     Object? title = freezed,
     Object? message = freezed,
-    Object? localNotificationID = freezed,
+    Object? localNotificationIDWithoutOffset = freezed,
+    Object? localNotificationIDOffset = freezed,
     Object? scheduleDateTime = freezed,
     Object? createdDate = freezed,
   }) {
@@ -119,9 +124,14 @@ class _$LocalNotificationScheduleCopyWithImpl<$Res>
           ? _value.message
           : message // ignore: cast_nullable_to_non_nullable
               as String,
-      localNotificationID: localNotificationID == freezed
-          ? _value.localNotificationID
-          : localNotificationID // ignore: cast_nullable_to_non_nullable
+      localNotificationIDWithoutOffset: localNotificationIDWithoutOffset ==
+              freezed
+          ? _value.localNotificationIDWithoutOffset
+          : localNotificationIDWithoutOffset // ignore: cast_nullable_to_non_nullable
+              as int,
+      localNotificationIDOffset: localNotificationIDOffset == freezed
+          ? _value.localNotificationIDOffset
+          : localNotificationIDOffset // ignore: cast_nullable_to_non_nullable
               as int,
       scheduleDateTime: scheduleDateTime == freezed
           ? _value.scheduleDateTime
@@ -146,7 +156,8 @@ abstract class _$LocalNotificationScheduleCopyWith<$Res>
       {LocalNotificationScheduleKind kind,
       String title,
       String message,
-      int localNotificationID,
+      int localNotificationIDWithoutOffset,
+      int localNotificationIDOffset,
       @JsonKey(fromJson: NonNullTimestampConverter.timestampToDateTime, toJson: NonNullTimestampConverter.dateTimeToTimestamp)
           DateTime scheduleDateTime,
       @JsonKey(fromJson: NonNullTimestampConverter.timestampToDateTime, toJson: NonNullTimestampConverter.dateTimeToTimestamp)
@@ -170,7 +181,8 @@ class __$LocalNotificationScheduleCopyWithImpl<$Res>
     Object? kind = freezed,
     Object? title = freezed,
     Object? message = freezed,
-    Object? localNotificationID = freezed,
+    Object? localNotificationIDWithoutOffset = freezed,
+    Object? localNotificationIDOffset = freezed,
     Object? scheduleDateTime = freezed,
     Object? createdDate = freezed,
   }) {
@@ -187,9 +199,14 @@ class __$LocalNotificationScheduleCopyWithImpl<$Res>
           ? _value.message
           : message // ignore: cast_nullable_to_non_nullable
               as String,
-      localNotificationID: localNotificationID == freezed
-          ? _value.localNotificationID
-          : localNotificationID // ignore: cast_nullable_to_non_nullable
+      localNotificationIDWithoutOffset: localNotificationIDWithoutOffset ==
+              freezed
+          ? _value.localNotificationIDWithoutOffset
+          : localNotificationIDWithoutOffset // ignore: cast_nullable_to_non_nullable
+              as int,
+      localNotificationIDOffset: localNotificationIDOffset == freezed
+          ? _value.localNotificationIDOffset
+          : localNotificationIDOffset // ignore: cast_nullable_to_non_nullable
               as int,
       scheduleDateTime: scheduleDateTime == freezed
           ? _value.scheduleDateTime
@@ -211,7 +228,8 @@ class _$_LocalNotificationSchedule extends _LocalNotificationSchedule {
       {required this.kind,
       required this.title,
       required this.message,
-      required this.localNotificationID,
+      required this.localNotificationIDWithoutOffset,
+      required this.localNotificationIDOffset,
       @JsonKey(fromJson: NonNullTimestampConverter.timestampToDateTime, toJson: NonNullTimestampConverter.dateTimeToTimestamp)
           required this.scheduleDateTime,
       @JsonKey(fromJson: NonNullTimestampConverter.timestampToDateTime, toJson: NonNullTimestampConverter.dateTimeToTimestamp)
@@ -227,8 +245,10 @@ class _$_LocalNotificationSchedule extends _LocalNotificationSchedule {
   final String title;
   @override
   final String message;
-  @override // NOTE: localNotificationID set  to count of all local notification schedules
-  final int localNotificationID;
+  @override
+  final int localNotificationIDWithoutOffset;
+  @override
+  final int localNotificationIDOffset;
   @override
   @JsonKey(
       fromJson: NonNullTimestampConverter.timestampToDateTime,
@@ -242,7 +262,7 @@ class _$_LocalNotificationSchedule extends _LocalNotificationSchedule {
 
   @override
   String toString() {
-    return 'LocalNotificationSchedule(kind: $kind, title: $title, message: $message, localNotificationID: $localNotificationID, scheduleDateTime: $scheduleDateTime, createdDate: $createdDate)';
+    return 'LocalNotificationSchedule(kind: $kind, title: $title, message: $message, localNotificationIDWithoutOffset: $localNotificationIDWithoutOffset, localNotificationIDOffset: $localNotificationIDOffset, scheduleDateTime: $scheduleDateTime, createdDate: $createdDate)';
   }
 
   @override
@@ -253,8 +273,11 @@ class _$_LocalNotificationSchedule extends _LocalNotificationSchedule {
             const DeepCollectionEquality().equals(other.kind, kind) &&
             const DeepCollectionEquality().equals(other.title, title) &&
             const DeepCollectionEquality().equals(other.message, message) &&
-            const DeepCollectionEquality()
-                .equals(other.localNotificationID, localNotificationID) &&
+            const DeepCollectionEquality().equals(
+                other.localNotificationIDWithoutOffset,
+                localNotificationIDWithoutOffset) &&
+            const DeepCollectionEquality().equals(
+                other.localNotificationIDOffset, localNotificationIDOffset) &&
             const DeepCollectionEquality()
                 .equals(other.scheduleDateTime, scheduleDateTime) &&
             const DeepCollectionEquality()
@@ -267,7 +290,8 @@ class _$_LocalNotificationSchedule extends _LocalNotificationSchedule {
       const DeepCollectionEquality().hash(kind),
       const DeepCollectionEquality().hash(title),
       const DeepCollectionEquality().hash(message),
-      const DeepCollectionEquality().hash(localNotificationID),
+      const DeepCollectionEquality().hash(localNotificationIDWithoutOffset),
+      const DeepCollectionEquality().hash(localNotificationIDOffset),
       const DeepCollectionEquality().hash(scheduleDateTime),
       const DeepCollectionEquality().hash(createdDate));
 
@@ -289,7 +313,8 @@ abstract class _LocalNotificationSchedule extends LocalNotificationSchedule {
       {required LocalNotificationScheduleKind kind,
       required String title,
       required String message,
-      required int localNotificationID,
+      required int localNotificationIDWithoutOffset,
+      required int localNotificationIDOffset,
       @JsonKey(fromJson: NonNullTimestampConverter.timestampToDateTime, toJson: NonNullTimestampConverter.dateTimeToTimestamp)
           required DateTime scheduleDateTime,
       @JsonKey(fromJson: NonNullTimestampConverter.timestampToDateTime, toJson: NonNullTimestampConverter.dateTimeToTimestamp)
@@ -305,8 +330,10 @@ abstract class _LocalNotificationSchedule extends LocalNotificationSchedule {
   String get title;
   @override
   String get message;
-  @override // NOTE: localNotificationID set  to count of all local notification schedules
-  int get localNotificationID;
+  @override
+  int get localNotificationIDWithoutOffset;
+  @override
+  int get localNotificationIDOffset;
   @override
   @JsonKey(
       fromJson: NonNullTimestampConverter.timestampToDateTime,

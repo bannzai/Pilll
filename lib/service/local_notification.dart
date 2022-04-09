@@ -66,7 +66,7 @@ class LocalNotification {
     if (isTrialOrPremium) {
       for (final schedule in localNotificationScheduleCollection.schedules) {
         await plugin.zonedSchedule(
-          schedule.localNotificationID,
+          schedule.actualLocalNotificationID,
           schedule.title,
           schedule.message,
           tz.TZDateTime.from(schedule.scheduleDateTime, tz.local),
@@ -100,7 +100,7 @@ class LocalNotification {
     } else {
       for (final schedule in localNotificationScheduleCollection.schedules) {
         await plugin.zonedSchedule(
-          schedule.localNotificationID,
+          schedule.actualLocalNotificationID,
           schedule.title,
           schedule.message,
           tz.TZDateTime.from(schedule.scheduleDateTime, tz.local),

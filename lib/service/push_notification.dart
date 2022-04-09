@@ -51,5 +51,5 @@ void callRegisterRemoteNotification() {
 }
 
 Future<void> onBackgroundMessage(RemoteMessage message) async {
-  await localNotification.test();
+  // await localNotification.test();
 }

@@ -38,8 +38,8 @@ class LocalNotificationSchedule with _$LocalNotificationSchedule {
     required LocalNotificationScheduleKind kind,
     required String title,
     required String message,
-    // NOTE: localNotificationID set  to count of all local notification schedules
-    required int localNotificationID,
+    required int localNotificationIDWithoutOffset,
+    required int localNotificationIDOffset,
     @JsonKey(
       fromJson: NonNullTimestampConverter.timestampToDateTime,
       toJson: NonNullTimestampConverter.dateTimeToTimestamp,
@@ -55,6 +55,9 @@ class LocalNotificationSchedule with _$LocalNotificationSchedule {
 
   factory LocalNotificationSchedule.fromJson(Map<String, dynamic> json) =>
       _$LocalNotificationScheduleFromJson(json);
+
+  int get actualLocalNotificationID =>
+      localNotificationIDWithoutOffset + localNotificationIDOffset;
 }
 
 @freezed
@@ -81,19 +84,18 @@ class LocalNotificationScheduleCollection
     required Setting setting,
     required tz.TZDateTime tzFrom,
   }) {
-    final offsetWithLastID =
+    final lastScheduleLocalNotificationIDWithoutOffset =
         reminderNotificationLocalNotificationScheduleCollection
-                .where(
-                    (element) =>
-                        element
-                            .kind ==
-                        LocalNotificationScheduleKind.reminderNotification)
-                .sorted((a, b) =>
-                    b.localNotificationID.compareTo(a.localNotificationID))
+                .where((element) =>
+                    element.kind ==
+                    LocalNotificationScheduleKind.reminderNotification)
+                .sorted((a, b) => b.localNotificationIDWithoutOffset
+                    .compareTo(a.localNotificationIDWithoutOffset))
                 .lastOrNull
-                ?.localNotificationID ??
+                ?.localNotificationIDWithoutOffset ??
             0;
-    debugPrint('offsetWithLastID: $offsetWithLastID');
+    debugPrint(
+        'lastScheduleLocalNotificationIDWithoutOffset: $lastScheduleLocalNotificationIDWithoutOffset');
 
     final schedules = <LocalNotificationSchedule>[];
     for (final reminderTime in setting.reminderTimes) {
@@ -151,10 +153,11 @@ class LocalNotificationScheduleCollection
             scheduleDateTime: reminderDate,
             title: title,
             message: message,
-            localNotificationID: reminderNotificationIdentifierOffset +
-                offsetWithLastID +
-                beforePillCount +
-                pillIndex,
+            localNotificationIDWithoutOffset:
+                lastScheduleLocalNotificationIDWithoutOffset +
+                    beforePillCount +
+                    pillIndex,
+            localNotificationIDOffset: reminderNotificationIdentifierOffset,
             createdDate: now(),
           );
           schedules.add(localNotificationSchedule);
