@@ -4,6 +4,7 @@ import 'dart:io';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:pilll/analytics.dart';
 import 'package:pilll/database/database.dart';
+import 'package:pilll/service/local_notification.dart';
 import 'package:pilll/service/user.dart';
 import 'package:firebase_messaging/firebase_messaging.dart';
 
@@ -34,9 +35,7 @@ void listenNotificationEvents() {
   FirebaseMessaging.onMessage.listen((event) {
     print('onMessage: $event');
   });
-  if (Platform.isAndroid) {
-    FirebaseMessaging.onBackgroundMessage(onBackgroundMessage);
-  }
+  FirebaseMessaging.onBackgroundMessage(onBackgroundMessage);
   FirebaseMessaging.onMessageOpenedApp.listen((event) {
     analytics.logEvent(name: "opened_from_notification_on_background");
     print("onMessageOpenedApp: $event");
@@ -52,18 +51,5 @@ void callRegisterRemoteNotification() {
 }
 
 Future<void> onBackgroundMessage(RemoteMessage message) async {
-  print("Handling a background message ${message.data}");
-  final messageData = message.data;
-  if (messageData.containsKey('data')) {
-    // データメッセージをハンドリング
-    final data = messageData['data'];
-    print("data: $data");
-  }
-
-  if (messageData.containsKey('notification')) {
-    // 通知メッセージをハンドリング
-    final notification = messageData['notification'];
-    print("notification: $notification");
-  }
-  print('onBackground: $message');
+  await localNotification.test();
 }
