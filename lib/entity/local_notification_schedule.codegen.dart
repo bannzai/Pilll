@@ -1,3 +1,4 @@
+import 'package:flutter/material.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';
 import 'package:pilll/entity/firestore_timestamp_converter.dart';
 import 'package:pilll/entity/pill_sheet.codegen.dart';
@@ -89,6 +90,8 @@ class LocalNotificationScheduleCollection
         ?.localNotificationID;
     final localNotificationIDOffset =
         reminderNotificationIdentifierOffset + (lastID ?? 0);
+    debugPrint(
+        'lastID: $lastID, localNotificationIDOffset: $localNotificationIDOffset');
 
     final schedules = <LocalNotificationSchedule>[];
     for (final reminderTime in setting.reminderTimes) {
@@ -154,6 +157,8 @@ class LocalNotificationScheduleCollection
         }
       }
     }
+
+    debugPrint('schedules: $schedules');
     return LocalNotificationScheduleCollection(
       kind: LocalNotificationScheduleKind.reminderNotification,
       schedules: schedules,
