@@ -130,6 +130,15 @@ class LocalNotification {
     }
   }
 
+  Future<void> cancelScheduledRemiderNotification({
+    required LocalNotificationScheduleCollection
+        localNotificationScheduleCollection,
+  }) async {
+    for (final schedule in localNotificationScheduleCollection.schedules) {
+      await plugin.cancel(schedule.actualLocalNotificationID);
+    }
+  }
+
   Future<void> test() async {
     await plugin.zonedSchedule(
       Random().nextInt(1000000),
