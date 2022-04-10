@@ -9,7 +9,7 @@ import 'package:hooks_riverpod/hooks_riverpod.dart';
 import 'package:pilll/domain/record/record_page_store.dart';
 import 'package:pilll/entity/pill_sheet_type.dart';
 
-class RecordPageAddingPillSheetGroupPage extends HookConsumerWidget {
+class PillSheetGroupAddPage extends HookConsumerWidget {
   @override
   Widget build(BuildContext context, WidgetRef ref) {
     final store = ref.watch(recordPageStoreProvider.notifier);
@@ -88,13 +88,13 @@ class RecordPageAddingPillSheetGroupPage extends HookConsumerWidget {
   }
 }
 
-extension RecordPageAddingPillSheetGroupPageRoute
-    on RecordPageAddingPillSheetGroupPage {
+extension PillSheetGroupoAddPageRoute
+    on PillSheetGroupAddPage {
   static Route<dynamic> route() {
     return MaterialPageRoute(
       fullscreenDialog: true,
       settings: const RouteSettings(name: "RecordPageAddingPillSheetGroupPage"),
-      builder: (_) => RecordPageAddingPillSheetGroupPage(),
+      builder: (_) => PillSheetGroupAddPage(),
     );
   }
 }

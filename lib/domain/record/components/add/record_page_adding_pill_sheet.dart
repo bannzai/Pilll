@@ -1,5 +1,6 @@
 import 'package:pilll/analytics.dart';
-import 'package:pilll/domain/record/components/adding/record_page_adding_pill_sheet_group_page.dart';
+import 'package:pilll/domain/record/components/add/pill_sheet_group_add_page.dart';
+import 'package:pilll/domain/record/components/adding/pill_sheet_group_add_page.dart';
 import 'package:pilll/domain/record/record_page_store.dart';
 import 'package:pilll/entity/setting.codegen.dart';
 import 'package:pilll/components/atoms/font.dart';
@@ -7,8 +8,8 @@ import 'package:pilll/components/atoms/text_color.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 
-class RecordPageAddingPillSheet extends StatelessWidget {
-  const RecordPageAddingPillSheet({
+class PillSheetGroupAddFrame extends StatelessWidget {
+  const PillSheetGroupAddFrame({
     Key? key,
     required this.context,
     required this.store,
@@ -45,9 +46,8 @@ class RecordPageAddingPillSheet extends StatelessWidget {
         ),
       ),
       onTap: () async {
-        analytics.logEvent(name: "adding_pill_sheet_tapped");
-        Navigator.of(context)
-            .push(RecordPageAddingPillSheetGroupPageRoute.route());
+        analytics.logEvent(name: "add_pill_sheet_tapped");
+        Navigator.of(context).push(PillSheetGroupoAddPageRoute.route());
       },
     );
   }
