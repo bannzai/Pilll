@@ -81,15 +81,6 @@ class SettingStateStore extends StateNotifier<SettingState> {
         }
       });
 
-      Future(() async {
-        final reminderNotificationSchedule =
-            await _localNotificationScheduleCollectionService
-                .fetchReminderNotification();
-        state = state.copyWith(
-            reminderlNotificationScheduleCollection:
-                reminderNotificationSchedule);
-      });
-
       _subscribe();
     } catch (exception) {
       state = state.copyWith(exception: exception);
@@ -152,10 +143,14 @@ class SettingStateStore extends StateNotifier<SettingState> {
     final activedPillSheet = state.latestPillSheetGroup?.activedPillSheet;
     LocalNotificationScheduleCollection? localNotificationScheduleCollection;
     if (pillSheetGroup != null && activedPillSheet != null) {
+      final reminderNotificationScheduleCollection =
+          await _localNotificationScheduleCollectionService
+              .fetchReminderNotification();
+
       localNotificationScheduleCollection =
           LocalNotificationScheduleCollection.reminderNotification(
         reminderNotificationLocalNotificationScheduleCollection:
-            state.reminderlNotificationScheduleCollection?.schedules ?? [],
+            reminderNotificationScheduleCollection?.schedules ?? [],
         pillSheetGroup: pillSheetGroup,
         activedPillSheet: activedPillSheet,
         isTrialOrPremium: state.isTrial || state.isPremium,

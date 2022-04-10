@@ -16,7 +16,6 @@ class SettingState with _$SettingState {
     @Default(false) bool isTrial,
     @Default(false) bool isHealthDataAvailable,
     DateTime? trialDeadlineDate,
-    LocalNotificationScheduleCollection? reminderlNotificationScheduleCollection,
     Object? exception,
   }) = _SettingState;
 }
