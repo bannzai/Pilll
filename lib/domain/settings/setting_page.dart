@@ -101,7 +101,8 @@ class SettingPage extends HookConsumerWidget {
                   return SettingSectionTitle(text: "Pilllプレミアム", children: [
                     if (state.isTrial) ...[
                       ListTile(
-                        title: const Text("プレミアムお試し体験について", style: FontType.listRow),
+                        title: const Text("プレミアムお試し体験について",
+                            style: FontType.listRow),
                         onTap: () {
                           analytics.logEvent(
                               name: "did_select_about_trial", parameters: {});
@@ -129,6 +130,8 @@ class SettingPage extends HookConsumerWidget {
                           setting: setting,
                           pillSheetGroup: pillSheetGroup,
                           activedPillSheet: activedPillSheet,
+                          isTrial: state.isTrial,
+                          isPremium: state.isPremium,
                         ),
                         _separator(),
                         PillSheetRemoveRow(),
@@ -204,7 +207,8 @@ class SettingPage extends HookConsumerWidget {
                           }),
                       _separator(),
                       ListTile(
-                          title: const Text("プライバシーポリシー", style: FontType.listRow),
+                          title:
+                              const Text("プライバシーポリシー", style: FontType.listRow),
                           onTap: () {
                             analytics.logEvent(
                                 name: "did_select_privacy_policy",

@@ -67,6 +67,7 @@ class RecordPage extends HookConsumerWidget {
             today: DateTime.now(),
             pillSheetGroup: state.pillSheetGroup,
             setting: setting,
+            state: state,
             store: store,
           ),
         ),
