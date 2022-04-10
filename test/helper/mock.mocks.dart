@@ -502,7 +502,7 @@ class MockRecordPageStore extends _i1.Mock implements _i24.RecordPageStore {
           {_i10.PillSheetGroup? pillSheetGroup,
           _i2.PillSheet? activedPillSheet}) =>
       (super.noSuchMethod(
-              Invocation.method(#beginResting, [], {
+              Invocation.method(#beginRestDuration, [], {
                 #pillSheetGroup: pillSheetGroup,
                 #activedPillSheet: activedPillSheet
               }),
@@ -515,7 +515,7 @@ class MockRecordPageStore extends _i1.Mock implements _i24.RecordPageStore {
           _i2.PillSheet? activedPillSheet,
           _i2.RestDuration? restDuration}) =>
       (super.noSuchMethod(
-              Invocation.method(#endResting, [], {
+              Invocation.method(#endRestDuration, [], {
                 #pillSheetGroup: pillSheetGroup,
                 #activedPillSheet: activedPillSheet,
                 #restDuration: restDuration
