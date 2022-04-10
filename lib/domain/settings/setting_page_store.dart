@@ -1,6 +1,5 @@
 import 'dart:async';
 import 'dart:io';
-import 'package:collection/collection.dart';
 
 import 'package:pilll/database/batch.dart';
 import 'package:pilll/entity/local_notification_schedule.codegen.dart';
