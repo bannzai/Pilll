@@ -47,7 +47,7 @@ class BeginManualRestDurationButton extends StatelessWidget {
                 FlutterAppBadger.removeBadge();
 
                 Navigator.of(context).pop();
-                await store.beginResting(
+                await store.beginRestDuration(
                   pillSheetGroup: pillSheetGroup,
                   activedPillSheet: activedPillSheet,
                 );
