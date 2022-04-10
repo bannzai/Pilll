@@ -13,6 +13,7 @@ import 'package:pilll/entity/pill_sheet_group.codegen.dart';
 import 'package:pilll/entity/pill_sheet_type.dart';
 import 'package:pilll/entity/setting.codegen.dart';
 import 'package:pilll/service/auth.dart';
+import 'package:pilll/service/local_notification.dart';
 import 'package:pilll/service/local_notification_schedule.dart';
 import 'package:pilll/service/pill_sheet.dart';
 import 'package:pilll/service/pill_sheet_group.dart';
@@ -156,6 +157,7 @@ class InitialSettingStateStore extends StateNotifier<InitialSettingState> {
     final setting = state.buildSetting();
     _settingService.updateWithBatch(batch, setting);
 
+    LocalNotificationScheduleCollection? localNotificationScheduleCollection;
     final todayPillNumber = state.todayPillNumber;
     if (todayPillNumber != null) {
       final createdPillSheets = _pillSheetService.register(
@@ -186,7 +188,7 @@ class InitialSettingStateStore extends StateNotifier<InitialSettingState> {
       );
       _pillSheetModifiedHistoryService.add(batch, history);
 
-      final localNotificationScheduleCollection =
+      localNotificationScheduleCollection =
           LocalNotificationScheduleCollection.reminderNotification(
         reminderNotificationLocalNotificationScheduleCollection: [],
         pillSheetGroup: pillSheetGroup,
@@ -202,6 +204,14 @@ class InitialSettingStateStore extends StateNotifier<InitialSettingState> {
     }
 
     await batch.commit();
+
+    if (localNotificationScheduleCollection != null) {
+      await localNotification.scheduleRemiderNotification(
+        localNotificationScheduleCollection:
+            localNotificationScheduleCollection,
+        isTrialOrPremium: true,
+      );
+    }
 
     await _userService.trial(setting);
   }

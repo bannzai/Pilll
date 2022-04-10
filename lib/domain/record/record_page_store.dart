@@ -3,6 +3,7 @@ import 'dart:math';
 
 import 'package:pilll/database/batch.dart';
 import 'package:pilll/domain/record/util/take.dart';
+import 'package:pilll/entity/local_notification_schedule.codegen.dart';
 import 'package:pilll/entity/pill_mark_type.dart';
 import 'package:pilll/entity/pill_sheet.codegen.dart';
 import 'package:pilll/entity/pill_sheet_group.codegen.dart';
@@ -10,6 +11,8 @@ import 'package:pilll/entity/pill_sheet_type.dart';
 import 'package:pilll/entity/setting.codegen.dart';
 import 'package:pilll/native/legacy.dart';
 import 'package:pilll/service/auth.dart';
+import 'package:pilll/service/local_notification.dart';
+import 'package:pilll/service/local_notification_schedule.dart';
 import 'package:pilll/service/pill_sheet.dart';
 import 'package:pilll/domain/record/record_page_state.codegen.dart';
 import 'package:pilll/service/pill_sheet_group.dart';
@@ -23,15 +26,17 @@ import 'package:shared_preferences/shared_preferences.dart';
 
 final recordPageStoreProvider =
     StateNotifierProvider<RecordPageStore, RecordPageState>(
-        (ref) => RecordPageStore(
-              ref.watch(batchFactoryProvider),
-              ref.watch(pillSheetServiceProvider),
-              ref.watch(settingServiceProvider),
-              ref.watch(userServiceProvider),
-              ref.watch(authServiceProvider),
-              ref.watch(pillSheetModifiedHistoryServiceProvider),
-              ref.watch(pillSheetGroupServiceProvider),
-            ));
+  (ref) => RecordPageStore(
+    ref.watch(batchFactoryProvider),
+    ref.watch(pillSheetServiceProvider),
+    ref.watch(settingServiceProvider),
+    ref.watch(userServiceProvider),
+    ref.watch(authServiceProvider),
+    ref.watch(pillSheetModifiedHistoryServiceProvider),
+    ref.watch(pillSheetGroupServiceProvider),
+    ref.watch(localNotificationScheduleCollectionServiceProvider),
+  ),
+);
 
 class RecordPageStore extends StateNotifier<RecordPageState> {
   final BatchFactory _batchFactory;
@@ -41,6 +46,8 @@ class RecordPageStore extends StateNotifier<RecordPageState> {
   final AuthService _authService;
   final PillSheetModifiedHistoryService _pillSheetModifiedHistoryService;
   final PillSheetGroupService _pillSheetGroupService;
+  final LocalNotificationScheduleCollectionService
+      _localNotificationScheduleCollectionService;
   RecordPageStore(
     this._batchFactory,
     this._pillSheetService,
@@ -49,6 +56,7 @@ class RecordPageStore extends StateNotifier<RecordPageState> {
     this._authService,
     this._pillSheetModifiedHistoryService,
     this._pillSheetGroupService,
+    this._localNotificationScheduleCollectionService,
   ) : super(const RecordPageState()) {
     reset();
   }
@@ -210,6 +218,25 @@ class RecordPageStore extends StateNotifier<RecordPageState> {
     _pillSheetModifiedHistoryService.add(batch, history);
 
     _settingService.updateWithBatch(batch, setting);
+
+    final currentLocalNotificationScheduleCollection =
+        await _localNotificationScheduleCollectionService
+            .fetchReminderNotification();
+    final newLocalNotificationScheduleCollection =
+        LocalNotificationScheduleCollection.reminderNotification(
+      reminderNotificationLocalNotificationScheduleCollection:
+          currentLocalNotificationScheduleCollection?.schedules ?? [],
+      pillSheetGroup: createdPillSheetGroup,
+      activedPillSheet: createdPillSheetGroup.activedPillSheet!,
+      isTrialOrPremium: state.isTrial || state.isPremium,
+      setting: setting,
+      tzFrom: now().tzDate(),
+    );
+    await localNotification.scheduleRemiderNotification(
+      localNotificationScheduleCollection:
+          newLocalNotificationScheduleCollection,
+      isTrialOrPremium: state.isTrial || state.isPremium,
+    );
 
     return batch.commit();
   }
