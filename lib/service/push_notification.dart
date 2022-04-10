@@ -4,6 +4,7 @@ import 'dart:io';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:pilll/analytics.dart';
 import 'package:pilll/database/database.dart';
+import 'package:pilll/service/local_notification.dart';
 import 'package:pilll/service/user.dart';
 import 'package:firebase_messaging/firebase_messaging.dart';
 
@@ -50,5 +51,5 @@ void callRegisterRemoteNotification() {
 }
 
 Future<void> onBackgroundMessage(RemoteMessage message) async {
-  // await localNotification.test();
+  await localNotification.test();
 }
