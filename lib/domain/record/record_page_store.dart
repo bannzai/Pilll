@@ -578,6 +578,20 @@ class RecordPageStore extends StateNotifier<RecordPageState> {
       ),
     );
     await batch.commit();
+
+    final localNotificationScheduleCollection =
+        LocalNotificationScheduleCollection.reminderNotification(
+      reminderNotificationLocalNotificationScheduleCollection: [],
+      pillSheetGroup: pillSheetGroup,
+      activedPillSheet: activedPillSheet,
+      isTrialOrPremium: state.isTrial || state.isPremium,
+      setting: state.setting!,
+      tzFrom: now().tzDate(),
+    );
+    await localNotification.scheduleRemiderNotification(
+      localNotificationScheduleCollection: localNotificationScheduleCollection,
+      isTrialOrPremium: state.isTrial || state.isPremium,
+    );
   }
 
   switchingAppearanceMode(PillSheetAppearanceMode mode) {
