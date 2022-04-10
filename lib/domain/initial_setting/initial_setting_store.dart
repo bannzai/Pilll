@@ -8,10 +8,12 @@ import 'package:pilll/database/batch.dart';
 import 'package:pilll/database/database.dart';
 import 'package:pilll/domain/initial_setting/initial_setting_state.codegen.dart';
 import 'package:pilll/entity/link_account_type.dart';
+import 'package:pilll/entity/local_notification_schedule.codegen.dart';
 import 'package:pilll/entity/pill_sheet_group.codegen.dart';
 import 'package:pilll/entity/pill_sheet_type.dart';
 import 'package:pilll/entity/setting.codegen.dart';
 import 'package:pilll/service/auth.dart';
+import 'package:pilll/service/local_notification_schedule.dart';
 import 'package:pilll/service/pill_sheet.dart';
 import 'package:pilll/service/pill_sheet_group.dart';
 import 'package:pilll/service/pill_sheet_modified_history.dart';
@@ -31,6 +33,7 @@ final initialSettingStoreProvider = StateNotifierProvider.autoDispose<
     ref.watch(pillSheetModifiedHistoryServiceProvider),
     ref.watch(pillSheetGroupServiceProvider),
     ref.watch(authServiceProvider),
+    ref.watch(localNotificationScheduleCollectionServiceProvider),
   ),
 );
 
@@ -45,6 +48,8 @@ class InitialSettingStateStore extends StateNotifier<InitialSettingState> {
   final PillSheetModifiedHistoryService _pillSheetModifiedHistoryService;
   final PillSheetGroupService _pillSheetGroupService;
   final AuthService _authService;
+  final LocalNotificationScheduleCollectionService
+      _localNotificationScheduleCollectionService;
 
   InitialSettingStateStore(
     this._userService,
@@ -54,6 +59,7 @@ class InitialSettingStateStore extends StateNotifier<InitialSettingState> {
     this._pillSheetModifiedHistoryService,
     this._pillSheetGroupService,
     this._authService,
+    this._localNotificationScheduleCollectionService,
   ) : super(const InitialSettingState());
 
   StreamSubscription? _authServiceCanceller;
@@ -147,6 +153,9 @@ class InitialSettingStateStore extends StateNotifier<InitialSettingState> {
 
     final batch = _batchFactory.batch();
 
+    final setting = state.buildSetting();
+    _settingService.updateWithBatch(batch, setting);
+
     final todayPillNumber = state.todayPillNumber;
     if (todayPillNumber != null) {
       final createdPillSheets = _pillSheetService.register(
@@ -161,7 +170,7 @@ class InitialSettingStateStore extends StateNotifier<InitialSettingState> {
       );
 
       final pillSheetIDs = createdPillSheets.map((e) => e.id!).toList();
-      final createdPillSheetGroup = _pillSheetGroupService.register(
+      final pillSheetGroup = _pillSheetGroupService.register(
         batch,
         PillSheetGroup(
           pillSheetIDs: pillSheetIDs,
@@ -173,13 +182,24 @@ class InitialSettingStateStore extends StateNotifier<InitialSettingState> {
       final history = PillSheetModifiedHistoryServiceActionFactory
           .createCreatedPillSheetAction(
         pillSheetIDs: pillSheetIDs,
-        pillSheetGroupID: createdPillSheetGroup.id,
+        pillSheetGroupID: pillSheetGroup.id,
       );
       _pillSheetModifiedHistoryService.add(batch, history);
-    }
 
-    final setting = state.buildSetting();
-    _settingService.updateWithBatch(batch, setting);
+      final localNotificationScheduleCollection =
+          LocalNotificationScheduleCollection.reminderNotification(
+        reminderNotificationLocalNotificationScheduleCollection: [],
+        pillSheetGroup: pillSheetGroup,
+        activedPillSheet: pillSheetGroup.activedPillSheet!,
+        isTrialOrPremium: true,
+        setting: setting,
+        tzFrom: now().tzDate(),
+      );
+      _localNotificationScheduleCollectionService.updateWithBatch(
+        batch,
+        localNotificationScheduleCollection,
+      );
+    }
 
     await batch.commit();
 
