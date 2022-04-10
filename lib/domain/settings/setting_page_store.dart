@@ -228,7 +228,7 @@ class SettingStateStore extends StateNotifier<SettingState> {
     state = state.copyWith(setting: setting);
   }
 
-  Future<void> deletePillSheet() {
+  Future<void> deletePillSheet() async {
     final pillSheetGroup = state.latestPillSheetGroup;
     if (pillSheetGroup == null) {
       throw const FormatException("pill sheet group not found");
@@ -249,7 +249,17 @@ class SettingStateStore extends StateNotifier<SettingState> {
     _pillSheetGroupService.delete(
         batch, pillSheetGroup.replaced(updatedPillSheet));
 
-    return batch.commit();
+    await batch.commit();
+
+    final localNotificationScheduleCollection =
+        await _localNotificationScheduleCollectionService
+            .fetchReminderNotification();
+    if (localNotificationScheduleCollection != null) {
+      await localNotification.cancelScheduledRemiderNotification(
+        localNotificationScheduleCollection:
+            localNotificationScheduleCollection,
+      );
+    }
   }
 
   Future<SettingState> modifiyIsAutomaticallyCreatePillSheet(bool isOn) {
