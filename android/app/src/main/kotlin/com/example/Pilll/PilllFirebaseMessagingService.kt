@@ -26,7 +26,7 @@ public class PilllFirebaseMessagingService: FirebaseMessagingService() {
         val mainActivityIntent = Intent(this, MainActivity::class.java).also {
             it.flags = Intent.FLAG_ACTIVITY_NEW_TASK
         }
-        val openAppPendingIntent = PendingIntent.getActivity( this,1, mainActivityIntent, PendingIntent.FLAG_CANCEL_CURRENT)
+        val openAppPendingIntent = PendingIntent.getActivity(this,1, mainActivityIntent, PendingIntent.FLAG_CANCEL_CURRENT)
         val title = data["title"]
         val body = data["body"]
         val builder = NotificationCompat.Builder(this, "PILL_REMINDER")
