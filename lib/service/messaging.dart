@@ -13,10 +13,4 @@ class Messaging {
       sound: true,
     );
   }
-
-  void listenNotificationEvents() {
-    
-  }
 }
-
-final messaging = Messaging();
