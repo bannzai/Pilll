@@ -30,14 +30,14 @@ public class PilllFirebaseMessagingService: FirebaseMessagingService() {
         val title = data["title"]
         val body = data["body"]
         val builder = NotificationCompat.Builder(this, "PILL_REMINDER")
-                .setSmallIcon(R.mipmap.ic_launcher)
-                .setLargeIcon(BitmapFactory.decodeResource(resources,
-                        R.mipmap.ic_launcher))
-                .setContentTitle(title)
-                .setContentText(body)
-                .setPriority(NotificationCompat.PRIORITY_DEFAULT)
-                .setAutoCancel(true)
-                .setContentIntent(openAppPendingIntent)
+            .setSmallIcon(R.mipmap.ic_launcher)
+            .setLargeIcon(BitmapFactory.decodeResource(resources,
+                R.mipmap.ic_launcher))
+            .setContentTitle(title)
+            .setContentText(body)
+            .setPriority(NotificationCompat.PRIORITY_DEFAULT)
+            .setContentIntent(openAppPendingIntent)
+            .setAutoCancel(true)
 
         if (data["action"] == "PILL_REMINDER") {
             val intent = Intent(this, BroadCastActionReceiver::class.java).apply {
