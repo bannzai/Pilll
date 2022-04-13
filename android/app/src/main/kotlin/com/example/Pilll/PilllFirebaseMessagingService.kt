@@ -33,7 +33,7 @@ public class PilllFirebaseMessagingService: FirebaseMessagingService() {
             .setSmallIcon(R.mipmap.ic_launcher)
             .setLargeIcon(BitmapFactory.decodeResource(resources,
                 R.mipmap.ic_launcher))
-            .setContentTitle(title + "y")
+            .setContentTitle(title)
             .setContentText(body)
             .setPriority(NotificationCompat.PRIORITY_DEFAULT)
             .setContentIntent(openAppPendingIntent)
