@@ -23,6 +23,10 @@ public class PilllFirebaseMessagingService: FirebaseMessagingService() {
     fun send( data: Map<String, String>) {
         Log.d("android message: ", "send")
 
+        val mainActivityIntent = Intent(this, MainActivity::class.java).also {
+            it.flags = Intent.FLAG_ACTIVITY_NEW_TASK
+        }
+        val openAppPendingIntent = PendingIntent.getActivity( this,0, mainActivityIntent, 0)
         val title = data["title"]
         val body = data["body"]
         val builder = NotificationCompat.Builder(this, "PILL_REMINDER")
@@ -33,6 +37,7 @@ public class PilllFirebaseMessagingService: FirebaseMessagingService() {
                 .setContentText(body)
                 .setPriority(NotificationCompat.PRIORITY_DEFAULT)
                 .setAutoCancel(true)
+                .setContentIntent(openAppPendingIntent)
 
         if (data["action"] == "PILL_REMINDER") {
             val intent = Intent(this, BroadCastActionReceiver::class.java).apply {
