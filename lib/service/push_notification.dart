@@ -2,11 +2,16 @@ import 'dart:async';
 import 'dart:io';
 
 import 'package:firebase_auth/firebase_auth.dart';
+import 'package:firebase_core/firebase_core.dart';
 import 'package:pilll/analytics.dart';
 import 'package:pilll/database/database.dart';
+import 'package:pilll/entity/local_notification_schedule.codegen.dart';
 import 'package:pilll/service/local_notification.dart';
+import 'package:pilll/service/local_notification_schedule.dart';
+import 'package:pilll/service/pill_sheet_group.dart';
 import 'package:pilll/service/user.dart';
 import 'package:firebase_messaging/firebase_messaging.dart';
+import 'package:pilll/util/datetime/day.dart';
 
 Future<void> requestNotificationPermissions() async {
   final firebaseUser = FirebaseAuth.instance.currentUser;
@@ -51,5 +56,64 @@ void callRegisterRemoteNotification() {
 }
 
 Future<void> onBackgroundMessage(RemoteMessage message) async {
-  await localNotification.test();
+  final title = message.data["title"];
+  final body = message.data["body"];
+  final notificationType = message.data["notificationType"];
+  if (title == null || body == null || notificationType == null) {
+    return;
+  }
+
+  switch (notificationType) {
+    case "CREATE_NEW_PILL_SHEET":
+      if (Firebase.apps.isEmpty) {
+        await Firebase.initializeApp();
+      }
+      final firebaseUser = FirebaseAuth.instance.currentUser;
+      if (firebaseUser == null) {
+        return;
+      }
+
+      final database = DatabaseConnection(firebaseUser.uid);
+      final userService = UserService(database);
+      final pillSheetGroupService = PillSheetGroupService(database);
+
+      final user = await userService.fetch();
+      final setting = user.setting;
+      final pillSheetGroup = await pillSheetGroupService.fetchLatest();
+      final activedPillSheet = pillSheetGroup?.activedPillSheet;
+      if (pillSheetGroup == null ||
+          activedPillSheet == null ||
+          setting == null) {
+        return;
+      }
+
+      final isTrialOrPremium = user.isTrial || user.isPremium;
+      final localNotificationScheduleCollection =
+          LocalNotificationScheduleCollection.reminderNotification(
+        reminderNotificationLocalNotificationScheduleCollection: [],
+        pillSheetGroup: pillSheetGroup,
+        activedPillSheet: activedPillSheet,
+        isTrialOrPremium: isTrialOrPremium,
+        setting: setting,
+        tzFrom: now().tzDate(),
+      );
+      await localNotification.scheduleRemiderNotification(
+        localNotificationScheduleCollection:
+            localNotificationScheduleCollection,
+        isTrialOrPremium: isTrialOrPremium,
+      );
+
+      final localNotificationScheduleCollectionService =
+          LocalNotificationScheduleCollectionService(database);
+      await localNotificationScheduleCollectionService
+          .update(localNotificationScheduleCollection);
+
+      localNotification.fireCreateNewPillSheetNotification(
+        title: title,
+        body: body,
+      );
+      break;
+    default:
+      return;
+  }
 }
