@@ -55,6 +55,30 @@ class LocalNotification {
     );
   }
 
+  Future<void> fireCreateNewPillSheetNotification({
+    required String title,
+    required String body,
+  }) async {
+    await plugin.show(
+      createNewPillSheetNotificationIdentifierOffset,
+      title,
+      body,
+      const NotificationDetails(
+        android: AndroidNotificationDetails(
+          "AndroidCreateNewPillSheetChannelID",
+          "新しいシート作成の通知",
+          setAsGroupSummary: true,
+          groupKey: AndroidReminderNotificationGroupKey,
+          category: AndroidNotificationCategory,
+        ),
+        iOS: DarwinNotificationDetails(
+          sound: "becho.caf",
+          presentSound: true,
+        ),
+      ),
+    );
+  }
+
   Future<void> scheduleRemiderNotification({
     required LocalNotificationScheduleCollection
         localNotificationScheduleCollection,
