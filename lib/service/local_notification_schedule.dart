@@ -5,11 +5,11 @@ import 'package:pilll/database/database.dart';
 import 'package:pilll/entity/local_notification_schedule.codegen.dart';
 import 'package:riverpod/riverpod.dart';
 
-final localNotificationScheduleCollectionServiceProvider = Provider((ref) =>
-    LocalNotificationScheduleCollectionService(
-        ref.watch(databaseProvider),
-        ref.watch(
-            localNotificationScheduleCollectionServiceStreamProvider.stream)));
+final localNotificationScheduleCollectionServiceProvider = Provider(
+  (ref) => LocalNotificationScheduleCollectionService(
+    ref.watch(databaseProvider),
+  ),
+);
 
 final localNotificationScheduleCollectionServiceStreamProvider =
     StreamProvider<List<LocalNotificationScheduleCollection>>((ref) => ref
@@ -18,8 +18,7 @@ final localNotificationScheduleCollectionServiceStreamProvider =
 
 class LocalNotificationScheduleCollectionService {
   final DatabaseConnection _database;
-  final Stream<List<LocalNotificationScheduleCollection>> _stream;
-  LocalNotificationScheduleCollectionService(this._database, this._stream);
+  LocalNotificationScheduleCollectionService(this._database);
 
   Future<LocalNotificationScheduleCollection?> fetchReminderNotification() {
     return _database
@@ -29,14 +28,19 @@ class LocalNotificationScheduleCollectionService {
         .then((e) => e.data());
   }
 
-  Stream<List<LocalNotificationScheduleCollection>> stream(
-      LocalNotificationScheduleKind kind) {
-    return _stream.map(
-        (event) => event.where((element) => element.kind == kind).toList());
-  }
-
   Future<void> updateWithBatch(
       WriteBatch batch,
+      LocalNotificationScheduleCollection
+          localNotificationScheduleCollection) async {
+    batch.set(
+      _database.localNotificationScheduleCollection(
+          localNotificationScheduleCollection.kind),
+      localNotificationScheduleCollection,
+      SetOptions(merge: true),
+    );
+  }
+
+  Future<void> update(
       LocalNotificationScheduleCollection
           localNotificationScheduleCollection) async {
     await _database
