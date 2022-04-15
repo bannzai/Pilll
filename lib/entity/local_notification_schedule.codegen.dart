@@ -29,7 +29,12 @@ abstract class LocalNotificationScheduleFirestoreField {
 }
 
 // Concrete identifier offsets
-const reminderNotificationIdentifierOffset = 1 * 10000000;
+const notificationIdentifierOffsetBase = 10000000;
+const createNewPillSheetNotificationIdentifierOffset =
+    1 * notificationIdentifierOffsetBase;
+// Keep Last. Reminder Notification is most frequency.
+const reminderNotificationIdentifierOffset =
+    10 * notificationIdentifierOffsetBase;
 
 @freezed
 class LocalNotificationSchedule with _$LocalNotificationSchedule {
