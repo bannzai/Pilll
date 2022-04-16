@@ -62,7 +62,7 @@ class _HomePageState extends State<HomePage>
                 Border(top: BorderSide(width: 1, color: PilllColors.border)),
           ),
           child: Ink(
-            color: PilllColors.bottomBar,
+            color: Color.fromARGB(255, 222, 211, 211),
             child: SafeArea(
               child: TabBar(
                 controller: _tabController,
