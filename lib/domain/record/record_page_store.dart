@@ -482,7 +482,7 @@ class RecordPageStore extends StateNotifier<RecordPageState> {
     state = state.copyWith(setting: updatedSetting);
   }
 
-  Future<void> beginResting({
+  Future<void> beginRestDuration({
     required PillSheetGroup pillSheetGroup,
     required PillSheet activedPillSheet,
   }) async {
@@ -512,7 +512,7 @@ class RecordPageStore extends StateNotifier<RecordPageState> {
     await batch.commit();
   }
 
-  Future<void> endResting({
+  Future<void> endRestDuration({
     required PillSheetGroup pillSheetGroup,
     required PillSheet activedPillSheet,
     required RestDuration restDuration,
