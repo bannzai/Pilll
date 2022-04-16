@@ -7,12 +7,9 @@ part 'setting_today_pill_number_state.codegen.freezed.dart';
 class SettingTodayPillNumberState with _$SettingTodayPillNumberState {
   const SettingTodayPillNumberState._();
   const factory SettingTodayPillNumberState({
-    required Setting? setting,
     @Default(0) int selectedPillSheetPageIndex,
     @Default(0) int selectedPillMarkNumberIntoPillSheet,
     required PillSheetAppearanceMode appearanceMode,
-    required bool isTrial,
-    required bool isPremium,
   }) = _SettingTodayPillNumberState;
 
   int? selectedTodayPillNumberIntoPillSheet(int pageIndex) {

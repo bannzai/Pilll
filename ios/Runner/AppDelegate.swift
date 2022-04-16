@@ -1,7 +1,6 @@
 import UIKit
 import ObjectiveC
 import Flutter
-import flutter_local_notifications
 import HealthKit
 
 @UIApplicationMain
@@ -98,15 +97,12 @@ import HealthKit
         DispatchQueue.main.asyncAfter(deadline: .now() + 1) {
             self.migrateFrom_1_3_2()
         }
-//        configureNotificationActionableButtons()
-//        UNUserNotificationCenter.current().swizzle()
+        configureNotificationActionableButtons()
+        UNUserNotificationCenter.current().swizzle()
         UNUserNotificationCenter.current().removeDeliveredNotifications(withIdentifiers: ["repeat_notification_for_taken_pill", "remind_notification_for_taken_pill"])
         UNUserNotificationCenter.current().removePendingNotificationRequests(withIdentifiers: ["repeat_notification_for_taken_pill", "remind_notification_for_taken_pill"])
         UNUserNotificationCenter.current().delegate = self as UNUserNotificationCenterDelegate
         GeneratedPluginRegistrant.register(with: self)
-        FlutterLocalNotificationsPlugin.setPluginRegistrantCallback { (registry) in
-            GeneratedPluginRegistrant.register(with: registry)
-        }
         return super.application(application, didFinishLaunchingWithOptions: launchOptions)
     }
 }
@@ -165,34 +161,34 @@ extension AppDelegate {
     }
 
 
-//    override func userNotificationCenter(_ center: UNUserNotificationCenter, didReceive response: UNNotificationResponse, withCompletionHandler completionHandler: @escaping () -> Void) {
-//        func end() {
-//            var isCompleted: Bool = false
-//            let completionHandlerWrapper = {
-//                isCompleted = true
-//                completionHandler()
-//            }
-//
-//            super.userNotificationCenter(center, didReceive: response, withCompletionHandler: completionHandlerWrapper)
-//
-//            if !isCompleted {
-//                completionHandlerWrapper()
-//            }
-//        }
-//
-//        switch extractCategory(userInfo: response.notification.request.content.userInfo) {
-//        case nil:
-//            return
-//        case .pillReminder:
-//            switch response.actionIdentifier {
-//            case "RECORD_PILL":
-//                invokeFlutterMethod(method: "recordPill", arguments: nil)
-//                end()
-//            default:
-//                end()
-//            }
-//        }
-//    }
+    override func userNotificationCenter(_ center: UNUserNotificationCenter, didReceive response: UNNotificationResponse, withCompletionHandler completionHandler: @escaping () -> Void) {
+        func end() {
+            var isCompleted: Bool = false
+            let completionHandlerWrapper = {
+                isCompleted = true
+                completionHandler()
+            }
+
+            super.userNotificationCenter(center, didReceive: response, withCompletionHandler: completionHandlerWrapper)
+
+            if !isCompleted {
+                completionHandlerWrapper()
+            }
+        }
+
+        switch extractCategory(userInfo: response.notification.request.content.userInfo) {
+        case nil:
+            return
+        case .pillReminder:
+            switch response.actionIdentifier {
+            case "RECORD_PILL":
+                invokeFlutterMethod(method: "recordPill", arguments: nil)
+                end()
+            default:
+                end()
+            }
+        }
+    }
 
     enum Category: String {
         case pillReminder = "PILL_REMINDER"

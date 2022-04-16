@@ -53,15 +53,11 @@ class PillSheetRemoveRow extends HookConsumerWidget {
                 AlertButton(
                   text: "破棄する",
                   onPressed: () async {
-                    try {
-                      await store.deletePillSheet();
-                    } catch (error) {
-                      if (error is PillSheetIsNotExists) {
-                        showErrorAlert(context,
-                            message:
-                                "ピルシートがすでに削除されています。表示等に問題がある場合は設定タブから「お問い合わせ」ください");
-                      }
-                    }
+                    store.deletePillSheet().catchError((error) {
+                      showErrorAlert(context,
+                          message:
+                              "ピルシートがすでに削除されています。表示等に問題がある場合は設定タブから「お問い合わせ」ください");
+                    }, test: (error) => error is PillSheetIsNotExists);
                     Navigator.of(context).pop();
                   },
                 ),

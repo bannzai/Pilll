@@ -3,7 +3,6 @@ import 'package:pilll/components/atoms/color.dart';
 import 'package:pilll/components/atoms/font.dart';
 import 'package:pilll/components/atoms/text_color.dart';
 import 'package:pilll/domain/record/components/header/today_taken_pill_number.dart';
-import 'package:pilll/domain/record/record_page_state.codegen.dart';
 import 'package:pilll/domain/record/record_page_store.dart';
 import 'package:pilll/domain/settings/today_pill_number/setting_today_pill_number_page.dart';
 import 'package:pilll/entity/pill_sheet_group.codegen.dart';
@@ -19,14 +18,12 @@ class RecordPageInformationHeader extends StatelessWidget {
   final DateTime today;
   final PillSheetGroup? pillSheetGroup;
   final Setting setting;
-  final RecordPageState state;
   final RecordPageStore store;
   const RecordPageInformationHeader({
     Key? key,
     required this.today,
     required this.pillSheetGroup,
     required this.setting,
-    required this.state,
     required this.store,
   }) : super(key: key);
 
@@ -68,11 +65,8 @@ class RecordPageInformationHeader extends StatelessWidget {
                         !pillSheetGroup.isDeactived) {
                       Navigator.of(context).push(
                         SettingTodayPillNumberPageRoute.route(
-                          setting: setting,
                           pillSheetGroup: pillSheetGroup,
                           activedPillSheet: activedPillSheet,
-                          isTrial: state.isTrial,
-                          isPremium: state.isPremium,
                         ),
                       );
                     }

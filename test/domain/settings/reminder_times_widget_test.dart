@@ -80,6 +80,7 @@ void main() {
           pillSheetIDs: ["1"], pillSheets: [pillSheet], createdAt: now());
       when(pillSheetGroupService.streamForLatest()).thenAnswer(
           (realInvocation) => Stream.fromIterable([pillSheetGroup]));
+
       final batchFactory = MockBatchFactory();
       final pillSheetModifiedService = MockPillSheetModifiedHistoryService();
 

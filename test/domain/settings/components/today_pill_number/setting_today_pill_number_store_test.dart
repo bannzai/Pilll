@@ -88,9 +88,6 @@ void main() {
         ],
       );
       final parameter = SettingTodayPillNumberStoreParameter(
-        setting: null,
-        isTrial: false,
-        isPremium: false,
         appearanceMode: PillSheetAppearanceMode.number,
         pillSheetGroup: pillSheetGroup,
         activedPillSheet: pillSheet,
@@ -175,9 +172,6 @@ void main() {
         ],
       );
       final parameter = SettingTodayPillNumberStoreParameter(
-        setting: null,
-        isTrial: false,
-        isPremium: false,
         appearanceMode: PillSheetAppearanceMode.number,
         pillSheetGroup: pillSheetGroup,
         activedPillSheet: pillSheet,
@@ -289,9 +283,6 @@ void main() {
         ],
       );
       final parameter = SettingTodayPillNumberStoreParameter(
-        setting: null,
-        isTrial: false,
-        isPremium: false,
         appearanceMode: PillSheetAppearanceMode.number,
         pillSheetGroup: pillSheetGroup,
         activedPillSheet: middle,
@@ -403,9 +394,6 @@ void main() {
         ],
       );
       final parameter = SettingTodayPillNumberStoreParameter(
-        setting: null,
-        isTrial: false,
-        isPremium: false,
         appearanceMode: PillSheetAppearanceMode.number,
         pillSheetGroup: pillSheetGroup,
         activedPillSheet: middle,
@@ -518,9 +506,6 @@ void main() {
         ],
       );
       final parameter = SettingTodayPillNumberStoreParameter(
-        setting: null,
-        isTrial: false,
-        isPremium: false,
         appearanceMode: PillSheetAppearanceMode.number,
         pillSheetGroup: pillSheetGroup,
         activedPillSheet: middle,
@@ -641,9 +626,6 @@ void main() {
         ],
       );
       final parameter = SettingTodayPillNumberStoreParameter(
-        setting: null,
-        isTrial: false,
-        isPremium: false,
         appearanceMode: PillSheetAppearanceMode.number,
         pillSheetGroup: pillSheetGroup,
         activedPillSheet: middle,

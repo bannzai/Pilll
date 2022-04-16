@@ -496,11 +496,11 @@ class MockRecordPageStore extends _i1.Mock implements _i24.RecordPageStore {
   dynamic removePillSheetType(int? index, _i3.Setting? setting) => super
       .noSuchMethod(Invocation.method(#removePillSheetType, [index, setting]));
   @override
-  _i16.Future<void> beginRestDuration(
+  _i16.Future<void> beginResting(
           {_i10.PillSheetGroup? pillSheetGroup,
           _i2.PillSheet? activedPillSheet}) =>
       (super.noSuchMethod(
-              Invocation.method(#beginRestDuration, [], {
+              Invocation.method(#beginResting, [], {
                 #pillSheetGroup: pillSheetGroup,
                 #activedPillSheet: activedPillSheet
               }),
@@ -508,12 +508,12 @@ class MockRecordPageStore extends _i1.Mock implements _i24.RecordPageStore {
               returnValueForMissingStub: Future<void>.value())
           as _i16.Future<void>);
   @override
-  _i16.Future<void> endRestDuration(
+  _i16.Future<void> endResting(
           {_i10.PillSheetGroup? pillSheetGroup,
           _i2.PillSheet? activedPillSheet,
           _i2.RestDuration? restDuration}) =>
       (super.noSuchMethod(
-              Invocation.method(#endRestDuration, [], {
+              Invocation.method(#endResting, [], {
                 #pillSheetGroup: pillSheetGroup,
                 #activedPillSheet: activedPillSheet,
                 #restDuration: restDuration
