@@ -187,6 +187,7 @@ class LocalNotification {
             );
           } else {
             final title = "💊の時間です";
+            await plugin.cancel(notificationID);
             await plugin.zonedSchedule(
               notificationID,
               title,
