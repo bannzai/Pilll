@@ -1,6 +1,7 @@
 import 'dart:async';
 import 'dart:math';
 
+import 'package:flutter/foundation.dart';
 import 'package:flutter_local_notifications/flutter_local_notifications.dart';
 import 'package:pilll/entity/pill_sheet.codegen.dart';
 import 'package:pilll/entity/pill_sheet_group.codegen.dart';
@@ -213,6 +214,8 @@ class LocalNotification {
         }
       }
     }
+
+    debugPrint("end scheduleRemiderNotification: ${setting.reminderTimes}");
   }
 
   Future<void> cancelAllScheduledRemiderNotification() async {
