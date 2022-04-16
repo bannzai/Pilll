@@ -103,8 +103,6 @@ void main() {
           .thenAnswer((realInvocation) => Future.value(pillSheetGroup));
       when(pillSheetGroupService.streamForLatest())
           .thenAnswer((realInvocation) => const Stream.empty());
-      final localNotificationScheduleCollectionService =
-          MockLocalNotificationScheduleCollectionService();
 
       final store = RecordPageStore(
         batch,
@@ -114,7 +112,6 @@ void main() {
         authService,
         pillSheetModifedHistoryService,
         pillSheetGroupService,
-        localNotificationScheduleCollectionService,
       );
 
       await waitForResetStoreState();
@@ -182,8 +179,6 @@ void main() {
           .thenAnswer((realInvocation) => Future.value(pillSheetGroup));
       when(pillSheetGroupService.streamForLatest())
           .thenAnswer((realInvocation) => const Stream.empty());
-      final localNotificationScheduleCollectionService =
-          MockLocalNotificationScheduleCollectionService();
 
       final store = RecordPageStore(
         batch,
@@ -193,7 +188,6 @@ void main() {
         authService,
         pillSheetModifedHistoryService,
         pillSheetGroupService,
-        localNotificationScheduleCollectionService,
       );
 
       await waitForResetStoreState();
@@ -263,8 +257,6 @@ void main() {
           .thenAnswer((realInvocation) => Future.value(pillSheetGroup));
       when(pillSheetGroupService.streamForLatest())
           .thenAnswer((realInvocation) => const Stream.empty());
-      final localNotificationScheduleCollectionService =
-          MockLocalNotificationScheduleCollectionService();
 
       final store = RecordPageStore(
         batch,
@@ -274,7 +266,6 @@ void main() {
         authService,
         pillSheetModifedHistoryService,
         pillSheetGroupService,
-        localNotificationScheduleCollectionService,
       );
 
       await waitForResetStoreState();
@@ -339,8 +330,6 @@ void main() {
           .thenAnswer((realInvocation) => Future.value(pillSheetGroup));
       when(pillSheetGroupService.streamForLatest())
           .thenAnswer((realInvocation) => const Stream.empty());
-      final localNotificationScheduleCollectionService =
-          MockLocalNotificationScheduleCollectionService();
 
       final store = RecordPageStore(
         batch,
@@ -350,7 +339,6 @@ void main() {
         authService,
         pillSheetModifedHistoryService,
         pillSheetGroupService,
-        localNotificationScheduleCollectionService,
       );
 
       await waitForResetStoreState();

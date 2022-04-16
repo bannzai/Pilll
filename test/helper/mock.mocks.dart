@@ -23,7 +23,6 @@ import 'package:pilll/domain/record/components/notification_bar/notification_bar
 import 'package:pilll/domain/record/record_page_state.codegen.dart' as _i7;
 import 'package:pilll/domain/record/record_page_store.dart' as _i24;
 import 'package:pilll/entity/diary.codegen.dart' as _i4;
-import 'package:pilll/entity/local_notification_schedule.codegen.dart' as _i36;
 import 'package:pilll/entity/menstruation.codegen.dart' as _i5;
 import 'package:pilll/entity/pill_mark_type.dart' as _i26;
 import 'package:pilll/entity/pill_sheet.codegen.dart' as _i2;
