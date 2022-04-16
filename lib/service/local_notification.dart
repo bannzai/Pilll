@@ -94,8 +94,6 @@ class LocalNotification {
   }
 
   Future<void> scheduleRemiderNotification({
-    required List<LocalNotificationSchedule>
-        reminderNotificationLocalNotificationScheduleCollection,
     required PillSheetGroup pillSheetGroup,
     required PillSheet activedPillSheet,
     required bool isTrialOrPremium,
