@@ -8,7 +8,6 @@ import 'package:pilll/entity/pill_sheet.codegen.dart';
 import 'package:pilll/entity/pill_sheet_group.codegen.dart';
 import 'package:pilll/entity/pill_sheet_type.dart';
 import 'package:pilll/service/local_notification.dart';
-import 'package:pilll/service/local_notification_schedule.dart';
 import 'package:pilll/service/pill_sheet.dart';
 import 'package:pilll/service/pill_sheet_group.dart';
 import 'package:pilll/service/pill_sheet_modified_history.dart';
@@ -24,7 +23,6 @@ final settingTodayPillNumberStoreProvider = StateNotifierProvider.autoDispose
     ref.watch(pillSheetServiceProvider),
     ref.watch(pillSheetGroupServiceProvider),
     ref.watch(pillSheetModifiedHistoryServiceProvider),
-    ref.watch(localNotificationScheduleCollectionServiceProvider),
   ),
 );
 
@@ -34,8 +32,6 @@ class SettingTodayPillNumberStateStore
   final PillSheetService _pillSheetService;
   final PillSheetGroupService _pillSheetGroupService;
   final PillSheetModifiedHistoryService _pillSheetModifiedHistoryService;
-  final LocalNotificationScheduleCollectionService
-      _localNotificationScheduleCollectionService;
 
   SettingTodayPillNumberStateStore(
     SettingTodayPillNumberStoreParameter _parameter,
@@ -43,7 +39,6 @@ class SettingTodayPillNumberStateStore
     this._pillSheetService,
     this._pillSheetGroupService,
     this._pillSheetModifiedHistoryService,
-    this._localNotificationScheduleCollectionService,
   ) : super(
           SettingTodayPillNumberState(
             setting: _parameter.setting,
@@ -132,31 +127,15 @@ class SettingTodayPillNumberStateStore
     _pillSheetGroupService.update(
         batch, pillSheetGroup.copyWith(pillSheets: updatedPillSheets));
 
-    await batch.commit();
-
-    final currentLocalNotificationScheduleCollection =
-        await _localNotificationScheduleCollectionService
-            .fetchReminderNotification();
-    if (currentLocalNotificationScheduleCollection != null) {
-      localNotification.cancelAllScheduledRemiderNotification(
-          localNotificationScheduleCollection:
-              currentLocalNotificationScheduleCollection);
-    }
-
-    final localNotificationScheduleCollection =
-        LocalNotificationScheduleCollection.reminderNotification(
-      reminderNotificationLocalNotificationScheduleCollection:
-          currentLocalNotificationScheduleCollection?.schedules ?? [],
+    await localNotification.scheduleRemiderNotification(
       pillSheetGroup: pillSheetGroup,
       activedPillSheet: activedPillSheet,
       isTrialOrPremium: state.isTrial || state.isPremium,
       setting: state.setting!,
       tzFrom: now().tzDate(),
     );
-    await localNotification.scheduleRemiderNotification(
-      localNotificationScheduleCollection: localNotificationScheduleCollection,
-      isTrialOrPremium: state.isTrial || state.isPremium,
-    );
+
+    await batch.commit();
   }
 }
 
