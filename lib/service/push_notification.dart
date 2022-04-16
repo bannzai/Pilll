@@ -3,6 +3,7 @@ import 'dart:io';
 
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:firebase_core/firebase_core.dart';
+import 'package:flutter/material.dart';
 import 'package:pilll/analytics.dart';
 import 'package:pilll/database/database.dart';
 import 'package:pilll/service/local_notification.dart';
@@ -35,10 +36,8 @@ Future<void> requestNotificationPermissions() async {
 }
 
 void listenNotificationEvents() {
-  FirebaseMessaging.onMessage.listen((event) {
-    print('onMessage: $event');
-  });
-  FirebaseMessaging.onBackgroundMessage(onBackgroundMessage);
+  FirebaseMessaging.onMessage.listen(handleMessage);
+  FirebaseMessaging.onBackgroundMessage(handleMessage);
   FirebaseMessaging.onMessageOpenedApp.listen((event) {
     analytics.logEvent(name: "opened_from_notification_on_background");
     print("onMessageOpenedApp: $event");
@@ -53,7 +52,9 @@ void callRegisterRemoteNotification() {
   }
 }
 
-Future<void> onBackgroundMessage(RemoteMessage message) async {
+Future<void> handleMessage(RemoteMessage message) async {
+  debugPrint("handleMessage: $message");
+
   final title = message.data["title"];
   final body = message.data["body"];
   final notificationType = message.data["notificationType"];

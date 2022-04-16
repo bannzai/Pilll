@@ -38,6 +38,7 @@ class _HomePageState extends State<HomePage>
   @override
   void initState() {
     super.initState();
+
     _tabController = TabController(
         length: HomePageTabType.values.length,
         vsync: this,
@@ -47,6 +48,7 @@ class _HomePageState extends State<HomePage>
     Future(() async {
       await requestNotificationPermissions();
       await localNotification.initialize();
+      listenNotificationEvents();
     });
   }
 
