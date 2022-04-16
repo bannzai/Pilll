@@ -98,7 +98,9 @@ class LocalNotification {
     required tz.TZDateTime tzFrom,
   }) async {
     for (final reminderTime in setting.reminderTimes) {
-      for (final loopIndex in List.generate(10, (index) => index)) {
+      // 新規ピルシートグループの作成後に通知のスケジュールができないため、多めに通知をスケジュールする
+      // ユーザーの何かしらのアクションでどこかでスケジュールされるだろう
+      for (final loopIndex in List.generate(6, (index) => index)) {
         for (final pillSheet in pillSheetGroup.pillSheets) {
           for (var pillIndex = 0;
               pillIndex < pillSheet.typeInfo.totalCount;
