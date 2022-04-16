@@ -6,6 +6,7 @@ import 'package:pilll/components/atoms/color.dart';
 import 'package:pilll/components/atoms/font.dart';
 import 'package:pilll/components/atoms/text_color.dart';
 import 'package:pilll/error/error_alert.dart';
+import 'package:pilll/error_log.dart';
 import 'package:pilll/util/formatter/date_time_formatter.dart';
 import 'package:pilll/util/toolbar/time_picker.dart';
 import 'package:flutter/material.dart';
@@ -175,7 +176,8 @@ class ReminderTimesPage extends HookConsumerWidget {
                 await store.addReminderTimes(
                     ReminderTime(hour: dateTime.hour, minute: dateTime.minute));
               }
-            } catch (error) {
+            } catch (error, stack) {
+              errorLogger.recordError(error, stack);
               showErrorAlert(context,
                   title: "通知時刻の変更に失敗しました",
                   message: "再度お試しください。解決しない場合は設定タブの「お問い合わせ」からお問い合わせください");
