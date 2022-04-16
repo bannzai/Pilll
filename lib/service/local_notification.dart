@@ -1,8 +1,14 @@
 import 'dart:async';
 import 'dart:math';
+import 'package:collection/collection.dart';
+import 'package:flutter/foundation.dart';
 
 import 'package:flutter_local_notifications/flutter_local_notifications.dart';
 import 'package:pilll/entity/local_notification_schedule.codegen.dart';
+import 'package:pilll/entity/pill_sheet.codegen.dart';
+import 'package:pilll/entity/pill_sheet_group.codegen.dart';
+import 'package:pilll/entity/setting.codegen.dart';
+import 'package:pilll/entity/weekday.dart';
 import 'package:pilll/native/pill.dart';
 import 'package:pilll/util/datetime/day.dart';
 import 'package:timezone/data/latest_all.dart' as tz;
@@ -88,76 +94,132 @@ class LocalNotification {
   }
 
   Future<void> scheduleRemiderNotification({
-    required LocalNotificationScheduleCollection
-        localNotificationScheduleCollection,
+    required List<LocalNotificationSchedule>
+        reminderNotificationLocalNotificationScheduleCollection,
+    required PillSheetGroup pillSheetGroup,
+    required PillSheet activedPillSheet,
     required bool isTrialOrPremium,
+    required Setting setting,
+    required tz.TZDateTime tzFrom,
   }) async {
-    assert(localNotificationScheduleCollection.kind ==
-        LocalNotificationScheduleKind.reminderNotification);
+    await cancelAllScheduledRemiderNotification();
 
-    if (isTrialOrPremium) {
-      for (final schedule in localNotificationScheduleCollection.schedules) {
-        await plugin.cancel(schedule.actualLocalNotificationID);
-        await plugin.zonedSchedule(
-          schedule.actualLocalNotificationID,
-          schedule.title,
-          schedule.message,
-          _mappedTZDateTime(schedule.scheduleDateTime),
-          const NotificationDetails(
-            android: AndroidNotificationDetails(
-              AndroidReminderNotificationChannelID,
-              "服用通知",
-              channelShowBadge: true,
-              setAsGroupSummary: true,
-              groupKey: AndroidReminderNotificationGroupKey,
-              category: AndroidNotificationCategory,
-              actions: [
-                AndroidNotificationAction(
-                  AndroidReminderNotificationActionIdentifier,
-                  "飲んだ",
-                )
-              ],
-            ),
-            iOS: DarwinNotificationDetails(
-              categoryIdentifier: iOSQuickRecordPillCategoryIdentifier,
-              presentBadge: true,
-              sound: "becho.caf",
-              presentSound: true,
-            ),
-          ),
-          androidAllowWhileIdle: true,
-          uiLocalNotificationDateInterpretation:
-              UILocalNotificationDateInterpretation.absoluteTime,
-        );
-      }
-    } else {
-      for (final schedule in localNotificationScheduleCollection.schedules) {
-        await plugin.cancel(schedule.actualLocalNotificationID);
-        await plugin.zonedSchedule(
-          schedule.actualLocalNotificationID,
-          schedule.title,
-          schedule.message,
-          _mappedTZDateTime(schedule.scheduleDateTime),
-          const NotificationDetails(
-            android: AndroidNotificationDetails(
-              AndroidReminderNotificationChannelID,
-              "服用通知",
-              channelShowBadge: true,
-              setAsGroupSummary: true,
-              groupKey: AndroidReminderNotificationGroupKey,
-              category: AndroidNotificationCategory,
-            ),
-            iOS: DarwinNotificationDetails(
-              categoryIdentifier: iOSQuickRecordPillCategoryIdentifier,
-              presentBadge: true,
-              sound: "becho.caf",
-              presentSound: true,
-            ),
-          ),
-          androidAllowWhileIdle: true,
-          uiLocalNotificationDateInterpretation:
-              UILocalNotificationDateInterpretation.absoluteTime,
-        );
+    for (final reminderTime in setting.reminderTimes) {
+      for (final pillSheet in pillSheetGroup.pillSheets) {
+        if (pillSheet.groupIndex < activedPillSheet.groupIndex) {
+          continue;
+        }
+        for (var pillIndex = 0;
+            pillIndex < pillSheet.typeInfo.totalCount;
+            pillIndex++) {
+          if (activedPillSheet.groupIndex == pillSheet.groupIndex &&
+              activedPillSheet.todayPillNumber <= pillIndex) {
+            continue;
+          }
+
+          final reminderDate = tzFrom
+              .tzDate()
+              .add(Duration(days: pillIndex))
+              .add(Duration(hours: reminderTime.hour))
+              .add(Duration(minutes: reminderTime.minute));
+
+          // NOTE: LocalNotification must be scheduled at least 3 minutes after the current time (in iOS, Android not confirm).
+          // Delay five minutes just to be sure.
+          if (!reminderDate
+              .add(const Duration(minutes: 5))
+              .isAfter(tzFrom.tzDate())) {
+            continue;
+          }
+
+          final notificationID = () {
+            final beforePillCount = summarizedPillCountWithPillSheetsToEndIndex(
+              pillSheets: pillSheetGroup.pillSheets,
+              endIndex: pillSheet.groupIndex,
+            );
+            return beforePillCount +
+                pillIndex +
+                reminderNotificationIdentifierOffset;
+          }();
+          final message = '';
+
+          if (isTrialOrPremium) {
+            final title = () {
+              var result = setting.reminderNotificationCustomization.word;
+              if (!setting
+                  .reminderNotificationCustomization.isInVisibleReminderDate) {
+                result += " ";
+                result +=
+                    "${reminderDate.month}/${reminderDate.day} (${WeekdayFunctions.weekdayFromDate(reminderDate).weekdayString()})";
+              }
+              if (!setting
+                  .reminderNotificationCustomization.isInVisiblePillNumber) {
+                result += " ";
+                result +=
+                    "${pillSheetPillNumber(pillSheet: pillSheet, targetDate: reminderDate)}番";
+              }
+              return result;
+            }();
+
+            await plugin.zonedSchedule(
+              notificationID,
+              title,
+              message,
+              reminderDate,
+              const NotificationDetails(
+                android: AndroidNotificationDetails(
+                  AndroidReminderNotificationChannelID,
+                  "服用通知",
+                  channelShowBadge: true,
+                  setAsGroupSummary: true,
+                  groupKey: AndroidReminderNotificationGroupKey,
+                  category: AndroidNotificationCategory,
+                  actions: [
+                    AndroidNotificationAction(
+                      AndroidReminderNotificationActionIdentifier,
+                      "飲んだ",
+                    )
+                  ],
+                ),
+                iOS: DarwinNotificationDetails(
+                  categoryIdentifier: iOSQuickRecordPillCategoryIdentifier,
+                  presentBadge: true,
+                  sound: "becho.caf",
+                  presentSound: true,
+                ),
+              ),
+              androidAllowWhileIdle: true,
+              uiLocalNotificationDateInterpretation:
+                  UILocalNotificationDateInterpretation.absoluteTime,
+            );
+          } else {
+            final title = "💊の時間です";
+            await plugin.zonedSchedule(
+              notificationID,
+              title,
+              message,
+              reminderDate,
+              const NotificationDetails(
+                android: AndroidNotificationDetails(
+                  AndroidReminderNotificationChannelID,
+                  "服用通知",
+                  channelShowBadge: true,
+                  setAsGroupSummary: true,
+                  groupKey: AndroidReminderNotificationGroupKey,
+                  category: AndroidNotificationCategory,
+                ),
+                iOS: DarwinNotificationDetails(
+                  categoryIdentifier: iOSQuickRecordPillCategoryIdentifier,
+                  presentBadge: true,
+                  sound: "becho.caf",
+                  presentSound: true,
+                ),
+              ),
+              androidAllowWhileIdle: true,
+              uiLocalNotificationDateInterpretation:
+                  UILocalNotificationDateInterpretation.absoluteTime,
+            );
+          }
+        }
       }
     }
   }
@@ -198,17 +260,6 @@ class LocalNotification {
       uiLocalNotificationDateInterpretation:
           UILocalNotificationDateInterpretation.absoluteTime,
     );
-  }
-
-  // NOTE: tz.TZDateTime.from に渡す値がtz.TZDateTimeだとエラーになる
-  // DateTimeにダウンキャストするとtimezoneが失われてしまうためこの方法は取らない
-  // ここでは、scheduleDateTimeに正しいtz.TZDateTimeが入る想定、もしくはFirsetoreから変換されたDateTimeが入ることを想定している
-  tz.TZDateTime _mappedTZDateTime(DateTime scheduleDateTime) {
-    if (scheduleDateTime is tz.TZDateTime) {
-      return scheduleDateTime;
-    } else {
-      return tz.TZDateTime.from(scheduleDateTime, tz.local);
-    }
   }
 }
 
