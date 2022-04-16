@@ -23,23 +23,28 @@ public class PilllFirebaseMessagingService: FirebaseMessagingService() {
     fun send( data: Map<String, String>) {
         Log.d("android message: ", "send")
 
+        val mainActivityIntent = Intent(this, MainActivity::class.java).also {
+            it.flags = Intent.FLAG_ACTIVITY_NEW_TASK
+        }
+        val openAppPendingIntent = PendingIntent.getActivity(this,1, mainActivityIntent, PendingIntent.FLAG_CANCEL_CURRENT)
         val title = data["title"]
         val body = data["body"]
         val builder = NotificationCompat.Builder(this, "PILL_REMINDER")
-                .setSmallIcon(R.mipmap.ic_launcher)
-                .setLargeIcon(BitmapFactory.decodeResource(resources,
-                        R.mipmap.ic_launcher))
-                .setContentTitle(title)
-                .setContentText(body)
-                .setPriority(NotificationCompat.PRIORITY_DEFAULT)
-                .setAutoCancel(true)
+            .setSmallIcon(R.mipmap.ic_launcher)
+            .setLargeIcon(BitmapFactory.decodeResource(resources,
+                R.mipmap.ic_launcher))
+            .setContentTitle(title)
+            .setContentText(body)
+            .setPriority(NotificationCompat.PRIORITY_DEFAULT)
+            .setContentIntent(openAppPendingIntent)
+            .setAutoCancel(true)
 
         if (data["action"] == "PILL_REMINDER") {
             val intent = Intent(this, BroadCastActionReceiver::class.java).apply {
                 action = "PILL_REMINDER"
             }
             val pendingIntent: PendingIntent =
-                    PendingIntent.getBroadcast(this, 0, intent, 0)
+                    PendingIntent.getBroadcast(this, 0, intent, PendingIntent.FLAG_CANCEL_CURRENT)
 
             builder.addAction(0, "飲んだ", pendingIntent)
         }
