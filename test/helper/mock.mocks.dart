@@ -8,7 +8,7 @@ import 'package:cloud_firestore/cloud_firestore.dart' as _i12;
 import 'package:firebase_auth/firebase_auth.dart' as _i21;
 import 'package:mockito/mockito.dart' as _i1;
 import 'package:pilll/analytics.dart' as _i17;
-import 'package:pilll/database/batch.dart' as _i37;
+import 'package:pilll/database/batch.dart' as _i35;
 import 'package:pilll/database/database.dart' as _i11;
 import 'package:pilll/domain/premium_function_survey/premium_function_survey_element_type.dart'
     as _i23;
@@ -34,7 +34,6 @@ import 'package:pilll/entity/user.codegen.dart' as _i6;
 import 'package:pilll/service/auth.dart' as _i20;
 import 'package:pilll/service/day.dart' as _i14;
 import 'package:pilll/service/diary.dart' as _i18;
-import 'package:pilll/service/local_notification_schedule.dart' as _i35;
 import 'package:pilll/service/menstruation.dart' as _i19;
 import 'package:pilll/service/pill_sheet.dart' as _i13;
 import 'package:pilll/service/pill_sheet_group.dart' as _i34;
@@ -745,46 +744,10 @@ class MockPillSheetGroupService extends _i1.Mock
       super.noSuchMethod(Invocation.method(#update, [batch, pillSheetGroup]));
 }
 
-/// A class which mocks [LocalNotificationScheduleCollectionService].
-///
-/// See the documentation for Mockito's code generation for more information.
-class MockLocalNotificationScheduleCollectionService extends _i1.Mock
-    implements _i35.LocalNotificationScheduleCollectionService {
-  MockLocalNotificationScheduleCollectionService() {
-    _i1.throwOnMissingStub(this);
-  }
-
-  @override
-  _i16.Future<_i36.LocalNotificationScheduleCollection?>
-      fetchReminderNotification() =>
-          (super.noSuchMethod(Invocation.method(#fetchReminderNotification, []),
-                  returnValue:
-                      Future<_i36.LocalNotificationScheduleCollection?>.value())
-              as _i16.Future<_i36.LocalNotificationScheduleCollection?>);
-  @override
-  _i16.Stream<List<_i36.LocalNotificationScheduleCollection>> stream(
-          _i36.LocalNotificationScheduleKind? kind) =>
-      (super.noSuchMethod(Invocation.method(#stream, [kind]),
-              returnValue: Stream<
-                  List<_i36.LocalNotificationScheduleCollection>>.empty())
-          as _i16.Stream<List<_i36.LocalNotificationScheduleCollection>>);
-  @override
-  _i16.Future<void> updateWithBatch(
-          _i12.WriteBatch? batch,
-          _i36.LocalNotificationScheduleCollection?
-              localNotificationScheduleCollection) =>
-      (super.noSuchMethod(
-          Invocation.method(
-              #updateWithBatch, [batch, localNotificationScheduleCollection]),
-          returnValue: Future<void>.value(),
-          returnValueForMissingStub:
-              Future<void>.value()) as _i16.Future<void>);
-}
-
 /// A class which mocks [BatchFactory].
 ///
 /// See the documentation for Mockito's code generation for more information.
-class MockBatchFactory extends _i1.Mock implements _i37.BatchFactory {
+class MockBatchFactory extends _i1.Mock implements _i35.BatchFactory {
   MockBatchFactory() {
     _i1.throwOnMissingStub(this);
   }
