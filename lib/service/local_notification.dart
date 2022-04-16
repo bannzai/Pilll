@@ -59,6 +59,7 @@ class LocalNotification {
     required String title,
     required String body,
   }) async {
+    await plugin.cancel(createNewPillSheetNotificationIdentifierOffset);
     await plugin.show(
       createNewPillSheetNotificationIdentifierOffset,
       title,
