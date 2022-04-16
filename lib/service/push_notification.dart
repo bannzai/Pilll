@@ -91,7 +91,7 @@ Future<void> handleMessage(RemoteMessage message) async {
         tzFrom: now().tzDate(),
       );
 
-      localNotification.fireCreateNewPillSheetNotification(
+      await localNotification.fireCreateNewPillSheetNotification(
         title: title,
         body: body,
       );
