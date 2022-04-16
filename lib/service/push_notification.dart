@@ -23,7 +23,10 @@ Future<void> requestNotificationPermissions() async {
   if (Platform.isIOS) {
     await FirebaseMessaging.instance
         .setForegroundNotificationPresentationOptions(
-            alert: true, badge: true, sound: true);
+      alert: true,
+      badge: true,
+      sound: true,
+    );
   }
   listenNotificationEvents();
 
