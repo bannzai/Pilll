@@ -5,9 +5,7 @@ import 'package:firebase_auth/firebase_auth.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'package:pilll/analytics.dart';
 import 'package:pilll/database/database.dart';
-import 'package:pilll/entity/local_notification_schedule.codegen.dart';
 import 'package:pilll/service/local_notification.dart';
-import 'package:pilll/service/local_notification_schedule.dart';
 import 'package:pilll/service/pill_sheet_group.dart';
 import 'package:pilll/service/user.dart';
 import 'package:firebase_messaging/firebase_messaging.dart';
@@ -88,25 +86,13 @@ Future<void> onBackgroundMessage(RemoteMessage message) async {
       }
 
       final isTrialOrPremium = user.isTrial || user.isPremium;
-      final localNotificationScheduleCollection =
-          LocalNotificationScheduleCollection.reminderNotification(
-        reminderNotificationLocalNotificationScheduleCollection: [],
+      await localNotification.scheduleRemiderNotification(
         pillSheetGroup: pillSheetGroup,
         activedPillSheet: activedPillSheet,
         isTrialOrPremium: isTrialOrPremium,
         setting: setting,
         tzFrom: now().tzDate(),
       );
-      await localNotification.scheduleRemiderNotification(
-        localNotificationScheduleCollection:
-            localNotificationScheduleCollection,
-        isTrialOrPremium: isTrialOrPremium,
-      );
-
-      final localNotificationScheduleCollectionService =
-          LocalNotificationScheduleCollectionService(database);
-      await localNotificationScheduleCollectionService
-          .update(localNotificationScheduleCollection);
 
       localNotification.fireCreateNewPillSheetNotification(
         title: title,
