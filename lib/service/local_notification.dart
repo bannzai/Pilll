@@ -23,6 +23,13 @@ const AndroidReminderNotificationGroupKey =
 // Doc: https://developer.android.com/reference/androidx/core/app/NotificationCompat#CATEGORY_REMINDER()
 const AndroidNotificationCategory = "CATEGORY_REMINDER";
 
+// Notification ID offset
+const notificationIdentifierOffsetBase = 10000000;
+const createNewPillSheetNotificationIdentifierOffset =
+    1 * notificationIdentifierOffsetBase;
+const reminderNotificationIdentifierOffset =
+    10 * notificationIdentifierOffsetBase;
+
 // NOTE: It can not be use Future.wait(processes) when register notification.
 class LocalNotification {
   final plugin = FlutterLocalNotificationsPlugin();
@@ -155,12 +162,13 @@ class LocalNotification {
     }
   }
 
-  Future<void> cancelAllScheduledRemiderNotification({
-    required LocalNotificationScheduleCollection
-        localNotificationScheduleCollection,
-  }) async {
-    for (final schedule in localNotificationScheduleCollection.schedules) {
-      await plugin.cancel(schedule.actualLocalNotificationID);
+  Future<void> cancelAllScheduledRemiderNotification() async {
+    for (final pendingNotificationRequest
+        in await plugin.pendingNotificationRequests()) {
+      if (pendingNotificationRequest.id - reminderNotificationIdentifierOffset >
+          0) {
+        await plugin.cancel(pendingNotificationRequest.id);
+      }
     }
   }
 
