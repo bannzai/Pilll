@@ -25,13 +25,14 @@ Future<void> requestNotificationPermissions() async {
         .setForegroundNotificationPresentationOptions(
             alert: true, badge: true, sound: true);
   }
-  callRegisterRemoteNotification();
+  listenNotificationEvents();
 
   final userService = UserService(DatabaseConnection(firebaseUser.uid));
   userService.fetch().then((_) async {
     final token = await FirebaseMessaging.instance.getToken();
     await userService.registerRemoteNotificationToken(token);
   });
+
   return Future.value();
 }
 
@@ -42,14 +43,6 @@ void listenNotificationEvents() {
     analytics.logEvent(name: "opened_from_notification_on_background");
     print("onMessageOpenedApp: $event");
   });
-}
-
-void callRegisterRemoteNotification() {
-  if (Platform.isIOS) {
-    // NOTE: FirebaseMessaging.configure call [UIApplication registerForRemoteNotifcation] from native library.
-    // Reason for calling listenNotificationEvents, I won't overwrite defined to receive event via FirebaseMessaging().configure.
-    listenNotificationEvents();
-  }
 }
 
 Future<void> handleMessage(RemoteMessage message) async {
