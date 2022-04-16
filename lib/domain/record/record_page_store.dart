@@ -10,6 +10,7 @@ import 'package:pilll/entity/pill_sheet_type.dart';
 import 'package:pilll/entity/setting.codegen.dart';
 import 'package:pilll/native/legacy.dart';
 import 'package:pilll/service/auth.dart';
+import 'package:pilll/service/local_notification.dart';
 import 'package:pilll/service/pill_sheet.dart';
 import 'package:pilll/domain/record/record_page_state.codegen.dart';
 import 'package:pilll/service/pill_sheet_group.dart';
@@ -23,15 +24,16 @@ import 'package:shared_preferences/shared_preferences.dart';
 
 final recordPageStoreProvider =
     StateNotifierProvider<RecordPageStore, RecordPageState>(
-        (ref) => RecordPageStore(
-              ref.watch(batchFactoryProvider),
-              ref.watch(pillSheetServiceProvider),
-              ref.watch(settingServiceProvider),
-              ref.watch(userServiceProvider),
-              ref.watch(authServiceProvider),
-              ref.watch(pillSheetModifiedHistoryServiceProvider),
-              ref.watch(pillSheetGroupServiceProvider),
-            ));
+  (ref) => RecordPageStore(
+    ref.watch(batchFactoryProvider),
+    ref.watch(pillSheetServiceProvider),
+    ref.watch(settingServiceProvider),
+    ref.watch(userServiceProvider),
+    ref.watch(authServiceProvider),
+    ref.watch(pillSheetModifiedHistoryServiceProvider),
+    ref.watch(pillSheetGroupServiceProvider),
+  ),
+);
 
 class RecordPageStore extends StateNotifier<RecordPageState> {
   final BatchFactory _batchFactory;
@@ -210,6 +212,13 @@ class RecordPageStore extends StateNotifier<RecordPageState> {
     _pillSheetModifiedHistoryService.add(batch, history);
 
     _settingService.updateWithBatch(batch, setting);
+
+    await localNotification.scheduleRemiderNotification(
+      pillSheetGroup: createdPillSheetGroup,
+      activedPillSheet: createdPillSheetGroup.activedPillSheet!,
+      isTrialOrPremium: state.isTrial || state.isPremium,
+      setting: setting,
+    );
 
     return batch.commit();
   }
@@ -482,7 +491,7 @@ class RecordPageStore extends StateNotifier<RecordPageState> {
     state = state.copyWith(setting: updatedSetting);
   }
 
-  Future<void> beginResting({
+  Future<void> beginRestDuration({
     required PillSheetGroup pillSheetGroup,
     required PillSheet activedPillSheet,
   }) async {
@@ -509,10 +518,12 @@ class RecordPageStore extends StateNotifier<RecordPageState> {
       ),
     );
 
+    await localNotification.cancelAllScheduledRemiderNotification();
+
     await batch.commit();
   }
 
-  Future<void> endResting({
+  Future<void> endRestDuration({
     required PillSheetGroup pillSheetGroup,
     required PillSheet activedPillSheet,
     required RestDuration restDuration,
@@ -541,6 +552,14 @@ class RecordPageStore extends StateNotifier<RecordPageState> {
         restDuration: updatedRestDuration,
       ),
     );
+
+    await localNotification.scheduleRemiderNotification(
+      pillSheetGroup: pillSheetGroup,
+      activedPillSheet: activedPillSheet,
+      isTrialOrPremium: state.isTrial || state.isPremium,
+      setting: state.setting!,
+    );
+
     await batch.commit();
   }
 

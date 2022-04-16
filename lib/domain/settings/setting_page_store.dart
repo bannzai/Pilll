@@ -4,6 +4,7 @@ import 'dart:io';
 import 'package:pilll/database/batch.dart';
 import 'package:pilll/entity/setting.codegen.dart';
 import 'package:pilll/native/health_care.dart';
+import 'package:pilll/service/local_notification.dart';
 import 'package:pilll/service/pill_sheet.dart';
 import 'package:pilll/service/pill_sheet_group.dart';
 import 'package:pilll/service/pill_sheet_modified_history.dart';
@@ -35,6 +36,7 @@ class SettingStateStore extends StateNotifier<SettingState> {
   final UserService _userService;
   final PillSheetModifiedHistoryService _pillSheetModifiedHistoryService;
   final PillSheetGroupService _pillSheetGroupService;
+
   SettingStateStore(
     this._batchFactory,
     this._settingService,
@@ -112,9 +114,9 @@ class SettingStateStore extends StateNotifier<SettingState> {
     super.dispose();
   }
 
-  void _modifyReminderTimes(List<ReminderTime> reminderTimes) {
-    final setting = state.setting;
-    if (setting == null) {
+  Future<void> _modifyReminderTimes(List<ReminderTime> reminderTimes) async {
+    final _setting = state.setting;
+    if (_setting == null) {
       throw const FormatException("setting entity not found");
     }
     if (reminderTimes.length > ReminderTime.maximumCount) {
@@ -123,39 +125,52 @@ class SettingStateStore extends StateNotifier<SettingState> {
     if (reminderTimes.length < ReminderTime.minimumCount) {
       throw Exception("通知時刻は最低${ReminderTime.minimumCount}件必要です");
     }
-    _settingService
-        .update(setting.copyWith(reminderTimes: reminderTimes))
-        .then((entity) => state = state.copyWith(setting: entity));
+
+    final setting = _setting.copyWith(reminderTimes: reminderTimes);
+
+    final pillSheetGroup = state.latestPillSheetGroup;
+    final activedPillSheet = state.latestPillSheetGroup?.activedPillSheet;
+    if (pillSheetGroup != null && activedPillSheet != null) {
+      await localNotification.scheduleRemiderNotification(
+        pillSheetGroup: pillSheetGroup,
+        activedPillSheet: activedPillSheet,
+        isTrialOrPremium: state.isTrial || state.isPremium,
+        setting: setting,
+      );
+    }
+
+    await _settingService.update(setting);
+    state = state.copyWith(setting: setting);
   }
 
-  void addReminderTimes(ReminderTime reminderTime) {
+  Future<void> addReminderTimes(ReminderTime reminderTime) async {
     final setting = state.setting;
     if (setting == null) {
       throw const FormatException("setting entity not found");
     }
     List<ReminderTime> copied = [...setting.reminderTimes];
     copied.add(reminderTime);
-    _modifyReminderTimes(copied);
+    await _modifyReminderTimes(copied);
   }
 
-  void editReminderTime(int index, ReminderTime reminderTime) {
+  Future<void> editReminderTime(int index, ReminderTime reminderTime) async {
     final setting = state.setting;
     if (setting == null) {
       throw const FormatException("setting entity not found");
     }
     List<ReminderTime> copied = [...setting.reminderTimes];
     copied[index] = reminderTime;
-    _modifyReminderTimes(copied);
+    await _modifyReminderTimes(copied);
   }
 
-  void deleteReminderTimes(int index) {
+  Future<void> deleteReminderTimes(int index) async {
     final setting = state.setting;
     if (setting == null) {
       throw const FormatException("setting entity not found");
     }
     List<ReminderTime> copied = [...setting.reminderTimes];
     copied.removeAt(index);
-    _modifyReminderTimes(copied);
+    await _modifyReminderTimes(copied);
   }
 
   Future<SettingState> modifyIsOnReminder(bool isOnReminder) {
@@ -182,7 +197,7 @@ class SettingStateStore extends StateNotifier<SettingState> {
     state = state.copyWith(setting: setting);
   }
 
-  Future<void> deletePillSheet() {
+  Future<void> deletePillSheet() async {
     final pillSheetGroup = state.latestPillSheetGroup;
     if (pillSheetGroup == null) {
       throw const FormatException("pill sheet group not found");
@@ -203,7 +218,8 @@ class SettingStateStore extends StateNotifier<SettingState> {
     _pillSheetGroupService.delete(
         batch, pillSheetGroup.replaced(updatedPillSheet));
 
-    return batch.commit();
+    await localNotification.cancelAllScheduledRemiderNotification();
+    await batch.commit();
   }
 
   Future<SettingState> modifiyIsAutomaticallyCreatePillSheet(bool isOn) {

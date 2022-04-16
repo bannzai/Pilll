@@ -1,5 +1,6 @@
 import 'package:pilll/entity/weekday.dart';
 import 'package:pilll/service/day.dart';
+import 'package:timezone/timezone.dart' as tz;
 
 DateTime today() {
   return todayRepository.now().date();
@@ -22,6 +23,10 @@ DateTime endDayOfWeekday(DateTime day) {
 extension Date on DateTime {
   DateTime date() {
     return DateTime(year, month, day);
+  }
+
+  tz.TZDateTime tzDate() {
+    return tz.TZDateTime.from(DateTime(year, month, day), tz.local);
   }
 }
 
