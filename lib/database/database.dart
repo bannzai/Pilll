@@ -26,8 +26,6 @@ abstract class _CollectionPath {
   static String menstruations(String userID) => "$users/$userID/menstruations";
   static String pillSheetModifiedHistories(String userID) =>
       "$users/$userID/pill_sheet_modified_histories";
-  static String localNotificationScheduleCollection(String userID) =>
-      "$users/$userID/local_notification_schedule_collections";
 }
 
 class DatabaseConnection {
@@ -81,31 +79,6 @@ class DatabaseConnection {
       FirebaseFirestore.instance
           .collection(_CollectionPath.pillSheetGroups(_userID))
           .doc(pillSheetGroupID);
-
-  DocumentReference<LocalNotificationScheduleCollection>
-      localNotificationScheduleCollection(LocalNotificationScheduleKind kind) =>
-          FirebaseFirestore.instance
-              .collection(
-                  _CollectionPath.localNotificationScheduleCollection(_userID))
-              .doc(kind.collectionID)
-              .withConverter(
-                fromFirestore: (snapshot, _) =>
-                    LocalNotificationScheduleCollection.fromJson(
-                        snapshot.data()!),
-                toFirestore: (value, _) => value.toJson(),
-              );
-
-  Stream<List<LocalNotificationScheduleCollection>>
-      localNotificationScheduleCollectionStream() => FirebaseFirestore.instance
-          .collection(
-              _CollectionPath.localNotificationScheduleCollection(_userID))
-          .withConverter<LocalNotificationScheduleCollection>(
-            fromFirestore: (snapshot, _) =>
-                LocalNotificationScheduleCollection.fromJson(snapshot.data()!),
-            toFirestore: (value, _) => value.toJson(),
-          )
-          .snapshots()
-          .map((event) => event.docs.map((e) => e.data()).toList());
 
   WriteBatch batch() {
     return FirebaseFirestore.instance.batch();
