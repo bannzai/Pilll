@@ -7,8 +7,8 @@ import 'package:pilll/components/atoms/text_color.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 
-class RecordPageAddingPillSheet extends StatelessWidget {
-  const RecordPageAddingPillSheet({
+class AddPillSheetGroupEmptyFrame extends StatelessWidget {
+  const AddPillSheetGroupEmptyFrame({
     Key? key,
     required this.context,
     required this.store,
