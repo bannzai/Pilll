@@ -520,16 +520,9 @@ class RecordPageStore extends StateNotifier<RecordPageState> {
       ),
     );
 
-    await batch.commit();
+    await localNotification.cancelAllScheduledRemiderNotification();
 
-    final localNotificationScheduleCollection =
-        await _localNotificationScheduleCollectionService
-            .fetchReminderNotification();
-    if (localNotificationScheduleCollection != null) {
-      await localNotification.cancelAllScheduledRemiderNotification(
-          localNotificationScheduleCollection:
-              localNotificationScheduleCollection);
-    }
+    await batch.commit();
   }
 
   Future<void> endRestDuration({
