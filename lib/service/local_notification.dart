@@ -116,15 +116,12 @@ class LocalNotification {
             final daysOffset = groupOffset + beforePillCount + pillIndex;
 
             final reminderDate = tzNow
-                .tzDate()
                 .add(Duration(days: daysOffset))
                 .add(Duration(hours: reminderTime.hour))
                 .add(Duration(minutes: reminderTime.minute));
             // NOTE: LocalNotification must be scheduled at least 3 minutes after the current time (in iOS, Android not confirm).
             // Delay five minutes just to be sure.
-            if (!reminderDate
-                .add(const Duration(minutes: 5))
-                .isAfter(tzNow.tzDate())) {
+            if (!reminderDate.add(const Duration(minutes: 5)).isAfter(tzNow)) {
               continue;
             }
 
