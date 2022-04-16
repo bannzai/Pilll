@@ -97,8 +97,6 @@ class LocalNotification {
     required Setting setting,
     required tz.TZDateTime tzFrom,
   }) async {
-    await cancelAllScheduledRemiderNotification();
-
     for (final reminderTime in setting.reminderTimes) {
       for (final pillSheet in pillSheetGroup.pillSheets) {
         if (pillSheet.groupIndex < activedPillSheet.groupIndex) {
@@ -155,6 +153,7 @@ class LocalNotification {
               return result;
             }();
 
+            await plugin.cancel(notificationID);
             await plugin.zonedSchedule(
               notificationID,
               title,
