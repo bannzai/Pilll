@@ -218,7 +218,6 @@ class RecordPageStore extends StateNotifier<RecordPageState> {
       activedPillSheet: createdPillSheetGroup.activedPillSheet!,
       isTrialOrPremium: state.isTrial || state.isPremium,
       setting: setting,
-      tzFrom: now().tzDate(),
     );
 
     return batch.commit();
@@ -559,7 +558,6 @@ class RecordPageStore extends StateNotifier<RecordPageState> {
       activedPillSheet: activedPillSheet,
       isTrialOrPremium: state.isTrial || state.isPremium,
       setting: state.setting!,
-      tzFrom: now().tzDate(),
     );
 
     await batch.commit();

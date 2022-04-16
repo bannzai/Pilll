@@ -95,8 +95,8 @@ class LocalNotification {
     required PillSheet activedPillSheet,
     required bool isTrialOrPremium,
     required Setting setting,
-    required tz.TZDateTime tzFrom,
   }) async {
+    final tzNow = now().tzDate();
     for (final reminderTime in setting.reminderTimes) {
       // 新規ピルシートグループの作成後に通知のスケジュールができないため、多めに通知をスケジュールする
       // ユーザーの何かしらのアクションでどこかでスケジュールされるだろう
@@ -115,7 +115,7 @@ class LocalNotification {
             );
             final daysOffset = groupOffset + beforePillCount + pillIndex;
 
-            final reminderDate = tzFrom
+            final reminderDate = tzNow
                 .tzDate()
                 .add(Duration(days: daysOffset))
                 .add(Duration(hours: reminderTime.hour))
@@ -124,7 +124,7 @@ class LocalNotification {
             // Delay five minutes just to be sure.
             if (!reminderDate
                 .add(const Duration(minutes: 5))
-                .isAfter(tzFrom.tzDate())) {
+                .isAfter(tzNow.tzDate())) {
               continue;
             }
 

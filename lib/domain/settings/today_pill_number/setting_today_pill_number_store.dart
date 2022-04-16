@@ -131,7 +131,6 @@ class SettingTodayPillNumberStateStore
       activedPillSheet: activedPillSheet,
       isTrialOrPremium: state.isTrial || state.isPremium,
       setting: state.setting!,
-      tzFrom: now().tzDate(),
     );
 
     await batch.commit();

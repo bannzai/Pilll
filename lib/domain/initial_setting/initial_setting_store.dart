@@ -186,7 +186,6 @@ class InitialSettingStateStore extends StateNotifier<InitialSettingState> {
         activedPillSheet: pillSheetGroup.activedPillSheet!,
         isTrialOrPremium: true,
         setting: setting,
-        tzFrom: now().tzDate(),
       );
     }
 

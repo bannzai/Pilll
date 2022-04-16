@@ -11,7 +11,6 @@ import 'package:pilll/service/pill_sheet_modified_history.dart';
 import 'package:pilll/service/setting.dart';
 import 'package:pilll/domain/settings/setting_page_state.codegen.dart';
 import 'package:pilll/service/user.dart';
-import 'package:pilll/util/datetime/day.dart';
 import 'package:pilll/util/shared_preference/keys.dart';
 import 'package:riverpod/riverpod.dart';
 import 'package:shared_preferences/shared_preferences.dart';
@@ -137,7 +136,6 @@ class SettingStateStore extends StateNotifier<SettingState> {
         activedPillSheet: activedPillSheet,
         isTrialOrPremium: state.isTrial || state.isPremium,
         setting: setting,
-        tzFrom: now().tzDate(),
       );
     }
 
