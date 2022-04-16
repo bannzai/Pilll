@@ -42,6 +42,6 @@ Future<void> requestNotificationPermissions() async {
 void listenNotificationEvents() {
   FirebaseMessaging.onMessageOpenedApp.listen((event) {
     analytics.logEvent(name: "opened_from_notification_on_background");
-    print("onMessageOpenedApp: $event");
+    debugPrint("onMessageOpenedApp: $event");
   });
 }
