@@ -26,7 +26,7 @@ void main() {
         final today = DateTime.parse("2020-09-01");
         todayRepository = mockTodayRepository;
         when(mockTodayRepository.now()).thenReturn(today);
-        when(mockTodayRepository.today()).thenReturn(today);
+        when(mockTodayRepository.now()).thenReturn(today);
         addTearDown(() {
           todayRepository = originalTodayRepository;
         });
@@ -79,7 +79,7 @@ void main() {
         final today = DateTime.parse("2020-09-01");
         todayRepository = mockTodayRepository;
         when(mockTodayRepository.now()).thenReturn(today);
-        when(mockTodayRepository.today()).thenReturn(today);
+        when(mockTodayRepository.now()).thenReturn(today);
         addTearDown(() {
           todayRepository = originalTodayRepository;
         });
@@ -135,7 +135,7 @@ void main() {
         final today = DateTime.parse("2020-09-01");
         todayRepository = mockTodayRepository;
         when(mockTodayRepository.now()).thenReturn(today);
-        when(mockTodayRepository.today()).thenReturn(today);
+        when(mockTodayRepository.now()).thenReturn(today);
         addTearDown(() {
           todayRepository = originalTodayRepository;
         });
@@ -192,7 +192,7 @@ void main() {
         final today = DateTime.parse("2020-09-01");
         todayRepository = mockTodayRepository;
         when(mockTodayRepository.now()).thenReturn(today);
-        when(mockTodayRepository.today()).thenReturn(today);
+        when(mockTodayRepository.now()).thenReturn(today);
         addTearDown(() {
           todayRepository = originalTodayRepository;
         });
@@ -248,7 +248,7 @@ void main() {
         final today = DateTime.parse("2020-09-01");
         todayRepository = mockTodayRepository;
         when(mockTodayRepository.now()).thenReturn(today);
-        when(mockTodayRepository.today()).thenReturn(today);
+        when(mockTodayRepository.now()).thenReturn(today);
         addTearDown(() {
           todayRepository = originalTodayRepository;
         });
@@ -304,7 +304,7 @@ void main() {
         final today = DateTime.parse("2020-09-01");
         todayRepository = mockTodayRepository;
         when(mockTodayRepository.now()).thenReturn(today);
-        when(mockTodayRepository.today()).thenReturn(today);
+        when(mockTodayRepository.now()).thenReturn(today);
         addTearDown(() {
           todayRepository = originalTodayRepository;
         });
@@ -361,7 +361,7 @@ void main() {
         final today = DateTime.parse("2020-09-01");
         todayRepository = mockTodayRepository;
         when(mockTodayRepository.now()).thenReturn(today);
-        when(mockTodayRepository.today()).thenReturn(today);
+        when(mockTodayRepository.now()).thenReturn(today);
         addTearDown(() {
           todayRepository = originalTodayRepository;
         });
@@ -414,7 +414,7 @@ void main() {
         final today = DateTime.parse("2020-09-01");
         todayRepository = mockTodayRepository;
         when(mockTodayRepository.now()).thenReturn(today);
-        when(mockTodayRepository.today()).thenReturn(today);
+        when(mockTodayRepository.now()).thenReturn(today);
         addTearDown(() {
           todayRepository = originalTodayRepository;
         });
@@ -470,7 +470,7 @@ void main() {
         final today = DateTime.parse("2020-09-01");
         todayRepository = mockTodayRepository;
         when(mockTodayRepository.now()).thenReturn(today);
-        when(mockTodayRepository.today()).thenReturn(today);
+        when(mockTodayRepository.now()).thenReturn(today);
         addTearDown(() {
           todayRepository = originalTodayRepository;
         });
@@ -526,8 +526,7 @@ void main() {
       final mockTodayRepository = MockTodayService();
       todayRepository = mockTodayRepository;
       when(mockTodayRepository.now()).thenReturn(DateTime.parse("2020-09-01"));
-      when(mockTodayRepository.today())
-          .thenReturn(DateTime.parse("2020-09-01"));
+      when(mockTodayRepository.now()).thenReturn(DateTime.parse("2020-09-01"));
       addTearDown(() {
         todayRepository = originalTodayRepository;
       });
@@ -558,7 +557,7 @@ void main() {
           todayRepository = mockTodayRepository;
           when(mockTodayRepository.now())
               .thenReturn(DateTime.parse("2020-09-11"));
-          when(mockTodayRepository.today())
+          when(mockTodayRepository.now())
               .thenReturn(DateTime.parse("2020-09-11"));
           addTearDown(() {
             todayRepository = originalTodayRepository;
@@ -605,7 +604,7 @@ void main() {
           todayRepository = mockTodayRepository;
           when(mockTodayRepository.now())
               .thenReturn(DateTime.parse("2020-09-12"));
-          when(mockTodayRepository.today())
+          when(mockTodayRepository.now())
               .thenReturn(DateTime.parse("2020-09-12"));
           addTearDown(() {
             todayRepository = originalTodayRepository;
@@ -654,7 +653,7 @@ void main() {
           todayRepository = mockTodayRepository;
           when(mockTodayRepository.now())
               .thenReturn(DateTime.parse("2020-09-11"));
-          when(mockTodayRepository.today())
+          when(mockTodayRepository.now())
               .thenReturn(DateTime.parse("2020-09-11"));
           addTearDown(() {
             todayRepository = originalTodayRepository;
@@ -703,7 +702,7 @@ void main() {
           todayRepository = mockTodayRepository;
           when(mockTodayRepository.now())
               .thenReturn(DateTime.parse("2020-09-12"));
-          when(mockTodayRepository.today())
+          when(mockTodayRepository.now())
               .thenReturn(DateTime.parse("2020-09-12"));
           addTearDown(() {
             todayRepository = originalTodayRepository;
@@ -755,7 +754,7 @@ void main() {
           todayRepository = mockTodayRepository;
           when(mockTodayRepository.now())
               .thenReturn(DateTime.parse("2022-01-14"));
-          when(mockTodayRepository.today())
+          when(mockTodayRepository.now())
               .thenReturn(DateTime.parse("2022-01-14"));
           addTearDown(() {
             todayRepository = originalTodayRepository;

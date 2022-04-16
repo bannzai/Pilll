@@ -49,7 +49,7 @@ void main() {
         final mockTodayRepository = MockTodayService();
         final today = DateTime(2021, 04, 29);
 
-        when(mockTodayRepository.today()).thenReturn(today);
+        when(mockTodayRepository.now()).thenReturn(today);
         when(mockTodayRepository.now()).thenReturn(today);
         todayRepository = mockTodayRepository;
 
@@ -114,7 +114,7 @@ void main() {
         final mockTodayRepository = MockTodayService();
         final today = DateTime(2021, 04, 29);
 
-        when(mockTodayRepository.today()).thenReturn(today);
+        when(mockTodayRepository.now()).thenReturn(today);
         when(mockTodayRepository.now()).thenReturn(today);
         todayRepository = mockTodayRepository;
 
@@ -180,7 +180,7 @@ void main() {
         final mockTodayRepository = MockTodayService();
         final today = DateTime(2021, 04, 29);
 
-        when(mockTodayRepository.today()).thenReturn(today);
+        when(mockTodayRepository.now()).thenReturn(today);
         when(mockTodayRepository.now()).thenReturn(today);
         todayRepository = mockTodayRepository;
 
@@ -244,7 +244,7 @@ void main() {
         final mockTodayRepository = MockTodayService();
         final today = DateTime(2021, 04, 29);
 
-        when(mockTodayRepository.today()).thenReturn(today);
+        when(mockTodayRepository.now()).thenReturn(today);
         when(mockTodayRepository.now()).thenReturn(today);
         todayRepository = mockTodayRepository;
 
@@ -307,7 +307,7 @@ void main() {
         final mockTodayRepository = MockTodayService();
         final today = DateTime(2021, 04, 29);
 
-        when(mockTodayRepository.today()).thenReturn(today);
+        when(mockTodayRepository.now()).thenReturn(today);
         when(mockTodayRepository.now()).thenReturn(today);
         todayRepository = mockTodayRepository;
 
@@ -371,7 +371,7 @@ void main() {
         final today = DateTime(2021, 04, 29);
         final n = today;
 
-        when(mockTodayRepository.today()).thenReturn(today);
+        when(mockTodayRepository.now()).thenReturn(today);
         when(mockTodayRepository.now()).thenReturn(n);
         todayRepository = mockTodayRepository;
 
@@ -434,7 +434,7 @@ void main() {
         final today = DateTime(2021, 04, 29);
         final n = today;
 
-        when(mockTodayRepository.today()).thenReturn(today);
+        when(mockTodayRepository.now()).thenReturn(today);
         when(mockTodayRepository.now()).thenReturn(n);
         todayRepository = mockTodayRepository;
 
@@ -499,7 +499,7 @@ void main() {
         final mockTodayRepository = MockTodayService();
         final today = DateTime(2021, 04, 29);
 
-        when(mockTodayRepository.today()).thenReturn(today);
+        when(mockTodayRepository.now()).thenReturn(today);
         when(mockTodayRepository.now()).thenReturn(today);
         todayRepository = mockTodayRepository;
 
@@ -562,7 +562,7 @@ void main() {
         final mockTodayRepository = MockTodayService();
         final today = DateTime(2021, 04, 29);
 
-        when(mockTodayRepository.today()).thenReturn(today);
+        when(mockTodayRepository.now()).thenReturn(today);
         when(mockTodayRepository.now()).thenReturn(today);
         todayRepository = mockTodayRepository;
 
@@ -625,7 +625,7 @@ void main() {
         final today = DateTime(2021, 04, 29);
         final n = today;
 
-        when(mockTodayRepository.today()).thenReturn(today);
+        when(mockTodayRepository.now()).thenReturn(today);
         when(mockTodayRepository.now()).thenReturn(n);
         todayRepository = mockTodayRepository;
 
@@ -690,7 +690,7 @@ void main() {
       final today = DateTime(2021, 04, 29);
       final n = today;
 
-      when(mockTodayRepository.today()).thenReturn(today);
+      when(mockTodayRepository.now()).thenReturn(today);
       when(mockTodayRepository.now()).thenReturn(n);
       todayRepository = mockTodayRepository;
 

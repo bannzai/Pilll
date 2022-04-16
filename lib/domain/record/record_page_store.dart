@@ -180,8 +180,8 @@ class RecordPageStore extends StateNotifier<RecordPageState> {
       batch,
       setting.pillSheetTypes.asMap().keys.map((pageIndex) {
         final pillSheetType = setting.pillSheetEnumTypes[pageIndex];
-        final offset = summarizedPillSheetTypeTotalCountToPageIndex(
-            pillSheetTypes: setting.pillSheetEnumTypes, pageIndex: pageIndex);
+        final offset = summarizedPillCountWithPillSheetTypesToEndIndex(
+            pillSheetTypes: setting.pillSheetEnumTypes, endIndex: pageIndex);
         return PillSheet(
           typeInfo: pillSheetType.typeInfo,
           beginingDate: n.add(
