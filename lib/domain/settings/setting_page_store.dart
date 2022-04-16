@@ -2,7 +2,6 @@ import 'dart:async';
 import 'dart:io';
 
 import 'package:pilll/database/batch.dart';
-import 'package:pilll/entity/local_notification_schedule.codegen.dart';
 import 'package:pilll/entity/setting.codegen.dart';
 import 'package:pilll/native/health_care.dart';
 import 'package:pilll/service/local_notification.dart';

@@ -8,7 +8,6 @@ import 'package:pilll/database/batch.dart';
 import 'package:pilll/database/database.dart';
 import 'package:pilll/domain/initial_setting/initial_setting_state.codegen.dart';
 import 'package:pilll/entity/link_account_type.dart';
-import 'package:pilll/entity/local_notification_schedule.codegen.dart';
 import 'package:pilll/entity/pill_sheet_group.codegen.dart';
 import 'package:pilll/entity/pill_sheet_type.dart';
 import 'package:pilll/entity/setting.codegen.dart';
@@ -152,7 +151,6 @@ class InitialSettingStateStore extends StateNotifier<InitialSettingState> {
     final setting = state.buildSetting();
     _settingService.updateWithBatch(batch, setting);
 
-    LocalNotificationScheduleCollection? localNotificationScheduleCollection;
     final todayPillNumber = state.todayPillNumber;
     if (todayPillNumber != null) {
       final createdPillSheets = _pillSheetService.register(
