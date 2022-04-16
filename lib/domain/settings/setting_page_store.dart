@@ -221,17 +221,8 @@ class SettingStateStore extends StateNotifier<SettingState> {
     _pillSheetGroupService.delete(
         batch, pillSheetGroup.replaced(updatedPillSheet));
 
+    await localNotification.cancelAllScheduledRemiderNotification();
     await batch.commit();
-
-    final localNotificationScheduleCollection =
-        await _localNotificationScheduleCollectionService
-            .fetchReminderNotification();
-    if (localNotificationScheduleCollection != null) {
-      await localNotification.cancelAllScheduledRemiderNotification(
-        localNotificationScheduleCollection:
-            localNotificationScheduleCollection,
-      );
-    }
   }
 
   Future<SettingState> modifiyIsAutomaticallyCreatePillSheet(bool isOn) {
