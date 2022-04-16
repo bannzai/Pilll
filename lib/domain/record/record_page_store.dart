@@ -561,21 +561,16 @@ class RecordPageStore extends StateNotifier<RecordPageState> {
         restDuration: updatedRestDuration,
       ),
     );
-    await batch.commit();
 
-    final localNotificationScheduleCollection =
-        LocalNotificationScheduleCollection.reminderNotification(
-      reminderNotificationLocalNotificationScheduleCollection: [],
+    await localNotification.scheduleRemiderNotification(
       pillSheetGroup: pillSheetGroup,
       activedPillSheet: activedPillSheet,
       isTrialOrPremium: state.isTrial || state.isPremium,
       setting: state.setting!,
       tzFrom: now().tzDate(),
     );
-    await localNotification.scheduleRemiderNotification(
-      localNotificationScheduleCollection: localNotificationScheduleCollection,
-      isTrialOrPremium: state.isTrial || state.isPremium,
-    );
+
+    await batch.commit();
   }
 
   switchingAppearanceMode(PillSheetAppearanceMode mode) {
