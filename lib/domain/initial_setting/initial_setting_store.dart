@@ -14,7 +14,6 @@ import 'package:pilll/entity/pill_sheet_type.dart';
 import 'package:pilll/entity/setting.codegen.dart';
 import 'package:pilll/service/auth.dart';
 import 'package:pilll/service/local_notification.dart';
-import 'package:pilll/service/local_notification_schedule.dart';
 import 'package:pilll/service/pill_sheet.dart';
 import 'package:pilll/service/pill_sheet_group.dart';
 import 'package:pilll/service/pill_sheet_modified_history.dart';
@@ -34,7 +33,6 @@ final initialSettingStoreProvider = StateNotifierProvider.autoDispose<
     ref.watch(pillSheetModifiedHistoryServiceProvider),
     ref.watch(pillSheetGroupServiceProvider),
     ref.watch(authServiceProvider),
-    ref.watch(localNotificationScheduleCollectionServiceProvider),
   ),
 );
 
@@ -49,8 +47,6 @@ class InitialSettingStateStore extends StateNotifier<InitialSettingState> {
   final PillSheetModifiedHistoryService _pillSheetModifiedHistoryService;
   final PillSheetGroupService _pillSheetGroupService;
   final AuthService _authService;
-  final LocalNotificationScheduleCollectionService
-      _localNotificationScheduleCollectionService;
 
   InitialSettingStateStore(
     this._userService,
@@ -60,7 +56,6 @@ class InitialSettingStateStore extends StateNotifier<InitialSettingState> {
     this._pillSheetModifiedHistoryService,
     this._pillSheetGroupService,
     this._authService,
-    this._localNotificationScheduleCollectionService,
   ) : super(const InitialSettingState());
 
   StreamSubscription? _authServiceCanceller;
@@ -188,30 +183,16 @@ class InitialSettingStateStore extends StateNotifier<InitialSettingState> {
       );
       _pillSheetModifiedHistoryService.add(batch, history);
 
-      localNotificationScheduleCollection =
-          LocalNotificationScheduleCollection.reminderNotification(
-        reminderNotificationLocalNotificationScheduleCollection: [],
+      await localNotification.scheduleRemiderNotification(
         pillSheetGroup: pillSheetGroup,
         activedPillSheet: pillSheetGroup.activedPillSheet!,
         isTrialOrPremium: true,
         setting: setting,
         tzFrom: now().tzDate(),
       );
-      _localNotificationScheduleCollectionService.updateWithBatch(
-        batch,
-        localNotificationScheduleCollection,
-      );
     }
 
     await batch.commit();
-
-    if (localNotificationScheduleCollection != null) {
-      await localNotification.scheduleRemiderNotification(
-        localNotificationScheduleCollection:
-            localNotificationScheduleCollection,
-        isTrialOrPremium: true,
-      );
-    }
 
     await _userService.trial(setting);
   }
