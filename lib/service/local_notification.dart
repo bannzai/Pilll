@@ -96,7 +96,7 @@ class LocalNotification {
     required bool isTrialOrPremium,
     required Setting setting,
   }) async {
-    final tzNow = now().tzDate();
+    final tzNow = tz.TZDateTime.now(tz.local);
     for (final reminderTime in setting.reminderTimes) {
       // 新規ピルシートグループの作成後に通知のスケジュールができないため、多めに通知をスケジュールする
       // ユーザーの何かしらのアクションでどこかでスケジュールされるだろう
