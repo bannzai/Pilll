@@ -27,7 +27,7 @@ const AndroidReminderNotificationGroupKey =
 const AndroidNotificationCategory = "CATEGORY_REMINDER";
 
 // Notification ID offset
-const notificationIdentifierOffsetBase = 10000000;
+const notificationIdentifierOffsetBase = 10000;
 const createNewPillSheetNotificationIdentifierOffset =
     1 * notificationIdentifierOffsetBase;
 const reminderNotificationIdentifierOffset =
@@ -98,121 +98,118 @@ class LocalNotification {
     required tz.TZDateTime tzFrom,
   }) async {
     for (final reminderTime in setting.reminderTimes) {
-      for (final pillSheet in pillSheetGroup.pillSheets) {
-        if (pillSheet.groupIndex < activedPillSheet.groupIndex) {
-          continue;
-        }
-        for (var pillIndex = 0;
-            pillIndex < pillSheet.typeInfo.totalCount;
-            pillIndex++) {
-          if (activedPillSheet.groupIndex == pillSheet.groupIndex &&
-              activedPillSheet.todayPillNumber <= pillIndex) {
-            continue;
-          }
-
-          final reminderDate = tzFrom
-              .tzDate()
-              .add(Duration(days: pillIndex))
-              .add(Duration(hours: reminderTime.hour))
-              .add(Duration(minutes: reminderTime.minute));
-
-          // NOTE: LocalNotification must be scheduled at least 3 minutes after the current time (in iOS, Android not confirm).
-          // Delay five minutes just to be sure.
-          if (!reminderDate
-              .add(const Duration(minutes: 5))
-              .isAfter(tzFrom.tzDate())) {
-            continue;
-          }
-
-          final notificationID = () {
+      for (final loopIndex in List.generate(10, (index) => index)) {
+        for (final pillSheet in pillSheetGroup.pillSheets) {
+          for (var pillIndex = 0;
+              pillIndex < pillSheet.typeInfo.totalCount;
+              pillIndex++) {
+            final groupPillCount = pillSheetGroup.pillSheets
+                .map((e) => e.typeInfo.totalCount)
+                .reduce((a, b) => a + b);
+            final groupOffset = groupPillCount * loopIndex;
             final beforePillCount = summarizedPillCountWithPillSheetsToEndIndex(
               pillSheets: pillSheetGroup.pillSheets,
               endIndex: pillSheet.groupIndex,
             );
-            return beforePillCount +
-                pillIndex +
-                reminderNotificationIdentifierOffset;
-          }();
-          final message = '';
+            final daysOffset = groupOffset + beforePillCount + pillIndex;
 
-          if (isTrialOrPremium) {
-            final title = () {
-              var result = setting.reminderNotificationCustomization.word;
-              if (!setting
-                  .reminderNotificationCustomization.isInVisibleReminderDate) {
-                result += " ";
-                result +=
-                    "${reminderDate.month}/${reminderDate.day} (${WeekdayFunctions.weekdayFromDate(reminderDate).weekdayString()})";
-              }
-              if (!setting
-                  .reminderNotificationCustomization.isInVisiblePillNumber) {
-                result += " ";
-                result +=
-                    "${pillSheetPillNumber(pillSheet: pillSheet, targetDate: reminderDate)}番";
-              }
-              return result;
+            final reminderDate = tzFrom
+                .tzDate()
+                .add(Duration(days: daysOffset))
+                .add(Duration(hours: reminderTime.hour))
+                .add(Duration(minutes: reminderTime.minute));
+            // NOTE: LocalNotification must be scheduled at least 3 minutes after the current time (in iOS, Android not confirm).
+            // Delay five minutes just to be sure.
+            if (!reminderDate
+                .add(const Duration(minutes: 5))
+                .isAfter(tzFrom.tzDate())) {
+              continue;
+            }
+
+            final notificationID = () {
+              return daysOffset + reminderNotificationIdentifierOffset;
             }();
+            final message = '';
 
-            await plugin.cancel(notificationID);
-            await plugin.zonedSchedule(
-              notificationID,
-              title,
-              message,
-              reminderDate,
-              const NotificationDetails(
-                android: AndroidNotificationDetails(
-                  AndroidReminderNotificationChannelID,
-                  "服用通知",
-                  channelShowBadge: true,
-                  setAsGroupSummary: true,
-                  groupKey: AndroidReminderNotificationGroupKey,
-                  category: AndroidNotificationCategory,
-                  actions: [
-                    AndroidNotificationAction(
-                      AndroidReminderNotificationActionIdentifier,
-                      "飲んだ",
-                    )
-                  ],
+            if (isTrialOrPremium) {
+              final title = () {
+                var result = setting.reminderNotificationCustomization.word;
+                if (!setting.reminderNotificationCustomization
+                    .isInVisibleReminderDate) {
+                  result += " ";
+                  result +=
+                      "${reminderDate.month}/${reminderDate.day} (${WeekdayFunctions.weekdayFromDate(reminderDate).weekdayString()})";
+                }
+                if (!setting
+                    .reminderNotificationCustomization.isInVisiblePillNumber) {
+                  result += " ";
+                  result +=
+                      "${pillSheetPillNumber(pillSheet: pillSheet, targetDate: reminderDate)}番";
+                }
+                return result;
+              }();
+
+              await plugin.cancel(notificationID);
+              await plugin.zonedSchedule(
+                notificationID,
+                title,
+                message,
+                reminderDate,
+                const NotificationDetails(
+                  android: AndroidNotificationDetails(
+                    AndroidReminderNotificationChannelID,
+                    "服用通知",
+                    channelShowBadge: true,
+                    setAsGroupSummary: true,
+                    groupKey: AndroidReminderNotificationGroupKey,
+                    category: AndroidNotificationCategory,
+                    actions: [
+                      AndroidNotificationAction(
+                        AndroidReminderNotificationActionIdentifier,
+                        "飲んだ",
+                      )
+                    ],
+                  ),
+                  iOS: DarwinNotificationDetails(
+                    categoryIdentifier: iOSQuickRecordPillCategoryIdentifier,
+                    presentBadge: true,
+                    sound: "becho.caf",
+                    presentSound: true,
+                  ),
                 ),
-                iOS: DarwinNotificationDetails(
-                  categoryIdentifier: iOSQuickRecordPillCategoryIdentifier,
-                  presentBadge: true,
-                  sound: "becho.caf",
-                  presentSound: true,
+                androidAllowWhileIdle: true,
+                uiLocalNotificationDateInterpretation:
+                    UILocalNotificationDateInterpretation.absoluteTime,
+              );
+            } else {
+              final title = "💊の時間です";
+              await plugin.cancel(notificationID);
+              await plugin.zonedSchedule(
+                notificationID,
+                title,
+                message,
+                reminderDate,
+                const NotificationDetails(
+                  android: AndroidNotificationDetails(
+                    AndroidReminderNotificationChannelID,
+                    "服用通知",
+                    channelShowBadge: true,
+                    setAsGroupSummary: true,
+                    groupKey: AndroidReminderNotificationGroupKey,
+                    category: AndroidNotificationCategory,
+                  ),
+                  iOS: DarwinNotificationDetails(
+                    categoryIdentifier: iOSQuickRecordPillCategoryIdentifier,
+                    presentBadge: true,
+                    sound: "becho.caf",
+                    presentSound: true,
+                  ),
                 ),
-              ),
-              androidAllowWhileIdle: true,
-              uiLocalNotificationDateInterpretation:
-                  UILocalNotificationDateInterpretation.absoluteTime,
-            );
-          } else {
-            final title = "💊の時間です";
-            await plugin.cancel(notificationID);
-            await plugin.zonedSchedule(
-              notificationID,
-              title,
-              message,
-              reminderDate,
-              const NotificationDetails(
-                android: AndroidNotificationDetails(
-                  AndroidReminderNotificationChannelID,
-                  "服用通知",
-                  channelShowBadge: true,
-                  setAsGroupSummary: true,
-                  groupKey: AndroidReminderNotificationGroupKey,
-                  category: AndroidNotificationCategory,
-                ),
-                iOS: DarwinNotificationDetails(
-                  categoryIdentifier: iOSQuickRecordPillCategoryIdentifier,
-                  presentBadge: true,
-                  sound: "becho.caf",
-                  presentSound: true,
-                ),
-              ),
-              androidAllowWhileIdle: true,
-              uiLocalNotificationDateInterpretation:
-                  UILocalNotificationDateInterpretation.absoluteTime,
-            );
+                androidAllowWhileIdle: true,
+                uiLocalNotificationDateInterpretation:
+                    UILocalNotificationDateInterpretation.absoluteTime,
+              );
+            }
           }
         }
       }
