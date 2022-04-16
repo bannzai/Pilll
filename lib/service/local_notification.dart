@@ -98,6 +98,7 @@ class LocalNotification {
     required Setting setting,
   }) async {
     final tzNow = tz.TZDateTime.now(tz.local);
+    final List<Future<void>> futures = [];
     for (final reminderTime in setting.reminderTimes) {
       // 新規ピルシートグループの作成後に通知のスケジュールができないため、多めに通知をスケジュールする
       // ユーザーの何かしらのアクションでどこかでスケジュールされるだろう
@@ -149,71 +150,77 @@ class LocalNotification {
                 return result;
               }();
 
-              await plugin.cancel(notificationID);
-              await plugin.zonedSchedule(
-                notificationID,
-                title,
-                message,
-                reminderDate,
-                const NotificationDetails(
-                  android: AndroidNotificationDetails(
-                    AndroidReminderNotificationChannelID,
-                    "服用通知",
-                    channelShowBadge: true,
-                    setAsGroupSummary: true,
-                    groupKey: AndroidReminderNotificationGroupKey,
-                    category: AndroidNotificationCategory,
-                    actions: [
-                      AndroidNotificationAction(
-                        AndroidReminderNotificationActionIdentifier,
-                        "飲んだ",
-                      )
-                    ],
+              futures.add(Future(() async {
+                await plugin.cancel(notificationID);
+                await plugin.zonedSchedule(
+                  notificationID,
+                  title,
+                  message,
+                  reminderDate,
+                  const NotificationDetails(
+                    android: AndroidNotificationDetails(
+                      AndroidReminderNotificationChannelID,
+                      "服用通知",
+                      channelShowBadge: true,
+                      setAsGroupSummary: true,
+                      groupKey: AndroidReminderNotificationGroupKey,
+                      category: AndroidNotificationCategory,
+                      actions: [
+                        AndroidNotificationAction(
+                          AndroidReminderNotificationActionIdentifier,
+                          "飲んだ",
+                        )
+                      ],
+                    ),
+                    iOS: DarwinNotificationDetails(
+                      categoryIdentifier: iOSQuickRecordPillCategoryIdentifier,
+                      presentBadge: true,
+                      sound: "becho.caf",
+                      presentSound: true,
+                    ),
                   ),
-                  iOS: DarwinNotificationDetails(
-                    categoryIdentifier: iOSQuickRecordPillCategoryIdentifier,
-                    presentBadge: true,
-                    sound: "becho.caf",
-                    presentSound: true,
-                  ),
-                ),
-                androidAllowWhileIdle: true,
-                uiLocalNotificationDateInterpretation:
-                    UILocalNotificationDateInterpretation.absoluteTime,
-              );
+                  androidAllowWhileIdle: true,
+                  uiLocalNotificationDateInterpretation:
+                      UILocalNotificationDateInterpretation.absoluteTime,
+                );
+              }));
             } else {
               final title = "💊の時間です";
-              await plugin.cancel(notificationID);
-              await plugin.zonedSchedule(
-                notificationID,
-                title,
-                message,
-                reminderDate,
-                const NotificationDetails(
-                  android: AndroidNotificationDetails(
-                    AndroidReminderNotificationChannelID,
-                    "服用通知",
-                    channelShowBadge: true,
-                    setAsGroupSummary: true,
-                    groupKey: AndroidReminderNotificationGroupKey,
-                    category: AndroidNotificationCategory,
+              futures.add(Future(() async {
+                await plugin.cancel(notificationID);
+                await plugin.zonedSchedule(
+                  notificationID,
+                  title,
+                  message,
+                  reminderDate,
+                  const NotificationDetails(
+                    android: AndroidNotificationDetails(
+                      AndroidReminderNotificationChannelID,
+                      "服用通知",
+                      channelShowBadge: true,
+                      setAsGroupSummary: true,
+                      groupKey: AndroidReminderNotificationGroupKey,
+                      category: AndroidNotificationCategory,
+                    ),
+                    iOS: DarwinNotificationDetails(
+                      categoryIdentifier: iOSQuickRecordPillCategoryIdentifier,
+                      presentBadge: true,
+                      sound: "becho.caf",
+                      presentSound: true,
+                    ),
                   ),
-                  iOS: DarwinNotificationDetails(
-                    categoryIdentifier: iOSQuickRecordPillCategoryIdentifier,
-                    presentBadge: true,
-                    sound: "becho.caf",
-                    presentSound: true,
-                  ),
-                ),
-                androidAllowWhileIdle: true,
-                uiLocalNotificationDateInterpretation:
-                    UILocalNotificationDateInterpretation.absoluteTime,
-              );
+                  androidAllowWhileIdle: true,
+                  uiLocalNotificationDateInterpretation:
+                      UILocalNotificationDateInterpretation.absoluteTime,
+                );
+              }));
             }
           }
         }
       }
     }
+
+    await Future.wait(futures);
 
     debugPrint("end scheduleRemiderNotification: ${setting.reminderTimes}");
   }
