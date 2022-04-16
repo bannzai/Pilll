@@ -138,7 +138,7 @@ class SettingTodayPillNumberStateStore
         await _localNotificationScheduleCollectionService
             .fetchReminderNotification();
     if (currentLocalNotificationScheduleCollection != null) {
-      localNotification.cancelScheduledRemiderNotification(
+      localNotification.cancelAllScheduledRemiderNotification(
           localNotificationScheduleCollection:
               currentLocalNotificationScheduleCollection);
     }

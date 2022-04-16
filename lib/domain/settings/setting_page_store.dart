@@ -255,7 +255,7 @@ class SettingStateStore extends StateNotifier<SettingState> {
         await _localNotificationScheduleCollectionService
             .fetchReminderNotification();
     if (localNotificationScheduleCollection != null) {
-      await localNotification.cancelScheduledRemiderNotification(
+      await localNotification.cancelAllScheduledRemiderNotification(
         localNotificationScheduleCollection:
             localNotificationScheduleCollection,
       );

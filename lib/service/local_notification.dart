@@ -155,7 +155,7 @@ class LocalNotification {
     }
   }
 
-  Future<void> cancelScheduledRemiderNotification({
+  Future<void> cancelAllScheduledRemiderNotification({
     required LocalNotificationScheduleCollection
         localNotificationScheduleCollection,
   }) async {
