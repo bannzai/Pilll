@@ -2,7 +2,7 @@ import 'package:pilll/components/molecules/indicator.dart';
 import 'package:pilll/domain/initial_setting/migrate_info.dart';
 import 'package:pilll/domain/premium_function_survey/premium_function_survey_page.dart';
 import 'package:pilll/domain/premium_trial/premium_trial_complete_modal.dart';
-import 'package:pilll/domain/record/components/add/add_pill_sheet_group_empty_frame.dart';
+import 'package:pilll/domain/record/components/add_pill_sheet_group/add_pill_sheet_group_empty_frame.dart';
 import 'package:pilll/domain/record/components/button/record_page_button.dart';
 import 'package:pilll/domain/record/components/display_number_setting/display_number_setting_sheet.dart';
 import 'package:pilll/domain/record/components/notification_bar/notification_bar.dart';

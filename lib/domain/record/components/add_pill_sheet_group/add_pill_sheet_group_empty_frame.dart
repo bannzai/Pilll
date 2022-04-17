@@ -1,5 +1,5 @@
 import 'package:pilll/analytics.dart';
-import 'package:pilll/domain/record/components/add/add_pill_sheet_group_page.dart';
+import 'package:pilll/domain/record/components/add_pill_sheet_group/add_pill_sheet_group_page.dart';
 import 'package:pilll/domain/record/record_page_store.dart';
 import 'package:pilll/entity/setting.codegen.dart';
 import 'package:pilll/components/atoms/font.dart';

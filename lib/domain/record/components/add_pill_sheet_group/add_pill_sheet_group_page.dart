@@ -6,7 +6,7 @@ import 'package:pilll/components/atoms/buttons.dart';
 import 'package:pilll/components/atoms/color.dart';
 import 'package:pilll/components/atoms/text_color.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
-import 'package:pilll/domain/record/components/add/display_number_setting.dart';
+import 'package:pilll/domain/record/components/add_pill_sheet_group/display_number_setting.dart';
 import 'package:pilll/domain/record/record_page_store.dart';
 import 'package:pilll/entity/pill_sheet_type.dart';
 
