@@ -175,6 +175,7 @@ class InitialSettingPillSheetGroupPageBody extends StatelessWidget {
           const SizedBox(height: 6),
           SettingPillSheetGroup(
               pillSheetTypes: state.pillSheetTypes,
+              displayNumberSetting: null,
               onAdd: (pillSheetType) {
                 analytics.logEvent(
                     name: "initial_setting_add_pill_sheet_group",
