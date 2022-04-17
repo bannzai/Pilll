@@ -6,7 +6,7 @@ import 'package:firebase_crashlytics/firebase_crashlytics.dart';
 import 'package:firebase_performance/firebase_performance.dart';
 import 'package:pilll/analytics.dart';
 import 'package:pilll/components/page/ok_dialog.dart';
-import 'package:pilll/domain/initial_setting/pill_type/initial_setting_pill_category_type_page.dart';
+import 'package:pilll/domain/initial_setting/pill_sheet_group/initial_setting_pill_sheet_group_page.dart';
 import 'package:pilll/entity/config.codegen.dart';
 import 'package:pilll/entity/user.codegen.dart';
 import 'package:pilll/performance.dart';
@@ -90,7 +90,7 @@ class RootState extends State<Root> {
           case ScreenType.home:
             return HomePage(key: homeKey);
           case ScreenType.initialSetting:
-            return InitialSettingPillCategoryTypePageRoute.screen();
+            return InitialSettingPillSheetGroupPageRoute.screen();
           default:
             return ScaffoldIndicator();
         }
@@ -116,8 +116,18 @@ class RootState extends State<Root> {
 
     await forceUpdateTrace.stop();
 
-    return packageVersion
+    final forceUpdate = packageVersion
         .isLessThan(Version.parse(config.minimumSupportedAppVersion));
+    if (forceUpdate) {
+      analytics.logEvent(
+        name: "screen_type_force_update",
+        parameters: {
+          "package_version": packageVersion.toString(),
+          "minimum_app_version": config.minimumSupportedAppVersion,
+        },
+      );
+    }
+    return forceUpdate;
   }
 
   Future<FirebaseAuth.User> _signIn() async {
@@ -139,13 +149,16 @@ class RootState extends State<Root> {
     bool? didEndInitialSetting =
         sharedPreferences.getBool(BoolKey.didEndInitialSetting);
     if (didEndInitialSetting == null) {
+      analytics.logEvent(name: "did_end_i_s_is_null");
       return ScreenType.initialSetting;
     }
     if (!didEndInitialSetting) {
+      analytics.logEvent(name: "did_end_i_s_is_false");
       return ScreenType.initialSetting;
     }
 
-    return screenType = ScreenType.home;
+    analytics.logEvent(name: "screen_type_is_home");
+    return ScreenType.home;
   }
 
   Future<User> _mutateUserWithLaunchInfoAnd(
@@ -165,9 +178,14 @@ class RootState extends State<Root> {
       final userService = UserService(DatabaseConnection(firebaseUser.uid));
       await userService.deleteSettings();
       await userService.setFlutterMigrationFlag();
+      analytics.logEvent(
+          name: "user_is_not_migrated_flutter",
+          parameters: {"uid": firebaseUser.uid});
       return ScreenType.initialSetting;
     } else if (user.setting == null) {
-      return screenType = ScreenType.initialSetting;
+      analytics.logEvent(
+          name: "uset_setting_is_null", parameters: {"uid": firebaseUser.uid});
+      return ScreenType.initialSetting;
     }
     return null;
   }

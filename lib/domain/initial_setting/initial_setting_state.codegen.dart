@@ -1,5 +1,4 @@
 import 'package:pilll/entity/link_account_type.dart';
-import 'package:pilll/entity/initial_setting_pill_category_type.dart';
 import 'package:pilll/util/datetime/day.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';
 import 'package:pilll/entity/pill_sheet.codegen.dart';
@@ -20,8 +19,6 @@ class InitialSettingTodayPillNumber with _$InitialSettingTodayPillNumber {
 class InitialSettingState with _$InitialSettingState {
   const InitialSettingState._();
   const factory InitialSettingState({
-    InitialSettingPillCategoryType? pillType,
-    PillSheetAppearanceMode? pillSheetAppearanceMode,
     @Default([])
         List<PillSheetType> pillSheetTypes,
     InitialSettingTodayPillNumber? todayPillNumber,
@@ -56,8 +53,6 @@ class InitialSettingState with _$InitialSettingState {
   }
 
   Setting buildSetting() {
-    assert(pillSheetAppearanceMode != null);
-
     final menstruationDuration = 4;
     final maxPillCount = pillSheetTypes
         .map((e) => e.totalCount)
@@ -70,8 +65,7 @@ class InitialSettingState with _$InitialSettingState {
       pillSheetTypes: pillSheetTypes,
       reminderTimes: reminderTimes,
       isOnReminder: isOnReminder,
-      pillSheetAppearanceMode:
-          pillSheetAppearanceMode ?? PillSheetAppearanceMode.number,
+      pillSheetAppearanceMode: PillSheetAppearanceMode.number,
     );
     return setting;
   }

@@ -170,12 +170,12 @@ extension PillSheetTypeFunctions on PillSheetType {
       (totalCount / Weekday.values.length).ceil();
 }
 
-int summarizedPillSheetTypeTotalCountToPageIndex(
-    {required List<PillSheetType> pillSheetTypes, required int pageIndex}) {
-  if (pageIndex == 0) {
+int summarizedPillCountWithPillSheetTypesToEndIndex(
+    {required List<PillSheetType> pillSheetTypes, required int endIndex}) {
+  if (endIndex == 0) {
     return 0;
   }
-  final passed = pillSheetTypes.sublist(0, pageIndex);
+  final passed = pillSheetTypes.sublist(0, endIndex);
   final passedTotalCount = passed
       .map((e) => e.totalCount)
       .reduce((value, element) => value + element);

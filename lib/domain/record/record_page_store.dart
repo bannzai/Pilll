@@ -180,8 +180,8 @@ class RecordPageStore extends StateNotifier<RecordPageState> {
       batch,
       setting.pillSheetTypes.asMap().keys.map((pageIndex) {
         final pillSheetType = setting.pillSheetEnumTypes[pageIndex];
-        final offset = summarizedPillSheetTypeTotalCountToPageIndex(
-            pillSheetTypes: setting.pillSheetEnumTypes, pageIndex: pageIndex);
+        final offset = summarizedPillCountWithPillSheetTypesToEndIndex(
+            pillSheetTypes: setting.pillSheetEnumTypes, endIndex: pageIndex);
         return PillSheet(
           typeInfo: pillSheetType.typeInfo,
           beginingDate: n.add(
@@ -482,7 +482,7 @@ class RecordPageStore extends StateNotifier<RecordPageState> {
     state = state.copyWith(setting: updatedSetting);
   }
 
-  Future<void> beginResting({
+  Future<void> beginRestDuration({
     required PillSheetGroup pillSheetGroup,
     required PillSheet activedPillSheet,
   }) async {
@@ -512,7 +512,7 @@ class RecordPageStore extends StateNotifier<RecordPageState> {
     await batch.commit();
   }
 
-  Future<void> endResting({
+  Future<void> endRestDuration({
     required PillSheetGroup pillSheetGroup,
     required PillSheet activedPillSheet,
     required RestDuration restDuration,

@@ -41,7 +41,9 @@ Stream<User?> _userAuthStateChanges() {
 }
 
 // Obtain the latest users form FirebaseAuth.
-// If it is not exists, return result of signin anonymous;
+// If it is not exists:
+//   -> wait userAuthStateChanges stream complete that firebase auth setup complete:
+//     -> return result of signin anonymous;
 Future<User> cachedUserOrSignInAnonymously() async {
   analytics.logEvent(name: "call_sign_in");
   final currentUser = FirebaseAuth.instance.currentUser;
@@ -53,7 +55,7 @@ Future<User> cachedUserOrSignInAnonymously() async {
 
   if (currentUser != null) {
     analytics.logEvent(
-        name: "current_user_exists",
+        name: "cached_current_user_exists",
         parameters: _logginParameters(currentUser));
 
     final sharedPreferences = await SharedPreferences.getInstance();
@@ -64,8 +66,30 @@ Future<User> cachedUserOrSignInAnonymously() async {
 
     return currentUser;
   } else {
-    final anonymousUser = await FirebaseAuth.instance.signInAnonymously();
+    analytics.logEvent(name: "cached_current_user_not_exists");
 
+    // keep until FirebaseAuth.instance user state updated
+    final obtainLatestChangedOptionalUserState = Future<User?>(() {
+      final completer = Completer<User?>();
+
+      StreamSubscription<User?>? subscription;
+      subscription = _userAuthStateChanges().listen((firebaseUser) {
+        completer.complete(firebaseUser);
+        subscription?.cancel();
+      });
+      return completer.future;
+    });
+
+    final obtainedUser = await obtainLatestChangedOptionalUserState;
+    if (obtainedUser != null) {
+      analytics.logEvent(
+        name: "obtained_current_user_exists",
+        parameters: _logginParameters(obtainedUser),
+      );
+      return obtainedUser;
+    }
+
+    final anonymousUser = await FirebaseAuth.instance.signInAnonymously();
     analytics.logEvent(
         name: "signin_anonymously",
         parameters: _logginParameters(anonymousUser.user));

@@ -30,7 +30,7 @@ class EndManualRestDurationButton extends StatelessWidget {
             name: "end_manual_rest_duration_pressed",
           );
 
-          await store.endResting(
+          await store.endRestDuration(
             pillSheetGroup: pillSheetGroup,
             activedPillSheet: activedPillSheet,
             restDuration: restDuration,

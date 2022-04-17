@@ -2,7 +2,7 @@ import 'package:pilll/components/molecules/indicator.dart';
 import 'package:pilll/domain/initial_setting/migrate_info.dart';
 import 'package:pilll/domain/premium_function_survey/premium_function_survey_page.dart';
 import 'package:pilll/domain/premium_trial/premium_trial_complete_modal.dart';
-import 'package:pilll/domain/record/components/adding/record_page_adding_pill_sheet.dart';
+import 'package:pilll/domain/record/components/add/add_pill_sheet_group_empty_frame.dart';
 import 'package:pilll/domain/record/components/button/record_page_button.dart';
 import 'package:pilll/domain/record/components/notification_bar/notification_bar.dart';
 import 'package:pilll/domain/record/components/offset_pill_number/offset_pill_number_sheet.dart';
@@ -129,7 +129,7 @@ class RecordPage extends HookConsumerWidget {
     if (activedPillSheet == null ||
         pillSheetGroup == null ||
         pillSheetGroup.isDeactived)
-      return RecordPageAddingPillSheet(
+      return AddPillSheetGroupEmptyFrame(
         context: context,
         store: store,
         setting: setting,

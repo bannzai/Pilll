@@ -107,9 +107,7 @@ class PillSheet with _$PillSheet {
       PillSheetTypeFunctions.fromRawPath(typeInfo.pillSheetTypeReferencePath);
 
   int get todayPillNumber {
-    return daysBetween(beginingDate.date(), today()) -
-        summarizedRestDuration(restDurations) +
-        1;
+    return pillSheetPillNumber(pillSheet: this, targetDate: today());
   }
 
   // NOTE: if pill sheet is not yet taken, lastTakenNumber return 0;
@@ -121,27 +119,7 @@ class PillSheet with _$PillSheet {
       return 0;
     }
 
-    final lastTakenPillNumber =
-        daysBetween(beginingDate.date(), lastTakenDate.date()) + 1;
-    if (restDurations.isEmpty) {
-      return lastTakenPillNumber;
-    }
-
-    final summarizedRestDuration = restDurations.map((e) {
-      if (!e.beginDate.isBefore(lastTakenDate)) {
-        return 0;
-      }
-      final endDate = e.endDate;
-      if (endDate == null) {
-        return daysBetween(e.beginDate, today());
-      } else if (lastTakenDate.isAfter(e.beginDate)) {
-        return daysBetween(e.beginDate, endDate);
-      } else {
-        return 0;
-      }
-    }).reduce((value, element) => value + element);
-
-    return lastTakenPillNumber - summarizedRestDuration;
+    return pillSheetPillNumber(pillSheet: this, targetDate: lastTakenDate);
   }
 
   bool get todayPillIsAlreadyTaken => todayPillNumber == lastTakenPillNumber;
@@ -156,14 +134,19 @@ class PillSheet with _$PillSheet {
     final n = now();
     final begin = beginingDate.date();
     final totalCount = typeInfo.totalCount;
-    final end = begin.add(
-        Duration(days: totalCount + summarizedRestDuration(restDurations) - 1));
+    final end = begin.add(Duration(
+        days: totalCount +
+            summarizedRestDuration(
+                restDurations: restDurations, upperDate: today()) -
+            1));
     return DateRange(begin, end).inRange(n);
   }
 
   DateTime get estimatedLastTakenDate => beginingDate
       .add(Duration(days: pillSheetType.totalCount - 1))
-      .add(Duration(days: summarizedRestDuration(restDurations)))
+      .add(Duration(
+          days: summarizedRestDuration(
+              restDurations: restDurations, upperDate: today())))
       .date()
       .add(const Duration(days: 1))
       .subtract(const Duration(seconds: 1));
@@ -211,16 +194,55 @@ class PillSheet with _$PillSheet {
   }
 }
 
-int summarizedRestDuration(List<RestDuration> restDurations) {
+// upperDate までの休薬期間を集計する
+// upperDate にはlastTakenDate(lastTakenPillNumberを集計したい時)やtoday(todayPillNumberを集計したい時）が入る想定
+int summarizedRestDuration({
+  required List<RestDuration> restDurations,
+  required DateTime upperDate,
+}) {
   if (restDurations.isEmpty) {
     return 0;
   }
   return restDurations.map((e) {
+    // upperDate よりも後の休薬期間の場合は無視する。同一日は無視しないので、!upperDate.isAfter(e.beginDate)では無い
+    if (!e.beginDate.isBefore(upperDate)) {
+      return 0;
+    }
+
     final endDate = e.endDate;
     if (endDate == null) {
-      return daysBetween(e.beginDate, today());
-    } else {
-      return daysBetween(e.beginDate, endDate);
+      // 実質upperDate == todayの場合にのみここを通る。本来であれば別の関数にした方が良いかも
+      assert(isSameDay(today(), upperDate));
+      return daysBetween(e.beginDate, upperDate);
     }
+
+    return daysBetween(e.beginDate, endDate);
   }).reduce((value, element) => value + element);
+}
+
+int pillSheetPillNumber({
+  required PillSheet pillSheet,
+  required DateTime targetDate,
+}) {
+  return daysBetween(pillSheet.beginingDate.date(), targetDate) -
+      summarizedRestDuration(
+          restDurations: pillSheet.restDurations, upperDate: targetDate) +
+      1;
+}
+
+int summarizedPillCountWithPillSheetsToEndIndex(
+    {required List<PillSheet> pillSheets, required int endIndex}) {
+  if (endIndex == 0) {
+    return 0;
+  }
+
+  final sublist = pillSheets.sublist(0, endIndex);
+  final passedTotalCount = sublist
+      .map((e) => e.typeInfo.totalCount)
+      .reduce((value, element) => value + element);
+  final restDurationCount = sublist
+      .map((e) => summarizedRestDuration(
+          restDurations: e.restDurations, upperDate: e.estimatedLastTakenDate))
+      .reduce((value, element) => value + element);
+  return passedTotalCount + restDurationCount;
 }

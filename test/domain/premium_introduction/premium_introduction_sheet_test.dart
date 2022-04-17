@@ -92,9 +92,10 @@ void main() {
   group('#PremiumIntroductionSheet', () {
     final mockTodayRepository = MockTodayService();
     final today = DateTime(2021, 04, 29);
-    final discountEntitlementDeadlineDate = today.subtract(const Duration(days: 1));
+    final discountEntitlementDeadlineDate =
+        today.subtract(const Duration(days: 1));
 
-    when(mockTodayRepository.today()).thenReturn(today);
+    when(mockTodayRepository.now()).thenReturn(today);
     todayRepository = mockTodayRepository;
 
     group('user is premium', () {
@@ -187,7 +188,7 @@ void main() {
         final mockTodayRepository = MockTodayService();
         final today = DateTime(2021, 04, 29);
 
-        when(mockTodayRepository.today()).thenReturn(today);
+        when(mockTodayRepository.now()).thenReturn(today);
         todayRepository = mockTodayRepository;
 
         final state = _FakePremiumIntroductionState(
@@ -233,7 +234,7 @@ void main() {
         final mockTodayRepository = MockTodayService();
         final today = DateTime(2021, 04, 29);
 
-        when(mockTodayRepository.today()).thenReturn(today);
+        when(mockTodayRepository.now()).thenReturn(today);
         todayRepository = mockTodayRepository;
 
         final state = _FakePremiumIntroductionState(
@@ -278,7 +279,7 @@ void main() {
         final mockTodayRepository = MockTodayService();
         final today = DateTime(2021, 04, 29);
 
-        when(mockTodayRepository.today()).thenReturn(today);
+        when(mockTodayRepository.now()).thenReturn(today);
         todayRepository = mockTodayRepository;
 
         var state = _FakePremiumIntroductionState(
