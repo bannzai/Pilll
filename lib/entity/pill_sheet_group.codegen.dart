@@ -127,6 +127,29 @@ class PillSheetGroup with _$PillSheetGroup {
 
     return sequentialLastTakenPillNumber;
   }
+
+  int get estimatedEndPillNumber {
+    var estimatedEndPillNumber = summarizedPillCountWithPillSheetsToEndIndex(
+        pillSheets: pillSheets, endIndex: pillSheets.length + 1);
+
+    final offsetPillNumber = this.displayNumberSetting;
+    if (offsetPillNumber != null) {
+      final beginPillNumberOffset = offsetPillNumber.beginPillNumber;
+      if (beginPillNumberOffset != null) {
+        estimatedEndPillNumber += (beginPillNumberOffset - 1);
+      }
+
+      final endPillNumberOffset = offsetPillNumber.endPillNumber;
+      if (endPillNumberOffset != null) {
+        estimatedEndPillNumber %= endPillNumberOffset;
+        if (sequentialTodayPillNumber == 0) {
+          estimatedEndPillNumber = endPillNumberOffset;
+        }
+      }
+    }
+
+    return estimatedEndPillNumber;
+  }
 }
 
 @freezed
