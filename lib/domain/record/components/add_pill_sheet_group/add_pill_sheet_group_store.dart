@@ -11,6 +11,7 @@ final addPillSheetGroupStateStoreProvider = StateNotifierProvider.autoDispose<
     return AddPillSheetGroupStateStore(
       ref.watch(recordPageStoreProvider).pillSheetGroup,
       ref.watch(recordPageStoreProvider).appearanceMode,
+      ref.watch(recordPageStoreProvider).setting,
       ref.watch(pillSheetGroupServiceProvider),
     );
   },
@@ -22,9 +23,11 @@ class AddPillSheetGroupStateStore
   AddPillSheetGroupStateStore(
     PillSheetGroup? pillSheetGroup,
     PillSheetAppearanceMode pillSheetAppearanceMode,
+    Setting? setting,
     this._pillSheetGroupService,
   ) : super(AddPillSheetGroupState(
           pillSheetGroup: pillSheetGroup,
           pillSheetAppearanceMode: pillSheetAppearanceMode,
+          setting: setting,
         ));
 }

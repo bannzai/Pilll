@@ -18,11 +18,13 @@ final _privateConstructorUsedError = UnsupportedError(
 class _$AddPillSheetGroupStateTearOff {
   const _$AddPillSheetGroupStateTearOff();
 
-  _$AddPillSheetGroupState call(
+  _AddPillSheetGroupState call(
       {PillSheetGroup? pillSheetGroup,
+      Setting? setting,
       required PillSheetAppearanceMode pillSheetAppearanceMode}) {
-    return _$AddPillSheetGroupState(
+    return _AddPillSheetGroupState(
       pillSheetGroup: pillSheetGroup,
+      setting: setting,
       pillSheetAppearanceMode: pillSheetAppearanceMode,
     );
   }
@@ -34,6 +36,7 @@ const $AddPillSheetGroupState = _$AddPillSheetGroupStateTearOff();
 /// @nodoc
 mixin _$AddPillSheetGroupState {
   PillSheetGroup? get pillSheetGroup => throw _privateConstructorUsedError;
+  Setting? get setting => throw _privateConstructorUsedError;
   PillSheetAppearanceMode get pillSheetAppearanceMode =>
       throw _privateConstructorUsedError;
 
@@ -49,9 +52,11 @@ abstract class $AddPillSheetGroupStateCopyWith<$Res> {
       _$AddPillSheetGroupStateCopyWithImpl<$Res>;
   $Res call(
       {PillSheetGroup? pillSheetGroup,
+      Setting? setting,
       PillSheetAppearanceMode pillSheetAppearanceMode});
 
   $PillSheetGroupCopyWith<$Res>? get pillSheetGroup;
+  $SettingCopyWith<$Res>? get setting;
 }
 
 /// @nodoc
@@ -66,6 +71,7 @@ class _$AddPillSheetGroupStateCopyWithImpl<$Res>
   @override
   $Res call({
     Object? pillSheetGroup = freezed,
+    Object? setting = freezed,
     Object? pillSheetAppearanceMode = freezed,
   }) {
     return _then(_value.copyWith(
@@ -73,6 +79,10 @@ class _$AddPillSheetGroupStateCopyWithImpl<$Res>
           ? _value.pillSheetGroup
           : pillSheetGroup // ignore: cast_nullable_to_non_nullable
               as PillSheetGroup?,
+      setting: setting == freezed
+          ? _value.setting
+          : setting // ignore: cast_nullable_to_non_nullable
+              as Setting?,
       pillSheetAppearanceMode: pillSheetAppearanceMode == freezed
           ? _value.pillSheetAppearanceMode
           : pillSheetAppearanceMode // ignore: cast_nullable_to_non_nullable
@@ -90,45 +100,63 @@ class _$AddPillSheetGroupStateCopyWithImpl<$Res>
       return _then(_value.copyWith(pillSheetGroup: value));
     });
   }
+
+  @override
+  $SettingCopyWith<$Res>? get setting {
+    if (_value.setting == null) {
+      return null;
+    }
+
+    return $SettingCopyWith<$Res>(_value.setting!, (value) {
+      return _then(_value.copyWith(setting: value));
+    });
+  }
 }
 
 /// @nodoc
-abstract class _$$AddPillSheetGroupStateCopyWith<$Res>
+abstract class _$AddPillSheetGroupStateCopyWith<$Res>
     implements $AddPillSheetGroupStateCopyWith<$Res> {
-  factory _$$AddPillSheetGroupStateCopyWith(_$AddPillSheetGroupState value,
-          $Res Function(_$AddPillSheetGroupState) then) =
-      __$$AddPillSheetGroupStateCopyWithImpl<$Res>;
+  factory _$AddPillSheetGroupStateCopyWith(_AddPillSheetGroupState value,
+          $Res Function(_AddPillSheetGroupState) then) =
+      __$AddPillSheetGroupStateCopyWithImpl<$Res>;
   @override
   $Res call(
       {PillSheetGroup? pillSheetGroup,
+      Setting? setting,
       PillSheetAppearanceMode pillSheetAppearanceMode});
 
   @override
   $PillSheetGroupCopyWith<$Res>? get pillSheetGroup;
+  @override
+  $SettingCopyWith<$Res>? get setting;
 }
 
 /// @nodoc
-class __$$AddPillSheetGroupStateCopyWithImpl<$Res>
+class __$AddPillSheetGroupStateCopyWithImpl<$Res>
     extends _$AddPillSheetGroupStateCopyWithImpl<$Res>
-    implements _$$AddPillSheetGroupStateCopyWith<$Res> {
-  __$$AddPillSheetGroupStateCopyWithImpl(_$AddPillSheetGroupState _value,
-      $Res Function(_$AddPillSheetGroupState) _then)
-      : super(_value, (v) => _then(v as _$AddPillSheetGroupState));
+    implements _$AddPillSheetGroupStateCopyWith<$Res> {
+  __$AddPillSheetGroupStateCopyWithImpl(_AddPillSheetGroupState _value,
+      $Res Function(_AddPillSheetGroupState) _then)
+      : super(_value, (v) => _then(v as _AddPillSheetGroupState));
 
   @override
-  _$AddPillSheetGroupState get _value =>
-      super._value as _$AddPillSheetGroupState;
+  _AddPillSheetGroupState get _value => super._value as _AddPillSheetGroupState;
 
   @override
   $Res call({
     Object? pillSheetGroup = freezed,
+    Object? setting = freezed,
     Object? pillSheetAppearanceMode = freezed,
   }) {
-    return _then(_$AddPillSheetGroupState(
+    return _then(_AddPillSheetGroupState(
       pillSheetGroup: pillSheetGroup == freezed
           ? _value.pillSheetGroup
           : pillSheetGroup // ignore: cast_nullable_to_non_nullable
               as PillSheetGroup?,
+      setting: setting == freezed
+          ? _value.setting
+          : setting // ignore: cast_nullable_to_non_nullable
+              as Setting?,
       pillSheetAppearanceMode: pillSheetAppearanceMode == freezed
           ? _value.pillSheetAppearanceMode
           : pillSheetAppearanceMode // ignore: cast_nullable_to_non_nullable
@@ -139,28 +167,33 @@ class __$$AddPillSheetGroupStateCopyWithImpl<$Res>
 
 /// @nodoc
 
-class _$_$AddPillSheetGroupState extends _$AddPillSheetGroupState {
-  _$_$AddPillSheetGroupState(
-      {this.pillSheetGroup, required this.pillSheetAppearanceMode})
+class _$_AddPillSheetGroupState extends _AddPillSheetGroupState {
+  _$_AddPillSheetGroupState(
+      {this.pillSheetGroup,
+      this.setting,
+      required this.pillSheetAppearanceMode})
       : super._();
 
   @override
   final PillSheetGroup? pillSheetGroup;
   @override
+  final Setting? setting;
+  @override
   final PillSheetAppearanceMode pillSheetAppearanceMode;
 
   @override
   String toString() {
-    return 'AddPillSheetGroupState(pillSheetGroup: $pillSheetGroup, pillSheetAppearanceMode: $pillSheetAppearanceMode)';
+    return 'AddPillSheetGroupState(pillSheetGroup: $pillSheetGroup, setting: $setting, pillSheetAppearanceMode: $pillSheetAppearanceMode)';
   }
 
   @override
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$AddPillSheetGroupState &&
+            other is _AddPillSheetGroupState &&
             const DeepCollectionEquality()
                 .equals(other.pillSheetGroup, pillSheetGroup) &&
+            const DeepCollectionEquality().equals(other.setting, setting) &&
             const DeepCollectionEquality().equals(
                 other.pillSheetAppearanceMode, pillSheetAppearanceMode));
   }
@@ -169,28 +202,32 @@ class _$_$AddPillSheetGroupState extends _$AddPillSheetGroupState {
   int get hashCode => Object.hash(
       runtimeType,
       const DeepCollectionEquality().hash(pillSheetGroup),
+      const DeepCollectionEquality().hash(setting),
       const DeepCollectionEquality().hash(pillSheetAppearanceMode));
 
   @JsonKey(ignore: true)
   @override
-  _$$AddPillSheetGroupStateCopyWith<_$AddPillSheetGroupState> get copyWith =>
-      __$$AddPillSheetGroupStateCopyWithImpl<_$AddPillSheetGroupState>(
+  _$AddPillSheetGroupStateCopyWith<_AddPillSheetGroupState> get copyWith =>
+      __$AddPillSheetGroupStateCopyWithImpl<_AddPillSheetGroupState>(
           this, _$identity);
 }
 
-abstract class _$AddPillSheetGroupState extends AddPillSheetGroupState {
-  factory _$AddPillSheetGroupState(
+abstract class _AddPillSheetGroupState extends AddPillSheetGroupState {
+  factory _AddPillSheetGroupState(
           {PillSheetGroup? pillSheetGroup,
+          Setting? setting,
           required PillSheetAppearanceMode pillSheetAppearanceMode}) =
-      _$_$AddPillSheetGroupState;
-  _$AddPillSheetGroupState._() : super._();
+      _$_AddPillSheetGroupState;
+  _AddPillSheetGroupState._() : super._();
 
   @override
   PillSheetGroup? get pillSheetGroup;
   @override
+  Setting? get setting;
+  @override
   PillSheetAppearanceMode get pillSheetAppearanceMode;
   @override
   @JsonKey(ignore: true)
-  _$$AddPillSheetGroupStateCopyWith<_$AddPillSheetGroupState> get copyWith =>
+  _$AddPillSheetGroupStateCopyWith<_AddPillSheetGroupState> get copyWith =>
       throw _privateConstructorUsedError;
 }
