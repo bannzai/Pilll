@@ -47,9 +47,9 @@ class AddPillSheetGroupStateStore
     this._pillSheetModifiedHistoryService,
     this._batchFactory,
   ) : super(AddPillSheetGroupState(
-          pillSheetGroup: pillSheetGroup,
+          pillSheetGroup: pillSheetGroup?.copyWith(),
           pillSheetAppearanceMode: pillSheetAppearanceMode,
-          setting: setting,
+          setting: setting?.copyWith(),
         ));
 
   addPillSheetType(PillSheetType pillSheetType, Setting setting) {
