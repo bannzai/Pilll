@@ -28,8 +28,9 @@ class DisplayNumberSetting extends HookConsumerWidget {
     }
 
     final estimatedEndPillNumber = pillSheetGroup.estimatedEndPillNumber;
+    final beginDisplayPillNumber = useState(estimatedEndPillNumber + 1);
     final textFieldController =
-        useTextEditingController(text: "${estimatedEndPillNumber + 1}");
+        useTextEditingController(text: "${beginDisplayPillNumber.value}");
 
     return Column(
       crossAxisAlignment: CrossAxisAlignment.center,
@@ -71,7 +72,9 @@ class DisplayNumberSetting extends HookConsumerWidget {
                   contentPadding: EdgeInsets.only(bottom: 8),
                 ),
                 onChanged: (text) {
-                  // TODO:
+                  try {
+                    beginDisplayPillNumber.value = int.parse(text);
+                  } catch (_) {}
                 },
               ),
             ),
