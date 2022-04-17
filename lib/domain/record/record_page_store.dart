@@ -172,48 +172,6 @@ class RecordPageStore extends StateNotifier<RecordPageState> {
     super.dispose();
   }
 
-  Future<void> register(Setting setting) async {
-    final batch = _batchFactory.batch();
-
-    final n = now();
-    final createdPillSheets = _pillSheetService.register(
-      batch,
-      setting.pillSheetTypes.asMap().keys.map((pageIndex) {
-        final pillSheetType = setting.pillSheetEnumTypes[pageIndex];
-        final offset = summarizedPillCountWithPillSheetTypesToEndIndex(
-            pillSheetTypes: setting.pillSheetEnumTypes, endIndex: pageIndex);
-        return PillSheet(
-          typeInfo: pillSheetType.typeInfo,
-          beginingDate: n.add(
-            Duration(days: offset),
-          ),
-          groupIndex: pageIndex,
-        );
-      }).toList(),
-    );
-
-    final pillSheetIDs = createdPillSheets.map((e) => e.id!).toList();
-    final createdPillSheetGroup = _pillSheetGroupService.register(
-      batch,
-      PillSheetGroup(
-        pillSheetIDs: pillSheetIDs,
-        pillSheets: createdPillSheets,
-        createdAt: now(),
-      ),
-    );
-
-    final history = PillSheetModifiedHistoryServiceActionFactory
-        .createCreatedPillSheetAction(
-      pillSheetIDs: pillSheetIDs,
-      pillSheetGroupID: createdPillSheetGroup.id,
-    );
-    _pillSheetModifiedHistoryService.add(batch, history);
-
-    _settingService.updateWithBatch(batch, setting);
-
-    return batch.commit();
-  }
-
   Future<bool> _take(DateTime takenDate) async {
     final pillSheetGroup = state.pillSheetGroup;
     if (pillSheetGroup == null) {
@@ -458,28 +416,6 @@ class RecordPageStore extends StateNotifier<RecordPageState> {
     final sharedPreferences = await SharedPreferences.getInstance();
     sharedPreferences.setBool(BoolKey.migrateFrom132IsShown, true);
     state = state.copyWith(shouldShowMigrateInfo: false);
-  }
-
-  addPillSheetType(PillSheetType pillSheetType, Setting setting) {
-    final updatedSetting = setting.copyWith(
-        pillSheetTypes: setting.pillSheetTypes..add(pillSheetType));
-    state = state.copyWith(setting: updatedSetting);
-  }
-
-  changePillSheetType(int index, PillSheetType pillSheetType, Setting setting) {
-    final copied = [...setting.pillSheetTypes];
-    copied[index] = pillSheetType;
-
-    final updatedSetting = setting.copyWith(pillSheetTypes: copied);
-    state = state.copyWith(setting: updatedSetting);
-  }
-
-  removePillSheetType(int index, Setting setting) {
-    final copied = [...setting.pillSheetEnumTypes];
-    copied.removeAt(index);
-
-    final updatedSetting = setting.copyWith(pillSheetTypes: copied);
-    state = state.copyWith(setting: updatedSetting);
   }
 
   Future<void> beginRestDuration({

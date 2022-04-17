@@ -5,13 +5,13 @@ import 'package:hooks_riverpod/hooks_riverpod.dart';
 import 'package:pilll/components/atoms/color.dart';
 import 'package:pilll/components/atoms/font.dart';
 import 'package:pilll/components/atoms/text_color.dart';
-import 'package:pilll/domain/record/record_page_state.codegen.dart';
-import 'package:pilll/domain/record/record_page_store.dart';
+import 'package:pilll/domain/record/components/add_pill_sheet_group/add_pill_sheet_group_state.codegen.dart';
+import 'package:pilll/domain/record/components/add_pill_sheet_group/add_pill_sheet_group_store.dart';
 import 'package:pilll/entity/setting.codegen.dart';
 
 class DisplayNumberSetting extends HookConsumerWidget {
-  final RecordPageStore store;
-  final RecordPageState state;
+  final AddPillSheetGroupStateStore store;
+  final AddPillSheetGroupState state;
 
   const DisplayNumberSetting({
     Key? key,
@@ -23,7 +23,7 @@ class DisplayNumberSetting extends HookConsumerWidget {
   Widget build(BuildContext context, WidgetRef ref) {
     final pillSheetGroup = state.pillSheetGroup;
     if (pillSheetGroup == null ||
-        state.appearanceMode != PillSheetAppearanceMode.sequential) {
+        state.pillSheetAppearanceMode != PillSheetAppearanceMode.sequential) {
       return Container();
     }
 
