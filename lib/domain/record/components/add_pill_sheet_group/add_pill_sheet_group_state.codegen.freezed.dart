@@ -19,13 +19,15 @@ class _$AddPillSheetGroupStateTearOff {
   const _$AddPillSheetGroupStateTearOff();
 
   _AddPillSheetGroupState call(
-      {PillSheetGroup? pillSheetGroup,
-      Setting? setting,
-      required PillSheetAppearanceMode pillSheetAppearanceMode}) {
+      {required PillSheetGroup? pillSheetGroup,
+      required Setting? setting,
+      required PillSheetAppearanceMode pillSheetAppearanceMode,
+      DisplayNumberSetting? displayNumberSetting}) {
     return _AddPillSheetGroupState(
       pillSheetGroup: pillSheetGroup,
       setting: setting,
       pillSheetAppearanceMode: pillSheetAppearanceMode,
+      displayNumberSetting: displayNumberSetting,
     );
   }
 }
@@ -38,6 +40,8 @@ mixin _$AddPillSheetGroupState {
   PillSheetGroup? get pillSheetGroup => throw _privateConstructorUsedError;
   Setting? get setting => throw _privateConstructorUsedError;
   PillSheetAppearanceMode get pillSheetAppearanceMode =>
+      throw _privateConstructorUsedError;
+  DisplayNumberSetting? get displayNumberSetting =>
       throw _privateConstructorUsedError;
 
   @JsonKey(ignore: true)
@@ -53,10 +57,12 @@ abstract class $AddPillSheetGroupStateCopyWith<$Res> {
   $Res call(
       {PillSheetGroup? pillSheetGroup,
       Setting? setting,
-      PillSheetAppearanceMode pillSheetAppearanceMode});
+      PillSheetAppearanceMode pillSheetAppearanceMode,
+      DisplayNumberSetting? displayNumberSetting});
 
   $PillSheetGroupCopyWith<$Res>? get pillSheetGroup;
   $SettingCopyWith<$Res>? get setting;
+  $DisplayNumberSettingCopyWith<$Res>? get displayNumberSetting;
 }
 
 /// @nodoc
@@ -73,6 +79,7 @@ class _$AddPillSheetGroupStateCopyWithImpl<$Res>
     Object? pillSheetGroup = freezed,
     Object? setting = freezed,
     Object? pillSheetAppearanceMode = freezed,
+    Object? displayNumberSetting = freezed,
   }) {
     return _then(_value.copyWith(
       pillSheetGroup: pillSheetGroup == freezed
@@ -87,6 +94,10 @@ class _$AddPillSheetGroupStateCopyWithImpl<$Res>
           ? _value.pillSheetAppearanceMode
           : pillSheetAppearanceMode // ignore: cast_nullable_to_non_nullable
               as PillSheetAppearanceMode,
+      displayNumberSetting: displayNumberSetting == freezed
+          ? _value.displayNumberSetting
+          : displayNumberSetting // ignore: cast_nullable_to_non_nullable
+              as DisplayNumberSetting?,
     ));
   }
 
@@ -111,6 +122,18 @@ class _$AddPillSheetGroupStateCopyWithImpl<$Res>
       return _then(_value.copyWith(setting: value));
     });
   }
+
+  @override
+  $DisplayNumberSettingCopyWith<$Res>? get displayNumberSetting {
+    if (_value.displayNumberSetting == null) {
+      return null;
+    }
+
+    return $DisplayNumberSettingCopyWith<$Res>(_value.displayNumberSetting!,
+        (value) {
+      return _then(_value.copyWith(displayNumberSetting: value));
+    });
+  }
 }
 
 /// @nodoc
@@ -123,12 +146,15 @@ abstract class _$AddPillSheetGroupStateCopyWith<$Res>
   $Res call(
       {PillSheetGroup? pillSheetGroup,
       Setting? setting,
-      PillSheetAppearanceMode pillSheetAppearanceMode});
+      PillSheetAppearanceMode pillSheetAppearanceMode,
+      DisplayNumberSetting? displayNumberSetting});
 
   @override
   $PillSheetGroupCopyWith<$Res>? get pillSheetGroup;
   @override
   $SettingCopyWith<$Res>? get setting;
+  @override
+  $DisplayNumberSettingCopyWith<$Res>? get displayNumberSetting;
 }
 
 /// @nodoc
@@ -147,6 +173,7 @@ class __$AddPillSheetGroupStateCopyWithImpl<$Res>
     Object? pillSheetGroup = freezed,
     Object? setting = freezed,
     Object? pillSheetAppearanceMode = freezed,
+    Object? displayNumberSetting = freezed,
   }) {
     return _then(_AddPillSheetGroupState(
       pillSheetGroup: pillSheetGroup == freezed
@@ -161,6 +188,10 @@ class __$AddPillSheetGroupStateCopyWithImpl<$Res>
           ? _value.pillSheetAppearanceMode
           : pillSheetAppearanceMode // ignore: cast_nullable_to_non_nullable
               as PillSheetAppearanceMode,
+      displayNumberSetting: displayNumberSetting == freezed
+          ? _value.displayNumberSetting
+          : displayNumberSetting // ignore: cast_nullable_to_non_nullable
+              as DisplayNumberSetting?,
     ));
   }
 }
@@ -169,9 +200,10 @@ class __$AddPillSheetGroupStateCopyWithImpl<$Res>
 
 class _$_AddPillSheetGroupState extends _AddPillSheetGroupState {
   _$_AddPillSheetGroupState(
-      {this.pillSheetGroup,
-      this.setting,
-      required this.pillSheetAppearanceMode})
+      {required this.pillSheetGroup,
+      required this.setting,
+      required this.pillSheetAppearanceMode,
+      this.displayNumberSetting})
       : super._();
 
   @override
@@ -180,10 +212,12 @@ class _$_AddPillSheetGroupState extends _AddPillSheetGroupState {
   final Setting? setting;
   @override
   final PillSheetAppearanceMode pillSheetAppearanceMode;
+  @override
+  final DisplayNumberSetting? displayNumberSetting;
 
   @override
   String toString() {
-    return 'AddPillSheetGroupState(pillSheetGroup: $pillSheetGroup, setting: $setting, pillSheetAppearanceMode: $pillSheetAppearanceMode)';
+    return 'AddPillSheetGroupState(pillSheetGroup: $pillSheetGroup, setting: $setting, pillSheetAppearanceMode: $pillSheetAppearanceMode, displayNumberSetting: $displayNumberSetting)';
   }
 
   @override
@@ -195,7 +229,9 @@ class _$_AddPillSheetGroupState extends _AddPillSheetGroupState {
                 .equals(other.pillSheetGroup, pillSheetGroup) &&
             const DeepCollectionEquality().equals(other.setting, setting) &&
             const DeepCollectionEquality().equals(
-                other.pillSheetAppearanceMode, pillSheetAppearanceMode));
+                other.pillSheetAppearanceMode, pillSheetAppearanceMode) &&
+            const DeepCollectionEquality()
+                .equals(other.displayNumberSetting, displayNumberSetting));
   }
 
   @override
@@ -203,7 +239,8 @@ class _$_AddPillSheetGroupState extends _AddPillSheetGroupState {
       runtimeType,
       const DeepCollectionEquality().hash(pillSheetGroup),
       const DeepCollectionEquality().hash(setting),
-      const DeepCollectionEquality().hash(pillSheetAppearanceMode));
+      const DeepCollectionEquality().hash(pillSheetAppearanceMode),
+      const DeepCollectionEquality().hash(displayNumberSetting));
 
   @JsonKey(ignore: true)
   @override
@@ -214,10 +251,10 @@ class _$_AddPillSheetGroupState extends _AddPillSheetGroupState {
 
 abstract class _AddPillSheetGroupState extends AddPillSheetGroupState {
   factory _AddPillSheetGroupState(
-          {PillSheetGroup? pillSheetGroup,
-          Setting? setting,
-          required PillSheetAppearanceMode pillSheetAppearanceMode}) =
-      _$_AddPillSheetGroupState;
+      {required PillSheetGroup? pillSheetGroup,
+      required Setting? setting,
+      required PillSheetAppearanceMode pillSheetAppearanceMode,
+      DisplayNumberSetting? displayNumberSetting}) = _$_AddPillSheetGroupState;
   _AddPillSheetGroupState._() : super._();
 
   @override
@@ -226,6 +263,8 @@ abstract class _AddPillSheetGroupState extends AddPillSheetGroupState {
   Setting? get setting;
   @override
   PillSheetAppearanceMode get pillSheetAppearanceMode;
+  @override
+  DisplayNumberSetting? get displayNumberSetting;
   @override
   @JsonKey(ignore: true)
   _$AddPillSheetGroupStateCopyWith<_AddPillSheetGroupState> get copyWith =>

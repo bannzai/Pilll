@@ -7,9 +7,10 @@ part 'add_pill_sheet_group_state.codegen.freezed.dart';
 @freezed
 class AddPillSheetGroupState with _$AddPillSheetGroupState {
   factory AddPillSheetGroupState({
-    PillSheetGroup? pillSheetGroup,
-    Setting? setting,
+    required PillSheetGroup? pillSheetGroup,
+    required Setting? setting,
     required PillSheetAppearanceMode pillSheetAppearanceMode,
+    DisplayNumberSetting? displayNumberSetting,
   }) = _AddPillSheetGroupState;
   AddPillSheetGroupState._();
 }

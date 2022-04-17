@@ -78,19 +78,10 @@ class AddPillSheetGroupStateStore
   void setBeginDisplayPillNumber(
     int beginDisplayPillNumber,
   ) {
-    final pillSheetGroup = state.pillSheetGroup;
-    final displayPillNumber = pillSheetGroup?.displayNumberSetting;
-    if (pillSheetGroup == null || displayPillNumber == null) {
-      return;
-    }
-
     state = state.copyWith(
-      pillSheetGroup: pillSheetGroup.copyWith(
-        displayNumberSetting: displayPillNumber.copyWith(
-          beginPillNumber: beginDisplayPillNumber,
-        ),
-      ),
-    );
+        displayNumberSetting: DisplayNumberSetting(
+      beginPillNumber: beginDisplayPillNumber,
+    ));
   }
 
   Future<void> register(Setting setting) async {
@@ -119,6 +110,7 @@ class AddPillSheetGroupStateStore
       PillSheetGroup(
         pillSheetIDs: pillSheetIDs,
         pillSheets: createdPillSheets,
+        displayNumberSetting: state.displayNumberSetting,
         createdAt: now(),
       ),
     );
