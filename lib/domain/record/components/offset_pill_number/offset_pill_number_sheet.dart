@@ -10,11 +10,11 @@ import 'package:pilll/entity/pill_sheet_group.codegen.dart';
 const _defaultBegin = 3;
 const _defaultEnd = 120;
 
-class DisplayPillNumberSheet extends HookConsumerWidget {
+class OffsetPillNumberSheet extends HookConsumerWidget {
   final DisplayNumberSetting? offsetPillNumber;
   final RecordPageStore store;
 
-  DisplayPillNumberSheet({
+  OffsetPillNumberSheet({
     required this.offsetPillNumber,
     required this.store,
   });
@@ -79,7 +79,7 @@ class DisplayPillNumberSheet extends HookConsumerWidget {
                     onChanged: (_begin) {
                       try {
                         begin.value = int.parse(_begin);
-                        store.setDisplayPillNumberBegin(begin.value);
+                        store.setOffsetPillNumberBegin(begin.value);
                       } catch (_) {}
                     },
                     controller: beginTextFieldController,
@@ -118,7 +118,7 @@ class DisplayPillNumberSheet extends HookConsumerWidget {
                     onChanged: (_end) {
                       try {
                         end.value = int.parse(_end);
-                        store.setDisplayPillNumberEnd(end.value);
+                        store.setOffsetPillNumberEnd(end.value);
                       } catch (_) {}
                     },
                     controller: endTextFieldController,

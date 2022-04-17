@@ -79,7 +79,7 @@ class RecordPage extends HookConsumerWidget {
                     showModalBottomSheet(
                         context: context,
                         builder: (context) {
-                          return DisplayPillNumberSheet(
+                          return OffsetPillNumberSheet(
                             offsetPillNumber:
                                 state.pillSheetGroup?.offsetPillNumber,
                             store: store,
