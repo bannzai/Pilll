@@ -81,7 +81,7 @@ class RecordPage extends HookConsumerWidget {
                         builder: (context) {
                           return DisplayNumberSettingSheet(
                             offsetPillNumber:
-                                state.pillSheetGroup?.offsetPillNumber,
+                                state.pillSheetGroup?.displayNumberSetting,
                             store: store,
                           );
                         });

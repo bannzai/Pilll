@@ -550,7 +550,7 @@ class RecordPageStore extends StateNotifier<RecordPageState> {
       return;
     }
 
-    final offsetPillNumber = pillSheetGroup.offsetPillNumber;
+    final offsetPillNumber = pillSheetGroup.displayNumberSetting;
     final PillSheetGroup updatedPillSheetGroup;
     if (offsetPillNumber == null) {
       final newDisplayNumberSetting =
@@ -575,7 +575,7 @@ class RecordPageStore extends StateNotifier<RecordPageState> {
       return;
     }
 
-    final offsetPillNumber = pillSheetGroup.offsetPillNumber;
+    final offsetPillNumber = pillSheetGroup.displayNumberSetting;
     final PillSheetGroup updatedPillSheetGroup;
     if (offsetPillNumber == null) {
       final newDisplayNumberSetting = DisplayNumberSetting(endPillNumber: end);

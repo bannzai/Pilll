@@ -15,7 +15,7 @@ class DisplayNumberSettingSheet extends HookConsumerWidget {
   final RecordPageStore store;
 
   DisplayNumberSettingSheet({
-    required this.offsetPillNumber,
+    required this.displayNumberSetting,
     required this.store,
   });
   @override

@@ -74,7 +74,7 @@ class PillSheetGroup with _$PillSheetGroup {
     var sequentialTodayPillNumber =
         passedPillCountForPillSheetTypes + activedPillSheet.todayPillNumber;
 
-    final offsetPillNumber = this.offsetPillNumber;
+    final offsetPillNumber = this.displayNumberSetting;
     if (offsetPillNumber != null) {
       final beginPillNumberOffset = offsetPillNumber.beginPillNumber;
       if (beginPillNumberOffset != null) {
@@ -109,7 +109,7 @@ class PillSheetGroup with _$PillSheetGroup {
     var sequentialLastTakenPillNumber =
         passedPillCountForPillSheetTypes + activedPillSheet.lastTakenPillNumber;
 
-    final offsetPillNumber = this.offsetPillNumber;
+    final offsetPillNumber = this.displayNumberSetting;
     if (offsetPillNumber != null) {
       final beginPillNumberOffset = offsetPillNumber.beginPillNumber;
       if (beginPillNumberOffset != null) {

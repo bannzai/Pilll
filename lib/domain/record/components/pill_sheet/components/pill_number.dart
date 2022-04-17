@@ -28,14 +28,14 @@ class SequentialPillNumber extends StatelessWidget {
   const SequentialPillNumber(
       {Key? key,
       required this.pageOffset,
-      required this.offsetPillNumber,
+      required this.displayNumberSetting,
       required this.pillNumberIntoPillSheet})
       : super(key: key);
   @override
   Widget build(BuildContext context) {
     var number = pageOffset + pillNumberIntoPillSheet;
 
-    final offsetPillNumber = this.offsetPillNumber;
+    final offsetPillNumber = this.displayNumberSetting;
     if (offsetPillNumber != null) {
       final beginPillNumberOffset = offsetPillNumber.beginPillNumber;
       if (beginPillNumberOffset != null) {
@@ -100,14 +100,14 @@ class MenstruationSequentialPillNumber extends StatelessWidget {
   const MenstruationSequentialPillNumber(
       {Key? key,
       required this.pageOffset,
-      required this.offsetPillNumber,
+      required this.displayNumberSetting,
       required this.pillNumberIntoPillSheet})
       : super(key: key);
   @override
   Widget build(BuildContext context) {
     var number = pageOffset + pillNumberIntoPillSheet;
 
-    final offsetPillNumber = this.offsetPillNumber;
+    final offsetPillNumber = this.displayNumberSetting;
     if (offsetPillNumber != null) {
       final beginPillNumberOffset = offsetPillNumber.beginPillNumber;
       if (beginPillNumberOffset != null) {
