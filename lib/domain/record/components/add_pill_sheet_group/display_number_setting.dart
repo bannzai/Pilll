@@ -74,6 +74,8 @@ class DisplayNumberSetting extends HookConsumerWidget {
                 onChanged: (text) {
                   try {
                     beginDisplayPillNumber.value = int.parse(text);
+                    store.setBeginDisplayPillNumber(
+                        beginDisplayPillNumber.value);
                   } catch (_) {}
                 },
               ),

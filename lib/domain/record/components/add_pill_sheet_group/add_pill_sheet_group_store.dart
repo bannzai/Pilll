@@ -75,6 +75,24 @@ class AddPillSheetGroupStateStore
     state = state.copyWith(setting: updatedSetting);
   }
 
+  void setBeginDisplayPillNumber(
+    int beginDisplayPillNumber,
+  ) {
+    final pillSheetGroup = state.pillSheetGroup;
+    final displayPillNumber = pillSheetGroup?.displayNumberSetting;
+    if (pillSheetGroup == null || displayPillNumber == null) {
+      return;
+    }
+
+    state = state.copyWith(
+      pillSheetGroup: pillSheetGroup.copyWith(
+        displayNumberSetting: displayPillNumber.copyWith(
+          beginPillNumber: beginDisplayPillNumber,
+        ),
+      ),
+    );
+  }
+
   Future<void> register(Setting setting) async {
     final batch = _batchFactory.batch();
 
