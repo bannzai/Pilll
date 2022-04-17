@@ -522,6 +522,14 @@ class MockRecordPageStore extends _i1.Mock implements _i24.RecordPageStore {
               returnValueForMissingStub: Future<void>.value())
           as _i16.Future<void>);
   @override
+  void setDisplayNumberSettingBegin(int? begin) => super.noSuchMethod(
+      Invocation.method(#setDisplayNumberSettingBegin, [begin]),
+      returnValueForMissingStub: null);
+  @override
+  void setDisplayNumberSettingEnd(int? end) =>
+      super.noSuchMethod(Invocation.method(#setDisplayNumberSettingEnd, [end]),
+          returnValueForMissingStub: null);
+  @override
   dynamic switchingAppearanceMode(_i3.PillSheetAppearanceMode? mode) =>
       super.noSuchMethod(Invocation.method(#switchingAppearanceMode, [mode]));
   @override
@@ -740,8 +748,17 @@ class MockPillSheetGroupService extends _i1.Mock
       (super.noSuchMethod(Invocation.method(#delete, [batch, pillSheetGroup]),
           returnValue: _FakePillSheetGroup_9()) as _i10.PillSheetGroup);
   @override
-  dynamic updateWithBatch(_i12.WriteBatch? batch, _i10.PillSheetGroup? pillSheetGroup) =>
-      super.noSuchMethod(Invocation.method(#update, [batch, pillSheetGroup]));
+  _i16.Future<void> update(_i10.PillSheetGroup? pillSheetGroup) =>
+      (super.noSuchMethod(Invocation.method(#update, [pillSheetGroup]),
+              returnValue: Future<void>.value(),
+              returnValueForMissingStub: Future<void>.value())
+          as _i16.Future<void>);
+  @override
+  void updateWithBatch(
+          _i12.WriteBatch? batch, _i10.PillSheetGroup? pillSheetGroup) =>
+      super.noSuchMethod(
+          Invocation.method(#updateWithBatch, [batch, pillSheetGroup]),
+          returnValueForMissingStub: null);
 }
 
 /// A class which mocks [BatchFactory].

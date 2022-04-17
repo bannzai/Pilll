@@ -31,7 +31,7 @@ class _$PillSheetGroupTearOff {
           required DateTime createdAt,
       @JsonKey(fromJson: TimestampConverter.timestampToDateTime, toJson: TimestampConverter.dateTimeToTimestamp)
           DateTime? deletedAt,
-      OffsetPillNumber? offsetPillNumber}) {
+      DisplayNumberSetting? offsetPillNumber}) {
     return _PillSheetGroup(
       id: id,
       pillSheetIDs: pillSheetIDs,
@@ -64,7 +64,8 @@ mixin _$PillSheetGroup {
       fromJson: TimestampConverter.timestampToDateTime,
       toJson: TimestampConverter.dateTimeToTimestamp)
   DateTime? get deletedAt => throw _privateConstructorUsedError;
-  OffsetPillNumber? get offsetPillNumber => throw _privateConstructorUsedError;
+  DisplayNumberSetting? get offsetPillNumber =>
+      throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
@@ -86,9 +87,9 @@ abstract class $PillSheetGroupCopyWith<$Res> {
           DateTime createdAt,
       @JsonKey(fromJson: TimestampConverter.timestampToDateTime, toJson: TimestampConverter.dateTimeToTimestamp)
           DateTime? deletedAt,
-      OffsetPillNumber? offsetPillNumber});
+      DisplayNumberSetting? offsetPillNumber});
 
-  $OffsetPillNumberCopyWith<$Res>? get offsetPillNumber;
+  $DisplayNumberSettingCopyWith<$Res>? get offsetPillNumber;
 }
 
 /// @nodoc
@@ -133,17 +134,18 @@ class _$PillSheetGroupCopyWithImpl<$Res>
       offsetPillNumber: offsetPillNumber == freezed
           ? _value.offsetPillNumber
           : offsetPillNumber // ignore: cast_nullable_to_non_nullable
-              as OffsetPillNumber?,
+              as DisplayNumberSetting?,
     ));
   }
 
   @override
-  $OffsetPillNumberCopyWith<$Res>? get offsetPillNumber {
+  $DisplayNumberSettingCopyWith<$Res>? get offsetPillNumber {
     if (_value.offsetPillNumber == null) {
       return null;
     }
 
-    return $OffsetPillNumberCopyWith<$Res>(_value.offsetPillNumber!, (value) {
+    return $DisplayNumberSettingCopyWith<$Res>(_value.offsetPillNumber!,
+        (value) {
       return _then(_value.copyWith(offsetPillNumber: value));
     });
   }
@@ -165,10 +167,10 @@ abstract class _$PillSheetGroupCopyWith<$Res>
           DateTime createdAt,
       @JsonKey(fromJson: TimestampConverter.timestampToDateTime, toJson: TimestampConverter.dateTimeToTimestamp)
           DateTime? deletedAt,
-      OffsetPillNumber? offsetPillNumber});
+      DisplayNumberSetting? offsetPillNumber});
 
   @override
-  $OffsetPillNumberCopyWith<$Res>? get offsetPillNumber;
+  $DisplayNumberSettingCopyWith<$Res>? get offsetPillNumber;
 }
 
 /// @nodoc
@@ -215,7 +217,7 @@ class __$PillSheetGroupCopyWithImpl<$Res>
       offsetPillNumber: offsetPillNumber == freezed
           ? _value.offsetPillNumber
           : offsetPillNumber // ignore: cast_nullable_to_non_nullable
-              as OffsetPillNumber?,
+              as DisplayNumberSetting?,
     ));
   }
 }
@@ -257,7 +259,7 @@ class _$_PillSheetGroup extends _PillSheetGroup {
       toJson: TimestampConverter.dateTimeToTimestamp)
   final DateTime? deletedAt;
   @override
-  final OffsetPillNumber? offsetPillNumber;
+  final DisplayNumberSetting? offsetPillNumber;
 
   @override
   String toString() {
@@ -311,7 +313,7 @@ abstract class _PillSheetGroup extends PillSheetGroup {
           required DateTime createdAt,
       @JsonKey(fromJson: TimestampConverter.timestampToDateTime, toJson: TimestampConverter.dateTimeToTimestamp)
           DateTime? deletedAt,
-      OffsetPillNumber? offsetPillNumber}) = _$_PillSheetGroup;
+      DisplayNumberSetting? offsetPillNumber}) = _$_PillSheetGroup;
   const _PillSheetGroup._() : super._();
 
   factory _PillSheetGroup.fromJson(Map<String, dynamic> json) =
@@ -335,63 +337,63 @@ abstract class _PillSheetGroup extends PillSheetGroup {
       toJson: TimestampConverter.dateTimeToTimestamp)
   DateTime? get deletedAt;
   @override
-  OffsetPillNumber? get offsetPillNumber;
+  DisplayNumberSetting? get offsetPillNumber;
   @override
   @JsonKey(ignore: true)
   _$PillSheetGroupCopyWith<_PillSheetGroup> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
-OffsetPillNumber _$OffsetPillNumberFromJson(Map<String, dynamic> json) {
-  return _OffsetPillNumber.fromJson(json);
+DisplayNumberSetting _$DisplayNumberSettingFromJson(Map<String, dynamic> json) {
+  return _DisplayNumberSetting.fromJson(json);
 }
 
 /// @nodoc
-class _$OffsetPillNumberTearOff {
-  const _$OffsetPillNumberTearOff();
+class _$DisplayNumberSettingTearOff {
+  const _$DisplayNumberSettingTearOff();
 
-  _OffsetPillNumber call({int? beginPillNumber, int? endPillNumber}) {
-    return _OffsetPillNumber(
+  _DisplayNumberSetting call({int? beginPillNumber, int? endPillNumber}) {
+    return _DisplayNumberSetting(
       beginPillNumber: beginPillNumber,
       endPillNumber: endPillNumber,
     );
   }
 
-  OffsetPillNumber fromJson(Map<String, Object?> json) {
-    return OffsetPillNumber.fromJson(json);
+  DisplayNumberSetting fromJson(Map<String, Object?> json) {
+    return DisplayNumberSetting.fromJson(json);
   }
 }
 
 /// @nodoc
-const $OffsetPillNumber = _$OffsetPillNumberTearOff();
+const $DisplayNumberSetting = _$DisplayNumberSettingTearOff();
 
 /// @nodoc
-mixin _$OffsetPillNumber {
+mixin _$DisplayNumberSetting {
   int? get beginPillNumber => throw _privateConstructorUsedError;
   int? get endPillNumber => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
-  $OffsetPillNumberCopyWith<OffsetPillNumber> get copyWith =>
+  $DisplayNumberSettingCopyWith<DisplayNumberSetting> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
 /// @nodoc
-abstract class $OffsetPillNumberCopyWith<$Res> {
-  factory $OffsetPillNumberCopyWith(
-          OffsetPillNumber value, $Res Function(OffsetPillNumber) then) =
-      _$OffsetPillNumberCopyWithImpl<$Res>;
+abstract class $DisplayNumberSettingCopyWith<$Res> {
+  factory $DisplayNumberSettingCopyWith(DisplayNumberSetting value,
+          $Res Function(DisplayNumberSetting) then) =
+      _$DisplayNumberSettingCopyWithImpl<$Res>;
   $Res call({int? beginPillNumber, int? endPillNumber});
 }
 
 /// @nodoc
-class _$OffsetPillNumberCopyWithImpl<$Res>
-    implements $OffsetPillNumberCopyWith<$Res> {
-  _$OffsetPillNumberCopyWithImpl(this._value, this._then);
+class _$DisplayNumberSettingCopyWithImpl<$Res>
+    implements $DisplayNumberSettingCopyWith<$Res> {
+  _$DisplayNumberSettingCopyWithImpl(this._value, this._then);
 
-  final OffsetPillNumber _value;
+  final DisplayNumberSetting _value;
   // ignore: unused_field
-  final $Res Function(OffsetPillNumber) _then;
+  final $Res Function(DisplayNumberSetting) _then;
 
   @override
   $Res call({
@@ -412,32 +414,32 @@ class _$OffsetPillNumberCopyWithImpl<$Res>
 }
 
 /// @nodoc
-abstract class _$OffsetPillNumberCopyWith<$Res>
-    implements $OffsetPillNumberCopyWith<$Res> {
-  factory _$OffsetPillNumberCopyWith(
-          _OffsetPillNumber value, $Res Function(_OffsetPillNumber) then) =
-      __$OffsetPillNumberCopyWithImpl<$Res>;
+abstract class _$DisplayNumberSettingCopyWith<$Res>
+    implements $DisplayNumberSettingCopyWith<$Res> {
+  factory _$DisplayNumberSettingCopyWith(_DisplayNumberSetting value,
+          $Res Function(_DisplayNumberSetting) then) =
+      __$DisplayNumberSettingCopyWithImpl<$Res>;
   @override
   $Res call({int? beginPillNumber, int? endPillNumber});
 }
 
 /// @nodoc
-class __$OffsetPillNumberCopyWithImpl<$Res>
-    extends _$OffsetPillNumberCopyWithImpl<$Res>
-    implements _$OffsetPillNumberCopyWith<$Res> {
-  __$OffsetPillNumberCopyWithImpl(
-      _OffsetPillNumber _value, $Res Function(_OffsetPillNumber) _then)
-      : super(_value, (v) => _then(v as _OffsetPillNumber));
+class __$DisplayNumberSettingCopyWithImpl<$Res>
+    extends _$DisplayNumberSettingCopyWithImpl<$Res>
+    implements _$DisplayNumberSettingCopyWith<$Res> {
+  __$DisplayNumberSettingCopyWithImpl(
+      _DisplayNumberSetting _value, $Res Function(_DisplayNumberSetting) _then)
+      : super(_value, (v) => _then(v as _DisplayNumberSetting));
 
   @override
-  _OffsetPillNumber get _value => super._value as _OffsetPillNumber;
+  _DisplayNumberSetting get _value => super._value as _DisplayNumberSetting;
 
   @override
   $Res call({
     Object? beginPillNumber = freezed,
     Object? endPillNumber = freezed,
   }) {
-    return _then(_OffsetPillNumber(
+    return _then(_DisplayNumberSetting(
       beginPillNumber: beginPillNumber == freezed
           ? _value.beginPillNumber
           : beginPillNumber // ignore: cast_nullable_to_non_nullable
@@ -453,11 +455,11 @@ class __$OffsetPillNumberCopyWithImpl<$Res>
 /// @nodoc
 
 @JsonSerializable(explicitToJson: true)
-class _$_OffsetPillNumber implements _OffsetPillNumber {
-  const _$_OffsetPillNumber({this.beginPillNumber, this.endPillNumber});
+class _$_DisplayNumberSetting implements _DisplayNumberSetting {
+  const _$_DisplayNumberSetting({this.beginPillNumber, this.endPillNumber});
 
-  factory _$_OffsetPillNumber.fromJson(Map<String, dynamic> json) =>
-      _$$_OffsetPillNumberFromJson(json);
+  factory _$_DisplayNumberSetting.fromJson(Map<String, dynamic> json) =>
+      _$$_DisplayNumberSettingFromJson(json);
 
   @override
   final int? beginPillNumber;
@@ -466,14 +468,14 @@ class _$_OffsetPillNumber implements _OffsetPillNumber {
 
   @override
   String toString() {
-    return 'OffsetPillNumber(beginPillNumber: $beginPillNumber, endPillNumber: $endPillNumber)';
+    return 'DisplayNumberSetting(beginPillNumber: $beginPillNumber, endPillNumber: $endPillNumber)';
   }
 
   @override
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _OffsetPillNumber &&
+            other is _DisplayNumberSetting &&
             const DeepCollectionEquality()
                 .equals(other.beginPillNumber, beginPillNumber) &&
             const DeepCollectionEquality()
@@ -488,21 +490,22 @@ class _$_OffsetPillNumber implements _OffsetPillNumber {
 
   @JsonKey(ignore: true)
   @override
-  _$OffsetPillNumberCopyWith<_OffsetPillNumber> get copyWith =>
-      __$OffsetPillNumberCopyWithImpl<_OffsetPillNumber>(this, _$identity);
+  _$DisplayNumberSettingCopyWith<_DisplayNumberSetting> get copyWith =>
+      __$DisplayNumberSettingCopyWithImpl<_DisplayNumberSetting>(
+          this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_OffsetPillNumberToJson(this);
+    return _$$_DisplayNumberSettingToJson(this);
   }
 }
 
-abstract class _OffsetPillNumber implements OffsetPillNumber {
-  const factory _OffsetPillNumber({int? beginPillNumber, int? endPillNumber}) =
-      _$_OffsetPillNumber;
+abstract class _DisplayNumberSetting implements DisplayNumberSetting {
+  const factory _DisplayNumberSetting(
+      {int? beginPillNumber, int? endPillNumber}) = _$_DisplayNumberSetting;
 
-  factory _OffsetPillNumber.fromJson(Map<String, dynamic> json) =
-      _$_OffsetPillNumber.fromJson;
+  factory _DisplayNumberSetting.fromJson(Map<String, dynamic> json) =
+      _$_DisplayNumberSetting.fromJson;
 
   @override
   int? get beginPillNumber;
@@ -510,6 +513,6 @@ abstract class _OffsetPillNumber implements OffsetPillNumber {
   int? get endPillNumber;
   @override
   @JsonKey(ignore: true)
-  _$OffsetPillNumberCopyWith<_OffsetPillNumber> get copyWith =>
+  _$DisplayNumberSettingCopyWith<_DisplayNumberSetting> get copyWith =>
       throw _privateConstructorUsedError;
 }

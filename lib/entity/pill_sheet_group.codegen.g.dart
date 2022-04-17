@@ -21,7 +21,7 @@ _$_PillSheetGroup _$$_PillSheetGroupFromJson(Map<String, dynamic> json) =>
           json['deletedAt'] as Timestamp?),
       offsetPillNumber: json['offsetPillNumber'] == null
           ? null
-          : OffsetPillNumber.fromJson(
+          : DisplayNumberSetting.fromJson(
               json['offsetPillNumber'] as Map<String, dynamic>),
     );
 
@@ -44,13 +44,15 @@ Map<String, dynamic> _$$_PillSheetGroupToJson(_$_PillSheetGroup instance) {
   return val;
 }
 
-_$_OffsetPillNumber _$$_OffsetPillNumberFromJson(Map<String, dynamic> json) =>
-    _$_OffsetPillNumber(
+_$_DisplayNumberSetting _$$_DisplayNumberSettingFromJson(
+        Map<String, dynamic> json) =>
+    _$_DisplayNumberSetting(
       beginPillNumber: json['beginPillNumber'] as int?,
       endPillNumber: json['endPillNumber'] as int?,
     );
 
-Map<String, dynamic> _$$_OffsetPillNumberToJson(_$_OffsetPillNumber instance) =>
+Map<String, dynamic> _$$_DisplayNumberSettingToJson(
+        _$_DisplayNumberSetting instance) =>
     <String, dynamic>{
       'beginPillNumber': instance.beginPillNumber,
       'endPillNumber': instance.endPillNumber,

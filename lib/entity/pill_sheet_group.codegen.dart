@@ -30,7 +30,7 @@ class PillSheetGroup with _$PillSheetGroup {
       toJson: TimestampConverter.dateTimeToTimestamp,
     )
         DateTime? deletedAt,
-    DisplayNumberSetting? offsetPillNumber,
+    DisplayNumberSetting? displayNumberSetting,
   }) = _PillSheetGroup;
 
   factory PillSheetGroup.fromJson(Map<String, dynamic> json) =>
