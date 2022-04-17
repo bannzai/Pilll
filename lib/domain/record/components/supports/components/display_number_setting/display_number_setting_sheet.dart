@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_hooks/flutter_hooks.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
+import 'package:pilll/analytics.dart';
 import 'package:pilll/components/atoms/color.dart';
 import 'package:pilll/components/atoms/font.dart';
 import 'package:pilll/components/atoms/text_color.dart';
@@ -11,18 +12,19 @@ const _defaultBegin = 3;
 const _defaultEnd = 120;
 
 class DisplayNumberSettingSheet extends HookConsumerWidget {
-  final DisplayNumberSetting? displayNumberSetting;
+  final PillSheetGroup pillSheetGroup;
   final RecordPageStore store;
 
   DisplayNumberSettingSheet({
-    required this.displayNumberSetting,
+    required this.pillSheetGroup,
     required this.store,
   });
   @override
   Widget build(BuildContext context, WidgetRef ref) {
-    final begin =
-        useState(displayNumberSetting?.beginPillNumber ?? _defaultBegin);
-    final end = useState(displayNumberSetting?.endPillNumber ?? _defaultEnd);
+    final begin = useState(
+        pillSheetGroup.displayNumberSetting?.beginPillNumber ?? _defaultBegin);
+    final end = useState(
+        pillSheetGroup.displayNumberSetting?.endPillNumber ?? _defaultEnd);
     final beginTextFieldController =
         useTextEditingController(text: "${begin.value}");
     final endTextFieldController =
@@ -135,4 +137,20 @@ class DisplayNumberSettingSheet extends HookConsumerWidget {
       ),
     );
   }
+}
+
+void showDisplayNumberSettingSheet(
+  BuildContext context, {
+  required PillSheetGroup pillSheetGroup,
+  required RecordPageStore store,
+}) {
+  analytics.setCurrentScreen(screenName: "DisplayNumberSettingSheet");
+  showModalBottomSheet(
+    context: context,
+    builder: (context) => DisplayNumberSettingSheet(
+      pillSheetGroup: pillSheetGroup,
+      store: store,
+    ),
+    backgroundColor: Colors.transparent,
+  );
 }

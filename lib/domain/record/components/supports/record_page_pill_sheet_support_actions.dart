@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:pilll/components/organisms/pill_sheet/pill_sheet_view_layout.dart';
 import 'package:pilll/domain/record/components/supports/components/appearance_mode/switching_appearance_mode.dart';
-import 'package:pilll/domain/record/components/supports/components/display_number_setting/display_number_setting_sheet.dart';
+import 'package:pilll/domain/record/components/supports/components/display_number_setting/display_number_setting_button.dart';
 import 'package:pilll/domain/record/components/supports/components/rest_duration/begin_manual_rest_duration_button.dart';
 import 'package:pilll/domain/record/components/supports/components/rest_duration/end_manual_rest_duration_button.dart';
 import 'package:pilll/domain/record/record_page_store.dart';
@@ -36,9 +36,10 @@ class RecordPagePillSheetSupportActions extends StatelessWidget {
           const Spacer(),
           if (setting.pillSheetAppearanceMode !=
               PillSheetAppearanceMode.sequential) ...[
-            DisplayNumberSettingSheet(
-                displayNumberSetting: pillSheetGroup.displayNumberSetting,
-                store: store),
+            DisplayNumberSettingButton(
+              pillSheetGroup: pillSheetGroup,
+              store: store,
+            ),
           ],
           const Spacer(),
           if (restDuration != null) ...[
