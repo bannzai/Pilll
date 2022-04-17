@@ -52,13 +52,14 @@ class AddPillSheetGroupStateStore
           setting: setting?.copyWith(),
         ));
 
-  addPillSheetType(PillSheetType pillSheetType, Setting setting) {
+  void addPillSheetType(PillSheetType pillSheetType, Setting setting) {
     final updatedSetting = setting.copyWith(
         pillSheetTypes: setting.pillSheetTypes..add(pillSheetType));
     state = state.copyWith(setting: updatedSetting);
   }
 
-  changePillSheetType(int index, PillSheetType pillSheetType, Setting setting) {
+  void changePillSheetType(
+      int index, PillSheetType pillSheetType, Setting setting) {
     final copied = [...setting.pillSheetTypes];
     copied[index] = pillSheetType;
 
@@ -66,7 +67,7 @@ class AddPillSheetGroupStateStore
     state = state.copyWith(setting: updatedSetting);
   }
 
-  removePillSheetType(int index, Setting setting) {
+  void removePillSheetType(int index, Setting setting) {
     final copied = [...setting.pillSheetEnumTypes];
     copied.removeAt(index);
 
