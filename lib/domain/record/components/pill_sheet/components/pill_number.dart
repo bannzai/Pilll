@@ -22,7 +22,7 @@ class PlainPillNumber extends StatelessWidget {
 
 class SequentialPillNumber extends StatelessWidget {
   final int pageOffset;
-  final AppearanceNumberSetting? offsetPillNumber;
+  final DisplayNumberSetting? offsetPillNumber;
   final int pillNumberIntoPillSheet;
 
   const SequentialPillNumber(
@@ -94,7 +94,7 @@ class MenstruationPillNumber extends StatelessWidget {
 
 class MenstruationSequentialPillNumber extends StatelessWidget {
   final int pageOffset;
-  final AppearanceNumberSetting? offsetPillNumber;
+  final DisplayNumberSetting? offsetPillNumber;
   final int pillNumberIntoPillSheet;
 
   const MenstruationSequentialPillNumber(
