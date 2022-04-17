@@ -544,7 +544,7 @@ class RecordPageStore extends StateNotifier<RecordPageState> {
     await batch.commit();
   }
 
-  void setOffsetPillNumberBegin(int begin) {
+  void setDisplayNumberSettingBegin(int begin) {
     final pillSheetGroup = state.pillSheetGroup;
     if (pillSheetGroup == null) {
       return;
@@ -553,22 +553,23 @@ class RecordPageStore extends StateNotifier<RecordPageState> {
     final offsetPillNumber = pillSheetGroup.offsetPillNumber;
     final PillSheetGroup updatedPillSheetGroup;
     if (offsetPillNumber == null) {
-      final newOffsetPillNumber = DisplayNumberSetting(beginPillNumber: begin);
+      final newDisplayNumberSetting =
+          DisplayNumberSetting(beginPillNumber: begin);
       updatedPillSheetGroup =
-          pillSheetGroup.copyWith(offsetPillNumber: newOffsetPillNumber);
+          pillSheetGroup.copyWith(offsetPillNumber: newDisplayNumberSetting);
       state = state.copyWith(pillSheetGroup: updatedPillSheetGroup);
     } else {
-      final newOffsetPillNumber =
+      final newDisplayNumberSetting =
           offsetPillNumber.copyWith(beginPillNumber: begin);
       updatedPillSheetGroup =
-          pillSheetGroup.copyWith(offsetPillNumber: newOffsetPillNumber);
+          pillSheetGroup.copyWith(offsetPillNumber: newDisplayNumberSetting);
       state = state.copyWith(pillSheetGroup: updatedPillSheetGroup);
     }
 
     _pillSheetGroupService.update(updatedPillSheetGroup);
   }
 
-  void setOffsetPillNumberEnd(int end) {
+  void setDisplayNumberSettingEnd(int end) {
     final pillSheetGroup = state.pillSheetGroup;
     if (pillSheetGroup == null) {
       return;
@@ -577,14 +578,15 @@ class RecordPageStore extends StateNotifier<RecordPageState> {
     final offsetPillNumber = pillSheetGroup.offsetPillNumber;
     final PillSheetGroup updatedPillSheetGroup;
     if (offsetPillNumber == null) {
-      final newOffsetPillNumber = DisplayNumberSetting(endPillNumber: end);
+      final newDisplayNumberSetting = DisplayNumberSetting(endPillNumber: end);
       updatedPillSheetGroup =
-          pillSheetGroup.copyWith(offsetPillNumber: newOffsetPillNumber);
+          pillSheetGroup.copyWith(offsetPillNumber: newDisplayNumberSetting);
       state = state.copyWith(pillSheetGroup: updatedPillSheetGroup);
     } else {
-      final newOffsetPillNumber = offsetPillNumber.copyWith(endPillNumber: end);
+      final newDisplayNumberSetting =
+          offsetPillNumber.copyWith(endPillNumber: end);
       updatedPillSheetGroup =
-          pillSheetGroup.copyWith(offsetPillNumber: newOffsetPillNumber);
+          pillSheetGroup.copyWith(offsetPillNumber: newDisplayNumberSetting);
       state = state.copyWith(pillSheetGroup: updatedPillSheetGroup);
     }
 

@@ -130,13 +130,13 @@ class PillSheetGroup with _$PillSheetGroup {
 }
 
 @freezed
-class DisplayNumberSetting with _$OffsetPillNumber {
+class DisplayNumberSetting with _$DisplayNumberSetting {
   @JsonSerializable(explicitToJson: true)
   const factory DisplayNumberSetting({
     int? beginPillNumber,
     int? endPillNumber,
-  }) = _OffsetPillNumber;
+  }) = _DisplayNumberSetting;
 
   factory DisplayNumberSetting.fromJson(Map<String, dynamic> json) =>
-      _$OffsetPillNumberFromJson(json);
+      _$DisplayNumberSettingFromJson(json);
 }
