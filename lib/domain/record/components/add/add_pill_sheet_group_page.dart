@@ -40,8 +40,6 @@ class AddPillSheetGroupPage extends HookConsumerWidget {
             children: [
               SettingPillSheetGroup(
                 pillSheetTypes: setting.pillSheetEnumTypes,
-                displayNumberSetting:
-                    DisplayNumberSetting(store: store, state: state),
                 onAdd: (pillSheetType) {
                   analytics.logEvent(
                       name: "setting_add_pill_sheet_group",
@@ -70,14 +68,21 @@ class AddPillSheetGroupPage extends HookConsumerWidget {
                   padding: const EdgeInsets.only(bottom: 35),
                   child: Container(
                     color: PilllColors.background,
-                    child: PrimaryButton(
-                      text: "追加",
-                      onPressed: () async {
-                        analytics.logEvent(
-                            name: "pressed_add_pill_sheet_group");
-                        await store.register(setting);
-                        Navigator.of(context).pop();
-                      },
+                    child: Column(
+                      mainAxisSize: MainAxisSize.min,
+                      children: [
+                        DisplayNumberSetting(store: store, state: state),
+                        const SizedBox(height: 24),
+                        PrimaryButton(
+                          text: "追加",
+                          onPressed: () async {
+                            analytics.logEvent(
+                                name: "pressed_add_pill_sheet_group");
+                            await store.register(setting);
+                            Navigator.of(context).pop();
+                          },
+                        ),
+                      ],
                     ),
                   ),
                 ),
