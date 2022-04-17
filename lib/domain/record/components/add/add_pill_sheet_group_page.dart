@@ -40,7 +40,8 @@ class AddPillSheetGroupPage extends HookConsumerWidget {
             children: [
               SettingPillSheetGroup(
                 pillSheetTypes: setting.pillSheetEnumTypes,
-displayNumberSetting: DisplayNumberSetting(store: store, state: state);,
+                displayNumberSetting:
+                    DisplayNumberSetting(store: store, state: state),
                 onAdd: (pillSheetType) {
                   analytics.logEvent(
                       name: "setting_add_pill_sheet_group",
