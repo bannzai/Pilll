@@ -8,18 +8,22 @@ class SettingPillSheetGroup extends StatelessWidget {
   const SettingPillSheetGroup({
     Key? key,
     required this.pillSheetTypes,
+    required this.displayNumberSetting,
     required this.onAdd,
     required this.onChange,
     required this.onDelete,
   }) : super(key: key);
 
   final List<PillSheetType> pillSheetTypes;
+  final Widget? displayNumberSetting;
   final Function(PillSheetType) onAdd;
   final Function(int, PillSheetType) onChange;
   final Function(int) onDelete;
 
   @override
   Widget build(BuildContext context) {
+    final displayNumberSetting = this.displayNumberSetting;
+
     return Column(
       children: [
         ...pillSheetTypes
@@ -41,6 +45,7 @@ class SettingPillSheetGroup extends StatelessWidget {
             .values
             .expand((element) => element)
             .toList(),
+        if (displayNumberSetting != null) displayNumberSetting,
         if (pillSheetTypes.length < 7) ...[
           const SizedBox(height: 24),
           PillSheetTypeAddButton(
