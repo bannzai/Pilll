@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 import 'package:flutter_hooks/flutter_hooks.dart';
 import 'package:pilll/components/atoms/font.dart';
 import 'package:pilll/domain/record/record_page_state.codegen.dart';
@@ -46,6 +47,7 @@ class DisplayNumberSetting extends StatelessWidget {
             TextField(
               controller: textFieldController,
               keyboardType: TextInputType.number,
+              inputFormatters: [FilteringTextInputFormatter.digitsOnly],
               decoration: const InputDecoration(
                 border: UnderlineInputBorder(
                   borderSide: BorderSide(width: 1),
