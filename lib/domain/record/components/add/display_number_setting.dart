@@ -26,10 +26,8 @@ class DisplayNumberSetting extends StatelessWidget {
     }
 
     final estimatedEndPillNumber = pillSheetGroup.estimatedEndPillNumber;
-    // TODO:
-    final textFieldController = useTextEditingController(text: "111");
-    // TODO:
-    final number = 121;
+    final textFieldController =
+        useTextEditingController(text: "${estimatedEndPillNumber + 1}");
 
     return Column(
       crossAxisAlignment: CrossAxisAlignment.center,
@@ -73,7 +71,7 @@ class DisplayNumberSetting extends StatelessWidget {
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
             Text(
-              "前回のシートの最後：$number",
+              "前回のシートの最後：$estimatedEndPillNumber",
               style: const TextStyle(
                   fontFamily: FontFamily.japanese,
                   fontSize: 12,
