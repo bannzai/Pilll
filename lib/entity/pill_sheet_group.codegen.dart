@@ -130,7 +130,7 @@ class PillSheetGroup with _$PillSheetGroup {
 
   int get estimatedEndPillNumber {
     var estimatedEndPillNumber = summarizedPillCountWithPillSheetsToEndIndex(
-        pillSheets: pillSheets, endIndex: pillSheets.length + 1);
+        pillSheets: pillSheets, endIndex: pillSheets.length);
 
     final offsetPillNumber = this.displayNumberSetting;
     if (offsetPillNumber != null) {
