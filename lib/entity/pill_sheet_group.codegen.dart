@@ -30,7 +30,7 @@ class PillSheetGroup with _$PillSheetGroup {
       toJson: TimestampConverter.dateTimeToTimestamp,
     )
         DateTime? deletedAt,
-    OffsetPillNumber? offsetPillNumber,
+    AppearanceNumberSetting? offsetPillNumber,
   }) = _PillSheetGroup;
 
   factory PillSheetGroup.fromJson(Map<String, dynamic> json) =>
@@ -130,13 +130,13 @@ class PillSheetGroup with _$PillSheetGroup {
 }
 
 @freezed
-class OffsetPillNumber with _$OffsetPillNumber {
+class AppearanceNumberSetting with _$OffsetPillNumber {
   @JsonSerializable(explicitToJson: true)
-  const factory OffsetPillNumber({
+  const factory AppearanceNumberSetting({
     int? beginPillNumber,
     int? endPillNumber,
   }) = _OffsetPillNumber;
 
-  factory OffsetPillNumber.fromJson(Map<String, dynamic> json) =>
+  factory AppearanceNumberSetting.fromJson(Map<String, dynamic> json) =>
       _$OffsetPillNumberFromJson(json);
 }

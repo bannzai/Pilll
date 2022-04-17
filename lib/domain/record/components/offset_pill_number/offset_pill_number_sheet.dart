@@ -11,7 +11,7 @@ const _defaultBegin = 3;
 const _defaultEnd = 120;
 
 class OffsetPillNumberSheet extends HookConsumerWidget {
-  final OffsetPillNumber? offsetPillNumber;
+  final AppearanceNumberSetting? offsetPillNumber;
   final RecordPageStore store;
 
   OffsetPillNumberSheet({

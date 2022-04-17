@@ -553,7 +553,7 @@ class RecordPageStore extends StateNotifier<RecordPageState> {
     final offsetPillNumber = pillSheetGroup.offsetPillNumber;
     final PillSheetGroup updatedPillSheetGroup;
     if (offsetPillNumber == null) {
-      final newOffsetPillNumber = OffsetPillNumber(beginPillNumber: begin);
+      final newOffsetPillNumber = AppearanceNumberSetting(beginPillNumber: begin);
       updatedPillSheetGroup =
           pillSheetGroup.copyWith(offsetPillNumber: newOffsetPillNumber);
       state = state.copyWith(pillSheetGroup: updatedPillSheetGroup);
@@ -577,7 +577,7 @@ class RecordPageStore extends StateNotifier<RecordPageState> {
     final offsetPillNumber = pillSheetGroup.offsetPillNumber;
     final PillSheetGroup updatedPillSheetGroup;
     if (offsetPillNumber == null) {
-      final newOffsetPillNumber = OffsetPillNumber(endPillNumber: end);
+      final newOffsetPillNumber = AppearanceNumberSetting(endPillNumber: end);
       updatedPillSheetGroup =
           pillSheetGroup.copyWith(offsetPillNumber: newOffsetPillNumber);
       state = state.copyWith(pillSheetGroup: updatedPillSheetGroup);
