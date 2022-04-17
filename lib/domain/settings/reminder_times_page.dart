@@ -5,8 +5,6 @@ import 'package:pilll/domain/settings/setting_page_store.dart';
 import 'package:pilll/components/atoms/color.dart';
 import 'package:pilll/components/atoms/font.dart';
 import 'package:pilll/components/atoms/text_color.dart';
-import 'package:pilll/error/error_alert.dart';
-import 'package:pilll/error_log.dart';
 import 'package:pilll/util/formatter/date_time_formatter.dart';
 import 'package:pilll/util/toolbar/time_picker.dart';
 import 'package:flutter/material.dart';
@@ -87,14 +85,8 @@ class ReminderTimesPage extends HookConsumerWidget {
       direction: DismissDirection.endToStart,
       onDismissed: setting.reminderTimes.length == 1
           ? null
-          : (direction) async {
-              try {
-                await store.deleteReminderTimes(number - 1);
-              } catch (error) {
-                showErrorAlert(context,
-                    title: "通知時刻の削除に失敗しました",
-                    message: "再度お試しください。解決しない場合は設定タブの「お問い合わせ」からお問い合わせください");
-              }
+          : (direction) {
+              store.deleteReminderTimes(number - 1);
             },
       background: Container(
         color: Colors.red,
@@ -166,21 +158,14 @@ class ReminderTimesPage extends HookConsumerWidget {
           initialDateTime: isEditing
               ? setting.reminderTimes[index].dateTime()
               : const ReminderTime(hour: 22, minute: 0).dateTime(),
-          done: (dateTime) async {
+          done: (dateTime) {
             Navigator.pop(context);
-            try {
-              if (isEditing) {
-                await store.editReminderTime(index,
-                    ReminderTime(hour: dateTime.hour, minute: dateTime.minute));
-              } else {
-                await store.addReminderTimes(
-                    ReminderTime(hour: dateTime.hour, minute: dateTime.minute));
-              }
-            } catch (error, stack) {
-              errorLogger.recordError(error, stack);
-              showErrorAlert(context,
-                  title: "通知時刻の変更に失敗しました",
-                  message: "再度お試しください。解決しない場合は設定タブの「お問い合わせ」からお問い合わせください");
+            if (isEditing) {
+              store.editReminderTime(index,
+                  ReminderTime(hour: dateTime.hour, minute: dateTime.minute));
+            } else {
+              store.addReminderTimes(
+                  ReminderTime(hour: dateTime.hour, minute: dateTime.minute));
             }
           },
         );

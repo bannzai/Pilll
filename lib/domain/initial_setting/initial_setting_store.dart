@@ -12,7 +12,6 @@ import 'package:pilll/entity/pill_sheet_group.codegen.dart';
 import 'package:pilll/entity/pill_sheet_type.dart';
 import 'package:pilll/entity/setting.codegen.dart';
 import 'package:pilll/service/auth.dart';
-import 'package:pilll/service/local_notification.dart';
 import 'package:pilll/service/pill_sheet.dart';
 import 'package:pilll/service/pill_sheet_group.dart';
 import 'package:pilll/service/pill_sheet_modified_history.dart';
@@ -148,9 +147,6 @@ class InitialSettingStateStore extends StateNotifier<InitialSettingState> {
 
     final batch = _batchFactory.batch();
 
-    final setting = state.buildSetting();
-    _settingService.updateWithBatch(batch, setting);
-
     final todayPillNumber = state.todayPillNumber;
     if (todayPillNumber != null) {
       final createdPillSheets = _pillSheetService.register(
@@ -165,7 +161,7 @@ class InitialSettingStateStore extends StateNotifier<InitialSettingState> {
       );
 
       final pillSheetIDs = createdPillSheets.map((e) => e.id!).toList();
-      final pillSheetGroup = _pillSheetGroupService.register(
+      final createdPillSheetGroup = _pillSheetGroupService.register(
         batch,
         PillSheetGroup(
           pillSheetIDs: pillSheetIDs,
@@ -177,17 +173,13 @@ class InitialSettingStateStore extends StateNotifier<InitialSettingState> {
       final history = PillSheetModifiedHistoryServiceActionFactory
           .createCreatedPillSheetAction(
         pillSheetIDs: pillSheetIDs,
-        pillSheetGroupID: pillSheetGroup.id,
+        pillSheetGroupID: createdPillSheetGroup.id,
       );
       _pillSheetModifiedHistoryService.add(batch, history);
-
-      await localNotification.scheduleRemiderNotification(
-        pillSheetGroup: pillSheetGroup,
-        activedPillSheet: pillSheetGroup.activedPillSheet!,
-        isTrialOrPremium: true,
-        setting: setting,
-      );
     }
+
+    final setting = state.buildSetting();
+    _settingService.updateWithBatch(batch, setting);
 
     await batch.commit();
 

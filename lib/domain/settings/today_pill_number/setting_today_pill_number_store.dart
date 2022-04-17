@@ -6,7 +6,6 @@ import 'package:pilll/domain/settings/today_pill_number/setting_today_pill_numbe
 import 'package:pilll/entity/pill_sheet.codegen.dart';
 import 'package:pilll/entity/pill_sheet_group.codegen.dart';
 import 'package:pilll/entity/pill_sheet_type.dart';
-import 'package:pilll/service/local_notification.dart';
 import 'package:pilll/service/pill_sheet.dart';
 import 'package:pilll/service/pill_sheet_group.dart';
 import 'package:pilll/service/pill_sheet_modified_history.dart';
@@ -40,15 +39,12 @@ class SettingTodayPillNumberStateStore
     this._pillSheetModifiedHistoryService,
   ) : super(
           SettingTodayPillNumberState(
-            setting: _parameter.setting,
             appearanceMode: _parameter.appearanceMode,
             selectedPillSheetPageIndex: _parameter.activedPillSheet.groupIndex,
             selectedPillMarkNumberIntoPillSheet: _pillNumberIntoPillSheet(
               activedPillSheet: _parameter.activedPillSheet,
               pillSheetGroup: _parameter.pillSheetGroup,
             ),
-            isTrial: _parameter.isTrial,
-            isPremium: _parameter.isPremium,
           ),
         );
 
@@ -70,12 +66,11 @@ class SettingTodayPillNumberStateStore
 
     final pillSheetTypes =
         pillSheetGroup.pillSheets.map((e) => e.pillSheetType).toList();
-    final nextSerializedPillNumber =
-        summarizedPillCountWithPillSheetTypesToEndIndex(
-              pillSheetTypes: pillSheetTypes,
-              endIndex: state.selectedPillSheetPageIndex,
-            ) +
-            state.selectedPillMarkNumberIntoPillSheet;
+    final nextSerializedPillNumber = summarizedPillCountWithPillSheetTypesToEndIndex(
+          pillSheetTypes: pillSheetTypes,
+          endIndex: state.selectedPillSheetPageIndex,
+        ) +
+        state.selectedPillMarkNumberIntoPillSheet;
     final firstPilSheetBeginDate =
         today().subtract(Duration(days: nextSerializedPillNumber - 1));
 
@@ -87,9 +82,8 @@ class SettingTodayPillNumberStateStore
       if (index == 0) {
         beginDate = firstPilSheetBeginDate;
       } else {
-        final passedTotalCount =
-            summarizedPillCountWithPillSheetTypesToEndIndex(
-                pillSheetTypes: pillSheetTypes, endIndex: index);
+        final passedTotalCount = summarizedPillCountWithPillSheetTypesToEndIndex(
+            pillSheetTypes: pillSheetTypes, endIndex: index);
         beginDate =
             firstPilSheetBeginDate.add(Duration(days: passedTotalCount));
       }
@@ -125,13 +119,6 @@ class SettingTodayPillNumberStateStore
 
     _pillSheetGroupService.update(
         batch, pillSheetGroup.copyWith(pillSheets: updatedPillSheets));
-
-    await localNotification.scheduleRemiderNotification(
-      pillSheetGroup: pillSheetGroup,
-      activedPillSheet: activedPillSheet,
-      isTrialOrPremium: state.isTrial || state.isPremium,
-      setting: state.setting!,
-    );
 
     await batch.commit();
   }

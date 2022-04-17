@@ -19,19 +19,13 @@ class _$SettingTodayPillNumberStoreParameterTearOff {
   const _$SettingTodayPillNumberStoreParameterTearOff();
 
   _SettingTodayPillNumberStoreParameter call(
-      {required Setting? setting,
-      required PillSheetGroup pillSheetGroup,
+      {required PillSheetGroup pillSheetGroup,
       required PillSheetAppearanceMode appearanceMode,
-      required PillSheet activedPillSheet,
-      required bool isTrial,
-      required bool isPremium}) {
+      required PillSheet activedPillSheet}) {
     return _SettingTodayPillNumberStoreParameter(
-      setting: setting,
       pillSheetGroup: pillSheetGroup,
       appearanceMode: appearanceMode,
       activedPillSheet: activedPillSheet,
-      isTrial: isTrial,
-      isPremium: isPremium,
     );
   }
 }
@@ -42,14 +36,10 @@ const $SettingTodayPillNumberStoreParameter =
 
 /// @nodoc
 mixin _$SettingTodayPillNumberStoreParameter {
-// TODO: Temporary optional for pass compile for test
-  Setting? get setting => throw _privateConstructorUsedError;
   PillSheetGroup get pillSheetGroup => throw _privateConstructorUsedError;
   PillSheetAppearanceMode get appearanceMode =>
       throw _privateConstructorUsedError;
   PillSheet get activedPillSheet => throw _privateConstructorUsedError;
-  bool get isTrial => throw _privateConstructorUsedError;
-  bool get isPremium => throw _privateConstructorUsedError;
 
   @JsonKey(ignore: true)
   $SettingTodayPillNumberStoreParameterCopyWith<
@@ -64,14 +54,10 @@ abstract class $SettingTodayPillNumberStoreParameterCopyWith<$Res> {
           $Res Function(SettingTodayPillNumberStoreParameter) then) =
       _$SettingTodayPillNumberStoreParameterCopyWithImpl<$Res>;
   $Res call(
-      {Setting? setting,
-      PillSheetGroup pillSheetGroup,
+      {PillSheetGroup pillSheetGroup,
       PillSheetAppearanceMode appearanceMode,
-      PillSheet activedPillSheet,
-      bool isTrial,
-      bool isPremium});
+      PillSheet activedPillSheet});
 
-  $SettingCopyWith<$Res>? get setting;
   $PillSheetGroupCopyWith<$Res> get pillSheetGroup;
   $PillSheetCopyWith<$Res> get activedPillSheet;
 }
@@ -87,18 +73,11 @@ class _$SettingTodayPillNumberStoreParameterCopyWithImpl<$Res>
 
   @override
   $Res call({
-    Object? setting = freezed,
     Object? pillSheetGroup = freezed,
     Object? appearanceMode = freezed,
     Object? activedPillSheet = freezed,
-    Object? isTrial = freezed,
-    Object? isPremium = freezed,
   }) {
     return _then(_value.copyWith(
-      setting: setting == freezed
-          ? _value.setting
-          : setting // ignore: cast_nullable_to_non_nullable
-              as Setting?,
       pillSheetGroup: pillSheetGroup == freezed
           ? _value.pillSheetGroup
           : pillSheetGroup // ignore: cast_nullable_to_non_nullable
@@ -111,26 +90,7 @@ class _$SettingTodayPillNumberStoreParameterCopyWithImpl<$Res>
           ? _value.activedPillSheet
           : activedPillSheet // ignore: cast_nullable_to_non_nullable
               as PillSheet,
-      isTrial: isTrial == freezed
-          ? _value.isTrial
-          : isTrial // ignore: cast_nullable_to_non_nullable
-              as bool,
-      isPremium: isPremium == freezed
-          ? _value.isPremium
-          : isPremium // ignore: cast_nullable_to_non_nullable
-              as bool,
     ));
-  }
-
-  @override
-  $SettingCopyWith<$Res>? get setting {
-    if (_value.setting == null) {
-      return null;
-    }
-
-    return $SettingCopyWith<$Res>(_value.setting!, (value) {
-      return _then(_value.copyWith(setting: value));
-    });
   }
 
   @override
@@ -157,15 +117,10 @@ abstract class _$SettingTodayPillNumberStoreParameterCopyWith<$Res>
       __$SettingTodayPillNumberStoreParameterCopyWithImpl<$Res>;
   @override
   $Res call(
-      {Setting? setting,
-      PillSheetGroup pillSheetGroup,
+      {PillSheetGroup pillSheetGroup,
       PillSheetAppearanceMode appearanceMode,
-      PillSheet activedPillSheet,
-      bool isTrial,
-      bool isPremium});
+      PillSheet activedPillSheet});
 
-  @override
-  $SettingCopyWith<$Res>? get setting;
   @override
   $PillSheetGroupCopyWith<$Res> get pillSheetGroup;
   @override
@@ -187,18 +142,11 @@ class __$SettingTodayPillNumberStoreParameterCopyWithImpl<$Res>
 
   @override
   $Res call({
-    Object? setting = freezed,
     Object? pillSheetGroup = freezed,
     Object? appearanceMode = freezed,
     Object? activedPillSheet = freezed,
-    Object? isTrial = freezed,
-    Object? isPremium = freezed,
   }) {
     return _then(_SettingTodayPillNumberStoreParameter(
-      setting: setting == freezed
-          ? _value.setting
-          : setting // ignore: cast_nullable_to_non_nullable
-              as Setting?,
       pillSheetGroup: pillSheetGroup == freezed
           ? _value.pillSheetGroup
           : pillSheetGroup // ignore: cast_nullable_to_non_nullable
@@ -211,14 +159,6 @@ class __$SettingTodayPillNumberStoreParameterCopyWithImpl<$Res>
           ? _value.activedPillSheet
           : activedPillSheet // ignore: cast_nullable_to_non_nullable
               as PillSheet,
-      isTrial: isTrial == freezed
-          ? _value.isTrial
-          : isTrial // ignore: cast_nullable_to_non_nullable
-              as bool,
-      isPremium: isPremium == freezed
-          ? _value.isPremium
-          : isPremium // ignore: cast_nullable_to_non_nullable
-              as bool,
     ));
   }
 }
@@ -228,29 +168,20 @@ class __$SettingTodayPillNumberStoreParameterCopyWithImpl<$Res>
 class _$_SettingTodayPillNumberStoreParameter
     implements _SettingTodayPillNumberStoreParameter {
   const _$_SettingTodayPillNumberStoreParameter(
-      {required this.setting,
-      required this.pillSheetGroup,
+      {required this.pillSheetGroup,
       required this.appearanceMode,
-      required this.activedPillSheet,
-      required this.isTrial,
-      required this.isPremium});
+      required this.activedPillSheet});
 
-  @override // TODO: Temporary optional for pass compile for test
-  final Setting? setting;
   @override
   final PillSheetGroup pillSheetGroup;
   @override
   final PillSheetAppearanceMode appearanceMode;
   @override
   final PillSheet activedPillSheet;
-  @override
-  final bool isTrial;
-  @override
-  final bool isPremium;
 
   @override
   String toString() {
-    return 'SettingTodayPillNumberStoreParameter(setting: $setting, pillSheetGroup: $pillSheetGroup, appearanceMode: $appearanceMode, activedPillSheet: $activedPillSheet, isTrial: $isTrial, isPremium: $isPremium)';
+    return 'SettingTodayPillNumberStoreParameter(pillSheetGroup: $pillSheetGroup, appearanceMode: $appearanceMode, activedPillSheet: $activedPillSheet)';
   }
 
   @override
@@ -258,26 +189,20 @@ class _$_SettingTodayPillNumberStoreParameter
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _SettingTodayPillNumberStoreParameter &&
-            const DeepCollectionEquality().equals(other.setting, setting) &&
             const DeepCollectionEquality()
                 .equals(other.pillSheetGroup, pillSheetGroup) &&
             const DeepCollectionEquality()
                 .equals(other.appearanceMode, appearanceMode) &&
             const DeepCollectionEquality()
-                .equals(other.activedPillSheet, activedPillSheet) &&
-            const DeepCollectionEquality().equals(other.isTrial, isTrial) &&
-            const DeepCollectionEquality().equals(other.isPremium, isPremium));
+                .equals(other.activedPillSheet, activedPillSheet));
   }
 
   @override
   int get hashCode => Object.hash(
       runtimeType,
-      const DeepCollectionEquality().hash(setting),
       const DeepCollectionEquality().hash(pillSheetGroup),
       const DeepCollectionEquality().hash(appearanceMode),
-      const DeepCollectionEquality().hash(activedPillSheet),
-      const DeepCollectionEquality().hash(isTrial),
-      const DeepCollectionEquality().hash(isPremium));
+      const DeepCollectionEquality().hash(activedPillSheet));
 
   @JsonKey(ignore: true)
   @override
@@ -290,25 +215,17 @@ class _$_SettingTodayPillNumberStoreParameter
 abstract class _SettingTodayPillNumberStoreParameter
     implements SettingTodayPillNumberStoreParameter {
   const factory _SettingTodayPillNumberStoreParameter(
-      {required Setting? setting,
-      required PillSheetGroup pillSheetGroup,
-      required PillSheetAppearanceMode appearanceMode,
-      required PillSheet activedPillSheet,
-      required bool isTrial,
-      required bool isPremium}) = _$_SettingTodayPillNumberStoreParameter;
+          {required PillSheetGroup pillSheetGroup,
+          required PillSheetAppearanceMode appearanceMode,
+          required PillSheet activedPillSheet}) =
+      _$_SettingTodayPillNumberStoreParameter;
 
-  @override // TODO: Temporary optional for pass compile for test
-  Setting? get setting;
   @override
   PillSheetGroup get pillSheetGroup;
   @override
   PillSheetAppearanceMode get appearanceMode;
   @override
   PillSheet get activedPillSheet;
-  @override
-  bool get isTrial;
-  @override
-  bool get isPremium;
   @override
   @JsonKey(ignore: true)
   _$SettingTodayPillNumberStoreParameterCopyWith<
