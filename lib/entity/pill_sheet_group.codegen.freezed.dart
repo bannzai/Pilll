@@ -31,14 +31,14 @@ class _$PillSheetGroupTearOff {
           required DateTime createdAt,
       @JsonKey(fromJson: TimestampConverter.timestampToDateTime, toJson: TimestampConverter.dateTimeToTimestamp)
           DateTime? deletedAt,
-      DisplayNumberSetting? offsetPillNumber}) {
+      DisplayNumberSetting? displayNumberSetting}) {
     return _PillSheetGroup(
       id: id,
       pillSheetIDs: pillSheetIDs,
       pillSheets: pillSheets,
       createdAt: createdAt,
       deletedAt: deletedAt,
-      offsetPillNumber: offsetPillNumber,
+      displayNumberSetting: displayNumberSetting,
     );
   }
 
@@ -64,7 +64,7 @@ mixin _$PillSheetGroup {
       fromJson: TimestampConverter.timestampToDateTime,
       toJson: TimestampConverter.dateTimeToTimestamp)
   DateTime? get deletedAt => throw _privateConstructorUsedError;
-  DisplayNumberSetting? get offsetPillNumber =>
+  DisplayNumberSetting? get displayNumberSetting =>
       throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
@@ -87,9 +87,9 @@ abstract class $PillSheetGroupCopyWith<$Res> {
           DateTime createdAt,
       @JsonKey(fromJson: TimestampConverter.timestampToDateTime, toJson: TimestampConverter.dateTimeToTimestamp)
           DateTime? deletedAt,
-      DisplayNumberSetting? offsetPillNumber});
+      DisplayNumberSetting? displayNumberSetting});
 
-  $DisplayNumberSettingCopyWith<$Res>? get offsetPillNumber;
+  $DisplayNumberSettingCopyWith<$Res>? get displayNumberSetting;
 }
 
 /// @nodoc
@@ -108,7 +108,7 @@ class _$PillSheetGroupCopyWithImpl<$Res>
     Object? pillSheets = freezed,
     Object? createdAt = freezed,
     Object? deletedAt = freezed,
-    Object? offsetPillNumber = freezed,
+    Object? displayNumberSetting = freezed,
   }) {
     return _then(_value.copyWith(
       id: id == freezed
@@ -131,22 +131,22 @@ class _$PillSheetGroupCopyWithImpl<$Res>
           ? _value.deletedAt
           : deletedAt // ignore: cast_nullable_to_non_nullable
               as DateTime?,
-      offsetPillNumber: offsetPillNumber == freezed
-          ? _value.offsetPillNumber
-          : offsetPillNumber // ignore: cast_nullable_to_non_nullable
+      displayNumberSetting: displayNumberSetting == freezed
+          ? _value.displayNumberSetting
+          : displayNumberSetting // ignore: cast_nullable_to_non_nullable
               as DisplayNumberSetting?,
     ));
   }
 
   @override
-  $DisplayNumberSettingCopyWith<$Res>? get offsetPillNumber {
-    if (_value.offsetPillNumber == null) {
+  $DisplayNumberSettingCopyWith<$Res>? get displayNumberSetting {
+    if (_value.displayNumberSetting == null) {
       return null;
     }
 
-    return $DisplayNumberSettingCopyWith<$Res>(_value.offsetPillNumber!,
+    return $DisplayNumberSettingCopyWith<$Res>(_value.displayNumberSetting!,
         (value) {
-      return _then(_value.copyWith(offsetPillNumber: value));
+      return _then(_value.copyWith(displayNumberSetting: value));
     });
   }
 }
@@ -167,10 +167,10 @@ abstract class _$PillSheetGroupCopyWith<$Res>
           DateTime createdAt,
       @JsonKey(fromJson: TimestampConverter.timestampToDateTime, toJson: TimestampConverter.dateTimeToTimestamp)
           DateTime? deletedAt,
-      DisplayNumberSetting? offsetPillNumber});
+      DisplayNumberSetting? displayNumberSetting});
 
   @override
-  $DisplayNumberSettingCopyWith<$Res>? get offsetPillNumber;
+  $DisplayNumberSettingCopyWith<$Res>? get displayNumberSetting;
 }
 
 /// @nodoc
@@ -191,7 +191,7 @@ class __$PillSheetGroupCopyWithImpl<$Res>
     Object? pillSheets = freezed,
     Object? createdAt = freezed,
     Object? deletedAt = freezed,
-    Object? offsetPillNumber = freezed,
+    Object? displayNumberSetting = freezed,
   }) {
     return _then(_PillSheetGroup(
       id: id == freezed
@@ -214,9 +214,9 @@ class __$PillSheetGroupCopyWithImpl<$Res>
           ? _value.deletedAt
           : deletedAt // ignore: cast_nullable_to_non_nullable
               as DateTime?,
-      offsetPillNumber: offsetPillNumber == freezed
-          ? _value.offsetPillNumber
-          : offsetPillNumber // ignore: cast_nullable_to_non_nullable
+      displayNumberSetting: displayNumberSetting == freezed
+          ? _value.displayNumberSetting
+          : displayNumberSetting // ignore: cast_nullable_to_non_nullable
               as DisplayNumberSetting?,
     ));
   }
@@ -235,7 +235,7 @@ class _$_PillSheetGroup extends _PillSheetGroup {
           required this.createdAt,
       @JsonKey(fromJson: TimestampConverter.timestampToDateTime, toJson: TimestampConverter.dateTimeToTimestamp)
           this.deletedAt,
-      this.offsetPillNumber})
+      this.displayNumberSetting})
       : super._();
 
   factory _$_PillSheetGroup.fromJson(Map<String, dynamic> json) =>
@@ -259,11 +259,11 @@ class _$_PillSheetGroup extends _PillSheetGroup {
       toJson: TimestampConverter.dateTimeToTimestamp)
   final DateTime? deletedAt;
   @override
-  final DisplayNumberSetting? offsetPillNumber;
+  final DisplayNumberSetting? displayNumberSetting;
 
   @override
   String toString() {
-    return 'PillSheetGroup(id: $id, pillSheetIDs: $pillSheetIDs, pillSheets: $pillSheets, createdAt: $createdAt, deletedAt: $deletedAt, offsetPillNumber: $offsetPillNumber)';
+    return 'PillSheetGroup(id: $id, pillSheetIDs: $pillSheetIDs, pillSheets: $pillSheets, createdAt: $createdAt, deletedAt: $deletedAt, displayNumberSetting: $displayNumberSetting)';
   }
 
   @override
@@ -279,7 +279,7 @@ class _$_PillSheetGroup extends _PillSheetGroup {
             const DeepCollectionEquality().equals(other.createdAt, createdAt) &&
             const DeepCollectionEquality().equals(other.deletedAt, deletedAt) &&
             const DeepCollectionEquality()
-                .equals(other.offsetPillNumber, offsetPillNumber));
+                .equals(other.displayNumberSetting, displayNumberSetting));
   }
 
   @override
@@ -290,7 +290,7 @@ class _$_PillSheetGroup extends _PillSheetGroup {
       const DeepCollectionEquality().hash(pillSheets),
       const DeepCollectionEquality().hash(createdAt),
       const DeepCollectionEquality().hash(deletedAt),
-      const DeepCollectionEquality().hash(offsetPillNumber));
+      const DeepCollectionEquality().hash(displayNumberSetting));
 
   @JsonKey(ignore: true)
   @override
@@ -313,7 +313,7 @@ abstract class _PillSheetGroup extends PillSheetGroup {
           required DateTime createdAt,
       @JsonKey(fromJson: TimestampConverter.timestampToDateTime, toJson: TimestampConverter.dateTimeToTimestamp)
           DateTime? deletedAt,
-      DisplayNumberSetting? offsetPillNumber}) = _$_PillSheetGroup;
+      DisplayNumberSetting? displayNumberSetting}) = _$_PillSheetGroup;
   const _PillSheetGroup._() : super._();
 
   factory _PillSheetGroup.fromJson(Map<String, dynamic> json) =
@@ -337,7 +337,7 @@ abstract class _PillSheetGroup extends PillSheetGroup {
       toJson: TimestampConverter.dateTimeToTimestamp)
   DateTime? get deletedAt;
   @override
-  DisplayNumberSetting? get offsetPillNumber;
+  DisplayNumberSetting? get displayNumberSetting;
   @override
   @JsonKey(ignore: true)
   _$PillSheetGroupCopyWith<_PillSheetGroup> get copyWith =>
