@@ -88,7 +88,7 @@ class AddPillSheetGroupPage extends HookConsumerWidget {
   }
 }
 
-extension RecordPageAddingPillSheetGroupPageRoute on AddPillSheetGroupPage {
+extension AddPillSheetGroupPageRoute on AddPillSheetGroupPage {
   static Route<dynamic> route() {
     return MaterialPageRoute(
       fullscreenDialog: true,
