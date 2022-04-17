@@ -1,4 +1,5 @@
 import 'package:firebase_auth/firebase_auth.dart';
+import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter_app_badger/flutter_app_badger.dart';
 import 'package:pilll/analytics.dart';
 import 'package:pilll/database/batch.dart';
@@ -10,6 +11,10 @@ import 'package:pilll/service/pill_sheet_modified_history.dart';
 import 'package:pilll/util/datetime/day.dart';
 
 Future<void> recordPill() async {
+    // 通知からの起動の時に、FirebaseAuth.instanceを参照すると、まだinitializeされてないよ．的なエラーが出る
+  if (Firebase.apps.isEmpty) {
+    await Firebase.initializeApp();
+  }
   final firebaseUser = FirebaseAuth.instance.currentUser;
   if (firebaseUser == null) {
     return;
