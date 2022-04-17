@@ -555,14 +555,14 @@ class RecordPageStore extends StateNotifier<RecordPageState> {
     if (offsetPillNumber == null) {
       final newDisplayNumberSetting =
           DisplayNumberSetting(beginPillNumber: begin);
-      updatedPillSheetGroup =
-          pillSheetGroup.copyWith(offsetPillNumber: newDisplayNumberSetting);
+      updatedPillSheetGroup = pillSheetGroup.copyWith(
+          displayNumberSetting: newDisplayNumberSetting);
       state = state.copyWith(pillSheetGroup: updatedPillSheetGroup);
     } else {
       final newDisplayNumberSetting =
           offsetPillNumber.copyWith(beginPillNumber: begin);
-      updatedPillSheetGroup =
-          pillSheetGroup.copyWith(offsetPillNumber: newDisplayNumberSetting);
+      updatedPillSheetGroup = pillSheetGroup.copyWith(
+          displayNumberSetting: newDisplayNumberSetting);
       state = state.copyWith(pillSheetGroup: updatedPillSheetGroup);
     }
 
@@ -579,14 +579,14 @@ class RecordPageStore extends StateNotifier<RecordPageState> {
     final PillSheetGroup updatedPillSheetGroup;
     if (offsetPillNumber == null) {
       final newDisplayNumberSetting = DisplayNumberSetting(endPillNumber: end);
-      updatedPillSheetGroup =
-          pillSheetGroup.copyWith(offsetPillNumber: newDisplayNumberSetting);
+      updatedPillSheetGroup = pillSheetGroup.copyWith(
+          displayNumberSetting: newDisplayNumberSetting);
       state = state.copyWith(pillSheetGroup: updatedPillSheetGroup);
     } else {
       final newDisplayNumberSetting =
           offsetPillNumber.copyWith(endPillNumber: end);
-      updatedPillSheetGroup =
-          pillSheetGroup.copyWith(offsetPillNumber: newDisplayNumberSetting);
+      updatedPillSheetGroup = pillSheetGroup.copyWith(
+          displayNumberSetting: newDisplayNumberSetting);
       state = state.copyWith(pillSheetGroup: updatedPillSheetGroup);
     }
 

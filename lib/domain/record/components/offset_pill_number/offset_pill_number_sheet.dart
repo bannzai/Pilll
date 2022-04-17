@@ -11,7 +11,7 @@ const _defaultBegin = 3;
 const _defaultEnd = 120;
 
 class DisplayNumberSettingSheet extends HookConsumerWidget {
-  final DisplayNumberSetting? offsetPillNumber;
+  final DisplayNumberSetting? displayNumberSetting;
   final RecordPageStore store;
 
   DisplayNumberSettingSheet({
@@ -20,8 +20,9 @@ class DisplayNumberSettingSheet extends HookConsumerWidget {
   });
   @override
   Widget build(BuildContext context, WidgetRef ref) {
-    final begin = useState(offsetPillNumber?.beginPillNumber ?? _defaultBegin);
-    final end = useState(offsetPillNumber?.endPillNumber ?? _defaultEnd);
+    final begin =
+        useState(displayNumberSetting?.beginPillNumber ?? _defaultBegin);
+    final end = useState(displayNumberSetting?.endPillNumber ?? _defaultEnd);
     final beginTextFieldController =
         useTextEditingController(text: "${begin.value}");
     final endTextFieldController =
