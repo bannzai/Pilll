@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_hooks/flutter_hooks.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
+import 'package:pilll/components/atoms/color.dart';
 import 'package:pilll/components/atoms/font.dart';
 import 'package:pilll/components/atoms/text_color.dart';
 import 'package:pilll/domain/record/record_page_state.codegen.dart';
@@ -46,24 +47,35 @@ class DisplayNumberSetting extends HookConsumerWidget {
                 color: TextColor.main,
               ),
             ),
+            const SizedBox(width: 5),
             SizedBox(
               width: 42,
               height: 40,
               child: TextField(
+                style: TextStyle(
+                  color: TextColor.darkGray,
+                  fontSize: 15,
+                  fontFamily: FontFamily.number,
+                  fontWeight: FontWeight.w500,
+                ),
+                textAlign: TextAlign.center,
                 controller: textFieldController,
                 keyboardType: TextInputType.number,
                 inputFormatters: [FilteringTextInputFormatter.digitsOnly],
                 decoration: const InputDecoration(
+                  fillColor: PilllColors.mat,
+                  filled: true,
                   border: UnderlineInputBorder(
                     borderSide: BorderSide(width: 1),
                   ),
-                  contentPadding: EdgeInsets.all(16),
+                  contentPadding: EdgeInsets.only(bottom: 8),
                 ),
                 onChanged: (text) {
                   // TODO:
                 },
               ),
             ),
+            const SizedBox(width: 5),
             const Text(
               "日目からスタート",
               style: TextStyle(

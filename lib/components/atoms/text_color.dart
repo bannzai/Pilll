@@ -5,7 +5,7 @@ class TextColor {
   static Color get standard => black;
   static const Color black = Colors.black;
   static const Color white = Colors.white;
-  static final Color darkGray = const Color(0xFF000000).withAlpha(153);
+  static final Color darkGray = const Color(0xD449454F);
   static const Color gray = const Color(0xFF7E7E7E);
   static const Color lightGray = const Color(0xFFB1B1B1);
   static const Color lightGray2 = const Color(0xFF666666);
