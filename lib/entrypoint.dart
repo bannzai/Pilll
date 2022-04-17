@@ -3,6 +3,7 @@ import 'dart:io';
 
 import 'package:firebase_analytics/firebase_analytics.dart';
 import 'package:flutter/cupertino.dart';
+import 'package:flutter/foundation.dart';
 import 'package:flutter/services.dart';
 import 'package:pilll/analytics.dart';
 import 'package:pilll/components/atoms/color.dart';
@@ -10,6 +11,7 @@ import 'package:pilll/components/atoms/font.dart';
 import 'package:pilll/domain/root/root.dart';
 import 'package:pilll/error/universal_error_page.dart';
 import 'package:pilll/native/channel.dart';
+import 'package:pilll/util/datetime/debug_print.dart';
 import 'package:pilll/util/environment.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:firebase_core/firebase_core.dart';
@@ -21,6 +23,9 @@ import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 Future<void> entrypoint() async {
   WidgetsFlutterBinding.ensureInitialized();
   await Firebase.initializeApp();
+  if (kDebugMode) {
+    overrideDebugPrint();
+  }
 
   if (Environment.isLocal) {
     connectToEmulator();
