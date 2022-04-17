@@ -43,7 +43,10 @@ class _HomePageState extends State<HomePage>
         initialIndex: _selectedIndex);
     _tabController.addListener(_handleTabSelection);
 
-    requestNotificationPermissions();
+    Future(() async {
+      await requestNotificationPermissions();
+      listenNotificationEvents();
+    });
   }
 
   @override

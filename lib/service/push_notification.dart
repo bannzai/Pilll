@@ -2,6 +2,7 @@ import 'dart:async';
 import 'dart:io';
 
 import 'package:firebase_auth/firebase_auth.dart';
+import 'package:flutter/foundation.dart';
 import 'package:pilll/analytics.dart';
 import 'package:pilll/database/database.dart';
 import 'package:pilll/service/user.dart';
@@ -20,7 +21,7 @@ Future<void> requestNotificationPermissions() async {
         .setForegroundNotificationPresentationOptions(
             alert: true, badge: true, sound: true);
   }
-  callRegisterRemoteNotification();
+  listenNotificationEvents();
 
   final userService = UserService(DatabaseConnection(firebaseUser.uid));
   userService.fetch().then((_) async {
@@ -31,39 +32,8 @@ Future<void> requestNotificationPermissions() async {
 }
 
 void listenNotificationEvents() {
-  FirebaseMessaging.onMessage.listen((event) {
-    print('onMessage: $event');
-  });
-  if (Platform.isAndroid) {
-    FirebaseMessaging.onBackgroundMessage(onBackgroundMessage);
-  }
   FirebaseMessaging.onMessageOpenedApp.listen((event) {
     analytics.logEvent(name: "opened_from_notification_on_background");
-    print("onMessageOpenedApp: $event");
+    debugPrint("onMessageOpenedApp: $event");
   });
-}
-
-void callRegisterRemoteNotification() {
-  if (Platform.isIOS) {
-    // NOTE: FirebaseMessaging.configure call [UIApplication registerForRemoteNotifcation] from native library.
-    // Reason for calling listenNotificationEvents, I won't overwrite defined to receive event via FirebaseMessaging().configure.
-    listenNotificationEvents();
-  }
-}
-
-Future<void> onBackgroundMessage(RemoteMessage message) async {
-  print("Handling a background message ${message.data}");
-  final messageData = message.data;
-  if (messageData.containsKey('data')) {
-    // データメッセージをハンドリング
-    final data = messageData['data'];
-    print("data: $data");
-  }
-
-  if (messageData.containsKey('notification')) {
-    // 通知メッセージをハンドリング
-    final notification = messageData['notification'];
-    print("notification: $notification");
-  }
-  print('onBackground: $message');
 }
