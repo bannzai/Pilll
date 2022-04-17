@@ -4,7 +4,6 @@ import 'package:pilll/domain/premium_function_survey/premium_function_survey_pag
 import 'package:pilll/domain/premium_trial/premium_trial_complete_modal.dart';
 import 'package:pilll/domain/record/components/add_pill_sheet_group/add_pill_sheet_group_empty_frame.dart';
 import 'package:pilll/domain/record/components/button/record_page_button.dart';
-import 'package:pilll/domain/record/components/display_number_setting/display_number_setting_sheet.dart';
 import 'package:pilll/domain/record/components/notification_bar/notification_bar.dart';
 import 'package:pilll/domain/record/components/supports/record_page_pill_sheet_support_actions.dart';
 import 'package:pilll/domain/record/components/pill_sheet/record_page_pill_sheet_list.dart';
@@ -71,25 +70,6 @@ class RecordPage extends HookConsumerWidget {
                 pillSheetGroup: state.pillSheetGroup,
                 setting: setting,
                 store: store,
-              ),
-              Align(
-                alignment: Alignment.topRight,
-                child: IconButton(
-                  onPressed: () {
-                    showModalBottomSheet(
-                        context: context,
-                        builder: (context) {
-                          return DisplayNumberSettingSheet(
-                            displayNumberSetting:
-                                state.pillSheetGroup?.displayNumberSetting,
-                            store: store,
-                          );
-                        });
-                  },
-                  icon: const Icon(Icons.edit),
-                  iconSize: 24,
-                  color: Colors.black,
-                ),
               ),
             ],
           ),
