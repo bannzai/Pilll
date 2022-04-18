@@ -7,33 +7,26 @@ import 'package:pilll/analytics.dart';
 import 'package:pilll/components/atoms/color.dart';
 import 'package:pilll/components/atoms/font.dart';
 import 'package:pilll/components/atoms/text_color.dart';
-import 'package:pilll/domain/record/record_page_store.dart';
-import 'package:pilll/entity/pill_sheet_group.codegen.dart';
+import 'package:pilll/domain/record/components/supports/components/display_number_setting/store.dart';
 
 class DisplayNumberSettingSheet extends HookConsumerWidget {
-  final PillSheetGroup? beforePillSheetGroup;
-  final PillSheetGroup pillSheetGroup;
-  final RecordPageStore store;
-
-  DisplayNumberSettingSheet({
-    required this.beforePillSheetGroup,
-    required this.pillSheetGroup,
-    required this.store,
-  });
-
   @override
   Widget build(BuildContext context, WidgetRef ref) {
-    final begin =
-        useState(pillSheetGroup.displayNumberSetting?.beginPillNumber ?? 1);
-    final end = useState(pillSheetGroup.displayNumberSetting?.endPillNumber ??
-        pillSheetGroup.estimatedEndPillNumber);
+    final state = ref.watch(displayNumberSettingStateStoreProvider);
+    final store = ref.watch(displayNumberSettingStateStoreProvider.notifier);
+
+    final begin = useState(
+        state.pillSheetGroup.displayNumberSetting?.beginPillNumber ?? 1);
+    final end = useState(
+        state.pillSheetGroup.displayNumberSetting?.endPillNumber ??
+            state.pillSheetGroup.estimatedEndPillNumber);
 
     final beginTextFieldController =
         useTextEditingController(text: "${begin.value}");
     final endTextFieldController =
         useTextEditingController(text: "${end.value}");
 
-    final beforePillSheetGroup = this.beforePillSheetGroup;
+    final beforePillSheetGroup = state.beforePillSheetGroup;
 
     return DraggableScrollableSheet(
       initialChildSize: 0.7,
@@ -180,19 +173,12 @@ class DisplayNumberSettingSheet extends HookConsumerWidget {
 }
 
 void showDisplayNumberSettingSheet(
-  BuildContext context, {
-  required PillSheetGroup? beforePillSheetGroup,
-  required PillSheetGroup pillSheetGroup,
-  required RecordPageStore store,
-}) {
+  BuildContext context,
+) {
   analytics.setCurrentScreen(screenName: "DisplayNumberSettingSheet");
   showModalBottomSheet(
     context: context,
-    builder: (context) => DisplayNumberSettingSheet(
-      beforePillSheetGroup: beforePillSheetGroup,
-      pillSheetGroup: pillSheetGroup,
-      store: store,
-    ),
+    builder: (context) => DisplayNumberSettingSheet(),
     backgroundColor: Colors.transparent,
     isScrollControlled: true,
   );
