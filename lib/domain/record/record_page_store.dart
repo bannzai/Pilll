@@ -545,4 +545,60 @@ class RecordPageStore extends StateNotifier<RecordPageState> {
     sharedPreferences.setBool(BoolKey.isAlreadyShowPremiumSurvey, true);
     state = state.copyWith(isAlreadyShowPremiumSurvey: true);
   }
+
+  void setBeginDisplayPillNumber(
+    int beginDisplayPillNumber,
+  ) {
+    final pillSheetGroup = state.pillSheetGroup;
+    if (pillSheetGroup == null) {
+      return;
+    }
+
+    final displayNumberSetting = pillSheetGroup.displayNumberSetting;
+    if (displayNumberSetting == null) {
+      state = state.copyWith(
+        pillSheetGroup: pillSheetGroup.copyWith(
+          displayNumberSetting: DisplayNumberSetting(
+            beginPillNumber: beginDisplayPillNumber,
+          ),
+        ),
+      );
+    } else {
+      state = state.copyWith(
+        pillSheetGroup: pillSheetGroup.copyWith(
+          displayNumberSetting: displayNumberSetting.copyWith(
+            beginPillNumber: beginDisplayPillNumber,
+          ),
+        ),
+      );
+    }
+  }
+
+  void setEndDisplayPillNumber(
+    int endDisplayPillNumber,
+  ) {
+    final pillSheetGroup = state.pillSheetGroup;
+    if (pillSheetGroup == null) {
+      return;
+    }
+
+    final displayNumberSetting = pillSheetGroup.displayNumberSetting;
+    if (displayNumberSetting == null) {
+      state = state.copyWith(
+        pillSheetGroup: pillSheetGroup.copyWith(
+          displayNumberSetting: DisplayNumberSetting(
+            endPillNumber: endDisplayPillNumber,
+          ),
+        ),
+      );
+    } else {
+      state = state.copyWith(
+        pillSheetGroup: pillSheetGroup.copyWith(
+          displayNumberSetting: displayNumberSetting.copyWith(
+            endPillNumber: endDisplayPillNumber,
+          ),
+        ),
+      );
+    }
+  }
 }
