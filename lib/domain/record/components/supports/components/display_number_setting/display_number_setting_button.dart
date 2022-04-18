@@ -35,8 +35,7 @@ class DisplayNumberSettingButton extends StatelessWidget {
       ]),
       onTap: () {
         analytics.logEvent(name: "t_r_p_display_number_setting");
-        showDisplayNumberSettingSheet(context,
-            pillSheetGroup: pillSheetGroup, store: store);
+        showDisplayNumberSettingSheet(context);
       },
     );
   }
