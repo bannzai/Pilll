@@ -74,7 +74,7 @@ mixin _$PillSheetModifiedHistory {
   String? get pillSheetGroupID => throw _privateConstructorUsedError;
   String? get beforePillSheetID => throw _privateConstructorUsedError;
   String? get afterPillSheetID =>
-      throw _privateConstructorUsedError; // before and after is non required
+      throw _privateConstructorUsedError; // before and after is nullable
 // Because, actions for createdPillSheet and deletedPillSheet are not exists target single pill sheet
   PillSheet? get before => throw _privateConstructorUsedError;
   PillSheet? get after => throw _privateConstructorUsedError;
@@ -366,7 +366,7 @@ class _$_PillSheetModifiedHistory extends _PillSheetModifiedHistory {
   final String? beforePillSheetID;
   @override
   final String? afterPillSheetID;
-  @override // before and after is non required
+  @override // before and after is nullable
 // Because, actions for createdPillSheet and deletedPillSheet are not exists target single pill sheet
   final PillSheet? before;
   @override
@@ -475,7 +475,7 @@ abstract class _PillSheetModifiedHistory extends PillSheetModifiedHistory {
   String? get beforePillSheetID;
   @override
   String? get afterPillSheetID;
-  @override // before and after is non required
+  @override // before and after is nullable
 // Because, actions for createdPillSheet and deletedPillSheet are not exists target single pill sheet
   PillSheet? get before;
   @override

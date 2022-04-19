@@ -49,6 +49,14 @@ _$_PillSheetModifiedHistoryValue _$$_PillSheetModifiedHistoryValueFromJson(
           ? null
           : EndedRestDurationValue.fromJson(
               json['endedRestDurationValue'] as Map<String, dynamic>),
+      changedBeginDisplayNumber: json['changedBeginDisplayNumber'] == null
+          ? null
+          : ChangedBeginDisplayNumberValue.fromJson(
+              json['changedBeginDisplayNumber'] as Map<String, dynamic>),
+      changedEndDisplayNumber: json['changedEndDisplayNumber'] == null
+          ? null
+          : ChangedEndDisplayNumberValue.fromJson(
+              json['changedEndDisplayNumber'] as Map<String, dynamic>),
     );
 
 Map<String, dynamic> _$$_PillSheetModifiedHistoryValueToJson(
@@ -65,6 +73,8 @@ Map<String, dynamic> _$$_PillSheetModifiedHistoryValueToJson(
       'endedPillSheet': instance.endedPillSheet?.toJson(),
       'beganRestDurationValue': instance.beganRestDurationValue?.toJson(),
       'endedRestDurationValue': instance.endedRestDurationValue?.toJson(),
+      'changedBeginDisplayNumber': instance.changedBeginDisplayNumber?.toJson(),
+      'changedEndDisplayNumber': instance.changedEndDisplayNumber?.toJson(),
     };
 
 _$_CreatedPillSheetValue _$$_CreatedPillSheetValueFromJson(
@@ -267,4 +277,40 @@ Map<String, dynamic> _$$_EndedRestDurationValueToJson(
         _$_EndedRestDurationValue instance) =>
     <String, dynamic>{
       'restDuration': instance.restDuration.toJson(),
+    };
+
+_$_ChangedBeginDisplayNumberValue _$$_ChangedBeginDisplayNumberValueFromJson(
+        Map<String, dynamic> json) =>
+    _$_ChangedBeginDisplayNumberValue(
+      beginDisplayNumberSetting: json['beginDisplayNumberSetting'] == null
+          ? null
+          : DisplayNumberSetting.fromJson(
+              json['beginDisplayNumberSetting'] as Map<String, dynamic>),
+      afterDisplayNumberSetting: DisplayNumberSetting.fromJson(
+          json['afterDisplayNumberSetting'] as Map<String, dynamic>),
+    );
+
+Map<String, dynamic> _$$_ChangedBeginDisplayNumberValueToJson(
+        _$_ChangedBeginDisplayNumberValue instance) =>
+    <String, dynamic>{
+      'beginDisplayNumberSetting': instance.beginDisplayNumberSetting?.toJson(),
+      'afterDisplayNumberSetting': instance.afterDisplayNumberSetting.toJson(),
+    };
+
+_$_ChangedEndDisplayNumberValue _$$_ChangedEndDisplayNumberValueFromJson(
+        Map<String, dynamic> json) =>
+    _$_ChangedEndDisplayNumberValue(
+      beginDisplayNumberSetting: json['beginDisplayNumberSetting'] == null
+          ? null
+          : DisplayNumberSetting.fromJson(
+              json['beginDisplayNumberSetting'] as Map<String, dynamic>),
+      afterDisplayNumberSetting: DisplayNumberSetting.fromJson(
+          json['afterDisplayNumberSetting'] as Map<String, dynamic>),
+    );
+
+Map<String, dynamic> _$$_ChangedEndDisplayNumberValueToJson(
+        _$_ChangedEndDisplayNumberValue instance) =>
+    <String, dynamic>{
+      'beginDisplayNumberSetting': instance.beginDisplayNumberSetting?.toJson(),
+      'afterDisplayNumberSetting': instance.afterDisplayNumberSetting.toJson(),
     };
