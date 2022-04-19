@@ -34,7 +34,7 @@ class RecordPagePillSheetSupportActions extends StatelessWidget {
           SwitchingAppearanceMode(
               store: store, mode: setting.pillSheetAppearanceMode),
           const Spacer(),
-          if (setting.pillSheetAppearanceMode !=
+          if (setting.pillSheetAppearanceMode ==
               PillSheetAppearanceMode.sequential) ...[
             DisplayNumberSettingButton(
               pillSheetGroup: pillSheetGroup,
