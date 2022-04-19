@@ -505,7 +505,7 @@ class RecordPageStore extends StateNotifier<RecordPageState> {
     _pillSheetGroupService.update(updatedPillSheetGroup);
   }
 
-  void setDisplayNumberSettingEnd(int end) {
+  Future<void> setDisplayNumberSettingEnd(int end) async {
     final pillSheetGroup = state.pillSheetGroup;
     if (pillSheetGroup == null) {
       return;
