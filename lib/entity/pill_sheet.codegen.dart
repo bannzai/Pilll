@@ -211,8 +211,6 @@ int summarizedRestDuration({
 
     final endDate = e.endDate;
     if (endDate == null) {
-      // 実質upperDate == todayの場合にのみここを通る。本来であれば別の関数にした方が良いかも
-      assert(isSameDay(today(), upperDate));
       return daysBetween(e.beginDate, upperDate);
     }
 
