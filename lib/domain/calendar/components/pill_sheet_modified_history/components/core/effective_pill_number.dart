@@ -69,7 +69,7 @@ abstract class PillSheetModifiedHistoryDateEffectivePillNumber {
   }
 
   static String changedEndDisplayNumberSetting(
-      ChangedBeginDisplayNumberValue value) {
+      ChangedEndDisplayNumberValue value) {
     final before = value.beforeDisplayNumberSetting;
     if (before == null) {
       return "${value.afterDisplayNumberSetting.endPillNumber}番";
