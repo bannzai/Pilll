@@ -4,6 +4,7 @@ import 'package:flutter_hooks/flutter_hooks.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
 import 'package:pilll/analytics.dart';
+import 'package:pilll/components/atoms/buttons.dart';
 import 'package:pilll/components/atoms/color.dart';
 import 'package:pilll/components/atoms/font.dart';
 import 'package:pilll/components/atoms/text_color.dart';
@@ -55,14 +56,11 @@ class DisplayNumberSettingSheet extends HookConsumerWidget {
                   textAlign: TextAlign.center,
                 ),
                 const Spacer(),
-                const Text(
-                  "変更",
-                  style: TextStyle(
-                    color: TextColor.primary,
-                    fontSize: 14,
-                    fontWeight: FontWeight.w500,
-                    fontFamily: FontFamily.japanese,
-                  ),
+                SecondaryButton(
+                  text: "変更",
+                  onPressed: () async {
+                    Navigator.of(context).pop();
+                  },
                 )
               ]),
               const SizedBox(height: 24),
