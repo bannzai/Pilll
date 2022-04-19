@@ -62,18 +62,18 @@ abstract class PillSheetModifiedHistoryDateEffectivePillNumber {
       ChangedBeginDisplayNumberValue value) {
     final before = value.beforeDisplayNumberSetting;
     if (before == null) {
-      return "${value.afterDisplayNumberSetting.beginPillNumber}番";
+      return "${value.afterDisplayNumberSetting.beginPillNumber}日目";
     }
-    return "${before.beginPillNumber}→${value.afterDisplayNumberSetting.beginPillNumber}番";
+    return "${before.beginPillNumber}→${value.afterDisplayNumberSetting.beginPillNumber}日目";
   }
 
   static String changedEndDisplayNumberSetting(
       ChangedEndDisplayNumberValue value) {
     final before = value.beforeDisplayNumberSetting;
     if (before == null) {
-      return "${value.afterDisplayNumberSetting.endPillNumber}番";
+      return "${value.afterDisplayNumberSetting.endPillNumber}日目";
     }
-    return "${before.endPillNumber}→${value.afterDisplayNumberSetting.endPillNumber}番";
+    return "${before.endPillNumber}→${value.afterDisplayNumberSetting.endPillNumber}日目";
   }
 
   static String pillSheetCount(List<String> pillSheetIDs) =>
