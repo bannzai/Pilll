@@ -39,6 +39,8 @@ class EndManualRestDurationButton extends StatelessWidget {
             activedPillSheet: activedPillSheet,
             restDuration: restDuration,
           );
+
+          didEndRestDuration();
         },
       ),
     );
