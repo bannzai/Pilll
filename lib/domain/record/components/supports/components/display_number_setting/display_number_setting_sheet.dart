@@ -65,6 +65,7 @@ class DisplayNumberSettingSheet extends HookConsumerWidget {
                 SecondaryButton(
                   text: "変更",
                   onPressed: () async {
+                    await store.modify();
                     Navigator.of(context).pop();
                   },
                 )

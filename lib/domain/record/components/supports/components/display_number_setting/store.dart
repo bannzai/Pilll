@@ -76,4 +76,8 @@ class DisplayNumberSettingStateStore
       );
     }
   }
+
+  Future<void> modify() async {
+    // TODO:
+  }
 }
