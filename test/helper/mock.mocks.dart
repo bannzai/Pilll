@@ -507,9 +507,10 @@ class MockRecordPageStore extends _i1.Mock implements _i24.RecordPageStore {
       Invocation.method(#setDisplayNumberSettingBegin, [begin]),
       returnValueForMissingStub: null);
   @override
-  void setDisplayNumberSettingEnd(int? end) =>
-      super.noSuchMethod(Invocation.method(#setDisplayNumberSettingEnd, [end]),
-          returnValueForMissingStub: null);
+  _i16.Future<void> setDisplayNumberSettingEnd(int? end) => (super.noSuchMethod(
+      Invocation.method(#setDisplayNumberSettingEnd, [end]),
+      returnValue: Future<void>.value(),
+      returnValueForMissingStub: Future<void>.value()) as _i16.Future<void>);
   @override
   dynamic switchingAppearanceMode(_i3.PillSheetAppearanceMode? mode) =>
       super.noSuchMethod(Invocation.method(#switchingAppearanceMode, [mode]));
