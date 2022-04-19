@@ -282,10 +282,10 @@ Map<String, dynamic> _$$_EndedRestDurationValueToJson(
 _$_ChangedBeginDisplayNumberValue _$$_ChangedBeginDisplayNumberValueFromJson(
         Map<String, dynamic> json) =>
     _$_ChangedBeginDisplayNumberValue(
-      beginDisplayNumberSetting: json['beginDisplayNumberSetting'] == null
+      beforeDisplayNumberSetting: json['beforeDisplayNumberSetting'] == null
           ? null
           : DisplayNumberSetting.fromJson(
-              json['beginDisplayNumberSetting'] as Map<String, dynamic>),
+              json['beforeDisplayNumberSetting'] as Map<String, dynamic>),
       afterDisplayNumberSetting: DisplayNumberSetting.fromJson(
           json['afterDisplayNumberSetting'] as Map<String, dynamic>),
     );
@@ -293,17 +293,18 @@ _$_ChangedBeginDisplayNumberValue _$$_ChangedBeginDisplayNumberValueFromJson(
 Map<String, dynamic> _$$_ChangedBeginDisplayNumberValueToJson(
         _$_ChangedBeginDisplayNumberValue instance) =>
     <String, dynamic>{
-      'beginDisplayNumberSetting': instance.beginDisplayNumberSetting?.toJson(),
+      'beforeDisplayNumberSetting':
+          instance.beforeDisplayNumberSetting?.toJson(),
       'afterDisplayNumberSetting': instance.afterDisplayNumberSetting.toJson(),
     };
 
 _$_ChangedEndDisplayNumberValue _$$_ChangedEndDisplayNumberValueFromJson(
         Map<String, dynamic> json) =>
     _$_ChangedEndDisplayNumberValue(
-      beginDisplayNumberSetting: json['beginDisplayNumberSetting'] == null
+      beforeDisplayNumberSetting: json['beforeDisplayNumberSetting'] == null
           ? null
           : DisplayNumberSetting.fromJson(
-              json['beginDisplayNumberSetting'] as Map<String, dynamic>),
+              json['beforeDisplayNumberSetting'] as Map<String, dynamic>),
       afterDisplayNumberSetting: DisplayNumberSetting.fromJson(
           json['afterDisplayNumberSetting'] as Map<String, dynamic>),
     );
@@ -311,6 +312,7 @@ _$_ChangedEndDisplayNumberValue _$$_ChangedEndDisplayNumberValueFromJson(
 Map<String, dynamic> _$$_ChangedEndDisplayNumberValueToJson(
         _$_ChangedEndDisplayNumberValue instance) =>
     <String, dynamic>{
-      'beginDisplayNumberSetting': instance.beginDisplayNumberSetting?.toJson(),
+      'beforeDisplayNumberSetting':
+          instance.beforeDisplayNumberSetting?.toJson(),
       'afterDisplayNumberSetting': instance.afterDisplayNumberSetting.toJson(),
     };

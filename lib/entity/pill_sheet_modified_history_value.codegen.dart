@@ -246,7 +246,7 @@ class ChangedBeginDisplayNumberValue with _$ChangedBeginDisplayNumberValue {
   const ChangedBeginDisplayNumberValue._();
   @JsonSerializable(explicitToJson: true)
   const factory ChangedBeginDisplayNumberValue({
-    required DisplayNumberSetting? beginDisplayNumberSetting,
+    required DisplayNumberSetting? beforeDisplayNumberSetting,
     required DisplayNumberSetting afterDisplayNumberSetting,
   }) = _ChangedBeginDisplayNumberValue;
 
@@ -259,7 +259,7 @@ class ChangedEndDisplayNumberValue with _$ChangedEndDisplayNumberValue {
   const ChangedEndDisplayNumberValue._();
   @JsonSerializable(explicitToJson: true)
   const factory ChangedEndDisplayNumberValue({
-    required DisplayNumberSetting? beginDisplayNumberSetting,
+    required DisplayNumberSetting? beforeDisplayNumberSetting,
     required DisplayNumberSetting afterDisplayNumberSetting,
   }) = _ChangedEndDisplayNumberValue;
 

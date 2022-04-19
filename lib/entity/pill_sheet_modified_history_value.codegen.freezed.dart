@@ -3019,10 +3019,10 @@ class _$ChangedBeginDisplayNumberValueTearOff {
   const _$ChangedBeginDisplayNumberValueTearOff();
 
   _ChangedBeginDisplayNumberValue call(
-      {required DisplayNumberSetting? beginDisplayNumberSetting,
+      {required DisplayNumberSetting? beforeDisplayNumberSetting,
       required DisplayNumberSetting afterDisplayNumberSetting}) {
     return _ChangedBeginDisplayNumberValue(
-      beginDisplayNumberSetting: beginDisplayNumberSetting,
+      beforeDisplayNumberSetting: beforeDisplayNumberSetting,
       afterDisplayNumberSetting: afterDisplayNumberSetting,
     );
   }
@@ -3038,7 +3038,7 @@ const $ChangedBeginDisplayNumberValue =
 
 /// @nodoc
 mixin _$ChangedBeginDisplayNumberValue {
-  DisplayNumberSetting? get beginDisplayNumberSetting =>
+  DisplayNumberSetting? get beforeDisplayNumberSetting =>
       throw _privateConstructorUsedError;
   DisplayNumberSetting get afterDisplayNumberSetting =>
       throw _privateConstructorUsedError;
@@ -3056,10 +3056,10 @@ abstract class $ChangedBeginDisplayNumberValueCopyWith<$Res> {
           $Res Function(ChangedBeginDisplayNumberValue) then) =
       _$ChangedBeginDisplayNumberValueCopyWithImpl<$Res>;
   $Res call(
-      {DisplayNumberSetting? beginDisplayNumberSetting,
+      {DisplayNumberSetting? beforeDisplayNumberSetting,
       DisplayNumberSetting afterDisplayNumberSetting});
 
-  $DisplayNumberSettingCopyWith<$Res>? get beginDisplayNumberSetting;
+  $DisplayNumberSettingCopyWith<$Res>? get beforeDisplayNumberSetting;
   $DisplayNumberSettingCopyWith<$Res> get afterDisplayNumberSetting;
 }
 
@@ -3074,13 +3074,13 @@ class _$ChangedBeginDisplayNumberValueCopyWithImpl<$Res>
 
   @override
   $Res call({
-    Object? beginDisplayNumberSetting = freezed,
+    Object? beforeDisplayNumberSetting = freezed,
     Object? afterDisplayNumberSetting = freezed,
   }) {
     return _then(_value.copyWith(
-      beginDisplayNumberSetting: beginDisplayNumberSetting == freezed
-          ? _value.beginDisplayNumberSetting
-          : beginDisplayNumberSetting // ignore: cast_nullable_to_non_nullable
+      beforeDisplayNumberSetting: beforeDisplayNumberSetting == freezed
+          ? _value.beforeDisplayNumberSetting
+          : beforeDisplayNumberSetting // ignore: cast_nullable_to_non_nullable
               as DisplayNumberSetting?,
       afterDisplayNumberSetting: afterDisplayNumberSetting == freezed
           ? _value.afterDisplayNumberSetting
@@ -3090,14 +3090,14 @@ class _$ChangedBeginDisplayNumberValueCopyWithImpl<$Res>
   }
 
   @override
-  $DisplayNumberSettingCopyWith<$Res>? get beginDisplayNumberSetting {
-    if (_value.beginDisplayNumberSetting == null) {
+  $DisplayNumberSettingCopyWith<$Res>? get beforeDisplayNumberSetting {
+    if (_value.beforeDisplayNumberSetting == null) {
       return null;
     }
 
     return $DisplayNumberSettingCopyWith<$Res>(
-        _value.beginDisplayNumberSetting!, (value) {
-      return _then(_value.copyWith(beginDisplayNumberSetting: value));
+        _value.beforeDisplayNumberSetting!, (value) {
+      return _then(_value.copyWith(beforeDisplayNumberSetting: value));
     });
   }
 
@@ -3119,11 +3119,11 @@ abstract class _$ChangedBeginDisplayNumberValueCopyWith<$Res>
       __$ChangedBeginDisplayNumberValueCopyWithImpl<$Res>;
   @override
   $Res call(
-      {DisplayNumberSetting? beginDisplayNumberSetting,
+      {DisplayNumberSetting? beforeDisplayNumberSetting,
       DisplayNumberSetting afterDisplayNumberSetting});
 
   @override
-  $DisplayNumberSettingCopyWith<$Res>? get beginDisplayNumberSetting;
+  $DisplayNumberSettingCopyWith<$Res>? get beforeDisplayNumberSetting;
   @override
   $DisplayNumberSettingCopyWith<$Res> get afterDisplayNumberSetting;
 }
@@ -3143,13 +3143,13 @@ class __$ChangedBeginDisplayNumberValueCopyWithImpl<$Res>
 
   @override
   $Res call({
-    Object? beginDisplayNumberSetting = freezed,
+    Object? beforeDisplayNumberSetting = freezed,
     Object? afterDisplayNumberSetting = freezed,
   }) {
     return _then(_ChangedBeginDisplayNumberValue(
-      beginDisplayNumberSetting: beginDisplayNumberSetting == freezed
-          ? _value.beginDisplayNumberSetting
-          : beginDisplayNumberSetting // ignore: cast_nullable_to_non_nullable
+      beforeDisplayNumberSetting: beforeDisplayNumberSetting == freezed
+          ? _value.beforeDisplayNumberSetting
+          : beforeDisplayNumberSetting // ignore: cast_nullable_to_non_nullable
               as DisplayNumberSetting?,
       afterDisplayNumberSetting: afterDisplayNumberSetting == freezed
           ? _value.afterDisplayNumberSetting
@@ -3165,7 +3165,7 @@ class __$ChangedBeginDisplayNumberValueCopyWithImpl<$Res>
 class _$_ChangedBeginDisplayNumberValue
     extends _ChangedBeginDisplayNumberValue {
   const _$_ChangedBeginDisplayNumberValue(
-      {required this.beginDisplayNumberSetting,
+      {required this.beforeDisplayNumberSetting,
       required this.afterDisplayNumberSetting})
       : super._();
 
@@ -3174,13 +3174,13 @@ class _$_ChangedBeginDisplayNumberValue
       _$$_ChangedBeginDisplayNumberValueFromJson(json);
 
   @override
-  final DisplayNumberSetting? beginDisplayNumberSetting;
+  final DisplayNumberSetting? beforeDisplayNumberSetting;
   @override
   final DisplayNumberSetting afterDisplayNumberSetting;
 
   @override
   String toString() {
-    return 'ChangedBeginDisplayNumberValue(beginDisplayNumberSetting: $beginDisplayNumberSetting, afterDisplayNumberSetting: $afterDisplayNumberSetting)';
+    return 'ChangedBeginDisplayNumberValue(beforeDisplayNumberSetting: $beforeDisplayNumberSetting, afterDisplayNumberSetting: $afterDisplayNumberSetting)';
   }
 
   @override
@@ -3189,7 +3189,7 @@ class _$_ChangedBeginDisplayNumberValue
         (other.runtimeType == runtimeType &&
             other is _ChangedBeginDisplayNumberValue &&
             const DeepCollectionEquality().equals(
-                other.beginDisplayNumberSetting, beginDisplayNumberSetting) &&
+                other.beforeDisplayNumberSetting, beforeDisplayNumberSetting) &&
             const DeepCollectionEquality().equals(
                 other.afterDisplayNumberSetting, afterDisplayNumberSetting));
   }
@@ -3197,7 +3197,7 @@ class _$_ChangedBeginDisplayNumberValue
   @override
   int get hashCode => Object.hash(
       runtimeType,
-      const DeepCollectionEquality().hash(beginDisplayNumberSetting),
+      const DeepCollectionEquality().hash(beforeDisplayNumberSetting),
       const DeepCollectionEquality().hash(afterDisplayNumberSetting));
 
   @JsonKey(ignore: true)
@@ -3215,7 +3215,7 @@ class _$_ChangedBeginDisplayNumberValue
 abstract class _ChangedBeginDisplayNumberValue
     extends ChangedBeginDisplayNumberValue {
   const factory _ChangedBeginDisplayNumberValue(
-          {required DisplayNumberSetting? beginDisplayNumberSetting,
+          {required DisplayNumberSetting? beforeDisplayNumberSetting,
           required DisplayNumberSetting afterDisplayNumberSetting}) =
       _$_ChangedBeginDisplayNumberValue;
   const _ChangedBeginDisplayNumberValue._() : super._();
@@ -3224,7 +3224,7 @@ abstract class _ChangedBeginDisplayNumberValue
       _$_ChangedBeginDisplayNumberValue.fromJson;
 
   @override
-  DisplayNumberSetting? get beginDisplayNumberSetting;
+  DisplayNumberSetting? get beforeDisplayNumberSetting;
   @override
   DisplayNumberSetting get afterDisplayNumberSetting;
   @override
@@ -3243,10 +3243,10 @@ class _$ChangedEndDisplayNumberValueTearOff {
   const _$ChangedEndDisplayNumberValueTearOff();
 
   _ChangedEndDisplayNumberValue call(
-      {required DisplayNumberSetting? beginDisplayNumberSetting,
+      {required DisplayNumberSetting? beforeDisplayNumberSetting,
       required DisplayNumberSetting afterDisplayNumberSetting}) {
     return _ChangedEndDisplayNumberValue(
-      beginDisplayNumberSetting: beginDisplayNumberSetting,
+      beforeDisplayNumberSetting: beforeDisplayNumberSetting,
       afterDisplayNumberSetting: afterDisplayNumberSetting,
     );
   }
@@ -3261,7 +3261,7 @@ const $ChangedEndDisplayNumberValue = _$ChangedEndDisplayNumberValueTearOff();
 
 /// @nodoc
 mixin _$ChangedEndDisplayNumberValue {
-  DisplayNumberSetting? get beginDisplayNumberSetting =>
+  DisplayNumberSetting? get beforeDisplayNumberSetting =>
       throw _privateConstructorUsedError;
   DisplayNumberSetting get afterDisplayNumberSetting =>
       throw _privateConstructorUsedError;
@@ -3279,10 +3279,10 @@ abstract class $ChangedEndDisplayNumberValueCopyWith<$Res> {
           $Res Function(ChangedEndDisplayNumberValue) then) =
       _$ChangedEndDisplayNumberValueCopyWithImpl<$Res>;
   $Res call(
-      {DisplayNumberSetting? beginDisplayNumberSetting,
+      {DisplayNumberSetting? beforeDisplayNumberSetting,
       DisplayNumberSetting afterDisplayNumberSetting});
 
-  $DisplayNumberSettingCopyWith<$Res>? get beginDisplayNumberSetting;
+  $DisplayNumberSettingCopyWith<$Res>? get beforeDisplayNumberSetting;
   $DisplayNumberSettingCopyWith<$Res> get afterDisplayNumberSetting;
 }
 
@@ -3297,13 +3297,13 @@ class _$ChangedEndDisplayNumberValueCopyWithImpl<$Res>
 
   @override
   $Res call({
-    Object? beginDisplayNumberSetting = freezed,
+    Object? beforeDisplayNumberSetting = freezed,
     Object? afterDisplayNumberSetting = freezed,
   }) {
     return _then(_value.copyWith(
-      beginDisplayNumberSetting: beginDisplayNumberSetting == freezed
-          ? _value.beginDisplayNumberSetting
-          : beginDisplayNumberSetting // ignore: cast_nullable_to_non_nullable
+      beforeDisplayNumberSetting: beforeDisplayNumberSetting == freezed
+          ? _value.beforeDisplayNumberSetting
+          : beforeDisplayNumberSetting // ignore: cast_nullable_to_non_nullable
               as DisplayNumberSetting?,
       afterDisplayNumberSetting: afterDisplayNumberSetting == freezed
           ? _value.afterDisplayNumberSetting
@@ -3313,14 +3313,14 @@ class _$ChangedEndDisplayNumberValueCopyWithImpl<$Res>
   }
 
   @override
-  $DisplayNumberSettingCopyWith<$Res>? get beginDisplayNumberSetting {
-    if (_value.beginDisplayNumberSetting == null) {
+  $DisplayNumberSettingCopyWith<$Res>? get beforeDisplayNumberSetting {
+    if (_value.beforeDisplayNumberSetting == null) {
       return null;
     }
 
     return $DisplayNumberSettingCopyWith<$Res>(
-        _value.beginDisplayNumberSetting!, (value) {
-      return _then(_value.copyWith(beginDisplayNumberSetting: value));
+        _value.beforeDisplayNumberSetting!, (value) {
+      return _then(_value.copyWith(beforeDisplayNumberSetting: value));
     });
   }
 
@@ -3342,11 +3342,11 @@ abstract class _$ChangedEndDisplayNumberValueCopyWith<$Res>
       __$ChangedEndDisplayNumberValueCopyWithImpl<$Res>;
   @override
   $Res call(
-      {DisplayNumberSetting? beginDisplayNumberSetting,
+      {DisplayNumberSetting? beforeDisplayNumberSetting,
       DisplayNumberSetting afterDisplayNumberSetting});
 
   @override
-  $DisplayNumberSettingCopyWith<$Res>? get beginDisplayNumberSetting;
+  $DisplayNumberSettingCopyWith<$Res>? get beforeDisplayNumberSetting;
   @override
   $DisplayNumberSettingCopyWith<$Res> get afterDisplayNumberSetting;
 }
@@ -3366,13 +3366,13 @@ class __$ChangedEndDisplayNumberValueCopyWithImpl<$Res>
 
   @override
   $Res call({
-    Object? beginDisplayNumberSetting = freezed,
+    Object? beforeDisplayNumberSetting = freezed,
     Object? afterDisplayNumberSetting = freezed,
   }) {
     return _then(_ChangedEndDisplayNumberValue(
-      beginDisplayNumberSetting: beginDisplayNumberSetting == freezed
-          ? _value.beginDisplayNumberSetting
-          : beginDisplayNumberSetting // ignore: cast_nullable_to_non_nullable
+      beforeDisplayNumberSetting: beforeDisplayNumberSetting == freezed
+          ? _value.beforeDisplayNumberSetting
+          : beforeDisplayNumberSetting // ignore: cast_nullable_to_non_nullable
               as DisplayNumberSetting?,
       afterDisplayNumberSetting: afterDisplayNumberSetting == freezed
           ? _value.afterDisplayNumberSetting
@@ -3387,7 +3387,7 @@ class __$ChangedEndDisplayNumberValueCopyWithImpl<$Res>
 @JsonSerializable(explicitToJson: true)
 class _$_ChangedEndDisplayNumberValue extends _ChangedEndDisplayNumberValue {
   const _$_ChangedEndDisplayNumberValue(
-      {required this.beginDisplayNumberSetting,
+      {required this.beforeDisplayNumberSetting,
       required this.afterDisplayNumberSetting})
       : super._();
 
@@ -3395,13 +3395,13 @@ class _$_ChangedEndDisplayNumberValue extends _ChangedEndDisplayNumberValue {
       _$$_ChangedEndDisplayNumberValueFromJson(json);
 
   @override
-  final DisplayNumberSetting? beginDisplayNumberSetting;
+  final DisplayNumberSetting? beforeDisplayNumberSetting;
   @override
   final DisplayNumberSetting afterDisplayNumberSetting;
 
   @override
   String toString() {
-    return 'ChangedEndDisplayNumberValue(beginDisplayNumberSetting: $beginDisplayNumberSetting, afterDisplayNumberSetting: $afterDisplayNumberSetting)';
+    return 'ChangedEndDisplayNumberValue(beforeDisplayNumberSetting: $beforeDisplayNumberSetting, afterDisplayNumberSetting: $afterDisplayNumberSetting)';
   }
 
   @override
@@ -3410,7 +3410,7 @@ class _$_ChangedEndDisplayNumberValue extends _ChangedEndDisplayNumberValue {
         (other.runtimeType == runtimeType &&
             other is _ChangedEndDisplayNumberValue &&
             const DeepCollectionEquality().equals(
-                other.beginDisplayNumberSetting, beginDisplayNumberSetting) &&
+                other.beforeDisplayNumberSetting, beforeDisplayNumberSetting) &&
             const DeepCollectionEquality().equals(
                 other.afterDisplayNumberSetting, afterDisplayNumberSetting));
   }
@@ -3418,7 +3418,7 @@ class _$_ChangedEndDisplayNumberValue extends _ChangedEndDisplayNumberValue {
   @override
   int get hashCode => Object.hash(
       runtimeType,
-      const DeepCollectionEquality().hash(beginDisplayNumberSetting),
+      const DeepCollectionEquality().hash(beforeDisplayNumberSetting),
       const DeepCollectionEquality().hash(afterDisplayNumberSetting));
 
   @JsonKey(ignore: true)
@@ -3436,7 +3436,7 @@ class _$_ChangedEndDisplayNumberValue extends _ChangedEndDisplayNumberValue {
 abstract class _ChangedEndDisplayNumberValue
     extends ChangedEndDisplayNumberValue {
   const factory _ChangedEndDisplayNumberValue(
-          {required DisplayNumberSetting? beginDisplayNumberSetting,
+          {required DisplayNumberSetting? beforeDisplayNumberSetting,
           required DisplayNumberSetting afterDisplayNumberSetting}) =
       _$_ChangedEndDisplayNumberValue;
   const _ChangedEndDisplayNumberValue._() : super._();
@@ -3445,7 +3445,7 @@ abstract class _ChangedEndDisplayNumberValue
       _$_ChangedEndDisplayNumberValue.fromJson;
 
   @override
-  DisplayNumberSetting? get beginDisplayNumberSetting;
+  DisplayNumberSetting? get beforeDisplayNumberSetting;
   @override
   DisplayNumberSetting get afterDisplayNumberSetting;
   @override
