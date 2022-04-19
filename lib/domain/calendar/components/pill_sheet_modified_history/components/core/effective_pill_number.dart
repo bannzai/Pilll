@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:pilll/components/atoms/font.dart';
 import 'package:pilll/components/atoms/text_color.dart';
+import 'package:pilll/entity/pill_sheet_group.codegen.dart';
 import 'package:pilll/entity/pill_sheet_modified_history_value.codegen.dart';
 
 class EffectivePillNumber extends StatelessWidget {
@@ -57,6 +58,24 @@ abstract class PillSheetModifiedHistoryDateEffectivePillNumber {
 
   static String changed(ChangedPillNumberValue value) =>
       "${value.beforeTodayPillNumber}→${value.afterTodayPillNumber}番";
+
+  static String changedBeginDisplayNumberSetting(
+      ChangedBeginDisplayNumberValue value) {
+    final before = value.beforeDisplayNumberSetting;
+    if (before == null) {
+      return "${value.afterDisplayNumberSetting.beginPillNumber}番";
+    }
+    return "${before.beginPillNumber}→${value.afterDisplayNumberSetting.beginPillNumber}番";
+  }
+
+  static String changedEndDisplayNumberSetting(
+      ChangedBeginDisplayNumberValue value) {
+    final before = value.beforeDisplayNumberSetting;
+    if (before == null) {
+      return "${value.afterDisplayNumberSetting.endPillNumber}番";
+    }
+    return "${before.endPillNumber}→${value.afterDisplayNumberSetting.endPillNumber}番";
+  }
 
   static String pillSheetCount(List<String> pillSheetIDs) =>
       pillSheetIDs.isNotEmpty ? "${pillSheetIDs.length}枚" : hyphen();
