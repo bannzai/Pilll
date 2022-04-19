@@ -65,9 +65,11 @@ class DisplayNumberSettingSheet extends HookConsumerWidget {
               ]),
               const SizedBox(height: 24),
               Column(
+                mainAxisAlignment: MainAxisAlignment.start,
                 children: [
                   Column(
                     mainAxisSize: MainAxisSize.min,
+                    mainAxisAlignment: MainAxisAlignment.start,
                     children: [
                       Row(
                         children: [
@@ -142,10 +144,11 @@ class DisplayNumberSettingSheet extends HookConsumerWidget {
                           ),
                         ],
                       ),
-                      if (beforePillSheetGroup != null)
+                      if (beforePillSheetGroup != null) ...[
+                        const SizedBox(height: 8),
                         Row(
                           crossAxisAlignment: CrossAxisAlignment.center,
-                          mainAxisAlignment: MainAxisAlignment.center,
+                          mainAxisAlignment: MainAxisAlignment.start,
                           children: [
                             Text(
                               "前回のシートの最後：${beforePillSheetGroup.estimatedEndPillNumber}",
@@ -158,6 +161,7 @@ class DisplayNumberSettingSheet extends HookConsumerWidget {
                             ),
                           ],
                         ),
+                      ],
                     ],
                   ),
                 ],
