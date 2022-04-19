@@ -3,7 +3,6 @@ import 'package:pilll/analytics.dart';
 import 'package:pilll/components/atoms/buttons.dart';
 import 'package:pilll/components/atoms/font.dart';
 import 'package:pilll/components/atoms/text_color.dart';
-import 'package:pilll/domain/record/record_page.dart';
 import 'package:pilll/domain/record/record_page_store.dart';
 import 'package:pilll/entity/pill_sheet.codegen.dart';
 import 'package:pilll/entity/pill_sheet_group.codegen.dart';
@@ -13,6 +12,7 @@ class EndManualRestDurationButton extends StatelessWidget {
   final PillSheet activedPillSheet;
   final PillSheetGroup pillSheetGroup;
   final RecordPageStore store;
+  final VoidCallback didEndRestDuration;
 
   const EndManualRestDurationButton({
     Key? key,
@@ -20,6 +20,7 @@ class EndManualRestDurationButton extends StatelessWidget {
     required this.activedPillSheet,
     required this.pillSheetGroup,
     required this.store,
+    required this.didEndRestDuration,
   }) : super(key: key);
 
   @override
@@ -33,10 +34,6 @@ class EndManualRestDurationButton extends StatelessWidget {
             name: "end_manual_rest_duration_pressed",
           );
 
-          await showDialog(
-              context: context,
-              builder: (context) => EndRestDurationModal(
-                  pillSheetGroup: pillSheetGroup, store: store));
           await store.endRestDuration(
             pillSheetGroup: pillSheetGroup,
             activedPillSheet: activedPillSheet,

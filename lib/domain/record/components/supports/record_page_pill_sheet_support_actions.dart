@@ -44,10 +44,20 @@ class RecordPagePillSheetSupportActions extends StatelessWidget {
           const Spacer(),
           if (restDuration != null) ...[
             EndManualRestDurationButton(
-                restDuration: restDuration,
-                activedPillSheet: activedPillSheet,
-                pillSheetGroup: pillSheetGroup,
-                store: store),
+              restDuration: restDuration,
+              activedPillSheet: activedPillSheet,
+              pillSheetGroup: pillSheetGroup,
+              store: store,
+              didEndRestDuration: () {
+                showDialog(
+                  context: context,
+                  builder: (context) => EndRestDurationModal(
+                    pillSheetGroup: pillSheetGroup,
+                    store: store,
+                  ),
+                );
+              },
+            ),
           ] else ...[
             BeginManualRestDurationButton(
                 appearanceMode: setting.pillSheetAppearanceMode,
