@@ -1,6 +1,7 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:pilll/database/database.dart';
 import 'package:pilll/entity/pill_sheet.codegen.dart';
+import 'package:pilll/entity/pill_sheet_group.codegen.dart';
 import 'package:pilll/entity/pill_sheet_modified_history.codegen.dart';
 import 'package:pilll/entity/pill_sheet_modified_history_value.codegen.dart';
 import 'package:pilll/util/datetime/day.dart';
@@ -283,6 +284,52 @@ extension PillSheetModifiedHistoryServiceActionFactory
       value: PillSheetModifiedHistoryValue(
         endedRestDurationValue: EndedRestDurationValue(
           restDuration: restDuration,
+        ),
+      ),
+      pillSheetGroupID: pillSheetGroupID,
+      beforePillSheetID: before.id,
+      afterPillSheetID: after.id,
+      before: before,
+      after: after,
+    );
+  }
+
+  static PillSheetModifiedHistory createChangedBeginDisplayNumberAction({
+    required String? pillSheetGroupID,
+    required PillSheet before,
+    required PillSheet after,
+    required DisplayNumberSetting? beforeDisplayNumberSetting,
+    required DisplayNumberSetting afterDisplayNumberSetting,
+  }) {
+    return _create(
+      actionType: PillSheetModifiedActionType.changedBeginDisplayNumber,
+      value: PillSheetModifiedHistoryValue(
+        changedBeginDisplayNumber: ChangedBeginDisplayNumberValue(
+          beforeDisplayNumberSetting: beforeDisplayNumberSetting,
+          afterDisplayNumberSetting: afterDisplayNumberSetting,
+        ),
+      ),
+      pillSheetGroupID: pillSheetGroupID,
+      beforePillSheetID: before.id,
+      afterPillSheetID: after.id,
+      before: before,
+      after: after,
+    );
+  }
+
+  static PillSheetModifiedHistory createChangedEndDisplayNumberAction({
+    required String? pillSheetGroupID,
+    required PillSheet before,
+    required PillSheet after,
+    required DisplayNumberSetting? beforeDisplayNumberSetting,
+    required DisplayNumberSetting afterDisplayNumberSetting,
+  }) {
+    return _create(
+      actionType: PillSheetModifiedActionType.changedEndDisplayNumber,
+      value: PillSheetModifiedHistoryValue(
+        changedEndDisplayNumber: ChangedEndDisplayNumberValue(
+          beforeDisplayNumberSetting: beforeDisplayNumberSetting,
+          afterDisplayNumberSetting: afterDisplayNumberSetting,
         ),
       ),
       pillSheetGroupID: pillSheetGroupID,
