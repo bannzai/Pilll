@@ -29,9 +29,15 @@ class DisplayNumberSettingSheet extends HookConsumerWidget {
 
     final beforePillSheetGroup = state.beforePillSheetGroup;
 
+    final estimatedKeyboardHeight = 216;
+    final offset = 24;
+    final height = 1 -
+        ((estimatedKeyboardHeight - offset) /
+            MediaQuery.of(context).size.height);
+
     return DraggableScrollableSheet(
-      initialChildSize: 0.7,
-      maxChildSize: 0.7,
+      initialChildSize: height,
+      maxChildSize: height,
       builder: (context, scrollController) {
         return Container(
           decoration: const BoxDecoration(
@@ -162,6 +168,70 @@ class DisplayNumberSettingSheet extends HookConsumerWidget {
                           ],
                         ),
                       ],
+                    ],
+                  ),
+                  const SizedBox(height: 32),
+                  Row(
+                    children: [
+                      SvgPicture.asset("images/end_display_number_setting.svg"),
+                      const SizedBox(width: 4),
+                      const Text(
+                        "服用日数の終わり",
+                        style: TextStyle(
+                          fontFamily: FontFamily.japanese,
+                          fontSize: 12,
+                          fontWeight: FontWeight.w700,
+                          color: TextColor.main,
+                        ),
+                      ),
+                    ],
+                  ),
+                  const SizedBox(height: 16),
+                  Row(
+                    children: [
+                      const SizedBox(width: 5),
+                      SizedBox(
+                        width: 42,
+                        height: 40,
+                        child: TextField(
+                          style: TextStyle(
+                            color: TextColor.darkGray,
+                            fontSize: 15,
+                            fontFamily: FontFamily.number,
+                            fontWeight: FontWeight.w500,
+                          ),
+                          textAlign: TextAlign.center,
+                          controller: endTextFieldController,
+                          keyboardType: TextInputType.number,
+                          inputFormatters: [
+                            FilteringTextInputFormatter.digitsOnly
+                          ],
+                          decoration: const InputDecoration(
+                            fillColor: PilllColors.mat,
+                            filled: true,
+                            border: UnderlineInputBorder(
+                              borderSide: BorderSide(width: 1),
+                            ),
+                            contentPadding: EdgeInsets.only(bottom: 8),
+                          ),
+                          onChanged: (text) {
+                            try {
+                              end.value = int.parse(text);
+                              store.setEndDisplayPillNumber(end.value);
+                            } catch (_) {}
+                          },
+                        ),
+                      ),
+                      const SizedBox(width: 5),
+                      const Text(
+                        "日目に変更",
+                        style: TextStyle(
+                          fontFamily: FontFamily.japanese,
+                          fontSize: 14,
+                          fontWeight: FontWeight.w400,
+                          color: TextColor.main,
+                        ),
+                      ),
                     ],
                   ),
                 ],
