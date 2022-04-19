@@ -60,10 +60,21 @@ class RecordPagePillSheetSupportActions extends StatelessWidget {
             ),
           ] else ...[
             BeginManualRestDurationButton(
-                appearanceMode: setting.pillSheetAppearanceMode,
-                activedPillSheet: activedPillSheet,
-                pillSheetGroup: pillSheetGroup,
-                store: store),
+              appearanceMode: setting.pillSheetAppearanceMode,
+              activedPillSheet: activedPillSheet,
+              pillSheetGroup: pillSheetGroup,
+              store: store,
+              didBeginRestDuration: () {
+                ScaffoldMessenger.of(context).showSnackBar(
+                  const SnackBar(
+                    duration: Duration(
+                      seconds: 2,
+                    ),
+                    content: Text("休薬期間が始まりました"),
+                  ),
+                );
+              },
+            ),
           ],
         ],
       ),

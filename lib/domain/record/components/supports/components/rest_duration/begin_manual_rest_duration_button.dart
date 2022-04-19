@@ -14,6 +14,7 @@ class BeginManualRestDurationButton extends StatelessWidget {
   final PillSheet activedPillSheet;
   final PillSheetGroup pillSheetGroup;
   final RecordPageStore store;
+  final VoidCallback didBeginRestDuration;
 
   const BeginManualRestDurationButton({
     Key? key,
@@ -21,6 +22,7 @@ class BeginManualRestDurationButton extends StatelessWidget {
     required this.activedPillSheet,
     required this.pillSheetGroup,
     required this.store,
+    required this.didBeginRestDuration,
   }) : super(key: key);
 
   @override
@@ -51,14 +53,8 @@ class BeginManualRestDurationButton extends StatelessWidget {
                   pillSheetGroup: pillSheetGroup,
                   activedPillSheet: activedPillSheet,
                 );
-                ScaffoldMessenger.of(context).showSnackBar(
-                  const SnackBar(
-                    duration: Duration(
-                      seconds: 2,
-                    ),
-                    content: Text("休薬期間が始まりました"),
-                  ),
-                );
+
+                didBeginRestDuration();
               },
             );
           }
