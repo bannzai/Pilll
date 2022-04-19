@@ -41,7 +41,7 @@ class DisplayNumberSettingSheet extends HookConsumerWidget {
             ),
             color: PilllColors.white,
           ),
-          padding: const EdgeInsets.symmetric(horizontal: 32, vertical: 20),
+          padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 24),
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.center,
             children: [
