@@ -20,10 +20,12 @@ class _$DisplayNumberSettingStateTearOff {
 
   _DisplayNumberSettingState call(
       {PillSheetGroup? beforePillSheetGroup,
-      required PillSheetGroup pillSheetGroup}) {
+      required PillSheetGroup pillSheetGroup,
+      required PillSheetGroup originalPillSheetGroup}) {
     return _DisplayNumberSettingState(
       beforePillSheetGroup: beforePillSheetGroup,
       pillSheetGroup: pillSheetGroup,
+      originalPillSheetGroup: originalPillSheetGroup,
     );
   }
 }
@@ -36,6 +38,8 @@ mixin _$DisplayNumberSettingState {
   PillSheetGroup? get beforePillSheetGroup =>
       throw _privateConstructorUsedError;
   PillSheetGroup get pillSheetGroup => throw _privateConstructorUsedError;
+  PillSheetGroup get originalPillSheetGroup =>
+      throw _privateConstructorUsedError;
 
   @JsonKey(ignore: true)
   $DisplayNumberSettingStateCopyWith<DisplayNumberSettingState> get copyWith =>
@@ -48,10 +52,13 @@ abstract class $DisplayNumberSettingStateCopyWith<$Res> {
           $Res Function(DisplayNumberSettingState) then) =
       _$DisplayNumberSettingStateCopyWithImpl<$Res>;
   $Res call(
-      {PillSheetGroup? beforePillSheetGroup, PillSheetGroup pillSheetGroup});
+      {PillSheetGroup? beforePillSheetGroup,
+      PillSheetGroup pillSheetGroup,
+      PillSheetGroup originalPillSheetGroup});
 
   $PillSheetGroupCopyWith<$Res>? get beforePillSheetGroup;
   $PillSheetGroupCopyWith<$Res> get pillSheetGroup;
+  $PillSheetGroupCopyWith<$Res> get originalPillSheetGroup;
 }
 
 /// @nodoc
@@ -67,6 +74,7 @@ class _$DisplayNumberSettingStateCopyWithImpl<$Res>
   $Res call({
     Object? beforePillSheetGroup = freezed,
     Object? pillSheetGroup = freezed,
+    Object? originalPillSheetGroup = freezed,
   }) {
     return _then(_value.copyWith(
       beforePillSheetGroup: beforePillSheetGroup == freezed
@@ -76,6 +84,10 @@ class _$DisplayNumberSettingStateCopyWithImpl<$Res>
       pillSheetGroup: pillSheetGroup == freezed
           ? _value.pillSheetGroup
           : pillSheetGroup // ignore: cast_nullable_to_non_nullable
+              as PillSheetGroup,
+      originalPillSheetGroup: originalPillSheetGroup == freezed
+          ? _value.originalPillSheetGroup
+          : originalPillSheetGroup // ignore: cast_nullable_to_non_nullable
               as PillSheetGroup,
     ));
   }
@@ -97,6 +109,14 @@ class _$DisplayNumberSettingStateCopyWithImpl<$Res>
       return _then(_value.copyWith(pillSheetGroup: value));
     });
   }
+
+  @override
+  $PillSheetGroupCopyWith<$Res> get originalPillSheetGroup {
+    return $PillSheetGroupCopyWith<$Res>(_value.originalPillSheetGroup,
+        (value) {
+      return _then(_value.copyWith(originalPillSheetGroup: value));
+    });
+  }
 }
 
 /// @nodoc
@@ -107,12 +127,16 @@ abstract class _$DisplayNumberSettingStateCopyWith<$Res>
       __$DisplayNumberSettingStateCopyWithImpl<$Res>;
   @override
   $Res call(
-      {PillSheetGroup? beforePillSheetGroup, PillSheetGroup pillSheetGroup});
+      {PillSheetGroup? beforePillSheetGroup,
+      PillSheetGroup pillSheetGroup,
+      PillSheetGroup originalPillSheetGroup});
 
   @override
   $PillSheetGroupCopyWith<$Res>? get beforePillSheetGroup;
   @override
   $PillSheetGroupCopyWith<$Res> get pillSheetGroup;
+  @override
+  $PillSheetGroupCopyWith<$Res> get originalPillSheetGroup;
 }
 
 /// @nodoc
@@ -131,6 +155,7 @@ class __$DisplayNumberSettingStateCopyWithImpl<$Res>
   $Res call({
     Object? beforePillSheetGroup = freezed,
     Object? pillSheetGroup = freezed,
+    Object? originalPillSheetGroup = freezed,
   }) {
     return _then(_DisplayNumberSettingState(
       beforePillSheetGroup: beforePillSheetGroup == freezed
@@ -141,6 +166,10 @@ class __$DisplayNumberSettingStateCopyWithImpl<$Res>
           ? _value.pillSheetGroup
           : pillSheetGroup // ignore: cast_nullable_to_non_nullable
               as PillSheetGroup,
+      originalPillSheetGroup: originalPillSheetGroup == freezed
+          ? _value.originalPillSheetGroup
+          : originalPillSheetGroup // ignore: cast_nullable_to_non_nullable
+              as PillSheetGroup,
     ));
   }
 }
@@ -149,17 +178,21 @@ class __$DisplayNumberSettingStateCopyWithImpl<$Res>
 
 class _$_DisplayNumberSettingState extends _DisplayNumberSettingState {
   _$_DisplayNumberSettingState(
-      {this.beforePillSheetGroup, required this.pillSheetGroup})
+      {this.beforePillSheetGroup,
+      required this.pillSheetGroup,
+      required this.originalPillSheetGroup})
       : super._();
 
   @override
   final PillSheetGroup? beforePillSheetGroup;
   @override
   final PillSheetGroup pillSheetGroup;
+  @override
+  final PillSheetGroup originalPillSheetGroup;
 
   @override
   String toString() {
-    return 'DisplayNumberSettingState(beforePillSheetGroup: $beforePillSheetGroup, pillSheetGroup: $pillSheetGroup)';
+    return 'DisplayNumberSettingState(beforePillSheetGroup: $beforePillSheetGroup, pillSheetGroup: $pillSheetGroup, originalPillSheetGroup: $originalPillSheetGroup)';
   }
 
   @override
@@ -170,14 +203,17 @@ class _$_DisplayNumberSettingState extends _DisplayNumberSettingState {
             const DeepCollectionEquality()
                 .equals(other.beforePillSheetGroup, beforePillSheetGroup) &&
             const DeepCollectionEquality()
-                .equals(other.pillSheetGroup, pillSheetGroup));
+                .equals(other.pillSheetGroup, pillSheetGroup) &&
+            const DeepCollectionEquality()
+                .equals(other.originalPillSheetGroup, originalPillSheetGroup));
   }
 
   @override
   int get hashCode => Object.hash(
       runtimeType,
       const DeepCollectionEquality().hash(beforePillSheetGroup),
-      const DeepCollectionEquality().hash(pillSheetGroup));
+      const DeepCollectionEquality().hash(pillSheetGroup),
+      const DeepCollectionEquality().hash(originalPillSheetGroup));
 
   @JsonKey(ignore: true)
   @override
@@ -189,14 +225,18 @@ class _$_DisplayNumberSettingState extends _DisplayNumberSettingState {
 
 abstract class _DisplayNumberSettingState extends DisplayNumberSettingState {
   factory _DisplayNumberSettingState(
-      {PillSheetGroup? beforePillSheetGroup,
-      required PillSheetGroup pillSheetGroup}) = _$_DisplayNumberSettingState;
+          {PillSheetGroup? beforePillSheetGroup,
+          required PillSheetGroup pillSheetGroup,
+          required PillSheetGroup originalPillSheetGroup}) =
+      _$_DisplayNumberSettingState;
   _DisplayNumberSettingState._() : super._();
 
   @override
   PillSheetGroup? get beforePillSheetGroup;
   @override
   PillSheetGroup get pillSheetGroup;
+  @override
+  PillSheetGroup get originalPillSheetGroup;
   @override
   @JsonKey(ignore: true)
   _$DisplayNumberSettingStateCopyWith<_DisplayNumberSettingState>

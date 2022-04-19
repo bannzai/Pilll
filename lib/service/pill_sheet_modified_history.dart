@@ -296,8 +296,6 @@ extension PillSheetModifiedHistoryServiceActionFactory
 
   static PillSheetModifiedHistory createChangedBeginDisplayNumberAction({
     required String? pillSheetGroupID,
-    required PillSheet before,
-    required PillSheet after,
     required DisplayNumberSetting? beforeDisplayNumberSetting,
     required DisplayNumberSetting afterDisplayNumberSetting,
   }) {
@@ -310,17 +308,15 @@ extension PillSheetModifiedHistoryServiceActionFactory
         ),
       ),
       pillSheetGroupID: pillSheetGroupID,
-      beforePillSheetID: before.id,
-      afterPillSheetID: after.id,
-      before: before,
-      after: after,
+      beforePillSheetID: null,
+      afterPillSheetID: null,
+      before: null,
+      after: null,
     );
   }
 
   static PillSheetModifiedHistory createChangedEndDisplayNumberAction({
     required String? pillSheetGroupID,
-    required PillSheet before,
-    required PillSheet after,
     required DisplayNumberSetting? beforeDisplayNumberSetting,
     required DisplayNumberSetting afterDisplayNumberSetting,
   }) {
@@ -333,10 +329,10 @@ extension PillSheetModifiedHistoryServiceActionFactory
         ),
       ),
       pillSheetGroupID: pillSheetGroupID,
-      beforePillSheetID: before.id,
-      afterPillSheetID: after.id,
-      before: before,
-      after: after,
+      beforePillSheetID: null,
+      afterPillSheetID: null,
+      before: null,
+      after: null,
     );
   }
 }
