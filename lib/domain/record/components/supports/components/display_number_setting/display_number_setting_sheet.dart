@@ -66,6 +66,9 @@ class DisplayNumberSettingSheet extends HookConsumerWidget {
                 SecondaryButton(
                   text: "変更",
                   onPressed: () async {
+                    analytics.logEvent(
+                      name: "sheet_change_display_number_setting",
+                    );
                     await store.modify();
                     Navigator.of(context).pop();
                   },
