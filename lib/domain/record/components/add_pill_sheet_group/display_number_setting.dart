@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/rendering.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_hooks/flutter_hooks.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
@@ -8,6 +9,7 @@ import 'package:pilll/components/atoms/text_color.dart';
 import 'package:pilll/domain/record/components/add_pill_sheet_group/add_pill_sheet_group_state.codegen.dart';
 import 'package:pilll/domain/record/components/add_pill_sheet_group/add_pill_sheet_group_store.dart';
 import 'package:pilll/entity/setting.codegen.dart';
+import 'package:pilll/util/formatter/text_input_formatter.dart';
 
 class DisplayNumberSetting extends HookConsumerWidget {
   final AddPillSheetGroupStateStore store;
@@ -62,7 +64,10 @@ class DisplayNumberSetting extends HookConsumerWidget {
                 textAlign: TextAlign.center,
                 controller: textFieldController,
                 keyboardType: TextInputType.number,
-                inputFormatters: [FilteringTextInputFormatter.digitsOnly],
+                inputFormatters: [
+                  FilteringTextInputFormatter.digitsOnly,
+                  AppTextFieldFormatter.greaterThanZero,
+                ],
                 decoration: const InputDecoration(
                   fillColor: PilllColors.mat,
                   filled: true,

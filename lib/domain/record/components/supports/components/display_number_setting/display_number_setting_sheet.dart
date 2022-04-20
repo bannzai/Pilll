@@ -9,6 +9,7 @@ import 'package:pilll/components/atoms/color.dart';
 import 'package:pilll/components/atoms/font.dart';
 import 'package:pilll/components/atoms/text_color.dart';
 import 'package:pilll/domain/record/components/supports/components/display_number_setting/store.dart';
+import 'package:pilll/util/formatter/text_input_formatter.dart';
 
 class DisplayNumberSettingSheet extends HookConsumerWidget {
   @override
@@ -121,7 +122,8 @@ class DisplayNumberSettingSheet extends HookConsumerWidget {
                               controller: beginTextFieldController,
                               keyboardType: TextInputType.number,
                               inputFormatters: [
-                                FilteringTextInputFormatter.digitsOnly
+                                FilteringTextInputFormatter.digitsOnly,
+                                AppTextFieldFormatter.greaterThanZero,
                               ],
                               decoration: const InputDecoration(
                                 fillColor: PilllColors.mat,
@@ -205,7 +207,8 @@ class DisplayNumberSettingSheet extends HookConsumerWidget {
                           controller: endTextFieldController,
                           keyboardType: TextInputType.number,
                           inputFormatters: [
-                            FilteringTextInputFormatter.digitsOnly
+                            FilteringTextInputFormatter.digitsOnly,
+                            AppTextFieldFormatter.greaterThanZero,
                           ],
                           decoration: const InputDecoration(
                             fillColor: PilllColors.mat,
