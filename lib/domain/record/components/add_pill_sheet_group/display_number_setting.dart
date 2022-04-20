@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_hooks/flutter_hooks.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
+import 'package:pilll/analytics.dart';
 import 'package:pilll/components/atoms/color.dart';
 import 'package:pilll/components/atoms/font.dart';
 import 'package:pilll/components/atoms/text_color.dart';
@@ -77,6 +78,9 @@ class DisplayNumberSetting extends HookConsumerWidget {
                 ),
                 onChanged: (text) {
                   try {
+                    analytics.logEvent(
+                        name: "on_changed_display_number",
+                        parameters: {"text": text});
                     beginDisplayPillNumber.value = int.parse(text);
                     store.setBeginDisplayPillNumber(
                         beginDisplayPillNumber.value);
