@@ -158,7 +158,7 @@ class DisplayNumberSettingSheet extends HookConsumerWidget {
                           mainAxisAlignment: MainAxisAlignment.start,
                           children: [
                             Text(
-                              "前回のシートの最後：${beforePillSheetGroup.estimatedEndPillNumber}",
+                              "前回のシートの最後：${beforePillSheetGroup.estimatedEndPillNumber}日目",
                               style: const TextStyle(
                                 fontFamily: FontFamily.japanese,
                                 fontSize: 12,
