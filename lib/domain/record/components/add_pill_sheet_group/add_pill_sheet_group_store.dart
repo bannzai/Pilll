@@ -48,8 +48,6 @@ class AddPillSheetGroupStateStore
     this._batchFactory,
   ) : super(AddPillSheetGroupState(
           pillSheetGroup: pillSheetGroup?.copyWith(),
-          displayNumberSetting: DisplayNumberSetting(
-              beginPillNumber: pillSheetGroup?.estimatedEndPillNumber ?? 1),
           pillSheetAppearanceMode: pillSheetAppearanceMode,
           setting: setting?.copyWith(),
         ));
@@ -112,7 +110,24 @@ class AddPillSheetGroupStateStore
       PillSheetGroup(
         pillSheetIDs: pillSheetIDs,
         pillSheets: createdPillSheets,
-        displayNumberSetting: state.displayNumberSetting,
+        displayNumberSetting: () {
+          if (state.pillSheetAppearanceMode ==
+              PillSheetAppearanceMode.sequential) {
+            if (state.displayNumberSetting != null) {
+              return state.displayNumberSetting;
+            }
+            final pillSheetGroup = state.pillSheetGroup;
+            if (pillSheetGroup != null) {
+              return DisplayNumberSetting(
+                beginPillNumber: pillSheetGroup.estimatedEndPillNumber + 1,
+              );
+            }
+
+            return null;
+          } else {
+            return null;
+          }
+        }(),
         createdAt: now(),
       ),
     );
