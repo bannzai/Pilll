@@ -503,11 +503,11 @@ class MockRecordPageStore extends _i1.Mock implements _i24.RecordPageStore {
               returnValueForMissingStub: Future<void>.value())
           as _i16.Future<void>);
   @override
-  void setDisplayNumberSettingBegin(int? begin) => super.noSuchMethod(
+  void setDisplayNumberSettingBeginNumber(int? begin) => super.noSuchMethod(
       Invocation.method(#setDisplayNumberSettingBegin, [begin]),
       returnValueForMissingStub: null);
   @override
-  _i16.Future<void> setDisplayNumberSettingEnd(int? end) => (super.noSuchMethod(
+  _i16.Future<void> setDisplayNumberSettingEndNumber(int? end) => (super.noSuchMethod(
       Invocation.method(#setDisplayNumberSettingEnd, [end]),
       returnValue: Future<void>.value(),
       returnValueForMissingStub: Future<void>.value()) as _i16.Future<void>);

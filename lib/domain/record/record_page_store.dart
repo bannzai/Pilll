@@ -480,7 +480,7 @@ class RecordPageStore extends StateNotifier<RecordPageState> {
     await batch.commit();
   }
 
-  void setDisplayNumberSettingBegin(int begin) {
+  void setDisplayNumberSettingBeginNumber(int begin) {
     final pillSheetGroup = state.pillSheetGroup;
     if (pillSheetGroup == null) {
       return;
@@ -505,7 +505,7 @@ class RecordPageStore extends StateNotifier<RecordPageState> {
     _pillSheetGroupService.update(updatedPillSheetGroup);
   }
 
-  Future<void> setDisplayNumberSettingEnd(int end) async {
+  Future<void> setDisplayNumberSettingEndNumber(int end) async {
     final pillSheetGroup = state.pillSheetGroup;
     if (pillSheetGroup == null) {
       return;
