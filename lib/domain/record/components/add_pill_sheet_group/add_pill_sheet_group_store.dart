@@ -48,6 +48,8 @@ class AddPillSheetGroupStateStore
     this._batchFactory,
   ) : super(AddPillSheetGroupState(
           pillSheetGroup: pillSheetGroup?.copyWith(),
+          displayNumberSetting: DisplayNumberSetting(
+              beginPillNumber: pillSheetGroup?.estimatedEndPillNumber ?? 1),
           pillSheetAppearanceMode: pillSheetAppearanceMode,
           setting: setting?.copyWith(),
         ));
