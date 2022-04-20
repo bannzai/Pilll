@@ -30,6 +30,7 @@ class PillSheetGroup with _$PillSheetGroup {
       toJson: TimestampConverter.dateTimeToTimestamp,
     )
         DateTime? deletedAt,
+    DisplayNumberSetting? displayNumberSetting,
   }) = _PillSheetGroup;
 
   factory PillSheetGroup.fromJson(Map<String, dynamic> json) =>
@@ -69,7 +70,27 @@ class PillSheetGroup with _$PillSheetGroup {
     final passedPillCountForPillSheetTypes =
         summarizedPillCountWithPillSheetsToEndIndex(
             pillSheets: pillSheets, endIndex: activedPillSheet.groupIndex);
-    return passedPillCountForPillSheetTypes + activedPillSheet.todayPillNumber;
+
+    var sequentialTodayPillNumber =
+        passedPillCountForPillSheetTypes + activedPillSheet.todayPillNumber;
+
+    final displayNumberSetting = this.displayNumberSetting;
+    if (displayNumberSetting != null) {
+      final beginPillNumberOffset = displayNumberSetting.beginPillNumber;
+      if (beginPillNumberOffset != null && beginPillNumberOffset > 0) {
+        sequentialTodayPillNumber += (beginPillNumberOffset - 1);
+      }
+
+      final endPillNumberOffset = displayNumberSetting.endPillNumber;
+      if (endPillNumberOffset != null && endPillNumberOffset > 0) {
+        sequentialTodayPillNumber %= endPillNumberOffset;
+        if (sequentialTodayPillNumber == 0) {
+          sequentialTodayPillNumber = endPillNumberOffset;
+        }
+      }
+    }
+
+    return sequentialTodayPillNumber;
   }
 
   int get sequentialLastTakenPillNumber {
@@ -84,7 +105,61 @@ class PillSheetGroup with _$PillSheetGroup {
     final passedPillCountForPillSheetTypes =
         summarizedPillCountWithPillSheetsToEndIndex(
             pillSheets: pillSheets, endIndex: activedPillSheet.groupIndex);
-    return passedPillCountForPillSheetTypes +
-        activedPillSheet.lastTakenPillNumber;
+
+    var sequentialLastTakenPillNumber =
+        passedPillCountForPillSheetTypes + activedPillSheet.lastTakenPillNumber;
+
+    final displayNumberSetting = this.displayNumberSetting;
+    if (displayNumberSetting != null) {
+      final beginPillNumberOffset = displayNumberSetting.beginPillNumber;
+      if (beginPillNumberOffset != null && beginPillNumberOffset > 0) {
+        sequentialLastTakenPillNumber += (beginPillNumberOffset - 1);
+      }
+
+      final endPillNumberOffset = displayNumberSetting.endPillNumber;
+      if (endPillNumberOffset != null && endPillNumberOffset > 0) {
+        sequentialLastTakenPillNumber %= endPillNumberOffset;
+        if (sequentialTodayPillNumber == 0) {
+          sequentialLastTakenPillNumber = endPillNumberOffset;
+        }
+      }
+    }
+
+    return sequentialLastTakenPillNumber;
   }
+
+  int get estimatedEndPillNumber {
+    var estimatedEndPillNumber = summarizedPillCountWithPillSheetsToEndIndex(
+        pillSheets: pillSheets, endIndex: pillSheets.length);
+
+    final displayNumberSetting = this.displayNumberSetting;
+    if (displayNumberSetting != null) {
+      final beginPillNumberOffset = displayNumberSetting.beginPillNumber;
+      if (beginPillNumberOffset != null && beginPillNumberOffset > 0) {
+        estimatedEndPillNumber += (beginPillNumberOffset - 1);
+      }
+
+      final endPillNumberOffset = displayNumberSetting.endPillNumber;
+      if (endPillNumberOffset != null && endPillNumberOffset > 0) {
+        estimatedEndPillNumber %= endPillNumberOffset;
+        if (sequentialTodayPillNumber == 0) {
+          estimatedEndPillNumber = endPillNumberOffset;
+        }
+      }
+    }
+
+    return estimatedEndPillNumber;
+  }
+}
+
+@freezed
+class DisplayNumberSetting with _$DisplayNumberSetting {
+  @JsonSerializable(explicitToJson: true)
+  const factory DisplayNumberSetting({
+    int? beginPillNumber,
+    int? endPillNumber,
+  }) = _DisplayNumberSetting;
+
+  factory DisplayNumberSetting.fromJson(Map<String, dynamic> json) =>
+      _$DisplayNumberSettingFromJson(json);
 }

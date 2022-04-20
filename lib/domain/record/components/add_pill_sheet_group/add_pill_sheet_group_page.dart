@@ -6,14 +6,15 @@ import 'package:pilll/components/atoms/buttons.dart';
 import 'package:pilll/components/atoms/color.dart';
 import 'package:pilll/components/atoms/text_color.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
-import 'package:pilll/domain/record/record_page_store.dart';
+import 'package:pilll/domain/record/components/add_pill_sheet_group/add_pill_sheet_group_store.dart';
+import 'package:pilll/domain/record/components/add_pill_sheet_group/display_number_setting.dart';
 import 'package:pilll/entity/pill_sheet_type.dart';
 
 class AddPillSheetGroupPage extends HookConsumerWidget {
   @override
   Widget build(BuildContext context, WidgetRef ref) {
-    final store = ref.watch(recordPageStoreProvider.notifier);
-    final state = ref.watch(recordPageStoreProvider);
+    final store = ref.watch(addPillSheetGroupStateStoreProvider.notifier);
+    final state = ref.watch(addPillSheetGroupStateStoreProvider);
     final setting = state.setting;
     if (setting == null) {
       throw const FormatException("ピルシートグループの設定が読み込めませんでした");
@@ -67,14 +68,21 @@ class AddPillSheetGroupPage extends HookConsumerWidget {
                   padding: const EdgeInsets.only(bottom: 35),
                   child: Container(
                     color: PilllColors.background,
-                    child: PrimaryButton(
-                      text: "追加",
-                      onPressed: () async {
-                        analytics.logEvent(
-                            name: "pressed_add_pill_sheet_group");
-                        await store.register(setting);
-                        Navigator.of(context).pop();
-                      },
+                    child: Column(
+                      mainAxisSize: MainAxisSize.min,
+                      children: [
+                        DisplayNumberSetting(store: store, state: state),
+                        const SizedBox(height: 24),
+                        PrimaryButton(
+                          text: "追加",
+                          onPressed: () async {
+                            analytics.logEvent(
+                                name: "pressed_add_pill_sheet_group");
+                            await store.register(setting);
+                            Navigator.of(context).pop();
+                          },
+                        ),
+                      ],
                     ),
                   ),
                 ),

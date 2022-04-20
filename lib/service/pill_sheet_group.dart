@@ -34,6 +34,23 @@ class PillSheetGroupService {
     return _map(snapshot);
   }
 
+  Future<PillSheetGroup?> fetchBeforePillSheetGroup() async {
+    final snapshot = await _database
+        .pillSheetGroupsReference()
+        .orderBy(PillSheetGroupFirestoreKeys.createdAt)
+        .limitToLast(2)
+        .get();
+    if (snapshot.docs.length <= 1) {
+      return null;
+    }
+
+    final document = snapshot.docs[1];
+    final data = document.data() as Map<String, dynamic>;
+    data.putIfAbsent("id", () => document.id);
+
+    return PillSheetGroup.fromJson(data);
+  }
+
   Stream<PillSheetGroup> streamForLatest() {
     return _latestQuery()
         .snapshots()
@@ -61,7 +78,13 @@ class PillSheetGroupService {
     return updated;
   }
 
-  update(WriteBatch batch, PillSheetGroup pillSheetGroup) {
+  Future<void> update(PillSheetGroup pillSheetGroup) async {
+    await _database
+        .pillSheetGroupReference(pillSheetGroup.id!)
+        .update(pillSheetGroup.toJson());
+  }
+
+  void updateWithBatch(WriteBatch batch, PillSheetGroup pillSheetGroup) {
     final json = pillSheetGroup.toJson();
     batch.update(_database.pillSheetGroupReference(pillSheetGroup.id!), json);
   }

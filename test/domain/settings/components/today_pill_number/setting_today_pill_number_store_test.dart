@@ -62,7 +62,7 @@ void main() {
       final updatedPillSheetGroup =
           pillSheetGroup.copyWith(pillSheets: [updatedPillSheet]);
       final pillSheetGroupService = MockPillSheetGroupService();
-      when(pillSheetGroupService.update(batch, updatedPillSheetGroup))
+      when(pillSheetGroupService.updateWithBatch(batch, updatedPillSheetGroup))
           .thenReturn(updatedPillSheetGroup);
 
       final history = PillSheetModifiedHistoryServiceActionFactory
@@ -146,7 +146,7 @@ void main() {
       final updatedPillSheetGroup =
           pillSheetGroup.copyWith(pillSheets: [updatedPillSheet]);
       final pillSheetGroupService = MockPillSheetGroupService();
-      when(pillSheetGroupService.update(batch, updatedPillSheetGroup))
+      when(pillSheetGroupService.updateWithBatch(batch, updatedPillSheetGroup))
           .thenReturn(updatedPillSheetGroup);
 
       final history = PillSheetModifiedHistoryServiceActionFactory
@@ -257,7 +257,7 @@ void main() {
         updatedRight,
       ]);
       final pillSheetGroupService = MockPillSheetGroupService();
-      when(pillSheetGroupService.update(batch, updatedPillSheetGroup))
+      when(pillSheetGroupService.updateWithBatch(batch, updatedPillSheetGroup))
           .thenReturn(updatedPillSheetGroup);
 
       final history = PillSheetModifiedHistoryServiceActionFactory
@@ -368,7 +368,7 @@ void main() {
         updatedRight,
       ]);
       final pillSheetGroupService = MockPillSheetGroupService();
-      when(pillSheetGroupService.update(batch, updatedPillSheetGroup))
+      when(pillSheetGroupService.updateWithBatch(batch, updatedPillSheetGroup))
           .thenReturn(updatedPillSheetGroup);
 
       final history = PillSheetModifiedHistoryServiceActionFactory
@@ -480,7 +480,7 @@ void main() {
         updatedRight,
       ]);
       final pillSheetGroupService = MockPillSheetGroupService();
-      when(pillSheetGroupService.update(batch, updatedPillSheetGroup))
+      when(pillSheetGroupService.updateWithBatch(batch, updatedPillSheetGroup))
           .thenReturn(updatedPillSheetGroup);
 
       final history = PillSheetModifiedHistoryServiceActionFactory
@@ -600,7 +600,7 @@ void main() {
         updatedRight,
       ]);
       final pillSheetGroupService = MockPillSheetGroupService();
-      when(pillSheetGroupService.update(batch, updatedPillSheetGroup))
+      when(pillSheetGroupService.updateWithBatch(batch, updatedPillSheetGroup))
           .thenReturn(updatedPillSheetGroup);
 
       final history = PillSheetModifiedHistoryServiceActionFactory

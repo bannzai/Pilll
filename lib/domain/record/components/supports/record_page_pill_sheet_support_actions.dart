@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:pilll/components/organisms/pill_sheet/pill_sheet_view_layout.dart';
 import 'package:pilll/domain/record/components/supports/components/appearance_mode/switching_appearance_mode.dart';
+import 'package:pilll/domain/record/components/supports/components/display_number_setting/display_number_setting_button.dart';
 import 'package:pilll/domain/record/components/supports/components/rest_duration/begin_manual_rest_duration_button.dart';
 import 'package:pilll/domain/record/components/supports/components/rest_duration/end_manual_rest_duration_button.dart';
 import 'package:pilll/domain/record/record_page_store.dart';
@@ -33,18 +34,44 @@ class RecordPagePillSheetSupportActions extends StatelessWidget {
           SwitchingAppearanceMode(
               store: store, mode: setting.pillSheetAppearanceMode),
           const Spacer(),
+          if (setting.pillSheetAppearanceMode ==
+              PillSheetAppearanceMode.sequential) ...[
+            DisplayNumberSettingButton(
+              pillSheetGroup: pillSheetGroup,
+              store: store,
+            ),
+          ],
+          const Spacer(),
           if (restDuration != null) ...[
             EndManualRestDurationButton(
-                restDuration: restDuration,
-                activedPillSheet: activedPillSheet,
-                pillSheetGroup: pillSheetGroup,
-                store: store),
+              restDuration: restDuration,
+              activedPillSheet: activedPillSheet,
+              pillSheetGroup: pillSheetGroup,
+              store: store,
+              didEndRestDuration: () {
+                showEndRestDurationModal(context,
+                    pillSheetGroup: pillSheetGroup,
+                    store: store,
+                    activedPillSheet: activedPillSheet);
+              },
+            ),
           ] else ...[
             BeginManualRestDurationButton(
-                appearanceMode: setting.pillSheetAppearanceMode,
-                activedPillSheet: activedPillSheet,
-                pillSheetGroup: pillSheetGroup,
-                store: store),
+              appearanceMode: setting.pillSheetAppearanceMode,
+              activedPillSheet: activedPillSheet,
+              pillSheetGroup: pillSheetGroup,
+              store: store,
+              didBeginRestDuration: () {
+                ScaffoldMessenger.of(context).showSnackBar(
+                  const SnackBar(
+                    duration: Duration(
+                      seconds: 2,
+                    ),
+                    content: Text("休薬期間が始まりました"),
+                  ),
+                );
+              },
+            ),
           ],
         ],
       ),

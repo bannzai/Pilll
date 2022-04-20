@@ -2,6 +2,7 @@ import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';
 import 'package:pilll/entity/firestore_timestamp_converter.dart';
 import 'package:pilll/entity/pill_sheet.codegen.dart';
+import 'package:pilll/entity/pill_sheet_group.codegen.dart';
 
 part 'pill_sheet_modified_history_value.codegen.g.dart';
 part 'pill_sheet_modified_history_value.codegen.freezed.dart';
@@ -23,6 +24,8 @@ class PillSheetModifiedHistoryValue with _$PillSheetModifiedHistoryValue {
     @Default(null) EndedPillSheetValue? endedPillSheet,
     @Default(null) BeganRestDurationValue? beganRestDurationValue,
     @Default(null) EndedRestDurationValue? endedRestDurationValue,
+    @Default(null) ChangedBeginDisplayNumberValue? changedBeginDisplayNumber,
+    @Default(null) ChangedEndDisplayNumberValue? changedEndDisplayNumber,
   }) = _PillSheetModifiedHistoryValue;
 
   factory PillSheetModifiedHistoryValue.fromJson(Map<String, dynamic> json) =>
@@ -236,4 +239,30 @@ class EndedRestDurationValue with _$EndedRestDurationValue {
 
   factory EndedRestDurationValue.fromJson(Map<String, dynamic> json) =>
       _$EndedRestDurationValueFromJson(json);
+}
+
+@freezed
+class ChangedBeginDisplayNumberValue with _$ChangedBeginDisplayNumberValue {
+  const ChangedBeginDisplayNumberValue._();
+  @JsonSerializable(explicitToJson: true)
+  const factory ChangedBeginDisplayNumberValue({
+    required DisplayNumberSetting? beforeDisplayNumberSetting,
+    required DisplayNumberSetting afterDisplayNumberSetting,
+  }) = _ChangedBeginDisplayNumberValue;
+
+  factory ChangedBeginDisplayNumberValue.fromJson(Map<String, dynamic> json) =>
+      _$ChangedBeginDisplayNumberValueFromJson(json);
+}
+
+@freezed
+class ChangedEndDisplayNumberValue with _$ChangedEndDisplayNumberValue {
+  const ChangedEndDisplayNumberValue._();
+  @JsonSerializable(explicitToJson: true)
+  const factory ChangedEndDisplayNumberValue({
+    required DisplayNumberSetting? beforeDisplayNumberSetting,
+    required DisplayNumberSetting afterDisplayNumberSetting,
+  }) = _ChangedEndDisplayNumberValue;
+
+  factory ChangedEndDisplayNumberValue.fromJson(Map<String, dynamic> json) =>
+      _$ChangedEndDisplayNumberValueFromJson(json);
 }

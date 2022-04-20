@@ -5,7 +5,7 @@ class TextColor {
   static Color get standard => black;
   static const Color black = Colors.black;
   static const Color white = Colors.white;
-  static final Color darkGray = const Color(0xFF000000).withAlpha(153);
+  static final Color darkGray = const Color(0xD449454F);
   static const Color gray = const Color(0xFF7E7E7E);
   static const Color lightGray = const Color(0xFFB1B1B1);
   static const Color lightGray2 = const Color(0xFF666666);
@@ -19,11 +19,6 @@ class TextColor {
   static Color highEmphasis(Color color) => color.withOpacity(0.87);
   static Color mediumEmphasis(Color color) => color.withOpacity(0.6);
   static Color disabled(Color color) => color.withOpacity(0.37);
-
-  static Color get highEmphasisMain => TextColor.highEmphasis(TextColor.main);
-  static Color get mediumEmphasisMain =>
-      TextColor.mediumEmphasis(TextColor.main);
-  static Color get disabledMain => TextColor.disabled(TextColor.main);
 }
 
 class TextColorStyle {

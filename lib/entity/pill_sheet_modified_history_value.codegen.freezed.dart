@@ -34,7 +34,9 @@ class _$PillSheetModifiedHistoryValueTearOff {
       ChangedPillNumberValue? changedPillNumber = null,
       EndedPillSheetValue? endedPillSheet = null,
       BeganRestDurationValue? beganRestDurationValue = null,
-      EndedRestDurationValue? endedRestDurationValue = null}) {
+      EndedRestDurationValue? endedRestDurationValue = null,
+      ChangedBeginDisplayNumberValue? changedBeginDisplayNumber = null,
+      ChangedEndDisplayNumberValue? changedEndDisplayNumber = null}) {
     return _PillSheetModifiedHistoryValue(
       beginTrialDate: beginTrialDate,
       createdPillSheet: createdPillSheet,
@@ -46,6 +48,8 @@ class _$PillSheetModifiedHistoryValueTearOff {
       endedPillSheet: endedPillSheet,
       beganRestDurationValue: beganRestDurationValue,
       endedRestDurationValue: endedRestDurationValue,
+      changedBeginDisplayNumber: changedBeginDisplayNumber,
+      changedEndDisplayNumber: changedEndDisplayNumber,
     );
   }
 
@@ -77,6 +81,10 @@ mixin _$PillSheetModifiedHistoryValue {
       throw _privateConstructorUsedError;
   EndedRestDurationValue? get endedRestDurationValue =>
       throw _privateConstructorUsedError;
+  ChangedBeginDisplayNumberValue? get changedBeginDisplayNumber =>
+      throw _privateConstructorUsedError;
+  ChangedEndDisplayNumberValue? get changedEndDisplayNumber =>
+      throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
@@ -101,7 +109,9 @@ abstract class $PillSheetModifiedHistoryValueCopyWith<$Res> {
       ChangedPillNumberValue? changedPillNumber,
       EndedPillSheetValue? endedPillSheet,
       BeganRestDurationValue? beganRestDurationValue,
-      EndedRestDurationValue? endedRestDurationValue});
+      EndedRestDurationValue? endedRestDurationValue,
+      ChangedBeginDisplayNumberValue? changedBeginDisplayNumber,
+      ChangedEndDisplayNumberValue? changedEndDisplayNumber});
 
   $CreatedPillSheetValueCopyWith<$Res>? get createdPillSheet;
   $AutomaticallyRecordedLastTakenDateValueCopyWith<$Res>?
@@ -113,6 +123,8 @@ abstract class $PillSheetModifiedHistoryValueCopyWith<$Res> {
   $EndedPillSheetValueCopyWith<$Res>? get endedPillSheet;
   $BeganRestDurationValueCopyWith<$Res>? get beganRestDurationValue;
   $EndedRestDurationValueCopyWith<$Res>? get endedRestDurationValue;
+  $ChangedBeginDisplayNumberValueCopyWith<$Res>? get changedBeginDisplayNumber;
+  $ChangedEndDisplayNumberValueCopyWith<$Res>? get changedEndDisplayNumber;
 }
 
 /// @nodoc
@@ -136,6 +148,8 @@ class _$PillSheetModifiedHistoryValueCopyWithImpl<$Res>
     Object? endedPillSheet = freezed,
     Object? beganRestDurationValue = freezed,
     Object? endedRestDurationValue = freezed,
+    Object? changedBeginDisplayNumber = freezed,
+    Object? changedEndDisplayNumber = freezed,
   }) {
     return _then(_value.copyWith(
       beginTrialDate: beginTrialDate == freezed
@@ -179,6 +193,14 @@ class _$PillSheetModifiedHistoryValueCopyWithImpl<$Res>
           ? _value.endedRestDurationValue
           : endedRestDurationValue // ignore: cast_nullable_to_non_nullable
               as EndedRestDurationValue?,
+      changedBeginDisplayNumber: changedBeginDisplayNumber == freezed
+          ? _value.changedBeginDisplayNumber
+          : changedBeginDisplayNumber // ignore: cast_nullable_to_non_nullable
+              as ChangedBeginDisplayNumberValue?,
+      changedEndDisplayNumber: changedEndDisplayNumber == freezed
+          ? _value.changedEndDisplayNumber
+          : changedEndDisplayNumber // ignore: cast_nullable_to_non_nullable
+              as ChangedEndDisplayNumberValue?,
     ));
   }
 
@@ -288,6 +310,30 @@ class _$PillSheetModifiedHistoryValueCopyWithImpl<$Res>
       return _then(_value.copyWith(endedRestDurationValue: value));
     });
   }
+
+  @override
+  $ChangedBeginDisplayNumberValueCopyWith<$Res>? get changedBeginDisplayNumber {
+    if (_value.changedBeginDisplayNumber == null) {
+      return null;
+    }
+
+    return $ChangedBeginDisplayNumberValueCopyWith<$Res>(
+        _value.changedBeginDisplayNumber!, (value) {
+      return _then(_value.copyWith(changedBeginDisplayNumber: value));
+    });
+  }
+
+  @override
+  $ChangedEndDisplayNumberValueCopyWith<$Res>? get changedEndDisplayNumber {
+    if (_value.changedEndDisplayNumber == null) {
+      return null;
+    }
+
+    return $ChangedEndDisplayNumberValueCopyWith<$Res>(
+        _value.changedEndDisplayNumber!, (value) {
+      return _then(_value.copyWith(changedEndDisplayNumber: value));
+    });
+  }
 }
 
 /// @nodoc
@@ -309,7 +355,9 @@ abstract class _$PillSheetModifiedHistoryValueCopyWith<$Res>
       ChangedPillNumberValue? changedPillNumber,
       EndedPillSheetValue? endedPillSheet,
       BeganRestDurationValue? beganRestDurationValue,
-      EndedRestDurationValue? endedRestDurationValue});
+      EndedRestDurationValue? endedRestDurationValue,
+      ChangedBeginDisplayNumberValue? changedBeginDisplayNumber,
+      ChangedEndDisplayNumberValue? changedEndDisplayNumber});
 
   @override
   $CreatedPillSheetValueCopyWith<$Res>? get createdPillSheet;
@@ -330,6 +378,10 @@ abstract class _$PillSheetModifiedHistoryValueCopyWith<$Res>
   $BeganRestDurationValueCopyWith<$Res>? get beganRestDurationValue;
   @override
   $EndedRestDurationValueCopyWith<$Res>? get endedRestDurationValue;
+  @override
+  $ChangedBeginDisplayNumberValueCopyWith<$Res>? get changedBeginDisplayNumber;
+  @override
+  $ChangedEndDisplayNumberValueCopyWith<$Res>? get changedEndDisplayNumber;
 }
 
 /// @nodoc
@@ -357,6 +409,8 @@ class __$PillSheetModifiedHistoryValueCopyWithImpl<$Res>
     Object? endedPillSheet = freezed,
     Object? beganRestDurationValue = freezed,
     Object? endedRestDurationValue = freezed,
+    Object? changedBeginDisplayNumber = freezed,
+    Object? changedEndDisplayNumber = freezed,
   }) {
     return _then(_PillSheetModifiedHistoryValue(
       beginTrialDate: beginTrialDate == freezed
@@ -400,6 +454,14 @@ class __$PillSheetModifiedHistoryValueCopyWithImpl<$Res>
           ? _value.endedRestDurationValue
           : endedRestDurationValue // ignore: cast_nullable_to_non_nullable
               as EndedRestDurationValue?,
+      changedBeginDisplayNumber: changedBeginDisplayNumber == freezed
+          ? _value.changedBeginDisplayNumber
+          : changedBeginDisplayNumber // ignore: cast_nullable_to_non_nullable
+              as ChangedBeginDisplayNumberValue?,
+      changedEndDisplayNumber: changedEndDisplayNumber == freezed
+          ? _value.changedEndDisplayNumber
+          : changedEndDisplayNumber // ignore: cast_nullable_to_non_nullable
+              as ChangedEndDisplayNumberValue?,
     ));
   }
 }
@@ -418,7 +480,9 @@ class _$_PillSheetModifiedHistoryValue extends _PillSheetModifiedHistoryValue {
       this.changedPillNumber = null,
       this.endedPillSheet = null,
       this.beganRestDurationValue = null,
-      this.endedRestDurationValue = null})
+      this.endedRestDurationValue = null,
+      this.changedBeginDisplayNumber = null,
+      this.changedEndDisplayNumber = null})
       : super._();
 
   factory _$_PillSheetModifiedHistoryValue.fromJson(
@@ -455,10 +519,16 @@ class _$_PillSheetModifiedHistoryValue extends _PillSheetModifiedHistoryValue {
   @JsonKey()
   @override
   final EndedRestDurationValue? endedRestDurationValue;
+  @JsonKey()
+  @override
+  final ChangedBeginDisplayNumberValue? changedBeginDisplayNumber;
+  @JsonKey()
+  @override
+  final ChangedEndDisplayNumberValue? changedEndDisplayNumber;
 
   @override
   String toString() {
-    return 'PillSheetModifiedHistoryValue(beginTrialDate: $beginTrialDate, createdPillSheet: $createdPillSheet, automaticallyRecordedLastTakenDate: $automaticallyRecordedLastTakenDate, deletedPillSheet: $deletedPillSheet, takenPill: $takenPill, revertTakenPill: $revertTakenPill, changedPillNumber: $changedPillNumber, endedPillSheet: $endedPillSheet, beganRestDurationValue: $beganRestDurationValue, endedRestDurationValue: $endedRestDurationValue)';
+    return 'PillSheetModifiedHistoryValue(beginTrialDate: $beginTrialDate, createdPillSheet: $createdPillSheet, automaticallyRecordedLastTakenDate: $automaticallyRecordedLastTakenDate, deletedPillSheet: $deletedPillSheet, takenPill: $takenPill, revertTakenPill: $revertTakenPill, changedPillNumber: $changedPillNumber, endedPillSheet: $endedPillSheet, beganRestDurationValue: $beganRestDurationValue, endedRestDurationValue: $endedRestDurationValue, changedBeginDisplayNumber: $changedBeginDisplayNumber, changedEndDisplayNumber: $changedEndDisplayNumber)';
   }
 
   @override
@@ -485,7 +555,11 @@ class _$_PillSheetModifiedHistoryValue extends _PillSheetModifiedHistoryValue {
             const DeepCollectionEquality()
                 .equals(other.beganRestDurationValue, beganRestDurationValue) &&
             const DeepCollectionEquality()
-                .equals(other.endedRestDurationValue, endedRestDurationValue));
+                .equals(other.endedRestDurationValue, endedRestDurationValue) &&
+            const DeepCollectionEquality().equals(
+                other.changedBeginDisplayNumber, changedBeginDisplayNumber) &&
+            const DeepCollectionEquality().equals(
+                other.changedEndDisplayNumber, changedEndDisplayNumber));
   }
 
   @override
@@ -500,7 +574,9 @@ class _$_PillSheetModifiedHistoryValue extends _PillSheetModifiedHistoryValue {
       const DeepCollectionEquality().hash(changedPillNumber),
       const DeepCollectionEquality().hash(endedPillSheet),
       const DeepCollectionEquality().hash(beganRestDurationValue),
-      const DeepCollectionEquality().hash(endedRestDurationValue));
+      const DeepCollectionEquality().hash(endedRestDurationValue),
+      const DeepCollectionEquality().hash(changedBeginDisplayNumber),
+      const DeepCollectionEquality().hash(changedEndDisplayNumber));
 
   @JsonKey(ignore: true)
   @override
@@ -527,7 +603,9 @@ abstract class _PillSheetModifiedHistoryValue
           ChangedPillNumberValue? changedPillNumber,
           EndedPillSheetValue? endedPillSheet,
           BeganRestDurationValue? beganRestDurationValue,
-          EndedRestDurationValue? endedRestDurationValue}) =
+          EndedRestDurationValue? endedRestDurationValue,
+          ChangedBeginDisplayNumberValue? changedBeginDisplayNumber,
+          ChangedEndDisplayNumberValue? changedEndDisplayNumber}) =
       _$_PillSheetModifiedHistoryValue;
   const _PillSheetModifiedHistoryValue._() : super._();
 
@@ -555,6 +633,10 @@ abstract class _PillSheetModifiedHistoryValue
   BeganRestDurationValue? get beganRestDurationValue;
   @override
   EndedRestDurationValue? get endedRestDurationValue;
+  @override
+  ChangedBeginDisplayNumberValue? get changedBeginDisplayNumber;
+  @override
+  ChangedEndDisplayNumberValue? get changedEndDisplayNumber;
   @override
   @JsonKey(ignore: true)
   _$PillSheetModifiedHistoryValueCopyWith<_PillSheetModifiedHistoryValue>
@@ -2925,4 +3007,449 @@ abstract class _EndedRestDurationValue extends EndedRestDurationValue {
   @JsonKey(ignore: true)
   _$EndedRestDurationValueCopyWith<_EndedRestDurationValue> get copyWith =>
       throw _privateConstructorUsedError;
+}
+
+ChangedBeginDisplayNumberValue _$ChangedBeginDisplayNumberValueFromJson(
+    Map<String, dynamic> json) {
+  return _ChangedBeginDisplayNumberValue.fromJson(json);
+}
+
+/// @nodoc
+class _$ChangedBeginDisplayNumberValueTearOff {
+  const _$ChangedBeginDisplayNumberValueTearOff();
+
+  _ChangedBeginDisplayNumberValue call(
+      {required DisplayNumberSetting? beforeDisplayNumberSetting,
+      required DisplayNumberSetting afterDisplayNumberSetting}) {
+    return _ChangedBeginDisplayNumberValue(
+      beforeDisplayNumberSetting: beforeDisplayNumberSetting,
+      afterDisplayNumberSetting: afterDisplayNumberSetting,
+    );
+  }
+
+  ChangedBeginDisplayNumberValue fromJson(Map<String, Object?> json) {
+    return ChangedBeginDisplayNumberValue.fromJson(json);
+  }
+}
+
+/// @nodoc
+const $ChangedBeginDisplayNumberValue =
+    _$ChangedBeginDisplayNumberValueTearOff();
+
+/// @nodoc
+mixin _$ChangedBeginDisplayNumberValue {
+  DisplayNumberSetting? get beforeDisplayNumberSetting =>
+      throw _privateConstructorUsedError;
+  DisplayNumberSetting get afterDisplayNumberSetting =>
+      throw _privateConstructorUsedError;
+
+  Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
+  @JsonKey(ignore: true)
+  $ChangedBeginDisplayNumberValueCopyWith<ChangedBeginDisplayNumberValue>
+      get copyWith => throw _privateConstructorUsedError;
+}
+
+/// @nodoc
+abstract class $ChangedBeginDisplayNumberValueCopyWith<$Res> {
+  factory $ChangedBeginDisplayNumberValueCopyWith(
+          ChangedBeginDisplayNumberValue value,
+          $Res Function(ChangedBeginDisplayNumberValue) then) =
+      _$ChangedBeginDisplayNumberValueCopyWithImpl<$Res>;
+  $Res call(
+      {DisplayNumberSetting? beforeDisplayNumberSetting,
+      DisplayNumberSetting afterDisplayNumberSetting});
+
+  $DisplayNumberSettingCopyWith<$Res>? get beforeDisplayNumberSetting;
+  $DisplayNumberSettingCopyWith<$Res> get afterDisplayNumberSetting;
+}
+
+/// @nodoc
+class _$ChangedBeginDisplayNumberValueCopyWithImpl<$Res>
+    implements $ChangedBeginDisplayNumberValueCopyWith<$Res> {
+  _$ChangedBeginDisplayNumberValueCopyWithImpl(this._value, this._then);
+
+  final ChangedBeginDisplayNumberValue _value;
+  // ignore: unused_field
+  final $Res Function(ChangedBeginDisplayNumberValue) _then;
+
+  @override
+  $Res call({
+    Object? beforeDisplayNumberSetting = freezed,
+    Object? afterDisplayNumberSetting = freezed,
+  }) {
+    return _then(_value.copyWith(
+      beforeDisplayNumberSetting: beforeDisplayNumberSetting == freezed
+          ? _value.beforeDisplayNumberSetting
+          : beforeDisplayNumberSetting // ignore: cast_nullable_to_non_nullable
+              as DisplayNumberSetting?,
+      afterDisplayNumberSetting: afterDisplayNumberSetting == freezed
+          ? _value.afterDisplayNumberSetting
+          : afterDisplayNumberSetting // ignore: cast_nullable_to_non_nullable
+              as DisplayNumberSetting,
+    ));
+  }
+
+  @override
+  $DisplayNumberSettingCopyWith<$Res>? get beforeDisplayNumberSetting {
+    if (_value.beforeDisplayNumberSetting == null) {
+      return null;
+    }
+
+    return $DisplayNumberSettingCopyWith<$Res>(
+        _value.beforeDisplayNumberSetting!, (value) {
+      return _then(_value.copyWith(beforeDisplayNumberSetting: value));
+    });
+  }
+
+  @override
+  $DisplayNumberSettingCopyWith<$Res> get afterDisplayNumberSetting {
+    return $DisplayNumberSettingCopyWith<$Res>(_value.afterDisplayNumberSetting,
+        (value) {
+      return _then(_value.copyWith(afterDisplayNumberSetting: value));
+    });
+  }
+}
+
+/// @nodoc
+abstract class _$ChangedBeginDisplayNumberValueCopyWith<$Res>
+    implements $ChangedBeginDisplayNumberValueCopyWith<$Res> {
+  factory _$ChangedBeginDisplayNumberValueCopyWith(
+          _ChangedBeginDisplayNumberValue value,
+          $Res Function(_ChangedBeginDisplayNumberValue) then) =
+      __$ChangedBeginDisplayNumberValueCopyWithImpl<$Res>;
+  @override
+  $Res call(
+      {DisplayNumberSetting? beforeDisplayNumberSetting,
+      DisplayNumberSetting afterDisplayNumberSetting});
+
+  @override
+  $DisplayNumberSettingCopyWith<$Res>? get beforeDisplayNumberSetting;
+  @override
+  $DisplayNumberSettingCopyWith<$Res> get afterDisplayNumberSetting;
+}
+
+/// @nodoc
+class __$ChangedBeginDisplayNumberValueCopyWithImpl<$Res>
+    extends _$ChangedBeginDisplayNumberValueCopyWithImpl<$Res>
+    implements _$ChangedBeginDisplayNumberValueCopyWith<$Res> {
+  __$ChangedBeginDisplayNumberValueCopyWithImpl(
+      _ChangedBeginDisplayNumberValue _value,
+      $Res Function(_ChangedBeginDisplayNumberValue) _then)
+      : super(_value, (v) => _then(v as _ChangedBeginDisplayNumberValue));
+
+  @override
+  _ChangedBeginDisplayNumberValue get _value =>
+      super._value as _ChangedBeginDisplayNumberValue;
+
+  @override
+  $Res call({
+    Object? beforeDisplayNumberSetting = freezed,
+    Object? afterDisplayNumberSetting = freezed,
+  }) {
+    return _then(_ChangedBeginDisplayNumberValue(
+      beforeDisplayNumberSetting: beforeDisplayNumberSetting == freezed
+          ? _value.beforeDisplayNumberSetting
+          : beforeDisplayNumberSetting // ignore: cast_nullable_to_non_nullable
+              as DisplayNumberSetting?,
+      afterDisplayNumberSetting: afterDisplayNumberSetting == freezed
+          ? _value.afterDisplayNumberSetting
+          : afterDisplayNumberSetting // ignore: cast_nullable_to_non_nullable
+              as DisplayNumberSetting,
+    ));
+  }
+}
+
+/// @nodoc
+
+@JsonSerializable(explicitToJson: true)
+class _$_ChangedBeginDisplayNumberValue
+    extends _ChangedBeginDisplayNumberValue {
+  const _$_ChangedBeginDisplayNumberValue(
+      {required this.beforeDisplayNumberSetting,
+      required this.afterDisplayNumberSetting})
+      : super._();
+
+  factory _$_ChangedBeginDisplayNumberValue.fromJson(
+          Map<String, dynamic> json) =>
+      _$$_ChangedBeginDisplayNumberValueFromJson(json);
+
+  @override
+  final DisplayNumberSetting? beforeDisplayNumberSetting;
+  @override
+  final DisplayNumberSetting afterDisplayNumberSetting;
+
+  @override
+  String toString() {
+    return 'ChangedBeginDisplayNumberValue(beforeDisplayNumberSetting: $beforeDisplayNumberSetting, afterDisplayNumberSetting: $afterDisplayNumberSetting)';
+  }
+
+  @override
+  bool operator ==(dynamic other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _ChangedBeginDisplayNumberValue &&
+            const DeepCollectionEquality().equals(
+                other.beforeDisplayNumberSetting, beforeDisplayNumberSetting) &&
+            const DeepCollectionEquality().equals(
+                other.afterDisplayNumberSetting, afterDisplayNumberSetting));
+  }
+
+  @override
+  int get hashCode => Object.hash(
+      runtimeType,
+      const DeepCollectionEquality().hash(beforeDisplayNumberSetting),
+      const DeepCollectionEquality().hash(afterDisplayNumberSetting));
+
+  @JsonKey(ignore: true)
+  @override
+  _$ChangedBeginDisplayNumberValueCopyWith<_ChangedBeginDisplayNumberValue>
+      get copyWith => __$ChangedBeginDisplayNumberValueCopyWithImpl<
+          _ChangedBeginDisplayNumberValue>(this, _$identity);
+
+  @override
+  Map<String, dynamic> toJson() {
+    return _$$_ChangedBeginDisplayNumberValueToJson(this);
+  }
+}
+
+abstract class _ChangedBeginDisplayNumberValue
+    extends ChangedBeginDisplayNumberValue {
+  const factory _ChangedBeginDisplayNumberValue(
+          {required DisplayNumberSetting? beforeDisplayNumberSetting,
+          required DisplayNumberSetting afterDisplayNumberSetting}) =
+      _$_ChangedBeginDisplayNumberValue;
+  const _ChangedBeginDisplayNumberValue._() : super._();
+
+  factory _ChangedBeginDisplayNumberValue.fromJson(Map<String, dynamic> json) =
+      _$_ChangedBeginDisplayNumberValue.fromJson;
+
+  @override
+  DisplayNumberSetting? get beforeDisplayNumberSetting;
+  @override
+  DisplayNumberSetting get afterDisplayNumberSetting;
+  @override
+  @JsonKey(ignore: true)
+  _$ChangedBeginDisplayNumberValueCopyWith<_ChangedBeginDisplayNumberValue>
+      get copyWith => throw _privateConstructorUsedError;
+}
+
+ChangedEndDisplayNumberValue _$ChangedEndDisplayNumberValueFromJson(
+    Map<String, dynamic> json) {
+  return _ChangedEndDisplayNumberValue.fromJson(json);
+}
+
+/// @nodoc
+class _$ChangedEndDisplayNumberValueTearOff {
+  const _$ChangedEndDisplayNumberValueTearOff();
+
+  _ChangedEndDisplayNumberValue call(
+      {required DisplayNumberSetting? beforeDisplayNumberSetting,
+      required DisplayNumberSetting afterDisplayNumberSetting}) {
+    return _ChangedEndDisplayNumberValue(
+      beforeDisplayNumberSetting: beforeDisplayNumberSetting,
+      afterDisplayNumberSetting: afterDisplayNumberSetting,
+    );
+  }
+
+  ChangedEndDisplayNumberValue fromJson(Map<String, Object?> json) {
+    return ChangedEndDisplayNumberValue.fromJson(json);
+  }
+}
+
+/// @nodoc
+const $ChangedEndDisplayNumberValue = _$ChangedEndDisplayNumberValueTearOff();
+
+/// @nodoc
+mixin _$ChangedEndDisplayNumberValue {
+  DisplayNumberSetting? get beforeDisplayNumberSetting =>
+      throw _privateConstructorUsedError;
+  DisplayNumberSetting get afterDisplayNumberSetting =>
+      throw _privateConstructorUsedError;
+
+  Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
+  @JsonKey(ignore: true)
+  $ChangedEndDisplayNumberValueCopyWith<ChangedEndDisplayNumberValue>
+      get copyWith => throw _privateConstructorUsedError;
+}
+
+/// @nodoc
+abstract class $ChangedEndDisplayNumberValueCopyWith<$Res> {
+  factory $ChangedEndDisplayNumberValueCopyWith(
+          ChangedEndDisplayNumberValue value,
+          $Res Function(ChangedEndDisplayNumberValue) then) =
+      _$ChangedEndDisplayNumberValueCopyWithImpl<$Res>;
+  $Res call(
+      {DisplayNumberSetting? beforeDisplayNumberSetting,
+      DisplayNumberSetting afterDisplayNumberSetting});
+
+  $DisplayNumberSettingCopyWith<$Res>? get beforeDisplayNumberSetting;
+  $DisplayNumberSettingCopyWith<$Res> get afterDisplayNumberSetting;
+}
+
+/// @nodoc
+class _$ChangedEndDisplayNumberValueCopyWithImpl<$Res>
+    implements $ChangedEndDisplayNumberValueCopyWith<$Res> {
+  _$ChangedEndDisplayNumberValueCopyWithImpl(this._value, this._then);
+
+  final ChangedEndDisplayNumberValue _value;
+  // ignore: unused_field
+  final $Res Function(ChangedEndDisplayNumberValue) _then;
+
+  @override
+  $Res call({
+    Object? beforeDisplayNumberSetting = freezed,
+    Object? afterDisplayNumberSetting = freezed,
+  }) {
+    return _then(_value.copyWith(
+      beforeDisplayNumberSetting: beforeDisplayNumberSetting == freezed
+          ? _value.beforeDisplayNumberSetting
+          : beforeDisplayNumberSetting // ignore: cast_nullable_to_non_nullable
+              as DisplayNumberSetting?,
+      afterDisplayNumberSetting: afterDisplayNumberSetting == freezed
+          ? _value.afterDisplayNumberSetting
+          : afterDisplayNumberSetting // ignore: cast_nullable_to_non_nullable
+              as DisplayNumberSetting,
+    ));
+  }
+
+  @override
+  $DisplayNumberSettingCopyWith<$Res>? get beforeDisplayNumberSetting {
+    if (_value.beforeDisplayNumberSetting == null) {
+      return null;
+    }
+
+    return $DisplayNumberSettingCopyWith<$Res>(
+        _value.beforeDisplayNumberSetting!, (value) {
+      return _then(_value.copyWith(beforeDisplayNumberSetting: value));
+    });
+  }
+
+  @override
+  $DisplayNumberSettingCopyWith<$Res> get afterDisplayNumberSetting {
+    return $DisplayNumberSettingCopyWith<$Res>(_value.afterDisplayNumberSetting,
+        (value) {
+      return _then(_value.copyWith(afterDisplayNumberSetting: value));
+    });
+  }
+}
+
+/// @nodoc
+abstract class _$ChangedEndDisplayNumberValueCopyWith<$Res>
+    implements $ChangedEndDisplayNumberValueCopyWith<$Res> {
+  factory _$ChangedEndDisplayNumberValueCopyWith(
+          _ChangedEndDisplayNumberValue value,
+          $Res Function(_ChangedEndDisplayNumberValue) then) =
+      __$ChangedEndDisplayNumberValueCopyWithImpl<$Res>;
+  @override
+  $Res call(
+      {DisplayNumberSetting? beforeDisplayNumberSetting,
+      DisplayNumberSetting afterDisplayNumberSetting});
+
+  @override
+  $DisplayNumberSettingCopyWith<$Res>? get beforeDisplayNumberSetting;
+  @override
+  $DisplayNumberSettingCopyWith<$Res> get afterDisplayNumberSetting;
+}
+
+/// @nodoc
+class __$ChangedEndDisplayNumberValueCopyWithImpl<$Res>
+    extends _$ChangedEndDisplayNumberValueCopyWithImpl<$Res>
+    implements _$ChangedEndDisplayNumberValueCopyWith<$Res> {
+  __$ChangedEndDisplayNumberValueCopyWithImpl(
+      _ChangedEndDisplayNumberValue _value,
+      $Res Function(_ChangedEndDisplayNumberValue) _then)
+      : super(_value, (v) => _then(v as _ChangedEndDisplayNumberValue));
+
+  @override
+  _ChangedEndDisplayNumberValue get _value =>
+      super._value as _ChangedEndDisplayNumberValue;
+
+  @override
+  $Res call({
+    Object? beforeDisplayNumberSetting = freezed,
+    Object? afterDisplayNumberSetting = freezed,
+  }) {
+    return _then(_ChangedEndDisplayNumberValue(
+      beforeDisplayNumberSetting: beforeDisplayNumberSetting == freezed
+          ? _value.beforeDisplayNumberSetting
+          : beforeDisplayNumberSetting // ignore: cast_nullable_to_non_nullable
+              as DisplayNumberSetting?,
+      afterDisplayNumberSetting: afterDisplayNumberSetting == freezed
+          ? _value.afterDisplayNumberSetting
+          : afterDisplayNumberSetting // ignore: cast_nullable_to_non_nullable
+              as DisplayNumberSetting,
+    ));
+  }
+}
+
+/// @nodoc
+
+@JsonSerializable(explicitToJson: true)
+class _$_ChangedEndDisplayNumberValue extends _ChangedEndDisplayNumberValue {
+  const _$_ChangedEndDisplayNumberValue(
+      {required this.beforeDisplayNumberSetting,
+      required this.afterDisplayNumberSetting})
+      : super._();
+
+  factory _$_ChangedEndDisplayNumberValue.fromJson(Map<String, dynamic> json) =>
+      _$$_ChangedEndDisplayNumberValueFromJson(json);
+
+  @override
+  final DisplayNumberSetting? beforeDisplayNumberSetting;
+  @override
+  final DisplayNumberSetting afterDisplayNumberSetting;
+
+  @override
+  String toString() {
+    return 'ChangedEndDisplayNumberValue(beforeDisplayNumberSetting: $beforeDisplayNumberSetting, afterDisplayNumberSetting: $afterDisplayNumberSetting)';
+  }
+
+  @override
+  bool operator ==(dynamic other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _ChangedEndDisplayNumberValue &&
+            const DeepCollectionEquality().equals(
+                other.beforeDisplayNumberSetting, beforeDisplayNumberSetting) &&
+            const DeepCollectionEquality().equals(
+                other.afterDisplayNumberSetting, afterDisplayNumberSetting));
+  }
+
+  @override
+  int get hashCode => Object.hash(
+      runtimeType,
+      const DeepCollectionEquality().hash(beforeDisplayNumberSetting),
+      const DeepCollectionEquality().hash(afterDisplayNumberSetting));
+
+  @JsonKey(ignore: true)
+  @override
+  _$ChangedEndDisplayNumberValueCopyWith<_ChangedEndDisplayNumberValue>
+      get copyWith => __$ChangedEndDisplayNumberValueCopyWithImpl<
+          _ChangedEndDisplayNumberValue>(this, _$identity);
+
+  @override
+  Map<String, dynamic> toJson() {
+    return _$$_ChangedEndDisplayNumberValueToJson(this);
+  }
+}
+
+abstract class _ChangedEndDisplayNumberValue
+    extends ChangedEndDisplayNumberValue {
+  const factory _ChangedEndDisplayNumberValue(
+          {required DisplayNumberSetting? beforeDisplayNumberSetting,
+          required DisplayNumberSetting afterDisplayNumberSetting}) =
+      _$_ChangedEndDisplayNumberValue;
+  const _ChangedEndDisplayNumberValue._() : super._();
+
+  factory _ChangedEndDisplayNumberValue.fromJson(Map<String, dynamic> json) =
+      _$_ChangedEndDisplayNumberValue.fromJson;
+
+  @override
+  DisplayNumberSetting? get beforeDisplayNumberSetting;
+  @override
+  DisplayNumberSetting get afterDisplayNumberSetting;
+  @override
+  @JsonKey(ignore: true)
+  _$ChangedEndDisplayNumberValueCopyWith<_ChangedEndDisplayNumberValue>
+      get copyWith => throw _privateConstructorUsedError;
 }

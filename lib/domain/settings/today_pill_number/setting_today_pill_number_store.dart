@@ -117,7 +117,7 @@ class SettingTodayPillNumberStateStore
     );
     _pillSheetModifiedHistoryService.add(batch, history);
 
-    _pillSheetGroupService.update(
+    _pillSheetGroupService.updateWithBatch(
         batch, pillSheetGroup.copyWith(pillSheets: updatedPillSheets));
 
     await batch.commit();

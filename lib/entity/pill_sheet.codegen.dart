@@ -211,8 +211,6 @@ int summarizedRestDuration({
 
     final endDate = e.endDate;
     if (endDate == null) {
-      // 実質upperDate == todayの場合にのみここを通る。本来であれば別の関数にした方が良いかも
-      assert(isSameDay(today(), upperDate));
       return daysBetween(e.beginDate, upperDate);
     }
 
@@ -236,13 +234,9 @@ int summarizedPillCountWithPillSheetsToEndIndex(
     return 0;
   }
 
-  final sublist = pillSheets.sublist(0, endIndex);
-  final passedTotalCount = sublist
-      .map((e) => e.typeInfo.totalCount)
-      .reduce((value, element) => value + element);
-  final restDurationCount = sublist
-      .map((e) => summarizedRestDuration(
-          restDurations: e.restDurations, upperDate: e.estimatedLastTakenDate))
-      .reduce((value, element) => value + element);
-  return passedTotalCount + restDurationCount;
+  return pillSheets.sublist(0, endIndex).fold(0, (int result, pillSheet) {
+    return result +
+        daysBetween(pillSheet.beginingDate, pillSheet.estimatedLastTakenDate) +
+        1;
+  });
 }

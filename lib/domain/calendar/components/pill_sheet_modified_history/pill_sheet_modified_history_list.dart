@@ -2,9 +2,11 @@ import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:pilll/domain/calendar/components/pill_sheet_modified_history/components/rows/pill_sheet_modified_history_automatically_recorded_last_taken_date_action.dart';
 import 'package:pilll/domain/calendar/components/pill_sheet_modified_history/components/rows/pill_sheet_modified_history_began_rest_duration.dart';
+import 'package:pilll/domain/calendar/components/pill_sheet_modified_history/components/rows/pill_sheet_modified_history_begin_display_number_action.dart';
 import 'package:pilll/domain/calendar/components/pill_sheet_modified_history/components/rows/pill_sheet_modified_history_changed_pill_number_action.dart';
 import 'package:pilll/domain/calendar/components/pill_sheet_modified_history/components/rows/pill_sheet_modified_history_created_pill_sheet_action.dart';
 import 'package:pilll/domain/calendar/components/pill_sheet_modified_history/components/rows/pill_sheet_modified_history_deleted_pill_sheet_action.dart';
+import 'package:pilll/domain/calendar/components/pill_sheet_modified_history/components/rows/pill_sheet_modified_history_end_display_number_action.dart';
 import 'package:pilll/domain/calendar/components/pill_sheet_modified_history/components/rows/pill_sheet_modified_history_ended_rest_duration.dart';
 import 'package:pilll/domain/calendar/components/pill_sheet_modified_history/components/rows/pill_sheet_modified_history_ended_pill_sheet_action.dart';
 import 'package:pilll/domain/calendar/components/pill_sheet_modified_history/components/pill_sheet_modified_history_monthly_header.dart';
@@ -147,6 +149,18 @@ class PillSheetModifiedHistoryList extends StatelessWidget {
                     estimatedEventCausingDate:
                         history.estimatedEventCausingDate,
                     value: history.value.endedRestDurationValue,
+                  );
+                case PillSheetModifiedActionType.changedBeginDisplayNumber:
+                  return PillSheetModifiedHistoryChangedBeginDisplayNumberAction(
+                    estimatedEventCausingDate:
+                        history.estimatedEventCausingDate,
+                    value: history.value.changedBeginDisplayNumber,
+                  );
+                case PillSheetModifiedActionType.changedEndDisplayNumber:
+                  return PillSheetModifiedHistoryChangedEndDisplayNumberAction(
+                    estimatedEventCausingDate:
+                        history.estimatedEventCausingDate,
+                    value: history.value.changedEndDisplayNumber,
                   );
               }
             };

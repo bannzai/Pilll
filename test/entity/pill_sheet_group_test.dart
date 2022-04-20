@@ -246,6 +246,120 @@ void main() {
         );
         expect(pillSheetGroup.sequentialTodayPillNumber, 29);
       });
+      test("with begin display number setting", () {
+        final mockTodayRepository = MockTodayService();
+        todayRepository = mockTodayRepository;
+        when(mockTodayRepository.now())
+            .thenReturn(DateTime.parse("2022-03-29"));
+
+        final sheetType = PillSheetType.pillsheet_21;
+        final pillSheet1 = PillSheet(
+          beginingDate: DateTime.parse("2022-03-01"),
+          lastTakenDate: DateTime.parse("2020-03-28"),
+          groupIndex: 0,
+          typeInfo: PillSheetTypeInfo(
+            dosingPeriod: sheetType.dosingPeriod,
+            name: sheetType.fullName,
+            totalCount: sheetType.totalCount,
+            pillSheetTypeReferencePath: sheetType.rawPath,
+          ),
+        );
+        final pillSheet2 = PillSheet(
+          beginingDate: DateTime.parse("2022-03-29"),
+          lastTakenDate: null,
+          groupIndex: 1,
+          typeInfo: PillSheetTypeInfo(
+            dosingPeriod: sheetType.dosingPeriod,
+            name: sheetType.fullName,
+            totalCount: sheetType.totalCount,
+            pillSheetTypeReferencePath: sheetType.rawPath,
+          ),
+        );
+        // created at and id are anything value
+        final pillSheetGroup = PillSheetGroup(
+          pillSheetIDs: ["sheet_id", "sheet_id2"],
+          pillSheets: [pillSheet1, pillSheet2],
+          createdAt: DateTime.now(),
+          displayNumberSetting: const DisplayNumberSetting(beginPillNumber: 2),
+        );
+        expect(pillSheetGroup.sequentialTodayPillNumber, 30);
+      });
+      test("with end display number setting", () {
+        final mockTodayRepository = MockTodayService();
+        todayRepository = mockTodayRepository;
+        when(mockTodayRepository.now())
+            .thenReturn(DateTime.parse("2022-03-29"));
+
+        final sheetType = PillSheetType.pillsheet_21;
+        final pillSheet1 = PillSheet(
+          beginingDate: DateTime.parse("2022-03-01"),
+          lastTakenDate: DateTime.parse("2020-03-28"),
+          groupIndex: 0,
+          typeInfo: PillSheetTypeInfo(
+            dosingPeriod: sheetType.dosingPeriod,
+            name: sheetType.fullName,
+            totalCount: sheetType.totalCount,
+            pillSheetTypeReferencePath: sheetType.rawPath,
+          ),
+        );
+        final pillSheet2 = PillSheet(
+          beginingDate: DateTime.parse("2022-03-29"),
+          lastTakenDate: null,
+          groupIndex: 1,
+          typeInfo: PillSheetTypeInfo(
+            dosingPeriod: sheetType.dosingPeriod,
+            name: sheetType.fullName,
+            totalCount: sheetType.totalCount,
+            pillSheetTypeReferencePath: sheetType.rawPath,
+          ),
+        );
+        // created at and id are anything value
+        final pillSheetGroup = PillSheetGroup(
+          pillSheetIDs: ["sheet_id", "sheet_id2"],
+          pillSheets: [pillSheet1, pillSheet2],
+          createdAt: DateTime.now(),
+          displayNumberSetting: const DisplayNumberSetting(endPillNumber: 28),
+        );
+        expect(pillSheetGroup.sequentialTodayPillNumber, 1);
+      });
+      test("with begin and end display number setting", () {
+        final mockTodayRepository = MockTodayService();
+        todayRepository = mockTodayRepository;
+        when(mockTodayRepository.now())
+            .thenReturn(DateTime.parse("2022-03-29"));
+
+        final sheetType = PillSheetType.pillsheet_21;
+        final pillSheet1 = PillSheet(
+          beginingDate: DateTime.parse("2022-03-01"),
+          lastTakenDate: DateTime.parse("2020-03-28"),
+          groupIndex: 0,
+          typeInfo: PillSheetTypeInfo(
+            dosingPeriod: sheetType.dosingPeriod,
+            name: sheetType.fullName,
+            totalCount: sheetType.totalCount,
+            pillSheetTypeReferencePath: sheetType.rawPath,
+          ),
+        );
+        final pillSheet2 = PillSheet(
+          beginingDate: DateTime.parse("2022-03-29"),
+          lastTakenDate: null,
+          groupIndex: 1,
+          typeInfo: PillSheetTypeInfo(
+            dosingPeriod: sheetType.dosingPeriod,
+            name: sheetType.fullName,
+            totalCount: sheetType.totalCount,
+            pillSheetTypeReferencePath: sheetType.rawPath,
+          ),
+        );
+        // created at and id are anything value
+        final pillSheetGroup = PillSheetGroup(
+          pillSheetIDs: ["sheet_id", "sheet_id2"],
+          pillSheets: [pillSheet1, pillSheet2],
+          createdAt: DateTime.now(),
+          displayNumberSetting: const DisplayNumberSetting(beginPillNumber: 2, endPillNumber: 28),
+        );
+        expect(pillSheetGroup.sequentialTodayPillNumber, 2);
+      });
     });
   });
 
@@ -536,8 +650,7 @@ void main() {
           );
           expect(pillSheetGroup.sequentialLastTakenPillNumber, 29);
         });
-
-        test("first pill sheet has rest duration", () {
+        test("with begin display number setting", () {
           final mockTodayRepository = MockTodayService();
           todayRepository = mockTodayRepository;
           when(mockTodayRepository.now())
@@ -546,50 +659,8 @@ void main() {
           final sheetType = PillSheetType.pillsheet_21;
           final pillSheet1 = PillSheet(
             beginingDate: DateTime.parse("2022-03-01"),
-            lastTakenDate: DateTime.parse("2022-03-29"),
-            restDurations: [
-              RestDuration(
-                beginDate: DateTime.parse("2022-03-02"),
-                createdDate: DateTime.parse("2022-03-02"),
-                endDate: DateTime.parse("2022-03-03"),
-              ),
-            ],
-            typeInfo: PillSheetTypeInfo(
-              dosingPeriod: sheetType.dosingPeriod,
-              name: sheetType.fullName,
-              totalCount: sheetType.totalCount,
-              pillSheetTypeReferencePath: sheetType.rawPath,
-            ),
-          );
-          final pillSheet2 = PillSheet(
-            beginingDate: DateTime.parse("2022-03-30"),
-            lastTakenDate: DateTime.parse("2022-03-30"),
-            groupIndex: 1,
-            typeInfo: PillSheetTypeInfo(
-              dosingPeriod: sheetType.dosingPeriod,
-              name: sheetType.fullName,
-              totalCount: sheetType.totalCount,
-              pillSheetTypeReferencePath: sheetType.rawPath,
-            ),
-          );
-          // created at and id are anything value
-          final pillSheetGroup = PillSheetGroup(
-            pillSheetIDs: ["sheet_id", "sheet_id2"],
-            pillSheets: [pillSheet1, pillSheet2],
-            createdAt: DateTime.now(),
-          );
-          expect(pillSheetGroup.sequentialLastTakenPillNumber, 30);
-        });
-        test("second pill sheet has rest duration", () {
-          final mockTodayRepository = MockTodayService();
-          todayRepository = mockTodayRepository;
-          when(mockTodayRepository.now())
-              .thenReturn(DateTime.parse("2022-03-30"));
-
-          final sheetType = PillSheetType.pillsheet_21;
-          final pillSheet1 = PillSheet(
-            beginingDate: DateTime.parse("2022-03-01"),
-            lastTakenDate: DateTime.parse("2022-03-28"),
+            lastTakenDate: DateTime.parse("2020-03-28"),
+            groupIndex: 0,
             typeInfo: PillSheetTypeInfo(
               dosingPeriod: sheetType.dosingPeriod,
               name: sheetType.fullName,
@@ -599,14 +670,7 @@ void main() {
           );
           final pillSheet2 = PillSheet(
             beginingDate: DateTime.parse("2022-03-29"),
-            lastTakenDate: DateTime.parse("2022-04-01"),
-            restDurations: [
-              RestDuration(
-                beginDate: DateTime.parse("2022-03-30"),
-                createdDate: DateTime.parse("2022-03-30"),
-                endDate: DateTime.parse("2022-03-31"),
-              ),
-            ],
+            lastTakenDate: DateTime.parse("2022-03-29"),
             groupIndex: 1,
             typeInfo: PillSheetTypeInfo(
               dosingPeriod: sheetType.dosingPeriod,
@@ -620,8 +684,126 @@ void main() {
             pillSheetIDs: ["sheet_id", "sheet_id2"],
             pillSheets: [pillSheet1, pillSheet2],
             createdAt: DateTime.now(),
+            displayNumberSetting:
+                const DisplayNumberSetting(beginPillNumber: 2),
           );
-          expect(pillSheetGroup.sequentialLastTakenPillNumber, 31);
+          expect(pillSheetGroup.sequentialLastTakenPillNumber, 30);
+        });
+        test("with end display number setting", () {
+          final mockTodayRepository = MockTodayService();
+          todayRepository = mockTodayRepository;
+          when(mockTodayRepository.now())
+              .thenReturn(DateTime.parse("2022-03-30"));
+
+          final sheetType = PillSheetType.pillsheet_21;
+          final pillSheet1 = PillSheet(
+            beginingDate: DateTime.parse("2022-03-01"),
+            lastTakenDate: DateTime.parse("2020-03-28"),
+            groupIndex: 0,
+            typeInfo: PillSheetTypeInfo(
+              dosingPeriod: sheetType.dosingPeriod,
+              name: sheetType.fullName,
+              totalCount: sheetType.totalCount,
+              pillSheetTypeReferencePath: sheetType.rawPath,
+            ),
+          );
+          final pillSheet2 = PillSheet(
+            beginingDate: DateTime.parse("2022-03-29"),
+            lastTakenDate: DateTime.parse("2022-03-29"),
+            groupIndex: 1,
+            typeInfo: PillSheetTypeInfo(
+              dosingPeriod: sheetType.dosingPeriod,
+              name: sheetType.fullName,
+              totalCount: sheetType.totalCount,
+              pillSheetTypeReferencePath: sheetType.rawPath,
+            ),
+          );
+          // created at and id are anything value
+          final pillSheetGroup = PillSheetGroup(
+            pillSheetIDs: ["sheet_id", "sheet_id2"],
+            pillSheets: [pillSheet1, pillSheet2],
+            createdAt: DateTime.now(),
+            displayNumberSetting: const DisplayNumberSetting(endPillNumber: 28),
+          );
+          expect(pillSheetGroup.sequentialLastTakenPillNumber, 1);
+        });
+
+        test("with end display number setting", () {
+          final mockTodayRepository = MockTodayService();
+          todayRepository = mockTodayRepository;
+          when(mockTodayRepository.now())
+              .thenReturn(DateTime.parse("2022-03-30"));
+
+          final sheetType = PillSheetType.pillsheet_21;
+          final pillSheet1 = PillSheet(
+            beginingDate: DateTime.parse("2022-03-01"),
+            lastTakenDate: DateTime.parse("2020-03-28"),
+            groupIndex: 0,
+            typeInfo: PillSheetTypeInfo(
+              dosingPeriod: sheetType.dosingPeriod,
+              name: sheetType.fullName,
+              totalCount: sheetType.totalCount,
+              pillSheetTypeReferencePath: sheetType.rawPath,
+            ),
+          );
+          final pillSheet2 = PillSheet(
+            beginingDate: DateTime.parse("2022-03-29"),
+            lastTakenDate: DateTime.parse("2022-03-29"),
+            groupIndex: 1,
+            typeInfo: PillSheetTypeInfo(
+              dosingPeriod: sheetType.dosingPeriod,
+              name: sheetType.fullName,
+              totalCount: sheetType.totalCount,
+              pillSheetTypeReferencePath: sheetType.rawPath,
+            ),
+          );
+          // created at and id are anything value
+          final pillSheetGroup = PillSheetGroup(
+            pillSheetIDs: ["sheet_id", "sheet_id2"],
+            pillSheets: [pillSheet1, pillSheet2],
+            createdAt: DateTime.now(),
+            displayNumberSetting: const DisplayNumberSetting(endPillNumber: 28),
+          );
+          expect(pillSheetGroup.sequentialLastTakenPillNumber, 1);
+        });
+        test("with begin and end display number setting", () {
+          final mockTodayRepository = MockTodayService();
+          todayRepository = mockTodayRepository;
+          when(mockTodayRepository.now())
+              .thenReturn(DateTime.parse("2022-03-30"));
+
+          final sheetType = PillSheetType.pillsheet_21;
+          final pillSheet1 = PillSheet(
+            beginingDate: DateTime.parse("2022-03-01"),
+            lastTakenDate: DateTime.parse("2020-03-28"),
+            groupIndex: 0,
+            typeInfo: PillSheetTypeInfo(
+              dosingPeriod: sheetType.dosingPeriod,
+              name: sheetType.fullName,
+              totalCount: sheetType.totalCount,
+              pillSheetTypeReferencePath: sheetType.rawPath,
+            ),
+          );
+          final pillSheet2 = PillSheet(
+            beginingDate: DateTime.parse("2022-03-29"),
+            lastTakenDate: DateTime.parse("2022-03-29"),
+            groupIndex: 1,
+            typeInfo: PillSheetTypeInfo(
+              dosingPeriod: sheetType.dosingPeriod,
+              name: sheetType.fullName,
+              totalCount: sheetType.totalCount,
+              pillSheetTypeReferencePath: sheetType.rawPath,
+            ),
+          );
+          // created at and id are anything value
+          final pillSheetGroup = PillSheetGroup(
+            pillSheetIDs: ["sheet_id", "sheet_id2"],
+            pillSheets: [pillSheet1, pillSheet2],
+            createdAt: DateTime.now(),
+            displayNumberSetting: const DisplayNumberSetting(
+                beginPillNumber: 2, endPillNumber: 28),
+          );
+          expect(pillSheetGroup.sequentialLastTakenPillNumber, 2);
         });
       });
     });

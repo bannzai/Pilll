@@ -19,6 +19,10 @@ _$_PillSheetGroup _$$_PillSheetGroupFromJson(Map<String, dynamic> json) =>
           json['createdAt'] as Timestamp),
       deletedAt: TimestampConverter.timestampToDateTime(
           json['deletedAt'] as Timestamp?),
+      displayNumberSetting: json['displayNumberSetting'] == null
+          ? null
+          : DisplayNumberSetting.fromJson(
+              json['displayNumberSetting'] as Map<String, dynamic>),
     );
 
 Map<String, dynamic> _$$_PillSheetGroupToJson(_$_PillSheetGroup instance) {
@@ -36,5 +40,20 @@ Map<String, dynamic> _$$_PillSheetGroupToJson(_$_PillSheetGroup instance) {
   val['createdAt'] =
       NonNullTimestampConverter.dateTimeToTimestamp(instance.createdAt);
   val['deletedAt'] = TimestampConverter.dateTimeToTimestamp(instance.deletedAt);
+  val['displayNumberSetting'] = instance.displayNumberSetting?.toJson();
   return val;
 }
+
+_$_DisplayNumberSetting _$$_DisplayNumberSettingFromJson(
+        Map<String, dynamic> json) =>
+    _$_DisplayNumberSetting(
+      beginPillNumber: json['beginPillNumber'] as int?,
+      endPillNumber: json['endPillNumber'] as int?,
+    );
+
+Map<String, dynamic> _$$_DisplayNumberSettingToJson(
+        _$_DisplayNumberSetting instance) =>
+    <String, dynamic>{
+      'beginPillNumber': instance.beginPillNumber,
+      'endPillNumber': instance.endPillNumber,
+    };

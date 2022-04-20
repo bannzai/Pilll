@@ -30,13 +30,15 @@ class _$PillSheetGroupTearOff {
       @JsonKey(fromJson: NonNullTimestampConverter.timestampToDateTime, toJson: NonNullTimestampConverter.dateTimeToTimestamp)
           required DateTime createdAt,
       @JsonKey(fromJson: TimestampConverter.timestampToDateTime, toJson: TimestampConverter.dateTimeToTimestamp)
-          DateTime? deletedAt}) {
+          DateTime? deletedAt,
+      DisplayNumberSetting? displayNumberSetting}) {
     return _PillSheetGroup(
       id: id,
       pillSheetIDs: pillSheetIDs,
       pillSheets: pillSheets,
       createdAt: createdAt,
       deletedAt: deletedAt,
+      displayNumberSetting: displayNumberSetting,
     );
   }
 
@@ -62,6 +64,8 @@ mixin _$PillSheetGroup {
       fromJson: TimestampConverter.timestampToDateTime,
       toJson: TimestampConverter.dateTimeToTimestamp)
   DateTime? get deletedAt => throw _privateConstructorUsedError;
+  DisplayNumberSetting? get displayNumberSetting =>
+      throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
@@ -82,7 +86,10 @@ abstract class $PillSheetGroupCopyWith<$Res> {
       @JsonKey(fromJson: NonNullTimestampConverter.timestampToDateTime, toJson: NonNullTimestampConverter.dateTimeToTimestamp)
           DateTime createdAt,
       @JsonKey(fromJson: TimestampConverter.timestampToDateTime, toJson: TimestampConverter.dateTimeToTimestamp)
-          DateTime? deletedAt});
+          DateTime? deletedAt,
+      DisplayNumberSetting? displayNumberSetting});
+
+  $DisplayNumberSettingCopyWith<$Res>? get displayNumberSetting;
 }
 
 /// @nodoc
@@ -101,6 +108,7 @@ class _$PillSheetGroupCopyWithImpl<$Res>
     Object? pillSheets = freezed,
     Object? createdAt = freezed,
     Object? deletedAt = freezed,
+    Object? displayNumberSetting = freezed,
   }) {
     return _then(_value.copyWith(
       id: id == freezed
@@ -123,7 +131,23 @@ class _$PillSheetGroupCopyWithImpl<$Res>
           ? _value.deletedAt
           : deletedAt // ignore: cast_nullable_to_non_nullable
               as DateTime?,
+      displayNumberSetting: displayNumberSetting == freezed
+          ? _value.displayNumberSetting
+          : displayNumberSetting // ignore: cast_nullable_to_non_nullable
+              as DisplayNumberSetting?,
     ));
+  }
+
+  @override
+  $DisplayNumberSettingCopyWith<$Res>? get displayNumberSetting {
+    if (_value.displayNumberSetting == null) {
+      return null;
+    }
+
+    return $DisplayNumberSettingCopyWith<$Res>(_value.displayNumberSetting!,
+        (value) {
+      return _then(_value.copyWith(displayNumberSetting: value));
+    });
   }
 }
 
@@ -142,7 +166,11 @@ abstract class _$PillSheetGroupCopyWith<$Res>
       @JsonKey(fromJson: NonNullTimestampConverter.timestampToDateTime, toJson: NonNullTimestampConverter.dateTimeToTimestamp)
           DateTime createdAt,
       @JsonKey(fromJson: TimestampConverter.timestampToDateTime, toJson: TimestampConverter.dateTimeToTimestamp)
-          DateTime? deletedAt});
+          DateTime? deletedAt,
+      DisplayNumberSetting? displayNumberSetting});
+
+  @override
+  $DisplayNumberSettingCopyWith<$Res>? get displayNumberSetting;
 }
 
 /// @nodoc
@@ -163,6 +191,7 @@ class __$PillSheetGroupCopyWithImpl<$Res>
     Object? pillSheets = freezed,
     Object? createdAt = freezed,
     Object? deletedAt = freezed,
+    Object? displayNumberSetting = freezed,
   }) {
     return _then(_PillSheetGroup(
       id: id == freezed
@@ -185,6 +214,10 @@ class __$PillSheetGroupCopyWithImpl<$Res>
           ? _value.deletedAt
           : deletedAt // ignore: cast_nullable_to_non_nullable
               as DateTime?,
+      displayNumberSetting: displayNumberSetting == freezed
+          ? _value.displayNumberSetting
+          : displayNumberSetting // ignore: cast_nullable_to_non_nullable
+              as DisplayNumberSetting?,
     ));
   }
 }
@@ -201,7 +234,8 @@ class _$_PillSheetGroup extends _PillSheetGroup {
       @JsonKey(fromJson: NonNullTimestampConverter.timestampToDateTime, toJson: NonNullTimestampConverter.dateTimeToTimestamp)
           required this.createdAt,
       @JsonKey(fromJson: TimestampConverter.timestampToDateTime, toJson: TimestampConverter.dateTimeToTimestamp)
-          this.deletedAt})
+          this.deletedAt,
+      this.displayNumberSetting})
       : super._();
 
   factory _$_PillSheetGroup.fromJson(Map<String, dynamic> json) =>
@@ -224,10 +258,12 @@ class _$_PillSheetGroup extends _PillSheetGroup {
       fromJson: TimestampConverter.timestampToDateTime,
       toJson: TimestampConverter.dateTimeToTimestamp)
   final DateTime? deletedAt;
+  @override
+  final DisplayNumberSetting? displayNumberSetting;
 
   @override
   String toString() {
-    return 'PillSheetGroup(id: $id, pillSheetIDs: $pillSheetIDs, pillSheets: $pillSheets, createdAt: $createdAt, deletedAt: $deletedAt)';
+    return 'PillSheetGroup(id: $id, pillSheetIDs: $pillSheetIDs, pillSheets: $pillSheets, createdAt: $createdAt, deletedAt: $deletedAt, displayNumberSetting: $displayNumberSetting)';
   }
 
   @override
@@ -241,7 +277,9 @@ class _$_PillSheetGroup extends _PillSheetGroup {
             const DeepCollectionEquality()
                 .equals(other.pillSheets, pillSheets) &&
             const DeepCollectionEquality().equals(other.createdAt, createdAt) &&
-            const DeepCollectionEquality().equals(other.deletedAt, deletedAt));
+            const DeepCollectionEquality().equals(other.deletedAt, deletedAt) &&
+            const DeepCollectionEquality()
+                .equals(other.displayNumberSetting, displayNumberSetting));
   }
 
   @override
@@ -251,7 +289,8 @@ class _$_PillSheetGroup extends _PillSheetGroup {
       const DeepCollectionEquality().hash(pillSheetIDs),
       const DeepCollectionEquality().hash(pillSheets),
       const DeepCollectionEquality().hash(createdAt),
-      const DeepCollectionEquality().hash(deletedAt));
+      const DeepCollectionEquality().hash(deletedAt),
+      const DeepCollectionEquality().hash(displayNumberSetting));
 
   @JsonKey(ignore: true)
   @override
@@ -273,7 +312,8 @@ abstract class _PillSheetGroup extends PillSheetGroup {
       @JsonKey(fromJson: NonNullTimestampConverter.timestampToDateTime, toJson: NonNullTimestampConverter.dateTimeToTimestamp)
           required DateTime createdAt,
       @JsonKey(fromJson: TimestampConverter.timestampToDateTime, toJson: TimestampConverter.dateTimeToTimestamp)
-          DateTime? deletedAt}) = _$_PillSheetGroup;
+          DateTime? deletedAt,
+      DisplayNumberSetting? displayNumberSetting}) = _$_PillSheetGroup;
   const _PillSheetGroup._() : super._();
 
   factory _PillSheetGroup.fromJson(Map<String, dynamic> json) =
@@ -297,7 +337,182 @@ abstract class _PillSheetGroup extends PillSheetGroup {
       toJson: TimestampConverter.dateTimeToTimestamp)
   DateTime? get deletedAt;
   @override
+  DisplayNumberSetting? get displayNumberSetting;
+  @override
   @JsonKey(ignore: true)
   _$PillSheetGroupCopyWith<_PillSheetGroup> get copyWith =>
+      throw _privateConstructorUsedError;
+}
+
+DisplayNumberSetting _$DisplayNumberSettingFromJson(Map<String, dynamic> json) {
+  return _DisplayNumberSetting.fromJson(json);
+}
+
+/// @nodoc
+class _$DisplayNumberSettingTearOff {
+  const _$DisplayNumberSettingTearOff();
+
+  _DisplayNumberSetting call({int? beginPillNumber, int? endPillNumber}) {
+    return _DisplayNumberSetting(
+      beginPillNumber: beginPillNumber,
+      endPillNumber: endPillNumber,
+    );
+  }
+
+  DisplayNumberSetting fromJson(Map<String, Object?> json) {
+    return DisplayNumberSetting.fromJson(json);
+  }
+}
+
+/// @nodoc
+const $DisplayNumberSetting = _$DisplayNumberSettingTearOff();
+
+/// @nodoc
+mixin _$DisplayNumberSetting {
+  int? get beginPillNumber => throw _privateConstructorUsedError;
+  int? get endPillNumber => throw _privateConstructorUsedError;
+
+  Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
+  @JsonKey(ignore: true)
+  $DisplayNumberSettingCopyWith<DisplayNumberSetting> get copyWith =>
+      throw _privateConstructorUsedError;
+}
+
+/// @nodoc
+abstract class $DisplayNumberSettingCopyWith<$Res> {
+  factory $DisplayNumberSettingCopyWith(DisplayNumberSetting value,
+          $Res Function(DisplayNumberSetting) then) =
+      _$DisplayNumberSettingCopyWithImpl<$Res>;
+  $Res call({int? beginPillNumber, int? endPillNumber});
+}
+
+/// @nodoc
+class _$DisplayNumberSettingCopyWithImpl<$Res>
+    implements $DisplayNumberSettingCopyWith<$Res> {
+  _$DisplayNumberSettingCopyWithImpl(this._value, this._then);
+
+  final DisplayNumberSetting _value;
+  // ignore: unused_field
+  final $Res Function(DisplayNumberSetting) _then;
+
+  @override
+  $Res call({
+    Object? beginPillNumber = freezed,
+    Object? endPillNumber = freezed,
+  }) {
+    return _then(_value.copyWith(
+      beginPillNumber: beginPillNumber == freezed
+          ? _value.beginPillNumber
+          : beginPillNumber // ignore: cast_nullable_to_non_nullable
+              as int?,
+      endPillNumber: endPillNumber == freezed
+          ? _value.endPillNumber
+          : endPillNumber // ignore: cast_nullable_to_non_nullable
+              as int?,
+    ));
+  }
+}
+
+/// @nodoc
+abstract class _$DisplayNumberSettingCopyWith<$Res>
+    implements $DisplayNumberSettingCopyWith<$Res> {
+  factory _$DisplayNumberSettingCopyWith(_DisplayNumberSetting value,
+          $Res Function(_DisplayNumberSetting) then) =
+      __$DisplayNumberSettingCopyWithImpl<$Res>;
+  @override
+  $Res call({int? beginPillNumber, int? endPillNumber});
+}
+
+/// @nodoc
+class __$DisplayNumberSettingCopyWithImpl<$Res>
+    extends _$DisplayNumberSettingCopyWithImpl<$Res>
+    implements _$DisplayNumberSettingCopyWith<$Res> {
+  __$DisplayNumberSettingCopyWithImpl(
+      _DisplayNumberSetting _value, $Res Function(_DisplayNumberSetting) _then)
+      : super(_value, (v) => _then(v as _DisplayNumberSetting));
+
+  @override
+  _DisplayNumberSetting get _value => super._value as _DisplayNumberSetting;
+
+  @override
+  $Res call({
+    Object? beginPillNumber = freezed,
+    Object? endPillNumber = freezed,
+  }) {
+    return _then(_DisplayNumberSetting(
+      beginPillNumber: beginPillNumber == freezed
+          ? _value.beginPillNumber
+          : beginPillNumber // ignore: cast_nullable_to_non_nullable
+              as int?,
+      endPillNumber: endPillNumber == freezed
+          ? _value.endPillNumber
+          : endPillNumber // ignore: cast_nullable_to_non_nullable
+              as int?,
+    ));
+  }
+}
+
+/// @nodoc
+
+@JsonSerializable(explicitToJson: true)
+class _$_DisplayNumberSetting implements _DisplayNumberSetting {
+  const _$_DisplayNumberSetting({this.beginPillNumber, this.endPillNumber});
+
+  factory _$_DisplayNumberSetting.fromJson(Map<String, dynamic> json) =>
+      _$$_DisplayNumberSettingFromJson(json);
+
+  @override
+  final int? beginPillNumber;
+  @override
+  final int? endPillNumber;
+
+  @override
+  String toString() {
+    return 'DisplayNumberSetting(beginPillNumber: $beginPillNumber, endPillNumber: $endPillNumber)';
+  }
+
+  @override
+  bool operator ==(dynamic other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _DisplayNumberSetting &&
+            const DeepCollectionEquality()
+                .equals(other.beginPillNumber, beginPillNumber) &&
+            const DeepCollectionEquality()
+                .equals(other.endPillNumber, endPillNumber));
+  }
+
+  @override
+  int get hashCode => Object.hash(
+      runtimeType,
+      const DeepCollectionEquality().hash(beginPillNumber),
+      const DeepCollectionEquality().hash(endPillNumber));
+
+  @JsonKey(ignore: true)
+  @override
+  _$DisplayNumberSettingCopyWith<_DisplayNumberSetting> get copyWith =>
+      __$DisplayNumberSettingCopyWithImpl<_DisplayNumberSetting>(
+          this, _$identity);
+
+  @override
+  Map<String, dynamic> toJson() {
+    return _$$_DisplayNumberSettingToJson(this);
+  }
+}
+
+abstract class _DisplayNumberSetting implements DisplayNumberSetting {
+  const factory _DisplayNumberSetting(
+      {int? beginPillNumber, int? endPillNumber}) = _$_DisplayNumberSetting;
+
+  factory _DisplayNumberSetting.fromJson(Map<String, dynamic> json) =
+      _$_DisplayNumberSetting.fromJson;
+
+  @override
+  int? get beginPillNumber;
+  @override
+  int? get endPillNumber;
+  @override
+  @JsonKey(ignore: true)
+  _$DisplayNumberSettingCopyWith<_DisplayNumberSetting> get copyWith =>
       throw _privateConstructorUsedError;
 }
