@@ -133,6 +133,7 @@ class EndRestDurationModal extends StatelessWidget {
                     onPressed: () async {
                       await store
                           .setDisplayNumberSettingEnd(lastTakenPillNumber + 1);
+                      Navigator.of(context).pop();
                     },
                     text: "はい",
                   ),
