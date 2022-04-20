@@ -23,8 +23,8 @@ class InitialSettingState with _$InitialSettingState {
         List<PillSheetType> pillSheetTypes,
     InitialSettingTodayPillNumber? todayPillNumber,
     @Default([
+      ReminderTime(hour: 20, minute: 0),
       ReminderTime(hour: 21, minute: 0),
-      ReminderTime(hour: 22, minute: 0),
     ])
         List<ReminderTime> reminderTimes,
     @Default(true)
