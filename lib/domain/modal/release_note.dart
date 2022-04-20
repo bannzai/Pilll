@@ -58,7 +58,7 @@ class ReleaseNote extends StatelessWidget {
                     children: [
                       Text(
                         '''
-新しくピルシートを作る場合に開始する番号を調整できます。また、手動での休薬後は1日目として再開できます
+休薬後は1日目として服用再開ができるようになりました。また、すべてのピルシート終了後引き続き服用を続ける場合に便利な機能を追加しました。
                         ''',
                         style: FontType.assisting.merge(TextColorStyle.main),
                       ),
