@@ -132,14 +132,14 @@ class PillSheetGroup with _$PillSheetGroup {
     var estimatedEndPillNumber = summarizedPillCountWithPillSheetsToEndIndex(
         pillSheets: pillSheets, endIndex: pillSheets.length);
 
-    final offsetPillNumber = this.displayNumberSetting;
-    if (offsetPillNumber != null) {
-      final beginPillNumberOffset = offsetPillNumber.beginPillNumber;
+    final displayNumberSetting = this.displayNumberSetting;
+    if (displayNumberSetting != null) {
+      final beginPillNumberOffset = displayNumberSetting.beginPillNumber;
       if (beginPillNumberOffset != null) {
         estimatedEndPillNumber += (beginPillNumberOffset - 1);
       }
 
-      final endPillNumberOffset = offsetPillNumber.endPillNumber;
+      final endPillNumberOffset = displayNumberSetting.endPillNumber;
       if (endPillNumberOffset != null) {
         estimatedEndPillNumber %= endPillNumberOffset;
         if (sequentialTodayPillNumber == 0) {
