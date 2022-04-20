@@ -49,16 +49,10 @@ class RecordPagePillSheetSupportActions extends StatelessWidget {
               pillSheetGroup: pillSheetGroup,
               store: store,
               didEndRestDuration: () {
-                if (activedPillSheet.lastTakenPillNumber <= 0) {
-                  return;
-                }
-                showDialog(
-                  context: context,
-                  builder: (context) => EndRestDurationModal(
+                showEndRestDurationModal(context,
                     pillSheetGroup: pillSheetGroup,
                     store: store,
-                  ),
-                );
+                    activedPillSheet: activedPillSheet);
               },
             ),
           ] else ...[

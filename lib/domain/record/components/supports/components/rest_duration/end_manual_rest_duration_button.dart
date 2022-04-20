@@ -131,8 +131,8 @@ class EndRestDurationModal extends StatelessWidget {
                 Expanded(
                   child: AppOutlinedButton(
                     onPressed: () async {
-                      await store
-                          .setDisplayNumberSettingEndNumber(lastTakenPillNumber);
+                      await store.setDisplayNumberSettingEndNumber(
+                          lastTakenPillNumber);
                       Navigator.of(context).pop();
                     },
                     text: "はい",
@@ -146,3 +146,19 @@ class EndRestDurationModal extends StatelessWidget {
     );
   }
 }
+
+void showEndRestDurationModal(BuildContext context,
+    {required PillSheetGroup pillSheetGroup,
+    required RecordPageStore store,
+    required PillSheet activedPillSheet,}) {
+                if (activedPillSheet.lastTakenPillNumber <= 0) {
+                  return;
+                }
+                showDialog(
+                  context: context,
+                  builder: (context) => EndRestDurationModal(
+                    pillSheetGroup: pillSheetGroup,
+                    store: store,
+                  ),
+                );
+    }
