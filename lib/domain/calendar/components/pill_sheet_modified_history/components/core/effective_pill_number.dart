@@ -61,8 +61,8 @@ abstract class PillSheetModifiedHistoryDateEffectivePillNumber {
   static String changedBeginDisplayNumberSetting(
       ChangedBeginDisplayNumberValue value) {
     final before = value.beforeDisplayNumberSetting;
-    if (before == null) {
-      return "${value.afterDisplayNumberSetting.beginPillNumber}日目";
+    if (before == null || before.beginPillNumber == null) {
+      return "1→${value.afterDisplayNumberSetting.beginPillNumber}日目";
     }
     return "${before.beginPillNumber}→${value.afterDisplayNumberSetting.beginPillNumber}日目";
   }
@@ -70,8 +70,8 @@ abstract class PillSheetModifiedHistoryDateEffectivePillNumber {
   static String changedEndDisplayNumberSetting(
       ChangedEndDisplayNumberValue value) {
     final before = value.beforeDisplayNumberSetting;
-    if (before == null) {
-      return "${value.afterDisplayNumberSetting.endPillNumber}日目";
+    if (before == null || before.endPillNumber == null) {
+      return "1→${value.afterDisplayNumberSetting.endPillNumber}日目";
     }
     return "${before.endPillNumber}→${value.afterDisplayNumberSetting.endPillNumber}日目";
   }
