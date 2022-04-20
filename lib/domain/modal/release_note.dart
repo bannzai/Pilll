@@ -45,7 +45,7 @@ class ReleaseNote extends StatelessWidget {
                         padding:
                             const EdgeInsets.only(top: 40, left: 40, right: 40),
                         child: Text(
-                          "ヘルスケアに生理記録が反映されるようになりました",
+                          "服用日数を調整できるようになりました",
                           style: FontType.subTitle.merge(TextColorStyle.black),
                           textAlign: TextAlign.center,
                         ),
@@ -60,7 +60,7 @@ class ReleaseNote extends StatelessWidget {
                     children: [
                       Text(
                         '''
-設定タブ > ヘルスケア連携から設定できます。連携後の生理記録はヘルスケアにも反映されます
+新しくピルシートを作る場合に開始する番号を調整できます。また、手動での休薬後は1日目として再開できます
                         ''',
                         style: FontType.assisting.merge(TextColorStyle.main),
                       ),
