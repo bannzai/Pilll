@@ -44,10 +44,10 @@ class InitialSettingState with _$InitialSettingState {
     }
     final n = now();
     if (index == 0) {
-      return DateTime(n.year, n.month, n.day, 21, 0, 0);
+      return DateTime(n.year, n.month, n.day, 20, 0, 0);
     }
     if (index == 1) {
-      return DateTime(n.year, n.month, n.day, 22, 0, 0);
+      return DateTime(n.year, n.month, n.day, 21, 0, 0);
     }
     return null;
   }
