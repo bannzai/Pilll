@@ -42,7 +42,8 @@ class ReleaseNote extends StatelessWidget {
                     Align(
                       alignment: Alignment.center,
                       child: Container(
-                        padding: const EdgeInsets.only(top: 40, left: 40, right: 40),
+                        padding:
+                            const EdgeInsets.only(top: 40, left: 40, right: 40),
                         child: Text(
                           "ヘルスケアに生理記録が反映されるようになりました",
                           style: FontType.subTitle.merge(TextColorStyle.black),
@@ -87,12 +88,7 @@ class ReleaseNote extends StatelessWidget {
 }
 
 showReleaseNotePreDialog(BuildContext context) async {
-  final String key;
-  if (Platform.isAndroid) {
-    key = ReleaseNoteKey.version3_8_0;
-  } else {
-    key = ReleaseNoteKey.version3_9_0;
-  }
+  final key = ReleaseNoteKey.version3_10_0;
   final storage = await SharedPreferences.getInstance();
   if (storage.getBool(key) ?? false) {
     return;
@@ -110,7 +106,7 @@ openReleaseNote() async {
   final ChromeSafariBrowser browser = new ChromeSafariBrowser();
   await browser.open(
       url: Uri.parse(
-          "https://pilll.wraptas.site/9f689858e2a34cf6bc7c08ab85a192cf"),
+          "https://www.notion.so/pilll/3-10-0-567d9c12f55d4d199b0d839f5eb46b1e"),
       options: ChromeSafariBrowserClassOptions(
           android:
               AndroidChromeCustomTabsOptions(addDefaultShareMenuItem: false),
