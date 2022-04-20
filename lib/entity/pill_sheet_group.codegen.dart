@@ -77,12 +77,12 @@ class PillSheetGroup with _$PillSheetGroup {
     final displayNumberSetting = this.displayNumberSetting;
     if (displayNumberSetting != null) {
       final beginPillNumberOffset = displayNumberSetting.beginPillNumber;
-      if (beginPillNumberOffset != null) {
+      if (beginPillNumberOffset != null && beginPillNumberOffset > 0) {
         sequentialTodayPillNumber += (beginPillNumberOffset - 1);
       }
 
       final endPillNumberOffset = displayNumberSetting.endPillNumber;
-      if (endPillNumberOffset != null) {
+      if (endPillNumberOffset != null && endPillNumberOffset > 0) {
         sequentialTodayPillNumber %= endPillNumberOffset;
         if (sequentialTodayPillNumber == 0) {
           sequentialTodayPillNumber = endPillNumberOffset;
@@ -112,12 +112,12 @@ class PillSheetGroup with _$PillSheetGroup {
     final displayNumberSetting = this.displayNumberSetting;
     if (displayNumberSetting != null) {
       final beginPillNumberOffset = displayNumberSetting.beginPillNumber;
-      if (beginPillNumberOffset != null) {
+      if (beginPillNumberOffset != null && beginPillNumberOffset > 0) {
         sequentialLastTakenPillNumber += (beginPillNumberOffset - 1);
       }
 
       final endPillNumberOffset = displayNumberSetting.endPillNumber;
-      if (endPillNumberOffset != null) {
+      if (endPillNumberOffset != null && endPillNumberOffset > 0) {
         sequentialLastTakenPillNumber %= endPillNumberOffset;
         if (sequentialTodayPillNumber == 0) {
           sequentialLastTakenPillNumber = endPillNumberOffset;
@@ -135,12 +135,12 @@ class PillSheetGroup with _$PillSheetGroup {
     final displayNumberSetting = this.displayNumberSetting;
     if (displayNumberSetting != null) {
       final beginPillNumberOffset = displayNumberSetting.beginPillNumber;
-      if (beginPillNumberOffset != null) {
+      if (beginPillNumberOffset != null && beginPillNumberOffset > 0) {
         estimatedEndPillNumber += (beginPillNumberOffset - 1);
       }
 
       final endPillNumberOffset = displayNumberSetting.endPillNumber;
-      if (endPillNumberOffset != null) {
+      if (endPillNumberOffset != null && endPillNumberOffset > 0) {
         estimatedEndPillNumber %= endPillNumberOffset;
         if (sequentialTodayPillNumber == 0) {
           estimatedEndPillNumber = endPillNumberOffset;
