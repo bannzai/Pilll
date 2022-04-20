@@ -119,7 +119,6 @@ void main() {
       final store =
           container.read(addPillSheetGroupStateStoreProvider.notifier);
 
-      await Future.delayed(const Duration(seconds: 1));
       await store.register(setting);
     });
     test("group has two pill sheet", () async {
@@ -224,7 +223,6 @@ void main() {
       final store =
           container.read(addPillSheetGroupStateStoreProvider.notifier);
 
-      await Future.delayed(const Duration(seconds: 1));
       await store.register(setting);
     });
   });
