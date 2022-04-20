@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:pilll/analytics.dart';
 import 'package:pilll/components/atoms/buttons.dart';
+import 'package:pilll/components/atoms/color.dart';
 import 'package:pilll/components/atoms/font.dart';
 import 'package:pilll/components/atoms/text_color.dart';
 import 'package:pilll/domain/record/record_page_store.dart';
@@ -60,58 +61,87 @@ class EndRestDurationModal extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final lastTakenPillNumber = pillSheetGroup.sequentialLastTakenPillNumber;
-    return AlertDialog(
-      title: Container(
-        padding: const EdgeInsets.symmetric(vertical: 8, horizontal: 16),
-        child: const Text(
-          "休薬期間終了",
-          style: TextStyle(
-            color: TextColor.white,
-            fontSize: 12,
-            fontFamily: FontFamily.japanese,
-            fontWeight: FontWeight.w700,
-          ),
+    return Center(
+      child: Container(
+        constraints:
+            BoxConstraints(maxWidth: MediaQuery.of(context).size.width - 32),
+        decoration: BoxDecoration(
+          color: PilllColors.white,
+          borderRadius: BorderRadius.circular(20),
+        ),
+        padding: const EdgeInsets.symmetric(vertical: 32, horizontal: 24),
+        child: Column(
+          mainAxisSize: MainAxisSize.min,
+          children: [
+            Container(
+              padding: const EdgeInsets.symmetric(vertical: 6, horizontal: 16),
+              decoration: BoxDecoration(
+                color: PilllColors.secondary,
+                borderRadius: BorderRadius.circular(50),
+              ),
+              child: const Text(
+                "休薬期間終了",
+                textAlign: TextAlign.center,
+                style: TextStyle(
+                  color: TextColor.white,
+                  fontSize: 12,
+                  fontFamily: FontFamily.japanese,
+                  fontWeight: FontWeight.w700,
+                ),
+              ),
+            ),
+            const SizedBox(height: 8),
+            Column(
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              mainAxisSize: MainAxisSize.min,
+              children: <Widget>[
+                const Text(
+                  "服用1日目から再開しますか？",
+                  style: TextStyle(
+                    color: TextColor.main,
+                    fontSize: 16,
+                    fontFamily: FontFamily.japanese,
+                    fontWeight: FontWeight.w700,
+                  ),
+                ),
+                const SizedBox(height: 24),
+                Text(
+                  "服用${lastTakenPillNumber + 1}日目→1日目",
+                  style: const TextStyle(
+                    color: TextColor.main,
+                    fontSize: 14,
+                    fontFamily: FontFamily.japanese,
+                    fontWeight: FontWeight.w400,
+                  ),
+                ),
+              ],
+            ),
+            const SizedBox(height: 24),
+            Row(
+              children: [
+                Expanded(
+                  child: AppOutlinedButton(
+                    onPressed: () async {
+                      await store
+                          .setDisplayNumberSettingEnd(lastTakenPillNumber + 1);
+                    },
+                    text: "はい",
+                  ),
+                ),
+                const SizedBox(width: 16),
+                Expanded(
+                  child: AppOutlinedButton(
+                    onPressed: () async {
+                      Navigator.of(context).pop();
+                    },
+                    text: "いいえ",
+                  ),
+                ),
+              ],
+            ),
+          ],
         ),
       ),
-      content: Column(
-        mainAxisAlignment: MainAxisAlignment.spaceBetween,
-        mainAxisSize: MainAxisSize.min,
-        children: <Widget>[
-          const Text(
-            "服用1日目から再開しますか？",
-            style: TextStyle(
-              color: TextColor.main,
-              fontSize: 16,
-              fontFamily: FontFamily.japanese,
-              fontWeight: FontWeight.w700,
-            ),
-          ),
-          const SizedBox(height: 24),
-          Text(
-            "服用${lastTakenPillNumber + 1}日目→1日目",
-            style: const TextStyle(
-              color: TextColor.main,
-              fontSize: 14,
-              fontFamily: FontFamily.japanese,
-              fontWeight: FontWeight.w400,
-            ),
-          ),
-        ],
-      ),
-      actions: [
-        AppOutlinedButton(
-          onPressed: () async {
-            await store.setDisplayNumberSettingEnd(lastTakenPillNumber + 1);
-          },
-          text: "はい",
-        ),
-        AppOutlinedButton(
-          onPressed: () async {
-            Navigator.of(context).pop();
-          },
-          text: "いいえ",
-        ),
-      ],
     );
   }
 }
