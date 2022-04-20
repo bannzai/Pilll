@@ -529,13 +529,13 @@ class RecordPageStore extends StateNotifier<RecordPageState> {
     _pillSheetGroupService.update(updatedPillSheetGroup);
   }
 
-  switchingAppearanceMode(PillSheetAppearanceMode mode) {
+  void switchingAppearanceMode(PillSheetAppearanceMode mode) {
     final setting = state.setting;
     if (setting == null) {
       throw const FormatException("setting entity not found");
     }
     final updated = setting.copyWith(pillSheetAppearanceMode: mode);
-    return _settingService
+    _settingService
         .update(updated)
         .then((value) => state = state.copyWith(setting: value));
   }
