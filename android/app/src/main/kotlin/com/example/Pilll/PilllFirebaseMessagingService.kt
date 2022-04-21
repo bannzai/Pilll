@@ -1,5 +1,6 @@
 package com.mizuki.Ohashi.Pilll
 
+import android.app.Notification
 import android.app.PendingIntent
 import android.content.Intent
 import android.graphics.BitmapFactory
@@ -29,7 +30,7 @@ public class PilllFirebaseMessagingService: FirebaseMessagingService() {
         val openAppPendingIntent = PendingIntent.getActivity(this,1, mainActivityIntent, PendingIntent.FLAG_CANCEL_CURRENT)
         val title = data["title"]
         val body = data["body"]
-        val builder = NotificationCompat.Builder(this, "PILL_REMINDER")
+        val builder = NotificationCompat.Builder(this, getString(R.string.reminder_channel_id))
             .setSmallIcon(R.mipmap.ic_notification)
             .setLargeIcon(BitmapFactory.decodeResource(resources,
                 R.mipmap.ic_notification))
@@ -37,6 +38,7 @@ public class PilllFirebaseMessagingService: FirebaseMessagingService() {
             .setContentText(body)
             .setPriority(NotificationCompat.PRIORITY_DEFAULT)
             .setContentIntent(openAppPendingIntent)
+            .setCategory(Notification.CATEGORY_REMINDER)
             .setAutoCancel(true)
 
         if (data["action"] == "PILL_REMINDER") {

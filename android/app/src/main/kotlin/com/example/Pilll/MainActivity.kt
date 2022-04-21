@@ -23,9 +23,8 @@ class MainActivity: FlutterActivity() {
         // Create the NotificationChannel, but only on API 26+ because
         // the NotificationChannel class is new and not in the support library
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
-            val importance = NotificationManager.IMPORTANCE_DEFAULT
-            val channel = NotificationChannel("PILL_REMINDER", "method.channel.MizukiOhashi.Pilll", importance).apply {
-                description = "method.channel.MizukiOhashi.Pilll.description"
+            val channel = NotificationChannel(getString(R.string.reminder_channel_id), getString(R.string.reminder_channel_name), NotificationManager.IMPORTANCE_DEFAULT).apply {
+                description = ""
             }
             // Register the channel with the system
             val notificationManager: NotificationManager =
