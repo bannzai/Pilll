@@ -19,6 +19,8 @@ public class PilllFirebaseMessagingService: FirebaseMessagingService() {
         super.onMessageReceived(remoteMessage)
         Log.d("android message: ", "onMessageReceived")
 
+        val data = remoteMessage.data;
+
         val mainActivityIntent = Intent(this, MainActivity::class.java).also {
             it.flags = Intent.FLAG_ACTIVITY_NEW_TASK
         }
