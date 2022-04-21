@@ -18,11 +18,6 @@ public class PilllFirebaseMessagingService: FirebaseMessagingService() {
     override fun onMessageReceived(remoteMessage: RemoteMessage) {
         super.onMessageReceived(remoteMessage)
         Log.d("android message: ", "onMessageReceived")
-        send(remoteMessage.data)
-    }
-
-    fun send( data: Map<String, String>) {
-        Log.d("android message: ", "send")
 
         val mainActivityIntent = Intent(this, MainActivity::class.java).also {
             it.flags = Intent.FLAG_ACTIVITY_NEW_TASK
