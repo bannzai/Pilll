@@ -248,7 +248,7 @@ void main() {
       store.setReminderTime(index: 0, hour: 22, minute: 10);
       expect(container.read(initialSettingStateProvider).reminderTimes, [
         const ReminderTime(hour: 22, minute: 10),
-        const ReminderTime(hour: 22, minute: 0)
+        const ReminderTime(hour: 21, minute: 0)
       ]);
     });
     test("add reminderTime", () {
@@ -280,8 +280,8 @@ void main() {
 
       store.setReminderTime(index: 2, hour: 22, minute: 10);
       expect(container.read(initialSettingStateProvider).reminderTimes, [
+        const ReminderTime(hour: 20, minute: 0),
         const ReminderTime(hour: 21, minute: 0),
-        const ReminderTime(hour: 22, minute: 0),
         const ReminderTime(hour: 22, minute: 10)
       ]);
     });
@@ -330,7 +330,7 @@ void main() {
         isOnReminder: true,
         reminderTimes: [
           ReminderTime(hour: 21, minute: 20),
-          ReminderTime(hour: 22, minute: 0)
+          ReminderTime(hour: 21, minute: 0)
         ],
         pillSheetTypes: [PillSheetType.pillsheet_21],
       );

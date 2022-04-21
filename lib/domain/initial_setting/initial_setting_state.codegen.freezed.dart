@@ -184,8 +184,8 @@ class _$InitialSettingStateTearOff {
       {List<PillSheetType> pillSheetTypes = const [],
       InitialSettingTodayPillNumber? todayPillNumber,
       List<ReminderTime> reminderTimes = const [
-        ReminderTime(hour: 21, minute: 0),
-        ReminderTime(hour: 22, minute: 0)
+        ReminderTime(hour: 20, minute: 0),
+        ReminderTime(hour: 21, minute: 0)
       ],
       bool isOnReminder = true,
       bool isLoading = false,
@@ -399,8 +399,8 @@ class _$_InitialSettingState extends _InitialSettingState {
       {this.pillSheetTypes = const [],
       this.todayPillNumber,
       this.reminderTimes = const [
-        ReminderTime(hour: 21, minute: 0),
-        ReminderTime(hour: 22, minute: 0)
+        ReminderTime(hour: 20, minute: 0),
+        ReminderTime(hour: 21, minute: 0)
       ],
       this.isOnReminder = true,
       this.isLoading = false,

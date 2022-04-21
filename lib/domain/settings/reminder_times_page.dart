@@ -157,7 +157,7 @@ class ReminderTimesPage extends HookConsumerWidget {
         return TimePicker(
           initialDateTime: isEditing
               ? setting.reminderTimes[index].dateTime()
-              : const ReminderTime(hour: 22, minute: 0).dateTime(),
+              : const ReminderTime(hour: 20, minute: 0).dateTime(),
           done: (dateTime) {
             Navigator.pop(context);
             if (isEditing) {

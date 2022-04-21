@@ -23,8 +23,8 @@ class InitialSettingState with _$InitialSettingState {
         List<PillSheetType> pillSheetTypes,
     InitialSettingTodayPillNumber? todayPillNumber,
     @Default([
+      ReminderTime(hour: 20, minute: 0),
       ReminderTime(hour: 21, minute: 0),
-      ReminderTime(hour: 22, minute: 0),
     ])
         List<ReminderTime> reminderTimes,
     @Default(true)
@@ -44,10 +44,10 @@ class InitialSettingState with _$InitialSettingState {
     }
     final n = now();
     if (index == 0) {
-      return DateTime(n.year, n.month, n.day, 21, 0, 0);
+      return DateTime(n.year, n.month, n.day, 20, 0, 0);
     }
     if (index == 1) {
-      return DateTime(n.year, n.month, n.day, 22, 0, 0);
+      return DateTime(n.year, n.month, n.day, 21, 0, 0);
     }
     return null;
   }
