@@ -44,7 +44,7 @@ class PillSheetGroupService {
       return null;
     }
 
-    final document = snapshot.docs[1];
+    final document = snapshot.docs[0];
     final data = document.data() as Map<String, dynamic>;
     data.putIfAbsent("id", () => document.id);
 
