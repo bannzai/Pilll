@@ -227,7 +227,8 @@ class RootState extends State<Root> {
 
         setState(() {
           this._error = UserDisplayedError(
-              ErrorMessages.connection + "\n" + "起動処理でエラーが発生しました");
+              "起動処理でエラーが発生しました\n${ErrorMessages.connection}\n詳細:" +
+                  error.toString());
         });
       } finally {
         await launchTrace.stop();
