@@ -19,14 +19,12 @@ public class PilllFirebaseMessagingService: FirebaseMessagingService() {
         super.onMessageReceived(remoteMessage)
         Log.d("android message: ", "onMessageReceived")
 
-        val data = remoteMessage.data;
-
         val mainActivityIntent = Intent(this, MainActivity::class.java).also {
             it.flags = Intent.FLAG_ACTIVITY_NEW_TASK
         }
         val openAppPendingIntent = PendingIntent.getActivity(this,1, mainActivityIntent, PendingIntent.FLAG_CANCEL_CURRENT)
-        val title = data["title"]
-        val body = data["body"]
+        val title = remoteMessage.data["title"]
+        val body = remoteMessage.data["body"]
         val builder = NotificationCompat.Builder(this, getString(R.string.reminder_channel_id))
             .setSmallIcon(R.mipmap.ic_notification)
             .setLargeIcon(BitmapFactory.decodeResource(resources,
@@ -38,7 +36,7 @@ public class PilllFirebaseMessagingService: FirebaseMessagingService() {
             .setCategory(Notification.CATEGORY_REMINDER)
             .setAutoCancel(true)
 
-        if (data["action"] == "PILL_REMINDER") {
+        if (remoteMessage.data["action"] == "PILL_REMINDER") {
             val intent = Intent(this, BroadCastActionReceiver::class.java).apply {
                 action = "PILL_REMINDER"
             }
