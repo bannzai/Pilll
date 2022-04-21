@@ -30,9 +30,9 @@ public class PilllFirebaseMessagingService: FirebaseMessagingService() {
         val title = data["title"]
         val body = data["body"]
         val builder = NotificationCompat.Builder(this, "PILL_REMINDER")
-            .setSmallIcon(R.mipmap.ic_launcher)
+            .setSmallIcon(R.mipmap.ic_notification)
             .setLargeIcon(BitmapFactory.decodeResource(resources,
-                R.mipmap.ic_launcher))
+                R.mipmap.ic_notification))
             .setContentTitle(title)
             .setContentText(body)
             .setPriority(NotificationCompat.PRIORITY_DEFAULT)
