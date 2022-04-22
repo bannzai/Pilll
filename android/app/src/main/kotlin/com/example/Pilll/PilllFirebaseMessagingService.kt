@@ -1,5 +1,6 @@
 package com.mizuki.Ohashi.Pilll
 
+import android.app.Notification
 import android.app.PendingIntent
 import android.content.Intent
 import android.graphics.BitmapFactory
@@ -17,29 +18,25 @@ public class PilllFirebaseMessagingService: FirebaseMessagingService() {
     override fun onMessageReceived(remoteMessage: RemoteMessage) {
         super.onMessageReceived(remoteMessage)
         Log.d("android message: ", "onMessageReceived")
-        send(remoteMessage.data)
-    }
-
-    fun send( data: Map<String, String>) {
-        Log.d("android message: ", "send")
 
         val mainActivityIntent = Intent(this, MainActivity::class.java).also {
             it.flags = Intent.FLAG_ACTIVITY_NEW_TASK
         }
         val openAppPendingIntent = PendingIntent.getActivity(this,1, mainActivityIntent, PendingIntent.FLAG_CANCEL_CURRENT)
-        val title = data["title"]
-        val body = data["body"]
-        val builder = NotificationCompat.Builder(this, "PILL_REMINDER")
-            .setSmallIcon(R.mipmap.ic_launcher)
+        val title = remoteMessage.data["title"]
+        val body = remoteMessage.data["body"]
+        val builder = NotificationCompat.Builder(this, getString(R.string.reminder_channel_id))
+            .setSmallIcon(R.mipmap.ic_notification)
             .setLargeIcon(BitmapFactory.decodeResource(resources,
-                R.mipmap.ic_launcher))
+                R.mipmap.ic_notification))
             .setContentTitle(title)
             .setContentText(body)
             .setPriority(NotificationCompat.PRIORITY_DEFAULT)
             .setContentIntent(openAppPendingIntent)
+            .setCategory(Notification.CATEGORY_REMINDER)
             .setAutoCancel(true)
 
-        if (data["action"] == "PILL_REMINDER") {
+        if (remoteMessage.data["action"] == "PILL_REMINDER") {
             val intent = Intent(this, BroadCastActionReceiver::class.java).apply {
                 action = "PILL_REMINDER"
             }
