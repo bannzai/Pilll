@@ -35,14 +35,14 @@ class SequentialPillNumber extends StatelessWidget {
   Widget build(BuildContext context) {
     var number = pageOffset + pillNumberIntoPillSheet;
 
-    final offsetPillNumber = this.displayNumberSetting;
-    if (offsetPillNumber != null) {
-      final beginPillNumberOffset = offsetPillNumber.beginPillNumber;
+    final displayNumberSetting = this.displayNumberSetting;
+    if (displayNumberSetting != null) {
+      final beginPillNumberOffset = displayNumberSetting.beginPillNumber;
       if (beginPillNumberOffset != null && beginPillNumberOffset > 0) {
         number += (beginPillNumberOffset - 1);
       }
 
-      final endPillNumberOffset = offsetPillNumber.endPillNumber;
+      final endPillNumberOffset = displayNumberSetting.endPillNumber;
       if (endPillNumberOffset != null && endPillNumberOffset > 0) {
         number %= endPillNumberOffset;
         if (number == 0) {
