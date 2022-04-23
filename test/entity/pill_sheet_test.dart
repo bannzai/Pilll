@@ -639,7 +639,7 @@ void main() {
       });
     });
   });
-  group("#estimatedLastTakenDate", () {
+  group("#estimatedEndTakenDate", () {
     test("spec", () {
       final mockTodayRepository = MockTodayService();
       todayRepository = mockTodayRepository;
@@ -655,7 +655,7 @@ void main() {
           pillSheetTypeReferencePath: sheetType.rawPath,
         ),
       );
-      expect(pillSheet.estimatedLastTakenDate,
+      expect(pillSheet.estimatedEndTakenDate,
           DateTime.parse("2022-05-29").subtract(const Duration(seconds: 1)));
     });
 
@@ -684,7 +684,7 @@ void main() {
             pillSheetTypeReferencePath: sheetType.rawPath,
           ),
         );
-        expect(pillSheet.estimatedLastTakenDate,
+        expect(pillSheet.estimatedEndTakenDate,
             DateTime.parse("2022-06-05").subtract(const Duration(seconds: 1)));
       });
       test("rest duration is ended", () {
@@ -710,7 +710,7 @@ void main() {
             pillSheetTypeReferencePath: sheetType.rawPath,
           ),
         );
-        expect(pillSheet.estimatedLastTakenDate,
+        expect(pillSheet.estimatedEndTakenDate,
             DateTime.parse("2022-05-31").subtract(const Duration(seconds: 1)));
       });
 
@@ -745,7 +745,7 @@ void main() {
             ),
           );
           expect(
-              pillSheet.estimatedLastTakenDate,
+              pillSheet.estimatedEndTakenDate,
               DateTime.parse("2022-06-03")
                   .subtract(const Duration(seconds: 1)));
         });
@@ -780,7 +780,7 @@ void main() {
             ),
           );
           expect(
-              pillSheet.estimatedLastTakenDate,
+              pillSheet.estimatedEndTakenDate,
               DateTime.parse("2022-06-01")
                   .subtract(const Duration(seconds: 1)));
         });
