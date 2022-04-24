@@ -129,7 +129,7 @@ class RecordPageRestDurationDialogTitle extends StatelessWidget {
         final dateString = DateTimeFormatter.monthAndDay(date);
         return "$dateString";
       case PillSheetAppearanceMode.sequential:
-        return "${pillSheetGroup.sequentialLastTakenPillNumber + 1}日目";
+        return "${pillSheetGroup.sequentialLastTakenPillNumber + 1}番";
     }
   }
 }
