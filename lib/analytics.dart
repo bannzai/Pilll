@@ -6,7 +6,7 @@ final firebaseAnalytics = FirebaseAnalytics.instance;
 
 class Analytics {
   logEvent({required String name, Map<String, dynamic>? parameters}) async {
-    assert(name.length < 40,
+    assert(name.length <= 40,
         "firebase analytics log event name limit length up to 40");
     print("[INFO] logEvent name: $name, parameters: $parameters");
 
