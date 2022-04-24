@@ -166,24 +166,6 @@ class NotificationBar extends HookConsumerWidget {
       }
     }
 
-    if (!state.isAlreadyShowAnnouncementSupportedMultilplePillSheet) {
-      return AnnouncementSupportedMultiplePillSheet(
-        onTap: () async {
-          final sharedPreferences = await SharedPreferences.getInstance();
-          if (sharedPreferences.getBool(BoolKey
-                  .isAlreadyShowAnnouncementSupportedMultilplePillSheet) ??
-              false) {
-            return;
-          }
-
-          store.setTrueIsAlreadyShowAnnouncementSupportedMultilplePillSheet();
-          showAnnouncementMultiplePillSheet(context);
-        },
-        onClose: () {
-          store.setTrueIsAlreadyShowAnnouncementSupportedMultilplePillSheet();
-        },
-      );
-    }
     return null;
   }
 }
