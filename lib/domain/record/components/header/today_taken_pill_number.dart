@@ -89,7 +89,7 @@ class TodayTakenPillNumber extends StatelessWidget {
         if (_appearanceMode == PillSheetAppearanceMode.sequential) ...[
           Text("${pillSheetGroup.sequentialTodayPillNumber}",
               style: FontType.xHugeNumber.merge(TextColorStyle.main)),
-          Text("日目",
+          Text("番",
               style: FontType.assistingBold.merge(TextColorStyle.noshime)),
         ],
       ],
