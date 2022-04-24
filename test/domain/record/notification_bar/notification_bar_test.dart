@@ -1,6 +1,5 @@
 import 'package:pilll/analytics.dart';
 import 'package:pilll/domain/premium_introduction/util/discount_deadline.dart';
-import 'package:pilll/domain/record/components/notification_bar/components/announce_supported_multiple_pill_sheet.dart';
 import 'package:pilll/domain/record/components/notification_bar/components/discount_price_deadline.dart';
 import 'package:pilll/domain/record/components/notification_bar/components/ended_pill_sheet.dart';
 import 'package:pilll/domain/record/components/notification_bar/components/premium_trial_begin.dart';
@@ -672,68 +671,6 @@ void main() {
           findsOneWidget,
         );
       });
-    });
-
-    testWidgets('#AnnouncementSupportedMultiplePillSheet',
-        (WidgetTester tester) async {
-      final mockTodayRepository = MockTodayService();
-      final today = DateTime(2021, 04, 29);
-      final n = today;
-
-      when(mockTodayRepository.now()).thenReturn(today);
-      when(mockTodayRepository.now()).thenReturn(n);
-      todayRepository = mockTodayRepository;
-
-      var pillSheet = PillSheet.create(PillSheetType.pillsheet_21);
-      pillSheet = pillSheet.copyWith(
-        lastTakenDate: today.subtract(const Duration(days: 1)),
-        beginingDate: today.subtract(
-// NOTE: To activate pill sheet
-          const Duration(days: 1),
-        ),
-      );
-      final pillSheetGroup = PillSheetGroup(
-          pillSheetIDs: ["1"], pillSheets: [pillSheet], createdAt: now());
-      final state = NotificationBarState(
-        latestPillSheetGroup: pillSheetGroup,
-        totalCountOfActionForTakenPill:
-            totalCountOfActionForTakenPillForLongTimeUser,
-        isPremium: false,
-        isTrial: true,
-        hasDiscountEntitlement: true,
-        isLinkedLoginProvider: true,
-        premiumTrialGuideNotificationIsClosed: false,
-        premiumTrialBeginAnouncementIsClosed: true,
-        recommendedSignupNotificationIsAlreadyShow: false,
-        trialDeadlineDate: null,
-        beginTrialDate: null,
-        discountEntitlementDeadlineDate: null,
-      );
-
-      final recordPageState = RecordPageState(
-          pillSheetGroup: PillSheetGroup(
-              pillSheets: [pillSheet], pillSheetIDs: ["1"], createdAt: now()));
-      await tester.pumpWidget(
-        ProviderScope(
-          overrides: [
-            notificationBarStoreProvider.overrideWithProvider((param) =>
-                StateNotifierProvider.autoDispose(
-                    (_) => MockNotificationBarStateStore())),
-            notificationBarStateProvider.overrideWithProvider(
-                (param) => Provider.autoDispose((_) => state)),
-          ],
-          child: MaterialApp(
-            home: Material(child: NotificationBar(recordPageState)),
-          ),
-        ),
-      );
-      await tester.pump();
-
-      expect(
-        find.byWidgetPredicate(
-            (widget) => widget is AnnouncementSupportedMultiplePillSheet),
-        findsOneWidget,
-      );
     });
   });
 }
