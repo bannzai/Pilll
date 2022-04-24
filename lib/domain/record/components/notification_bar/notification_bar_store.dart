@@ -28,8 +28,6 @@ class NotificationBarStateStore extends StateNotifier<NotificationBarState> {
             isPremium: parameter.isPremium,
             isTrial: parameter.isTrial,
             hasDiscountEntitlement: parameter.hasDiscountEntitlement,
-            isAlreadyShowAnnouncementSupportedMultilplePillSheet:
-                parameter.isAlreadyShowAnnouncementSupportedMultilplePillSheet,
             trialDeadlineDate: parameter.trialDeadlineDate,
             beginTrialDate: parameter.beginTrialDate,
             discountEntitlementDeadlineDate:
@@ -62,14 +60,5 @@ class NotificationBarStateStore extends StateNotifier<NotificationBarState> {
     sharedPreferences.setBool(
         BoolKey.premiumTrialBeginAnouncementIsClosed, true);
     state = state.copyWith(premiumTrialBeginAnouncementIsClosed: true);
-  }
-
-  Future<void>
-      setTrueIsAlreadyShowAnnouncementSupportedMultilplePillSheet() async {
-    final sharedPreferences = await SharedPreferences.getInstance();
-    sharedPreferences.setBool(
-        BoolKey.isAlreadyShowAnnouncementSupportedMultilplePillSheet, true);
-    state = state.copyWith(
-        isAlreadyShowAnnouncementSupportedMultilplePillSheet: true);
   }
 }

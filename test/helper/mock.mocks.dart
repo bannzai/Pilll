@@ -584,16 +584,6 @@ class MockNotificationBarStateStore extends _i1.Mock
       returnValue: Future<void>.value(),
       returnValueForMissingStub: Future<void>.value()) as _i16.Future<void>);
   @override
-  _i16.Future<void>
-      setTrueIsAlreadyShowAnnouncementSupportedMultilplePillSheet() =>
-          (super.noSuchMethod(
-              Invocation.method(
-                  #setTrueIsAlreadyShowAnnouncementSupportedMultilplePillSheet,
-                  []),
-              returnValue: Future<void>.value(),
-              returnValueForMissingStub:
-                  Future<void>.value()) as _i16.Future<void>);
-  @override
   _i25.RemoveListener addListener(
           _i27.Listener<_i8.NotificationBarState>? listener,
           {bool? fireImmediately = true}) =>
