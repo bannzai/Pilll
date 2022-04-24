@@ -146,7 +146,7 @@ class DisplayNumberSettingSheet extends HookConsumerWidget {
                           ),
                           const SizedBox(width: 5),
                           const Text(
-                            "日目からスタート",
+                            "番からスタート",
                             style: TextStyle(
                               fontFamily: FontFamily.japanese,
                               fontSize: 14,
@@ -231,7 +231,7 @@ class DisplayNumberSettingSheet extends HookConsumerWidget {
                       ),
                       const SizedBox(width: 5),
                       const Text(
-                        "日目に変更",
+                        "番に変更",
                         style: TextStyle(
                           fontFamily: FontFamily.japanese,
                           fontSize: 14,
