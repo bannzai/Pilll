@@ -26,7 +26,6 @@ class _$RecordPageStateTearOff {
       bool isPremium = false,
       bool isTrial = false,
       bool hasDiscountEntitlement = false,
-      bool isAlreadyShowAnnouncementSupportedMultilplePillSheet = false,
       bool isAlreadyShowTiral = false,
       bool isAlreadyShowPremiumSurvey = false,
       bool shouldShowMigrateInfo = false,
@@ -46,8 +45,6 @@ class _$RecordPageStateTearOff {
       isPremium: isPremium,
       isTrial: isTrial,
       hasDiscountEntitlement: hasDiscountEntitlement,
-      isAlreadyShowAnnouncementSupportedMultilplePillSheet:
-          isAlreadyShowAnnouncementSupportedMultilplePillSheet,
       isAlreadyShowTiral: isAlreadyShowTiral,
       isAlreadyShowPremiumSurvey: isAlreadyShowPremiumSurvey,
       shouldShowMigrateInfo: shouldShowMigrateInfo,
@@ -78,8 +75,6 @@ mixin _$RecordPageState {
   bool get isPremium => throw _privateConstructorUsedError;
   bool get isTrial => throw _privateConstructorUsedError;
   bool get hasDiscountEntitlement => throw _privateConstructorUsedError;
-  bool get isAlreadyShowAnnouncementSupportedMultilplePillSheet =>
-      throw _privateConstructorUsedError;
   bool get isAlreadyShowTiral => throw _privateConstructorUsedError;
   bool get isAlreadyShowPremiumSurvey => throw _privateConstructorUsedError;
   bool get shouldShowMigrateInfo => throw _privateConstructorUsedError;
@@ -114,7 +109,6 @@ abstract class $RecordPageStateCopyWith<$Res> {
       bool isPremium,
       bool isTrial,
       bool hasDiscountEntitlement,
-      bool isAlreadyShowAnnouncementSupportedMultilplePillSheet,
       bool isAlreadyShowTiral,
       bool isAlreadyShowPremiumSurvey,
       bool shouldShowMigrateInfo,
@@ -149,7 +143,6 @@ class _$RecordPageStateCopyWithImpl<$Res>
     Object? isPremium = freezed,
     Object? isTrial = freezed,
     Object? hasDiscountEntitlement = freezed,
-    Object? isAlreadyShowAnnouncementSupportedMultilplePillSheet = freezed,
     Object? isAlreadyShowTiral = freezed,
     Object? isAlreadyShowPremiumSurvey = freezed,
     Object? shouldShowMigrateInfo = freezed,
@@ -191,11 +184,6 @@ class _$RecordPageStateCopyWithImpl<$Res>
           ? _value.hasDiscountEntitlement
           : hasDiscountEntitlement // ignore: cast_nullable_to_non_nullable
               as bool,
-      isAlreadyShowAnnouncementSupportedMultilplePillSheet:
-          isAlreadyShowAnnouncementSupportedMultilplePillSheet == freezed
-              ? _value.isAlreadyShowAnnouncementSupportedMultilplePillSheet
-              : isAlreadyShowAnnouncementSupportedMultilplePillSheet // ignore: cast_nullable_to_non_nullable
-                  as bool,
       isAlreadyShowTiral: isAlreadyShowTiral == freezed
           ? _value.isAlreadyShowTiral
           : isAlreadyShowTiral // ignore: cast_nullable_to_non_nullable
@@ -282,7 +270,6 @@ abstract class _$RecordPageStateCopyWith<$Res>
       bool isPremium,
       bool isTrial,
       bool hasDiscountEntitlement,
-      bool isAlreadyShowAnnouncementSupportedMultilplePillSheet,
       bool isAlreadyShowTiral,
       bool isAlreadyShowPremiumSurvey,
       bool shouldShowMigrateInfo,
@@ -321,7 +308,6 @@ class __$RecordPageStateCopyWithImpl<$Res>
     Object? isPremium = freezed,
     Object? isTrial = freezed,
     Object? hasDiscountEntitlement = freezed,
-    Object? isAlreadyShowAnnouncementSupportedMultilplePillSheet = freezed,
     Object? isAlreadyShowTiral = freezed,
     Object? isAlreadyShowPremiumSurvey = freezed,
     Object? shouldShowMigrateInfo = freezed,
@@ -363,11 +349,6 @@ class __$RecordPageStateCopyWithImpl<$Res>
           ? _value.hasDiscountEntitlement
           : hasDiscountEntitlement // ignore: cast_nullable_to_non_nullable
               as bool,
-      isAlreadyShowAnnouncementSupportedMultilplePillSheet:
-          isAlreadyShowAnnouncementSupportedMultilplePillSheet == freezed
-              ? _value.isAlreadyShowAnnouncementSupportedMultilplePillSheet
-              : isAlreadyShowAnnouncementSupportedMultilplePillSheet // ignore: cast_nullable_to_non_nullable
-                  as bool,
       isAlreadyShowTiral: isAlreadyShowTiral == freezed
           ? _value.isAlreadyShowTiral
           : isAlreadyShowTiral // ignore: cast_nullable_to_non_nullable
@@ -428,7 +409,6 @@ class _$_RecordPageState extends _RecordPageState {
       this.isPremium = false,
       this.isTrial = false,
       this.hasDiscountEntitlement = false,
-      this.isAlreadyShowAnnouncementSupportedMultilplePillSheet = false,
       this.isAlreadyShowTiral = false,
       this.isAlreadyShowPremiumSurvey = false,
       this.shouldShowMigrateInfo = false,
@@ -463,9 +443,6 @@ class _$_RecordPageState extends _RecordPageState {
   final bool hasDiscountEntitlement;
   @JsonKey()
   @override
-  final bool isAlreadyShowAnnouncementSupportedMultilplePillSheet;
-  @JsonKey()
-  @override
   final bool isAlreadyShowTiral;
   @JsonKey()
   @override
@@ -496,7 +473,7 @@ class _$_RecordPageState extends _RecordPageState {
 
   @override
   String toString() {
-    return 'RecordPageState(pillSheetGroup: $pillSheetGroup, setting: $setting, totalCountOfActionForTakenPill: $totalCountOfActionForTakenPill, firstLoadIsEnded: $firstLoadIsEnded, isPremium: $isPremium, isTrial: $isTrial, hasDiscountEntitlement: $hasDiscountEntitlement, isAlreadyShowAnnouncementSupportedMultilplePillSheet: $isAlreadyShowAnnouncementSupportedMultilplePillSheet, isAlreadyShowTiral: $isAlreadyShowTiral, isAlreadyShowPremiumSurvey: $isAlreadyShowPremiumSurvey, shouldShowMigrateInfo: $shouldShowMigrateInfo, isLinkedLoginProvider: $isLinkedLoginProvider, beginTrialDate: $beginTrialDate, trialDeadlineDate: $trialDeadlineDate, discountEntitlementDeadlineDate: $discountEntitlementDeadlineDate, recommendedSignupNotificationIsAlreadyShow: $recommendedSignupNotificationIsAlreadyShow, premiumTrialGuideNotificationIsClosed: $premiumTrialGuideNotificationIsClosed, premiumTrialBeginAnouncementIsClosed: $premiumTrialBeginAnouncementIsClosed, exception: $exception)';
+    return 'RecordPageState(pillSheetGroup: $pillSheetGroup, setting: $setting, totalCountOfActionForTakenPill: $totalCountOfActionForTakenPill, firstLoadIsEnded: $firstLoadIsEnded, isPremium: $isPremium, isTrial: $isTrial, hasDiscountEntitlement: $hasDiscountEntitlement, isAlreadyShowTiral: $isAlreadyShowTiral, isAlreadyShowPremiumSurvey: $isAlreadyShowPremiumSurvey, shouldShowMigrateInfo: $shouldShowMigrateInfo, isLinkedLoginProvider: $isLinkedLoginProvider, beginTrialDate: $beginTrialDate, trialDeadlineDate: $trialDeadlineDate, discountEntitlementDeadlineDate: $discountEntitlementDeadlineDate, recommendedSignupNotificationIsAlreadyShow: $recommendedSignupNotificationIsAlreadyShow, premiumTrialGuideNotificationIsClosed: $premiumTrialGuideNotificationIsClosed, premiumTrialBeginAnouncementIsClosed: $premiumTrialBeginAnouncementIsClosed, exception: $exception)';
   }
 
   @override
@@ -516,9 +493,6 @@ class _$_RecordPageState extends _RecordPageState {
             const DeepCollectionEquality().equals(other.isTrial, isTrial) &&
             const DeepCollectionEquality()
                 .equals(other.hasDiscountEntitlement, hasDiscountEntitlement) &&
-            const DeepCollectionEquality().equals(
-                other.isAlreadyShowAnnouncementSupportedMultilplePillSheet,
-                isAlreadyShowAnnouncementSupportedMultilplePillSheet) &&
             const DeepCollectionEquality()
                 .equals(other.isAlreadyShowTiral, isAlreadyShowTiral) &&
             const DeepCollectionEquality().equals(
@@ -547,32 +521,28 @@ class _$_RecordPageState extends _RecordPageState {
   }
 
   @override
-  int get hashCode => Object.hashAll([
-        runtimeType,
-        const DeepCollectionEquality().hash(pillSheetGroup),
-        const DeepCollectionEquality().hash(setting),
-        const DeepCollectionEquality().hash(totalCountOfActionForTakenPill),
-        const DeepCollectionEquality().hash(firstLoadIsEnded),
-        const DeepCollectionEquality().hash(isPremium),
-        const DeepCollectionEquality().hash(isTrial),
-        const DeepCollectionEquality().hash(hasDiscountEntitlement),
-        const DeepCollectionEquality()
-            .hash(isAlreadyShowAnnouncementSupportedMultilplePillSheet),
-        const DeepCollectionEquality().hash(isAlreadyShowTiral),
-        const DeepCollectionEquality().hash(isAlreadyShowPremiumSurvey),
-        const DeepCollectionEquality().hash(shouldShowMigrateInfo),
-        const DeepCollectionEquality().hash(isLinkedLoginProvider),
-        const DeepCollectionEquality().hash(beginTrialDate),
-        const DeepCollectionEquality().hash(trialDeadlineDate),
-        const DeepCollectionEquality().hash(discountEntitlementDeadlineDate),
-        const DeepCollectionEquality()
-            .hash(recommendedSignupNotificationIsAlreadyShow),
-        const DeepCollectionEquality()
-            .hash(premiumTrialGuideNotificationIsClosed),
-        const DeepCollectionEquality()
-            .hash(premiumTrialBeginAnouncementIsClosed),
-        const DeepCollectionEquality().hash(exception)
-      ]);
+  int get hashCode => Object.hash(
+      runtimeType,
+      const DeepCollectionEquality().hash(pillSheetGroup),
+      const DeepCollectionEquality().hash(setting),
+      const DeepCollectionEquality().hash(totalCountOfActionForTakenPill),
+      const DeepCollectionEquality().hash(firstLoadIsEnded),
+      const DeepCollectionEquality().hash(isPremium),
+      const DeepCollectionEquality().hash(isTrial),
+      const DeepCollectionEquality().hash(hasDiscountEntitlement),
+      const DeepCollectionEquality().hash(isAlreadyShowTiral),
+      const DeepCollectionEquality().hash(isAlreadyShowPremiumSurvey),
+      const DeepCollectionEquality().hash(shouldShowMigrateInfo),
+      const DeepCollectionEquality().hash(isLinkedLoginProvider),
+      const DeepCollectionEquality().hash(beginTrialDate),
+      const DeepCollectionEquality().hash(trialDeadlineDate),
+      const DeepCollectionEquality().hash(discountEntitlementDeadlineDate),
+      const DeepCollectionEquality()
+          .hash(recommendedSignupNotificationIsAlreadyShow),
+      const DeepCollectionEquality()
+          .hash(premiumTrialGuideNotificationIsClosed),
+      const DeepCollectionEquality().hash(premiumTrialBeginAnouncementIsClosed),
+      const DeepCollectionEquality().hash(exception));
 
   @JsonKey(ignore: true)
   @override
@@ -589,7 +559,6 @@ abstract class _RecordPageState extends RecordPageState {
       bool isPremium,
       bool isTrial,
       bool hasDiscountEntitlement,
-      bool isAlreadyShowAnnouncementSupportedMultilplePillSheet,
       bool isAlreadyShowTiral,
       bool isAlreadyShowPremiumSurvey,
       bool shouldShowMigrateInfo,
@@ -617,8 +586,6 @@ abstract class _RecordPageState extends RecordPageState {
   bool get isTrial;
   @override
   bool get hasDiscountEntitlement;
-  @override
-  bool get isAlreadyShowAnnouncementSupportedMultilplePillSheet;
   @override
   bool get isAlreadyShowTiral;
   @override

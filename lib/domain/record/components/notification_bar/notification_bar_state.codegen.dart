@@ -13,7 +13,6 @@ class NotificationBarState with _$NotificationBarState {
     required int totalCountOfActionForTakenPill,
     required bool isPremium,
     required bool isTrial,
-    required bool isAlreadyShowAnnouncementSupportedMultilplePillSheet,
     required bool hasDiscountEntitlement,
     required DateTime? beginTrialDate,
     required DateTime? trialDeadlineDate,

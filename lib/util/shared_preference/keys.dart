@@ -6,8 +6,6 @@ extension BoolKey on String {
       "premiumTrialGuideNotificationIsClosed";
   static final premiumTrialBeginAnouncementIsClosed =
       "premiumTrialBeginAnouncementIsClosed";
-  static final isAlreadyShowAnnouncementSupportedMultilplePillSheet =
-      "isAlreadyShowAnnouncementSupportedMultilplePillSheet";
   static final isAlreadyShowDemography = "isAlreadyShowDemography";
   static final isAlreadyDoneDemography = "isAlreadyDoneDemography";
   static final isAlreadyShowPremiumTrialModal =
