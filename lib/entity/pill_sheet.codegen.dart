@@ -142,7 +142,7 @@ class PillSheet with _$PillSheet {
     return DateRange(begin, end).inRange(n);
   }
 
-  DateTime get estimatedLastTakenDate => beginingDate
+  DateTime get estimatedEndTakenDate => beginingDate
       .add(Duration(days: pillSheetType.totalCount - 1))
       .add(Duration(
           days: summarizedRestDuration(
@@ -236,7 +236,7 @@ int summarizedPillCountWithPillSheetsToEndIndex(
 
   return pillSheets.sublist(0, endIndex).fold(0, (int result, pillSheet) {
     return result +
-        daysBetween(pillSheet.beginingDate, pillSheet.estimatedLastTakenDate) +
+        daysBetween(pillSheet.beginingDate, pillSheet.estimatedEndTakenDate) +
         1;
   });
 }
