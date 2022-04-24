@@ -62,7 +62,8 @@ class PremiumTrialModal extends HookConsumerWidget {
                                   color: PilllColors.primary,
                                   borderRadius: BorderRadius.circular(50),
                                 ),
-                                padding: const EdgeInsets.only(top: 4, bottom: 4),
+                                padding:
+                                    const EdgeInsets.only(top: 4, bottom: 4),
                                 child: const Center(
                                   child: Text(
                                     "30日間お試し",
@@ -77,7 +78,7 @@ class PremiumTrialModal extends HookConsumerWidget {
                               ),
                               const SizedBox(height: 8),
                               const Text(
-                                "プレミアム体験プレゼント中",
+                                "まもなく終了！\nプレミアム体験プレゼント中",
                                 style: TextStyle(
                                   color: TextColor.black,
                                   fontFamily: FontFamily.japanese,
