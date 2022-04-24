@@ -2,12 +2,10 @@ import 'package:flutter/material.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
 import 'package:pilll/analytics.dart';
 import 'package:pilll/components/atoms/color.dart';
-import 'package:pilll/domain/modal/announcement_multiple_pillsheet.dart';
 import 'package:pilll/domain/premium_introduction/premium_introduction_sheet.dart';
 import 'package:pilll/domain/premium_introduction/util/discount_deadline.dart';
 import 'package:pilll/domain/premium_trial/premium_trial_complete_modal.dart';
 import 'package:pilll/domain/premium_trial/premium_trial_modal.dart';
-import 'package:pilll/domain/record/components/notification_bar/components/announce_supported_multiple_pill_sheet.dart';
 import 'package:pilll/domain/record/components/notification_bar/components/discount_price_deadline.dart';
 import 'package:pilll/domain/record/components/notification_bar/components/ended_pill_sheet.dart';
 import 'package:pilll/domain/record/components/notification_bar/components/premium_trial_begin.dart';
@@ -21,8 +19,6 @@ import 'package:pilll/domain/record/record_page_state.codegen.dart';
 import 'package:pilll/signin/signin_sheet.dart';
 import 'package:pilll/signin/signin_sheet_state.codegen.dart';
 import 'package:pilll/util/datetime/day.dart';
-import 'package:pilll/util/shared_preference/keys.dart';
-import 'package:shared_preferences/shared_preferences.dart';
 
 class NotificationBar extends HookConsumerWidget {
   final RecordPageState parameter;
