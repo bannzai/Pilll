@@ -58,7 +58,7 @@ class ReleaseNote extends StatelessWidget {
                     children: [
                       Text(
                         '''
-休薬後は1日目として服用再開ができるようになりました。また、すべてのピルシート終了後引き続き服用を続ける場合に便利な機能を追加しました。
+休薬後は1番目として服用再開ができるようになりました。また、すべてのピルシート終了後引き続き服用を続ける場合に便利な機能を追加しました。
                         ''',
                         style: FontType.assisting.merge(TextColorStyle.main),
                       ),
