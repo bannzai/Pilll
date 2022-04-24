@@ -155,11 +155,7 @@ void showEndRestDurationModal(
   BuildContext context, {
   required PillSheetGroup pillSheetGroup,
   required RecordPageStore store,
-  required PillSheet activedPillSheet,
 }) {
-  if (activedPillSheet.lastTakenPillNumber <= 0) {
-    return;
-  }
   showDialog(
     context: context,
     builder: (context) => EndRestDurationModal(

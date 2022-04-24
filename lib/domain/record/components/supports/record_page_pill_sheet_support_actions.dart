@@ -49,10 +49,24 @@ class RecordPagePillSheetSupportActions extends StatelessWidget {
               pillSheetGroup: pillSheetGroup,
               store: store,
               didEndRestDuration: () {
-                showEndRestDurationModal(context,
+                if (pillSheetGroup.sequentialLastTakenPillNumber > 0 &&
+                    setting.pillSheetAppearanceMode ==
+                        PillSheetAppearanceMode.sequential) {
+                  showEndRestDurationModal(
+                    context,
                     pillSheetGroup: pillSheetGroup,
                     store: store,
-                    activedPillSheet: activedPillSheet);
+                  );
+                } else {
+                  ScaffoldMessenger.of(context).showSnackBar(
+                    const SnackBar(
+                      duration: Duration(
+                        seconds: 2,
+                      ),
+                      content: Text("休薬期間が終了しました"),
+                    ),
+                  );
+                }
               },
             ),
           ] else ...[
