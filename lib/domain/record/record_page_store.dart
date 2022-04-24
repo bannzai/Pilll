@@ -102,10 +102,6 @@ class RecordPageStore extends StateNotifier<RecordPageState> {
             isAlreadyShowPremiumSurvey:
                 sharedPreferences.getBool(BoolKey.isAlreadyShowPremiumSurvey) ??
                     false,
-            isAlreadyShowAnnouncementSupportedMultilplePillSheet:
-                sharedPreferences.getBool(BoolKey
-                        .isAlreadyShowAnnouncementSupportedMultilplePillSheet) ??
-                    false,
             recommendedSignupNotificationIsAlreadyShow:
                 recommendedSignupNotificationIsAlreadyShow,
             premiumTrialGuideNotificationIsClosed:
