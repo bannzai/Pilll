@@ -20,9 +20,9 @@ class SwitchingAppearanceMode extends StatelessWidget {
   Widget build(BuildContext context) {
     return GestureDetector(
       child: Row(children: [
-        Text(
-          _text,
-          style: const TextStyle(
+        const Text(
+          "表示モード",
+          style: TextStyle(
             color: TextColor.main,
             fontSize: 12,
             fontFamily: FontFamily.japanese,
@@ -37,16 +37,5 @@ class SwitchingAppearanceMode extends StatelessWidget {
         showSelectAppearanceModeModal(context);
       },
     );
-  }
-
-  String get _text {
-    switch (mode) {
-      case PillSheetAppearanceMode.number:
-        return "ピル番号表示";
-      case PillSheetAppearanceMode.date:
-        return "日付表示";
-      case PillSheetAppearanceMode.sequential:
-        return "服用日数表示";
-    }
   }
 }
