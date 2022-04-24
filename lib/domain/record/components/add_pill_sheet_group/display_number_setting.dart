@@ -90,7 +90,7 @@ class DisplayNumberSetting extends HookConsumerWidget {
             ),
             const SizedBox(width: 5),
             const Text(
-              "日目からスタート",
+              "番からスタート",
               style: TextStyle(
                 fontFamily: FontFamily.japanese,
                 fontSize: 14,
@@ -106,7 +106,7 @@ class DisplayNumberSetting extends HookConsumerWidget {
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
             Text(
-              "前回のシートの最後：$estimatedEndPillNumber日目",
+              "前回のシートの最後：$estimatedEndPillNumber番",
               style: const TextStyle(
                 fontFamily: FontFamily.japanese,
                 fontSize: 12,

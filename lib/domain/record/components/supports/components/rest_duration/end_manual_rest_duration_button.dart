@@ -96,7 +96,7 @@ class EndRestDurationModal extends StatelessWidget {
               mainAxisSize: MainAxisSize.min,
               children: <Widget>[
                 const Text(
-                  "服用1日目から再開しますか？",
+                  "服用1番目から再開しますか？",
                   style: TextStyle(
                     color: TextColor.main,
                     fontSize: 16,
@@ -106,7 +106,7 @@ class EndRestDurationModal extends StatelessWidget {
                 ),
                 const SizedBox(height: 24),
                 Text(
-                  "服用${lastTakenPillNumber + 1}日目→1日目",
+                  "服用${lastTakenPillNumber + 1}番→1番",
                   style: const TextStyle(
                     color: TextColor.main,
                     fontSize: 14,
