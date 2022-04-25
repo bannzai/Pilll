@@ -272,7 +272,7 @@ extension SaveUserLaunchInfo on UserService {
       beginingVersion = v;
     }
 
-    final now = DateTime.now();
+    final now = DateTime.now().toLocal();
     final timeZoneName = now.timeZoneName;
     final timeZoneOffset = now.timeZoneOffset;
 
