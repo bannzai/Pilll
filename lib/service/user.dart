@@ -282,6 +282,10 @@ extension SaveUserLaunchInfo on UserService {
         "beginingVersion": beginingVersion,
         "lastLoginVersion": lastLoginVersion,
         "timeZoneName": timeZoneName,
+        "timeZoneIsNegative": timeZoneOffset.isNegative,
+        "timeZoneOffsetInHours": timeZoneOffset.inHours,
+        "timeZoneOffsetInMinutes": timeZoneOffset.inMinutes,
+        // Deprecated
         "timeZoneOffset":
             "${timeZoneOffset.isNegative ? "-" : "+"}${timeZoneOffset.inHours}",
       }
