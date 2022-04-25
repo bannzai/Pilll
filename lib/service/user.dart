@@ -272,7 +272,7 @@ extension SaveUserLaunchInfo on UserService {
       beginingVersion = v;
     }
 
-    final now = DateTime.now();
+    final now = DateTime.now().toLocal();
     final timeZoneName = now.timeZoneName;
     final timeZoneOffset = now.timeZoneOffset;
 
@@ -282,6 +282,10 @@ extension SaveUserLaunchInfo on UserService {
         "beginingVersion": beginingVersion,
         "lastLoginVersion": lastLoginVersion,
         "timeZoneName": timeZoneName,
+        "timeZoneIsNegative": timeZoneOffset.isNegative,
+        "timeZoneOffsetInHours": timeZoneOffset.inHours,
+        "timeZoneOffsetInMinutes": timeZoneOffset.inMinutes,
+        // Deprecated
         "timeZoneOffset":
             "${timeZoneOffset.isNegative ? "-" : "+"}${timeZoneOffset.inHours}",
       }
