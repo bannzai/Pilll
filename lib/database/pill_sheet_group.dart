@@ -11,27 +11,22 @@ class PillSheetGroupDatastore {
 
   PillSheetGroupDatastore(this._database);
 
-  Query _latestQuery() {
+  Query<PillSheetGroup> _latestQuery() {
     return _database
         .pillSheetGroupsReference()
         .orderBy(PillSheetGroupFirestoreKeys.createdAt)
         .limitToLast(1);
   }
 
-  PillSheetGroup? _map(QuerySnapshot snapshot) {
+  PillSheetGroup? _filter(QuerySnapshot<PillSheetGroup> snapshot) {
     if (snapshot.docs.isEmpty) return null;
     if (!snapshot.docs.last.exists) return null;
-
-    final document = snapshot.docs.last;
-    final data = document.data() as Map<String, dynamic>;
-    data.putIfAbsent("id", () => document.id);
-
-    return PillSheetGroup.fromJson(data);
+    return snapshot.docs.last.data();
   }
 
   Future<PillSheetGroup?> fetchLatest() async {
     final snapshot = await _latestQuery().get();
-    return _map(snapshot);
+    return _filter(snapshot);
   }
 
   Future<PillSheetGroup?> fetchBeforePillSheetGroup() async {
@@ -44,17 +39,13 @@ class PillSheetGroupDatastore {
       return null;
     }
 
-    final document = snapshot.docs[0];
-    final data = document.data() as Map<String, dynamic>;
-    data.putIfAbsent("id", () => document.id);
-
-    return PillSheetGroup.fromJson(data);
+    return snapshot.docs[0].data();
   }
 
   Stream<PillSheetGroup> streamForLatest() {
     return _latestQuery()
         .snapshots()
-        .map(((event) => _map(event)))
+        .map(((event) => _filter(event)))
         .where((event) => event != null)
         .cast();
   }
