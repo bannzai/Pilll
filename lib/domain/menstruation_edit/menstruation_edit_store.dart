@@ -18,7 +18,7 @@ final menstruationEditProvider = StateNotifierProvider.family
   (ref, menstruation) => MenstruationEditStore(
     menstruation: menstruation,
     menstruationDatastore: ref.watch(menstruationDatastoreProvider),
-    settingService: ref.watch(settingDatastoreProvider),
+    settingDatastore: ref.watch(settingDatastoreProvider),
     userService: ref.watch(userDatastoreProvider),
   ),
 );
@@ -45,13 +45,13 @@ List<DateTime> displayedDates(Menstruation? menstruation) {
 class MenstruationEditStore extends StateNotifier<MenstruationEditState> {
   late Menstruation? initialMenstruation;
   final MenstruationDatastore menstruationDatastore;
-  final SettingDatastore settingService;
+  final SettingDatastore settingDatastore;
   final UserDatastore userService;
 
   MenstruationEditStore({
     Menstruation? menstruation,
     required this.menstruationDatastore,
-    required this.settingService,
+    required this.settingDatastore,
     required this.userService,
   }) : super(MenstruationEditState(
             menstruation: menstruation,
@@ -155,7 +155,7 @@ class MenstruationEditStore extends StateNotifier<MenstruationEditState> {
     if (menstruation == null) {
       final Setting setting;
       try {
-        setting = await settingService.fetch();
+        setting = await settingDatastore.fetch();
       } catch (error) {
         throw error;
       }

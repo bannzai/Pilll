@@ -34,7 +34,7 @@ class AddPillSheetGroupStateStore
     extends StateNotifier<AddPillSheetGroupState> {
   final PillSheetDatastore _pillSheetService;
   final PillSheetGroupDatastore _pillSheetGroupService;
-  final SettingDatastore _settingService;
+  final SettingDatastore _settingDatastore;
   final PillSheetModifiedHistoryDatastore _pillSheetModifiedHistoryService;
   final BatchFactory _batchFactory;
   AddPillSheetGroupStateStore(
@@ -43,7 +43,7 @@ class AddPillSheetGroupStateStore
     Setting? setting,
     this._pillSheetService,
     this._pillSheetGroupService,
-    this._settingService,
+    this._settingDatastore,
     this._pillSheetModifiedHistoryService,
     this._batchFactory,
   ) : super(AddPillSheetGroupState(
@@ -139,7 +139,7 @@ class AddPillSheetGroupStateStore
     );
     _pillSheetModifiedHistoryService.add(batch, history);
 
-    _settingService.updateWithBatch(batch, setting);
+    _settingDatastore.updateWithBatch(batch, setting);
 
     return batch.commit();
   }

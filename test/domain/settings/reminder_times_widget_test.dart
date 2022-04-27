@@ -56,7 +56,7 @@ void main() {
         (WidgetTester tester) async {
       SupportedDeviceType.iPhone5SE2nd.binding(tester.binding.window);
 
-      final settingService = MockSettingDatastore();
+      final settingDatastore = MockSettingDatastore();
       final entity = const Setting(
         pillNumberForFromMenstruation: 22,
         durationMenstruation: 2,
@@ -66,7 +66,7 @@ void main() {
           ReminderTime(hour: 10, minute: 0),
         ],
       );
-      when(settingService.stream())
+      when(settingDatastore.stream())
           .thenAnswer((realInvocation) => Stream.fromIterable([entity]));
 
       final pillSheetService = MockPillSheetDatastore();
@@ -86,7 +86,7 @@ void main() {
 
       final store = SettingStateStore(
         batchFactory,
-        settingService,
+        settingDatastore,
         pillSheetService,
         userService,
         pillSheetModifiedService,
@@ -126,7 +126,7 @@ void main() {
         (WidgetTester tester) async {
       SupportedDeviceType.iPhone5SE2nd.binding(tester.binding.window);
 
-      final settingService = MockSettingDatastore();
+      final settingDatastore = MockSettingDatastore();
       final entity = const Setting(
         pillNumberForFromMenstruation: 22,
         durationMenstruation: 2,
@@ -138,7 +138,7 @@ void main() {
           ReminderTime(hour: 12, minute: 0)
         ],
       );
-      when(settingService.stream())
+      when(settingDatastore.stream())
           .thenAnswer((realInvocation) => Stream.value(entity));
 
       final userService = MockUserDatastore();
@@ -158,7 +158,7 @@ void main() {
 
       final store = SettingStateStore(
         batchFactory,
-        settingService,
+        settingDatastore,
         pillSheetService,
         userService,
         pillSheetModifiedService,

@@ -100,8 +100,8 @@ void main() {
             .thenAnswer((realInvocation) => Future.value([]));
         when(diaryDatastore.stream())
             .thenAnswer((realInvocation) => const Stream.empty());
-        final settingService = MockSettingDatastore();
-        when(settingService.fetch())
+        final settingDatastore = MockSettingDatastore();
+        when(settingDatastore.fetch())
             .thenAnswer((realInvocation) => Future.value(
                   const Setting(
                     pillSheetTypes: [PillSheetType.pillsheet_21],
@@ -111,7 +111,7 @@ void main() {
                     isOnReminder: true,
                   ),
                 ));
-        when(settingService.stream())
+        when(settingDatastore.stream())
             .thenAnswer((realInvocation) => const Stream.empty());
         final userService = MockUserDatastore();
         when(userService.fetch())
@@ -130,7 +130,7 @@ void main() {
         final store = MenstruationStore(
           menstruationDatastore: menstruationDatastore,
           diaryDatastore: diaryDatastore,
-          settingService: settingService,
+          settingDatastore: settingDatastore,
           pillSheetService: pillSheetService,
           userService: userService,
           pillSheetGroupService: pillSheetGroupService,
@@ -185,8 +185,8 @@ void main() {
             .thenAnswer((realInvocation) => Future.value([]));
         when(diaryDatastore.stream())
             .thenAnswer((realInvocation) => const Stream.empty());
-        final settingService = MockSettingDatastore();
-        when(settingService.fetch())
+        final settingDatastore = MockSettingDatastore();
+        when(settingDatastore.fetch())
             .thenAnswer((realInvocation) => Future.value(const Setting(
                   pillSheetTypes: [PillSheetType.pillsheet_21],
                   pillNumberForFromMenstruation: 22,
@@ -194,7 +194,7 @@ void main() {
                   reminderTimes: [],
                   isOnReminder: true,
                 )));
-        when(settingService.stream())
+        when(settingDatastore.stream())
             .thenAnswer((realInvocation) => const Stream.empty());
         final userService = MockUserDatastore();
         when(userService.fetch())
@@ -214,7 +214,7 @@ void main() {
         final store = MenstruationStore(
           menstruationDatastore: menstruationDatastore,
           diaryDatastore: diaryDatastore,
-          settingService: settingService,
+          settingDatastore: settingDatastore,
           pillSheetService: pillSheetService,
           userService: userService,
           pillSheetGroupService: pillSheetGroupService,
@@ -253,8 +253,8 @@ void main() {
             .thenAnswer((realInvocation) => Future.value([]));
         when(diaryDatastore.stream())
             .thenAnswer((realInvocation) => const Stream.empty());
-        final settingService = MockSettingDatastore();
-        when(settingService.fetch()).thenAnswer(
+        final settingDatastore = MockSettingDatastore();
+        when(settingDatastore.fetch()).thenAnswer(
           (realInvocation) => Future.value(
             const Setting(
               pillSheetTypes: [PillSheetType.pillsheet_21],
@@ -265,7 +265,7 @@ void main() {
             ),
           ),
         );
-        when(settingService.stream())
+        when(settingDatastore.stream())
             .thenAnswer((realInvocation) => const Stream.empty());
         final userService = MockUserDatastore();
         when(userService.fetch())
@@ -293,7 +293,7 @@ void main() {
         final store = MenstruationStore(
           menstruationDatastore: menstruationDatastore,
           diaryDatastore: diaryDatastore,
-          settingService: settingService,
+          settingDatastore: settingDatastore,
           pillSheetService: pillSheetService,
           userService: userService,
           pillSheetGroupService: pillSheetGroupService,
@@ -336,8 +336,8 @@ void main() {
             .thenAnswer((realInvocation) => Future.value([]));
         when(diaryDatastore.stream())
             .thenAnswer((realInvocation) => const Stream.empty());
-        final settingService = MockSettingDatastore();
-        when(settingService.fetch()).thenAnswer(
+        final settingDatastore = MockSettingDatastore();
+        when(settingDatastore.fetch()).thenAnswer(
           (realInvocation) => Future.value(
             const Setting(
               pillSheetTypes: [PillSheetType.pillsheet_21],
@@ -348,7 +348,7 @@ void main() {
             ),
           ),
         );
-        when(settingService.stream())
+        when(settingDatastore.stream())
             .thenAnswer((realInvocation) => const Stream.empty());
         final userService = MockUserDatastore();
         when(userService.fetch())
@@ -373,7 +373,7 @@ void main() {
         final store = MenstruationStore(
           menstruationDatastore: menstruationDatastore,
           diaryDatastore: diaryDatastore,
-          settingService: settingService,
+          settingDatastore: settingDatastore,
           pillSheetService: pillSheetService,
           userService: userService,
           pillSheetGroupService: pillSheetGroupService,

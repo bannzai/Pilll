@@ -30,14 +30,14 @@ final settingStateProvider = Provider((ref) => ref.watch(settingStoreProvider));
 
 class SettingStateStore extends StateNotifier<SettingState> {
   final BatchFactory _batchFactory;
-  final SettingDatastore _settingService;
+  final SettingDatastore _settingDatastore;
   final PillSheetDatastore _pillSheetService;
   final UserDatastore _userService;
   final PillSheetModifiedHistoryDatastore _pillSheetModifiedHistoryService;
   final PillSheetGroupDatastore _pillSheetGroupService;
   SettingStateStore(
     this._batchFactory,
-    this._settingService,
+    this._settingDatastore,
     this._pillSheetService,
     this._userService,
     this._pillSheetModifiedHistoryService,
@@ -84,7 +84,7 @@ class SettingStateStore extends StateNotifier<SettingState> {
   void _subscribe() {
     cancel();
 
-    _settingCanceller = _settingService.stream().listen((event) {
+    _settingCanceller = _settingDatastore.stream().listen((event) {
       state = state.copyWith(setting: event);
     });
     _pillSheetGroupCanceller =
@@ -123,7 +123,7 @@ class SettingStateStore extends StateNotifier<SettingState> {
     if (reminderTimes.length < ReminderTime.minimumCount) {
       throw Exception("通知時刻は最低${ReminderTime.minimumCount}件必要です");
     }
-    _settingService
+    _settingDatastore
         .update(setting.copyWith(reminderTimes: reminderTimes))
         .then((entity) => state = state.copyWith(setting: entity));
   }
@@ -163,7 +163,7 @@ class SettingStateStore extends StateNotifier<SettingState> {
     if (setting == null) {
       throw const FormatException("setting entity not found");
     }
-    return _settingService
+    return _settingDatastore
         .update(setting.copyWith(isOnReminder: isOnReminder))
         .then((setting) => state = state.copyWith(setting: setting));
   }
@@ -173,7 +173,7 @@ class SettingStateStore extends StateNotifier<SettingState> {
     if (setting == null) {
       throw const FormatException("setting entity not found");
     }
-    return _settingService
+    return _settingDatastore
         .update(setting.copyWith(isOnNotifyInNotTakenDuration: isOn))
         .then((setting) => state = state.copyWith(setting: setting));
   }
@@ -211,7 +211,7 @@ class SettingStateStore extends StateNotifier<SettingState> {
     if (setting == null) {
       throw const FormatException("setting entity not found");
     }
-    return _settingService
+    return _settingDatastore
         .update(setting.copyWith(isAutomaticallyCreatePillSheet: isOn))
         .then((setting) => state = state.copyWith(setting: setting));
   }
@@ -227,7 +227,7 @@ class SettingStateStore extends StateNotifier<SettingState> {
     reminderNotificationCustomization =
         reminderNotificationCustomization.copyWith(word: word);
 
-    return _settingService
+    return _settingDatastore
         .update(setting.copyWith(
             reminderNotificationCustomization:
                 reminderNotificationCustomization))
@@ -245,7 +245,7 @@ class SettingStateStore extends StateNotifier<SettingState> {
     reminderNotificationCustomization = reminderNotificationCustomization
         .copyWith(isInVisibleReminderDate: isInVisibleReminderDate);
 
-    return _settingService
+    return _settingDatastore
         .update(setting.copyWith(
             reminderNotificationCustomization:
                 reminderNotificationCustomization))
@@ -263,7 +263,7 @@ class SettingStateStore extends StateNotifier<SettingState> {
     reminderNotificationCustomization = reminderNotificationCustomization
         .copyWith(isInVisiblePillNumber: isInVisiblePillNumber);
 
-    return _settingService
+    return _settingDatastore
         .update(setting.copyWith(
             reminderNotificationCustomization:
                 reminderNotificationCustomization))
@@ -281,7 +281,7 @@ class SettingStateStore extends StateNotifier<SettingState> {
     reminderNotificationCustomization = reminderNotificationCustomization
         .copyWith(isInVisibleDescription: isInVisibleDescription);
 
-    return _settingService
+    return _settingDatastore
         .update(setting.copyWith(
             reminderNotificationCustomization:
                 reminderNotificationCustomization))

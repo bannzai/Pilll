@@ -40,7 +40,7 @@ final initialSettingStateProvider =
 class InitialSettingStateStore extends StateNotifier<InitialSettingState> {
   final UserDatastore _userService;
   final BatchFactory _batchFactory;
-  final SettingDatastore _settingService;
+  final SettingDatastore _settingDatastore;
   final PillSheetDatastore _pillSheetService;
   final PillSheetModifiedHistoryDatastore _pillSheetModifiedHistoryService;
   final PillSheetGroupDatastore _pillSheetGroupService;
@@ -49,7 +49,7 @@ class InitialSettingStateStore extends StateNotifier<InitialSettingState> {
   InitialSettingStateStore(
     this._userService,
     this._batchFactory,
-    this._settingService,
+    this._settingDatastore,
     this._pillSheetService,
     this._pillSheetModifiedHistoryService,
     this._pillSheetGroupService,
@@ -179,7 +179,7 @@ class InitialSettingStateStore extends StateNotifier<InitialSettingState> {
     }
 
     final setting = state.buildSetting();
-    _settingService.updateWithBatch(batch, setting);
+    _settingDatastore.updateWithBatch(batch, setting);
 
     await batch.commit();
 

@@ -36,7 +36,7 @@ final recordPageStoreProvider =
 class RecordPageStore extends StateNotifier<RecordPageState> {
   final BatchFactory _batchFactory;
   final PillSheetDatastore _pillSheetService;
-  final SettingDatastore _settingService;
+  final SettingDatastore _settingDatastore;
   final UserDatastore _userService;
   final AuthService _authService;
   final PillSheetModifiedHistoryDatastore _pillSheetModifiedHistoryService;
@@ -44,7 +44,7 @@ class RecordPageStore extends StateNotifier<RecordPageState> {
   RecordPageStore(
     this._batchFactory,
     this._pillSheetService,
-    this._settingService,
+    this._settingDatastore,
     this._userService,
     this._authService,
     this._pillSheetModifiedHistoryService,
@@ -62,7 +62,7 @@ class RecordPageStore extends StateNotifier<RecordPageState> {
           state = state.copyWith(pillSheetGroup: pillSheetGroup);
         }),
         Future(() async {
-          final setting = await _settingService.fetch();
+          final setting = await _settingDatastore.fetch();
           state = state.copyWith(setting: setting);
         }),
         Future(() async {
@@ -137,7 +137,7 @@ class RecordPageStore extends StateNotifier<RecordPageState> {
       state = state.copyWith(pillSheetGroup: event);
     });
     _settingCanceller?.cancel();
-    _settingCanceller = _settingService.stream().listen((setting) {
+    _settingCanceller = _settingDatastore.stream().listen((setting) {
       state = state.copyWith(setting: setting);
     });
     _userSubscribeCanceller?.cancel();
@@ -531,7 +531,7 @@ class RecordPageStore extends StateNotifier<RecordPageState> {
       throw const FormatException("setting entity not found");
     }
     final updated = setting.copyWith(pillSheetAppearanceMode: mode);
-    _settingService
+    _settingDatastore
         .update(updated)
         .then((value) => state = state.copyWith(setting: value));
   }

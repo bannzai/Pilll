@@ -21,7 +21,7 @@ final menstruationsStoreProvider =
   (ref) => MenstruationStore(
     menstruationDatastore: ref.watch(menstruationDatastoreProvider),
     diaryDatastore: ref.watch(diaryDatastoreProvider),
-    settingService: ref.watch(settingDatastoreProvider),
+    settingDatastore: ref.watch(settingDatastoreProvider),
     pillSheetService: ref.watch(pillSheetDatastoreProvider),
     userService: ref.watch(userDatastoreProvider),
     pillSheetGroupService: ref.watch(pillSheetGroupDatastoreProvider),
@@ -31,14 +31,14 @@ final menstruationsStoreProvider =
 class MenstruationStore extends StateNotifier<MenstruationState> {
   final MenstruationDatastore menstruationDatastore;
   final DiaryDatastore diaryDatastore;
-  final SettingDatastore settingService;
+  final SettingDatastore settingDatastore;
   final PillSheetDatastore pillSheetService;
   final UserDatastore userService;
   final PillSheetGroupDatastore pillSheetGroupService;
   MenstruationStore({
     required this.menstruationDatastore,
     required this.diaryDatastore,
-    required this.settingService,
+    required this.settingDatastore,
     required this.pillSheetService,
     required this.userService,
     required this.pillSheetGroupService,
@@ -52,7 +52,7 @@ class MenstruationStore extends StateNotifier<MenstruationState> {
     try {
       final menstruations = await menstruationDatastore.fetchAll();
       final diaries = await diaryDatastore.fetchListAround90Days(today());
-      final setting = await settingService.fetch();
+      final setting = await settingDatastore.fetch();
       final latestPillSheetGroup = await pillSheetGroupService.fetchLatest();
       final user = await userService.fetch();
       state = state.copyWith(
@@ -87,7 +87,7 @@ class MenstruationStore extends StateNotifier<MenstruationState> {
       state = state.copyWith(diariesForMonth: entities);
     });
     _settingCanceller?.cancel();
-    _settingCanceller = settingService.stream().listen((setting) {
+    _settingCanceller = settingDatastore.stream().listen((setting) {
       state = state.copyWith(setting: setting);
     });
     _pillSheetGroupCanceller?.cancel();

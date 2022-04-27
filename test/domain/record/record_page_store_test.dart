@@ -90,12 +90,12 @@ void main() {
           PillSheetType.pillsheet_28_0,
         ],
       );
-      final settingService = MockSettingDatastore();
-      when(settingService.fetch())
+      final settingDatastore = MockSettingDatastore();
+      when(settingDatastore.fetch())
           .thenAnswer((realInvocation) async => setting);
-      when(settingService.stream())
+      when(settingDatastore.stream())
           .thenAnswer((realInvocation) => const Stream.empty());
-      when(settingService.updateWithBatch(batch, setting)).thenReturn(null);
+      when(settingDatastore.updateWithBatch(batch, setting)).thenReturn(null);
 
       final user = const User();
       final userService = MockUserDatastore();
@@ -107,7 +107,7 @@ void main() {
         overrides: [
           batchFactoryProvider.overrideWithValue(batchFactory),
           authServiceProvider.overrideWithValue(authService),
-          settingDatastoreProvider.overrideWithValue(settingService),
+          settingDatastoreProvider.overrideWithValue(settingDatastore),
           pillSheetDatastoreProvider.overrideWithValue(pillSheetService),
           pillSheetModifiedHistoryDatastoreProvider
               .overrideWithValue(pillSheetModifiedHistoryService),
@@ -194,12 +194,12 @@ void main() {
           PillSheetType.pillsheet_21
         ],
       );
-      final settingService = MockSettingDatastore();
-      when(settingService.fetch())
+      final settingDatastore = MockSettingDatastore();
+      when(settingDatastore.fetch())
           .thenAnswer((realInvocation) async => setting);
-      when(settingService.stream())
+      when(settingDatastore.stream())
           .thenAnswer((realInvocation) => const Stream.empty());
-      when(settingService.updateWithBatch(batch, setting)).thenReturn(null);
+      when(settingDatastore.updateWithBatch(batch, setting)).thenReturn(null);
 
       final user = const User();
       final userService = MockUserDatastore();
@@ -211,7 +211,7 @@ void main() {
         overrides: [
           batchFactoryProvider.overrideWithValue(batchFactory),
           authServiceProvider.overrideWithValue(authService),
-          settingDatastoreProvider.overrideWithValue(settingService),
+          settingDatastoreProvider.overrideWithValue(settingDatastore),
           pillSheetDatastoreProvider.overrideWithValue(pillSheetService),
           pillSheetModifiedHistoryDatastoreProvider
               .overrideWithValue(pillSheetModifiedHistoryService),
@@ -304,12 +304,12 @@ void main() {
           PillSheetType.pillsheet_28_0,
         ],
       );
-      final settingService = MockSettingDatastore();
-      when(settingService.fetch())
+      final settingDatastore = MockSettingDatastore();
+      when(settingDatastore.fetch())
           .thenAnswer((realInvocation) async => setting);
-      when(settingService.stream())
+      when(settingDatastore.stream())
           .thenAnswer((realInvocation) => const Stream.empty());
-      when(settingService.updateWithBatch(batch, setting)).thenReturn(null);
+      when(settingDatastore.updateWithBatch(batch, setting)).thenReturn(null);
 
       final user = const User();
       final userService = MockUserDatastore();
@@ -321,7 +321,7 @@ void main() {
         overrides: [
           batchFactoryProvider.overrideWithValue(batchFactory),
           authServiceProvider.overrideWithValue(authService),
-          settingDatastoreProvider.overrideWithValue(settingService),
+          settingDatastoreProvider.overrideWithValue(settingDatastore),
           pillSheetDatastoreProvider.overrideWithValue(pillSheetService),
           pillSheetModifiedHistoryDatastoreProvider
               .overrideWithValue(pillSheetModifiedHistoryService),
@@ -425,12 +425,12 @@ void main() {
           PillSheetType.pillsheet_21,
         ],
       );
-      final settingService = MockSettingDatastore();
-      when(settingService.fetch())
+      final settingDatastore = MockSettingDatastore();
+      when(settingDatastore.fetch())
           .thenAnswer((realInvocation) async => setting);
-      when(settingService.stream())
+      when(settingDatastore.stream())
           .thenAnswer((realInvocation) => const Stream.empty());
-      when(settingService.updateWithBatch(batch, setting)).thenReturn(null);
+      when(settingDatastore.updateWithBatch(batch, setting)).thenReturn(null);
 
       final user = const User();
       final userService = MockUserDatastore();
@@ -442,7 +442,7 @@ void main() {
         overrides: [
           batchFactoryProvider.overrideWithValue(batchFactory),
           authServiceProvider.overrideWithValue(authService),
-          settingDatastoreProvider.overrideWithValue(settingService),
+          settingDatastoreProvider.overrideWithValue(settingDatastore),
           pillSheetDatastoreProvider.overrideWithValue(pillSheetService),
           pillSheetModifiedHistoryDatastoreProvider
               .overrideWithValue(pillSheetModifiedHistoryService),
@@ -547,12 +547,12 @@ void main() {
           PillSheetType.pillsheet_21,
         ],
       );
-      final settingService = MockSettingDatastore();
-      when(settingService.fetch())
+      final settingDatastore = MockSettingDatastore();
+      when(settingDatastore.fetch())
           .thenAnswer((realInvocation) async => setting);
-      when(settingService.stream())
+      when(settingDatastore.stream())
           .thenAnswer((realInvocation) => const Stream.empty());
-      when(settingService.updateWithBatch(batch, setting)).thenReturn(null);
+      when(settingDatastore.updateWithBatch(batch, setting)).thenReturn(null);
 
       final user = const User();
       final userService = MockUserDatastore();
@@ -564,7 +564,7 @@ void main() {
         overrides: [
           batchFactoryProvider.overrideWithValue(batchFactory),
           authServiceProvider.overrideWithValue(authService),
-          settingDatastoreProvider.overrideWithValue(settingService),
+          settingDatastoreProvider.overrideWithValue(settingDatastore),
           pillSheetDatastoreProvider.overrideWithValue(pillSheetService),
           pillSheetModifiedHistoryDatastoreProvider
               .overrideWithValue(pillSheetModifiedHistoryService),
@@ -672,12 +672,12 @@ void main() {
           PillSheetType.pillsheet_21,
         ],
       );
-      final settingService = MockSettingDatastore();
-      when(settingService.fetch())
+      final settingDatastore = MockSettingDatastore();
+      when(settingDatastore.fetch())
           .thenAnswer((realInvocation) async => setting);
-      when(settingService.stream())
+      when(settingDatastore.stream())
           .thenAnswer((realInvocation) => const Stream.empty());
-      when(settingService.updateWithBatch(batch, setting)).thenReturn(null);
+      when(settingDatastore.updateWithBatch(batch, setting)).thenReturn(null);
 
       final user = const User();
       final userService = MockUserDatastore();
@@ -689,7 +689,7 @@ void main() {
         overrides: [
           batchFactoryProvider.overrideWithValue(batchFactory),
           authServiceProvider.overrideWithValue(authService),
-          settingDatastoreProvider.overrideWithValue(settingService),
+          settingDatastoreProvider.overrideWithValue(settingDatastore),
           pillSheetDatastoreProvider.overrideWithValue(pillSheetService),
           pillSheetModifiedHistoryDatastoreProvider
               .overrideWithValue(pillSheetModifiedHistoryService),
@@ -789,12 +789,12 @@ void main() {
             PillSheetType.pillsheet_28_0,
           ],
         );
-        final settingService = MockSettingDatastore();
-        when(settingService.fetch())
+        final settingDatastore = MockSettingDatastore();
+        when(settingDatastore.fetch())
             .thenAnswer((realInvocation) async => setting);
-        when(settingService.stream())
+        when(settingDatastore.stream())
             .thenAnswer((realInvocation) => const Stream.empty());
-        when(settingService.updateWithBatch(batch, setting)).thenReturn(null);
+        when(settingDatastore.updateWithBatch(batch, setting)).thenReturn(null);
 
         final user = const User();
         final userService = MockUserDatastore();
@@ -806,7 +806,7 @@ void main() {
           overrides: [
             batchFactoryProvider.overrideWithValue(batchFactory),
             authServiceProvider.overrideWithValue(authService),
-            settingDatastoreProvider.overrideWithValue(settingService),
+            settingDatastoreProvider.overrideWithValue(settingDatastore),
             pillSheetDatastoreProvider.overrideWithValue(pillSheetService),
             pillSheetModifiedHistoryDatastoreProvider
                 .overrideWithValue(pillSheetModifiedHistoryService),
@@ -903,12 +903,12 @@ void main() {
             PillSheetType.pillsheet_28_0,
           ],
         );
-        final settingService = MockSettingDatastore();
-        when(settingService.fetch())
+        final settingDatastore = MockSettingDatastore();
+        when(settingDatastore.fetch())
             .thenAnswer((realInvocation) async => setting);
-        when(settingService.stream())
+        when(settingDatastore.stream())
             .thenAnswer((realInvocation) => const Stream.empty());
-        when(settingService.updateWithBatch(batch, setting)).thenReturn(null);
+        when(settingDatastore.updateWithBatch(batch, setting)).thenReturn(null);
 
         final user = const User();
         final userService = MockUserDatastore();
@@ -920,7 +920,7 @@ void main() {
           overrides: [
             batchFactoryProvider.overrideWithValue(batchFactory),
             authServiceProvider.overrideWithValue(authService),
-            settingDatastoreProvider.overrideWithValue(settingService),
+            settingDatastoreProvider.overrideWithValue(settingDatastore),
             pillSheetDatastoreProvider.overrideWithValue(pillSheetService),
             pillSheetModifiedHistoryDatastoreProvider
                 .overrideWithValue(pillSheetModifiedHistoryService),
@@ -1032,12 +1032,12 @@ void main() {
             PillSheetType.pillsheet_28_0,
           ],
         );
-        final settingService = MockSettingDatastore();
-        when(settingService.fetch())
+        final settingDatastore = MockSettingDatastore();
+        when(settingDatastore.fetch())
             .thenAnswer((realInvocation) async => setting);
-        when(settingService.stream())
+        when(settingDatastore.stream())
             .thenAnswer((realInvocation) => const Stream.empty());
-        when(settingService.updateWithBatch(batch, setting)).thenReturn(null);
+        when(settingDatastore.updateWithBatch(batch, setting)).thenReturn(null);
 
         final user = const User();
         final userService = MockUserDatastore();
@@ -1049,7 +1049,7 @@ void main() {
           overrides: [
             batchFactoryProvider.overrideWithValue(batchFactory),
             authServiceProvider.overrideWithValue(authService),
-            settingDatastoreProvider.overrideWithValue(settingService),
+            settingDatastoreProvider.overrideWithValue(settingDatastore),
             pillSheetDatastoreProvider.overrideWithValue(pillSheetService),
             pillSheetModifiedHistoryDatastoreProvider
                 .overrideWithValue(pillSheetModifiedHistoryService),
@@ -1153,12 +1153,12 @@ void main() {
             PillSheetType.pillsheet_28_0,
           ],
         );
-        final settingService = MockSettingDatastore();
-        when(settingService.fetch())
+        final settingDatastore = MockSettingDatastore();
+        when(settingDatastore.fetch())
             .thenAnswer((realInvocation) async => setting);
-        when(settingService.stream())
+        when(settingDatastore.stream())
             .thenAnswer((realInvocation) => const Stream.empty());
-        when(settingService.updateWithBatch(batch, setting)).thenReturn(null);
+        when(settingDatastore.updateWithBatch(batch, setting)).thenReturn(null);
 
         final user = const User();
         final userService = MockUserDatastore();
@@ -1170,7 +1170,7 @@ void main() {
           overrides: [
             batchFactoryProvider.overrideWithValue(batchFactory),
             authServiceProvider.overrideWithValue(authService),
-            settingDatastoreProvider.overrideWithValue(settingService),
+            settingDatastoreProvider.overrideWithValue(settingDatastore),
             pillSheetDatastoreProvider.overrideWithValue(pillSheetService),
             pillSheetModifiedHistoryDatastoreProvider
                 .overrideWithValue(pillSheetModifiedHistoryService),
@@ -1280,12 +1280,12 @@ void main() {
             PillSheetType.pillsheet_21,
           ],
         );
-        final settingService = MockSettingDatastore();
-        when(settingService.fetch())
+        final settingDatastore = MockSettingDatastore();
+        when(settingDatastore.fetch())
             .thenAnswer((realInvocation) async => setting);
-        when(settingService.stream())
+        when(settingDatastore.stream())
             .thenAnswer((realInvocation) => const Stream.empty());
-        when(settingService.updateWithBatch(batch, setting)).thenReturn(null);
+        when(settingDatastore.updateWithBatch(batch, setting)).thenReturn(null);
 
         final user = const User();
         final userService = MockUserDatastore();
@@ -1297,7 +1297,7 @@ void main() {
           overrides: [
             batchFactoryProvider.overrideWithValue(batchFactory),
             authServiceProvider.overrideWithValue(authService),
-            settingDatastoreProvider.overrideWithValue(settingService),
+            settingDatastoreProvider.overrideWithValue(settingDatastore),
             pillSheetDatastoreProvider.overrideWithValue(pillSheetService),
             pillSheetModifiedHistoryDatastoreProvider
                 .overrideWithValue(pillSheetModifiedHistoryService),
@@ -1410,12 +1410,12 @@ void main() {
             PillSheetType.pillsheet_21,
           ],
         );
-        final settingService = MockSettingDatastore();
-        when(settingService.fetch())
+        final settingDatastore = MockSettingDatastore();
+        when(settingDatastore.fetch())
             .thenAnswer((realInvocation) async => setting);
-        when(settingService.stream())
+        when(settingDatastore.stream())
             .thenAnswer((realInvocation) => const Stream.empty());
-        when(settingService.updateWithBatch(batch, setting)).thenReturn(null);
+        when(settingDatastore.updateWithBatch(batch, setting)).thenReturn(null);
 
         final user = const User();
         final userService = MockUserDatastore();
@@ -1427,7 +1427,7 @@ void main() {
           overrides: [
             batchFactoryProvider.overrideWithValue(batchFactory),
             authServiceProvider.overrideWithValue(authService),
-            settingDatastoreProvider.overrideWithValue(settingService),
+            settingDatastoreProvider.overrideWithValue(settingDatastore),
             pillSheetDatastoreProvider.overrideWithValue(pillSheetService),
             pillSheetModifiedHistoryDatastoreProvider
                 .overrideWithValue(pillSheetModifiedHistoryService),
@@ -1545,12 +1545,12 @@ void main() {
             PillSheetType.pillsheet_21,
           ],
         );
-        final settingService = MockSettingDatastore();
-        when(settingService.fetch())
+        final settingDatastore = MockSettingDatastore();
+        when(settingDatastore.fetch())
             .thenAnswer((realInvocation) async => setting);
-        when(settingService.stream())
+        when(settingDatastore.stream())
             .thenAnswer((realInvocation) => const Stream.empty());
-        when(settingService.updateWithBatch(batch, setting)).thenReturn(null);
+        when(settingDatastore.updateWithBatch(batch, setting)).thenReturn(null);
 
         final user = const User();
         final userService = MockUserDatastore();
@@ -1562,7 +1562,7 @@ void main() {
           overrides: [
             batchFactoryProvider.overrideWithValue(batchFactory),
             authServiceProvider.overrideWithValue(authService),
-            settingDatastoreProvider.overrideWithValue(settingService),
+            settingDatastoreProvider.overrideWithValue(settingDatastore),
             pillSheetDatastoreProvider.overrideWithValue(pillSheetService),
             pillSheetModifiedHistoryDatastoreProvider
                 .overrideWithValue(pillSheetModifiedHistoryService),

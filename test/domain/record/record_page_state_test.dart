@@ -80,10 +80,10 @@ void main() {
 
       final service = MockPillSheetDatastore();
       final batch = MockBatchFactory();
-      final settingService = MockSettingDatastore();
-      when(settingService.fetch())
+      final settingDatastore = MockSettingDatastore();
+      when(settingDatastore.fetch())
           .thenAnswer((realInvocation) => Future.value(setting));
-      when(settingService.stream())
+      when(settingDatastore.stream())
           .thenAnswer((realInvocation) => const Stream.empty());
 
       final authService = MockAuthService();
@@ -106,7 +106,7 @@ void main() {
       final store = RecordPageStore(
         batch,
         service,
-        settingService,
+        settingDatastore,
         userService,
         authService,
         pillSheetModifedHistoryService,
@@ -155,10 +155,10 @@ void main() {
 
       final service = MockPillSheetDatastore();
       final batch = MockBatchFactory();
-      final settingService = MockSettingDatastore();
-      when(settingService.fetch())
+      final settingDatastore = MockSettingDatastore();
+      when(settingDatastore.fetch())
           .thenAnswer((realInvocation) => Future.value(setting));
-      when(settingService.stream())
+      when(settingDatastore.stream())
           .thenAnswer((realInvocation) => const Stream.empty());
 
       final authService = MockAuthService();
@@ -182,7 +182,7 @@ void main() {
       final store = RecordPageStore(
         batch,
         service,
-        settingService,
+        settingDatastore,
         userService,
         authService,
         pillSheetModifedHistoryService,
@@ -233,10 +233,10 @@ void main() {
 
       final service = MockPillSheetDatastore();
       final batch = MockBatchFactory();
-      final settingService = MockSettingDatastore();
-      when(settingService.fetch())
+      final settingDatastore = MockSettingDatastore();
+      when(settingDatastore.fetch())
           .thenAnswer((realInvocation) => Future.value(setting));
-      when(settingService.stream())
+      when(settingDatastore.stream())
           .thenAnswer((realInvocation) => const Stream.empty());
 
       final authService = MockAuthService();
@@ -260,7 +260,7 @@ void main() {
       final store = RecordPageStore(
         batch,
         service,
-        settingService,
+        settingDatastore,
         userService,
         authService,
         pillSheetModifedHistoryService,
@@ -306,10 +306,10 @@ void main() {
 
       final service = MockPillSheetDatastore();
       final batch = MockBatchFactory();
-      final settingService = MockSettingDatastore();
-      when(settingService.fetch())
+      final settingDatastore = MockSettingDatastore();
+      when(settingDatastore.fetch())
           .thenAnswer((realInvocation) => Future.value(setting));
-      when(settingService.stream())
+      when(settingDatastore.stream())
           .thenAnswer((realInvocation) => const Stream.empty());
 
       final authService = MockAuthService();
@@ -333,7 +333,7 @@ void main() {
       final store = RecordPageStore(
         batch,
         service,
-        settingService,
+        settingDatastore,
         userService,
         authService,
         pillSheetModifedHistoryService,
