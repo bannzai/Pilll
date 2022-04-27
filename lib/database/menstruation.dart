@@ -10,14 +10,10 @@ class MenstruationDatastore {
   final DatabaseConnection _database;
 
   MenstruationDatastore(this._database);
-  Menstruation _map(DocumentSnapshot document) {
-    var data = document.data()! as Map<String, dynamic>;
-    data["id"] = document.id;
-    return Menstruation.fromJson(data);
-  }
 
-  Future<Menstruation> fetch(String id) {
-    return _database.menstruationReference(id).get().then(_map);
+  Future<Menstruation> fetch(String id) async {
+    final doc = await _database.menstruationReference(id).get();
+    return doc.data()!;
   }
 
   Future<List<Menstruation>> fetchAll() {
@@ -26,7 +22,7 @@ class MenstruationDatastore {
         .where(MenstruationFirestoreKey.deletedAt, isEqualTo: null)
         .orderBy(MenstruationFirestoreKey.beginDate, descending: true)
         .get()
-        .then((event) => event.docs.map(_map).toList())
+        .then((event) => event.docs.map((e) => e.data()).toList())
         .then((value) =>
             value.where((element) => element.deletedAt == null).toList());
   }
@@ -36,7 +32,7 @@ class MenstruationDatastore {
         .menstruationsReference()
         .add(menstruation)
         .then((event) => event.get())
-        .then((value) => _map(value));
+        .then((value) => value.data()!);
   }
 
   Future<Menstruation> update(String id, Menstruation menstruation) {
@@ -53,7 +49,7 @@ class MenstruationDatastore {
         .where(MenstruationFirestoreKey.deletedAt, isEqualTo: null)
         .orderBy(MenstruationFirestoreKey.beginDate, descending: true)
         .snapshots()
-        .map((event) => event.docs.map((doc) => _map(doc)).toList())
+        .map((event) => event.docs.map((doc) => doc.data()).toList())
         .map((value) =>
             value.where((element) => element.deletedAt == null).toList());
   }
