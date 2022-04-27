@@ -8,11 +8,11 @@ import 'package:riverpod/riverpod.dart';
 
 final signinSheetStoreProvider = StateNotifierProvider.autoDispose
     .family<SignInSheetStore, SignInSheetState, SignInSheetStateContext>(
-  (ref, context) => SignInSheetStore(context, ref.watch(userDatabaseProvider)),
+  (ref, context) => SignInSheetStore(context, ref.watch(userDatastoreProvider)),
 );
 
 class SignInSheetStore extends StateNotifier<SignInSheetState> {
-  final UserDatabase _userService;
+  final UserDatastore _userService;
   SignInSheetStore(SignInSheetStateContext context, this._userService)
       : super(SignInSheetState(context: context)) {
     reset();

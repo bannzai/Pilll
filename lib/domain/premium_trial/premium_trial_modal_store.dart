@@ -9,13 +9,13 @@ import 'package:riverpod/riverpod.dart';
 final premiumTrialStoreProvider =
     StateNotifierProvider<PremiumTrialModalStateStore, PremiumTrialModalState>(
   (ref) => PremiumTrialModalStateStore(
-    ref.watch(userDatabaseProvider),
+    ref.watch(userDatastoreProvider),
   ),
 );
 
 class PremiumTrialModalStateStore
     extends StateNotifier<PremiumTrialModalState> {
-  final UserDatabase _userService;
+  final UserDatastore _userService;
   PremiumTrialModalStateStore(
     this._userService,
   ) : super(const PremiumTrialModalState()) {

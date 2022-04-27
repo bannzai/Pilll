@@ -39,7 +39,7 @@ void main() {
 
       final container = ProviderContainer(
         overrides: [
-          userDatabaseProvider.overrideWithValue(userService),
+          userDatastoreProvider.overrideWithValue(userService),
           batchFactoryProvider.overrideWithValue(batchFactory),
           authServiceProvider.overrideWithValue(authService),
           settingDatabaseProvider.overrideWithValue(settingService),
@@ -73,7 +73,7 @@ void main() {
 
       final container = ProviderContainer(
         overrides: [
-          userDatabaseProvider.overrideWithValue(userService),
+          userDatastoreProvider.overrideWithValue(userService),
           batchFactoryProvider.overrideWithValue(batchFactory),
           authServiceProvider.overrideWithValue(authService),
           settingDatabaseProvider.overrideWithValue(settingService),
@@ -116,7 +116,7 @@ void main() {
 
       final container = ProviderContainer(
         overrides: [
-          userDatabaseProvider.overrideWithValue(userService),
+          userDatastoreProvider.overrideWithValue(userService),
           batchFactoryProvider.overrideWithValue(batchFactory),
           authServiceProvider.overrideWithValue(authService),
           settingDatabaseProvider.overrideWithValue(settingService),
@@ -154,7 +154,7 @@ void main() {
 
       final container = ProviderContainer(
         overrides: [
-          userDatabaseProvider.overrideWithValue(userService),
+          userDatastoreProvider.overrideWithValue(userService),
           batchFactoryProvider.overrideWithValue(batchFactory),
           authServiceProvider.overrideWithValue(authService),
           settingDatabaseProvider.overrideWithValue(settingService),
@@ -193,7 +193,7 @@ void main() {
 
       final container = ProviderContainer(
         overrides: [
-          userDatabaseProvider.overrideWithValue(userService),
+          userDatastoreProvider.overrideWithValue(userService),
           batchFactoryProvider.overrideWithValue(batchFactory),
           authServiceProvider.overrideWithValue(authService),
           settingDatabaseProvider.overrideWithValue(settingService),
@@ -232,7 +232,7 @@ void main() {
 
       final container = ProviderContainer(
         overrides: [
-          userDatabaseProvider.overrideWithValue(userService),
+          userDatastoreProvider.overrideWithValue(userService),
           batchFactoryProvider.overrideWithValue(batchFactory),
           authServiceProvider.overrideWithValue(authService),
           settingDatabaseProvider.overrideWithValue(settingService),
@@ -265,7 +265,7 @@ void main() {
 
       final container = ProviderContainer(
         overrides: [
-          userDatabaseProvider.overrideWithValue(userService),
+          userDatastoreProvider.overrideWithValue(userService),
           batchFactoryProvider.overrideWithValue(batchFactory),
           authServiceProvider.overrideWithValue(authService),
           settingDatabaseProvider.overrideWithValue(settingService),
@@ -339,7 +339,7 @@ void main() {
 
       final container = ProviderContainer(
         overrides: [
-          userDatabaseProvider.overrideWithValue(userService),
+          userDatastoreProvider.overrideWithValue(userService),
           batchFactoryProvider.overrideWithValue(batchFactory),
           authServiceProvider.overrideWithValue(authService),
           settingDatabaseProvider.overrideWithValue(settingService),
@@ -437,7 +437,7 @@ void main() {
 
       final container = ProviderContainer(
         overrides: [
-          userDatabaseProvider.overrideWithValue(userService),
+          userDatastoreProvider.overrideWithValue(userService),
           batchFactoryProvider.overrideWithValue(batchFactory),
           authServiceProvider.overrideWithValue(authService),
           settingDatabaseProvider.overrideWithValue(settingService),
@@ -517,7 +517,7 @@ void main() {
 
       final container = ProviderContainer(
         overrides: [
-          userDatabaseProvider.overrideWithValue(userService),
+          userDatastoreProvider.overrideWithValue(userService),
           batchFactoryProvider.overrideWithValue(batchFactory),
           authServiceProvider.overrideWithValue(authService),
           settingDatabaseProvider.overrideWithValue(settingService),

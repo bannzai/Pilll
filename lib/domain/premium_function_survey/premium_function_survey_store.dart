@@ -5,12 +5,12 @@ import 'package:riverpod/riverpod.dart';
 
 final premiumFunctionSurveyStoreProvider = StateNotifierProvider<
     PremiumFunctionSurveyStateStore, PremiumFunctionSurveyState>(
-  (ref) => PremiumFunctionSurveyStateStore(ref.watch(userDatabaseProvider)),
+  (ref) => PremiumFunctionSurveyStateStore(ref.watch(userDatastoreProvider)),
 );
 
 class PremiumFunctionSurveyStateStore
     extends StateNotifier<PremiumFunctionSurveyState> {
-  final UserDatabase _userService;
+  final UserDatastore _userService;
   PremiumFunctionSurveyStateStore(this._userService)
       : super(const PremiumFunctionSurveyState());
 

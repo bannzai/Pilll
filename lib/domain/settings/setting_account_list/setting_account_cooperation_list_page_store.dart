@@ -12,14 +12,14 @@ import 'package:riverpod/riverpod.dart';
 final settingAccountCooperationListProvider = StateNotifierProvider.autoDispose<
     SettingAccountCooperationListPageStore, SettingAccountCooperationListState>(
   (ref) => SettingAccountCooperationListPageStore(
-    ref.watch(userDatabaseProvider),
+    ref.watch(userDatastoreProvider),
     ref.watch(authServiceProvider),
   ),
 );
 
 class SettingAccountCooperationListPageStore
     extends StateNotifier<SettingAccountCooperationListState> {
-  final UserDatabase _userService;
+  final UserDatastore _userService;
   final AuthService _authService;
   SettingAccountCooperationListPageStore(this._userService, this._authService)
       : super(SettingAccountCooperationListState(

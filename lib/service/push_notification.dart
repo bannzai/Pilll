@@ -23,7 +23,7 @@ Future<void> requestNotificationPermissions() async {
   }
   listenNotificationEvents();
 
-  final userService = UserDatabase(DatabaseConnection(firebaseUser.uid));
+  final userService = UserDatastore(DatabaseConnection(firebaseUser.uid));
   userService.fetch().then((_) async {
     final token = await FirebaseMessaging.instance.getToken();
     await userService.registerRemoteNotificationToken(token);

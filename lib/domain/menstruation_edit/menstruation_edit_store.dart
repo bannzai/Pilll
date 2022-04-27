@@ -19,7 +19,7 @@ final menstruationEditProvider = StateNotifierProvider.family
     menstruation: menstruation,
     menstruationService: ref.watch(menstruationDatabaseProvider),
     settingService: ref.watch(settingDatabaseProvider),
-    userService: ref.watch(userDatabaseProvider),
+    userService: ref.watch(userDatastoreProvider),
   ),
 );
 
@@ -46,7 +46,7 @@ class MenstruationEditStore extends StateNotifier<MenstruationEditState> {
   late Menstruation? initialMenstruation;
   final MenstruationDatabase menstruationService;
   final SettingDatabase settingService;
-  final UserDatabase userService;
+  final UserDatastore userService;
 
   MenstruationEditStore({
     Menstruation? menstruation,

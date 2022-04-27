@@ -276,7 +276,7 @@ class MockAuthService extends _i1.Mock implements _i20.AuthService {
 /// A class which mocks [UserDatabase].
 ///
 /// See the documentation for Mockito's code generation for more information.
-class MockUserDatabase extends _i1.Mock implements _i22.UserDatabase {
+class MockUserDatabase extends _i1.Mock implements _i22.UserDatastore {
   MockUserDatabase() {
     _i1.throwOnMissingStub(this);
   }

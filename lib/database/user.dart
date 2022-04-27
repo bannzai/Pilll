@@ -15,12 +15,12 @@ import 'package:package_info/package_info.dart';
 import 'package:riverpod/riverpod.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
-final userDatabaseProvider =
-    Provider((ref) => UserDatabase(ref.watch(databaseProvider)));
+final userDatastoreProvider =
+    Provider((ref) => UserDatastore(ref.watch(databaseProvider)));
 
-class UserDatabase {
+class UserDatastore {
   final DatabaseConnection _database;
-  UserDatabase(this._database);
+  UserDatastore(this._database);
 
   Future<User> prepare(String uid) async {
     print("call prepare for $uid");
@@ -198,7 +198,7 @@ class UserDatabase {
   }
 }
 
-extension SaveUserLaunchInfo on UserDatabase {
+extension SaveUserLaunchInfo on UserDatastore {
   saveUserLaunchInfo() {
     unawaited(_recordUserIDs());
     unawaited(_saveLaunchInfo());

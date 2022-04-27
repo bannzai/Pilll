@@ -113,7 +113,7 @@ void main() {
               .overrideWithValue(pillSheetModifiedHistoryService),
           pillSheetGroupDatabaseProvider
               .overrideWithValue(pillSheetGroupService),
-          userDatabaseProvider.overrideWithValue(userService),
+          userDatastoreProvider.overrideWithValue(userService),
         ],
       );
       final store =
@@ -217,7 +217,7 @@ void main() {
               .overrideWithValue(pillSheetModifiedHistoryService),
           pillSheetGroupDatabaseProvider
               .overrideWithValue(pillSheetGroupService),
-          userDatabaseProvider.overrideWithValue(userService),
+          userDatastoreProvider.overrideWithValue(userService),
         ],
       );
       final store =
@@ -327,7 +327,7 @@ void main() {
               .overrideWithValue(pillSheetModifiedHistoryService),
           pillSheetGroupDatabaseProvider
               .overrideWithValue(pillSheetGroupService),
-          userDatabaseProvider.overrideWithValue(userService),
+          userDatastoreProvider.overrideWithValue(userService),
         ],
       );
       final store = container.read(recordPageStoreProvider.notifier);
@@ -448,7 +448,7 @@ void main() {
               .overrideWithValue(pillSheetModifiedHistoryService),
           pillSheetGroupDatabaseProvider
               .overrideWithValue(pillSheetGroupService),
-          userDatabaseProvider.overrideWithValue(userService),
+          userDatastoreProvider.overrideWithValue(userService),
         ],
       );
       final store = container.read(recordPageStoreProvider.notifier);
@@ -570,7 +570,7 @@ void main() {
               .overrideWithValue(pillSheetModifiedHistoryService),
           pillSheetGroupDatabaseProvider
               .overrideWithValue(pillSheetGroupService),
-          userDatabaseProvider.overrideWithValue(userService),
+          userDatastoreProvider.overrideWithValue(userService),
         ],
       );
       final store = container.read(recordPageStoreProvider.notifier);
@@ -695,7 +695,7 @@ void main() {
               .overrideWithValue(pillSheetModifiedHistoryService),
           pillSheetGroupDatabaseProvider
               .overrideWithValue(pillSheetGroupService),
-          userDatabaseProvider.overrideWithValue(userService),
+          userDatastoreProvider.overrideWithValue(userService),
         ],
       );
       final store = container.read(recordPageStoreProvider.notifier);
@@ -812,7 +812,7 @@ void main() {
                 .overrideWithValue(pillSheetModifiedHistoryService),
             pillSheetGroupDatabaseProvider
                 .overrideWithValue(pillSheetGroupService),
-            userDatabaseProvider.overrideWithValue(userService),
+            userDatastoreProvider.overrideWithValue(userService),
           ],
         );
         final store = container.read(recordPageStoreProvider.notifier);
@@ -926,7 +926,7 @@ void main() {
                 .overrideWithValue(pillSheetModifiedHistoryService),
             pillSheetGroupDatabaseProvider
                 .overrideWithValue(pillSheetGroupService),
-            userDatabaseProvider.overrideWithValue(userService),
+            userDatastoreProvider.overrideWithValue(userService),
           ],
         );
         final store = container.read(recordPageStoreProvider.notifier);
@@ -1055,7 +1055,7 @@ void main() {
                 .overrideWithValue(pillSheetModifiedHistoryService),
             pillSheetGroupDatabaseProvider
                 .overrideWithValue(pillSheetGroupService),
-            userDatabaseProvider.overrideWithValue(userService),
+            userDatastoreProvider.overrideWithValue(userService),
           ],
         );
         final store = container.read(recordPageStoreProvider.notifier);
@@ -1176,7 +1176,7 @@ void main() {
                 .overrideWithValue(pillSheetModifiedHistoryService),
             pillSheetGroupDatabaseProvider
                 .overrideWithValue(pillSheetGroupService),
-            userDatabaseProvider.overrideWithValue(userService),
+            userDatastoreProvider.overrideWithValue(userService),
           ],
         );
         final store = container.read(recordPageStoreProvider.notifier);
@@ -1303,7 +1303,7 @@ void main() {
                 .overrideWithValue(pillSheetModifiedHistoryService),
             pillSheetGroupDatabaseProvider
                 .overrideWithValue(pillSheetGroupService),
-            userDatabaseProvider.overrideWithValue(userService),
+            userDatastoreProvider.overrideWithValue(userService),
           ],
         );
         final store = container.read(recordPageStoreProvider.notifier);
@@ -1433,7 +1433,7 @@ void main() {
                 .overrideWithValue(pillSheetModifiedHistoryService),
             pillSheetGroupDatabaseProvider
                 .overrideWithValue(pillSheetGroupService),
-            userDatabaseProvider.overrideWithValue(userService),
+            userDatastoreProvider.overrideWithValue(userService),
           ],
         );
         final store = container.read(recordPageStoreProvider.notifier);
@@ -1568,7 +1568,7 @@ void main() {
                 .overrideWithValue(pillSheetModifiedHistoryService),
             pillSheetGroupDatabaseProvider
                 .overrideWithValue(pillSheetGroupService),
-            userDatabaseProvider.overrideWithValue(userService),
+            userDatastoreProvider.overrideWithValue(userService),
           ],
         );
         final store = container.read(recordPageStoreProvider.notifier);
