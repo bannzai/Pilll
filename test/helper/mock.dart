@@ -20,7 +20,7 @@ import 'package:mockito/annotations.dart';
   TodayService,
   SettingDatastore,
   Analytics,
-  DiaryDatabase,
+  DiaryDatastore,
   MenstruationDatastore,
   AuthService,
   UserDatastore,

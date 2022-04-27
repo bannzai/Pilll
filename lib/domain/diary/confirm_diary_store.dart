@@ -6,7 +6,7 @@ import 'package:hooks_riverpod/hooks_riverpod.dart';
 import 'package:pilll/util/datetime/date_compare.dart';
 
 class ConfirmDiaryStore extends StateNotifier<DiaryState> {
-  final DiaryDatabase _diaryService;
+  final DiaryDatastore _diaryService;
   ConfirmDiaryStore(this._diaryService, DiaryState state) : super(state) {
     _subscribe();
   }

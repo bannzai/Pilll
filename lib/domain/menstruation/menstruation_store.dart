@@ -20,7 +20,7 @@ final menstruationsStoreProvider =
     StateNotifierProvider<MenstruationStore, MenstruationState>(
   (ref) => MenstruationStore(
     menstruationService: ref.watch(menstruationDatastoreProvider),
-    diaryService: ref.watch(diaryDatabaseProvider),
+    diaryService: ref.watch(diaryDatastoreProvider),
     settingService: ref.watch(settingDatastoreProvider),
     pillSheetService: ref.watch(pillSheetDatastoreProvider),
     userService: ref.watch(userDatastoreProvider),
@@ -30,7 +30,7 @@ final menstruationsStoreProvider =
 
 class MenstruationStore extends StateNotifier<MenstruationState> {
   final MenstruationDatastore menstruationService;
-  final DiaryDatabase diaryService;
+  final DiaryDatastore diaryService;
   final SettingDatastore settingService;
   final PillSheetDatastore pillSheetService;
   final UserDatastore userService;

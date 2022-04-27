@@ -3,8 +3,8 @@ import 'package:pilll/entity/diary.codegen.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:riverpod/riverpod.dart';
 
-final diaryDatabaseProvider =
-    Provider<DiaryDatabase>((ref) => DiaryDatabase(ref.watch(databaseProvider)));
+final diaryDatastoreProvider =
+    Provider<DiaryDatastore>((ref) => DiaryDatastore(ref.watch(databaseProvider)));
 
 int sortDiary(Diary a, Diary b) => a.date.compareTo(b.date);
 List<Diary> sortedDiaries(List<Diary> diaries) {
@@ -12,10 +12,10 @@ List<Diary> sortedDiaries(List<Diary> diaries) {
   return diaries;
 }
 
-class DiaryDatabase {
+class DiaryDatastore {
   final DatabaseConnection _database;
 
-  DiaryDatabase(this._database);
+  DiaryDatastore(this._database);
 
   Future<List<Diary>> fetchListAround90Days(DateTime base) {
     return _database
