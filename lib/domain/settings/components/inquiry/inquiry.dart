@@ -40,7 +40,7 @@ Future<String> debugInfo(String separator) async {
 
   List<Menstruation> menstruations = [];
   try {
-    menstruations = await MenstruationDatabase(databaseConnection).fetchAll();
+    menstruations = await MenstruationDatastore(databaseConnection).fetchAll();
   } catch (_) {}
 
   Menstruation? menstruation =

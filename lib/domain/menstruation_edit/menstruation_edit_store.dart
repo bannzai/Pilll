@@ -17,7 +17,7 @@ final menstruationEditProvider = StateNotifierProvider.family
     .autoDispose<MenstruationEditStore, MenstruationEditState, Menstruation?>(
   (ref, menstruation) => MenstruationEditStore(
     menstruation: menstruation,
-    menstruationService: ref.watch(menstruationDatabaseProvider),
+    menstruationService: ref.watch(menstruationDatastoreProvider),
     settingService: ref.watch(settingDatastoreProvider),
     userService: ref.watch(userDatastoreProvider),
   ),
@@ -44,7 +44,7 @@ List<DateTime> displayedDates(Menstruation? menstruation) {
 
 class MenstruationEditStore extends StateNotifier<MenstruationEditState> {
   late Menstruation? initialMenstruation;
-  final MenstruationDatabase menstruationService;
+  final MenstruationDatastore menstruationService;
   final SettingDatastore settingService;
   final UserDatastore userService;
 
