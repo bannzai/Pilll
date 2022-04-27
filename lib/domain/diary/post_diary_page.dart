@@ -17,7 +17,7 @@ import 'package:flutter_svg/svg.dart';
 final _postDiaryStoreProvider = StateNotifierProvider.autoDispose
     .family<PostDiaryStore, DiaryState, PostDiaryStoreProviderFamily>(
         (ref, family) {
-  final service = ref.watch(diaryServiceProvider);
+  final service = ref.watch(diaryDatabaseProvider);
   final diary = family.diary;
   if (diary == null) {
     return PostDiaryStore(

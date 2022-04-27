@@ -19,7 +19,7 @@ final calendarPageStateStoreProvider =
   (ref) => CalendarPageStateStore(
     ref.watch(menstruationServiceProvider),
     ref.watch(settingServiceProvider),
-    ref.watch(diaryServiceProvider),
+    ref.watch(diaryDatabaseProvider),
     ref.watch(pillSheetModifiedHistoryServiceProvider),
     ref.watch(userServiceProvider),
     ref.watch(pillSheetGroupServiceProvider),
@@ -29,7 +29,7 @@ final calendarPageStateStoreProvider =
 class CalendarPageStateStore extends StateNotifier<CalendarPageState> {
   final MenstruationService _menstruationService;
   final SettingService _settingService;
-  final DiaryService _diaryService;
+  final DiaryDatabase _diaryService;
   final PillSheetModifiedHistoryService _pillSheetModifiedHistoryService;
   final UserService _userService;
   final PillSheetGroupService _pillSheetGroupService;

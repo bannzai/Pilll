@@ -15,7 +15,7 @@ import 'package:flutter_svg/svg.dart';
 
 final _confirmDiaryStoreProvider = StateNotifierProvider.autoDispose
     .family<ConfirmDiaryStore, DiaryState, Diary>((ref, diary) {
-  final service = ref.watch(diaryServiceProvider);
+  final service = ref.watch(diaryDatabaseProvider);
   return ConfirmDiaryStore(service, DiaryState(diary: diary.copyWith()));
 });
 

@@ -169,7 +169,7 @@ class MockAnalytics extends _i1.Mock implements _i17.Analytics {
 /// A class which mocks [DiaryService].
 ///
 /// See the documentation for Mockito's code generation for more information.
-class MockDiaryService extends _i1.Mock implements _i18.DiaryService {
+class MockDiaryService extends _i1.Mock implements _i18.DiaryDatabase {
   MockDiaryService() {
     _i1.throwOnMissingStub(this);
   }
