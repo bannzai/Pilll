@@ -4,7 +4,7 @@ import 'package:hooks_riverpod/hooks_riverpod.dart';
 import 'package:pilll/domain/premium_introduction/premium_introduction_state.codegen.dart';
 import 'package:pilll/service/auth.dart';
 import 'package:pilll/service/purchase.dart';
-import 'package:pilll/service/user.dart';
+import 'package:pilll/database/user.dart';
 import 'package:purchases_flutter/purchases_flutter.dart';
 import 'package:pilll/domain/premium_introduction/util/map_to_error.dart';
 import 'package:pilll/entity/user_error.dart';

@@ -2,7 +2,7 @@ import 'package:pilll/analytics.dart';
 import 'package:pilll/auth/apple.dart';
 import 'package:pilll/auth/boilerplate.dart';
 import 'package:pilll/auth/google.dart';
-import 'package:pilll/service/user.dart';
+import 'package:pilll/database/user.dart';
 import 'package:pilll/signin/signin_sheet_state.codegen.dart';
 import 'package:riverpod/riverpod.dart';
 

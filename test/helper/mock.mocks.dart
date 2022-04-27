@@ -38,7 +38,7 @@ import 'package:pilll/database/pill_sheet.dart' as _i13;
 import 'package:pilll/database/pill_sheet_group.dart' as _i33;
 import 'package:pilll/database/pill_sheet_modified_history.dart' as _i31;
 import 'package:pilll/database/setting.dart' as _i15;
-import 'package:pilll/service/user.dart' as _i22;
+import 'package:pilll/database/user.dart' as _i22;
 import 'package:purchases_flutter/purchases_flutter.dart' as _i30;
 import 'package:riverpod/riverpod.dart' as _i25;
 import 'package:state_notifier/state_notifier.dart' as _i27;

@@ -6,7 +6,7 @@ import 'package:purchases_flutter/purchases_flutter.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:pilll/analytics.dart';
 import 'package:pilll/database/database.dart';
-import 'package:pilll/service/user.dart';
+import 'package:pilll/database/user.dart';
 
 final purchaseServiceProvider = Provider((ref) => PurchaseService());
 

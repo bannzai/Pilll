@@ -6,7 +6,7 @@ import 'package:pilll/auth/boilerplate.dart';
 import 'package:pilll/auth/google.dart';
 import 'package:pilll/domain/settings/setting_account_list/setting_account_cooperation_list_page_state.codegen.dart';
 import 'package:pilll/service/auth.dart';
-import 'package:pilll/service/user.dart';
+import 'package:pilll/database/user.dart';
 import 'package:riverpod/riverpod.dart';
 
 final settingAccountCooperationListProvider = StateNotifierProvider.autoDispose<

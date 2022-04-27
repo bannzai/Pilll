@@ -1,6 +1,6 @@
 import 'package:pilll/domain/premium_function_survey/premium_function_survey_element_type.dart';
 import 'package:pilll/domain/premium_function_survey/premium_function_survey_state.codegen.dart';
-import 'package:pilll/service/user.dart';
+import 'package:pilll/database/user.dart';
 import 'package:riverpod/riverpod.dart';
 
 final premiumFunctionSurveyStoreProvider = StateNotifierProvider<

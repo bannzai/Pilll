@@ -12,7 +12,7 @@ import 'package:pilll/database/pill_sheet_group.dart';
 import 'package:pilll/database/pill_sheet_modified_history.dart';
 import 'package:pilll/database/setting.dart';
 import 'package:pilll/service/day.dart';
-import 'package:pilll/service/user.dart';
+import 'package:pilll/database/user.dart';
 import 'package:mockito/annotations.dart';
 
 @GenerateMocks([

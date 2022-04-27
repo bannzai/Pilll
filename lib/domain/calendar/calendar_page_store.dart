@@ -11,7 +11,7 @@ import 'package:pilll/database/pill_sheet_group.dart';
 import 'package:pilll/database/pill_sheet_modified_history.dart';
 import 'package:pilll/database/setting.dart';
 import 'package:pilll/domain/calendar/calendar_page_state.codegen.dart';
-import 'package:pilll/service/user.dart';
+import 'package:pilll/database/user.dart';
 import 'package:pilll/util/datetime/date_compare.dart';
 
 final calendarPageStateStoreProvider =
