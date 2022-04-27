@@ -8,8 +8,8 @@ import 'package:pilll/util/datetime/day.dart';
 import 'package:riverpod/riverpod.dart';
 
 final pillSheetModifiedHistoryDatastoreProvider =
-    Provider<PillSheetModifiedHistoryDatastore>(
-        (ref) => PillSheetModifiedHistoryDatastore(ref.watch(databaseProvider)));
+    Provider<PillSheetModifiedHistoryDatastore>((ref) =>
+        PillSheetModifiedHistoryDatastore(ref.watch(databaseProvider)));
 
 class PillSheetModifiedHistoryDatastore {
   final DatabaseConnection _database;
@@ -49,7 +49,7 @@ class PillSheetModifiedHistoryDatastore {
     await _database
         .pillSheetModifiedHistoriesReference()
         .doc(pillSheetModifiedHistory.id)
-        .set(pillSheetModifiedHistory.toJson(), SetOptions(merge: true));
+        .set(pillSheetModifiedHistory, SetOptions(merge: true));
   }
 
   Stream<List<PillSheetModifiedHistory>> stream(int limit) {
