@@ -5,7 +5,7 @@ import 'package:pilll/domain/calendar/calendar_card_state.dart';
 import 'package:pilll/domain/calendar/components/pill_sheet_modified_history/pill_sheet_modified_history_card.dart';
 import 'package:pilll/entity/pill_sheet_modified_history.codegen.dart';
 import 'package:pilll/entity/pill_sheet_modified_history_value.codegen.dart';
-import 'package:pilll/service/diary.dart';
+import 'package:pilll/database/diary.dart';
 import 'package:pilll/service/menstruation.dart';
 import 'package:pilll/service/pill_sheet_group.dart';
 import 'package:pilll/service/pill_sheet_modified_history.dart';

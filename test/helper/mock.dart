@@ -5,7 +5,7 @@ import 'package:pilll/domain/premium_introduction/premium_introduction_store.dar
 import 'package:pilll/domain/record/components/notification_bar/notification_bar_store.dart';
 import 'package:pilll/domain/record/record_page_store.dart';
 import 'package:pilll/service/auth.dart';
-import 'package:pilll/service/diary.dart';
+import 'package:pilll/database/diary.dart';
 import 'package:pilll/service/menstruation.dart';
 import 'package:pilll/service/pill_sheet.dart';
 import 'package:pilll/service/pill_sheet_group.dart';
