@@ -72,6 +72,11 @@ class SettingStateStore extends StateNotifier<SettingState> {
         }
       });
 
+      Future(() async {
+        final setting = await _settingDatastore.fetch();
+        state = state.copyWith(setting: setting);
+      });
+
       _subscribe();
     } catch (exception) {
       state = state.copyWith(exception: exception);
