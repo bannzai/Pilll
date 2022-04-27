@@ -70,29 +70,29 @@ void main() {
 
       final batchFactory = MockBatchFactory();
       final pillSheet = PillSheet.create(PillSheetType.pillsheet_21);
-      final pillSheetService = MockPillSheetDatastore();
+      final pillSheetDatastore = MockPillSheetDatastore();
       final pillSheetGroup = PillSheetGroup(
           pillSheetIDs: ["1"], pillSheets: [pillSheet], createdAt: now());
 
-      final userService = MockUserDatastore();
-      when(userService.fetch())
+      final userDatastore = MockUserDatastore();
+      when(userDatastore.fetch())
           .thenAnswer((realInvocation) => Future.value(_FakeUser()));
-      when(userService.stream())
+      when(userDatastore.stream())
           .thenAnswer((realInvocation) => const Stream.empty());
       final pillSheetModifiedService = MockPillSheetModifiedHistoryDatastore();
-      final pillSheetGroupService = MockPillSheetGroupDatastore();
-      when(pillSheetGroupService.fetchLatest())
+      final pillSheetGroupDatastore = MockPillSheetGroupDatastore();
+      when(pillSheetGroupDatastore.fetchLatest())
           .thenAnswer((realInvocation) => Future.value(pillSheetGroup));
-      when(pillSheetGroupService.streamForLatest())
+      when(pillSheetGroupDatastore.streamForLatest())
           .thenAnswer((realInvocation) => const Stream.empty());
 
       final store = SettingStateStore(
         batchFactory,
         settingDatastore,
-        pillSheetService,
-        userService,
+        pillSheetDatastore,
+        userDatastore,
         pillSheetModifiedService,
-        pillSheetGroupService,
+        pillSheetGroupDatastore,
       );
 
       // ignore: invalid_use_of_protected_member
@@ -130,26 +130,26 @@ void main() {
       final pillSheetGroup = PillSheetGroup(
           pillSheetIDs: ["1"], pillSheets: [pillSheet], createdAt: now());
 
-      final pillSheetService = MockPillSheetDatastore();
-      final userService = MockUserDatastore();
-      when(userService.fetch())
+      final pillSheetDatastore = MockPillSheetDatastore();
+      final userDatastore = MockUserDatastore();
+      when(userDatastore.fetch())
           .thenAnswer((realInvocation) => Future.value(_FakeUser()));
-      when(userService.stream())
+      when(userDatastore.stream())
           .thenAnswer((realInvocation) => const Stream.empty());
       final pillSheetModifiedService = MockPillSheetModifiedHistoryDatastore();
-      final pillSheetGroupService = MockPillSheetGroupDatastore();
-      when(pillSheetGroupService.fetchLatest())
+      final pillSheetGroupDatastore = MockPillSheetGroupDatastore();
+      when(pillSheetGroupDatastore.fetchLatest())
           .thenAnswer((realInvocation) => Future.value(pillSheetGroup));
-      when(pillSheetGroupService.streamForLatest())
+      when(pillSheetGroupDatastore.streamForLatest())
           .thenAnswer((realInvocation) => const Stream.empty());
 
       final store = SettingStateStore(
         batchFactory,
         settingDatastore,
-        pillSheetService,
-        userService,
+        pillSheetDatastore,
+        userDatastore,
         pillSheetModifiedService,
-        pillSheetGroupService,
+        pillSheetGroupDatastore,
       );
 
       // ignore: invalid_use_of_protected_member
@@ -183,26 +183,26 @@ void main() {
           pillSheetIDs: ["1"], pillSheets: [pillSheet], createdAt: now());
 
       final batchFactory = MockBatchFactory();
-      final pillSheetService = MockPillSheetDatastore();
-      final userService = MockUserDatastore();
-      when(userService.fetch())
+      final pillSheetDatastore = MockPillSheetDatastore();
+      final userDatastore = MockUserDatastore();
+      when(userDatastore.fetch())
           .thenAnswer((realInvocation) => Future.value(_FakeUser()));
-      when(userService.stream())
+      when(userDatastore.stream())
           .thenAnswer((realInvocation) => const Stream.empty());
       final pillSheetModifiedService = MockPillSheetModifiedHistoryDatastore();
-      final pillSheetGroupService = MockPillSheetGroupDatastore();
-      when(pillSheetGroupService.fetchLatest())
+      final pillSheetGroupDatastore = MockPillSheetGroupDatastore();
+      when(pillSheetGroupDatastore.fetchLatest())
           .thenAnswer((realInvocation) => Future.value(pillSheetGroup));
-      when(pillSheetGroupService.streamForLatest())
+      when(pillSheetGroupDatastore.streamForLatest())
           .thenAnswer((realInvocation) => const Stream.empty());
 
       final store = SettingStateStore(
         batchFactory,
         settingDatastore,
-        pillSheetService,
-        userService,
+        pillSheetDatastore,
+        userDatastore,
         pillSheetModifiedService,
-        pillSheetGroupService,
+        pillSheetGroupDatastore,
       );
 
       // ignore: invalid_use_of_protected_member
@@ -234,27 +234,27 @@ void main() {
       final pillSheetGroup = PillSheetGroup(
           pillSheetIDs: ["1"], pillSheets: [pillSheet], createdAt: now());
 
-      final pillSheetService = MockPillSheetDatastore();
+      final pillSheetDatastore = MockPillSheetDatastore();
 
-      final userService = MockUserDatastore();
-      when(userService.fetch())
+      final userDatastore = MockUserDatastore();
+      when(userDatastore.fetch())
           .thenAnswer((realInvocation) => Future.value(_FakeUser()));
-      when(userService.stream())
+      when(userDatastore.stream())
           .thenAnswer((realInvocation) => const Stream.empty());
       final pillSheetModifiedService = MockPillSheetModifiedHistoryDatastore();
-      final pillSheetGroupService = MockPillSheetGroupDatastore();
-      when(pillSheetGroupService.fetchLatest())
+      final pillSheetGroupDatastore = MockPillSheetGroupDatastore();
+      when(pillSheetGroupDatastore.fetchLatest())
           .thenAnswer((realInvocation) => Future.value(pillSheetGroup));
-      when(pillSheetGroupService.streamForLatest())
+      when(pillSheetGroupDatastore.streamForLatest())
           .thenAnswer((realInvocation) => const Stream.empty());
 
       final store = SettingStateStore(
         batchFactory,
         settingDatastore,
-        pillSheetService,
-        userService,
+        pillSheetDatastore,
+        userDatastore,
         pillSheetModifiedService,
-        pillSheetGroupService,
+        pillSheetGroupDatastore,
       );
 
       // ignore: invalid_use_of_protected_member

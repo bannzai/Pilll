@@ -15,16 +15,16 @@ final premiumTrialStoreProvider =
 
 class PremiumTrialModalStateStore
     extends StateNotifier<PremiumTrialModalState> {
-  final UserDatastore _userService;
+  final UserDatastore _userDatastore;
   PremiumTrialModalStateStore(
-    this._userService,
+    this._userDatastore,
   ) : super(const PremiumTrialModalState()) {
     reset();
   }
 
   void reset() {
     Future(() async {
-      final user = await _userService.fetch();
+      final user = await _userDatastore.fetch();
       this.state = PremiumTrialModalState(
         isLoading: false,
         isTrial: user.isTrial,
@@ -37,7 +37,7 @@ class PremiumTrialModalStateStore
   StreamSubscription? _userSubscribeCanceller;
   void _subscribe() {
     _userSubscribeCanceller?.cancel();
-    _userSubscribeCanceller = _userService.stream().listen((event) {
+    _userSubscribeCanceller = _userDatastore.stream().listen((event) {
       state = state.copyWith(isTrial: event.isTrial, setting: event.setting);
     });
   }
@@ -71,7 +71,7 @@ class PremiumTrialModalStateStore
       throw AssertionError("Unexpected setting is null when start to trial");
     }
     try {
-      await _userService.trial(setting);
+      await _userDatastore.trial(setting);
     } catch (exception, stack) {
       errorLogger.recordError(exception, stack);
       throw UserDisplayedError("エラーが発生しました。通信環境をお確かめのうえ再度お試しください");

@@ -19,9 +19,9 @@ final settingAccountCooperationListProvider = StateNotifierProvider.autoDispose<
 
 class SettingAccountCooperationListPageStore
     extends StateNotifier<SettingAccountCooperationListState> {
-  final UserDatastore _userService;
+  final UserDatastore _userDatastore;
   final AuthService _authService;
-  SettingAccountCooperationListPageStore(this._userService, this._authService)
+  SettingAccountCooperationListPageStore(this._userDatastore, this._authService)
       : super(SettingAccountCooperationListState(
             user: FirebaseAuth.instance.currentUser)) {
     reset();
@@ -55,13 +55,13 @@ class SettingAccountCooperationListPageStore
     if (state.isLinkedApple) {
       throw AssertionError("unexpected already linked apple when link");
     }
-    return callLinkWithApple(_userService);
+    return callLinkWithApple(_userDatastore);
   }
 
   Future<SignInWithGoogleState> linkGoogle() {
     if (state.isLinkedGoogle) {
       throw AssertionError("unexpected already linked google when link");
     }
-    return callLinkWithGoogle(_userService);
+    return callLinkWithGoogle(_userDatastore);
   }
 }

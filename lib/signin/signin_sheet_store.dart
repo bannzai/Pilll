@@ -12,8 +12,8 @@ final signinSheetStoreProvider = StateNotifierProvider.autoDispose
 );
 
 class SignInSheetStore extends StateNotifier<SignInSheetState> {
-  final UserDatastore _userService;
-  SignInSheetStore(SignInSheetStateContext context, this._userService)
+  final UserDatastore _userDatastore;
+  SignInSheetStore(SignInSheetStateContext context, this._userDatastore)
       : super(SignInSheetState(context: context)) {
     reset();
   }
@@ -30,7 +30,7 @@ class SignInSheetStore extends StateNotifier<SignInSheetState> {
           : SignInWithAppleState.determined);
     } else {
       analytics.logEvent(name: "signin_sheet_link_with_apple");
-      return callLinkWithApple(_userService);
+      return callLinkWithApple(_userDatastore);
     }
   }
 
@@ -42,7 +42,7 @@ class SignInSheetStore extends StateNotifier<SignInSheetState> {
           : SignInWithGoogleState.determined);
     } else {
       analytics.logEvent(name: "signin_sheet_link_with_google");
-      return callLinkWithGoogle(_userService);
+      return callLinkWithGoogle(_userDatastore);
     }
   }
 

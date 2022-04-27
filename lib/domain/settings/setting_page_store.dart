@@ -31,17 +31,17 @@ final settingStateProvider = Provider((ref) => ref.watch(settingStoreProvider));
 class SettingStateStore extends StateNotifier<SettingState> {
   final BatchFactory _batchFactory;
   final SettingDatastore _settingDatastore;
-  final PillSheetDatastore _pillSheetService;
-  final UserDatastore _userService;
+  final PillSheetDatastore _pillSheetDatastore;
+  final UserDatastore _userDatastore;
   final PillSheetModifiedHistoryDatastore _pillSheetModifiedHistoryService;
-  final PillSheetGroupDatastore _pillSheetGroupService;
+  final PillSheetGroupDatastore _pillSheetGroupDatastore;
   SettingStateStore(
     this._batchFactory,
     this._settingDatastore,
-    this._pillSheetService,
-    this._userService,
+    this._pillSheetDatastore,
+    this._userDatastore,
     this._pillSheetModifiedHistoryService,
-    this._pillSheetGroupService,
+    this._pillSheetGroupDatastore,
   ) : super(const SettingState()) {
     setup();
   }
@@ -88,10 +88,10 @@ class SettingStateStore extends StateNotifier<SettingState> {
       state = state.copyWith(setting: event);
     });
     _pillSheetGroupCanceller =
-        _pillSheetGroupService.streamForLatest().listen((event) {
+        _pillSheetGroupDatastore.streamForLatest().listen((event) {
       state = state.copyWith(latestPillSheetGroup: event);
     });
-    _userSubscribeCanceller = _userService.stream().listen((event) {
+    _userSubscribeCanceller = _userDatastore.stream().listen((event) {
       state = state.copyWith(
         isPremium: event.isPremium,
         isTrial: event.isTrial,
@@ -193,14 +193,15 @@ class SettingStateStore extends StateNotifier<SettingState> {
     }
 
     final batch = _batchFactory.batch();
-    final updatedPillSheet = _pillSheetService.delete(batch, activedPillSheet);
+    final updatedPillSheet =
+        _pillSheetDatastore.delete(batch, activedPillSheet);
     final history = PillSheetModifiedHistoryServiceActionFactory
         .createDeletedPillSheetAction(
       pillSheetGroupID: pillSheetGroup.id,
       pillSheetIDs: pillSheetGroup.pillSheetIDs,
     );
     _pillSheetModifiedHistoryService.add(batch, history);
-    _pillSheetGroupService.delete(
+    _pillSheetGroupDatastore.delete(
         batch, pillSheetGroup.replaced(updatedPillSheet));
 
     return batch.commit();

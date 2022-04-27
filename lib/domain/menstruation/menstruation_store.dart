@@ -22,9 +22,9 @@ final menstruationsStoreProvider =
     menstruationDatastore: ref.watch(menstruationDatastoreProvider),
     diaryDatastore: ref.watch(diaryDatastoreProvider),
     settingDatastore: ref.watch(settingDatastoreProvider),
-    pillSheetService: ref.watch(pillSheetDatastoreProvider),
-    userService: ref.watch(userDatastoreProvider),
-    pillSheetGroupService: ref.watch(pillSheetGroupDatastoreProvider),
+    pillSheetDatastore: ref.watch(pillSheetDatastoreProvider),
+    userDatastore: ref.watch(userDatastoreProvider),
+    pillSheetGroupDatastore: ref.watch(pillSheetGroupDatastoreProvider),
   ),
 );
 
@@ -32,16 +32,16 @@ class MenstruationStore extends StateNotifier<MenstruationState> {
   final MenstruationDatastore menstruationDatastore;
   final DiaryDatastore diaryDatastore;
   final SettingDatastore settingDatastore;
-  final PillSheetDatastore pillSheetService;
-  final UserDatastore userService;
-  final PillSheetGroupDatastore pillSheetGroupService;
+  final PillSheetDatastore pillSheetDatastore;
+  final UserDatastore userDatastore;
+  final PillSheetGroupDatastore pillSheetGroupDatastore;
   MenstruationStore({
     required this.menstruationDatastore,
     required this.diaryDatastore,
     required this.settingDatastore,
-    required this.pillSheetService,
-    required this.userService,
-    required this.pillSheetGroupService,
+    required this.pillSheetDatastore,
+    required this.userDatastore,
+    required this.pillSheetGroupDatastore,
   }) : super(MenstruationState()) {
     reset();
   }
@@ -53,8 +53,8 @@ class MenstruationStore extends StateNotifier<MenstruationState> {
       final menstruations = await menstruationDatastore.fetchAll();
       final diaries = await diaryDatastore.fetchListAround90Days(today());
       final setting = await settingDatastore.fetch();
-      final latestPillSheetGroup = await pillSheetGroupService.fetchLatest();
-      final user = await userService.fetch();
+      final latestPillSheetGroup = await pillSheetGroupDatastore.fetchLatest();
+      final user = await userDatastore.fetch();
       state = state.copyWith(
         entities: menstruations,
         diariesForMonth: diaries,
@@ -92,11 +92,11 @@ class MenstruationStore extends StateNotifier<MenstruationState> {
     });
     _pillSheetGroupCanceller?.cancel();
     _pillSheetGroupCanceller =
-        pillSheetGroupService.streamForLatest().listen((pillSheet) {
+        pillSheetGroupDatastore.streamForLatest().listen((pillSheet) {
       state = state.copyWith(latestPillSheetGroup: pillSheet);
     });
     _userCanceller?.cancel();
-    _userCanceller = userService.stream().listen((user) {
+    _userCanceller = userDatastore.stream().listen((user) {
       state = state.copyWith(
         isPremium: user.isPremium,
         isTrial: user.isTrial,

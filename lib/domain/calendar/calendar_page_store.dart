@@ -31,16 +31,16 @@ class CalendarPageStateStore extends StateNotifier<CalendarPageState> {
   final SettingDatastore _settingDatastore;
   final DiaryDatastore _diaryDatastore;
   final PillSheetModifiedHistoryDatastore _pillSheetModifiedHistoryService;
-  final UserDatastore _userService;
-  final PillSheetGroupDatastore _pillSheetGroupService;
+  final UserDatastore _userDatastore;
+  final PillSheetGroupDatastore _pillSheetGroupDatastore;
 
   CalendarPageStateStore(
     this._menstruationDatastore,
     this._settingDatastore,
     this._diaryDatastore,
     this._pillSheetModifiedHistoryService,
-    this._userService,
-    this._pillSheetGroupService,
+    this._userDatastore,
+    this._pillSheetGroupDatastore,
   ) : super(CalendarPageState(menstruations: [])) {
     reset();
   }
@@ -52,7 +52,8 @@ class CalendarPageStateStore extends StateNotifier<CalendarPageState> {
       await Future(() async {
         final menstruations = await _menstruationDatastore.fetchAll();
         final setting = await _settingDatastore.fetch();
-        final latestPillSheetGroup = await _pillSheetGroupService.fetchLatest();
+        final latestPillSheetGroup =
+            await _pillSheetGroupDatastore.fetchLatest();
         final diaries = await _diaryDatastore.fetchListForMonth(
             state.calendarDataSource[state.todayCalendarIndex]);
         final pillSheetModifiedHistories =
@@ -61,7 +62,7 @@ class CalendarPageStateStore extends StateNotifier<CalendarPageState> {
                 CalendarPillSheetModifiedHistoryCardState
                         .pillSheetModifiedHistoriesThreshold +
                     1);
-        final user = await _userService.fetch();
+        final user = await _userDatastore.fetch();
         state = state.copyWith(
           menstruations: menstruations,
           setting: setting,
@@ -98,7 +99,7 @@ class CalendarPageStateStore extends StateNotifier<CalendarPageState> {
     });
     _latestPillSheetGroupCanceller?.cancel();
     _latestPillSheetGroupCanceller =
-        _pillSheetGroupService.streamForLatest().listen((entity) {
+        _pillSheetGroupDatastore.streamForLatest().listen((entity) {
       state = state.copyWith(latestPillSheetGroup: entity);
     });
     _diariesCanceller?.cancel();
@@ -114,7 +115,7 @@ class CalendarPageStateStore extends StateNotifier<CalendarPageState> {
       state = state.copyWith(allPillSheetModifiedHistories: event);
     });
     _userCanceller?.cancel();
-    _userCanceller = _userService.stream().listen((event) {
+    _userCanceller = _userDatastore.stream().listen((event) {
       state = state.copyWith(
         isPremium: event.isPremium,
         isTrial: event.isTrial,

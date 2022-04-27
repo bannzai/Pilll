@@ -52,9 +52,9 @@ Future<PillSheetGroup?> take({
   required PillSheetGroup pillSheetGroup,
   required PillSheet activedPillSheet,
   required BatchFactory batchFactory,
-  required PillSheetDatastore pillSheetService,
+  required PillSheetDatastore pillSheetDatastore,
   required PillSheetModifiedHistoryDatastore pillSheetModifiedHistoryService,
-  required PillSheetGroupDatastore pillSheetGroupService,
+  required PillSheetGroupDatastore pillSheetGroupDatastore,
   required bool isQuickRecord,
 }) async {
   if (activedPillSheet.todayPillIsAlreadyTaken) {
@@ -74,8 +74,7 @@ Future<PillSheetGroup?> take({
     // takenDateよりも予測するピルシートの最終服用日よりじも大きい場合はactivedPillSheetじゃないPillSheetと判断。
     // そのピルシートの最終日で予測する最終服用日を記録する
     if (takenDate.isAfter(pillSheet.estimatedEndTakenDate)) {
-      return pillSheet.copyWith(
-          lastTakenDate: pillSheet.estimatedEndTakenDate);
+      return pillSheet.copyWith(lastTakenDate: pillSheet.estimatedEndTakenDate);
     } else {
       return pillSheet.copyWith(lastTakenDate: takenDate);
     }
@@ -93,11 +92,11 @@ Future<PillSheetGroup?> take({
     return null;
   }
 
-  pillSheetService.update(
+  pillSheetDatastore.update(
     batch,
     updatedPillSheets,
   );
-  pillSheetGroupService.updateWithBatch(batch, updatedPillSheetGroup);
+  pillSheetGroupDatastore.updateWithBatch(batch, updatedPillSheetGroup);
 
   final before = pillSheetGroup.pillSheets[updatedIndexses.first];
   final after = updatedPillSheetGroup.pillSheets[updatedIndexses.last];

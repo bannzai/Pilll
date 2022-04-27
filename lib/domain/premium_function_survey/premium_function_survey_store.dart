@@ -10,8 +10,8 @@ final premiumFunctionSurveyStoreProvider = StateNotifierProvider<
 
 class PremiumFunctionSurveyStateStore
     extends StateNotifier<PremiumFunctionSurveyState> {
-  final UserDatastore _userService;
-  PremiumFunctionSurveyStateStore(this._userService)
+  final UserDatastore _userDatastore;
+  PremiumFunctionSurveyStateStore(this._userDatastore)
       : super(const PremiumFunctionSurveyState());
 
   handleCheckEvent(PremiumFunctionSurveyElementType element) {
@@ -29,7 +29,7 @@ class PremiumFunctionSurveyStateStore
   }
 
   Future<void> send() async {
-    await _userService.sendPremiumFunctionSurvey(
+    await _userDatastore.sendPremiumFunctionSurvey(
         state.selectedElements, state.message);
   }
 }

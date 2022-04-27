@@ -11,7 +11,7 @@ import 'package:pilll/database/pill_sheet_modified_history.dart';
 import 'package:pilll/util/datetime/day.dart';
 
 Future<void> recordPill() async {
-    // 通知からの起動の時に、FirebaseAuth.instanceを参照すると、まだinitializeされてないよ．的なエラーが出る
+  // 通知からの起動の時に、FirebaseAuth.instanceを参照すると、まだinitializeされてないよ．的なエラーが出る
   if (Firebase.apps.isEmpty) {
     await Firebase.initializeApp();
   }
@@ -21,11 +21,11 @@ Future<void> recordPill() async {
   }
 
   final database = DatabaseConnection(firebaseUser.uid);
-  final pillSheetService = PillSheetDatastore(database);
+  final pillSheetDatastore = PillSheetDatastore(database);
   final pillSheetModifiedHistoryService =
       PillSheetModifiedHistoryDatastore(database);
-  final pillSheetGroupService = PillSheetGroupDatastore(database);
-  final pillSheetGroup = await pillSheetGroupService.fetchLatest();
+  final pillSheetGroupDatastore = PillSheetGroupDatastore(database);
+  final pillSheetGroup = await pillSheetGroupDatastore.fetchLatest();
   if (pillSheetGroup == null) {
     return Future.value();
   }
@@ -44,9 +44,9 @@ Future<void> recordPill() async {
     pillSheetGroup: pillSheetGroup,
     activedPillSheet: activedPillSheet,
     batchFactory: batchFactory,
-    pillSheetService: pillSheetService,
+    pillSheetDatastore: pillSheetDatastore,
     pillSheetModifiedHistoryService: pillSheetModifiedHistoryService,
-    pillSheetGroupService: pillSheetGroupService,
+    pillSheetGroupDatastore: pillSheetGroupDatastore,
     isQuickRecord: true,
   );
 

@@ -69,16 +69,16 @@ void main() {
       when(settingDatastore.stream())
           .thenAnswer((realInvocation) => Stream.fromIterable([entity]));
 
-      final pillSheetService = MockPillSheetDatastore();
-      final userService = MockUserDatastore();
-      when(userService.stream())
+      final pillSheetDatastore = MockPillSheetDatastore();
+      final userDatastore = MockUserDatastore();
+      when(userDatastore.stream())
           .thenAnswer((realInvocation) => Stream.fromIterable([_FakeUser()]));
 
-      final pillSheetGroupService = MockPillSheetGroupDatastore();
+      final pillSheetGroupDatastore = MockPillSheetGroupDatastore();
       final pillSheet = PillSheet.create(PillSheetType.pillsheet_21);
       final pillSheetGroup = PillSheetGroup(
           pillSheetIDs: ["1"], pillSheets: [pillSheet], createdAt: now());
-      when(pillSheetGroupService.streamForLatest()).thenAnswer(
+      when(pillSheetGroupDatastore.streamForLatest()).thenAnswer(
           (realInvocation) => Stream.fromIterable([pillSheetGroup]));
 
       final batchFactory = MockBatchFactory();
@@ -87,10 +87,10 @@ void main() {
       final store = SettingStateStore(
         batchFactory,
         settingDatastore,
-        pillSheetService,
-        userService,
+        pillSheetDatastore,
+        userDatastore,
         pillSheetModifiedService,
-        pillSheetGroupService,
+        pillSheetGroupDatastore,
       );
       store.setup();
 
@@ -141,28 +141,28 @@ void main() {
       when(settingDatastore.stream())
           .thenAnswer((realInvocation) => Stream.value(entity));
 
-      final userService = MockUserDatastore();
-      when(userService.stream())
+      final userDatastore = MockUserDatastore();
+      when(userDatastore.stream())
           .thenAnswer((realInvocation) => Stream.value(_FakeUser()));
 
       final pillSheet = PillSheet.create(PillSheetType.pillsheet_21);
       final pillSheetGroup = PillSheetGroup(
           pillSheetIDs: ["1"], pillSheets: [pillSheet], createdAt: now());
-      final pillSheetGroupService = MockPillSheetGroupDatastore();
-      when(pillSheetGroupService.streamForLatest())
+      final pillSheetGroupDatastore = MockPillSheetGroupDatastore();
+      when(pillSheetGroupDatastore.streamForLatest())
           .thenAnswer((realInvocation) => Stream.value(pillSheetGroup));
 
       final batchFactory = MockBatchFactory();
-      final pillSheetService = MockPillSheetDatastore();
+      final pillSheetDatastore = MockPillSheetDatastore();
       final pillSheetModifiedService = MockPillSheetModifiedHistoryDatastore();
 
       final store = SettingStateStore(
         batchFactory,
         settingDatastore,
-        pillSheetService,
-        userService,
+        pillSheetDatastore,
+        userDatastore,
         pillSheetModifiedService,
-        pillSheetGroupService,
+        pillSheetGroupDatastore,
       );
       store.setup();
 

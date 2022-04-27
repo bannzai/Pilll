@@ -38,21 +38,21 @@ final initialSettingStateProvider =
     StateProvider.autoDispose((ref) => ref.watch(initialSettingStoreProvider));
 
 class InitialSettingStateStore extends StateNotifier<InitialSettingState> {
-  final UserDatastore _userService;
+  final UserDatastore _userDatastore;
   final BatchFactory _batchFactory;
   final SettingDatastore _settingDatastore;
-  final PillSheetDatastore _pillSheetService;
+  final PillSheetDatastore _pillSheetDatastore;
   final PillSheetModifiedHistoryDatastore _pillSheetModifiedHistoryService;
-  final PillSheetGroupDatastore _pillSheetGroupService;
+  final PillSheetGroupDatastore _pillSheetGroupDatastore;
   final AuthService _authService;
 
   InitialSettingStateStore(
-    this._userService,
+    this._userDatastore,
     this._batchFactory,
     this._settingDatastore,
-    this._pillSheetService,
+    this._pillSheetDatastore,
     this._pillSheetModifiedHistoryService,
-    this._pillSheetGroupService,
+    this._pillSheetGroupDatastore,
     this._authService,
   ) : super(const InitialSettingState());
 
@@ -63,9 +63,9 @@ class InitialSettingStateStore extends StateNotifier<InitialSettingState> {
 
       final userIsNotAnonymous = !user.isAnonymous;
       if (userIsNotAnonymous) {
-        final userService = UserDatastore(DatabaseConnection(user.uid));
-        final dbUser = await userService.prepare(user.uid);
-        userService.saveUserLaunchInfo();
+        final userDatastore = UserDatastore(DatabaseConnection(user.uid));
+        final dbUser = await userDatastore.prepare(user.uid);
+        userDatastore.saveUserLaunchInfo();
 
         unawaited(FirebaseCrashlytics.instance.setUserIdentifier(user.uid));
         unawaited(firebaseAnalytics.setUserId(id: user.uid));
@@ -149,7 +149,7 @@ class InitialSettingStateStore extends StateNotifier<InitialSettingState> {
 
     final todayPillNumber = state.todayPillNumber;
     if (todayPillNumber != null) {
-      final createdPillSheets = _pillSheetService.register(
+      final createdPillSheets = _pillSheetDatastore.register(
         batch,
         state.pillSheetTypes.asMap().keys.map((pageIndex) {
           return InitialSettingState.buildPillSheet(
@@ -161,7 +161,7 @@ class InitialSettingStateStore extends StateNotifier<InitialSettingState> {
       );
 
       final pillSheetIDs = createdPillSheets.map((e) => e.id!).toList();
-      final createdPillSheetGroup = _pillSheetGroupService.register(
+      final createdPillSheetGroup = _pillSheetGroupDatastore.register(
         batch,
         PillSheetGroup(
           pillSheetIDs: pillSheetIDs,
@@ -183,7 +183,7 @@ class InitialSettingStateStore extends StateNotifier<InitialSettingState> {
 
     await batch.commit();
 
-    await _userService.trial(setting);
+    await _userDatastore.trial(setting);
   }
 
   showHUD() {

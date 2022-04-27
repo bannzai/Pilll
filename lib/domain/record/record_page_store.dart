@@ -35,20 +35,20 @@ final recordPageStoreProvider =
 
 class RecordPageStore extends StateNotifier<RecordPageState> {
   final BatchFactory _batchFactory;
-  final PillSheetDatastore _pillSheetService;
+  final PillSheetDatastore _pillSheetDatastore;
   final SettingDatastore _settingDatastore;
-  final UserDatastore _userService;
+  final UserDatastore _userDatastore;
   final AuthService _authService;
   final PillSheetModifiedHistoryDatastore _pillSheetModifiedHistoryService;
-  final PillSheetGroupDatastore _pillSheetGroupService;
+  final PillSheetGroupDatastore _pillSheetGroupDatastore;
   RecordPageStore(
     this._batchFactory,
-    this._pillSheetService,
+    this._pillSheetDatastore,
     this._settingDatastore,
-    this._userService,
+    this._userDatastore,
     this._authService,
     this._pillSheetModifiedHistoryService,
-    this._pillSheetGroupService,
+    this._pillSheetGroupDatastore,
   ) : super(const RecordPageState()) {
     reset();
   }
@@ -58,7 +58,7 @@ class RecordPageStore extends StateNotifier<RecordPageState> {
       state = state.copyWith(exception: null);
       await Future.wait([
         Future(() async {
-          final pillSheetGroup = await _pillSheetGroupService.fetchLatest();
+          final pillSheetGroup = await _pillSheetGroupDatastore.fetchLatest();
           state = state.copyWith(pillSheetGroup: pillSheetGroup);
         }),
         Future(() async {
@@ -66,7 +66,7 @@ class RecordPageStore extends StateNotifier<RecordPageState> {
           state = state.copyWith(setting: setting);
         }),
         Future(() async {
-          final user = await _userService.fetch();
+          final user = await _userDatastore.fetch();
           state = state.copyWith(
             isPremium: user.isPremium,
             isTrial: user.isTrial,
@@ -133,7 +133,7 @@ class RecordPageStore extends StateNotifier<RecordPageState> {
   void _subscribe() {
     _pillSheetGroupCanceller?.cancel();
     _pillSheetGroupCanceller =
-        _pillSheetGroupService.streamForLatest().listen((event) {
+        _pillSheetGroupDatastore.streamForLatest().listen((event) {
       state = state.copyWith(pillSheetGroup: event);
     });
     _settingCanceller?.cancel();
@@ -141,7 +141,7 @@ class RecordPageStore extends StateNotifier<RecordPageState> {
       state = state.copyWith(setting: setting);
     });
     _userSubscribeCanceller?.cancel();
-    _userSubscribeCanceller = _userService.stream().listen((event) {
+    _userSubscribeCanceller = _userDatastore.stream().listen((event) {
       state = state.copyWith(
         isPremium: event.isPremium,
         isTrial: event.isTrial,
@@ -185,9 +185,9 @@ class RecordPageStore extends StateNotifier<RecordPageState> {
       pillSheetGroup: pillSheetGroup,
       activedPillSheet: activedPillSheet,
       batchFactory: _batchFactory,
-      pillSheetService: _pillSheetService,
+      pillSheetDatastore: _pillSheetDatastore,
       pillSheetModifiedHistoryService: _pillSheetModifiedHistoryService,
-      pillSheetGroupService: _pillSheetGroupService,
+      pillSheetGroupDatastore: _pillSheetGroupDatastore,
       isQuickRecord: false,
     );
     if (updatedPillSheetGroup == null) {
@@ -314,11 +314,11 @@ class RecordPageStore extends StateNotifier<RecordPageState> {
     }
 
     final batch = _batchFactory.batch();
-    _pillSheetService.update(
+    _pillSheetDatastore.update(
       batch,
       updatedPillSheets,
     );
-    _pillSheetGroupService.updateWithBatch(batch, updatedPillSheetGroup);
+    _pillSheetGroupDatastore.updateWithBatch(batch, updatedPillSheetGroup);
 
     final before = pillSheetGroup.pillSheets[updatedIndexses.last];
     final after = updatedPillSheetGroup.pillSheets[updatedIndexses.first];
@@ -428,8 +428,8 @@ class RecordPageStore extends StateNotifier<RecordPageState> {
     final updatedPillSheetGroup = pillSheetGroup.replaced(updatedPillSheet);
 
     final batch = _batchFactory.batch();
-    _pillSheetService.update(batch, updatedPillSheetGroup.pillSheets);
-    _pillSheetGroupService.updateWithBatch(batch, updatedPillSheetGroup);
+    _pillSheetDatastore.update(batch, updatedPillSheetGroup.pillSheets);
+    _pillSheetGroupDatastore.updateWithBatch(batch, updatedPillSheetGroup);
     _pillSheetModifiedHistoryService.add(
       batch,
       PillSheetModifiedHistoryServiceActionFactory
@@ -461,8 +461,8 @@ class RecordPageStore extends StateNotifier<RecordPageState> {
     final updatedPillSheetGroup = pillSheetGroup.replaced(updatedPillSheet);
 
     final batch = _batchFactory.batch();
-    _pillSheetService.update(batch, updatedPillSheetGroup.pillSheets);
-    _pillSheetGroupService.updateWithBatch(batch, updatedPillSheetGroup);
+    _pillSheetDatastore.update(batch, updatedPillSheetGroup.pillSheets);
+    _pillSheetGroupDatastore.updateWithBatch(batch, updatedPillSheetGroup);
     _pillSheetModifiedHistoryService.add(
       batch,
       PillSheetModifiedHistoryServiceActionFactory
@@ -498,7 +498,7 @@ class RecordPageStore extends StateNotifier<RecordPageState> {
       state = state.copyWith(pillSheetGroup: updatedPillSheetGroup);
     }
 
-    _pillSheetGroupService.update(updatedPillSheetGroup);
+    _pillSheetGroupDatastore.update(updatedPillSheetGroup);
   }
 
   Future<void> setDisplayNumberSettingEndNumber(int end) async {
@@ -522,7 +522,7 @@ class RecordPageStore extends StateNotifier<RecordPageState> {
       state = state.copyWith(pillSheetGroup: updatedPillSheetGroup);
     }
 
-    _pillSheetGroupService.update(updatedPillSheetGroup);
+    _pillSheetGroupDatastore.update(updatedPillSheetGroup);
   }
 
   void switchingAppearanceMode(PillSheetAppearanceMode mode) {

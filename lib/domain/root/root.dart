@@ -163,11 +163,11 @@ class RootState extends State<Root> {
 
   Future<User> _mutateUserWithLaunchInfoAnd(
       FirebaseAuth.User firebaseUser) async {
-    final userService = UserDatastore(DatabaseConnection(firebaseUser.uid));
-    userService.saveUserLaunchInfo();
+    final userDatastore = UserDatastore(DatabaseConnection(firebaseUser.uid));
+    userDatastore.saveUserLaunchInfo();
 
-    final user = await userService.prepare(firebaseUser.uid);
-    unawaited(userService.temporarySyncronizeDiscountEntitlement(user));
+    final user = await userDatastore.prepare(firebaseUser.uid);
+    unawaited(userDatastore.temporarySyncronizeDiscountEntitlement(user));
 
     return user;
   }
@@ -175,9 +175,9 @@ class RootState extends State<Root> {
   Future<ScreenType?> _screenTypeForLegacyUser(
       FirebaseAuth.User firebaseUser, User user) async {
     if (!user.migratedFlutter) {
-      final userService = UserDatastore(DatabaseConnection(firebaseUser.uid));
-      await userService.deleteSettings();
-      await userService.setFlutterMigrationFlag();
+      final userDatastore = UserDatastore(DatabaseConnection(firebaseUser.uid));
+      await userDatastore.deleteSettings();
+      await userDatastore.setFlutterMigrationFlag();
       analytics.logEvent(
           name: "user_is_not_migrated_flutter",
           parameters: {"uid": firebaseUser.uid});

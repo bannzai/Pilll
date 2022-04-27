@@ -21,12 +21,12 @@ final displayNumberSettingStateStoreProvider =
 class DisplayNumberSettingStateStore
     extends StateNotifier<DisplayNumberSettingState> {
   final BatchFactory _batchFactory;
-  final PillSheetGroupDatastore _pillSheetGroupService;
+  final PillSheetGroupDatastore _pillSheetGroupDatastore;
   final PillSheetModifiedHistoryDatastore _pillSheetModifiedHistoryService;
 
   DisplayNumberSettingStateStore(
     this._batchFactory,
-    this._pillSheetGroupService,
+    this._pillSheetGroupDatastore,
     this._pillSheetModifiedHistoryService, {
     required PillSheetGroup pillSheetGroup,
   }) : super(DisplayNumberSettingState(
@@ -38,7 +38,7 @@ class DisplayNumberSettingStateStore
 
   void setup() async {
     final beforePillSheetGroup =
-        await _pillSheetGroupService.fetchBeforePillSheetGroup();
+        await _pillSheetGroupDatastore.fetchBeforePillSheetGroup();
     state = state.copyWith(beforePillSheetGroup: beforePillSheetGroup);
   }
 
@@ -123,7 +123,7 @@ class DisplayNumberSettingStateStore
       );
     }
 
-    _pillSheetGroupService.updateWithBatch(batch, state.pillSheetGroup);
+    _pillSheetGroupDatastore.updateWithBatch(batch, state.pillSheetGroup);
 
     await batch.commit();
   }

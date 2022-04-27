@@ -25,11 +25,11 @@ final premiumIntroductionStateProvider =
     Provider.autoDispose((ref) => ref.watch(premiumIntroductionStoreProvider));
 
 class PremiumIntroductionStore extends StateNotifier<PremiumIntroductionState> {
-  final UserDatastore _userService;
+  final UserDatastore _userDatastore;
   final AuthService _authService;
   final PurchaseService _purchaseService;
   PremiumIntroductionStore(
-      this._userService, this._authService, this._purchaseService)
+      this._userDatastore, this._authService, this._purchaseService)
       : super(const PremiumIntroductionState()) {
     reset();
   }
@@ -42,7 +42,7 @@ class PremiumIntroductionStore extends StateNotifier<PremiumIntroductionState> {
         hasLoginProvider:
             _authService.isLinkedApple() || _authService.isLinkedGoogle(),
       );
-      _userService.fetch().then((value) {
+      _userDatastore.fetch().then((value) {
         state = state.copyWith(
           isPremium: value.isPremium,
           isTrial: value.isTrial,
@@ -62,7 +62,7 @@ class PremiumIntroductionStore extends StateNotifier<PremiumIntroductionState> {
   StreamSubscription? _authStreamCanceller;
   _subscribe() {
     _userStreamCanceller?.cancel();
-    _userStreamCanceller = _userService.stream().listen((event) {
+    _userStreamCanceller = _userDatastore.stream().listen((event) {
       state = state.copyWith(
         isPremium: event.isPremium,
         isTrial: event.isTrial,

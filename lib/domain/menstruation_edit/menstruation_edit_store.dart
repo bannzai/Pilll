@@ -19,7 +19,7 @@ final menstruationEditProvider = StateNotifierProvider.family
     menstruation: menstruation,
     menstruationDatastore: ref.watch(menstruationDatastoreProvider),
     settingDatastore: ref.watch(settingDatastoreProvider),
-    userService: ref.watch(userDatastoreProvider),
+    userDatastore: ref.watch(userDatastoreProvider),
   ),
 );
 
@@ -46,13 +46,13 @@ class MenstruationEditStore extends StateNotifier<MenstruationEditState> {
   late Menstruation? initialMenstruation;
   final MenstruationDatastore menstruationDatastore;
   final SettingDatastore settingDatastore;
-  final UserDatastore userService;
+  final UserDatastore userDatastore;
 
   MenstruationEditStore({
     Menstruation? menstruation,
     required this.menstruationDatastore,
     required this.settingDatastore,
-    required this.userService,
+    required this.userDatastore,
   }) : super(MenstruationEditState(
             menstruation: menstruation,
             displayedDates: displayedDates(menstruation))) {
@@ -68,7 +68,7 @@ class MenstruationEditStore extends StateNotifier<MenstruationEditState> {
   void _subscribe() {
     _cancel();
 
-    _userSubscribeCanceller = userService.stream().listen((event) {
+    _userSubscribeCanceller = userDatastore.stream().listen((event) {
       state = state.copyWith(
         isPremium: event.isPremium,
         isTrial: event.isTrial,

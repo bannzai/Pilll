@@ -91,26 +91,26 @@ void main() {
       when(authService.isLinkedGoogle()).thenReturn(false);
       when(authService.stream())
           .thenAnswer((realInvocation) => const Stream.empty());
-      final userService = MockUserDatastore();
-      when(userService.fetch())
+      final userDatastore = MockUserDatastore();
+      when(userDatastore.fetch())
           .thenAnswer((reaInvocation) => Future.value(_FakeUser()));
-      when(userService.stream())
+      when(userDatastore.stream())
           .thenAnswer((realInvocation) => const Stream.empty());
       final pillSheetModifedHistoryService =
           MockPillSheetModifiedHistoryDatastore();
-      final pillSheetGroupService = MockPillSheetGroupDatastore();
-      when(pillSheetGroupService.fetchLatest())
+      final pillSheetGroupDatastore = MockPillSheetGroupDatastore();
+      when(pillSheetGroupDatastore.fetchLatest())
           .thenAnswer((realInvocation) => Future.value(pillSheetGroup));
-      when(pillSheetGroupService.streamForLatest())
+      when(pillSheetGroupDatastore.streamForLatest())
           .thenAnswer((realInvocation) => const Stream.empty());
       final store = RecordPageStore(
         batch,
         service,
         settingDatastore,
-        userService,
+        userDatastore,
         authService,
         pillSheetModifedHistoryService,
-        pillSheetGroupService,
+        pillSheetGroupDatastore,
       );
 
       await waitForResetStoreState();
@@ -166,27 +166,27 @@ void main() {
       when(authService.isLinkedGoogle()).thenReturn(false);
       when(authService.stream())
           .thenAnswer((realInvocation) => const Stream.empty());
-      final userService = MockUserDatastore();
-      when(userService.fetch())
+      final userDatastore = MockUserDatastore();
+      when(userDatastore.fetch())
           .thenAnswer((reaInvocation) => Future.value(_FakeUser()));
-      when(userService.stream())
+      when(userDatastore.stream())
           .thenAnswer((realInvocation) => const Stream.empty());
       final pillSheetModifedHistoryService =
           MockPillSheetModifiedHistoryDatastore();
-      final pillSheetGroupService = MockPillSheetGroupDatastore();
-      when(pillSheetGroupService.fetchLatest())
+      final pillSheetGroupDatastore = MockPillSheetGroupDatastore();
+      when(pillSheetGroupDatastore.fetchLatest())
           .thenAnswer((realInvocation) => Future.value(pillSheetGroup));
-      when(pillSheetGroupService.streamForLatest())
+      when(pillSheetGroupDatastore.streamForLatest())
           .thenAnswer((realInvocation) => const Stream.empty());
 
       final store = RecordPageStore(
         batch,
         service,
         settingDatastore,
-        userService,
+        userDatastore,
         authService,
         pillSheetModifedHistoryService,
-        pillSheetGroupService,
+        pillSheetGroupDatastore,
       );
 
       await waitForResetStoreState();
@@ -244,27 +244,27 @@ void main() {
       when(authService.isLinkedGoogle()).thenReturn(false);
       when(authService.stream())
           .thenAnswer((realInvocation) => const Stream.empty());
-      final userService = MockUserDatastore();
-      when(userService.fetch())
+      final userDatastore = MockUserDatastore();
+      when(userDatastore.fetch())
           .thenAnswer((reaInvocation) => Future.value(_FakeUser()));
-      when(userService.stream())
+      when(userDatastore.stream())
           .thenAnswer((realInvocation) => const Stream.empty());
       final pillSheetModifedHistoryService =
           MockPillSheetModifiedHistoryDatastore();
-      final pillSheetGroupService = MockPillSheetGroupDatastore();
-      when(pillSheetGroupService.fetchLatest())
+      final pillSheetGroupDatastore = MockPillSheetGroupDatastore();
+      when(pillSheetGroupDatastore.fetchLatest())
           .thenAnswer((realInvocation) => Future.value(pillSheetGroup));
-      when(pillSheetGroupService.streamForLatest())
+      when(pillSheetGroupDatastore.streamForLatest())
           .thenAnswer((realInvocation) => const Stream.empty());
 
       final store = RecordPageStore(
         batch,
         service,
         settingDatastore,
-        userService,
+        userDatastore,
         authService,
         pillSheetModifedHistoryService,
-        pillSheetGroupService,
+        pillSheetGroupDatastore,
       );
 
       await waitForResetStoreState();
@@ -317,27 +317,27 @@ void main() {
       when(authService.isLinkedGoogle()).thenReturn(false);
       when(authService.stream())
           .thenAnswer((realInvocation) => const Stream.empty());
-      final userService = MockUserDatastore();
-      when(userService.fetch())
+      final userDatastore = MockUserDatastore();
+      when(userDatastore.fetch())
           .thenAnswer((reaInvocation) => Future.value(_FakeUser()));
-      when(userService.stream())
+      when(userDatastore.stream())
           .thenAnswer((realInvocation) => const Stream.empty());
       final pillSheetModifedHistoryService =
           MockPillSheetModifiedHistoryDatastore();
-      final pillSheetGroupService = MockPillSheetGroupDatastore();
-      when(pillSheetGroupService.fetchLatest())
+      final pillSheetGroupDatastore = MockPillSheetGroupDatastore();
+      when(pillSheetGroupDatastore.fetchLatest())
           .thenAnswer((realInvocation) => Future.value(pillSheetGroup));
-      when(pillSheetGroupService.streamForLatest())
+      when(pillSheetGroupDatastore.streamForLatest())
           .thenAnswer((realInvocation) => const Stream.empty());
 
       final store = RecordPageStore(
         batch,
         service,
         settingDatastore,
-        userService,
+        userDatastore,
         authService,
         pillSheetModifedHistoryService,
-        pillSheetGroupService,
+        pillSheetGroupDatastore,
       );
 
       await waitForResetStoreState();

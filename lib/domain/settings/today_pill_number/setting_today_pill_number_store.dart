@@ -27,15 +27,15 @@ final settingTodayPillNumberStoreProvider = StateNotifierProvider.autoDispose
 class SettingTodayPillNumberStateStore
     extends StateNotifier<SettingTodayPillNumberState> {
   final BatchFactory _batchFactory;
-  final PillSheetDatastore _pillSheetService;
-  final PillSheetGroupDatastore _pillSheetGroupService;
+  final PillSheetDatastore _pillSheetDatastore;
+  final PillSheetGroupDatastore _pillSheetGroupDatastore;
   final PillSheetModifiedHistoryDatastore _pillSheetModifiedHistoryService;
 
   SettingTodayPillNumberStateStore(
     SettingTodayPillNumberStoreParameter _parameter,
     this._batchFactory,
-    this._pillSheetService,
-    this._pillSheetGroupService,
+    this._pillSheetDatastore,
+    this._pillSheetGroupDatastore,
     this._pillSheetModifiedHistoryService,
   ) : super(
           SettingTodayPillNumberState(
@@ -66,11 +66,12 @@ class SettingTodayPillNumberStateStore
 
     final pillSheetTypes =
         pillSheetGroup.pillSheets.map((e) => e.pillSheetType).toList();
-    final nextSerializedPillNumber = summarizedPillCountWithPillSheetTypesToEndIndex(
-          pillSheetTypes: pillSheetTypes,
-          endIndex: state.selectedPillSheetPageIndex,
-        ) +
-        state.selectedPillMarkNumberIntoPillSheet;
+    final nextSerializedPillNumber =
+        summarizedPillCountWithPillSheetTypesToEndIndex(
+              pillSheetTypes: pillSheetTypes,
+              endIndex: state.selectedPillSheetPageIndex,
+            ) +
+            state.selectedPillMarkNumberIntoPillSheet;
     final firstPilSheetBeginDate =
         today().subtract(Duration(days: nextSerializedPillNumber - 1));
 
@@ -82,8 +83,9 @@ class SettingTodayPillNumberStateStore
       if (index == 0) {
         beginDate = firstPilSheetBeginDate;
       } else {
-        final passedTotalCount = summarizedPillCountWithPillSheetTypesToEndIndex(
-            pillSheetTypes: pillSheetTypes, endIndex: index);
+        final passedTotalCount =
+            summarizedPillCountWithPillSheetTypesToEndIndex(
+                pillSheetTypes: pillSheetTypes, endIndex: index);
         beginDate =
             firstPilSheetBeginDate.add(Duration(days: passedTotalCount));
       }
@@ -107,7 +109,7 @@ class SettingTodayPillNumberStateStore
       updatedPillSheets.add(updatedPillSheet);
     });
 
-    _pillSheetService.update(batch, updatedPillSheets);
+    _pillSheetDatastore.update(batch, updatedPillSheets);
 
     final history = PillSheetModifiedHistoryServiceActionFactory
         .createChangedPillNumberAction(
@@ -117,7 +119,7 @@ class SettingTodayPillNumberStateStore
     );
     _pillSheetModifiedHistoryService.add(batch, history);
 
-    _pillSheetGroupService.updateWithBatch(
+    _pillSheetGroupDatastore.updateWithBatch(
         batch, pillSheetGroup.copyWith(pillSheets: updatedPillSheets));
 
     await batch.commit();

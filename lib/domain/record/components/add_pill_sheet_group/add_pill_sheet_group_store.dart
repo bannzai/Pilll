@@ -32,8 +32,8 @@ final addPillSheetGroupStateStoreProvider = StateNotifierProvider.autoDispose<
 
 class AddPillSheetGroupStateStore
     extends StateNotifier<AddPillSheetGroupState> {
-  final PillSheetDatastore _pillSheetService;
-  final PillSheetGroupDatastore _pillSheetGroupService;
+  final PillSheetDatastore _pillSheetDatastore;
+  final PillSheetGroupDatastore _pillSheetGroupDatastore;
   final SettingDatastore _settingDatastore;
   final PillSheetModifiedHistoryDatastore _pillSheetModifiedHistoryService;
   final BatchFactory _batchFactory;
@@ -41,8 +41,8 @@ class AddPillSheetGroupStateStore
     PillSheetGroup? pillSheetGroup,
     PillSheetAppearanceMode pillSheetAppearanceMode,
     Setting? setting,
-    this._pillSheetService,
-    this._pillSheetGroupService,
+    this._pillSheetDatastore,
+    this._pillSheetGroupDatastore,
     this._settingDatastore,
     this._pillSheetModifiedHistoryService,
     this._batchFactory,
@@ -88,7 +88,7 @@ class AddPillSheetGroupStateStore
     final batch = _batchFactory.batch();
 
     final n = now();
-    final createdPillSheets = _pillSheetService.register(
+    final createdPillSheets = _pillSheetDatastore.register(
       batch,
       setting.pillSheetTypes.asMap().keys.map((pageIndex) {
         final pillSheetType = setting.pillSheetEnumTypes[pageIndex];
@@ -105,7 +105,7 @@ class AddPillSheetGroupStateStore
     );
 
     final pillSheetIDs = createdPillSheets.map((e) => e.id!).toList();
-    final createdPillSheetGroup = _pillSheetGroupService.register(
+    final createdPillSheetGroup = _pillSheetGroupDatastore.register(
       batch,
       PillSheetGroup(
         pillSheetIDs: pillSheetIDs,
