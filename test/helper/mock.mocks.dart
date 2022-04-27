@@ -33,7 +33,7 @@ import 'package:pilll/entity/user.codegen.dart' as _i6;
 import 'package:pilll/service/auth.dart' as _i20;
 import 'package:pilll/service/day.dart' as _i14;
 import 'package:pilll/database/diary.dart' as _i18;
-import 'package:pilll/service/menstruation.dart' as _i19;
+import 'package:pilll/database/menstruation.dart' as _i19;
 import 'package:pilll/service/pill_sheet.dart' as _i13;
 import 'package:pilll/service/pill_sheet_group.dart' as _i33;
 import 'package:pilll/service/pill_sheet_modified_history.dart' as _i31;

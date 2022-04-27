@@ -3,7 +3,7 @@ import 'dart:async';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
 import 'package:pilll/domain/menstruation_list/menstruation_list_row.dart';
 import 'package:pilll/domain/menstruation_list/menstruation_list_state.codegen.dart';
-import 'package:pilll/service/menstruation.dart';
+import 'package:pilll/database/menstruation.dart';
 import 'package:pilll/domain/menstruation/menstruation_store.dart';
 
 final menstruationListStoreProvider =
