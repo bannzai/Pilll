@@ -3,7 +3,7 @@ import 'package:pilll/auth/apple.dart';
 import 'package:pilll/auth/boilerplate.dart';
 import 'package:pilll/auth/google.dart';
 import 'package:pilll/database/user.dart';
-import 'package:pilll/signin/signin_sheet_state.codegen.dart';
+import 'package:pilll/domain/sign_in/sign_in_sheet_state.codegen.dart';
 import 'package:riverpod/riverpod.dart';
 
 final signinSheetStoreProvider = StateNotifierProvider.autoDispose

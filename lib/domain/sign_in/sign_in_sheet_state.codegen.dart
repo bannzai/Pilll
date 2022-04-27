@@ -1,7 +1,7 @@
 import 'package:freezed_annotation/freezed_annotation.dart';
 import 'package:pilll/entity/link_account_type.dart';
 
-part 'signin_sheet_state.codegen.freezed.dart';
+part 'sign_in_sheet_state.codegen.freezed.dart';
 
 enum SignInSheetStateContext { initialSetting, recordPage, premium, setting }
 
