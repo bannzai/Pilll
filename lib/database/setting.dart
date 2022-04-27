@@ -14,9 +14,10 @@ class SettingDatastore {
   SettingDatastore(this._database);
 
   Future<Setting> fetch() {
-    return _database.userReference().get().then((event) => Setting.fromJson(
-        (event.data()
-            as Map<String, dynamic>)[UserFirestoreFieldKeys.settings]));
+    return _database
+        .userReference()
+        .get()
+        .then((event) => event.data()!.setting!);
   }
 
   late Stream<Setting> _stream = _database
