@@ -61,7 +61,7 @@ class UserDatastore {
     required List<String> activeSubscriptions,
     required String? originalPurchaseDate,
   }) async {
-    await _database.userReference().set({
+    await _database.userRawReference().set({
       if (isActivated != null) UserFirestoreFieldKeys.isPremium: isActivated,
       UserFirestoreFieldKeys.purchaseAppID: purchaseAppID
     }, SetOptions(merge: true));
@@ -80,7 +80,7 @@ class UserDatastore {
     };
     if (privates.isNotEmpty) {
       await _database
-          .userPrivateReference()
+          .userPrivateRawReference()
           .set({...privates}, SetOptions(merge: true));
     }
   }
@@ -88,7 +88,7 @@ class UserDatastore {
   Future<void> syncPurchaseInfo({
     required bool isActivated,
   }) async {
-    await _database.userReference().set({
+    await _database.userRawReference().set({
       UserFirestoreFieldKeys.isPremium: isActivated,
     }, SetOptions(merge: true));
   }
@@ -100,7 +100,7 @@ class UserDatastore {
   }
 
   Future<void> setFlutterMigrationFlag() {
-    return _database.userReference().set(
+    return _database.userRawReference().set(
       {UserFirestoreFieldKeys.migratedFlutter: true},
       SetOptions(merge: true),
     );
@@ -111,7 +111,7 @@ class UserDatastore {
     final sharedPreferences = await SharedPreferences.getInstance();
     final anonymousUserID =
         sharedPreferences.getString(StringKey.lastSignInAnonymousUID);
-    return _database.userReference().set(
+    return _database.userRawReference().set(
       {
         if (anonymousUserID != null)
           UserFirestoreFieldKeys.anonymousUserID: anonymousUserID,
@@ -123,7 +123,7 @@ class UserDatastore {
 
   Future<void> registerRemoteNotificationToken(String? token) {
     print("token: $token");
-    return _database.userPrivateReference().set(
+    return _database.userPrivateRawReference().set(
       {UserPrivateFirestoreFieldKeys.fcmToken: token},
       SetOptions(merge: true),
     );
@@ -133,7 +133,7 @@ class UserDatastore {
     await _database.userReference().set({
       UserFirestoreFieldKeys.isAnonymous: false,
     }, SetOptions(merge: true));
-    return _database.userPrivateReference().set({
+    return _database.userPrivateRawReference().set({
       if (email != null) UserPrivateFirestoreFieldKeys.appleEmail: email,
       UserPrivateFirestoreFieldKeys.isLinkedApple: true,
     }, SetOptions(merge: true));
@@ -143,7 +143,7 @@ class UserDatastore {
     await _database.userReference().set({
       UserFirestoreFieldKeys.isAnonymous: false,
     }, SetOptions(merge: true));
-    return _database.userPrivateReference().set({
+    return _database.userPrivateRawReference().set({
       if (email != null) UserPrivateFirestoreFieldKeys.googleEmail: email,
       UserPrivateFirestoreFieldKeys.isLinkedGoogle: true,
     }, SetOptions(merge: true));
@@ -171,7 +171,7 @@ class UserDatastore {
       elements: elements,
       message: message,
     );
-    return _database.userPrivateReference().set({
+    return _database.userPrivateRawReference().set({
       UserPrivateFirestoreFieldKeys.premiumFunctionSurvey:
           premiumFunctionSurvey.toJson()
     }, SetOptions(merge: true));

@@ -47,6 +47,8 @@ class DatabaseConnection {
         fromFirestore: _userFromFirestore,
         toFirestore: _userToFirestore,
       );
+  DocumentReference userRawReference() =>
+      FirebaseFirestore.instance.collection(_CollectionPath.users).doc(_userID);
 
   FromFirestore<PillSheet> _pillSheetFromFirestore =
       (snapshot, options) => PillSheet.fromJson(snapshot.data()!);
@@ -87,18 +89,9 @@ class DatabaseConnection {
             toFirestore: _diaryToFirestore,
           );
 
-  FromFirestore<UserPrivate> _userPrivateFromFirestore =
-      (snapshot, options) => UserPrivate.fromJson(snapshot.data()!);
-  ToFirestore<UserPrivate> _userPrivateToFirestore =
-      (userPrivate, options) => userPrivate.toJson();
-  DocumentReference<UserPrivate> userPrivateReference() =>
-      FirebaseFirestore.instance
-          .collection(_CollectionPath.userPrivates(_userID))
-          .doc(_userID)
-          .withConverter(
-            fromFirestore: _userPrivateFromFirestore,
-            toFirestore: _userPrivateToFirestore,
-          );
+  DocumentReference userPrivateRawReference() => FirebaseFirestore.instance
+      .collection(_CollectionPath.userPrivates(_userID))
+      .doc(_userID);
 
   FromFirestore<Menstruation> _menstruationFromFirestore =
       (snapshot, options) => Menstruation.fromJson(snapshot.data()!);
