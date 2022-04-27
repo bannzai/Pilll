@@ -166,7 +166,7 @@ class RootState extends State<Root> {
     final userDatastore = UserDatastore(DatabaseConnection(firebaseUser.uid));
     userDatastore.saveUserLaunchInfo();
 
-    final user = await userDatastore.prepare(firebaseUser.uid);
+    final user = await userDatastore.fetchOrCreate(firebaseUser.uid);
     unawaited(userDatastore.temporarySyncronizeDiscountEntitlement(user));
 
     return user;

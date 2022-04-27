@@ -22,8 +22,8 @@ class UserDatastore {
   final DatabaseConnection _database;
   UserDatastore(this._database);
 
-  Future<User> prepare(String uid) async {
-    print("call prepare for $uid");
+  Future<User> fetchOrCreate(String uid) async {
+    print("call fetchOrCreate for $uid");
     final user = await fetch().catchError((error) {
       if (error is UserNotFound) {
         return _create(uid).then((_) => fetch());
