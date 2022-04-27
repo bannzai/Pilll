@@ -59,11 +59,10 @@ class DiaryDatastore {
     return _database.diaryReference(diary).delete().then((_) => diary);
   }
 
-  Stream<List<Diary>> stream() {
-    return _database
-        .diariesReference()
-        .snapshots()
-        .map((event) => event.docs.map((e) => e.data()).toList())
-        .map((diaries) => sortedDiaries(diaries));
-  }
+  late Stream<List<Diary>> _stream = _database
+      .diariesReference()
+      .snapshots()
+      .map((event) => event.docs.map((e) => e.data()).toList())
+      .map((diaries) => sortedDiaries(diaries));
+  Stream<List<Diary>> stream() => _stream;
 }
