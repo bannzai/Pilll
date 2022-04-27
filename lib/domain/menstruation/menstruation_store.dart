@@ -92,7 +92,7 @@ class MenstruationStore extends StateNotifier<MenstruationState> {
     });
     _pillSheetGroupCanceller?.cancel();
     _pillSheetGroupCanceller =
-        pillSheetGroupDatastore.streamForLatest().listen((pillSheet) {
+        pillSheetGroupDatastore.latestPillSheetGroupStream().listen((pillSheet) {
       state = state.copyWith(latestPillSheetGroup: pillSheet);
     });
     _userCanceller?.cancel();

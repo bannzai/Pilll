@@ -714,7 +714,7 @@ class MockPillSheetGroupDatastore extends _i1.Mock
               returnValue: Future<_i10.PillSheetGroup?>.value())
           as _i16.Future<_i10.PillSheetGroup?>);
   @override
-  _i16.Stream<_i10.PillSheetGroup> streamForLatest() =>
+  _i16.Stream<_i10.PillSheetGroup> latestPillSheetGroupStream() =>
       (super.noSuchMethod(Invocation.method(#streamForLatest, []),
               returnValue: Stream<_i10.PillSheetGroup>.empty())
           as _i16.Stream<_i10.PillSheetGroup>);

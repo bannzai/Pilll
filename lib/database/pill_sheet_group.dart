@@ -42,12 +42,13 @@ class PillSheetGroupDatastore {
     return snapshot.docs[0].data();
   }
 
-  Stream<PillSheetGroup> streamForLatest() {
-    return _latestQuery()
-        .snapshots()
-        .map(((event) => _filter(event)))
-        .where((event) => event != null)
-        .cast();
+  late Stream<PillSheetGroup> _latestPillSheetGroupStream = _latestQuery()
+      .snapshots()
+      .map(((event) => _filter(event)))
+      .where((event) => event != null)
+      .cast();
+  Stream<PillSheetGroup> latestPillSheetGroupStream() {
+    return _latestPillSheetGroupStream;
   }
 
   // Return new PillSheet document id

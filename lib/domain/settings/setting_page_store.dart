@@ -88,7 +88,7 @@ class SettingStateStore extends StateNotifier<SettingState> {
       state = state.copyWith(setting: event);
     });
     _pillSheetGroupCanceller =
-        _pillSheetGroupDatastore.streamForLatest().listen((event) {
+        _pillSheetGroupDatastore.latestPillSheetGroupStream().listen((event) {
       state = state.copyWith(latestPillSheetGroup: event);
     });
     _userSubscribeCanceller = _userDatastore.stream().listen((event) {

@@ -78,7 +78,7 @@ void main() {
       final pillSheet = PillSheet.create(PillSheetType.pillsheet_21);
       final pillSheetGroup = PillSheetGroup(
           pillSheetIDs: ["1"], pillSheets: [pillSheet], createdAt: now());
-      when(pillSheetGroupDatastore.streamForLatest()).thenAnswer(
+      when(pillSheetGroupDatastore.latestPillSheetGroupStream()).thenAnswer(
           (realInvocation) => Stream.fromIterable([pillSheetGroup]));
 
       final batchFactory = MockBatchFactory();
@@ -149,7 +149,7 @@ void main() {
       final pillSheetGroup = PillSheetGroup(
           pillSheetIDs: ["1"], pillSheets: [pillSheet], createdAt: now());
       final pillSheetGroupDatastore = MockPillSheetGroupDatastore();
-      when(pillSheetGroupDatastore.streamForLatest())
+      when(pillSheetGroupDatastore.latestPillSheetGroupStream())
           .thenAnswer((realInvocation) => Stream.value(pillSheetGroup));
 
       final batchFactory = MockBatchFactory();
