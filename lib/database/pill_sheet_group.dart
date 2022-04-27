@@ -56,7 +56,7 @@ class PillSheetGroupDatastore {
 
     final copied = pillSheetGroup.copyWith(createdAt: DateTime.now());
     final newDocument = _database.pillSheetGroupsReference().doc();
-    batch.set(newDocument, copied.toJson(), SetOptions(merge: true));
+    batch.set(newDocument, copied, SetOptions(merge: true));
     return copied.copyWith(id: newDocument.id);
   }
 
@@ -64,20 +64,20 @@ class PillSheetGroupDatastore {
     if (pillSheetGroup.deletedAt != null) throw PillSheetGroupAlreadyDeleted();
 
     final updated = pillSheetGroup.copyWith(deletedAt: DateTime.now());
-    batch.set(_database.pillSheetGroupReference(pillSheetGroup.id!),
-        updated.toJson(), SetOptions(merge: true));
+    batch.set(_database.pillSheetGroupReference(pillSheetGroup.id!), updated,
+        SetOptions(merge: true));
     return updated;
   }
 
   Future<void> update(PillSheetGroup pillSheetGroup) async {
     await _database
         .pillSheetGroupReference(pillSheetGroup.id!)
-        .update(pillSheetGroup.toJson());
+        .set(pillSheetGroup, SetOptions(merge: true));
   }
 
   void updateWithBatch(WriteBatch batch, PillSheetGroup pillSheetGroup) {
-    final json = pillSheetGroup.toJson();
-    batch.update(_database.pillSheetGroupReference(pillSheetGroup.id!), json);
+    batch.set(_database.pillSheetGroupReference(pillSheetGroup.id!),
+        pillSheetGroup, SetOptions(merge: true));
   }
 }
 

@@ -30,14 +30,14 @@ class SettingDatastore {
 
   Future<Setting> update(Setting setting) {
     return _database
-        .userReference()
+        .userRawReference()
         .update({UserFirestoreFieldKeys.settings: setting.toJson()}).then(
             (_) => setting);
   }
 
   void updateWithBatch(WriteBatch batch, Setting setting) {
     batch.set(
-      _database.userReference(),
+      _database.userRawReference(),
       {UserFirestoreFieldKeys.settings: setting.toJson()},
       SetOptions(merge: true),
     );

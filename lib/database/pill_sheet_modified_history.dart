@@ -56,8 +56,8 @@ class PillSheetModifiedHistoryDatastore {
   }
 
   void add(WriteBatch batch, PillSheetModifiedHistory history) {
-    batch.set(_database.pillSheetModifiedHistoriesReference().doc(),
-        history.toJson(), SetOptions(merge: true));
+    batch.set(_database.pillSheetModifiedHistoriesReference().doc(), history,
+        SetOptions(merge: true));
   }
 }
 

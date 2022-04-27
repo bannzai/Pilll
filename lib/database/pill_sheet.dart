@@ -20,8 +20,7 @@ class PillSheetDatastore {
       final copied = pillSheet.copyWith(createdAt: DateTime.now());
 
       final document = _database.pillSheetsReference().doc();
-      var json = copied.toJson();
-      batch.set(document, json, SetOptions(merge: true));
+      batch.set(document, copied, SetOptions(merge: true));
 
       newPillSheets.add(copied.copyWith(id: document.id));
     });
@@ -30,15 +29,15 @@ class PillSheetDatastore {
 
   PillSheet delete(WriteBatch batch, PillSheet pillSheet) {
     final updated = pillSheet.copyWith(deletedAt: DateTime.now());
-    batch.set(_database.pillSheetReference(pillSheet.documentID!),
-        updated.toJson(), SetOptions(merge: true));
+    batch.set(_database.pillSheetReference(pillSheet.documentID!), updated,
+        SetOptions(merge: true));
     return updated;
   }
 
   void update(WriteBatch batch, List<PillSheet> pillSheets) {
     pillSheets.forEach((pillSheet) {
-      final json = pillSheet.toJson();
-      batch.update(_database.pillSheetReference(pillSheet.documentID!), json);
+      batch.set(_database.pillSheetReference(pillSheet.documentID!), pillSheet,
+          SetOptions(merge: true));
     });
   }
 }

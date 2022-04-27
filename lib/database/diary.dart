@@ -51,7 +51,7 @@ class DiaryDatastore {
   Future<Diary> update(Diary diary) {
     return _database
         .diaryReference(diary)
-        .update(diary.toJson())
+        .set(diary, SetOptions(merge: true))
         .then((_) => diary);
   }
 
