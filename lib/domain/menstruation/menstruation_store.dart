@@ -24,7 +24,7 @@ final menstruationsStoreProvider =
     settingService: ref.watch(settingDatastoreProvider),
     pillSheetService: ref.watch(pillSheetDatastoreProvider),
     userService: ref.watch(userDatastoreProvider),
-    pillSheetGroupService: ref.watch(pillSheetGroupDatabaseProvider),
+    pillSheetGroupService: ref.watch(pillSheetGroupDatastoreProvider),
   ),
 );
 
@@ -34,7 +34,7 @@ class MenstruationStore extends StateNotifier<MenstruationState> {
   final SettingDatastore settingService;
   final PillSheetDatastore pillSheetService;
   final UserDatastore userService;
-  final PillSheetGroupDatabase pillSheetGroupService;
+  final PillSheetGroupDatastore pillSheetGroupService;
   MenstruationStore({
     required this.menstruationService,
     required this.diaryService,

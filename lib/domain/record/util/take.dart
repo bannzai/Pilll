@@ -54,7 +54,7 @@ Future<PillSheetGroup?> take({
   required BatchFactory batchFactory,
   required PillSheetDatastore pillSheetService,
   required PillSheetModifiedHistoryDatastore pillSheetModifiedHistoryService,
-  required PillSheetGroupDatabase pillSheetGroupService,
+  required PillSheetGroupDatastore pillSheetGroupService,
   required bool isQuickRecord,
 }) async {
   if (activedPillSheet.todayPillIsAlreadyTaken) {

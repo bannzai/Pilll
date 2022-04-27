@@ -12,7 +12,7 @@ final displayNumberSettingStateStoreProvider =
         DisplayNumberSettingState>((ref) {
   return DisplayNumberSettingStateStore(
     ref.watch(batchFactoryProvider),
-    ref.watch(pillSheetGroupDatabaseProvider),
+    ref.watch(pillSheetGroupDatastoreProvider),
     ref.watch(pillSheetModifiedHistoryDatastoreProvider),
     pillSheetGroup: ref.watch(recordPageStoreProvider).pillSheetGroup!,
   );
@@ -21,7 +21,7 @@ final displayNumberSettingStateStoreProvider =
 class DisplayNumberSettingStateStore
     extends StateNotifier<DisplayNumberSettingState> {
   final BatchFactory _batchFactory;
-  final PillSheetGroupDatabase _pillSheetGroupService;
+  final PillSheetGroupDatastore _pillSheetGroupService;
   final PillSheetModifiedHistoryDatastore _pillSheetModifiedHistoryService;
 
   DisplayNumberSettingStateStore(

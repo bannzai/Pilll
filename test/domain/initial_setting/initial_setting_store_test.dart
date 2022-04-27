@@ -46,7 +46,7 @@ void main() {
           pillSheetDatastoreProvider.overrideWithValue(pillSheetService),
           pillSheetModifiedHistoryDatastoreProvider
               .overrideWithValue(pillSheetModifiedHistoryService),
-          pillSheetGroupDatabaseProvider
+          pillSheetGroupDatastoreProvider
               .overrideWithValue(pillSheetGroupService),
         ],
       );
@@ -80,7 +80,7 @@ void main() {
           pillSheetDatastoreProvider.overrideWithValue(pillSheetService),
           pillSheetModifiedHistoryDatastoreProvider
               .overrideWithValue(pillSheetModifiedHistoryService),
-          pillSheetGroupDatabaseProvider
+          pillSheetGroupDatastoreProvider
               .overrideWithValue(pillSheetGroupService),
         ],
       );
@@ -123,7 +123,7 @@ void main() {
           pillSheetDatastoreProvider.overrideWithValue(pillSheetService),
           pillSheetModifiedHistoryDatastoreProvider
               .overrideWithValue(pillSheetModifiedHistoryService),
-          pillSheetGroupDatabaseProvider
+          pillSheetGroupDatastoreProvider
               .overrideWithValue(pillSheetGroupService),
         ],
       );
@@ -161,7 +161,7 @@ void main() {
           pillSheetDatastoreProvider.overrideWithValue(pillSheetService),
           pillSheetModifiedHistoryDatastoreProvider
               .overrideWithValue(pillSheetModifiedHistoryService),
-          pillSheetGroupDatabaseProvider
+          pillSheetGroupDatastoreProvider
               .overrideWithValue(pillSheetGroupService),
         ],
       );
@@ -200,7 +200,7 @@ void main() {
           pillSheetDatastoreProvider.overrideWithValue(pillSheetService),
           pillSheetModifiedHistoryDatastoreProvider
               .overrideWithValue(pillSheetModifiedHistoryService),
-          pillSheetGroupDatabaseProvider
+          pillSheetGroupDatastoreProvider
               .overrideWithValue(pillSheetGroupService),
         ],
       );
@@ -239,7 +239,7 @@ void main() {
           pillSheetDatastoreProvider.overrideWithValue(pillSheetService),
           pillSheetModifiedHistoryDatastoreProvider
               .overrideWithValue(pillSheetModifiedHistoryService),
-          pillSheetGroupDatabaseProvider
+          pillSheetGroupDatastoreProvider
               .overrideWithValue(pillSheetGroupService),
         ],
       );
@@ -272,7 +272,7 @@ void main() {
           pillSheetDatastoreProvider.overrideWithValue(pillSheetService),
           pillSheetModifiedHistoryDatastoreProvider
               .overrideWithValue(pillSheetModifiedHistoryService),
-          pillSheetGroupDatabaseProvider
+          pillSheetGroupDatastoreProvider
               .overrideWithValue(pillSheetGroupService),
         ],
       );
@@ -346,7 +346,7 @@ void main() {
           pillSheetDatastoreProvider.overrideWithValue(pillSheetService),
           pillSheetModifiedHistoryDatastoreProvider
               .overrideWithValue(pillSheetModifiedHistoryService),
-          pillSheetGroupDatabaseProvider
+          pillSheetGroupDatastoreProvider
               .overrideWithValue(pillSheetGroupService),
         ],
       );
@@ -444,7 +444,7 @@ void main() {
           pillSheetDatastoreProvider.overrideWithValue(pillSheetService),
           pillSheetModifiedHistoryDatastoreProvider
               .overrideWithValue(pillSheetModifiedHistoryService),
-          pillSheetGroupDatabaseProvider
+          pillSheetGroupDatastoreProvider
               .overrideWithValue(pillSheetGroupService),
         ],
       );
@@ -524,7 +524,7 @@ void main() {
           pillSheetDatastoreProvider.overrideWithValue(pillSheetService),
           pillSheetModifiedHistoryDatastoreProvider
               .overrideWithValue(pillSheetModifiedHistoryService),
-          pillSheetGroupDatabaseProvider
+          pillSheetGroupDatastoreProvider
               .overrideWithValue(pillSheetGroupService),
         ],
       );

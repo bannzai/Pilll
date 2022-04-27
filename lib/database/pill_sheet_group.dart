@@ -3,13 +3,13 @@ import 'package:pilll/database/database.dart';
 import 'package:pilll/entity/pill_sheet_group.codegen.dart';
 import 'package:riverpod/riverpod.dart';
 
-final pillSheetGroupDatabaseProvider = Provider<PillSheetGroupDatabase>(
-    (ref) => PillSheetGroupDatabase(ref.watch(databaseProvider)));
+final pillSheetGroupDatastoreProvider = Provider<PillSheetGroupDatastore>(
+    (ref) => PillSheetGroupDatastore(ref.watch(databaseProvider)));
 
-class PillSheetGroupDatabase {
+class PillSheetGroupDatastore {
   final DatabaseConnection _database;
 
-  PillSheetGroupDatabase(this._database);
+  PillSheetGroupDatastore(this._database);
 
   Query _latestQuery() {
     return _database

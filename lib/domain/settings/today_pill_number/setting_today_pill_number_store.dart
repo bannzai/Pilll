@@ -19,7 +19,7 @@ final settingTodayPillNumberStoreProvider = StateNotifierProvider.autoDispose
     parameter,
     ref.watch(batchFactoryProvider),
     ref.watch(pillSheetDatastoreProvider),
-    ref.watch(pillSheetGroupDatabaseProvider),
+    ref.watch(pillSheetGroupDatastoreProvider),
     ref.watch(pillSheetModifiedHistoryDatastoreProvider),
   ),
 );
@@ -28,7 +28,7 @@ class SettingTodayPillNumberStateStore
     extends StateNotifier<SettingTodayPillNumberState> {
   final BatchFactory _batchFactory;
   final PillSheetDatastore _pillSheetService;
-  final PillSheetGroupDatabase _pillSheetGroupService;
+  final PillSheetGroupDatastore _pillSheetGroupService;
   final PillSheetModifiedHistoryDatastore _pillSheetModifiedHistoryService;
 
   SettingTodayPillNumberStateStore(

@@ -29,7 +29,7 @@ final initialSettingStoreProvider = StateNotifierProvider.autoDispose<
     ref.watch(settingDatastoreProvider),
     ref.watch(pillSheetDatastoreProvider),
     ref.watch(pillSheetModifiedHistoryDatastoreProvider),
-    ref.watch(pillSheetGroupDatabaseProvider),
+    ref.watch(pillSheetGroupDatastoreProvider),
     ref.watch(authServiceProvider),
   ),
 );
@@ -43,7 +43,7 @@ class InitialSettingStateStore extends StateNotifier<InitialSettingState> {
   final SettingDatastore _settingService;
   final PillSheetDatastore _pillSheetService;
   final PillSheetModifiedHistoryDatastore _pillSheetModifiedHistoryService;
-  final PillSheetGroupDatabase _pillSheetGroupService;
+  final PillSheetGroupDatastore _pillSheetGroupService;
   final AuthService _authService;
 
   InitialSettingStateStore(
