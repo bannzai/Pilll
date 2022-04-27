@@ -48,7 +48,7 @@ void main() {
           const Duration(days: 1),
         ),
       );
-      final pillSheetService = MockPillSheetService();
+      final pillSheetService = MockPillSheetDatabase();
       when(pillSheetService.update(batch, [updatedPillSheet])).thenReturn(null);
 
       final pillSheetGroup = PillSheetGroup(
@@ -61,7 +61,7 @@ void main() {
       );
       final updatedPillSheetGroup =
           pillSheetGroup.copyWith(pillSheets: [updatedPillSheet]);
-      final pillSheetGroupService = MockPillSheetGroupService();
+      final pillSheetGroupService = MockPillSheetGroupDatabase();
       when(pillSheetGroupService.updateWithBatch(batch, updatedPillSheetGroup))
           .thenReturn(updatedPillSheetGroup);
 
@@ -73,7 +73,7 @@ void main() {
       );
 
       final pillSheetModifiedHistoryService =
-          MockPillSheetModifiedHistoryService();
+          MockPillSheetModifiedHistoryDatabase();
       when(pillSheetModifiedHistoryService.add(batch, history))
           .thenReturn(null);
 
@@ -132,7 +132,7 @@ void main() {
           const Duration(days: 1),
         ),
       );
-      final pillSheetService = MockPillSheetService();
+      final pillSheetService = MockPillSheetDatabase();
       when(pillSheetService.update(batch, [updatedPillSheet])).thenReturn(null);
 
       final pillSheetGroup = PillSheetGroup(
@@ -145,7 +145,7 @@ void main() {
       );
       final updatedPillSheetGroup =
           pillSheetGroup.copyWith(pillSheets: [updatedPillSheet]);
-      final pillSheetGroupService = MockPillSheetGroupService();
+      final pillSheetGroupService = MockPillSheetGroupDatabase();
       when(pillSheetGroupService.updateWithBatch(batch, updatedPillSheetGroup))
           .thenReturn(updatedPillSheetGroup);
 
@@ -157,7 +157,7 @@ void main() {
       );
 
       final pillSheetModifiedHistoryService =
-          MockPillSheetModifiedHistoryService();
+          MockPillSheetModifiedHistoryDatabase();
       when(pillSheetModifiedHistoryService.add(batch, history))
           .thenReturn(null);
 
@@ -234,7 +234,7 @@ void main() {
       final updatedRight = right.copyWith(
         beginingDate: DateTime.parse("2022-05-30"),
       );
-      final pillSheetService = MockPillSheetService();
+      final pillSheetService = MockPillSheetDatabase();
       when(pillSheetService.update(batch, [
         updatedLeft,
         updatedMiddle,
@@ -256,7 +256,7 @@ void main() {
         updatedMiddle,
         updatedRight,
       ]);
-      final pillSheetGroupService = MockPillSheetGroupService();
+      final pillSheetGroupService = MockPillSheetGroupDatabase();
       when(pillSheetGroupService.updateWithBatch(batch, updatedPillSheetGroup))
           .thenReturn(updatedPillSheetGroup);
 
@@ -268,7 +268,7 @@ void main() {
       );
 
       final pillSheetModifiedHistoryService =
-          MockPillSheetModifiedHistoryService();
+          MockPillSheetModifiedHistoryDatabase();
       when(pillSheetModifiedHistoryService.add(batch, history))
           .thenReturn(null);
 
@@ -345,7 +345,7 @@ void main() {
       final updatedRight = right.copyWith(
         beginingDate: DateTime.parse("2022-05-30"),
       );
-      final pillSheetService = MockPillSheetService();
+      final pillSheetService = MockPillSheetDatabase();
       when(pillSheetService.update(batch, [
         updatedLeft,
         updatedMiddle,
@@ -367,7 +367,7 @@ void main() {
         updatedMiddle,
         updatedRight,
       ]);
-      final pillSheetGroupService = MockPillSheetGroupService();
+      final pillSheetGroupService = MockPillSheetGroupDatabase();
       when(pillSheetGroupService.updateWithBatch(batch, updatedPillSheetGroup))
           .thenReturn(updatedPillSheetGroup);
 
@@ -379,7 +379,7 @@ void main() {
       );
 
       final pillSheetModifiedHistoryService =
-          MockPillSheetModifiedHistoryService();
+          MockPillSheetModifiedHistoryDatabase();
       when(pillSheetModifiedHistoryService.add(batch, history))
           .thenReturn(null);
 
@@ -457,7 +457,7 @@ void main() {
         beginingDate: DateTime.parse("2022-05-01"),
         lastTakenDate: DateTime.parse("2022-04-30"),
       );
-      final pillSheetService = MockPillSheetService();
+      final pillSheetService = MockPillSheetDatabase();
       when(pillSheetService.update(batch, [
         updatedLeft,
         updatedMiddle,
@@ -479,7 +479,7 @@ void main() {
         updatedMiddle,
         updatedRight,
       ]);
-      final pillSheetGroupService = MockPillSheetGroupService();
+      final pillSheetGroupService = MockPillSheetGroupDatabase();
       when(pillSheetGroupService.updateWithBatch(batch, updatedPillSheetGroup))
           .thenReturn(updatedPillSheetGroup);
 
@@ -491,7 +491,7 @@ void main() {
       );
 
       final pillSheetModifiedHistoryService =
-          MockPillSheetModifiedHistoryService();
+          MockPillSheetModifiedHistoryDatabase();
       when(pillSheetModifiedHistoryService.add(batch, history))
           .thenReturn(null);
 
@@ -577,7 +577,7 @@ void main() {
       final updatedRight = right.copyWith(
         beginingDate: DateTime.parse("2022-05-31"),
       );
-      final pillSheetService = MockPillSheetService();
+      final pillSheetService = MockPillSheetDatabase();
       when(pillSheetService.update(batch, [
         updatedLeft,
         updatedMiddle,
@@ -599,7 +599,7 @@ void main() {
         updatedMiddle,
         updatedRight,
       ]);
-      final pillSheetGroupService = MockPillSheetGroupService();
+      final pillSheetGroupService = MockPillSheetGroupDatabase();
       when(pillSheetGroupService.updateWithBatch(batch, updatedPillSheetGroup))
           .thenReturn(updatedPillSheetGroup);
 
@@ -611,7 +611,7 @@ void main() {
       );
 
       final pillSheetModifiedHistoryService =
-          MockPillSheetModifiedHistoryService();
+          MockPillSheetModifiedHistoryDatabase();
       when(pillSheetModifiedHistoryService.add(batch, history))
           .thenReturn(null);
 

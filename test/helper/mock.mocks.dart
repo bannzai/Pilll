@@ -10,6 +10,13 @@ import 'package:mockito/mockito.dart' as _i1;
 import 'package:pilll/analytics.dart' as _i17;
 import 'package:pilll/database/batch.dart' as _i34;
 import 'package:pilll/database/database.dart' as _i11;
+import 'package:pilll/database/diary.dart' as _i18;
+import 'package:pilll/database/menstruation.dart' as _i19;
+import 'package:pilll/database/pill_sheet.dart' as _i13;
+import 'package:pilll/database/pill_sheet_group.dart' as _i33;
+import 'package:pilll/database/pill_sheet_modified_history.dart' as _i31;
+import 'package:pilll/database/setting.dart' as _i15;
+import 'package:pilll/database/user.dart' as _i22;
 import 'package:pilll/domain/premium_function_survey/premium_function_survey_element_type.dart'
     as _i23;
 import 'package:pilll/domain/premium_introduction/premium_introduction_state.codegen.dart'
@@ -32,13 +39,6 @@ import 'package:pilll/entity/setting.codegen.dart' as _i3;
 import 'package:pilll/entity/user.codegen.dart' as _i6;
 import 'package:pilll/service/auth.dart' as _i20;
 import 'package:pilll/service/day.dart' as _i14;
-import 'package:pilll/database/diary.dart' as _i18;
-import 'package:pilll/database/menstruation.dart' as _i19;
-import 'package:pilll/database/pill_sheet.dart' as _i13;
-import 'package:pilll/database/pill_sheet_group.dart' as _i33;
-import 'package:pilll/database/pill_sheet_modified_history.dart' as _i31;
-import 'package:pilll/database/setting.dart' as _i15;
-import 'package:pilll/database/user.dart' as _i22;
 import 'package:purchases_flutter/purchases_flutter.dart' as _i30;
 import 'package:riverpod/riverpod.dart' as _i25;
 import 'package:state_notifier/state_notifier.dart' as _i27;
@@ -79,11 +79,11 @@ class _FakeDatabaseConnection_10 extends _i1.Fake
 
 class _FakeWriteBatch_11 extends _i1.Fake implements _i12.WriteBatch {}
 
-/// A class which mocks [PillSheetService].
+/// A class which mocks [PillSheetDatabase].
 ///
 /// See the documentation for Mockito's code generation for more information.
-class MockPillSheetService extends _i1.Mock implements _i13.PillSheetDatabase {
-  MockPillSheetService() {
+class MockPillSheetDatabase extends _i1.Mock implements _i13.PillSheetDatabase {
+  MockPillSheetDatabase() {
     _i1.throwOnMissingStub(this);
   }
 
@@ -114,11 +114,11 @@ class MockTodayService extends _i1.Mock implements _i14.TodayService {
       returnValue: _FakeDateTime_1()) as DateTime);
 }
 
-/// A class which mocks [SettingService].
+/// A class which mocks [SettingDatabase].
 ///
 /// See the documentation for Mockito's code generation for more information.
-class MockSettingService extends _i1.Mock implements _i15.SettingDatabase {
-  MockSettingService() {
+class MockSettingDatabase extends _i1.Mock implements _i15.SettingDatabase {
+  MockSettingDatabase() {
     _i1.throwOnMissingStub(this);
   }
 
@@ -166,11 +166,11 @@ class MockAnalytics extends _i1.Mock implements _i17.Analytics {
       super.noSuchMethod(Invocation.method(#setUserProperties, [name, value]));
 }
 
-/// A class which mocks [DiaryService].
+/// A class which mocks [DiaryDatabase].
 ///
 /// See the documentation for Mockito's code generation for more information.
-class MockDiaryService extends _i1.Mock implements _i18.DiaryDatabase {
-  MockDiaryService() {
+class MockDiaryDatabase extends _i1.Mock implements _i18.DiaryDatabase {
+  MockDiaryDatabase() {
     _i1.throwOnMissingStub(this);
   }
 
@@ -207,12 +207,12 @@ class MockDiaryService extends _i1.Mock implements _i18.DiaryDatabase {
           as _i16.Stream<List<_i4.Diary>>);
 }
 
-/// A class which mocks [MenstruationService].
+/// A class which mocks [MenstruationDatabase].
 ///
 /// See the documentation for Mockito's code generation for more information.
-class MockMenstruationService extends _i1.Mock
+class MockMenstruationDatabase extends _i1.Mock
     implements _i19.MenstruationDatabase {
-  MockMenstruationService() {
+  MockMenstruationDatabase() {
     _i1.throwOnMissingStub(this);
   }
 
@@ -273,11 +273,11 @@ class MockAuthService extends _i1.Mock implements _i20.AuthService {
           returnValue: false) as bool);
 }
 
-/// A class which mocks [UserService].
+/// A class which mocks [UserDatabase].
 ///
 /// See the documentation for Mockito's code generation for more information.
-class MockUserService extends _i1.Mock implements _i22.UserDatabase {
-  MockUserService() {
+class MockUserDatabase extends _i1.Mock implements _i22.UserDatabase {
+  MockUserDatabase() {
     _i1.throwOnMissingStub(this);
   }
 
@@ -653,12 +653,12 @@ class MockPremiumIntroductionStore extends _i1.Mock
           returnValue: () {}) as _i25.RemoveListener);
 }
 
-/// A class which mocks [PillSheetModifiedHistoryService].
+/// A class which mocks [PillSheetModifiedHistoryDatabase].
 ///
 /// See the documentation for Mockito's code generation for more information.
-class MockPillSheetModifiedHistoryService extends _i1.Mock
+class MockPillSheetModifiedHistoryDatabase extends _i1.Mock
     implements _i31.PillSheetModifiedHistoryDatabase {
-  MockPillSheetModifiedHistoryService() {
+  MockPillSheetModifiedHistoryDatabase() {
     _i1.throwOnMissingStub(this);
   }
 
@@ -693,12 +693,12 @@ class MockPillSheetModifiedHistoryService extends _i1.Mock
       super.noSuchMethod(Invocation.method(#add, [batch, history]));
 }
 
-/// A class which mocks [PillSheetGroupService].
+/// A class which mocks [PillSheetGroupDatabase].
 ///
 /// See the documentation for Mockito's code generation for more information.
-class MockPillSheetGroupService extends _i1.Mock
+class MockPillSheetGroupDatabase extends _i1.Mock
     implements _i33.PillSheetGroupDatabase {
-  MockPillSheetGroupService() {
+  MockPillSheetGroupDatabase() {
     _i1.throwOnMissingStub(this);
   }
 

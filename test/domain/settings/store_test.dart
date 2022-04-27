@@ -51,7 +51,7 @@ void main() {
   });
   group("#addReminderTimes", () {
     test("when added reminder times ${ReminderTime.maximumCount}", () {
-      final settingService = MockSettingService();
+      final settingService = MockSettingDatabase();
       final setting = const Setting(
         reminderTimes: [
           ReminderTime(hour: 1, minute: 0),
@@ -70,17 +70,17 @@ void main() {
 
       final batchFactory = MockBatchFactory();
       final pillSheet = PillSheet.create(PillSheetType.pillsheet_21);
-      final pillSheetService = MockPillSheetService();
+      final pillSheetService = MockPillSheetDatabase();
       final pillSheetGroup = PillSheetGroup(
           pillSheetIDs: ["1"], pillSheets: [pillSheet], createdAt: now());
 
-      final userService = MockUserService();
+      final userService = MockUserDatabase();
       when(userService.fetch())
           .thenAnswer((realInvocation) => Future.value(_FakeUser()));
       when(userService.stream())
           .thenAnswer((realInvocation) => const Stream.empty());
-      final pillSheetModifiedService = MockPillSheetModifiedHistoryService();
-      final pillSheetGroupService = MockPillSheetGroupService();
+      final pillSheetModifiedService = MockPillSheetModifiedHistoryDatabase();
+      final pillSheetGroupService = MockPillSheetGroupDatabase();
       when(pillSheetGroupService.fetchLatest())
           .thenAnswer((realInvocation) => Future.value(pillSheetGroup));
       when(pillSheetGroupService.streamForLatest())
@@ -114,7 +114,7 @@ void main() {
     test(
         "return exception when setting has reminderTimes count is ${ReminderTime.maximumCount}",
         () {
-      final settingService = MockSettingService();
+      final settingService = MockSettingDatabase();
       final setting = _FakeSetting([
         const ReminderTime(hour: 1, minute: 0),
         const ReminderTime(hour: 2, minute: 0),
@@ -130,14 +130,14 @@ void main() {
       final pillSheetGroup = PillSheetGroup(
           pillSheetIDs: ["1"], pillSheets: [pillSheet], createdAt: now());
 
-      final pillSheetService = MockPillSheetService();
-      final userService = MockUserService();
+      final pillSheetService = MockPillSheetDatabase();
+      final userService = MockUserDatabase();
       when(userService.fetch())
           .thenAnswer((realInvocation) => Future.value(_FakeUser()));
       when(userService.stream())
           .thenAnswer((realInvocation) => const Stream.empty());
-      final pillSheetModifiedService = MockPillSheetModifiedHistoryService();
-      final pillSheetGroupService = MockPillSheetGroupService();
+      final pillSheetModifiedService = MockPillSheetModifiedHistoryDatabase();
+      final pillSheetGroupService = MockPillSheetGroupDatabase();
       when(pillSheetGroupService.fetchLatest())
           .thenAnswer((realInvocation) => Future.value(pillSheetGroup));
       when(pillSheetGroupService.streamForLatest())
@@ -162,7 +162,7 @@ void main() {
   });
   group("#deleteReminderTimes", () {
     test("when deleted reminder times ${ReminderTime.maximumCount}", () {
-      final settingService = MockSettingService();
+      final settingService = MockSettingDatabase();
       final setting = const Setting(
         reminderTimes: [
           ReminderTime(hour: 1, minute: 0),
@@ -183,14 +183,14 @@ void main() {
           pillSheetIDs: ["1"], pillSheets: [pillSheet], createdAt: now());
 
       final batchFactory = MockBatchFactory();
-      final pillSheetService = MockPillSheetService();
-      final userService = MockUserService();
+      final pillSheetService = MockPillSheetDatabase();
+      final userService = MockUserDatabase();
       when(userService.fetch())
           .thenAnswer((realInvocation) => Future.value(_FakeUser()));
       when(userService.stream())
           .thenAnswer((realInvocation) => const Stream.empty());
-      final pillSheetModifiedService = MockPillSheetModifiedHistoryService();
-      final pillSheetGroupService = MockPillSheetGroupService();
+      final pillSheetModifiedService = MockPillSheetModifiedHistoryDatabase();
+      final pillSheetGroupService = MockPillSheetGroupDatabase();
       when(pillSheetGroupService.fetchLatest())
           .thenAnswer((realInvocation) => Future.value(pillSheetGroup));
       when(pillSheetGroupService.streamForLatest())
@@ -220,7 +220,7 @@ void main() {
     test(
         "return exception when setting has remindertimes count is ${ReminderTime.minimumCount}",
         () {
-      final settingService = MockSettingService();
+      final settingService = MockSettingDatabase();
       final setting = _FakeSetting([
         const ReminderTime(hour: 1, minute: 0),
       ]);
@@ -234,15 +234,15 @@ void main() {
       final pillSheetGroup = PillSheetGroup(
           pillSheetIDs: ["1"], pillSheets: [pillSheet], createdAt: now());
 
-      final pillSheetService = MockPillSheetService();
+      final pillSheetService = MockPillSheetDatabase();
 
-      final userService = MockUserService();
+      final userService = MockUserDatabase();
       when(userService.fetch())
           .thenAnswer((realInvocation) => Future.value(_FakeUser()));
       when(userService.stream())
           .thenAnswer((realInvocation) => const Stream.empty());
-      final pillSheetModifiedService = MockPillSheetModifiedHistoryService();
-      final pillSheetGroupService = MockPillSheetGroupService();
+      final pillSheetModifiedService = MockPillSheetModifiedHistoryDatabase();
+      final pillSheetGroupService = MockPillSheetGroupDatabase();
       when(pillSheetGroupService.fetchLatest())
           .thenAnswer((realInvocation) => Future.value(pillSheetGroup));
       when(pillSheetGroupService.streamForLatest())

@@ -50,7 +50,7 @@ void main() {
         groupIndex: 0,
         lastTakenDate: null,
       );
-      final pillSheetService = MockPillSheetService();
+      final pillSheetService = MockPillSheetDatabase();
       when(pillSheetService.register(batch, [pillSheet])).thenReturn([
         pillSheet.copyWith(id: "sheet_id"),
       ]);
@@ -62,7 +62,7 @@ void main() {
         ],
         createdAt: now(),
       );
-      final pillSheetGroupService = MockPillSheetGroupService();
+      final pillSheetGroupService = MockPillSheetGroupDatabase();
       when(pillSheetGroupService.fetchLatest())
           .thenAnswer((realInvocation) async => pillSheetGroup);
       when(pillSheetGroupService.streamForLatest())
@@ -74,7 +74,7 @@ void main() {
           .createCreatedPillSheetAction(
               pillSheetGroupID: "group_id", pillSheetIDs: ["sheet_id"]);
       final pillSheetModifiedHistoryService =
-          MockPillSheetModifiedHistoryService();
+          MockPillSheetModifiedHistoryDatabase();
       when(pillSheetModifiedHistoryService.add(batch, history))
           .thenReturn(null);
 
@@ -90,7 +90,7 @@ void main() {
           PillSheetType.pillsheet_28_0,
         ],
       );
-      final settingService = MockSettingService();
+      final settingService = MockSettingDatabase();
       when(settingService.fetch())
           .thenAnswer((realInvocation) async => setting);
       when(settingService.stream())
@@ -98,7 +98,7 @@ void main() {
       when(settingService.updateWithBatch(batch, setting)).thenReturn(null);
 
       final user = const User();
-      final userService = MockUserService();
+      final userService = MockUserDatabase();
       when(userService.stream())
           .thenAnswer((realInvocation) => const Stream.empty());
       when(userService.fetch()).thenAnswer((realInvocation) async => user);
@@ -149,7 +149,7 @@ void main() {
         lastTakenDate: null,
         groupIndex: 1,
       );
-      final pillSheetService = MockPillSheetService();
+      final pillSheetService = MockPillSheetDatabase();
       when(pillSheetService.register(batch, [pillSheet, pillSheet2]))
           .thenReturn([
         pillSheet.copyWith(id: "sheet_id"),
@@ -164,7 +164,7 @@ void main() {
         ],
         createdAt: now(),
       );
-      final pillSheetGroupService = MockPillSheetGroupService();
+      final pillSheetGroupService = MockPillSheetGroupDatabase();
       when(pillSheetGroupService.fetchLatest())
           .thenAnswer((realInvocation) async => pillSheetGroup);
       when(pillSheetGroupService.streamForLatest())
@@ -177,7 +177,7 @@ void main() {
               pillSheetGroupID: "group_id",
               pillSheetIDs: ["sheet_id", "sheet_id2"]);
       final pillSheetModifiedHistoryService =
-          MockPillSheetModifiedHistoryService();
+          MockPillSheetModifiedHistoryDatabase();
       when(pillSheetModifiedHistoryService.add(batch, history))
           .thenReturn(null);
 
@@ -194,7 +194,7 @@ void main() {
           PillSheetType.pillsheet_21
         ],
       );
-      final settingService = MockSettingService();
+      final settingService = MockSettingDatabase();
       when(settingService.fetch())
           .thenAnswer((realInvocation) async => setting);
       when(settingService.stream())
@@ -202,7 +202,7 @@ void main() {
       when(settingService.updateWithBatch(batch, setting)).thenReturn(null);
 
       final user = const User();
-      final userService = MockUserService();
+      final userService = MockUserDatabase();
       when(userService.stream())
           .thenAnswer((realInvocation) => const Stream.empty());
       when(userService.fetch()).thenAnswer((realInvocation) async => user);
@@ -250,7 +250,7 @@ void main() {
         groupIndex: 0,
         lastTakenDate: null,
       );
-      final pillSheetService = MockPillSheetService();
+      final pillSheetService = MockPillSheetDatabase();
       when(pillSheetService.update(
           batch, [pillSheet.copyWith(lastTakenDate: _today)])).thenReturn(null);
 
@@ -270,7 +270,7 @@ void main() {
         ],
         createdAt: now(),
       );
-      final pillSheetGroupService = MockPillSheetGroupService();
+      final pillSheetGroupService = MockPillSheetGroupDatabase();
       when(pillSheetGroupService.fetchLatest())
           .thenAnswer((realInvocation) async => pillSheetGroup);
       when(pillSheetGroupService.streamForLatest())
@@ -288,7 +288,7 @@ void main() {
         isQuickRecord: false,
       );
       final pillSheetModifiedHistoryService =
-          MockPillSheetModifiedHistoryService();
+          MockPillSheetModifiedHistoryDatabase();
       when(pillSheetModifiedHistoryService.add(batch, history))
           .thenReturn(null);
 
@@ -304,7 +304,7 @@ void main() {
           PillSheetType.pillsheet_28_0,
         ],
       );
-      final settingService = MockSettingService();
+      final settingService = MockSettingDatabase();
       when(settingService.fetch())
           .thenAnswer((realInvocation) async => setting);
       when(settingService.stream())
@@ -312,7 +312,7 @@ void main() {
       when(settingService.updateWithBatch(batch, setting)).thenReturn(null);
 
       final user = const User();
-      final userService = MockUserService();
+      final userService = MockUserDatabase();
       when(userService.stream())
           .thenAnswer((realInvocation) => const Stream.empty());
       when(userService.fetch()).thenAnswer((realInvocation) async => user);
@@ -366,7 +366,7 @@ void main() {
         groupIndex: 1,
         lastTakenDate: null,
       );
-      final pillSheetService = MockPillSheetService();
+      final pillSheetService = MockPillSheetDatabase();
       when(pillSheetService.update(batch, [
         pillSheet.copyWith(lastTakenDate: _today),
         pillSheet2,
@@ -390,7 +390,7 @@ void main() {
         ],
         createdAt: now(),
       );
-      final pillSheetGroupService = MockPillSheetGroupService();
+      final pillSheetGroupService = MockPillSheetGroupDatabase();
       when(pillSheetGroupService.fetchLatest())
           .thenAnswer((realInvocation) async => pillSheetGroup);
       when(pillSheetGroupService.streamForLatest())
@@ -408,7 +408,7 @@ void main() {
         isQuickRecord: false,
       );
       final pillSheetModifiedHistoryService =
-          MockPillSheetModifiedHistoryService();
+          MockPillSheetModifiedHistoryDatabase();
       when(pillSheetModifiedHistoryService.add(batch, history))
           .thenReturn(null);
 
@@ -425,7 +425,7 @@ void main() {
           PillSheetType.pillsheet_21,
         ],
       );
-      final settingService = MockSettingService();
+      final settingService = MockSettingDatabase();
       when(settingService.fetch())
           .thenAnswer((realInvocation) async => setting);
       when(settingService.stream())
@@ -433,7 +433,7 @@ void main() {
       when(settingService.updateWithBatch(batch, setting)).thenReturn(null);
 
       final user = const User();
-      final userService = MockUserService();
+      final userService = MockUserDatabase();
       when(userService.stream())
           .thenAnswer((realInvocation) => const Stream.empty());
       when(userService.fetch()).thenAnswer((realInvocation) async => user);
@@ -488,7 +488,7 @@ void main() {
         groupIndex: 1,
         lastTakenDate: null,
       );
-      final pillSheetService = MockPillSheetService();
+      final pillSheetService = MockPillSheetDatabase();
       when(pillSheetService.update(batch, [
         pillSheet,
         pillSheet2.copyWith(lastTakenDate: _today),
@@ -512,7 +512,7 @@ void main() {
         ],
         createdAt: now(),
       );
-      final pillSheetGroupService = MockPillSheetGroupService();
+      final pillSheetGroupService = MockPillSheetGroupDatabase();
       when(pillSheetGroupService.fetchLatest())
           .thenAnswer((realInvocation) async => pillSheetGroup);
       when(pillSheetGroupService.streamForLatest())
@@ -530,7 +530,7 @@ void main() {
         isQuickRecord: false,
       );
       final pillSheetModifiedHistoryService =
-          MockPillSheetModifiedHistoryService();
+          MockPillSheetModifiedHistoryDatabase();
       when(pillSheetModifiedHistoryService.add(batch, history))
           .thenReturn(null);
 
@@ -547,7 +547,7 @@ void main() {
           PillSheetType.pillsheet_21,
         ],
       );
-      final settingService = MockSettingService();
+      final settingService = MockSettingDatabase();
       when(settingService.fetch())
           .thenAnswer((realInvocation) async => setting);
       when(settingService.stream())
@@ -555,7 +555,7 @@ void main() {
       when(settingService.updateWithBatch(batch, setting)).thenReturn(null);
 
       final user = const User();
-      final userService = MockUserService();
+      final userService = MockUserDatabase();
       when(userService.stream())
           .thenAnswer((realInvocation) => const Stream.empty());
       when(userService.fetch()).thenAnswer((realInvocation) async => user);
@@ -610,7 +610,7 @@ void main() {
         groupIndex: 1,
         lastTakenDate: null,
       );
-      final pillSheetService = MockPillSheetService();
+      final pillSheetService = MockPillSheetDatabase();
       when(pillSheetService.update(batch, [
         pillSheet.copyWith(
             lastTakenDate: DateTime.parse("2020-09-18 23:59:59")),
@@ -637,7 +637,7 @@ void main() {
         createdAt: _today,
       );
 
-      final pillSheetGroupService = MockPillSheetGroupService();
+      final pillSheetGroupService = MockPillSheetGroupDatabase();
       when(pillSheetGroupService.fetchLatest())
           .thenAnswer((realInvocation) async => pillSheetGroup);
       when(pillSheetGroupService.streamForLatest())
@@ -655,7 +655,7 @@ void main() {
         isQuickRecord: false,
       );
       final pillSheetModifiedHistoryService =
-          MockPillSheetModifiedHistoryService();
+          MockPillSheetModifiedHistoryDatabase();
       when(pillSheetModifiedHistoryService.add(batch, history))
           .thenReturn(null);
 
@@ -672,7 +672,7 @@ void main() {
           PillSheetType.pillsheet_21,
         ],
       );
-      final settingService = MockSettingService();
+      final settingService = MockSettingDatabase();
       when(settingService.fetch())
           .thenAnswer((realInvocation) async => setting);
       when(settingService.stream())
@@ -680,7 +680,7 @@ void main() {
       when(settingService.updateWithBatch(batch, setting)).thenReturn(null);
 
       final user = const User();
-      final userService = MockUserService();
+      final userService = MockUserDatabase();
       when(userService.stream())
           .thenAnswer((realInvocation) => const Stream.empty());
       when(userService.fetch()).thenAnswer((realInvocation) async => user);
@@ -732,7 +732,7 @@ void main() {
           groupIndex: 0,
           lastTakenDate: today(),
         );
-        final pillSheetService = MockPillSheetService();
+        final pillSheetService = MockPillSheetDatabase();
         when(pillSheetService.update(batch, [
           pillSheet.copyWith(
               lastTakenDate: yesterday.subtract(const Duration(days: 1)))
@@ -755,7 +755,7 @@ void main() {
           ],
           createdAt: now(),
         );
-        final pillSheetGroupService = MockPillSheetGroupService();
+        final pillSheetGroupService = MockPillSheetGroupDatabase();
         when(pillSheetGroupService.fetchLatest())
             .thenAnswer((realInvocation) async => pillSheetGroup);
         when(pillSheetGroupService.streamForLatest())
@@ -773,7 +773,7 @@ void main() {
           ),
         );
         final pillSheetModifiedHistoryService =
-            MockPillSheetModifiedHistoryService();
+            MockPillSheetModifiedHistoryDatabase();
         when(pillSheetModifiedHistoryService.add(batch, history))
             .thenReturn(null);
 
@@ -789,7 +789,7 @@ void main() {
             PillSheetType.pillsheet_28_0,
           ],
         );
-        final settingService = MockSettingService();
+        final settingService = MockSettingDatabase();
         when(settingService.fetch())
             .thenAnswer((realInvocation) async => setting);
         when(settingService.stream())
@@ -797,7 +797,7 @@ void main() {
         when(settingService.updateWithBatch(batch, setting)).thenReturn(null);
 
         final user = const User();
-        final userService = MockUserService();
+        final userService = MockUserDatabase();
         when(userService.stream())
             .thenAnswer((realInvocation) => const Stream.empty());
         when(userService.fetch()).thenAnswer((realInvocation) async => user);
@@ -848,7 +848,7 @@ void main() {
           groupIndex: 0,
           lastTakenDate: today(),
         );
-        final pillSheetService = MockPillSheetService();
+        final pillSheetService = MockPillSheetDatabase();
         when(pillSheetService
                 .update(batch, [pillSheet.copyWith(lastTakenDate: yesterday)]))
             .thenReturn(null);
@@ -869,7 +869,7 @@ void main() {
           ],
           createdAt: now(),
         );
-        final pillSheetGroupService = MockPillSheetGroupService();
+        final pillSheetGroupService = MockPillSheetGroupDatabase();
         when(pillSheetGroupService.fetchLatest())
             .thenAnswer((realInvocation) async => pillSheetGroup);
         when(pillSheetGroupService.streamForLatest())
@@ -887,7 +887,7 @@ void main() {
           ),
         );
         final pillSheetModifiedHistoryService =
-            MockPillSheetModifiedHistoryService();
+            MockPillSheetModifiedHistoryDatabase();
         when(pillSheetModifiedHistoryService.add(batch, history))
             .thenReturn(null);
 
@@ -903,7 +903,7 @@ void main() {
             PillSheetType.pillsheet_28_0,
           ],
         );
-        final settingService = MockSettingService();
+        final settingService = MockSettingDatabase();
         when(settingService.fetch())
             .thenAnswer((realInvocation) async => setting);
         when(settingService.stream())
@@ -911,7 +911,7 @@ void main() {
         when(settingService.updateWithBatch(batch, setting)).thenReturn(null);
 
         final user = const User();
-        final userService = MockUserService();
+        final userService = MockUserDatabase();
         when(userService.stream())
             .thenAnswer((realInvocation) => const Stream.empty());
         when(userService.fetch()).thenAnswer((realInvocation) async => user);
@@ -969,7 +969,7 @@ void main() {
             ),
           ],
         );
-        final pillSheetService = MockPillSheetService();
+        final pillSheetService = MockPillSheetDatabase();
         when(pillSheetService.update(
           batch,
           [
@@ -997,7 +997,7 @@ void main() {
           ],
           createdAt: now(),
         );
-        final pillSheetGroupService = MockPillSheetGroupService();
+        final pillSheetGroupService = MockPillSheetGroupDatabase();
         when(pillSheetGroupService.fetchLatest())
             .thenAnswer((realInvocation) async => pillSheetGroup);
         when(pillSheetGroupService.streamForLatest())
@@ -1016,7 +1016,7 @@ void main() {
           ),
         );
         final pillSheetModifiedHistoryService =
-            MockPillSheetModifiedHistoryService();
+            MockPillSheetModifiedHistoryDatabase();
         when(pillSheetModifiedHistoryService.add(batch, history))
             .thenReturn(null);
 
@@ -1032,7 +1032,7 @@ void main() {
             PillSheetType.pillsheet_28_0,
           ],
         );
-        final settingService = MockSettingService();
+        final settingService = MockSettingDatabase();
         when(settingService.fetch())
             .thenAnswer((realInvocation) async => setting);
         when(settingService.stream())
@@ -1040,7 +1040,7 @@ void main() {
         when(settingService.updateWithBatch(batch, setting)).thenReturn(null);
 
         final user = const User();
-        final userService = MockUserService();
+        final userService = MockUserDatabase();
         when(userService.stream())
             .thenAnswer((realInvocation) => const Stream.empty());
         when(userService.fetch()).thenAnswer((realInvocation) async => user);
@@ -1099,7 +1099,7 @@ void main() {
             ),
           ],
         );
-        final pillSheetService = MockPillSheetService();
+        final pillSheetService = MockPillSheetDatabase();
         when(pillSheetService.update(
           batch,
           [pillSheet.copyWith(lastTakenDate: yesterday)],
@@ -1121,7 +1121,7 @@ void main() {
           ],
           createdAt: now(),
         );
-        final pillSheetGroupService = MockPillSheetGroupService();
+        final pillSheetGroupService = MockPillSheetGroupDatabase();
         when(pillSheetGroupService.fetchLatest())
             .thenAnswer((realInvocation) async => pillSheetGroup);
         when(pillSheetGroupService.streamForLatest())
@@ -1137,7 +1137,7 @@ void main() {
           after: pillSheet.copyWith(lastTakenDate: yesterday),
         );
         final pillSheetModifiedHistoryService =
-            MockPillSheetModifiedHistoryService();
+            MockPillSheetModifiedHistoryDatabase();
         when(pillSheetModifiedHistoryService.add(batch, history))
             .thenReturn(null);
 
@@ -1153,7 +1153,7 @@ void main() {
             PillSheetType.pillsheet_28_0,
           ],
         );
-        final settingService = MockSettingService();
+        final settingService = MockSettingDatabase();
         when(settingService.fetch())
             .thenAnswer((realInvocation) async => setting);
         when(settingService.stream())
@@ -1161,7 +1161,7 @@ void main() {
         when(settingService.updateWithBatch(batch, setting)).thenReturn(null);
 
         final user = const User();
-        final userService = MockUserService();
+        final userService = MockUserDatabase();
         when(userService.stream())
             .thenAnswer((realInvocation) => const Stream.empty());
         when(userService.fetch()).thenAnswer((realInvocation) async => user);
@@ -1224,7 +1224,7 @@ void main() {
           groupIndex: 1,
         );
 
-        final pillSheetService = MockPillSheetService();
+        final pillSheetService = MockPillSheetDatabase();
         when(pillSheetService.update(batch, [
           pillSheet,
           pillSheet2.copyWith(lastTakenDate: yesterday),
@@ -1245,7 +1245,7 @@ void main() {
           ],
           createdAt: now(),
         );
-        final pillSheetGroupService = MockPillSheetGroupService();
+        final pillSheetGroupService = MockPillSheetGroupDatabase();
         when(pillSheetGroupService.fetchLatest())
             .thenAnswer((realInvocation) async => pillSheetGroup);
         when(pillSheetGroupService.streamForLatest())
@@ -1263,7 +1263,7 @@ void main() {
           ),
         );
         final pillSheetModifiedHistoryService =
-            MockPillSheetModifiedHistoryService();
+            MockPillSheetModifiedHistoryDatabase();
         when(pillSheetModifiedHistoryService.add(batch, history))
             .thenReturn(null);
 
@@ -1280,7 +1280,7 @@ void main() {
             PillSheetType.pillsheet_21,
           ],
         );
-        final settingService = MockSettingService();
+        final settingService = MockSettingDatabase();
         when(settingService.fetch())
             .thenAnswer((realInvocation) async => setting);
         when(settingService.stream())
@@ -1288,7 +1288,7 @@ void main() {
         when(settingService.updateWithBatch(batch, setting)).thenReturn(null);
 
         final user = const User();
-        final userService = MockUserService();
+        final userService = MockUserDatabase();
         when(userService.stream())
             .thenAnswer((realInvocation) => const Stream.empty());
         when(userService.fetch()).thenAnswer((realInvocation) async => user);
@@ -1350,7 +1350,7 @@ void main() {
           groupIndex: 1,
         );
 
-        final pillSheetService = MockPillSheetService();
+        final pillSheetService = MockPillSheetDatabase();
         when(pillSheetService.update(batch, [
           pillSheet.copyWith(
               lastTakenDate: _today.subtract(const Duration(days: 4))),
@@ -1377,7 +1377,7 @@ void main() {
           ],
           createdAt: now(),
         );
-        final pillSheetGroupService = MockPillSheetGroupService();
+        final pillSheetGroupService = MockPillSheetGroupDatabase();
         when(pillSheetGroupService.fetchLatest())
             .thenAnswer((realInvocation) async => pillSheetGroup);
         when(pillSheetGroupService.streamForLatest())
@@ -1393,7 +1393,7 @@ void main() {
                 after: pillSheet.copyWith(
                     lastTakenDate: _today.subtract(const Duration(days: 4))));
         final pillSheetModifiedHistoryService =
-            MockPillSheetModifiedHistoryService();
+            MockPillSheetModifiedHistoryDatabase();
         when(pillSheetModifiedHistoryService.add(batch, history))
             .thenReturn(null);
 
@@ -1410,7 +1410,7 @@ void main() {
             PillSheetType.pillsheet_21,
           ],
         );
-        final settingService = MockSettingService();
+        final settingService = MockSettingDatabase();
         when(settingService.fetch())
             .thenAnswer((realInvocation) async => setting);
         when(settingService.stream())
@@ -1418,7 +1418,7 @@ void main() {
         when(settingService.updateWithBatch(batch, setting)).thenReturn(null);
 
         final user = const User();
-        final userService = MockUserService();
+        final userService = MockUserDatabase();
         when(userService.stream())
             .thenAnswer((realInvocation) => const Stream.empty());
         when(userService.fetch()).thenAnswer((realInvocation) async => user);
@@ -1482,7 +1482,7 @@ void main() {
           ],
         );
 
-        final pillSheetService = MockPillSheetService();
+        final pillSheetService = MockPillSheetDatabase();
         when(pillSheetService.update(batch, [
           pillSheet.copyWith(
               lastTakenDate: _today.subtract(const Duration(days: 4))),
@@ -1511,7 +1511,7 @@ void main() {
           ],
           createdAt: now(),
         );
-        final pillSheetGroupService = MockPillSheetGroupService();
+        final pillSheetGroupService = MockPillSheetGroupDatabase();
         when(pillSheetGroupService.fetchLatest())
             .thenAnswer((realInvocation) async => pillSheetGroup);
         when(pillSheetGroupService.streamForLatest())
@@ -1528,7 +1528,7 @@ void main() {
                     lastTakenDate: _today.subtract(const Duration(days: 4)),
                     restDurations: []));
         final pillSheetModifiedHistoryService =
-            MockPillSheetModifiedHistoryService();
+            MockPillSheetModifiedHistoryDatabase();
         when(pillSheetModifiedHistoryService.add(batch, history))
             .thenReturn(null);
 
@@ -1545,7 +1545,7 @@ void main() {
             PillSheetType.pillsheet_21,
           ],
         );
-        final settingService = MockSettingService();
+        final settingService = MockSettingDatabase();
         when(settingService.fetch())
             .thenAnswer((realInvocation) async => setting);
         when(settingService.stream())
@@ -1553,7 +1553,7 @@ void main() {
         when(settingService.updateWithBatch(batch, setting)).thenReturn(null);
 
         final user = const User();
-        final userService = MockUserService();
+        final userService = MockUserDatabase();
         when(userService.stream())
             .thenAnswer((realInvocation) => const Stream.empty());
         when(userService.fetch()).thenAnswer((realInvocation) async => user);
