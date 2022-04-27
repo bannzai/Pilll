@@ -98,8 +98,9 @@ class MockPillSheetDatastore extends _i1.Mock
       (super.noSuchMethod(Invocation.method(#delete, [batch, pillSheet]),
           returnValue: _FakePillSheet_0()) as _i2.PillSheet);
   @override
-  dynamic update(_i12.WriteBatch? batch, List<_i2.PillSheet>? pillSheets) =>
-      super.noSuchMethod(Invocation.method(#update, [batch, pillSheets]));
+  void update(_i12.WriteBatch? batch, List<_i2.PillSheet>? pillSheets) =>
+      super.noSuchMethod(Invocation.method(#update, [batch, pillSheets]),
+          returnValueForMissingStub: null);
 }
 
 /// A class which mocks [TodayService].
@@ -283,8 +284,8 @@ class MockUserDatastore extends _i1.Mock implements _i22.UserDatastore {
   }
 
   @override
-  _i16.Future<_i6.User> prepare(String? uid) =>
-      (super.noSuchMethod(Invocation.method(#prepare, [uid]),
+  _i16.Future<_i6.User> fetchOrCreate(String? uid) =>
+      (super.noSuchMethod(Invocation.method(#fetchOrCreate, [uid]),
               returnValue: Future<_i6.User>.value(_FakeUser_5()))
           as _i16.Future<_i6.User>);
   @override
@@ -690,8 +691,9 @@ class MockPillSheetModifiedHistoryDatastore extends _i1.Mock
               returnValue: Stream<List<_i32.PillSheetModifiedHistory>>.empty())
           as _i16.Stream<List<_i32.PillSheetModifiedHistory>>);
   @override
-  dynamic add(_i12.WriteBatch? batch, _i32.PillSheetModifiedHistory? history) =>
-      super.noSuchMethod(Invocation.method(#add, [batch, history]));
+  void add(_i12.WriteBatch? batch, _i32.PillSheetModifiedHistory? history) =>
+      super.noSuchMethod(Invocation.method(#add, [batch, history]),
+          returnValueForMissingStub: null);
 }
 
 /// A class which mocks [PillSheetGroupDatastore].
@@ -715,7 +717,7 @@ class MockPillSheetGroupDatastore extends _i1.Mock
           as _i16.Future<_i10.PillSheetGroup?>);
   @override
   _i16.Stream<_i10.PillSheetGroup> latestPillSheetGroupStream() =>
-      (super.noSuchMethod(Invocation.method(#streamForLatest, []),
+      (super.noSuchMethod(Invocation.method(#latestPillSheetGroupStream, []),
               returnValue: Stream<_i10.PillSheetGroup>.empty())
           as _i16.Stream<_i10.PillSheetGroup>);
   @override
