@@ -135,7 +135,8 @@ class DatabaseConnection {
           );
 
   FromFirestore<PillSheetGroup> _pillSheetGroupFromFirestore =
-      (snapshot, options) => PillSheetGroup.fromJson(snapshot.data()!);
+      (snapshot, options) => PillSheetGroup.fromJson(
+          snapshot.data()!.putIfAbsent("id", () => snapshot.id));
   ToFirestore<PillSheetGroup> _pillSheetGroupToFirestore =
       (pillSheetGroup, options) => pillSheetGroup.toJson();
   CollectionReference<PillSheetGroup> pillSheetGroupsReference() =>
