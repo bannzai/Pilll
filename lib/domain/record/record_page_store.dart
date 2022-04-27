@@ -14,7 +14,7 @@ import 'package:pilll/database/pill_sheet.dart';
 import 'package:pilll/domain/record/record_page_state.codegen.dart';
 import 'package:pilll/database/pill_sheet_group.dart';
 import 'package:pilll/database/pill_sheet_modified_history.dart';
-import 'package:pilll/service/setting.dart';
+import 'package:pilll/database/setting.dart';
 import 'package:pilll/service/user.dart';
 import 'package:pilll/util/datetime/day.dart';
 import 'package:pilll/util/shared_preference/keys.dart';

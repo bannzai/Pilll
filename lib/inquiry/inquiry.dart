@@ -5,7 +5,7 @@ import 'package:pilll/entity/menstruation.codegen.dart';
 import 'package:pilll/entity/setting.codegen.dart';
 import 'package:pilll/database/menstruation.dart';
 import 'package:pilll/database/pill_sheet_group.dart';
-import 'package:pilll/service/setting.dart';
+import 'package:pilll/database/setting.dart';
 import 'package:pilll/util/environment.dart';
 import 'package:package_info/package_info.dart';
 import 'package:url_launcher/url_launcher.dart';

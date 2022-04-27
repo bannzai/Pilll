@@ -7,7 +7,7 @@ import 'package:pilll/entity/menstruation.codegen.dart';
 import 'package:pilll/entity/setting.codegen.dart';
 import 'package:pilll/native/health_care.dart';
 import 'package:pilll/database/menstruation.dart';
-import 'package:pilll/service/setting.dart';
+import 'package:pilll/database/setting.dart';
 import 'package:pilll/domain/menstruation_edit/menstruation_edit_state.codegen.dart';
 import 'package:pilll/service/user.dart';
 import 'package:pilll/util/datetime/date_compare.dart';
