@@ -211,7 +211,7 @@ class MockDiaryService extends _i1.Mock implements _i18.DiaryDatabase {
 ///
 /// See the documentation for Mockito's code generation for more information.
 class MockMenstruationService extends _i1.Mock
-    implements _i19.MenstruationService {
+    implements _i19.MenstruationDatabase {
   MockMenstruationService() {
     _i1.throwOnMissingStub(this);
   }

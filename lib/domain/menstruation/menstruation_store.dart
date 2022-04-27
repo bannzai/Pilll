@@ -19,7 +19,7 @@ import 'package:pilll/util/datetime/day.dart';
 final menstruationsStoreProvider =
     StateNotifierProvider<MenstruationStore, MenstruationState>(
   (ref) => MenstruationStore(
-    menstruationService: ref.watch(menstruationServiceProvider),
+    menstruationService: ref.watch(menstruationDatabaseProvider),
     diaryService: ref.watch(diaryDatabaseProvider),
     settingService: ref.watch(settingServiceProvider),
     pillSheetService: ref.watch(pillSheetServiceProvider),
@@ -29,7 +29,7 @@ final menstruationsStoreProvider =
 );
 
 class MenstruationStore extends StateNotifier<MenstruationState> {
-  final MenstruationService menstruationService;
+  final MenstruationDatabase menstruationService;
   final DiaryDatabase diaryService;
   final SettingService settingService;
   final PillSheetService pillSheetService;

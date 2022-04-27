@@ -21,7 +21,7 @@ import 'package:mockito/annotations.dart';
   SettingService,
   Analytics,
   DiaryDatabase,
-  MenstruationService,
+  MenstruationDatabase,
   AuthService,
   UserService,
   RecordPageStore,

@@ -9,12 +9,12 @@ import 'package:pilll/domain/menstruation/menstruation_store.dart';
 final menstruationListStoreProvider =
     StateNotifierProvider<MenstruationListStore, MenstruationListState>(
   (ref) => MenstruationListStore(
-    menstruationService: ref.watch(menstruationServiceProvider),
+    menstruationService: ref.watch(menstruationDatabaseProvider),
   ),
 );
 
 class MenstruationListStore extends StateNotifier<MenstruationListState> {
-  final MenstruationService menstruationService;
+  final MenstruationDatabase menstruationService;
   MenstruationListStore({
     required this.menstruationService,
   }) : super(const MenstruationListState()) {

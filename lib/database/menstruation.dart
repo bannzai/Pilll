@@ -3,13 +3,13 @@ import 'package:pilll/database/database.dart';
 import 'package:pilll/entity/menstruation.codegen.dart';
 import 'package:riverpod/riverpod.dart';
 
-final menstruationServiceProvider = Provider<MenstruationService>(
-    (ref) => MenstruationService(ref.watch(databaseProvider)));
+final menstruationDatabaseProvider = Provider<MenstruationDatabase>(
+    (ref) => MenstruationDatabase(ref.watch(databaseProvider)));
 
-class MenstruationService {
+class MenstruationDatabase {
   final DatabaseConnection _database;
 
-  MenstruationService(this._database);
+  MenstruationDatabase(this._database);
   Menstruation _map(DocumentSnapshot document) {
     var data = document.data()! as Map<String, dynamic>;
     data["id"] = document.id;

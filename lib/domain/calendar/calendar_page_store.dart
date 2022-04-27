@@ -17,7 +17,7 @@ import 'package:pilll/util/datetime/date_compare.dart';
 final calendarPageStateStoreProvider =
     StateNotifierProvider<CalendarPageStateStore, CalendarPageState>(
   (ref) => CalendarPageStateStore(
-    ref.watch(menstruationServiceProvider),
+    ref.watch(menstruationDatabaseProvider),
     ref.watch(settingServiceProvider),
     ref.watch(diaryDatabaseProvider),
     ref.watch(pillSheetModifiedHistoryServiceProvider),
@@ -27,7 +27,7 @@ final calendarPageStateStoreProvider =
 );
 
 class CalendarPageStateStore extends StateNotifier<CalendarPageState> {
-  final MenstruationService _menstruationService;
+  final MenstruationDatabase _menstruationService;
   final SettingService _settingService;
   final DiaryDatabase _diaryService;
   final PillSheetModifiedHistoryService _pillSheetModifiedHistoryService;
