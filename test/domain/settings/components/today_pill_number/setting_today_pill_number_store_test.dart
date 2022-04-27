@@ -83,7 +83,7 @@ void main() {
           pillSheetServiceProvider.overrideWithValue(pillSheetService),
           pillSheetModifiedHistoryServiceProvider
               .overrideWithValue(pillSheetModifiedHistoryService),
-          pillSheetGroupServiceProvider
+          pillSheetGroupDatabaseProvider
               .overrideWithValue(pillSheetGroupService),
         ],
       );
@@ -167,7 +167,7 @@ void main() {
           pillSheetServiceProvider.overrideWithValue(pillSheetService),
           pillSheetModifiedHistoryServiceProvider
               .overrideWithValue(pillSheetModifiedHistoryService),
-          pillSheetGroupServiceProvider
+          pillSheetGroupDatabaseProvider
               .overrideWithValue(pillSheetGroupService),
         ],
       );
@@ -278,7 +278,7 @@ void main() {
           pillSheetServiceProvider.overrideWithValue(pillSheetService),
           pillSheetModifiedHistoryServiceProvider
               .overrideWithValue(pillSheetModifiedHistoryService),
-          pillSheetGroupServiceProvider
+          pillSheetGroupDatabaseProvider
               .overrideWithValue(pillSheetGroupService),
         ],
       );
@@ -389,7 +389,7 @@ void main() {
           pillSheetServiceProvider.overrideWithValue(pillSheetService),
           pillSheetModifiedHistoryServiceProvider
               .overrideWithValue(pillSheetModifiedHistoryService),
-          pillSheetGroupServiceProvider
+          pillSheetGroupDatabaseProvider
               .overrideWithValue(pillSheetGroupService),
         ],
       );
@@ -501,7 +501,7 @@ void main() {
           pillSheetServiceProvider.overrideWithValue(pillSheetService),
           pillSheetModifiedHistoryServiceProvider
               .overrideWithValue(pillSheetModifiedHistoryService),
-          pillSheetGroupServiceProvider
+          pillSheetGroupDatabaseProvider
               .overrideWithValue(pillSheetGroupService),
         ],
       );
@@ -621,7 +621,7 @@ void main() {
           pillSheetServiceProvider.overrideWithValue(pillSheetService),
           pillSheetModifiedHistoryServiceProvider
               .overrideWithValue(pillSheetModifiedHistoryService),
-          pillSheetGroupServiceProvider
+          pillSheetGroupDatabaseProvider
               .overrideWithValue(pillSheetGroupService),
         ],
       );

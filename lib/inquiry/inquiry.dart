@@ -30,7 +30,7 @@ Future<String> debugInfo(String separator) async {
   PillSheetGroup? pillSheetGroup;
   try {
     pillSheetGroup =
-        await PillSheetGroupService(databaseConnection).fetchLatest();
+        await PillSheetGroupDatabase(databaseConnection).fetchLatest();
   } catch (_) {}
 
   Setting? setting;

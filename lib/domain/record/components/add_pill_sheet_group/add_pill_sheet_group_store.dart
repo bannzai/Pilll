@@ -22,7 +22,7 @@ final addPillSheetGroupStateStoreProvider = StateNotifierProvider.autoDispose<
       ref.watch(recordPageStoreProvider).appearanceMode,
       ref.watch(recordPageStoreProvider).setting,
       ref.watch(pillSheetServiceProvider),
-      ref.watch(pillSheetGroupServiceProvider),
+      ref.watch(pillSheetGroupDatabaseProvider),
       ref.watch(settingServiceProvider),
       ref.watch(pillSheetModifiedHistoryServiceProvider),
       ref.watch(batchFactoryProvider),
@@ -33,7 +33,7 @@ final addPillSheetGroupStateStoreProvider = StateNotifierProvider.autoDispose<
 class AddPillSheetGroupStateStore
     extends StateNotifier<AddPillSheetGroupState> {
   final PillSheetService _pillSheetService;
-  final PillSheetGroupService _pillSheetGroupService;
+  final PillSheetGroupDatabase _pillSheetGroupService;
   final SettingService _settingService;
   final PillSheetModifiedHistoryService _pillSheetModifiedHistoryService;
   final BatchFactory _batchFactory;

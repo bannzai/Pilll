@@ -30,7 +30,7 @@ final recordPageStoreProvider =
               ref.watch(userServiceProvider),
               ref.watch(authServiceProvider),
               ref.watch(pillSheetModifiedHistoryServiceProvider),
-              ref.watch(pillSheetGroupServiceProvider),
+              ref.watch(pillSheetGroupDatabaseProvider),
             ));
 
 class RecordPageStore extends StateNotifier<RecordPageState> {
@@ -40,7 +40,7 @@ class RecordPageStore extends StateNotifier<RecordPageState> {
   final UserService _userService;
   final AuthService _authService;
   final PillSheetModifiedHistoryService _pillSheetModifiedHistoryService;
-  final PillSheetGroupService _pillSheetGroupService;
+  final PillSheetGroupDatabase _pillSheetGroupService;
   RecordPageStore(
     this._batchFactory,
     this._pillSheetService,
