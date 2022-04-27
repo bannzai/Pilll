@@ -16,7 +16,7 @@ import 'package:riverpod/riverpod.dart';
 final premiumIntroductionStoreProvider = StateNotifierProvider.autoDispose<
     PremiumIntroductionStore, PremiumIntroductionState>(
   (ref) => PremiumIntroductionStore(
-    ref.watch(userServiceProvider),
+    ref.watch(userDatabaseProvider),
     ref.watch(authServiceProvider),
     ref.watch(purchaseServiceProvider),
   ),
@@ -25,7 +25,7 @@ final premiumIntroductionStateProvider =
     Provider.autoDispose((ref) => ref.watch(premiumIntroductionStoreProvider));
 
 class PremiumIntroductionStore extends StateNotifier<PremiumIntroductionState> {
-  final UserService _userService;
+  final UserDatabase _userService;
   final AuthService _authService;
   final PurchaseService _purchaseService;
   PremiumIntroductionStore(

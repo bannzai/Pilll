@@ -6,7 +6,7 @@ import 'package:pilll/database/user.dart';
 import 'package:pilll/auth/apple.dart';
 import 'package:pilll/auth/google.dart';
 
-Future<SignInWithAppleState> callLinkWithApple(UserService userService) async {
+Future<SignInWithAppleState> callLinkWithApple(UserDatabase userService) async {
   final user = FirebaseAuth.instance.currentUser;
   if (user == null) {
     throw AssertionError("Required Firebase user");
@@ -39,7 +39,7 @@ Future<SignInWithAppleState> callLinkWithApple(UserService userService) async {
 }
 
 Future<SignInWithGoogleState> callLinkWithGoogle(
-    UserService userService) async {
+    UserDatabase userService) async {
   final user = FirebaseAuth.instance.currentUser;
   if (user == null) {
     throw AssertionError("Required Firebase user");

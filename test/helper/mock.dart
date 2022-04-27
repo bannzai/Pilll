@@ -23,7 +23,7 @@ import 'package:mockito/annotations.dart';
   DiaryDatabase,
   MenstruationDatabase,
   AuthService,
-  UserService,
+  UserDatabase,
   RecordPageStore,
   NotificationBarStateStore,
   PremiumIntroductionStore,

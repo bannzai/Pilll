@@ -35,7 +35,7 @@ Future<void> callUpdatePurchaseInfo(PurchaserInfo info) async {
     return;
   }
 
-  final userService = UserService(DatabaseConnection(uid));
+  final userService = UserDatabase(DatabaseConnection(uid));
   final premiumEntitlement = info.entitlements.all[premiumEntitlements];
   try {
     analytics.logEvent(name: "call_update_purchase_info");
@@ -70,7 +70,7 @@ Future<void> syncPurchaseInfo() async {
       premiumEntitlement == null ? false : premiumEntitlement.isActive;
 
   try {
-    final userService = UserService(DatabaseConnection(uid));
+    final userService = UserDatabase(DatabaseConnection(uid));
     analytics.logEvent(name: "call_service_sync_purchase_info");
     await userService.syncPurchaseInfo(isActivated: isActivated);
     analytics.logEvent(name: "end_sync_purchase_info");

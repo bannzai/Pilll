@@ -24,7 +24,7 @@ import 'package:riverpod/riverpod.dart';
 final initialSettingStoreProvider = StateNotifierProvider.autoDispose<
     InitialSettingStateStore, InitialSettingState>(
   (ref) => InitialSettingStateStore(
-    ref.watch(userServiceProvider),
+    ref.watch(userDatabaseProvider),
     ref.watch(batchFactoryProvider),
     ref.watch(settingDatabaseProvider),
     ref.watch(pillSheetDatabaseProvider),
@@ -38,7 +38,7 @@ final initialSettingStateProvider =
     StateProvider.autoDispose((ref) => ref.watch(initialSettingStoreProvider));
 
 class InitialSettingStateStore extends StateNotifier<InitialSettingState> {
-  final UserService _userService;
+  final UserDatabase _userService;
   final BatchFactory _batchFactory;
   final SettingDatabase _settingService;
   final PillSheetDatabase _pillSheetService;
@@ -63,7 +63,7 @@ class InitialSettingStateStore extends StateNotifier<InitialSettingState> {
 
       final userIsNotAnonymous = !user.isAnonymous;
       if (userIsNotAnonymous) {
-        final userService = UserService(DatabaseConnection(user.uid));
+        final userService = UserDatabase(DatabaseConnection(user.uid));
         final dbUser = await userService.prepare(user.uid);
         userService.saveUserLaunchInfo();
 
