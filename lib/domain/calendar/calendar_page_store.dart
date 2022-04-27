@@ -27,7 +27,7 @@ final calendarPageStateStoreProvider =
 );
 
 class CalendarPageStateStore extends StateNotifier<CalendarPageState> {
-  final MenstruationDatastore _menstruationService;
+  final MenstruationDatastore _menstruationDatastore;
   final SettingDatastore _settingService;
   final DiaryDatastore _diaryService;
   final PillSheetModifiedHistoryDatastore _pillSheetModifiedHistoryService;
@@ -35,7 +35,7 @@ class CalendarPageStateStore extends StateNotifier<CalendarPageState> {
   final PillSheetGroupDatastore _pillSheetGroupService;
 
   CalendarPageStateStore(
-    this._menstruationService,
+    this._menstruationDatastore,
     this._settingService,
     this._diaryService,
     this._pillSheetModifiedHistoryService,
@@ -50,7 +50,7 @@ class CalendarPageStateStore extends StateNotifier<CalendarPageState> {
     state = state.copyWith(currentCalendarIndex: state.todayCalendarIndex);
     try {
       await Future(() async {
-        final menstruations = await _menstruationService.fetchAll();
+        final menstruations = await _menstruationDatastore.fetchAll();
         final setting = await _settingService.fetch();
         final latestPillSheetGroup = await _pillSheetGroupService.fetchLatest();
         final diaries = await _diaryService.fetchListForMonth(
@@ -89,7 +89,7 @@ class CalendarPageStateStore extends StateNotifier<CalendarPageState> {
   void _subscribe() {
     _menstruationCanceller?.cancel();
     _menstruationCanceller =
-        _menstruationService.streamAll().listen((entities) {
+        _menstruationDatastore.streamAll().listen((entities) {
       state = state.copyWith(menstruations: entities);
     });
     _settingCanceller?.cancel();

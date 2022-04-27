@@ -17,7 +17,7 @@ final menstruationEditProvider = StateNotifierProvider.family
     .autoDispose<MenstruationEditStore, MenstruationEditState, Menstruation?>(
   (ref, menstruation) => MenstruationEditStore(
     menstruation: menstruation,
-    menstruationService: ref.watch(menstruationDatastoreProvider),
+    menstruationDatastore: ref.watch(menstruationDatastoreProvider),
     settingService: ref.watch(settingDatastoreProvider),
     userService: ref.watch(userDatastoreProvider),
   ),
@@ -44,13 +44,13 @@ List<DateTime> displayedDates(Menstruation? menstruation) {
 
 class MenstruationEditStore extends StateNotifier<MenstruationEditState> {
   late Menstruation? initialMenstruation;
-  final MenstruationDatastore menstruationService;
+  final MenstruationDatastore menstruationDatastore;
   final SettingDatastore settingService;
   final UserDatastore userService;
 
   MenstruationEditStore({
     Menstruation? menstruation,
-    required this.menstruationService,
+    required this.menstruationDatastore,
     required this.settingService,
     required this.userService,
   }) : super(MenstruationEditState(
@@ -114,7 +114,7 @@ class MenstruationEditStore extends StateNotifier<MenstruationEditState> {
       menstruation = menstruation.copyWith(healthKitSampleDataUUID: null);
     }
 
-    await menstruationService.update(
+    await menstruationDatastore.update(
         documentID, menstruation.copyWith(deletedAt: now()));
   }
 
@@ -132,7 +132,7 @@ class MenstruationEditStore extends StateNotifier<MenstruationEditState> {
             healthKitSampleDataUUID: healthKitSampleDataUUID);
       }
 
-      return menstruationService.create(menstruation);
+      return menstruationDatastore.create(menstruation);
     } else {
       if (await _canHealthKitDataSave()) {
         final healthKitSampleDataUUID =
@@ -140,7 +140,7 @@ class MenstruationEditStore extends StateNotifier<MenstruationEditState> {
         menstruation = menstruation.copyWith(
             healthKitSampleDataUUID: healthKitSampleDataUUID);
       }
-      return menstruationService.update(documentID, menstruation);
+      return menstruationDatastore.update(documentID, menstruation);
     }
   }
 

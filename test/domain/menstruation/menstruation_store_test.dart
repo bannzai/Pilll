@@ -65,8 +65,8 @@ void main() {
           todayRepository = originalTodayRepository;
         });
 
-        final menstruationService = MockMenstruationDatastore();
-        when(menstruationService.fetchAll()).thenAnswer(
+        final menstruationDatastore = MockMenstruationDatastore();
+        when(menstruationDatastore.fetchAll()).thenAnswer(
           (realInvocation) => Future.value([
             Menstruation(
               beginDate: DateTime(2021, 04, 28),
@@ -80,7 +80,7 @@ void main() {
             ),
           ]),
         );
-        when(menstruationService.streamAll()).thenAnswer(
+        when(menstruationDatastore.streamAll()).thenAnswer(
           (realInvocation) => Stream.value([
             Menstruation(
               beginDate: DateTime(2021, 04, 28),
@@ -128,7 +128,7 @@ void main() {
             .thenAnswer((realInvocation) => const Stream.empty());
 
         final store = MenstruationStore(
-          menstruationService: menstruationService,
+          menstruationDatastore: menstruationDatastore,
           diaryService: diaryService,
           settingService: settingService,
           pillSheetService: pillSheetService,
@@ -160,8 +160,8 @@ void main() {
           todayRepository = originalTodayRepository;
         });
 
-        final menstruationService = MockMenstruationDatastore();
-        when(menstruationService.fetchAll()).thenAnswer(
+        final menstruationDatastore = MockMenstruationDatastore();
+        when(menstruationDatastore.fetchAll()).thenAnswer(
           (realInvocation) => Future.value([
             Menstruation(
               beginDate: DateTime(2021, 03, 28),
@@ -170,7 +170,7 @@ void main() {
             ),
           ]),
         );
-        when(menstruationService.streamAll()).thenAnswer(
+        when(menstruationDatastore.streamAll()).thenAnswer(
           (realInvocation) => Stream.value([
             Menstruation(
               beginDate: DateTime(2021, 03, 28),
@@ -212,7 +212,7 @@ void main() {
             .thenAnswer((realInvocation) => const Stream.empty());
 
         final store = MenstruationStore(
-          menstruationService: menstruationService,
+          menstruationDatastore: menstruationDatastore,
           diaryService: diaryService,
           settingService: settingService,
           pillSheetService: pillSheetService,
@@ -240,11 +240,11 @@ void main() {
           todayRepository = originalTodayRepository;
         });
 
-        final menstruationService = MockMenstruationDatastore();
-        when(menstruationService.fetchAll()).thenAnswer(
+        final menstruationDatastore = MockMenstruationDatastore();
+        when(menstruationDatastore.fetchAll()).thenAnswer(
           (realInvocation) => Future.value([]),
         );
-        when(menstruationService.streamAll()).thenAnswer(
+        when(menstruationDatastore.streamAll()).thenAnswer(
           (realInvocation) => Stream.value([]),
         );
         final pillSheetService = MockPillSheetDatastore();
@@ -291,7 +291,7 @@ void main() {
             .thenAnswer((realInvocation) => const Stream.empty());
 
         final store = MenstruationStore(
-          menstruationService: menstruationService,
+          menstruationDatastore: menstruationDatastore,
           diaryService: diaryService,
           settingService: settingService,
           pillSheetService: pillSheetService,
@@ -323,11 +323,11 @@ void main() {
           todayRepository = originalTodayRepository;
         });
 
-        final menstruationService = MockMenstruationDatastore();
-        when(menstruationService.fetchAll()).thenAnswer(
+        final menstruationDatastore = MockMenstruationDatastore();
+        when(menstruationDatastore.fetchAll()).thenAnswer(
           (realInvocation) => Future.value([]),
         );
-        when(menstruationService.streamAll()).thenAnswer(
+        when(menstruationDatastore.streamAll()).thenAnswer(
           (realInvocation) => Stream.value([]),
         );
         final pillSheetService = MockPillSheetDatastore();
@@ -371,7 +371,7 @@ void main() {
             .thenAnswer((realInvocation) => const Stream.empty());
 
         final store = MenstruationStore(
-          menstruationService: menstruationService,
+          menstruationDatastore: menstruationDatastore,
           diaryService: diaryService,
           settingService: settingService,
           pillSheetService: pillSheetService,
