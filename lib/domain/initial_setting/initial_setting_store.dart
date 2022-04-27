@@ -42,7 +42,7 @@ class InitialSettingStateStore extends StateNotifier<InitialSettingState> {
   final BatchFactory _batchFactory;
   final SettingDatastore _settingDatastore;
   final PillSheetDatastore _pillSheetDatastore;
-  final PillSheetModifiedHistoryDatastore _pillSheetModifiedHistoryService;
+  final PillSheetModifiedHistoryDatastore _pillSheetModifiedHistoryDatastore;
   final PillSheetGroupDatastore _pillSheetGroupDatastore;
   final AuthService _authService;
 
@@ -51,7 +51,7 @@ class InitialSettingStateStore extends StateNotifier<InitialSettingState> {
     this._batchFactory,
     this._settingDatastore,
     this._pillSheetDatastore,
-    this._pillSheetModifiedHistoryService,
+    this._pillSheetModifiedHistoryDatastore,
     this._pillSheetGroupDatastore,
     this._authService,
   ) : super(const InitialSettingState());
@@ -175,7 +175,7 @@ class InitialSettingStateStore extends StateNotifier<InitialSettingState> {
         pillSheetIDs: pillSheetIDs,
         pillSheetGroupID: createdPillSheetGroup.id,
       );
-      _pillSheetModifiedHistoryService.add(batch, history);
+      _pillSheetModifiedHistoryDatastore.add(batch, history);
     }
 
     final setting = state.buildSetting();

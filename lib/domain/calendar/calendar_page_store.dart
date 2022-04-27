@@ -30,7 +30,7 @@ class CalendarPageStateStore extends StateNotifier<CalendarPageState> {
   final MenstruationDatastore _menstruationDatastore;
   final SettingDatastore _settingDatastore;
   final DiaryDatastore _diaryDatastore;
-  final PillSheetModifiedHistoryDatastore _pillSheetModifiedHistoryService;
+  final PillSheetModifiedHistoryDatastore _pillSheetModifiedHistoryDatastore;
   final UserDatastore _userDatastore;
   final PillSheetGroupDatastore _pillSheetGroupDatastore;
 
@@ -38,7 +38,7 @@ class CalendarPageStateStore extends StateNotifier<CalendarPageState> {
     this._menstruationDatastore,
     this._settingDatastore,
     this._diaryDatastore,
-    this._pillSheetModifiedHistoryService,
+    this._pillSheetModifiedHistoryDatastore,
     this._userDatastore,
     this._pillSheetGroupDatastore,
   ) : super(CalendarPageState(menstruations: [])) {
@@ -57,7 +57,7 @@ class CalendarPageStateStore extends StateNotifier<CalendarPageState> {
         final diaries = await _diaryDatastore.fetchListForMonth(
             state.calendarDataSource[state.todayCalendarIndex]);
         final pillSheetModifiedHistories =
-            await _pillSheetModifiedHistoryService.fetchList(
+            await _pillSheetModifiedHistoryDatastore.fetchList(
                 null,
                 CalendarPillSheetModifiedHistoryCardState
                         .pillSheetModifiedHistoriesThreshold +
@@ -107,7 +107,7 @@ class CalendarPageStateStore extends StateNotifier<CalendarPageState> {
       state = state.copyWith(diariesForMonth: entities);
     });
     _pillSheetModifiedHistoryCanceller?.cancel();
-    _pillSheetModifiedHistoryCanceller = _pillSheetModifiedHistoryService
+    _pillSheetModifiedHistoryCanceller = _pillSheetModifiedHistoryDatastore
         .stream(CalendarPillSheetModifiedHistoryCardState
                 .pillSheetModifiedHistoriesThreshold +
             1)
@@ -159,7 +159,7 @@ class CalendarPageStateStore extends StateNotifier<CalendarPageState> {
     TakenPillValue takenPillValue,
   ) {
     return updateForEditTakenValue(
-      service: _pillSheetModifiedHistoryService,
+      service: _pillSheetModifiedHistoryDatastore,
       actualTakenDate: actualTakenDate,
       history: history,
       value: value,

@@ -73,9 +73,9 @@ void main() {
       final history = PillSheetModifiedHistoryServiceActionFactory
           .createCreatedPillSheetAction(
               pillSheetGroupID: "group_id", pillSheetIDs: ["sheet_id"]);
-      final pillSheetModifiedHistoryService =
+      final pillSheetModifiedHistoryDatastore =
           MockPillSheetModifiedHistoryDatastore();
-      when(pillSheetModifiedHistoryService.add(batch, history))
+      when(pillSheetModifiedHistoryDatastore.add(batch, history))
           .thenReturn(null);
 
       final setting = const Setting(
@@ -110,7 +110,7 @@ void main() {
           settingDatastoreProvider.overrideWithValue(settingDatastore),
           pillSheetDatastoreProvider.overrideWithValue(pillSheetDatastore),
           pillSheetModifiedHistoryDatastoreProvider
-              .overrideWithValue(pillSheetModifiedHistoryService),
+              .overrideWithValue(pillSheetModifiedHistoryDatastore),
           pillSheetGroupDatastoreProvider
               .overrideWithValue(pillSheetGroupDatastore),
           userDatastoreProvider.overrideWithValue(userDatastore),
@@ -176,9 +176,9 @@ void main() {
           .createCreatedPillSheetAction(
               pillSheetGroupID: "group_id",
               pillSheetIDs: ["sheet_id", "sheet_id2"]);
-      final pillSheetModifiedHistoryService =
+      final pillSheetModifiedHistoryDatastore =
           MockPillSheetModifiedHistoryDatastore();
-      when(pillSheetModifiedHistoryService.add(batch, history))
+      when(pillSheetModifiedHistoryDatastore.add(batch, history))
           .thenReturn(null);
 
       final setting = const Setting(
@@ -214,7 +214,7 @@ void main() {
           settingDatastoreProvider.overrideWithValue(settingDatastore),
           pillSheetDatastoreProvider.overrideWithValue(pillSheetDatastore),
           pillSheetModifiedHistoryDatastoreProvider
-              .overrideWithValue(pillSheetModifiedHistoryService),
+              .overrideWithValue(pillSheetModifiedHistoryDatastore),
           pillSheetGroupDatastoreProvider
               .overrideWithValue(pillSheetGroupDatastore),
           userDatastoreProvider.overrideWithValue(userDatastore),
@@ -288,9 +288,9 @@ void main() {
         ),
         isQuickRecord: false,
       );
-      final pillSheetModifiedHistoryService =
+      final pillSheetModifiedHistoryDatastore =
           MockPillSheetModifiedHistoryDatastore();
-      when(pillSheetModifiedHistoryService.add(batch, history))
+      when(pillSheetModifiedHistoryDatastore.add(batch, history))
           .thenReturn(null);
 
       final setting = const Setting(
@@ -325,7 +325,7 @@ void main() {
           settingDatastoreProvider.overrideWithValue(settingDatastore),
           pillSheetDatastoreProvider.overrideWithValue(pillSheetDatastore),
           pillSheetModifiedHistoryDatastoreProvider
-              .overrideWithValue(pillSheetModifiedHistoryService),
+              .overrideWithValue(pillSheetModifiedHistoryDatastore),
           pillSheetGroupDatastoreProvider
               .overrideWithValue(pillSheetGroupDatastore),
           userDatastoreProvider.overrideWithValue(userDatastore),
@@ -409,9 +409,9 @@ void main() {
         ),
         isQuickRecord: false,
       );
-      final pillSheetModifiedHistoryService =
+      final pillSheetModifiedHistoryDatastore =
           MockPillSheetModifiedHistoryDatastore();
-      when(pillSheetModifiedHistoryService.add(batch, history))
+      when(pillSheetModifiedHistoryDatastore.add(batch, history))
           .thenReturn(null);
 
       final setting = const Setting(
@@ -447,7 +447,7 @@ void main() {
           settingDatastoreProvider.overrideWithValue(settingDatastore),
           pillSheetDatastoreProvider.overrideWithValue(pillSheetDatastore),
           pillSheetModifiedHistoryDatastoreProvider
-              .overrideWithValue(pillSheetModifiedHistoryService),
+              .overrideWithValue(pillSheetModifiedHistoryDatastore),
           pillSheetGroupDatastoreProvider
               .overrideWithValue(pillSheetGroupDatastore),
           userDatastoreProvider.overrideWithValue(userDatastore),
@@ -532,9 +532,9 @@ void main() {
         ),
         isQuickRecord: false,
       );
-      final pillSheetModifiedHistoryService =
+      final pillSheetModifiedHistoryDatastore =
           MockPillSheetModifiedHistoryDatastore();
-      when(pillSheetModifiedHistoryService.add(batch, history))
+      when(pillSheetModifiedHistoryDatastore.add(batch, history))
           .thenReturn(null);
 
       final setting = const Setting(
@@ -570,7 +570,7 @@ void main() {
           settingDatastoreProvider.overrideWithValue(settingDatastore),
           pillSheetDatastoreProvider.overrideWithValue(pillSheetDatastore),
           pillSheetModifiedHistoryDatastoreProvider
-              .overrideWithValue(pillSheetModifiedHistoryService),
+              .overrideWithValue(pillSheetModifiedHistoryDatastore),
           pillSheetGroupDatastoreProvider
               .overrideWithValue(pillSheetGroupDatastore),
           userDatastoreProvider.overrideWithValue(userDatastore),
@@ -658,9 +658,9 @@ void main() {
         ),
         isQuickRecord: false,
       );
-      final pillSheetModifiedHistoryService =
+      final pillSheetModifiedHistoryDatastore =
           MockPillSheetModifiedHistoryDatastore();
-      when(pillSheetModifiedHistoryService.add(batch, history))
+      when(pillSheetModifiedHistoryDatastore.add(batch, history))
           .thenReturn(null);
 
       final setting = const Setting(
@@ -696,7 +696,7 @@ void main() {
           settingDatastoreProvider.overrideWithValue(settingDatastore),
           pillSheetDatastoreProvider.overrideWithValue(pillSheetDatastore),
           pillSheetModifiedHistoryDatastoreProvider
-              .overrideWithValue(pillSheetModifiedHistoryService),
+              .overrideWithValue(pillSheetModifiedHistoryDatastore),
           pillSheetGroupDatastoreProvider
               .overrideWithValue(pillSheetGroupDatastore),
           userDatastoreProvider.overrideWithValue(userDatastore),
@@ -776,9 +776,9 @@ void main() {
             lastTakenDate: yesterday.subtract(const Duration(days: 1)),
           ),
         );
-        final pillSheetModifiedHistoryService =
+        final pillSheetModifiedHistoryDatastore =
             MockPillSheetModifiedHistoryDatastore();
-        when(pillSheetModifiedHistoryService.add(batch, history))
+        when(pillSheetModifiedHistoryDatastore.add(batch, history))
             .thenReturn(null);
 
         final setting = const Setting(
@@ -813,7 +813,7 @@ void main() {
             settingDatastoreProvider.overrideWithValue(settingDatastore),
             pillSheetDatastoreProvider.overrideWithValue(pillSheetDatastore),
             pillSheetModifiedHistoryDatastoreProvider
-                .overrideWithValue(pillSheetModifiedHistoryService),
+                .overrideWithValue(pillSheetModifiedHistoryDatastore),
             pillSheetGroupDatastoreProvider
                 .overrideWithValue(pillSheetGroupDatastore),
             userDatastoreProvider.overrideWithValue(userDatastore),
@@ -890,9 +890,9 @@ void main() {
             lastTakenDate: yesterday,
           ),
         );
-        final pillSheetModifiedHistoryService =
+        final pillSheetModifiedHistoryDatastore =
             MockPillSheetModifiedHistoryDatastore();
-        when(pillSheetModifiedHistoryService.add(batch, history))
+        when(pillSheetModifiedHistoryDatastore.add(batch, history))
             .thenReturn(null);
 
         final setting = const Setting(
@@ -927,7 +927,7 @@ void main() {
             settingDatastoreProvider.overrideWithValue(settingDatastore),
             pillSheetDatastoreProvider.overrideWithValue(pillSheetDatastore),
             pillSheetModifiedHistoryDatastoreProvider
-                .overrideWithValue(pillSheetModifiedHistoryService),
+                .overrideWithValue(pillSheetModifiedHistoryDatastore),
             pillSheetGroupDatastoreProvider
                 .overrideWithValue(pillSheetGroupDatastore),
             userDatastoreProvider.overrideWithValue(userDatastore),
@@ -1019,9 +1019,9 @@ void main() {
             restDurations: [],
           ),
         );
-        final pillSheetModifiedHistoryService =
+        final pillSheetModifiedHistoryDatastore =
             MockPillSheetModifiedHistoryDatastore();
-        when(pillSheetModifiedHistoryService.add(batch, history))
+        when(pillSheetModifiedHistoryDatastore.add(batch, history))
             .thenReturn(null);
 
         final setting = const Setting(
@@ -1056,7 +1056,7 @@ void main() {
             settingDatastoreProvider.overrideWithValue(settingDatastore),
             pillSheetDatastoreProvider.overrideWithValue(pillSheetDatastore),
             pillSheetModifiedHistoryDatastoreProvider
-                .overrideWithValue(pillSheetModifiedHistoryService),
+                .overrideWithValue(pillSheetModifiedHistoryDatastore),
             pillSheetGroupDatastoreProvider
                 .overrideWithValue(pillSheetGroupDatastore),
             userDatastoreProvider.overrideWithValue(userDatastore),
@@ -1140,9 +1140,9 @@ void main() {
           before: pillSheet,
           after: pillSheet.copyWith(lastTakenDate: yesterday),
         );
-        final pillSheetModifiedHistoryService =
+        final pillSheetModifiedHistoryDatastore =
             MockPillSheetModifiedHistoryDatastore();
-        when(pillSheetModifiedHistoryService.add(batch, history))
+        when(pillSheetModifiedHistoryDatastore.add(batch, history))
             .thenReturn(null);
 
         final setting = const Setting(
@@ -1177,7 +1177,7 @@ void main() {
             settingDatastoreProvider.overrideWithValue(settingDatastore),
             pillSheetDatastoreProvider.overrideWithValue(pillSheetDatastore),
             pillSheetModifiedHistoryDatastoreProvider
-                .overrideWithValue(pillSheetModifiedHistoryService),
+                .overrideWithValue(pillSheetModifiedHistoryDatastore),
             pillSheetGroupDatastoreProvider
                 .overrideWithValue(pillSheetGroupDatastore),
             userDatastoreProvider.overrideWithValue(userDatastore),
@@ -1266,9 +1266,9 @@ void main() {
             lastTakenDate: yesterday,
           ),
         );
-        final pillSheetModifiedHistoryService =
+        final pillSheetModifiedHistoryDatastore =
             MockPillSheetModifiedHistoryDatastore();
-        when(pillSheetModifiedHistoryService.add(batch, history))
+        when(pillSheetModifiedHistoryDatastore.add(batch, history))
             .thenReturn(null);
 
         final setting = const Setting(
@@ -1304,7 +1304,7 @@ void main() {
             settingDatastoreProvider.overrideWithValue(settingDatastore),
             pillSheetDatastoreProvider.overrideWithValue(pillSheetDatastore),
             pillSheetModifiedHistoryDatastoreProvider
-                .overrideWithValue(pillSheetModifiedHistoryService),
+                .overrideWithValue(pillSheetModifiedHistoryDatastore),
             pillSheetGroupDatastoreProvider
                 .overrideWithValue(pillSheetGroupDatastore),
             userDatastoreProvider.overrideWithValue(userDatastore),
@@ -1396,9 +1396,9 @@ void main() {
                 before: pillSheet2,
                 after: pillSheet.copyWith(
                     lastTakenDate: _today.subtract(const Duration(days: 4))));
-        final pillSheetModifiedHistoryService =
+        final pillSheetModifiedHistoryDatastore =
             MockPillSheetModifiedHistoryDatastore();
-        when(pillSheetModifiedHistoryService.add(batch, history))
+        when(pillSheetModifiedHistoryDatastore.add(batch, history))
             .thenReturn(null);
 
         final setting = const Setting(
@@ -1434,7 +1434,7 @@ void main() {
             settingDatastoreProvider.overrideWithValue(settingDatastore),
             pillSheetDatastoreProvider.overrideWithValue(pillSheetDatastore),
             pillSheetModifiedHistoryDatastoreProvider
-                .overrideWithValue(pillSheetModifiedHistoryService),
+                .overrideWithValue(pillSheetModifiedHistoryDatastore),
             pillSheetGroupDatastoreProvider
                 .overrideWithValue(pillSheetGroupDatastore),
             userDatastoreProvider.overrideWithValue(userDatastore),
@@ -1531,9 +1531,9 @@ void main() {
                 after: pillSheet.copyWith(
                     lastTakenDate: _today.subtract(const Duration(days: 4)),
                     restDurations: []));
-        final pillSheetModifiedHistoryService =
+        final pillSheetModifiedHistoryDatastore =
             MockPillSheetModifiedHistoryDatastore();
-        when(pillSheetModifiedHistoryService.add(batch, history))
+        when(pillSheetModifiedHistoryDatastore.add(batch, history))
             .thenReturn(null);
 
         final setting = const Setting(
@@ -1569,7 +1569,7 @@ void main() {
             settingDatastoreProvider.overrideWithValue(settingDatastore),
             pillSheetDatastoreProvider.overrideWithValue(pillSheetDatastore),
             pillSheetModifiedHistoryDatastoreProvider
-                .overrideWithValue(pillSheetModifiedHistoryService),
+                .overrideWithValue(pillSheetModifiedHistoryDatastore),
             pillSheetGroupDatastoreProvider
                 .overrideWithValue(pillSheetGroupDatastore),
             userDatastoreProvider.overrideWithValue(userDatastore),

@@ -39,7 +39,7 @@ class RecordPageStore extends StateNotifier<RecordPageState> {
   final SettingDatastore _settingDatastore;
   final UserDatastore _userDatastore;
   final AuthService _authService;
-  final PillSheetModifiedHistoryDatastore _pillSheetModifiedHistoryService;
+  final PillSheetModifiedHistoryDatastore _pillSheetModifiedHistoryDatastore;
   final PillSheetGroupDatastore _pillSheetGroupDatastore;
   RecordPageStore(
     this._batchFactory,
@@ -47,7 +47,7 @@ class RecordPageStore extends StateNotifier<RecordPageState> {
     this._settingDatastore,
     this._userDatastore,
     this._authService,
-    this._pillSheetModifiedHistoryService,
+    this._pillSheetModifiedHistoryDatastore,
     this._pillSheetGroupDatastore,
   ) : super(const RecordPageState()) {
     reset();
@@ -186,7 +186,7 @@ class RecordPageStore extends StateNotifier<RecordPageState> {
       activedPillSheet: activedPillSheet,
       batchFactory: _batchFactory,
       pillSheetDatastore: _pillSheetDatastore,
-      pillSheetModifiedHistoryService: _pillSheetModifiedHistoryService,
+      pillSheetModifiedHistoryDatastore: _pillSheetModifiedHistoryDatastore,
       pillSheetGroupDatastore: _pillSheetGroupDatastore,
       isQuickRecord: false,
     );
@@ -328,7 +328,7 @@ class RecordPageStore extends StateNotifier<RecordPageState> {
       before: before,
       after: after,
     );
-    _pillSheetModifiedHistoryService.add(batch, history);
+    _pillSheetModifiedHistoryDatastore.add(batch, history);
 
     await batch.commit();
 
@@ -430,7 +430,7 @@ class RecordPageStore extends StateNotifier<RecordPageState> {
     final batch = _batchFactory.batch();
     _pillSheetDatastore.update(batch, updatedPillSheetGroup.pillSheets);
     _pillSheetGroupDatastore.updateWithBatch(batch, updatedPillSheetGroup);
-    _pillSheetModifiedHistoryService.add(
+    _pillSheetModifiedHistoryDatastore.add(
       batch,
       PillSheetModifiedHistoryServiceActionFactory
           .createBeganRestDurationAction(
@@ -463,7 +463,7 @@ class RecordPageStore extends StateNotifier<RecordPageState> {
     final batch = _batchFactory.batch();
     _pillSheetDatastore.update(batch, updatedPillSheetGroup.pillSheets);
     _pillSheetGroupDatastore.updateWithBatch(batch, updatedPillSheetGroup);
-    _pillSheetModifiedHistoryService.add(
+    _pillSheetModifiedHistoryDatastore.add(
       batch,
       PillSheetModifiedHistoryServiceActionFactory
           .createEndedRestDurationAction(

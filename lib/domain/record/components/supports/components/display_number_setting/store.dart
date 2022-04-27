@@ -22,12 +22,12 @@ class DisplayNumberSettingStateStore
     extends StateNotifier<DisplayNumberSettingState> {
   final BatchFactory _batchFactory;
   final PillSheetGroupDatastore _pillSheetGroupDatastore;
-  final PillSheetModifiedHistoryDatastore _pillSheetModifiedHistoryService;
+  final PillSheetModifiedHistoryDatastore _pillSheetModifiedHistoryDatastore;
 
   DisplayNumberSettingStateStore(
     this._batchFactory,
     this._pillSheetGroupDatastore,
-    this._pillSheetModifiedHistoryService, {
+    this._pillSheetModifiedHistoryDatastore, {
     required PillSheetGroup pillSheetGroup,
   }) : super(DisplayNumberSettingState(
           pillSheetGroup: pillSheetGroup.copyWith(),
@@ -97,7 +97,7 @@ class DisplayNumberSettingStateStore
     final batch = _batchFactory.batch();
     if (displayNumberSetting.beginPillNumber !=
         state.originalPillSheetGroup.displayNumberSetting?.beginPillNumber) {
-      _pillSheetModifiedHistoryService.add(
+      _pillSheetModifiedHistoryDatastore.add(
         batch,
         PillSheetModifiedHistoryServiceActionFactory
             .createChangedBeginDisplayNumberAction(
@@ -111,7 +111,7 @@ class DisplayNumberSettingStateStore
 
     if (displayNumberSetting.endPillNumber !=
         state.originalPillSheetGroup.displayNumberSetting?.endPillNumber) {
-      _pillSheetModifiedHistoryService.add(
+      _pillSheetModifiedHistoryDatastore.add(
         batch,
         PillSheetModifiedHistoryServiceActionFactory
             .createChangedEndDisplayNumberAction(

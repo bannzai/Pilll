@@ -53,7 +53,7 @@ Future<PillSheetGroup?> take({
   required PillSheet activedPillSheet,
   required BatchFactory batchFactory,
   required PillSheetDatastore pillSheetDatastore,
-  required PillSheetModifiedHistoryDatastore pillSheetModifiedHistoryService,
+  required PillSheetModifiedHistoryDatastore pillSheetModifiedHistoryDatastore,
   required PillSheetGroupDatastore pillSheetGroupDatastore,
   required bool isQuickRecord,
 }) async {
@@ -107,7 +107,7 @@ Future<PillSheetGroup?> take({
     after: after,
     isQuickRecord: isQuickRecord,
   );
-  pillSheetModifiedHistoryService.add(batch, history);
+  pillSheetModifiedHistoryDatastore.add(batch, history);
 
   await batch.commit();
 

@@ -74,9 +74,9 @@ void main() {
         after: updatedPillSheet,
       );
 
-      final pillSheetModifiedHistoryService =
+      final pillSheetModifiedHistoryDatastore =
           MockPillSheetModifiedHistoryDatastore();
-      when(pillSheetModifiedHistoryService.add(batch, history))
+      when(pillSheetModifiedHistoryDatastore.add(batch, history))
           .thenReturn(null);
 
       final container = ProviderContainer(
@@ -84,7 +84,7 @@ void main() {
           batchFactoryProvider.overrideWithValue(batchFactory),
           pillSheetDatastoreProvider.overrideWithValue(pillSheetDatastore),
           pillSheetModifiedHistoryDatastoreProvider
-              .overrideWithValue(pillSheetModifiedHistoryService),
+              .overrideWithValue(pillSheetModifiedHistoryDatastore),
           pillSheetGroupDatastoreProvider
               .overrideWithValue(pillSheetGroupDatastore),
         ],
@@ -160,9 +160,9 @@ void main() {
         after: updatedPillSheet,
       );
 
-      final pillSheetModifiedHistoryService =
+      final pillSheetModifiedHistoryDatastore =
           MockPillSheetModifiedHistoryDatastore();
-      when(pillSheetModifiedHistoryService.add(batch, history))
+      when(pillSheetModifiedHistoryDatastore.add(batch, history))
           .thenReturn(null);
 
       final container = ProviderContainer(
@@ -170,7 +170,7 @@ void main() {
           batchFactoryProvider.overrideWithValue(batchFactory),
           pillSheetDatastoreProvider.overrideWithValue(pillSheetDatastore),
           pillSheetModifiedHistoryDatastoreProvider
-              .overrideWithValue(pillSheetModifiedHistoryService),
+              .overrideWithValue(pillSheetModifiedHistoryDatastore),
           pillSheetGroupDatastoreProvider
               .overrideWithValue(pillSheetGroupDatastore),
         ],
@@ -272,9 +272,9 @@ void main() {
         after: updatedLeft,
       );
 
-      final pillSheetModifiedHistoryService =
+      final pillSheetModifiedHistoryDatastore =
           MockPillSheetModifiedHistoryDatastore();
-      when(pillSheetModifiedHistoryService.add(batch, history))
+      when(pillSheetModifiedHistoryDatastore.add(batch, history))
           .thenReturn(null);
 
       final container = ProviderContainer(
@@ -282,7 +282,7 @@ void main() {
           batchFactoryProvider.overrideWithValue(batchFactory),
           pillSheetDatastoreProvider.overrideWithValue(pillSheetDatastore),
           pillSheetModifiedHistoryDatastoreProvider
-              .overrideWithValue(pillSheetModifiedHistoryService),
+              .overrideWithValue(pillSheetModifiedHistoryDatastore),
           pillSheetGroupDatastoreProvider
               .overrideWithValue(pillSheetGroupDatastore),
         ],
@@ -384,9 +384,9 @@ void main() {
         after: updatedLeft,
       );
 
-      final pillSheetModifiedHistoryService =
+      final pillSheetModifiedHistoryDatastore =
           MockPillSheetModifiedHistoryDatastore();
-      when(pillSheetModifiedHistoryService.add(batch, history))
+      when(pillSheetModifiedHistoryDatastore.add(batch, history))
           .thenReturn(null);
 
       final container = ProviderContainer(
@@ -394,7 +394,7 @@ void main() {
           batchFactoryProvider.overrideWithValue(batchFactory),
           pillSheetDatastoreProvider.overrideWithValue(pillSheetDatastore),
           pillSheetModifiedHistoryDatastoreProvider
-              .overrideWithValue(pillSheetModifiedHistoryService),
+              .overrideWithValue(pillSheetModifiedHistoryDatastore),
           pillSheetGroupDatastoreProvider
               .overrideWithValue(pillSheetGroupDatastore),
         ],
@@ -497,9 +497,9 @@ void main() {
         after: updatedRight,
       );
 
-      final pillSheetModifiedHistoryService =
+      final pillSheetModifiedHistoryDatastore =
           MockPillSheetModifiedHistoryDatastore();
-      when(pillSheetModifiedHistoryService.add(batch, history))
+      when(pillSheetModifiedHistoryDatastore.add(batch, history))
           .thenReturn(null);
 
       final container = ProviderContainer(
@@ -507,7 +507,7 @@ void main() {
           batchFactoryProvider.overrideWithValue(batchFactory),
           pillSheetDatastoreProvider.overrideWithValue(pillSheetDatastore),
           pillSheetModifiedHistoryDatastoreProvider
-              .overrideWithValue(pillSheetModifiedHistoryService),
+              .overrideWithValue(pillSheetModifiedHistoryDatastore),
           pillSheetGroupDatastoreProvider
               .overrideWithValue(pillSheetGroupDatastore),
         ],
@@ -618,9 +618,9 @@ void main() {
         after: updatedLeft,
       );
 
-      final pillSheetModifiedHistoryService =
+      final pillSheetModifiedHistoryDatastore =
           MockPillSheetModifiedHistoryDatastore();
-      when(pillSheetModifiedHistoryService.add(batch, history))
+      when(pillSheetModifiedHistoryDatastore.add(batch, history))
           .thenReturn(null);
 
       final container = ProviderContainer(
@@ -628,7 +628,7 @@ void main() {
           batchFactoryProvider.overrideWithValue(batchFactory),
           pillSheetDatastoreProvider.overrideWithValue(pillSheetDatastore),
           pillSheetModifiedHistoryDatastoreProvider
-              .overrideWithValue(pillSheetModifiedHistoryService),
+              .overrideWithValue(pillSheetModifiedHistoryDatastore),
           pillSheetGroupDatastoreProvider
               .overrideWithValue(pillSheetGroupDatastore),
         ],

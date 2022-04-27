@@ -33,14 +33,14 @@ class SettingStateStore extends StateNotifier<SettingState> {
   final SettingDatastore _settingDatastore;
   final PillSheetDatastore _pillSheetDatastore;
   final UserDatastore _userDatastore;
-  final PillSheetModifiedHistoryDatastore _pillSheetModifiedHistoryService;
+  final PillSheetModifiedHistoryDatastore _pillSheetModifiedHistoryDatastore;
   final PillSheetGroupDatastore _pillSheetGroupDatastore;
   SettingStateStore(
     this._batchFactory,
     this._settingDatastore,
     this._pillSheetDatastore,
     this._userDatastore,
-    this._pillSheetModifiedHistoryService,
+    this._pillSheetModifiedHistoryDatastore,
     this._pillSheetGroupDatastore,
   ) : super(const SettingState()) {
     setup();
@@ -200,7 +200,7 @@ class SettingStateStore extends StateNotifier<SettingState> {
       pillSheetGroupID: pillSheetGroup.id,
       pillSheetIDs: pillSheetGroup.pillSheetIDs,
     );
-    _pillSheetModifiedHistoryService.add(batch, history);
+    _pillSheetModifiedHistoryDatastore.add(batch, history);
     _pillSheetGroupDatastore.delete(
         batch, pillSheetGroup.replaced(updatedPillSheet));
 

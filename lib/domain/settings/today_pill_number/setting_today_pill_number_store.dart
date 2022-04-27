@@ -29,14 +29,14 @@ class SettingTodayPillNumberStateStore
   final BatchFactory _batchFactory;
   final PillSheetDatastore _pillSheetDatastore;
   final PillSheetGroupDatastore _pillSheetGroupDatastore;
-  final PillSheetModifiedHistoryDatastore _pillSheetModifiedHistoryService;
+  final PillSheetModifiedHistoryDatastore _pillSheetModifiedHistoryDatastore;
 
   SettingTodayPillNumberStateStore(
     SettingTodayPillNumberStoreParameter _parameter,
     this._batchFactory,
     this._pillSheetDatastore,
     this._pillSheetGroupDatastore,
-    this._pillSheetModifiedHistoryService,
+    this._pillSheetModifiedHistoryDatastore,
   ) : super(
           SettingTodayPillNumberState(
             appearanceMode: _parameter.appearanceMode,
@@ -117,7 +117,7 @@ class SettingTodayPillNumberStateStore
       before: activedPillSheet,
       after: updatedPillSheets[state.selectedPillSheetPageIndex],
     );
-    _pillSheetModifiedHistoryService.add(batch, history);
+    _pillSheetModifiedHistoryDatastore.add(batch, history);
 
     _pillSheetGroupDatastore.updateWithBatch(
         batch, pillSheetGroup.copyWith(pillSheets: updatedPillSheets));

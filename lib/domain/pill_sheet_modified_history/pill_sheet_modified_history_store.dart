@@ -16,9 +16,9 @@ final pillSheetModifiedHistoryStoreProvider = StateNotifierProvider.autoDispose<
 
 class PillSheetModifiedHistoryStateStore
     extends StateNotifier<PillSheetModifiedHistoryState> {
-  final PillSheetModifiedHistoryDatastore _pillSheetModifiedHistoryService;
+  final PillSheetModifiedHistoryDatastore _pillSheetModifiedHistoryDatastore;
   PillSheetModifiedHistoryStateStore(
-    this._pillSheetModifiedHistoryService,
+    this._pillSheetModifiedHistoryDatastore,
   ) : super(const PillSheetModifiedHistoryState()) {
     reset();
   }
@@ -27,7 +27,7 @@ class PillSheetModifiedHistoryStateStore
     state = state.copyWith(isLoading: true);
     Future(() async {
       final pillSheetModifiedHistories =
-          await _pillSheetModifiedHistoryService.fetchList(null, 20);
+          await _pillSheetModifiedHistoryDatastore.fetchList(null, 20);
       state = state.copyWith(
         pillSheetModifiedHistories: pillSheetModifiedHistories,
         isFirstLoadEnded: true,
@@ -40,7 +40,7 @@ class PillSheetModifiedHistoryStateStore
   StreamSubscription? _pillSheetModifiedHistoryCanceller;
   void _subscribe() {
     _pillSheetModifiedHistoryCanceller?.cancel();
-    _pillSheetModifiedHistoryCanceller = _pillSheetModifiedHistoryService
+    _pillSheetModifiedHistoryCanceller = _pillSheetModifiedHistoryDatastore
         .stream(max(state.pillSheetModifiedHistories.length, 20))
         .listen((event) {
       state = state.copyWith(pillSheetModifiedHistories: event);
@@ -59,7 +59,7 @@ class PillSheetModifiedHistoryStateStore
     }
     state = state.copyWith(isLoading: true);
     final pillSheetModifiedHistories =
-        await _pillSheetModifiedHistoryService.fetchList(
+        await _pillSheetModifiedHistoryDatastore.fetchList(
             state.pillSheetModifiedHistories.last.estimatedEventCausingDate,
             20);
     state = state.copyWith(
@@ -76,7 +76,7 @@ class PillSheetModifiedHistoryStateStore
     TakenPillValue takenPillValue,
   ) {
     return updateForEditTakenValue(
-      service: _pillSheetModifiedHistoryService,
+      service: _pillSheetModifiedHistoryDatastore,
       actualTakenDate: actualTakenDate,
       history: history,
       value: value,

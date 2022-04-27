@@ -35,7 +35,7 @@ class AddPillSheetGroupStateStore
   final PillSheetDatastore _pillSheetDatastore;
   final PillSheetGroupDatastore _pillSheetGroupDatastore;
   final SettingDatastore _settingDatastore;
-  final PillSheetModifiedHistoryDatastore _pillSheetModifiedHistoryService;
+  final PillSheetModifiedHistoryDatastore _pillSheetModifiedHistoryDatastore;
   final BatchFactory _batchFactory;
   AddPillSheetGroupStateStore(
     PillSheetGroup? pillSheetGroup,
@@ -44,7 +44,7 @@ class AddPillSheetGroupStateStore
     this._pillSheetDatastore,
     this._pillSheetGroupDatastore,
     this._settingDatastore,
-    this._pillSheetModifiedHistoryService,
+    this._pillSheetModifiedHistoryDatastore,
     this._batchFactory,
   ) : super(AddPillSheetGroupState(
           pillSheetGroup: pillSheetGroup?.copyWith(),
@@ -137,7 +137,7 @@ class AddPillSheetGroupStateStore
       pillSheetIDs: pillSheetIDs,
       pillSheetGroupID: createdPillSheetGroup.id,
     );
-    _pillSheetModifiedHistoryService.add(batch, history);
+    _pillSheetModifiedHistoryDatastore.add(batch, history);
 
     _settingDatastore.updateWithBatch(batch, setting);
 
