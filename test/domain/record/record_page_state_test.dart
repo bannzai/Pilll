@@ -78,9 +78,9 @@ void main() {
       final state =
           RecordPageState(pillSheetGroup: pillSheetGroup, setting: setting);
 
-      final service = MockPillSheetDatabase();
+      final service = MockPillSheetDatastore();
       final batch = MockBatchFactory();
-      final settingService = MockSettingDatabase();
+      final settingService = MockSettingDatastore();
       when(settingService.fetch())
           .thenAnswer((realInvocation) => Future.value(setting));
       when(settingService.stream())
@@ -91,14 +91,14 @@ void main() {
       when(authService.isLinkedGoogle()).thenReturn(false);
       when(authService.stream())
           .thenAnswer((realInvocation) => const Stream.empty());
-      final userService = MockUserDatabase();
+      final userService = MockUserDatastore();
       when(userService.fetch())
           .thenAnswer((reaInvocation) => Future.value(_FakeUser()));
       when(userService.stream())
           .thenAnswer((realInvocation) => const Stream.empty());
       final pillSheetModifedHistoryService =
-          MockPillSheetModifiedHistoryDatabase();
-      final pillSheetGroupService = MockPillSheetGroupDatabase();
+          MockPillSheetModifiedHistoryDatastore();
+      final pillSheetGroupService = MockPillSheetGroupDatastore();
       when(pillSheetGroupService.fetchLatest())
           .thenAnswer((realInvocation) => Future.value(pillSheetGroup));
       when(pillSheetGroupService.streamForLatest())
@@ -153,9 +153,9 @@ void main() {
       final state =
           RecordPageState(pillSheetGroup: pillSheetGroup, setting: setting);
 
-      final service = MockPillSheetDatabase();
+      final service = MockPillSheetDatastore();
       final batch = MockBatchFactory();
-      final settingService = MockSettingDatabase();
+      final settingService = MockSettingDatastore();
       when(settingService.fetch())
           .thenAnswer((realInvocation) => Future.value(setting));
       when(settingService.stream())
@@ -166,14 +166,14 @@ void main() {
       when(authService.isLinkedGoogle()).thenReturn(false);
       when(authService.stream())
           .thenAnswer((realInvocation) => const Stream.empty());
-      final userService = MockUserDatabase();
+      final userService = MockUserDatastore();
       when(userService.fetch())
           .thenAnswer((reaInvocation) => Future.value(_FakeUser()));
       when(userService.stream())
           .thenAnswer((realInvocation) => const Stream.empty());
       final pillSheetModifedHistoryService =
-          MockPillSheetModifiedHistoryDatabase();
-      final pillSheetGroupService = MockPillSheetGroupDatabase();
+          MockPillSheetModifiedHistoryDatastore();
+      final pillSheetGroupService = MockPillSheetGroupDatastore();
       when(pillSheetGroupService.fetchLatest())
           .thenAnswer((realInvocation) => Future.value(pillSheetGroup));
       when(pillSheetGroupService.streamForLatest())
@@ -231,9 +231,9 @@ void main() {
       final state =
           RecordPageState(pillSheetGroup: pillSheetGroup, setting: setting);
 
-      final service = MockPillSheetDatabase();
+      final service = MockPillSheetDatastore();
       final batch = MockBatchFactory();
-      final settingService = MockSettingDatabase();
+      final settingService = MockSettingDatastore();
       when(settingService.fetch())
           .thenAnswer((realInvocation) => Future.value(setting));
       when(settingService.stream())
@@ -244,14 +244,14 @@ void main() {
       when(authService.isLinkedGoogle()).thenReturn(false);
       when(authService.stream())
           .thenAnswer((realInvocation) => const Stream.empty());
-      final userService = MockUserDatabase();
+      final userService = MockUserDatastore();
       when(userService.fetch())
           .thenAnswer((reaInvocation) => Future.value(_FakeUser()));
       when(userService.stream())
           .thenAnswer((realInvocation) => const Stream.empty());
       final pillSheetModifedHistoryService =
-          MockPillSheetModifiedHistoryDatabase();
-      final pillSheetGroupService = MockPillSheetGroupDatabase();
+          MockPillSheetModifiedHistoryDatastore();
+      final pillSheetGroupService = MockPillSheetGroupDatastore();
       when(pillSheetGroupService.fetchLatest())
           .thenAnswer((realInvocation) => Future.value(pillSheetGroup));
       when(pillSheetGroupService.streamForLatest())
@@ -304,9 +304,9 @@ void main() {
       final state =
           RecordPageState(pillSheetGroup: pillSheetGroup, setting: setting);
 
-      final service = MockPillSheetDatabase();
+      final service = MockPillSheetDatastore();
       final batch = MockBatchFactory();
-      final settingService = MockSettingDatabase();
+      final settingService = MockSettingDatastore();
       when(settingService.fetch())
           .thenAnswer((realInvocation) => Future.value(setting));
       when(settingService.stream())
@@ -317,14 +317,14 @@ void main() {
       when(authService.isLinkedGoogle()).thenReturn(false);
       when(authService.stream())
           .thenAnswer((realInvocation) => const Stream.empty());
-      final userService = MockUserDatabase();
+      final userService = MockUserDatastore();
       when(userService.fetch())
           .thenAnswer((reaInvocation) => Future.value(_FakeUser()));
       when(userService.stream())
           .thenAnswer((realInvocation) => const Stream.empty());
       final pillSheetModifedHistoryService =
-          MockPillSheetModifiedHistoryDatabase();
-      final pillSheetGroupService = MockPillSheetGroupDatabase();
+          MockPillSheetModifiedHistoryDatastore();
+      final pillSheetGroupService = MockPillSheetGroupDatastore();
       when(pillSheetGroupService.fetchLatest())
           .thenAnswer((realInvocation) => Future.value(pillSheetGroup));
       when(pillSheetGroupService.streamForLatest())

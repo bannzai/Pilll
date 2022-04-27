@@ -56,7 +56,7 @@ void main() {
         (WidgetTester tester) async {
       SupportedDeviceType.iPhone5SE2nd.binding(tester.binding.window);
 
-      final settingService = MockSettingDatabase();
+      final settingService = MockSettingDatastore();
       final entity = const Setting(
         pillNumberForFromMenstruation: 22,
         durationMenstruation: 2,
@@ -69,12 +69,12 @@ void main() {
       when(settingService.stream())
           .thenAnswer((realInvocation) => Stream.fromIterable([entity]));
 
-      final pillSheetService = MockPillSheetDatabase();
-      final userService = MockUserDatabase();
+      final pillSheetService = MockPillSheetDatastore();
+      final userService = MockUserDatastore();
       when(userService.stream())
           .thenAnswer((realInvocation) => Stream.fromIterable([_FakeUser()]));
 
-      final pillSheetGroupService = MockPillSheetGroupDatabase();
+      final pillSheetGroupService = MockPillSheetGroupDatastore();
       final pillSheet = PillSheet.create(PillSheetType.pillsheet_21);
       final pillSheetGroup = PillSheetGroup(
           pillSheetIDs: ["1"], pillSheets: [pillSheet], createdAt: now());
@@ -82,7 +82,7 @@ void main() {
           (realInvocation) => Stream.fromIterable([pillSheetGroup]));
 
       final batchFactory = MockBatchFactory();
-      final pillSheetModifiedService = MockPillSheetModifiedHistoryDatabase();
+      final pillSheetModifiedService = MockPillSheetModifiedHistoryDatastore();
 
       final store = SettingStateStore(
         batchFactory,
@@ -126,7 +126,7 @@ void main() {
         (WidgetTester tester) async {
       SupportedDeviceType.iPhone5SE2nd.binding(tester.binding.window);
 
-      final settingService = MockSettingDatabase();
+      final settingService = MockSettingDatastore();
       final entity = const Setting(
         pillNumberForFromMenstruation: 22,
         durationMenstruation: 2,
@@ -141,20 +141,20 @@ void main() {
       when(settingService.stream())
           .thenAnswer((realInvocation) => Stream.value(entity));
 
-      final userService = MockUserDatabase();
+      final userService = MockUserDatastore();
       when(userService.stream())
           .thenAnswer((realInvocation) => Stream.value(_FakeUser()));
 
       final pillSheet = PillSheet.create(PillSheetType.pillsheet_21);
       final pillSheetGroup = PillSheetGroup(
           pillSheetIDs: ["1"], pillSheets: [pillSheet], createdAt: now());
-      final pillSheetGroupService = MockPillSheetGroupDatabase();
+      final pillSheetGroupService = MockPillSheetGroupDatastore();
       when(pillSheetGroupService.streamForLatest())
           .thenAnswer((realInvocation) => Stream.value(pillSheetGroup));
 
       final batchFactory = MockBatchFactory();
-      final pillSheetService = MockPillSheetDatabase();
-      final pillSheetModifiedService = MockPillSheetModifiedHistoryDatabase();
+      final pillSheetService = MockPillSheetDatastore();
+      final pillSheetModifiedService = MockPillSheetModifiedHistoryDatastore();
 
       final store = SettingStateStore(
         batchFactory,

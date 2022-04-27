@@ -79,11 +79,12 @@ class _FakeDatabaseConnection_10 extends _i1.Fake
 
 class _FakeWriteBatch_11 extends _i1.Fake implements _i12.WriteBatch {}
 
-/// A class which mocks [PillSheetDatabase].
+/// A class which mocks [PillSheetDatastore].
 ///
 /// See the documentation for Mockito's code generation for more information.
-class MockPillSheetDatabase extends _i1.Mock implements _i13.PillSheetDatastore {
-  MockPillSheetDatabase() {
+class MockPillSheetDatastore extends _i1.Mock
+    implements _i13.PillSheetDatastore {
+  MockPillSheetDatastore() {
     _i1.throwOnMissingStub(this);
   }
 
@@ -114,11 +115,11 @@ class MockTodayService extends _i1.Mock implements _i14.TodayService {
       returnValue: _FakeDateTime_1()) as DateTime);
 }
 
-/// A class which mocks [SettingDatabase].
+/// A class which mocks [SettingDatastore].
 ///
 /// See the documentation for Mockito's code generation for more information.
-class MockSettingDatabase extends _i1.Mock implements _i15.SettingDatastore {
-  MockSettingDatabase() {
+class MockSettingDatastore extends _i1.Mock implements _i15.SettingDatastore {
+  MockSettingDatastore() {
     _i1.throwOnMissingStub(this);
   }
 
@@ -166,11 +167,11 @@ class MockAnalytics extends _i1.Mock implements _i17.Analytics {
       super.noSuchMethod(Invocation.method(#setUserProperties, [name, value]));
 }
 
-/// A class which mocks [DiaryDatabase].
+/// A class which mocks [DiaryDatastore].
 ///
 /// See the documentation for Mockito's code generation for more information.
-class MockDiaryDatabase extends _i1.Mock implements _i18.DiaryDatastore {
-  MockDiaryDatabase() {
+class MockDiaryDatastore extends _i1.Mock implements _i18.DiaryDatastore {
+  MockDiaryDatastore() {
     _i1.throwOnMissingStub(this);
   }
 
@@ -207,12 +208,12 @@ class MockDiaryDatabase extends _i1.Mock implements _i18.DiaryDatastore {
           as _i16.Stream<List<_i4.Diary>>);
 }
 
-/// A class which mocks [MenstruationDatabase].
+/// A class which mocks [MenstruationDatastore].
 ///
 /// See the documentation for Mockito's code generation for more information.
-class MockMenstruationDatabase extends _i1.Mock
+class MockMenstruationDatastore extends _i1.Mock
     implements _i19.MenstruationDatastore {
-  MockMenstruationDatabase() {
+  MockMenstruationDatastore() {
     _i1.throwOnMissingStub(this);
   }
 
@@ -273,11 +274,11 @@ class MockAuthService extends _i1.Mock implements _i20.AuthService {
           returnValue: false) as bool);
 }
 
-/// A class which mocks [UserDatabase].
+/// A class which mocks [UserDatastore].
 ///
 /// See the documentation for Mockito's code generation for more information.
-class MockUserDatabase extends _i1.Mock implements _i22.UserDatastore {
-  MockUserDatabase() {
+class MockUserDatastore extends _i1.Mock implements _i22.UserDatastore {
+  MockUserDatastore() {
     _i1.throwOnMissingStub(this);
   }
 
@@ -653,12 +654,12 @@ class MockPremiumIntroductionStore extends _i1.Mock
           returnValue: () {}) as _i25.RemoveListener);
 }
 
-/// A class which mocks [PillSheetModifiedHistoryDatabase].
+/// A class which mocks [PillSheetModifiedHistoryDatastore].
 ///
 /// See the documentation for Mockito's code generation for more information.
-class MockPillSheetModifiedHistoryDatabase extends _i1.Mock
+class MockPillSheetModifiedHistoryDatastore extends _i1.Mock
     implements _i31.PillSheetModifiedHistoryDatastore {
-  MockPillSheetModifiedHistoryDatabase() {
+  MockPillSheetModifiedHistoryDatastore() {
     _i1.throwOnMissingStub(this);
   }
 
@@ -693,12 +694,12 @@ class MockPillSheetModifiedHistoryDatabase extends _i1.Mock
       super.noSuchMethod(Invocation.method(#add, [batch, history]));
 }
 
-/// A class which mocks [PillSheetGroupDatabase].
+/// A class which mocks [PillSheetGroupDatastore].
 ///
 /// See the documentation for Mockito's code generation for more information.
-class MockPillSheetGroupDatabase extends _i1.Mock
+class MockPillSheetGroupDatastore extends _i1.Mock
     implements _i33.PillSheetGroupDatastore {
-  MockPillSheetGroupDatabase() {
+  MockPillSheetGroupDatastore() {
     _i1.throwOnMissingStub(this);
   }
 
