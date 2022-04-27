@@ -4,7 +4,7 @@ import 'dart:math';
 import 'package:pilll/domain/pill_sheet_modified_history/pill_sheet_modified_history_state.codegen.dart';
 import 'package:pilll/entity/pill_sheet_modified_history.codegen.dart';
 import 'package:pilll/entity/pill_sheet_modified_history_value.codegen.dart';
-import 'package:pilll/service/pill_sheet_modified_history.dart';
+import 'package:pilll/database/pill_sheet_modified_history.dart';
 import 'package:riverpod/riverpod.dart';
 
 final pillSheetModifiedHistoryStoreProvider = StateNotifierProvider.autoDispose<
