@@ -20,7 +20,7 @@ final menstruationsStoreProvider =
     StateNotifierProvider<MenstruationStore, MenstruationState>(
   (ref) => MenstruationStore(
     menstruationDatastore: ref.watch(menstruationDatastoreProvider),
-    diaryService: ref.watch(diaryDatastoreProvider),
+    diaryDatastore: ref.watch(diaryDatastoreProvider),
     settingService: ref.watch(settingDatastoreProvider),
     pillSheetService: ref.watch(pillSheetDatastoreProvider),
     userService: ref.watch(userDatastoreProvider),
@@ -30,14 +30,14 @@ final menstruationsStoreProvider =
 
 class MenstruationStore extends StateNotifier<MenstruationState> {
   final MenstruationDatastore menstruationDatastore;
-  final DiaryDatastore diaryService;
+  final DiaryDatastore diaryDatastore;
   final SettingDatastore settingService;
   final PillSheetDatastore pillSheetService;
   final UserDatastore userService;
   final PillSheetGroupDatastore pillSheetGroupService;
   MenstruationStore({
     required this.menstruationDatastore,
-    required this.diaryService,
+    required this.diaryDatastore,
     required this.settingService,
     required this.pillSheetService,
     required this.userService,
@@ -51,7 +51,7 @@ class MenstruationStore extends StateNotifier<MenstruationState> {
     state = state.copyWith(currentCalendarIndex: state.todayCalendarIndex);
     try {
       final menstruations = await menstruationDatastore.fetchAll();
-      final diaries = await diaryService.fetchListAround90Days(today());
+      final diaries = await diaryDatastore.fetchListAround90Days(today());
       final setting = await settingService.fetch();
       final latestPillSheetGroup = await pillSheetGroupService.fetchLatest();
       final user = await userService.fetch();
@@ -83,7 +83,7 @@ class MenstruationStore extends StateNotifier<MenstruationState> {
       state = state.copyWith(entities: entities);
     });
     _diaryCanceller?.cancel();
-    _diaryCanceller = diaryService.stream().listen((entities) {
+    _diaryCanceller = diaryDatastore.stream().listen((entities) {
       state = state.copyWith(diariesForMonth: entities);
     });
     _settingCanceller?.cancel();

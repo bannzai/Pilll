@@ -29,7 +29,7 @@ final calendarPageStateStoreProvider =
 class CalendarPageStateStore extends StateNotifier<CalendarPageState> {
   final MenstruationDatastore _menstruationDatastore;
   final SettingDatastore _settingService;
-  final DiaryDatastore _diaryService;
+  final DiaryDatastore _diaryDatastore;
   final PillSheetModifiedHistoryDatastore _pillSheetModifiedHistoryService;
   final UserDatastore _userService;
   final PillSheetGroupDatastore _pillSheetGroupService;
@@ -37,7 +37,7 @@ class CalendarPageStateStore extends StateNotifier<CalendarPageState> {
   CalendarPageStateStore(
     this._menstruationDatastore,
     this._settingService,
-    this._diaryService,
+    this._diaryDatastore,
     this._pillSheetModifiedHistoryService,
     this._userService,
     this._pillSheetGroupService,
@@ -53,7 +53,7 @@ class CalendarPageStateStore extends StateNotifier<CalendarPageState> {
         final menstruations = await _menstruationDatastore.fetchAll();
         final setting = await _settingService.fetch();
         final latestPillSheetGroup = await _pillSheetGroupService.fetchLatest();
-        final diaries = await _diaryService.fetchListForMonth(
+        final diaries = await _diaryDatastore.fetchListForMonth(
             state.calendarDataSource[state.todayCalendarIndex]);
         final pillSheetModifiedHistories =
             await _pillSheetModifiedHistoryService.fetchList(
@@ -102,7 +102,7 @@ class CalendarPageStateStore extends StateNotifier<CalendarPageState> {
       state = state.copyWith(latestPillSheetGroup: entity);
     });
     _diariesCanceller?.cancel();
-    _diariesCanceller = _diaryService.stream().listen((entities) {
+    _diariesCanceller = _diaryDatastore.stream().listen((entities) {
       state = state.copyWith(diariesForMonth: entities);
     });
     _pillSheetModifiedHistoryCanceller?.cancel();
@@ -140,7 +140,7 @@ class CalendarPageStateStore extends StateNotifier<CalendarPageState> {
     }
     state = state.copyWith(currentCalendarIndex: index);
     final date = state.calendarDataSource[state.currentCalendarIndex];
-    _diaryService.fetchListForMonth(date).then((diaries) {
+    _diaryDatastore.fetchListForMonth(date).then((diaries) {
       final ignoredSameMonth = state.diariesForMonth
           .where((element) => !isSameMonth(element.date, date))
           .toList();

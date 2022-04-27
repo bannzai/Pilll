@@ -95,10 +95,10 @@ void main() {
           ]),
         );
         final pillSheetService = MockPillSheetDatastore();
-        final diaryService = MockDiaryDatastore();
-        when(diaryService.fetchListAround90Days(today))
+        final diaryDatastore = MockDiaryDatastore();
+        when(diaryDatastore.fetchListAround90Days(today))
             .thenAnswer((realInvocation) => Future.value([]));
-        when(diaryService.stream())
+        when(diaryDatastore.stream())
             .thenAnswer((realInvocation) => const Stream.empty());
         final settingService = MockSettingDatastore();
         when(settingService.fetch())
@@ -129,7 +129,7 @@ void main() {
 
         final store = MenstruationStore(
           menstruationDatastore: menstruationDatastore,
-          diaryService: diaryService,
+          diaryDatastore: diaryDatastore,
           settingService: settingService,
           pillSheetService: pillSheetService,
           userService: userService,
@@ -180,10 +180,10 @@ void main() {
           ]),
         );
         final pillSheetService = MockPillSheetDatastore();
-        final diaryService = MockDiaryDatastore();
-        when(diaryService.fetchListAround90Days(today))
+        final diaryDatastore = MockDiaryDatastore();
+        when(diaryDatastore.fetchListAround90Days(today))
             .thenAnswer((realInvocation) => Future.value([]));
-        when(diaryService.stream())
+        when(diaryDatastore.stream())
             .thenAnswer((realInvocation) => const Stream.empty());
         final settingService = MockSettingDatastore();
         when(settingService.fetch())
@@ -213,7 +213,7 @@ void main() {
 
         final store = MenstruationStore(
           menstruationDatastore: menstruationDatastore,
-          diaryService: diaryService,
+          diaryDatastore: diaryDatastore,
           settingService: settingService,
           pillSheetService: pillSheetService,
           userService: userService,
@@ -248,10 +248,10 @@ void main() {
           (realInvocation) => Stream.value([]),
         );
         final pillSheetService = MockPillSheetDatastore();
-        final diaryService = MockDiaryDatastore();
-        when(diaryService.fetchListAround90Days(today))
+        final diaryDatastore = MockDiaryDatastore();
+        when(diaryDatastore.fetchListAround90Days(today))
             .thenAnswer((realInvocation) => Future.value([]));
-        when(diaryService.stream())
+        when(diaryDatastore.stream())
             .thenAnswer((realInvocation) => const Stream.empty());
         final settingService = MockSettingDatastore();
         when(settingService.fetch()).thenAnswer(
@@ -292,7 +292,7 @@ void main() {
 
         final store = MenstruationStore(
           menstruationDatastore: menstruationDatastore,
-          diaryService: diaryService,
+          diaryDatastore: diaryDatastore,
           settingService: settingService,
           pillSheetService: pillSheetService,
           userService: userService,
@@ -331,10 +331,10 @@ void main() {
           (realInvocation) => Stream.value([]),
         );
         final pillSheetService = MockPillSheetDatastore();
-        final diaryService = MockDiaryDatastore();
-        when(diaryService.fetchListAround90Days(today))
+        final diaryDatastore = MockDiaryDatastore();
+        when(diaryDatastore.fetchListAround90Days(today))
             .thenAnswer((realInvocation) => Future.value([]));
-        when(diaryService.stream())
+        when(diaryDatastore.stream())
             .thenAnswer((realInvocation) => const Stream.empty());
         final settingService = MockSettingDatastore();
         when(settingService.fetch()).thenAnswer(
@@ -372,7 +372,7 @@ void main() {
 
         final store = MenstruationStore(
           menstruationDatastore: menstruationDatastore,
-          diaryService: diaryService,
+          diaryDatastore: diaryDatastore,
           settingService: settingService,
           pillSheetService: pillSheetService,
           userService: userService,
