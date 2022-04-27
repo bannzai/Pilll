@@ -80,7 +80,7 @@ void main() {
       final container = ProviderContainer(
         overrides: [
           batchFactoryProvider.overrideWithValue(batchFactory),
-          pillSheetServiceProvider.overrideWithValue(pillSheetService),
+          pillSheetDatabaseProvider.overrideWithValue(pillSheetService),
           pillSheetModifiedHistoryDatabaseProvider
               .overrideWithValue(pillSheetModifiedHistoryService),
           pillSheetGroupDatabaseProvider
@@ -164,7 +164,7 @@ void main() {
       final container = ProviderContainer(
         overrides: [
           batchFactoryProvider.overrideWithValue(batchFactory),
-          pillSheetServiceProvider.overrideWithValue(pillSheetService),
+          pillSheetDatabaseProvider.overrideWithValue(pillSheetService),
           pillSheetModifiedHistoryDatabaseProvider
               .overrideWithValue(pillSheetModifiedHistoryService),
           pillSheetGroupDatabaseProvider
@@ -275,7 +275,7 @@ void main() {
       final container = ProviderContainer(
         overrides: [
           batchFactoryProvider.overrideWithValue(batchFactory),
-          pillSheetServiceProvider.overrideWithValue(pillSheetService),
+          pillSheetDatabaseProvider.overrideWithValue(pillSheetService),
           pillSheetModifiedHistoryDatabaseProvider
               .overrideWithValue(pillSheetModifiedHistoryService),
           pillSheetGroupDatabaseProvider
@@ -386,7 +386,7 @@ void main() {
       final container = ProviderContainer(
         overrides: [
           batchFactoryProvider.overrideWithValue(batchFactory),
-          pillSheetServiceProvider.overrideWithValue(pillSheetService),
+          pillSheetDatabaseProvider.overrideWithValue(pillSheetService),
           pillSheetModifiedHistoryDatabaseProvider
               .overrideWithValue(pillSheetModifiedHistoryService),
           pillSheetGroupDatabaseProvider
@@ -498,7 +498,7 @@ void main() {
       final container = ProviderContainer(
         overrides: [
           batchFactoryProvider.overrideWithValue(batchFactory),
-          pillSheetServiceProvider.overrideWithValue(pillSheetService),
+          pillSheetDatabaseProvider.overrideWithValue(pillSheetService),
           pillSheetModifiedHistoryDatabaseProvider
               .overrideWithValue(pillSheetModifiedHistoryService),
           pillSheetGroupDatabaseProvider
@@ -618,7 +618,7 @@ void main() {
       final container = ProviderContainer(
         overrides: [
           batchFactoryProvider.overrideWithValue(batchFactory),
-          pillSheetServiceProvider.overrideWithValue(pillSheetService),
+          pillSheetDatabaseProvider.overrideWithValue(pillSheetService),
           pillSheetModifiedHistoryDatabaseProvider
               .overrideWithValue(pillSheetModifiedHistoryService),
           pillSheetGroupDatabaseProvider

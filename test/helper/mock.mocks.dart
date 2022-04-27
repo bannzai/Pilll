@@ -82,7 +82,7 @@ class _FakeWriteBatch_11 extends _i1.Fake implements _i12.WriteBatch {}
 /// A class which mocks [PillSheetService].
 ///
 /// See the documentation for Mockito's code generation for more information.
-class MockPillSheetService extends _i1.Mock implements _i13.PillSheetService {
+class MockPillSheetService extends _i1.Mock implements _i13.PillSheetDatabase {
   MockPillSheetService() {
     _i1.throwOnMissingStub(this);
   }

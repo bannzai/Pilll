@@ -21,7 +21,7 @@ Future<void> recordPill() async {
   }
 
   final database = DatabaseConnection(firebaseUser.uid);
-  final pillSheetService = PillSheetService(database);
+  final pillSheetService = PillSheetDatabase(database);
   final pillSheetModifiedHistoryService =
       PillSheetModifiedHistoryDatabase(database);
   final pillSheetGroupService = PillSheetGroupDatabase(database);

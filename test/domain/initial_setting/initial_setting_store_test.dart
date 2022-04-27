@@ -43,7 +43,7 @@ void main() {
           batchFactoryProvider.overrideWithValue(batchFactory),
           authServiceProvider.overrideWithValue(authService),
           settingServiceProvider.overrideWithValue(settingService),
-          pillSheetServiceProvider.overrideWithValue(pillSheetService),
+          pillSheetDatabaseProvider.overrideWithValue(pillSheetService),
           pillSheetModifiedHistoryDatabaseProvider
               .overrideWithValue(pillSheetModifiedHistoryService),
           pillSheetGroupDatabaseProvider
@@ -77,7 +77,7 @@ void main() {
           batchFactoryProvider.overrideWithValue(batchFactory),
           authServiceProvider.overrideWithValue(authService),
           settingServiceProvider.overrideWithValue(settingService),
-          pillSheetServiceProvider.overrideWithValue(pillSheetService),
+          pillSheetDatabaseProvider.overrideWithValue(pillSheetService),
           pillSheetModifiedHistoryDatabaseProvider
               .overrideWithValue(pillSheetModifiedHistoryService),
           pillSheetGroupDatabaseProvider
@@ -120,7 +120,7 @@ void main() {
           batchFactoryProvider.overrideWithValue(batchFactory),
           authServiceProvider.overrideWithValue(authService),
           settingServiceProvider.overrideWithValue(settingService),
-          pillSheetServiceProvider.overrideWithValue(pillSheetService),
+          pillSheetDatabaseProvider.overrideWithValue(pillSheetService),
           pillSheetModifiedHistoryDatabaseProvider
               .overrideWithValue(pillSheetModifiedHistoryService),
           pillSheetGroupDatabaseProvider
@@ -158,7 +158,7 @@ void main() {
           batchFactoryProvider.overrideWithValue(batchFactory),
           authServiceProvider.overrideWithValue(authService),
           settingServiceProvider.overrideWithValue(settingService),
-          pillSheetServiceProvider.overrideWithValue(pillSheetService),
+          pillSheetDatabaseProvider.overrideWithValue(pillSheetService),
           pillSheetModifiedHistoryDatabaseProvider
               .overrideWithValue(pillSheetModifiedHistoryService),
           pillSheetGroupDatabaseProvider
@@ -197,7 +197,7 @@ void main() {
           batchFactoryProvider.overrideWithValue(batchFactory),
           authServiceProvider.overrideWithValue(authService),
           settingServiceProvider.overrideWithValue(settingService),
-          pillSheetServiceProvider.overrideWithValue(pillSheetService),
+          pillSheetDatabaseProvider.overrideWithValue(pillSheetService),
           pillSheetModifiedHistoryDatabaseProvider
               .overrideWithValue(pillSheetModifiedHistoryService),
           pillSheetGroupDatabaseProvider
@@ -236,7 +236,7 @@ void main() {
           batchFactoryProvider.overrideWithValue(batchFactory),
           authServiceProvider.overrideWithValue(authService),
           settingServiceProvider.overrideWithValue(settingService),
-          pillSheetServiceProvider.overrideWithValue(pillSheetService),
+          pillSheetDatabaseProvider.overrideWithValue(pillSheetService),
           pillSheetModifiedHistoryDatabaseProvider
               .overrideWithValue(pillSheetModifiedHistoryService),
           pillSheetGroupDatabaseProvider
@@ -269,7 +269,7 @@ void main() {
           batchFactoryProvider.overrideWithValue(batchFactory),
           authServiceProvider.overrideWithValue(authService),
           settingServiceProvider.overrideWithValue(settingService),
-          pillSheetServiceProvider.overrideWithValue(pillSheetService),
+          pillSheetDatabaseProvider.overrideWithValue(pillSheetService),
           pillSheetModifiedHistoryDatabaseProvider
               .overrideWithValue(pillSheetModifiedHistoryService),
           pillSheetGroupDatabaseProvider
@@ -343,7 +343,7 @@ void main() {
           batchFactoryProvider.overrideWithValue(batchFactory),
           authServiceProvider.overrideWithValue(authService),
           settingServiceProvider.overrideWithValue(settingService),
-          pillSheetServiceProvider.overrideWithValue(pillSheetService),
+          pillSheetDatabaseProvider.overrideWithValue(pillSheetService),
           pillSheetModifiedHistoryDatabaseProvider
               .overrideWithValue(pillSheetModifiedHistoryService),
           pillSheetGroupDatabaseProvider
@@ -441,7 +441,7 @@ void main() {
           batchFactoryProvider.overrideWithValue(batchFactory),
           authServiceProvider.overrideWithValue(authService),
           settingServiceProvider.overrideWithValue(settingService),
-          pillSheetServiceProvider.overrideWithValue(pillSheetService),
+          pillSheetDatabaseProvider.overrideWithValue(pillSheetService),
           pillSheetModifiedHistoryDatabaseProvider
               .overrideWithValue(pillSheetModifiedHistoryService),
           pillSheetGroupDatabaseProvider
@@ -521,7 +521,7 @@ void main() {
           batchFactoryProvider.overrideWithValue(batchFactory),
           authServiceProvider.overrideWithValue(authService),
           settingServiceProvider.overrideWithValue(settingService),
-          pillSheetServiceProvider.overrideWithValue(pillSheetService),
+          pillSheetDatabaseProvider.overrideWithValue(pillSheetService),
           pillSheetModifiedHistoryDatabaseProvider
               .overrideWithValue(pillSheetModifiedHistoryService),
           pillSheetGroupDatabaseProvider
