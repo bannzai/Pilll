@@ -29,13 +29,14 @@ class UserDatastore {
         return _create(uid).then((_) => fetch());
       }
       throw FormatException(
-          "cause exception when failed fetch and create user for $error, stackTrace: ${StackTrace.current.toString()}");
+          "cause exception when failed fetch and create user. error: $error, stackTrace: ${StackTrace.current.toString()}");
     });
     return user;
   }
 
   Future<User> fetch() async {
     print("call fetch for ${_database.userID}");
+
     final document = await _database.userReference().get();
     if (!document.exists) {
       print("user does not exists ${_database.userID}");
