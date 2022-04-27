@@ -25,12 +25,7 @@ class PillSheetModifiedHistoryDatastore {
         .startAfter([after])
         .limit(limit)
         .get()
-        .then((reference) => reference.docs)
-        .then((docs) => docs
-            .map((doc) => PillSheetModifiedHistory.fromJson(
-                (doc.data() as Map<String, dynamic>)
-                  ..putIfAbsent("id", () => doc.id)))
-            .toList());
+        .then((reference) => reference.docs.map((e) => e.data()).toList());
   }
 
   Future<List<PillSheetModifiedHistory>> fetchAll() {
@@ -38,11 +33,7 @@ class PillSheetModifiedHistoryDatastore {
         .pillSheetModifiedHistoriesReference()
         .get()
         .then((reference) => reference.docs)
-        .then((docs) => docs
-            .map((doc) => doc.data())
-            .whereType<Map<String, dynamic>>()
-            .map((data) => PillSheetModifiedHistory.fromJson(data))
-            .toList());
+        .then((docs) => docs.map((doc) => doc.data()).toList());
   }
 
   Future<void> update(PillSheetModifiedHistory pillSheetModifiedHistory) async {
@@ -61,11 +52,7 @@ class PillSheetModifiedHistoryDatastore {
         .limit(limit)
         .snapshots()
         .map((reference) => reference.docs)
-        .map((docs) => docs
-            .map((doc) => PillSheetModifiedHistory.fromJson(
-                (doc.data() as Map<String, dynamic>)
-                  ..putIfAbsent("id", () => doc.id)))
-            .toList());
+        .map((docs) => docs.map((doc) => doc.data()).toList());
   }
 
   add(WriteBatch batch, PillSheetModifiedHistory history) {

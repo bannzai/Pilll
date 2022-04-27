@@ -116,7 +116,8 @@ class DatabaseConnection {
 
   FromFirestore<PillSheetModifiedHistory>
       _pillSheetModifiedHistoryFromFirestore = (snapshot, options) =>
-          PillSheetModifiedHistory.fromJson(snapshot.data()!);
+          PillSheetModifiedHistory.fromJson(
+              snapshot.data()!.putIfAbsent("id", () => snapshot.id));
   ToFirestore<PillSheetModifiedHistory> _pillSheetModifiedHistoryToFirestore =
       (history, options) => history.toJson();
   CollectionReference<PillSheetModifiedHistory>
