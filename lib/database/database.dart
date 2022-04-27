@@ -38,7 +38,7 @@ class DatabaseConnection {
   final String _userID;
 
   FromFirestore<User> _userFromFirestore = (snapshot, options) =>
-      User.fromJson(snapshot.data()!.putIfAbsent("id", () => snapshot.id));
+      User.fromJson(snapshot.data()!..putIfAbsent("id", () => snapshot.id));
   ToFirestore<User> _userToFirestore = (user, options) => user.toJson();
   DocumentReference<User> userReference() => FirebaseFirestore.instance
       .collection(_CollectionPath.users)
@@ -95,7 +95,7 @@ class DatabaseConnection {
 
   FromFirestore<Menstruation> _menstruationFromFirestore =
       (snapshot, options) => Menstruation.fromJson(
-          snapshot.data()!.putIfAbsent("id", () => snapshot.id));
+          snapshot.data()!..putIfAbsent("id", () => snapshot.id));
   ToFirestore<Menstruation> _menstruationToFirestore =
       (menstruation, options) => menstruation.toJson();
   CollectionReference<Menstruation> menstruationsReference() =>
@@ -118,7 +118,7 @@ class DatabaseConnection {
   FromFirestore<PillSheetModifiedHistory>
       _pillSheetModifiedHistoryFromFirestore = (snapshot, options) =>
           PillSheetModifiedHistory.fromJson(
-              snapshot.data()!.putIfAbsent("id", () => snapshot.id));
+              snapshot.data()!..putIfAbsent("id", () => snapshot.id));
   ToFirestore<PillSheetModifiedHistory> _pillSheetModifiedHistoryToFirestore =
       (history, options) => history.toJson();
   CollectionReference<PillSheetModifiedHistory>
@@ -131,7 +131,7 @@ class DatabaseConnection {
 
   FromFirestore<PillSheetGroup> _pillSheetGroupFromFirestore =
       (snapshot, options) => PillSheetGroup.fromJson(
-          snapshot.data()!.putIfAbsent("id", () => snapshot.id));
+          snapshot.data()!..putIfAbsent("id", () => snapshot.id));
   ToFirestore<PillSheetGroup> _pillSheetGroupToFirestore =
       (pillSheetGroup, options) => pillSheetGroup.toJson();
   CollectionReference<PillSheetGroup> pillSheetGroupsReference() =>
