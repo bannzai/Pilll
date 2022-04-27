@@ -52,7 +52,7 @@ Future<PillSheetGroup?> take({
   required PillSheetGroup pillSheetGroup,
   required PillSheet activedPillSheet,
   required BatchFactory batchFactory,
-  required PillSheetDatabase pillSheetService,
+  required PillSheetDatastore pillSheetService,
   required PillSheetModifiedHistoryDatabase pillSheetModifiedHistoryService,
   required PillSheetGroupDatabase pillSheetGroupService,
   required bool isQuickRecord,

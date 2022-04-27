@@ -19,7 +19,7 @@ final settingStoreProvider =
   (ref) => SettingStateStore(
     ref.watch(batchFactoryProvider),
     ref.watch(settingDatastoreProvider),
-    ref.watch(pillSheetDatabaseProvider),
+    ref.watch(pillSheetDatastoreProvider),
     ref.watch(userDatastoreProvider),
     ref.watch(pillSheetModifiedHistoryDatabaseProvider),
     ref.watch(pillSheetGroupDatabaseProvider),
@@ -31,7 +31,7 @@ final settingStateProvider = Provider((ref) => ref.watch(settingStoreProvider));
 class SettingStateStore extends StateNotifier<SettingState> {
   final BatchFactory _batchFactory;
   final SettingDatastore _settingService;
-  final PillSheetDatabase _pillSheetService;
+  final PillSheetDatastore _pillSheetService;
   final UserDatastore _userService;
   final PillSheetModifiedHistoryDatabase _pillSheetModifiedHistoryService;
   final PillSheetGroupDatabase _pillSheetGroupService;

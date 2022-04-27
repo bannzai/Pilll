@@ -16,7 +16,7 @@ import 'package:pilll/database/user.dart';
 import 'package:mockito/annotations.dart';
 
 @GenerateMocks([
-  PillSheetDatabase,
+  PillSheetDatastore,
   TodayService,
   SettingDatastore,
   Analytics,

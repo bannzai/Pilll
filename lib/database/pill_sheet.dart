@@ -3,13 +3,13 @@ import 'package:pilll/entity/pill_sheet.codegen.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:riverpod/riverpod.dart';
 
-final pillSheetDatabaseProvider = Provider<PillSheetDatabase>(
-    (ref) => PillSheetDatabase(ref.watch(databaseProvider)));
+final pillSheetDatastoreProvider = Provider<PillSheetDatastore>(
+    (ref) => PillSheetDatastore(ref.watch(databaseProvider)));
 
-class PillSheetDatabase {
+class PillSheetDatastore {
   final DatabaseConnection _database;
 
-  PillSheetDatabase(this._database);
+  PillSheetDatastore(this._database);
 
   // Return new PillSheet document id
   List<PillSheet> register(WriteBatch batch, List<PillSheet> pillSheets) {
