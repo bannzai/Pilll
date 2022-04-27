@@ -130,7 +130,7 @@ class UserDatastore {
   }
 
   Future<void> linkApple(String? email) async {
-    await _database.userReference().set({
+    await _database.userRawReference().set({
       UserFirestoreFieldKeys.isAnonymous: false,
     }, SetOptions(merge: true));
     return _database.userPrivateRawReference().set({
@@ -140,7 +140,7 @@ class UserDatastore {
   }
 
   Future<void> linkGoogle(String? email) async {
-    await _database.userReference().set({
+    await _database.userRawReference().set({
       UserFirestoreFieldKeys.isAnonymous: false,
     }, SetOptions(merge: true));
     return _database.userPrivateRawReference().set({
@@ -155,7 +155,7 @@ class UserDatastore {
       isAutomaticallyCreatePillSheet: true,
     );
 
-    return _database.userReference().set({
+    return _database.userRawReference().set({
       UserFirestoreFieldKeys.isTrial: true,
       UserFirestoreFieldKeys.beginTrialDate: now(),
       UserFirestoreFieldKeys.trialDeadlineDate:
@@ -192,7 +192,7 @@ class UserDatastore {
     } else {
       hasDiscountEntitlement = !now().isAfter(discountEntitlementDeadlineDate);
     }
-    return _database.userReference().set({
+    return _database.userRawReference().set({
       UserFirestoreFieldKeys.hasDiscountEntitlement: hasDiscountEntitlement,
     }, SetOptions(merge: true));
   }
@@ -232,7 +232,7 @@ extension SaveUserLaunchInfo on UserDatastore {
         firebaseCurrentUserIDSets.add(firebaseCurrentUserID);
       }
 
-      await _database.userReference().set(
+      await _database.userRawReference().set(
         {
           UserFirestoreFieldKeys.userDocumentIDSets: userDocumentIDSets,
           UserFirestoreFieldKeys.firebaseCurrentUserIDSets:
@@ -254,7 +254,7 @@ extension SaveUserLaunchInfo on UserDatastore {
           appName: info.appName,
           buildNumber: info.buildNumber,
           appVersion: info.version);
-      return _database.userReference().set(
+      return _database.userRawReference().set(
           {UserFirestoreFieldKeys.packageInfo: packageInfo.toJson()},
           SetOptions(merge: true));
     });
@@ -276,7 +276,7 @@ extension SaveUserLaunchInfo on UserDatastore {
     final timeZoneName = now.timeZoneName;
     final timeZoneOffset = now.timeZoneOffset;
 
-    return _database.userReference().set({
+    return _database.userRawReference().set({
       "stats": {
         "lastLoginAt": now,
         "beginingVersion": beginingVersion,
