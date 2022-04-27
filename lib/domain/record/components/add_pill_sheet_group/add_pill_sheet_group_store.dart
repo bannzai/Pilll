@@ -7,10 +7,10 @@ import 'package:pilll/entity/pill_sheet.codegen.dart';
 import 'package:pilll/entity/pill_sheet_group.codegen.dart';
 import 'package:pilll/entity/pill_sheet_type.dart';
 import 'package:pilll/entity/setting.codegen.dart';
-import 'package:pilll/service/pill_sheet.dart';
-import 'package:pilll/service/pill_sheet_group.dart';
-import 'package:pilll/service/pill_sheet_modified_history.dart';
-import 'package:pilll/service/setting.dart';
+import 'package:pilll/database/pill_sheet.dart';
+import 'package:pilll/database/pill_sheet_group.dart';
+import 'package:pilll/database/pill_sheet_modified_history.dart';
+import 'package:pilll/database/setting.dart';
 import 'package:pilll/util/datetime/day.dart';
 import 'package:riverpod/riverpod.dart';
 
@@ -21,10 +21,10 @@ final addPillSheetGroupStateStoreProvider = StateNotifierProvider.autoDispose<
       ref.watch(recordPageStoreProvider).pillSheetGroup,
       ref.watch(recordPageStoreProvider).appearanceMode,
       ref.watch(recordPageStoreProvider).setting,
-      ref.watch(pillSheetServiceProvider),
-      ref.watch(pillSheetGroupServiceProvider),
-      ref.watch(settingServiceProvider),
-      ref.watch(pillSheetModifiedHistoryServiceProvider),
+      ref.watch(pillSheetDatastoreProvider),
+      ref.watch(pillSheetGroupDatastoreProvider),
+      ref.watch(settingDatastoreProvider),
+      ref.watch(pillSheetModifiedHistoryDatastoreProvider),
       ref.watch(batchFactoryProvider),
     );
   },
@@ -32,19 +32,19 @@ final addPillSheetGroupStateStoreProvider = StateNotifierProvider.autoDispose<
 
 class AddPillSheetGroupStateStore
     extends StateNotifier<AddPillSheetGroupState> {
-  final PillSheetService _pillSheetService;
-  final PillSheetGroupService _pillSheetGroupService;
-  final SettingService _settingService;
-  final PillSheetModifiedHistoryService _pillSheetModifiedHistoryService;
+  final PillSheetDatastore _pillSheetDatastore;
+  final PillSheetGroupDatastore _pillSheetGroupDatastore;
+  final SettingDatastore _settingDatastore;
+  final PillSheetModifiedHistoryDatastore _pillSheetModifiedHistoryDatastore;
   final BatchFactory _batchFactory;
   AddPillSheetGroupStateStore(
     PillSheetGroup? pillSheetGroup,
     PillSheetAppearanceMode pillSheetAppearanceMode,
     Setting? setting,
-    this._pillSheetService,
-    this._pillSheetGroupService,
-    this._settingService,
-    this._pillSheetModifiedHistoryService,
+    this._pillSheetDatastore,
+    this._pillSheetGroupDatastore,
+    this._settingDatastore,
+    this._pillSheetModifiedHistoryDatastore,
     this._batchFactory,
   ) : super(AddPillSheetGroupState(
           pillSheetGroup: pillSheetGroup?.copyWith(),
@@ -88,7 +88,7 @@ class AddPillSheetGroupStateStore
     final batch = _batchFactory.batch();
 
     final n = now();
-    final createdPillSheets = _pillSheetService.register(
+    final createdPillSheets = _pillSheetDatastore.register(
       batch,
       setting.pillSheetTypes.asMap().keys.map((pageIndex) {
         final pillSheetType = setting.pillSheetEnumTypes[pageIndex];
@@ -105,7 +105,7 @@ class AddPillSheetGroupStateStore
     );
 
     final pillSheetIDs = createdPillSheets.map((e) => e.id!).toList();
-    final createdPillSheetGroup = _pillSheetGroupService.register(
+    final createdPillSheetGroup = _pillSheetGroupDatastore.register(
       batch,
       PillSheetGroup(
         pillSheetIDs: pillSheetIDs,
@@ -137,9 +137,9 @@ class AddPillSheetGroupStateStore
       pillSheetIDs: pillSheetIDs,
       pillSheetGroupID: createdPillSheetGroup.id,
     );
-    _pillSheetModifiedHistoryService.add(batch, history);
+    _pillSheetModifiedHistoryDatastore.add(batch, history);
 
-    _settingService.updateWithBatch(batch, setting);
+    _settingDatastore.updateWithBatch(batch, setting);
 
     return batch.commit();
   }

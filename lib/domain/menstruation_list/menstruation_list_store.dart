@@ -3,27 +3,27 @@ import 'dart:async';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
 import 'package:pilll/domain/menstruation_list/menstruation_list_row.dart';
 import 'package:pilll/domain/menstruation_list/menstruation_list_state.codegen.dart';
-import 'package:pilll/service/menstruation.dart';
+import 'package:pilll/database/menstruation.dart';
 import 'package:pilll/domain/menstruation/menstruation_store.dart';
 
 final menstruationListStoreProvider =
     StateNotifierProvider<MenstruationListStore, MenstruationListState>(
   (ref) => MenstruationListStore(
-    menstruationService: ref.watch(menstruationServiceProvider),
+    menstruationDatastore: ref.watch(menstruationDatastoreProvider),
   ),
 );
 
 class MenstruationListStore extends StateNotifier<MenstruationListState> {
-  final MenstruationService menstruationService;
+  final MenstruationDatastore menstruationDatastore;
   MenstruationListStore({
-    required this.menstruationService,
+    required this.menstruationDatastore,
   }) : super(const MenstruationListState()) {
     _reset();
   }
 
   void _reset() {
     Future(() async {
-      final menstruations = await menstruationService.fetchAll();
+      final menstruations = await menstruationDatastore.fetchAll();
       state = state.copyWith(
         isNotYetLoaded: false,
         allRows: MenstruationListRowState.rows(
@@ -36,7 +36,8 @@ class MenstruationListStore extends StateNotifier<MenstruationListState> {
   StreamSubscription? _menstruationCanceller;
   void _subscribe() {
     _menstruationCanceller?.cancel();
-    _menstruationCanceller = menstruationService.streamAll().listen((entities) {
+    _menstruationCanceller =
+        menstruationDatastore.streamAll().listen((entities) {
       state = state.copyWith(
           allRows: MenstruationListRowState.rows(
               dropInTheMiddleMenstruation(entities)));

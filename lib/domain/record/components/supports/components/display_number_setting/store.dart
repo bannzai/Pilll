@@ -1,8 +1,8 @@
 import 'package:pilll/database/batch.dart';
 import 'package:pilll/domain/record/record_page_store.dart';
 import 'package:pilll/entity/pill_sheet_group.codegen.dart';
-import 'package:pilll/service/pill_sheet_group.dart';
-import 'package:pilll/service/pill_sheet_modified_history.dart';
+import 'package:pilll/database/pill_sheet_group.dart';
+import 'package:pilll/database/pill_sheet_modified_history.dart';
 
 import 'state.codegen.dart';
 import 'package:riverpod/riverpod.dart';
@@ -12,8 +12,8 @@ final displayNumberSettingStateStoreProvider =
         DisplayNumberSettingState>((ref) {
   return DisplayNumberSettingStateStore(
     ref.watch(batchFactoryProvider),
-    ref.watch(pillSheetGroupServiceProvider),
-    ref.watch(pillSheetModifiedHistoryServiceProvider),
+    ref.watch(pillSheetGroupDatastoreProvider),
+    ref.watch(pillSheetModifiedHistoryDatastoreProvider),
     pillSheetGroup: ref.watch(recordPageStoreProvider).pillSheetGroup!,
   );
 });
@@ -21,13 +21,13 @@ final displayNumberSettingStateStoreProvider =
 class DisplayNumberSettingStateStore
     extends StateNotifier<DisplayNumberSettingState> {
   final BatchFactory _batchFactory;
-  final PillSheetGroupService _pillSheetGroupService;
-  final PillSheetModifiedHistoryService _pillSheetModifiedHistoryService;
+  final PillSheetGroupDatastore _pillSheetGroupDatastore;
+  final PillSheetModifiedHistoryDatastore _pillSheetModifiedHistoryDatastore;
 
   DisplayNumberSettingStateStore(
     this._batchFactory,
-    this._pillSheetGroupService,
-    this._pillSheetModifiedHistoryService, {
+    this._pillSheetGroupDatastore,
+    this._pillSheetModifiedHistoryDatastore, {
     required PillSheetGroup pillSheetGroup,
   }) : super(DisplayNumberSettingState(
           pillSheetGroup: pillSheetGroup.copyWith(),
@@ -38,7 +38,7 @@ class DisplayNumberSettingStateStore
 
   void setup() async {
     final beforePillSheetGroup =
-        await _pillSheetGroupService.fetchBeforePillSheetGroup();
+        await _pillSheetGroupDatastore.fetchBeforePillSheetGroup();
     state = state.copyWith(beforePillSheetGroup: beforePillSheetGroup);
   }
 
@@ -97,7 +97,7 @@ class DisplayNumberSettingStateStore
     final batch = _batchFactory.batch();
     if (displayNumberSetting.beginPillNumber !=
         state.originalPillSheetGroup.displayNumberSetting?.beginPillNumber) {
-      _pillSheetModifiedHistoryService.add(
+      _pillSheetModifiedHistoryDatastore.add(
         batch,
         PillSheetModifiedHistoryServiceActionFactory
             .createChangedBeginDisplayNumberAction(
@@ -111,7 +111,7 @@ class DisplayNumberSettingStateStore
 
     if (displayNumberSetting.endPillNumber !=
         state.originalPillSheetGroup.displayNumberSetting?.endPillNumber) {
-      _pillSheetModifiedHistoryService.add(
+      _pillSheetModifiedHistoryDatastore.add(
         batch,
         PillSheetModifiedHistoryServiceActionFactory
             .createChangedEndDisplayNumberAction(
@@ -123,7 +123,7 @@ class DisplayNumberSettingStateStore
       );
     }
 
-    _pillSheetGroupService.updateWithBatch(batch, state.pillSheetGroup);
+    _pillSheetGroupDatastore.updateWithBatch(batch, state.pillSheetGroup);
 
     await batch.commit();
   }

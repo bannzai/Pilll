@@ -4,7 +4,7 @@ import 'package:hooks_riverpod/hooks_riverpod.dart';
 import 'package:pilll/domain/premium_introduction/premium_introduction_state.codegen.dart';
 import 'package:pilll/service/auth.dart';
 import 'package:pilll/service/purchase.dart';
-import 'package:pilll/service/user.dart';
+import 'package:pilll/database/user.dart';
 import 'package:purchases_flutter/purchases_flutter.dart';
 import 'package:pilll/domain/premium_introduction/util/map_to_error.dart';
 import 'package:pilll/entity/user_error.dart';
@@ -16,7 +16,7 @@ import 'package:riverpod/riverpod.dart';
 final premiumIntroductionStoreProvider = StateNotifierProvider.autoDispose<
     PremiumIntroductionStore, PremiumIntroductionState>(
   (ref) => PremiumIntroductionStore(
-    ref.watch(userServiceProvider),
+    ref.watch(userDatastoreProvider),
     ref.watch(authServiceProvider),
     ref.watch(purchaseServiceProvider),
   ),
@@ -25,11 +25,11 @@ final premiumIntroductionStateProvider =
     Provider.autoDispose((ref) => ref.watch(premiumIntroductionStoreProvider));
 
 class PremiumIntroductionStore extends StateNotifier<PremiumIntroductionState> {
-  final UserService _userService;
+  final UserDatastore _userDatastore;
   final AuthService _authService;
   final PurchaseService _purchaseService;
   PremiumIntroductionStore(
-      this._userService, this._authService, this._purchaseService)
+      this._userDatastore, this._authService, this._purchaseService)
       : super(const PremiumIntroductionState()) {
     reset();
   }
@@ -42,7 +42,7 @@ class PremiumIntroductionStore extends StateNotifier<PremiumIntroductionState> {
         hasLoginProvider:
             _authService.isLinkedApple() || _authService.isLinkedGoogle(),
       );
-      _userService.fetch().then((value) {
+      _userDatastore.fetch().then((value) {
         state = state.copyWith(
           isPremium: value.isPremium,
           isTrial: value.isTrial,
@@ -62,7 +62,7 @@ class PremiumIntroductionStore extends StateNotifier<PremiumIntroductionState> {
   StreamSubscription? _authStreamCanceller;
   _subscribe() {
     _userStreamCanceller?.cancel();
-    _userStreamCanceller = _userService.stream().listen((event) {
+    _userStreamCanceller = _userDatastore.stream().listen((event) {
       state = state.copyWith(
         isPremium: event.isPremium,
         isTrial: event.isTrial,

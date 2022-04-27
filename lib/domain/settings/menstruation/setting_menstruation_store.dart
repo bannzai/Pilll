@@ -1,21 +1,21 @@
 import 'package:pilll/domain/settings/menstruation/setting_menstruation_state.codegen.dart';
 import 'package:pilll/entity/pill_sheet_type.dart';
 import 'package:pilll/entity/setting.codegen.dart';
-import 'package:pilll/service/setting.dart';
+import 'package:pilll/database/setting.dart';
 import 'package:riverpod/riverpod.dart';
 
 final settingMenstruationStoreProvider = StateNotifierProvider.autoDispose<
     SettingMenstruationStateStore, SettingMenstruationState>(
   (ref) => SettingMenstruationStateStore(
-    ref.watch(settingServiceProvider),
+    ref.watch(settingDatastoreProvider),
   ),
 );
 
 class SettingMenstruationStateStore
     extends StateNotifier<SettingMenstruationState> {
-  final SettingService _settingService;
+  final SettingDatastore _settingDatastore;
   SettingMenstruationStateStore(
-    this._settingService,
+    this._settingDatastore,
   ) : super(const SettingMenstruationState());
 
   Future<void> modifyFromMenstruation({
@@ -25,7 +25,7 @@ class SettingMenstruationStateStore
   }) {
     final offset = summarizedPillCountWithPillSheetTypesToEndIndex(
         pillSheetTypes: setting.pillSheetEnumTypes, endIndex: pageIndex);
-    return _settingService.update(setting.copyWith(
+    return _settingDatastore.update(setting.copyWith(
         pillNumberForFromMenstruation: fromMenstruation + offset));
   }
 
@@ -33,7 +33,7 @@ class SettingMenstruationStateStore
     required Setting setting,
     required int serializedPillNumberIntoGroup,
   }) {
-    return _settingService.update(setting.copyWith(
+    return _settingDatastore.update(setting.copyWith(
         pillNumberForFromMenstruation: serializedPillNumberIntoGroup));
   }
 
@@ -41,7 +41,7 @@ class SettingMenstruationStateStore
     required Setting setting,
     required int durationMenstruation,
   }) {
-    return _settingService
+    return _settingDatastore
         .update(setting.copyWith(durationMenstruation: durationMenstruation));
   }
 

@@ -12,11 +12,11 @@ import 'package:pilll/entity/pill_sheet_group.codegen.dart';
 import 'package:pilll/entity/pill_sheet_type.dart';
 import 'package:pilll/entity/setting.codegen.dart';
 import 'package:pilll/service/auth.dart';
-import 'package:pilll/service/pill_sheet.dart';
-import 'package:pilll/service/pill_sheet_group.dart';
-import 'package:pilll/service/pill_sheet_modified_history.dart';
-import 'package:pilll/service/setting.dart';
-import 'package:pilll/service/user.dart';
+import 'package:pilll/database/pill_sheet.dart';
+import 'package:pilll/database/pill_sheet_group.dart';
+import 'package:pilll/database/pill_sheet_modified_history.dart';
+import 'package:pilll/database/setting.dart';
+import 'package:pilll/database/user.dart';
 import 'package:pilll/util/datetime/day.dart';
 import 'package:purchases_flutter/purchases_flutter.dart';
 import 'package:riverpod/riverpod.dart';
@@ -24,12 +24,12 @@ import 'package:riverpod/riverpod.dart';
 final initialSettingStoreProvider = StateNotifierProvider.autoDispose<
     InitialSettingStateStore, InitialSettingState>(
   (ref) => InitialSettingStateStore(
-    ref.watch(userServiceProvider),
+    ref.watch(userDatastoreProvider),
     ref.watch(batchFactoryProvider),
-    ref.watch(settingServiceProvider),
-    ref.watch(pillSheetServiceProvider),
-    ref.watch(pillSheetModifiedHistoryServiceProvider),
-    ref.watch(pillSheetGroupServiceProvider),
+    ref.watch(settingDatastoreProvider),
+    ref.watch(pillSheetDatastoreProvider),
+    ref.watch(pillSheetModifiedHistoryDatastoreProvider),
+    ref.watch(pillSheetGroupDatastoreProvider),
     ref.watch(authServiceProvider),
   ),
 );
@@ -38,21 +38,21 @@ final initialSettingStateProvider =
     StateProvider.autoDispose((ref) => ref.watch(initialSettingStoreProvider));
 
 class InitialSettingStateStore extends StateNotifier<InitialSettingState> {
-  final UserService _userService;
+  final UserDatastore _userDatastore;
   final BatchFactory _batchFactory;
-  final SettingService _settingService;
-  final PillSheetService _pillSheetService;
-  final PillSheetModifiedHistoryService _pillSheetModifiedHistoryService;
-  final PillSheetGroupService _pillSheetGroupService;
+  final SettingDatastore _settingDatastore;
+  final PillSheetDatastore _pillSheetDatastore;
+  final PillSheetModifiedHistoryDatastore _pillSheetModifiedHistoryDatastore;
+  final PillSheetGroupDatastore _pillSheetGroupDatastore;
   final AuthService _authService;
 
   InitialSettingStateStore(
-    this._userService,
+    this._userDatastore,
     this._batchFactory,
-    this._settingService,
-    this._pillSheetService,
-    this._pillSheetModifiedHistoryService,
-    this._pillSheetGroupService,
+    this._settingDatastore,
+    this._pillSheetDatastore,
+    this._pillSheetModifiedHistoryDatastore,
+    this._pillSheetGroupDatastore,
     this._authService,
   ) : super(const InitialSettingState());
 
@@ -63,9 +63,9 @@ class InitialSettingStateStore extends StateNotifier<InitialSettingState> {
 
       final userIsNotAnonymous = !user.isAnonymous;
       if (userIsNotAnonymous) {
-        final userService = UserService(DatabaseConnection(user.uid));
-        final dbUser = await userService.prepare(user.uid);
-        userService.saveUserLaunchInfo();
+        final userDatastore = UserDatastore(DatabaseConnection(user.uid));
+        final dbUser = await userDatastore.prepare(user.uid);
+        userDatastore.saveUserLaunchInfo();
 
         unawaited(FirebaseCrashlytics.instance.setUserIdentifier(user.uid));
         unawaited(firebaseAnalytics.setUserId(id: user.uid));
@@ -149,7 +149,7 @@ class InitialSettingStateStore extends StateNotifier<InitialSettingState> {
 
     final todayPillNumber = state.todayPillNumber;
     if (todayPillNumber != null) {
-      final createdPillSheets = _pillSheetService.register(
+      final createdPillSheets = _pillSheetDatastore.register(
         batch,
         state.pillSheetTypes.asMap().keys.map((pageIndex) {
           return InitialSettingState.buildPillSheet(
@@ -161,7 +161,7 @@ class InitialSettingStateStore extends StateNotifier<InitialSettingState> {
       );
 
       final pillSheetIDs = createdPillSheets.map((e) => e.id!).toList();
-      final createdPillSheetGroup = _pillSheetGroupService.register(
+      final createdPillSheetGroup = _pillSheetGroupDatastore.register(
         batch,
         PillSheetGroup(
           pillSheetIDs: pillSheetIDs,
@@ -175,15 +175,15 @@ class InitialSettingStateStore extends StateNotifier<InitialSettingState> {
         pillSheetIDs: pillSheetIDs,
         pillSheetGroupID: createdPillSheetGroup.id,
       );
-      _pillSheetModifiedHistoryService.add(batch, history);
+      _pillSheetModifiedHistoryDatastore.add(batch, history);
     }
 
     final setting = state.buildSetting();
-    _settingService.updateWithBatch(batch, setting);
+    _settingDatastore.updateWithBatch(batch, setting);
 
     await batch.commit();
 
-    await _userService.trial(setting);
+    await _userDatastore.trial(setting);
   }
 
   showHUD() {

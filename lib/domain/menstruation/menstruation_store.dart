@@ -7,41 +7,41 @@ import 'package:pilll/domain/menstruation/menstruation_card_state.codegen.dart';
 import 'package:pilll/domain/menstruation/menstruation_history_card_state.dart';
 import 'package:pilll/entity/menstruation.codegen.dart';
 import 'package:pilll/native/health_care.dart';
-import 'package:pilll/service/diary.dart';
-import 'package:pilll/service/menstruation.dart';
-import 'package:pilll/service/pill_sheet.dart';
-import 'package:pilll/service/pill_sheet_group.dart';
-import 'package:pilll/service/setting.dart';
+import 'package:pilll/database/diary.dart';
+import 'package:pilll/database/menstruation.dart';
+import 'package:pilll/database/pill_sheet.dart';
+import 'package:pilll/database/pill_sheet_group.dart';
+import 'package:pilll/database/setting.dart';
 import 'package:pilll/domain/menstruation/menstruation_state.codegen.dart';
-import 'package:pilll/service/user.dart';
+import 'package:pilll/database/user.dart';
 import 'package:pilll/util/datetime/day.dart';
 
 final menstruationsStoreProvider =
     StateNotifierProvider<MenstruationStore, MenstruationState>(
   (ref) => MenstruationStore(
-    menstruationService: ref.watch(menstruationServiceProvider),
-    diaryService: ref.watch(diaryServiceProvider),
-    settingService: ref.watch(settingServiceProvider),
-    pillSheetService: ref.watch(pillSheetServiceProvider),
-    userService: ref.watch(userServiceProvider),
-    pillSheetGroupService: ref.watch(pillSheetGroupServiceProvider),
+    menstruationDatastore: ref.watch(menstruationDatastoreProvider),
+    diaryDatastore: ref.watch(diaryDatastoreProvider),
+    settingDatastore: ref.watch(settingDatastoreProvider),
+    pillSheetDatastore: ref.watch(pillSheetDatastoreProvider),
+    userDatastore: ref.watch(userDatastoreProvider),
+    pillSheetGroupDatastore: ref.watch(pillSheetGroupDatastoreProvider),
   ),
 );
 
 class MenstruationStore extends StateNotifier<MenstruationState> {
-  final MenstruationService menstruationService;
-  final DiaryService diaryService;
-  final SettingService settingService;
-  final PillSheetService pillSheetService;
-  final UserService userService;
-  final PillSheetGroupService pillSheetGroupService;
+  final MenstruationDatastore menstruationDatastore;
+  final DiaryDatastore diaryDatastore;
+  final SettingDatastore settingDatastore;
+  final PillSheetDatastore pillSheetDatastore;
+  final UserDatastore userDatastore;
+  final PillSheetGroupDatastore pillSheetGroupDatastore;
   MenstruationStore({
-    required this.menstruationService,
-    required this.diaryService,
-    required this.settingService,
-    required this.pillSheetService,
-    required this.userService,
-    required this.pillSheetGroupService,
+    required this.menstruationDatastore,
+    required this.diaryDatastore,
+    required this.settingDatastore,
+    required this.pillSheetDatastore,
+    required this.userDatastore,
+    required this.pillSheetGroupDatastore,
   }) : super(MenstruationState()) {
     reset();
   }
@@ -50,11 +50,11 @@ class MenstruationStore extends StateNotifier<MenstruationState> {
     state = state.copyWith(exception: null);
     state = state.copyWith(currentCalendarIndex: state.todayCalendarIndex);
     try {
-      final menstruations = await menstruationService.fetchAll();
-      final diaries = await diaryService.fetchListAround90Days(today());
-      final setting = await settingService.fetch();
-      final latestPillSheetGroup = await pillSheetGroupService.fetchLatest();
-      final user = await userService.fetch();
+      final menstruations = await menstruationDatastore.fetchAll();
+      final diaries = await diaryDatastore.fetchListAround90Days(today());
+      final setting = await settingDatastore.fetch();
+      final latestPillSheetGroup = await pillSheetGroupDatastore.fetchLatest();
+      final user = await userDatastore.fetch();
       state = state.copyWith(
         entities: menstruations,
         diariesForMonth: diaries,
@@ -78,24 +78,25 @@ class MenstruationStore extends StateNotifier<MenstruationState> {
   StreamSubscription? _userCanceller;
   void _subscribe() {
     _menstruationCanceller?.cancel();
-    _menstruationCanceller = menstruationService.streamAll().listen((entities) {
+    _menstruationCanceller =
+        menstruationDatastore.streamAll().listen((entities) {
       state = state.copyWith(entities: entities);
     });
     _diaryCanceller?.cancel();
-    _diaryCanceller = diaryService.stream().listen((entities) {
+    _diaryCanceller = diaryDatastore.stream().listen((entities) {
       state = state.copyWith(diariesForMonth: entities);
     });
     _settingCanceller?.cancel();
-    _settingCanceller = settingService.stream().listen((setting) {
+    _settingCanceller = settingDatastore.stream().listen((setting) {
       state = state.copyWith(setting: setting);
     });
     _pillSheetGroupCanceller?.cancel();
     _pillSheetGroupCanceller =
-        pillSheetGroupService.streamForLatest().listen((pillSheet) {
+        pillSheetGroupDatastore.streamForLatest().listen((pillSheet) {
       state = state.copyWith(latestPillSheetGroup: pillSheet);
     });
     _userCanceller?.cancel();
-    _userCanceller = userService.stream().listen((user) {
+    _userCanceller = userDatastore.stream().listen((user) {
       state = state.copyWith(
         isPremium: user.isPremium,
         isTrial: user.isTrial,
@@ -139,7 +140,7 @@ class MenstruationStore extends StateNotifier<MenstruationState> {
           healthKitSampleDataUUID: healthKitSampleDataUUID);
     }
 
-    return menstruationService.create(menstruation);
+    return menstruationDatastore.create(menstruation);
   }
 
   Future<Menstruation> recordFromYesterday() async {
@@ -160,7 +161,7 @@ class MenstruationStore extends StateNotifier<MenstruationState> {
           healthKitSampleDataUUID: healthKitSampleDataUUID);
     }
 
-    return menstruationService.create(menstruation);
+    return menstruationDatastore.create(menstruation);
   }
 
   MenstruationCardState? cardState() {

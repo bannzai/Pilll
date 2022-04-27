@@ -16,8 +16,8 @@ import 'package:pilll/domain/record/components/notification_bar/components/recom
 import 'package:pilll/domain/record/components/notification_bar/components/recommend_signup_premium.dart';
 import 'package:pilll/domain/record/components/notification_bar/components/rest_duration.dart';
 import 'package:pilll/domain/record/record_page_state.codegen.dart';
-import 'package:pilll/signin/signin_sheet.dart';
-import 'package:pilll/signin/signin_sheet_state.codegen.dart';
+import 'package:pilll/domain/sign_in/sign_in_sheet.dart';
+import 'package:pilll/domain/sign_in/sign_in_sheet_state.codegen.dart';
 import 'package:pilll/util/datetime/day.dart';
 
 class NotificationBar extends HookConsumerWidget {

@@ -65,8 +65,8 @@ void main() {
           todayRepository = originalTodayRepository;
         });
 
-        final menstruationService = MockMenstruationService();
-        when(menstruationService.fetchAll()).thenAnswer(
+        final menstruationDatastore = MockMenstruationDatastore();
+        when(menstruationDatastore.fetchAll()).thenAnswer(
           (realInvocation) => Future.value([
             Menstruation(
               beginDate: DateTime(2021, 04, 28),
@@ -80,7 +80,7 @@ void main() {
             ),
           ]),
         );
-        when(menstruationService.streamAll()).thenAnswer(
+        when(menstruationDatastore.streamAll()).thenAnswer(
           (realInvocation) => Stream.value([
             Menstruation(
               beginDate: DateTime(2021, 04, 28),
@@ -94,14 +94,14 @@ void main() {
             ),
           ]),
         );
-        final pillSheetService = MockPillSheetService();
-        final diaryService = MockDiaryService();
-        when(diaryService.fetchListAround90Days(today))
+        final pillSheetDatastore = MockPillSheetDatastore();
+        final diaryDatastore = MockDiaryDatastore();
+        when(diaryDatastore.fetchListAround90Days(today))
             .thenAnswer((realInvocation) => Future.value([]));
-        when(diaryService.stream())
+        when(diaryDatastore.stream())
             .thenAnswer((realInvocation) => const Stream.empty());
-        final settingService = MockSettingService();
-        when(settingService.fetch())
+        final settingDatastore = MockSettingDatastore();
+        when(settingDatastore.fetch())
             .thenAnswer((realInvocation) => Future.value(
                   const Setting(
                     pillSheetTypes: [PillSheetType.pillsheet_21],
@@ -111,29 +111,29 @@ void main() {
                     isOnReminder: true,
                   ),
                 ));
-        when(settingService.stream())
+        when(settingDatastore.stream())
             .thenAnswer((realInvocation) => const Stream.empty());
-        final userService = MockUserService();
-        when(userService.fetch())
+        final userDatastore = MockUserDatastore();
+        when(userDatastore.fetch())
             .thenAnswer((reaInvocation) => Future.value(_FakeUser()));
-        when(userService.stream())
+        when(userDatastore.stream())
             .thenAnswer((realInvocation) => const Stream.empty());
         final pillSheetGroup =
             PillSheetGroup(pillSheetIDs: [], pillSheets: [], createdAt: now());
 
-        final pillSheetGroupService = MockPillSheetGroupService();
-        when(pillSheetGroupService.fetchLatest())
+        final pillSheetGroupDatastore = MockPillSheetGroupDatastore();
+        when(pillSheetGroupDatastore.fetchLatest())
             .thenAnswer((realInvocation) => Future.value(pillSheetGroup));
-        when(pillSheetGroupService.streamForLatest())
+        when(pillSheetGroupDatastore.streamForLatest())
             .thenAnswer((realInvocation) => const Stream.empty());
 
         final store = MenstruationStore(
-          menstruationService: menstruationService,
-          diaryService: diaryService,
-          settingService: settingService,
-          pillSheetService: pillSheetService,
-          userService: userService,
-          pillSheetGroupService: pillSheetGroupService,
+          menstruationDatastore: menstruationDatastore,
+          diaryDatastore: diaryDatastore,
+          settingDatastore: settingDatastore,
+          pillSheetDatastore: pillSheetDatastore,
+          userDatastore: userDatastore,
+          pillSheetGroupDatastore: pillSheetGroupDatastore,
         );
 
         await waitForResetStoreState();
@@ -160,8 +160,8 @@ void main() {
           todayRepository = originalTodayRepository;
         });
 
-        final menstruationService = MockMenstruationService();
-        when(menstruationService.fetchAll()).thenAnswer(
+        final menstruationDatastore = MockMenstruationDatastore();
+        when(menstruationDatastore.fetchAll()).thenAnswer(
           (realInvocation) => Future.value([
             Menstruation(
               beginDate: DateTime(2021, 03, 28),
@@ -170,7 +170,7 @@ void main() {
             ),
           ]),
         );
-        when(menstruationService.streamAll()).thenAnswer(
+        when(menstruationDatastore.streamAll()).thenAnswer(
           (realInvocation) => Stream.value([
             Menstruation(
               beginDate: DateTime(2021, 03, 28),
@@ -179,14 +179,14 @@ void main() {
             ),
           ]),
         );
-        final pillSheetService = MockPillSheetService();
-        final diaryService = MockDiaryService();
-        when(diaryService.fetchListAround90Days(today))
+        final pillSheetDatastore = MockPillSheetDatastore();
+        final diaryDatastore = MockDiaryDatastore();
+        when(diaryDatastore.fetchListAround90Days(today))
             .thenAnswer((realInvocation) => Future.value([]));
-        when(diaryService.stream())
+        when(diaryDatastore.stream())
             .thenAnswer((realInvocation) => const Stream.empty());
-        final settingService = MockSettingService();
-        when(settingService.fetch())
+        final settingDatastore = MockSettingDatastore();
+        when(settingDatastore.fetch())
             .thenAnswer((realInvocation) => Future.value(const Setting(
                   pillSheetTypes: [PillSheetType.pillsheet_21],
                   pillNumberForFromMenstruation: 22,
@@ -194,30 +194,30 @@ void main() {
                   reminderTimes: [],
                   isOnReminder: true,
                 )));
-        when(settingService.stream())
+        when(settingDatastore.stream())
             .thenAnswer((realInvocation) => const Stream.empty());
-        final userService = MockUserService();
-        when(userService.fetch())
+        final userDatastore = MockUserDatastore();
+        when(userDatastore.fetch())
             .thenAnswer((reaInvocation) => Future.value(_FakeUser()));
-        when(userService.stream())
+        when(userDatastore.stream())
             .thenAnswer((realInvocation) => const Stream.empty());
 
         final pillSheetGroup =
             PillSheetGroup(pillSheetIDs: [], pillSheets: [], createdAt: now());
 
-        final pillSheetGroupService = MockPillSheetGroupService();
-        when(pillSheetGroupService.fetchLatest())
+        final pillSheetGroupDatastore = MockPillSheetGroupDatastore();
+        when(pillSheetGroupDatastore.fetchLatest())
             .thenAnswer((realInvocation) => Future.value(pillSheetGroup));
-        when(pillSheetGroupService.streamForLatest())
+        when(pillSheetGroupDatastore.streamForLatest())
             .thenAnswer((realInvocation) => const Stream.empty());
 
         final store = MenstruationStore(
-          menstruationService: menstruationService,
-          diaryService: diaryService,
-          settingService: settingService,
-          pillSheetService: pillSheetService,
-          userService: userService,
-          pillSheetGroupService: pillSheetGroupService,
+          menstruationDatastore: menstruationDatastore,
+          diaryDatastore: diaryDatastore,
+          settingDatastore: settingDatastore,
+          pillSheetDatastore: pillSheetDatastore,
+          userDatastore: userDatastore,
+          pillSheetGroupDatastore: pillSheetGroupDatastore,
         );
 
         await waitForResetStoreState();
@@ -240,21 +240,21 @@ void main() {
           todayRepository = originalTodayRepository;
         });
 
-        final menstruationService = MockMenstruationService();
-        when(menstruationService.fetchAll()).thenAnswer(
+        final menstruationDatastore = MockMenstruationDatastore();
+        when(menstruationDatastore.fetchAll()).thenAnswer(
           (realInvocation) => Future.value([]),
         );
-        when(menstruationService.streamAll()).thenAnswer(
+        when(menstruationDatastore.streamAll()).thenAnswer(
           (realInvocation) => Stream.value([]),
         );
-        final pillSheetService = MockPillSheetService();
-        final diaryService = MockDiaryService();
-        when(diaryService.fetchListAround90Days(today))
+        final pillSheetDatastore = MockPillSheetDatastore();
+        final diaryDatastore = MockDiaryDatastore();
+        when(diaryDatastore.fetchListAround90Days(today))
             .thenAnswer((realInvocation) => Future.value([]));
-        when(diaryService.stream())
+        when(diaryDatastore.stream())
             .thenAnswer((realInvocation) => const Stream.empty());
-        final settingService = MockSettingService();
-        when(settingService.fetch()).thenAnswer(
+        final settingDatastore = MockSettingDatastore();
+        when(settingDatastore.fetch()).thenAnswer(
           (realInvocation) => Future.value(
             const Setting(
               pillSheetTypes: [PillSheetType.pillsheet_21],
@@ -265,12 +265,12 @@ void main() {
             ),
           ),
         );
-        when(settingService.stream())
+        when(settingDatastore.stream())
             .thenAnswer((realInvocation) => const Stream.empty());
-        final userService = MockUserService();
-        when(userService.fetch())
+        final userDatastore = MockUserDatastore();
+        when(userDatastore.fetch())
             .thenAnswer((reaInvocation) => Future.value(_FakeUser()));
-        when(userService.stream())
+        when(userDatastore.stream())
             .thenAnswer((realInvocation) => const Stream.empty());
 
         final pillSheetGroup = PillSheetGroup(
@@ -284,19 +284,19 @@ void main() {
           createdAt: now(),
         );
 
-        final pillSheetGroupService = MockPillSheetGroupService();
-        when(pillSheetGroupService.fetchLatest())
+        final pillSheetGroupDatastore = MockPillSheetGroupDatastore();
+        when(pillSheetGroupDatastore.fetchLatest())
             .thenAnswer((realInvocation) => Future.value(pillSheetGroup));
-        when(pillSheetGroupService.streamForLatest())
+        when(pillSheetGroupDatastore.streamForLatest())
             .thenAnswer((realInvocation) => const Stream.empty());
 
         final store = MenstruationStore(
-          menstruationService: menstruationService,
-          diaryService: diaryService,
-          settingService: settingService,
-          pillSheetService: pillSheetService,
-          userService: userService,
-          pillSheetGroupService: pillSheetGroupService,
+          menstruationDatastore: menstruationDatastore,
+          diaryDatastore: diaryDatastore,
+          settingDatastore: settingDatastore,
+          pillSheetDatastore: pillSheetDatastore,
+          userDatastore: userDatastore,
+          pillSheetGroupDatastore: pillSheetGroupDatastore,
         );
 
         await waitForResetStoreState();
@@ -323,21 +323,21 @@ void main() {
           todayRepository = originalTodayRepository;
         });
 
-        final menstruationService = MockMenstruationService();
-        when(menstruationService.fetchAll()).thenAnswer(
+        final menstruationDatastore = MockMenstruationDatastore();
+        when(menstruationDatastore.fetchAll()).thenAnswer(
           (realInvocation) => Future.value([]),
         );
-        when(menstruationService.streamAll()).thenAnswer(
+        when(menstruationDatastore.streamAll()).thenAnswer(
           (realInvocation) => Stream.value([]),
         );
-        final pillSheetService = MockPillSheetService();
-        final diaryService = MockDiaryService();
-        when(diaryService.fetchListAround90Days(today))
+        final pillSheetDatastore = MockPillSheetDatastore();
+        final diaryDatastore = MockDiaryDatastore();
+        when(diaryDatastore.fetchListAround90Days(today))
             .thenAnswer((realInvocation) => Future.value([]));
-        when(diaryService.stream())
+        when(diaryDatastore.stream())
             .thenAnswer((realInvocation) => const Stream.empty());
-        final settingService = MockSettingService();
-        when(settingService.fetch()).thenAnswer(
+        final settingDatastore = MockSettingDatastore();
+        when(settingDatastore.fetch()).thenAnswer(
           (realInvocation) => Future.value(
             const Setting(
               pillSheetTypes: [PillSheetType.pillsheet_21],
@@ -348,12 +348,12 @@ void main() {
             ),
           ),
         );
-        when(settingService.stream())
+        when(settingDatastore.stream())
             .thenAnswer((realInvocation) => const Stream.empty());
-        final userService = MockUserService();
-        when(userService.fetch())
+        final userDatastore = MockUserDatastore();
+        when(userDatastore.fetch())
             .thenAnswer((reaInvocation) => Future.value(_FakeUser()));
-        when(userService.stream())
+        when(userDatastore.stream())
             .thenAnswer((realInvocation) => const Stream.empty());
 
         final pillSheetGroup = PillSheetGroup(pillSheetIDs: [
@@ -364,19 +364,19 @@ void main() {
             beginingDate: DateTime(2021, 04, 07),
           ),
         ], createdAt: now());
-        final pillSheetGroupService = MockPillSheetGroupService();
-        when(pillSheetGroupService.fetchLatest())
+        final pillSheetGroupDatastore = MockPillSheetGroupDatastore();
+        when(pillSheetGroupDatastore.fetchLatest())
             .thenAnswer((realInvocation) => Future.value(pillSheetGroup));
-        when(pillSheetGroupService.streamForLatest())
+        when(pillSheetGroupDatastore.streamForLatest())
             .thenAnswer((realInvocation) => const Stream.empty());
 
         final store = MenstruationStore(
-          menstruationService: menstruationService,
-          diaryService: diaryService,
-          settingService: settingService,
-          pillSheetService: pillSheetService,
-          userService: userService,
-          pillSheetGroupService: pillSheetGroupService,
+          menstruationDatastore: menstruationDatastore,
+          diaryDatastore: diaryDatastore,
+          settingDatastore: settingDatastore,
+          pillSheetDatastore: pillSheetDatastore,
+          userDatastore: userDatastore,
+          pillSheetGroupDatastore: pillSheetGroupDatastore,
         );
         await waitForResetStoreState();
         final actual = store.cardState();

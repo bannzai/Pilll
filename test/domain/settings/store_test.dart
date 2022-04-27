@@ -51,7 +51,7 @@ void main() {
   });
   group("#addReminderTimes", () {
     test("when added reminder times ${ReminderTime.maximumCount}", () {
-      final settingService = MockSettingService();
+      final settingDatastore = MockSettingDatastore();
       final setting = const Setting(
         reminderTimes: [
           ReminderTime(hour: 1, minute: 0),
@@ -63,49 +63,49 @@ void main() {
         pillSheetTypes: [PillSheetType.pillsheet_28_4],
       );
 
-      when(settingService.fetch())
+      when(settingDatastore.fetch())
           .thenAnswer((realInvocation) => Future.value(setting));
-      when(settingService.stream())
+      when(settingDatastore.stream())
           .thenAnswer((realInvocation) => Stream.value(setting));
 
       final batchFactory = MockBatchFactory();
       final pillSheet = PillSheet.create(PillSheetType.pillsheet_21);
-      final pillSheetService = MockPillSheetService();
+      final pillSheetDatastore = MockPillSheetDatastore();
       final pillSheetGroup = PillSheetGroup(
           pillSheetIDs: ["1"], pillSheets: [pillSheet], createdAt: now());
 
-      final userService = MockUserService();
-      when(userService.fetch())
+      final userDatastore = MockUserDatastore();
+      when(userDatastore.fetch())
           .thenAnswer((realInvocation) => Future.value(_FakeUser()));
-      when(userService.stream())
+      when(userDatastore.stream())
           .thenAnswer((realInvocation) => const Stream.empty());
-      final pillSheetModifiedService = MockPillSheetModifiedHistoryService();
-      final pillSheetGroupService = MockPillSheetGroupService();
-      when(pillSheetGroupService.fetchLatest())
+      final pillSheetModifiedService = MockPillSheetModifiedHistoryDatastore();
+      final pillSheetGroupDatastore = MockPillSheetGroupDatastore();
+      when(pillSheetGroupDatastore.fetchLatest())
           .thenAnswer((realInvocation) => Future.value(pillSheetGroup));
-      when(pillSheetGroupService.streamForLatest())
+      when(pillSheetGroupDatastore.streamForLatest())
           .thenAnswer((realInvocation) => const Stream.empty());
 
       final store = SettingStateStore(
         batchFactory,
-        settingService,
-        pillSheetService,
-        userService,
+        settingDatastore,
+        pillSheetDatastore,
+        userDatastore,
         pillSheetModifiedService,
-        pillSheetGroupService,
+        pillSheetGroupDatastore,
       );
 
       // ignore: invalid_use_of_protected_member
       store.state = SettingState(setting: setting);
 
-      when(settingService.update(setting.copyWith(reminderTimes: [
+      when(settingDatastore.update(setting.copyWith(reminderTimes: [
         const ReminderTime(hour: 1, minute: 0),
         const ReminderTime(hour: 2, minute: 0),
         const ReminderTime(hour: 3, minute: 0),
       ]))).thenAnswer((realInvocation) => Future.value(setting));
 
       store.addReminderTimes(const ReminderTime(hour: 3, minute: 0));
-      verify(settingService.update(setting.copyWith(reminderTimes: [
+      verify(settingDatastore.update(setting.copyWith(reminderTimes: [
         const ReminderTime(hour: 1, minute: 0),
         const ReminderTime(hour: 2, minute: 0),
         const ReminderTime(hour: 3, minute: 0),
@@ -114,15 +114,15 @@ void main() {
     test(
         "return exception when setting has reminderTimes count is ${ReminderTime.maximumCount}",
         () {
-      final settingService = MockSettingService();
+      final settingDatastore = MockSettingDatastore();
       final setting = _FakeSetting([
         const ReminderTime(hour: 1, minute: 0),
         const ReminderTime(hour: 2, minute: 0),
         const ReminderTime(hour: 3, minute: 0)
       ]);
-      when(settingService.fetch())
+      when(settingDatastore.fetch())
           .thenAnswer((realInvocation) => Future.value(setting));
-      when(settingService.stream())
+      when(settingDatastore.stream())
           .thenAnswer((realInvocation) => Stream.value(setting));
 
       final batchFactory = MockBatchFactory();
@@ -130,26 +130,26 @@ void main() {
       final pillSheetGroup = PillSheetGroup(
           pillSheetIDs: ["1"], pillSheets: [pillSheet], createdAt: now());
 
-      final pillSheetService = MockPillSheetService();
-      final userService = MockUserService();
-      when(userService.fetch())
+      final pillSheetDatastore = MockPillSheetDatastore();
+      final userDatastore = MockUserDatastore();
+      when(userDatastore.fetch())
           .thenAnswer((realInvocation) => Future.value(_FakeUser()));
-      when(userService.stream())
+      when(userDatastore.stream())
           .thenAnswer((realInvocation) => const Stream.empty());
-      final pillSheetModifiedService = MockPillSheetModifiedHistoryService();
-      final pillSheetGroupService = MockPillSheetGroupService();
-      when(pillSheetGroupService.fetchLatest())
+      final pillSheetModifiedService = MockPillSheetModifiedHistoryDatastore();
+      final pillSheetGroupDatastore = MockPillSheetGroupDatastore();
+      when(pillSheetGroupDatastore.fetchLatest())
           .thenAnswer((realInvocation) => Future.value(pillSheetGroup));
-      when(pillSheetGroupService.streamForLatest())
+      when(pillSheetGroupDatastore.streamForLatest())
           .thenAnswer((realInvocation) => const Stream.empty());
 
       final store = SettingStateStore(
         batchFactory,
-        settingService,
-        pillSheetService,
-        userService,
+        settingDatastore,
+        pillSheetDatastore,
+        userDatastore,
         pillSheetModifiedService,
-        pillSheetGroupService,
+        pillSheetGroupDatastore,
       );
 
       // ignore: invalid_use_of_protected_member
@@ -162,7 +162,7 @@ void main() {
   });
   group("#deleteReminderTimes", () {
     test("when deleted reminder times ${ReminderTime.maximumCount}", () {
-      final settingService = MockSettingService();
+      final settingDatastore = MockSettingDatastore();
       final setting = const Setting(
         reminderTimes: [
           ReminderTime(hour: 1, minute: 0),
@@ -173,9 +173,9 @@ void main() {
         isOnReminder: false,
         pillSheetTypes: [PillSheetType.pillsheet_28_4],
       );
-      when(settingService.fetch())
+      when(settingDatastore.fetch())
           .thenAnswer((realInvocation) => Future.value(setting));
-      when(settingService.stream())
+      when(settingDatastore.stream())
           .thenAnswer((realInvocation) => Stream.value(setting));
 
       final pillSheet = PillSheet.create(PillSheetType.pillsheet_21);
@@ -183,50 +183,50 @@ void main() {
           pillSheetIDs: ["1"], pillSheets: [pillSheet], createdAt: now());
 
       final batchFactory = MockBatchFactory();
-      final pillSheetService = MockPillSheetService();
-      final userService = MockUserService();
-      when(userService.fetch())
+      final pillSheetDatastore = MockPillSheetDatastore();
+      final userDatastore = MockUserDatastore();
+      when(userDatastore.fetch())
           .thenAnswer((realInvocation) => Future.value(_FakeUser()));
-      when(userService.stream())
+      when(userDatastore.stream())
           .thenAnswer((realInvocation) => const Stream.empty());
-      final pillSheetModifiedService = MockPillSheetModifiedHistoryService();
-      final pillSheetGroupService = MockPillSheetGroupService();
-      when(pillSheetGroupService.fetchLatest())
+      final pillSheetModifiedService = MockPillSheetModifiedHistoryDatastore();
+      final pillSheetGroupDatastore = MockPillSheetGroupDatastore();
+      when(pillSheetGroupDatastore.fetchLatest())
           .thenAnswer((realInvocation) => Future.value(pillSheetGroup));
-      when(pillSheetGroupService.streamForLatest())
+      when(pillSheetGroupDatastore.streamForLatest())
           .thenAnswer((realInvocation) => const Stream.empty());
 
       final store = SettingStateStore(
         batchFactory,
-        settingService,
-        pillSheetService,
-        userService,
+        settingDatastore,
+        pillSheetDatastore,
+        userDatastore,
         pillSheetModifiedService,
-        pillSheetGroupService,
+        pillSheetGroupDatastore,
       );
 
       // ignore: invalid_use_of_protected_member
       store.state = SettingState(setting: setting);
 
-      when(settingService.update(setting.copyWith(reminderTimes: [
+      when(settingDatastore.update(setting.copyWith(reminderTimes: [
         const ReminderTime(hour: 1, minute: 0),
       ]))).thenAnswer((realInvocation) => Future.value(setting));
 
       store.deleteReminderTimes(1);
-      verify(settingService.update(setting.copyWith(reminderTimes: [
+      verify(settingDatastore.update(setting.copyWith(reminderTimes: [
         const ReminderTime(hour: 1, minute: 0),
       ])));
     });
     test(
         "return exception when setting has remindertimes count is ${ReminderTime.minimumCount}",
         () {
-      final settingService = MockSettingService();
+      final settingDatastore = MockSettingDatastore();
       final setting = _FakeSetting([
         const ReminderTime(hour: 1, minute: 0),
       ]);
-      when(settingService.fetch())
+      when(settingDatastore.fetch())
           .thenAnswer((realInvocation) => Future.value(setting));
-      when(settingService.stream())
+      when(settingDatastore.stream())
           .thenAnswer((realInvocation) => Stream.value(setting));
 
       final batchFactory = MockBatchFactory();
@@ -234,27 +234,27 @@ void main() {
       final pillSheetGroup = PillSheetGroup(
           pillSheetIDs: ["1"], pillSheets: [pillSheet], createdAt: now());
 
-      final pillSheetService = MockPillSheetService();
+      final pillSheetDatastore = MockPillSheetDatastore();
 
-      final userService = MockUserService();
-      when(userService.fetch())
+      final userDatastore = MockUserDatastore();
+      when(userDatastore.fetch())
           .thenAnswer((realInvocation) => Future.value(_FakeUser()));
-      when(userService.stream())
+      when(userDatastore.stream())
           .thenAnswer((realInvocation) => const Stream.empty());
-      final pillSheetModifiedService = MockPillSheetModifiedHistoryService();
-      final pillSheetGroupService = MockPillSheetGroupService();
-      when(pillSheetGroupService.fetchLatest())
+      final pillSheetModifiedService = MockPillSheetModifiedHistoryDatastore();
+      final pillSheetGroupDatastore = MockPillSheetGroupDatastore();
+      when(pillSheetGroupDatastore.fetchLatest())
           .thenAnswer((realInvocation) => Future.value(pillSheetGroup));
-      when(pillSheetGroupService.streamForLatest())
+      when(pillSheetGroupDatastore.streamForLatest())
           .thenAnswer((realInvocation) => const Stream.empty());
 
       final store = SettingStateStore(
         batchFactory,
-        settingService,
-        pillSheetService,
-        userService,
+        settingDatastore,
+        pillSheetDatastore,
+        userDatastore,
         pillSheetModifiedService,
-        pillSheetGroupService,
+        pillSheetGroupDatastore,
       );
 
       // ignore: invalid_use_of_protected_member

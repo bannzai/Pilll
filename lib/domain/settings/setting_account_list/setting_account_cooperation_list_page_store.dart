@@ -6,22 +6,22 @@ import 'package:pilll/auth/boilerplate.dart';
 import 'package:pilll/auth/google.dart';
 import 'package:pilll/domain/settings/setting_account_list/setting_account_cooperation_list_page_state.codegen.dart';
 import 'package:pilll/service/auth.dart';
-import 'package:pilll/service/user.dart';
+import 'package:pilll/database/user.dart';
 import 'package:riverpod/riverpod.dart';
 
 final settingAccountCooperationListProvider = StateNotifierProvider.autoDispose<
     SettingAccountCooperationListPageStore, SettingAccountCooperationListState>(
   (ref) => SettingAccountCooperationListPageStore(
-    ref.watch(userServiceProvider),
+    ref.watch(userDatastoreProvider),
     ref.watch(authServiceProvider),
   ),
 );
 
 class SettingAccountCooperationListPageStore
     extends StateNotifier<SettingAccountCooperationListState> {
-  final UserService _userService;
+  final UserDatastore _userDatastore;
   final AuthService _authService;
-  SettingAccountCooperationListPageStore(this._userService, this._authService)
+  SettingAccountCooperationListPageStore(this._userDatastore, this._authService)
       : super(SettingAccountCooperationListState(
             user: FirebaseAuth.instance.currentUser)) {
     reset();
@@ -55,13 +55,13 @@ class SettingAccountCooperationListPageStore
     if (state.isLinkedApple) {
       throw AssertionError("unexpected already linked apple when link");
     }
-    return callLinkWithApple(_userService);
+    return callLinkWithApple(_userDatastore);
   }
 
   Future<SignInWithGoogleState> linkGoogle() {
     if (state.isLinkedGoogle) {
       throw AssertionError("unexpected already linked google when link");
     }
-    return callLinkWithGoogle(_userService);
+    return callLinkWithGoogle(_userDatastore);
   }
 }

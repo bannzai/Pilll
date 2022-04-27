@@ -6,10 +6,10 @@ import 'package:hooks_riverpod/hooks_riverpod.dart';
 import 'package:pilll/entity/menstruation.codegen.dart';
 import 'package:pilll/entity/setting.codegen.dart';
 import 'package:pilll/native/health_care.dart';
-import 'package:pilll/service/menstruation.dart';
-import 'package:pilll/service/setting.dart';
+import 'package:pilll/database/menstruation.dart';
+import 'package:pilll/database/setting.dart';
 import 'package:pilll/domain/menstruation_edit/menstruation_edit_state.codegen.dart';
-import 'package:pilll/service/user.dart';
+import 'package:pilll/database/user.dart';
 import 'package:pilll/util/datetime/date_compare.dart';
 import 'package:pilll/util/datetime/day.dart';
 
@@ -17,9 +17,9 @@ final menstruationEditProvider = StateNotifierProvider.family
     .autoDispose<MenstruationEditStore, MenstruationEditState, Menstruation?>(
   (ref, menstruation) => MenstruationEditStore(
     menstruation: menstruation,
-    menstruationService: ref.watch(menstruationServiceProvider),
-    settingService: ref.watch(settingServiceProvider),
-    userService: ref.watch(userServiceProvider),
+    menstruationDatastore: ref.watch(menstruationDatastoreProvider),
+    settingDatastore: ref.watch(settingDatastoreProvider),
+    userDatastore: ref.watch(userDatastoreProvider),
   ),
 );
 
@@ -44,15 +44,15 @@ List<DateTime> displayedDates(Menstruation? menstruation) {
 
 class MenstruationEditStore extends StateNotifier<MenstruationEditState> {
   late Menstruation? initialMenstruation;
-  final MenstruationService menstruationService;
-  final SettingService settingService;
-  final UserService userService;
+  final MenstruationDatastore menstruationDatastore;
+  final SettingDatastore settingDatastore;
+  final UserDatastore userDatastore;
 
   MenstruationEditStore({
     Menstruation? menstruation,
-    required this.menstruationService,
-    required this.settingService,
-    required this.userService,
+    required this.menstruationDatastore,
+    required this.settingDatastore,
+    required this.userDatastore,
   }) : super(MenstruationEditState(
             menstruation: menstruation,
             displayedDates: displayedDates(menstruation))) {
@@ -68,7 +68,7 @@ class MenstruationEditStore extends StateNotifier<MenstruationEditState> {
   void _subscribe() {
     _cancel();
 
-    _userSubscribeCanceller = userService.stream().listen((event) {
+    _userSubscribeCanceller = userDatastore.stream().listen((event) {
       state = state.copyWith(
         isPremium: event.isPremium,
         isTrial: event.isTrial,
@@ -114,7 +114,7 @@ class MenstruationEditStore extends StateNotifier<MenstruationEditState> {
       menstruation = menstruation.copyWith(healthKitSampleDataUUID: null);
     }
 
-    await menstruationService.update(
+    await menstruationDatastore.update(
         documentID, menstruation.copyWith(deletedAt: now()));
   }
 
@@ -132,7 +132,7 @@ class MenstruationEditStore extends StateNotifier<MenstruationEditState> {
             healthKitSampleDataUUID: healthKitSampleDataUUID);
       }
 
-      return menstruationService.create(menstruation);
+      return menstruationDatastore.create(menstruation);
     } else {
       if (await _canHealthKitDataSave()) {
         final healthKitSampleDataUUID =
@@ -140,7 +140,7 @@ class MenstruationEditStore extends StateNotifier<MenstruationEditState> {
         menstruation = menstruation.copyWith(
             healthKitSampleDataUUID: healthKitSampleDataUUID);
       }
-      return menstruationService.update(documentID, menstruation);
+      return menstruationDatastore.update(documentID, menstruation);
     }
   }
 
@@ -155,7 +155,7 @@ class MenstruationEditStore extends StateNotifier<MenstruationEditState> {
     if (menstruation == null) {
       final Setting setting;
       try {
-        setting = await settingService.fetch();
+        setting = await settingDatastore.fetch();
       } catch (error) {
         throw error;
       }

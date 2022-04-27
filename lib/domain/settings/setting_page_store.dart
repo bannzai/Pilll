@@ -4,12 +4,12 @@ import 'dart:io';
 import 'package:pilll/database/batch.dart';
 import 'package:pilll/entity/setting.codegen.dart';
 import 'package:pilll/native/health_care.dart';
-import 'package:pilll/service/pill_sheet.dart';
-import 'package:pilll/service/pill_sheet_group.dart';
-import 'package:pilll/service/pill_sheet_modified_history.dart';
-import 'package:pilll/service/setting.dart';
+import 'package:pilll/database/pill_sheet.dart';
+import 'package:pilll/database/pill_sheet_group.dart';
+import 'package:pilll/database/pill_sheet_modified_history.dart';
+import 'package:pilll/database/setting.dart';
 import 'package:pilll/domain/settings/setting_page_state.codegen.dart';
-import 'package:pilll/service/user.dart';
+import 'package:pilll/database/user.dart';
 import 'package:pilll/util/shared_preference/keys.dart';
 import 'package:riverpod/riverpod.dart';
 import 'package:shared_preferences/shared_preferences.dart';
@@ -18,11 +18,11 @@ final settingStoreProvider =
     StateNotifierProvider<SettingStateStore, SettingState>(
   (ref) => SettingStateStore(
     ref.watch(batchFactoryProvider),
-    ref.watch(settingServiceProvider),
-    ref.watch(pillSheetServiceProvider),
-    ref.watch(userServiceProvider),
-    ref.watch(pillSheetModifiedHistoryServiceProvider),
-    ref.watch(pillSheetGroupServiceProvider),
+    ref.watch(settingDatastoreProvider),
+    ref.watch(pillSheetDatastoreProvider),
+    ref.watch(userDatastoreProvider),
+    ref.watch(pillSheetModifiedHistoryDatastoreProvider),
+    ref.watch(pillSheetGroupDatastoreProvider),
   ),
 );
 
@@ -30,18 +30,18 @@ final settingStateProvider = Provider((ref) => ref.watch(settingStoreProvider));
 
 class SettingStateStore extends StateNotifier<SettingState> {
   final BatchFactory _batchFactory;
-  final SettingService _settingService;
-  final PillSheetService _pillSheetService;
-  final UserService _userService;
-  final PillSheetModifiedHistoryService _pillSheetModifiedHistoryService;
-  final PillSheetGroupService _pillSheetGroupService;
+  final SettingDatastore _settingDatastore;
+  final PillSheetDatastore _pillSheetDatastore;
+  final UserDatastore _userDatastore;
+  final PillSheetModifiedHistoryDatastore _pillSheetModifiedHistoryDatastore;
+  final PillSheetGroupDatastore _pillSheetGroupDatastore;
   SettingStateStore(
     this._batchFactory,
-    this._settingService,
-    this._pillSheetService,
-    this._userService,
-    this._pillSheetModifiedHistoryService,
-    this._pillSheetGroupService,
+    this._settingDatastore,
+    this._pillSheetDatastore,
+    this._userDatastore,
+    this._pillSheetModifiedHistoryDatastore,
+    this._pillSheetGroupDatastore,
   ) : super(const SettingState()) {
     setup();
   }
@@ -84,14 +84,14 @@ class SettingStateStore extends StateNotifier<SettingState> {
   void _subscribe() {
     cancel();
 
-    _settingCanceller = _settingService.stream().listen((event) {
+    _settingCanceller = _settingDatastore.stream().listen((event) {
       state = state.copyWith(setting: event);
     });
     _pillSheetGroupCanceller =
-        _pillSheetGroupService.streamForLatest().listen((event) {
+        _pillSheetGroupDatastore.streamForLatest().listen((event) {
       state = state.copyWith(latestPillSheetGroup: event);
     });
-    _userSubscribeCanceller = _userService.stream().listen((event) {
+    _userSubscribeCanceller = _userDatastore.stream().listen((event) {
       state = state.copyWith(
         isPremium: event.isPremium,
         isTrial: event.isTrial,
@@ -123,7 +123,7 @@ class SettingStateStore extends StateNotifier<SettingState> {
     if (reminderTimes.length < ReminderTime.minimumCount) {
       throw Exception("通知時刻は最低${ReminderTime.minimumCount}件必要です");
     }
-    _settingService
+    _settingDatastore
         .update(setting.copyWith(reminderTimes: reminderTimes))
         .then((entity) => state = state.copyWith(setting: entity));
   }
@@ -163,7 +163,7 @@ class SettingStateStore extends StateNotifier<SettingState> {
     if (setting == null) {
       throw const FormatException("setting entity not found");
     }
-    return _settingService
+    return _settingDatastore
         .update(setting.copyWith(isOnReminder: isOnReminder))
         .then((setting) => state = state.copyWith(setting: setting));
   }
@@ -173,7 +173,7 @@ class SettingStateStore extends StateNotifier<SettingState> {
     if (setting == null) {
       throw const FormatException("setting entity not found");
     }
-    return _settingService
+    return _settingDatastore
         .update(setting.copyWith(isOnNotifyInNotTakenDuration: isOn))
         .then((setting) => state = state.copyWith(setting: setting));
   }
@@ -193,14 +193,15 @@ class SettingStateStore extends StateNotifier<SettingState> {
     }
 
     final batch = _batchFactory.batch();
-    final updatedPillSheet = _pillSheetService.delete(batch, activedPillSheet);
+    final updatedPillSheet =
+        _pillSheetDatastore.delete(batch, activedPillSheet);
     final history = PillSheetModifiedHistoryServiceActionFactory
         .createDeletedPillSheetAction(
       pillSheetGroupID: pillSheetGroup.id,
       pillSheetIDs: pillSheetGroup.pillSheetIDs,
     );
-    _pillSheetModifiedHistoryService.add(batch, history);
-    _pillSheetGroupService.delete(
+    _pillSheetModifiedHistoryDatastore.add(batch, history);
+    _pillSheetGroupDatastore.delete(
         batch, pillSheetGroup.replaced(updatedPillSheet));
 
     return batch.commit();
@@ -211,7 +212,7 @@ class SettingStateStore extends StateNotifier<SettingState> {
     if (setting == null) {
       throw const FormatException("setting entity not found");
     }
-    return _settingService
+    return _settingDatastore
         .update(setting.copyWith(isAutomaticallyCreatePillSheet: isOn))
         .then((setting) => state = state.copyWith(setting: setting));
   }
@@ -227,7 +228,7 @@ class SettingStateStore extends StateNotifier<SettingState> {
     reminderNotificationCustomization =
         reminderNotificationCustomization.copyWith(word: word);
 
-    return _settingService
+    return _settingDatastore
         .update(setting.copyWith(
             reminderNotificationCustomization:
                 reminderNotificationCustomization))
@@ -245,7 +246,7 @@ class SettingStateStore extends StateNotifier<SettingState> {
     reminderNotificationCustomization = reminderNotificationCustomization
         .copyWith(isInVisibleReminderDate: isInVisibleReminderDate);
 
-    return _settingService
+    return _settingDatastore
         .update(setting.copyWith(
             reminderNotificationCustomization:
                 reminderNotificationCustomization))
@@ -263,7 +264,7 @@ class SettingStateStore extends StateNotifier<SettingState> {
     reminderNotificationCustomization = reminderNotificationCustomization
         .copyWith(isInVisiblePillNumber: isInVisiblePillNumber);
 
-    return _settingService
+    return _settingDatastore
         .update(setting.copyWith(
             reminderNotificationCustomization:
                 reminderNotificationCustomization))
@@ -281,7 +282,7 @@ class SettingStateStore extends StateNotifier<SettingState> {
     reminderNotificationCustomization = reminderNotificationCustomization
         .copyWith(isInVisibleDescription: isInVisibleDescription);
 
-    return _settingService
+    return _settingDatastore
         .update(setting.copyWith(
             reminderNotificationCustomization:
                 reminderNotificationCustomization))

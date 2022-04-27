@@ -8,9 +8,9 @@ import 'package:flutter_test/flutter_test.dart';
 import 'package:mockito/mockito.dart';
 import 'package:pilll/entity/setting.codegen.dart';
 import 'package:pilll/service/day.dart';
-import 'package:pilll/service/pill_sheet.dart';
-import 'package:pilll/service/pill_sheet_group.dart';
-import 'package:pilll/service/pill_sheet_modified_history.dart';
+import 'package:pilll/database/pill_sheet.dart';
+import 'package:pilll/database/pill_sheet_group.dart';
+import 'package:pilll/database/pill_sheet_modified_history.dart';
 import 'package:pilll/util/datetime/day.dart';
 import 'package:riverpod/riverpod.dart';
 import 'package:shared_preferences/shared_preferences.dart';
@@ -48,8 +48,9 @@ void main() {
           const Duration(days: 1),
         ),
       );
-      final pillSheetService = MockPillSheetService();
-      when(pillSheetService.update(batch, [updatedPillSheet])).thenReturn(null);
+      final pillSheetDatastore = MockPillSheetDatastore();
+      when(pillSheetDatastore.update(batch, [updatedPillSheet]))
+          .thenReturn(null);
 
       final pillSheetGroup = PillSheetGroup(
         id: "group_id",
@@ -61,8 +62,9 @@ void main() {
       );
       final updatedPillSheetGroup =
           pillSheetGroup.copyWith(pillSheets: [updatedPillSheet]);
-      final pillSheetGroupService = MockPillSheetGroupService();
-      when(pillSheetGroupService.updateWithBatch(batch, updatedPillSheetGroup))
+      final pillSheetGroupDatastore = MockPillSheetGroupDatastore();
+      when(pillSheetGroupDatastore.updateWithBatch(
+              batch, updatedPillSheetGroup))
           .thenReturn(updatedPillSheetGroup);
 
       final history = PillSheetModifiedHistoryServiceActionFactory
@@ -72,19 +74,19 @@ void main() {
         after: updatedPillSheet,
       );
 
-      final pillSheetModifiedHistoryService =
-          MockPillSheetModifiedHistoryService();
-      when(pillSheetModifiedHistoryService.add(batch, history))
+      final pillSheetModifiedHistoryDatastore =
+          MockPillSheetModifiedHistoryDatastore();
+      when(pillSheetModifiedHistoryDatastore.add(batch, history))
           .thenReturn(null);
 
       final container = ProviderContainer(
         overrides: [
           batchFactoryProvider.overrideWithValue(batchFactory),
-          pillSheetServiceProvider.overrideWithValue(pillSheetService),
-          pillSheetModifiedHistoryServiceProvider
-              .overrideWithValue(pillSheetModifiedHistoryService),
-          pillSheetGroupServiceProvider
-              .overrideWithValue(pillSheetGroupService),
+          pillSheetDatastoreProvider.overrideWithValue(pillSheetDatastore),
+          pillSheetModifiedHistoryDatastoreProvider
+              .overrideWithValue(pillSheetModifiedHistoryDatastore),
+          pillSheetGroupDatastoreProvider
+              .overrideWithValue(pillSheetGroupDatastore),
         ],
       );
       final parameter = SettingTodayPillNumberStoreParameter(
@@ -132,8 +134,9 @@ void main() {
           const Duration(days: 1),
         ),
       );
-      final pillSheetService = MockPillSheetService();
-      when(pillSheetService.update(batch, [updatedPillSheet])).thenReturn(null);
+      final pillSheetDatastore = MockPillSheetDatastore();
+      when(pillSheetDatastore.update(batch, [updatedPillSheet]))
+          .thenReturn(null);
 
       final pillSheetGroup = PillSheetGroup(
         id: "group_id",
@@ -145,8 +148,9 @@ void main() {
       );
       final updatedPillSheetGroup =
           pillSheetGroup.copyWith(pillSheets: [updatedPillSheet]);
-      final pillSheetGroupService = MockPillSheetGroupService();
-      when(pillSheetGroupService.updateWithBatch(batch, updatedPillSheetGroup))
+      final pillSheetGroupDatastore = MockPillSheetGroupDatastore();
+      when(pillSheetGroupDatastore.updateWithBatch(
+              batch, updatedPillSheetGroup))
           .thenReturn(updatedPillSheetGroup);
 
       final history = PillSheetModifiedHistoryServiceActionFactory
@@ -156,19 +160,19 @@ void main() {
         after: updatedPillSheet,
       );
 
-      final pillSheetModifiedHistoryService =
-          MockPillSheetModifiedHistoryService();
-      when(pillSheetModifiedHistoryService.add(batch, history))
+      final pillSheetModifiedHistoryDatastore =
+          MockPillSheetModifiedHistoryDatastore();
+      when(pillSheetModifiedHistoryDatastore.add(batch, history))
           .thenReturn(null);
 
       final container = ProviderContainer(
         overrides: [
           batchFactoryProvider.overrideWithValue(batchFactory),
-          pillSheetServiceProvider.overrideWithValue(pillSheetService),
-          pillSheetModifiedHistoryServiceProvider
-              .overrideWithValue(pillSheetModifiedHistoryService),
-          pillSheetGroupServiceProvider
-              .overrideWithValue(pillSheetGroupService),
+          pillSheetDatastoreProvider.overrideWithValue(pillSheetDatastore),
+          pillSheetModifiedHistoryDatastoreProvider
+              .overrideWithValue(pillSheetModifiedHistoryDatastore),
+          pillSheetGroupDatastoreProvider
+              .overrideWithValue(pillSheetGroupDatastore),
         ],
       );
       final parameter = SettingTodayPillNumberStoreParameter(
@@ -234,8 +238,8 @@ void main() {
       final updatedRight = right.copyWith(
         beginingDate: DateTime.parse("2022-05-30"),
       );
-      final pillSheetService = MockPillSheetService();
-      when(pillSheetService.update(batch, [
+      final pillSheetDatastore = MockPillSheetDatastore();
+      when(pillSheetDatastore.update(batch, [
         updatedLeft,
         updatedMiddle,
         updatedRight,
@@ -256,8 +260,9 @@ void main() {
         updatedMiddle,
         updatedRight,
       ]);
-      final pillSheetGroupService = MockPillSheetGroupService();
-      when(pillSheetGroupService.updateWithBatch(batch, updatedPillSheetGroup))
+      final pillSheetGroupDatastore = MockPillSheetGroupDatastore();
+      when(pillSheetGroupDatastore.updateWithBatch(
+              batch, updatedPillSheetGroup))
           .thenReturn(updatedPillSheetGroup);
 
       final history = PillSheetModifiedHistoryServiceActionFactory
@@ -267,19 +272,19 @@ void main() {
         after: updatedLeft,
       );
 
-      final pillSheetModifiedHistoryService =
-          MockPillSheetModifiedHistoryService();
-      when(pillSheetModifiedHistoryService.add(batch, history))
+      final pillSheetModifiedHistoryDatastore =
+          MockPillSheetModifiedHistoryDatastore();
+      when(pillSheetModifiedHistoryDatastore.add(batch, history))
           .thenReturn(null);
 
       final container = ProviderContainer(
         overrides: [
           batchFactoryProvider.overrideWithValue(batchFactory),
-          pillSheetServiceProvider.overrideWithValue(pillSheetService),
-          pillSheetModifiedHistoryServiceProvider
-              .overrideWithValue(pillSheetModifiedHistoryService),
-          pillSheetGroupServiceProvider
-              .overrideWithValue(pillSheetGroupService),
+          pillSheetDatastoreProvider.overrideWithValue(pillSheetDatastore),
+          pillSheetModifiedHistoryDatastoreProvider
+              .overrideWithValue(pillSheetModifiedHistoryDatastore),
+          pillSheetGroupDatastoreProvider
+              .overrideWithValue(pillSheetGroupDatastore),
         ],
       );
       final parameter = SettingTodayPillNumberStoreParameter(
@@ -345,8 +350,8 @@ void main() {
       final updatedRight = right.copyWith(
         beginingDate: DateTime.parse("2022-05-30"),
       );
-      final pillSheetService = MockPillSheetService();
-      when(pillSheetService.update(batch, [
+      final pillSheetDatastore = MockPillSheetDatastore();
+      when(pillSheetDatastore.update(batch, [
         updatedLeft,
         updatedMiddle,
         updatedRight,
@@ -367,8 +372,9 @@ void main() {
         updatedMiddle,
         updatedRight,
       ]);
-      final pillSheetGroupService = MockPillSheetGroupService();
-      when(pillSheetGroupService.updateWithBatch(batch, updatedPillSheetGroup))
+      final pillSheetGroupDatastore = MockPillSheetGroupDatastore();
+      when(pillSheetGroupDatastore.updateWithBatch(
+              batch, updatedPillSheetGroup))
           .thenReturn(updatedPillSheetGroup);
 
       final history = PillSheetModifiedHistoryServiceActionFactory
@@ -378,19 +384,19 @@ void main() {
         after: updatedLeft,
       );
 
-      final pillSheetModifiedHistoryService =
-          MockPillSheetModifiedHistoryService();
-      when(pillSheetModifiedHistoryService.add(batch, history))
+      final pillSheetModifiedHistoryDatastore =
+          MockPillSheetModifiedHistoryDatastore();
+      when(pillSheetModifiedHistoryDatastore.add(batch, history))
           .thenReturn(null);
 
       final container = ProviderContainer(
         overrides: [
           batchFactoryProvider.overrideWithValue(batchFactory),
-          pillSheetServiceProvider.overrideWithValue(pillSheetService),
-          pillSheetModifiedHistoryServiceProvider
-              .overrideWithValue(pillSheetModifiedHistoryService),
-          pillSheetGroupServiceProvider
-              .overrideWithValue(pillSheetGroupService),
+          pillSheetDatastoreProvider.overrideWithValue(pillSheetDatastore),
+          pillSheetModifiedHistoryDatastoreProvider
+              .overrideWithValue(pillSheetModifiedHistoryDatastore),
+          pillSheetGroupDatastoreProvider
+              .overrideWithValue(pillSheetGroupDatastore),
         ],
       );
       final parameter = SettingTodayPillNumberStoreParameter(
@@ -457,8 +463,8 @@ void main() {
         beginingDate: DateTime.parse("2022-05-01"),
         lastTakenDate: DateTime.parse("2022-04-30"),
       );
-      final pillSheetService = MockPillSheetService();
-      when(pillSheetService.update(batch, [
+      final pillSheetDatastore = MockPillSheetDatastore();
+      when(pillSheetDatastore.update(batch, [
         updatedLeft,
         updatedMiddle,
         updatedRight,
@@ -479,8 +485,9 @@ void main() {
         updatedMiddle,
         updatedRight,
       ]);
-      final pillSheetGroupService = MockPillSheetGroupService();
-      when(pillSheetGroupService.updateWithBatch(batch, updatedPillSheetGroup))
+      final pillSheetGroupDatastore = MockPillSheetGroupDatastore();
+      when(pillSheetGroupDatastore.updateWithBatch(
+              batch, updatedPillSheetGroup))
           .thenReturn(updatedPillSheetGroup);
 
       final history = PillSheetModifiedHistoryServiceActionFactory
@@ -490,19 +497,19 @@ void main() {
         after: updatedRight,
       );
 
-      final pillSheetModifiedHistoryService =
-          MockPillSheetModifiedHistoryService();
-      when(pillSheetModifiedHistoryService.add(batch, history))
+      final pillSheetModifiedHistoryDatastore =
+          MockPillSheetModifiedHistoryDatastore();
+      when(pillSheetModifiedHistoryDatastore.add(batch, history))
           .thenReturn(null);
 
       final container = ProviderContainer(
         overrides: [
           batchFactoryProvider.overrideWithValue(batchFactory),
-          pillSheetServiceProvider.overrideWithValue(pillSheetService),
-          pillSheetModifiedHistoryServiceProvider
-              .overrideWithValue(pillSheetModifiedHistoryService),
-          pillSheetGroupServiceProvider
-              .overrideWithValue(pillSheetGroupService),
+          pillSheetDatastoreProvider.overrideWithValue(pillSheetDatastore),
+          pillSheetModifiedHistoryDatastoreProvider
+              .overrideWithValue(pillSheetModifiedHistoryDatastore),
+          pillSheetGroupDatastoreProvider
+              .overrideWithValue(pillSheetGroupDatastore),
         ],
       );
       final parameter = SettingTodayPillNumberStoreParameter(
@@ -577,8 +584,8 @@ void main() {
       final updatedRight = right.copyWith(
         beginingDate: DateTime.parse("2022-05-31"),
       );
-      final pillSheetService = MockPillSheetService();
-      when(pillSheetService.update(batch, [
+      final pillSheetDatastore = MockPillSheetDatastore();
+      when(pillSheetDatastore.update(batch, [
         updatedLeft,
         updatedMiddle,
         updatedRight,
@@ -599,8 +606,9 @@ void main() {
         updatedMiddle,
         updatedRight,
       ]);
-      final pillSheetGroupService = MockPillSheetGroupService();
-      when(pillSheetGroupService.updateWithBatch(batch, updatedPillSheetGroup))
+      final pillSheetGroupDatastore = MockPillSheetGroupDatastore();
+      when(pillSheetGroupDatastore.updateWithBatch(
+              batch, updatedPillSheetGroup))
           .thenReturn(updatedPillSheetGroup);
 
       final history = PillSheetModifiedHistoryServiceActionFactory
@@ -610,19 +618,19 @@ void main() {
         after: updatedLeft,
       );
 
-      final pillSheetModifiedHistoryService =
-          MockPillSheetModifiedHistoryService();
-      when(pillSheetModifiedHistoryService.add(batch, history))
+      final pillSheetModifiedHistoryDatastore =
+          MockPillSheetModifiedHistoryDatastore();
+      when(pillSheetModifiedHistoryDatastore.add(batch, history))
           .thenReturn(null);
 
       final container = ProviderContainer(
         overrides: [
           batchFactoryProvider.overrideWithValue(batchFactory),
-          pillSheetServiceProvider.overrideWithValue(pillSheetService),
-          pillSheetModifiedHistoryServiceProvider
-              .overrideWithValue(pillSheetModifiedHistoryService),
-          pillSheetGroupServiceProvider
-              .overrideWithValue(pillSheetGroupService),
+          pillSheetDatastoreProvider.overrideWithValue(pillSheetDatastore),
+          pillSheetModifiedHistoryDatastoreProvider
+              .overrideWithValue(pillSheetModifiedHistoryDatastore),
+          pillSheetGroupDatastoreProvider
+              .overrideWithValue(pillSheetGroupDatastore),
         ],
       );
       final parameter = SettingTodayPillNumberStoreParameter(

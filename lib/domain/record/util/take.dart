@@ -7,9 +7,9 @@ import 'package:pilll/domain/record/record_page_store.dart';
 import 'package:pilll/entity/pill_sheet.codegen.dart';
 import 'package:pilll/entity/pill_sheet_group.codegen.dart';
 import 'package:pilll/error_log.dart';
-import 'package:pilll/service/pill_sheet.dart';
-import 'package:pilll/service/pill_sheet_group.dart';
-import 'package:pilll/service/pill_sheet_modified_history.dart';
+import 'package:pilll/database/pill_sheet.dart';
+import 'package:pilll/database/pill_sheet_group.dart';
+import 'package:pilll/database/pill_sheet_modified_history.dart';
 import 'package:pilll/util/shared_preference/keys.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
@@ -52,9 +52,9 @@ Future<PillSheetGroup?> take({
   required PillSheetGroup pillSheetGroup,
   required PillSheet activedPillSheet,
   required BatchFactory batchFactory,
-  required PillSheetService pillSheetService,
-  required PillSheetModifiedHistoryService pillSheetModifiedHistoryService,
-  required PillSheetGroupService pillSheetGroupService,
+  required PillSheetDatastore pillSheetDatastore,
+  required PillSheetModifiedHistoryDatastore pillSheetModifiedHistoryDatastore,
+  required PillSheetGroupDatastore pillSheetGroupDatastore,
   required bool isQuickRecord,
 }) async {
   if (activedPillSheet.todayPillIsAlreadyTaken) {
@@ -74,8 +74,7 @@ Future<PillSheetGroup?> take({
     // takenDateよりも予測するピルシートの最終服用日よりじも大きい場合はactivedPillSheetじゃないPillSheetと判断。
     // そのピルシートの最終日で予測する最終服用日を記録する
     if (takenDate.isAfter(pillSheet.estimatedEndTakenDate)) {
-      return pillSheet.copyWith(
-          lastTakenDate: pillSheet.estimatedEndTakenDate);
+      return pillSheet.copyWith(lastTakenDate: pillSheet.estimatedEndTakenDate);
     } else {
       return pillSheet.copyWith(lastTakenDate: takenDate);
     }
@@ -93,11 +92,11 @@ Future<PillSheetGroup?> take({
     return null;
   }
 
-  pillSheetService.update(
+  pillSheetDatastore.update(
     batch,
     updatedPillSheets,
   );
-  pillSheetGroupService.updateWithBatch(batch, updatedPillSheetGroup);
+  pillSheetGroupDatastore.updateWithBatch(batch, updatedPillSheetGroup);
 
   final before = pillSheetGroup.pillSheets[updatedIndexses.first];
   final after = updatedPillSheetGroup.pillSheets[updatedIndexses.last];
@@ -108,7 +107,7 @@ Future<PillSheetGroup?> take({
     after: after,
     isQuickRecord: isQuickRecord,
   );
-  pillSheetModifiedHistoryService.add(batch, history);
+  pillSheetModifiedHistoryDatastore.add(batch, history);
 
   await batch.commit();
 

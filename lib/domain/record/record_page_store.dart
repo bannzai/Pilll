@@ -10,12 +10,12 @@ import 'package:pilll/entity/pill_sheet_type.dart';
 import 'package:pilll/entity/setting.codegen.dart';
 import 'package:pilll/native/legacy.dart';
 import 'package:pilll/service/auth.dart';
-import 'package:pilll/service/pill_sheet.dart';
+import 'package:pilll/database/pill_sheet.dart';
 import 'package:pilll/domain/record/record_page_state.codegen.dart';
-import 'package:pilll/service/pill_sheet_group.dart';
-import 'package:pilll/service/pill_sheet_modified_history.dart';
-import 'package:pilll/service/setting.dart';
-import 'package:pilll/service/user.dart';
+import 'package:pilll/database/pill_sheet_group.dart';
+import 'package:pilll/database/pill_sheet_modified_history.dart';
+import 'package:pilll/database/setting.dart';
+import 'package:pilll/database/user.dart';
 import 'package:pilll/util/datetime/day.dart';
 import 'package:pilll/util/shared_preference/keys.dart';
 import 'package:riverpod/riverpod.dart';
@@ -25,30 +25,30 @@ final recordPageStoreProvider =
     StateNotifierProvider<RecordPageStore, RecordPageState>(
         (ref) => RecordPageStore(
               ref.watch(batchFactoryProvider),
-              ref.watch(pillSheetServiceProvider),
-              ref.watch(settingServiceProvider),
-              ref.watch(userServiceProvider),
+              ref.watch(pillSheetDatastoreProvider),
+              ref.watch(settingDatastoreProvider),
+              ref.watch(userDatastoreProvider),
               ref.watch(authServiceProvider),
-              ref.watch(pillSheetModifiedHistoryServiceProvider),
-              ref.watch(pillSheetGroupServiceProvider),
+              ref.watch(pillSheetModifiedHistoryDatastoreProvider),
+              ref.watch(pillSheetGroupDatastoreProvider),
             ));
 
 class RecordPageStore extends StateNotifier<RecordPageState> {
   final BatchFactory _batchFactory;
-  final PillSheetService _pillSheetService;
-  final SettingService _settingService;
-  final UserService _userService;
+  final PillSheetDatastore _pillSheetDatastore;
+  final SettingDatastore _settingDatastore;
+  final UserDatastore _userDatastore;
   final AuthService _authService;
-  final PillSheetModifiedHistoryService _pillSheetModifiedHistoryService;
-  final PillSheetGroupService _pillSheetGroupService;
+  final PillSheetModifiedHistoryDatastore _pillSheetModifiedHistoryDatastore;
+  final PillSheetGroupDatastore _pillSheetGroupDatastore;
   RecordPageStore(
     this._batchFactory,
-    this._pillSheetService,
-    this._settingService,
-    this._userService,
+    this._pillSheetDatastore,
+    this._settingDatastore,
+    this._userDatastore,
     this._authService,
-    this._pillSheetModifiedHistoryService,
-    this._pillSheetGroupService,
+    this._pillSheetModifiedHistoryDatastore,
+    this._pillSheetGroupDatastore,
   ) : super(const RecordPageState()) {
     reset();
   }
@@ -58,15 +58,15 @@ class RecordPageStore extends StateNotifier<RecordPageState> {
       state = state.copyWith(exception: null);
       await Future.wait([
         Future(() async {
-          final pillSheetGroup = await _pillSheetGroupService.fetchLatest();
+          final pillSheetGroup = await _pillSheetGroupDatastore.fetchLatest();
           state = state.copyWith(pillSheetGroup: pillSheetGroup);
         }),
         Future(() async {
-          final setting = await _settingService.fetch();
+          final setting = await _settingDatastore.fetch();
           state = state.copyWith(setting: setting);
         }),
         Future(() async {
-          final user = await _userService.fetch();
+          final user = await _userDatastore.fetch();
           state = state.copyWith(
             isPremium: user.isPremium,
             isTrial: user.isTrial,
@@ -133,15 +133,15 @@ class RecordPageStore extends StateNotifier<RecordPageState> {
   void _subscribe() {
     _pillSheetGroupCanceller?.cancel();
     _pillSheetGroupCanceller =
-        _pillSheetGroupService.streamForLatest().listen((event) {
+        _pillSheetGroupDatastore.streamForLatest().listen((event) {
       state = state.copyWith(pillSheetGroup: event);
     });
     _settingCanceller?.cancel();
-    _settingCanceller = _settingService.stream().listen((setting) {
+    _settingCanceller = _settingDatastore.stream().listen((setting) {
       state = state.copyWith(setting: setting);
     });
     _userSubscribeCanceller?.cancel();
-    _userSubscribeCanceller = _userService.stream().listen((event) {
+    _userSubscribeCanceller = _userDatastore.stream().listen((event) {
       state = state.copyWith(
         isPremium: event.isPremium,
         isTrial: event.isTrial,
@@ -185,9 +185,9 @@ class RecordPageStore extends StateNotifier<RecordPageState> {
       pillSheetGroup: pillSheetGroup,
       activedPillSheet: activedPillSheet,
       batchFactory: _batchFactory,
-      pillSheetService: _pillSheetService,
-      pillSheetModifiedHistoryService: _pillSheetModifiedHistoryService,
-      pillSheetGroupService: _pillSheetGroupService,
+      pillSheetDatastore: _pillSheetDatastore,
+      pillSheetModifiedHistoryDatastore: _pillSheetModifiedHistoryDatastore,
+      pillSheetGroupDatastore: _pillSheetGroupDatastore,
       isQuickRecord: false,
     );
     if (updatedPillSheetGroup == null) {
@@ -314,11 +314,11 @@ class RecordPageStore extends StateNotifier<RecordPageState> {
     }
 
     final batch = _batchFactory.batch();
-    _pillSheetService.update(
+    _pillSheetDatastore.update(
       batch,
       updatedPillSheets,
     );
-    _pillSheetGroupService.updateWithBatch(batch, updatedPillSheetGroup);
+    _pillSheetGroupDatastore.updateWithBatch(batch, updatedPillSheetGroup);
 
     final before = pillSheetGroup.pillSheets[updatedIndexses.last];
     final after = updatedPillSheetGroup.pillSheets[updatedIndexses.first];
@@ -328,7 +328,7 @@ class RecordPageStore extends StateNotifier<RecordPageState> {
       before: before,
       after: after,
     );
-    _pillSheetModifiedHistoryService.add(batch, history);
+    _pillSheetModifiedHistoryDatastore.add(batch, history);
 
     await batch.commit();
 
@@ -428,9 +428,9 @@ class RecordPageStore extends StateNotifier<RecordPageState> {
     final updatedPillSheetGroup = pillSheetGroup.replaced(updatedPillSheet);
 
     final batch = _batchFactory.batch();
-    _pillSheetService.update(batch, updatedPillSheetGroup.pillSheets);
-    _pillSheetGroupService.updateWithBatch(batch, updatedPillSheetGroup);
-    _pillSheetModifiedHistoryService.add(
+    _pillSheetDatastore.update(batch, updatedPillSheetGroup.pillSheets);
+    _pillSheetGroupDatastore.updateWithBatch(batch, updatedPillSheetGroup);
+    _pillSheetModifiedHistoryDatastore.add(
       batch,
       PillSheetModifiedHistoryServiceActionFactory
           .createBeganRestDurationAction(
@@ -461,9 +461,9 @@ class RecordPageStore extends StateNotifier<RecordPageState> {
     final updatedPillSheetGroup = pillSheetGroup.replaced(updatedPillSheet);
 
     final batch = _batchFactory.batch();
-    _pillSheetService.update(batch, updatedPillSheetGroup.pillSheets);
-    _pillSheetGroupService.updateWithBatch(batch, updatedPillSheetGroup);
-    _pillSheetModifiedHistoryService.add(
+    _pillSheetDatastore.update(batch, updatedPillSheetGroup.pillSheets);
+    _pillSheetGroupDatastore.updateWithBatch(batch, updatedPillSheetGroup);
+    _pillSheetModifiedHistoryDatastore.add(
       batch,
       PillSheetModifiedHistoryServiceActionFactory
           .createEndedRestDurationAction(
@@ -498,7 +498,7 @@ class RecordPageStore extends StateNotifier<RecordPageState> {
       state = state.copyWith(pillSheetGroup: updatedPillSheetGroup);
     }
 
-    _pillSheetGroupService.update(updatedPillSheetGroup);
+    _pillSheetGroupDatastore.update(updatedPillSheetGroup);
   }
 
   Future<void> setDisplayNumberSettingEndNumber(int end) async {
@@ -522,7 +522,7 @@ class RecordPageStore extends StateNotifier<RecordPageState> {
       state = state.copyWith(pillSheetGroup: updatedPillSheetGroup);
     }
 
-    _pillSheetGroupService.update(updatedPillSheetGroup);
+    _pillSheetGroupDatastore.update(updatedPillSheetGroup);
   }
 
   void switchingAppearanceMode(PillSheetAppearanceMode mode) {
@@ -531,7 +531,7 @@ class RecordPageStore extends StateNotifier<RecordPageState> {
       throw const FormatException("setting entity not found");
     }
     final updated = setting.copyWith(pillSheetAppearanceMode: mode);
-    _settingService
+    _settingDatastore
         .update(updated)
         .then((value) => state = state.copyWith(setting: value));
   }

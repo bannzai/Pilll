@@ -56,7 +56,7 @@ void main() {
         (WidgetTester tester) async {
       SupportedDeviceType.iPhone5SE2nd.binding(tester.binding.window);
 
-      final settingService = MockSettingService();
+      final settingDatastore = MockSettingDatastore();
       final entity = const Setting(
         pillNumberForFromMenstruation: 22,
         durationMenstruation: 2,
@@ -66,31 +66,31 @@ void main() {
           ReminderTime(hour: 10, minute: 0),
         ],
       );
-      when(settingService.stream())
+      when(settingDatastore.stream())
           .thenAnswer((realInvocation) => Stream.fromIterable([entity]));
 
-      final pillSheetService = MockPillSheetService();
-      final userService = MockUserService();
-      when(userService.stream())
+      final pillSheetDatastore = MockPillSheetDatastore();
+      final userDatastore = MockUserDatastore();
+      when(userDatastore.stream())
           .thenAnswer((realInvocation) => Stream.fromIterable([_FakeUser()]));
 
-      final pillSheetGroupService = MockPillSheetGroupService();
+      final pillSheetGroupDatastore = MockPillSheetGroupDatastore();
       final pillSheet = PillSheet.create(PillSheetType.pillsheet_21);
       final pillSheetGroup = PillSheetGroup(
           pillSheetIDs: ["1"], pillSheets: [pillSheet], createdAt: now());
-      when(pillSheetGroupService.streamForLatest()).thenAnswer(
+      when(pillSheetGroupDatastore.streamForLatest()).thenAnswer(
           (realInvocation) => Stream.fromIterable([pillSheetGroup]));
 
       final batchFactory = MockBatchFactory();
-      final pillSheetModifiedService = MockPillSheetModifiedHistoryService();
+      final pillSheetModifiedService = MockPillSheetModifiedHistoryDatastore();
 
       final store = SettingStateStore(
         batchFactory,
-        settingService,
-        pillSheetService,
-        userService,
+        settingDatastore,
+        pillSheetDatastore,
+        userDatastore,
         pillSheetModifiedService,
-        pillSheetGroupService,
+        pillSheetGroupDatastore,
       );
       store.setup();
 
@@ -126,7 +126,7 @@ void main() {
         (WidgetTester tester) async {
       SupportedDeviceType.iPhone5SE2nd.binding(tester.binding.window);
 
-      final settingService = MockSettingService();
+      final settingDatastore = MockSettingDatastore();
       final entity = const Setting(
         pillNumberForFromMenstruation: 22,
         durationMenstruation: 2,
@@ -138,31 +138,31 @@ void main() {
           ReminderTime(hour: 12, minute: 0)
         ],
       );
-      when(settingService.stream())
+      when(settingDatastore.stream())
           .thenAnswer((realInvocation) => Stream.value(entity));
 
-      final userService = MockUserService();
-      when(userService.stream())
+      final userDatastore = MockUserDatastore();
+      when(userDatastore.stream())
           .thenAnswer((realInvocation) => Stream.value(_FakeUser()));
 
       final pillSheet = PillSheet.create(PillSheetType.pillsheet_21);
       final pillSheetGroup = PillSheetGroup(
           pillSheetIDs: ["1"], pillSheets: [pillSheet], createdAt: now());
-      final pillSheetGroupService = MockPillSheetGroupService();
-      when(pillSheetGroupService.streamForLatest())
+      final pillSheetGroupDatastore = MockPillSheetGroupDatastore();
+      when(pillSheetGroupDatastore.streamForLatest())
           .thenAnswer((realInvocation) => Stream.value(pillSheetGroup));
 
       final batchFactory = MockBatchFactory();
-      final pillSheetService = MockPillSheetService();
-      final pillSheetModifiedService = MockPillSheetModifiedHistoryService();
+      final pillSheetDatastore = MockPillSheetDatastore();
+      final pillSheetModifiedService = MockPillSheetModifiedHistoryDatastore();
 
       final store = SettingStateStore(
         batchFactory,
-        settingService,
-        pillSheetService,
-        userService,
+        settingDatastore,
+        pillSheetDatastore,
+        userDatastore,
         pillSheetModifiedService,
-        pillSheetGroupService,
+        pillSheetGroupDatastore,
       );
       store.setup();
 

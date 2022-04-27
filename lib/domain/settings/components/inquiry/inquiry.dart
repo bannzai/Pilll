@@ -3,9 +3,9 @@ import 'package:pilll/entity/pill_sheet_group.codegen.dart';
 import 'package:pilll/database/database.dart';
 import 'package:pilll/entity/menstruation.codegen.dart';
 import 'package:pilll/entity/setting.codegen.dart';
-import 'package:pilll/service/menstruation.dart';
-import 'package:pilll/service/pill_sheet_group.dart';
-import 'package:pilll/service/setting.dart';
+import 'package:pilll/database/menstruation.dart';
+import 'package:pilll/database/pill_sheet_group.dart';
+import 'package:pilll/database/setting.dart';
 import 'package:pilll/util/environment.dart';
 import 'package:package_info/package_info.dart';
 import 'package:url_launcher/url_launcher.dart';
@@ -30,17 +30,17 @@ Future<String> debugInfo(String separator) async {
   PillSheetGroup? pillSheetGroup;
   try {
     pillSheetGroup =
-        await PillSheetGroupService(databaseConnection).fetchLatest();
+        await PillSheetGroupDatastore(databaseConnection).fetchLatest();
   } catch (_) {}
 
   Setting? setting;
   try {
-    setting = await SettingService(databaseConnection).fetch();
+    setting = await SettingDatastore(databaseConnection).fetch();
   } catch (_) {}
 
   List<Menstruation> menstruations = [];
   try {
-    menstruations = await MenstruationService(databaseConnection).fetchAll();
+    menstruations = await MenstruationDatastore(databaseConnection).fetchAll();
   } catch (_) {}
 
   Menstruation? menstruation =

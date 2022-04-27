@@ -5,13 +5,13 @@ import 'package:pilll/analytics.dart';
 import 'package:pilll/database/batch.dart';
 import 'package:pilll/database/database.dart';
 import 'package:pilll/domain/record/util/take.dart';
-import 'package:pilll/service/pill_sheet.dart';
-import 'package:pilll/service/pill_sheet_group.dart';
-import 'package:pilll/service/pill_sheet_modified_history.dart';
+import 'package:pilll/database/pill_sheet.dart';
+import 'package:pilll/database/pill_sheet_group.dart';
+import 'package:pilll/database/pill_sheet_modified_history.dart';
 import 'package:pilll/util/datetime/day.dart';
 
 Future<void> recordPill() async {
-    // 通知からの起動の時に、FirebaseAuth.instanceを参照すると、まだinitializeされてないよ．的なエラーが出る
+  // 通知からの起動の時に、FirebaseAuth.instanceを参照すると、まだinitializeされてないよ．的なエラーが出る
   if (Firebase.apps.isEmpty) {
     await Firebase.initializeApp();
   }
@@ -21,11 +21,11 @@ Future<void> recordPill() async {
   }
 
   final database = DatabaseConnection(firebaseUser.uid);
-  final pillSheetService = PillSheetService(database);
-  final pillSheetModifiedHistoryService =
-      PillSheetModifiedHistoryService(database);
-  final pillSheetGroupService = PillSheetGroupService(database);
-  final pillSheetGroup = await pillSheetGroupService.fetchLatest();
+  final pillSheetDatastore = PillSheetDatastore(database);
+  final pillSheetModifiedHistoryDatastore =
+      PillSheetModifiedHistoryDatastore(database);
+  final pillSheetGroupDatastore = PillSheetGroupDatastore(database);
+  final pillSheetGroup = await pillSheetGroupDatastore.fetchLatest();
   if (pillSheetGroup == null) {
     return Future.value();
   }
@@ -44,9 +44,9 @@ Future<void> recordPill() async {
     pillSheetGroup: pillSheetGroup,
     activedPillSheet: activedPillSheet,
     batchFactory: batchFactory,
-    pillSheetService: pillSheetService,
-    pillSheetModifiedHistoryService: pillSheetModifiedHistoryService,
-    pillSheetGroupService: pillSheetGroupService,
+    pillSheetDatastore: pillSheetDatastore,
+    pillSheetModifiedHistoryDatastore: pillSheetModifiedHistoryDatastore,
+    pillSheetGroupDatastore: pillSheetGroupDatastore,
     isQuickRecord: true,
   );
 

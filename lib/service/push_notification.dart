@@ -5,7 +5,7 @@ import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/foundation.dart';
 import 'package:pilll/analytics.dart';
 import 'package:pilll/database/database.dart';
-import 'package:pilll/service/user.dart';
+import 'package:pilll/database/user.dart';
 import 'package:firebase_messaging/firebase_messaging.dart';
 
 Future<void> requestNotificationPermissions() async {
@@ -23,10 +23,10 @@ Future<void> requestNotificationPermissions() async {
   }
   listenNotificationEvents();
 
-  final userService = UserService(DatabaseConnection(firebaseUser.uid));
-  userService.fetch().then((_) async {
+  final userDatastore = UserDatastore(DatabaseConnection(firebaseUser.uid));
+  userDatastore.fetch().then((_) async {
     final token = await FirebaseMessaging.instance.getToken();
-    await userService.registerRemoteNotificationToken(token);
+    await userDatastore.registerRemoteNotificationToken(token);
   });
   return Future.value();
 }
