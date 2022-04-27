@@ -46,8 +46,9 @@ class UserDatastore {
     });
   }
 
-  late Stream<User> stream =
+  late Stream<User> _stream =
       _database.userReference().snapshots().map((event) => event.data()!);
+  Stream<User> stream() => _stream;
 
   Future<void> updatePurchaseInfo({
     required bool? isActivated,
