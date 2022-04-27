@@ -19,16 +19,13 @@ class SettingDatastore {
             as Map<String, dynamic>)[UserFirestoreFieldKeys.settings]));
   }
 
-  Stream<Setting> stream() {
-    return _database
-        .userReference()
-        .snapshots()
-        .map((event) => event.data())
-        .where((data) => data != null)
-        .map((data) => Setting.fromJson(
-            (data as Map<String, dynamic>)[UserFirestoreFieldKeys.settings]))
-        .cast();
-  }
+  late Stream<Setting> _stream = _database
+      .userReference()
+      .snapshots()
+      .map((event) => event.data()?.setting)
+      .where((data) => data != null)
+      .cast();
+  Stream<Setting> stream() => _stream;
 
   Future<Setting> update(Setting setting) {
     return _database

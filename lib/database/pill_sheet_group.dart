@@ -47,9 +47,8 @@ class PillSheetGroupDatastore {
       .map(((event) => _filter(event)))
       .where((event) => event != null)
       .cast();
-  Stream<PillSheetGroup> latestPillSheetGroupStream() {
-    return _latestPillSheetGroupStream;
-  }
+  Stream<PillSheetGroup> latestPillSheetGroupStream() =>
+      _latestPillSheetGroupStream;
 
   // Return new PillSheet document id
   PillSheetGroup register(WriteBatch batch, PillSheetGroup pillSheetGroup) {
