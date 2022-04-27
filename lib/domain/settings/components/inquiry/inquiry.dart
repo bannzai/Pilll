@@ -35,7 +35,7 @@ Future<String> debugInfo(String separator) async {
 
   Setting? setting;
   try {
-    setting = await SettingDatabase(databaseConnection).fetch();
+    setting = await SettingDatastore(databaseConnection).fetch();
   } catch (_) {}
 
   List<Menstruation> menstruations = [];

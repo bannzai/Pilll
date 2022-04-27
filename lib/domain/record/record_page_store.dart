@@ -26,7 +26,7 @@ final recordPageStoreProvider =
         (ref) => RecordPageStore(
               ref.watch(batchFactoryProvider),
               ref.watch(pillSheetDatabaseProvider),
-              ref.watch(settingDatabaseProvider),
+              ref.watch(settingDatastoreProvider),
               ref.watch(userDatastoreProvider),
               ref.watch(authServiceProvider),
               ref.watch(pillSheetModifiedHistoryDatabaseProvider),
@@ -36,7 +36,7 @@ final recordPageStoreProvider =
 class RecordPageStore extends StateNotifier<RecordPageState> {
   final BatchFactory _batchFactory;
   final PillSheetDatabase _pillSheetService;
-  final SettingDatabase _settingService;
+  final SettingDatastore _settingService;
   final UserDatastore _userService;
   final AuthService _authService;
   final PillSheetModifiedHistoryDatabase _pillSheetModifiedHistoryService;

@@ -7,13 +7,13 @@ import 'package:riverpod/riverpod.dart';
 final settingMenstruationStoreProvider = StateNotifierProvider.autoDispose<
     SettingMenstruationStateStore, SettingMenstruationState>(
   (ref) => SettingMenstruationStateStore(
-    ref.watch(settingDatabaseProvider),
+    ref.watch(settingDatastoreProvider),
   ),
 );
 
 class SettingMenstruationStateStore
     extends StateNotifier<SettingMenstruationState> {
-  final SettingDatabase _settingService;
+  final SettingDatastore _settingService;
   SettingMenstruationStateStore(
     this._settingService,
   ) : super(const SettingMenstruationState());

@@ -117,7 +117,7 @@ class MockTodayService extends _i1.Mock implements _i14.TodayService {
 /// A class which mocks [SettingDatabase].
 ///
 /// See the documentation for Mockito's code generation for more information.
-class MockSettingDatabase extends _i1.Mock implements _i15.SettingDatabase {
+class MockSettingDatabase extends _i1.Mock implements _i15.SettingDatastore {
   MockSettingDatabase() {
     _i1.throwOnMissingStub(this);
   }
