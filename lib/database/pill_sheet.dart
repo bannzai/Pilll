@@ -35,7 +35,7 @@ class PillSheetDatastore {
     return updated;
   }
 
-  update(WriteBatch batch, List<PillSheet> pillSheets) {
+  void update(WriteBatch batch, List<PillSheet> pillSheets) {
     pillSheets.forEach((pillSheet) {
       final json = pillSheet.toJson();
       batch.update(_database.pillSheetReference(pillSheet.documentID!), json);
