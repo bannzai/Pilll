@@ -34,16 +34,15 @@ class UserDatastore {
     return user;
   }
 
-  Future<User> fetch() {
+  Future<User> fetch() async {
     print("call fetch for ${_database.userID}");
-    return _database.userReference().get().then((document) {
-      if (!document.exists) {
-        print("user does not exists ${_database.userID}");
-        throw UserNotFound();
-      }
-      print("fetched user ${document.data()}, id: ${_database.userID}");
-      return User.fromJson(document.data() as Map<String, dynamic>);
-    });
+    final document = await _database.userReference().get();
+    if (!document.exists) {
+      print("user does not exists ${_database.userID}");
+      throw UserNotFound();
+    }
+
+    return document.data()!;
   }
 
   late Stream<User> _stream =
@@ -174,10 +173,6 @@ class UserDatastore {
     }, SetOptions(merge: true));
   }
 
-  Future<DocumentSnapshot> _fetchRawDocumentSnapshot() {
-    return _database.userReference().get();
-  }
-
   // NOTE: 下位互換のために一時的にhasDiscountEntitlementをtrueにしていくスクリプト。
   // サーバー側での制御が無駄になるけど、理屈ではこれで生合成が取れる
   Future<void> temporarySyncronizeDiscountEntitlement(User user) async {
@@ -196,22 +191,20 @@ class UserDatastore {
 }
 
 extension SaveUserLaunchInfo on UserDatastore {
-  saveUserLaunchInfo() {
-    unawaited(_recordUserIDs());
+  saveUserLaunchInfo(User user) {
+    unawaited(_recordUserIDs(user));
     unawaited(_saveLaunchInfo());
     unawaited(_saveStats());
   }
 
-  Future<void> _recordUserIDs() async {
+  Future<void> _recordUserIDs(User user) async {
     try {
-      final document = await _fetchRawDocumentSnapshot();
-      final user = User.fromJson(document.data() as Map<String, dynamic>);
-      final documentID = document.id;
+      final userID = user.id!;
       final sharedPreferences = await SharedPreferences.getInstance();
 
       List<String> userDocumentIDSets = user.userDocumentIDSets;
-      if (!userDocumentIDSets.contains(documentID)) {
-        userDocumentIDSets.add(documentID);
+      if (!userDocumentIDSets.contains(userID)) {
+        userDocumentIDSets.add(userID);
       }
 
       final lastSignInAnonymousUID =

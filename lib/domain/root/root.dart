@@ -164,10 +164,10 @@ class RootState extends State<Root> {
   Future<User> _mutateUserWithLaunchInfoAnd(
       FirebaseAuth.User firebaseUser) async {
     final userDatastore = UserDatastore(DatabaseConnection(firebaseUser.uid));
-    userDatastore.saveUserLaunchInfo();
-
     final user = await userDatastore.fetchOrCreate(firebaseUser.uid);
-    unawaited(userDatastore.temporarySyncronizeDiscountEntitlement(user));
+
+    userDatastore.saveUserLaunchInfo(user);
+    userDatastore.temporarySyncronizeDiscountEntitlement(user);
 
     return user;
   }

@@ -171,7 +171,8 @@ class _$UserTearOff {
   const _$UserTearOff();
 
   _User call(
-      {@JsonKey(name: "settings")
+      {String? id,
+      @JsonKey(name: "settings")
           Setting? setting,
       bool migratedFlutter = false,
       String? userIDWhenCreateUser,
@@ -189,6 +190,7 @@ class _$UserTearOff {
       @JsonKey(fromJson: TimestampConverter.timestampToDateTime, toJson: TimestampConverter.dateTimeToTimestamp)
           DateTime? discountEntitlementDeadlineDate}) {
     return _User(
+      id: id,
       setting: setting,
       migratedFlutter: migratedFlutter,
       userIDWhenCreateUser: userIDWhenCreateUser,
@@ -215,6 +217,7 @@ const $User = _$UserTearOff();
 
 /// @nodoc
 mixin _$User {
+  String? get id => throw _privateConstructorUsedError;
   @JsonKey(name: "settings")
   Setting? get setting => throw _privateConstructorUsedError;
   bool get migratedFlutter => throw _privateConstructorUsedError;
@@ -251,7 +254,8 @@ abstract class $UserCopyWith<$Res> {
   factory $UserCopyWith(User value, $Res Function(User) then) =
       _$UserCopyWithImpl<$Res>;
   $Res call(
-      {@JsonKey(name: "settings")
+      {String? id,
+      @JsonKey(name: "settings")
           Setting? setting,
       bool migratedFlutter,
       String? userIDWhenCreateUser,
@@ -282,6 +286,7 @@ class _$UserCopyWithImpl<$Res> implements $UserCopyWith<$Res> {
 
   @override
   $Res call({
+    Object? id = freezed,
     Object? setting = freezed,
     Object? migratedFlutter = freezed,
     Object? userIDWhenCreateUser = freezed,
@@ -297,6 +302,10 @@ class _$UserCopyWithImpl<$Res> implements $UserCopyWith<$Res> {
     Object? discountEntitlementDeadlineDate = freezed,
   }) {
     return _then(_value.copyWith(
+      id: id == freezed
+          ? _value.id
+          : id // ignore: cast_nullable_to_non_nullable
+              as String?,
       setting: setting == freezed
           ? _value.setting
           : setting // ignore: cast_nullable_to_non_nullable
@@ -371,7 +380,8 @@ abstract class _$UserCopyWith<$Res> implements $UserCopyWith<$Res> {
       __$UserCopyWithImpl<$Res>;
   @override
   $Res call(
-      {@JsonKey(name: "settings")
+      {String? id,
+      @JsonKey(name: "settings")
           Setting? setting,
       bool migratedFlutter,
       String? userIDWhenCreateUser,
@@ -404,6 +414,7 @@ class __$UserCopyWithImpl<$Res> extends _$UserCopyWithImpl<$Res>
 
   @override
   $Res call({
+    Object? id = freezed,
     Object? setting = freezed,
     Object? migratedFlutter = freezed,
     Object? userIDWhenCreateUser = freezed,
@@ -419,6 +430,10 @@ class __$UserCopyWithImpl<$Res> extends _$UserCopyWithImpl<$Res>
     Object? discountEntitlementDeadlineDate = freezed,
   }) {
     return _then(_User(
+      id: id == freezed
+          ? _value.id
+          : id // ignore: cast_nullable_to_non_nullable
+              as String?,
       setting: setting == freezed
           ? _value.setting
           : setting // ignore: cast_nullable_to_non_nullable
@@ -481,7 +496,8 @@ class __$UserCopyWithImpl<$Res> extends _$UserCopyWithImpl<$Res>
 @JsonSerializable(explicitToJson: true)
 class _$_User extends _User {
   const _$_User(
-      {@JsonKey(name: "settings")
+      {this.id,
+      @JsonKey(name: "settings")
           this.setting,
       this.migratedFlutter = false,
       this.userIDWhenCreateUser,
@@ -502,6 +518,8 @@ class _$_User extends _User {
 
   factory _$_User.fromJson(Map<String, dynamic> json) => _$$_UserFromJson(json);
 
+  @override
+  final String? id;
   @override
   @JsonKey(name: "settings")
   final Setting? setting;
@@ -548,7 +566,7 @@ class _$_User extends _User {
 
   @override
   String toString() {
-    return 'User(setting: $setting, migratedFlutter: $migratedFlutter, userIDWhenCreateUser: $userIDWhenCreateUser, anonymousUserID: $anonymousUserID, userDocumentIDSets: $userDocumentIDSets, anonymousUserIDSets: $anonymousUserIDSets, firebaseCurrentUserIDSets: $firebaseCurrentUserIDSets, isPremium: $isPremium, isTrial: $isTrial, hasDiscountEntitlement: $hasDiscountEntitlement, beginTrialDate: $beginTrialDate, trialDeadlineDate: $trialDeadlineDate, discountEntitlementDeadlineDate: $discountEntitlementDeadlineDate)';
+    return 'User(id: $id, setting: $setting, migratedFlutter: $migratedFlutter, userIDWhenCreateUser: $userIDWhenCreateUser, anonymousUserID: $anonymousUserID, userDocumentIDSets: $userDocumentIDSets, anonymousUserIDSets: $anonymousUserIDSets, firebaseCurrentUserIDSets: $firebaseCurrentUserIDSets, isPremium: $isPremium, isTrial: $isTrial, hasDiscountEntitlement: $hasDiscountEntitlement, beginTrialDate: $beginTrialDate, trialDeadlineDate: $trialDeadlineDate, discountEntitlementDeadlineDate: $discountEntitlementDeadlineDate)';
   }
 
   @override
@@ -556,6 +574,7 @@ class _$_User extends _User {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _User &&
+            const DeepCollectionEquality().equals(other.id, id) &&
             const DeepCollectionEquality().equals(other.setting, setting) &&
             const DeepCollectionEquality()
                 .equals(other.migratedFlutter, migratedFlutter) &&
@@ -585,6 +604,7 @@ class _$_User extends _User {
   @override
   int get hashCode => Object.hash(
       runtimeType,
+      const DeepCollectionEquality().hash(id),
       const DeepCollectionEquality().hash(setting),
       const DeepCollectionEquality().hash(migratedFlutter),
       const DeepCollectionEquality().hash(userIDWhenCreateUser),
@@ -612,7 +632,8 @@ class _$_User extends _User {
 
 abstract class _User extends User {
   const factory _User(
-      {@JsonKey(name: "settings")
+      {String? id,
+      @JsonKey(name: "settings")
           Setting? setting,
       bool migratedFlutter,
       String? userIDWhenCreateUser,
@@ -633,6 +654,8 @@ abstract class _User extends User {
 
   factory _User.fromJson(Map<String, dynamic> json) = _$_User.fromJson;
 
+  @override
+  String? get id;
   @override
   @JsonKey(name: "settings")
   Setting? get setting;

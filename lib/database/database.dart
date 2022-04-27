@@ -37,8 +37,8 @@ class DatabaseConnection {
   String get userID => _userID;
   final String _userID;
 
-  FromFirestore<User> _userFromFirestore =
-      (snapshot, options) => User.fromJson(snapshot.data()!);
+  FromFirestore<User> _userFromFirestore = (snapshot, options) =>
+      User.fromJson(snapshot.data()!.putIfAbsent("id", () => snapshot.id));
   ToFirestore<User> _userToFirestore = (user, options) => user.toJson();
   DocumentReference<User> userReference() => FirebaseFirestore.instance
       .collection(_CollectionPath.users)
