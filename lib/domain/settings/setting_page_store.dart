@@ -82,6 +82,15 @@ class SettingStateStore extends StateNotifier<SettingState> {
         state = state.copyWith(latestPillSheetGroup: pillsheetGroup);
       });
 
+      Future(() async {
+        final user = await _userDatastore.fetch();
+        state = state.copyWith(
+          isPremium: user.isPremium,
+          isTrial: user.isTrial,
+          trialDeadlineDate: user.trialDeadlineDate,
+        );
+      });
+
       _subscribe();
     } catch (exception) {
       state = state.copyWith(exception: exception);
