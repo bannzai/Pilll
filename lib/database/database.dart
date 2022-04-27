@@ -94,7 +94,8 @@ class DatabaseConnection {
       .doc(_userID);
 
   FromFirestore<Menstruation> _menstruationFromFirestore =
-      (snapshot, options) => Menstruation.fromJson(snapshot.data()!);
+      (snapshot, options) => Menstruation.fromJson(
+          snapshot.data()!.putIfAbsent("id", () => snapshot.id));
   ToFirestore<Menstruation> _menstruationToFirestore =
       (menstruation, options) => menstruation.toJson();
   CollectionReference<Menstruation> menstruationsReference() =>
