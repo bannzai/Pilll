@@ -73,6 +73,8 @@ void main() {
 
       final pillSheetDatastore = MockPillSheetDatastore();
       final userDatastore = MockUserDatastore();
+      when(userDatastore.fetch())
+          .thenAnswer((realInvocation) => Future.value(_FakeUser()));
       when(userDatastore.stream())
           .thenAnswer((realInvocation) => Stream.fromIterable([_FakeUser()]));
 
@@ -148,6 +150,8 @@ void main() {
           .thenAnswer((realInvocation) => Stream.value(entity));
 
       final userDatastore = MockUserDatastore();
+      when(userDatastore.fetch())
+          .thenAnswer((realInvocation) => Future.value(_FakeUser()));
       when(userDatastore.stream())
           .thenAnswer((realInvocation) => Stream.value(_FakeUser()));
 
