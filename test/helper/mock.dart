@@ -18,7 +18,7 @@ import 'package:mockito/annotations.dart';
 @GenerateMocks([
   PillSheetDatabase,
   TodayService,
-  SettingService,
+  SettingDatabase,
   Analytics,
   DiaryDatabase,
   MenstruationDatabase,

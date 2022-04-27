@@ -26,7 +26,7 @@ final initialSettingStoreProvider = StateNotifierProvider.autoDispose<
   (ref) => InitialSettingStateStore(
     ref.watch(userServiceProvider),
     ref.watch(batchFactoryProvider),
-    ref.watch(settingServiceProvider),
+    ref.watch(settingDatabaseProvider),
     ref.watch(pillSheetDatabaseProvider),
     ref.watch(pillSheetModifiedHistoryDatabaseProvider),
     ref.watch(pillSheetGroupDatabaseProvider),
@@ -40,7 +40,7 @@ final initialSettingStateProvider =
 class InitialSettingStateStore extends StateNotifier<InitialSettingState> {
   final UserService _userService;
   final BatchFactory _batchFactory;
-  final SettingService _settingService;
+  final SettingDatabase _settingService;
   final PillSheetDatabase _pillSheetService;
   final PillSheetModifiedHistoryDatabase _pillSheetModifiedHistoryService;
   final PillSheetGroupDatabase _pillSheetGroupService;

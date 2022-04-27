@@ -6,12 +6,12 @@ import 'package:pilll/entity/setting.codegen.dart';
 import 'package:pilll/entity/user.codegen.dart';
 import 'package:riverpod/riverpod.dart';
 
-final settingServiceProvider =
-    Provider((ref) => SettingService(ref.watch(databaseProvider)));
+final settingDatabaseProvider =
+    Provider((ref) => SettingDatabase(ref.watch(databaseProvider)));
 
-class SettingService {
+class SettingDatabase {
   final DatabaseConnection _database;
-  SettingService(this._database);
+  SettingDatabase(this._database);
 
   Future<Setting> fetch() {
     return _database.userReference().get().then((event) => Setting.fromJson(
