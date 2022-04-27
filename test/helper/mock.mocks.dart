@@ -657,7 +657,7 @@ class MockPremiumIntroductionStore extends _i1.Mock
 ///
 /// See the documentation for Mockito's code generation for more information.
 class MockPillSheetModifiedHistoryDatabase extends _i1.Mock
-    implements _i31.PillSheetModifiedHistoryDatabase {
+    implements _i31.PillSheetModifiedHistoryDatastore {
   MockPillSheetModifiedHistoryDatabase() {
     _i1.throwOnMissingStub(this);
   }

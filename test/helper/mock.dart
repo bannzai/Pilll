@@ -27,7 +27,7 @@ import 'package:mockito/annotations.dart';
   RecordPageStore,
   NotificationBarStateStore,
   PremiumIntroductionStore,
-  PillSheetModifiedHistoryDatabase,
+  PillSheetModifiedHistoryDatastore,
   PillSheetGroupDatabase,
   BatchFactory,
   WriteBatch,

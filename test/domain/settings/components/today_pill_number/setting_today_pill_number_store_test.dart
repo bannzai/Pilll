@@ -81,7 +81,7 @@ void main() {
         overrides: [
           batchFactoryProvider.overrideWithValue(batchFactory),
           pillSheetDatastoreProvider.overrideWithValue(pillSheetService),
-          pillSheetModifiedHistoryDatabaseProvider
+          pillSheetModifiedHistoryDatastoreProvider
               .overrideWithValue(pillSheetModifiedHistoryService),
           pillSheetGroupDatabaseProvider
               .overrideWithValue(pillSheetGroupService),
@@ -165,7 +165,7 @@ void main() {
         overrides: [
           batchFactoryProvider.overrideWithValue(batchFactory),
           pillSheetDatastoreProvider.overrideWithValue(pillSheetService),
-          pillSheetModifiedHistoryDatabaseProvider
+          pillSheetModifiedHistoryDatastoreProvider
               .overrideWithValue(pillSheetModifiedHistoryService),
           pillSheetGroupDatabaseProvider
               .overrideWithValue(pillSheetGroupService),
@@ -276,7 +276,7 @@ void main() {
         overrides: [
           batchFactoryProvider.overrideWithValue(batchFactory),
           pillSheetDatastoreProvider.overrideWithValue(pillSheetService),
-          pillSheetModifiedHistoryDatabaseProvider
+          pillSheetModifiedHistoryDatastoreProvider
               .overrideWithValue(pillSheetModifiedHistoryService),
           pillSheetGroupDatabaseProvider
               .overrideWithValue(pillSheetGroupService),
@@ -387,7 +387,7 @@ void main() {
         overrides: [
           batchFactoryProvider.overrideWithValue(batchFactory),
           pillSheetDatastoreProvider.overrideWithValue(pillSheetService),
-          pillSheetModifiedHistoryDatabaseProvider
+          pillSheetModifiedHistoryDatastoreProvider
               .overrideWithValue(pillSheetModifiedHistoryService),
           pillSheetGroupDatabaseProvider
               .overrideWithValue(pillSheetGroupService),
@@ -499,7 +499,7 @@ void main() {
         overrides: [
           batchFactoryProvider.overrideWithValue(batchFactory),
           pillSheetDatastoreProvider.overrideWithValue(pillSheetService),
-          pillSheetModifiedHistoryDatabaseProvider
+          pillSheetModifiedHistoryDatastoreProvider
               .overrideWithValue(pillSheetModifiedHistoryService),
           pillSheetGroupDatabaseProvider
               .overrideWithValue(pillSheetGroupService),
@@ -619,7 +619,7 @@ void main() {
         overrides: [
           batchFactoryProvider.overrideWithValue(batchFactory),
           pillSheetDatastoreProvider.overrideWithValue(pillSheetService),
-          pillSheetModifiedHistoryDatabaseProvider
+          pillSheetModifiedHistoryDatastoreProvider
               .overrideWithValue(pillSheetModifiedHistoryService),
           pillSheetGroupDatabaseProvider
               .overrideWithValue(pillSheetGroupService),

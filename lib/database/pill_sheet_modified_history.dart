@@ -7,14 +7,14 @@ import 'package:pilll/entity/pill_sheet_modified_history_value.codegen.dart';
 import 'package:pilll/util/datetime/day.dart';
 import 'package:riverpod/riverpod.dart';
 
-final pillSheetModifiedHistoryDatabaseProvider =
-    Provider<PillSheetModifiedHistoryDatabase>(
-        (ref) => PillSheetModifiedHistoryDatabase(ref.watch(databaseProvider)));
+final pillSheetModifiedHistoryDatastoreProvider =
+    Provider<PillSheetModifiedHistoryDatastore>(
+        (ref) => PillSheetModifiedHistoryDatastore(ref.watch(databaseProvider)));
 
-class PillSheetModifiedHistoryDatabase {
+class PillSheetModifiedHistoryDatastore {
   final DatabaseConnection _database;
 
-  PillSheetModifiedHistoryDatabase(this._database);
+  PillSheetModifiedHistoryDatastore(this._database);
 
   Future<List<PillSheetModifiedHistory>> fetchList(DateTime? after, int limit) {
     return _database
@@ -76,7 +76,7 @@ class PillSheetModifiedHistoryDatabase {
 
 // Factories
 extension PillSheetModifiedHistoryServiceActionFactory
-    on PillSheetModifiedHistoryDatabase {
+    on PillSheetModifiedHistoryDatastore {
   static PillSheetModifiedHistory _create({
     required PillSheet? before,
     required PillSheet? after,
@@ -338,7 +338,7 @@ extension PillSheetModifiedHistoryServiceActionFactory
 }
 
 Future<void> updateForEditTakenValue({
-  required PillSheetModifiedHistoryDatabase service,
+  required PillSheetModifiedHistoryDatastore service,
   required DateTime actualTakenDate,
   required PillSheetModifiedHistory history,
   required PillSheetModifiedHistoryValue value,

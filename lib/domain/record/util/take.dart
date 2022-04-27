@@ -53,7 +53,7 @@ Future<PillSheetGroup?> take({
   required PillSheet activedPillSheet,
   required BatchFactory batchFactory,
   required PillSheetDatastore pillSheetService,
-  required PillSheetModifiedHistoryDatabase pillSheetModifiedHistoryService,
+  required PillSheetModifiedHistoryDatastore pillSheetModifiedHistoryService,
   required PillSheetGroupDatabase pillSheetGroupService,
   required bool isQuickRecord,
 }) async {

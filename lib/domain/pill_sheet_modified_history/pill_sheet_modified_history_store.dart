@@ -10,13 +10,13 @@ import 'package:riverpod/riverpod.dart';
 final pillSheetModifiedHistoryStoreProvider = StateNotifierProvider.autoDispose<
     PillSheetModifiedHistoryStateStore, PillSheetModifiedHistoryState>(
   (ref) => PillSheetModifiedHistoryStateStore(
-    ref.watch(pillSheetModifiedHistoryDatabaseProvider),
+    ref.watch(pillSheetModifiedHistoryDatastoreProvider),
   ),
 );
 
 class PillSheetModifiedHistoryStateStore
     extends StateNotifier<PillSheetModifiedHistoryState> {
-  final PillSheetModifiedHistoryDatabase _pillSheetModifiedHistoryService;
+  final PillSheetModifiedHistoryDatastore _pillSheetModifiedHistoryService;
   PillSheetModifiedHistoryStateStore(
     this._pillSheetModifiedHistoryService,
   ) : super(const PillSheetModifiedHistoryState()) {

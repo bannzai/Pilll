@@ -23,7 +23,7 @@ Future<void> recordPill() async {
   final database = DatabaseConnection(firebaseUser.uid);
   final pillSheetService = PillSheetDatastore(database);
   final pillSheetModifiedHistoryService =
-      PillSheetModifiedHistoryDatabase(database);
+      PillSheetModifiedHistoryDatastore(database);
   final pillSheetGroupService = PillSheetGroupDatabase(database);
   final pillSheetGroup = await pillSheetGroupService.fetchLatest();
   if (pillSheetGroup == null) {
