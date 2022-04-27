@@ -46,12 +46,8 @@ class UserDatastore {
     });
   }
 
-  Stream<User> stream() {
-    return _database
-        .userReference()
-        .snapshots(includeMetadataChanges: true)
-        .map((event) => User.fromJson(event.data() as Map<String, dynamic>));
-  }
+  late Stream<User> stream =
+      _database.userReference().snapshots().map((event) => event.data()!);
 
   Future<void> updatePurchaseInfo({
     required bool? isActivated,
