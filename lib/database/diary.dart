@@ -25,11 +25,7 @@ class DiaryDatastore {
             isGreaterThanOrEqualTo: DateTime(base.year, base.month, -90))
         .orderBy(DiaryFirestoreKey.date)
         .get()
-        .then((event) => event.docs
-            .map((e) => e.data())
-            .whereType<Map<String, dynamic>>()
-            .map((data) => Diary.fromJson(data))
-            .toList());
+        .then((event) => event.docs.map((e) => e.data()).toList());
   }
 
   Future<List<Diary>> fetchListForMonth(DateTime dateTimeOfMonth) {
@@ -42,11 +38,7 @@ class DiaryDatastore {
                 DateTime(dateTimeOfMonth.year, dateTimeOfMonth.month, 1))
         .orderBy(DiaryFirestoreKey.date)
         .get()
-        .then((event) => event.docs
-            .map((e) => e.data())
-            .whereType<Map<String, dynamic>>()
-            .map((data) => Diary.fromJson(data))
-            .toList());
+        .then((event) => event.docs.map((e) => e.data()).toList());
   }
 
   Future<Diary> register(Diary diary) {
@@ -71,11 +63,7 @@ class DiaryDatastore {
     return _database
         .diariesReference()
         .snapshots()
-        .map((event) => event.docs
-            .map((e) => e.data())
-            .whereType<Map<String, dynamic>>()
-            .map((data) => Diary.fromJson(data))
-            .toList())
+        .map((event) => event.docs.map((e) => e.data()).toList())
         .map((diaries) => sortedDiaries(diaries));
   }
 }
