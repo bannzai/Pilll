@@ -25,21 +25,32 @@ class RecordPage extends HookConsumerWidget {
     final store = ref.watch(recordPageStoreProvider.notifier);
     useAutomaticKeepAlive(wantKeepAlive: true);
 
-    final exception = state.exception;
-    if (exception != null) {
-      return UniversalErrorPage(
-        error: exception,
-        reload: () => store.reset(),
+    return state.when(
+      data: (state) => RecordPageBody(store: store, state: state),
+      error: (error, stackTrace) => UniversalErrorPage(
+        error: error,
+        reload: () => ref.refresh(recordPageAsyncStateProvider),
         child: null,
-      );
-    }
+      ),
+      loading: () => const Indicator(),
+    );
+  }
+}
 
+class RecordPageBody extends StatelessWidget {
+  final RecordPageStore store;
+  final RecordPageState state;
+
+  const RecordPageBody({
+    Key? key,
+    required this.store,
+    required this.state,
+  }) : super(key: key);
+  @override
+  Widget build(BuildContext context) {
     final pillSheetGroup = state.pillSheetGroup;
     final activedPillSheet = pillSheetGroup?.activedPillSheet;
     final setting = state.setting;
-    if (setting == null || !state.firstLoadIsEnded) {
-      return const Indicator();
-    }
 
     Future.microtask(() async {
       if (state.shouldShowMigrateInfo) {
@@ -54,46 +65,42 @@ class RecordPage extends HookConsumerWidget {
       }
     });
 
-    return UniversalErrorPage(
-      error: state.exception,
-      reload: () => store.reset(),
-      child: Scaffold(
-        backgroundColor: PilllColors.background,
-        appBar: AppBar(
-          titleSpacing: 0,
-          backgroundColor: PilllColors.white,
-          toolbarHeight: RecordPageInformationHeaderConst.height,
-          title: Stack(
-            children: [
-              RecordPageInformationHeader(
-                today: DateTime.now(),
-                pillSheetGroup: state.pillSheetGroup,
-                setting: setting,
-                store: store,
-              ),
-            ],
-          ),
-        ),
-        body: Column(
+    return Scaffold(
+      backgroundColor: PilllColors.background,
+      appBar: AppBar(
+        titleSpacing: 0,
+        backgroundColor: PilllColors.white,
+        toolbarHeight: RecordPageInformationHeaderConst.height,
+        title: Stack(
           children: [
-            Expanded(
-              child: ListView(
-                children: [
-                  NotificationBar(state),
-                  const SizedBox(height: 37),
-                  _content(context, setting, state, store),
-                  const SizedBox(height: 20),
-                ],
-              ),
+            RecordPageInformationHeader(
+              today: DateTime.now(),
+              pillSheetGroup: state.pillSheetGroup,
+              setting: setting,
+              store: store,
             ),
-            if (activedPillSheet != null &&
-                pillSheetGroup != null &&
-                !pillSheetGroup.isDeactived) ...[
-              RecordPageButton(currentPillSheet: activedPillSheet),
-              const SizedBox(height: 40),
-            ],
           ],
         ),
+      ),
+      body: Column(
+        children: [
+          Expanded(
+            child: ListView(
+              children: [
+                NotificationBar(state),
+                const SizedBox(height: 37),
+                _content(context, setting, state, store),
+                const SizedBox(height: 20),
+              ],
+            ),
+          ),
+          if (activedPillSheet != null &&
+              pillSheetGroup != null &&
+              !pillSheetGroup.isDeactived) ...[
+            RecordPageButton(currentPillSheet: activedPillSheet),
+            const SizedBox(height: 40),
+          ],
+        ],
       ),
     );
   }
@@ -119,6 +126,7 @@ class RecordPage extends HookConsumerWidget {
         mainAxisAlignment: MainAxisAlignment.start,
         children: [
           RecordPagePillSheetSupportActions(
+            state: state,
             store: store,
             pillSheetGroup: pillSheetGroup,
             activedPillSheet: activedPillSheet,
@@ -134,7 +142,7 @@ class RecordPage extends HookConsumerWidget {
       );
   }
 
-  Future<void> _showMigrateInfoDialog(
+  void _showMigrateInfoDialog(
       BuildContext context, RecordPageStore store) async {
     showDialog(
         context: context,
@@ -142,7 +150,7 @@ class RecordPage extends HookConsumerWidget {
         builder: (context) {
           return MigrateInfo(
             onClose: () async {
-              await store.shownMigrateInfo();
+              store.showMigrateInfo();
               Navigator.of(context).pop();
             },
           );

@@ -125,7 +125,7 @@ class RecordPageStore extends StateNotifier<AsyncValue<RecordPageState>> {
         pillNumberIntoPillSheet <= activedPillSheet.todayPillNumber;
   }
 
-  void shownMigrateInfo() async {
+  void showMigrateInfo() async {
     final value = state.value;
     if (value == null) {
       return;
@@ -167,7 +167,7 @@ class RecordPageStore extends StateNotifier<AsyncValue<RecordPageState>> {
   void switchingAppearanceMode(PillSheetAppearanceMode mode) => _asyncAction
       .switchingAppearanceMode(mode: mode, setting: _stateValue.setting);
 
-  void setTrueIsAlreadyShowPremiumFunctionSurvey() async {
+  Future<void> setTrueIsAlreadyShowPremiumFunctionSurvey() async {
     final sharedPreferences = await SharedPreferences.getInstance();
     sharedPreferences.setBool(BoolKey.isAlreadyShowPremiumSurvey, true);
 

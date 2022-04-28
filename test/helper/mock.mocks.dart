@@ -474,7 +474,7 @@ class MockRecordPageStore extends _i1.Mock implements _i25.RecordPageStore {
           }),
           returnValue: false) as bool);
   @override
-  void shownMigrateInfo() =>
+  void showMigrateInfo() =>
       super.noSuchMethod(Invocation.method(#shownMigrateInfo, []),
           returnValueForMissingStub: null);
   @override
