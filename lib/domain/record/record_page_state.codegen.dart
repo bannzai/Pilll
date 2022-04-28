@@ -66,7 +66,7 @@ class RecordPageState with _$RecordPageState {
   }
 }
 
-final recordStateProvider = StateProvider<AsyncValue<RecordPageState>>((ref) {
+final recordPageAsyncStateProvider = StateProvider<AsyncValue<RecordPageState>>((ref) {
   final latestPillSheetGroup =
       ref.watch(latestPillSheetGroupStreamProvider).asData;
   if (latestPillSheetGroup == null) {

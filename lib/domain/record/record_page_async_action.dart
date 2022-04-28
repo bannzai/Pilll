@@ -374,10 +374,7 @@ class RecordPageAsyncAction {
   }
 
   void switchingAppearanceMode(
-      {required PillSheetAppearanceMode mode, Setting? setting}) {
-    if (setting == null) {
-      throw const FormatException("setting entity not found");
-    }
+      {required PillSheetAppearanceMode mode, required Setting setting}) {
     final updated = setting.copyWith(pillSheetAppearanceMode: mode);
     _settingDatastore.update(updated);
   }
