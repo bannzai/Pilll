@@ -22,6 +22,17 @@ import 'package:pilll/util/shared_preference/keys.dart';
 import 'package:riverpod/riverpod.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
+final recordStateProvider = StateProvider<AsyncValue<RecordPageState>>((ref) {
+  final latestPillSheetGroupAsyncData =
+      ref.watch(latestPillSheetGroupStreamProvider).asData;
+  if (latestPillSheetGroupAsyncData == null) {
+    return const AsyncValue.loading();
+  }
+
+  return AsyncValue.data(
+      RecordPageState(pillSheetGroup: latestPillSheetGroupAsyncData.value));
+});
+
 final recordPageStoreProvider =
     StateNotifierProvider<RecordPageStore, RecordPageState>(
         (ref) => RecordPageStore(
@@ -135,6 +146,7 @@ class RecordPageStore extends StateNotifier<RecordPageState> {
   StreamSubscription? _userSubscribeCanceller;
   StreamSubscription? _authServiceCanceller;
   void _subscribe() {
+    return;
     _pillSheetGroupCanceller?.cancel();
     _pillSheetGroupCanceller =
         _pillSheetGroupDatastore.latestPillSheetGroupStream().listen((event) {
@@ -335,8 +347,6 @@ class RecordPageStore extends StateNotifier<RecordPageState> {
     _pillSheetModifiedHistoryDatastore.add(batch, history);
 
     await batch.commit();
-
-    state = state.copyWith(pillSheetGroup: updatedPillSheetGroup);
   }
 
   bool isDone({

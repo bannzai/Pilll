@@ -6,6 +6,9 @@ import 'package:riverpod/riverpod.dart';
 final pillSheetGroupDatastoreProvider = Provider<PillSheetGroupDatastore>(
     (ref) => PillSheetGroupDatastore(ref.watch(databaseProvider)));
 
+final latestPillSheetGroupStreamProvider = StreamProvider((ref) =>
+    ref.watch(pillSheetGroupDatastoreProvider).latestPillSheetGroupStream());
+
 class PillSheetGroupDatastore {
   final DatabaseConnection _database;
 
@@ -42,12 +45,9 @@ class PillSheetGroupDatastore {
     return snapshot.docs[0].data();
   }
 
-  late Stream<PillSheetGroup> _latestPillSheetGroupStream = _latestQuery()
-      .snapshots()
-      .map(((event) => _filter(event)))
-      .where((event) => event != null)
-      .cast();
-  Stream<PillSheetGroup> latestPillSheetGroupStream() =>
+  late Stream<PillSheetGroup?> _latestPillSheetGroupStream =
+      _latestQuery().snapshots().map(((event) => _filter(event)));
+  Stream<PillSheetGroup?> latestPillSheetGroupStream() =>
       _latestPillSheetGroupStream;
 
   // Return new PillSheet document id
