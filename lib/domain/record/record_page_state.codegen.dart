@@ -1,7 +1,13 @@
 import 'package:freezed_annotation/freezed_annotation.dart';
+import 'package:pilll/database/pill_sheet_group.dart';
 import 'package:pilll/entity/pill_sheet_group.codegen.dart';
 import 'package:pilll/entity/setting.codegen.dart';
 import 'package:pilll/provider/premium_and_trial.codegen.dart';
+import 'package:riverpod/riverpod.dart';
+import 'package:pilll/provider/shared_preference.dart';
+import 'package:pilll/service/auth.dart';
+import 'package:pilll/database/setting.dart';
+import 'package:pilll/util/shared_preference/keys.dart';
 
 part 'record_page_state.codegen.freezed.dart';
 
@@ -56,6 +62,55 @@ class RecordPageState with _$RecordPageState {
   }
 
   PillSheetAppearanceMode get appearanceMode {
-    return setting?.pillSheetAppearanceMode ?? PillSheetAppearanceMode.number;
+    return setting.pillSheetAppearanceMode;
   }
 }
+
+final recordStateProvider = StateProvider<AsyncValue<RecordPageState>>((ref) {
+  final latestPillSheetGroup =
+      ref.watch(latestPillSheetGroupStreamProvider).asData;
+  if (latestPillSheetGroup == null) {
+    return const AsyncValue.loading();
+  }
+
+  final premiumAndTrial = ref.watch(premiumAndTrialProvider).asData;
+  if (premiumAndTrial == null) {
+    return const AsyncValue.loading();
+  }
+
+  final setting = ref.watch(settingStreamProvider).asData;
+  if (setting == null) {
+    return const AsyncValue.loading();
+  }
+
+  final sharedPreferenceAsyncData = ref.watch(sharedPreferenceProvider).asData;
+  if (sharedPreferenceAsyncData == null) {
+    return const AsyncValue.loading();
+  }
+  final sharedPreferences = sharedPreferenceAsyncData.value;
+
+  return AsyncValue.data(RecordPageState(
+    pillSheetGroup: latestPillSheetGroup.value,
+    setting: setting.value,
+    premiumAndTrial: premiumAndTrial.value,
+    totalCountOfActionForTakenPill:
+        sharedPreferences.getInt(IntKey.totalCountOfActionForTakenPill) ?? 0,
+    shouldShowMigrateInfo:
+        ref.watch(shouldShowMigrationInformationProvider(sharedPreferences)),
+    isAlreadyShowTiral:
+        sharedPreferences.getBool(BoolKey.isAlreadyShowPremiumTrialModal) ??
+            false,
+    isAlreadyShowPremiumSurvey:
+        sharedPreferences.getBool(BoolKey.isAlreadyShowPremiumSurvey) ?? false,
+    recommendedSignupNotificationIsAlreadyShow: sharedPreferences
+            .getBool(BoolKey.recommendedSignupNotificationIsAlreadyShow) ??
+        false,
+    premiumTrialGuideNotificationIsClosed: sharedPreferences
+            .getBool(BoolKey.premiumTrialGuideNotificationIsClosed) ??
+        false,
+    premiumTrialBeginAnouncementIsClosed: sharedPreferences
+            .getBool(BoolKey.premiumTrialBeginAnouncementIsClosed) ??
+        false,
+    isLinkedLoginProvider: ref.watch(isLinkedProvider),
+  ));
+});
