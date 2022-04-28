@@ -21,7 +21,7 @@ class PremiumAndTrial with _$PremiumAndTrial {
   bool get isNotYetStartTrial => trialDeadlineDate == null;
 }
 
-final premiumAndTrialProvider = Provider((ref) {
+final premiumAndTrialProvider = Provider<AsyncValue<PremiumAndTrial>>((ref) {
   final user = ref.watch(userStreamProvider).asData;
   if (user == null) {
     return const AsyncValue.loading();

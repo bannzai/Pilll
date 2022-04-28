@@ -18,6 +18,7 @@ class TakenButton extends HookConsumerWidget {
   @override
   Widget build(BuildContext context, WidgetRef ref) {
     final store = ref.watch(recordPageStoreProvider.notifier);
+
     return PrimaryButton(
       text: "飲んだ",
       onPressed: () async {

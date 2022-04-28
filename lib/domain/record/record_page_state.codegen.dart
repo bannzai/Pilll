@@ -66,51 +66,39 @@ class RecordPageState with _$RecordPageState {
   }
 }
 
-final recordPageAsyncStateProvider = StateProvider<AsyncValue<RecordPageState>>((ref) {
-  final latestPillSheetGroup =
-      ref.watch(latestPillSheetGroupStreamProvider).asData;
-  if (latestPillSheetGroup == null) {
-    return const AsyncValue.loading();
-  }
+final recordPageAsyncStateProvider =
+    FutureProvider<AsyncValue<RecordPageState>>((ref) {
+  return AsyncValue.guard(() async {
+    final latestPillSheetGroup =
+        await ref.watch(latestPillSheetGroupStreamProvider.future);
+    final premiumAndTrial = await ref.watch(premiumAndTrialProvider.future);
+    final setting = await ref.watch(settingStreamProvider.future);
+    final sharedPreferences = await ref.watch(sharedPreferenceProvider.future);
 
-  final premiumAndTrial = ref.watch(premiumAndTrialProvider).asData;
-  if (premiumAndTrial == null) {
-    return const AsyncValue.loading();
-  }
-
-  final setting = ref.watch(settingStreamProvider).asData;
-  if (setting == null) {
-    return const AsyncValue.loading();
-  }
-
-  final sharedPreferenceAsyncData = ref.watch(sharedPreferenceProvider).asData;
-  if (sharedPreferenceAsyncData == null) {
-    return const AsyncValue.loading();
-  }
-  final sharedPreferences = sharedPreferenceAsyncData.value;
-
-  return AsyncValue.data(RecordPageState(
-    pillSheetGroup: latestPillSheetGroup.value,
-    setting: setting.value,
-    premiumAndTrial: premiumAndTrial.value,
-    totalCountOfActionForTakenPill:
-        sharedPreferences.getInt(IntKey.totalCountOfActionForTakenPill) ?? 0,
-    shouldShowMigrateInfo:
-        ref.watch(shouldShowMigrationInformationProvider(sharedPreferences)),
-    isAlreadyShowTiral:
-        sharedPreferences.getBool(BoolKey.isAlreadyShowPremiumTrialModal) ??
-            false,
-    isAlreadyShowPremiumSurvey:
-        sharedPreferences.getBool(BoolKey.isAlreadyShowPremiumSurvey) ?? false,
-    recommendedSignupNotificationIsAlreadyShow: sharedPreferences
-            .getBool(BoolKey.recommendedSignupNotificationIsAlreadyShow) ??
-        false,
-    premiumTrialGuideNotificationIsClosed: sharedPreferences
-            .getBool(BoolKey.premiumTrialGuideNotificationIsClosed) ??
-        false,
-    premiumTrialBeginAnouncementIsClosed: sharedPreferences
-            .getBool(BoolKey.premiumTrialBeginAnouncementIsClosed) ??
-        false,
-    isLinkedLoginProvider: ref.watch(isLinkedProvider),
-  ));
+    return RecordPageState(
+      pillSheetGroup: latestPillSheetGroup,
+      setting: setting,
+      premiumAndTrial: premiumAndTrial,
+      totalCountOfActionForTakenPill:
+          sharedPreferences.getInt(IntKey.totalCountOfActionForTakenPill) ?? 0,
+      shouldShowMigrateInfo:
+          ref.watch(shouldShowMigrationInformationProvider(sharedPreferences)),
+      isAlreadyShowTiral:
+          sharedPreferences.getBool(BoolKey.isAlreadyShowPremiumTrialModal) ??
+              false,
+      isAlreadyShowPremiumSurvey:
+          sharedPreferences.getBool(BoolKey.isAlreadyShowPremiumSurvey) ??
+              false,
+      recommendedSignupNotificationIsAlreadyShow: sharedPreferences
+              .getBool(BoolKey.recommendedSignupNotificationIsAlreadyShow) ??
+          false,
+      premiumTrialGuideNotificationIsClosed: sharedPreferences
+              .getBool(BoolKey.premiumTrialGuideNotificationIsClosed) ??
+          false,
+      premiumTrialBeginAnouncementIsClosed: sharedPreferences
+              .getBool(BoolKey.premiumTrialBeginAnouncementIsClosed) ??
+          false,
+      isLinkedLoginProvider: ref.watch(isLinkedProvider),
+    );
+  });
 });

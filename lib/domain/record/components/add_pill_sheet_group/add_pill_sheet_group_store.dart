@@ -19,9 +19,9 @@ final addPillSheetGroupStateStoreProvider = StateNotifierProvider.autoDispose<
     AddPillSheetGroupStateStore, AddPillSheetGroupState>(
   (ref) {
     return AddPillSheetGroupStateStore(
-      ref.watch(recordPageAsyncStateProvider).value!.pillSheetGroup,
-      ref.watch(recordPageAsyncStateProvider).value!.appearanceMode,
-      ref.watch(recordPageAsyncStateProvider).value!.setting,
+      ref.watch(recordPageStoreProvider).value!.pillSheetGroup,
+      ref.watch(recordPageStoreProvider).value!.appearanceMode,
+      ref.watch(recordPageStoreProvider).value!.setting,
       ref.watch(pillSheetDatastoreProvider),
       ref.watch(pillSheetGroupDatastoreProvider),
       ref.watch(settingDatastoreProvider),
