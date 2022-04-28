@@ -17,6 +17,9 @@ final authStateStreamProvider = StreamProvider<User>(
   (ref) => _userAuthStateChanges().where((event) => event != null).cast(),
 );
 
+final isLinkedProvider =
+    Provider((ref) => apple.isLinkedApple() || google.isLinkedGoogle());
+
 class AuthService {
   // 退会時は一時的にnullになる。なのでOptional型のこのstreamを使う
   Stream<User?> optionalStream() {
