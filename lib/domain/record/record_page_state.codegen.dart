@@ -10,7 +10,7 @@ class RecordPageState with _$RecordPageState {
   const RecordPageState._();
   const factory RecordPageState({
     required PillSheetGroup? pillSheetGroup,
-    required Setting? setting,
+    required Setting setting,
     required PremiumAndTrial premiumAndTrial,
     required int totalCountOfActionForTakenPill,
     required bool isAlreadyShowTiral,
