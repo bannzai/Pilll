@@ -716,10 +716,10 @@ class MockPillSheetGroupDatastore extends _i1.Mock
               returnValue: Future<_i10.PillSheetGroup?>.value())
           as _i16.Future<_i10.PillSheetGroup?>);
   @override
-  _i16.Stream<_i10.PillSheetGroup> latestPillSheetGroupStream() =>
+  _i16.Stream<_i10.PillSheetGroup?> latestPillSheetGroupStream() =>
       (super.noSuchMethod(Invocation.method(#latestPillSheetGroupStream, []),
-              returnValue: Stream<_i10.PillSheetGroup>.empty())
-          as _i16.Stream<_i10.PillSheetGroup>);
+              returnValue: Stream<_i10.PillSheetGroup?>.empty())
+          as _i16.Stream<_i10.PillSheetGroup?>);
   @override
   _i10.PillSheetGroup register(
           _i12.WriteBatch? batch, _i10.PillSheetGroup? pillSheetGroup) =>
