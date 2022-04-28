@@ -13,10 +13,13 @@ import 'package:pilll/domain/record/record_page_store.dart';
 import 'package:pilll/entity/setting.codegen.dart';
 
 class SelectAppearanceModeModal extends HookConsumerWidget {
+  final RecordPageStore store;
+  final RecordPageState state;
+
+  SelectAppearanceModeModal(this.store, this.state);
+
   @override
   Widget build(BuildContext context, WidgetRef ref) {
-    final store = ref.watch(recordPageStoreProvider.notifier);
-    final state = ref.watch(recordPageStoreProvider);
     return Container(
       color: Colors.white,
       padding: const EdgeInsets.only(bottom: 20, top: 24, left: 16, right: 16),
