@@ -10,6 +10,7 @@ import 'package:pilll/entity/pill_sheet_type.dart';
 import 'package:pilll/entity/setting.codegen.dart';
 import 'package:pilll/entity/user.codegen.dart';
 import 'package:pilll/native/legacy.dart';
+import 'package:pilll/provider/shared_preference.dart';
 import 'package:pilll/service/auth.dart';
 import 'package:pilll/database/pill_sheet.dart';
 import 'package:pilll/domain/record/record_page_state.codegen.dart';
@@ -17,20 +18,59 @@ import 'package:pilll/database/pill_sheet_group.dart';
 import 'package:pilll/database/pill_sheet_modified_history.dart';
 import 'package:pilll/database/setting.dart';
 import 'package:pilll/database/user.dart';
+import 'package:pilll/provider/premium_and_trial.codegen.dart';
 import 'package:pilll/util/datetime/day.dart';
 import 'package:pilll/util/shared_preference/keys.dart';
 import 'package:riverpod/riverpod.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
 final recordStateProvider = StateProvider<AsyncValue<RecordPageState>>((ref) {
-  final latestPillSheetGroupAsyncData =
+  final latestPillSheetGroup =
       ref.watch(latestPillSheetGroupStreamProvider).asData;
-  if (latestPillSheetGroupAsyncData == null) {
+  if (latestPillSheetGroup == null) {
     return const AsyncValue.loading();
   }
 
-  return AsyncValue.data(
-      RecordPageState(pillSheetGroup: latestPillSheetGroupAsyncData.value));
+  final premiumAndTrial = ref.watch(premiumAndTrialProvider).asData;
+  if (premiumAndTrial == null) {
+    return const AsyncValue.loading();
+  }
+
+  final setting = ref.watch(settingStreamProvider).asData;
+  if (setting == null) {
+    return const AsyncValue.loading();
+  }
+
+  final sharedPreferenceAsyncData = ref.watch(sharedPreferenceProvider).asData;
+  if (sharedPreferenceAsyncData == null) {
+    return const AsyncValue.loading();
+  }
+  final sharedPreferences = sharedPreferenceAsyncData.value;
+
+  return AsyncValue.data(RecordPageState(
+    pillSheetGroup: latestPillSheetGroup.value,
+    setting: setting.value,
+    premiumAndTrial: premiumAndTrial.value,
+    totalCountOfActionForTakenPill:
+        sharedPreferences.getInt(IntKey.totalCountOfActionForTakenPill) ?? 0,
+    shouldShowMigrateInfo:
+        ref.watch(shouldShowMigrationInformationProvider(sharedPreferences)),
+    isAlreadyShowTiral:
+        sharedPreferences.getBool(BoolKey.isAlreadyShowPremiumTrialModal) ??
+            false,
+    isAlreadyShowPremiumSurvey:
+        sharedPreferences.getBool(BoolKey.isAlreadyShowPremiumSurvey) ?? false,
+    recommendedSignupNotificationIsAlreadyShow: sharedPreferences
+            .getBool(BoolKey.recommendedSignupNotificationIsAlreadyShow) ??
+        false,
+    premiumTrialGuideNotificationIsClosed: sharedPreferences
+            .getBool(BoolKey.premiumTrialGuideNotificationIsClosed) ??
+        false,
+    premiumTrialBeginAnouncementIsClosed: sharedPreferences
+            .getBool(BoolKey.premiumTrialBeginAnouncementIsClosed) ??
+        false,
+    isLinkedLoginProvider: ref.watch(isLinkedProvider),
+  ));
 });
 
 final recordPageStoreProvider =
