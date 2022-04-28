@@ -21,9 +21,8 @@ final userDatastoreProvider =
 final userStreamProvider =
     StreamProvider((ref) => ref.watch(userDatastoreProvider).stream());
 
-final userEntityProvider = Provider((ref) async {
-  return await ref.watch(userStreamProvider.future);
-});
+final userEntityProvider =
+    Provider((ref) async => await ref.watch(userStreamProvider.future));
 
 class UserDatastore {
   final DatabaseConnection _database;
