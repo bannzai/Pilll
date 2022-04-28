@@ -1,6 +1,7 @@
 import 'package:freezed_annotation/freezed_annotation.dart';
 import 'package:pilll/entity/pill_sheet_group.codegen.dart';
 import 'package:pilll/entity/setting.codegen.dart';
+import 'package:pilll/provider/premium_and_trial.codegen.dart';
 
 part 'record_page_state.codegen.freezed.dart';
 
@@ -8,24 +9,17 @@ part 'record_page_state.codegen.freezed.dart';
 class RecordPageState with _$RecordPageState {
   const RecordPageState._();
   const factory RecordPageState({
-    PillSheetGroup? pillSheetGroup,
-    Setting? setting,
-    @Default(0) int totalCountOfActionForTakenPill,
-    @Default(false) bool firstLoadIsEnded,
-    @Default(false) bool isPremium,
-    @Default(false) bool isTrial,
-    @Default(false) bool hasDiscountEntitlement,
-    @Default(false) bool isAlreadyShowTiral,
-    @Default(false) bool isAlreadyShowPremiumSurvey,
-    @Default(false) bool shouldShowMigrateInfo,
-    @Default(false) bool isLinkedLoginProvider,
-    DateTime? beginTrialDate,
-    DateTime? trialDeadlineDate,
-    DateTime? discountEntitlementDeadlineDate,
-    @Default(true) bool recommendedSignupNotificationIsAlreadyShow,
-    @Default(true) bool premiumTrialGuideNotificationIsClosed,
-    @Default(true) bool premiumTrialBeginAnouncementIsClosed,
-    Object? exception,
+    required PillSheetGroup? pillSheetGroup,
+    required Setting? setting,
+    required PremiumAndTrial premiumAndTrial,
+    required int totalCountOfActionForTakenPill,
+    required bool isAlreadyShowTiral,
+    required bool isAlreadyShowPremiumSurvey,
+    required bool shouldShowMigrateInfo,
+    required bool recommendedSignupNotificationIsAlreadyShow,
+    required bool premiumTrialGuideNotificationIsClosed,
+    required bool premiumTrialBeginAnouncementIsClosed,
+    required bool isLinkedLoginProvider,
   }) = _RecordPageState;
 
   int get initialPageIndex {
@@ -33,13 +27,10 @@ class RecordPageState with _$RecordPageState {
   }
 
   bool get shouldShowTrial {
-    if (beginTrialDate != null) {
+    if (premiumAndTrial.trialIsAlreadyBegin) {
       return false;
     }
-    if (isTrial) {
-      return false;
-    }
-    if (!firstLoadIsEnded) {
+    if (premiumAndTrial.isTrial) {
       return false;
     }
     if (isAlreadyShowTiral) {
@@ -55,11 +46,10 @@ class RecordPageState with _$RecordPageState {
     if (shouldShowTrial) {
       return false;
     }
-    if (isPremium || isTrial) {
+    if (premiumAndTrial.premiumOrTrial) {
       return false;
     }
-    final isNotYetStartTrial = trialDeadlineDate == null;
-    if (isNotYetStartTrial) {
+    if (premiumAndTrial.isNotYetStartTrial) {
       return false;
     }
     return !isAlreadyShowPremiumSurvey;
