@@ -1,6 +1,7 @@
 import 'package:freezed_annotation/freezed_annotation.dart';
 import 'package:pilll/entity/pill_sheet_group.codegen.dart';
 import 'package:pilll/entity/pill_sheet_type.dart';
+import 'package:pilll/provider/premium_and_trial.codegen.dart';
 import 'package:pilll/util/datetime/day.dart';
 
 part 'notification_bar_state.codegen.freezed.dart';
@@ -11,12 +12,7 @@ class NotificationBarState with _$NotificationBarState {
   const factory NotificationBarState({
     required PillSheetGroup? latestPillSheetGroup,
     required int totalCountOfActionForTakenPill,
-    required bool isPremium,
-    required bool isTrial,
-    required bool hasDiscountEntitlement,
-    required DateTime? beginTrialDate,
-    required DateTime? trialDeadlineDate,
-    required DateTime? discountEntitlementDeadlineDate,
+    required PremiumAndTrial premiumAndTrial,
     required bool recommendedSignupNotificationIsAlreadyShow,
     required bool premiumTrialGuideNotificationIsClosed,
     required bool premiumTrialBeginAnouncementIsClosed,
@@ -27,7 +23,7 @@ class NotificationBarState with _$NotificationBarState {
     if (isLinkedLoginProvider) {
       return false;
     }
-    if (!isPremium) {
+    if (!premiumAndTrial.isPremium) {
       return false;
     }
     return true;
@@ -67,10 +63,10 @@ class NotificationBarState with _$NotificationBarState {
   }
 
   String? get premiumTrialLimit {
-    if (!isTrial) {
+    if (!premiumAndTrial.isTrial) {
       return null;
     }
-    final trialDeadlineDate = this.trialDeadlineDate;
+    final trialDeadlineDate = this.premiumAndTrial.trialDeadlineDate;
     if (trialDeadlineDate == null) {
       return null;
     }
