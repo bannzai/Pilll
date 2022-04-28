@@ -14,7 +14,7 @@ final displayNumberSettingStateStoreProvider =
     ref.watch(batchFactoryProvider),
     ref.watch(pillSheetGroupDatastoreProvider),
     ref.watch(pillSheetModifiedHistoryDatastoreProvider),
-    pillSheetGroup: ref.watch(recordPageStoreProvider).pillSheetGroup!,
+    pillSheetGroup: ref.watch(recordPageStoreProvider).value!.pillSheetGroup!,
   );
 });
 
