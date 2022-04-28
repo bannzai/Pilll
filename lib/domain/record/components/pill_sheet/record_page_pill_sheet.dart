@@ -139,7 +139,8 @@ class RecordPagePillSheet extends StatelessWidget {
     required int pageIndex,
     required Setting setting,
   }) {
-    final isPremiumOrTrial = state.isPremium || state.isTrial;
+    final isPremiumOrTrial =
+        state.premiumAndTrial.isPremium || state.premiumAndTrial.isTrial;
     final containedMenstruationDuration =
         RecordPagePillSheet.isContainedMenstruationDuration(
       pillNumberIntoPillSheet: pillNumberIntoPillSheet,
