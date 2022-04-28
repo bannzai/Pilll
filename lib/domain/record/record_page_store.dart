@@ -8,6 +8,7 @@ import 'package:pilll/entity/pill_sheet.codegen.dart';
 import 'package:pilll/entity/pill_sheet_group.codegen.dart';
 import 'package:pilll/entity/pill_sheet_type.dart';
 import 'package:pilll/entity/setting.codegen.dart';
+import 'package:pilll/entity/user.codegen.dart';
 import 'package:pilll/native/legacy.dart';
 import 'package:pilll/service/auth.dart';
 import 'package:pilll/database/pill_sheet.dart';
@@ -31,6 +32,7 @@ final recordPageStoreProvider =
               ref.watch(authServiceProvider),
               ref.watch(pillSheetModifiedHistoryDatastoreProvider),
               ref.watch(pillSheetGroupDatastoreProvider),
+              ref.watch(userEntityProvider),
             ));
 
 class RecordPageStore extends StateNotifier<RecordPageState> {
@@ -41,6 +43,7 @@ class RecordPageStore extends StateNotifier<RecordPageState> {
   final AuthService _authService;
   final PillSheetModifiedHistoryDatastore _pillSheetModifiedHistoryDatastore;
   final PillSheetGroupDatastore _pillSheetGroupDatastore;
+  final Future<User> _user;
   RecordPageStore(
     this._batchFactory,
     this._pillSheetDatastore,
@@ -49,6 +52,7 @@ class RecordPageStore extends StateNotifier<RecordPageState> {
     this._authService,
     this._pillSheetModifiedHistoryDatastore,
     this._pillSheetGroupDatastore,
+    this._user,
   ) : super(const RecordPageState()) {
     reset();
   }
@@ -66,7 +70,7 @@ class RecordPageStore extends StateNotifier<RecordPageState> {
           state = state.copyWith(setting: setting);
         }),
         Future(() async {
-          final user = await _userDatastore.fetch();
+          final user = await _user;
           state = state.copyWith(
             isPremium: user.isPremium,
             isTrial: user.isTrial,

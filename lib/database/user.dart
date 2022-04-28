@@ -18,6 +18,13 @@ import 'package:shared_preferences/shared_preferences.dart';
 final userDatastoreProvider =
     Provider((ref) => UserDatastore(ref.watch(databaseProvider)));
 
+final userStreamProvider =
+    StreamProvider((ref) => ref.watch(userDatastoreProvider).stream());
+
+final userEntityProvider = Provider((ref) async {
+  return await ref.watch(userStreamProvider.future);
+});
+
 class UserDatastore {
   final DatabaseConnection _database;
   UserDatastore(this._database);
