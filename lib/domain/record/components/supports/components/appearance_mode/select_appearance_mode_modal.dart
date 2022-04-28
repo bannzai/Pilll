@@ -90,10 +90,10 @@ class SelectAppearanceModeModal extends HookConsumerWidget {
           },
         );
 
-        if (state.isPremium || state.isTrial) {
+        if (state.premiumAndTrial.isPremium || state.premiumAndTrial.isTrial) {
           store.switchingAppearanceMode(mode);
         } else if (isPremiumFunction) {
-          if (state.trialDeadlineDate == null) {
+          if (state.premiumAndTrial.trialDeadlineDate == null) {
             showPremiumTrialModal(context, () {
               showPremiumTrialCompleteModalPreDialog(context);
             });
@@ -132,11 +132,13 @@ class SelectAppearanceModeModal extends HookConsumerWidget {
 
 void showSelectAppearanceModeModal(
   BuildContext context,
+  RecordPageStore store,
+  RecordPageState state,
 ) {
   analytics.setCurrentScreen(screenName: "SelectAppearanceModeModal");
   showModalBottomSheet(
     context: context,
-    builder: (context) => SelectAppearanceModeModal(),
+    builder: (context) => SelectAppearanceModeModal(store, state),
     backgroundColor: Colors.transparent,
   );
 }
