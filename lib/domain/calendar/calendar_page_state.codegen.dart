@@ -46,13 +46,13 @@ class CalendarPageState with _$CalendarPageState {
   DateTime get displayMonth => calendarDataSource[currentCalendarIndex];
   String get displayMonthString => DateTimeFormatter.yearAndMonth(displayMonth);
 
-  final _satisfyBandCount = 15;
-  late final List<CalendarBandModel> allBands = buildBandModels(
-    latestPillSheetGroup,
-    setting,
-    menstruations,
-    _satisfyBandCount,
-  );
+//  final _satisfyBandCount = 15;
+//  late final List<CalendarBandModel> allBands = buildBandModels(
+//    latestPillSheetGroup,
+//    setting,
+//    menstruations,
+//    _satisfyBandCount,
+//  );
 }
 
 List<DateTime> _calendarDataSource() {
