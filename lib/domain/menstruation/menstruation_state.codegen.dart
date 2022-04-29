@@ -25,7 +25,7 @@ final todayCalendarPageIndexProvider = Provider(
           element.where((element) => isSameDay(element, today())).isNotEmpty),
 );
 final currentMenstruationWeekCalendarPageIndexProvider =
-    Provider((ref) => ref.watch(todayCalendarPageIndexProvider));
+    StateProvider((ref) => ref.watch(todayCalendarPageIndexProvider));
 
 final menstruationStateProvider =
     Provider<AsyncValue<MenstruationState>>((ref) {

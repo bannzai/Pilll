@@ -8,6 +8,7 @@ import 'package:pilll/domain/calendar/components/month/month_calendar.dart';
 import 'package:pilll/domain/menstruation/components/calendar/menstruation_calendar_header.dart';
 import 'package:pilll/domain/menstruation/components/menstruation_card_list.dart';
 import 'package:pilll/domain/menstruation/components/menstruation_record_button.dart';
+import 'package:pilll/domain/menstruation/menstruation_state.codegen.dart';
 import 'package:pilll/domain/record/weekday_badge.dart';
 import 'package:pilll/domain/menstruation/menstruation_store.dart';
 import 'package:pilll/error/universal_error_page.dart';
@@ -26,27 +27,51 @@ class MenstruationPage extends HookConsumerWidget {
   Widget build(BuildContext context, WidgetRef ref) {
     final store = ref.watch(menstruationsStoreProvider.notifier);
     final state = ref.watch(menstruationsStoreProvider);
-
+    final todayCalendarPageIndex = ref.read(todayCalendarPageIndexProvider);
     useAutomaticKeepAlive(wantKeepAlive: true);
 
-    if (state.exception != null) {
-      return UniversalErrorPage(
-        error: state.exception,
-        child: null,
-        reload: () => store.reset(),
-      );
-    }
-    if (state.isNotYetLoaded) {
-      return ScaffoldIndicator();
-    }
-
     final pageController =
-        usePageController(initialPage: state.currentCalendarIndex);
+        usePageController(initialPage: todayCalendarPageIndex);
     pageController.addListener(() {
       final index = (pageController.page ?? pageController.initialPage).round();
-      store.updateCurrentCalendarIndex(index);
+
+      final currentCalendarPageIndex = ref
+          .read(currentMenstruationWeekCalendarPageIndexProvider.notifier)
+          .state;
+      if (currentCalendarPageIndex != index) {
+        ref
+            .read(currentMenstruationWeekCalendarPageIndexProvider.notifier)
+            .state = index;
+      }
     });
 
+    return state.when(
+      data: (state) => MenstruationPageBody(
+          store: store, state: state, pageController: pageController),
+      error: (error, _) => UniversalErrorPage(
+        error: error,
+        child: null,
+        reload: () => ref.refresh(menstruationStateProvider),
+      ),
+      loading: () => ScaffoldIndicator(),
+    );
+  }
+}
+
+class MenstruationPageBody extends StatelessWidget {
+  final MenstruationStore store;
+  final MenstruationState state;
+  final PageController pageController;
+
+  const MenstruationPageBody({
+    Key? key,
+    required this.store,
+    required this.state,
+    required this.pageController,
+  }) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: PilllColors.background,
       appBar: AppBar(

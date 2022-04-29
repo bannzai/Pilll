@@ -19,7 +19,7 @@ class CalendarPage extends HookConsumerWidget {
   Widget build(BuildContext context, WidgetRef ref) {
     final store = ref.watch(calendarPageStateStoreProvider.notifier);
     final state = ref.watch(calendarPageStateStoreProvider);
-    final todayCalendarPageIndex = ref.watch(todayCalendarIndexProvider);
+    final todayCalendarPageIndex = ref.read(todayCalendarIndexProvider);
 
     useAutomaticKeepAlive(wantKeepAlive: true);
 
