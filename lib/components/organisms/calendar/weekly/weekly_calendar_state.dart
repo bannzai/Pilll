@@ -29,15 +29,3 @@ abstract class WeekCalendarState {
   bool hasMenstruationMark(DateTime date);
   Alignment get contentAlignment;
 }
-
-extension WeeklyCalendarStateCompoutedProperties on WeekCalendarState {
-  bool isNecessaryLineBreak(DateTime date) {
-    return !dateRange.inRange(date.date());
-  }
-
-  int offsetForStartPositionAtLine(DateTime begin) {
-    return isNecessaryLineBreak(begin)
-        ? 0
-        : daysBetween(dateRange.begin.date(), begin.date());
-  }
-}
