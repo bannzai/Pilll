@@ -41,9 +41,6 @@ class RecordPageStore extends StateNotifier<AsyncValue<RecordPageState>> {
         pillSheet: pillSheet,
       );
 
-  Future<void> cancelTaken() async =>
-      asyncAction.cancelTaken(pillSheetGroup: state.value?.pillSheetGroup);
-
   Future<void> revertTaken({
     required PillSheetGroup pillSheetGroup,
     required int pageIndex,

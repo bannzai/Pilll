@@ -4,11 +4,16 @@ import 'package:pilll/analytics.dart';
 import 'package:pilll/components/atoms/buttons.dart';
 import 'package:pilll/domain/record/record_page_store.dart';
 import 'package:pilll/entity/pill_sheet.codegen.dart';
+import 'package:pilll/entity/pill_sheet_group.codegen.dart';
 
 class CancelButton extends HookConsumerWidget {
+  final PillSheetGroup pillSheetGroup;
   final PillSheet pillSheet;
 
-  CancelButton(this.pillSheet);
+  CancelButton({
+    required this.pillSheetGroup,
+    required this.pillSheet,
+  });
   Widget build(BuildContext context, WidgetRef ref) {
     final store = ref.watch(recordPageStoreProvider.notifier);
     return TertiaryButton(
@@ -26,7 +31,7 @@ class CancelButton extends HookConsumerWidget {
         if (lastTakenDate == null) {
           return;
         }
-        await store.cancelTaken();
+        await store.asyncAction.cancelTaken(pillSheetGroup: pillSheetGroup);
       },
     );
   }

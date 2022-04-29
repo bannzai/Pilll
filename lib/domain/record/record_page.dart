@@ -97,7 +97,10 @@ class RecordPageBody extends StatelessWidget {
           if (activedPillSheet != null &&
               pillSheetGroup != null &&
               !pillSheetGroup.isDeactived) ...[
-            RecordPageButton(currentPillSheet: activedPillSheet),
+            RecordPageButton(
+              pillSheetGroup: pillSheetGroup,
+              currentPillSheet: activedPillSheet,
+            ),
             const SizedBox(height: 40),
           ],
         ],
