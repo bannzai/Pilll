@@ -88,33 +88,3 @@ class MenstruationPage extends HookConsumerWidget {
     );
   }
 }
-
-class MenstruationCardList extends StatelessWidget {
-  const MenstruationCardList({
-    Key? key,
-    required this.store,
-  }) : super(key: key);
-
-  final MenstruationStore store;
-
-  @override
-  Widget build(BuildContext context) {
-    final cardState = store.cardState();
-    final historyCardState = store.historyCardState();
-    return Container(
-      color: PilllColors.background,
-      child: ListView(
-        padding: const EdgeInsets.only(top: 16, left: 16, right: 16),
-        scrollDirection: Axis.vertical,
-        children: [
-          if (cardState != null) ...[
-            MenstruationCard(cardState),
-            const SizedBox(height: 24),
-          ],
-          if (historyCardState != null)
-            MenstruationHistoryCard(state: historyCardState),
-        ],
-      ),
-    );
-  }
-}

@@ -105,7 +105,8 @@ class MenstruationHistoryCardList extends StatelessWidget {
     return Column(
       mainAxisSize: MainAxisSize.max,
       children: state.rows
-          .map((e) => [MenstruationListRow(state: e), const SizedBox(height: 20)])
+          .map((e) =>
+              [MenstruationListRow(state: e), const SizedBox(height: 20)])
           .expand((e) => e)
           .toList(),
     );
