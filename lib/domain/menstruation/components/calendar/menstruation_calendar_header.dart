@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
+import 'package:hooks_riverpod/hooks_riverpod.dart';
 import 'package:pilll/analytics.dart';
 import 'package:pilll/components/molecules/shadow_container.dart';
 import 'package:pilll/components/organisms/calendar/band/calendar_band_model.dart';
@@ -14,7 +15,7 @@ import 'package:pilll/entity/weekday.dart';
 
 const double _horizontalPadding = 10;
 
-class MenstruationCalendarHeader extends StatelessWidget {
+class MenstruationCalendarHeader extends HookConsumerWidget {
   const MenstruationCalendarHeader({
     Key? key,
     required this.state,
@@ -44,7 +45,7 @@ class MenstruationCalendarHeader extends StatelessWidget {
                 physics: const PageScrollPhysics(),
                 scrollDirection: Axis.horizontal,
                 itemBuilder: (context, index) {
-                  final days = state.calendarDataSource[index];
+                  final days = menstruationWeekCalendarDataSource[index];
                   return Container(
                     width: MediaQuery.of(context).size.width -
                         _horizontalPadding * 2,

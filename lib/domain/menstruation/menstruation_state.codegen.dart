@@ -17,7 +17,7 @@ import 'package:riverpod/riverpod.dart';
 part 'menstruation_state.codegen.freezed.dart';
 
 final menstruationCalendarWeekCalendarDataSourceProvider =
-    Provider((_) => _calendarDataSource());
+    Provider((_) => menstruationWeekCalendarDataSource);
 final todayCalendarPageIndexProvider = Provider(
   (ref) => ref
       .watch(menstruationCalendarWeekCalendarDataSourceProvider)
@@ -101,7 +101,7 @@ class MenstruationState with _$MenstruationState {
   }
 }
 
-List<List<DateTime>> _calendarDataSource() {
+final List<List<DateTime>> menstruationWeekCalendarDataSource = () {
   final base = today();
 
   var begin = base.subtract(const Duration(days: 90));
@@ -123,4 +123,4 @@ List<List<DateTime>> _calendarDataSource() {
       ((diffDay) / Weekday.values.length).round(),
       (i) => days.sublist(i * Weekday.values.length,
           i * Weekday.values.length + Weekday.values.length));
-}
+}();
