@@ -91,8 +91,7 @@ class CalendarPageBody extends StatelessWidget {
                 controller: pageController,
                 scrollDirection: Axis.horizontal,
                 physics: const PageScrollPhysics(),
-                children:
-                    List.generate(state.calendarDataSource.length, (index) {
+                children: List.generate(calendarDataSourceLength, (index) {
                   return Container(
                     height: 444,
                     width: MediaQuery.of(context).size.width,
@@ -102,6 +101,12 @@ class CalendarPageBody extends StatelessWidget {
                             (context, monthCalendarState, weekCalendarState) {
                           return CalendarWeekdayLine(
                             state: weekCalendarState,
+                            calendarMenstruationBandModels:
+                                state.calendarMenstruationBandModels,
+                            calendarScheduledMenstruationBandModels:
+                                state.calendarScheduledMenstruationBandModels,
+                            calendarNextPillSheetBandModels:
+                                state.calendarNextPillSheetBandModels,
                             horizontalPadding: 0,
                             onTap: (weeklyCalendarState, date) {
                               analytics.logEvent(
@@ -124,10 +129,10 @@ class CalendarPageBody extends StatelessWidget {
               child: CalendarPillSheetModifiedHistoryCard(
                 store: store,
                 state: CalendarPillSheetModifiedHistoryCardState(
-                  state.allPillSheetModifiedHistories,
-                  isPremium: state.isPremium,
-                  isTrial: state.isTrial,
-                  trialDeadlineDate: state.trialDeadlineDate,
+                  state.pillSheetModifiedHistories,
+                  isPremium: state.premiumAndTrial.isPremium,
+                  isTrial: state.premiumAndTrial.isTrial,
+                  trialDeadlineDate: state.premiumAndTrial.trialDeadlineDate,
                 ),
               ),
             ),

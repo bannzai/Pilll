@@ -17,8 +17,9 @@ import 'package:riverpod/riverpod.dart';
 
 part 'calendar_page_state.codegen.freezed.dart';
 
+const calendarDataSourceLength = 24;
 final calendarDataSourceProvider = Provider((_) =>
-    List.generate(24, (index) => (index + 1) - 12)
+    List.generate(calendarDataSourceLength, (index) => (index + 1) - 12)
         .map((e) => DateTime(today().year, today().month + e, 1))
         .toList());
 final todayCalendarIndexProvider = Provider((ref) => ref
