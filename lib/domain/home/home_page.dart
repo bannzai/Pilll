@@ -32,8 +32,6 @@ class _HomePageState extends State<HomePage>
     return HomePageTabType.values[_selectedIndex];
   }
 
-  List<Diary> diaries = [];
-
   @override
   void initState() {
     super.initState();
@@ -113,31 +111,6 @@ class _HomePageState extends State<HomePage>
             CalendarPage(),
             SettingPage(),
           ],
-        ),
-        floatingActionButton: Visibility(
-          visible: _selectedTab == HomePageTabType.calendar,
-          child: Container(
-            padding: const EdgeInsets.only(right: 10, bottom: 32),
-            child: FloatingActionButton(
-              onPressed: () {
-                switch (_selectedTab) {
-                  case HomePageTabType.record:
-                    break;
-                  case HomePageTabType.menstruation:
-                    break;
-                  case HomePageTabType.calendar:
-                    analytics.logEvent(name: "calendar_fab_pressed");
-                    final date = today();
-                    transitionToPostDiary(context, date, diaries);
-                    break;
-                  case HomePageTabType.setting:
-                    break;
-                }
-              },
-              child: const Icon(Icons.add, color: Colors.white),
-              backgroundColor: PilllColors.secondary,
-            ),
-          ),
         ),
       ),
     );
