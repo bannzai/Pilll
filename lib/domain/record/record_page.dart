@@ -29,7 +29,7 @@ class RecordPage extends HookConsumerWidget {
       data: (state) => RecordPageBody(store: store, state: state),
       error: (error, stackTrace) => UniversalErrorPage(
         error: error,
-        reload: () => ref.refresh(recordPageStoreProvider),
+        reload: () => ref.refresh(recordPageAsyncStateProvider),
         child: null,
       ),
       loading: () => const Indicator(),
