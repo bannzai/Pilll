@@ -4,7 +4,7 @@ import 'package:pilll/components/organisms/calendar/monthly/monthly_calendar_lay
 import 'package:pilll/components/organisms/calendar/weekly/weekly_calendar.dart';
 import 'package:pilll/domain/calendar/calendar_card_state.dart';
 import 'package:pilll/domain/calendar/date_range.dart';
-import 'package:pilll/domain/calendar/weekly_calendar_state.dart';
+import 'package:pilll/domain/calendar/week_calendar_state.dart';
 import 'package:pilll/entity/diary.codegen.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_test/flutter_test.dart';

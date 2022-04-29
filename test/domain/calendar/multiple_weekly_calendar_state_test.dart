@@ -1,5 +1,5 @@
 import 'package:pilll/domain/calendar/date_range.dart';
-import 'package:pilll/domain/calendar/weekly_calendar_state.dart';
+import 'package:pilll/domain/calendar/week_calendar_state.dart';
 import 'package:pilll/components/organisms/calendar/weekly/weekly_calendar_state.dart';
 import 'package:flutter_test/flutter_test.dart';
 import 'package:shared_preferences/shared_preferences.dart';
