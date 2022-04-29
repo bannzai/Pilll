@@ -6,6 +6,14 @@ import 'package:riverpod/riverpod.dart';
 final diaryDatastoreProvider = Provider<DiaryDatastore>(
     (ref) => DiaryDatastore(ref.watch(databaseProvider)));
 
+final diariesStreamProvider =
+    StreamProvider((ref) => ref.watch(diaryDatastoreProvider).stream());
+
+final diariesStreamForMonthProvider = StreamProvider.family(
+    (ref, DateTime dateForMonth) => ref
+        .watch(diaryDatastoreProvider)
+        .streamForMonth(dateForMonth: dateForMonth));
+
 int sortDiary(Diary a, Diary b) => a.date.compareTo(b.date);
 List<Diary> sortedDiaries(List<Diary> diaries) {
   diaries.sort(sortDiary);
@@ -65,4 +73,19 @@ class DiaryDatastore {
       .map((event) => event.docs.map((e) => e.data()).toList())
       .map((diaries) => sortedDiaries(diaries));
   Stream<List<Diary>> stream() => _stream;
+
+  Stream<List<Diary>> streamForMonth({required DateTime dateForMonth}) {
+    final firstDate = DateTime(dateForMonth.year, dateForMonth.month, 1);
+    final lastDate = DateTime(dateForMonth.year, dateForMonth.month + 1, 0);
+    return _database
+        .diariesReference()
+        .where(
+          DiaryFirestoreKey.date,
+          isGreaterThanOrEqualTo: firstDate,
+          isLessThanOrEqualTo: lastDate,
+        )
+        .snapshots()
+        .map((event) => event.docs.map((e) => e.data()).toList())
+        .map((diaries) => sortedDiaries(diaries));
+  }
 }

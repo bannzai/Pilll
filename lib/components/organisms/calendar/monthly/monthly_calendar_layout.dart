@@ -1,54 +1,68 @@
-import 'package:pilll/components/organisms/calendar/monthly/calendar_state.dart';
-import 'package:pilll/domain/calendar/date_range.dart';
+import 'package:hooks_riverpod/hooks_riverpod.dart';
+import 'package:pilll/components/molecules/indicator.dart';
+import 'package:pilll/components/organisms/calendar/weekly/weekly_calendar_state.dart';
+import 'package:pilll/domain/calendar/components/month/month_calendar_state.codegen.dart';
 import 'package:pilll/domain/record/weekday_badge.dart';
 import 'package:pilll/entity/weekday.dart';
 import 'package:flutter/material.dart';
 
 abstract class CalendarConstants {
   static final double tileHeight = 66;
-  static const int constantLineCount = 6;
 }
 
-class MonthlyCalendarLayout extends StatelessWidget {
-  final MonthlyCalendarState state;
-  final Widget Function(BuildContext, DateRange) weeklyCalendarBuilder;
+class MonthlyCalendarLayout extends HookConsumerWidget {
+  final DateTime dateForMonth;
+  final Widget Function(BuildContext, WeekCalendarState) weekCalendarBuilder;
 
   const MonthlyCalendarLayout({
     Key? key,
-    required this.state,
-    required this.weeklyCalendarBuilder,
+    required this.dateForMonth,
+    required this.weekCalendarBuilder,
   }) : super(key: key);
 
   @override
-  Widget build(BuildContext context) {
-    return Column(
-      children: <Widget>[
-        Row(
-          mainAxisAlignment: MainAxisAlignment.start,
-          children: List.generate(
-              Weekday.values.length,
-              (index) => Expanded(
-                    child: WeekdayBadge(
-                      weekday: Weekday.values[index],
-                    ),
-                  )),
-        ),
-        const Divider(height: 1),
-        ...List.generate(CalendarConstants.constantLineCount, (offset) {
-          final line = offset + 1;
-          if (state.weeklineCount() < CalendarConstants.constantLineCount &&
-              line == CalendarConstants.constantLineCount) {
-            return Container(height: CalendarConstants.tileHeight);
-          }
-          final weeklyCalendar = weeklyCalendarBuilder(
-            context,
-            state.dateRangeOfLine(line),
-          );
-          return Column(
-              mainAxisAlignment: MainAxisAlignment.spaceBetween,
-              children: [weeklyCalendar, const Divider(height: 1)]);
-        }),
-      ],
+  Widget build(BuildContext context, WidgetRef ref) {
+    final state = ref.watch(monthCalendarStateProvider(dateForMonth));
+
+    return state.when(
+      data: (state) {
+        final weekCalendarStatuses = state.weekCalendarStatuses;
+
+        return Column(
+          children: [
+            Row(
+              mainAxisAlignment: MainAxisAlignment.start,
+              children: List.generate(
+                  Weekday.values.length,
+                  (index) => Expanded(
+                        child: WeekdayBadge(
+                          weekday: Weekday.values[index],
+                        ),
+                      )),
+            ),
+            const Divider(height: 1),
+            ...List.generate(6, (offset) {
+              if (weekCalendarStatuses.length <= offset) {
+                return Container(height: CalendarConstants.tileHeight);
+              }
+
+              final weeklyCalendar =
+                  weekCalendarBuilder(context, weekCalendarStatuses[offset]);
+              return Column(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                children: [
+                  weeklyCalendar,
+                  const Divider(height: 1),
+                ],
+              );
+            }),
+          ],
+        );
+      },
+      error: (error, _) => Container(
+        child: Text(error.toString()),
+      ),
+      loading: () => const Indicator(),
     );
   }
 }

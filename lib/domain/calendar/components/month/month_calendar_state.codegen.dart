@@ -39,10 +39,10 @@ class MonthCalendarState with _$MonthCalendarState {
   MonthCalendarState._();
 
   List<CalendarTabWeeklyCalendarState> get weekCalendarStatuses =>
-      List.generate(6, (index) => index + 1)
+      List.generate(weeklineCount(), (index) => index + 1)
           .map(
             (line) => CalendarTabWeeklyCalendarState(
-              dateRange: _dateRangeOfLine(1),
+              dateRange: _dateRangeOfLine(line),
               diariesForMonth: diaries,
               // TODO:
               allBandModels: [],

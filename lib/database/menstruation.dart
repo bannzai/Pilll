@@ -5,6 +5,9 @@ import 'package:riverpod/riverpod.dart';
 final menstruationDatastoreProvider = Provider<MenstruationDatastore>(
     (ref) => MenstruationDatastore(ref.watch(databaseProvider)));
 
+final allMenstruationStreamProvider = StreamProvider<List<Menstruation>>(
+    (ref) => ref.watch(menstruationDatastoreProvider).streamAll());
+
 class MenstruationDatastore {
   final DatabaseConnection _database;
 

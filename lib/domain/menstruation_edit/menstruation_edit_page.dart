@@ -43,7 +43,7 @@ class MenstruationEditPage extends HookConsumerWidget {
           store.adjustedScrollOffset();
           final double estimatedSectionTitleHeight = 95;
           scrollController.jumpTo(CalendarConstants.tileHeight *
-                  CalendarConstants.constantLineCount +
+                  CalendarConstants.maxLineCount +
               estimatedSectionTitleHeight);
         });
         return Container(
@@ -134,7 +134,7 @@ class MenstruationEditPage extends HookConsumerWidget {
                             MonthlyCalendarLayout(
                               state: MenstruationEditCalendarState(
                                   dateForMonth, state.menstruation),
-                              weeklyCalendarBuilder:
+                              weekCalendarBuilder:
                                   (context, weeklyCalendarState) {
                                 return CalendarWeekdayLine(
                                   calendarState:

@@ -41,7 +41,7 @@ void main() {
           child: MaterialApp(
             home: MonthlyCalendarLayout(
               state: CalendarCardState(now),
-              weeklyCalendarBuilder: (context, weeklyDateRange) {
+              weekCalendarBuilder: (context, weeklyDateRange) {
                 return CalendarWeekdayLine(
                   calendarState: CalendarTabWeeklyCalendarState(
                     dateRange: weeklyDateRange,
@@ -90,7 +90,7 @@ void main() {
           child: MaterialApp(
             home: MonthlyCalendarLayout(
               state: CalendarCardState(now),
-              weeklyCalendarBuilder: (context, weeklyDateRange) {
+              weekCalendarBuilder: (context, weeklyDateRange) {
                 return CalendarWeekdayLine(
                   calendarState: CalendarTabWeeklyCalendarState(
                     dateRange: weeklyDateRange,
@@ -125,7 +125,7 @@ void main() {
           child: MaterialApp(
             home: MonthlyCalendarLayout(
               state: CalendarCardState(now),
-              weeklyCalendarBuilder: (context, weeklyDateRange) {
+              weekCalendarBuilder: (context, weeklyDateRange) {
                 return CalendarWeekdayLine(
                   calendarState: CalendarTabWeeklyCalendarState(
                     dateRange: weeklyDateRange,
@@ -156,7 +156,7 @@ void main() {
           child: MaterialApp(
             home: MonthlyCalendarLayout(
               state: CalendarCardState(now),
-              weeklyCalendarBuilder: (context, weeklyDateRange) {
+              weekCalendarBuilder: (context, weeklyDateRange) {
                 return CalendarWeekdayLine(
                   calendarState: CalendarTabWeeklyCalendarState(
                     dateRange: weeklyDateRange,

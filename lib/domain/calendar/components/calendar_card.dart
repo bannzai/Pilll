@@ -26,7 +26,7 @@ class CalendarCard extends StatelessWidget {
     return ShadowContainer(
       child: MonthlyCalendarLayout(
         state: state,
-        weeklyCalendarBuilder: (context, weeklyDateRange) {
+        weekCalendarBuilder: (context, weeklyDateRange) {
           return CalendarWeekdayLine(
             calendarState: CalendarTabWeeklyCalendarState(
               dateRange: weeklyDateRange,
