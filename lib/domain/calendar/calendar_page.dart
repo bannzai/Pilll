@@ -27,7 +27,11 @@ class CalendarPage extends HookConsumerWidget {
         usePageController(initialPage: todayCalendarPageIndex);
     pageController.addListener(() {
       final index = (pageController.page ?? pageController.initialPage).round();
-      store.updateCurrentCalendarIndex(index);
+      final currentCalendarPageIndex =
+          ref.read(currentCalendarPageIndexProvider.notifier).state;
+      if (currentCalendarPageIndex != index) {
+        ref.read(currentCalendarPageIndexProvider.notifier).state = index;
+      }
     });
     return state.when(
       data: (state) => CalendarPageBody(

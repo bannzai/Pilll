@@ -31,6 +31,7 @@ class CalendarPageStateStore
     required AsyncValue<CalendarPageState> initialState,
   }) : super(initialState);
 
+  // TODO: Remove
   void updateCurrentCalendarIndex(int index) {
     final value = state.asData?.value;
     if (value == null) {
