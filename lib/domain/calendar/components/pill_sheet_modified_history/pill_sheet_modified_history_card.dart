@@ -66,7 +66,8 @@ class CalendarPillSheetModifiedHistoryCard extends StatelessWidget {
   Widget build(BuildContext context) {
     return AppCard(
       child: Container(
-        padding: const EdgeInsets.only(left: 16, top: 16, right: 16, bottom: 16),
+        padding:
+            const EdgeInsets.only(left: 16, top: 16, right: 16, bottom: 16),
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
@@ -99,7 +100,7 @@ class CalendarPillSheetModifiedHistoryCard extends StatelessWidget {
                       scrollPhysics: const NeverScrollableScrollPhysics(),
                       pillSheetModifiedHistories:
                           state.pillSheetModifiedHistories,
-                      onEditTakenPillAction: store.editTakenValue,
+                      onEditTakenPillAction: store.asyncAction.editTakenValue,
                     ),
                   ),
                   if (state.moreButtonIsShown)
