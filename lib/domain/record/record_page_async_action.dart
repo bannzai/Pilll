@@ -65,13 +65,13 @@ class RecordPageAsyncAction {
 
   Future<bool> takenWithPillNumber({
     required int pillNumberIntoPillSheet,
-    required PillSheetGroup? pillSheetGroup,
+    required PillSheetGroup pillSheetGroup,
     required PillSheet pillSheet,
   }) async {
     if (pillNumberIntoPillSheet <= pillSheet.lastTakenPillNumber) {
       return false;
     }
-    final activedPillSheet = pillSheetGroup?.activedPillSheet;
+    final activedPillSheet = pillSheetGroup.activedPillSheet;
     if (activedPillSheet == null) {
       return false;
     }
