@@ -4,8 +4,8 @@ import 'package:pilll/components/molecules/diagonal_striped_line.dart';
 import 'package:pilll/components/organisms/calendar/band/calendar_band.dart';
 import 'package:pilll/entity/menstruation.codegen.dart';
 
-class CalendarBand extends StatelessWidget {
-  const CalendarBand({
+class CalendarMenstruationBand extends StatelessWidget {
+  const CalendarMenstruationBand({
     Key? key,
     required this.menstruation,
     required this.width,
@@ -26,7 +26,7 @@ class CalendarBand extends StatelessWidget {
         child: CustomPaint(
           painter: DiagonalStripedLine(
             color: PilllColors.menstruation,
-            isNecessaryBorder: true,
+            isNecessaryBorder: false,
           ),
           size: Size(width, CalendarBandConst.height),
         ),
