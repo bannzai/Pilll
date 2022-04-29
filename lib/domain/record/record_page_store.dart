@@ -23,8 +23,8 @@ class RecordPageStore extends StateNotifier<AsyncValue<RecordPageState>> {
   final RecordPageAsyncAction _asyncAction;
   RecordPageStore(
     this._asyncAction,
-    AsyncValue<RecordPageState> _state,
-  ) : super(_state);
+    AsyncValue<RecordPageState> initialState,
+  ) : super(initialState);
 
   RecordPageState get _stateValue => state.value!;
 
