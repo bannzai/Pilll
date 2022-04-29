@@ -1,9 +1,11 @@
 import 'package:freezed_annotation/freezed_annotation.dart';
 import 'package:pilll/components/organisms/calendar/weekly/weekly_calendar_state.dart';
 import 'package:pilll/database/diary.dart';
+import 'package:pilll/database/menstruation.dart';
 import 'package:pilll/domain/calendar/date_range.dart';
 import 'package:pilll/domain/calendar/week_calendar_state.dart';
 import 'package:pilll/entity/diary.codegen.dart';
+import 'package:pilll/entity/menstruation.codegen.dart';
 import 'package:pilll/entity/weekday.dart';
 import 'package:riverpod/riverpod.dart';
 
@@ -13,8 +15,10 @@ final monthCalendarStateProvider =
     Provider.family<AsyncValue<MonthCalendarState>, DateTime>(
         (ref, DateTime dateForMonth) {
   final diaries = ref.watch(diariesStreamForMonthProvider(dateForMonth));
+  final menstruations =
+      ref.watch(menstruationsStreamForMonthProvider(dateForMonth));
 
-  if (diaries is AsyncLoading) {
+  if (diaries is AsyncLoading || menstruations is AsyncLoading) {
     return const AsyncValue.loading();
   }
 
@@ -23,6 +27,7 @@ final monthCalendarStateProvider =
       MonthCalendarState(
         dateForMonth: dateForMonth,
         diaries: diaries.value!,
+        menstruations: menstruations.value!,
       ),
     );
   } catch (error, _) {
@@ -35,6 +40,7 @@ class MonthCalendarState with _$MonthCalendarState {
   factory MonthCalendarState({
     required DateTime dateForMonth,
     required List<Diary> diaries,
+    required List<Menstruation> menstruations,
   }) = _MonthCalendarState;
   MonthCalendarState._();
 

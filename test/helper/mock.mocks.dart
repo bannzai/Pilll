@@ -257,6 +257,14 @@ class MockMenstruationDatastore extends _i1.Mock
       (super.noSuchMethod(Invocation.method(#streamAll, []),
               returnValue: Stream<List<_i5.Menstruation>>.empty())
           as _i17.Stream<List<_i5.Menstruation>>);
+  @override
+  _i17.Stream<List<_i5.Menstruation>> streamForMonth(
+          {DateTime? dateForMonth}) =>
+      (super.noSuchMethod(
+          Invocation.method(#streamForMonth, [], {#dateForMonth: dateForMonth}),
+          returnValue:
+              Stream<List<_i5.Menstruation>>.empty()) as _i17
+          .Stream<List<_i5.Menstruation>>);
 }
 
 /// A class which mocks [AuthService].

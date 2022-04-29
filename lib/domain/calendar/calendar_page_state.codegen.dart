@@ -29,19 +29,14 @@ class CalendarPageState with _$CalendarPageState {
   CalendarPageState._();
   factory CalendarPageState({
     @Default(0) int currentCalendarIndex,
-    @Default(true) bool isNotYetLoaded,
-    @Default([]) List<Menstruation> menstruations,
     Setting? setting,
     PillSheetGroup? latestPillSheetGroup,
-    @Default([]) List<Diary> diariesForMonth,
     @Default([]) List<PillSheetModifiedHistory> allPillSheetModifiedHistories,
     @Default(false) bool isPremium,
     @Default(false) bool isTrial,
     DateTime? trialDeadlineDate,
     Object? exception,
   }) = _CalendarPageState;
-
-  bool get shouldShowIndicator => isNotYetLoaded || setting == null;
 
   final List<DateTime> calendarDataSource = _calendarDataSource();
   int get todayCalendarIndex => calendarDataSource

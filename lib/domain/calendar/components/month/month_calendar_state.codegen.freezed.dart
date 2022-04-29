@@ -19,10 +19,13 @@ class _$MonthCalendarStateTearOff {
   const _$MonthCalendarStateTearOff();
 
   _MonthCalendarState call(
-      {required DateTime dateForMonth, required List<Diary> diaries}) {
+      {required DateTime dateForMonth,
+      required List<Diary> diaries,
+      required List<Menstruation> menstruations}) {
     return _MonthCalendarState(
       dateForMonth: dateForMonth,
       diaries: diaries,
+      menstruations: menstruations,
     );
   }
 }
@@ -34,6 +37,7 @@ const $MonthCalendarState = _$MonthCalendarStateTearOff();
 mixin _$MonthCalendarState {
   DateTime get dateForMonth => throw _privateConstructorUsedError;
   List<Diary> get diaries => throw _privateConstructorUsedError;
+  List<Menstruation> get menstruations => throw _privateConstructorUsedError;
 
   @JsonKey(ignore: true)
   $MonthCalendarStateCopyWith<MonthCalendarState> get copyWith =>
@@ -45,7 +49,10 @@ abstract class $MonthCalendarStateCopyWith<$Res> {
   factory $MonthCalendarStateCopyWith(
           MonthCalendarState value, $Res Function(MonthCalendarState) then) =
       _$MonthCalendarStateCopyWithImpl<$Res>;
-  $Res call({DateTime dateForMonth, List<Diary> diaries});
+  $Res call(
+      {DateTime dateForMonth,
+      List<Diary> diaries,
+      List<Menstruation> menstruations});
 }
 
 /// @nodoc
@@ -61,6 +68,7 @@ class _$MonthCalendarStateCopyWithImpl<$Res>
   $Res call({
     Object? dateForMonth = freezed,
     Object? diaries = freezed,
+    Object? menstruations = freezed,
   }) {
     return _then(_value.copyWith(
       dateForMonth: dateForMonth == freezed
@@ -71,6 +79,10 @@ class _$MonthCalendarStateCopyWithImpl<$Res>
           ? _value.diaries
           : diaries // ignore: cast_nullable_to_non_nullable
               as List<Diary>,
+      menstruations: menstruations == freezed
+          ? _value.menstruations
+          : menstruations // ignore: cast_nullable_to_non_nullable
+              as List<Menstruation>,
     ));
   }
 }
@@ -82,7 +94,10 @@ abstract class _$MonthCalendarStateCopyWith<$Res>
           _MonthCalendarState value, $Res Function(_MonthCalendarState) then) =
       __$MonthCalendarStateCopyWithImpl<$Res>;
   @override
-  $Res call({DateTime dateForMonth, List<Diary> diaries});
+  $Res call(
+      {DateTime dateForMonth,
+      List<Diary> diaries,
+      List<Menstruation> menstruations});
 }
 
 /// @nodoc
@@ -100,6 +115,7 @@ class __$MonthCalendarStateCopyWithImpl<$Res>
   $Res call({
     Object? dateForMonth = freezed,
     Object? diaries = freezed,
+    Object? menstruations = freezed,
   }) {
     return _then(_MonthCalendarState(
       dateForMonth: dateForMonth == freezed
@@ -110,6 +126,10 @@ class __$MonthCalendarStateCopyWithImpl<$Res>
           ? _value.diaries
           : diaries // ignore: cast_nullable_to_non_nullable
               as List<Diary>,
+      menstruations: menstruations == freezed
+          ? _value.menstruations
+          : menstruations // ignore: cast_nullable_to_non_nullable
+              as List<Menstruation>,
     ));
   }
 }
@@ -117,17 +137,22 @@ class __$MonthCalendarStateCopyWithImpl<$Res>
 /// @nodoc
 
 class _$_MonthCalendarState extends _MonthCalendarState {
-  _$_MonthCalendarState({required this.dateForMonth, required this.diaries})
+  _$_MonthCalendarState(
+      {required this.dateForMonth,
+      required this.diaries,
+      required this.menstruations})
       : super._();
 
   @override
   final DateTime dateForMonth;
   @override
   final List<Diary> diaries;
+  @override
+  final List<Menstruation> menstruations;
 
   @override
   String toString() {
-    return 'MonthCalendarState(dateForMonth: $dateForMonth, diaries: $diaries)';
+    return 'MonthCalendarState(dateForMonth: $dateForMonth, diaries: $diaries, menstruations: $menstruations)';
   }
 
   @override
@@ -137,14 +162,17 @@ class _$_MonthCalendarState extends _MonthCalendarState {
             other is _MonthCalendarState &&
             const DeepCollectionEquality()
                 .equals(other.dateForMonth, dateForMonth) &&
-            const DeepCollectionEquality().equals(other.diaries, diaries));
+            const DeepCollectionEquality().equals(other.diaries, diaries) &&
+            const DeepCollectionEquality()
+                .equals(other.menstruations, menstruations));
   }
 
   @override
   int get hashCode => Object.hash(
       runtimeType,
       const DeepCollectionEquality().hash(dateForMonth),
-      const DeepCollectionEquality().hash(diaries));
+      const DeepCollectionEquality().hash(diaries),
+      const DeepCollectionEquality().hash(menstruations));
 
   @JsonKey(ignore: true)
   @override
@@ -155,13 +183,16 @@ class _$_MonthCalendarState extends _MonthCalendarState {
 abstract class _MonthCalendarState extends MonthCalendarState {
   factory _MonthCalendarState(
       {required DateTime dateForMonth,
-      required List<Diary> diaries}) = _$_MonthCalendarState;
+      required List<Diary> diaries,
+      required List<Menstruation> menstruations}) = _$_MonthCalendarState;
   _MonthCalendarState._() : super._();
 
   @override
   DateTime get dateForMonth;
   @override
   List<Diary> get diaries;
+  @override
+  List<Menstruation> get menstruations;
   @override
   @JsonKey(ignore: true)
   _$MonthCalendarStateCopyWith<_MonthCalendarState> get copyWith =>
