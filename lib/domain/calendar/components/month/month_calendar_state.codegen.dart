@@ -2,7 +2,7 @@ import 'package:freezed_annotation/freezed_annotation.dart';
 import 'package:pilll/components/organisms/calendar/weekly/weekly_calendar_state.dart';
 import 'package:pilll/database/diary.dart';
 import 'package:pilll/domain/calendar/date_range.dart';
-import 'package:pilll/domain/calendar/weekly_calendar_state.dart';
+import 'package:pilll/domain/calendar/week_calendar_state.dart';
 import 'package:pilll/entity/diary.codegen.dart';
 import 'package:pilll/entity/weekday.dart';
 import 'package:riverpod/riverpod.dart';

@@ -19,7 +19,7 @@ extension DateTimeForCalnedarState on DateTime {
   }
 }
 
-abstract class WeeklyCalendarState {
+abstract class WeekCalendarState {
   DateRange get dateRange;
   List<Diary> get diariesForMonth;
   List<CalendarBandModel> get allBandModels;
@@ -30,7 +30,7 @@ abstract class WeeklyCalendarState {
   Alignment get contentAlignment;
 }
 
-extension WeeklyCalendarStateCompoutedProperties on WeeklyCalendarState {
+extension WeeklyCalendarStateCompoutedProperties on WeekCalendarState {
   bool isNecessaryLineBreak(DateTime date) {
     return !dateRange.inRange(date.date());
   }

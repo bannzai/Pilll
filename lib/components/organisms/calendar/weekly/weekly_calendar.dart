@@ -15,9 +15,9 @@ import 'package:pilll/util/datetime/date_compare.dart';
 import 'package:pilll/util/datetime/day.dart';
 
 class CalendarWeekdayLine extends StatelessWidget {
-  final WeeklyCalendarState calendarState;
+  final WeekCalendarState calendarState;
   final double horizontalPadding;
-  final Function(WeeklyCalendarState, DateTime) onTap;
+  final Function(WeekCalendarState, DateTime) onTap;
 
   const CalendarWeekdayLine({
     Key? key,
@@ -71,7 +71,7 @@ class CalendarWeekdayLine extends StatelessWidget {
   List<Widget> _bands(
     BuildContext context,
     List<CalendarBandModel> bandModels,
-    WeeklyCalendarState calendarState,
+    WeekCalendarState calendarState,
     double horizontalPadding,
   ) {
     var tileWidth =
