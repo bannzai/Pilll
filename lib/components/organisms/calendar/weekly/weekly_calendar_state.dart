@@ -40,12 +40,4 @@ extension WeeklyCalendarStateCompoutedProperties on WeekCalendarState {
         ? 0
         : daysBetween(dateRange.begin.date(), begin.date());
   }
-
-  DateTime buildDate(Weekday weekday) {
-    return dateRange.begin.add(Duration(days: weekday.index));
-  }
-
-  int targetDay(Weekday weekday) {
-    return dateRange.begin.add(Duration(days: weekday.index + 1)).day;
-  }
 }

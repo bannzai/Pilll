@@ -46,7 +46,7 @@ class CalendarWeekdayLine extends StatelessWidget {
         children: [
           Row(
             children: Weekday.values.map((weekday) {
-              final date = state.buildDate(weekday);
+              final date = _buildDate(weekday);
               final isOutOfBoundsInLine = !state.dateRange.inRange(date);
               if (isOutOfBoundsInLine) {
                 return Expanded(child: Container());
@@ -155,10 +155,6 @@ class CalendarWeekdayLine extends StatelessWidget {
 
   DateTime _buildDate(Weekday weekday) {
     return state.dateRange.begin.add(Duration(days: weekday.index));
-  }
-
-  int _targetDay(Weekday weekday) {
-    return state.dateRange.begin.add(Duration(days: weekday.index + 1)).day;
   }
 }
 
