@@ -14,42 +14,42 @@ import 'package:shared_preferences/shared_preferences.dart';
 final recordPageStoreProvider =
     StateNotifierProvider<RecordPageStore, AsyncValue<RecordPageState>>(
   (ref) => RecordPageStore(
-    ref.watch(recordPageAsyncActionProvider),
-    ref.watch(recordPageAsyncStateProvider),
+    asyncAction: ref.watch(recordPageAsyncActionProvider),
+    initialState: ref.watch(recordPageAsyncStateProvider),
   ),
 );
 
 class RecordPageStore extends StateNotifier<AsyncValue<RecordPageState>> {
-  final RecordPageAsyncAction _asyncAction;
-  RecordPageStore(
-    this._asyncAction,
-    AsyncValue<RecordPageState> initialState,
-  ) : super(initialState);
+  final RecordPageAsyncAction asyncAction;
+  RecordPageStore({
+    required this.asyncAction,
+    required AsyncValue<RecordPageState> initialState,
+  }) : super(initialState);
 
   RecordPageState get _stateValue => state.value!;
 
   Future<bool> taken() =>
-      _asyncAction.taken(pillSheetGroup: state.value?.pillSheetGroup);
+      asyncAction.taken(pillSheetGroup: state.value?.pillSheetGroup);
 
   Future<bool> takenWithPillNumber({
     required int pillNumberIntoPillSheet,
     required PillSheet pillSheet,
   }) =>
-      _asyncAction.takenWithPillNumber(
+      asyncAction.takenWithPillNumber(
         pillNumberIntoPillSheet: pillNumberIntoPillSheet,
         pillSheetGroup: state.value?.pillSheetGroup,
         pillSheet: pillSheet,
       );
 
   Future<void> cancelTaken() async =>
-      _asyncAction.cancelTaken(pillSheetGroup: state.value?.pillSheetGroup);
+      asyncAction.cancelTaken(pillSheetGroup: state.value?.pillSheetGroup);
 
   Future<void> revertTaken({
     required PillSheetGroup pillSheetGroup,
     required int pageIndex,
     required int pillNumberIntoPillSheet,
   }) async =>
-      _asyncAction.revertTaken(
+      asyncAction.revertTaken(
         pillSheetGroup: pillSheetGroup,
         pageIndex: pageIndex,
         pillNumberIntoPillSheet: pillNumberIntoPillSheet,
@@ -141,7 +141,7 @@ class RecordPageStore extends StateNotifier<AsyncValue<RecordPageState>> {
     required PillSheetGroup pillSheetGroup,
     required PillSheet activedPillSheet,
   }) async =>
-      _asyncAction.beginRestDuration(
+      asyncAction.beginRestDuration(
         pillSheetGroup: pillSheetGroup,
         activedPillSheet: activedPillSheet,
       );
@@ -151,20 +151,20 @@ class RecordPageStore extends StateNotifier<AsyncValue<RecordPageState>> {
     required PillSheet activedPillSheet,
     required RestDuration restDuration,
   }) async =>
-      _asyncAction.endRestDuration(
+      asyncAction.endRestDuration(
           pillSheetGroup: pillSheetGroup,
           activedPillSheet: activedPillSheet,
           restDuration: restDuration);
 
   void setDisplayNumberSettingBeginNumber(int begin) =>
-      _asyncAction.setDisplayNumberSettingBeginNumber(
+      asyncAction.setDisplayNumberSettingBeginNumber(
           begin: begin, pillSheetGroup: state.value?.pillSheetGroup);
 
   Future<void> setDisplayNumberSettingEndNumber(int end) async =>
-      _asyncAction.setDisplayNumberSettingEndNumber(
+      asyncAction.setDisplayNumberSettingEndNumber(
           end: end, pillSheetGroup: state.value?.pillSheetGroup);
 
-  void switchingAppearanceMode(PillSheetAppearanceMode mode) => _asyncAction
+  void switchingAppearanceMode(PillSheetAppearanceMode mode) => asyncAction
       .switchingAppearanceMode(mode: mode, setting: _stateValue.setting);
 
   Future<void> setTrueIsAlreadyShowPremiumFunctionSurvey() async {
