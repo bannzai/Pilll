@@ -15,6 +15,7 @@ import 'package:riverpod/riverpod.dart';
 
 part 'calendar_page_state.codegen.freezed.dart';
 
+final currentCalendarPageIndexProvider = StateProvider((ref) => 0);
 final calendarPageStateProvider =
     Provider<AsyncValue<CalendarPageState>>((ref) {
   final pillSheetModifiedHistories =
@@ -37,6 +38,7 @@ final calendarPageStateProvider =
 
   try {
     return AsyncValue.data(CalendarPageState(
+        currentCalendarIndex: ref.watch(currentCalendarPageIndexProvider),
         pillSheetModifiedHistories: pillSheetModifiedHistories.value!,
         premiumAndTrial: premiumAndTrial.value!,
         calendarMenstruationBandModels: calendarMenstruationBandModels.value!,
@@ -53,7 +55,7 @@ final calendarPageStateProvider =
 class CalendarPageState with _$CalendarPageState {
   CalendarPageState._();
   factory CalendarPageState({
-    @Default(0) int currentCalendarIndex,
+    required int currentCalendarIndex,
     required List<CalendarMenstruationBandModel> calendarMenstruationBandModels,
     required List<CalendarScheduledMenstruationBandModel>
         calendarScheduledMenstruationBandModels,

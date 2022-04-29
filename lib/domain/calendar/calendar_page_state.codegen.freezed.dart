@@ -19,7 +19,7 @@ class _$CalendarPageStateTearOff {
   const _$CalendarPageStateTearOff();
 
   _CalendarPageState call(
-      {int currentCalendarIndex = 0,
+      {required int currentCalendarIndex,
       required List<CalendarMenstruationBandModel>
           calendarMenstruationBandModels,
       required List<CalendarScheduledMenstruationBandModel>
@@ -210,7 +210,7 @@ class __$CalendarPageStateCopyWithImpl<$Res>
 
 class _$_CalendarPageState extends _CalendarPageState {
   _$_CalendarPageState(
-      {this.currentCalendarIndex = 0,
+      {required this.currentCalendarIndex,
       required this.calendarMenstruationBandModels,
       required this.calendarScheduledMenstruationBandModels,
       required this.calendarNextPillSheetBandModels,
@@ -218,7 +218,6 @@ class _$_CalendarPageState extends _CalendarPageState {
       required this.premiumAndTrial})
       : super._();
 
-  @JsonKey()
   @override
   final int currentCalendarIndex;
   @override
@@ -279,7 +278,7 @@ class _$_CalendarPageState extends _CalendarPageState {
 
 abstract class _CalendarPageState extends CalendarPageState {
   factory _CalendarPageState(
-      {int currentCalendarIndex,
+      {required int currentCalendarIndex,
       required List<CalendarMenstruationBandModel>
           calendarMenstruationBandModels,
       required List<CalendarScheduledMenstruationBandModel>
