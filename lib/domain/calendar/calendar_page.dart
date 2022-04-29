@@ -1,14 +1,11 @@
 import 'package:flutter_hooks/flutter_hooks.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
-import 'package:flutter_svg/flutter_svg.dart';
 import 'package:pilll/analytics.dart';
 import 'package:pilll/components/molecules/indicator.dart';
+import 'package:pilll/domain/calendar/calendar_page_title.dart';
 import 'package:pilll/domain/calendar/components/month/month_calendar.dart';
 import 'package:pilll/components/organisms/calendar/weekly/weekly_calendar.dart';
-import 'package:pilll/domain/calendar/calendar_page_state.codegen.dart';
 import 'package:pilll/components/atoms/color.dart';
-import 'package:pilll/components/atoms/font.dart';
-import 'package:pilll/components/atoms/text_color.dart';
 import 'package:pilll/domain/calendar/components/pill_sheet_modified_history/pill_sheet_modified_history_card.dart';
 import 'package:pilll/domain/home/home_page.dart';
 import 'package:pilll/domain/calendar/calendar_page_store.dart';
@@ -48,7 +45,7 @@ class CalendarPage extends HookConsumerWidget {
     return Scaffold(
       backgroundColor: PilllColors.background,
       appBar: AppBar(
-        title: CalendarModifyMonth(
+        title: CalendarPageTitle(
           state: state,
           pageController: pageController,
           store: store,
@@ -112,56 +109,6 @@ class CalendarPage extends HookConsumerWidget {
           ],
         ),
       ),
-    );
-  }
-}
-
-class CalendarModifyMonth extends StatelessWidget {
-  const CalendarModifyMonth({
-    Key? key,
-    required this.state,
-    required this.pageController,
-    required this.store,
-  }) : super(key: key);
-
-  final CalendarPageState state;
-  final PageController pageController;
-  final CalendarPageStateStore store;
-
-  @override
-  Widget build(BuildContext context) {
-    return Row(
-      mainAxisAlignment: MainAxisAlignment.center,
-      children: [
-        IconButton(
-          icon: SvgPicture.asset("images/arrow_left.svg"),
-          onPressed: () {
-            final previousMonthIndex = state.currentCalendarIndex - 1;
-            pageController.jumpToPage(previousMonthIndex);
-            store.updateCurrentCalendarIndex(previousMonthIndex);
-            analytics.logEvent(name: "pressed_previous_month", parameters: {
-              "current_index": state.currentCalendarIndex,
-              "previous_index": previousMonthIndex
-            });
-          },
-        ),
-        Text(
-          state.displayMonthString,
-          style: TextColorStyle.main.merge(FontType.subTitle),
-        ),
-        IconButton(
-          icon: SvgPicture.asset("images/arrow_right.svg"),
-          onPressed: () {
-            final nextMonthIndex = state.currentCalendarIndex + 1;
-            pageController.jumpToPage(nextMonthIndex);
-            store.updateCurrentCalendarIndex(nextMonthIndex);
-            analytics.logEvent(name: "pressed_next_month", parameters: {
-              "current_index": state.currentCalendarIndex,
-              "next_index": nextMonthIndex
-            });
-          },
-        ),
-      ],
     );
   }
 }
