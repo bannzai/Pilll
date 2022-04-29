@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:pilll/components/atoms/color.dart';
 import 'package:pilll/components/atoms/font.dart';
 import 'package:pilll/components/atoms/text_color.dart';
-import 'package:pilll/components/organisms/calendar/monthly/monthly_calendar_layout.dart';
+import 'package:pilll/domain/calendar/components/month/month_calendar.dart';
 import 'package:pilll/entity/weekday.dart';
 
 class CalendarDayTile extends StatelessWidget {

@@ -1,6 +1,6 @@
 import 'package:pilll/components/organisms/calendar/band/calendar_band.dart';
 import 'package:pilll/components/organisms/calendar/band/calendar_band_model.dart';
-import 'package:pilll/components/organisms/calendar/monthly/monthly_calendar_layout.dart';
+import 'package:pilll/domain/calendar/components/month/month_calendar.dart';
 import 'package:pilll/components/organisms/calendar/weekly/weekly_calendar.dart';
 import 'package:pilll/domain/calendar/calendar_card_state.dart';
 import 'package:pilll/domain/calendar/date_range.dart';
@@ -39,7 +39,7 @@ void main() {
       await tester.pumpWidget(
         ProviderScope(
           child: MaterialApp(
-            home: MonthlyCalendarLayout(
+            home: MonthCalendar(
               state: CalendarCardState(now),
               weekCalendarBuilder: (context, weeklyDateRange) {
                 return CalendarWeekdayLine(
@@ -88,7 +88,7 @@ void main() {
       await tester.pumpWidget(
         ProviderScope(
           child: MaterialApp(
-            home: MonthlyCalendarLayout(
+            home: MonthCalendar(
               state: CalendarCardState(now),
               weekCalendarBuilder: (context, weeklyDateRange) {
                 return CalendarWeekdayLine(
@@ -123,7 +123,7 @@ void main() {
       await tester.pumpWidget(
         ProviderScope(
           child: MaterialApp(
-            home: MonthlyCalendarLayout(
+            home: MonthCalendar(
               state: CalendarCardState(now),
               weekCalendarBuilder: (context, weeklyDateRange) {
                 return CalendarWeekdayLine(
@@ -154,7 +154,7 @@ void main() {
       await tester.pumpWidget(
         ProviderScope(
           child: MaterialApp(
-            home: MonthlyCalendarLayout(
+            home: MonthCalendar(
               state: CalendarCardState(now),
               weekCalendarBuilder: (context, weeklyDateRange) {
                 return CalendarWeekdayLine(

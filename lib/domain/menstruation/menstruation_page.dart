@@ -6,7 +6,7 @@ import 'package:pilll/components/atoms/buttons.dart';
 import 'package:pilll/components/atoms/color.dart';
 import 'package:pilll/components/atoms/text_color.dart';
 import 'package:pilll/components/molecules/indicator.dart';
-import 'package:pilll/components/organisms/calendar/monthly/monthly_calendar_layout.dart';
+import 'package:pilll/domain/calendar/components/month/month_calendar.dart';
 import 'package:pilll/domain/menstruation/components/calendar/menstruation_calendar_header.dart';
 import 'package:pilll/domain/menstruation/menstruation_card.dart';
 import 'package:pilll/domain/menstruation/menstruation_state.codegen.dart';

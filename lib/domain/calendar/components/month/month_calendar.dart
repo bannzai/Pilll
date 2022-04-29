@@ -11,12 +11,12 @@ abstract class CalendarConstants {
   static const int maxLineCount = 6;
 }
 
-class MonthlyCalendarLayout extends HookConsumerWidget {
+class MonthCalendar extends HookConsumerWidget {
   final DateTime dateForMonth;
   final Widget Function(BuildContext, MonthCalendarState, WeekCalendarState)
       weekCalendarBuilder;
 
-  const MonthlyCalendarLayout({
+  const MonthCalendar({
     Key? key,
     required this.dateForMonth,
     required this.weekCalendarBuilder,
