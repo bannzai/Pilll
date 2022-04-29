@@ -20,6 +20,7 @@ class _$CalendarPageStateTearOff {
 
   _CalendarPageState call(
       {required int currentCalendarIndex,
+      required MonthCalendar currentMonthCalendar,
       required List<CalendarMenstruationBandModel>
           calendarMenstruationBandModels,
       required List<CalendarScheduledMenstruationBandModel>
@@ -30,6 +31,7 @@ class _$CalendarPageStateTearOff {
       required PremiumAndTrial premiumAndTrial}) {
     return _CalendarPageState(
       currentCalendarIndex: currentCalendarIndex,
+      currentMonthCalendar: currentMonthCalendar,
       calendarMenstruationBandModels: calendarMenstruationBandModels,
       calendarScheduledMenstruationBandModels:
           calendarScheduledMenstruationBandModels,
@@ -46,6 +48,7 @@ const $CalendarPageState = _$CalendarPageStateTearOff();
 /// @nodoc
 mixin _$CalendarPageState {
   int get currentCalendarIndex => throw _privateConstructorUsedError;
+  MonthCalendar get currentMonthCalendar => throw _privateConstructorUsedError;
   List<CalendarMenstruationBandModel> get calendarMenstruationBandModels =>
       throw _privateConstructorUsedError;
   List<CalendarScheduledMenstruationBandModel>
@@ -69,6 +72,7 @@ abstract class $CalendarPageStateCopyWith<$Res> {
       _$CalendarPageStateCopyWithImpl<$Res>;
   $Res call(
       {int currentCalendarIndex,
+      MonthCalendar currentMonthCalendar,
       List<CalendarMenstruationBandModel> calendarMenstruationBandModels,
       List<CalendarScheduledMenstruationBandModel>
           calendarScheduledMenstruationBandModels,
@@ -91,6 +95,7 @@ class _$CalendarPageStateCopyWithImpl<$Res>
   @override
   $Res call({
     Object? currentCalendarIndex = freezed,
+    Object? currentMonthCalendar = freezed,
     Object? calendarMenstruationBandModels = freezed,
     Object? calendarScheduledMenstruationBandModels = freezed,
     Object? calendarNextPillSheetBandModels = freezed,
@@ -102,6 +107,10 @@ class _$CalendarPageStateCopyWithImpl<$Res>
           ? _value.currentCalendarIndex
           : currentCalendarIndex // ignore: cast_nullable_to_non_nullable
               as int,
+      currentMonthCalendar: currentMonthCalendar == freezed
+          ? _value.currentMonthCalendar
+          : currentMonthCalendar // ignore: cast_nullable_to_non_nullable
+              as MonthCalendar,
       calendarMenstruationBandModels: calendarMenstruationBandModels == freezed
           ? _value.calendarMenstruationBandModels
           : calendarMenstruationBandModels // ignore: cast_nullable_to_non_nullable
@@ -144,6 +153,7 @@ abstract class _$CalendarPageStateCopyWith<$Res>
   @override
   $Res call(
       {int currentCalendarIndex,
+      MonthCalendar currentMonthCalendar,
       List<CalendarMenstruationBandModel> calendarMenstruationBandModels,
       List<CalendarScheduledMenstruationBandModel>
           calendarScheduledMenstruationBandModels,
@@ -169,6 +179,7 @@ class __$CalendarPageStateCopyWithImpl<$Res>
   @override
   $Res call({
     Object? currentCalendarIndex = freezed,
+    Object? currentMonthCalendar = freezed,
     Object? calendarMenstruationBandModels = freezed,
     Object? calendarScheduledMenstruationBandModels = freezed,
     Object? calendarNextPillSheetBandModels = freezed,
@@ -180,6 +191,10 @@ class __$CalendarPageStateCopyWithImpl<$Res>
           ? _value.currentCalendarIndex
           : currentCalendarIndex // ignore: cast_nullable_to_non_nullable
               as int,
+      currentMonthCalendar: currentMonthCalendar == freezed
+          ? _value.currentMonthCalendar
+          : currentMonthCalendar // ignore: cast_nullable_to_non_nullable
+              as MonthCalendar,
       calendarMenstruationBandModels: calendarMenstruationBandModels == freezed
           ? _value.calendarMenstruationBandModels
           : calendarMenstruationBandModels // ignore: cast_nullable_to_non_nullable
@@ -211,6 +226,7 @@ class __$CalendarPageStateCopyWithImpl<$Res>
 class _$_CalendarPageState extends _CalendarPageState {
   _$_CalendarPageState(
       {required this.currentCalendarIndex,
+      required this.currentMonthCalendar,
       required this.calendarMenstruationBandModels,
       required this.calendarScheduledMenstruationBandModels,
       required this.calendarNextPillSheetBandModels,
@@ -220,6 +236,8 @@ class _$_CalendarPageState extends _CalendarPageState {
 
   @override
   final int currentCalendarIndex;
+  @override
+  final MonthCalendar currentMonthCalendar;
   @override
   final List<CalendarMenstruationBandModel> calendarMenstruationBandModels;
   @override
@@ -234,7 +252,7 @@ class _$_CalendarPageState extends _CalendarPageState {
 
   @override
   String toString() {
-    return 'CalendarPageState(currentCalendarIndex: $currentCalendarIndex, calendarMenstruationBandModels: $calendarMenstruationBandModels, calendarScheduledMenstruationBandModels: $calendarScheduledMenstruationBandModels, calendarNextPillSheetBandModels: $calendarNextPillSheetBandModels, pillSheetModifiedHistories: $pillSheetModifiedHistories, premiumAndTrial: $premiumAndTrial)';
+    return 'CalendarPageState(currentCalendarIndex: $currentCalendarIndex, currentMonthCalendar: $currentMonthCalendar, calendarMenstruationBandModels: $calendarMenstruationBandModels, calendarScheduledMenstruationBandModels: $calendarScheduledMenstruationBandModels, calendarNextPillSheetBandModels: $calendarNextPillSheetBandModels, pillSheetModifiedHistories: $pillSheetModifiedHistories, premiumAndTrial: $premiumAndTrial)';
   }
 
   @override
@@ -244,6 +262,8 @@ class _$_CalendarPageState extends _CalendarPageState {
             other is _CalendarPageState &&
             const DeepCollectionEquality()
                 .equals(other.currentCalendarIndex, currentCalendarIndex) &&
+            const DeepCollectionEquality()
+                .equals(other.currentMonthCalendar, currentMonthCalendar) &&
             const DeepCollectionEquality().equals(
                 other.calendarMenstruationBandModels,
                 calendarMenstruationBandModels) &&
@@ -263,6 +283,7 @@ class _$_CalendarPageState extends _CalendarPageState {
   int get hashCode => Object.hash(
       runtimeType,
       const DeepCollectionEquality().hash(currentCalendarIndex),
+      const DeepCollectionEquality().hash(currentMonthCalendar),
       const DeepCollectionEquality().hash(calendarMenstruationBandModels),
       const DeepCollectionEquality()
           .hash(calendarScheduledMenstruationBandModels),
@@ -279,6 +300,7 @@ class _$_CalendarPageState extends _CalendarPageState {
 abstract class _CalendarPageState extends CalendarPageState {
   factory _CalendarPageState(
       {required int currentCalendarIndex,
+      required MonthCalendar currentMonthCalendar,
       required List<CalendarMenstruationBandModel>
           calendarMenstruationBandModels,
       required List<CalendarScheduledMenstruationBandModel>
@@ -291,6 +313,8 @@ abstract class _CalendarPageState extends CalendarPageState {
 
   @override
   int get currentCalendarIndex;
+  @override
+  MonthCalendar get currentMonthCalendar;
   @override
   List<CalendarMenstruationBandModel> get calendarMenstruationBandModels;
   @override
