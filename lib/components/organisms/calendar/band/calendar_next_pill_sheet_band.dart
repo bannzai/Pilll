@@ -5,19 +5,18 @@ import 'package:pilll/components/atoms/text_color.dart';
 import 'package:pilll/components/molecules/diagonal_striped_line.dart';
 import 'package:pilll/components/organisms/calendar/band/calendar_band.dart';
 
-// TODO: When alignemnt band, use with CalendarBandConst.height
 class CalendarNextPillSheetBand extends StatelessWidget {
   const CalendarNextPillSheetBand({
     Key? key,
     required this.begin,
     required this.end,
-    required this.isLineBreaked,
+    required this.isLineBreak,
     required this.width,
   }) : super(key: key);
 
   final DateTime begin;
   final DateTime end;
-  final bool isLineBreaked;
+  final bool isLineBreak;
   final double width;
 
   @override

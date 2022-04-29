@@ -1,6 +1,10 @@
 import 'package:collection/collection.dart';
+import 'package:pilll/components/organisms/calendar/band/calendar_band.dart';
 
 import 'package:pilll/components/organisms/calendar/band/calendar_band_model.dart';
+import 'package:pilll/components/organisms/calendar/band/calendar_menstruation_band.dart';
+import 'package:pilll/components/organisms/calendar/band/calendar_next_pill_sheet_band.dart';
+import 'package:pilll/components/organisms/calendar/band/calendar_scheduled_menstruation_band.dart';
 import 'package:pilll/components/organisms/calendar/day/calendar_day_tile.dart';
 import 'package:pilll/components/organisms/calendar/band/calendar_band_function.dart';
 import 'package:pilll/components/organisms/calendar/weekly/weekly_calendar_state.dart';
@@ -16,16 +20,26 @@ import 'package:pilll/util/datetime/day.dart';
 class CalendarWeekdayLine extends StatelessWidget {
   final WeekCalendarState state;
   final double horizontalPadding;
+  final List<CalendarMenstruationBandModel> calendarMenstruationBandModels;
+  final List<CalendarScheduledMenstruationBandModel>
+      calendarScheduledMenstruationBandModels;
+  final List<CalendarNextPillSheetBandModel> calendarNextPillSheetBandModels;
   final Function(WeekCalendarState, DateTime) onTap;
 
   const CalendarWeekdayLine({
     Key? key,
     required this.state,
+    required this.calendarMenstruationBandModels,
+    required this.calendarScheduledMenstruationBandModels,
+    required this.calendarNextPillSheetBandModels,
     required this.horizontalPadding,
     required this.onTap,
   }) : super(key: key);
   @override
   Widget build(BuildContext context) {
+    var tileWidth =
+        (MediaQuery.of(context).size.width - horizontalPadding * 2) /
+            Weekday.values.length;
     return Container(
       child: Stack(
         children: [
@@ -57,56 +71,88 @@ class CalendarWeekdayLine extends StatelessWidget {
               );
             }).toList(),
           ),
-          ..._bands(context, state.allBandModels, state, horizontalPadding)
+          ...calendarMenstruationBandModels.where(_contains).map(
+                (e) => _buildBand(
+                  calendarBandModel: e,
+                  bottomOffset: 0,
+                  tileWidth: tileWidth,
+                  bandBuilder: (_, width) => CalendarMenstruationBand(
+                    menstruation: e.menstruation,
+                    width: width,
+                  ),
+                ),
+              ),
+          ...calendarScheduledMenstruationBandModels.where(_contains).map(
+                (e) => _buildBand(
+                  calendarBandModel: e,
+                  bottomOffset: 0,
+                  tileWidth: tileWidth,
+                  bandBuilder: (_, width) => CalendarScheduledMenstruationBand(
+                    begin: e.begin,
+                    end: e.end,
+                    width: width,
+                  ),
+                ),
+              ),
+          ...calendarNextPillSheetBandModels.where(_contains).map(
+                (e) => _buildBand(
+                  calendarBandModel: e,
+                  bottomOffset: CalendarBandConst.height,
+                  tileWidth: tileWidth,
+                  bandBuilder: (isLineBreak, width) =>
+                      CalendarNextPillSheetBand(
+                    begin: e.begin,
+                    end: e.end,
+                    isLineBreak: isLineBreak,
+                    width: width,
+                  ),
+                ),
+              ),
         ],
       ),
     );
   }
 
-  List<Widget> _bands(
-    BuildContext context,
-    List<CalendarBandModel> bandModels,
-    WeekCalendarState calendarState,
-    double horizontalPadding,
-  ) {
-    var tileWidth =
-        (MediaQuery.of(context).size.width - horizontalPadding * 2) /
-            Weekday.values.length;
+  bool _contains(CalendarBandModel calendarBandModel) {
+    final isInRange = state.dateRange.inRange(calendarBandModel.begin) ||
+        state.dateRange.inRange(calendarBandModel.end);
+    return isInRange;
+  }
 
-    return bandModels
-        .map((bandModel) {
-          final isInRange = calendarState.dateRange.inRange(bandModel.begin) ||
-              calendarState.dateRange.inRange(bandModel.end);
-          if (!isInRange) {
-            return null;
-          }
+  Widget _buildBand({
+    required CalendarBandModel calendarBandModel,
+    required double bottomOffset,
+    required double tileWidth,
+    required Widget Function(bool isLineBreak, double width) bandBuilder,
+  }) {
+    bool isLineBreak = _isNecessaryLineBreak(calendarBandModel.begin);
+    int start = _offsetForStartPositionAtLine(calendarBandModel.begin);
+    final length = bandLength(state.dateRange, calendarBandModel, isLineBreak);
 
-          bool isLineBreaked =
-              calendarState.isNecessaryLineBreak(bandModel.begin);
-          int start =
-              calendarState.offsetForStartPositionAtLine(bandModel.begin);
-          final length =
-              bandLength(calendarState.dateRange, bandModel, isLineBreaked);
+    return Positioned(
+      left: start.toDouble() * tileWidth,
+      width: tileWidth * length,
+      bottom: bottomOffset,
+      child: bandBuilder(isLineBreak, tileWidth * length),
+    );
+  }
 
-          return Positioned(
-            left: start.toDouble() * tileWidth,
-            width: tileWidth * length,
-            bottom: bandModel.bottom,
-            child: CalendarBand(
-              model: bandModel,
-              isLineBreaked: isLineBreaked,
-              width: tileWidth * length,
-              onTap: (model) {
-                if (model is! CalendarMenstruationBandModel) {
-                  return;
-                }
-                showMenstruationEditPageForUpdate(context, model.menstruation);
-              },
-            ),
-          );
-        })
-        .whereNotNull()
-        .toList();
+  bool _isNecessaryLineBreak(DateTime date) {
+    return !state.dateRange.inRange(date.date());
+  }
+
+  int _offsetForStartPositionAtLine(DateTime begin) {
+    return _isNecessaryLineBreak(begin)
+        ? 0
+        : daysBetween(state.dateRange.begin.date(), begin.date());
+  }
+
+  DateTime _buildDate(Weekday weekday) {
+    return state.dateRange.begin.add(Duration(days: weekday.index));
+  }
+
+  int _targetDay(Weekday weekday) {
+    return state.dateRange.begin.add(Duration(days: weekday.index + 1)).day;
   }
 }
 
