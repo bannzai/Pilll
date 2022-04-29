@@ -10,7 +10,6 @@ import 'package:pilll/domain/calendar/components/month/month_calendar.dart';
 import 'package:pilll/domain/menstruation_edit/components/calendar/calendar_date_header.dart';
 import 'package:pilll/components/organisms/calendar/weekly/weekly_calendar.dart';
 import 'package:pilll/domain/menstruation_edit/components/calendar/weekly_calendar_state.dart';
-import 'package:pilll/domain/menstruation_edit/components/monthly_calendar_state.dart';
 import 'package:pilll/entity/menstruation.codegen.dart';
 import 'package:pilll/domain/menstruation_edit/menstruation_edit_store.dart';
 import 'package:pilll/util/formatter/date_time_formatter.dart';
@@ -42,9 +41,9 @@ class MenstruationEditPage extends HookConsumerWidget {
           }
           store.adjustedScrollOffset();
           final double estimatedSectionTitleHeight = 95;
-          scrollController.jumpTo(CalendarConstants.tileHeight *
-                  CalendarConstants.maxLineCount +
-              estimatedSectionTitleHeight);
+          scrollController.jumpTo(
+              CalendarConstants.tileHeight * CalendarConstants.maxLineCount +
+                  estimatedSectionTitleHeight);
         });
         return Container(
           decoration: const BoxDecoration(
@@ -137,8 +136,7 @@ class MenstruationEditPage extends HookConsumerWidget {
                               weekCalendarBuilder:
                                   (context, weeklyCalendarState) {
                                 return CalendarWeekdayLine(
-                                  state:
-                                      MenstruationEditWeeklyCalendarState(
+                                  state: MenstruationEditWeeklyCalendarState(
                                     weeklyCalendarState,
                                     dateForMonth,
                                     state.menstruation,
