@@ -132,16 +132,6 @@ class RecordPageStore extends StateNotifier<AsyncValue<RecordPageState>> {
         activedPillSheet: activedPillSheet,
       );
 
-  Future<void> endRestDuration({
-    required PillSheetGroup pillSheetGroup,
-    required PillSheet activedPillSheet,
-    required RestDuration restDuration,
-  }) async =>
-      asyncAction.endRestDuration(
-          pillSheetGroup: pillSheetGroup,
-          activedPillSheet: activedPillSheet,
-          restDuration: restDuration);
-
   void setDisplayNumberSettingBeginNumber(int begin) =>
       asyncAction.setDisplayNumberSettingBeginNumber(
           begin: begin, pillSheetGroup: state.value?.pillSheetGroup);
