@@ -28,9 +28,6 @@ class RecordPageStore extends StateNotifier<AsyncValue<RecordPageState>> {
 
   RecordPageState get _stateValue => state.value!;
 
-  Future<bool> taken() =>
-      asyncAction.taken(pillSheetGroup: state.value?.pillSheetGroup);
-
   bool isDone({
     required int pillNumberIntoPillSheet,
     required PillSheet pillSheet,

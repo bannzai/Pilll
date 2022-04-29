@@ -26,6 +26,7 @@ class RecordPageButton extends StatelessWidget {
     else
       return TakenButton(
         parentContext: context,
+        pillSheetGroup: pillSheetGroup,
         pillSheet: currentPillSheet,
       );
   }

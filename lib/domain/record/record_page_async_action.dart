@@ -32,10 +32,7 @@ class RecordPageAsyncAction {
 
   Future<bool> _take(
       {required DateTime takenDate,
-      required PillSheetGroup? pillSheetGroup}) async {
-    if (pillSheetGroup == null) {
-      throw const FormatException("pill sheet group not found");
-    }
+      required PillSheetGroup pillSheetGroup}) async {
     final activedPillSheet = pillSheetGroup.activedPillSheet;
     if (activedPillSheet == null) {
       throw const FormatException("active pill sheet not found");
@@ -59,7 +56,7 @@ class RecordPageAsyncAction {
     return true;
   }
 
-  Future<bool> taken({required PillSheetGroup? pillSheetGroup}) {
+  Future<bool> taken({required PillSheetGroup pillSheetGroup}) {
     return _take(takenDate: now(), pillSheetGroup: pillSheetGroup);
   }
 

@@ -5,14 +5,17 @@ import 'package:pilll/components/atoms/buttons.dart';
 import 'package:pilll/domain/record/record_page_store.dart';
 import 'package:pilll/domain/record/util/take.dart';
 import 'package:pilll/entity/pill_sheet.codegen.dart';
+import 'package:pilll/entity/pill_sheet_group.codegen.dart';
 
 class TakenButton extends HookConsumerWidget {
   final BuildContext parentContext;
+  final PillSheetGroup pillSheetGroup;
   final PillSheet pillSheet;
 
   const TakenButton({
     Key? key,
     required this.parentContext,
+    required this.pillSheetGroup,
     required this.pillSheet,
   }) : super(key: key);
   @override
@@ -28,7 +31,7 @@ class TakenButton extends HookConsumerWidget {
         });
         await effectAfterTakenPillAction(
           context: parentContext,
-          taken: store.taken(),
+          taken: store.asyncAction.taken(pillSheetGroup: pillSheetGroup),
           store: store,
         );
       },
