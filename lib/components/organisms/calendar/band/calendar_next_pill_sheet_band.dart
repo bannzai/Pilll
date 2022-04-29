@@ -5,6 +5,7 @@ import 'package:pilll/components/atoms/text_color.dart';
 import 'package:pilll/components/molecules/diagonal_striped_line.dart';
 import 'package:pilll/components/organisms/calendar/band/calendar_band.dart';
 
+// TODO: When alignemnt band, use with CalendarBandConst.height
 class CalendarNextPillSheetBand extends StatelessWidget {
   const CalendarNextPillSheetBand({
     Key? key,
