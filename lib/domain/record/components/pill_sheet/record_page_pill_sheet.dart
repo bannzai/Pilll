@@ -111,7 +111,7 @@ class RecordPagePillSheet extends StatelessWidget {
             }
 
             if (pillSheet.lastTakenPillNumber >= pillNumberIntoPillSheet) {
-              await store.revertTaken(
+              await store.asyncAction.revertTaken(
                   pillSheetGroup: pillSheetGroup,
                   pageIndex: pageIndex,
                   pillNumberIntoPillSheet: pillNumberIntoPillSheet);
