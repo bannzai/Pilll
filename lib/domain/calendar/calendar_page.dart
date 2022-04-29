@@ -12,6 +12,7 @@ import 'package:pilll/domain/calendar/calendar_page_store.dart';
 import 'package:flutter/material.dart';
 import 'package:pilll/error/universal_error_page.dart';
 import 'package:pilll/hooks/automatic_keep_alive_client_mixin.dart';
+import 'package:pilll/util/datetime/day.dart';
 
 class CalendarPage extends HookConsumerWidget {
   @override
@@ -43,6 +44,18 @@ class CalendarPage extends HookConsumerWidget {
     });
 
     return Scaffold(
+      floatingActionButton: Container(
+        padding: const EdgeInsets.only(right: 10, bottom: 32),
+        child: FloatingActionButton(
+          onPressed: () {
+            analytics.logEvent(name: "calendar_fab_pressed");
+            final date = today();
+            transitionToPostDiary(context, date, diaries);
+          },
+          child: const Icon(Icons.add, color: Colors.white),
+          backgroundColor: PilllColors.secondary,
+        ),
+      ),
       backgroundColor: PilllColors.background,
       appBar: AppBar(
         title: CalendarPageTitle(
