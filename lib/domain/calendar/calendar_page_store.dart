@@ -32,24 +32,24 @@ class CalendarPageStateStore
   }) : super(initialState);
 
   // TODO: Remove
-  void updateCurrentCalendarIndex(int index) {
-    final value = state.asData?.value;
-    if (value == null) {
-      return;
-    }
-    if (value.currentCalendarIndex == index) {
-      return;
-    }
-    state = AsyncValue.data(value.copyWith(currentCalendarIndex: index));
-
-    // TODO: Remove or move to asyncAction
-    //   final date = state.calendarDataSource[state.currentCalendarIndex];
-    //   _diaryDatastore.fetchListForMonth(date).then((diaries) {
-    //     final ignoredSameMonth = state.diariesForMonth
-    //         .where((element) => !isSameMonth(element.date, date))
-    //         .toList();
-    //     final updated = ignoredSameMonth..addAll(diaries);
-    //     state = state.copyWith(diariesForMonth: updated);
-    //   });
-  }
+//  void updateCurrentCalendarIndex(int index) {
+//    final value = state.asData?.value;
+//    if (value == null) {
+//      return;
+//    }
+//    if (value.currentCalendarIndex == index) {
+//      return;
+//    }
+//    state = AsyncValue.data(value.copyWith(currentCalendarIndex: index));
+//
+//    // TODO: Remove or move to asyncAction
+//    //   final date = state.calendarDataSource[state.currentCalendarIndex];
+//    //   _diaryDatastore.fetchListForMonth(date).then((diaries) {
+//    //     final ignoredSameMonth = state.diariesForMonth
+//    //         .where((element) => !isSameMonth(element.date, date))
+//    //         .toList();
+//    //     final updated = ignoredSameMonth..addAll(diaries);
+//    //     state = state.copyWith(diariesForMonth: updated);
+//    //   });
+//  }
 }
