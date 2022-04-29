@@ -1,3 +1,5 @@
+import 'package:pilll/components/organisms/calendar/band/calendar_band_model.dart';
+import 'package:pilll/components/organisms/calendar/band/calendar_band_provider.dart';
 import 'package:pilll/database/diary.dart';
 import 'package:pilll/database/menstruation.dart';
 import 'package:pilll/database/pill_sheet_group.dart';
@@ -35,6 +37,13 @@ final menstruationStateProvider =
   final diaries = ref.watch(diariesStreamAround90Days(today()));
   final menstruations = ref.watch(allMenstruationStreamProvider);
 
+  final calendarMenstruationBandModels =
+      ref.watch(calendarMenstruationBandListProvider);
+  final calendarScheduledMenstruationBandModels =
+      ref.watch(calendarScheduledMenstruationBandListProvider);
+  final calendarNextPillSheetBandModels =
+      ref.watch(calendarNextPillSheetBandListProvider);
+
   final currentCalendarPageIndex =
       ref.watch(currentMenstruationWeekCalendarPageIndexProvider);
   final todayCalendarPageIndex = ref.watch(todayCalendarPageIndexProvider);
@@ -57,6 +66,10 @@ final menstruationStateProvider =
         premiumAndTrial: premiumAndTrial.value!,
         setting: setting.value!,
         latestPillSheetGroup: latestPillSheetGroup.value!,
+        calendarMenstruationBandModels: calendarMenstruationBandModels.value!,
+        calendarScheduledMenstruationBandModels:
+            calendarScheduledMenstruationBandModels.value!,
+        calendarNextPillSheetBandModels: calendarNextPillSheetBandModels.value!,
       ),
     );
   } catch (error, _) {
@@ -75,6 +88,11 @@ class MenstruationState with _$MenstruationState {
     required PremiumAndTrial premiumAndTrial,
     required Setting setting,
     required PillSheetGroup? latestPillSheetGroup,
+    required List<CalendarMenstruationBandModel> calendarMenstruationBandModels,
+    required List<CalendarScheduledMenstruationBandModel>
+        calendarScheduledMenstruationBandModels,
+    required List<CalendarNextPillSheetBandModel>
+        calendarNextPillSheetBandModels,
   }) = _MenstruationState;
 
   DateTime _targetEndDayOfWeekday() {
