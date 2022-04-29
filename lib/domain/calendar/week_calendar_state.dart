@@ -4,7 +4,7 @@ import 'package:pilll/domain/calendar/date_range.dart';
 import 'package:pilll/components/organisms/calendar/weekly/weekly_calendar_state.dart';
 import 'package:pilll/entity/diary.codegen.dart';
 
-class CalendarTabWeeklyCalendarState extends WeeklyCalendarState {
+class CalendarTabWeeklyCalendarState extends WeekCalendarState {
   final DateRange dateRange;
   final List<Diary> diariesForMonth;
   final List<CalendarBandModel> allBandModels;

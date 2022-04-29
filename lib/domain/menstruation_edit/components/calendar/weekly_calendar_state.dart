@@ -5,7 +5,7 @@ import 'package:pilll/domain/calendar/date_range.dart';
 import 'package:pilll/entity/diary.codegen.dart';
 import 'package:pilll/entity/menstruation.codegen.dart';
 
-class MenstruationEditWeeklyCalendarState extends WeeklyCalendarState {
+class MenstruationEditWeeklyCalendarState extends WeekCalendarState {
   final DateRange dateRange;
   List<Diary> get diariesForMonth => [];
   List<CalendarBandModel> get allBandModels => [];
