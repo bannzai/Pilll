@@ -25,7 +25,13 @@ class _$MenstruationStateTearOff {
       required List<Menstruation> menstruations,
       required PremiumAndTrial premiumAndTrial,
       required Setting setting,
-      required PillSheetGroup? latestPillSheetGroup}) {
+      required PillSheetGroup? latestPillSheetGroup,
+      required List<CalendarMenstruationBandModel>
+          calendarMenstruationBandModels,
+      required List<CalendarScheduledMenstruationBandModel>
+          calendarScheduledMenstruationBandModels,
+      required List<CalendarNextPillSheetBandModel>
+          calendarNextPillSheetBandModels}) {
     return _MenstruationState(
       currentCalendarPageIndex: currentCalendarPageIndex,
       todayCalendarPageIndex: todayCalendarPageIndex,
@@ -34,6 +40,10 @@ class _$MenstruationStateTearOff {
       premiumAndTrial: premiumAndTrial,
       setting: setting,
       latestPillSheetGroup: latestPillSheetGroup,
+      calendarMenstruationBandModels: calendarMenstruationBandModels,
+      calendarScheduledMenstruationBandModels:
+          calendarScheduledMenstruationBandModels,
+      calendarNextPillSheetBandModels: calendarNextPillSheetBandModels,
     );
   }
 }
@@ -50,6 +60,13 @@ mixin _$MenstruationState {
   PremiumAndTrial get premiumAndTrial => throw _privateConstructorUsedError;
   Setting get setting => throw _privateConstructorUsedError;
   PillSheetGroup? get latestPillSheetGroup =>
+      throw _privateConstructorUsedError;
+  List<CalendarMenstruationBandModel> get calendarMenstruationBandModels =>
+      throw _privateConstructorUsedError;
+  List<CalendarScheduledMenstruationBandModel>
+      get calendarScheduledMenstruationBandModels =>
+          throw _privateConstructorUsedError;
+  List<CalendarNextPillSheetBandModel> get calendarNextPillSheetBandModels =>
       throw _privateConstructorUsedError;
 
   @JsonKey(ignore: true)
@@ -69,7 +86,11 @@ abstract class $MenstruationStateCopyWith<$Res> {
       List<Menstruation> menstruations,
       PremiumAndTrial premiumAndTrial,
       Setting setting,
-      PillSheetGroup? latestPillSheetGroup});
+      PillSheetGroup? latestPillSheetGroup,
+      List<CalendarMenstruationBandModel> calendarMenstruationBandModels,
+      List<CalendarScheduledMenstruationBandModel>
+          calendarScheduledMenstruationBandModels,
+      List<CalendarNextPillSheetBandModel> calendarNextPillSheetBandModels});
 
   $PremiumAndTrialCopyWith<$Res> get premiumAndTrial;
   $SettingCopyWith<$Res> get setting;
@@ -94,6 +115,9 @@ class _$MenstruationStateCopyWithImpl<$Res>
     Object? premiumAndTrial = freezed,
     Object? setting = freezed,
     Object? latestPillSheetGroup = freezed,
+    Object? calendarMenstruationBandModels = freezed,
+    Object? calendarScheduledMenstruationBandModels = freezed,
+    Object? calendarNextPillSheetBandModels = freezed,
   }) {
     return _then(_value.copyWith(
       currentCalendarPageIndex: currentCalendarPageIndex == freezed
@@ -124,6 +148,20 @@ class _$MenstruationStateCopyWithImpl<$Res>
           ? _value.latestPillSheetGroup
           : latestPillSheetGroup // ignore: cast_nullable_to_non_nullable
               as PillSheetGroup?,
+      calendarMenstruationBandModels: calendarMenstruationBandModels == freezed
+          ? _value.calendarMenstruationBandModels
+          : calendarMenstruationBandModels // ignore: cast_nullable_to_non_nullable
+              as List<CalendarMenstruationBandModel>,
+      calendarScheduledMenstruationBandModels:
+          calendarScheduledMenstruationBandModels == freezed
+              ? _value.calendarScheduledMenstruationBandModels
+              : calendarScheduledMenstruationBandModels // ignore: cast_nullable_to_non_nullable
+                  as List<CalendarScheduledMenstruationBandModel>,
+      calendarNextPillSheetBandModels: calendarNextPillSheetBandModels ==
+              freezed
+          ? _value.calendarNextPillSheetBandModels
+          : calendarNextPillSheetBandModels // ignore: cast_nullable_to_non_nullable
+              as List<CalendarNextPillSheetBandModel>,
     ));
   }
 
@@ -167,7 +205,11 @@ abstract class _$MenstruationStateCopyWith<$Res>
       List<Menstruation> menstruations,
       PremiumAndTrial premiumAndTrial,
       Setting setting,
-      PillSheetGroup? latestPillSheetGroup});
+      PillSheetGroup? latestPillSheetGroup,
+      List<CalendarMenstruationBandModel> calendarMenstruationBandModels,
+      List<CalendarScheduledMenstruationBandModel>
+          calendarScheduledMenstruationBandModels,
+      List<CalendarNextPillSheetBandModel> calendarNextPillSheetBandModels});
 
   @override
   $PremiumAndTrialCopyWith<$Res> get premiumAndTrial;
@@ -197,6 +239,9 @@ class __$MenstruationStateCopyWithImpl<$Res>
     Object? premiumAndTrial = freezed,
     Object? setting = freezed,
     Object? latestPillSheetGroup = freezed,
+    Object? calendarMenstruationBandModels = freezed,
+    Object? calendarScheduledMenstruationBandModels = freezed,
+    Object? calendarNextPillSheetBandModels = freezed,
   }) {
     return _then(_MenstruationState(
       currentCalendarPageIndex: currentCalendarPageIndex == freezed
@@ -227,6 +272,20 @@ class __$MenstruationStateCopyWithImpl<$Res>
           ? _value.latestPillSheetGroup
           : latestPillSheetGroup // ignore: cast_nullable_to_non_nullable
               as PillSheetGroup?,
+      calendarMenstruationBandModels: calendarMenstruationBandModels == freezed
+          ? _value.calendarMenstruationBandModels
+          : calendarMenstruationBandModels // ignore: cast_nullable_to_non_nullable
+              as List<CalendarMenstruationBandModel>,
+      calendarScheduledMenstruationBandModels:
+          calendarScheduledMenstruationBandModels == freezed
+              ? _value.calendarScheduledMenstruationBandModels
+              : calendarScheduledMenstruationBandModels // ignore: cast_nullable_to_non_nullable
+                  as List<CalendarScheduledMenstruationBandModel>,
+      calendarNextPillSheetBandModels: calendarNextPillSheetBandModels ==
+              freezed
+          ? _value.calendarNextPillSheetBandModels
+          : calendarNextPillSheetBandModels // ignore: cast_nullable_to_non_nullable
+              as List<CalendarNextPillSheetBandModel>,
     ));
   }
 }
@@ -241,7 +300,10 @@ class _$_MenstruationState extends _MenstruationState {
       required this.menstruations,
       required this.premiumAndTrial,
       required this.setting,
-      required this.latestPillSheetGroup})
+      required this.latestPillSheetGroup,
+      required this.calendarMenstruationBandModels,
+      required this.calendarScheduledMenstruationBandModels,
+      required this.calendarNextPillSheetBandModels})
       : super._();
 
   @override
@@ -258,10 +320,17 @@ class _$_MenstruationState extends _MenstruationState {
   final Setting setting;
   @override
   final PillSheetGroup? latestPillSheetGroup;
+  @override
+  final List<CalendarMenstruationBandModel> calendarMenstruationBandModels;
+  @override
+  final List<CalendarScheduledMenstruationBandModel>
+      calendarScheduledMenstruationBandModels;
+  @override
+  final List<CalendarNextPillSheetBandModel> calendarNextPillSheetBandModels;
 
   @override
   String toString() {
-    return 'MenstruationState(currentCalendarPageIndex: $currentCalendarPageIndex, todayCalendarPageIndex: $todayCalendarPageIndex, diariesForAround90Days: $diariesForAround90Days, menstruations: $menstruations, premiumAndTrial: $premiumAndTrial, setting: $setting, latestPillSheetGroup: $latestPillSheetGroup)';
+    return 'MenstruationState(currentCalendarPageIndex: $currentCalendarPageIndex, todayCalendarPageIndex: $todayCalendarPageIndex, diariesForAround90Days: $diariesForAround90Days, menstruations: $menstruations, premiumAndTrial: $premiumAndTrial, setting: $setting, latestPillSheetGroup: $latestPillSheetGroup, calendarMenstruationBandModels: $calendarMenstruationBandModels, calendarScheduledMenstruationBandModels: $calendarScheduledMenstruationBandModels, calendarNextPillSheetBandModels: $calendarNextPillSheetBandModels)';
   }
 
   @override
@@ -281,7 +350,16 @@ class _$_MenstruationState extends _MenstruationState {
                 .equals(other.premiumAndTrial, premiumAndTrial) &&
             const DeepCollectionEquality().equals(other.setting, setting) &&
             const DeepCollectionEquality()
-                .equals(other.latestPillSheetGroup, latestPillSheetGroup));
+                .equals(other.latestPillSheetGroup, latestPillSheetGroup) &&
+            const DeepCollectionEquality().equals(
+                other.calendarMenstruationBandModels,
+                calendarMenstruationBandModels) &&
+            const DeepCollectionEquality().equals(
+                other.calendarScheduledMenstruationBandModels,
+                calendarScheduledMenstruationBandModels) &&
+            const DeepCollectionEquality().equals(
+                other.calendarNextPillSheetBandModels,
+                calendarNextPillSheetBandModels));
   }
 
   @override
@@ -293,7 +371,11 @@ class _$_MenstruationState extends _MenstruationState {
       const DeepCollectionEquality().hash(menstruations),
       const DeepCollectionEquality().hash(premiumAndTrial),
       const DeepCollectionEquality().hash(setting),
-      const DeepCollectionEquality().hash(latestPillSheetGroup));
+      const DeepCollectionEquality().hash(latestPillSheetGroup),
+      const DeepCollectionEquality().hash(calendarMenstruationBandModels),
+      const DeepCollectionEquality()
+          .hash(calendarScheduledMenstruationBandModels),
+      const DeepCollectionEquality().hash(calendarNextPillSheetBandModels));
 
   @JsonKey(ignore: true)
   @override
@@ -309,7 +391,13 @@ abstract class _MenstruationState extends MenstruationState {
       required List<Menstruation> menstruations,
       required PremiumAndTrial premiumAndTrial,
       required Setting setting,
-      required PillSheetGroup? latestPillSheetGroup}) = _$_MenstruationState;
+      required PillSheetGroup? latestPillSheetGroup,
+      required List<CalendarMenstruationBandModel>
+          calendarMenstruationBandModels,
+      required List<CalendarScheduledMenstruationBandModel>
+          calendarScheduledMenstruationBandModels,
+      required List<CalendarNextPillSheetBandModel>
+          calendarNextPillSheetBandModels}) = _$_MenstruationState;
   _MenstruationState._() : super._();
 
   @override
@@ -326,6 +414,13 @@ abstract class _MenstruationState extends MenstruationState {
   Setting get setting;
   @override
   PillSheetGroup? get latestPillSheetGroup;
+  @override
+  List<CalendarMenstruationBandModel> get calendarMenstruationBandModels;
+  @override
+  List<CalendarScheduledMenstruationBandModel>
+      get calendarScheduledMenstruationBandModels;
+  @override
+  List<CalendarNextPillSheetBandModel> get calendarNextPillSheetBandModels;
   @override
   @JsonKey(ignore: true)
   _$MenstruationStateCopyWith<_MenstruationState> get copyWith =>

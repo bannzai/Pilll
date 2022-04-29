@@ -33,6 +33,7 @@ final calendarPageStateProvider =
   final pillSheetModifiedHistories =
       ref.watch(pillSheetModifiedHistoryStreamForLatest7);
   final premiumAndTrial = ref.watch(premiumAndTrialProvider);
+
   final calendarMenstruationBandModels =
       ref.watch(calendarMenstruationBandListProvider);
   final calendarScheduledMenstruationBandModels =
@@ -61,16 +62,16 @@ final calendarPageStateProvider =
 
   try {
     return AsyncValue.data(CalendarPageState(
-        currentCalendarIndex: currentCalendarPageIndex,
-        currentMonthCalendar: monthCalendar.value!,
-        todayMonthCalendar: todayMonthCalendar.value!,
-        pillSheetModifiedHistories: pillSheetModifiedHistories.value!,
-        premiumAndTrial: premiumAndTrial.value!,
-        calendarMenstruationBandModels: calendarMenstruationBandModels.value!,
-        calendarScheduledMenstruationBandModels:
-            calendarScheduledMenstruationBandModels.value!,
-        calendarNextPillSheetBandModels:
-            calendarNextPillSheetBandModels.value!));
+      currentCalendarIndex: currentCalendarPageIndex,
+      currentMonthCalendar: monthCalendar.value!,
+      todayMonthCalendar: todayMonthCalendar.value!,
+      pillSheetModifiedHistories: pillSheetModifiedHistories.value!,
+      premiumAndTrial: premiumAndTrial.value!,
+      calendarMenstruationBandModels: calendarMenstruationBandModels.value!,
+      calendarScheduledMenstruationBandModels:
+          calendarScheduledMenstruationBandModels.value!,
+      calendarNextPillSheetBandModels: calendarNextPillSheetBandModels.value!,
+    ));
   } catch (error, _) {
     return AsyncValue.error(error);
   }

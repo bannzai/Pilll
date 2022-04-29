@@ -217,6 +217,12 @@ class MockDiaryDatastore extends _i1.Mock implements _i19.DiaryDatastore {
           Invocation.method(#streamForMonth, [], {#dateForMonth: dateForMonth}),
           returnValue:
               Stream<List<_i4.Diary>>.empty()) as _i17.Stream<List<_i4.Diary>>);
+  @override
+  _i17.Stream<List<_i4.Diary>> streamForAround90Days({DateTime? base}) =>
+      (super.noSuchMethod(
+              Invocation.method(#streamForAround90Days, [], {#base: base}),
+              returnValue: Stream<List<_i4.Diary>>.empty())
+          as _i17.Stream<List<_i4.Diary>>);
 }
 
 /// A class which mocks [MenstruationDatastore].

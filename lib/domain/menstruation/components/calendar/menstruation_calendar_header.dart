@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
-import 'package:hooks_riverpod/hooks_riverpod.dart';
 import 'package:pilll/analytics.dart';
 import 'package:pilll/components/molecules/shadow_container.dart';
 import 'package:pilll/components/organisms/calendar/band/calendar_band_model.dart';
@@ -15,7 +14,7 @@ import 'package:pilll/entity/weekday.dart';
 
 const double _horizontalPadding = 10;
 
-class MenstruationCalendarHeader extends HookConsumerWidget {
+class MenstruationCalendarHeader extends StatelessWidget {
   const MenstruationCalendarHeader({
     Key? key,
     required this.state,
@@ -53,11 +52,11 @@ class MenstruationCalendarHeader extends HookConsumerWidget {
                     child: CalendarWeekdayLine(
                       state: MenstruationSinglelineWeeklyCalendarState(
                         dateRange: DateRange(days.first, days.last),
-                        diariesForMonth: state.diariesForMonth,
+                        diariesForMonth: state.diariesForAround90Days,
                         allBandModels: buildBandModels(
                                 state.latestPillSheetGroup,
                                 state.setting,
-                                state.entities,
+                                state.menstruations,
                                 12)
                             .where((element) =>
                                 !(element is CalendarNextPillSheetBandModel))
@@ -68,8 +67,14 @@ class MenstruationCalendarHeader extends HookConsumerWidget {
                         analytics.logEvent(
                             name: "did_select_day_tile_on_menstruation");
                         transitionToPostDiary(
-                            context, date, state.diariesForMonth);
+                            context, date, state.diariesForAround90Days);
                       },
+                      calendarMenstruationBandModels:
+                          state.calendarMenstruationBandModels,
+                      calendarNextPillSheetBandModels:
+                          state.calendarNextPillSheetBandModels,
+                      calendarScheduledMenstruationBandModels:
+                          state.calendarScheduledMenstruationBandModels,
                     ),
                   );
                 },
