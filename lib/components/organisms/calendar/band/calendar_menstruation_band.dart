@@ -9,18 +9,17 @@ class CalendarMenstruationBand extends StatelessWidget {
     Key? key,
     required this.menstruation,
     required this.width,
-    this.onTap,
+    required this.onTap,
   }) : super(key: key);
 
   final Menstruation menstruation;
   final double width;
-  final Function(Menstruation)? onTap;
+  final Function(Menstruation) onTap;
 
   @override
   Widget build(BuildContext context) {
-    final onTap = this.onTap;
     return GestureDetector(
-      onTap: () => onTap?.call(menstruation),
+      onTap: () => onTap(menstruation),
       child: Container(
         height: CalendarBandConst.height,
         child: CustomPaint(

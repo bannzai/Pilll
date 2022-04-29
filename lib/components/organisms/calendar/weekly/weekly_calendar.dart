@@ -1,4 +1,5 @@
 import 'package:collection/collection.dart';
+import 'package:pilll/analytics.dart';
 import 'package:pilll/components/organisms/calendar/band/calendar_band.dart';
 
 import 'package:pilll/components/organisms/calendar/band/calendar_band_model.dart';
@@ -79,6 +80,11 @@ class CalendarWeekdayLine extends StatelessWidget {
                   bandBuilder: (_, width) => CalendarMenstruationBand(
                     menstruation: e.menstruation,
                     width: width,
+                    onTap: (menstruation) {
+                      analytics.logEvent(
+                          name: "tap_calendar_menstruation_band");
+                      showMenstruationEditPageForUpdate(context, menstruation);
+                    },
                   ),
                 ),
               ),
