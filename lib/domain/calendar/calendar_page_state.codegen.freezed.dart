@@ -20,23 +20,17 @@ class _$CalendarPageStateTearOff {
 
   _CalendarPageState call(
       {int currentCalendarIndex = 0,
-      List<Menstruation> menstruations = const [],
-      Setting? setting,
-      PillSheetGroup? latestPillSheetGroup,
-      List<PillSheetModifiedHistory> allPillSheetModifiedHistories = const [],
-      bool isPremium = false,
-      bool isTrial = false,
-      DateTime? trialDeadlineDate,
+      required Setting setting,
+      required PillSheetGroup? latestPillSheetGroup,
+      required List<PillSheetModifiedHistory> pillSheetModifiedHistories,
+      required PremiumAndTrial premiumAndTrial,
       Object? exception}) {
     return _CalendarPageState(
       currentCalendarIndex: currentCalendarIndex,
-      menstruations: menstruations,
       setting: setting,
       latestPillSheetGroup: latestPillSheetGroup,
-      allPillSheetModifiedHistories: allPillSheetModifiedHistories,
-      isPremium: isPremium,
-      isTrial: isTrial,
-      trialDeadlineDate: trialDeadlineDate,
+      pillSheetModifiedHistories: pillSheetModifiedHistories,
+      premiumAndTrial: premiumAndTrial,
       exception: exception,
     );
   }
@@ -48,15 +42,12 @@ const $CalendarPageState = _$CalendarPageStateTearOff();
 /// @nodoc
 mixin _$CalendarPageState {
   int get currentCalendarIndex => throw _privateConstructorUsedError;
-  List<Menstruation> get menstruations => throw _privateConstructorUsedError;
-  Setting? get setting => throw _privateConstructorUsedError;
+  Setting get setting => throw _privateConstructorUsedError;
   PillSheetGroup? get latestPillSheetGroup =>
       throw _privateConstructorUsedError;
-  List<PillSheetModifiedHistory> get allPillSheetModifiedHistories =>
+  List<PillSheetModifiedHistory> get pillSheetModifiedHistories =>
       throw _privateConstructorUsedError;
-  bool get isPremium => throw _privateConstructorUsedError;
-  bool get isTrial => throw _privateConstructorUsedError;
-  DateTime? get trialDeadlineDate => throw _privateConstructorUsedError;
+  PremiumAndTrial get premiumAndTrial => throw _privateConstructorUsedError;
   Object? get exception => throw _privateConstructorUsedError;
 
   @JsonKey(ignore: true)
@@ -71,17 +62,15 @@ abstract class $CalendarPageStateCopyWith<$Res> {
       _$CalendarPageStateCopyWithImpl<$Res>;
   $Res call(
       {int currentCalendarIndex,
-      List<Menstruation> menstruations,
-      Setting? setting,
+      Setting setting,
       PillSheetGroup? latestPillSheetGroup,
-      List<PillSheetModifiedHistory> allPillSheetModifiedHistories,
-      bool isPremium,
-      bool isTrial,
-      DateTime? trialDeadlineDate,
+      List<PillSheetModifiedHistory> pillSheetModifiedHistories,
+      PremiumAndTrial premiumAndTrial,
       Object? exception});
 
-  $SettingCopyWith<$Res>? get setting;
+  $SettingCopyWith<$Res> get setting;
   $PillSheetGroupCopyWith<$Res>? get latestPillSheetGroup;
+  $PremiumAndTrialCopyWith<$Res> get premiumAndTrial;
 }
 
 /// @nodoc
@@ -96,13 +85,10 @@ class _$CalendarPageStateCopyWithImpl<$Res>
   @override
   $Res call({
     Object? currentCalendarIndex = freezed,
-    Object? menstruations = freezed,
     Object? setting = freezed,
     Object? latestPillSheetGroup = freezed,
-    Object? allPillSheetModifiedHistories = freezed,
-    Object? isPremium = freezed,
-    Object? isTrial = freezed,
-    Object? trialDeadlineDate = freezed,
+    Object? pillSheetModifiedHistories = freezed,
+    Object? premiumAndTrial = freezed,
     Object? exception = freezed,
   }) {
     return _then(_value.copyWith(
@@ -110,45 +96,29 @@ class _$CalendarPageStateCopyWithImpl<$Res>
           ? _value.currentCalendarIndex
           : currentCalendarIndex // ignore: cast_nullable_to_non_nullable
               as int,
-      menstruations: menstruations == freezed
-          ? _value.menstruations
-          : menstruations // ignore: cast_nullable_to_non_nullable
-              as List<Menstruation>,
       setting: setting == freezed
           ? _value.setting
           : setting // ignore: cast_nullable_to_non_nullable
-              as Setting?,
+              as Setting,
       latestPillSheetGroup: latestPillSheetGroup == freezed
           ? _value.latestPillSheetGroup
           : latestPillSheetGroup // ignore: cast_nullable_to_non_nullable
               as PillSheetGroup?,
-      allPillSheetModifiedHistories: allPillSheetModifiedHistories == freezed
-          ? _value.allPillSheetModifiedHistories
-          : allPillSheetModifiedHistories // ignore: cast_nullable_to_non_nullable
+      pillSheetModifiedHistories: pillSheetModifiedHistories == freezed
+          ? _value.pillSheetModifiedHistories
+          : pillSheetModifiedHistories // ignore: cast_nullable_to_non_nullable
               as List<PillSheetModifiedHistory>,
-      isPremium: isPremium == freezed
-          ? _value.isPremium
-          : isPremium // ignore: cast_nullable_to_non_nullable
-              as bool,
-      isTrial: isTrial == freezed
-          ? _value.isTrial
-          : isTrial // ignore: cast_nullable_to_non_nullable
-              as bool,
-      trialDeadlineDate: trialDeadlineDate == freezed
-          ? _value.trialDeadlineDate
-          : trialDeadlineDate // ignore: cast_nullable_to_non_nullable
-              as DateTime?,
+      premiumAndTrial: premiumAndTrial == freezed
+          ? _value.premiumAndTrial
+          : premiumAndTrial // ignore: cast_nullable_to_non_nullable
+              as PremiumAndTrial,
       exception: exception == freezed ? _value.exception : exception,
     ));
   }
 
   @override
-  $SettingCopyWith<$Res>? get setting {
-    if (_value.setting == null) {
-      return null;
-    }
-
-    return $SettingCopyWith<$Res>(_value.setting!, (value) {
+  $SettingCopyWith<$Res> get setting {
+    return $SettingCopyWith<$Res>(_value.setting, (value) {
       return _then(_value.copyWith(setting: value));
     });
   }
@@ -163,6 +133,13 @@ class _$CalendarPageStateCopyWithImpl<$Res>
       return _then(_value.copyWith(latestPillSheetGroup: value));
     });
   }
+
+  @override
+  $PremiumAndTrialCopyWith<$Res> get premiumAndTrial {
+    return $PremiumAndTrialCopyWith<$Res>(_value.premiumAndTrial, (value) {
+      return _then(_value.copyWith(premiumAndTrial: value));
+    });
+  }
 }
 
 /// @nodoc
@@ -174,19 +151,18 @@ abstract class _$CalendarPageStateCopyWith<$Res>
   @override
   $Res call(
       {int currentCalendarIndex,
-      List<Menstruation> menstruations,
-      Setting? setting,
+      Setting setting,
       PillSheetGroup? latestPillSheetGroup,
-      List<PillSheetModifiedHistory> allPillSheetModifiedHistories,
-      bool isPremium,
-      bool isTrial,
-      DateTime? trialDeadlineDate,
+      List<PillSheetModifiedHistory> pillSheetModifiedHistories,
+      PremiumAndTrial premiumAndTrial,
       Object? exception});
 
   @override
-  $SettingCopyWith<$Res>? get setting;
+  $SettingCopyWith<$Res> get setting;
   @override
   $PillSheetGroupCopyWith<$Res>? get latestPillSheetGroup;
+  @override
+  $PremiumAndTrialCopyWith<$Res> get premiumAndTrial;
 }
 
 /// @nodoc
@@ -203,13 +179,10 @@ class __$CalendarPageStateCopyWithImpl<$Res>
   @override
   $Res call({
     Object? currentCalendarIndex = freezed,
-    Object? menstruations = freezed,
     Object? setting = freezed,
     Object? latestPillSheetGroup = freezed,
-    Object? allPillSheetModifiedHistories = freezed,
-    Object? isPremium = freezed,
-    Object? isTrial = freezed,
-    Object? trialDeadlineDate = freezed,
+    Object? pillSheetModifiedHistories = freezed,
+    Object? premiumAndTrial = freezed,
     Object? exception = freezed,
   }) {
     return _then(_CalendarPageState(
@@ -217,34 +190,22 @@ class __$CalendarPageStateCopyWithImpl<$Res>
           ? _value.currentCalendarIndex
           : currentCalendarIndex // ignore: cast_nullable_to_non_nullable
               as int,
-      menstruations: menstruations == freezed
-          ? _value.menstruations
-          : menstruations // ignore: cast_nullable_to_non_nullable
-              as List<Menstruation>,
       setting: setting == freezed
           ? _value.setting
           : setting // ignore: cast_nullable_to_non_nullable
-              as Setting?,
+              as Setting,
       latestPillSheetGroup: latestPillSheetGroup == freezed
           ? _value.latestPillSheetGroup
           : latestPillSheetGroup // ignore: cast_nullable_to_non_nullable
               as PillSheetGroup?,
-      allPillSheetModifiedHistories: allPillSheetModifiedHistories == freezed
-          ? _value.allPillSheetModifiedHistories
-          : allPillSheetModifiedHistories // ignore: cast_nullable_to_non_nullable
+      pillSheetModifiedHistories: pillSheetModifiedHistories == freezed
+          ? _value.pillSheetModifiedHistories
+          : pillSheetModifiedHistories // ignore: cast_nullable_to_non_nullable
               as List<PillSheetModifiedHistory>,
-      isPremium: isPremium == freezed
-          ? _value.isPremium
-          : isPremium // ignore: cast_nullable_to_non_nullable
-              as bool,
-      isTrial: isTrial == freezed
-          ? _value.isTrial
-          : isTrial // ignore: cast_nullable_to_non_nullable
-              as bool,
-      trialDeadlineDate: trialDeadlineDate == freezed
-          ? _value.trialDeadlineDate
-          : trialDeadlineDate // ignore: cast_nullable_to_non_nullable
-              as DateTime?,
+      premiumAndTrial: premiumAndTrial == freezed
+          ? _value.premiumAndTrial
+          : premiumAndTrial // ignore: cast_nullable_to_non_nullable
+              as PremiumAndTrial,
       exception: exception == freezed ? _value.exception : exception,
     ));
   }
@@ -255,43 +216,30 @@ class __$CalendarPageStateCopyWithImpl<$Res>
 class _$_CalendarPageState extends _CalendarPageState {
   _$_CalendarPageState(
       {this.currentCalendarIndex = 0,
-      this.menstruations = const [],
-      this.setting,
-      this.latestPillSheetGroup,
-      this.allPillSheetModifiedHistories = const [],
-      this.isPremium = false,
-      this.isTrial = false,
-      this.trialDeadlineDate,
+      required this.setting,
+      required this.latestPillSheetGroup,
+      required this.pillSheetModifiedHistories,
+      required this.premiumAndTrial,
       this.exception})
       : super._();
 
   @JsonKey()
   @override
   final int currentCalendarIndex;
-  @JsonKey()
   @override
-  final List<Menstruation> menstruations;
-  @override
-  final Setting? setting;
+  final Setting setting;
   @override
   final PillSheetGroup? latestPillSheetGroup;
-  @JsonKey()
   @override
-  final List<PillSheetModifiedHistory> allPillSheetModifiedHistories;
-  @JsonKey()
+  final List<PillSheetModifiedHistory> pillSheetModifiedHistories;
   @override
-  final bool isPremium;
-  @JsonKey()
-  @override
-  final bool isTrial;
-  @override
-  final DateTime? trialDeadlineDate;
+  final PremiumAndTrial premiumAndTrial;
   @override
   final Object? exception;
 
   @override
   String toString() {
-    return 'CalendarPageState(currentCalendarIndex: $currentCalendarIndex, menstruations: $menstruations, setting: $setting, latestPillSheetGroup: $latestPillSheetGroup, allPillSheetModifiedHistories: $allPillSheetModifiedHistories, isPremium: $isPremium, isTrial: $isTrial, trialDeadlineDate: $trialDeadlineDate, exception: $exception)';
+    return 'CalendarPageState(currentCalendarIndex: $currentCalendarIndex, setting: $setting, latestPillSheetGroup: $latestPillSheetGroup, pillSheetModifiedHistories: $pillSheetModifiedHistories, premiumAndTrial: $premiumAndTrial, exception: $exception)';
   }
 
   @override
@@ -301,18 +249,13 @@ class _$_CalendarPageState extends _CalendarPageState {
             other is _CalendarPageState &&
             const DeepCollectionEquality()
                 .equals(other.currentCalendarIndex, currentCalendarIndex) &&
-            const DeepCollectionEquality()
-                .equals(other.menstruations, menstruations) &&
             const DeepCollectionEquality().equals(other.setting, setting) &&
             const DeepCollectionEquality()
                 .equals(other.latestPillSheetGroup, latestPillSheetGroup) &&
             const DeepCollectionEquality().equals(
-                other.allPillSheetModifiedHistories,
-                allPillSheetModifiedHistories) &&
-            const DeepCollectionEquality().equals(other.isPremium, isPremium) &&
-            const DeepCollectionEquality().equals(other.isTrial, isTrial) &&
+                other.pillSheetModifiedHistories, pillSheetModifiedHistories) &&
             const DeepCollectionEquality()
-                .equals(other.trialDeadlineDate, trialDeadlineDate) &&
+                .equals(other.premiumAndTrial, premiumAndTrial) &&
             const DeepCollectionEquality().equals(other.exception, exception));
   }
 
@@ -320,13 +263,10 @@ class _$_CalendarPageState extends _CalendarPageState {
   int get hashCode => Object.hash(
       runtimeType,
       const DeepCollectionEquality().hash(currentCalendarIndex),
-      const DeepCollectionEquality().hash(menstruations),
       const DeepCollectionEquality().hash(setting),
       const DeepCollectionEquality().hash(latestPillSheetGroup),
-      const DeepCollectionEquality().hash(allPillSheetModifiedHistories),
-      const DeepCollectionEquality().hash(isPremium),
-      const DeepCollectionEquality().hash(isTrial),
-      const DeepCollectionEquality().hash(trialDeadlineDate),
+      const DeepCollectionEquality().hash(pillSheetModifiedHistories),
+      const DeepCollectionEquality().hash(premiumAndTrial),
       const DeepCollectionEquality().hash(exception));
 
   @JsonKey(ignore: true)
@@ -338,32 +278,23 @@ class _$_CalendarPageState extends _CalendarPageState {
 abstract class _CalendarPageState extends CalendarPageState {
   factory _CalendarPageState(
       {int currentCalendarIndex,
-      List<Menstruation> menstruations,
-      Setting? setting,
-      PillSheetGroup? latestPillSheetGroup,
-      List<PillSheetModifiedHistory> allPillSheetModifiedHistories,
-      bool isPremium,
-      bool isTrial,
-      DateTime? trialDeadlineDate,
+      required Setting setting,
+      required PillSheetGroup? latestPillSheetGroup,
+      required List<PillSheetModifiedHistory> pillSheetModifiedHistories,
+      required PremiumAndTrial premiumAndTrial,
       Object? exception}) = _$_CalendarPageState;
   _CalendarPageState._() : super._();
 
   @override
   int get currentCalendarIndex;
   @override
-  List<Menstruation> get menstruations;
-  @override
-  Setting? get setting;
+  Setting get setting;
   @override
   PillSheetGroup? get latestPillSheetGroup;
   @override
-  List<PillSheetModifiedHistory> get allPillSheetModifiedHistories;
+  List<PillSheetModifiedHistory> get pillSheetModifiedHistories;
   @override
-  bool get isPremium;
-  @override
-  bool get isTrial;
-  @override
-  DateTime? get trialDeadlineDate;
+  PremiumAndTrial get premiumAndTrial;
   @override
   Object? get exception;
   @override

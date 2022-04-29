@@ -3,6 +3,7 @@ import 'package:pilll/components/organisms/calendar/band/calendar_band_model.dar
 import 'package:pilll/components/organisms/calendar/utility.dart';
 import 'package:pilll/database/diary.dart';
 import 'package:pilll/database/menstruation.dart';
+import 'package:pilll/database/pill_sheet_modified_history.dart';
 import 'package:pilll/database/setting.dart';
 import 'package:pilll/domain/settings/setting_page_store.dart';
 import 'package:pilll/entity/diary.codegen.dart';
@@ -10,6 +11,7 @@ import 'package:pilll/entity/menstruation.codegen.dart';
 import 'package:pilll/entity/pill_sheet_group.codegen.dart';
 import 'package:pilll/entity/pill_sheet_modified_history.codegen.dart';
 import 'package:pilll/entity/setting.codegen.dart';
+import 'package:pilll/provider/premium_and_trial.codegen.dart';
 import 'package:pilll/util/datetime/date_compare.dart';
 import 'package:pilll/util/datetime/day.dart';
 import 'package:pilll/util/formatter/date_time_formatter.dart';
@@ -21,7 +23,9 @@ final calendarPageStateProvider =
     Provider<AsyncValue<CalendarPageState>>((ref) {
   final allMenstruations = ref.watch(allMenstruationStreamProvider);
   final setting = ref.watch(settingStreamProvider);
-  final diary = ref.watch(diaryStreamProvider);
+  final pillSheetModifiedHistories =
+      ref.watch(pillSheetModifiedHistoryStreamForLatest7);
+  final premiumAndTrial = ref.watch(premiumAndTrialProvider);
 });
 
 @freezed
@@ -29,12 +33,10 @@ class CalendarPageState with _$CalendarPageState {
   CalendarPageState._();
   factory CalendarPageState({
     @Default(0) int currentCalendarIndex,
-    Setting? setting,
-    PillSheetGroup? latestPillSheetGroup,
-    @Default([]) List<PillSheetModifiedHistory> allPillSheetModifiedHistories,
-    @Default(false) bool isPremium,
-    @Default(false) bool isTrial,
-    DateTime? trialDeadlineDate,
+    required Setting setting,
+    required PillSheetGroup? latestPillSheetGroup,
+    required List<PillSheetModifiedHistory> pillSheetModifiedHistories,
+    required PremiumAndTrial premiumAndTrial,
     Object? exception,
   }) = _CalendarPageState;
 
