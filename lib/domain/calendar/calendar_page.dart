@@ -2,12 +2,12 @@ import 'package:flutter_hooks/flutter_hooks.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
 import 'package:pilll/analytics.dart';
 import 'package:pilll/components/molecules/indicator.dart';
+import 'package:pilll/domain/calendar/calendar_page_state.codegen.dart';
 import 'package:pilll/domain/calendar/calendar_page_title.dart';
 import 'package:pilll/domain/calendar/components/month/month_calendar.dart';
 import 'package:pilll/components/organisms/calendar/weekly/weekly_calendar.dart';
 import 'package:pilll/components/atoms/color.dart';
 import 'package:pilll/domain/calendar/components/pill_sheet_modified_history/pill_sheet_modified_history_card.dart';
-import 'package:pilll/domain/home/home_page.dart';
 import 'package:pilll/domain/calendar/calendar_page_store.dart';
 import 'package:flutter/material.dart';
 import 'package:pilll/error/universal_error_page.dart';
@@ -19,30 +19,42 @@ class CalendarPage extends HookConsumerWidget {
   Widget build(BuildContext context, WidgetRef ref) {
     final store = ref.watch(calendarPageStateStoreProvider.notifier);
     final state = ref.watch(calendarPageStateStoreProvider);
-    homeKey.currentState?.diaries = state.diariesForMonth;
+    final todayCalendarPageIndex = ref.watch(todayCalendarIndexProvider);
 
     useAutomaticKeepAlive(wantKeepAlive: true);
 
-    final exception = state.exception;
-    if (exception != null) {
-      return UniversalErrorPage(
-        error: exception,
-        child: null,
-        reload: () => store.reset(),
-      );
-    }
-
-    if (state.shouldShowIndicator) {
-      return ScaffoldIndicator();
-    }
-
     final pageController =
-        usePageController(initialPage: state.currentCalendarIndex);
+        usePageController(initialPage: todayCalendarPageIndex);
     pageController.addListener(() {
       final index = (pageController.page ?? pageController.initialPage).round();
       store.updateCurrentCalendarIndex(index);
     });
+    return state.when(
+      data: (state) => CalendarPageBody(
+          store: store, state: state, pageController: pageController),
+      error: (error, _) => UniversalErrorPage(
+        error: error,
+        child: null,
+        reload: () => ref.refresh(calendarPageStateProvider),
+      ),
+      loading: () => ScaffoldIndicator(),
+    );
+  }
+}
 
+class CalendarPageBody extends StatelessWidget {
+  final CalendarPageStateStore store;
+  final CalendarPageState state;
+  final PageController pageController;
+
+  const CalendarPageBody(
+      {Key? key,
+      required this.store,
+      required this.state,
+      required this.pageController})
+      : super(key: key);
+  @override
+  Widget build(BuildContext context) {
     return Scaffold(
       floatingActionButton: Container(
         padding: const EdgeInsets.only(right: 10, bottom: 32),
@@ -50,7 +62,8 @@ class CalendarPage extends HookConsumerWidget {
           onPressed: () {
             analytics.logEvent(name: "calendar_fab_pressed");
             final date = today();
-            transitionToPostDiary(context, date, diaries);
+            transitionToPostDiary(
+                context, date, state.todayMonthCalendar.diaries);
           },
           child: const Icon(Icons.add, color: Colors.white),
           backgroundColor: PilllColors.secondary,
