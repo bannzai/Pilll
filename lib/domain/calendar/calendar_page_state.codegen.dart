@@ -68,14 +68,6 @@ class CalendarPageState with _$CalendarPageState {
       .lastIndexWhere((element) => isSameMonth(element, today()));
   DateTime get displayMonth => calendarDataSource[currentCalendarIndex];
   String get displayMonthString => DateTimeFormatter.yearAndMonth(displayMonth);
-
-//  final _satisfyBandCount = 15;
-//  late final List<CalendarBandModel> allBands = buildBandModels(
-//    latestPillSheetGroup,
-//    setting,
-//    menstruations,
-//    _satisfyBandCount,
-//  );
 }
 
 List<DateTime> _calendarDataSource() {
