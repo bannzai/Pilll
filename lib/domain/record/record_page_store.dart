@@ -15,25 +15,16 @@ final recordPageStoreProvider =
     StateNotifierProvider<RecordPageStore, AsyncValue<RecordPageState>>(
   (ref) => RecordPageStore(
     ref.watch(recordPageAsyncActionProvider),
-    ref.watch(recordPageAsyncStateProvider.future),
+    ref.watch(recordPageAsyncStateProvider),
   ),
 );
 
 class RecordPageStore extends StateNotifier<AsyncValue<RecordPageState>> {
   final RecordPageAsyncAction _asyncAction;
-  final Future<AsyncValue<RecordPageState>> _initialState;
   RecordPageStore(
     this._asyncAction,
-    this._initialState,
-  ) : super(const AsyncValue.loading()) {
-    setup();
-  }
-
-  void setup() async {
-    state = const AsyncValue.loading();
-
-    state = await _initialState;
-  }
+    AsyncValue<RecordPageState> _state,
+  ) : super(_state);
 
   RecordPageState get _stateValue => state.value!;
 
