@@ -6,7 +6,7 @@ import 'package:pilll/components/organisms/calendar/band/calendar_band_model.dar
 import 'package:pilll/domain/menstruation/components/calendar/menstruation_single_line_state.dart';
 import 'package:pilll/components/organisms/calendar/weekly/weekly_calendar.dart';
 import 'package:pilll/domain/calendar/date_range.dart';
-import 'package:pilll/components/organisms/calendar/band/calendar_band_provider.dart';
+import 'package:pilll/components/organisms/calendar/band/calendar_band_function.dart';
 import 'package:pilll/domain/menstruation/menstruation_page.dart';
 import 'package:pilll/domain/menstruation/menstruation_state.codegen.dart';
 import 'package:pilll/domain/record/weekday_badge.dart';

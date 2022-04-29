@@ -3,7 +3,7 @@ import 'package:collection/collection.dart';
 import 'package:pilll/components/organisms/calendar/band/calendar_band.dart';
 import 'package:pilll/components/organisms/calendar/band/calendar_band_model.dart';
 import 'package:pilll/components/organisms/calendar/day/calendar_day_tile.dart';
-import 'package:pilll/components/organisms/calendar/band/calendar_band_provider.dart';
+import 'package:pilll/components/organisms/calendar/band/calendar_band_function.dart';
 import 'package:pilll/components/organisms/calendar/weekly/weekly_calendar_state.dart';
 import 'package:pilll/domain/diary/post_diary_page.dart';
 import 'package:flutter/material.dart';
