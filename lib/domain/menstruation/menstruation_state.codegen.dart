@@ -27,7 +27,8 @@ final todayCalendarPageIndexProvider = Provider(
 final currentMenstruationWeekCalendarPageIndexProvider =
     Provider((ref) => ref.watch(todayCalendarPageIndexProvider));
 
-final menstruationStateProvider = Provider<AsyncValue>((ref) {
+final menstruationStateProvider =
+    Provider<AsyncValue<MenstruationState>>((ref) {
   final latestPillSheetGroup = ref.watch(latestPillSheetGroupStreamProvider);
   final premiumAndTrial = ref.watch(premiumAndTrialProvider);
   final setting = ref.watch(settingStreamProvider);
