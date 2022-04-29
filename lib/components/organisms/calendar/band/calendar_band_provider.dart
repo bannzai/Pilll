@@ -55,7 +55,7 @@ final calendarScheduledMenstruationBandListProvider =
 });
 
 final calendarNextPillSheetBandListProvider =
-    Provider<AsyncValue<List<CalendarScheduledMenstruationBandModel>>>((ref) {
+    Provider<AsyncValue<List<CalendarNextPillSheetBandModel>>>((ref) {
   final pillSheetGroup = ref.watch(latestPillSheetGroupStreamProvider);
 
   if (pillSheetGroup is AsyncLoading) {
@@ -65,8 +65,8 @@ final calendarNextPillSheetBandListProvider =
   try {
     return AsyncValue.data(
       nextPillSheetDateRanges(pillSheetGroup.value!, 15)
-          .map((dateRange) => CalendarScheduledMenstruationBandModel(
-              dateRange.begin, dateRange.end))
+          .map((dateRange) =>
+              CalendarNextPillSheetBandModel(dateRange.begin, dateRange.end))
           .toList(),
     );
   } catch (error, _) {

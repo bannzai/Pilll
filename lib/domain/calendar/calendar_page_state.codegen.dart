@@ -1,13 +1,9 @@
 import 'package:freezed_annotation/freezed_annotation.dart';
 import 'package:pilll/components/organisms/calendar/band/calendar_band_model.dart';
-import 'package:pilll/components/organisms/calendar/band/calendar_band_function.dart';
-import 'package:pilll/database/diary.dart';
+import 'package:pilll/components/organisms/calendar/band/calendar_band_provider.dart';
 import 'package:pilll/database/menstruation.dart';
 import 'package:pilll/database/pill_sheet_modified_history.dart';
 import 'package:pilll/database/setting.dart';
-import 'package:pilll/domain/settings/setting_page_store.dart';
-import 'package:pilll/entity/diary.codegen.dart';
-import 'package:pilll/entity/menstruation.codegen.dart';
 import 'package:pilll/entity/pill_sheet_group.codegen.dart';
 import 'package:pilll/entity/pill_sheet_modified_history.codegen.dart';
 import 'package:pilll/entity/setting.codegen.dart';
@@ -21,11 +17,36 @@ part 'calendar_page_state.codegen.freezed.dart';
 
 final calendarPageStateProvider =
     Provider<AsyncValue<CalendarPageState>>((ref) {
-  final allMenstruations = ref.watch(allMenstruationStreamProvider);
-  final setting = ref.watch(settingStreamProvider);
   final pillSheetModifiedHistories =
       ref.watch(pillSheetModifiedHistoryStreamForLatest7);
   final premiumAndTrial = ref.watch(premiumAndTrialProvider);
+  final calendarMenstruationBandModels =
+      ref.watch(calendarMenstruationBandListProvider);
+  final calendarScheduledMenstruationBandModels =
+      ref.watch(calendarScheduledMenstruationBandListProvider);
+  final calendarNextPillSheetBandModels =
+      ref.watch(calendarNextPillSheetBandListProvider);
+
+  if (pillSheetModifiedHistories is AsyncLoading ||
+      premiumAndTrial is AsyncLoading ||
+      calendarMenstruationBandModels is AsyncLoading ||
+      calendarScheduledMenstruationBandModels is AsyncLoading ||
+      calendarNextPillSheetBandModels is AsyncLoading) {
+    return const AsyncValue.loading();
+  }
+
+  try {
+    return AsyncValue.data(CalendarPageState(
+        pillSheetModifiedHistories: pillSheetModifiedHistories.value!,
+        premiumAndTrial: premiumAndTrial.value!,
+        calendarMenstruationBandModels: calendarMenstruationBandModels.value!,
+        calendarScheduledMenstruationBandModels:
+            calendarScheduledMenstruationBandModels.value!,
+        calendarNextPillSheetBandModels:
+            calendarNextPillSheetBandModels.value!));
+  } catch (error, _) {
+    return AsyncValue.error(error);
+  }
 });
 
 @freezed
@@ -33,11 +54,13 @@ class CalendarPageState with _$CalendarPageState {
   CalendarPageState._();
   factory CalendarPageState({
     @Default(0) int currentCalendarIndex,
-    required Setting setting,
-    required PillSheetGroup? latestPillSheetGroup,
+    required List<CalendarMenstruationBandModel> calendarMenstruationBandModels,
+    required List<CalendarScheduledMenstruationBandModel>
+        calendarScheduledMenstruationBandModels,
+    required List<CalendarNextPillSheetBandModel>
+        calendarNextPillSheetBandModels,
     required List<PillSheetModifiedHistory> pillSheetModifiedHistories,
     required PremiumAndTrial premiumAndTrial,
-    Object? exception,
   }) = _CalendarPageState;
 
   final List<DateTime> calendarDataSource = _calendarDataSource();

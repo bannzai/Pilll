@@ -11,7 +11,7 @@ final pillSheetModifiedHistoryDatastoreProvider =
     Provider<PillSheetModifiedHistoryDatastore>((ref) =>
         PillSheetModifiedHistoryDatastore(ref.watch(databaseProvider)));
 
-final pillSheetModifiedHistoryStreamForLatest7 = Provider(
+final pillSheetModifiedHistoryStreamForLatest7 = StreamProvider(
     (ref) => ref.watch(pillSheetModifiedHistoryDatastoreProvider).stream(7));
 
 class PillSheetModifiedHistoryDatastore {
