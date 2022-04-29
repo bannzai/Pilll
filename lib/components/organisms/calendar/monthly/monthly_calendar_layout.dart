@@ -7,7 +7,8 @@ import 'package:pilll/entity/weekday.dart';
 import 'package:flutter/material.dart';
 
 abstract class CalendarConstants {
-  static final double tileHeight = 66;
+  static const double tileHeight = 66;
+  static const int maxLineCount = 6;
 }
 
 class MonthlyCalendarLayout extends HookConsumerWidget {

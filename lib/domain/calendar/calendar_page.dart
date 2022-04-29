@@ -6,7 +6,6 @@ import 'package:pilll/components/molecules/indicator.dart';
 import 'package:pilll/components/organisms/calendar/monthly/monthly_calendar_layout.dart';
 import 'package:pilll/components/organisms/calendar/weekly/weekly_calendar.dart';
 import 'package:pilll/domain/calendar/calendar_page_state.codegen.dart';
-import 'package:pilll/domain/calendar/components/calendar_card.dart';
 import 'package:pilll/components/atoms/color.dart';
 import 'package:pilll/components/atoms/font.dart';
 import 'package:pilll/components/atoms/text_color.dart';
