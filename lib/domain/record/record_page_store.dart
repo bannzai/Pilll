@@ -110,9 +110,6 @@ class RecordPageStore extends StateNotifier<AsyncValue<RecordPageState>> {
     state = AsyncValue.data(value.copyWith(shouldShowMigrateInfo: false));
   }
 
-  void switchingAppearanceMode(PillSheetAppearanceMode mode) => asyncAction
-      .switchingAppearanceMode(mode: mode, setting: _stateValue.setting);
-
   Future<void> setTrueIsAlreadyShowPremiumFunctionSurvey() async {
     final sharedPreferences = await SharedPreferences.getInstance();
     sharedPreferences.setBool(BoolKey.isAlreadyShowPremiumSurvey, true);

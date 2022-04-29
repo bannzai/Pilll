@@ -91,7 +91,8 @@ class SelectAppearanceModeModal extends HookConsumerWidget {
         );
 
         if (state.premiumAndTrial.isPremium || state.premiumAndTrial.isTrial) {
-          store.switchingAppearanceMode(mode);
+          store.asyncAction
+              .switchingAppearanceMode(mode: mode, setting: state.setting);
         } else if (isPremiumFunction) {
           if (state.premiumAndTrial.trialDeadlineDate == null) {
             showPremiumTrialModal(context, () {
@@ -102,7 +103,8 @@ class SelectAppearanceModeModal extends HookConsumerWidget {
           }
         } else {
           // User selected non premium function mode
-          store.switchingAppearanceMode(mode);
+          store.asyncAction
+              .switchingAppearanceMode(mode: mode, setting: state.setting);
         }
       },
       child: Container(
