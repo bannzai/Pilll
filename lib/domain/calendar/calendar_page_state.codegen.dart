@@ -45,18 +45,24 @@ final calendarPageStateProvider =
   final monthCalendar = ref.watch(
       monthCalendarStateProvider(calendarDataSource[currentCalendarPageIndex]));
 
+  final todayMonthCalendar = ref.watch(monthCalendarStateProvider(
+      calendarDataSource[ref.watch(todayCalendarIndexProvider)]));
+
   if (pillSheetModifiedHistories is AsyncLoading ||
       premiumAndTrial is AsyncLoading ||
       calendarMenstruationBandModels is AsyncLoading ||
       calendarScheduledMenstruationBandModels is AsyncLoading ||
       calendarNextPillSheetBandModels is AsyncLoading ||
-      monthCalendar is AsyncLoading) {
+      monthCalendar is AsyncLoading ||
+      todayMonthCalendar is AsyncLoading) {
     return const AsyncValue.loading();
   }
 
   try {
     return AsyncValue.data(CalendarPageState(
         currentCalendarIndex: currentCalendarPageIndex,
+        currentMonthCalendar: monthCalendar.value!,
+        todayMonthCalendar: todayMonthCalendar.value!,
         pillSheetModifiedHistories: pillSheetModifiedHistories.value!,
         premiumAndTrial: premiumAndTrial.value!,
         calendarMenstruationBandModels: calendarMenstruationBandModels.value!,
@@ -74,7 +80,8 @@ class CalendarPageState with _$CalendarPageState {
   CalendarPageState._();
   factory CalendarPageState({
     required int currentCalendarIndex,
-    required MonthCalendar currentMonthCalendar,
+    required MonthCalendarState currentMonthCalendar,
+    required MonthCalendarState todayMonthCalendar,
     required List<CalendarMenstruationBandModel> calendarMenstruationBandModels,
     required List<CalendarScheduledMenstruationBandModel>
         calendarScheduledMenstruationBandModels,
