@@ -1,3 +1,7 @@
+import 'package:pilll/database/diary.dart';
+import 'package:pilll/database/menstruation.dart';
+import 'package:pilll/database/pill_sheet_group.dart';
+import 'package:pilll/database/setting.dart';
 import 'package:pilll/entity/diary.codegen.dart';
 import 'package:pilll/entity/menstruation.codegen.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';
@@ -22,6 +26,42 @@ final todayCalendarPageIndexProvider = Provider(
 );
 final currentMenstruationWeekCalendarPageIndexProvider =
     Provider((ref) => ref.watch(todayCalendarPageIndexProvider));
+
+final menstruationStateProvider = Provider<AsyncValue>((ref) {
+  final latestPillSheetGroup = ref.watch(latestPillSheetGroupStreamProvider);
+  final premiumAndTrial = ref.watch(premiumAndTrialProvider);
+  final setting = ref.watch(settingStreamProvider);
+  final diaries = ref.watch(diariesStreamAround90Days(today()));
+  final menstruations = ref.watch(allMenstruationStreamProvider);
+
+  final currentCalendarPageIndex =
+      ref.watch(currentMenstruationWeekCalendarPageIndexProvider);
+  final todayCalendarPageIndex = ref.watch(todayCalendarPageIndexProvider);
+
+  if (latestPillSheetGroup is AsyncLoading ||
+      premiumAndTrial is AsyncLoading ||
+      setting is AsyncLoading ||
+      diaries is AsyncLoading ||
+      menstruations is AsyncLoading) {
+    return const AsyncValue.loading();
+  }
+
+  try {
+    return AsyncValue.data(
+      MenstruationState(
+        currentCalendarPageIndex: currentCalendarPageIndex,
+        todayCalendarPageIndex: todayCalendarPageIndex,
+        diariesForAround90Days: diaries.value!,
+        menstruations: menstruations.value!,
+        premiumAndTrial: premiumAndTrial.value!,
+        setting: setting.value!,
+        latestPillSheetGroup: latestPillSheetGroup.value!,
+      ),
+    );
+  } catch (error, _) {
+    return AsyncValue.error(error);
+  }
+});
 
 @freezed
 class MenstruationState with _$MenstruationState {

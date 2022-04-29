@@ -14,6 +14,9 @@ final diariesStreamForMonthProvider = StreamProvider.family(
         .watch(diaryDatastoreProvider)
         .streamForMonth(dateForMonth: dateForMonth));
 
+final diariesStreamAround90Days = StreamProvider.family((ref, DateTime base) =>
+    ref.watch(diaryDatastoreProvider).streamForAround90Days(base: base));
+
 int sortDiary(Diary a, Diary b) => a.date.compareTo(b.date);
 List<Diary> sortedDiaries(List<Diary> diaries) {
   diaries.sort(sortDiary);
@@ -84,6 +87,18 @@ class DiaryDatastore {
           isGreaterThanOrEqualTo: firstDate,
           isLessThanOrEqualTo: lastDate,
         )
+        .snapshots()
+        .map((event) => event.docs.map((e) => e.data()).toList())
+        .map((diaries) => sortedDiaries(diaries));
+  }
+
+  Stream<List<Diary>> streamForAround90Days({required DateTime base}) {
+    return _database
+        .diariesReference()
+        .where(DiaryFirestoreKey.date,
+            isLessThanOrEqualTo: DateTime(base.year, base.month, 90),
+            isGreaterThanOrEqualTo: DateTime(base.year, base.month, -90))
+        .orderBy(DiaryFirestoreKey.date)
         .snapshots()
         .map((event) => event.docs.map((e) => e.data()).toList())
         .map((diaries) => sortedDiaries(diaries));
