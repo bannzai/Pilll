@@ -6,7 +6,7 @@ import 'package:pilll/components/atoms/text_color.dart';
 import 'package:pilll/components/molecules/app_card.dart';
 import 'package:pilll/components/molecules/counter_unit_layout.dart';
 import 'package:pilll/components/molecules/premium_badge.dart';
-import 'package:pilll/domain/menstruation/menstruation_history_card_state.dart';
+import 'package:pilll/domain/menstruation/history/menstruation_history_card_state.dart';
 import 'package:pilll/domain/menstruation_list/menstruation_list_row.dart';
 import 'package:pilll/domain/menstruation_list/menstruation_list_page.dart';
 import 'package:flutter/material.dart';

@@ -31,10 +31,6 @@ class MenstruationRecordButton extends StatelessWidget {
         }
 
         final setting = state.setting;
-        if (setting == null) {
-          throw const FormatException(
-              "生理記録前にデータの読み込みに失敗しました。再読み込みしてから再度お試しください");
-        }
 
         if (setting.durationMenstruation == 0) {
           return showMenstruationEditPageForCreate(context);
@@ -47,7 +43,8 @@ class MenstruationRecordButton extends StatelessWidget {
               case MenstruationSelectModifyType.today:
                 analytics.logEvent(name: "tapped_menstruation_record_today");
                 Navigator.of(context).pop();
-                final created = await store.recordFromToday();
+                final created =
+                    await store.asyncAction.recordFromToday(setting: setting);
                 ScaffoldMessenger.of(context).showSnackBar(
                   SnackBar(
                     duration: const Duration(seconds: 2),
@@ -60,7 +57,8 @@ class MenstruationRecordButton extends StatelessWidget {
                 analytics.logEvent(
                     name: "tapped_menstruation_record_yesterday");
                 Navigator.of(context).pop();
-                final created = await store.recordFromYesterday();
+                final created = await store.asyncAction
+                    .recordFromYesterday(setting: setting);
                 ScaffoldMessenger.of(context).showSnackBar(
                   SnackBar(
                     duration: const Duration(seconds: 2),
