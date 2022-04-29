@@ -1,7 +1,9 @@
 import 'package:freezed_annotation/freezed_annotation.dart';
+import 'package:hooks_riverpod/hooks_riverpod.dart';
 import 'package:pilll/database/pill_sheet_group.dart';
 import 'package:pilll/entity/pill_sheet_group.codegen.dart';
 import 'package:pilll/entity/setting.codegen.dart';
+import 'package:pilll/error_log.dart';
 import 'package:pilll/provider/premium_and_trial.codegen.dart';
 import 'package:riverpod/riverpod.dart';
 import 'package:pilll/provider/shared_preference.dart';
@@ -67,18 +69,26 @@ class RecordPageState with _$RecordPageState {
 }
 
 final recordPageAsyncStateProvider =
-    FutureProvider<AsyncValue<RecordPageState>>((ref) {
-  return AsyncValue.guard(() async {
-    final latestPillSheetGroup =
-        await ref.watch(latestPillSheetGroupStreamProvider.future);
-    final premiumAndTrial = await ref.watch(premiumAndTrialProvider.future);
-    final setting = await ref.watch(settingStreamProvider.future);
-    final sharedPreferences = await ref.watch(sharedPreferenceProvider.future);
+    Provider<AsyncValue<RecordPageState>>((ref) {
+  final latestPillSheetGroup = ref.watch(latestPillSheetGroupStreamProvider);
+  final premiumAndTrial = ref.watch(premiumAndTrialProvider);
+  final setting = ref.watch(settingStreamProvider);
+  final sharedPreferencesAsyncValue = ref.watch(sharedPreferenceProvider);
 
-    return RecordPageState(
-      pillSheetGroup: latestPillSheetGroup,
-      setting: setting,
-      premiumAndTrial: premiumAndTrial,
+  if (latestPillSheetGroup is AsyncLoading ||
+      premiumAndTrial is AsyncLoading ||
+      setting is AsyncLoading ||
+      sharedPreferencesAsyncValue is AsyncLoading) {
+    return const AsyncValue.loading();
+  }
+
+  final sharedPreferences = sharedPreferencesAsyncValue.value!;
+
+  try {
+    return AsyncValue.data(RecordPageState(
+      pillSheetGroup: latestPillSheetGroup.value,
+      setting: setting.value!,
+      premiumAndTrial: premiumAndTrial.value!,
       totalCountOfActionForTakenPill:
           sharedPreferences.getInt(IntKey.totalCountOfActionForTakenPill) ?? 0,
       shouldShowMigrateInfo:
@@ -99,6 +109,9 @@ final recordPageAsyncStateProvider =
               .getBool(BoolKey.premiumTrialBeginAnouncementIsClosed) ??
           false,
       isLinkedLoginProvider: ref.watch(isLinkedProvider),
-    );
-  });
+    ));
+  } catch (error, stackTrace) {
+    errorLogger.recordError(error, stackTrace);
+    return AsyncValue.error(error);
+  }
 });
