@@ -137,7 +137,7 @@ class MenstruationEditPage extends HookConsumerWidget {
                               weekCalendarBuilder:
                                   (context, weeklyCalendarState) {
                                 return CalendarWeekdayLine(
-                                  calendarState:
+                                  state:
                                       MenstruationEditWeeklyCalendarState(
                                     weeklyCalendarState,
                                     dateForMonth,

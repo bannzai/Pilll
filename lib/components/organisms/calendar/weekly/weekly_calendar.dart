@@ -15,13 +15,13 @@ import 'package:pilll/util/datetime/date_compare.dart';
 import 'package:pilll/util/datetime/day.dart';
 
 class CalendarWeekdayLine extends StatelessWidget {
-  final WeekCalendarState calendarState;
+  final WeekCalendarState state;
   final double horizontalPadding;
   final Function(WeekCalendarState, DateTime) onTap;
 
   const CalendarWeekdayLine({
     Key? key,
-    required this.calendarState,
+    required this.state,
     required this.horizontalPadding,
     required this.onTap,
   }) : super(key: key);
@@ -32,19 +32,17 @@ class CalendarWeekdayLine extends StatelessWidget {
         children: [
           Row(
             children: Weekday.values.map((weekday) {
-              final date = calendarState.buildDate(weekday);
-              final isOutOfBoundsInLine =
-                  !calendarState.dateRange.inRange(date);
+              final date = state.buildDate(weekday);
+              final isOutOfBoundsInLine = !state.dateRange.inRange(date);
               if (isOutOfBoundsInLine) {
                 return Expanded(child: Container());
               }
 
-              if (calendarState.isGrayoutTile(date)) {
+              if (state.isGrayoutTile(date)) {
                 return CalendarDayTile.grayout(
                   weekday: weekday,
-                  shouldShowMenstruationMark:
-                      calendarState.hasMenstruationMark(date),
-                  contentAlignment: calendarState.contentAlignment,
+                  shouldShowMenstruationMark: state.hasMenstruationMark(date),
+                  contentAlignment: state.contentAlignment,
                   date: date,
                 );
               }
@@ -52,17 +50,15 @@ class CalendarWeekdayLine extends StatelessWidget {
                 isToday: isSameDay(today(), date),
                 weekday: weekday,
                 date: date,
-                shouldShowDiaryMark: calendarState.hasDiaryMark(
-                    calendarState.diariesForMonth, date),
-                shouldShowMenstruationMark:
-                    calendarState.hasMenstruationMark(date),
-                contentAlignment: calendarState.contentAlignment,
-                onTap: (date) => onTap(calendarState, date),
+                shouldShowDiaryMark:
+                    state.hasDiaryMark(state.diariesForMonth, date),
+                shouldShowMenstruationMark: state.hasMenstruationMark(date),
+                contentAlignment: state.contentAlignment,
+                onTap: (date) => onTap(state, date),
               );
             }).toList(),
           ),
-          ..._bands(context, calendarState.allBandModels, calendarState,
-              horizontalPadding)
+          ..._bands(context, state.allBandModels, state, horizontalPadding)
         ],
       ),
     );

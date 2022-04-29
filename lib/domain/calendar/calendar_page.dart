@@ -3,6 +3,8 @@ import 'package:hooks_riverpod/hooks_riverpod.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:pilll/analytics.dart';
 import 'package:pilll/components/molecules/indicator.dart';
+import 'package:pilll/components/organisms/calendar/monthly/monthly_calendar_layout.dart';
+import 'package:pilll/components/organisms/calendar/weekly/weekly_calendar.dart';
 import 'package:pilll/domain/calendar/calendar_page_state.codegen.dart';
 import 'package:pilll/domain/calendar/components/calendar_card.dart';
 import 'package:pilll/components/atoms/color.dart';
@@ -69,7 +71,28 @@ class CalendarPage extends HookConsumerWidget {
                 physics: const PageScrollPhysics(),
                 children:
                     List.generate(state.calendarDataSource.length, (index) {
-                  return CalendarContainer(store: store, state: state);
+                  return Container(
+                    height: 444,
+                    width: MediaQuery.of(context).size.width,
+                    child: MonthlyCalendarLayout(
+                        dateForMonth: state.displayMonth,
+                        weekCalendarBuilder:
+                            (context, monthCalendarState, weekCalendarState) {
+                          return CalendarWeekdayLine(
+                            state: weekCalendarState,
+                            horizontalPadding: 0,
+                            onTap: (weeklyCalendarState, date) {
+                              analytics.logEvent(
+                                  name: "did_select_day_tile_on_calendar_card");
+                              transitionToPostDiary(
+                                context,
+                                date,
+                                monthCalendarState.diaries,
+                              );
+                            },
+                          );
+                        }),
+                  );
                 }),
               ),
             ),
@@ -89,30 +112,6 @@ class CalendarPage extends HookConsumerWidget {
             const SizedBox(height: 120),
           ],
         ),
-      ),
-    );
-  }
-}
-
-class CalendarContainer extends StatelessWidget {
-  const CalendarContainer({
-    Key? key,
-    required this.store,
-    required this.state,
-  }) : super(key: key);
-
-  final CalendarPageStateStore store;
-  final CalendarPageState state;
-
-  @override
-  Widget build(BuildContext context) {
-    return Container(
-      height: 444,
-      width: MediaQuery.of(context).size.width,
-      child: CalendarCard(
-        state: store.cardState(state.displayMonth),
-        diariesForMonth: state.diariesForMonth,
-        allBands: state.allBands,
       ),
     );
   }

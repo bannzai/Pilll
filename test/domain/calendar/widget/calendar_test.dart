@@ -43,7 +43,7 @@ void main() {
               state: CalendarCardState(now),
               weekCalendarBuilder: (context, weeklyDateRange) {
                 return CalendarWeekdayLine(
-                  calendarState: CalendarTabWeeklyCalendarState(
+                  state: CalendarTabWeeklyCalendarState(
                     dateRange: weeklyDateRange,
                     diariesForMonth: diaries,
                     allBandModels: [model],
@@ -92,7 +92,7 @@ void main() {
               state: CalendarCardState(now),
               weekCalendarBuilder: (context, weeklyDateRange) {
                 return CalendarWeekdayLine(
-                  calendarState: CalendarTabWeeklyCalendarState(
+                  state: CalendarTabWeeklyCalendarState(
                     dateRange: weeklyDateRange,
                     diariesForMonth: diaries,
                     allBandModels: [model],
@@ -127,7 +127,7 @@ void main() {
               state: CalendarCardState(now),
               weekCalendarBuilder: (context, weeklyDateRange) {
                 return CalendarWeekdayLine(
-                  calendarState: CalendarTabWeeklyCalendarState(
+                  state: CalendarTabWeeklyCalendarState(
                     dateRange: weeklyDateRange,
                     diariesForMonth: [],
                     allBandModels: [
@@ -158,7 +158,7 @@ void main() {
               state: CalendarCardState(now),
               weekCalendarBuilder: (context, weeklyDateRange) {
                 return CalendarWeekdayLine(
-                  calendarState: CalendarTabWeeklyCalendarState(
+                  state: CalendarTabWeeklyCalendarState(
                     dateRange: weeklyDateRange,
                     diariesForMonth: [],
                     allBandModels: [

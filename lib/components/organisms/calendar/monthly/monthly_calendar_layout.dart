@@ -12,7 +12,8 @@ abstract class CalendarConstants {
 
 class MonthlyCalendarLayout extends HookConsumerWidget {
   final DateTime dateForMonth;
-  final Widget Function(BuildContext, WeekCalendarState) weekCalendarBuilder;
+  final Widget Function(BuildContext, MonthCalendarState, WeekCalendarState)
+      weekCalendarBuilder;
 
   const MonthlyCalendarLayout({
     Key? key,
@@ -46,8 +47,8 @@ class MonthlyCalendarLayout extends HookConsumerWidget {
                 return Container(height: CalendarConstants.tileHeight);
               }
 
-              final weeklyCalendar =
-                  weekCalendarBuilder(context, weekCalendarStatuses[offset]);
+              final weeklyCalendar = weekCalendarBuilder(
+                  context, state, weekCalendarStatuses[offset]);
               return Column(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
