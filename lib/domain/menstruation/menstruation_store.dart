@@ -6,6 +6,8 @@ import 'package:pilll/database/menstruation.dart';
 import 'package:pilll/database/pill_sheet.dart';
 import 'package:pilll/database/pill_sheet_group.dart';
 import 'package:pilll/database/setting.dart';
+import 'package:pilll/domain/calendar/date_range.dart';
+import 'package:pilll/domain/menstruation/menstruation_card_state.codegen.dart';
 import 'package:pilll/domain/menstruation/menstruation_page_async_action.dart';
 import 'package:pilll/domain/menstruation/menstruation_state.codegen.dart';
 import 'package:pilll/database/user.dart';
@@ -29,6 +31,46 @@ class MenstruationStore extends StateNotifier<AsyncValue<MenstruationState>> {
   }) : super(initialState);
 
   MenstruationState get stateValue => state.value!;
+
+  MenstruationCardState? cardState() {
+    final latestMenstruation = stateValue.latestMenstruation;
+    if (latestMenstruation != null &&
+        latestMenstruation.dateRange.inRange(today())) {
+      return MenstruationCardState.record(menstruation: latestMenstruation);
+    }
+
+    final latestPillSheetGroup = stateValue.latestPillSheetGroup;
+    final setting = stateValue.setting;
+    if (latestPillSheetGroup == null ||
+        latestPillSheetGroup.pillSheets.isEmpty) {
+      return null;
+    }
+    if (setting.pillNumberForFromMenstruation == 0 ||
+        setting.durationMenstruation == 0) {
+      return null;
+    }
+
+    final menstruationDateRanges =
+        stateValue.calendarScheduledMenstruationBandModels;
+    final inTheMiddleDateRanges = menstruationDateRanges
+        .map((e) => DateRange(e.begin, e.end))
+        .where((element) => element.inRange(today()));
+
+    if (inTheMiddleDateRanges.isNotEmpty) {
+      return MenstruationCardState.inTheMiddle(
+          scheduledDate: inTheMiddleDateRanges.first.begin);
+    }
+
+    final futureDateRanges = menstruationDateRanges
+        .where((element) => element.begin.isAfter(today()));
+    if (futureDateRanges.isNotEmpty) {
+      return MenstruationCardState.future(
+          nextSchedule: futureDateRanges.first.begin);
+    }
+
+    assert(false);
+    return null;
+  }
 
   MenstruationHistoryCardState? historyCardState() {
     final latestMenstruation = stateValue.latestMenstruation;
