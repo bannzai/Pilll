@@ -123,10 +123,6 @@ class RecordPageStore extends StateNotifier<AsyncValue<RecordPageState>> {
     state = AsyncValue.data(value.copyWith(shouldShowMigrateInfo: false));
   }
 
-  Future<void> setDisplayNumberSettingEndNumber(int end) async =>
-      asyncAction.setDisplayNumberSettingEndNumber(
-          end: end, pillSheetGroup: state.value?.pillSheetGroup);
-
   void switchingAppearanceMode(PillSheetAppearanceMode mode) => asyncAction
       .switchingAppearanceMode(mode: mode, setting: _stateValue.setting);
 

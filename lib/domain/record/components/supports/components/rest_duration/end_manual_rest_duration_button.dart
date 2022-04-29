@@ -135,8 +135,10 @@ class EndRestDurationModal extends StatelessWidget {
                     onPressed: () async {
                       analytics.logEvent(
                           name: "display_number_setting_modal_yes");
-                      await store.setDisplayNumberSettingEndNumber(
-                          lastTakenPillNumber);
+                      await store.asyncAction.setDisplayNumberSettingEndNumber(
+                        end: lastTakenPillNumber,
+                        pillSheetGroup: pillSheetGroup,
+                      );
                       Navigator.of(context).pop();
                     },
                     text: "はい",

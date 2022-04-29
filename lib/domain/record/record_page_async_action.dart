@@ -329,11 +329,7 @@ class RecordPageAsyncAction {
   }
 
   Future<void> setDisplayNumberSettingEndNumber(
-      {required int end, required PillSheetGroup? pillSheetGroup}) async {
-    if (pillSheetGroup == null) {
-      return;
-    }
-
+      {required int end, required PillSheetGroup pillSheetGroup}) async {
     final offsetPillNumber = pillSheetGroup.displayNumberSetting;
     final PillSheetGroup updatedPillSheetGroup;
     if (offsetPillNumber == null) {
