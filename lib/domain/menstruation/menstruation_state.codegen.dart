@@ -3,35 +3,41 @@ import 'package:pilll/entity/menstruation.codegen.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';
 import 'package:pilll/entity/pill_sheet_group.codegen.dart';
 import 'package:pilll/entity/setting.codegen.dart';
+import 'package:pilll/provider/premium_and_trial.codegen.dart';
 import 'package:pilll/util/datetime/date_compare.dart';
 import 'package:pilll/util/formatter/date_time_formatter.dart';
 import 'package:pilll/entity/weekday.dart';
 import 'package:pilll/util/datetime/day.dart';
+import 'package:riverpod/riverpod.dart';
 
 part 'menstruation_state.codegen.freezed.dart';
+
+final menstruationCalendarWeekCalendarDataSourceProvider =
+    Provider((_) => _calendarDataSource());
+final todayCalendarPageIndexProvider = Provider(
+  (ref) => ref
+      .watch(menstruationCalendarWeekCalendarDataSourceProvider)
+      .lastIndexWhere((element) =>
+          element.where((element) => isSameDay(element, today())).isNotEmpty),
+);
+final currentMenstruationWeekCalendarPageIndexProvider =
+    Provider((ref) => ref.watch(todayCalendarPageIndexProvider));
 
 @freezed
 class MenstruationState with _$MenstruationState {
   MenstruationState._();
   factory MenstruationState({
-    @Default(true) bool isNotYetLoaded,
-    @Default(0) int currentCalendarIndex,
-    @Default([]) List<Diary> diariesForMonth,
-    @Default([]) List<Menstruation> entities,
-    @Default(false) bool isPremium,
-    @Default(false) bool isTrial,
-    DateTime? trialDeadlineDate,
-    Setting? setting,
-    PillSheetGroup? latestPillSheetGroup,
-    Object? exception,
+    required int currentCalendarPageIndex,
+    required int todayCalendarPageIndex,
+    required List<Diary> diariesForAround90Days,
+    required List<Menstruation> menstruations,
+    required PremiumAndTrial premiumAndTrial,
+    required Setting setting,
+    required PillSheetGroup? latestPillSheetGroup,
   }) = _MenstruationState;
 
-  late final List<List<DateTime>> calendarDataSource = _calendarDataSource();
-  int get todayCalendarIndex => calendarDataSource.lastIndexWhere((element) =>
-      element.where((element) => isSameDay(element, today())).isNotEmpty);
-
   DateTime _targetEndDayOfWeekday() {
-    final diff = currentCalendarIndex - todayCalendarIndex;
+    final diff = currentCalendarPageIndex - todayCalendarPageIndex;
     final base = today().add(Duration(days: diff * Weekday.values.length));
     return endDayOfWeekday(base);
   }
@@ -50,7 +56,7 @@ class MenstruationState with _$MenstruationState {
   }
 
   Menstruation? get latestMenstruation {
-    return entities.isEmpty ? null : entities.first;
+    return menstruations.isEmpty ? null : menstruations.first;
   }
 }
 
