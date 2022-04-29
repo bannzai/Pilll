@@ -328,29 +328,6 @@ class RecordPageAsyncAction {
     await batch.commit();
   }
 
-  void setDisplayNumberSettingBeginNumber(
-      {required int begin, required PillSheetGroup? pillSheetGroup}) {
-    if (pillSheetGroup == null) {
-      return;
-    }
-
-    final offsetPillNumber = pillSheetGroup.displayNumberSetting;
-    final PillSheetGroup updatedPillSheetGroup;
-    if (offsetPillNumber == null) {
-      final newDisplayNumberSetting =
-          DisplayNumberSetting(beginPillNumber: begin);
-      updatedPillSheetGroup = pillSheetGroup.copyWith(
-          displayNumberSetting: newDisplayNumberSetting);
-    } else {
-      final newDisplayNumberSetting =
-          offsetPillNumber.copyWith(beginPillNumber: begin);
-      updatedPillSheetGroup = pillSheetGroup.copyWith(
-          displayNumberSetting: newDisplayNumberSetting);
-    }
-
-    _pillSheetGroupDatastore.update(updatedPillSheetGroup);
-  }
-
   Future<void> setDisplayNumberSettingEndNumber(
       {required int end, required PillSheetGroup? pillSheetGroup}) async {
     if (pillSheetGroup == null) {
