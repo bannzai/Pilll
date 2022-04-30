@@ -151,8 +151,6 @@ _$_TakenPillValue _$$_TakenPillValueFromJson(Map<String, dynamic> json) =>
           ? null
           : TakenPillEditedValue.fromJson(
               json['edited'] as Map<String, dynamic>),
-      pillSheetAppearanceMode: $enumDecodeNullable(
-          _$PillSheetAppearanceModeEnumMap, json['pillSheetAppearanceMode']),
     );
 
 Map<String, dynamic> _$$_TakenPillValueToJson(_$_TakenPillValue instance) =>
@@ -165,15 +163,7 @@ Map<String, dynamic> _$$_TakenPillValueToJson(_$_TakenPillValue instance) =>
       'afterLastTakenPillNumber': instance.afterLastTakenPillNumber,
       'isQuickRecord': instance.isQuickRecord,
       'edited': instance.edited?.toJson(),
-      'pillSheetAppearanceMode':
-          _$PillSheetAppearanceModeEnumMap[instance.pillSheetAppearanceMode],
     };
-
-const _$PillSheetAppearanceModeEnumMap = {
-  PillSheetAppearanceMode.number: 'number',
-  PillSheetAppearanceMode.date: 'date',
-  PillSheetAppearanceMode.sequential: 'sequential',
-};
 
 _$_TakenPillEditedValue _$$_TakenPillEditedValueFromJson(
         Map<String, dynamic> json) =>
@@ -206,8 +196,6 @@ _$_RevertTakenPillValue _$$_RevertTakenPillValueFromJson(
           json['afterLastTakenDate'] as Timestamp),
       beforeLastTakenPillNumber: json['beforeLastTakenPillNumber'] as int,
       afterLastTakenPillNumber: json['afterLastTakenPillNumber'] as int,
-      pillSheetAppearanceMode: $enumDecodeNullable(
-          _$PillSheetAppearanceModeEnumMap, json['pillSheetAppearanceMode']),
     );
 
 Map<String, dynamic> _$$_RevertTakenPillValueToJson(
@@ -219,8 +207,6 @@ Map<String, dynamic> _$$_RevertTakenPillValueToJson(
           instance.afterLastTakenDate),
       'beforeLastTakenPillNumber': instance.beforeLastTakenPillNumber,
       'afterLastTakenPillNumber': instance.afterLastTakenPillNumber,
-      'pillSheetAppearanceMode':
-          _$PillSheetAppearanceModeEnumMap[instance.pillSheetAppearanceMode],
     };
 
 _$_ChangedPillNumberValue _$$_ChangedPillNumberValueFromJson(
@@ -234,8 +220,6 @@ _$_ChangedPillNumberValue _$$_ChangedPillNumberValueFromJson(
       afterTodayPillNumber: json['afterTodayPillNumber'] as int,
       beforeGroupIndex: json['beforeGroupIndex'] as int? ?? 1,
       afterGroupIndex: json['afterGroupIndex'] as int? ?? 1,
-      pillSheetAppearanceMode: $enumDecodeNullable(
-          _$PillSheetAppearanceModeEnumMap, json['pillSheetAppearanceMode']),
     );
 
 Map<String, dynamic> _$$_ChangedPillNumberValueToJson(
@@ -249,8 +233,6 @@ Map<String, dynamic> _$$_ChangedPillNumberValueToJson(
       'afterTodayPillNumber': instance.afterTodayPillNumber,
       'beforeGroupIndex': instance.beforeGroupIndex,
       'afterGroupIndex': instance.afterGroupIndex,
-      'pillSheetAppearanceMode':
-          _$PillSheetAppearanceModeEnumMap[instance.pillSheetAppearanceMode],
     };
 
 _$_EndedPillSheetValue _$$_EndedPillSheetValueFromJson(

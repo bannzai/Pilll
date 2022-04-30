@@ -70,11 +70,8 @@ void main() {
       final history = PillSheetModifiedHistoryServiceActionFactory
           .createChangedPillNumberAction(
         pillSheetGroupID: "group_id",
-        beforePillSheetGroup: pillSheetGroup,
-        afterPillSheetGroup: updatedPillSheetGroup,
-        beforeActivedPillSheet: pillSheet,
-        afterActivedPillSheet: updatedPillSheet,
-        appearanceMode: PillSheetAppearanceMode.number,
+        before: pillSheet,
+        after: updatedPillSheet,
       );
 
       final pillSheetModifiedHistoryDatastore =
@@ -109,7 +106,6 @@ void main() {
       await store.modifiyTodayPillNumber(
         pillSheetGroup: pillSheetGroup,
         activedPillSheet: pillSheetGroup.activedPillSheet!,
-        appearanceMode: PillSheetAppearanceMode.number,
       );
     });
 
@@ -160,11 +156,8 @@ void main() {
       final history = PillSheetModifiedHistoryServiceActionFactory
           .createChangedPillNumberAction(
         pillSheetGroupID: "group_id",
-        beforePillSheetGroup: pillSheetGroup,
-        afterPillSheetGroup: updatedPillSheetGroup,
-        beforeActivedPillSheet: pillSheet,
-        afterActivedPillSheet: updatedPillSheet,
-        appearanceMode: PillSheetAppearanceMode.number,
+        before: pillSheet,
+        after: updatedPillSheet,
       );
 
       final pillSheetModifiedHistoryDatastore =
@@ -199,7 +192,6 @@ void main() {
       await store.modifiyTodayPillNumber(
         pillSheetGroup: pillSheetGroup,
         activedPillSheet: pillSheetGroup.activedPillSheet!,
-        appearanceMode: PillSheetAppearanceMode.number,
       );
     });
 
@@ -276,11 +268,8 @@ void main() {
       final history = PillSheetModifiedHistoryServiceActionFactory
           .createChangedPillNumberAction(
         pillSheetGroupID: "group_id",
-        beforePillSheetGroup: pillSheetGroup,
-        afterPillSheetGroup: updatedPillSheetGroup,
-        beforeActivedPillSheet: middle,
-        afterActivedPillSheet: updatedLeft,
-        appearanceMode: PillSheetAppearanceMode.number,
+        before: middle,
+        after: updatedLeft,
       );
 
       final pillSheetModifiedHistoryDatastore =
@@ -315,7 +304,6 @@ void main() {
       await store.modifiyTodayPillNumber(
         pillSheetGroup: pillSheetGroup,
         activedPillSheet: pillSheetGroup.activedPillSheet!,
-        appearanceMode: PillSheetAppearanceMode.number,
       );
     });
     test(
@@ -392,11 +380,8 @@ void main() {
       final history = PillSheetModifiedHistoryServiceActionFactory
           .createChangedPillNumberAction(
         pillSheetGroupID: "group_id",
-        beforePillSheetGroup: pillSheetGroup,
-        afterPillSheetGroup: updatedPillSheetGroup,
-        beforeActivedPillSheet: middle,
-        afterActivedPillSheet: updatedLeft,
-        appearanceMode: PillSheetAppearanceMode.number,
+        before: middle,
+        after: updatedLeft,
       );
 
       final pillSheetModifiedHistoryDatastore =
@@ -431,7 +416,6 @@ void main() {
       await store.modifiyTodayPillNumber(
         pillSheetGroup: pillSheetGroup,
         activedPillSheet: pillSheetGroup.activedPillSheet!,
-        appearanceMode: PillSheetAppearanceMode.number,
       );
     });
     test(
@@ -509,11 +493,8 @@ void main() {
       final history = PillSheetModifiedHistoryServiceActionFactory
           .createChangedPillNumberAction(
         pillSheetGroupID: "group_id",
-        beforePillSheetGroup: pillSheetGroup,
-        afterPillSheetGroup: updatedPillSheetGroup,
-        beforeActivedPillSheet: middle,
-        afterActivedPillSheet: updatedRight,
-        appearanceMode: PillSheetAppearanceMode.number,
+        before: middle,
+        after: updatedRight,
       );
 
       final pillSheetModifiedHistoryDatastore =
@@ -548,7 +529,6 @@ void main() {
       await store.modifiyTodayPillNumber(
         pillSheetGroup: pillSheetGroup,
         activedPillSheet: pillSheetGroup.activedPillSheet!,
-        appearanceMode: PillSheetAppearanceMode.number,
       );
     });
   });
@@ -634,11 +614,8 @@ void main() {
       final history = PillSheetModifiedHistoryServiceActionFactory
           .createChangedPillNumberAction(
         pillSheetGroupID: "group_id",
-        beforePillSheetGroup: pillSheetGroup,
-        afterPillSheetGroup: updatedPillSheetGroup,
-        beforeActivedPillSheet: middle,
-        afterActivedPillSheet: updatedLeft,
-        appearanceMode: PillSheetAppearanceMode.number,
+        before: middle,
+        after: updatedLeft,
       );
 
       final pillSheetModifiedHistoryDatastore =
@@ -673,7 +650,6 @@ void main() {
       await store.modifiyTodayPillNumber(
         pillSheetGroup: pillSheetGroup,
         activedPillSheet: pillSheetGroup.activedPillSheet!,
-        appearanceMode: PillSheetAppearanceMode.number,
       );
     });
   });
