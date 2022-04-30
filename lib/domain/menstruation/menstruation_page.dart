@@ -8,6 +8,7 @@ import 'package:pilll/domain/calendar/components/month_calendar/month_calendar.d
 import 'package:pilll/domain/menstruation/components/calendar/menstruation_calendar_header.dart';
 import 'package:pilll/domain/menstruation/components/menstruation_card_list.dart';
 import 'package:pilll/domain/menstruation/components/menstruation_record_button.dart';
+import 'package:pilll/domain/menstruation/menstruation_calendar_page_index_state_notifier.dart';
 import 'package:pilll/domain/menstruation/menstruation_state.codegen.dart';
 import 'package:pilll/domain/record/weekday_badge.dart';
 import 'package:pilll/domain/menstruation/menstruation_store.dart';
@@ -27,7 +28,8 @@ class MenstruationPage extends HookConsumerWidget {
   Widget build(BuildContext context, WidgetRef ref) {
     final store = ref.watch(menstruationsStoreProvider.notifier);
     final state = ref.watch(menstruationsStoreProvider);
-    final todayCalendarPageIndex = ref.read(todayCalendarPageIndexProvider);
+    final calendarPageIndexStateNotifier =
+        ref.watch(menstruationCalendarPageIndexStateNotifierProvider.notifier);
     useAutomaticKeepAlive(wantKeepAlive: true);
 
     final pageController =
@@ -35,14 +37,7 @@ class MenstruationPage extends HookConsumerWidget {
     pageController.addListener(() {
       final index = (pageController.page ?? pageController.initialPage).round();
 
-      final currentCalendarPageIndex = ref
-          .read(currentMenstruationWeekCalendarPageIndexProvider.notifier)
-          .state;
-      if (currentCalendarPageIndex != index) {
-        ref
-            .read(currentMenstruationWeekCalendarPageIndexProvider.notifier)
-            .state = index;
-      }
+      calendarPageIndexStateNotifier.set(index);
     });
 
     return state.when(

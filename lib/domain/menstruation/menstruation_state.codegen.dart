@@ -4,6 +4,7 @@ import 'package:pilll/database/diary.dart';
 import 'package:pilll/database/menstruation.dart';
 import 'package:pilll/database/pill_sheet_group.dart';
 import 'package:pilll/database/setting.dart';
+import 'package:pilll/domain/menstruation/menstruation_calendar_page_index_state_notifier.dart';
 import 'package:pilll/entity/diary.codegen.dart';
 import 'package:pilll/entity/menstruation.codegen.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';
@@ -18,16 +19,9 @@ import 'package:riverpod/riverpod.dart';
 
 part 'menstruation_state.codegen.freezed.dart';
 
-final menstruationCalendarWeekCalendarDataSourceProvider =
-    Provider((_) => menstruationWeekCalendarDataSource);
-final todayCalendarPageIndexProvider = Provider(
-  (ref) => ref
-      .watch(menstruationCalendarWeekCalendarDataSourceProvider)
-      .lastIndexWhere((element) =>
-          element.where((element) => isSameDay(element, today())).isNotEmpty),
-);
-final currentMenstruationWeekCalendarPageIndexProvider =
-    StateProvider((ref) => ref.watch(todayCalendarPageIndexProvider));
+final todayCalendarPageIndex =
+    menstruationWeekCalendarDataSource.lastIndexWhere((element) =>
+        element.where((element) => isSameDay(element, today())).isNotEmpty);
 
 final menstruationPageStateProvider =
     Provider<AsyncValue<MenstruationState>>((ref) {
@@ -45,8 +39,7 @@ final menstruationPageStateProvider =
       ref.watch(calendarNextPillSheetBandListProvider);
 
   final currentCalendarPageIndex =
-      ref.watch(currentMenstruationWeekCalendarPageIndexProvider);
-  final todayCalendarPageIndex = ref.watch(todayCalendarPageIndexProvider);
+      ref.watch(menstruationCalendarPageIndexStateNotifierProvider);
 
   if (latestPillSheetGroup is AsyncLoading ||
       premiumAndTrial is AsyncLoading ||
