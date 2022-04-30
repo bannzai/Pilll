@@ -56,7 +56,7 @@ class CreatingNewPillSheetRow extends HookConsumerWidget {
                   SnackBar(
                     duration: const Duration(seconds: 2),
                     content: Text(
-                      "ピルシートグループの自動追加を${setting.isAutomaticallyCreatePillSheet ? "ON" : "OFF"}にしました",
+                      "ピルシートグループの自動追加を${value ? "ON" : "OFF"}にしました",
                     ),
                   ),
                 ),

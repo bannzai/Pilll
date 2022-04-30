@@ -9,7 +9,7 @@ import 'package:pilll/entity/setting.codegen.dart';
 import 'package:pilll/entity/pill_sheet_type.dart';
 
 class MenstruationRow extends HookConsumerWidget {
-  final SettingStateStore store;
+  final SettingStateNotifier store;
   final Setting setting;
 
   MenstruationRow(this.store, this.setting);
