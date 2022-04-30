@@ -8,7 +8,7 @@ import 'package:riverpod/riverpod.dart';
 
 part 'menstruation_edit_page_state.codegen.freezed.dart';
 
-final menstruationEditStateProvider =
+final menstruationEditPageStateProvider =
     Provider.autoDispose.family((ref, Menstruation? menstruation) {
   final premiumAndTrial = ref.watch(premiumAndTrialProvider).value!;
   return MenstruationEditPageState(

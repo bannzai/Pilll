@@ -72,6 +72,7 @@ class MenstruationEditPage extends HookConsumerWidget {
                     children: [
                       MenstruationEditPageHeader(
                         title: title,
+                        state: state,
                         store: store,
                         onDeleted: onDeleted,
                         onSaved: onSaved,
@@ -89,8 +90,7 @@ class MenstruationEditPage extends HookConsumerWidget {
                   child: ListView(
                     controller: scrollController,
                     children: [
-                      ...state
-                          .dates()
+                      ...state.displayedDates
                           .map((dateForMonth) {
                             return [
                               CalendarDateHeader(date: dateForMonth),

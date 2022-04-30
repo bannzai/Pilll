@@ -3,6 +3,9 @@ import 'dart:io';
 import 'dart:math';
 
 import 'package:hooks_riverpod/hooks_riverpod.dart';
+import 'package:pilll/domain/menstruation/menstruation_page_async_action.dart';
+import 'package:pilll/domain/menstruation/menstruation_state.codegen.dart';
+import 'package:pilll/domain/menstruation_edit/menstruation_edit_page_async_action.dart';
 import 'package:pilll/entity/menstruation.codegen.dart';
 import 'package:pilll/entity/setting.codegen.dart';
 import 'package:pilll/native/health_care.dart';
@@ -16,112 +19,27 @@ import 'package:pilll/util/datetime/day.dart';
 final menstruationEditProvider = StateNotifierProvider.family.autoDispose<
     MenstruationEditPageStore, MenstruationEditPageState, Menstruation?>(
   (ref, menstruation) => MenstruationEditPageStore(
-    menstruation: menstruation,
-    menstruationDatastore: ref.watch(menstruationDatastoreProvider),
-    settingDatastore: ref.watch(settingDatastoreProvider),
-    userDatastore: ref.watch(userDatastoreProvider),
-  ),
+      asyncAction: ref.watch(menstruationEditPageAsyncActionProvider),
+      initialState: ref.watch(menstruationEditPageStateProvider(menstruation))),
 );
 
-class MenstruationEditPageStore extends StateNotifier<MenstruationEditPageState> {
-  late Menstruation? initialMenstruation;
-  final MenstruationDatastore menstruationDatastore;
-  final SettingDatastore settingDatastore;
-  final UserDatastore userDatastore;
+class MenstruationEditPageStore
+    extends StateNotifier<MenstruationEditPageState> {
+  final MenstruationEditPageAsyncAction asyncAction;
+  final MenstruationEditPageState initialState;
 
   MenstruationEditPageStore({
-    Menstruation? menstruation,
-    required MenstruationEditPageState initialState,
-  }) : super(initialState) {
-    initialMenstruation = menstruation;
-    setup();
-  }
+    required this.asyncAction,
+    required this.initialState,
+  }) : super(initialState);
 
-  void setup() {
-    _subscribe();
-  }
-
-  StreamSubscription? _userSubscribeCanceller;
-  void _subscribe() {
-    _cancel();
-
-    _userSubscribeCanceller = userDatastore.stream().listen((event) {
-      state = state.copyWith(
-        isPremium: event.isPremium,
-        isTrial: event.isTrial,
-      );
-    });
-  }
-
-  void _cancel() {
-    _userSubscribeCanceller?.cancel();
-  }
-
-  @override
-  void dispose() {
-    _cancel();
-    super.dispose();
-  }
-
-  bool shouldShowDiscardDialog() {
-    return (state.menstruation == null && initialMenstruation != null);
-  }
-
+  Menstruation? get initialMenstruation => initialState.menstruation;
+  bool shouldShowDiscardDialog() =>
+      state.menstruation == null && initialMenstruation != null;
   bool isDismissWhenSaveButtonPressed() =>
       !shouldShowDiscardDialog() && state.menstruation == null;
 
-  Future<void> delete() async {
-    var menstruation = this.initialMenstruation;
-    if (menstruation == null) {
-      throw const FormatException(
-          "menstruation is not exists from db when delete");
-    }
-    final documentID = menstruation.documentID;
-    if (documentID == null) {
-      throw const FormatException(
-          "menstruation is not exists document id from db when delete");
-    }
-    if (state.menstruation != null) {
-      throw const FormatException(
-          "missing condition about state.menstruation is exists when delete. state.menstruation should flushed on edit page");
-    }
-
-    if (await _canHealthKitDataSave()) {
-      await deleteMenstruationFlowHealthKitData(menstruation);
-      menstruation = menstruation.copyWith(healthKitSampleDataUUID: null);
-    }
-
-    await menstruationDatastore.update(
-        documentID, menstruation.copyWith(deletedAt: now()));
-  }
-
-  Future<Menstruation> save() async {
-    var menstruation = state.menstruation;
-    if (menstruation == null) {
-      throw const FormatException("menstruation is not exists when save");
-    }
-    final documentID = initialMenstruation?.documentID;
-    if (documentID == null) {
-      if (await _canHealthKitDataSave()) {
-        final healthKitSampleDataUUID =
-            await addMenstruationFlowHealthKitData(menstruation);
-        menstruation = menstruation.copyWith(
-            healthKitSampleDataUUID: healthKitSampleDataUUID);
-      }
-
-      return menstruationDatastore.create(menstruation);
-    } else {
-      if (await _canHealthKitDataSave()) {
-        final healthKitSampleDataUUID =
-            await updateOrAddMenstruationFlowHealthKitData(menstruation);
-        menstruation = menstruation.copyWith(
-            healthKitSampleDataUUID: healthKitSampleDataUUID);
-      }
-      return menstruationDatastore.update(documentID, menstruation);
-    }
-  }
-
-  tappedDate(DateTime date) async {
+  void tappedDate(DateTime date, Setting setting) async {
     final menstruation = state.menstruation;
     if (date.isAfter(today()) && menstruation == null) {
       state = state.copyWith(invalidMessage: "未来の日付は選択できません");
@@ -130,13 +48,6 @@ class MenstruationEditPageStore extends StateNotifier<MenstruationEditPageState>
     state = state.copyWith(invalidMessage: null);
 
     if (menstruation == null) {
-      final Setting setting;
-      try {
-        setting = await settingDatastore.fetch();
-      } catch (error) {
-        throw error;
-      }
-
       final begin = date;
       final end =
           date.add(Duration(days: max(setting.durationMenstruation - 1, 0)));
@@ -193,19 +104,5 @@ class MenstruationEditPageStore extends StateNotifier<MenstruationEditPageState>
 
   void adjustedScrollOffset() {
     state = state.copyWith(isAlreadyAdjsutScrollOffset: true);
-  }
-
-  Future<bool> _canHealthKitDataSave() async {
-    if (Platform.isIOS) {
-      if (await isHealthDataAvailable()) {
-        if (await isAuthorizedReadAndShareToHealthKitData()) {
-          if (state.menstruation?.healthKitSampleDataUUID != null) {
-            return true;
-          }
-        }
-      }
-    }
-
-    return false;
   }
 }

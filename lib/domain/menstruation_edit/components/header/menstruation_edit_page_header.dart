@@ -4,11 +4,13 @@ import 'package:pilll/components/atoms/buttons.dart';
 import 'package:pilll/components/atoms/font.dart';
 import 'package:pilll/components/atoms/text_color.dart';
 import 'package:pilll/components/page/discard_dialog.dart';
+import 'package:pilll/domain/menstruation_edit/menstruation_edit_page_state.codegen.dart';
 import 'package:pilll/domain/menstruation_edit/menstruation_edit_page_store.dart';
 import 'package:pilll/entity/menstruation.codegen.dart';
 
 class MenstruationEditPageHeader extends StatelessWidget {
   final String title;
+  final MenstruationEditPageState state;
   final MenstruationEditPageStore store;
   final Function() onDeleted;
   final Function(Menstruation) onSaved;
@@ -16,6 +18,7 @@ class MenstruationEditPageHeader extends StatelessWidget {
   const MenstruationEditPageHeader({
     Key? key,
     required this.title,
+    required this.state,
     required this.store,
     required this.onDeleted,
     required this.onSaved,
@@ -49,7 +52,10 @@ class MenstruationEditPageHeader extends StatelessWidget {
                     AlertButton(
                       text: "削除する",
                       onPressed: () async {
-                        await store.delete();
+                        await store.asyncAction.delete(
+                          initialMenstruation: store.initialMenstruation,
+                          menstruation: state.menstruation,
+                        );
                         onDeleted();
 
                         analytics.logEvent(name: "pressed_delete_menstruation");
@@ -62,7 +68,12 @@ class MenstruationEditPageHeader extends StatelessWidget {
             } else if (store.isDismissWhenSaveButtonPressed()) {
               Navigator.of(context).pop();
             } else {
-              store.save().then((value) => onSaved(value));
+              store.asyncAction
+                  .save(
+                    initialMenstruation: store.initialMenstruation,
+                    menstruation: state.menstruation,
+                  )
+                  .then((value) => onSaved(value));
             }
           },
           text: "保存",
