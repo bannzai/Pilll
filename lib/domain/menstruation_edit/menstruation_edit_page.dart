@@ -29,8 +29,6 @@ class MenstruationEditPage extends HookConsumerWidget {
     final invalidMessage = state.invalidMessage;
 
     final scrollController = useScrollController();
-    // TODO: Check
-    // Future.delayed(const Duration(microseconds: 200)).then((value) {});
     Future.microtask(() {
       if (state.isAlreadyAdjsutScrollOffset) {
         return;
@@ -89,8 +87,10 @@ class MenstruationEditPage extends HookConsumerWidget {
                               CalendarDateHeader(date: dateForMonth),
                               MonthCalendar(
                                 dateForMonth: dateForMonth,
+                                state: state,
                                 store: store,
-                                setting: state.setting,
+                                monthCalendarState:
+                                    state.monthCalendarStatuses(dateForMonth),
                               )
                             ];
                           })
