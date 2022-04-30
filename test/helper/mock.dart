@@ -9,6 +9,8 @@ import 'package:pilll/domain/record/components/notification_bar/notification_bar
 import 'package:pilll/domain/record/record_page_async_action.dart';
 import 'package:pilll/domain/record/record_page_store.dart';
 import 'package:pilll/domain/settings/setting_page_async_action.dart';
+import 'package:pilll/entity/setting.codegen.dart';
+import 'package:pilll/provider/premium_and_trial.codegen.dart';
 import 'package:pilll/service/auth.dart';
 import 'package:pilll/database/diary.dart';
 import 'package:pilll/database/menstruation.dart';
@@ -41,5 +43,7 @@ import 'package:mockito/annotations.dart';
   MenstruationPageAsyncAction,
   MenstruationEditPageAsyncAction,
   CalendarPageAsyncAction,
+  PremiumAndTrial,
+  Setting,
 ])
 abstract class KeepGeneratedMocks {}
