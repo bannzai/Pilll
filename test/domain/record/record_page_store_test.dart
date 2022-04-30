@@ -286,6 +286,9 @@ void main() {
         afterActivedPillSheet: pillSheet.copyWith(
           lastTakenDate: _today,
         ),
+        beforePillSheetGroup: pillSheetGroup,
+        afterPillSheetGroup: updatedPillSheetGroup,
+        appearanceMode: PillSheetAppearanceMode.number,
         isQuickRecord: false,
       );
       final pillSheetModifiedHistoryDatastore =
@@ -407,6 +410,9 @@ void main() {
         afterActivedPillSheet: pillSheet.copyWith(
           lastTakenDate: _today,
         ),
+        beforePillSheetGroup: pillSheetGroup,
+        afterPillSheetGroup: updatedPillSheetGroup,
+        appearanceMode: PillSheetAppearanceMode.number,
         isQuickRecord: false,
       );
       final pillSheetModifiedHistoryDatastore =
@@ -530,6 +536,9 @@ void main() {
         afterActivedPillSheet: pillSheet2.copyWith(
           lastTakenDate: _today,
         ),
+        beforePillSheetGroup: pillSheetGroup,
+        afterPillSheetGroup: updatedPillSheetGroup,
+        appearanceMode: PillSheetAppearanceMode.number,
         isQuickRecord: false,
       );
       final pillSheetModifiedHistoryDatastore =
@@ -656,6 +665,9 @@ void main() {
         afterActivedPillSheet: pillSheet2.copyWith(
           lastTakenDate: _today,
         ),
+        beforePillSheetGroup: pillSheetGroup,
+        afterPillSheetGroup: updatedPillSheetGroup,
+        appearanceMode: PillSheetAppearanceMode.number,
         isQuickRecord: false,
       );
       final pillSheetModifiedHistoryDatastore =
@@ -775,6 +787,9 @@ void main() {
           afterActivedPillSheet: pillSheet.copyWith(
             lastTakenDate: yesterday.subtract(const Duration(days: 1)),
           ),
+          beforePillSheetGroup: pillSheetGroup,
+          afterPillSheetGroup: updatedPillSheetGroup,
+          appearanceMode: PillSheetAppearanceMode.number,
         );
         final pillSheetModifiedHistoryDatastore =
             MockPillSheetModifiedHistoryDatastore();
@@ -889,6 +904,9 @@ void main() {
           afterActivedPillSheet: pillSheet.copyWith(
             lastTakenDate: yesterday,
           ),
+          beforePillSheetGroup: pillSheetGroup,
+          afterPillSheetGroup: updatedPillSheetGroup,
+          appearanceMode: PillSheetAppearanceMode.number,
         );
         final pillSheetModifiedHistoryDatastore =
             MockPillSheetModifiedHistoryDatastore();
@@ -1018,6 +1036,9 @@ void main() {
             lastTakenDate: beginDate.subtract(const Duration(days: 1)),
             restDurations: [],
           ),
+          beforePillSheetGroup: pillSheetGroup,
+          afterPillSheetGroup: updatedPillSheetGroup,
+          appearanceMode: PillSheetAppearanceMode.number,
         );
         final pillSheetModifiedHistoryDatastore =
             MockPillSheetModifiedHistoryDatastore();
@@ -1139,6 +1160,9 @@ void main() {
           pillSheetGroupID: "group_id",
           beforeActivedPillSheet: pillSheet,
           afterActivedPillSheet: pillSheet.copyWith(lastTakenDate: yesterday),
+          beforePillSheetGroup: pillSheetGroup,
+          afterPillSheetGroup: updatedPillSheetGroup,
+          appearanceMode: PillSheetAppearanceMode.number,
         );
         final pillSheetModifiedHistoryDatastore =
             MockPillSheetModifiedHistoryDatastore();
@@ -1265,6 +1289,9 @@ void main() {
           afterActivedPillSheet: pillSheet2.copyWith(
             lastTakenDate: yesterday,
           ),
+          beforePillSheetGroup: pillSheetGroup,
+          afterPillSheetGroup: updatedPillSheetGroup,
+          appearanceMode: PillSheetAppearanceMode.number,
         );
         final pillSheetModifiedHistoryDatastore =
             MockPillSheetModifiedHistoryDatastore();
@@ -1392,10 +1419,14 @@ void main() {
 
         final history = PillSheetModifiedHistoryServiceActionFactory
             .createRevertTakenPillAction(
-                pillSheetGroupID: "group_id",
-                beforeActivedPillSheet: pillSheet2,
-                afterActivedPillSheet: pillSheet.copyWith(
-                    lastTakenDate: _today.subtract(const Duration(days: 4))));
+          pillSheetGroupID: "group_id",
+          beforeActivedPillSheet: pillSheet2,
+          afterActivedPillSheet: pillSheet.copyWith(
+              lastTakenDate: _today.subtract(const Duration(days: 4))),
+          beforePillSheetGroup: pillSheetGroup,
+          afterPillSheetGroup: updatedPillSheetGroup,
+          appearanceMode: PillSheetAppearanceMode.number,
+        );
         final pillSheetModifiedHistoryDatastore =
             MockPillSheetModifiedHistoryDatastore();
         when(pillSheetModifiedHistoryDatastore.add(batch, history))
@@ -1526,11 +1557,15 @@ void main() {
 
         final history = PillSheetModifiedHistoryServiceActionFactory
             .createRevertTakenPillAction(
-                pillSheetGroupID: "group_id",
-                beforeActivedPillSheet: pillSheet2,
-                afterActivedPillSheet: pillSheet.copyWith(
-                    lastTakenDate: _today.subtract(const Duration(days: 4)),
-                    restDurations: []));
+          pillSheetGroupID: "group_id",
+          beforeActivedPillSheet: pillSheet2,
+          afterActivedPillSheet: pillSheet.copyWith(
+              lastTakenDate: _today.subtract(const Duration(days: 4)),
+              restDurations: []),
+          beforePillSheetGroup: pillSheetGroup,
+          afterPillSheetGroup: updatedPillSheetGroup,
+          appearanceMode: PillSheetAppearanceMode.number,
+        );
         final pillSheetModifiedHistoryDatastore =
             MockPillSheetModifiedHistoryDatastore();
         when(pillSheetModifiedHistoryDatastore.add(batch, history))
