@@ -54,8 +54,7 @@ class MenstruationEditPage extends HookConsumerWidget {
                   topLeft: Radius.circular(20.0),
                   topRight: Radius.circular(20.0),
                 )),
-            child: ListView(
-              controller: scrollController,
+            child: Column(
               children: [
                 Padding(
                   padding:
