@@ -26,7 +26,7 @@ class MenstruationRecordButton extends StatelessWidget {
         final latestMenstruation = state.latestMenstruation;
         if (latestMenstruation != null &&
             latestMenstruation.dateRange.inRange(today())) {
-          showMenstruationEditPage(context, latestMenstruation);
+          showMenstruationEditPage(context, menstruation: latestMenstruation);
           return;
         }
 

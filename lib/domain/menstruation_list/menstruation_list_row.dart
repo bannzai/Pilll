@@ -79,7 +79,7 @@ class MenstruationListRow extends StatelessWidget {
   Widget build(BuildContext context) {
     return GestureDetector(
       onTap: () {
-        showMenstruationEditPage(context, state.menstruation);
+        showMenstruationEditPage(context, menstruation: state.menstruation);
       },
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
