@@ -27,7 +27,7 @@ class SettingTodayPillNumberPage extends HookConsumerWidget {
   @override
   Widget build(BuildContext context, WidgetRef ref) {
     final parameter = SettingTodayPillNumberStoreParameter(
-      appearanceMode: PillSheetAppearanceMode.number,
+      appearanceMode: setting.pillSheetAppearanceMode,
       pillSheetGroup: pillSheetGroup,
       activedPillSheet: activedPillSheet,
     );
