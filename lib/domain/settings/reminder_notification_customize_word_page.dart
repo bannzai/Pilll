@@ -120,8 +120,13 @@ class ReminderNotificationCustomizeWordPage extends HookConsumerWidget {
                           (value) async {
                             analytics.logEvent(
                                 name: "change_reminder_notification_date");
-                            await store.setIsInVisibleReminderDate(!value);
-                            isInVisibleReminderDate.value = !value;
+                            try {
+                              await store.asyncAction
+                                  .setIsInVisibleReminderDate(!value, setting);
+                              isInVisibleReminderDate.value = !value;
+                            } catch (error) {
+                              showErrorAlertFor(context, error);
+                            }
                           },
                         ),
                         const Divider(),
@@ -131,8 +136,13 @@ class ReminderNotificationCustomizeWordPage extends HookConsumerWidget {
                           (value) async {
                             analytics.logEvent(
                                 name: "change_reminder_notification_number");
-                            await store.setIsInVisiblePillNumber(!value);
-                            isInVisiblePillNumber.value = !value;
+                            try {
+                              await store.asyncAction
+                                  .setIsInVisiblePillNumber(!value, setting);
+                              isInVisiblePillNumber.value = !value;
+                            } catch (error) {
+                              showErrorAlertFor(context, error);
+                            }
                           },
                         ),
                         const Divider(),
@@ -142,8 +152,13 @@ class ReminderNotificationCustomizeWordPage extends HookConsumerWidget {
                           (value) async {
                             analytics.logEvent(
                                 name: "change_reminder_notification_desc");
-                            await store.setIsInVisibleDescription(!value);
-                            isInVisibleDescription.value = !value;
+                            try {
+                              await store.asyncAction
+                                  .setIsInVisibleDescription(!value, setting);
+                              isInVisibleDescription.value = !value;
+                            } catch (error) {
+                              showErrorAlertFor(context, error);
+                            }
                           },
                         ),
                         const Divider(),

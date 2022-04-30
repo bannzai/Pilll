@@ -55,13 +55,13 @@ void showErrorAlert(BuildContext context,
   );
 }
 
-void showErrorAlertFor(BuildContext context, Object object) {
+void showErrorAlertFor(BuildContext context, Object error) {
   showDialog(
     context: context,
     builder: (_) {
       return ErrorAlert(
         title: "エラーが発生しました",
-        errorMessage: object.toString(),
+        errorMessage: error.toString(),
       );
     },
   );
