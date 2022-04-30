@@ -251,10 +251,11 @@ class RecordPageStore extends StateNotifier<RecordPageState> {
         pillNumberIntoPillSheet: activedPillSheet.lastTakenPillNumber);
   }
 
-  Future<void> revertTaken(
-      {required PillSheetGroup pillSheetGroup,
-      required int pageIndex,
-      required int pillNumberIntoPillSheet}) async {
+  Future<void> revertTaken({
+    required PillSheetGroup pillSheetGroup,
+    required int pageIndex,
+    required int pillNumberIntoPillSheet,
+  }) async {
     final activedPillSheet = pillSheetGroup.activedPillSheet;
     if (activedPillSheet == null) {
       throw const FormatException("現在対象となっているピルシートが見つかりませんでした");
@@ -330,7 +331,7 @@ class RecordPageStore extends StateNotifier<RecordPageState> {
       afterPillSheetGroup: updatedPillSheetGroup,
       beforeActivedPillSheet: before,
       afterActivedPillSheet: after,
-      appearanceMode: PillSheetAppearanceMode.number,
+      appearanceMode: state.setting!.pillSheetAppearanceMode,
     );
     _pillSheetModifiedHistoryDatastore.add(batch, history);
 
