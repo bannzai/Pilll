@@ -49,12 +49,11 @@ class MenstruationEditPageAsyncAction {
     required Menstruation? initialMenstruation,
     required Menstruation? menstruation,
   }) async {
-    var menstruation = initialMenstruation;
-    if (menstruation == null) {
+    if (initialMenstruation == null) {
       throw const FormatException(
           "menstruation is not exists from db when delete");
     }
-    final documentID = menstruation.documentID;
+    final documentID = initialMenstruation.documentID;
     if (documentID == null) {
       throw const FormatException(
           "menstruation is not exists document id from db when delete");
@@ -65,12 +64,13 @@ class MenstruationEditPageAsyncAction {
     }
 
     if (await _canHealthKitDataSave(menstruation: menstruation)) {
-      await deleteMenstruationFlowHealthKitData(menstruation);
-      menstruation = menstruation.copyWith(healthKitSampleDataUUID: null);
+      await deleteMenstruationFlowHealthKitData(initialMenstruation);
+      initialMenstruation =
+          initialMenstruation.copyWith(healthKitSampleDataUUID: null);
     }
 
     await _menstruationDatastore.update(
-        documentID, menstruation.copyWith(deletedAt: now()));
+        documentID, initialMenstruation.copyWith(deletedAt: now()));
   }
 
   Future<bool> _canHealthKitDataSave(
