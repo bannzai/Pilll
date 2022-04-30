@@ -11,7 +11,7 @@ final menstruationsStoreProvider =
     StateNotifierProvider<MenstruationStore, AsyncValue<MenstruationState>>(
   (ref) => MenstruationStore(
     asyncAction: ref.watch(menstruationPageAsyncActionProvider),
-    initialState: ref.watch(menstruationStateProvider),
+    initialState: ref.watch(menstruationPageStateProvider),
   ),
 );
 

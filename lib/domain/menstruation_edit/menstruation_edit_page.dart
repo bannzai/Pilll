@@ -132,10 +132,10 @@ class MenstruationEditPage extends HookConsumerWidget {
 }
 
 // TODO: Integrate
-void showMenstruationEditPageForUpdate(
-  BuildContext context,
-  Menstruation menstruation,
-) {
+void showMenstruationEditPage(
+  BuildContext context, {
+  required Menstruation? menstruation,
+}) {
   analytics.setCurrentScreen(screenName: "MenstruationEditPage");
   showModalBottomSheet(
     context: context,

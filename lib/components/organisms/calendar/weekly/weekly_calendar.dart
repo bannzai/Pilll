@@ -83,7 +83,7 @@ class CalendarWeekdayLine extends StatelessWidget {
                     onTap: (menstruation) {
                       analytics.logEvent(
                           name: "tap_calendar_menstruation_band");
-                      showMenstruationEditPageForUpdate(context, menstruation);
+                      showMenstruationEditPage(context, menstruation);
                     },
                   ),
                 ),

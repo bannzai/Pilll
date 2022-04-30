@@ -51,7 +51,7 @@ class MenstruationPage extends HookConsumerWidget {
       error: (error, _) => UniversalErrorPage(
         error: error,
         child: null,
-        reload: () => ref.refresh(menstruationStateProvider),
+        reload: () => ref.refresh(menstruationPageStateProvider),
       ),
       loading: () => ScaffoldIndicator(),
     );

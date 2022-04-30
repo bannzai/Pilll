@@ -3,7 +3,7 @@
 // ignore_for_file: type=lint
 // ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target
 
-part of 'menstruation_edit_state.codegen.dart';
+part of 'menstruation_edit_page_state.codegen.dart';
 
 // **************************************************************************
 // FreezedGenerator
@@ -15,76 +15,72 @@ final _privateConstructorUsedError = UnsupportedError(
     'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more informations: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
 
 /// @nodoc
-class _$MenstruationEditStateTearOff {
-  const _$MenstruationEditStateTearOff();
+class _$MenstruationEditPageStateTearOff {
+  const _$MenstruationEditPageStateTearOff();
 
-  _MenstruationEditState call(
+  _MenstruationEditPageState call(
       {bool isAlreadyAdjsutScrollOffset = false,
       required Menstruation? menstruation,
       required List<DateTime> displayedDates,
-      dynamic isPremium = false,
-      dynamic isTrial = false,
+      required PremiumAndTrial premiumAndTrial,
       String? invalidMessage}) {
-    return _MenstruationEditState(
+    return _MenstruationEditPageState(
       isAlreadyAdjsutScrollOffset: isAlreadyAdjsutScrollOffset,
       menstruation: menstruation,
       displayedDates: displayedDates,
-      isPremium: isPremium,
-      isTrial: isTrial,
+      premiumAndTrial: premiumAndTrial,
       invalidMessage: invalidMessage,
     );
   }
 }
 
 /// @nodoc
-const $MenstruationEditState = _$MenstruationEditStateTearOff();
+const $MenstruationEditPageState = _$MenstruationEditPageStateTearOff();
 
 /// @nodoc
-mixin _$MenstruationEditState {
+mixin _$MenstruationEditPageState {
   bool get isAlreadyAdjsutScrollOffset => throw _privateConstructorUsedError;
   Menstruation? get menstruation => throw _privateConstructorUsedError;
   List<DateTime> get displayedDates => throw _privateConstructorUsedError;
-  dynamic get isPremium => throw _privateConstructorUsedError;
-  dynamic get isTrial => throw _privateConstructorUsedError;
+  PremiumAndTrial get premiumAndTrial => throw _privateConstructorUsedError;
   String? get invalidMessage => throw _privateConstructorUsedError;
 
   @JsonKey(ignore: true)
-  $MenstruationEditStateCopyWith<MenstruationEditState> get copyWith =>
+  $MenstruationEditPageStateCopyWith<MenstruationEditPageState> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
 /// @nodoc
-abstract class $MenstruationEditStateCopyWith<$Res> {
-  factory $MenstruationEditStateCopyWith(MenstruationEditState value,
-          $Res Function(MenstruationEditState) then) =
-      _$MenstruationEditStateCopyWithImpl<$Res>;
+abstract class $MenstruationEditPageStateCopyWith<$Res> {
+  factory $MenstruationEditPageStateCopyWith(MenstruationEditPageState value,
+          $Res Function(MenstruationEditPageState) then) =
+      _$MenstruationEditPageStateCopyWithImpl<$Res>;
   $Res call(
       {bool isAlreadyAdjsutScrollOffset,
       Menstruation? menstruation,
       List<DateTime> displayedDates,
-      dynamic isPremium,
-      dynamic isTrial,
+      PremiumAndTrial premiumAndTrial,
       String? invalidMessage});
 
   $MenstruationCopyWith<$Res>? get menstruation;
+  $PremiumAndTrialCopyWith<$Res> get premiumAndTrial;
 }
 
 /// @nodoc
-class _$MenstruationEditStateCopyWithImpl<$Res>
-    implements $MenstruationEditStateCopyWith<$Res> {
-  _$MenstruationEditStateCopyWithImpl(this._value, this._then);
+class _$MenstruationEditPageStateCopyWithImpl<$Res>
+    implements $MenstruationEditPageStateCopyWith<$Res> {
+  _$MenstruationEditPageStateCopyWithImpl(this._value, this._then);
 
-  final MenstruationEditState _value;
+  final MenstruationEditPageState _value;
   // ignore: unused_field
-  final $Res Function(MenstruationEditState) _then;
+  final $Res Function(MenstruationEditPageState) _then;
 
   @override
   $Res call({
     Object? isAlreadyAdjsutScrollOffset = freezed,
     Object? menstruation = freezed,
     Object? displayedDates = freezed,
-    Object? isPremium = freezed,
-    Object? isTrial = freezed,
+    Object? premiumAndTrial = freezed,
     Object? invalidMessage = freezed,
   }) {
     return _then(_value.copyWith(
@@ -100,14 +96,10 @@ class _$MenstruationEditStateCopyWithImpl<$Res>
           ? _value.displayedDates
           : displayedDates // ignore: cast_nullable_to_non_nullable
               as List<DateTime>,
-      isPremium: isPremium == freezed
-          ? _value.isPremium
-          : isPremium // ignore: cast_nullable_to_non_nullable
-              as dynamic,
-      isTrial: isTrial == freezed
-          ? _value.isTrial
-          : isTrial // ignore: cast_nullable_to_non_nullable
-              as dynamic,
+      premiumAndTrial: premiumAndTrial == freezed
+          ? _value.premiumAndTrial
+          : premiumAndTrial // ignore: cast_nullable_to_non_nullable
+              as PremiumAndTrial,
       invalidMessage: invalidMessage == freezed
           ? _value.invalidMessage
           : invalidMessage // ignore: cast_nullable_to_non_nullable
@@ -125,48 +117,56 @@ class _$MenstruationEditStateCopyWithImpl<$Res>
       return _then(_value.copyWith(menstruation: value));
     });
   }
+
+  @override
+  $PremiumAndTrialCopyWith<$Res> get premiumAndTrial {
+    return $PremiumAndTrialCopyWith<$Res>(_value.premiumAndTrial, (value) {
+      return _then(_value.copyWith(premiumAndTrial: value));
+    });
+  }
 }
 
 /// @nodoc
-abstract class _$MenstruationEditStateCopyWith<$Res>
-    implements $MenstruationEditStateCopyWith<$Res> {
-  factory _$MenstruationEditStateCopyWith(_MenstruationEditState value,
-          $Res Function(_MenstruationEditState) then) =
-      __$MenstruationEditStateCopyWithImpl<$Res>;
+abstract class _$MenstruationEditPageStateCopyWith<$Res>
+    implements $MenstruationEditPageStateCopyWith<$Res> {
+  factory _$MenstruationEditPageStateCopyWith(_MenstruationEditPageState value,
+          $Res Function(_MenstruationEditPageState) then) =
+      __$MenstruationEditPageStateCopyWithImpl<$Res>;
   @override
   $Res call(
       {bool isAlreadyAdjsutScrollOffset,
       Menstruation? menstruation,
       List<DateTime> displayedDates,
-      dynamic isPremium,
-      dynamic isTrial,
+      PremiumAndTrial premiumAndTrial,
       String? invalidMessage});
 
   @override
   $MenstruationCopyWith<$Res>? get menstruation;
+  @override
+  $PremiumAndTrialCopyWith<$Res> get premiumAndTrial;
 }
 
 /// @nodoc
-class __$MenstruationEditStateCopyWithImpl<$Res>
-    extends _$MenstruationEditStateCopyWithImpl<$Res>
-    implements _$MenstruationEditStateCopyWith<$Res> {
-  __$MenstruationEditStateCopyWithImpl(_MenstruationEditState _value,
-      $Res Function(_MenstruationEditState) _then)
-      : super(_value, (v) => _then(v as _MenstruationEditState));
+class __$MenstruationEditPageStateCopyWithImpl<$Res>
+    extends _$MenstruationEditPageStateCopyWithImpl<$Res>
+    implements _$MenstruationEditPageStateCopyWith<$Res> {
+  __$MenstruationEditPageStateCopyWithImpl(_MenstruationEditPageState _value,
+      $Res Function(_MenstruationEditPageState) _then)
+      : super(_value, (v) => _then(v as _MenstruationEditPageState));
 
   @override
-  _MenstruationEditState get _value => super._value as _MenstruationEditState;
+  _MenstruationEditPageState get _value =>
+      super._value as _MenstruationEditPageState;
 
   @override
   $Res call({
     Object? isAlreadyAdjsutScrollOffset = freezed,
     Object? menstruation = freezed,
     Object? displayedDates = freezed,
-    Object? isPremium = freezed,
-    Object? isTrial = freezed,
+    Object? premiumAndTrial = freezed,
     Object? invalidMessage = freezed,
   }) {
-    return _then(_MenstruationEditState(
+    return _then(_MenstruationEditPageState(
       isAlreadyAdjsutScrollOffset: isAlreadyAdjsutScrollOffset == freezed
           ? _value.isAlreadyAdjsutScrollOffset
           : isAlreadyAdjsutScrollOffset // ignore: cast_nullable_to_non_nullable
@@ -179,8 +179,10 @@ class __$MenstruationEditStateCopyWithImpl<$Res>
           ? _value.displayedDates
           : displayedDates // ignore: cast_nullable_to_non_nullable
               as List<DateTime>,
-      isPremium: isPremium == freezed ? _value.isPremium : isPremium,
-      isTrial: isTrial == freezed ? _value.isTrial : isTrial,
+      premiumAndTrial: premiumAndTrial == freezed
+          ? _value.premiumAndTrial
+          : premiumAndTrial // ignore: cast_nullable_to_non_nullable
+              as PremiumAndTrial,
       invalidMessage: invalidMessage == freezed
           ? _value.invalidMessage
           : invalidMessage // ignore: cast_nullable_to_non_nullable
@@ -191,13 +193,12 @@ class __$MenstruationEditStateCopyWithImpl<$Res>
 
 /// @nodoc
 
-class _$_MenstruationEditState extends _MenstruationEditState {
-  const _$_MenstruationEditState(
+class _$_MenstruationEditPageState extends _MenstruationEditPageState {
+  const _$_MenstruationEditPageState(
       {this.isAlreadyAdjsutScrollOffset = false,
       required this.menstruation,
       required this.displayedDates,
-      this.isPremium = false,
-      this.isTrial = false,
+      required this.premiumAndTrial,
       this.invalidMessage})
       : super._();
 
@@ -208,25 +209,21 @@ class _$_MenstruationEditState extends _MenstruationEditState {
   final Menstruation? menstruation;
   @override
   final List<DateTime> displayedDates;
-  @JsonKey()
   @override
-  final dynamic isPremium;
-  @JsonKey()
-  @override
-  final dynamic isTrial;
+  final PremiumAndTrial premiumAndTrial;
   @override
   final String? invalidMessage;
 
   @override
   String toString() {
-    return 'MenstruationEditState(isAlreadyAdjsutScrollOffset: $isAlreadyAdjsutScrollOffset, menstruation: $menstruation, displayedDates: $displayedDates, isPremium: $isPremium, isTrial: $isTrial, invalidMessage: $invalidMessage)';
+    return 'MenstruationEditPageState(isAlreadyAdjsutScrollOffset: $isAlreadyAdjsutScrollOffset, menstruation: $menstruation, displayedDates: $displayedDates, premiumAndTrial: $premiumAndTrial, invalidMessage: $invalidMessage)';
   }
 
   @override
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _MenstruationEditState &&
+            other is _MenstruationEditPageState &&
             const DeepCollectionEquality().equals(
                 other.isAlreadyAdjsutScrollOffset,
                 isAlreadyAdjsutScrollOffset) &&
@@ -234,8 +231,8 @@ class _$_MenstruationEditState extends _MenstruationEditState {
                 .equals(other.menstruation, menstruation) &&
             const DeepCollectionEquality()
                 .equals(other.displayedDates, displayedDates) &&
-            const DeepCollectionEquality().equals(other.isPremium, isPremium) &&
-            const DeepCollectionEquality().equals(other.isTrial, isTrial) &&
+            const DeepCollectionEquality()
+                .equals(other.premiumAndTrial, premiumAndTrial) &&
             const DeepCollectionEquality()
                 .equals(other.invalidMessage, invalidMessage));
   }
@@ -246,26 +243,25 @@ class _$_MenstruationEditState extends _MenstruationEditState {
       const DeepCollectionEquality().hash(isAlreadyAdjsutScrollOffset),
       const DeepCollectionEquality().hash(menstruation),
       const DeepCollectionEquality().hash(displayedDates),
-      const DeepCollectionEquality().hash(isPremium),
-      const DeepCollectionEquality().hash(isTrial),
+      const DeepCollectionEquality().hash(premiumAndTrial),
       const DeepCollectionEquality().hash(invalidMessage));
 
   @JsonKey(ignore: true)
   @override
-  _$MenstruationEditStateCopyWith<_MenstruationEditState> get copyWith =>
-      __$MenstruationEditStateCopyWithImpl<_MenstruationEditState>(
-          this, _$identity);
+  _$MenstruationEditPageStateCopyWith<_MenstruationEditPageState>
+      get copyWith =>
+          __$MenstruationEditPageStateCopyWithImpl<_MenstruationEditPageState>(
+              this, _$identity);
 }
 
-abstract class _MenstruationEditState extends MenstruationEditState {
-  const factory _MenstruationEditState(
+abstract class _MenstruationEditPageState extends MenstruationEditPageState {
+  const factory _MenstruationEditPageState(
       {bool isAlreadyAdjsutScrollOffset,
       required Menstruation? menstruation,
       required List<DateTime> displayedDates,
-      dynamic isPremium,
-      dynamic isTrial,
-      String? invalidMessage}) = _$_MenstruationEditState;
-  const _MenstruationEditState._() : super._();
+      required PremiumAndTrial premiumAndTrial,
+      String? invalidMessage}) = _$_MenstruationEditPageState;
+  const _MenstruationEditPageState._() : super._();
 
   @override
   bool get isAlreadyAdjsutScrollOffset;
@@ -274,13 +270,11 @@ abstract class _MenstruationEditState extends MenstruationEditState {
   @override
   List<DateTime> get displayedDates;
   @override
-  dynamic get isPremium;
-  @override
-  dynamic get isTrial;
+  PremiumAndTrial get premiumAndTrial;
   @override
   String? get invalidMessage;
   @override
   @JsonKey(ignore: true)
-  _$MenstruationEditStateCopyWith<_MenstruationEditState> get copyWith =>
-      throw _privateConstructorUsedError;
+  _$MenstruationEditPageStateCopyWith<_MenstruationEditPageState>
+      get copyWith => throw _privateConstructorUsedError;
 }

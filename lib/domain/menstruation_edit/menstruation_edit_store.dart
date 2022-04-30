@@ -8,7 +8,7 @@ import 'package:pilll/entity/setting.codegen.dart';
 import 'package:pilll/native/health_care.dart';
 import 'package:pilll/database/menstruation.dart';
 import 'package:pilll/database/setting.dart';
-import 'package:pilll/domain/menstruation_edit/menstruation_edit_state.codegen.dart';
+import 'package:pilll/domain/menstruation_edit/menstruation_edit_page_state.codegen.dart';
 import 'package:pilll/database/user.dart';
 import 'package:pilll/util/datetime/date_compare.dart';
 import 'package:pilll/util/datetime/day.dart';
@@ -22,25 +22,6 @@ final menstruationEditProvider = StateNotifierProvider.family
     userDatastore: ref.watch(userDatastoreProvider),
   ),
 );
-
-List<DateTime> displayedDates(Menstruation? menstruation) {
-  if (menstruation != null) {
-    return [
-      DateTime(
-          menstruation.beginDate.year, menstruation.beginDate.month - 1, 1),
-      menstruation.beginDate,
-      DateTime(
-          menstruation.beginDate.year, menstruation.beginDate.month + 1, 1),
-    ];
-  } else {
-    final t = today();
-    return [
-      DateTime(t.year, t.month - 1, 1),
-      t,
-      DateTime(t.year, t.month + 1, 1),
-    ];
-  }
-}
 
 class MenstruationEditStore extends StateNotifier<MenstruationEditState> {
   late Menstruation? initialMenstruation;
