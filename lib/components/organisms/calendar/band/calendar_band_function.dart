@@ -8,6 +8,7 @@ import 'package:pilll/entity/pill_sheet_type.dart';
 import 'package:pilll/entity/setting.codegen.dart';
 import 'package:pilll/entity/weekday.dart';
 import 'package:pilll/util/datetime/date_compare.dart';
+import 'package:pilll/util/datetime/day.dart';
 
 List<DateRange> scheduledOrInTheMiddleMenstruationDateRanges(
   PillSheetGroup pillSheetGroup,
@@ -147,4 +148,14 @@ List<CalendarBandModel> buildBandModels(
           (range) => CalendarNextPillSheetBandModel(range.begin, range.end))
     ]
   ];
+}
+
+bool isNecessaryLineBreak(DateTime date, DateRange dateRange) {
+  return !dateRange.inRange(date.date());
+}
+
+int offsetForStartPositionAtLine(DateTime begin, DateRange dateRange) {
+  return isNecessaryLineBreak(begin, dateRange)
+      ? 0
+      : daysBetween(dateRange.begin.date(), begin.date());
 }

@@ -133,8 +133,10 @@ class CalendarWeekdayLine extends StatelessWidget {
     required double tileWidth,
     required Widget Function(bool isLineBreak, double width) bandBuilder,
   }) {
-    bool isLineBreak = _isNecessaryLineBreak(calendarBandModel.begin);
-    int start = _offsetForStartPositionAtLine(calendarBandModel.begin);
+    bool isLineBreak =
+        isNecessaryLineBreak(calendarBandModel.begin, state.dateRange);
+    int start =
+        offsetForStartPositionAtLine(calendarBandModel.begin, state.dateRange);
     final length = bandLength(state.dateRange, calendarBandModel, isLineBreak);
 
     return Positioned(
@@ -143,16 +145,6 @@ class CalendarWeekdayLine extends StatelessWidget {
       bottom: bottomOffset,
       child: bandBuilder(isLineBreak, tileWidth * length),
     );
-  }
-
-  bool _isNecessaryLineBreak(DateTime date) {
-    return !state.dateRange.inRange(date.date());
-  }
-
-  int _offsetForStartPositionAtLine(DateTime begin) {
-    return _isNecessaryLineBreak(begin)
-        ? 0
-        : daysBetween(state.dateRange.begin.date(), begin.date());
   }
 
   DateTime _buildDate(Weekday weekday) {
