@@ -14,12 +14,10 @@ import 'package:pilll/entity/setting.codegen.dart';
 import 'package:pilll/util/formatter/date_time_formatter.dart';
 
 class MenstruationEditPage extends HookConsumerWidget {
-  final Setting setting;
   final Menstruation? menstruation;
   final Function(Menstruation) onSaved;
   final VoidCallback onDeleted;
   MenstruationEditPage({
-    required this.setting,
     required this.menstruation,
     required this.onSaved,
     required this.onDeleted,
@@ -94,7 +92,7 @@ class MenstruationEditPage extends HookConsumerWidget {
                               MonthCalendar(
                                 dateForMonth: dateForMonth,
                                 store: store,
-                                setting: setting,
+                                setting: state.setting,
                               )
                             ];
                           })
@@ -112,17 +110,14 @@ class MenstruationEditPage extends HookConsumerWidget {
   }
 }
 
-// TODO: Integrate
 void showMenstruationEditPage(
   BuildContext context, {
-  required Setting setting,
   required Menstruation? menstruation,
 }) {
   analytics.setCurrentScreen(screenName: "MenstruationEditPage");
   showModalBottomSheet(
     context: context,
     builder: (context) => MenstruationEditPage(
-      setting: setting,
       menstruation: menstruation,
       onSaved: (savedMenstruation) {
         Navigator.of(context).pop();
