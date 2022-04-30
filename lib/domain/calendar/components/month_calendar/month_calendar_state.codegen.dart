@@ -18,16 +18,12 @@ final monthCalendarStateProvider =
   final menstruations =
       ref.watch(menstruationsStreamForMonthProvider(dateForMonth));
 
-  if (diaries is AsyncLoading || menstruations is AsyncLoading) {
-    return const AsyncValue.loading();
-  }
-
   try {
     return AsyncValue.data(
       MonthCalendarState(
         dateForMonth: dateForMonth,
-        diaries: diaries.value!,
-        menstruations: menstruations.value!,
+        diaries: diaries.asData?.value ?? [],
+        menstruations: menstruations.asData?.value ?? [],
       ),
     );
   } catch (error, _) {
