@@ -512,7 +512,7 @@ void main() {
         beforePillSheetGroup: pillSheetGroup,
         afterPillSheetGroup: updatedPillSheetGroup,
         beforeActivedPillSheet: middle,
-        afterActivedPillSheet: updatedLeft,
+        afterActivedPillSheet: updatedRight,
         appearanceMode: PillSheetAppearanceMode.number,
       );
 
