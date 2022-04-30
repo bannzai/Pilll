@@ -9,7 +9,6 @@ import 'package:pilll/entity/pill_sheet_type.dart';
 import 'package:pilll/database/pill_sheet.dart';
 import 'package:pilll/database/pill_sheet_group.dart';
 import 'package:pilll/database/pill_sheet_modified_history.dart';
-import 'package:pilll/entity/setting.codegen.dart';
 import 'package:pilll/util/datetime/day.dart';
 import 'package:riverpod/riverpod.dart';
 
@@ -62,7 +61,6 @@ class SettingTodayPillNumberStateStore
   Future<void> modifiyTodayPillNumber({
     required PillSheetGroup pillSheetGroup,
     required PillSheet activedPillSheet,
-    required PillSheetAppearanceMode appearanceMode,
   }) async {
     final batch = _batchFactory.batch();
 
@@ -113,21 +111,17 @@ class SettingTodayPillNumberStateStore
 
     _pillSheetDatastore.update(batch, updatedPillSheets);
 
-    final updatedPillSheetGroup = pillSheetGroup.copyWith(
-        pillSheets: updatedPillSheets, displayNumberSetting: null);
-    _pillSheetGroupDatastore.updateWithBatch(batch, updatedPillSheetGroup);
-
     final history = PillSheetModifiedHistoryServiceActionFactory
         .createChangedPillNumberAction(
       pillSheetGroupID: pillSheetGroup.id,
-      beforeActivedPillSheet: activedPillSheet,
-      afterActivedPillSheet:
-          updatedPillSheets[state.selectedPillSheetPageIndex],
-      beforePillSheetGroup: pillSheetGroup,
-      afterPillSheetGroup: updatedPillSheetGroup,
-      appearanceMode: appearanceMode,
+      before: activedPillSheet,
+      after: updatedPillSheets[state.selectedPillSheetPageIndex],
     );
     _pillSheetModifiedHistoryDatastore.add(batch, history);
+
+    _pillSheetGroupDatastore.updateWithBatch(
+        batch, pillSheetGroup.copyWith(pillSheets: updatedPillSheets));
+
     await batch.commit();
   }
 }

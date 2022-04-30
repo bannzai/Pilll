@@ -1335,8 +1335,7 @@ class _$TakenPillValueTearOff {
       required int beforeLastTakenPillNumber,
       required int afterLastTakenPillNumber,
       bool? isQuickRecord,
-      TakenPillEditedValue? edited,
-      required PillSheetAppearanceMode? pillSheetAppearanceMode}) {
+      TakenPillEditedValue? edited}) {
     return _TakenPillValue(
       beforeLastTakenDate: beforeLastTakenDate,
       afterLastTakenDate: afterLastTakenDate,
@@ -1344,7 +1343,6 @@ class _$TakenPillValueTearOff {
       afterLastTakenPillNumber: afterLastTakenPillNumber,
       isQuickRecord: isQuickRecord,
       edited: edited,
-      pillSheetAppearanceMode: pillSheetAppearanceMode,
     );
   }
 
@@ -1371,8 +1369,6 @@ mixin _$TakenPillValue {
       throw _privateConstructorUsedError; // null => 途中から追加したプロパティなので、どちらか不明
   bool? get isQuickRecord => throw _privateConstructorUsedError;
   TakenPillEditedValue? get edited => throw _privateConstructorUsedError;
-  PillSheetAppearanceMode? get pillSheetAppearanceMode =>
-      throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
@@ -1393,8 +1389,7 @@ abstract class $TakenPillValueCopyWith<$Res> {
       int beforeLastTakenPillNumber,
       int afterLastTakenPillNumber,
       bool? isQuickRecord,
-      TakenPillEditedValue? edited,
-      PillSheetAppearanceMode? pillSheetAppearanceMode});
+      TakenPillEditedValue? edited});
 
   $TakenPillEditedValueCopyWith<$Res>? get edited;
 }
@@ -1416,7 +1411,6 @@ class _$TakenPillValueCopyWithImpl<$Res>
     Object? afterLastTakenPillNumber = freezed,
     Object? isQuickRecord = freezed,
     Object? edited = freezed,
-    Object? pillSheetAppearanceMode = freezed,
   }) {
     return _then(_value.copyWith(
       beforeLastTakenDate: beforeLastTakenDate == freezed
@@ -1443,10 +1437,6 @@ class _$TakenPillValueCopyWithImpl<$Res>
           ? _value.edited
           : edited // ignore: cast_nullable_to_non_nullable
               as TakenPillEditedValue?,
-      pillSheetAppearanceMode: pillSheetAppearanceMode == freezed
-          ? _value.pillSheetAppearanceMode
-          : pillSheetAppearanceMode // ignore: cast_nullable_to_non_nullable
-              as PillSheetAppearanceMode?,
     ));
   }
 
@@ -1477,8 +1467,7 @@ abstract class _$TakenPillValueCopyWith<$Res>
       int beforeLastTakenPillNumber,
       int afterLastTakenPillNumber,
       bool? isQuickRecord,
-      TakenPillEditedValue? edited,
-      PillSheetAppearanceMode? pillSheetAppearanceMode});
+      TakenPillEditedValue? edited});
 
   @override
   $TakenPillEditedValueCopyWith<$Res>? get edited;
@@ -1503,7 +1492,6 @@ class __$TakenPillValueCopyWithImpl<$Res>
     Object? afterLastTakenPillNumber = freezed,
     Object? isQuickRecord = freezed,
     Object? edited = freezed,
-    Object? pillSheetAppearanceMode = freezed,
   }) {
     return _then(_TakenPillValue(
       beforeLastTakenDate: beforeLastTakenDate == freezed
@@ -1530,10 +1518,6 @@ class __$TakenPillValueCopyWithImpl<$Res>
           ? _value.edited
           : edited // ignore: cast_nullable_to_non_nullable
               as TakenPillEditedValue?,
-      pillSheetAppearanceMode: pillSheetAppearanceMode == freezed
-          ? _value.pillSheetAppearanceMode
-          : pillSheetAppearanceMode // ignore: cast_nullable_to_non_nullable
-              as PillSheetAppearanceMode?,
     ));
   }
 }
@@ -1550,8 +1534,7 @@ class _$_TakenPillValue extends _TakenPillValue {
       required this.beforeLastTakenPillNumber,
       required this.afterLastTakenPillNumber,
       this.isQuickRecord,
-      this.edited,
-      required this.pillSheetAppearanceMode})
+      this.edited})
       : super._();
 
   factory _$_TakenPillValue.fromJson(Map<String, dynamic> json) =>
@@ -1575,12 +1558,10 @@ class _$_TakenPillValue extends _TakenPillValue {
   final bool? isQuickRecord;
   @override
   final TakenPillEditedValue? edited;
-  @override
-  final PillSheetAppearanceMode? pillSheetAppearanceMode;
 
   @override
   String toString() {
-    return 'TakenPillValue(beforeLastTakenDate: $beforeLastTakenDate, afterLastTakenDate: $afterLastTakenDate, beforeLastTakenPillNumber: $beforeLastTakenPillNumber, afterLastTakenPillNumber: $afterLastTakenPillNumber, isQuickRecord: $isQuickRecord, edited: $edited, pillSheetAppearanceMode: $pillSheetAppearanceMode)';
+    return 'TakenPillValue(beforeLastTakenDate: $beforeLastTakenDate, afterLastTakenDate: $afterLastTakenDate, beforeLastTakenPillNumber: $beforeLastTakenPillNumber, afterLastTakenPillNumber: $afterLastTakenPillNumber, isQuickRecord: $isQuickRecord, edited: $edited)';
   }
 
   @override
@@ -1598,9 +1579,7 @@ class _$_TakenPillValue extends _TakenPillValue {
                 other.afterLastTakenPillNumber, afterLastTakenPillNumber) &&
             const DeepCollectionEquality()
                 .equals(other.isQuickRecord, isQuickRecord) &&
-            const DeepCollectionEquality().equals(other.edited, edited) &&
-            const DeepCollectionEquality().equals(
-                other.pillSheetAppearanceMode, pillSheetAppearanceMode));
+            const DeepCollectionEquality().equals(other.edited, edited));
   }
 
   @override
@@ -1611,8 +1590,7 @@ class _$_TakenPillValue extends _TakenPillValue {
       const DeepCollectionEquality().hash(beforeLastTakenPillNumber),
       const DeepCollectionEquality().hash(afterLastTakenPillNumber),
       const DeepCollectionEquality().hash(isQuickRecord),
-      const DeepCollectionEquality().hash(edited),
-      const DeepCollectionEquality().hash(pillSheetAppearanceMode));
+      const DeepCollectionEquality().hash(edited));
 
   @JsonKey(ignore: true)
   @override
@@ -1634,8 +1612,7 @@ abstract class _TakenPillValue extends TakenPillValue {
       required int beforeLastTakenPillNumber,
       required int afterLastTakenPillNumber,
       bool? isQuickRecord,
-      TakenPillEditedValue? edited,
-      required PillSheetAppearanceMode? pillSheetAppearanceMode}) = _$_TakenPillValue;
+      TakenPillEditedValue? edited}) = _$_TakenPillValue;
   const _TakenPillValue._() : super._();
 
   factory _TakenPillValue.fromJson(Map<String, dynamic> json) =
@@ -1659,8 +1636,6 @@ abstract class _TakenPillValue extends TakenPillValue {
   bool? get isQuickRecord;
   @override
   TakenPillEditedValue? get edited;
-  @override
-  PillSheetAppearanceMode? get pillSheetAppearanceMode;
   @override
   @JsonKey(ignore: true)
   _$TakenPillValueCopyWith<_TakenPillValue> get copyWith =>
@@ -1931,14 +1906,12 @@ class _$RevertTakenPillValueTearOff {
       @JsonKey(fromJson: NonNullTimestampConverter.timestampToDateTime, toJson: NonNullTimestampConverter.dateTimeToTimestamp)
           required DateTime afterLastTakenDate,
       required int beforeLastTakenPillNumber,
-      required int afterLastTakenPillNumber,
-      required PillSheetAppearanceMode? pillSheetAppearanceMode}) {
+      required int afterLastTakenPillNumber}) {
     return _RevertTakenPillValue(
       beforeLastTakenDate: beforeLastTakenDate,
       afterLastTakenDate: afterLastTakenDate,
       beforeLastTakenPillNumber: beforeLastTakenPillNumber,
       afterLastTakenPillNumber: afterLastTakenPillNumber,
-      pillSheetAppearanceMode: pillSheetAppearanceMode,
     );
   }
 
@@ -1962,8 +1935,6 @@ mixin _$RevertTakenPillValue {
   DateTime get afterLastTakenDate => throw _privateConstructorUsedError;
   int get beforeLastTakenPillNumber => throw _privateConstructorUsedError;
   int get afterLastTakenPillNumber => throw _privateConstructorUsedError;
-  PillSheetAppearanceMode? get pillSheetAppearanceMode =>
-      throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
@@ -1982,8 +1953,7 @@ abstract class $RevertTakenPillValueCopyWith<$Res> {
       @JsonKey(fromJson: NonNullTimestampConverter.timestampToDateTime, toJson: NonNullTimestampConverter.dateTimeToTimestamp)
           DateTime afterLastTakenDate,
       int beforeLastTakenPillNumber,
-      int afterLastTakenPillNumber,
-      PillSheetAppearanceMode? pillSheetAppearanceMode});
+      int afterLastTakenPillNumber});
 }
 
 /// @nodoc
@@ -2001,7 +1971,6 @@ class _$RevertTakenPillValueCopyWithImpl<$Res>
     Object? afterLastTakenDate = freezed,
     Object? beforeLastTakenPillNumber = freezed,
     Object? afterLastTakenPillNumber = freezed,
-    Object? pillSheetAppearanceMode = freezed,
   }) {
     return _then(_value.copyWith(
       beforeLastTakenDate: beforeLastTakenDate == freezed
@@ -2020,10 +1989,6 @@ class _$RevertTakenPillValueCopyWithImpl<$Res>
           ? _value.afterLastTakenPillNumber
           : afterLastTakenPillNumber // ignore: cast_nullable_to_non_nullable
               as int,
-      pillSheetAppearanceMode: pillSheetAppearanceMode == freezed
-          ? _value.pillSheetAppearanceMode
-          : pillSheetAppearanceMode // ignore: cast_nullable_to_non_nullable
-              as PillSheetAppearanceMode?,
     ));
   }
 }
@@ -2041,8 +2006,7 @@ abstract class _$RevertTakenPillValueCopyWith<$Res>
       @JsonKey(fromJson: NonNullTimestampConverter.timestampToDateTime, toJson: NonNullTimestampConverter.dateTimeToTimestamp)
           DateTime afterLastTakenDate,
       int beforeLastTakenPillNumber,
-      int afterLastTakenPillNumber,
-      PillSheetAppearanceMode? pillSheetAppearanceMode});
+      int afterLastTakenPillNumber});
 }
 
 /// @nodoc
@@ -2062,7 +2026,6 @@ class __$RevertTakenPillValueCopyWithImpl<$Res>
     Object? afterLastTakenDate = freezed,
     Object? beforeLastTakenPillNumber = freezed,
     Object? afterLastTakenPillNumber = freezed,
-    Object? pillSheetAppearanceMode = freezed,
   }) {
     return _then(_RevertTakenPillValue(
       beforeLastTakenDate: beforeLastTakenDate == freezed
@@ -2081,10 +2044,6 @@ class __$RevertTakenPillValueCopyWithImpl<$Res>
           ? _value.afterLastTakenPillNumber
           : afterLastTakenPillNumber // ignore: cast_nullable_to_non_nullable
               as int,
-      pillSheetAppearanceMode: pillSheetAppearanceMode == freezed
-          ? _value.pillSheetAppearanceMode
-          : pillSheetAppearanceMode // ignore: cast_nullable_to_non_nullable
-              as PillSheetAppearanceMode?,
     ));
   }
 }
@@ -2099,8 +2058,7 @@ class _$_RevertTakenPillValue extends _RevertTakenPillValue {
       @JsonKey(fromJson: NonNullTimestampConverter.timestampToDateTime, toJson: NonNullTimestampConverter.dateTimeToTimestamp)
           required this.afterLastTakenDate,
       required this.beforeLastTakenPillNumber,
-      required this.afterLastTakenPillNumber,
-      required this.pillSheetAppearanceMode})
+      required this.afterLastTakenPillNumber})
       : super._();
 
   factory _$_RevertTakenPillValue.fromJson(Map<String, dynamic> json) =>
@@ -2120,12 +2078,10 @@ class _$_RevertTakenPillValue extends _RevertTakenPillValue {
   final int beforeLastTakenPillNumber;
   @override
   final int afterLastTakenPillNumber;
-  @override
-  final PillSheetAppearanceMode? pillSheetAppearanceMode;
 
   @override
   String toString() {
-    return 'RevertTakenPillValue(beforeLastTakenDate: $beforeLastTakenDate, afterLastTakenDate: $afterLastTakenDate, beforeLastTakenPillNumber: $beforeLastTakenPillNumber, afterLastTakenPillNumber: $afterLastTakenPillNumber, pillSheetAppearanceMode: $pillSheetAppearanceMode)';
+    return 'RevertTakenPillValue(beforeLastTakenDate: $beforeLastTakenDate, afterLastTakenDate: $afterLastTakenDate, beforeLastTakenPillNumber: $beforeLastTakenPillNumber, afterLastTakenPillNumber: $afterLastTakenPillNumber)';
   }
 
   @override
@@ -2140,9 +2096,7 @@ class _$_RevertTakenPillValue extends _RevertTakenPillValue {
             const DeepCollectionEquality().equals(
                 other.beforeLastTakenPillNumber, beforeLastTakenPillNumber) &&
             const DeepCollectionEquality().equals(
-                other.afterLastTakenPillNumber, afterLastTakenPillNumber) &&
-            const DeepCollectionEquality().equals(
-                other.pillSheetAppearanceMode, pillSheetAppearanceMode));
+                other.afterLastTakenPillNumber, afterLastTakenPillNumber));
   }
 
   @override
@@ -2151,8 +2105,7 @@ class _$_RevertTakenPillValue extends _RevertTakenPillValue {
       const DeepCollectionEquality().hash(beforeLastTakenDate),
       const DeepCollectionEquality().hash(afterLastTakenDate),
       const DeepCollectionEquality().hash(beforeLastTakenPillNumber),
-      const DeepCollectionEquality().hash(afterLastTakenPillNumber),
-      const DeepCollectionEquality().hash(pillSheetAppearanceMode));
+      const DeepCollectionEquality().hash(afterLastTakenPillNumber));
 
   @JsonKey(ignore: true)
   @override
@@ -2173,8 +2126,7 @@ abstract class _RevertTakenPillValue extends RevertTakenPillValue {
       @JsonKey(fromJson: NonNullTimestampConverter.timestampToDateTime, toJson: NonNullTimestampConverter.dateTimeToTimestamp)
           required DateTime afterLastTakenDate,
       required int beforeLastTakenPillNumber,
-      required int afterLastTakenPillNumber,
-      required PillSheetAppearanceMode? pillSheetAppearanceMode}) = _$_RevertTakenPillValue;
+      required int afterLastTakenPillNumber}) = _$_RevertTakenPillValue;
   const _RevertTakenPillValue._() : super._();
 
   factory _RevertTakenPillValue.fromJson(Map<String, dynamic> json) =
@@ -2194,8 +2146,6 @@ abstract class _RevertTakenPillValue extends RevertTakenPillValue {
   int get beforeLastTakenPillNumber;
   @override
   int get afterLastTakenPillNumber;
-  @override
-  PillSheetAppearanceMode? get pillSheetAppearanceMode;
   @override
   @JsonKey(ignore: true)
   _$RevertTakenPillValueCopyWith<_RevertTakenPillValue> get copyWith =>
@@ -2219,8 +2169,7 @@ class _$ChangedPillNumberValueTearOff {
       required int beforeTodayPillNumber,
       required int afterTodayPillNumber,
       int beforeGroupIndex = 1,
-      int afterGroupIndex = 1,
-      required PillSheetAppearanceMode? pillSheetAppearanceMode}) {
+      int afterGroupIndex = 1}) {
     return _ChangedPillNumberValue(
       beforeBeginingDate: beforeBeginingDate,
       afterBeginingDate: afterBeginingDate,
@@ -2228,7 +2177,6 @@ class _$ChangedPillNumberValueTearOff {
       afterTodayPillNumber: afterTodayPillNumber,
       beforeGroupIndex: beforeGroupIndex,
       afterGroupIndex: afterGroupIndex,
-      pillSheetAppearanceMode: pillSheetAppearanceMode,
     );
   }
 
@@ -2254,8 +2202,6 @@ mixin _$ChangedPillNumberValue {
   int get afterTodayPillNumber => throw _privateConstructorUsedError;
   int get beforeGroupIndex => throw _privateConstructorUsedError;
   int get afterGroupIndex => throw _privateConstructorUsedError;
-  PillSheetAppearanceMode? get pillSheetAppearanceMode =>
-      throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
@@ -2276,8 +2222,7 @@ abstract class $ChangedPillNumberValueCopyWith<$Res> {
       int beforeTodayPillNumber,
       int afterTodayPillNumber,
       int beforeGroupIndex,
-      int afterGroupIndex,
-      PillSheetAppearanceMode? pillSheetAppearanceMode});
+      int afterGroupIndex});
 }
 
 /// @nodoc
@@ -2297,7 +2242,6 @@ class _$ChangedPillNumberValueCopyWithImpl<$Res>
     Object? afterTodayPillNumber = freezed,
     Object? beforeGroupIndex = freezed,
     Object? afterGroupIndex = freezed,
-    Object? pillSheetAppearanceMode = freezed,
   }) {
     return _then(_value.copyWith(
       beforeBeginingDate: beforeBeginingDate == freezed
@@ -2324,10 +2268,6 @@ class _$ChangedPillNumberValueCopyWithImpl<$Res>
           ? _value.afterGroupIndex
           : afterGroupIndex // ignore: cast_nullable_to_non_nullable
               as int,
-      pillSheetAppearanceMode: pillSheetAppearanceMode == freezed
-          ? _value.pillSheetAppearanceMode
-          : pillSheetAppearanceMode // ignore: cast_nullable_to_non_nullable
-              as PillSheetAppearanceMode?,
     ));
   }
 }
@@ -2347,8 +2287,7 @@ abstract class _$ChangedPillNumberValueCopyWith<$Res>
       int beforeTodayPillNumber,
       int afterTodayPillNumber,
       int beforeGroupIndex,
-      int afterGroupIndex,
-      PillSheetAppearanceMode? pillSheetAppearanceMode});
+      int afterGroupIndex});
 }
 
 /// @nodoc
@@ -2370,7 +2309,6 @@ class __$ChangedPillNumberValueCopyWithImpl<$Res>
     Object? afterTodayPillNumber = freezed,
     Object? beforeGroupIndex = freezed,
     Object? afterGroupIndex = freezed,
-    Object? pillSheetAppearanceMode = freezed,
   }) {
     return _then(_ChangedPillNumberValue(
       beforeBeginingDate: beforeBeginingDate == freezed
@@ -2397,10 +2335,6 @@ class __$ChangedPillNumberValueCopyWithImpl<$Res>
           ? _value.afterGroupIndex
           : afterGroupIndex // ignore: cast_nullable_to_non_nullable
               as int,
-      pillSheetAppearanceMode: pillSheetAppearanceMode == freezed
-          ? _value.pillSheetAppearanceMode
-          : pillSheetAppearanceMode // ignore: cast_nullable_to_non_nullable
-              as PillSheetAppearanceMode?,
     ));
   }
 }
@@ -2417,8 +2351,7 @@ class _$_ChangedPillNumberValue extends _ChangedPillNumberValue {
       required this.beforeTodayPillNumber,
       required this.afterTodayPillNumber,
       this.beforeGroupIndex = 1,
-      this.afterGroupIndex = 1,
-      required this.pillSheetAppearanceMode})
+      this.afterGroupIndex = 1})
       : super._();
 
   factory _$_ChangedPillNumberValue.fromJson(Map<String, dynamic> json) =>
@@ -2444,12 +2377,10 @@ class _$_ChangedPillNumberValue extends _ChangedPillNumberValue {
   @JsonKey()
   @override
   final int afterGroupIndex;
-  @override
-  final PillSheetAppearanceMode? pillSheetAppearanceMode;
 
   @override
   String toString() {
-    return 'ChangedPillNumberValue(beforeBeginingDate: $beforeBeginingDate, afterBeginingDate: $afterBeginingDate, beforeTodayPillNumber: $beforeTodayPillNumber, afterTodayPillNumber: $afterTodayPillNumber, beforeGroupIndex: $beforeGroupIndex, afterGroupIndex: $afterGroupIndex, pillSheetAppearanceMode: $pillSheetAppearanceMode)';
+    return 'ChangedPillNumberValue(beforeBeginingDate: $beforeBeginingDate, afterBeginingDate: $afterBeginingDate, beforeTodayPillNumber: $beforeTodayPillNumber, afterTodayPillNumber: $afterTodayPillNumber, beforeGroupIndex: $beforeGroupIndex, afterGroupIndex: $afterGroupIndex)';
   }
 
   @override
@@ -2468,9 +2399,7 @@ class _$_ChangedPillNumberValue extends _ChangedPillNumberValue {
             const DeepCollectionEquality()
                 .equals(other.beforeGroupIndex, beforeGroupIndex) &&
             const DeepCollectionEquality()
-                .equals(other.afterGroupIndex, afterGroupIndex) &&
-            const DeepCollectionEquality().equals(
-                other.pillSheetAppearanceMode, pillSheetAppearanceMode));
+                .equals(other.afterGroupIndex, afterGroupIndex));
   }
 
   @override
@@ -2481,8 +2410,7 @@ class _$_ChangedPillNumberValue extends _ChangedPillNumberValue {
       const DeepCollectionEquality().hash(beforeTodayPillNumber),
       const DeepCollectionEquality().hash(afterTodayPillNumber),
       const DeepCollectionEquality().hash(beforeGroupIndex),
-      const DeepCollectionEquality().hash(afterGroupIndex),
-      const DeepCollectionEquality().hash(pillSheetAppearanceMode));
+      const DeepCollectionEquality().hash(afterGroupIndex));
 
   @JsonKey(ignore: true)
   @override
@@ -2505,8 +2433,7 @@ abstract class _ChangedPillNumberValue extends ChangedPillNumberValue {
       required int beforeTodayPillNumber,
       required int afterTodayPillNumber,
       int beforeGroupIndex,
-      int afterGroupIndex,
-      required PillSheetAppearanceMode? pillSheetAppearanceMode}) = _$_ChangedPillNumberValue;
+      int afterGroupIndex}) = _$_ChangedPillNumberValue;
   const _ChangedPillNumberValue._() : super._();
 
   factory _ChangedPillNumberValue.fromJson(Map<String, dynamic> json) =
@@ -2530,8 +2457,6 @@ abstract class _ChangedPillNumberValue extends ChangedPillNumberValue {
   int get beforeGroupIndex;
   @override
   int get afterGroupIndex;
-  @override
-  PillSheetAppearanceMode? get pillSheetAppearanceMode;
   @override
   @JsonKey(ignore: true)
   _$ChangedPillNumberValueCopyWith<_ChangedPillNumberValue> get copyWith =>
