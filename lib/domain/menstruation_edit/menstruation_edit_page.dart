@@ -2,27 +2,26 @@ import 'package:flutter/material.dart';
 import 'package:flutter_hooks/flutter_hooks.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
 import 'package:pilll/analytics.dart';
-import 'package:pilll/components/atoms/buttons.dart';
 import 'package:pilll/components/atoms/color.dart';
 import 'package:pilll/components/atoms/font.dart';
 import 'package:pilll/components/atoms/text_color.dart';
-import 'package:pilll/components/page/discard_dialog.dart';
-import 'package:pilll/domain/calendar/components/month/month_calendar.dart';
 import 'package:pilll/domain/menstruation_edit/components/calendar/calendar_date_header.dart';
-import 'package:pilll/components/organisms/calendar/weekly/weekly_calendar.dart';
-import 'package:pilll/domain/menstruation_edit/components/calendar/weekly_calendar_state.dart';
+import 'package:pilll/domain/menstruation_edit/components/calendar/month_calendar.dart';
 import 'package:pilll/domain/menstruation_edit/components/header/menstruation_edit_page_header.dart';
 import 'package:pilll/entity/menstruation.codegen.dart';
 import 'package:pilll/domain/menstruation_edit/menstruation_edit_page_store.dart';
+import 'package:pilll/entity/setting.codegen.dart';
 import 'package:pilll/util/formatter/date_time_formatter.dart';
 
 class MenstruationEditPage extends HookConsumerWidget {
   final String title;
+  final Setting setting;
   final Menstruation? menstruation;
   final Function(Menstruation) onSaved;
   final VoidCallback onDeleted;
   MenstruationEditPage({
     required this.title,
+    required this.setting,
     required this.menstruation,
     required this.onSaved,
     required this.onDeleted,
@@ -95,26 +94,10 @@ class MenstruationEditPage extends HookConsumerWidget {
                             return [
                               CalendarDateHeader(date: dateForMonth),
                               MonthCalendar(
-                                state: MenstruationEditCalendarState(
-                                    dateForMonth, state.menstruation),
-                                weekCalendarBuilder:
-                                    (context, weeklyCalendarState) {
-                                  return CalendarWeekdayLine(
-                                    state: MenstruationEditWeeklyCalendarState(
-                                      weeklyCalendarState,
-                                      dateForMonth,
-                                      state.menstruation,
-                                    ),
-                                    horizontalPadding: 0,
-                                    onTap: (weeklyCalendarState, date) {
-                                      analytics.logEvent(
-                                          name:
-                                              "selected_day_tile_on_menstruation_edit");
-                                      store.tappedDate(date);
-                                    },
-                                  );
-                                },
-                              ),
+                                dateForMonth: dateForMonth,
+                                store: store,
+                                setting: setting,
+                              )
                             ];
                           })
                           .expand((element) => element)
@@ -134,6 +117,7 @@ class MenstruationEditPage extends HookConsumerWidget {
 // TODO: Integrate
 void showMenstruationEditPage(
   BuildContext context, {
+  required Setting setting,
   required Menstruation? menstruation,
 }) {
   analytics.setCurrentScreen(screenName: "MenstruationEditPage");
@@ -141,6 +125,7 @@ void showMenstruationEditPage(
     context: context,
     builder: (context) => MenstruationEditPage(
       title: "生理期間の編集",
+      setting: setting,
       menstruation: menstruation,
       onSaved: (menstruation) {
         Navigator.of(context).pop();
@@ -167,13 +152,15 @@ void showMenstruationEditPage(
 }
 
 void showMenstruationEditPageForCreate(
-  BuildContext context,
-) {
+  BuildContext context, {
+  required Setting setting,
+}) {
   analytics.setCurrentScreen(screenName: "MenstruationEditPage");
   showModalBottomSheet(
     context: context,
     builder: (context) => MenstruationEditPage(
       title: "生理開始日を選択",
+      setting: setting,
       menstruation: null,
       onSaved: (menstruation) {
         Navigator.of(context).pop();

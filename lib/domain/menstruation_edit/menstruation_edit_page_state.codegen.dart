@@ -2,6 +2,7 @@ import 'package:freezed_annotation/freezed_annotation.dart';
 import 'package:pilll/domain/menstruation/menstruation_state.codegen.dart';
 import 'package:pilll/domain/menstruation_edit/menstruation_edit_page.dart';
 import 'package:pilll/entity/menstruation.codegen.dart';
+import 'package:pilll/entity/setting.codegen.dart';
 import 'package:pilll/provider/premium_and_trial.codegen.dart';
 import 'package:pilll/util/datetime/day.dart';
 import 'package:riverpod/riverpod.dart';

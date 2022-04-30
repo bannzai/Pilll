@@ -1,9 +1,12 @@
 import 'package:hooks_riverpod/hooks_riverpod.dart';
+import 'package:pilll/analytics.dart';
 import 'package:pilll/components/molecules/indicator.dart';
 import 'package:pilll/components/organisms/calendar/weekly/weekly_calendar.dart';
 import 'package:pilll/components/organisms/calendar/weekly/weekly_calendar_state.dart';
 import 'package:pilll/domain/calendar/components/month/month_calendar_state.codegen.dart';
+import 'package:pilll/domain/menstruation_edit/menstruation_edit_page_store.dart';
 import 'package:pilll/domain/record/weekday_badge.dart';
+import 'package:pilll/entity/setting.codegen.dart';
 import 'package:pilll/entity/weekday.dart';
 import 'package:flutter/material.dart';
 
@@ -14,13 +17,14 @@ abstract class CalendarConstants {
 
 class MonthCalendar extends HookConsumerWidget {
   final DateTime dateForMonth;
-  final Widget Function(BuildContext, MonthCalendarState, WeekCalendarState)
-      weekCalendarBuilder;
+  final MenstruationEditPageStore store;
+  final Setting setting;
 
   const MonthCalendar({
     Key? key,
     required this.dateForMonth,
-    required this.weekCalendarBuilder,
+    required this.store,
+    required this.setting,
   }) : super(key: key);
 
   @override
@@ -75,13 +79,14 @@ class MonthCalendar extends HookConsumerWidget {
     required WeekCalendarState weekCalendarState,
   }) {
     return CalendarWeekdayLine(
-      state: weekCalendarState,
-      calendarMenstruationBandModels: state.calendar,
-      calendarScheduledMenstruationBandModels:
-          calendarScheduledMenstruationBandModels,
-      calendarNextPillSheetBandModels: calendarNextPillSheetBandModels,
-      horizontalPadding: horizontalPadding,
-      onTap: onTap,
-    );
+        state: weekCalendarState,
+        calendarMenstruationBandModels: [],
+        calendarScheduledMenstruationBandModels: [],
+        calendarNextPillSheetBandModels: [],
+        horizontalPadding: 0,
+        onTap: (weekCalendarState, date) {
+          analytics.logEvent(name: "selected_day_tile_on_menstruation_edit");
+          store.tappedDate(date, setting);
+        });
   }
 }
