@@ -1,10 +1,9 @@
-import 'package:pilll/components/organisms/calendar/band/calendar_band.dart';
 import 'package:pilll/components/organisms/calendar/band/calendar_band_model.dart';
+import 'package:pilll/components/organisms/calendar/band/calendar_next_pill_sheet_band.dart';
 import 'package:pilll/domain/calendar/components/month_calendar/month_calendar.dart';
 import 'package:pilll/components/organisms/calendar/weekly/weekly_calendar.dart';
-import 'package:pilll/domain/calendar/calendar_card_state.dart';
+import 'package:pilll/domain/calendar/components/month_calendar/month_calendar_state.codegen.dart';
 import 'package:pilll/domain/calendar/date_range.dart';
-import 'package:pilll/domain/calendar/week_calendar_state.dart';
 import 'package:pilll/entity/diary.codegen.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_test/flutter_test.dart';
@@ -38,19 +37,30 @@ void main() {
 
       await tester.pumpWidget(
         ProviderScope(
+          overrides: [
+            monthCalendarStateProvider.overrideWithProvider(
+              (argument) => Provider(
+                (_) => AsyncValue.data(
+                  MonthCalendarState(
+                    dateForMonth: argument,
+                    diaries: diaries,
+                    menstruations: [],
+                  ),
+                ),
+              ),
+            ),
+          ],
           child: MaterialApp(
             home: MonthCalendar(
-              monthCalendarState: CalendarCardState(now),
-              weekCalendarBuilder: (context, weeklyDateRange) {
+              dateForMonth: DateTime(2020, 09, 1),
+              weekCalendarBuilder: (context, monthState, weekState) {
                 return CalendarWeekdayLine(
-                  state: CalendarTabWeeklyCalendarState(
-                    dateRange: weeklyDateRange,
-                    diariesForMonth: diaries,
-                    allBandModels: [model],
-                    targetDateOfMonth: now,
-                  ),
+                  state: weekState,
+                  calendarMenstruationBandModels: [],
+                  calendarScheduledMenstruationBandModels: [],
+                  calendarNextPillSheetBandModels: [model],
                   horizontalPadding: 0,
-                  onTap: (weeklyCalendarState, date) {},
+                  onTap: (_, __) => {},
                 );
               },
             ),
@@ -60,11 +70,12 @@ void main() {
       await tester.pump();
 
       expect(find.text("新しいシート開始 ▶︎"), findsOneWidget);
-      expect(find.byType(CalendarBand), findsOneWidget);
+      expect(find.byType(CalendarNextPillSheetBand), findsOneWidget);
       expect(
-          find.byWidgetPredicate((widget) => (widget is CalendarBand &&
-              DateRange.isSameDay(widget.model.begin, model.begin) &&
-              DateRange.isSameDay(widget.model.end, model.end))),
+          find.byWidgetPredicate((widget) =>
+              (widget is CalendarNextPillSheetBand &&
+                  DateRange.isSameDay(widget.begin, model.begin) &&
+                  DateRange.isSameDay(widget.end, model.end))),
           findsOneWidget);
     });
     testWidgets('when showing 新しいシート開始 ▶︎ with linebreak',
@@ -87,19 +98,30 @@ void main() {
 
       await tester.pumpWidget(
         ProviderScope(
+          overrides: [
+            monthCalendarStateProvider.overrideWithProvider(
+              (argument) => Provider(
+                (_) => AsyncValue.data(
+                  MonthCalendarState(
+                    dateForMonth: argument,
+                    diaries: diaries,
+                    menstruations: [],
+                  ),
+                ),
+              ),
+            ),
+          ],
           child: MaterialApp(
             home: MonthCalendar(
-              monthCalendarState: CalendarCardState(now),
-              weekCalendarBuilder: (context, weeklyDateRange) {
+              dateForMonth: DateTime(2020, 09, 1),
+              weekCalendarBuilder: (context, monthState, weekState) {
                 return CalendarWeekdayLine(
-                  state: CalendarTabWeeklyCalendarState(
-                    dateRange: weeklyDateRange,
-                    diariesForMonth: diaries,
-                    allBandModels: [model],
-                    targetDateOfMonth: now,
-                  ),
+                  state: weekState,
+                  calendarMenstruationBandModels: [],
+                  calendarScheduledMenstruationBandModels: [],
+                  calendarNextPillSheetBandModels: [model],
                   horizontalPadding: 0,
-                  onTap: (weeklyCalendarState, date) {},
+                  onTap: (_, __) => {},
                 );
               },
             ),
@@ -109,35 +131,45 @@ void main() {
       await tester.pump();
 
       expect(find.text("新しいシート開始 ▶︎"), findsOneWidget);
-      expect(find.byType(CalendarBand), findsNWidgets(2));
+      expect(find.byType(CalendarNextPillSheetBand), findsOneWidget);
       expect(
-          find.byWidgetPredicate((widget) => (widget is CalendarBand &&
-              DateRange.isSameDay(widget.model.begin, model.begin) &&
-              DateRange.isSameDay(widget.model.end, model.end))),
+          find.byWidgetPredicate((widget) =>
+              (widget is CalendarNextPillSheetBand &&
+                  DateRange.isSameDay(widget.begin, model.begin) &&
+                  DateRange.isSameDay(widget.end, model.end))),
           findsNWidgets(2));
     });
     testWidgets('when showing new sheet label to next month',
         (WidgetTester tester) async {
-      var now = DateTime(2020, 09, 14);
+      final model = CalendarNextPillSheetBandModel(
+          DateTime(2020, 10, 15), DateTime(2020, 10, 18));
 
       await tester.pumpWidget(
         ProviderScope(
+          overrides: [
+            monthCalendarStateProvider.overrideWithProvider(
+              (argument) => Provider(
+                (_) => AsyncValue.data(
+                  MonthCalendarState(
+                    dateForMonth: argument,
+                    diaries: [],
+                    menstruations: [],
+                  ),
+                ),
+              ),
+            ),
+          ],
           child: MaterialApp(
             home: MonthCalendar(
-              monthCalendarState: CalendarCardState(now),
-              weekCalendarBuilder: (context, weeklyDateRange) {
+              dateForMonth: DateTime(2020, 09, 1),
+              weekCalendarBuilder: (context, monthState, weekState) {
                 return CalendarWeekdayLine(
-                  state: CalendarTabWeeklyCalendarState(
-                    dateRange: weeklyDateRange,
-                    diariesForMonth: [],
-                    allBandModels: [
-                      CalendarNextPillSheetBandModel(
-                          DateTime(2020, 10, 15), DateTime(2020, 10, 18)),
-                    ],
-                    targetDateOfMonth: now,
-                  ),
+                  state: weekState,
+                  calendarMenstruationBandModels: [],
+                  calendarScheduledMenstruationBandModels: [],
+                  calendarNextPillSheetBandModels: [model],
                   horizontalPadding: 0,
-                  onTap: (weeklyCalendarState, date) {},
+                  onTap: (_, __) => {},
                 );
               },
             ),
@@ -145,30 +177,39 @@ void main() {
         ),
       );
       expect(find.text("新しいシート開始 ▶︎"), isNot(findsWidgets));
-      expect(find.byType(CalendarBand), isNot(findsWidgets));
+      expect(find.byType(CalendarNextPillSheetBand), isNot(findsWidgets));
     });
     testWidgets('when showing new sheet label to before month',
         (WidgetTester tester) async {
-      var now = DateTime(2020, 09, 14);
+      final model = CalendarNextPillSheetBandModel(
+          DateTime(2020, 10, 15), DateTime(2020, 10, 18));
 
       await tester.pumpWidget(
         ProviderScope(
+          overrides: [
+            monthCalendarStateProvider.overrideWithProvider(
+              (argument) => Provider(
+                (_) => AsyncValue.data(
+                  MonthCalendarState(
+                    dateForMonth: argument,
+                    diaries: [],
+                    menstruations: [],
+                  ),
+                ),
+              ),
+            ),
+          ],
           child: MaterialApp(
             home: MonthCalendar(
-              monthCalendarState: CalendarCardState(now),
-              weekCalendarBuilder: (context, weeklyDateRange) {
+              dateForMonth: DateTime(2020, 09, 1),
+              weekCalendarBuilder: (context, monthState, weekState) {
                 return CalendarWeekdayLine(
-                  state: CalendarTabWeeklyCalendarState(
-                    dateRange: weeklyDateRange,
-                    diariesForMonth: [],
-                    allBandModels: [
-                      CalendarNextPillSheetBandModel(
-                          DateTime(2020, 10, 15), DateTime(2020, 10, 18)),
-                    ],
-                    targetDateOfMonth: now,
-                  ),
+                  state: weekState,
+                  calendarMenstruationBandModels: [],
+                  calendarScheduledMenstruationBandModels: [],
+                  calendarNextPillSheetBandModels: [model],
                   horizontalPadding: 0,
-                  onTap: (weeklyCalendarState, date) {},
+                  onTap: (_, __) => {},
                 );
               },
             ),
@@ -176,7 +217,7 @@ void main() {
         ),
       );
       expect(find.text("新しいシート開始 ▶︎"), isNot(findsWidgets));
-      expect(find.byType(CalendarBand), isNot(findsWidgets));
+      expect(find.byType(CalendarNextPillSheetBand), isNot(findsWidgets));
     });
   });
 }
