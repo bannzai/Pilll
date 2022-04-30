@@ -1,4 +1,5 @@
 import 'package:flutter_test/flutter_test.dart';
+import 'package:hooks_riverpod/hooks_riverpod.dart';
 import 'package:mockito/mockito.dart';
 import 'package:pilll/domain/menstruation/menstruation_card_state.codegen.dart';
 import 'package:pilll/domain/menstruation/menstruation_state.codegen.dart';
@@ -8,6 +9,7 @@ import 'package:pilll/entity/pill_sheet_group.codegen.dart';
 import 'package:pilll/entity/pill_sheet_type.dart';
 import 'package:pilll/entity/setting.codegen.dart';
 import 'package:pilll/entity/user.codegen.dart';
+import 'package:pilll/provider/premium_and_trial.codegen.dart';
 import 'package:pilll/service/day.dart';
 import 'package:pilll/domain/menstruation/menstruation_store.dart';
 import 'package:pilll/util/datetime/day.dart';
@@ -66,75 +68,40 @@ void main() {
           todayRepository = originalTodayRepository;
         });
 
-        final menstruationDatastore = MockMenstruationDatastore();
-        when(menstruationDatastore.fetchAll()).thenAnswer(
-          (realInvocation) => Future.value([
-            Menstruation(
-              beginDate: DateTime(2021, 04, 28),
-              endDate: DateTime(2021, 04, 30),
-              createdAt: DateTime(2021, 04, 28),
-            ),
-            Menstruation(
-              beginDate: DateTime(2021, 03, 28),
-              endDate: DateTime(2021, 03, 30),
-              createdAt: DateTime(2021, 03, 28),
-            ),
-          ]),
-        );
-        when(menstruationDatastore.streamAll()).thenAnswer(
-          (realInvocation) => Stream.value([
-            Menstruation(
-              beginDate: DateTime(2021, 04, 28),
-              endDate: DateTime(2021, 04, 30),
-              createdAt: DateTime(2021, 04, 28),
-            ),
-            Menstruation(
-              beginDate: DateTime(2021, 03, 28),
-              endDate: DateTime(2021, 03, 30),
-              createdAt: DateTime(2021, 03, 28),
-            ),
-          ]),
-        );
-        final pillSheetDatastore = MockPillSheetDatastore();
-        final diaryDatastore = MockDiaryDatastore();
-        when(diaryDatastore.fetchListAround90Days(today))
-            .thenAnswer((realInvocation) => Future.value([]));
-        when(diaryDatastore.stream())
-            .thenAnswer((realInvocation) => const Stream.empty());
-        final settingDatastore = MockSettingDatastore();
-        when(settingDatastore.fetch())
-            .thenAnswer((realInvocation) => Future.value(
-                  const Setting(
-                    pillSheetTypes: [PillSheetType.pillsheet_21],
-                    pillNumberForFromMenstruation: 22,
-                    durationMenstruation: 3,
-                    reminderTimes: [],
-                    isOnReminder: true,
-                  ),
-                ));
-        when(settingDatastore.stream())
-            .thenAnswer((realInvocation) => const Stream.empty());
-        final userDatastore = MockUserDatastore();
-        when(userDatastore.fetch())
-            .thenAnswer((reaInvocation) => Future.value(_FakeUser()));
-        when(userDatastore.stream())
-            .thenAnswer((realInvocation) => const Stream.empty());
-        final pillSheetGroup =
-            PillSheetGroup(pillSheetIDs: [], pillSheets: [], createdAt: now());
-
-        final pillSheetGroupDatastore = MockPillSheetGroupDatastore();
-        when(pillSheetGroupDatastore.fetchLatest())
-            .thenAnswer((realInvocation) => Future.value(pillSheetGroup));
-        when(pillSheetGroupDatastore.latestPillSheetGroupStream())
-            .thenAnswer((realInvocation) => const Stream.empty());
-
         final store = MenstruationStore(
-          menstruationDatastore: menstruationDatastore,
-          diaryDatastore: diaryDatastore,
-          settingDatastore: settingDatastore,
-          pillSheetDatastore: pillSheetDatastore,
-          userDatastore: userDatastore,
-          pillSheetGroupDatastore: pillSheetGroupDatastore,
+          asyncAction: MockMenstruationPageAsyncAction(),
+          initialState: AsyncValue.data(
+            MenstruationState(
+              currentCalendarPageIndex: todayCalendarPageIndex,
+              todayCalendarPageIndex: todayCalendarPageIndex,
+              diariesForAround90Days: [],
+              menstruations: [
+                Menstruation(
+                  beginDate: DateTime(2021, 04, 28),
+                  endDate: DateTime(2021, 04, 30),
+                  createdAt: DateTime(2021, 04, 28),
+                ),
+                Menstruation(
+                  beginDate: DateTime(2021, 03, 28),
+                  endDate: DateTime(2021, 03, 30),
+                  createdAt: DateTime(2021, 03, 28),
+                ),
+              ],
+              premiumAndTrial: MockPremiumAndTrial(),
+              setting: const Setting(
+                pillSheetTypes: [PillSheetType.pillsheet_21],
+                pillNumberForFromMenstruation: 22,
+                durationMenstruation: 3,
+                reminderTimes: [],
+                isOnReminder: true,
+              ),
+              latestPillSheetGroup: PillSheetGroup(
+                  pillSheetIDs: [], pillSheets: [], createdAt: now()),
+              calendarMenstruationBandModels: [],
+              calendarScheduledMenstruationBandModels: [],
+              calendarNextPillSheetBandModels: [],
+            ),
+          ),
         );
 
         await waitForResetStoreState();
