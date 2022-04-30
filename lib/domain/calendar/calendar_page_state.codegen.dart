@@ -36,9 +36,6 @@ final calendarPageStateProvider =
 
   final currentCalendarPageIndex =
       ref.watch(calendarPageIndexStateNotifierProvider);
-  final monthCalendar = ref.watch(
-      monthCalendarStateProvider(calendarDataSource[currentCalendarPageIndex]));
-
   final todayMonthCalendar = ref.watch(
       monthCalendarStateProvider(calendarDataSource[todayCalendarPageIndex]));
 
@@ -47,7 +44,6 @@ final calendarPageStateProvider =
       calendarMenstruationBandModels is AsyncLoading ||
       calendarScheduledMenstruationBandModels is AsyncLoading ||
       calendarNextPillSheetBandModels is AsyncLoading ||
-      monthCalendar is AsyncLoading ||
       todayMonthCalendar is AsyncLoading) {
     return const AsyncValue.loading();
   }
@@ -55,7 +51,7 @@ final calendarPageStateProvider =
   try {
     return AsyncValue.data(CalendarPageState(
       currentCalendarIndex: currentCalendarPageIndex,
-      currentMonthCalendar: monthCalendar.value!,
+      displayMonth: calendarDataSource[currentCalendarPageIndex],
       todayMonthCalendar: todayMonthCalendar.value!,
       pillSheetModifiedHistories: pillSheetModifiedHistories.value!,
       premiumAndTrial: premiumAndTrial.value!,
@@ -74,7 +70,7 @@ class CalendarPageState with _$CalendarPageState {
   CalendarPageState._();
   factory CalendarPageState({
     required int currentCalendarIndex,
-    required MonthCalendarState currentMonthCalendar,
+    required DateTime displayMonth,
     required MonthCalendarState todayMonthCalendar,
     required List<CalendarMenstruationBandModel> calendarMenstruationBandModels,
     required List<CalendarScheduledMenstruationBandModel>
@@ -85,6 +81,5 @@ class CalendarPageState with _$CalendarPageState {
     required PremiumAndTrial premiumAndTrial,
   }) = _CalendarPageState;
 
-  DateTime get displayMonth => currentMonthCalendar.dateForMonth;
   String get displayMonthString => DateTimeFormatter.yearAndMonth(displayMonth);
 }
