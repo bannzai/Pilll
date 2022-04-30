@@ -4,7 +4,7 @@ import 'package:pilll/components/atoms/buttons.dart';
 import 'package:pilll/components/atoms/font.dart';
 import 'package:pilll/components/atoms/text_color.dart';
 import 'package:pilll/components/page/discard_dialog.dart';
-import 'package:pilll/domain/menstruation_edit/menstruation_edit_store.dart';
+import 'package:pilll/domain/menstruation_edit/menstruation_edit_page_store.dart';
 import 'package:pilll/entity/menstruation.codegen.dart';
 
 class MenstruationEditPageHeader extends StatelessWidget {
