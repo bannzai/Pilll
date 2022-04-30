@@ -14,8 +14,8 @@ import 'package:pilll/util/datetime/date_compare.dart';
 import 'package:pilll/util/datetime/day.dart';
 
 final menstruationEditProvider = StateNotifierProvider.family.autoDispose<
-    MenstruationEditStore, MenstruationEditPageState, Menstruation?>(
-  (ref, menstruation) => MenstruationEditStore(
+    MenstruationEditPageStore, MenstruationEditPageState, Menstruation?>(
+  (ref, menstruation) => MenstruationEditPageStore(
     menstruation: menstruation,
     menstruationDatastore: ref.watch(menstruationDatastoreProvider),
     settingDatastore: ref.watch(settingDatastoreProvider),
@@ -23,20 +23,16 @@ final menstruationEditProvider = StateNotifierProvider.family.autoDispose<
   ),
 );
 
-class MenstruationEditStore extends StateNotifier<MenstruationEditPageState> {
+class MenstruationEditPageStore extends StateNotifier<MenstruationEditPageState> {
   late Menstruation? initialMenstruation;
   final MenstruationDatastore menstruationDatastore;
   final SettingDatastore settingDatastore;
   final UserDatastore userDatastore;
 
-  MenstruationEditStore({
+  MenstruationEditPageStore({
     Menstruation? menstruation,
-    required this.menstruationDatastore,
-    required this.settingDatastore,
-    required this.userDatastore,
-  }) : super(MenstruationEditPageState(
-            menstruation: menstruation,
-            displayedDates: displayedDates(menstruation))) {
+    required MenstruationEditPageState initialState,
+  }) : super(initialState) {
     initialMenstruation = menstruation;
     setup();
   }

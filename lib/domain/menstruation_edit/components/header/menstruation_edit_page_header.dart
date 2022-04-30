@@ -9,7 +9,7 @@ import 'package:pilll/entity/menstruation.codegen.dart';
 
 class MenstruationEditPageHeader extends StatelessWidget {
   final String title;
-  final MenstruationEditStore store;
+  final MenstruationEditPageStore store;
   final Function() onDeleted;
   final Function(Menstruation) onSaved;
 
