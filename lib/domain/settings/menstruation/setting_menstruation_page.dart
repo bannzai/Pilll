@@ -15,7 +15,7 @@ class SettingMenstruationPage extends HookConsumerWidget {
   @override
   Widget build(BuildContext context, WidgetRef ref) {
     final store = ref.watch(settingMenstruationStoreProvider.notifier);
-    final settingState = ref.watch(settingStateProvider);
+    final settingState = ref.watch(settingStateNotifierProvider);
     final setting = settingState.setting;
     if (setting == null) {
       throw const FormatException("生理設定にはSettingのデータが必要です");
