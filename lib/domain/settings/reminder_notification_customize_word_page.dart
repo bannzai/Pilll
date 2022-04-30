@@ -2,7 +2,7 @@ import 'package:flutter_hooks/flutter_hooks.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:pilll/analytics.dart';
 import 'package:pilll/components/atoms/font.dart';
-import 'package:pilll/domain/settings/setting_page_store.dart';
+import 'package:pilll/domain/settings/setting_page_state_notifier.dart';
 import 'package:pilll/components/atoms/color.dart';
 import 'package:pilll/components/atoms/text_color.dart';
 import 'package:flutter/material.dart';

@@ -3,7 +3,7 @@ import 'package:hooks_riverpod/hooks_riverpod.dart';
 import 'package:pilll/analytics.dart';
 import 'package:pilll/components/atoms/font.dart';
 import 'package:pilll/domain/settings/today_pill_number/setting_today_pill_number_page.dart';
-import 'package:pilll/domain/settings/setting_page_store.dart';
+import 'package:pilll/domain/settings/setting_page_state_notifier.dart';
 import 'package:pilll/entity/pill_sheet.codegen.dart';
 import 'package:pilll/entity/pill_sheet_group.codegen.dart';
 import 'package:pilll/entity/setting.codegen.dart';

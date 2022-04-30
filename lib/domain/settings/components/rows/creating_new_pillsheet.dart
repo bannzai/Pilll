@@ -7,7 +7,7 @@ import 'package:pilll/components/molecules/premium_badge.dart';
 import 'package:pilll/domain/premium_introduction/premium_introduction_sheet.dart';
 import 'package:pilll/domain/premium_trial/premium_trial_complete_modal.dart';
 import 'package:pilll/domain/premium_trial/premium_trial_modal.dart';
-import 'package:pilll/domain/settings/setting_page_store.dart';
+import 'package:pilll/domain/settings/setting_page_state_notifier.dart';
 import 'package:pilll/entity/setting.codegen.dart';
 
 class CreatingNewPillSheetRow extends HookConsumerWidget {

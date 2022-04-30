@@ -5,7 +5,7 @@ import 'package:pilll/components/atoms/buttons.dart';
 import 'package:pilll/components/atoms/font.dart';
 import 'package:pilll/components/atoms/text_color.dart';
 import 'package:pilll/components/page/discard_dialog.dart';
-import 'package:pilll/domain/settings/setting_page_store.dart';
+import 'package:pilll/domain/settings/setting_page_state_notifier.dart';
 import 'package:pilll/error/error_alert.dart';
 import 'package:pilll/database/pill_sheet.dart';
 
