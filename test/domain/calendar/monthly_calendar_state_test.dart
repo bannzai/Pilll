@@ -1,15 +1,15 @@
-import 'package:pilll/domain/calendar/calendar_card_state.dart';
+import 'package:pilll/components/organisms/calendar/weekly/utility.dart';
 import 'package:pilll/domain/calendar/date_range.dart';
 import 'package:flutter_test/flutter_test.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
 void main() {
-  late CalendarCardState calendarState;
+  late WeekCalendarDateRangeCalculator calculator;
   late DateTime date;
   setUp(() {
     TestWidgetsFlutterBinding.ensureInitialized();
     SharedPreferences.setMockInitialValues({});
-    calendarState = CalendarCardState(date);
+    calculator = WeekCalendarDateRangeCalculator(date);
   });
   group("2020-09-14", () {
     /*
@@ -26,39 +26,39 @@ void main() {
     date = DateTime.parse("2020-09-14");
 
     test("#lineCount", () {
-      expect(calendarState.weeklineCount(), 5);
+      expect(calculator.weeklineCount(), 5);
     });
     test("#dateRangeOfLine", () {
       expect(
-        calendarState.dateRangeOfLine(1),
+        calculator.dateRangeOfLine(1),
         DateRange(
           DateTime.parse("2020-08-30"),
           DateTime.parse("2020-09-05"),
         ),
       );
       expect(
-        calendarState.dateRangeOfLine(2),
+        calculator.dateRangeOfLine(2),
         DateRange(
           DateTime.parse("2020-09-06"),
           DateTime.parse("2020-09-12"),
         ),
       );
       expect(
-        calendarState.dateRangeOfLine(3),
+        calculator.dateRangeOfLine(3),
         DateRange(
           DateTime.parse("2020-09-13"),
           DateTime.parse("2020-09-19"),
         ),
       );
       expect(
-        calendarState.dateRangeOfLine(4),
+        calculator.dateRangeOfLine(4),
         DateRange(
           DateTime.parse("2020-09-20"),
           DateTime.parse("2020-09-26"),
         ),
       );
       expect(
-        calendarState.dateRangeOfLine(5),
+        calculator.dateRangeOfLine(5),
         DateRange(
           DateTime.parse("2020-09-27"),
           DateTime.parse("2020-09-30"),
