@@ -47,7 +47,8 @@ class ReminderNotificationCustomizeWordPage extends HookConsumerWidget {
           child: ListView(
             children: [
               Container(
-                padding: const EdgeInsets.symmetric(vertical: 20, horizontal: 16),
+                padding:
+                    const EdgeInsets.symmetric(vertical: 20, horizontal: 16),
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
@@ -91,7 +92,8 @@ class ReminderNotificationCustomizeWordPage extends HookConsumerWidget {
                         analytics.logEvent(
                             name: "submit_reminder_notification_customize");
                         try {
-                          await store.reminderNotificationWordSubmit(word);
+                          await store.asyncAction
+                              .reminderNotificationWordSubmit(word, setting);
                           Navigator.of(context).pop();
                         } catch (error) {
                           showErrorAlert(context, message: error.toString());
@@ -187,7 +189,8 @@ extension ReminderNotificationCustomizeWordPageRoutes
     on ReminderNotificationCustomizeWordPage {
   static Route<dynamic> route({required Setting setting}) {
     return MaterialPageRoute(
-      settings: const RouteSettings(name: "ReminderNotificationCustomizeWordPage"),
+      settings:
+          const RouteSettings(name: "ReminderNotificationCustomizeWordPage"),
       builder: (_) => ReminderNotificationCustomizeWordPage(setting),
     );
   }
