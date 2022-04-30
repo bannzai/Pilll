@@ -13,15 +13,14 @@ import 'package:riverpod/riverpod.dart';
 part 'calendar_page_state.codegen.freezed.dart';
 
 const calendarDataSourceLength = 24;
-final calendarDataSourceProvider = Provider((_) =>
+final calendarDataSource =
     List.generate(calendarDataSourceLength, (index) => (index + 1) - 12)
         .map((e) => DateTime(today().year, today().month + e, 1))
-        .toList());
-final todayCalendarIndexProvider = Provider((ref) => ref
-    .watch(calendarDataSourceProvider)
-    .lastIndexWhere((element) => isSameMonth(element, today())));
+        .toList();
+final todayCalendarIndex = calendarDataSource
+    .lastIndexWhere((element) => isSameMonth(element, today()));
 final currentCalendarPageIndexProvider =
-    StateProvider((ref) => ref.watch(todayCalendarIndexProvider));
+    StateProvider((ref) => todayCalendarIndex);
 
 final calendarPageStateProvider =
     Provider<AsyncValue<CalendarPageState>>((ref) {
@@ -38,12 +37,11 @@ final calendarPageStateProvider =
 
   final currentCalendarPageIndex =
       ref.watch(currentCalendarPageIndexProvider.notifier).state;
-  final calendarDataSource = ref.watch(calendarDataSourceProvider);
   final monthCalendar = ref.watch(
       monthCalendarStateProvider(calendarDataSource[currentCalendarPageIndex]));
 
-  final todayMonthCalendar = ref.watch(monthCalendarStateProvider(
-      calendarDataSource[ref.watch(todayCalendarIndexProvider)]));
+  final todayMonthCalendar = ref.watch(
+      monthCalendarStateProvider(calendarDataSource[todayCalendarIndex]));
 
   if (pillSheetModifiedHistories is AsyncLoading ||
       premiumAndTrial is AsyncLoading ||
