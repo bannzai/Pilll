@@ -65,6 +65,7 @@ class RecordPageInformationHeader extends StatelessWidget {
                         !pillSheetGroup.isDeactived) {
                       Navigator.of(context).push(
                         SettingTodayPillNumberPageRoute.route(
+                          setting: setting,
                           pillSheetGroup: pillSheetGroup,
                           activedPillSheet: activedPillSheet,
                         ),

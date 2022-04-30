@@ -188,6 +188,7 @@ class RecordPageStore extends StateNotifier<RecordPageState> {
       pillSheetDatastore: _pillSheetDatastore,
       pillSheetModifiedHistoryDatastore: _pillSheetModifiedHistoryDatastore,
       pillSheetGroupDatastore: _pillSheetGroupDatastore,
+      appearanceMode: state.setting!.pillSheetAppearanceMode,
       isQuickRecord: false,
     );
     if (updatedPillSheetGroup == null) {
@@ -325,8 +326,11 @@ class RecordPageStore extends StateNotifier<RecordPageState> {
     final history = PillSheetModifiedHistoryServiceActionFactory
         .createRevertTakenPillAction(
       pillSheetGroupID: pillSheetGroup.id,
-      before: before,
-      after: after,
+      beforePillSheetGroup: pillSheetGroup,
+      afterPillSheetGroup: updatedPillSheetGroup,
+      beforeActivedPillSheet: before,
+      afterActivedPillSheet: after,
+      appearanceMode: PillSheetAppearanceMode.number,
     );
     _pillSheetModifiedHistoryDatastore.add(batch, history);
 

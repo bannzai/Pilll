@@ -13,11 +13,13 @@ import 'package:pilll/util/formatter/date_time_formatter.dart';
 import 'package:flutter/material.dart';
 
 class SettingTodayPillNumberPage extends HookConsumerWidget {
+  final Setting setting;
   final PillSheetGroup pillSheetGroup;
   final PillSheet activedPillSheet;
 
   const SettingTodayPillNumberPage({
     Key? key,
+    required this.setting,
     required this.pillSheetGroup,
     required this.activedPillSheet,
   }) : super(key: key);
@@ -88,6 +90,7 @@ class SettingTodayPillNumberPage extends HookConsumerWidget {
                           await store.modifiyTodayPillNumber(
                             pillSheetGroup: pillSheetGroup,
                             activedPillSheet: activedPillSheet,
+                            appearanceMode: state.appearanceMode,
                           );
                           Navigator.of(context).pop();
                         },
@@ -112,12 +115,14 @@ class SettingTodayPillNumberPage extends HookConsumerWidget {
 
 extension SettingTodayPillNumberPageRoute on SettingTodayPillNumberPage {
   static Route<dynamic> route({
+    required Setting setting,
     required PillSheetGroup pillSheetGroup,
     required PillSheet activedPillSheet,
   }) {
     return MaterialPageRoute(
       settings: const RouteSettings(name: "SettingTodayPillNumberPage"),
       builder: (_) => SettingTodayPillNumberPage(
+        setting: setting,
         pillSheetGroup: pillSheetGroup,
         activedPillSheet: activedPillSheet,
       ),
