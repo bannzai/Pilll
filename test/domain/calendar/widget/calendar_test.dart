@@ -1,6 +1,6 @@
 import 'package:pilll/components/organisms/calendar/band/calendar_band.dart';
 import 'package:pilll/components/organisms/calendar/band/calendar_band_model.dart';
-import 'package:pilll/domain/calendar/components/month/month_calendar.dart';
+import 'package:pilll/domain/calendar/components/month_calendar/month_calendar.dart';
 import 'package:pilll/components/organisms/calendar/weekly/weekly_calendar.dart';
 import 'package:pilll/domain/calendar/calendar_card_state.dart';
 import 'package:pilll/domain/calendar/date_range.dart';

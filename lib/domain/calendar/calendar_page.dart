@@ -4,7 +4,7 @@ import 'package:pilll/analytics.dart';
 import 'package:pilll/components/molecules/indicator.dart';
 import 'package:pilll/domain/calendar/calendar_page_state.codegen.dart';
 import 'package:pilll/domain/calendar/calendar_page_title.dart';
-import 'package:pilll/domain/calendar/components/month/month_calendar.dart';
+import 'package:pilll/domain/calendar/components/month_calendar/month_calendar.dart';
 import 'package:pilll/components/organisms/calendar/weekly/weekly_calendar.dart';
 import 'package:pilll/components/atoms/color.dart';
 import 'package:pilll/domain/calendar/components/pill_sheet_modified_history/pill_sheet_modified_history_card.dart';
