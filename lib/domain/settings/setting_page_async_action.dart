@@ -1,27 +1,20 @@
 import 'dart:async';
-import 'dart:io';
 
 import 'package:pilll/database/batch.dart';
 import 'package:pilll/entity/pill_sheet.codegen.dart';
 import 'package:pilll/entity/pill_sheet_group.codegen.dart';
 import 'package:pilll/entity/setting.codegen.dart';
-import 'package:pilll/native/health_care.dart';
 import 'package:pilll/database/pill_sheet.dart';
 import 'package:pilll/database/pill_sheet_group.dart';
 import 'package:pilll/database/pill_sheet_modified_history.dart';
 import 'package:pilll/database/setting.dart';
-import 'package:pilll/domain/settings/setting_page_state.codegen.dart';
-import 'package:pilll/database/user.dart';
-import 'package:pilll/util/shared_preference/keys.dart';
 import 'package:riverpod/riverpod.dart';
-import 'package:shared_preferences/shared_preferences.dart';
 
 final settingPageAsyncActionProvider = Provider(
   (ref) => SettingPageAsyncAction(
     ref.watch(batchFactoryProvider),
     ref.watch(settingDatastoreProvider),
     ref.watch(pillSheetDatastoreProvider),
-    ref.watch(userDatastoreProvider),
     ref.watch(pillSheetModifiedHistoryDatastoreProvider),
     ref.watch(pillSheetGroupDatastoreProvider),
   ),
@@ -31,7 +24,6 @@ class SettingPageAsyncAction {
   final BatchFactory _batchFactory;
   final SettingDatastore _settingDatastore;
   final PillSheetDatastore _pillSheetDatastore;
-  final UserDatastore _userDatastore;
   final PillSheetModifiedHistoryDatastore _pillSheetModifiedHistoryDatastore;
   final PillSheetGroupDatastore _pillSheetGroupDatastore;
 
@@ -39,7 +31,6 @@ class SettingPageAsyncAction {
     this._batchFactory,
     this._settingDatastore,
     this._pillSheetDatastore,
-    this._userDatastore,
     this._pillSheetModifiedHistoryDatastore,
     this._pillSheetGroupDatastore,
   );
