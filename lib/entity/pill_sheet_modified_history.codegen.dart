@@ -4,7 +4,6 @@ import 'package:pilll/entity/firestore_document_id_escaping_to_json.dart';
 import 'package:pilll/entity/firestore_timestamp_converter.dart';
 import 'package:pilll/entity/pill_sheet.codegen.dart';
 import 'package:pilll/entity/pill_sheet_modified_history_value.codegen.dart';
-import 'package:pilll/entity/setting.codegen.dart';
 
 part 'pill_sheet_modified_history.codegen.g.dart';
 part 'pill_sheet_modified_history.codegen.freezed.dart';

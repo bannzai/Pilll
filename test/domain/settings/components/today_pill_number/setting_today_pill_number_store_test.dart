@@ -109,6 +109,7 @@ void main() {
       await store.modifiyTodayPillNumber(
         pillSheetGroup: pillSheetGroup,
         activedPillSheet: pillSheetGroup.activedPillSheet!,
+        appearanceMode: PillSheetAppearanceMode.number,
       );
     });
 
@@ -198,6 +199,7 @@ void main() {
       await store.modifiyTodayPillNumber(
         pillSheetGroup: pillSheetGroup,
         activedPillSheet: pillSheetGroup.activedPillSheet!,
+        appearanceMode: PillSheetAppearanceMode.number,
       );
     });
 
@@ -313,6 +315,7 @@ void main() {
       await store.modifiyTodayPillNumber(
         pillSheetGroup: pillSheetGroup,
         activedPillSheet: pillSheetGroup.activedPillSheet!,
+        appearanceMode: PillSheetAppearanceMode.number,
       );
     });
     test(
@@ -428,6 +431,7 @@ void main() {
       await store.modifiyTodayPillNumber(
         pillSheetGroup: pillSheetGroup,
         activedPillSheet: pillSheetGroup.activedPillSheet!,
+        appearanceMode: PillSheetAppearanceMode.number,
       );
     });
     test(
@@ -544,6 +548,7 @@ void main() {
       await store.modifiyTodayPillNumber(
         pillSheetGroup: pillSheetGroup,
         activedPillSheet: pillSheetGroup.activedPillSheet!,
+        appearanceMode: PillSheetAppearanceMode.number,
       );
     });
   });
@@ -668,6 +673,7 @@ void main() {
       await store.modifiyTodayPillNumber(
         pillSheetGroup: pillSheetGroup,
         activedPillSheet: pillSheetGroup.activedPillSheet!,
+        appearanceMode: PillSheetAppearanceMode.number,
       );
     });
   });
