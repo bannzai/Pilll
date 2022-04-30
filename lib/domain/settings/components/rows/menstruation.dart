@@ -33,7 +33,8 @@ class MenstruationRow extends HookConsumerWidget {
         analytics.logEvent(
           name: "did_select_changing_about_menstruation",
         );
-        Navigator.of(context).push(SettingMenstruationPageRoute.route());
+        Navigator.of(context)
+            .push(SettingMenstruationPageRoute.route(setting: setting));
       },
     );
   }

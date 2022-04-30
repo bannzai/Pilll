@@ -5,21 +5,20 @@ import 'package:pilll/components/template/setting_menstruation/setting_menstruat
 import 'package:pilll/components/template/setting_menstruation/setting_menstruation_page_template.dart';
 import 'package:pilll/components/template/setting_menstruation/setting_menstruation_pill_sheet_list.dart';
 import 'package:pilll/domain/settings/menstruation/setting_menstruation_store.dart';
-import 'package:pilll/domain/settings/setting_page_state_notifier.dart';
 import 'package:pilll/entity/setting.codegen.dart';
 
 class SettingMenstruationPage extends HookConsumerWidget {
-  const SettingMenstruationPage({
+  final Setting setting;
+
+  SettingMenstruationPage({
     Key? key,
+    required this.setting,
   }) : super(key: key);
+
   @override
   Widget build(BuildContext context, WidgetRef ref) {
     final store = ref.watch(settingMenstruationStoreProvider.notifier);
-    final settingState = ref.watch(settingStateNotifierProvider);
-    final setting = settingState.setting;
-    if (setting == null) {
-      throw const FormatException("生理設定にはSettingのデータが必要です");
-    }
+
     return SettingMenstruationPageTemplate(
       title: "生理について",
       pillSheetList: SettingMenstruationPillSheetList(
@@ -68,10 +67,10 @@ class SettingMenstruationPage extends HookConsumerWidget {
 }
 
 extension SettingMenstruationPageRoute on SettingMenstruationPage {
-  static Route<dynamic> route() {
+  static Route<dynamic> route({required Setting setting}) {
     return MaterialPageRoute(
       settings: const RouteSettings(name: "SettingMenstruationPage"),
-      builder: (_) => const SettingMenstruationPage(),
+      builder: (_) => SettingMenstruationPage(setting: setting),
     );
   }
 }
