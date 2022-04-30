@@ -10,7 +10,6 @@ import 'package:pilll/domain/menstruation_edit/components/calendar/month_calenda
 import 'package:pilll/domain/menstruation_edit/components/header/menstruation_edit_page_header.dart';
 import 'package:pilll/entity/menstruation.codegen.dart';
 import 'package:pilll/domain/menstruation_edit/menstruation_edit_page_store.dart';
-import 'package:pilll/entity/setting.codegen.dart';
 import 'package:pilll/util/formatter/date_time_formatter.dart';
 
 class MenstruationEditPage extends HookConsumerWidget {
