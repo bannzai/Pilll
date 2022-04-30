@@ -5,6 +5,7 @@ import 'package:pilll/components/atoms/color.dart';
 import 'package:pilll/components/atoms/font.dart';
 import 'package:pilll/domain/settings/setting_page_state_notifier.dart';
 import 'package:pilll/entity/setting.codegen.dart';
+import 'package:pilll/error/error_alert.dart';
 
 class TakingPillNotification extends HookConsumerWidget {
   final Setting setting;
@@ -25,20 +26,19 @@ class TakingPillNotification extends HookConsumerWidget {
           name: "did_select_toggle_reminder",
         );
         ScaffoldMessenger.of(context).hideCurrentSnackBar();
-        store.modifyIsOnReminder(!setting.isOnReminder).then((state) {
-          final setting = state.setting;
-          if (setting == null) {
-            return;
-          }
-          ScaffoldMessenger.of(context).showSnackBar(
-            SnackBar(
-              duration: const Duration(seconds: 2),
-              content: Text(
-                "服用通知を${setting.isOnReminder ? "ON" : "OFF"}にしました",
+        store.asyncAction
+            .modifyIsOnReminder(!setting.isOnReminder, setting)
+            .catchError((error) => showErrorAlertFor(context, error))
+            .then(
+              (_) => ScaffoldMessenger.of(context).showSnackBar(
+                SnackBar(
+                  duration: const Duration(seconds: 2),
+                  content: Text(
+                    "服用通知を${value ? "ON" : "OFF"}にしました",
+                  ),
+                ),
               ),
-            ),
-          );
-        });
+            );
       },
       value: setting.isOnReminder,
       // NOTE: when configured subtitle, the space between elements becomes very narrow
