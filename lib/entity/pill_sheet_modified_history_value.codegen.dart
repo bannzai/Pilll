@@ -3,6 +3,7 @@ import 'package:freezed_annotation/freezed_annotation.dart';
 import 'package:pilll/entity/firestore_timestamp_converter.dart';
 import 'package:pilll/entity/pill_sheet.codegen.dart';
 import 'package:pilll/entity/pill_sheet_group.codegen.dart';
+import 'package:pilll/entity/setting.codegen.dart';
 
 part 'pill_sheet_modified_history_value.codegen.g.dart';
 part 'pill_sheet_modified_history_value.codegen.freezed.dart';
@@ -113,6 +114,7 @@ class TakenPillValue with _$TakenPillValue {
     // null => 途中から追加したプロパティなので、どちらか不明
     bool? isQuickRecord,
     TakenPillEditedValue? edited,
+    required PillSheetAppearanceMode? pillSheetAppearanceMode,
   }) = _TakenPillValue;
 
   factory TakenPillValue.fromJson(Map<String, dynamic> json) =>
@@ -163,6 +165,7 @@ class RevertTakenPillValue with _$RevertTakenPillValue {
         required DateTime afterLastTakenDate,
     required int beforeLastTakenPillNumber,
     required int afterLastTakenPillNumber,
+    required PillSheetAppearanceMode? pillSheetAppearanceMode,
   }) = _RevertTakenPillValue;
 
   factory RevertTakenPillValue.fromJson(Map<String, dynamic> json) =>
@@ -190,6 +193,7 @@ class ChangedPillNumberValue with _$ChangedPillNumberValue {
         int beforeGroupIndex,
     @Default(1)
         int afterGroupIndex,
+    required PillSheetAppearanceMode? pillSheetAppearanceMode,
   }) = _ChangedPillNumberValue;
 
   factory ChangedPillNumberValue.fromJson(Map<String, dynamic> json) =>

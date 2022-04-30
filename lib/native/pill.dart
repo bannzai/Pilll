@@ -4,6 +4,7 @@ import 'package:flutter_app_badger/flutter_app_badger.dart';
 import 'package:pilll/analytics.dart';
 import 'package:pilll/database/batch.dart';
 import 'package:pilll/database/database.dart';
+import 'package:pilll/database/setting.dart';
 import 'package:pilll/domain/record/util/take.dart';
 import 'package:pilll/database/pill_sheet.dart';
 import 'package:pilll/database/pill_sheet_group.dart';
@@ -26,6 +27,7 @@ Future<void> recordPill() async {
       PillSheetModifiedHistoryDatastore(database);
   final pillSheetGroupDatastore = PillSheetGroupDatastore(database);
   final pillSheetGroup = await pillSheetGroupDatastore.fetchLatest();
+  final setting = await SettingDatastore(database).fetch();
   if (pillSheetGroup == null) {
     return Future.value();
   }
@@ -47,6 +49,7 @@ Future<void> recordPill() async {
     pillSheetDatastore: pillSheetDatastore,
     pillSheetModifiedHistoryDatastore: pillSheetModifiedHistoryDatastore,
     pillSheetGroupDatastore: pillSheetGroupDatastore,
+    appearanceMode: setting.pillSheetAppearanceMode,
     isQuickRecord: true,
   );
 

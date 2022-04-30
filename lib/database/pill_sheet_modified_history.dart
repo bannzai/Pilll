@@ -4,12 +4,13 @@ import 'package:pilll/entity/pill_sheet.codegen.dart';
 import 'package:pilll/entity/pill_sheet_group.codegen.dart';
 import 'package:pilll/entity/pill_sheet_modified_history.codegen.dart';
 import 'package:pilll/entity/pill_sheet_modified_history_value.codegen.dart';
+import 'package:pilll/entity/setting.codegen.dart';
 import 'package:pilll/util/datetime/day.dart';
 import 'package:riverpod/riverpod.dart';
 
 final pillSheetModifiedHistoryDatastoreProvider =
-    Provider<PillSheetModifiedHistoryDatastore>(
-        (ref) => PillSheetModifiedHistoryDatastore(ref.watch(databaseProvider)));
+    Provider<PillSheetModifiedHistoryDatastore>((ref) =>
+        PillSheetModifiedHistoryDatastore(ref.watch(databaseProvider)));
 
 class PillSheetModifiedHistoryDatastore {
   final DatabaseConnection _database;
@@ -103,71 +104,102 @@ extension PillSheetModifiedHistoryServiceActionFactory
 
   static PillSheetModifiedHistory createTakenPillAction({
     required String? pillSheetGroupID,
-    required PillSheet before,
-    required PillSheet after,
+    required PillSheetGroup beforePillSheetGroup,
+    required PillSheet beforeActivedPillSheet,
+    required PillSheetGroup afterPillSheetGroup,
+    required PillSheet afterActivedPillSheet,
+    required PillSheetAppearanceMode appearanceMode,
     required bool isQuickRecord,
   }) {
     assert(pillSheetGroupID != null);
 
-    final afterID = after.id;
-    final afterLastTakenDate = after.lastTakenDate;
-    if (afterID == null || afterLastTakenDate == null) {
+    final afterActivedPillSheetID = afterActivedPillSheet.id;
+    final afterLastTakenDate = afterActivedPillSheet.lastTakenDate;
+    if (afterActivedPillSheetID == null || afterLastTakenDate == null) {
       throw FormatException(
-          "unexpected afterPillSheetID: $afterID or lastTakenDate:${after.lastTakenDate} is null for takenPill action");
+          "unexpected afterPillSheetID: $afterActivedPillSheetID or lastTakenDate:${afterActivedPillSheet.lastTakenDate} is null for takenPill action");
     }
     return _create(
       actionType: PillSheetModifiedActionType.takenPill,
       value: PillSheetModifiedHistoryValue(
         takenPill: TakenPillValue(
           afterLastTakenDate: afterLastTakenDate,
-          afterLastTakenPillNumber: after.lastTakenPillNumber,
-          beforeLastTakenDate: before.lastTakenDate,
-          beforeLastTakenPillNumber: before.lastTakenPillNumber,
+          afterLastTakenPillNumber: () {
+            if (appearanceMode == PillSheetAppearanceMode.sequential) {
+              return afterPillSheetGroup.sequentialLastTakenPillNumber;
+            } else {
+              return afterActivedPillSheet.lastTakenPillNumber;
+            }
+          }(),
+          beforeLastTakenDate: beforeActivedPillSheet.lastTakenDate,
+          beforeLastTakenPillNumber: () {
+            if (appearanceMode == PillSheetAppearanceMode.sequential) {
+              return beforePillSheetGroup.sequentialLastTakenPillNumber;
+            } else {
+              return beforeActivedPillSheet.lastTakenPillNumber;
+            }
+          }(),
+          pillSheetAppearanceMode: appearanceMode,
           isQuickRecord: isQuickRecord,
         ),
       ),
-      after: after,
-      beforePillSheetID: before.id,
-      afterPillSheetID: afterID,
+      after: afterActivedPillSheet,
+      beforePillSheetID: beforeActivedPillSheet.id,
+      afterPillSheetID: afterActivedPillSheetID,
       pillSheetGroupID: pillSheetGroupID,
-      before: before,
+      before: beforeActivedPillSheet,
     );
   }
 
   static PillSheetModifiedHistory createRevertTakenPillAction({
     required String? pillSheetGroupID,
-    required PillSheet before,
-    required PillSheet after,
+    required PillSheetGroup beforePillSheetGroup,
+    required PillSheet beforeActivedPillSheet,
+    required PillSheetGroup afterPillSheetGroup,
+    required PillSheet afterActivedPillSheet,
+    required PillSheetAppearanceMode appearanceMode,
   }) {
     assert(pillSheetGroupID != null);
 
-    final afterID = after.id;
-    final afterLastTakenDate = after.lastTakenDate;
-    if (afterID == null || afterLastTakenDate == null) {
+    final afterActivedPillSheetID = afterActivedPillSheet.id;
+    final afterLastTakenDate = afterActivedPillSheet.lastTakenDate;
+    if (afterActivedPillSheetID == null || afterLastTakenDate == null) {
       throw FormatException(
-          "unexpected afterPillSheetID: $afterID or lastTakenDate:${after.lastTakenDate} is null for revertTakenPill action");
+          "unexpected afterPillSheetID: $afterActivedPillSheetID or lastTakenDate:${afterActivedPillSheet.lastTakenDate} is null for revertTakenPill action");
     }
-    final beforeID = before.id;
-    final beforeLastTakenDate = before.lastTakenDate;
+    final beforeID = beforeActivedPillSheet.id;
+    final beforeLastTakenDate = beforeActivedPillSheet.lastTakenDate;
     if (beforeID == null || beforeLastTakenDate == null) {
       throw FormatException(
-          "unexpected before pill sheet id or lastTakenDate is null id: ${before.id}, lastTakenDate: ${before.lastTakenDate} for revertTakenPill action");
+          "unexpected before pill sheet id or lastTakenDate is null id: ${beforeActivedPillSheet.id}, lastTakenDate: ${beforeActivedPillSheet.lastTakenDate} for revertTakenPill action");
     }
     return _create(
       actionType: PillSheetModifiedActionType.revertTakenPill,
       value: PillSheetModifiedHistoryValue(
         revertTakenPill: RevertTakenPillValue(
-          afterLastTakenDate: afterLastTakenDate,
-          afterLastTakenPillNumber: after.lastTakenPillNumber,
-          beforeLastTakenDate: beforeLastTakenDate,
-          beforeLastTakenPillNumber: before.lastTakenPillNumber,
-        ),
+            afterLastTakenDate: afterLastTakenDate,
+            afterLastTakenPillNumber: () {
+              if (appearanceMode == PillSheetAppearanceMode.sequential) {
+                return afterPillSheetGroup.sequentialLastTakenPillNumber;
+              } else {
+                return afterActivedPillSheet.lastTakenPillNumber;
+              }
+            }(),
+            beforeLastTakenDate: beforeLastTakenDate,
+            beforeLastTakenPillNumber: () {
+              if (appearanceMode == PillSheetAppearanceMode.sequential) {
+                return beforePillSheetGroup.sequentialLastTakenPillNumber;
+              } else {
+                return beforeActivedPillSheet.lastTakenPillNumber;
+              }
+            }(),
+            pillSheetAppearanceMode: appearanceMode),
       ),
-      after: after,
+      after: afterActivedPillSheet,
       pillSheetGroupID: pillSheetGroupID,
       beforePillSheetID: beforeID,
-      afterPillSheetID: afterID,
-      before: before,
+      afterPillSheetID: afterActivedPillSheetID,
+      before: beforeActivedPillSheet,
     );
   }
 
@@ -195,34 +227,50 @@ extension PillSheetModifiedHistoryServiceActionFactory
 
   static PillSheetModifiedHistory createChangedPillNumberAction({
     required String? pillSheetGroupID,
-    required PillSheet before,
-    required PillSheet after,
+    required PillSheetGroup beforePillSheetGroup,
+    required PillSheet beforeActivedPillSheet,
+    required PillSheetGroup afterPillSheetGroup,
+    required PillSheet afterActivedPillSheet,
+    required PillSheetAppearanceMode appearanceMode,
   }) {
     assert(pillSheetGroupID != null);
 
-    final afterID = after.id;
-    if (afterID == null || pillSheetGroupID == null) {
+    final afterPillSheetID = afterActivedPillSheet.id;
+    if (afterPillSheetID == null || pillSheetGroupID == null) {
       throw FormatException(
-          "unexpected pillSheetGroupID: $pillSheetGroupID, or afterPillSheetID: $afterID  is null for changePillNumber action");
+          "unexpected pillSheetGroupID: $pillSheetGroupID, or afterPillSheetID: $afterPillSheetID  is null for changePillNumber action");
     }
 
     return _create(
       actionType: PillSheetModifiedActionType.changedPillNumber,
       value: PillSheetModifiedHistoryValue(
         changedPillNumber: ChangedPillNumberValue(
-          afterBeginingDate: after.beginingDate,
-          beforeBeginingDate: before.beginingDate,
-          afterTodayPillNumber: after.todayPillNumber,
-          beforeTodayPillNumber: before.todayPillNumber,
-          beforeGroupIndex: before.groupIndex,
-          afterGroupIndex: after.groupIndex,
+          afterBeginingDate: afterActivedPillSheet.beginingDate,
+          beforeBeginingDate: beforeActivedPillSheet.beginingDate,
+          afterTodayPillNumber: () {
+            if (appearanceMode == PillSheetAppearanceMode.sequential) {
+              return afterPillSheetGroup.sequentialTodayPillNumber;
+            } else {
+              return afterActivedPillSheet.todayPillNumber;
+            }
+          }(),
+          beforeTodayPillNumber: () {
+            if (appearanceMode == PillSheetAppearanceMode.sequential) {
+              return beforePillSheetGroup.sequentialTodayPillNumber;
+            } else {
+              return beforeActivedPillSheet.todayPillNumber;
+            }
+          }(),
+          beforeGroupIndex: beforeActivedPillSheet.groupIndex,
+          afterGroupIndex: afterActivedPillSheet.groupIndex,
+          pillSheetAppearanceMode: appearanceMode,
         ),
       ),
-      after: after,
+      after: afterActivedPillSheet,
       pillSheetGroupID: pillSheetGroupID,
-      beforePillSheetID: before.id,
-      afterPillSheetID: afterID,
-      before: before,
+      beforePillSheetID: beforeActivedPillSheet.id,
+      afterPillSheetID: afterPillSheetID,
+      before: beforeActivedPillSheet,
     );
   }
 

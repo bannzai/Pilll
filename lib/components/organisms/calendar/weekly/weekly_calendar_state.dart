@@ -28,9 +28,7 @@ abstract class WeeklyCalendarState {
   bool hasDiaryMark(List<Diary> diaries, DateTime date);
   bool hasMenstruationMark(DateTime date);
   Alignment get contentAlignment;
-}
 
-extension WeeklyCalendarStateCompoutedProperties on WeeklyCalendarState {
   bool isNecessaryLineBreak(DateTime date) {
     return !dateRange.inRange(date.date());
   }
