@@ -1,6 +1,5 @@
 import 'package:freezed_annotation/freezed_annotation.dart';
 import 'package:pilll/domain/menstruation/menstruation_state.codegen.dart';
-import 'package:pilll/domain/menstruation_edit/menstruation_edit_page.dart';
 import 'package:pilll/entity/menstruation.codegen.dart';
 import 'package:pilll/entity/setting.codegen.dart';
 import 'package:pilll/provider/premium_and_trial.codegen.dart';
@@ -12,8 +11,10 @@ part 'menstruation_edit_page_state.codegen.freezed.dart';
 final menstruationEditPageStateProvider =
     Provider.autoDispose.family((ref, Menstruation? menstruation) {
   final premiumAndTrial = ref.watch(premiumAndTrialProvider).value!;
+  final menstruationState = ref.watch(menstruationPageStateProvider);
   return MenstruationEditPageState(
     menstruation: menstruation,
+    setting: menstruationState.value!.setting,
     displayedDates: _displayedDates(menstruation),
     premiumAndTrial: premiumAndTrial,
   );
@@ -25,6 +26,7 @@ class MenstruationEditPageState with _$MenstruationEditPageState {
   const factory MenstruationEditPageState({
     @Default(false) bool isAlreadyAdjsutScrollOffset,
     required Menstruation? menstruation,
+    required Setting setting,
     required List<DateTime> displayedDates,
     required PremiumAndTrial premiumAndTrial,
     String? invalidMessage,

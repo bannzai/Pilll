@@ -21,12 +21,14 @@ class _$MenstruationEditPageStateTearOff {
   _MenstruationEditPageState call(
       {bool isAlreadyAdjsutScrollOffset = false,
       required Menstruation? menstruation,
+      required Setting setting,
       required List<DateTime> displayedDates,
       required PremiumAndTrial premiumAndTrial,
       String? invalidMessage}) {
     return _MenstruationEditPageState(
       isAlreadyAdjsutScrollOffset: isAlreadyAdjsutScrollOffset,
       menstruation: menstruation,
+      setting: setting,
       displayedDates: displayedDates,
       premiumAndTrial: premiumAndTrial,
       invalidMessage: invalidMessage,
@@ -41,6 +43,7 @@ const $MenstruationEditPageState = _$MenstruationEditPageStateTearOff();
 mixin _$MenstruationEditPageState {
   bool get isAlreadyAdjsutScrollOffset => throw _privateConstructorUsedError;
   Menstruation? get menstruation => throw _privateConstructorUsedError;
+  Setting get setting => throw _privateConstructorUsedError;
   List<DateTime> get displayedDates => throw _privateConstructorUsedError;
   PremiumAndTrial get premiumAndTrial => throw _privateConstructorUsedError;
   String? get invalidMessage => throw _privateConstructorUsedError;
@@ -58,11 +61,13 @@ abstract class $MenstruationEditPageStateCopyWith<$Res> {
   $Res call(
       {bool isAlreadyAdjsutScrollOffset,
       Menstruation? menstruation,
+      Setting setting,
       List<DateTime> displayedDates,
       PremiumAndTrial premiumAndTrial,
       String? invalidMessage});
 
   $MenstruationCopyWith<$Res>? get menstruation;
+  $SettingCopyWith<$Res> get setting;
   $PremiumAndTrialCopyWith<$Res> get premiumAndTrial;
 }
 
@@ -79,6 +84,7 @@ class _$MenstruationEditPageStateCopyWithImpl<$Res>
   $Res call({
     Object? isAlreadyAdjsutScrollOffset = freezed,
     Object? menstruation = freezed,
+    Object? setting = freezed,
     Object? displayedDates = freezed,
     Object? premiumAndTrial = freezed,
     Object? invalidMessage = freezed,
@@ -92,6 +98,10 @@ class _$MenstruationEditPageStateCopyWithImpl<$Res>
           ? _value.menstruation
           : menstruation // ignore: cast_nullable_to_non_nullable
               as Menstruation?,
+      setting: setting == freezed
+          ? _value.setting
+          : setting // ignore: cast_nullable_to_non_nullable
+              as Setting,
       displayedDates: displayedDates == freezed
           ? _value.displayedDates
           : displayedDates // ignore: cast_nullable_to_non_nullable
@@ -119,6 +129,13 @@ class _$MenstruationEditPageStateCopyWithImpl<$Res>
   }
 
   @override
+  $SettingCopyWith<$Res> get setting {
+    return $SettingCopyWith<$Res>(_value.setting, (value) {
+      return _then(_value.copyWith(setting: value));
+    });
+  }
+
+  @override
   $PremiumAndTrialCopyWith<$Res> get premiumAndTrial {
     return $PremiumAndTrialCopyWith<$Res>(_value.premiumAndTrial, (value) {
       return _then(_value.copyWith(premiumAndTrial: value));
@@ -136,12 +153,15 @@ abstract class _$MenstruationEditPageStateCopyWith<$Res>
   $Res call(
       {bool isAlreadyAdjsutScrollOffset,
       Menstruation? menstruation,
+      Setting setting,
       List<DateTime> displayedDates,
       PremiumAndTrial premiumAndTrial,
       String? invalidMessage});
 
   @override
   $MenstruationCopyWith<$Res>? get menstruation;
+  @override
+  $SettingCopyWith<$Res> get setting;
   @override
   $PremiumAndTrialCopyWith<$Res> get premiumAndTrial;
 }
@@ -162,6 +182,7 @@ class __$MenstruationEditPageStateCopyWithImpl<$Res>
   $Res call({
     Object? isAlreadyAdjsutScrollOffset = freezed,
     Object? menstruation = freezed,
+    Object? setting = freezed,
     Object? displayedDates = freezed,
     Object? premiumAndTrial = freezed,
     Object? invalidMessage = freezed,
@@ -175,6 +196,10 @@ class __$MenstruationEditPageStateCopyWithImpl<$Res>
           ? _value.menstruation
           : menstruation // ignore: cast_nullable_to_non_nullable
               as Menstruation?,
+      setting: setting == freezed
+          ? _value.setting
+          : setting // ignore: cast_nullable_to_non_nullable
+              as Setting,
       displayedDates: displayedDates == freezed
           ? _value.displayedDates
           : displayedDates // ignore: cast_nullable_to_non_nullable
@@ -197,6 +222,7 @@ class _$_MenstruationEditPageState extends _MenstruationEditPageState {
   const _$_MenstruationEditPageState(
       {this.isAlreadyAdjsutScrollOffset = false,
       required this.menstruation,
+      required this.setting,
       required this.displayedDates,
       required this.premiumAndTrial,
       this.invalidMessage})
@@ -208,6 +234,8 @@ class _$_MenstruationEditPageState extends _MenstruationEditPageState {
   @override
   final Menstruation? menstruation;
   @override
+  final Setting setting;
+  @override
   final List<DateTime> displayedDates;
   @override
   final PremiumAndTrial premiumAndTrial;
@@ -216,7 +244,7 @@ class _$_MenstruationEditPageState extends _MenstruationEditPageState {
 
   @override
   String toString() {
-    return 'MenstruationEditPageState(isAlreadyAdjsutScrollOffset: $isAlreadyAdjsutScrollOffset, menstruation: $menstruation, displayedDates: $displayedDates, premiumAndTrial: $premiumAndTrial, invalidMessage: $invalidMessage)';
+    return 'MenstruationEditPageState(isAlreadyAdjsutScrollOffset: $isAlreadyAdjsutScrollOffset, menstruation: $menstruation, setting: $setting, displayedDates: $displayedDates, premiumAndTrial: $premiumAndTrial, invalidMessage: $invalidMessage)';
   }
 
   @override
@@ -229,6 +257,7 @@ class _$_MenstruationEditPageState extends _MenstruationEditPageState {
                 isAlreadyAdjsutScrollOffset) &&
             const DeepCollectionEquality()
                 .equals(other.menstruation, menstruation) &&
+            const DeepCollectionEquality().equals(other.setting, setting) &&
             const DeepCollectionEquality()
                 .equals(other.displayedDates, displayedDates) &&
             const DeepCollectionEquality()
@@ -242,6 +271,7 @@ class _$_MenstruationEditPageState extends _MenstruationEditPageState {
       runtimeType,
       const DeepCollectionEquality().hash(isAlreadyAdjsutScrollOffset),
       const DeepCollectionEquality().hash(menstruation),
+      const DeepCollectionEquality().hash(setting),
       const DeepCollectionEquality().hash(displayedDates),
       const DeepCollectionEquality().hash(premiumAndTrial),
       const DeepCollectionEquality().hash(invalidMessage));
@@ -258,6 +288,7 @@ abstract class _MenstruationEditPageState extends MenstruationEditPageState {
   const factory _MenstruationEditPageState(
       {bool isAlreadyAdjsutScrollOffset,
       required Menstruation? menstruation,
+      required Setting setting,
       required List<DateTime> displayedDates,
       required PremiumAndTrial premiumAndTrial,
       String? invalidMessage}) = _$_MenstruationEditPageState;
@@ -267,6 +298,8 @@ abstract class _MenstruationEditPageState extends MenstruationEditPageState {
   bool get isAlreadyAdjsutScrollOffset;
   @override
   Menstruation? get menstruation;
+  @override
+  Setting get setting;
   @override
   List<DateTime> get displayedDates;
   @override
