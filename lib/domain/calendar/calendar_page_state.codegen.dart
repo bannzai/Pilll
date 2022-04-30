@@ -35,7 +35,7 @@ final calendarPageStateProvider =
       ref.watch(calendarNextPillSheetBandListProvider);
 
   final currentCalendarPageIndex =
-      ref.watch(calendarPageIndexStateNotifierProvider.notifier).state;
+      ref.watch(calendarPageIndexStateNotifierProvider);
   final monthCalendar = ref.watch(
       monthCalendarStateProvider(calendarDataSource[currentCalendarPageIndex]));
 
