@@ -113,8 +113,8 @@ class SettingTodayPillNumberStateStore
 
     _pillSheetDatastore.update(batch, updatedPillSheets);
 
-    final updatedPillSheetGroup =
-        pillSheetGroup.copyWith(pillSheets: updatedPillSheets);
+    final updatedPillSheetGroup = pillSheetGroup.copyWith(
+        pillSheets: updatedPillSheets, displayNumberSetting: null);
     _pillSheetGroupDatastore.updateWithBatch(batch, updatedPillSheetGroup);
 
     final history = PillSheetModifiedHistoryServiceActionFactory
