@@ -73,7 +73,7 @@ class SettingPage extends HookConsumerWidget {
   }
 
   Widget _body(
-      BuildContext context, SettingState state, SettingStateStore store) {
+      BuildContext context, SettingState state, SettingStateNotifier store) {
     final setting = state.setting;
     if (setting == null) {
       return Container();
@@ -101,7 +101,8 @@ class SettingPage extends HookConsumerWidget {
                   return SettingSectionTitle(text: "Pilllプレミアム", children: [
                     if (state.isTrial) ...[
                       ListTile(
-                        title: const Text("プレミアムお試し体験について", style: FontType.listRow),
+                        title: const Text("プレミアムお試し体験について",
+                            style: FontType.listRow),
                         onTap: () {
                           analytics.logEvent(
                               name: "did_select_about_trial", parameters: {});
@@ -204,7 +205,8 @@ class SettingPage extends HookConsumerWidget {
                           }),
                       _separator(),
                       ListTile(
-                          title: const Text("プライバシーポリシー", style: FontType.listRow),
+                          title:
+                              const Text("プライバシーポリシー", style: FontType.listRow),
                           onTap: () {
                             analytics.logEvent(
                                 name: "did_select_privacy_policy",

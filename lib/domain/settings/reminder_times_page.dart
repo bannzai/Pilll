@@ -52,7 +52,7 @@ class ReminderTimesPage extends HookConsumerWidget {
   }
 
   List<Widget> _components(
-      BuildContext context, SettingStateStore store, Setting setting) {
+      BuildContext context, SettingStateNotifier store, Setting setting) {
     return setting.reminderTimes
         .asMap()
         .map((offset, reminderTime) => MapEntry(offset,
@@ -63,7 +63,7 @@ class ReminderTimesPage extends HookConsumerWidget {
 
   Widget _component(
     BuildContext context,
-    SettingStateStore store,
+    SettingStateNotifier store,
     Setting setting,
     ReminderTime reminderTime,
     int number,
@@ -120,7 +120,7 @@ class ReminderTimesPage extends HookConsumerWidget {
   }
 
   Widget _footer(
-      BuildContext context, SettingState state, SettingStateStore store) {
+      BuildContext context, SettingState state, SettingStateNotifier store) {
     final setting = state.setting;
     if (setting == null) {
       return Container();
@@ -148,7 +148,7 @@ class ReminderTimesPage extends HookConsumerWidget {
     );
   }
 
-  void _showPicker(BuildContext context, SettingStateStore store,
+  void _showPicker(BuildContext context, SettingStateNotifier store,
       Setting setting, int? index) {
     final isEditing = index != null;
     showModalBottomSheet(

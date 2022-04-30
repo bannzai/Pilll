@@ -29,7 +29,7 @@ class TodayPllNumberRow extends HookConsumerWidget {
     );
   }
 
-  _onTap(BuildContext context, SettingStateStore store, Setting setting,
+  _onTap(BuildContext context, SettingStateNotifier store, Setting setting,
       PillSheet activedPillSheet) {
     analytics.logEvent(
       name: "did_select_changing_pill_number",
