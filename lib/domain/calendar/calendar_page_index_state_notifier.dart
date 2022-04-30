@@ -14,16 +14,28 @@ class CalendarPageIndexStateNotifier extends StateNotifier<int> {
   CalendarPageIndexStateNotifier(
     int initialState,
     this._diaryDatastore,
-  ) : super(initialState);
+  ) : super(initialState) {
+    _prefetch(initialState);
+  }
 
   void set(int index) {
     if (state == index) {
       return;
     }
 
-    // Prefetch diary data
-    _diaryDatastore.fetchListForMonth(calendarDataSource[index]);
+    _prefetch(index);
 
     state = index;
+  }
+
+  void _prefetch(int index) {
+    _diaryDatastore.fetchListForMonth(calendarDataSource[index]);
+
+    if (calendarDataSource.length > index) {
+      _diaryDatastore.fetchListForMonth(calendarDataSource[index + 1]);
+    }
+    if (calendarDataSource.length < index) {
+      _diaryDatastore.fetchListForMonth(calendarDataSource[index - 1]);
+    }
   }
 }
