@@ -4,6 +4,7 @@ import 'package:flutter_hooks/flutter_hooks.dart';
 import 'package:pilll/analytics.dart';
 import 'package:pilll/components/atoms/buttons.dart';
 import 'package:pilll/components/atoms/font.dart';
+import 'package:pilll/components/molecules/indicator.dart';
 import 'package:pilll/components/page/discard_dialog.dart';
 import 'package:pilll/domain/settings/components/rows/creating_new_pillsheet.dart';
 import 'package:pilll/domain/settings/components/rows/health_care.dart';
@@ -50,34 +51,31 @@ class SettingPage extends HookConsumerWidget {
 
     useAutomaticKeepAlive(wantKeepAlive: true);
 
-    if (state.exception != null) {
-      return UniversalErrorPage(
-        error: state.exception,
+    return state.when(
+      data: (state) => SettingPageBody(store: store, state: state),
+      error: (error, _) => UniversalErrorPage(
+        error: error,
         child: null,
-        reload: () => store.reset(),
-      );
-    }
-
-    return UniversalErrorPage(
-      error: state.exception,
-      reload: () => store.reset(),
-      child: Scaffold(
-        backgroundColor: PilllColors.background,
-        appBar: AppBar(
-          title: const Text('設定', style: TextColorStyle.main),
-          backgroundColor: PilllColors.white,
-        ),
-        body: Container(child: _body(context, state, store)),
+        reload: () => ref.refresh(settingStateProvider),
       ),
+      loading: () => ScaffoldIndicator(),
     );
   }
+}
 
-  Widget _body(
-      BuildContext context, SettingState state, SettingStateNotifier store) {
+class SettingPageBody extends StatelessWidget {
+  final SettingStateNotifier store;
+  final SettingState state;
+
+  const SettingPageBody({
+    Key? key,
+    required this.store,
+    required this.state,
+  }) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
     final setting = state.setting;
-    if (setting == null) {
-      return Container();
-    }
     final pillSheetGroup = state.latestPillSheetGroup;
     final activedPillSheet = pillSheetGroup?.activedPillSheet;
     return Container(
