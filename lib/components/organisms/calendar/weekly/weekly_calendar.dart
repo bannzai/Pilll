@@ -85,7 +85,6 @@ class CalendarWeekdayLine extends StatelessWidget {
                       showMenstruationEditPage(
                         context,
                         menstruation: menstruation,
-                        setting: setting,
                       );
                     },
                   ),
