@@ -14,17 +14,16 @@ import 'package:flutter_svg/svg.dart';
 
 class ReminderTimesPage extends HookConsumerWidget {
   final SettingStateNotifier store;
-  final SettingState state;
 
   ReminderTimesPage({
     required this.store,
-    required this.state,
   });
-
-  Setting get setting => state.setting;
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {
+    final state = ref.watch(settingStateProvider).value!;
+    final setting = state.setting;
+
     return Scaffold(
       backgroundColor: PilllColors.background,
       appBar: AppBar(
@@ -127,9 +126,6 @@ class ReminderTimesPage extends HookConsumerWidget {
   Widget _footer(
       BuildContext context, SettingState state, SettingStateNotifier store) {
     final setting = state.setting;
-    if (setting == null) {
-      return Container();
-    }
     if (setting.reminderTimes.length >= ReminderTime.maximumCount) {
       return Container();
     }
@@ -192,11 +188,10 @@ class ReminderTimesPage extends HookConsumerWidget {
 extension ReminderTimesPageRoute on ReminderTimesPage {
   static Route<dynamic> route({
     required SettingStateNotifier store,
-    required SettingState state,
   }) {
     return MaterialPageRoute(
       settings: const RouteSettings(name: "ReminderTimesPage"),
-      builder: (_) => ReminderTimesPage(store: store, state: state),
+      builder: (_) => ReminderTimesPage(store: store),
     );
   }
 }

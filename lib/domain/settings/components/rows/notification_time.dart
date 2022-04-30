@@ -27,8 +27,7 @@ class NotificationTimeRow extends StatelessWidget {
         analytics.logEvent(
           name: "did_select_changing_reminder_times",
         );
-        Navigator.of(context)
-            .push(ReminderTimesPageRoute.route(store: store, state: state));
+        Navigator.of(context).push(ReminderTimesPageRoute.route(store: store));
       },
     );
   }
