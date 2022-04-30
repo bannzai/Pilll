@@ -17,6 +17,11 @@ import 'package:pilll/database/pill_sheet_group.dart' as _i34;
 import 'package:pilll/database/pill_sheet_modified_history.dart' as _i32;
 import 'package:pilll/database/setting.dart' as _i16;
 import 'package:pilll/database/user.dart' as _i23;
+import 'package:pilll/domain/calendar/calendar_page_async_action.dart' as _i39;
+import 'package:pilll/domain/menstruation/menstruation_page_async_action.dart'
+    as _i37;
+import 'package:pilll/domain/menstruation_edit/menstruation_edit_page_async_action.dart'
+    as _i38;
 import 'package:pilll/domain/premium_function_survey/premium_function_survey_element_type.dart'
     as _i24;
 import 'package:pilll/domain/premium_introduction/premium_introduction_state.codegen.dart'
@@ -30,12 +35,15 @@ import 'package:pilll/domain/record/components/notification_bar/notification_bar
 import 'package:pilll/domain/record/record_page_async_action.dart' as _i7;
 import 'package:pilll/domain/record/record_page_state.codegen.dart' as _i26;
 import 'package:pilll/domain/record/record_page_store.dart' as _i25;
+import 'package:pilll/domain/settings/setting_page_async_action.dart' as _i36;
 import 'package:pilll/entity/diary.codegen.dart' as _i4;
 import 'package:pilll/entity/menstruation.codegen.dart' as _i5;
 import 'package:pilll/entity/pill_mark_type.dart' as _i27;
 import 'package:pilll/entity/pill_sheet.codegen.dart' as _i2;
 import 'package:pilll/entity/pill_sheet_group.codegen.dart' as _i11;
 import 'package:pilll/entity/pill_sheet_modified_history.codegen.dart' as _i33;
+import 'package:pilll/entity/pill_sheet_modified_history_value.codegen.dart'
+    as _i40;
 import 'package:pilll/entity/setting.codegen.dart' as _i3;
 import 'package:pilll/entity/user.codegen.dart' as _i6;
 import 'package:pilll/service/auth.dart' as _i21;
@@ -748,4 +756,327 @@ class MockWriteBatch extends _i1.Mock implements _i13.WriteBatch {
           Map<String, dynamic>? data) =>
       super.noSuchMethod(Invocation.method(#update, [document, data]),
           returnValueForMissingStub: null);
+}
+
+/// A class which mocks [RecordPageAsyncAction].
+///
+/// See the documentation for Mockito's code generation for more information.
+class MockRecordPageAsyncAction extends _i1.Mock
+    implements _i7.RecordPageAsyncAction {
+  MockRecordPageAsyncAction() {
+    _i1.throwOnMissingStub(this);
+  }
+
+  @override
+  _i17.Future<bool> taken({_i11.PillSheetGroup? pillSheetGroup}) =>
+      (super.noSuchMethod(
+          Invocation.method(#taken, [], {#pillSheetGroup: pillSheetGroup}),
+          returnValue: Future<bool>.value(false)) as _i17.Future<bool>);
+  @override
+  _i17.Future<bool> takenWithPillNumber(
+          {int? pillNumberIntoPillSheet,
+          _i11.PillSheetGroup? pillSheetGroup,
+          _i2.PillSheet? pillSheet}) =>
+      (super.noSuchMethod(
+          Invocation.method(#takenWithPillNumber, [], {
+            #pillNumberIntoPillSheet: pillNumberIntoPillSheet,
+            #pillSheetGroup: pillSheetGroup,
+            #pillSheet: pillSheet
+          }),
+          returnValue: Future<bool>.value(false)) as _i17.Future<bool>);
+  @override
+  _i17.Future<void> cancelTaken({_i11.PillSheetGroup? pillSheetGroup}) =>
+      (super.noSuchMethod(
+              Invocation.method(
+                  #cancelTaken, [], {#pillSheetGroup: pillSheetGroup}),
+              returnValue: Future<void>.value(),
+              returnValueForMissingStub: Future<void>.value())
+          as _i17.Future<void>);
+  @override
+  _i17.Future<void> revertTaken(
+          {_i11.PillSheetGroup? pillSheetGroup,
+          int? pageIndex,
+          int? pillNumberIntoPillSheet}) =>
+      (super.noSuchMethod(
+              Invocation.method(#revertTaken, [], {
+                #pillSheetGroup: pillSheetGroup,
+                #pageIndex: pageIndex,
+                #pillNumberIntoPillSheet: pillNumberIntoPillSheet
+              }),
+              returnValue: Future<void>.value(),
+              returnValueForMissingStub: Future<void>.value())
+          as _i17.Future<void>);
+  @override
+  bool isDone(
+          {int? pillNumberIntoPillSheet,
+          _i11.PillSheetGroup? pillSheetGroup,
+          _i2.PillSheet? pillSheet}) =>
+      (super.noSuchMethod(
+          Invocation.method(#isDone, [], {
+            #pillNumberIntoPillSheet: pillNumberIntoPillSheet,
+            #pillSheetGroup: pillSheetGroup,
+            #pillSheet: pillSheet
+          }),
+          returnValue: false) as bool);
+  @override
+  _i27.PillMarkType markFor(
+          {int? pillNumberIntoPillSheet, _i2.PillSheet? pillSheet}) =>
+      (super.noSuchMethod(
+          Invocation.method(#markFor, [], {
+            #pillNumberIntoPillSheet: pillNumberIntoPillSheet,
+            #pillSheet: pillSheet
+          }),
+          returnValue: _i27.PillMarkType.normal) as _i27.PillMarkType);
+  @override
+  bool shouldPillMarkAnimation(
+          {int? pillNumberIntoPillSheet,
+          _i11.PillSheetGroup? pillSheetGroup,
+          _i2.PillSheet? pillSheet}) =>
+      (super.noSuchMethod(
+          Invocation.method(#shouldPillMarkAnimation, [], {
+            #pillNumberIntoPillSheet: pillNumberIntoPillSheet,
+            #pillSheetGroup: pillSheetGroup,
+            #pillSheet: pillSheet
+          }),
+          returnValue: false) as bool);
+  @override
+  _i17.Future<void> beginRestDuration(
+          {_i11.PillSheetGroup? pillSheetGroup,
+          _i2.PillSheet? activedPillSheet}) =>
+      (super.noSuchMethod(
+              Invocation.method(#beginRestDuration, [], {
+                #pillSheetGroup: pillSheetGroup,
+                #activedPillSheet: activedPillSheet
+              }),
+              returnValue: Future<void>.value(),
+              returnValueForMissingStub: Future<void>.value())
+          as _i17.Future<void>);
+  @override
+  _i17.Future<void> endRestDuration(
+          {_i11.PillSheetGroup? pillSheetGroup,
+          _i2.PillSheet? activedPillSheet,
+          _i2.RestDuration? restDuration}) =>
+      (super.noSuchMethod(
+              Invocation.method(#endRestDuration, [], {
+                #pillSheetGroup: pillSheetGroup,
+                #activedPillSheet: activedPillSheet,
+                #restDuration: restDuration
+              }),
+              returnValue: Future<void>.value(),
+              returnValueForMissingStub: Future<void>.value())
+          as _i17.Future<void>);
+  @override
+  _i17.Future<void> setDisplayNumberSettingEndNumber(
+          {int? end, _i11.PillSheetGroup? pillSheetGroup}) =>
+      (super.noSuchMethod(
+              Invocation.method(#setDisplayNumberSettingEndNumber, [],
+                  {#end: end, #pillSheetGroup: pillSheetGroup}),
+              returnValue: Future<void>.value(),
+              returnValueForMissingStub: Future<void>.value())
+          as _i17.Future<void>);
+  @override
+  _i17.Future<void> switchingAppearanceMode(
+          {_i3.PillSheetAppearanceMode? mode, _i3.Setting? setting}) =>
+      (super.noSuchMethod(
+          Invocation.method(
+              #switchingAppearanceMode, [], {#mode: mode, #setting: setting}),
+          returnValue: Future<void>.value(),
+          returnValueForMissingStub:
+              Future<void>.value()) as _i17.Future<void>);
+}
+
+/// A class which mocks [SettingPageAsyncAction].
+///
+/// See the documentation for Mockito's code generation for more information.
+class MockSettingPageAsyncAction extends _i1.Mock
+    implements _i36.SettingPageAsyncAction {
+  MockSettingPageAsyncAction() {
+    _i1.throwOnMissingStub(this);
+  }
+
+  @override
+  _i17.Future<void> addReminderTimes(
+          {_i3.Setting? setting, _i3.ReminderTime? reminderTime}) =>
+      (super.noSuchMethod(
+              Invocation.method(#addReminderTimes, [],
+                  {#setting: setting, #reminderTime: reminderTime}),
+              returnValue: Future<void>.value(),
+              returnValueForMissingStub: Future<void>.value())
+          as _i17.Future<void>);
+  @override
+  _i17.Future<void> editReminderTime(
+          {int? index, _i3.Setting? setting, _i3.ReminderTime? reminderTime}) =>
+      (super.noSuchMethod(
+              Invocation.method(#editReminderTime, [], {
+                #index: index,
+                #setting: setting,
+                #reminderTime: reminderTime
+              }),
+              returnValue: Future<void>.value(),
+              returnValueForMissingStub: Future<void>.value())
+          as _i17.Future<void>);
+  @override
+  _i17.Future<void> deleteReminderTimes({int? index, _i3.Setting? setting}) =>
+      (super.noSuchMethod(
+              Invocation.method(
+                  #deleteReminderTimes, [], {#index: index, #setting: setting}),
+              returnValue: Future<void>.value(),
+              returnValueForMissingStub: Future<void>.value())
+          as _i17.Future<void>);
+  @override
+  _i17.Future<void> modifyIsOnReminder(
+          bool? isOnReminder, _i3.Setting? setting) =>
+      (super.noSuchMethod(
+              Invocation.method(#modifyIsOnReminder, [isOnReminder, setting]),
+              returnValue: Future<void>.value(),
+              returnValueForMissingStub: Future<void>.value())
+          as _i17.Future<void>);
+  @override
+  _i17.Future<void> modifyIsOnNotifyInNotTakenDuration(
+          bool? isOn, _i3.Setting? setting) =>
+      (super.noSuchMethod(
+              Invocation.method(
+                  #modifyIsOnNotifyInNotTakenDuration, [isOn, setting]),
+              returnValue: Future<void>.value(),
+              returnValueForMissingStub: Future<void>.value())
+          as _i17.Future<void>);
+  @override
+  _i17.Future<void> deletePillSheet(
+          {_i11.PillSheetGroup? latestPillSheetGroup,
+          _i2.PillSheet? activedPillSheet}) =>
+      (super.noSuchMethod(
+              Invocation.method(#deletePillSheet, [], {
+                #latestPillSheetGroup: latestPillSheetGroup,
+                #activedPillSheet: activedPillSheet
+              }),
+              returnValue: Future<void>.value(),
+              returnValueForMissingStub: Future<void>.value())
+          as _i17.Future<void>);
+  @override
+  _i17.Future<void> modifiyIsAutomaticallyCreatePillSheet(
+          bool? isOn, _i3.Setting? setting) =>
+      (super.noSuchMethod(
+              Invocation.method(
+                  #modifiyIsAutomaticallyCreatePillSheet, [isOn, setting]),
+              returnValue: Future<void>.value(),
+              returnValueForMissingStub: Future<void>.value())
+          as _i17.Future<void>);
+  @override
+  _i17.Future<void> reminderNotificationWordSubmit(
+          String? word, _i3.Setting? setting) =>
+      (super.noSuchMethod(
+          Invocation.method(#reminderNotificationWordSubmit, [word, setting]),
+          returnValue: Future<void>.value(),
+          returnValueForMissingStub:
+              Future<void>.value()) as _i17.Future<void>);
+  @override
+  _i17.Future<void> setIsInVisibleReminderDate(
+          bool? isInVisibleReminderDate, _i3.Setting? setting) =>
+      (super.noSuchMethod(
+          Invocation.method(
+              #setIsInVisibleReminderDate, [isInVisibleReminderDate, setting]),
+          returnValue: Future<void>.value(),
+          returnValueForMissingStub:
+              Future<void>.value()) as _i17.Future<void>);
+  @override
+  _i17.Future<void> setIsInVisiblePillNumber(
+          bool? isInVisiblePillNumber, _i3.Setting? setting) =>
+      (super.noSuchMethod(
+              Invocation.method(
+                  #setIsInVisiblePillNumber, [isInVisiblePillNumber, setting]),
+              returnValue: Future<void>.value(),
+              returnValueForMissingStub: Future<void>.value())
+          as _i17.Future<void>);
+  @override
+  _i17.Future<void> setIsInVisibleDescription(
+          bool? isInVisibleDescription, _i3.Setting? setting) =>
+      (super.noSuchMethod(
+          Invocation.method(
+              #setIsInVisibleDescription, [isInVisibleDescription, setting]),
+          returnValue: Future<void>.value(),
+          returnValueForMissingStub:
+              Future<void>.value()) as _i17.Future<void>);
+}
+
+/// A class which mocks [MenstruationPageAsyncAction].
+///
+/// See the documentation for Mockito's code generation for more information.
+class MockMenstruationPageAsyncAction extends _i1.Mock
+    implements _i37.MenstruationPageAsyncAction {
+  MockMenstruationPageAsyncAction() {
+    _i1.throwOnMissingStub(this);
+  }
+
+  @override
+  _i17.Future<_i5.Menstruation> recordFromToday({_i3.Setting? setting}) =>
+      (super.noSuchMethod(
+              Invocation.method(#recordFromToday, [], {#setting: setting}),
+              returnValue:
+                  Future<_i5.Menstruation>.value(_FakeMenstruation_4()))
+          as _i17.Future<_i5.Menstruation>);
+  @override
+  _i17.Future<_i5.Menstruation> recordFromYesterday({_i3.Setting? setting}) =>
+      (super.noSuchMethod(
+              Invocation.method(#recordFromYesterday, [], {#setting: setting}),
+              returnValue:
+                  Future<_i5.Menstruation>.value(_FakeMenstruation_4()))
+          as _i17.Future<_i5.Menstruation>);
+}
+
+/// A class which mocks [MenstruationEditPageAsyncAction].
+///
+/// See the documentation for Mockito's code generation for more information.
+class MockMenstruationEditPageAsyncAction extends _i1.Mock
+    implements _i38.MenstruationEditPageAsyncAction {
+  MockMenstruationEditPageAsyncAction() {
+    _i1.throwOnMissingStub(this);
+  }
+
+  @override
+  _i17.Future<_i5.Menstruation> save(
+          {_i5.Menstruation? initialMenstruation,
+          _i5.Menstruation? menstruation}) =>
+      (super.noSuchMethod(
+              Invocation.method(#save, [], {
+                #initialMenstruation: initialMenstruation,
+                #menstruation: menstruation
+              }),
+              returnValue:
+                  Future<_i5.Menstruation>.value(_FakeMenstruation_4()))
+          as _i17.Future<_i5.Menstruation>);
+  @override
+  _i17.Future<void> delete(
+          {_i5.Menstruation? initialMenstruation,
+          _i5.Menstruation? menstruation}) =>
+      (super.noSuchMethod(
+              Invocation.method(#delete, [], {
+                #initialMenstruation: initialMenstruation,
+                #menstruation: menstruation
+              }),
+              returnValue: Future<void>.value(),
+              returnValueForMissingStub: Future<void>.value())
+          as _i17.Future<void>);
+}
+
+/// A class which mocks [CalendarPageAsyncAction].
+///
+/// See the documentation for Mockito's code generation for more information.
+class MockCalendarPageAsyncAction extends _i1.Mock
+    implements _i39.CalendarPageAsyncAction {
+  MockCalendarPageAsyncAction() {
+    _i1.throwOnMissingStub(this);
+  }
+
+  @override
+  _i17.Future<void> editTakenValue(
+          DateTime? actualTakenDate,
+          _i33.PillSheetModifiedHistory? history,
+          _i40.PillSheetModifiedHistoryValue? value,
+          _i40.TakenPillValue? takenPillValue) =>
+      (super.noSuchMethod(
+              Invocation.method(#editTakenValue,
+                  [actualTakenDate, history, value, takenPillValue]),
+              returnValue: Future<void>.value(),
+              returnValueForMissingStub: Future<void>.value())
+          as _i17.Future<void>);
 }

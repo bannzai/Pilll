@@ -1,6 +1,7 @@
 import 'package:flutter_test/flutter_test.dart';
 import 'package:mockito/mockito.dart';
 import 'package:pilll/domain/menstruation/menstruation_card_state.codegen.dart';
+import 'package:pilll/domain/menstruation/menstruation_state.codegen.dart';
 import 'package:pilll/entity/menstruation.codegen.dart';
 import 'package:pilll/entity/pill_sheet.codegen.dart';
 import 'package:pilll/entity/pill_sheet_group.codegen.dart';
