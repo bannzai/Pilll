@@ -14,13 +14,11 @@ import 'package:pilll/entity/setting.codegen.dart';
 import 'package:pilll/util/formatter/date_time_formatter.dart';
 
 class MenstruationEditPage extends HookConsumerWidget {
-  final String title;
   final Setting setting;
   final Menstruation? menstruation;
   final Function(Menstruation) onSaved;
   final VoidCallback onDeleted;
   MenstruationEditPage({
-    required this.title,
     required this.setting,
     required this.menstruation,
     required this.onSaved,
@@ -70,7 +68,7 @@ class MenstruationEditPage extends HookConsumerWidget {
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
                       MenstruationEditPageHeader(
-                        title: title,
+                        title: menstruation == null ? "生理開始日を選択" : "生理期間の編集",
                         state: state,
                         store: store,
                         onDeleted: onDeleted,
@@ -124,7 +122,6 @@ void showMenstruationEditPage(
   showModalBottomSheet(
     context: context,
     builder: (context) => MenstruationEditPage(
-      title: menstruation == null ? "生理開始日を選択" : "生理期間の編集",
       setting: setting,
       menstruation: menstruation,
       onSaved: (savedMenstruation) {
