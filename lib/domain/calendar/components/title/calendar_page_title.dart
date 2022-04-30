@@ -1,6 +1,7 @@
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
 import 'package:pilll/analytics.dart';
+import 'package:pilll/domain/calendar/calendar_page_index_state_notifier.dart';
 import 'package:pilll/domain/calendar/calendar_page_state.codegen.dart';
 import 'package:pilll/components/atoms/font.dart';
 import 'package:pilll/components/atoms/text_color.dart';
@@ -21,6 +22,8 @@ class CalendarPageTitle extends HookConsumerWidget {
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {
+    final calendarPageIndexStateNotifier =
+        ref.watch(calendarPageIndexStateNotifierProvider.notifier);
     return Row(
       mainAxisAlignment: MainAxisAlignment.center,
       children: [
@@ -35,12 +38,7 @@ class CalendarPageTitle extends HookConsumerWidget {
             });
 
             pageController.jumpToPage(previousMonthIndex);
-            final currentCalendarPageIndex =
-                ref.read(currentCalendarPageIndexProvider.notifier).state;
-            if (currentCalendarPageIndex != previousMonthIndex) {
-              ref.read(currentCalendarPageIndexProvider.notifier).state =
-                  previousMonthIndex;
-            }
+            calendarPageIndexStateNotifier.set(previousMonthIndex);
           },
         ),
         Text(
@@ -58,12 +56,7 @@ class CalendarPageTitle extends HookConsumerWidget {
             });
 
             pageController.jumpToPage(nextMonthIndex);
-            final currentCalendarPageIndex =
-                ref.read(currentCalendarPageIndexProvider.notifier).state;
-            if (currentCalendarPageIndex != nextMonthIndex) {
-              ref.read(currentCalendarPageIndexProvider.notifier).state =
-                  nextMonthIndex;
-            }
+            calendarPageIndexStateNotifier.set(nextMonthIndex);
           },
         ),
       ],

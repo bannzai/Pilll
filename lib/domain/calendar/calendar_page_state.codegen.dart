@@ -2,6 +2,7 @@ import 'package:freezed_annotation/freezed_annotation.dart';
 import 'package:pilll/components/organisms/calendar/band/calendar_band_model.dart';
 import 'package:pilll/components/organisms/calendar/band/calendar_band_provider.dart';
 import 'package:pilll/database/pill_sheet_modified_history.dart';
+import 'package:pilll/domain/calendar/calendar_page_index_state_notifier.dart';
 import 'package:pilll/domain/calendar/components/month_calendar/month_calendar_state.codegen.dart';
 import 'package:pilll/entity/pill_sheet_modified_history.codegen.dart';
 import 'package:pilll/provider/premium_and_trial.codegen.dart';
@@ -17,10 +18,8 @@ final calendarDataSource =
     List.generate(calendarDataSourceLength, (index) => (index + 1) - 12)
         .map((e) => DateTime(today().year, today().month + e, 1))
         .toList();
-final todayCalendarIndex = calendarDataSource
+final todayCalendarPageIndex = calendarDataSource
     .lastIndexWhere((element) => isSameMonth(element, today()));
-final currentCalendarPageIndexProvider =
-    StateProvider((ref) => todayCalendarIndex);
 
 final calendarPageStateProvider =
     Provider<AsyncValue<CalendarPageState>>((ref) {
@@ -36,12 +35,12 @@ final calendarPageStateProvider =
       ref.watch(calendarNextPillSheetBandListProvider);
 
   final currentCalendarPageIndex =
-      ref.watch(currentCalendarPageIndexProvider.notifier).state;
+      ref.watch(calendarPageIndexStateNotifierProvider.notifier).state;
   final monthCalendar = ref.watch(
       monthCalendarStateProvider(calendarDataSource[currentCalendarPageIndex]));
 
   final todayMonthCalendar = ref.watch(
-      monthCalendarStateProvider(calendarDataSource[todayCalendarIndex]));
+      monthCalendarStateProvider(calendarDataSource[todayCalendarPageIndex]));
 
   if (pillSheetModifiedHistories is AsyncLoading ||
       premiumAndTrial is AsyncLoading ||

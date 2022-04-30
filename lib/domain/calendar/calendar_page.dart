@@ -2,6 +2,7 @@ import 'package:flutter_hooks/flutter_hooks.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
 import 'package:pilll/analytics.dart';
 import 'package:pilll/components/molecules/indicator.dart';
+import 'package:pilll/domain/calendar/calendar_page_index_state_notifier.dart';
 import 'package:pilll/domain/calendar/calendar_page_state.codegen.dart';
 import 'package:pilll/domain/calendar/components/title/calendar_page_title.dart';
 import 'package:pilll/domain/calendar/components/month_calendar/month_calendar.dart';
@@ -19,7 +20,8 @@ class CalendarPage extends HookConsumerWidget {
   Widget build(BuildContext context, WidgetRef ref) {
     final store = ref.watch(calendarPageStateStoreProvider.notifier);
     final state = ref.watch(calendarPageStateStoreProvider);
-    final todayCalendarPageIndex = ref.read(todayCalendarIndexProvider);
+    final calendarPageIndexStateNotifier =
+        ref.watch(calendarPageIndexStateNotifierProvider.notifier);
 
     useAutomaticKeepAlive(wantKeepAlive: true);
 
@@ -27,12 +29,9 @@ class CalendarPage extends HookConsumerWidget {
         usePageController(initialPage: todayCalendarPageIndex);
     pageController.addListener(() {
       final index = (pageController.page ?? pageController.initialPage).round();
-      final currentCalendarPageIndex =
-          ref.read(currentCalendarPageIndexProvider.notifier).state;
-      if (currentCalendarPageIndex != index) {
-        ref.read(currentCalendarPageIndexProvider.notifier).state = index;
-      }
+      calendarPageIndexStateNotifier.set(index);
     });
+
     return state.when(
       data: (state) => CalendarPageBody(
           store: store, state: state, pageController: pageController),
