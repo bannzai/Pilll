@@ -30,7 +30,7 @@ Future<void> effectAfterTakenPillAction({
   }
 }
 
-_requestInAppReview() {
+void _requestInAppReview() {
   SharedPreferences.getInstance().then((store) async {
     final key = IntKey.totalCountOfActionForTakenPill;
     int? value = store.getInt(key);
