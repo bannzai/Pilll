@@ -5,6 +5,7 @@ import 'package:pilll/domain/settings/setting_page_state_notifier.dart';
 import 'package:pilll/components/atoms/color.dart';
 import 'package:pilll/components/atoms/font.dart';
 import 'package:pilll/components/atoms/text_color.dart';
+import 'package:pilll/error/error_alert.dart';
 import 'package:pilll/util/formatter/date_time_formatter.dart';
 import 'package:pilll/util/toolbar/time_picker.dart';
 import 'package:flutter/material.dart';
@@ -12,16 +13,18 @@ import 'package:hooks_riverpod/hooks_riverpod.dart';
 import 'package:flutter_svg/svg.dart';
 
 class ReminderTimesPage extends HookConsumerWidget {
+  final SettingStateNotifier store;
+  final SettingState state;
+
+  ReminderTimesPage({
+    required this.store,
+    required this.state,
+  });
+
+  Setting get setting => state.setting;
+
   @override
   Widget build(BuildContext context, WidgetRef ref) {
-    final store = ref.watch(settingStoreProvider.notifier);
-    final state = ref.watch(settingStateProvider);
-    final setting = state.setting;
-
-    if (setting == null) {
-      return const Indicator();
-    }
-
     return Scaffold(
       backgroundColor: PilllColors.background,
       appBar: AppBar(
@@ -86,7 +89,9 @@ class ReminderTimesPage extends HookConsumerWidget {
       onDismissed: setting.reminderTimes.length == 1
           ? null
           : (direction) {
-              store.deleteReminderTimes(number - 1);
+              store.asyncAction
+                  .deleteReminderTimes(index: number - 1, setting: setting)
+                  .catchError((error) => showErrorAlertFor(context, error));
             },
       background: Container(
         color: Colors.red,
@@ -161,11 +166,21 @@ class ReminderTimesPage extends HookConsumerWidget {
           done: (dateTime) {
             Navigator.pop(context);
             if (isEditing) {
-              store.editReminderTime(index,
-                  ReminderTime(hour: dateTime.hour, minute: dateTime.minute));
+              store.asyncAction
+                  .editReminderTime(
+                    index: index,
+                    reminderTime: ReminderTime(
+                        hour: dateTime.hour, minute: dateTime.minute),
+                    setting: setting,
+                  )
+                  .catchError((error) => showErrorAlertFor(context, error));
             } else {
-              store.addReminderTimes(
-                  ReminderTime(hour: dateTime.hour, minute: dateTime.minute));
+              store.asyncAction
+                  .addReminderTimes(
+                      reminderTime: ReminderTime(
+                          hour: dateTime.hour, minute: dateTime.minute),
+                      setting: setting)
+                  .catchError((error) => showErrorAlertFor(context, error));
             }
           },
         );
@@ -175,10 +190,13 @@ class ReminderTimesPage extends HookConsumerWidget {
 }
 
 extension ReminderTimesPageRoute on ReminderTimesPage {
-  static Route<dynamic> route() {
+  static Route<dynamic> route({
+    required SettingStateNotifier store,
+    required SettingState state,
+  }) {
     return MaterialPageRoute(
       settings: const RouteSettings(name: "ReminderTimesPage"),
-      builder: (_) => ReminderTimesPage(),
+      builder: (_) => ReminderTimesPage(store: store, state: state),
     );
   }
 }
