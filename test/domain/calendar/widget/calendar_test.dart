@@ -40,7 +40,7 @@ void main() {
         ProviderScope(
           child: MaterialApp(
             home: MonthCalendar(
-              state: CalendarCardState(now),
+              monthCalendarState: CalendarCardState(now),
               weekCalendarBuilder: (context, weeklyDateRange) {
                 return CalendarWeekdayLine(
                   state: CalendarTabWeeklyCalendarState(
@@ -89,7 +89,7 @@ void main() {
         ProviderScope(
           child: MaterialApp(
             home: MonthCalendar(
-              state: CalendarCardState(now),
+              monthCalendarState: CalendarCardState(now),
               weekCalendarBuilder: (context, weeklyDateRange) {
                 return CalendarWeekdayLine(
                   state: CalendarTabWeeklyCalendarState(
@@ -124,7 +124,7 @@ void main() {
         ProviderScope(
           child: MaterialApp(
             home: MonthCalendar(
-              state: CalendarCardState(now),
+              monthCalendarState: CalendarCardState(now),
               weekCalendarBuilder: (context, weeklyDateRange) {
                 return CalendarWeekdayLine(
                   state: CalendarTabWeeklyCalendarState(
@@ -155,7 +155,7 @@ void main() {
         ProviderScope(
           child: MaterialApp(
             home: MonthCalendar(
-              state: CalendarCardState(now),
+              monthCalendarState: CalendarCardState(now),
               weekCalendarBuilder: (context, weeklyDateRange) {
                 return CalendarWeekdayLine(
                   state: CalendarTabWeeklyCalendarState(

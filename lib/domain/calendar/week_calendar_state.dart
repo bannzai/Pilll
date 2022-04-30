@@ -7,13 +7,11 @@ import 'package:pilll/entity/diary.codegen.dart';
 class CalendarTabWeeklyCalendarState extends WeekCalendarState {
   final DateRange dateRange;
   final List<Diary> diariesForMonth;
-  final List<CalendarBandModel> allBandModels;
   final DateTime targetDateOfMonth;
 
   CalendarTabWeeklyCalendarState({
     required this.dateRange,
     required this.diariesForMonth,
-    required this.allBandModels,
     required this.targetDateOfMonth,
   });
 

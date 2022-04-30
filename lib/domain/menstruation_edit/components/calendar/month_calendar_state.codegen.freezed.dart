@@ -19,11 +19,8 @@ class _$MonthCalendarStateTearOff {
   const _$MonthCalendarStateTearOff();
 
   _MonthCalendarState call(
-      {required List<MenstruationEditWeeklyCalendarState> weekCalendarStatuses,
-      required DateTime dateForMonth,
-      required Menstruation? menstruation}) {
+      {required DateTime dateForMonth, required Menstruation? menstruation}) {
     return _MonthCalendarState(
-      weekCalendarStatuses: weekCalendarStatuses,
       dateForMonth: dateForMonth,
       menstruation: menstruation,
     );
@@ -35,8 +32,6 @@ const $MonthCalendarState = _$MonthCalendarStateTearOff();
 
 /// @nodoc
 mixin _$MonthCalendarState {
-  List<MenstruationEditWeeklyCalendarState> get weekCalendarStatuses =>
-      throw _privateConstructorUsedError;
   DateTime get dateForMonth => throw _privateConstructorUsedError;
   Menstruation? get menstruation => throw _privateConstructorUsedError;
 
@@ -50,10 +45,7 @@ abstract class $MonthCalendarStateCopyWith<$Res> {
   factory $MonthCalendarStateCopyWith(
           MonthCalendarState value, $Res Function(MonthCalendarState) then) =
       _$MonthCalendarStateCopyWithImpl<$Res>;
-  $Res call(
-      {List<MenstruationEditWeeklyCalendarState> weekCalendarStatuses,
-      DateTime dateForMonth,
-      Menstruation? menstruation});
+  $Res call({DateTime dateForMonth, Menstruation? menstruation});
 
   $MenstruationCopyWith<$Res>? get menstruation;
 }
@@ -69,15 +61,10 @@ class _$MonthCalendarStateCopyWithImpl<$Res>
 
   @override
   $Res call({
-    Object? weekCalendarStatuses = freezed,
     Object? dateForMonth = freezed,
     Object? menstruation = freezed,
   }) {
     return _then(_value.copyWith(
-      weekCalendarStatuses: weekCalendarStatuses == freezed
-          ? _value.weekCalendarStatuses
-          : weekCalendarStatuses // ignore: cast_nullable_to_non_nullable
-              as List<MenstruationEditWeeklyCalendarState>,
       dateForMonth: dateForMonth == freezed
           ? _value.dateForMonth
           : dateForMonth // ignore: cast_nullable_to_non_nullable
@@ -108,10 +95,7 @@ abstract class _$MonthCalendarStateCopyWith<$Res>
           _MonthCalendarState value, $Res Function(_MonthCalendarState) then) =
       __$MonthCalendarStateCopyWithImpl<$Res>;
   @override
-  $Res call(
-      {List<MenstruationEditWeeklyCalendarState> weekCalendarStatuses,
-      DateTime dateForMonth,
-      Menstruation? menstruation});
+  $Res call({DateTime dateForMonth, Menstruation? menstruation});
 
   @override
   $MenstruationCopyWith<$Res>? get menstruation;
@@ -130,15 +114,10 @@ class __$MonthCalendarStateCopyWithImpl<$Res>
 
   @override
   $Res call({
-    Object? weekCalendarStatuses = freezed,
     Object? dateForMonth = freezed,
     Object? menstruation = freezed,
   }) {
     return _then(_MonthCalendarState(
-      weekCalendarStatuses: weekCalendarStatuses == freezed
-          ? _value.weekCalendarStatuses
-          : weekCalendarStatuses // ignore: cast_nullable_to_non_nullable
-              as List<MenstruationEditWeeklyCalendarState>,
       dateForMonth: dateForMonth == freezed
           ? _value.dateForMonth
           : dateForMonth // ignore: cast_nullable_to_non_nullable
@@ -155,13 +134,9 @@ class __$MonthCalendarStateCopyWithImpl<$Res>
 
 class _$_MonthCalendarState extends _MonthCalendarState {
   _$_MonthCalendarState(
-      {required this.weekCalendarStatuses,
-      required this.dateForMonth,
-      required this.menstruation})
+      {required this.dateForMonth, required this.menstruation})
       : super._();
 
-  @override
-  final List<MenstruationEditWeeklyCalendarState> weekCalendarStatuses;
   @override
   final DateTime dateForMonth;
   @override
@@ -169,7 +144,7 @@ class _$_MonthCalendarState extends _MonthCalendarState {
 
   @override
   String toString() {
-    return 'MonthCalendarState(weekCalendarStatuses: $weekCalendarStatuses, dateForMonth: $dateForMonth, menstruation: $menstruation)';
+    return 'MonthCalendarState(dateForMonth: $dateForMonth, menstruation: $menstruation)';
   }
 
   @override
@@ -177,8 +152,6 @@ class _$_MonthCalendarState extends _MonthCalendarState {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _MonthCalendarState &&
-            const DeepCollectionEquality()
-                .equals(other.weekCalendarStatuses, weekCalendarStatuses) &&
             const DeepCollectionEquality()
                 .equals(other.dateForMonth, dateForMonth) &&
             const DeepCollectionEquality()
@@ -188,7 +161,6 @@ class _$_MonthCalendarState extends _MonthCalendarState {
   @override
   int get hashCode => Object.hash(
       runtimeType,
-      const DeepCollectionEquality().hash(weekCalendarStatuses),
       const DeepCollectionEquality().hash(dateForMonth),
       const DeepCollectionEquality().hash(menstruation));
 
@@ -200,13 +172,10 @@ class _$_MonthCalendarState extends _MonthCalendarState {
 
 abstract class _MonthCalendarState extends MonthCalendarState {
   factory _MonthCalendarState(
-      {required List<MenstruationEditWeeklyCalendarState> weekCalendarStatuses,
-      required DateTime dateForMonth,
+      {required DateTime dateForMonth,
       required Menstruation? menstruation}) = _$_MonthCalendarState;
   _MonthCalendarState._() : super._();
 
-  @override
-  List<MenstruationEditWeeklyCalendarState> get weekCalendarStatuses;
   @override
   DateTime get dateForMonth;
   @override

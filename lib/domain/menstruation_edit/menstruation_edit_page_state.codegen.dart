@@ -1,5 +1,7 @@
 import 'package:freezed_annotation/freezed_annotation.dart';
+import 'package:pilll/components/organisms/calendar/weekly/utility.dart';
 import 'package:pilll/domain/menstruation/menstruation_state.codegen.dart';
+import 'package:pilll/domain/menstruation_edit/components/calendar/month_calendar_state.codegen.dart';
 import 'package:pilll/entity/menstruation.codegen.dart';
 import 'package:pilll/entity/setting.codegen.dart';
 import 'package:pilll/provider/premium_and_trial.codegen.dart';
@@ -31,6 +33,17 @@ class MenstruationEditPageState with _$MenstruationEditPageState {
     required PremiumAndTrial premiumAndTrial,
     String? invalidMessage,
   }) = _MenstruationEditPageState;
+
+  List<MonthCalendarState> monthCalendarStatuses() {
+    return displayedDates.map(
+      (dateForMonth) {
+        return MonthCalendarState(
+          dateForMonth: dateForMonth,
+          menstruation: menstruation,
+        );
+      },
+    );
+  }
 }
 
 List<DateTime> _displayedDates(Menstruation? menstruation) {

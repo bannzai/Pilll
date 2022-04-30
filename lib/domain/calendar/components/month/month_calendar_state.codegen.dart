@@ -1,4 +1,5 @@
 import 'package:freezed_annotation/freezed_annotation.dart';
+import 'package:pilll/components/organisms/calendar/weekly/utility.dart';
 import 'package:pilll/database/diary.dart';
 import 'package:pilll/database/menstruation.dart';
 import 'package:pilll/domain/calendar/date_range.dart';
@@ -43,52 +44,17 @@ class MonthCalendarState with _$MonthCalendarState {
   }) = _MonthCalendarState;
   MonthCalendarState._();
 
+  late final WeekCalendarDateRangeCalculator _range =
+      WeekCalendarDateRangeCalculator(dateForMonth);
+
   List<CalendarTabWeeklyCalendarState> get weekCalendarStatuses =>
-      List.generate(weeklineCount(), (index) => index + 1)
+      List.generate(_range.weeklineCount(), (index) => index + 1)
           .map(
             (line) => CalendarTabWeeklyCalendarState(
-              dateRange: _dateRangeOfLine(line),
+              dateRange: _range.dateRangeOfLine(line),
               diariesForMonth: diaries,
-              // TODO:
-              allBandModels: [],
               targetDateOfMonth: dateForMonth,
             ),
           )
           .toList();
-
-  DateRange _dateRangeOfLine(int line) {
-    if (line == 1) {
-      return DateRange(
-        DateTime(dateForMonth.year, dateForMonth.month,
-            1 - _previousMonthDayCount()),
-        DateTime(dateForMonth.year, dateForMonth.month,
-            Weekday.values.length - _previousMonthDayCount()),
-      );
-    }
-    if (line == weeklineCount()) {
-      return DateRange(
-        DateTime(dateForMonth.year, dateForMonth.month,
-            Weekday.values.length * (line - 1) + 1 - _previousMonthDayCount()),
-        DateTime(dateForMonth.year, dateForMonth.month, _lastDay()),
-      );
-    }
-    var beginDay =
-        Weekday.values.length * (line - 1) - _previousMonthDayCount() + 1;
-    var endDay = Weekday.values.length * line - _previousMonthDayCount();
-    return DateRange(
-      DateTime(dateForMonth.year, dateForMonth.month, beginDay),
-      DateTime(dateForMonth.year, dateForMonth.month, endDay),
-    );
-  }
-
-  int _lastDay() => DateTime(dateForMonth.year, dateForMonth.month + 1, 0).day;
-  int _weekdayOffset() =>
-      WeekdayFunctions.weekdayFromDate(_firstDayOfMonth(dateForMonth)).index;
-  int _previousMonthDayCount() => _weekdayOffset();
-  int _tileCount() => _previousMonthDayCount() + _lastDay();
-  int weeklineCount() => (_tileCount() / Weekday.values.length).ceil();
-
-  DateTime _firstDayOfMonth(DateTime date) {
-    return DateTime(date.year, date.month, 1);
-  }
 }

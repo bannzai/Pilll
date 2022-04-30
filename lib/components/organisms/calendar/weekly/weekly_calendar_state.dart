@@ -20,7 +20,6 @@ extension DateTimeForCalnedarState on DateTime {
 abstract class WeekCalendarState {
   DateRange get dateRange;
   List<Diary> get diariesForMonth;
-  List<CalendarBandModel> get allBandModels;
 
   bool isGrayoutTile(DateTime date);
   bool hasDiaryMark(List<Diary> diaries, DateTime date);
