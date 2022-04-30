@@ -13,6 +13,54 @@ import 'package:pilll/util/shared_preference/keys.dart';
 
 part 'record_page_state.codegen.freezed.dart';
 
+final recordPageAsyncStateProvider =
+    Provider<AsyncValue<RecordPageState>>((ref) {
+  final latestPillSheetGroup = ref.watch(latestPillSheetGroupStreamProvider);
+  final premiumAndTrial = ref.watch(premiumAndTrialProvider);
+  final setting = ref.watch(settingStreamProvider);
+  final sharedPreferencesAsyncValue = ref.watch(sharedPreferenceProvider);
+
+  if (latestPillSheetGroup is AsyncLoading ||
+      premiumAndTrial is AsyncLoading ||
+      setting is AsyncLoading ||
+      sharedPreferencesAsyncValue is AsyncLoading) {
+    return const AsyncValue.loading();
+  }
+
+  final sharedPreferences = sharedPreferencesAsyncValue.value!;
+
+  try {
+    return AsyncValue.data(RecordPageState(
+      pillSheetGroup: latestPillSheetGroup.value,
+      setting: setting.value!,
+      premiumAndTrial: premiumAndTrial.value!,
+      totalCountOfActionForTakenPill:
+          sharedPreferences.getInt(IntKey.totalCountOfActionForTakenPill) ?? 0,
+      shouldShowMigrateInfo:
+          ref.watch(shouldShowMigrationInformationProvider(sharedPreferences)),
+      isAlreadyShowTiral:
+          sharedPreferences.getBool(BoolKey.isAlreadyShowPremiumTrialModal) ??
+              false,
+      isAlreadyShowPremiumSurvey:
+          sharedPreferences.getBool(BoolKey.isAlreadyShowPremiumSurvey) ??
+              false,
+      recommendedSignupNotificationIsAlreadyShow: sharedPreferences
+              .getBool(BoolKey.recommendedSignupNotificationIsAlreadyShow) ??
+          false,
+      premiumTrialGuideNotificationIsClosed: sharedPreferences
+              .getBool(BoolKey.premiumTrialGuideNotificationIsClosed) ??
+          false,
+      premiumTrialBeginAnouncementIsClosed: sharedPreferences
+              .getBool(BoolKey.premiumTrialBeginAnouncementIsClosed) ??
+          false,
+      isLinkedLoginProvider: ref.watch(isLinkedProvider),
+    ));
+  } catch (error, stackTrace) {
+    errorLogger.recordError(error, stackTrace);
+    return AsyncValue.error(error);
+  }
+});
+
 @freezed
 class RecordPageState with _$RecordPageState {
   const RecordPageState._();
@@ -67,51 +115,3 @@ class RecordPageState with _$RecordPageState {
     return setting.pillSheetAppearanceMode;
   }
 }
-
-final recordPageAsyncStateProvider =
-    Provider<AsyncValue<RecordPageState>>((ref) {
-  final latestPillSheetGroup = ref.watch(latestPillSheetGroupStreamProvider);
-  final premiumAndTrial = ref.watch(premiumAndTrialProvider);
-  final setting = ref.watch(settingStreamProvider);
-  final sharedPreferencesAsyncValue = ref.watch(sharedPreferenceProvider);
-
-  if (latestPillSheetGroup is AsyncLoading ||
-      premiumAndTrial is AsyncLoading ||
-      setting is AsyncLoading ||
-      sharedPreferencesAsyncValue is AsyncLoading) {
-    return const AsyncValue.loading();
-  }
-
-  final sharedPreferences = sharedPreferencesAsyncValue.value!;
-
-  try {
-    return AsyncValue.data(RecordPageState(
-      pillSheetGroup: latestPillSheetGroup.value,
-      setting: setting.value!,
-      premiumAndTrial: premiumAndTrial.value!,
-      totalCountOfActionForTakenPill:
-          sharedPreferences.getInt(IntKey.totalCountOfActionForTakenPill) ?? 0,
-      shouldShowMigrateInfo:
-          ref.watch(shouldShowMigrationInformationProvider(sharedPreferences)),
-      isAlreadyShowTiral:
-          sharedPreferences.getBool(BoolKey.isAlreadyShowPremiumTrialModal) ??
-              false,
-      isAlreadyShowPremiumSurvey:
-          sharedPreferences.getBool(BoolKey.isAlreadyShowPremiumSurvey) ??
-              false,
-      recommendedSignupNotificationIsAlreadyShow: sharedPreferences
-              .getBool(BoolKey.recommendedSignupNotificationIsAlreadyShow) ??
-          false,
-      premiumTrialGuideNotificationIsClosed: sharedPreferences
-              .getBool(BoolKey.premiumTrialGuideNotificationIsClosed) ??
-          false,
-      premiumTrialBeginAnouncementIsClosed: sharedPreferences
-              .getBool(BoolKey.premiumTrialBeginAnouncementIsClosed) ??
-          false,
-      isLinkedLoginProvider: ref.watch(isLinkedProvider),
-    ));
-  } catch (error, stackTrace) {
-    errorLogger.recordError(error, stackTrace);
-    return AsyncValue.error(error);
-  }
-});
