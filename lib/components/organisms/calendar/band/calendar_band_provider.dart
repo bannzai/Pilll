@@ -19,8 +19,8 @@ final calendarMenstruationBandListProvider =
           .map((menstruation) => CalendarMenstruationBandModel(menstruation))
           .toList(),
     );
-  } catch (error, _) {
-    return AsyncValue.error(error);
+  } catch (error, stackTrace) {
+    return AsyncValue.error(error, stackTrace: stackTrace);
   }
 });
 
@@ -48,8 +48,8 @@ final calendarScheduledMenstruationBandListProvider =
               dateRange.begin, dateRange.end))
           .toList(),
     );
-  } catch (error, _) {
-    return AsyncValue.error(error);
+  } catch (error, stackTrace) {
+    return AsyncValue.error(error, stackTrace: stackTrace);
   }
 });
 
@@ -68,7 +68,7 @@ final calendarNextPillSheetBandListProvider =
               CalendarNextPillSheetBandModel(dateRange.begin, dateRange.end))
           .toList(),
     );
-  } catch (error, _) {
-    return AsyncValue.error(error);
+  } catch (error, stackTrace) {
+    return AsyncValue.error(error, stackTrace: stackTrace);
   }
 });

@@ -27,9 +27,9 @@ final recordPageAsyncStateProvider =
     return const AsyncValue.loading();
   }
 
-  final sharedPreferences = sharedPreferencesAsyncValue.value!;
-
   try {
+    final sharedPreferences = sharedPreferencesAsyncValue.value!;
+
     return AsyncValue.data(RecordPageState(
       pillSheetGroup: latestPillSheetGroup.value,
       setting: setting.value!,
@@ -57,7 +57,7 @@ final recordPageAsyncStateProvider =
     ));
   } catch (error, stackTrace) {
     errorLogger.recordError(error, stackTrace);
-    return AsyncValue.error(error);
+    return AsyncValue.error(error, stackTrace: stackTrace);
   }
 });
 

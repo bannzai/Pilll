@@ -60,8 +60,8 @@ final calendarPageStateProvider =
           calendarScheduledMenstruationBandModels.value!,
       calendarNextPillSheetBandModels: calendarNextPillSheetBandModels.value!,
     ));
-  } catch (error, _) {
-    return AsyncValue.error(error);
+  } catch (error, stackTrace) {
+    return AsyncValue.error(error, stackTrace: stackTrace);
   }
 });
 
