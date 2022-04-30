@@ -61,7 +61,7 @@ class PillSheetRemoveRow extends HookConsumerWidget {
                 ),
                 AlertButton(
                   text: "破棄する",
-                  onPressed: () {
+                  onPressed: () async {
                     store.asyncAction
                         .deletePillSheet(
                           latestPillSheetGroup: latestPillSheetGroup,
