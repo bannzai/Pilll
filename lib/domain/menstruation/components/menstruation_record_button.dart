@@ -33,7 +33,7 @@ class MenstruationRecordButton extends StatelessWidget {
         final setting = state.setting;
 
         if (setting.durationMenstruation == 0) {
-          return showMenstruationEditPageForCreate(context);
+          return showMenstruationEditPage(context);
         }
         showModalBottomSheet(
           context: context,
@@ -70,7 +70,7 @@ class MenstruationRecordButton extends StatelessWidget {
               case MenstruationSelectModifyType.begin:
                 analytics.logEvent(name: "tapped_menstruation_record_begin");
                 Navigator.of(context).pop();
-                return showMenstruationEditPageForCreate(context);
+                return showMenstruationEditPage(context);
             }
           }),
         );

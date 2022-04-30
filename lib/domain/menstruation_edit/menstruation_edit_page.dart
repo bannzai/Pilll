@@ -124,53 +124,27 @@ void showMenstruationEditPage(
   showModalBottomSheet(
     context: context,
     builder: (context) => MenstruationEditPage(
-      title: "生理期間の編集",
+      title: menstruation == null ? "生理開始日を選択" : "生理期間の編集",
       setting: setting,
       menstruation: menstruation,
-      onSaved: (menstruation) {
+      onSaved: (savedMenstruation) {
         Navigator.of(context).pop();
-        ScaffoldMessenger.of(context).showSnackBar(
-          const SnackBar(
-            duration: Duration(seconds: 2),
-            content: Text("生理期間を編集しました"),
-          ),
-        );
-      },
-      onDeleted: () {
-        Navigator.of(context).pop();
-        ScaffoldMessenger.of(context).showSnackBar(
-          const SnackBar(
-            duration: Duration(seconds: 2),
-            content: Text("生理期間を削除しました"),
-          ),
-        );
-      },
-    ),
-    backgroundColor: Colors.transparent,
-    isScrollControlled: true,
-  );
-}
-
-void showMenstruationEditPageForCreate(
-  BuildContext context, {
-  required Setting setting,
-}) {
-  analytics.setCurrentScreen(screenName: "MenstruationEditPage");
-  showModalBottomSheet(
-    context: context,
-    builder: (context) => MenstruationEditPage(
-      title: "生理開始日を選択",
-      setting: setting,
-      menstruation: null,
-      onSaved: (menstruation) {
-        Navigator.of(context).pop();
-        ScaffoldMessenger.of(context).showSnackBar(
-          SnackBar(
-            duration: const Duration(seconds: 2),
-            content: Text(
-                "${DateTimeFormatter.monthAndDay(menstruation.beginDate)}から生理開始で記録しました"),
-          ),
-        );
+        if (menstruation == null) {
+          ScaffoldMessenger.of(context).showSnackBar(
+            SnackBar(
+              duration: const Duration(seconds: 2),
+              content: Text(
+                  "${DateTimeFormatter.monthAndDay(savedMenstruation.beginDate)}から生理開始で記録しました"),
+            ),
+          );
+        } else {
+          ScaffoldMessenger.of(context).showSnackBar(
+            const SnackBar(
+              duration: Duration(seconds: 2),
+              content: Text("生理期間を編集しました"),
+            ),
+          );
+        }
       },
       onDeleted: () {
         Navigator.of(context).pop();
