@@ -14,12 +14,13 @@ import 'package:pilll/entity/setting.codegen.dart';
 
 class SelectAppearanceModeModal extends HookConsumerWidget {
   final RecordPageStore store;
-  final RecordPageState state;
 
-  SelectAppearanceModeModal(this.store, this.state);
+  SelectAppearanceModeModal(this.store);
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {
+    final state = ref.watch(recordPageStoreProvider).value!;
+
     return Container(
       color: Colors.white,
       padding: const EdgeInsets.only(bottom: 20, top: 24, left: 16, right: 16),
@@ -81,7 +82,7 @@ class SelectAppearanceModeModal extends HookConsumerWidget {
     required bool isPremiumFunction,
   }) {
     return GestureDetector(
-      onTap: () {
+      onTap: () async {
         analytics.logEvent(
           name: "did_select_pill_sheet_appearance",
           parameters: {
@@ -91,7 +92,7 @@ class SelectAppearanceModeModal extends HookConsumerWidget {
         );
 
         if (state.premiumAndTrial.isPremium || state.premiumAndTrial.isTrial) {
-          store.asyncAction
+          await store.asyncAction
               .switchingAppearanceMode(mode: mode, setting: state.setting);
         } else if (isPremiumFunction) {
           if (state.premiumAndTrial.trialDeadlineDate == null) {
@@ -103,7 +104,7 @@ class SelectAppearanceModeModal extends HookConsumerWidget {
           }
         } else {
           // User selected non premium function mode
-          store.asyncAction
+          await store.asyncAction
               .switchingAppearanceMode(mode: mode, setting: state.setting);
         }
       },
@@ -135,12 +136,11 @@ class SelectAppearanceModeModal extends HookConsumerWidget {
 void showSelectAppearanceModeModal(
   BuildContext context,
   RecordPageStore store,
-  RecordPageState state,
 ) {
   analytics.setCurrentScreen(screenName: "SelectAppearanceModeModal");
   showModalBottomSheet(
     context: context,
-    builder: (context) => SelectAppearanceModeModal(store, state),
+    builder: (context) => SelectAppearanceModeModal(store),
     backgroundColor: Colors.transparent,
   );
 }

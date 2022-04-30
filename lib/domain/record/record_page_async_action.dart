@@ -343,10 +343,10 @@ class RecordPageAsyncAction {
     _pillSheetGroupDatastore.update(updatedPillSheetGroup);
   }
 
-  void switchingAppearanceMode(
-      {required PillSheetAppearanceMode mode, required Setting setting}) {
+  Future<void> switchingAppearanceMode(
+      {required PillSheetAppearanceMode mode, required Setting setting}) async {
     final updated = setting.copyWith(pillSheetAppearanceMode: mode);
-    _settingDatastore.update(updated);
+    await _settingDatastore.update(updated);
   }
 }
 

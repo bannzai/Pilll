@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_hooks/flutter_hooks.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:pilll/analytics.dart';
 import 'package:pilll/components/atoms/font.dart';
@@ -34,7 +35,7 @@ class SwitchingAppearanceMode extends StatelessWidget {
       ]),
       onTap: () {
         analytics.logEvent(name: "did_tapped_record_page_appearance_mode");
-        showSelectAppearanceModeModal(context, store, state);
+        showSelectAppearanceModeModal(context, store);
       },
     );
   }
