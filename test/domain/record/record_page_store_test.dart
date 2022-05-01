@@ -83,10 +83,6 @@ void main() {
         ],
       );
       final settingDatastore = MockSettingDatastore();
-      when(settingDatastore.fetch())
-          .thenAnswer((realInvocation) async => setting);
-      when(settingDatastore.stream())
-          .thenAnswer((realInvocation) => const Stream.empty());
       when(settingDatastore.updateWithBatch(batch, setting)).thenReturn(null);
 
       final container = ProviderContainer(
@@ -170,10 +166,6 @@ void main() {
         ],
       );
       final settingDatastore = MockSettingDatastore();
-      when(settingDatastore.fetch())
-          .thenAnswer((realInvocation) async => setting);
-      when(settingDatastore.stream())
-          .thenAnswer((realInvocation) => const Stream.empty());
       when(settingDatastore.updateWithBatch(batch, setting)).thenReturn(null);
 
       final container = ProviderContainer(
@@ -264,10 +256,6 @@ void main() {
         ],
       );
       final settingDatastore = MockSettingDatastore();
-      when(settingDatastore.fetch())
-          .thenAnswer((realInvocation) async => setting);
-      when(settingDatastore.stream())
-          .thenAnswer((realInvocation) => const Stream.empty());
       when(settingDatastore.updateWithBatch(batch, setting)).thenReturn(null);
 
       final container = ProviderContainer(
@@ -369,10 +357,6 @@ void main() {
         ],
       );
       final settingDatastore = MockSettingDatastore();
-      when(settingDatastore.fetch())
-          .thenAnswer((realInvocation) async => setting);
-      when(settingDatastore.stream())
-          .thenAnswer((realInvocation) => const Stream.empty());
       when(settingDatastore.updateWithBatch(batch, setting)).thenReturn(null);
 
       final container = ProviderContainer(
@@ -475,10 +459,6 @@ void main() {
         ],
       );
       final settingDatastore = MockSettingDatastore();
-      when(settingDatastore.fetch())
-          .thenAnswer((realInvocation) async => setting);
-      when(settingDatastore.stream())
-          .thenAnswer((realInvocation) => const Stream.empty());
       when(settingDatastore.updateWithBatch(batch, setting)).thenReturn(null);
 
       final container = ProviderContainer(
@@ -584,10 +564,6 @@ void main() {
         ],
       );
       final settingDatastore = MockSettingDatastore();
-      when(settingDatastore.fetch())
-          .thenAnswer((realInvocation) async => setting);
-      when(settingDatastore.stream())
-          .thenAnswer((realInvocation) => const Stream.empty());
       when(settingDatastore.updateWithBatch(batch, setting)).thenReturn(null);
 
       final container = ProviderContainer(
@@ -684,10 +660,6 @@ void main() {
           ],
         );
         final settingDatastore = MockSettingDatastore();
-        when(settingDatastore.fetch())
-            .thenAnswer((realInvocation) async => setting);
-        when(settingDatastore.stream())
-            .thenAnswer((realInvocation) => const Stream.empty());
         when(settingDatastore.updateWithBatch(batch, setting)).thenReturn(null);
 
         final container = ProviderContainer(
@@ -781,10 +753,6 @@ void main() {
           ],
         );
         final settingDatastore = MockSettingDatastore();
-        when(settingDatastore.fetch())
-            .thenAnswer((realInvocation) async => setting);
-        when(settingDatastore.stream())
-            .thenAnswer((realInvocation) => const Stream.empty());
         when(settingDatastore.updateWithBatch(batch, setting)).thenReturn(null);
 
         final container = ProviderContainer(
@@ -893,10 +861,6 @@ void main() {
           ],
         );
         final settingDatastore = MockSettingDatastore();
-        when(settingDatastore.fetch())
-            .thenAnswer((realInvocation) async => setting);
-        when(settingDatastore.stream())
-            .thenAnswer((realInvocation) => const Stream.empty());
         when(settingDatastore.updateWithBatch(batch, setting)).thenReturn(null);
 
         final container = ProviderContainer(
@@ -997,10 +961,6 @@ void main() {
           ],
         );
         final settingDatastore = MockSettingDatastore();
-        when(settingDatastore.fetch())
-            .thenAnswer((realInvocation) async => setting);
-        when(settingDatastore.stream())
-            .thenAnswer((realInvocation) => const Stream.empty());
         when(settingDatastore.updateWithBatch(batch, setting)).thenReturn(null);
 
         final container = ProviderContainer(
@@ -1107,10 +1067,6 @@ void main() {
           ],
         );
         final settingDatastore = MockSettingDatastore();
-        when(settingDatastore.fetch())
-            .thenAnswer((realInvocation) async => setting);
-        when(settingDatastore.stream())
-            .thenAnswer((realInvocation) => const Stream.empty());
         when(settingDatastore.updateWithBatch(batch, setting)).thenReturn(null);
 
         final container = ProviderContainer(
@@ -1220,10 +1176,6 @@ void main() {
           ],
         );
         final settingDatastore = MockSettingDatastore();
-        when(settingDatastore.fetch())
-            .thenAnswer((realInvocation) async => setting);
-        when(settingDatastore.stream())
-            .thenAnswer((realInvocation) => const Stream.empty());
         when(settingDatastore.updateWithBatch(batch, setting)).thenReturn(null);
 
         final container = ProviderContainer(
@@ -1338,10 +1290,6 @@ void main() {
           ],
         );
         final settingDatastore = MockSettingDatastore();
-        when(settingDatastore.fetch())
-            .thenAnswer((realInvocation) async => setting);
-        when(settingDatastore.stream())
-            .thenAnswer((realInvocation) => const Stream.empty());
         when(settingDatastore.updateWithBatch(batch, setting)).thenReturn(null);
 
         final container = ProviderContainer(
