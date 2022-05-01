@@ -39,11 +39,6 @@ void main() {
       final batchFactory = MockBatchFactory();
       final batch = MockWriteBatch();
       when(batchFactory.batch()).thenReturn(batch);
-      final authService = MockAuthService();
-      when(authService.isLinkedApple()).thenReturn(false);
-      when(authService.isLinkedGoogle()).thenReturn(false);
-      when(authService.stream())
-          .thenAnswer((realInvocation) => const Stream.empty());
 
       final pillSheet = PillSheet(
         typeInfo: PillSheetType.pillsheet_28_0.typeInfo,
@@ -107,7 +102,6 @@ void main() {
       final container = ProviderContainer(
         overrides: [
           batchFactoryProvider.overrideWithValue(batchFactory),
-          authServiceProvider.overrideWithValue(authService),
           settingDatastoreProvider.overrideWithValue(settingDatastore),
           pillSheetDatastoreProvider.overrideWithValue(pillSheetDatastore),
           pillSheetModifiedHistoryDatastoreProvider
@@ -132,11 +126,6 @@ void main() {
       final batchFactory = MockBatchFactory();
       final batch = MockWriteBatch();
       when(batchFactory.batch()).thenReturn(batch);
-      final authService = MockAuthService();
-      when(authService.isLinkedApple()).thenReturn(false);
-      when(authService.isLinkedGoogle()).thenReturn(false);
-      when(authService.stream())
-          .thenAnswer((realInvocation) => const Stream.empty());
 
       final pillSheet = PillSheet(
         typeInfo: PillSheetType.pillsheet_28_0.typeInfo,
@@ -211,7 +200,6 @@ void main() {
       final container = ProviderContainer(
         overrides: [
           batchFactoryProvider.overrideWithValue(batchFactory),
-          authServiceProvider.overrideWithValue(authService),
           settingDatastoreProvider.overrideWithValue(settingDatastore),
           pillSheetDatastoreProvider.overrideWithValue(pillSheetDatastore),
           pillSheetModifiedHistoryDatastoreProvider
@@ -238,11 +226,6 @@ void main() {
       final batchFactory = MockBatchFactory();
       final batch = MockWriteBatch();
       when(batchFactory.batch()).thenReturn(batch);
-      final authService = MockAuthService();
-      when(authService.isLinkedApple()).thenReturn(false);
-      when(authService.isLinkedGoogle()).thenReturn(false);
-      when(authService.stream())
-          .thenAnswer((realInvocation) => const Stream.empty());
 
       final pillSheet = PillSheet(
         id: "sheet_id",
@@ -322,7 +305,6 @@ void main() {
       final container = ProviderContainer(
         overrides: [
           batchFactoryProvider.overrideWithValue(batchFactory),
-          authServiceProvider.overrideWithValue(authService),
           settingDatastoreProvider.overrideWithValue(settingDatastore),
           pillSheetDatastoreProvider.overrideWithValue(pillSheetDatastore),
           pillSheetModifiedHistoryDatastoreProvider
@@ -348,11 +330,6 @@ void main() {
       final batchFactory = MockBatchFactory();
       final batch = MockWriteBatch();
       when(batchFactory.batch()).thenReturn(batch);
-      final authService = MockAuthService();
-      when(authService.isLinkedApple()).thenReturn(false);
-      when(authService.isLinkedGoogle()).thenReturn(false);
-      when(authService.stream())
-          .thenAnswer((realInvocation) => const Stream.empty());
 
       final pillSheet = PillSheet(
         id: "sheet_id",
@@ -444,7 +421,6 @@ void main() {
       final container = ProviderContainer(
         overrides: [
           batchFactoryProvider.overrideWithValue(batchFactory),
-          authServiceProvider.overrideWithValue(authService),
           settingDatastoreProvider.overrideWithValue(settingDatastore),
           pillSheetDatastoreProvider.overrideWithValue(pillSheetDatastore),
           pillSheetModifiedHistoryDatastoreProvider
@@ -471,11 +447,6 @@ void main() {
       final batchFactory = MockBatchFactory();
       final batch = MockWriteBatch();
       when(batchFactory.batch()).thenReturn(batch);
-      final authService = MockAuthService();
-      when(authService.isLinkedApple()).thenReturn(false);
-      when(authService.isLinkedGoogle()).thenReturn(false);
-      when(authService.stream())
-          .thenAnswer((realInvocation) => const Stream.empty());
 
       final pillSheet = PillSheet(
         id: "sheet_id",
@@ -567,7 +538,6 @@ void main() {
       final container = ProviderContainer(
         overrides: [
           batchFactoryProvider.overrideWithValue(batchFactory),
-          authServiceProvider.overrideWithValue(authService),
           settingDatastoreProvider.overrideWithValue(settingDatastore),
           pillSheetDatastoreProvider.overrideWithValue(pillSheetDatastore),
           pillSheetModifiedHistoryDatastoreProvider
@@ -594,11 +564,6 @@ void main() {
       final batchFactory = MockBatchFactory();
       final batch = MockWriteBatch();
       when(batchFactory.batch()).thenReturn(batch);
-      final authService = MockAuthService();
-      when(authService.isLinkedApple()).thenReturn(false);
-      when(authService.isLinkedGoogle()).thenReturn(false);
-      when(authService.stream())
-          .thenAnswer((realInvocation) => const Stream.empty());
 
       final pillSheet = PillSheet(
         id: "sheet_id",
@@ -693,7 +658,6 @@ void main() {
       final container = ProviderContainer(
         overrides: [
           batchFactoryProvider.overrideWithValue(batchFactory),
-          authServiceProvider.overrideWithValue(authService),
           settingDatastoreProvider.overrideWithValue(settingDatastore),
           pillSheetDatastoreProvider.overrideWithValue(pillSheetDatastore),
           pillSheetModifiedHistoryDatastoreProvider
@@ -724,11 +688,6 @@ void main() {
         final batchFactory = MockBatchFactory();
         final batch = MockWriteBatch();
         when(batchFactory.batch()).thenReturn(batch);
-        final authService = MockAuthService();
-        when(authService.isLinkedApple()).thenReturn(false);
-        when(authService.isLinkedGoogle()).thenReturn(false);
-        when(authService.stream())
-            .thenAnswer((realInvocation) => const Stream.empty());
 
         final pillSheet = PillSheet(
           id: "sheet_id",
@@ -810,7 +769,6 @@ void main() {
         final container = ProviderContainer(
           overrides: [
             batchFactoryProvider.overrideWithValue(batchFactory),
-            authServiceProvider.overrideWithValue(authService),
             settingDatastoreProvider.overrideWithValue(settingDatastore),
             pillSheetDatastoreProvider.overrideWithValue(pillSheetDatastore),
             pillSheetModifiedHistoryDatastoreProvider
@@ -840,11 +798,6 @@ void main() {
         final batchFactory = MockBatchFactory();
         final batch = MockWriteBatch();
         when(batchFactory.batch()).thenReturn(batch);
-        final authService = MockAuthService();
-        when(authService.isLinkedApple()).thenReturn(false);
-        when(authService.isLinkedGoogle()).thenReturn(false);
-        when(authService.stream())
-            .thenAnswer((realInvocation) => const Stream.empty());
 
         final pillSheet = PillSheet(
           id: "sheet_id",
@@ -924,7 +877,6 @@ void main() {
         final container = ProviderContainer(
           overrides: [
             batchFactoryProvider.overrideWithValue(batchFactory),
-            authServiceProvider.overrideWithValue(authService),
             settingDatastoreProvider.overrideWithValue(settingDatastore),
             pillSheetDatastoreProvider.overrideWithValue(pillSheetDatastore),
             pillSheetModifiedHistoryDatastoreProvider
@@ -954,11 +906,6 @@ void main() {
         final batchFactory = MockBatchFactory();
         final batch = MockWriteBatch();
         when(batchFactory.batch()).thenReturn(batch);
-        final authService = MockAuthService();
-        when(authService.isLinkedApple()).thenReturn(false);
-        when(authService.isLinkedGoogle()).thenReturn(false);
-        when(authService.stream())
-            .thenAnswer((realInvocation) => const Stream.empty());
 
         final pillSheet = PillSheet(
           id: "sheet_id",
@@ -1053,7 +1000,6 @@ void main() {
         final container = ProviderContainer(
           overrides: [
             batchFactoryProvider.overrideWithValue(batchFactory),
-            authServiceProvider.overrideWithValue(authService),
             settingDatastoreProvider.overrideWithValue(settingDatastore),
             pillSheetDatastoreProvider.overrideWithValue(pillSheetDatastore),
             pillSheetModifiedHistoryDatastoreProvider
@@ -1084,11 +1030,6 @@ void main() {
         final batchFactory = MockBatchFactory();
         final batch = MockWriteBatch();
         when(batchFactory.batch()).thenReturn(batch);
-        final authService = MockAuthService();
-        when(authService.isLinkedApple()).thenReturn(false);
-        when(authService.isLinkedGoogle()).thenReturn(false);
-        when(authService.stream())
-            .thenAnswer((realInvocation) => const Stream.empty());
 
         final pillSheet = PillSheet(
           id: "sheet_id",
@@ -1174,7 +1115,6 @@ void main() {
         final container = ProviderContainer(
           overrides: [
             batchFactoryProvider.overrideWithValue(batchFactory),
-            authServiceProvider.overrideWithValue(authService),
             settingDatastoreProvider.overrideWithValue(settingDatastore),
             pillSheetDatastoreProvider.overrideWithValue(pillSheetDatastore),
             pillSheetModifiedHistoryDatastoreProvider
@@ -1206,11 +1146,6 @@ void main() {
         final batchFactory = MockBatchFactory();
         final batch = MockWriteBatch();
         when(batchFactory.batch()).thenReturn(batch);
-        final authService = MockAuthService();
-        when(authService.isLinkedApple()).thenReturn(false);
-        when(authService.isLinkedGoogle()).thenReturn(false);
-        when(authService.stream())
-            .thenAnswer((realInvocation) => const Stream.empty());
 
         final pillSheet = PillSheet(
           id: "1",
@@ -1301,7 +1236,6 @@ void main() {
         final container = ProviderContainer(
           overrides: [
             batchFactoryProvider.overrideWithValue(batchFactory),
-            authServiceProvider.overrideWithValue(authService),
             settingDatastoreProvider.overrideWithValue(settingDatastore),
             pillSheetDatastoreProvider.overrideWithValue(pillSheetDatastore),
             pillSheetModifiedHistoryDatastoreProvider
@@ -1332,11 +1266,6 @@ void main() {
         final batchFactory = MockBatchFactory();
         final batch = MockWriteBatch();
         when(batchFactory.batch()).thenReturn(batch);
-        final authService = MockAuthService();
-        when(authService.isLinkedApple()).thenReturn(false);
-        when(authService.isLinkedGoogle()).thenReturn(false);
-        when(authService.stream())
-            .thenAnswer((realInvocation) => const Stream.empty());
 
         final pillSheet = PillSheet(
           id: "1",
@@ -1431,7 +1360,6 @@ void main() {
         final container = ProviderContainer(
           overrides: [
             batchFactoryProvider.overrideWithValue(batchFactory),
-            authServiceProvider.overrideWithValue(authService),
             settingDatastoreProvider.overrideWithValue(settingDatastore),
             pillSheetDatastoreProvider.overrideWithValue(pillSheetDatastore),
             pillSheetModifiedHistoryDatastoreProvider
@@ -1460,11 +1388,6 @@ void main() {
         final batchFactory = MockBatchFactory();
         final batch = MockWriteBatch();
         when(batchFactory.batch()).thenReturn(batch);
-        final authService = MockAuthService();
-        when(authService.isLinkedApple()).thenReturn(false);
-        when(authService.isLinkedGoogle()).thenReturn(false);
-        when(authService.stream())
-            .thenAnswer((realInvocation) => const Stream.empty());
 
         final pillSheet = PillSheet(
           id: "1",
@@ -1566,7 +1489,6 @@ void main() {
         final container = ProviderContainer(
           overrides: [
             batchFactoryProvider.overrideWithValue(batchFactory),
-            authServiceProvider.overrideWithValue(authService),
             settingDatastoreProvider.overrideWithValue(settingDatastore),
             pillSheetDatastoreProvider.overrideWithValue(pillSheetDatastore),
             pillSheetModifiedHistoryDatastoreProvider
