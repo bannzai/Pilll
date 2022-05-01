@@ -45,6 +45,10 @@ void main() {
           ],
           child: MaterialApp(
             home: RecordPageButton(
+              pillSheetGroup: PillSheetGroup(
+                  pillSheets: [pillSheet],
+                  createdAt: now(),
+                  pillSheetIDs: ["id"]),
               currentPillSheet: pillSheet,
             ),
           ),
@@ -70,6 +74,10 @@ void main() {
         ],
         child: MaterialApp(
           home: RecordPageButton(
+            pillSheetGroup: PillSheetGroup(
+                pillSheets: [pillSheet],
+                createdAt: now(),
+                pillSheetIDs: ["id"]),
             currentPillSheet: pillSheet,
           ),
         ),
