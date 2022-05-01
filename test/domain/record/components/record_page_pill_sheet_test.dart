@@ -1,49 +1,16 @@
 import 'package:mockito/mockito.dart';
 import 'package:pilll/domain/record/components/pill_sheet/components/pill_number.dart';
 import 'package:pilll/domain/record/components/pill_sheet/record_page_pill_sheet.dart';
-import 'package:pilll/domain/record/record_page_state.codegen.dart';
 import 'package:pilll/entity/pill_sheet.codegen.dart';
 import 'package:pilll/entity/pill_sheet_group.codegen.dart';
 import 'package:pilll/entity/pill_sheet_type.dart';
 import 'package:flutter_test/flutter_test.dart';
 import 'package:pilll/entity/setting.codegen.dart';
-import 'package:pilll/provider/premium_and_trial.codegen.dart';
 import 'package:pilll/service/day.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
+import '../../../helper/fake.dart';
 import '../../../helper/mock.mocks.dart';
-
-class _FakePremiumAndTrial extends Mock implements PremiumAndTrial {
-  _FakePremiumAndTrial({
-// ignore: unused_element
-    this.fakeIsPremium = false,
-// ignore: unused_element
-    this.fakeIsTrial = false,
-// ignore: unused_element
-    this.fakeTrialDeadlineDate,
-// ignore: unused_element
-    this.fakeDiscountEntitlementDeadlineDate,
-// ignore: unused_element
-    this.fakeIsExpiredDiscountEntitlements = false,
-  });
-  final DateTime? fakeTrialDeadlineDate;
-  final DateTime? fakeDiscountEntitlementDeadlineDate;
-  final bool fakeIsPremium;
-  final bool fakeIsTrial;
-  final bool fakeIsExpiredDiscountEntitlements;
-
-  @override
-  bool get isPremium => fakeIsPremium;
-  @override
-  bool get isTrial => fakeIsTrial;
-  @override
-  bool get hasDiscountEntitlement => fakeIsExpiredDiscountEntitlements;
-  @override
-  DateTime? get trialDeadlineDate => fakeTrialDeadlineDate;
-  @override
-  DateTime? get discountEntitlementDeadlineDate =>
-      fakeDiscountEntitlementDeadlineDate;
-}
 
 void main() {
   setUp(() {
@@ -87,7 +54,7 @@ void main() {
             pageIndex: 0,
             setting: setting,
             premiumAndTrial:
-                _FakePremiumAndTrial(fakeIsPremium: true, fakeIsTrial: true),
+                FakePremiumAndTrial(fakeIsPremium: true, fakeIsTrial: true),
           );
 
           if (pillNumberIntoPillSheet < pillNumberForFromMenstruation) {
@@ -133,8 +100,8 @@ void main() {
         for (int i = 0; i < 28; i++) {
           final pillNumberIntoPillSheet = i + 1;
           final widget = RecordPagePillSheet.textOfPillNumber(
-              premiumAndTrial: _FakePremiumAndTrial(
-                  fakeIsPremium: false, fakeIsTrial: false),
+              premiumAndTrial:
+                  FakePremiumAndTrial(fakeIsPremium: false, fakeIsTrial: false),
               pillSheetGroup: pillSheetGroup,
               pillSheet: pillSheet,
               pillNumberIntoPillSheet: pillNumberIntoPillSheet,
@@ -186,7 +153,7 @@ void main() {
           final pillNumberIntoPillSheet = i + 1;
           final widget = RecordPagePillSheet.textOfPillNumber(
               premiumAndTrial:
-                  _FakePremiumAndTrial(fakeIsPremium: true, fakeIsTrial: true),
+                  FakePremiumAndTrial(fakeIsPremium: true, fakeIsTrial: true),
               pillSheetGroup: pillSheetGroup,
               pillSheet: pillSheet,
               pillNumberIntoPillSheet: pillNumberIntoPillSheet,
@@ -239,7 +206,7 @@ void main() {
           final pillNumberIntoPillSheet = i + 1;
           final widget = RecordPagePillSheet.textOfPillNumber(
               premiumAndTrial:
-                  _FakePremiumAndTrial(fakeIsPremium: true, fakeIsTrial: true),
+                  FakePremiumAndTrial(fakeIsPremium: true, fakeIsTrial: true),
               pillSheetGroup: pillSheetGroup,
               pillSheet: pillSheet,
               pillNumberIntoPillSheet: pillNumberIntoPillSheet,
@@ -290,8 +257,8 @@ void main() {
         for (int i = 0; i < 28; i++) {
           final pillNumberIntoPillSheet = i + 1;
           final widget = RecordPagePillSheet.textOfPillNumber(
-              premiumAndTrial: _FakePremiumAndTrial(
-                  fakeIsPremium: false, fakeIsTrial: false),
+              premiumAndTrial:
+                  FakePremiumAndTrial(fakeIsPremium: false, fakeIsTrial: false),
               pillSheetGroup: pillSheetGroup,
               pillSheet: pillSheet,
               pillNumberIntoPillSheet: pillNumberIntoPillSheet,
@@ -343,7 +310,7 @@ void main() {
           final pillNumberIntoPillSheet = i + 1;
           final widget = RecordPagePillSheet.textOfPillNumber(
               premiumAndTrial:
-                  _FakePremiumAndTrial(fakeIsPremium: true, fakeIsTrial: true),
+                  FakePremiumAndTrial(fakeIsPremium: true, fakeIsTrial: true),
               pillSheetGroup: pillSheetGroup,
               pillSheet: pillSheet,
               pillNumberIntoPillSheet: pillNumberIntoPillSheet,
@@ -395,7 +362,7 @@ void main() {
           final pillNumberIntoPillSheet = i + 1;
           final widget = RecordPagePillSheet.textOfPillNumber(
               premiumAndTrial:
-                  _FakePremiumAndTrial(fakeIsPremium: true, fakeIsTrial: true),
+                  FakePremiumAndTrial(fakeIsPremium: true, fakeIsTrial: true),
               pillSheetGroup: pillSheetGroup,
               pillSheet: pillSheet,
               pillNumberIntoPillSheet: pillNumberIntoPillSheet,
@@ -444,8 +411,8 @@ void main() {
         for (int i = 0; i < 28; i++) {
           final pillNumberIntoPillSheet = i + 1;
           final widget = RecordPagePillSheet.textOfPillNumber(
-              premiumAndTrial: _FakePremiumAndTrial(
-                  fakeIsPremium: false, fakeIsTrial: false),
+              premiumAndTrial:
+                  FakePremiumAndTrial(fakeIsPremium: false, fakeIsTrial: false),
               pillSheetGroup: pillSheetGroup,
               pillSheet: pillSheet,
               pillNumberIntoPillSheet: pillNumberIntoPillSheet,
@@ -497,7 +464,7 @@ void main() {
           final pillNumberIntoPillSheet = i + 1;
           final widget = RecordPagePillSheet.textOfPillNumber(
               premiumAndTrial:
-                  _FakePremiumAndTrial(fakeIsPremium: true, fakeIsTrial: true),
+                  FakePremiumAndTrial(fakeIsPremium: true, fakeIsTrial: true),
               pillSheetGroup: pillSheetGroup,
               pillSheet: pillSheet,
               pillNumberIntoPillSheet: pillNumberIntoPillSheet,
