@@ -65,7 +65,7 @@ void main() {
       final pillSheetGroupDatastore = MockPillSheetGroupDatastore();
       when(pillSheetGroupDatastore.fetchLatest())
           .thenAnswer((realInvocation) async => pillSheetGroup);
-      when(pillSheetGroupDatastore.streamForLatest())
+      when(pillSheetGroupDatastore.latestPillSheetGroupStream())
           .thenAnswer((realInvocation) => const Stream.empty());
       when(pillSheetGroupDatastore.register(batch, pillSheetGroup))
           .thenReturn(pillSheetGroup.copyWith(id: "group_id"));
@@ -167,7 +167,7 @@ void main() {
       final pillSheetGroupDatastore = MockPillSheetGroupDatastore();
       when(pillSheetGroupDatastore.fetchLatest())
           .thenAnswer((realInvocation) async => pillSheetGroup);
-      when(pillSheetGroupDatastore.streamForLatest())
+      when(pillSheetGroupDatastore.latestPillSheetGroupStream())
           .thenAnswer((realInvocation) => const Stream.empty());
       when(pillSheetGroupDatastore.register(batch, pillSheetGroup))
           .thenReturn(pillSheetGroup.copyWith(id: "group_id"));
@@ -273,7 +273,7 @@ void main() {
       final pillSheetGroupDatastore = MockPillSheetGroupDatastore();
       when(pillSheetGroupDatastore.fetchLatest())
           .thenAnswer((realInvocation) async => pillSheetGroup);
-      when(pillSheetGroupDatastore.streamForLatest())
+      when(pillSheetGroupDatastore.latestPillSheetGroupStream())
           .thenAnswer((realInvocation) => const Stream.empty());
       when(pillSheetGroupDatastore.updateWithBatch(
               batch, updatedPillSheetGroup))
@@ -394,7 +394,7 @@ void main() {
       final pillSheetGroupDatastore = MockPillSheetGroupDatastore();
       when(pillSheetGroupDatastore.fetchLatest())
           .thenAnswer((realInvocation) async => pillSheetGroup);
-      when(pillSheetGroupDatastore.streamForLatest())
+      when(pillSheetGroupDatastore.latestPillSheetGroupStream())
           .thenAnswer((realInvocation) => const Stream.empty());
       when(pillSheetGroupDatastore.updateWithBatch(
               batch, updatedPillSheetGroup))
@@ -517,7 +517,7 @@ void main() {
       final pillSheetGroupDatastore = MockPillSheetGroupDatastore();
       when(pillSheetGroupDatastore.fetchLatest())
           .thenAnswer((realInvocation) async => pillSheetGroup);
-      when(pillSheetGroupDatastore.streamForLatest())
+      when(pillSheetGroupDatastore.latestPillSheetGroupStream())
           .thenAnswer((realInvocation) => const Stream.empty());
       when(pillSheetGroupDatastore.updateWithBatch(
               batch, updatedPillSheetGroup))
@@ -643,7 +643,7 @@ void main() {
       final pillSheetGroupDatastore = MockPillSheetGroupDatastore();
       when(pillSheetGroupDatastore.fetchLatest())
           .thenAnswer((realInvocation) async => pillSheetGroup);
-      when(pillSheetGroupDatastore.streamForLatest())
+      when(pillSheetGroupDatastore.latestPillSheetGroupStream())
           .thenAnswer((realInvocation) => const Stream.empty());
       when(pillSheetGroupDatastore.updateWithBatch(
               batch, updatedPillSheetGroup))
@@ -762,7 +762,7 @@ void main() {
         final pillSheetGroupDatastore = MockPillSheetGroupDatastore();
         when(pillSheetGroupDatastore.fetchLatest())
             .thenAnswer((realInvocation) async => pillSheetGroup);
-        when(pillSheetGroupDatastore.streamForLatest())
+        when(pillSheetGroupDatastore.latestPillSheetGroupStream())
             .thenAnswer((realInvocation) => const Stream.empty());
         when(pillSheetGroupDatastore.updateWithBatch(
                 batch, updatedPillSheetGroup))
@@ -876,7 +876,7 @@ void main() {
         final pillSheetGroupDatastore = MockPillSheetGroupDatastore();
         when(pillSheetGroupDatastore.fetchLatest())
             .thenAnswer((realInvocation) async => pillSheetGroup);
-        when(pillSheetGroupDatastore.streamForLatest())
+        when(pillSheetGroupDatastore.latestPillSheetGroupStream())
             .thenAnswer((realInvocation) => const Stream.empty());
         when(pillSheetGroupDatastore.updateWithBatch(
                 batch, updatedPillSheetGroup))
@@ -1004,7 +1004,7 @@ void main() {
         final pillSheetGroupDatastore = MockPillSheetGroupDatastore();
         when(pillSheetGroupDatastore.fetchLatest())
             .thenAnswer((realInvocation) async => pillSheetGroup);
-        when(pillSheetGroupDatastore.streamForLatest())
+        when(pillSheetGroupDatastore.latestPillSheetGroupStream())
             .thenAnswer((realInvocation) => const Stream.empty());
         when(pillSheetGroupDatastore.updateWithBatch(
                 batch, updatedPillSheetGroup))
@@ -1128,7 +1128,7 @@ void main() {
         final pillSheetGroupDatastore = MockPillSheetGroupDatastore();
         when(pillSheetGroupDatastore.fetchLatest())
             .thenAnswer((realInvocation) async => pillSheetGroup);
-        when(pillSheetGroupDatastore.streamForLatest())
+        when(pillSheetGroupDatastore.latestPillSheetGroupStream())
             .thenAnswer((realInvocation) => const Stream.empty());
         when(pillSheetGroupDatastore.updateWithBatch(
                 batch, updatedPillSheetGroup))
@@ -1252,7 +1252,7 @@ void main() {
         final pillSheetGroupDatastore = MockPillSheetGroupDatastore();
         when(pillSheetGroupDatastore.fetchLatest())
             .thenAnswer((realInvocation) async => pillSheetGroup);
-        when(pillSheetGroupDatastore.streamForLatest())
+        when(pillSheetGroupDatastore.latestPillSheetGroupStream())
             .thenAnswer((realInvocation) => const Stream.empty());
         when(pillSheetGroupDatastore.updateWithBatch(
                 batch, updatedPillSheetGroup))
@@ -1384,7 +1384,7 @@ void main() {
         final pillSheetGroupDatastore = MockPillSheetGroupDatastore();
         when(pillSheetGroupDatastore.fetchLatest())
             .thenAnswer((realInvocation) async => pillSheetGroup);
-        when(pillSheetGroupDatastore.streamForLatest())
+        when(pillSheetGroupDatastore.latestPillSheetGroupStream())
             .thenAnswer((realInvocation) => const Stream.empty());
         when(pillSheetGroupDatastore.updateWithBatch(
                 batch, updatedPillSheetGroup))
@@ -1518,7 +1518,7 @@ void main() {
         final pillSheetGroupDatastore = MockPillSheetGroupDatastore();
         when(pillSheetGroupDatastore.fetchLatest())
             .thenAnswer((realInvocation) async => pillSheetGroup);
-        when(pillSheetGroupDatastore.streamForLatest())
+        when(pillSheetGroupDatastore.latestPillSheetGroupStream())
             .thenAnswer((realInvocation) => const Stream.empty());
         when(pillSheetGroupDatastore.updateWithBatch(
                 batch, updatedPillSheetGroup))

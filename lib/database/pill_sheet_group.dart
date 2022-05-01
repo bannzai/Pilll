@@ -11,27 +11,22 @@ class PillSheetGroupDatastore {
 
   PillSheetGroupDatastore(this._database);
 
-  Query _latestQuery() {
+  Query<PillSheetGroup> _latestQuery() {
     return _database
         .pillSheetGroupsReference()
         .orderBy(PillSheetGroupFirestoreKeys.createdAt)
         .limitToLast(1);
   }
 
-  PillSheetGroup? _map(QuerySnapshot snapshot) {
+  PillSheetGroup? _filter(QuerySnapshot<PillSheetGroup> snapshot) {
     if (snapshot.docs.isEmpty) return null;
     if (!snapshot.docs.last.exists) return null;
-
-    final document = snapshot.docs.last;
-    final data = document.data() as Map<String, dynamic>;
-    data.putIfAbsent("id", () => document.id);
-
-    return PillSheetGroup.fromJson(data);
+    return snapshot.docs.last.data();
   }
 
   Future<PillSheetGroup?> fetchLatest() async {
     final snapshot = await _latestQuery().get();
-    return _map(snapshot);
+    return _filter(snapshot);
   }
 
   Future<PillSheetGroup?> fetchBeforePillSheetGroup() async {
@@ -44,20 +39,16 @@ class PillSheetGroupDatastore {
       return null;
     }
 
-    final document = snapshot.docs[0];
-    final data = document.data() as Map<String, dynamic>;
-    data.putIfAbsent("id", () => document.id);
-
-    return PillSheetGroup.fromJson(data);
+    return snapshot.docs[0].data();
   }
 
-  Stream<PillSheetGroup> streamForLatest() {
-    return _latestQuery()
-        .snapshots()
-        .map(((event) => _map(event)))
-        .where((event) => event != null)
-        .cast();
-  }
+  late Stream<PillSheetGroup> _latestPillSheetGroupStream = _latestQuery()
+      .snapshots()
+      .map(((event) => _filter(event)))
+      .where((event) => event != null)
+      .cast();
+  Stream<PillSheetGroup> latestPillSheetGroupStream() =>
+      _latestPillSheetGroupStream;
 
   // Return new PillSheet document id
   PillSheetGroup register(WriteBatch batch, PillSheetGroup pillSheetGroup) {
@@ -65,7 +56,7 @@ class PillSheetGroupDatastore {
 
     final copied = pillSheetGroup.copyWith(createdAt: DateTime.now());
     final newDocument = _database.pillSheetGroupsReference().doc();
-    batch.set(newDocument, copied.toJson(), SetOptions(merge: true));
+    batch.set(newDocument, copied, SetOptions(merge: true));
     return copied.copyWith(id: newDocument.id);
   }
 
@@ -73,20 +64,20 @@ class PillSheetGroupDatastore {
     if (pillSheetGroup.deletedAt != null) throw PillSheetGroupAlreadyDeleted();
 
     final updated = pillSheetGroup.copyWith(deletedAt: DateTime.now());
-    batch.set(_database.pillSheetGroupReference(pillSheetGroup.id!),
-        updated.toJson(), SetOptions(merge: true));
+    batch.set(_database.pillSheetGroupReference(pillSheetGroup.id!), updated,
+        SetOptions(merge: true));
     return updated;
   }
 
   Future<void> update(PillSheetGroup pillSheetGroup) async {
     await _database
         .pillSheetGroupReference(pillSheetGroup.id!)
-        .update(pillSheetGroup.toJson());
+        .set(pillSheetGroup, SetOptions(merge: true));
   }
 
   void updateWithBatch(WriteBatch batch, PillSheetGroup pillSheetGroup) {
-    final json = pillSheetGroup.toJson();
-    batch.update(_database.pillSheetGroupReference(pillSheetGroup.id!), json);
+    batch.set(_database.pillSheetGroupReference(pillSheetGroup.id!),
+        pillSheetGroup, SetOptions(merge: true));
   }
 }
 

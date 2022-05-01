@@ -124,7 +124,7 @@ void main() {
         final pillSheetGroupDatastore = MockPillSheetGroupDatastore();
         when(pillSheetGroupDatastore.fetchLatest())
             .thenAnswer((realInvocation) => Future.value(pillSheetGroup));
-        when(pillSheetGroupDatastore.streamForLatest())
+        when(pillSheetGroupDatastore.latestPillSheetGroupStream())
             .thenAnswer((realInvocation) => const Stream.empty());
 
         final store = MenstruationStore(
@@ -208,7 +208,7 @@ void main() {
         final pillSheetGroupDatastore = MockPillSheetGroupDatastore();
         when(pillSheetGroupDatastore.fetchLatest())
             .thenAnswer((realInvocation) => Future.value(pillSheetGroup));
-        when(pillSheetGroupDatastore.streamForLatest())
+        when(pillSheetGroupDatastore.latestPillSheetGroupStream())
             .thenAnswer((realInvocation) => const Stream.empty());
 
         final store = MenstruationStore(
@@ -287,7 +287,7 @@ void main() {
         final pillSheetGroupDatastore = MockPillSheetGroupDatastore();
         when(pillSheetGroupDatastore.fetchLatest())
             .thenAnswer((realInvocation) => Future.value(pillSheetGroup));
-        when(pillSheetGroupDatastore.streamForLatest())
+        when(pillSheetGroupDatastore.latestPillSheetGroupStream())
             .thenAnswer((realInvocation) => const Stream.empty());
 
         final store = MenstruationStore(
@@ -367,7 +367,7 @@ void main() {
         final pillSheetGroupDatastore = MockPillSheetGroupDatastore();
         when(pillSheetGroupDatastore.fetchLatest())
             .thenAnswer((realInvocation) => Future.value(pillSheetGroup));
-        when(pillSheetGroupDatastore.streamForLatest())
+        when(pillSheetGroupDatastore.latestPillSheetGroupStream())
             .thenAnswer((realInvocation) => const Stream.empty());
 
         final store = MenstruationStore(

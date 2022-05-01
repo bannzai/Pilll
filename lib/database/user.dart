@@ -22,36 +22,33 @@ class UserDatastore {
   final DatabaseConnection _database;
   UserDatastore(this._database);
 
-  Future<User> prepare(String uid) async {
-    print("call prepare for $uid");
+  Future<User> fetchOrCreate(String uid) async {
+    print("call fetchOrCreate for $uid");
     final user = await fetch().catchError((error) {
       if (error is UserNotFound) {
         return _create(uid).then((_) => fetch());
       }
       throw FormatException(
-          "cause exception when failed fetch and create user for $error, stackTrace: ${StackTrace.current.toString()}");
+          "cause exception when failed fetch and create user. error: $error, stackTrace: ${StackTrace.current.toString()}");
     });
     return user;
   }
 
-  Future<User> fetch() {
+  Future<User> fetch() async {
     print("call fetch for ${_database.userID}");
-    return _database.userReference().get().then((document) {
-      if (!document.exists) {
-        print("user does not exists ${_database.userID}");
-        throw UserNotFound();
-      }
-      print("fetched user ${document.data()}, id: ${_database.userID}");
-      return User.fromJson(document.data() as Map<String, dynamic>);
-    });
+
+    final document = await _database.userReference().get();
+    if (!document.exists) {
+      print("user does not exists ${_database.userID}");
+      throw UserNotFound();
+    }
+
+    return document.data()!;
   }
 
-  Stream<User> stream() {
-    return _database
-        .userReference()
-        .snapshots(includeMetadataChanges: true)
-        .map((event) => User.fromJson(event.data() as Map<String, dynamic>));
-  }
+  late Stream<User> _stream =
+      _database.userReference().snapshots().map((event) => event.data()!);
+  Stream<User> stream() => _stream;
 
   Future<void> updatePurchaseInfo({
     required bool? isActivated,
@@ -61,7 +58,7 @@ class UserDatastore {
     required List<String> activeSubscriptions,
     required String? originalPurchaseDate,
   }) async {
-    await _database.userReference().set({
+    await _database.userRawReference().set({
       if (isActivated != null) UserFirestoreFieldKeys.isPremium: isActivated,
       UserFirestoreFieldKeys.purchaseAppID: purchaseAppID
     }, SetOptions(merge: true));
@@ -80,7 +77,7 @@ class UserDatastore {
     };
     if (privates.isNotEmpty) {
       await _database
-          .userPrivateReference()
+          .userPrivateRawReference()
           .set({...privates}, SetOptions(merge: true));
     }
   }
@@ -88,7 +85,7 @@ class UserDatastore {
   Future<void> syncPurchaseInfo({
     required bool isActivated,
   }) async {
-    await _database.userReference().set({
+    await _database.userRawReference().set({
       UserFirestoreFieldKeys.isPremium: isActivated,
     }, SetOptions(merge: true));
   }
@@ -100,7 +97,7 @@ class UserDatastore {
   }
 
   Future<void> setFlutterMigrationFlag() {
-    return _database.userReference().set(
+    return _database.userRawReference().set(
       {UserFirestoreFieldKeys.migratedFlutter: true},
       SetOptions(merge: true),
     );
@@ -111,7 +108,7 @@ class UserDatastore {
     final sharedPreferences = await SharedPreferences.getInstance();
     final anonymousUserID =
         sharedPreferences.getString(StringKey.lastSignInAnonymousUID);
-    return _database.userReference().set(
+    return _database.userRawReference().set(
       {
         if (anonymousUserID != null)
           UserFirestoreFieldKeys.anonymousUserID: anonymousUserID,
@@ -123,27 +120,27 @@ class UserDatastore {
 
   Future<void> registerRemoteNotificationToken(String? token) {
     print("token: $token");
-    return _database.userPrivateReference().set(
+    return _database.userPrivateRawReference().set(
       {UserPrivateFirestoreFieldKeys.fcmToken: token},
       SetOptions(merge: true),
     );
   }
 
   Future<void> linkApple(String? email) async {
-    await _database.userReference().set({
+    await _database.userRawReference().set({
       UserFirestoreFieldKeys.isAnonymous: false,
     }, SetOptions(merge: true));
-    return _database.userPrivateReference().set({
+    return _database.userPrivateRawReference().set({
       if (email != null) UserPrivateFirestoreFieldKeys.appleEmail: email,
       UserPrivateFirestoreFieldKeys.isLinkedApple: true,
     }, SetOptions(merge: true));
   }
 
   Future<void> linkGoogle(String? email) async {
-    await _database.userReference().set({
+    await _database.userRawReference().set({
       UserFirestoreFieldKeys.isAnonymous: false,
     }, SetOptions(merge: true));
-    return _database.userPrivateReference().set({
+    return _database.userPrivateRawReference().set({
       if (email != null) UserPrivateFirestoreFieldKeys.googleEmail: email,
       UserPrivateFirestoreFieldKeys.isLinkedGoogle: true,
     }, SetOptions(merge: true));
@@ -155,7 +152,7 @@ class UserDatastore {
       isAutomaticallyCreatePillSheet: true,
     );
 
-    return _database.userReference().set({
+    return _database.userRawReference().set({
       UserFirestoreFieldKeys.isTrial: true,
       UserFirestoreFieldKeys.beginTrialDate: now(),
       UserFirestoreFieldKeys.trialDeadlineDate:
@@ -171,14 +168,10 @@ class UserDatastore {
       elements: elements,
       message: message,
     );
-    return _database.userPrivateReference().set({
+    return _database.userPrivateRawReference().set({
       UserPrivateFirestoreFieldKeys.premiumFunctionSurvey:
           premiumFunctionSurvey.toJson()
     }, SetOptions(merge: true));
-  }
-
-  Future<DocumentSnapshot> _fetchRawDocumentSnapshot() {
-    return _database.userReference().get();
   }
 
   // NOTE: 下位互換のために一時的にhasDiscountEntitlementをtrueにしていくスクリプト。
@@ -192,29 +185,27 @@ class UserDatastore {
     } else {
       hasDiscountEntitlement = !now().isAfter(discountEntitlementDeadlineDate);
     }
-    return _database.userReference().set({
+    return _database.userRawReference().set({
       UserFirestoreFieldKeys.hasDiscountEntitlement: hasDiscountEntitlement,
     }, SetOptions(merge: true));
   }
 }
 
 extension SaveUserLaunchInfo on UserDatastore {
-  saveUserLaunchInfo() {
-    unawaited(_recordUserIDs());
+  saveUserLaunchInfo(User user) {
+    unawaited(_recordUserIDs(user));
     unawaited(_saveLaunchInfo());
     unawaited(_saveStats());
   }
 
-  Future<void> _recordUserIDs() async {
+  Future<void> _recordUserIDs(User user) async {
     try {
-      final document = await _fetchRawDocumentSnapshot();
-      final user = User.fromJson(document.data() as Map<String, dynamic>);
-      final documentID = document.id;
+      final userID = user.id!;
       final sharedPreferences = await SharedPreferences.getInstance();
 
       List<String> userDocumentIDSets = user.userDocumentIDSets;
-      if (!userDocumentIDSets.contains(documentID)) {
-        userDocumentIDSets.add(documentID);
+      if (!userDocumentIDSets.contains(userID)) {
+        userDocumentIDSets.add(userID);
       }
 
       final lastSignInAnonymousUID =
@@ -232,7 +223,7 @@ extension SaveUserLaunchInfo on UserDatastore {
         firebaseCurrentUserIDSets.add(firebaseCurrentUserID);
       }
 
-      await _database.userReference().set(
+      await _database.userRawReference().set(
         {
           UserFirestoreFieldKeys.userDocumentIDSets: userDocumentIDSets,
           UserFirestoreFieldKeys.firebaseCurrentUserIDSets:
@@ -254,7 +245,7 @@ extension SaveUserLaunchInfo on UserDatastore {
           appName: info.appName,
           buildNumber: info.buildNumber,
           appVersion: info.version);
-      return _database.userReference().set(
+      return _database.userRawReference().set(
           {UserFirestoreFieldKeys.packageInfo: packageInfo.toJson()},
           SetOptions(merge: true));
     });
@@ -276,7 +267,7 @@ extension SaveUserLaunchInfo on UserDatastore {
     final timeZoneName = now.timeZoneName;
     final timeZoneOffset = now.timeZoneOffset;
 
-    return _database.userReference().set({
+    return _database.userRawReference().set({
       "stats": {
         "lastLoginAt": now,
         "beginingVersion": beginingVersion,

@@ -67,6 +67,7 @@ class User with _$User {
   const User._();
   @JsonSerializable(explicitToJson: true)
   const factory User({
+    String? id,
     @JsonKey(name: "settings")
         Setting? setting,
     @Default(false)

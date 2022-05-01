@@ -14,32 +14,30 @@ class SettingDatastore {
   SettingDatastore(this._database);
 
   Future<Setting> fetch() {
-    return _database.userReference().get().then((event) => Setting.fromJson(
-        (event.data()
-            as Map<String, dynamic>)[UserFirestoreFieldKeys.settings]));
-  }
-
-  Stream<Setting> stream() {
     return _database
         .userReference()
-        .snapshots()
-        .map((event) => event.data())
-        .where((data) => data != null)
-        .map((data) => Setting.fromJson(
-            (data as Map<String, dynamic>)[UserFirestoreFieldKeys.settings]))
-        .cast();
+        .get()
+        .then((event) => event.data()!.setting!);
   }
+
+  late Stream<Setting> _stream = _database
+      .userReference()
+      .snapshots()
+      .map((event) => event.data()?.setting)
+      .where((data) => data != null)
+      .cast();
+  Stream<Setting> stream() => _stream;
 
   Future<Setting> update(Setting setting) {
     return _database
-        .userReference()
+        .userRawReference()
         .update({UserFirestoreFieldKeys.settings: setting.toJson()}).then(
             (_) => setting);
   }
 
   void updateWithBatch(WriteBatch batch, Setting setting) {
     batch.set(
-      _database.userReference(),
+      _database.userRawReference(),
       {UserFirestoreFieldKeys.settings: setting.toJson()},
       SetOptions(merge: true),
     );

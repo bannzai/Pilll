@@ -133,7 +133,7 @@ class RecordPageStore extends StateNotifier<RecordPageState> {
   void _subscribe() {
     _pillSheetGroupCanceller?.cancel();
     _pillSheetGroupCanceller =
-        _pillSheetGroupDatastore.streamForLatest().listen((event) {
+        _pillSheetGroupDatastore.latestPillSheetGroupStream().listen((event) {
       state = state.copyWith(pillSheetGroup: event);
     });
     _settingCanceller?.cancel();

@@ -72,6 +72,25 @@ class SettingStateStore extends StateNotifier<SettingState> {
         }
       });
 
+      Future(() async {
+        final setting = await _settingDatastore.fetch();
+        state = state.copyWith(setting: setting);
+      });
+
+      Future(() async {
+        final pillsheetGroup = await _pillSheetGroupDatastore.fetchLatest();
+        state = state.copyWith(latestPillSheetGroup: pillsheetGroup);
+      });
+
+      Future(() async {
+        final user = await _userDatastore.fetch();
+        state = state.copyWith(
+          isPremium: user.isPremium,
+          isTrial: user.isTrial,
+          trialDeadlineDate: user.trialDeadlineDate,
+        );
+      });
+
       _subscribe();
     } catch (exception) {
       state = state.copyWith(exception: exception);
@@ -88,7 +107,7 @@ class SettingStateStore extends StateNotifier<SettingState> {
       state = state.copyWith(setting: event);
     });
     _pillSheetGroupCanceller =
-        _pillSheetGroupDatastore.streamForLatest().listen((event) {
+        _pillSheetGroupDatastore.latestPillSheetGroupStream().listen((event) {
       state = state.copyWith(latestPillSheetGroup: event);
     });
     _userSubscribeCanceller = _userDatastore.stream().listen((event) {

@@ -3,8 +3,8 @@ import 'package:pilll/entity/diary.codegen.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:riverpod/riverpod.dart';
 
-final diaryDatastoreProvider =
-    Provider<DiaryDatastore>((ref) => DiaryDatastore(ref.watch(databaseProvider)));
+final diaryDatastoreProvider = Provider<DiaryDatastore>(
+    (ref) => DiaryDatastore(ref.watch(databaseProvider)));
 
 int sortDiary(Diary a, Diary b) => a.date.compareTo(b.date);
 List<Diary> sortedDiaries(List<Diary> diaries) {
@@ -25,11 +25,7 @@ class DiaryDatastore {
             isGreaterThanOrEqualTo: DateTime(base.year, base.month, -90))
         .orderBy(DiaryFirestoreKey.date)
         .get()
-        .then((event) => event.docs
-            .map((e) => e.data())
-            .whereType<Map<String, dynamic>>()
-            .map((data) => Diary.fromJson(data))
-            .toList());
+        .then((event) => event.docs.map((e) => e.data()).toList());
   }
 
   Future<List<Diary>> fetchListForMonth(DateTime dateTimeOfMonth) {
@@ -42,24 +38,20 @@ class DiaryDatastore {
                 DateTime(dateTimeOfMonth.year, dateTimeOfMonth.month, 1))
         .orderBy(DiaryFirestoreKey.date)
         .get()
-        .then((event) => event.docs
-            .map((e) => e.data())
-            .whereType<Map<String, dynamic>>()
-            .map((data) => Diary.fromJson(data))
-            .toList());
+        .then((event) => event.docs.map((e) => e.data()).toList());
   }
 
   Future<Diary> register(Diary diary) {
     return _database
         .diaryReference(diary)
-        .set(diary.toJson(), SetOptions(merge: true))
+        .set(diary, SetOptions(merge: true))
         .then((_) => diary);
   }
 
   Future<Diary> update(Diary diary) {
     return _database
         .diaryReference(diary)
-        .update(diary.toJson())
+        .set(diary, SetOptions(merge: true))
         .then((_) => diary);
   }
 
@@ -67,15 +59,10 @@ class DiaryDatastore {
     return _database.diaryReference(diary).delete().then((_) => diary);
   }
 
-  Stream<List<Diary>> stream() {
-    return _database
-        .diariesReference()
-        .snapshots()
-        .map((event) => event.docs
-            .map((e) => e.data())
-            .whereType<Map<String, dynamic>>()
-            .map((data) => Diary.fromJson(data))
-            .toList())
-        .map((diaries) => sortedDiaries(diaries));
-  }
+  late Stream<List<Diary>> _stream = _database
+      .diariesReference()
+      .snapshots()
+      .map((event) => event.docs.map((e) => e.data()).toList())
+      .map((diaries) => sortedDiaries(diaries));
+  Stream<List<Diary>> stream() => _stream;
 }

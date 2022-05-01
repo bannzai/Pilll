@@ -64,8 +64,8 @@ class InitialSettingStateStore extends StateNotifier<InitialSettingState> {
       final userIsNotAnonymous = !user.isAnonymous;
       if (userIsNotAnonymous) {
         final userDatastore = UserDatastore(DatabaseConnection(user.uid));
-        final dbUser = await userDatastore.prepare(user.uid);
-        userDatastore.saveUserLaunchInfo();
+        final dbUser = await userDatastore.fetchOrCreate(user.uid);
+        userDatastore.saveUserLaunchInfo(dbUser);
 
         unawaited(FirebaseCrashlytics.instance.setUserIdentifier(user.uid));
         unawaited(firebaseAnalytics.setUserId(id: user.uid));

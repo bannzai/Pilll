@@ -66,11 +66,15 @@ void main() {
           ReminderTime(hour: 10, minute: 0),
         ],
       );
+      when(settingDatastore.fetch())
+          .thenAnswer((realInvocation) => Future.value(entity));
       when(settingDatastore.stream())
           .thenAnswer((realInvocation) => Stream.fromIterable([entity]));
 
       final pillSheetDatastore = MockPillSheetDatastore();
       final userDatastore = MockUserDatastore();
+      when(userDatastore.fetch())
+          .thenAnswer((realInvocation) => Future.value(_FakeUser()));
       when(userDatastore.stream())
           .thenAnswer((realInvocation) => Stream.fromIterable([_FakeUser()]));
 
@@ -78,7 +82,9 @@ void main() {
       final pillSheet = PillSheet.create(PillSheetType.pillsheet_21);
       final pillSheetGroup = PillSheetGroup(
           pillSheetIDs: ["1"], pillSheets: [pillSheet], createdAt: now());
-      when(pillSheetGroupDatastore.streamForLatest()).thenAnswer(
+      when(pillSheetGroupDatastore.fetchLatest())
+          .thenAnswer((realInvocation) => Future.value(pillSheetGroup));
+      when(pillSheetGroupDatastore.latestPillSheetGroupStream()).thenAnswer(
           (realInvocation) => Stream.fromIterable([pillSheetGroup]));
 
       final batchFactory = MockBatchFactory();
@@ -138,10 +144,14 @@ void main() {
           ReminderTime(hour: 12, minute: 0)
         ],
       );
+      when(settingDatastore.fetch())
+          .thenAnswer((realInvocation) => Future.value(entity));
       when(settingDatastore.stream())
           .thenAnswer((realInvocation) => Stream.value(entity));
 
       final userDatastore = MockUserDatastore();
+      when(userDatastore.fetch())
+          .thenAnswer((realInvocation) => Future.value(_FakeUser()));
       when(userDatastore.stream())
           .thenAnswer((realInvocation) => Stream.value(_FakeUser()));
 
@@ -149,7 +159,9 @@ void main() {
       final pillSheetGroup = PillSheetGroup(
           pillSheetIDs: ["1"], pillSheets: [pillSheet], createdAt: now());
       final pillSheetGroupDatastore = MockPillSheetGroupDatastore();
-      when(pillSheetGroupDatastore.streamForLatest())
+      when(pillSheetGroupDatastore.fetchLatest())
+          .thenAnswer((realInvocation) => Future.value(pillSheetGroup));
+      when(pillSheetGroupDatastore.latestPillSheetGroupStream())
           .thenAnswer((realInvocation) => Stream.value(pillSheetGroup));
 
       final batchFactory = MockBatchFactory();

@@ -99,7 +99,7 @@ class CalendarPageStateStore extends StateNotifier<CalendarPageState> {
     });
     _latestPillSheetGroupCanceller?.cancel();
     _latestPillSheetGroupCanceller =
-        _pillSheetGroupDatastore.streamForLatest().listen((entity) {
+        _pillSheetGroupDatastore.latestPillSheetGroupStream().listen((entity) {
       state = state.copyWith(latestPillSheetGroup: entity);
     });
     _diariesCanceller?.cancel();

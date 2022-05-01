@@ -8,8 +8,8 @@ import 'package:pilll/util/datetime/day.dart';
 import 'package:riverpod/riverpod.dart';
 
 final pillSheetModifiedHistoryDatastoreProvider =
-    Provider<PillSheetModifiedHistoryDatastore>(
-        (ref) => PillSheetModifiedHistoryDatastore(ref.watch(databaseProvider)));
+    Provider<PillSheetModifiedHistoryDatastore>((ref) =>
+        PillSheetModifiedHistoryDatastore(ref.watch(databaseProvider)));
 
 class PillSheetModifiedHistoryDatastore {
   final DatabaseConnection _database;
@@ -25,12 +25,7 @@ class PillSheetModifiedHistoryDatastore {
         .startAfter([after])
         .limit(limit)
         .get()
-        .then((reference) => reference.docs)
-        .then((docs) => docs
-            .map((doc) => PillSheetModifiedHistory.fromJson(
-                (doc.data() as Map<String, dynamic>)
-                  ..putIfAbsent("id", () => doc.id)))
-            .toList());
+        .then((reference) => reference.docs.map((e) => e.data()).toList());
   }
 
   Future<List<PillSheetModifiedHistory>> fetchAll() {
@@ -38,18 +33,14 @@ class PillSheetModifiedHistoryDatastore {
         .pillSheetModifiedHistoriesReference()
         .get()
         .then((reference) => reference.docs)
-        .then((docs) => docs
-            .map((doc) => doc.data())
-            .whereType<Map<String, dynamic>>()
-            .map((data) => PillSheetModifiedHistory.fromJson(data))
-            .toList());
+        .then((docs) => docs.map((doc) => doc.data()).toList());
   }
 
   Future<void> update(PillSheetModifiedHistory pillSheetModifiedHistory) async {
     await _database
         .pillSheetModifiedHistoriesReference()
         .doc(pillSheetModifiedHistory.id)
-        .set(pillSheetModifiedHistory.toJson(), SetOptions(merge: true));
+        .set(pillSheetModifiedHistory, SetOptions(merge: true));
   }
 
   Stream<List<PillSheetModifiedHistory>> stream(int limit) {
@@ -61,16 +52,12 @@ class PillSheetModifiedHistoryDatastore {
         .limit(limit)
         .snapshots()
         .map((reference) => reference.docs)
-        .map((docs) => docs
-            .map((doc) => PillSheetModifiedHistory.fromJson(
-                (doc.data() as Map<String, dynamic>)
-                  ..putIfAbsent("id", () => doc.id)))
-            .toList());
+        .map((docs) => docs.map((doc) => doc.data()).toList());
   }
 
-  add(WriteBatch batch, PillSheetModifiedHistory history) {
-    batch.set(_database.pillSheetModifiedHistoriesReference().doc(),
-        history.toJson(), SetOptions(merge: true));
+  void add(WriteBatch batch, PillSheetModifiedHistory history) {
+    batch.set(_database.pillSheetModifiedHistoriesReference().doc(), history,
+        SetOptions(merge: true));
   }
 }
 
