@@ -1,6 +1,8 @@
 import 'package:flutter_test/flutter_test.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
 import 'package:mockito/mockito.dart';
+import 'package:pilll/components/organisms/calendar/band/calendar_band_function.dart';
+import 'package:pilll/components/organisms/calendar/band/calendar_band_model.dart';
 import 'package:pilll/domain/menstruation/menstruation_card_state.codegen.dart';
 import 'package:pilll/domain/menstruation/menstruation_state.codegen.dart';
 import 'package:pilll/entity/menstruation.codegen.dart';
@@ -35,6 +37,39 @@ void main() {
           todayRepository = originalTodayRepository;
         });
 
+        final pillSheetGroup =
+            PillSheetGroup(pillSheetIDs: [], pillSheets: [], createdAt: now());
+        final setting = const Setting(
+          pillSheetTypes: [PillSheetType.pillsheet_21],
+          pillNumberForFromMenstruation: 22,
+          durationMenstruation: 3,
+          reminderTimes: [],
+          isOnReminder: true,
+        );
+        final menstruations = [
+          Menstruation(
+            beginDate: DateTime(2021, 04, 28),
+            endDate: DateTime(2021, 04, 30),
+            createdAt: DateTime(2021, 04, 28),
+          ),
+          Menstruation(
+            beginDate: DateTime(2021, 03, 28),
+            endDate: DateTime(2021, 03, 30),
+            createdAt: DateTime(2021, 03, 28),
+          ),
+        ];
+        final calendarScheduledMenstruationBandModels =
+            scheduledOrInTheMiddleMenstruationDateRanges(
+                    pillSheetGroup, setting, menstruations, 12)
+                .map((e) =>
+                    CalendarScheduledMenstruationBandModel(e.begin, e.end))
+                .toList();
+        final calendarMenstruationBandModels =
+            menstruations.map((e) => CalendarMenstruationBandModel(e)).toList();
+        final calendarNextPillSheetBandModels =
+            nextPillSheetDateRanges(pillSheetGroup, 12)
+                .map((e) => CalendarNextPillSheetBandModel(e.begin, e.end))
+                .toList();
         final store = MenstruationStore(
           asyncAction: MockMenstruationPageAsyncAction(),
           initialState: AsyncValue.data(
@@ -42,31 +77,14 @@ void main() {
               currentCalendarPageIndex: todayCalendarPageIndex,
               todayCalendarPageIndex: todayCalendarPageIndex,
               diariesForAround90Days: [],
-              menstruations: [
-                Menstruation(
-                  beginDate: DateTime(2021, 04, 28),
-                  endDate: DateTime(2021, 04, 30),
-                  createdAt: DateTime(2021, 04, 28),
-                ),
-                Menstruation(
-                  beginDate: DateTime(2021, 03, 28),
-                  endDate: DateTime(2021, 03, 30),
-                  createdAt: DateTime(2021, 03, 28),
-                ),
-              ],
+              menstruations: menstruations,
               premiumAndTrial: MockPremiumAndTrial(),
-              setting: const Setting(
-                pillSheetTypes: [PillSheetType.pillsheet_21],
-                pillNumberForFromMenstruation: 22,
-                durationMenstruation: 3,
-                reminderTimes: [],
-                isOnReminder: true,
-              ),
-              latestPillSheetGroup: PillSheetGroup(
-                  pillSheetIDs: [], pillSheets: [], createdAt: now()),
-              calendarMenstruationBandModels: [],
-              calendarScheduledMenstruationBandModels: [],
-              calendarNextPillSheetBandModels: [],
+              setting: setting,
+              latestPillSheetGroup: pillSheetGroup,
+              calendarMenstruationBandModels: calendarMenstruationBandModels,
+              calendarScheduledMenstruationBandModels:
+                  calendarScheduledMenstruationBandModels,
+              calendarNextPillSheetBandModels: calendarNextPillSheetBandModels,
             ),
           ),
         );
@@ -95,6 +113,34 @@ void main() {
           todayRepository = originalTodayRepository;
         });
 
+        final pillSheetGroup =
+            PillSheetGroup(pillSheetIDs: [], pillSheets: [], createdAt: now());
+        final setting = const Setting(
+          pillSheetTypes: [PillSheetType.pillsheet_21],
+          pillNumberForFromMenstruation: 22,
+          durationMenstruation: 3,
+          reminderTimes: [],
+          isOnReminder: true,
+        );
+        final menstruations = [
+          Menstruation(
+            beginDate: DateTime(2021, 03, 28),
+            endDate: DateTime(2021, 03, 30),
+            createdAt: DateTime(2021, 03, 28),
+          ),
+        ];
+        final calendarScheduledMenstruationBandModels =
+            scheduledOrInTheMiddleMenstruationDateRanges(
+                    pillSheetGroup, setting, menstruations, 12)
+                .map((e) =>
+                    CalendarScheduledMenstruationBandModel(e.begin, e.end))
+                .toList();
+        final calendarMenstruationBandModels =
+            menstruations.map((e) => CalendarMenstruationBandModel(e)).toList();
+        final calendarNextPillSheetBandModels =
+            nextPillSheetDateRanges(pillSheetGroup, 12)
+                .map((e) => CalendarNextPillSheetBandModel(e.begin, e.end))
+                .toList();
         final store = MenstruationStore(
           asyncAction: MockMenstruationPageAsyncAction(),
           initialState: AsyncValue.data(
@@ -102,26 +148,14 @@ void main() {
               currentCalendarPageIndex: todayCalendarPageIndex,
               todayCalendarPageIndex: todayCalendarPageIndex,
               diariesForAround90Days: [],
-              menstruations: [
-                Menstruation(
-                  beginDate: DateTime(2021, 03, 28),
-                  endDate: DateTime(2021, 03, 30),
-                  createdAt: DateTime(2021, 03, 28),
-                ),
-              ],
+              menstruations: menstruations,
               premiumAndTrial: MockPremiumAndTrial(),
-              setting: const Setting(
-                pillSheetTypes: [PillSheetType.pillsheet_21],
-                pillNumberForFromMenstruation: 22,
-                durationMenstruation: 3,
-                reminderTimes: [],
-                isOnReminder: true,
-              ),
-              latestPillSheetGroup: PillSheetGroup(
-                  pillSheetIDs: [], pillSheets: [], createdAt: now()),
-              calendarMenstruationBandModels: [],
-              calendarScheduledMenstruationBandModels: [],
-              calendarNextPillSheetBandModels: [],
+              setting: setting,
+              latestPillSheetGroup: pillSheetGroup,
+              calendarMenstruationBandModels: calendarMenstruationBandModels,
+              calendarScheduledMenstruationBandModels:
+                  calendarScheduledMenstruationBandModels,
+              calendarNextPillSheetBandModels: calendarNextPillSheetBandModels,
             ),
           ),
         );
@@ -146,6 +180,33 @@ void main() {
           todayRepository = originalTodayRepository;
         });
 
+        final pillSheetGroup = PillSheetGroup(
+          pillSheetIDs: ["1"],
+          pillSheets: [
+            PillSheet(
+              typeInfo: PillSheetType.pillsheet_21.typeInfo,
+              beginingDate: DateTime(2021, 04, 22),
+            ),
+          ],
+          createdAt: now(),
+        );
+        final setting = const Setting(
+          pillSheetTypes: [PillSheetType.pillsheet_21],
+          pillNumberForFromMenstruation: 22,
+          durationMenstruation: 3,
+          reminderTimes: [],
+          isOnReminder: true,
+        );
+        final calendarScheduledMenstruationBandModels =
+            scheduledOrInTheMiddleMenstruationDateRanges(
+                    pillSheetGroup, setting, [], 12)
+                .map((e) =>
+                    CalendarScheduledMenstruationBandModel(e.begin, e.end))
+                .toList();
+        final calendarNextPillSheetBandModels =
+            nextPillSheetDateRanges(pillSheetGroup, 12)
+                .map((e) => CalendarNextPillSheetBandModel(e.begin, e.end))
+                .toList();
         final store = MenstruationStore(
           asyncAction: MockMenstruationPageAsyncAction(),
           initialState: AsyncValue.data(
@@ -155,26 +216,12 @@ void main() {
               diariesForAround90Days: [],
               menstruations: [],
               premiumAndTrial: MockPremiumAndTrial(),
-              setting: const Setting(
-                pillSheetTypes: [PillSheetType.pillsheet_21],
-                pillNumberForFromMenstruation: 22,
-                durationMenstruation: 3,
-                reminderTimes: [],
-                isOnReminder: true,
-              ),
-              latestPillSheetGroup: PillSheetGroup(
-                pillSheetIDs: ["1"],
-                pillSheets: [
-                  PillSheet(
-                    typeInfo: PillSheetType.pillsheet_21.typeInfo,
-                    beginingDate: DateTime(2021, 04, 22),
-                  ),
-                ],
-                createdAt: now(),
-              ),
+              setting: setting,
+              latestPillSheetGroup: pillSheetGroup,
               calendarMenstruationBandModels: [],
-              calendarScheduledMenstruationBandModels: [],
-              calendarNextPillSheetBandModels: [],
+              calendarScheduledMenstruationBandModels:
+                  calendarScheduledMenstruationBandModels,
+              calendarNextPillSheetBandModels: calendarNextPillSheetBandModels,
             ),
           ),
         );
@@ -203,6 +250,42 @@ void main() {
           todayRepository = originalTodayRepository;
         });
 
+        final pillSheetGroup = PillSheetGroup(
+          pillSheetIDs: ["1"],
+          pillSheets: [
+            PillSheet(
+              typeInfo: PillSheetType.pillsheet_21.typeInfo,
+              beginingDate: DateTime(2021, 04, 07),
+            ),
+          ],
+          createdAt: now(),
+        );
+        final setting = const Setting(
+          pillSheetTypes: [PillSheetType.pillsheet_21],
+          pillNumberForFromMenstruation: 22,
+          durationMenstruation: 3,
+          reminderTimes: [],
+          isOnReminder: true,
+        );
+        final menstruations = [
+          Menstruation(
+            beginDate: DateTime(2021, 03, 28),
+            endDate: DateTime(2021, 03, 30),
+            createdAt: DateTime(2021, 03, 28),
+          ),
+        ];
+        final calendarScheduledMenstruationBandModels =
+            scheduledOrInTheMiddleMenstruationDateRanges(
+                    pillSheetGroup, setting, menstruations, 12)
+                .map((e) =>
+                    CalendarScheduledMenstruationBandModel(e.begin, e.end))
+                .toList();
+        final calendarMenstruationBandModels =
+            menstruations.map((e) => CalendarMenstruationBandModel(e)).toList();
+        final calendarNextPillSheetBandModels =
+            nextPillSheetDateRanges(pillSheetGroup, 12)
+                .map((e) => CalendarNextPillSheetBandModel(e.begin, e.end))
+                .toList();
         final store = MenstruationStore(
           asyncAction: MockMenstruationPageAsyncAction(),
           initialState: AsyncValue.data(
@@ -210,28 +293,14 @@ void main() {
               currentCalendarPageIndex: todayCalendarPageIndex,
               todayCalendarPageIndex: todayCalendarPageIndex,
               diariesForAround90Days: [],
-              menstruations: [],
+              menstruations: menstruations,
               premiumAndTrial: MockPremiumAndTrial(),
-              setting: const Setting(
-                pillSheetTypes: [PillSheetType.pillsheet_21],
-                pillNumberForFromMenstruation: 22,
-                durationMenstruation: 3,
-                reminderTimes: [],
-                isOnReminder: true,
-              ),
-              latestPillSheetGroup: PillSheetGroup(
-                pillSheetIDs: ["1"],
-                pillSheets: [
-                  PillSheet(
-                    typeInfo: PillSheetType.pillsheet_21.typeInfo,
-                    beginingDate: DateTime(2021, 04, 07),
-                  ),
-                ],
-                createdAt: now(),
-              ),
-              calendarMenstruationBandModels: [],
-              calendarScheduledMenstruationBandModels: [],
-              calendarNextPillSheetBandModels: [],
+              setting: setting,
+              latestPillSheetGroup: pillSheetGroup,
+              calendarMenstruationBandModels: calendarMenstruationBandModels,
+              calendarScheduledMenstruationBandModels:
+                  calendarScheduledMenstruationBandModels,
+              calendarNextPillSheetBandModels: calendarNextPillSheetBandModels,
             ),
           ),
         );
