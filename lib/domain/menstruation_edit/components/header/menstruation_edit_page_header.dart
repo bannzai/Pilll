@@ -5,13 +5,13 @@ import 'package:pilll/components/atoms/font.dart';
 import 'package:pilll/components/atoms/text_color.dart';
 import 'package:pilll/components/page/discard_dialog.dart';
 import 'package:pilll/domain/menstruation_edit/menstruation_edit_page_state.codegen.dart';
-import 'package:pilll/domain/menstruation_edit/menstruation_edit_page_store.dart';
+import 'package:pilll/domain/menstruation_edit/menstruation_edit_page_state_notifier.dart';
 import 'package:pilll/entity/menstruation.codegen.dart';
 
 class MenstruationEditPageHeader extends StatelessWidget {
   final String title;
   final MenstruationEditPageState state;
-  final MenstruationEditPageStore store;
+  final MenstruationEditPageStateNotifier store;
   final Function() onDeleted;
   final Function(Menstruation) onSaved;
 

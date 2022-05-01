@@ -8,19 +8,20 @@ import 'package:pilll/domain/menstruation_edit/menstruation_edit_page_state.code
 import 'package:pilll/util/datetime/date_compare.dart';
 import 'package:pilll/util/datetime/day.dart';
 
-final menstruationEditProvider = StateNotifierProvider.family.autoDispose<
-    MenstruationEditPageStore, MenstruationEditPageState, Menstruation?>(
-  (ref, menstruation) => MenstruationEditPageStore(
+final menstruationEditPageStateNotifierProvider = StateNotifierProvider.family
+    .autoDispose<MenstruationEditPageStateNotifier, MenstruationEditPageState,
+        Menstruation?>(
+  (ref, menstruation) => MenstruationEditPageStateNotifier(
       asyncAction: ref.watch(menstruationEditPageAsyncActionProvider),
       initialState: ref.watch(menstruationEditPageStateProvider(menstruation))),
 );
 
-class MenstruationEditPageStore
+class MenstruationEditPageStateNotifier
     extends StateNotifier<MenstruationEditPageState> {
   final MenstruationEditPageAsyncAction asyncAction;
   final MenstruationEditPageState initialState;
 
-  MenstruationEditPageStore({
+  MenstruationEditPageStateNotifier({
     required this.asyncAction,
     required this.initialState,
   }) : super(initialState);

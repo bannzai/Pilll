@@ -4,7 +4,7 @@ import 'package:pilll/components/organisms/calendar/weekly/weekly_calendar.dart'
 import 'package:pilll/domain/menstruation_edit/components/calendar/month_calendar_state.codegen.dart';
 import 'package:pilll/domain/menstruation_edit/components/calendar/weekly_calendar_state.dart';
 import 'package:pilll/domain/menstruation_edit/menstruation_edit_page_state.codegen.dart';
-import 'package:pilll/domain/menstruation_edit/menstruation_edit_page_store.dart';
+import 'package:pilll/domain/menstruation_edit/menstruation_edit_page_state_notifier.dart';
 import 'package:pilll/domain/record/weekday_badge.dart';
 import 'package:pilll/entity/weekday.dart';
 import 'package:flutter/material.dart';
@@ -18,7 +18,7 @@ class MonthCalendar extends HookConsumerWidget {
   final DateTime dateForMonth;
   final MenstruationEditPageState state;
   final MonthCalendarState monthCalendarState;
-  final MenstruationEditPageStore store;
+  final MenstruationEditPageStateNotifier store;
 
   const MonthCalendar({
     Key? key,

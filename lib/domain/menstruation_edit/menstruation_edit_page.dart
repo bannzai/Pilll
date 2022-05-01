@@ -9,7 +9,7 @@ import 'package:pilll/domain/menstruation_edit/components/calendar/calendar_date
 import 'package:pilll/domain/menstruation_edit/components/calendar/month_calendar.dart';
 import 'package:pilll/domain/menstruation_edit/components/header/menstruation_edit_page_header.dart';
 import 'package:pilll/entity/menstruation.codegen.dart';
-import 'package:pilll/domain/menstruation_edit/menstruation_edit_page_store.dart';
+import 'package:pilll/domain/menstruation_edit/menstruation_edit_page_state_notifier.dart';
 import 'package:pilll/util/formatter/date_time_formatter.dart';
 
 class MenstruationEditPage extends HookConsumerWidget {
@@ -24,8 +24,8 @@ class MenstruationEditPage extends HookConsumerWidget {
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {
-    final store = ref.watch(menstruationEditProvider(menstruation).notifier);
-    final state = ref.watch(menstruationEditProvider(menstruation));
+    final store = ref.watch(menstruationEditPageStateNotifierProvider(menstruation).notifier);
+    final state = ref.watch(menstruationEditPageStateNotifierProvider(menstruation));
     final invalidMessage = state.invalidMessage;
 
     final scrollController = useScrollController();
