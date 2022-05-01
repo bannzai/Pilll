@@ -14,6 +14,7 @@ import 'package:pilll/entity/pill_sheet_group.codegen.dart';
 import 'package:pilll/entity/pill_sheet_type.dart';
 import 'package:pilll/entity/setting.codegen.dart';
 import 'package:pilll/entity/weekday.dart';
+import 'package:pilll/provider/premium_and_trial.codegen.dart';
 
 class RecordPagePillSheet extends StatelessWidget {
   final PillSheetGroup pillSheetGroup;
@@ -79,7 +80,7 @@ class RecordPagePillSheet extends StatelessWidget {
         width: PillSheetViewLayout.componentWidth,
         child: PillMarkWithNumberLayout(
           textOfPillNumber: textOfPillNumber(
-            state: state,
+            premiumAndTrial: state.premiumAndTrial,
             pillSheetGroup: pillSheetGroup,
             pillSheet: pillSheet,
             setting: setting,
@@ -133,15 +134,15 @@ class RecordPagePillSheet extends StatelessWidget {
   }
 
   static Widget textOfPillNumber({
-    required RecordPageState state,
-    required PillSheetGroup pillSheetGroup,
-    required PillSheet pillSheet,
     required int pillNumberIntoPillSheet,
     required int pageIndex,
+    required PillSheetGroup pillSheetGroup,
+    required PillSheet pillSheet,
+    required PremiumAndTrial premiumAndTrial,
     required Setting setting,
   }) {
     final isPremiumOrTrial =
-        state.premiumAndTrial.isPremium || state.premiumAndTrial.isTrial;
+        premiumAndTrial.isPremium || premiumAndTrial.isTrial;
     final containedMenstruationDuration =
         RecordPagePillSheet.isContainedMenstruationDuration(
       pillNumberIntoPillSheet: pillNumberIntoPillSheet,
@@ -150,7 +151,7 @@ class RecordPagePillSheet extends StatelessWidget {
       pageIndex: pageIndex,
     );
     if (isPremiumOrTrial &&
-        state.appearanceMode == PillSheetAppearanceMode.date) {
+        setting.pillSheetAppearanceMode == PillSheetAppearanceMode.date) {
       final DateTime date =
           pillSheet.displayPillTakeDate(pillNumberIntoPillSheet);
 
@@ -164,7 +165,8 @@ class RecordPagePillSheet extends StatelessWidget {
       } else {
         return PlainPillDate(date: date);
       }
-    } else if (state.appearanceMode == PillSheetAppearanceMode.sequential) {
+    } else if (setting.pillSheetAppearanceMode ==
+        PillSheetAppearanceMode.sequential) {
       final pageOffset = summarizedPillCountWithPillSheetsToEndIndex(
         pillSheets: pillSheetGroup.pillSheets,
         endIndex: pageIndex,
@@ -173,7 +175,7 @@ class RecordPagePillSheet extends StatelessWidget {
           setting.durationMenstruation == 0) {
         return SequentialPillNumber(
           pageOffset: pageOffset,
-          displayNumberSetting: state.pillSheetGroup?.displayNumberSetting,
+          displayNumberSetting: pillSheetGroup.displayNumberSetting,
           pillNumberIntoPillSheet: pillNumberIntoPillSheet,
         );
       }
@@ -182,14 +184,14 @@ class RecordPagePillSheet extends StatelessWidget {
         if (containedMenstruationDuration) {
           return MenstruationSequentialPillNumber(
             pageOffset: pageOffset,
-            displayNumberSetting: state.pillSheetGroup?.displayNumberSetting,
+            displayNumberSetting: pillSheetGroup.displayNumberSetting,
             pillNumberIntoPillSheet: pillNumberIntoPillSheet,
           );
         }
       }
       return SequentialPillNumber(
           pageOffset: pageOffset,
-          displayNumberSetting: state.pillSheetGroup?.displayNumberSetting,
+          displayNumberSetting: pillSheetGroup.displayNumberSetting,
           pillNumberIntoPillSheet: pillNumberIntoPillSheet);
     } else {
       if (setting.pillNumberForFromMenstruation == 0 ||
