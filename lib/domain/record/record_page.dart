@@ -87,7 +87,7 @@ class RecordPageBody extends StatelessWidget {
           Expanded(
             child: ListView(
               children: [
-                NotificationBar(state),
+                NotificationBar(),
                 const SizedBox(height: 37),
                 _content(context, setting, state, store),
                 const SizedBox(height: 20),
