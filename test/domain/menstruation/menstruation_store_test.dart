@@ -11,7 +11,7 @@ import 'package:pilll/entity/pill_sheet_group.codegen.dart';
 import 'package:pilll/entity/pill_sheet_type.dart';
 import 'package:pilll/entity/setting.codegen.dart';
 import 'package:pilll/service/day.dart';
-import 'package:pilll/domain/menstruation/menstruation_store.dart';
+import 'package:pilll/domain/menstruation/menstruation_page_state_notifier.dart';
 import 'package:pilll/util/datetime/day.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
@@ -70,7 +70,7 @@ void main() {
             nextPillSheetDateRanges(pillSheetGroup, 12)
                 .map((e) => CalendarNextPillSheetBandModel(e.begin, e.end))
                 .toList();
-        final store = MenstruationStore(
+        final store = MenstruationPageStateNotifier(
           asyncAction: MockMenstruationPageAsyncAction(),
           initialState: AsyncValue.data(
             MenstruationState(
@@ -141,7 +141,7 @@ void main() {
             nextPillSheetDateRanges(pillSheetGroup, 12)
                 .map((e) => CalendarNextPillSheetBandModel(e.begin, e.end))
                 .toList();
-        final store = MenstruationStore(
+        final store = MenstruationPageStateNotifier(
           asyncAction: MockMenstruationPageAsyncAction(),
           initialState: AsyncValue.data(
             MenstruationState(
@@ -207,7 +207,7 @@ void main() {
             nextPillSheetDateRanges(pillSheetGroup, 12)
                 .map((e) => CalendarNextPillSheetBandModel(e.begin, e.end))
                 .toList();
-        final store = MenstruationStore(
+        final store = MenstruationPageStateNotifier(
           asyncAction: MockMenstruationPageAsyncAction(),
           initialState: AsyncValue.data(
             MenstruationState(
@@ -286,7 +286,7 @@ void main() {
             nextPillSheetDateRanges(pillSheetGroup, 12)
                 .map((e) => CalendarNextPillSheetBandModel(e.begin, e.end))
                 .toList();
-        final store = MenstruationStore(
+        final store = MenstruationPageStateNotifier(
           asyncAction: MockMenstruationPageAsyncAction(),
           initialState: AsyncValue.data(
             MenstruationState(

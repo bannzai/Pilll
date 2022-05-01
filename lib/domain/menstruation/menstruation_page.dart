@@ -11,7 +11,7 @@ import 'package:pilll/domain/menstruation/components/menstruation_record_button.
 import 'package:pilll/domain/menstruation/menstruation_calendar_page_index_state_notifier.dart';
 import 'package:pilll/domain/menstruation/menstruation_state.codegen.dart';
 import 'package:pilll/domain/record/weekday_badge.dart';
-import 'package:pilll/domain/menstruation/menstruation_store.dart';
+import 'package:pilll/domain/menstruation/menstruation_page_state_notifier.dart';
 import 'package:pilll/error/universal_error_page.dart';
 import 'package:pilll/hooks/automatic_keep_alive_client_mixin.dart';
 
@@ -26,8 +26,8 @@ abstract class MenstruationPageConst {
 class MenstruationPage extends HookConsumerWidget {
   @override
   Widget build(BuildContext context, WidgetRef ref) {
-    final store = ref.watch(menstruationsStoreProvider.notifier);
-    final state = ref.watch(menstruationsStoreProvider);
+    final store = ref.watch(menstruationPageStateNotifierProvider.notifier);
+    final state = ref.watch(menstruationPageStateNotifierProvider);
     final calendarPageIndexStateNotifier =
         ref.watch(menstruationCalendarPageIndexStateNotifierProvider.notifier);
     useAutomaticKeepAlive(wantKeepAlive: true);
@@ -54,7 +54,7 @@ class MenstruationPage extends HookConsumerWidget {
 }
 
 class MenstruationPageBody extends StatelessWidget {
-  final MenstruationStore store;
+  final MenstruationPageStateNotifier store;
   final MenstruationState state;
   final PageController pageController;
 

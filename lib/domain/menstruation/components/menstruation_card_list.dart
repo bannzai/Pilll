@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:pilll/components/atoms/color.dart';
 import 'package:pilll/domain/menstruation/history/menstruation_history_card.dart';
 import 'package:pilll/domain/menstruation/menstruation_card.dart';
-import 'package:pilll/domain/menstruation/menstruation_store.dart';
+import 'package:pilll/domain/menstruation/menstruation_page_state_notifier.dart';
 
 class MenstruationCardList extends StatelessWidget {
   const MenstruationCardList({
@@ -10,7 +10,7 @@ class MenstruationCardList extends StatelessWidget {
     required this.store,
   }) : super(key: key);
 
-  final MenstruationStore store;
+  final MenstruationPageStateNotifier store;
 
   @override
   Widget build(BuildContext context) {

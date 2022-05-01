@@ -7,17 +7,18 @@ import 'package:pilll/util/datetime/day.dart';
 
 import 'history/menstruation_history_card_state.dart';
 
-final menstruationsStoreProvider =
-    StateNotifierProvider<MenstruationStore, AsyncValue<MenstruationState>>(
-  (ref) => MenstruationStore(
+final menstruationPageStateNotifierProvider = StateNotifierProvider<
+    MenstruationPageStateNotifier, AsyncValue<MenstruationState>>(
+  (ref) => MenstruationPageStateNotifier(
     asyncAction: ref.watch(menstruationPageAsyncActionProvider),
     initialState: ref.watch(menstruationPageStateProvider),
   ),
 );
 
-class MenstruationStore extends StateNotifier<AsyncValue<MenstruationState>> {
+class MenstruationPageStateNotifier
+    extends StateNotifier<AsyncValue<MenstruationState>> {
   final MenstruationPageAsyncAction asyncAction;
-  MenstruationStore({
+  MenstruationPageStateNotifier({
     required this.asyncAction,
     required AsyncValue<MenstruationState> initialState,
   }) : super(initialState);
