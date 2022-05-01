@@ -1,9 +1,8 @@
+import 'package:pilll/domain/settings/setting_page_async_action.dart';
 import 'package:pilll/entity/pill_sheet.codegen.dart';
 import 'package:pilll/entity/pill_sheet_group.codegen.dart';
 import 'package:pilll/entity/pill_sheet_type.dart';
 import 'package:pilll/entity/setting.codegen.dart';
-import 'package:pilll/domain/settings/setting_page_state.codegen.dart';
-import 'package:pilll/domain/settings/setting_page_state_notifier.dart';
 import 'package:flutter_test/flutter_test.dart';
 import 'package:mockito/mockito.dart';
 import 'package:pilll/entity/user.codegen.dart';
@@ -86,17 +85,13 @@ void main() {
       when(pillSheetGroupDatastore.latestPillSheetGroupStream())
           .thenAnswer((realInvocation) => const Stream.empty());
 
-      final store = SettingStateStore(
+      final asyncAction = SettingPageAsyncAction(
         batchFactory,
         settingDatastore,
         pillSheetDatastore,
-        userDatastore,
         pillSheetModifiedService,
         pillSheetGroupDatastore,
       );
-
-      // ignore: invalid_use_of_protected_member
-      store.state = SettingState(setting: setting);
 
       when(settingDatastore.update(setting.copyWith(reminderTimes: [
         const ReminderTime(hour: 1, minute: 0),
@@ -104,7 +99,11 @@ void main() {
         const ReminderTime(hour: 3, minute: 0),
       ]))).thenAnswer((realInvocation) => Future.value(setting));
 
-      store.addReminderTimes(const ReminderTime(hour: 3, minute: 0));
+      asyncAction.addReminderTimes(
+        reminderTime: const ReminderTime(hour: 3, minute: 0),
+        setting: setting,
+      );
+
       verify(settingDatastore.update(setting.copyWith(reminderTimes: [
         const ReminderTime(hour: 1, minute: 0),
         const ReminderTime(hour: 2, minute: 0),
@@ -143,20 +142,18 @@ void main() {
       when(pillSheetGroupDatastore.latestPillSheetGroupStream())
           .thenAnswer((realInvocation) => const Stream.empty());
 
-      final store = SettingStateStore(
+      final asyncAction = SettingPageAsyncAction(
         batchFactory,
         settingDatastore,
         pillSheetDatastore,
-        userDatastore,
         pillSheetModifiedService,
         pillSheetGroupDatastore,
       );
 
-      // ignore: invalid_use_of_protected_member
-      store.state = SettingState(setting: setting);
-
       expect(
-          () => store.addReminderTimes(const ReminderTime(hour: 4, minute: 0)),
+          () => asyncAction.addReminderTimes(
+              reminderTime: const ReminderTime(hour: 4, minute: 0),
+              setting: setting),
           throwsException);
     });
   });
@@ -196,23 +193,20 @@ void main() {
       when(pillSheetGroupDatastore.latestPillSheetGroupStream())
           .thenAnswer((realInvocation) => const Stream.empty());
 
-      final store = SettingStateStore(
+      final asyncAction = SettingPageAsyncAction(
         batchFactory,
         settingDatastore,
         pillSheetDatastore,
-        userDatastore,
         pillSheetModifiedService,
         pillSheetGroupDatastore,
       );
-
-      // ignore: invalid_use_of_protected_member
-      store.state = SettingState(setting: setting);
 
       when(settingDatastore.update(setting.copyWith(reminderTimes: [
         const ReminderTime(hour: 1, minute: 0),
       ]))).thenAnswer((realInvocation) => Future.value(setting));
 
-      store.deleteReminderTimes(1);
+      asyncAction.deleteReminderTimes(index: 1, setting: setting);
+
       verify(settingDatastore.update(setting.copyWith(reminderTimes: [
         const ReminderTime(hour: 1, minute: 0),
       ])));
@@ -248,18 +242,16 @@ void main() {
       when(pillSheetGroupDatastore.latestPillSheetGroupStream())
           .thenAnswer((realInvocation) => const Stream.empty());
 
-      final store = SettingStateStore(
+      final asyncAction = SettingPageAsyncAction(
         batchFactory,
         settingDatastore,
         pillSheetDatastore,
-        userDatastore,
         pillSheetModifiedService,
         pillSheetGroupDatastore,
       );
 
-      // ignore: invalid_use_of_protected_member
-      store.state = SettingState(setting: setting);
-      expect(() => store.deleteReminderTimes(0), throwsException);
+      expect(() => asyncAction.deleteReminderTimes(index: 0, setting: setting),
+          throwsException);
     });
   });
 }
