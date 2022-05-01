@@ -117,16 +117,16 @@ void main() {
       expect(state.pillSheetGroup?.pillSheets.first.todayPillIsAlreadyTaken,
           isTrue);
       expect(
-          store.pillMarkFor(pillNumberIntoPillSheet: 1, pillSheet: pillSheetEntity),
+          pillMarkFor(pillNumberIntoPillSheet: 1, pillSheet: pillSheetEntity),
           PillMarkType.done);
       expect(
-          store.pillMarkFor(pillNumberIntoPillSheet: 2, pillSheet: pillSheetEntity),
+          pillMarkFor(pillNumberIntoPillSheet: 2, pillSheet: pillSheetEntity),
           PillMarkType.done);
       expect(
-          store.pillMarkFor(pillNumberIntoPillSheet: 3, pillSheet: pillSheetEntity),
+          pillMarkFor(pillNumberIntoPillSheet: 3, pillSheet: pillSheetEntity),
           PillMarkType.done);
       expect(
-          store.pillMarkFor(pillNumberIntoPillSheet: 4, pillSheet: pillSheetEntity),
+          pillMarkFor(pillNumberIntoPillSheet: 4, pillSheet: pillSheetEntity),
           PillMarkType.normal);
     });
     test("it is not taken all", () async {
@@ -193,16 +193,16 @@ void main() {
       expect(state.pillSheetGroup?.pillSheets.first.todayPillIsAlreadyTaken,
           isFalse);
       expect(
-          store.pillMarkFor(pillNumberIntoPillSheet: 1, pillSheet: pillSheetEntity),
+          pillMarkFor(pillNumberIntoPillSheet: 1, pillSheet: pillSheetEntity),
           PillMarkType.done);
       expect(
-          store.pillMarkFor(pillNumberIntoPillSheet: 2, pillSheet: pillSheetEntity),
+          pillMarkFor(pillNumberIntoPillSheet: 2, pillSheet: pillSheetEntity),
           PillMarkType.done);
       expect(
-          store.pillMarkFor(pillNumberIntoPillSheet: 3, pillSheet: pillSheetEntity),
+          pillMarkFor(pillNumberIntoPillSheet: 3, pillSheet: pillSheetEntity),
           PillMarkType.normal);
       expect(
-          store.pillMarkFor(pillNumberIntoPillSheet: 4, pillSheet: pillSheetEntity),
+          pillMarkFor(pillNumberIntoPillSheet: 4, pillSheet: pillSheetEntity),
           PillMarkType.normal);
     });
   });
