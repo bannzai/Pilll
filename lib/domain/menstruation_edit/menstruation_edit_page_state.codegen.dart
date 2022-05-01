@@ -1,5 +1,5 @@
 import 'package:freezed_annotation/freezed_annotation.dart';
-import 'package:pilll/domain/menstruation/menstruation_state.codegen.dart';
+import 'package:pilll/domain/menstruation/menstruation_page_state_notifier.dart';
 import 'package:pilll/entity/menstruation.codegen.dart';
 import 'package:pilll/entity/setting.codegen.dart';
 import 'package:pilll/provider/premium_and_trial.codegen.dart';
@@ -13,7 +13,7 @@ part 'menstruation_edit_page_state.codegen.freezed.dart';
 final menstruationEditPageStateProvider =
     Provider.autoDispose.family((ref, Menstruation? menstruation) {
   final premiumAndTrial = ref.watch(premiumAndTrialProvider).value!;
-  final menstruationState = ref.watch(menstruationPageStateProvider);
+  final menstruationState = ref.watch(menstruationPageStateNotifierProvider);
   return MenstruationEditPageState(
     menstruation: menstruation,
     setting: menstruationState.value!.setting,
