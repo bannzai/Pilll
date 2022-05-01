@@ -5,14 +5,14 @@ import 'package:pilll/components/template/setting_menstruation/setting_menstruat
 import 'package:pilll/components/template/setting_menstruation/setting_menstruation_page_template.dart';
 import 'package:pilll/components/template/setting_menstruation/setting_menstruation_pill_sheet_list.dart';
 import 'package:pilll/domain/settings/menstruation/setting_menstruation_store.dart';
-import 'package:pilll/domain/settings/setting_page_state_notifier.dart';
+import 'package:pilll/domain/settings/setting_page_state.codegen.dart';
 import 'package:pilll/entity/setting.codegen.dart';
 
 class SettingMenstruationPage extends HookConsumerWidget {
   @override
   Widget build(BuildContext context, WidgetRef ref) {
     final store = ref.watch(settingMenstruationStoreProvider.notifier);
-    final state = ref.watch(settingStateNotifierProvider).value!;
+    final state = ref.watch(settingStateProvider).value!;
     final setting = state.setting;
 
     return SettingMenstruationPageTemplate(
