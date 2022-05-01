@@ -52,7 +52,7 @@ void main() {
           ],
           child: MaterialApp(
             home: MonthCalendar(
-              dateForMonth: DateTime(2020, 09, 1),
+              dateForMonth: DateTime(2020, 09, 14),
               weekCalendarBuilder: (context, monthState, weekState) {
                 return CalendarWeekdayLine(
                   state: weekState,
@@ -113,7 +113,7 @@ void main() {
           ],
           child: MaterialApp(
             home: MonthCalendar(
-              dateForMonth: DateTime(2020, 09, 1),
+              dateForMonth: DateTime(2020, 09, 14),
               weekCalendarBuilder: (context, monthState, weekState) {
                 return CalendarWeekdayLine(
                   state: weekState,
@@ -131,7 +131,7 @@ void main() {
       await tester.pump();
 
       expect(find.text("新しいシート開始 ▶︎"), findsOneWidget);
-      expect(find.byType(CalendarNextPillSheetBand), findsOneWidget);
+      expect(find.byType(CalendarNextPillSheetBand), findsNWidgets(2));
       expect(
           find.byWidgetPredicate((widget) =>
               (widget is CalendarNextPillSheetBand &&
@@ -161,7 +161,7 @@ void main() {
           ],
           child: MaterialApp(
             home: MonthCalendar(
-              dateForMonth: DateTime(2020, 09, 1),
+              dateForMonth: DateTime(2020, 09, 14),
               weekCalendarBuilder: (context, monthState, weekState) {
                 return CalendarWeekdayLine(
                   state: weekState,
@@ -201,7 +201,7 @@ void main() {
           ],
           child: MaterialApp(
             home: MonthCalendar(
-              dateForMonth: DateTime(2020, 09, 1),
+              dateForMonth: DateTime(2020, 09, 14),
               weekCalendarBuilder: (context, monthState, weekState) {
                 return CalendarWeekdayLine(
                   state: weekState,
