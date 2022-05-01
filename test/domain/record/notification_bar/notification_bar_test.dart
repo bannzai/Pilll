@@ -11,7 +11,6 @@ import 'package:pilll/domain/record/components/notification_bar/components/premi
 import 'package:pilll/domain/record/components/notification_bar/components/recommend_signup.dart';
 import 'package:pilll/domain/record/components/notification_bar/components/recommend_signup_premium.dart';
 import 'package:pilll/domain/record/components/notification_bar/components/rest_duration.dart';
-import 'package:pilll/domain/record/record_page_state.codegen.dart';
 import 'package:pilll/entity/pill_sheet.codegen.dart';
 import 'package:pilll/entity/pill_sheet_group.codegen.dart';
 import 'package:pilll/entity/pill_sheet_type.dart';
@@ -27,7 +26,6 @@ import 'package:intl/date_symbol_data_local.dart';
 import 'package:pilll/util/shared_preference/keys.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
-import '../../../helper/fake.dart';
 import '../../../helper/mock.mocks.dart';
 
 class FakeState extends Fake implements NotificationBarState {}
