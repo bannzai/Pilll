@@ -463,7 +463,7 @@ class MockRecordPageStore extends _i1.Mock implements _i26.RecordPageStore {
           }),
           returnValue: false) as bool);
   @override
-  _i28.PillMarkType markFor(
+  _i28.PillMarkType pillMarkFor(
           {int? pillNumberIntoPillSheet, _i2.PillSheet? pillSheet}) =>
       (super.noSuchMethod(
           Invocation.method(#markFor, [], {

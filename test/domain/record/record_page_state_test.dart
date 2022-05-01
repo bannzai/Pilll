@@ -117,16 +117,16 @@ void main() {
       expect(state.pillSheetGroup?.pillSheets.first.todayPillIsAlreadyTaken,
           isTrue);
       expect(
-          store.markFor(pillNumberIntoPillSheet: 1, pillSheet: pillSheetEntity),
+          store.pillMarkFor(pillNumberIntoPillSheet: 1, pillSheet: pillSheetEntity),
           PillMarkType.done);
       expect(
-          store.markFor(pillNumberIntoPillSheet: 2, pillSheet: pillSheetEntity),
+          store.pillMarkFor(pillNumberIntoPillSheet: 2, pillSheet: pillSheetEntity),
           PillMarkType.done);
       expect(
-          store.markFor(pillNumberIntoPillSheet: 3, pillSheet: pillSheetEntity),
+          store.pillMarkFor(pillNumberIntoPillSheet: 3, pillSheet: pillSheetEntity),
           PillMarkType.done);
       expect(
-          store.markFor(pillNumberIntoPillSheet: 4, pillSheet: pillSheetEntity),
+          store.pillMarkFor(pillNumberIntoPillSheet: 4, pillSheet: pillSheetEntity),
           PillMarkType.normal);
     });
     test("it is not taken all", () async {
@@ -193,16 +193,16 @@ void main() {
       expect(state.pillSheetGroup?.pillSheets.first.todayPillIsAlreadyTaken,
           isFalse);
       expect(
-          store.markFor(pillNumberIntoPillSheet: 1, pillSheet: pillSheetEntity),
+          store.pillMarkFor(pillNumberIntoPillSheet: 1, pillSheet: pillSheetEntity),
           PillMarkType.done);
       expect(
-          store.markFor(pillNumberIntoPillSheet: 2, pillSheet: pillSheetEntity),
+          store.pillMarkFor(pillNumberIntoPillSheet: 2, pillSheet: pillSheetEntity),
           PillMarkType.done);
       expect(
-          store.markFor(pillNumberIntoPillSheet: 3, pillSheet: pillSheetEntity),
+          store.pillMarkFor(pillNumberIntoPillSheet: 3, pillSheet: pillSheetEntity),
           PillMarkType.normal);
       expect(
-          store.markFor(pillNumberIntoPillSheet: 4, pillSheet: pillSheetEntity),
+          store.pillMarkFor(pillNumberIntoPillSheet: 4, pillSheet: pillSheetEntity),
           PillMarkType.normal);
     });
   });

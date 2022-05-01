@@ -49,25 +49,6 @@ class RecordPageStore extends StateNotifier<AsyncValue<RecordPageState>> {
     return pillNumberIntoPillSheet <= activedPillSheet.lastTakenPillNumber;
   }
 
-  PillMarkType markFor({
-    required int pillNumberIntoPillSheet,
-    required PillSheet pillSheet,
-  }) {
-    if (pillNumberIntoPillSheet > pillSheet.typeInfo.dosingPeriod) {
-      return (pillSheet.pillSheetType == PillSheetType.pillsheet_21 ||
-              pillSheet.pillSheetType == PillSheetType.pillsheet_24_rest_4)
-          ? PillMarkType.rest
-          : PillMarkType.fake;
-    }
-    if (pillNumberIntoPillSheet <= pillSheet.lastTakenPillNumber) {
-      return PillMarkType.done;
-    }
-    if (pillNumberIntoPillSheet < pillSheet.todayPillNumber) {
-      return PillMarkType.normal;
-    }
-    return PillMarkType.normal;
-  }
-
   bool shouldPillMarkAnimation({
     required int pillNumberIntoPillSheet,
     required PillSheet pillSheet,
@@ -115,4 +96,23 @@ class RecordPageStore extends StateNotifier<AsyncValue<RecordPageState>> {
     state =
         AsyncValue.data(_stateValue.copyWith(isAlreadyShowPremiumSurvey: true));
   }
+}
+
+PillMarkType pillMarkFor({
+  required int pillNumberIntoPillSheet,
+  required PillSheet pillSheet,
+}) {
+  if (pillNumberIntoPillSheet > pillSheet.typeInfo.dosingPeriod) {
+    return (pillSheet.pillSheetType == PillSheetType.pillsheet_21 ||
+            pillSheet.pillSheetType == PillSheetType.pillsheet_24_rest_4)
+        ? PillMarkType.rest
+        : PillMarkType.fake;
+  }
+  if (pillNumberIntoPillSheet <= pillSheet.lastTakenPillNumber) {
+    return PillMarkType.done;
+  }
+  if (pillNumberIntoPillSheet < pillSheet.todayPillNumber) {
+    return PillMarkType.normal;
+  }
+  return PillMarkType.normal;
 }
