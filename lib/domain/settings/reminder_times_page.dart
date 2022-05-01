@@ -1,4 +1,3 @@
-import 'package:pilll/components/molecules/indicator.dart';
 import 'package:pilll/domain/settings/setting_page_state.codegen.dart';
 import 'package:pilll/entity/setting.codegen.dart';
 import 'package:pilll/domain/settings/setting_page_state_notifier.dart';
