@@ -5,6 +5,14 @@ import 'package:riverpod/riverpod.dart';
 final menstruationDatastoreProvider = Provider<MenstruationDatastore>(
     (ref) => MenstruationDatastore(ref.watch(databaseProvider)));
 
+final allMenstruationStreamProvider = StreamProvider<List<Menstruation>>(
+    (ref) => ref.watch(menstruationDatastoreProvider).streamAll());
+
+final menstruationsStreamForMonthProvider = StreamProvider.family(
+    (ref, DateTime dateForMonth) => ref
+        .watch(menstruationDatastoreProvider)
+        .streamForMonth(dateForMonth: dateForMonth));
+
 class MenstruationDatastore {
   final DatabaseConnection _database;
 
@@ -51,5 +59,22 @@ class MenstruationDatastore {
         .map((event) => event.docs.map((doc) => doc.data()).toList())
         .map((value) =>
             value.where((element) => element.deletedAt == null).toList());
+  }
+
+  Stream<List<Menstruation>> streamForMonth({required DateTime dateForMonth}) {
+    final firstDate = DateTime(dateForMonth.year, dateForMonth.month, 1);
+    final lastDate = DateTime(dateForMonth.year, dateForMonth.month + 1, 0);
+
+    return _database
+        .menstruationsReference()
+        .where(
+          MenstruationFirestoreKey.beginDate,
+          isGreaterThanOrEqualTo: firstDate,
+          isLessThanOrEqualTo: lastDate,
+        )
+        .snapshots()
+        .map((event) => event.docs.map((e) => e.data()).toList())
+        .map((menstruations) =>
+            menstruations..sort((a, b) => a.beginDate.compareTo(b.beginDate)));
   }
 }

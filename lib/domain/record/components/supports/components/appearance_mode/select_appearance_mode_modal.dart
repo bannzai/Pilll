@@ -9,14 +9,18 @@ import 'package:pilll/domain/premium_introduction/premium_introduction_sheet.dar
 import 'package:pilll/domain/premium_trial/premium_trial_complete_modal.dart';
 import 'package:pilll/domain/premium_trial/premium_trial_modal.dart';
 import 'package:pilll/domain/record/record_page_state.codegen.dart';
-import 'package:pilll/domain/record/record_page_store.dart';
+import 'package:pilll/domain/record/record_page_state_notifier.dart';
 import 'package:pilll/entity/setting.codegen.dart';
 
 class SelectAppearanceModeModal extends HookConsumerWidget {
+  final RecordPageStateNotifier store;
+
+  SelectAppearanceModeModal(this.store);
+
   @override
   Widget build(BuildContext context, WidgetRef ref) {
-    final store = ref.watch(recordPageStoreProvider.notifier);
-    final state = ref.watch(recordPageStoreProvider);
+    final state = ref.watch(recordPageStateNotifierProvider).value!;
+
     return Container(
       color: Colors.white,
       padding: const EdgeInsets.only(bottom: 20, top: 24, left: 16, right: 16),
@@ -71,14 +75,14 @@ class SelectAppearanceModeModal extends HookConsumerWidget {
 
   Widget _row(
     BuildContext context, {
-    required RecordPageStore store,
+    required RecordPageStateNotifier store,
     required RecordPageState state,
     required PillSheetAppearanceMode mode,
     required String text,
     required bool isPremiumFunction,
   }) {
     return GestureDetector(
-      onTap: () {
+      onTap: () async {
         analytics.logEvent(
           name: "did_select_pill_sheet_appearance",
           parameters: {
@@ -87,10 +91,11 @@ class SelectAppearanceModeModal extends HookConsumerWidget {
           },
         );
 
-        if (state.isPremium || state.isTrial) {
-          store.switchingAppearanceMode(mode);
+        if (state.premiumAndTrial.isPremium || state.premiumAndTrial.isTrial) {
+          await store.asyncAction
+              .switchingAppearanceMode(mode: mode, setting: state.setting);
         } else if (isPremiumFunction) {
-          if (state.trialDeadlineDate == null) {
+          if (state.premiumAndTrial.trialDeadlineDate == null) {
             showPremiumTrialModal(context, () {
               showPremiumTrialCompleteModalPreDialog(context);
             });
@@ -99,7 +104,8 @@ class SelectAppearanceModeModal extends HookConsumerWidget {
           }
         } else {
           // User selected non premium function mode
-          store.switchingAppearanceMode(mode);
+          await store.asyncAction
+              .switchingAppearanceMode(mode: mode, setting: state.setting);
         }
       },
       child: Container(
@@ -129,11 +135,12 @@ class SelectAppearanceModeModal extends HookConsumerWidget {
 
 void showSelectAppearanceModeModal(
   BuildContext context,
+  RecordPageStateNotifier store,
 ) {
   analytics.setCurrentScreen(screenName: "SelectAppearanceModeModal");
   showModalBottomSheet(
     context: context,
-    builder: (context) => SelectAppearanceModeModal(),
+    builder: (context) => SelectAppearanceModeModal(store),
     backgroundColor: Colors.transparent,
   );
 }

@@ -8,7 +8,7 @@ import 'package:pilll/domain/record/components/notification_bar/notification_bar
 import 'package:pilll/domain/record/components/supports/record_page_pill_sheet_support_actions.dart';
 import 'package:pilll/domain/record/components/pill_sheet/record_page_pill_sheet_list.dart';
 import 'package:pilll/domain/record/record_page_state.codegen.dart';
-import 'package:pilll/domain/record/record_page_store.dart';
+import 'package:pilll/domain/record/record_page_state_notifier.dart';
 import 'package:pilll/domain/record/components/header/record_page_header.dart';
 import 'package:pilll/domain/premium_trial/premium_trial_modal.dart';
 import 'package:pilll/entity/setting.codegen.dart';
@@ -21,25 +21,36 @@ import 'package:pilll/hooks/automatic_keep_alive_client_mixin.dart';
 class RecordPage extends HookConsumerWidget {
   @override
   Widget build(BuildContext context, WidgetRef ref) {
-    final state = ref.watch(recordPageStoreProvider);
-    final store = ref.watch(recordPageStoreProvider.notifier);
+    final state = ref.watch(recordPageStateNotifierProvider);
+    final store = ref.watch(recordPageStateNotifierProvider.notifier);
     useAutomaticKeepAlive(wantKeepAlive: true);
 
-    final exception = state.exception;
-    if (exception != null) {
-      return UniversalErrorPage(
-        error: exception,
-        reload: () => store.reset(),
+    return state.when(
+      data: (state) => RecordPageBody(store: store, state: state),
+      error: (error, stackTrace) => UniversalErrorPage(
+        error: error,
+        reload: () => ref.refresh(recordPageAsyncStateProvider),
         child: null,
-      );
-    }
+      ),
+      loading: () => const Indicator(),
+    );
+  }
+}
 
+class RecordPageBody extends StatelessWidget {
+  final RecordPageStateNotifier store;
+  final RecordPageState state;
+
+  const RecordPageBody({
+    Key? key,
+    required this.store,
+    required this.state,
+  }) : super(key: key);
+  @override
+  Widget build(BuildContext context) {
     final pillSheetGroup = state.pillSheetGroup;
     final activedPillSheet = pillSheetGroup?.activedPillSheet;
     final setting = state.setting;
-    if (setting == null || !state.firstLoadIsEnded) {
-      return const Indicator();
-    }
 
     Future.microtask(() async {
       if (state.shouldShowMigrateInfo) {
@@ -54,46 +65,45 @@ class RecordPage extends HookConsumerWidget {
       }
     });
 
-    return UniversalErrorPage(
-      error: state.exception,
-      reload: () => store.reset(),
-      child: Scaffold(
-        backgroundColor: PilllColors.background,
-        appBar: AppBar(
-          titleSpacing: 0,
-          backgroundColor: PilllColors.white,
-          toolbarHeight: RecordPageInformationHeaderConst.height,
-          title: Stack(
-            children: [
-              RecordPageInformationHeader(
-                today: DateTime.now(),
-                pillSheetGroup: state.pillSheetGroup,
-                setting: setting,
-                store: store,
-              ),
-            ],
-          ),
-        ),
-        body: Column(
+    return Scaffold(
+      backgroundColor: PilllColors.background,
+      appBar: AppBar(
+        titleSpacing: 0,
+        backgroundColor: PilllColors.white,
+        toolbarHeight: RecordPageInformationHeaderConst.height,
+        title: Stack(
           children: [
-            Expanded(
-              child: ListView(
-                children: [
-                  NotificationBar(state),
-                  const SizedBox(height: 37),
-                  _content(context, setting, state, store),
-                  const SizedBox(height: 20),
-                ],
-              ),
+            RecordPageInformationHeader(
+              today: DateTime.now(),
+              pillSheetGroup: state.pillSheetGroup,
+              setting: setting,
+              store: store,
             ),
-            if (activedPillSheet != null &&
-                pillSheetGroup != null &&
-                !pillSheetGroup.isDeactived) ...[
-              RecordPageButton(currentPillSheet: activedPillSheet),
-              const SizedBox(height: 40),
-            ],
           ],
         ),
+      ),
+      body: Column(
+        children: [
+          Expanded(
+            child: ListView(
+              children: [
+                NotificationBar(),
+                const SizedBox(height: 37),
+                _content(context, setting, state, store),
+                const SizedBox(height: 20),
+              ],
+            ),
+          ),
+          if (activedPillSheet != null &&
+              pillSheetGroup != null &&
+              !pillSheetGroup.isDeactived) ...[
+            RecordPageButton(
+              pillSheetGroup: pillSheetGroup,
+              currentPillSheet: activedPillSheet,
+            ),
+            const SizedBox(height: 40),
+          ],
+        ],
       ),
     );
   }
@@ -102,7 +112,7 @@ class RecordPage extends HookConsumerWidget {
     BuildContext context,
     Setting setting,
     RecordPageState state,
-    RecordPageStore store,
+    RecordPageStateNotifier store,
   ) {
     final pillSheetGroup = state.pillSheetGroup;
     final activedPillSheet = pillSheetGroup?.activedPillSheet;
@@ -119,6 +129,7 @@ class RecordPage extends HookConsumerWidget {
         mainAxisAlignment: MainAxisAlignment.start,
         children: [
           RecordPagePillSheetSupportActions(
+            state: state,
             store: store,
             pillSheetGroup: pillSheetGroup,
             activedPillSheet: activedPillSheet,
@@ -134,15 +145,15 @@ class RecordPage extends HookConsumerWidget {
       );
   }
 
-  Future<void> _showMigrateInfoDialog(
-      BuildContext context, RecordPageStore store) async {
+  void _showMigrateInfoDialog(
+      BuildContext context, RecordPageStateNotifier store) async {
     showDialog(
         context: context,
         barrierColor: Colors.white,
         builder: (context) {
           return MigrateInfo(
             onClose: () async {
-              await store.shownMigrateInfo();
+              store.showMigrateInfo();
               Navigator.of(context).pop();
             },
           );

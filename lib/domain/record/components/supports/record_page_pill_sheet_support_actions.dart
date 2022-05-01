@@ -4,13 +4,15 @@ import 'package:pilll/domain/record/components/supports/components/appearance_mo
 import 'package:pilll/domain/record/components/supports/components/display_number_setting/display_number_setting_button.dart';
 import 'package:pilll/domain/record/components/supports/components/rest_duration/begin_manual_rest_duration_button.dart';
 import 'package:pilll/domain/record/components/supports/components/rest_duration/end_manual_rest_duration_button.dart';
-import 'package:pilll/domain/record/record_page_store.dart';
+import 'package:pilll/domain/record/record_page_state.codegen.dart';
+import 'package:pilll/domain/record/record_page_state_notifier.dart';
 import 'package:pilll/entity/pill_sheet.codegen.dart';
 import 'package:pilll/entity/pill_sheet_group.codegen.dart';
 import 'package:pilll/entity/setting.codegen.dart';
 
 class RecordPagePillSheetSupportActions extends StatelessWidget {
-  final RecordPageStore store;
+  final RecordPageStateNotifier store;
+  final RecordPageState state;
   final PillSheetGroup pillSheetGroup;
   final PillSheet activedPillSheet;
   final Setting setting;
@@ -18,6 +20,7 @@ class RecordPagePillSheetSupportActions extends StatelessWidget {
   const RecordPagePillSheetSupportActions({
     Key? key,
     required this.store,
+    required this.state,
     required this.pillSheetGroup,
     required this.activedPillSheet,
     required this.setting,
@@ -31,8 +34,7 @@ class RecordPagePillSheetSupportActions extends StatelessWidget {
       width: PillSheetViewLayout.width,
       child: Row(
         children: [
-          SwitchingAppearanceMode(
-              store: store, mode: setting.pillSheetAppearanceMode),
+          SwitchingAppearanceMode(store: store, state: state),
           const Spacer(),
           if (setting.pillSheetAppearanceMode ==
               PillSheetAppearanceMode.sequential) ...[

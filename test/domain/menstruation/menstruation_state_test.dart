@@ -10,8 +10,7 @@ void main() {
   group("#calendarDataSource", () {
     test("limit testing for every time", () {
       // NOTE: If calculating calendarDataSource is missing. Maybe throw exception about range error.
-      final state = MenstruationState();
-      expect(state.calendarDataSource.length / 7, greaterThan(0));
+      expect(menstruationWeekCalendarDataSource.length / 7, greaterThan(0));
     });
   });
 }

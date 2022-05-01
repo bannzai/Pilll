@@ -15,15 +15,11 @@ import 'package:pilll/domain/record/components/notification_bar/components/premi
 import 'package:pilll/domain/record/components/notification_bar/components/recommend_signup.dart';
 import 'package:pilll/domain/record/components/notification_bar/components/recommend_signup_premium.dart';
 import 'package:pilll/domain/record/components/notification_bar/components/rest_duration.dart';
-import 'package:pilll/domain/record/record_page_state.codegen.dart';
 import 'package:pilll/domain/sign_in/sign_in_sheet.dart';
 import 'package:pilll/domain/sign_in/sign_in_sheet_state.codegen.dart';
 import 'package:pilll/util/datetime/day.dart';
 
 class NotificationBar extends HookConsumerWidget {
-  final RecordPageState parameter;
-
-  NotificationBar(this.parameter);
   @override
   Widget build(BuildContext context, WidgetRef ref) {
     final body = _body(context, ref);
@@ -39,9 +35,9 @@ class NotificationBar extends HookConsumerWidget {
   }
 
   Widget? _body(BuildContext context, WidgetRef ref) {
-    final state = ref.watch(notificationBarStateProvider(parameter));
-    final store = ref.watch(notificationBarStoreProvider(parameter).notifier);
-    if (!state.isPremium) {
+    final state = ref.watch(notificationBarStoreProvider);
+    final store = ref.watch(notificationBarStoreProvider.notifier);
+    if (!state.premiumAndTrial.isPremium) {
       final premiumTrialLimit = state.premiumTrialLimit;
       if (premiumTrialLimit != null) {
         return PremiumTrialLimitNotificationBar(
@@ -49,8 +45,8 @@ class NotificationBar extends HookConsumerWidget {
       }
 
       if (!state.premiumTrialBeginAnouncementIsClosed) {
-        if (state.isTrial) {
-          final beginTrialDate = state.beginTrialDate;
+        if (state.premiumAndTrial.isTrial) {
+          final beginTrialDate = state.premiumAndTrial.beginTrialDate;
           if (beginTrialDate != null) {
             final between = daysBetween(beginTrialDate, now());
             if (between <= 3) {
@@ -60,10 +56,10 @@ class NotificationBar extends HookConsumerWidget {
         }
       }
 
-      if (state.hasDiscountEntitlement) {
-        if (!state.isTrial) {
+      if (state.premiumAndTrial.hasDiscountEntitlement) {
+        if (!state.premiumAndTrial.isTrial) {
           final discountEntitlementDeadlineDate =
-              state.discountEntitlementDeadlineDate;
+              state.premiumAndTrial.discountEntitlementDeadlineDate;
           if (discountEntitlementDeadlineDate != null) {
             // NOTE: watch state
             final isOverDiscountDeadline = ref.watch(
@@ -111,9 +107,9 @@ class NotificationBar extends HookConsumerWidget {
         }
       }
 
-      if (!state.isTrial) {
+      if (!state.premiumAndTrial.isTrial) {
         if (state.totalCountOfActionForTakenPill >= 14) {
-          if (state.trialDeadlineDate == null) {
+          if (state.premiumAndTrial.trialDeadlineDate == null) {
             if (!state.premiumTrialGuideNotificationIsClosed) {
               return PremiumTrialGuideNotificationBar(
                 onTap: () {
@@ -135,9 +131,9 @@ class NotificationBar extends HookConsumerWidget {
           state.latestPillSheetGroup?.activedPillSheet == null) {
         // ピルシートグループが存在していてactivedPillSheetが無い場合はピルシート終了が何かしらの理由がなくなったと見なし終了表示にする
         return EndedPillSheet(
-          isPremium: state.isPremium,
-          isTrial: state.isTrial,
-          trialDeadlineDate: state.trialDeadlineDate,
+          isPremium: state.premiumAndTrial.isPremium,
+          isTrial: state.premiumAndTrial.isTrial,
+          trialDeadlineDate: state.premiumAndTrial.trialDeadlineDate,
         );
       }
     } else {
@@ -155,9 +151,9 @@ class NotificationBar extends HookConsumerWidget {
           state.latestPillSheetGroup?.activedPillSheet == null) {
         // ピルシートグループが存在していてactivedPillSheetが無い場合はピルシート終了が何かしらの理由がなくなったと見なし終了表示にする
         return EndedPillSheet(
-          isPremium: state.isPremium,
-          isTrial: state.isTrial,
-          trialDeadlineDate: state.trialDeadlineDate,
+          isPremium: state.premiumAndTrial.isPremium,
+          isTrial: state.premiumAndTrial.isTrial,
+          trialDeadlineDate: state.premiumAndTrial.trialDeadlineDate,
         );
       }
     }

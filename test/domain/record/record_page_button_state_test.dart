@@ -2,8 +2,9 @@ import 'package:pilll/analytics.dart';
 import 'package:pilll/domain/record/components/button/cancel_button.dart';
 import 'package:pilll/domain/record/components/button/record_page_button.dart';
 import 'package:pilll/domain/record/components/button/taken_button.dart';
-import 'package:pilll/domain/record/record_page_store.dart';
+import 'package:pilll/domain/record/record_page_state_notifier.dart';
 import 'package:pilll/entity/pill_sheet.codegen.dart';
+import 'package:pilll/entity/pill_sheet_group.codegen.dart';
 import 'package:pilll/entity/pill_sheet_type.dart';
 import 'package:pilll/util/datetime/day.dart';
 import 'package:pilll/util/environment.dart';
@@ -39,11 +40,15 @@ void main() {
       await tester.pumpWidget(
         ProviderScope(
           overrides: [
-            recordPageStoreProvider.overrideWithProvider(
-                StateNotifierProvider((ref) => MockRecordPageStore())),
+            recordPageStateNotifierProvider.overrideWithProvider(
+                StateNotifierProvider((ref) => MockRecordPageStateNotifier())),
           ],
           child: MaterialApp(
             home: RecordPageButton(
+              pillSheetGroup: PillSheetGroup(
+                  pillSheets: [pillSheet],
+                  createdAt: now(),
+                  pillSheetIDs: ["id"]),
               currentPillSheet: pillSheet,
             ),
           ),
@@ -64,11 +69,15 @@ void main() {
     await tester.pumpWidget(
       ProviderScope(
         overrides: [
-          recordPageStoreProvider.overrideWithProvider(
-              StateNotifierProvider((ref) => MockRecordPageStore())),
+          recordPageStateNotifierProvider.overrideWithProvider(
+              StateNotifierProvider((ref) => MockRecordPageStateNotifier())),
         ],
         child: MaterialApp(
           home: RecordPageButton(
+            pillSheetGroup: PillSheetGroup(
+                pillSheets: [pillSheet],
+                createdAt: now(),
+                pillSheetIDs: ["id"]),
             currentPillSheet: pillSheet,
           ),
         ),

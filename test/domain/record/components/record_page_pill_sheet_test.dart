@@ -1,7 +1,6 @@
 import 'package:mockito/mockito.dart';
 import 'package:pilll/domain/record/components/pill_sheet/components/pill_number.dart';
 import 'package:pilll/domain/record/components/pill_sheet/record_page_pill_sheet.dart';
-import 'package:pilll/domain/record/record_page_state.codegen.dart';
 import 'package:pilll/entity/pill_sheet.codegen.dart';
 import 'package:pilll/entity/pill_sheet_group.codegen.dart';
 import 'package:pilll/entity/pill_sheet_type.dart';
@@ -10,6 +9,7 @@ import 'package:pilll/entity/setting.codegen.dart';
 import 'package:pilll/service/day.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
+import '../../../helper/fake.dart';
 import '../../../helper/mock.mocks.dart';
 
 void main() {
@@ -39,11 +39,6 @@ void main() {
           isOnReminder: true,
           pillSheetAppearanceMode: pillSheetAppearanceMode,
         );
-        final state = RecordPageState(
-          isPremium: true,
-          isTrial: true,
-          setting: setting,
-        );
         final pillSheet = PillSheet(
             typeInfo: PillSheetType.pillsheet_21.typeInfo, beginingDate: today);
         final pillSheetGroup = PillSheetGroup(
@@ -53,12 +48,14 @@ void main() {
         for (int i = 0; i < 28; i++) {
           final pillNumberIntoPillSheet = i + 1;
           final widget = RecordPagePillSheet.textOfPillNumber(
-              state: state,
-              pillSheetGroup: pillSheetGroup,
-              pillSheet: pillSheet,
-              pillNumberIntoPillSheet: pillNumberIntoPillSheet,
-              pageIndex: 0,
-              setting: setting);
+            pillSheetGroup: pillSheetGroup,
+            pillSheet: pillSheet,
+            pillNumberIntoPillSheet: pillNumberIntoPillSheet,
+            pageIndex: 0,
+            setting: setting,
+            premiumAndTrial:
+                FakePremiumAndTrial(fakeIsPremium: true, fakeIsTrial: true),
+          );
 
           if (pillNumberIntoPillSheet < pillNumberForFromMenstruation) {
             expect(widget, isA<PlainPillNumber>(),
@@ -92,11 +89,7 @@ void main() {
           isOnReminder: true,
           pillSheetAppearanceMode: pillSheetAppearanceMode,
         );
-        final state = RecordPageState(
-          isPremium: false,
-          isTrial: false,
-          setting: setting,
-        );
+
         final pillSheet = PillSheet(
             typeInfo: PillSheetType.pillsheet_21.typeInfo, beginingDate: today);
         final pillSheetGroup = PillSheetGroup(
@@ -107,7 +100,8 @@ void main() {
         for (int i = 0; i < 28; i++) {
           final pillNumberIntoPillSheet = i + 1;
           final widget = RecordPagePillSheet.textOfPillNumber(
-              state: state,
+              premiumAndTrial:
+                  FakePremiumAndTrial(fakeIsPremium: false, fakeIsTrial: false),
               pillSheetGroup: pillSheetGroup,
               pillSheet: pillSheet,
               pillNumberIntoPillSheet: pillNumberIntoPillSheet,
@@ -148,11 +142,6 @@ void main() {
           isOnReminder: true,
           pillSheetAppearanceMode: pillSheetAppearanceMode,
         );
-        final state = RecordPageState(
-          isPremium: true,
-          isTrial: true,
-          setting: setting,
-        );
         final pillSheet = PillSheet(
             typeInfo: PillSheetType.pillsheet_21.typeInfo, beginingDate: today);
         final pillSheetGroup = PillSheetGroup(
@@ -163,7 +152,8 @@ void main() {
         for (int i = 0; i < 28; i++) {
           final pillNumberIntoPillSheet = i + 1;
           final widget = RecordPagePillSheet.textOfPillNumber(
-              state: state,
+              premiumAndTrial:
+                  FakePremiumAndTrial(fakeIsPremium: true, fakeIsTrial: true),
               pillSheetGroup: pillSheetGroup,
               pillSheet: pillSheet,
               pillNumberIntoPillSheet: pillNumberIntoPillSheet,
@@ -205,11 +195,6 @@ void main() {
           isOnReminder: true,
           pillSheetAppearanceMode: pillSheetAppearanceMode,
         );
-        final state = RecordPageState(
-          isPremium: true,
-          isTrial: true,
-          setting: setting,
-        );
         final pillSheet = PillSheet(
             typeInfo: PillSheetType.pillsheet_21.typeInfo, beginingDate: today);
         final pillSheetGroup = PillSheetGroup(
@@ -220,7 +205,8 @@ void main() {
         for (int i = 0; i < 28; i++) {
           final pillNumberIntoPillSheet = i + 1;
           final widget = RecordPagePillSheet.textOfPillNumber(
-              state: state,
+              premiumAndTrial:
+                  FakePremiumAndTrial(fakeIsPremium: true, fakeIsTrial: true),
               pillSheetGroup: pillSheetGroup,
               pillSheet: pillSheet,
               pillNumberIntoPillSheet: pillNumberIntoPillSheet,
@@ -261,11 +247,6 @@ void main() {
           isOnReminder: true,
           pillSheetAppearanceMode: pillSheetAppearanceMode,
         );
-        final state = RecordPageState(
-          isPremium: false,
-          isTrial: false,
-          setting: setting,
-        );
         final pillSheet = PillSheet(
             typeInfo: PillSheetType.pillsheet_21.typeInfo, beginingDate: today);
         final pillSheetGroup = PillSheetGroup(
@@ -276,7 +257,8 @@ void main() {
         for (int i = 0; i < 28; i++) {
           final pillNumberIntoPillSheet = i + 1;
           final widget = RecordPagePillSheet.textOfPillNumber(
-              state: state,
+              premiumAndTrial:
+                  FakePremiumAndTrial(fakeIsPremium: false, fakeIsTrial: false),
               pillSheetGroup: pillSheetGroup,
               pillSheet: pillSheet,
               pillNumberIntoPillSheet: pillNumberIntoPillSheet,
@@ -317,11 +299,6 @@ void main() {
           isOnReminder: true,
           pillSheetAppearanceMode: pillSheetAppearanceMode,
         );
-        final state = RecordPageState(
-          isPremium: true,
-          isTrial: true,
-          setting: setting,
-        );
         final pillSheet = PillSheet(
             typeInfo: PillSheetType.pillsheet_21.typeInfo, beginingDate: today);
         final pillSheetGroup = PillSheetGroup(
@@ -332,7 +309,8 @@ void main() {
         for (int i = 0; i < 28; i++) {
           final pillNumberIntoPillSheet = i + 1;
           final widget = RecordPagePillSheet.textOfPillNumber(
-              state: state,
+              premiumAndTrial:
+                  FakePremiumAndTrial(fakeIsPremium: true, fakeIsTrial: true),
               pillSheetGroup: pillSheetGroup,
               pillSheet: pillSheet,
               pillNumberIntoPillSheet: pillNumberIntoPillSheet,
@@ -374,11 +352,6 @@ void main() {
           isOnReminder: true,
           pillSheetAppearanceMode: pillSheetAppearanceMode,
         );
-        final state = RecordPageState(
-          isPremium: true,
-          isTrial: true,
-          setting: setting,
-        );
         final pillSheet = PillSheet(
             typeInfo: PillSheetType.pillsheet_21.typeInfo, beginingDate: today);
         final pillSheetGroup = PillSheetGroup(
@@ -388,7 +361,8 @@ void main() {
         for (int i = 0; i < 28; i++) {
           final pillNumberIntoPillSheet = i + 1;
           final widget = RecordPagePillSheet.textOfPillNumber(
-              state: state,
+              premiumAndTrial:
+                  FakePremiumAndTrial(fakeIsPremium: true, fakeIsTrial: true),
               pillSheetGroup: pillSheetGroup,
               pillSheet: pillSheet,
               pillNumberIntoPillSheet: pillNumberIntoPillSheet,
@@ -427,11 +401,6 @@ void main() {
           isOnReminder: true,
           pillSheetAppearanceMode: pillSheetAppearanceMode,
         );
-        final state = RecordPageState(
-          isPremium: false,
-          isTrial: false,
-          setting: setting,
-        );
         final pillSheet = PillSheet(
             typeInfo: PillSheetType.pillsheet_21.typeInfo, beginingDate: today);
         final pillSheetGroup = PillSheetGroup(
@@ -442,7 +411,8 @@ void main() {
         for (int i = 0; i < 28; i++) {
           final pillNumberIntoPillSheet = i + 1;
           final widget = RecordPagePillSheet.textOfPillNumber(
-              state: state,
+              premiumAndTrial:
+                  FakePremiumAndTrial(fakeIsPremium: false, fakeIsTrial: false),
               pillSheetGroup: pillSheetGroup,
               pillSheet: pillSheet,
               pillNumberIntoPillSheet: pillNumberIntoPillSheet,
@@ -483,11 +453,6 @@ void main() {
           isOnReminder: true,
           pillSheetAppearanceMode: pillSheetAppearanceMode,
         );
-        final state = RecordPageState(
-          isPremium: true,
-          isTrial: true,
-          setting: setting,
-        );
         final pillSheet = PillSheet(
             typeInfo: PillSheetType.pillsheet_21.typeInfo, beginingDate: today);
         final pillSheetGroup = PillSheetGroup(
@@ -498,7 +463,8 @@ void main() {
         for (int i = 0; i < 28; i++) {
           final pillNumberIntoPillSheet = i + 1;
           final widget = RecordPagePillSheet.textOfPillNumber(
-              state: state,
+              premiumAndTrial:
+                  FakePremiumAndTrial(fakeIsPremium: true, fakeIsTrial: true),
               pillSheetGroup: pillSheetGroup,
               pillSheet: pillSheet,
               pillNumberIntoPillSheet: pillNumberIntoPillSheet,

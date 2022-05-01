@@ -42,13 +42,6 @@ class PillSheetDatastore {
   }
 }
 
-class PillSheetIsNotExists extends Error {
-  @override
-  toString() {
-    return "ピルシートが存在しません。";
-  }
-}
-
 class PillSheetAlreadyExists extends Error {
   @override
   toString() {

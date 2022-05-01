@@ -7,7 +7,7 @@ import 'package:pilll/components/atoms/font.dart';
 import 'package:pilll/components/atoms/text_color.dart';
 import 'package:pilll/components/molecules/app_card.dart';
 import 'package:pilll/components/molecules/premium_badge.dart';
-import 'package:pilll/domain/calendar/calendar_page_store.dart';
+import 'package:pilll/domain/calendar/calendar_page_state_notifier.dart';
 import 'package:pilll/domain/calendar/components/pill_sheet_modified_history/components/pill_sheet_modified_history_more_button.dart';
 import 'package:pilll/domain/calendar/components/pill_sheet_modified_history/pill_sheet_modified_history_list.dart';
 import 'package:pilll/domain/calendar/components/pill_sheet_modified_history/pill_sheet_modified_history_list_header.dart';
@@ -55,7 +55,7 @@ class CalendarPillSheetModifiedHistoryCardState {
 
 class CalendarPillSheetModifiedHistoryCard extends StatelessWidget {
   final CalendarPillSheetModifiedHistoryCardState state;
-  final CalendarPageStateStore store;
+  final CalendarPageStateNotifier store;
 
   const CalendarPillSheetModifiedHistoryCard({
     Key? key,
@@ -66,7 +66,8 @@ class CalendarPillSheetModifiedHistoryCard extends StatelessWidget {
   Widget build(BuildContext context) {
     return AppCard(
       child: Container(
-        padding: const EdgeInsets.only(left: 16, top: 16, right: 16, bottom: 16),
+        padding:
+            const EdgeInsets.only(left: 16, top: 16, right: 16, bottom: 16),
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
@@ -99,7 +100,7 @@ class CalendarPillSheetModifiedHistoryCard extends StatelessWidget {
                       scrollPhysics: const NeverScrollableScrollPhysics(),
                       pillSheetModifiedHistories:
                           state.pillSheetModifiedHistories,
-                      onEditTakenPillAction: store.editTakenValue,
+                      onEditTakenPillAction: store.asyncAction.editTakenValue,
                     ),
                   ),
                   if (state.moreButtonIsShown)

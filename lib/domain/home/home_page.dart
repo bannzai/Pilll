@@ -1,5 +1,4 @@
 import 'package:pilll/analytics.dart';
-import 'package:pilll/entity/diary.codegen.dart';
 import 'package:pilll/domain/calendar/calendar_page.dart';
 import 'package:pilll/domain/menstruation/menstruation_page.dart';
 import 'package:pilll/domain/record/record_page.dart';
@@ -7,11 +6,8 @@ import 'package:pilll/domain/settings/setting_page.dart';
 import 'package:pilll/components/atoms/color.dart';
 import 'package:pilll/components/atoms/text_color.dart';
 import 'package:pilll/service/push_notification.dart';
-import 'package:pilll/util/datetime/day.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
-
-import '../../components/organisms/calendar/weekly/weekly_calendar.dart';
 
 GlobalKey<_HomePageState> homeKey = GlobalKey();
 
@@ -31,8 +27,6 @@ class _HomePageState extends State<HomePage>
   HomePageTabType get _selectedTab {
     return HomePageTabType.values[_selectedIndex];
   }
-
-  List<Diary> diaries = [];
 
   @override
   void initState() {
@@ -113,31 +107,6 @@ class _HomePageState extends State<HomePage>
             CalendarPage(),
             SettingPage(),
           ],
-        ),
-        floatingActionButton: Visibility(
-          visible: _selectedTab == HomePageTabType.calendar,
-          child: Container(
-            padding: const EdgeInsets.only(right: 10, bottom: 32),
-            child: FloatingActionButton(
-              onPressed: () {
-                switch (_selectedTab) {
-                  case HomePageTabType.record:
-                    break;
-                  case HomePageTabType.menstruation:
-                    break;
-                  case HomePageTabType.calendar:
-                    analytics.logEvent(name: "calendar_fab_pressed");
-                    final date = today();
-                    transitionToPostDiary(context, date, diaries);
-                    break;
-                  case HomePageTabType.setting:
-                    break;
-                }
-              },
-              child: const Icon(Icons.add, color: Colors.white),
-              backgroundColor: PilllColors.secondary,
-            ),
-          ),
         ),
       ),
     );

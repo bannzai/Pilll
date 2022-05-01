@@ -1,5 +1,5 @@
 import 'package:pilll/database/batch.dart';
-import 'package:pilll/domain/record/record_page_store.dart';
+import 'package:pilll/domain/record/record_page_state_notifier.dart';
 import 'package:pilll/entity/pill_sheet_group.codegen.dart';
 import 'package:pilll/database/pill_sheet_group.dart';
 import 'package:pilll/database/pill_sheet_modified_history.dart';
@@ -14,7 +14,7 @@ final displayNumberSettingStateStoreProvider =
     ref.watch(batchFactoryProvider),
     ref.watch(pillSheetGroupDatastoreProvider),
     ref.watch(pillSheetModifiedHistoryDatastoreProvider),
-    pillSheetGroup: ref.watch(recordPageStoreProvider).pillSheetGroup!,
+    pillSheetGroup: ref.watch(recordPageStateNotifierProvider).value!.pillSheetGroup!,
   );
 });
 

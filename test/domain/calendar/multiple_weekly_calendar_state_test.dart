@@ -1,6 +1,6 @@
+import 'package:pilll/components/organisms/calendar/band/calendar_band_function.dart';
 import 'package:pilll/domain/calendar/date_range.dart';
-import 'package:pilll/domain/calendar/weekly_calendar_state.dart';
-import 'package:pilll/components/organisms/calendar/weekly/weekly_calendar_state.dart';
+import 'package:pilll/domain/calendar/week_calendar_state.dart';
 import 'package:flutter_test/flutter_test.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
@@ -24,11 +24,10 @@ void main() {
     test("#shouldGrayoutTile", () {
       final date = DateTime.parse("2020-09-14");
       final anyDate = date;
-      final calendarState = CalendarTabWeeklyCalendarState(
+      final calendarState = CalendarTabWeekCalendarState(
         dateRange: DateRange(anyDate, anyDate.add(const Duration(days: 6))),
         targetDateOfMonth: date,
         diariesForMonth: [],
-        allBandModels: [],
       );
       expect(calendarState.isGrayoutTile(DateTime.parse("2020-08-30")), true);
       expect(calendarState.isGrayoutTile(DateTime.parse("2020-08-31")), true);
@@ -40,26 +39,29 @@ void main() {
         final date = DateTime.parse("2020-09-14");
         final begin = DateTime.parse("2020-08-30");
         final end = DateTime.parse("2020-09-05");
-        final calendarState = CalendarTabWeeklyCalendarState(
+        final calendarState = CalendarTabWeekCalendarState(
           dateRange: DateRange(begin, end),
           targetDateOfMonth: date,
           diariesForMonth: [],
-          allBandModels: [],
         );
         expect(
-          calendarState.isNecessaryLineBreak(DateTime.parse("2020-08-31")),
+          isNecessaryLineBreak(
+              DateTime.parse("2020-08-31"), calendarState.dateRange),
           false,
         );
         expect(
-          calendarState.isNecessaryLineBreak(DateTime.parse("2020-09-01")),
+          isNecessaryLineBreak(
+              DateTime.parse("2020-09-01"), calendarState.dateRange),
           false,
         );
         expect(
-          calendarState.isNecessaryLineBreak(DateTime.parse("2020-09-06")),
+          isNecessaryLineBreak(
+              DateTime.parse("2020-09-06"), calendarState.dateRange),
           true,
         );
         expect(
-          calendarState.isNecessaryLineBreak(DateTime.parse("2020-09-19")),
+          isNecessaryLineBreak(
+              DateTime.parse("2020-09-19"), calendarState.dateRange),
           true,
         );
       });
@@ -69,21 +71,22 @@ void main() {
         final date = DateTime.parse("2020-09-14");
         final begin = DateTime.parse("2020-08-30");
         final end = DateTime.parse("2020-09-05");
-        final calendarState = CalendarTabWeeklyCalendarState(
+        final calendarState = CalendarTabWeekCalendarState(
           dateRange: DateRange(begin, end),
           targetDateOfMonth: date,
-          allBandModels: [],
           diariesForMonth: [],
         );
         expect(
-          calendarState.offsetForStartPositionAtLine(
+          offsetForStartPositionAtLine(
             DateTime.parse("2020-08-31"),
+            calendarState.dateRange,
           ),
           1,
         );
         expect(
-          calendarState.offsetForStartPositionAtLine(
+          offsetForStartPositionAtLine(
             DateTime.parse("2020-09-01"),
+            calendarState.dateRange,
           ),
           2,
         );

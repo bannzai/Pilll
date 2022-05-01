@@ -3,10 +3,11 @@ import 'package:hooks_riverpod/hooks_riverpod.dart';
 import 'package:pilll/analytics.dart';
 import 'package:pilll/components/atoms/color.dart';
 import 'package:pilll/components/atoms/font.dart';
-import 'package:pilll/domain/settings/setting_page_store.dart';
+import 'package:pilll/domain/settings/setting_page_state_notifier.dart';
 import 'package:pilll/entity/pill_sheet.codegen.dart';
 import 'package:pilll/entity/pill_sheet_type.dart';
 import 'package:pilll/entity/setting.codegen.dart';
+import 'package:pilll/error/error_alert.dart';
 
 class NotificationInRestDuration extends HookConsumerWidget {
   final PillSheet pillSheet;
@@ -20,7 +21,7 @@ class NotificationInRestDuration extends HookConsumerWidget {
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {
-    final store = ref.watch(settingStoreProvider.notifier);
+    final store = ref.watch(settingStateNotifierProvider.notifier);
     return SwitchListTile(
       title: Text("${pillSheet.pillSheetType.notTakenWord}期間の通知",
           style: FontType.listRow),
@@ -33,19 +34,18 @@ class NotificationInRestDuration extends HookConsumerWidget {
           name: "toggle_notify_not_taken_duration",
         );
         ScaffoldMessenger.of(context).hideCurrentSnackBar();
-        store
+        store.asyncAction
             .modifyIsOnNotifyInNotTakenDuration(
-                !setting.isOnNotifyInNotTakenDuration)
-            .then((state) {
-          ScaffoldMessenger.of(context).showSnackBar(
-            SnackBar(
-              duration: const Duration(seconds: 2),
-              content: Text(
-                "${pillSheet.pillSheetType.notTakenWord}期間の通知を${state.setting!.isOnNotifyInNotTakenDuration ? "ON" : "OFF"}にしました",
-              ),
-            ),
-          );
-        });
+                !setting.isOnNotifyInNotTakenDuration, setting)
+            .catchError((error) => showErrorAlertFor(context, error))
+            .then((_) => ScaffoldMessenger.of(context).showSnackBar(
+                  SnackBar(
+                    duration: const Duration(seconds: 2),
+                    content: Text(
+                      "${pillSheet.pillSheetType.notTakenWord}期間の通知を${value ? "ON" : "OFF"}にしました",
+                    ),
+                  ),
+                ));
       },
       value: setting.isOnNotifyInNotTakenDuration,
       // NOTE: when configured subtitle, the space between elements becomes very narrow

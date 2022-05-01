@@ -7,8 +7,9 @@ import 'package:pilll/components/molecules/premium_badge.dart';
 import 'package:pilll/domain/premium_introduction/premium_introduction_sheet.dart';
 import 'package:pilll/domain/premium_trial/premium_trial_complete_modal.dart';
 import 'package:pilll/domain/premium_trial/premium_trial_modal.dart';
-import 'package:pilll/domain/settings/setting_page_store.dart';
+import 'package:pilll/domain/settings/setting_page_state_notifier.dart';
 import 'package:pilll/entity/setting.codegen.dart';
+import 'package:pilll/error/error_alert.dart';
 
 class CreatingNewPillSheetRow extends HookConsumerWidget {
   final Setting setting;
@@ -26,7 +27,7 @@ class CreatingNewPillSheetRow extends HookConsumerWidget {
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {
-    final store = ref.watch(settingStoreProvider.notifier);
+    final store = ref.watch(settingStateNotifierProvider.notifier);
     return SwitchListTile(
       title: Row(
         children: [
@@ -37,8 +38,8 @@ class CreatingNewPillSheetRow extends HookConsumerWidget {
           ]
         ],
       ),
-      subtitle:
-          const Text("ピルをすべて服用済みの場合、新しいシートを自動で追加します", style: FontType.assisting),
+      subtitle: const Text("ピルをすべて服用済みの場合、新しいシートを自動で追加します",
+          style: FontType.assisting),
       activeColor: PilllColors.primary,
       onChanged: (bool value) {
         analytics.logEvent(
@@ -46,23 +47,20 @@ class CreatingNewPillSheetRow extends HookConsumerWidget {
         );
         if (isPremium || isTrial) {
           ScaffoldMessenger.of(context).hideCurrentSnackBar();
-          store
+          store.asyncAction
               .modifiyIsAutomaticallyCreatePillSheet(
-                  !setting.isAutomaticallyCreatePillSheet)
-              .then((state) {
-            final setting = state.setting;
-            if (setting == null) {
-              return null;
-            }
-            ScaffoldMessenger.of(context).showSnackBar(
-              SnackBar(
-                duration: const Duration(seconds: 2),
-                content: Text(
-                  "ピルシートグループの自動追加を${setting.isAutomaticallyCreatePillSheet ? "ON" : "OFF"}にしました",
+                  !setting.isAutomaticallyCreatePillSheet, setting)
+              .catchError((error) => showErrorAlertFor(context, error))
+              .then(
+                (_) => ScaffoldMessenger.of(context).showSnackBar(
+                  SnackBar(
+                    duration: const Duration(seconds: 2),
+                    content: Text(
+                      "ピルシートグループの自動追加を${value ? "ON" : "OFF"}にしました",
+                    ),
+                  ),
                 ),
-              ),
-            );
-          });
+              );
         } else if (trialDeadlineDate == null) {
           showPremiumTrialModal(context, () {
             showPremiumTrialCompleteModalPreDialog(context);

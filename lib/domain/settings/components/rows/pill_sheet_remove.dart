@@ -5,14 +5,23 @@ import 'package:pilll/components/atoms/buttons.dart';
 import 'package:pilll/components/atoms/font.dart';
 import 'package:pilll/components/atoms/text_color.dart';
 import 'package:pilll/components/page/discard_dialog.dart';
-import 'package:pilll/domain/settings/setting_page_store.dart';
+import 'package:pilll/domain/settings/setting_page_state_notifier.dart';
+import 'package:pilll/entity/pill_sheet.codegen.dart';
+import 'package:pilll/entity/pill_sheet_group.codegen.dart';
 import 'package:pilll/error/error_alert.dart';
-import 'package:pilll/database/pill_sheet.dart';
 
 class PillSheetRemoveRow extends HookConsumerWidget {
+  final PillSheetGroup latestPillSheetGroup;
+  final PillSheet activedPillSheet;
+
+  PillSheetRemoveRow({
+    required this.latestPillSheetGroup,
+    required this.activedPillSheet,
+  });
+
   @override
   Widget build(BuildContext context, WidgetRef ref) {
-    final store = ref.watch(settingStoreProvider.notifier);
+    final store = ref.watch(settingStateNotifierProvider.notifier);
     return ListTile(
       title: const Text("ピルシートをすべて破棄", style: FontType.listRow),
       onTap: () {
@@ -53,11 +62,13 @@ class PillSheetRemoveRow extends HookConsumerWidget {
                 AlertButton(
                   text: "破棄する",
                   onPressed: () async {
-                    store.deletePillSheet().catchError((error) {
-                      showErrorAlert(context,
-                          message:
-                              "ピルシートがすでに削除されています。表示等に問題がある場合は設定タブから「お問い合わせ」ください");
-                    }, test: (error) => error is PillSheetIsNotExists);
+                    store.asyncAction
+                        .deletePillSheet(
+                          latestPillSheetGroup: latestPillSheetGroup,
+                          activedPillSheet: activedPillSheet,
+                        )
+                        .catchError(
+                            (error) => showErrorAlertFor(context, error));
                     Navigator.of(context).pop();
                   },
                 ),

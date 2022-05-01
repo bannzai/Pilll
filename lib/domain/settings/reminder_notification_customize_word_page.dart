@@ -2,7 +2,7 @@ import 'package:flutter_hooks/flutter_hooks.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:pilll/analytics.dart';
 import 'package:pilll/components/atoms/font.dart';
-import 'package:pilll/domain/settings/setting_page_store.dart';
+import 'package:pilll/domain/settings/setting_page_state_notifier.dart';
 import 'package:pilll/components/atoms/color.dart';
 import 'package:pilll/components/atoms/text_color.dart';
 import 'package:flutter/material.dart';
@@ -16,7 +16,7 @@ class ReminderNotificationCustomizeWordPage extends HookConsumerWidget {
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {
-    final store = ref.watch(settingStoreProvider.notifier);
+    final store = ref.watch(settingStateNotifierProvider.notifier);
     final textFieldControlelr = useTextEditingController(
         text: setting.reminderNotificationCustomization.word);
     final word = useState(setting.reminderNotificationCustomization.word);
@@ -47,7 +47,8 @@ class ReminderNotificationCustomizeWordPage extends HookConsumerWidget {
           child: ListView(
             children: [
               Container(
-                padding: const EdgeInsets.symmetric(vertical: 20, horizontal: 16),
+                padding:
+                    const EdgeInsets.symmetric(vertical: 20, horizontal: 16),
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
@@ -91,7 +92,8 @@ class ReminderNotificationCustomizeWordPage extends HookConsumerWidget {
                         analytics.logEvent(
                             name: "submit_reminder_notification_customize");
                         try {
-                          await store.reminderNotificationWordSubmit(word);
+                          await store.asyncAction
+                              .reminderNotificationWordSubmit(word, setting);
                           Navigator.of(context).pop();
                         } catch (error) {
                           showErrorAlert(context, message: error.toString());
@@ -118,8 +120,13 @@ class ReminderNotificationCustomizeWordPage extends HookConsumerWidget {
                           (value) async {
                             analytics.logEvent(
                                 name: "change_reminder_notification_date");
-                            await store.setIsInVisibleReminderDate(!value);
-                            isInVisibleReminderDate.value = !value;
+                            try {
+                              await store.asyncAction
+                                  .setIsInVisibleReminderDate(!value, setting);
+                              isInVisibleReminderDate.value = !value;
+                            } catch (error) {
+                              showErrorAlertFor(context, error);
+                            }
                           },
                         ),
                         const Divider(),
@@ -129,8 +136,13 @@ class ReminderNotificationCustomizeWordPage extends HookConsumerWidget {
                           (value) async {
                             analytics.logEvent(
                                 name: "change_reminder_notification_number");
-                            await store.setIsInVisiblePillNumber(!value);
-                            isInVisiblePillNumber.value = !value;
+                            try {
+                              await store.asyncAction
+                                  .setIsInVisiblePillNumber(!value, setting);
+                              isInVisiblePillNumber.value = !value;
+                            } catch (error) {
+                              showErrorAlertFor(context, error);
+                            }
                           },
                         ),
                         const Divider(),
@@ -140,8 +152,13 @@ class ReminderNotificationCustomizeWordPage extends HookConsumerWidget {
                           (value) async {
                             analytics.logEvent(
                                 name: "change_reminder_notification_desc");
-                            await store.setIsInVisibleDescription(!value);
-                            isInVisibleDescription.value = !value;
+                            try {
+                              await store.asyncAction
+                                  .setIsInVisibleDescription(!value, setting);
+                              isInVisibleDescription.value = !value;
+                            } catch (error) {
+                              showErrorAlertFor(context, error);
+                            }
                           },
                         ),
                         const Divider(),
@@ -187,7 +204,8 @@ extension ReminderNotificationCustomizeWordPageRoutes
     on ReminderNotificationCustomizeWordPage {
   static Route<dynamic> route({required Setting setting}) {
     return MaterialPageRoute(
-      settings: const RouteSettings(name: "ReminderNotificationCustomizeWordPage"),
+      settings:
+          const RouteSettings(name: "ReminderNotificationCustomizeWordPage"),
       builder: (_) => ReminderNotificationCustomizeWordPage(setting),
     );
   }

@@ -19,23 +19,17 @@ class _$SettingStateTearOff {
   const _$SettingStateTearOff();
 
   _SettingState call(
-      {Setting? setting,
-      PillSheetGroup? latestPillSheetGroup,
-      bool userIsUpdatedFrom132 = false,
-      bool isPremium = false,
-      bool isTrial = false,
-      bool isHealthDataAvailable = false,
-      DateTime? trialDeadlineDate,
-      Object? exception}) {
+      {required Setting setting,
+      required PillSheetGroup? latestPillSheetGroup,
+      required bool userIsUpdatedFrom132,
+      required PremiumAndTrial premiumAndTrial,
+      required bool isHealthDataAvailable}) {
     return _SettingState(
       setting: setting,
       latestPillSheetGroup: latestPillSheetGroup,
       userIsUpdatedFrom132: userIsUpdatedFrom132,
-      isPremium: isPremium,
-      isTrial: isTrial,
+      premiumAndTrial: premiumAndTrial,
       isHealthDataAvailable: isHealthDataAvailable,
-      trialDeadlineDate: trialDeadlineDate,
-      exception: exception,
     );
   }
 }
@@ -45,15 +39,12 @@ const $SettingState = _$SettingStateTearOff();
 
 /// @nodoc
 mixin _$SettingState {
-  Setting? get setting => throw _privateConstructorUsedError;
+  Setting get setting => throw _privateConstructorUsedError;
   PillSheetGroup? get latestPillSheetGroup =>
       throw _privateConstructorUsedError;
   bool get userIsUpdatedFrom132 => throw _privateConstructorUsedError;
-  bool get isPremium => throw _privateConstructorUsedError;
-  bool get isTrial => throw _privateConstructorUsedError;
+  PremiumAndTrial get premiumAndTrial => throw _privateConstructorUsedError;
   bool get isHealthDataAvailable => throw _privateConstructorUsedError;
-  DateTime? get trialDeadlineDate => throw _privateConstructorUsedError;
-  Object? get exception => throw _privateConstructorUsedError;
 
   @JsonKey(ignore: true)
   $SettingStateCopyWith<SettingState> get copyWith =>
@@ -66,17 +57,15 @@ abstract class $SettingStateCopyWith<$Res> {
           SettingState value, $Res Function(SettingState) then) =
       _$SettingStateCopyWithImpl<$Res>;
   $Res call(
-      {Setting? setting,
+      {Setting setting,
       PillSheetGroup? latestPillSheetGroup,
       bool userIsUpdatedFrom132,
-      bool isPremium,
-      bool isTrial,
-      bool isHealthDataAvailable,
-      DateTime? trialDeadlineDate,
-      Object? exception});
+      PremiumAndTrial premiumAndTrial,
+      bool isHealthDataAvailable});
 
-  $SettingCopyWith<$Res>? get setting;
+  $SettingCopyWith<$Res> get setting;
   $PillSheetGroupCopyWith<$Res>? get latestPillSheetGroup;
+  $PremiumAndTrialCopyWith<$Res> get premiumAndTrial;
 }
 
 /// @nodoc
@@ -92,17 +81,14 @@ class _$SettingStateCopyWithImpl<$Res> implements $SettingStateCopyWith<$Res> {
     Object? setting = freezed,
     Object? latestPillSheetGroup = freezed,
     Object? userIsUpdatedFrom132 = freezed,
-    Object? isPremium = freezed,
-    Object? isTrial = freezed,
+    Object? premiumAndTrial = freezed,
     Object? isHealthDataAvailable = freezed,
-    Object? trialDeadlineDate = freezed,
-    Object? exception = freezed,
   }) {
     return _then(_value.copyWith(
       setting: setting == freezed
           ? _value.setting
           : setting // ignore: cast_nullable_to_non_nullable
-              as Setting?,
+              as Setting,
       latestPillSheetGroup: latestPillSheetGroup == freezed
           ? _value.latestPillSheetGroup
           : latestPillSheetGroup // ignore: cast_nullable_to_non_nullable
@@ -111,33 +97,20 @@ class _$SettingStateCopyWithImpl<$Res> implements $SettingStateCopyWith<$Res> {
           ? _value.userIsUpdatedFrom132
           : userIsUpdatedFrom132 // ignore: cast_nullable_to_non_nullable
               as bool,
-      isPremium: isPremium == freezed
-          ? _value.isPremium
-          : isPremium // ignore: cast_nullable_to_non_nullable
-              as bool,
-      isTrial: isTrial == freezed
-          ? _value.isTrial
-          : isTrial // ignore: cast_nullable_to_non_nullable
-              as bool,
+      premiumAndTrial: premiumAndTrial == freezed
+          ? _value.premiumAndTrial
+          : premiumAndTrial // ignore: cast_nullable_to_non_nullable
+              as PremiumAndTrial,
       isHealthDataAvailable: isHealthDataAvailable == freezed
           ? _value.isHealthDataAvailable
           : isHealthDataAvailable // ignore: cast_nullable_to_non_nullable
               as bool,
-      trialDeadlineDate: trialDeadlineDate == freezed
-          ? _value.trialDeadlineDate
-          : trialDeadlineDate // ignore: cast_nullable_to_non_nullable
-              as DateTime?,
-      exception: exception == freezed ? _value.exception : exception,
     ));
   }
 
   @override
-  $SettingCopyWith<$Res>? get setting {
-    if (_value.setting == null) {
-      return null;
-    }
-
-    return $SettingCopyWith<$Res>(_value.setting!, (value) {
+  $SettingCopyWith<$Res> get setting {
+    return $SettingCopyWith<$Res>(_value.setting, (value) {
       return _then(_value.copyWith(setting: value));
     });
   }
@@ -152,6 +125,13 @@ class _$SettingStateCopyWithImpl<$Res> implements $SettingStateCopyWith<$Res> {
       return _then(_value.copyWith(latestPillSheetGroup: value));
     });
   }
+
+  @override
+  $PremiumAndTrialCopyWith<$Res> get premiumAndTrial {
+    return $PremiumAndTrialCopyWith<$Res>(_value.premiumAndTrial, (value) {
+      return _then(_value.copyWith(premiumAndTrial: value));
+    });
+  }
 }
 
 /// @nodoc
@@ -162,19 +142,18 @@ abstract class _$SettingStateCopyWith<$Res>
       __$SettingStateCopyWithImpl<$Res>;
   @override
   $Res call(
-      {Setting? setting,
+      {Setting setting,
       PillSheetGroup? latestPillSheetGroup,
       bool userIsUpdatedFrom132,
-      bool isPremium,
-      bool isTrial,
-      bool isHealthDataAvailable,
-      DateTime? trialDeadlineDate,
-      Object? exception});
+      PremiumAndTrial premiumAndTrial,
+      bool isHealthDataAvailable});
 
   @override
-  $SettingCopyWith<$Res>? get setting;
+  $SettingCopyWith<$Res> get setting;
   @override
   $PillSheetGroupCopyWith<$Res>? get latestPillSheetGroup;
+  @override
+  $PremiumAndTrialCopyWith<$Res> get premiumAndTrial;
 }
 
 /// @nodoc
@@ -192,17 +171,14 @@ class __$SettingStateCopyWithImpl<$Res> extends _$SettingStateCopyWithImpl<$Res>
     Object? setting = freezed,
     Object? latestPillSheetGroup = freezed,
     Object? userIsUpdatedFrom132 = freezed,
-    Object? isPremium = freezed,
-    Object? isTrial = freezed,
+    Object? premiumAndTrial = freezed,
     Object? isHealthDataAvailable = freezed,
-    Object? trialDeadlineDate = freezed,
-    Object? exception = freezed,
   }) {
     return _then(_SettingState(
       setting: setting == freezed
           ? _value.setting
           : setting // ignore: cast_nullable_to_non_nullable
-              as Setting?,
+              as Setting,
       latestPillSheetGroup: latestPillSheetGroup == freezed
           ? _value.latestPillSheetGroup
           : latestPillSheetGroup // ignore: cast_nullable_to_non_nullable
@@ -211,23 +187,14 @@ class __$SettingStateCopyWithImpl<$Res> extends _$SettingStateCopyWithImpl<$Res>
           ? _value.userIsUpdatedFrom132
           : userIsUpdatedFrom132 // ignore: cast_nullable_to_non_nullable
               as bool,
-      isPremium: isPremium == freezed
-          ? _value.isPremium
-          : isPremium // ignore: cast_nullable_to_non_nullable
-              as bool,
-      isTrial: isTrial == freezed
-          ? _value.isTrial
-          : isTrial // ignore: cast_nullable_to_non_nullable
-              as bool,
+      premiumAndTrial: premiumAndTrial == freezed
+          ? _value.premiumAndTrial
+          : premiumAndTrial // ignore: cast_nullable_to_non_nullable
+              as PremiumAndTrial,
       isHealthDataAvailable: isHealthDataAvailable == freezed
           ? _value.isHealthDataAvailable
           : isHealthDataAvailable // ignore: cast_nullable_to_non_nullable
               as bool,
-      trialDeadlineDate: trialDeadlineDate == freezed
-          ? _value.trialDeadlineDate
-          : trialDeadlineDate // ignore: cast_nullable_to_non_nullable
-              as DateTime?,
-      exception: exception == freezed ? _value.exception : exception,
     ));
   }
 }
@@ -236,40 +203,27 @@ class __$SettingStateCopyWithImpl<$Res> extends _$SettingStateCopyWithImpl<$Res>
 
 class _$_SettingState extends _SettingState {
   const _$_SettingState(
-      {this.setting,
-      this.latestPillSheetGroup,
-      this.userIsUpdatedFrom132 = false,
-      this.isPremium = false,
-      this.isTrial = false,
-      this.isHealthDataAvailable = false,
-      this.trialDeadlineDate,
-      this.exception})
+      {required this.setting,
+      required this.latestPillSheetGroup,
+      required this.userIsUpdatedFrom132,
+      required this.premiumAndTrial,
+      required this.isHealthDataAvailable})
       : super._();
 
   @override
-  final Setting? setting;
+  final Setting setting;
   @override
   final PillSheetGroup? latestPillSheetGroup;
-  @JsonKey()
   @override
   final bool userIsUpdatedFrom132;
-  @JsonKey()
   @override
-  final bool isPremium;
-  @JsonKey()
-  @override
-  final bool isTrial;
-  @JsonKey()
+  final PremiumAndTrial premiumAndTrial;
   @override
   final bool isHealthDataAvailable;
-  @override
-  final DateTime? trialDeadlineDate;
-  @override
-  final Object? exception;
 
   @override
   String toString() {
-    return 'SettingState(setting: $setting, latestPillSheetGroup: $latestPillSheetGroup, userIsUpdatedFrom132: $userIsUpdatedFrom132, isPremium: $isPremium, isTrial: $isTrial, isHealthDataAvailable: $isHealthDataAvailable, trialDeadlineDate: $trialDeadlineDate, exception: $exception)';
+    return 'SettingState(setting: $setting, latestPillSheetGroup: $latestPillSheetGroup, userIsUpdatedFrom132: $userIsUpdatedFrom132, premiumAndTrial: $premiumAndTrial, isHealthDataAvailable: $isHealthDataAvailable)';
   }
 
   @override
@@ -282,13 +236,10 @@ class _$_SettingState extends _SettingState {
                 .equals(other.latestPillSheetGroup, latestPillSheetGroup) &&
             const DeepCollectionEquality()
                 .equals(other.userIsUpdatedFrom132, userIsUpdatedFrom132) &&
-            const DeepCollectionEquality().equals(other.isPremium, isPremium) &&
-            const DeepCollectionEquality().equals(other.isTrial, isTrial) &&
             const DeepCollectionEquality()
-                .equals(other.isHealthDataAvailable, isHealthDataAvailable) &&
+                .equals(other.premiumAndTrial, premiumAndTrial) &&
             const DeepCollectionEquality()
-                .equals(other.trialDeadlineDate, trialDeadlineDate) &&
-            const DeepCollectionEquality().equals(other.exception, exception));
+                .equals(other.isHealthDataAvailable, isHealthDataAvailable));
   }
 
   @override
@@ -297,11 +248,8 @@ class _$_SettingState extends _SettingState {
       const DeepCollectionEquality().hash(setting),
       const DeepCollectionEquality().hash(latestPillSheetGroup),
       const DeepCollectionEquality().hash(userIsUpdatedFrom132),
-      const DeepCollectionEquality().hash(isPremium),
-      const DeepCollectionEquality().hash(isTrial),
-      const DeepCollectionEquality().hash(isHealthDataAvailable),
-      const DeepCollectionEquality().hash(trialDeadlineDate),
-      const DeepCollectionEquality().hash(exception));
+      const DeepCollectionEquality().hash(premiumAndTrial),
+      const DeepCollectionEquality().hash(isHealthDataAvailable));
 
   @JsonKey(ignore: true)
   @override
@@ -311,32 +259,23 @@ class _$_SettingState extends _SettingState {
 
 abstract class _SettingState extends SettingState {
   const factory _SettingState(
-      {Setting? setting,
-      PillSheetGroup? latestPillSheetGroup,
-      bool userIsUpdatedFrom132,
-      bool isPremium,
-      bool isTrial,
-      bool isHealthDataAvailable,
-      DateTime? trialDeadlineDate,
-      Object? exception}) = _$_SettingState;
+      {required Setting setting,
+      required PillSheetGroup? latestPillSheetGroup,
+      required bool userIsUpdatedFrom132,
+      required PremiumAndTrial premiumAndTrial,
+      required bool isHealthDataAvailable}) = _$_SettingState;
   const _SettingState._() : super._();
 
   @override
-  Setting? get setting;
+  Setting get setting;
   @override
   PillSheetGroup? get latestPillSheetGroup;
   @override
   bool get userIsUpdatedFrom132;
   @override
-  bool get isPremium;
-  @override
-  bool get isTrial;
+  PremiumAndTrial get premiumAndTrial;
   @override
   bool get isHealthDataAvailable;
-  @override
-  DateTime? get trialDeadlineDate;
-  @override
-  Object? get exception;
   @override
   @JsonKey(ignore: true)
   _$SettingStateCopyWith<_SettingState> get copyWith =>

@@ -4,7 +4,7 @@ import 'package:pilll/components/atoms/buttons.dart';
 import 'package:pilll/components/atoms/color.dart';
 import 'package:pilll/components/atoms/font.dart';
 import 'package:pilll/components/atoms/text_color.dart';
-import 'package:pilll/domain/record/record_page_store.dart';
+import 'package:pilll/domain/record/record_page_state_notifier.dart';
 import 'package:pilll/entity/pill_sheet.codegen.dart';
 import 'package:pilll/entity/pill_sheet_group.codegen.dart';
 
@@ -12,7 +12,7 @@ class EndManualRestDurationButton extends StatelessWidget {
   final RestDuration restDuration;
   final PillSheet activedPillSheet;
   final PillSheetGroup pillSheetGroup;
-  final RecordPageStore store;
+  final RecordPageStateNotifier store;
   final VoidCallback didEndRestDuration;
 
   const EndManualRestDurationButton({
@@ -35,7 +35,7 @@ class EndManualRestDurationButton extends StatelessWidget {
             name: "end_manual_rest_duration_pressed",
           );
 
-          await store.endRestDuration(
+          await store.asyncAction.endRestDuration(
             pillSheetGroup: pillSheetGroup,
             activedPillSheet: activedPillSheet,
             restDuration: restDuration,
@@ -50,7 +50,7 @@ class EndManualRestDurationButton extends StatelessWidget {
 
 class EndRestDurationModal extends StatelessWidget {
   final PillSheetGroup pillSheetGroup;
-  final RecordPageStore store;
+  final RecordPageStateNotifier store;
 
   const EndRestDurationModal({
     Key? key,
@@ -135,8 +135,10 @@ class EndRestDurationModal extends StatelessWidget {
                     onPressed: () async {
                       analytics.logEvent(
                           name: "display_number_setting_modal_yes");
-                      await store.setDisplayNumberSettingEndNumber(
-                          lastTakenPillNumber);
+                      await store.asyncAction.setDisplayNumberSettingEndNumber(
+                        end: lastTakenPillNumber,
+                        pillSheetGroup: pillSheetGroup,
+                      );
                       Navigator.of(context).pop();
                     },
                     text: "はい",
@@ -154,7 +156,7 @@ class EndRestDurationModal extends StatelessWidget {
 void showEndRestDurationModal(
   BuildContext context, {
   required PillSheetGroup pillSheetGroup,
-  required RecordPageStore store,
+  required RecordPageStateNotifier store,
 }) {
   showDialog(
     context: context,

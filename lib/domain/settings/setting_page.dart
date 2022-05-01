@@ -4,6 +4,7 @@ import 'package:flutter_hooks/flutter_hooks.dart';
 import 'package:pilll/analytics.dart';
 import 'package:pilll/components/atoms/buttons.dart';
 import 'package:pilll/components/atoms/font.dart';
+import 'package:pilll/components/molecules/indicator.dart';
 import 'package:pilll/components/page/discard_dialog.dart';
 import 'package:pilll/domain/settings/components/rows/creating_new_pillsheet.dart';
 import 'package:pilll/domain/settings/components/rows/health_care.dart';
@@ -24,7 +25,7 @@ import 'package:pilll/domain/settings/setting_page_state.codegen.dart';
 import 'package:pilll/error/universal_error_page.dart';
 import 'package:pilll/hooks/automatic_keep_alive_client_mixin.dart';
 import 'package:pilll/domain/settings/components/inquiry/inquiry.dart';
-import 'package:pilll/domain/settings/setting_page_store.dart';
+import 'package:pilll/domain/settings/setting_page_state_notifier.dart';
 import 'package:pilll/components/atoms/color.dart';
 import 'package:pilll/components/atoms/text_color.dart';
 import 'package:pilll/util/environment.dart';
@@ -45,39 +46,36 @@ enum SettingSection {
 class SettingPage extends HookConsumerWidget {
   @override
   Widget build(BuildContext context, WidgetRef ref) {
-    final store = ref.watch(settingStoreProvider.notifier);
-    final state = ref.watch(settingStoreProvider);
+    final store = ref.watch(settingStateNotifierProvider.notifier);
+    final state = ref.watch(settingStateNotifierProvider);
 
     useAutomaticKeepAlive(wantKeepAlive: true);
 
-    if (state.exception != null) {
-      return UniversalErrorPage(
-        error: state.exception,
+    return state.when(
+      data: (state) => SettingPageBody(store: store, state: state),
+      error: (error, _) => UniversalErrorPage(
+        error: error,
         child: null,
-        reload: () => store.reset(),
-      );
-    }
-
-    return UniversalErrorPage(
-      error: state.exception,
-      reload: () => store.reset(),
-      child: Scaffold(
-        backgroundColor: PilllColors.background,
-        appBar: AppBar(
-          title: const Text('設定', style: TextColorStyle.main),
-          backgroundColor: PilllColors.white,
-        ),
-        body: Container(child: _body(context, state, store)),
+        reload: () => ref.refresh(settingStateProvider),
       ),
+      loading: () => ScaffoldIndicator(),
     );
   }
+}
 
-  Widget _body(
-      BuildContext context, SettingState state, SettingStateStore store) {
+class SettingPageBody extends StatelessWidget {
+  final SettingStateNotifier store;
+  final SettingState state;
+
+  const SettingPageBody({
+    Key? key,
+    required this.store,
+    required this.state,
+  }) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
     final setting = state.setting;
-    if (setting == null) {
-      return Container();
-    }
     final pillSheetGroup = state.latestPillSheetGroup;
     final activedPillSheet = pillSheetGroup?.activedPillSheet;
     return Container(
@@ -99,9 +97,10 @@ class SettingPage extends HookConsumerWidget {
                   );
                 case SettingSection.premium:
                   return SettingSectionTitle(text: "Pilllプレミアム", children: [
-                    if (state.isTrial) ...[
+                    if (state.premiumAndTrial.isTrial) ...[
                       ListTile(
-                        title: const Text("プレミアムお試し体験について", style: FontType.listRow),
+                        title: const Text("プレミアムお試し体験について",
+                            style: FontType.listRow),
                         onTap: () {
                           analytics.logEvent(
                               name: "did_select_about_trial", parameters: {});
@@ -113,8 +112,9 @@ class SettingPage extends HookConsumerWidget {
                       _separator(),
                     ],
                     PremiumIntroductionRow(
-                      isPremium: state.isPremium,
-                      trialDeadlineDate: state.trialDeadlineDate,
+                      isPremium: state.premiumAndTrial.isPremium,
+                      trialDeadlineDate:
+                          state.premiumAndTrial.trialDeadlineDate,
                     ),
                     _separator(),
                   ]);
@@ -131,14 +131,18 @@ class SettingPage extends HookConsumerWidget {
                           activedPillSheet: activedPillSheet,
                         ),
                         _separator(),
-                        PillSheetRemoveRow(),
+                        PillSheetRemoveRow(
+                          latestPillSheetGroup: pillSheetGroup,
+                          activedPillSheet: activedPillSheet,
+                        ),
                         _separator(),
                       ],
                       CreatingNewPillSheetRow(
                         setting: setting,
-                        isPremium: state.isPremium,
-                        isTrial: state.isTrial,
-                        trialDeadlineDate: state.trialDeadlineDate,
+                        isPremium: state.premiumAndTrial.isPremium,
+                        isTrial: state.premiumAndTrial.isTrial,
+                        trialDeadlineDate:
+                            state.premiumAndTrial.trialDeadlineDate,
                       ),
                       _separator(),
                     ],
@@ -149,7 +153,7 @@ class SettingPage extends HookConsumerWidget {
                     children: [
                       TakingPillNotification(setting: setting),
                       _separator(),
-                      NotificationTimeRow(setting: setting),
+                      NotificationTimeRow(store: store, state: state),
                       _separator(),
                       if (activedPillSheet != null &&
                           activedPillSheet.pillSheetHasRestOrFakeDuration) ...[
@@ -157,18 +161,21 @@ class SettingPage extends HookConsumerWidget {
                             setting: setting, pillSheet: activedPillSheet),
                         _separator(),
                       ],
-                      if (!state.isPremium) ...[
+                      if (!state.premiumAndTrial.isPremium) ...[
                         QuickRecordRow(
-                          isTrial: state.isTrial,
-                          trialDeadlineDate: state.trialDeadlineDate,
+                          isTrial: state.premiumAndTrial.isTrial,
+                          trialDeadlineDate:
+                              state.premiumAndTrial.trialDeadlineDate,
                         ),
                         _separator(),
                       ],
                       ReminderNotificationCustomizeWord(
-                          setting: setting,
-                          isTrial: state.isTrial,
-                          isPremium: state.isPremium,
-                          trialDeadlineDate: state.trialDeadlineDate),
+                        setting: setting,
+                        isTrial: state.premiumAndTrial.isTrial,
+                        isPremium: state.premiumAndTrial.isPremium,
+                        trialDeadlineDate:
+                            state.premiumAndTrial.trialDeadlineDate,
+                      ),
                       _separator(),
                     ],
                   );
@@ -180,7 +187,8 @@ class SettingPage extends HookConsumerWidget {
                       _separator(),
                       if (Platform.isIOS && state.isHealthDataAvailable) ...[
                         HealthCareRow(
-                          trialDeadlineDate: state.trialDeadlineDate,
+                          trialDeadlineDate:
+                              state.premiumAndTrial.trialDeadlineDate,
                         ),
                         _separator(),
                       ]
@@ -204,7 +212,8 @@ class SettingPage extends HookConsumerWidget {
                           }),
                       _separator(),
                       ListTile(
-                          title: const Text("プライバシーポリシー", style: FontType.listRow),
+                          title:
+                              const Text("プライバシーポリシー", style: FontType.listRow),
                           onTap: () {
                             analytics.logEvent(
                                 name: "did_select_privacy_policy",

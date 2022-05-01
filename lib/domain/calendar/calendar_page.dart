@@ -1,53 +1,80 @@
 import 'package:flutter_hooks/flutter_hooks.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
-import 'package:flutter_svg/flutter_svg.dart';
 import 'package:pilll/analytics.dart';
 import 'package:pilll/components/molecules/indicator.dart';
+import 'package:pilll/domain/calendar/calendar_page_index_state_notifier.dart';
 import 'package:pilll/domain/calendar/calendar_page_state.codegen.dart';
-import 'package:pilll/domain/calendar/components/calendar_card.dart';
+import 'package:pilll/domain/calendar/components/title/calendar_page_title.dart';
+import 'package:pilll/domain/calendar/components/month_calendar/month_calendar.dart';
+import 'package:pilll/components/organisms/calendar/week/week_calendar.dart';
 import 'package:pilll/components/atoms/color.dart';
-import 'package:pilll/components/atoms/font.dart';
-import 'package:pilll/components/atoms/text_color.dart';
 import 'package:pilll/domain/calendar/components/pill_sheet_modified_history/pill_sheet_modified_history_card.dart';
-import 'package:pilll/domain/home/home_page.dart';
-import 'package:pilll/domain/calendar/calendar_page_store.dart';
+import 'package:pilll/domain/calendar/calendar_page_state_notifier.dart';
 import 'package:flutter/material.dart';
 import 'package:pilll/error/universal_error_page.dart';
 import 'package:pilll/hooks/automatic_keep_alive_client_mixin.dart';
+import 'package:pilll/util/datetime/day.dart';
 
 class CalendarPage extends HookConsumerWidget {
   @override
   Widget build(BuildContext context, WidgetRef ref) {
-    final store = ref.watch(calendarPageStateStoreProvider.notifier);
-    final state = ref.watch(calendarPageStateStoreProvider);
-    homeKey.currentState?.diaries = state.diariesForMonth;
+    final store = ref.watch(calendarPageStateNotifierProvider.notifier);
+    final state = ref.watch(calendarPageStateNotifierProvider);
+    final calendarPageIndexStateNotifier =
+        ref.watch(calendarPageIndexStateNotifierProvider.notifier);
 
     useAutomaticKeepAlive(wantKeepAlive: true);
 
-    final exception = state.exception;
-    if (exception != null) {
-      return UniversalErrorPage(
-        error: exception,
-        child: null,
-        reload: () => store.reset(),
-      );
-    }
-
-    if (state.shouldShowIndicator) {
-      return ScaffoldIndicator();
-    }
-
     final pageController =
-        usePageController(initialPage: state.currentCalendarIndex);
+        usePageController(initialPage: todayCalendarPageIndex);
     pageController.addListener(() {
       final index = (pageController.page ?? pageController.initialPage).round();
-      store.updateCurrentCalendarIndex(index);
+      calendarPageIndexStateNotifier.set(index);
     });
 
+    return state.when(
+      data: (state) => CalendarPageBody(
+          store: store, state: state, pageController: pageController),
+      error: (error, _) => UniversalErrorPage(
+        error: error,
+        child: null,
+        reload: () => ref.refresh(calendarPageStateProvider),
+      ),
+      loading: () => ScaffoldIndicator(),
+    );
+  }
+}
+
+class CalendarPageBody extends StatelessWidget {
+  final CalendarPageStateNotifier store;
+  final CalendarPageState state;
+  final PageController pageController;
+
+  const CalendarPageBody(
+      {Key? key,
+      required this.store,
+      required this.state,
+      required this.pageController})
+      : super(key: key);
+  @override
+  Widget build(BuildContext context) {
     return Scaffold(
+      floatingActionButton: Container(
+        padding: const EdgeInsets.only(right: 10, bottom: 32),
+        child: FloatingActionButton(
+          onPressed: () {
+            analytics.logEvent(name: "calendar_fab_pressed");
+            final date = today();
+            transitionToPostDiary(
+                context, date, state.todayMonthCalendar.diaries);
+          },
+          child: const Icon(Icons.add, color: Colors.white),
+          backgroundColor: PilllColors.secondary,
+        ),
+      ),
       backgroundColor: PilllColors.background,
       appBar: AppBar(
-        title: CalendarModifyMonth(
+        title: CalendarPageTitle(
           state: state,
           pageController: pageController,
           store: store,
@@ -67,9 +94,35 @@ class CalendarPage extends HookConsumerWidget {
                 controller: pageController,
                 scrollDirection: Axis.horizontal,
                 physics: const PageScrollPhysics(),
-                children:
-                    List.generate(state.calendarDataSource.length, (index) {
-                  return CalendarContainer(store: store, state: state);
+                children: List.generate(calendarDataSourceLength, (index) {
+                  return Container(
+                    height: 444,
+                    width: MediaQuery.of(context).size.width,
+                    child: MonthCalendar(
+                        dateForMonth: state.displayMonth,
+                        weekCalendarBuilder:
+                            (context, monthCalendarState, weekCalendarState) {
+                          return CalendarWeekdayLine(
+                            state: weekCalendarState,
+                            calendarMenstruationBandModels:
+                                state.calendarMenstruationBandModels,
+                            calendarScheduledMenstruationBandModels:
+                                state.calendarScheduledMenstruationBandModels,
+                            calendarNextPillSheetBandModels:
+                                state.calendarNextPillSheetBandModels,
+                            horizontalPadding: 0,
+                            onTap: (weekCalendarState, date) {
+                              analytics.logEvent(
+                                  name: "did_select_day_tile_on_calendar_card");
+                              transitionToPostDiary(
+                                context,
+                                date,
+                                monthCalendarState.diaries,
+                              );
+                            },
+                          );
+                        }),
+                  );
                 }),
               ),
             ),
@@ -79,10 +132,10 @@ class CalendarPage extends HookConsumerWidget {
               child: CalendarPillSheetModifiedHistoryCard(
                 store: store,
                 state: CalendarPillSheetModifiedHistoryCardState(
-                  state.allPillSheetModifiedHistories,
-                  isPremium: state.isPremium,
-                  isTrial: state.isTrial,
-                  trialDeadlineDate: state.trialDeadlineDate,
+                  state.pillSheetModifiedHistories,
+                  isPremium: state.premiumAndTrial.isPremium,
+                  isTrial: state.premiumAndTrial.isTrial,
+                  trialDeadlineDate: state.premiumAndTrial.trialDeadlineDate,
                 ),
               ),
             ),
@@ -90,80 +143,6 @@ class CalendarPage extends HookConsumerWidget {
           ],
         ),
       ),
-    );
-  }
-}
-
-class CalendarContainer extends StatelessWidget {
-  const CalendarContainer({
-    Key? key,
-    required this.store,
-    required this.state,
-  }) : super(key: key);
-
-  final CalendarPageStateStore store;
-  final CalendarPageState state;
-
-  @override
-  Widget build(BuildContext context) {
-    return Container(
-      height: 444,
-      width: MediaQuery.of(context).size.width,
-      child: CalendarCard(
-        state: store.cardState(state.displayMonth),
-        diariesForMonth: state.diariesForMonth,
-        allBands: state.allBands,
-      ),
-    );
-  }
-}
-
-class CalendarModifyMonth extends StatelessWidget {
-  const CalendarModifyMonth({
-    Key? key,
-    required this.state,
-    required this.pageController,
-    required this.store,
-  }) : super(key: key);
-
-  final CalendarPageState state;
-  final PageController pageController;
-  final CalendarPageStateStore store;
-
-  @override
-  Widget build(BuildContext context) {
-    return Row(
-      mainAxisAlignment: MainAxisAlignment.center,
-      children: [
-        IconButton(
-          icon: SvgPicture.asset("images/arrow_left.svg"),
-          onPressed: () {
-            final previousMonthIndex = state.currentCalendarIndex - 1;
-            pageController.jumpToPage(previousMonthIndex);
-            store.updateCurrentCalendarIndex(previousMonthIndex);
-            analytics.logEvent(name: "pressed_previous_month", parameters: {
-              "current_index": state.currentCalendarIndex,
-              "previous_index": previousMonthIndex
-            });
-          },
-        ),
-        Text(
-          state.displayMonthString,
-          style: TextColorStyle.main.merge(FontType.subTitle),
-        ),
-        IconButton(
-          icon: SvgPicture.asset("images/arrow_right.svg"),
-          onPressed: () {
-            final nextMonthIndex = state.currentCalendarIndex + 1;
-            pageController.jumpToPage(nextMonthIndex);
-            store.updateCurrentCalendarIndex(nextMonthIndex);
-            analytics.logEvent(name: "pressed_next_month", parameters: {
-              "current_index": state.currentCalendarIndex,
-              "next_index": nextMonthIndex
-            });
-          },
-        ),
-      ],
     );
   }
 }
