@@ -7,7 +7,7 @@ import 'package:pilll/components/organisms/pill_sheet/pill_sheet_view_layout.dar
 import 'package:pilll/components/organisms/pill_sheet/pill_sheet_view_weekday_line.dart';
 import 'package:pilll/domain/record/components/pill_sheet/components/pill_number.dart';
 import 'package:pilll/domain/record/record_page_state.codegen.dart';
-import 'package:pilll/domain/record/record_page_store.dart';
+import 'package:pilll/domain/record/record_page_state_notifier.dart';
 import 'package:pilll/domain/record/util/take.dart';
 import 'package:pilll/entity/pill_sheet.codegen.dart';
 import 'package:pilll/entity/pill_sheet_group.codegen.dart';

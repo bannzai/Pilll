@@ -5,7 +5,7 @@ import 'package:pilll/components/atoms/font.dart';
 import 'package:pilll/components/atoms/text_color.dart';
 import 'package:pilll/domain/record/components/supports/components/appearance_mode/select_appearance_mode_modal.dart';
 import 'package:pilll/domain/record/record_page_state.codegen.dart';
-import 'package:pilll/domain/record/record_page_store.dart';
+import 'package:pilll/domain/record/record_page_state_notifier.dart';
 
 class SwitchingAppearanceMode extends StatelessWidget {
   final RecordPageStateNotifier store;

@@ -4,7 +4,7 @@ import 'package:pilll/components/molecules/dots_page_indicator.dart';
 import 'package:pilll/components/organisms/pill_sheet/pill_sheet_view_layout.dart';
 import 'package:pilll/domain/record/components/pill_sheet/record_page_pill_sheet.dart';
 import 'package:pilll/domain/record/record_page_state.codegen.dart';
-import 'package:pilll/domain/record/record_page_store.dart';
+import 'package:pilll/domain/record/record_page_state_notifier.dart';
 import 'package:pilll/entity/pill_sheet_type.dart';
 import 'package:pilll/entity/setting.codegen.dart';
 import 'package:flutter/cupertino.dart';

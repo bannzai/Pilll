@@ -4,7 +4,7 @@ import 'package:pilll/analytics.dart';
 import 'package:pilll/components/atoms/font.dart';
 import 'package:pilll/components/atoms/text_color.dart';
 import 'package:pilll/domain/record/components/supports/components/display_number_setting/display_number_setting_sheet.dart';
-import 'package:pilll/domain/record/record_page_store.dart';
+import 'package:pilll/domain/record/record_page_state_notifier.dart';
 import 'package:pilll/entity/pill_sheet_group.codegen.dart';
 
 class DisplayNumberSettingButton extends StatelessWidget {
