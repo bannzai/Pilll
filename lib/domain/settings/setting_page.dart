@@ -46,8 +46,8 @@ enum SettingSection {
 class SettingPage extends HookConsumerWidget {
   @override
   Widget build(BuildContext context, WidgetRef ref) {
-    final store = ref.watch(settingStoreProvider.notifier);
-    final state = ref.watch(settingStoreProvider);
+    final store = ref.watch(settingStateNotifierProvider.notifier);
+    final state = ref.watch(settingStateNotifierProvider);
 
     useAutomaticKeepAlive(wantKeepAlive: true);
 

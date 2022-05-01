@@ -21,7 +21,7 @@ class PillSheetRemoveRow extends HookConsumerWidget {
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {
-    final store = ref.watch(settingStoreProvider.notifier);
+    final store = ref.watch(settingStateNotifierProvider.notifier);
     return ListTile(
       title: const Text("ピルシートをすべて破棄", style: FontType.listRow),
       onTap: () {

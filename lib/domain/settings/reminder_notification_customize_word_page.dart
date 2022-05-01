@@ -16,7 +16,7 @@ class ReminderNotificationCustomizeWordPage extends HookConsumerWidget {
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {
-    final store = ref.watch(settingStoreProvider.notifier);
+    final store = ref.watch(settingStateNotifierProvider.notifier);
     final textFieldControlelr = useTextEditingController(
         text: setting.reminderNotificationCustomization.word);
     final word = useState(setting.reminderNotificationCustomization.word);

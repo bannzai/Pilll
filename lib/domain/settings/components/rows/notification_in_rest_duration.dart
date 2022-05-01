@@ -21,7 +21,7 @@ class NotificationInRestDuration extends HookConsumerWidget {
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {
-    final store = ref.watch(settingStoreProvider.notifier);
+    final store = ref.watch(settingStateNotifierProvider.notifier);
     return SwitchListTile(
       title: Text("${pillSheet.pillSheetType.notTakenWord}期間の通知",
           style: FontType.listRow),
