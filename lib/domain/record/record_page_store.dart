@@ -3,6 +3,7 @@ import 'dart:async';
 import 'package:pilll/domain/record/record_page_async_action.dart';
 import 'package:pilll/entity/pill_mark_type.dart';
 import 'package:pilll/entity/pill_sheet.codegen.dart';
+import 'package:pilll/entity/pill_sheet_group.codegen.dart';
 import 'package:pilll/entity/pill_sheet_type.dart';
 import 'package:pilll/domain/record/record_page_state.codegen.dart';
 import 'package:pilll/util/shared_preference/keys.dart';
@@ -49,34 +50,6 @@ class RecordPageStore extends StateNotifier<AsyncValue<RecordPageState>> {
     return pillNumberIntoPillSheet <= activedPillSheet.lastTakenPillNumber;
   }
 
-  bool shouldPillMarkAnimation({
-    required int pillNumberIntoPillSheet,
-    required PillSheet pillSheet,
-  }) {
-    if (state.value?.pillSheetGroup?.activedPillSheet?.activeRestDuration !=
-        null) {
-      return false;
-    }
-    final activedPillSheet = state.value?.pillSheetGroup?.activedPillSheet;
-    if (activedPillSheet == null) {
-      throw const FormatException("pill sheet not found");
-    }
-    if (activedPillSheet.groupIndex < pillSheet.groupIndex) {
-      return false;
-    }
-    if (activedPillSheet.id != pillSheet.id) {
-      if (pillSheet.isBegan) {
-        if (pillNumberIntoPillSheet > pillSheet.lastTakenPillNumber) {
-          return true;
-        }
-      }
-      return false;
-    }
-
-    return pillNumberIntoPillSheet > activedPillSheet.lastTakenPillNumber &&
-        pillNumberIntoPillSheet <= activedPillSheet.todayPillNumber;
-  }
-
   void showMigrateInfo() async {
     final value = state.value;
     if (value == null) {
@@ -115,4 +88,32 @@ PillMarkType pillMarkFor({
     return PillMarkType.normal;
   }
   return PillMarkType.normal;
+}
+
+bool shouldPillMarkAnimation({
+  required int pillNumberIntoPillSheet,
+  required PillSheet pillSheet,
+  required PillSheetGroup pillSheetGroup,
+}) {
+  if (pillSheetGroup.activedPillSheet?.activeRestDuration != null) {
+    return false;
+  }
+  final activedPillSheet = pillSheetGroup.activedPillSheet;
+  if (activedPillSheet == null) {
+    throw const FormatException("pill sheet not found");
+  }
+  if (activedPillSheet.groupIndex < pillSheet.groupIndex) {
+    return false;
+  }
+  if (activedPillSheet.id != pillSheet.id) {
+    if (pillSheet.isBegan) {
+      if (pillNumberIntoPillSheet > pillSheet.lastTakenPillNumber) {
+        return true;
+      }
+    }
+    return false;
+  }
+
+  return pillNumberIntoPillSheet > activedPillSheet.lastTakenPillNumber &&
+      pillNumberIntoPillSheet <= activedPillSheet.todayPillNumber;
 }
