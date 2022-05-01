@@ -10,6 +10,9 @@ final settingStoreProvider =
   ),
 );
 
+final settingStateNotifierProvider =
+    Provider((ref) => ref.watch(settingStoreProvider));
+
 class SettingStateNotifier extends StateNotifier<AsyncValue<SettingState>> {
   final SettingPageAsyncAction asyncAction;
   SettingStateNotifier({
