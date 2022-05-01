@@ -424,11 +424,12 @@ class MockUserDatastore extends _i1.Mock implements _i26.UserDatastore {
               Future<void>.value()) as _i20.Future<void>);
 }
 
-/// A class which mocks [RecordPageStore].
+/// A class which mocks [RecordPageStateNotifier].
 ///
 /// See the documentation for Mockito's code generation for more information.
-class MockRecordPageStore extends _i1.Mock implements _i28.RecordPageStateNotifier {
-  MockRecordPageStore() {
+class MockRecordPageStateNotifier extends _i1.Mock
+    implements _i28.RecordPageStateNotifier {
+  MockRecordPageStateNotifier() {
     _i1.throwOnMissingStub(this);
   }
 
