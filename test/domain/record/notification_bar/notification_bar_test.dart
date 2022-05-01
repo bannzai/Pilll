@@ -82,26 +82,21 @@ void main() {
           recommendedSignupNotificationIsAlreadyShow: false,
         );
 
-        final recordPageState = RecordPageState(
-            pillSheetGroup: PillSheetGroup(
-                pillSheets: [pillSheet],
-                pillSheetIDs: ["1"],
-                createdAt: now()));
         await tester.pumpWidget(
           ProviderScope(
             overrides: [
-              notificationBarStoreProvider.overrideWithProvider((param) =>
+              notificationBarStoreProvider.overrideWithProvider(
                   StateNotifierProvider.autoDispose(
                       (_) => MockNotificationBarStateStore())),
-              notificationBarStateProvider.overrideWithProvider(
-                  (param) => Provider.autoDispose((_) => state)),
+              notificationBarStateProvider
+                  .overrideWithProvider(Provider.autoDispose((_) => state)),
               isOverDiscountDeadlineProvider.overrideWithProvider(
                   (param) => Provider.autoDispose((_) => false)),
               durationToDiscountPriceDeadline.overrideWithProvider((param) =>
                   Provider.autoDispose((_) => const Duration(seconds: 1000))),
             ],
             child: MaterialApp(
-              home: Material(child: NotificationBar(recordPageState)),
+              home: Material(child: NotificationBar()),
             ),
           ),
         );
