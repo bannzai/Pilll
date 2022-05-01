@@ -1,12 +1,14 @@
 import 'package:pilll/database/batch.dart';
 import 'package:pilll/domain/record/components/add_pill_sheet_group/add_pill_sheet_group_store.dart';
 import 'package:pilll/domain/record/record_page_async_action.dart';
+import 'package:pilll/domain/record/record_page_state.codegen.dart';
 import 'package:pilll/entity/pill_sheet.codegen.dart';
 import 'package:pilll/entity/pill_sheet_group.codegen.dart';
 import 'package:pilll/entity/pill_sheet_type.dart';
 import 'package:flutter_test/flutter_test.dart';
 import 'package:mockito/mockito.dart';
 import 'package:pilll/entity/setting.codegen.dart';
+import 'package:pilll/provider/premium_and_trial.codegen.dart';
 import 'package:pilll/service/day.dart';
 import 'package:pilll/database/pill_sheet.dart';
 import 'package:pilll/database/pill_sheet_group.dart';
@@ -17,6 +19,8 @@ import 'package:riverpod/riverpod.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
 import '../../helper/mock.mocks.dart';
+
+class FakeRecordPageState extends Mock implements RecordPageState {}
 
 void main() {
   setUp(() {
@@ -82,6 +86,8 @@ void main() {
 
       final container = ProviderContainer(
         overrides: [
+          recordPageAsyncStateProvider
+              .overrideWithValue(AsyncValue.data(FakeRecordPageState())),
           batchFactoryProvider.overrideWithValue(batchFactory),
           settingDatastoreProvider.overrideWithValue(settingDatastore),
           pillSheetDatastoreProvider.overrideWithValue(pillSheetDatastore),
@@ -165,6 +171,8 @@ void main() {
 
       final container = ProviderContainer(
         overrides: [
+          recordPageAsyncStateProvider
+              .overrideWithValue(AsyncValue.data(FakeRecordPageState())),
           batchFactoryProvider.overrideWithValue(batchFactory),
           settingDatastoreProvider.overrideWithValue(settingDatastore),
           pillSheetDatastoreProvider.overrideWithValue(pillSheetDatastore),
