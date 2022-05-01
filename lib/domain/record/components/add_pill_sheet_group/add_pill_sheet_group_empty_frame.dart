@@ -16,7 +16,7 @@ class AddPillSheetGroupEmptyFrame extends StatelessWidget {
   }) : super(key: key);
 
   final BuildContext context;
-  final RecordPageStore store;
+  final RecordPageStateNotifier store;
   final Setting setting;
 
   @override

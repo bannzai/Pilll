@@ -20,7 +20,7 @@ class TakenButton extends HookConsumerWidget {
   }) : super(key: key);
   @override
   Widget build(BuildContext context, WidgetRef ref) {
-    final store = ref.watch(recordPageStoreProvider.notifier);
+    final store = ref.watch(recordPageStateNotifierProvider.notifier);
 
     return PrimaryButton(
       text: "飲んだ",

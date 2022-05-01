@@ -15,7 +15,7 @@ class CancelButton extends HookConsumerWidget {
     required this.pillSheet,
   });
   Widget build(BuildContext context, WidgetRef ref) {
-    final store = ref.watch(recordPageStoreProvider.notifier);
+    final store = ref.watch(recordPageStateNotifierProvider.notifier);
     return TertiaryButton(
       text: "飲んでない",
       onPressed: () async {

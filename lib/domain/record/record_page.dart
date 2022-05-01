@@ -21,8 +21,8 @@ import 'package:pilll/hooks/automatic_keep_alive_client_mixin.dart';
 class RecordPage extends HookConsumerWidget {
   @override
   Widget build(BuildContext context, WidgetRef ref) {
-    final state = ref.watch(recordPageStoreProvider);
-    final store = ref.watch(recordPageStoreProvider.notifier);
+    final state = ref.watch(recordPageStateNotifierProvider);
+    final store = ref.watch(recordPageStateNotifierProvider.notifier);
     useAutomaticKeepAlive(wantKeepAlive: true);
 
     return state.when(
@@ -38,7 +38,7 @@ class RecordPage extends HookConsumerWidget {
 }
 
 class RecordPageBody extends StatelessWidget {
-  final RecordPageStore store;
+  final RecordPageStateNotifier store;
   final RecordPageState state;
 
   const RecordPageBody({
@@ -112,7 +112,7 @@ class RecordPageBody extends StatelessWidget {
     BuildContext context,
     Setting setting,
     RecordPageState state,
-    RecordPageStore store,
+    RecordPageStateNotifier store,
   ) {
     final pillSheetGroup = state.pillSheetGroup;
     final activedPillSheet = pillSheetGroup?.activedPillSheet;
@@ -146,7 +146,7 @@ class RecordPageBody extends StatelessWidget {
   }
 
   void _showMigrateInfoDialog(
-      BuildContext context, RecordPageStore store) async {
+      BuildContext context, RecordPageStateNotifier store) async {
     showDialog(
         context: context,
         barrierColor: Colors.white,

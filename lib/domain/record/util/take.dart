@@ -17,7 +17,7 @@ import 'package:shared_preferences/shared_preferences.dart';
 Future<void> effectAfterTakenPillAction({
   required BuildContext context,
   required Future<void> taken,
-  required RecordPageStore store,
+  required RecordPageStateNotifier store,
 }) async {
   try {
     await taken;

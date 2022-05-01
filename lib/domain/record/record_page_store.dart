@@ -10,17 +10,18 @@ import 'package:pilll/util/shared_preference/keys.dart';
 import 'package:riverpod/riverpod.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
-final recordPageStoreProvider =
-    StateNotifierProvider<RecordPageStore, AsyncValue<RecordPageState>>(
-  (ref) => RecordPageStore(
+final recordPageStateNotifierProvider =
+    StateNotifierProvider<RecordPageStateNotifier, AsyncValue<RecordPageState>>(
+  (ref) => RecordPageStateNotifier(
     asyncAction: ref.watch(recordPageAsyncActionProvider),
     initialState: ref.watch(recordPageAsyncStateProvider),
   ),
 );
 
-class RecordPageStore extends StateNotifier<AsyncValue<RecordPageState>> {
+class RecordPageStateNotifier
+    extends StateNotifier<AsyncValue<RecordPageState>> {
   final RecordPageAsyncAction asyncAction;
-  RecordPageStore({
+  RecordPageStateNotifier({
     required this.asyncAction,
     required AsyncValue<RecordPageState> initialState,
   }) : super(initialState);

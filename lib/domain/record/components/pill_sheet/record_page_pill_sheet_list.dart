@@ -19,7 +19,7 @@ class RecordPagePillSheetList extends HookConsumerWidget {
   }) : super(key: key);
 
   final RecordPageState state;
-  final RecordPageStore store;
+  final RecordPageStateNotifier store;
   final Setting setting;
 
   @override

@@ -40,7 +40,7 @@ void main() {
       await tester.pumpWidget(
         ProviderScope(
           overrides: [
-            recordPageStoreProvider.overrideWithProvider(
+            recordPageStateNotifierProvider.overrideWithProvider(
                 StateNotifierProvider((ref) => MockRecordPageStore())),
           ],
           child: MaterialApp(
@@ -69,7 +69,7 @@ void main() {
     await tester.pumpWidget(
       ProviderScope(
         overrides: [
-          recordPageStoreProvider.overrideWithProvider(
+          recordPageStateNotifierProvider.overrideWithProvider(
               StateNotifierProvider((ref) => MockRecordPageStore())),
         ],
         child: MaterialApp(

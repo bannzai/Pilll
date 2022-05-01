@@ -12,7 +12,7 @@ class EndManualRestDurationButton extends StatelessWidget {
   final RestDuration restDuration;
   final PillSheet activedPillSheet;
   final PillSheetGroup pillSheetGroup;
-  final RecordPageStore store;
+  final RecordPageStateNotifier store;
   final VoidCallback didEndRestDuration;
 
   const EndManualRestDurationButton({
@@ -50,7 +50,7 @@ class EndManualRestDurationButton extends StatelessWidget {
 
 class EndRestDurationModal extends StatelessWidget {
   final PillSheetGroup pillSheetGroup;
-  final RecordPageStore store;
+  final RecordPageStateNotifier store;
 
   const EndRestDurationModal({
     Key? key,
@@ -156,7 +156,7 @@ class EndRestDurationModal extends StatelessWidget {
 void showEndRestDurationModal(
   BuildContext context, {
   required PillSheetGroup pillSheetGroup,
-  required RecordPageStore store,
+  required RecordPageStateNotifier store,
 }) {
   showDialog(
     context: context,

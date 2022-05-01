@@ -8,7 +8,7 @@ import 'package:pilll/domain/record/record_page_state.codegen.dart';
 import 'package:pilll/domain/record/record_page_store.dart';
 
 class SwitchingAppearanceMode extends StatelessWidget {
-  final RecordPageStore store;
+  final RecordPageStateNotifier store;
   final RecordPageState state;
   const SwitchingAppearanceMode({
     Key? key,

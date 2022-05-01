@@ -13,13 +13,13 @@ import 'package:pilll/domain/record/record_page_store.dart';
 import 'package:pilll/entity/setting.codegen.dart';
 
 class SelectAppearanceModeModal extends HookConsumerWidget {
-  final RecordPageStore store;
+  final RecordPageStateNotifier store;
 
   SelectAppearanceModeModal(this.store);
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {
-    final state = ref.watch(recordPageStoreProvider).value!;
+    final state = ref.watch(recordPageStateNotifierProvider).value!;
 
     return Container(
       color: Colors.white,
@@ -75,7 +75,7 @@ class SelectAppearanceModeModal extends HookConsumerWidget {
 
   Widget _row(
     BuildContext context, {
-    required RecordPageStore store,
+    required RecordPageStateNotifier store,
     required RecordPageState state,
     required PillSheetAppearanceMode mode,
     required String text,
@@ -135,7 +135,7 @@ class SelectAppearanceModeModal extends HookConsumerWidget {
 
 void showSelectAppearanceModeModal(
   BuildContext context,
-  RecordPageStore store,
+  RecordPageStateNotifier store,
 ) {
   analytics.setCurrentScreen(screenName: "SelectAppearanceModeModal");
   showModalBottomSheet(

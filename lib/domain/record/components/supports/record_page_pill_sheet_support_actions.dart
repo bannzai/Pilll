@@ -11,7 +11,7 @@ import 'package:pilll/entity/pill_sheet_group.codegen.dart';
 import 'package:pilll/entity/setting.codegen.dart';
 
 class RecordPagePillSheetSupportActions extends StatelessWidget {
-  final RecordPageStore store;
+  final RecordPageStateNotifier store;
   final RecordPageState state;
   final PillSheetGroup pillSheetGroup;
   final PillSheet activedPillSheet;

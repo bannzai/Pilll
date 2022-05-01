@@ -13,7 +13,7 @@ final notificationBarStoreProvider = StateNotifierProvider.autoDispose<
   ),
 );
 final notificationBarStateProvider = Provider.autoDispose((ref) {
-  final parameter = ref.watch(recordPageStoreProvider).value!;
+  final parameter = ref.watch(recordPageStateNotifierProvider).value!;
   return NotificationBarState(
     latestPillSheetGroup: parameter.pillSheetGroup,
     totalCountOfActionForTakenPill: parameter.totalCountOfActionForTakenPill,

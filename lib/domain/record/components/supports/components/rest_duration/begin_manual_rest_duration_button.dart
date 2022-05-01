@@ -13,7 +13,7 @@ class BeginManualRestDurationButton extends StatelessWidget {
   final PillSheetAppearanceMode appearanceMode;
   final PillSheet activedPillSheet;
   final PillSheetGroup pillSheetGroup;
-  final RecordPageStore store;
+  final RecordPageStateNotifier store;
   final VoidCallback didBeginRestDuration;
 
   const BeginManualRestDurationButton({

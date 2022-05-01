@@ -427,7 +427,7 @@ class MockUserDatastore extends _i1.Mock implements _i26.UserDatastore {
 /// A class which mocks [RecordPageStore].
 ///
 /// See the documentation for Mockito's code generation for more information.
-class MockRecordPageStore extends _i1.Mock implements _i28.RecordPageStore {
+class MockRecordPageStore extends _i1.Mock implements _i28.RecordPageStateNotifier {
   MockRecordPageStore() {
     _i1.throwOnMissingStub(this);
   }

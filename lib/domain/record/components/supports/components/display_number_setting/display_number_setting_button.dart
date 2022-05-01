@@ -9,7 +9,7 @@ import 'package:pilll/entity/pill_sheet_group.codegen.dart';
 
 class DisplayNumberSettingButton extends StatelessWidget {
   final PillSheetGroup pillSheetGroup;
-  final RecordPageStore store;
+  final RecordPageStateNotifier store;
 
   const DisplayNumberSettingButton({
     Key? key,

@@ -20,7 +20,7 @@ class RecordPagePillSheet extends StatelessWidget {
   final PillSheetGroup pillSheetGroup;
   final PillSheet pillSheet;
   final Setting setting;
-  final RecordPageStore store;
+  final RecordPageStateNotifier store;
   final RecordPageState state;
 
   List<PillSheetType> get pillSheetTypes =>
