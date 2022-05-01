@@ -4,7 +4,7 @@ import 'package:pilll/analytics.dart';
 import 'package:pilll/components/molecules/shadow_container.dart';
 import 'package:pilll/components/organisms/calendar/band/calendar_band_model.dart';
 import 'package:pilll/domain/menstruation/components/calendar/menstruation_single_line_state.dart';
-import 'package:pilll/components/organisms/calendar/weekly/weekly_calendar.dart';
+import 'package:pilll/components/organisms/calendar/week/week_calendar.dart';
 import 'package:pilll/domain/calendar/date_range.dart';
 import 'package:pilll/components/organisms/calendar/band/calendar_band_function.dart';
 import 'package:pilll/domain/menstruation/menstruation_page.dart';
@@ -63,7 +63,7 @@ class MenstruationCalendarHeader extends StatelessWidget {
                             .toList(),
                       ),
                       horizontalPadding: _horizontalPadding,
-                      onTap: (weeklyCalendarState, date) {
+                      onTap: (weekCalendarState, date) {
                         analytics.logEvent(
                             name: "did_select_day_tile_on_menstruation");
                         transitionToPostDiary(

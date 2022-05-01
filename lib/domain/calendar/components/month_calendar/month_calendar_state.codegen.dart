@@ -1,5 +1,5 @@
 import 'package:freezed_annotation/freezed_annotation.dart';
-import 'package:pilll/components/organisms/calendar/weekly/utility.dart';
+import 'package:pilll/components/organisms/calendar/week/utility.dart';
 import 'package:pilll/database/diary.dart';
 import 'package:pilll/database/menstruation.dart';
 import 'package:pilll/domain/calendar/week_calendar_state.dart';

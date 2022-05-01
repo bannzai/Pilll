@@ -1,8 +1,8 @@
 import 'package:hooks_riverpod/hooks_riverpod.dart';
 import 'package:pilll/analytics.dart';
-import 'package:pilll/components/organisms/calendar/weekly/weekly_calendar.dart';
+import 'package:pilll/components/organisms/calendar/week/week_calendar.dart';
 import 'package:pilll/domain/menstruation_edit/components/calendar/month_calendar_state.codegen.dart';
-import 'package:pilll/domain/menstruation_edit/components/calendar/weekly_calendar_state.dart';
+import 'package:pilll/domain/menstruation_edit/components/calendar/week_calendar_state.dart';
 import 'package:pilll/domain/menstruation_edit/menstruation_edit_page_state.codegen.dart';
 import 'package:pilll/domain/menstruation_edit/menstruation_edit_page_state_notifier.dart';
 import 'package:pilll/domain/record/weekday_badge.dart';

@@ -1,4 +1,4 @@
-import 'package:pilll/components/organisms/calendar/weekly/utility.dart';
+import 'package:pilll/components/organisms/calendar/week/utility.dart';
 import 'package:pilll/domain/calendar/date_range.dart';
 import 'package:flutter_test/flutter_test.dart';
 import 'package:shared_preferences/shared_preferences.dart';

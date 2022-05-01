@@ -1,6 +1,6 @@
 import 'package:hooks_riverpod/hooks_riverpod.dart';
 import 'package:pilll/components/molecules/indicator.dart';
-import 'package:pilll/components/organisms/calendar/weekly/weekly_calendar_state.dart';
+import 'package:pilll/components/organisms/calendar/week/week_calendar_state.dart';
 import 'package:pilll/domain/calendar/components/month_calendar/month_calendar_state.codegen.dart';
 import 'package:pilll/domain/record/weekday_badge.dart';
 import 'package:pilll/entity/weekday.dart';
@@ -48,12 +48,12 @@ class MonthCalendar extends HookConsumerWidget {
                 return Container(height: CalendarConstants.tileHeight);
               }
 
-              final weeklyCalendar = weekCalendarBuilder(
+              final weekCalendar = weekCalendarBuilder(
                   context, state, weekCalendarStatuses[offset]);
               return Column(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
-                  weeklyCalendar,
+                  weekCalendar,
                   const Divider(height: 1),
                 ],
               );
