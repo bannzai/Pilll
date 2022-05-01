@@ -4,45 +4,17 @@ import 'package:pilll/entity/pill_sheet_group.codegen.dart';
 import 'package:pilll/entity/pill_sheet_type.dart';
 import 'package:pilll/entity/setting.codegen.dart';
 import 'package:pilll/domain/settings/reminder_times_page.dart';
-import 'package:pilll/domain/settings/setting_page_state_notifier.dart';
-import 'package:pilll/entity/user.codegen.dart';
 import 'package:pilll/util/datetime/day.dart';
 import 'package:pilll/util/environment.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_test/flutter_test.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
 import 'package:intl/date_symbol_data_local.dart';
-import 'package:mockito/mockito.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
 import '../../helper/fake.dart';
 import '../../helper/mock.mocks.dart';
 import '../../helper/supported_device.dart';
-
-class _FakeUser extends Fake implements User {
-  _FakeUser({
-// ignore: unused_element
-    this.fakeIsPremium = false,
-// ignore: unused_element
-    this.fakeIsTrial = false,
-// ignore: unused_element
-    this.fakeIsExpiredDiscountEntitlements = false,
-// ignore: unused_element
-    this.fakeIsTrialDeadlineDate,
-  });
-  final bool fakeIsPremium;
-  final bool fakeIsTrial;
-  final bool fakeIsExpiredDiscountEntitlements;
-  final DateTime? fakeIsTrialDeadlineDate;
-  @override
-  bool get isPremium => fakeIsPremium;
-  @override
-  bool get isTrial => fakeIsTrial;
-  @override
-  bool get hasDiscountEntitlement => fakeIsExpiredDiscountEntitlements;
-  @override
-  DateTime? get trialDeadlineDate => fakeIsTrialDeadlineDate;
-}
 
 void main() {
   setUp(() {
