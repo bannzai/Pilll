@@ -17,9 +17,8 @@ import 'package:pilll/util/datetime/day.dart';
 import 'package:riverpod/riverpod.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
+import '../../helper/fake.dart';
 import '../../helper/mock.mocks.dart';
-
-class FakeRecordPageState extends Mock implements RecordPageState {}
 
 void main() {
   setUp(() {
@@ -83,10 +82,24 @@ void main() {
       final settingDatastore = MockSettingDatastore();
       when(settingDatastore.updateWithBatch(batch, setting)).thenReturn(null);
 
+      final recordPageState = RecordPageState(
+        pillSheetGroup: pillSheetGroup,
+        setting: setting,
+        premiumAndTrial: FakePremiumAndTrial(),
+        totalCountOfActionForTakenPill: 0,
+        isAlreadyShowTiral: false,
+        isAlreadyShowPremiumSurvey: false,
+        shouldShowMigrateInfo: false,
+        recommendedSignupNotificationIsAlreadyShow: false,
+        premiumTrialGuideNotificationIsClosed: false,
+        premiumTrialBeginAnouncementIsClosed: false,
+        isLinkedLoginProvider: false,
+      );
+
       final container = ProviderContainer(
         overrides: [
           recordPageAsyncStateProvider
-              .overrideWithValue(AsyncValue.data(FakeRecordPageState())),
+              .overrideWithValue(AsyncValue.data(recordPageState)),
           batchFactoryProvider.overrideWithValue(batchFactory),
           settingDatastoreProvider.overrideWithValue(settingDatastore),
           pillSheetDatastoreProvider.overrideWithValue(pillSheetDatastore),
@@ -168,10 +181,24 @@ void main() {
       final settingDatastore = MockSettingDatastore();
       when(settingDatastore.updateWithBatch(batch, setting)).thenReturn(null);
 
+      final recordPageState = RecordPageState(
+        pillSheetGroup: pillSheetGroup,
+        setting: setting,
+        premiumAndTrial: FakePremiumAndTrial(),
+        totalCountOfActionForTakenPill: 0,
+        isAlreadyShowTiral: false,
+        isAlreadyShowPremiumSurvey: false,
+        shouldShowMigrateInfo: false,
+        recommendedSignupNotificationIsAlreadyShow: false,
+        premiumTrialGuideNotificationIsClosed: false,
+        premiumTrialBeginAnouncementIsClosed: false,
+        isLinkedLoginProvider: false,
+      );
+
       final container = ProviderContainer(
         overrides: [
           recordPageAsyncStateProvider
-              .overrideWithValue(AsyncValue.data(FakeRecordPageState())),
+              .overrideWithValue(AsyncValue.data(recordPageState)),
           batchFactoryProvider.overrideWithValue(batchFactory),
           settingDatastoreProvider.overrideWithValue(settingDatastore),
           pillSheetDatastoreProvider.overrideWithValue(pillSheetDatastore),
