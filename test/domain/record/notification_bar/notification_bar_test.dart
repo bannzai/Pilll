@@ -85,7 +85,7 @@ void main() {
             overrides: [
               notificationBarStoreProvider.overrideWithProvider(
                   StateNotifierProvider.autoDispose(
-                      (_) => MockNotificationBarStateStore())),
+                      (_) => NotificationBarStateStore(state))),
               notificationBarStateProvider
                   .overrideWithProvider(Provider.autoDispose((_) => state)),
               isOverDiscountDeadlineProvider.overrideWithProvider(
@@ -147,7 +147,7 @@ void main() {
             overrides: [
               notificationBarStoreProvider.overrideWithProvider(
                   StateNotifierProvider.autoDispose(
-                      (_) => MockNotificationBarStateStore())),
+                      (_) => NotificationBarStateStore(state))),
               notificationBarStateProvider
                   .overrideWithProvider(Provider.autoDispose((_) => state)),
               isOverDiscountDeadlineProvider.overrideWithProvider(
@@ -208,7 +208,7 @@ void main() {
             overrides: [
               notificationBarStoreProvider.overrideWithProvider(
                   StateNotifierProvider.autoDispose(
-                      (_) => MockNotificationBarStateStore())),
+                      (_) => NotificationBarStateStore(state))),
               notificationBarStateProvider
                   .overrideWithProvider(Provider.autoDispose((_) => state)),
             ],
@@ -268,7 +268,7 @@ void main() {
             overrides: [
               notificationBarStoreProvider.overrideWithProvider(
                   StateNotifierProvider.autoDispose(
-                      (_) => MockNotificationBarStateStore())),
+                      (_) => NotificationBarStateStore(state))),
               notificationBarStateProvider
                   .overrideWithProvider(Provider.autoDispose((_) => state)),
             ],
@@ -327,7 +327,7 @@ void main() {
             overrides: [
               notificationBarStoreProvider.overrideWithProvider(
                   StateNotifierProvider.autoDispose(
-                      (_) => MockNotificationBarStateStore())),
+                      (_) => NotificationBarStateStore(state))),
               notificationBarStateProvider
                   .overrideWithProvider(Provider.autoDispose((_) => state)),
             ],
@@ -387,7 +387,7 @@ void main() {
             overrides: [
               notificationBarStoreProvider.overrideWithProvider(
                   StateNotifierProvider.autoDispose(
-                      (_) => MockNotificationBarStateStore())),
+                      (_) => NotificationBarStateStore(state))),
               notificationBarStateProvider
                   .overrideWithProvider(Provider.autoDispose((_) => state)),
             ],
@@ -446,7 +446,7 @@ void main() {
             overrides: [
               notificationBarStoreProvider.overrideWithProvider(
                   StateNotifierProvider.autoDispose(
-                      (_) => MockNotificationBarStateStore())),
+                      (_) => NotificationBarStateStore(state))),
               notificationBarStateProvider
                   .overrideWithProvider(Provider.autoDispose((_) => state)),
             ],
@@ -507,7 +507,7 @@ void main() {
             overrides: [
               notificationBarStoreProvider.overrideWithProvider(
                   StateNotifierProvider.autoDispose(
-                      (_) => MockNotificationBarStateStore())),
+                      (_) => NotificationBarStateStore(state))),
               notificationBarStateProvider
                   .overrideWithProvider(Provider.autoDispose((_) => state)),
             ],
@@ -566,7 +566,7 @@ void main() {
             overrides: [
               notificationBarStoreProvider.overrideWithProvider(
                   StateNotifierProvider.autoDispose(
-                      (_) => MockNotificationBarStateStore())),
+                      (_) => NotificationBarStateStore(state))),
               notificationBarStateProvider
                   .overrideWithProvider(Provider.autoDispose((_) => state)),
             ],
@@ -625,7 +625,7 @@ void main() {
             overrides: [
               notificationBarStoreProvider.overrideWithProvider(
                   StateNotifierProvider.autoDispose(
-                      (_) => MockNotificationBarStateStore())),
+                      (_) => NotificationBarStateStore(state))),
               notificationBarStateProvider
                   .overrideWithProvider(Provider.autoDispose((_) => state)),
             ],
