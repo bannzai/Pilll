@@ -41,10 +41,10 @@ class MonthCalendarState with _$MonthCalendarState {
   late final WeekCalendarDateRangeCalculator _range =
       WeekCalendarDateRangeCalculator(dateForMonth);
 
-  List<CalendarTabWeeklyCalendarState> get weekCalendarStatuses =>
+  List<CalendarTabWeekCalendarState> get weekCalendarStatuses =>
       List.generate(_range.weeklineCount(), (index) => index + 1)
           .map(
-            (line) => CalendarTabWeeklyCalendarState(
+            (line) => CalendarTabWeekCalendarState(
               dateRange: _range.dateRangeOfLine(line),
               diariesForMonth: diaries,
               targetDateOfMonth: dateForMonth,

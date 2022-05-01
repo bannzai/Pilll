@@ -24,7 +24,7 @@ void main() {
     test("#shouldGrayoutTile", () {
       final date = DateTime.parse("2020-09-14");
       final anyDate = date;
-      final calendarState = CalendarTabWeeklyCalendarState(
+      final calendarState = CalendarTabWeekCalendarState(
         dateRange: DateRange(anyDate, anyDate.add(const Duration(days: 6))),
         targetDateOfMonth: date,
         diariesForMonth: [],
@@ -39,7 +39,7 @@ void main() {
         final date = DateTime.parse("2020-09-14");
         final begin = DateTime.parse("2020-08-30");
         final end = DateTime.parse("2020-09-05");
-        final calendarState = CalendarTabWeeklyCalendarState(
+        final calendarState = CalendarTabWeekCalendarState(
           dateRange: DateRange(begin, end),
           targetDateOfMonth: date,
           diariesForMonth: [],
@@ -71,7 +71,7 @@ void main() {
         final date = DateTime.parse("2020-09-14");
         final begin = DateTime.parse("2020-08-30");
         final end = DateTime.parse("2020-09-05");
-        final calendarState = CalendarTabWeeklyCalendarState(
+        final calendarState = CalendarTabWeekCalendarState(
           dateRange: DateRange(begin, end),
           targetDateOfMonth: date,
           diariesForMonth: [],

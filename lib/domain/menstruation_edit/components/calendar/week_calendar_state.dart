@@ -4,14 +4,14 @@ import 'package:pilll/domain/calendar/date_range.dart';
 import 'package:pilll/entity/diary.codegen.dart';
 import 'package:pilll/entity/menstruation.codegen.dart';
 
-class MenstruationEditWeeklyCalendarState extends WeekCalendarState {
+class MenstruationEditWeekCalendarState extends WeekCalendarState {
   final DateRange dateRange;
   final DateTime dateForMonth;
   final Menstruation? menstruation;
 
   List<Diary> get diariesForMonth => [];
 
-  MenstruationEditWeeklyCalendarState({
+  MenstruationEditWeekCalendarState({
     required this.dateRange,
     required this.dateForMonth,
     required this.menstruation,

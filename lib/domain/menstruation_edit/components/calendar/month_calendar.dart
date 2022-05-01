@@ -65,7 +65,7 @@ class MonthCalendar extends HookConsumerWidget {
 
   Widget _weekdayLine(
     BuildContext context, {
-    required MenstruationEditWeeklyCalendarState weekCalendarState,
+    required MenstruationEditWeekCalendarState weekCalendarState,
   }) {
     return CalendarWeekdayLine(
         state: weekCalendarState,

@@ -3,12 +3,12 @@ import 'package:pilll/domain/calendar/date_range.dart';
 import 'package:pilll/components/organisms/calendar/week/week_calendar_state.dart';
 import 'package:pilll/entity/diary.codegen.dart';
 
-class CalendarTabWeeklyCalendarState extends WeekCalendarState {
+class CalendarTabWeekCalendarState extends WeekCalendarState {
   final DateRange dateRange;
   final List<Diary> diariesForMonth;
   final DateTime targetDateOfMonth;
 
-  CalendarTabWeeklyCalendarState({
+  CalendarTabWeekCalendarState({
     required this.dateRange,
     required this.diariesForMonth,
     required this.targetDateOfMonth,

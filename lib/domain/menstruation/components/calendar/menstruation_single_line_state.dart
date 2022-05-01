@@ -4,11 +4,11 @@ import 'package:pilll/domain/calendar/date_range.dart';
 import 'package:pilll/components/organisms/calendar/week/week_calendar_state.dart';
 import 'package:pilll/entity/diary.codegen.dart';
 
-class MenstruationSinglelineWeeklyCalendarState extends WeekCalendarState {
+class MenstruationSinglelineWeekCalendarState extends WeekCalendarState {
   final DateRange dateRange;
   final List<Diary> diariesForMonth;
   final List<CalendarBandModel> allBandModels;
-  MenstruationSinglelineWeeklyCalendarState({
+  MenstruationSinglelineWeekCalendarState({
     required this.dateRange,
     required this.diariesForMonth,
     required this.allBandModels,

@@ -16,10 +16,10 @@ class MonthCalendarState with _$MonthCalendarState {
   late final WeekCalendarDateRangeCalculator _range =
       WeekCalendarDateRangeCalculator(dateForMonth);
 
-  List<MenstruationEditWeeklyCalendarState> get weekCalendarStatuses =>
+  List<MenstruationEditWeekCalendarState> get weekCalendarStatuses =>
       List.generate(_range.weeklineCount(), (index) => index + 1)
           .map(
-            (line) => MenstruationEditWeeklyCalendarState(
+            (line) => MenstruationEditWeekCalendarState(
               dateRange: _range.dateRangeOfLine(line),
               dateForMonth: dateForMonth,
               menstruation: menstruation,
