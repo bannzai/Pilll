@@ -129,39 +129,36 @@ void main() {
           latestPillSheetGroup: pillSheetGroup,
           totalCountOfActionForTakenPill:
               totalCountOfActionForTakenPillForLongTimeUser,
-          isPremium: false,
-          isTrial: false,
-          hasDiscountEntitlement: true,
+          premiumAndTrial: PremiumAndTrial(
+            isPremium: false,
+            isTrial: false,
+            hasDiscountEntitlement: true,
+            trialDeadlineDate: null,
+            beginTrialDate: null,
+            discountEntitlementDeadlineDate:
+                today.subtract(const Duration(days: 1)),
+          ),
           isLinkedLoginProvider: false,
           premiumTrialGuideNotificationIsClosed: false,
           premiumTrialBeginAnouncementIsClosed: true,
           recommendedSignupNotificationIsAlreadyShow: false,
-          trialDeadlineDate: null,
-          beginTrialDate: null,
-          discountEntitlementDeadlineDate:
-              today.subtract(const Duration(days: 1)),
         );
 
-        final recordPageState = RecordPageState(
-            pillSheetGroup: PillSheetGroup(
-                pillSheets: [pillSheet],
-                pillSheetIDs: ["1"],
-                createdAt: now()));
         await tester.pumpWidget(
           ProviderScope(
             overrides: [
-              notificationBarStoreProvider.overrideWithProvider((param) =>
+              notificationBarStoreProvider.overrideWithProvider(
                   StateNotifierProvider.autoDispose(
                       (_) => MockNotificationBarStateStore())),
-              notificationBarStateProvider.overrideWithProvider(
-                  (param) => Provider.autoDispose((_) => state)),
+              notificationBarStateProvider
+                  .overrideWithProvider(Provider.autoDispose((_) => state)),
               isOverDiscountDeadlineProvider.overrideWithProvider(
                   (param) => Provider.autoDispose((_) => false)),
               durationToDiscountPriceDeadline.overrideWithProvider((param) =>
                   Provider.autoDispose((_) => const Duration(seconds: 1000))),
             ],
             child: MaterialApp(
-              home: Material(child: NotificationBar(recordPageState)),
+              home: Material(child: NotificationBar()),
             ),
           ),
         );
@@ -194,34 +191,31 @@ void main() {
           latestPillSheetGroup: pillSheetGroup,
           totalCountOfActionForTakenPill:
               totalCountOfActionForTakenPillForLongTimeUser,
-          isPremium: false,
-          isTrial: false,
-          hasDiscountEntitlement: true,
+          premiumAndTrial: PremiumAndTrial(
+            isPremium: false,
+            isTrial: false,
+            hasDiscountEntitlement: true,
+            trialDeadlineDate: null,
+            beginTrialDate: null,
+            discountEntitlementDeadlineDate: null,
+          ),
           isLinkedLoginProvider: false,
           premiumTrialGuideNotificationIsClosed: false,
           premiumTrialBeginAnouncementIsClosed: true,
           recommendedSignupNotificationIsAlreadyShow: false,
-          trialDeadlineDate: null,
-          beginTrialDate: null,
-          discountEntitlementDeadlineDate: null,
         );
 
-        final recordPageState = RecordPageState(
-            pillSheetGroup: PillSheetGroup(
-                pillSheets: [pillSheet],
-                pillSheetIDs: ["1"],
-                createdAt: now()));
         await tester.pumpWidget(
           ProviderScope(
             overrides: [
-              notificationBarStoreProvider.overrideWithProvider((param) =>
+              notificationBarStoreProvider.overrideWithProvider(
                   StateNotifierProvider.autoDispose(
                       (_) => MockNotificationBarStateStore())),
-              notificationBarStateProvider.overrideWithProvider(
-                  (param) => Provider.autoDispose((_) => state)),
+              notificationBarStateProvider
+                  .overrideWithProvider(Provider.autoDispose((_) => state)),
             ],
             child: MaterialApp(
-              home: Material(child: NotificationBar(recordPageState)),
+              home: Material(child: NotificationBar()),
             ),
           ),
         );
@@ -257,34 +251,31 @@ void main() {
           latestPillSheetGroup: pillSheetGroup,
           totalCountOfActionForTakenPill:
               totalCountOfActionForTakenPillForLongTimeUser,
-          isPremium: false,
-          isTrial: false,
-          hasDiscountEntitlement: true,
+          premiumAndTrial: PremiumAndTrial(
+            isPremium: false,
+            isTrial: false,
+            hasDiscountEntitlement: true,
+            trialDeadlineDate: null,
+            beginTrialDate: null,
+            discountEntitlementDeadlineDate: null,
+          ),
           isLinkedLoginProvider: false,
           premiumTrialGuideNotificationIsClosed: false,
           premiumTrialBeginAnouncementIsClosed: true,
           recommendedSignupNotificationIsAlreadyShow: false,
-          trialDeadlineDate: null,
-          beginTrialDate: null,
-          discountEntitlementDeadlineDate: null,
         );
 
-        final recordPageState = RecordPageState(
-            pillSheetGroup: PillSheetGroup(
-                pillSheets: [pillSheet],
-                pillSheetIDs: ["1"],
-                createdAt: now()));
         await tester.pumpWidget(
           ProviderScope(
             overrides: [
-              notificationBarStoreProvider.overrideWithProvider((param) =>
+              notificationBarStoreProvider.overrideWithProvider(
                   StateNotifierProvider.autoDispose(
                       (_) => MockNotificationBarStateStore())),
-              notificationBarStateProvider.overrideWithProvider(
-                  (param) => Provider.autoDispose((_) => state)),
+              notificationBarStateProvider
+                  .overrideWithProvider(Provider.autoDispose((_) => state)),
             ],
             child: MaterialApp(
-              home: Material(child: NotificationBar(recordPageState)),
+              home: Material(child: NotificationBar()),
             ),
           ),
         );
@@ -319,34 +310,31 @@ void main() {
           latestPillSheetGroup: pillSheetGroup,
           totalCountOfActionForTakenPill:
               totalCountOfActionForTakenPillForLongTimeUser,
-          isPremium: false,
-          isTrial: false,
-          hasDiscountEntitlement: true,
+          premiumAndTrial: PremiumAndTrial(
+            isPremium: false,
+            isTrial: false,
+            hasDiscountEntitlement: true,
+            trialDeadlineDate: null,
+            beginTrialDate: null,
+            discountEntitlementDeadlineDate: null,
+          ),
           isLinkedLoginProvider: true,
           premiumTrialGuideNotificationIsClosed: false,
           premiumTrialBeginAnouncementIsClosed: true,
           recommendedSignupNotificationIsAlreadyShow: false,
-          trialDeadlineDate: null,
-          beginTrialDate: null,
-          discountEntitlementDeadlineDate: null,
         );
 
-        final recordPageState = RecordPageState(
-            pillSheetGroup: PillSheetGroup(
-                pillSheets: [pillSheet],
-                pillSheetIDs: ["1"],
-                createdAt: now()));
         await tester.pumpWidget(
           ProviderScope(
             overrides: [
-              notificationBarStoreProvider.overrideWithProvider((param) =>
+              notificationBarStoreProvider.overrideWithProvider(
                   StateNotifierProvider.autoDispose(
                       (_) => MockNotificationBarStateStore())),
-              notificationBarStateProvider.overrideWithProvider(
-                  (param) => Provider.autoDispose((_) => state)),
+              notificationBarStateProvider
+                  .overrideWithProvider(Provider.autoDispose((_) => state)),
             ],
             child: MaterialApp(
-              home: Material(child: NotificationBar(recordPageState)),
+              home: Material(child: NotificationBar()),
             ),
           ),
         );
@@ -382,34 +370,31 @@ void main() {
           latestPillSheetGroup: pillSheetGroup,
           totalCountOfActionForTakenPill:
               totalCountOfActionForTakenPillForLongTimeUser,
-          isPremium: false,
-          isTrial: true,
-          hasDiscountEntitlement: true,
+          premiumAndTrial: PremiumAndTrial(
+            isPremium: false,
+            isTrial: true,
+            hasDiscountEntitlement: true,
+            trialDeadlineDate: today.add(const Duration(days: 1)),
+            beginTrialDate: null,
+            discountEntitlementDeadlineDate: null,
+          ),
           isLinkedLoginProvider: true,
           premiumTrialGuideNotificationIsClosed: false,
           premiumTrialBeginAnouncementIsClosed: true,
           recommendedSignupNotificationIsAlreadyShow: false,
-          trialDeadlineDate: today.add(const Duration(days: 1)),
-          beginTrialDate: null,
-          discountEntitlementDeadlineDate: null,
         );
 
-        final recordPageState = RecordPageState(
-            pillSheetGroup: PillSheetGroup(
-                pillSheets: [pillSheet],
-                pillSheetIDs: ["1"],
-                createdAt: now()));
         await tester.pumpWidget(
           ProviderScope(
             overrides: [
-              notificationBarStoreProvider.overrideWithProvider((param) =>
+              notificationBarStoreProvider.overrideWithProvider(
                   StateNotifierProvider.autoDispose(
                       (_) => MockNotificationBarStateStore())),
-              notificationBarStateProvider.overrideWithProvider(
-                  (param) => Provider.autoDispose((_) => state)),
+              notificationBarStateProvider
+                  .overrideWithProvider(Provider.autoDispose((_) => state)),
             ],
             child: MaterialApp(
-              home: Material(child: NotificationBar(recordPageState)),
+              home: Material(child: NotificationBar()),
             ),
           ),
         );
@@ -444,34 +429,31 @@ void main() {
           latestPillSheetGroup: pillSheetGroup,
           totalCountOfActionForTakenPill:
               totalCountOfActionForTakenPillForLongTimeUser,
-          isPremium: false,
-          isTrial: true,
-          hasDiscountEntitlement: true,
+          premiumAndTrial: PremiumAndTrial(
+            isPremium: false,
+            isTrial: true,
+            hasDiscountEntitlement: true,
+            trialDeadlineDate: null,
+            beginTrialDate: null,
+            discountEntitlementDeadlineDate: null,
+          ),
           isLinkedLoginProvider: true,
           premiumTrialGuideNotificationIsClosed: false,
           premiumTrialBeginAnouncementIsClosed: true,
           recommendedSignupNotificationIsAlreadyShow: false,
-          trialDeadlineDate: null,
-          beginTrialDate: null,
-          discountEntitlementDeadlineDate: null,
         );
 
-        final recordPageState = RecordPageState(
-            pillSheetGroup: PillSheetGroup(
-                pillSheets: [pillSheet],
-                pillSheetIDs: ["1"],
-                createdAt: now()));
         await tester.pumpWidget(
           ProviderScope(
             overrides: [
-              notificationBarStoreProvider.overrideWithProvider((param) =>
+              notificationBarStoreProvider.overrideWithProvider(
                   StateNotifierProvider.autoDispose(
                       (_) => MockNotificationBarStateStore())),
-              notificationBarStateProvider.overrideWithProvider(
-                  (param) => Provider.autoDispose((_) => state)),
+              notificationBarStateProvider
+                  .overrideWithProvider(Provider.autoDispose((_) => state)),
             ],
             child: MaterialApp(
-              home: Material(child: NotificationBar(recordPageState)),
+              home: Material(child: NotificationBar()),
             ),
           ),
         );
@@ -508,34 +490,31 @@ void main() {
           latestPillSheetGroup: pillSheetGroup,
           totalCountOfActionForTakenPill:
               totalCountOfActionForTakenPillForLongTimeUser,
-          isPremium: true,
-          isTrial: true,
-          hasDiscountEntitlement: true,
+          premiumAndTrial: PremiumAndTrial(
+            isPremium: true,
+            isTrial: true,
+            hasDiscountEntitlement: true,
+            trialDeadlineDate: null,
+            beginTrialDate: null,
+            discountEntitlementDeadlineDate: null,
+          ),
           isLinkedLoginProvider: false,
           premiumTrialGuideNotificationIsClosed: false,
           premiumTrialBeginAnouncementIsClosed: true,
           recommendedSignupNotificationIsAlreadyShow: false,
-          trialDeadlineDate: null,
-          beginTrialDate: null,
-          discountEntitlementDeadlineDate: null,
         );
 
-        final recordPageState = RecordPageState(
-            pillSheetGroup: PillSheetGroup(
-                pillSheets: [pillSheet],
-                pillSheetIDs: ["1"],
-                createdAt: now()));
         await tester.pumpWidget(
           ProviderScope(
             overrides: [
-              notificationBarStoreProvider.overrideWithProvider((param) =>
+              notificationBarStoreProvider.overrideWithProvider(
                   StateNotifierProvider.autoDispose(
                       (_) => MockNotificationBarStateStore())),
-              notificationBarStateProvider.overrideWithProvider(
-                  (param) => Provider.autoDispose((_) => state)),
+              notificationBarStateProvider
+                  .overrideWithProvider(Provider.autoDispose((_) => state)),
             ],
             child: MaterialApp(
-              home: Material(child: NotificationBar(recordPageState)),
+              home: Material(child: NotificationBar()),
             ),
           ),
         );
@@ -570,34 +549,31 @@ void main() {
           latestPillSheetGroup: pillSheetGroup,
           totalCountOfActionForTakenPill:
               totalCountOfActionForTakenPillForLongTimeUser,
-          isPremium: true,
-          isTrial: false,
-          hasDiscountEntitlement: true,
+          premiumAndTrial: PremiumAndTrial(
+            isPremium: true,
+            isTrial: false,
+            hasDiscountEntitlement: true,
+            trialDeadlineDate: null,
+            beginTrialDate: null,
+            discountEntitlementDeadlineDate: null,
+          ),
           isLinkedLoginProvider: true,
           premiumTrialGuideNotificationIsClosed: false,
           premiumTrialBeginAnouncementIsClosed: true,
           recommendedSignupNotificationIsAlreadyShow: false,
-          trialDeadlineDate: null,
-          beginTrialDate: null,
-          discountEntitlementDeadlineDate: null,
         );
 
-        final recordPageState = RecordPageState(
-            pillSheetGroup: PillSheetGroup(
-                pillSheets: [pillSheet],
-                pillSheetIDs: ["1"],
-                createdAt: now()));
         await tester.pumpWidget(
           ProviderScope(
             overrides: [
-              notificationBarStoreProvider.overrideWithProvider((param) =>
+              notificationBarStoreProvider.overrideWithProvider(
                   StateNotifierProvider.autoDispose(
                       (_) => MockNotificationBarStateStore())),
-              notificationBarStateProvider.overrideWithProvider(
-                  (param) => Provider.autoDispose((_) => state)),
+              notificationBarStateProvider
+                  .overrideWithProvider(Provider.autoDispose((_) => state)),
             ],
             child: MaterialApp(
-              home: Material(child: NotificationBar(recordPageState)),
+              home: Material(child: NotificationBar()),
             ),
           ),
         );
@@ -632,34 +608,31 @@ void main() {
           latestPillSheetGroup: pillSheetGroup,
           totalCountOfActionForTakenPill:
               totalCountOfActionForTakenPillForLongTimeUser,
-          isPremium: true,
-          isTrial: true,
-          hasDiscountEntitlement: true,
+          premiumAndTrial: PremiumAndTrial(
+            isPremium: true,
+            isTrial: true,
+            hasDiscountEntitlement: true,
+            trialDeadlineDate: null,
+            beginTrialDate: null,
+            discountEntitlementDeadlineDate: null,
+          ),
           isLinkedLoginProvider: true,
           premiumTrialGuideNotificationIsClosed: false,
           premiumTrialBeginAnouncementIsClosed: true,
           recommendedSignupNotificationIsAlreadyShow: false,
-          trialDeadlineDate: null,
-          beginTrialDate: null,
-          discountEntitlementDeadlineDate: null,
         );
 
-        final recordPageState = RecordPageState(
-            pillSheetGroup: PillSheetGroup(
-                pillSheets: [pillSheet],
-                pillSheetIDs: ["1"],
-                createdAt: now()));
         await tester.pumpWidget(
           ProviderScope(
             overrides: [
-              notificationBarStoreProvider.overrideWithProvider((param) =>
+              notificationBarStoreProvider.overrideWithProvider(
                   StateNotifierProvider.autoDispose(
                       (_) => MockNotificationBarStateStore())),
-              notificationBarStateProvider.overrideWithProvider(
-                  (param) => Provider.autoDispose((_) => state)),
+              notificationBarStateProvider
+                  .overrideWithProvider(Provider.autoDispose((_) => state)),
             ],
             child: MaterialApp(
-              home: Material(child: NotificationBar(recordPageState)),
+              home: Material(child: NotificationBar()),
             ),
           ),
         );
