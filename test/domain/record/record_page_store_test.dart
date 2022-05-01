@@ -1,6 +1,7 @@
 import 'dart:async';
 import 'package:pilll/database/batch.dart';
 import 'package:pilll/domain/record/components/add_pill_sheet_group/add_pill_sheet_group_store.dart';
+import 'package:pilll/domain/record/record_page_async_action.dart';
 import 'package:pilll/domain/record/record_page_store.dart';
 import 'package:pilll/entity/pill_sheet.codegen.dart';
 import 'package:pilll/entity/pill_sheet_group.codegen.dart';
@@ -331,10 +332,10 @@ void main() {
           userDatastoreProvider.overrideWithValue(userDatastore),
         ],
       );
-      final store = container.read(recordPageStoreProvider.notifier);
+      final asyncAction = container.read(recordPageAsyncActionProvider);
 
       await Future.delayed(const Duration(seconds: 1));
-      final result = await store.taken();
+      final result = await asyncAction.taken(pillSheetGroup: pillSheetGroup);
       expect(result, isTrue);
     });
     test("group has two pill sheet contains future pill sheet", () async {
@@ -453,10 +454,10 @@ void main() {
           userDatastoreProvider.overrideWithValue(userDatastore),
         ],
       );
-      final store = container.read(recordPageStoreProvider.notifier);
+      final asyncAction = container.read(recordPageAsyncActionProvider);
 
       await Future.delayed(const Duration(seconds: 1));
-      final result = await store.taken();
+      final result = await asyncAction.taken(pillSheetGroup: pillSheetGroup);
       expect(result, isTrue);
     });
     test("group has two pill sheet for first pillSheet.isFill pattern",
@@ -576,10 +577,10 @@ void main() {
           userDatastoreProvider.overrideWithValue(userDatastore),
         ],
       );
-      final store = container.read(recordPageStoreProvider.notifier);
+      final asyncAction = container.read(recordPageAsyncActionProvider);
 
       await Future.delayed(const Duration(seconds: 1));
-      final result = await store.taken();
+      final result = await asyncAction.taken(pillSheetGroup: pillSheetGroup);
       expect(result, isTrue);
     });
     test("group has two pill sheet contains past pill sheet but not yet filled",
@@ -702,10 +703,10 @@ void main() {
           userDatastoreProvider.overrideWithValue(userDatastore),
         ],
       );
-      final store = container.read(recordPageStoreProvider.notifier);
+      final asyncAction = container.read(recordPageAsyncActionProvider);
 
       await Future.delayed(const Duration(seconds: 1));
-      final result = await store.taken();
+      final result = await asyncAction.taken(pillSheetGroup: pillSheetGroup);
       expect(result, isTrue);
     });
   });
@@ -819,10 +820,10 @@ void main() {
             userDatastoreProvider.overrideWithValue(userDatastore),
           ],
         );
-        final store = container.read(recordPageStoreProvider.notifier);
+        final asyncAction = container.read(recordPageAsyncActionProvider);
 
         await Future.delayed(const Duration(seconds: 1));
-        await store.revertTaken(
+        await asyncAction.revertTaken(
             pillSheetGroup: pillSheetGroup,
             pageIndex: 0,
             pillNumberIntoPillSheet: 1);
@@ -933,10 +934,10 @@ void main() {
             userDatastoreProvider.overrideWithValue(userDatastore),
           ],
         );
-        final store = container.read(recordPageStoreProvider.notifier);
+        final asyncAction = container.read(recordPageAsyncActionProvider);
 
         await Future.delayed(const Duration(seconds: 1));
-        await store.revertTaken(
+        await asyncAction.revertTaken(
             pillSheetGroup: pillSheetGroup,
             pageIndex: 0,
             pillNumberIntoPillSheet: 2);
@@ -1062,10 +1063,10 @@ void main() {
             userDatastoreProvider.overrideWithValue(userDatastore),
           ],
         );
-        final store = container.read(recordPageStoreProvider.notifier);
+        final asyncAction = container.read(recordPageAsyncActionProvider);
 
         await Future.delayed(const Duration(seconds: 1));
-        await store.revertTaken(
+        await asyncAction.revertTaken(
             pillSheetGroup: pillSheetGroup,
             pageIndex: 0,
             pillNumberIntoPillSheet: 1);
@@ -1183,10 +1184,10 @@ void main() {
             userDatastoreProvider.overrideWithValue(userDatastore),
           ],
         );
-        final store = container.read(recordPageStoreProvider.notifier);
+        final asyncAction = container.read(recordPageAsyncActionProvider);
 
         await Future.delayed(const Duration(seconds: 1));
-        await store.revertTaken(
+        await asyncAction.revertTaken(
             pillSheetGroup: pillSheetGroup,
             pageIndex: 0,
             pillNumberIntoPillSheet: 11);
@@ -1310,10 +1311,10 @@ void main() {
             userDatastoreProvider.overrideWithValue(userDatastore),
           ],
         );
-        final store = container.read(recordPageStoreProvider.notifier);
+        final asyncAction = container.read(recordPageAsyncActionProvider);
 
         await Future.delayed(const Duration(seconds: 1));
-        await store.revertTaken(
+        await asyncAction.revertTaken(
             pillSheetGroup: pillSheetGroup,
             pageIndex: 1,
             pillNumberIntoPillSheet: 2);
@@ -1440,10 +1441,10 @@ void main() {
             userDatastoreProvider.overrideWithValue(userDatastore),
           ],
         );
-        final store = container.read(recordPageStoreProvider.notifier);
+        final asyncAction = container.read(recordPageAsyncActionProvider);
 
         await Future.delayed(const Duration(seconds: 1));
-        await store.revertTaken(
+        await asyncAction.revertTaken(
             pillSheetGroup: pillSheetGroup,
             pageIndex: 0,
             pillNumberIntoPillSheet: 27);
@@ -1575,10 +1576,10 @@ void main() {
             userDatastoreProvider.overrideWithValue(userDatastore),
           ],
         );
-        final store = container.read(recordPageStoreProvider.notifier);
+        final asycnAction = container.read(recordPageAsyncActionProvider);
 
         await Future.delayed(const Duration(seconds: 1));
-        await store.revertTaken(
+        await asycnAction.revertTaken(
             pillSheetGroup: pillSheetGroup,
             pageIndex: 0,
             pillNumberIntoPillSheet: 27);
