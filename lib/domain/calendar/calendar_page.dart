@@ -9,7 +9,7 @@ import 'package:pilll/domain/calendar/components/month_calendar/month_calendar.d
 import 'package:pilll/components/organisms/calendar/weekly/weekly_calendar.dart';
 import 'package:pilll/components/atoms/color.dart';
 import 'package:pilll/domain/calendar/components/pill_sheet_modified_history/pill_sheet_modified_history_card.dart';
-import 'package:pilll/domain/calendar/calendar_page_store.dart';
+import 'package:pilll/domain/calendar/calendar_page_state_notifier.dart';
 import 'package:flutter/material.dart';
 import 'package:pilll/error/universal_error_page.dart';
 import 'package:pilll/hooks/automatic_keep_alive_client_mixin.dart';
@@ -18,8 +18,8 @@ import 'package:pilll/util/datetime/day.dart';
 class CalendarPage extends HookConsumerWidget {
   @override
   Widget build(BuildContext context, WidgetRef ref) {
-    final store = ref.watch(calendarPageStateStoreProvider.notifier);
-    final state = ref.watch(calendarPageStateStoreProvider);
+    final store = ref.watch(calendarPageStateNotifierProvider.notifier);
+    final state = ref.watch(calendarPageStateNotifierProvider);
     final calendarPageIndexStateNotifier =
         ref.watch(calendarPageIndexStateNotifierProvider.notifier);
 
@@ -46,7 +46,7 @@ class CalendarPage extends HookConsumerWidget {
 }
 
 class CalendarPageBody extends StatelessWidget {
-  final CalendarPageStateStore store;
+  final CalendarPageStateNotifier store;
   final CalendarPageState state;
   final PageController pageController;
 

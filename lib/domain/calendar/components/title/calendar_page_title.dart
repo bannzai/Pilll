@@ -5,7 +5,7 @@ import 'package:pilll/domain/calendar/calendar_page_index_state_notifier.dart';
 import 'package:pilll/domain/calendar/calendar_page_state.codegen.dart';
 import 'package:pilll/components/atoms/font.dart';
 import 'package:pilll/components/atoms/text_color.dart';
-import 'package:pilll/domain/calendar/calendar_page_store.dart';
+import 'package:pilll/domain/calendar/calendar_page_state_notifier.dart';
 import 'package:flutter/material.dart';
 
 class CalendarPageTitle extends HookConsumerWidget {
@@ -18,7 +18,7 @@ class CalendarPageTitle extends HookConsumerWidget {
 
   final CalendarPageState state;
   final PageController pageController;
-  final CalendarPageStateStore store;
+  final CalendarPageStateNotifier store;
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {
