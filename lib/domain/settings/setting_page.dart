@@ -78,188 +78,197 @@ class SettingPageBody extends StatelessWidget {
     final setting = state.setting;
     final pillSheetGroup = state.latestPillSheetGroup;
     final activedPillSheet = pillSheetGroup?.activedPillSheet;
-    return Container(
-      child: ListView.builder(
-        itemBuilder: (BuildContext context, int index) {
-          return HookBuilder(
-            builder: (BuildContext context) {
-              final section = SettingSection.values[index];
-              switch (section) {
-                case SettingSection.account:
-                  return SettingSectionTitle(
-                    text: "アカウント",
-                    children: [
-                      const ListExplainRow(
-                          text: "機種変更やスマホ紛失時など、データの引き継ぎ・復元には、アカウント登録が必要です。"),
-                      AccountLinkRow(),
-                      _separator(),
-                    ],
-                  );
-                case SettingSection.premium:
-                  return SettingSectionTitle(text: "Pilllプレミアム", children: [
-                    if (state.premiumAndTrial.isTrial) ...[
-                      ListTile(
-                        title: const Text("プレミアムお試し体験について",
-                            style: FontType.listRow),
-                        onTap: () {
-                          analytics.logEvent(
-                              name: "did_select_about_trial", parameters: {});
-                          launch(
-                              "https://pilll.wraptas.site/3abd690f501549c48f813fd310b5f242",
-                              forceSafariVC: true);
-                        },
-                      ),
-                      _separator(),
-                    ],
-                    PremiumIntroductionRow(
-                      isPremium: state.premiumAndTrial.isPremium,
-                      trialDeadlineDate:
-                          state.premiumAndTrial.trialDeadlineDate,
-                    ),
-                    _separator(),
-                  ]);
-                case SettingSection.pill:
-                  return SettingSectionTitle(
-                    text: "ピルシート",
-                    children: [
-                      if (activedPillSheet != null &&
-                          pillSheetGroup != null &&
-                          !pillSheetGroup.isDeactived) ...[
-                        TodayPllNumberRow(
-                          setting: setting,
-                          pillSheetGroup: pillSheetGroup,
-                          activedPillSheet: activedPillSheet,
-                        ),
+    return Scaffold(
+      backgroundColor: PilllColors.background,
+      appBar: AppBar(
+        title: const Text('設定', style: TextColorStyle.main),
+        backgroundColor: PilllColors.white,
+      ),
+      body: Container(
+        child: ListView.builder(
+          itemBuilder: (BuildContext context, int index) {
+            return HookBuilder(
+              builder: (BuildContext context) {
+                final section = SettingSection.values[index];
+                switch (section) {
+                  case SettingSection.account:
+                    return SettingSectionTitle(
+                      text: "アカウント",
+                      children: [
+                        const ListExplainRow(
+                            text: "機種変更やスマホ紛失時など、データの引き継ぎ・復元には、アカウント登録が必要です。"),
+                        AccountLinkRow(),
                         _separator(),
-                        PillSheetRemoveRow(
-                          latestPillSheetGroup: pillSheetGroup,
-                          activedPillSheet: activedPillSheet,
+                      ],
+                    );
+                  case SettingSection.premium:
+                    return SettingSectionTitle(text: "Pilllプレミアム", children: [
+                      if (state.premiumAndTrial.isTrial) ...[
+                        ListTile(
+                          title: const Text("プレミアムお試し体験について",
+                              style: FontType.listRow),
+                          onTap: () {
+                            analytics.logEvent(
+                                name: "did_select_about_trial", parameters: {});
+                            launch(
+                                "https://pilll.wraptas.site/3abd690f501549c48f813fd310b5f242",
+                                forceSafariVC: true);
+                          },
                         ),
                         _separator(),
                       ],
-                      CreatingNewPillSheetRow(
-                        setting: setting,
+                      PremiumIntroductionRow(
                         isPremium: state.premiumAndTrial.isPremium,
-                        isTrial: state.premiumAndTrial.isTrial,
                         trialDeadlineDate:
                             state.premiumAndTrial.trialDeadlineDate,
                       ),
                       _separator(),
-                    ],
-                  );
-                case SettingSection.notification:
-                  return SettingSectionTitle(
-                    text: "通知",
-                    children: [
-                      TakingPillNotification(setting: setting),
-                      _separator(),
-                      NotificationTimeRow(store: store, state: state),
-                      _separator(),
-                      if (activedPillSheet != null &&
-                          activedPillSheet.pillSheetHasRestOrFakeDuration) ...[
-                        NotificationInRestDuration(
-                            setting: setting, pillSheet: activedPillSheet),
-                        _separator(),
-                      ],
-                      if (!state.premiumAndTrial.isPremium) ...[
-                        QuickRecordRow(
+                    ]);
+                  case SettingSection.pill:
+                    return SettingSectionTitle(
+                      text: "ピルシート",
+                      children: [
+                        if (activedPillSheet != null &&
+                            pillSheetGroup != null &&
+                            !pillSheetGroup.isDeactived) ...[
+                          TodayPllNumberRow(
+                            setting: setting,
+                            pillSheetGroup: pillSheetGroup,
+                            activedPillSheet: activedPillSheet,
+                          ),
+                          _separator(),
+                          PillSheetRemoveRow(
+                            latestPillSheetGroup: pillSheetGroup,
+                            activedPillSheet: activedPillSheet,
+                          ),
+                          _separator(),
+                        ],
+                        CreatingNewPillSheetRow(
+                          setting: setting,
+                          isPremium: state.premiumAndTrial.isPremium,
                           isTrial: state.premiumAndTrial.isTrial,
                           trialDeadlineDate:
                               state.premiumAndTrial.trialDeadlineDate,
                         ),
                         _separator(),
                       ],
-                      ReminderNotificationCustomizeWord(
-                        setting: setting,
-                        isTrial: state.premiumAndTrial.isTrial,
-                        isPremium: state.premiumAndTrial.isPremium,
-                        trialDeadlineDate:
-                            state.premiumAndTrial.trialDeadlineDate,
-                      ),
-                      _separator(),
-                    ],
-                  );
-                case SettingSection.menstruation:
-                  return SettingSectionTitle(
-                    text: "生理",
-                    children: [
-                      MenstruationRow(store, setting),
-                      _separator(),
-                      if (Platform.isIOS && state.isHealthDataAvailable) ...[
-                        HealthCareRow(
+                    );
+                  case SettingSection.notification:
+                    return SettingSectionTitle(
+                      text: "通知",
+                      children: [
+                        TakingPillNotification(setting: setting),
+                        _separator(),
+                        NotificationTimeRow(store: store, state: state),
+                        _separator(),
+                        if (activedPillSheet != null &&
+                            activedPillSheet
+                                .pillSheetHasRestOrFakeDuration) ...[
+                          NotificationInRestDuration(
+                              setting: setting, pillSheet: activedPillSheet),
+                          _separator(),
+                        ],
+                        if (!state.premiumAndTrial.isPremium) ...[
+                          QuickRecordRow(
+                            isTrial: state.premiumAndTrial.isTrial,
+                            trialDeadlineDate:
+                                state.premiumAndTrial.trialDeadlineDate,
+                          ),
+                          _separator(),
+                        ],
+                        ReminderNotificationCustomizeWord(
+                          setting: setting,
+                          isTrial: state.premiumAndTrial.isTrial,
+                          isPremium: state.premiumAndTrial.isPremium,
                           trialDeadlineDate:
                               state.premiumAndTrial.trialDeadlineDate,
                         ),
                         _separator(),
-                      ]
-                    ],
-                  );
-                case SettingSection.other:
-                  return SettingSectionTitle(
-                    text: "その他",
-                    children: [
-                      if (state.userIsUpdatedFrom132) ...[
-                        UpdateFrom132Row(),
-                        _separator(),
                       ],
-                      ListTile(
-                          title: const Text("利用規約", style: FontType.listRow),
-                          onTap: () {
-                            analytics.logEvent(
-                                name: "did_select_terms", parameters: {});
-                            launch("https://bannzai.github.io/Pilll/Terms",
-                                forceSafariVC: true);
-                          }),
-                      _separator(),
-                      ListTile(
-                          title:
-                              const Text("プライバシーポリシー", style: FontType.listRow),
-                          onTap: () {
-                            analytics.logEvent(
-                                name: "did_select_privacy_policy",
-                                parameters: {});
-                            launch(
-                                "https://bannzai.github.io/Pilll/PrivacyPolicy",
-                                forceSafariVC: true);
-                          }),
-                      _separator(),
-                      ListTile(
-                          title: const Text("FAQ", style: FontType.listRow),
-                          onTap: () {
-                            analytics.logEvent(
-                                name: "did_select_faq", parameters: {});
-                            launch(
-                                "https://pilll.wraptas.site/bb1f49eeded64b57929b7a13e9224d69",
-                                forceSafariVC: true);
-                          }),
-                      _separator(),
-                      ListTile(
-                          title: const Text("新機能紹介", style: FontType.listRow),
-                          onTap: () {
-                            analytics.logEvent(
-                                name: "setting_did_select_release_note",
-                                parameters: {});
-                            launch(
-                                "https://pilll.wraptas.site/172cae6bced04bbabeab1d8acad91a61");
-                          }),
-                      _separator(),
-                      ListTile(
-                          title: const Text("お問い合わせ", style: FontType.listRow),
-                          onTap: () {
-                            analytics.logEvent(
-                                name: "did_select_inquiry", parameters: {});
-                            inquiry();
-                          }),
-                      _separator(),
-                      if (Environment.isDevelopment) _debug(context),
-                    ],
-                  );
-              }
-            },
-          );
-        },
-        itemCount: SettingSection.values.length,
-        addRepaintBoundaries: false,
+                    );
+                  case SettingSection.menstruation:
+                    return SettingSectionTitle(
+                      text: "生理",
+                      children: [
+                        MenstruationRow(store, setting),
+                        _separator(),
+                        if (Platform.isIOS && state.isHealthDataAvailable) ...[
+                          HealthCareRow(
+                            trialDeadlineDate:
+                                state.premiumAndTrial.trialDeadlineDate,
+                          ),
+                          _separator(),
+                        ]
+                      ],
+                    );
+                  case SettingSection.other:
+                    return SettingSectionTitle(
+                      text: "その他",
+                      children: [
+                        if (state.userIsUpdatedFrom132) ...[
+                          UpdateFrom132Row(),
+                          _separator(),
+                        ],
+                        ListTile(
+                            title: const Text("利用規約", style: FontType.listRow),
+                            onTap: () {
+                              analytics.logEvent(
+                                  name: "did_select_terms", parameters: {});
+                              launch("https://bannzai.github.io/Pilll/Terms",
+                                  forceSafariVC: true);
+                            }),
+                        _separator(),
+                        ListTile(
+                            title: const Text("プライバシーポリシー",
+                                style: FontType.listRow),
+                            onTap: () {
+                              analytics.logEvent(
+                                  name: "did_select_privacy_policy",
+                                  parameters: {});
+                              launch(
+                                  "https://bannzai.github.io/Pilll/PrivacyPolicy",
+                                  forceSafariVC: true);
+                            }),
+                        _separator(),
+                        ListTile(
+                            title: const Text("FAQ", style: FontType.listRow),
+                            onTap: () {
+                              analytics.logEvent(
+                                  name: "did_select_faq", parameters: {});
+                              launch(
+                                  "https://pilll.wraptas.site/bb1f49eeded64b57929b7a13e9224d69",
+                                  forceSafariVC: true);
+                            }),
+                        _separator(),
+                        ListTile(
+                            title: const Text("新機能紹介", style: FontType.listRow),
+                            onTap: () {
+                              analytics.logEvent(
+                                  name: "setting_did_select_release_note",
+                                  parameters: {});
+                              launch(
+                                  "https://pilll.wraptas.site/172cae6bced04bbabeab1d8acad91a61");
+                            }),
+                        _separator(),
+                        ListTile(
+                            title:
+                                const Text("お問い合わせ", style: FontType.listRow),
+                            onTap: () {
+                              analytics.logEvent(
+                                  name: "did_select_inquiry", parameters: {});
+                              inquiry();
+                            }),
+                        _separator(),
+                        if (Environment.isDevelopment) _debug(context),
+                      ],
+                    );
+                }
+              },
+            );
+          },
+          itemCount: SettingSection.values.length,
+          addRepaintBoundaries: false,
+        ),
       ),
     );
   }
