@@ -2,6 +2,7 @@ import 'dart:async';
 import 'dart:io';
 
 import 'package:firebase_auth/firebase_auth.dart' as firebaseAuth;
+import 'package:flutter_native_timezone/flutter_native_timezone.dart';
 import 'package:pilll/database/database.dart';
 import 'package:pilll/domain/premium_function_survey/premium_function_survey_element_type.dart';
 import 'package:pilll/entity/package.codegen.dart';
@@ -256,7 +257,7 @@ extension SaveUserLaunchInfo on UserDatastore {
 
   Future<void> _saveStats() async {
     final store = await SharedPreferences.getInstance();
-    final 
+    final timeZoneDatabaseName = await FlutterNativeTimezone.getLocalTimezone();
 
     final lastLoginVersion =
         await PackageInfo.fromPlatform().then((value) => value.version);
@@ -277,12 +278,14 @@ extension SaveUserLaunchInfo on UserDatastore {
         "beginingVersion": beginingVersion,
         "lastLoginVersion": lastLoginVersion,
         "timeZoneName": timeZoneName,
-        "timeZoneIsNegative": timeZoneOffset.isNegative,
+        "timeZoneDatabaseName": timeZoneDatabaseName,
+        "timeZoneOffsetIsNegative": timeZoneOffset.isNegative,
         "timeZoneOffsetInHours": timeZoneOffset.inHours,
         "timeZoneOffsetInMinutes": timeZoneOffset.inMinutes,
         // Deprecated
         "timeZoneOffset":
             "${timeZoneOffset.isNegative ? "-" : "+"}${timeZoneOffset.inHours}",
+        "timeZoneIsNegative": timeZoneOffset.isNegative,
       }
     }, SetOptions(merge: true));
   }
