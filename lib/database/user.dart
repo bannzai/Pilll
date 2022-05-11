@@ -256,6 +256,7 @@ extension SaveUserLaunchInfo on UserDatastore {
 
   Future<void> _saveStats() async {
     final store = await SharedPreferences.getInstance();
+    final 
 
     final lastLoginVersion =
         await PackageInfo.fromPlatform().then((value) => value.version);
