@@ -261,11 +261,11 @@ extension SaveUserLaunchInfo on UserDatastore {
 
     final lastLoginVersion =
         await PackageInfo.fromPlatform().then((value) => value.version);
-    String? beginingVersion = store.getString(StringKey.beginingVersionKey);
-    if (beginingVersion == null) {
+    String? beginVersion = store.getString(StringKey.beginVersion);
+    if (beginVersion == null) {
       final v = lastLoginVersion;
-      await store.setString(StringKey.beginingVersionKey, v);
-      beginingVersion = v;
+      await store.setString(StringKey.beginVersion, v);
+      beginVersion = v;
     }
 
     final now = DateTime.now().toLocal();
@@ -275,7 +275,7 @@ extension SaveUserLaunchInfo on UserDatastore {
     return _database.userRawReference().set({
       "stats": {
         "lastLoginAt": now,
-        "beginingVersion": beginingVersion,
+        "beginVersion": beginVersion,
         "lastLoginVersion": lastLoginVersion,
         "timeZoneName": timeZoneName,
         "timeZoneDatabaseName": timeZoneDatabaseName,
@@ -286,6 +286,7 @@ extension SaveUserLaunchInfo on UserDatastore {
         "timeZoneOffset":
             "${timeZoneOffset.isNegative ? "-" : "+"}${timeZoneOffset.inHours}",
         "timeZoneIsNegative": timeZoneOffset.isNegative,
+        "beginingVersion": beginVersion,
       }
     }, SetOptions(merge: true));
   }

@@ -17,7 +17,7 @@ extension BoolKey on String {
 extension StringKey on String {
   static final String salvagedOldStartTakenDate = "salvagedOldStartTakenDate";
   static final String salvagedOldLastTakenDate = "salvagedOldLastTakenDate";
-  static final String beginingVersionKey = "beginingVersion";
+  static final String beginVersion = "beginingVersion";
   static final String currentUserUID = "currentUserUID";
   static final String lastSignInAnonymousUID = "lastSigninAnonymousUID";
 }
