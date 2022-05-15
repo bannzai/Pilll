@@ -168,9 +168,9 @@ class RecordPagePillSheet extends StatelessWidget {
       }
     } else if (setting.pillSheetAppearanceMode ==
         PillSheetAppearanceMode.sequential) {
-      final pageOffset =
-          summarizedPillSheetPillDayCountWithPillSheetsToEndIndex(
-        pillSheets: pillSheetGroup.pillSheets,
+      final pageOffset = summarizedPillCountWithPillSheetTypesToEndIndex(
+        pillSheetTypes:
+            pillSheetGroup.pillSheets.map((e) => e.pillSheetType).toList(),
         endIndex: pageIndex,
       );
       if (setting.pillNumberForFromMenstruation == 0 ||

@@ -3,6 +3,7 @@ import 'package:pilll/entity/firestore_timestamp_converter.dart';
 import 'package:pilll/entity/pill_sheet.codegen.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';
+import 'package:pilll/entity/pill_sheet_type.dart';
 
 part 'pill_sheet_group.codegen.g.dart';
 part 'pill_sheet_group.codegen.freezed.dart';
@@ -68,8 +69,9 @@ class PillSheetGroup with _$PillSheetGroup {
     }
 
     final passedPillCountForPillSheetTypes =
-        summarizedPillSheetPillDayCountWithPillSheetsToEndIndex(
-            pillSheets: pillSheets, endIndex: activedPillSheet.groupIndex);
+        summarizedPillCountWithPillSheetTypesToEndIndex(
+            pillSheetTypes: pillSheets.map((e) => e.pillSheetType).toList(),
+            endIndex: activedPillSheet.groupIndex);
 
     var sequentialTodayPillNumber =
         passedPillCountForPillSheetTypes + activedPillSheet.todayPillNumber;
@@ -103,8 +105,9 @@ class PillSheetGroup with _$PillSheetGroup {
     }
 
     final passedPillCountForPillSheetTypes =
-        summarizedPillSheetPillDayCountWithPillSheetsToEndIndex(
-            pillSheets: pillSheets, endIndex: activedPillSheet.groupIndex);
+        summarizedPillCountWithPillSheetTypesToEndIndex(
+            pillSheetTypes: pillSheets.map((e) => e.pillSheetType).toList(),
+            endIndex: activedPillSheet.groupIndex);
 
     var sequentialLastTakenPillNumber =
         passedPillCountForPillSheetTypes + activedPillSheet.lastTakenPillNumber;
