@@ -168,7 +168,8 @@ class RecordPagePillSheet extends StatelessWidget {
       }
     } else if (setting.pillSheetAppearanceMode ==
         PillSheetAppearanceMode.sequential) {
-      final pageOffset = summarizedPillDayCountWithPillSheetsToEndIndex(
+      final pageOffset =
+          summarizedPillSheetPillDayCountWithPillSheetsToEndIndex(
         pillSheets: pillSheetGroup.pillSheets,
         endIndex: pageIndex,
       );
@@ -244,7 +245,7 @@ class RecordPagePillSheet extends StatelessWidget {
       return left <= pillNumberIntoPillSheet &&
           pillNumberIntoPillSheet <= right;
     }
-    final passedCount = summarizedPillDayCountWithPillSheetsToEndIndex(
+    final passedCount = summarizedPillSheetPillDayCountWithPillSheetsToEndIndex(
         pillSheets: pillSheetGroup.pillSheets, endIndex: pageIndex);
     final serialiedPillNumber = passedCount + pillNumberIntoPillSheet;
 
