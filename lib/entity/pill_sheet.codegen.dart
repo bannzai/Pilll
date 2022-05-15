@@ -240,3 +240,16 @@ int summarizedPillDayCountWithPillSheetsToEndIndex(
         1;
   });
 }
+
+int summarizedPillCountWithPillSheetsToEndIndex(
+    {required List<PillSheet> pillSheets, required int endIndex}) {
+  if (endIndex == 0) {
+    return 0;
+  }
+
+  return pillSheets.sublist(0, endIndex).fold(0, (int result, pillSheet) {
+    return result +
+        daysBetween(pillSheet.beginingDate, pillSheet.estimatedEndTakenDate) +
+        1;
+  });
+}
