@@ -245,8 +245,10 @@ class RecordPagePillSheet extends StatelessWidget {
       return left <= pillNumberIntoPillSheet &&
           pillNumberIntoPillSheet <= right;
     }
-    final passedCount = summarizedPillSheetPillDayCountWithPillSheetsToEndIndex(
-        pillSheets: pillSheetGroup.pillSheets, endIndex: pageIndex);
+    final passedCount = summarizedPillCountWithPillSheetTypesToEndIndex(
+        pillSheetTypes:
+            pillSheetGroup.pillSheets.map((e) => e.pillSheetType).toList(),
+        endIndex: pageIndex);
     final serialiedPillNumber = passedCount + pillNumberIntoPillSheet;
 
     final menstruationRangeList =

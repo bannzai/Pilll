@@ -133,8 +133,9 @@ class PillSheetGroup with _$PillSheetGroup {
 
   int get estimatedEndPillNumber {
     var estimatedEndPillNumber =
-        summarizedPillSheetPillDayCountWithPillSheetsToEndIndex(
-            pillSheets: pillSheets, endIndex: pillSheets.length);
+        summarizedPillCountWithPillSheetTypesToEndIndex(
+            pillSheetTypes: pillSheets.map((e) => e.pillSheetType).toList(),
+            endIndex: pillSheets.length);
 
     final displayNumberSetting = this.displayNumberSetting;
     if (displayNumberSetting != null) {
