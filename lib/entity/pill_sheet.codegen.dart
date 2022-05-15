@@ -228,7 +228,7 @@ int pillSheetPillNumber({
       1;
 }
 
-int summarizedPillCountWithPillSheetsToEndIndex(
+int summarizedPillDayCountWithPillSheetsToEndIndex(
     {required List<PillSheet> pillSheets, required int endIndex}) {
   if (endIndex == 0) {
     return 0;

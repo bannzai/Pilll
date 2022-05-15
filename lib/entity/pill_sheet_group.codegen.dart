@@ -68,7 +68,7 @@ class PillSheetGroup with _$PillSheetGroup {
     }
 
     final passedPillCountForPillSheetTypes =
-        summarizedPillCountWithPillSheetsToEndIndex(
+        summarizedPillDayCountWithPillSheetsToEndIndex(
             pillSheets: pillSheets, endIndex: activedPillSheet.groupIndex);
 
     var sequentialTodayPillNumber =
@@ -103,7 +103,7 @@ class PillSheetGroup with _$PillSheetGroup {
     }
 
     final passedPillCountForPillSheetTypes =
-        summarizedPillCountWithPillSheetsToEndIndex(
+        summarizedPillDayCountWithPillSheetsToEndIndex(
             pillSheets: pillSheets, endIndex: activedPillSheet.groupIndex);
 
     var sequentialLastTakenPillNumber =
@@ -129,7 +129,7 @@ class PillSheetGroup with _$PillSheetGroup {
   }
 
   int get estimatedEndPillNumber {
-    var estimatedEndPillNumber = summarizedPillCountWithPillSheetsToEndIndex(
+    var estimatedEndPillNumber = summarizedPillDayCountWithPillSheetsToEndIndex(
         pillSheets: pillSheets, endIndex: pillSheets.length);
 
     final displayNumberSetting = this.displayNumberSetting;
