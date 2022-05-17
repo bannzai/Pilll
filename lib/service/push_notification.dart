@@ -15,12 +15,9 @@ Future<void> requestNotificationPermissions() async {
     return;
   }
 
+  await FirebaseMessaging.instance.setForegroundNotificationPresentationOptions(
+      alert: true, badge: true, sound: true);
   await FirebaseMessaging.instance.requestPermission();
-  if (Platform.isIOS) {
-    await FirebaseMessaging.instance
-        .setForegroundNotificationPresentationOptions(
-            alert: true, badge: true, sound: true);
-  }
   listenNotificationEvents();
 
   final userDatastore = UserDatastore(DatabaseConnection(firebaseUser.uid));
