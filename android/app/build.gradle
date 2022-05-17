@@ -54,7 +54,7 @@ android {
         // TODO: Specify your own unique Application ID (https://developer.android.com/studio/build/application-id.html).
         applicationId "com.mizuki.Ohashi.Pilll"
         minSdkVersion 23
-        targetSdkVersion 31
+        targetSdkVersion S
         versionCode flutterVersionCode.toInteger()
         versionName flutterVersionName
     }
