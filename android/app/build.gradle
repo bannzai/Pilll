@@ -100,6 +100,7 @@ dependencies {
     implementation platform('com.google.firebase:firebase-bom') // add this 
     implementation 'com.google.firebase:firebase-iid:21.1.0' // add this
     implementation 'com.google.firebase:firebase-messaging:23.0.4'
+    implementation 'com.google.firebase:firebase-messaging-directboot:20.2.0'
 }
 
 apply plugin: 'com.google.gms.google-services'
