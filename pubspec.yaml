@@ -31,7 +31,7 @@ dependencies:
   firebase_core: ^1.0.1
   firebase_analytics: ^9.0.4
   firebase_auth: ^3.3.4
-  firebase_messaging: ^11.2.4
+  firebase_messaging: ^11.4.0
   cloud_firestore: ^3.1.5
   url_launcher: ^6.0.2
   package_info: ^2.0.0
