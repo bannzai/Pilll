@@ -36,15 +36,6 @@ public class PilllFirebaseMessagingService: FirebaseMessagingService() {
             .setCategory(Notification.CATEGORY_REMINDER)
             .setAutoCancel(true)
 
-        if (remoteMessage.data["action"] == "PILL_REMINDER") {
-            val intent = Intent(this, BroadCastActionReceiver::class.java).apply {
-                action = "PILL_REMINDER"
-            }
-            val pendingIntent: PendingIntent =
-                    PendingIntent.getBroadcast(this, 0, intent, PendingIntent.FLAG_CANCEL_CURRENT)
-
-            builder.addAction(0, "飲んだ", pendingIntent)
-        }
 
         with(NotificationManagerCompat.from(this)) {
             // notificationId is a unique int for each notification that you must define
