@@ -22,7 +22,7 @@ public class PilllFirebaseMessagingService: FirebaseMessagingService() {
         val mainActivityIntent = Intent(this, MainActivity::class.java).also {
             it.flags = Intent.FLAG_ACTIVITY_NEW_TASK
         }
-        val openAppPendingIntent = PendingIntent.getActivity(this, 10, mainActivityIntent, PendingIntent.FLAG_CANCEL_CURRENT)
+        val openAppPendingIntent = PendingIntent.getActivity(this, 1, mainActivityIntent, PendingIntent.FLAG_IMMUTABLE)
         val title = remoteMessage.data["title"]
         val body = remoteMessage.data["body"]
         val builder = NotificationCompat.Builder(this, getString(R.string.reminder_channel_id))
