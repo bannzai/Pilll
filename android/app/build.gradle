@@ -96,11 +96,11 @@ flutter {
 
 dependencies {
     implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
-    // ref: https://stackoverflow.com/questions/71014578/flutter-firebase-messaging-crashing-targeting-s-version-31-and-above-requires
+    
+    // ref: https://github.com/firebase/flutterfire/issues/8018
     implementation platform('com.google.firebase:firebase-bom') // add this 
+    implementation 'com.google.firebase:firebase-messaging:23.0.0'
     implementation 'com.google.firebase:firebase-iid:21.1.0' // add this
-    implementation 'com.google.firebase:firebase-messaging:23.0.4'
-    implementation 'com.google.firebase:firebase-messaging-directboot:20.2.0'
 }
 
 apply plugin: 'com.google.gms.google-services'
