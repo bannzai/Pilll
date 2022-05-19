@@ -41,7 +41,7 @@ public class PilllFirebaseMessagingService: FirebaseMessagingService() {
                 action = "PILL_REMINDER"
             }
             val pendingIntent: PendingIntent =
-                    PendingIntent.getBroadcast(this, 0, intent, PendingIntent.FLAG_CANCEL_CURRENT)
+                    PendingIntent.getBroadcast(this, 0, intent, PendingIntent.FLAG_IMMUTABLE)
 
             builder.addAction(0, "飲んだ", pendingIntent)
         }
