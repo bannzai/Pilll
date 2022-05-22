@@ -58,7 +58,7 @@ final menstruationPageStateProvider =
         menstruations: menstruations.value!,
         premiumAndTrial: premiumAndTrial.value!,
         setting: setting.value!,
-        latestPillSheetGroup: latestPillSheetGroup.value!,
+        latestPillSheetGroup: latestPillSheetGroup.value,
         calendarMenstruationBandModels: calendarMenstruationBandModels.value!,
         calendarScheduledMenstruationBandModels:
             calendarScheduledMenstruationBandModels.value!,
