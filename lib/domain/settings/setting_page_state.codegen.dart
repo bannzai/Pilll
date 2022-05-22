@@ -37,7 +37,7 @@ final settingStateProvider = Provider<AsyncValue<SettingState>>((ref) {
 
     return AsyncValue.data(
       SettingState(
-        latestPillSheetGroup: latestPillSheetGroup.value!,
+        latestPillSheetGroup: latestPillSheetGroup.value,
         setting: setting.value!,
         premiumAndTrial: premiumAndTrial.value!,
         isHealthDataAvailable: isHealthDataAvailable.value!,

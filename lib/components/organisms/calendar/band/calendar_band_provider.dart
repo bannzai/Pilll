@@ -36,12 +36,21 @@ final calendarScheduledMenstruationBandListProvider =
     return const AsyncValue.loading();
   }
 
+  final pillSheetGroupValue = pillSheetGroup.value;
+  final settingValue = setting.value;
+  final allMenstruationsValue = allMenstruations.value;
+  if (pillSheetGroupValue == null ||
+      settingValue == null ||
+      allMenstruationsValue == null) {
+    return const AsyncValue.data([]);
+  }
+
   try {
     return AsyncValue.data(
       scheduledOrInTheMiddleMenstruationDateRanges(
-        pillSheetGroup.value!,
-        setting.value!,
-        allMenstruations.value!,
+        pillSheetGroupValue,
+        settingValue,
+        allMenstruationsValue,
         15,
       )
           .map((dateRange) => CalendarScheduledMenstruationBandModel(
@@ -61,9 +70,14 @@ final calendarNextPillSheetBandListProvider =
     return const AsyncValue.loading();
   }
 
+  final pillSheetGroupValue = pillSheetGroup.value;
+  if (pillSheetGroupValue == null) {
+    return const AsyncValue.data([]);
+  }
+
   try {
     return AsyncValue.data(
-      nextPillSheetDateRanges(pillSheetGroup.value!, 15)
+      nextPillSheetDateRanges(pillSheetGroupValue, 15)
           .map((dateRange) =>
               CalendarNextPillSheetBandModel(dateRange.begin, dateRange.end))
           .toList(),
