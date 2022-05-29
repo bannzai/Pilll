@@ -273,6 +273,8 @@ extension SaveUserLaunchInfo on UserDatastore {
     final timeZoneOffset = now.timeZoneOffset;
 
     return _database.userRawReference().set({
+      // shortcut property for backend
+      "lastLoginAt": now,
       "stats": {
         "lastLoginAt": now,
         "beginVersion": beginVersion,
