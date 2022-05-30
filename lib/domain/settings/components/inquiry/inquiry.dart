@@ -66,6 +66,8 @@ Future<String> debugInfo(String separator) async {
         activedPillSheet.lastTakenDate?.toIso8601String();
     activedPillSheetDebugInfo["createdAt"] =
         activedPillSheet.createdAt?.toIso8601String();
+    activedPillSheetDebugInfo["deletedAt"] =
+        activedPillSheet.deletedAt?.toIso8601String();
   }
 
   final contents = [
