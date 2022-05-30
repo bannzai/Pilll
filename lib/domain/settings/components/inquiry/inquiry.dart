@@ -53,10 +53,12 @@ Future<String> debugInfo(String separator) async {
   final appName = package?.appName;
   final buildNumber = package?.buildNumber;
   final packageName = package?.packageName;
+  final version = package?.version;
 
   final contents = [
     "DEBUG INFO",
     "appName: $appName",
+    "version: $version",
     "packageName: $packageName",
     "buildNumber: $buildNumber",
     "env: ${Environment.isProduction ? "production" : "development"}",
