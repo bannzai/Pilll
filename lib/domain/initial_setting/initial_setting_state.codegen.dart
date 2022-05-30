@@ -21,7 +21,7 @@ class InitialSettingState with _$InitialSettingState {
   const factory InitialSettingState({
     @Default([]) List<PillSheetType> pillSheetTypes,
     InitialSettingTodayPillNumber? todayPillNumber,
-    @Default([]) List<ReminderTime> reminderTimes,
+    required List<ReminderTime> reminderTimes,
     @Default(true) bool isOnReminder,
     @Default(false) bool isLoading,
     @Default(false) bool userIsNotAnonymous,
