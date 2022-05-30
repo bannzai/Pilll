@@ -19,22 +19,13 @@ class InitialSettingTodayPillNumber with _$InitialSettingTodayPillNumber {
 class InitialSettingState with _$InitialSettingState {
   const InitialSettingState._();
   const factory InitialSettingState({
-    @Default([])
-        List<PillSheetType> pillSheetTypes,
+    @Default([]) List<PillSheetType> pillSheetTypes,
     InitialSettingTodayPillNumber? todayPillNumber,
-    @Default([
-      ReminderTime(hour: 20, minute: 0),
-      ReminderTime(hour: 21, minute: 0),
-    ])
-        List<ReminderTime> reminderTimes,
-    @Default(true)
-        bool isOnReminder,
-    @Default(false)
-        bool isLoading,
-    @Default(false)
-        bool userIsNotAnonymous,
-    @Default(false)
-        bool settingIsExist,
+    @Default([]) List<ReminderTime> reminderTimes,
+    @Default(true) bool isOnReminder,
+    @Default(false) bool isLoading,
+    @Default(false) bool userIsNotAnonymous,
+    @Default(false) bool settingIsExist,
     LinkAccountType? accountType,
   }) = _InitialSettingState;
 
