@@ -252,6 +252,11 @@ void main() {
       ]);
     });
     test("add reminderTime", () {
+      final mockTodayRepository = MockTodayService();
+      todayRepository = mockTodayRepository;
+      when(mockTodayRepository.now())
+          .thenReturn(DateTime(2020, 9, 29, 21, 0, 0));
+
       final userDatastore = MockUserDatastore();
       final batchFactory = MockBatchFactory();
       final authService = MockAuthService();
