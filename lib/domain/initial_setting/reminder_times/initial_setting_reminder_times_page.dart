@@ -16,7 +16,7 @@ import 'package:flutter_svg/svg.dart';
 import 'package:url_launcher/url_launcher.dart';
 
 class InitialSettingReminderTimesPage extends HookConsumerWidget {
-  void _showDurationModalSheet(
+  void _showTimePicker(
     BuildContext context,
     int index,
     InitialSettingState state,
@@ -70,7 +70,7 @@ class InitialSettingReminderTimesPage extends HookConsumerWidget {
           ),
           const SizedBox(height: 8),
           GestureDetector(
-            onTap: () => _showDurationModalSheet(context, index, state, store),
+            onTap: () => _showTimePicker(context, index, state, store),
             child: Container(
               width: 81,
               height: 48,
