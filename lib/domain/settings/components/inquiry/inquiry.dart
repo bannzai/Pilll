@@ -59,13 +59,13 @@ Future<String> debugInfo(String separator) async {
   final activedPillSheet = pillSheetGroup?.activedPillSheet;
   final Map<String, dynamic> activedPillSheetDebugInfo = Map<String, dynamic>();
   if (activedPillSheet != null) {
+    activedPillSheetDebugInfo["id"] = activedPillSheet.id;
     activedPillSheetDebugInfo["beginingDate"] =
         activedPillSheet.beginingDate.toIso8601String();
     activedPillSheetDebugInfo["lastTakenDate"] =
         activedPillSheet.lastTakenDate?.toIso8601String();
     activedPillSheetDebugInfo["createdAt"] =
         activedPillSheet.createdAt?.toIso8601String();
-    activedPillSheetDebugInfo["id"] = activedPillSheet.id;
   }
 
   final contents = [
