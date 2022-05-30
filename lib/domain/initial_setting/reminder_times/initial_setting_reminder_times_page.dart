@@ -132,7 +132,7 @@ class InitialSettingReminderTimesPage extends HookConsumerWidget {
     final n = now();
     DateTime initialDateTime = reminderDateTime != null
         ? reminderDateTime
-        : DateTime(n.year, n.month, n.day, 22, 0, 0);
+        : DateTime(n.year, n.month, n.day, n.hour, 0, 0);
     showModalBottomSheet(
       context: context,
       builder: (BuildContext context) {
