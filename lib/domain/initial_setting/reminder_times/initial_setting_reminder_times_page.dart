@@ -128,7 +128,7 @@ class InitialSettingReminderTimesPage extends HookConsumerWidget {
     InitialSettingStateStore store,
   ) {
     analytics.logEvent(name: "show_initial_setting_reminder_picker");
-    final reminderDateTime = state.reminderTimeOrDefault(index);
+    final reminderDateTime = state.reminderTimeOrNull(index);
     final n = now();
     DateTime initialDateTime = reminderDateTime != null
         ? reminderDateTime
@@ -157,7 +157,7 @@ class InitialSettingReminderTimesPage extends HookConsumerWidget {
     InitialSettingState state,
     int index,
   ) {
-    final reminderTime = state.reminderTimeOrDefault(index);
+    final reminderTime = state.reminderTimeOrNull(index);
     final formValue = reminderTime == null
         ? "--:--"
         : DateTimeFormatter.militaryTime(reminderTime);

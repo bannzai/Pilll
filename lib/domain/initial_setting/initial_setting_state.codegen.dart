@@ -29,7 +29,7 @@ class InitialSettingState with _$InitialSettingState {
     LinkAccountType? accountType,
   }) = _InitialSettingState;
 
-  DateTime? reminderTimeOrDefault(int index) {
+  DateTime? reminderTimeOrNull(int index) {
     if (index < reminderTimes.length) {
       return reminderDateTime(index);
     }
