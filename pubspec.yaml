@@ -64,7 +64,6 @@ dev_dependencies:
   build_runner:
   json_serializable:
   freezed: ^1.1.0
-  flutter_launcher_icons: ^0.9.2
 
 
 # For information on the generic Dart part of this file, see the
@@ -106,9 +105,3 @@ flutter:
   #
   # For details regarding fonts from package dependencies,
   # see https://flutter.dev/custom-fonts/#from-packages
-
-  
-flutter_icons:
-  android: true
-  ios: true
-  image_path: 'images/app_icon.png'
