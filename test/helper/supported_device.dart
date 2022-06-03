@@ -37,7 +37,7 @@ extension SupportedDeviceTypeExtension on SupportedDeviceType {
 
   void binding(TestWindow window) {
     window.devicePixelRatioTestValue = devicePixelRatio;
-    window.textScaleFactorTestValue = textScaleFactor;
+    window.platformDispatcher.textScaleFactorTestValue = textScaleFactor;
     window.physicalSizeTestValue = physicalSize;
   }
 }

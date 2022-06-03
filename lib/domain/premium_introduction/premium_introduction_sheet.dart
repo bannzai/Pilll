@@ -58,7 +58,8 @@ class PremiumIntroductionSheet extends HookConsumerWidget {
                             )
                           : null,
                     ),
-                    padding: const EdgeInsets.only(left: 40, right: 40, bottom: 40),
+                    padding:
+                        const EdgeInsets.only(left: 40, right: 40, bottom: 40),
                     width: MediaQuery.of(context).size.width,
                   ),
                   SingleChildScrollView(
@@ -96,7 +97,7 @@ class PremiumIntroductionSheet extends HookConsumerWidget {
                             onPressed: () async {
                               analytics.logEvent(
                                   name: "pressed_premium_functions_on_sheet");
-                              await launch(preimumLink);
+                              await launchUrl(Uri.parse(preimumLink));
                             },
                             text: "プレミアム機能を見る"),
                         const SizedBox(height: 24),

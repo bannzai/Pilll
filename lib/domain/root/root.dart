@@ -76,7 +76,10 @@ class RootState extends State<Root> {
             message:
                 "お使いのアプリのバージョンのアップデートをお願いしております。$storeNameから最新バージョンにアップデートしてください",
             ok: () async {
-          await launch(storeURL, forceSafariVC: false, forceWebView: false);
+          await launchUrl(
+            Uri.parse(storeURL),
+            mode: LaunchMode.externalApplication,
+          );
         });
       });
       return ScaffoldIndicator();

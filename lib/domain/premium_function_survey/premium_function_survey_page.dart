@@ -59,7 +59,7 @@ class PremiumFunctionSurveyPage extends HookConsumerWidget {
                   GestureDetector(
                     onTap: () async {
                       analytics.logEvent(name: "premium_link_tapped_on_survey");
-                      await launch(preimumLink);
+                      await launchUrl(Uri.parse(preimumLink));
                     },
                     child: const Text("プレミアム機能の詳細はこちら",
                         style: TextStyle(

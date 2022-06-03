@@ -10,7 +10,8 @@ class InvalidAlreadyTakenPillDialog extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return AlertDialog(
-      contentPadding: const EdgeInsets.only(left: 24, right: 24, top: 4, bottom: 24),
+      contentPadding:
+          const EdgeInsets.only(left: 24, right: 24, top: 4, bottom: 24),
       actionsPadding: const EdgeInsets.only(left: 24, right: 24, bottom: 32),
       titlePadding: const EdgeInsets.only(top: 32),
       title: SvgPicture.asset("images/alert_24.svg", width: 24, height: 24),
@@ -52,8 +53,8 @@ class InvalidAlreadyTakenPillDialog extends StatelessWidget {
         AppOutlinedButton(
           onPressed: () async {
             analytics.logEvent(name: "invalid_already_taken_pill_faq");
-            launch(
-                "https://pilll.wraptas.site/467128e667ae4d6cbff4d61ee370cce5");
+            launchUrl(Uri.parse(
+                "https://pilll.wraptas.site/467128e667ae4d6cbff4d61ee370cce5"));
           },
           text: "休薬機能の使い方を見る",
         ),

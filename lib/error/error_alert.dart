@@ -28,7 +28,7 @@ class ErrorAlert extends StatelessWidget {
           AlertButton(
             text: "FAQを見る",
             onPressed: () async {
-              launch(faq);
+              launchUrl(Uri.parse(faq));
             },
           ),
         AlertButton(
