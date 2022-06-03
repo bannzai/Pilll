@@ -251,7 +251,6 @@ void main() {
       todayRepository = mockTodayRepository;
       when(mockTodayRepository.now())
           .thenReturn(DateTime(2020, 9, 29, 23, 59, 59));
-      when(mockTodayRepository.now()).thenReturn(DateTime.parse("2020-09-29"));
 
       final sheetType = PillSheetType.pillsheet_21;
       final model = PillSheet(
@@ -278,7 +277,6 @@ void main() {
       todayRepository = mockTodayRepository;
       when(mockTodayRepository.now())
           .thenReturn(DateTime(2020, 9, 29, 23, 59, 59));
-      when(mockTodayRepository.now()).thenReturn(DateTime.parse("2020-09-29"));
 
       final sheetType = PillSheetType.pillsheet_21;
       final model = PillSheet(
@@ -340,7 +338,6 @@ void main() {
       todayRepository = mockTodayRepository;
       when(mockTodayRepository.now())
           .thenReturn(DateTime(2020, 9, 30, 23, 59, 59));
-      when(mockTodayRepository.now()).thenReturn(DateTime.parse("2020-09-30"));
 
       final sheetType = PillSheetType.pillsheet_21;
       final model = PillSheet(
@@ -497,8 +494,6 @@ void main() {
         todayRepository = mockTodayRepository;
         when(mockTodayRepository.now())
             .thenReturn(DateTime.parse("2020-09-28"));
-        when(mockTodayRepository.now())
-            .thenReturn(DateTime.parse("2020-09-28"));
 
         final sheetType = PillSheetType.pillsheet_21;
         final model = PillSheet(
@@ -576,8 +571,6 @@ void main() {
         test("last rest duration is not ended", () {
           final mockTodayRepository = MockTodayService();
           todayRepository = mockTodayRepository;
-          when(mockTodayRepository.now())
-              .thenReturn(DateTime.parse("2020-09-28"));
           when(mockTodayRepository.now())
               .thenReturn(DateTime.parse("2020-09-28"));
 
@@ -665,8 +658,6 @@ void main() {
         todayRepository = mockTodayRepository;
         when(mockTodayRepository.now())
             .thenReturn(DateTime.parse("2022-05-10"));
-        when(mockTodayRepository.now())
-            .thenReturn(DateTime.parse("2022-05-10"));
 
         final sheetType = PillSheetType.pillsheet_21;
         final pillSheet = PillSheet(
@@ -720,8 +711,6 @@ void main() {
           todayRepository = mockTodayRepository;
           when(mockTodayRepository.now())
               .thenReturn(DateTime.parse("2022-05-10"));
-          when(mockTodayRepository.now())
-              .thenReturn(DateTime.parse("2022-05-10"));
 
           final sheetType = PillSheetType.pillsheet_21;
           final pillSheet = PillSheet(
@@ -752,8 +741,6 @@ void main() {
         test("last rest duration is ended", () {
           final mockTodayRepository = MockTodayService();
           todayRepository = mockTodayRepository;
-          when(mockTodayRepository.now())
-              .thenReturn(DateTime.parse("2022-05-10"));
           when(mockTodayRepository.now())
               .thenReturn(DateTime.parse("2022-05-10"));
 
@@ -790,8 +777,6 @@ void main() {
       test("restDurations isEmpty", () {
         final mockTodayRepository = MockTodayService();
         todayRepository = mockTodayRepository;
-        when(mockTodayRepository.now())
-            .thenReturn(DateTime.parse("2022-05-10"));
         when(mockTodayRepository.now())
             .thenReturn(DateTime.parse("2022-05-10"));
 

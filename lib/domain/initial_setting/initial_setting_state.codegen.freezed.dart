@@ -183,10 +183,7 @@ class _$InitialSettingStateTearOff {
   _InitialSettingState call(
       {List<PillSheetType> pillSheetTypes = const [],
       InitialSettingTodayPillNumber? todayPillNumber,
-      List<ReminderTime> reminderTimes = const [
-        ReminderTime(hour: 20, minute: 0),
-        ReminderTime(hour: 21, minute: 0)
-      ],
+      required List<ReminderTime> reminderTimes,
       bool isOnReminder = true,
       bool isLoading = false,
       bool userIsNotAnonymous = false,
@@ -398,10 +395,7 @@ class _$_InitialSettingState extends _InitialSettingState {
   const _$_InitialSettingState(
       {this.pillSheetTypes = const [],
       this.todayPillNumber,
-      this.reminderTimes = const [
-        ReminderTime(hour: 20, minute: 0),
-        ReminderTime(hour: 21, minute: 0)
-      ],
+      required this.reminderTimes,
       this.isOnReminder = true,
       this.isLoading = false,
       this.userIsNotAnonymous = false,
@@ -414,7 +408,6 @@ class _$_InitialSettingState extends _InitialSettingState {
   final List<PillSheetType> pillSheetTypes;
   @override
   final InitialSettingTodayPillNumber? todayPillNumber;
-  @JsonKey()
   @override
   final List<ReminderTime> reminderTimes;
   @JsonKey()
@@ -482,7 +475,7 @@ abstract class _InitialSettingState extends InitialSettingState {
   const factory _InitialSettingState(
       {List<PillSheetType> pillSheetTypes,
       InitialSettingTodayPillNumber? todayPillNumber,
-      List<ReminderTime> reminderTimes,
+      required List<ReminderTime> reminderTimes,
       bool isOnReminder,
       bool isLoading,
       bool userIsNotAnonymous,

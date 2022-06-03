@@ -19,35 +19,26 @@ class InitialSettingTodayPillNumber with _$InitialSettingTodayPillNumber {
 class InitialSettingState with _$InitialSettingState {
   const InitialSettingState._();
   const factory InitialSettingState({
-    @Default([])
-        List<PillSheetType> pillSheetTypes,
+    @Default([]) List<PillSheetType> pillSheetTypes,
     InitialSettingTodayPillNumber? todayPillNumber,
-    @Default([
-      ReminderTime(hour: 20, minute: 0),
-      ReminderTime(hour: 21, minute: 0),
-    ])
-        List<ReminderTime> reminderTimes,
-    @Default(true)
-        bool isOnReminder,
-    @Default(false)
-        bool isLoading,
-    @Default(false)
-        bool userIsNotAnonymous,
-    @Default(false)
-        bool settingIsExist,
+    required List<ReminderTime> reminderTimes,
+    @Default(true) bool isOnReminder,
+    @Default(false) bool isLoading,
+    @Default(false) bool userIsNotAnonymous,
+    @Default(false) bool settingIsExist,
     LinkAccountType? accountType,
   }) = _InitialSettingState;
 
-  DateTime? reminderTimeOrDefault(int index) {
+  DateTime? reminderTimeOrNull(int index) {
     if (index < reminderTimes.length) {
       return reminderDateTime(index);
     }
     final n = now();
     if (index == 0) {
-      return DateTime(n.year, n.month, n.day, 20, 0, 0);
+      return DateTime(n.year, n.month, n.day, n.hour, 0, 0);
     }
     if (index == 1) {
-      return DateTime(n.year, n.month, n.day, 21, 0, 0);
+      return DateTime(n.year, n.month, n.day, n.hour + 1, 0, 0);
     }
     return null;
   }

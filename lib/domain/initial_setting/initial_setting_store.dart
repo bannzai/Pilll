@@ -31,6 +31,7 @@ final initialSettingStoreProvider = StateNotifierProvider.autoDispose<
     ref.watch(pillSheetModifiedHistoryDatastoreProvider),
     ref.watch(pillSheetGroupDatastoreProvider),
     ref.watch(authServiceProvider),
+    now(),
   ),
 );
 
@@ -54,10 +55,16 @@ class InitialSettingStateStore extends StateNotifier<InitialSettingState> {
     this._pillSheetModifiedHistoryDatastore,
     this._pillSheetGroupDatastore,
     this._authService,
-  ) : super(const InitialSettingState());
+    DateTime _now,
+  ) : super(
+          InitialSettingState(reminderTimes: [
+            ReminderTime(hour: _now.hour, minute: 0),
+            ReminderTime(hour: _now.hour + 1, minute: 0),
+          ]),
+        );
 
   StreamSubscription? _authServiceCanceller;
-  fetch() {
+  void fetch() {
     _authServiceCanceller = _authService.stream().listen((user) async {
       print("watch sign state user: $user");
 
@@ -186,11 +193,11 @@ class InitialSettingStateStore extends StateNotifier<InitialSettingState> {
     await _userDatastore.trial(setting);
   }
 
-  showHUD() {
+  void showHUD() {
     state = state.copyWith(isLoading: true);
   }
 
-  hideHUD() {
+  void hideHUD() {
     state = state.copyWith(isLoading: false);
   }
 }
