@@ -110,9 +110,10 @@ class SettingPageBody extends StatelessWidget {
                           onTap: () {
                             analytics.logEvent(
                                 name: "did_select_about_trial", parameters: {});
-                            launch(
-                                "https://pilll.wraptas.site/3abd690f501549c48f813fd310b5f242",
-                                forceSafariVC: true);
+                            launchUrl(
+                                Uri.parse(
+                                    "https://pilll.wraptas.site/3abd690f501549c48f813fd310b5f242"),
+                                mode: LaunchMode.inAppWebView);
                           },
                         ),
                         _separator(),
@@ -214,8 +215,10 @@ class SettingPageBody extends StatelessWidget {
                             onTap: () {
                               analytics.logEvent(
                                   name: "did_select_terms", parameters: {});
-                              launch("https://bannzai.github.io/Pilll/Terms",
-                                  forceSafariVC: true);
+                              launchUrl(
+                                  Uri.parse(
+                                      "https://bannzai.github.io/Pilll/Terms"),
+                                  mode: LaunchMode.inAppWebView);
                             }),
                         _separator(),
                         ListTile(
@@ -225,9 +228,10 @@ class SettingPageBody extends StatelessWidget {
                               analytics.logEvent(
                                   name: "did_select_privacy_policy",
                                   parameters: {});
-                              launch(
-                                  "https://bannzai.github.io/Pilll/PrivacyPolicy",
-                                  forceSafariVC: true);
+                              launchUrl(
+                                  Uri.parse(
+                                      "https://bannzai.github.io/Pilll/PrivacyPolicy"),
+                                  mode: LaunchMode.inAppWebView);
                             }),
                         _separator(),
                         ListTile(
@@ -235,9 +239,10 @@ class SettingPageBody extends StatelessWidget {
                             onTap: () {
                               analytics.logEvent(
                                   name: "did_select_faq", parameters: {});
-                              launch(
-                                  "https://pilll.wraptas.site/bb1f49eeded64b57929b7a13e9224d69",
-                                  forceSafariVC: true);
+                              launchUrl(
+                                  Uri.parse(
+                                      "https://pilll.wraptas.site/bb1f49eeded64b57929b7a13e9224d69"),
+                                  mode: LaunchMode.inAppWebView);
                             }),
                         _separator(),
                         ListTile(
@@ -246,8 +251,8 @@ class SettingPageBody extends StatelessWidget {
                               analytics.logEvent(
                                   name: "setting_did_select_release_note",
                                   parameters: {});
-                              launch(
-                                  "https://pilll.wraptas.site/172cae6bced04bbabeab1d8acad91a61");
+                              launchUrl(Uri.parse(
+                                  "https://pilll.wraptas.site/172cae6bced04bbabeab1d8acad91a61"));
                             }),
                         _separator(),
                         ListTile(

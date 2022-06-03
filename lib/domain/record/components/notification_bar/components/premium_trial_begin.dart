@@ -25,7 +25,7 @@ class PremiumTrialBegin extends HookConsumerWidget {
       child: GestureDetector(
         onTap: () async {
           analytics.logEvent(name: "p_premium_trial_begin_n_b");
-          await launch(preimumLink);
+          await launchUrl(Uri.parse(preimumLink));
         },
         child: Row(
           crossAxisAlignment: CrossAxisAlignment.center,

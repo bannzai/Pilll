@@ -33,15 +33,19 @@ class PremiumIntroductionFotter extends StatelessWidget {
                       fontFamily: FontFamily.japanese),
                 ),
                 children: [
-                  const TextSpan(text: "・プレミアム契約期間は開始日から起算して1ヶ月または1年ごとの自動更新となります\n"),
+                  const TextSpan(
+                      text: "・プレミアム契約期間は開始日から起算して1ヶ月または1年ごとの自動更新となります\n"),
                   const TextSpan(text: "・"),
                   TextSpan(
                     text: "プライバシーポリシー",
-                    style: const TextStyle(decoration: TextDecoration.underline),
+                    style:
+                        const TextStyle(decoration: TextDecoration.underline),
                     recognizer: TapGestureRecognizer()
                       ..onTap = () {
-                        launch("https://bannzai.github.io/Pilll/PrivacyPolicy",
-                            forceSafariVC: true);
+                        launchUrl(
+                            Uri.parse(
+                                "https://bannzai.github.io/Pilll/PrivacyPolicy"),
+                            mode: LaunchMode.inAppWebView);
                       },
                   ),
                   const TextSpan(
@@ -49,11 +53,13 @@ class PremiumIntroductionFotter extends StatelessWidget {
                   ),
                   TextSpan(
                     text: "利用規約",
-                    style: const TextStyle(decoration: TextDecoration.underline),
+                    style:
+                        const TextStyle(decoration: TextDecoration.underline),
                     recognizer: TapGestureRecognizer()
                       ..onTap = () {
-                        launch("https://bannzai.github.io/Pilll/Terms",
-                            forceSafariVC: true);
+                        launchUrl(
+                            Uri.parse("https://bannzai.github.io/Pilll/Terms"),
+                            mode: LaunchMode.inAppWebView);
                       },
                   ),
                   const TextSpan(
@@ -61,12 +67,14 @@ class PremiumIntroductionFotter extends StatelessWidget {
                   ),
                   TextSpan(
                     text: "特定商取引法に基づく表示",
-                    style: const TextStyle(decoration: TextDecoration.underline),
+                    style:
+                        const TextStyle(decoration: TextDecoration.underline),
                     recognizer: TapGestureRecognizer()
                       ..onTap = () {
-                        launch(
-                            "https://bannzai.github.io/Pilll/SpecifiedCommercialTransactionAct",
-                            forceSafariVC: true);
+                        launchUrl(
+                            Uri.parse(
+                                "https://bannzai.github.io/Pilll/SpecifiedCommercialTransactionAct"),
+                            mode: LaunchMode.inAppWebView);
                       },
                   ),
                   const TextSpan(

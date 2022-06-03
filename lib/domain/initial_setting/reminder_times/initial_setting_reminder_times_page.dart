@@ -148,9 +148,10 @@ class InitialSettingReminderTimesPage extends HookConsumerWidget {
                                 .merge(TextColorStyle.link),
                             recognizer: TapGestureRecognizer()
                               ..onTap = () {
-                                launch(
-                                    "https://bannzai.github.io/Pilll/PrivacyPolicy",
-                                    forceSafariVC: true);
+                                launchUrl(
+                                    Uri.parse(
+                                        "https://bannzai.github.io/Pilll/PrivacyPolicy"),
+                                    mode: LaunchMode.inAppWebView);
                               },
                           ),
                           TextSpan(
@@ -164,8 +165,10 @@ class InitialSettingReminderTimesPage extends HookConsumerWidget {
                                 .merge(TextColorStyle.link),
                             recognizer: TapGestureRecognizer()
                               ..onTap = () {
-                                launch("https://bannzai.github.io/Pilll/Terms",
-                                    forceSafariVC: true);
+                                launchUrl(
+                                    Uri.parse(
+                                        "https://bannzai.github.io/Pilll/Terms"),
+                                    mode: LaunchMode.inAppWebView);
                               },
                           ),
                           TextSpan(
