@@ -14,7 +14,7 @@ void main() {
   setUp(() {
     TestWidgetsFlutterBinding.ensureInitialized();
     SharedPreferences.setMockInitialValues({});
-    WidgetsBinding.instance?.renderView.configuration =
+    WidgetsBinding.instance.renderView.configuration =
         new TestViewConfiguration(size: const Size(375.0, 667.0));
   });
   group("Appearance Next Sheet Label", () {

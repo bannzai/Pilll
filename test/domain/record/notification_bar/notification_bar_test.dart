@@ -39,7 +39,7 @@ void main() {
     initializeDateFormatting('ja_JP');
     Environment.isTest = true;
     analytics = MockAnalytics();
-    WidgetsBinding.instance?.renderView.configuration =
+    WidgetsBinding.instance.renderView.configuration =
         new TestViewConfiguration(size: const Size(375.0, 667.0));
   });
   group('notification bar appearance content type', () {
