@@ -16,6 +16,7 @@ import 'package:pilll/entity/pill_sheet_type.dart';
 import 'package:pilll/entity/setting.codegen.dart';
 import 'package:pilll/entity/weekday.dart';
 import 'package:pilll/provider/premium_and_trial.codegen.dart';
+import 'package:pilll/util/datetime/day.dart';
 
 class RecordPagePillSheet extends StatelessWidget {
   final PillSheetGroup pillSheetGroup;
@@ -38,14 +39,13 @@ class RecordPagePillSheet extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final weekdayDate = pillSheet.beginingDate.add(Duration(
+        days: summarizedRestDuration(
+            restDurations: pillSheet.restDurations, upperDate: today())));
+
     return PillSheetViewLayout(
       weekdayLines: PillSheetViewWeekdayLine(
-        firstWeekday: WeekdayFunctions.weekdayFromDate(
-          pillSheet.restDurations
-                  .lastWhereOrNull((element) => element.endDate != null)
-                  ?.endDate ??
-              pillSheet.beginingDate,
-        ),
+        firstWeekday: WeekdayFunctions.weekdayFromDate(weekdayDate),
       ),
       pillMarkLines: List.generate(
         pillSheet.pillSheetType.numberOfLineInPillSheet,
