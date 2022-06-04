@@ -193,37 +193,49 @@ class RootState extends State<Root> {
     return null;
   }
 
-  // forceUpdate -> signIn -> decide initial setting or home screen -> after effect: mutate user launch info to db and salvage old version user
-  // save launch app time, Keep last of `after effect: mutate user launch info to db and salvage old version user`
   void _decideScreenType() {
     Future(() async {
       final launchTrace = _trace(name: "appLaunch", uuid: _traceUUID);
       await launchTrace.start();
 
-      try {
-        final shouldForceUpdate = await _checkForceUpdate();
+      // check force update is very slow(avarage 2 sec). So, should check asynchronously. And we tolerate for user tapped record button in 2 second.
+      _checkForceUpdate().then((shouldForceUpdate) {
         if (shouldForceUpdate) {
           setState(() {
             this.screenType = ScreenType.forceUpdate;
           });
-        } else {
-          final firebaseUser = await _signIn();
+        }
+      }).catchError((error, stackTrace) {
+        errorLogger.recordError(error, stackTrace);
 
-          final screenType = await _screenType();
+        setState(() {
+          this._error = UserDisplayedError(
+              "起動処理でエラーが発生しました\n${ErrorMessages.connection}\n詳細:" +
+                  error.toString());
+        });
+      }).whenComplete(() {
+        launchTrace.stop();
+      });
+
+      try {
+        // Keep first, call signIn
+        final firebaseUser = await _signIn();
+
+        // Keep after call signIn
+        final screenType = await _screenType();
+        setState(() {
+          this.screenType = screenType;
+        });
+
+        // NOTE: Below code contains backward-compatible logic from version 1.3.2
+        // screenType is determined if necessary, but since it is a special pattern. So, it is determined last
+        final user = await _mutateUserWithLaunchInfoAnd(firebaseUser);
+        final screenTypeForLegacyUser =
+            await _screenTypeForLegacyUser(firebaseUser, user);
+        if (screenTypeForLegacyUser != null) {
           setState(() {
-            this.screenType = screenType;
+            this.screenType = screenTypeForLegacyUser;
           });
-
-          // NOTE: Below code contains backward-compatible logic from version 1.3.2
-          // screenType is determined if necessary, but since it is a special pattern. So, it is determined last
-          final user = await _mutateUserWithLaunchInfoAnd(firebaseUser);
-          final screenTypeForLegacyUser =
-              await _screenTypeForLegacyUser(firebaseUser, user);
-          if (screenTypeForLegacyUser != null) {
-            setState(() {
-              this.screenType = screenTypeForLegacyUser;
-            });
-          }
         }
       } catch (error, stackTrace) {
         errorLogger.recordError(error, stackTrace);
