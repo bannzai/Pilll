@@ -69,7 +69,9 @@ mixin _$RecordPageState {
       throw _privateConstructorUsedError;
   bool get premiumTrialBeginAnouncementIsClosed =>
       throw _privateConstructorUsedError;
-  bool get isLinkedLoginProvider => throw _privateConstructorUsedError;
+  bool get isLinkedLoginProvider =>
+      throw _privateConstructorUsedError; // Workaround for no update RecordPageStateNotifier when pillSheetGroup.activedPillSheet.restDurations is change
+// Add and always update timestamp when every stream or provider changed to avoid this issue
   DateTime get timestamp => throw _privateConstructorUsedError;
 
   @JsonKey(ignore: true)
@@ -357,7 +359,8 @@ class _$_RecordPageState extends _RecordPageState {
   final bool premiumTrialBeginAnouncementIsClosed;
   @override
   final bool isLinkedLoginProvider;
-  @override
+  @override // Workaround for no update RecordPageStateNotifier when pillSheetGroup.activedPillSheet.restDurations is change
+// Add and always update timestamp when every stream or provider changed to avoid this issue
   final DateTime timestamp;
 
   @override
@@ -460,7 +463,8 @@ abstract class _RecordPageState extends RecordPageState {
   bool get premiumTrialBeginAnouncementIsClosed;
   @override
   bool get isLinkedLoginProvider;
-  @override
+  @override // Workaround for no update RecordPageStateNotifier when pillSheetGroup.activedPillSheet.restDurations is change
+// Add and always update timestamp when every stream or provider changed to avoid this issue
   DateTime get timestamp;
   @override
   @JsonKey(ignore: true)
