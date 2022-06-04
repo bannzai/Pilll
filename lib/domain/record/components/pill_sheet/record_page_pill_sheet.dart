@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:freezed_annotation/freezed_annotation.dart';
 import 'package:pilll/analytics.dart';
 import 'package:pilll/components/organisms/pill_mark/pill_mark.dart';
 import 'package:pilll/components/organisms/pill_mark/pill_mark_line.dart';
@@ -39,8 +40,13 @@ class RecordPagePillSheet extends StatelessWidget {
   Widget build(BuildContext context) {
     return PillSheetViewLayout(
       weekdayLines: PillSheetViewWeekdayLine(
-          firstWeekday:
-              WeekdayFunctions.weekdayFromDate(pillSheet.beginingDate)),
+        firstWeekday: WeekdayFunctions.weekdayFromDate(
+          pillSheet.restDurations
+                  .lastWhereOrNull((element) => element.endDate != null)
+                  ?.endDate ??
+              pillSheet.beginingDate,
+        ),
+      ),
       pillMarkLines: List.generate(
         pillSheet.pillSheetType.numberOfLineInPillSheet,
         (index) {
