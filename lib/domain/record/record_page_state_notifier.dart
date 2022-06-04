@@ -10,8 +10,8 @@ import 'package:pilll/util/shared_preference/keys.dart';
 import 'package:riverpod/riverpod.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
-final recordPageStateNotifierProvider =
-    StateNotifierProvider<RecordPageStateNotifier, AsyncValue<RecordPageState>>(
+final recordPageStateNotifierProvider = StateNotifierProvider.autoDispose<
+    RecordPageStateNotifier, AsyncValue<RecordPageState>>(
   (ref) => RecordPageStateNotifier(
     asyncAction: ref.watch(recordPageAsyncActionProvider),
     initialState: ref.watch(recordPageAsyncStateProvider),

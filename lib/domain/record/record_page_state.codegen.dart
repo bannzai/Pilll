@@ -5,6 +5,7 @@ import 'package:pilll/entity/pill_sheet_group.codegen.dart';
 import 'package:pilll/entity/setting.codegen.dart';
 import 'package:pilll/error_log.dart';
 import 'package:pilll/provider/premium_and_trial.codegen.dart';
+import 'package:pilll/util/datetime/day.dart';
 import 'package:riverpod/riverpod.dart';
 import 'package:pilll/provider/shared_preference.dart';
 import 'package:pilll/service/auth.dart';
@@ -14,7 +15,7 @@ import 'package:pilll/util/shared_preference/keys.dart';
 part 'record_page_state.codegen.freezed.dart';
 
 final recordPageAsyncStateProvider =
-    Provider<AsyncValue<RecordPageState>>((ref) {
+    Provider.autoDispose<AsyncValue<RecordPageState>>((ref) {
   final latestPillSheetGroup = ref.watch(latestPillSheetGroupStreamProvider);
   final premiumAndTrial = ref.watch(premiumAndTrialProvider);
   final setting = ref.watch(settingStreamProvider);
@@ -54,6 +55,7 @@ final recordPageAsyncStateProvider =
               .getBool(BoolKey.premiumTrialBeginAnouncementIsClosed) ??
           false,
       isLinkedLoginProvider: ref.watch(isLinkedProvider),
+      timestamp: now(),
     ));
   } catch (error, stackTrace) {
     errorLogger.recordError(error, stackTrace);
@@ -76,6 +78,7 @@ class RecordPageState with _$RecordPageState {
     required bool premiumTrialGuideNotificationIsClosed,
     required bool premiumTrialBeginAnouncementIsClosed,
     required bool isLinkedLoginProvider,
+    required DateTime timestamp,
   }) = _RecordPageState;
 
   int get initialPageIndex {
