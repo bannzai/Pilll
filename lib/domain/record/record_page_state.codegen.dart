@@ -78,6 +78,7 @@ class RecordPageState with _$RecordPageState {
     required bool premiumTrialGuideNotificationIsClosed,
     required bool premiumTrialBeginAnouncementIsClosed,
     required bool isLinkedLoginProvider,
+    // Workaround for no update RecordPageStateNotifier when pillSheetGroup.activedPillSheet.restDurations is change
     required DateTime timestamp,
   }) = _RecordPageState;
 
