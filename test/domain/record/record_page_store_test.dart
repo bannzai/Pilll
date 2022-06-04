@@ -94,6 +94,7 @@ void main() {
         premiumTrialGuideNotificationIsClosed: false,
         premiumTrialBeginAnouncementIsClosed: false,
         isLinkedLoginProvider: false,
+        timestamp: now(),
       );
 
       final container = ProviderContainer(
@@ -193,6 +194,7 @@ void main() {
         premiumTrialGuideNotificationIsClosed: false,
         premiumTrialBeginAnouncementIsClosed: false,
         isLinkedLoginProvider: false,
+        timestamp: now(),
       );
 
       final container = ProviderContainer(

@@ -29,7 +29,8 @@ class _$RecordPageStateTearOff {
       required bool recommendedSignupNotificationIsAlreadyShow,
       required bool premiumTrialGuideNotificationIsClosed,
       required bool premiumTrialBeginAnouncementIsClosed,
-      required bool isLinkedLoginProvider}) {
+      required bool isLinkedLoginProvider,
+      required DateTime timestamp}) {
     return _RecordPageState(
       pillSheetGroup: pillSheetGroup,
       setting: setting,
@@ -45,6 +46,7 @@ class _$RecordPageStateTearOff {
       premiumTrialBeginAnouncementIsClosed:
           premiumTrialBeginAnouncementIsClosed,
       isLinkedLoginProvider: isLinkedLoginProvider,
+      timestamp: timestamp,
     );
   }
 }
@@ -67,7 +69,10 @@ mixin _$RecordPageState {
       throw _privateConstructorUsedError;
   bool get premiumTrialBeginAnouncementIsClosed =>
       throw _privateConstructorUsedError;
-  bool get isLinkedLoginProvider => throw _privateConstructorUsedError;
+  bool get isLinkedLoginProvider =>
+      throw _privateConstructorUsedError; // Workaround for no update RecordPageStateNotifier when pillSheetGroup.activedPillSheet.restDurations is change
+// Add and always update timestamp when every stream or provider changed to avoid this issue
+  DateTime get timestamp => throw _privateConstructorUsedError;
 
   @JsonKey(ignore: true)
   $RecordPageStateCopyWith<RecordPageState> get copyWith =>
@@ -90,7 +95,8 @@ abstract class $RecordPageStateCopyWith<$Res> {
       bool recommendedSignupNotificationIsAlreadyShow,
       bool premiumTrialGuideNotificationIsClosed,
       bool premiumTrialBeginAnouncementIsClosed,
-      bool isLinkedLoginProvider});
+      bool isLinkedLoginProvider,
+      DateTime timestamp});
 
   $PillSheetGroupCopyWith<$Res>? get pillSheetGroup;
   $SettingCopyWith<$Res> get setting;
@@ -119,6 +125,7 @@ class _$RecordPageStateCopyWithImpl<$Res>
     Object? premiumTrialGuideNotificationIsClosed = freezed,
     Object? premiumTrialBeginAnouncementIsClosed = freezed,
     Object? isLinkedLoginProvider = freezed,
+    Object? timestamp = freezed,
   }) {
     return _then(_value.copyWith(
       pillSheetGroup: pillSheetGroup == freezed
@@ -168,6 +175,10 @@ class _$RecordPageStateCopyWithImpl<$Res>
           ? _value.isLinkedLoginProvider
           : isLinkedLoginProvider // ignore: cast_nullable_to_non_nullable
               as bool,
+      timestamp: timestamp == freezed
+          ? _value.timestamp
+          : timestamp // ignore: cast_nullable_to_non_nullable
+              as DateTime,
     ));
   }
 
@@ -215,7 +226,8 @@ abstract class _$RecordPageStateCopyWith<$Res>
       bool recommendedSignupNotificationIsAlreadyShow,
       bool premiumTrialGuideNotificationIsClosed,
       bool premiumTrialBeginAnouncementIsClosed,
-      bool isLinkedLoginProvider});
+      bool isLinkedLoginProvider,
+      DateTime timestamp});
 
   @override
   $PillSheetGroupCopyWith<$Res>? get pillSheetGroup;
@@ -249,6 +261,7 @@ class __$RecordPageStateCopyWithImpl<$Res>
     Object? premiumTrialGuideNotificationIsClosed = freezed,
     Object? premiumTrialBeginAnouncementIsClosed = freezed,
     Object? isLinkedLoginProvider = freezed,
+    Object? timestamp = freezed,
   }) {
     return _then(_RecordPageState(
       pillSheetGroup: pillSheetGroup == freezed
@@ -298,6 +311,10 @@ class __$RecordPageStateCopyWithImpl<$Res>
           ? _value.isLinkedLoginProvider
           : isLinkedLoginProvider // ignore: cast_nullable_to_non_nullable
               as bool,
+      timestamp: timestamp == freezed
+          ? _value.timestamp
+          : timestamp // ignore: cast_nullable_to_non_nullable
+              as DateTime,
     ));
   }
 }
@@ -316,7 +333,8 @@ class _$_RecordPageState extends _RecordPageState {
       required this.recommendedSignupNotificationIsAlreadyShow,
       required this.premiumTrialGuideNotificationIsClosed,
       required this.premiumTrialBeginAnouncementIsClosed,
-      required this.isLinkedLoginProvider})
+      required this.isLinkedLoginProvider,
+      required this.timestamp})
       : super._();
 
   @override
@@ -341,10 +359,13 @@ class _$_RecordPageState extends _RecordPageState {
   final bool premiumTrialBeginAnouncementIsClosed;
   @override
   final bool isLinkedLoginProvider;
+  @override // Workaround for no update RecordPageStateNotifier when pillSheetGroup.activedPillSheet.restDurations is change
+// Add and always update timestamp when every stream or provider changed to avoid this issue
+  final DateTime timestamp;
 
   @override
   String toString() {
-    return 'RecordPageState(pillSheetGroup: $pillSheetGroup, setting: $setting, premiumAndTrial: $premiumAndTrial, totalCountOfActionForTakenPill: $totalCountOfActionForTakenPill, isAlreadyShowTiral: $isAlreadyShowTiral, isAlreadyShowPremiumSurvey: $isAlreadyShowPremiumSurvey, shouldShowMigrateInfo: $shouldShowMigrateInfo, recommendedSignupNotificationIsAlreadyShow: $recommendedSignupNotificationIsAlreadyShow, premiumTrialGuideNotificationIsClosed: $premiumTrialGuideNotificationIsClosed, premiumTrialBeginAnouncementIsClosed: $premiumTrialBeginAnouncementIsClosed, isLinkedLoginProvider: $isLinkedLoginProvider)';
+    return 'RecordPageState(pillSheetGroup: $pillSheetGroup, setting: $setting, premiumAndTrial: $premiumAndTrial, totalCountOfActionForTakenPill: $totalCountOfActionForTakenPill, isAlreadyShowTiral: $isAlreadyShowTiral, isAlreadyShowPremiumSurvey: $isAlreadyShowPremiumSurvey, shouldShowMigrateInfo: $shouldShowMigrateInfo, recommendedSignupNotificationIsAlreadyShow: $recommendedSignupNotificationIsAlreadyShow, premiumTrialGuideNotificationIsClosed: $premiumTrialGuideNotificationIsClosed, premiumTrialBeginAnouncementIsClosed: $premiumTrialBeginAnouncementIsClosed, isLinkedLoginProvider: $isLinkedLoginProvider, timestamp: $timestamp)';
   }
 
   @override
@@ -376,7 +397,8 @@ class _$_RecordPageState extends _RecordPageState {
                 other.premiumTrialBeginAnouncementIsClosed,
                 premiumTrialBeginAnouncementIsClosed) &&
             const DeepCollectionEquality()
-                .equals(other.isLinkedLoginProvider, isLinkedLoginProvider));
+                .equals(other.isLinkedLoginProvider, isLinkedLoginProvider) &&
+            const DeepCollectionEquality().equals(other.timestamp, timestamp));
   }
 
   @override
@@ -394,7 +416,8 @@ class _$_RecordPageState extends _RecordPageState {
       const DeepCollectionEquality()
           .hash(premiumTrialGuideNotificationIsClosed),
       const DeepCollectionEquality().hash(premiumTrialBeginAnouncementIsClosed),
-      const DeepCollectionEquality().hash(isLinkedLoginProvider));
+      const DeepCollectionEquality().hash(isLinkedLoginProvider),
+      const DeepCollectionEquality().hash(timestamp));
 
   @JsonKey(ignore: true)
   @override
@@ -414,7 +437,8 @@ abstract class _RecordPageState extends RecordPageState {
       required bool recommendedSignupNotificationIsAlreadyShow,
       required bool premiumTrialGuideNotificationIsClosed,
       required bool premiumTrialBeginAnouncementIsClosed,
-      required bool isLinkedLoginProvider}) = _$_RecordPageState;
+      required bool isLinkedLoginProvider,
+      required DateTime timestamp}) = _$_RecordPageState;
   const _RecordPageState._() : super._();
 
   @override
@@ -439,6 +463,9 @@ abstract class _RecordPageState extends RecordPageState {
   bool get premiumTrialBeginAnouncementIsClosed;
   @override
   bool get isLinkedLoginProvider;
+  @override // Workaround for no update RecordPageStateNotifier when pillSheetGroup.activedPillSheet.restDurations is change
+// Add and always update timestamp when every stream or provider changed to avoid this issue
+  DateTime get timestamp;
   @override
   @JsonKey(ignore: true)
   _$RecordPageStateCopyWith<_RecordPageState> get copyWith =>
