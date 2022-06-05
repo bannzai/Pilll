@@ -132,7 +132,7 @@ class PremiumTrialModal extends HookConsumerWidget {
                           onPressed: () async {
                             analytics.logEvent(name: "pressed_trial_start");
                             try {
-                              await store.trial();
+                              store.trial();
                               Navigator.of(context).pop();
                               didEndTrial();
                             } catch (exception) {
