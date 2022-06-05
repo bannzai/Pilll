@@ -46,7 +46,7 @@ class PremiumTrialBegin extends HookConsumerWidget {
             ),
             const Spacer(),
             Text(
-              "プレミアムお試し体験中（残り$latestDay日）",
+              "$latestDay日後まですべての機能を使えます",
               style: TextColorStyle.white.merge(FontType.descriptionBold),
               textAlign: TextAlign.center,
             ),

@@ -82,6 +82,6 @@ class NotificationBarState with _$NotificationBarState {
     if (diff > 10) {
       return null;
     }
-    return "プレミアムお試し体験中（残り$diff日）";
+    return "$diff日後まですべての機能を使えます";
   }
 }
