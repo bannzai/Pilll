@@ -30,7 +30,10 @@ class DiscountPriceDeadline extends HookConsumerWidget {
             Align(
               alignment: Alignment.center,
               child: Text(
-                "プレミアムお試し終了\n$countdown内の購入で48%OFFで購入できます",
+                """
+プレミアム登録で引き続きすべての機能が利用できます
+$countdown内の購入で48%OFF!
+""",
                 style: FontType.assistingBold.merge(TextColorStyle.white),
                 textAlign: TextAlign.center,
               ),
