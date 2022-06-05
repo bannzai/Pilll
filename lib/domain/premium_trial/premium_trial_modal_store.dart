@@ -48,19 +48,19 @@ class PremiumTrialModalStateStore
     super.dispose();
   }
 
-  handleException(Object exception) {
+  void handleException(Object exception) {
     state = state.copyWith(exception: exception);
   }
 
-  showHUD() {
+  void showHUD() {
     state = state.copyWith(isLoading: true);
   }
 
-  hideHUD() {
+  void hideHUD() {
     state = state.copyWith(isLoading: false);
   }
 
-  trial() async {
+  void trial() async {
     if (state.isTrial && state.beginTrialDate != null) {
       state = state.copyWith(
           exception: "すでにトライアル中になっています。もし解決しない場合は設定>お問い合わせよりご連絡ください");

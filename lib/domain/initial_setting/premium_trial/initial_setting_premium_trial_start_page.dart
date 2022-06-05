@@ -26,7 +26,6 @@ class IntiialSettingPremiumTrialStartPage extends HookConsumerWidget {
         child: Column(
           children: [
             const Spacer(),
-            SvgPicture.asset("images/premium_trial_ribbon.svg"),
             Column(
               children: [
                 Container(
@@ -37,20 +36,11 @@ class IntiialSettingPremiumTrialStartPage extends HookConsumerWidget {
                   color: PilllColors.mat,
                   child: Column(
                     children: [
-                      const Text(
-                        "PRESENT",
-                        style: TextStyle(
-                          fontSize: 24,
-                          fontWeight: FontWeight.bold,
-                          color: TextColor.primaryDarkBlue,
-                          fontFamily: FontFamily.alphabet,
-                        ),
-                      ),
                       const SizedBox(height: 1),
                       Column(
                         children: [
                           const Text(
-                            "プレミアム体験プレゼント中",
+                            "\\ 通知から服用記録ができます /",
                             style: TextStyle(
                               fontSize: 20,
                               fontWeight: FontWeight.bold,
@@ -114,12 +104,11 @@ class IntiialSettingPremiumTrialStartPage extends HookConsumerWidget {
                 const SizedBox(height: 16),
                 const Text(
                   '''
-自動課金はされません。安心してお使いください
-30日後、自動で無料版に移行します
+30日間すべての機能が使えます！
 ''',
                   style: TextStyle(
                     color: TextColor.main,
-                    fontWeight: FontWeight.bold,
+                    fontWeight: FontWeight.w700,
                     fontFamily: FontFamily.japanese,
                     fontSize: 12,
                   ),
