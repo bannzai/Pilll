@@ -105,7 +105,7 @@ class SettingPageBody extends StatelessWidget {
                     return SettingSectionTitle(text: "Pilllプレミアム", children: [
                       if (state.premiumAndTrial.isTrial) ...[
                         ListTile(
-                          title: const Text("プレミアムお試し体験について",
+                          title: const Text("機能無制限の期間について",
                               style: FontType.listRow),
                           onTap: () {
                             analytics.logEvent(
