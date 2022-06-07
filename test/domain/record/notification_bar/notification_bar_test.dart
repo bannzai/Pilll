@@ -6,7 +6,6 @@ import 'package:pilll/domain/record/components/notification_bar/components/premi
 import 'package:pilll/domain/record/components/notification_bar/notification_bar.dart';
 import 'package:pilll/domain/record/components/notification_bar/notification_bar_state.codegen.dart';
 import 'package:pilll/domain/record/components/notification_bar/notification_bar_store.dart';
-import 'package:pilll/domain/record/components/notification_bar/components/premium_trial_guide.dart';
 import 'package:pilll/domain/record/components/notification_bar/components/premium_trial_limit.dart';
 import 'package:pilll/domain/record/components/notification_bar/components/recommend_signup.dart';
 import 'package:pilll/domain/record/components/notification_bar/components/recommend_signup_premium.dart';

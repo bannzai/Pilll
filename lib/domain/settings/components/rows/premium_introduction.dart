@@ -18,13 +18,7 @@ class PremiumIntroductionRow extends StatelessWidget {
     return ListTile(
       onTap: () {
         analytics.logEvent(name: "tapped_premium_introduction_row");
-        if (trialDeadlineDate == null) {
-          showPremiumTrialModal(context, () {
-            showPremiumTrialCompleteModalPreDialog(context);
-          });
-        } else {
-          showPremiumIntroductionSheet(context);
-        }
+        showPremiumIntroductionSheet(context);
       },
       title: Row(
         children: [
