@@ -26,7 +26,6 @@ class _$RecordPageStateTearOff {
       required bool isAlreadyShowPremiumSurvey,
       required bool shouldShowMigrateInfo,
       required bool recommendedSignupNotificationIsAlreadyShow,
-      required bool premiumTrialGuideNotificationIsClosed,
       required bool premiumTrialBeginAnouncementIsClosed,
       required bool isLinkedLoginProvider,
       required DateTime timestamp}) {
@@ -39,8 +38,6 @@ class _$RecordPageStateTearOff {
       shouldShowMigrateInfo: shouldShowMigrateInfo,
       recommendedSignupNotificationIsAlreadyShow:
           recommendedSignupNotificationIsAlreadyShow,
-      premiumTrialGuideNotificationIsClosed:
-          premiumTrialGuideNotificationIsClosed,
       premiumTrialBeginAnouncementIsClosed:
           premiumTrialBeginAnouncementIsClosed,
       isLinkedLoginProvider: isLinkedLoginProvider,
@@ -61,8 +58,6 @@ mixin _$RecordPageState {
   bool get isAlreadyShowPremiumSurvey => throw _privateConstructorUsedError;
   bool get shouldShowMigrateInfo => throw _privateConstructorUsedError;
   bool get recommendedSignupNotificationIsAlreadyShow =>
-      throw _privateConstructorUsedError;
-  bool get premiumTrialGuideNotificationIsClosed =>
       throw _privateConstructorUsedError;
   bool get premiumTrialBeginAnouncementIsClosed =>
       throw _privateConstructorUsedError;
@@ -89,7 +84,6 @@ abstract class $RecordPageStateCopyWith<$Res> {
       bool isAlreadyShowPremiumSurvey,
       bool shouldShowMigrateInfo,
       bool recommendedSignupNotificationIsAlreadyShow,
-      bool premiumTrialGuideNotificationIsClosed,
       bool premiumTrialBeginAnouncementIsClosed,
       bool isLinkedLoginProvider,
       DateTime timestamp});
@@ -117,7 +111,6 @@ class _$RecordPageStateCopyWithImpl<$Res>
     Object? isAlreadyShowPremiumSurvey = freezed,
     Object? shouldShowMigrateInfo = freezed,
     Object? recommendedSignupNotificationIsAlreadyShow = freezed,
-    Object? premiumTrialGuideNotificationIsClosed = freezed,
     Object? premiumTrialBeginAnouncementIsClosed = freezed,
     Object? isLinkedLoginProvider = freezed,
     Object? timestamp = freezed,
@@ -151,11 +144,6 @@ class _$RecordPageStateCopyWithImpl<$Res>
           recommendedSignupNotificationIsAlreadyShow == freezed
               ? _value.recommendedSignupNotificationIsAlreadyShow
               : recommendedSignupNotificationIsAlreadyShow // ignore: cast_nullable_to_non_nullable
-                  as bool,
-      premiumTrialGuideNotificationIsClosed:
-          premiumTrialGuideNotificationIsClosed == freezed
-              ? _value.premiumTrialGuideNotificationIsClosed
-              : premiumTrialGuideNotificationIsClosed // ignore: cast_nullable_to_non_nullable
                   as bool,
       premiumTrialBeginAnouncementIsClosed: premiumTrialBeginAnouncementIsClosed ==
               freezed
@@ -214,7 +202,6 @@ abstract class _$RecordPageStateCopyWith<$Res>
       bool isAlreadyShowPremiumSurvey,
       bool shouldShowMigrateInfo,
       bool recommendedSignupNotificationIsAlreadyShow,
-      bool premiumTrialGuideNotificationIsClosed,
       bool premiumTrialBeginAnouncementIsClosed,
       bool isLinkedLoginProvider,
       DateTime timestamp});
@@ -247,7 +234,6 @@ class __$RecordPageStateCopyWithImpl<$Res>
     Object? isAlreadyShowPremiumSurvey = freezed,
     Object? shouldShowMigrateInfo = freezed,
     Object? recommendedSignupNotificationIsAlreadyShow = freezed,
-    Object? premiumTrialGuideNotificationIsClosed = freezed,
     Object? premiumTrialBeginAnouncementIsClosed = freezed,
     Object? isLinkedLoginProvider = freezed,
     Object? timestamp = freezed,
@@ -282,11 +268,6 @@ class __$RecordPageStateCopyWithImpl<$Res>
               ? _value.recommendedSignupNotificationIsAlreadyShow
               : recommendedSignupNotificationIsAlreadyShow // ignore: cast_nullable_to_non_nullable
                   as bool,
-      premiumTrialGuideNotificationIsClosed:
-          premiumTrialGuideNotificationIsClosed == freezed
-              ? _value.premiumTrialGuideNotificationIsClosed
-              : premiumTrialGuideNotificationIsClosed // ignore: cast_nullable_to_non_nullable
-                  as bool,
       premiumTrialBeginAnouncementIsClosed: premiumTrialBeginAnouncementIsClosed ==
               freezed
           ? _value.premiumTrialBeginAnouncementIsClosed
@@ -315,7 +296,6 @@ class _$_RecordPageState extends _RecordPageState {
       required this.isAlreadyShowPremiumSurvey,
       required this.shouldShowMigrateInfo,
       required this.recommendedSignupNotificationIsAlreadyShow,
-      required this.premiumTrialGuideNotificationIsClosed,
       required this.premiumTrialBeginAnouncementIsClosed,
       required this.isLinkedLoginProvider,
       required this.timestamp})
@@ -336,8 +316,6 @@ class _$_RecordPageState extends _RecordPageState {
   @override
   final bool recommendedSignupNotificationIsAlreadyShow;
   @override
-  final bool premiumTrialGuideNotificationIsClosed;
-  @override
   final bool premiumTrialBeginAnouncementIsClosed;
   @override
   final bool isLinkedLoginProvider;
@@ -347,7 +325,7 @@ class _$_RecordPageState extends _RecordPageState {
 
   @override
   String toString() {
-    return 'RecordPageState(pillSheetGroup: $pillSheetGroup, setting: $setting, premiumAndTrial: $premiumAndTrial, totalCountOfActionForTakenPill: $totalCountOfActionForTakenPill, isAlreadyShowPremiumSurvey: $isAlreadyShowPremiumSurvey, shouldShowMigrateInfo: $shouldShowMigrateInfo, recommendedSignupNotificationIsAlreadyShow: $recommendedSignupNotificationIsAlreadyShow, premiumTrialGuideNotificationIsClosed: $premiumTrialGuideNotificationIsClosed, premiumTrialBeginAnouncementIsClosed: $premiumTrialBeginAnouncementIsClosed, isLinkedLoginProvider: $isLinkedLoginProvider, timestamp: $timestamp)';
+    return 'RecordPageState(pillSheetGroup: $pillSheetGroup, setting: $setting, premiumAndTrial: $premiumAndTrial, totalCountOfActionForTakenPill: $totalCountOfActionForTakenPill, isAlreadyShowPremiumSurvey: $isAlreadyShowPremiumSurvey, shouldShowMigrateInfo: $shouldShowMigrateInfo, recommendedSignupNotificationIsAlreadyShow: $recommendedSignupNotificationIsAlreadyShow, premiumTrialBeginAnouncementIsClosed: $premiumTrialBeginAnouncementIsClosed, isLinkedLoginProvider: $isLinkedLoginProvider, timestamp: $timestamp)';
   }
 
   @override
@@ -371,9 +349,6 @@ class _$_RecordPageState extends _RecordPageState {
                 other.recommendedSignupNotificationIsAlreadyShow,
                 recommendedSignupNotificationIsAlreadyShow) &&
             const DeepCollectionEquality().equals(
-                other.premiumTrialGuideNotificationIsClosed,
-                premiumTrialGuideNotificationIsClosed) &&
-            const DeepCollectionEquality().equals(
                 other.premiumTrialBeginAnouncementIsClosed,
                 premiumTrialBeginAnouncementIsClosed) &&
             const DeepCollectionEquality()
@@ -392,8 +367,6 @@ class _$_RecordPageState extends _RecordPageState {
       const DeepCollectionEquality().hash(shouldShowMigrateInfo),
       const DeepCollectionEquality()
           .hash(recommendedSignupNotificationIsAlreadyShow),
-      const DeepCollectionEquality()
-          .hash(premiumTrialGuideNotificationIsClosed),
       const DeepCollectionEquality().hash(premiumTrialBeginAnouncementIsClosed),
       const DeepCollectionEquality().hash(isLinkedLoginProvider),
       const DeepCollectionEquality().hash(timestamp));
@@ -413,7 +386,6 @@ abstract class _RecordPageState extends RecordPageState {
       required bool isAlreadyShowPremiumSurvey,
       required bool shouldShowMigrateInfo,
       required bool recommendedSignupNotificationIsAlreadyShow,
-      required bool premiumTrialGuideNotificationIsClosed,
       required bool premiumTrialBeginAnouncementIsClosed,
       required bool isLinkedLoginProvider,
       required DateTime timestamp}) = _$_RecordPageState;
@@ -433,8 +405,6 @@ abstract class _RecordPageState extends RecordPageState {
   bool get shouldShowMigrateInfo;
   @override
   bool get recommendedSignupNotificationIsAlreadyShow;
-  @override
-  bool get premiumTrialGuideNotificationIsClosed;
   @override
   bool get premiumTrialBeginAnouncementIsClosed;
   @override
