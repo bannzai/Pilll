@@ -4,8 +4,6 @@ import 'package:pilll/components/atoms/font.dart';
 import 'package:pilll/components/atoms/text_color.dart';
 import 'package:pilll/domain/pill_sheet_modified_history/pill_sheet_modified_history_page.dart';
 import 'package:pilll/domain/premium_introduction/premium_introduction_sheet.dart';
-import 'package:pilll/domain/premium_trial/premium_trial_complete_modal.dart';
-import 'package:pilll/domain/premium_trial/premium_trial_modal.dart';
 
 class EndedPillSheet extends StatelessWidget {
   final bool isTrial;
