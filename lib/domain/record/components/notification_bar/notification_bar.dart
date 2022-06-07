@@ -107,26 +107,6 @@ class NotificationBar extends HookConsumerWidget {
         }
       }
 
-      if (!state.premiumAndTrial.isTrial) {
-        if (state.totalCountOfActionForTakenPill >= 14) {
-          if (state.premiumAndTrial.trialDeadlineDate == null) {
-            if (!state.premiumTrialGuideNotificationIsClosed) {
-              return PremiumTrialGuideNotificationBar(
-                onTap: () {
-                  analytics.logEvent(
-                      name: "pressed_trial_guide_notification_bar");
-                  showPremiumTrialModal(context, () {
-                    showPremiumTrialCompleteModalPreDialog(context);
-                  });
-                },
-                onClose: () {
-                  store.closePremiumTrialNotification();
-                },
-              );
-            }
-          }
-        }
-      }
       if (state.latestPillSheetGroup != null &&
           state.latestPillSheetGroup?.activedPillSheet == null) {
         // ピルシートグループが存在していてactivedPillSheetが無い場合はピルシート終了が何かしらの理由がなくなったと見なし終了表示にする

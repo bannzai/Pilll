@@ -45,9 +45,6 @@ final recordPageAsyncStateProvider =
       recommendedSignupNotificationIsAlreadyShow: sharedPreferences
               .getBool(BoolKey.recommendedSignupNotificationIsAlreadyShow) ??
           false,
-      premiumTrialGuideNotificationIsClosed: sharedPreferences
-              .getBool(BoolKey.premiumTrialGuideNotificationIsClosed) ??
-          false,
       premiumTrialBeginAnouncementIsClosed: sharedPreferences
               .getBool(BoolKey.premiumTrialBeginAnouncementIsClosed) ??
           false,
@@ -71,7 +68,6 @@ class RecordPageState with _$RecordPageState {
     required bool isAlreadyShowPremiumSurvey,
     required bool shouldShowMigrateInfo,
     required bool recommendedSignupNotificationIsAlreadyShow,
-    required bool premiumTrialGuideNotificationIsClosed,
     required bool premiumTrialBeginAnouncementIsClosed,
     required bool isLinkedLoginProvider,
     // Workaround for no update RecordPageStateNotifier when pillSheetGroup.activedPillSheet.restDurations is change

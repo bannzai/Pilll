@@ -75,7 +75,6 @@ void main() {
                 today.subtract(const Duration(days: 1)),
           ),
           isLinkedLoginProvider: false,
-          premiumTrialGuideNotificationIsClosed: false,
           premiumTrialBeginAnouncementIsClosed: false,
           recommendedSignupNotificationIsAlreadyShow: false,
         );
@@ -137,7 +136,6 @@ void main() {
                 today.subtract(const Duration(days: 1)),
           ),
           isLinkedLoginProvider: false,
-          premiumTrialGuideNotificationIsClosed: false,
           premiumTrialBeginAnouncementIsClosed: true,
           recommendedSignupNotificationIsAlreadyShow: false,
         );
@@ -198,7 +196,6 @@ void main() {
             discountEntitlementDeadlineDate: null,
           ),
           isLinkedLoginProvider: false,
-          premiumTrialGuideNotificationIsClosed: false,
           premiumTrialBeginAnouncementIsClosed: true,
           recommendedSignupNotificationIsAlreadyShow: false,
         );
@@ -258,7 +255,6 @@ void main() {
             discountEntitlementDeadlineDate: null,
           ),
           isLinkedLoginProvider: false,
-          premiumTrialGuideNotificationIsClosed: false,
           premiumTrialBeginAnouncementIsClosed: true,
           recommendedSignupNotificationIsAlreadyShow: false,
         );
@@ -317,7 +313,6 @@ void main() {
             discountEntitlementDeadlineDate: null,
           ),
           isLinkedLoginProvider: true,
-          premiumTrialGuideNotificationIsClosed: false,
           premiumTrialBeginAnouncementIsClosed: true,
           recommendedSignupNotificationIsAlreadyShow: false,
         );
@@ -377,7 +372,6 @@ void main() {
             discountEntitlementDeadlineDate: null,
           ),
           isLinkedLoginProvider: true,
-          premiumTrialGuideNotificationIsClosed: false,
           premiumTrialBeginAnouncementIsClosed: true,
           recommendedSignupNotificationIsAlreadyShow: false,
         );
@@ -436,7 +430,6 @@ void main() {
             discountEntitlementDeadlineDate: null,
           ),
           isLinkedLoginProvider: true,
-          premiumTrialGuideNotificationIsClosed: false,
           premiumTrialBeginAnouncementIsClosed: true,
           recommendedSignupNotificationIsAlreadyShow: false,
         );
@@ -497,7 +490,6 @@ void main() {
             discountEntitlementDeadlineDate: null,
           ),
           isLinkedLoginProvider: false,
-          premiumTrialGuideNotificationIsClosed: false,
           premiumTrialBeginAnouncementIsClosed: true,
           recommendedSignupNotificationIsAlreadyShow: false,
         );
@@ -556,7 +548,6 @@ void main() {
             discountEntitlementDeadlineDate: null,
           ),
           isLinkedLoginProvider: true,
-          premiumTrialGuideNotificationIsClosed: false,
           premiumTrialBeginAnouncementIsClosed: true,
           recommendedSignupNotificationIsAlreadyShow: false,
         );
@@ -615,7 +606,6 @@ void main() {
             discountEntitlementDeadlineDate: null,
           ),
           isLinkedLoginProvider: true,
-          premiumTrialGuideNotificationIsClosed: false,
           premiumTrialBeginAnouncementIsClosed: true,
           recommendedSignupNotificationIsAlreadyShow: false,
         );
