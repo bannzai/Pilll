@@ -39,9 +39,6 @@ final recordPageAsyncStateProvider =
           sharedPreferences.getInt(IntKey.totalCountOfActionForTakenPill) ?? 0,
       shouldShowMigrateInfo:
           ref.watch(shouldShowMigrationInformationProvider(sharedPreferences)),
-      isAlreadyShowTiral:
-          sharedPreferences.getBool(BoolKey.isAlreadyShowPremiumTrialModal) ??
-              false,
       isAlreadyShowPremiumSurvey:
           sharedPreferences.getBool(BoolKey.isAlreadyShowPremiumSurvey) ??
               false,
@@ -71,7 +68,6 @@ class RecordPageState with _$RecordPageState {
     required Setting setting,
     required PremiumAndTrial premiumAndTrial,
     required int totalCountOfActionForTakenPill,
-    required bool isAlreadyShowTiral,
     required bool isAlreadyShowPremiumSurvey,
     required bool shouldShowMigrateInfo,
     required bool recommendedSignupNotificationIsAlreadyShow,

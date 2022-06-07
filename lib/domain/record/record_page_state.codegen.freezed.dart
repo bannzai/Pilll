@@ -23,7 +23,6 @@ class _$RecordPageStateTearOff {
       required Setting setting,
       required PremiumAndTrial premiumAndTrial,
       required int totalCountOfActionForTakenPill,
-      required bool isAlreadyShowTiral,
       required bool isAlreadyShowPremiumSurvey,
       required bool shouldShowMigrateInfo,
       required bool recommendedSignupNotificationIsAlreadyShow,
@@ -36,7 +35,6 @@ class _$RecordPageStateTearOff {
       setting: setting,
       premiumAndTrial: premiumAndTrial,
       totalCountOfActionForTakenPill: totalCountOfActionForTakenPill,
-      isAlreadyShowTiral: isAlreadyShowTiral,
       isAlreadyShowPremiumSurvey: isAlreadyShowPremiumSurvey,
       shouldShowMigrateInfo: shouldShowMigrateInfo,
       recommendedSignupNotificationIsAlreadyShow:
@@ -60,7 +58,6 @@ mixin _$RecordPageState {
   Setting get setting => throw _privateConstructorUsedError;
   PremiumAndTrial get premiumAndTrial => throw _privateConstructorUsedError;
   int get totalCountOfActionForTakenPill => throw _privateConstructorUsedError;
-  bool get isAlreadyShowTiral => throw _privateConstructorUsedError;
   bool get isAlreadyShowPremiumSurvey => throw _privateConstructorUsedError;
   bool get shouldShowMigrateInfo => throw _privateConstructorUsedError;
   bool get recommendedSignupNotificationIsAlreadyShow =>
@@ -89,7 +86,6 @@ abstract class $RecordPageStateCopyWith<$Res> {
       Setting setting,
       PremiumAndTrial premiumAndTrial,
       int totalCountOfActionForTakenPill,
-      bool isAlreadyShowTiral,
       bool isAlreadyShowPremiumSurvey,
       bool shouldShowMigrateInfo,
       bool recommendedSignupNotificationIsAlreadyShow,
@@ -118,7 +114,6 @@ class _$RecordPageStateCopyWithImpl<$Res>
     Object? setting = freezed,
     Object? premiumAndTrial = freezed,
     Object? totalCountOfActionForTakenPill = freezed,
-    Object? isAlreadyShowTiral = freezed,
     Object? isAlreadyShowPremiumSurvey = freezed,
     Object? shouldShowMigrateInfo = freezed,
     Object? recommendedSignupNotificationIsAlreadyShow = freezed,
@@ -144,10 +139,6 @@ class _$RecordPageStateCopyWithImpl<$Res>
           ? _value.totalCountOfActionForTakenPill
           : totalCountOfActionForTakenPill // ignore: cast_nullable_to_non_nullable
               as int,
-      isAlreadyShowTiral: isAlreadyShowTiral == freezed
-          ? _value.isAlreadyShowTiral
-          : isAlreadyShowTiral // ignore: cast_nullable_to_non_nullable
-              as bool,
       isAlreadyShowPremiumSurvey: isAlreadyShowPremiumSurvey == freezed
           ? _value.isAlreadyShowPremiumSurvey
           : isAlreadyShowPremiumSurvey // ignore: cast_nullable_to_non_nullable
@@ -220,7 +211,6 @@ abstract class _$RecordPageStateCopyWith<$Res>
       Setting setting,
       PremiumAndTrial premiumAndTrial,
       int totalCountOfActionForTakenPill,
-      bool isAlreadyShowTiral,
       bool isAlreadyShowPremiumSurvey,
       bool shouldShowMigrateInfo,
       bool recommendedSignupNotificationIsAlreadyShow,
@@ -254,7 +244,6 @@ class __$RecordPageStateCopyWithImpl<$Res>
     Object? setting = freezed,
     Object? premiumAndTrial = freezed,
     Object? totalCountOfActionForTakenPill = freezed,
-    Object? isAlreadyShowTiral = freezed,
     Object? isAlreadyShowPremiumSurvey = freezed,
     Object? shouldShowMigrateInfo = freezed,
     Object? recommendedSignupNotificationIsAlreadyShow = freezed,
@@ -280,10 +269,6 @@ class __$RecordPageStateCopyWithImpl<$Res>
           ? _value.totalCountOfActionForTakenPill
           : totalCountOfActionForTakenPill // ignore: cast_nullable_to_non_nullable
               as int,
-      isAlreadyShowTiral: isAlreadyShowTiral == freezed
-          ? _value.isAlreadyShowTiral
-          : isAlreadyShowTiral // ignore: cast_nullable_to_non_nullable
-              as bool,
       isAlreadyShowPremiumSurvey: isAlreadyShowPremiumSurvey == freezed
           ? _value.isAlreadyShowPremiumSurvey
           : isAlreadyShowPremiumSurvey // ignore: cast_nullable_to_non_nullable
@@ -327,7 +312,6 @@ class _$_RecordPageState extends _RecordPageState {
       required this.setting,
       required this.premiumAndTrial,
       required this.totalCountOfActionForTakenPill,
-      required this.isAlreadyShowTiral,
       required this.isAlreadyShowPremiumSurvey,
       required this.shouldShowMigrateInfo,
       required this.recommendedSignupNotificationIsAlreadyShow,
@@ -346,8 +330,6 @@ class _$_RecordPageState extends _RecordPageState {
   @override
   final int totalCountOfActionForTakenPill;
   @override
-  final bool isAlreadyShowTiral;
-  @override
   final bool isAlreadyShowPremiumSurvey;
   @override
   final bool shouldShowMigrateInfo;
@@ -365,7 +347,7 @@ class _$_RecordPageState extends _RecordPageState {
 
   @override
   String toString() {
-    return 'RecordPageState(pillSheetGroup: $pillSheetGroup, setting: $setting, premiumAndTrial: $premiumAndTrial, totalCountOfActionForTakenPill: $totalCountOfActionForTakenPill, isAlreadyShowTiral: $isAlreadyShowTiral, isAlreadyShowPremiumSurvey: $isAlreadyShowPremiumSurvey, shouldShowMigrateInfo: $shouldShowMigrateInfo, recommendedSignupNotificationIsAlreadyShow: $recommendedSignupNotificationIsAlreadyShow, premiumTrialGuideNotificationIsClosed: $premiumTrialGuideNotificationIsClosed, premiumTrialBeginAnouncementIsClosed: $premiumTrialBeginAnouncementIsClosed, isLinkedLoginProvider: $isLinkedLoginProvider, timestamp: $timestamp)';
+    return 'RecordPageState(pillSheetGroup: $pillSheetGroup, setting: $setting, premiumAndTrial: $premiumAndTrial, totalCountOfActionForTakenPill: $totalCountOfActionForTakenPill, isAlreadyShowPremiumSurvey: $isAlreadyShowPremiumSurvey, shouldShowMigrateInfo: $shouldShowMigrateInfo, recommendedSignupNotificationIsAlreadyShow: $recommendedSignupNotificationIsAlreadyShow, premiumTrialGuideNotificationIsClosed: $premiumTrialGuideNotificationIsClosed, premiumTrialBeginAnouncementIsClosed: $premiumTrialBeginAnouncementIsClosed, isLinkedLoginProvider: $isLinkedLoginProvider, timestamp: $timestamp)';
   }
 
   @override
@@ -381,8 +363,6 @@ class _$_RecordPageState extends _RecordPageState {
             const DeepCollectionEquality().equals(
                 other.totalCountOfActionForTakenPill,
                 totalCountOfActionForTakenPill) &&
-            const DeepCollectionEquality()
-                .equals(other.isAlreadyShowTiral, isAlreadyShowTiral) &&
             const DeepCollectionEquality().equals(
                 other.isAlreadyShowPremiumSurvey, isAlreadyShowPremiumSurvey) &&
             const DeepCollectionEquality()
@@ -408,7 +388,6 @@ class _$_RecordPageState extends _RecordPageState {
       const DeepCollectionEquality().hash(setting),
       const DeepCollectionEquality().hash(premiumAndTrial),
       const DeepCollectionEquality().hash(totalCountOfActionForTakenPill),
-      const DeepCollectionEquality().hash(isAlreadyShowTiral),
       const DeepCollectionEquality().hash(isAlreadyShowPremiumSurvey),
       const DeepCollectionEquality().hash(shouldShowMigrateInfo),
       const DeepCollectionEquality()
@@ -431,7 +410,6 @@ abstract class _RecordPageState extends RecordPageState {
       required Setting setting,
       required PremiumAndTrial premiumAndTrial,
       required int totalCountOfActionForTakenPill,
-      required bool isAlreadyShowTiral,
       required bool isAlreadyShowPremiumSurvey,
       required bool shouldShowMigrateInfo,
       required bool recommendedSignupNotificationIsAlreadyShow,
@@ -449,8 +427,6 @@ abstract class _RecordPageState extends RecordPageState {
   PremiumAndTrial get premiumAndTrial;
   @override
   int get totalCountOfActionForTakenPill;
-  @override
-  bool get isAlreadyShowTiral;
   @override
   bool get isAlreadyShowPremiumSurvey;
   @override
