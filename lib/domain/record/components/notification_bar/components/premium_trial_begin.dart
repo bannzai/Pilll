@@ -25,7 +25,8 @@ class PremiumTrialBegin extends HookConsumerWidget {
       child: GestureDetector(
         onTap: () async {
           analytics.logEvent(name: "p_premium_trial_begin_n_b");
-          await launchUrl(Uri.parse(preimumLink));
+          await launchUrl(Uri.parse(
+              "https://pilll.wraptas.site/3abd690f501549c48f813fd310b5f242"));
         },
         child: Row(
           crossAxisAlignment: CrossAxisAlignment.center,
