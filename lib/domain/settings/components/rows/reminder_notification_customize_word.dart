@@ -46,13 +46,7 @@ class ReminderNotificationCustomizeWord extends HookConsumerWidget {
               ReminderNotificationCustomizeWordPageRoutes.route(
                   setting: setting));
         } else {
-          if (trialDeadlineDate == null) {
-            showPremiumTrialModal(context, () {
-              showPremiumTrialCompleteModalPreDialog(context);
-            });
-          } else {
-            showPremiumIntroductionSheet(context);
-          }
+          showPremiumIntroductionSheet(context);
         }
       },
     );

@@ -34,13 +34,7 @@ class QuickRecordRow extends StatelessWidget {
         if (isTrial) {
           return;
         }
-        if (trialDeadlineDate == null) {
-          showPremiumTrialModal(context, () {
-            showPremiumTrialCompleteModalPreDialog(context);
-          });
-        } else {
-          showPremiumIntroductionSheet(context);
-        }
+        showPremiumIntroductionSheet(context);
       },
     );
   }

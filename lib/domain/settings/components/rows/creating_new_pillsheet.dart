@@ -61,10 +61,6 @@ class CreatingNewPillSheetRow extends HookConsumerWidget {
                   ),
                 ),
               );
-        } else if (trialDeadlineDate == null) {
-          showPremiumTrialModal(context, () {
-            showPremiumTrialCompleteModalPreDialog(context);
-          });
         } else if (!isPremium) {
           showPremiumIntroductionSheet(context);
         }

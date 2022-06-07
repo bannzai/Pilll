@@ -71,13 +71,7 @@ class MenstruationHistoryCardMoreButton extends StatelessWidget {
                 if (state.isPremium || state.isTrial) {
                   Navigator.of(context).push(MenstruationListPageRoute.route());
                 } else {
-                  if (state.trialDeadlineDate == null) {
-                    showPremiumTrialModal(context, () {
-                      showPremiumTrialCompleteModalPreDialog(context);
-                    });
-                  } else {
-                    showPremiumIntroductionSheet(context);
-                  }
+                  showPremiumIntroductionSheet(context);
                 }
               }),
       ],

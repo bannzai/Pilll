@@ -28,13 +28,7 @@ class PillSheetModifiedHistoryMoreButton extends StatelessWidget {
                 Navigator.of(context)
                     .push(PillSheetModifiedHistoriesPageRoute.route());
               } else {
-                if (state.trialDeadlineDate == null) {
-                  showPremiumTrialModal(context, () {
-                    showPremiumTrialCompleteModalPreDialog(context);
-                  });
-                } else {
-                  showPremiumIntroductionSheet(context);
-                }
+                showPremiumIntroductionSheet(context);
               }
             }),
       ],

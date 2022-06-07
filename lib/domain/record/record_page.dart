@@ -58,10 +58,6 @@ class RecordPageBody extends StatelessWidget {
       } else if (state.shouldShowPremiumFunctionSurvey) {
         await store.setTrueIsAlreadyShowPremiumFunctionSurvey();
         Navigator.of(context).push(PremiumFunctionSurveyPageRoutes.route());
-      } else if (state.shouldShowTrial) {
-        showPremiumTrialModalWhenLaunchApp(context, () {
-          showPremiumTrialCompleteModalPreDialog(context);
-        });
       }
     });
 

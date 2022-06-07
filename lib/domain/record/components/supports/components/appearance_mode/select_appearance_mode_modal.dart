@@ -95,13 +95,7 @@ class SelectAppearanceModeModal extends HookConsumerWidget {
           await store.asyncAction
               .switchingAppearanceMode(mode: mode, setting: state.setting);
         } else if (isPremiumFunction) {
-          if (state.premiumAndTrial.trialDeadlineDate == null) {
-            showPremiumTrialModal(context, () {
-              showPremiumTrialCompleteModalPreDialog(context);
-            });
-          } else {
-            showPremiumIntroductionSheet(context);
-          }
+          showPremiumIntroductionSheet(context);
         } else {
           // User selected non premium function mode
           await store.asyncAction
