@@ -21,7 +21,8 @@ class PremiumTrialLimitNotificationBar extends StatelessWidget {
       child: GestureDetector(
         onTap: () async {
           analytics.logEvent(name: "pressed_trial_limited_notification_bar");
-          await launchUrl(Uri.parse(preimumLink));
+          await launchUrl(Uri.parse(
+              "https://pilll.wraptas.site/3abd690f501549c48f813fd310b5f242"));
         },
         child: Row(
           mainAxisAlignment: MainAxisAlignment.center,
