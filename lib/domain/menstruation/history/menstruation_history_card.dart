@@ -11,8 +11,6 @@ import 'package:pilll/domain/menstruation_list/menstruation_list_row.dart';
 import 'package:pilll/domain/menstruation_list/menstruation_list_page.dart';
 import 'package:flutter/material.dart';
 import 'package:pilll/domain/premium_introduction/premium_introduction_sheet.dart';
-import 'package:pilll/domain/premium_trial/premium_trial_complete_modal.dart';
-import 'package:pilll/domain/premium_trial/premium_trial_modal.dart';
 
 class MenstruationHistoryCard extends StatelessWidget {
   final MenstruationHistoryCardState state;
@@ -32,13 +30,8 @@ class MenstruationHistoryCard extends StatelessWidget {
             if (state.isPremium || state.isTrial) {
               return;
             }
-            if (state.trialDeadlineDate == null) {
-              showPremiumTrialModal(context, () {
-                showPremiumTrialCompleteModalPreDialog(context);
-              });
-            } else {
-              showPremiumIntroductionSheet(context);
-            }
+
+            showPremiumIntroductionSheet(context);
           },
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,

@@ -155,15 +155,7 @@ class CalendarPillSheetModifiedHistoryCard extends StatelessWidget {
                                             name:
                                                 "pressed_show_detail_pill_sheet_history",
                                           );
-                                          if (state.trialDeadlineDate == null) {
-                                            showPremiumTrialModal(context, () {
-                                              showPremiumTrialCompleteModalPreDialog(
-                                                  context);
-                                            });
-                                          } else {
-                                            showPremiumIntroductionSheet(
-                                                context);
-                                          }
+                                          showPremiumIntroductionSheet(context);
                                         },
                                       ),
                                     ),
