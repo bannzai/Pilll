@@ -87,24 +87,9 @@ class RecordPageState with _$RecordPageState {
     return pillSheetGroup?.activedPillSheet?.groupIndex ?? 0;
   }
 
-  bool get shouldShowTrial {
-    if (premiumAndTrial.trialIsAlreadyBegin) {
-      return false;
-    }
-    if (premiumAndTrial.isTrial) {
-      return false;
-    }
-    if (isAlreadyShowTiral) {
-      return false;
-    }
-    if (totalCountOfActionForTakenPill < 42) {
-      return false;
-    }
-    return true;
-  }
-
   bool get shouldShowPremiumFunctionSurvey {
-    if (shouldShowTrial) {
+    if (!(premiumAndTrial.trialIsAlreadyBegin &&
+        totalCountOfActionForTakenPill >= 42)) {
       return false;
     }
     if (premiumAndTrial.premiumOrTrial) {
