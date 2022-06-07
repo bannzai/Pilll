@@ -80,8 +80,10 @@ class RecordPageState with _$RecordPageState {
   }
 
   bool get shouldShowPremiumFunctionSurvey {
-    if (!(premiumAndTrial.trialIsAlreadyBegin &&
-        totalCountOfActionForTakenPill >= 42)) {
+    if (premiumAndTrial.trialIsAlreadyBegin) {
+      return false;
+    }
+    if (totalCountOfActionForTakenPill < 42) {
       return false;
     }
     if (premiumAndTrial.premiumOrTrial) {
