@@ -39,17 +39,11 @@ final recordPageAsyncStateProvider =
           sharedPreferences.getInt(IntKey.totalCountOfActionForTakenPill) ?? 0,
       shouldShowMigrateInfo:
           ref.watch(shouldShowMigrationInformationProvider(sharedPreferences)),
-      isAlreadyShowTiral:
-          sharedPreferences.getBool(BoolKey.isAlreadyShowPremiumTrialModal) ??
-              false,
       isAlreadyShowPremiumSurvey:
           sharedPreferences.getBool(BoolKey.isAlreadyShowPremiumSurvey) ??
               false,
       recommendedSignupNotificationIsAlreadyShow: sharedPreferences
               .getBool(BoolKey.recommendedSignupNotificationIsAlreadyShow) ??
-          false,
-      premiumTrialGuideNotificationIsClosed: sharedPreferences
-              .getBool(BoolKey.premiumTrialGuideNotificationIsClosed) ??
           false,
       premiumTrialBeginAnouncementIsClosed: sharedPreferences
               .getBool(BoolKey.premiumTrialBeginAnouncementIsClosed) ??
@@ -71,11 +65,9 @@ class RecordPageState with _$RecordPageState {
     required Setting setting,
     required PremiumAndTrial premiumAndTrial,
     required int totalCountOfActionForTakenPill,
-    required bool isAlreadyShowTiral,
     required bool isAlreadyShowPremiumSurvey,
     required bool shouldShowMigrateInfo,
     required bool recommendedSignupNotificationIsAlreadyShow,
-    required bool premiumTrialGuideNotificationIsClosed,
     required bool premiumTrialBeginAnouncementIsClosed,
     required bool isLinkedLoginProvider,
     // Workaround for no update RecordPageStateNotifier when pillSheetGroup.activedPillSheet.restDurations is change
@@ -87,24 +79,11 @@ class RecordPageState with _$RecordPageState {
     return pillSheetGroup?.activedPillSheet?.groupIndex ?? 0;
   }
 
-  bool get shouldShowTrial {
+  bool get shouldShowPremiumFunctionSurvey {
     if (premiumAndTrial.trialIsAlreadyBegin) {
       return false;
     }
-    if (premiumAndTrial.isTrial) {
-      return false;
-    }
-    if (isAlreadyShowTiral) {
-      return false;
-    }
     if (totalCountOfActionForTakenPill < 42) {
-      return false;
-    }
-    return true;
-  }
-
-  bool get shouldShowPremiumFunctionSurvey {
-    if (shouldShowTrial) {
       return false;
     }
     if (premiumAndTrial.premiumOrTrial) {

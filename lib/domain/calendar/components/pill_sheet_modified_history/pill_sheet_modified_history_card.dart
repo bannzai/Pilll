@@ -12,8 +12,6 @@ import 'package:pilll/domain/calendar/components/pill_sheet_modified_history/com
 import 'package:pilll/domain/calendar/components/pill_sheet_modified_history/pill_sheet_modified_history_list.dart';
 import 'package:pilll/domain/calendar/components/pill_sheet_modified_history/pill_sheet_modified_history_list_header.dart';
 import 'package:pilll/domain/premium_introduction/premium_introduction_sheet.dart';
-import 'package:pilll/domain/premium_trial/premium_trial_complete_modal.dart';
-import 'package:pilll/domain/premium_trial/premium_trial_modal.dart';
 import 'package:pilll/emoji/emoji.dart';
 import 'package:pilll/entity/pill_sheet_modified_history.codegen.dart';
 
@@ -155,15 +153,7 @@ class CalendarPillSheetModifiedHistoryCard extends StatelessWidget {
                                             name:
                                                 "pressed_show_detail_pill_sheet_history",
                                           );
-                                          if (state.trialDeadlineDate == null) {
-                                            showPremiumTrialModal(context, () {
-                                              showPremiumTrialCompleteModalPreDialog(
-                                                  context);
-                                            });
-                                          } else {
-                                            showPremiumIntroductionSheet(
-                                                context);
-                                          }
+                                          showPremiumIntroductionSheet(context);
                                         },
                                       ),
                                     ),

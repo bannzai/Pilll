@@ -19,8 +19,6 @@ final notificationBarStateProvider = Provider.autoDispose((ref) {
     totalCountOfActionForTakenPill: parameter.totalCountOfActionForTakenPill,
     premiumAndTrial: parameter.premiumAndTrial,
     isLinkedLoginProvider: parameter.isLinkedLoginProvider,
-    premiumTrialGuideNotificationIsClosed:
-        parameter.premiumTrialGuideNotificationIsClosed,
     premiumTrialBeginAnouncementIsClosed:
         parameter.premiumTrialBeginAnouncementIsClosed,
     recommendedSignupNotificationIsAlreadyShow:
@@ -36,13 +34,6 @@ class NotificationBarStateStore extends StateNotifier<NotificationBarState> {
     sharedPreferences.setBool(
         BoolKey.recommendedSignupNotificationIsAlreadyShow, true);
     state = state.copyWith(recommendedSignupNotificationIsAlreadyShow: true);
-  }
-
-  Future<void> closePremiumTrialNotification() async {
-    final sharedPreferences = await SharedPreferences.getInstance();
-    sharedPreferences.setBool(
-        BoolKey.premiumTrialGuideNotificationIsClosed, true);
-    state = state.copyWith(premiumTrialGuideNotificationIsClosed: true);
   }
 
   Future<void> closePremiumTrialBeginNotification() async {

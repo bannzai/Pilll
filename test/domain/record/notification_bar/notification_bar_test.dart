@@ -6,7 +6,6 @@ import 'package:pilll/domain/record/components/notification_bar/components/premi
 import 'package:pilll/domain/record/components/notification_bar/notification_bar.dart';
 import 'package:pilll/domain/record/components/notification_bar/notification_bar_state.codegen.dart';
 import 'package:pilll/domain/record/components/notification_bar/notification_bar_store.dart';
-import 'package:pilll/domain/record/components/notification_bar/components/premium_trial_guide.dart';
 import 'package:pilll/domain/record/components/notification_bar/components/premium_trial_limit.dart';
 import 'package:pilll/domain/record/components/notification_bar/components/recommend_signup.dart';
 import 'package:pilll/domain/record/components/notification_bar/components/recommend_signup_premium.dart';
@@ -75,7 +74,6 @@ void main() {
                 today.subtract(const Duration(days: 1)),
           ),
           isLinkedLoginProvider: false,
-          premiumTrialGuideNotificationIsClosed: false,
           premiumTrialBeginAnouncementIsClosed: false,
           recommendedSignupNotificationIsAlreadyShow: false,
         );
@@ -137,7 +135,6 @@ void main() {
                 today.subtract(const Duration(days: 1)),
           ),
           isLinkedLoginProvider: false,
-          premiumTrialGuideNotificationIsClosed: false,
           premiumTrialBeginAnouncementIsClosed: true,
           recommendedSignupNotificationIsAlreadyShow: false,
         );
@@ -198,7 +195,6 @@ void main() {
             discountEntitlementDeadlineDate: null,
           ),
           isLinkedLoginProvider: false,
-          premiumTrialGuideNotificationIsClosed: false,
           premiumTrialBeginAnouncementIsClosed: true,
           recommendedSignupNotificationIsAlreadyShow: false,
         );
@@ -258,7 +254,6 @@ void main() {
             discountEntitlementDeadlineDate: null,
           ),
           isLinkedLoginProvider: false,
-          premiumTrialGuideNotificationIsClosed: false,
           premiumTrialBeginAnouncementIsClosed: true,
           recommendedSignupNotificationIsAlreadyShow: false,
         );
@@ -282,65 +277,6 @@ void main() {
         expect(
           find.byWidgetPredicate(
               (widget) => widget is RecommendSignupNotificationBar),
-          findsOneWidget,
-        );
-      });
-      testWidgets('#PremiumTrialGuideNotificationBar',
-          (WidgetTester tester) async {
-        final mockTodayRepository = MockTodayService();
-        final today = DateTime(2021, 04, 29);
-
-        when(mockTodayRepository.now()).thenReturn(today);
-        when(mockTodayRepository.now()).thenReturn(today);
-        todayRepository = mockTodayRepository;
-
-        var pillSheet = PillSheet.create(PillSheetType.pillsheet_21);
-        pillSheet = pillSheet.copyWith(
-          lastTakenDate: today,
-          beginingDate: today.subtract(
-// NOTE: Not into rest duration and notification duration
-            const Duration(days: 10),
-          ),
-        );
-        final pillSheetGroup = PillSheetGroup(
-            pillSheetIDs: ["1"], pillSheets: [pillSheet], createdAt: now());
-        final state = NotificationBarState(
-          latestPillSheetGroup: pillSheetGroup,
-          totalCountOfActionForTakenPill:
-              totalCountOfActionForTakenPillForLongTimeUser,
-          premiumAndTrial: PremiumAndTrial(
-            isPremium: false,
-            isTrial: false,
-            hasDiscountEntitlement: true,
-            trialDeadlineDate: null,
-            beginTrialDate: null,
-            discountEntitlementDeadlineDate: null,
-          ),
-          isLinkedLoginProvider: true,
-          premiumTrialGuideNotificationIsClosed: false,
-          premiumTrialBeginAnouncementIsClosed: true,
-          recommendedSignupNotificationIsAlreadyShow: false,
-        );
-
-        await tester.pumpWidget(
-          ProviderScope(
-            overrides: [
-              notificationBarStoreProvider.overrideWithProvider(
-                  StateNotifierProvider.autoDispose(
-                      (_) => NotificationBarStateStore(state))),
-              notificationBarStateProvider
-                  .overrideWithProvider(Provider.autoDispose((_) => state)),
-            ],
-            child: MaterialApp(
-              home: Material(child: NotificationBar()),
-            ),
-          ),
-        );
-        await tester.pump();
-
-        expect(
-          find.byWidgetPredicate(
-              (widget) => widget is PremiumTrialGuideNotificationBar),
           findsOneWidget,
         );
       });
@@ -377,7 +313,6 @@ void main() {
             discountEntitlementDeadlineDate: null,
           ),
           isLinkedLoginProvider: true,
-          premiumTrialGuideNotificationIsClosed: false,
           premiumTrialBeginAnouncementIsClosed: true,
           recommendedSignupNotificationIsAlreadyShow: false,
         );
@@ -436,7 +371,6 @@ void main() {
             discountEntitlementDeadlineDate: null,
           ),
           isLinkedLoginProvider: true,
-          premiumTrialGuideNotificationIsClosed: false,
           premiumTrialBeginAnouncementIsClosed: true,
           recommendedSignupNotificationIsAlreadyShow: false,
         );
@@ -497,7 +431,6 @@ void main() {
             discountEntitlementDeadlineDate: null,
           ),
           isLinkedLoginProvider: false,
-          premiumTrialGuideNotificationIsClosed: false,
           premiumTrialBeginAnouncementIsClosed: true,
           recommendedSignupNotificationIsAlreadyShow: false,
         );
@@ -556,7 +489,6 @@ void main() {
             discountEntitlementDeadlineDate: null,
           ),
           isLinkedLoginProvider: true,
-          premiumTrialGuideNotificationIsClosed: false,
           premiumTrialBeginAnouncementIsClosed: true,
           recommendedSignupNotificationIsAlreadyShow: false,
         );
@@ -615,7 +547,6 @@ void main() {
             discountEntitlementDeadlineDate: null,
           ),
           isLinkedLoginProvider: true,
-          premiumTrialGuideNotificationIsClosed: false,
           premiumTrialBeginAnouncementIsClosed: true,
           recommendedSignupNotificationIsAlreadyShow: false,
         );

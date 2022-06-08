@@ -1,7 +1,6 @@
 import 'package:pilll/components/molecules/indicator.dart';
 import 'package:pilll/domain/initial_setting/migrate_info.dart';
 import 'package:pilll/domain/premium_function_survey/premium_function_survey_page.dart';
-import 'package:pilll/domain/premium_trial/premium_trial_complete_modal.dart';
 import 'package:pilll/domain/record/components/add_pill_sheet_group/add_pill_sheet_group_empty_frame.dart';
 import 'package:pilll/domain/record/components/button/record_page_button.dart';
 import 'package:pilll/domain/record/components/notification_bar/notification_bar.dart';
@@ -10,7 +9,6 @@ import 'package:pilll/domain/record/components/pill_sheet/record_page_pill_sheet
 import 'package:pilll/domain/record/record_page_state.codegen.dart';
 import 'package:pilll/domain/record/record_page_state_notifier.dart';
 import 'package:pilll/domain/record/components/header/record_page_header.dart';
-import 'package:pilll/domain/premium_trial/premium_trial_modal.dart';
 import 'package:pilll/entity/setting.codegen.dart';
 import 'package:pilll/error/universal_error_page.dart';
 import 'package:pilll/components/atoms/color.dart';
@@ -58,10 +56,6 @@ class RecordPageBody extends StatelessWidget {
       } else if (state.shouldShowPremiumFunctionSurvey) {
         await store.setTrueIsAlreadyShowPremiumFunctionSurvey();
         Navigator.of(context).push(PremiumFunctionSurveyPageRoutes.route());
-      } else if (state.shouldShowTrial) {
-        showPremiumTrialModalWhenLaunchApp(context, () {
-          showPremiumTrialCompleteModalPreDialog(context);
-        });
       }
     });
 

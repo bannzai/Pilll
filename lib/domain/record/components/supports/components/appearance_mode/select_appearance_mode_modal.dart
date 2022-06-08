@@ -6,8 +6,6 @@ import 'package:pilll/components/atoms/text_color.dart';
 import 'package:pilll/components/molecules/premium_badge.dart';
 import 'package:pilll/components/molecules/select_circle.dart';
 import 'package:pilll/domain/premium_introduction/premium_introduction_sheet.dart';
-import 'package:pilll/domain/premium_trial/premium_trial_complete_modal.dart';
-import 'package:pilll/domain/premium_trial/premium_trial_modal.dart';
 import 'package:pilll/domain/record/record_page_state.codegen.dart';
 import 'package:pilll/domain/record/record_page_state_notifier.dart';
 import 'package:pilll/entity/setting.codegen.dart';
@@ -95,13 +93,7 @@ class SelectAppearanceModeModal extends HookConsumerWidget {
           await store.asyncAction
               .switchingAppearanceMode(mode: mode, setting: state.setting);
         } else if (isPremiumFunction) {
-          if (state.premiumAndTrial.trialDeadlineDate == null) {
-            showPremiumTrialModal(context, () {
-              showPremiumTrialCompleteModalPreDialog(context);
-            });
-          } else {
-            showPremiumIntroductionSheet(context);
-          }
+          showPremiumIntroductionSheet(context);
         } else {
           // User selected non premium function mode
           await store.asyncAction
