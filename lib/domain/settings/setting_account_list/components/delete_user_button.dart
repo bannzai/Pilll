@@ -2,7 +2,6 @@ import 'dart:io';
 
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
-import 'package:package_info/package_info.dart';
 import 'package:pilll/auth/apple.dart';
 import 'package:pilll/auth/google.dart';
 import 'package:pilll/components/atoms/buttons.dart';
@@ -12,8 +11,6 @@ import 'package:pilll/components/page/discard_dialog.dart';
 import 'package:pilll/error/error_alert.dart';
 import 'package:pilll/error_log.dart';
 import 'package:pilll/router/router.dart';
-import 'package:purchases_flutter/purchases_flutter.dart';
-import 'package:url_launcher/url_launcher.dart';
 
 class DeleteUserButton extends StatelessWidget {
   @override
@@ -22,15 +19,25 @@ class DeleteUserButton extends StatelessWidget {
       padding: const EdgeInsets.only(top: 54),
       child: AlertButton(
         onPressed: () async {
-          if (Platform.isIOS) {
-            launchUrl(
-                Uri.parse("https://apps.apple.com/account/subscriptions"));
-          }
-          if (Platform.isAndroid) {
-            final package = await PackageInfo.fromPlatform();
-            launchUrl(Uri.parse(
-                "https://play.google.com/store/account/subscriptions?sku=pilll_dev_300yen_1month&package=${package.packageName}"));
-          }
+          showDiscardDialog(
+            context,
+            title: "ユーザー情報が削除されます",
+            message: "退会をするとすべてデータが削除され、二度と同じアカウントでログインができなくなります。",
+            actions: [
+              AlertButton(
+                text: "キャンセル",
+                onPressed: () async {
+                  Navigator.of(context).pop();
+                },
+              ),
+              AlertButton(
+                text: "退会する",
+                onPressed: () async {
+                  await _delete(context);
+                },
+              ),
+            ],
+          );
         },
         text: "退会する",
       ),
