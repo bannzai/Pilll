@@ -179,7 +179,7 @@ class SettingAccountCooperationListPage extends HookConsumerWidget {
     );
   }
 
-  _showSignInSheet(BuildContext context) {
+  void _showSignInSheet(BuildContext context) {
     showSignInSheet(
       context,
       SignInSheetStateContext.setting,
