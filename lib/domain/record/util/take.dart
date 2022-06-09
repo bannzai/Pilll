@@ -39,7 +39,7 @@ void _requestInAppReview() {
     }
     value += 1;
     store.setInt(key, value);
-    if (value % 7 != 0) {
+    if (value % 28 != 0) {
       return;
     }
     if (await InAppReview.instance.isAvailable()) {
