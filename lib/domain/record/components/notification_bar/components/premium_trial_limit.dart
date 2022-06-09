@@ -3,7 +3,6 @@ import 'package:flutter_svg/flutter_svg.dart';
 import 'package:pilll/analytics.dart';
 import 'package:pilll/components/atoms/font.dart';
 import 'package:pilll/components/atoms/text_color.dart';
-import 'package:pilll/util/links.dart';
 import 'package:url_launcher/url_launcher.dart';
 
 class PremiumTrialLimitNotificationBar extends StatelessWidget {
