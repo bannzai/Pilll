@@ -83,11 +83,23 @@ Future<PillSheetGroup?> take({
 
   final updatedPillSheetGroup =
       pillSheetGroup.copyWith(pillSheets: updatedPillSheets);
-  final updatedIndexses = pillSheetGroup.pillSheets.asMap().keys.where(
-        (index) =>
-            pillSheetGroup.pillSheets[index] !=
-            updatedPillSheetGroup.pillSheets[index],
-      );
+  final updatedIndexses = pillSheetGroup.pillSheets.asMap().keys.where((index) {
+    final updatedPillSheet = updatedPillSheetGroup.pillSheets[index];
+    if (pillSheetGroup.pillSheets[index] == updatedPillSheet) {
+      return false;
+    }
+
+    // 例えば2枚目のピルシート(groupIndex:1)がアクティブで、1枚目のピルシート(groupIndex:0)が最終日を記録した場合(28番目)、2枚目のピルシートのlastTakenDateが1枚目の28番目のピルシートのlastTakenDateと同じになる。
+    // その場合後続の処理で決定する履歴のafter: PillSheetの値が2枚目のピルシートの値になってしまう。これを避けるための条件式になっている
+    final updatedPillSheetLastTakenDate = updatedPillSheet.lastTakenDate;
+    if (updatedPillSheet.groupIndex == activedPillSheet.groupIndex &&
+        updatedPillSheetLastTakenDate != null &&
+        updatedPillSheet.beginingDate.isAfter(updatedPillSheetLastTakenDate)) {
+      return false;
+    }
+
+    return true;
+  }).toList();
 
   if (updatedIndexses.isEmpty) {
     return null;
