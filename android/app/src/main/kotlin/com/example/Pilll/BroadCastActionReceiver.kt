@@ -27,7 +27,7 @@ public class BroadCastActionReceiver: BroadcastReceiver() {
                 scope.launch(Dispatchers.Default) {
                     methodChannel(context).invokeMethod("recordPill", "", result)
 
-                    // Remove notification badge
+                    // Remove notification from tray and remove notification badge
                     with(NotificationManagerCompat.from(context)) {
                         cancel(PilllFirebaseMessagingService.regularlyMessageID)
                     }
