@@ -16,21 +16,17 @@ import kotlinx.coroutines.launch
 
 
 public class BroadCastActionReceiver: BroadcastReceiver() {
-    private val scope = CoroutineScope(SupervisorJob())
-
     override fun onReceive(context: Context?, intent: Intent?) {
         Log.d("android message: ", "onReceive")
         if (context != null && intent != null) {
             if (intent.action == "PILL_REMINDER") {
                 val pendingResult: PendingResult = goAsync()
                 val result = RecordPillResult(pendingResult)
-                scope.launch(Dispatchers.Default) {
-                    methodChannel(context).invokeMethod("recordPill", "", result)
+                methodChannel(context).invokeMethod("recordPill", "", result)
 
-                    // Remove notification from tray and remove notification badge
-                    with(NotificationManagerCompat.from(context)) {
-                        cancel(PilllFirebaseMessagingService.regularlyMessageID)
-                    }
+                // Remove notification from tray and remove notification badge
+                with(NotificationManagerCompat.from(context)) {
+                    cancel(PilllFirebaseMessagingService.regularlyMessageID)
                 }
             }
         }
