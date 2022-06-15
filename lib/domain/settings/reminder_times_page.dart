@@ -159,7 +159,6 @@ class ReminderTimesPage extends HookConsumerWidget {
               ? setting.reminderTimes[index].dateTime()
               : const ReminderTime(hour: 20, minute: 0).dateTime(),
           done: (dateTime) {
-            Navigator.pop(context);
             if (isEditing) {
               store.asyncAction
                   .editReminderTime(
@@ -177,6 +176,8 @@ class ReminderTimesPage extends HookConsumerWidget {
                       setting: setting)
                   .catchError((error) => showErrorAlertFor(context, error));
             }
+
+            Navigator.pop(context);
           },
         );
       },
