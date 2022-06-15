@@ -107,16 +107,6 @@ import HealthKit
     }
 }
 
-// MARK: - Syntax Sugar
-extension AppDelegate {
-    static var instance: AppDelegate? {
-        UIApplication.shared.delegate as? AppDelegate
-    }
-    func invokeFlutterMethod(method: String, arguments: [String: Any]?) {
-        channel?.invokeMethod(method, arguments: arguments)
-    }
-}
-
 // MARK: - Avoid bug for flutter app badger
 // ref: https://github.com/g123k/flutter_app_badger/pull/52
 extension UNUserNotificationCenter {
@@ -144,7 +134,7 @@ extension UNUserNotificationCenter {
 extension AppDelegate {
     func migrateFrom_1_3_2() {
         if let salvagedValue = UserDefaults.standard.string(forKey: "startSavedDate"), let lastTakenDate = UserDefaults.standard.string(forKey: "savedDate") {
-            invokeFlutterMethod(method: "salvagedOldStartTakenDate", arguments: ["salvagedOldStartTakenDate": salvagedValue, "salvagedOldLastTakenDate": lastTakenDate])
+            channel?.invokeMethod("salvagedOldStartTakenDate", arguments: ["salvagedOldStartTakenDate": salvagedValue, "salvagedOldLastTakenDate": lastTakenDate])
         }
     }
 
@@ -182,8 +172,9 @@ extension AppDelegate {
         case .pillReminder:
             switch response.actionIdentifier {
             case "RECORD_PILL":
-                invokeFlutterMethod(method: "recordPill", arguments: nil)
-                end()
+                channel?.invokeMethod("recordPill", arguments: nil, result: { result in
+                    end()
+                })
             default:
                 end()
             }

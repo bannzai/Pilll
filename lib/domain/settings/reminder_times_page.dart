@@ -1,3 +1,5 @@
+import 'dart:async';
+
 import 'package:pilll/domain/settings/setting_page_state.codegen.dart';
 import 'package:pilll/entity/setting.codegen.dart';
 import 'package:pilll/domain/settings/setting_page_state_notifier.dart';
@@ -159,24 +161,25 @@ class ReminderTimesPage extends HookConsumerWidget {
               ? setting.reminderTimes[index].dateTime()
               : const ReminderTime(hour: 20, minute: 0).dateTime(),
           done: (dateTime) {
-            Navigator.pop(context);
             if (isEditing) {
-              store.asyncAction
+              unawaited(store.asyncAction
                   .editReminderTime(
                     index: index,
                     reminderTime: ReminderTime(
                         hour: dateTime.hour, minute: dateTime.minute),
                     setting: setting,
                   )
-                  .catchError((error) => showErrorAlertFor(context, error));
+                  .catchError((error) => showErrorAlertFor(context, error)));
             } else {
-              store.asyncAction
+              unawaited(store.asyncAction
                   .addReminderTimes(
                       reminderTime: ReminderTime(
                           hour: dateTime.hour, minute: dateTime.minute),
                       setting: setting)
-                  .catchError((error) => showErrorAlertFor(context, error));
+                  .catchError((error) => showErrorAlertFor(context, error)));
             }
+
+            Navigator.pop(context);
           },
         );
       },

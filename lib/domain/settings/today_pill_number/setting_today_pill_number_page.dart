@@ -1,3 +1,5 @@
+import 'dart:async';
+
 import 'package:hooks_riverpod/hooks_riverpod.dart';
 import 'package:pilll/components/atoms/buttons.dart';
 import 'package:pilll/components/atoms/color.dart';
@@ -85,10 +87,10 @@ class SettingTodayPillNumberPage extends HookConsumerWidget {
                     children: [
                       PrimaryButton(
                         onPressed: () async {
-                          await store.modifiyTodayPillNumber(
+                          unawaited(store.modifiyTodayPillNumber(
                             pillSheetGroup: pillSheetGroup,
                             activedPillSheet: activedPillSheet,
-                          );
+                          ));
                           Navigator.of(context).pop();
                         },
                         text: "変更する",
