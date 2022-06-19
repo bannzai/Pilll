@@ -10,7 +10,7 @@ import 'package:pilll/domain/modal/release_note.dart';
 import 'package:pilll/domain/record/components/pill_sheet/components/pill_number.dart';
 import 'package:pilll/domain/record/record_page_state.codegen.dart';
 import 'package:pilll/domain/record/record_page_state_notifier.dart';
-import 'package:pilll/domain/record/util/take.dart';
+import 'package:pilll/domain/record/util/request_in_app_review.dart';
 import 'package:pilll/entity/pill_sheet.codegen.dart';
 import 'package:pilll/entity/pill_sheet_group.codegen.dart';
 import 'package:pilll/entity/pill_sheet_type.dart';
