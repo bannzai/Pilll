@@ -1,13 +1,7 @@
-import 'package:flutter/material.dart';
-import 'package:flutter_app_badger/flutter_app_badger.dart';
 import 'package:in_app_review/in_app_review.dart';
 import 'package:pilll/database/batch.dart';
-import 'package:pilll/domain/modal/release_note.dart';
-import 'package:pilll/domain/record/record_page_state_notifier.dart';
 import 'package:pilll/entity/pill_sheet.codegen.dart';
 import 'package:pilll/entity/pill_sheet_group.codegen.dart';
-import 'package:pilll/error/error_alert.dart';
-import 'package:pilll/error_log.dart';
 import 'package:pilll/database/pill_sheet.dart';
 import 'package:pilll/database/pill_sheet_group.dart';
 import 'package:pilll/database/pill_sheet_modified_history.dart';
