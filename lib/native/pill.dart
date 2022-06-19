@@ -8,6 +8,7 @@ import 'package:pilll/domain/record/util/take.dart';
 import 'package:pilll/database/pill_sheet.dart';
 import 'package:pilll/database/pill_sheet_group.dart';
 import 'package:pilll/database/pill_sheet_modified_history.dart';
+import 'package:pilll/native/app_badge.dart';
 import 'package:pilll/util/datetime/day.dart';
 
 Future<void> recordPill() async {
@@ -51,7 +52,7 @@ Future<void> recordPill() async {
     isQuickRecord: true,
   );
 
-  FlutterAppBadger.removeBadge();
+  removeAppBadge();
   // NOTE: Firebase initializeが成功しているかが定かでは無いので一番最後にログを送る
   analytics.logEvent(name: "quick_recorded");
 }

@@ -10,6 +10,7 @@ import 'package:pilll/entity/pill_sheet.codegen.dart';
 import 'package:pilll/entity/pill_sheet_group.codegen.dart';
 import 'package:pilll/error/error_alert.dart';
 import 'package:pilll/error_log.dart';
+import 'package:pilll/native/app_badge.dart';
 
 class TakenButton extends HookConsumerWidget {
   final BuildContext parentContext;
@@ -37,7 +38,7 @@ class TakenButton extends HookConsumerWidget {
 
           await store.asyncAction.taken(pillSheetGroup: pillSheetGroup);
 
-          FlutterAppBadger.removeBadge();
+          removeAppBadge();
 
           requestInAppReview();
 

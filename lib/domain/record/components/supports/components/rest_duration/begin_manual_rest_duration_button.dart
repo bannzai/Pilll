@@ -8,6 +8,7 @@ import 'package:pilll/domain/record/record_page_state_notifier.dart';
 import 'package:pilll/entity/pill_sheet.codegen.dart';
 import 'package:pilll/entity/pill_sheet_group.codegen.dart';
 import 'package:pilll/entity/setting.codegen.dart';
+import 'package:pilll/native/app_badge.dart';
 
 class BeginManualRestDurationButton extends StatelessWidget {
   final PillSheetAppearanceMode appearanceMode;
@@ -46,7 +47,7 @@ class BeginManualRestDurationButton extends StatelessWidget {
               activedPillSheet: activedPillSheet,
               onDone: () async {
                 analytics.logEvent(name: "done_rest_duration");
-                FlutterAppBadger.removeBadge();
+                removeAppBadge();
 
                 Navigator.of(context).pop();
                 await store.asyncAction.beginRestDuration(

@@ -18,6 +18,7 @@ import 'package:pilll/entity/setting.codegen.dart';
 import 'package:pilll/entity/weekday.dart';
 import 'package:pilll/error/error_alert.dart';
 import 'package:pilll/error_log.dart';
+import 'package:pilll/native/app_badge.dart';
 import 'package:pilll/provider/premium_and_trial.codegen.dart';
 import 'package:pilll/util/datetime/day.dart';
 
@@ -134,7 +135,7 @@ class RecordPagePillSheet extends StatelessWidget {
                   pillSheet: pillSheet,
                 );
 
-                FlutterAppBadger.removeBadge();
+                removeAppBadge();
 
                 requestInAppReview();
 
