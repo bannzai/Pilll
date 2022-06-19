@@ -14,23 +14,7 @@ import 'package:pilll/database/pill_sheet_modified_history.dart';
 import 'package:pilll/util/shared_preference/keys.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
-Future<void> effectAfterTakenPillAction({
-  required BuildContext context,
-  required Future<void> taken,
-  required RecordPageStateNotifier store,
-}) async {
-  try {
-    await taken;
-    FlutterAppBadger.removeBadge();
-    _requestInAppReview();
-    await showReleaseNotePreDialog(context);
-  } catch (exception, stack) {
-    errorLogger.recordError(exception, stack);
-    showErrorAlert(context, message: exception.toString());
-  }
-}
-
-void _requestInAppReview() {
+void requestInAppReview() {
   SharedPreferences.getInstance().then((store) async {
     final key = IntKey.totalCountOfActionForTakenPill;
     int? value = store.getInt(key);
