@@ -39,18 +39,20 @@ Future<void> recordPill() async {
 
   final takenDate = now();
   final batchFactory = BatchFactory(database);
-  await take(
-    takenDate: takenDate,
-    pillSheetGroup: pillSheetGroup,
-    activedPillSheet: activedPillSheet,
-    batchFactory: batchFactory,
-    pillSheetDatastore: pillSheetDatastore,
-    pillSheetModifiedHistoryDatastore: pillSheetModifiedHistoryDatastore,
-    pillSheetGroupDatastore: pillSheetGroupDatastore,
-    isQuickRecord: true,
-  );
-
-  FlutterAppBadger.removeBadge();
-  // NOTE: Firebase initializeが成功しているかが定かでは無いので一番最後にログを送る
-  analytics.logEvent(name: "quick_recorded");
+  try {
+    await take(
+      takenDate: takenDate,
+      pillSheetGroup: pillSheetGroup,
+      activedPillSheet: activedPillSheet,
+      batchFactory: batchFactory,
+      pillSheetDatastore: pillSheetDatastore,
+      pillSheetModifiedHistoryDatastore: pillSheetModifiedHistoryDatastore,
+      pillSheetGroupDatastore: pillSheetGroupDatastore,
+      isQuickRecord: true,
+    );
+  } finally {
+    FlutterAppBadger.removeBadge();
+    // NOTE: Firebase initializeが成功しているかが定かでは無いので一番最後にログを送る
+    analytics.logEvent(name: "quick_recorded");
+  }
 }
