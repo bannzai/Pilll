@@ -128,7 +128,7 @@ class RecordPagePillSheet extends StatelessWidget {
                     pageIndex: pageIndex,
                     pillNumberIntoPillSheet: pillNumberIntoPillSheet);
               } else {
-                store.asyncAction.takenWithPillNumber(
+                await store.asyncAction.takenWithPillNumber(
                   pillSheetGroup: pillSheetGroup,
                   pillNumberIntoPillSheet: pillNumberIntoPillSheet,
                   pillSheet: pillSheet,
