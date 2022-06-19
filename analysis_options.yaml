@@ -7,7 +7,6 @@ analyzer:
     missing_return: error
     invalid_annotation_target: ignore
   exclude:
-    - "lib/**/*.g.dart"
     - "lib/**/*.freezed.dart"
 
 linter:
