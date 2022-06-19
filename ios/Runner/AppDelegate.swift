@@ -22,6 +22,9 @@ import HealthKit
             }
 
             switch call.method {
+            case "removeAppBadge":
+                UIApplication.shared.applicationIconBadgeNumber = 0
+                completionHandler(["result": "success"])
             case "isHealthDataAvailable":
                 completionHandler([
                     "result": "success",
