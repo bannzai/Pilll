@@ -39,6 +39,7 @@ Future<void> recordPill() async {
 
   final takenDate = now();
   final batchFactory = BatchFactory(database);
+
   await take(
     takenDate: takenDate,
     pillSheetGroup: pillSheetGroup,

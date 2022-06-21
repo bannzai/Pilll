@@ -1,19 +1,23 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_app_badger/flutter_app_badger.dart';
 import 'package:pilll/analytics.dart';
 import 'package:pilll/components/organisms/pill_mark/pill_mark.dart';
 import 'package:pilll/components/organisms/pill_mark/pill_mark_line.dart';
 import 'package:pilll/components/organisms/pill_mark/pill_mark_with_number_layout.dart';
 import 'package:pilll/components/organisms/pill_sheet/pill_sheet_view_layout.dart';
 import 'package:pilll/components/organisms/pill_sheet/pill_sheet_view_weekday_line.dart';
+import 'package:pilll/domain/modal/release_note.dart';
 import 'package:pilll/domain/record/components/pill_sheet/components/pill_number.dart';
 import 'package:pilll/domain/record/record_page_state.codegen.dart';
 import 'package:pilll/domain/record/record_page_state_notifier.dart';
-import 'package:pilll/domain/record/util/take.dart';
+import 'package:pilll/domain/record/util/request_in_app_review.dart';
 import 'package:pilll/entity/pill_sheet.codegen.dart';
 import 'package:pilll/entity/pill_sheet_group.codegen.dart';
 import 'package:pilll/entity/pill_sheet_type.dart';
 import 'package:pilll/entity/setting.codegen.dart';
 import 'package:pilll/entity/weekday.dart';
+import 'package:pilll/error/error_alert.dart';
+import 'package:pilll/error_log.dart';
 import 'package:pilll/provider/premium_and_trial.codegen.dart';
 import 'package:pilll/util/datetime/day.dart';
 
@@ -108,30 +112,35 @@ class RecordPagePillSheet extends StatelessWidget {
             ),
           ),
           onTap: () async {
-            analytics.logEvent(name: "pill_mark_tapped", parameters: {
-              "last_taken_pill_number": pillSheet.lastTakenPillNumber,
-              "today_pill_number": pillSheet.todayPillNumber,
-            });
+            try {
+              analytics.logEvent(name: "pill_mark_tapped", parameters: {
+                "last_taken_pill_number": pillSheet.lastTakenPillNumber,
+                "today_pill_number": pillSheet.todayPillNumber,
+              });
 
-            if (pillSheet.todayPillNumber < pillNumberIntoPillSheet) {
-              return;
-            }
+              if (pillSheet.todayPillNumber < pillNumberIntoPillSheet) {
+                return;
+              }
 
-            if (pillSheet.lastTakenPillNumber >= pillNumberIntoPillSheet) {
-              await store.asyncAction.revertTaken(
-                  pillSheetGroup: pillSheetGroup,
-                  pageIndex: pageIndex,
-                  pillNumberIntoPillSheet: pillNumberIntoPillSheet);
-            } else {
-              await effectAfterTakenPillAction(
-                context: context,
-                taken: store.asyncAction.takenWithPillNumber(
+              if (pillSheet.lastTakenPillNumber >= pillNumberIntoPillSheet) {
+                await store.asyncAction.revertTaken(
+                    pillSheetGroup: pillSheetGroup,
+                    pageIndex: pageIndex,
+                    pillNumberIntoPillSheet: pillNumberIntoPillSheet);
+              } else {
+                // NOTE: batch.commit でリモートのDBに書き込む時間がかかるので事前にバッジを0にする
+                FlutterAppBadger.removeBadge();
+                await store.asyncAction.takenWithPillNumber(
                   pillSheetGroup: pillSheetGroup,
                   pillNumberIntoPillSheet: pillNumberIntoPillSheet,
                   pillSheet: pillSheet,
-                ),
-                store: store,
-              );
+                );
+                requestInAppReview();
+                await showReleaseNotePreDialog(context);
+              }
+            } catch (exception, stack) {
+              errorLogger.recordError(exception, stack);
+              showErrorAlert(context, message: exception.toString());
             }
           },
         ),
