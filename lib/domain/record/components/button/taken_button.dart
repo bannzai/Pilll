@@ -34,13 +34,10 @@ class TakenButton extends HookConsumerWidget {
             "last_taken_pill_number": pillSheet.lastTakenPillNumber,
             "today_pill_number": pillSheet.todayPillNumber,
           });
-
-          await store.asyncAction.taken(pillSheetGroup: pillSheetGroup);
-
+          // NOTE: batch.commit でリモートのDBに書き込む時間がかかるので事前にバッジを0にする
           FlutterAppBadger.removeBadge();
-
+          await store.asyncAction.taken(pillSheetGroup: pillSheetGroup);
           requestInAppReview();
-
           await showReleaseNotePreDialog(context);
         } catch (exception, stack) {
           errorLogger.recordError(exception, stack);

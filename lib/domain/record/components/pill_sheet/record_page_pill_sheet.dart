@@ -128,16 +128,14 @@ class RecordPagePillSheet extends StatelessWidget {
                     pageIndex: pageIndex,
                     pillNumberIntoPillSheet: pillNumberIntoPillSheet);
               } else {
+                // NOTE: batch.commit でリモートのDBに書き込む時間がかかるので事前にバッジを0にする
+                FlutterAppBadger.removeBadge();
                 await store.asyncAction.takenWithPillNumber(
                   pillSheetGroup: pillSheetGroup,
                   pillNumberIntoPillSheet: pillNumberIntoPillSheet,
                   pillSheet: pillSheet,
                 );
-
-                FlutterAppBadger.removeBadge();
-
                 requestInAppReview();
-
                 await showReleaseNotePreDialog(context);
               }
             } catch (exception, stack) {

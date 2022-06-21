@@ -46,14 +46,13 @@ class BeginManualRestDurationButton extends StatelessWidget {
               activedPillSheet: activedPillSheet,
               onDone: () async {
                 analytics.logEvent(name: "done_rest_duration");
+                // NOTE: batch.commit でリモートのDBに書き込む時間がかかるので事前にバッジを0にする
                 FlutterAppBadger.removeBadge();
-
                 Navigator.of(context).pop();
                 await store.asyncAction.beginRestDuration(
                   pillSheetGroup: pillSheetGroup,
                   activedPillSheet: activedPillSheet,
                 );
-
                 didBeginRestDuration();
               },
             );
