@@ -484,7 +484,8 @@ void main() {
       );
 
       final userDatastore = MockUserDatastore();
-      when(userDatastore.trial(setting)).thenAnswer((_) => Future.value());
+      when(userDatastore.endInitialSetting(setting))
+          .thenAnswer((_) => Future.value());
 
       var mockTodayRepository = MockTodayService();
       final _today = DateTime.parse("2020-09-19");

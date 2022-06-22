@@ -402,10 +402,11 @@ class MockUserDatastore extends _i1.Mock implements _i26.UserDatastore {
       returnValue: Future<void>.value(),
       returnValueForMissingStub: Future<void>.value()) as _i20.Future<void>);
   @override
-  _i20.Future<void> trial(_i3.Setting? setting) => (super.noSuchMethod(
-      Invocation.method(#trial, [setting]),
-      returnValue: Future<void>.value(),
-      returnValueForMissingStub: Future<void>.value()) as _i20.Future<void>);
+  _i20.Future<void> endInitialSetting(_i3.Setting? setting) =>
+      (super.noSuchMethod(Invocation.method(#trial, [setting]),
+              returnValue: Future<void>.value(),
+              returnValueForMissingStub: Future<void>.value())
+          as _i20.Future<void>);
   @override
   _i20.Future<void> sendPremiumFunctionSurvey(
           List<_i27.PremiumFunctionSurveyElementType>? elements,

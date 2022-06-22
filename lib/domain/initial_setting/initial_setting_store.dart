@@ -190,7 +190,7 @@ class InitialSettingStateStore extends StateNotifier<InitialSettingState> {
 
     await batch.commit();
 
-    await _userDatastore.trial(setting);
+    await _userDatastore.endInitialSetting(setting);
   }
 
   void showHUD() {

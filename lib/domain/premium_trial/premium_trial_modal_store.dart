@@ -71,7 +71,7 @@ class PremiumTrialModalStateStore
       throw AssertionError("Unexpected setting is null when start to trial");
     }
     try {
-      await _userDatastore.trial(setting);
+      await _userDatastore.endInitialSetting(setting);
     } catch (exception, stack) {
       errorLogger.recordError(exception, stack);
       throw UserDisplayedError("エラーが発生しました。通信環境をお確かめのうえ再度お試しください");

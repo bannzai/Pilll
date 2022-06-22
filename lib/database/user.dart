@@ -150,7 +150,7 @@ class UserDatastore {
     }, SetOptions(merge: true));
   }
 
-  Future<void> trial(Setting setting) {
+  Future<void> endInitialSetting(Setting setting) {
     final settingForTrial = setting.copyWith(
       pillSheetAppearanceMode: PillSheetAppearanceMode.date,
       isAutomaticallyCreatePillSheet: true,
