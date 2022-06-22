@@ -403,7 +403,7 @@ class MockUserDatastore extends _i1.Mock implements _i26.UserDatastore {
       returnValueForMissingStub: Future<void>.value()) as _i20.Future<void>);
   @override
   _i20.Future<void> endInitialSetting(_i3.Setting? setting) =>
-      (super.noSuchMethod(Invocation.method(#trial, [setting]),
+      (super.noSuchMethod(Invocation.method(#endInitialSetting, [setting]),
               returnValue: Future<void>.value(),
               returnValueForMissingStub: Future<void>.value())
           as _i20.Future<void>);
