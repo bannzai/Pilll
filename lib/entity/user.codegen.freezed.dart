@@ -188,7 +188,8 @@ class _$UserTearOff {
       @JsonKey(fromJson: TimestampConverter.timestampToDateTime, toJson: TimestampConverter.dateTimeToTimestamp)
           DateTime? trialDeadlineDate,
       @JsonKey(fromJson: TimestampConverter.timestampToDateTime, toJson: TimestampConverter.dateTimeToTimestamp)
-          DateTime? discountEntitlementDeadlineDate}) {
+          DateTime? discountEntitlementDeadlineDate,
+      bool useTimeZoneOffset = false}) {
     return _User(
       id: id,
       setting: setting,
@@ -204,6 +205,7 @@ class _$UserTearOff {
       beginTrialDate: beginTrialDate,
       trialDeadlineDate: trialDeadlineDate,
       discountEntitlementDeadlineDate: discountEntitlementDeadlineDate,
+      useTimeZoneOffset: useTimeZoneOffset,
     );
   }
 
@@ -243,6 +245,7 @@ mixin _$User {
       toJson: TimestampConverter.dateTimeToTimestamp)
   DateTime? get discountEntitlementDeadlineDate =>
       throw _privateConstructorUsedError;
+  bool get useTimeZoneOffset => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
@@ -271,7 +274,8 @@ abstract class $UserCopyWith<$Res> {
       @JsonKey(fromJson: TimestampConverter.timestampToDateTime, toJson: TimestampConverter.dateTimeToTimestamp)
           DateTime? trialDeadlineDate,
       @JsonKey(fromJson: TimestampConverter.timestampToDateTime, toJson: TimestampConverter.dateTimeToTimestamp)
-          DateTime? discountEntitlementDeadlineDate});
+          DateTime? discountEntitlementDeadlineDate,
+      bool useTimeZoneOffset});
 
   $SettingCopyWith<$Res>? get setting;
 }
@@ -300,6 +304,7 @@ class _$UserCopyWithImpl<$Res> implements $UserCopyWith<$Res> {
     Object? beginTrialDate = freezed,
     Object? trialDeadlineDate = freezed,
     Object? discountEntitlementDeadlineDate = freezed,
+    Object? useTimeZoneOffset = freezed,
   }) {
     return _then(_value.copyWith(
       id: id == freezed
@@ -359,6 +364,10 @@ class _$UserCopyWithImpl<$Res> implements $UserCopyWith<$Res> {
           ? _value.discountEntitlementDeadlineDate
           : discountEntitlementDeadlineDate // ignore: cast_nullable_to_non_nullable
               as DateTime?,
+      useTimeZoneOffset: useTimeZoneOffset == freezed
+          ? _value.useTimeZoneOffset
+          : useTimeZoneOffset // ignore: cast_nullable_to_non_nullable
+              as bool,
     ));
   }
 
@@ -397,7 +406,8 @@ abstract class _$UserCopyWith<$Res> implements $UserCopyWith<$Res> {
       @JsonKey(fromJson: TimestampConverter.timestampToDateTime, toJson: TimestampConverter.dateTimeToTimestamp)
           DateTime? trialDeadlineDate,
       @JsonKey(fromJson: TimestampConverter.timestampToDateTime, toJson: TimestampConverter.dateTimeToTimestamp)
-          DateTime? discountEntitlementDeadlineDate});
+          DateTime? discountEntitlementDeadlineDate,
+      bool useTimeZoneOffset});
 
   @override
   $SettingCopyWith<$Res>? get setting;
@@ -428,6 +438,7 @@ class __$UserCopyWithImpl<$Res> extends _$UserCopyWithImpl<$Res>
     Object? beginTrialDate = freezed,
     Object? trialDeadlineDate = freezed,
     Object? discountEntitlementDeadlineDate = freezed,
+    Object? useTimeZoneOffset = freezed,
   }) {
     return _then(_User(
       id: id == freezed
@@ -487,6 +498,10 @@ class __$UserCopyWithImpl<$Res> extends _$UserCopyWithImpl<$Res>
           ? _value.discountEntitlementDeadlineDate
           : discountEntitlementDeadlineDate // ignore: cast_nullable_to_non_nullable
               as DateTime?,
+      useTimeZoneOffset: useTimeZoneOffset == freezed
+          ? _value.useTimeZoneOffset
+          : useTimeZoneOffset // ignore: cast_nullable_to_non_nullable
+              as bool,
     ));
   }
 }
@@ -513,7 +528,8 @@ class _$_User extends _User {
       @JsonKey(fromJson: TimestampConverter.timestampToDateTime, toJson: TimestampConverter.dateTimeToTimestamp)
           this.trialDeadlineDate,
       @JsonKey(fromJson: TimestampConverter.timestampToDateTime, toJson: TimestampConverter.dateTimeToTimestamp)
-          this.discountEntitlementDeadlineDate})
+          this.discountEntitlementDeadlineDate,
+      this.useTimeZoneOffset = false})
       : super._();
 
   factory _$_User.fromJson(Map<String, dynamic> json) => _$$_UserFromJson(json);
@@ -563,10 +579,13 @@ class _$_User extends _User {
       fromJson: TimestampConverter.timestampToDateTime,
       toJson: TimestampConverter.dateTimeToTimestamp)
   final DateTime? discountEntitlementDeadlineDate;
+  @JsonKey()
+  @override
+  final bool useTimeZoneOffset;
 
   @override
   String toString() {
-    return 'User(id: $id, setting: $setting, migratedFlutter: $migratedFlutter, userIDWhenCreateUser: $userIDWhenCreateUser, anonymousUserID: $anonymousUserID, userDocumentIDSets: $userDocumentIDSets, anonymousUserIDSets: $anonymousUserIDSets, firebaseCurrentUserIDSets: $firebaseCurrentUserIDSets, isPremium: $isPremium, isTrial: $isTrial, hasDiscountEntitlement: $hasDiscountEntitlement, beginTrialDate: $beginTrialDate, trialDeadlineDate: $trialDeadlineDate, discountEntitlementDeadlineDate: $discountEntitlementDeadlineDate)';
+    return 'User(id: $id, setting: $setting, migratedFlutter: $migratedFlutter, userIDWhenCreateUser: $userIDWhenCreateUser, anonymousUserID: $anonymousUserID, userDocumentIDSets: $userDocumentIDSets, anonymousUserIDSets: $anonymousUserIDSets, firebaseCurrentUserIDSets: $firebaseCurrentUserIDSets, isPremium: $isPremium, isTrial: $isTrial, hasDiscountEntitlement: $hasDiscountEntitlement, beginTrialDate: $beginTrialDate, trialDeadlineDate: $trialDeadlineDate, discountEntitlementDeadlineDate: $discountEntitlementDeadlineDate, useTimeZoneOffset: $useTimeZoneOffset)';
   }
 
   @override
@@ -598,7 +617,9 @@ class _$_User extends _User {
                 .equals(other.trialDeadlineDate, trialDeadlineDate) &&
             const DeepCollectionEquality().equals(
                 other.discountEntitlementDeadlineDate,
-                discountEntitlementDeadlineDate));
+                discountEntitlementDeadlineDate) &&
+            const DeepCollectionEquality()
+                .equals(other.useTimeZoneOffset, useTimeZoneOffset));
   }
 
   @override
@@ -617,7 +638,8 @@ class _$_User extends _User {
       const DeepCollectionEquality().hash(hasDiscountEntitlement),
       const DeepCollectionEquality().hash(beginTrialDate),
       const DeepCollectionEquality().hash(trialDeadlineDate),
-      const DeepCollectionEquality().hash(discountEntitlementDeadlineDate));
+      const DeepCollectionEquality().hash(discountEntitlementDeadlineDate),
+      const DeepCollectionEquality().hash(useTimeZoneOffset));
 
   @JsonKey(ignore: true)
   @override
@@ -649,7 +671,8 @@ abstract class _User extends User {
       @JsonKey(fromJson: TimestampConverter.timestampToDateTime, toJson: TimestampConverter.dateTimeToTimestamp)
           DateTime? trialDeadlineDate,
       @JsonKey(fromJson: TimestampConverter.timestampToDateTime, toJson: TimestampConverter.dateTimeToTimestamp)
-          DateTime? discountEntitlementDeadlineDate}) = _$_User;
+          DateTime? discountEntitlementDeadlineDate,
+      bool useTimeZoneOffset}) = _$_User;
   const _User._() : super._();
 
   factory _User.fromJson(Map<String, dynamic> json) = _$_User.fromJson;
@@ -692,6 +715,8 @@ abstract class _User extends User {
       fromJson: TimestampConverter.timestampToDateTime,
       toJson: TimestampConverter.dateTimeToTimestamp)
   DateTime? get discountEntitlementDeadlineDate;
+  @override
+  bool get useTimeZoneOffset;
   @override
   @JsonKey(ignore: true)
   _$UserCopyWith<_User> get copyWith => throw _privateConstructorUsedError;
