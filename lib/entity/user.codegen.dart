@@ -101,6 +101,7 @@ class User with _$User {
       toJson: TimestampConverter.dateTimeToTimestamp,
     )
         DateTime? discountEntitlementDeadlineDate,
+    bool useTimeZoneOffset,
   }) = _User;
 
   factory User.fromJson(Map<String, dynamic> json) => _$UserFromJson(json);
