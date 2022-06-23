@@ -2,6 +2,7 @@ import 'dart:io';
 
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
+import 'package:pilll/analytics.dart';
 import 'package:pilll/auth/apple.dart';
 import 'package:pilll/auth/google.dart';
 import 'package:pilll/components/atoms/buttons.dart';
@@ -27,12 +28,14 @@ class DeleteUserButton extends StatelessWidget {
               AlertButton(
                 text: "キャンセル",
                 onPressed: () async {
+                  analytics.logEvent(name: "cancel_delete_user");
                   Navigator.of(context).pop();
                 },
               ),
               AlertButton(
                 text: "退会する",
                 onPressed: () async {
+                  analytics.logEvent(name: "pressed_delete_user_button");
                   await _delete(context);
                 },
               ),
