@@ -56,47 +56,11 @@ class PrimaryButton extends HookWidget {
   }
 }
 
-class SecondaryButton extends StatelessWidget {
-  final String text;
-  final Future<void> Function() onPressed;
-
-  const SecondaryButton({
-    Key? key,
-    required this.onPressed,
-    required this.text,
-  }) : super(key: key);
-
-  Widget build(BuildContext context) {
-    var isProcessing = false;
-    return SizedBox(
-      height: 44,
-      child: TextButton(
-        style: TextButton.styleFrom(backgroundColor: Colors.transparent),
-        child: Text(text, style: TextColorStyle.primary),
-        onPressed: () async {
-          if (isProcessing) {
-            return;
-          }
-          isProcessing = true;
-
-          try {
-            await onPressed.call();
-          } catch (error) {
-            rethrow;
-          } finally {
-            isProcessing = false;
-          }
-        },
-      ),
-    );
-  }
-}
-
-class TertiaryButton extends HookWidget {
+class UndoButton extends HookWidget {
   final String text;
   final Future<void> Function()? onPressed;
 
-  const TertiaryButton({
+  const UndoButton({
     Key? key,
     required this.onPressed,
     required this.text,
@@ -139,6 +103,42 @@ class TertiaryButton extends HookWidget {
                 isProcessing.value = false;
               }
             },
+    );
+  }
+}
+
+class SecondaryButton extends StatelessWidget {
+  final String text;
+  final Future<void> Function() onPressed;
+
+  const SecondaryButton({
+    Key? key,
+    required this.onPressed,
+    required this.text,
+  }) : super(key: key);
+
+  Widget build(BuildContext context) {
+    var isProcessing = false;
+    return SizedBox(
+      height: 44,
+      child: TextButton(
+        style: TextButton.styleFrom(backgroundColor: Colors.transparent),
+        child: Text(text, style: TextColorStyle.primary),
+        onPressed: () async {
+          if (isProcessing) {
+            return;
+          }
+          isProcessing = true;
+
+          try {
+            await onPressed.call();
+          } catch (error) {
+            rethrow;
+          } finally {
+            isProcessing = false;
+          }
+        },
+      ),
     );
   }
 }
