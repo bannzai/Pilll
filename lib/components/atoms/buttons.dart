@@ -1,10 +1,11 @@
+import 'package:flutter_hooks/flutter_hooks.dart';
 import 'package:pilll/components/atoms/button.dart';
 import 'package:pilll/components/atoms/color.dart';
 import 'package:pilll/components/atoms/font.dart';
 import 'package:pilll/components/atoms/text_color.dart';
 import 'package:flutter/material.dart';
 
-class PrimaryButton extends StatelessWidget {
+class PrimaryButton extends HookWidget {
   final String text;
   final Future<void> Function()? onPressed;
 
@@ -15,36 +16,45 @@ class PrimaryButton extends StatelessWidget {
   }) : super(key: key);
 
   Widget build(BuildContext context) {
-    var isProcessing = false;
-    return ConstrainedBox(
-      constraints:
-          const BoxConstraints(maxHeight: 44, minHeight: 44, minWidth: 180),
-      child: ElevatedButton(
-        child: Text(text, style: ButtonTextStyle.main),
-        style: ButtonStyle(
-            backgroundColor: MaterialStateProperty.resolveWith((statuses) {
-          if (statuses.contains(MaterialState.disabled)) {
-            return PilllColors.lightGray;
-          }
-          return PilllColors.secondary;
-        })),
-        onPressed: onPressed == null
-            ? null
-            : () async {
-                if (isProcessing) {
-                  return;
-                }
-                isProcessing = true;
-
-                try {
-                  await onPressed?.call();
-                } catch (error) {
-                  rethrow;
-                } finally {
-                  isProcessing = false;
-                }
-              },
+    final isProcessing = useState(false);
+    return ElevatedButton(
+      child: ConstrainedBox(
+        constraints: const BoxConstraints(
+            maxHeight: 44, minHeight: 44, minWidth: 180, maxWidth: 180),
+        child: Stack(
+          alignment: Alignment.center,
+          children: [
+            Text(text, style: ButtonTextStyle.main),
+            if (isProcessing.value)
+              const CircularProgressIndicator(
+                  valueColor: AlwaysStoppedAnimation(Colors.grey))
+          ],
+        ),
       ),
+      style: ButtonStyle(
+          backgroundColor: MaterialStateProperty.resolveWith((statuses) {
+        if (statuses.contains(MaterialState.disabled)) {
+          return PilllColors.lightGray;
+        }
+        return PilllColors.secondary;
+      })),
+      onPressed: isProcessing.value || onPressed == null
+          ? null
+          : () async {
+              if (isProcessing.value) {
+                return;
+              }
+              isProcessing.value = true;
+
+              try {
+                await Future.delayed(const Duration(seconds: 1));
+                await onPressed?.call();
+              } catch (error) {
+                rethrow;
+              } finally {
+                isProcessing.value = false;
+              }
+            },
     );
   }
 }
