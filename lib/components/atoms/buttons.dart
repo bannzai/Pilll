@@ -25,9 +25,7 @@ class PrimaryButton extends HookWidget {
           alignment: Alignment.center,
           children: [
             Text(text, style: ButtonTextStyle.main),
-            if (isProcessing.value)
-              const CircularProgressIndicator(
-                  valueColor: AlwaysStoppedAnimation(Colors.grey))
+            if (isProcessing.value) _Loading(),
           ],
         ),
       ),
@@ -297,5 +295,13 @@ class AlertButton extends StatelessWidget {
       ),
       onPressed: onPressed,
     );
+  }
+}
+
+class _Loading extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return const CircularProgressIndicator(
+        valueColor: AlwaysStoppedAnimation(Colors.grey));
   }
 }
