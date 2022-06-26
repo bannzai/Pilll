@@ -107,7 +107,7 @@ class UndoButton extends HookWidget {
   }
 }
 
-class RedTextButton extends StatelessWidget {
+class RedTextButton extends HookWidget {
   final String text;
   final Future<void> Function() onPressed;
 
@@ -118,26 +118,37 @@ class RedTextButton extends StatelessWidget {
   }) : super(key: key);
 
   Widget build(BuildContext context) {
-    var isProcessing = false;
+    var isProcessing = useState(false);
     return SizedBox(
       height: 44,
       child: TextButton(
         style: TextButton.styleFrom(backgroundColor: Colors.transparent),
-        child: Text(text, style: TextColorStyle.primary),
-        onPressed: () async {
-          if (isProcessing) {
-            return;
-          }
-          isProcessing = true;
+        child: Stack(
+          alignment: Alignment.center,
+          children: [
+            Text(text,
+                style: isProcessing.value
+                    ? TextColorStyle.gray
+                    : TextColorStyle.primary),
+            if (isProcessing.value) _Loading(),
+          ],
+        ),
+        onPressed: isProcessing.value
+            ? null
+            : () async {
+                if (isProcessing.value) {
+                  return;
+                }
+                isProcessing.value = true;
 
-          try {
-            await onPressed.call();
-          } catch (error) {
-            rethrow;
-          } finally {
-            isProcessing = false;
-          }
-        },
+                try {
+                  await onPressed.call();
+                } catch (error) {
+                  rethrow;
+                } finally {
+                  isProcessing.value = false;
+                }
+              },
       ),
     );
   }
@@ -314,7 +325,13 @@ class AlertButton extends StatelessWidget {
 class _Loading extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return const CircularProgressIndicator(
-        strokeWidth: 1, valueColor: AlwaysStoppedAnimation(Colors.grey));
+    return const SizedBox(
+      width: 20,
+      height: 20,
+      child: const CircularProgressIndicator(
+        strokeWidth: 1,
+        valueColor: AlwaysStoppedAnimation(Colors.grey),
+      ),
+    );
   }
 }
