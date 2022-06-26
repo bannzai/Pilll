@@ -78,8 +78,7 @@ class AddPillSheetGroupPage extends HookConsumerWidget {
                           onPressed: () async {
                             analytics.logEvent(
                                 name: "pressed_add_pill_sheet_group");
-                            store.register(setting);
-
+                            await store.register(setting);
                             Navigator.of(context).pop();
                           },
                         ),
