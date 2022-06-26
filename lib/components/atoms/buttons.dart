@@ -45,7 +45,6 @@ class PrimaryButton extends HookWidget {
               isProcessing.value = true;
 
               try {
-                await Future.delayed(const Duration(seconds: 1));
                 await onPressed?.call();
               } catch (error) {
                 rethrow;
