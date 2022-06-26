@@ -63,7 +63,7 @@ class DisplayNumberSettingSheet extends HookConsumerWidget {
                   textAlign: TextAlign.center,
                 ),
                 const Spacer(),
-                SecondaryButton(
+                RedTextButton(
                   text: "変更",
                   onPressed: () async {
                     analytics.logEvent(

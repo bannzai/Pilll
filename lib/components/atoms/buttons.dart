@@ -107,11 +107,11 @@ class UndoButton extends HookWidget {
   }
 }
 
-class SecondaryButton extends StatelessWidget {
+class RedTextButton extends StatelessWidget {
   final String text;
   final Future<void> Function() onPressed;
 
-  const SecondaryButton({
+  const RedTextButton({
     Key? key,
     required this.onPressed,
     required this.text,
