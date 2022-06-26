@@ -92,9 +92,9 @@ class SecondaryButton extends StatelessWidget {
   }
 }
 
-class TertiaryButton extends StatelessWidget {
+class TertiaryButton extends HookWidget {
   final String text;
-  final Future<void> Function() onPressed;
+  final Future<void> Function()? onPressed;
 
   const TertiaryButton({
     Key? key,
@@ -103,28 +103,42 @@ class TertiaryButton extends StatelessWidget {
   }) : super(key: key);
 
   Widget build(BuildContext context) {
-    var isProcessing = false;
-    return SizedBox(
-      width: 180,
-      height: 44,
-      child: TextButton(
-        style: TextButton.styleFrom(backgroundColor: PilllColors.gray),
-        child:
-            Text(text, style: ButtonTextStyle.main.merge(TextColorStyle.white)),
-        onPressed: () async {
-          if (isProcessing) {
-            return;
-          }
-          isProcessing = true;
-          try {
-            await onPressed.call();
-          } catch (error) {
-            rethrow;
-          } finally {
-            isProcessing = false;
-          }
-        },
+    final isProcessing = useState(false);
+    return ElevatedButton(
+      child: ConstrainedBox(
+        constraints: const BoxConstraints(
+            maxHeight: 44, minHeight: 44, minWidth: 180, maxWidth: 180),
+        child: Stack(
+          alignment: Alignment.center,
+          children: [
+            Text(text, style: ButtonTextStyle.main),
+            if (isProcessing.value) _Loading(),
+          ],
+        ),
       ),
+      style: ButtonStyle(
+          backgroundColor: MaterialStateProperty.resolveWith((statuses) {
+        if (statuses.contains(MaterialState.disabled)) {
+          return PilllColors.lightGray;
+        }
+        return PilllColors.gray;
+      })),
+      onPressed: isProcessing.value || onPressed == null
+          ? null
+          : () async {
+              if (isProcessing.value) {
+                return;
+              }
+              isProcessing.value = true;
+
+              try {
+                await onPressed?.call();
+              } catch (error) {
+                rethrow;
+              } finally {
+                isProcessing.value = false;
+              }
+            },
     );
   }
 }
@@ -301,6 +315,6 @@ class _Loading extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return const CircularProgressIndicator(
-        valueColor: AlwaysStoppedAnimation(Colors.grey));
+        strokeWidth: 1, valueColor: AlwaysStoppedAnimation(Colors.grey));
   }
 }
