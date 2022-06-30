@@ -21,28 +21,29 @@ import 'package:hooks_riverpod/hooks_riverpod.dart';
 import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 
 Future<void> entrypoint() async {
-  WidgetsFlutterBinding.ensureInitialized();
-  await Firebase.initializeApp();
-  if (kDebugMode) {
-    overrideDebugPrint();
-  }
-
-  if (Environment.isLocal) {
-    connectToEmulator();
-  }
-  ErrorWidget.builder = (FlutterErrorDetails details) {
-    return UniversalErrorPage(
-      error: details.exception.toString(),
-      child: null,
-      reload: () {
-        rootKey.currentState?.reload();
-      },
-    );
-  };
-  // MEMO: FirebaseCrashlytics#recordFlutterError called dumpErrorToConsole in function.
-  FlutterError.onError = FirebaseCrashlytics.instance.recordFlutterError;
-  definedChannel();
   runZonedGuarded(() async {
+    WidgetsFlutterBinding.ensureInitialized();
+    await Firebase.initializeApp();
+    if (kDebugMode) {
+      overrideDebugPrint();
+    }
+    if (Environment.isLocal) {
+      connectToEmulator();
+    }
+
+    ErrorWidget.builder = (FlutterErrorDetails details) {
+      return UniversalErrorPage(
+        error: details.exception.toString(),
+        child: null,
+        reload: () {
+          rootKey.currentState?.reload();
+        },
+      );
+    };
+    // MEMO: FirebaseCrashlytics#recordFlutterError called dumpErrorToConsole in function.
+    FlutterError.onError = FirebaseCrashlytics.instance.recordFlutterError;
+
+    definedChannel();
     runApp(ProviderScope(child: App()));
   }, (error, stack) => FirebaseCrashlytics.instance.recordError(error, stack));
 }
