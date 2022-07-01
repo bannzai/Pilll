@@ -40,7 +40,7 @@ class RecordPageAsyncAction {
     if (activedPillSheet.todayPillIsAlreadyTaken) {
       return false;
     }
-    final updatedPillSheetGroup = await take(
+    final updatedPillSheetGroup = await takePill(
       takenDate: takenDate,
       pillSheetGroup: pillSheetGroup,
       activedPillSheet: activedPillSheet,

@@ -5,7 +5,7 @@ import 'package:pilll/database/pill_sheet.dart';
 import 'package:pilll/database/pill_sheet_group.dart';
 import 'package:pilll/database/pill_sheet_modified_history.dart';
 
-Future<PillSheetGroup?> take({
+Future<PillSheetGroup?> takePill({
   required DateTime takenDate,
   required PillSheetGroup pillSheetGroup,
   required PillSheet activedPillSheet,
