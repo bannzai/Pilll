@@ -1,5 +1,6 @@
 import 'dart:async';
 
+import 'package:pilll/analytics.dart';
 import 'package:pilll/domain/settings/setting_page_state.codegen.dart';
 import 'package:pilll/entity/setting.codegen.dart';
 import 'package:pilll/domain/settings/setting_page_state_notifier.dart';
@@ -73,6 +74,7 @@ class ReminderTimesPage extends HookConsumerWidget {
   ) {
     Widget body = GestureDetector(
       onTap: () {
+        analytics.logEvent(name: "show_modify_reminder_time");
         _showPicker(context, store, setting, number - 1);
       },
       child: ListTile(
@@ -89,6 +91,7 @@ class ReminderTimesPage extends HookConsumerWidget {
       onDismissed: setting.reminderTimes.length == 1
           ? null
           : (direction) {
+              analytics.logEvent(name: "delete_reminder_time");
               store.asyncAction
                   .deleteReminderTimes(index: number - 1, setting: setting)
                   .catchError((error) => showErrorAlertFor(context, error));
@@ -132,6 +135,7 @@ class ReminderTimesPage extends HookConsumerWidget {
     }
     return GestureDetector(
       onTap: () {
+        analytics.logEvent(name: "pressed_add_reminder_time");
         _showPicker(context, store, setting, null);
       },
       child: Container(
@@ -162,6 +166,7 @@ class ReminderTimesPage extends HookConsumerWidget {
               : const ReminderTime(hour: 20, minute: 0).dateTime(),
           done: (dateTime) {
             if (isEditing) {
+              analytics.logEvent(name: "edited_reminder_time");
               unawaited(store.asyncAction
                   .editReminderTime(
                     index: index,
@@ -171,6 +176,7 @@ class ReminderTimesPage extends HookConsumerWidget {
                   )
                   .catchError((error) => showErrorAlertFor(context, error)));
             } else {
+              analytics.logEvent(name: "added_reminder_time");
               unawaited(store.asyncAction
                   .addReminderTimes(
                       reminderTime: ReminderTime(

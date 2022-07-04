@@ -26,7 +26,7 @@ class PillSheetRemoveRow extends HookConsumerWidget {
       title: const Text("ピルシートをすべて破棄", style: FontType.listRow),
       onTap: () {
         analytics.logEvent(
-          name: "did_select_removing_pill_sheet",
+          name: "did_select_remove_pill_sheet",
         );
         showDialog(
           context: context,
