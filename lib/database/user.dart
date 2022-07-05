@@ -150,7 +150,7 @@ class UserDatastore {
     }, SetOptions(merge: true));
   }
 
-  Future<void> trial(Setting setting) {
+  Future<void> endInitialSetting(Setting setting) {
     final settingForTrial = setting.copyWith(
       pillSheetAppearanceMode: PillSheetAppearanceMode.date,
       isAutomaticallyCreatePillSheet: true,
@@ -163,6 +163,7 @@ class UserDatastore {
           now().add(const Duration(days: 30)),
       UserFirestoreFieldKeys.settings: settingForTrial.toJson(),
       UserFirestoreFieldKeys.hasDiscountEntitlement: true,
+      UserFirestoreFieldKeys.useTimeZoneOffset: true,
     }, SetOptions(merge: true));
   }
 

@@ -60,6 +60,7 @@ extension UserFirestoreFieldKeys on String {
   static final hasDiscountEntitlement = "hasDiscountEntitlement";
   static final discountEntitlementDeadlineDate =
       "discountEntitlementDeadlineDate";
+  static final useTimeZoneOffset = "useTimeZoneOffset";
 }
 
 @freezed
@@ -101,6 +102,8 @@ class User with _$User {
       toJson: TimestampConverter.dateTimeToTimestamp,
     )
         DateTime? discountEntitlementDeadlineDate,
+    @Default(false)
+        bool useTimeZoneOffset,
   }) = _User;
 
   factory User.fromJson(Map<String, dynamic> json) => _$UserFromJson(json);
