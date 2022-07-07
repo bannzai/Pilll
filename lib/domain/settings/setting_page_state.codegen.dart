@@ -1,3 +1,4 @@
+import 'package:flutter_native_timezone/flutter_native_timezone.dart';
 import 'package:pilll/database/pill_sheet_group.dart';
 import 'package:pilll/database/setting.dart';
 import 'package:pilll/entity/pill_sheet_group.codegen.dart';
@@ -13,6 +14,8 @@ part 'setting_page_state.codegen.freezed.dart';
 
 final isHealthDataAvailableProvider =
     FutureProvider((ref) => isHealthDataAvailable());
+final deviceTimezoneNameProvider =
+    FutureProvider((ref) => FlutterNativeTimezone.getLocalTimezone());
 
 final settingStateProvider = Provider<AsyncValue<SettingState>>((ref) {
   final latestPillSheetGroup = ref.watch(latestPillSheetGroupStreamProvider);
@@ -20,12 +23,14 @@ final settingStateProvider = Provider<AsyncValue<SettingState>>((ref) {
   final setting = ref.watch(settingStreamProvider);
   final sharedPreferencesAsyncValue = ref.watch(sharedPreferenceProvider);
   final isHealthDataAvailable = ref.watch(isHealthDataAvailableProvider);
+  final deviceTimezoneName = ref.watch(deviceTimezoneNameProvider);
 
   if (latestPillSheetGroup is AsyncLoading ||
       premiumAndTrial is AsyncLoading ||
       setting is AsyncLoading ||
       sharedPreferencesAsyncValue is AsyncLoading ||
-      isHealthDataAvailable is AsyncLoading) {
+      isHealthDataAvailable is AsyncLoading ||
+      deviceTimezoneName is AsyncLoading) {
     return const AsyncValue.loading();
   }
 
@@ -42,6 +47,7 @@ final settingStateProvider = Provider<AsyncValue<SettingState>>((ref) {
         premiumAndTrial: premiumAndTrial.value!,
         isHealthDataAvailable: isHealthDataAvailable.value!,
         userIsUpdatedFrom132: userIsMigratedFrom132,
+        deviceTimezoneName: deviceTimezoneName.value!,
       ),
     );
   } catch (error, stacktrace) {
@@ -58,5 +64,6 @@ class SettingState with _$SettingState {
     required bool userIsUpdatedFrom132,
     required PremiumAndTrial premiumAndTrial,
     required bool isHealthDataAvailable,
+    required String deviceTimezoneName,
   }) = _SettingState;
 }

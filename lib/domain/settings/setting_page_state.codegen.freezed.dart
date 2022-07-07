@@ -23,13 +23,15 @@ class _$SettingStateTearOff {
       required PillSheetGroup? latestPillSheetGroup,
       required bool userIsUpdatedFrom132,
       required PremiumAndTrial premiumAndTrial,
-      required bool isHealthDataAvailable}) {
+      required bool isHealthDataAvailable,
+      required String deviceTimezoneName}) {
     return _SettingState(
       setting: setting,
       latestPillSheetGroup: latestPillSheetGroup,
       userIsUpdatedFrom132: userIsUpdatedFrom132,
       premiumAndTrial: premiumAndTrial,
       isHealthDataAvailable: isHealthDataAvailable,
+      deviceTimezoneName: deviceTimezoneName,
     );
   }
 }
@@ -45,6 +47,7 @@ mixin _$SettingState {
   bool get userIsUpdatedFrom132 => throw _privateConstructorUsedError;
   PremiumAndTrial get premiumAndTrial => throw _privateConstructorUsedError;
   bool get isHealthDataAvailable => throw _privateConstructorUsedError;
+  String get deviceTimezoneName => throw _privateConstructorUsedError;
 
   @JsonKey(ignore: true)
   $SettingStateCopyWith<SettingState> get copyWith =>
@@ -61,7 +64,8 @@ abstract class $SettingStateCopyWith<$Res> {
       PillSheetGroup? latestPillSheetGroup,
       bool userIsUpdatedFrom132,
       PremiumAndTrial premiumAndTrial,
-      bool isHealthDataAvailable});
+      bool isHealthDataAvailable,
+      String deviceTimezoneName});
 
   $SettingCopyWith<$Res> get setting;
   $PillSheetGroupCopyWith<$Res>? get latestPillSheetGroup;
@@ -83,6 +87,7 @@ class _$SettingStateCopyWithImpl<$Res> implements $SettingStateCopyWith<$Res> {
     Object? userIsUpdatedFrom132 = freezed,
     Object? premiumAndTrial = freezed,
     Object? isHealthDataAvailable = freezed,
+    Object? deviceTimezoneName = freezed,
   }) {
     return _then(_value.copyWith(
       setting: setting == freezed
@@ -105,6 +110,10 @@ class _$SettingStateCopyWithImpl<$Res> implements $SettingStateCopyWith<$Res> {
           ? _value.isHealthDataAvailable
           : isHealthDataAvailable // ignore: cast_nullable_to_non_nullable
               as bool,
+      deviceTimezoneName: deviceTimezoneName == freezed
+          ? _value.deviceTimezoneName
+          : deviceTimezoneName // ignore: cast_nullable_to_non_nullable
+              as String,
     ));
   }
 
@@ -146,7 +155,8 @@ abstract class _$SettingStateCopyWith<$Res>
       PillSheetGroup? latestPillSheetGroup,
       bool userIsUpdatedFrom132,
       PremiumAndTrial premiumAndTrial,
-      bool isHealthDataAvailable});
+      bool isHealthDataAvailable,
+      String deviceTimezoneName});
 
   @override
   $SettingCopyWith<$Res> get setting;
@@ -173,6 +183,7 @@ class __$SettingStateCopyWithImpl<$Res> extends _$SettingStateCopyWithImpl<$Res>
     Object? userIsUpdatedFrom132 = freezed,
     Object? premiumAndTrial = freezed,
     Object? isHealthDataAvailable = freezed,
+    Object? deviceTimezoneName = freezed,
   }) {
     return _then(_SettingState(
       setting: setting == freezed
@@ -195,6 +206,10 @@ class __$SettingStateCopyWithImpl<$Res> extends _$SettingStateCopyWithImpl<$Res>
           ? _value.isHealthDataAvailable
           : isHealthDataAvailable // ignore: cast_nullable_to_non_nullable
               as bool,
+      deviceTimezoneName: deviceTimezoneName == freezed
+          ? _value.deviceTimezoneName
+          : deviceTimezoneName // ignore: cast_nullable_to_non_nullable
+              as String,
     ));
   }
 }
@@ -207,7 +222,8 @@ class _$_SettingState extends _SettingState {
       required this.latestPillSheetGroup,
       required this.userIsUpdatedFrom132,
       required this.premiumAndTrial,
-      required this.isHealthDataAvailable})
+      required this.isHealthDataAvailable,
+      required this.deviceTimezoneName})
       : super._();
 
   @override
@@ -220,10 +236,12 @@ class _$_SettingState extends _SettingState {
   final PremiumAndTrial premiumAndTrial;
   @override
   final bool isHealthDataAvailable;
+  @override
+  final String deviceTimezoneName;
 
   @override
   String toString() {
-    return 'SettingState(setting: $setting, latestPillSheetGroup: $latestPillSheetGroup, userIsUpdatedFrom132: $userIsUpdatedFrom132, premiumAndTrial: $premiumAndTrial, isHealthDataAvailable: $isHealthDataAvailable)';
+    return 'SettingState(setting: $setting, latestPillSheetGroup: $latestPillSheetGroup, userIsUpdatedFrom132: $userIsUpdatedFrom132, premiumAndTrial: $premiumAndTrial, isHealthDataAvailable: $isHealthDataAvailable, deviceTimezoneName: $deviceTimezoneName)';
   }
 
   @override
@@ -239,7 +257,9 @@ class _$_SettingState extends _SettingState {
             const DeepCollectionEquality()
                 .equals(other.premiumAndTrial, premiumAndTrial) &&
             const DeepCollectionEquality()
-                .equals(other.isHealthDataAvailable, isHealthDataAvailable));
+                .equals(other.isHealthDataAvailable, isHealthDataAvailable) &&
+            const DeepCollectionEquality()
+                .equals(other.deviceTimezoneName, deviceTimezoneName));
   }
 
   @override
@@ -249,7 +269,8 @@ class _$_SettingState extends _SettingState {
       const DeepCollectionEquality().hash(latestPillSheetGroup),
       const DeepCollectionEquality().hash(userIsUpdatedFrom132),
       const DeepCollectionEquality().hash(premiumAndTrial),
-      const DeepCollectionEquality().hash(isHealthDataAvailable));
+      const DeepCollectionEquality().hash(isHealthDataAvailable),
+      const DeepCollectionEquality().hash(deviceTimezoneName));
 
   @JsonKey(ignore: true)
   @override
@@ -263,7 +284,8 @@ abstract class _SettingState extends SettingState {
       required PillSheetGroup? latestPillSheetGroup,
       required bool userIsUpdatedFrom132,
       required PremiumAndTrial premiumAndTrial,
-      required bool isHealthDataAvailable}) = _$_SettingState;
+      required bool isHealthDataAvailable,
+      required String deviceTimezoneName}) = _$_SettingState;
   const _SettingState._() : super._();
 
   @override
@@ -276,6 +298,8 @@ abstract class _SettingState extends SettingState {
   PremiumAndTrial get premiumAndTrial;
   @override
   bool get isHealthDataAvailable;
+  @override
+  String get deviceTimezoneName;
   @override
   @JsonKey(ignore: true)
   _$SettingStateCopyWith<_SettingState> get copyWith =>
