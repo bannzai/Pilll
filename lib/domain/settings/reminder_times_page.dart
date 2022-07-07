@@ -1,6 +1,8 @@
 import 'dart:async';
 
+import 'package:flutter_native_timezone/flutter_native_timezone.dart';
 import 'package:pilll/analytics.dart';
+import 'package:pilll/components/atoms/buttons.dart';
 import 'package:pilll/domain/settings/setting_page_state.codegen.dart';
 import 'package:pilll/entity/setting.codegen.dart';
 import 'package:pilll/domain/settings/setting_page_state_notifier.dart';
@@ -155,6 +157,29 @@ class ReminderTimesPage extends HookConsumerWidget {
           ],
         ),
       ),
+    );
+  }
+
+  Widget _timezone(
+      BuildContext context, SettingState state, SettingStateNotifier store) {
+    return Column(
+      children: [
+        const Text(
+          "Pilllでのタイムゾーン",
+          style: TextStyle(
+            fontFamily: FontFamily.japanese,
+            fontSize: 14,
+            fontWeight: FontWeight.w600,
+          ),
+        ),
+        const SizedBox(height: 16),
+        SecondaryButton(
+          text: "タイムゾーンを${state.deviceTimezoneName}に更新する",
+          onPressed: () async {
+            
+          },
+        ),
+      ],
     );
   }
 

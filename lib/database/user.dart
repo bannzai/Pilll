@@ -293,4 +293,10 @@ extension SaveUserLaunchInfo on UserDatastore {
       }
     }, SetOptions(merge: true));
   }
+
+  Future<void> setUseTimeZone() async {
+    await _database.userRawReference().set({
+      UserFirestoreFieldKeys.useTimeZoneOffset: true,
+    }, SetOptions(merge: true));
+  }
 }
