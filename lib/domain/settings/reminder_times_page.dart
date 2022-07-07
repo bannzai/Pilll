@@ -64,7 +64,7 @@ class ReminderTimesPage extends HookConsumerWidget {
                     ),
                   )
                   .values,
-              _footer(context, state, store),
+              _add(context, state, store),
               Padding(
                 padding: const EdgeInsets.only(left: 15, right: 15),
                 child: Container(
@@ -131,7 +131,7 @@ class ReminderTimesPage extends HookConsumerWidget {
     );
   }
 
-  Widget _footer(
+  Widget _add(
       BuildContext context, SettingState state, SettingStateNotifier store) {
     final setting = state.setting;
     if (setting.reminderTimes.length >= ReminderTime.maximumCount) {
