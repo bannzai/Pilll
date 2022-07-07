@@ -258,7 +258,6 @@ extension SaveUserLaunchInfo on UserDatastore {
 
   Future<void> _saveStats() async {
     final store = await SharedPreferences.getInstance();
-    final timeZoneDatabaseName = await FlutterNativeTimezone.getLocalTimezone();
 
     final lastLoginVersion =
         await PackageInfo.fromPlatform().then((value) => value.version);
@@ -270,8 +269,6 @@ extension SaveUserLaunchInfo on UserDatastore {
     }
 
     final now = DateTime.now().toLocal();
-    final timeZoneName = now.timeZoneName;
-    final timeZoneOffset = now.timeZoneOffset;
 
     return _database.userRawReference().set({
       // shortcut property for backend
@@ -280,6 +277,19 @@ extension SaveUserLaunchInfo on UserDatastore {
         "lastLoginAt": now,
         "beginVersion": beginVersion,
         "lastLoginVersion": lastLoginVersion,
+        "beginingVersion": beginVersion,
+      }
+    }, SetOptions(merge: true));
+  }
+
+  Future<Map<String, dynamic>> _timeZoneMapEntry() async {
+    final timeZoneDatabaseName = await FlutterNativeTimezone.getLocalTimezone();
+    final now = DateTime.now().toLocal();
+    final timeZoneName = now.timeZoneName;
+    final timeZoneOffset = now.timeZoneOffset;
+
+    return {
+      "stats": {
         "timeZoneName": timeZoneName,
         "timeZoneDatabaseName": timeZoneDatabaseName,
         "timeZoneOffsetIsNegative": timeZoneOffset.isNegative,
@@ -289,8 +299,13 @@ extension SaveUserLaunchInfo on UserDatastore {
         "timeZoneOffset":
             "${timeZoneOffset.isNegative ? "-" : "+"}${timeZoneOffset.inHours}",
         "timeZoneIsNegative": timeZoneOffset.isNegative,
-        "beginingVersion": beginVersion,
       }
-    }, SetOptions(merge: true));
+    };
+  }
+
+  Future<void> saveTimeZone() async {
+    return _database
+        .userRawReference()
+        .set(_timeZoneMapEntry(), SetOptions(merge: true));
   }
 }
