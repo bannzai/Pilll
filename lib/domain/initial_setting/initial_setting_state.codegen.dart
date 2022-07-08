@@ -1,3 +1,4 @@
+import 'package:flutter_native_timezone/flutter_native_timezone.dart';
 import 'package:pilll/entity/link_account_type.dart';
 import 'package:pilll/util/datetime/day.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';
@@ -43,7 +44,7 @@ class InitialSettingState with _$InitialSettingState {
     return null;
   }
 
-  Setting buildSetting() {
+  Future<Setting> buildSetting() async {
     final menstruationDuration = 4;
     final maxPillCount = pillSheetTypes
         .map((e) => e.totalCount)
@@ -51,13 +52,13 @@ class InitialSettingState with _$InitialSettingState {
     final pillNumberForFromMenstruation = maxPillCount - menstruationDuration;
 
     final setting = Setting(
-      pillNumberForFromMenstruation: pillNumberForFromMenstruation,
-      durationMenstruation: menstruationDuration,
-      pillSheetTypes: pillSheetTypes,
-      reminderTimes: reminderTimes,
-      isOnReminder: isOnReminder,
-      pillSheetAppearanceMode: PillSheetAppearanceMode.number,
-    );
+        pillNumberForFromMenstruation: pillNumberForFromMenstruation,
+        durationMenstruation: menstruationDuration,
+        pillSheetTypes: pillSheetTypes,
+        reminderTimes: reminderTimes,
+        isOnReminder: isOnReminder,
+        pillSheetAppearanceMode: PillSheetAppearanceMode.number,
+        timezoneDatabaseName: await FlutterNativeTimezone.getLocalTimezone());
     return setting;
   }
 

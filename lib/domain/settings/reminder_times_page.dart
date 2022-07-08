@@ -164,7 +164,7 @@ class ReminderTimesPage extends HookConsumerWidget {
     return Column(
       children: [
         const Text(
-          "Pilllでのタイムゾーン",
+          "現在設定されているタイムゾーン",
           style: TextStyle(
             fontFamily: FontFamily.japanese,
             fontSize: 14,
@@ -176,7 +176,8 @@ class ReminderTimesPage extends HookConsumerWidget {
           text: "タイムゾーンを${state.deviceTimezoneName}に更新する",
           onPressed: () async {
             try {
-              await store.asyncAction.updateTimezoneDatabaseName(timezoneDatabaseName: state.deviceTimezoneName);
+              await store.asyncAction.updateTimezoneDatabaseName(
+                  timezoneDatabaseName: state.deviceTimezoneName);
             } catch (error) {
               showErrorAlert(context, message: error.toString());
             }

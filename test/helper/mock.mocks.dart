@@ -993,6 +993,15 @@ class MockSettingPageAsyncAction extends _i1.Mock
           returnValue: Future<void>.value(),
           returnValueForMissingStub:
               Future<void>.value()) as _i20.Future<void>);
+  @override
+  _i20.Future<void> updateTimezoneDatabaseName(
+          {String? timezoneDatabaseName}) =>
+      (super.noSuchMethod(
+              Invocation.method(#updateTimezoneDatabaseName, [],
+                  {#timezoneDatabaseName: timezoneDatabaseName}),
+              returnValue: Future<void>.value(),
+              returnValueForMissingStub: Future<void>.value())
+          as _i20.Future<void>);
 }
 
 /// A class which mocks [MenstruationPageAsyncAction].
