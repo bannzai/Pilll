@@ -211,7 +211,8 @@ class _$SettingTearOff {
           PillSheetAppearanceMode.number,
       bool isAutomaticallyCreatePillSheet = false,
       ReminderNotificationCustomization reminderNotificationCustomization =
-          const ReminderNotificationCustomization()}) {
+          const ReminderNotificationCustomization(),
+      required String? timezoneDatabaseName}) {
     return _Setting(
       pillSheetTypes: pillSheetTypes,
       pillNumberForFromMenstruation: pillNumberForFromMenstruation,
@@ -222,6 +223,7 @@ class _$SettingTearOff {
       pillSheetAppearanceMode: pillSheetAppearanceMode,
       isAutomaticallyCreatePillSheet: isAutomaticallyCreatePillSheet,
       reminderNotificationCustomization: reminderNotificationCustomization,
+      timezoneDatabaseName: timezoneDatabaseName,
     );
   }
 
@@ -246,6 +248,7 @@ mixin _$Setting {
   bool get isAutomaticallyCreatePillSheet => throw _privateConstructorUsedError;
   ReminderNotificationCustomization get reminderNotificationCustomization =>
       throw _privateConstructorUsedError;
+  String? get timezoneDatabaseName => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
@@ -265,7 +268,8 @@ abstract class $SettingCopyWith<$Res> {
       bool isOnNotifyInNotTakenDuration,
       PillSheetAppearanceMode pillSheetAppearanceMode,
       bool isAutomaticallyCreatePillSheet,
-      ReminderNotificationCustomization reminderNotificationCustomization});
+      ReminderNotificationCustomization reminderNotificationCustomization,
+      String? timezoneDatabaseName});
 
   $ReminderNotificationCustomizationCopyWith<$Res>
       get reminderNotificationCustomization;
@@ -290,6 +294,7 @@ class _$SettingCopyWithImpl<$Res> implements $SettingCopyWith<$Res> {
     Object? pillSheetAppearanceMode = freezed,
     Object? isAutomaticallyCreatePillSheet = freezed,
     Object? reminderNotificationCustomization = freezed,
+    Object? timezoneDatabaseName = freezed,
   }) {
     return _then(_value.copyWith(
       pillSheetTypes: pillSheetTypes == freezed
@@ -329,6 +334,10 @@ class _$SettingCopyWithImpl<$Res> implements $SettingCopyWith<$Res> {
           ? _value.reminderNotificationCustomization
           : reminderNotificationCustomization // ignore: cast_nullable_to_non_nullable
               as ReminderNotificationCustomization,
+      timezoneDatabaseName: timezoneDatabaseName == freezed
+          ? _value.timezoneDatabaseName
+          : timezoneDatabaseName // ignore: cast_nullable_to_non_nullable
+              as String?,
     ));
   }
 
@@ -356,7 +365,8 @@ abstract class _$SettingCopyWith<$Res> implements $SettingCopyWith<$Res> {
       bool isOnNotifyInNotTakenDuration,
       PillSheetAppearanceMode pillSheetAppearanceMode,
       bool isAutomaticallyCreatePillSheet,
-      ReminderNotificationCustomization reminderNotificationCustomization});
+      ReminderNotificationCustomization reminderNotificationCustomization,
+      String? timezoneDatabaseName});
 
   @override
   $ReminderNotificationCustomizationCopyWith<$Res>
@@ -383,6 +393,7 @@ class __$SettingCopyWithImpl<$Res> extends _$SettingCopyWithImpl<$Res>
     Object? pillSheetAppearanceMode = freezed,
     Object? isAutomaticallyCreatePillSheet = freezed,
     Object? reminderNotificationCustomization = freezed,
+    Object? timezoneDatabaseName = freezed,
   }) {
     return _then(_Setting(
       pillSheetTypes: pillSheetTypes == freezed
@@ -422,6 +433,10 @@ class __$SettingCopyWithImpl<$Res> extends _$SettingCopyWithImpl<$Res>
           ? _value.reminderNotificationCustomization
           : reminderNotificationCustomization // ignore: cast_nullable_to_non_nullable
               as ReminderNotificationCustomization,
+      timezoneDatabaseName: timezoneDatabaseName == freezed
+          ? _value.timezoneDatabaseName
+          : timezoneDatabaseName // ignore: cast_nullable_to_non_nullable
+              as String?,
     ));
   }
 }
@@ -440,7 +455,8 @@ class _$_Setting extends _Setting with DiagnosticableTreeMixin {
       this.pillSheetAppearanceMode = PillSheetAppearanceMode.number,
       this.isAutomaticallyCreatePillSheet = false,
       this.reminderNotificationCustomization =
-          const ReminderNotificationCustomization()})
+          const ReminderNotificationCustomization(),
+      required this.timezoneDatabaseName})
       : super._();
 
   factory _$_Setting.fromJson(Map<String, dynamic> json) =>
@@ -470,10 +486,12 @@ class _$_Setting extends _Setting with DiagnosticableTreeMixin {
   @JsonKey()
   @override
   final ReminderNotificationCustomization reminderNotificationCustomization;
+  @override
+  final String? timezoneDatabaseName;
 
   @override
   String toString({DiagnosticLevel minLevel = DiagnosticLevel.info}) {
-    return 'Setting(pillSheetTypes: $pillSheetTypes, pillNumberForFromMenstruation: $pillNumberForFromMenstruation, durationMenstruation: $durationMenstruation, reminderTimes: $reminderTimes, isOnReminder: $isOnReminder, isOnNotifyInNotTakenDuration: $isOnNotifyInNotTakenDuration, pillSheetAppearanceMode: $pillSheetAppearanceMode, isAutomaticallyCreatePillSheet: $isAutomaticallyCreatePillSheet, reminderNotificationCustomization: $reminderNotificationCustomization)';
+    return 'Setting(pillSheetTypes: $pillSheetTypes, pillNumberForFromMenstruation: $pillNumberForFromMenstruation, durationMenstruation: $durationMenstruation, reminderTimes: $reminderTimes, isOnReminder: $isOnReminder, isOnNotifyInNotTakenDuration: $isOnNotifyInNotTakenDuration, pillSheetAppearanceMode: $pillSheetAppearanceMode, isAutomaticallyCreatePillSheet: $isAutomaticallyCreatePillSheet, reminderNotificationCustomization: $reminderNotificationCustomization, timezoneDatabaseName: $timezoneDatabaseName)';
   }
 
   @override
@@ -494,7 +512,8 @@ class _$_Setting extends _Setting with DiagnosticableTreeMixin {
       ..add(DiagnosticsProperty(
           'isAutomaticallyCreatePillSheet', isAutomaticallyCreatePillSheet))
       ..add(DiagnosticsProperty('reminderNotificationCustomization',
-          reminderNotificationCustomization));
+          reminderNotificationCustomization))
+      ..add(DiagnosticsProperty('timezoneDatabaseName', timezoneDatabaseName));
   }
 
   @override
@@ -523,7 +542,9 @@ class _$_Setting extends _Setting with DiagnosticableTreeMixin {
                 isAutomaticallyCreatePillSheet) &&
             const DeepCollectionEquality().equals(
                 other.reminderNotificationCustomization,
-                reminderNotificationCustomization));
+                reminderNotificationCustomization) &&
+            const DeepCollectionEquality()
+                .equals(other.timezoneDatabaseName, timezoneDatabaseName));
   }
 
   @override
@@ -537,7 +558,8 @@ class _$_Setting extends _Setting with DiagnosticableTreeMixin {
       const DeepCollectionEquality().hash(isOnNotifyInNotTakenDuration),
       const DeepCollectionEquality().hash(pillSheetAppearanceMode),
       const DeepCollectionEquality().hash(isAutomaticallyCreatePillSheet),
-      const DeepCollectionEquality().hash(reminderNotificationCustomization));
+      const DeepCollectionEquality().hash(reminderNotificationCustomization),
+      const DeepCollectionEquality().hash(timezoneDatabaseName));
 
   @JsonKey(ignore: true)
   @override
@@ -560,8 +582,8 @@ abstract class _Setting extends Setting {
       bool isOnNotifyInNotTakenDuration,
       PillSheetAppearanceMode pillSheetAppearanceMode,
       bool isAutomaticallyCreatePillSheet,
-      ReminderNotificationCustomization
-          reminderNotificationCustomization}) = _$_Setting;
+      ReminderNotificationCustomization reminderNotificationCustomization,
+      required String? timezoneDatabaseName}) = _$_Setting;
   const _Setting._() : super._();
 
   factory _Setting.fromJson(Map<String, dynamic> json) = _$_Setting.fromJson;
@@ -584,6 +606,8 @@ abstract class _Setting extends Setting {
   bool get isAutomaticallyCreatePillSheet;
   @override
   ReminderNotificationCustomization get reminderNotificationCustomization;
+  @override
+  String? get timezoneDatabaseName;
   @override
   @JsonKey(ignore: true)
   _$SettingCopyWith<_Setting> get copyWith =>
