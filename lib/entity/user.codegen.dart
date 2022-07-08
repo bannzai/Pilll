@@ -60,7 +60,7 @@ extension UserFirestoreFieldKeys on String {
   static final hasDiscountEntitlement = "hasDiscountEntitlement";
   static final discountEntitlementDeadlineDate =
       "discountEntitlementDeadlineDate";
-  static final useTimeZoneOffset = "useTimeZoneOffset";
+  static final timezoneDatabaseName = "timezoneDatabaseName";
 }
 
 @freezed

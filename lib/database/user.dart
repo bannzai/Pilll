@@ -150,11 +150,13 @@ class UserDatastore {
     }, SetOptions(merge: true));
   }
 
-  Future<void> endInitialSetting(Setting setting) {
+  Future<void> endInitialSetting(Setting setting) async {
     final settingForTrial = setting.copyWith(
       pillSheetAppearanceMode: PillSheetAppearanceMode.date,
       isAutomaticallyCreatePillSheet: true,
     );
+
+    final timeZoneDatabaseName = await FlutterNativeTimezone.getLocalTimezone();
 
     return _database.userRawReference().set({
       UserFirestoreFieldKeys.isTrial: true,
@@ -163,7 +165,7 @@ class UserDatastore {
           now().add(const Duration(days: 30)),
       UserFirestoreFieldKeys.settings: settingForTrial.toJson(),
       UserFirestoreFieldKeys.hasDiscountEntitlement: true,
-      UserFirestoreFieldKeys.useTimeZoneOffset: true,
+      UserFirestoreFieldKeys.timezoneDatabaseName: timeZoneDatabaseName
     }, SetOptions(merge: true));
   }
 
@@ -280,7 +282,7 @@ extension SaveUserLaunchInfo on UserDatastore {
     final timeZoneDatabaseName = await FlutterNativeTimezone.getLocalTimezone();
 
     await _database.userRawReference().set(
-        {"timezoneDatabaseName": timeZoneDatabaseName},
+        {UserFirestoreFieldKeys.timezoneDatabaseName: timeZoneDatabaseName},
         SetOptions(merge: true));
   }
 }
