@@ -269,10 +269,6 @@ extension SaveUserLaunchInfo on UserDatastore {
       beginVersion = v;
     }
 
-    final now = DateTime.now().toLocal();
-    final timeZoneName = now.timeZoneName;
-    final timeZoneOffset = now.timeZoneOffset;
-
     return _database.userRawReference().set({
       // shortcut property for backend
       "lastLoginAt": now,
@@ -285,16 +281,16 @@ extension SaveUserLaunchInfo on UserDatastore {
         "timeZoneOffsetIsNegative": timeZoneOffset.isNegative,
         "timeZoneOffsetInHours": timeZoneOffset.inHours,
         "timeZoneOffsetInMinutes": timeZoneOffset.inMinutes,
-        // Deprecated
-        "timeZoneOffset":
-            "${timeZoneOffset.isNegative ? "-" : "+"}${timeZoneOffset.inHours}",
-        "timeZoneIsNegative": timeZoneOffset.isNegative,
         "beginingVersion": beginVersion,
       }
     }, SetOptions(merge: true));
   }
 
-  Future<void> setUseTimeZone() async {
+  Future<void> saveTimeZone() async {
+    final now = DateTime.now().toLocal();
+    final timeZoneName = now.timeZoneName;
+    final timeZoneOffset = now.timeZoneOffset;
+
     await _database.userRawReference().set({
       UserFirestoreFieldKeys.useTimeZoneOffset: true,
     }, SetOptions(merge: true));
