@@ -88,6 +88,13 @@ class TimezoneSettingDialog extends StatelessWidget {
           child: AlertButton(
             text: "いいえ",
             onPressed: () async {
+              analytics.logEvent(
+                name: "pressed_timezone_no",
+                parameters: {
+                  "user_timezone": state.setting.timezoneDatabaseName,
+                  "device_timezone": state.deviceTimezoneName,
+                },
+              );
               Navigator.of(context).pop();
             },
           ),
