@@ -177,6 +177,7 @@ class ReminderTimesPage extends HookConsumerWidget {
           onPressed: () async {
             try {
               await store.asyncAction.updateTimezoneDatabaseName(
+                  setting: state.setting,
                   timezoneDatabaseName: state.deviceTimezoneName);
             } catch (error) {
               showErrorAlert(context, message: error.toString());
