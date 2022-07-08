@@ -276,9 +276,11 @@ extension SaveUserLaunchInfo on UserDatastore {
     }, SetOptions(merge: true));
   }
 
-  Future<void> saveTimeZone() async {
-    await _database.userRawReference().set({
-      UserFirestoreFieldKeys.useTimeZoneOffset: true,
-    }, SetOptions(merge: true));
+  Future<void> useCurrentTimeZone() async {
+    final timeZoneDatabaseName = await FlutterNativeTimezone.getLocalTimezone();
+
+    await _database.userRawReference().set(
+        {"timezoneDatabaseName": timeZoneDatabaseName},
+        SetOptions(merge: true));
   }
 }
