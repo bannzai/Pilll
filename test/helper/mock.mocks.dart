@@ -995,10 +995,12 @@ class MockSettingPageAsyncAction extends _i1.Mock
               Future<void>.value()) as _i20.Future<void>);
   @override
   _i20.Future<void> updateTimezoneDatabaseName(
-          {String? timezoneDatabaseName}) =>
+          {_i3.Setting? setting, String? timezoneDatabaseName}) =>
       (super.noSuchMethod(
-              Invocation.method(#updateTimezoneDatabaseName, [],
-                  {#timezoneDatabaseName: timezoneDatabaseName}),
+              Invocation.method(#updateTimezoneDatabaseName, [], {
+                #setting: setting,
+                #timezoneDatabaseName: timezoneDatabaseName
+              }),
               returnValue: Future<void>.value(),
               returnValueForMissingStub: Future<void>.value())
           as _i20.Future<void>);
