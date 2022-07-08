@@ -1,7 +1,6 @@
 import 'dart:async';
 
 import 'package:pilll/database/batch.dart';
-import 'package:pilll/database/user.dart';
 import 'package:pilll/entity/pill_sheet.codegen.dart';
 import 'package:pilll/entity/pill_sheet_group.codegen.dart';
 import 'package:pilll/entity/setting.codegen.dart';
@@ -14,7 +13,6 @@ import 'package:riverpod/riverpod.dart';
 final settingPageAsyncActionProvider = Provider(
   (ref) => SettingPageAsyncAction(
     ref.watch(batchFactoryProvider),
-    ref.watch(userDatastoreProvider),
     ref.watch(settingDatastoreProvider),
     ref.watch(pillSheetDatastoreProvider),
     ref.watch(pillSheetModifiedHistoryDatastoreProvider),
@@ -24,7 +22,6 @@ final settingPageAsyncActionProvider = Provider(
 
 class SettingPageAsyncAction {
   final BatchFactory _batchFactory;
-  final UserDatastore _userDatastore;
   final SettingDatastore _settingDatastore;
   final PillSheetDatastore _pillSheetDatastore;
   final PillSheetModifiedHistoryDatastore _pillSheetModifiedHistoryDatastore;
@@ -32,7 +29,6 @@ class SettingPageAsyncAction {
 
   SettingPageAsyncAction(
     this._batchFactory,
-    this._userDatastore,
     this._settingDatastore,
     this._pillSheetDatastore,
     this._pillSheetModifiedHistoryDatastore,
@@ -162,8 +158,9 @@ class SettingPageAsyncAction {
   }
 
   Future<void> updateTimezoneDatabaseName(
-      {required String timezoneDatabaseName}) async {
-    await _userDatastore.updateTimezoneDatabaseName(
-        timezoneDatabaseName: timezoneDatabaseName);
+      {required Setting setting, required String timezoneDatabaseName}) async {
+    final updated =
+        setting.copyWith(timezoneDatabaseName: timezoneDatabaseName);
+    await _settingDatastore.update(updated);
   }
 }
