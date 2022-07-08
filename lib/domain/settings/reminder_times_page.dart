@@ -40,20 +40,23 @@ class ReminderTimesPage extends HookConsumerWidget {
         ),
         actions: [
           IconButton(
-              onPressed: () => showDialog(
-                  context: context,
-                  builder: (_) => TimezoneSettingDialog(
-                        state: state,
-                        stateNotifier: store,
-                        onDone: (tz) {
-                          ScaffoldMessenger.of(context).showSnackBar(
-                            SnackBar(
-                              duration: const Duration(seconds: 2),
-                              content: Text("$tzに変更しました"),
-                            ),
-                          );
-                        },
-                      )),
+              onPressed: () {
+                analytics.logEvent(name: "pressed_tz_setting_action");
+                showDialog(
+                    context: context,
+                    builder: (_) => TimezoneSettingDialog(
+                          state: state,
+                          stateNotifier: store,
+                          onDone: (tz) {
+                            ScaffoldMessenger.of(context).showSnackBar(
+                              SnackBar(
+                                duration: const Duration(seconds: 2),
+                                content: Text("$tzに変更しました"),
+                              ),
+                            );
+                          },
+                        ));
+              },
               icon:
                   const Icon(Icons.timer_sharp, color: PilllColors.secondary)),
         ],
