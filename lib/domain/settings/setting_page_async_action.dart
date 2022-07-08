@@ -161,7 +161,9 @@ class SettingPageAsyncAction {
         reminderNotificationCustomization: reminderNotificationCustomization));
   }
 
-  Future<void> updateTimezone() async {
-    await _userDatastore.setUseTimeZone();
+  Future<void> updateTimezoneDatabaseName(
+      {required String timezoneDatabaseName}) async {
+    await _userDatastore.updateTimezoneDatabaseName(
+        timezoneDatabaseName: timezoneDatabaseName);
   }
 }

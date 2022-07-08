@@ -1,6 +1,5 @@
 import 'dart:async';
 
-import 'package:flutter_native_timezone/flutter_native_timezone.dart';
 import 'package:pilll/analytics.dart';
 import 'package:pilll/components/atoms/buttons.dart';
 import 'package:pilll/domain/settings/setting_page_state.codegen.dart';
@@ -176,7 +175,11 @@ class ReminderTimesPage extends HookConsumerWidget {
         SecondaryButton(
           text: "タイムゾーンを${state.deviceTimezoneName}に更新する",
           onPressed: () async {
-            
+            try {
+              await store.asyncAction.updateTimezoneDatabaseName(timezoneDatabaseName: state.deviceTimezoneName);
+            } catch (error) {
+              showErrorAlert(context, message: error.toString());
+            }
           },
         ),
       ],
