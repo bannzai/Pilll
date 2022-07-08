@@ -1,8 +1,8 @@
 import 'dart:async';
 
 import 'package:pilll/analytics.dart';
-import 'package:pilll/components/atoms/buttons.dart';
 import 'package:pilll/domain/settings/setting_page_state.codegen.dart';
+import 'package:pilll/domain/settings/timezone_setting_dialog.dart';
 import 'package:pilll/entity/setting.codegen.dart';
 import 'package:pilll/domain/settings/setting_page_state_notifier.dart';
 import 'package:pilll/components/atoms/color.dart';
@@ -38,6 +38,25 @@ class ReminderTimesPage extends HookConsumerWidget {
           "通知時間",
           style: TextStyle(color: TextColor.black),
         ),
+        actions: [
+          IconButton(
+              onPressed: () => showDialog(
+                  context: context,
+                  builder: (_) => TimezoneSettingDialog(
+                        state: state,
+                        stateNotifier: store,
+                        onDone: (tz) {
+                          ScaffoldMessenger.of(context).showSnackBar(
+                            SnackBar(
+                              duration: const Duration(seconds: 2),
+                              content: Text("$tzに変更しました"),
+                            ),
+                          );
+                        },
+                      )),
+              icon:
+                  const Icon(Icons.timer_sharp, color: PilllColors.secondary)),
+        ],
         backgroundColor: PilllColors.background,
       ),
       body: SafeArea(
@@ -65,7 +84,6 @@ class ReminderTimesPage extends HookConsumerWidget {
                     ),
                   )
                   .values,
-              _add(context, state, store),
               Padding(
                 padding: const EdgeInsets.only(left: 15, right: 15),
                 child: Container(
@@ -73,6 +91,7 @@ class ReminderTimesPage extends HookConsumerWidget {
                   color: PilllColors.border,
                 ),
               ),
+              _add(context, state, store),
             ],
           ),
         ),
@@ -156,35 +175,6 @@ class ReminderTimesPage extends HookConsumerWidget {
           ],
         ),
       ),
-    );
-  }
-
-  Widget _timezone(
-      BuildContext context, SettingState state, SettingStateNotifier store) {
-    return Column(
-      children: [
-        const Text(
-          "現在設定されているタイムゾーン",
-          style: TextStyle(
-            fontFamily: FontFamily.japanese,
-            fontSize: 14,
-            fontWeight: FontWeight.w600,
-          ),
-        ),
-        const SizedBox(height: 16),
-        SecondaryButton(
-          text: "タイムゾーンを${state.deviceTimezoneName}に更新する",
-          onPressed: () async {
-            try {
-              await store.asyncAction.updateTimezoneDatabaseName(
-                  setting: state.setting,
-                  timezoneDatabaseName: state.deviceTimezoneName);
-            } catch (error) {
-              showErrorAlert(context, message: error.toString());
-            }
-          },
-        ),
-      ],
     );
   }
 
