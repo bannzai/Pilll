@@ -59,6 +59,7 @@ void main() {
             durationMenstruation: 3,
             isOnReminder: false,
             reminderTimes: [ReminderTime(hour: 1, minute: 1)],
+            timezoneDatabaseName: null,
           );
           expect(
             scheduledOrInTheMiddleMenstruationDateRanges(
@@ -115,6 +116,7 @@ void main() {
             durationMenstruation: 3,
             isOnReminder: false,
             reminderTimes: [ReminderTime(hour: 1, minute: 1)],
+            timezoneDatabaseName: null,
           );
           expect(
             scheduledOrInTheMiddleMenstruationDateRanges(
@@ -171,6 +173,7 @@ void main() {
             durationMenstruation: 3,
             isOnReminder: false,
             reminderTimes: [ReminderTime(hour: 1, minute: 1)],
+            timezoneDatabaseName: null,
           );
           expect(
             scheduledOrInTheMiddleMenstruationDateRanges(
@@ -245,6 +248,7 @@ void main() {
             durationMenstruation: durationMenstruation,
             isOnReminder: false,
             reminderTimes: [const ReminderTime(hour: 1, minute: 1)],
+            timezoneDatabaseName: null,
           );
           assert(pillSheetType.dosingPeriod == 21,
               "scheduledMenstruationDateRange adding value with dosingPeriod when it will create DateRange. pillsheet_28_7 type has 24 dosingPeriod");
@@ -292,6 +296,7 @@ void main() {
             durationMenstruation: durationMenstruation,
             isOnReminder: false,
             reminderTimes: [const ReminderTime(hour: 1, minute: 1)],
+            timezoneDatabaseName: null,
           );
           assert(pillSheetType.dosingPeriod == 21,
               "scheduledMenstruationDateRange adding value with dosingPeriod when it will create DateRange. pillsheet_28_7 type has 24 dosingPeriod");
@@ -342,6 +347,7 @@ void main() {
             durationMenstruation: durationMenstruation,
             isOnReminder: false,
             reminderTimes: [const ReminderTime(hour: 1, minute: 1)],
+            timezoneDatabaseName: null,
           );
           assert(pillSheetType.dosingPeriod == 21,
               "scheduledMenstruationDateRange adding value with dosingPeriod when it will create DateRange. pillsheet_28_7 type has 24 dosingPeriod");
@@ -396,6 +402,7 @@ void main() {
             durationMenstruation: durationMenstruation,
             isOnReminder: false,
             reminderTimes: [const ReminderTime(hour: 1, minute: 1)],
+            timezoneDatabaseName: null,
           );
           assert(pillSheetType.dosingPeriod == 28,
               "scheduledMenstruationDateRange adding value with dosingPeriod when it will create DateRange. pillsheet_28_7 type has 24 dosingPeriod");
@@ -440,6 +447,7 @@ void main() {
             durationMenstruation: 3,
             isOnReminder: false,
             reminderTimes: [const ReminderTime(hour: 1, minute: 1)],
+            timezoneDatabaseName: null,
           );
           expect(
             scheduledOrInTheMiddleMenstruationDateRanges(
@@ -491,6 +499,7 @@ void main() {
             durationMenstruation: durationMenstruation,
             isOnReminder: false,
             reminderTimes: [const ReminderTime(hour: 1, minute: 1)],
+            timezoneDatabaseName: null,
           );
           assert(pillSheetType.dosingPeriod == 28,
               "scheduledMenstruationDateRange adding value with dosingPeriod when it will create DateRange. pillsheet_28_7 type has 24 dosingPeriod");

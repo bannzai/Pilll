@@ -343,6 +343,7 @@ void main() {
           ReminderTime(hour: 21, minute: 0)
         ],
         pillSheetTypes: [PillSheetType.pillsheet_21],
+        timezoneDatabaseName: null,
       );
       final settingDatastore = MockSettingDatastore();
       when(settingDatastore.updateWithBatch(batch, setting)).thenReturn(null);
@@ -441,6 +442,7 @@ void main() {
           PillSheetType.pillsheet_28_0,
           PillSheetType.pillsheet_21
         ],
+        timezoneDatabaseName: null,
       );
       final settingDatastore = MockSettingDatastore();
       when(settingDatastore.updateWithBatch(batch, setting)).thenReturn(null);
@@ -481,6 +483,7 @@ void main() {
           ReminderTime(hour: 22, minute: 0)
         ],
         pillSheetTypes: [PillSheetType.pillsheet_24_rest_4],
+        timezoneDatabaseName: null,
       );
 
       final userDatastore = MockUserDatastore();

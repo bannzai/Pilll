@@ -34,6 +34,7 @@ void main() {
           pillNumberForFromMenstruation: 22,
           durationMenstruation: 2,
           isOnReminder: false,
+          timezoneDatabaseName: null,
           pillSheetTypes: [PillSheetType.pillsheet_21],
           reminderTimes: [
             ReminderTime(hour: 10, minute: 0),
@@ -46,6 +47,7 @@ void main() {
             createdAt: now()),
         isHealthDataAvailable: false,
         userIsUpdatedFrom132: false,
+        deviceTimezoneName: "Asia/Tokyo",
       );
 
       await tester.pumpWidget(
@@ -72,6 +74,7 @@ void main() {
           pillNumberForFromMenstruation: 22,
           durationMenstruation: 2,
           isOnReminder: false,
+          timezoneDatabaseName: null,
           pillSheetTypes: [PillSheetType.pillsheet_21],
           reminderTimes: [
             ReminderTime(hour: 10, minute: 0),
@@ -86,6 +89,7 @@ void main() {
             createdAt: now()),
         isHealthDataAvailable: false,
         userIsUpdatedFrom132: false,
+        deviceTimezoneName: "Asia/Tokyo",
       );
 
       await tester.pumpWidget(
