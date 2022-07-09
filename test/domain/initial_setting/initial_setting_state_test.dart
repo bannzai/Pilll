@@ -1,3 +1,4 @@
+import 'package:flutter/services.dart';
 import 'package:pilll/domain/initial_setting/initial_setting_state.codegen.dart';
 import 'package:pilll/entity/pill_sheet.codegen.dart';
 import 'package:pilll/entity/pill_sheet_type.dart';
@@ -9,9 +10,20 @@ import 'package:shared_preferences/shared_preferences.dart';
 import '../../helper/mock.mocks.dart';
 
 void main() {
+  const MethodChannel timezoneChannel =
+      MethodChannel('flutter_native_timezone');
+
   setUp(() {
     TestWidgetsFlutterBinding.ensureInitialized();
     SharedPreferences.setMockInitialValues({});
+
+    timezoneChannel.setMockMethodCallHandler((MethodCall methodCall) async {
+      return 'Asia/Tokyo';
+    });
+  });
+
+  tearDown(() {
+    timezoneChannel.setMockMethodCallHandler(null);
   });
   group("#InitialSettingState.buildPillSheet", () {
     test("it is builded pillSheet.gropuIndex == todayPillNumber.pageIndex ",
