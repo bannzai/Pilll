@@ -20,7 +20,6 @@ void main() {
       final today = DateTime.parse("2020-11-23");
       todayRepository = mockTodayRepository;
       when(mockTodayRepository.now()).thenReturn(today);
-      when(mockTodayRepository.now()).thenReturn(today);
 
       final pillSheet = InitialSettingState.buildPillSheet(
         pageIndex: 0,
@@ -41,7 +40,6 @@ void main() {
       final mockTodayRepository = MockTodayService();
       final today = DateTime.parse("2020-11-23");
       todayRepository = mockTodayRepository;
-      when(mockTodayRepository.now()).thenReturn(today);
       when(mockTodayRepository.now()).thenReturn(today);
 
       final pillSheet = InitialSettingState.buildPillSheet(
@@ -68,7 +66,6 @@ void main() {
       final mockTodayRepository = MockTodayService();
       final today = DateTime.parse("2020-11-23");
       todayRepository = mockTodayRepository;
-      when(mockTodayRepository.now()).thenReturn(today);
       when(mockTodayRepository.now()).thenReturn(today);
 
       final pillSheet = InitialSettingState.buildPillSheet(
