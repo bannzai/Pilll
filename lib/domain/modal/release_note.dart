@@ -85,7 +85,7 @@ class ReleaseNote extends StatelessWidget {
   }
 }
 
-showReleaseNotePreDialog(BuildContext context) async {
+void showReleaseNotePreDialog(BuildContext context) async {
   final key = ReleaseNoteKey.version3_11_0;
   final storage = await SharedPreferences.getInstance();
   if (storage.getBool(key) ?? false) {
@@ -100,7 +100,7 @@ showReleaseNotePreDialog(BuildContext context) async {
       });
 }
 
-openReleaseNote() async {
+void openReleaseNote() async {
   final ChromeSafariBrowser browser = new ChromeSafariBrowser();
   await browser.open(
       url: Uri.parse(
