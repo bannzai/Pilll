@@ -136,7 +136,7 @@ class RecordPagePillSheet extends StatelessWidget {
                   pillSheet: pillSheet,
                 );
                 requestInAppReview();
-                await showReleaseNotePreDialog(context);
+                showReleaseNotePreDialog(context);
               }
             } catch (exception, stack) {
               errorLogger.recordError(exception, stack);

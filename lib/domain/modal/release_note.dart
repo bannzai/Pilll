@@ -71,7 +71,7 @@ class ReleaseNote extends StatelessWidget {
                       onPressed: () async {
                         analytics.logEvent(name: "pressed_show_release_note");
                         Navigator.of(context).pop();
-                        await openReleaseNote();
+                        openReleaseNote();
                       },
                       text: "詳細を見る"),
                 ),
