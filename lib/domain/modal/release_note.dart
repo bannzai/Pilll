@@ -43,7 +43,7 @@ class ReleaseNote extends StatelessWidget {
                         padding:
                             const EdgeInsets.only(top: 40, left: 40, right: 40),
                         child: Text(
-                          "服用日数を調整できるようになりました",
+                          "服用通知のタイムゾーンに対応",
                           style: FontType.subTitle.merge(TextColorStyle.black),
                           textAlign: TextAlign.center,
                         ),
@@ -58,7 +58,7 @@ class ReleaseNote extends StatelessWidget {
                     children: [
                       Text(
                         '''
-休薬後は1番目として服用再開ができるようになりました。また、すべてのピルシート終了後引き続き服用を続ける場合に便利な機能を追加しました。
+設定 > 通知時刻 からお住まいの地域のタイムゾーンへと変更することができます。通知時刻は設定されているタイムゾーンの時刻になります
                         ''',
                         style: FontType.assisting.merge(TextColorStyle.main),
                       ),
@@ -71,7 +71,7 @@ class ReleaseNote extends StatelessWidget {
                       onPressed: () async {
                         analytics.logEvent(name: "pressed_show_release_note");
                         Navigator.of(context).pop();
-                        await openReleaseNote();
+                        openReleaseNote();
                       },
                       text: "詳細を見る"),
                 ),
@@ -85,8 +85,8 @@ class ReleaseNote extends StatelessWidget {
   }
 }
 
-showReleaseNotePreDialog(BuildContext context) async {
-  final key = ReleaseNoteKey.version3_10_0;
+void showReleaseNotePreDialog(BuildContext context) async {
+  final key = ReleaseNoteKey.version3_11_0;
   final storage = await SharedPreferences.getInstance();
   if (storage.getBool(key) ?? false) {
     return;
@@ -100,11 +100,11 @@ showReleaseNotePreDialog(BuildContext context) async {
       });
 }
 
-openReleaseNote() async {
+void openReleaseNote() async {
   final ChromeSafariBrowser browser = new ChromeSafariBrowser();
   await browser.open(
       url: Uri.parse(
-          "https://pilll.wraptas.site/567d9c12f55d4d199b0d839f5eb46b1e"),
+          "https://pilll.wraptas.site/e78b91bc246a4669bfbe3fda9e058e79"),
       options: ChromeSafariBrowserClassOptions(
           android:
               AndroidChromeCustomTabsOptions(addDefaultShareMenuItem: false),
