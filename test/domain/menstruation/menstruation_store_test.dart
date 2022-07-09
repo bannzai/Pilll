@@ -44,6 +44,7 @@ void main() {
           pillNumberForFromMenstruation: 22,
           durationMenstruation: 3,
           reminderTimes: [],
+          timezoneDatabaseName: null,
           isOnReminder: true,
         );
         final menstruations = [
@@ -120,6 +121,7 @@ void main() {
           pillNumberForFromMenstruation: 22,
           durationMenstruation: 3,
           reminderTimes: [],
+          timezoneDatabaseName: null,
           isOnReminder: true,
         );
         final menstruations = [
@@ -195,6 +197,7 @@ void main() {
           pillNumberForFromMenstruation: 22,
           durationMenstruation: 3,
           reminderTimes: [],
+          timezoneDatabaseName: null,
           isOnReminder: true,
         );
         final calendarScheduledMenstruationBandModels =
@@ -265,6 +268,7 @@ void main() {
           pillNumberForFromMenstruation: 22,
           durationMenstruation: 3,
           reminderTimes: [],
+          timezoneDatabaseName: null,
           isOnReminder: true,
         );
         final menstruations = [

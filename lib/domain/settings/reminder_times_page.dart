@@ -2,6 +2,7 @@ import 'dart:async';
 
 import 'package:pilll/analytics.dart';
 import 'package:pilll/domain/settings/setting_page_state.codegen.dart';
+import 'package:pilll/domain/settings/timezone_setting_dialog.dart';
 import 'package:pilll/entity/setting.codegen.dart';
 import 'package:pilll/domain/settings/setting_page_state_notifier.dart';
 import 'package:pilll/components/atoms/color.dart';
@@ -37,32 +38,68 @@ class ReminderTimesPage extends HookConsumerWidget {
           "通知時間",
           style: TextStyle(color: TextColor.black),
         ),
+        actions: [
+          IconButton(
+              onPressed: () {
+                analytics.logEvent(name: "pressed_tz_setting_action");
+                showDialog(
+                    context: context,
+                    builder: (_) => TimezoneSettingDialog(
+                          state: state,
+                          stateNotifier: store,
+                          onDone: (tz) {
+                            ScaffoldMessenger.of(context).showSnackBar(
+                              SnackBar(
+                                duration: const Duration(seconds: 2),
+                                content: Text("$tzに変更しました"),
+                              ),
+                            );
+                          },
+                        ));
+              },
+              icon:
+                  const Icon(Icons.timer_sharp, color: PilllColors.secondary)),
+        ],
         backgroundColor: PilllColors.background,
       ),
       body: SafeArea(
         child: Container(
           child: ListView(
             children: [
-              ..._components(context, store, setting).map((e) {
-                return [e, _separator()];
-              }).expand((element) => element),
-              _footer(context, state, store),
-              _separator(),
+              ...setting.reminderTimes
+                  .asMap()
+                  .map(
+                    (offset, reminderTime) => MapEntry(
+                      offset,
+                      Column(
+                        children: [
+                          Padding(
+                            padding: const EdgeInsets.only(left: 15, right: 15),
+                            child: Container(
+                              height: 1,
+                              color: PilllColors.border,
+                            ),
+                          ),
+                          _component(
+                              context, store, setting, reminderTime, offset + 1)
+                        ],
+                      ),
+                    ),
+                  )
+                  .values,
+              Padding(
+                padding: const EdgeInsets.only(left: 15, right: 15),
+                child: Container(
+                  height: 1,
+                  color: PilllColors.border,
+                ),
+              ),
+              _add(context, state, store),
             ],
           ),
         ),
       ),
     );
-  }
-
-  List<Widget> _components(
-      BuildContext context, SettingStateNotifier store, Setting setting) {
-    return setting.reminderTimes
-        .asMap()
-        .map((offset, reminderTime) => MapEntry(offset,
-            _component(context, store, setting, reminderTime, offset + 1)))
-        .values
-        .toList();
   }
 
   Widget _component(
@@ -117,17 +154,7 @@ class ReminderTimesPage extends HookConsumerWidget {
     );
   }
 
-  Widget _separator() {
-    return Padding(
-      padding: const EdgeInsets.only(left: 15, right: 15),
-      child: Container(
-        height: 1,
-        color: PilllColors.border,
-      ),
-    );
-  }
-
-  Widget _footer(
+  Widget _add(
       BuildContext context, SettingState state, SettingStateNotifier store) {
     final setting = state.setting;
     if (setting.reminderTimes.length >= ReminderTime.maximumCount) {

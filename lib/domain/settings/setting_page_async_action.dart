@@ -156,4 +156,11 @@ class SettingPageAsyncAction {
     await _settingDatastore.update(setting.copyWith(
         reminderNotificationCustomization: reminderNotificationCustomization));
   }
+
+  Future<void> updateTimezoneDatabaseName(
+      {required Setting setting, required String timezoneDatabaseName}) async {
+    final updated =
+        setting.copyWith(timezoneDatabaseName: timezoneDatabaseName);
+    await _settingDatastore.update(updated);
+  }
 }

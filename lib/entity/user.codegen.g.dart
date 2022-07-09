@@ -46,7 +46,6 @@ _$_User _$$_UserFromJson(Map<String, dynamic> json) => _$_User(
           json['trialDeadlineDate'] as Timestamp?),
       discountEntitlementDeadlineDate: TimestampConverter.timestampToDateTime(
           json['discountEntitlementDeadlineDate'] as Timestamp?),
-      useTimeZoneOffset: json['useTimeZoneOffset'] as bool? ?? false,
     );
 
 Map<String, dynamic> _$$_UserToJson(_$_User instance) => <String, dynamic>{
@@ -67,5 +66,4 @@ Map<String, dynamic> _$$_UserToJson(_$_User instance) => <String, dynamic>{
           TimestampConverter.dateTimeToTimestamp(instance.trialDeadlineDate),
       'discountEntitlementDeadlineDate': TimestampConverter.dateTimeToTimestamp(
           instance.discountEntitlementDeadlineDate),
-      'useTimeZoneOffset': instance.useTimeZoneOffset,
     };

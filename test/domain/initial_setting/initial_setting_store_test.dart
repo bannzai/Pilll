@@ -1,3 +1,4 @@
+import 'package:flutter/services.dart';
 import 'package:pilll/database/batch.dart';
 import 'package:pilll/domain/initial_setting/initial_setting_store.dart';
 import 'package:pilll/entity/pill_sheet.codegen.dart';
@@ -20,9 +21,20 @@ import 'package:shared_preferences/shared_preferences.dart';
 import '../../helper/mock.mocks.dart';
 
 void main() {
+  const MethodChannel timezoneChannel =
+      MethodChannel('flutter_native_timezone');
+
   setUp(() {
     TestWidgetsFlutterBinding.ensureInitialized();
     SharedPreferences.setMockInitialValues({});
+
+    timezoneChannel.setMockMethodCallHandler((MethodCall methodCall) async {
+      return 'Asia/Tokyo';
+    });
+  });
+
+  tearDown(() {
+    timezoneChannel.setMockMethodCallHandler(null);
   });
   group("#selectedFirstPillSheetType", () {
     test("when first selected", () {
@@ -297,7 +309,7 @@ void main() {
     });
   });
   group("#register", () {
-    test("state.pillSheetTypes has one pillSheetType", () {
+    test("state.pillSheetTypes has one pillSheetType", () async {
       final userDatastore = MockUserDatastore();
       var mockTodayRepository = MockTodayService();
       final _today = DateTime.parse("2020-09-19");
@@ -343,6 +355,7 @@ void main() {
           ReminderTime(hour: 21, minute: 0)
         ],
         pillSheetTypes: [PillSheetType.pillsheet_21],
+        timezoneDatabaseName: null,
       );
       final settingDatastore = MockSettingDatastore();
       when(settingDatastore.updateWithBatch(batch, setting)).thenReturn(null);
@@ -368,9 +381,9 @@ void main() {
       store.setTodayPillNumber(pageIndex: 0, pillNumberIntoPillSheet: 1);
       store.setReminderTime(index: 0, hour: 21, minute: 20);
 
-      store.register();
+      await store.register();
     });
-    test("state.pillSheetTypes has two pillSheetType", () {
+    test("state.pillSheetTypes has two pillSheetType", () async {
       final userDatastore = MockUserDatastore();
       var mockTodayRepository = MockTodayService();
       final _today = DateTime.parse("2020-09-19");
@@ -441,6 +454,7 @@ void main() {
           PillSheetType.pillsheet_28_0,
           PillSheetType.pillsheet_21
         ],
+        timezoneDatabaseName: null,
       );
       final settingDatastore = MockSettingDatastore();
       when(settingDatastore.updateWithBatch(batch, setting)).thenReturn(null);
@@ -467,11 +481,12 @@ void main() {
       store.setTodayPillNumber(pageIndex: 1, pillNumberIntoPillSheet: 1);
       store.setReminderTime(index: 0, hour: 21, minute: 20);
 
-      store.register();
+      await store.register();
     });
 
     // ref: https://github.com/bannzai/Pilll/pull/534
-    test("state.pillSheetTypes is [PillSheetType.pillsheet_24_rest_4]", () {
+    test("state.pillSheetTypes is [PillSheetType.pillsheet_24_rest_4]",
+        () async {
       final setting = const Setting(
         pillNumberForFromMenstruation: 24,
         durationMenstruation: 4,
@@ -481,6 +496,7 @@ void main() {
           ReminderTime(hour: 22, minute: 0)
         ],
         pillSheetTypes: [PillSheetType.pillsheet_24_rest_4],
+        timezoneDatabaseName: null,
       );
 
       final userDatastore = MockUserDatastore();
@@ -547,7 +563,7 @@ void main() {
       store.setTodayPillNumber(pageIndex: 0, pillNumberIntoPillSheet: 1);
       store.setReminderTime(index: 0, hour: 21, minute: 20);
 
-      store.register();
+      await store.register();
     });
   });
 }

@@ -185,7 +185,7 @@ class InitialSettingStateStore extends StateNotifier<InitialSettingState> {
       _pillSheetModifiedHistoryDatastore.add(batch, history);
     }
 
-    final setting = state.buildSetting();
+    final setting = await state.buildSetting();
     _settingDatastore.updateWithBatch(batch, setting);
 
     await batch.commit();

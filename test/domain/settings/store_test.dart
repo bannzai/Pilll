@@ -60,6 +60,7 @@ void main() {
         durationMenstruation: 1,
         isOnReminder: false,
         pillSheetTypes: [PillSheetType.pillsheet_28_4],
+        timezoneDatabaseName: null,
       );
 
       when(settingDatastore.fetch())
@@ -169,6 +170,7 @@ void main() {
         durationMenstruation: 1,
         isOnReminder: false,
         pillSheetTypes: [PillSheetType.pillsheet_28_4],
+        timezoneDatabaseName: null,
       );
       when(settingDatastore.fetch())
           .thenAnswer((realInvocation) => Future.value(setting));

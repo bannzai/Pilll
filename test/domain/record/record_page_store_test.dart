@@ -71,6 +71,7 @@ void main() {
         pillNumberForFromMenstruation: 22,
         durationMenstruation: 3,
         isOnReminder: true,
+        timezoneDatabaseName: null,
         reminderTimes: [
           ReminderTime(hour: 21, minute: 20),
           ReminderTime(hour: 22, minute: 0)
@@ -168,6 +169,7 @@ void main() {
         pillNumberForFromMenstruation: 22,
         durationMenstruation: 3,
         isOnReminder: true,
+        timezoneDatabaseName: null,
         reminderTimes: [
           ReminderTime(hour: 21, minute: 20),
           ReminderTime(hour: 22, minute: 0)
@@ -274,6 +276,7 @@ void main() {
         pillNumberForFromMenstruation: 22,
         durationMenstruation: 3,
         isOnReminder: true,
+        timezoneDatabaseName: null,
         reminderTimes: [
           ReminderTime(hour: 21, minute: 20),
           ReminderTime(hour: 22, minute: 0)
@@ -374,6 +377,7 @@ void main() {
         pillNumberForFromMenstruation: 22,
         durationMenstruation: 3,
         isOnReminder: true,
+        timezoneDatabaseName: null,
         reminderTimes: [
           ReminderTime(hour: 21, minute: 20),
           ReminderTime(hour: 22, minute: 0)
@@ -476,6 +480,7 @@ void main() {
         pillNumberForFromMenstruation: 22,
         durationMenstruation: 3,
         isOnReminder: true,
+        timezoneDatabaseName: null,
         reminderTimes: [
           ReminderTime(hour: 21, minute: 20),
           ReminderTime(hour: 22, minute: 0)
@@ -581,6 +586,7 @@ void main() {
         pillNumberForFromMenstruation: 22,
         durationMenstruation: 3,
         isOnReminder: true,
+        timezoneDatabaseName: null,
         reminderTimes: [
           ReminderTime(hour: 21, minute: 20),
           ReminderTime(hour: 22, minute: 0)
@@ -678,6 +684,7 @@ void main() {
           pillNumberForFromMenstruation: 22,
           durationMenstruation: 3,
           isOnReminder: true,
+          timezoneDatabaseName: null,
           reminderTimes: [
             ReminderTime(hour: 21, minute: 20),
             ReminderTime(hour: 22, minute: 0)
@@ -771,6 +778,7 @@ void main() {
           pillNumberForFromMenstruation: 22,
           durationMenstruation: 3,
           isOnReminder: true,
+          timezoneDatabaseName: null,
           reminderTimes: [
             ReminderTime(hour: 21, minute: 20),
             ReminderTime(hour: 22, minute: 0)
@@ -879,6 +887,7 @@ void main() {
           pillNumberForFromMenstruation: 22,
           durationMenstruation: 3,
           isOnReminder: true,
+          timezoneDatabaseName: null,
           reminderTimes: [
             ReminderTime(hour: 21, minute: 20),
             ReminderTime(hour: 22, minute: 0)
@@ -979,6 +988,7 @@ void main() {
           pillNumberForFromMenstruation: 22,
           durationMenstruation: 3,
           isOnReminder: true,
+          timezoneDatabaseName: null,
           reminderTimes: [
             ReminderTime(hour: 21, minute: 20),
             ReminderTime(hour: 22, minute: 0)
@@ -1084,6 +1094,7 @@ void main() {
           pillNumberForFromMenstruation: 22,
           durationMenstruation: 3,
           isOnReminder: true,
+          timezoneDatabaseName: null,
           reminderTimes: [
             ReminderTime(hour: 21, minute: 20),
             ReminderTime(hour: 22, minute: 0)
@@ -1193,6 +1204,7 @@ void main() {
           pillNumberForFromMenstruation: 22,
           durationMenstruation: 3,
           isOnReminder: true,
+          timezoneDatabaseName: null,
           reminderTimes: [
             ReminderTime(hour: 21, minute: 20),
             ReminderTime(hour: 22, minute: 0)
@@ -1307,6 +1319,7 @@ void main() {
           pillNumberForFromMenstruation: 22,
           durationMenstruation: 3,
           isOnReminder: true,
+          timezoneDatabaseName: null,
           reminderTimes: [
             ReminderTime(hour: 21, minute: 20),
             ReminderTime(hour: 22, minute: 0)

@@ -163,7 +163,6 @@ class UserDatastore {
           now().add(const Duration(days: 30)),
       UserFirestoreFieldKeys.settings: settingForTrial.toJson(),
       UserFirestoreFieldKeys.hasDiscountEntitlement: true,
-      UserFirestoreFieldKeys.useTimeZoneOffset: true,
     }, SetOptions(merge: true));
   }
 
@@ -198,99 +197,83 @@ class UserDatastore {
 
 extension SaveUserLaunchInfo on UserDatastore {
   saveUserLaunchInfo(User user) {
-    unawaited(_recordUserIDs(user));
-    unawaited(_saveLaunchInfo());
-    unawaited(_saveStats());
+    unawaited(_saveStats(user));
   }
 
-  Future<void> _recordUserIDs(User user) async {
-    try {
-      final userID = user.id!;
-      final sharedPreferences = await SharedPreferences.getInstance();
+  Future<void> _saveStats(User user) async {
+    final sharedPreferences = await SharedPreferences.getInstance();
 
-      List<String> userDocumentIDSets = user.userDocumentIDSets;
-      if (!userDocumentIDSets.contains(userID)) {
-        userDocumentIDSets.add(userID);
-      }
-
-      final lastSignInAnonymousUID =
-          sharedPreferences.getString(StringKey.lastSignInAnonymousUID);
-      List<String> anonymousUserIDSets = user.anonymousUserIDSets;
-      if (lastSignInAnonymousUID != null &&
-          !anonymousUserIDSets.contains(lastSignInAnonymousUID)) {
-        anonymousUserIDSets.add(lastSignInAnonymousUID);
-      }
-      final firebaseCurrentUserID =
-          firebaseAuth.FirebaseAuth.instance.currentUser?.uid;
-      List<String> firebaseCurrentUserIDSets = user.firebaseCurrentUserIDSets;
-      if (firebaseCurrentUserID != null &&
-          !firebaseCurrentUserIDSets.contains(firebaseCurrentUserID)) {
-        firebaseCurrentUserIDSets.add(firebaseCurrentUserID);
-      }
-
-      await _database.userRawReference().set(
-        {
-          UserFirestoreFieldKeys.userDocumentIDSets: userDocumentIDSets,
-          UserFirestoreFieldKeys.firebaseCurrentUserIDSets:
-              firebaseCurrentUserIDSets,
-          UserFirestoreFieldKeys.anonymousUserIDSets: anonymousUserIDSets,
-        },
-        SetOptions(merge: true),
-      );
-    } catch (error) {
-      print(error);
-    }
-  }
-
-  Future<void> _saveLaunchInfo() {
-    final os = Platform.operatingSystem;
-    return PackageInfo.fromPlatform().then((info) {
-      final packageInfo = Package(
-          latestOS: os,
-          appName: info.appName,
-          buildNumber: info.buildNumber,
-          appVersion: info.version);
-      return _database.userRawReference().set(
-          {UserFirestoreFieldKeys.packageInfo: packageInfo.toJson()},
-          SetOptions(merge: true));
-    });
-  }
-
-  Future<void> _saveStats() async {
-    final store = await SharedPreferences.getInstance();
-    final timeZoneDatabaseName = await FlutterNativeTimezone.getLocalTimezone();
-
+    // Stats
     final lastLoginVersion =
         await PackageInfo.fromPlatform().then((value) => value.version);
-    String? beginVersion = store.getString(StringKey.beginVersion);
+    String? beginVersion = sharedPreferences.getString(StringKey.beginVersion);
     if (beginVersion == null) {
       final v = lastLoginVersion;
-      await store.setString(StringKey.beginVersion, v);
+      await sharedPreferences.setString(StringKey.beginVersion, v);
       beginVersion = v;
     }
 
+    // timezone
     final now = DateTime.now().toLocal();
     final timeZoneName = now.timeZoneName;
     final timeZoneOffset = now.timeZoneOffset;
+    final timeZoneDatabaseName = await FlutterNativeTimezone.getLocalTimezone();
+
+    // Package
+    final packageInfo = await PackageInfo.fromPlatform();
+    final os = Platform.operatingSystem;
+    final package = Package(
+        latestOS: os,
+        appName: packageInfo.appName,
+        buildNumber: packageInfo.buildNumber,
+        appVersion: packageInfo.version);
+
+    // UserIDs
+    final userID = user.id!;
+    List<String> userDocumentIDSets = [...user.userDocumentIDSets];
+    if (!userDocumentIDSets.contains(userID)) {
+      userDocumentIDSets.add(userID);
+    }
+    final lastSignInAnonymousUID =
+        sharedPreferences.getString(StringKey.lastSignInAnonymousUID);
+    List<String> anonymousUserIDSets = [...user.anonymousUserIDSets];
+    if (lastSignInAnonymousUID != null &&
+        !anonymousUserIDSets.contains(lastSignInAnonymousUID)) {
+      anonymousUserIDSets.add(lastSignInAnonymousUID);
+    }
+    final firebaseCurrentUserID =
+        firebaseAuth.FirebaseAuth.instance.currentUser?.uid;
+    List<String> firebaseCurrentUserIDSets = [
+      ...user.firebaseCurrentUserIDSets
+    ];
+    if (firebaseCurrentUserID != null &&
+        !firebaseCurrentUserIDSets.contains(firebaseCurrentUserID)) {
+      firebaseCurrentUserIDSets.add(firebaseCurrentUserID);
+    }
 
     return _database.userRawReference().set({
-      // shortcut property for backend
+      // Shortcut property for backend
       "lastLoginAt": now,
+      // Stats
       "stats": {
         "lastLoginAt": now,
         "beginVersion": beginVersion,
         "lastLoginVersion": lastLoginVersion,
-        "timeZoneName": timeZoneName,
-        "timeZoneDatabaseName": timeZoneDatabaseName,
-        "timeZoneOffsetIsNegative": timeZoneOffset.isNegative,
-        "timeZoneOffsetInHours": timeZoneOffset.inHours,
-        "timeZoneOffsetInMinutes": timeZoneOffset.inMinutes,
-        // Deprecated
-        "timeZoneOffset":
-            "${timeZoneOffset.isNegative ? "-" : "+"}${timeZoneOffset.inHours}",
-        "timeZoneIsNegative": timeZoneOffset.isNegative,
-        "beginingVersion": beginVersion,
-      }
+      },
+      "timezone": {
+        "name": timeZoneName,
+        "databaseName": timeZoneDatabaseName,
+        "offsetInHours": timeZoneOffset.inHours,
+        "offsetIsNegative": timeZoneOffset.isNegative,
+      },
+      // Package
+      UserFirestoreFieldKeys.packageInfo: package.toJson(),
+
+      // UserIDs
+      UserFirestoreFieldKeys.userDocumentIDSets: userDocumentIDSets,
+      UserFirestoreFieldKeys.firebaseCurrentUserIDSets:
+          firebaseCurrentUserIDSets,
+      UserFirestoreFieldKeys.anonymousUserIDSets: anonymousUserIDSets,
     }, SetOptions(merge: true));
   }
 }
