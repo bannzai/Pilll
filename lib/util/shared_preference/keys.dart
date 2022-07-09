@@ -32,6 +32,7 @@ extension ReleaseNoteKey on String {
   static final String version3_8_0 = "release_notes_shown_3.8.0";
   static final String version3_9_0 = "release_notes_shown_3.9.0";
   static final String version3_10_0 = "release_notes_shown_3.10.0";
+  static final String version3_11_0 = "release_notes_shown_3.11.0";
 }
 
 extension IntKey on String {
