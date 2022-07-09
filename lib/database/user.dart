@@ -230,20 +230,22 @@ extension SaveUserLaunchInfo on UserDatastore {
 
     // UserIDs
     final userID = user.id!;
-    List<String> userDocumentIDSets = user.userDocumentIDSets;
+    List<String> userDocumentIDSets = [...user.userDocumentIDSets];
     if (!userDocumentIDSets.contains(userID)) {
       userDocumentIDSets.add(userID);
     }
     final lastSignInAnonymousUID =
         sharedPreferences.getString(StringKey.lastSignInAnonymousUID);
-    List<String> anonymousUserIDSets = user.anonymousUserIDSets;
+    List<String> anonymousUserIDSets = [...user.anonymousUserIDSets];
     if (lastSignInAnonymousUID != null &&
         !anonymousUserIDSets.contains(lastSignInAnonymousUID)) {
       anonymousUserIDSets.add(lastSignInAnonymousUID);
     }
     final firebaseCurrentUserID =
         firebaseAuth.FirebaseAuth.instance.currentUser?.uid;
-    List<String> firebaseCurrentUserIDSets = user.firebaseCurrentUserIDSets;
+    List<String> firebaseCurrentUserIDSets = [
+      ...user.firebaseCurrentUserIDSets
+    ];
     if (firebaseCurrentUserID != null &&
         !firebaseCurrentUserIDSets.contains(firebaseCurrentUserID)) {
       firebaseCurrentUserIDSets.add(firebaseCurrentUserID);
