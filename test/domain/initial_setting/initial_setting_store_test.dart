@@ -297,7 +297,7 @@ void main() {
     });
   });
   group("#register", () {
-    test("state.pillSheetTypes has one pillSheetType", () {
+    test("state.pillSheetTypes has one pillSheetType", () async {
       final userDatastore = MockUserDatastore();
       var mockTodayRepository = MockTodayService();
       final _today = DateTime.parse("2020-09-19");
@@ -369,9 +369,9 @@ void main() {
       store.setTodayPillNumber(pageIndex: 0, pillNumberIntoPillSheet: 1);
       store.setReminderTime(index: 0, hour: 21, minute: 20);
 
-      store.register();
+      await store.register();
     });
-    test("state.pillSheetTypes has two pillSheetType", () {
+    test("state.pillSheetTypes has two pillSheetType", () async {
       final userDatastore = MockUserDatastore();
       var mockTodayRepository = MockTodayService();
       final _today = DateTime.parse("2020-09-19");
@@ -469,11 +469,12 @@ void main() {
       store.setTodayPillNumber(pageIndex: 1, pillNumberIntoPillSheet: 1);
       store.setReminderTime(index: 0, hour: 21, minute: 20);
 
-      store.register();
+      await store.register();
     });
 
     // ref: https://github.com/bannzai/Pilll/pull/534
-    test("state.pillSheetTypes is [PillSheetType.pillsheet_24_rest_4]", () {
+    test("state.pillSheetTypes is [PillSheetType.pillsheet_24_rest_4]",
+        () async {
       final setting = const Setting(
         pillNumberForFromMenstruation: 24,
         durationMenstruation: 4,
@@ -550,7 +551,7 @@ void main() {
       store.setTodayPillNumber(pageIndex: 0, pillNumberIntoPillSheet: 1);
       store.setReminderTime(index: 0, hour: 21, minute: 20);
 
-      store.register();
+      await store.register();
     });
   });
 }
