@@ -9,13 +9,13 @@ import 'package:shared_preferences/shared_preferences.dart';
 import '../../helper/mock.mocks.dart';
 
 void main() {
-  setUp(() async {
+  setUp(() {
     TestWidgetsFlutterBinding.ensureInitialized();
     SharedPreferences.setMockInitialValues({});
   });
   group("#InitialSettingState.buildPillSheet", () {
     test("it is builded pillSheet.gropuIndex == todayPillNumber.pageIndex ",
-        () async {
+        () {
       final mockTodayRepository = MockTodayService();
       final today = DateTime.parse("2020-11-23");
       todayRepository = mockTodayRepository;
@@ -35,8 +35,7 @@ void main() {
 
       expect(expected, pillSheet);
     });
-    test("it is builded pillSheet.gropuIndex > todayPillNumber.pageIndex ",
-        () async {
+    test("it is builded pillSheet.gropuIndex > todayPillNumber.pageIndex ", () {
       final mockTodayRepository = MockTodayService();
       final today = DateTime.parse("2020-11-23");
       todayRepository = mockTodayRepository;
@@ -61,8 +60,7 @@ void main() {
 
       expect(expected, pillSheet);
     });
-    test("it is builded pillSheet.gropuIndex < todayPillNumber.pageIndex ",
-        () async {
+    test("it is builded pillSheet.gropuIndex < todayPillNumber.pageIndex ", () {
       final mockTodayRepository = MockTodayService();
       final today = DateTime.parse("2020-11-23");
       todayRepository = mockTodayRepository;
