@@ -43,7 +43,7 @@ class ReleaseNote extends StatelessWidget {
                         padding:
                             const EdgeInsets.only(top: 40, left: 40, right: 40),
                         child: Text(
-                          "服用通知がタイムゾーンに対応しました",
+                          "服用通知のタイムゾーンに対応",
                           style: FontType.subTitle.merge(TextColorStyle.black),
                           textAlign: TextAlign.center,
                         ),
