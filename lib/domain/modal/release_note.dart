@@ -58,7 +58,7 @@ class ReleaseNote extends StatelessWidget {
                     children: [
                       Text(
                         '''
-設定 > 通知時刻 > 右上の⏰ボタンを押していただくと、お住まいの地域のタイムゾーンへと変更することができます。通知時刻は設定されているタイムゾーンの時刻が設定されます。デフォルトでは日本時間になります
+設定 > 通知時刻 からお住まいの地域のタイムゾーンへと変更することができます。通知時刻は設定されているタイムゾーンの時刻になります
                         ''',
                         style: FontType.assisting.merge(TextColorStyle.main),
                       ),
