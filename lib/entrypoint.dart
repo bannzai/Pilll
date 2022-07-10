@@ -24,6 +24,9 @@ Future<void> entrypoint() async {
   runZonedGuarded(() async {
     WidgetsFlutterBinding.ensureInitialized();
     await Firebase.initializeApp();
+    // QuickRecordの処理などFirebaseを使用するのでFirebase.initializeApp()の後に時刻する
+    definedChannel();
+
     if (kDebugMode) {
       overrideDebugPrint();
     }
@@ -42,8 +45,6 @@ Future<void> entrypoint() async {
     };
     // MEMO: FirebaseCrashlytics#recordFlutterError called dumpErrorToConsole in function.
     FlutterError.onError = FirebaseCrashlytics.instance.recordFlutterError;
-
-    definedChannel();
     runApp(ProviderScope(child: App()));
   }, (error, stack) => FirebaseCrashlytics.instance.recordError(error, stack));
 }
