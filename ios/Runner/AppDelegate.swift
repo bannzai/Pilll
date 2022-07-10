@@ -171,12 +171,15 @@ extension AppDelegate {
         case .pillReminder:
             switch response.actionIdentifier {
             case "RECORD_PILL":
+                // 先にバッジをクリアしてしまう。後述の理由でQuickRecordが多少遅延するため操作に違和感が出る。この部分は楽観的UIとして更新してしまう
+                UIApplication.shared.applicationIconBadgeNumber = 0
+
                 // application(_:didFinishLaunchingWithOptions:)が終了してからFlutterのmainの開始は非同期的でFlutterのmainの完了までラグがある
                 // 特にアプリのプロセスがKillされている状態では、先にuserNotificationCenter(_:didReceive:withCompletionHandler:)の処理が走り
                 // Flutter側でのMethodChannelが確立される前にQuickRecordの呼び出しをおこなってしまう。この場合次にChanelが確立するまでFlutter側の処理の実行は遅延される。これは次のアプリの起動時まで遅延されるとほぼ同義になる
-                // よって対処療法的ではあるが、3秒待つことでほぼ間違いなくmain(の中でもMethodChanelの確立までは)の処理はすべて終えているとしてここではdelayを設けている。
+                // よって対処療法的ではあるが、5秒待つことでほぼ間違いなくmain(の中でもMethodChanelの確立までは)の処理はすべて終えているとしてここではdelayを設けている。
                 // ちなみに通常は1秒前後あれば十分であるが念のためくらいの間を持たせている
-                DispatchQueue.main.asyncAfter(deadline: .now() + 3) { [self] in
+                DispatchQueue.main.asyncAfter(deadline: .now() + 5) { [self] in
                     channel?.invokeMethod("recordPill", arguments: nil, result: { result in
                         end()
                     })

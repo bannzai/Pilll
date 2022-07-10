@@ -51,7 +51,6 @@ Future<void> recordPill() async {
     isQuickRecord: true,
   );
 
-  FlutterAppBadger.removeBadge();
   // NOTE: Firebase initializeが成功しているかが定かでは無いので一番最後にログを送る
   analytics.logEvent(name: "quick_recorded");
 }
