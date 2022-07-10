@@ -15,7 +15,7 @@ import HealthKit
             name: "method.channel.MizukiOhashi.Pilll",
             binaryMessenger: viewController.binaryMessenger
         )
-        // DO NOT OVERRIDE AGAIN
+        // DO NOT OVERRIDE
         channel?.setMethodCallHandler({ call, _completionHandler in
             let completionHandler: (Dictionary<String, Any>) -> Void = {
                 _completionHandler($0)
@@ -150,7 +150,6 @@ extension AppDelegate {
         UNUserNotificationCenter.current().setNotificationCategories([category])
     }
 
-
     override func userNotificationCenter(_ center: UNUserNotificationCenter, didReceive response: UNNotificationResponse, withCompletionHandler completionHandler: @escaping () -> Void) {
         func end() {
             var isCompleted: Bool = false
@@ -172,9 +171,16 @@ extension AppDelegate {
         case .pillReminder:
             switch response.actionIdentifier {
             case "RECORD_PILL":
-                channel?.invokeMethod("recordPill", arguments: nil, result: { result in
-                    end()
-                })
+                // application(_:didFinishLaunchingWithOptions:)が終了してからFlutterのmainの開始は非同期的でFlutterのmainの完了までラグがある
+                // 特にアプリのプロセスがKillされている状態では、先にuserNotificationCenter(_:didReceive:withCompletionHandler:)の処理が走り
+                // Flutter側でのMethodChannelが確立される前にQuickRecordの呼び出しをおこなってしまう。この場合次にChanelが確立するまでFlutter側の処理の実行は遅延される。これは次のアプリの起動時まで遅延されるとほぼ同義になる
+                // よって対処療法的ではあるが、5秒待つことでほぼ間違いなくmain(の中でもMethodChanelの確立までは)の処理はすべて終えているとしてここではdelayを設けている。
+                // ちなみに通常は1秒前後あれば十分であるが念のためくらいの間を持たせている
+                DispatchQueue.main.asyncAfter(deadline: .now() + 5) { [self] in
+                    channel?.invokeMethod("recordPill", arguments: nil, result: { result in
+                        end()
+                    })
+                }
             default:
                 end()
             }
