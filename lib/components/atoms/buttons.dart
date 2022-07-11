@@ -154,7 +154,7 @@ class RedTextButton extends HookWidget {
   }
 }
 
-class InconspicuousButton extends StatelessWidget {
+class InconspicuousButton extends HookWidget {
   final String text;
   final Future<void> Function() onPressed;
 
@@ -165,26 +165,38 @@ class InconspicuousButton extends StatelessWidget {
   }) : super(key: key);
 
   Widget build(BuildContext context) {
-    var isProcessing = false;
+    var isProcessing = useState(false);
     return SizedBox(
       width: 180,
       height: 44,
       child: TextButton(
         style: TextButton.styleFrom(backgroundColor: Colors.transparent),
-        child: Text(text, style: TextColorStyle.gray),
-        onPressed: () async {
-          if (isProcessing) {
-            return;
-          }
-          isProcessing = true;
-          try {
-            await onPressed.call();
-          } catch (error) {
-            rethrow;
-          } finally {
-            isProcessing = false;
-          }
-        },
+        child: Stack(
+          alignment: Alignment.center,
+          children: [
+            Text(text,
+                style: isProcessing.value
+                    ? TextColorStyle.lightGray
+                    : TextColorStyle.gray),
+            if (isProcessing.value) _Loading(),
+          ],
+        ),
+        onPressed: isProcessing.value
+            ? null
+            : () async {
+                if (isProcessing.value) {
+                  return;
+                }
+                isProcessing.value = true;
+
+                try {
+                  await onPressed.call();
+                } catch (error) {
+                  rethrow;
+                } finally {
+                  isProcessing.value = false;
+                }
+              },
       ),
     );
   }
