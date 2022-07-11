@@ -17,7 +17,7 @@ class PurchaseService {
       return offerings;
     } catch (exception, stack) {
       errorLogger.recordError(exception, stack);
-      print(exception);
+      debugPrint(exception);
       rethrow;
     }
   }

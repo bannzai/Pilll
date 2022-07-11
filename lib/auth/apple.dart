@@ -1,4 +1,5 @@
 import 'package:firebase_auth/firebase_auth.dart';
+import 'package:flutter/foundation.dart';
 import 'package:pilll/auth/hash.dart';
 import 'package:pilll/auth/link_value_container.dart';
 import 'package:pilll/util/environment.dart';
@@ -21,7 +22,7 @@ Future<LinkValueContainer?> linkWithApple(User user) async {
       nonce: sha256ofString(rawNonce).toString(),
       state: state,
     );
-    print("appleCredential: $appleCredential");
+    debugPrint("appleCredential: $appleCredential");
     if (state != appleCredential.state) {
       throw AssertionError('state not matched!');
     }
@@ -58,7 +59,7 @@ Future<UserCredential?> signInWithApple() async {
       nonce: sha256ofString(rawNonce).toString(),
       state: state,
     );
-    print("appleCredential: $appleCredential");
+    debugPrint("appleCredential: $appleCredential");
     if (state != appleCredential.state) {
       throw AssertionError('state not matched!');
     }
@@ -103,7 +104,7 @@ Future<bool> appleReauthentification() async {
     nonce: sha256ofString(rawNonce).toString(),
     state: state,
   );
-  print("appleCredential: $appleCredential");
+  debugPrint("appleCredential: $appleCredential");
   if (state != appleCredential.state) {
     throw AssertionError('state not matched!');
   }

@@ -66,7 +66,7 @@ class InitialSettingStateStore extends StateNotifier<InitialSettingState> {
   StreamSubscription? _authServiceCanceller;
   void fetch() {
     _authServiceCanceller = _authService.stream().listen((user) async {
-      print("watch sign state user: $user");
+      debugPrint("watch sign state user: $user");
 
       final userIsNotAnonymous = !user.isAnonymous;
       if (userIsNotAnonymous) {
@@ -100,8 +100,8 @@ class InitialSettingStateStore extends StateNotifier<InitialSettingState> {
   }
 
   void addPillSheetType(PillSheetType pillSheetType) {
-    state = state.copyWith(
-        pillSheetTypes: [...state.pillSheetTypes, pillSheetType]);
+    state = state
+        .copyWith(pillSheetTypes: [...state.pillSheetTypes, pillSheetType]);
   }
 
   void changePillSheetType(int index, PillSheetType pillSheetType) {

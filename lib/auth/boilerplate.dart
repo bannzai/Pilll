@@ -1,4 +1,5 @@
 import 'package:firebase_auth/firebase_auth.dart';
+import 'package:flutter/foundation.dart';
 import 'package:pilll/auth/exception.dart';
 import 'package:pilll/entity/link_account_type.dart';
 import 'package:pilll/error_log.dart';
@@ -24,7 +25,7 @@ Future<SignInWithAppleState> callLinkWithApple(
     return Future.value(SignInWithAppleState.determined);
   } on FirebaseAuthException catch (error, stackTrace) {
     errorLogger.recordError(error, stackTrace);
-    print(
+    debugPrint(
         "FirebaseAuthException $error, code: ${error.code}, stack: ${stackTrace.toString()}");
     final mappedException =
         mapFromFirebaseAuthException(error, LinkAccountType.apple);
@@ -33,7 +34,7 @@ Future<SignInWithAppleState> callLinkWithApple(
     }
     rethrow;
   } catch (error, stack) {
-    print("$error, ${StackTrace.current.toString()}");
+    debugPrint("$error, ${StackTrace.current.toString()}");
     errorLogger.recordError(error, stack);
     rethrow;
   }
@@ -58,7 +59,7 @@ Future<SignInWithGoogleState> callLinkWithGoogle(
     return Future.value(SignInWithGoogleState.determined);
   } on FirebaseAuthException catch (error, stackTrace) {
     errorLogger.recordError(error, stackTrace);
-    print(
+    debugPrint(
         "FirebaseAuthException $error, code: ${error.code}, stack: ${stackTrace.toString()}");
     final mappedException =
         mapFromFirebaseAuthException(error, LinkAccountType.google);
@@ -67,7 +68,7 @@ Future<SignInWithGoogleState> callLinkWithGoogle(
     }
     rethrow;
   } catch (error, stack) {
-    print("$error, ${StackTrace.current.toString()}");
+    debugPrint("$error, ${StackTrace.current.toString()}");
     errorLogger.recordError(error, stack);
     rethrow;
   }

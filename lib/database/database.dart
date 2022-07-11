@@ -1,4 +1,5 @@
 import 'package:firebase_auth/firebase_auth.dart' as firebase;
+import 'package:flutter/foundation.dart';
 import 'package:pilll/entity/diary.codegen.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
@@ -13,7 +14,7 @@ final databaseProvider = Provider<DatabaseConnection>((ref) {
   final stream = ref.watch(authStateStreamProvider);
   final uid = stream.asData?.value.uid ??
       firebase.FirebaseAuth.instance.currentUser?.uid;
-  print("[DEBUG] database uid is $uid");
+  debugPrint("[DEBUG] database uid is $uid");
   if (uid == null) {
     throw UnimplementedError("Must be called service/auth.dart callSignIn");
   }
@@ -73,7 +74,8 @@ class DatabaseConnection {
 
   final FromFirestore<Diary> _diaryFromFirestore =
       (snapshot, options) => Diary.fromJson(snapshot.data()!);
-  final ToFirestore<Diary> _diaryToFirestore = (diary, options) => diary.toJson();
+  final ToFirestore<Diary> _diaryToFirestore =
+      (diary, options) => diary.toJson();
   CollectionReference<Diary> diariesReference() => FirebaseFirestore.instance
       .collection(_CollectionPath.diaries(_userID))
       .withConverter(
@@ -119,7 +121,8 @@ class DatabaseConnection {
       _pillSheetModifiedHistoryFromFirestore = (snapshot, options) =>
           PillSheetModifiedHistory.fromJson(
               snapshot.data()!..putIfAbsent("id", () => snapshot.id));
-  final ToFirestore<PillSheetModifiedHistory> _pillSheetModifiedHistoryToFirestore =
+  final ToFirestore<PillSheetModifiedHistory>
+      _pillSheetModifiedHistoryToFirestore =
       (history, options) => history.toJson();
   CollectionReference<PillSheetModifiedHistory>
       pillSheetModifiedHistoriesReference() => FirebaseFirestore.instance
