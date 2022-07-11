@@ -65,7 +65,7 @@ void main() {
       final pillSheetGroupDatastore = MockPillSheetGroupDatastore();
       when(pillSheetGroupDatastore.updateWithBatch(
               batch, updatedPillSheetGroup))
-          .thenReturn(updatedPillSheetGroup);
+          .thenReturn(null);
 
       final history = PillSheetModifiedHistoryServiceActionFactory
           .createChangedPillNumberAction(
@@ -151,7 +151,7 @@ void main() {
       final pillSheetGroupDatastore = MockPillSheetGroupDatastore();
       when(pillSheetGroupDatastore.updateWithBatch(
               batch, updatedPillSheetGroup))
-          .thenReturn(updatedPillSheetGroup);
+          .thenReturn(null);
 
       final history = PillSheetModifiedHistoryServiceActionFactory
           .createChangedPillNumberAction(
@@ -263,7 +263,7 @@ void main() {
       final pillSheetGroupDatastore = MockPillSheetGroupDatastore();
       when(pillSheetGroupDatastore.updateWithBatch(
               batch, updatedPillSheetGroup))
-          .thenReturn(updatedPillSheetGroup);
+          .thenReturn(null);
 
       final history = PillSheetModifiedHistoryServiceActionFactory
           .createChangedPillNumberAction(
@@ -375,7 +375,7 @@ void main() {
       final pillSheetGroupDatastore = MockPillSheetGroupDatastore();
       when(pillSheetGroupDatastore.updateWithBatch(
               batch, updatedPillSheetGroup))
-          .thenReturn(updatedPillSheetGroup);
+          .thenReturn(null);
 
       final history = PillSheetModifiedHistoryServiceActionFactory
           .createChangedPillNumberAction(
@@ -488,7 +488,7 @@ void main() {
       final pillSheetGroupDatastore = MockPillSheetGroupDatastore();
       when(pillSheetGroupDatastore.updateWithBatch(
               batch, updatedPillSheetGroup))
-          .thenReturn(updatedPillSheetGroup);
+          .thenReturn(null);
 
       final history = PillSheetModifiedHistoryServiceActionFactory
           .createChangedPillNumberAction(
@@ -609,7 +609,7 @@ void main() {
       final pillSheetGroupDatastore = MockPillSheetGroupDatastore();
       when(pillSheetGroupDatastore.updateWithBatch(
               batch, updatedPillSheetGroup))
-          .thenReturn(updatedPillSheetGroup);
+          .thenReturn(null);
 
       final history = PillSheetModifiedHistoryServiceActionFactory
           .createChangedPillNumberAction(
