@@ -92,14 +92,12 @@ class CalendarPillSheetModifiedHistoryCard extends StatelessWidget {
             ...() {
               if (state.isPremium || state.isTrial) {
                 return [
-                  Container(
-                    child: PillSheetModifiedHistoryList(
-                      padding: null,
-                      scrollPhysics: const NeverScrollableScrollPhysics(),
-                      pillSheetModifiedHistories:
-                          state.pillSheetModifiedHistories,
-                      onEditTakenPillAction: store.asyncAction.editTakenValue,
-                    ),
+                  PillSheetModifiedHistoryList(
+                    padding: null,
+                    scrollPhysics: const NeverScrollableScrollPhysics(),
+                    pillSheetModifiedHistories:
+                        state.pillSheetModifiedHistories,
+                    onEditTakenPillAction: store.asyncAction.editTakenValue,
                   ),
                   if (state.moreButtonIsShown)
                     PillSheetModifiedHistoryMoreButton(state: state),
@@ -108,14 +106,12 @@ class CalendarPillSheetModifiedHistoryCard extends StatelessWidget {
                 return [
                   Stack(
                     children: [
-                      Container(
-                        child: PillSheetModifiedHistoryList(
-                          padding: null,
-                          scrollPhysics: const NeverScrollableScrollPhysics(),
-                          pillSheetModifiedHistories:
-                              state.pillSheetModifiedHistories,
-                          onEditTakenPillAction: null,
-                        ),
+                      PillSheetModifiedHistoryList(
+                        padding: null,
+                        scrollPhysics: const NeverScrollableScrollPhysics(),
+                        pillSheetModifiedHistories:
+                            state.pillSheetModifiedHistories,
+                        onEditTakenPillAction: null,
                       ),
                       Positioned.fill(
                         child: ClipRect(
