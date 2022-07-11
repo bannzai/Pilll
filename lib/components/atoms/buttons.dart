@@ -17,7 +17,9 @@ class PrimaryButton extends HookWidget {
 
   Widget build(BuildContext context) {
     final isProcessing = useState(false);
+    // Avoid [Once you have called dispose() on a ValueNotifier<bool>, it can no longer be use]
     final isMounted = useIsMounted();
+
     return ElevatedButton(
       child: ConstrainedBox(
         constraints: const BoxConstraints(
