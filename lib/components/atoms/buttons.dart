@@ -202,7 +202,7 @@ class InconspicuousButton extends HookWidget {
   }
 }
 
-class SmallAppOutlinedButton extends StatelessWidget {
+class SmallAppOutlinedButton extends HookWidget {
   final String text;
   final Future<void> Function()? onPressed;
 
@@ -213,20 +213,24 @@ class SmallAppOutlinedButton extends StatelessWidget {
   }) : super(key: key);
 
   Widget build(BuildContext context) {
-    var isProcessing = false;
+    var isProcessing = useState(false);
     return OutlinedButton(
       child: Container(
         padding: const EdgeInsets.only(top: 8.5, bottom: 8.5),
-        child: Center(
-          child: Text(
-            text,
-            style: const TextStyle(
-              color: TextColor.main,
-              fontSize: 12,
-              fontFamily: FontFamily.japanese,
-              fontWeight: FontWeight.w700,
+        child: Stack(
+          alignment: Alignment.center,
+          children: [
+            Text(
+              text,
+              style: TextStyle(
+                color: isProcessing.value ? TextColor.gray : TextColor.main,
+                fontSize: 12,
+                fontFamily: FontFamily.japanese,
+                fontWeight: FontWeight.w700,
+              ),
             ),
-          ),
+            if (isProcessing.value) _Loading(),
+          ],
         ),
       ),
       style: OutlinedButton.styleFrom(
@@ -239,23 +243,23 @@ class SmallAppOutlinedButton extends StatelessWidget {
       onPressed: onPressed == null
           ? null
           : () async {
-              if (isProcessing) {
+              if (isProcessing.value) {
                 return;
               }
-              isProcessing = true;
+              isProcessing.value = true;
               try {
                 await onPressed?.call();
               } catch (error) {
                 rethrow;
               } finally {
-                isProcessing = false;
+                isProcessing.value = false;
               }
             },
     );
   }
 }
 
-class AppOutlinedButton extends StatelessWidget {
+class AppOutlinedButton extends HookWidget {
   final String text;
   final Future<void> Function()? onPressed;
 
@@ -266,20 +270,23 @@ class AppOutlinedButton extends StatelessWidget {
   }) : super(key: key);
 
   Widget build(BuildContext context) {
-    var isProcessing = false;
+    var isProcessing = useState(false);
     return OutlinedButton(
       child: Container(
         padding: const EdgeInsets.only(top: 12, bottom: 12),
-        child: Center(
-          child: Text(
-            text,
-            style: const TextStyle(
-              color: TextColor.main,
-              fontSize: 16,
-              fontFamily: FontFamily.japanese,
-              fontWeight: FontWeight.w700,
+        child: Stack(
+          children: [
+            Text(
+              text,
+              style: TextStyle(
+                color: isProcessing.value ? TextColor.gray : TextColor.main,
+                fontSize: 16,
+                fontFamily: FontFamily.japanese,
+                fontWeight: FontWeight.w700,
+              ),
             ),
-          ),
+            if (isProcessing.value) _Loading(),
+          ],
         ),
       ),
       style: OutlinedButton.styleFrom(
@@ -292,16 +299,16 @@ class AppOutlinedButton extends StatelessWidget {
       onPressed: onPressed == null
           ? null
           : () async {
-              if (isProcessing) {
+              if (isProcessing.value) {
                 return;
               }
-              isProcessing = true;
+              isProcessing.value = true;
               try {
                 await onPressed?.call();
               } catch (error) {
                 rethrow;
               } finally {
-                isProcessing = false;
+                isProcessing.value = false;
               }
             },
     );
