@@ -1,7 +1,7 @@
 import 'dart:async';
 import 'dart:io';
 
-import 'package:firebase_auth/firebase_auth.dart' as firebaseAuth;
+import 'package:firebase_auth/firebase_auth.dart' as firebase_auth;
 import 'package:flutter/foundation.dart';
 import 'package:flutter_native_timezone/flutter_native_timezone.dart';
 import 'package:pilll/database/database.dart';
@@ -243,7 +243,7 @@ extension SaveUserLaunchInfo on UserDatastore {
       anonymousUserIDSets.add(lastSignInAnonymousUID);
     }
     final firebaseCurrentUserID =
-        firebaseAuth.FirebaseAuth.instance.currentUser?.uid;
+        firebase_auth.FirebaseAuth.instance.currentUser?.uid;
     List<String> firebaseCurrentUserIDSets = [
       ...user.firebaseCurrentUserIDSets
     ];
