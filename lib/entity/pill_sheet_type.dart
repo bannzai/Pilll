@@ -16,6 +16,7 @@ enum PillSheetType {
   // "21錠タイプ(すべて実薬)";
   pillsheet_21_0,
   // "24錠+4日休薬";
+  // ignore: constant_identifier_names
   pillsheet_24_rest_4,
 }
 
