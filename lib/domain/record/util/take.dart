@@ -46,13 +46,20 @@ Future<PillSheetGroup?> takePill({
       return false;
     }
 
-    // 例えば2枚目のピルシート(groupIndex:1)がアクティブで、1枚目のピルシート(groupIndex:0)が最終日を記録した場合(28番目)、2枚目のピルシートのlastTakenDateが1枚目の28番目のピルシートのlastTakenDateと同じになる。
+    // 例えば2枚目のピルシート(groupIndex:1)がアクティブで、1枚目のピルシート(groupIndex:0)の最終日を記録した場合(28番目)、2枚目のピルシートのlastTakenDateが1枚目の28番目のピルシートのlastTakenDateと同じになる。
     // その場合後続の処理で決定する履歴のafter: PillSheetの値が2枚目のピルシートの値になってしまう。これを避けるための条件式になっている
     final updatedPillSheetLastTakenDate = updatedPillSheet.lastTakenDate;
     if (updatedPillSheet.groupIndex == activedPillSheet.groupIndex &&
         updatedPillSheetLastTakenDate != null &&
         updatedPillSheet.beginingDate.isAfter(updatedPillSheetLastTakenDate)) {
-      return false;
+      // index(pillSheet.groupIndex) == 0 の時は上記の条件に該当してしまう。
+      // 同じ結果になり他の書き方をすると
+      // beforeUpdatePillSheet(updatedPillSheetGroup.pillSheets[index - 1]).groupIndex != updatedPillSheet.groupIndex となる
+      if (index > 0) {
+        return false;
+      } else {
+        return true;
+      }
     }
 
     return true;
