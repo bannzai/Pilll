@@ -38,8 +38,8 @@ class IntiialSettingPremiumTrialStartPage extends HookConsumerWidget {
                     children: [
                       const SizedBox(height: 1),
                       Column(
-                        children: [
-                          const Text(
+                        children: const [
+                          Text(
                             "\\ 通知から服用記録ができます /",
                             style: TextStyle(
                               fontSize: 20,
@@ -48,7 +48,7 @@ class IntiialSettingPremiumTrialStartPage extends HookConsumerWidget {
                               fontFamily: FontFamily.japanese,
                             ),
                           ),
-                          const SizedBox(height: 16),
+                          SizedBox(height: 16),
                         ],
                       ),
                       Padding(

@@ -20,7 +20,7 @@ class CalendarMenstruationBand extends StatelessWidget {
   Widget build(BuildContext context) {
     return GestureDetector(
       onTap: () => onTap(menstruation),
-      child: Container(
+      child: SizedBox(
         height: CalendarBandConst.height,
         child: CustomPaint(
           painter: DiagonalStripedLine(

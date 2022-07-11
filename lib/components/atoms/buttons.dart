@@ -15,6 +15,7 @@ class PrimaryButton extends HookWidget {
     required this.text,
   }) : super(key: key);
 
+  @override
   Widget build(BuildContext context) {
     final isProcessing = useState(false);
     // Avoid [Once you have called dispose() on a ValueNotifier<bool>, it can no longer be use]
@@ -69,6 +70,7 @@ class UndoButton extends HookWidget {
     required this.text,
   }) : super(key: key);
 
+  @override
   Widget build(BuildContext context) {
     final isProcessing = useState(false);
     final isMounted = useIsMounted();
@@ -122,6 +124,7 @@ class RedTextButton extends HookWidget {
     required this.text,
   }) : super(key: key);
 
+  @override
   Widget build(BuildContext context) {
     final isProcessing = useState(false);
     final isMounted = useIsMounted();
@@ -171,6 +174,7 @@ class InconspicuousButton extends HookWidget {
     required this.text,
   }) : super(key: key);
 
+  @override
   Widget build(BuildContext context) {
     final isProcessing = useState(false);
     final isMounted = useIsMounted();
@@ -221,6 +225,7 @@ class SmallAppOutlinedButton extends HookWidget {
     required this.text,
   }) : super(key: key);
 
+  @override
   Widget build(BuildContext context) {
     final isProcessing = useState(false);
     final isMounted = useIsMounted();
@@ -280,6 +285,7 @@ class AppOutlinedButton extends HookWidget {
     required this.text,
   }) : super(key: key);
 
+  @override
   Widget build(BuildContext context) {
     final isProcessing = useState(false);
     final isMounted = useIsMounted();
@@ -338,6 +344,7 @@ class AlertButton extends HookWidget {
     required this.text,
   }) : super(key: key);
 
+  @override
   Widget build(BuildContext context) {
     final isProcessing = useState(false);
     final isMounted = useIsMounted();
@@ -381,7 +388,7 @@ class _Loading extends StatelessWidget {
     return const SizedBox(
       width: 20,
       height: 20,
-      child: const CircularProgressIndicator(
+      child: CircularProgressIndicator(
         strokeWidth: 1,
         valueColor: AlwaysStoppedAnimation(Colors.grey),
       ),

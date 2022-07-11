@@ -61,7 +61,7 @@ class MenstruationListRowState {
   }
 
   double get width {
-    final double widthForDay = 10;
+    const double widthForDay = 10;
     final menstruationDuration = this.menstruationDuration;
     if (menstruationDuration == null) {
       return widthForDay * 28;

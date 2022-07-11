@@ -10,11 +10,11 @@ import 'package:pilll/components/atoms/text_color.dart';
 class MenstruationCard extends StatelessWidget {
   final MenstruationCardState state;
 
-  MenstruationCard(this.state);
+  const MenstruationCard(this.state);
 
   @override
   Widget build(BuildContext context) {
-    return Container(
+    return SizedBox(
       height: 111,
       child: AppCard(
         child: Column(

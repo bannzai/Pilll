@@ -29,9 +29,9 @@ void main() {
         (WidgetTester tester) async {
       SupportedDeviceType.iPhone5SE2nd.binding(tester.binding.window);
 
-      final weekdayLines =
-          const PillSheetViewWeekdayLine(firstWeekday: Weekday.Sunday);
-      final pillSheetType = PillSheetType.pillsheet_21_0;
+      const weekdayLines =
+          PillSheetViewWeekdayLine(firstWeekday: Weekday.Sunday);
+      const pillSheetType = PillSheetType.pillsheet_21_0;
       final widget = PillSheetViewLayout(
         weekdayLines: weekdayLines,
         pillMarkLines: List.generate(
@@ -41,7 +41,7 @@ void main() {
       );
       await tester.pumpWidget(
         MaterialApp(
-          home: Container(
+          home: SizedBox(
             child: widget,
             height: PillSheetViewLayout.calcHeight(
                 pillSheetType.numberOfLineInPillSheet, false),
@@ -58,8 +58,8 @@ void main() {
       (WidgetTester tester) async {
     SupportedDeviceType.iPhone5SE2nd.binding(tester.binding.window);
 
-    final weekdayLines = const PillSheetViewWeekdayLine(firstWeekday: Weekday.Sunday);
-    final pillSheetType = PillSheetType.pillsheet_28_0;
+    const weekdayLines = PillSheetViewWeekdayLine(firstWeekday: Weekday.Sunday);
+    const pillSheetType = PillSheetType.pillsheet_28_0;
     final widget = PillSheetViewLayout(
       weekdayLines: weekdayLines,
       pillMarkLines: List.generate(
@@ -69,7 +69,7 @@ void main() {
     );
     await tester.pumpWidget(
       MaterialApp(
-        home: Container(
+        home: SizedBox(
           child: widget,
           height: PillSheetViewLayout.calcHeight(
               pillSheetType.numberOfLineInPillSheet, false),

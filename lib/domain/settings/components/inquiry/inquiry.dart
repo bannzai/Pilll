@@ -57,7 +57,7 @@ Future<String> debugInfo(String separator) async {
   final platform = Platform.isIOS ? "iOS" : "Android";
 
   final activedPillSheet = pillSheetGroup?.activedPillSheet;
-  final Map<String, dynamic> activedPillSheetDebugInfo = Map<String, dynamic>();
+  final Map<String, dynamic> activedPillSheetDebugInfo = <String, dynamic>{};
   if (activedPillSheet != null) {
     activedPillSheetDebugInfo["id"] = activedPillSheet.id;
     activedPillSheetDebugInfo["beginingDate"] =

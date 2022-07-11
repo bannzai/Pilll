@@ -45,7 +45,7 @@ class PillSheetGroupDatastore {
     return snapshot.docs[0].data();
   }
 
-  late Stream<PillSheetGroup?> _latestPillSheetGroupStream =
+  late final Stream<PillSheetGroup?> _latestPillSheetGroupStream =
       _latestQuery().snapshots().map(((event) => _filter(event)));
   Stream<PillSheetGroup?> latestPillSheetGroupStream() =>
       _latestPillSheetGroupStream;

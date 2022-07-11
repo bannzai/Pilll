@@ -12,7 +12,7 @@ import 'package:pilll/error/error_alert.dart';
 
 class ReminderNotificationCustomizeWordPage extends HookConsumerWidget {
   final Setting setting;
-  ReminderNotificationCustomizeWordPage(this.setting);
+  const ReminderNotificationCustomizeWordPage(this.setting);
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {
@@ -65,7 +65,7 @@ class ReminderNotificationCustomizeWordPage extends HookConsumerWidget {
                           borderSide: BorderSide(color: PilllColors.primary),
                         ),
                         counter: Row(children: [
-                          Text(
+                          const Text(
                             "通知の先頭部分の変更ができます",
                             style: TextStyle(
                                 fontFamily: FontFamily.japanese,
@@ -76,7 +76,7 @@ class ReminderNotificationCustomizeWordPage extends HookConsumerWidget {
                           const Spacer(),
                           Text(
                             "${word.value.characters.length}/8",
-                            style: TextStyle(
+                            style: const TextStyle(
                                 fontFamily: FontFamily.japanese,
                                 fontSize: 12,
                                 fontWeight: FontWeight.w400,
@@ -228,6 +228,7 @@ class _ReminderPushNotificationPreview extends StatelessWidget {
   // avoid broken editor
   final thinkingFace = "🤔";
 
+  @override
   Widget build(BuildContext context) {
     return Container(
       decoration: BoxDecoration(

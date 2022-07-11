@@ -14,7 +14,7 @@ class PillSheetRemoveRow extends HookConsumerWidget {
   final PillSheetGroup latestPillSheetGroup;
   final PillSheet activedPillSheet;
 
-  PillSheetRemoveRow({
+  const PillSheetRemoveRow({
     required this.latestPillSheetGroup,
     required this.activedPillSheet,
   });

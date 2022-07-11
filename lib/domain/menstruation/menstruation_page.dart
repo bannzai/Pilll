@@ -17,9 +17,9 @@ import 'package:pilll/hooks/automatic_keep_alive_client_mixin.dart';
 
 abstract class MenstruationPageConst {
   static const double calendarHeaderDropShadowOffset = 2;
-  static final double tileHeight =
+  static const double tileHeight =
       CalendarConstants.tileHeight + calendarHeaderDropShadowOffset;
-  static final double calendarHeaderHeight =
+  static const double calendarHeaderHeight =
       WeekdayBadgeConst.height + tileHeight;
 }
 

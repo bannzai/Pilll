@@ -9,7 +9,7 @@ part 'pill_sheet_group.codegen.g.dart';
 part 'pill_sheet_group.codegen.freezed.dart';
 
 class PillSheetGroupFirestoreKeys {
-  static final createdAt = "createdAt";
+  static const createdAt = "createdAt";
 }
 
 @freezed

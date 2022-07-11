@@ -4,7 +4,7 @@ class TimestampConverter {
   static Timestamp? dateTimeToTimestamp(DateTime? dateTime) =>
       dateTime == null ? null : Timestamp.fromDate(dateTime);
   static DateTime? timestampToDateTime(Timestamp? timestamp) =>
-      timestamp == null ? null : timestamp.toDate();
+      timestamp?.toDate();
 }
 
 class NonNullTimestampConverter {

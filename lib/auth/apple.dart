@@ -4,7 +4,7 @@ import 'package:pilll/auth/link_value_container.dart';
 import 'package:pilll/util/environment.dart';
 import 'package:sign_in_with_apple/sign_in_with_apple.dart';
 
-final appleProviderID = "apple.com";
+const appleProviderID = "apple.com";
 
 enum SignInWithAppleState { determined, cancel }
 

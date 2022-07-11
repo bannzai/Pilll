@@ -21,7 +21,7 @@ class CalendarNextPillSheetBand extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Container(
+    return SizedBox(
       height: CalendarBandConst.height,
       child: Stack(
         children: [

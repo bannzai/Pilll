@@ -35,7 +35,7 @@ class RecordPagePillSheetList extends HookConsumerWidget {
             MediaQuery.of(context).size.width);
     return Column(
       children: [
-        Container(
+        SizedBox(
           height: PillSheetViewLayout.calcHeight(
             PillSheetViewLayout.mostLargePillSheetType(pillSheetGroup.pillSheets
                     .map((e) => e.pillSheetType)

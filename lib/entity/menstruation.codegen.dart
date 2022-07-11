@@ -8,8 +8,8 @@ part 'menstruation.codegen.g.dart';
 part 'menstruation.codegen.freezed.dart';
 
 class MenstruationFirestoreKey {
-  static final String beginDate = "beginDate";
-  static final String deletedAt = "deletedAt";
+  static const String beginDate = "beginDate";
+  static const String deletedAt = "deletedAt";
 }
 
 @freezed

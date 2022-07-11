@@ -12,7 +12,7 @@ import 'package:flutter_svg/svg.dart';
 GlobalKey<_HomePageState> homeKey = GlobalKey();
 
 class HomePage extends StatefulWidget {
-  HomePage({required Key key}) : super(key: key);
+  const HomePage({required Key key}) : super(key: key);
 
   @override
   _HomePageState createState() => _HomePageState();
@@ -142,7 +142,7 @@ class _HomePageState extends State<HomePage>
 
   void _screenTracking() {
     analytics.setCurrentScreen(
-      screenName: "${HomePageTabType.values[_tabController.index].screenName}",
+      screenName: HomePageTabType.values[_tabController.index].screenName,
     );
   }
 }

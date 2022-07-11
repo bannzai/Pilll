@@ -5,17 +5,17 @@ import 'package:flutter_svg/flutter_svg.dart';
 import 'package:pilll/entity/pill_sheet_type.dart';
 
 class PillSheetViewLayout extends StatelessWidget {
-  static final double width = 316;
-  static final double lineHeight = 49.5;
-  static final double topSpace = 24;
-  static final double bottomSpace = 24;
-  static final double componentWidth = 37;
+  static const double width = 316;
+  static const double lineHeight = 49.5;
+  static const double topSpace = 24;
+  static const double bottomSpace = 24;
+  static const double componentWidth = 37;
 
   static double calcHeight(
     int numberOfLineInPillSheet,
     bool isHideWeekdayLine,
   ) {
-    final verticalSpacing =
+    const verticalSpacing =
         PillSheetViewLayout.topSpace + PillSheetViewLayout.bottomSpace;
     final pillMarkListHeight =
         PillSheetViewLayout.lineHeight * numberOfLineInPillSheet +
@@ -53,20 +53,20 @@ class PillSheetViewLayout extends StatelessWidget {
       decoration: BoxDecoration(
         color: PilllColors.pillSheet,
         borderRadius: BorderRadius.circular(10),
-        boxShadow: [
-          const BoxShadow(
+        boxShadow: const [
+          BoxShadow(
             color: Colors.black26,
             blurRadius: 6.0,
             offset: Offset(0, 2),
           ),
         ],
       ),
-      padding: EdgeInsets.fromLTRB(22, 0, 22, PillSheetViewLayout.bottomSpace),
+      padding: const EdgeInsets.fromLTRB(22, 0, 22, PillSheetViewLayout.bottomSpace),
       child: Column(
         mainAxisAlignment: MainAxisAlignment.start,
         children: [
           if (weekdayLines != null) weekdayLines,
-          SizedBox(height: PillSheetViewLayout.topSpace),
+          const SizedBox(height: PillSheetViewLayout.topSpace),
           Column(
             mainAxisAlignment: MainAxisAlignment.center,
             children: pillMarkLines

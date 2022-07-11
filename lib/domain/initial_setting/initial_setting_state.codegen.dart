@@ -45,7 +45,7 @@ class InitialSettingState with _$InitialSettingState {
   }
 
   Future<Setting> buildSetting() async {
-    final menstruationDuration = 4;
+    const menstruationDuration = 4;
     final maxPillCount = pillSheetTypes
         .map((e) => e.totalCount)
         .reduce((value, element) => value + element);

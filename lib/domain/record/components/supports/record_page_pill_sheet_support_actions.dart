@@ -30,7 +30,7 @@ class RecordPagePillSheetSupportActions extends StatelessWidget {
   Widget build(BuildContext context) {
     final RestDuration? restDuration = activedPillSheet.activeRestDuration;
 
-    return Container(
+    return SizedBox(
       width: PillSheetViewLayout.width,
       child: Row(
         children: [

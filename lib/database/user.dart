@@ -50,7 +50,7 @@ class UserDatastore {
     return document.data()!;
   }
 
-  late Stream<User> _stream =
+  late final Stream<User> _stream =
       _database.userReference().snapshots().map((event) => event.data()!);
   Stream<User> stream() => _stream;
 

@@ -2,7 +2,7 @@ import 'package:firebase_auth/firebase_auth.dart';
 import 'package:google_sign_in/google_sign_in.dart';
 import 'package:pilll/auth/link_value_container.dart';
 
-final googleProviderID = 'google.com';
+const googleProviderID = 'google.com';
 
 enum SignInWithGoogleState { determined, cancel }
 

@@ -36,8 +36,8 @@ class PremiumTrialBegin extends HookConsumerWidget {
                 store.closePremiumTrialBeginNotification();
               },
               child: const Padding(
-                padding: const EdgeInsets.symmetric(vertical: 10),
-                child: const Icon(
+                padding: EdgeInsets.symmetric(vertical: 10),
+                child: Icon(
                   Icons.close,
                   color: Colors.white,
                   size: 24,

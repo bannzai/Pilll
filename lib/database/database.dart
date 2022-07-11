@@ -21,7 +21,7 @@ final databaseProvider = Provider<DatabaseConnection>((ref) {
 });
 
 abstract class _CollectionPath {
-  static final String users = "users";
+  static const String users = "users";
   static String pillSheets(String userID) => "$users/$userID/pill_sheets";
   static String pillSheetGroups(String userID) =>
       "$users/$userID/pill_sheet_groups";
@@ -37,9 +37,9 @@ class DatabaseConnection {
   String get userID => _userID;
   final String _userID;
 
-  FromFirestore<User> _userFromFirestore = (snapshot, options) =>
+  final FromFirestore<User> _userFromFirestore = (snapshot, options) =>
       User.fromJson(snapshot.data()!..putIfAbsent("id", () => snapshot.id));
-  ToFirestore<User> _userToFirestore = (user, options) => user.toJson();
+  final ToFirestore<User> _userToFirestore = (user, options) => user.toJson();
   DocumentReference<User> userReference() => FirebaseFirestore.instance
       .collection(_CollectionPath.users)
       .doc(_userID)
@@ -50,9 +50,9 @@ class DatabaseConnection {
   DocumentReference userRawReference() =>
       FirebaseFirestore.instance.collection(_CollectionPath.users).doc(_userID);
 
-  FromFirestore<PillSheet> _pillSheetFromFirestore =
+  final FromFirestore<PillSheet> _pillSheetFromFirestore =
       (snapshot, options) => PillSheet.fromJson(snapshot.data()!);
-  ToFirestore<PillSheet> _pillSheetToFirestore =
+  final ToFirestore<PillSheet> _pillSheetToFirestore =
       (pillSheet, options) => pillSheet.toJson();
   CollectionReference<PillSheet> pillSheetsReference() =>
       FirebaseFirestore.instance
@@ -71,9 +71,9 @@ class DatabaseConnection {
             toFirestore: _pillSheetToFirestore,
           );
 
-  FromFirestore<Diary> _diaryFromFirestore =
+  final FromFirestore<Diary> _diaryFromFirestore =
       (snapshot, options) => Diary.fromJson(snapshot.data()!);
-  ToFirestore<Diary> _diaryToFirestore = (diary, options) => diary.toJson();
+  final ToFirestore<Diary> _diaryToFirestore = (diary, options) => diary.toJson();
   CollectionReference<Diary> diariesReference() => FirebaseFirestore.instance
       .collection(_CollectionPath.diaries(_userID))
       .withConverter(
@@ -93,10 +93,10 @@ class DatabaseConnection {
       .collection(_CollectionPath.userPrivates(_userID))
       .doc(_userID);
 
-  FromFirestore<Menstruation> _menstruationFromFirestore =
+  final FromFirestore<Menstruation> _menstruationFromFirestore =
       (snapshot, options) => Menstruation.fromJson(
           snapshot.data()!..putIfAbsent("id", () => snapshot.id));
-  ToFirestore<Menstruation> _menstruationToFirestore =
+  final ToFirestore<Menstruation> _menstruationToFirestore =
       (menstruation, options) => menstruation.toJson();
   CollectionReference<Menstruation> menstruationsReference() =>
       FirebaseFirestore.instance
@@ -115,11 +115,11 @@ class DatabaseConnection {
             toFirestore: _menstruationToFirestore,
           );
 
-  FromFirestore<PillSheetModifiedHistory>
+  final FromFirestore<PillSheetModifiedHistory>
       _pillSheetModifiedHistoryFromFirestore = (snapshot, options) =>
           PillSheetModifiedHistory.fromJson(
               snapshot.data()!..putIfAbsent("id", () => snapshot.id));
-  ToFirestore<PillSheetModifiedHistory> _pillSheetModifiedHistoryToFirestore =
+  final ToFirestore<PillSheetModifiedHistory> _pillSheetModifiedHistoryToFirestore =
       (history, options) => history.toJson();
   CollectionReference<PillSheetModifiedHistory>
       pillSheetModifiedHistoriesReference() => FirebaseFirestore.instance
@@ -129,10 +129,10 @@ class DatabaseConnection {
             toFirestore: _pillSheetModifiedHistoryToFirestore,
           );
 
-  FromFirestore<PillSheetGroup> _pillSheetGroupFromFirestore =
+  final FromFirestore<PillSheetGroup> _pillSheetGroupFromFirestore =
       (snapshot, options) => PillSheetGroup.fromJson(
           snapshot.data()!..putIfAbsent("id", () => snapshot.id));
-  ToFirestore<PillSheetGroup> _pillSheetGroupToFirestore =
+  final ToFirestore<PillSheetGroup> _pillSheetGroupToFirestore =
       (pillSheetGroup, options) => pillSheetGroup.toJson();
   CollectionReference<PillSheetGroup> pillSheetGroupsReference() =>
       FirebaseFirestore.instance

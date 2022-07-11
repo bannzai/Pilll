@@ -30,7 +30,7 @@ import '../../../helper/mock.mocks.dart';
 class FakeState extends Fake implements NotificationBarState {}
 
 void main() {
-  final totalCountOfActionForTakenPillForLongTimeUser = 14;
+  const totalCountOfActionForTakenPillForLongTimeUser = 14;
   setUp(() {
     TestWidgetsFlutterBinding.ensureInitialized();
     SharedPreferences.setMockInitialValues(
@@ -39,7 +39,7 @@ void main() {
     Environment.isTest = true;
     analytics = MockAnalytics();
     WidgetsBinding.instance.renderView.configuration =
-        new TestViewConfiguration(size: const Size(375.0, 667.0));
+        TestViewConfiguration(size: const Size(375.0, 667.0));
   });
   group('notification bar appearance content type', () {
     group('for it is not premium user', () {

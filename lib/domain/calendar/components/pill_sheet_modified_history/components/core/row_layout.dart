@@ -25,15 +25,15 @@ class RowLayout extends StatelessWidget {
         children: [
           day,
           const SizedBox(width: 8),
-          Container(
+          const SizedBox(
             height: 26,
-            child: const VerticalDivider(
+            child: VerticalDivider(
               color: PilllColors.divider,
               width: 0.5,
             ),
           ),
           const SizedBox(width: 8),
-          Container(
+          SizedBox(
             width: 79,
             child: effectiveNumbersOrHyphen,
           ),
@@ -43,7 +43,7 @@ class RowLayout extends StatelessWidget {
           ),
           if (takenPillActionOList != null) ...[
             const SizedBox(width: 8),
-            Container(
+            SizedBox(
               width: 57,
               child: takenPillActionOList,
             ),

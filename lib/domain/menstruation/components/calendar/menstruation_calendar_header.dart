@@ -45,7 +45,7 @@ class MenstruationCalendarHeader extends StatelessWidget {
                 scrollDirection: Axis.horizontal,
                 itemBuilder: (context, index) {
                   final days = menstruationWeekCalendarDataSource[index];
-                  return Container(
+                  return SizedBox(
                     width: MediaQuery.of(context).size.width -
                         _horizontalPadding * 2,
                     height: MenstruationPageConst.tileHeight,
@@ -59,7 +59,7 @@ class MenstruationCalendarHeader extends StatelessWidget {
                                 state.menstruations,
                                 12)
                             .where((element) =>
-                                !(element is CalendarNextPillSheetBandModel))
+                                element is! CalendarNextPillSheetBandModel)
                             .toList(),
                       ),
                       horizontalPadding: _horizontalPadding,

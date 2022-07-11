@@ -4,7 +4,8 @@ import 'package:pilll/components/atoms/color.dart';
 import 'package:pilll/components/atoms/text_color.dart';
 
 class RestDurationButton extends StatelessWidget {
-  RestDurationButton();
+  const RestDurationButton();
+  @override
   Widget build(BuildContext context) {
     return SizedBox(
       width: 180,

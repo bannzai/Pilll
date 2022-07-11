@@ -34,7 +34,7 @@ extension _CellTypeFunction on MenstruationSelectModifyType {
   }
 }
 
-final double _tileHeight = 48;
+const double _tileHeight = 48;
 
 class MenstruationSelectModifyTypeSheet extends StatelessWidget {
   final Function(MenstruationSelectModifyType) onTap;

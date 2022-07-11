@@ -8,8 +8,8 @@ import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 
 abstract class PillMarkConst {
-  static final double edge = 20;
-  static final double edgeOfRipple = 80;
+  static const double edge = 20;
+  static const double edgeOfRipple = 80;
 }
 
 class PillMark extends StatefulWidget {
@@ -73,7 +73,7 @@ class _PillMarkState extends State<PillMark> with TickerProviderStateMixin {
             top: -30,
             child: Container(
               child: CustomPaint(
-                size: Size(
+                size: const Size(
                     PillMarkConst.edgeOfRipple, PillMarkConst.edgeOfRipple),
                 painter: Ripple(
                   _controller,

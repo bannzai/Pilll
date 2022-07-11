@@ -139,7 +139,7 @@ class SettingMenstruationDynamicDescription extends StatelessWidget {
                 Navigator.pop(context);
               }),
             ),
-            Container(
+            SizedBox(
               height: 200,
               child: GestureDetector(
                 onTap: () {
@@ -185,7 +185,7 @@ class SettingMenstruationDynamicDescription extends StatelessWidget {
                 Navigator.pop(context);
               }),
             ),
-            Container(
+            SizedBox(
               height: MediaQuery.of(context).size.height / 3,
               child: GestureDetector(
                 onTap: () {

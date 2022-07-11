@@ -16,7 +16,7 @@ class MenstruationEditPage extends HookConsumerWidget {
   final Menstruation? menstruation;
   final Function(Menstruation) onSaved;
   final VoidCallback onDeleted;
-  MenstruationEditPage({
+  const MenstruationEditPage({
     required this.menstruation,
     required this.onSaved,
     required this.onDeleted,
@@ -34,7 +34,7 @@ class MenstruationEditPage extends HookConsumerWidget {
         return;
       }
       store.adjustedScrollOffset();
-      final double estimatedSectionTitleHeight = 95;
+      const double estimatedSectionTitleHeight = 95;
       scrollController.jumpTo(
           CalendarConstants.tileHeight * CalendarConstants.maxLineCount +
               estimatedSectionTitleHeight);

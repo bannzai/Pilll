@@ -60,7 +60,7 @@ class PremiumIntroductionState with _$PremiumIntroductionState {
   }
 
   Package? get monthlyPremiumPackage {
-    final premiumPackageOfferingType = OfferingType.premium;
+    const premiumPackageOfferingType = OfferingType.premium;
     final offering = offerings?.all[premiumPackageOfferingType.name];
     if (offering == null) {
       return null;

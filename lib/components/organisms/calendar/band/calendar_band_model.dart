@@ -7,7 +7,9 @@ abstract class CalendarBandModel {
 }
 
 class CalendarScheduledMenstruationBandModel extends CalendarBandModel {
+  @override
   final DateTime begin;
+  @override
   final DateTime end;
 
   CalendarScheduledMenstruationBandModel(this.begin, this.end)
@@ -21,7 +23,9 @@ class CalendarMenstruationBandModel extends CalendarBandModel {
 }
 
 class CalendarNextPillSheetBandModel extends CalendarBandModel {
+  @override
   final DateTime begin;
+  @override
   final DateTime end;
 
   CalendarNextPillSheetBandModel(this.begin, this.end) : super(begin, end);

@@ -9,7 +9,7 @@ class PostDiaryStoreProviderFamily extends Equatable {
   final DateTime date;
   final Diary? diary;
 
-  PostDiaryStoreProviderFamily({
+  const PostDiaryStoreProviderFamily({
     required this.date,
     required this.diary,
   });

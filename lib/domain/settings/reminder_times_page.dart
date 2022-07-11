@@ -18,7 +18,7 @@ import 'package:flutter_svg/svg.dart';
 class ReminderTimesPage extends HookConsumerWidget {
   final SettingStateNotifier store;
 
-  ReminderTimesPage({
+  const ReminderTimesPage({
     required this.store,
   });
 
@@ -135,7 +135,7 @@ class ReminderTimesPage extends HookConsumerWidget {
             },
       background: Container(
         color: Colors.red,
-        child: Container(
+        child: SizedBox(
           width: 40,
           child: Padding(
             padding: const EdgeInsets.all(20.0),
@@ -165,7 +165,7 @@ class ReminderTimesPage extends HookConsumerWidget {
         analytics.logEvent(name: "pressed_add_reminder_time");
         _showPicker(context, store, setting, null);
       },
-      child: Container(
+      child: SizedBox(
         height: 64,
         child: Row(
           mainAxisAlignment: MainAxisAlignment.center,

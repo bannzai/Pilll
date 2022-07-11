@@ -15,7 +15,7 @@ class SharedPreferencesBuilder<T> extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return FutureBuilder<T?>(future: _future(), builder: this.builder);
+    return FutureBuilder<T?>(future: _future(), builder: builder);
   }
 
   Future<T?> _future() async {

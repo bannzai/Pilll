@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:pilll/components/molecules/indicator.dart';
 
 class _InheritedWidget extends InheritedWidget {
-  _InheritedWidget({
+  const _InheritedWidget({
     Key? key,
     required Widget child,
     required this.state,

@@ -22,7 +22,7 @@ final _confirmDiaryStoreProvider = StateNotifierProvider.autoDispose
 class ConfirmDiarySheet extends HookConsumerWidget {
   final Diary _diary;
 
-  ConfirmDiarySheet(this._diary);
+  const ConfirmDiarySheet(this._diary);
   @override
   Widget build(BuildContext context, WidgetRef ref) {
     final state = ref.watch(_confirmDiaryStoreProvider(_diary));

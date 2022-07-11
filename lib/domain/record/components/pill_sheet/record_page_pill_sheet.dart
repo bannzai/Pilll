@@ -85,7 +85,7 @@ class RecordPagePillSheet extends StatelessWidget {
       final pillNumberIntoPillSheet =
           PillMarkWithNumberLayoutHelper.calcPillNumberIntoPillSheet(
               columnIndex, lineIndex);
-      return Container(
+      return SizedBox(
         width: PillSheetViewLayout.componentWidth,
         child: PillMarkWithNumberLayout(
           textOfPillNumber: textOfPillNumber(

@@ -23,7 +23,7 @@ class SettingDatastore {
         .then((event) => event.data()!.setting!);
   }
 
-  late Stream<Setting> _stream = _database
+  late final Stream<Setting> _stream = _database
       .userReference()
       .snapshots()
       .map((event) => event.data()?.setting)

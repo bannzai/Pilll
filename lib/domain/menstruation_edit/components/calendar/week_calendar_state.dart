@@ -5,10 +5,12 @@ import 'package:pilll/entity/diary.codegen.dart';
 import 'package:pilll/entity/menstruation.codegen.dart';
 
 class MenstruationEditWeekCalendarState extends WeekCalendarState {
+  @override
   final DateRange dateRange;
   final DateTime dateForMonth;
   final Menstruation? menstruation;
 
+  @override
   List<Diary> get diariesForMonth => [];
 
   MenstruationEditWeekCalendarState({
@@ -17,8 +19,11 @@ class MenstruationEditWeekCalendarState extends WeekCalendarState {
     required this.menstruation,
   });
 
+  @override
   bool isGrayoutTile(DateTime date) => date.isPreviousMonth(dateForMonth);
+  @override
   bool hasDiaryMark(List<Diary> diaries, DateTime date) => false;
+  @override
   bool hasMenstruationMark(DateTime date) {
     final menstruation = this.menstruation;
     if (menstruation == null) {
@@ -28,5 +33,6 @@ class MenstruationEditWeekCalendarState extends WeekCalendarState {
         .inRange(date);
   }
 
+  @override
   Alignment get contentAlignment => Alignment.center;
 }

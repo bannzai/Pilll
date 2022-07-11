@@ -16,14 +16,14 @@ import 'package:pilll/domain/sign_in/sign_in_sheet_state.codegen.dart';
 import 'package:pilll/domain/sign_in/sign_in_sheet_store.dart';
 
 abstract class SignInSheetConst {
-  static final double height = 340;
+  static const double height = 340;
 }
 
 class SignInSheet extends HookConsumerWidget {
   final SignInSheetStateContext stateContext;
   final Function(LinkAccountType)? onSignIn;
 
-  SignInSheet({
+  const SignInSheet({
     required this.stateContext,
     required this.onSignIn,
   });
@@ -111,7 +111,7 @@ class SignInSheet extends HookConsumerWidget {
           store.hideHUD();
         }
       },
-      child: Container(
+      child: SizedBox(
         height: 48,
         child: Padding(
           padding: const EdgeInsets.fromLTRB(24, 10, 24, 10),
@@ -172,7 +172,7 @@ class SignInSheet extends HookConsumerWidget {
           store.hideHUD();
         }
       },
-      child: Container(
+      child: SizedBox(
         height: 48,
         child: Padding(
           padding: const EdgeInsets.fromLTRB(24, 10, 24, 10),

@@ -346,7 +346,7 @@ void main() {
       when(pillSheetModifiedHistoryDatastore.add(batch, history))
           .thenReturn(null);
 
-      final setting = const Setting(
+      const setting = Setting(
         pillNumberForFromMenstruation: 24,
         durationMenstruation: 4,
         isOnReminder: true,
@@ -441,7 +441,7 @@ void main() {
       when(pillSheetModifiedHistoryDatastore.add(batch, history))
           .thenReturn(null);
 
-      final setting = const Setting(
+      const setting = Setting(
         pillSheetAppearanceMode: PillSheetAppearanceMode.sequential,
         pillNumberForFromMenstruation: 52,
         durationMenstruation: 4,
@@ -487,7 +487,7 @@ void main() {
     // ref: https://github.com/bannzai/Pilll/pull/534
     test("state.pillSheetTypes is [PillSheetType.pillsheet_24_rest_4]",
         () async {
-      final setting = const Setting(
+      const setting = Setting(
         pillNumberForFromMenstruation: 24,
         durationMenstruation: 4,
         isOnReminder: true,

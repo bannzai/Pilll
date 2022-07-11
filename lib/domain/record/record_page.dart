@@ -112,13 +112,13 @@ class RecordPageBody extends StatelessWidget {
     final activedPillSheet = pillSheetGroup?.activedPillSheet;
     if (activedPillSheet == null ||
         pillSheetGroup == null ||
-        pillSheetGroup.isDeactived)
+        pillSheetGroup.isDeactived) {
       return AddPillSheetGroupEmptyFrame(
         context: context,
         store: store,
         setting: setting,
       );
-    else
+    } else {
       return Column(
         mainAxisAlignment: MainAxisAlignment.start,
         children: [
@@ -137,6 +137,7 @@ class RecordPageBody extends StatelessWidget {
           ),
         ],
       );
+    }
   }
 
   void _showMigrateInfoDialog(

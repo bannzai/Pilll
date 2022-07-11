@@ -16,7 +16,7 @@ import 'package:pilll/emoji/emoji.dart';
 import 'package:pilll/entity/pill_sheet_modified_history.codegen.dart';
 
 class CalendarPillSheetModifiedHistoryCardState {
-  static final pillSheetModifiedHistoriesThreshold = 6;
+  static const pillSheetModifiedHistoriesThreshold = 6;
   final List<PillSheetModifiedHistory> _allPillSheetModifiedHistories;
   final bool isPremium;
   final bool isTrial;

@@ -184,7 +184,7 @@ class SettingAccountCooperationListPage extends HookConsumerWidget {
       context,
       SignInSheetStateContext.setting,
       (accountType) async {
-        final snackBarDuration = const Duration(seconds: 1);
+        const snackBarDuration = Duration(seconds: 1);
         ScaffoldMessenger.of(context).showSnackBar(
           SnackBar(
             duration: snackBarDuration,
@@ -213,7 +213,7 @@ class SettingAccountCooperationRow extends StatelessWidget {
   final Future<void> Function() onTap;
   final Future<void> Function() onLongPress;
 
-  SettingAccountCooperationRow({
+  const SettingAccountCooperationRow({
     required this.accountType,
     required this.isLinked,
     required this.onTap,

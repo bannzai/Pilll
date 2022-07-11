@@ -65,7 +65,7 @@ class ReleaseNote extends StatelessWidget {
                     ],
                   ),
                 ),
-                Container(
+                SizedBox(
                   width: 230,
                   child: AlertButton(
                       onPressed: () async {
@@ -86,7 +86,7 @@ class ReleaseNote extends StatelessWidget {
 }
 
 void showReleaseNotePreDialog(BuildContext context) async {
-  final key = ReleaseNoteKey.version3_11_0;
+  const key = ReleaseNoteKey.version3_11_0;
   final storage = await SharedPreferences.getInstance();
   if (storage.getBool(key) ?? false) {
     return;
@@ -101,7 +101,7 @@ void showReleaseNotePreDialog(BuildContext context) async {
 }
 
 void openReleaseNote() async {
-  final ChromeSafariBrowser browser = new ChromeSafariBrowser();
+  final ChromeSafariBrowser browser = ChromeSafariBrowser();
   await browser.open(
       url: Uri.parse(
           "https://pilll.wraptas.site/e78b91bc246a4669bfbe3fda9e058e79"),

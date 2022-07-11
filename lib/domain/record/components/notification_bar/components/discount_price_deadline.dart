@@ -9,7 +9,7 @@ class DiscountPriceDeadline extends HookConsumerWidget {
   final DateTime discountEntitlementDeadlineDate;
   final VoidCallback onTap;
 
-  DiscountPriceDeadline({
+  const DiscountPriceDeadline({
     required this.discountEntitlementDeadlineDate,
     required this.onTap,
   });

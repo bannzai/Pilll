@@ -15,7 +15,7 @@ void main() {
     TestWidgetsFlutterBinding.ensureInitialized();
     SharedPreferences.setMockInitialValues({});
     WidgetsBinding.instance.renderView.configuration =
-        new TestViewConfiguration(size: const Size(375.0, 667.0));
+        TestViewConfiguration(size: const Size(375.0, 667.0));
   });
   group("Appearance Next Sheet Label", () {
     testWidgets('when showing 新しいシート開始 ▶︎', (WidgetTester tester) async {
@@ -56,8 +56,8 @@ void main() {
               weekCalendarBuilder: (context, monthState, weekState) {
                 return CalendarWeekdayLine(
                   state: weekState,
-                  calendarMenstruationBandModels: [],
-                  calendarScheduledMenstruationBandModels: [],
+                  calendarMenstruationBandModels: const [],
+                  calendarScheduledMenstruationBandModels: const [],
                   calendarNextPillSheetBandModels: [model],
                   horizontalPadding: 0,
                   onTap: (_, __) => {},
@@ -117,8 +117,8 @@ void main() {
               weekCalendarBuilder: (context, monthState, weekState) {
                 return CalendarWeekdayLine(
                   state: weekState,
-                  calendarMenstruationBandModels: [],
-                  calendarScheduledMenstruationBandModels: [],
+                  calendarMenstruationBandModels: const [],
+                  calendarScheduledMenstruationBandModels: const [],
                   calendarNextPillSheetBandModels: [model],
                   horizontalPadding: 0,
                   onTap: (_, __) => {},
@@ -165,8 +165,8 @@ void main() {
               weekCalendarBuilder: (context, monthState, weekState) {
                 return CalendarWeekdayLine(
                   state: weekState,
-                  calendarMenstruationBandModels: [],
-                  calendarScheduledMenstruationBandModels: [],
+                  calendarMenstruationBandModels: const [],
+                  calendarScheduledMenstruationBandModels: const [],
                   calendarNextPillSheetBandModels: [model],
                   horizontalPadding: 0,
                   onTap: (_, __) => {},
@@ -205,8 +205,8 @@ void main() {
               weekCalendarBuilder: (context, monthState, weekState) {
                 return CalendarWeekdayLine(
                   state: weekState,
-                  calendarMenstruationBandModels: [],
-                  calendarScheduledMenstruationBandModels: [],
+                  calendarMenstruationBandModels: const [],
+                  calendarScheduledMenstruationBandModels: const [],
                   calendarNextPillSheetBandModels: [model],
                   horizontalPadding: 0,
                   onTap: (_, __) => {},

@@ -95,7 +95,7 @@ class CalendarPageBody extends StatelessWidget {
                 scrollDirection: Axis.horizontal,
                 physics: const PageScrollPhysics(),
                 children: List.generate(calendarDataSourceLength, (index) {
-                  return Container(
+                  return SizedBox(
                     height: 444,
                     width: MediaQuery.of(context).size.width,
                     child: MonthCalendar(

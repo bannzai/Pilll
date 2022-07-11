@@ -34,9 +34,9 @@ class PillSheetGroupSelectPillSheetTypePage extends StatelessWidget {
                 const SizedBox(height: 25),
                 Row(
                   mainAxisAlignment: MainAxisAlignment.start,
-                  children: [
-                    const SizedBox(width: 16),
-                    const Text(
+                  children: const [
+                    SizedBox(width: 16),
+                    Text(
                       "ピルの種類を選択",
                       style: TextStyle(
                         color: TextColor.main,

@@ -22,11 +22,11 @@ void main() {
         (WidgetTester tester) async {
       SupportedDeviceType.iPhone5SE2nd.binding(tester.binding.window);
 
-      final pillSheetType = PillSheetType.pillsheet_21;
+      const pillSheetType = PillSheetType.pillsheet_21;
       final widget = SettingPillSheetView(
         pageIndex: 0,
         appearanceMode: PillSheetAppearanceMode.number,
-        pillSheetTypes: [pillSheetType],
+        pillSheetTypes: const [pillSheetType],
         selectedPillNumberIntoPillSheet: null,
         markSelected: (p, i) => {},
       );
@@ -49,11 +49,11 @@ void main() {
         (WidgetTester tester) async {
       SupportedDeviceType.iPhone5SE2nd.binding(tester.binding.window);
 
-      final pillSheetType = PillSheetType.pillsheet_28_4;
+      const pillSheetType = PillSheetType.pillsheet_28_4;
       final widget = SettingPillSheetView(
         pageIndex: 0,
         appearanceMode: PillSheetAppearanceMode.number,
-        pillSheetTypes: [pillSheetType],
+        pillSheetTypes: const [pillSheetType],
         selectedPillNumberIntoPillSheet: null,
         markSelected: (p, i) => {},
       );
@@ -76,11 +76,11 @@ void main() {
         (WidgetTester tester) async {
       SupportedDeviceType.iPhone5SE2nd.binding(tester.binding.window);
 
-      final pillSheetType = PillSheetType.pillsheet_28_0;
+      const pillSheetType = PillSheetType.pillsheet_28_0;
       final widget = SettingPillSheetView(
         pageIndex: 0,
         appearanceMode: PillSheetAppearanceMode.number,
-        pillSheetTypes: [pillSheetType],
+        pillSheetTypes: const [pillSheetType],
         selectedPillNumberIntoPillSheet: 10,
         markSelected: (p, i) => {},
       );
@@ -102,11 +102,11 @@ void main() {
     testWidgets('exists selected pill number', (WidgetTester tester) async {
       SupportedDeviceType.iPhone5SE2nd.binding(tester.binding.window);
 
-      final pillSheetType = PillSheetType.pillsheet_28_0;
+      const pillSheetType = PillSheetType.pillsheet_28_0;
       final widget = SettingPillSheetView(
         pageIndex: 0,
         appearanceMode: PillSheetAppearanceMode.number,
-        pillSheetTypes: [pillSheetType],
+        pillSheetTypes: const [pillSheetType],
         selectedPillNumberIntoPillSheet: null,
         markSelected: (p, i) => {},
       );

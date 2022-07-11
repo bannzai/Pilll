@@ -17,7 +17,7 @@ class CalendarScheduledMenstruationBand extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Container(
+    return SizedBox(
       height: CalendarBandConst.height,
       child: CustomPaint(
         painter: DiagonalStripedLine(

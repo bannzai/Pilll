@@ -34,7 +34,7 @@ class PostDiaryPage extends HookConsumerWidget {
   final DateTime date;
   final Diary? diary;
 
-  PostDiaryPage(this.date, this.diary);
+  const PostDiaryPage(this.date, this.diary);
 
   PostDiaryStoreProviderFamily _family() {
     return PostDiaryStoreProviderFamily(date: date, diary: diary);
@@ -88,7 +88,7 @@ class PostDiaryPage extends HookConsumerWidget {
       body: SafeArea(
         child: Stack(
           children: [
-            Container(
+            SizedBox(
               height: MediaQuery.of(context).size.height,
               width: MediaQuery.of(context).size.width,
               child: Padding(
@@ -96,7 +96,7 @@ class PostDiaryPage extends HookConsumerWidget {
                 child: ListView(
                   controller: scrollController,
                   children: [
-                    Text(DateTimeFormatter.yearAndMonthAndDay(this.date),
+                    Text(DateTimeFormatter.yearAndMonthAndDay(date),
                         style: FontType.sBigTitle.merge(TextColorStyle.main)),
                     ...[
                       _physicalConditions(store, state),
@@ -166,9 +166,9 @@ class PostDiaryPage extends HookConsumerWidget {
                           PhysicalConditionStatus.bad);
                     }),
               ),
-              Container(
+              const SizedBox(
                   height: 48,
-                  child: const VerticalDivider(width: 1, color: PilllColors.divider)),
+                  child: VerticalDivider(width: 1, color: PilllColors.divider)),
               Container(
                 decoration: BoxDecoration(
                   borderRadius: const BorderRadius.only(
@@ -288,7 +288,7 @@ class PostDiaryPage extends HookConsumerWidget {
     PostDiaryStore store,
     DiaryState state,
   ) {
-    final textLength = 120;
+    const textLength = 120;
     return Container(
       child: ConstrainedBox(
         constraints: BoxConstraints(

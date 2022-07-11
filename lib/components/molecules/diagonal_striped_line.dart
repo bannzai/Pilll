@@ -15,7 +15,7 @@ class DiagonalStripedLine extends CustomPainter {
     }
 
     final emptyWidth = _blockWidth * 0.25;
-    final emptyOffset = 10.0;
+    const emptyOffset = 10.0;
     final count = size.width / _blockWidth;
     for (int i = 0; i < count; i++) {
       final offset = i.toDouble() * _blockWidth;

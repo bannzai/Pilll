@@ -133,9 +133,7 @@ class InitialSettingReminderTimesPage extends HookConsumerWidget {
     analytics.logEvent(name: "show_initial_setting_reminder_picker");
     final reminderDateTime = state.reminderTimeOrNull(index);
     final n = now();
-    DateTime initialDateTime = reminderDateTime != null
-        ? reminderDateTime
-        : DateTime(n.year, n.month, n.day, n.hour, 0, 0);
+    DateTime initialDateTime = reminderDateTime ?? DateTime(n.year, n.month, n.day, n.hour, 0, 0);
     showModalBottomSheet(
       context: context,
       builder: (BuildContext context) {

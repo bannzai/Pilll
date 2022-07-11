@@ -30,8 +30,8 @@ class DisplayNumberSettingSheet extends HookConsumerWidget {
 
     final beforePillSheetGroup = state.beforePillSheetGroup;
 
-    final estimatedKeyboardHeight = 216;
-    final offset = 24;
+    const estimatedKeyboardHeight = 216;
+    const offset = 24;
     final height = 1 -
         ((estimatedKeyboardHeight - offset) /
             MediaQuery.of(context).size.height);
@@ -115,7 +115,7 @@ class DisplayNumberSettingSheet extends HookConsumerWidget {
                             width: 42,
                             height: 40,
                             child: TextField(
-                              style: TextStyle(
+                              style: const TextStyle(
                                 color: TextColor.darkGray,
                                 fontSize: 15,
                                 fontFamily: FontFamily.number,
@@ -200,7 +200,7 @@ class DisplayNumberSettingSheet extends HookConsumerWidget {
                         width: 42,
                         height: 40,
                         child: TextField(
-                          style: TextStyle(
+                          style: const TextStyle(
                             color: TextColor.darkGray,
                             fontSize: 15,
                             fontFamily: FontFamily.number,

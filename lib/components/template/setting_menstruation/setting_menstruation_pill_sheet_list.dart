@@ -13,7 +13,7 @@ class SettingMenstruationPillSheetList extends HookConsumerWidget {
   final PillSheetAppearanceMode appearanceMode;
   final Function(int pageIndex, int pillNumber) markSelected;
 
-  SettingMenstruationPillSheetList({
+  const SettingMenstruationPillSheetList({
     required this.pillSheetTypes,
     required this.selectedPillNumber,
     required this.appearanceMode,

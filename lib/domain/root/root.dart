@@ -31,7 +31,7 @@ import 'package:uuid/uuid.dart';
 GlobalKey<RootState> rootKey = GlobalKey();
 
 class Root extends StatefulWidget {
-  Root({Key? key}) : super(key: key);
+  const Root({Key? key}) : super(key: key);
 
   @override
   RootState createState() => RootState();
@@ -202,14 +202,14 @@ class RootState extends State<Root> {
       _checkForceUpdate().then((shouldForceUpdate) {
         if (shouldForceUpdate) {
           setState(() {
-            this.screenType = ScreenType.forceUpdate;
+            screenType = ScreenType.forceUpdate;
           });
         }
       }).catchError((error, stackTrace) {
         errorLogger.recordError(error, stackTrace);
 
         setState(() {
-          this._error = UserDisplayedError(
+          _error = UserDisplayedError(
               "起動処理でエラーが発生しました\n${ErrorMessages.connection}\n詳細:" +
                   error.toString());
         });
@@ -241,7 +241,7 @@ class RootState extends State<Root> {
         errorLogger.recordError(error, stackTrace);
 
         setState(() {
-          this._error = UserDisplayedError(
+          _error = UserDisplayedError(
               "起動処理でエラーが発生しました\n${ErrorMessages.connection}\n詳細:" +
                   error.toString());
         });

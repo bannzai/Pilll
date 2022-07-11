@@ -20,7 +20,7 @@ enum PillSheetType {
 }
 
 extension PillSheetTypeFunctions on PillSheetType {
-  static final String firestoreCollectionPath = "pill_sheet_types";
+  static const String firestoreCollectionPath = "pill_sheet_types";
   static PillSheetType fromRawPath(String rawPath) {
     switch (rawPath) {
       case "pillsheet_21":
@@ -144,7 +144,7 @@ extension PillSheetTypeFunctions on PillSheetType {
       dosingPeriod: dosingPeriod);
 
   bool get isNotExistsNotTakenDuration {
-    return this.totalCount == this.dosingPeriod;
+    return totalCount == dosingPeriod;
   }
 
   String get notTakenWord {

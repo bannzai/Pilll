@@ -33,14 +33,19 @@ class DateRange {
     if (other is! DateRange) {
       return false;
     }
-    return this.begin == other.begin && this.end == other.end;
+    return begin == other.begin && end == other.end;
   }
 
-  @override
-  int get hashCode => super.hashCode;
 
   @override
   String toString() {
     return "begin: $_begin, end: $_end";
   }
+
+  @override
+  // TODO: implement hashCode
+  int get hashCode => super.hashCode;
+
+
+
 }

@@ -6,7 +6,7 @@ import 'package:pilll/domain/settings/components/inquiry/inquiry.dart';
 import 'package:flutter/material.dart';
 
 class _InheritedWidget extends InheritedWidget {
-  _InheritedWidget({
+  const _InheritedWidget({
     Key? key,
     required Widget child,
     required this.state,
@@ -63,7 +63,7 @@ class _UniversalErrorPageState extends State<UniversalErrorPage> {
 
   @override
   Widget build(BuildContext context) {
-    final child = this.widget.child;
+    final child = widget.child;
     final error = this.error;
     return _InheritedWidget(
       state: this,
@@ -85,7 +85,7 @@ class _UniversalErrorPageState extends State<UniversalErrorPage> {
     return Scaffold(
       backgroundColor: PilllColors.background,
       body: Center(
-        child: Container(
+        child: SizedBox(
           width: 300,
           child: Column(
             mainAxisSize: MainAxisSize.min,
@@ -111,7 +111,7 @@ class _UniversalErrorPageState extends State<UniversalErrorPage> {
                   analytics.logEvent(name: "reload_button_pressed");
                   setState(() {
                     _error = null;
-                    final reload = this.widget.reload;
+                    final reload = widget.reload;
                     if (reload != null) {
                       reload();
                     }
