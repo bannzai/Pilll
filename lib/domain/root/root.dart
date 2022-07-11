@@ -1,7 +1,7 @@
 import 'dart:async';
 
 import 'package:cloud_firestore/cloud_firestore.dart';
-import 'package:firebase_auth/firebase_auth.dart' as FirebaseAuth;
+import 'package:firebase_auth/firebase_auth.dart' as firebase_auth;
 import 'package:firebase_crashlytics/firebase_crashlytics.dart';
 import 'package:firebase_performance/firebase_performance.dart';
 import 'package:pilll/analytics.dart';
@@ -133,7 +133,7 @@ class RootState extends State<Root> {
     return forceUpdate;
   }
 
-  Future<FirebaseAuth.User> _signIn() async {
+  Future<firebase_auth.User> _signIn() async {
     final signInTrace = _trace(name: "signInTrace", uuid: _traceUUID);
     await signInTrace.start();
     final firebaseUser = await cachedUserOrSignInAnonymously();
@@ -165,7 +165,7 @@ class RootState extends State<Root> {
   }
 
   Future<User> _mutateUserWithLaunchInfoAnd(
-      FirebaseAuth.User firebaseUser) async {
+      firebase_auth.User firebaseUser) async {
     final userDatastore = UserDatastore(DatabaseConnection(firebaseUser.uid));
     final user = await userDatastore.fetchOrCreate(firebaseUser.uid);
 
@@ -176,7 +176,7 @@ class RootState extends State<Root> {
   }
 
   Future<ScreenType?> _screenTypeForLegacyUser(
-      FirebaseAuth.User firebaseUser, User user) async {
+      firebase_auth.User firebaseUser, User user) async {
     if (!user.migratedFlutter) {
       final userDatastore = UserDatastore(DatabaseConnection(firebaseUser.uid));
       await userDatastore.deleteSettings();
