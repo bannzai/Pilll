@@ -106,7 +106,7 @@ class PremiumIntroductionStore extends StateNotifier<PremiumIntroductionState> {
         throw AssertionError("unexpected premium entitlements is not exists");
       }
       if (!premiumEntitlement.isActive) {
-        throw UserDisplayedError("課金の有効化が完了しておりません。しばらく時間をおいてからご確認ください");
+        throw FormatException("課金の有効化が完了しておりません。しばらく時間をおいてからご確認ください");
       }
       await callUpdatePurchaseInfo(purchaserInfo);
       return Future.value(true);
