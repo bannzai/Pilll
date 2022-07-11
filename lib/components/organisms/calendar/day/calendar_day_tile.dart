@@ -15,11 +15,13 @@ class CalendarDayTile extends StatelessWidget {
   final Function(DateTime)? onTap;
 
   const CalendarDayTile.grayout({
+    Key? key,
     required DateTime date,
     required Weekday weekday,
     required bool shouldShowMenstruationMark,
     required Alignment contentAlignment,
   }) : this(
+          key: key,
           isToday: false,
           onTap: null,
           weekday: weekday,
@@ -46,7 +48,7 @@ class CalendarDayTile extends StatelessWidget {
     return Expanded(
       child: RawMaterialButton(
         onPressed: () => onTap != null ? onTap(date) : null,
-        child: Container(
+        child: SizedBox(
           height: CalendarConstants.tileHeight,
           child: Stack(
             children: <Widget>[
@@ -72,7 +74,7 @@ class CalendarDayTile extends StatelessWidget {
   }
 
   Widget _content() {
-    return Container(
+    return SizedBox(
       width: 40,
       height: 40,
       child: Stack(

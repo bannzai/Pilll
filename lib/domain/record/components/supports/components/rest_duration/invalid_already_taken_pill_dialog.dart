@@ -7,6 +7,8 @@ import 'package:pilll/components/atoms/text_color.dart';
 import 'package:url_launcher/url_launcher.dart';
 
 class InvalidAlreadyTakenPillDialog extends StatelessWidget {
+  const InvalidAlreadyTakenPillDialog({Key? key}) : super(key: key);
+
   @override
   Widget build(BuildContext context) {
     return AlertDialog(
@@ -78,6 +80,6 @@ showInvalidAlreadyTakenPillDialog(
   analytics.setCurrentScreen(screenName: "InvalidAlreadyTakenPillDialog");
   showDialog(
     context: context,
-    builder: (context) => InvalidAlreadyTakenPillDialog(),
+    builder: (context) => const InvalidAlreadyTakenPillDialog(),
   );
 }

@@ -37,62 +37,60 @@ class InitialSettingSelectTodayPillNumberPage extends HookConsumerWidget {
         backgroundColor: PilllColors.white,
       ),
       body: SafeArea(
-        child: Container(
-          child: Center(
-            child: Column(
-              children: [
-                Expanded(
-                  child: ListView(
-                    children: [
-                      const SizedBox(height: 24),
-                      Text(
-                        "今日(${todayString()})\n飲む・飲んだピルの番号をタップ",
-                        style: FontType.sBigTitle.merge(TextColorStyle.main),
-                        textAlign: TextAlign.center,
-                      ),
-                      const SizedBox(height: 44),
-                      Center(
-                        child: SelectTodayPillNumberPillSheetList(
-                          state: state,
-                          store: store,
-                        ),
-                      ),
-                      const SizedBox(height: 24),
-                      ExplainPillNumber(today: todayString()),
-                      const SizedBox(height: 16),
-                      InconspicuousButton(
-                        onPressed: () async {
-                          store.unsetTodayPillNumber();
-                          analytics.logEvent(
-                              name: "unknown_number_initial_setting");
-                          Navigator.of(context).push(
-                              InitialSettingReminderTimesPageRoute.route());
-                        },
-                        text: "まだ分からない",
-                      ),
-                    ],
-                  ),
-                ),
-                Column(
-                  mainAxisAlignment: MainAxisAlignment.end,
+        child: Center(
+          child: Column(
+            children: [
+              Expanded(
+                child: ListView(
                   children: [
-                    const SizedBox(height: 30),
-                    PrimaryButton(
-                      text: "次へ",
-                      onPressed: state.todayPillNumber == null
-                          ? null
-                          : () async {
-                              analytics.logEvent(
-                                  name: "done_today_number_initial_setting");
-                              Navigator.of(context).push(
-                                  InitialSettingReminderTimesPageRoute.route());
-                            },
+                    const SizedBox(height: 24),
+                    Text(
+                      "今日(${todayString()})\n飲む・飲んだピルの番号をタップ",
+                      style: FontType.sBigTitle.merge(TextColorStyle.main),
+                      textAlign: TextAlign.center,
                     ),
-                    const SizedBox(height: 35),
+                    const SizedBox(height: 44),
+                    Center(
+                      child: SelectTodayPillNumberPillSheetList(
+                        state: state,
+                        store: store,
+                      ),
+                    ),
+                    const SizedBox(height: 24),
+                    ExplainPillNumber(today: todayString()),
+                    const SizedBox(height: 16),
+                    InconspicuousButton(
+                      onPressed: () async {
+                        store.unsetTodayPillNumber();
+                        analytics.logEvent(
+                            name: "unknown_number_initial_setting");
+                        Navigator.of(context)
+                            .push(InitialSettingReminderTimesPageRoute.route());
+                      },
+                      text: "まだ分からない",
+                    ),
                   ],
                 ),
-              ],
-            ),
+              ),
+              Column(
+                mainAxisAlignment: MainAxisAlignment.end,
+                children: [
+                  const SizedBox(height: 30),
+                  PrimaryButton(
+                    text: "次へ",
+                    onPressed: state.todayPillNumber == null
+                        ? null
+                        : () async {
+                            analytics.logEvent(
+                                name: "done_today_number_initial_setting");
+                            Navigator.of(context).push(
+                                InitialSettingReminderTimesPageRoute.route());
+                          },
+                  ),
+                  const SizedBox(height: 35),
+                ],
+              ),
+            ],
           ),
         ),
       ),

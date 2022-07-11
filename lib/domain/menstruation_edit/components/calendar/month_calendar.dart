@@ -69,9 +69,9 @@ class MonthCalendar extends HookConsumerWidget {
   }) {
     return CalendarWeekdayLine(
         state: weekCalendarState,
-        calendarMenstruationBandModels: [],
-        calendarScheduledMenstruationBandModels: [],
-        calendarNextPillSheetBandModels: [],
+        calendarMenstruationBandModels: const [],
+        calendarScheduledMenstruationBandModels: const [],
+        calendarNextPillSheetBandModels: const [],
         horizontalPadding: 0,
         onTap: (weekCalendarState, date) {
           analytics.logEvent(name: "selected_day_tile_on_menstruation_edit");

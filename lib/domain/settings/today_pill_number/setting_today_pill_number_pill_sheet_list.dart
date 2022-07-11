@@ -29,7 +29,7 @@ class SettingTodayPillNumberPillSheetList extends HookConsumerWidget {
 
     return Column(
       children: [
-        Container(
+        SizedBox(
           height: PillSheetViewLayout.calcHeight(
             PillSheetViewLayout.mostLargePillSheetType(pillSheetTypes)
                 .numberOfLineInPillSheet,

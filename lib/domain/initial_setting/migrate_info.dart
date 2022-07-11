@@ -90,7 +90,7 @@ class MigrateInfo extends StatelessWidget {
                 const SizedBox(height: 32),
                 Align(
                   alignment: Alignment.center,
-                  child: Container(
+                  child: SizedBox(
                       width: 230,
                       child: PrimaryButton(
                           onPressed: () async => onClose(), text: "閉じる")),

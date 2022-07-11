@@ -116,14 +116,14 @@ class MenstruationHisotryCardAvarageInformation extends StatelessWidget {
         CounterUnitLayout(
           title: "平均周期",
           number: (state.isPremium || state.isTrial)
-              ? "${state.avalageMenstruationDuration}"
+              ? state.avalageMenstruationDuration
               : "🔒",
           unit: "日",
         ),
         const SizedBox(width: 30),
-        Container(
+        const SizedBox(
             height: 64,
-            child: const VerticalDivider(
+            child: VerticalDivider(
               color: PilllColors.divider,
               width: 3,
             )),
@@ -131,7 +131,7 @@ class MenstruationHisotryCardAvarageInformation extends StatelessWidget {
         CounterUnitLayout(
           title: "平均日数",
           number: (state.isPremium || state.isTrial)
-              ? "${state.avalageMenstruationPeriod}"
+              ? state.avalageMenstruationPeriod
               : "🔒",
           unit: "日",
         ),
@@ -164,7 +164,7 @@ class MenstruationHistoryCardTitle extends StatelessWidget {
         ),
         if (!state.isPremium) ...[
           const SizedBox(width: 8),
-          PremiumBadge(),
+          const PremiumBadge(),
         ],
       ],
     );

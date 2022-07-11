@@ -107,7 +107,7 @@ class MenstruationSequentialPillNumber extends StatelessWidget {
   Widget build(BuildContext context) {
     var number = pageOffset + pillNumberIntoPillSheet;
 
-    final offsetPillNumber = this.displayNumberSetting;
+    final offsetPillNumber = displayNumberSetting;
     if (offsetPillNumber != null) {
       final beginPillNumberOffset = offsetPillNumber.beginPillNumber;
       if (beginPillNumberOffset != null && beginPillNumberOffset > 0) {

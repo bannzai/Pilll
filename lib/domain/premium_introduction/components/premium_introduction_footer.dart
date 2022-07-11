@@ -12,6 +12,8 @@ import 'package:pilll/util/platform/platform.dart';
 import 'package:url_launcher/url_launcher.dart';
 
 class PremiumIntroductionFotter extends StatelessWidget {
+  const PremiumIntroductionFotter({Key? key}) : super(key: key);
+
   @override
   Widget build(BuildContext context) {
     final store = PremiumIntroductionFooterStateStore();

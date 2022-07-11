@@ -4,11 +4,9 @@ import 'package:shared_preferences/shared_preferences.dart';
 
 void requestInAppReview() {
   SharedPreferences.getInstance().then((store) async {
-    final key = IntKey.totalCountOfActionForTakenPill;
+    const key = IntKey.totalCountOfActionForTakenPill;
     int? value = store.getInt(key);
-    if (value == null) {
-      value = 0;
-    }
+    value ??= 0;
     value += 1;
     store.setInt(key, value);
     if (value % 7 != 0) {

@@ -19,7 +19,7 @@ void main() {
   });
   group("#RecordPagePillSheet.textOfPillNumber", () {
     group("pillSheetAppearanceMode is number", () {
-      final pillSheetAppearanceMode = PillSheetAppearanceMode.number;
+      const pillSheetAppearanceMode = PillSheetAppearanceMode.number;
       test("it is isPremium or isTrial", () {
         final originalTodayRepository = todayRepository;
         final mockTodayRepository = MockTodayService();
@@ -31,9 +31,9 @@ void main() {
           todayRepository = originalTodayRepository;
         });
 
-        final pillNumberForFromMenstruation = 22;
-        final durationMenstruation = 4;
-        final setting = Setting(
+        const pillNumberForFromMenstruation = 22;
+        const durationMenstruation = 4;
+        const setting = Setting(
           pillNumberForFromMenstruation: pillNumberForFromMenstruation,
           durationMenstruation: durationMenstruation,
           isOnReminder: true,
@@ -82,9 +82,9 @@ void main() {
           todayRepository = originalTodayRepository;
         });
 
-        final pillNumberForFromMenstruation = 22;
-        final durationMenstruation = 4;
-        final setting = Setting(
+        const pillNumberForFromMenstruation = 22;
+        const durationMenstruation = 4;
+        const setting = Setting(
           pillNumberForFromMenstruation: pillNumberForFromMenstruation,
           durationMenstruation: durationMenstruation,
           isOnReminder: true,
@@ -136,9 +136,9 @@ void main() {
           todayRepository = originalTodayRepository;
         });
 
-        final pillNumberForFromMenstruation = 0;
-        final durationMenstruation = 0;
-        final setting = Setting(
+        const pillNumberForFromMenstruation = 0;
+        const durationMenstruation = 0;
+        const setting = Setting(
           pillNumberForFromMenstruation: pillNumberForFromMenstruation,
           durationMenstruation: durationMenstruation,
           isOnReminder: true,
@@ -178,7 +178,7 @@ void main() {
       });
     });
     group("pillSheetAppearanceMode is date", () {
-      final pillSheetAppearanceMode = PillSheetAppearanceMode.date;
+      const pillSheetAppearanceMode = PillSheetAppearanceMode.date;
       test("it is isPremium or isTrial", () {
         final originalTodayRepository = todayRepository;
         final mockTodayRepository = MockTodayService();
@@ -190,9 +190,9 @@ void main() {
           todayRepository = originalTodayRepository;
         });
 
-        final pillNumberForFromMenstruation = 22;
-        final durationMenstruation = 4;
-        final setting = Setting(
+        const pillNumberForFromMenstruation = 22;
+        const durationMenstruation = 4;
+        const setting = Setting(
           pillNumberForFromMenstruation: pillNumberForFromMenstruation,
           durationMenstruation: durationMenstruation,
           isOnReminder: true,
@@ -243,9 +243,9 @@ void main() {
           todayRepository = originalTodayRepository;
         });
 
-        final pillNumberForFromMenstruation = 22;
-        final durationMenstruation = 4;
-        final setting = Setting(
+        const pillNumberForFromMenstruation = 22;
+        const durationMenstruation = 4;
+        const setting = Setting(
           pillNumberForFromMenstruation: pillNumberForFromMenstruation,
           durationMenstruation: durationMenstruation,
           isOnReminder: true,
@@ -296,9 +296,9 @@ void main() {
           todayRepository = originalTodayRepository;
         });
 
-        final pillNumberForFromMenstruation = 0;
-        final durationMenstruation = 0;
-        final setting = Setting(
+        const pillNumberForFromMenstruation = 0;
+        const durationMenstruation = 0;
+        const setting = Setting(
           pillNumberForFromMenstruation: pillNumberForFromMenstruation,
           durationMenstruation: durationMenstruation,
           isOnReminder: true,
@@ -338,7 +338,7 @@ void main() {
       });
     });
     group("pillSheetAppearanceMode is sequential", () {
-      final pillSheetAppearanceMode = PillSheetAppearanceMode.sequential;
+      const pillSheetAppearanceMode = PillSheetAppearanceMode.sequential;
       test("it is isPremium or isTrial", () {
         final originalTodayRepository = todayRepository;
         final mockTodayRepository = MockTodayService();
@@ -350,9 +350,9 @@ void main() {
           todayRepository = originalTodayRepository;
         });
 
-        final pillNumberForFromMenstruation = 22;
-        final durationMenstruation = 4;
-        final setting = Setting(
+        const pillNumberForFromMenstruation = 22;
+        const durationMenstruation = 4;
+        const setting = Setting(
           pillNumberForFromMenstruation: pillNumberForFromMenstruation,
           durationMenstruation: durationMenstruation,
           isOnReminder: true,
@@ -400,9 +400,9 @@ void main() {
           todayRepository = originalTodayRepository;
         });
 
-        final pillNumberForFromMenstruation = 22;
-        final durationMenstruation = 4;
-        final setting = Setting(
+        const pillNumberForFromMenstruation = 22;
+        const durationMenstruation = 4;
+        const setting = Setting(
           pillNumberForFromMenstruation: pillNumberForFromMenstruation,
           durationMenstruation: durationMenstruation,
           isOnReminder: true,
@@ -453,9 +453,9 @@ void main() {
           todayRepository = originalTodayRepository;
         });
 
-        final pillNumberForFromMenstruation = 0;
-        final durationMenstruation = 0;
-        final setting = Setting(
+        const pillNumberForFromMenstruation = 0;
+        const durationMenstruation = 0;
+        const setting = Setting(
           pillNumberForFromMenstruation: pillNumberForFromMenstruation,
           durationMenstruation: durationMenstruation,
           isOnReminder: true,
@@ -783,14 +783,14 @@ void main() {
         pillSheets: [pillSheet],
         createdAt: anyDate,
       );
-      final setting = const Setting(
+      const setting = Setting(
         pillSheetTypes: [PillSheetType.pillsheet_28_0],
         pillNumberForFromMenstruation: 22,
         durationMenstruation: 3,
         isOnReminder: true,
         timezoneDatabaseName: null,
       );
-      final pageIndex = 0;
+      const pageIndex = 0;
 
       for (int i = 1; i <= 28; i++) {
         expect(
@@ -827,7 +827,7 @@ void main() {
         pillSheets: [one, two, three],
         createdAt: anyDate,
       );
-      final setting = const Setting(
+      const setting = Setting(
         pillSheetTypes: [
           PillSheetType.pillsheet_28_0,
           PillSheetType.pillsheet_28_0,
@@ -887,7 +887,7 @@ void main() {
         pillSheets: [one, two, three],
         createdAt: anyDate,
       );
-      final setting = const Setting(
+      const setting = Setting(
         pillSheetTypes: [
           PillSheetType.pillsheet_28_0,
           PillSheetType.pillsheet_28_0,
@@ -956,7 +956,7 @@ void main() {
         pillSheets: [one, two, three, four, five],
         createdAt: anyDate,
       );
-      final setting = const Setting(
+      const setting = Setting(
         pillSheetTypes: [
           PillSheetType.pillsheet_28_0,
           PillSheetType.pillsheet_28_0,
@@ -1036,7 +1036,7 @@ void main() {
         pillSheets: [one, two, three, four, five],
         createdAt: anyDate,
       );
-      final setting = const Setting(
+      const setting = Setting(
         pillSheetTypes: [
           PillSheetType.pillsheet_28_0,
           PillSheetType.pillsheet_28_0,

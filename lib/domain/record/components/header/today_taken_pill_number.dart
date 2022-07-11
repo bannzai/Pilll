@@ -46,7 +46,7 @@ class TodayTakenPillNumber extends StatelessWidget {
         if (pillSheetGroup?.activedPillSheet == null) {
           return;
         }
-        this.onPressed();
+        onPressed();
       },
     );
   }

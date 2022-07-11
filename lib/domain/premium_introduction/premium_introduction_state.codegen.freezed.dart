@@ -261,7 +261,8 @@ class __$PremiumIntroductionStateCopyWithImpl<$Res>
 
 /// @nodoc
 
-class _$_PremiumIntroductionState extends _PremiumIntroductionState {
+class _$_PremiumIntroductionState extends _PremiumIntroductionState
+    with DiagnosticableTreeMixin {
   const _$_PremiumIntroductionState(
       {this.offerings,
       this.isOverDiscountDeadline = false,
@@ -304,8 +305,28 @@ class _$_PremiumIntroductionState extends _PremiumIntroductionState {
   final DateTime? discountEntitlementDeadlineDate;
 
   @override
-  String toString() {
+  String toString({DiagnosticLevel minLevel = DiagnosticLevel.info}) {
     return 'PremiumIntroductionState(offerings: $offerings, isOverDiscountDeadline: $isOverDiscountDeadline, isCompletedRestore: $isCompletedRestore, isLoading: $isLoading, isPremium: $isPremium, hasLoginProvider: $hasLoginProvider, isTrial: $isTrial, hasDiscountEntitlement: $hasDiscountEntitlement, beginTrialDate: $beginTrialDate, discountEntitlementDeadlineDate: $discountEntitlementDeadlineDate)';
+  }
+
+  @override
+  void debugFillProperties(DiagnosticPropertiesBuilder properties) {
+    super.debugFillProperties(properties);
+    properties
+      ..add(DiagnosticsProperty('type', 'PremiumIntroductionState'))
+      ..add(DiagnosticsProperty('offerings', offerings))
+      ..add(
+          DiagnosticsProperty('isOverDiscountDeadline', isOverDiscountDeadline))
+      ..add(DiagnosticsProperty('isCompletedRestore', isCompletedRestore))
+      ..add(DiagnosticsProperty('isLoading', isLoading))
+      ..add(DiagnosticsProperty('isPremium', isPremium))
+      ..add(DiagnosticsProperty('hasLoginProvider', hasLoginProvider))
+      ..add(DiagnosticsProperty('isTrial', isTrial))
+      ..add(
+          DiagnosticsProperty('hasDiscountEntitlement', hasDiscountEntitlement))
+      ..add(DiagnosticsProperty('beginTrialDate', beginTrialDate))
+      ..add(DiagnosticsProperty(
+          'discountEntitlementDeadlineDate', discountEntitlementDeadlineDate));
   }
 
   @override

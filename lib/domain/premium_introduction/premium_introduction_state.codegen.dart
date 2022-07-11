@@ -1,3 +1,4 @@
+import 'package:flutter/foundation.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';
 import 'package:purchases_flutter/purchases_flutter.dart';
 
@@ -23,14 +24,14 @@ class PremiumIntroductionState with _$PremiumIntroductionState {
 
   OfferingType get currentOfferingType {
     if (!hasDiscountEntitlement) {
-      print("[DEBUG] user does not hasDiscountEntitlement");
+      debugPrint("[DEBUG] user does not hasDiscountEntitlement");
       return OfferingType.premium;
     }
     if (isOverDiscountDeadline) {
-      print("[DEBUG] isOverDiscountDeadline is true");
+      debugPrint("[DEBUG] isOverDiscountDeadline is true");
       return OfferingType.premium;
     } else {
-      print("[DEBUG] isOverDiscountDeadline is false");
+      debugPrint("[DEBUG] isOverDiscountDeadline is false");
       return OfferingType.limited;
     }
   }
@@ -60,7 +61,7 @@ class PremiumIntroductionState with _$PremiumIntroductionState {
   }
 
   Package? get monthlyPremiumPackage {
-    final premiumPackageOfferingType = OfferingType.premium;
+    const premiumPackageOfferingType = OfferingType.premium;
     final offering = offerings?.all[premiumPackageOfferingType.name];
     if (offering == null) {
       return null;

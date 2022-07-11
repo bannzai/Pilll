@@ -9,7 +9,7 @@ part 'pill_sheet_modified_history.codegen.g.dart';
 part 'pill_sheet_modified_history.codegen.freezed.dart';
 
 class PillSheetModifiedHistoryFirestoreKeys {
-  static final estimatedEventCausingDate = "estimatedEventCausingDate";
+  static const estimatedEventCausingDate = "estimatedEventCausingDate";
 }
 
 enum PillSheetModifiedActionType {
@@ -38,7 +38,7 @@ enum PillSheetModifiedActionType {
 }
 
 extension PillSheetModifiedActionTypeFunctions on PillSheetModifiedActionType {
-  String get name => this.toString().split(".").last;
+  String get name => toString().split(".").last;
 }
 
 // PillSheetModifiedHistory only create on backend

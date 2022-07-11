@@ -15,19 +15,21 @@ class RecordPageButton extends StatelessWidget {
     required this.currentPillSheet,
   }) : super(key: key);
 
+  @override
   Widget build(BuildContext context) {
-    if (currentPillSheet.activeRestDuration != null)
-      return RestDurationButton();
-    else if (currentPillSheet.todayPillIsAlreadyTaken)
+    if (currentPillSheet.activeRestDuration != null) {
+      return const RestDurationButton();
+    } else if (currentPillSheet.todayPillIsAlreadyTaken) {
       return CancelButton(
         pillSheetGroup: pillSheetGroup,
         pillSheet: currentPillSheet,
       );
-    else
+    } else {
       return TakenButton(
         parentContext: context,
         pillSheetGroup: pillSheetGroup,
         pillSheet: currentPillSheet,
       );
+    }
   }
 }

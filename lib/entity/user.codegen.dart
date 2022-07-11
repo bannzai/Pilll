@@ -7,28 +7,30 @@ part 'user.codegen.g.dart';
 part 'user.codegen.freezed.dart';
 
 class UserNotFound with Exception {
+  @override
   toString() {
     return "user not found";
   }
 }
 
 class UserAlreadyExists with Exception {
+  @override
   toString() {
     return "user already exists";
   }
 }
 
 extension UserPrivateFirestoreFieldKeys on String {
-  static final fcmToken = 'fcmToken';
-  static final appleEmail = 'appleEmail';
-  static final isLinkedApple = 'isLinkedApple';
-  static final googleEmail = 'googleEmail';
-  static final isLinkedGoogle = 'isLinkedGoogle';
-  static final latestPremiumPlanIdentifier = "latestPremiumPlanIdentifier";
-  static final originalPurchaseDate = "originalPurchaseDate";
-  static final activeSubscriptions = "activeSubscriptions";
-  static final entitlementIdentifier = "entitlementIdentifier";
-  static final premiumFunctionSurvey = "premiumFunctionSurvey";
+  static const fcmToken = 'fcmToken';
+  static const appleEmail = 'appleEmail';
+  static const isLinkedApple = 'isLinkedApple';
+  static const googleEmail = 'googleEmail';
+  static const isLinkedGoogle = 'isLinkedGoogle';
+  static const latestPremiumPlanIdentifier = "latestPremiumPlanIdentifier";
+  static const originalPurchaseDate = "originalPurchaseDate";
+  static const activeSubscriptions = "activeSubscriptions";
+  static const entitlementIdentifier = "entitlementIdentifier";
+  static const premiumFunctionSurvey = "premiumFunctionSurvey";
 }
 
 @freezed
@@ -43,22 +45,22 @@ class UserPrivate with _$UserPrivate {
 }
 
 extension UserFirestoreFieldKeys on String {
-  static final userDocumentIDSets = "userDocumentIDSets";
-  static final anonymousUserIDSets = "anonymousUserIDSets";
-  static final firebaseCurrentUserIDSets = "firebaseCurrentUserIDSets";
-  static final userIDWhenCreateUser = "userIDWhenCreateUser";
-  static final anonymousUserID = "anonymousUserID";
-  static final settings = "settings";
-  static final migratedFlutter = "migratedFlutter";
-  static final packageInfo = "packageInfo";
-  static final isAnonymous = "isAnonymous";
-  static final isPremium = "isPremium";
-  static final purchaseAppID = "purchaseAppID";
-  static final isTrial = "isTrial";
-  static final beginTrialDate = "beginTrialDate";
-  static final trialDeadlineDate = "trialDeadlineDate";
-  static final hasDiscountEntitlement = "hasDiscountEntitlement";
-  static final discountEntitlementDeadlineDate =
+  static const userDocumentIDSets = "userDocumentIDSets";
+  static const anonymousUserIDSets = "anonymousUserIDSets";
+  static const firebaseCurrentUserIDSets = "firebaseCurrentUserIDSets";
+  static const userIDWhenCreateUser = "userIDWhenCreateUser";
+  static const anonymousUserID = "anonymousUserID";
+  static const settings = "settings";
+  static const migratedFlutter = "migratedFlutter";
+  static const packageInfo = "packageInfo";
+  static const isAnonymous = "isAnonymous";
+  static const isPremium = "isPremium";
+  static const purchaseAppID = "purchaseAppID";
+  static const isTrial = "isTrial";
+  static const beginTrialDate = "beginTrialDate";
+  static const trialDeadlineDate = "trialDeadlineDate";
+  static const hasDiscountEntitlement = "hasDiscountEntitlement";
+  static const discountEntitlementDeadlineDate =
       "discountEntitlementDeadlineDate";
 }
 

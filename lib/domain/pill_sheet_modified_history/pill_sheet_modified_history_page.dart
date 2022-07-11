@@ -8,15 +8,17 @@ import 'package:pilll/domain/calendar/components/pill_sheet_modified_history/pil
 import 'package:pilll/domain/pill_sheet_modified_history/pill_sheet_modified_history_store.dart';
 
 class PillSheetModifiedHistoriesPage extends HookConsumerWidget {
+  const PillSheetModifiedHistoriesPage({Key? key}) : super(key: key);
+
   @override
   Widget build(BuildContext context, WidgetRef ref) {
     final store = ref.watch(pillSheetModifiedHistoryStoreProvider.notifier);
     final state = ref.watch(pillSheetModifiedHistoryStoreProvider);
     if (!state.isFirstLoadEnded) {
-      return ScaffoldIndicator();
+      return const ScaffoldIndicator();
     }
     if (state.pillSheetModifiedHistories.isEmpty) {
-      return ScaffoldIndicator();
+      return const ScaffoldIndicator();
     }
     return Scaffold(
       backgroundColor: PilllColors.white,
@@ -72,7 +74,7 @@ extension PillSheetModifiedHistoriesPageRoute
   static Route<dynamic> route() {
     return MaterialPageRoute(
       settings: const RouteSettings(name: "PillSheetModifiedHistoriesPage"),
-      builder: (_) => PillSheetModifiedHistoriesPage(),
+      builder: (_) => const PillSheetModifiedHistoriesPage(),
     );
   }
 }

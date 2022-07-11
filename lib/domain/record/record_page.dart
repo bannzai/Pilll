@@ -17,6 +17,8 @@ import 'package:hooks_riverpod/hooks_riverpod.dart';
 import 'package:pilll/hooks/automatic_keep_alive_client_mixin.dart';
 
 class RecordPage extends HookConsumerWidget {
+  const RecordPage({Key? key}) : super(key: key);
+
   @override
   Widget build(BuildContext context, WidgetRef ref) {
     final state = ref.watch(recordPageStateNotifierProvider);
@@ -81,7 +83,7 @@ class RecordPageBody extends StatelessWidget {
           Expanded(
             child: ListView(
               children: [
-                NotificationBar(),
+                const NotificationBar(),
                 const SizedBox(height: 37),
                 _content(context, setting, state, store),
                 const SizedBox(height: 20),
@@ -112,13 +114,13 @@ class RecordPageBody extends StatelessWidget {
     final activedPillSheet = pillSheetGroup?.activedPillSheet;
     if (activedPillSheet == null ||
         pillSheetGroup == null ||
-        pillSheetGroup.isDeactived)
+        pillSheetGroup.isDeactived) {
       return AddPillSheetGroupEmptyFrame(
         context: context,
         store: store,
         setting: setting,
       );
-    else
+    } else {
       return Column(
         mainAxisAlignment: MainAxisAlignment.start,
         children: [
@@ -137,6 +139,7 @@ class RecordPageBody extends StatelessWidget {
           ),
         ],
       );
+    }
   }
 
   void _showMigrateInfoDialog(

@@ -8,12 +8,14 @@ import 'package:pilll/domain/menstruation_list/menstruation_list_row.dart';
 import 'package:pilll/domain/menstruation_list/menstruation_list_store.dart';
 
 class MenstruationListPage extends HookConsumerWidget {
+  const MenstruationListPage({Key? key}) : super(key: key);
+
   @override
   Widget build(BuildContext context, WidgetRef ref) {
     final state = ref.watch(menstruationListStoreProvider);
 
     if (state.isNotYetLoaded) {
-      return ScaffoldIndicator();
+      return const ScaffoldIndicator();
     }
 
     return Scaffold(
@@ -55,7 +57,7 @@ extension MenstruationListPageRoute on MenstruationListPage {
   static Route<dynamic> route() {
     return MaterialPageRoute(
       settings: const RouteSettings(name: "MenstruationListPage"),
-      builder: (_) => MenstruationListPage(),
+      builder: (_) => const MenstruationListPage(),
     );
   }
 }

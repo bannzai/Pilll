@@ -8,6 +8,8 @@ import 'package:pilll/components/atoms/text_color.dart';
 import 'package:pilll/domain/settings/setting_account_list/setting_account_cooperation_list_page.dart';
 
 class AccountLinkRow extends StatelessWidget {
+  const AccountLinkRow({Key? key}) : super(key: key);
+
   @override
   Widget build(BuildContext context) {
     return ListTile(

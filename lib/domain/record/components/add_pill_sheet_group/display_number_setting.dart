@@ -55,7 +55,7 @@ class DisplayNumberSetting extends HookConsumerWidget {
               width: 42,
               height: 40,
               child: TextField(
-                style: TextStyle(
+                style: const TextStyle(
                   color: TextColor.darkGray,
                   fontSize: 15,
                   fontFamily: FontFamily.number,

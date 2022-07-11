@@ -16,6 +16,7 @@ class PremiumIntroductionDiscountRow extends HookConsumerWidget {
     required this.monthlyPremiumPackage,
   }) : super(key: key);
 
+  @override
   Widget build(BuildContext context, WidgetRef ref) {
     final discountEntitlementDeadlineDate =
         this.discountEntitlementDeadlineDate;
@@ -80,7 +81,7 @@ class PremiumIntroductionDiscountRow extends HookConsumerWidget {
           Stack(
             children: [
               Text(
-                "${monthlyPremiumPackage.product.priceString}",
+                monthlyPremiumPackage.product.priceString,
                 textAlign: TextAlign.center,
                 style: TextColorStyle.main.merge(
                   const TextStyle(

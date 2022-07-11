@@ -31,7 +31,7 @@ class SettingMenstruationPageTemplate extends StatelessWidget {
           onPressed: () => Navigator.of(context).pop(),
         ),
         title: Text(
-          this.title,
+          title,
           style: const TextStyle(color: TextColor.black),
         ),
         backgroundColor: PilllColors.white,

@@ -16,7 +16,7 @@ import 'package:pilll/emoji/emoji.dart';
 import 'package:pilll/entity/pill_sheet_modified_history.codegen.dart';
 
 class CalendarPillSheetModifiedHistoryCardState {
-  static final pillSheetModifiedHistoriesThreshold = 6;
+  static const pillSheetModifiedHistoriesThreshold = 6;
   final List<PillSheetModifiedHistory> _allPillSheetModifiedHistories;
   final bool isPremium;
   final bool isTrial;
@@ -82,7 +82,7 @@ class CalendarPillSheetModifiedHistoryCard extends StatelessWidget {
                 ),
                 if (!state.isPremium) ...[
                   const SizedBox(width: 8),
-                  PremiumBadge(),
+                  const PremiumBadge(),
                 ],
               ],
             ),
@@ -92,14 +92,12 @@ class CalendarPillSheetModifiedHistoryCard extends StatelessWidget {
             ...() {
               if (state.isPremium || state.isTrial) {
                 return [
-                  Container(
-                    child: PillSheetModifiedHistoryList(
-                      padding: null,
-                      scrollPhysics: const NeverScrollableScrollPhysics(),
-                      pillSheetModifiedHistories:
-                          state.pillSheetModifiedHistories,
-                      onEditTakenPillAction: store.asyncAction.editTakenValue,
-                    ),
+                  PillSheetModifiedHistoryList(
+                    padding: null,
+                    scrollPhysics: const NeverScrollableScrollPhysics(),
+                    pillSheetModifiedHistories:
+                        state.pillSheetModifiedHistories,
+                    onEditTakenPillAction: store.asyncAction.editTakenValue,
                   ),
                   if (state.moreButtonIsShown)
                     PillSheetModifiedHistoryMoreButton(state: state),
@@ -108,14 +106,12 @@ class CalendarPillSheetModifiedHistoryCard extends StatelessWidget {
                 return [
                   Stack(
                     children: [
-                      Container(
-                        child: PillSheetModifiedHistoryList(
-                          padding: null,
-                          scrollPhysics: const NeverScrollableScrollPhysics(),
-                          pillSheetModifiedHistories:
-                              state.pillSheetModifiedHistories,
-                          onEditTakenPillAction: null,
-                        ),
+                      PillSheetModifiedHistoryList(
+                        padding: null,
+                        scrollPhysics: const NeverScrollableScrollPhysics(),
+                        pillSheetModifiedHistories:
+                            state.pillSheetModifiedHistories,
+                        onEditTakenPillAction: null,
                       ),
                       Positioned.fill(
                         child: ClipRect(

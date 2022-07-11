@@ -34,7 +34,7 @@ class PostDiaryPage extends HookConsumerWidget {
   final DateTime date;
   final Diary? diary;
 
-  PostDiaryPage(this.date, this.diary);
+  const PostDiaryPage(this.date, this.diary, {Key? key}) : super(key: key);
 
   PostDiaryStoreProviderFamily _family() {
     return PostDiaryStoreProviderFamily(date: date, diary: diary);
@@ -58,12 +58,14 @@ class PostDiaryPage extends HookConsumerWidget {
                   PostDiaryPageConst.keyboardToobarHeight);
           if (overwrapHeight > 0) {
             scrollController.animateTo(overwrapHeight,
-                duration: const Duration(milliseconds: 300), curve: Curves.easeInOut);
+                duration: const Duration(milliseconds: 300),
+                curve: Curves.easeInOut);
           }
         });
       } else {
         scrollController.animateTo(scrollController.position.minScrollExtent,
-            duration: const Duration(milliseconds: 300), curve: Curves.easeInOut);
+            duration: const Duration(milliseconds: 300),
+            curve: Curves.easeInOut);
       }
     });
     return Scaffold(
@@ -88,7 +90,7 @@ class PostDiaryPage extends HookConsumerWidget {
       body: SafeArea(
         child: Stack(
           children: [
-            Container(
+            SizedBox(
               height: MediaQuery.of(context).size.height,
               width: MediaQuery.of(context).size.width,
               child: Padding(
@@ -96,7 +98,7 @@ class PostDiaryPage extends HookConsumerWidget {
                 child: ListView(
                   controller: scrollController,
                   children: [
-                    Text(DateTimeFormatter.yearAndMonthAndDay(this.date),
+                    Text(DateTimeFormatter.yearAndMonthAndDay(date),
                         style: FontType.sBigTitle.merge(TextColorStyle.main)),
                     ...[
                       _physicalConditions(store, state),
@@ -166,9 +168,9 @@ class PostDiaryPage extends HookConsumerWidget {
                           PhysicalConditionStatus.bad);
                     }),
               ),
-              Container(
+              const SizedBox(
                   height: 48,
-                  child: const VerticalDivider(width: 1, color: PilllColors.divider)),
+                  child: VerticalDivider(width: 1, color: PilllColors.divider)),
               Container(
                 decoration: BoxDecoration(
                   borderRadius: const BorderRadius.only(
@@ -288,29 +290,27 @@ class PostDiaryPage extends HookConsumerWidget {
     PostDiaryStore store,
     DiaryState state,
   ) {
-    final textLength = 120;
-    return Container(
-      child: ConstrainedBox(
-        constraints: BoxConstraints(
-          minWidth: MediaQuery.of(context).size.width,
-          maxWidth: MediaQuery.of(context).size.width,
-          minHeight: 40,
-          maxHeight: 200,
+    const textLength = 120;
+    return ConstrainedBox(
+      constraints: BoxConstraints(
+        minWidth: MediaQuery.of(context).size.width,
+        maxWidth: MediaQuery.of(context).size.width,
+        minHeight: 40,
+        maxHeight: 200,
+      ),
+      child: TextFormField(
+        onChanged: (text) {
+          store.editedMemo(text);
+        },
+        decoration: const InputDecoration(
+          hintText: "メモ",
+          border: OutlineInputBorder(),
         ),
-        child: TextFormField(
-          onChanged: (text) {
-            store.editedMemo(text);
-          },
-          decoration: const InputDecoration(
-            hintText: "メモ",
-            border: OutlineInputBorder(),
-          ),
-          controller: textEditingController,
-          maxLines: null,
-          maxLength: textLength,
-          keyboardType: TextInputType.multiline,
-          focusNode: focusNode,
-        ),
+        controller: textEditingController,
+        maxLines: null,
+        maxLength: textLength,
+        keyboardType: TextInputType.multiline,
+        focusNode: focusNode,
       ),
     );
   }

@@ -16,16 +16,19 @@ class MenstruationEditPage extends HookConsumerWidget {
   final Menstruation? menstruation;
   final Function(Menstruation) onSaved;
   final VoidCallback onDeleted;
-  MenstruationEditPage({
+  const MenstruationEditPage({
+    Key? key,
     required this.menstruation,
     required this.onSaved,
     required this.onDeleted,
-  });
+  }) : super(key: key);
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {
-    final store = ref.watch(menstruationEditPageStateNotifierProvider(menstruation).notifier);
-    final state = ref.watch(menstruationEditPageStateNotifierProvider(menstruation));
+    final store = ref.watch(
+        menstruationEditPageStateNotifierProvider(menstruation).notifier);
+    final state =
+        ref.watch(menstruationEditPageStateNotifierProvider(menstruation));
     final invalidMessage = state.invalidMessage;
 
     final scrollController = useScrollController();
@@ -34,7 +37,7 @@ class MenstruationEditPage extends HookConsumerWidget {
         return;
       }
       store.adjustedScrollOffset();
-      final double estimatedSectionTitleHeight = 95;
+      const double estimatedSectionTitleHeight = 95;
       scrollController.jumpTo(
           CalendarConstants.tileHeight * CalendarConstants.maxLineCount +
               estimatedSectionTitleHeight);

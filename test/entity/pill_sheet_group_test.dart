@@ -22,7 +22,7 @@ void main() {
         when(mockTodayRepository.now())
             .thenReturn(DateTime.parse("2020-09-19"));
 
-        final sheetType = PillSheetType.pillsheet_21;
+        const sheetType = PillSheetType.pillsheet_21;
         final pillSheet = PillSheet(
           beginingDate: DateTime.parse("2020-09-14"),
           lastTakenDate: DateTime.parse("2020-09-18"),
@@ -47,7 +47,7 @@ void main() {
         when(mockTodayRepository.now())
             .thenReturn(DateTime.parse("2020-09-28"));
 
-        final sheetType = PillSheetType.pillsheet_21;
+        const sheetType = PillSheetType.pillsheet_21;
         final pillSheet = PillSheet(
           beginingDate: DateTime.parse("2020-09-01"),
           lastTakenDate: DateTime.parse("2020-09-28"),
@@ -73,7 +73,7 @@ void main() {
           when(mockTodayRepository.now())
               .thenReturn(DateTime.parse("2020-09-28"));
 
-          final sheetType = PillSheetType.pillsheet_21;
+          const sheetType = PillSheetType.pillsheet_21;
           final pillSheet = PillSheet(
             beginingDate: DateTime.parse("2020-09-01"),
             lastTakenDate: DateTime.parse("2020-09-28"),
@@ -105,7 +105,7 @@ void main() {
           when(mockTodayRepository.now())
               .thenReturn(DateTime.parse("2020-09-28"));
 
-          final sheetType = PillSheetType.pillsheet_21;
+          const sheetType = PillSheetType.pillsheet_21;
           final pillSheet = PillSheet(
             beginingDate: DateTime.parse("2020-09-01"),
             lastTakenDate: DateTime.parse("2020-09-28"),
@@ -138,7 +138,7 @@ void main() {
             when(mockTodayRepository.now())
                 .thenReturn(DateTime.parse("2020-09-28"));
 
-            final sheetType = PillSheetType.pillsheet_21;
+            const sheetType = PillSheetType.pillsheet_21;
             final pillSheet = PillSheet(
               beginingDate: DateTime.parse("2020-09-01"),
               lastTakenDate: DateTime.parse("2020-09-28"),
@@ -174,7 +174,7 @@ void main() {
             when(mockTodayRepository.now())
                 .thenReturn(DateTime.parse("2020-09-28"));
 
-            final sheetType = PillSheetType.pillsheet_21;
+            const sheetType = PillSheetType.pillsheet_21;
             final pillSheet = PillSheet(
               beginingDate: DateTime.parse("2020-09-01"),
               lastTakenDate: DateTime.parse("2020-09-28"),
@@ -215,7 +215,7 @@ void main() {
         when(mockTodayRepository.now())
             .thenReturn(DateTime.parse("2022-03-29"));
 
-        final sheetType = PillSheetType.pillsheet_21;
+        const sheetType = PillSheetType.pillsheet_21;
         final pillSheet1 = PillSheet(
           beginingDate: DateTime.parse("2022-03-01"),
           lastTakenDate: DateTime.parse("2020-03-28"),
@@ -252,7 +252,7 @@ void main() {
         when(mockTodayRepository.now())
             .thenReturn(DateTime.parse("2022-03-29"));
 
-        final sheetType = PillSheetType.pillsheet_21;
+        const sheetType = PillSheetType.pillsheet_21;
         final pillSheet1 = PillSheet(
           beginingDate: DateTime.parse("2022-03-01"),
           lastTakenDate: DateTime.parse("2020-03-28"),
@@ -290,7 +290,7 @@ void main() {
         when(mockTodayRepository.now())
             .thenReturn(DateTime.parse("2022-03-29"));
 
-        final sheetType = PillSheetType.pillsheet_21;
+        const sheetType = PillSheetType.pillsheet_21;
         final pillSheet1 = PillSheet(
           beginingDate: DateTime.parse("2022-03-01"),
           lastTakenDate: DateTime.parse("2020-03-28"),
@@ -328,7 +328,7 @@ void main() {
         when(mockTodayRepository.now())
             .thenReturn(DateTime.parse("2022-03-29"));
 
-        final sheetType = PillSheetType.pillsheet_21;
+        const sheetType = PillSheetType.pillsheet_21;
         final pillSheet1 = PillSheet(
           beginingDate: DateTime.parse("2022-03-01"),
           lastTakenDate: DateTime.parse("2020-03-28"),
@@ -371,7 +371,7 @@ void main() {
         when(mockTodayRepository.now())
             .thenReturn(DateTime.parse("2020-09-19"));
 
-        final sheetType = PillSheetType.pillsheet_21;
+        const sheetType = PillSheetType.pillsheet_21;
         final pillSheet = PillSheet(
           beginingDate: DateTime.parse("2020-09-14"),
           typeInfo: PillSheetTypeInfo(
@@ -395,7 +395,7 @@ void main() {
         when(mockTodayRepository.now())
             .thenReturn(DateTime.parse("2020-09-19"));
 
-        final sheetType = PillSheetType.pillsheet_21;
+        const sheetType = PillSheetType.pillsheet_21;
         final pillSheet = PillSheet(
           beginingDate: DateTime.parse("2020-09-14"),
           lastTakenDate: DateTime.parse("2020-09-17"),
@@ -420,7 +420,7 @@ void main() {
         when(mockTodayRepository.now())
             .thenReturn(DateTime.parse("2020-09-28"));
 
-        final sheetType = PillSheetType.pillsheet_21;
+        const sheetType = PillSheetType.pillsheet_21;
         final pillSheet = PillSheet(
           beginingDate: DateTime.parse("2020-09-01"),
           lastTakenDate: DateTime.parse("2020-09-28"),
@@ -446,7 +446,7 @@ void main() {
           when(mockTodayRepository.now())
               .thenReturn(DateTime.parse("2020-09-28"));
 
-          final sheetType = PillSheetType.pillsheet_21;
+          const sheetType = PillSheetType.pillsheet_21;
           final pillSheet = PillSheet(
             beginingDate: DateTime.parse("2020-09-01"),
             lastTakenDate: DateTime.parse("2020-09-22"),
@@ -477,7 +477,7 @@ void main() {
           when(mockTodayRepository.now())
               .thenReturn(DateTime.parse("2020-09-28"));
 
-          final sheetType = PillSheetType.pillsheet_21;
+          const sheetType = PillSheetType.pillsheet_21;
           final pillSheet = PillSheet(
             beginingDate: DateTime.parse("2020-09-01"),
             lastTakenDate: DateTime.parse("2020-09-27"),
@@ -509,7 +509,7 @@ void main() {
           when(mockTodayRepository.now())
               .thenReturn(DateTime.parse("2020-09-28"));
 
-          final sheetType = PillSheetType.pillsheet_21;
+          const sheetType = PillSheetType.pillsheet_21;
           final pillSheet = PillSheet(
             beginingDate: DateTime.parse("2020-09-01"),
             lastTakenDate: null,
@@ -543,7 +543,7 @@ void main() {
             when(mockTodayRepository.now())
                 .thenReturn(DateTime.parse("2020-09-28"));
 
-            final sheetType = PillSheetType.pillsheet_21;
+            const sheetType = PillSheetType.pillsheet_21;
             final pillSheet = PillSheet(
               beginingDate: DateTime.parse("2020-09-01"),
               lastTakenDate: DateTime.parse("2020-09-22"),
@@ -579,7 +579,7 @@ void main() {
             when(mockTodayRepository.now())
                 .thenReturn(DateTime.parse("2020-09-28"));
 
-            final sheetType = PillSheetType.pillsheet_21;
+            const sheetType = PillSheetType.pillsheet_21;
             final pillSheet = PillSheet(
               beginingDate: DateTime.parse("2020-09-01"),
               lastTakenDate: DateTime.parse("2020-09-22"),
@@ -619,7 +619,7 @@ void main() {
           when(mockTodayRepository.now())
               .thenReturn(DateTime.parse("2022-03-30"));
 
-          final sheetType = PillSheetType.pillsheet_21;
+          const sheetType = PillSheetType.pillsheet_21;
           final pillSheet1 = PillSheet(
             beginingDate: DateTime.parse("2022-03-01"),
             lastTakenDate: DateTime.parse("2020-03-28"),
@@ -656,7 +656,7 @@ void main() {
           when(mockTodayRepository.now())
               .thenReturn(DateTime.parse("2022-03-30"));
 
-          final sheetType = PillSheetType.pillsheet_21;
+          const sheetType = PillSheetType.pillsheet_21;
           final pillSheet1 = PillSheet(
             beginingDate: DateTime.parse("2022-03-01"),
             lastTakenDate: DateTime.parse("2020-03-28"),
@@ -695,7 +695,7 @@ void main() {
           when(mockTodayRepository.now())
               .thenReturn(DateTime.parse("2022-03-30"));
 
-          final sheetType = PillSheetType.pillsheet_21;
+          const sheetType = PillSheetType.pillsheet_21;
           final pillSheet1 = PillSheet(
             beginingDate: DateTime.parse("2022-03-01"),
             lastTakenDate: DateTime.parse("2020-03-28"),
@@ -734,7 +734,7 @@ void main() {
           when(mockTodayRepository.now())
               .thenReturn(DateTime.parse("2022-03-30"));
 
-          final sheetType = PillSheetType.pillsheet_21;
+          const sheetType = PillSheetType.pillsheet_21;
           final pillSheet1 = PillSheet(
             beginingDate: DateTime.parse("2022-03-01"),
             lastTakenDate: DateTime.parse("2020-03-28"),
@@ -772,7 +772,7 @@ void main() {
           when(mockTodayRepository.now())
               .thenReturn(DateTime.parse("2022-03-30"));
 
-          final sheetType = PillSheetType.pillsheet_21;
+          const sheetType = PillSheetType.pillsheet_21;
           final pillSheet1 = PillSheet(
             beginingDate: DateTime.parse("2022-03-01"),
             lastTakenDate: DateTime.parse("2020-03-28"),

@@ -49,58 +49,55 @@ class SettingTodayPillNumberPage extends HookConsumerWidget {
         backgroundColor: PilllColors.white,
       ),
       body: SafeArea(
-        child: Container(
-          child: Center(
-            child: Stack(
-              children: [
-                ListView(
+        child: Center(
+          child: Stack(
+            children: [
+              ListView(
+                children: [
+                  const SizedBox(height: 20),
+                  Text(
+                    "今日(${_today()})\n飲む・飲んだピルの番号をタップ",
+                    style: FontType.sBigTitle.merge(TextColorStyle.main),
+                    textAlign: TextAlign.center,
+                  ),
+                  const SizedBox(height: 56),
+                  Center(
+                    child: SettingTodayPillNumberPillSheetList(
+                      pillSheetTypes: pillSheetGroup.pillSheets
+                          .map((e) => e.pillSheetType)
+                          .toList(),
+                      appearanceMode: state.appearanceMode,
+                      selectedTodayPillNumberIntoPillSheet:
+                          state.selectedTodayPillNumberIntoPillSheet,
+                      markSelected: (pageIndex, pillNumberIntoPillSheet) =>
+                          store.markSelected(
+                              pageIndex: pageIndex,
+                              pillNumberIntoPillSheet: pillNumberIntoPillSheet),
+                    ),
+                  ),
+                  const SizedBox(height: 20),
+                ],
+              ),
+              Align(
+                alignment: Alignment.bottomCenter,
+                child: Column(
+                  mainAxisAlignment: MainAxisAlignment.end,
                   children: [
-                    const SizedBox(height: 20),
-                    Text(
-                      "今日(${_today()})\n飲む・飲んだピルの番号をタップ",
-                      style: FontType.sBigTitle.merge(TextColorStyle.main),
-                      textAlign: TextAlign.center,
+                    PrimaryButton(
+                      onPressed: () async {
+                        unawaited(store.modifiyTodayPillNumber(
+                          pillSheetGroup: pillSheetGroup,
+                          activedPillSheet: activedPillSheet,
+                        ));
+                        Navigator.of(context).pop();
+                      },
+                      text: "変更する",
                     ),
-                    const SizedBox(height: 56),
-                    Center(
-                      child: SettingTodayPillNumberPillSheetList(
-                        pillSheetTypes: pillSheetGroup.pillSheets
-                            .map((e) => e.pillSheetType)
-                            .toList(),
-                        appearanceMode: state.appearanceMode,
-                        selectedTodayPillNumberIntoPillSheet:
-                            state.selectedTodayPillNumberIntoPillSheet,
-                        markSelected: (pageIndex, pillNumberIntoPillSheet) =>
-                            store.markSelected(
-                                pageIndex: pageIndex,
-                                pillNumberIntoPillSheet:
-                                    pillNumberIntoPillSheet),
-                      ),
-                    ),
-                    const SizedBox(height: 20),
+                    const SizedBox(height: 35),
                   ],
                 ),
-                Align(
-                  alignment: Alignment.bottomCenter,
-                  child: Column(
-                    mainAxisAlignment: MainAxisAlignment.end,
-                    children: [
-                      PrimaryButton(
-                        onPressed: () async {
-                          unawaited(store.modifiyTodayPillNumber(
-                            pillSheetGroup: pillSheetGroup,
-                            activedPillSheet: activedPillSheet,
-                          ));
-                          Navigator.of(context).pop();
-                        },
-                        text: "変更する",
-                      ),
-                      const SizedBox(height: 35),
-                    ],
-                  ),
-                )
-              ],
-            ),
+              )
+            ],
           ),
         ),
       ),

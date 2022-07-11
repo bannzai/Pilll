@@ -29,7 +29,7 @@ class NotificationBarState with _$NotificationBarState {
   }
 
   String? get restDurationNotification {
-    final activedPillSheet = this.latestPillSheetGroup?.activedPillSheet;
+    final activedPillSheet = latestPillSheetGroup?.activedPillSheet;
     if (activedPillSheet == null) {
       return null;
     }
@@ -49,7 +49,7 @@ class NotificationBarState with _$NotificationBarState {
       return "${activedPillSheet.pillSheetType.notTakenWord}$day日目";
     }
 
-    final threshold = 4;
+    const threshold = 4;
     if (activedPillSheet.pillSheetType.notTakenWord.isNotEmpty) {
       if (activedPillSheet.typeInfo.dosingPeriod - threshold + 1 <
           activedPillSheet.todayPillNumber) {
@@ -65,7 +65,7 @@ class NotificationBarState with _$NotificationBarState {
     if (!premiumAndTrial.isTrial) {
       return null;
     }
-    final trialDeadlineDate = this.premiumAndTrial.trialDeadlineDate;
+    final trialDeadlineDate = premiumAndTrial.trialDeadlineDate;
     if (trialDeadlineDate == null) {
       return null;
     }

@@ -16,6 +16,8 @@ import 'package:pilll/hooks/automatic_keep_alive_client_mixin.dart';
 import 'package:pilll/util/datetime/day.dart';
 
 class CalendarPage extends HookConsumerWidget {
+  const CalendarPage({Key? key}) : super(key: key);
+
   @override
   Widget build(BuildContext context, WidgetRef ref) {
     final store = ref.watch(calendarPageStateNotifierProvider.notifier);
@@ -40,7 +42,7 @@ class CalendarPage extends HookConsumerWidget {
         child: null,
         reload: () => ref.refresh(calendarPageStateProvider),
       ),
-      loading: () => ScaffoldIndicator(),
+      loading: () => const ScaffoldIndicator(),
     );
   }
 }
@@ -95,7 +97,7 @@ class CalendarPageBody extends StatelessWidget {
                 scrollDirection: Axis.horizontal,
                 physics: const PageScrollPhysics(),
                 children: List.generate(calendarDataSourceLength, (index) {
-                  return Container(
+                  return SizedBox(
                     height: 444,
                     width: MediaQuery.of(context).size.width,
                     child: MonthCalendar(

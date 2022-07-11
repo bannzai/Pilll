@@ -1,7 +1,8 @@
 import 'dart:async';
 import 'dart:io';
 
-import 'package:firebase_auth/firebase_auth.dart' as firebaseAuth;
+import 'package:firebase_auth/firebase_auth.dart' as firebase_auth;
+import 'package:flutter/foundation.dart';
 import 'package:flutter_native_timezone/flutter_native_timezone.dart';
 import 'package:pilll/database/database.dart';
 import 'package:pilll/domain/premium_function_survey/premium_function_survey_element_type.dart';
@@ -27,7 +28,7 @@ class UserDatastore {
   UserDatastore(this._database);
 
   Future<User> fetchOrCreate(String uid) async {
-    print("call fetchOrCreate for $uid");
+    debugPrint("call fetchOrCreate for $uid");
     final user = await fetch().catchError((error) {
       if (error is UserNotFound) {
         return _create(uid).then((_) => fetch());
@@ -39,18 +40,18 @@ class UserDatastore {
   }
 
   Future<User> fetch() async {
-    print("call fetch for ${_database.userID}");
+    debugPrint("call fetch for ${_database.userID}");
 
     final document = await _database.userReference().get();
     if (!document.exists) {
-      print("user does not exists ${_database.userID}");
+      debugPrint("user does not exists ${_database.userID}");
       throw UserNotFound();
     }
 
     return document.data()!;
   }
 
-  late Stream<User> _stream =
+  late final Stream<User> _stream =
       _database.userReference().snapshots().map((event) => event.data()!);
   Stream<User> stream() => _stream;
 
@@ -108,7 +109,7 @@ class UserDatastore {
   }
 
   Future<void> _create(String uid) async {
-    print("call create for $uid");
+    debugPrint("call create for $uid");
     final sharedPreferences = await SharedPreferences.getInstance();
     final anonymousUserID =
         sharedPreferences.getString(StringKey.lastSignInAnonymousUID);
@@ -123,7 +124,7 @@ class UserDatastore {
   }
 
   Future<void> registerRemoteNotificationToken(String? token) {
-    print("token: $token");
+    debugPrint("token: $token");
     return _database.userPrivateRawReference().set(
       {UserPrivateFirestoreFieldKeys.fcmToken: token},
       SetOptions(merge: true),
@@ -242,7 +243,7 @@ extension SaveUserLaunchInfo on UserDatastore {
       anonymousUserIDSets.add(lastSignInAnonymousUID);
     }
     final firebaseCurrentUserID =
-        firebaseAuth.FirebaseAuth.instance.currentUser?.uid;
+        firebase_auth.FirebaseAuth.instance.currentUser?.uid;
     List<String> firebaseCurrentUserIDSets = [
       ...user.firebaseCurrentUserIDSets
     ];

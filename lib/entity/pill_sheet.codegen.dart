@@ -9,11 +9,11 @@ part 'pill_sheet.codegen.g.dart';
 part 'pill_sheet.codegen.freezed.dart';
 
 class PillSheetFirestoreKey {
-  static final String typeInfo = "typeInfo";
-  static final String createdAt = "createdAt";
-  static final String deletedAt = "deletedAt";
-  static final String lastTakenDate = "lastTakenDate";
-  static final String beginingDate = "beginingDate";
+  static const String typeInfo = "typeInfo";
+  static const String createdAt = "createdAt";
+  static const String deletedAt = "deletedAt";
+  static const String lastTakenDate = "lastTakenDate";
+  static const String beginingDate = "beginingDate";
 }
 
 @freezed

@@ -24,7 +24,7 @@ class TimePicker extends StatelessWidget {
           }),
           cancel: (() => Navigator.pop(context)),
         ),
-        Container(
+        SizedBox(
           height: MediaQuery.of(context).size.height / 3,
           child: GestureDetector(
               onTap: () {

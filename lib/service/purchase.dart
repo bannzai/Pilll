@@ -1,3 +1,4 @@
+import 'package:flutter/cupertino.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
 import 'package:pilll/app/secret.dart';
 import 'package:pilll/error_log.dart';
@@ -17,7 +18,7 @@ class PurchaseService {
       return offerings;
     } catch (exception, stack) {
       errorLogger.recordError(exception, stack);
-      print(exception);
+      debugPrint(exception.toString());
       rethrow;
     }
   }

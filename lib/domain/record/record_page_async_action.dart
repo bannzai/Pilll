@@ -169,7 +169,7 @@ class RecordPageAsyncAction {
         );
 
     if (updatedIndexses.isEmpty) {
-      return null;
+      return;
     }
 
     final batch = _batchFactory.batch();

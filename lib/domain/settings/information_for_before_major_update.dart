@@ -15,13 +15,13 @@ class InformationForBeforeMigrate132 extends StatelessWidget {
       : super(key: key);
 
   int _latestPillNumber() {
-    final last = DateTime.parse(this.salvagedOldLastTakenDate);
-    final start = DateTime.parse(this.salvagedOldStartTakenDate);
+    final last = DateTime.parse(salvagedOldLastTakenDate);
+    final start = DateTime.parse(salvagedOldStartTakenDate);
     return daysBetween(start, last) % 28 + 1;
   }
 
   int _todayPillNumber() {
-    final start = DateTime.parse(this.salvagedOldStartTakenDate);
+    final start = DateTime.parse(salvagedOldStartTakenDate);
     return daysBetween(start, today()) % 28 + 1;
   }
 
@@ -56,7 +56,7 @@ class InformationForBeforeMigrate132 extends StatelessWidget {
                 ),
                 const SizedBox(height: 8),
                 Text(
-                  "最後に飲んだ日: ${this.salvagedOldLastTakenDate}",
+                  "最後に飲んだ日: $salvagedOldLastTakenDate",
                   style: FontType.listRow.merge(TextColorStyle.main),
                 ),
                 const SizedBox(height: 4),

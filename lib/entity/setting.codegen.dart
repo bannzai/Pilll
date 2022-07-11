@@ -24,8 +24,8 @@ class ReminderTime with _$ReminderTime {
         t.millisecond, t.microsecond);
   }
 
-  static final int maximumCount = 3;
-  static final int minimumCount = 1;
+  static const int maximumCount = 3;
+  static const int minimumCount = 1;
 }
 
 enum PillSheetAppearanceMode {
@@ -38,8 +38,8 @@ enum PillSheetAppearanceMode {
 }
 
 class SettingFirestoreFieldKeys {
-  static final pillSheetAppearanceMode = "pillSheetAppearanceMode";
-  static final timezoneDatabaseName = "timezoneDatabaseName";
+  static const pillSheetAppearanceMode = "pillSheetAppearanceMode";
+  static const timezoneDatabaseName = "timezoneDatabaseName";
 }
 
 @freezed
@@ -68,7 +68,7 @@ class Setting with _$Setting {
   // 本来初期設定でpillsheet_24_rest_4を選択したユーザーの pillSheetTypes の値が null が入ってしまっている
   List<PillSheetType> get pillSheetEnumTypes {
     return pillSheetTypes
-        .map((e) => e == null ? PillSheetType.pillsheet_24_rest_4 : e)
+        .map((e) => e ?? PillSheetType.pillsheet_24_rest_4)
         .toList();
   }
 }

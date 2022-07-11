@@ -8,7 +8,7 @@ part 'diary.codegen.g.dart';
 part 'diary.codegen.freezed.dart';
 
 class DiaryFirestoreKey {
-  static final String date = "date";
+  static const String date = "date";
 }
 
 enum PhysicalConditionStatus { fine, bad }

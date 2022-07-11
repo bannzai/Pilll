@@ -18,7 +18,7 @@ class Day extends StatelessWidget {
     return Row(
       mainAxisAlignment: MainAxisAlignment.end,
       children: [
-        Container(
+        SizedBox(
           width: 28,
           child: Text(
             "$_day",

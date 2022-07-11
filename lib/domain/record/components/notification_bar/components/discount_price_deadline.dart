@@ -9,10 +9,11 @@ class DiscountPriceDeadline extends HookConsumerWidget {
   final DateTime discountEntitlementDeadlineDate;
   final VoidCallback onTap;
 
-  DiscountPriceDeadline({
+  const DiscountPriceDeadline({
+    Key? key,
     required this.discountEntitlementDeadlineDate,
     required this.onTap,
-  });
+  }) : super(key: key);
   @override
   Widget build(BuildContext context, WidgetRef ref) {
     final difference = ref.watch(

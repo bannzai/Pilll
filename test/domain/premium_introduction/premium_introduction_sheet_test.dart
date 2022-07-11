@@ -64,12 +64,12 @@ class _FakePremiumIntroductionState extends Fake
   @override
   Package? get annualPackage => _AnnualFakePackage();
   @override
-  bool get isPremium => this.fakeIsPremium;
+  bool get isPremium => fakeIsPremium;
   @override
-  bool get hasDiscountEntitlement => this.fakeHasDiscountEntitlement;
+  bool get hasDiscountEntitlement => fakeHasDiscountEntitlement;
   @override
   DateTime? get discountEntitlementDeadlineDate =>
-      this.fakeDiscountEntitlementDeadlineDate;
+      fakeDiscountEntitlementDeadlineDate;
   @override
   OfferingType get currentOfferingType => OfferingType.premium;
   @override
@@ -87,7 +87,7 @@ void main() {
     Environment.isTest = true;
     analytics = MockAnalytics();
     WidgetsBinding.instance.renderView.configuration =
-        new TestViewConfiguration(size: const Size(375.0, 667.0));
+        TestViewConfiguration(size: const Size(375.0, 667.0));
   });
   group('#PremiumIntroductionSheet', () {
     final mockTodayRepository = MockTodayService();
@@ -108,7 +108,7 @@ void main() {
           fakeDiscountEntitlementDeadlineDate: null,
         );
 
-        final sheet = PremiumIntroductionSheet();
+        const sheet = PremiumIntroductionSheet();
         await tester.pumpWidget(
           MaterialApp(
             home: ProviderScope(
@@ -122,7 +122,7 @@ void main() {
                 durationToDiscountPriceDeadline.overrideWithProvider((param) =>
                     Provider.autoDispose((_) => const Duration(seconds: 1000))),
               ],
-              child: MaterialApp(
+              child: const MaterialApp(
                 home: sheet,
               ),
             ),
@@ -142,8 +142,8 @@ void main() {
       });
     });
     group('user has discount entitlements', () {
-      final hasDiscountEntitlement = true;
-      final isOverDiscountDeadline = false;
+      const hasDiscountEntitlement = true;
+      const isOverDiscountDeadline = false;
       testWidgets('#PremiumIntroductionDiscountRow is found',
           (WidgetTester tester) async {
         var state = _FakePremiumIntroductionState(
@@ -152,7 +152,7 @@ void main() {
           fakeDiscountEntitlementDeadlineDate: discountEntitlementDeadlineDate,
         );
 
-        final sheet = PremiumIntroductionSheet();
+        const sheet = PremiumIntroductionSheet();
         await tester.pumpWidget(
           MaterialApp(
             home: ProviderScope(
@@ -166,7 +166,7 @@ void main() {
                 durationToDiscountPriceDeadline.overrideWithProvider((param) =>
                     Provider.autoDispose((_) => const Duration(seconds: 1000))),
               ],
-              child: MaterialApp(
+              child: const MaterialApp(
                 home: sheet,
               ),
             ),
@@ -182,7 +182,7 @@ void main() {
       });
     });
     group('user does not has discount entitlements', () {
-      final hasDiscountEntitlement = false;
+      const hasDiscountEntitlement = false;
       testWidgets('#PremiumIntroductionDiscountRow is not found',
           (WidgetTester tester) async {
         final mockTodayRepository = MockTodayService();
@@ -198,7 +198,7 @@ void main() {
               today.subtract(const Duration(days: 1)),
         );
 
-        final sheet = PremiumIntroductionSheet();
+        const sheet = PremiumIntroductionSheet();
         await tester.pumpWidget(
           MaterialApp(
             home: ProviderScope(
@@ -212,7 +212,7 @@ void main() {
                 durationToDiscountPriceDeadline.overrideWithProvider((param) =>
                     Provider.autoDispose((_) => const Duration(seconds: 1000))),
               ],
-              child: MaterialApp(
+              child: const MaterialApp(
                 home: sheet,
               ),
             ),
@@ -228,7 +228,7 @@ void main() {
       });
     });
     group('is over discount deadline ', () {
-      final isOverDiscountDeadline = true;
+      const isOverDiscountDeadline = true;
       testWidgets('#PremiumIntroductionDiscountRow is found',
           (WidgetTester tester) async {
         final mockTodayRepository = MockTodayService();
@@ -244,7 +244,7 @@ void main() {
               today.subtract(const Duration(days: 1)),
         );
 
-        final sheet = PremiumIntroductionSheet();
+        const sheet = PremiumIntroductionSheet();
         await tester.pumpWidget(
           MaterialApp(
             home: ProviderScope(
@@ -258,7 +258,7 @@ void main() {
                 durationToDiscountPriceDeadline.overrideWithProvider((param) =>
                     Provider.autoDispose((_) => const Duration(seconds: 1000))),
               ],
-              child: MaterialApp(
+              child: const MaterialApp(
                 home: sheet,
               ),
             ),
@@ -288,7 +288,7 @@ void main() {
           fakeDiscountEntitlementDeadlineDate: null,
         );
 
-        final sheet = PremiumIntroductionSheet();
+        const sheet = PremiumIntroductionSheet();
         await tester.pumpWidget(
           MaterialApp(
             home: ProviderScope(
@@ -302,7 +302,7 @@ void main() {
                 durationToDiscountPriceDeadline.overrideWithProvider((param) =>
                     Provider.autoDispose((_) => const Duration(seconds: 1000))),
               ],
-              child: MaterialApp(
+              child: const MaterialApp(
                 home: sheet,
               ),
             ),

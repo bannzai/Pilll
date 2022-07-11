@@ -13,7 +13,7 @@ import 'package:pilll/entity/setting.codegen.dart';
 class SelectAppearanceModeModal extends HookConsumerWidget {
   final RecordPageStateNotifier store;
 
-  SelectAppearanceModeModal(this.store);
+  const SelectAppearanceModeModal(this.store, {Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {
@@ -100,7 +100,7 @@ class SelectAppearanceModeModal extends HookConsumerWidget {
               .switchingAppearanceMode(mode: mode, setting: state.setting);
         }
       },
-      child: Container(
+      child: SizedBox(
         height: 48,
         child: Row(
           children: [
@@ -116,7 +116,7 @@ class SelectAppearanceModeModal extends HookConsumerWidget {
             ),
             if (isPremiumFunction) ...[
               const SizedBox(width: 12),
-              PremiumBadge(),
+              const PremiumBadge(),
             ]
           ],
         ),

@@ -8,8 +8,8 @@ import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 
 abstract class PillMarkConst {
-  static final double edge = 20;
-  static final double edgeOfRipple = 80;
+  static const double edge = 20;
+  static const double edgeOfRipple = 80;
 }
 
 class PillMark extends StatefulWidget {
@@ -71,14 +71,12 @@ class _PillMarkState extends State<PillMark> with TickerProviderStateMixin {
           Positioned(
             left: -30,
             top: -30,
-            child: Container(
-              child: CustomPaint(
-                size: Size(
-                    PillMarkConst.edgeOfRipple, PillMarkConst.edgeOfRipple),
-                painter: Ripple(
-                  _controller,
-                  color: PilllColors.primary,
-                ),
+            child: CustomPaint(
+              size: const Size(
+                  PillMarkConst.edgeOfRipple, PillMarkConst.edgeOfRipple),
+              painter: Ripple(
+                _controller,
+                color: PilllColors.primary,
               ),
             ),
           ),
@@ -89,15 +87,15 @@ class _PillMarkState extends State<PillMark> with TickerProviderStateMixin {
   Widget _mark(PillMarkType type) {
     switch (type) {
       case PillMarkType.normal:
-        return NormalPillMark();
+        return const NormalPillMark();
       case PillMarkType.rest:
-        return RestPillMark();
+        return const RestPillMark();
       case PillMarkType.fake:
-        return FakePillMark();
+        return const FakePillMark();
       case PillMarkType.selected:
-        return SelectedPillMark();
+        return const SelectedPillMark();
       case PillMarkType.done:
-        return LightGrayPillMark();
+        return const LightGrayPillMark();
     }
   }
 }

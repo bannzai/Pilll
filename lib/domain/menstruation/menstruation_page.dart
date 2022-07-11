@@ -17,13 +17,15 @@ import 'package:pilll/hooks/automatic_keep_alive_client_mixin.dart';
 
 abstract class MenstruationPageConst {
   static const double calendarHeaderDropShadowOffset = 2;
-  static final double tileHeight =
+  static const double tileHeight =
       CalendarConstants.tileHeight + calendarHeaderDropShadowOffset;
-  static final double calendarHeaderHeight =
+  static const double calendarHeaderHeight =
       WeekdayBadgeConst.height + tileHeight;
 }
 
 class MenstruationPage extends HookConsumerWidget {
+  const MenstruationPage({Key? key}) : super(key: key);
+
   @override
   Widget build(BuildContext context, WidgetRef ref) {
     final store = ref.watch(menstruationPageStateNotifierProvider.notifier);
@@ -48,7 +50,7 @@ class MenstruationPage extends HookConsumerWidget {
         child: null,
         reload: () => ref.refresh(menstruationPageStateProvider),
       ),
-      loading: () => ScaffoldIndicator(),
+      loading: () => const ScaffoldIndicator(),
     );
   }
 }
@@ -80,30 +82,28 @@ class MenstruationPageBody extends StatelessWidget {
         elevation: 0,
       ),
       body: SafeArea(
-        child: Container(
-          child: Stack(
-            children: [
-              Column(
-                children: [
-                  MenstruationCalendarHeader(
-                    pageController: pageController,
-                    state: state,
-                  ),
-                  Expanded(
-                    child: MenstruationCardList(store: store),
-                  ),
-                  const SizedBox(height: 40),
-                ],
-              ),
-              Align(
-                alignment: Alignment.bottomCenter,
-                child: Padding(
-                  padding: const EdgeInsets.only(bottom: 20.0),
-                  child: MenstruationRecordButton(state: state, store: store),
+        child: Stack(
+          children: [
+            Column(
+              children: [
+                MenstruationCalendarHeader(
+                  pageController: pageController,
+                  state: state,
                 ),
+                Expanded(
+                  child: MenstruationCardList(store: store),
+                ),
+                const SizedBox(height: 40),
+              ],
+            ),
+            Align(
+              alignment: Alignment.bottomCenter,
+              child: Padding(
+                padding: const EdgeInsets.only(bottom: 20.0),
+                child: MenstruationRecordButton(state: state, store: store),
               ),
-            ],
-          ),
+            ),
+          ],
         ),
       ),
     );

@@ -10,7 +10,7 @@ class PickerToolbar extends StatelessWidget {
       : super(key: key);
   @override
   Widget build(BuildContext context) {
-    return Container(
+    return SizedBox(
       height: 44,
       child: Row(
         mainAxisAlignment: MainAxisAlignment.spaceBetween,

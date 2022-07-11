@@ -14,10 +14,11 @@ class SelectTodayPillNumberPillSheetList extends HookConsumerWidget {
   final InitialSettingState state;
   final InitialSettingStateStore store;
 
-  SelectTodayPillNumberPillSheetList({
+  const SelectTodayPillNumberPillSheetList({
+    Key? key,
     required this.state,
     required this.store,
-  });
+  }) : super(key: key);
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {
@@ -26,7 +27,7 @@ class SelectTodayPillNumberPillSheetList extends HookConsumerWidget {
             MediaQuery.of(context).size.width);
     return Column(
       children: [
-        Container(
+        SizedBox(
           height: PillSheetViewLayout.calcHeight(
             PillSheetViewLayout.mostLargePillSheetType(state.pillSheetTypes)
                 .numberOfLineInPillSheet,

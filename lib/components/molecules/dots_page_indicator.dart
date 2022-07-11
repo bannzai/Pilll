@@ -2,16 +2,18 @@ import 'package:flutter/material.dart';
 import 'package:pilll/components/atoms/color.dart';
 
 class DotsIndicator extends AnimatedWidget {
-  DotsIndicator({
+  const DotsIndicator({
+    Key? key,
     required this.controller,
     required this.itemCount,
     required this.onDotTapped,
-  }) : super(listenable: controller);
+  }) : super(key: key, listenable: controller);
 
   final PageController controller;
   final int itemCount;
   final ValueChanged<int> onDotTapped;
 
+  @override
   Widget build(BuildContext context) {
     return Row(
       mainAxisAlignment: MainAxisAlignment.center,
@@ -22,13 +24,13 @@ class DotsIndicator extends AnimatedWidget {
   Widget _buildDot(int index) {
     final isSelected =
         index == (controller.page ?? controller.initialPage).round();
-    return Container(
+    return SizedBox(
       width: 25,
       child: Center(
         child: Material(
           color: isSelected ? PilllColors.secondary : PilllColors.unselect,
           type: MaterialType.circle,
-          child: Container(
+          child: SizedBox(
             width: 8,
             height: 8,
             child: InkWell(

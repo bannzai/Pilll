@@ -51,7 +51,7 @@ void main() {
   group("#addReminderTimes", () {
     test("when added reminder times ${ReminderTime.maximumCount}", () {
       final settingDatastore = MockSettingDatastore();
-      final setting = const Setting(
+      const setting = Setting(
         reminderTimes: [
           ReminderTime(hour: 1, minute: 0),
           ReminderTime(hour: 2, minute: 0),
@@ -161,7 +161,7 @@ void main() {
   group("#deleteReminderTimes", () {
     test("when deleted reminder times ${ReminderTime.maximumCount}", () {
       final settingDatastore = MockSettingDatastore();
-      final setting = const Setting(
+      const setting = Setting(
         reminderTimes: [
           ReminderTime(hour: 1, minute: 0),
           ReminderTime(hour: 2, minute: 0),

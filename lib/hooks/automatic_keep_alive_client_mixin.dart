@@ -13,7 +13,7 @@ void useAutomaticKeepAlive({
 class _AutomaticKeepAliveHook extends Hook<void> {
   final bool wantKeepAlive;
 
-  _AutomaticKeepAliveHook({required this.wantKeepAlive});
+  const _AutomaticKeepAliveHook({required this.wantKeepAlive});
 
   @override
   HookState<void, _AutomaticKeepAliveHook> createState() =>
@@ -53,7 +53,7 @@ class _AutomaticKeepAliveHookState
   @override
   void build(BuildContext context) {
     if (hook.wantKeepAlive && _keepAliveHandle == null) _ensureKeepAlive();
-    return null;
+    return;
   }
 
   @override

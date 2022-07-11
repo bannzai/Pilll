@@ -14,7 +14,7 @@ class PillSheetDatastore {
   // Return new PillSheet document id
   List<PillSheet> register(WriteBatch batch, List<PillSheet> pillSheets) {
     final List<PillSheet> newPillSheets = [];
-    pillSheets.forEach((pillSheet) {
+    for (var pillSheet in pillSheets) {
       if (pillSheet.createdAt != null) throw PillSheetAlreadyExists();
       if (pillSheet.deletedAt != null) throw PillSheetAlreadyDeleted();
       final copied = pillSheet.copyWith(createdAt: DateTime.now());
@@ -23,7 +23,7 @@ class PillSheetDatastore {
       batch.set(document, copied, SetOptions(merge: true));
 
       newPillSheets.add(copied.copyWith(id: document.id));
-    });
+    }
     return newPillSheets;
   }
 
@@ -35,10 +35,10 @@ class PillSheetDatastore {
   }
 
   void update(WriteBatch batch, List<PillSheet> pillSheets) {
-    pillSheets.forEach((pillSheet) {
+    for (var pillSheet in pillSheets) {
       batch.set(_database.pillSheetReference(pillSheet.documentID!), pillSheet,
           SetOptions(merge: true));
-    });
+    }
   }
 }
 

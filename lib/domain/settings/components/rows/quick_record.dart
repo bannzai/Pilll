@@ -18,9 +18,9 @@ class QuickRecordRow extends StatelessWidget {
     return ListTile(
       minVerticalPadding: 9,
       title: Row(
-        children: [
-          const Text("クイックレコード", style: FontType.listRow),
-          const SizedBox(width: 7),
+        children: const [
+          Text("クイックレコード", style: FontType.listRow),
+          SizedBox(width: 7),
           PremiumBadge(),
         ],
       ),

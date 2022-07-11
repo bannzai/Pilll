@@ -1,7 +1,7 @@
 import 'dart:async';
 
 import 'package:cloud_firestore/cloud_firestore.dart';
-import 'package:firebase_auth/firebase_auth.dart' as FirebaseAuth;
+import 'package:firebase_auth/firebase_auth.dart' as firebase_auth;
 import 'package:firebase_crashlytics/firebase_crashlytics.dart';
 import 'package:firebase_performance/firebase_performance.dart';
 import 'package:pilll/analytics.dart';
@@ -31,7 +31,7 @@ import 'package:uuid/uuid.dart';
 GlobalKey<RootState> rootKey = GlobalKey();
 
 class Root extends StatefulWidget {
-  Root({Key? key}) : super(key: key);
+  const Root({Key? key}) : super(key: key);
 
   @override
   RootState createState() => RootState();
@@ -67,7 +67,7 @@ class RootState extends State<Root> {
   @override
   Widget build(BuildContext context) {
     if (screenType == null && _error == null) {
-      return ScaffoldIndicator();
+      return const ScaffoldIndicator();
     }
     if (screenType == ScreenType.forceUpdate) {
       Future.microtask(() async {
@@ -82,7 +82,7 @@ class RootState extends State<Root> {
           );
         });
       });
-      return ScaffoldIndicator();
+      return const ScaffoldIndicator();
     }
 
     return UniversalErrorPage(
@@ -95,7 +95,7 @@ class RootState extends State<Root> {
           case ScreenType.initialSetting:
             return InitialSettingPillSheetGroupPageRoute.screen();
           default:
-            return ScaffoldIndicator();
+            return const ScaffoldIndicator();
         }
       }(),
     );
@@ -133,7 +133,7 @@ class RootState extends State<Root> {
     return forceUpdate;
   }
 
-  Future<FirebaseAuth.User> _signIn() async {
+  Future<firebase_auth.User> _signIn() async {
     final signInTrace = _trace(name: "signInTrace", uuid: _traceUUID);
     await signInTrace.start();
     final firebaseUser = await cachedUserOrSignInAnonymously();
@@ -165,7 +165,7 @@ class RootState extends State<Root> {
   }
 
   Future<User> _mutateUserWithLaunchInfoAnd(
-      FirebaseAuth.User firebaseUser) async {
+      firebase_auth.User firebaseUser) async {
     final userDatastore = UserDatastore(DatabaseConnection(firebaseUser.uid));
     final user = await userDatastore.fetchOrCreate(firebaseUser.uid);
 
@@ -176,7 +176,7 @@ class RootState extends State<Root> {
   }
 
   Future<ScreenType?> _screenTypeForLegacyUser(
-      FirebaseAuth.User firebaseUser, User user) async {
+      firebase_auth.User firebaseUser, User user) async {
     if (!user.migratedFlutter) {
       final userDatastore = UserDatastore(DatabaseConnection(firebaseUser.uid));
       await userDatastore.deleteSettings();
@@ -202,14 +202,14 @@ class RootState extends State<Root> {
       _checkForceUpdate().then((shouldForceUpdate) {
         if (shouldForceUpdate) {
           setState(() {
-            this.screenType = ScreenType.forceUpdate;
+            screenType = ScreenType.forceUpdate;
           });
         }
       }).catchError((error, stackTrace) {
         errorLogger.recordError(error, stackTrace);
 
         setState(() {
-          this._error = UserDisplayedError(
+          _error = UserDisplayedError(
               "起動処理でエラーが発生しました\n${ErrorMessages.connection}\n詳細:" +
                   error.toString());
         });
@@ -241,7 +241,7 @@ class RootState extends State<Root> {
         errorLogger.recordError(error, stackTrace);
 
         setState(() {
-          this._error = UserDisplayedError(
+          _error = UserDisplayedError(
               "起動処理でエラーが発生しました\n${ErrorMessages.connection}\n詳細:" +
                   error.toString());
         });

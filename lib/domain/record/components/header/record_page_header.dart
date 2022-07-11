@@ -11,7 +11,7 @@ import 'package:pilll/util/formatter/date_time_formatter.dart';
 import 'package:flutter/material.dart';
 
 abstract class RecordPageInformationHeaderConst {
-  static final double height = 130;
+  static const double height = 130;
 }
 
 class RecordPageInformationHeader extends StatelessWidget {
@@ -27,8 +27,8 @@ class RecordPageInformationHeader extends StatelessWidget {
     required this.store,
   }) : super(key: key);
 
-  String _formattedToday() => DateTimeFormatter.monthAndDay(this.today);
-  String _todayWeekday() => DateTimeFormatter.weekday(this.today);
+  String _formattedToday() => DateTimeFormatter.monthAndDay(today);
+  String _todayWeekday() => DateTimeFormatter.weekday(today);
 
   @override
   Widget build(BuildContext context) {
@@ -36,7 +36,7 @@ class RecordPageInformationHeader extends StatelessWidget {
     final activedPillSheet = pillSheetGroup?.activedPillSheet;
     final setting = this.setting;
 
-    return Container(
+    return SizedBox(
       height: RecordPageInformationHeaderConst.height,
       child: Column(
         children: <Widget>[
@@ -46,9 +46,9 @@ class RecordPageInformationHeader extends StatelessWidget {
             children: <Widget>[
               _todayWidget(),
               const SizedBox(width: 28),
-              Container(
+              const SizedBox(
                 height: 64,
-                child: const VerticalDivider(
+                child: VerticalDivider(
                   width: 10,
                   color: PilllColors.divider,
                 ),

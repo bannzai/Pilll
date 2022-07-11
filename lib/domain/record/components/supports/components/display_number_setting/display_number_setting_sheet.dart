@@ -12,6 +12,8 @@ import 'package:pilll/domain/record/components/supports/components/display_numbe
 import 'package:pilll/util/formatter/text_input_formatter.dart';
 
 class DisplayNumberSettingSheet extends HookConsumerWidget {
+  const DisplayNumberSettingSheet({Key? key}) : super(key: key);
+
   @override
   Widget build(BuildContext context, WidgetRef ref) {
     final state = ref.watch(displayNumberSettingStateStoreProvider);
@@ -30,8 +32,8 @@ class DisplayNumberSettingSheet extends HookConsumerWidget {
 
     final beforePillSheetGroup = state.beforePillSheetGroup;
 
-    final estimatedKeyboardHeight = 216;
-    final offset = 24;
+    const estimatedKeyboardHeight = 216;
+    const offset = 24;
     final height = 1 -
         ((estimatedKeyboardHeight - offset) /
             MediaQuery.of(context).size.height);
@@ -115,7 +117,7 @@ class DisplayNumberSettingSheet extends HookConsumerWidget {
                             width: 42,
                             height: 40,
                             child: TextField(
-                              style: TextStyle(
+                              style: const TextStyle(
                                 color: TextColor.darkGray,
                                 fontSize: 15,
                                 fontFamily: FontFamily.number,
@@ -200,7 +202,7 @@ class DisplayNumberSettingSheet extends HookConsumerWidget {
                         width: 42,
                         height: 40,
                         child: TextField(
-                          style: TextStyle(
+                          style: const TextStyle(
                             color: TextColor.darkGray,
                             fontSize: 15,
                             fontFamily: FontFamily.number,
@@ -257,7 +259,7 @@ void showDisplayNumberSettingSheet(
   analytics.setCurrentScreen(screenName: "DisplayNumberSettingSheet");
   showModalBottomSheet(
     context: context,
-    builder: (context) => DisplayNumberSettingSheet(),
+    builder: (context) => const DisplayNumberSettingSheet(),
     backgroundColor: Colors.transparent,
     isScrollControlled: true,
   );

@@ -67,7 +67,7 @@ void main() {
       when(pillSheetModifiedHistoryDatastore.add(batch, history))
           .thenReturn(null);
 
-      final setting = const Setting(
+      const setting = Setting(
         pillNumberForFromMenstruation: 22,
         durationMenstruation: 3,
         isOnReminder: true,
@@ -165,7 +165,7 @@ void main() {
       when(pillSheetModifiedHistoryDatastore.add(batch, history))
           .thenReturn(null);
 
-      final setting = const Setting(
+      const setting = Setting(
         pillNumberForFromMenstruation: 22,
         durationMenstruation: 3,
         isOnReminder: true,
@@ -272,7 +272,7 @@ void main() {
       when(pillSheetModifiedHistoryDatastore.add(batch, history))
           .thenReturn(null);
 
-      final setting = const Setting(
+      const setting = Setting(
         pillNumberForFromMenstruation: 22,
         durationMenstruation: 3,
         isOnReminder: true,
@@ -373,7 +373,7 @@ void main() {
       when(pillSheetModifiedHistoryDatastore.add(batch, history))
           .thenReturn(null);
 
-      final setting = const Setting(
+      const setting = Setting(
         pillNumberForFromMenstruation: 22,
         durationMenstruation: 3,
         isOnReminder: true,
@@ -476,7 +476,7 @@ void main() {
       when(pillSheetModifiedHistoryDatastore.add(batch, history))
           .thenReturn(null);
 
-      final setting = const Setting(
+      const setting = Setting(
         pillNumberForFromMenstruation: 22,
         durationMenstruation: 3,
         isOnReminder: true,
@@ -582,7 +582,7 @@ void main() {
       when(pillSheetModifiedHistoryDatastore.add(batch, history))
           .thenReturn(null);
 
-      final setting = const Setting(
+      const setting = Setting(
         pillNumberForFromMenstruation: 22,
         durationMenstruation: 3,
         isOnReminder: true,
@@ -680,7 +680,7 @@ void main() {
         when(pillSheetModifiedHistoryDatastore.add(batch, history))
             .thenReturn(null);
 
-        final setting = const Setting(
+        const setting = Setting(
           pillNumberForFromMenstruation: 22,
           durationMenstruation: 3,
           isOnReminder: true,
@@ -774,7 +774,7 @@ void main() {
         when(pillSheetModifiedHistoryDatastore.add(batch, history))
             .thenReturn(null);
 
-        final setting = const Setting(
+        const setting = Setting(
           pillNumberForFromMenstruation: 22,
           durationMenstruation: 3,
           isOnReminder: true,
@@ -883,7 +883,7 @@ void main() {
         when(pillSheetModifiedHistoryDatastore.add(batch, history))
             .thenReturn(null);
 
-        final setting = const Setting(
+        const setting = Setting(
           pillNumberForFromMenstruation: 22,
           durationMenstruation: 3,
           isOnReminder: true,
@@ -984,7 +984,7 @@ void main() {
         when(pillSheetModifiedHistoryDatastore.add(batch, history))
             .thenReturn(null);
 
-        final setting = const Setting(
+        const setting = Setting(
           pillNumberForFromMenstruation: 22,
           durationMenstruation: 3,
           isOnReminder: true,
@@ -1090,7 +1090,7 @@ void main() {
         when(pillSheetModifiedHistoryDatastore.add(batch, history))
             .thenReturn(null);
 
-        final setting = const Setting(
+        const setting = Setting(
           pillNumberForFromMenstruation: 22,
           durationMenstruation: 3,
           isOnReminder: true,
@@ -1200,7 +1200,7 @@ void main() {
         when(pillSheetModifiedHistoryDatastore.add(batch, history))
             .thenReturn(null);
 
-        final setting = const Setting(
+        const setting = Setting(
           pillNumberForFromMenstruation: 22,
           durationMenstruation: 3,
           isOnReminder: true,
@@ -1315,7 +1315,7 @@ void main() {
         when(pillSheetModifiedHistoryDatastore.add(batch, history))
             .thenReturn(null);
 
-        final setting = const Setting(
+        const setting = Setting(
           pillNumberForFromMenstruation: 22,
           durationMenstruation: 3,
           isOnReminder: true,

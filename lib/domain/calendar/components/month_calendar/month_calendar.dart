@@ -61,9 +61,7 @@ class MonthCalendar extends HookConsumerWidget {
           ],
         );
       },
-      error: (error, _) => Container(
-        child: Text(error.toString()),
-      ),
+      error: (error, _) => Text(error.toString()),
       loading: () => const Indicator(),
     );
   }

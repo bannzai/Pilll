@@ -70,7 +70,7 @@ class DiaryDatastore {
     return _database.diaryReference(diary).delete().then((_) => diary);
   }
 
-  late Stream<List<Diary>> _stream = _database
+  late final Stream<List<Diary>> _stream = _database
       .diariesReference()
       .snapshots()
       .map((event) => event.docs.map((e) => e.data()).toList())

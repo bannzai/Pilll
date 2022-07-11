@@ -33,40 +33,38 @@ class SettingMenstruationDynamicDescription extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Container(
-      child: Column(
-        mainAxisAlignment: MainAxisAlignment.spaceBetween,
-        children: <Widget>[
-          const SizedBox(height: 20),
-          Row(
-            mainAxisAlignment: MainAxisAlignment.center,
-            children: <Widget>[
-              Text("ピル番号 ",
-                  style: FontType.assisting.merge(TextColorStyle.main)),
-              GestureDetector(
-                onTap: () => _showFromModalSheet(context),
-                child: _from(),
-              ),
-              Text(" 番ごとに",
-                  style: FontType.assisting.merge(TextColorStyle.main)),
-            ],
-          ),
-          Text("何日間生理が続く？",
-              style: FontType.assistingBold.merge(TextColorStyle.main)),
-          const SizedBox(height: 4),
-          Row(
-            mainAxisAlignment: MainAxisAlignment.center,
-            children: <Widget>[
-              GestureDetector(
-                onTap: () => _showDurationModalSheet(context),
-                child: _duration(),
-              ),
-              Text(" 日間生理が続く",
-                  style: FontType.assisting.merge(TextColorStyle.main)),
-            ],
-          )
-        ],
-      ),
+    return Column(
+      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+      children: <Widget>[
+        const SizedBox(height: 20),
+        Row(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: <Widget>[
+            Text("ピル番号 ",
+                style: FontType.assisting.merge(TextColorStyle.main)),
+            GestureDetector(
+              onTap: () => _showFromModalSheet(context),
+              child: _from(),
+            ),
+            Text(" 番ごとに",
+                style: FontType.assisting.merge(TextColorStyle.main)),
+          ],
+        ),
+        Text("何日間生理が続く？",
+            style: FontType.assistingBold.merge(TextColorStyle.main)),
+        const SizedBox(height: 4),
+        Row(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: <Widget>[
+            GestureDetector(
+              onTap: () => _showDurationModalSheet(context),
+              child: _duration(),
+            ),
+            Text(" 日間生理が続く",
+                style: FontType.assisting.merge(TextColorStyle.main)),
+          ],
+        )
+      ],
     );
   }
 
@@ -139,7 +137,7 @@ class SettingMenstruationDynamicDescription extends StatelessWidget {
                 Navigator.pop(context);
               }),
             ),
-            Container(
+            SizedBox(
               height: 200,
               child: GestureDetector(
                 onTap: () {
@@ -185,7 +183,7 @@ class SettingMenstruationDynamicDescription extends StatelessWidget {
                 Navigator.pop(context);
               }),
             ),
-            Container(
+            SizedBox(
               height: MediaQuery.of(context).size.height / 3,
               child: GestureDetector(
                 onTap: () {

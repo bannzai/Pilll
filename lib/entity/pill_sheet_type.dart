@@ -16,11 +16,12 @@ enum PillSheetType {
   // "21錠タイプ(すべて実薬)";
   pillsheet_21_0,
   // "24錠+4日休薬";
+  // ignore: constant_identifier_names
   pillsheet_24_rest_4,
 }
 
 extension PillSheetTypeFunctions on PillSheetType {
-  static final String firestoreCollectionPath = "pill_sheet_types";
+  static const String firestoreCollectionPath = "pill_sheet_types";
   static PillSheetType fromRawPath(String rawPath) {
     switch (rawPath) {
       case "pillsheet_21":
@@ -144,7 +145,7 @@ extension PillSheetTypeFunctions on PillSheetType {
       dosingPeriod: dosingPeriod);
 
   bool get isNotExistsNotTakenDuration {
-    return this.totalCount == this.dosingPeriod;
+    return totalCount == dosingPeriod;
   }
 
   String get notTakenWord {

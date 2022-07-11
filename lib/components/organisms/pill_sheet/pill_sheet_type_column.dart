@@ -5,8 +5,8 @@ import 'package:pilll/components/atoms/text_color.dart';
 import 'package:flutter/material.dart';
 
 abstract class PillSheetTypeColumnConstant {
-  static final double width = 146;
-  static final double height = 140;
+  static const double width = 146;
+  static const double height = 140;
   static double get aspectRatio => width / height;
 }
 
@@ -20,19 +20,19 @@ class PillSheetTypeColumn extends StatelessWidget {
   }) : super(key: key);
 
   static const boxConstraints =
-      const BoxConstraints(minWidth: 146, minHeight: 129);
+      BoxConstraints(minWidth: 146, minHeight: 129);
 
   @override
   Widget build(BuildContext context) {
     return Container(
       constraints: PillSheetTypeColumn.boxConstraints,
       decoration: BoxDecoration(
-        color: this.selected
+        color: selected
             ? PilllColors.secondary.withOpacity(0.08)
             : PilllColors.white,
         border: Border.all(
-          width: this.selected ? 2 : 1,
-          color: this.selected ? PilllColors.secondary : PilllColors.border,
+          width: selected ? 2 : 1,
+          color: selected ? PilllColors.secondary : PilllColors.border,
         ),
         borderRadius: BorderRadius.circular(10),
       ),
@@ -47,13 +47,13 @@ class PillSheetTypeColumn extends StatelessWidget {
           mainAxisAlignment: MainAxisAlignment.start,
           crossAxisAlignment: CrossAxisAlignment.start,
           children: <Widget>[
-            Text("${_title(pillSheetType)}",
+            Text(_title(pillSheetType),
                 style: FontType.thinTitle.merge(TextColorStyle.main)),
             const SizedBox(height: 2),
-            Text("${_subtitle(pillSheetType)}",
+            Text(_subtitle(pillSheetType),
                 style: FontType.assisting.merge(TextColorStyle.main)),
             const SizedBox(height: 9),
-            this.pillSheetType.image,
+            pillSheetType.image,
           ],
         ),
       ),

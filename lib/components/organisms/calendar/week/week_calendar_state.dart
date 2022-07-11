@@ -12,7 +12,7 @@ extension DateTimeForCalnedarState on DateTime {
     if (isSameMonth(date, this)) {
       return false;
     }
-    return this.isBefore(date);
+    return isBefore(date);
   }
 }
 

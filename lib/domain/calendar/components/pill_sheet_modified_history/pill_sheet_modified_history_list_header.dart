@@ -69,7 +69,7 @@ class _HeaderLayout extends StatelessWidget {
             child: detail,
           ),
           const SizedBox(width: 8),
-          Container(
+          SizedBox(
             width: 57,
             child: takenPillActionOList,
           ),

@@ -12,7 +12,7 @@ class MenstruationRow extends HookConsumerWidget {
   final SettingStateNotifier store;
   final Setting setting;
 
-  MenstruationRow(this.store, this.setting);
+  const MenstruationRow(this.store, this.setting, {Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {

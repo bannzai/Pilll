@@ -18,9 +18,10 @@ import 'package:flutter_svg/svg.dart';
 class ReminderTimesPage extends HookConsumerWidget {
   final SettingStateNotifier store;
 
-  ReminderTimesPage({
+  const ReminderTimesPage({
+    Key? key,
     required this.store,
-  });
+  }) : super(key: key);
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {
@@ -63,40 +64,38 @@ class ReminderTimesPage extends HookConsumerWidget {
         backgroundColor: PilllColors.background,
       ),
       body: SafeArea(
-        child: Container(
-          child: ListView(
-            children: [
-              ...setting.reminderTimes
-                  .asMap()
-                  .map(
-                    (offset, reminderTime) => MapEntry(
-                      offset,
-                      Column(
-                        children: [
-                          Padding(
-                            padding: const EdgeInsets.only(left: 15, right: 15),
-                            child: Container(
-                              height: 1,
-                              color: PilllColors.border,
-                            ),
+        child: ListView(
+          children: [
+            ...setting.reminderTimes
+                .asMap()
+                .map(
+                  (offset, reminderTime) => MapEntry(
+                    offset,
+                    Column(
+                      children: [
+                        Padding(
+                          padding: const EdgeInsets.only(left: 15, right: 15),
+                          child: Container(
+                            height: 1,
+                            color: PilllColors.border,
                           ),
-                          _component(
-                              context, store, setting, reminderTime, offset + 1)
-                        ],
-                      ),
+                        ),
+                        _component(
+                            context, store, setting, reminderTime, offset + 1)
+                      ],
                     ),
-                  )
-                  .values,
-              Padding(
-                padding: const EdgeInsets.only(left: 15, right: 15),
-                child: Container(
-                  height: 1,
-                  color: PilllColors.border,
-                ),
+                  ),
+                )
+                .values,
+            Padding(
+              padding: const EdgeInsets.only(left: 15, right: 15),
+              child: Container(
+                height: 1,
+                color: PilllColors.border,
               ),
-              _add(context, state, store),
-            ],
-          ),
+            ),
+            _add(context, state, store),
+          ],
         ),
       ),
     );
@@ -135,7 +134,7 @@ class ReminderTimesPage extends HookConsumerWidget {
             },
       background: Container(
         color: Colors.red,
-        child: Container(
+        child: SizedBox(
           width: 40,
           child: Padding(
             padding: const EdgeInsets.all(20.0),
@@ -165,7 +164,7 @@ class ReminderTimesPage extends HookConsumerWidget {
         analytics.logEvent(name: "pressed_add_reminder_time");
         _showPicker(context, store, setting, null);
       },
-      child: Container(
+      child: SizedBox(
         height: 64,
         child: Row(
           mainAxisAlignment: MainAxisAlignment.center,

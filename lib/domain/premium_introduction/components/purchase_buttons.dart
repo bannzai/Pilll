@@ -69,7 +69,7 @@ class PurchaseButtons extends HookConsumerWidget {
             });
       }
     } catch (error) {
-      print("caused purchase error for $error");
+      debugPrint("caused purchase error for $error");
       if (error is UserDisplayedError) {
         showErrorAlertWithError(context, error);
       } else {

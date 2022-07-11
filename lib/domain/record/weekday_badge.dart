@@ -4,7 +4,7 @@ import 'package:pilll/entity/weekday.dart';
 import 'package:flutter/material.dart';
 
 abstract class WeekdayBadgeConst {
-  static final double height = 30;
+  static const double height = 30;
 }
 
 class WeekdayBadge extends StatelessWidget {

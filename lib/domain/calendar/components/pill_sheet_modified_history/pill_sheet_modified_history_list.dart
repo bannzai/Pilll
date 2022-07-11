@@ -87,6 +87,7 @@ class PillSheetModifiedHistoryList extends StatelessWidget {
             }
 
             dirtyIndex += 1;
+            // ignore: prefer_function_declarations_over_variables
             final body = () {
               switch (actionType) {
                 case PillSheetModifiedActionType.createdPillSheet:
@@ -190,15 +191,15 @@ class PillSheetModifiedHistoryList extends StatelessWidget {
 
   List<PillSheetModifiedHistoryListModel> get _summarizedForEachMonth {
     final List<PillSheetModifiedHistoryListModel> models = [];
-    pillSheetModifiedHistories.forEach((history) {
+    for (var history in pillSheetModifiedHistories) {
       PillSheetModifiedHistoryListModel? model;
 
-      models.forEach((m) {
+      for (var m in models) {
         if (isSameMonth(m.dateTimeOfMonth, history.estimatedEventCausingDate)) {
           model = m;
-          return;
+          continue;
         }
-      });
+      }
 
       final m = model;
       if (m != null) {
@@ -211,7 +212,7 @@ class PillSheetModifiedHistoryList extends StatelessWidget {
           ),
         );
       }
-    });
+    }
     return models;
   }
 }

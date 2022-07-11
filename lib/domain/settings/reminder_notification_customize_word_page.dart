@@ -12,7 +12,8 @@ import 'package:pilll/error/error_alert.dart';
 
 class ReminderNotificationCustomizeWordPage extends HookConsumerWidget {
   final Setting setting;
-  ReminderNotificationCustomizeWordPage(this.setting);
+  const ReminderNotificationCustomizeWordPage(this.setting, {Key? key})
+      : super(key: key);
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {
@@ -43,132 +44,126 @@ class ReminderNotificationCustomizeWordPage extends HookConsumerWidget {
         backgroundColor: PilllColors.background,
       ),
       body: SafeArea(
-        child: Container(
-          child: ListView(
-            children: [
-              Container(
-                padding:
-                    const EdgeInsets.symmetric(vertical: 20, horizontal: 16),
-                child: Column(
-                  crossAxisAlignment: CrossAxisAlignment.start,
-                  children: [
-                    _ReminderPushNotificationPreview(
-                      word: word.value,
-                      isInVisibleReminderDate: isInVisibleReminderDate.value,
-                      isInvisiblePillNumber: isInVisiblePillNumber.value,
-                      isInvisibleDescription: isInVisibleDescription.value,
-                    ),
-                    const SizedBox(height: 20),
-                    TextField(
-                      decoration: InputDecoration(
-                        focusedBorder: const UnderlineInputBorder(
-                          borderSide: BorderSide(color: PilllColors.primary),
-                        ),
-                        counter: Row(children: [
-                          Text(
-                            "通知の先頭部分の変更ができます",
-                            style: TextStyle(
-                                fontFamily: FontFamily.japanese,
-                                fontSize: 12,
-                                fontWeight: FontWeight.w400,
-                                color: TextColor.darkGray),
-                          ),
-                          const Spacer(),
-                          Text(
-                            "${word.value.characters.length}/8",
-                            style: TextStyle(
-                                fontFamily: FontFamily.japanese,
-                                fontSize: 12,
-                                fontWeight: FontWeight.w400,
-                                color: TextColor.darkGray),
-                          ),
-                        ]),
+        child: ListView(
+          children: [
+            Container(
+              padding: const EdgeInsets.symmetric(vertical: 20, horizontal: 16),
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  _ReminderPushNotificationPreview(
+                    word: word.value,
+                    isInVisibleReminderDate: isInVisibleReminderDate.value,
+                    isInvisiblePillNumber: isInVisiblePillNumber.value,
+                    isInvisibleDescription: isInVisibleDescription.value,
+                  ),
+                  const SizedBox(height: 20),
+                  TextField(
+                    decoration: InputDecoration(
+                      focusedBorder: const UnderlineInputBorder(
+                        borderSide: BorderSide(color: PilllColors.primary),
                       ),
-                      autofocus: true,
-                      onChanged: (_word) {
-                        word.value = _word;
-                      },
-                      onSubmitted: (word) async {
-                        analytics.logEvent(
-                            name: "submit_reminder_notification_customize");
-                        try {
-                          await store.asyncAction
-                              .reminderNotificationWordSubmit(word, setting);
-                          Navigator.of(context).pop();
-                        } catch (error) {
-                          showErrorAlert(context, message: error.toString());
-                        }
-                      },
-                      controller: textFieldControlelr,
-                      maxLength: 8,
+                      counter: Row(children: [
+                        const Text(
+                          "通知の先頭部分の変更ができます",
+                          style: TextStyle(
+                              fontFamily: FontFamily.japanese,
+                              fontSize: 12,
+                              fontWeight: FontWeight.w400,
+                              color: TextColor.darkGray),
+                        ),
+                        const Spacer(),
+                        Text(
+                          "${word.value.characters.length}/8",
+                          style: const TextStyle(
+                              fontFamily: FontFamily.japanese,
+                              fontSize: 12,
+                              fontWeight: FontWeight.w400,
+                              color: TextColor.darkGray),
+                        ),
+                      ]),
                     ),
-                    const SizedBox(height: 20),
-                    Column(
-                      crossAxisAlignment: CrossAxisAlignment.start,
-                      children: [
-                        Container(
-                          child: Text(
-                            "詳細設定",
-                            style: FontType.assisting
-                                .merge(TextColorStyle.primary),
-                          ),
-                        ),
-                        const SizedBox(height: 4),
-                        _switchRow(
-                          "日付を表示",
-                          !isInVisibleReminderDate.value,
-                          (value) async {
-                            analytics.logEvent(
-                                name: "change_reminder_notification_date");
-                            try {
-                              await store.asyncAction
-                                  .setIsInVisibleReminderDate(!value, setting);
-                              isInVisibleReminderDate.value = !value;
-                            } catch (error) {
-                              showErrorAlertFor(context, error);
-                            }
-                          },
-                        ),
-                        const Divider(),
-                        _switchRow(
-                          "番号を表示",
-                          !isInVisiblePillNumber.value,
-                          (value) async {
-                            analytics.logEvent(
-                                name: "change_reminder_notification_number");
-                            try {
-                              await store.asyncAction
-                                  .setIsInVisiblePillNumber(!value, setting);
-                              isInVisiblePillNumber.value = !value;
-                            } catch (error) {
-                              showErrorAlertFor(context, error);
-                            }
-                          },
-                        ),
-                        const Divider(),
-                        _switchRow(
-                          "説明文の表示",
-                          !isInVisibleDescription.value,
-                          (value) async {
-                            analytics.logEvent(
-                                name: "change_reminder_notification_desc");
-                            try {
-                              await store.asyncAction
-                                  .setIsInVisibleDescription(!value, setting);
-                              isInVisibleDescription.value = !value;
-                            } catch (error) {
-                              showErrorAlertFor(context, error);
-                            }
-                          },
-                        ),
-                        const Divider(),
-                      ],
-                    ),
-                  ],
-                ),
+                    autofocus: true,
+                    onChanged: (_word) {
+                      word.value = _word;
+                    },
+                    onSubmitted: (word) async {
+                      analytics.logEvent(
+                          name: "submit_reminder_notification_customize");
+                      try {
+                        await store.asyncAction
+                            .reminderNotificationWordSubmit(word, setting);
+                        Navigator.of(context).pop();
+                      } catch (error) {
+                        showErrorAlert(context, message: error.toString());
+                      }
+                    },
+                    controller: textFieldControlelr,
+                    maxLength: 8,
+                  ),
+                  const SizedBox(height: 20),
+                  Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      Text(
+                        "詳細設定",
+                        style: FontType.assisting.merge(TextColorStyle.primary),
+                      ),
+                      const SizedBox(height: 4),
+                      _switchRow(
+                        "日付を表示",
+                        !isInVisibleReminderDate.value,
+                        (value) async {
+                          analytics.logEvent(
+                              name: "change_reminder_notification_date");
+                          try {
+                            await store.asyncAction
+                                .setIsInVisibleReminderDate(!value, setting);
+                            isInVisibleReminderDate.value = !value;
+                          } catch (error) {
+                            showErrorAlertFor(context, error);
+                          }
+                        },
+                      ),
+                      const Divider(),
+                      _switchRow(
+                        "番号を表示",
+                        !isInVisiblePillNumber.value,
+                        (value) async {
+                          analytics.logEvent(
+                              name: "change_reminder_notification_number");
+                          try {
+                            await store.asyncAction
+                                .setIsInVisiblePillNumber(!value, setting);
+                            isInVisiblePillNumber.value = !value;
+                          } catch (error) {
+                            showErrorAlertFor(context, error);
+                          }
+                        },
+                      ),
+                      const Divider(),
+                      _switchRow(
+                        "説明文の表示",
+                        !isInVisibleDescription.value,
+                        (value) async {
+                          analytics.logEvent(
+                              name: "change_reminder_notification_desc");
+                          try {
+                            await store.asyncAction
+                                .setIsInVisibleDescription(!value, setting);
+                            isInVisibleDescription.value = !value;
+                          } catch (error) {
+                            showErrorAlertFor(context, error);
+                          }
+                        },
+                      ),
+                      const Divider(),
+                    ],
+                  ),
+                ],
               ),
-            ],
-          ),
+            ),
+          ],
         ),
       ),
     );
@@ -228,6 +223,7 @@ class _ReminderPushNotificationPreview extends StatelessWidget {
   // avoid broken editor
   final thinkingFace = "🤔";
 
+  @override
   Widget build(BuildContext context) {
     return Container(
       decoration: BoxDecoration(

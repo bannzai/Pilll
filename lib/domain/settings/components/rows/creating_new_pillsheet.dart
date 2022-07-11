@@ -32,7 +32,7 @@ class CreatingNewPillSheetRow extends HookConsumerWidget {
           const Text("ピルシートグループの自動追加", style: FontType.listRow),
           if (!isPremium) ...[
             const SizedBox(width: 8),
-            PremiumBadge(),
+            const PremiumBadge(),
           ]
         ],
       ),

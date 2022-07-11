@@ -1,6 +1,7 @@
 import 'dart:async';
 
 import 'package:firebase_auth/firebase_auth.dart';
+import 'package:flutter/foundation.dart';
 import 'package:pilll/auth/apple.dart';
 import 'package:pilll/auth/boilerplate.dart';
 import 'package:pilll/auth/google.dart';
@@ -39,7 +40,7 @@ class SettingAccountCooperationListPageStore
   _subscribe() {
     _authCanceller?.cancel();
     _authCanceller = _authService.optionalStream().listen((user) {
-      print(
+      debugPrint(
           "watch sign state uid: ${user?.uid}, isAnonymous: ${user?.isAnonymous}");
       state = state.copyWith(user: user);
     });

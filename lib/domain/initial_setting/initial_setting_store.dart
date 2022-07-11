@@ -1,6 +1,7 @@
 import 'dart:async';
 
 import 'package:firebase_crashlytics/firebase_crashlytics.dart';
+import 'package:flutter/foundation.dart';
 import 'package:pilll/analytics.dart';
 import 'package:pilll/auth/apple.dart';
 import 'package:pilll/auth/google.dart';
@@ -66,7 +67,7 @@ class InitialSettingStateStore extends StateNotifier<InitialSettingState> {
   StreamSubscription? _authServiceCanceller;
   void fetch() {
     _authServiceCanceller = _authService.stream().listen((user) async {
-      print("watch sign state user: $user");
+      debugPrint("watch sign state user: $user");
 
       final userIsNotAnonymous = !user.isAnonymous;
       if (userIsNotAnonymous) {
@@ -100,8 +101,8 @@ class InitialSettingStateStore extends StateNotifier<InitialSettingState> {
   }
 
   void addPillSheetType(PillSheetType pillSheetType) {
-    state = state.copyWith(
-        pillSheetTypes: [...state.pillSheetTypes]..add(pillSheetType));
+    state = state
+        .copyWith(pillSheetTypes: [...state.pillSheetTypes, pillSheetType]);
   }
 
   void changePillSheetType(int index, PillSheetType pillSheetType) {

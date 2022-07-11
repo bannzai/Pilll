@@ -15,7 +15,7 @@ class ErrorAlert extends StatelessWidget {
       : super(key: key);
   @override
   Widget build(BuildContext context) {
-    final faq = this.faqLinkURL;
+    final faq = faqLinkURL;
     return AlertDialog(
       title: Text(
         title ?? "エラーが発生しました",

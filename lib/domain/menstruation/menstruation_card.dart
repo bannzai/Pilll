@@ -10,11 +10,11 @@ import 'package:pilll/components/atoms/text_color.dart';
 class MenstruationCard extends StatelessWidget {
   final MenstruationCardState state;
 
-  MenstruationCard(this.state);
+  const MenstruationCard(this.state, {Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
-    return Container(
+    return SizedBox(
       height: 111,
       child: AppCard(
         child: Column(
@@ -49,7 +49,8 @@ class MenstruationCard extends StatelessWidget {
             ),
             const SizedBox(height: 8),
             Container(
-              padding: const EdgeInsets.only(left: 32, right: 32, top: 2, bottom: 2),
+              padding:
+                  const EdgeInsets.only(left: 32, right: 32, top: 2, bottom: 2),
               decoration: BoxDecoration(
                 color: PilllColors.secondary,
                 borderRadius: BorderRadius.circular(30),
