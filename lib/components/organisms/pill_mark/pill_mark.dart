@@ -71,14 +71,12 @@ class _PillMarkState extends State<PillMark> with TickerProviderStateMixin {
           Positioned(
             left: -30,
             top: -30,
-            child: Container(
-              child: CustomPaint(
-                size: const Size(
-                    PillMarkConst.edgeOfRipple, PillMarkConst.edgeOfRipple),
-                painter: Ripple(
-                  _controller,
-                  color: PilllColors.primary,
-                ),
+            child: CustomPaint(
+              size: const Size(
+                  PillMarkConst.edgeOfRipple, PillMarkConst.edgeOfRipple),
+              painter: Ripple(
+                _controller,
+                color: PilllColors.primary,
               ),
             ),
           ),

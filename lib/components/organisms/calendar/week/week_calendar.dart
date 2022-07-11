@@ -40,84 +40,80 @@ class CalendarWeekdayLine extends StatelessWidget {
     var tileWidth =
         (MediaQuery.of(context).size.width - horizontalPadding * 2) /
             Weekday.values.length;
-    return Container(
-      child: Stack(
-        children: [
-          Row(
-            children: Weekday.values.map((weekday) {
-              final date = _buildDate(weekday);
-              final isOutOfBoundsInLine = !state.dateRange.inRange(date);
-              if (isOutOfBoundsInLine) {
-                return Expanded(child: Container());
-              }
+    return Stack(
+      children: [
+        Row(
+          children: Weekday.values.map((weekday) {
+            final date = _buildDate(weekday);
+            final isOutOfBoundsInLine = !state.dateRange.inRange(date);
+            if (isOutOfBoundsInLine) {
+              return Expanded(child: Container());
+            }
 
-              if (state.isGrayoutTile(date)) {
-                return CalendarDayTile.grayout(
-                  weekday: weekday,
-                  shouldShowMenstruationMark: state.hasMenstruationMark(date),
-                  contentAlignment: state.contentAlignment,
-                  date: date,
-                );
-              }
-              return CalendarDayTile(
-                isToday: isSameDay(today(), date),
+            if (state.isGrayoutTile(date)) {
+              return CalendarDayTile.grayout(
                 weekday: weekday,
-                date: date,
-                shouldShowDiaryMark:
-                    state.hasDiaryMark(state.diariesForMonth, date),
                 shouldShowMenstruationMark: state.hasMenstruationMark(date),
                 contentAlignment: state.contentAlignment,
-                onTap: (date) => onTap(state, date),
+                date: date,
               );
-            }).toList(),
-          ),
-          ...calendarMenstruationBandModels.where(_contains).map(
-                (e) => _buildBand(
-                  calendarBandModel: e,
-                  bottomOffset: 0,
-                  tileWidth: tileWidth,
-                  bandBuilder: (_, width) => CalendarMenstruationBand(
-                    menstruation: e.menstruation,
-                    width: width,
-                    onTap: (menstruation) {
-                      analytics.logEvent(
-                          name: "tap_calendar_menstruation_band");
-                      showMenstruationEditPage(
-                        context,
-                        menstruation: menstruation,
-                      );
-                    },
-                  ),
+            }
+            return CalendarDayTile(
+              isToday: isSameDay(today(), date),
+              weekday: weekday,
+              date: date,
+              shouldShowDiaryMark:
+                  state.hasDiaryMark(state.diariesForMonth, date),
+              shouldShowMenstruationMark: state.hasMenstruationMark(date),
+              contentAlignment: state.contentAlignment,
+              onTap: (date) => onTap(state, date),
+            );
+          }).toList(),
+        ),
+        ...calendarMenstruationBandModels.where(_contains).map(
+              (e) => _buildBand(
+                calendarBandModel: e,
+                bottomOffset: 0,
+                tileWidth: tileWidth,
+                bandBuilder: (_, width) => CalendarMenstruationBand(
+                  menstruation: e.menstruation,
+                  width: width,
+                  onTap: (menstruation) {
+                    analytics.logEvent(name: "tap_calendar_menstruation_band");
+                    showMenstruationEditPage(
+                      context,
+                      menstruation: menstruation,
+                    );
+                  },
                 ),
               ),
-          ...calendarScheduledMenstruationBandModels.where(_contains).map(
-                (e) => _buildBand(
-                  calendarBandModel: e,
-                  bottomOffset: 0,
-                  tileWidth: tileWidth,
-                  bandBuilder: (_, width) => CalendarScheduledMenstruationBand(
-                    begin: e.begin,
-                    end: e.end,
-                    width: width,
-                  ),
+            ),
+        ...calendarScheduledMenstruationBandModels.where(_contains).map(
+              (e) => _buildBand(
+                calendarBandModel: e,
+                bottomOffset: 0,
+                tileWidth: tileWidth,
+                bandBuilder: (_, width) => CalendarScheduledMenstruationBand(
+                  begin: e.begin,
+                  end: e.end,
+                  width: width,
                 ),
               ),
-          ...calendarNextPillSheetBandModels.where(_contains).map(
-                (e) => _buildBand(
-                  calendarBandModel: e,
-                  bottomOffset: CalendarBandConst.height,
-                  tileWidth: tileWidth,
-                  bandBuilder: (isLineBreak, width) =>
-                      CalendarNextPillSheetBand(
-                    begin: e.begin,
-                    end: e.end,
-                    isLineBreak: isLineBreak,
-                    width: width,
-                  ),
+            ),
+        ...calendarNextPillSheetBandModels.where(_contains).map(
+              (e) => _buildBand(
+                calendarBandModel: e,
+                bottomOffset: CalendarBandConst.height,
+                tileWidth: tileWidth,
+                bandBuilder: (isLineBreak, width) => CalendarNextPillSheetBand(
+                  begin: e.begin,
+                  end: e.end,
+                  isLineBreak: isLineBreak,
+                  width: width,
                 ),
               ),
-        ],
-      ),
+            ),
+      ],
     );
   }
 

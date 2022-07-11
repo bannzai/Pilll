@@ -13,44 +13,42 @@ class PremiumCompleteDialog extends StatelessWidget {
   Widget build(BuildContext context) {
     return AlertDialog(
       contentPadding: const EdgeInsets.fromLTRB(24, 48, 24, 24),
-      content: Container(
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
-          mainAxisSize: MainAxisSize.min,
-          children: [
-            const Text(
-              "Pilllプレミアム登録完了",
-              style: TextStyle(
-                color: TextColor.main,
-                fontFamily: FontFamily.japanese,
-                fontWeight: FontWeight.w700,
-                fontSize: 16,
-              ),
-              textAlign: TextAlign.center,
+      content: Column(
+        mainAxisAlignment: MainAxisAlignment.center,
+        mainAxisSize: MainAxisSize.min,
+        children: [
+          const Text(
+            "Pilllプレミアム登録完了",
+            style: TextStyle(
+              color: TextColor.main,
+              fontFamily: FontFamily.japanese,
+              fontWeight: FontWeight.w700,
+              fontSize: 16,
             ),
-            const SizedBox(height: 24),
-            SvgPicture.asset("images/jewel.svg"),
-            const SizedBox(height: 24),
-            const Text(
-              "ご登録ありがとうございます。\nすべての機能が使えるようになりました！",
-              style: TextStyle(
-                color: TextColor.main,
-                fontFamily: FontFamily.japanese,
-                fontWeight: FontWeight.w400,
-                fontSize: 14,
-              ),
-              textAlign: TextAlign.center,
+            textAlign: TextAlign.center,
+          ),
+          const SizedBox(height: 24),
+          SvgPicture.asset("images/jewel.svg"),
+          const SizedBox(height: 24),
+          const Text(
+            "ご登録ありがとうございます。\nすべての機能が使えるようになりました！",
+            style: TextStyle(
+              color: TextColor.main,
+              fontFamily: FontFamily.japanese,
+              fontWeight: FontWeight.w400,
+              fontSize: 14,
             ),
-            const SizedBox(height: 24),
-            PrimaryButton(
-              onPressed: () async {
-                Navigator.of(context).pop();
-                onClose();
-              },
-              text: "OK",
-            ),
-          ],
-        ),
+            textAlign: TextAlign.center,
+          ),
+          const SizedBox(height: 24),
+          PrimaryButton(
+            onPressed: () async {
+              Navigator.of(context).pop();
+              onClose();
+            },
+            text: "OK",
+          ),
+        ],
       ),
     );
   }

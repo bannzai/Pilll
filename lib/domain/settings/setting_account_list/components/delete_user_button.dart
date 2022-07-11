@@ -108,42 +108,40 @@ class _CompletedDialog extends StatelessWidget {
   Widget build(BuildContext context) {
     return AlertDialog(
       contentPadding: const EdgeInsets.fromLTRB(24, 48, 24, 24),
-      content: Container(
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
-          mainAxisSize: MainAxisSize.min,
-          children: [
-            const Text(
-              "退会しました",
-              style: TextStyle(
-                color: TextColor.main,
-                fontFamily: FontFamily.japanese,
-                fontWeight: FontWeight.w700,
-                fontSize: 16,
-              ),
-              textAlign: TextAlign.center,
+      content: Column(
+        mainAxisAlignment: MainAxisAlignment.center,
+        mainAxisSize: MainAxisSize.min,
+        children: [
+          const Text(
+            "退会しました",
+            style: TextStyle(
+              color: TextColor.main,
+              fontFamily: FontFamily.japanese,
+              fontWeight: FontWeight.w700,
+              fontSize: 16,
             ),
-            const SizedBox(height: 24),
-            const Text(
-              "初期設定画面に移動します。新しいアカウントとして引き続きご利用になる場合は再度設定をお願いいたします",
-              style: TextStyle(
-                color: TextColor.main,
-                fontFamily: FontFamily.japanese,
-                fontWeight: FontWeight.w400,
-                fontSize: 14,
-              ),
-              textAlign: TextAlign.center,
+            textAlign: TextAlign.center,
+          ),
+          const SizedBox(height: 24),
+          const Text(
+            "初期設定画面に移動します。新しいアカウントとして引き続きご利用になる場合は再度設定をお願いいたします",
+            style: TextStyle(
+              color: TextColor.main,
+              fontFamily: FontFamily.japanese,
+              fontWeight: FontWeight.w400,
+              fontSize: 14,
             ),
-            const SizedBox(height: 24),
-            PrimaryButton(
-              onPressed: () async {
-                Navigator.of(context).pop();
-                await onClose();
-              },
-              text: "OK",
-            ),
-          ],
-        ),
+            textAlign: TextAlign.center,
+          ),
+          const SizedBox(height: 24),
+          PrimaryButton(
+            onPressed: () async {
+              Navigator.of(context).pop();
+              await onClose();
+            },
+            text: "OK",
+          ),
+        ],
       ),
     );
   }

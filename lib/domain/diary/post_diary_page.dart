@@ -289,28 +289,26 @@ class PostDiaryPage extends HookConsumerWidget {
     DiaryState state,
   ) {
     const textLength = 120;
-    return Container(
-      child: ConstrainedBox(
-        constraints: BoxConstraints(
-          minWidth: MediaQuery.of(context).size.width,
-          maxWidth: MediaQuery.of(context).size.width,
-          minHeight: 40,
-          maxHeight: 200,
+    return ConstrainedBox(
+      constraints: BoxConstraints(
+        minWidth: MediaQuery.of(context).size.width,
+        maxWidth: MediaQuery.of(context).size.width,
+        minHeight: 40,
+        maxHeight: 200,
+      ),
+      child: TextFormField(
+        onChanged: (text) {
+          store.editedMemo(text);
+        },
+        decoration: const InputDecoration(
+          hintText: "メモ",
+          border: OutlineInputBorder(),
         ),
-        child: TextFormField(
-          onChanged: (text) {
-            store.editedMemo(text);
-          },
-          decoration: const InputDecoration(
-            hintText: "メモ",
-            border: OutlineInputBorder(),
-          ),
-          controller: textEditingController,
-          maxLines: null,
-          maxLength: textLength,
-          keyboardType: TextInputType.multiline,
-          focusNode: focusNode,
-        ),
+        controller: textEditingController,
+        maxLines: null,
+        maxLength: textLength,
+        keyboardType: TextInputType.multiline,
+        focusNode: focusNode,
       ),
     );
   }

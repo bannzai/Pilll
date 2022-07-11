@@ -34,90 +34,88 @@ class InitialSettingReminderTimesPage extends HookConsumerWidget {
         backgroundColor: PilllColors.white,
       ),
       body: SafeArea(
-        child: Container(
-          child: Center(
-            child: Column(
-              children: <Widget>[
-                const SizedBox(height: 24),
-                Text(
-                  "ピルの飲み忘れ通知",
-                  style: FontType.title.merge(TextColorStyle.main),
-                  textAlign: TextAlign.center,
-                ),
-                const Spacer(),
-                Column(
-                  children: [
-                    Padding(
-                      padding: const EdgeInsets.only(bottom: 36),
-                      child: Row(
-                          mainAxisAlignment: MainAxisAlignment.center,
-                          children: List.generate(3, (index) {
-                            return _form(context, store, state, index);
-                          })),
+        child: Center(
+          child: Column(
+            children: <Widget>[
+              const SizedBox(height: 24),
+              Text(
+                "ピルの飲み忘れ通知",
+                style: FontType.title.merge(TextColorStyle.main),
+                textAlign: TextAlign.center,
+              ),
+              const Spacer(),
+              Column(
+                children: [
+                  Padding(
+                    padding: const EdgeInsets.only(bottom: 36),
+                    child: Row(
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        children: List.generate(3, (index) {
+                          return _form(context, store, state, index);
+                        })),
+                  ),
+                  Text("複数設定しておく事で飲み忘れを防げます",
+                      style: FontType.assisting.merge(TextColorStyle.main)),
+                ],
+              ),
+              const Spacer(),
+              Column(
+                children: [
+                  RichText(
+                    textAlign: TextAlign.center,
+                    text: TextSpan(
+                      children: [
+                        TextSpan(
+                          text: "プライバシーポリシー",
+                          style: FontType.sSmallSentence
+                              .merge(TextColorStyle.link),
+                          recognizer: TapGestureRecognizer()
+                            ..onTap = () {
+                              launchUrl(
+                                  Uri.parse(
+                                      "https://bannzai.github.io/Pilll/PrivacyPolicy"),
+                                  mode: LaunchMode.inAppWebView);
+                            },
+                        ),
+                        TextSpan(
+                          text: "と",
+                          style: FontType.sSmallSentence
+                              .merge(TextColorStyle.gray),
+                        ),
+                        TextSpan(
+                          text: "利用規約",
+                          style: FontType.sSmallSentence
+                              .merge(TextColorStyle.link),
+                          recognizer: TapGestureRecognizer()
+                            ..onTap = () {
+                              launchUrl(
+                                  Uri.parse(
+                                      "https://bannzai.github.io/Pilll/Terms"),
+                                  mode: LaunchMode.inAppWebView);
+                            },
+                        ),
+                        TextSpan(
+                          text: "を読んで\n利用をはじめてください",
+                          style: FontType.sSmallSentence
+                              .merge(TextColorStyle.gray),
+                        ),
+                      ],
                     ),
-                    Text("複数設定しておく事で飲み忘れを防げます",
-                        style: FontType.assisting.merge(TextColorStyle.main)),
-                  ],
-                ),
-                const Spacer(),
-                Column(
-                  children: [
-                    RichText(
-                      textAlign: TextAlign.center,
-                      text: TextSpan(
-                        children: [
-                          TextSpan(
-                            text: "プライバシーポリシー",
-                            style: FontType.sSmallSentence
-                                .merge(TextColorStyle.link),
-                            recognizer: TapGestureRecognizer()
-                              ..onTap = () {
-                                launchUrl(
-                                    Uri.parse(
-                                        "https://bannzai.github.io/Pilll/PrivacyPolicy"),
-                                    mode: LaunchMode.inAppWebView);
-                              },
-                          ),
-                          TextSpan(
-                            text: "と",
-                            style: FontType.sSmallSentence
-                                .merge(TextColorStyle.gray),
-                          ),
-                          TextSpan(
-                            text: "利用規約",
-                            style: FontType.sSmallSentence
-                                .merge(TextColorStyle.link),
-                            recognizer: TapGestureRecognizer()
-                              ..onTap = () {
-                                launchUrl(
-                                    Uri.parse(
-                                        "https://bannzai.github.io/Pilll/Terms"),
-                                    mode: LaunchMode.inAppWebView);
-                              },
-                          ),
-                          TextSpan(
-                            text: "を読んで\n利用をはじめてください",
-                            style: FontType.sSmallSentence
-                                .merge(TextColorStyle.gray),
-                          ),
-                        ],
-                      ),
-                    ),
-                    const SizedBox(height: 24),
-                    PrimaryButton(
-                      text: "次へ",
-                      onPressed: () async {
-                        analytics.logEvent(
-                            name: "next_initial_setting_reminder_times");
-                        Navigator.of(context).push(
-                            IntiialSettingPremiumTrialStartPageRoute.route());
-                      },
-                    ),
-                  ],
-                ),
-                const SizedBox(height: 35),
-              ],
-            ),
+                  ),
+                  const SizedBox(height: 24),
+                  PrimaryButton(
+                    text: "次へ",
+                    onPressed: () async {
+                      analytics.logEvent(
+                          name: "next_initial_setting_reminder_times");
+                      Navigator.of(context).push(
+                          IntiialSettingPremiumTrialStartPageRoute.route());
+                    },
+                  ),
+                ],
+              ),
+              const SizedBox(height: 35),
+            ],
           ),
         ),
       ),
@@ -133,7 +131,8 @@ class InitialSettingReminderTimesPage extends HookConsumerWidget {
     analytics.logEvent(name: "show_initial_setting_reminder_picker");
     final reminderDateTime = state.reminderTimeOrNull(index);
     final n = now();
-    DateTime initialDateTime = reminderDateTime ?? DateTime(n.year, n.month, n.day, n.hour, 0, 0);
+    DateTime initialDateTime =
+        reminderDateTime ?? DateTime(n.year, n.month, n.day, n.hour, 0, 0);
     showModalBottomSheet(
       context: context,
       builder: (BuildContext context) {

@@ -63,40 +63,38 @@ class ReminderTimesPage extends HookConsumerWidget {
         backgroundColor: PilllColors.background,
       ),
       body: SafeArea(
-        child: Container(
-          child: ListView(
-            children: [
-              ...setting.reminderTimes
-                  .asMap()
-                  .map(
-                    (offset, reminderTime) => MapEntry(
-                      offset,
-                      Column(
-                        children: [
-                          Padding(
-                            padding: const EdgeInsets.only(left: 15, right: 15),
-                            child: Container(
-                              height: 1,
-                              color: PilllColors.border,
-                            ),
+        child: ListView(
+          children: [
+            ...setting.reminderTimes
+                .asMap()
+                .map(
+                  (offset, reminderTime) => MapEntry(
+                    offset,
+                    Column(
+                      children: [
+                        Padding(
+                          padding: const EdgeInsets.only(left: 15, right: 15),
+                          child: Container(
+                            height: 1,
+                            color: PilllColors.border,
                           ),
-                          _component(
-                              context, store, setting, reminderTime, offset + 1)
-                        ],
-                      ),
+                        ),
+                        _component(
+                            context, store, setting, reminderTime, offset + 1)
+                      ],
                     ),
-                  )
-                  .values,
-              Padding(
-                padding: const EdgeInsets.only(left: 15, right: 15),
-                child: Container(
-                  height: 1,
-                  color: PilllColors.border,
-                ),
+                  ),
+                )
+                .values,
+            Padding(
+              padding: const EdgeInsets.only(left: 15, right: 15),
+              child: Container(
+                height: 1,
+                color: PilllColors.border,
               ),
-              _add(context, state, store),
-            ],
-          ),
+            ),
+            _add(context, state, store),
+          ],
         ),
       ),
     );

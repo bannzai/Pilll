@@ -18,11 +18,9 @@ class Indicator extends StatelessWidget {
         ),
       );
     }
-    return Container(
-      child: const Center(
-        child: CircularProgressIndicator(
-            valueColor: AlwaysStoppedAnimation(PilllColors.primary)),
-      ),
+    return const Center(
+      child: CircularProgressIndicator(
+          valueColor: AlwaysStoppedAnimation(PilllColors.primary)),
     );
   }
 }
