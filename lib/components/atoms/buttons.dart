@@ -17,6 +17,7 @@ class PrimaryButton extends HookWidget {
 
   Widget build(BuildContext context) {
     final isProcessing = useState(false);
+    final isMounted = useIsMounted();
     return ElevatedButton(
       child: ConstrainedBox(
         constraints: const BoxConstraints(
@@ -49,7 +50,7 @@ class PrimaryButton extends HookWidget {
               } catch (error) {
                 rethrow;
               } finally {
-                isProcessing.value = false;
+                if (isMounted()) isProcessing.value = false;
               }
             },
     );
@@ -68,6 +69,8 @@ class UndoButton extends HookWidget {
 
   Widget build(BuildContext context) {
     final isProcessing = useState(false);
+    final isMounted = useIsMounted();
+
     return ElevatedButton(
       child: ConstrainedBox(
         constraints: const BoxConstraints(
@@ -100,7 +103,7 @@ class UndoButton extends HookWidget {
               } catch (error) {
                 rethrow;
               } finally {
-                isProcessing.value = false;
+                if (isMounted()) isProcessing.value = false;
               }
             },
     );
@@ -118,7 +121,9 @@ class RedTextButton extends HookWidget {
   }) : super(key: key);
 
   Widget build(BuildContext context) {
-    var isProcessing = useState(false);
+    final isProcessing = useState(false);
+    final isMounted = useIsMounted();
+
     return SizedBox(
       height: 44,
       child: TextButton(
@@ -146,7 +151,7 @@ class RedTextButton extends HookWidget {
                 } catch (error) {
                   rethrow;
                 } finally {
-                  isProcessing.value = false;
+                  if (isMounted()) isProcessing.value = false;
                 }
               },
       ),
@@ -165,7 +170,9 @@ class InconspicuousButton extends HookWidget {
   }) : super(key: key);
 
   Widget build(BuildContext context) {
-    var isProcessing = useState(false);
+    final isProcessing = useState(false);
+    final isMounted = useIsMounted();
+
     return SizedBox(
       width: 180,
       height: 44,
@@ -194,7 +201,7 @@ class InconspicuousButton extends HookWidget {
                 } catch (error) {
                   rethrow;
                 } finally {
-                  isProcessing.value = false;
+                  if (isMounted()) isProcessing.value = false;
                 }
               },
       ),
@@ -213,7 +220,9 @@ class SmallAppOutlinedButton extends HookWidget {
   }) : super(key: key);
 
   Widget build(BuildContext context) {
-    var isProcessing = useState(false);
+    final isProcessing = useState(false);
+    final isMounted = useIsMounted();
+
     return OutlinedButton(
       child: Container(
         padding: const EdgeInsets.only(top: 8.5, bottom: 8.5),
@@ -252,7 +261,7 @@ class SmallAppOutlinedButton extends HookWidget {
               } catch (error) {
                 rethrow;
               } finally {
-                isProcessing.value = false;
+                if (isMounted()) isProcessing.value = false;
               }
             },
     );
@@ -270,7 +279,9 @@ class AppOutlinedButton extends HookWidget {
   }) : super(key: key);
 
   Widget build(BuildContext context) {
-    var isProcessing = useState(false);
+    final isProcessing = useState(false);
+    final isMounted = useIsMounted();
+
     return OutlinedButton(
       child: Container(
         padding: const EdgeInsets.only(top: 12, bottom: 12),
@@ -308,7 +319,7 @@ class AppOutlinedButton extends HookWidget {
               } catch (error) {
                 rethrow;
               } finally {
-                isProcessing.value = false;
+                if (isMounted()) isProcessing.value = false;
               }
             },
     );
@@ -326,7 +337,9 @@ class AlertButton extends HookWidget {
   }) : super(key: key);
 
   Widget build(BuildContext context) {
-    var isProcessing = useState(false);
+    final isProcessing = useState(false);
+    final isMounted = useIsMounted();
+
     return TextButton(
       child: Stack(
         children: [
@@ -353,7 +366,7 @@ class AlertButton extends HookWidget {
               } catch (error) {
                 rethrow;
               } finally {
-                isProcessing.value = false;
+                if (isMounted()) isProcessing.value = false;
               }
             },
     );
