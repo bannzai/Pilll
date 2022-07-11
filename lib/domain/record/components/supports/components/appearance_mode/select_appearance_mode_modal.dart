@@ -116,7 +116,7 @@ class SelectAppearanceModeModal extends HookConsumerWidget {
             ),
             if (isPremiumFunction) ...[
               const SizedBox(width: 12),
-              PremiumBadge(),
+              const PremiumBadge(),
             ]
           ],
         ),

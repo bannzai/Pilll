@@ -150,7 +150,7 @@ extension IntiialSettingPremiumTrialStartPageRoute
     return MaterialPageRoute(
       settings:
           const RouteSettings(name: "IntiialSettingPremiumTrialStartPage"),
-      builder: (_) => IntiialSettingPremiumTrialStartPage(),
+      builder: (_) => const IntiialSettingPremiumTrialStartPage(),
     );
   }
 }

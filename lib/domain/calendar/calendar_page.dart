@@ -42,7 +42,7 @@ class CalendarPage extends HookConsumerWidget {
         child: null,
         reload: () => ref.refresh(calendarPageStateProvider),
       ),
-      loading: () => ScaffoldIndicator(),
+      loading: () => const ScaffoldIndicator(),
     );
   }
 }

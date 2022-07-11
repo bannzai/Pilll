@@ -208,6 +208,6 @@ extension InitialSettingPillSheetGroupPageRoute
     on InitialSettingPillSheetGroupPage {
   static InitialSettingPillSheetGroupPage screen() {
     analytics.setCurrentScreen(screenName: "InitialSettingPillSheetGroupPage");
-    return InitialSettingPillSheetGroupPage();
+    return const InitialSettingPillSheetGroupPage();
   }
 }

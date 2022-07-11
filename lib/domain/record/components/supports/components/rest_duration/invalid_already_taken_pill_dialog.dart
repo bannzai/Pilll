@@ -80,6 +80,6 @@ showInvalidAlreadyTakenPillDialog(
   analytics.setCurrentScreen(screenName: "InvalidAlreadyTakenPillDialog");
   showDialog(
     context: context,
-    builder: (context) => InvalidAlreadyTakenPillDialog(),
+    builder: (context) => const InvalidAlreadyTakenPillDialog(),
   );
 }

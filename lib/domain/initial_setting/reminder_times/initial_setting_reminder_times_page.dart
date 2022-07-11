@@ -205,7 +205,7 @@ extension InitialSettingReminderTimesPageRoute
   static Route<dynamic> route() {
     return MaterialPageRoute(
       settings: const RouteSettings(name: "InitialSettingReminderTimesPage"),
-      builder: (_) => InitialSettingReminderTimesPage(),
+      builder: (_) => const InitialSettingReminderTimesPage(),
     );
   }
 }

@@ -30,7 +30,7 @@ class ReminderNotificationCustomizeWord extends HookConsumerWidget {
           const Text("服用通知のカスタマイズ", style: FontType.listRow),
           if (!isPremium) ...[
             const SizedBox(width: 8),
-            PremiumBadge(),
+            const PremiumBadge(),
           ]
         ],
       ),

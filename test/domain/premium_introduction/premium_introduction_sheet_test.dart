@@ -108,7 +108,7 @@ void main() {
           fakeDiscountEntitlementDeadlineDate: null,
         );
 
-        final sheet = PremiumIntroductionSheet();
+        const sheet = PremiumIntroductionSheet();
         await tester.pumpWidget(
           MaterialApp(
             home: ProviderScope(
@@ -122,7 +122,7 @@ void main() {
                 durationToDiscountPriceDeadline.overrideWithProvider((param) =>
                     Provider.autoDispose((_) => const Duration(seconds: 1000))),
               ],
-              child: MaterialApp(
+              child: const MaterialApp(
                 home: sheet,
               ),
             ),
@@ -152,7 +152,7 @@ void main() {
           fakeDiscountEntitlementDeadlineDate: discountEntitlementDeadlineDate,
         );
 
-        final sheet = PremiumIntroductionSheet();
+        const sheet = PremiumIntroductionSheet();
         await tester.pumpWidget(
           MaterialApp(
             home: ProviderScope(
@@ -166,7 +166,7 @@ void main() {
                 durationToDiscountPriceDeadline.overrideWithProvider((param) =>
                     Provider.autoDispose((_) => const Duration(seconds: 1000))),
               ],
-              child: MaterialApp(
+              child: const MaterialApp(
                 home: sheet,
               ),
             ),
@@ -198,7 +198,7 @@ void main() {
               today.subtract(const Duration(days: 1)),
         );
 
-        final sheet = PremiumIntroductionSheet();
+        const sheet = PremiumIntroductionSheet();
         await tester.pumpWidget(
           MaterialApp(
             home: ProviderScope(
@@ -212,7 +212,7 @@ void main() {
                 durationToDiscountPriceDeadline.overrideWithProvider((param) =>
                     Provider.autoDispose((_) => const Duration(seconds: 1000))),
               ],
-              child: MaterialApp(
+              child: const MaterialApp(
                 home: sheet,
               ),
             ),
@@ -244,7 +244,7 @@ void main() {
               today.subtract(const Duration(days: 1)),
         );
 
-        final sheet = PremiumIntroductionSheet();
+        const sheet = PremiumIntroductionSheet();
         await tester.pumpWidget(
           MaterialApp(
             home: ProviderScope(
@@ -258,7 +258,7 @@ void main() {
                 durationToDiscountPriceDeadline.overrideWithProvider((param) =>
                     Provider.autoDispose((_) => const Duration(seconds: 1000))),
               ],
-              child: MaterialApp(
+              child: const MaterialApp(
                 home: sheet,
               ),
             ),
@@ -288,7 +288,7 @@ void main() {
           fakeDiscountEntitlementDeadlineDate: null,
         );
 
-        final sheet = PremiumIntroductionSheet();
+        const sheet = PremiumIntroductionSheet();
         await tester.pumpWidget(
           MaterialApp(
             home: ProviderScope(
@@ -302,7 +302,7 @@ void main() {
                 durationToDiscountPriceDeadline.overrideWithProvider((param) =>
                     Provider.autoDispose((_) => const Duration(seconds: 1000))),
               ],
-              child: MaterialApp(
+              child: const MaterialApp(
                 home: sheet,
               ),
             ),

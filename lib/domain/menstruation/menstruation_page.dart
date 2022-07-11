@@ -50,7 +50,7 @@ class MenstruationPage extends HookConsumerWidget {
         child: null,
         reload: () => ref.refresh(menstruationPageStateProvider),
       ),
-      loading: () => ScaffoldIndicator(),
+      loading: () => const ScaffoldIndicator(),
     );
   }
 }

@@ -103,7 +103,7 @@ class PremiumIntroductionSheet extends HookConsumerWidget {
                             },
                             text: "プレミアム機能を見る"),
                         const SizedBox(height: 24),
-                        PremiumIntroductionFotter(),
+                        const PremiumIntroductionFotter(),
                       ],
                     ),
                   ),
@@ -128,7 +128,7 @@ showPremiumIntroductionSheet(BuildContext context) {
 
   showModalBottomSheet(
     context: context,
-    builder: (_) => PremiumIntroductionSheet(),
+    builder: (_) => const PremiumIntroductionSheet(),
     backgroundColor: Colors.transparent,
     isScrollControlled: true,
   );

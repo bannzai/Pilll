@@ -57,7 +57,7 @@ extension MenstruationListPageRoute on MenstruationListPage {
   static Route<dynamic> route() {
     return MaterialPageRoute(
       settings: const RouteSettings(name: "MenstruationListPage"),
-      builder: (_) => MenstruationListPage(),
+      builder: (_) => const MenstruationListPage(),
     );
   }
 }

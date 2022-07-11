@@ -15,10 +15,10 @@ class PillSheetModifiedHistoriesPage extends HookConsumerWidget {
     final store = ref.watch(pillSheetModifiedHistoryStoreProvider.notifier);
     final state = ref.watch(pillSheetModifiedHistoryStoreProvider);
     if (!state.isFirstLoadEnded) {
-      return ScaffoldIndicator();
+      return const ScaffoldIndicator();
     }
     if (state.pillSheetModifiedHistories.isEmpty) {
-      return ScaffoldIndicator();
+      return const ScaffoldIndicator();
     }
     return Scaffold(
       backgroundColor: PilllColors.white,
@@ -74,7 +74,7 @@ extension PillSheetModifiedHistoriesPageRoute
   static Route<dynamic> route() {
     return MaterialPageRoute(
       settings: const RouteSettings(name: "PillSheetModifiedHistoriesPage"),
-      builder: (_) => PillSheetModifiedHistoriesPage(),
+      builder: (_) => const PillSheetModifiedHistoriesPage(),
     );
   }
 }

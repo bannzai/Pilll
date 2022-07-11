@@ -87,15 +87,15 @@ class _PillMarkState extends State<PillMark> with TickerProviderStateMixin {
   Widget _mark(PillMarkType type) {
     switch (type) {
       case PillMarkType.normal:
-        return NormalPillMark();
+        return const NormalPillMark();
       case PillMarkType.rest:
-        return RestPillMark();
+        return const RestPillMark();
       case PillMarkType.fake:
-        return FakePillMark();
+        return const FakePillMark();
       case PillMarkType.selected:
-        return SelectedPillMark();
+        return const SelectedPillMark();
       case PillMarkType.done:
-        return LightGrayPillMark();
+        return const LightGrayPillMark();
     }
   }
 }

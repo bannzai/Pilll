@@ -98,7 +98,7 @@ class SettingPageBody extends StatelessWidget {
                     children: [
                       const ListExplainRow(
                           text: "機種変更やスマホ紛失時など、データの引き継ぎ・復元には、アカウント登録が必要です。"),
-                      AccountLinkRow(),
+                      const AccountLinkRow(),
                       _separator(),
                     ],
                   );
@@ -207,7 +207,7 @@ class SettingPageBody extends StatelessWidget {
                     text: "その他",
                     children: [
                       if (state.userIsUpdatedFrom132) ...[
-                        UpdateFrom132Row(),
+                        const UpdateFrom132Row(),
                         _separator(),
                       ],
                       ListTile(

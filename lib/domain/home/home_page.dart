@@ -101,7 +101,7 @@ class _HomePageState extends State<HomePage>
         body: TabBarView(
           physics: const NeverScrollableScrollPhysics(),
           controller: _tabController,
-          children: <Widget>[
+          children: const <Widget>[
             RecordPage(),
             MenstruationPage(),
             CalendarPage(),
@@ -151,13 +151,13 @@ extension HomePageTabFunctions on HomePageTabType {
   Widget widget() {
     switch (this) {
       case HomePageTabType.record:
-        return RecordPage();
+        return const RecordPage();
       case HomePageTabType.menstruation:
-        return MenstruationPage();
+        return const MenstruationPage();
       case HomePageTabType.calendar:
-        return CalendarPage();
+        return const CalendarPage();
       case HomePageTabType.setting:
-        return SettingPage();
+        return const SettingPage();
     }
   }
 

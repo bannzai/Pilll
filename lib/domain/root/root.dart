@@ -67,7 +67,7 @@ class RootState extends State<Root> {
   @override
   Widget build(BuildContext context) {
     if (screenType == null && _error == null) {
-      return ScaffoldIndicator();
+      return const ScaffoldIndicator();
     }
     if (screenType == ScreenType.forceUpdate) {
       Future.microtask(() async {
@@ -82,7 +82,7 @@ class RootState extends State<Root> {
           );
         });
       });
-      return ScaffoldIndicator();
+      return const ScaffoldIndicator();
     }
 
     return UniversalErrorPage(
@@ -95,7 +95,7 @@ class RootState extends State<Root> {
           case ScreenType.initialSetting:
             return InitialSettingPillSheetGroupPageRoute.screen();
           default:
-            return ScaffoldIndicator();
+            return const ScaffoldIndicator();
         }
       }(),
     );

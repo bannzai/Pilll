@@ -91,7 +91,7 @@ void main() {
               durationToDiscountPriceDeadline.overrideWithProvider((param) =>
                   Provider.autoDispose((_) => const Duration(seconds: 1000))),
             ],
-            child: MaterialApp(
+            child: const MaterialApp(
               home: Material(child: NotificationBar()),
             ),
           ),
@@ -152,7 +152,7 @@ void main() {
               durationToDiscountPriceDeadline.overrideWithProvider((param) =>
                   Provider.autoDispose((_) => const Duration(seconds: 1000))),
             ],
-            child: MaterialApp(
+            child: const MaterialApp(
               home: Material(child: NotificationBar()),
             ),
           ),
@@ -208,7 +208,7 @@ void main() {
               notificationBarStateProvider
                   .overrideWithProvider(Provider.autoDispose((_) => state)),
             ],
-            child: MaterialApp(
+            child: const MaterialApp(
               home: Material(child: NotificationBar()),
             ),
           ),
@@ -267,7 +267,7 @@ void main() {
               notificationBarStateProvider
                   .overrideWithProvider(Provider.autoDispose((_) => state)),
             ],
-            child: MaterialApp(
+            child: const MaterialApp(
               home: Material(child: NotificationBar()),
             ),
           ),
@@ -326,7 +326,7 @@ void main() {
               notificationBarStateProvider
                   .overrideWithProvider(Provider.autoDispose((_) => state)),
             ],
-            child: MaterialApp(
+            child: const MaterialApp(
               home: Material(child: NotificationBar()),
             ),
           ),
@@ -384,7 +384,7 @@ void main() {
               notificationBarStateProvider
                   .overrideWithProvider(Provider.autoDispose((_) => state)),
             ],
-            child: MaterialApp(
+            child: const MaterialApp(
               home: Material(child: NotificationBar()),
             ),
           ),
@@ -444,7 +444,7 @@ void main() {
               notificationBarStateProvider
                   .overrideWithProvider(Provider.autoDispose((_) => state)),
             ],
-            child: MaterialApp(
+            child: const MaterialApp(
               home: Material(child: NotificationBar()),
             ),
           ),
@@ -502,7 +502,7 @@ void main() {
               notificationBarStateProvider
                   .overrideWithProvider(Provider.autoDispose((_) => state)),
             ],
-            child: MaterialApp(
+            child: const MaterialApp(
               home: Material(child: NotificationBar()),
             ),
           ),
@@ -560,7 +560,7 @@ void main() {
               notificationBarStateProvider
                   .overrideWithProvider(Provider.autoDispose((_) => state)),
             ],
-            child: MaterialApp(
+            child: const MaterialApp(
               home: Material(child: NotificationBar()),
             ),
           ),

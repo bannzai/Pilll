@@ -82,7 +82,7 @@ class CalendarPillSheetModifiedHistoryCard extends StatelessWidget {
                 ),
                 if (!state.isPremium) ...[
                   const SizedBox(width: 8),
-                  PremiumBadge(),
+                  const PremiumBadge(),
                 ],
               ],
             ),
