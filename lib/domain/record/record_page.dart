@@ -17,6 +17,8 @@ import 'package:hooks_riverpod/hooks_riverpod.dart';
 import 'package:pilll/hooks/automatic_keep_alive_client_mixin.dart';
 
 class RecordPage extends HookConsumerWidget {
+  const RecordPage({Key? key}) : super(key: key);
+
   @override
   Widget build(BuildContext context, WidgetRef ref) {
     final state = ref.watch(recordPageStateNotifierProvider);

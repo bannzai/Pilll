@@ -21,6 +21,8 @@ import 'package:pilll/domain/sign_in/sign_in_sheet.dart';
 import 'package:pilll/domain/sign_in/sign_in_sheet_state.codegen.dart';
 
 class InitialSettingPillSheetGroupPage extends HookConsumerWidget {
+  const InitialSettingPillSheetGroupPage({Key? key}) : super(key: key);
+
   @override
   Widget build(BuildContext context, WidgetRef ref) {
     final store = ref.watch(initialSettingStoreProvider.notifier);

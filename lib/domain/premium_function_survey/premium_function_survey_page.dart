@@ -13,6 +13,8 @@ import 'package:pilll/util/links.dart';
 import 'package:url_launcher/url_launcher.dart';
 
 class PremiumFunctionSurveyPage extends HookConsumerWidget {
+  const PremiumFunctionSurveyPage({Key? key}) : super(key: key);
+
   @override
   Widget build(BuildContext context, WidgetRef ref) {
     final store = ref.watch(premiumFunctionSurveyStoreProvider.notifier);
@@ -144,7 +146,7 @@ extension PremiumFunctionSurveyPageRoutes on PremiumFunctionSurveyPage {
   static Route<dynamic> route() {
     return MaterialPageRoute(
       settings: const RouteSettings(name: "PremiumFunctionSurveyPage"),
-      builder: (_) => PremiumFunctionSurveyPage(),
+      builder: (_) => const PremiumFunctionSurveyPage(),
       fullscreenDialog: true,
     );
   }

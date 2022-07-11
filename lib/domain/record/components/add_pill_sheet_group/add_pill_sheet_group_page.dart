@@ -11,6 +11,8 @@ import 'package:pilll/domain/record/components/add_pill_sheet_group/display_numb
 import 'package:pilll/entity/pill_sheet_type.dart';
 
 class AddPillSheetGroupPage extends HookConsumerWidget {
+  const AddPillSheetGroupPage({Key? key}) : super(key: key);
+
   @override
   Widget build(BuildContext context, WidgetRef ref) {
     final store = ref.watch(addPillSheetGroupStateStoreProvider.notifier);
@@ -101,7 +103,7 @@ extension AddPillSheetGroupPageRoute on AddPillSheetGroupPage {
     return MaterialPageRoute(
       fullscreenDialog: true,
       settings: const RouteSettings(name: "RecordPageAddingPillSheetGroupPage"),
-      builder: (_) => AddPillSheetGroupPage(),
+      builder: (_) => const AddPillSheetGroupPage(),
     );
   }
 }

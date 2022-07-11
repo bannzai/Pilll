@@ -13,7 +13,7 @@ import 'package:pilll/entity/setting.codegen.dart';
 class SelectAppearanceModeModal extends HookConsumerWidget {
   final RecordPageStateNotifier store;
 
-  const SelectAppearanceModeModal(this.store);
+  const SelectAppearanceModeModal(this.store, {Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {

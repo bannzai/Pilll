@@ -8,6 +8,8 @@ import 'package:pilll/domain/calendar/components/pill_sheet_modified_history/pil
 import 'package:pilll/domain/pill_sheet_modified_history/pill_sheet_modified_history_store.dart';
 
 class PillSheetModifiedHistoriesPage extends HookConsumerWidget {
+  const PillSheetModifiedHistoriesPage({Key? key}) : super(key: key);
+
   @override
   Widget build(BuildContext context, WidgetRef ref) {
     final store = ref.watch(pillSheetModifiedHistoryStoreProvider.notifier);

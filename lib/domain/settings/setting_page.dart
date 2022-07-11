@@ -44,6 +44,8 @@ enum SettingSection {
 }
 
 class SettingPage extends HookConsumerWidget {
+  const SettingPage({Key? key}) : super(key: key);
+
   @override
   Widget build(BuildContext context, WidgetRef ref) {
     final store = ref.watch(settingStateNotifierProvider.notifier);
@@ -58,7 +60,7 @@ class SettingPage extends HookConsumerWidget {
         child: null,
         reload: () => ref.refresh(settingStateProvider),
       ),
-      loading: () => ScaffoldIndicator(),
+      loading: () => const ScaffoldIndicator(),
     );
   }
 }

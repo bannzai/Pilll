@@ -11,9 +11,10 @@ class CancelButton extends HookConsumerWidget {
   final PillSheet pillSheet;
 
   const CancelButton({
+    Key? key,
     required this.pillSheetGroup,
     required this.pillSheet,
-  });
+  }) : super(key: key);
   @override
   Widget build(BuildContext context, WidgetRef ref) {
     final store = ref.watch(recordPageStateNotifierProvider.notifier);

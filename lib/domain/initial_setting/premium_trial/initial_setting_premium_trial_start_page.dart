@@ -11,6 +11,8 @@ import 'package:pilll/error/error_alert.dart';
 import 'package:pilll/router/router.dart';
 
 class IntiialSettingPremiumTrialStartPage extends HookConsumerWidget {
+  const IntiialSettingPremiumTrialStartPage({Key? key}) : super(key: key);
+
   @override
   Widget build(BuildContext context, WidgetRef ref) {
     final store = ref.watch(initialSettingStoreProvider.notifier);

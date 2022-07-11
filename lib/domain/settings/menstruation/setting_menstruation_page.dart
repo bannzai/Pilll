@@ -9,6 +9,8 @@ import 'package:pilll/domain/settings/setting_page_state_notifier.dart';
 import 'package:pilll/entity/setting.codegen.dart';
 
 class SettingMenstruationPage extends HookConsumerWidget {
+  const SettingMenstruationPage({Key? key}) : super(key: key);
+
   @override
   Widget build(BuildContext context, WidgetRef ref) {
     final store = ref.watch(settingMenstruationStoreProvider.notifier);
@@ -66,7 +68,7 @@ extension SettingMenstruationPageRoute on SettingMenstruationPage {
   static Route<dynamic> route() {
     return MaterialPageRoute(
       settings: const RouteSettings(name: "SettingMenstruationPage"),
-      builder: (_) => SettingMenstruationPage(),
+      builder: (_) => const SettingMenstruationPage(),
     );
   }
 }

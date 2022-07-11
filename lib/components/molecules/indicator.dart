@@ -26,6 +26,8 @@ class Indicator extends StatelessWidget {
 }
 
 class ScaffoldIndicator extends StatelessWidget {
+  const ScaffoldIndicator({Key? key}) : super(key: key);
+
   @override
   Widget build(BuildContext context) {
     return const Scaffold(
@@ -36,6 +38,8 @@ class ScaffoldIndicator extends StatelessWidget {
 }
 
 class DialogIndicator extends StatelessWidget {
+  const DialogIndicator({Key? key}) : super(key: key);
+
   @override
   Widget build(BuildContext context) {
     return Material(

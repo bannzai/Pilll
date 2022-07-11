@@ -3,10 +3,11 @@ import 'package:pilll/components/atoms/color.dart';
 
 class DotsIndicator extends AnimatedWidget {
   const DotsIndicator({
+    Key? key,
     required this.controller,
     required this.itemCount,
     required this.onDotTapped,
-  }) : super(listenable: controller);
+  }) : super(key: key, listenable: controller);
 
   final PageController controller;
   final int itemCount;

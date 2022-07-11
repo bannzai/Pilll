@@ -34,7 +34,7 @@ class PostDiaryPage extends HookConsumerWidget {
   final DateTime date;
   final Diary? diary;
 
-  const PostDiaryPage(this.date, this.diary);
+  const PostDiaryPage(this.date, this.diary, {Key? key}) : super(key: key);
 
   PostDiaryStoreProviderFamily _family() {
     return PostDiaryStoreProviderFamily(date: date, diary: diary);
@@ -58,12 +58,14 @@ class PostDiaryPage extends HookConsumerWidget {
                   PostDiaryPageConst.keyboardToobarHeight);
           if (overwrapHeight > 0) {
             scrollController.animateTo(overwrapHeight,
-                duration: const Duration(milliseconds: 300), curve: Curves.easeInOut);
+                duration: const Duration(milliseconds: 300),
+                curve: Curves.easeInOut);
           }
         });
       } else {
         scrollController.animateTo(scrollController.position.minScrollExtent,
-            duration: const Duration(milliseconds: 300), curve: Curves.easeInOut);
+            duration: const Duration(milliseconds: 300),
+            curve: Curves.easeInOut);
       }
     });
     return Scaffold(

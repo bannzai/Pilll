@@ -15,9 +15,10 @@ class SelectTodayPillNumberPillSheetList extends HookConsumerWidget {
   final InitialSettingStateStore store;
 
   const SelectTodayPillNumberPillSheetList({
+    Key? key,
     required this.state,
     required this.store,
-  });
+  }) : super(key: key);
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {

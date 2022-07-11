@@ -16,6 +16,8 @@ import 'package:pilll/hooks/automatic_keep_alive_client_mixin.dart';
 import 'package:pilll/util/datetime/day.dart';
 
 class CalendarPage extends HookConsumerWidget {
+  const CalendarPage({Key? key}) : super(key: key);
+
   @override
   Widget build(BuildContext context, WidgetRef ref) {
     final store = ref.watch(calendarPageStateNotifierProvider.notifier);

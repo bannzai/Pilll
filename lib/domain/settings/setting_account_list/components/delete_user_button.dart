@@ -14,6 +14,8 @@ import 'package:pilll/error_log.dart';
 import 'package:pilll/router/router.dart';
 
 class DeleteUserButton extends StatelessWidget {
+  const DeleteUserButton({Key? key}) : super(key: key);
+
   @override
   Widget build(BuildContext context) {
     return Container(

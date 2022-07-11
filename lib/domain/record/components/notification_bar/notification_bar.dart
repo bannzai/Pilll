@@ -17,6 +17,8 @@ import 'package:pilll/domain/sign_in/sign_in_sheet_state.codegen.dart';
 import 'package:pilll/util/datetime/day.dart';
 
 class NotificationBar extends HookConsumerWidget {
+  const NotificationBar({Key? key}) : super(key: key);
+
   @override
   Widget build(BuildContext context, WidgetRef ref) {
     final body = _body(context, ref);

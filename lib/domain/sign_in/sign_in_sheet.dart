@@ -24,9 +24,10 @@ class SignInSheet extends HookConsumerWidget {
   final Function(LinkAccountType)? onSignIn;
 
   const SignInSheet({
+    Key? key,
     required this.stateContext,
     required this.onSignIn,
-  });
+  }) : super(key: key);
   @override
   Widget build(BuildContext context, WidgetRef ref) {
     final store = ref.watch(signinSheetStoreProvider(stateContext).notifier);

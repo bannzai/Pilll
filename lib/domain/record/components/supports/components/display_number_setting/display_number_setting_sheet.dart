@@ -12,6 +12,8 @@ import 'package:pilll/domain/record/components/supports/components/display_numbe
 import 'package:pilll/util/formatter/text_input_formatter.dart';
 
 class DisplayNumberSettingSheet extends HookConsumerWidget {
+  const DisplayNumberSettingSheet({Key? key}) : super(key: key);
+
   @override
   Widget build(BuildContext context, WidgetRef ref) {
     final state = ref.watch(displayNumberSettingStateStoreProvider);
@@ -257,7 +259,7 @@ void showDisplayNumberSettingSheet(
   analytics.setCurrentScreen(screenName: "DisplayNumberSettingSheet");
   showModalBottomSheet(
     context: context,
-    builder: (context) => DisplayNumberSettingSheet(),
+    builder: (context) => const DisplayNumberSettingSheet(),
     backgroundColor: Colors.transparent,
     isScrollControlled: true,
   );

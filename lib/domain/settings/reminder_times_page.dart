@@ -19,8 +19,9 @@ class ReminderTimesPage extends HookConsumerWidget {
   final SettingStateNotifier store;
 
   const ReminderTimesPage({
+    Key? key,
     required this.store,
-  });
+  }) : super(key: key);
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {

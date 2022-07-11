@@ -18,6 +18,8 @@ import 'package:pilll/util/links.dart';
 import 'package:url_launcher/url_launcher.dart';
 
 class PremiumIntroductionSheet extends HookConsumerWidget {
+  const PremiumIntroductionSheet({Key? key}) : super(key: key);
+
   @override
   Widget build(BuildContext context, WidgetRef ref) {
     final store = ref.watch(premiumIntroductionStoreProvider.notifier);
@@ -67,10 +69,10 @@ class PremiumIntroductionSheet extends HookConsumerWidget {
                     child: Column(
                       mainAxisSize: MainAxisSize.min,
                       children: [
-                        PremiumIntroductionHeader(),
+                        const PremiumIntroductionHeader(),
                         if (state.isPremium) ...[
                           const SizedBox(height: 32),
-                          PremiumUserThanksRow(),
+                          const PremiumUserThanksRow(),
                         ],
                         if (!state.isPremium) ...[
                           if (state.hasDiscountEntitlement)

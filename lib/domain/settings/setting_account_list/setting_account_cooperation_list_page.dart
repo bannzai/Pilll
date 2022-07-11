@@ -19,6 +19,8 @@ import 'package:pilll/domain/sign_in/sign_in_sheet.dart';
 import 'package:pilll/domain/sign_in/sign_in_sheet_state.codegen.dart';
 
 class SettingAccountCooperationListPage extends HookConsumerWidget {
+  const SettingAccountCooperationListPage({Key? key}) : super(key: key);
+
   @override
   Widget build(BuildContext context, WidgetRef ref) {
     final store = ref.watch(settingAccountCooperationListProvider.notifier);
@@ -167,7 +169,7 @@ class SettingAccountCooperationListPage extends HookConsumerWidget {
                     },
                   ),
                   const Divider(indent: 16),
-                  DeleteUserButton(),
+                  const DeleteUserButton(),
                 ],
               ),
             );
@@ -200,7 +202,7 @@ extension SettingAccountCooperationListPageRoute
   static Route<dynamic> route() {
     return MaterialPageRoute(
       settings: const RouteSettings(name: "SettingAccountCooperationListPage"),
-      builder: (_) => SettingAccountCooperationListPage(),
+      builder: (_) => const SettingAccountCooperationListPage(),
     );
   }
 }
@@ -212,11 +214,12 @@ class SettingAccountCooperationRow extends StatelessWidget {
   final Future<void> Function() onLongPress;
 
   const SettingAccountCooperationRow({
+    Key? key,
     required this.accountType,
     required this.isLinked,
     required this.onTap,
     required this.onLongPress,
-  });
+  }) : super(key: key);
 
   @override
   Widget build(BuildContext context) {

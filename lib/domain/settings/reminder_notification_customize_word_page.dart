@@ -12,7 +12,8 @@ import 'package:pilll/error/error_alert.dart';
 
 class ReminderNotificationCustomizeWordPage extends HookConsumerWidget {
   final Setting setting;
-  const ReminderNotificationCustomizeWordPage(this.setting);
+  const ReminderNotificationCustomizeWordPage(this.setting, {Key? key})
+      : super(key: key);
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {
