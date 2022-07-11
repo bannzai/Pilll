@@ -315,7 +315,7 @@ class AppOutlinedButton extends HookWidget {
   }
 }
 
-class AlertButton extends StatelessWidget {
+class AlertButton extends HookWidget {
   final String text;
   final Future<void> Function()? onPressed;
 
@@ -326,17 +326,36 @@ class AlertButton extends StatelessWidget {
   }) : super(key: key);
 
   Widget build(BuildContext context) {
+    var isProcessing = useState(false);
     return TextButton(
-      child: Text(
-        text,
-        style: const TextStyle(
-          fontFamily: FontFamily.japanese,
-          fontWeight: FontWeight.w600,
-          fontSize: FontSize.normal,
-          color: PilllColors.primary,
-        ),
+      child: Stack(
+        children: [
+          Text(
+            text,
+            style: TextStyle(
+                fontFamily: FontFamily.japanese,
+                fontWeight: FontWeight.w600,
+                fontSize: FontSize.normal,
+                color: isProcessing.value ? TextColor.gray : TextColor.primary),
+          ),
+          if (isProcessing.value) _Loading(),
+        ],
       ),
-      onPressed: onPressed,
+      onPressed: onPressed == null
+          ? null
+          : () async {
+              if (isProcessing.value) {
+                return;
+              }
+              isProcessing.value = true;
+              try {
+                await onPressed?.call();
+              } catch (error) {
+                rethrow;
+              } finally {
+                isProcessing.value = false;
+              }
+            },
     );
   }
 }
