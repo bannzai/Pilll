@@ -16,7 +16,7 @@ class CancelButton extends HookConsumerWidget {
   });
   Widget build(BuildContext context, WidgetRef ref) {
     final store = ref.watch(recordPageStateNotifierProvider.notifier);
-    return TertiaryButton(
+    return UndoButton(
       text: "飲んでない",
       onPressed: () async {
         analytics.logEvent(name: "cancel_taken_button_pressed", parameters: {
