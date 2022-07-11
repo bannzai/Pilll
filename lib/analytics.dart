@@ -1,6 +1,7 @@
 import 'dart:async';
 
 import 'package:firebase_analytics/firebase_analytics.dart';
+import 'package:flutter/foundation.dart';
 
 final firebaseAnalytics = FirebaseAnalytics.instance;
 
@@ -8,7 +9,9 @@ class Analytics {
   logEvent({required String name, Map<String, dynamic>? parameters}) async {
     assert(name.length <= 40,
         "firebase analytics log event name limit length up to 40");
-    print("[INFO] logEvent name: $name, parameters: $parameters");
+    if (kDebugMode) {
+      print("[INFO] logEvent name: $name, parameters: $parameters");
+    }
 
     if (parameters != null) {
       for (final key in parameters.keys) {
@@ -40,7 +43,9 @@ class Analytics {
         "firebase setUserProperties name limit length up to 25");
     assert(!name.startsWith("firebase_"));
 
-    print("[INFO] setUserProperties name: $name, value: $value");
+    if (kDebugMode) {
+      print("[INFO] setUserProperties name: $name, value: $value");
+    }
     firebaseAnalytics.setUserProperty(name: name, value: value);
   }
 }
