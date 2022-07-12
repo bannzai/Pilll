@@ -9,12 +9,10 @@ void printWrapped(String? _message, {int? wrapWidth}) {
 
   if (kDebugMode) {
     if (message == null) {
-      debugPrint("null");
+      print("null");
     } else {
       final pattern = RegExp('.{1,800}'); // 800 is the size of each chunk
-      pattern
-          .allMatches(message)
-          .forEach((match) => debugPrint(match.group(0)));
+      pattern.allMatches(message).forEach((match) => print(match.group(0)));
     }
   }
 }
