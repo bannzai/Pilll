@@ -290,46 +290,49 @@ class AppOutlinedButton extends HookWidget {
     final isProcessing = useState(false);
     final isMounted = useIsMounted();
 
-    return OutlinedButton(
-      child: Container(
-        padding: const EdgeInsets.only(top: 12, bottom: 12),
-        child: Stack(
-          children: [
-            Text(
-              text,
-              style: TextStyle(
-                color: isProcessing.value ? TextColor.gray : TextColor.main,
-                fontSize: 16,
-                fontFamily: FontFamily.japanese,
-                fontWeight: FontWeight.w700,
+    return Stack(
+      alignment: Alignment.center,
+      children: [
+        OutlinedButton(
+          child: Container(
+            padding: const EdgeInsets.only(top: 12, bottom: 12),
+            child: Center(
+              child: Text(
+                text,
+                style: TextStyle(
+                  color: isProcessing.value ? TextColor.gray : TextColor.main,
+                  fontSize: 16,
+                  fontFamily: FontFamily.japanese,
+                  fontWeight: FontWeight.w700,
+                ),
               ),
             ),
-            if (isProcessing.value) _Loading(),
-          ],
+          ),
+          style: OutlinedButton.styleFrom(
+            primary: PilllColors.secondary,
+            shape: RoundedRectangleBorder(
+              borderRadius: BorderRadius.circular(6),
+            ),
+            side: const BorderSide(color: PilllColors.secondary),
+          ),
+          onPressed: onPressed == null
+              ? null
+              : () async {
+                  if (isProcessing.value) {
+                    return;
+                  }
+                  isProcessing.value = true;
+                  try {
+                    await onPressed?.call();
+                  } catch (error) {
+                    rethrow;
+                  } finally {
+                    if (isMounted()) isProcessing.value = false;
+                  }
+                },
         ),
-      ),
-      style: OutlinedButton.styleFrom(
-        primary: PilllColors.secondary,
-        shape: RoundedRectangleBorder(
-          borderRadius: BorderRadius.circular(6),
-        ),
-        side: const BorderSide(color: PilllColors.secondary),
-      ),
-      onPressed: onPressed == null
-          ? null
-          : () async {
-              if (isProcessing.value) {
-                return;
-              }
-              isProcessing.value = true;
-              try {
-                await onPressed?.call();
-              } catch (error) {
-                rethrow;
-              } finally {
-                if (isMounted()) isProcessing.value = false;
-              }
-            },
+        if (isProcessing.value) _Loading(),
+      ],
     );
   }
 }
@@ -351,6 +354,7 @@ class AlertButton extends HookWidget {
 
     return TextButton(
       child: Stack(
+        alignment: Alignment.center,
         children: [
           Text(
             text,
