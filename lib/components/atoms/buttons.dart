@@ -75,41 +75,41 @@ class UndoButton extends HookWidget {
     final isProcessing = useState(false);
     final isMounted = useIsMounted();
 
-    return ElevatedButton(
-      child: ConstrainedBox(
-        constraints: const BoxConstraints(
-            maxHeight: 44, minHeight: 44, minWidth: 180, maxWidth: 180),
-        child: Stack(
-          alignment: Alignment.center,
-          children: [
-            Text(text, style: ButtonTextStyle.main),
-            if (isProcessing.value) _Loading(),
-          ],
-        ),
-      ),
-      style: ButtonStyle(
-          backgroundColor: MaterialStateProperty.resolveWith((statuses) {
-        if (statuses.contains(MaterialState.disabled)) {
-          return PilllColors.lightGray;
-        }
-        return PilllColors.gray;
-      })),
-      onPressed: isProcessing.value || onPressed == null
-          ? null
-          : () async {
-              if (isProcessing.value) {
-                return;
-              }
-              isProcessing.value = true;
+    return Stack(
+      alignment: Alignment.center,
+      children: [
+        ElevatedButton(
+          child: ConstrainedBox(
+            constraints: const BoxConstraints(
+                maxHeight: 44, minHeight: 44, minWidth: 180, maxWidth: 180),
+            child: Center(child: Text(text, style: ButtonTextStyle.main)),
+          ),
+          style: ButtonStyle(
+              backgroundColor: MaterialStateProperty.resolveWith((statuses) {
+            if (statuses.contains(MaterialState.disabled)) {
+              return PilllColors.lightGray;
+            }
+            return PilllColors.gray;
+          })),
+          onPressed: isProcessing.value || onPressed == null
+              ? null
+              : () async {
+                  if (isProcessing.value) {
+                    return;
+                  }
+                  isProcessing.value = true;
 
-              try {
-                await onPressed?.call();
-              } catch (error) {
-                rethrow;
-              } finally {
-                if (isMounted()) isProcessing.value = false;
-              }
-            },
+                  try {
+                    await onPressed?.call();
+                  } catch (error) {
+                    rethrow;
+                  } finally {
+                    if (isMounted()) isProcessing.value = false;
+                  }
+                },
+        ),
+        if (isProcessing.value) _Loading(),
+      ],
     );
   }
 }
