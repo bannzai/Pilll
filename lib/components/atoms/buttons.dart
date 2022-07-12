@@ -21,41 +21,41 @@ class PrimaryButton extends HookWidget {
     // Avoid [Once you have called dispose() on a ValueNotifier<bool>, it can no longer be use]
     final isMounted = useIsMounted();
 
-    return ElevatedButton(
-      child: ConstrainedBox(
-        constraints: const BoxConstraints(
-            maxHeight: 44, minHeight: 44, minWidth: 180, maxWidth: 180),
-        child: Stack(
-          alignment: Alignment.center,
-          children: [
-            Text(text, style: ButtonTextStyle.main),
-            if (isProcessing.value) _Loading(),
-          ],
-        ),
-      ),
-      style: ButtonStyle(
-          backgroundColor: MaterialStateProperty.resolveWith((statuses) {
-        if (statuses.contains(MaterialState.disabled)) {
-          return PilllColors.lightGray;
-        }
-        return PilllColors.secondary;
-      })),
-      onPressed: isProcessing.value || onPressed == null
-          ? null
-          : () async {
-              if (isProcessing.value) {
-                return;
-              }
-              isProcessing.value = true;
+    return Stack(
+      alignment: Alignment.center,
+      children: [
+        ElevatedButton(
+          child: ConstrainedBox(
+            constraints: const BoxConstraints(
+                maxHeight: 44, minHeight: 44, minWidth: 180, maxWidth: 180),
+            child: Center(child: Text(text, style: ButtonTextStyle.main)),
+          ),
+          style: ButtonStyle(
+              backgroundColor: MaterialStateProperty.resolveWith((statuses) {
+            if (statuses.contains(MaterialState.disabled)) {
+              return PilllColors.lightGray;
+            }
+            return PilllColors.secondary;
+          })),
+          onPressed: isProcessing.value || onPressed == null
+              ? null
+              : () async {
+                  if (isProcessing.value) {
+                    return;
+                  }
+                  isProcessing.value = true;
 
-              try {
-                await onPressed?.call();
-              } catch (error) {
-                rethrow;
-              } finally {
-                if (isMounted()) isProcessing.value = false;
-              }
-            },
+                  try {
+                    await onPressed?.call();
+                  } catch (error) {
+                    rethrow;
+                  } finally {
+                    if (isMounted()) isProcessing.value = false;
+                  }
+                },
+        ),
+        if (isProcessing.value) _Loading(),
+      ],
     );
   }
 }
@@ -75,41 +75,41 @@ class UndoButton extends HookWidget {
     final isProcessing = useState(false);
     final isMounted = useIsMounted();
 
-    return ElevatedButton(
-      child: ConstrainedBox(
-        constraints: const BoxConstraints(
-            maxHeight: 44, minHeight: 44, minWidth: 180, maxWidth: 180),
-        child: Stack(
-          alignment: Alignment.center,
-          children: [
-            Text(text, style: ButtonTextStyle.main),
-            if (isProcessing.value) _Loading(),
-          ],
-        ),
-      ),
-      style: ButtonStyle(
-          backgroundColor: MaterialStateProperty.resolveWith((statuses) {
-        if (statuses.contains(MaterialState.disabled)) {
-          return PilllColors.lightGray;
-        }
-        return PilllColors.gray;
-      })),
-      onPressed: isProcessing.value || onPressed == null
-          ? null
-          : () async {
-              if (isProcessing.value) {
-                return;
-              }
-              isProcessing.value = true;
+    return Stack(
+      alignment: Alignment.center,
+      children: [
+        ElevatedButton(
+          child: ConstrainedBox(
+            constraints: const BoxConstraints(
+                maxHeight: 44, minHeight: 44, minWidth: 180, maxWidth: 180),
+            child: Center(child: Text(text, style: ButtonTextStyle.main)),
+          ),
+          style: ButtonStyle(
+              backgroundColor: MaterialStateProperty.resolveWith((statuses) {
+            if (statuses.contains(MaterialState.disabled)) {
+              return PilllColors.lightGray;
+            }
+            return PilllColors.gray;
+          })),
+          onPressed: isProcessing.value || onPressed == null
+              ? null
+              : () async {
+                  if (isProcessing.value) {
+                    return;
+                  }
+                  isProcessing.value = true;
 
-              try {
-                await onPressed?.call();
-              } catch (error) {
-                rethrow;
-              } finally {
-                if (isMounted()) isProcessing.value = false;
-              }
-            },
+                  try {
+                    await onPressed?.call();
+                  } catch (error) {
+                    rethrow;
+                  } finally {
+                    if (isMounted()) isProcessing.value = false;
+                  }
+                },
+        ),
+        if (isProcessing.value) _Loading(),
+      ],
     );
   }
 }
@@ -290,46 +290,49 @@ class AppOutlinedButton extends HookWidget {
     final isProcessing = useState(false);
     final isMounted = useIsMounted();
 
-    return OutlinedButton(
-      child: Container(
-        padding: const EdgeInsets.only(top: 12, bottom: 12),
-        child: Stack(
-          children: [
-            Text(
-              text,
-              style: TextStyle(
-                color: isProcessing.value ? TextColor.gray : TextColor.main,
-                fontSize: 16,
-                fontFamily: FontFamily.japanese,
-                fontWeight: FontWeight.w700,
+    return Stack(
+      alignment: Alignment.center,
+      children: [
+        OutlinedButton(
+          child: Container(
+            padding: const EdgeInsets.only(top: 12, bottom: 12),
+            child: Center(
+              child: Text(
+                text,
+                style: TextStyle(
+                  color: isProcessing.value ? TextColor.gray : TextColor.main,
+                  fontSize: 16,
+                  fontFamily: FontFamily.japanese,
+                  fontWeight: FontWeight.w700,
+                ),
               ),
             ),
-            if (isProcessing.value) _Loading(),
-          ],
+          ),
+          style: OutlinedButton.styleFrom(
+            primary: PilllColors.secondary,
+            shape: RoundedRectangleBorder(
+              borderRadius: BorderRadius.circular(6),
+            ),
+            side: const BorderSide(color: PilllColors.secondary),
+          ),
+          onPressed: onPressed == null
+              ? null
+              : () async {
+                  if (isProcessing.value) {
+                    return;
+                  }
+                  isProcessing.value = true;
+                  try {
+                    await onPressed?.call();
+                  } catch (error) {
+                    rethrow;
+                  } finally {
+                    if (isMounted()) isProcessing.value = false;
+                  }
+                },
         ),
-      ),
-      style: OutlinedButton.styleFrom(
-        primary: PilllColors.secondary,
-        shape: RoundedRectangleBorder(
-          borderRadius: BorderRadius.circular(6),
-        ),
-        side: const BorderSide(color: PilllColors.secondary),
-      ),
-      onPressed: onPressed == null
-          ? null
-          : () async {
-              if (isProcessing.value) {
-                return;
-              }
-              isProcessing.value = true;
-              try {
-                await onPressed?.call();
-              } catch (error) {
-                rethrow;
-              } finally {
-                if (isMounted()) isProcessing.value = false;
-              }
-            },
+        if (isProcessing.value) _Loading(),
+      ],
     );
   }
 }
@@ -351,6 +354,7 @@ class AlertButton extends HookWidget {
 
     return TextButton(
       child: Stack(
+        alignment: Alignment.center,
         children: [
           Text(
             text,
