@@ -14,7 +14,6 @@ import 'package:pilll/domain/record/weekday_badge.dart';
 import 'package:pilll/domain/menstruation/menstruation_page_state_notifier.dart';
 import 'package:pilll/error/universal_error_page.dart';
 import 'package:pilll/hooks/automatic_keep_alive_client_mixin.dart';
-import 'package:pilll/util/formatter/date_time_formatter.dart';
 
 abstract class MenstruationPageConst {
   static const double calendarHeaderDropShadowOffset = 2;
@@ -101,18 +100,7 @@ class MenstruationPageBody extends StatelessWidget {
               alignment: Alignment.bottomCenter,
               child: Padding(
                 padding: const EdgeInsets.only(bottom: 20.0),
-                child: MenstruationRecordButton(
-                    state: state,
-                    store: store,
-                    onRecord: (menstruation) {
-                      ScaffoldMessenger.of(context).showSnackBar(
-                        SnackBar(
-                          duration: const Duration(seconds: 2),
-                          content: Text(
-                              "${DateTimeFormatter.monthAndDay(menstruation.beginDate)}から生理開始で記録しました"),
-                        ),
-                      );
-                    }),
+                child: MenstruationRecordButton(state: state, store: store),
               ),
             ),
           ],
