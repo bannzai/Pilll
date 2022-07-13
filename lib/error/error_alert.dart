@@ -54,6 +54,10 @@ void showErrorAlert(BuildContext context, Object error) {
     title = error.title ?? "エラーが発生しました";
     message = error.displayedMessage;
     faqLinkURL = error.faqLinkURL;
+  } else if (error is String) {
+    title = "エラーが発生しました";
+    message = error;
+    faqLinkURL = null;
   } else {
     title = "予想外のエラーが発生しました";
     message = error.toString();
