@@ -101,8 +101,7 @@ class SettingAccountCooperationListPage extends HookConsumerWidget {
                                   ),
                                 );
                               } catch (error) {
-                                showErrorAlert(context,
-                                    message: error.toString());
+                                showErrorAlert(context, error);
                               }
                             },
                           ),
@@ -159,8 +158,7 @@ class SettingAccountCooperationListPage extends HookConsumerWidget {
                                   ),
                                 );
                               } catch (error) {
-                                showErrorAlert(context,
-                                    message: error.toString());
+                                showErrorAlert(context, error);
                               }
                             },
                           ),
