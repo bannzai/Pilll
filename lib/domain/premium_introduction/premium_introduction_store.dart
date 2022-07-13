@@ -7,7 +7,7 @@ import 'package:pilll/service/purchase.dart';
 import 'package:pilll/database/user.dart';
 import 'package:purchases_flutter/purchases_flutter.dart';
 import 'package:pilll/domain/premium_introduction/util/map_to_error.dart';
-import 'package:pilll/entity/alert_error.dart';
+import 'package:pilll/error/alert_error.dart';
 import 'package:pilll/error_log.dart';
 import 'package:flutter/services.dart';
 import 'package:pilll/analytics.dart';

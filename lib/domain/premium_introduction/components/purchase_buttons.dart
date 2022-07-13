@@ -7,7 +7,7 @@ import 'package:pilll/domain/premium_introduction/components/monthly_purchase_bu
 import 'package:pilll/domain/premium_introduction/premium_complete_dialog.dart';
 import 'package:pilll/domain/premium_introduction/premium_introduction_state.codegen.dart';
 import 'package:pilll/domain/premium_introduction/premium_introduction_store.dart';
-import 'package:pilll/entity/alert_error.dart';
+import 'package:pilll/error/alert_error.dart';
 import 'package:pilll/error/error_alert.dart';
 import 'package:pilll/error/universal_error_page.dart';
 import 'package:purchases_flutter/purchases_flutter.dart';
