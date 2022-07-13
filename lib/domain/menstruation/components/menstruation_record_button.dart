@@ -5,6 +5,7 @@ import 'package:pilll/domain/menstruation/menstruation_state.codegen.dart';
 import 'package:pilll/domain/menstruation_edit/menstruation_edit_page.dart';
 import 'package:pilll/domain/menstruation/menstruation_select_modify_type_sheet.dart';
 import 'package:pilll/domain/menstruation/menstruation_page_state_notifier.dart';
+import 'package:pilll/entity/menstruation.codegen.dart';
 import 'package:pilll/util/datetime/day.dart';
 
 class MenstruationRecordButton extends StatelessWidget {
@@ -12,10 +13,12 @@ class MenstruationRecordButton extends StatelessWidget {
     Key? key,
     required this.state,
     required this.store,
+    required this.onRecord,
   }) : super(key: key);
 
   final MenstruationState state;
   final MenstruationPageStateNotifier store;
+  final Function(Menstruation) onRecord;
 
   @override
   Widget build(BuildContext context) {
@@ -41,30 +44,18 @@ class MenstruationRecordButton extends StatelessWidget {
             switch (type) {
               case MenstruationSelectModifyType.today:
                 analytics.logEvent(name: "tapped_menstruation_record_today");
-                Navigator.of(context).pop();
                 final created =
                     await store.asyncAction.recordFromToday(setting: setting);
-                ScaffoldMessenger.of(context).showSnackBar(
-                  SnackBar(
-                    duration: const Duration(seconds: 2),
-                    content: Text(
-                        "${DateTimeFormatter.monthAndDay(created.beginDate)}から生理開始で記録しました"),
-                  ),
-                );
+                onRecord(created);
+                Navigator.of(context).pop();
                 return;
               case MenstruationSelectModifyType.yesterday:
                 analytics.logEvent(
                     name: "tapped_menstruation_record_yesterday");
-                Navigator.of(context).pop();
                 final created = await store.asyncAction
                     .recordFromYesterday(setting: setting);
-                ScaffoldMessenger.of(context).showSnackBar(
-                  SnackBar(
-                    duration: const Duration(seconds: 2),
-                    content: Text(
-                        "${DateTimeFormatter.monthAndDay(created.beginDate)}から生理開始で記録しました"),
-                  ),
-                );
+                onRecord(created);
+                Navigator.of(context).pop();
                 return;
               case MenstruationSelectModifyType.begin:
                 analytics.logEvent(name: "tapped_menstruation_record_begin");
