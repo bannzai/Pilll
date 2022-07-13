@@ -43,12 +43,29 @@ class ErrorAlert extends StatelessWidget {
 }
 
 void showErrorAlert(BuildContext context, Object error) {
+  final String title;
+  final String message;
+  final String? faqLinkURL;
+  if (error is FormatException) {
+    title = "不明なエラーが発生しました";
+    message = error.message;
+    faqLinkURL = null;
+  } else if (error is AlertError) {
+    title = error.title ?? "エラーが発生しました";
+    message = error.displayedMessage;
+    faqLinkURL = error.faqLinkURL;
+  } else {
+    title = "予想外のエラーが発生しました";
+    message = error.toString();
+    faqLinkURL = null;
+  }
   showDialog(
     context: context,
     builder: (_) {
       return ErrorAlert(
-        title: "エラーが発生しました",
-        errorMessage: error.toString(),
+        title: title,
+        errorMessage: message,
+        faqLinkURL: faqLinkURL,
       );
     },
   );
