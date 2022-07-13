@@ -2,7 +2,7 @@ import 'package:pilll/components/atoms/buttons.dart';
 import 'package:pilll/components/atoms/font.dart';
 import 'package:pilll/components/atoms/text_color.dart';
 import 'package:flutter/material.dart';
-import 'package:pilll/entity/user_error.dart';
+import 'package:pilll/entity/alert_error.dart';
 import 'package:url_launcher/url_launcher.dart';
 
 class ErrorAlert extends StatelessWidget {

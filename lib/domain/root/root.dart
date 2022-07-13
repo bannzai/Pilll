@@ -13,7 +13,7 @@ import 'package:pilll/performance.dart';
 import 'package:pilll/service/auth.dart';
 import 'package:pilll/database/database.dart';
 import 'package:pilll/domain/home/home_page.dart';
-import 'package:pilll/entity/user_error.dart';
+import 'package:pilll/entity/alert_error.dart';
 import 'package:pilll/components/molecules/indicator.dart';
 import 'package:pilll/error/template.dart';
 import 'package:pilll/error/universal_error_page.dart';

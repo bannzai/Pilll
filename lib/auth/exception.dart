@@ -1,6 +1,6 @@
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:pilll/entity/link_account_type.dart';
-import 'package:pilll/entity/user_error.dart';
+import 'package:pilll/entity/alert_error.dart';
 
 Exception? mapFromFirebaseAuthException(
     FirebaseAuthException e, LinkAccountType accountType) {
