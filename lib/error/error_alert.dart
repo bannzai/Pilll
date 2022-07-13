@@ -42,19 +42,6 @@ class ErrorAlert extends StatelessWidget {
   }
 }
 
-void showErrorAlert(BuildContext context,
-    {String? title, required String message}) {
-  showDialog(
-    context: context,
-    builder: (_) {
-      return ErrorAlert(
-        title: title,
-        errorMessage: message,
-      );
-    },
-  );
-}
-
 void showErrorAlertFor(BuildContext context, Object error) {
   showDialog(
     context: context,
@@ -62,19 +49,6 @@ void showErrorAlertFor(BuildContext context, Object error) {
       return ErrorAlert(
         title: "エラーが発生しました",
         errorMessage: error.toString(),
-      );
-    },
-  );
-}
-
-void showErrorAlertWithError(BuildContext context, AlertError error) {
-  showDialog(
-    context: context,
-    builder: (_) {
-      return ErrorAlert(
-        title: error.title ?? "エラーが発生しました",
-        errorMessage: error.toString(),
-        faqLinkURL: error.faqLinkURL,
       );
     },
   );
