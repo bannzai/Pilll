@@ -95,7 +95,7 @@ class ReminderNotificationCustomizeWordPage extends HookConsumerWidget {
                             .reminderNotificationWordSubmit(word, setting);
                         Navigator.of(context).pop();
                       } catch (error) {
-                        showErrorAlert(context, message: error.toString());
+                        showErrorAlert(context, error);
                       }
                     },
                     controller: textFieldControlelr,

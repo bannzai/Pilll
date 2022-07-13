@@ -94,10 +94,10 @@ class DeleteUserButton extends StatelessWidget {
         );
       } else {
         errorLogger.recordError(error, stackTrace);
-        showErrorAlert(context, message: error.toString());
+        showErrorAlert(context, error);
       }
     } catch (error) {
-      showErrorAlert(context, message: error.toString());
+      showErrorAlert(context, error);
     }
   }
 }
