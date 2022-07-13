@@ -70,7 +70,7 @@ class PurchaseButtons extends HookConsumerWidget {
       }
     } catch (error) {
       debugPrint("caused purchase error for $error");
-      if (error is UserDisplayedError) {
+      if (error is AlertError) {
         showErrorAlertWithError(context, error);
       } else {
         UniversalErrorPage.of(context).showError(error);

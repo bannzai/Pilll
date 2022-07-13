@@ -40,7 +40,7 @@ class HealthCareRow extends StatelessWidget {
             }
           }
         } catch (error) {
-          if (error is UserDisplayedError) {
+          if (error is AlertError) {
             showErrorAlertWithError(context, error);
           } else {
             UniversalErrorPage.of(context).showError(error);

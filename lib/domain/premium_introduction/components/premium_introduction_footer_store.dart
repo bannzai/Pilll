@@ -31,7 +31,7 @@ class PremiumIntroductionFooterStateStore {
         "entitlements": entitlements?.identifier,
         "isActivated": entitlements?.isActive,
       });
-      throw UserDisplayedError("以前の購入情報が見つかりません。アカウントをお確かめの上再度お試しください");
+      throw AlertError("以前の購入情報が見つかりません。アカウントをお確かめの上再度お試しください");
     } on PlatformException catch (exception, stack) {
       analytics.logEvent(name: "catched_restore_exception", parameters: {
         "code": exception.code,

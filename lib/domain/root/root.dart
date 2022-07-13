@@ -209,7 +209,7 @@ class RootState extends State<Root> {
         errorLogger.recordError(error, stackTrace);
 
         setState(() {
-          _error = UserDisplayedError(
+          _error = AlertError(
               "起動処理でエラーが発生しました\n${ErrorMessages.connection}\n詳細:" +
                   error.toString());
         });
@@ -241,7 +241,7 @@ class RootState extends State<Root> {
         errorLogger.recordError(error, stackTrace);
 
         setState(() {
-          _error = UserDisplayedError(
+          _error = AlertError(
               "起動処理でエラーが発生しました\n${ErrorMessages.connection}\n詳細:" +
                   error.toString());
         });

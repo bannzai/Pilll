@@ -67,7 +67,7 @@ void showErrorAlertFor(BuildContext context, Object error) {
   );
 }
 
-void showErrorAlertWithError(BuildContext context, UserDisplayedError error) {
+void showErrorAlertWithError(BuildContext context, AlertError error) {
   showDialog(
     context: context,
     builder: (_) {
