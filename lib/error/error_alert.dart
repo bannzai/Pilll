@@ -42,7 +42,7 @@ class ErrorAlert extends StatelessWidget {
   }
 }
 
-void showErrorAlertFor(BuildContext context, Object error) {
+void showErrorAlert(BuildContext context, Object error) {
   showDialog(
     context: context,
     builder: (_) {

@@ -48,7 +48,7 @@ class CreatingNewPillSheetRow extends HookConsumerWidget {
           store.asyncAction
               .modifiyIsAutomaticallyCreatePillSheet(
                   !setting.isAutomaticallyCreatePillSheet, setting)
-              .catchError((error) => showErrorAlertFor(context, error))
+              .catchError((error) => showErrorAlert(context, error))
               .then(
                 (_) => ScaffoldMessenger.of(context).showSnackBar(
                   SnackBar(

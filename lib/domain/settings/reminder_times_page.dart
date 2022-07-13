@@ -130,7 +130,7 @@ class ReminderTimesPage extends HookConsumerWidget {
               analytics.logEvent(name: "delete_reminder_time");
               store.asyncAction
                   .deleteReminderTimes(index: number - 1, setting: setting)
-                  .catchError((error) => showErrorAlertFor(context, error));
+                  .catchError((error) => showErrorAlert(context, error));
             },
       background: Container(
         color: Colors.red,
@@ -200,7 +200,7 @@ class ReminderTimesPage extends HookConsumerWidget {
                         hour: dateTime.hour, minute: dateTime.minute),
                     setting: setting,
                   )
-                  .catchError((error) => showErrorAlertFor(context, error)));
+                  .catchError((error) => showErrorAlert(context, error)));
             } else {
               analytics.logEvent(name: "added_reminder_time");
               unawaited(store.asyncAction
@@ -208,7 +208,7 @@ class ReminderTimesPage extends HookConsumerWidget {
                       reminderTime: ReminderTime(
                           hour: dateTime.hour, minute: dateTime.minute),
                       setting: setting)
-                  .catchError((error) => showErrorAlertFor(context, error)));
+                  .catchError((error) => showErrorAlert(context, error)));
             }
 
             Navigator.pop(context);
