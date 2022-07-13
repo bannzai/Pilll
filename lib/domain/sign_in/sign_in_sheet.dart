@@ -104,7 +104,7 @@ class SignInSheet extends HookConsumerWidget {
           }
         } catch (error) {
           if (error is AlertError) {
-            showErrorAlertWithError(context, error);
+            showErrorAlert(context, error);
           } else {
             store.handleException(error);
           }
@@ -165,7 +165,7 @@ class SignInSheet extends HookConsumerWidget {
           }
         } catch (error) {
           if (error is AlertError) {
-            showErrorAlertWithError(context, error);
+            showErrorAlert(context, error);
           } else {
             store.handleException(error);
           }
