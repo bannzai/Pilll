@@ -7,6 +7,7 @@
 
   ],
   "settings" : {
+    "_locale" : "ja",
     "_storefront" : "JPN",
     "_timeRate" : 4
   },
@@ -20,6 +21,9 @@
       "subscriptions" : [
         {
           "adHocOffers" : [
+
+          ],
+          "codeOffers" : [
 
           ],
           "displayPrice" : "3000",
@@ -47,6 +51,9 @@
         },
         {
           "adHocOffers" : [
+
+          ],
+          "codeOffers" : [
 
           ],
           "displayPrice" : "300",
@@ -85,6 +92,9 @@
           "adHocOffers" : [
 
           ],
+          "codeOffers" : [
+
+          ],
           "displayPrice" : "3600",
           "familyShareable" : false,
           "groupNumber" : 1,
@@ -110,6 +120,9 @@
         },
         {
           "adHocOffers" : [
+
+          ],
+          "codeOffers" : [
 
           ],
           "displayPrice" : "480",
@@ -148,6 +161,9 @@
           "adHocOffers" : [
 
           ],
+          "codeOffers" : [
+
+          ],
           "displayPrice" : "3600",
           "familyShareable" : false,
           "groupNumber" : 1,
@@ -173,6 +189,9 @@
         },
         {
           "adHocOffers" : [
+
+          ],
+          "codeOffers" : [
 
           ],
           "displayPrice" : "480",
@@ -203,6 +222,6 @@
   ],
   "version" : {
     "major" : 1,
-    "minor" : 1
+    "minor" : 2
   }
 }
