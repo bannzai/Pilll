@@ -3,7 +3,7 @@ import 'dart:async';
 import 'package:flutter/services.dart';
 import 'package:pilll/analytics.dart';
 import 'package:pilll/domain/premium_introduction/util/map_to_error.dart';
-import 'package:pilll/entity/user_error.dart';
+import 'package:pilll/error/alert_error.dart';
 import 'package:pilll/error_log.dart';
 import 'package:pilll/service/purchase.dart';
 import 'package:purchases_flutter/purchases_flutter.dart';
@@ -31,7 +31,7 @@ class PremiumIntroductionFooterStateStore {
         "entitlements": entitlements?.identifier,
         "isActivated": entitlements?.isActive,
       });
-      throw UserDisplayedError("以前の購入情報が見つかりません。アカウントをお確かめの上再度お試しください");
+      throw AlertError("以前の購入情報が見つかりません。アカウントをお確かめの上再度お試しください");
     } on PlatformException catch (exception, stack) {
       analytics.logEvent(name: "catched_restore_exception", parameters: {
         "code": exception.code,

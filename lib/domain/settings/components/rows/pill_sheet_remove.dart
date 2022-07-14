@@ -68,8 +68,7 @@ class PillSheetRemoveRow extends HookConsumerWidget {
                           latestPillSheetGroup: latestPillSheetGroup,
                           activedPillSheet: activedPillSheet,
                         )
-                        .catchError(
-                            (error) => showErrorAlertFor(context, error));
+                        .catchError((error) => showErrorAlert(context, error));
                     Navigator.of(context).pop();
                   },
                 ),

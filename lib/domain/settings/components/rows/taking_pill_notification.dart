@@ -28,7 +28,7 @@ class TakingPillNotification extends HookConsumerWidget {
         ScaffoldMessenger.of(context).hideCurrentSnackBar();
         store.asyncAction
             .modifyIsOnReminder(!setting.isOnReminder, setting)
-            .catchError((error) => showErrorAlertFor(context, error))
+            .catchError((error) => showErrorAlert(context, error))
             .then(
               (_) => ScaffoldMessenger.of(context).showSnackBar(
                 SnackBar(

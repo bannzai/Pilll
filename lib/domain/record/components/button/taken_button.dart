@@ -41,7 +41,7 @@ class TakenButton extends HookConsumerWidget {
           await store.asyncAction.taken(pillSheetGroup: pillSheetGroup);
         } catch (exception, stack) {
           errorLogger.recordError(exception, stack);
-          showErrorAlert(context, message: exception.toString());
+          showErrorAlert(context, exception);
         }
       },
     );

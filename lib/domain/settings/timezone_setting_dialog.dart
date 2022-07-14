@@ -77,7 +77,7 @@ class TimezoneSettingDialog extends StatelessWidget {
                   timezoneDatabaseName: state.deviceTimezoneName);
               onDone(state.deviceTimezoneName);
             } catch (error) {
-              showErrorAlert(context, message: error.toString());
+              showErrorAlert(context, error);
             }
 
             Navigator.of(context).pop();

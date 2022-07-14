@@ -9,7 +9,7 @@ import 'package:pilll/components/atoms/font.dart';
 import 'package:pilll/components/atoms/text_color.dart';
 import 'package:pilll/components/page/hud.dart';
 import 'package:pilll/entity/link_account_type.dart';
-import 'package:pilll/entity/user_error.dart';
+import 'package:pilll/error/alert_error.dart';
 import 'package:pilll/error/error_alert.dart';
 import 'package:pilll/error/universal_error_page.dart';
 import 'package:pilll/domain/sign_in/sign_in_sheet_state.codegen.dart';
@@ -103,8 +103,8 @@ class SignInSheet extends HookConsumerWidget {
               return;
           }
         } catch (error) {
-          if (error is UserDisplayedError) {
-            showErrorAlertWithError(context, error);
+          if (error is AlertError) {
+            showErrorAlert(context, error);
           } else {
             store.handleException(error);
           }
@@ -164,8 +164,8 @@ class SignInSheet extends HookConsumerWidget {
               return;
           }
         } catch (error) {
-          if (error is UserDisplayedError) {
-            showErrorAlertWithError(context, error);
+          if (error is AlertError) {
+            showErrorAlert(context, error);
           } else {
             store.handleException(error);
           }

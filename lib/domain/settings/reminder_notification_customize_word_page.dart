@@ -95,7 +95,7 @@ class ReminderNotificationCustomizeWordPage extends HookConsumerWidget {
                             .reminderNotificationWordSubmit(word, setting);
                         Navigator.of(context).pop();
                       } catch (error) {
-                        showErrorAlert(context, message: error.toString());
+                        showErrorAlert(context, error);
                       }
                     },
                     controller: textFieldControlelr,
@@ -121,7 +121,7 @@ class ReminderNotificationCustomizeWordPage extends HookConsumerWidget {
                                 .setIsInVisibleReminderDate(!value, setting);
                             isInVisibleReminderDate.value = !value;
                           } catch (error) {
-                            showErrorAlertFor(context, error);
+                            showErrorAlert(context, error);
                           }
                         },
                       ),
@@ -137,7 +137,7 @@ class ReminderNotificationCustomizeWordPage extends HookConsumerWidget {
                                 .setIsInVisiblePillNumber(!value, setting);
                             isInVisiblePillNumber.value = !value;
                           } catch (error) {
-                            showErrorAlertFor(context, error);
+                            showErrorAlert(context, error);
                           }
                         },
                       ),
@@ -153,7 +153,7 @@ class ReminderNotificationCustomizeWordPage extends HookConsumerWidget {
                                 .setIsInVisibleDescription(!value, setting);
                             isInVisibleDescription.value = !value;
                           } catch (error) {
-                            showErrorAlertFor(context, error);
+                            showErrorAlert(context, error);
                           }
                         },
                       ),

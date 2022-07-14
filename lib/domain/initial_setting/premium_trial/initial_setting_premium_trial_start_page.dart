@@ -131,7 +131,7 @@ class IntiialSettingPremiumTrialStartPage extends HookConsumerWidget {
                     await store.register();
                     AppRouter.endInitialSetting(context);
                   } catch (error) {
-                    showErrorAlert(context, message: error.toString());
+                    showErrorAlert(context, error.toString());
                   }
                 },
               ),

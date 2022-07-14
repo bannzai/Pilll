@@ -141,7 +141,7 @@ class RecordPagePillSheet extends StatelessWidget {
               }
             } catch (exception, stack) {
               errorLogger.recordError(exception, stack);
-              showErrorAlert(context, message: exception.toString());
+              showErrorAlert(context, exception);
             }
           },
         ),

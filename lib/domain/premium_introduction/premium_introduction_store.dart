@@ -7,7 +7,7 @@ import 'package:pilll/service/purchase.dart';
 import 'package:pilll/database/user.dart';
 import 'package:purchases_flutter/purchases_flutter.dart';
 import 'package:pilll/domain/premium_introduction/util/map_to_error.dart';
-import 'package:pilll/entity/user_error.dart';
+import 'package:pilll/error/alert_error.dart';
 import 'package:pilll/error_log.dart';
 import 'package:flutter/services.dart';
 import 'package:pilll/analytics.dart';
@@ -106,7 +106,7 @@ class PremiumIntroductionStore extends StateNotifier<PremiumIntroductionState> {
         throw AssertionError("unexpected premium entitlements is not exists");
       }
       if (!premiumEntitlement.isActive) {
-        throw UserDisplayedError("課金の有効化が完了しておりません。しばらく時間をおいてからご確認ください");
+        throw AlertError("課金の有効化が完了しておりません。しばらく時間をおいてからご確認ください");
       }
       await callUpdatePurchaseInfo(purchaserInfo);
       return Future.value(true);

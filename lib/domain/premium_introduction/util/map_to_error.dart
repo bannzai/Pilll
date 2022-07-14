@@ -1,5 +1,5 @@
 import 'package:flutter/services.dart';
-import 'package:pilll/entity/user_error.dart';
+import 'package:pilll/error/alert_error.dart';
 import 'package:pilll/util/platform/platform.dart';
 import 'package:purchases_flutter/purchases_flutter.dart';
 
@@ -25,30 +25,28 @@ Exception? mapToDisplayedException(PlatformException exception) {
     case PurchasesErrorCode.purchaseNotAllowedError:
       // NOTE: Maybe simulator or emulators
       // See more details: https://docs.revenuecat.com/docs/errors#--purchase_not_allowed
-      return UserDisplayedError("このデバイスで購入が許可されていません");
+      return AlertError("このデバイスで購入が許可されていません");
     case PurchasesErrorCode.purchaseInvalidError:
       // See more details: https://docs.revenuecat.com/docs/errors#-purchase_invalid
-      return UserDisplayedError("支払いに失敗しました。有効な支払い方法かどうかをご確認の上再度お試しください");
+      return AlertError("支払いに失敗しました。有効な支払い方法かどうかをご確認の上再度お試しください");
     case PurchasesErrorCode.productNotAvailableForPurchaseError:
       // Maybe missed implement or User references older payment product.
       // See more details: https://docs.revenuecat.com/docs/errors#-product_not_available_for_purchase
-      return UserDisplayedError("対象のプランは現在販売しておりません。お手数ですがアプリを再起動の上お試しください");
+      return AlertError("対象のプランは現在販売しておりません。お手数ですがアプリを再起動の上お試しください");
     case PurchasesErrorCode.productAlreadyPurchasedError:
       // User already has same product. Announcement to restore
       // See more details: https://docs.revenuecat.com/docs/errors#-product_already_purchased
       // > If this occurs in production, make sure the user restores purchases to re-sync any transactions with their current App User Id.
-      return UserDisplayedError(
+      return AlertError(
           "すでにプランを購入済みです。この端末で購入情報を復元する場合は「以前購入した方はこちら」から購入情報を復元してくさい");
     case PurchasesErrorCode.receiptAlreadyInUseError:
-      return UserDisplayedError(
-          '既に購入済み。もくは購入情報は別のユーザーで使用されています。$accountNameを確認してください');
+      return AlertError('既に購入済み。もくは購入情報は別のユーザーで使用されています。$accountNameを確認してください');
     case PurchasesErrorCode.invalidReceiptError:
-      return UserDisplayedError("不正な購入情報です。購入情報を確かめてください");
+      return AlertError("不正な購入情報です。購入情報を確かめてください");
     case PurchasesErrorCode.missingReceiptFileError:
-      return UserDisplayedError(
-          "購入者の情報が存在しません。$accountName で端末にサインインをした上でお試しください");
+      return AlertError("購入者の情報が存在しません。$accountName で端末にサインインをした上でお試しください");
     case PurchasesErrorCode.networkError:
-      return UserDisplayedError("ネットワーク状態が不安定です。接続状況を確認した上でお試しください。");
+      return AlertError("ネットワーク状態が不安定です。接続状況を確認した上でお試しください。");
     case PurchasesErrorCode.invalidCredentialsError:
       // Maybe developer or store settings error
       // See more details: https://docs.revenuecat.com/docs/errors#---invalid_credentials
@@ -60,13 +58,13 @@ Exception? mapToDisplayedException(PlatformException exception) {
       return FormatException(
           "現在購入ができません。時間をおいて再度お試しください。解決しない場合は 設定 > 問い合わせ よりお問い合わせください。詳細: ${exception.message}:${exception.details}");
     case PurchasesErrorCode.receiptInUseByOtherSubscriberError:
-      return UserDisplayedError(
+      return AlertError(
           '購入情報は別のユーザーで使用されています。端末にログインしている$accountNameを確認してください');
     case PurchasesErrorCode.invalidAppUserIdError:
       return FormatException(
           "ユーザーが確認できませんでした。アプリを再起動の上再度お試しください。詳細: ${exception.message}:${exception.details}");
     case PurchasesErrorCode.operationAlreadyInProgressError:
-      return UserDisplayedError('購入処理が別途進んでおります。お時間をおいて再度ご確認ください');
+      return AlertError('購入処理が別途進んでおります。お時間をおいて再度ご確認ください');
     case PurchasesErrorCode.unknownBackendError:
       // Maybe RevenueCat incident
       // See more details: https://docs.revenuecat.com/docs/errors#-unknown_backend_error
@@ -84,10 +82,10 @@ Exception? mapToDisplayedException(PlatformException exception) {
       return FormatException(
           "お使いのユーザーでの購入に失敗しました。時間をおいて再度お試しください。解決しない場合は 設定 > 問い合わせ よりお問い合わせください。詳細: ${exception.message}:${exception.details}");
     case PurchasesErrorCode.insufficientPermissionsError:
-      return UserDisplayedError(
+      return AlertError(
           'お使いの $accountName ではプランへの加入ができません。お支払い情報をご確認の上再度お試しください');
     case PurchasesErrorCode.paymentPendingError:
-      return UserDisplayedError(
+      return AlertError(
           '支払いが途中で止まっております。ログイン中の$accountNameで$storeNameをお確かめくだい');
     case PurchasesErrorCode.invalidSubscriberAttributesError:
       // See more details: https://docs.revenuecat.com/docs/errors#-invalid_subscriber_attributes

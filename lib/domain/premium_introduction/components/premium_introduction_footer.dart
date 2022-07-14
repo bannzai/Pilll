@@ -5,7 +5,7 @@ import 'package:pilll/components/atoms/font.dart';
 import 'package:pilll/components/atoms/text_color.dart';
 import 'package:pilll/components/page/hud.dart';
 import 'package:pilll/domain/premium_introduction/components/premium_introduction_footer_store.dart';
-import 'package:pilll/entity/user_error.dart';
+import 'package:pilll/error/alert_error.dart';
 import 'package:pilll/error/error_alert.dart';
 import 'package:pilll/error/universal_error_page.dart';
 import 'package:pilll/util/platform/platform.dart';
@@ -110,8 +110,8 @@ class PremiumIntroductionFotter extends StatelessWidget {
                   );
                 }
               } catch (error) {
-                if (error is UserDisplayedError) {
-                  showErrorAlertWithError(context, error);
+                if (error is AlertError) {
+                  showErrorAlert(context, error);
                 } else {
                   UniversalErrorPage.of(context).showError(error);
                 }

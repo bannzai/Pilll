@@ -126,7 +126,7 @@ class PremiumFunctionSurveyPage extends HookConsumerWidget {
                           await store.send();
                           Navigator.of(context).pop();
                         } catch (error) {
-                          showErrorAlert(context, message: error.toString());
+                          showErrorAlert(context, error);
                         }
                       },
                       text: "この内容で送る",

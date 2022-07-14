@@ -37,7 +37,7 @@ class NotificationInRestDuration extends HookConsumerWidget {
         store.asyncAction
             .modifyIsOnNotifyInNotTakenDuration(
                 !setting.isOnNotifyInNotTakenDuration, setting)
-            .catchError((error) => showErrorAlertFor(context, error))
+            .catchError((error) => showErrorAlert(context, error))
             .then((_) => ScaffoldMessenger.of(context).showSnackBar(
                   SnackBar(
                     duration: const Duration(seconds: 2),

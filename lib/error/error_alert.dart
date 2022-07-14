@@ -2,7 +2,7 @@ import 'package:pilll/components/atoms/buttons.dart';
 import 'package:pilll/components/atoms/font.dart';
 import 'package:pilll/components/atoms/text_color.dart';
 import 'package:flutter/material.dart';
-import 'package:pilll/entity/user_error.dart';
+import 'package:pilll/error/alert_error.dart';
 import 'package:url_launcher/url_launcher.dart';
 
 class ErrorAlert extends StatelessWidget {
@@ -42,39 +42,34 @@ class ErrorAlert extends StatelessWidget {
   }
 }
 
-void showErrorAlert(BuildContext context,
-    {String? title, required String message}) {
+void showErrorAlert(BuildContext context, Object error) {
+  final String title;
+  final String message;
+  final String? faqLinkURL;
+  if (error is FormatException) {
+    title = "不明なエラーが発生しました";
+    message = error.message;
+    faqLinkURL = null;
+  } else if (error is AlertError) {
+    title = error.title ?? "エラーが発生しました";
+    message = error.displayedMessage;
+    faqLinkURL = error.faqLinkURL;
+  } else if (error is String) {
+    title = "エラーが発生しました";
+    message = error;
+    faqLinkURL = null;
+  } else {
+    title = "予想外のエラーが発生しました";
+    message = error.toString();
+    faqLinkURL = null;
+  }
   showDialog(
     context: context,
     builder: (_) {
       return ErrorAlert(
         title: title,
         errorMessage: message,
-      );
-    },
-  );
-}
-
-void showErrorAlertFor(BuildContext context, Object error) {
-  showDialog(
-    context: context,
-    builder: (_) {
-      return ErrorAlert(
-        title: "エラーが発生しました",
-        errorMessage: error.toString(),
-      );
-    },
-  );
-}
-
-void showErrorAlertWithError(BuildContext context, UserDisplayedError error) {
-  showDialog(
-    context: context,
-    builder: (_) {
-      return ErrorAlert(
-        title: error.title ?? "エラーが発生しました",
-        errorMessage: error.toString(),
-        faqLinkURL: error.faqLinkURL,
+        faqLinkURL: faqLinkURL,
       );
     },
   );

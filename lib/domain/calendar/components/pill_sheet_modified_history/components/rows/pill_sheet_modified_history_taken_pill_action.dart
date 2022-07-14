@@ -73,8 +73,7 @@ class PillSheetModifiedHistoryTakenPillAction extends StatelessWidget {
                     );
                     Navigator.pop(context);
                   } catch (error) {
-                    showErrorAlert(context,
-                        message: '更新に失敗しました。通信環境をお確かめの上、再度変更してください');
+                    showErrorAlert(context, '更新に失敗しました。通信環境をお確かめの上、再度変更してください');
                   }
                 },
               );

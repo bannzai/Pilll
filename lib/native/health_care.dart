@@ -2,7 +2,7 @@ import 'dart:io';
 
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:pilll/entity/menstruation.codegen.dart';
-import 'package:pilll/entity/user_error.dart';
+import 'package:pilll/error/alert_error.dart';
 import 'package:pilll/native/channel.dart';
 
 Future<bool> isHealthDataAvailable() async {
@@ -42,7 +42,7 @@ Future<bool> shouldRequestForAccessToHealthKitData() async {
   if (response["result"] == "success") {
     return response["shouldRequestForAccessToHealthKitData"] == true;
   } else if (response["result"] == "failure") {
-    throw UserDisplayedError(response["reason"]);
+    throw AlertError(response["reason"]);
   } else {
     throw Exception("unknown error");
   }
@@ -63,7 +63,7 @@ Future<bool> requestWriteMenstrualFlowHealthKitDataPermission() async {
   if (response["result"] == "success") {
     return response["isSuccess"] == true;
   } else if (response["result"] == "failure") {
-    throw UserDisplayedError(response["reason"]);
+    throw AlertError(response["reason"]);
   } else {
     throw Exception("unknown error");
   }
@@ -100,7 +100,7 @@ Future<String> addMenstruationFlowHealthKitData(
   if (response["result"] == "success") {
     return response["healthKitSampleDataUUID"] as String;
   } else if (response["result"] == "failure") {
-    throw UserDisplayedError(response["reason"]);
+    throw AlertError(response["reason"]);
   } else {
     throw Exception("unknown error");
   }
@@ -137,7 +137,7 @@ Future<String> updateOrAddMenstruationFlowHealthKitData(
   if (response["result"] == "success") {
     return response["healthKitSampleDataUUID"] as String;
   } else if (response["result"] == "failure") {
-    throw UserDisplayedError(response["reason"]);
+    throw AlertError(response["reason"]);
   } else {
     throw Exception("unknown error");
   }
@@ -174,7 +174,7 @@ Future<void> deleteMenstruationFlowHealthKitData(
   if (response["result"] == "success") {
     return;
   } else if (response["result"] == "failure") {
-    throw UserDisplayedError(response["reason"]);
+    throw AlertError(response["reason"]);
   } else {
     throw Exception("unknown error");
   }
