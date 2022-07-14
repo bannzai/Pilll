@@ -121,7 +121,6 @@ void showMenstruationEditPage(
     builder: (context) => MenstruationEditPage(
       menstruation: menstruation,
       onSaved: (savedMenstruation) {
-        Navigator.of(context).pop();
         if (menstruation == null) {
           ScaffoldMessenger.of(context).showSnackBar(
             SnackBar(
@@ -138,6 +137,7 @@ void showMenstruationEditPage(
             ),
           );
         }
+        Navigator.of(context).pop();
       },
       onDeleted: () {
         Navigator.of(context).pop();
