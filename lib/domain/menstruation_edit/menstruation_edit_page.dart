@@ -140,13 +140,13 @@ void showMenstruationEditPage(
         Navigator.of(context).pop();
       },
       onDeleted: () {
-        Navigator.of(context).pop();
         ScaffoldMessenger.of(context).showSnackBar(
           const SnackBar(
             duration: Duration(seconds: 2),
             content: Text("生理期間を削除しました"),
           ),
         );
+        Navigator.of(context).pop();
       },
     ),
     backgroundColor: Colors.transparent,
