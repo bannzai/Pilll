@@ -86,6 +86,7 @@ class RecordPagePillSheetSupportActions extends StatelessWidget {
                     content: Text("休薬期間が始まりました"),
                   ),
                 );
+                Navigator.of(context).pop();
               },
             ),
           ],

@@ -90,8 +90,6 @@ class SettingAccountCooperationListPage extends HookConsumerWidget {
                                     name: 'a_c_l_apple_long_press_result',
                                     parameters: {"success": isSuccess});
 
-                                Navigator.of(context).pop();
-
                                 ScaffoldMessenger.of(context).showSnackBar(
                                   SnackBar(
                                     duration: const Duration(seconds: 2),
@@ -100,6 +98,7 @@ class SettingAccountCooperationListPage extends HookConsumerWidget {
                                         : "認証情報を更新に失敗しました"),
                                   ),
                                 );
+                                Navigator.of(context).pop();
                               } catch (error) {
                                 showErrorAlert(context, error);
                               }
@@ -147,8 +146,6 @@ class SettingAccountCooperationListPage extends HookConsumerWidget {
                                     name: 'a_c_l_google_long_press_result',
                                     parameters: {"success": isSuccess});
 
-                                Navigator.of(context).pop();
-
                                 ScaffoldMessenger.of(context).showSnackBar(
                                   SnackBar(
                                     duration: const Duration(seconds: 2),
@@ -157,6 +154,7 @@ class SettingAccountCooperationListPage extends HookConsumerWidget {
                                         : "認証情報を更新に失敗しました"),
                                   ),
                                 );
+                                Navigator.of(context).pop();
                               } catch (error) {
                                 showErrorAlert(context, error);
                               }
