@@ -70,12 +70,11 @@ class DiaryDatastore {
     return _database.diaryReference(diary).delete().then((_) => diary);
   }
 
-  late final Stream<List<Diary>> _stream = _database
+  Stream<List<Diary>> stream() => _database
       .diariesReference()
       .snapshots()
       .map((event) => event.docs.map((e) => e.data()).toList())
       .map((diaries) => sortedDiaries(diaries));
-  Stream<List<Diary>> stream() => _stream;
 
   Stream<List<Diary>> streamForMonth({required DateTime dateForMonth}) {
     final firstDate = DateTime(dateForMonth.year, dateForMonth.month, 1);

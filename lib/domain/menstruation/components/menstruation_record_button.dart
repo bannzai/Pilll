@@ -7,7 +7,6 @@ import 'package:pilll/domain/menstruation/menstruation_select_modify_type_sheet.
 import 'package:pilll/domain/menstruation/menstruation_page_state_notifier.dart';
 import 'package:pilll/entity/menstruation.codegen.dart';
 import 'package:pilll/util/datetime/day.dart';
-import 'package:pilll/util/formatter/date_time_formatter.dart';
 
 class MenstruationRecordButton extends StatelessWidget {
   const MenstruationRecordButton({
