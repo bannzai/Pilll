@@ -45,10 +45,8 @@ class PillSheetGroupDatastore {
     return snapshot.docs[0].data();
   }
 
-  late final Stream<PillSheetGroup?> _latestPillSheetGroupStream =
-      _latestQuery().snapshots().map(((event) => _filter(event)));
   Stream<PillSheetGroup?> latestPillSheetGroupStream() =>
-      _latestPillSheetGroupStream;
+      _latestQuery().snapshots().map(((event) => _filter(event)));
 
   // Return new PillSheet document id
   PillSheetGroup register(WriteBatch batch, PillSheetGroup pillSheetGroup) {
