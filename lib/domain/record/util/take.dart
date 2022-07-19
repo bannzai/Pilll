@@ -4,6 +4,7 @@ import 'package:pilll/entity/pill_sheet_group.codegen.dart';
 import 'package:pilll/database/pill_sheet.dart';
 import 'package:pilll/database/pill_sheet_group.dart';
 import 'package:pilll/database/pill_sheet_modified_history.dart';
+import 'package:pilll/error_log.dart';
 import 'package:pilll/util/datetime/date_compare.dart';
 import 'package:pilll/util/datetime/day.dart';
 
@@ -47,21 +48,22 @@ Future<PillSheetGroup?> takePill({
       return false;
     }
 
+    // TODO: テストコード書いて不要だった場合消す
     // 例えば2枚目のピルシート(groupIndex:1)がアクティブで、1枚目のピルシート(groupIndex:0)の最終日を記録した場合(28番目)、2枚目のピルシートのlastTakenDateが1枚目の28番目のピルシートのlastTakenDateと同じになる。
     // その場合後続の処理で決定する履歴のafter: PillSheetの値が2枚目のピルシートの値になってしまう。これを避けるための条件式になっている
     if (updatedPillSheet.groupIndex == activedPillSheet.groupIndex) {
       if (index > 0) {
         final previousUpdatedPillSheet = updatedPillSheetGroup.pillSheets[index - 1];
-        if (isSameDay(previousUpdatedPillSheet.estimatedEndTakenDate, takenDate)) {
-          final previousUpdatedPillSheetLastTakenDate = previousUpdatedPillSheet.lastTakenDate;
-          final updatedPillSheetLastTakenDate = updatedPillSheet.lastTakenDate;
-
-          // 事前処理でnullではないはず
-          assert(previousUpdatedPillSheetLastTakenDate != null && updatedPillSheetLastTakenDate != null,
-              "previousUpdatedPillSheetLastTakenDate != null && updatedPillSheetLastTakenDate != null");
-          if (previousUpdatedPillSheetLastTakenDate != null && updatedPillSheetLastTakenDate != null) {
-            if (isSameDay(previousUpdatedPillSheetLastTakenDate, updatedPillSheetLastTakenDate)) {
-              return false;
+        final previousUpdatedPillSheetLastTakenDate = previousUpdatedPillSheet.lastTakenDate;
+        assert(previousUpdatedPillSheetLastTakenDate != null, "事前処理でnullではないはず。previousUpdatedPillSheetLastTakenDate != null");
+        if (previousUpdatedPillSheetLastTakenDate != null) {
+          if (isSameDay(previousUpdatedPillSheetLastTakenDate, takenDate)) {
+            final updatedPillSheetLastTakenDate = updatedPillSheet.lastTakenDate;
+            assert(updatedPillSheetLastTakenDate != null, "事前処理でnullではないはず。updatedPillSheetLastTakenDate != null");
+            if (updatedPillSheetLastTakenDate != null) {
+              if (isSameDay(previousUpdatedPillSheetLastTakenDate, updatedPillSheetLastTakenDate)) {
+                return false;
+              }
             }
           }
         }
@@ -72,6 +74,7 @@ Future<PillSheetGroup?> takePill({
   }).toList();
 
   if (updatedIndexses.isEmpty) {
+    errorLogger.recordError(const FormatException("unexpected updatedIndexes is empty"), StackTrace.current);
     return null;
   }
 
