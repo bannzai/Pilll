@@ -4,7 +4,6 @@ import 'package:pilll/entity/pill_sheet_group.codegen.dart';
 import 'package:pilll/database/pill_sheet.dart';
 import 'package:pilll/database/pill_sheet_group.dart';
 import 'package:pilll/database/pill_sheet_modified_history.dart';
-import 'package:pilll/util/datetime/date_compare.dart';
 import 'package:pilll/util/datetime/day.dart';
 
 Future<PillSheetGroup?> takePill({
@@ -56,14 +55,8 @@ Future<PillSheetGroup?> takePill({
       // 同じ日時の時に服用記録されないが、秒数まで同じ場合はレアケースなので無視する
       final begin = updatedPillSheet.beginingDate;
       if (begin.date().isAfter(updatedPillSheetLastTakenDate)) {
-        // pillSheet.groupIndex == 0 の時は単体のピルシートの状態のみで上記の条件に該当してしまう。
-        // 1つ目のピルシートの一番目のピルの服用記録をつけた後に取り消してもう一度服用した場合に服用できないが該当する
-        if (index > 0) {
-          return false;
-        }
+        return false;
       }
-
-      return true;
     }
 
     return true;
