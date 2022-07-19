@@ -40,8 +40,7 @@ Future<PillSheetGroup?> takePill({
     }
   }).toList();
 
-  final updatedPillSheetGroup =
-      pillSheetGroup.copyWith(pillSheets: updatedPillSheets);
+  final updatedPillSheetGroup = pillSheetGroup.copyWith(pillSheets: updatedPillSheets);
   final updatedIndexses = pillSheetGroup.pillSheets.asMap().keys.where((index) {
     final updatedPillSheet = updatedPillSheetGroup.pillSheets[index];
     if (pillSheetGroup.pillSheets[index] == updatedPillSheet) {
@@ -52,18 +51,13 @@ Future<PillSheetGroup?> takePill({
     // その場合後続の処理で決定する履歴のafter: PillSheetの値が2枚目のピルシートの値になってしまう。これを避けるための条件式になっている
     if (updatedPillSheet.groupIndex == activedPillSheet.groupIndex) {
       if (index > 0) {
-        final previousUpdatedPillSheet =
-            updatedPillSheetGroup.pillSheets[index - 1];
-        if (isSameDay(
-            previousUpdatedPillSheet.estimatedEndTakenDate, takenDate)) {
-          final previousUpdatedPillSheetLastTakenDate =
-              previousUpdatedPillSheet.lastTakenDate;
+        final previousUpdatedPillSheet = updatedPillSheetGroup.pillSheets[index - 1];
+        if (isSameDay(previousUpdatedPillSheet.estimatedEndTakenDate, takenDate)) {
+          final previousUpdatedPillSheetLastTakenDate = previousUpdatedPillSheet.lastTakenDate;
           final updatedPillSheetLastTakenDate = updatedPillSheet.lastTakenDate;
 
-          if (previousUpdatedPillSheetLastTakenDate != null &&
-              updatedPillSheetLastTakenDate != null) {
-            if (isSameDay(previousUpdatedPillSheetLastTakenDate,
-                updatedPillSheetLastTakenDate)) {
+          if (previousUpdatedPillSheetLastTakenDate != null && updatedPillSheetLastTakenDate != null) {
+            if (isSameDay(previousUpdatedPillSheetLastTakenDate, updatedPillSheetLastTakenDate)) {
               return false;
             }
           }
@@ -86,8 +80,7 @@ Future<PillSheetGroup?> takePill({
 
   final before = pillSheetGroup.pillSheets[updatedIndexses.first];
   final after = updatedPillSheetGroup.pillSheets[updatedIndexses.last];
-  final history =
-      PillSheetModifiedHistoryServiceActionFactory.createTakenPillAction(
+  final history = PillSheetModifiedHistoryServiceActionFactory.createTakenPillAction(
     pillSheetGroupID: pillSheetGroup.id,
     before: before,
     after: after,
