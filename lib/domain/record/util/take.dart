@@ -52,7 +52,6 @@ Future<PillSheetGroup?> takePill({
     final updatedPillSheetLastTakenDate = updatedPillSheet.lastTakenDate;
     if (updatedPillSheet.groupIndex == activedPillSheet.groupIndex &&
         updatedPillSheetLastTakenDate != null) {
-      // 同じ日時の時に服用記録されないが、秒数まで同じ場合はレアケースなので無視する
       final begin = updatedPillSheet.beginingDate;
       if (begin.date().isAfter(updatedPillSheetLastTakenDate)) {
         return false;
