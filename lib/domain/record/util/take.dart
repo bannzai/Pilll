@@ -56,6 +56,9 @@ Future<PillSheetGroup?> takePill({
           final previousUpdatedPillSheetLastTakenDate = previousUpdatedPillSheet.lastTakenDate;
           final updatedPillSheetLastTakenDate = updatedPillSheet.lastTakenDate;
 
+          // 事前処理でnullではないはず
+          assert(previousUpdatedPillSheetLastTakenDate != null && updatedPillSheetLastTakenDate != null,
+              "previousUpdatedPillSheetLastTakenDate != null && updatedPillSheetLastTakenDate != null");
           if (previousUpdatedPillSheetLastTakenDate != null && updatedPillSheetLastTakenDate != null) {
             if (isSameDay(previousUpdatedPillSheetLastTakenDate, updatedPillSheetLastTakenDate)) {
               return false;
