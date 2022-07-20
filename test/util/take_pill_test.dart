@@ -371,6 +371,50 @@ void main() {
 
         expect(result, updatedPillSheetGroup);
       });
+      // Bugfix https://github.com/bannzai/Pilll/pull/651
+      test("when previous pill sheet is not taken all. and takenDate is previous pill sheet estimate last taken date", () async {
+        previousPillSheet = previousPillSheet.copyWith(lastTakenDate: previousPillSheet.lastTakenDate!.subtract(const Duration(days: 1)));
+        pillSheetGroup = PillSheetGroup(
+          id: "group_id",
+          pillSheetIDs: [previousPillSheet.id!, activedPillSheet.id!, nextPillSheet.id!],
+          pillSheets: [previousPillSheet, activedPillSheet, nextPillSheet],
+          createdAt: _today,
+        );
+        final takenDate = previousPillSheet.estimatedEndTakenDate;
+
+        final batchFactory = MockBatchFactory();
+        final batch = MockWriteBatch();
+        when(batchFactory.batch()).thenReturn(batch);
+
+        final pillSheetDatastore = MockPillSheetDatastore();
+        final updatedPreviousPillSheet = previousPillSheet.copyWith(lastTakenDate: previousPillSheet.estimatedEndTakenDate);
+        final updatedActivePillSheet = activedPillSheet.copyWith(lastTakenDate: takenDate);
+        when(pillSheetDatastore.update(batch, [updatedPreviousPillSheet, updatedActivePillSheet, nextPillSheet])).thenReturn(null);
+
+        final pillSheetModifiedHistoryDatastore = MockPillSheetModifiedHistoryDatastore();
+        final history = PillSheetModifiedHistoryServiceActionFactory.createTakenPillAction(
+            pillSheetGroupID: pillSheetGroup.id, isQuickRecord: false, before: updatedPreviousPillSheet, after: updatedActivePillSheet);
+        when(pillSheetModifiedHistoryDatastore.add(batch, history)).thenReturn(null);
+
+        final pillSheetGroupDatastore = MockPillSheetGroupDatastore();
+        final updatedPillSheetGroup = pillSheetGroup.copyWith(pillSheets: [updatedPreviousPillSheet, updatedActivePillSheet, nextPillSheet]);
+        when(pillSheetGroupDatastore.updateWithBatch(batch, updatedPillSheetGroup)).thenReturn(null);
+
+        final takePill = TakePill(
+          batchFactory: batchFactory,
+          pillSheetDatastore: pillSheetDatastore,
+          pillSheetModifiedHistoryDatastore: pillSheetModifiedHistoryDatastore,
+          pillSheetGroupDatastore: pillSheetGroupDatastore,
+        );
+        final result = await takePill(
+          takenDate: takenDate,
+          activedPillSheet: activedPillSheet,
+          pillSheetGroup: pillSheetGroup,
+          isQuickRecord: false,
+        );
+
+        expect(result, updatedPillSheetGroup);
+      });
     });
   });
 }
