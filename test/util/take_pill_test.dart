@@ -123,6 +123,14 @@ void main() {
     });
 
     group("three pill sheet", () {
+      setUp(() {
+        pillSheetGroup = PillSheetGroup(
+          id: "group_id",
+          pillSheetIDs: [previousPillSheet.id!, activedPillSheet.id!, nextPillSheet.id!],
+          pillSheets: [previousPillSheet, activedPillSheet, nextPillSheet],
+          createdAt: _today,
+        );
+      });
       test("take pill", () async {
         final takenDate = _today.add(const Duration(seconds: 1));
 
@@ -132,7 +140,7 @@ void main() {
 
         final pillSheetDatastore = MockPillSheetDatastore();
         final updatedPillSheet = activedPillSheet.copyWith(lastTakenDate: takenDate);
-        when(pillSheetDatastore.update(batch, [updatedPillSheet])).thenReturn(null);
+        when(pillSheetDatastore.update(batch, [previousPillSheet, updatedPillSheet, nextPillSheet])).thenReturn(null);
 
         final pillSheetModifiedHistoryDatastore = MockPillSheetModifiedHistoryDatastore();
         final history = PillSheetModifiedHistoryServiceActionFactory.createTakenPillAction(
@@ -140,7 +148,7 @@ void main() {
         when(pillSheetModifiedHistoryDatastore.add(batch, history)).thenReturn(null);
 
         final pillSheetGroupDatastore = MockPillSheetGroupDatastore();
-        final updatedPillSheetGroup = pillSheetGroup.copyWith(pillSheets: [updatedPillSheet]);
+        final updatedPillSheetGroup = pillSheetGroup.copyWith(pillSheets: [previousPillSheet, updatedPillSheet, nextPillSheet]);
         when(pillSheetGroupDatastore.updateWithBatch(batch, updatedPillSheetGroup)).thenReturn(null);
 
         final takePill = TakePill(
