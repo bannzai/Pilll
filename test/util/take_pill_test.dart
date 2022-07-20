@@ -366,7 +366,7 @@ void main() {
 
         final pillSheetModifiedHistoryDatastore = MockPillSheetModifiedHistoryDatastore();
         final history = PillSheetModifiedHistoryServiceActionFactory.createTakenPillAction(
-            pillSheetGroupID: pillSheetGroup.id, isQuickRecord: false, before: updatedPreviousPillSheet, after: updatedActivePillSheet);
+            pillSheetGroupID: pillSheetGroup.id, isQuickRecord: false, before: previousPillSheet, after: updatedActivePillSheet);
         when(pillSheetModifiedHistoryDatastore.add(batch, history)).thenReturn(null);
 
         final pillSheetGroupDatastore = MockPillSheetGroupDatastore();
@@ -412,7 +412,7 @@ void main() {
 
         final pillSheetModifiedHistoryDatastore = MockPillSheetModifiedHistoryDatastore();
         final history = PillSheetModifiedHistoryServiceActionFactory.createTakenPillAction(
-            pillSheetGroupID: pillSheetGroup.id, isQuickRecord: false, before: updatedPreviousPillSheet, after: updatedActivePillSheet);
+            pillSheetGroupID: pillSheetGroup.id, isQuickRecord: false, before: previousPillSheet, after: updatedPreviousPillSheet);
         when(pillSheetModifiedHistoryDatastore.add(batch, history)).thenReturn(null);
 
         final pillSheetGroupDatastore = MockPillSheetGroupDatastore();
