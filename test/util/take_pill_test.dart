@@ -299,17 +299,16 @@ void main() {
       });
 
       test(
-          "bounday test. activePillSheet.lastTakenDate != activePillSheet.estimatedEndTakenDate and taken activePillSheet.estimatedEndTakenDate + 1.second. it is over active pill sheet range pattern. ",
+          "bounday test. activePillSheet.lastTakenDate != null and taken activePillSheet.estimatedEndTakenDate + 1.second. it is over active pill sheet range pattern. ",
           () async {
-        // NOTE: No Firebase App '[DEFAULT]' has been created - call Firebase.initializeApp() が起きるので事前にインスタンスを作っている
+        final takenDate = activedPillSheet.estimatedEndTakenDate.add(const Duration(seconds: 1));
+        activedPillSheet = activedPillSheet.copyWith(lastTakenDate: activedPillSheet.estimatedEndTakenDate.subtract(const Duration(days: 10)));
         pillSheetGroup = PillSheetGroup(
           id: "group_id",
           pillSheetIDs: [previousPillSheet.id!, activedPillSheet.id!, nextPillSheet.id!],
           pillSheets: [previousPillSheet, activedPillSheet, nextPillSheet],
           createdAt: _today,
         );
-        final takenDate = activedPillSheet.estimatedEndTakenDate.add(const Duration(seconds: 1));
-        activedPillSheet = activedPillSheet.copyWith(lastTakenDate: activedPillSheet.estimatedEndTakenDate);
 
         final batchFactory = MockBatchFactory();
         final batch = MockWriteBatch();
