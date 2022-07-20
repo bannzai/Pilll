@@ -1,3 +1,4 @@
+import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 import 'package:pilll/database/batch.dart';
 import 'package:pilll/entity/pill_sheet.codegen.dart';
@@ -90,7 +91,10 @@ class TakePill {
 
     debugPrint("updatedIndexses: $updatedIndexses");
     if (updatedIndexses.isEmpty) {
-      errorLogger.recordError(const FormatException("unexpected updatedIndexes is empty"), StackTrace.current);
+      // NOTE: avoid error for unit test
+      if (Firebase.apps.isNotEmpty) {
+        errorLogger.recordError(const FormatException("unexpected updatedIndexes is empty"), StackTrace.current);
+      }
       return null;
     }
 
