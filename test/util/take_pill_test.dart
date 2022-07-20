@@ -38,40 +38,42 @@ void main() {
     );
   });
   group("#TakePill", () {
-    test("take pill", () async {
-      final takenDate = _today.add(const Duration(seconds: 1));
+    group("one pill sheet", () {
+      test("take pill", () async {
+        final takenDate = _today.add(const Duration(seconds: 1));
 
-      final batchFactory = MockBatchFactory();
-      final batch = MockWriteBatch();
-      when(batchFactory.batch()).thenReturn(batch);
+        final batchFactory = MockBatchFactory();
+        final batch = MockWriteBatch();
+        when(batchFactory.batch()).thenReturn(batch);
 
-      final pillSheetDatastore = MockPillSheetDatastore();
-      final updatedPillSheet = activedPillSheet.copyWith(lastTakenDate: takenDate);
-      when(pillSheetDatastore.update(batch, [updatedPillSheet])).thenReturn(null);
+        final pillSheetDatastore = MockPillSheetDatastore();
+        final updatedPillSheet = activedPillSheet.copyWith(lastTakenDate: takenDate);
+        when(pillSheetDatastore.update(batch, [updatedPillSheet])).thenReturn(null);
 
-      final pillSheetModifiedHistoryDatastore = MockPillSheetModifiedHistoryDatastore();
-      final history = PillSheetModifiedHistoryServiceActionFactory.createTakenPillAction(
-          pillSheetGroupID: pillSheetGroup.id, isQuickRecord: false, before: activedPillSheet, after: updatedPillSheet);
-      when(pillSheetModifiedHistoryDatastore.add(batch, history)).thenReturn(null);
+        final pillSheetModifiedHistoryDatastore = MockPillSheetModifiedHistoryDatastore();
+        final history = PillSheetModifiedHistoryServiceActionFactory.createTakenPillAction(
+            pillSheetGroupID: pillSheetGroup.id, isQuickRecord: false, before: activedPillSheet, after: updatedPillSheet);
+        when(pillSheetModifiedHistoryDatastore.add(batch, history)).thenReturn(null);
 
-      final pillSheetGroupDatastore = MockPillSheetGroupDatastore();
-      final updatedPillSheetGroup = pillSheetGroup.copyWith(pillSheets: [updatedPillSheet]);
-      when(pillSheetGroupDatastore.updateWithBatch(batch, updatedPillSheetGroup)).thenReturn(null);
+        final pillSheetGroupDatastore = MockPillSheetGroupDatastore();
+        final updatedPillSheetGroup = pillSheetGroup.copyWith(pillSheets: [updatedPillSheet]);
+        when(pillSheetGroupDatastore.updateWithBatch(batch, updatedPillSheetGroup)).thenReturn(null);
 
-      final takePill = TakePill(
-        batchFactory: batchFactory,
-        pillSheetDatastore: pillSheetDatastore,
-        pillSheetModifiedHistoryDatastore: pillSheetModifiedHistoryDatastore,
-        pillSheetGroupDatastore: pillSheetGroupDatastore,
-      );
-      final result = await takePill(
-        takenDate: takenDate,
-        activedPillSheet: activedPillSheet,
-        pillSheetGroup: pillSheetGroup,
-        isQuickRecord: false,
-      );
+        final takePill = TakePill(
+          batchFactory: batchFactory,
+          pillSheetDatastore: pillSheetDatastore,
+          pillSheetModifiedHistoryDatastore: pillSheetModifiedHistoryDatastore,
+          pillSheetGroupDatastore: pillSheetGroupDatastore,
+        );
+        final result = await takePill(
+          takenDate: takenDate,
+          activedPillSheet: activedPillSheet,
+          pillSheetGroup: pillSheetGroup,
+          isQuickRecord: false,
+        );
 
-      expect(result, updatedPillSheetGroup);
+        expect(result, updatedPillSheetGroup);
+      });
     });
   });
 }
