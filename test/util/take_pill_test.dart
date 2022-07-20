@@ -74,6 +74,31 @@ void main() {
 
         expect(result, updatedPillSheetGroup);
       });
+
+      test("activedPillSheet.todayPillIsAlreadyTaken", () async {
+        final takenDate = _today.add(const Duration(seconds: 1));
+        activedPillSheet = activedPillSheet.copyWith(lastTakenDate: takenDate);
+
+        final batchFactory = MockBatchFactory();
+        final pillSheetDatastore = MockPillSheetDatastore();
+        final pillSheetModifiedHistoryDatastore = MockPillSheetModifiedHistoryDatastore();
+        final pillSheetGroupDatastore = MockPillSheetGroupDatastore();
+
+        final takePill = TakePill(
+          batchFactory: batchFactory,
+          pillSheetDatastore: pillSheetDatastore,
+          pillSheetModifiedHistoryDatastore: pillSheetModifiedHistoryDatastore,
+          pillSheetGroupDatastore: pillSheetGroupDatastore,
+        );
+        final result = await takePill(
+          takenDate: takenDate,
+          activedPillSheet: activedPillSheet,
+          pillSheetGroup: pillSheetGroup,
+          isQuickRecord: false,
+        );
+
+        expect(result, null);
+      });
     });
   });
 }
