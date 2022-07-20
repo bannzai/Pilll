@@ -40,8 +40,6 @@ Future<void> recordPill() async {
   final batchFactory = BatchFactory(database);
 
   final takePill = TakePill(
-    pillSheetGroup: pillSheetGroup,
-    activedPillSheet: activedPillSheet,
     batchFactory: batchFactory,
     pillSheetDatastore: pillSheetDatastore,
     pillSheetModifiedHistoryDatastore: pillSheetModifiedHistoryDatastore,
@@ -49,6 +47,8 @@ Future<void> recordPill() async {
   );
   await takePill(
     takenDate: takenDate,
+    pillSheetGroup: pillSheetGroup,
+    activedPillSheet: activedPillSheet,
     isQuickRecord: true,
   );
 

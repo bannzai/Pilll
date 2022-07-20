@@ -39,8 +39,6 @@ class RecordPageAsyncAction {
       return false;
     }
     final takePill = TakePill(
-      pillSheetGroup: pillSheetGroup,
-      activedPillSheet: activedPillSheet,
       batchFactory: _batchFactory,
       pillSheetDatastore: _pillSheetDatastore,
       pillSheetModifiedHistoryDatastore: _pillSheetModifiedHistoryDatastore,
@@ -48,6 +46,8 @@ class RecordPageAsyncAction {
     );
     final updatedPillSheetGroup = await takePill(
       takenDate: takenDate,
+      pillSheetGroup: pillSheetGroup,
+      activedPillSheet: activedPillSheet,
       isQuickRecord: false,
     );
     if (updatedPillSheetGroup == null) {

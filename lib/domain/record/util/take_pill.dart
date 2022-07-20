@@ -8,23 +8,24 @@ import 'package:pilll/error_log.dart';
 import 'package:pilll/util/datetime/date_compare.dart';
 
 class TakePill {
-  final PillSheetGroup pillSheetGroup;
-  final PillSheet activedPillSheet;
   final BatchFactory batchFactory;
   final PillSheetDatastore pillSheetDatastore;
   final PillSheetModifiedHistoryDatastore pillSheetModifiedHistoryDatastore;
   final PillSheetGroupDatastore pillSheetGroupDatastore;
 
   TakePill({
-    required this.pillSheetGroup,
-    required this.activedPillSheet,
     required this.batchFactory,
     required this.pillSheetDatastore,
     required this.pillSheetModifiedHistoryDatastore,
     required this.pillSheetGroupDatastore,
   });
 
-  Future<PillSheetGroup?> call({required DateTime takenDate, required bool isQuickRecord}) async {
+  Future<PillSheetGroup?> call({
+    required DateTime takenDate,
+    required PillSheetGroup pillSheetGroup,
+    required PillSheet activedPillSheet,
+    required bool isQuickRecord,
+  }) async {
     if (activedPillSheet.todayPillIsAlreadyTaken) {
       return null;
     }
