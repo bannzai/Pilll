@@ -286,6 +286,7 @@ void main() {
       test(
           "bounday test. activePillSheet.lastTakenDate != activePillSheet.estimatedEndTakenDate and taken activePillSheet.estimatedEndTakenDate + 1.second. it is over active pill sheet range pattern. ",
           () async {
+        // NOTE: No Firebase App '[DEFAULT]' has been created - call Firebase.initializeApp() が起きるので事前にインスタンスを作っている
         pillSheetGroup = PillSheetGroup(
           id: "group_id",
           pillSheetIDs: [previousPillSheet.id!, activedPillSheet.id!, nextPillSheet.id!],
