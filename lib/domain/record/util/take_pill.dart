@@ -1,3 +1,4 @@
+import 'package:flutter/material.dart';
 import 'package:pilll/database/batch.dart';
 import 'package:pilll/entity/pill_sheet.codegen.dart';
 import 'package:pilll/entity/pill_sheet_group.codegen.dart';
@@ -30,8 +31,6 @@ class TakePill {
       return null;
     }
 
-    final batch = batchFactory.batch();
-
     final updatedPillSheets = pillSheetGroup.pillSheets.map((pillSheet) {
       if (pillSheet.groupIndex > activedPillSheet.groupIndex) {
         return pillSheet;
@@ -43,6 +42,7 @@ class TakePill {
       // takenDateよりも予測するピルシートの最終服用日よりも大きい場合はactivedPillSheetじゃないPillSheetと判断。
       // そのピルシートの最終日で予測する最終服用日を記録する
       if (takenDate.isAfter(pillSheet.estimatedEndTakenDate)) {
+        debugPrint("$takenDate, $pillSheet, ${pillSheet.estimatedEndTakenDate}");
         return pillSheet.copyWith(lastTakenDate: pillSheet.estimatedEndTakenDate);
       } else {
         return pillSheet.copyWith(lastTakenDate: takenDate);
@@ -55,6 +55,7 @@ class TakePill {
       if (pillSheetGroup.pillSheets[index] == updatedPillSheet) {
         return false;
       }
+      debugPrint("${pillSheetGroup.pillSheets[index]}, $updatedPillSheet");
 
       // TODO: テストコード書いて不要だった場合消す
       // 例えば2枚目のピルシート(groupIndex:1)がアクティブで、1枚目のピルシート(groupIndex:0)の最終日を記録した場合(28番目)、2枚目のピルシートのlastTakenDateが1枚目の28番目のピルシートのlastTakenDateと同じになる。
@@ -81,11 +82,13 @@ class TakePill {
       return true;
     }).toList();
 
+    debugPrint("$updatedIndexses");
     if (updatedIndexses.isEmpty) {
       errorLogger.recordError(const FormatException("unexpected updatedIndexes is empty"), StackTrace.current);
       return null;
     }
 
+    final batch = batchFactory.batch();
     pillSheetDatastore.update(
       batch,
       updatedPillSheets,
