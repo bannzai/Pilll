@@ -195,6 +195,42 @@ void main() {
 
         expect(result, null);
       });
+
+      test("bounday test. taken activePillSheet.estimatedEndTakenDate", () async {
+        final takenDate = activedPillSheet.estimatedEndTakenDate;
+
+        final batchFactory = MockBatchFactory();
+        final batch = MockWriteBatch();
+        when(batchFactory.batch()).thenReturn(batch);
+
+        final pillSheetDatastore = MockPillSheetDatastore();
+        final updatedPillSheet = activedPillSheet.copyWith(lastTakenDate: takenDate);
+        when(pillSheetDatastore.update(batch, [previousPillSheet, updatedPillSheet, nextPillSheet])).thenReturn(null);
+
+        final pillSheetModifiedHistoryDatastore = MockPillSheetModifiedHistoryDatastore();
+        final history = PillSheetModifiedHistoryServiceActionFactory.createTakenPillAction(
+            pillSheetGroupID: pillSheetGroup.id, isQuickRecord: false, before: activedPillSheet, after: updatedPillSheet);
+        when(pillSheetModifiedHistoryDatastore.add(batch, history)).thenReturn(null);
+
+        final pillSheetGroupDatastore = MockPillSheetGroupDatastore();
+        final updatedPillSheetGroup = pillSheetGroup.copyWith(pillSheets: [previousPillSheet, updatedPillSheet, nextPillSheet]);
+        when(pillSheetGroupDatastore.updateWithBatch(batch, updatedPillSheetGroup)).thenReturn(null);
+
+        final takePill = TakePill(
+          batchFactory: batchFactory,
+          pillSheetDatastore: pillSheetDatastore,
+          pillSheetModifiedHistoryDatastore: pillSheetModifiedHistoryDatastore,
+          pillSheetGroupDatastore: pillSheetGroupDatastore,
+        );
+        final result = await takePill(
+          takenDate: takenDate,
+          activedPillSheet: activedPillSheet,
+          pillSheetGroup: pillSheetGroup,
+          isQuickRecord: false,
+        );
+
+        expect(result, updatedPillSheetGroup);
+      });
     });
   });
 }
