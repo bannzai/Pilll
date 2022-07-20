@@ -56,12 +56,10 @@ class TakePill {
       if (pillSheetGroup.pillSheets[index] == updatedPillSheet) {
         return false;
       }
-      debugPrint("${pillSheetGroup.pillSheets[index]}, $updatedPillSheet");
 
       // TODO: テストコード書いて不要だった場合消す
       // 例えば2枚目のピルシート(groupIndex:1)がアクティブで、1枚目のピルシート(groupIndex:0)の最終日を記録した場合(28番目)、2枚目のピルシートのlastTakenDateが1枚目の28番目のピルシートのlastTakenDateと同じになる。
       // その場合後続の処理で決定する履歴のafter: PillSheetの値が2枚目のピルシートの値になってしまう。これを避けるための条件式になっている
-      debugPrint("0");
       if (updatedPillSheet.groupIndex == activedPillSheet.groupIndex) {
         debugPrint("1");
         if (index > 0) {
@@ -90,7 +88,7 @@ class TakePill {
       return true;
     }).toList();
 
-    debugPrint("$updatedIndexses");
+    debugPrint("updatedIndexses: $updatedIndexses");
     if (updatedIndexses.isEmpty) {
       errorLogger.recordError(const FormatException("unexpected updatedIndexes is empty"), StackTrace.current);
       return null;
@@ -105,7 +103,7 @@ class TakePill {
 
     final before = pillSheetGroup.pillSheets[updatedIndexses.first];
     final after = updatedPillSheetGroup.pillSheets[updatedIndexses.last];
-    debugPrint("$before, $after");
+    debugPrint("before: $before, after: $after");
     final history = PillSheetModifiedHistoryServiceActionFactory.createTakenPillAction(
       pillSheetGroupID: pillSheetGroup.id,
       before: before,
