@@ -420,27 +420,27 @@ void main() {
           "when previous pill sheet is not taken all. And active pill sheet lastTakenDate equal beginDate minus 1 that means reverted taken first pill. And record previous pill sheet last taken date",
           () async {
         previousPillSheet = previousPillSheet.copyWith(lastTakenDate: previousPillSheet.lastTakenDate!.subtract(const Duration(days: 1)));
-        activedPillSheet = activedPillSheet.copyWith(lastTakenDate: activedPillSheet.beginingDate.add(const Duration(days: 1)));
+        activedPillSheet = activedPillSheet.copyWith(lastTakenDate: previousPillSheet.estimatedEndTakenDate);
         pillSheetGroup = PillSheetGroup(
           id: "group_id",
           pillSheetIDs: [previousPillSheet.id!, activedPillSheet.id!, nextPillSheet.id!],
           pillSheets: [previousPillSheet, activedPillSheet, nextPillSheet],
           createdAt: _today,
         );
-        final takenDate = previousPillSheet.estimatedEndTakenDate;
+        final takenDate = previousPillSheet.estimatedEndTakenDate.subtract(const Duration(seconds: 1));
 
         final batchFactory = MockBatchFactory();
         final batch = MockWriteBatch();
         when(batchFactory.batch()).thenReturn(batch);
 
         final pillSheetDatastore = MockPillSheetDatastore();
-        final updatedPreviousPillSheet = previousPillSheet.copyWith(lastTakenDate: previousPillSheet.estimatedEndTakenDate);
+        final updatedPreviousPillSheet = previousPillSheet.copyWith(lastTakenDate: takenDate);
         final updatedActivePillSheet = activedPillSheet.copyWith(lastTakenDate: takenDate);
         when(pillSheetDatastore.update(batch, [updatedPreviousPillSheet, updatedActivePillSheet, nextPillSheet])).thenReturn(null);
 
         final pillSheetModifiedHistoryDatastore = MockPillSheetModifiedHistoryDatastore();
         final history = PillSheetModifiedHistoryServiceActionFactory.createTakenPillAction(
-            pillSheetGroupID: pillSheetGroup.id, isQuickRecord: false, before: updatedPreviousPillSheet, after: updatedActivePillSheet);
+            pillSheetGroupID: pillSheetGroup.id, isQuickRecord: false, before: previousPillSheet, after: updatedPreviousPillSheet);
         when(pillSheetModifiedHistoryDatastore.add(batch, history)).thenReturn(null);
 
         final pillSheetGroupDatastore = MockPillSheetGroupDatastore();
@@ -459,6 +459,10 @@ void main() {
           pillSheetGroup: pillSheetGroup,
           isQuickRecord: false,
         );
+
+        verify(pillSheetDatastore.update(batch, [updatedPreviousPillSheet, updatedActivePillSheet, nextPillSheet])).called(1);
+        verify(pillSheetModifiedHistoryDatastore.add(batch, history)).called(1);
+        verify(pillSheetGroupDatastore.updateWithBatch(batch, updatedPillSheetGroup)).called(1);
 
         expect(result, updatedPillSheetGroup);
       });

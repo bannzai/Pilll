@@ -48,6 +48,7 @@ class TakePill {
         return pillSheet.copyWith(lastTakenDate: takenDate);
       }
     }).toList();
+    debugPrint("$updatedPillSheets");
 
     final updatedPillSheetGroup = pillSheetGroup.copyWith(pillSheets: updatedPillSheets);
     final updatedIndexses = pillSheetGroup.pillSheets.asMap().keys.where((index) {
@@ -60,17 +61,24 @@ class TakePill {
       // TODO: テストコード書いて不要だった場合消す
       // 例えば2枚目のピルシート(groupIndex:1)がアクティブで、1枚目のピルシート(groupIndex:0)の最終日を記録した場合(28番目)、2枚目のピルシートのlastTakenDateが1枚目の28番目のピルシートのlastTakenDateと同じになる。
       // その場合後続の処理で決定する履歴のafter: PillSheetの値が2枚目のピルシートの値になってしまう。これを避けるための条件式になっている
+      debugPrint("0");
       if (updatedPillSheet.groupIndex == activedPillSheet.groupIndex) {
+        debugPrint("1");
         if (index > 0) {
+          debugPrint("2");
           final previousUpdatedPillSheet = updatedPillSheetGroup.pillSheets[index - 1];
           final previousUpdatedPillSheetLastTakenDate = previousUpdatedPillSheet.lastTakenDate;
           assert(previousUpdatedPillSheetLastTakenDate != null, "事前処理でnullではないはず。previousUpdatedPillSheetLastTakenDate != null");
           if (previousUpdatedPillSheetLastTakenDate != null) {
+            debugPrint("3");
             if (isSameDay(previousUpdatedPillSheetLastTakenDate, takenDate)) {
+              debugPrint("4");
               final updatedPillSheetLastTakenDate = updatedPillSheet.lastTakenDate;
               assert(updatedPillSheetLastTakenDate != null, "事前処理でnullではないはず。updatedPillSheetLastTakenDate != null");
               if (updatedPillSheetLastTakenDate != null) {
+                debugPrint("5");
                 if (isSameDay(previousUpdatedPillSheetLastTakenDate, updatedPillSheetLastTakenDate)) {
+                  debugPrint("6");
                   return false;
                 }
               }
@@ -97,6 +105,7 @@ class TakePill {
 
     final before = pillSheetGroup.pillSheets[updatedIndexses.first];
     final after = updatedPillSheetGroup.pillSheets[updatedIndexses.last];
+    debugPrint("$before, $after");
     final history = PillSheetModifiedHistoryServiceActionFactory.createTakenPillAction(
       pillSheetGroupID: pillSheetGroup.id,
       before: before,
