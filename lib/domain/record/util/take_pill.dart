@@ -45,6 +45,8 @@ class TakePill {
         return pillSheet.copyWith(lastTakenDate: pillSheet.estimatedEndTakenDate);
       }
 
+      // takenDateがピルシートの開始日に満たない場合は、記録の対象になっていないので早期リターン
+      // 一つ前のピルシートのピルをタップした時など
       if (takenDate.isBefore(pillSheet.beginingDate)) {
         return pillSheet;
       }
