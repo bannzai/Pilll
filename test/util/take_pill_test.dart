@@ -127,16 +127,14 @@ void main() {
     });
 
     group("three pill sheet", () {
-      setUp(() {
+      test("take pill", () async {
+        final takenDate = _today.add(const Duration(seconds: 1));
         pillSheetGroup = PillSheetGroup(
           id: "group_id",
           pillSheetIDs: [previousPillSheet.id!, activedPillSheet.id!, nextPillSheet.id!],
           pillSheets: [previousPillSheet, activedPillSheet, nextPillSheet],
           createdAt: _today,
         );
-      });
-      test("take pill", () async {
-        final takenDate = _today.add(const Duration(seconds: 1));
 
         final batchFactory = MockBatchFactory();
         final batch = MockWriteBatch();
@@ -174,6 +172,12 @@ void main() {
       test("activedPillSheet.todayPillIsAlreadyTaken", () async {
         final takenDate = _today.add(const Duration(seconds: 1));
         activedPillSheet = activedPillSheet.copyWith(lastTakenDate: takenDate);
+        pillSheetGroup = PillSheetGroup(
+          id: "group_id",
+          pillSheetIDs: [previousPillSheet.id!, activedPillSheet.id!, nextPillSheet.id!],
+          pillSheets: [previousPillSheet, activedPillSheet, nextPillSheet],
+          createdAt: _today,
+        );
 
         final batchFactory = MockBatchFactory();
         final pillSheetDatastore = MockPillSheetDatastore();
@@ -198,6 +202,12 @@ void main() {
 
       test("bounday test. taken activePillSheet.estimatedEndTakenDate", () async {
         final takenDate = activedPillSheet.estimatedEndTakenDate;
+        pillSheetGroup = PillSheetGroup(
+          id: "group_id",
+          pillSheetIDs: [previousPillSheet.id!, activedPillSheet.id!, nextPillSheet.id!],
+          pillSheets: [previousPillSheet, activedPillSheet, nextPillSheet],
+          createdAt: _today,
+        );
 
         final batchFactory = MockBatchFactory();
         final batch = MockWriteBatch();
@@ -233,6 +243,12 @@ void main() {
       });
       test("bounday test. taken activePillSheet.estimatedEndTakenDate + 1.second. it is over active pill sheet range pattern", () async {
         final takenDate = activedPillSheet.estimatedEndTakenDate.add(const Duration(seconds: 1));
+        pillSheetGroup = PillSheetGroup(
+          id: "group_id",
+          pillSheetIDs: [previousPillSheet.id!, activedPillSheet.id!, nextPillSheet.id!],
+          pillSheets: [previousPillSheet, activedPillSheet, nextPillSheet],
+          createdAt: _today,
+        );
 
         final batchFactory = MockBatchFactory();
         final batch = MockWriteBatch();
@@ -270,8 +286,14 @@ void main() {
       test(
           "bounday test. activePillSheet.lastTakenDate != activePillSheet.estimatedEndTakenDate and taken activePillSheet.estimatedEndTakenDate + 1.second. it is over active pill sheet range pattern. ",
           () async {
-        activedPillSheet = activedPillSheet.copyWith(lastTakenDate: activedPillSheet.estimatedEndTakenDate);
+        pillSheetGroup = PillSheetGroup(
+          id: "group_id",
+          pillSheetIDs: [previousPillSheet.id!, activedPillSheet.id!, nextPillSheet.id!],
+          pillSheets: [previousPillSheet, activedPillSheet, nextPillSheet],
+          createdAt: _today,
+        );
         final takenDate = activedPillSheet.estimatedEndTakenDate.add(const Duration(seconds: 1));
+        activedPillSheet = activedPillSheet.copyWith(lastTakenDate: activedPillSheet.estimatedEndTakenDate);
 
         final batchFactory = MockBatchFactory();
         final batch = MockWriteBatch();
@@ -288,6 +310,49 @@ void main() {
 
         final pillSheetGroupDatastore = MockPillSheetGroupDatastore();
         final updatedPillSheetGroup = pillSheetGroup.copyWith(pillSheets: [previousPillSheet, updatedPillSheet, nextPillSheet]);
+        when(pillSheetGroupDatastore.updateWithBatch(batch, updatedPillSheetGroup)).thenReturn(null);
+
+        final takePill = TakePill(
+          batchFactory: batchFactory,
+          pillSheetDatastore: pillSheetDatastore,
+          pillSheetModifiedHistoryDatastore: pillSheetModifiedHistoryDatastore,
+          pillSheetGroupDatastore: pillSheetGroupDatastore,
+        );
+        final result = await takePill(
+          takenDate: takenDate,
+          activedPillSheet: activedPillSheet,
+          pillSheetGroup: pillSheetGroup,
+          isQuickRecord: false,
+        );
+
+        expect(result, updatedPillSheetGroup);
+      });
+      test("when previous pill sheet is not taken all.", () async {
+        final takenDate = _today.add(const Duration(seconds: 1));
+        previousPillSheet = previousPillSheet.copyWith(lastTakenDate: previousPillSheet.lastTakenDate!.subtract(const Duration(days: 1)));
+        pillSheetGroup = PillSheetGroup(
+          id: "group_id",
+          pillSheetIDs: [previousPillSheet.id!, activedPillSheet.id!, nextPillSheet.id!],
+          pillSheets: [previousPillSheet, activedPillSheet, nextPillSheet],
+          createdAt: _today,
+        );
+
+        final batchFactory = MockBatchFactory();
+        final batch = MockWriteBatch();
+        when(batchFactory.batch()).thenReturn(batch);
+
+        final pillSheetDatastore = MockPillSheetDatastore();
+        final updatedPreviousPillSheet = previousPillSheet.copyWith(lastTakenDate: previousPillSheet.estimatedEndTakenDate);
+        final updatedActivePillSheet = activedPillSheet.copyWith(lastTakenDate: takenDate);
+        when(pillSheetDatastore.update(batch, [updatedPreviousPillSheet, updatedActivePillSheet, nextPillSheet])).thenReturn(null);
+
+        final pillSheetModifiedHistoryDatastore = MockPillSheetModifiedHistoryDatastore();
+        final history = PillSheetModifiedHistoryServiceActionFactory.createTakenPillAction(
+            pillSheetGroupID: pillSheetGroup.id, isQuickRecord: false, before: updatedPreviousPillSheet, after: updatedActivePillSheet);
+        when(pillSheetModifiedHistoryDatastore.add(batch, history)).thenReturn(null);
+
+        final pillSheetGroupDatastore = MockPillSheetGroupDatastore();
+        final updatedPillSheetGroup = pillSheetGroup.copyWith(pillSheets: [updatedPreviousPillSheet, updatedActivePillSheet, nextPillSheet]);
         when(pillSheetGroupDatastore.updateWithBatch(batch, updatedPillSheetGroup)).thenReturn(null);
 
         final takePill = TakePill(
