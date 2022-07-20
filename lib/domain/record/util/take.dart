@@ -6,7 +6,6 @@ import 'package:pilll/database/pill_sheet_group.dart';
 import 'package:pilll/database/pill_sheet_modified_history.dart';
 import 'package:pilll/error_log.dart';
 import 'package:pilll/util/datetime/date_compare.dart';
-import 'package:pilll/util/datetime/day.dart';
 
 class TakePill {
   final PillSheetGroup pillSheetGroup;
