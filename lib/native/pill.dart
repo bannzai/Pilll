@@ -22,8 +22,7 @@ Future<void> recordPill() async {
 
   final database = DatabaseConnection(firebaseUser.uid);
   final pillSheetDatastore = PillSheetDatastore(database);
-  final pillSheetModifiedHistoryDatastore =
-      PillSheetModifiedHistoryDatastore(database);
+  final pillSheetModifiedHistoryDatastore = PillSheetModifiedHistoryDatastore(database);
   final pillSheetGroupDatastore = PillSheetGroupDatastore(database);
   final pillSheetGroup = await pillSheetGroupDatastore.fetchLatest();
   if (pillSheetGroup == null) {
@@ -40,14 +39,16 @@ Future<void> recordPill() async {
   final takenDate = now();
   final batchFactory = BatchFactory(database);
 
-  await takePill(
-    takenDate: takenDate,
+  final takePill = TakePill(
     pillSheetGroup: pillSheetGroup,
     activedPillSheet: activedPillSheet,
     batchFactory: batchFactory,
     pillSheetDatastore: pillSheetDatastore,
     pillSheetModifiedHistoryDatastore: pillSheetModifiedHistoryDatastore,
     pillSheetGroupDatastore: pillSheetGroupDatastore,
+  );
+  await takePill(
+    takenDate: takenDate,
     isQuickRecord: true,
   );
 
