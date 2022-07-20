@@ -40,14 +40,16 @@ class TakePill {
         return pillSheet;
       }
 
-      // takenDateよりも予測するピルシートの最終服用日よりも大きい場合はactivedPillSheetじゃないPillSheetと判断。
-      // そのピルシートの最終日で予測する最終服用日を記録する
+      // takenDateよりも予測するピルシートの最終服用日よりも小さい場合は、そのピルシートの最終日で予測する最終服用日を記録する
       if (takenDate.isAfter(pillSheet.estimatedEndTakenDate)) {
-        debugPrint("$takenDate, $pillSheet, ${pillSheet.estimatedEndTakenDate}");
         return pillSheet.copyWith(lastTakenDate: pillSheet.estimatedEndTakenDate);
-      } else {
-        return pillSheet.copyWith(lastTakenDate: takenDate);
       }
+
+      if (takenDate.isBefore(pillSheet.beginingDate)) {
+        return pillSheet;
+      }
+
+      return pillSheet.copyWith(lastTakenDate: takenDate);
     }).toList();
     debugPrint("$updatedPillSheets");
 
@@ -56,34 +58,6 @@ class TakePill {
       final updatedPillSheet = updatedPillSheetGroup.pillSheets[index];
       if (pillSheetGroup.pillSheets[index] == updatedPillSheet) {
         return false;
-      }
-
-      // TODO: テストコード書いて不要だった場合消す
-      // 例えば2枚目のピルシート(groupIndex:1)がアクティブで、1枚目のピルシート(groupIndex:0)の最終日を記録した場合(28番目)、2枚目のピルシートのlastTakenDateが1枚目の28番目のピルシートのlastTakenDateと同じになる。
-      // その場合後続の処理で決定する履歴のafter: PillSheetの値が2枚目のピルシートの値になってしまう。これを避けるための条件式になっている
-      if (updatedPillSheet.groupIndex == activedPillSheet.groupIndex) {
-        debugPrint("1");
-        if (index > 0) {
-          debugPrint("2");
-          final previousUpdatedPillSheet = updatedPillSheetGroup.pillSheets[index - 1];
-          final previousUpdatedPillSheetLastTakenDate = previousUpdatedPillSheet.lastTakenDate;
-          assert(previousUpdatedPillSheetLastTakenDate != null, "事前処理でnullではないはず。previousUpdatedPillSheetLastTakenDate != null");
-          if (previousUpdatedPillSheetLastTakenDate != null) {
-            debugPrint("3");
-            if (isSameDay(previousUpdatedPillSheetLastTakenDate, takenDate)) {
-              debugPrint("4");
-              final updatedPillSheetLastTakenDate = updatedPillSheet.lastTakenDate;
-              assert(updatedPillSheetLastTakenDate != null, "事前処理でnullではないはず。updatedPillSheetLastTakenDate != null");
-              if (updatedPillSheetLastTakenDate != null) {
-                debugPrint("5");
-                if (isSameDay(previousUpdatedPillSheetLastTakenDate, updatedPillSheetLastTakenDate)) {
-                  debugPrint("6");
-                  return false;
-                }
-              }
-            }
-          }
-        }
       }
 
       return true;
