@@ -4,7 +4,7 @@ import 'package:flutter_app_badger/flutter_app_badger.dart';
 import 'package:pilll/analytics.dart';
 import 'package:pilll/database/batch.dart';
 import 'package:pilll/database/database.dart';
-import 'package:pilll/domain/record/util/take.dart';
+import 'package:pilll/domain/record/util/take_pill.dart';
 import 'package:pilll/database/pill_sheet.dart';
 import 'package:pilll/database/pill_sheet_group.dart';
 import 'package:pilll/database/pill_sheet_modified_history.dart';
@@ -22,8 +22,7 @@ Future<void> recordPill() async {
 
   final database = DatabaseConnection(firebaseUser.uid);
   final pillSheetDatastore = PillSheetDatastore(database);
-  final pillSheetModifiedHistoryDatastore =
-      PillSheetModifiedHistoryDatastore(database);
+  final pillSheetModifiedHistoryDatastore = PillSheetModifiedHistoryDatastore(database);
   final pillSheetGroupDatastore = PillSheetGroupDatastore(database);
   final pillSheetGroup = await pillSheetGroupDatastore.fetchLatest();
   if (pillSheetGroup == null) {
@@ -40,14 +39,16 @@ Future<void> recordPill() async {
   final takenDate = now();
   final batchFactory = BatchFactory(database);
 
-  await takePill(
-    takenDate: takenDate,
-    pillSheetGroup: pillSheetGroup,
-    activedPillSheet: activedPillSheet,
+  final takePill = TakePill(
     batchFactory: batchFactory,
     pillSheetDatastore: pillSheetDatastore,
     pillSheetModifiedHistoryDatastore: pillSheetModifiedHistoryDatastore,
     pillSheetGroupDatastore: pillSheetGroupDatastore,
+  );
+  await takePill(
+    takenDate: takenDate,
+    pillSheetGroup: pillSheetGroup,
+    activedPillSheet: activedPillSheet,
     isQuickRecord: true,
   );
 

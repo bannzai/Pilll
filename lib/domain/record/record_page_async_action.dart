@@ -2,7 +2,7 @@ import 'dart:async';
 import 'dart:math';
 
 import 'package:pilll/database/batch.dart';
-import 'package:pilll/domain/record/util/take.dart';
+import 'package:pilll/domain/record/util/take_pill.dart';
 import 'package:pilll/entity/pill_mark_type.dart';
 import 'package:pilll/entity/pill_sheet.codegen.dart';
 import 'package:pilll/entity/pill_sheet_group.codegen.dart';
@@ -30,9 +30,7 @@ class RecordPageAsyncAction {
     this._pillSheetGroupDatastore,
   );
 
-  Future<bool> _take(
-      {required DateTime takenDate,
-      required PillSheetGroup pillSheetGroup}) async {
+  Future<bool> _take({required DateTime takenDate, required PillSheetGroup pillSheetGroup}) async {
     final activedPillSheet = pillSheetGroup.activedPillSheet;
     if (activedPillSheet == null) {
       throw const FormatException("active pill sheet not found");
@@ -40,14 +38,16 @@ class RecordPageAsyncAction {
     if (activedPillSheet.todayPillIsAlreadyTaken) {
       return false;
     }
-    final updatedPillSheetGroup = await takePill(
-      takenDate: takenDate,
-      pillSheetGroup: pillSheetGroup,
-      activedPillSheet: activedPillSheet,
+    final takePill = TakePill(
       batchFactory: _batchFactory,
       pillSheetDatastore: _pillSheetDatastore,
       pillSheetModifiedHistoryDatastore: _pillSheetModifiedHistoryDatastore,
       pillSheetGroupDatastore: _pillSheetGroupDatastore,
+    );
+    final updatedPillSheetGroup = await takePill(
+      takenDate: takenDate,
+      pillSheetGroup: pillSheetGroup,
+      activedPillSheet: activedPillSheet,
       isQuickRecord: false,
     );
     if (updatedPillSheetGroup == null) {
@@ -78,8 +78,7 @@ class RecordPageAsyncAction {
     if (activedPillSheet.groupIndex < pillSheet.groupIndex) {
       return false;
     }
-    var diff = min(pillSheet.todayPillNumber, pillSheet.typeInfo.totalCount) -
-        pillNumberIntoPillSheet;
+    var diff = min(pillSheet.todayPillNumber, pillSheet.typeInfo.totalCount) - pillNumberIntoPillSheet;
     if (diff < 0) {
       // User tapped future pill number
       return false;
@@ -98,21 +97,15 @@ class RecordPageAsyncAction {
       throw const FormatException("現在対象となっているピルシートが見つかりませんでした");
     }
     // キャンセルの場合は今日の服用のundo機能なので、服用済みじゃない場合はreturnする
-    if (!activedPillSheet.todayPillIsAlreadyTaken ||
-        activedPillSheet.lastTakenDate == null) {
+    if (!activedPillSheet.todayPillIsAlreadyTaken || activedPillSheet.lastTakenDate == null) {
       return;
     }
 
     await revertTaken(
-        pillSheetGroup: pillSheetGroup,
-        pageIndex: activedPillSheet.groupIndex,
-        pillNumberIntoPillSheet: activedPillSheet.lastTakenPillNumber);
+        pillSheetGroup: pillSheetGroup, pageIndex: activedPillSheet.groupIndex, pillNumberIntoPillSheet: activedPillSheet.lastTakenPillNumber);
   }
 
-  Future<void> revertTaken(
-      {required PillSheetGroup pillSheetGroup,
-      required int pageIndex,
-      required int pillNumberIntoPillSheet}) async {
+  Future<void> revertTaken({required PillSheetGroup pillSheetGroup, required int pageIndex, required int pillNumberIntoPillSheet}) async {
     final activedPillSheet = pillSheetGroup.activedPillSheet;
     if (activedPillSheet == null) {
       throw const FormatException("現在対象となっているピルシートが見つかりませんでした");
@@ -122,10 +115,7 @@ class RecordPageAsyncAction {
     }
 
     final targetPillSheet = pillSheetGroup.pillSheets[pageIndex];
-    final takenDate = targetPillSheet
-        .displayPillTakeDate(pillNumberIntoPillSheet)
-        .subtract(const Duration(days: 1))
-        .date();
+    final takenDate = targetPillSheet.displayPillTakeDate(pillNumberIntoPillSheet).subtract(const Duration(days: 1)).date();
 
     final updatedPillSheets = pillSheetGroup.pillSheets.map((pillSheet) {
       final lastTakenDate = pillSheet.lastTakenDate;
@@ -145,27 +135,17 @@ class RecordPageAsyncAction {
 
       if (takenDate.isBefore(pillSheet.beginingDate)) {
         // reset pill sheet when back to one before pill sheet
-        return pillSheet.copyWith(
-            lastTakenDate:
-                pillSheet.beginingDate.subtract(const Duration(days: 1)).date(),
-            restDurations: []);
+        return pillSheet.copyWith(lastTakenDate: pillSheet.beginingDate.subtract(const Duration(days: 1)).date(), restDurations: []);
       } else {
         // Revert対象の日付よりも後ろにある休薬期間のデータは消す
-        final remainingResetDurations = pillSheet.restDurations
-            .where((restDuration) =>
-                restDuration.beginDate.date().isBefore(takenDate))
-            .toList();
-        return pillSheet.copyWith(
-            lastTakenDate: takenDate, restDurations: remainingResetDurations);
+        final remainingResetDurations = pillSheet.restDurations.where((restDuration) => restDuration.beginDate.date().isBefore(takenDate)).toList();
+        return pillSheet.copyWith(lastTakenDate: takenDate, restDurations: remainingResetDurations);
       }
     }).toList();
 
-    final updatedPillSheetGroup =
-        pillSheetGroup.copyWith(pillSheets: updatedPillSheets);
+    final updatedPillSheetGroup = pillSheetGroup.copyWith(pillSheets: updatedPillSheets);
     final updatedIndexses = pillSheetGroup.pillSheets.asMap().keys.where(
-          (index) =>
-              pillSheetGroup.pillSheets[index] !=
-              updatedPillSheetGroup.pillSheets[index],
+          (index) => pillSheetGroup.pillSheets[index] != updatedPillSheetGroup.pillSheets[index],
         );
 
     if (updatedIndexses.isEmpty) {
@@ -181,8 +161,7 @@ class RecordPageAsyncAction {
 
     final before = pillSheetGroup.pillSheets[updatedIndexses.last];
     final after = updatedPillSheetGroup.pillSheets[updatedIndexses.first];
-    final history = PillSheetModifiedHistoryServiceActionFactory
-        .createRevertTakenPillAction(
+    final history = PillSheetModifiedHistoryServiceActionFactory.createRevertTakenPillAction(
       pillSheetGroupID: pillSheetGroup.id,
       before: before,
       after: after,
@@ -221,8 +200,7 @@ class RecordPageAsyncAction {
     required PillSheet pillSheet,
   }) {
     if (pillNumberIntoPillSheet > pillSheet.typeInfo.dosingPeriod) {
-      return (pillSheet.pillSheetType == PillSheetType.pillsheet_21 ||
-              pillSheet.pillSheetType == PillSheetType.pillsheet_24_rest_4)
+      return (pillSheet.pillSheetType == PillSheetType.pillsheet_21 || pillSheet.pillSheetType == PillSheetType.pillsheet_24_rest_4)
           ? PillMarkType.rest
           : PillMarkType.fake;
     }
@@ -259,8 +237,7 @@ class RecordPageAsyncAction {
       return false;
     }
 
-    return pillNumberIntoPillSheet > activedPillSheet.lastTakenPillNumber &&
-        pillNumberIntoPillSheet <= activedPillSheet.todayPillNumber;
+    return pillNumberIntoPillSheet > activedPillSheet.lastTakenPillNumber && pillNumberIntoPillSheet <= activedPillSheet.todayPillNumber;
   }
 
   Future<void> beginRestDuration({
@@ -281,8 +258,7 @@ class RecordPageAsyncAction {
     _pillSheetGroupDatastore.updateWithBatch(batch, updatedPillSheetGroup);
     _pillSheetModifiedHistoryDatastore.add(
       batch,
-      PillSheetModifiedHistoryServiceActionFactory
-          .createBeganRestDurationAction(
+      PillSheetModifiedHistoryServiceActionFactory.createBeganRestDurationAction(
         pillSheetGroupID: pillSheetGroup.id,
         before: activedPillSheet,
         after: updatedPillSheet,
@@ -314,8 +290,7 @@ class RecordPageAsyncAction {
     _pillSheetGroupDatastore.updateWithBatch(batch, updatedPillSheetGroup);
     _pillSheetModifiedHistoryDatastore.add(
       batch,
-      PillSheetModifiedHistoryServiceActionFactory
-          .createEndedRestDurationAction(
+      PillSheetModifiedHistoryServiceActionFactory.createEndedRestDurationAction(
         pillSheetGroupID: pillSheetGroup.id,
         before: activedPillSheet,
         after: updatedPillSheet,
@@ -325,26 +300,21 @@ class RecordPageAsyncAction {
     await batch.commit();
   }
 
-  Future<void> setDisplayNumberSettingEndNumber(
-      {required int end, required PillSheetGroup pillSheetGroup}) async {
+  Future<void> setDisplayNumberSettingEndNumber({required int end, required PillSheetGroup pillSheetGroup}) async {
     final offsetPillNumber = pillSheetGroup.displayNumberSetting;
     final PillSheetGroup updatedPillSheetGroup;
     if (offsetPillNumber == null) {
       final newDisplayNumberSetting = DisplayNumberSetting(endPillNumber: end);
-      updatedPillSheetGroup = pillSheetGroup.copyWith(
-          displayNumberSetting: newDisplayNumberSetting);
+      updatedPillSheetGroup = pillSheetGroup.copyWith(displayNumberSetting: newDisplayNumberSetting);
     } else {
-      final newDisplayNumberSetting =
-          offsetPillNumber.copyWith(endPillNumber: end);
-      updatedPillSheetGroup = pillSheetGroup.copyWith(
-          displayNumberSetting: newDisplayNumberSetting);
+      final newDisplayNumberSetting = offsetPillNumber.copyWith(endPillNumber: end);
+      updatedPillSheetGroup = pillSheetGroup.copyWith(displayNumberSetting: newDisplayNumberSetting);
     }
 
     _pillSheetGroupDatastore.update(updatedPillSheetGroup);
   }
 
-  Future<void> switchingAppearanceMode(
-      {required PillSheetAppearanceMode mode, required Setting setting}) async {
+  Future<void> switchingAppearanceMode({required PillSheetAppearanceMode mode, required Setting setting}) async {
     final updated = setting.copyWith(pillSheetAppearanceMode: mode);
     await _settingDatastore.update(updated);
   }
