@@ -13,7 +13,7 @@ import 'package:shared_preferences/shared_preferences.dart';
 import '../helper/mock.mocks.dart';
 
 void main() {
-  final _today = DateTime.parse("2022-07-20");
+  final _today = DateTime.parse("2022-07-24");
   late DateTime activePillSheetBeginDate;
   late DateTime? activePillSheetLastTakenDate;
   late PillSheet previousPillSheet;
