@@ -7,7 +7,7 @@ import 'package:pilll/database/pill_sheet.dart';
 import 'package:pilll/database/pill_sheet_group.dart';
 import 'package:pilll/database/pill_sheet_modified_history.dart';
 import 'package:pilll/error_log.dart';
-import 'package:pilll/util/datetime/date_compare.dart';
+import 'package:pilll/util/datetime/day.dart';
 
 class TakePill {
   final BatchFactory batchFactory;
@@ -47,7 +47,7 @@ class TakePill {
 
       // takenDateがピルシートの開始日に満たない場合は、記録の対象になっていないので早期リターン
       // 一つ前のピルシートのピルをタップした時など
-      if (takenDate.isBefore(pillSheet.beginingDate)) {
+      if (takenDate.date().isBefore(pillSheet.beginingDate.date())) {
         return pillSheet;
       }
 
@@ -67,6 +67,8 @@ class TakePill {
 
     debugPrint("updatedIndexses: $updatedIndexses");
     if (updatedIndexses.isEmpty) {
+      debugPrint("unexpected updatedIndexes is empty");
+
       // NOTE: avoid error for unit test
       if (Firebase.apps.isNotEmpty) {
         errorLogger.recordError(const FormatException("unexpected updatedIndexes is empty"), StackTrace.current);
