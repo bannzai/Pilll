@@ -13,7 +13,7 @@ import 'package:shared_preferences/shared_preferences.dart';
 import '../helper/mock.mocks.dart';
 
 void main() {
-  final _today = DateTime.parse("2022-07-24");
+  final _today = DateTime.parse("2022-07-24T19:02:00");
   late DateTime activePillSheetBeginDate;
   late DateTime? activePillSheetLastTakenDate;
   late PillSheet previousPillSheet;
@@ -485,6 +485,67 @@ void main() {
         verify(pillSheetModifiedHistoryDatastore.add(batch, history)).called(1);
         verify(pillSheetGroupDatastore.updateWithBatch(batch, updatedPillSheetGroup)).called(1);
 
+        expect(result, updatedPillSheetGroup);
+      });
+
+      test("Real case 1. Timesensitive pattern(takenDate(19:02:00) < beginingDate(19:02:21)) and with rest durations", () async {
+        previousPillSheet =
+            previousPillSheet.copyWith(beginingDate: DateTime.parse("2022-06-22T19:02:21"), lastTakenDate: DateTime.parse("2022-07-23T19:00:04"));
+        previousPillSheet = previousPillSheet.copyWith(restDurations: [
+          RestDuration(
+              beginDate: DateTime.parse("2022-07-14T18:25:41"),
+              createdDate: DateTime.parse("2022-07-14T18:25:41"),
+              endDate: DateTime.parse("2022-07-18T18:10:01"))
+        ]);
+        activedPillSheet = activedPillSheet.copyWith(beginingDate: DateTime.parse("2022-07-24T19:02:21"), lastTakenDate: null);
+        pillSheetGroup = PillSheetGroup(
+          id: "group_id",
+          pillSheetIDs: [previousPillSheet.id!, activedPillSheet.id!, nextPillSheet.id!],
+          pillSheets: [previousPillSheet, activedPillSheet, nextPillSheet],
+          createdAt: _today,
+        );
+
+        final takenDate = _today.add(const Duration(seconds: 1));
+        pillSheetGroup = PillSheetGroup(
+          id: "group_id",
+          pillSheetIDs: [previousPillSheet.id!, activedPillSheet.id!, nextPillSheet.id!],
+          pillSheets: [previousPillSheet, activedPillSheet, nextPillSheet],
+          createdAt: _today,
+        );
+
+        final batchFactory = MockBatchFactory();
+        final batch = MockWriteBatch();
+        when(batchFactory.batch()).thenReturn(batch);
+
+        final pillSheetDatastore = MockPillSheetDatastore();
+        final updatedActivePillSheet = activedPillSheet.copyWith(lastTakenDate: takenDate);
+        when(pillSheetDatastore.update(batch, [previousPillSheet, updatedActivePillSheet, nextPillSheet])).thenReturn(null);
+
+        final pillSheetModifiedHistoryDatastore = MockPillSheetModifiedHistoryDatastore();
+        final history = PillSheetModifiedHistoryServiceActionFactory.createTakenPillAction(
+            pillSheetGroupID: pillSheetGroup.id, isQuickRecord: false, before: activedPillSheet, after: updatedActivePillSheet);
+        when(pillSheetModifiedHistoryDatastore.add(batch, history)).thenReturn(null);
+
+        final pillSheetGroupDatastore = MockPillSheetGroupDatastore();
+        final updatedPillSheetGroup = pillSheetGroup.copyWith(pillSheets: [previousPillSheet, updatedActivePillSheet, nextPillSheet]);
+        when(pillSheetGroupDatastore.updateWithBatch(batch, updatedPillSheetGroup)).thenReturn(null);
+
+        final takePill = TakePill(
+          batchFactory: batchFactory,
+          pillSheetDatastore: pillSheetDatastore,
+          pillSheetModifiedHistoryDatastore: pillSheetModifiedHistoryDatastore,
+          pillSheetGroupDatastore: pillSheetGroupDatastore,
+        );
+        final result = await takePill(
+          takenDate: takenDate,
+          activedPillSheet: activedPillSheet,
+          pillSheetGroup: pillSheetGroup,
+          isQuickRecord: false,
+        );
+
+        verify(pillSheetDatastore.update(batch, [previousPillSheet, updatedActivePillSheet, nextPillSheet])).called(1);
+        verify(pillSheetModifiedHistoryDatastore.add(batch, history)).called(1);
+        verify(pillSheetGroupDatastore.updateWithBatch(batch, updatedPillSheetGroup)).called(1);
         expect(result, updatedPillSheetGroup);
       });
     });
