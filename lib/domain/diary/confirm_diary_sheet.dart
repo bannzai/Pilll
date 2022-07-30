@@ -2,7 +2,7 @@ import 'package:pilll/components/atoms/buttons.dart';
 import 'package:pilll/components/page/discard_dialog.dart';
 import 'package:pilll/domain/diary/confirm_diary_store.dart';
 import 'package:pilll/domain/diary/diary_state.codegen.dart';
-import 'package:pilll/domain/diary/post_diary_page.dart';
+import 'package:pilll/domain/diary_post/post_diary_page.dart';
 import 'package:pilll/entity/diary.codegen.dart';
 import 'package:pilll/database/diary.dart';
 import 'package:pilll/components/atoms/color.dart';
