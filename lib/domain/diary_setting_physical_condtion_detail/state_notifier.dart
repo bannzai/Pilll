@@ -1,6 +1,6 @@
 import 'dart:async';
 
-import 'package:pilll/domain/diary_setting_physical_condtion_detail/state.dart';
+import 'package:pilll/domain/diary_setting_physical_condtion_detail/state.codegen.dart';
 
 import 'package:riverpod/riverpod.dart';
 import 'package:shared_preferences/shared_preferences.dart';
