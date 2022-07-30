@@ -1,5 +1,7 @@
 import 'package:flutter/foundation.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';
+import 'package:pilll/entity/firestore_timestamp_converter.dart';
+import 'package:cloud_firestore/cloud_firestore.dart';
 
 part 'diary_setting.codegen.g.dart';
 part 'diary_setting.codegen.freezed.dart';
@@ -21,13 +23,19 @@ const List<String> defaultPhysicalConditions = [
   "不眠",
 ];
 
-// MEMO: 途中で追加したEntity。CreatedAtが欲しくなったら追加するくらいの温度感。
-// 途中で追加なのでそれ用のスクリプトを書く手間を省きたくてデフォルト値だけでインスタンス化できている間はこのままにする
 @freezed
 class DiarySetting with _$DiarySetting {
   const DiarySetting._();
   @JsonSerializable(explicitToJson: true)
-  const factory DiarySetting({@Default(defaultPhysicalConditions) List<String> physicalConditions}) = _DiarySetting;
+  const factory DiarySetting({
+    @Default(defaultPhysicalConditions)
+        List<String> physicalConditions,
+    @JsonKey(
+      fromJson: NonNullTimestampConverter.timestampToDateTime,
+      toJson: NonNullTimestampConverter.dateTimeToTimestamp,
+    )
+        required DateTime createdAt,
+  }) = _DiarySetting;
 
   factory DiarySetting.fromJson(Map<String, dynamic> json) => _$DiarySettingFromJson(json);
 }

@@ -12,9 +12,13 @@ _$_DiarySetting _$$_DiarySettingFromJson(Map<String, dynamic> json) =>
               ?.map((e) => e as String)
               .toList() ??
           defaultPhysicalConditions,
+      createdAt: NonNullTimestampConverter.timestampToDateTime(
+          json['createdAt'] as Timestamp),
     );
 
 Map<String, dynamic> _$$_DiarySettingToJson(_$_DiarySetting instance) =>
     <String, dynamic>{
       'physicalConditions': instance.physicalConditions,
+      'createdAt':
+          NonNullTimestampConverter.dateTimeToTimestamp(instance.createdAt),
     };
