@@ -181,7 +181,7 @@ class DiaryPostPage extends HookConsumerWidget {
         const SizedBox(height: 8),
         Wrap(
           spacing: 10,
-          children: Diary.allPhysicalConditions
+          children: defaultPhysicalConditions
               .map((e) => ChoiceChip(
                     label: Text(e),
                     labelStyle: FontType.assisting.merge(state.diary.physicalConditions.contains(e) ? TextColorStyle.white : TextColorStyle.darkGray),
