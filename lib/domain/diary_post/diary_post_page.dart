@@ -17,6 +17,9 @@ abstract class DiaryPostPageConst {
   static double keyboardToobarHeight = 44;
 }
 
+const _secitonTitle =
+    const TextStyle(fontFamily: FontFamily.japanese, fontWeight: FontWeight.w300, fontSize: FontSize.sLarge, color: TextColor.black);
+
 class DiaryPostPage extends HookConsumerWidget {
   final DateTime date;
   final Diary? diary;
@@ -110,7 +113,7 @@ class DiaryPostPage extends HookConsumerWidget {
     return Row(
       mainAxisAlignment: MainAxisAlignment.center,
       children: [
-        Text("体調", style: FontType.componentTitle.merge(TextColorStyle.black)),
+        const Text("体調", style: _secitonTitle),
         const Spacer(),
         Container(
           height: 48,
@@ -160,7 +163,21 @@ class DiaryPostPage extends HookConsumerWidget {
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
-        Text("体調詳細", style: FontType.componentTitle.merge(TextColorStyle.black)),
+        Row(
+          children: [
+            const Text("体調詳細", style: _secitonTitle),
+            const SizedBox(width: 12),
+            IconButton(
+              onPressed: () {},
+              padding: const EdgeInsets.all(4),
+              icon: const Icon(
+                Icons.edit,
+              ),
+              iconSize: 20,
+              constraints: const BoxConstraints(minWidth: 20, minHeight: 20),
+            ),
+          ],
+        ),
         const SizedBox(height: 8),
         Wrap(
           spacing: 10,
@@ -185,7 +202,7 @@ class DiaryPostPage extends HookConsumerWidget {
     return Row(
       mainAxisAlignment: MainAxisAlignment.center,
       children: [
-        Text("sex", style: FontType.componentTitle.merge(TextColorStyle.black)),
+        const Text("sex", style: _secitonTitle),
         const SizedBox(width: 80),
         GestureDetector(
           onTap: () {
