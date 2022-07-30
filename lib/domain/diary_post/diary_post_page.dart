@@ -18,8 +18,7 @@ abstract class DiaryPostPageConst {
   static double keyboardToobarHeight = 44;
 }
 
-const _secitonTitle =
-    const TextStyle(fontFamily: FontFamily.japanese, fontWeight: FontWeight.w300, fontSize: FontSize.sLarge, color: TextColor.black);
+const _secitonTitle = TextStyle(fontFamily: FontFamily.japanese, fontWeight: FontWeight.w300, fontSize: FontSize.sLarge, color: TextColor.black);
 
 class DiaryPostPage extends HookConsumerWidget {
   final DateTime date;
