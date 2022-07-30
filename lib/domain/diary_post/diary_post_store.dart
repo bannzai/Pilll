@@ -3,9 +3,9 @@ import 'package:pilll/entity/diary.codegen.dart';
 import 'package:pilll/database/diary.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
 
-class DiaryPostStore extends StateNotifier<DiaryState> {
+class DiaryPostStateNotifier extends StateNotifier<DiaryState> {
   final DiaryDatastore _diaryDatastore;
-  DiaryPostStore(this._diaryDatastore, DiaryState state) : super(state);
+  DiaryPostStateNotifier(this._diaryDatastore, DiaryState state) : super(state);
 
   void removePhysicalCondition(String physicalCondition) {
     state = state.copyWith(diary: state.diary.copyWith(physicalConditions: state.diary.physicalConditions..remove(physicalCondition)));

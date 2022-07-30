@@ -14,13 +14,14 @@ import 'package:flutter/material.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
 import 'package:flutter_svg/svg.dart';
 
-final _diaryPostStoreProvider = StateNotifierProvider.autoDispose.family<DiaryPostStore, DiaryState, DiaryPostStoreProviderFamily>((ref, family) {
+final _diaryPostStoreProvider =
+    StateNotifierProvider.autoDispose.family<DiaryPostStateNotifier, DiaryState, DiaryPostStoreProviderFamily>((ref, family) {
   final service = ref.watch(diaryDatastoreProvider);
   final diary = family.diary;
   if (diary == null) {
-    return DiaryPostStore(service, DiaryState(diary: Diary.fromDate(family.date)));
+    return DiaryPostStateNotifier(service, DiaryState(diary: Diary.fromDate(family.date)));
   }
-  return DiaryPostStore(service, DiaryState(diary: diary.copyWith()));
+  return DiaryPostStateNotifier(service, DiaryState(diary: diary.copyWith()));
 });
 
 abstract class DiaryPostPageConst {
@@ -116,7 +117,7 @@ class DiaryPostPage extends HookConsumerWidget {
     );
   }
 
-  Widget _physicalConditions(DiaryPostStore store, DiaryState state) {
+  Widget _physicalConditions(DiaryPostStateNotifier store, DiaryState state) {
     return Row(
       mainAxisAlignment: MainAxisAlignment.center,
       children: [
@@ -166,7 +167,7 @@ class DiaryPostPage extends HookConsumerWidget {
     );
   }
 
-  Widget _physicalConditionDetails(DiaryPostStore store, DiaryState state) {
+  Widget _physicalConditionDetails(DiaryPostStateNotifier store, DiaryState state) {
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
@@ -191,7 +192,7 @@ class DiaryPostPage extends HookConsumerWidget {
     );
   }
 
-  Widget _sex(DiaryPostStore store, DiaryState state) {
+  Widget _sex(DiaryPostStateNotifier store, DiaryState state) {
     return Row(
       mainAxisAlignment: MainAxisAlignment.center,
       children: [
@@ -240,7 +241,7 @@ class DiaryPostPage extends HookConsumerWidget {
     BuildContext context,
     TextEditingController? textEditingController,
     FocusNode focusNode,
-    DiaryPostStore store,
+    DiaryPostStateNotifier store,
     DiaryState state,
   ) {
     const textLength = 120;
