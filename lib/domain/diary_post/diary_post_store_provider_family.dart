@@ -1,10 +1,6 @@
 import 'package:equatable/equatable.dart';
 import 'package:pilll/entity/diary.codegen.dart';
 
-// ref: https://riverpod.dev/docs/concepts/modifiers/family/
-// > A tuple from tuple
-// > Objects generated with Freezed or built_value
-// > Objects using equatable
 class DiaryPostStoreProviderFamily extends Equatable {
   final DateTime date;
   final Diary? diary;
