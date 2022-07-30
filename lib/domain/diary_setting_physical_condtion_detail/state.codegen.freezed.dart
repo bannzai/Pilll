@@ -19,9 +19,10 @@ class _$DiarySettingPhysicalConditionDetailStateTearOff {
   const _$DiarySettingPhysicalConditionDetailStateTearOff();
 
   _DiarySettingPhysicalConditionDetailState call(
-      {required DiarySetting diarySetting}) {
+      {required DiarySetting diarySetting, required List<String> selected}) {
     return _DiarySettingPhysicalConditionDetailState(
       diarySetting: diarySetting,
+      selected: selected,
     );
   }
 }
@@ -33,6 +34,7 @@ const $DiarySettingPhysicalConditionDetailState =
 /// @nodoc
 mixin _$DiarySettingPhysicalConditionDetailState {
   DiarySetting get diarySetting => throw _privateConstructorUsedError;
+  List<String> get selected => throw _privateConstructorUsedError;
 
   @JsonKey(ignore: true)
   $DiarySettingPhysicalConditionDetailStateCopyWith<
@@ -46,7 +48,7 @@ abstract class $DiarySettingPhysicalConditionDetailStateCopyWith<$Res> {
           DiarySettingPhysicalConditionDetailState value,
           $Res Function(DiarySettingPhysicalConditionDetailState) then) =
       _$DiarySettingPhysicalConditionDetailStateCopyWithImpl<$Res>;
-  $Res call({DiarySetting diarySetting});
+  $Res call({DiarySetting diarySetting, List<String> selected});
 
   $DiarySettingCopyWith<$Res> get diarySetting;
 }
@@ -64,12 +66,17 @@ class _$DiarySettingPhysicalConditionDetailStateCopyWithImpl<$Res>
   @override
   $Res call({
     Object? diarySetting = freezed,
+    Object? selected = freezed,
   }) {
     return _then(_value.copyWith(
       diarySetting: diarySetting == freezed
           ? _value.diarySetting
           : diarySetting // ignore: cast_nullable_to_non_nullable
               as DiarySetting,
+      selected: selected == freezed
+          ? _value.selected
+          : selected // ignore: cast_nullable_to_non_nullable
+              as List<String>,
     ));
   }
 
@@ -89,7 +96,7 @@ abstract class _$DiarySettingPhysicalConditionDetailStateCopyWith<$Res>
           $Res Function(_DiarySettingPhysicalConditionDetailState) then) =
       __$DiarySettingPhysicalConditionDetailStateCopyWithImpl<$Res>;
   @override
-  $Res call({DiarySetting diarySetting});
+  $Res call({DiarySetting diarySetting, List<String> selected});
 
   @override
   $DiarySettingCopyWith<$Res> get diarySetting;
@@ -112,12 +119,17 @@ class __$DiarySettingPhysicalConditionDetailStateCopyWithImpl<$Res>
   @override
   $Res call({
     Object? diarySetting = freezed,
+    Object? selected = freezed,
   }) {
     return _then(_DiarySettingPhysicalConditionDetailState(
       diarySetting: diarySetting == freezed
           ? _value.diarySetting
           : diarySetting // ignore: cast_nullable_to_non_nullable
               as DiarySetting,
+      selected: selected == freezed
+          ? _value.selected
+          : selected // ignore: cast_nullable_to_non_nullable
+              as List<String>,
     ));
   }
 }
@@ -126,15 +138,18 @@ class __$DiarySettingPhysicalConditionDetailStateCopyWithImpl<$Res>
 
 class _$_DiarySettingPhysicalConditionDetailState
     extends _DiarySettingPhysicalConditionDetailState {
-  _$_DiarySettingPhysicalConditionDetailState({required this.diarySetting})
+  _$_DiarySettingPhysicalConditionDetailState(
+      {required this.diarySetting, required this.selected})
       : super._();
 
   @override
   final DiarySetting diarySetting;
+  @override
+  final List<String> selected;
 
   @override
   String toString() {
-    return 'DiarySettingPhysicalConditionDetailState(diarySetting: $diarySetting)';
+    return 'DiarySettingPhysicalConditionDetailState(diarySetting: $diarySetting, selected: $selected)';
   }
 
   @override
@@ -143,12 +158,15 @@ class _$_DiarySettingPhysicalConditionDetailState
         (other.runtimeType == runtimeType &&
             other is _DiarySettingPhysicalConditionDetailState &&
             const DeepCollectionEquality()
-                .equals(other.diarySetting, diarySetting));
+                .equals(other.diarySetting, diarySetting) &&
+            const DeepCollectionEquality().equals(other.selected, selected));
   }
 
   @override
   int get hashCode => Object.hash(
-      runtimeType, const DeepCollectionEquality().hash(diarySetting));
+      runtimeType,
+      const DeepCollectionEquality().hash(diarySetting),
+      const DeepCollectionEquality().hash(selected));
 
   @JsonKey(ignore: true)
   @override
@@ -161,12 +179,15 @@ class _$_DiarySettingPhysicalConditionDetailState
 abstract class _DiarySettingPhysicalConditionDetailState
     extends DiarySettingPhysicalConditionDetailState {
   factory _DiarySettingPhysicalConditionDetailState(
-          {required DiarySetting diarySetting}) =
+          {required DiarySetting diarySetting,
+          required List<String> selected}) =
       _$_DiarySettingPhysicalConditionDetailState;
   _DiarySettingPhysicalConditionDetailState._() : super._();
 
   @override
   DiarySetting get diarySetting;
+  @override
+  List<String> get selected;
   @override
   @JsonKey(ignore: true)
   _$DiarySettingPhysicalConditionDetailStateCopyWith<
