@@ -8,7 +8,7 @@ import 'package:pilll/components/organisms/calendar/band/calendar_scheduled_mens
 import 'package:pilll/components/organisms/calendar/day/calendar_day_tile.dart';
 import 'package:pilll/components/organisms/calendar/band/calendar_band_function.dart';
 import 'package:pilll/components/organisms/calendar/week/week_calendar_state.dart';
-import 'package:pilll/domain/diary_post/post_diary_page.dart';
+import 'package:pilll/domain/diary_post/diary_post_page.dart';
 import 'package:flutter/material.dart';
 import 'package:pilll/domain/menstruation_edit/menstruation_edit_page.dart';
 import 'package:pilll/entity/diary.codegen.dart';
