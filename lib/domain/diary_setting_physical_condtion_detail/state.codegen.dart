@@ -1,7 +1,6 @@
 import 'package:freezed_annotation/freezed_annotation.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
 import 'package:pilll/database/diary_setting.dart';
-import 'package:pilll/domain/record/record_page_state.codegen.dart';
 import 'package:pilll/entity/diary_setting.codegen.dart';
 
 part 'state.codegen.freezed.dart';
