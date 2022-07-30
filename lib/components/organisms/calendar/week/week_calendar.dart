@@ -21,8 +21,7 @@ class CalendarWeekdayLine extends StatelessWidget {
   final WeekCalendarState state;
   final double horizontalPadding;
   final List<CalendarMenstruationBandModel> calendarMenstruationBandModels;
-  final List<CalendarScheduledMenstruationBandModel>
-      calendarScheduledMenstruationBandModels;
+  final List<CalendarScheduledMenstruationBandModel> calendarScheduledMenstruationBandModels;
   final List<CalendarNextPillSheetBandModel> calendarNextPillSheetBandModels;
   final Function(WeekCalendarState, DateTime) onTap;
 
@@ -37,9 +36,7 @@ class CalendarWeekdayLine extends StatelessWidget {
   }) : super(key: key);
   @override
   Widget build(BuildContext context) {
-    var tileWidth =
-        (MediaQuery.of(context).size.width - horizontalPadding * 2) /
-            Weekday.values.length;
+    var tileWidth = (MediaQuery.of(context).size.width - horizontalPadding * 2) / Weekday.values.length;
     return Stack(
       children: [
         Row(
@@ -62,8 +59,7 @@ class CalendarWeekdayLine extends StatelessWidget {
               isToday: isSameDay(today(), date),
               weekday: weekday,
               date: date,
-              shouldShowDiaryMark:
-                  state.hasDiaryMark(state.diariesForMonth, date),
+              shouldShowDiaryMark: state.hasDiaryMark(state.diariesForMonth, date),
               shouldShowMenstruationMark: state.hasMenstruationMark(date),
               contentAlignment: state.contentAlignment,
               onTap: (date) => onTap(state, date),
@@ -118,8 +114,7 @@ class CalendarWeekdayLine extends StatelessWidget {
   }
 
   bool _contains(CalendarBandModel calendarBandModel) {
-    final isInRange = state.dateRange.inRange(calendarBandModel.begin) ||
-        state.dateRange.inRange(calendarBandModel.end);
+    final isInRange = state.dateRange.inRange(calendarBandModel.begin) || state.dateRange.inRange(calendarBandModel.end);
     return isInRange;
   }
 
@@ -129,10 +124,8 @@ class CalendarWeekdayLine extends StatelessWidget {
     required double tileWidth,
     required Widget Function(bool isLineBreak, double width) bandBuilder,
   }) {
-    bool isLineBreak =
-        isNecessaryLineBreak(calendarBandModel.begin, state.dateRange);
-    int start =
-        offsetForStartPositionAtLine(calendarBandModel.begin, state.dateRange);
+    bool isLineBreak = isNecessaryLineBreak(calendarBandModel.begin, state.dateRange);
+    int start = offsetForStartPositionAtLine(calendarBandModel.begin, state.dateRange);
     final length = bandLength(state.dateRange, calendarBandModel, isLineBreak);
 
     return Positioned(
@@ -148,7 +141,7 @@ class CalendarWeekdayLine extends StatelessWidget {
   }
 }
 
-void transitionToPostDiary(
+void transitionToDiaryPost(
   BuildContext context,
   DateTime date,
   List<Diary> diaries,
@@ -157,7 +150,7 @@ void transitionToPostDiary(
     return;
   }
   if (!isExistsPostedDiary(diaries, date)) {
-    Navigator.of(context).push(PostDiaryPageRoute.route(date, null));
+    Navigator.of(context).push(DiaryPostPageRoute.route(date, null));
   } else {
     final diary = diaries.lastWhere((element) => isSameDay(element.date, date));
     showModalBottomSheet(

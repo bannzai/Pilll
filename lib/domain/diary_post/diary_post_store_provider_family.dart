@@ -5,17 +5,17 @@ import 'package:pilll/entity/diary.codegen.dart';
 // > A tuple from tuple
 // > Objects generated with Freezed or built_value
 // > Objects using equatable
-class PostDiaryStoreProviderFamily extends Equatable {
+class DiaryPostStoreProviderFamily extends Equatable {
   final DateTime date;
   final Diary? diary;
 
-  const PostDiaryStoreProviderFamily({
+  const DiaryPostStoreProviderFamily({
     required this.date,
     required this.diary,
   });
 
-// NOTE: When diary.physicalConditions did change, PostDiaryPage can not changed for sex,memo,physical condition status.
-// if PostDiaryStoreProviderFamily with @\freezed object or props contains [diary].
+// NOTE: When diary.physicalConditions did change, DiaryPostPage can not changed for sex,memo,physical condition status.
+// if DiaryPostStoreProviderFamily with @\freezed object or props contains [diary].
   @override
   List<Object?> get props => [date];
 }

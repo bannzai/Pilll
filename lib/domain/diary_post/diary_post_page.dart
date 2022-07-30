@@ -14,38 +14,34 @@ import 'package:flutter/material.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
 import 'package:flutter_svg/svg.dart';
 
-final _postDiaryStoreProvider = StateNotifierProvider.autoDispose
-    .family<PostDiaryStore, DiaryState, PostDiaryStoreProviderFamily>(
-        (ref, family) {
+final _diaryPostStoreProvider = StateNotifierProvider.autoDispose.family<DiaryPostStore, DiaryState, DiaryPostStoreProviderFamily>((ref, family) {
   final service = ref.watch(diaryDatastoreProvider);
   final diary = family.diary;
   if (diary == null) {
-    return PostDiaryStore(
-        service, DiaryState(diary: Diary.fromDate(family.date)));
+    return DiaryPostStore(service, DiaryState(diary: Diary.fromDate(family.date)));
   }
-  return PostDiaryStore(service, DiaryState(diary: diary.copyWith()));
+  return DiaryPostStore(service, DiaryState(diary: diary.copyWith()));
 });
 
-abstract class PostDiaryPageConst {
+abstract class DiaryPostPageConst {
   static double keyboardToobarHeight = 44;
 }
 
-class PostDiaryPage extends HookConsumerWidget {
+class DiaryPostPage extends HookConsumerWidget {
   final DateTime date;
   final Diary? diary;
 
-  const PostDiaryPage(this.date, this.diary, {Key? key}) : super(key: key);
+  const DiaryPostPage(this.date, this.diary, {Key? key}) : super(key: key);
 
-  PostDiaryStoreProviderFamily _family() {
-    return PostDiaryStoreProviderFamily(date: date, diary: diary);
+  DiaryPostStoreProviderFamily _family() {
+    return DiaryPostStoreProviderFamily(date: date, diary: diary);
   }
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {
-    final store = ref.watch(_postDiaryStoreProvider(_family()).notifier);
-    final state = ref.watch(_postDiaryStoreProvider(_family()));
-    final TextEditingController? textEditingController =
-        useTextEditingController(text: state.diary.memo);
+    final store = ref.watch(_diaryPostStoreProvider(_family()).notifier);
+    final state = ref.watch(_diaryPostStoreProvider(_family()));
+    final TextEditingController? textEditingController = useTextEditingController(text: state.diary.memo);
     final focusNode = useFocusNode();
     final scrollController = useScrollController();
 
@@ -53,19 +49,13 @@ class PostDiaryPage extends HookConsumerWidget {
       if (focusNode.hasFocus) {
         // NOTE: The final keyboard height cannot be got at the moment of focus via MediaQuery.of(context).viewInsets.bottom. so it is delayed.
         Future.delayed(const Duration(milliseconds: 100)).then((_) {
-          final overwrapHeight = focusNode.rect.bottom -
-              (MediaQuery.of(context).viewInsets.bottom +
-                  PostDiaryPageConst.keyboardToobarHeight);
+          final overwrapHeight = focusNode.rect.bottom - (MediaQuery.of(context).viewInsets.bottom + DiaryPostPageConst.keyboardToobarHeight);
           if (overwrapHeight > 0) {
-            scrollController.animateTo(overwrapHeight,
-                duration: const Duration(milliseconds: 300),
-                curve: Curves.easeInOut);
+            scrollController.animateTo(overwrapHeight, duration: const Duration(milliseconds: 300), curve: Curves.easeInOut);
           }
         });
       } else {
-        scrollController.animateTo(scrollController.position.minScrollExtent,
-            duration: const Duration(milliseconds: 300),
-            curve: Curves.easeInOut);
+        scrollController.animateTo(scrollController.position.minScrollExtent, duration: const Duration(milliseconds: 300), curve: Curves.easeInOut);
       }
     });
     return Scaffold(
@@ -98,19 +88,15 @@ class PostDiaryPage extends HookConsumerWidget {
                 child: ListView(
                   controller: scrollController,
                   children: [
-                    Text(DateTimeFormatter.yearAndMonthAndDay(date),
-                        style: FontType.sBigTitle.merge(TextColorStyle.main)),
+                    Text(DateTimeFormatter.yearAndMonthAndDay(date), style: FontType.sBigTitle.merge(TextColorStyle.main)),
                     ...[
                       _physicalConditions(store, state),
                       _physicalConditionDetails(store, state),
                       _sex(store, state),
-                      _memo(context, textEditingController, focusNode, store,
-                          state),
+                      _memo(context, textEditingController, focusNode, store, state),
                     ].map((e) => _withContentSpacer(e)),
                     SizedBox(
-                      height: MediaQuery.of(context).viewInsets.bottom +
-                          PostDiaryPageConst.keyboardToobarHeight +
-                          60,
+                      height: MediaQuery.of(context).viewInsets.bottom + DiaryPostPageConst.keyboardToobarHeight + 60,
                     ),
                   ],
                 ),
@@ -130,7 +116,7 @@ class PostDiaryPage extends HookConsumerWidget {
     );
   }
 
-  Widget _physicalConditions(PostDiaryStore store, DiaryState state) {
+  Widget _physicalConditions(DiaryPostStore store, DiaryState state) {
     return Row(
       mainAxisAlignment: MainAxisAlignment.center,
       children: [
@@ -149,47 +135,27 @@ class PostDiaryPage extends HookConsumerWidget {
             children: [
               Container(
                 decoration: BoxDecoration(
-                  borderRadius: const BorderRadius.only(
-                      topLeft: Radius.circular(8),
-                      bottomLeft: Radius.circular(8)),
-                  color: state.hasPhysicalConditionStatusFor(
-                          PhysicalConditionStatus.bad)
-                      ? PilllColors.thinSecondary
-                      : Colors.transparent,
+                  borderRadius: const BorderRadius.only(topLeft: Radius.circular(8), bottomLeft: Radius.circular(8)),
+                  color: state.hasPhysicalConditionStatusFor(PhysicalConditionStatus.bad) ? PilllColors.thinSecondary : Colors.transparent,
                 ),
                 child: IconButton(
                     icon: SvgPicture.asset("images/angry.svg",
-                        color: state.hasPhysicalConditionStatusFor(
-                                PhysicalConditionStatus.bad)
-                            ? PilllColors.secondary
-                            : TextColor.darkGray),
+                        color: state.hasPhysicalConditionStatusFor(PhysicalConditionStatus.bad) ? PilllColors.secondary : TextColor.darkGray),
                     onPressed: () {
-                      store.switchingPhysicalCondition(
-                          PhysicalConditionStatus.bad);
+                      store.switchingPhysicalCondition(PhysicalConditionStatus.bad);
                     }),
               ),
-              const SizedBox(
-                  height: 48,
-                  child: VerticalDivider(width: 1, color: PilllColors.divider)),
+              const SizedBox(height: 48, child: VerticalDivider(width: 1, color: PilllColors.divider)),
               Container(
                 decoration: BoxDecoration(
-                  borderRadius: const BorderRadius.only(
-                      topRight: Radius.circular(8),
-                      bottomRight: Radius.circular(8)),
-                  color: state.hasPhysicalConditionStatusFor(
-                          PhysicalConditionStatus.fine)
-                      ? PilllColors.thinSecondary
-                      : Colors.transparent,
+                  borderRadius: const BorderRadius.only(topRight: Radius.circular(8), bottomRight: Radius.circular(8)),
+                  color: state.hasPhysicalConditionStatusFor(PhysicalConditionStatus.fine) ? PilllColors.thinSecondary : Colors.transparent,
                 ),
                 child: IconButton(
                     icon: SvgPicture.asset("images/laugh.svg",
-                        color: state.hasPhysicalConditionStatusFor(
-                                PhysicalConditionStatus.fine)
-                            ? PilllColors.secondary
-                            : TextColor.darkGray),
+                        color: state.hasPhysicalConditionStatusFor(PhysicalConditionStatus.fine) ? PilllColors.secondary : TextColor.darkGray),
                     onPressed: () {
-                      store.switchingPhysicalCondition(
-                          PhysicalConditionStatus.fine);
+                      store.switchingPhysicalCondition(PhysicalConditionStatus.fine);
                     }),
               ),
             ],
@@ -200,29 +166,23 @@ class PostDiaryPage extends HookConsumerWidget {
     );
   }
 
-  Widget _physicalConditionDetails(PostDiaryStore store, DiaryState state) {
+  Widget _physicalConditionDetails(DiaryPostStore store, DiaryState state) {
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
-        Text("体調詳細",
-            style: FontType.componentTitle.merge(TextColorStyle.black)),
+        Text("体調詳細", style: FontType.componentTitle.merge(TextColorStyle.black)),
         const SizedBox(height: 8),
         Wrap(
           spacing: 10,
           children: Diary.allPhysicalConditions
               .map((e) => ChoiceChip(
                     label: Text(e),
-                    labelStyle: FontType.assisting.merge(
-                        state.diary.physicalConditions.contains(e)
-                            ? TextColorStyle.white
-                            : TextColorStyle.darkGray),
+                    labelStyle: FontType.assisting.merge(state.diary.physicalConditions.contains(e) ? TextColorStyle.white : TextColorStyle.darkGray),
                     disabledColor: PilllColors.disabledSheet,
                     selectedColor: PilllColors.secondary,
                     selected: state.diary.physicalConditions.contains(e),
                     onSelected: (selected) {
-                      state.diary.physicalConditions.contains(e)
-                          ? store.removePhysicalCondition(e)
-                          : store.addPhysicalCondition(e);
+                      state.diary.physicalConditions.contains(e) ? store.removePhysicalCondition(e) : store.addPhysicalCondition(e);
                     },
                   ))
               .toList(),
@@ -231,7 +191,7 @@ class PostDiaryPage extends HookConsumerWidget {
     );
   }
 
-  Widget _sex(PostDiaryStore store, DiaryState state) {
+  Widget _sex(DiaryPostStore store, DiaryState state) {
     return Row(
       mainAxisAlignment: MainAxisAlignment.center,
       children: [
@@ -245,15 +205,8 @@ class PostDiaryPage extends HookConsumerWidget {
               padding: const EdgeInsets.all(4),
               width: 32,
               height: 32,
-              decoration: BoxDecoration(
-                  shape: BoxShape.circle,
-                  color: state.diary.hasSex
-                      ? PilllColors.thinSecondary
-                      : PilllColors.disabledSheet),
-              child: SvgPicture.asset("images/heart.svg",
-                  color: state.diary.hasSex
-                      ? PilllColors.secondary
-                      : TextColor.darkGray)),
+              decoration: BoxDecoration(shape: BoxShape.circle, color: state.diary.hasSex ? PilllColors.thinSecondary : PilllColors.disabledSheet),
+              child: SvgPicture.asset("images/heart.svg", color: state.diary.hasSex ? PilllColors.secondary : TextColor.darkGray)),
         ),
         const Spacer(),
       ],
@@ -264,7 +217,7 @@ class PostDiaryPage extends HookConsumerWidget {
     return Positioned(
       bottom: MediaQuery.of(context).viewInsets.bottom,
       child: Container(
-        height: PostDiaryPageConst.keyboardToobarHeight,
+        height: DiaryPostPageConst.keyboardToobarHeight,
         width: MediaQuery.of(context).size.width,
         child: Row(
           children: [
@@ -287,7 +240,7 @@ class PostDiaryPage extends HookConsumerWidget {
     BuildContext context,
     TextEditingController? textEditingController,
     FocusNode focusNode,
-    PostDiaryStore store,
+    DiaryPostStore store,
     DiaryState state,
   ) {
     const textLength = 120;
@@ -316,11 +269,11 @@ class PostDiaryPage extends HookConsumerWidget {
   }
 }
 
-extension PostDiaryPageRoute on PostDiaryPage {
+extension DiaryPostPageRoute on DiaryPostPage {
   static Route<dynamic> route(DateTime date, Diary? diary) {
     return MaterialPageRoute(
-      settings: const RouteSettings(name: "PostDiaryPage"),
-      builder: (_) => PostDiaryPage(date, diary),
+      settings: const RouteSettings(name: "DiaryPostPage"),
+      builder: (_) => DiaryPostPage(date, diary),
       fullscreenDialog: true,
     );
   }
