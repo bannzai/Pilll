@@ -4,7 +4,6 @@ import 'package:pilll/domain/diary/diary_state.codegen.dart';
 import 'package:pilll/domain/diary_post/diary_post_store.dart';
 import 'package:pilll/domain/diary_post/diary_post_store_provider_family.dart';
 import 'package:pilll/entity/diary.codegen.dart';
-import 'package:pilll/database/diary.dart';
 import 'package:pilll/components/atoms/buttons.dart';
 import 'package:pilll/components/atoms/color.dart';
 import 'package:pilll/components/atoms/font.dart';
@@ -13,16 +12,6 @@ import 'package:pilll/util/formatter/date_time_formatter.dart';
 import 'package:flutter/material.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
 import 'package:flutter_svg/svg.dart';
-
-final _diaryPostStoreProvider =
-    StateNotifierProvider.autoDispose.family<DiaryPostStateNotifier, DiaryState, DiaryPostStoreProviderFamily>((ref, family) {
-  final service = ref.watch(diaryDatastoreProvider);
-  final diary = family.diary;
-  if (diary == null) {
-    return DiaryPostStateNotifier(service, DiaryState(diary: Diary.fromDate(family.date)));
-  }
-  return DiaryPostStateNotifier(service, DiaryState(diary: diary.copyWith()));
-});
 
 abstract class DiaryPostPageConst {
   static double keyboardToobarHeight = 44;
@@ -40,8 +29,8 @@ class DiaryPostPage extends HookConsumerWidget {
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {
-    final store = ref.watch(_diaryPostStoreProvider(_family()).notifier);
-    final state = ref.watch(_diaryPostStoreProvider(_family()));
+    final stateNotifier = ref.watch(diaryPostStateNotifierProvider(_family()).notifier);
+    final state = ref.watch(diaryPostStateNotifierProvider(_family()));
     final TextEditingController? textEditingController = useTextEditingController(text: state.diary.memo);
     final focusNode = useFocusNode();
     final scrollController = useScrollController();
@@ -71,7 +60,7 @@ class DiaryPostPage extends HookConsumerWidget {
         actions: [
           AlertButton(
             text: "保存",
-            onPressed: () => store.register().then((value) {
+            onPressed: () => stateNotifier.register().then((value) {
               Navigator.of(context).pop();
             }),
           ),
@@ -91,10 +80,10 @@ class DiaryPostPage extends HookConsumerWidget {
                   children: [
                     Text(DateTimeFormatter.yearAndMonthAndDay(date), style: FontType.sBigTitle.merge(TextColorStyle.main)),
                     ...[
-                      _physicalConditions(store, state),
-                      _physicalConditionDetails(store, state),
-                      _sex(store, state),
-                      _memo(context, textEditingController, focusNode, store, state),
+                      _physicalConditions(stateNotifier, state),
+                      _physicalConditionDetails(stateNotifier, state),
+                      _sex(stateNotifier, state),
+                      _memo(context, textEditingController, focusNode, stateNotifier, state),
                     ].map((e) => _withContentSpacer(e)),
                     SizedBox(
                       height: MediaQuery.of(context).viewInsets.bottom + DiaryPostPageConst.keyboardToobarHeight + 60,

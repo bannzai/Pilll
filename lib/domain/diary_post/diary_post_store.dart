@@ -1,7 +1,18 @@
 import 'package:pilll/domain/diary/diary_state.codegen.dart';
+import 'package:pilll/domain/diary_post/diary_post_store_provider_family.dart';
 import 'package:pilll/entity/diary.codegen.dart';
 import 'package:pilll/database/diary.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
+
+final diaryPostStateNotifierProvider =
+    StateNotifierProvider.autoDispose.family<DiaryPostStateNotifier, DiaryState, DiaryPostStoreProviderFamily>((ref, family) {
+  final service = ref.watch(diaryDatastoreProvider);
+  final diary = family.diary;
+  if (diary == null) {
+    return DiaryPostStateNotifier(service, DiaryState(diary: Diary.fromDate(family.date)));
+  }
+  return DiaryPostStateNotifier(service, DiaryState(diary: diary.copyWith()));
+});
 
 class DiaryPostStateNotifier extends StateNotifier<DiaryState> {
   final DiaryDatastore _diaryDatastore;
