@@ -1,8 +1,4 @@
-import 'package:cloud_firestore/cloud_firestore.dart';
-import 'package:pilll/database/database.dart';
 import 'package:pilll/domain/diary_setting_physical_condtion_detail/state.codegen.dart';
-import 'package:pilll/entity/diary_setting.codegen.dart';
-import 'package:pilll/util/datetime/day.dart';
 
 import 'package:riverpod/riverpod.dart';
 

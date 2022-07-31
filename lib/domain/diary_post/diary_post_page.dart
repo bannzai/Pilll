@@ -1,7 +1,6 @@
 import 'package:flutter_hooks/flutter_hooks.dart';
 import 'package:pilll/analytics.dart';
 import 'package:pilll/components/molecules/indicator.dart';
-import 'package:pilll/domain/diary/diary_state.codegen.dart';
 import 'package:pilll/domain/diary_post/state.codegen.dart';
 import 'package:pilll/domain/diary_post/state_notifier.dart';
 import 'package:pilll/domain/diary_post/diary_post_state_provider_family.dart';

@@ -1,5 +1,3 @@
-import 'package:pilll/database/diary_setting.dart';
-import 'package:pilll/domain/diary/diary_state.codegen.dart';
 import 'package:pilll/domain/diary_post/diary_post_state_provider_family.dart';
 import 'package:pilll/domain/diary_post/state.codegen.dart';
 import 'package:pilll/entity/diary.codegen.dart';
