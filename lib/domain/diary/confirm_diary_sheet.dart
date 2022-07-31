@@ -2,7 +2,7 @@ import 'package:pilll/components/atoms/buttons.dart';
 import 'package:pilll/components/page/discard_dialog.dart';
 import 'package:pilll/domain/diary/confirm_diary_store.dart';
 import 'package:pilll/domain/diary/diary_state.codegen.dart';
-import 'package:pilll/domain/diary/post_diary_page.dart';
+import 'package:pilll/domain/diary_post/diary_post_page.dart';
 import 'package:pilll/entity/diary.codegen.dart';
 import 'package:pilll/database/diary.dart';
 import 'package:pilll/components/atoms/color.dart';
@@ -13,8 +13,7 @@ import 'package:flutter/material.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
 import 'package:flutter_svg/svg.dart';
 
-final _confirmDiaryStoreProvider = StateNotifierProvider.autoDispose
-    .family<ConfirmDiaryStore, DiaryState, Diary>((ref, diary) {
+final _confirmDiaryStoreProvider = StateNotifierProvider.autoDispose.family<ConfirmDiaryStore, DiaryState, Diary>((ref, diary) {
   final service = ref.watch(diaryDatastoreProvider);
   return ConfirmDiaryStore(service, DiaryState(diary: diary.copyWith()));
 });
@@ -36,18 +35,15 @@ class ConfirmDiarySheet extends HookConsumerWidget {
         color: PilllColors.white,
       ),
       padding: const EdgeInsets.fromLTRB(16, 20, 16, 20),
-      child: Column(
-          mainAxisSize: MainAxisSize.min,
-          crossAxisAlignment: CrossAxisAlignment.start,
-          children: [
-            _title(context, store, state),
-            ...[
-              if (state.hasPhysicalConditionStatus()) _physicalCondition(state),
-              _physicalConditionDetails(state),
-              if (state.diary.hasSex) _sex(),
-              _memo(state),
-            ].map((e) => _withContentSpacer(e)),
-          ]),
+      child: Column(mainAxisSize: MainAxisSize.min, crossAxisAlignment: CrossAxisAlignment.start, children: [
+        _title(context, store, state),
+        ...[
+          if (state.diary.hasPhysicalConditionStatus) _physicalCondition(state),
+          _physicalConditionDetails(state),
+          if (state.diary.hasSex) _sex(),
+          _memo(state),
+        ].map((e) => _withContentSpacer(e)),
+      ]),
     );
   }
 
@@ -58,19 +54,16 @@ class ConfirmDiarySheet extends HookConsumerWidget {
     );
   }
 
-  Widget _title(
-      BuildContext context, ConfirmDiaryStore store, DiaryState state) {
+  Widget _title(BuildContext context, ConfirmDiaryStore store, DiaryState state) {
     return Row(
       mainAxisSize: MainAxisSize.max,
       children: [
-        Text(DateTimeFormatter.yearAndMonthAndDay(state.diary.date),
-            style: FontType.sBigTitle.merge(TextColorStyle.main)),
+        Text(DateTimeFormatter.yearAndMonthAndDay(state.diary.date), style: FontType.sBigTitle.merge(TextColorStyle.main)),
         const Spacer(),
         IconButton(
           icon: SvgPicture.asset("images/edit.svg"),
           onPressed: () {
-            Navigator.of(context)
-                .push(PostDiaryPageRoute.route(state.diary.date, state.diary));
+            Navigator.of(context).push(DiaryPostPageRoute.route(state.diary.date, state.diary));
           },
         ),
         const SizedBox(width: 12),
@@ -82,8 +75,7 @@ class ConfirmDiarySheet extends HookConsumerWidget {
                 builder: (context) {
                   return DiscardDialog(
                     title: "日記を削除します",
-                    message: Text("削除された日記は復元ができません",
-                        style: FontType.assisting.merge(TextColorStyle.main)),
+                    message: Text("削除された日記は復元ができません", style: FontType.assisting.merge(TextColorStyle.main)),
                     actions: [
                       AlertButton(
                         text: "キャンセル",
@@ -97,8 +89,7 @@ class ConfirmDiarySheet extends HookConsumerWidget {
                           int counter = 0;
                           await store.delete();
 
-                          Navigator.popUntil(
-                              context, (route) => counter++ >= 1);
+                          Navigator.popUntil(context, (route) => counter++ >= 1);
                           Navigator.of(context).pop();
                         },
                       ),
@@ -114,11 +105,9 @@ class ConfirmDiarySheet extends HookConsumerWidget {
   Widget _physicalConditionImage(PhysicalConditionStatus? status) {
     switch (status) {
       case PhysicalConditionStatus.fine:
-        return SvgPicture.asset("images/laugh.svg",
-            color: PilllColors.secondary);
+        return SvgPicture.asset("images/laugh.svg", color: PilllColors.secondary);
       case PhysicalConditionStatus.bad:
-        return SvgPicture.asset("images/angry.svg",
-            color: PilllColors.secondary);
+        return SvgPicture.asset("images/angry.svg", color: PilllColors.secondary);
       default:
         return Container();
     }
@@ -159,8 +148,7 @@ class ConfirmDiarySheet extends HookConsumerWidget {
       padding: const EdgeInsets.all(4),
       width: 32,
       height: 32,
-      decoration: BoxDecoration(
-          shape: BoxShape.circle, color: PilllColors.thinSecondary),
+      decoration: BoxDecoration(shape: BoxShape.circle, color: PilllColors.thinSecondary),
       child: SvgPicture.asset("images/heart.svg", color: PilllColors.secondary),
     );
   }

@@ -15,23 +15,6 @@ enum PhysicalConditionStatus { fine, bad }
 
 @freezed
 class Diary with _$Diary {
-  static final List<String> allPhysicalConditions = [
-    "頭痛",
-    "腹痛",
-    "吐き気",
-    "貧血",
-    "下痢",
-    "便秘",
-    "ほてり",
-    "眠気",
-    "腰痛",
-    "動悸",
-    "不正出血",
-    "食欲不振",
-    "胸の張り",
-    "不眠",
-  ];
-
   String get id => "Diary_${DateTimeFormatter.diaryIdentifier(date)}";
 
   @JsonSerializable(explicitToJson: true)
@@ -54,12 +37,8 @@ class Diary with _$Diary {
   }) = _Diary;
   const Diary._();
 
-  factory Diary.fromDate(DateTime date) => Diary(
-      date: date,
-      memo: "",
-      createdAt: now(),
-      physicalConditions: [],
-      hasSex: false);
+  factory Diary.fromDate(DateTime date) => Diary(date: date, memo: "", createdAt: now(), physicalConditions: [], hasSex: false);
   factory Diary.fromJson(Map<String, dynamic> json) => _$DiaryFromJson(json);
   bool get hasPhysicalConditionStatus => physicalConditionStatus != null;
+  bool hasPhysicalConditionStatusFor(PhysicalConditionStatus status) => physicalConditionStatus == status;
 }

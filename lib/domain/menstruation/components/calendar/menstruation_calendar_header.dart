@@ -46,35 +46,24 @@ class MenstruationCalendarHeader extends StatelessWidget {
                 itemBuilder: (context, index) {
                   final days = menstruationWeekCalendarDataSource[index];
                   return SizedBox(
-                    width: MediaQuery.of(context).size.width -
-                        _horizontalPadding * 2,
+                    width: MediaQuery.of(context).size.width - _horizontalPadding * 2,
                     height: MenstruationPageConst.tileHeight,
                     child: CalendarWeekdayLine(
                       state: MenstruationSinglelineWeekCalendarState(
                         dateRange: DateRange(days.first, days.last),
                         diariesForMonth: state.diariesForAround90Days,
-                        allBandModels: buildBandModels(
-                                state.latestPillSheetGroup,
-                                state.setting,
-                                state.menstruations,
-                                12)
-                            .where((element) =>
-                                element is! CalendarNextPillSheetBandModel)
+                        allBandModels: buildBandModels(state.latestPillSheetGroup, state.setting, state.menstruations, 12)
+                            .where((element) => element is! CalendarNextPillSheetBandModel)
                             .toList(),
                       ),
                       horizontalPadding: _horizontalPadding,
                       onTap: (weekCalendarState, date) {
-                        analytics.logEvent(
-                            name: "did_select_day_tile_on_menstruation");
-                        transitionToPostDiary(
-                            context, date, state.diariesForAround90Days);
+                        analytics.logEvent(name: "did_select_day_tile_on_menstruation");
+                        transitionToDiaryPost(context, date, state.diariesForAround90Days);
                       },
-                      calendarMenstruationBandModels:
-                          state.calendarMenstruationBandModels,
-                      calendarNextPillSheetBandModels:
-                          state.calendarNextPillSheetBandModels,
-                      calendarScheduledMenstruationBandModels:
-                          state.calendarScheduledMenstruationBandModels,
+                      calendarMenstruationBandModels: state.calendarMenstruationBandModels,
+                      calendarNextPillSheetBandModels: state.calendarNextPillSheetBandModels,
+                      calendarScheduledMenstruationBandModels: state.calendarScheduledMenstruationBandModels,
                     ),
                   );
                 },
@@ -92,10 +81,7 @@ class _WeekdayLine extends StatelessWidget {
   Widget build(BuildContext context) {
     return Row(
       mainAxisAlignment: MainAxisAlignment.start,
-      children: List.generate(
-          Weekday.values.length,
-          (index) =>
-              Expanded(child: WeekdayBadge(weekday: Weekday.values[index]))),
+      children: List.generate(Weekday.values.length, (index) => Expanded(child: WeekdayBadge(weekday: Weekday.values[index]))),
     );
   }
 }

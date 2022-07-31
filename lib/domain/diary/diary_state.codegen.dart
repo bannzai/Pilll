@@ -9,9 +9,4 @@ class DiaryState with _$DiaryState {
   const factory DiaryState({
     required Diary diary,
   }) = _DiaryState;
-
-  bool hasPhysicalConditionStatusFor(PhysicalConditionStatus status) =>
-      diary.physicalConditionStatus == status;
-
-  bool hasPhysicalConditionStatus() => diary.hasPhysicalConditionStatus;
 }

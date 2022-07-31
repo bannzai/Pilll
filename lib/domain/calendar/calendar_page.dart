@@ -22,21 +22,18 @@ class CalendarPage extends HookConsumerWidget {
   Widget build(BuildContext context, WidgetRef ref) {
     final store = ref.watch(calendarPageStateNotifierProvider.notifier);
     final state = ref.watch(calendarPageStateNotifierProvider);
-    final calendarPageIndexStateNotifier =
-        ref.watch(calendarPageIndexStateNotifierProvider.notifier);
+    final calendarPageIndexStateNotifier = ref.watch(calendarPageIndexStateNotifierProvider.notifier);
 
     useAutomaticKeepAlive(wantKeepAlive: true);
 
-    final pageController =
-        usePageController(initialPage: todayCalendarPageIndex);
+    final pageController = usePageController(initialPage: todayCalendarPageIndex);
     pageController.addListener(() {
       final index = (pageController.page ?? pageController.initialPage).round();
       calendarPageIndexStateNotifier.set(index);
     });
 
     return state.when(
-      data: (state) => CalendarPageBody(
-          store: store, state: state, pageController: pageController),
+      data: (state) => CalendarPageBody(store: store, state: state, pageController: pageController),
       error: (error, _) => UniversalErrorPage(
         error: error,
         child: null,
@@ -52,12 +49,7 @@ class CalendarPageBody extends StatelessWidget {
   final CalendarPageState state;
   final PageController pageController;
 
-  const CalendarPageBody(
-      {Key? key,
-      required this.store,
-      required this.state,
-      required this.pageController})
-      : super(key: key);
+  const CalendarPageBody({Key? key, required this.store, required this.state, required this.pageController}) : super(key: key);
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -67,8 +59,7 @@ class CalendarPageBody extends StatelessWidget {
           onPressed: () {
             analytics.logEvent(name: "calendar_fab_pressed");
             final date = today();
-            transitionToPostDiary(
-                context, date, state.todayMonthCalendar.diaries);
+            transitionToDiaryPost(context, date, state.todayMonthCalendar.diaries);
           },
           child: const Icon(Icons.add, color: Colors.white),
           backgroundColor: PilllColors.secondary,
@@ -102,21 +93,16 @@ class CalendarPageBody extends StatelessWidget {
                     width: MediaQuery.of(context).size.width,
                     child: MonthCalendar(
                         dateForMonth: state.displayMonth,
-                        weekCalendarBuilder:
-                            (context, monthCalendarState, weekCalendarState) {
+                        weekCalendarBuilder: (context, monthCalendarState, weekCalendarState) {
                           return CalendarWeekdayLine(
                             state: weekCalendarState,
-                            calendarMenstruationBandModels:
-                                state.calendarMenstruationBandModels,
-                            calendarScheduledMenstruationBandModels:
-                                state.calendarScheduledMenstruationBandModels,
-                            calendarNextPillSheetBandModels:
-                                state.calendarNextPillSheetBandModels,
+                            calendarMenstruationBandModels: state.calendarMenstruationBandModels,
+                            calendarScheduledMenstruationBandModels: state.calendarScheduledMenstruationBandModels,
+                            calendarNextPillSheetBandModels: state.calendarNextPillSheetBandModels,
                             horizontalPadding: 0,
                             onTap: (weekCalendarState, date) {
-                              analytics.logEvent(
-                                  name: "did_select_day_tile_on_calendar_card");
-                              transitionToPostDiary(
+                              analytics.logEvent(name: "did_select_day_tile_on_calendar_card");
+                              transitionToDiaryPost(
                                 context,
                                 date,
                                 monthCalendarState.diaries,
