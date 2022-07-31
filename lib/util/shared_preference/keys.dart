@@ -1,9 +1,7 @@
 extension BoolKey on String {
   static const didEndInitialSetting = "isDidEndInitialSettingKey";
-  static const recommendedSignupNotificationIsAlreadyShow =
-      "recommendedSignupNotificationIsAlreadyShow";
-  static const premiumTrialBeginAnouncementIsClosed =
-      "premiumTrialBeginAnouncementIsClosed";
+  static const recommendedSignupNotificationIsAlreadyShow = "recommendedSignupNotificationIsAlreadyShow";
+  static const premiumTrialBeginAnouncementIsClosed = "premiumTrialBeginAnouncementIsClosed";
   static const isAlreadyShowDemography = "isAlreadyShowDemography";
   static const isAlreadyDoneDemography = "isAlreadyDoneDemography";
   static const isAlreadyShowPremiumSurvey = "isAlreadyShowPremiumSurvey";
@@ -33,6 +31,7 @@ extension ReleaseNoteKey on String {
   static const String version3_9_0 = "release_notes_shown_3.9.0";
   static const String version3_10_0 = "release_notes_shown_3.10.0";
   static const String version3_11_0 = "release_notes_shown_3.11.0";
+  static const String version3_12_0 = "release_notes_shown_3.12.0";
 }
 
 extension IntKey on String {

@@ -40,10 +40,9 @@ class ReleaseNote extends StatelessWidget {
                     Align(
                       alignment: Alignment.center,
                       child: Container(
-                        padding:
-                            const EdgeInsets.only(top: 40, left: 40, right: 40),
+                        padding: const EdgeInsets.only(top: 40, left: 40, right: 40),
                         child: Text(
-                          "服用通知のタイムゾーンに対応",
+                          "日記の体調詳細を編集できるようになりました",
                           style: FontType.subTitle.merge(TextColorStyle.black),
                           textAlign: TextAlign.center,
                         ),
@@ -58,7 +57,7 @@ class ReleaseNote extends StatelessWidget {
                     children: [
                       Text(
                         '''
-設定 > 通知時刻 からお住まいの地域のタイムゾーンへと変更することができます。通知時刻は設定されているタイムゾーンの時刻になります
+日記投稿画面から「体調詳細」の右側にある ✏️ ボタンを押すことで体調詳細を追加・削除できるようになります
                         ''',
                         style: FontType.assisting.merge(TextColorStyle.main),
                       ),
@@ -86,7 +85,7 @@ class ReleaseNote extends StatelessWidget {
 }
 
 void showReleaseNotePreDialog(BuildContext context) async {
-  const key = ReleaseNoteKey.version3_11_0;
+  const key = ReleaseNoteKey.version3_12_0;
   final storage = await SharedPreferences.getInstance();
   if (storage.getBool(key) ?? false) {
     return;
@@ -103,12 +102,8 @@ void showReleaseNotePreDialog(BuildContext context) async {
 void openReleaseNote() async {
   final ChromeSafariBrowser browser = ChromeSafariBrowser();
   await browser.open(
-      url: Uri.parse(
-          "https://pilll.wraptas.site/e78b91bc246a4669bfbe3fda9e058e79"),
+      url: Uri.parse("https://pilll.wraptas.site/22b34a8b242f43ccb4e72ea9a9f99459"),
       options: ChromeSafariBrowserClassOptions(
-          android:
-              AndroidChromeCustomTabsOptions(addDefaultShareMenuItem: false),
-          ios: IOSSafariOptions(
-              barCollapsingEnabled: true,
-              presentationStyle: IOSUIModalPresentationStyle.PAGE_SHEET)));
+          android: AndroidChromeCustomTabsOptions(addDefaultShareMenuItem: false),
+          ios: IOSSafariOptions(barCollapsingEnabled: true, presentationStyle: IOSUIModalPresentationStyle.PAGE_SHEET)));
 }
