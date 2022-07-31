@@ -19,7 +19,7 @@ class _$DiarySettingPhysicalConditionDetailStateTearOff {
   const _$DiarySettingPhysicalConditionDetailStateTearOff();
 
   _DiarySettingPhysicalConditionDetailState call(
-      {required DiarySetting diarySetting, required List<String> selected}) {
+      {required DiarySetting? diarySetting, required List<String> selected}) {
     return _DiarySettingPhysicalConditionDetailState(
       diarySetting: diarySetting,
       selected: selected,
@@ -33,7 +33,7 @@ const $DiarySettingPhysicalConditionDetailState =
 
 /// @nodoc
 mixin _$DiarySettingPhysicalConditionDetailState {
-  DiarySetting get diarySetting => throw _privateConstructorUsedError;
+  DiarySetting? get diarySetting => throw _privateConstructorUsedError;
   List<String> get selected => throw _privateConstructorUsedError;
 
   @JsonKey(ignore: true)
@@ -48,9 +48,9 @@ abstract class $DiarySettingPhysicalConditionDetailStateCopyWith<$Res> {
           DiarySettingPhysicalConditionDetailState value,
           $Res Function(DiarySettingPhysicalConditionDetailState) then) =
       _$DiarySettingPhysicalConditionDetailStateCopyWithImpl<$Res>;
-  $Res call({DiarySetting diarySetting, List<String> selected});
+  $Res call({DiarySetting? diarySetting, List<String> selected});
 
-  $DiarySettingCopyWith<$Res> get diarySetting;
+  $DiarySettingCopyWith<$Res>? get diarySetting;
 }
 
 /// @nodoc
@@ -72,7 +72,7 @@ class _$DiarySettingPhysicalConditionDetailStateCopyWithImpl<$Res>
       diarySetting: diarySetting == freezed
           ? _value.diarySetting
           : diarySetting // ignore: cast_nullable_to_non_nullable
-              as DiarySetting,
+              as DiarySetting?,
       selected: selected == freezed
           ? _value.selected
           : selected // ignore: cast_nullable_to_non_nullable
@@ -81,8 +81,12 @@ class _$DiarySettingPhysicalConditionDetailStateCopyWithImpl<$Res>
   }
 
   @override
-  $DiarySettingCopyWith<$Res> get diarySetting {
-    return $DiarySettingCopyWith<$Res>(_value.diarySetting, (value) {
+  $DiarySettingCopyWith<$Res>? get diarySetting {
+    if (_value.diarySetting == null) {
+      return null;
+    }
+
+    return $DiarySettingCopyWith<$Res>(_value.diarySetting!, (value) {
       return _then(_value.copyWith(diarySetting: value));
     });
   }
@@ -96,10 +100,10 @@ abstract class _$DiarySettingPhysicalConditionDetailStateCopyWith<$Res>
           $Res Function(_DiarySettingPhysicalConditionDetailState) then) =
       __$DiarySettingPhysicalConditionDetailStateCopyWithImpl<$Res>;
   @override
-  $Res call({DiarySetting diarySetting, List<String> selected});
+  $Res call({DiarySetting? diarySetting, List<String> selected});
 
   @override
-  $DiarySettingCopyWith<$Res> get diarySetting;
+  $DiarySettingCopyWith<$Res>? get diarySetting;
 }
 
 /// @nodoc
@@ -125,7 +129,7 @@ class __$DiarySettingPhysicalConditionDetailStateCopyWithImpl<$Res>
       diarySetting: diarySetting == freezed
           ? _value.diarySetting
           : diarySetting // ignore: cast_nullable_to_non_nullable
-              as DiarySetting,
+              as DiarySetting?,
       selected: selected == freezed
           ? _value.selected
           : selected // ignore: cast_nullable_to_non_nullable
@@ -143,7 +147,7 @@ class _$_DiarySettingPhysicalConditionDetailState
       : super._();
 
   @override
-  final DiarySetting diarySetting;
+  final DiarySetting? diarySetting;
   @override
   final List<String> selected;
 
@@ -179,13 +183,13 @@ class _$_DiarySettingPhysicalConditionDetailState
 abstract class _DiarySettingPhysicalConditionDetailState
     extends DiarySettingPhysicalConditionDetailState {
   factory _DiarySettingPhysicalConditionDetailState(
-          {required DiarySetting diarySetting,
+          {required DiarySetting? diarySetting,
           required List<String> selected}) =
       _$_DiarySettingPhysicalConditionDetailState;
   _DiarySettingPhysicalConditionDetailState._() : super._();
 
   @override
-  DiarySetting get diarySetting;
+  DiarySetting? get diarySetting;
   @override
   List<String> get selected;
   @override
