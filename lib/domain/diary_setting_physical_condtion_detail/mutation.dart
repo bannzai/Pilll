@@ -25,7 +25,7 @@ class AddDiarySettingPhysicalConditionDetail {
 
   Future<void> call({required DiarySetting diarySetting, required String physicalConditionDetail}) async {
     await reference.set(
-        diarySetting.copyWith(physicalConditions: diarySetting.physicalConditions..add(physicalConditionDetail)), SetOptions(merge: true));
+        diarySetting.copyWith(physicalConditions: diarySetting.physicalConditions..insert(0, physicalConditionDetail)), SetOptions(merge: true));
   }
 }
 
