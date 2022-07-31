@@ -176,6 +176,12 @@ class DiaryPostPage extends HookConsumerWidget {
   }
 
   Widget _physicalConditionDetails(BuildContext context, DiaryPostStateNotifier store, DiaryPostState state) {
+    late List<String> physicalConditionDetails;
+    if (state.premiumAndTrial.premiumOrTrial) {
+      physicalConditionDetails = state.diarySetting?.physicalConditions ?? defaultPhysicalConditions;
+    } else {
+      physicalConditionDetails = defaultPhysicalConditions;
+    }
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
@@ -214,7 +220,7 @@ class DiaryPostPage extends HookConsumerWidget {
         const SizedBox(height: 8),
         Wrap(
           spacing: 10,
-          children: (state.diarySetting?.physicalConditions ?? defaultPhysicalConditions)
+          children: physicalConditionDetails
               .map((e) => ChoiceChip(
                     label: Text(e),
                     labelStyle: FontType.assisting.merge(state.diary.physicalConditions.contains(e) ? TextColorStyle.white : TextColorStyle.darkGray),
