@@ -71,7 +71,8 @@ class DiarySettingPhysicalConditionDetailPage extends HookConsumerWidget {
                   onSubmitted: (physicalConditionDetail) async {
                     analytics.logEvent(name: "submit_physical_condition_detail", parameters: {"element": physicalConditionDetail});
                     try {
-                      addDiarySetting(diarySetting: diarySetting, physicalConditionDetail: physicalConditionDetail);
+                      await addDiarySetting(diarySetting: diarySetting, physicalConditionDetail: physicalConditionDetail);
+                      textFieldController.text = "";
                     } catch (error) {
                       showErrorAlert(context, error);
                     }
