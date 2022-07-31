@@ -5,6 +5,7 @@ import 'package:pilll/domain/diary_post/state.codegen.dart';
 import 'package:pilll/domain/diary_post/state_notifier.dart';
 import 'package:pilll/domain/diary_post/diary_post_state_provider_family.dart';
 import 'package:pilll/domain/diary_setting_physical_condtion_detail/page.dart';
+import 'package:pilll/domain/premium_introduction/premium_introduction_sheet.dart';
 import 'package:pilll/entity/diary.codegen.dart';
 import 'package:pilll/components/atoms/buttons.dart';
 import 'package:pilll/components/atoms/color.dart';
@@ -184,17 +185,22 @@ class DiaryPostPage extends HookConsumerWidget {
             const SizedBox(width: 12),
             IconButton(
               onPressed: () {
-                showModalBottomSheet(
-                    context: context,
-                    isDismissible: true,
-                    isScrollControlled: true,
-                    backgroundColor: Colors.transparent,
-                    builder: (_) {
-                      return SizedBox(
-                        height: MediaQuery.of(context).size.height - 200,
-                        child: const DiarySettingPhysicalConditionDetailPage(),
-                      );
-                    });
+                analytics.logEvent(name: "edit_physical_condition_detail");
+                if (state.premiumAndTrial.isPremium || state.premiumAndTrial.isTrial) {
+                  showModalBottomSheet(
+                      context: context,
+                      isDismissible: true,
+                      isScrollControlled: true,
+                      backgroundColor: Colors.transparent,
+                      builder: (_) {
+                        return SizedBox(
+                          height: MediaQuery.of(context).size.height - 200,
+                          child: const DiarySettingPhysicalConditionDetailPage(),
+                        );
+                      });
+                } else {
+                  showPremiumIntroductionSheet(context);
+                }
               },
               padding: const EdgeInsets.all(4),
               icon: const Icon(
