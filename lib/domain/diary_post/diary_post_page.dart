@@ -3,6 +3,7 @@ import 'package:pilll/analytics.dart';
 import 'package:pilll/domain/diary/diary_state.codegen.dart';
 import 'package:pilll/domain/diary_post/diary_post_store.dart';
 import 'package:pilll/domain/diary_post/diary_post_store_provider_family.dart';
+import 'package:pilll/domain/diary_setting_physical_condtion_detail/page.dart';
 import 'package:pilll/entity/diary.codegen.dart';
 import 'package:pilll/components/atoms/buttons.dart';
 import 'package:pilll/components/atoms/color.dart';
@@ -84,7 +85,7 @@ class DiaryPostPage extends HookConsumerWidget {
                     Text(DateTimeFormatter.yearAndMonthAndDay(date), style: FontType.sBigTitle.merge(TextColorStyle.main)),
                     ...[
                       _physicalConditions(stateNotifier, state),
-                      _physicalConditionDetails(stateNotifier, state),
+                      _physicalConditionDetails(context, stateNotifier, state),
                       _sex(stateNotifier, state),
                       _memo(context, textEditingController, focusNode, stateNotifier, state),
                     ].map((e) => _withContentSpacer(e)),
@@ -159,7 +160,7 @@ class DiaryPostPage extends HookConsumerWidget {
     );
   }
 
-  Widget _physicalConditionDetails(DiaryPostStateNotifier store, DiaryState state) {
+  Widget _physicalConditionDetails(BuildContext context, DiaryPostStateNotifier store, DiaryState state) {
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
@@ -168,7 +169,15 @@ class DiaryPostPage extends HookConsumerWidget {
             const Text("体調詳細", style: _secitonTitle),
             const SizedBox(width: 12),
             IconButton(
-              onPressed: () {},
+              onPressed: () {
+                showModalBottomSheet(
+                    context: context,
+                    isScrollControlled: true,
+                    backgroundColor: Colors.transparent,
+                    builder: (_) {
+                      return const DiarySettingPhysicalConditionDetailPage();
+                    });
+              },
               padding: const EdgeInsets.all(4),
               icon: const Icon(
                 Icons.edit,
