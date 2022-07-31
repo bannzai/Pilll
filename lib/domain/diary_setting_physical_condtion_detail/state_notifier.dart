@@ -19,12 +19,4 @@ class DiarySettingPhysicalConditionDetailStateNotifier extends StateNotifier<Asy
   }) : super(initialState);
 
   DiarySettingPhysicalConditionDetailState? get value => state.value;
-
-  void select({required String physicalConditionDetail}) {
-    state = AsyncValue.data(value!.copyWith(selected: value!.selected..add(physicalConditionDetail)));
-  }
-
-  void deleted() {
-    state = AsyncValue.data(value!.copyWith(selected: []));
-  }
 }
