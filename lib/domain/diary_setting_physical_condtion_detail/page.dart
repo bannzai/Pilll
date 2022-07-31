@@ -21,6 +21,11 @@ class DiarySettingPhysicalConditionDetailPage extends HookConsumerWidget {
     final deleteDiarySetting = ref.watch(deleteDiarySettingPhysicalConditionDetailProvider);
     final state = ref.watch(diarySettingPhysicalConditionDetailStateNotifierProvider);
     final textFieldController = useTextEditingController();
+    final scrollController = useScrollController();
+
+    scrollController.addListener(() {
+      primaryFocus?.unfocus();
+    });
 
     useEffect(() {
       final diarySetting = state.asData?.value.diarySetting;
@@ -51,7 +56,30 @@ class DiarySettingPhysicalConditionDetailPage extends HookConsumerWidget {
             shadowColor: Colors.transparent,
           ),
           body: ListView(
+            controller: scrollController,
             children: [
+              Padding(
+                padding: const EdgeInsets.symmetric(horizontal: 16),
+                child: TextField(
+                  controller: textFieldController,
+                  decoration: const InputDecoration(
+                    focusedBorder: UnderlineInputBorder(
+                      borderSide: BorderSide(color: PilllColors.primary),
+                    ),
+                    hintText: "入力して追加",
+                  ),
+                  onSubmitted: (physicalConditionDetail) async {
+                    analytics.logEvent(name: "submit_physical_condition_detail", parameters: {"element": physicalConditionDetail});
+                    try {
+                      addDiarySetting(diarySetting: diarySetting, physicalConditionDetail: physicalConditionDetail);
+                      Navigator.of(context).pop();
+                    } catch (error) {
+                      showErrorAlert(context, error);
+                    }
+                  },
+                  maxLength: 8,
+                ),
+              ),
               for (final p in diarySetting.physicalConditions)
                 Column(
                   children: [
@@ -68,25 +96,6 @@ class DiarySettingPhysicalConditionDetailPage extends HookConsumerWidget {
                     const Divider(),
                   ],
                 ),
-              TextField(
-                controller: textFieldController,
-                decoration: const InputDecoration(
-                  focusedBorder: UnderlineInputBorder(
-                    borderSide: BorderSide(color: PilllColors.primary),
-                  ),
-                ),
-                autofocus: true,
-                onSubmitted: (physicalConditionDetail) async {
-                  analytics.logEvent(name: "submit_physical_condition_detail", parameters: {"element": physicalConditionDetail});
-                  try {
-                    addDiarySetting(diarySetting: diarySetting, physicalConditionDetail: physicalConditionDetail);
-                    Navigator.of(context).pop();
-                  } catch (error) {
-                    showErrorAlert(context, error);
-                  }
-                },
-                maxLength: 8,
-              ),
             ],
           ),
         );
