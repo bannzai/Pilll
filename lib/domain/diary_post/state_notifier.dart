@@ -7,7 +7,7 @@ import 'package:pilll/database/diary.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
 
 final diaryPostStateNotifierProvider =
-    StateNotifierProvider.autoDispose.family<DiaryPostStateNotifier, DiaryState, DiaryPostStateProviderFamily>((ref, family) {
+    StateNotifierProvider.autoDispose.family<DiaryPostStateNotifier, AsyncValue<DiaryPostState>, DiaryPostStateProviderFamily>((ref, family) {
   return DiaryPostStateNotifier(ref.watch(diaryDatastoreProvider), ref.watch(diaryPostAsyncStateProvider(family)));
 });
 

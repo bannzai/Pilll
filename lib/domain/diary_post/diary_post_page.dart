@@ -1,6 +1,8 @@
 import 'package:flutter_hooks/flutter_hooks.dart';
 import 'package:pilll/analytics.dart';
+import 'package:pilll/components/molecules/indicator.dart';
 import 'package:pilll/domain/diary/diary_state.codegen.dart';
+import 'package:pilll/domain/diary_post/state.codegen.dart';
 import 'package:pilll/domain/diary_post/state_notifier.dart';
 import 'package:pilll/domain/diary_post/diary_post_state_provider_family.dart';
 import 'package:pilll/domain/diary_setting_physical_condtion_detail/page.dart';
@@ -10,6 +12,7 @@ import 'package:pilll/components/atoms/color.dart';
 import 'package:pilll/components/atoms/font.dart';
 import 'package:pilll/components/atoms/text_color.dart';
 import 'package:pilll/entity/diary_setting.codegen.dart';
+import 'package:pilll/error/universal_error_page.dart';
 import 'package:pilll/util/formatter/date_time_formatter.dart';
 import 'package:flutter/material.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
@@ -34,7 +37,19 @@ class DiaryPostPage extends HookConsumerWidget {
   @override
   Widget build(BuildContext context, WidgetRef ref) {
     final stateNotifier = ref.watch(diaryPostStateNotifierProvider(_family()).notifier);
-    final state = ref.watch(diaryPostStateNotifierProvider(_family()));
+    final asyncState = ref.watch(diaryPostStateNotifierProvider(_family()));
+
+    if (asyncState is AsyncLoading) {
+      return const ScaffoldIndicator();
+    }
+
+    late DiaryPostState state;
+    try {
+      state = asyncState.value!;
+    } catch (error) {
+      return UniversalErrorPage(error: error, child: null, reload: () => ref.refresh(diaryPostAsyncStateProvider(_family())));
+    }
+
     final TextEditingController? textEditingController = useTextEditingController(text: state.diary.memo);
     final focusNode = useFocusNode();
     final scrollController = useScrollController();
@@ -110,7 +125,7 @@ class DiaryPostPage extends HookConsumerWidget {
     );
   }
 
-  Widget _physicalConditions(DiaryPostStateNotifier store, DiaryState state) {
+  Widget _physicalConditions(DiaryPostStateNotifier store, DiaryPostState state) {
     return Row(
       mainAxisAlignment: MainAxisAlignment.center,
       children: [
@@ -160,7 +175,7 @@ class DiaryPostPage extends HookConsumerWidget {
     );
   }
 
-  Widget _physicalConditionDetails(BuildContext context, DiaryPostStateNotifier store, DiaryState state) {
+  Widget _physicalConditionDetails(BuildContext context, DiaryPostStateNotifier store, DiaryPostState state) {
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
@@ -194,7 +209,7 @@ class DiaryPostPage extends HookConsumerWidget {
         const SizedBox(height: 8),
         Wrap(
           spacing: 10,
-          children: defaultPhysicalConditions
+          children: (state.diarySetting?.physicalConditions ?? defaultPhysicalConditions)
               .map((e) => ChoiceChip(
                     label: Text(e),
                     labelStyle: FontType.assisting.merge(state.diary.physicalConditions.contains(e) ? TextColorStyle.white : TextColorStyle.darkGray),
@@ -211,7 +226,7 @@ class DiaryPostPage extends HookConsumerWidget {
     );
   }
 
-  Widget _sex(DiaryPostStateNotifier store, DiaryState state) {
+  Widget _sex(DiaryPostStateNotifier store, DiaryPostState state) {
     return Row(
       mainAxisAlignment: MainAxisAlignment.center,
       children: [
@@ -261,7 +276,7 @@ class DiaryPostPage extends HookConsumerWidget {
     TextEditingController? textEditingController,
     FocusNode focusNode,
     DiaryPostStateNotifier store,
-    DiaryState state,
+    DiaryPostState state,
   ) {
     const textLength = 120;
     return ConstrainedBox(
