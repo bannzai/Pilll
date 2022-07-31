@@ -19,8 +19,11 @@ class _$DiaryPostStateTearOff {
   const _$DiaryPostStateTearOff();
 
   _DiaryPostState call(
-      {required Diary diary, required DiarySetting? diarySetting}) {
+      {required PremiumAndTrial premiumAndTrial,
+      required Diary diary,
+      required DiarySetting? diarySetting}) {
     return _DiaryPostState(
+      premiumAndTrial: premiumAndTrial,
       diary: diary,
       diarySetting: diarySetting,
     );
@@ -32,6 +35,7 @@ const $DiaryPostState = _$DiaryPostStateTearOff();
 
 /// @nodoc
 mixin _$DiaryPostState {
+  PremiumAndTrial get premiumAndTrial => throw _privateConstructorUsedError;
   Diary get diary => throw _privateConstructorUsedError;
   DiarySetting? get diarySetting => throw _privateConstructorUsedError;
 
@@ -45,8 +49,12 @@ abstract class $DiaryPostStateCopyWith<$Res> {
   factory $DiaryPostStateCopyWith(
           DiaryPostState value, $Res Function(DiaryPostState) then) =
       _$DiaryPostStateCopyWithImpl<$Res>;
-  $Res call({Diary diary, DiarySetting? diarySetting});
+  $Res call(
+      {PremiumAndTrial premiumAndTrial,
+      Diary diary,
+      DiarySetting? diarySetting});
 
+  $PremiumAndTrialCopyWith<$Res> get premiumAndTrial;
   $DiaryCopyWith<$Res> get diary;
   $DiarySettingCopyWith<$Res>? get diarySetting;
 }
@@ -62,10 +70,15 @@ class _$DiaryPostStateCopyWithImpl<$Res>
 
   @override
   $Res call({
+    Object? premiumAndTrial = freezed,
     Object? diary = freezed,
     Object? diarySetting = freezed,
   }) {
     return _then(_value.copyWith(
+      premiumAndTrial: premiumAndTrial == freezed
+          ? _value.premiumAndTrial
+          : premiumAndTrial // ignore: cast_nullable_to_non_nullable
+              as PremiumAndTrial,
       diary: diary == freezed
           ? _value.diary
           : diary // ignore: cast_nullable_to_non_nullable
@@ -75,6 +88,13 @@ class _$DiaryPostStateCopyWithImpl<$Res>
           : diarySetting // ignore: cast_nullable_to_non_nullable
               as DiarySetting?,
     ));
+  }
+
+  @override
+  $PremiumAndTrialCopyWith<$Res> get premiumAndTrial {
+    return $PremiumAndTrialCopyWith<$Res>(_value.premiumAndTrial, (value) {
+      return _then(_value.copyWith(premiumAndTrial: value));
+    });
   }
 
   @override
@@ -103,8 +123,13 @@ abstract class _$DiaryPostStateCopyWith<$Res>
           _DiaryPostState value, $Res Function(_DiaryPostState) then) =
       __$DiaryPostStateCopyWithImpl<$Res>;
   @override
-  $Res call({Diary diary, DiarySetting? diarySetting});
+  $Res call(
+      {PremiumAndTrial premiumAndTrial,
+      Diary diary,
+      DiarySetting? diarySetting});
 
+  @override
+  $PremiumAndTrialCopyWith<$Res> get premiumAndTrial;
   @override
   $DiaryCopyWith<$Res> get diary;
   @override
@@ -124,10 +149,15 @@ class __$DiaryPostStateCopyWithImpl<$Res>
 
   @override
   $Res call({
+    Object? premiumAndTrial = freezed,
     Object? diary = freezed,
     Object? diarySetting = freezed,
   }) {
     return _then(_DiaryPostState(
+      premiumAndTrial: premiumAndTrial == freezed
+          ? _value.premiumAndTrial
+          : premiumAndTrial // ignore: cast_nullable_to_non_nullable
+              as PremiumAndTrial,
       diary: diary == freezed
           ? _value.diary
           : diary // ignore: cast_nullable_to_non_nullable
@@ -143,9 +173,14 @@ class __$DiaryPostStateCopyWithImpl<$Res>
 /// @nodoc
 
 class _$_DiaryPostState extends _DiaryPostState {
-  _$_DiaryPostState({required this.diary, required this.diarySetting})
+  _$_DiaryPostState(
+      {required this.premiumAndTrial,
+      required this.diary,
+      required this.diarySetting})
       : super._();
 
+  @override
+  final PremiumAndTrial premiumAndTrial;
   @override
   final Diary diary;
   @override
@@ -153,7 +188,7 @@ class _$_DiaryPostState extends _DiaryPostState {
 
   @override
   String toString() {
-    return 'DiaryPostState(diary: $diary, diarySetting: $diarySetting)';
+    return 'DiaryPostState(premiumAndTrial: $premiumAndTrial, diary: $diary, diarySetting: $diarySetting)';
   }
 
   @override
@@ -161,6 +196,8 @@ class _$_DiaryPostState extends _DiaryPostState {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _DiaryPostState &&
+            const DeepCollectionEquality()
+                .equals(other.premiumAndTrial, premiumAndTrial) &&
             const DeepCollectionEquality().equals(other.diary, diary) &&
             const DeepCollectionEquality()
                 .equals(other.diarySetting, diarySetting));
@@ -169,6 +206,7 @@ class _$_DiaryPostState extends _DiaryPostState {
   @override
   int get hashCode => Object.hash(
       runtimeType,
+      const DeepCollectionEquality().hash(premiumAndTrial),
       const DeepCollectionEquality().hash(diary),
       const DeepCollectionEquality().hash(diarySetting));
 
@@ -180,10 +218,13 @@ class _$_DiaryPostState extends _DiaryPostState {
 
 abstract class _DiaryPostState extends DiaryPostState {
   factory _DiaryPostState(
-      {required Diary diary,
+      {required PremiumAndTrial premiumAndTrial,
+      required Diary diary,
       required DiarySetting? diarySetting}) = _$_DiaryPostState;
   _DiaryPostState._() : super._();
 
+  @override
+  PremiumAndTrial get premiumAndTrial;
   @override
   Diary get diary;
   @override
