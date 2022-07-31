@@ -29,14 +29,15 @@ class AddDiarySettingPhysicalConditionDetail {
   }
 }
 
-final deleteDiarySettingPhysicalConditionDetailProvider = Provider.autoDispose((ref) => ref.watch(databaseProvider).diarySettingReference());
+final deleteDiarySettingPhysicalConditionDetailProvider =
+    Provider.autoDispose((ref) => DeleteDiarySettingPhysicalConditionDetail(ref.watch(databaseProvider).diarySettingReference()));
 
 class DeleteDiarySettingPhysicalConditionDetail {
   final DocumentReference<DiarySetting> reference;
   DeleteDiarySettingPhysicalConditionDetail(this.reference);
 
-  Future<void> call({required DiarySetting diarySetting, required List<String> physicalConditionDetails}) async {
-    await reference.set(diarySetting.copyWith(physicalConditions: diarySetting.physicalConditions..removeWhere(physicalConditionDetails.contains)),
-        SetOptions(merge: true));
+  Future<void> call({required DiarySetting diarySetting, required String physicalConditionDetail}) async {
+    await reference.set(
+        diarySetting.copyWith(physicalConditions: diarySetting.physicalConditions..remove(physicalConditionDetail)), SetOptions(merge: true));
   }
 }

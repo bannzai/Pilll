@@ -15,7 +15,6 @@ final diarySettingPhysicalConditionDetailAsyncStateProvider = Provider.autoDispo
   try {
     return AsyncValue.data(DiarySettingPhysicalConditionDetailState(
       diarySetting: diarySetting.value,
-      selected: [],
     ));
   } catch (error, stackTrace) {
     return AsyncValue.error(error, stackTrace: stackTrace);
@@ -26,7 +25,6 @@ final diarySettingPhysicalConditionDetailAsyncStateProvider = Provider.autoDispo
 class DiarySettingPhysicalConditionDetailState with _$DiarySettingPhysicalConditionDetailState {
   factory DiarySettingPhysicalConditionDetailState({
     required DiarySetting? diarySetting,
-    required List<String> selected,
   }) = _DiarySettingPhysicalConditionDetailState;
   DiarySettingPhysicalConditionDetailState._();
 }

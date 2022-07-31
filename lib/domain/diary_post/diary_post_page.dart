@@ -172,10 +172,14 @@ class DiaryPostPage extends HookConsumerWidget {
               onPressed: () {
                 showModalBottomSheet(
                     context: context,
+                    isDismissible: true,
                     isScrollControlled: true,
                     backgroundColor: Colors.transparent,
                     builder: (_) {
-                      return const DiarySettingPhysicalConditionDetailPage();
+                      return SizedBox(
+                        height: MediaQuery.of(context).size.height - 200,
+                        child: const DiarySettingPhysicalConditionDetailPage(),
+                      );
                     });
               },
               padding: const EdgeInsets.all(4),

@@ -3,6 +3,8 @@ import 'package:flutter_hooks/flutter_hooks.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
 import 'package:pilll/analytics.dart';
 import 'package:pilll/components/atoms/color.dart';
+import 'package:pilll/components/atoms/font.dart';
+import 'package:pilll/components/atoms/text_color.dart';
 import 'package:pilll/components/molecules/indicator.dart';
 import 'package:pilll/domain/diary_setting_physical_condtion_detail/mutation.dart';
 import 'package:pilll/domain/diary_setting_physical_condtion_detail/state_notifier.dart';
@@ -16,7 +18,9 @@ class DiarySettingPhysicalConditionDetailPage extends HookConsumerWidget {
   Widget build(BuildContext context, WidgetRef ref) {
     final createDiarySetting = ref.watch(createDiarySettingPhysicalConditionDetailProvider);
     final addDiarySetting = ref.watch(addDiarySettingPhysicalConditionDetailProvider);
+    final deleteDiarySetting = ref.watch(deleteDiarySettingPhysicalConditionDetailProvider);
     final state = ref.watch(diarySettingPhysicalConditionDetailStateNotifierProvider);
+    final textFieldController = useTextEditingController();
 
     useEffect(() {
       final diarySetting = state.asData?.value.diarySetting;
@@ -36,10 +40,36 @@ class DiarySettingPhysicalConditionDetailPage extends HookConsumerWidget {
           return const ScaffoldIndicator();
         }
         return Scaffold(
+          appBar: AppBar(
+            title: const Text("体調詳細編集",
+                style: TextStyle(
+                  fontSize: 17,
+                  fontFamily: FontFamily.japanese,
+                  color: TextColor.main,
+                  fontWeight: FontWeight.w600,
+                )),
+            shadowColor: Colors.transparent,
+          ),
           body: ListView(
             children: [
-              for (final p in diarySetting.physicalConditions) Text(p),
+              for (final p in diarySetting.physicalConditions)
+                Column(
+                  children: [
+                    ListTile(
+                      title: Text(p),
+                      contentPadding: const EdgeInsets.symmetric(horizontal: 16, vertical: 0),
+                      trailing: IconButton(
+                        icon: const Icon(Icons.delete),
+                        onPressed: () async {
+                          await deleteDiarySetting(diarySetting: diarySetting, physicalConditionDetail: p);
+                        },
+                      ),
+                    ),
+                    const Divider(),
+                  ],
+                ),
               TextField(
+                controller: textFieldController,
                 decoration: const InputDecoration(
                   focusedBorder: UnderlineInputBorder(
                     borderSide: BorderSide(color: PilllColors.primary),
