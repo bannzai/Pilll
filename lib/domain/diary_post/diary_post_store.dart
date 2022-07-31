@@ -1,22 +1,25 @@
+import 'package:pilll/database/diary_setting.dart';
 import 'package:pilll/domain/diary/diary_state.codegen.dart';
 import 'package:pilll/domain/diary_post/diary_post_store_provider_family.dart';
+import 'package:pilll/domain/diary_post/state.codegen.dart';
 import 'package:pilll/entity/diary.codegen.dart';
 import 'package:pilll/database/diary.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
 
 final diaryPostStateNotifierProvider =
     StateNotifierProvider.autoDispose.family<DiaryPostStateNotifier, DiaryState, DiaryPostStoreProviderFamily>((ref, family) {
+  final diarySetting = ref.watch(diarySettingStreamProvider).asData?.value;
   final service = ref.watch(diaryDatastoreProvider);
   final diary = family.diary;
   if (diary == null) {
-    return DiaryPostStateNotifier(service, DiaryState(diary: Diary.fromDate(family.date)));
+    return DiaryPostStateNotifier(service, DiaryPostState(diary: Diary.fromDate(family.date), diarySetting: diarySetting));
   }
-  return DiaryPostStateNotifier(service, DiaryState(diary: diary.copyWith()));
+  return DiaryPostStateNotifier(service, DiaryPostState(diary: diary.copyWith(), diarySetting: diarySetting));
 });
 
-class DiaryPostStateNotifier extends StateNotifier<DiaryState> {
+class DiaryPostStateNotifier extends StateNotifier<DiaryPostState> {
   final DiaryDatastore _diaryDatastore;
-  DiaryPostStateNotifier(this._diaryDatastore, DiaryState state) : super(state);
+  DiaryPostStateNotifier(this._diaryDatastore, DiaryPostState state) : super(state);
 
   void removePhysicalCondition(String physicalCondition) {
     state = state.copyWith(diary: state.diary.copyWith(physicalConditions: state.diary.physicalConditions..remove(physicalCondition)));
@@ -27,7 +30,7 @@ class DiaryPostStateNotifier extends StateNotifier<DiaryState> {
   }
 
   void switchingPhysicalCondition(PhysicalConditionStatus status) {
-    if (state.hasPhysicalConditionStatusFor(status)) {
+    if (state.diary.hasPhysicalConditionStatusFor(status)) {
       state = state.copyWith(diary: state.diary.copyWith(physicalConditionStatus: null));
       return;
     }

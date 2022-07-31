@@ -130,11 +130,11 @@ class DiaryPostPage extends HookConsumerWidget {
               Container(
                 decoration: BoxDecoration(
                   borderRadius: const BorderRadius.only(topLeft: Radius.circular(8), bottomLeft: Radius.circular(8)),
-                  color: state.hasPhysicalConditionStatusFor(PhysicalConditionStatus.bad) ? PilllColors.thinSecondary : Colors.transparent,
+                  color: state.diary.hasPhysicalConditionStatusFor(PhysicalConditionStatus.bad) ? PilllColors.thinSecondary : Colors.transparent,
                 ),
                 child: IconButton(
                     icon: SvgPicture.asset("images/angry.svg",
-                        color: state.hasPhysicalConditionStatusFor(PhysicalConditionStatus.bad) ? PilllColors.secondary : TextColor.darkGray),
+                        color: state.diary.hasPhysicalConditionStatusFor(PhysicalConditionStatus.bad) ? PilllColors.secondary : TextColor.darkGray),
                     onPressed: () {
                       store.switchingPhysicalCondition(PhysicalConditionStatus.bad);
                     }),
@@ -143,11 +143,11 @@ class DiaryPostPage extends HookConsumerWidget {
               Container(
                 decoration: BoxDecoration(
                   borderRadius: const BorderRadius.only(topRight: Radius.circular(8), bottomRight: Radius.circular(8)),
-                  color: state.hasPhysicalConditionStatusFor(PhysicalConditionStatus.fine) ? PilllColors.thinSecondary : Colors.transparent,
+                  color: state.diary.hasPhysicalConditionStatusFor(PhysicalConditionStatus.fine) ? PilllColors.thinSecondary : Colors.transparent,
                 ),
                 child: IconButton(
                     icon: SvgPicture.asset("images/laugh.svg",
-                        color: state.hasPhysicalConditionStatusFor(PhysicalConditionStatus.fine) ? PilllColors.secondary : TextColor.darkGray),
+                        color: state.diary.hasPhysicalConditionStatusFor(PhysicalConditionStatus.fine) ? PilllColors.secondary : TextColor.darkGray),
                     onPressed: () {
                       store.switchingPhysicalCondition(PhysicalConditionStatus.fine);
                     }),

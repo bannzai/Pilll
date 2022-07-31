@@ -38,7 +38,7 @@ class ConfirmDiarySheet extends HookConsumerWidget {
       child: Column(mainAxisSize: MainAxisSize.min, crossAxisAlignment: CrossAxisAlignment.start, children: [
         _title(context, store, state),
         ...[
-          if (state.hasPhysicalConditionStatus()) _physicalCondition(state),
+          if (state.diary.hasPhysicalConditionStatus) _physicalCondition(state),
           _physicalConditionDetails(state),
           if (state.diary.hasSex) _sex(),
           _memo(state),
