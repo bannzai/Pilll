@@ -7,7 +7,7 @@ import 'package:pilll/components/atoms/font.dart';
 import 'package:pilll/components/atoms/text_color.dart';
 import 'package:pilll/components/molecules/indicator.dart';
 import 'package:pilll/domain/diary_setting_physical_condtion_detail/mutation.dart';
-import 'package:pilll/domain/diary_setting_physical_condtion_detail/state_notifier.dart';
+import 'package:pilll/domain/diary_setting_physical_condtion_detail/state.codegen.dart';
 import 'package:pilll/error/error_alert.dart';
 import 'package:pilll/error/universal_error_page.dart';
 
@@ -19,7 +19,7 @@ class DiarySettingPhysicalConditionDetailPage extends HookConsumerWidget {
     final createDiarySetting = ref.watch(createDiarySettingPhysicalConditionDetailProvider);
     final addDiarySetting = ref.watch(addDiarySettingPhysicalConditionDetailProvider);
     final deleteDiarySetting = ref.watch(deleteDiarySettingPhysicalConditionDetailProvider);
-    final state = ref.watch(diarySettingPhysicalConditionDetailStateNotifierProvider);
+    final state = ref.watch(diarySettingPhysicalConditionDetailAsyncStateProvider);
     final textFieldController = useTextEditingController();
     final scrollController = useScrollController();
 
