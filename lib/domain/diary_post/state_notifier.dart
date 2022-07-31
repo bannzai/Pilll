@@ -8,48 +8,45 @@ import 'package:hooks_riverpod/hooks_riverpod.dart';
 
 final diaryPostStateNotifierProvider =
     StateNotifierProvider.autoDispose.family<DiaryPostStateNotifier, DiaryState, DiaryPostStateProviderFamily>((ref, family) {
-  final diarySetting = ref.watch(diarySettingStreamProvider).asData?.value;
-  final service = ref.watch(diaryDatastoreProvider);
-  final diary = family.diary;
-  if (diary == null) {
-    return DiaryPostStateNotifier(service, DiaryPostState(diary: Diary.fromDate(family.date), diarySetting: diarySetting));
-  }
-  return DiaryPostStateNotifier(service, DiaryPostState(diary: diary.copyWith(), diarySetting: diarySetting));
+  return DiaryPostStateNotifier(ref.watch(diaryDatastoreProvider), ref.watch(diaryPostAsyncStateProvider(family)));
 });
 
-class DiaryPostStateNotifier extends StateNotifier<DiaryPostState> {
+class DiaryPostStateNotifier extends StateNotifier<AsyncValue<DiaryPostState>> {
   final DiaryDatastore _diaryDatastore;
-  DiaryPostStateNotifier(this._diaryDatastore, DiaryPostState state) : super(state);
+  DiaryPostStateNotifier(this._diaryDatastore, AsyncValue<DiaryPostState> initialState) : super(initialState);
+
+  DiaryPostState get value => state.value!;
 
   void removePhysicalCondition(String physicalCondition) {
-    state = state.copyWith(diary: state.diary.copyWith(physicalConditions: state.diary.physicalConditions..remove(physicalCondition)));
+    state =
+        AsyncValue.data(value.copyWith(diary: value.diary.copyWith(physicalConditions: value.diary.physicalConditions..remove(physicalCondition))));
   }
 
   void addPhysicalCondition(String physicalCondition) {
-    state = state.copyWith(diary: state.diary.copyWith(physicalConditions: state.diary.physicalConditions..add(physicalCondition)));
+    state = AsyncValue.data(value.copyWith(diary: value.diary.copyWith(physicalConditions: value.diary.physicalConditions..add(physicalCondition))));
   }
 
   void switchingPhysicalCondition(PhysicalConditionStatus status) {
-    if (state.diary.hasPhysicalConditionStatusFor(status)) {
-      state = state.copyWith(diary: state.diary.copyWith(physicalConditionStatus: null));
+    if (value.diary.hasPhysicalConditionStatusFor(status)) {
+      state = AsyncValue.data(value.copyWith(diary: value.diary.copyWith(physicalConditionStatus: null)));
       return;
     }
-    state = state.copyWith(diary: state.diary.copyWith(physicalConditionStatus: status));
+    state = AsyncValue.data(value.copyWith(diary: value.diary.copyWith(physicalConditionStatus: status)));
   }
 
   void toggleHasSex() {
-    state = state.copyWith(diary: state.diary.copyWith(hasSex: !state.diary.hasSex));
+    state = AsyncValue.data(value.copyWith(diary: value.diary.copyWith(hasSex: !value.diary.hasSex)));
   }
 
   void editedMemo(String text) {
-    state = state.copyWith(diary: state.diary.copyWith(memo: text));
+    state = AsyncValue.data(value.copyWith(diary: value.diary.copyWith(memo: text)));
   }
 
   Future<Diary> register() {
-    return _diaryDatastore.register(state.diary);
+    return _diaryDatastore.register(value.diary);
   }
 
   Future<void> delete() {
-    return _diaryDatastore.delete(state.diary);
+    return _diaryDatastore.delete(value.diary);
   }
 }
