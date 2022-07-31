@@ -2,6 +2,7 @@ import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:pilll/database/database.dart';
 import 'package:pilll/domain/diary_setting_physical_condtion_detail/state.codegen.dart';
 import 'package:pilll/entity/diary_setting.codegen.dart';
+import 'package:pilll/util/datetime/day.dart';
 
 import 'package:riverpod/riverpod.dart';
 
@@ -28,7 +29,20 @@ class DiarySettingPhysicalConditionDetailStateNotifier extends StateNotifier<Asy
   }
 }
 
-final addDiarySettingPhysicalConditionDetailProvider = Provider.autoDispose((ref) => ref.watch(databaseProvider).diarySettingReference());
+final createDiarySettingPhysicalConditionDetailProvider =
+    Provider.autoDispose((ref) => CreateDiarySettingPhysicalConditionDetail(ref.watch(databaseProvider).diarySettingReference()));
+
+class CreateDiarySettingPhysicalConditionDetail {
+  final DocumentReference<DiarySetting> reference;
+  CreateDiarySettingPhysicalConditionDetail(this.reference);
+
+  Future<void> call() async {
+    await reference.set(DiarySetting(createdAt: now()), SetOptions(merge: true));
+  }
+}
+
+final addDiarySettingPhysicalConditionDetailProvider =
+    Provider.autoDispose((ref) => AddDiarySettingPhysicalConditionDetail(ref.watch(databaseProvider).diarySettingReference()));
 
 class AddDiarySettingPhysicalConditionDetail {
   final DocumentReference<DiarySetting> reference;
