@@ -46,7 +46,7 @@ class DiarySettingPhysicalConditionDetailPage extends HookConsumerWidget {
         }
         return Scaffold(
           appBar: AppBar(
-            title: const Text("体調詳細編集",
+            title: const Text("体調詳細",
                 style: TextStyle(
                   fontSize: 17,
                   fontFamily: FontFamily.japanese,
@@ -72,7 +72,6 @@ class DiarySettingPhysicalConditionDetailPage extends HookConsumerWidget {
                     analytics.logEvent(name: "submit_physical_condition_detail", parameters: {"element": physicalConditionDetail});
                     try {
                       addDiarySetting(diarySetting: diarySetting, physicalConditionDetail: physicalConditionDetail);
-                      Navigator.of(context).pop();
                     } catch (error) {
                       showErrorAlert(context, error);
                     }
