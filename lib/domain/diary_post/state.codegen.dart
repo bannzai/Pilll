@@ -7,7 +7,6 @@ import 'package:pilll/entity/diary_setting.codegen.dart';
 
 part 'state.codegen.freezed.dart';
 
-@freezed
 final diaryPostAsyncStateProvider = Provider.autoDispose.family<AsyncValue<DiaryPostState>, DiaryPostStateProviderFamily>((ref, family) {
   final diarySetting = ref.watch(diarySettingStreamProvider).asData?.value;
   final diary = family.diary ?? Diary.fromDate(family.date);
@@ -22,6 +21,7 @@ final diaryPostAsyncStateProvider = Provider.autoDispose.family<AsyncValue<Diary
   }
 });
 
+@freezed
 class DiaryPostState with _$DiaryPostState {
   factory DiaryPostState({
     required Diary diary,
