@@ -1,11 +1,11 @@
 import 'package:equatable/equatable.dart';
 import 'package:pilll/entity/diary.codegen.dart';
 
-class DiaryPostStoreProviderFamily extends Equatable {
+class DiaryPostStateProviderFamily extends Equatable {
   final DateTime date;
   final Diary? diary;
 
-  const DiaryPostStoreProviderFamily({
+  const DiaryPostStateProviderFamily({
     required this.date,
     required this.diary,
   });

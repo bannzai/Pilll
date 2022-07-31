@@ -1,13 +1,13 @@
 import 'package:pilll/database/diary_setting.dart';
 import 'package:pilll/domain/diary/diary_state.codegen.dart';
-import 'package:pilll/domain/diary_post/diary_post_store_provider_family.dart';
+import 'package:pilll/domain/diary_post/diary_post_state_provider_family.dart';
 import 'package:pilll/domain/diary_post/state.codegen.dart';
 import 'package:pilll/entity/diary.codegen.dart';
 import 'package:pilll/database/diary.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
 
 final diaryPostStateNotifierProvider =
-    StateNotifierProvider.autoDispose.family<DiaryPostStateNotifier, DiaryState, DiaryPostStoreProviderFamily>((ref, family) {
+    StateNotifierProvider.autoDispose.family<DiaryPostStateNotifier, DiaryState, DiaryPostStateProviderFamily>((ref, family) {
   final diarySetting = ref.watch(diarySettingStreamProvider).asData?.value;
   final service = ref.watch(diaryDatastoreProvider);
   final diary = family.diary;
