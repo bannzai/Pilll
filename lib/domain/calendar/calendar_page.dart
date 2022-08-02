@@ -88,8 +88,20 @@ class CalendarPageBody extends StatelessWidget {
                 scrollDirection: Axis.horizontal,
                 physics: const PageScrollPhysics(),
                 children: List.generate(calendarDataSourceLength, (index) {
-                  return SizedBox(
-                    height: 444,
+                  return Container(
+                    margin: const EdgeInsets.only(bottom: 10),
+                    decoration: BoxDecoration(
+                      color: PilllColors.white,
+                      boxShadow: [
+                        BoxShadow(
+                          color: PilllColors.shadow,
+                          blurRadius: 6.0,
+                          offset: const Offset(0, 2),
+                        ),
+                      ],
+                    ),
+                    // minus value of `margin`. so, it is show shadow
+                    height: 444 - 10,
                     width: MediaQuery.of(context).size.width,
                     child: MonthCalendar(
                         dateForMonth: state.displayMonth,
