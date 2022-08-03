@@ -1,4 +1,5 @@
 import 'package:hooks_riverpod/hooks_riverpod.dart';
+import 'package:pilll/components/atoms/color.dart';
 import 'package:pilll/components/molecules/indicator.dart';
 import 'package:pilll/components/organisms/calendar/week/week_calendar_state.dart';
 import 'package:pilll/domain/calendar/components/month_calendar/month_calendar_state.codegen.dart';
@@ -13,8 +14,7 @@ abstract class CalendarConstants {
 
 class MonthCalendar extends HookConsumerWidget {
   final DateTime dateForMonth;
-  final Widget Function(BuildContext, MonthCalendarState, WeekCalendarState)
-      weekCalendarBuilder;
+  final Widget Function(BuildContext, MonthCalendarState, WeekCalendarState) weekCalendarBuilder;
 
   const MonthCalendar({
     Key? key,
@@ -48,8 +48,7 @@ class MonthCalendar extends HookConsumerWidget {
                 return Container(height: CalendarConstants.tileHeight);
               }
 
-              final weekCalendar = weekCalendarBuilder(
-                  context, state, weekCalendarStatuses[offset]);
+              final weekCalendar = weekCalendarBuilder(context, state, weekCalendarStatuses[offset]);
               return Column(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
