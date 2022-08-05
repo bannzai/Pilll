@@ -58,6 +58,9 @@ class NotificationBarState with _$NotificationBarState {
   }
 
   String? get premiumTrialLimit {
+    if (premiumAndTrial.isPremium) {
+      return null;
+    }
     if (!premiumAndTrial.isTrial) {
       return null;
     }
