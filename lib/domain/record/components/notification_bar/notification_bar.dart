@@ -6,6 +6,7 @@ import 'package:pilll/domain/premium_introduction/premium_introduction_sheet.dar
 import 'package:pilll/domain/premium_introduction/util/discount_deadline.dart';
 import 'package:pilll/domain/record/components/notification_bar/components/discount_price_deadline.dart';
 import 'package:pilll/domain/record/components/notification_bar/components/ended_pill_sheet.dart';
+import 'package:pilll/domain/record/components/notification_bar/components/pilll_ads.dart';
 import 'package:pilll/domain/record/components/notification_bar/components/premium_trial_begin.dart';
 import 'package:pilll/domain/record/components/notification_bar/notification_bar_store.dart';
 import 'package:pilll/domain/record/components/notification_bar/components/premium_trial_limit.dart';
@@ -23,11 +24,7 @@ class NotificationBar extends HookConsumerWidget {
   Widget build(BuildContext context, WidgetRef ref) {
     final body = _body(context, ref);
     if (body != null) {
-      return Container(
-        padding: const EdgeInsets.fromLTRB(8, 0, 8, 0),
-        color: PilllColors.secondary,
-        child: body,
-      );
+      return body;
     }
 
     return Container();
@@ -36,11 +33,11 @@ class NotificationBar extends HookConsumerWidget {
   Widget? _body(BuildContext context, WidgetRef ref) {
     final state = ref.watch(notificationBarStoreProvider);
     final store = ref.watch(notificationBarStoreProvider.notifier);
+    return PilllAdsNotificationBar();
     if (!state.premiumAndTrial.isPremium) {
       final premiumTrialLimit = state.premiumTrialLimit;
       if (premiumTrialLimit != null) {
-        return PremiumTrialLimitNotificationBar(
-            premiumTrialLimit: premiumTrialLimit);
+        return PremiumTrialLimitNotificationBar(premiumTrialLimit: premiumTrialLimit);
       }
 
       if (!state.premiumTrialBeginAnouncementIsClosed) {
@@ -57,20 +54,15 @@ class NotificationBar extends HookConsumerWidget {
 
       if (state.premiumAndTrial.hasDiscountEntitlement) {
         if (!state.premiumAndTrial.isTrial) {
-          final discountEntitlementDeadlineDate =
-              state.premiumAndTrial.discountEntitlementDeadlineDate;
+          final discountEntitlementDeadlineDate = state.premiumAndTrial.discountEntitlementDeadlineDate;
           if (discountEntitlementDeadlineDate != null) {
             // NOTE: watch state
-            final isOverDiscountDeadline = ref.watch(
-                isOverDiscountDeadlineProvider(
-                    discountEntitlementDeadlineDate));
+            final isOverDiscountDeadline = ref.watch(isOverDiscountDeadlineProvider(discountEntitlementDeadlineDate));
             if (!isOverDiscountDeadline) {
               return DiscountPriceDeadline(
-                  discountEntitlementDeadlineDate:
-                      discountEntitlementDeadlineDate,
+                  discountEntitlementDeadlineDate: discountEntitlementDeadlineDate,
                   onTap: () {
-                    analytics.logEvent(
-                        name: "pressed_discount_notification_bar");
+                    analytics.logEvent(name: "pressed_discount_notification_bar");
                     showPremiumIntroductionSheet(context);
                   });
             }
@@ -80,8 +72,7 @@ class NotificationBar extends HookConsumerWidget {
 
       final restDurationNotification = state.restDurationNotification;
       if (restDurationNotification != null) {
-        return RestDurationNotificationBar(
-            restDurationNotification: restDurationNotification);
+        return RestDurationNotificationBar(restDurationNotification: restDurationNotification);
       }
 
       if (!state.isLinkedLoginProvider) {
@@ -97,8 +88,7 @@ class NotificationBar extends HookConsumerWidget {
                 );
               },
               onClose: () {
-                analytics.logEvent(
-                    name: "record_page_signing_notification_closed");
+                analytics.logEvent(name: "record_page_signing_notification_closed");
                 store.closeRecommendedSignupNotification();
               },
             );
@@ -106,8 +96,7 @@ class NotificationBar extends HookConsumerWidget {
         }
       }
 
-      if (state.latestPillSheetGroup != null &&
-          state.latestPillSheetGroup?.activedPillSheet == null) {
+      if (state.latestPillSheetGroup != null && state.latestPillSheetGroup?.activedPillSheet == null) {
         // ピルシートグループが存在していてactivedPillSheetが無い場合はピルシート終了が何かしらの理由がなくなったと見なし終了表示にする
         return EndedPillSheet(
           isPremium: state.premiumAndTrial.isPremium,
@@ -122,12 +111,10 @@ class NotificationBar extends HookConsumerWidget {
 
       final restDurationNotification = state.restDurationNotification;
       if (restDurationNotification != null) {
-        return RestDurationNotificationBar(
-            restDurationNotification: restDurationNotification);
+        return RestDurationNotificationBar(restDurationNotification: restDurationNotification);
       }
 
-      if (state.latestPillSheetGroup != null &&
-          state.latestPillSheetGroup?.activedPillSheet == null) {
+      if (state.latestPillSheetGroup != null && state.latestPillSheetGroup?.activedPillSheet == null) {
         // ピルシートグループが存在していてactivedPillSheetが無い場合はピルシート終了が何かしらの理由がなくなったと見なし終了表示にする
         return EndedPillSheet(
           isPremium: state.premiumAndTrial.isPremium,

@@ -6,8 +6,7 @@ import 'package:pilll/util/shared_preference/keys.dart';
 import 'package:riverpod/riverpod.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
-final notificationBarStoreProvider = StateNotifierProvider.autoDispose<
-    NotificationBarStateStore, NotificationBarState>(
+final notificationBarStoreProvider = StateNotifierProvider.autoDispose<NotificationBarStateStore, NotificationBarState>(
   (ref) => NotificationBarStateStore(
     ref.watch(notificationBarStateProvider),
   ),
@@ -19,10 +18,8 @@ final notificationBarStateProvider = Provider.autoDispose((ref) {
     totalCountOfActionForTakenPill: parameter.totalCountOfActionForTakenPill,
     premiumAndTrial: parameter.premiumAndTrial,
     isLinkedLoginProvider: parameter.isLinkedLoginProvider,
-    premiumTrialBeginAnouncementIsClosed:
-        parameter.premiumTrialBeginAnouncementIsClosed,
-    recommendedSignupNotificationIsAlreadyShow:
-        parameter.recommendedSignupNotificationIsAlreadyShow,
+    premiumTrialBeginAnouncementIsClosed: parameter.premiumTrialBeginAnouncementIsClosed,
+    recommendedSignupNotificationIsAlreadyShow: parameter.recommendedSignupNotificationIsAlreadyShow,
   );
 });
 
@@ -31,15 +28,19 @@ class NotificationBarStateStore extends StateNotifier<NotificationBarState> {
 
   Future<void> closeRecommendedSignupNotification() async {
     final sharedPreferences = await SharedPreferences.getInstance();
-    sharedPreferences.setBool(
-        BoolKey.recommendedSignupNotificationIsAlreadyShow, true);
+    sharedPreferences.setBool(BoolKey.recommendedSignupNotificationIsAlreadyShow, true);
     state = state.copyWith(recommendedSignupNotificationIsAlreadyShow: true);
   }
 
   Future<void> closePremiumTrialBeginNotification() async {
     final sharedPreferences = await SharedPreferences.getInstance();
-    sharedPreferences.setBool(
-        BoolKey.premiumTrialBeginAnouncementIsClosed, true);
+    sharedPreferences.setBool(BoolKey.premiumTrialBeginAnouncementIsClosed, true);
+    state = state.copyWith(premiumTrialBeginAnouncementIsClosed: true);
+  }
+
+  Future<void> closeAds() async {
+    final sharedPreferences = await SharedPreferences.getInstance();
+    sharedPreferences.setBool(BoolKey.premiumTrialBeginAnouncementIsClosed, true);
     state = state.copyWith(premiumTrialBeginAnouncementIsClosed: true);
   }
 }
