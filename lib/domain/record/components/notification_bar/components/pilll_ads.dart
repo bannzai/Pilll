@@ -2,26 +2,14 @@ import 'package:flutter/material.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:pilll/analytics.dart';
-import 'package:pilll/provider/premium_and_trial.codegen.dart';
 import 'package:url_launcher/url_launcher.dart';
 
 class PilllAdsNotificationBar extends HookConsumerWidget {
+  final VoidCallback? onClose;
   const PilllAdsNotificationBar({
     Key? key,
+    required this.onClose,
   }) : super(key: key);
-
-  static bool isShown({
-    required PremiumAndTrial premiumAndTrial,
-    required bool premiumUserIsClosedAds,
-  }) {
-    if (premiumAndTrial.isTrial) {
-      return false;
-    }
-    if (premiumAndTrial.isPremium && premiumUserIsClosedAds) {
-      return false;
-    }
-    return true;
-  }
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {
@@ -45,22 +33,21 @@ class PilllAdsNotificationBar extends HookConsumerWidget {
                     color: Colors.white,
                     size: 24,
                   ),
-                  onPressed: () {
-                    analytics.logEvent(name: "pilll_ads_is_closed");
-                  },
+                  onPressed: onClose != null
+                      ? () {
+                          analytics.logEvent(name: "pilll_ads_is_closed");
+                          onClose?.call();
+                        }
+                      : null,
                   iconSize: 24,
                   padding: EdgeInsets.zero,
                 ),
                 const Spacer(),
-                IconButton(
-                  icon: SvgPicture.asset(
-                    "images/arrow_right.svg",
-                    color: Colors.white,
-                  ),
-                  onPressed: () {},
-                  iconSize: 24,
-                  padding: const EdgeInsets.all(8),
-                  alignment: Alignment.centerRight,
+                SvgPicture.asset(
+                  "images/arrow_right.svg",
+                  color: Colors.white,
+                  height: 24,
+                  width: 24,
                 ),
               ],
             ),
