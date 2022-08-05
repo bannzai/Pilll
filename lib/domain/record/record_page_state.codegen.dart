@@ -40,6 +40,7 @@ final recordPageAsyncStateProvider = Provider.autoDispose<AsyncValue<RecordPageS
       recommendedSignupNotificationIsAlreadyShow: sharedPreferences.getBool(BoolKey.recommendedSignupNotificationIsAlreadyShow) ?? false,
       premiumTrialBeginAnouncementIsClosed: sharedPreferences.getBool(BoolKey.premiumTrialBeginAnouncementIsClosed) ?? false,
       isLinkedLoginProvider: ref.watch(isLinkedProvider),
+      premiumUserIsClosedAdsMederiPill: sharedPreferences.getBool(BoolKey.premiumUserIsClosedAdsMederiPill) ?? false,
       timestamp: now(),
     ));
   } catch (error, stackTrace) {
