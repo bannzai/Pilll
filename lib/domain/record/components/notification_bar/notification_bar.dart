@@ -5,6 +5,7 @@ import 'package:pilll/domain/premium_introduction/premium_introduction_sheet.dar
 import 'package:pilll/domain/premium_introduction/util/discount_deadline.dart';
 import 'package:pilll/domain/record/components/notification_bar/components/discount_price_deadline.dart';
 import 'package:pilll/domain/record/components/notification_bar/components/ended_pill_sheet.dart';
+import 'package:pilll/domain/record/components/notification_bar/components/pilll_ads.dart';
 import 'package:pilll/domain/record/components/notification_bar/components/premium_trial_begin.dart';
 import 'package:pilll/domain/record/components/notification_bar/notification_bar_store.dart';
 import 'package:pilll/domain/record/components/notification_bar/components/premium_trial_limit.dart';
@@ -67,41 +68,48 @@ class NotificationBar extends HookConsumerWidget {
         }
       }
 
-      final restDurationNotification = state.restDurationNotification;
-      if (restDurationNotification != null) {
-        return RestDurationNotificationBar(restDurationNotification: restDurationNotification);
-      }
+      if (state.premiumAndTrial.isTrial) {
+        final restDurationNotification = state.restDurationNotification;
+        if (restDurationNotification != null) {
+          return RestDurationNotificationBar(restDurationNotification: restDurationNotification);
+        }
 
-      if (!state.isLinkedLoginProvider) {
-        if (state.totalCountOfActionForTakenPill >= 7) {
-          if (!state.recommendedSignupNotificationIsAlreadyShow) {
-            return RecommendSignupNotificationBar(
-              onTap: () {
-                analytics.logEvent(name: "tapped_signup_notification_bar");
-                showSignInSheet(
-                  context,
-                  SignInSheetStateContext.recordPage,
-                  null,
-                );
-              },
-              onClose: () {
-                analytics.logEvent(name: "record_page_signing_notification_closed");
-                store.closeRecommendedSignupNotification();
-              },
-            );
+        if (!state.isLinkedLoginProvider) {
+          if (state.totalCountOfActionForTakenPill >= 7) {
+            if (!state.recommendedSignupNotificationIsAlreadyShow) {
+              return RecommendSignupNotificationBar(
+                onTap: () {
+                  analytics.logEvent(name: "tapped_signup_notification_bar");
+                  showSignInSheet(
+                    context,
+                    SignInSheetStateContext.recordPage,
+                    null,
+                  );
+                },
+                onClose: () {
+                  analytics.logEvent(name: "record_page_signing_notification_closed");
+                  store.closeRecommendedSignupNotification();
+                },
+              );
+            }
           }
         }
-      }
 
-      if (state.latestPillSheetGroup != null && state.latestPillSheetGroup?.activedPillSheet == null) {
-        // ピルシートグループが存在していてactivedPillSheetが無い場合はピルシート終了が何かしらの理由がなくなったと見なし終了表示にする
-        return EndedPillSheet(
-          isPremium: state.premiumAndTrial.isPremium,
-          isTrial: state.premiumAndTrial.isTrial,
-          trialDeadlineDate: state.premiumAndTrial.trialDeadlineDate,
-        );
+        if (state.latestPillSheetGroup != null && state.latestPillSheetGroup?.activedPillSheet == null) {
+          // ピルシートグループが存在していてactivedPillSheetが無い場合はピルシート終了が何かしらの理由がなくなったと見なし終了表示にする
+          return EndedPillSheet(
+            isPremium: state.premiumAndTrial.isPremium,
+            isTrial: state.premiumAndTrial.isTrial,
+            trialDeadlineDate: state.premiumAndTrial.trialDeadlineDate,
+          );
+        }
+      } else {
+        return const PilllAdsNotificationBar(onClose: null);
       }
     } else {
+      if (!state.premiumUserIsClosedAdsMederiPill) {
+        return PilllAdsNotificationBar(onClose: () => store.closeAds());
+      }
       if (state.shownRecommendSignupNotificationForPremium) {
         return const RecommendSignupForPremiumNotificationBar();
       }
