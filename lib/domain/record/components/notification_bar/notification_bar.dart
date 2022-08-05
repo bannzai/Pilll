@@ -6,7 +6,7 @@ import 'package:pilll/domain/premium_introduction/premium_introduction_sheet.dar
 import 'package:pilll/domain/premium_introduction/util/discount_deadline.dart';
 import 'package:pilll/domain/record/components/notification_bar/components/discount_price_deadline.dart';
 import 'package:pilll/domain/record/components/notification_bar/components/ended_pill_sheet.dart';
-import 'package:pilll/domain/record/components/notification_bar/components/pilll_ads.dart';
+import 'package:pilll/domain/record/components/ads/pilll_ads.dart';
 import 'package:pilll/domain/record/components/notification_bar/components/premium_trial_begin.dart';
 import 'package:pilll/domain/record/components/notification_bar/notification_bar_store.dart';
 import 'package:pilll/domain/record/components/notification_bar/components/premium_trial_limit.dart';
@@ -33,7 +33,6 @@ class NotificationBar extends HookConsumerWidget {
   Widget? _body(BuildContext context, WidgetRef ref) {
     final state = ref.watch(notificationBarStoreProvider);
     final store = ref.watch(notificationBarStoreProvider.notifier);
-    return PilllAdsNotificationBar();
     if (!state.premiumAndTrial.isPremium) {
       final premiumTrialLimit = state.premiumTrialLimit;
       if (premiumTrialLimit != null) {
