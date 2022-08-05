@@ -13,6 +13,7 @@ class PilllAdsNotificationBar extends HookConsumerWidget {
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {
+    final onClose = this.onClose;
     return Container(
       color: const Color(0xFFFC7CA4),
       child: GestureDetector(
@@ -26,22 +27,22 @@ class PilllAdsNotificationBar extends HookConsumerWidget {
               crossAxisAlignment: CrossAxisAlignment.center,
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
-                IconButton(
-                  alignment: Alignment.centerLeft,
-                  icon: const Icon(
-                    Icons.close,
-                    color: Colors.white,
-                    size: 24,
-                  ),
-                  onPressed: onClose != null
-                      ? () {
+                onClose != null
+                    ? IconButton(
+                        alignment: Alignment.centerLeft,
+                        icon: const Icon(
+                          Icons.close,
+                          color: Colors.white,
+                          size: 24,
+                        ),
+                        onPressed: () {
                           analytics.logEvent(name: "pilll_ads_is_closed");
-                          onClose?.call();
-                        }
-                      : null,
-                  iconSize: 24,
-                  padding: EdgeInsets.zero,
-                ),
+                          onClose();
+                        },
+                        iconSize: 24,
+                        padding: EdgeInsets.zero,
+                      )
+                    : const SizedBox(width: 24, height: 24),
                 const Spacer(),
                 SvgPicture.asset(
                   "images/arrow_right.svg",
