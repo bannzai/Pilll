@@ -2,12 +2,26 @@ import 'package:flutter/material.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:pilll/analytics.dart';
+import 'package:pilll/provider/premium_and_trial.codegen.dart';
 import 'package:url_launcher/url_launcher.dart';
 
 class PilllAdsNotificationBar extends HookConsumerWidget {
   const PilllAdsNotificationBar({
     Key? key,
   }) : super(key: key);
+
+  static bool isShown({
+    required PremiumAndTrial premiumAndTrial,
+    required bool premiumUserIsClosedAds,
+  }) {
+    if (premiumAndTrial.isTrial) {
+      return false;
+    }
+    if (premiumAndTrial.isPremium && premiumUserIsClosedAds) {
+      return false;
+    }
+    return true;
+  }
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {
