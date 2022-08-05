@@ -6,7 +6,6 @@ import 'package:pilll/domain/premium_introduction/premium_introduction_sheet.dar
 import 'package:pilll/domain/premium_introduction/util/discount_deadline.dart';
 import 'package:pilll/domain/record/components/notification_bar/components/discount_price_deadline.dart';
 import 'package:pilll/domain/record/components/notification_bar/components/ended_pill_sheet.dart';
-import 'package:pilll/domain/record/components/ads/pilll_ads.dart';
 import 'package:pilll/domain/record/components/notification_bar/components/premium_trial_begin.dart';
 import 'package:pilll/domain/record/components/notification_bar/notification_bar_store.dart';
 import 'package:pilll/domain/record/components/notification_bar/components/premium_trial_limit.dart';
@@ -24,7 +23,11 @@ class NotificationBar extends HookConsumerWidget {
   Widget build(BuildContext context, WidgetRef ref) {
     final body = _body(context, ref);
     if (body != null) {
-      return body;
+      return Container(
+        padding: const EdgeInsets.fromLTRB(8, 0, 8, 0),
+        color: PilllColors.secondary,
+        child: body,
+      );
     }
 
     return Container();
