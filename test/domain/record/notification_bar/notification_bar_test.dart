@@ -33,13 +33,11 @@ void main() {
   const totalCountOfActionForTakenPillForLongTimeUser = 14;
   setUp(() {
     TestWidgetsFlutterBinding.ensureInitialized();
-    SharedPreferences.setMockInitialValues(
-        {BoolKey.recommendedSignupNotificationIsAlreadyShow: true});
+    SharedPreferences.setMockInitialValues({BoolKey.recommendedSignupNotificationIsAlreadyShow: true});
     initializeDateFormatting('ja_JP');
     Environment.isTest = true;
     analytics = MockAnalytics();
-    WidgetsBinding.instance.renderView.configuration =
-        TestViewConfiguration(size: const Size(375.0, 667.0));
+    WidgetsBinding.instance.renderView.configuration = TestViewConfiguration(size: const Size(375.0, 667.0));
   });
   group('notification bar appearance content type', () {
     group('for it is not premium user', () {
@@ -58,38 +56,31 @@ void main() {
             const Duration(days: 25),
           ),
         );
-        final pillSheetGroup = PillSheetGroup(
-            pillSheetIDs: ["1"], pillSheets: [pillSheet], createdAt: now());
+        final pillSheetGroup = PillSheetGroup(pillSheetIDs: ["1"], pillSheets: [pillSheet], createdAt: now());
         final state = NotificationBarState(
           latestPillSheetGroup: pillSheetGroup,
-          totalCountOfActionForTakenPill:
-              totalCountOfActionForTakenPillForLongTimeUser,
+          totalCountOfActionForTakenPill: totalCountOfActionForTakenPillForLongTimeUser,
           premiumAndTrial: PremiumAndTrial(
             isPremium: false,
             isTrial: true,
             hasDiscountEntitlement: true,
             trialDeadlineDate: null,
             beginTrialDate: today,
-            discountEntitlementDeadlineDate:
-                today.subtract(const Duration(days: 1)),
+            discountEntitlementDeadlineDate: today.subtract(const Duration(days: 1)),
           ),
           isLinkedLoginProvider: false,
           premiumTrialBeginAnouncementIsClosed: false,
+          premiumUserIsClosedAdsMederiPill: false,
           recommendedSignupNotificationIsAlreadyShow: false,
         );
 
         await tester.pumpWidget(
           ProviderScope(
             overrides: [
-              notificationBarStoreProvider.overrideWithProvider(
-                  StateNotifierProvider.autoDispose(
-                      (_) => NotificationBarStateStore(state))),
-              notificationBarStateProvider
-                  .overrideWithProvider(Provider.autoDispose((_) => state)),
-              isOverDiscountDeadlineProvider.overrideWithProvider(
-                  (param) => Provider.autoDispose((_) => false)),
-              durationToDiscountPriceDeadline.overrideWithProvider((param) =>
-                  Provider.autoDispose((_) => const Duration(seconds: 1000))),
+              notificationBarStoreProvider.overrideWithProvider(StateNotifierProvider.autoDispose((_) => NotificationBarStateStore(state))),
+              notificationBarStateProvider.overrideWithProvider(Provider.autoDispose((_) => state)),
+              isOverDiscountDeadlineProvider.overrideWithProvider((param) => Provider.autoDispose((_) => false)),
+              durationToDiscountPriceDeadline.overrideWithProvider((param) => Provider.autoDispose((_) => const Duration(seconds: 1000))),
             ],
             child: const MaterialApp(
               home: Material(child: NotificationBar()),
@@ -119,38 +110,31 @@ void main() {
             const Duration(days: 25),
           ),
         );
-        final pillSheetGroup = PillSheetGroup(
-            pillSheetIDs: ["1"], pillSheets: [pillSheet], createdAt: now());
+        final pillSheetGroup = PillSheetGroup(pillSheetIDs: ["1"], pillSheets: [pillSheet], createdAt: now());
         final state = NotificationBarState(
           latestPillSheetGroup: pillSheetGroup,
-          totalCountOfActionForTakenPill:
-              totalCountOfActionForTakenPillForLongTimeUser,
+          totalCountOfActionForTakenPill: totalCountOfActionForTakenPillForLongTimeUser,
           premiumAndTrial: PremiumAndTrial(
             isPremium: false,
             isTrial: false,
             hasDiscountEntitlement: true,
             trialDeadlineDate: null,
             beginTrialDate: null,
-            discountEntitlementDeadlineDate:
-                today.subtract(const Duration(days: 1)),
+            discountEntitlementDeadlineDate: today.subtract(const Duration(days: 1)),
           ),
           isLinkedLoginProvider: false,
           premiumTrialBeginAnouncementIsClosed: true,
+          premiumUserIsClosedAdsMederiPill: false,
           recommendedSignupNotificationIsAlreadyShow: false,
         );
 
         await tester.pumpWidget(
           ProviderScope(
             overrides: [
-              notificationBarStoreProvider.overrideWithProvider(
-                  StateNotifierProvider.autoDispose(
-                      (_) => NotificationBarStateStore(state))),
-              notificationBarStateProvider
-                  .overrideWithProvider(Provider.autoDispose((_) => state)),
-              isOverDiscountDeadlineProvider.overrideWithProvider(
-                  (param) => Provider.autoDispose((_) => false)),
-              durationToDiscountPriceDeadline.overrideWithProvider((param) =>
-                  Provider.autoDispose((_) => const Duration(seconds: 1000))),
+              notificationBarStoreProvider.overrideWithProvider(StateNotifierProvider.autoDispose((_) => NotificationBarStateStore(state))),
+              notificationBarStateProvider.overrideWithProvider(Provider.autoDispose((_) => state)),
+              isOverDiscountDeadlineProvider.overrideWithProvider((param) => Provider.autoDispose((_) => false)),
+              durationToDiscountPriceDeadline.overrideWithProvider((param) => Provider.autoDispose((_) => const Duration(seconds: 1000))),
             ],
             child: const MaterialApp(
               home: Material(child: NotificationBar()),
@@ -180,12 +164,10 @@ void main() {
             const Duration(days: 25),
           ),
         );
-        final pillSheetGroup = PillSheetGroup(
-            pillSheetIDs: ["1"], pillSheets: [pillSheet], createdAt: now());
+        final pillSheetGroup = PillSheetGroup(pillSheetIDs: ["1"], pillSheets: [pillSheet], createdAt: now());
         final state = NotificationBarState(
           latestPillSheetGroup: pillSheetGroup,
-          totalCountOfActionForTakenPill:
-              totalCountOfActionForTakenPillForLongTimeUser,
+          totalCountOfActionForTakenPill: totalCountOfActionForTakenPillForLongTimeUser,
           premiumAndTrial: PremiumAndTrial(
             isPremium: false,
             isTrial: false,
@@ -196,17 +178,15 @@ void main() {
           ),
           isLinkedLoginProvider: false,
           premiumTrialBeginAnouncementIsClosed: true,
+          premiumUserIsClosedAdsMederiPill: false,
           recommendedSignupNotificationIsAlreadyShow: false,
         );
 
         await tester.pumpWidget(
           ProviderScope(
             overrides: [
-              notificationBarStoreProvider.overrideWithProvider(
-                  StateNotifierProvider.autoDispose(
-                      (_) => NotificationBarStateStore(state))),
-              notificationBarStateProvider
-                  .overrideWithProvider(Provider.autoDispose((_) => state)),
+              notificationBarStoreProvider.overrideWithProvider(StateNotifierProvider.autoDispose((_) => NotificationBarStateStore(state))),
+              notificationBarStateProvider.overrideWithProvider(Provider.autoDispose((_) => state)),
             ],
             child: const MaterialApp(
               home: Material(child: NotificationBar()),
@@ -216,14 +196,12 @@ void main() {
         await tester.pump();
 
         expect(
-          find.byWidgetPredicate(
-              (widget) => widget is RestDurationNotificationBar),
+          find.byWidgetPredicate((widget) => widget is RestDurationNotificationBar),
           findsOneWidget,
         );
       });
 
-      testWidgets('#RecommendSignupNotificationBar',
-          (WidgetTester tester) async {
+      testWidgets('#RecommendSignupNotificationBar', (WidgetTester tester) async {
         final mockTodayRepository = MockTodayService();
         final today = DateTime(2021, 04, 29);
 
@@ -239,12 +217,10 @@ void main() {
             const Duration(days: 10),
           ),
         );
-        final pillSheetGroup = PillSheetGroup(
-            pillSheetIDs: ["1"], pillSheets: [pillSheet], createdAt: now());
+        final pillSheetGroup = PillSheetGroup(pillSheetIDs: ["1"], pillSheets: [pillSheet], createdAt: now());
         final state = NotificationBarState(
           latestPillSheetGroup: pillSheetGroup,
-          totalCountOfActionForTakenPill:
-              totalCountOfActionForTakenPillForLongTimeUser,
+          totalCountOfActionForTakenPill: totalCountOfActionForTakenPillForLongTimeUser,
           premiumAndTrial: PremiumAndTrial(
             isPremium: false,
             isTrial: false,
@@ -255,17 +231,15 @@ void main() {
           ),
           isLinkedLoginProvider: false,
           premiumTrialBeginAnouncementIsClosed: true,
+          premiumUserIsClosedAdsMederiPill: false,
           recommendedSignupNotificationIsAlreadyShow: false,
         );
 
         await tester.pumpWidget(
           ProviderScope(
             overrides: [
-              notificationBarStoreProvider.overrideWithProvider(
-                  StateNotifierProvider.autoDispose(
-                      (_) => NotificationBarStateStore(state))),
-              notificationBarStateProvider
-                  .overrideWithProvider(Provider.autoDispose((_) => state)),
+              notificationBarStoreProvider.overrideWithProvider(StateNotifierProvider.autoDispose((_) => NotificationBarStateStore(state))),
+              notificationBarStateProvider.overrideWithProvider(Provider.autoDispose((_) => state)),
             ],
             child: const MaterialApp(
               home: Material(child: NotificationBar()),
@@ -275,13 +249,11 @@ void main() {
         await tester.pumpAndSettle(const Duration(milliseconds: 400));
 
         expect(
-          find.byWidgetPredicate(
-              (widget) => widget is RecommendSignupNotificationBar),
+          find.byWidgetPredicate((widget) => widget is RecommendSignupNotificationBar),
           findsOneWidget,
         );
       });
-      testWidgets('#PremiumTrialLimitNotificationBar',
-          (WidgetTester tester) async {
+      testWidgets('#PremiumTrialLimitNotificationBar', (WidgetTester tester) async {
         final mockTodayRepository = MockTodayService();
         final today = DateTime(2021, 04, 29);
         final n = today;
@@ -298,12 +270,10 @@ void main() {
             const Duration(days: 10),
           ),
         );
-        final pillSheetGroup = PillSheetGroup(
-            pillSheetIDs: ["1"], pillSheets: [pillSheet], createdAt: now());
+        final pillSheetGroup = PillSheetGroup(pillSheetIDs: ["1"], pillSheets: [pillSheet], createdAt: now());
         final state = NotificationBarState(
           latestPillSheetGroup: pillSheetGroup,
-          totalCountOfActionForTakenPill:
-              totalCountOfActionForTakenPillForLongTimeUser,
+          totalCountOfActionForTakenPill: totalCountOfActionForTakenPillForLongTimeUser,
           premiumAndTrial: PremiumAndTrial(
             isPremium: false,
             isTrial: true,
@@ -314,17 +284,15 @@ void main() {
           ),
           isLinkedLoginProvider: true,
           premiumTrialBeginAnouncementIsClosed: true,
+          premiumUserIsClosedAdsMederiPill: false,
           recommendedSignupNotificationIsAlreadyShow: false,
         );
 
         await tester.pumpWidget(
           ProviderScope(
             overrides: [
-              notificationBarStoreProvider.overrideWithProvider(
-                  StateNotifierProvider.autoDispose(
-                      (_) => NotificationBarStateStore(state))),
-              notificationBarStateProvider
-                  .overrideWithProvider(Provider.autoDispose((_) => state)),
+              notificationBarStoreProvider.overrideWithProvider(StateNotifierProvider.autoDispose((_) => NotificationBarStateStore(state))),
+              notificationBarStateProvider.overrideWithProvider(Provider.autoDispose((_) => state)),
             ],
             child: const MaterialApp(
               home: Material(child: NotificationBar()),
@@ -334,8 +302,7 @@ void main() {
         await tester.pump();
 
         expect(
-          find.byWidgetPredicate(
-              (widget) => widget is PremiumTrialLimitNotificationBar),
+          find.byWidgetPredicate((widget) => widget is PremiumTrialLimitNotificationBar),
           findsOneWidget,
         );
       });
@@ -356,12 +323,10 @@ void main() {
             const Duration(days: 30),
           ),
         );
-        final pillSheetGroup = PillSheetGroup(
-            pillSheetIDs: ["1"], pillSheets: [pillSheet], createdAt: now());
+        final pillSheetGroup = PillSheetGroup(pillSheetIDs: ["1"], pillSheets: [pillSheet], createdAt: now());
         final state = NotificationBarState(
           latestPillSheetGroup: pillSheetGroup,
-          totalCountOfActionForTakenPill:
-              totalCountOfActionForTakenPillForLongTimeUser,
+          totalCountOfActionForTakenPill: totalCountOfActionForTakenPillForLongTimeUser,
           premiumAndTrial: PremiumAndTrial(
             isPremium: false,
             isTrial: true,
@@ -372,17 +337,15 @@ void main() {
           ),
           isLinkedLoginProvider: true,
           premiumTrialBeginAnouncementIsClosed: true,
+          premiumUserIsClosedAdsMederiPill: false,
           recommendedSignupNotificationIsAlreadyShow: false,
         );
 
         await tester.pumpWidget(
           ProviderScope(
             overrides: [
-              notificationBarStoreProvider.overrideWithProvider(
-                  StateNotifierProvider.autoDispose(
-                      (_) => NotificationBarStateStore(state))),
-              notificationBarStateProvider
-                  .overrideWithProvider(Provider.autoDispose((_) => state)),
+              notificationBarStoreProvider.overrideWithProvider(StateNotifierProvider.autoDispose((_) => NotificationBarStateStore(state))),
+              notificationBarStateProvider.overrideWithProvider(Provider.autoDispose((_) => state)),
             ],
             child: const MaterialApp(
               home: Material(child: NotificationBar()),
@@ -399,8 +362,7 @@ void main() {
     });
 
     group('for it is premium user', () {
-      testWidgets('#RecommendSignupForPremiumNotificationBar',
-          (WidgetTester tester) async {
+      testWidgets('#RecommendSignupForPremiumNotificationBar', (WidgetTester tester) async {
         final mockTodayRepository = MockTodayService();
         final today = DateTime(2021, 04, 29);
 
@@ -416,12 +378,10 @@ void main() {
             const Duration(days: 10),
           ),
         );
-        final pillSheetGroup = PillSheetGroup(
-            pillSheetIDs: ["1"], pillSheets: [pillSheet], createdAt: now());
+        final pillSheetGroup = PillSheetGroup(pillSheetIDs: ["1"], pillSheets: [pillSheet], createdAt: now());
         final state = NotificationBarState(
           latestPillSheetGroup: pillSheetGroup,
-          totalCountOfActionForTakenPill:
-              totalCountOfActionForTakenPillForLongTimeUser,
+          totalCountOfActionForTakenPill: totalCountOfActionForTakenPillForLongTimeUser,
           premiumAndTrial: PremiumAndTrial(
             isPremium: true,
             isTrial: true,
@@ -432,17 +392,15 @@ void main() {
           ),
           isLinkedLoginProvider: false,
           premiumTrialBeginAnouncementIsClosed: true,
+          premiumUserIsClosedAdsMederiPill: false,
           recommendedSignupNotificationIsAlreadyShow: false,
         );
 
         await tester.pumpWidget(
           ProviderScope(
             overrides: [
-              notificationBarStoreProvider.overrideWithProvider(
-                  StateNotifierProvider.autoDispose(
-                      (_) => NotificationBarStateStore(state))),
-              notificationBarStateProvider
-                  .overrideWithProvider(Provider.autoDispose((_) => state)),
+              notificationBarStoreProvider.overrideWithProvider(StateNotifierProvider.autoDispose((_) => NotificationBarStateStore(state))),
+              notificationBarStateProvider.overrideWithProvider(Provider.autoDispose((_) => state)),
             ],
             child: const MaterialApp(
               home: Material(child: NotificationBar()),
@@ -452,8 +410,7 @@ void main() {
         await tester.pump();
 
         expect(
-          find.byWidgetPredicate(
-              (widget) => widget is RecommendSignupForPremiumNotificationBar),
+          find.byWidgetPredicate((widget) => widget is RecommendSignupForPremiumNotificationBar),
           findsOneWidget,
         );
       });
@@ -474,12 +431,10 @@ void main() {
             const Duration(days: 25),
           ),
         );
-        final pillSheetGroup = PillSheetGroup(
-            pillSheetIDs: ["1"], pillSheets: [pillSheet], createdAt: now());
+        final pillSheetGroup = PillSheetGroup(pillSheetIDs: ["1"], pillSheets: [pillSheet], createdAt: now());
         final state = NotificationBarState(
           latestPillSheetGroup: pillSheetGroup,
-          totalCountOfActionForTakenPill:
-              totalCountOfActionForTakenPillForLongTimeUser,
+          totalCountOfActionForTakenPill: totalCountOfActionForTakenPillForLongTimeUser,
           premiumAndTrial: PremiumAndTrial(
             isPremium: true,
             isTrial: false,
@@ -490,17 +445,15 @@ void main() {
           ),
           isLinkedLoginProvider: true,
           premiumTrialBeginAnouncementIsClosed: true,
+          premiumUserIsClosedAdsMederiPill: false,
           recommendedSignupNotificationIsAlreadyShow: false,
         );
 
         await tester.pumpWidget(
           ProviderScope(
             overrides: [
-              notificationBarStoreProvider.overrideWithProvider(
-                  StateNotifierProvider.autoDispose(
-                      (_) => NotificationBarStateStore(state))),
-              notificationBarStateProvider
-                  .overrideWithProvider(Provider.autoDispose((_) => state)),
+              notificationBarStoreProvider.overrideWithProvider(StateNotifierProvider.autoDispose((_) => NotificationBarStateStore(state))),
+              notificationBarStateProvider.overrideWithProvider(Provider.autoDispose((_) => state)),
             ],
             child: const MaterialApp(
               home: Material(child: NotificationBar()),
@@ -510,8 +463,7 @@ void main() {
         await tester.pump();
 
         expect(
-          find.byWidgetPredicate(
-              (widget) => widget is RestDurationNotificationBar),
+          find.byWidgetPredicate((widget) => widget is RestDurationNotificationBar),
           findsOneWidget,
         );
       });
@@ -532,12 +484,10 @@ void main() {
             const Duration(days: 30),
           ),
         );
-        final pillSheetGroup = PillSheetGroup(
-            pillSheetIDs: ["1"], pillSheets: [pillSheet], createdAt: now());
+        final pillSheetGroup = PillSheetGroup(pillSheetIDs: ["1"], pillSheets: [pillSheet], createdAt: now());
         final state = NotificationBarState(
           latestPillSheetGroup: pillSheetGroup,
-          totalCountOfActionForTakenPill:
-              totalCountOfActionForTakenPillForLongTimeUser,
+          totalCountOfActionForTakenPill: totalCountOfActionForTakenPillForLongTimeUser,
           premiumAndTrial: PremiumAndTrial(
             isPremium: true,
             isTrial: true,
@@ -548,17 +498,15 @@ void main() {
           ),
           isLinkedLoginProvider: true,
           premiumTrialBeginAnouncementIsClosed: true,
+          premiumUserIsClosedAdsMederiPill: false,
           recommendedSignupNotificationIsAlreadyShow: false,
         );
 
         await tester.pumpWidget(
           ProviderScope(
             overrides: [
-              notificationBarStoreProvider.overrideWithProvider(
-                  StateNotifierProvider.autoDispose(
-                      (_) => NotificationBarStateStore(state))),
-              notificationBarStateProvider
-                  .overrideWithProvider(Provider.autoDispose((_) => state)),
+              notificationBarStoreProvider.overrideWithProvider(StateNotifierProvider.autoDispose((_) => NotificationBarStateStore(state))),
+              notificationBarStateProvider.overrideWithProvider(Provider.autoDispose((_) => state)),
             ],
             child: const MaterialApp(
               home: Material(child: NotificationBar()),

@@ -56,26 +56,19 @@ void main() {
         createdAt: now(),
       );
       final pillSheetGroupDatastore = MockPillSheetGroupDatastore();
-      when(pillSheetGroupDatastore.register(batch, pillSheetGroup))
-          .thenReturn(pillSheetGroup.copyWith(id: "group_id"));
+      when(pillSheetGroupDatastore.register(batch, pillSheetGroup)).thenReturn(pillSheetGroup.copyWith(id: "group_id"));
 
-      final history = PillSheetModifiedHistoryServiceActionFactory
-          .createCreatedPillSheetAction(
-              pillSheetGroupID: "group_id", pillSheetIDs: ["sheet_id"]);
-      final pillSheetModifiedHistoryDatastore =
-          MockPillSheetModifiedHistoryDatastore();
-      when(pillSheetModifiedHistoryDatastore.add(batch, history))
-          .thenReturn(null);
+      final history =
+          PillSheetModifiedHistoryServiceActionFactory.createCreatedPillSheetAction(pillSheetGroupID: "group_id", pillSheetIDs: ["sheet_id"]);
+      final pillSheetModifiedHistoryDatastore = MockPillSheetModifiedHistoryDatastore();
+      when(pillSheetModifiedHistoryDatastore.add(batch, history)).thenReturn(null);
 
       const setting = Setting(
         pillNumberForFromMenstruation: 22,
         durationMenstruation: 3,
         isOnReminder: true,
         timezoneDatabaseName: null,
-        reminderTimes: [
-          ReminderTime(hour: 21, minute: 20),
-          ReminderTime(hour: 22, minute: 0)
-        ],
+        reminderTimes: [ReminderTime(hour: 21, minute: 20), ReminderTime(hour: 22, minute: 0)],
         pillSheetTypes: [
           PillSheetType.pillsheet_28_0,
         ],
@@ -93,24 +86,21 @@ void main() {
         recommendedSignupNotificationIsAlreadyShow: false,
         premiumTrialBeginAnouncementIsClosed: false,
         isLinkedLoginProvider: false,
+        premiumUserIsClosedAdsMederiPill: false,
         timestamp: now(),
       );
 
       final container = ProviderContainer(
         overrides: [
-          recordPageAsyncStateProvider
-              .overrideWithValue(AsyncValue.data(recordPageState)),
+          recordPageAsyncStateProvider.overrideWithValue(AsyncValue.data(recordPageState)),
           batchFactoryProvider.overrideWithValue(batchFactory),
           settingDatastoreProvider.overrideWithValue(settingDatastore),
           pillSheetDatastoreProvider.overrideWithValue(pillSheetDatastore),
-          pillSheetModifiedHistoryDatastoreProvider
-              .overrideWithValue(pillSheetModifiedHistoryDatastore),
-          pillSheetGroupDatastoreProvider
-              .overrideWithValue(pillSheetGroupDatastore),
+          pillSheetModifiedHistoryDatastoreProvider.overrideWithValue(pillSheetModifiedHistoryDatastore),
+          pillSheetGroupDatastoreProvider.overrideWithValue(pillSheetGroupDatastore),
         ],
       );
-      final store =
-          container.read(addPillSheetGroupStateStoreProvider.notifier);
+      final store = container.read(addPillSheetGroupStateStoreProvider.notifier);
 
       await store.register(setting);
     });
@@ -139,10 +129,7 @@ void main() {
       );
       final pillSheetDatastore = MockPillSheetDatastore();
       when(pillSheetDatastore.register(batch, [pillSheet, pillSheet2]))
-          .thenReturn([
-        pillSheet.copyWith(id: "sheet_id"),
-        pillSheet2.copyWith(id: "sheet_id2")
-      ]);
+          .thenReturn([pillSheet.copyWith(id: "sheet_id"), pillSheet2.copyWith(id: "sheet_id2")]);
 
       final pillSheetGroup = PillSheetGroup(
         pillSheetIDs: ["sheet_id", "sheet_id2"],
@@ -153,31 +140,20 @@ void main() {
         createdAt: now(),
       );
       final pillSheetGroupDatastore = MockPillSheetGroupDatastore();
-      when(pillSheetGroupDatastore.register(batch, pillSheetGroup))
-          .thenReturn(pillSheetGroup.copyWith(id: "group_id"));
+      when(pillSheetGroupDatastore.register(batch, pillSheetGroup)).thenReturn(pillSheetGroup.copyWith(id: "group_id"));
 
-      final history = PillSheetModifiedHistoryServiceActionFactory
-          .createCreatedPillSheetAction(
-              pillSheetGroupID: "group_id",
-              pillSheetIDs: ["sheet_id", "sheet_id2"]);
-      final pillSheetModifiedHistoryDatastore =
-          MockPillSheetModifiedHistoryDatastore();
-      when(pillSheetModifiedHistoryDatastore.add(batch, history))
-          .thenReturn(null);
+      final history = PillSheetModifiedHistoryServiceActionFactory.createCreatedPillSheetAction(
+          pillSheetGroupID: "group_id", pillSheetIDs: ["sheet_id", "sheet_id2"]);
+      final pillSheetModifiedHistoryDatastore = MockPillSheetModifiedHistoryDatastore();
+      when(pillSheetModifiedHistoryDatastore.add(batch, history)).thenReturn(null);
 
       const setting = Setting(
         pillNumberForFromMenstruation: 22,
         durationMenstruation: 3,
         isOnReminder: true,
         timezoneDatabaseName: null,
-        reminderTimes: [
-          ReminderTime(hour: 21, minute: 20),
-          ReminderTime(hour: 22, minute: 0)
-        ],
-        pillSheetTypes: [
-          PillSheetType.pillsheet_28_0,
-          PillSheetType.pillsheet_21
-        ],
+        reminderTimes: [ReminderTime(hour: 21, minute: 20), ReminderTime(hour: 22, minute: 0)],
+        pillSheetTypes: [PillSheetType.pillsheet_28_0, PillSheetType.pillsheet_21],
       );
       final settingDatastore = MockSettingDatastore();
       when(settingDatastore.updateWithBatch(batch, setting)).thenReturn(null);
@@ -192,24 +168,21 @@ void main() {
         recommendedSignupNotificationIsAlreadyShow: false,
         premiumTrialBeginAnouncementIsClosed: false,
         isLinkedLoginProvider: false,
+        premiumUserIsClosedAdsMederiPill: false,
         timestamp: now(),
       );
 
       final container = ProviderContainer(
         overrides: [
-          recordPageAsyncStateProvider
-              .overrideWithValue(AsyncValue.data(recordPageState)),
+          recordPageAsyncStateProvider.overrideWithValue(AsyncValue.data(recordPageState)),
           batchFactoryProvider.overrideWithValue(batchFactory),
           settingDatastoreProvider.overrideWithValue(settingDatastore),
           pillSheetDatastoreProvider.overrideWithValue(pillSheetDatastore),
-          pillSheetModifiedHistoryDatastoreProvider
-              .overrideWithValue(pillSheetModifiedHistoryDatastore),
-          pillSheetGroupDatastoreProvider
-              .overrideWithValue(pillSheetGroupDatastore),
+          pillSheetModifiedHistoryDatastoreProvider.overrideWithValue(pillSheetModifiedHistoryDatastore),
+          pillSheetGroupDatastoreProvider.overrideWithValue(pillSheetGroupDatastore),
         ],
       );
-      final store =
-          container.read(addPillSheetGroupStateStoreProvider.notifier);
+      final store = container.read(addPillSheetGroupStateStoreProvider.notifier);
 
       await store.register(setting);
     });
@@ -234,8 +207,7 @@ void main() {
         lastTakenDate: null,
       );
       final pillSheetDatastore = MockPillSheetDatastore();
-      when(pillSheetDatastore.update(
-          batch, [pillSheet.copyWith(lastTakenDate: _today)])).thenReturn(null);
+      when(pillSheetDatastore.update(batch, [pillSheet.copyWith(lastTakenDate: _today)])).thenReturn(null);
 
       final pillSheetGroup = PillSheetGroup(
         id: "group_id",
@@ -254,12 +226,9 @@ void main() {
         createdAt: now(),
       );
       final pillSheetGroupDatastore = MockPillSheetGroupDatastore();
-      when(pillSheetGroupDatastore.updateWithBatch(
-              batch, updatedPillSheetGroup))
-          .thenReturn(null);
+      when(pillSheetGroupDatastore.updateWithBatch(batch, updatedPillSheetGroup)).thenReturn(null);
 
-      final history =
-          PillSheetModifiedHistoryServiceActionFactory.createTakenPillAction(
+      final history = PillSheetModifiedHistoryServiceActionFactory.createTakenPillAction(
         pillSheetGroupID: "group_id",
         before: pillSheet,
         after: pillSheet.copyWith(
@@ -267,20 +236,15 @@ void main() {
         ),
         isQuickRecord: false,
       );
-      final pillSheetModifiedHistoryDatastore =
-          MockPillSheetModifiedHistoryDatastore();
-      when(pillSheetModifiedHistoryDatastore.add(batch, history))
-          .thenReturn(null);
+      final pillSheetModifiedHistoryDatastore = MockPillSheetModifiedHistoryDatastore();
+      when(pillSheetModifiedHistoryDatastore.add(batch, history)).thenReturn(null);
 
       const setting = Setting(
         pillNumberForFromMenstruation: 22,
         durationMenstruation: 3,
         isOnReminder: true,
         timezoneDatabaseName: null,
-        reminderTimes: [
-          ReminderTime(hour: 21, minute: 20),
-          ReminderTime(hour: 22, minute: 0)
-        ],
+        reminderTimes: [ReminderTime(hour: 21, minute: 20), ReminderTime(hour: 22, minute: 0)],
         pillSheetTypes: [
           PillSheetType.pillsheet_28_0,
         ],
@@ -293,10 +257,8 @@ void main() {
           batchFactoryProvider.overrideWithValue(batchFactory),
           settingDatastoreProvider.overrideWithValue(settingDatastore),
           pillSheetDatastoreProvider.overrideWithValue(pillSheetDatastore),
-          pillSheetModifiedHistoryDatastoreProvider
-              .overrideWithValue(pillSheetModifiedHistoryDatastore),
-          pillSheetGroupDatastoreProvider
-              .overrideWithValue(pillSheetGroupDatastore),
+          pillSheetModifiedHistoryDatastoreProvider.overrideWithValue(pillSheetModifiedHistoryDatastore),
+          pillSheetGroupDatastoreProvider.overrideWithValue(pillSheetGroupDatastore),
         ],
       );
       final asyncAction = container.read(recordPageAsyncActionProvider);
@@ -355,12 +317,9 @@ void main() {
         createdAt: now(),
       );
       final pillSheetGroupDatastore = MockPillSheetGroupDatastore();
-      when(pillSheetGroupDatastore.updateWithBatch(
-              batch, updatedPillSheetGroup))
-          .thenReturn(null);
+      when(pillSheetGroupDatastore.updateWithBatch(batch, updatedPillSheetGroup)).thenReturn(null);
 
-      final history =
-          PillSheetModifiedHistoryServiceActionFactory.createTakenPillAction(
+      final history = PillSheetModifiedHistoryServiceActionFactory.createTakenPillAction(
         pillSheetGroupID: "group_id",
         before: pillSheet,
         after: pillSheet.copyWith(
@@ -368,20 +327,15 @@ void main() {
         ),
         isQuickRecord: false,
       );
-      final pillSheetModifiedHistoryDatastore =
-          MockPillSheetModifiedHistoryDatastore();
-      when(pillSheetModifiedHistoryDatastore.add(batch, history))
-          .thenReturn(null);
+      final pillSheetModifiedHistoryDatastore = MockPillSheetModifiedHistoryDatastore();
+      when(pillSheetModifiedHistoryDatastore.add(batch, history)).thenReturn(null);
 
       const setting = Setting(
         pillNumberForFromMenstruation: 22,
         durationMenstruation: 3,
         isOnReminder: true,
         timezoneDatabaseName: null,
-        reminderTimes: [
-          ReminderTime(hour: 21, minute: 20),
-          ReminderTime(hour: 22, minute: 0)
-        ],
+        reminderTimes: [ReminderTime(hour: 21, minute: 20), ReminderTime(hour: 22, minute: 0)],
         pillSheetTypes: [
           PillSheetType.pillsheet_28_0,
           PillSheetType.pillsheet_21,
@@ -395,10 +349,8 @@ void main() {
           batchFactoryProvider.overrideWithValue(batchFactory),
           settingDatastoreProvider.overrideWithValue(settingDatastore),
           pillSheetDatastoreProvider.overrideWithValue(pillSheetDatastore),
-          pillSheetModifiedHistoryDatastoreProvider
-              .overrideWithValue(pillSheetModifiedHistoryDatastore),
-          pillSheetGroupDatastoreProvider
-              .overrideWithValue(pillSheetGroupDatastore),
+          pillSheetModifiedHistoryDatastoreProvider.overrideWithValue(pillSheetModifiedHistoryDatastore),
+          pillSheetGroupDatastoreProvider.overrideWithValue(pillSheetGroupDatastore),
         ],
       );
       final asyncAction = container.read(recordPageAsyncActionProvider);
@@ -407,8 +359,7 @@ void main() {
       final result = await asyncAction.taken(pillSheetGroup: pillSheetGroup);
       expect(result, isTrue);
     });
-    test("group has two pill sheet for first pillSheet.isFill pattern",
-        () async {
+    test("group has two pill sheet for first pillSheet.isFill pattern", () async {
       var mockTodayRepository = MockTodayService();
       final _today = DateTime.parse("2022-05-29");
       todayRepository = mockTodayRepository;
@@ -458,12 +409,9 @@ void main() {
         createdAt: now(),
       );
       final pillSheetGroupDatastore = MockPillSheetGroupDatastore();
-      when(pillSheetGroupDatastore.updateWithBatch(
-              batch, updatedPillSheetGroup))
-          .thenReturn(null);
+      when(pillSheetGroupDatastore.updateWithBatch(batch, updatedPillSheetGroup)).thenReturn(null);
 
-      final history =
-          PillSheetModifiedHistoryServiceActionFactory.createTakenPillAction(
+      final history = PillSheetModifiedHistoryServiceActionFactory.createTakenPillAction(
         pillSheetGroupID: "group_id",
         before: pillSheet2,
         after: pillSheet2.copyWith(
@@ -471,20 +419,15 @@ void main() {
         ),
         isQuickRecord: false,
       );
-      final pillSheetModifiedHistoryDatastore =
-          MockPillSheetModifiedHistoryDatastore();
-      when(pillSheetModifiedHistoryDatastore.add(batch, history))
-          .thenReturn(null);
+      final pillSheetModifiedHistoryDatastore = MockPillSheetModifiedHistoryDatastore();
+      when(pillSheetModifiedHistoryDatastore.add(batch, history)).thenReturn(null);
 
       const setting = Setting(
         pillNumberForFromMenstruation: 22,
         durationMenstruation: 3,
         isOnReminder: true,
         timezoneDatabaseName: null,
-        reminderTimes: [
-          ReminderTime(hour: 21, minute: 20),
-          ReminderTime(hour: 22, minute: 0)
-        ],
+        reminderTimes: [ReminderTime(hour: 21, minute: 20), ReminderTime(hour: 22, minute: 0)],
         pillSheetTypes: [
           PillSheetType.pillsheet_28_0,
           PillSheetType.pillsheet_21,
@@ -498,10 +441,8 @@ void main() {
           batchFactoryProvider.overrideWithValue(batchFactory),
           settingDatastoreProvider.overrideWithValue(settingDatastore),
           pillSheetDatastoreProvider.overrideWithValue(pillSheetDatastore),
-          pillSheetModifiedHistoryDatastoreProvider
-              .overrideWithValue(pillSheetModifiedHistoryDatastore),
-          pillSheetGroupDatastoreProvider
-              .overrideWithValue(pillSheetGroupDatastore),
+          pillSheetModifiedHistoryDatastoreProvider.overrideWithValue(pillSheetModifiedHistoryDatastore),
+          pillSheetGroupDatastoreProvider.overrideWithValue(pillSheetGroupDatastore),
         ],
       );
       final asyncAction = container.read(recordPageAsyncActionProvider);
@@ -510,8 +451,7 @@ void main() {
       final result = await asyncAction.taken(pillSheetGroup: pillSheetGroup);
       expect(result, isTrue);
     });
-    test("group has two pill sheet contains past pill sheet but not yet filled",
-        () async {
+    test("group has two pill sheet contains past pill sheet but not yet filled", () async {
       var mockTodayRepository = MockTodayService();
       final _today = DateTime.parse("2020-09-19");
       todayRepository = mockTodayRepository;
@@ -537,11 +477,9 @@ void main() {
         lastTakenDate: null,
       );
       final pillSheetDatastore = MockPillSheetDatastore();
-      when(pillSheetDatastore.update(batch, [
-        pillSheet.copyWith(
-            lastTakenDate: DateTime.parse("2020-09-18 23:59:59")),
-        pillSheet2.copyWith(lastTakenDate: _today)
-      ])).thenReturn(null);
+      when(pillSheetDatastore
+              .update(batch, [pillSheet.copyWith(lastTakenDate: DateTime.parse("2020-09-18 23:59:59")), pillSheet2.copyWith(lastTakenDate: _today)]))
+          .thenReturn(null);
 
       final pillSheetGroup = PillSheetGroup(
         id: "group_id",
@@ -556,20 +494,16 @@ void main() {
         id: "group_id",
         pillSheetIDs: ["sheet_id", "sheet_id_2"],
         pillSheets: [
-          pillSheet.copyWith(
-              lastTakenDate: DateTime.parse("2020-09-18 23:59:59")),
+          pillSheet.copyWith(lastTakenDate: DateTime.parse("2020-09-18 23:59:59")),
           pillSheet2.copyWith(lastTakenDate: _today),
         ],
         createdAt: _today,
       );
 
       final pillSheetGroupDatastore = MockPillSheetGroupDatastore();
-      when(pillSheetGroupDatastore.updateWithBatch(
-              batch, updatedPillSheetGroup))
-          .thenReturn(null);
+      when(pillSheetGroupDatastore.updateWithBatch(batch, updatedPillSheetGroup)).thenReturn(null);
 
-      final history =
-          PillSheetModifiedHistoryServiceActionFactory.createTakenPillAction(
+      final history = PillSheetModifiedHistoryServiceActionFactory.createTakenPillAction(
         pillSheetGroupID: "group_id",
         before: pillSheet,
         after: pillSheet2.copyWith(
@@ -577,20 +511,15 @@ void main() {
         ),
         isQuickRecord: false,
       );
-      final pillSheetModifiedHistoryDatastore =
-          MockPillSheetModifiedHistoryDatastore();
-      when(pillSheetModifiedHistoryDatastore.add(batch, history))
-          .thenReturn(null);
+      final pillSheetModifiedHistoryDatastore = MockPillSheetModifiedHistoryDatastore();
+      when(pillSheetModifiedHistoryDatastore.add(batch, history)).thenReturn(null);
 
       const setting = Setting(
         pillNumberForFromMenstruation: 22,
         durationMenstruation: 3,
         isOnReminder: true,
         timezoneDatabaseName: null,
-        reminderTimes: [
-          ReminderTime(hour: 21, minute: 20),
-          ReminderTime(hour: 22, minute: 0)
-        ],
+        reminderTimes: [ReminderTime(hour: 21, minute: 20), ReminderTime(hour: 22, minute: 0)],
         pillSheetTypes: [
           PillSheetType.pillsheet_28_0,
           PillSheetType.pillsheet_21,
@@ -604,10 +533,8 @@ void main() {
           batchFactoryProvider.overrideWithValue(batchFactory),
           settingDatastoreProvider.overrideWithValue(settingDatastore),
           pillSheetDatastoreProvider.overrideWithValue(pillSheetDatastore),
-          pillSheetModifiedHistoryDatastoreProvider
-              .overrideWithValue(pillSheetModifiedHistoryDatastore),
-          pillSheetGroupDatastoreProvider
-              .overrideWithValue(pillSheetGroupDatastore),
+          pillSheetModifiedHistoryDatastoreProvider.overrideWithValue(pillSheetModifiedHistoryDatastore),
+          pillSheetGroupDatastoreProvider.overrideWithValue(pillSheetGroupDatastore),
         ],
       );
       final asyncAction = container.read(recordPageAsyncActionProvider);
@@ -640,10 +567,7 @@ void main() {
           lastTakenDate: today(),
         );
         final pillSheetDatastore = MockPillSheetDatastore();
-        when(pillSheetDatastore.update(batch, [
-          pillSheet.copyWith(
-              lastTakenDate: yesterday.subtract(const Duration(days: 1)))
-        ])).thenReturn(null);
+        when(pillSheetDatastore.update(batch, [pillSheet.copyWith(lastTakenDate: yesterday.subtract(const Duration(days: 1)))])).thenReturn(null);
 
         final pillSheetGroup = PillSheetGroup(
           id: "group_id",
@@ -657,38 +581,29 @@ void main() {
           id: "group_id",
           pillSheetIDs: ["sheet_id"],
           pillSheets: [
-            pillSheet.copyWith(
-                lastTakenDate: yesterday.subtract(const Duration(days: 1))),
+            pillSheet.copyWith(lastTakenDate: yesterday.subtract(const Duration(days: 1))),
           ],
           createdAt: now(),
         );
         final pillSheetGroupDatastore = MockPillSheetGroupDatastore();
-        when(pillSheetGroupDatastore.updateWithBatch(
-                batch, updatedPillSheetGroup))
-            .thenReturn(null);
+        when(pillSheetGroupDatastore.updateWithBatch(batch, updatedPillSheetGroup)).thenReturn(null);
 
-        final history = PillSheetModifiedHistoryServiceActionFactory
-            .createRevertTakenPillAction(
+        final history = PillSheetModifiedHistoryServiceActionFactory.createRevertTakenPillAction(
           pillSheetGroupID: "group_id",
           before: pillSheet,
           after: pillSheet.copyWith(
             lastTakenDate: yesterday.subtract(const Duration(days: 1)),
           ),
         );
-        final pillSheetModifiedHistoryDatastore =
-            MockPillSheetModifiedHistoryDatastore();
-        when(pillSheetModifiedHistoryDatastore.add(batch, history))
-            .thenReturn(null);
+        final pillSheetModifiedHistoryDatastore = MockPillSheetModifiedHistoryDatastore();
+        when(pillSheetModifiedHistoryDatastore.add(batch, history)).thenReturn(null);
 
         const setting = Setting(
           pillNumberForFromMenstruation: 22,
           durationMenstruation: 3,
           isOnReminder: true,
           timezoneDatabaseName: null,
-          reminderTimes: [
-            ReminderTime(hour: 21, minute: 20),
-            ReminderTime(hour: 22, minute: 0)
-          ],
+          reminderTimes: [ReminderTime(hour: 21, minute: 20), ReminderTime(hour: 22, minute: 0)],
           pillSheetTypes: [
             PillSheetType.pillsheet_28_0,
           ],
@@ -701,19 +616,14 @@ void main() {
             batchFactoryProvider.overrideWithValue(batchFactory),
             settingDatastoreProvider.overrideWithValue(settingDatastore),
             pillSheetDatastoreProvider.overrideWithValue(pillSheetDatastore),
-            pillSheetModifiedHistoryDatastoreProvider
-                .overrideWithValue(pillSheetModifiedHistoryDatastore),
-            pillSheetGroupDatastoreProvider
-                .overrideWithValue(pillSheetGroupDatastore),
+            pillSheetModifiedHistoryDatastoreProvider.overrideWithValue(pillSheetModifiedHistoryDatastore),
+            pillSheetGroupDatastoreProvider.overrideWithValue(pillSheetGroupDatastore),
           ],
         );
         final asyncAction = container.read(recordPageAsyncActionProvider);
 
         await Future.delayed(const Duration(seconds: 1));
-        await asyncAction.revertTaken(
-            pillSheetGroup: pillSheetGroup,
-            pageIndex: 0,
-            pillNumberIntoPillSheet: 1);
+        await asyncAction.revertTaken(pillSheetGroup: pillSheetGroup, pageIndex: 0, pillNumberIntoPillSheet: 1);
       });
 
       test("Revert today pill", () async {
@@ -736,9 +646,7 @@ void main() {
           lastTakenDate: today(),
         );
         final pillSheetDatastore = MockPillSheetDatastore();
-        when(pillSheetDatastore
-                .update(batch, [pillSheet.copyWith(lastTakenDate: yesterday)]))
-            .thenReturn(null);
+        when(pillSheetDatastore.update(batch, [pillSheet.copyWith(lastTakenDate: yesterday)])).thenReturn(null);
 
         final pillSheetGroup = PillSheetGroup(
           id: "group_id",
@@ -757,32 +665,24 @@ void main() {
           createdAt: now(),
         );
         final pillSheetGroupDatastore = MockPillSheetGroupDatastore();
-        when(pillSheetGroupDatastore.updateWithBatch(
-                batch, updatedPillSheetGroup))
-            .thenReturn(null);
+        when(pillSheetGroupDatastore.updateWithBatch(batch, updatedPillSheetGroup)).thenReturn(null);
 
-        final history = PillSheetModifiedHistoryServiceActionFactory
-            .createRevertTakenPillAction(
+        final history = PillSheetModifiedHistoryServiceActionFactory.createRevertTakenPillAction(
           pillSheetGroupID: "group_id",
           before: pillSheet,
           after: pillSheet.copyWith(
             lastTakenDate: yesterday,
           ),
         );
-        final pillSheetModifiedHistoryDatastore =
-            MockPillSheetModifiedHistoryDatastore();
-        when(pillSheetModifiedHistoryDatastore.add(batch, history))
-            .thenReturn(null);
+        final pillSheetModifiedHistoryDatastore = MockPillSheetModifiedHistoryDatastore();
+        when(pillSheetModifiedHistoryDatastore.add(batch, history)).thenReturn(null);
 
         const setting = Setting(
           pillNumberForFromMenstruation: 22,
           durationMenstruation: 3,
           isOnReminder: true,
           timezoneDatabaseName: null,
-          reminderTimes: [
-            ReminderTime(hour: 21, minute: 20),
-            ReminderTime(hour: 22, minute: 0)
-          ],
+          reminderTimes: [ReminderTime(hour: 21, minute: 20), ReminderTime(hour: 22, minute: 0)],
           pillSheetTypes: [
             PillSheetType.pillsheet_28_0,
           ],
@@ -795,19 +695,14 @@ void main() {
             batchFactoryProvider.overrideWithValue(batchFactory),
             settingDatastoreProvider.overrideWithValue(settingDatastore),
             pillSheetDatastoreProvider.overrideWithValue(pillSheetDatastore),
-            pillSheetModifiedHistoryDatastoreProvider
-                .overrideWithValue(pillSheetModifiedHistoryDatastore),
-            pillSheetGroupDatastoreProvider
-                .overrideWithValue(pillSheetGroupDatastore),
+            pillSheetModifiedHistoryDatastoreProvider.overrideWithValue(pillSheetModifiedHistoryDatastore),
+            pillSheetGroupDatastoreProvider.overrideWithValue(pillSheetGroupDatastore),
           ],
         );
         final asyncAction = container.read(recordPageAsyncActionProvider);
 
         await Future.delayed(const Duration(seconds: 1));
-        await asyncAction.revertTaken(
-            pillSheetGroup: pillSheetGroup,
-            pageIndex: 0,
-            pillNumberIntoPillSheet: 2);
+        await asyncAction.revertTaken(pillSheetGroup: pillSheetGroup, pageIndex: 0, pillNumberIntoPillSheet: 2);
       });
 
       test("revert with rest durations and removed rest duration", () async {
@@ -839,11 +734,7 @@ void main() {
         final pillSheetDatastore = MockPillSheetDatastore();
         when(pillSheetDatastore.update(
           batch,
-          [
-            pillSheet.copyWith(
-                lastTakenDate: beginDate.subtract(const Duration(days: 1)),
-                restDurations: [])
-          ],
+          [pillSheet.copyWith(lastTakenDate: beginDate.subtract(const Duration(days: 1)), restDurations: [])],
         )).thenReturn(null);
 
         final pillSheetGroup = PillSheetGroup(
@@ -858,19 +749,14 @@ void main() {
           id: "group_id",
           pillSheetIDs: ["sheet_id"],
           pillSheets: [
-            pillSheet.copyWith(
-                lastTakenDate: beginDate.subtract(const Duration(days: 1)),
-                restDurations: []),
+            pillSheet.copyWith(lastTakenDate: beginDate.subtract(const Duration(days: 1)), restDurations: []),
           ],
           createdAt: now(),
         );
         final pillSheetGroupDatastore = MockPillSheetGroupDatastore();
-        when(pillSheetGroupDatastore.updateWithBatch(
-                batch, updatedPillSheetGroup))
-            .thenReturn(null);
+        when(pillSheetGroupDatastore.updateWithBatch(batch, updatedPillSheetGroup)).thenReturn(null);
 
-        final history = PillSheetModifiedHistoryServiceActionFactory
-            .createRevertTakenPillAction(
+        final history = PillSheetModifiedHistoryServiceActionFactory.createRevertTakenPillAction(
           pillSheetGroupID: "group_id",
           before: pillSheet,
           after: pillSheet.copyWith(
@@ -878,20 +764,15 @@ void main() {
             restDurations: [],
           ),
         );
-        final pillSheetModifiedHistoryDatastore =
-            MockPillSheetModifiedHistoryDatastore();
-        when(pillSheetModifiedHistoryDatastore.add(batch, history))
-            .thenReturn(null);
+        final pillSheetModifiedHistoryDatastore = MockPillSheetModifiedHistoryDatastore();
+        when(pillSheetModifiedHistoryDatastore.add(batch, history)).thenReturn(null);
 
         const setting = Setting(
           pillNumberForFromMenstruation: 22,
           durationMenstruation: 3,
           isOnReminder: true,
           timezoneDatabaseName: null,
-          reminderTimes: [
-            ReminderTime(hour: 21, minute: 20),
-            ReminderTime(hour: 22, minute: 0)
-          ],
+          reminderTimes: [ReminderTime(hour: 21, minute: 20), ReminderTime(hour: 22, minute: 0)],
           pillSheetTypes: [
             PillSheetType.pillsheet_28_0,
           ],
@@ -904,19 +785,14 @@ void main() {
             batchFactoryProvider.overrideWithValue(batchFactory),
             settingDatastoreProvider.overrideWithValue(settingDatastore),
             pillSheetDatastoreProvider.overrideWithValue(pillSheetDatastore),
-            pillSheetModifiedHistoryDatastoreProvider
-                .overrideWithValue(pillSheetModifiedHistoryDatastore),
-            pillSheetGroupDatastoreProvider
-                .overrideWithValue(pillSheetGroupDatastore),
+            pillSheetModifiedHistoryDatastoreProvider.overrideWithValue(pillSheetModifiedHistoryDatastore),
+            pillSheetGroupDatastoreProvider.overrideWithValue(pillSheetGroupDatastore),
           ],
         );
         final asyncAction = container.read(recordPageAsyncActionProvider);
 
         await Future.delayed(const Duration(seconds: 1));
-        await asyncAction.revertTaken(
-            pillSheetGroup: pillSheetGroup,
-            pageIndex: 0,
-            pillNumberIntoPillSheet: 1);
+        await asyncAction.revertTaken(pillSheetGroup: pillSheetGroup, pageIndex: 0, pillNumberIntoPillSheet: 1);
       });
 
       test("revert with rest durations but no removed rest duration", () async {
@@ -969,30 +845,22 @@ void main() {
           createdAt: now(),
         );
         final pillSheetGroupDatastore = MockPillSheetGroupDatastore();
-        when(pillSheetGroupDatastore.updateWithBatch(
-                batch, updatedPillSheetGroup))
-            .thenReturn(null);
+        when(pillSheetGroupDatastore.updateWithBatch(batch, updatedPillSheetGroup)).thenReturn(null);
 
-        final history = PillSheetModifiedHistoryServiceActionFactory
-            .createRevertTakenPillAction(
+        final history = PillSheetModifiedHistoryServiceActionFactory.createRevertTakenPillAction(
           pillSheetGroupID: "group_id",
           before: pillSheet,
           after: pillSheet.copyWith(lastTakenDate: yesterday),
         );
-        final pillSheetModifiedHistoryDatastore =
-            MockPillSheetModifiedHistoryDatastore();
-        when(pillSheetModifiedHistoryDatastore.add(batch, history))
-            .thenReturn(null);
+        final pillSheetModifiedHistoryDatastore = MockPillSheetModifiedHistoryDatastore();
+        when(pillSheetModifiedHistoryDatastore.add(batch, history)).thenReturn(null);
 
         const setting = Setting(
           pillNumberForFromMenstruation: 22,
           durationMenstruation: 3,
           isOnReminder: true,
           timezoneDatabaseName: null,
-          reminderTimes: [
-            ReminderTime(hour: 21, minute: 20),
-            ReminderTime(hour: 22, minute: 0)
-          ],
+          reminderTimes: [ReminderTime(hour: 21, minute: 20), ReminderTime(hour: 22, minute: 0)],
           pillSheetTypes: [
             PillSheetType.pillsheet_28_0,
           ],
@@ -1005,19 +873,14 @@ void main() {
             batchFactoryProvider.overrideWithValue(batchFactory),
             settingDatastoreProvider.overrideWithValue(settingDatastore),
             pillSheetDatastoreProvider.overrideWithValue(pillSheetDatastore),
-            pillSheetModifiedHistoryDatastoreProvider
-                .overrideWithValue(pillSheetModifiedHistoryDatastore),
-            pillSheetGroupDatastoreProvider
-                .overrideWithValue(pillSheetGroupDatastore),
+            pillSheetModifiedHistoryDatastoreProvider.overrideWithValue(pillSheetModifiedHistoryDatastore),
+            pillSheetGroupDatastoreProvider.overrideWithValue(pillSheetGroupDatastore),
           ],
         );
         final asyncAction = container.read(recordPageAsyncActionProvider);
 
         await Future.delayed(const Duration(seconds: 1));
-        await asyncAction.revertTaken(
-            pillSheetGroup: pillSheetGroup,
-            pageIndex: 0,
-            pillNumberIntoPillSheet: 11);
+        await asyncAction.revertTaken(pillSheetGroup: pillSheetGroup, pageIndex: 0, pillNumberIntoPillSheet: 11);
       });
     });
 
@@ -1073,32 +936,24 @@ void main() {
           createdAt: now(),
         );
         final pillSheetGroupDatastore = MockPillSheetGroupDatastore();
-        when(pillSheetGroupDatastore.updateWithBatch(
-                batch, updatedPillSheetGroup))
-            .thenReturn(null);
+        when(pillSheetGroupDatastore.updateWithBatch(batch, updatedPillSheetGroup)).thenReturn(null);
 
-        final history = PillSheetModifiedHistoryServiceActionFactory
-            .createRevertTakenPillAction(
+        final history = PillSheetModifiedHistoryServiceActionFactory.createRevertTakenPillAction(
           pillSheetGroupID: "group_id",
           before: pillSheet2,
           after: pillSheet2.copyWith(
             lastTakenDate: yesterday,
           ),
         );
-        final pillSheetModifiedHistoryDatastore =
-            MockPillSheetModifiedHistoryDatastore();
-        when(pillSheetModifiedHistoryDatastore.add(batch, history))
-            .thenReturn(null);
+        final pillSheetModifiedHistoryDatastore = MockPillSheetModifiedHistoryDatastore();
+        when(pillSheetModifiedHistoryDatastore.add(batch, history)).thenReturn(null);
 
         const setting = Setting(
           pillNumberForFromMenstruation: 22,
           durationMenstruation: 3,
           isOnReminder: true,
           timezoneDatabaseName: null,
-          reminderTimes: [
-            ReminderTime(hour: 21, minute: 20),
-            ReminderTime(hour: 22, minute: 0)
-          ],
+          reminderTimes: [ReminderTime(hour: 21, minute: 20), ReminderTime(hour: 22, minute: 0)],
           pillSheetTypes: [
             PillSheetType.pillsheet_28_0,
             PillSheetType.pillsheet_21,
@@ -1112,23 +967,17 @@ void main() {
             batchFactoryProvider.overrideWithValue(batchFactory),
             settingDatastoreProvider.overrideWithValue(settingDatastore),
             pillSheetDatastoreProvider.overrideWithValue(pillSheetDatastore),
-            pillSheetModifiedHistoryDatastoreProvider
-                .overrideWithValue(pillSheetModifiedHistoryDatastore),
-            pillSheetGroupDatastoreProvider
-                .overrideWithValue(pillSheetGroupDatastore),
+            pillSheetModifiedHistoryDatastoreProvider.overrideWithValue(pillSheetModifiedHistoryDatastore),
+            pillSheetGroupDatastoreProvider.overrideWithValue(pillSheetGroupDatastore),
           ],
         );
         final asyncAction = container.read(recordPageAsyncActionProvider);
 
         await Future.delayed(const Duration(seconds: 1));
-        await asyncAction.revertTaken(
-            pillSheetGroup: pillSheetGroup,
-            pageIndex: 1,
-            pillNumberIntoPillSheet: 2);
+        await asyncAction.revertTaken(pillSheetGroup: pillSheetGroup, pageIndex: 1, pillNumberIntoPillSheet: 2);
       });
 
-      test("call revert from actived pill sheet to before pill sheet",
-          () async {
+      test("call revert from actived pill sheet to before pill sheet", () async {
         var mockTodayRepository = MockTodayService();
         final _today = DateTime.parse("2022-01-31");
         todayRepository = mockTodayRepository;
@@ -1159,11 +1008,8 @@ void main() {
 
         final pillSheetDatastore = MockPillSheetDatastore();
         when(pillSheetDatastore.update(batch, [
-          pillSheet.copyWith(
-              lastTakenDate: _today.subtract(const Duration(days: 4))),
-          pillSheet2.copyWith(
-              lastTakenDate:
-                  pillSheet2.beginingDate.subtract(const Duration(days: 1))),
+          pillSheet.copyWith(lastTakenDate: _today.subtract(const Duration(days: 4))),
+          pillSheet2.copyWith(lastTakenDate: pillSheet2.beginingDate.subtract(const Duration(days: 1))),
         ])).thenReturn(null);
 
         final pillSheetGroup = PillSheetGroup(
@@ -1176,39 +1022,25 @@ void main() {
           id: "group_id",
           pillSheetIDs: ["1", "2"],
           pillSheets: [
-            pillSheet.copyWith(
-                lastTakenDate: _today.subtract(const Duration(days: 4))),
-            pillSheet2.copyWith(
-                lastTakenDate:
-                    pillSheet2.beginingDate.subtract(const Duration(days: 1))),
+            pillSheet.copyWith(lastTakenDate: _today.subtract(const Duration(days: 4))),
+            pillSheet2.copyWith(lastTakenDate: pillSheet2.beginingDate.subtract(const Duration(days: 1))),
           ],
           createdAt: now(),
         );
         final pillSheetGroupDatastore = MockPillSheetGroupDatastore();
-        when(pillSheetGroupDatastore.updateWithBatch(
-                batch, updatedPillSheetGroup))
-            .thenReturn(null);
+        when(pillSheetGroupDatastore.updateWithBatch(batch, updatedPillSheetGroup)).thenReturn(null);
 
-        final history = PillSheetModifiedHistoryServiceActionFactory
-            .createRevertTakenPillAction(
-                pillSheetGroupID: "group_id",
-                before: pillSheet2,
-                after: pillSheet.copyWith(
-                    lastTakenDate: _today.subtract(const Duration(days: 4))));
-        final pillSheetModifiedHistoryDatastore =
-            MockPillSheetModifiedHistoryDatastore();
-        when(pillSheetModifiedHistoryDatastore.add(batch, history))
-            .thenReturn(null);
+        final history = PillSheetModifiedHistoryServiceActionFactory.createRevertTakenPillAction(
+            pillSheetGroupID: "group_id", before: pillSheet2, after: pillSheet.copyWith(lastTakenDate: _today.subtract(const Duration(days: 4))));
+        final pillSheetModifiedHistoryDatastore = MockPillSheetModifiedHistoryDatastore();
+        when(pillSheetModifiedHistoryDatastore.add(batch, history)).thenReturn(null);
 
         const setting = Setting(
           pillNumberForFromMenstruation: 22,
           durationMenstruation: 3,
           isOnReminder: true,
           timezoneDatabaseName: null,
-          reminderTimes: [
-            ReminderTime(hour: 21, minute: 20),
-            ReminderTime(hour: 22, minute: 0)
-          ],
+          reminderTimes: [ReminderTime(hour: 21, minute: 20), ReminderTime(hour: 22, minute: 0)],
           pillSheetTypes: [
             PillSheetType.pillsheet_28_0,
             PillSheetType.pillsheet_21,
@@ -1222,19 +1054,14 @@ void main() {
             batchFactoryProvider.overrideWithValue(batchFactory),
             settingDatastoreProvider.overrideWithValue(settingDatastore),
             pillSheetDatastoreProvider.overrideWithValue(pillSheetDatastore),
-            pillSheetModifiedHistoryDatastoreProvider
-                .overrideWithValue(pillSheetModifiedHistoryDatastore),
-            pillSheetGroupDatastoreProvider
-                .overrideWithValue(pillSheetGroupDatastore),
+            pillSheetModifiedHistoryDatastoreProvider.overrideWithValue(pillSheetModifiedHistoryDatastore),
+            pillSheetGroupDatastoreProvider.overrideWithValue(pillSheetGroupDatastore),
           ],
         );
         final asyncAction = container.read(recordPageAsyncActionProvider);
 
         await Future.delayed(const Duration(seconds: 1));
-        await asyncAction.revertTaken(
-            pillSheetGroup: pillSheetGroup,
-            pageIndex: 0,
-            pillNumberIntoPillSheet: 27);
+        await asyncAction.revertTaken(pillSheetGroup: pillSheetGroup, pageIndex: 0, pillNumberIntoPillSheet: 27);
       });
       test("call revert with rest duration", () async {
         var mockTodayRepository = MockTodayService();
@@ -1264,19 +1091,14 @@ void main() {
           lastTakenDate: _today,
           groupIndex: 1,
           restDurations: [
-            RestDuration(
-                beginDate: yesterday, createdDate: yesterday, endDate: _today),
+            RestDuration(beginDate: yesterday, createdDate: yesterday, endDate: _today),
           ],
         );
 
         final pillSheetDatastore = MockPillSheetDatastore();
         when(pillSheetDatastore.update(batch, [
-          pillSheet.copyWith(
-              lastTakenDate: _today.subtract(const Duration(days: 4))),
-          pillSheet2.copyWith(
-              lastTakenDate:
-                  pillSheet2.beginingDate.subtract(const Duration(days: 1)),
-              restDurations: []),
+          pillSheet.copyWith(lastTakenDate: _today.subtract(const Duration(days: 4))),
+          pillSheet2.copyWith(lastTakenDate: pillSheet2.beginingDate.subtract(const Duration(days: 1)), restDurations: []),
         ])).thenReturn(null);
 
         final pillSheetGroup = PillSheetGroup(
@@ -1289,41 +1111,27 @@ void main() {
           id: "group_id",
           pillSheetIDs: ["1", "2"],
           pillSheets: [
-            pillSheet.copyWith(
-                lastTakenDate: _today.subtract(const Duration(days: 4))),
-            pillSheet2.copyWith(
-                lastTakenDate:
-                    pillSheet2.beginingDate.subtract(const Duration(days: 1)),
-                restDurations: []),
+            pillSheet.copyWith(lastTakenDate: _today.subtract(const Duration(days: 4))),
+            pillSheet2.copyWith(lastTakenDate: pillSheet2.beginingDate.subtract(const Duration(days: 1)), restDurations: []),
           ],
           createdAt: now(),
         );
         final pillSheetGroupDatastore = MockPillSheetGroupDatastore();
-        when(pillSheetGroupDatastore.updateWithBatch(
-                batch, updatedPillSheetGroup))
-            .thenReturn(null);
+        when(pillSheetGroupDatastore.updateWithBatch(batch, updatedPillSheetGroup)).thenReturn(null);
 
-        final history = PillSheetModifiedHistoryServiceActionFactory
-            .createRevertTakenPillAction(
-                pillSheetGroupID: "group_id",
-                before: pillSheet2,
-                after: pillSheet.copyWith(
-                    lastTakenDate: _today.subtract(const Duration(days: 4)),
-                    restDurations: []));
-        final pillSheetModifiedHistoryDatastore =
-            MockPillSheetModifiedHistoryDatastore();
-        when(pillSheetModifiedHistoryDatastore.add(batch, history))
-            .thenReturn(null);
+        final history = PillSheetModifiedHistoryServiceActionFactory.createRevertTakenPillAction(
+            pillSheetGroupID: "group_id",
+            before: pillSheet2,
+            after: pillSheet.copyWith(lastTakenDate: _today.subtract(const Duration(days: 4)), restDurations: []));
+        final pillSheetModifiedHistoryDatastore = MockPillSheetModifiedHistoryDatastore();
+        when(pillSheetModifiedHistoryDatastore.add(batch, history)).thenReturn(null);
 
         const setting = Setting(
           pillNumberForFromMenstruation: 22,
           durationMenstruation: 3,
           isOnReminder: true,
           timezoneDatabaseName: null,
-          reminderTimes: [
-            ReminderTime(hour: 21, minute: 20),
-            ReminderTime(hour: 22, minute: 0)
-          ],
+          reminderTimes: [ReminderTime(hour: 21, minute: 20), ReminderTime(hour: 22, minute: 0)],
           pillSheetTypes: [
             PillSheetType.pillsheet_28_0,
             PillSheetType.pillsheet_21,
@@ -1337,19 +1145,14 @@ void main() {
             batchFactoryProvider.overrideWithValue(batchFactory),
             settingDatastoreProvider.overrideWithValue(settingDatastore),
             pillSheetDatastoreProvider.overrideWithValue(pillSheetDatastore),
-            pillSheetModifiedHistoryDatastoreProvider
-                .overrideWithValue(pillSheetModifiedHistoryDatastore),
-            pillSheetGroupDatastoreProvider
-                .overrideWithValue(pillSheetGroupDatastore),
+            pillSheetModifiedHistoryDatastoreProvider.overrideWithValue(pillSheetModifiedHistoryDatastore),
+            pillSheetGroupDatastoreProvider.overrideWithValue(pillSheetGroupDatastore),
           ],
         );
         final asycnAction = container.read(recordPageAsyncActionProvider);
 
         await Future.delayed(const Duration(seconds: 1));
-        await asycnAction.revertTaken(
-            pillSheetGroup: pillSheetGroup,
-            pageIndex: 0,
-            pillNumberIntoPillSheet: 27);
+        await asycnAction.revertTaken(pillSheetGroup: pillSheetGroup, pageIndex: 0, pillNumberIntoPillSheet: 27);
       });
     });
   });
