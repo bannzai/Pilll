@@ -42,19 +42,15 @@ class NotificationBarState with _$NotificationBarState {
       return "休薬$day日目";
     }
 
-    if (activedPillSheet.typeInfo.dosingPeriod <
-        activedPillSheet.todayPillNumber) {
-      final day = activedPillSheet.todayPillNumber -
-          activedPillSheet.typeInfo.dosingPeriod;
+    if (activedPillSheet.typeInfo.dosingPeriod < activedPillSheet.todayPillNumber) {
+      final day = activedPillSheet.todayPillNumber - activedPillSheet.typeInfo.dosingPeriod;
       return "${activedPillSheet.pillSheetType.notTakenWord}$day日目";
     }
 
     const threshold = 4;
     if (activedPillSheet.pillSheetType.notTakenWord.isNotEmpty) {
-      if (activedPillSheet.typeInfo.dosingPeriod - threshold + 1 <
-          activedPillSheet.todayPillNumber) {
-        final diff = activedPillSheet.typeInfo.dosingPeriod -
-            activedPillSheet.todayPillNumber;
+      if (activedPillSheet.typeInfo.dosingPeriod - threshold + 1 < activedPillSheet.todayPillNumber) {
+        final diff = activedPillSheet.typeInfo.dosingPeriod - activedPillSheet.todayPillNumber;
         return "あと${diff + 1}日で${activedPillSheet.pillSheetType.notTakenWord}期間です";
       }
     }
