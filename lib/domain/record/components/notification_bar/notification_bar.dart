@@ -36,6 +36,9 @@ class NotificationBar extends HookConsumerWidget {
   Widget? _body(BuildContext context, WidgetRef ref) {
     final state = ref.watch(notificationBarStoreProvider);
     final store = ref.watch(notificationBarStoreProvider.notifier);
+    final discountEntitlementDeadlineDate = state.premiumAndTrial.discountEntitlementDeadlineDate;
+    final isOverDiscountDeadline = ref.watch(isOverDiscountDeadlineProvider(discountEntitlementDeadlineDate));
+
     if (!state.premiumAndTrial.isPremium) {
       final premiumTrialLimit = state.premiumTrialLimit;
       if (premiumTrialLimit != null) {
@@ -56,10 +59,7 @@ class NotificationBar extends HookConsumerWidget {
 
       if (state.premiumAndTrial.hasDiscountEntitlement) {
         if (!state.premiumAndTrial.isTrial) {
-          final discountEntitlementDeadlineDate = state.premiumAndTrial.discountEntitlementDeadlineDate;
           if (discountEntitlementDeadlineDate != null) {
-            // NOTE: watch state
-            final isOverDiscountDeadline = ref.watch(isOverDiscountDeadlineProvider(discountEntitlementDeadlineDate));
             if (!isOverDiscountDeadline) {
               return DiscountPriceDeadline(
                   discountEntitlementDeadlineDate: discountEntitlementDeadlineDate,
