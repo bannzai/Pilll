@@ -67,8 +67,6 @@ class RecordPageBody extends StatelessWidget {
         titleSpacing: 0,
         backgroundColor: PilllColors.white,
         toolbarHeight: RecordPageInformationHeaderConst.height,
-        // TODO: 広告関連でのデザインを確認次第消す
-        // elevation: 0,
         title: Stack(
           children: [
             RecordPageInformationHeader(
