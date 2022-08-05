@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:pilll/analytics.dart';
+import 'package:pilll/components/atoms/color.dart';
 import 'package:pilll/components/atoms/font.dart';
 import 'package:pilll/components/atoms/text_color.dart';
 import 'package:pilll/domain/pill_sheet_modified_history/pill_sheet_modified_history_page.dart';
@@ -28,14 +29,14 @@ class EndedPillSheet extends StatelessWidget {
         });
 
         if (isPremium || isTrial) {
-          Navigator.of(context)
-              .push(PillSheetModifiedHistoriesPageRoute.route());
+          Navigator.of(context).push(PillSheetModifiedHistoriesPageRoute.route());
         } else {
           showPremiumIntroductionSheet(context);
         }
       },
       child: Container(
-        padding: const EdgeInsets.only(top: 8, bottom: 8),
+        padding: const EdgeInsets.symmetric(vertical: 8, horizontal: 8),
+        color: PilllColors.secondary,
         child: Center(
           child: Column(
             children: [

@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:pilll/analytics.dart';
+import 'package:pilll/components/atoms/color.dart';
 import 'package:pilll/components/atoms/font.dart';
 import 'package:pilll/components/atoms/text_color.dart';
 import 'package:pilll/domain/sign_in/sign_in_sheet.dart';
@@ -14,7 +15,8 @@ class RecommendSignupForPremiumNotificationBar extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      padding: const EdgeInsets.only(top: 10, bottom: 8),
+      padding: const EdgeInsets.only(top: 10, bottom: 8, left: 8, right: 8),
+      color: PilllColors.secondary,
       child: GestureDetector(
         onTap: () {
           analytics.logEvent(name: "tapped_premium_signup_notification_bar");
@@ -38,8 +40,7 @@ class RecommendSignupForPremiumNotificationBar extends StatelessWidget {
                       const SizedBox(width: 5),
                       Text(
                         "アカウント登録をしてください",
-                        style: TextColorStyle.white
-                            .merge(FontType.descriptionBold),
+                        style: TextColorStyle.white.merge(FontType.descriptionBold),
                         textAlign: TextAlign.center,
                       ),
                     ],

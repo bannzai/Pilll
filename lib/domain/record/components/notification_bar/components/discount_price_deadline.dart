@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
 import 'package:flutter_svg/flutter_svg.dart';
+import 'package:pilll/components/atoms/color.dart';
 import 'package:pilll/components/atoms/font.dart';
 import 'package:pilll/components/atoms/text_color.dart';
 import 'package:pilll/domain/premium_introduction/util/discount_deadline.dart';
@@ -16,14 +17,14 @@ class DiscountPriceDeadline extends HookConsumerWidget {
   }) : super(key: key);
   @override
   Widget build(BuildContext context, WidgetRef ref) {
-    final difference = ref.watch(
-        durationToDiscountPriceDeadline(discountEntitlementDeadlineDate));
+    final difference = ref.watch(durationToDiscountPriceDeadline(discountEntitlementDeadlineDate));
     if (difference.inSeconds <= 0) {
       return Container();
     }
     final countdown = discountPriceDeadlineCountdownString(difference);
     return Container(
-      padding: const EdgeInsets.only(top: 10, bottom: 4),
+      padding: const EdgeInsets.only(top: 10, bottom: 4, left: 8, right: 8),
+      color: PilllColors.secondary,
       child: GestureDetector(
         onTap: onTap,
         child: Stack(

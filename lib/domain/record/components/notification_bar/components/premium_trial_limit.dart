@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:pilll/analytics.dart';
+import 'package:pilll/components/atoms/color.dart';
 import 'package:pilll/components/atoms/font.dart';
 import 'package:pilll/components/atoms/text_color.dart';
 import 'package:url_launcher/url_launcher.dart';
@@ -16,12 +17,12 @@ class PremiumTrialLimitNotificationBar extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      padding: const EdgeInsets.only(top: 10, bottom: 10),
+      padding: const EdgeInsets.symmetric(vertical: 10, horizontal: 8),
+      color: PilllColors.secondary,
       child: GestureDetector(
         onTap: () async {
           analytics.logEvent(name: "pressed_trial_limited_notification_bar");
-          await launchUrl(Uri.parse(
-              "https://pilll.wraptas.site/3abd690f501549c48f813fd310b5f242"));
+          await launchUrl(Uri.parse("https://pilll.wraptas.site/3abd690f501549c48f813fd310b5f242"));
         },
         child: Row(
           mainAxisAlignment: MainAxisAlignment.center,
