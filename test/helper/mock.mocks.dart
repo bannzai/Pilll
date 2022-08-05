@@ -551,6 +551,11 @@ class MockNotificationBarStateStore extends _i1.Mock
       returnValue: Future<void>.value(),
       returnValueForMissingStub: Future<void>.value()) as _i20.Future<void>);
   @override
+  _i20.Future<void> closeAds() => (super.noSuchMethod(
+      Invocation.method(#closeAds, []),
+      returnValue: Future<void>.value(),
+      returnValueForMissingStub: Future<void>.value()) as _i20.Future<void>);
+  @override
   _i8.RemoveListener addListener(
           _i30.Listener<_i9.NotificationBarState>? listener,
           {bool? fireImmediately = true}) =>
