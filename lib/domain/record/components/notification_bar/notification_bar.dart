@@ -34,6 +34,11 @@ class NotificationBar extends HookConsumerWidget {
     final store = ref.watch(notificationBarStoreProvider.notifier);
     final discountEntitlementDeadlineDate = state.premiumAndTrial.discountEntitlementDeadlineDate;
     final isOverDiscountDeadline = ref.watch(isOverDiscountDeadlineProvider(discountEntitlementDeadlineDate));
+    final isAdsDisabled = () {
+      final begin = DateTime(2022, 8, 10, 0, 0, 0);
+      final end = DateTime(2022, 8, 23, 23, 59, 59);
+      return now().isBefore(begin) || now().isAfter(end);
+    }();
 
     if (!state.premiumAndTrial.isPremium) {
       final premiumTrialLimit = state.premiumTrialLimit;
@@ -104,11 +109,15 @@ class NotificationBar extends HookConsumerWidget {
           );
         }
       } else {
-        return const PilllAdsNotificationBar(onClose: null);
+        if (!isAdsDisabled) {
+          return const PilllAdsNotificationBar(onClose: null);
+        }
       }
     } else {
       if (!state.premiumUserIsClosedAdsMederiPill) {
-        return PilllAdsNotificationBar(onClose: () => store.closeAds());
+        if (!isAdsDisabled) {
+          return PilllAdsNotificationBar(onClose: () => store.closeAds());
+        }
       }
       if (state.shownRecommendSignupNotificationForPremium) {
         return const RecommendSignupForPremiumNotificationBar();
