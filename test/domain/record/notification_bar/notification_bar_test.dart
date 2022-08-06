@@ -364,7 +364,7 @@ void main() {
       group("#PilllAdsNotificationBar", () {
         testWidgets('begin from 2022-08-10', (WidgetTester tester) async {
           final mockTodayRepository = MockTodayService();
-          final today = DateTime(2021, 08, 10);
+          final today = DateTime(2022, 08, 10);
 
           when(mockTodayRepository.now()).thenReturn(today);
           todayRepository = mockTodayRepository;
