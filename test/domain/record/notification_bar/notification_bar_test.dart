@@ -825,6 +825,58 @@ void main() {
             findsOneWidget,
           );
         });
+        testWidgets('now is 2022-08-23T23:59:59 and already closed', (WidgetTester tester) async {
+          final mockTodayRepository = MockTodayService();
+          final today = DateTime(2022, 08, 23, 23, 59, 59);
+
+          when(mockTodayRepository.now()).thenReturn(today);
+          when(mockTodayRepository.now()).thenReturn(today);
+          todayRepository = mockTodayRepository;
+
+          var pillSheet = PillSheet.create(PillSheetType.pillsheet_21);
+          pillSheet = pillSheet.copyWith(
+            lastTakenDate: today,
+            beginingDate: today.subtract(
+              // NOTE: Not into rest duration and notification duration
+              const Duration(days: 10),
+            ),
+          );
+          final pillSheetGroup = PillSheetGroup(pillSheetIDs: ["1"], pillSheets: [pillSheet], createdAt: now());
+          final state = NotificationBarState(
+            latestPillSheetGroup: pillSheetGroup,
+            totalCountOfActionForTakenPill: totalCountOfActionForTakenPillForLongTimeUser,
+            premiumAndTrial: PremiumAndTrial(
+              isPremium: true,
+              isTrial: true,
+              hasDiscountEntitlement: true,
+              trialDeadlineDate: null,
+              beginTrialDate: null,
+              discountEntitlementDeadlineDate: null,
+            ),
+            isLinkedLoginProvider: false,
+            premiumTrialBeginAnouncementIsClosed: true,
+            premiumUserIsClosedAdsMederiPill: true,
+            recommendedSignupNotificationIsAlreadyShow: false,
+          );
+
+          await tester.pumpWidget(
+            ProviderScope(
+              overrides: [
+                notificationBarStoreProvider.overrideWithProvider(StateNotifierProvider.autoDispose((_) => NotificationBarStateStore(state))),
+                notificationBarStateProvider.overrideWithProvider(Provider.autoDispose((_) => state)),
+              ],
+              child: const MaterialApp(
+                home: Material(child: NotificationBar()),
+              ),
+            ),
+          );
+          await tester.pump();
+
+          expect(
+            find.byWidgetPredicate((widget) => widget is PilllAdsNotificationBar),
+            findsNothing,
+          );
+        });
         testWidgets('now is 2022-08-24T00:00:00', (WidgetTester tester) async {
           final mockTodayRepository = MockTodayService();
           final today = DateTime(2022, 08, 24);
