@@ -171,7 +171,7 @@ void main() {
           totalCountOfActionForTakenPill: totalCountOfActionForTakenPillForLongTimeUser,
           premiumAndTrial: PremiumAndTrial(
             isPremium: false,
-            isTrial: false,
+            isTrial: true,
             hasDiscountEntitlement: true,
             trialDeadlineDate: null,
             beginTrialDate: null,
@@ -224,7 +224,7 @@ void main() {
           totalCountOfActionForTakenPill: totalCountOfActionForTakenPillForLongTimeUser,
           premiumAndTrial: PremiumAndTrial(
             isPremium: false,
-            isTrial: false,
+            isTrial: true,
             hasDiscountEntitlement: true,
             trialDeadlineDate: null,
             beginTrialDate: null,
