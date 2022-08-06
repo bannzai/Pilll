@@ -362,7 +362,7 @@ void main() {
       });
 
       group("#PilllAdsNotificationBar", () {
-        testWidgets('begin before 2022-08-10', (WidgetTester tester) async {
+        testWidgets('today is before 2022-08-10', (WidgetTester tester) async {
           final mockTodayRepository = MockTodayService();
           final today = DateTime(2022, 08, 10).subtract(const Duration(seconds: 1));
 
@@ -412,7 +412,7 @@ void main() {
             findsNothing,
           );
         });
-        testWidgets('begin from 2022-08-10', (WidgetTester tester) async {
+        testWidgets('today is 2022-08-10', (WidgetTester tester) async {
           final mockTodayRepository = MockTodayService();
           final today = DateTime(2022, 08, 10);
 
