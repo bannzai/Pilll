@@ -67,7 +67,6 @@ class RecordPageBody extends StatelessWidget {
         titleSpacing: 0,
         backgroundColor: PilllColors.white,
         toolbarHeight: RecordPageInformationHeaderConst.height,
-        elevation: 0,
         title: Stack(
           children: [
             RecordPageInformationHeader(
