@@ -2,6 +2,7 @@ import 'package:pilll/analytics.dart';
 import 'package:pilll/domain/premium_introduction/util/discount_deadline.dart';
 import 'package:pilll/domain/record/components/notification_bar/components/discount_price_deadline.dart';
 import 'package:pilll/domain/record/components/notification_bar/components/ended_pill_sheet.dart';
+import 'package:pilll/domain/record/components/notification_bar/components/pilll_ads.dart';
 import 'package:pilll/domain/record/components/notification_bar/components/premium_trial_begin.dart';
 import 'package:pilll/domain/record/components/notification_bar/notification_bar.dart';
 import 'package:pilll/domain/record/components/notification_bar/notification_bar_state.codegen.dart';
@@ -358,6 +359,59 @@ void main() {
           find.byWidgetPredicate((widget) => widget is EndedPillSheet),
           findsOneWidget,
         );
+      });
+
+      group("#PilllAdsNotificationBar", () {
+        testWidgets('begin from 2022-08-10', (WidgetTester tester) async {
+          final mockTodayRepository = MockTodayService();
+          final today = DateTime(2021, 08, 10);
+
+          when(mockTodayRepository.now()).thenReturn(today);
+          todayRepository = mockTodayRepository;
+
+          var pillSheet = PillSheet.create(PillSheetType.pillsheet_21);
+          pillSheet = pillSheet.copyWith(
+            lastTakenDate: today.subtract(const Duration(days: 1)),
+            beginingDate: today.subtract(
+              const Duration(days: 25),
+            ),
+          );
+          final pillSheetGroup = PillSheetGroup(pillSheetIDs: ["1"], pillSheets: [pillSheet], createdAt: now());
+          final state = NotificationBarState(
+            latestPillSheetGroup: pillSheetGroup,
+            totalCountOfActionForTakenPill: totalCountOfActionForTakenPillForLongTimeUser,
+            premiumAndTrial: PremiumAndTrial(
+              isPremium: false,
+              isTrial: false,
+              hasDiscountEntitlement: true,
+              trialDeadlineDate: null,
+              beginTrialDate: null,
+              discountEntitlementDeadlineDate: null,
+            ),
+            isLinkedLoginProvider: false,
+            premiumTrialBeginAnouncementIsClosed: false,
+            premiumUserIsClosedAdsMederiPill: false,
+            recommendedSignupNotificationIsAlreadyShow: false,
+          );
+
+          await tester.pumpWidget(
+            ProviderScope(
+              overrides: [
+                notificationBarStoreProvider.overrideWithProvider(StateNotifierProvider.autoDispose((_) => NotificationBarStateStore(state))),
+                notificationBarStateProvider.overrideWithProvider(Provider.autoDispose((_) => state)),
+              ],
+              child: const MaterialApp(
+                home: Material(child: NotificationBar()),
+              ),
+            ),
+          );
+          await tester.pump();
+
+          expect(
+            find.byWidgetPredicate((widget) => widget is PilllAdsNotificationBar),
+            findsOneWidget,
+          );
+        });
       });
     });
 
