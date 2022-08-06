@@ -696,7 +696,7 @@ void main() {
           ),
           isLinkedLoginProvider: false,
           premiumTrialBeginAnouncementIsClosed: true,
-          premiumUserIsClosedAdsMederiPill: false,
+          premiumUserIsClosedAdsMederiPill: true,
           recommendedSignupNotificationIsAlreadyShow: false,
         );
 
@@ -749,7 +749,7 @@ void main() {
           ),
           isLinkedLoginProvider: true,
           premiumTrialBeginAnouncementIsClosed: true,
-          premiumUserIsClosedAdsMederiPill: false,
+          premiumUserIsClosedAdsMederiPill: true,
           recommendedSignupNotificationIsAlreadyShow: false,
         );
 
@@ -802,7 +802,7 @@ void main() {
           ),
           isLinkedLoginProvider: true,
           premiumTrialBeginAnouncementIsClosed: true,
-          premiumUserIsClosedAdsMederiPill: false,
+          premiumUserIsClosedAdsMederiPill: true,
           recommendedSignupNotificationIsAlreadyShow: false,
         );
 
