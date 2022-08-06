@@ -16,6 +16,7 @@ class PilllAdsNotificationBar extends HookConsumerWidget {
     final onClose = this.onClose;
     return Container(
       color: const Color(0xFFFC7CA4),
+      padding: const EdgeInsets.symmetric(horizontal: 8),
       child: GestureDetector(
         onTap: () {
           launchUrl(Uri.parse("https://mederi.jp/pr/tvcmdoctor01/?utm_source=Pilll_reminder&utm_medium=Pilll_reminder&utm_campaign=202208"));
@@ -47,8 +48,8 @@ class PilllAdsNotificationBar extends HookConsumerWidget {
                 SvgPicture.asset(
                   "images/arrow_right.svg",
                   color: Colors.white,
-                  height: 24,
-                  width: 24,
+                  height: 20,
+                  width: 20,
                 ),
               ],
             ),
