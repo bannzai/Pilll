@@ -1,5 +1,4 @@
 import 'package:hooks_riverpod/hooks_riverpod.dart';
-import 'package:pilll/components/atoms/color.dart';
 import 'package:pilll/components/molecules/indicator.dart';
 import 'package:pilll/components/organisms/calendar/week/week_calendar_state.dart';
 import 'package:pilll/domain/calendar/components/month_calendar/month_calendar_state.codegen.dart';

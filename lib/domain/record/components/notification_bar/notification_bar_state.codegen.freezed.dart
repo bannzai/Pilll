@@ -24,7 +24,8 @@ class _$NotificationBarStateTearOff {
       required PremiumAndTrial premiumAndTrial,
       required bool recommendedSignupNotificationIsAlreadyShow,
       required bool premiumTrialBeginAnouncementIsClosed,
-      required bool isLinkedLoginProvider}) {
+      required bool isLinkedLoginProvider,
+      required bool premiumUserIsClosedAdsMederiPill}) {
     return _NotificationBarState(
       latestPillSheetGroup: latestPillSheetGroup,
       totalCountOfActionForTakenPill: totalCountOfActionForTakenPill,
@@ -34,6 +35,7 @@ class _$NotificationBarStateTearOff {
       premiumTrialBeginAnouncementIsClosed:
           premiumTrialBeginAnouncementIsClosed,
       isLinkedLoginProvider: isLinkedLoginProvider,
+      premiumUserIsClosedAdsMederiPill: premiumUserIsClosedAdsMederiPill,
     );
   }
 }
@@ -52,6 +54,8 @@ mixin _$NotificationBarState {
   bool get premiumTrialBeginAnouncementIsClosed =>
       throw _privateConstructorUsedError;
   bool get isLinkedLoginProvider => throw _privateConstructorUsedError;
+  bool get premiumUserIsClosedAdsMederiPill =>
+      throw _privateConstructorUsedError;
 
   @JsonKey(ignore: true)
   $NotificationBarStateCopyWith<NotificationBarState> get copyWith =>
@@ -69,7 +73,8 @@ abstract class $NotificationBarStateCopyWith<$Res> {
       PremiumAndTrial premiumAndTrial,
       bool recommendedSignupNotificationIsAlreadyShow,
       bool premiumTrialBeginAnouncementIsClosed,
-      bool isLinkedLoginProvider});
+      bool isLinkedLoginProvider,
+      bool premiumUserIsClosedAdsMederiPill});
 
   $PillSheetGroupCopyWith<$Res>? get latestPillSheetGroup;
   $PremiumAndTrialCopyWith<$Res> get premiumAndTrial;
@@ -92,6 +97,7 @@ class _$NotificationBarStateCopyWithImpl<$Res>
     Object? recommendedSignupNotificationIsAlreadyShow = freezed,
     Object? premiumTrialBeginAnouncementIsClosed = freezed,
     Object? isLinkedLoginProvider = freezed,
+    Object? premiumUserIsClosedAdsMederiPill = freezed,
   }) {
     return _then(_value.copyWith(
       latestPillSheetGroup: latestPillSheetGroup == freezed
@@ -119,6 +125,11 @@ class _$NotificationBarStateCopyWithImpl<$Res>
       isLinkedLoginProvider: isLinkedLoginProvider == freezed
           ? _value.isLinkedLoginProvider
           : isLinkedLoginProvider // ignore: cast_nullable_to_non_nullable
+              as bool,
+      premiumUserIsClosedAdsMederiPill: premiumUserIsClosedAdsMederiPill ==
+              freezed
+          ? _value.premiumUserIsClosedAdsMederiPill
+          : premiumUserIsClosedAdsMederiPill // ignore: cast_nullable_to_non_nullable
               as bool,
     ));
   }
@@ -155,7 +166,8 @@ abstract class _$NotificationBarStateCopyWith<$Res>
       PremiumAndTrial premiumAndTrial,
       bool recommendedSignupNotificationIsAlreadyShow,
       bool premiumTrialBeginAnouncementIsClosed,
-      bool isLinkedLoginProvider});
+      bool isLinkedLoginProvider,
+      bool premiumUserIsClosedAdsMederiPill});
 
   @override
   $PillSheetGroupCopyWith<$Res>? get latestPillSheetGroup;
@@ -182,6 +194,7 @@ class __$NotificationBarStateCopyWithImpl<$Res>
     Object? recommendedSignupNotificationIsAlreadyShow = freezed,
     Object? premiumTrialBeginAnouncementIsClosed = freezed,
     Object? isLinkedLoginProvider = freezed,
+    Object? premiumUserIsClosedAdsMederiPill = freezed,
   }) {
     return _then(_NotificationBarState(
       latestPillSheetGroup: latestPillSheetGroup == freezed
@@ -210,6 +223,11 @@ class __$NotificationBarStateCopyWithImpl<$Res>
           ? _value.isLinkedLoginProvider
           : isLinkedLoginProvider // ignore: cast_nullable_to_non_nullable
               as bool,
+      premiumUserIsClosedAdsMederiPill: premiumUserIsClosedAdsMederiPill ==
+              freezed
+          ? _value.premiumUserIsClosedAdsMederiPill
+          : premiumUserIsClosedAdsMederiPill // ignore: cast_nullable_to_non_nullable
+              as bool,
     ));
   }
 }
@@ -223,7 +241,8 @@ class _$_NotificationBarState extends _NotificationBarState {
       required this.premiumAndTrial,
       required this.recommendedSignupNotificationIsAlreadyShow,
       required this.premiumTrialBeginAnouncementIsClosed,
-      required this.isLinkedLoginProvider})
+      required this.isLinkedLoginProvider,
+      required this.premiumUserIsClosedAdsMederiPill})
       : super._();
 
   @override
@@ -238,10 +257,12 @@ class _$_NotificationBarState extends _NotificationBarState {
   final bool premiumTrialBeginAnouncementIsClosed;
   @override
   final bool isLinkedLoginProvider;
+  @override
+  final bool premiumUserIsClosedAdsMederiPill;
 
   @override
   String toString() {
-    return 'NotificationBarState(latestPillSheetGroup: $latestPillSheetGroup, totalCountOfActionForTakenPill: $totalCountOfActionForTakenPill, premiumAndTrial: $premiumAndTrial, recommendedSignupNotificationIsAlreadyShow: $recommendedSignupNotificationIsAlreadyShow, premiumTrialBeginAnouncementIsClosed: $premiumTrialBeginAnouncementIsClosed, isLinkedLoginProvider: $isLinkedLoginProvider)';
+    return 'NotificationBarState(latestPillSheetGroup: $latestPillSheetGroup, totalCountOfActionForTakenPill: $totalCountOfActionForTakenPill, premiumAndTrial: $premiumAndTrial, recommendedSignupNotificationIsAlreadyShow: $recommendedSignupNotificationIsAlreadyShow, premiumTrialBeginAnouncementIsClosed: $premiumTrialBeginAnouncementIsClosed, isLinkedLoginProvider: $isLinkedLoginProvider, premiumUserIsClosedAdsMederiPill: $premiumUserIsClosedAdsMederiPill)';
   }
 
   @override
@@ -263,7 +284,10 @@ class _$_NotificationBarState extends _NotificationBarState {
                 other.premiumTrialBeginAnouncementIsClosed,
                 premiumTrialBeginAnouncementIsClosed) &&
             const DeepCollectionEquality()
-                .equals(other.isLinkedLoginProvider, isLinkedLoginProvider));
+                .equals(other.isLinkedLoginProvider, isLinkedLoginProvider) &&
+            const DeepCollectionEquality().equals(
+                other.premiumUserIsClosedAdsMederiPill,
+                premiumUserIsClosedAdsMederiPill));
   }
 
   @override
@@ -275,7 +299,8 @@ class _$_NotificationBarState extends _NotificationBarState {
       const DeepCollectionEquality()
           .hash(recommendedSignupNotificationIsAlreadyShow),
       const DeepCollectionEquality().hash(premiumTrialBeginAnouncementIsClosed),
-      const DeepCollectionEquality().hash(isLinkedLoginProvider));
+      const DeepCollectionEquality().hash(isLinkedLoginProvider),
+      const DeepCollectionEquality().hash(premiumUserIsClosedAdsMederiPill));
 
   @JsonKey(ignore: true)
   @override
@@ -286,12 +311,14 @@ class _$_NotificationBarState extends _NotificationBarState {
 
 abstract class _NotificationBarState extends NotificationBarState {
   const factory _NotificationBarState(
-      {required PillSheetGroup? latestPillSheetGroup,
-      required int totalCountOfActionForTakenPill,
-      required PremiumAndTrial premiumAndTrial,
-      required bool recommendedSignupNotificationIsAlreadyShow,
-      required bool premiumTrialBeginAnouncementIsClosed,
-      required bool isLinkedLoginProvider}) = _$_NotificationBarState;
+          {required PillSheetGroup? latestPillSheetGroup,
+          required int totalCountOfActionForTakenPill,
+          required PremiumAndTrial premiumAndTrial,
+          required bool recommendedSignupNotificationIsAlreadyShow,
+          required bool premiumTrialBeginAnouncementIsClosed,
+          required bool isLinkedLoginProvider,
+          required bool premiumUserIsClosedAdsMederiPill}) =
+      _$_NotificationBarState;
   const _NotificationBarState._() : super._();
 
   @override
@@ -306,6 +333,8 @@ abstract class _NotificationBarState extends NotificationBarState {
   bool get premiumTrialBeginAnouncementIsClosed;
   @override
   bool get isLinkedLoginProvider;
+  @override
+  bool get premiumUserIsClosedAdsMederiPill;
   @override
   @JsonKey(ignore: true)
   _$NotificationBarStateCopyWith<_NotificationBarState> get copyWith =>

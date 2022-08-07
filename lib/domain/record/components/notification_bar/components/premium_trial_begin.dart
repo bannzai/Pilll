@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:pilll/analytics.dart';
+import 'package:pilll/components/atoms/color.dart';
 import 'package:pilll/components/atoms/font.dart';
 import 'package:pilll/components/atoms/text_color.dart';
 import 'package:pilll/domain/record/components/notification_bar/notification_bar_store.dart';
@@ -21,11 +22,11 @@ class PremiumTrialBegin extends HookConsumerWidget {
   Widget build(BuildContext context, WidgetRef ref) {
     return Container(
       padding: const EdgeInsets.symmetric(horizontal: 8),
+      color: PilllColors.secondary,
       child: GestureDetector(
         onTap: () async {
           analytics.logEvent(name: "p_premium_trial_begin_n_b");
-          await launchUrl(Uri.parse(
-              "https://pilll.wraptas.site/3abd690f501549c48f813fd310b5f242"));
+          await launchUrl(Uri.parse("https://pilll.wraptas.site/3abd690f501549c48f813fd310b5f242"));
         },
         child: Row(
           crossAxisAlignment: CrossAxisAlignment.center,

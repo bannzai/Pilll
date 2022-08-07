@@ -3,11 +3,9 @@ import 'package:pilll/database/database.dart';
 import 'package:pilll/entity/pill_sheet_group.codegen.dart';
 import 'package:riverpod/riverpod.dart';
 
-final pillSheetGroupDatastoreProvider = Provider<PillSheetGroupDatastore>(
-    (ref) => PillSheetGroupDatastore(ref.watch(databaseProvider)));
+final pillSheetGroupDatastoreProvider = Provider<PillSheetGroupDatastore>((ref) => PillSheetGroupDatastore(ref.watch(databaseProvider)));
 
-final latestPillSheetGroupStreamProvider = StreamProvider((ref) =>
-    ref.watch(pillSheetGroupDatastoreProvider).latestPillSheetGroupStream());
+final latestPillSheetGroupStreamProvider = StreamProvider((ref) => ref.watch(pillSheetGroupDatastoreProvider).latestPillSheetGroupStream());
 
 class PillSheetGroupDatastore {
   final DatabaseConnection _database;
@@ -15,10 +13,7 @@ class PillSheetGroupDatastore {
   PillSheetGroupDatastore(this._database);
 
   Query<PillSheetGroup> _latestQuery() {
-    return _database
-        .pillSheetGroupsReference()
-        .orderBy(PillSheetGroupFirestoreKeys.createdAt)
-        .limitToLast(1);
+    return _database.pillSheetGroupsReference().orderBy(PillSheetGroupFirestoreKeys.createdAt).limitToLast(1);
   }
 
   PillSheetGroup? _filter(QuerySnapshot<PillSheetGroup> snapshot) {
@@ -33,11 +28,7 @@ class PillSheetGroupDatastore {
   }
 
   Future<PillSheetGroup?> fetchBeforePillSheetGroup() async {
-    final snapshot = await _database
-        .pillSheetGroupsReference()
-        .orderBy(PillSheetGroupFirestoreKeys.createdAt)
-        .limitToLast(2)
-        .get();
+    final snapshot = await _database.pillSheetGroupsReference().orderBy(PillSheetGroupFirestoreKeys.createdAt).limitToLast(2).get();
     if (snapshot.docs.length <= 1) {
       return null;
     }
@@ -45,8 +36,7 @@ class PillSheetGroupDatastore {
     return snapshot.docs[0].data();
   }
 
-  Stream<PillSheetGroup?> latestPillSheetGroupStream() =>
-      _latestQuery().snapshots().map(((event) => _filter(event)));
+  Stream<PillSheetGroup?> latestPillSheetGroupStream() => _latestQuery().snapshots().map(((event) => _filter(event)));
 
   // Return new PillSheet document id
   PillSheetGroup register(WriteBatch batch, PillSheetGroup pillSheetGroup) {
@@ -62,20 +52,16 @@ class PillSheetGroupDatastore {
     if (pillSheetGroup.deletedAt != null) throw PillSheetGroupAlreadyDeleted();
 
     final updated = pillSheetGroup.copyWith(deletedAt: DateTime.now());
-    batch.set(_database.pillSheetGroupReference(pillSheetGroup.id!), updated,
-        SetOptions(merge: true));
+    batch.set(_database.pillSheetGroupReference(pillSheetGroup.id!), updated, SetOptions(merge: true));
     return updated;
   }
 
   Future<void> update(PillSheetGroup pillSheetGroup) async {
-    await _database
-        .pillSheetGroupReference(pillSheetGroup.id!)
-        .set(pillSheetGroup, SetOptions(merge: true));
+    await _database.pillSheetGroupReference(pillSheetGroup.id!).set(pillSheetGroup, SetOptions(merge: true));
   }
 
   void updateWithBatch(WriteBatch batch, PillSheetGroup pillSheetGroup) {
-    batch.set(_database.pillSheetGroupReference(pillSheetGroup.id!),
-        pillSheetGroup, SetOptions(merge: true));
+    batch.set(_database.pillSheetGroupReference(pillSheetGroup.id!), pillSheetGroup, SetOptions(merge: true));
   }
 }
 

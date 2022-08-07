@@ -1,11 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
 import 'package:pilll/analytics.dart';
-import 'package:pilll/components/atoms/color.dart';
 import 'package:pilll/domain/premium_introduction/premium_introduction_sheet.dart';
 import 'package:pilll/domain/premium_introduction/util/discount_deadline.dart';
 import 'package:pilll/domain/record/components/notification_bar/components/discount_price_deadline.dart';
 import 'package:pilll/domain/record/components/notification_bar/components/ended_pill_sheet.dart';
+import 'package:pilll/domain/record/components/notification_bar/components/pilll_ads.dart';
 import 'package:pilll/domain/record/components/notification_bar/components/premium_trial_begin.dart';
 import 'package:pilll/domain/record/components/notification_bar/notification_bar_store.dart';
 import 'package:pilll/domain/record/components/notification_bar/components/premium_trial_limit.dart';
@@ -23,11 +23,7 @@ class NotificationBar extends HookConsumerWidget {
   Widget build(BuildContext context, WidgetRef ref) {
     final body = _body(context, ref);
     if (body != null) {
-      return Container(
-        padding: const EdgeInsets.fromLTRB(8, 0, 8, 0),
-        color: PilllColors.secondary,
-        child: body,
-      );
+      return body;
     }
 
     return Container();
@@ -36,11 +32,18 @@ class NotificationBar extends HookConsumerWidget {
   Widget? _body(BuildContext context, WidgetRef ref) {
     final state = ref.watch(notificationBarStoreProvider);
     final store = ref.watch(notificationBarStoreProvider.notifier);
+    final discountEntitlementDeadlineDate = state.premiumAndTrial.discountEntitlementDeadlineDate;
+    final isOverDiscountDeadline = ref.watch(isOverDiscountDeadlineProvider(discountEntitlementDeadlineDate));
+    final isAdsDisabled = () {
+      final begin = DateTime(2022, 8, 10, 0, 0, 0);
+      final end = DateTime(2022, 8, 23, 23, 59, 59);
+      return now().isBefore(begin) || now().isAfter(end);
+    }();
+
     if (!state.premiumAndTrial.isPremium) {
       final premiumTrialLimit = state.premiumTrialLimit;
       if (premiumTrialLimit != null) {
-        return PremiumTrialLimitNotificationBar(
-            premiumTrialLimit: premiumTrialLimit);
+        return PremiumTrialLimitNotificationBar(premiumTrialLimit: premiumTrialLimit);
       }
 
       if (!state.premiumTrialBeginAnouncementIsClosed) {
@@ -57,20 +60,12 @@ class NotificationBar extends HookConsumerWidget {
 
       if (state.premiumAndTrial.hasDiscountEntitlement) {
         if (!state.premiumAndTrial.isTrial) {
-          final discountEntitlementDeadlineDate =
-              state.premiumAndTrial.discountEntitlementDeadlineDate;
           if (discountEntitlementDeadlineDate != null) {
-            // NOTE: watch state
-            final isOverDiscountDeadline = ref.watch(
-                isOverDiscountDeadlineProvider(
-                    discountEntitlementDeadlineDate));
             if (!isOverDiscountDeadline) {
               return DiscountPriceDeadline(
-                  discountEntitlementDeadlineDate:
-                      discountEntitlementDeadlineDate,
+                  discountEntitlementDeadlineDate: discountEntitlementDeadlineDate,
                   onTap: () {
-                    analytics.logEvent(
-                        name: "pressed_discount_notification_bar");
+                    analytics.logEvent(name: "pressed_discount_notification_bar");
                     showPremiumIntroductionSheet(context);
                   });
             }
@@ -78,56 +73,62 @@ class NotificationBar extends HookConsumerWidget {
         }
       }
 
-      final restDurationNotification = state.restDurationNotification;
-      if (restDurationNotification != null) {
-        return RestDurationNotificationBar(
-            restDurationNotification: restDurationNotification);
-      }
+      if (state.premiumAndTrial.isTrial) {
+        final restDurationNotification = state.restDurationNotification;
+        if (restDurationNotification != null) {
+          return RestDurationNotificationBar(restDurationNotification: restDurationNotification);
+        }
 
-      if (!state.isLinkedLoginProvider) {
-        if (state.totalCountOfActionForTakenPill >= 7) {
-          if (!state.recommendedSignupNotificationIsAlreadyShow) {
-            return RecommendSignupNotificationBar(
-              onTap: () {
-                analytics.logEvent(name: "tapped_signup_notification_bar");
-                showSignInSheet(
-                  context,
-                  SignInSheetStateContext.recordPage,
-                  null,
-                );
-              },
-              onClose: () {
-                analytics.logEvent(
-                    name: "record_page_signing_notification_closed");
-                store.closeRecommendedSignupNotification();
-              },
-            );
+        if (!state.isLinkedLoginProvider) {
+          if (state.totalCountOfActionForTakenPill >= 7) {
+            if (!state.recommendedSignupNotificationIsAlreadyShow) {
+              return RecommendSignupNotificationBar(
+                onTap: () {
+                  analytics.logEvent(name: "tapped_signup_notification_bar");
+                  showSignInSheet(
+                    context,
+                    SignInSheetStateContext.recordPage,
+                    null,
+                  );
+                },
+                onClose: () {
+                  analytics.logEvent(name: "record_page_signing_notification_closed");
+                  store.closeRecommendedSignupNotification();
+                },
+              );
+            }
           }
         }
-      }
 
-      if (state.latestPillSheetGroup != null &&
-          state.latestPillSheetGroup?.activedPillSheet == null) {
-        // ピルシートグループが存在していてactivedPillSheetが無い場合はピルシート終了が何かしらの理由がなくなったと見なし終了表示にする
-        return EndedPillSheet(
-          isPremium: state.premiumAndTrial.isPremium,
-          isTrial: state.premiumAndTrial.isTrial,
-          trialDeadlineDate: state.premiumAndTrial.trialDeadlineDate,
-        );
+        if (state.latestPillSheetGroup != null && state.latestPillSheetGroup?.activedPillSheet == null) {
+          // ピルシートグループが存在していてactivedPillSheetが無い場合はピルシート終了が何かしらの理由がなくなったと見なし終了表示にする
+          return EndedPillSheet(
+            isPremium: state.premiumAndTrial.isPremium,
+            isTrial: state.premiumAndTrial.isTrial,
+            trialDeadlineDate: state.premiumAndTrial.trialDeadlineDate,
+          );
+        }
+      } else {
+        if (!isAdsDisabled) {
+          return const PilllAdsNotificationBar(onClose: null);
+        }
       }
     } else {
+      if (!state.premiumUserIsClosedAdsMederiPill) {
+        if (!isAdsDisabled) {
+          return PilllAdsNotificationBar(onClose: () => store.closeAds());
+        }
+      }
       if (state.shownRecommendSignupNotificationForPremium) {
         return const RecommendSignupForPremiumNotificationBar();
       }
 
       final restDurationNotification = state.restDurationNotification;
       if (restDurationNotification != null) {
-        return RestDurationNotificationBar(
-            restDurationNotification: restDurationNotification);
+        return RestDurationNotificationBar(restDurationNotification: restDurationNotification);
       }
 
-      if (state.latestPillSheetGroup != null &&
-          state.latestPillSheetGroup?.activedPillSheet == null) {
+      if (state.latestPillSheetGroup != null && state.latestPillSheetGroup?.activedPillSheet == null) {
         // ピルシートグループが存在していてactivedPillSheetが無い場合はピルシート終了が何かしらの理由がなくなったと見なし終了表示にする
         return EndedPillSheet(
           isPremium: state.premiumAndTrial.isPremium,

@@ -90,9 +90,7 @@ class RecordPageBody extends StatelessWidget {
               ],
             ),
           ),
-          if (activedPillSheet != null &&
-              pillSheetGroup != null &&
-              !pillSheetGroup.isDeactived) ...[
+          if (activedPillSheet != null && pillSheetGroup != null && !pillSheetGroup.isDeactived) ...[
             RecordPageButton(
               pillSheetGroup: pillSheetGroup,
               currentPillSheet: activedPillSheet,
@@ -112,9 +110,7 @@ class RecordPageBody extends StatelessWidget {
   ) {
     final pillSheetGroup = state.pillSheetGroup;
     final activedPillSheet = pillSheetGroup?.activedPillSheet;
-    if (activedPillSheet == null ||
-        pillSheetGroup == null ||
-        pillSheetGroup.isDeactived) {
+    if (activedPillSheet == null || pillSheetGroup == null || pillSheetGroup.isDeactived) {
       return AddPillSheetGroupEmptyFrame(
         context: context,
         store: store,
@@ -142,8 +138,7 @@ class RecordPageBody extends StatelessWidget {
     }
   }
 
-  void _showMigrateInfoDialog(
-      BuildContext context, RecordPageStateNotifier store) async {
+  void _showMigrateInfoDialog(BuildContext context, RecordPageStateNotifier store) async {
     showDialog(
         context: context,
         barrierColor: Colors.white,
