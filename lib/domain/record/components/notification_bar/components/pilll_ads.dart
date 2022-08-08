@@ -19,6 +19,7 @@ class PilllAdsNotificationBar extends HookConsumerWidget {
       padding: const EdgeInsets.symmetric(horizontal: 8),
       child: GestureDetector(
         onTap: () {
+          analytics.logEvent(name: "pilll_ads_tapped");
           launchUrl(Uri.parse("https://mederi.jp/pr/tvcmdoctor01/?utm_source=Pilll_reminder&utm_medium=Pilll_reminder&utm_campaign=202208"));
         },
         child: Stack(
