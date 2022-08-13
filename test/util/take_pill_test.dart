@@ -621,9 +621,9 @@ void main() {
           isQuickRecord: false,
         );
 
-        verify(pillSheetDatastore.update(batch, [previousPillSheet, updatedActivePillSheet, nextPillSheet])).called(1);
-        verify(pillSheetModifiedHistoryDatastore.add(batch, history)).called(1);
-        verify(pillSheetGroupDatastore.updateWithBatch(batch, updatedPillSheetGroup)).called(1);
+        verify(pillSheetDatastore.update(batch, [previousPillSheet, updatedActivePillSheet, nextPillSheet])).called(0);
+        verify(pillSheetModifiedHistoryDatastore.add(batch, history)).called(0);
+        verify(pillSheetGroupDatastore.updateWithBatch(batch, updatedPillSheetGroup)).called(0);
         expect(result, updatedPillSheetGroup);
       });
     });
