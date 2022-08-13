@@ -545,6 +545,86 @@ void main() {
         verify(pillSheetGroupDatastore.updateWithBatch(batch, updatedPillSheetGroup)).called(1);
         expect(result, updatedPillSheetGroup);
       });
+      test("Real case 2", () async {
+        final _today = DateTime.parse("2022-08-11T19:06:00");
+        final mockTodayRepository = MockTodayService();
+        todayRepository = mockTodayRepository;
+        when(mockTodayRepository.now()).thenReturn(_today);
+
+        previousPillSheet =
+            previousPillSheet.copyWith(beginingDate: DateTime.parse("2022-06-23T00:00:00"), lastTakenDate: DateTime.parse("2022-07-20T00:00:00"));
+        activedPillSheet =
+            activedPillSheet.copyWith(beginingDate: DateTime.parse("2022-07-21T00:00:00"), lastTakenDate: DateTime.parse("2022-08-11"));
+        activedPillSheet = activedPillSheet.copyWith(restDurations: [
+          RestDuration(
+              beginDate: DateTime.parse("2022-08-04T08:19:04"),
+              createdDate: DateTime.parse("2022-08-04T08:19:04"),
+              endDate: DateTime.parse("2022-08-04T08:19:17")),
+          RestDuration(
+              beginDate: DateTime.parse("2022-08-04T08:19:32"),
+              createdDate: DateTime.parse("2022-08-04T08:19:32"),
+              endDate: DateTime.parse("2022-08-07T10:48:19")),
+          RestDuration(
+              beginDate: DateTime.parse("2022-08-07T10:48:22"),
+              createdDate: DateTime.parse("2022-08-07T10:48:22"),
+              endDate: DateTime.parse("2022-08-08T19:47:49"))
+        ]);
+        nextPillSheet = PillSheet(
+          id: "next_pill_sheet_id",
+          groupIndex: 2,
+          typeInfo: PillSheetType.pillsheet_28_7.typeInfo,
+          beginingDate: activePillSheetBeginDate.add(const Duration(days: 28)),
+          lastTakenDate: null,
+        );
+        pillSheetGroup = PillSheetGroup(
+          id: "group_id",
+          pillSheetIDs: [previousPillSheet.id!, activedPillSheet.id!, nextPillSheet.id!],
+          pillSheets: [previousPillSheet, activedPillSheet, nextPillSheet],
+          createdAt: _today,
+        );
+
+        final takenDate = _today.add(const Duration(seconds: 1));
+        pillSheetGroup = PillSheetGroup(
+          id: "group_id",
+          pillSheetIDs: [previousPillSheet.id!, activedPillSheet.id!, nextPillSheet.id!],
+          pillSheets: [previousPillSheet, activedPillSheet, nextPillSheet],
+          createdAt: _today,
+        );
+
+        final batchFactory = MockBatchFactory();
+        final batch = MockWriteBatch();
+        when(batchFactory.batch()).thenReturn(batch);
+
+        final pillSheetDatastore = MockPillSheetDatastore();
+        final updatedActivePillSheet = activedPillSheet.copyWith(lastTakenDate: takenDate);
+        when(pillSheetDatastore.update(batch, [previousPillSheet, updatedActivePillSheet, nextPillSheet])).thenReturn(null);
+
+        final pillSheetModifiedHistoryDatastore = MockPillSheetModifiedHistoryDatastore();
+        final history = PillSheetModifiedHistoryServiceActionFactory.createTakenPillAction(
+            pillSheetGroupID: pillSheetGroup.id, isQuickRecord: false, before: activedPillSheet, after: updatedActivePillSheet);
+        when(pillSheetModifiedHistoryDatastore.add(batch, history)).thenReturn(null);
+
+        final pillSheetGroupDatastore = MockPillSheetGroupDatastore();
+        when(pillSheetGroupDatastore.updateWithBatch(batch, pillSheetGroup)).thenReturn(null);
+
+        final takePill = TakePill(
+          batchFactory: batchFactory,
+          pillSheetDatastore: pillSheetDatastore,
+          pillSheetModifiedHistoryDatastore: pillSheetModifiedHistoryDatastore,
+          pillSheetGroupDatastore: pillSheetGroupDatastore,
+        );
+        final result = await takePill(
+          takenDate: takenDate,
+          activedPillSheet: activedPillSheet,
+          pillSheetGroup: pillSheetGroup,
+          isQuickRecord: false,
+        );
+
+        verifyNever(pillSheetDatastore.update(batch, [previousPillSheet, updatedActivePillSheet, nextPillSheet]));
+        verifyNever(pillSheetModifiedHistoryDatastore.add(batch, history));
+        verifyNever(pillSheetGroupDatastore.updateWithBatch(batch, pillSheetGroup));
+        expect(result, null);
+      });
     });
   });
 }
