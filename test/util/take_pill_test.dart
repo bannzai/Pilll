@@ -605,8 +605,7 @@ void main() {
         when(pillSheetModifiedHistoryDatastore.add(batch, history)).thenReturn(null);
 
         final pillSheetGroupDatastore = MockPillSheetGroupDatastore();
-        final updatedPillSheetGroup = pillSheetGroup.copyWith(pillSheets: [previousPillSheet, updatedActivePillSheet, nextPillSheet]);
-        when(pillSheetGroupDatastore.updateWithBatch(batch, updatedPillSheetGroup)).thenReturn(null);
+        when(pillSheetGroupDatastore.updateWithBatch(batch, pillSheetGroup)).thenReturn(null);
 
         final takePill = TakePill(
           batchFactory: batchFactory,
@@ -621,10 +620,10 @@ void main() {
           isQuickRecord: false,
         );
 
-        verify(pillSheetDatastore.update(batch, [previousPillSheet, updatedActivePillSheet, nextPillSheet])).called(0);
-        verify(pillSheetModifiedHistoryDatastore.add(batch, history)).called(0);
-        verify(pillSheetGroupDatastore.updateWithBatch(batch, updatedPillSheetGroup)).called(0);
-        expect(result, updatedPillSheetGroup);
+        verifyNever(pillSheetDatastore.update(batch, [previousPillSheet, updatedActivePillSheet, nextPillSheet]));
+        verifyNever(pillSheetModifiedHistoryDatastore.add(batch, history));
+        verifyNever(pillSheetGroupDatastore.updateWithBatch(batch, pillSheetGroup));
+        expect(result, null);
       });
     });
   });
