@@ -10,6 +10,7 @@ import FirebaseAuth
 
     private let teamID = "TQPN82UBBY"
     private var keychainAccessGroup: String { "\(teamID).\(Bundle.main.bundleIdentifier!)" }
+    private let isMigratedToSharedKeychainUserDefaultsKey = "isMigratedToSharedKeychainUserDefaultsKey"
 
     override func application(
         _ application: UIApplication,
@@ -95,12 +96,7 @@ import FirebaseAuth
                     }
                 }
             case "isMigratedSharedKeychain":
-                do {
-                    let appGroupUser = try Auth.auth().getStoredUser(forAccessGroup: self.keychainAccessGroup)
-                    completionHandler(["result": "success", "isMigratedSharedKeychain": true])
-                } catch {
-                    fatalError("get user from access group \(error)")
-                }
+                completionHandler(["result": "success", "isMigratedSharedKeychain": UserDefaults.standard.bool(forKey: "isMigratedToSharedKeychainUserDefaultsKey")])
             case "iOSKeychainMigrateToSharedKeychain":
                 self.migrateToSharedKeychain(_completionHandler: completionHandler)
             case _:
@@ -126,7 +122,6 @@ import FirebaseAuth
 private extension AppDelegate {
     // ref: https://firebase.google.com/docs/auth/ios/single-sign-on
     func migrateToSharedKeychain(_completionHandler: @escaping (Dictionary<String, Any>) -> Void) {
-        // 調査用
         enum Const {
             static let startMigrateionCurrentUserID = "startMigrateionCurrentUserID"
             static let errorUpdateCurrentUserID = "errorUpdateCurrentUserID"
@@ -138,29 +133,27 @@ private extension AppDelegate {
                 UserDefaults.standard.removeObject(forKey: Const.startMigrateionCurrentUserID)
                 UserDefaults.standard.removeObject(forKey: Const.errorUpdateCurrentUserID)
                 UserDefaults.standard.removeObject(forKey: Const.errorUpdateCurrentUserError)
+                UserDefaults.standard.set(true, forKey: self.isMigratedToSharedKeychainUserDefaultsKey)
             } else {
                 _completionHandler(["result": "failure", "iOSKeychainMigrateToSharedKeychain": false])
             }
         }
 
-        // 未ログインユーザーやupdateCurrentUserが異常終了した場合はcurrentUserはnilになる
+        // 未ログインユーザーや後続のupdateCurrentUserが異常終了した場合はcurrentUserはnilになる想定
         let currentUser = Auth.auth().currentUser
         if UserDefaults.standard.string(forKey: Const.startMigrateionCurrentUserID) == nil {
             UserDefaults.standard.set(currentUser?.uid, forKey: Const.startMigrateionCurrentUserID)
         }
 
-        let appGroupUser: User?
-        do {
-            appGroupUser = try Auth.auth().getStoredUser(forAccessGroup: keychainAccessGroup)
-        } catch {
-            fatalError("get user from access group \(error)")
-        }
+        // まだ移行してない時に try catchをした場合に返ってくるエラーが code:0, domain: `Foundation._GenericObjCError.nilError`, userInfo: [] という具合でcatchする意味もなさそうだった。エラーの場合は未移行として処理をしてしまう
+        let appGroupUser = try? Auth.auth().getStoredUser(forAccessGroup: keychainAccessGroup)
 
+        // NOTE: このタイミングで Auth.auth().useUserAccessGroup(keychainAccessGroup) を呼ぶのもアリだが、try catch をしなきゃいけないので呼ばなくて良いなら呼ばないようにしている
         switch (currentUser, appGroupUser) {
-        case (let currentUser?, let appGroupUser?):
+        case (let _?, let _?):
             // すでに移行済み
             completionHandler(true)
-        case (nil, let appGroupUser?):
+        case (nil, let _?):
             // 移行済みではあるが、何かしらの理由でcurrentUserが取得できない状態。Flutterの方でログイン状態の監視を行なっているので成功にして処理を進める
             completionHandler(true)
         case (nil, nil):
@@ -176,14 +169,15 @@ private extension AppDelegate {
             do {
                 try Auth.auth().useUserAccessGroup(keychainAccessGroup)
             } catch {
-                fatalError("Error changing user access group: \(error)")
+                completionHandler(false)
+                return
             }
 
             Auth.auth().updateCurrentUser(currentUser) { error in
-                if error != nil {
+                if let error = errro {
                     // ここではfatalErrorにしない。 再起動後にcase (nil, nil) の状態になり新しいユーザーでFlutter側でログインされてしまうため
                     UserDefaults.standard.set(currentUser.uid, forKey: Const.errorUpdateCurrentUserID)
-                    UserDefaults.standard.set(error?.localizedDescription, forKey: Const.errorUpdateCurrentUserError)
+                    UserDefaults.standard.set(error.localizedDescription, forKey: Const.errorUpdateCurrentUserError)
                     completionHandler(false)
                 } else {
                     completionHandler(true)
