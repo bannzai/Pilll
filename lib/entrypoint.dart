@@ -25,7 +25,11 @@ Future<void> entrypoint() async {
   runZonedGuarded(() async {
     WidgetsFlutterBinding.ensureInitialized();
 
+    // `ここから`順番は変えてはいけない
     await Firebase.initializeApp();
+    // QuickRecordの処理などFirebaseを使用するのでFirebase.initializeApp()の後に時刻する
+    // また、同じくQuickRecordの処理開始までにMethodChannelが確立されていてほしいのでこの処理はなるべく早く実行する
+    definedChannel();
     if (Platform.isIOS) {
       if (!(await isMigratedSharedKeychain())) {
         final isSuccess = await iOSKeychainMigrateToSharedKeychain();
@@ -36,10 +40,7 @@ Future<void> entrypoint() async {
         }
       }
     }
-
-    // QuickRecordの処理などFirebaseを使用するのでFirebase.initializeApp()の後に時刻する
-    // また、同じくQuickRecordの処理開始までにMethodChannelが確立されていてほしいのでこの処理はなるべく早く実行する
-    definedChannel();
+    // `ここまで`順番は変えてはいけない
 
     if (kDebugMode) {
       overrideDebugPrint();
