@@ -117,7 +117,7 @@ import FirebaseAuth
     }
 
     private func analytics(name: String, parameters: [String: Any]? = nil) {
-        channel?.invokeMethod("analytics", arguments: ["name": name, "parameters": parameters])
+        channel?.invokeMethod("analytics", arguments: ["name": name, "parameters": parameters ?? [:]])
     }
 }
 
@@ -155,7 +155,7 @@ private extension AppDelegate {
 
         // まだ移行してない時に try catchをした場合に返ってくるエラーが code:0, domain: `Foundation._GenericObjCError.nilError`, userInfo: [] という具合でcatchする意味もなさそうだった。エラーの場合は未移行として処理をしてしまう
         let appGroupUser = try? Auth.auth().getStoredUser(forAccessGroup: keychainAccessGroup)
-        analytics(name: "migration_users", parameters: ["currentUserID": currentUser?.uid, "appGroupUserID": appGroupUser?.uid])
+        analytics(name: "migration_users", parameters: ["currentUserID": currentUser?.uid ?? "", "appGroupUserID": appGroupUser?.uid ?? ""])
 
         // NOTE: このタイミングで Auth.auth().useUserAccessGroup(keychainAccessGroup) を呼ぶのもアリだが、try catch をしなきゃいけないので呼ばなくて良いなら呼ばないようにしている
         switch (currentUser, appGroupUser) {
