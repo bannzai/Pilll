@@ -2,10 +2,15 @@ import UIKit
 import ObjectiveC
 import Flutter
 import HealthKit
+import FirebaseAuth
 
 @UIApplicationMain
 @objc class AppDelegate: FlutterAppDelegate {
     var channel: FlutterMethodChannel?
+
+    let teamID = "TQPN82UBBY"
+    let keychainAccessGroup = "\(teamID).\(Bundle.main.bundleIdentifier!)"
+
     override func application(
         _ application: UIApplication,
         didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?
@@ -89,6 +94,39 @@ import HealthKit
                         completionHandler(failure.toDictionary())
                     }
                 }
+            case "isMigratedSharedKeychain":
+                do {
+                    let appGroupUser = try Auth.auth().getStoredUser(forAccessGroup: keychainAccessGroup)
+                    completionHandler(appGroupUser != nil)
+                } catch {
+                    fatalError("get user from access group \(error)")
+                }
+            case "iOSKeychainMigrateToSharedKeychain":
+                // ref: https://firebase.google.com/docs/auth/ios/single-sign-on
+                let currentUser = Auth.auth().currentUser
+                guard let currentUser = currentUser else {
+                    return
+                }
+
+                let appGroupUser: User?
+                do {
+                    appGroupUser = try Auth.auth().getStoredUser(forAccessGroup: keychainAccessGroup)
+                } catch {
+                    fatalError("get user from access group \(error)")
+                }
+
+                if appGroupUser == nil {
+                    do {
+                        try Auth.auth().useUserAccessGroup(keychainAccessGroup)
+                    } catch {
+                        fatalError("Error changing user access group: \(error)")
+                    }
+
+                    Auth.auth().updateCurrentUser(currentUser) { error in
+                        fatalError("unexpected error when udpate current user")
+                    }
+                }
+                completionHandler(true)
             case _:
                 return
             }
