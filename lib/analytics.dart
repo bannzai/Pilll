@@ -6,7 +6,7 @@ import 'package:flutter/foundation.dart';
 final firebaseAnalytics = FirebaseAnalytics.instance;
 
 class Analytics {
-  logEvent({required String name, Map<String, dynamic>? parameters}) async {
+  void logEvent({required String name, Map<String, dynamic>? parameters}) async {
     assert(name.length <= 40, "firebase analytics log event name limit length up to 40");
     if (kDebugMode) {
       print("[INFO] logEvent name: $name, parameters: $parameters");
@@ -23,7 +23,7 @@ class Analytics {
     return firebaseAnalytics.logEvent(name: name, parameters: parameters);
   }
 
-  setCurrentScreen({required String screenName, String screenClassOverride = 'Flutter'}) async {
+  void setCurrentScreen({required String screenName, String screenClassOverride = 'Flutter'}) async {
     unawaited(firebaseAnalytics.logEvent(name: "screen_$screenName"));
     return firebaseAnalytics.setCurrentScreen(screenName: screenName, screenClassOverride: screenClassOverride);
   }
@@ -31,7 +31,7 @@ class Analytics {
   /// Up to 25 user property names are supported.
   // The "firebase_" prefix is reserved and should not be used for
   /// user property names.
-  setUserProperties(String name, value) {
+  void setUserProperties(String name, value) {
     assert(name.toLowerCase() != "age");
     assert(name.toLowerCase() != "gender");
     assert(name.toLowerCase() != "interest");
