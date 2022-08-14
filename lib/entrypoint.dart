@@ -29,7 +29,7 @@ Future<void> entrypoint() async {
     await Firebase.initializeApp();
     // QuickRecordの処理などFirebaseを使用するのでFirebase.initializeApp()の後に時刻する
     // また、同じくQuickRecordの処理開始までにMethodChannelが確立されていてほしいのでこの処理はなるべく早く実行する
-    definedChannel();
+    defineChannel();
     if (Platform.isIOS) {
       if (!(await isMigratedSharedKeychain())) {
         final isSuccess = await iOSKeychainMigrateToSharedKeychain();

@@ -4,7 +4,7 @@ import 'package:pilll/native/legacy.dart';
 import 'package:pilll/native/pill.dart';
 
 const methodChannel = MethodChannel("method.channel.MizukiOhashi.Pilll");
-void definedChannel() {
+void defineChannel() {
   methodChannel.setMethodCallHandler((MethodCall call) async {
     switch (call.method) {
       case 'recordPill':
