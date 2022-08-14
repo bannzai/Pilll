@@ -23,7 +23,9 @@ import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 Future<void> entrypoint() async {
   runZonedGuarded(() async {
     WidgetsFlutterBinding.ensureInitialized();
+
     await Firebase.initializeApp();
+
     // QuickRecordの処理などFirebaseを使用するのでFirebase.initializeApp()の後に時刻する
     // また、同じくQuickRecordの処理開始までにMethodChannelが確立されていてほしいのでこの処理はなるべく早く実行する
     definedChannel();
@@ -52,8 +54,7 @@ Future<void> entrypoint() async {
 
 void connectToEmulator() {
   final domain = Platform.isAndroid ? '10.0.2.2' : 'localhost';
-  FirebaseFirestore.instance.settings = Settings(
-      persistenceEnabled: false, host: '$domain:8080', sslEnabled: false);
+  FirebaseFirestore.instance.settings = Settings(persistenceEnabled: false, host: '$domain:8080', sslEnabled: false);
 }
 
 class App extends StatelessWidget {
@@ -62,9 +63,7 @@ class App extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      navigatorObservers: [
-        FirebaseAnalyticsObserver(analytics: firebaseAnalytics)
-      ],
+      navigatorObservers: [FirebaseAnalyticsObserver(analytics: firebaseAnalytics)],
       theme: ThemeData(
         appBarTheme: const AppBarTheme(
           systemOverlayStyle: SystemUiOverlayStyle.dark,
@@ -78,8 +77,7 @@ class App extends StatelessWidget {
         primaryColor: PilllColors.primary,
         visualDensity: VisualDensity.adaptivePlatformDensity,
         toggleableActiveColor: PilllColors.primary,
-        cupertinoOverrideTheme: const NoDefaultCupertinoThemeData(
-            textTheme: CupertinoTextThemeData(textStyle: FontType.xBigTitle)),
+        cupertinoOverrideTheme: const NoDefaultCupertinoThemeData(textTheme: CupertinoTextThemeData(textStyle: FontType.xBigTitle)),
         buttonTheme: const ButtonThemeData(
           buttonColor: PilllColors.secondary,
           disabledColor: PilllColors.disable,
