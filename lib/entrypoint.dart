@@ -11,6 +11,7 @@ import 'package:pilll/components/atoms/font.dart';
 import 'package:pilll/domain/root/root.dart';
 import 'package:pilll/error/universal_error_page.dart';
 import 'package:pilll/native/channel.dart';
+import 'package:pilll/native/ios_keychain_migration.dart';
 import 'package:pilll/util/datetime/debug_print.dart';
 import 'package:pilll/util/environment.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
@@ -25,6 +26,11 @@ Future<void> entrypoint() async {
     WidgetsFlutterBinding.ensureInitialized();
 
     await Firebase.initializeApp();
+    if (Platform.isIOS) {
+      if (!(await isMigratedSharedKeychain())) {
+        await iOSKeychainMigrateToSharedKeychain();
+      }
+    }
 
     // QuickRecordの処理などFirebaseを使用するのでFirebase.initializeApp()の後に時刻する
     // また、同じくQuickRecordの処理開始までにMethodChannelが確立されていてほしいのでこの処理はなるべく早く実行する
