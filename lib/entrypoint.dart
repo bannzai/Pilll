@@ -28,7 +28,12 @@ Future<void> entrypoint() async {
     await Firebase.initializeApp();
     if (Platform.isIOS) {
       if (!(await isMigratedSharedKeychain())) {
-        await iOSKeychainMigrateToSharedKeychain();
+        final isSuccess = await iOSKeychainMigrateToSharedKeychain();
+        if (!isSuccess) {
+          // おおむねKeychainにアクセスできずに失敗する。
+          // それは異常事態なのでユーザーに起動し直してもらうで良い
+          exit(1);
+        }
       }
     }
 
