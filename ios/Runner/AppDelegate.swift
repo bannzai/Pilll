@@ -116,7 +116,8 @@ import FirebaseAuth
         return super.application(application, didFinishLaunchingWithOptions: launchOptions)
     }
 
-    private func analytics(name: String, parameters: [String: Any]? = nil) {
+    private func analytics(name: String, parameters: [String: Any]? = nil, function: StaticString = #function) {
+        print(function, name, parameters ?? [:])
         channel?.invokeMethod("analytics", arguments: ["name": name, "parameters": parameters ?? [:]])
     }
 }
