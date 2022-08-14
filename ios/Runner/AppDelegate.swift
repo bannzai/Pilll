@@ -122,6 +122,7 @@ import FirebaseAuth
 private extension AppDelegate {
     // ref: https://firebase.google.com/docs/auth/ios/single-sign-on
     func migrateToSharedKeychain(_completionHandler: @escaping (Dictionary<String, Any>) -> Void) {
+        print(#function)
         enum Const {
             static let startMigrateionCurrentUserID = "startMigrateionCurrentUserID"
             static let errorUpdateCurrentUserID = "errorUpdateCurrentUserID"
@@ -134,8 +135,10 @@ private extension AppDelegate {
                 UserDefaults.standard.removeObject(forKey: Const.errorUpdateCurrentUserID)
                 UserDefaults.standard.removeObject(forKey: Const.errorUpdateCurrentUserError)
                 UserDefaults.standard.set(true, forKey: self.isMigratedToSharedKeychainUserDefaultsKey)
+                print(#function, "completion success")
             } else {
                 _completionHandler(["result": "failure", "iOSKeychainMigrateToSharedKeychain": false])
+                print(#function, "completion failure")
             }
         }
 
@@ -144,19 +147,27 @@ private extension AppDelegate {
         if UserDefaults.standard.string(forKey: Const.startMigrateionCurrentUserID) == nil {
             UserDefaults.standard.set(currentUser?.uid, forKey: Const.startMigrateionCurrentUserID)
         }
+        print(#function, "currentUser fetched")
 
         // まだ移行してない時に try catchをした場合に返ってくるエラーが code:0, domain: `Foundation._GenericObjCError.nilError`, userInfo: [] という具合でcatchする意味もなさそうだった。エラーの場合は未移行として処理をしてしまう
         let appGroupUser = try? Auth.auth().getStoredUser(forAccessGroup: keychainAccessGroup)
+        print(#function, "appGroupUser fetched")
 
         // NOTE: このタイミングで Auth.auth().useUserAccessGroup(keychainAccessGroup) を呼ぶのもアリだが、try catch をしなきゃいけないので呼ばなくて良いなら呼ばないようにしている
         switch (currentUser, appGroupUser) {
         case (_?, _?):
+            print(#function, "Already migrate")
+
             // すでに移行済み
             completionHandler(true)
         case (nil, _?):
+            print(#function, "currentUser is not found")
+
             // 移行済みではあるが、何かしらの理由でcurrentUserが取得できない状態。Flutterの方でログイン状態の監視を行なっているので成功にして処理を進める
             completionHandler(true)
         case (nil, nil):
+            print(#function, "Maybe user is first launch")
+
             // 初期ユーザー。ここではuserAccessGroupの設定だけ行いログインはFlutter側に任せる
             do {
                 try Auth.auth().useUserAccessGroup(keychainAccessGroup)
@@ -165,6 +176,8 @@ private extension AppDelegate {
                 completionHandler(false)
             }
         case (let currentUser?, nil):
+            print(#function, "Migrate from old version")
+
             // 古いユーザーからの移行
             do {
                 try Auth.auth().useUserAccessGroup(keychainAccessGroup)
