@@ -115,6 +115,10 @@ import FirebaseAuth
         GeneratedPluginRegistrant.register(with: self)
         return super.application(application, didFinishLaunchingWithOptions: launchOptions)
     }
+
+    private func analytics(name: String, parameters: [String: Any]? = nil) {
+        channel?.invokeMethod("analytics", arguments: ["name": name, "parameters": parameters])
+    }
 }
 
 
@@ -122,7 +126,8 @@ import FirebaseAuth
 private extension AppDelegate {
     // ref: https://firebase.google.com/docs/auth/ios/single-sign-on
     func migrateToSharedKeychain(_completionHandler: @escaping (Dictionary<String, Any>) -> Void) {
-        print(#function)
+        analytics(name: "start_migration")
+
         enum Const {
             static let startMigrateionCurrentUserID = "startMigrateionCurrentUserID"
             static let errorUpdateCurrentUserID = "errorUpdateCurrentUserID"
@@ -135,10 +140,10 @@ private extension AppDelegate {
                 UserDefaults.standard.removeObject(forKey: Const.errorUpdateCurrentUserID)
                 UserDefaults.standard.removeObject(forKey: Const.errorUpdateCurrentUserError)
                 UserDefaults.standard.set(true, forKey: self.isMigratedToSharedKeychainUserDefaultsKey)
-                print(#function, "completion success")
+                self.analytics(name: "migration_complete", parameters: ["isSuccess": true])
             } else {
                 _completionHandler(["result": "failure", "iOSKeychainMigrateToSharedKeychain": false])
-                print(#function, "completion failure")
+                self.analytics(name: "migration_complete", parameters: ["isSuccess": false])
             }
         }
 
@@ -147,27 +152,23 @@ private extension AppDelegate {
         if UserDefaults.standard.string(forKey: Const.startMigrateionCurrentUserID) == nil {
             UserDefaults.standard.set(currentUser?.uid, forKey: Const.startMigrateionCurrentUserID)
         }
-        print(#function, "currentUser fetched", currentUser?.uid)
 
         // まだ移行してない時に try catchをした場合に返ってくるエラーが code:0, domain: `Foundation._GenericObjCError.nilError`, userInfo: [] という具合でcatchする意味もなさそうだった。エラーの場合は未移行として処理をしてしまう
         let appGroupUser = try? Auth.auth().getStoredUser(forAccessGroup: keychainAccessGroup)
-        print(#function, "appGroupUser fetched", appGroupUser?.uid)
+        analytics(name: "migration_users", parameters: ["currentUserID": currentUser?.uid, "appGroupUserID": appGroupUser?.uid])
 
         // NOTE: このタイミングで Auth.auth().useUserAccessGroup(keychainAccessGroup) を呼ぶのもアリだが、try catch をしなきゃいけないので呼ばなくて良いなら呼ばないようにしている
         switch (currentUser, appGroupUser) {
         case (_?, _?):
-            print(#function, "Already migrate")
-
+            analytics(name: "migration_already_end")
             // すでに移行済み
             completionHandler(true)
         case (nil, _?):
-            print(#function, "currentUser is not found")
-
+            analytics(name: "maybe_migration_already_end")
             // 移行済みではあるが、何かしらの理由でcurrentUserが取得できない状態。Flutterの方でログイン状態の監視を行なっているので成功にして処理を進める
             completionHandler(true)
         case (nil, nil):
-            print(#function, "Maybe user is first launch")
-
+            analytics(name: "no_need_migration")
             // 初期ユーザー。ここではuserAccessGroupの設定だけ行いログインはFlutter側に任せる
             do {
                 try Auth.auth().useUserAccessGroup(keychainAccessGroup)
@@ -176,7 +177,7 @@ private extension AppDelegate {
                 completionHandler(false)
             }
         case (let currentUser?, nil):
-            print(#function, "Migrate from old version")
+            analytics(name: "migrate_from_old_version")
 
             // 古いユーザーからの移行
             do {
@@ -192,8 +193,10 @@ private extension AppDelegate {
                     UserDefaults.standard.set(currentUser.uid, forKey: Const.errorUpdateCurrentUserID)
                     UserDefaults.standard.set(error.localizedDescription, forKey: Const.errorUpdateCurrentUserError)
                     completionHandler(false)
+                    self.analytics(name: "update_current_user_is_fail", parameters: ["code": error._code, "domain": error._domain, "error": error.localizedDescription])
                 } else {
                     completionHandler(true)
+                    self.analytics(name: "update_current_user_is_success")
                 }
             }
         }
