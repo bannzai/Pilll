@@ -69,7 +69,7 @@ Future<User> cachedUserOrSignInAnonymously() async {
     analytics.logEvent(name: "cached_current_user_not_exists");
 
     // keep until FirebaseAuth.instance user state updated
-    final obtainLatestChangedOptionalUserState = Future<User?>(() {
+    final waitLatestChangedOptionalUserState = Future<User?>(() {
       final completer = Completer<User?>();
 
       StreamSubscription<User?>? subscription;
@@ -80,7 +80,7 @@ Future<User> cachedUserOrSignInAnonymously() async {
       return completer.future;
     });
 
-    final obtainedUser = await obtainLatestChangedOptionalUserState;
+    final obtainedUser = await waitLatestChangedOptionalUserState;
     if (obtainedUser != null) {
       analytics.logEvent(
         name: "obtained_current_user_exists",
@@ -102,7 +102,7 @@ Future<User> cachedUserOrSignInAnonymously() async {
     }
 
     // keep until FirebaseAuth.instance user state updated
-    final obtainLatestChangedUserState = Future<User>(() {
+    final waitLatestChangedUserState = Future<User>(() {
       final completer = Completer<User>();
       final Stream<User> nonOptionalStream = _userAuthStateChanges().where((event) => event != null).cast();
 
@@ -114,7 +114,7 @@ Future<User> cachedUserOrSignInAnonymously() async {
       return completer.future;
     });
 
-    final User signedUser = await obtainLatestChangedUserState;
+    final User signedUser = await waitLatestChangedUserState;
     assert(anonymousUser.user?.uid == signedUser.uid);
     return signedUser;
   }
