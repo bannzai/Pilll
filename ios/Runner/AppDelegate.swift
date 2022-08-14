@@ -8,8 +8,8 @@ import FirebaseAuth
 @objc class AppDelegate: FlutterAppDelegate {
     var channel: FlutterMethodChannel?
 
-    let teamID = "TQPN82UBBY"
-    let keychainAccessGroup = "\(teamID).\(Bundle.main.bundleIdentifier!)"
+    private let teamID = "TQPN82UBBY"
+    private var keychainAccessGroup: String { "\(teamID).\(Bundle.main.bundleIdentifier!)" }
 
     override func application(
         _ application: UIApplication,
@@ -96,37 +96,13 @@ import FirebaseAuth
                 }
             case "isMigratedSharedKeychain":
                 do {
-                    let appGroupUser = try Auth.auth().getStoredUser(forAccessGroup: keychainAccessGroup)
-                    completionHandler(appGroupUser != nil)
+                    let appGroupUser = try Auth.auth().getStoredUser(forAccessGroup: self.keychainAccessGroup)
+                    completionHandler(["result": "success", "isMigratedSharedKeychain": true])
                 } catch {
                     fatalError("get user from access group \(error)")
                 }
             case "iOSKeychainMigrateToSharedKeychain":
-                // ref: https://firebase.google.com/docs/auth/ios/single-sign-on
-                let currentUser = Auth.auth().currentUser
-                guard let currentUser = currentUser else {
-                    return
-                }
-
-                let appGroupUser: User?
-                do {
-                    appGroupUser = try Auth.auth().getStoredUser(forAccessGroup: keychainAccessGroup)
-                } catch {
-                    fatalError("get user from access group \(error)")
-                }
-
-                if appGroupUser == nil {
-                    do {
-                        try Auth.auth().useUserAccessGroup(keychainAccessGroup)
-                    } catch {
-                        fatalError("Error changing user access group: \(error)")
-                    }
-
-                    Auth.auth().updateCurrentUser(currentUser) { error in
-                        fatalError("unexpected error when udpate current user")
-                    }
-                }
-                completionHandler(true)
+                self.migrateToSharedKeychain(_completionHandler: completionHandler)
             case _:
                 return
             }
@@ -142,6 +118,78 @@ import FirebaseAuth
         UNUserNotificationCenter.current().delegate = self as UNUserNotificationCenterDelegate
         GeneratedPluginRegistrant.register(with: self)
         return super.application(application, didFinishLaunchingWithOptions: launchOptions)
+    }
+}
+
+
+// MARK: - Keychain migration
+private extension AppDelegate {
+    // ref: https://firebase.google.com/docs/auth/ios/single-sign-on
+    func migrateToSharedKeychain(_completionHandler: @escaping (Dictionary<String, Any>) -> Void) {
+        // 調査用
+        enum Const {
+            static let startMigrateionCurrentUserID = "startMigrateionCurrentUserID"
+            static let errorUpdateCurrentUserID = "errorUpdateCurrentUserID"
+            static let errorUpdateCurrentUserError = "errorUpdateCurrentUserError"
+        }
+        let completionHandler: (Bool) -> Void = { isMigrated in
+            if isMigrated {
+                _completionHandler(["result": "success", "iOSKeychainMigrateToSharedKeychain": true])
+                UserDefaults.standard.removeObject(forKey: Const.startMigrateionCurrentUserID)
+                UserDefaults.standard.removeObject(forKey: Const.errorUpdateCurrentUserID)
+                UserDefaults.standard.removeObject(forKey: Const.errorUpdateCurrentUserError)
+            } else {
+                _completionHandler(["result": "failure", "iOSKeychainMigrateToSharedKeychain": false])
+            }
+        }
+
+        // 未ログインユーザーやupdateCurrentUserが異常終了した場合はcurrentUserはnilになる
+        let currentUser = Auth.auth().currentUser
+        if UserDefaults.standard.string(forKey: Const.startMigrateionCurrentUserID) == nil {
+            UserDefaults.standard.set(currentUser?.uid, forKey: Const.startMigrateionCurrentUserID)
+        }
+
+        let appGroupUser: User?
+        do {
+            appGroupUser = try Auth.auth().getStoredUser(forAccessGroup: keychainAccessGroup)
+        } catch {
+            fatalError("get user from access group \(error)")
+        }
+
+        switch (currentUser, appGroupUser) {
+        case (let currentUser?, let appGroupUser?):
+            // すでに移行済み
+            completionHandler(true)
+        case (nil, let appGroupUser?):
+            // 移行済みではあるが、何かしらの理由でcurrentUserが取得できない状態。Flutterの方でログイン状態の監視を行なっているので成功にして処理を進める
+            completionHandler(true)
+        case (nil, nil):
+            // 初期ユーザー。ここではuserAccessGroupの設定だけ行いログインはFlutter側に任せる
+            do {
+                try Auth.auth().useUserAccessGroup(keychainAccessGroup)
+                completionHandler(true)
+            } catch {
+                completionHandler(false)
+            }
+        case (let currentUser?, nil):
+            // 古いユーザーからの移行
+            do {
+                try Auth.auth().useUserAccessGroup(keychainAccessGroup)
+            } catch {
+                fatalError("Error changing user access group: \(error)")
+            }
+
+            Auth.auth().updateCurrentUser(currentUser) { error in
+                if error != nil {
+                    // ここではfatalErrorにしない。 再起動後にcase (nil, nil) の状態になり新しいユーザーでFlutter側でログインされてしまうため
+                    UserDefaults.standard.set(currentUser.uid, forKey: Const.errorUpdateCurrentUserID)
+                    UserDefaults.standard.set(error?.localizedDescription, forKey: Const.errorUpdateCurrentUserError)
+                    completionHandler(false)
+                } else {
+                    completionHandler(true)
+                }
+            }
+        }
     }
 }
 
