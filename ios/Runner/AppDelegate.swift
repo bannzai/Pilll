@@ -193,11 +193,11 @@ private extension AppDelegate {
                     // ここではfatalErrorにしない。 再起動後にcase (nil, nil) の状態になり新しいユーザーでFlutter側でログインされてしまうため
                     UserDefaults.standard.set(currentUser.uid, forKey: Const.errorUpdateCurrentUserID)
                     UserDefaults.standard.set(error.localizedDescription, forKey: Const.errorUpdateCurrentUserError)
-                    completionHandler(false)
                     self.analytics(name: "update_current_user_is_fail", parameters: ["code": error._code, "domain": error._domain, "error": error.localizedDescription])
+                    completionHandler(false)
                 } else {
-                    completionHandler(true)
                     self.analytics(name: "update_current_user_is_success")
+                    completionHandler(true)
                 }
             }
         }
