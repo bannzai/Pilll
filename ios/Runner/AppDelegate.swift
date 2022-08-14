@@ -150,10 +150,10 @@ private extension AppDelegate {
 
         // NOTE: このタイミングで Auth.auth().useUserAccessGroup(keychainAccessGroup) を呼ぶのもアリだが、try catch をしなきゃいけないので呼ばなくて良いなら呼ばないようにしている
         switch (currentUser, appGroupUser) {
-        case (let _?, let _?):
+        case (_?, _?):
             // すでに移行済み
             completionHandler(true)
-        case (nil, let _?):
+        case (nil, _?):
             // 移行済みではあるが、何かしらの理由でcurrentUserが取得できない状態。Flutterの方でログイン状態の監視を行なっているので成功にして処理を進める
             completionHandler(true)
         case (nil, nil):
@@ -174,7 +174,7 @@ private extension AppDelegate {
             }
 
             Auth.auth().updateCurrentUser(currentUser) { error in
-                if let error = errro {
+                if let error = error {
                     // ここではfatalErrorにしない。 再起動後にcase (nil, nil) の状態になり新しいユーザーでFlutter側でログインされてしまうため
                     UserDefaults.standard.set(currentUser.uid, forKey: Const.errorUpdateCurrentUserID)
                     UserDefaults.standard.set(error.localizedDescription, forKey: Const.errorUpdateCurrentUserError)
