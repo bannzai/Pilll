@@ -158,7 +158,7 @@ private extension AppDelegate {
         let appGroupUser = try? Auth.auth().getStoredUser(forAccessGroup: keychainAccessGroup)
         analytics(name: "migration_users", parameters: ["currentUserID": currentUser?.uid ?? "", "appGroupUserID": appGroupUser?.uid ?? ""])
 
-        // NOTE: このタイミングで Auth.auth().useUserAccessGroup(keychainAccessGroup) を呼ぶのもアリだが、try catch をしなきゃいけないので呼ばなくて良いなら呼ばないようにしている
+        // NOTE: switch前のこの場所でAuth.auth().useUserAccessGroup(keychainAccessGroup) を呼ぶのもアリだが、try catch をしなきゃいけないので呼ばなくて良いなら呼ばないようにしている
         switch (currentUser, appGroupUser) {
         case (_?, _?):
             analytics(name: "migration_already_end")
