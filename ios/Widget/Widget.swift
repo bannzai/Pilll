@@ -46,7 +46,7 @@ struct WidgetEntryView : View {
 }
 
 @main
-struct Widget: Widget {
+struct Entrypoint: Widget {
     let kind: String = "Widget"
 
     var body: some WidgetConfiguration {
