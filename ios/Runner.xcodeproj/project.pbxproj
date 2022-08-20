@@ -15,7 +15,6 @@
 		2006A7CF28B0BB680066E4DD /* Widget.intentdefinition in Sources */ = {isa = PBXBuildFile; fileRef = 2006A7CB28B0BB670066E4DD /* Widget.intentdefinition */; };
 		2006A7D028B0BB680066E4DD /* Widget.intentdefinition in Sources */ = {isa = PBXBuildFile; fileRef = 2006A7CB28B0BB670066E4DD /* Widget.intentdefinition */; };
 		2006A7D328B0BB680066E4DD /* WidgetExtension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 2006A7C328B0BB670066E4DD /* WidgetExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
-		2006A7DF28B0C0290066E4DD /* WidgetBundle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2006A7DE28B0C0290066E4DD /* WidgetBundle.swift */; };
 		2006A7E228B0CE200066E4DD /* Const.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2006A7E028B0CDC00066E4DD /* Const.swift */; };
 		2006A7E328B0CE210066E4DD /* Const.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2006A7E028B0CDC00066E4DD /* Const.swift */; };
 		20C768EB27D2B4E700BA525C /* Profile-Development.xcconfig in Resources */ = {isa = PBXBuildFile; fileRef = 20C768E927D2B4E700BA525C /* Profile-Development.xcconfig */; };
@@ -94,7 +93,6 @@
 		2006A7CC28B0BB680066E4DD /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		2006A7CE28B0BB680066E4DD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2006A7DD28B0BE130066E4DD /* WidgetExtension.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = WidgetExtension.entitlements; sourceTree = "<group>"; };
-		2006A7DE28B0C0290066E4DD /* WidgetBundle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WidgetBundle.swift; sourceTree = "<group>"; };
 		2006A7E028B0CDC00066E4DD /* Const.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Const.swift; sourceTree = "<group>"; };
 		20C768E927D2B4E700BA525C /* Profile-Development.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; name = "Profile-Development.xcconfig"; path = "Flutter/Profile-Development.xcconfig"; sourceTree = "<group>"; };
 		20C768EA27D2B4E700BA525C /* Profile.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; name = Profile.xcconfig; path = Flutter/Profile.xcconfig; sourceTree = "<group>"; };
@@ -171,7 +169,6 @@
 			isa = PBXGroup;
 			children = (
 				2006A7C928B0BB670066E4DD /* Widget.swift */,
-				2006A7DE28B0C0290066E4DD /* WidgetBundle.swift */,
 				2006A7CB28B0BB670066E4DD /* Widget.intentdefinition */,
 				2006A7CC28B0BB680066E4DD /* Assets.xcassets */,
 				2006A7CE28B0BB680066E4DD /* Info.plist */,
@@ -574,7 +571,6 @@
 				20DBB04627A88D1D0069A9A2 /* HealthKit.swift in Sources */,
 				74858FAF1ED2DC5600515810 /* AppDelegate.swift in Sources */,
 				1498D2341E8E89220040F4C2 /* GeneratedPluginRegistrant.m in Sources */,
-				2006A7DF28B0C0290066E4DD /* WidgetBundle.swift in Sources */,
 				2006A7E328B0CE210066E4DD /* Const.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
