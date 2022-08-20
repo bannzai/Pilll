@@ -7,7 +7,6 @@ import HealthKit
 @UIApplicationMain
 @objc class AppDelegate: FlutterAppDelegate {
     private var channel: FlutterMethodChannel?
-    private let appGroupKey = "group.\(Bundle.main.bundleIdentifier!)"
 
     override func application(
         _ application: UIApplication,
@@ -95,7 +94,7 @@ import HealthKit
             case "saveToNativeLocalStorage":
                 let key = call.arguments["key"] as! String
                 let value = call.arguments["value"]
-                UserDefaults(suiteName: appGroupKey)?.set(value, forKey: key)
+                UserDefaults(suiteName: Const.appGroupKey)?.set(value, forKey: key)
                 completionHandler(["result": "success"])
             case _:
                 return
