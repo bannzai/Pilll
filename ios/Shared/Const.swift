@@ -6,4 +6,7 @@ enum Const {
     #else
     static let appGroupKey = "group.com.mizuki.Ohashi.Pilll"
     #endif
+
+    static let pillSheetBeginDate = "pillSheetBeginDate"
+    static let pillSheetLastTakenDate = "pillSheetLastTakenDate"
 }
