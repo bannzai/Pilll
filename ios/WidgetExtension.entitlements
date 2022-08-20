@@ -7,5 +7,10 @@
 		<string>group.com.mizuki.Ohashi.Pilll.dev</string>
 		<string>group.com.mizuki.Ohashi.Pilll</string>
 	</array>
+	<key>keychain-access-groups</key>
+	<array>
+		<string>$(AppIdentifierPrefix)TQPN82UBBY.com.mizuki.Ohashi.Pilll.keychain</string>
+		<string>$(AppIdentifierPrefix)TQPN82UBBY.com.mizuki.Ohashi.Pilll.dev.keychain</string>
+	</array>
 </dict>
 </plist>
