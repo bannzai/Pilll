@@ -9,7 +9,7 @@ import FirebaseAuth
     var channel: FlutterMethodChannel?
 
     private let teamID = "TQPN82UBBY"
-    private var keychainAccessGroup: String { "\(teamID).\(Bundle.main.bundleIdentifier!)" }
+    private var keychainAccessGroup: String { "\(teamID).\(Bundle.main.bundleIdentifier!).keychain" }
     private let isMigratedToSharedKeychainUserDefaultsKey = "isMigratedToSharedKeychainUserDefaultsKey"
 
     override func application(
