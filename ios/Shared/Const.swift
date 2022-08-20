@@ -8,5 +8,7 @@ enum Const {
     #endif
 
     static let pillSheetBeginDate = "pillSheetBeginDate"
+    static let pillSheetNumberOffset = "pillSheetNumberOffset"
     static let pillSheetLastTakenDate = "pillSheetLastTakenDate"
+    static let pillSheetCurrentStatus = "pillSheetCurrentStatus"
 }
