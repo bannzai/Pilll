@@ -17,7 +17,8 @@ final authStateStreamProvider = StreamProvider<User>(
   (ref) => _userAuthStateChanges().where((event) => event != null).cast(),
 );
 
-final isLinkedProvider = Provider((ref) => apple.isLinkedApple() || google.isLinkedGoogle());
+final isLinkedProvider =
+    Provider((ref) => apple.isLinkedApple() || google.isLinkedGoogle());
 
 class AuthService {
   // 退会時は一時的にnullになる。なのでOptional型のこのstreamを使う
@@ -56,7 +57,9 @@ Future<User> cachedUserOrSignInAnonymously() async {
   );
 
   if (currentUser != null) {
-    analytics.logEvent(name: "cached_current_user_exists", parameters: _logginParameters(currentUser));
+    analytics.logEvent(
+        name: "cached_current_user_exists",
+        parameters: _logginParameters(currentUser));
 
     final sharedPreferences = await SharedPreferences.getInstance();
     final existsUID = sharedPreferences.getString(StringKey.currentUserUID);
@@ -69,7 +72,7 @@ Future<User> cachedUserOrSignInAnonymously() async {
     analytics.logEvent(name: "cached_current_user_not_exists");
 
     // keep until FirebaseAuth.instance user state updated
-    final waitLatestChangedOptionalUserState = Future<User?>(() {
+    final obtainLatestChangedOptionalUserState = Future<User?>(() {
       final completer = Completer<User?>();
 
       StreamSubscription<User?>? subscription;
@@ -80,7 +83,7 @@ Future<User> cachedUserOrSignInAnonymously() async {
       return completer.future;
     });
 
-    final obtainedUser = await waitLatestChangedOptionalUserState;
+    final obtainedUser = await obtainLatestChangedOptionalUserState;
     if (obtainedUser != null) {
       analytics.logEvent(
         name: "obtained_current_user_exists",
@@ -90,21 +93,26 @@ Future<User> cachedUserOrSignInAnonymously() async {
     }
 
     final anonymousUser = await FirebaseAuth.instance.signInAnonymously();
-    analytics.logEvent(name: "signin_anonymously", parameters: _logginParameters(anonymousUser.user));
+    analytics.logEvent(
+        name: "signin_anonymously",
+        parameters: _logginParameters(anonymousUser.user));
 
     final sharedPreferences = await SharedPreferences.getInstance();
-    final existsUID = sharedPreferences.getString(StringKey.lastSignInAnonymousUID);
+    final existsUID =
+        sharedPreferences.getString(StringKey.lastSignInAnonymousUID);
     if (existsUID == null || existsUID.isEmpty) {
       final user = anonymousUser.user;
       if (user != null) {
-        await sharedPreferences.setString(StringKey.lastSignInAnonymousUID, user.uid);
+        await sharedPreferences.setString(
+            StringKey.lastSignInAnonymousUID, user.uid);
       }
     }
 
     // keep until FirebaseAuth.instance user state updated
-    final waitLatestChangedUserState = Future<User>(() {
+    final obtainLatestChangedUserState = Future<User>(() {
       final completer = Completer<User>();
-      final Stream<User> nonOptionalStream = _userAuthStateChanges().where((event) => event != null).cast();
+      final Stream<User> nonOptionalStream =
+          _userAuthStateChanges().where((event) => event != null).cast();
 
       StreamSubscription<User>? subscription;
       subscription = nonOptionalStream.listen((firebaseUser) {
@@ -114,7 +122,7 @@ Future<User> cachedUserOrSignInAnonymously() async {
       return completer.future;
     });
 
-    final User signedUser = await waitLatestChangedUserState;
+    final User signedUser = await obtainLatestChangedUserState;
     assert(anonymousUser.user?.uid == signedUser.uid);
     return signedUser;
   }
@@ -128,7 +136,11 @@ Map<String, dynamic> _logginParameters(User? currentUser) {
   return {
     "uid": currentUser.uid,
     "isAnonymous": currentUser.isAnonymous,
-    "hasGoogleProviderData": currentUser.providerData.where((element) => element.providerId == googleProviderID).isNotEmpty,
-    "hasAppleProviderData": currentUser.providerData.where((element) => element.providerId == appleProviderID).isNotEmpty,
+    "hasGoogleProviderData": currentUser.providerData
+        .where((element) => element.providerId == googleProviderID)
+        .isNotEmpty,
+    "hasAppleProviderData": currentUser.providerData
+        .where((element) => element.providerId == appleProviderID)
+        .isNotEmpty,
   };
 }

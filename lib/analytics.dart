@@ -6,8 +6,9 @@ import 'package:flutter/foundation.dart';
 final firebaseAnalytics = FirebaseAnalytics.instance;
 
 class Analytics {
-  void logEvent({required String name, Map<String, dynamic>? parameters}) async {
-    assert(name.length <= 40, "firebase analytics log event name limit length up to 40");
+  logEvent({required String name, Map<String, dynamic>? parameters}) async {
+    assert(name.length <= 40,
+        "firebase analytics log event name limit length up to 40");
     if (kDebugMode) {
       print("[INFO] logEvent name: $name, parameters: $parameters");
     }
@@ -20,22 +21,26 @@ class Analytics {
         }
       }
     }
-    firebaseAnalytics.logEvent(name: name, parameters: parameters);
+    return firebaseAnalytics.logEvent(name: name, parameters: parameters);
   }
 
-  void setCurrentScreen({required String screenName, String screenClassOverride = 'Flutter'}) async {
+  setCurrentScreen(
+      {required String screenName,
+      String screenClassOverride = 'Flutter'}) async {
     unawaited(firebaseAnalytics.logEvent(name: "screen_$screenName"));
-    firebaseAnalytics.setCurrentScreen(screenName: screenName, screenClassOverride: screenClassOverride);
+    return firebaseAnalytics.setCurrentScreen(
+        screenName: screenName, screenClassOverride: screenClassOverride);
   }
 
   /// Up to 25 user property names are supported.
   // The "firebase_" prefix is reserved and should not be used for
   /// user property names.
-  void setUserProperties(String name, value) {
+  setUserProperties(String name, value) {
     assert(name.toLowerCase() != "age");
     assert(name.toLowerCase() != "gender");
     assert(name.toLowerCase() != "interest");
-    assert(name.length < 25, "firebase setUserProperties name limit length up to 25");
+    assert(name.length < 25,
+        "firebase setUserProperties name limit length up to 25");
     assert(!name.startsWith("firebase_"));
 
     if (kDebugMode) {

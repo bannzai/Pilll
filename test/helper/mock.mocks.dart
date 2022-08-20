@@ -183,24 +183,19 @@ class MockAnalytics extends _i1.Mock implements _i21.Analytics {
   }
 
   @override
-  void logEvent({String? name, Map<String, dynamic>? parameters}) =>
-      super.noSuchMethod(
-          Invocation.method(
-              #logEvent, [], {#name: name, #parameters: parameters}),
-          returnValueForMissingStub: null);
+  dynamic logEvent({String? name, Map<String, dynamic>? parameters}) =>
+      super.noSuchMethod(Invocation.method(
+          #logEvent, [], {#name: name, #parameters: parameters}));
   @override
-  void setCurrentScreen(
+  dynamic setCurrentScreen(
           {String? screenName, String? screenClassOverride = r'Flutter'}) =>
-      super.noSuchMethod(
-          Invocation.method(#setCurrentScreen, [], {
-            #screenName: screenName,
-            #screenClassOverride: screenClassOverride
-          }),
-          returnValueForMissingStub: null);
+      super.noSuchMethod(Invocation.method(#setCurrentScreen, [], {
+        #screenName: screenName,
+        #screenClassOverride: screenClassOverride
+      }));
   @override
-  void setUserProperties(String? name, dynamic value) =>
-      super.noSuchMethod(Invocation.method(#setUserProperties, [name, value]),
-          returnValueForMissingStub: null);
+  dynamic setUserProperties(String? name, dynamic value) =>
+      super.noSuchMethod(Invocation.method(#setUserProperties, [name, value]));
 }
 
 /// A class which mocks [DiaryDatastore].
