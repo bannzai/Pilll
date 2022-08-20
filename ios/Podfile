@@ -45,10 +45,6 @@ end
 
 target 'WidgetExtension' do
   use_frameworks!
-
-  pod 'Firebase/Auth'
-  # Ref: https://github.dev/FirebaseExtended/flutterfire/tree/master/packages/firebase_core/firebase_core/ios/firebase_sdk_version.rb#L1-L2
-  pod 'FirebaseFirestore', :git => 'https://github.com/invertase/firestore-ios-sdk-frameworks.git', :tag => $FirebaseSDKVersion
 end
 
 post_install do |installer|
