@@ -53,7 +53,7 @@ dependencies:
   flutter_inappwebview: ^5.3.2
   flutter_app_badger: ^1.2.0
   sign_in_with_apple: ^3.0.0
-  google_sign_in: ^5.0.4
+  google_sign_in: ^5.4.1
   purchases_flutter: ^3.2.2
   firebase_performance: ^0.8.0+7
   flutter_native_timezone: ^2.0.0
