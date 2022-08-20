@@ -96,6 +96,7 @@ import HealthKit
                 let key = call.arguments["key"] as! String
                 let value = call.arguments["value"]
                 UserDefaults(suiteName: appGroupKey)?.set(value, forKey: key)
+                completionHandler(["result": "success"])
             case _:
                 return
             }
