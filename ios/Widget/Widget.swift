@@ -9,35 +9,32 @@ import WidgetKit
 import SwiftUI
 import Intents
 
-struct Provider: IntentTimelineProvider {
-    func placeholder(in context: Context) -> SimpleEntry {
-        SimpleEntry(date: Date(), configuration: ConfigurationIntent())
+struct Provider: TimelineProvider {
+    typealias Entry = PillSheetEntry
+
+    func placeholder(in context: Context) -> Entry {
+        .init(date: .now, pillSheetBeginDate: .now, pillSheetLastTakenDate: nil, pillSheetCurrentStatus: "")
     }
 
-    func getSnapshot(for configuration: ConfigurationIntent, in context: Context, completion: @escaping (SimpleEntry) -> ()) {
-        let entry = SimpleEntry(date: Date(), configuration: configuration)
-        completion(entry)
+    func getSnapshot(in context: Context, completion: @escaping (Entry) -> ()) {
+        completion(placeholder(in: context))
     }
 
-    func getTimeline(for configuration: ConfigurationIntent, in context: Context, completion: @escaping (Timeline<Entry>) -> ()) {
-        var entries: [SimpleEntry] = []
-
-        // Generate a timeline consisting of five entries an hour apart, starting from the current date.
-        let currentDate = Date()
-        for hourOffset in 0 ..< 5 {
-            let entryDate = Calendar.current.date(byAdding: .hour, value: hourOffset, to: currentDate)!
-            let entry = SimpleEntry(date: entryDate, configuration: configuration)
-            entries.append(entry)
-        }
-
+    func getTimeline(in context: Context, completion: @escaping (Timeline<Entry>) -> ()) {
+        let entries: [PillSheetEntry] = []
         let timeline = Timeline(entries: entries, policy: .atEnd)
         completion(timeline)
     }
 }
 
-struct SimpleEntry: TimelineEntry {
+struct PillSheetEntry: TimelineEntry {
+    // Timeline Entry required property
     let date: Date
-    let configuration: ConfigurationIntent
+
+    // PillSheet property
+    let pillSheetBeginDate: Date
+    let pillSheetLastTakenDate: Date?
+    let pillSheetCurrentStatus: String
 }
 
 struct WidgetEntryView : View {
@@ -53,17 +50,17 @@ struct Widget: Widget {
     let kind: String = "Widget"
 
     var body: some WidgetConfiguration {
-        IntentConfiguration(kind: kind, intent: ConfigurationIntent.self, provider: Provider()) { entry in
+        StaticConfiguration(kind: kind, provider: Provider()) { entry in
             WidgetEntryView(entry: entry)
         }
-        .configurationDisplayName("My Widget")
-        .description("This is an example widget.")
+        .supportedFamilies([.systemSmall])
+        .description("This is an Pilll widget")
     }
 }
 
 struct Widget_Previews: PreviewProvider {
     static var previews: some View {
-        WidgetEntryView(entry: SimpleEntry(date: Date(), configuration: ConfigurationIntent()))
+        WidgetEntryView(entry: .init(date: .now, pillSheetBeginDate: .now, pillSheetLastTakenDate: nil, pillSheetCurrentStatus: ""))
             .previewContext(WidgetPreviewContext(family: .systemSmall))
     }
 }
