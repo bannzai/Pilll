@@ -1,10 +1,3 @@
-//
-//  Widget.swift
-//  Widget
-//
-//  Created by 廣瀬雄大 on 2022/08/20.
-//
-
 import WidgetKit
 import SwiftUI
 import Intents
