@@ -3,9 +3,12 @@ import ObjectiveC
 import Flutter
 import HealthKit
 
+
 @UIApplicationMain
 @objc class AppDelegate: FlutterAppDelegate {
-    var channel: FlutterMethodChannel?
+    private var channel: FlutterMethodChannel?
+    private let appGroupKey = "group.\(Bundle.main.bundleIdentifier!)"
+
     override func application(
         _ application: UIApplication,
         didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?
@@ -89,6 +92,10 @@ import HealthKit
                         completionHandler(failure.toDictionary())
                     }
                 }
+            case "saveToNativeLocalStorage":
+                let key = call.arguments["key"] as! String
+                let value = call.arguments["value"]
+                UserDefaults(suiteName: appGroupKey)?.set(value, forKey: key)
             case _:
                 return
             }
