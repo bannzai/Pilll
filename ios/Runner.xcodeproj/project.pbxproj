@@ -93,6 +93,7 @@
 		2006A7CE28B0BB680066E4DD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2006A7DD28B0BE130066E4DD /* WidgetExtension.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = WidgetExtension.entitlements; sourceTree = "<group>"; };
 		2006A7DE28B0C0290066E4DD /* WidgetBundle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WidgetBundle.swift; sourceTree = "<group>"; };
+		2006A7E028B0CDC00066E4DD /* Const.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Const.swift; sourceTree = "<group>"; };
 		20C768E927D2B4E700BA525C /* Profile-Development.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; name = "Profile-Development.xcconfig"; path = "Flutter/Profile-Development.xcconfig"; sourceTree = "<group>"; };
 		20C768EA27D2B4E700BA525C /* Profile.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; name = Profile.xcconfig; path = Flutter/Profile.xcconfig; sourceTree = "<group>"; };
 		20DBB04327A88BAE0069A9A2 /* HealthKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = HealthKit.framework; path = System/Library/Frameworks/HealthKit.framework; sourceTree = SDKROOT; };
@@ -169,6 +170,7 @@
 			children = (
 				2006A7C928B0BB670066E4DD /* Widget.swift */,
 				2006A7DE28B0C0290066E4DD /* WidgetBundle.swift */,
+				2006A7E028B0CDC00066E4DD /* Const.swift */,
 				2006A7CB28B0BB670066E4DD /* Widget.intentdefinition */,
 				2006A7CC28B0BB680066E4DD /* Assets.xcassets */,
 				2006A7CE28B0BB680066E4DD /* Info.plist */,
