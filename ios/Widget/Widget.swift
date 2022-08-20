@@ -14,7 +14,7 @@ struct Provider: TimelineProvider {
     }
 
     func getTimeline(in context: Context, completion: @escaping (Timeline<Entry>) -> ()) {
-        let entries: [PillSheetEntry] = []
+        let entries: [PillSheetEntry] = [.init(date: .now, pillSheetBeginDate: .now, pillSheetLastTakenDate: nil, pillSheetCurrentStatus: "")]
         let timeline = Timeline(entries: entries, policy: .atEnd)
         completion(timeline)
     }
@@ -34,7 +34,7 @@ struct WidgetEntryView : View {
     var entry: Provider.Entry
 
     var body: some View {
-        Text(entry.date, style: .time)
+        Text("Hello")
     }
 }
 
