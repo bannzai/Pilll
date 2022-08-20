@@ -92,8 +92,12 @@ import HealthKit
                     }
                 }
             case "saveToNativeLocalStorage":
-                let key = call.arguments["key"] as! String
-                let value = call.arguments["value"]
+                guard let arguments = call.arguments as? Dictionary<String, Any>,
+                      let key = arguments["key"] as? String,
+                      let value = arguments["value"] else {
+                    fatalError()
+                }
+
                 UserDefaults(suiteName: Const.appGroupKey)?.set(value, forKey: key)
                 completionHandler(["result": "success"])
             case _:
