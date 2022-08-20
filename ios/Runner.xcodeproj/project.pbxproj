@@ -568,6 +568,7 @@
 /* Begin XCBuildConfiguration section */
 		2006A7D528B0BB680066E4DD /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3379DA5124E3A4DC0002DD85 /* Debug-Development.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
@@ -608,6 +609,7 @@
 		};
 		2006A7D628B0BB680066E4DD /* Debug-Development */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3379DA5124E3A4DC0002DD85 /* Debug-Development.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
@@ -648,6 +650,7 @@
 		};
 		2006A7D728B0BB680066E4DD /* Debug-Production */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3379DA5024E3A4DC0002DD85 /* Debug-Production.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
@@ -688,6 +691,7 @@
 		};
 		2006A7D828B0BB680066E4DD /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3379DA5224E3A4DC0002DD85 /* Release-Production.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
@@ -725,6 +729,7 @@
 		};
 		2006A7D928B0BB680066E4DD /* Release-Development */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3379DA5324E3A4DC0002DD85 /* Release-Development.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
@@ -762,6 +767,7 @@
 		};
 		2006A7DA28B0BB680066E4DD /* Release-Production */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3379DA5224E3A4DC0002DD85 /* Release-Production.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
