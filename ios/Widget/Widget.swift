@@ -25,18 +25,14 @@ struct PillSheetEntry: TimelineEntry {
     let date: Date
 
     // PillSheet property
-    let pillSheetBeginDate: Date?
-    let pillSheetLastTakenDate: Date?
-    let pillSheetNumberOffset: Int?
-    let pillSheetCurrentStatus: String?
+    let todayPillNumber: Int?
+    let lastTakenPillNumber: Int?
 
     init() {
         date = .now
 
-        pillSheetBeginDate = UserDefaults(suiteName: Const.appGroupKey)?.object(forKey: "pillSheetBeginDate") as? Date
-        pillSheetLastTakenDate = UserDefaults(suiteName: Const.appGroupKey)?.object(forKey: "pillSheetLastTakenDate") as? Date
-        pillSheetNumberOffset = UserDefaults(suiteName: Const.appGroupKey)?.integer(forKey: "pillSheetNumberOffset")
-        pillSheetCurrentStatus = UserDefaults(suiteName: Const.appGroupKey)?.string(forKey: "pillSheetCurrentStatus")
+        todayPillNumber = UserDefaults(suiteName: Const.appGroupKey)?.integer(forKey: "todayPillNumber")
+        lastTakenPillNumber = UserDefaults(suiteName: Const.appGroupKey)?.integer(forKey: "lastTakenPillNumber")
     }
 }
 
