@@ -75,7 +75,7 @@ struct WidgetEntryView : View {
 
                 Spacer()
 
-                Image("pilll-widget-icon.svg")
+                Image("pilll-widget-icon")
                     .frame(width: 11, height: 16)
             }
 
