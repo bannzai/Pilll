@@ -49,9 +49,13 @@ struct PillSheetEntry: TimelineEntry {
     init(date: Date) {
         self.date = date
 
-        todayPillNumber = UserDefaults(suiteName: Const.appGroupKey)?.integer(forKey: Const.todayPillNumber)
-        lastTakenPillNumber = UserDefaults(suiteName: Const.appGroupKey)?.integer(forKey: Const.lastTakenPillNumber)
-        pilllNumberDisplayMode = UserDefaults(suiteName: Const.appGroupKey)?.string(forKey: Const.pilllNumberDisplayMode)
+        func contains(_ key: String) -> Bool {
+            UserDefaults(suiteName: Const.appGroupKey)?.dictionaryRepresentation().keys.contains(key) == true
+        }
+
+        todayPillNumber = contains(Const.todayPillNumber) ? UserDefaults(suiteName: Const.appGroupKey)?.integer(forKey: Const.todayPillNumber) : nil
+        lastTakenPillNumber = contains(Const.lastTakenPillNumber) ? UserDefaults(suiteName: Const.appGroupKey)?.integer(forKey: Const.lastTakenPillNumber) : nil
+        pilllNumberDisplayMode = contains(Const.pilllNumberDisplayMode) ? UserDefaults(suiteName: Const.appGroupKey)?.string(forKey: Const.pilllNumberDisplayMode) : nil
     }
 }
 
