@@ -91,14 +91,23 @@ import HealthKit
                         completionHandler(failure.toDictionary())
                     }
                 }
-            case "saveToNativeLocalStorage":
-                guard let arguments = call.arguments as? Dictionary<String, Any>,
-                      let key = arguments["key"] as? String,
-                      let value = arguments["value"] else {
+            case "updateValuesForWidget":
+                guard let arguments = call.arguments as? Dictionary<String, Any> else {
                     fatalError()
                 }
 
-                UserDefaults(suiteName: Const.appGroupKey)?.set(value, forKey: key)
+                let pillSheetBeginDate = arguments["pillSheetBeginDate"] as? Date
+                UserDefaults(suiteName: Const.appGroupKey)?.set(pillSheetBeginDate, forKey: "pillSheetBeginDate")
+
+                let pillSheetNumberOffset = arguments["pillSheetNumberOffset"] as? Int
+                UserDefaults(suiteName: Const.appGroupKey)?.set(pillSheetNumberOffset, forKey: "pillSheetNumberOffset")
+
+                let pillSheetLastTakenDate = arguments["pillSheetLastTakenDate"] as? Date
+                UserDefaults(suiteName: Const.appGroupKey)?.set(pillSheetLastTakenDate, forKey: "pillSheetLastTakenDate")
+
+                let pillSheetCurrentStatus = arguments["pillSheetCurrentStatus"] as? String
+                UserDefaults(suiteName: Const.appGroupKey)?.set(pillSheetCurrentStatus, forKey: "pillSheetCurrentStatus")
+
                 completionHandler(["result": "success"])
             case _:
                 return

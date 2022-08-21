@@ -15,6 +15,7 @@
 		207DA16C28B1148800CD6C34 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 207DA16B28B1148800CD6C34 /* Assets.xcassets */; };
 		207DA17028B1148800CD6C34 /* WidgetExtension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 207DA16528B1148700CD6C34 /* WidgetExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		20BF93A428B122F8007A36C9 /* WidgetKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2006A7C428B0BB670066E4DD /* WidgetKit.framework */; };
+		20BF942028B22626007A36C9 /* Const.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2006A7E028B0CDC00066E4DD /* Const.swift */; };
 		20C768EB27D2B4E700BA525C /* Profile-Development.xcconfig in Resources */ = {isa = PBXBuildFile; fileRef = 20C768E927D2B4E700BA525C /* Profile-Development.xcconfig */; };
 		20C768EC27D2B4E700BA525C /* Profile.xcconfig in Resources */ = {isa = PBXBuildFile; fileRef = 20C768EA27D2B4E700BA525C /* Profile.xcconfig */; };
 		20DBB04427A88BAE0069A9A2 /* HealthKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 20DBB04327A88BAE0069A9A2 /* HealthKit.framework */; };
@@ -544,6 +545,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				207DA16A28B1148700CD6C34 /* Widget.swift in Sources */,
+				20BF942028B22626007A36C9 /* Const.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -6,7 +6,7 @@ struct Provider: TimelineProvider {
     typealias Entry = PillSheetEntry
 
     func placeholder(in context: Context) -> Entry {
-        .init(date: .now, pillSheetBeginDate: .now, pillSheetLastTakenDate: nil, pillSheetCurrentStatus: "")
+        .init()
     }
 
     func getSnapshot(in context: Context, completion: @escaping (Entry) -> ()) {
@@ -14,7 +14,7 @@ struct Provider: TimelineProvider {
     }
 
     func getTimeline(in context: Context, completion: @escaping (Timeline<Entry>) -> ()) {
-        let entries: [PillSheetEntry] = [.init(date: .now, pillSheetBeginDate: .now, pillSheetLastTakenDate: nil, pillSheetCurrentStatus: "")]
+        let entries: [PillSheetEntry] = [.init()]
         let timeline = Timeline(entries: entries, policy: .atEnd)
         completion(timeline)
     }
@@ -25,9 +25,19 @@ struct PillSheetEntry: TimelineEntry {
     let date: Date
 
     // PillSheet property
-    let pillSheetBeginDate: Date
+    let pillSheetBeginDate: Date?
     let pillSheetLastTakenDate: Date?
-    let pillSheetCurrentStatus: String
+    let pillSheetNumberOffset: Int?
+    let pillSheetCurrentStatus: String?
+
+    init() {
+        date = .now
+
+        pillSheetBeginDate = UserDefaults(suiteName: Const.appGroupKey)?.object(forKey: "pillSheetBeginDate") as? Date
+        pillSheetLastTakenDate = UserDefaults(suiteName: Const.appGroupKey)?.object(forKey: "pillSheetLastTakenDate") as? Date
+        pillSheetNumberOffset = UserDefaults(suiteName: Const.appGroupKey)?.integer(forKey: "pillSheetNumberOffset")
+        pillSheetCurrentStatus = UserDefaults(suiteName: Const.appGroupKey)?.string(forKey: "pillSheetCurrentStatus")
+    }
 }
 
 struct WidgetEntryView : View {
@@ -53,7 +63,7 @@ struct Entrypoint: Widget {
 
 struct Widget_Previews: PreviewProvider {
     static var previews: some View {
-        WidgetEntryView(entry: .init(date: .now, pillSheetBeginDate: .now, pillSheetLastTakenDate: nil, pillSheetCurrentStatus: ""))
+        WidgetEntryView(entry: .init())
             .previewContext(WidgetPreviewContext(family: .systemSmall))
     }
 }
