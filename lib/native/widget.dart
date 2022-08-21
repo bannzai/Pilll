@@ -3,13 +3,13 @@ import 'package:pilll/entity/setting.codegen.dart';
 import 'package:pilll/native/channel.dart';
 
 Future<void> updateValuesForWidget({
-  required PillSheet activePillSheet,
+  required PillSheet? activePillSheet,
   required PillSheetAppearanceMode appearanceMode,
   required bool userIsPremiumOrTrial,
 }) async {
   final map = {
-    "todayPillNumber": activePillSheet.todayPillNumber,
-    "lastTakenPillNumber": activePillSheet.lastTakenPillNumber,
+    "todayPillNumber": activePillSheet?.todayPillNumber,
+    "lastTakenPillNumber": activePillSheet?.lastTakenPillNumber,
     "pilllNumberDisplayMode": appearanceMode.name,
     "userIsPremiumOrTrial": userIsPremiumOrTrial,
   };
