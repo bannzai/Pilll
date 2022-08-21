@@ -7,7 +7,8 @@ enum Const {
     static let appGroupKey = "group.com.mizuki.Ohashi.Pilll"
     #endif
 
+    static let userIsPremiumOrTrial = "userIsPremiumOrTrial"
     static let todayPillNumber = "todayPillNumber"
     static let lastTakenPillNumber = "lastTakenPillNumber"
-    static let pilllNumberDisplayMode = "pilllNumberDisplayMode" // number or sequential or date 
+    static let pilllNumberDisplayMode = "pilllNumberDisplayMode" // number or sequential or date
 }

@@ -170,8 +170,12 @@ struct Entrypoint: Widget {
         StaticConfiguration(kind: kind, provider: Provider()) { entry in
             WidgetEntryView(entry: entry)
         }
-        .supportedFamilies([.systemSmall])
+        .supportedFamilies(supportedFamilies)
         .description("This is an Pilll widget")
+    }
+
+    private var supportedFamilies: [WidgetFamily] {
+        UserDefaults(suiteName: Const.appGroupKey)?.bool(forKey: Const.userIsPremiumOrTrial) == true ? [.systemSmall] : []
     }
 }
 
