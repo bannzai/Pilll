@@ -123,7 +123,7 @@ struct WidgetEntryView : View {
                             .cornerRadius(2)
 
                         VStack(alignment: .leading, spacing: 2) {
-                            Text("- 番")
+                            Text(entry.pilllNumberDisplayMode == "date" ? "- 日目" : "- 番")
                                 .foregroundColor(.black)
                                 .font(.system(size: 15))
                                 .fontWeight(.semibold)
