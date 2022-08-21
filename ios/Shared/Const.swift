@@ -9,4 +9,5 @@ enum Const {
 
     static let todayPillNumber = "todayPillNumber"
     static let lastTakenPillNumber = "lastTakenPillNumber"
+    static let pilllNumberDisplayMode = "pilllNumberDisplayMode" // number or sequential or date 
 }

@@ -97,10 +97,13 @@ import HealthKit
                 }
 
                 let todayPillNumber = arguments["todayPillNumber"] as? Date
-                UserDefaults(suiteName: Const.appGroupKey)?.set(todayPillNumber, forKey: "todayPillNumber")
+                UserDefaults(suiteName: Const.appGroupKey)?.set(todayPillNumber, forKey: Const.todayPillNumber)
 
                 let lastTakenPillNumber = arguments["lastTakenPillNumber"] as? Int
-                UserDefaults(suiteName: Const.appGroupKey)?.set(lastTakenPillNumber, forKey: "lastTakenPillNumber")
+                UserDefaults(suiteName: Const.appGroupKey)?.set(lastTakenPillNumber, forKey: Const.lastTakenPillNumber)
+
+                let pilllNumberDisplayMode = arguments["pilllNumberDisplayMode"] as? String
+                UserDefaults(suiteName: Const.appGroupKey)?.set(pilllNumberDisplayMode, forKey: Const.pilllNumberDisplayMode)
 
                 completionHandler(["result": "success"])
             case _:
