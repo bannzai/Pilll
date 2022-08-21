@@ -91,7 +91,8 @@ struct WidgetEntryView : View {
                     HStack(spacing: 6) {
                         Divider()
                             .frame(width: 4)
-                            .foregroundColor(alreadyTaken ? .primary : .orange)
+                            .overlay(alreadyTaken ? Color.primary : Color.orange)
+                            .cornerRadius(2)
 
                         VStack(alignment: .leading, spacing: 2) {
                             Text(entry.pilllNumberDisplayMode == "date" ? "\(todayPillNumber)日目" : "\(todayPillNumber)番")
@@ -118,7 +119,8 @@ struct WidgetEntryView : View {
                     HStack(spacing: 6) {
                         Divider()
                             .frame(width: 4)
-                            .foregroundColor(Color(red: 190 / 255, green: 192 / 255, blue: 194 / 255))
+                            .overlay(Color(red: 190 / 255, green: 192 / 255, blue: 194 / 255))
+                            .cornerRadius(2)
 
                         VStack(alignment: .leading, spacing: 2) {
                             Text("- 番")
