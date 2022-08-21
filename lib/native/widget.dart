@@ -1,11 +1,17 @@
 import 'package:pilll/entity/pill_sheet.codegen.dart';
+import 'package:pilll/entity/setting.codegen.dart';
 import 'package:pilll/native/channel.dart';
 
-Future<void> updateValueForWidget(PillSheet pillSheet) async {
+Future<void> updateValuesForWidget({
+  required PillSheet pillSheet,
+  required PillSheetAppearanceMode appearanceMode,
+  required bool userIsPremiumOrTrial,
+}) async {
   final map = {
-"pillSheetBeginDate": pillSheet.beginingDate,
-"pillSheetLastTakenDate": pillSheet.lastTakenDate,
-  }
-  final result = await methodChannel.invokeMethod("updateValueForWidget", pillSheet);
-  return result["isHealthDataAvailable"] == true;
+    "todayPillNumber": pillSheet.todayPillNumber,
+    "lastTakenPillNumber": pillSheet.lastTakenPillNumber,
+    "pilllNumberDisplayMode": appearanceMode.name,
+    "userIsPremiumOrTrial": userIsPremiumOrTrial,
+  };
+  await methodChannel.invokeMethod("updateValueForWidget", map);
 }
