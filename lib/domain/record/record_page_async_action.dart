@@ -101,7 +101,7 @@ class RecordPageAsyncAction {
       return null;
     }
 
-    await revertTaken(
+    return await revertTaken(
         pillSheetGroup: pillSheetGroup, pageIndex: activedPillSheet.groupIndex, pillNumberIntoPillSheet: activedPillSheet.lastTakenPillNumber);
   }
 
