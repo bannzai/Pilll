@@ -4,8 +4,8 @@ import 'package:pilll/native/channel.dart';
 
 Future<void> updateValuesForWidget({
   required PillSheet? activePillSheet,
-  required PillSheetAppearanceMode? appearanceMode,
-  required bool? userIsPremiumOrTrial,
+  required PillSheetAppearanceMode appearanceMode,
+  required bool userIsPremiumOrTrial,
 }) async {
   final map = {
     "todayPillNumber": activePillSheet?.todayPillNumber,
@@ -13,8 +13,5 @@ Future<void> updateValuesForWidget({
     "pilllNumberDisplayMode": appearanceMode.name,
     "userIsPremiumOrTrial": userIsPremiumOrTrial,
   };
-  if (appearanceMode != null) {
-    map["pilllNumberDisplayMode"] = appearanceMode.name;
-  }
   await methodChannel.invokeMethod("updateValueForWidget", map);
 }
