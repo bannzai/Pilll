@@ -3,8 +3,7 @@
 <plist version="1.0">
 <dict>
 	<key>AppGroupKey</key>
-	<string>$(APP_GROUP_KEY)
-)</string>
+	<string>$(APP_GROUP_KEY)</string>
 	<key>NSHealthShareUsageDescription</key>
 	<string>ヘルスケアアプリから生理情報の取得を許可してください</string>
 	<key>NSHealthUpdateUsageDescription</key>
