@@ -1,4 +1,5 @@
 import 'package:flutter/services.dart';
+import 'package:pilll/database/pill_sheet_modified_history.dart';
 import 'package:pilll/native/legacy.dart';
 import 'package:pilll/native/pill.dart';
 
@@ -7,7 +8,7 @@ void definedChannel() {
   methodChannel.setMethodCallHandler((MethodCall call) async {
     switch (call.method) {
       case 'recordPill':
-        return recordPill();
+        await recordPill();
       case "salvagedOldStartTakenDate":
         return salvagedOldStartTakenDate(call.arguments);
       default:
