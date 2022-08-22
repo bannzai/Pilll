@@ -6,7 +6,6 @@ import 'package:pilll/domain/record/record_page_state_notifier.dart';
 import 'package:pilll/entity/pill_sheet.codegen.dart';
 import 'package:pilll/entity/pill_sheet_group.codegen.dart';
 import 'package:pilll/entity/pill_sheet_type.dart';
-import 'package:pilll/entity/setting.codegen.dart';
 import 'package:pilll/util/datetime/day.dart';
 import 'package:pilll/util/environment.dart';
 import 'package:flutter/material.dart';
@@ -45,7 +44,6 @@ void main() {
             home: RecordPageButton(
               pillSheetGroup: PillSheetGroup(pillSheets: [pillSheet], createdAt: now(), pillSheetIDs: ["id"]),
               currentPillSheet: pillSheet,
-              appearanceMode: PillSheetAppearanceMode.number,
               userIsPremiumOtTrial: false,
             ),
           ),
@@ -71,7 +69,6 @@ void main() {
           home: RecordPageButton(
             pillSheetGroup: PillSheetGroup(pillSheets: [pillSheet], createdAt: now(), pillSheetIDs: ["id"]),
             currentPillSheet: pillSheet,
-            appearanceMode: PillSheetAppearanceMode.date,
             userIsPremiumOtTrial: false,
           ),
         ),

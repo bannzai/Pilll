@@ -94,7 +94,6 @@ class RecordPageBody extends StatelessWidget {
             RecordPageButton(
               pillSheetGroup: pillSheetGroup,
               currentPillSheet: activedPillSheet,
-              appearanceMode: state.appearanceMode,
               userIsPremiumOtTrial: false,
             ),
             const SizedBox(height: 40),
