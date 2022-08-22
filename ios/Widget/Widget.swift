@@ -70,6 +70,8 @@ struct WidgetEntryView : View {
   var entry: Provider.Entry
 
   var body: some View {
+    Text(Bundle.main.bundleIdentifier!)
+    Text(UserDefaults(suiteName: Plist.appGroupKey) == nil ? "nil" : "exist")
     if UserDefaults(suiteName: Plist.appGroupKey)?.bool(forKey: Const.userIsPremiumOrTrial) == true {
       VStack {
         HStack(alignment: .top) {
