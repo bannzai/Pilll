@@ -52,14 +52,14 @@ struct PillSheetEntry: TimelineEntry {
       UserDefaults(suiteName: Const.appGroupKey)?.dictionaryRepresentation().keys.contains(key) == true
     }
 
-    if contains(Const.pillSheetBeginDate), let pillSheetBeginDateEpochSecond = UserDefaults(suiteName: Const.appGroupKey)?.integer(forKey: Const.pillSheetBeginDate) {
-      pillSheetBeginDate = Date(timeIntervalSince1970: TimeInterval(pillSheetBeginDateEpochSecond))
+    if contains(Const.pillSheetBeginDate), let pillSheetBeginDateEpochMilliSecond = UserDefaults(suiteName: Const.appGroupKey)?.integer(forKey: Const.pillSheetBeginDate) {
+      pillSheetBeginDate = Date(timeIntervalSince1970: TimeInterval(pillSheetBeginDateEpochMilliSecond / 1000))
     } else {
       pillSheetBeginDate = nil
     }
 
-    if contains(Const.pillSheetLastTakenDate), let pillSheetLastTakenDateEpochSecond = UserDefaults(suiteName: Const.appGroupKey)?.integer(forKey: Const.pillSheetLastTakenDate) {
-      pillSheetLastTakenDate = Date(timeIntervalSince1970: TimeInterval(pillSheetLastTakenDateEpochSecond))
+    if contains(Const.pillSheetLastTakenDate), let pillSheetLastTakenDateEpochMilliSecond = UserDefaults(suiteName: Const.appGroupKey)?.integer(forKey: Const.pillSheetLastTakenDate) {
+      pillSheetLastTakenDate = Date(timeIntervalSince1970: TimeInterval(pillSheetLastTakenDateEpochMilliSecond / 1000))
     } else {
       pillSheetLastTakenDate = nil
     }
