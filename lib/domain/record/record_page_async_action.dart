@@ -60,28 +60,28 @@ class RecordPageAsyncAction {
     return _take(takenDate: now(), pillSheetGroup: pillSheetGroup);
   }
 
-  Future<bool> takenWithPillNumber({
+  Future<PillSheetGroup?> takenWithPillNumber({
     required int pillNumberIntoPillSheet,
     required PillSheetGroup pillSheetGroup,
     required PillSheet pillSheet,
   }) async {
     if (pillNumberIntoPillSheet <= pillSheet.lastTakenPillNumber) {
-      return false;
+      return null;
     }
     final activedPillSheet = pillSheetGroup.activedPillSheet;
     if (activedPillSheet == null) {
-      return false;
+      return null;
     }
     if (activedPillSheet.activeRestDuration != null) {
-      return false;
+      return null;
     }
     if (activedPillSheet.groupIndex < pillSheet.groupIndex) {
-      return false;
+      return null;
     }
     var diff = min(pillSheet.todayPillNumber, pillSheet.typeInfo.totalCount) - pillNumberIntoPillSheet;
     if (diff < 0) {
       // User tapped future pill number
-      return false;
+      return null;
     }
 
     final takenDate = pillSheet.displayPillTakeDate(pillNumberIntoPillSheet);
