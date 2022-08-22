@@ -7,6 +7,8 @@ enum Const {
     static let appGroupKey = "group.com.mizuki.Ohashi.Pilll"
     #endif
 
+    static let widgetKind = "com.mizuki.Ohashi.Pilll.widget"
+
     static let userIsPremiumOrTrial = "userIsPremiumOrTrial"
     // Epoch second
     static let pillSheetBeginDate = "pillSheetBeginDate"

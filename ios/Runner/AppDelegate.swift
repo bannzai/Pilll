@@ -104,6 +104,9 @@ import HealthKit
 
                 let pillSheetLastTakenDate = arguments[Const.pillSheetLastTakenDate] as? Int
                 UserDefaults(suiteName: Const.appGroupKey)?.set(pillSheetLastTakenDate, forKey: Const.pillSheetLastTakenDate)
+                
+                WidgetCenter.shared.reloadTimelines(ofKind: Const.widgetKind)
+
                 completionHandler(["result": "success"])
             case _:
                 return

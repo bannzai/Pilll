@@ -197,10 +197,8 @@ extension Color {
 
 @main
 struct Entrypoint: Widget {
-  let kind: String = "com.mizuki.Ohashi.Pilll.widget"
-
   var body: some WidgetConfiguration {
-    StaticConfiguration(kind: kind, provider: Provider()) { entry in
+    StaticConfiguration(kind: Const.widgetKind, provider: Provider()) { entry in
       WidgetEntryView(entry: entry)
     }
     .supportedFamilies([.systemSmall])
