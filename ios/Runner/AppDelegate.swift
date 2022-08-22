@@ -99,10 +99,10 @@ import HealthKit
                 let userIsPremiumOrTrial = arguments[Const.userIsPremiumOrTrial] as? Bool
                 UserDefaults(suiteName: Const.appGroupKey)?.set(userIsPremiumOrTrial, forKey: Const.userIsPremiumOrTrial)
 
-                let pillSheetBeginDate = arguments[Const.pillSheetBeginDate] as? Date
+                let pillSheetBeginDate = arguments[Const.pillSheetBeginDate] as? Int
                 UserDefaults(suiteName: Const.appGroupKey)?.set(pillSheetBeginDate, forKey: Const.pillSheetBeginDate)
 
-                let pillSheetLastTakenDate = arguments[Const.pillSheetLastTakenDate] as? Date
+                let pillSheetLastTakenDate = arguments[Const.pillSheetLastTakenDate] as? Int
                 UserDefaults(suiteName: Const.appGroupKey)?.set(pillSheetLastTakenDate, forKey: Const.pillSheetLastTakenDate)
                 completionHandler(["result": "success"])
             case _:

@@ -6,8 +6,8 @@ Future<void> updateValuesForWidget({
   required bool userIsPremiumOrTrial,
 }) async {
   final map = {
-    "pillSheetBeginDate": activePillSheet?.beginingDate,
-    "pillSheetLastTakenDate": activePillSheet?.lastTakenDate,
+    "pillSheetBeginDate": activePillSheet?.beginingDate.millisecondsSinceEpoch,
+    "pillSheetLastTakenDate": activePillSheet?.lastTakenDate?.millisecondsSinceEpoch,
     "userIsPremiumOrTrial": userIsPremiumOrTrial,
   };
   await methodChannel.invokeMethod("updateValueForWidget", map);

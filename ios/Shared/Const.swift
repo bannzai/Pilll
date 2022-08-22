@@ -8,6 +8,8 @@ enum Const {
     #endif
 
     static let userIsPremiumOrTrial = "userIsPremiumOrTrial"
+    // Epoch second
     static let pillSheetBeginDate = "pillSheetBeginDate"
+    // Epoch second
     static let pillSheetLastTakenDate = "pillSheetLastTakenDate"
 }

@@ -48,8 +48,21 @@ struct PillSheetEntry: TimelineEntry {
   init(date: Date) {
     self.date = date
 
-    pillSheetBeginDate = UserDefaults(suiteName: Const.appGroupKey)?.object(forKey: Const.pillSheetBeginDate) as? Date
-    pillSheetLastTakenDate = UserDefaults(suiteName: Const.appGroupKey)?.object(forKey: Const.pillSheetLastTakenDate) as? Date
+    func contains(_ key: String) -> Bool {
+      UserDefaults(suiteName: Const.appGroupKey)?.dictionaryRepresentation().keys.contains(key) == true
+    }
+
+    if contains(Const.pillSheetBeginDate), let pillSheetBeginDateEpochSecond = UserDefaults(suiteName: Const.appGroupKey)?.integer(forKey: Const.pillSheetBeginDate) {
+      pillSheetBeginDate = Date(timeIntervalSince1970: pillSheetBeginDateEpochSecond)
+    } else {
+      pillSheetBeginDate = nil
+    }
+
+    if contains(Const.pillSheetLastTakenDate), let pillSheetLastTakenDateEpochSecond = pillSheetLastTakenDate = UserDefaults(suiteName: Const.appGroupKey)?.integer(forKey: Const.pillSheetLastTakenDate) {
+      pillSheetLastTakenDate = Date(timeIntervalSince1970: pillSheetLastTakenDateEpochSecond)
+    } else {
+      pillSheetLastTakenDate = nil
+    }
   }
 }
 
