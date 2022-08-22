@@ -10,5 +10,5 @@ Future<void> updateValuesForWidget({
     "pillSheetLastTakenDate": activePillSheet?.lastTakenDate?.millisecondsSinceEpoch,
     "userIsPremiumOrTrial": userIsPremiumOrTrial,
   };
-  await methodChannel.invokeMethod("updateValueForWidget", map);
+  await methodChannel.invokeMethod("updateValuesForWidget", map);
 }

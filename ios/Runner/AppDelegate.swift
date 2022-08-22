@@ -105,13 +105,13 @@ import WidgetKit
 
                 let pillSheetLastTakenDate = arguments[Const.pillSheetLastTakenDate] as? Int
                 UserDefaults(suiteName: Const.appGroupKey)?.set(pillSheetLastTakenDate, forKey: Const.pillSheetLastTakenDate)
-                
+
                 if #available(iOS 14.0, *) {
                     WidgetCenter.shared.reloadTimelines(ofKind: Const.widgetKind)
                 } else {
                     // Fallback on earlier versions
                 }
-                
+
                 completionHandler(["result": "success"])
             case _:
                 return
