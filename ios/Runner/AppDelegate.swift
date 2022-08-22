@@ -98,13 +98,13 @@ import WidgetKit
                 }
 
                 let userIsPremiumOrTrial = arguments[Const.userIsPremiumOrTrial] as? Bool
-                UserDefaults(suiteName: Const.appGroupKey)?.set(userIsPremiumOrTrial, forKey: Const.userIsPremiumOrTrial)
+                UserDefaults(suiteName: Plist.appGroupKey)?.set(userIsPremiumOrTrial, forKey: Const.userIsPremiumOrTrial)
 
                 let pillSheetBeginDate = arguments[Const.pillSheetBeginDate] as? Int
-                UserDefaults(suiteName: Const.appGroupKey)?.set(pillSheetBeginDate, forKey: Const.pillSheetBeginDate)
+                UserDefaults(suiteName: Plist.appGroupKey)?.set(pillSheetBeginDate, forKey: Const.pillSheetBeginDate)
 
                 let pillSheetLastTakenDate = arguments[Const.pillSheetLastTakenDate] as? Int
-                UserDefaults(suiteName: Const.appGroupKey)?.set(pillSheetLastTakenDate, forKey: Const.pillSheetLastTakenDate)
+                UserDefaults(suiteName: Plist.appGroupKey)?.set(pillSheetLastTakenDate, forKey: Const.pillSheetLastTakenDate)
 
                 if #available(iOS 14.0, *) {
                     WidgetCenter.shared.reloadTimelines(ofKind: Const.widgetKind)

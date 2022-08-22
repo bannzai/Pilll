@@ -49,16 +49,16 @@ struct PillSheetEntry: TimelineEntry {
     self.date = date
 
     func contains(_ key: String) -> Bool {
-      UserDefaults(suiteName: Const.appGroupKey)?.dictionaryRepresentation().keys.contains(key) == true
+      UserDefaults(suiteName: Plist.appGroupKey)?.dictionaryRepresentation().keys.contains(key) == true
     }
 
-    if contains(Const.pillSheetBeginDate), let pillSheetBeginDateEpochMilliSecond = UserDefaults(suiteName: Const.appGroupKey)?.integer(forKey: Const.pillSheetBeginDate) {
+    if contains(Const.pillSheetBeginDate), let pillSheetBeginDateEpochMilliSecond = UserDefaults(suiteName: Plist.appGroupKey)?.integer(forKey: Const.pillSheetBeginDate) {
       pillSheetBeginDate = Date(timeIntervalSince1970: TimeInterval(pillSheetBeginDateEpochMilliSecond / 1000))
     } else {
       pillSheetBeginDate = nil
     }
 
-    if contains(Const.pillSheetLastTakenDate), let pillSheetLastTakenDateEpochMilliSecond = UserDefaults(suiteName: Const.appGroupKey)?.integer(forKey: Const.pillSheetLastTakenDate) {
+    if contains(Const.pillSheetLastTakenDate), let pillSheetLastTakenDateEpochMilliSecond = UserDefaults(suiteName: Plist.appGroupKey)?.integer(forKey: Const.pillSheetLastTakenDate) {
       pillSheetLastTakenDate = Date(timeIntervalSince1970: TimeInterval(pillSheetLastTakenDateEpochMilliSecond / 1000))
     } else {
       pillSheetLastTakenDate = nil
@@ -70,7 +70,7 @@ struct WidgetEntryView : View {
   var entry: Provider.Entry
 
   var body: some View {
-    if UserDefaults(suiteName: Const.appGroupKey)?.bool(forKey: Const.userIsPremiumOrTrial) == true {
+    if UserDefaults(suiteName: Plist.appGroupKey)?.bool(forKey: Const.userIsPremiumOrTrial) == true {
       VStack {
         HStack(alignment: .top) {
           VStack(spacing: 0) {
