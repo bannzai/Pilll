@@ -4,15 +4,15 @@ import Intents
 
 fileprivate var calendar: Calendar {
   var calendar = Calendar(identifier: .gregorian)
-#if DEBUG
-  calendar.locale = .init(identifier: "ja_JP")
-#endif
+  calendar.locale = .autoupdatingCurrent
+  calendar.timeZone = .autoupdatingCurrent
   return calendar
 }
 
 fileprivate var dateFormater: DateFormatter {
   let dateFormater = DateFormatter()
-  dateFormater.locale = .init(identifier: "ja_JP")
+  dateFormater.locale = .autoupdatingCurrent
+  dateFormater.timeZone = .autoupdatingCurrent
   return dateFormater
 }
 
