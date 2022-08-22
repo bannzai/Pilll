@@ -41,8 +41,8 @@ class TakenButton extends HookConsumerWidget {
           FlutterAppBadger.removeBadge();
           requestInAppReview();
           showReleaseNotePreDialog(context);
-          await store.asyncAction.taken(pillSheetGroup: pillSheetGroup);
-          updateValuesForWidget(activePillSheet: pillSheet, userIsPremiumOrTrial: userIsPremiumOtTrial);
+          final updatedPillSheetGroup = await store.asyncAction.taken(pillSheetGroup: pillSheetGroup);
+          updateValuesForWidget(activePillSheet: updatedPillSheetGroup?.activedPillSheet, userIsPremiumOrTrial: userIsPremiumOtTrial);
         } catch (exception, stack) {
           errorLogger.recordError(exception, stack);
           showErrorAlert(context, exception);
