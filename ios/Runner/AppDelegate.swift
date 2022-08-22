@@ -2,6 +2,7 @@ import UIKit
 import ObjectiveC
 import Flutter
 import HealthKit
+import WidgetKit
 
 
 @UIApplicationMain
@@ -105,8 +106,12 @@ import HealthKit
                 let pillSheetLastTakenDate = arguments[Const.pillSheetLastTakenDate] as? Int
                 UserDefaults(suiteName: Const.appGroupKey)?.set(pillSheetLastTakenDate, forKey: Const.pillSheetLastTakenDate)
                 
-                WidgetCenter.shared.reloadTimelines(ofKind: Const.widgetKind)
-
+                if #available(iOS 14.0, *) {
+                    WidgetCenter.shared.reloadTimelines(ofKind: Const.widgetKind)
+                } else {
+                    // Fallback on earlier versions
+                }
+                
                 completionHandler(["result": "success"])
             case _:
                 return
