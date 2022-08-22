@@ -53,13 +53,13 @@ struct PillSheetEntry: TimelineEntry {
     }
 
     if contains(Const.pillSheetBeginDate), let pillSheetBeginDateEpochSecond = UserDefaults(suiteName: Const.appGroupKey)?.integer(forKey: Const.pillSheetBeginDate) {
-      pillSheetBeginDate = Date(timeIntervalSince1970: pillSheetBeginDateEpochSecond)
+      pillSheetBeginDate = Date(timeIntervalSince1970: TimeInterval(pillSheetBeginDateEpochSecond))
     } else {
       pillSheetBeginDate = nil
     }
 
     if contains(Const.pillSheetLastTakenDate), let pillSheetLastTakenDateEpochSecond = pillSheetLastTakenDate = UserDefaults(suiteName: Const.appGroupKey)?.integer(forKey: Const.pillSheetLastTakenDate) {
-      pillSheetLastTakenDate = Date(timeIntervalSince1970: pillSheetLastTakenDateEpochSecond)
+      pillSheetLastTakenDate = Date(timeIntervalSince1970: TimeInterval(pillSheetLastTakenDateEpochSecond))
     } else {
       pillSheetLastTakenDate = nil
     }
