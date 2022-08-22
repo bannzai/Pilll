@@ -96,18 +96,14 @@ import HealthKit
                     fatalError()
                 }
 
-                let todayPillNumber = arguments[Const.todayPillNumber] as? Date
-                UserDefaults(suiteName: Const.appGroupKey)?.set(todayPillNumber, forKey: Const.todayPillNumber)
-
-                let lastTakenPillNumber = arguments[Const.lastTakenPillNumber] as? Int
-                UserDefaults(suiteName: Const.appGroupKey)?.set(lastTakenPillNumber, forKey: Const.lastTakenPillNumber)
-
-                let pilllNumberDisplayMode = arguments[Const.pilllNumberDisplayMode] as? String
-                UserDefaults(suiteName: Const.appGroupKey)?.set(pilllNumberDisplayMode, forKey: Const.pilllNumberDisplayMode)
-
                 let userIsPremiumOrTrial = arguments[Const.userIsPremiumOrTrial] as? Bool
                 UserDefaults(suiteName: Const.appGroupKey)?.set(userIsPremiumOrTrial, forKey: Const.userIsPremiumOrTrial)
 
+                let pillSheetBeginDate = arguments[Const.pillSheetBeginDate] as? Date
+                UserDefaults(suiteName: Const.appGroupKey)?.set(pillSheetBeginDate, forKey: Const.pillSheetBeginDate)
+
+                let pillSheetLastTakenDate = arguments[Const.pillSheetLastTakenDate] as? Date
+                UserDefaults(suiteName: Const.appGroupKey)?.set(todayPillNumber, forKey: Const.pillSheetLastTakenDate)
                 completionHandler(["result": "success"])
             case _:
                 return

@@ -8,7 +8,6 @@ enum Const {
     #endif
 
     static let userIsPremiumOrTrial = "userIsPremiumOrTrial"
-    static let todayPillNumber = "todayPillNumber"
-    static let lastTakenPillNumber = "lastTakenPillNumber"
-    static let pilllNumberDisplayMode = "pilllNumberDisplayMode" // number or sequential or date
+    static let pillSheetBeginDate = "pillSheetBeginDate"
+    static let pillSheetLastTakenDate = "pillSheetLastTakenDate"
 }

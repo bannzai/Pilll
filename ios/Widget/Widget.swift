@@ -42,20 +42,14 @@ struct PillSheetEntry: TimelineEntry {
   let date: Date
 
   // PillSheet property
-  let todayPillNumber: Int?
-  let lastTakenPillNumber: Int?
-  let pilllNumberDisplayMode: String?
+  let pillSheetBeginDate: Date?
+  let pillSheetLastTakenDate: Date?
 
   init(date: Date) {
     self.date = date
 
-    func contains(_ key: String) -> Bool {
-      UserDefaults(suiteName: Const.appGroupKey)?.dictionaryRepresentation().keys.contains(key) == true
-    }
-
-    todayPillNumber = contains(Const.todayPillNumber) ? UserDefaults(suiteName: Const.appGroupKey)?.integer(forKey: Const.todayPillNumber) : nil
-    lastTakenPillNumber = contains(Const.lastTakenPillNumber) ? UserDefaults(suiteName: Const.appGroupKey)?.integer(forKey: Const.lastTakenPillNumber) : nil
-    pilllNumberDisplayMode = contains(Const.pilllNumberDisplayMode) ? UserDefaults(suiteName: Const.appGroupKey)?.string(forKey: Const.pilllNumberDisplayMode) : nil
+    pillSheetBeginDate = UserDefaults(suiteName: Const.appGroupKey)?.object(forKey: Const.pillSheetBeginDate) as? Date
+    pillSheetLastTakenDate = UserDefaults(suiteName: Const.appGroupKey)?.object(forKey: Const.pillSheetLastTakenDate) as? Date
   }
 }
 
@@ -86,8 +80,7 @@ struct WidgetEntryView : View {
 
         Spacer()
 
-        if let lastTakenPillNumber = entry.lastTakenPillNumber, let todayPillNumber = entry.todayPillNumber {
-          let alreadyTaken = lastTakenPillNumber == todayPillNumber
+        if let alreadyTaken = alreadyTaken {
           HStack {
             HStack(spacing: 6) {
               Divider()
@@ -96,10 +89,10 @@ struct WidgetEntryView : View {
                 .cornerRadius(2)
 
               VStack(alignment: .leading, spacing: 2) {
-                Text(entry.pilllNumberDisplayMode == "date" ? "\(todayPillNumber)日目" : "\(todayPillNumber)番")
-                  .foregroundColor(.black)
-                  .font(.system(size: 15))
-                  .fontWeight(.semibold)
+//                Text(entry.pilllNumberDisplayMode == "date" ? "\(todayPillNumber)日目" : "\(todayPillNumber)番")
+//                  .foregroundColor(.black)
+//                  .font(.system(size: 15))
+//                  .fontWeight(.semibold)
 
                 Text(alreadyTaken ? "服用済み" : "未服用")
                   .foregroundColor(.mainText)
@@ -124,10 +117,10 @@ struct WidgetEntryView : View {
                 .cornerRadius(2)
 
               VStack(alignment: .leading, spacing: 2) {
-                Text(entry.pilllNumberDisplayMode == "date" ? "- 日目" : "- 番")
-                  .foregroundColor(.black)
-                  .font(.system(size: 15))
-                  .fontWeight(.semibold)
+//                Text(entry.pilllNumberDisplayMode == "date" ? "- 日目" : "- 番")
+//                  .foregroundColor(.black)
+//                  .font(.system(size: 15))
+//                  .fontWeight(.semibold)
 
                 Text("シートがありません")
                   .foregroundColor(.orange)
@@ -172,6 +165,13 @@ struct WidgetEntryView : View {
 
   private var day: Int {
     calendar.component(.day, from: entry.date)
+  }
+
+  private var alreadyTaken: Bool? {
+    guard let pillSheetLastTakenDate = entry.pillSheetLastTakenDate else {
+      return nil
+    }
+    return calendar.isDate(.now, inSameDayAs: pillSheetLastTakenDate)
   }
 
 }
