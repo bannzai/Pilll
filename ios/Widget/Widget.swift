@@ -184,7 +184,7 @@ struct WidgetEntryView : View {
     guard let pillSheetLastTakenDate = entry.pillSheetLastTakenDate else {
       return nil
     }
-    return calendar.isDate(.now, inSameDayAs: pillSheetLastTakenDate)
+    return calendar.isDate(entry.date, inSameDayAs: pillSheetLastTakenDate)
   }
 
 }
