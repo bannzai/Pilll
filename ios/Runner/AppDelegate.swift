@@ -103,7 +103,7 @@ import HealthKit
                 UserDefaults(suiteName: Const.appGroupKey)?.set(pillSheetBeginDate, forKey: Const.pillSheetBeginDate)
 
                 let pillSheetLastTakenDate = arguments[Const.pillSheetLastTakenDate] as? Date
-                UserDefaults(suiteName: Const.appGroupKey)?.set(todayPillNumber, forKey: Const.pillSheetLastTakenDate)
+                UserDefaults(suiteName: Const.appGroupKey)?.set(pillSheetLastTakenDate, forKey: Const.pillSheetLastTakenDate)
                 completionHandler(["result": "success"])
             case _:
                 return
