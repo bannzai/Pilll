@@ -58,7 +58,7 @@ struct PillSheetEntry: TimelineEntry {
       pillSheetBeginDate = nil
     }
 
-    if contains(Const.pillSheetLastTakenDate), let pillSheetLastTakenDateEpochSecond = pillSheetLastTakenDate = UserDefaults(suiteName: Const.appGroupKey)?.integer(forKey: Const.pillSheetLastTakenDate) {
+    if contains(Const.pillSheetLastTakenDate), let pillSheetLastTakenDateEpochSecond = UserDefaults(suiteName: Const.appGroupKey)?.integer(forKey: Const.pillSheetLastTakenDate) {
       pillSheetLastTakenDate = Date(timeIntervalSince1970: TimeInterval(pillSheetLastTakenDateEpochSecond))
     } else {
       pillSheetLastTakenDate = nil
