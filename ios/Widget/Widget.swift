@@ -116,7 +116,7 @@ struct WidgetEntryView : View {
 
             Spacer()
 
-            Image(alreadyTaken ? "check-icon-on.svg" : "check-icon-off.svg")
+            Image(alreadyTaken ? "check-icon-on" : "check-icon-off")
               .frame(width: 32, height: 32)
               .shadow(color: Color(red: 78 / 255, green: 98 / 255, blue: 135 / 255, opacity: 0.4), radius: 5, x: 0, y: 2)
           }
