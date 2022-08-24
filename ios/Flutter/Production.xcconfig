@@ -3,4 +3,3 @@
 FLUTTER_FLAVOR=Production
 PRODUCT_BUNDLE_IDENTIFIER=com.mizuki.Ohashi.Pilll
 DISPLAY_NAME=Pilll
-APP_GROUP_KEY=group.com.mizuki.Ohashi.Pilll

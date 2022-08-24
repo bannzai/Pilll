@@ -30,7 +30,9 @@ Future<void> callUpdatePurchaseInfo(PurchaserInfo info) async {
   analytics.logEvent(name: "start_update_purchase_info");
   final uid = FirebaseAuth.instance.currentUser?.uid;
   if (uid == null) {
-    errorLogger.recordError("unexpected uid is not found when purchase info is update", StackTrace.current);
+    errorLogger.recordError(
+        "unexpected uid is not found when purchase info is update",
+        StackTrace.current);
     return;
   }
 
@@ -56,13 +58,17 @@ Future<void> syncPurchaseInfo() async {
   analytics.logEvent(name: "start_sync_purchase_info");
   final uid = FirebaseAuth.instance.currentUser?.uid;
   if (uid == null) {
-    errorLogger.recordError("unexpected uid is not found when purchase info to sync", StackTrace.current);
+    errorLogger.recordError(
+        "unexpected uid is not found when purchase info to sync",
+        StackTrace.current);
     return;
   }
 
   PurchaserInfo purchaserInfo = await Purchases.getPurchaserInfo();
-  final premiumEntitlement = purchaserInfo.entitlements.all[premiumEntitlements];
-  final isActivated = premiumEntitlement == null ? false : premiumEntitlement.isActive;
+  final premiumEntitlement =
+      purchaserInfo.entitlements.all[premiumEntitlements];
+  final isActivated =
+      premiumEntitlement == null ? false : premiumEntitlement.isActive;
 
   try {
     final userDatastore = UserDatastore(DatabaseConnection(uid));

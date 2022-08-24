@@ -770,35 +770,32 @@ class MockRecordPageAsyncAction extends _i1.Mock
   }
 
   @override
-  _i20.Future<_i11.PillSheetGroup?> taken(
-          {_i11.PillSheetGroup? pillSheetGroup}) =>
+  _i20.Future<bool> taken({_i11.PillSheetGroup? pillSheetGroup}) =>
       (super.noSuchMethod(
-              Invocation.method(#taken, [], {#pillSheetGroup: pillSheetGroup}),
-              returnValue: Future<_i11.PillSheetGroup?>.value())
-          as _i20.Future<_i11.PillSheetGroup?>);
+          Invocation.method(#taken, [], {#pillSheetGroup: pillSheetGroup}),
+          returnValue: Future<bool>.value(false)) as _i20.Future<bool>);
   @override
-  _i20.Future<_i11.PillSheetGroup?> takenWithPillNumber(
+  _i20.Future<bool> takenWithPillNumber(
           {int? pillNumberIntoPillSheet,
           _i11.PillSheetGroup? pillSheetGroup,
           _i2.PillSheet? pillSheet}) =>
       (super.noSuchMethod(
-              Invocation.method(#takenWithPillNumber, [], {
-                #pillNumberIntoPillSheet: pillNumberIntoPillSheet,
-                #pillSheetGroup: pillSheetGroup,
-                #pillSheet: pillSheet
-              }),
-              returnValue: Future<_i11.PillSheetGroup?>.value())
-          as _i20.Future<_i11.PillSheetGroup?>);
+          Invocation.method(#takenWithPillNumber, [], {
+            #pillNumberIntoPillSheet: pillNumberIntoPillSheet,
+            #pillSheetGroup: pillSheetGroup,
+            #pillSheet: pillSheet
+          }),
+          returnValue: Future<bool>.value(false)) as _i20.Future<bool>);
   @override
-  _i20.Future<_i11.PillSheetGroup?> cancelTaken(
-          {_i11.PillSheetGroup? pillSheetGroup}) =>
+  _i20.Future<void> cancelTaken({_i11.PillSheetGroup? pillSheetGroup}) =>
       (super.noSuchMethod(
               Invocation.method(
                   #cancelTaken, [], {#pillSheetGroup: pillSheetGroup}),
-              returnValue: Future<_i11.PillSheetGroup?>.value())
-          as _i20.Future<_i11.PillSheetGroup?>);
+              returnValue: Future<void>.value(),
+              returnValueForMissingStub: Future<void>.value())
+          as _i20.Future<void>);
   @override
-  _i20.Future<_i11.PillSheetGroup?> revertTaken(
+  _i20.Future<void> revertTaken(
           {_i11.PillSheetGroup? pillSheetGroup,
           int? pageIndex,
           int? pillNumberIntoPillSheet}) =>
@@ -808,8 +805,9 @@ class MockRecordPageAsyncAction extends _i1.Mock
                 #pageIndex: pageIndex,
                 #pillNumberIntoPillSheet: pillNumberIntoPillSheet
               }),
-              returnValue: Future<_i11.PillSheetGroup?>.value())
-          as _i20.Future<_i11.PillSheetGroup?>);
+              returnValue: Future<void>.value(),
+              returnValueForMissingStub: Future<void>.value())
+          as _i20.Future<void>);
   @override
   bool isDone(
           {int? pillNumberIntoPillSheet,
