@@ -8,13 +8,11 @@ import 'package:pilll/entity/pill_sheet_group.codegen.dart';
 class RecordPageButton extends StatelessWidget {
   final PillSheetGroup pillSheetGroup;
   final PillSheet currentPillSheet;
-  final bool userIsPremiumOtTrial;
 
   const RecordPageButton({
     Key? key,
     required this.pillSheetGroup,
     required this.currentPillSheet,
-    required this.userIsPremiumOtTrial,
   }) : super(key: key);
 
   @override
@@ -25,14 +23,12 @@ class RecordPageButton extends StatelessWidget {
       return CancelButton(
         pillSheetGroup: pillSheetGroup,
         pillSheet: currentPillSheet,
-        userIsPremiumOtTrial: userIsPremiumOtTrial,
       );
     } else {
       return TakenButton(
         parentContext: context,
         pillSheetGroup: pillSheetGroup,
         pillSheet: currentPillSheet,
-        userIsPremiumOtTrial: userIsPremiumOtTrial,
       );
     }
   }

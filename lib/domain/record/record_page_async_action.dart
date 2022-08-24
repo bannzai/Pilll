@@ -30,13 +30,13 @@ class RecordPageAsyncAction {
     this._pillSheetGroupDatastore,
   );
 
-  Future<PillSheetGroup?> _take({required DateTime takenDate, required PillSheetGroup pillSheetGroup}) async {
+  Future<bool> _take({required DateTime takenDate, required PillSheetGroup pillSheetGroup}) async {
     final activedPillSheet = pillSheetGroup.activedPillSheet;
     if (activedPillSheet == null) {
       throw const FormatException("active pill sheet not found");
     }
     if (activedPillSheet.todayPillIsAlreadyTaken) {
-      return null;
+      return false;
     }
     final takePill = TakePill(
       batchFactory: _batchFactory,
@@ -51,44 +51,44 @@ class RecordPageAsyncAction {
       isQuickRecord: false,
     );
     if (updatedPillSheetGroup == null) {
-      return null;
+      return false;
     }
-    return updatedPillSheetGroup;
+    return true;
   }
 
-  Future<PillSheetGroup?> taken({required PillSheetGroup pillSheetGroup}) {
+  Future<bool> taken({required PillSheetGroup pillSheetGroup}) {
     return _take(takenDate: now(), pillSheetGroup: pillSheetGroup);
   }
 
-  Future<PillSheetGroup?> takenWithPillNumber({
+  Future<bool> takenWithPillNumber({
     required int pillNumberIntoPillSheet,
     required PillSheetGroup pillSheetGroup,
     required PillSheet pillSheet,
   }) async {
     if (pillNumberIntoPillSheet <= pillSheet.lastTakenPillNumber) {
-      return null;
+      return false;
     }
     final activedPillSheet = pillSheetGroup.activedPillSheet;
     if (activedPillSheet == null) {
-      return null;
+      return false;
     }
     if (activedPillSheet.activeRestDuration != null) {
-      return null;
+      return false;
     }
     if (activedPillSheet.groupIndex < pillSheet.groupIndex) {
-      return null;
+      return false;
     }
     var diff = min(pillSheet.todayPillNumber, pillSheet.typeInfo.totalCount) - pillNumberIntoPillSheet;
     if (diff < 0) {
       // User tapped future pill number
-      return null;
+      return false;
     }
 
     final takenDate = pillSheet.displayPillTakeDate(pillNumberIntoPillSheet);
     return _take(takenDate: takenDate, pillSheetGroup: pillSheetGroup);
   }
 
-  Future<PillSheetGroup?> cancelTaken({required PillSheetGroup? pillSheetGroup}) async {
+  Future<void> cancelTaken({required PillSheetGroup? pillSheetGroup}) async {
     if (pillSheetGroup == null) {
       throw const FormatException("現在有効なとなっているピルシートグループが見つかりませんでした");
     }
@@ -98,14 +98,14 @@ class RecordPageAsyncAction {
     }
     // キャンセルの場合は今日の服用のundo機能なので、服用済みじゃない場合はreturnする
     if (!activedPillSheet.todayPillIsAlreadyTaken || activedPillSheet.lastTakenDate == null) {
-      return null;
+      return;
     }
 
-    return await revertTaken(
+    await revertTaken(
         pillSheetGroup: pillSheetGroup, pageIndex: activedPillSheet.groupIndex, pillNumberIntoPillSheet: activedPillSheet.lastTakenPillNumber);
   }
 
-  Future<PillSheetGroup?> revertTaken({required PillSheetGroup pillSheetGroup, required int pageIndex, required int pillNumberIntoPillSheet}) async {
+  Future<void> revertTaken({required PillSheetGroup pillSheetGroup, required int pageIndex, required int pillNumberIntoPillSheet}) async {
     final activedPillSheet = pillSheetGroup.activedPillSheet;
     if (activedPillSheet == null) {
       throw const FormatException("現在対象となっているピルシートが見つかりませんでした");
@@ -149,7 +149,7 @@ class RecordPageAsyncAction {
         );
 
     if (updatedIndexses.isEmpty) {
-      return null;
+      return;
     }
 
     final batch = _batchFactory.batch();
@@ -169,8 +169,6 @@ class RecordPageAsyncAction {
     _pillSheetModifiedHistoryDatastore.add(batch, history);
 
     await batch.commit();
-
-    return updatedPillSheetGroup;
   }
 
   bool isDone({

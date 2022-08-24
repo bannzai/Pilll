@@ -5,18 +5,15 @@ import 'package:pilll/components/atoms/buttons.dart';
 import 'package:pilll/domain/record/record_page_state_notifier.dart';
 import 'package:pilll/entity/pill_sheet.codegen.dart';
 import 'package:pilll/entity/pill_sheet_group.codegen.dart';
-import 'package:pilll/native/widget.dart';
 
 class CancelButton extends HookConsumerWidget {
   final PillSheetGroup pillSheetGroup;
   final PillSheet pillSheet;
-  final bool userIsPremiumOtTrial;
 
   const CancelButton({
     Key? key,
     required this.pillSheetGroup,
     required this.pillSheet,
-    required this.userIsPremiumOtTrial,
   }) : super(key: key);
   @override
   Widget build(BuildContext context, WidgetRef ref) {
@@ -36,8 +33,7 @@ class CancelButton extends HookConsumerWidget {
         if (lastTakenDate == null) {
           return;
         }
-        final updatedPillSheetGroup = await store.asyncAction.cancelTaken(pillSheetGroup: pillSheetGroup);
-        updateValuesForWidget(activePillSheet: updatedPillSheetGroup?.activedPillSheet, userIsPremiumOrTrial: userIsPremiumOtTrial);
+        await store.asyncAction.cancelTaken(pillSheetGroup: pillSheetGroup);
       },
     );
   }

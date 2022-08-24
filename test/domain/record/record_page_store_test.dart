@@ -265,7 +265,7 @@ void main() {
 
       await Future.delayed(const Duration(seconds: 1));
       final result = await asyncAction.taken(pillSheetGroup: pillSheetGroup);
-      expect(result, isNotNull);
+      expect(result, isTrue);
     });
     test("group has two pill sheet contains future pill sheet", () async {
       var mockTodayRepository = MockTodayService();
@@ -357,7 +357,7 @@ void main() {
 
       await Future.delayed(const Duration(seconds: 1));
       final result = await asyncAction.taken(pillSheetGroup: pillSheetGroup);
-      expect(result, isNotNull);
+      expect(result, isTrue);
     });
     test("group has two pill sheet for first pillSheet.isFill pattern", () async {
       var mockTodayRepository = MockTodayService();
@@ -449,7 +449,7 @@ void main() {
 
       await Future.delayed(const Duration(seconds: 1));
       final result = await asyncAction.taken(pillSheetGroup: pillSheetGroup);
-      expect(result, isNotNull);
+      expect(result, isTrue);
     });
     test("group has two pill sheet contains past pill sheet but not yet filled", () async {
       var mockTodayRepository = MockTodayService();
@@ -541,7 +541,7 @@ void main() {
 
       await Future.delayed(const Duration(seconds: 1));
       final result = await asyncAction.taken(pillSheetGroup: pillSheetGroup);
-      expect(result, isNotNull);
+      expect(result, isTrue);
     });
   });
 

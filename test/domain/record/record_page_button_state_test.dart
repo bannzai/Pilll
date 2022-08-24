@@ -20,11 +20,13 @@ import '../../helper/mock.mocks.dart';
 void main() {
   setUp(() {
     TestWidgetsFlutterBinding.ensureInitialized();
-    SharedPreferences.setMockInitialValues({BoolKey.recommendedSignupNotificationIsAlreadyShow: true});
+    SharedPreferences.setMockInitialValues(
+        {BoolKey.recommendedSignupNotificationIsAlreadyShow: true});
     initializeDateFormatting('ja_JP');
     Environment.isTest = true;
     analytics = MockAnalytics();
-    WidgetsBinding.instance.renderView.configuration = TestViewConfiguration(size: const Size(375.0, 667.0));
+    WidgetsBinding.instance.renderView.configuration =
+        TestViewConfiguration(size: const Size(375.0, 667.0));
   });
   group('appearance taken button type', () {
     testWidgets('today pill not taken', (WidgetTester tester) async {
@@ -38,19 +40,24 @@ void main() {
       await tester.pumpWidget(
         ProviderScope(
           overrides: [
-            recordPageStateNotifierProvider.overrideWithProvider(StateNotifierProvider.autoDispose((ref) => MockRecordPageStateNotifier())),
+            recordPageStateNotifierProvider.overrideWithProvider(
+                StateNotifierProvider.autoDispose(
+                    (ref) => MockRecordPageStateNotifier())),
           ],
           child: MaterialApp(
             home: RecordPageButton(
-              pillSheetGroup: PillSheetGroup(pillSheets: [pillSheet], createdAt: now(), pillSheetIDs: ["id"]),
+              pillSheetGroup: PillSheetGroup(
+                  pillSheets: [pillSheet],
+                  createdAt: now(),
+                  pillSheetIDs: ["id"]),
               currentPillSheet: pillSheet,
-              userIsPremiumOtTrial: false,
             ),
           ),
         ),
       );
       await tester.pump();
-      expect(find.byWidgetPredicate((widget) => widget is TakenButton), findsOneWidget);
+      expect(find.byWidgetPredicate((widget) => widget is TakenButton),
+          findsOneWidget);
     });
   });
   testWidgets('today pill is already taken', (WidgetTester tester) async {
@@ -63,18 +70,23 @@ void main() {
     await tester.pumpWidget(
       ProviderScope(
         overrides: [
-          recordPageStateNotifierProvider.overrideWithProvider(StateNotifierProvider.autoDispose((ref) => MockRecordPageStateNotifier())),
+          recordPageStateNotifierProvider.overrideWithProvider(
+              StateNotifierProvider.autoDispose(
+                  (ref) => MockRecordPageStateNotifier())),
         ],
         child: MaterialApp(
           home: RecordPageButton(
-            pillSheetGroup: PillSheetGroup(pillSheets: [pillSheet], createdAt: now(), pillSheetIDs: ["id"]),
+            pillSheetGroup: PillSheetGroup(
+                pillSheets: [pillSheet],
+                createdAt: now(),
+                pillSheetIDs: ["id"]),
             currentPillSheet: pillSheet,
-            userIsPremiumOtTrial: false,
           ),
         ),
       ),
     );
     await tester.pump();
-    expect(find.byWidgetPredicate((widget) => widget is CancelButton), findsOneWidget);
+    expect(find.byWidgetPredicate((widget) => widget is CancelButton),
+        findsOneWidget);
   });
 }

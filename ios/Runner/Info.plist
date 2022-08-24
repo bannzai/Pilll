@@ -2,8 +2,6 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
-	<key>AppGroupKey</key>
-	<string>$(APP_GROUP_KEY)</string>
 	<key>NSHealthShareUsageDescription</key>
 	<string>ヘルスケアアプリから生理情報の取得を許可してください</string>
 	<key>NSHealthUpdateUsageDescription</key>

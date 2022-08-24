@@ -8,17 +8,16 @@ import 'package:pilll/domain/record/util/take_pill.dart';
 import 'package:pilll/database/pill_sheet.dart';
 import 'package:pilll/database/pill_sheet_group.dart';
 import 'package:pilll/database/pill_sheet_modified_history.dart';
-import 'package:pilll/entity/pill_sheet_group.codegen.dart';
 import 'package:pilll/util/datetime/day.dart';
 
-Future<PillSheetGroup?> recordPill() async {
+Future<void> recordPill() async {
   // 通知からの起動の時に、FirebaseAuth.instanceを参照すると、まだinitializeされてないよ．的なエラーが出る
   if (Firebase.apps.isEmpty) {
     await Firebase.initializeApp();
   }
   final firebaseUser = FirebaseAuth.instance.currentUser;
   if (firebaseUser == null) {
-    return null;
+    return;
   }
 
   final database = DatabaseConnection(firebaseUser.uid);
@@ -27,14 +26,14 @@ Future<PillSheetGroup?> recordPill() async {
   final pillSheetGroupDatastore = PillSheetGroupDatastore(database);
   final pillSheetGroup = await pillSheetGroupDatastore.fetchLatest();
   if (pillSheetGroup == null) {
-    return null;
+    return Future.value();
   }
   final activedPillSheet = pillSheetGroup.activedPillSheet;
   if (activedPillSheet == null) {
-    return pillSheetGroup;
+    return Future.value();
   }
   if (activedPillSheet.todayPillIsAlreadyTaken) {
-    return pillSheetGroup;
+    return Future.value();
   }
 
   final takenDate = now();
@@ -46,7 +45,7 @@ Future<PillSheetGroup?> recordPill() async {
     pillSheetModifiedHistoryDatastore: pillSheetModifiedHistoryDatastore,
     pillSheetGroupDatastore: pillSheetGroupDatastore,
   );
-  final updatedPillSheetGroup = await takePill(
+  await takePill(
     takenDate: takenDate,
     pillSheetGroup: pillSheetGroup,
     activedPillSheet: activedPillSheet,
@@ -58,6 +57,4 @@ Future<PillSheetGroup?> recordPill() async {
 
   // NOTE: Firebase initializeが成功しているかが定かでは無いので一番最後にログを送る
   analytics.logEvent(name: "quick_recorded");
-
-  return updatedPillSheetGroup;
 }
