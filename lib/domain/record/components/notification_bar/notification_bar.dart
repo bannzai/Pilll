@@ -1,3 +1,5 @@
+import 'dart:io';
+
 import 'package:flutter/material.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
 import 'package:pilll/analytics.dart';
@@ -35,6 +37,9 @@ class NotificationBar extends HookConsumerWidget {
     final discountEntitlementDeadlineDate = state.premiumAndTrial.discountEntitlementDeadlineDate;
     final isOverDiscountDeadline = ref.watch(isOverDiscountDeadlineProvider(discountEntitlementDeadlineDate));
     final isAdsDisabled = () {
+      if (!Platform.localeName.contains("_JP")) {
+        return true;
+      }
       final begin = DateTime(2022, 8, 10, 0, 0, 0);
       final end = DateTime(2022, 8, 23, 23, 59, 59);
       return now().isBefore(begin) || now().isAfter(end);
