@@ -14,6 +14,7 @@ import 'package:pilll/domain/record/components/notification_bar/components/rest_
 import 'package:pilll/entity/pill_sheet.codegen.dart';
 import 'package:pilll/entity/pill_sheet_group.codegen.dart';
 import 'package:pilll/entity/pill_sheet_type.dart';
+import 'package:pilll/provider/locale.dart';
 import 'package:pilll/provider/premium_and_trial.codegen.dart';
 import 'package:pilll/service/day.dart';
 import 'package:pilll/util/datetime/day.dart';
@@ -78,6 +79,7 @@ void main() {
         await tester.pumpWidget(
           ProviderScope(
             overrides: [
+              isJaLocaleProvider.overrideWithValue(true),
               notificationBarStoreProvider.overrideWithProvider(StateNotifierProvider.autoDispose((_) => NotificationBarStateStore(state))),
               notificationBarStateProvider.overrideWithProvider(Provider.autoDispose((_) => state)),
               isOverDiscountDeadlineProvider.overrideWithProvider((param) => Provider.autoDispose((_) => false)),
@@ -132,6 +134,7 @@ void main() {
         await tester.pumpWidget(
           ProviderScope(
             overrides: [
+              isJaLocaleProvider.overrideWithValue(true),
               notificationBarStoreProvider.overrideWithProvider(StateNotifierProvider.autoDispose((_) => NotificationBarStateStore(state))),
               notificationBarStateProvider.overrideWithProvider(Provider.autoDispose((_) => state)),
               isOverDiscountDeadlineProvider.overrideWithProvider((param) => Provider.autoDispose((_) => false)),
@@ -186,6 +189,7 @@ void main() {
         await tester.pumpWidget(
           ProviderScope(
             overrides: [
+              isJaLocaleProvider.overrideWithValue(true),
               notificationBarStoreProvider.overrideWithProvider(StateNotifierProvider.autoDispose((_) => NotificationBarStateStore(state))),
               notificationBarStateProvider.overrideWithProvider(Provider.autoDispose((_) => state)),
             ],
@@ -239,6 +243,7 @@ void main() {
         await tester.pumpWidget(
           ProviderScope(
             overrides: [
+              isJaLocaleProvider.overrideWithValue(true),
               notificationBarStoreProvider.overrideWithProvider(StateNotifierProvider.autoDispose((_) => NotificationBarStateStore(state))),
               notificationBarStateProvider.overrideWithProvider(Provider.autoDispose((_) => state)),
             ],
@@ -292,6 +297,7 @@ void main() {
         await tester.pumpWidget(
           ProviderScope(
             overrides: [
+              isJaLocaleProvider.overrideWithValue(true),
               notificationBarStoreProvider.overrideWithProvider(StateNotifierProvider.autoDispose((_) => NotificationBarStateStore(state))),
               notificationBarStateProvider.overrideWithProvider(Provider.autoDispose((_) => state)),
             ],
@@ -345,6 +351,7 @@ void main() {
         await tester.pumpWidget(
           ProviderScope(
             overrides: [
+              isJaLocaleProvider.overrideWithValue(true),
               notificationBarStoreProvider.overrideWithProvider(StateNotifierProvider.autoDispose((_) => NotificationBarStateStore(state))),
               notificationBarStateProvider.overrideWithProvider(Provider.autoDispose((_) => state)),
             ],
@@ -397,6 +404,7 @@ void main() {
           await tester.pumpWidget(
             ProviderScope(
               overrides: [
+                isJaLocaleProvider.overrideWithValue(true),
                 notificationBarStoreProvider.overrideWithProvider(StateNotifierProvider.autoDispose((_) => NotificationBarStateStore(state))),
                 notificationBarStateProvider.overrideWithProvider(Provider.autoDispose((_) => state)),
               ],
@@ -447,6 +455,7 @@ void main() {
           await tester.pumpWidget(
             ProviderScope(
               overrides: [
+                isJaLocaleProvider.overrideWithValue(true),
                 notificationBarStoreProvider.overrideWithProvider(StateNotifierProvider.autoDispose((_) => NotificationBarStateStore(state))),
                 notificationBarStateProvider.overrideWithProvider(Provider.autoDispose((_) => state)),
               ],
@@ -497,6 +506,7 @@ void main() {
           await tester.pumpWidget(
             ProviderScope(
               overrides: [
+                isJaLocaleProvider.overrideWithValue(true),
                 notificationBarStoreProvider.overrideWithProvider(StateNotifierProvider.autoDispose((_) => NotificationBarStateStore(state))),
                 notificationBarStateProvider.overrideWithProvider(Provider.autoDispose((_) => state)),
               ],
@@ -547,6 +557,7 @@ void main() {
           await tester.pumpWidget(
             ProviderScope(
               overrides: [
+                isJaLocaleProvider.overrideWithValue(true),
                 notificationBarStoreProvider.overrideWithProvider(StateNotifierProvider.autoDispose((_) => NotificationBarStateStore(state))),
                 notificationBarStateProvider.overrideWithProvider(Provider.autoDispose((_) => state)),
               ],
@@ -597,6 +608,7 @@ void main() {
           await tester.pumpWidget(
             ProviderScope(
               overrides: [
+                isJaLocaleProvider.overrideWithValue(true),
                 notificationBarStoreProvider.overrideWithProvider(StateNotifierProvider.autoDispose((_) => NotificationBarStateStore(state))),
                 notificationBarStateProvider.overrideWithProvider(Provider.autoDispose((_) => state)),
               ],
@@ -654,6 +666,7 @@ void main() {
           await tester.pumpWidget(
             ProviderScope(
               overrides: [
+                isJaLocaleProvider.overrideWithValue(true),
                 notificationBarStoreProvider.overrideWithProvider(StateNotifierProvider.autoDispose((_) => NotificationBarStateStore(state))),
                 notificationBarStateProvider.overrideWithProvider(Provider.autoDispose((_) => state)),
               ],
@@ -706,6 +719,7 @@ void main() {
           await tester.pumpWidget(
             ProviderScope(
               overrides: [
+                isJaLocaleProvider.overrideWithValue(true),
                 notificationBarStoreProvider.overrideWithProvider(StateNotifierProvider.autoDispose((_) => NotificationBarStateStore(state))),
                 notificationBarStateProvider.overrideWithProvider(Provider.autoDispose((_) => state)),
               ],
@@ -758,6 +772,7 @@ void main() {
           await tester.pumpWidget(
             ProviderScope(
               overrides: [
+                isJaLocaleProvider.overrideWithValue(true),
                 notificationBarStoreProvider.overrideWithProvider(StateNotifierProvider.autoDispose((_) => NotificationBarStateStore(state))),
                 notificationBarStateProvider.overrideWithProvider(Provider.autoDispose((_) => state)),
               ],
@@ -810,6 +825,7 @@ void main() {
           await tester.pumpWidget(
             ProviderScope(
               overrides: [
+                isJaLocaleProvider.overrideWithValue(true),
                 notificationBarStoreProvider.overrideWithProvider(StateNotifierProvider.autoDispose((_) => NotificationBarStateStore(state))),
                 notificationBarStateProvider.overrideWithProvider(Provider.autoDispose((_) => state)),
               ],
@@ -862,6 +878,7 @@ void main() {
           await tester.pumpWidget(
             ProviderScope(
               overrides: [
+                isJaLocaleProvider.overrideWithValue(true),
                 notificationBarStoreProvider.overrideWithProvider(StateNotifierProvider.autoDispose((_) => NotificationBarStateStore(state))),
                 notificationBarStateProvider.overrideWithProvider(Provider.autoDispose((_) => state)),
               ],
@@ -914,6 +931,7 @@ void main() {
           await tester.pumpWidget(
             ProviderScope(
               overrides: [
+                isJaLocaleProvider.overrideWithValue(true),
                 notificationBarStoreProvider.overrideWithProvider(StateNotifierProvider.autoDispose((_) => NotificationBarStateStore(state))),
                 notificationBarStateProvider.overrideWithProvider(Provider.autoDispose((_) => state)),
               ],
@@ -967,6 +985,7 @@ void main() {
         await tester.pumpWidget(
           ProviderScope(
             overrides: [
+              isJaLocaleProvider.overrideWithValue(true),
               notificationBarStoreProvider.overrideWithProvider(StateNotifierProvider.autoDispose((_) => NotificationBarStateStore(state))),
               notificationBarStateProvider.overrideWithProvider(Provider.autoDispose((_) => state)),
             ],
@@ -1020,6 +1039,7 @@ void main() {
         await tester.pumpWidget(
           ProviderScope(
             overrides: [
+              isJaLocaleProvider.overrideWithValue(true),
               notificationBarStoreProvider.overrideWithProvider(StateNotifierProvider.autoDispose((_) => NotificationBarStateStore(state))),
               notificationBarStateProvider.overrideWithProvider(Provider.autoDispose((_) => state)),
             ],
@@ -1073,6 +1093,7 @@ void main() {
         await tester.pumpWidget(
           ProviderScope(
             overrides: [
+              isJaLocaleProvider.overrideWithValue(true),
               notificationBarStoreProvider.overrideWithProvider(StateNotifierProvider.autoDispose((_) => NotificationBarStateStore(state))),
               notificationBarStateProvider.overrideWithProvider(Provider.autoDispose((_) => state)),
             ],
