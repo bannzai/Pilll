@@ -16,6 +16,7 @@ import 'package:pilll/domain/record/components/notification_bar/components/recom
 import 'package:pilll/domain/record/components/notification_bar/components/rest_duration.dart';
 import 'package:pilll/domain/sign_in/sign_in_sheet.dart';
 import 'package:pilll/domain/sign_in/sign_in_sheet_state.codegen.dart';
+import 'package:pilll/provider/locale.dart';
 import 'package:pilll/util/datetime/day.dart';
 
 class NotificationBar extends HookConsumerWidget {
@@ -36,8 +37,9 @@ class NotificationBar extends HookConsumerWidget {
     final store = ref.watch(notificationBarStoreProvider.notifier);
     final discountEntitlementDeadlineDate = state.premiumAndTrial.discountEntitlementDeadlineDate;
     final isOverDiscountDeadline = ref.watch(isOverDiscountDeadlineProvider(discountEntitlementDeadlineDate));
+    final isJaLocale = ref.watch(isJaLocaleProvider);
     final isAdsDisabled = () {
-      if (!Platform.localeName.contains("_JP")) {
+      if (!isJaLocale) {
         return true;
       }
       final begin = DateTime(2022, 8, 10, 0, 0, 0);
