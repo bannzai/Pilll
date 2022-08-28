@@ -2,10 +2,13 @@ import UIKit
 import ObjectiveC
 import Flutter
 import HealthKit
+import WidgetKit
+
 
 @UIApplicationMain
 @objc class AppDelegate: FlutterAppDelegate {
-    var channel: FlutterMethodChannel?
+    private var channel: FlutterMethodChannel?
+
     override func application(
         _ application: UIApplication,
         didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?
@@ -89,6 +92,27 @@ import HealthKit
                         completionHandler(failure.toDictionary())
                     }
                 }
+            case "updateValuesForWidget":
+                guard let arguments = call.arguments as? Dictionary<String, Any> else {
+                    fatalError()
+                }
+
+                let userIsPremiumOrTrial = arguments[Const.userIsPremiumOrTrial] as? Bool
+                UserDefaults(suiteName: Plist.appGroupKey)?.set(userIsPremiumOrTrial, forKey: Const.userIsPremiumOrTrial)
+
+                let pillSheetBeginDate = arguments[Const.pillSheetBeginDate] as? Int
+                UserDefaults(suiteName: Plist.appGroupKey)?.set(pillSheetBeginDate, forKey: Const.pillSheetBeginDate)
+
+                let pillSheetLastTakenDate = arguments[Const.pillSheetLastTakenDate] as? Int
+                UserDefaults(suiteName: Plist.appGroupKey)?.set(pillSheetLastTakenDate, forKey: Const.pillSheetLastTakenDate)
+
+                if #available(iOS 14.0, *) {
+                    WidgetCenter.shared.reloadTimelines(ofKind: Const.widgetKind)
+                } else {
+                    // Fallback on earlier versions
+                }
+
+                completionHandler(["result": "success"])
             case _:
                 return
             }

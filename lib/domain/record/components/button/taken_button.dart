@@ -10,17 +10,20 @@ import 'package:pilll/entity/pill_sheet.codegen.dart';
 import 'package:pilll/entity/pill_sheet_group.codegen.dart';
 import 'package:pilll/error/error_alert.dart';
 import 'package:pilll/error_log.dart';
+import 'package:pilll/native/widget.dart';
 
 class TakenButton extends HookConsumerWidget {
   final BuildContext parentContext;
   final PillSheetGroup pillSheetGroup;
   final PillSheet pillSheet;
+  final bool userIsPremiumOtTrial;
 
   const TakenButton({
     Key? key,
     required this.parentContext,
     required this.pillSheetGroup,
     required this.pillSheet,
+    required this.userIsPremiumOtTrial,
   }) : super(key: key);
   @override
   Widget build(BuildContext context, WidgetRef ref) {
@@ -38,7 +41,8 @@ class TakenButton extends HookConsumerWidget {
           FlutterAppBadger.removeBadge();
           requestInAppReview();
           showReleaseNotePreDialog(context);
-          await store.asyncAction.taken(pillSheetGroup: pillSheetGroup);
+          final updatedPillSheetGroup = await store.asyncAction.taken(pillSheetGroup: pillSheetGroup);
+          updateValuesForWidget(activePillSheet: updatedPillSheetGroup?.activedPillSheet, userIsPremiumOrTrial: userIsPremiumOtTrial);
         } catch (exception, stack) {
           errorLogger.recordError(exception, stack);
           showErrorAlert(context, exception);
