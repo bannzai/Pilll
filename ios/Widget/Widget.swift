@@ -193,7 +193,7 @@ struct Entrypoint: Widget {
     }
     .supportedFamilies([.systemSmall])
     .configurationDisplayName("今日飲むピルが一目でわかる")
-    .description("This is an Pilll widget")
+    .description("This is a Pilll widget")
   }
 }
 
