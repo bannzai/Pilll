@@ -102,11 +102,6 @@ struct WidgetEntryView : View {
                 .cornerRadius(2)
 
               VStack(alignment: .leading, spacing: 2) {
-//                Text(entry.pilllNumberDisplayMode == "date" ? "\(todayPillNumber)日目" : "\(todayPillNumber)番")
-//                  .foregroundColor(.black)
-//                  .font(.system(size: 15))
-//                  .fontWeight(.semibold)
-
                 Text(alreadyTaken ? "服用済み" : "未服用")
                   .foregroundColor(.mainText)
                   .font(.system(size: 12))
@@ -130,11 +125,6 @@ struct WidgetEntryView : View {
                 .cornerRadius(2)
 
               VStack(alignment: .leading, spacing: 2) {
-//                Text(entry.pilllNumberDisplayMode == "date" ? "- 日目" : "- 番")
-//                  .foregroundColor(.black)
-//                  .font(.system(size: 15))
-//                  .fontWeight(.semibold)
-
                 Text("シートがありません")
                   .foregroundColor(.orange)
                   .font(.system(size: 12))
