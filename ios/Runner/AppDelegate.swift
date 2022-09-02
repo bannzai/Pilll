@@ -137,7 +137,7 @@ import WidgetKit
                 UserDefaults(suiteName: Plist.appGroupKey)?.set(pillSheetTodayPillNumber, forKey: Const.pillSheetTodayPillNumber)
 
                 let pillSheetEndDisplayPillNumber = arguments[Const.pillSheetEndDisplayPillNumber] as? Int
-                UserDefaults(suiteName: Plist.appGroupKey)?.set(pillSheetEndDisplayPillNumber, forKey: Const.pillSheetTodayPillNumber)
+                UserDefaults(suiteName: Plist.appGroupKey)?.set(pillSheetEndDisplayPillNumber, forKey: Const.pillSheetEndDisplayPillNumber)
 
                 if #available(iOS 14.0, *) {
                     WidgetCenter.shared.reloadTimelines(ofKind: Const.widgetKind)
