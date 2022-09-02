@@ -4,10 +4,13 @@ enum Const {
     static let widgetKind = "com.mizuki.Ohashi.Pilll.widget"
 
     static let userIsPremiumOrTrial = "userIsPremiumOrTrial"
-    // Epoch milli second
-    static let pillSheetBeginDate = "pillSheetBeginDate"
+
+    static let pillSheetTodayPillNumber = "pillSheetTodayPillNumber"
+    static let pillSheetEndDisplayPillNumber = "pillSheetEndDisplayPillNumber"
     // Epoch milli second
     static let pillSheetLastTakenDate = "pillSheetLastTakenDate"
+    // Epoch milli second
+    static let lastRecordDate = "lastRecordDate"
 }
 
 enum Plist {
