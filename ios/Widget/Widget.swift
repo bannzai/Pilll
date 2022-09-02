@@ -250,13 +250,13 @@ struct WidgetEntryView : View {
     return calendar.isDate(entry.date, inSameDayAs: pillSheetLastTakenDate)
   }
 
-  private func displayTodayPillNumber(todayPillNumber: Int, appearanceMode: String) -> String {
+  private func displayTodayPillNumber(todayPillNumber: Int, appearanceMode: Entry.SettingPillSheetAppearanceMode) -> String {
     switch appearanceMode {
-    case "number":
+    case .number:
       return "\(todayPillNumber)番"
-    case "date":
+    case .date:
       return "\(todayPillNumber)番"
-    case "sequential":
+    case .sequential:
       return "\(todayPillNumber)日目"
     case _:
       return ""
