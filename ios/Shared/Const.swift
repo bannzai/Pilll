@@ -7,6 +7,7 @@ enum Const {
 
     static let pillSheetTodayPillNumber = "pillSheetTodayPillNumber"
     static let pillSheetEndDisplayPillNumber = "pillSheetEndDisplayPillNumber"
+    static let pillSheetAppearanceMode = "pillSheetAppearanceMode" // number or date or sequential
     // Epoch milli second
     static let pillSheetLastTakenDate = "pillSheetLastTakenDate"
     // Epoch milli second
