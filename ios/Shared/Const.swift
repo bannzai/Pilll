@@ -5,7 +5,7 @@ enum Const {
 
     static let userIsPremiumOrTrial = "userIsPremiumOrTrial"
 
-    static let pillSheetTodayPillNumber = "pillSheetTodayPillNumber"
+    static let pillSheetGroupTodayPillNumber = "pillSheetGroupTodayPillNumber"
     static let pillSheetEndDisplayPillNumber = "pillSheetEndDisplayPillNumber"
     // Epoch milli second
     static let pillSheetLastTakenDate = "pillSheetLastTakenDate"

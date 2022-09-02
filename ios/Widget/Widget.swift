@@ -40,7 +40,7 @@ struct Entry: TimelineEntry {
   let date: Date
 
   // PillSheet property
-  let pillSheetTodayPillNumber: Int?
+  let pillSheetGroupTodayPillNumber: Int?
   let pillSheetEndDisplayPillNumber: Int?
   let pillSheetLastTakenDate: Date?
 
@@ -57,10 +57,10 @@ struct Entry: TimelineEntry {
       UserDefaults(suiteName: Plist.appGroupKey)?.dictionaryRepresentation().keys.contains(key) == true
     }
 
-    if contains(Const.pillSheetTodayPillNumber), let pillSheetTodayPillNumber = UserDefaults(suiteName: Plist.appGroupKey)?.integer(forKey: Const.pillSheetTodayPillNumber) {
-      self.pillSheetTodayPillNumber = pillSheetTodayPillNumber
+    if contains(Const.pillSheetGroupTodayPillNumber), let pillSheetGroupTodayPillNumber = UserDefaults(suiteName: Plist.appGroupKey)?.integer(forKey: Const.pillSheetGroupTodayPillNumber) {
+      self.pillSheetGroupTodayPillNumber = pillSheetGroupTodayPillNumber
     } else {
-      self.pillSheetTodayPillNumber = nil
+      self.pillSheetGroupTodayPillNumber = nil
     }
 
     if contains(Const.pillSheetEndDisplayPillNumber), let pillSheetEndDisplayPillNumber = UserDefaults(suiteName: Plist.appGroupKey)?.integer(forKey: Const.pillSheetEndDisplayPillNumber) {
@@ -88,14 +88,14 @@ struct Entry: TimelineEntry {
 
   var todayPillNumber: Int? {
     guard
-      let recordedPillSheetTodayPillNumber = pillSheetTodayPillNumber,
+      let recordedpillSheetGroupTodayPillNumber = pillSheetGroupTodayPillNumber,
       let pillSheetValueLastUpdateDateTime = pillSheetValueLastUpdateDateTime else {
       return nil
     }
     guard let diff = calendar.dateComponents([.day], from: date, to: pillSheetValueLastUpdateDateTime).day else {
-      return recordedPillSheetTodayPillNumber
+      return recordedpillSheetGroupTodayPillNumber
     }
-    let todayPillNumber = recordedPillSheetTodayPillNumber + diff
+    let todayPillNumber = recordedpillSheetGroupTodayPillNumber + diff
 
     if let pillSheetEndDisplayPillNumber = pillSheetEndDisplayPillNumber, todayPillNumber > pillSheetEndDisplayPillNumber {
       // 更新されるまで常に1で良い

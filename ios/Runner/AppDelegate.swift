@@ -133,8 +133,8 @@ import WidgetKit
                 let pillSheetLastTakenDate = arguments[Const.pillSheetLastTakenDate] as? Int
                 UserDefaults(suiteName: Plist.appGroupKey)?.set(pillSheetLastTakenDate, forKey: Const.pillSheetLastTakenDate)
 
-                let pillSheetTodayPillNumber = arguments[Const.pillSheetTodayPillNumber] as? Int
-                UserDefaults(suiteName: Plist.appGroupKey)?.set(pillSheetTodayPillNumber, forKey: Const.pillSheetTodayPillNumber)
+                let pillSheetGroupTodayPillNumber = arguments[Const.pillSheetGroupTodayPillNumber] as? Int
+                UserDefaults(suiteName: Plist.appGroupKey)?.set(pillSheetGroupTodayPillNumber, forKey: Const.pillSheetGroupTodayPillNumber)
 
                 let pillSheetEndDisplayPillNumber = arguments[Const.pillSheetEndDisplayPillNumber] as? Int
                 UserDefaults(suiteName: Plist.appGroupKey)?.set(pillSheetEndDisplayPillNumber, forKey: Const.pillSheetEndDisplayPillNumber)
