@@ -2,10 +2,13 @@ import UIKit
 import ObjectiveC
 import Flutter
 import HealthKit
+import WidgetKit
+
 
 @UIApplicationMain
 @objc class AppDelegate: FlutterAppDelegate {
-    var channel: FlutterMethodChannel?
+    private var channel: FlutterMethodChannel?
+
     override func application(
         _ application: UIApplication,
         didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?
@@ -89,6 +92,63 @@ import HealthKit
                         completionHandler(failure.toDictionary())
                     }
                 }
+            case "syncUserStatus":
+                guard let arguments = call.arguments as? Dictionary<String, Any> else {
+                    fatalError()
+                }
+
+                let userIsPremiumOrTrial = arguments[Const.userIsPremiumOrTrial] as? Bool
+                UserDefaults(suiteName: Plist.appGroupKey)?.set(userIsPremiumOrTrial, forKey: Const.userIsPremiumOrTrial)
+
+                if #available(iOS 14.0, *) {
+                    WidgetCenter.shared.reloadTimelines(ofKind: Const.widgetKind)
+                } else {
+                    // Fallback on earlier versions
+                }
+
+                completionHandler(["result": "success"])
+            case "syncSetting":
+                guard let arguments = call.arguments as? Dictionary<String, Any> else {
+                    fatalError()
+                }
+
+                let settingPillSheetAppearanceMode = arguments[Const.settingPillSheetAppearanceMode] as? String
+                UserDefaults(suiteName: Plist.appGroupKey)?.set(settingPillSheetAppearanceMode, forKey: Const.settingPillSheetAppearanceMode)
+
+                if #available(iOS 14.0, *) {
+                    WidgetCenter.shared.reloadTimelines(ofKind: Const.widgetKind)
+                } else {
+                    // Fallback on earlier versions
+                }
+
+                completionHandler(["result": "success"])
+            case "syncActivePillSheetValue":
+                guard let arguments = call.arguments as? Dictionary<String, Any> else {
+                    fatalError()
+                }
+
+                let pillSheetValueLastUpdateDateTime = arguments[Const.pillSheetValueLastUpdateDateTime] as? Int
+                UserDefaults(suiteName: Plist.appGroupKey)?.set(pillSheetValueLastUpdateDateTime, forKey: Const.pillSheetValueLastUpdateDateTime)
+
+                let pillSheetLastTakenDate = arguments[Const.pillSheetLastTakenDate] as? Int
+                UserDefaults(suiteName: Plist.appGroupKey)?.set(pillSheetLastTakenDate, forKey: Const.pillSheetLastTakenDate)
+
+                let pillSheetGroupTodayPillNumber = arguments[Const.pillSheetGroupTodayPillNumber] as? Int
+                UserDefaults(suiteName: Plist.appGroupKey)?.set(pillSheetGroupTodayPillNumber, forKey: Const.pillSheetGroupTodayPillNumber)
+
+                let pillSheetTodayPillNumber = arguments[Const.pillSheetTodayPillNumber] as? Int
+                UserDefaults(suiteName: Plist.appGroupKey)?.set(pillSheetTodayPillNumber, forKey: Const.pillSheetTodayPillNumber)
+
+                let pillSheetEndDisplayPillNumber = arguments[Const.pillSheetEndDisplayPillNumber] as? Int
+                UserDefaults(suiteName: Plist.appGroupKey)?.set(pillSheetEndDisplayPillNumber, forKey: Const.pillSheetEndDisplayPillNumber)
+
+                if #available(iOS 14.0, *) {
+                    WidgetCenter.shared.reloadTimelines(ofKind: Const.widgetKind)
+                } else {
+                    // Fallback on earlier versions
+                }
+
+                completionHandler(["result": "success"])
             case _:
                 return
             }
