@@ -34,14 +34,7 @@ class RecordPage extends HookConsumerWidget {
     useEffect(() {
       final f = (() async {
         try {
-          final premiumAndTrial = (await AsyncValue.guard(() => ref.read(premiumAndTrialProvider.future))).value;
-          syncUserStatus(premiumAndTrial: premiumAndTrial);
-
-          final setting = (await AsyncValue.guard(() => ref.read(settingStreamProvider.future))).value;
-          syncSetting(setting: setting);
-
-          final pillSheetGroup = (await AsyncValue.guard(() => ref.read(latestPillSheetGroupStreamProvider.future))).value;
-          syncActivePillSheetValue(pillSheetGroup: pillSheetGroup);
+          syncUserStatus(premiumAndTrial: state.asData?.value.premiumAndTrial);
         } catch (error) {
           debugPrint(error.toString());
         }
@@ -49,7 +42,33 @@ class RecordPage extends HookConsumerWidget {
 
       f();
       return null;
-    }, []);
+    }, [state.asData?.value.premiumAndTrial]);
+
+    useEffect(() {
+      final f = (() async {
+        try {
+          syncSetting(setting: state.asData?.value.setting);
+        } catch (error) {
+          debugPrint(error.toString());
+        }
+      });
+
+      f();
+      return null;
+    }, [state.asData?.value.setting]);
+
+    useEffect(() {
+      final f = (() async {
+        try {
+          syncActivePillSheetValue(pillSheetGroup: state.asData?.value.pillSheetGroup);
+        } catch (error) {
+          debugPrint(error.toString());
+        }
+      });
+
+      f();
+      return null;
+    }, [state.asData?.value.pillSheetGroup]);
 
     return state.when(
       data: (state) => RecordPageBody(store: store, state: state),
