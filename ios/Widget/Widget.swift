@@ -17,8 +17,6 @@ fileprivate var dateFormater: DateFormatter {
 }
 
 struct Provider: TimelineProvider {
-  typealias Entry = PillSheetEntry
-
   func placeholder(in context: Context) -> Entry {
     .init(date: .now)
   }
@@ -30,20 +28,27 @@ struct Provider: TimelineProvider {
   func getTimeline(in context: Context, completion: @escaping (Timeline<Entry>) -> ()) {
     let intervalMinute = 15
     let oneDayLoopCount = 24 * (4 * intervalMinute)
-    let entries: [PillSheetEntry] = .init(repeating: .init(date: .now.addingTimeInterval(TimeInterval(intervalMinute * 60))), count: oneDayLoopCount)
+    let entries: [Entry] = .init(repeating: .init(date: .now.addingTimeInterval(TimeInterval(intervalMinute * 60))), count: oneDayLoopCount)
     let nextTimelineSchedule = Calendar.current.date(byAdding: .minute, value: intervalMinute, to: .now)!
     let timeline = Timeline(entries: entries, policy: .after(nextTimelineSchedule))
     completion(timeline)
   }
 }
 
-struct PillSheetEntry: TimelineEntry {
+struct Entry: TimelineEntry {
   // Timeline Entry required property
   let date: Date
 
   // PillSheet property
-  let pillSheetBeginDate: Date?
+  let pillSheetTodayPillNumber: Int?
+  let pillSheetEndDisplayPillNumber: Int?
   let pillSheetLastTakenDate: Date?
+
+  // Setting property
+  var settingPillSheetAppearanceMode: String = "number"
+
+  // Timestamp
+  let pillSheetValueLastUpdateDateTime: Date?
 
   init(date: Date) {
     self.date = date
@@ -52,16 +57,32 @@ struct PillSheetEntry: TimelineEntry {
       UserDefaults(suiteName: Plist.appGroupKey)?.dictionaryRepresentation().keys.contains(key) == true
     }
 
-    if contains(Const.pillSheetBeginDate), let pillSheetBeginDateEpochMilliSecond = UserDefaults(suiteName: Plist.appGroupKey)?.integer(forKey: Const.pillSheetBeginDate) {
-      pillSheetBeginDate = Date(timeIntervalSince1970: TimeInterval(pillSheetBeginDateEpochMilliSecond / 1000))
+    if contains(Const.pillSheetTodayPillNumber), let pillSheetTodayPillNumber = UserDefaults(suiteName: Plist.appGroupKey)?.integer(forKey: Const.pillSheetTodayPillNumber) {
+      self.pillSheetTodayPillNumber = pillSheetTodayPillNumber
     } else {
-      pillSheetBeginDate = nil
+      self.pillSheetTodayPillNumber = nil
+    }
+
+    if contains(Const.pillSheetEndDisplayPillNumber), let pillSheetEndDisplayPillNumber = UserDefaults(suiteName: Plist.appGroupKey)?.integer(forKey: Const.pillSheetEndDisplayPillNumber) {
+      self.pillSheetEndDisplayPillNumber = pillSheetEndDisplayPillNumber
+    } else {
+      self.pillSheetEndDisplayPillNumber = nil
     }
 
     if contains(Const.pillSheetLastTakenDate), let pillSheetLastTakenDateEpochMilliSecond = UserDefaults(suiteName: Plist.appGroupKey)?.integer(forKey: Const.pillSheetLastTakenDate) {
-      pillSheetLastTakenDate = Date(timeIntervalSince1970: TimeInterval(pillSheetLastTakenDateEpochMilliSecond / 1000))
+      self.pillSheetLastTakenDate = Date(timeIntervalSince1970: TimeInterval(pillSheetLastTakenDateEpochMilliSecond / 1000))
     } else {
-      pillSheetLastTakenDate = nil
+      self.pillSheetLastTakenDate = nil
+    }
+
+    if contains(Const.settingPillSheetAppearanceMode), let settingPillSheetAppearanceMode = UserDefaults(suiteName: Plist.appGroupKey)?.string(forKey: Const.settingPillSheetAppearanceMode) {
+      self.settingPillSheetAppearanceMode = settingPillSheetAppearanceMode
+    }
+
+    if contains(Const.pillSheetValueLastUpdateDateTime), let pillSheetValueLastUpdateDateTimeEpochMilliSecond = UserDefaults(suiteName: Plist.appGroupKey)?.integer(forKey: Const.pillSheetValueLastUpdateDateTime) {
+      self.pillSheetValueLastUpdateDateTime = Date(timeIntervalSince1970: TimeInterval(pillSheetValueLastUpdateDateTimeEpochMilliSecond / 1000))
+    } else {
+      self.pillSheetValueLastUpdateDateTime = nil
     }
   }
 }
