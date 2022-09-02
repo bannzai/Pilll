@@ -9,7 +9,7 @@ void definedChannel() {
     switch (call.method) {
       case 'recordPill':
         final pillSheetGroup = await recordPill();
-        updateValuesForWidget(activePillSheet: pillSheetGroup?.activedPillSheet, userIsPremiumOrTrial: true);
+        syncActivePillSheetValue(activePillSheet: pillSheetGroup?.activedPillSheet, userIsPremiumOrTrial: true);
         return;
       case "salvagedOldStartTakenDate":
         return salvagedOldStartTakenDate(call.arguments);

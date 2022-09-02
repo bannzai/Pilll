@@ -89,15 +89,15 @@ struct Entry: TimelineEntry {
   var todayPillNumber: Int? {
     guard
       let recordedPillSheetTodayPillNumber = pillSheetTodayPillNumber,
-      let pillSheetValueLastUpdateDateTime = pillSheetValueLastUpdateDateTime,
-      let pillSheetEndDisplayPillNumber = pillSheetEndDisplayPillNumber else {
+      let pillSheetValueLastUpdateDateTime = pillSheetValueLastUpdateDateTime else {
       return nil
     }
     guard let diff = calendar.dateComponents([.day], from: date, to: pillSheetValueLastUpdateDateTime).day else {
       return recordedPillSheetTodayPillNumber
     }
     let todayPillNumber = recordedPillSheetTodayPillNumber + diff
-    if todayPillNumber > pillSheetEndDisplayPillNumber {
+
+    if let pillSheetEndDisplayPillNumber = pillSheetEndDisplayPillNumber, todayPillNumber > pillSheetEndDisplayPillNumber {
       // 更新されるまで常に1で良い
       return 1
     } else {
