@@ -42,7 +42,7 @@ class ReleaseNote extends StatelessWidget {
                       child: Container(
                         padding: const EdgeInsets.only(top: 40, left: 40, right: 40),
                         child: Text(
-                          "日記の体調詳細を編集できるようになりました",
+                          "Pilllのウィジェットが出来ました",
                           style: FontType.subTitle.merge(TextColorStyle.black),
                           textAlign: TextAlign.center,
                         ),
@@ -57,7 +57,7 @@ class ReleaseNote extends StatelessWidget {
                     children: [
                       Text(
                         '''
-日記投稿画面から「体調詳細」の右側にある ✏️ ボタンを押すことで体調詳細を追加・削除できるようになります
+ホーム画面にPilllのウィジェットを配置できるようになりました。本日服用するピルの番号が一目で確認できます。ウィジェットの追加方法は詳細を見るよりご確認ください
                         ''',
                         style: FontType.assisting.merge(TextColorStyle.main),
                       ),
@@ -85,7 +85,7 @@ class ReleaseNote extends StatelessWidget {
 }
 
 void showReleaseNotePreDialog(BuildContext context) async {
-  const key = ReleaseNoteKey.version3_12_0;
+  const key = ReleaseNoteKey.version3_13_0;
   final storage = await SharedPreferences.getInstance();
   if (storage.getBool(key) ?? false) {
     return;
@@ -102,7 +102,7 @@ void showReleaseNotePreDialog(BuildContext context) async {
 void openReleaseNote() async {
   final ChromeSafariBrowser browser = ChromeSafariBrowser();
   await browser.open(
-      url: Uri.parse("https://pilll.wraptas.site/22b34a8b242f43ccb4e72ea9a9f99459"),
+      url: Uri.parse("https://pilll.wraptas.site/ad04fcc876024c978da3c41a7a28d5c1"),
       options: ChromeSafariBrowserClassOptions(
           android: AndroidChromeCustomTabsOptions(addDefaultShareMenuItem: false),
           ios: IOSSafariOptions(barCollapsingEnabled: true, presentationStyle: IOSUIModalPresentationStyle.PAGE_SHEET)));
