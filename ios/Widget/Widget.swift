@@ -40,6 +40,7 @@ struct Entry: TimelineEntry {
   let date: Date
 
   // PillSheet property
+  let pillSheetTodayPillNumber: Int?
   let pillSheetGroupTodayPillNumber: Int?
   let pillSheetEndDisplayPillNumber: Int?
   let pillSheetLastTakenDate: Date?
@@ -55,6 +56,12 @@ struct Entry: TimelineEntry {
 
     func contains(_ key: String) -> Bool {
       UserDefaults(suiteName: Plist.appGroupKey)?.dictionaryRepresentation().keys.contains(key) == true
+    }
+
+    if contains(Const.pillSheetTodayPillNumber), let pillSheetTodayPillNumber = UserDefaults(suiteName: Plist.appGroupKey)?.integer(forKey: Const.pillSheetTodayPillNumber) {
+      self.pillSheetTodayPillNumber = pillSheetTodayPillNumber
+    } else {
+      self.pillSheetTodayPillNumber = nil
     }
 
     if contains(Const.pillSheetGroupTodayPillNumber), let pillSheetGroupTodayPillNumber = UserDefaults(suiteName: Plist.appGroupKey)?.integer(forKey: Const.pillSheetGroupTodayPillNumber) {
