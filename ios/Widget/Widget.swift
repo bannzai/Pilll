@@ -85,6 +85,26 @@ struct Entry: TimelineEntry {
       self.pillSheetValueLastUpdateDateTime = nil
     }
   }
+
+  var todayPillNumber: Int? {
+    guard
+      let recordedPillSheetTodayPillNumber = pillSheetTodayPillNumber,
+      let pillSheetValueLastUpdateDateTime = pillSheetValueLastUpdateDateTime,
+      let pillSheetEndDisplayPillNumber = pillSheetEndDisplayPillNumber else {
+      return nil
+    }
+    guard let diff = calendar.dateComponents([.day], from: date, to: pillSheetValueLastUpdateDateTime).day else {
+      return recordedPillSheetTodayPillNumber
+    }
+    let todayPillNumber = recordedPillSheetTodayPillNumber + diff
+    if todayPillNumber > pillSheetEndDisplayPillNumber {
+      // 更新されるまで常に1で良い
+      return 1
+    } else {
+      return todayPillNumber
+    }
+  }
+
 }
 
 struct WidgetEntryView : View {
@@ -114,28 +134,59 @@ struct WidgetEntryView : View {
 
         Spacer()
 
-        HStack {
-          HStack(spacing: 6) {
-            Divider()
-              .frame(width: 4)
-              .overlay(alreadyTaken ? Color.primary : Color.orange)
-              .cornerRadius(2)
+        if let todayPillNumber = entry.todayPillNumber {
+          HStack {
+            HStack(spacing: 6) {
+              Divider()
+                .frame(width: 4)
+                .overlay(Color.primary)
+                .cornerRadius(2)
 
-            VStack(alignment: .leading, spacing: 2) {
-              Text(alreadyTaken ? "服用済み" : "未服用")
-                .foregroundColor(.mainText)
-                .font(.system(size: 12))
-                .fontWeight(.medium)
+              VStack(alignment: .leading, spacing: 2) {
+                Text(displayTodayPillNumber(todayPillNumber: todayPillNumber, appearanceMode: entry.settingPillSheetAppearanceMode))
+                  .foregroundColor(.mainText)
+                  .font(.system(size: 15))
+                  .fontWeight(.semibold)
+
+                if alreadyTaken {
+                  Text("服用済み")
+                    .foregroundColor(.mainText)
+                    .font(.system(size: 12))
+                    .fontWeight(.medium)
+                }
+              }
+            }
+
+            Spacer()
+
+            if alreadyTaken {
+              Image("check-icon-on")
+                .frame(width: 32, height: 32)
+                .shadow(color: Color(red: 78 / 255, green: 98 / 255, blue: 135 / 255, opacity: 0.4), radius: 5, x: 0, y: 2)
             }
           }
+          .frame(maxHeight: 40)
+        } else {
+          HStack {
+            HStack(spacing: 6) {
+              Divider()
+                .frame(width: 4)
+                .overlay(Color(red: 190 / 255, green: 192 / 255, blue: 194 / 255))
+                .cornerRadius(2)
 
-          Spacer()
+              VStack(alignment: .leading, spacing: 2) {
+                Text("シートがありません")
+                  .foregroundColor(.orange)
+                  .font(.system(size: 12))
+                  .fontWeight(.medium)
+                  .background(Color(red: 230 / 255, green: 94 / 255, blue: 90 / 255, opacity: 0.1))
+              }
+            }
 
-          Image(alreadyTaken ? "check-icon-on" : "check-icon-off")
-            .frame(width: 32, height: 32)
-            .shadow(color: Color(red: 78 / 255, green: 98 / 255, blue: 135 / 255, opacity: 0.4), radius: 5, x: 0, y: 2)
+            Spacer()
+          }
+          .frame(maxHeight: 40)
         }
-        .frame(maxHeight: 40)
       }
       .padding(.horizontal, 16)
       .padding(.vertical, 15)
@@ -176,6 +227,18 @@ struct WidgetEntryView : View {
     return calendar.isDate(entry.date, inSameDayAs: pillSheetLastTakenDate)
   }
 
+  private func displayTodayPillNumber(todayPillNumber: Int, appearanceMode: String) -> String {
+    switch appearanceMode {
+    case "number":
+      return "\(todayPillNumber)番"
+    case "date":
+      return "\(todayPillNumber)番"
+    case "sequential":
+      return "\(todayPillNumber)日目"
+    case _:
+      return ""
+    }
+  }
 }
 
 extension Color {
