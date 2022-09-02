@@ -1,4 +1,7 @@
+import 'package:flutter_hooks/flutter_hooks.dart';
 import 'package:pilll/components/molecules/indicator.dart';
+import 'package:pilll/database/pill_sheet_group.dart';
+import 'package:pilll/database/setting.dart';
 import 'package:pilll/domain/initial_setting/migrate_info.dart';
 import 'package:pilll/domain/premium_function_survey/premium_function_survey_page.dart';
 import 'package:pilll/domain/record/components/add_pill_sheet_group/add_pill_sheet_group_empty_frame.dart';
@@ -9,12 +12,15 @@ import 'package:pilll/domain/record/components/pill_sheet/record_page_pill_sheet
 import 'package:pilll/domain/record/record_page_state.codegen.dart';
 import 'package:pilll/domain/record/record_page_state_notifier.dart';
 import 'package:pilll/domain/record/components/header/record_page_header.dart';
+import 'package:pilll/domain/settings/setting_page_state.codegen.dart';
 import 'package:pilll/entity/setting.codegen.dart';
 import 'package:pilll/error/universal_error_page.dart';
 import 'package:pilll/components/atoms/color.dart';
 import 'package:flutter/material.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
 import 'package:pilll/hooks/automatic_keep_alive_client_mixin.dart';
+import 'package:pilll/native/widget.dart';
+import 'package:pilll/provider/premium_and_trial.codegen.dart';
 
 class RecordPage extends HookConsumerWidget {
   const RecordPage({Key? key}) : super(key: key);
@@ -24,6 +30,26 @@ class RecordPage extends HookConsumerWidget {
     final state = ref.watch(recordPageStateNotifierProvider);
     final store = ref.watch(recordPageStateNotifierProvider.notifier);
     useAutomaticKeepAlive(wantKeepAlive: true);
+
+    useEffect(() {
+      final f = (() async {
+        try {
+          final premiumAndTrial = (await AsyncValue.guard(() => ref.read(premiumAndTrialProvider.future))).value;
+          syncUserStatus(premiumAndTrial: premiumAndTrial);
+
+          final setting = (await AsyncValue.guard(() => ref.read(settingStreamProvider.future))).value;
+          syncSetting(setting: setting);
+
+          final pillSheetGroup = (await AsyncValue.guard(() => ref.read(latestPillSheetGroupStreamProvider.future))).value;
+          syncActivePillSheetValue(pillSheetGroup: pillSheetGroup);
+        } catch (error) {
+          debugPrint(error.toString());
+        }
+      });
+
+      f();
+      return null;
+    }, []);
 
     return state.when(
       data: (state) => RecordPageBody(store: store, state: state),

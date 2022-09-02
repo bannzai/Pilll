@@ -21,10 +21,10 @@ Future<void> syncActivePillSheetValue({
 }
 
 Future<void> syncSetting({
-  required Setting setting,
+  required Setting? setting,
 }) async {
   final map = {
-    "settingPillSheetAppearanceMode": setting.pillSheetAppearanceMode,
+    "settingPillSheetAppearanceMode": setting?.pillSheetAppearanceMode,
   };
   try {
     await methodChannel.invokeMethod("syncSetting", map);
@@ -34,10 +34,10 @@ Future<void> syncSetting({
 }
 
 Future<void> syncUserStatus({
-  required PremiumAndTrial premiumAndTrial,
+  required PremiumAndTrial? premiumAndTrial,
 }) async {
   final map = {
-    "userIsPremiumOrTrial": premiumAndTrial.premiumOrTrial,
+    "userIsPremiumOrTrial": premiumAndTrial?.premiumOrTrial,
   };
   await methodChannel.invokeMethod("syncUserStatus", map);
 }
