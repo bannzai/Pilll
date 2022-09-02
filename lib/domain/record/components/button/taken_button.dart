@@ -42,7 +42,7 @@ class TakenButton extends HookConsumerWidget {
           requestInAppReview();
           showReleaseNotePreDialog(context);
           final updatedPillSheetGroup = await store.asyncAction.taken(pillSheetGroup: pillSheetGroup);
-          syncActivePillSheetValue(activePillSheet: updatedPillSheetGroup?.activedPillSheet, userIsPremiumOrTrial: userIsPremiumOtTrial);
+          syncActivePillSheetValue(pillSheetGroup: updatedPillSheetGroup);
         } catch (exception, stack) {
           errorLogger.recordError(exception, stack);
           showErrorAlert(context, exception);

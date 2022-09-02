@@ -37,7 +37,7 @@ class CancelButton extends HookConsumerWidget {
           return;
         }
         final updatedPillSheetGroup = await store.asyncAction.cancelTaken(pillSheetGroup: pillSheetGroup);
-        syncActivePillSheetValue(activePillSheet: updatedPillSheetGroup?.activedPillSheet, userIsPremiumOrTrial: userIsPremiumOtTrial);
+        syncActivePillSheetValue(pillSheetGroup: updatedPillSheetGroup);
       },
     );
   }
