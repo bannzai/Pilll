@@ -24,7 +24,7 @@ Future<void> syncSetting({
   required Setting? setting,
 }) async {
   final map = {
-    "settingPillSheetAppearanceMode": setting?.pillSheetAppearanceMode,
+    "settingPillSheetAppearanceMode": setting?.pillSheetAppearanceMode.name,
   };
   try {
     await methodChannel.invokeMethod("syncSetting", map);
