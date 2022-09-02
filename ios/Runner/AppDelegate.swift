@@ -113,7 +113,7 @@ import WidgetKit
                 }
 
                 let settingPillSheetAppearanceMode = arguments[Const.settingPillSheetAppearanceMode] as? String
-                UserDefaults(suiteName: Plist.appGroupKey)?.set(settingPillSheetAppearanceMode, forKey: Const.userIsPremiumOrTrial)
+                UserDefaults(suiteName: Plist.appGroupKey)?.set(settingPillSheetAppearanceMode, forKey: Const.settingPillSheetAppearanceMode)
 
                 if #available(iOS 14.0, *) {
                     WidgetCenter.shared.reloadTimelines(ofKind: Const.widgetKind)
