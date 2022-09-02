@@ -92,7 +92,7 @@ import WidgetKit
                         completionHandler(failure.toDictionary())
                     }
                 }
-            case "updateValuesForWidget":
+            case "syncUserStatus":
                 guard let arguments = call.arguments as? Dictionary<String, Any> else {
                     fatalError()
                 }
@@ -100,11 +100,47 @@ import WidgetKit
                 let userIsPremiumOrTrial = arguments[Const.userIsPremiumOrTrial] as? Bool
                 UserDefaults(suiteName: Plist.appGroupKey)?.set(userIsPremiumOrTrial, forKey: Const.userIsPremiumOrTrial)
 
-                let pillSheetBeginDate = arguments[Const.pillSheetBeginDate] as? Int
-                UserDefaults(suiteName: Plist.appGroupKey)?.set(pillSheetBeginDate, forKey: Const.pillSheetBeginDate)
+                if #available(iOS 14.0, *) {
+                    WidgetCenter.shared.reloadTimelines(ofKind: Const.widgetKind)
+                } else {
+                    // Fallback on earlier versions
+                }
+
+                completionHandler(["result": "success"])
+            case "syncSetting":
+                guard let arguments = call.arguments as? Dictionary<String, Any> else {
+                    fatalError()
+                }
+
+                let settingPillSheetAppearanceMode = arguments[Const.settingPillSheetAppearanceMode] as? String
+                UserDefaults(suiteName: Plist.appGroupKey)?.set(settingPillSheetAppearanceMode, forKey: Const.userIsPremiumOrTrial)
+
+                if #available(iOS 14.0, *) {
+                    WidgetCenter.shared.reloadTimelines(ofKind: Const.widgetKind)
+                } else {
+                    // Fallback on earlier versions
+                }
+
+                completionHandler(["result": "success"])
+            case "syncActivePillSheetValue":
+                guard let arguments = call.arguments as? Dictionary<String, Any> else {
+                    fatalError()
+                }
+
+                let pillSheetValueLastUpdateDateTime = arguments[Const.pillSheetValueLastUpdateDateTime] as? Int
+                UserDefaults(suiteName: Plist.appGroupKey)?.set(pillSheetValueLastUpdateDateTime, forKey: Const.pillSheetValueLastUpdateDateTime)
 
                 let pillSheetLastTakenDate = arguments[Const.pillSheetLastTakenDate] as? Int
                 UserDefaults(suiteName: Plist.appGroupKey)?.set(pillSheetLastTakenDate, forKey: Const.pillSheetLastTakenDate)
+
+                let pillSheetTodayPillNumber = arguments[Const.pillSheetTodayPillNumber] as? Int
+                UserDefaults(suiteName: Plist.appGroupKey)?.set(pillSheetTodayPillNumber, forKey: Const.pillSheetTodayPillNumber)
+
+                let pillSheetEndDisplayPillNumber = arguments[Const.pillSheetEndDisplayPillNumber] as? Int
+                UserDefaults(suiteName: Plist.appGroupKey)?.set(pillSheetEndDisplayPillNumber, forKey: Const.pillSheetTodayPillNumber)
+
+                let pillSheetEndDisplayPillNumber = arguments[Const.pillSheetEndDisplayPillNumber] as? Int
+                UserDefaults(suiteName: Plist.appGroupKey)?.set(pillSheetEndDisplayPillNumber, forKey: Const.pillSheetTodayPillNumber)
 
                 if #available(iOS 14.0, *) {
                     WidgetCenter.shared.reloadTimelines(ofKind: Const.widgetKind)
