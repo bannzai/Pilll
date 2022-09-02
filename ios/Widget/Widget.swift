@@ -46,7 +46,10 @@ struct Entry: TimelineEntry {
   let pillSheetLastTakenDate: Date?
 
   // Setting property
-  var settingPillSheetAppearanceMode: String = "number"
+  var settingPillSheetAppearanceMode: SettingPillSheetAppearanceMode = .number
+  enum SettingPillSheetAppearanceMode: String {
+    case number, date, sequential
+  }
 
   // Timestamp
   let pillSheetValueLastUpdateDateTime: Date?
@@ -83,7 +86,7 @@ struct Entry: TimelineEntry {
     }
 
     if contains(Const.settingPillSheetAppearanceMode), let settingPillSheetAppearanceMode = UserDefaults(suiteName: Plist.appGroupKey)?.string(forKey: Const.settingPillSheetAppearanceMode) {
-      self.settingPillSheetAppearanceMode = settingPillSheetAppearanceMode
+      self.settingPillSheetAppearanceMode = .init(rawValue: settingPillSheetAppearanceMode) ?? .number
     }
 
     if contains(Const.pillSheetValueLastUpdateDateTime), let pillSheetValueLastUpdateDateTimeEpochMilliSecond = UserDefaults(suiteName: Plist.appGroupKey)?.integer(forKey: Const.pillSheetValueLastUpdateDateTime) {
@@ -94,15 +97,28 @@ struct Entry: TimelineEntry {
   }
 
   var todayPillNumber: Int? {
-    guard
-      let recordedpillSheetGroupTodayPillNumber = pillSheetGroupTodayPillNumber,
-      let pillSheetValueLastUpdateDateTime = pillSheetValueLastUpdateDateTime else {
+    guard let pillSheetValueLastUpdateDateTime = pillSheetValueLastUpdateDateTime else {
       return nil
     }
-    guard let diff = calendar.dateComponents([.day], from: date, to: pillSheetValueLastUpdateDateTime).day else {
-      return recordedpillSheetGroupTodayPillNumber
+
+    let todayPillNumberBase: Int
+    switch settingPillSheetAppearanceMode {
+    case .number, .date:
+      guard let pillSheetTodayPillNumber = pillSheetTodayPillNumber else {
+        return nil
+      }
+      todayPillNumberBase = pillSheetTodayPillNumber
+    case .sequential:
+      guard let recordedPillSheetGroupTodayPillNumber = pillSheetGroupTodayPillNumber else {
+        return nil
+      }
+      todayPillNumberBase = recordedPillSheetGroupTodayPillNumber
     }
-    let todayPillNumber = recordedpillSheetGroupTodayPillNumber + diff
+
+    guard let diff = calendar.dateComponents([.day], from: date, to: pillSheetValueLastUpdateDateTime).day else {
+      return todayPillNumberBase
+    }
+    let todayPillNumber = todayPillNumberBase + diff
 
     if let pillSheetEndDisplayPillNumber = pillSheetEndDisplayPillNumber, todayPillNumber > pillSheetEndDisplayPillNumber {
       // 更新されるまで常に1で良い
