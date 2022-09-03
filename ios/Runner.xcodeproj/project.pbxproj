@@ -20,6 +20,8 @@
 		20C768EC27D2B4E700BA525C /* Profile.xcconfig in Resources */ = {isa = PBXBuildFile; fileRef = 20C768EA27D2B4E700BA525C /* Profile.xcconfig */; };
 		20DBB04427A88BAE0069A9A2 /* HealthKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 20DBB04327A88BAE0069A9A2 /* HealthKit.framework */; };
 		20DBB04627A88D1D0069A9A2 /* HealthKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20DBB04527A88D1D0069A9A2 /* HealthKit.swift */; };
+		20E4646D28C3312F00329A5E /* Entry.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20E4646C28C3312F00329A5E /* Entry.swift */; };
+		20E4646F28C3315100329A5E /* Global.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20E4646E28C3315100329A5E /* Global.swift */; };
 		3379DA4E24E3A3D90002DD85 /* Development.xcconfig in Resources */ = {isa = PBXBuildFile; fileRef = 3379DA4C24E3A3D90002DD85 /* Development.xcconfig */; };
 		3379DA4F24E3A3D90002DD85 /* Production.xcconfig in Resources */ = {isa = PBXBuildFile; fileRef = 3379DA4D24E3A3D90002DD85 /* Production.xcconfig */; };
 		3379DA5424E3A4DC0002DD85 /* Debug-Production.xcconfig in Resources */ = {isa = PBXBuildFile; fileRef = 3379DA5024E3A4DC0002DD85 /* Debug-Production.xcconfig */; };
@@ -96,6 +98,8 @@
 		20C768EA27D2B4E700BA525C /* Profile.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; name = Profile.xcconfig; path = Flutter/Profile.xcconfig; sourceTree = "<group>"; };
 		20DBB04327A88BAE0069A9A2 /* HealthKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = HealthKit.framework; path = System/Library/Frameworks/HealthKit.framework; sourceTree = SDKROOT; };
 		20DBB04527A88D1D0069A9A2 /* HealthKit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HealthKit.swift; sourceTree = "<group>"; };
+		20E4646C28C3312F00329A5E /* Entry.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Entry.swift; sourceTree = "<group>"; };
+		20E4646E28C3315100329A5E /* Global.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Global.swift; sourceTree = "<group>"; };
 		3379DA4C24E3A3D90002DD85 /* Development.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; name = Development.xcconfig; path = Flutter/Development.xcconfig; sourceTree = "<group>"; };
 		3379DA4D24E3A3D90002DD85 /* Production.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; name = Production.xcconfig; path = Flutter/Production.xcconfig; sourceTree = "<group>"; };
 		3379DA5024E3A4DC0002DD85 /* Debug-Production.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; name = "Debug-Production.xcconfig"; path = "Flutter/Debug-Production.xcconfig"; sourceTree = "<group>"; };
@@ -172,6 +176,8 @@
 			isa = PBXGroup;
 			children = (
 				207DA16928B1148700CD6C34 /* Widget.swift */,
+				20E4646E28C3315100329A5E /* Global.swift */,
+				20E4646C28C3312F00329A5E /* Entry.swift */,
 				207DA16B28B1148800CD6C34 /* Assets.xcassets */,
 				207DA16D28B1148800CD6C34 /* Info.plist */,
 			);
@@ -553,7 +559,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				20E4646D28C3312F00329A5E /* Entry.swift in Sources */,
 				20DBB04627A88D1D0069A9A2 /* HealthKit.swift in Sources */,
+				20E4646F28C3315100329A5E /* Global.swift in Sources */,
 				74858FAF1ED2DC5600515810 /* AppDelegate.swift in Sources */,
 				1498D2341E8E89220040F4C2 /* GeneratedPluginRegistrant.m in Sources */,
 				2006A7E328B0CE210066E4DD /* Const.swift in Sources */,
