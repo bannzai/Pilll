@@ -12,7 +12,7 @@ struct WidgetEntryView : WidgetView {
     case .systemSmall:
       SmallWidget(entry: entry)
     case .accessoryCircular:
-      EmptyView() // TODO:
+      AccessoryCircularWidget(entry: entry)
     case _:
       fatalError()
     }
