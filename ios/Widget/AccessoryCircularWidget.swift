@@ -20,7 +20,6 @@ struct AccessoryCircularWidget: WidgetView {
                   .frame(width: 16, height: 16)
               } else {
                 Text("\(todayPillNumber)")
-                  .font(.system(size: 8))
               }
             }
           }
