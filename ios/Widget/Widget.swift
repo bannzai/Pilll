@@ -2,7 +2,7 @@ import WidgetKit
 import SwiftUI
 import Intents
 
-struct WidgetEntryView : WidgetView {
+struct WidgetEntryView : View {
   @Environment(\.widgetFamily) var widgetFamily
 
   var entry: Provider.Entry

@@ -117,9 +117,10 @@ extension Entry {
       return .userIsNotPremiumOrTrial
     }
 
-    if let todayPillNumber = entry.todayPillNumber {
-
+    if let todayPillNumber = todayPillNumber {
+      return .pill(todayPillNumber: todayPillNumber, alreadyTaken: alreadyTaken)
+    } else {
+      return .invalidPillSheet
     }
   }
-
 }

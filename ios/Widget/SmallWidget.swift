@@ -1,8 +1,8 @@
 import SwiftUI
 
-struct SmallWidget: WidgetView {
+struct SmallWidget: View {
     let entry: Entry
-    
+
     var body: some View {
     if UserDefaults(suiteName: Plist.appGroupKey)?.bool(forKey: Const.userIsPremiumOrTrial) == true {
       VStack {

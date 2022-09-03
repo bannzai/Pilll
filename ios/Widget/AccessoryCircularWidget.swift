@@ -1,7 +1,7 @@
 import SwiftUI
 import Foundation
 
-struct AccessoryCircularWidget: WidgetView {
+struct AccessoryCircularWidget: View {
     let entry: Entry
 
     var body: some View {
