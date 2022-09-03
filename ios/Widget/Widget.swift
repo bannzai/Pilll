@@ -2,7 +2,7 @@ import WidgetKit
 import SwiftUI
 import Intents
 
-struct WidgetEntryView : View {
+struct WidgetEntryView : WidgetView {
   var entry: Provider.Entry
 
   var body: some View {
@@ -104,34 +104,6 @@ struct WidgetEntryView : View {
       .padding(.vertical, 15)
       .frame(maxWidth: .infinity, maxHeight: .infinity)
       .background(Color.white)
-    }
-  }
-
-  private var weekday: String {
-    dateFormater.weekdaySymbols[calendar.component(.weekday, from: entry.date) - 1]
-  }
-
-  private var day: Int {
-    calendar.component(.day, from: entry.date)
-  }
-
-  private var alreadyTaken: Bool {
-    guard let pillSheetLastTakenDate = entry.pillSheetLastTakenDate else {
-      return false
-    }
-    return calendar.isDate(entry.date, inSameDayAs: pillSheetLastTakenDate)
-  }
-
-  private func displayTodayPillNumber(todayPillNumber: Int, appearanceMode: Entry.SettingPillSheetAppearanceMode) -> String {
-    switch appearanceMode {
-    case .number:
-      return "\(todayPillNumber)番"
-    case .date:
-      return "\(todayPillNumber)番"
-    case .sequential:
-      return "\(todayPillNumber)日目"
-    case _:
-      return ""
     }
   }
 }
