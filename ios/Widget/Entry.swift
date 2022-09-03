@@ -105,7 +105,7 @@ extension Entry {
     calendar.component(.day, from: date)
   }
 
-  var alreadyTaken: Bool {
+  private var alreadyTaken: Bool {
     guard let pillSheetLastTakenDate = pillSheetLastTakenDate else {
       return false
     }
