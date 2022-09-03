@@ -1,10 +1,11 @@
 import SwiftUI
 
-struct SmallWidget: View {
-    let entry: Entry
+struct SmallWidget: WidgetView {
+  let entry: Entry
 
-    var body: some View {
-    if UserDefaults(suiteName: Plist.appGroupKey)?.bool(forKey: Const.userIsPremiumOrTrial) == true {
+  var body: some View {
+    switch entry.status {
+    case let .pill(todayPillNumber, alreadyTaken):
       VStack {
         HStack(alignment: .top) {
           VStack(spacing: 0) {
@@ -27,7 +28,7 @@ struct SmallWidget: View {
 
         Spacer()
 
-        if let todayPillNumber = entry.todayPillNumber {
+        if let todayPillNumber = todayPillNumber {
           HStack {
             HStack(spacing: 6) {
               Divider()
@@ -84,7 +85,7 @@ struct SmallWidget: View {
       .padding(.horizontal, 16)
       .padding(.vertical, 15)
       .background(Color.white)
-    } else {
+    case .userIsNotPremiumOrTrial:
       VStack {
         HStack {
           Spacer()

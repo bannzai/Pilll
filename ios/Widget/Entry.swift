@@ -97,14 +97,6 @@ extension Entry {
     }
   }
 
-  var weekday: String {
-    dateFormater.weekdaySymbols[calendar.component(.weekday, from: date) - 1]
-  }
-
-  var day: Int {
-    calendar.component(.day, from: date)
-  }
-
   private var alreadyTaken: Bool {
     guard let pillSheetLastTakenDate = pillSheetLastTakenDate else {
       return false
@@ -117,10 +109,6 @@ extension Entry {
       return .userIsNotPremiumOrTrial
     }
 
-    if let todayPillNumber = todayPillNumber {
-      return .pill(todayPillNumber: todayPillNumber, alreadyTaken: alreadyTaken)
-    } else {
-      return .invalidPillSheet
-    }
+    return .pill(todayPillNumber: todayPillNumber, alreadyTaken: alreadyTaken)
   }
 }

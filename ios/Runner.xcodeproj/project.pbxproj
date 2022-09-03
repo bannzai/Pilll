@@ -27,6 +27,7 @@
 		20E4647E28C3334200329A5E /* SmallWidget.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20E4647C28C3332300329A5E /* SmallWidget.swift */; };
 		20E4648128C3339500329A5E /* AccessoryCircularWidget.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20E4647F28C3338600329A5E /* AccessoryCircularWidget.swift */; };
 		20E4648428C33DC400329A5E /* Status.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20E4648228C33D6600329A5E /* Status.swift */; };
+		20E4648728C340F000329A5E /* WidgetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20E4648528C340E900329A5E /* WidgetView.swift */; };
 		3379DA4E24E3A3D90002DD85 /* Development.xcconfig in Resources */ = {isa = PBXBuildFile; fileRef = 3379DA4C24E3A3D90002DD85 /* Development.xcconfig */; };
 		3379DA4F24E3A3D90002DD85 /* Production.xcconfig in Resources */ = {isa = PBXBuildFile; fileRef = 3379DA4D24E3A3D90002DD85 /* Production.xcconfig */; };
 		3379DA5424E3A4DC0002DD85 /* Debug-Production.xcconfig in Resources */ = {isa = PBXBuildFile; fileRef = 3379DA5024E3A4DC0002DD85 /* Debug-Production.xcconfig */; };
@@ -110,6 +111,7 @@
 		20E4647C28C3332300329A5E /* SmallWidget.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SmallWidget.swift; sourceTree = "<group>"; };
 		20E4647F28C3338600329A5E /* AccessoryCircularWidget.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccessoryCircularWidget.swift; sourceTree = "<group>"; };
 		20E4648228C33D6600329A5E /* Status.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Status.swift; sourceTree = "<group>"; };
+		20E4648528C340E900329A5E /* WidgetView.swift */ = {isa = PBXFileReference; indentWidth = 2; lastKnownFileType = sourcecode.swift; path = WidgetView.swift; sourceTree = "<group>"; tabWidth = 2; };
 		3379DA4C24E3A3D90002DD85 /* Development.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; name = Development.xcconfig; path = Flutter/Development.xcconfig; sourceTree = "<group>"; };
 		3379DA4D24E3A3D90002DD85 /* Production.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; name = Production.xcconfig; path = Flutter/Production.xcconfig; sourceTree = "<group>"; };
 		3379DA5024E3A4DC0002DD85 /* Debug-Production.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; name = "Debug-Production.xcconfig"; path = "Flutter/Debug-Production.xcconfig"; sourceTree = "<group>"; };
@@ -187,6 +189,7 @@
 			children = (
 				207DA16928B1148700CD6C34 /* Widget.swift */,
 				20E4647F28C3338600329A5E /* AccessoryCircularWidget.swift */,
+				20E4648528C340E900329A5E /* WidgetView.swift */,
 				20E4648228C33D6600329A5E /* Status.swift */,
 				20E4647C28C3332300329A5E /* SmallWidget.swift */,
 				20E4647028C3316800329A5E /* Provider.swift */,
@@ -196,8 +199,10 @@
 				207DA16B28B1148800CD6C34 /* Assets.xcassets */,
 				207DA16D28B1148800CD6C34 /* Info.plist */,
 			);
+			indentWidth = 2;
 			path = Widget;
 			sourceTree = "<group>";
+			tabWidth = 2;
 		};
 		9740EEB11CF90186004384FC /* Flutter */ = {
 			isa = PBXGroup;
@@ -569,6 +574,7 @@
 				20E4648428C33DC400329A5E /* Status.swift in Sources */,
 				20E4647E28C3334200329A5E /* SmallWidget.swift in Sources */,
 				20E4647828C3320C00329A5E /* Style.swift in Sources */,
+				20E4648728C340F000329A5E /* WidgetView.swift in Sources */,
 				20E4647428C3319600329A5E /* Provider.swift in Sources */,
 				207DA16A28B1148700CD6C34 /* Widget.swift in Sources */,
 				20BF942028B22626007A36C9 /* Const.swift in Sources */,
