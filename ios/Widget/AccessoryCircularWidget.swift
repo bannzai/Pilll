@@ -9,6 +9,8 @@ struct AccessoryCircularWidget: WidgetView {
       switch entry.status {
       case let .pill(todayPillNumber, alreadyTaken):
         VStack {
+          Spacer().frame(height: 8)
+
           Image("pilll-widget-icon")
             .frame(width: 5.5, height: 8)
 
@@ -17,7 +19,7 @@ struct AccessoryCircularWidget: WidgetView {
               if alreadyTaken {
                 Image("check-icon-on")
                   .resizable()
-                  .frame(width: 16, height: 16)
+                  .frame(width: 18, height: 18)
               } else {
                 Text("\(todayPillNumber)")
               }
@@ -25,7 +27,7 @@ struct AccessoryCircularWidget: WidgetView {
           }
         }
         .frame(maxWidth: .infinity, maxHeight: .infinity)
-        .background(Color.gray)
+        .background(Color.black)
       case .userIsNotPremiumOrTrial:
         VStack {
           Image("pilll-widget-icon")
@@ -38,3 +40,4 @@ struct AccessoryCircularWidget: WidgetView {
     }
   }
 }
+
