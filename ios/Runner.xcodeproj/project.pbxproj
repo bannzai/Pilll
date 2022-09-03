@@ -24,10 +24,9 @@
 		20E4647428C3319600329A5E /* Provider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20E4647028C3316800329A5E /* Provider.swift */; };
 		20E4647528C3319600329A5E /* Entry.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20E4646C28C3312F00329A5E /* Entry.swift */; };
 		20E4647828C3320C00329A5E /* Style.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20E4647628C331FF00329A5E /* Style.swift */; };
-		20E4647B28C3328D00329A5E /* WidgetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20E4647928C3327F00329A5E /* WidgetView.swift */; };
 		20E4647E28C3334200329A5E /* SmallWidget.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20E4647C28C3332300329A5E /* SmallWidget.swift */; };
 		20E4648128C3339500329A5E /* AccessoryCircularWidget.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20E4647F28C3338600329A5E /* AccessoryCircularWidget.swift */; };
-		20E4648328C33D6600329A5E /* Status.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20E4648228C33D6600329A5E /* Status.swift */; };
+		20E4648428C33DC400329A5E /* Status.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20E4648228C33D6600329A5E /* Status.swift */; };
 		3379DA4E24E3A3D90002DD85 /* Development.xcconfig in Resources */ = {isa = PBXBuildFile; fileRef = 3379DA4C24E3A3D90002DD85 /* Development.xcconfig */; };
 		3379DA4F24E3A3D90002DD85 /* Production.xcconfig in Resources */ = {isa = PBXBuildFile; fileRef = 3379DA4D24E3A3D90002DD85 /* Production.xcconfig */; };
 		3379DA5424E3A4DC0002DD85 /* Debug-Production.xcconfig in Resources */ = {isa = PBXBuildFile; fileRef = 3379DA5024E3A4DC0002DD85 /* Debug-Production.xcconfig */; };
@@ -104,11 +103,10 @@
 		20C768EA27D2B4E700BA525C /* Profile.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; name = Profile.xcconfig; path = Flutter/Profile.xcconfig; sourceTree = "<group>"; };
 		20DBB04327A88BAE0069A9A2 /* HealthKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = HealthKit.framework; path = System/Library/Frameworks/HealthKit.framework; sourceTree = SDKROOT; };
 		20DBB04527A88D1D0069A9A2 /* HealthKit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HealthKit.swift; sourceTree = "<group>"; };
-		20E4646C28C3312F00329A5E /* Entry.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Entry.swift; sourceTree = "<group>"; };
+		20E4646C28C3312F00329A5E /* Entry.swift */ = {isa = PBXFileReference; indentWidth = 2; lastKnownFileType = sourcecode.swift; path = Entry.swift; sourceTree = "<group>"; tabWidth = 2; };
 		20E4646E28C3315100329A5E /* Global.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Global.swift; sourceTree = "<group>"; };
 		20E4647028C3316800329A5E /* Provider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Provider.swift; sourceTree = "<group>"; };
 		20E4647628C331FF00329A5E /* Style.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Style.swift; sourceTree = "<group>"; };
-		20E4647928C3327F00329A5E /* WidgetView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WidgetView.swift; sourceTree = "<group>"; };
 		20E4647C28C3332300329A5E /* SmallWidget.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SmallWidget.swift; sourceTree = "<group>"; };
 		20E4647F28C3338600329A5E /* AccessoryCircularWidget.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccessoryCircularWidget.swift; sourceTree = "<group>"; };
 		20E4648228C33D6600329A5E /* Status.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Status.swift; sourceTree = "<group>"; };
@@ -191,7 +189,6 @@
 				20E4647F28C3338600329A5E /* AccessoryCircularWidget.swift */,
 				20E4648228C33D6600329A5E /* Status.swift */,
 				20E4647C28C3332300329A5E /* SmallWidget.swift */,
-				20E4647928C3327F00329A5E /* WidgetView.swift */,
 				20E4647028C3316800329A5E /* Provider.swift */,
 				20E4646E28C3315100329A5E /* Global.swift */,
 				20E4647628C331FF00329A5E /* Style.swift */,
@@ -569,9 +566,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				20E4647528C3319600329A5E /* Entry.swift in Sources */,
+				20E4648428C33DC400329A5E /* Status.swift in Sources */,
 				20E4647E28C3334200329A5E /* SmallWidget.swift in Sources */,
 				20E4647828C3320C00329A5E /* Style.swift in Sources */,
-				20E4647B28C3328D00329A5E /* WidgetView.swift in Sources */,
 				20E4647428C3319600329A5E /* Provider.swift in Sources */,
 				207DA16A28B1148700CD6C34 /* Widget.swift in Sources */,
 				20BF942028B22626007A36C9 /* Const.swift in Sources */,
@@ -585,7 +582,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				20DBB04627A88D1D0069A9A2 /* HealthKit.swift in Sources */,
-				20E4648328C33D6600329A5E /* Status.swift in Sources */,
 				74858FAF1ED2DC5600515810 /* AppDelegate.swift in Sources */,
 				1498D2341E8E89220040F4C2 /* GeneratedPluginRegistrant.m in Sources */,
 				2006A7E328B0CE210066E4DD /* Const.swift in Sources */,

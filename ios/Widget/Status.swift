@@ -3,5 +3,5 @@ import Foundation
 enum Status {
     case userIsNotPremiumOrTrial
     case invalidPillSheet
-    case pill(todayPillNumber: Int)
+    case pill(todayPillNumber: Int, alreadyTaken: Bool)
 }

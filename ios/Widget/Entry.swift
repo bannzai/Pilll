@@ -62,7 +62,10 @@ struct Entry: TimelineEntry {
     }
   }
 
-  var todayPillNumber: Int? {
+}
+
+extension Entry {
+  private var todayPillNumber: Int? {
     guard let pillSheetValueLastUpdateDateTime = pillSheetValueLastUpdateDateTime else {
       return nil
     }
@@ -91,6 +94,31 @@ struct Entry: TimelineEntry {
       return 1
     } else {
       return todayPillNumber
+    }
+  }
+
+  var weekday: String {
+    dateFormater.weekdaySymbols[calendar.component(.weekday, from: date) - 1]
+  }
+
+  var day: Int {
+    calendar.component(.day, from: date)
+  }
+
+  var alreadyTaken: Bool {
+    guard let pillSheetLastTakenDate = pillSheetLastTakenDate else {
+      return false
+    }
+    return calendar.isDate(date, inSameDayAs: pillSheetLastTakenDate)
+  }
+
+  var status: Status {
+    guard let userIsPremium = UserDefaults(suiteName: Plist.appGroupKey)?.bool(forKey: Const.userIsPremiumOrTrial), userIsPremium else {
+      return .userIsNotPremiumOrTrial
+    }
+
+    if let todayPillNumber = entry.todayPillNumber {
+
     }
   }
 

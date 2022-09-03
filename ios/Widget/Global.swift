@@ -13,3 +13,16 @@ var dateFormater: DateFormatter {
   dateFormater.timeZone = .autoupdatingCurrent
   return dateFormater
 }
+
+func displayTodayPillNumber(todayPillNumber: Int, appearanceMode: Entry.SettingPillSheetAppearanceMode) -> String {
+    switch appearanceMode {
+    case .number:
+        return "\(todayPillNumber)番"
+    case .date:
+        return "\(todayPillNumber)番"
+    case .sequential:
+        return "\(todayPillNumber)日目"
+    case _:
+        return ""
+    }
+}
