@@ -23,6 +23,7 @@
 		20E4647328C3319600329A5E /* Global.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20E4646E28C3315100329A5E /* Global.swift */; };
 		20E4647428C3319600329A5E /* Provider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20E4647028C3316800329A5E /* Provider.swift */; };
 		20E4647528C3319600329A5E /* Entry.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20E4646C28C3312F00329A5E /* Entry.swift */; };
+		20E4647728C331FF00329A5E /* Style.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20E4647628C331FF00329A5E /* Style.swift */; };
 		3379DA4E24E3A3D90002DD85 /* Development.xcconfig in Resources */ = {isa = PBXBuildFile; fileRef = 3379DA4C24E3A3D90002DD85 /* Development.xcconfig */; };
 		3379DA4F24E3A3D90002DD85 /* Production.xcconfig in Resources */ = {isa = PBXBuildFile; fileRef = 3379DA4D24E3A3D90002DD85 /* Production.xcconfig */; };
 		3379DA5424E3A4DC0002DD85 /* Debug-Production.xcconfig in Resources */ = {isa = PBXBuildFile; fileRef = 3379DA5024E3A4DC0002DD85 /* Debug-Production.xcconfig */; };
@@ -102,6 +103,7 @@
 		20E4646C28C3312F00329A5E /* Entry.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Entry.swift; sourceTree = "<group>"; };
 		20E4646E28C3315100329A5E /* Global.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Global.swift; sourceTree = "<group>"; };
 		20E4647028C3316800329A5E /* Provider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Provider.swift; sourceTree = "<group>"; };
+		20E4647628C331FF00329A5E /* Style.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Style.swift; sourceTree = "<group>"; };
 		3379DA4C24E3A3D90002DD85 /* Development.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; name = Development.xcconfig; path = Flutter/Development.xcconfig; sourceTree = "<group>"; };
 		3379DA4D24E3A3D90002DD85 /* Production.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; name = Production.xcconfig; path = Flutter/Production.xcconfig; sourceTree = "<group>"; };
 		3379DA5024E3A4DC0002DD85 /* Debug-Production.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; name = "Debug-Production.xcconfig"; path = "Flutter/Debug-Production.xcconfig"; sourceTree = "<group>"; };
@@ -180,6 +182,7 @@
 				207DA16928B1148700CD6C34 /* Widget.swift */,
 				20E4647028C3316800329A5E /* Provider.swift */,
 				20E4646E28C3315100329A5E /* Global.swift */,
+				20E4647628C331FF00329A5E /* Style.swift */,
 				20E4646C28C3312F00329A5E /* Entry.swift */,
 				207DA16B28B1148800CD6C34 /* Assets.xcassets */,
 				207DA16D28B1148800CD6C34 /* Info.plist */,
@@ -569,6 +572,7 @@
 				74858FAF1ED2DC5600515810 /* AppDelegate.swift in Sources */,
 				1498D2341E8E89220040F4C2 /* GeneratedPluginRegistrant.m in Sources */,
 				2006A7E328B0CE210066E4DD /* Const.swift in Sources */,
+				20E4647728C331FF00329A5E /* Style.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
