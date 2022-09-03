@@ -276,13 +276,17 @@ struct Entrypoint: Widget {
     StaticConfiguration(kind: Const.widgetKind, provider: Provider()) { entry in
       WidgetEntryView(entry: entry)
     }
-    if #available(iOSApplicationExtension 16.0, *) {
-      .supportedFamilies([.systemSmall, .accessoryCircular])
-    } else {
-      .supportedFamilies([.systemSmall])
-    }
+    .supportedFamilies(supportedFamilies)
     .configurationDisplayName("今日飲むピルが一目でわかる")
     .description("This is a Pilll widget")
+  }
+
+  private var supportedFamilies: [WidgetFamily] {
+    if #available(iOSApplicationExtension 16.0, *) {
+      return [.systemSmall, .accessoryCircular]
+    } else {
+      return [.systemSmall]
+    }
   }
 }
 
