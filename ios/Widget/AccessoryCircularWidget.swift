@@ -8,7 +8,7 @@ struct AccessoryCircularWidget: WidgetView {
     if #available(iOSApplicationExtension 16.0, *) {
       switch entry.status {
       case let .pill(todayPillNumber, alreadyTaken):
-        VStack(spacing: 5) {
+        VStack(spacing: 4) {
           Image("pilll-widget-icon")
 
           if let todayPillNumber {
@@ -25,11 +25,11 @@ struct AccessoryCircularWidget: WidgetView {
         .frame(maxWidth: .infinity, maxHeight: .infinity)
         .background(Color.black)
       case .userIsNotPremiumOrTrial:
-        VStack(spacing: 5) {
+        VStack(spacing: 4) {
           Image("pilll-widget-icon")
 
           Image(systemName: "xmark")
-            .font(.system(size: 14))
+            .font(.system(size: 13))
             .bold()
         }
         .frame(maxWidth: .infinity, maxHeight: .infinity)
