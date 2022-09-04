@@ -13,6 +13,8 @@ struct WidgetEntryView : View {
       SmallWidget(entry: entry)
     case .accessoryCircular:
       AccessoryCircularWidget(entry: entry)
+    case .accessoryRectangular:
+      AccessoryRectanglerWidget(entry: entry)
     case _:
       fatalError()
     }
