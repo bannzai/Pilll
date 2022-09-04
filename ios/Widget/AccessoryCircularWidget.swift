@@ -28,13 +28,14 @@ struct AccessoryCircularWidget: WidgetView {
         .frame(maxWidth: .infinity, maxHeight: .infinity)
         .background(Color.black)
       case .userIsNotPremiumOrTrial:
-        VStack {
+        VStack(spacing: 5) {
           Image("pilll-widget-icon")
-            .frame(width: 5.5, height: 8)
 
           Image(systemName: "xmark")
-            .font(.system(size: 9))
+            .font(.system(size: 14))
         }
+        .frame(maxWidth: .infinity, maxHeight: .infinity)
+        .background(Color.black)
       }
     }
   }
