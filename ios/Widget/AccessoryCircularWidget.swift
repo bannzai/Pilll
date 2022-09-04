@@ -12,7 +12,6 @@ struct AccessoryCircularWidget: WidgetView {
           Spacer().frame(height: 8)
 
           Image("pilll-widget-icon")
-            .frame(width: 5.5, height: 8)
 
           if let todayPillNumber {
             HStack {
@@ -21,7 +20,7 @@ struct AccessoryCircularWidget: WidgetView {
                   .resizable()
                   .frame(width: 18, height: 18)
               } else {
-                Text("\(todayPillNumber)")
+                Text(displayTodayPillNumber(todayPillNumber: todayPillNumber, appearanceMode: entry.settingPillSheetAppearanceMode))
               }
             }
           }
