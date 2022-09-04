@@ -5,23 +5,20 @@ struct AccessoryCircularWidget: WidgetView {
   let entry: Entry
 
   var body: some View {
-    Group {
+    if #available(iOSApplicationExtension 16.0, *) {
       switch entry.status {
       case let .pill(todayPillNumber, alreadyTaken):
-        VStack {
-          Spacer().frame(height: 8)
-
+        VStack(spacing: 5) {
           Image("pilll-widget-icon")
 
           if let todayPillNumber {
-            HStack {
-              if alreadyTaken {
-                Image("check-icon-on")
-                  .resizable()
-                  .frame(width: 18, height: 18)
-              } else {
-                Text(displayTodayPillNumber(todayPillNumber: todayPillNumber, appearanceMode: entry.settingPillSheetAppearanceMode))
-              }
+            if alreadyTaken {
+              Image("check-icon-on")
+                .resizable()
+                .frame(width: 18, height: 18)
+            } else {
+              Text(displayTodayPillNumber(todayPillNumber: todayPillNumber, appearanceMode: entry.settingPillSheetAppearanceMode))
+                .bold()
             }
           }
         }
@@ -33,11 +30,12 @@ struct AccessoryCircularWidget: WidgetView {
 
           Image(systemName: "xmark")
             .font(.system(size: 14))
+            .bold()
         }
         .frame(maxWidth: .infinity, maxHeight: .infinity)
         .background(Color.black)
-      }
     }
   }
+}
 }
 
