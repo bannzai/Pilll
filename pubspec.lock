@@ -383,7 +383,7 @@ packages:
       path: "."
       ref: master
       resolved-ref: "252d836d52bff32870ed1b72231e428b0009e89e"
-      url: "git@github.com:bannzai/flutter_inappwebview.git"
+      url: "ssh://git@github.com/bannzai/flutter_inappwebview.git"
     source: git
     version: "5.4.3+7"
   flutter_lints:

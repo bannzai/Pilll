@@ -54,7 +54,7 @@ dependencies:
     # Use https://github.com/pichillilorenzo/flutter_inappwebview/pull/1238
   flutter_inappwebview:
     git: 
-      url: git@github.com:bannzai/flutter_inappwebview.git
+      url: ssh://git@github.com/bannzai/flutter_inappwebview.git
       ref: master
   flutter_app_badger: ^1.2.0
   sign_in_with_apple: ^3.0.0
