@@ -28,4 +28,6 @@ class Schedule with _$Schedule {
         required DateTime createdDateTime,
   }) = _Schedule;
   const Schedule._();
+
+  factory Schedule.fromJson(Map<String, dynamic> json) => _$ScheduleFromJson(json);
 }

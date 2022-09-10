@@ -14,6 +14,10 @@ T _$identity<T>(T value) => value;
 final _privateConstructorUsedError = UnsupportedError(
     'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more informations: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
 
+Schedule _$ScheduleFromJson(Map<String, dynamic> json) {
+  return _Schedule.fromJson(json);
+}
+
 /// @nodoc
 class _$ScheduleTearOff {
   const _$ScheduleTearOff();
@@ -29,6 +33,10 @@ class _$ScheduleTearOff {
       date: date,
       createdDateTime: createdDateTime,
     );
+  }
+
+  Schedule fromJson(Map<String, Object?> json) {
+    return Schedule.fromJson(json);
   }
 }
 
@@ -47,6 +55,7 @@ mixin _$Schedule {
       toJson: NonNullTimestampConverter.dateTimeToTimestamp)
   DateTime get createdDateTime => throw _privateConstructorUsedError;
 
+  Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
   $ScheduleCopyWith<Schedule> get copyWith =>
       throw _privateConstructorUsedError;
@@ -152,6 +161,9 @@ class _$_Schedule extends _Schedule {
           required this.createdDateTime})
       : super._();
 
+  factory _$_Schedule.fromJson(Map<String, dynamic> json) =>
+      _$$_ScheduleFromJson(json);
+
   @override
   final String title;
   @override
@@ -192,6 +204,11 @@ class _$_Schedule extends _Schedule {
   @override
   _$ScheduleCopyWith<_Schedule> get copyWith =>
       __$ScheduleCopyWithImpl<_Schedule>(this, _$identity);
+
+  @override
+  Map<String, dynamic> toJson() {
+    return _$$_ScheduleToJson(this);
+  }
 }
 
 abstract class _Schedule extends Schedule {
@@ -202,6 +219,8 @@ abstract class _Schedule extends Schedule {
       @JsonKey(fromJson: NonNullTimestampConverter.timestampToDateTime, toJson: NonNullTimestampConverter.dateTimeToTimestamp)
           required DateTime createdDateTime}) = _$_Schedule;
   const _Schedule._() : super._();
+
+  factory _Schedule.fromJson(Map<String, dynamic> json) = _$_Schedule.fromJson;
 
   @override
   String get title;
