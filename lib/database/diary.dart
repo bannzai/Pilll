@@ -14,6 +14,7 @@ final diariesStreamForMonthProvider = StreamProvider.family(
         .watch(diaryDatastoreProvider)
         .streamForMonth(dateForMonth: dateForMonth));
 
+
 final diariesStreamAround90Days = StreamProvider.family((ref, DateTime base) =>
     ref.watch(diaryDatastoreProvider).streamForAround90Days(base: base));
 
