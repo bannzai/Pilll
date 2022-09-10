@@ -1,6 +1,7 @@
 import 'package:freezed_annotation/freezed_annotation.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
 import 'package:pilll/database/user.dart';
+import 'package:pilll/entity/user.codegen.dart';
 import 'package:pilll/provider/premium_and_trial.codegen.dart';
 import 'package:pilll/provider/shared_preference.dart';
 
@@ -19,8 +20,8 @@ final schedulePostAsyncStateProvider = Provider.autoDispose<AsyncValue<ScheduleP
     final sharedPreferences = sharedPreferencesAsyncValue.value!;
 
     return AsyncValue.data(SchedulePostState(
-      user: user,
-      premiumAndTrial: premiumAndTrial,
+      user: user.value!,
+      premiumAndTrial: premiumAndTrial.value!,
     ));
   } catch (error, stackTrace) {
     return AsyncValue.error(error, stackTrace: stackTrace);

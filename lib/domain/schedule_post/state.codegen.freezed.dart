@@ -47,6 +47,7 @@ abstract class $SchedulePostStateCopyWith<$Res> {
       _$SchedulePostStateCopyWithImpl<$Res>;
   $Res call({User user, PremiumAndTrial premiumAndTrial});
 
+  $UserCopyWith<$Res> get user;
   $PremiumAndTrialCopyWith<$Res> get premiumAndTrial;
 }
 
@@ -77,6 +78,13 @@ class _$SchedulePostStateCopyWithImpl<$Res>
   }
 
   @override
+  $UserCopyWith<$Res> get user {
+    return $UserCopyWith<$Res>(_value.user, (value) {
+      return _then(_value.copyWith(user: value));
+    });
+  }
+
+  @override
   $PremiumAndTrialCopyWith<$Res> get premiumAndTrial {
     return $PremiumAndTrialCopyWith<$Res>(_value.premiumAndTrial, (value) {
       return _then(_value.copyWith(premiumAndTrial: value));
@@ -93,6 +101,8 @@ abstract class _$SchedulePostStateCopyWith<$Res>
   @override
   $Res call({User user, PremiumAndTrial premiumAndTrial});
 
+  @override
+  $UserCopyWith<$Res> get user;
   @override
   $PremiumAndTrialCopyWith<$Res> get premiumAndTrial;
 }
