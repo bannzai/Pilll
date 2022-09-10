@@ -13,6 +13,7 @@ class ScheduleFirestoreKey {
 class Schedule with _$Schedule {
   @JsonSerializable(explicitToJson: true)
   const factory Schedule({
+    String? id,
     required String title,
     @JsonKey(
       fromJson: NonNullTimestampConverter.timestampToDateTime,

@@ -7,6 +7,7 @@ part of 'schedule.codegen.dart';
 // **************************************************************************
 
 _$_Schedule _$$_ScheduleFromJson(Map<String, dynamic> json) => _$_Schedule(
+      id: json['id'] as String?,
       title: json['title'] as String,
       date: NonNullTimestampConverter.timestampToDateTime(
           json['date'] as Timestamp),
@@ -16,6 +17,7 @@ _$_Schedule _$$_ScheduleFromJson(Map<String, dynamic> json) => _$_Schedule(
 
 Map<String, dynamic> _$$_ScheduleToJson(_$_Schedule instance) =>
     <String, dynamic>{
+      'id': instance.id,
       'title': instance.title,
       'date': NonNullTimestampConverter.dateTimeToTimestamp(instance.date),
       'createdDateTime': NonNullTimestampConverter.dateTimeToTimestamp(
