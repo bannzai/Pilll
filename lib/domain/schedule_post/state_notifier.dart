@@ -6,9 +6,6 @@ import 'package:pilll/entity/schedule.codegen.dart';
 
 import 'state.codegen.dart';
 import 'package:riverpod/riverpod.dart';
-import 'package:shared_preferences/shared_preferences.dart';
-
-import 'state.codegen.dart';
 
 final schedulePostStateNotifierProvider = StateNotifierProvider.autoDispose<SchedulePostStateNotifier, AsyncValue<SchedulePostState>>(
   (ref) => SchedulePostStateNotifier(
