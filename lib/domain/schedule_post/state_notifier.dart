@@ -22,6 +22,6 @@ class SchedulePostStateNotifier extends StateNotifier<AsyncValue<SchedulePostSta
   }) : super(initialState);
 
   Future<void> post({required Schedule schedule}) async {
-    read(databaseProvider).schedulesReference().doc().set(schedule, SetOptions(merge: true));
+    await read(databaseProvider).schedulesReference().doc().set(schedule, SetOptions(merge: true));
   }
 }

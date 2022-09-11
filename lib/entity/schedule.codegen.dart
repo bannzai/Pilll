@@ -24,7 +24,7 @@ class Schedule with _$Schedule {
       fromJson: NonNullTimestampConverter.timestampToDateTime,
       toJson: NonNullTimestampConverter.dateTimeToTimestamp,
     )
-        required DateTime createdDateTime,
+        required DateTime createdDateTime
   }) = _Schedule;
   const Schedule._();
 
