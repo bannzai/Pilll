@@ -1,5 +1,9 @@
 import 'dart:async';
 
+import 'package:cloud_firestore/cloud_firestore.dart';
+import 'package:pilll/database/database.dart';
+import 'package:pilll/entity/schedule.codegen.dart';
+
 import 'state.codegen.dart';
 import 'package:riverpod/riverpod.dart';
 import 'package:shared_preferences/shared_preferences.dart';
@@ -9,16 +13,18 @@ import 'state.codegen.dart';
 final schedulePostStateNotifierProvider = StateNotifierProvider.autoDispose<SchedulePostStateNotifier, AsyncValue<SchedulePostState>>(
   (ref) => SchedulePostStateNotifier(
     initialState: ref.watch(schedulePostAsyncStateProvider),
-    ref: ref,
+    read: ref.read,
   ),
 );
 
 class SchedulePostStateNotifier extends StateNotifier<AsyncValue<SchedulePostState>> {
-  final Ref ref;
+  final Reader read;
   SchedulePostStateNotifier({
     required AsyncValue<SchedulePostState> initialState,
-    required this.ref,
+    required this.read,
   }) : super(initialState);
 
-  Future<void> post() async {}
+  Future<void> post({required Schedule schedule}) async {
+    read(databaseProvider).schedulesReference().doc().set(schedule, SetOptions(merge: true));
+  }
 }
