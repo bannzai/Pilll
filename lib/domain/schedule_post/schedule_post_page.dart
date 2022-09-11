@@ -66,9 +66,10 @@ class _SchedulePostPage extends HookConsumerWidget {
         actions: [
           AlertButton(
             text: "保存",
-            onPressed: () => stateNotifier.register().then((value) {
+            onPressed: () async {
+              await stateNotifier.post(schedule: schedule);
               Navigator.of(context).pop();
-            }),
+            },
           ),
         ],
         backgroundColor: PilllColors.white,
