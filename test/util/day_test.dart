@@ -27,8 +27,8 @@ void main() {
     test("difference in 1 hour", () {
       DateTime date = DateTime.parse("2020-01-09 23:00:00.299871");
 
-      expect(date.dateRange().begin, DateTime(2020, 1, 9));
-      expect(date.dateRange().end, DateTime(2020, 1, 10, 23, 59, 59));
+      expect(date.dateTimeRange().start, DateTime(2020, 1, 9));
+      expect(date.dateTimeRange().end, DateTime(2020, 1, 9, 23, 59, 59));
     });
   });
 }

@@ -4,13 +4,13 @@ import 'package:riverpod/riverpod.dart';
 import 'package:pilll/util/datetime/day.dart';
 
 final schedulesProvider = FutureProvider.family((ref, DateTime date) async {
-  final range = date.dateRange();
+  final range = date.dateTimeRange();
   return await ref
       .watch(databaseProvider)
       .schedulesReference()
       .where(
         ScheduleFirestoreKey.date,
-        isGreaterThanOrEqualTo: range.begin,
+        isGreaterThanOrEqualTo: range.start,
         isLessThanOrEqualTo: range.end,
       )
       .get()

@@ -9,13 +9,13 @@ final diaryDatastoreProvider = Provider<DiaryDatastore>((ref) => DiaryDatastore(
 final diariesStreamProvider = StreamProvider((ref) => ref.watch(diaryDatastoreProvider).stream());
 
 final diariesStreamForMonthProvider = StreamProvider.family((ref, DateTime dateForMonth) {
-  final range = dateForMonth.dateRange();
+  final range = dateForMonth.dateTimeRange();
   return ref
       .watch(databaseProvider)
       .diariesReference()
       .where(
         DiaryFirestoreKey.date,
-        isGreaterThanOrEqualTo: range.begin,
+        isGreaterThanOrEqualTo: range.start,
         isLessThanOrEqualTo: range.end,
       )
       .snapshots()

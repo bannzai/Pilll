@@ -1,3 +1,4 @@
+import 'package:flutter/material.dart';
 import 'package:pilll/domain/calendar/date_range.dart';
 import 'package:pilll/entity/weekday.dart';
 import 'package:pilll/service/day.dart';
@@ -37,8 +38,8 @@ extension DateTimeBeginEnd on DateTime {
     return DateTime(year, month, day, 23, 59, 59);
   }
 
-  DateRange dateRange() {
-    return DateRange(begin(), end());
+  DateTimeRange dateTimeRange() {
+    return DateTimeRange(start: begin(), end: end());
   }
 }
 
