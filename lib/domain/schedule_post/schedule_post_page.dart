@@ -106,7 +106,7 @@ class _SchedulePostPage extends HookConsumerWidget {
                       ),
                     ),
                     SizedBox(
-                      height: MediaQuery.of(context).viewInsets.bottom + keyboardToobarHeight + 60,
+                      height: MediaQuery.of(context).viewInsets.bottom + keyboardToolbarHeight + 60,
                     ),
                   ],
                 ),
