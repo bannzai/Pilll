@@ -56,6 +56,7 @@ class _SchedulePostPage extends HookConsumerWidget {
       resizeToAvoidBottomInset: false,
       appBar: AppBar(
         elevation: 0.0,
+        title: Text(DateTimeFormatter.yearAndMonthAndDay(state.date), style: FontType.sBigTitle.merge(TextColorStyle.main)),
         leading: IconButton(
           icon: const Icon(Icons.close, color: Colors.black),
           onPressed: () => Navigator.of(context).pop(),
@@ -74,6 +75,7 @@ class _SchedulePostPage extends HookConsumerWidget {
       body: SafeArea(
         child: Stack(
           children: [
+            Text(DateTimeFormatter.yearAndMonthAndDay(state.date), style: FontType.sBigTitle.merge(TextColorStyle.main)),
             SizedBox(
               height: MediaQuery.of(context).size.height,
               width: MediaQuery.of(context).size.width,
@@ -82,7 +84,7 @@ class _SchedulePostPage extends HookConsumerWidget {
                 child: ListView(
                   controller: scrollController,
                   children: [
-                    Text(DateTimeFormatter.yearAndMonthAndDay(state.date), style: FontType.sBigTitle.merge(TextColorStyle.main)),
+                    const SizedBox(height: 16),
                     ConstrainedBox(
                       constraints: BoxConstraints(
                         minWidth: MediaQuery.of(context).size.width,
@@ -95,7 +97,7 @@ class _SchedulePostPage extends HookConsumerWidget {
                           title.value = text;
                         },
                         decoration: const InputDecoration(
-                          hintText: "予定",
+                          hintText: "通院する",
                           border: OutlineInputBorder(),
                         ),
                         controller: textEditingController,
