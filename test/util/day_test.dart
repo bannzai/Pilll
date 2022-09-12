@@ -22,4 +22,13 @@ void main() {
       expect(daysBetween(date1, date2), 0);
     });
   });
+
+  group("#dateRange", () {
+    test("difference in 1 hour", () {
+      DateTime date = DateTime.parse("2020-01-09 23:00:00.299871");
+
+      expect(date.dateRange().begin, DateTime(2020, 1, 9));
+      expect(date.dateRange().end, DateTime(2020, 1, 10, 23, 59, 59));
+    });
+  });
 }
