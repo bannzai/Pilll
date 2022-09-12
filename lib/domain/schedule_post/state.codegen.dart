@@ -40,7 +40,7 @@ class SchedulePostState with _$SchedulePostState {
   }) = _SchedulePostState;
   SchedulePostState._();
 
-  Schedule? schedule({required int index}) {
+  Schedule? scheduleOrNull({required int index}) {
     if (schedules.length - 1 < index) {
       return null;
     }

@@ -7,9 +7,10 @@ import 'package:pilll/entity/schedule.codegen.dart';
 import 'state.codegen.dart';
 import 'package:riverpod/riverpod.dart';
 
-final schedulePostStateNotifierProvider = StateNotifierProvider.autoDispose<SchedulePostStateNotifier, AsyncValue<SchedulePostState>>(
-  (ref) => SchedulePostStateNotifier(
-    initialState: ref.watch(schedulePostAsyncStateProvider),
+final schedulePostStateNotifierProvider =
+    StateNotifierProvider.autoDispose.family<SchedulePostStateNotifier, AsyncValue<SchedulePostState>, DateTime>(
+  (ref, DateTime date) => SchedulePostStateNotifier(
+    initialState: ref.watch(schedulePostAsyncStateProvider(date)),
     read: ref.read,
   ),
 );

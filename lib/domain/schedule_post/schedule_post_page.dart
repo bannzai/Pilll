@@ -1,24 +1,33 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_hooks/flutter_hooks.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
+import 'package:pilll/analytics.dart';
 import 'package:pilll/components/atoms/buttons.dart';
 import 'package:pilll/components/atoms/color.dart';
+import 'package:pilll/components/atoms/font.dart';
+import 'package:pilll/components/atoms/text_color.dart';
 import 'package:pilll/components/molecules/indicator.dart';
 import 'package:pilll/domain/schedule_post/state.codegen.dart';
 import 'package:pilll/domain/schedule_post/state_notifier.dart';
+import 'package:pilll/entity/schedule.codegen.dart';
 import 'package:pilll/error/universal_error_page.dart';
+import 'package:pilll/util/const.dart';
+import 'package:pilll/util/formatter/date_time_formatter.dart';
 
 class SchedulePostPage extends HookConsumerWidget {
+  final DateTime date;
+
+  SchedulePostPage({required this.date});
   @override
   Widget build(BuildContext context, WidgetRef ref) {
-    final asyncState = ref.watch(schedulePostStateNotifierProvider);
+    final asyncState = ref.watch(schedulePostStateNotifierProvider(date));
 
     return asyncState.when(
       data: (state) => _SchedulePostPage(state: state),
       error: (error, _) => UniversalErrorPage(
         error: error,
         child: null,
-        reload: () => ref.refresh(schedulePostAsyncStateProvider),
+        reload: () => ref.refresh(schedulePostAsyncStateProvider(date)),
       ),
       loading: () => const ScaffoldIndicator(),
     );
@@ -35,24 +44,12 @@ class _SchedulePostPage extends HookConsumerWidget {
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {
-    final stateNotifier = ref.watch(schedulePostStateNotifierProvider.notifier);
-    final TextEditingController? textEditingController = useTextEditingController(text: state.diary.memo);
+    final schedule = state.scheduleOrNull(index: 0) ?? Schedule(title: "", date: state.date, createdDateTime: DateTime.now());
+    final title = useState(schedule.title);
+    final textEditingController = useTextEditingController(text: title.value);
     final focusNode = useFocusNode();
     final scrollController = useScrollController();
-
-    focusNode.addListener(() {
-      if (focusNode.hasFocus) {
-        // NOTE: The final keyboard height cannot be got at the moment of focus via MediaQuery.of(context).viewInsets.bottom. so it is delayed.
-        Future.delayed(const Duration(milliseconds: 100)).then((_) {
-          final overwrapHeight = focusNode.rect.bottom - (MediaQuery.of(context).viewInsets.bottom + DiaryPostPageConst.keyboardToobarHeight);
-          if (overwrapHeight > 0) {
-            scrollController.animateTo(overwrapHeight, duration: const Duration(milliseconds: 300), curve: Curves.easeInOut);
-          }
-        });
-      } else {
-        scrollController.animateTo(scrollController.position.minScrollExtent, duration: const Duration(milliseconds: 300), curve: Curves.easeInOut);
-      }
-    });
+    final stateNotifier = ref.watch(schedulePostStateNotifierProvider(state.date).notifier);
 
     return Scaffold(
       backgroundColor: PilllColors.white,
@@ -85,15 +82,31 @@ class _SchedulePostPage extends HookConsumerWidget {
                 child: ListView(
                   controller: scrollController,
                   children: [
-                    Text(DateTimeFormatter.yearAndMonthAndDay(date), style: FontType.sBigTitle.merge(TextColorStyle.main)),
-                    ...[
-                      _physicalConditions(stateNotifier, state),
-                      _physicalConditionDetails(context, stateNotifier, state),
-                      _sex(stateNotifier, state),
-                      _memo(context, textEditingController, focusNode, stateNotifier, state),
-                    ].map((e) => _withContentSpacer(e)),
+                    Text(DateTimeFormatter.yearAndMonthAndDay(state.date), style: FontType.sBigTitle.merge(TextColorStyle.main)),
+                    ConstrainedBox(
+                      constraints: BoxConstraints(
+                        minWidth: MediaQuery.of(context).size.width,
+                        maxWidth: MediaQuery.of(context).size.width,
+                        minHeight: 40,
+                        maxHeight: 200,
+                      ),
+                      child: TextFormField(
+                        onChanged: (text) {
+                          title.value = text;
+                        },
+                        decoration: const InputDecoration(
+                          hintText: "メモ",
+                          border: OutlineInputBorder(),
+                        ),
+                        controller: textEditingController,
+                        maxLines: null,
+                        maxLength: 60,
+                        keyboardType: TextInputType.multiline,
+                        focusNode: focusNode,
+                      ),
+                    ),
                     SizedBox(
-                      height: MediaQuery.of(context).viewInsets.bottom + DiaryPostPageConst.keyboardToobarHeight + 60,
+                      height: MediaQuery.of(context).viewInsets.bottom + keyboardToobarHeight + 60,
                     ),
                   ],
                 ),
@@ -102,6 +115,29 @@ class _SchedulePostPage extends HookConsumerWidget {
             if (focusNode.hasFocus) _keyboardToolbar(context, focusNode),
           ],
         ),
+      ),
+    );
+  }
+
+  Widget _keyboardToolbar(BuildContext context, FocusNode focusNode) {
+    return Positioned(
+      bottom: MediaQuery.of(context).viewInsets.bottom,
+      child: Container(
+        height: keyboardToolbarHeight,
+        width: MediaQuery.of(context).size.width,
+        child: Row(
+          children: [
+            const Spacer(),
+            AlertButton(
+              text: '完了',
+              onPressed: () async {
+                analytics.logEvent(name: "post_schedule_done_button_pressed");
+                focusNode.unfocus();
+              },
+            ),
+          ],
+        ),
+        decoration: const BoxDecoration(color: PilllColors.white),
       ),
     );
   }
