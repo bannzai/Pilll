@@ -75,7 +75,6 @@ class _SchedulePostPage extends HookConsumerWidget {
       body: SafeArea(
         child: Stack(
           children: [
-            Text(DateTimeFormatter.yearAndMonthAndDay(state.date), style: FontType.sBigTitle.merge(TextColorStyle.main)),
             SizedBox(
               height: MediaQuery.of(context).size.height,
               width: MediaQuery.of(context).size.width,
@@ -84,7 +83,6 @@ class _SchedulePostPage extends HookConsumerWidget {
                 child: ListView(
                   controller: scrollController,
                   children: [
-                    const SizedBox(height: 16),
                     ConstrainedBox(
                       constraints: BoxConstraints(
                         minWidth: MediaQuery.of(context).size.width,
