@@ -3,7 +3,7 @@ import 'package:pilll/entity/schedule.codegen.dart';
 import 'package:riverpod/riverpod.dart';
 import 'package:pilll/util/datetime/day.dart';
 
-final schedulesProvider = Provider.family((ref, DateTime date) async {
+final schedulesProvider = FutureProvider.family((ref, DateTime date) async {
   final range = date.dateRange();
   return await ref
       .watch(databaseProvider)
