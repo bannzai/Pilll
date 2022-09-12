@@ -142,3 +142,13 @@ class _SchedulePostPage extends HookConsumerWidget {
     );
   }
 }
+
+extension SchedulePostPageRoute on SchedulePostPage {
+  static Route<dynamic> route(DateTime date) {
+    return MaterialPageRoute(
+      settings: const RouteSettings(name: "SchedulePostPage"),
+      builder: (_) => SchedulePostPage(date: date),
+      fullscreenDialog: true,
+    );
+  }
+}
