@@ -19,10 +19,15 @@ class _$SchedulePostStateTearOff {
   const _$SchedulePostStateTearOff();
 
   _SchedulePostState call(
-      {required User user, required PremiumAndTrial premiumAndTrial}) {
+      {required DateTime date,
+      required User user,
+      required PremiumAndTrial premiumAndTrial,
+      required List<Schedule> schedules}) {
     return _SchedulePostState(
+      date: date,
       user: user,
       premiumAndTrial: premiumAndTrial,
+      schedules: schedules,
     );
   }
 }
@@ -32,8 +37,10 @@ const $SchedulePostState = _$SchedulePostStateTearOff();
 
 /// @nodoc
 mixin _$SchedulePostState {
+  DateTime get date => throw _privateConstructorUsedError;
   User get user => throw _privateConstructorUsedError;
   PremiumAndTrial get premiumAndTrial => throw _privateConstructorUsedError;
+  List<Schedule> get schedules => throw _privateConstructorUsedError;
 
   @JsonKey(ignore: true)
   $SchedulePostStateCopyWith<SchedulePostState> get copyWith =>
@@ -45,7 +52,11 @@ abstract class $SchedulePostStateCopyWith<$Res> {
   factory $SchedulePostStateCopyWith(
           SchedulePostState value, $Res Function(SchedulePostState) then) =
       _$SchedulePostStateCopyWithImpl<$Res>;
-  $Res call({User user, PremiumAndTrial premiumAndTrial});
+  $Res call(
+      {DateTime date,
+      User user,
+      PremiumAndTrial premiumAndTrial,
+      List<Schedule> schedules});
 
   $UserCopyWith<$Res> get user;
   $PremiumAndTrialCopyWith<$Res> get premiumAndTrial;
@@ -62,10 +73,16 @@ class _$SchedulePostStateCopyWithImpl<$Res>
 
   @override
   $Res call({
+    Object? date = freezed,
     Object? user = freezed,
     Object? premiumAndTrial = freezed,
+    Object? schedules = freezed,
   }) {
     return _then(_value.copyWith(
+      date: date == freezed
+          ? _value.date
+          : date // ignore: cast_nullable_to_non_nullable
+              as DateTime,
       user: user == freezed
           ? _value.user
           : user // ignore: cast_nullable_to_non_nullable
@@ -74,6 +91,10 @@ class _$SchedulePostStateCopyWithImpl<$Res>
           ? _value.premiumAndTrial
           : premiumAndTrial // ignore: cast_nullable_to_non_nullable
               as PremiumAndTrial,
+      schedules: schedules == freezed
+          ? _value.schedules
+          : schedules // ignore: cast_nullable_to_non_nullable
+              as List<Schedule>,
     ));
   }
 
@@ -99,7 +120,11 @@ abstract class _$SchedulePostStateCopyWith<$Res>
           _SchedulePostState value, $Res Function(_SchedulePostState) then) =
       __$SchedulePostStateCopyWithImpl<$Res>;
   @override
-  $Res call({User user, PremiumAndTrial premiumAndTrial});
+  $Res call(
+      {DateTime date,
+      User user,
+      PremiumAndTrial premiumAndTrial,
+      List<Schedule> schedules});
 
   @override
   $UserCopyWith<$Res> get user;
@@ -120,10 +145,16 @@ class __$SchedulePostStateCopyWithImpl<$Res>
 
   @override
   $Res call({
+    Object? date = freezed,
     Object? user = freezed,
     Object? premiumAndTrial = freezed,
+    Object? schedules = freezed,
   }) {
     return _then(_SchedulePostState(
+      date: date == freezed
+          ? _value.date
+          : date // ignore: cast_nullable_to_non_nullable
+              as DateTime,
       user: user == freezed
           ? _value.user
           : user // ignore: cast_nullable_to_non_nullable
@@ -132,6 +163,10 @@ class __$SchedulePostStateCopyWithImpl<$Res>
           ? _value.premiumAndTrial
           : premiumAndTrial // ignore: cast_nullable_to_non_nullable
               as PremiumAndTrial,
+      schedules: schedules == freezed
+          ? _value.schedules
+          : schedules // ignore: cast_nullable_to_non_nullable
+              as List<Schedule>,
     ));
   }
 }
@@ -139,17 +174,25 @@ class __$SchedulePostStateCopyWithImpl<$Res>
 /// @nodoc
 
 class _$_SchedulePostState extends _SchedulePostState {
-  _$_SchedulePostState({required this.user, required this.premiumAndTrial})
+  _$_SchedulePostState(
+      {required this.date,
+      required this.user,
+      required this.premiumAndTrial,
+      required this.schedules})
       : super._();
 
+  @override
+  final DateTime date;
   @override
   final User user;
   @override
   final PremiumAndTrial premiumAndTrial;
+  @override
+  final List<Schedule> schedules;
 
   @override
   String toString() {
-    return 'SchedulePostState(user: $user, premiumAndTrial: $premiumAndTrial)';
+    return 'SchedulePostState(date: $date, user: $user, premiumAndTrial: $premiumAndTrial, schedules: $schedules)';
   }
 
   @override
@@ -157,16 +200,20 @@ class _$_SchedulePostState extends _SchedulePostState {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _SchedulePostState &&
+            const DeepCollectionEquality().equals(other.date, date) &&
             const DeepCollectionEquality().equals(other.user, user) &&
             const DeepCollectionEquality()
-                .equals(other.premiumAndTrial, premiumAndTrial));
+                .equals(other.premiumAndTrial, premiumAndTrial) &&
+            const DeepCollectionEquality().equals(other.schedules, schedules));
   }
 
   @override
   int get hashCode => Object.hash(
       runtimeType,
+      const DeepCollectionEquality().hash(date),
       const DeepCollectionEquality().hash(user),
-      const DeepCollectionEquality().hash(premiumAndTrial));
+      const DeepCollectionEquality().hash(premiumAndTrial),
+      const DeepCollectionEquality().hash(schedules));
 
   @JsonKey(ignore: true)
   @override
@@ -176,14 +223,20 @@ class _$_SchedulePostState extends _SchedulePostState {
 
 abstract class _SchedulePostState extends SchedulePostState {
   factory _SchedulePostState(
-      {required User user,
-      required PremiumAndTrial premiumAndTrial}) = _$_SchedulePostState;
+      {required DateTime date,
+      required User user,
+      required PremiumAndTrial premiumAndTrial,
+      required List<Schedule> schedules}) = _$_SchedulePostState;
   _SchedulePostState._() : super._();
 
+  @override
+  DateTime get date;
   @override
   User get user;
   @override
   PremiumAndTrial get premiumAndTrial;
+  @override
+  List<Schedule> get schedules;
   @override
   @JsonKey(ignore: true)
   _$SchedulePostStateCopyWith<_SchedulePostState> get copyWith =>
