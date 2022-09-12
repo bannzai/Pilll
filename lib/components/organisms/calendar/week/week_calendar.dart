@@ -56,7 +56,6 @@ class CalendarWeekdayLine extends StatelessWidget {
               );
             }
             return CalendarDayTile(
-              isToday: isSameDay(today(), date),
               weekday: weekday,
               date: date,
               shouldShowDiaryMark: state.hasDiaryMark(state.diariesForMonth, date),
