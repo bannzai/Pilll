@@ -17,7 +17,7 @@ import 'package:pilll/util/formatter/date_time_formatter.dart';
 class SchedulePostPage extends HookConsumerWidget {
   final DateTime date;
 
-  SchedulePostPage({required this.date});
+  const SchedulePostPage({Key? key, required this.date}) : super(key: key);
   @override
   Widget build(BuildContext context, WidgetRef ref) {
     final asyncState = ref.watch(schedulePostStateNotifierProvider(date));
