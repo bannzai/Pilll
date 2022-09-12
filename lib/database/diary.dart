@@ -2,21 +2,21 @@ import 'package:pilll/database/database.dart';
 import 'package:pilll/entity/diary.codegen.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:riverpod/riverpod.dart';
+import 'package:pilll/util/datetime/day.dart';
 
 final diaryDatastoreProvider = Provider<DiaryDatastore>((ref) => DiaryDatastore(ref.watch(databaseProvider)));
 
 final diariesStreamProvider = StreamProvider((ref) => ref.watch(diaryDatastoreProvider).stream());
 
 final diariesStreamForMonthProvider = StreamProvider.family((ref, DateTime dateForMonth) {
-  final firstDate = DateTime(dateForMonth.year, dateForMonth.month, 1);
-  final lastDate = DateTime(dateForMonth.year, dateForMonth.month + 1, 0);
+  final range = dateForMonth.dateRange();
   return ref
       .watch(databaseProvider)
       .diariesReference()
       .where(
         DiaryFirestoreKey.date,
-        isGreaterThanOrEqualTo: firstDate,
-        isLessThanOrEqualTo: lastDate,
+        isGreaterThanOrEqualTo: range.begin,
+        isLessThanOrEqualTo: range.end,
       )
       .snapshots()
       .map((event) => event.docs.map((e) => e.data()).toList())
