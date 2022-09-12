@@ -95,7 +95,7 @@ class _SchedulePostPage extends HookConsumerWidget {
                           title.value = text;
                         },
                         decoration: const InputDecoration(
-                          hintText: "メモ",
+                          hintText: "予定",
                           border: OutlineInputBorder(),
                         ),
                         controller: textEditingController,
