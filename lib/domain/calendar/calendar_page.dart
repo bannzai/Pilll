@@ -11,6 +11,7 @@ import 'package:pilll/components/atoms/color.dart';
 import 'package:pilll/domain/calendar/components/pill_sheet_modified_history/pill_sheet_modified_history_card.dart';
 import 'package:pilll/domain/calendar/calendar_page_state_notifier.dart';
 import 'package:flutter/material.dart';
+import 'package:pilll/domain/schedule_post/schedule_post_page.dart';
 import 'package:pilll/error/universal_error_page.dart';
 import 'package:pilll/util/datetime/day.dart';
 
@@ -58,7 +59,11 @@ class _CalendarPage extends StatelessWidget {
           onPressed: () {
             analytics.logEvent(name: "calendar_fab_pressed");
             final date = today();
-            transitionToDiaryPost(context, date, state.todayMonthCalendar.diaries);
+            if (date.date().isAfter(tomorrow())) {
+              Navigator.of(context).push(SchedulePostPageRoute.route(date));
+            } else {
+              transitionToDiaryPost(context, date, state.todayMonthCalendar.diaries);
+            }
           },
           child: const Icon(Icons.add, color: Colors.white),
           backgroundColor: PilllColors.secondary,
@@ -113,11 +118,15 @@ class _CalendarPage extends StatelessWidget {
                             horizontalPadding: 0,
                             onTap: (weekCalendarState, date) {
                               analytics.logEvent(name: "did_select_day_tile_on_calendar_card");
-                              transitionToDiaryPost(
-                                context,
-                                date,
-                                monthCalendarState.diaries,
-                              );
+                              if (date.date().isAfter(tomorrow())) {
+                                Navigator.of(context).push(SchedulePostPageRoute.route(date));
+                              } else {
+                                transitionToDiaryPost(
+                                  context,
+                                  date,
+                                  monthCalendarState.diaries,
+                                );
+                              }
                             },
                           );
                         }),
