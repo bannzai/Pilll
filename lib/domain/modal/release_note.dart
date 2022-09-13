@@ -42,7 +42,7 @@ class ReleaseNote extends StatelessWidget {
                       child: Container(
                         padding: const EdgeInsets.only(top: 40, left: 40, right: 40),
                         child: Text(
-                          "Pilllのウィジェットが出来ました",
+                          "ロック画面で服用するピルの番号を確認できるようになりました",
                           style: FontType.subTitle.merge(TextColorStyle.black),
                           textAlign: TextAlign.center,
                         ),
@@ -57,7 +57,7 @@ class ReleaseNote extends StatelessWidget {
                     children: [
                       Text(
                         '''
-ホーム画面にPilllのウィジェットを配置できるようになりました。本日服用するピルの番号が一目で確認できます。ウィジェットの追加方法は詳細を見るよりご確認ください
+ロック画面にPilllのウィジェットが配置できるようになりました。本日服用するピルの番号が一目で確認できます。追加方法は詳細よりご確認ください
                         ''',
                         style: FontType.assisting.merge(TextColorStyle.main),
                       ),
