@@ -42,7 +42,7 @@ class ReleaseNote extends StatelessWidget {
                       child: Container(
                         padding: const EdgeInsets.only(top: 40, left: 40, right: 40),
                         child: Text(
-                          "Pilllのウィジェットが出来ました",
+                          "ロック画面で服用するピルの番号を確認できるようになりました",
                           style: FontType.subTitle.merge(TextColorStyle.black),
                           textAlign: TextAlign.center,
                         ),
@@ -57,7 +57,7 @@ class ReleaseNote extends StatelessWidget {
                     children: [
                       Text(
                         '''
-ホーム画面にPilllのウィジェットを配置できるようになりました。本日服用するピルの番号が一目で確認できます。ウィジェットの追加方法は詳細を見るよりご確認ください
+ロック画面にPilllのウィジェットが配置できるようになりました。本日服用するピルの番号が一目で確認できます。追加方法は詳細よりご確認ください
                         ''',
                         style: FontType.assisting.merge(TextColorStyle.main),
                       ),
@@ -85,7 +85,7 @@ class ReleaseNote extends StatelessWidget {
 }
 
 void showReleaseNotePreDialog(BuildContext context) async {
-  const key = ReleaseNoteKey.version3_13_0;
+  const key = ReleaseNoteKey.version3_14_0;
   final storage = await SharedPreferences.getInstance();
   if (storage.getBool(key) ?? false) {
     return;
@@ -102,7 +102,7 @@ void showReleaseNotePreDialog(BuildContext context) async {
 void openReleaseNote() async {
   final ChromeSafariBrowser browser = ChromeSafariBrowser();
   await browser.open(
-      url: Uri.parse("https://pilll.wraptas.site/ad04fcc876024c978da3c41a7a28d5c1"),
+      url: Uri.parse("https://pilll.wraptas.site/f8693e05085f4f0280eea0d9b574361a"),
       options: ChromeSafariBrowserClassOptions(
           android: AndroidChromeCustomTabsOptions(addDefaultShareMenuItem: false),
           ios: IOSSafariOptions(barCollapsingEnabled: true, presentationStyle: IOSUIModalPresentationStyle.PAGE_SHEET)));
