@@ -51,10 +51,6 @@ post_install do |installer|
       config.build_settings["EXCLUDED_ARCHS[sdk=iphonesimulator*]"] = "arm64 i386"
       config.build_settings['ENABLE_BITCODE'] = 'NO'
 
-      # workaround: https://github.com/CocoaPods/CocoaPods/issues/11196#issuecomment-1058716826
-      if config.build_settings['WRAPPER_EXTENSION'] == 'bundle'
-        config.build_settings['DEVELOPMENT_TEAM'] = 'TQPN82UBBY'
-      end
     end
   end
 end
