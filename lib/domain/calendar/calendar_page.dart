@@ -12,7 +12,6 @@ import 'package:pilll/domain/calendar/components/pill_sheet_modified_history/pil
 import 'package:pilll/domain/calendar/calendar_page_state_notifier.dart';
 import 'package:flutter/material.dart';
 import 'package:pilll/error/universal_error_page.dart';
-import 'package:pilll/hooks/automatic_keep_alive_client_mixin.dart';
 import 'package:pilll/util/datetime/day.dart';
 
 class CalendarPage extends HookConsumerWidget {

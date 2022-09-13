@@ -13,15 +13,12 @@ import 'package:pilll/domain/menstruation/menstruation_state.codegen.dart';
 import 'package:pilll/domain/record/weekday_badge.dart';
 import 'package:pilll/domain/menstruation/menstruation_page_state_notifier.dart';
 import 'package:pilll/error/universal_error_page.dart';
-import 'package:pilll/hooks/automatic_keep_alive_client_mixin.dart';
 import 'package:pilll/util/formatter/date_time_formatter.dart';
 
 abstract class MenstruationPageConst {
   static const double calendarHeaderDropShadowOffset = 2;
-  static const double tileHeight =
-      CalendarConstants.tileHeight + calendarHeaderDropShadowOffset;
-  static const double calendarHeaderHeight =
-      WeekdayBadgeConst.height + tileHeight;
+  static const double tileHeight = CalendarConstants.tileHeight + calendarHeaderDropShadowOffset;
+  static const double calendarHeaderHeight = WeekdayBadgeConst.height + tileHeight;
 }
 
 class MenstruationPage extends HookConsumerWidget {
@@ -31,12 +28,10 @@ class MenstruationPage extends HookConsumerWidget {
   Widget build(BuildContext context, WidgetRef ref) {
     final store = ref.watch(menstruationPageStateNotifierProvider.notifier);
     final state = ref.watch(menstruationPageStateNotifierProvider);
-    final calendarPageIndexStateNotifier =
-        ref.watch(menstruationCalendarPageIndexStateNotifierProvider.notifier);
+    final calendarPageIndexStateNotifier = ref.watch(menstruationCalendarPageIndexStateNotifierProvider.notifier);
     useAutomaticKeepAlive(wantKeepAlive: true);
 
-    final pageController =
-        usePageController(initialPage: todayCalendarPageIndex);
+    final pageController = usePageController(initialPage: todayCalendarPageIndex);
     pageController.addListener(() {
       final index = (pageController.page ?? pageController.initialPage).round();
 
@@ -44,8 +39,7 @@ class MenstruationPage extends HookConsumerWidget {
     });
 
     return state.when(
-      data: (state) => MenstruationPageBody(
-          store: store, state: state, pageController: pageController),
+      data: (state) => MenstruationPageBody(store: store, state: state, pageController: pageController),
       error: (error, _) => UniversalErrorPage(
         error: error,
         child: null,
@@ -108,8 +102,7 @@ class MenstruationPageBody extends StatelessWidget {
                       ScaffoldMessenger.of(context).showSnackBar(
                         SnackBar(
                           duration: const Duration(seconds: 2),
-                          content: Text(
-                              "${DateTimeFormatter.monthAndDay(menstruation.beginDate)}から生理開始で記録しました"),
+                          content: Text("${DateTimeFormatter.monthAndDay(menstruation.beginDate)}から生理開始で記録しました"),
                         ),
                       );
                     }),

@@ -18,9 +18,7 @@ import 'package:pilll/error/universal_error_page.dart';
 import 'package:pilll/components/atoms/color.dart';
 import 'package:flutter/material.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
-import 'package:pilll/hooks/automatic_keep_alive_client_mixin.dart';
 import 'package:pilll/native/widget.dart';
-import 'package:pilll/provider/premium_and_trial.codegen.dart';
 
 class RecordPage extends HookConsumerWidget {
   const RecordPage({Key? key}) : super(key: key);
