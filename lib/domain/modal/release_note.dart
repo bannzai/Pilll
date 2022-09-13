@@ -102,7 +102,7 @@ void showReleaseNotePreDialog(BuildContext context) async {
 void openReleaseNote() async {
   final ChromeSafariBrowser browser = ChromeSafariBrowser();
   await browser.open(
-      url: Uri.parse("https://pilll.wraptas.site/ad04fcc876024c978da3c41a7a28d5c1"),
+      url: Uri.parse("https://pilll.wraptas.site/f8693e05085f4f0280eea0d9b574361a"),
       options: ChromeSafariBrowserClassOptions(
           android: AndroidChromeCustomTabsOptions(addDefaultShareMenuItem: false),
           ios: IOSSafariOptions(barCollapsingEnabled: true, presentationStyle: IOSUIModalPresentationStyle.PAGE_SHEET)));
