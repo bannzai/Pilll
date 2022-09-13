@@ -23,7 +23,6 @@ import 'package:pilll/domain/settings/components/rows/update_from_132.dart';
 import 'package:pilll/domain/settings/components/setting_section_title.dart';
 import 'package:pilll/domain/settings/setting_page_state.codegen.dart';
 import 'package:pilll/error/universal_error_page.dart';
-import 'package:pilll/hooks/automatic_keep_alive_client_mixin.dart';
 import 'package:pilll/domain/settings/components/inquiry/inquiry.dart';
 import 'package:pilll/domain/settings/setting_page_state_notifier.dart';
 import 'package:pilll/components/atoms/color.dart';
@@ -34,14 +33,7 @@ import 'package:flutter/services.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
 import 'package:url_launcher/url_launcher.dart';
 
-enum SettingSection {
-  account,
-  premium,
-  pill,
-  notification,
-  menstruation,
-  other
-}
+enum SettingSection { account, premium, pill, notification, menstruation, other }
 
 class SettingPage extends HookConsumerWidget {
   const SettingPage({Key? key}) : super(key: key);
@@ -96,8 +88,7 @@ class SettingPageBody extends StatelessWidget {
                   return SettingSectionTitle(
                     text: "アカウント",
                     children: [
-                      const ListExplainRow(
-                          text: "機種変更やスマホ紛失時など、データの引き継ぎ・復元には、アカウント登録が必要です。"),
+                      const ListExplainRow(text: "機種変更やスマホ紛失時など、データの引き継ぎ・復元には、アカウント登録が必要です。"),
                       const AccountLinkRow(),
                       _separator(),
                     ],
@@ -106,23 +97,17 @@ class SettingPageBody extends StatelessWidget {
                   return SettingSectionTitle(text: "Pilllプレミアム", children: [
                     if (state.premiumAndTrial.isTrial) ...[
                       ListTile(
-                        title:
-                            const Text("機能無制限の期間について", style: FontType.listRow),
+                        title: const Text("機能無制限の期間について", style: FontType.listRow),
                         onTap: () {
-                          analytics.logEvent(
-                              name: "did_select_about_trial", parameters: {});
-                          launchUrl(
-                              Uri.parse(
-                                  "https://pilll.wraptas.site/3abd690f501549c48f813fd310b5f242"),
-                              mode: LaunchMode.inAppWebView);
+                          analytics.logEvent(name: "did_select_about_trial", parameters: {});
+                          launchUrl(Uri.parse("https://pilll.wraptas.site/3abd690f501549c48f813fd310b5f242"), mode: LaunchMode.inAppWebView);
                         },
                       ),
                       _separator(),
                     ],
                     PremiumIntroductionRow(
                       isPremium: state.premiumAndTrial.isPremium,
-                      trialDeadlineDate:
-                          state.premiumAndTrial.trialDeadlineDate,
+                      trialDeadlineDate: state.premiumAndTrial.trialDeadlineDate,
                     ),
                     _separator(),
                   ]);
@@ -130,9 +115,7 @@ class SettingPageBody extends StatelessWidget {
                   return SettingSectionTitle(
                     text: "ピルシート",
                     children: [
-                      if (activedPillSheet != null &&
-                          pillSheetGroup != null &&
-                          !pillSheetGroup.isDeactived) ...[
+                      if (activedPillSheet != null && pillSheetGroup != null && !pillSheetGroup.isDeactived) ...[
                         TodayPllNumberRow(
                           setting: setting,
                           pillSheetGroup: pillSheetGroup,
@@ -149,8 +132,7 @@ class SettingPageBody extends StatelessWidget {
                         setting: setting,
                         isPremium: state.premiumAndTrial.isPremium,
                         isTrial: state.premiumAndTrial.isTrial,
-                        trialDeadlineDate:
-                            state.premiumAndTrial.trialDeadlineDate,
+                        trialDeadlineDate: state.premiumAndTrial.trialDeadlineDate,
                       ),
                       _separator(),
                     ],
@@ -163,17 +145,14 @@ class SettingPageBody extends StatelessWidget {
                       _separator(),
                       NotificationTimeRow(store: store, state: state),
                       _separator(),
-                      if (activedPillSheet != null &&
-                          activedPillSheet.pillSheetHasRestOrFakeDuration) ...[
-                        NotificationInRestDuration(
-                            setting: setting, pillSheet: activedPillSheet),
+                      if (activedPillSheet != null && activedPillSheet.pillSheetHasRestOrFakeDuration) ...[
+                        NotificationInRestDuration(setting: setting, pillSheet: activedPillSheet),
                         _separator(),
                       ],
                       if (!state.premiumAndTrial.isPremium) ...[
                         QuickRecordRow(
                           isTrial: state.premiumAndTrial.isTrial,
-                          trialDeadlineDate:
-                              state.premiumAndTrial.trialDeadlineDate,
+                          trialDeadlineDate: state.premiumAndTrial.trialDeadlineDate,
                         ),
                         _separator(),
                       ],
@@ -181,8 +160,7 @@ class SettingPageBody extends StatelessWidget {
                         setting: setting,
                         isTrial: state.premiumAndTrial.isTrial,
                         isPremium: state.premiumAndTrial.isPremium,
-                        trialDeadlineDate:
-                            state.premiumAndTrial.trialDeadlineDate,
+                        trialDeadlineDate: state.premiumAndTrial.trialDeadlineDate,
                       ),
                       _separator(),
                     ],
@@ -195,8 +173,7 @@ class SettingPageBody extends StatelessWidget {
                       _separator(),
                       if (Platform.isIOS && state.isHealthDataAvailable) ...[
                         HealthCareRow(
-                          trialDeadlineDate:
-                              state.premiumAndTrial.trialDeadlineDate,
+                          trialDeadlineDate: state.premiumAndTrial.trialDeadlineDate,
                         ),
                         _separator(),
                       ]
@@ -213,53 +190,35 @@ class SettingPageBody extends StatelessWidget {
                       ListTile(
                           title: const Text("利用規約", style: FontType.listRow),
                           onTap: () {
-                            analytics.logEvent(
-                                name: "did_select_terms", parameters: {});
-                            launchUrl(
-                                Uri.parse(
-                                    "https://bannzai.github.io/Pilll/Terms"),
-                                mode: LaunchMode.inAppWebView);
+                            analytics.logEvent(name: "did_select_terms", parameters: {});
+                            launchUrl(Uri.parse("https://bannzai.github.io/Pilll/Terms"), mode: LaunchMode.inAppWebView);
                           }),
                       _separator(),
                       ListTile(
-                          title:
-                              const Text("プライバシーポリシー", style: FontType.listRow),
+                          title: const Text("プライバシーポリシー", style: FontType.listRow),
                           onTap: () {
-                            analytics.logEvent(
-                                name: "did_select_privacy_policy",
-                                parameters: {});
-                            launchUrl(
-                                Uri.parse(
-                                    "https://bannzai.github.io/Pilll/PrivacyPolicy"),
-                                mode: LaunchMode.inAppWebView);
+                            analytics.logEvent(name: "did_select_privacy_policy", parameters: {});
+                            launchUrl(Uri.parse("https://bannzai.github.io/Pilll/PrivacyPolicy"), mode: LaunchMode.inAppWebView);
                           }),
                       _separator(),
                       ListTile(
                           title: const Text("FAQ", style: FontType.listRow),
                           onTap: () {
-                            analytics.logEvent(
-                                name: "did_select_faq", parameters: {});
-                            launchUrl(
-                                Uri.parse(
-                                    "https://pilll.wraptas.site/bb1f49eeded64b57929b7a13e9224d69"),
-                                mode: LaunchMode.inAppWebView);
+                            analytics.logEvent(name: "did_select_faq", parameters: {});
+                            launchUrl(Uri.parse("https://pilll.wraptas.site/bb1f49eeded64b57929b7a13e9224d69"), mode: LaunchMode.inAppWebView);
                           }),
                       _separator(),
                       ListTile(
                           title: const Text("新機能紹介", style: FontType.listRow),
                           onTap: () {
-                            analytics.logEvent(
-                                name: "setting_did_select_release_note",
-                                parameters: {});
-                            launchUrl(Uri.parse(
-                                "https://pilll.wraptas.site/172cae6bced04bbabeab1d8acad91a61"));
+                            analytics.logEvent(name: "setting_did_select_release_note", parameters: {});
+                            launchUrl(Uri.parse("https://pilll.wraptas.site/172cae6bced04bbabeab1d8acad91a61"));
                           }),
                       _separator(),
                       ListTile(
                           title: const Text("お問い合わせ", style: FontType.listRow),
                           onTap: () {
-                            analytics.logEvent(
-                                name: "did_select_inquiry", parameters: {});
+                            analytics.logEvent(name: "did_select_inquiry", parameters: {});
                             inquiry();
                           }),
                       _separator(),
@@ -283,8 +242,7 @@ class SettingPageBody extends StatelessWidget {
     return Padding(
       padding: const EdgeInsets.only(left: 10, right: 10, bottom: 20, top: 20),
       child: GestureDetector(
-        child: const Center(
-            child: Text("COPY DEBUG INFO", style: TextColorStyle.primary)),
+        child: const Center(child: Text("COPY DEBUG INFO", style: TextColorStyle.primary)),
         onTap: () async {
           Clipboard.setData(ClipboardData(text: await debugInfo("\n")));
         },
