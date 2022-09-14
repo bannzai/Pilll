@@ -19,14 +19,17 @@ jobs:
     - uses: actions/setup-java@v1
       with:
         java-version: '12.x'
+    - uses: webfactory/ssh-agent@v0.5.4
+      with:
+        ssh-private-key: ${{ secrets.SSH_PRIVATE_KEY }}
     - name: Prepare firebase config
       run: make secret
       env:
         FILE_FIREBASE_IOS_DEVELOPMENT: ${{ secrets.FILE_FIREBASE_IOS_DEVELOPMENT }}
         FILE_FIREBASE_IOS_PRODUCTION: ${{ secrets.FILE_FIREBASE_IOS_PRODUCTION }}
-    - uses: subosito/flutter-action@v1
+    - uses: subosito/flutter-action@v2
       with:
-        flutter-version: '3.0.1'
+        flutter-version: '3.3.1'
     - run: flutter pub get
     - name: Run iOS
       run: flutter build ios --debug --no-codesign --flavor development --target lib/main.dev.dart --no-sound-null-safety
@@ -38,14 +41,17 @@ jobs:
     - uses: actions/setup-java@v1
       with:
         java-version: '12.x'
+    - uses: webfactory/ssh-agent@v0.5.4
+      with:
+        ssh-private-key: ${{ secrets.SSH_PRIVATE_KEY }}
     - name: Prepare firebase config
       run: make secret
       env:
         FILE_FIREBASE_ANDROID_DEVELOPMENT: ${{ secrets.FILE_FIREBASE_ANDROID_DEVELOPMENT }}
         FILE_FIREBASE_ANDROID_PRODUCTION: ${{ secrets.FILE_FIREBASE_ANDROID_PRODUCTION }}
-    - uses: subosito/flutter-action@v1
+    - uses: subosito/flutter-action@v2
       with:
-        flutter-version: '3.0.1'
+        flutter-version: '3.3.1'
     - run: flutter pub get
     - run: flutter build apk --debug --flavor development --target lib/main.dev.dart --no-sound-null-safety
   test:
@@ -56,9 +62,12 @@ jobs:
     - uses: actions/setup-java@v1
       with:
         java-version: '12.x'
-    - uses: subosito/flutter-action@v1
+    - uses: subosito/flutter-action@v2
       with:
-        flutter-version: '3.0.1'
+        flutter-version: '3.3.1'
+    - uses: webfactory/ssh-agent@v0.5.4
+      with:
+        ssh-private-key: ${{ secrets.SSH_PRIVATE_KEY }}
     - run: make secret
     - run: flutter pub get
     - run: flutter test 
@@ -70,9 +79,12 @@ jobs:
     - uses: actions/setup-java@v1
       with:
         java-version: '12.x'
-    - uses: subosito/flutter-action@v1
+    - uses: subosito/flutter-action@v2
       with:
-        flutter-version: '3.0.1'
+        flutter-version: '3.3.1'
+    - uses: webfactory/ssh-agent@v0.5.4
+      with:
+        ssh-private-key: ${{ secrets.SSH_PRIVATE_KEY }}
     - run: make secret
     - run: flutter pub get
     - run: flutter pub run build_runner build --delete-conflicting-outputs
