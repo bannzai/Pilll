@@ -37,7 +37,7 @@ dependencies:
   package_info: ^2.0.0
   equatable: ^2.0.0
   json_annotation: ^4.0.0
-  mockito: ^5.3.0
+  mockito: 5.2.0
   riverpod: ^1.0.3
   freezed_annotation: ^1.1.0
   flutter_hooks: ^0.18.4
