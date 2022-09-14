@@ -24,7 +24,7 @@ jobs:
       env:
         FILE_FIREBASE_IOS_DEVELOPMENT: ${{ secrets.FILE_FIREBASE_IOS_DEVELOPMENT }}
         FILE_FIREBASE_IOS_PRODUCTION: ${{ secrets.FILE_FIREBASE_IOS_PRODUCTION }}
-    - uses: subosito/flutter-action@v1
+    - uses: subosito/flutter-action@v2
       with:
         flutter-version: '3.3.1'
     - run: flutter pub get
@@ -43,7 +43,7 @@ jobs:
       env:
         FILE_FIREBASE_ANDROID_DEVELOPMENT: ${{ secrets.FILE_FIREBASE_ANDROID_DEVELOPMENT }}
         FILE_FIREBASE_ANDROID_PRODUCTION: ${{ secrets.FILE_FIREBASE_ANDROID_PRODUCTION }}
-    - uses: subosito/flutter-action@v1
+    - uses: subosito/flutter-action@v2
       with:
         flutter-version: '3.3.1'
     - run: flutter pub get
@@ -56,7 +56,7 @@ jobs:
     - uses: actions/setup-java@v1
       with:
         java-version: '12.x'
-    - uses: subosito/flutter-action@v1
+    - uses: subosito/flutter-action@v2
       with:
         flutter-version: '3.3.1'
     - run: make secret
@@ -70,7 +70,7 @@ jobs:
     - uses: actions/setup-java@v1
       with:
         java-version: '12.x'
-    - uses: subosito/flutter-action@v1
+    - uses: subosito/flutter-action@v2
       with:
         flutter-version: '3.3.1'
     - run: make secret
