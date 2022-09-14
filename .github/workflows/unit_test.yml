@@ -26,7 +26,7 @@ jobs:
         FILE_FIREBASE_IOS_PRODUCTION: ${{ secrets.FILE_FIREBASE_IOS_PRODUCTION }}
     - uses: subosito/flutter-action@v1
       with:
-        flutter-version: '3.0.1'
+        flutter-version: '3.3.1'
     - run: flutter pub get
     - name: Run iOS
       run: flutter build ios --debug --no-codesign --flavor development --target lib/main.dev.dart --no-sound-null-safety
@@ -45,7 +45,7 @@ jobs:
         FILE_FIREBASE_ANDROID_PRODUCTION: ${{ secrets.FILE_FIREBASE_ANDROID_PRODUCTION }}
     - uses: subosito/flutter-action@v1
       with:
-        flutter-version: '3.0.1'
+        flutter-version: '3.3.1'
     - run: flutter pub get
     - run: flutter build apk --debug --flavor development --target lib/main.dev.dart --no-sound-null-safety
   test:
@@ -58,7 +58,7 @@ jobs:
         java-version: '12.x'
     - uses: subosito/flutter-action@v1
       with:
-        flutter-version: '3.0.1'
+        flutter-version: '3.3.1'
     - run: make secret
     - run: flutter pub get
     - run: flutter test 
@@ -72,7 +72,7 @@ jobs:
         java-version: '12.x'
     - uses: subosito/flutter-action@v1
       with:
-        flutter-version: '3.0.1'
+        flutter-version: '3.3.1'
     - run: make secret
     - run: flutter pub get
     - run: flutter pub run build_runner build --delete-conflicting-outputs
