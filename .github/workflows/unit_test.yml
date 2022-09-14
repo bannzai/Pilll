@@ -19,6 +19,9 @@ jobs:
     - uses: actions/setup-java@v1
       with:
         java-version: '12.x'
+    - uses: webfactory/ssh-agent@v0.5.4
+      with:
+        ssh-private-key: ${{ secrets.SSH_PRIVATE_KEY }}
     - name: Prepare firebase config
       run: make secret
       env:
