@@ -247,12 +247,12 @@ packages:
     source: hosted
     version: "3.3.4"
   firebase_auth_platform_interface:
-    dependency: "direct main"
+    dependency: transitive
     description:
       name: firebase_auth_platform_interface
       url: "https://pub.dartlang.org"
     source: hosted
-    version: "6.1.10"
+    version: "6.7.0"
   firebase_auth_web:
     dependency: transitive
     description:
