@@ -5,7 +5,7 @@ PODS:
   - AppAuth/Core (1.5.0)
   - AppAuth/ExternalUserAgent (1.5.0):
     - AppAuth/Core
-  - cloud_firestore (3.1.5):
+  - cloud_firestore (3.4.7):
     - Firebase/Firestore (= 8.10.0)
     - firebase_core
     - Flutter
@@ -31,22 +31,22 @@ PODS:
   - Firebase/Performance (8.10.0):
     - Firebase/CoreOnly
     - FirebasePerformance (~> 8.10.0)
-  - firebase_analytics (9.1.2):
+  - firebase_analytics (9.3.4):
     - Firebase/Analytics (= 8.10.0)
     - firebase_core
     - Flutter
-  - firebase_auth (3.3.4):
+  - firebase_auth (3.8.0):
     - Firebase/Auth (= 8.10.0)
     - firebase_core
     - Flutter
-  - firebase_core (1.10.6):
+  - firebase_core (1.22.0):
     - Firebase/CoreOnly (= 8.10.0)
     - Flutter
-  - firebase_crashlytics (2.4.4):
+  - firebase_crashlytics (2.8.10):
     - Firebase/Crashlytics (= 8.10.0)
     - firebase_core
     - Flutter
-  - firebase_messaging (11.2.4):
+  - firebase_messaging (11.4.4):
     - Firebase/Messaging (= 8.10.0)
     - firebase_core
     - Flutter
@@ -321,13 +321,13 @@ CHECKOUT OPTIONS:
 
 SPEC CHECKSUMS:
   AppAuth: 80317d99ac7ff2801a2f18ff86b48cd315ed465d
-  cloud_firestore: 57bd3bbdcc8060e6bafb8a0fad7dab7621afbf12
+  cloud_firestore: d2b5939616075867480fb9561286a4580c480c10
   Firebase: 44213362f1dcc52555b935dc925ed35ac55f1b20
-  firebase_analytics: 51be50ccff1932f2b329d80d74f5a9954b2000cc
-  firebase_auth: 52426c8d0c774beb9a3b69992ab2be49daaac2b8
-  firebase_core: a0b53a73c4717e4c9ba2231001811df7dc064af4
-  firebase_crashlytics: 91d42e9558c26fec2a9ff58cb12fcb3482988a10
-  firebase_messaging: a3634385b421cc33f5d44f3d336bf783d3e46b64
+  firebase_analytics: a45f2dda19b30df3b378ea9cc8c3a28624862980
+  firebase_auth: d599dbda7a2588186b8562fc7bbedb87257d3b5e
+  firebase_core: 8e4ab1b2623bac17ed1f8e3362778d7679ca80e3
+  firebase_crashlytics: 1d9b343328d7c0b5419d33902c8a73c1b2b5cd75
+  firebase_messaging: e55855c1117104147db56cc6beef95b1208e0ead
   firebase_performance: beaedcc208376412e1edefae23e3412e3f2f920d
   FirebaseABTesting: 10cbce8db9985ae2e3847ea44e9947dd18f94e10
   FirebaseAnalytics: 319c9b3b1bdd400d60e2f415dff0c5f6959e6760
