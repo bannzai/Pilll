@@ -119,7 +119,7 @@ packages:
       name: cloud_firestore
       url: "https://pub.dartlang.org"
     source: hosted
-    version: "3.1.5"
+    version: "3.4.7"
   cloud_firestore_platform_interface:
     dependency: transitive
     description:
@@ -140,7 +140,7 @@ packages:
       name: code_builder
       url: "https://pub.dartlang.org"
     source: hosted
-    version: "4.3.0"
+    version: "4.2.0"
   collection:
     dependency: transitive
     description:
@@ -217,7 +217,7 @@ packages:
       name: firebase
       url: "https://pub.dartlang.org"
     source: hosted
-    version: "9.0.3"
+    version: "9.0.2"
   firebase_analytics:
     dependency: "direct main"
     description:
@@ -231,14 +231,14 @@ packages:
       name: firebase_analytics_platform_interface
       url: "https://pub.dartlang.org"
     source: hosted
-    version: "3.3.4"
+    version: "3.1.1"
   firebase_analytics_web:
     dependency: transitive
     description:
       name: firebase_analytics_web
       url: "https://pub.dartlang.org"
     source: hosted
-    version: "0.4.2+4"
+    version: "0.4.0+8"
   firebase_auth:
     dependency: "direct main"
     description:
@@ -252,14 +252,14 @@ packages:
       name: firebase_auth_platform_interface
       url: "https://pub.dartlang.org"
     source: hosted
-    version: "6.7.0"
+    version: "6.1.9"
   firebase_auth_web:
     dependency: transitive
     description:
       name: firebase_auth_web
       url: "https://pub.dartlang.org"
     source: hosted
-    version: "3.3.19"
+    version: "3.3.5"
   firebase_core:
     dependency: "direct main"
     description:
@@ -294,14 +294,14 @@ packages:
       name: firebase_crashlytics_platform_interface
       url: "https://pub.dartlang.org"
     source: hosted
-    version: "3.2.16"
+    version: "3.1.11"
   firebase_messaging:
     dependency: "direct main"
     description:
       name: firebase_messaging
       url: "https://pub.dartlang.org"
     source: hosted
-    version: "11.2.4"
+    version: "11.4.4"
   firebase_messaging_platform_interface:
     dependency: transitive
     description:
@@ -322,7 +322,7 @@ packages:
       name: firebase_performance
       url: "https://pub.dartlang.org"
     source: hosted
-    version: "0.8.3"
+    version: "0.8.0+7"
   firebase_performance_platform_interface:
     dependency: transitive
     description:
@@ -456,7 +456,7 @@ packages:
       name: google_sign_in_android
       url: "https://pub.dartlang.org"
     source: hosted
-    version: "6.1.1"
+    version: "6.1.0"
   google_sign_in_ios:
     dependency: transitive
     description:
