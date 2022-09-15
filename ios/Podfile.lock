@@ -50,7 +50,7 @@ PODS:
     - Firebase/Messaging (= 8.10.0)
     - firebase_core
     - Flutter
-  - firebase_performance (0.8.3):
+  - firebase_performance (0.8.0-7):
     - Firebase/Performance (= 8.10.0)
     - firebase_core
     - Flutter
@@ -328,7 +328,7 @@ SPEC CHECKSUMS:
   firebase_core: a0b53a73c4717e4c9ba2231001811df7dc064af4
   firebase_crashlytics: 91d42e9558c26fec2a9ff58cb12fcb3482988a10
   firebase_messaging: a3634385b421cc33f5d44f3d336bf783d3e46b64
-  firebase_performance: beaedcc208376412e1edefae23e3412e3f2f920d
+  firebase_performance: 11fd14ea6fd31e8e5e6e0fe3109545b26cf97146
   FirebaseABTesting: 10cbce8db9985ae2e3847ea44e9947dd18f94e10
   FirebaseAnalytics: 319c9b3b1bdd400d60e2f415dff0c5f6959e6760
   FirebaseAuth: 59a2d2b933b5b79e18fb1e6ad230c6abdaa73d26
