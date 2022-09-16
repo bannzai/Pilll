@@ -11,18 +11,18 @@ final schedulePostStateNotifierProvider =
     StateNotifierProvider.autoDispose.family<SchedulePostStateNotifier, AsyncValue<SchedulePostState>, DateTime>(
   (ref, DateTime date) => SchedulePostStateNotifier(
     initialState: ref.watch(schedulePostAsyncStateProvider(date)),
-    read: ref.read,
+    ref: ref,
   ),
 );
 
 class SchedulePostStateNotifier extends StateNotifier<AsyncValue<SchedulePostState>> {
-  final Reader read;
+  final Ref ref;
   SchedulePostStateNotifier({
     required AsyncValue<SchedulePostState> initialState,
-    required this.read,
+    required this.ref,
   }) : super(initialState);
 
   Future<void> post({required Schedule schedule}) async {
-    await read(databaseProvider).schedulesReference().doc().set(schedule, SetOptions(merge: true));
+    await ref.read(databaseProvider).schedulesReference().doc().set(schedule, SetOptions(merge: true));
   }
 }

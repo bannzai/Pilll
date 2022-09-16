@@ -104,6 +104,6 @@ void openReleaseNote() async {
   await browser.open(
       url: Uri.parse("https://pilll.wraptas.site/f8693e05085f4f0280eea0d9b574361a"),
       options: ChromeSafariBrowserClassOptions(
-          android: AndroidChromeCustomTabsOptions(addDefaultShareMenuItem: false),
+          android: AndroidChromeCustomTabsOptions(shareState: CustomTabsShareState.SHARE_STATE_OFF),
           ios: IOSSafariOptions(barCollapsingEnabled: true, presentationStyle: IOSUIModalPresentationStyle.PAGE_SHEET)));
 }
