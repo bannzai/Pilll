@@ -11,12 +11,13 @@ import 'package:pilll/entity/setting.codegen.dart';
 import 'package:pilll/error/error_alert.dart';
 
 class ReminderNotificationCustomizeWordPage extends HookConsumerWidget {
-  final Setting setting;
-  const ReminderNotificationCustomizeWordPage(this.setting, {Key? key}) : super(key: key);
+  const ReminderNotificationCustomizeWordPage({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {
     final stateNotifier = ref.watch(settingStateNotifierProvider.notifier);
+    final setting = ref.watch(settingStateNotifierProvider).value!.setting;
+
     final textFieldControlelr = useTextEditingController(text: setting.reminderNotificationCustomization.word);
     final word = useState(setting.reminderNotificationCustomization.word);
     final isInVisibleReminderDate = useState(setting.reminderNotificationCustomization.isInVisibleReminderDate);
@@ -175,10 +176,10 @@ class ReminderNotificationCustomizeWordPage extends HookConsumerWidget {
 }
 
 extension ReminderNotificationCustomizeWordPageRoutes on ReminderNotificationCustomizeWordPage {
-  static Route<dynamic> route({required Setting setting}) {
+  static Route<dynamic> route() {
     return MaterialPageRoute(
       settings: const RouteSettings(name: "ReminderNotificationCustomizeWordPage"),
-      builder: (_) => ReminderNotificationCustomizeWordPage(setting),
+      builder: (_) => const ReminderNotificationCustomizeWordPage(),
     );
   }
 }
