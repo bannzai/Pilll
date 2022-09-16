@@ -19,7 +19,7 @@ Map<String, dynamic> _$$_PremiumFunctionSurveyToJson(
         _$_PremiumFunctionSurvey instance) =>
     <String, dynamic>{
       'elements': instance.elements
-          .map((e) => _$PremiumFunctionSurveyElementTypeEnumMap[e]!)
+          .map((e) => _$PremiumFunctionSurveyElementTypeEnumMap[e])
           .toList(),
       'message': instance.message,
     };
