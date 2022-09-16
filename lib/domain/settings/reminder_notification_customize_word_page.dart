@@ -12,21 +12,16 @@ import 'package:pilll/error/error_alert.dart';
 
 class ReminderNotificationCustomizeWordPage extends HookConsumerWidget {
   final Setting setting;
-  const ReminderNotificationCustomizeWordPage(this.setting, {Key? key})
-      : super(key: key);
+  const ReminderNotificationCustomizeWordPage(this.setting, {Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {
-    final store = ref.watch(settingStateNotifierProvider.notifier);
-    final textFieldControlelr = useTextEditingController(
-        text: setting.reminderNotificationCustomization.word);
+    final stateNotifier = ref.watch(settingStateNotifierProvider.notifier);
+    final textFieldControlelr = useTextEditingController(text: setting.reminderNotificationCustomization.word);
     final word = useState(setting.reminderNotificationCustomization.word);
-    final isInVisibleReminderDate = useState(
-        setting.reminderNotificationCustomization.isInVisibleReminderDate);
-    final isInVisiblePillNumber = useState(
-        setting.reminderNotificationCustomization.isInVisiblePillNumber);
-    final isInVisibleDescription = useState(
-        setting.reminderNotificationCustomization.isInVisibleDescription);
+    final isInVisibleReminderDate = useState(setting.reminderNotificationCustomization.isInVisibleReminderDate);
+    final isInVisiblePillNumber = useState(setting.reminderNotificationCustomization.isInVisiblePillNumber);
+    final isInVisibleDescription = useState(setting.reminderNotificationCustomization.isInVisibleDescription);
 
     return Scaffold(
       backgroundColor: PilllColors.background,
@@ -66,20 +61,13 @@ class ReminderNotificationCustomizeWordPage extends HookConsumerWidget {
                       counter: Row(children: [
                         const Text(
                           "通知の先頭部分の変更ができます",
-                          style: TextStyle(
-                              fontFamily: FontFamily.japanese,
-                              fontSize: 12,
-                              fontWeight: FontWeight.w400,
-                              color: TextColor.darkGray),
+                          style: TextStyle(fontFamily: FontFamily.japanese, fontSize: 12, fontWeight: FontWeight.w400, color: TextColor.darkGray),
                         ),
                         const Spacer(),
                         Text(
                           "${word.value.characters.length}/8",
-                          style: const TextStyle(
-                              fontFamily: FontFamily.japanese,
-                              fontSize: 12,
-                              fontWeight: FontWeight.w400,
-                              color: TextColor.darkGray),
+                          style:
+                              const TextStyle(fontFamily: FontFamily.japanese, fontSize: 12, fontWeight: FontWeight.w400, color: TextColor.darkGray),
                         ),
                       ]),
                     ),
@@ -88,11 +76,9 @@ class ReminderNotificationCustomizeWordPage extends HookConsumerWidget {
                       word.value = _word;
                     },
                     onSubmitted: (word) async {
-                      analytics.logEvent(
-                          name: "submit_reminder_notification_customize");
+                      analytics.logEvent(name: "submit_reminder_notification_customize");
                       try {
-                        await store.asyncAction
-                            .reminderNotificationWordSubmit(word, setting);
+                        await stateNotifier.asyncAction.reminderNotificationWordSubmit(word, setting);
                         Navigator.of(context).pop();
                       } catch (error) {
                         showErrorAlert(context, error);
@@ -114,11 +100,9 @@ class ReminderNotificationCustomizeWordPage extends HookConsumerWidget {
                         "日付を表示",
                         !isInVisibleReminderDate.value,
                         (value) async {
-                          analytics.logEvent(
-                              name: "change_reminder_notification_date");
+                          analytics.logEvent(name: "change_reminder_notification_date");
                           try {
-                            await store.asyncAction
-                                .setIsInVisibleReminderDate(!value, setting);
+                            await stateNotifier.asyncAction.setIsInVisibleReminderDate(!value, setting);
                             isInVisibleReminderDate.value = !value;
                           } catch (error) {
                             showErrorAlert(context, error);
@@ -130,11 +114,9 @@ class ReminderNotificationCustomizeWordPage extends HookConsumerWidget {
                         "番号を表示",
                         !isInVisiblePillNumber.value,
                         (value) async {
-                          analytics.logEvent(
-                              name: "change_reminder_notification_number");
+                          analytics.logEvent(name: "change_reminder_notification_number");
                           try {
-                            await store.asyncAction
-                                .setIsInVisiblePillNumber(!value, setting);
+                            await stateNotifier.asyncAction.setIsInVisiblePillNumber(!value, setting);
                             isInVisiblePillNumber.value = !value;
                           } catch (error) {
                             showErrorAlert(context, error);
@@ -146,11 +128,9 @@ class ReminderNotificationCustomizeWordPage extends HookConsumerWidget {
                         "説明文の表示",
                         !isInVisibleDescription.value,
                         (value) async {
-                          analytics.logEvent(
-                              name: "change_reminder_notification_desc");
+                          analytics.logEvent(name: "change_reminder_notification_desc");
                           try {
-                            await store.asyncAction
-                                .setIsInVisibleDescription(!value, setting);
+                            await stateNotifier.asyncAction.setIsInVisibleDescription(!value, setting);
                             isInVisibleDescription.value = !value;
                           } catch (error) {
                             showErrorAlert(context, error);
@@ -169,8 +149,7 @@ class ReminderNotificationCustomizeWordPage extends HookConsumerWidget {
     );
   }
 
-  Widget _switchRow(
-      String title, bool initialValue, ValueChanged<bool> onChanged) {
+  Widget _switchRow(String title, bool initialValue, ValueChanged<bool> onChanged) {
     return Container(
       padding: const EdgeInsets.symmetric(vertical: 2),
       child: Row(
@@ -195,12 +174,10 @@ class ReminderNotificationCustomizeWordPage extends HookConsumerWidget {
   }
 }
 
-extension ReminderNotificationCustomizeWordPageRoutes
-    on ReminderNotificationCustomizeWordPage {
+extension ReminderNotificationCustomizeWordPageRoutes on ReminderNotificationCustomizeWordPage {
   static Route<dynamic> route({required Setting setting}) {
     return MaterialPageRoute(
-      settings:
-          const RouteSettings(name: "ReminderNotificationCustomizeWordPage"),
+      settings: const RouteSettings(name: "ReminderNotificationCustomizeWordPage"),
       builder: (_) => ReminderNotificationCustomizeWordPage(setting),
     );
   }
