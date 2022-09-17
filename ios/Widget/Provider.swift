@@ -15,7 +15,7 @@ struct Provider: TimelineProvider {
   func getTimeline(in context: Context, completion: @escaping (Timeline<Entry>) -> ()) {
     let intervalMinute = 15
     let nextTimelineSchedule = Calendar.current.date(byAdding: .minute, value: intervalMinute, to: .now)
-    let timeline = Timeline(entries: [Entry(date: .now.addingTimeInterval(TimeInterval(intervalMinute * 60)))], policy: .after(nextTimelineSchedule ?? .now))
+    let timeline = Timeline(entries: [Entry(date: .now)], policy: .after(nextTimelineSchedule ?? .now))
     completion(timeline)
   }
 }
