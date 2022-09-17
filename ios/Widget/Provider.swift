@@ -14,10 +14,8 @@ struct Provider: TimelineProvider {
 
   func getTimeline(in context: Context, completion: @escaping (Timeline<Entry>) -> ()) {
     let intervalMinute = 15
-    let oneDayLoopCount = 24 * (4 * intervalMinute)
-    let entries: [Entry] = .init(repeating: .init(date: .now.addingTimeInterval(TimeInterval(intervalMinute * 60))), count: oneDayLoopCount)
-    let nextTimelineSchedule = Calendar.current.date(byAdding: .minute, value: intervalMinute, to: .now)!
-    let timeline = Timeline(entries: entries, policy: .after(nextTimelineSchedule))
+    let nextTimelineSchedule = Calendar.current.date(byAdding: .minute, value: intervalMinute, to: .now)
+    let timeline = Timeline(entries: [Entry(date: .now)], policy: .after(nextTimelineSchedule ?? .now))
     completion(timeline)
   }
 }

@@ -84,10 +84,12 @@ extension Entry {
       todayPillNumberBase = recordedPillSheetGroupTodayPillNumber
     }
 
-    guard let diff = calendar.dateComponents([.day], from: date, to: pillSheetValueLastUpdateDateTime).day else {
+    guard let dateDay = calendar.dateComponents([.day], from: date).day,
+          let pillSheetValueLastUpdateDateTimeDay = calendar.dateComponents([.day], from: pillSheetValueLastUpdateDateTime).day else {
       return todayPillNumberBase
     }
-    let todayPillNumber = todayPillNumberBase + diff
+    let diff = dateDay - pillSheetValueLastUpdateDateTimeDay
+    let todayPillNumber = todayPillNumberBase + max(0, diff)
 
     if let pillSheetEndDisplayPillNumber = pillSheetEndDisplayPillNumber, todayPillNumber > pillSheetEndDisplayPillNumber {
       // 更新されるまで常に1で良い
