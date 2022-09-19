@@ -154,8 +154,31 @@ import WidgetKit
             }
         })
 
-        DispatchQueue.main.asyncAfter(deadline: .now() + 1) {
+        // Await established channel
+        DispatchQueue.main.asyncAfter(deadline: .now() + 3) {
             self.migrateFrom_1_3_2()
+
+            if #available(iOS 14.0, *) {
+                WidgetCenter.shared.getCurrentConfigurations { result in
+                    do {
+                        let userConfiguredFamilies = try result.get().map(\.family)
+                        if !userConfiguredFamilies.isEmpty {
+                            if #available(iOS 16.0, *) {
+                                self.analytics(name: "user_configured_ios_widget", parameters: [
+                                    "systemSmall": userConfiguredFamilies.contains(.systemSmall),
+                                    "accessoryCircular": userConfiguredFamilies.contains(.accessoryCircular)
+                                ])
+                            } else {
+                                self.analytics(name: "user_configured_ios_widget", parameters: [
+                                    "systemSmall": userConfiguredFamilies.contains(.systemSmall),
+                                ])
+                            }
+                        }
+                    } catch {
+                        // Ignore error
+                    }
+                }
+            }
         }
         configureNotificationActionableButtons()
         UNUserNotificationCenter.current().swizzle()
@@ -164,6 +187,11 @@ import WidgetKit
         UNUserNotificationCenter.current().delegate = self as UNUserNotificationCenterDelegate
         GeneratedPluginRegistrant.register(with: self)
         return super.application(application, didFinishLaunchingWithOptions: launchOptions)
+    }
+
+    private func analytics(name: String, parameters: [String: Any]? = nil, function: StaticString = #function) {
+        print(function, name, parameters ?? [:])
+        channel?.invokeMethod("analytics", arguments: ["name": name, "parameters": parameters ?? [:]])
     }
 }
 
