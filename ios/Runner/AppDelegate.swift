@@ -154,8 +154,22 @@ import WidgetKit
             }
         })
 
-        DispatchQueue.main.asyncAfter(deadline: .now() + 1) {
+        // Await established channel
+        DispatchQueue.main.asyncAfter(deadline: .now() + 3) {
             self.migrateFrom_1_3_2()
+
+            if #available(iOS 14.0, *) {
+                WidgetCenter.shared.getCurrentConfigurations { result in
+                    do {
+                        let userConfiguredFamilies = try result.get().map(\.family).map(String.init)
+                        if !userConfiguredFamilies.isEmpty {
+                            self.analytics(name: "user_configured_ios_widget", parameters: ["families": userConfiguredFamilies])
+                        }
+                    } catch {
+                        // Ignore error
+                    }
+                }
+            }
         }
         configureNotificationActionableButtons()
         UNUserNotificationCenter.current().swizzle()
