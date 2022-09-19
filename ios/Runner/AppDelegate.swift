@@ -161,9 +161,18 @@ import WidgetKit
             if #available(iOS 14.0, *) {
                 WidgetCenter.shared.getCurrentConfigurations { result in
                     do {
-                        let userConfiguredFamilies = try result.get().map(\.family).map(String.init)
+                        let userConfiguredFamilies = try result.get().map(\.family)
                         if !userConfiguredFamilies.isEmpty {
-                            self.analytics(name: "user_configured_ios_widget", parameters: ["families": userConfiguredFamilies])
+                            if #available(iOS 16.0, *) {
+                                self.analytics(name: "user_configured_ios_widget", parameters: [
+                                    "systemSmall": userConfiguredFamilies.contains(.systemSmall),
+                                    "accessoryCircular": userConfiguredFamilies.contains(.accessoryCircular)
+                                ])
+                            } else {
+                                self.analytics(name: "user_configured_ios_widget", parameters: [
+                                    "systemSmall": userConfiguredFamilies.contains(.systemSmall),
+                                ])
+                            }
                         }
                     } catch {
                         // Ignore error
