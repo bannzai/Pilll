@@ -18,8 +18,12 @@ final recordPageAsyncStateProvider = Provider.autoDispose<AsyncValue<RecordPageS
   final latestPillSheetGroup = ref.watch(latestPillSheetGroupStreamProvider);
   final premiumAndTrial = ref.watch(premiumAndTrialProvider);
   final setting = ref.watch(settingStreamProvider);
+  final sharedPreferencesAsyncValue = ref.watch(sharedPreferenceProvider);
 
-  if (latestPillSheetGroup is AsyncLoading || premiumAndTrial is AsyncLoading || setting is AsyncLoading) {
+  if (latestPillSheetGroup is AsyncLoading ||
+      premiumAndTrial is AsyncLoading ||
+      setting is AsyncLoading ||
+      sharedPreferencesAsyncValue is AsyncLoading) {
     return const AsyncValue.loading();
   }
 
