@@ -17,6 +17,7 @@ class NotificationBarState with _$NotificationBarState {
     required bool premiumTrialBeginAnouncementIsClosed,
     required bool isLinkedLoginProvider,
     required bool premiumUserIsClosedAdsMederiPill,
+    required bool userAnsweredSurvey,
   }) = _NotificationBarState;
 
   bool get shownRecommendSignupNotificationForPremium {
