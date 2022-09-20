@@ -18,18 +18,13 @@ final recordPageAsyncStateProvider = Provider.autoDispose<AsyncValue<RecordPageS
   final latestPillSheetGroup = ref.watch(latestPillSheetGroupStreamProvider);
   final premiumAndTrial = ref.watch(premiumAndTrialProvider);
   final setting = ref.watch(settingStreamProvider);
-  final sharedPreferencesAsyncValue = ref.watch(sharedPreferenceProvider);
 
-  if (latestPillSheetGroup is AsyncLoading ||
-      premiumAndTrial is AsyncLoading ||
-      setting is AsyncLoading ||
-      sharedPreferencesAsyncValue is AsyncLoading) {
+  if (latestPillSheetGroup is AsyncLoading || premiumAndTrial is AsyncLoading || setting is AsyncLoading) {
     return const AsyncValue.loading();
   }
 
   try {
     final sharedPreferences = sharedPreferencesAsyncValue.value!;
-
     return AsyncValue.data(RecordPageState(
       pillSheetGroup: latestPillSheetGroup.value,
       setting: setting.value!,
@@ -37,12 +32,7 @@ final recordPageAsyncStateProvider = Provider.autoDispose<AsyncValue<RecordPageS
       totalCountOfActionForTakenPill: sharedPreferences.getInt(IntKey.totalCountOfActionForTakenPill) ?? 0,
       shouldShowMigrateInfo: ref.watch(shouldShowMigrationInformationProvider(sharedPreferences)),
       isAlreadyShowPremiumSurvey: sharedPreferences.getBool(BoolKey.isAlreadyShowPremiumSurvey) ?? false,
-      recommendedSignupNotificationIsAlreadyShow: sharedPreferences.getBool(BoolKey.recommendedSignupNotificationIsAlreadyShow) ?? false,
-      premiumTrialBeginAnouncementIsClosed: sharedPreferences.getBool(BoolKey.premiumTrialBeginAnouncementIsClosed) ?? false,
       isLinkedLoginProvider: ref.watch(isLinkedProvider),
-      premiumUserIsClosedAdsMederiPill: sharedPreferences.getBool(BoolKey.premiumUserIsClosedAdsMederiPill) ?? false,
-      userAnsweredSurvey: sharedPreferences.getBool(BoolKey.userAnsweredSurvey) ?? false,
-      userClosedSurvey: sharedPreferences.getBool(BoolKey.userClosedSurvey) ?? false,
       timestamp: now(),
     ));
   } catch (error, stackTrace) {
@@ -61,12 +51,7 @@ class RecordPageState with _$RecordPageState {
     required int totalCountOfActionForTakenPill,
     required bool isAlreadyShowPremiumSurvey,
     required bool shouldShowMigrateInfo,
-    required bool recommendedSignupNotificationIsAlreadyShow,
-    required bool premiumTrialBeginAnouncementIsClosed,
     required bool isLinkedLoginProvider,
-    required bool premiumUserIsClosedAdsMederiPill,
-    required bool userAnsweredSurvey,
-    required bool userClosedSurvey,
     // Workaround for no update RecordPageStateNotifier when pillSheetGroup.activedPillSheet.restDurations is change
     // Add and always update timestamp when every stream or provider changed to avoid this issue
     required DateTime timestamp,
