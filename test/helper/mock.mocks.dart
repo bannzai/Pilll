@@ -832,6 +832,24 @@ class MockNotificationBarStateNotifier extends _i1.Mock
         returnValueForMissingStub: Future<void>.value(),
       ) as _i20.Future<void>);
   @override
+  _i20.Future<void> closeUserSurvey() => (super.noSuchMethod(
+        Invocation.method(
+          #closeUserSurvey,
+          [],
+        ),
+        returnValue: Future<void>.value(),
+        returnValueForMissingStub: Future<void>.value(),
+      ) as _i20.Future<void>);
+  @override
+  _i20.Future<void> openUserSurvey() => (super.noSuchMethod(
+        Invocation.method(
+          #openUserSurvey,
+          [],
+        ),
+        returnValue: Future<void>.value(),
+        returnValueForMissingStub: Future<void>.value(),
+      ) as _i20.Future<void>);
+  @override
   bool updateShouldNotify(
     _i9.NotificationBarState? old,
     _i9.NotificationBarState? current,
