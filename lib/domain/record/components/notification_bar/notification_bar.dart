@@ -9,6 +9,7 @@ import 'package:pilll/domain/record/components/notification_bar/components/disco
 import 'package:pilll/domain/record/components/notification_bar/components/ended_pill_sheet.dart';
 import 'package:pilll/domain/record/components/notification_bar/components/pilll_ads.dart';
 import 'package:pilll/domain/record/components/notification_bar/components/premium_trial_begin.dart';
+import 'package:pilll/domain/record/components/notification_bar/components/user_survey.dart';
 import 'package:pilll/domain/record/components/notification_bar/state_notifier.dart';
 import 'package:pilll/domain/record/components/notification_bar/components/premium_trial_limit.dart';
 import 'package:pilll/domain/record/components/notification_bar/components/recommend_signup.dart';
@@ -50,8 +51,10 @@ class NotificationBar extends HookConsumerWidget {
     if (!state.premiumAndTrial.isTrial) {
       if (!state.userClosedSurvey) {
         if (!state.userAnsweredSurvey) {
-          // TODO:
-          return Container();
+          return UserSurvey(
+            onClose: () => store.closeUserSurvey(),
+            onTap: () => store.openUserSurvey(),
+          );
         }
       }
     }

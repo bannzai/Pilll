@@ -50,4 +50,16 @@ class NotificationBarStateNotifier extends StateNotifier<NotificationBarState> {
     sharedPreferences.setBool(BoolKey.premiumUserIsClosedAdsMederiPill, true);
     state = state.copyWith(premiumUserIsClosedAdsMederiPill: true);
   }
+
+  Future<void> closeUserSurvey() async {
+    final sharedPreferences = await SharedPreferences.getInstance();
+    sharedPreferences.setBool(BoolKey.userClosedSurvey, true);
+    state = state.copyWith(userClosedSurvey: true);
+  }
+
+  Future<void> openUserSurvey() async {
+    final sharedPreferences = await SharedPreferences.getInstance();
+    sharedPreferences.setBool(BoolKey.userAnsweredSurvey, true);
+    state = state.copyWith(userAnsweredSurvey: true);
+  }
 }
