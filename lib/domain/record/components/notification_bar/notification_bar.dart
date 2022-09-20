@@ -46,6 +46,7 @@ class NotificationBar extends HookConsumerWidget {
       return now().isBefore(begin) || now().isAfter(end);
     }();
 
+    // TODO: ある程度数が集まったら消す。テストも書かない
     if (!state.premiumAndTrial.isTrial) {
       if (!state.userClosedSurvey) {
         if (!state.userAnsweredSurvey) {
