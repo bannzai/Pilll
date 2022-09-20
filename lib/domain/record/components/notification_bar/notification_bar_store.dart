@@ -22,6 +22,7 @@ final notificationBarStateProvider = Provider.autoDispose((ref) {
     recommendedSignupNotificationIsAlreadyShow: parameter.recommendedSignupNotificationIsAlreadyShow,
     premiumUserIsClosedAdsMederiPill: parameter.premiumUserIsClosedAdsMederiPill,
     userAnsweredSurvey: parameter.userAnsweredSurvey,
+    userClosedSurvey: parameter.userClosedSurvey,
   );
 });
 
