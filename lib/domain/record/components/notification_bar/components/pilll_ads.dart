@@ -17,6 +17,7 @@ class PilllAdsNotificationBar extends HookConsumerWidget {
     return Container(
       color: const Color(0xFFFC7CA4),
       padding: const EdgeInsets.symmetric(horizontal: 8),
+      
       child: GestureDetector(
         onTap: () {
           analytics.logEvent(name: "pilll_ads_tapped");
