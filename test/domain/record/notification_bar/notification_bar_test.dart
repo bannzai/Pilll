@@ -74,6 +74,8 @@ void main() {
           premiumTrialBeginAnouncementIsClosed: false,
           premiumUserIsClosedAdsMederiPill: false,
           recommendedSignupNotificationIsAlreadyShow: false,
+          userAnsweredSurvey: true,
+          userClosedSurvey: true,
         );
 
         await tester.pumpWidget(
@@ -130,6 +132,8 @@ void main() {
           premiumTrialBeginAnouncementIsClosed: true,
           premiumUserIsClosedAdsMederiPill: false,
           recommendedSignupNotificationIsAlreadyShow: false,
+          userAnsweredSurvey: true,
+          userClosedSurvey: true,
         );
 
         await tester.pumpWidget(
@@ -186,6 +190,8 @@ void main() {
           premiumTrialBeginAnouncementIsClosed: true,
           premiumUserIsClosedAdsMederiPill: false,
           recommendedSignupNotificationIsAlreadyShow: false,
+          userAnsweredSurvey: true,
+          userClosedSurvey: true,
         );
 
         await tester.pumpWidget(
@@ -241,6 +247,8 @@ void main() {
           premiumTrialBeginAnouncementIsClosed: true,
           premiumUserIsClosedAdsMederiPill: false,
           recommendedSignupNotificationIsAlreadyShow: false,
+          userAnsweredSurvey: true,
+          userClosedSurvey: true,
         );
 
         await tester.pumpWidget(
@@ -296,6 +304,8 @@ void main() {
           premiumTrialBeginAnouncementIsClosed: true,
           premiumUserIsClosedAdsMederiPill: false,
           recommendedSignupNotificationIsAlreadyShow: false,
+          userAnsweredSurvey: true,
+          userClosedSurvey: true,
         );
 
         await tester.pumpWidget(
@@ -351,6 +361,8 @@ void main() {
           premiumTrialBeginAnouncementIsClosed: true,
           premiumUserIsClosedAdsMederiPill: false,
           recommendedSignupNotificationIsAlreadyShow: false,
+          userAnsweredSurvey: true,
+          userClosedSurvey: true,
         );
 
         await tester.pumpWidget(
@@ -405,6 +417,8 @@ void main() {
             premiumTrialBeginAnouncementIsClosed: false,
             premiumUserIsClosedAdsMederiPill: false,
             recommendedSignupNotificationIsAlreadyShow: false,
+            userAnsweredSurvey: true,
+            userClosedSurvey: true,
           );
 
           await tester.pumpWidget(
@@ -457,6 +471,8 @@ void main() {
             premiumTrialBeginAnouncementIsClosed: false,
             premiumUserIsClosedAdsMederiPill: false,
             recommendedSignupNotificationIsAlreadyShow: false,
+            userAnsweredSurvey: true,
+            userClosedSurvey: true,
           );
 
           await tester.pumpWidget(
@@ -509,6 +525,8 @@ void main() {
             premiumTrialBeginAnouncementIsClosed: false,
             premiumUserIsClosedAdsMederiPill: false,
             recommendedSignupNotificationIsAlreadyShow: false,
+            userAnsweredSurvey: true,
+            userClosedSurvey: true,
           );
 
           await tester.pumpWidget(
@@ -561,6 +579,8 @@ void main() {
             premiumTrialBeginAnouncementIsClosed: false,
             premiumUserIsClosedAdsMederiPill: false,
             recommendedSignupNotificationIsAlreadyShow: false,
+            userAnsweredSurvey: true,
+            userClosedSurvey: true,
           );
 
           await tester.pumpWidget(
@@ -613,6 +633,8 @@ void main() {
             premiumTrialBeginAnouncementIsClosed: false,
             premiumUserIsClosedAdsMederiPill: false,
             recommendedSignupNotificationIsAlreadyShow: false,
+            userAnsweredSurvey: true,
+            userClosedSurvey: true,
           );
 
           await tester.pumpWidget(
@@ -672,6 +694,8 @@ void main() {
             premiumTrialBeginAnouncementIsClosed: true,
             premiumUserIsClosedAdsMederiPill: false,
             recommendedSignupNotificationIsAlreadyShow: false,
+            userAnsweredSurvey: true,
+            userClosedSurvey: true,
           );
 
           await tester.pumpWidget(
@@ -726,6 +750,8 @@ void main() {
             premiumTrialBeginAnouncementIsClosed: true,
             premiumUserIsClosedAdsMederiPill: false,
             recommendedSignupNotificationIsAlreadyShow: false,
+            userAnsweredSurvey: true,
+            userClosedSurvey: true,
           );
 
           await tester.pumpWidget(
@@ -780,6 +806,8 @@ void main() {
             premiumTrialBeginAnouncementIsClosed: true,
             premiumUserIsClosedAdsMederiPill: false,
             recommendedSignupNotificationIsAlreadyShow: false,
+            userAnsweredSurvey: true,
+            userClosedSurvey: true,
           );
 
           await tester.pumpWidget(
@@ -834,6 +862,8 @@ void main() {
             premiumTrialBeginAnouncementIsClosed: true,
             premiumUserIsClosedAdsMederiPill: false,
             recommendedSignupNotificationIsAlreadyShow: false,
+            userAnsweredSurvey: true,
+            userClosedSurvey: true,
           );
 
           await tester.pumpWidget(
@@ -888,6 +918,8 @@ void main() {
             premiumTrialBeginAnouncementIsClosed: true,
             premiumUserIsClosedAdsMederiPill: true,
             recommendedSignupNotificationIsAlreadyShow: false,
+            userAnsweredSurvey: true,
+            userClosedSurvey: true,
           );
 
           await tester.pumpWidget(
@@ -942,6 +974,8 @@ void main() {
             premiumTrialBeginAnouncementIsClosed: true,
             premiumUserIsClosedAdsMederiPill: false,
             recommendedSignupNotificationIsAlreadyShow: false,
+            userAnsweredSurvey: true,
+            userClosedSurvey: true,
           );
 
           await tester.pumpWidget(
@@ -997,6 +1031,8 @@ void main() {
           premiumTrialBeginAnouncementIsClosed: true,
           premiumUserIsClosedAdsMederiPill: true,
           recommendedSignupNotificationIsAlreadyShow: false,
+          userAnsweredSurvey: true,
+          userClosedSurvey: true,
         );
 
         await tester.pumpWidget(
@@ -1052,6 +1088,8 @@ void main() {
           premiumTrialBeginAnouncementIsClosed: true,
           premiumUserIsClosedAdsMederiPill: true,
           recommendedSignupNotificationIsAlreadyShow: false,
+          userAnsweredSurvey: true,
+          userClosedSurvey: true,
         );
 
         await tester.pumpWidget(
@@ -1107,6 +1145,8 @@ void main() {
           premiumTrialBeginAnouncementIsClosed: true,
           premiumUserIsClosedAdsMederiPill: true,
           recommendedSignupNotificationIsAlreadyShow: false,
+          userAnsweredSurvey: true,
+          userClosedSurvey: true,
         );
 
         await tester.pumpWidget(
