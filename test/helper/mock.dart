@@ -33,7 +33,7 @@ import 'package:mockito/annotations.dart';
   AuthService,
   UserDatastore,
   RecordPageStateNotifier,
-  NotificationBarStateStore,
+  NotificationBarStateNotifier,
   PremiumIntroductionStore,
   PillSheetModifiedHistoryDatastore,
   PillSheetGroupDatastore,

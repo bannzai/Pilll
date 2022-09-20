@@ -6,8 +6,8 @@ import 'package:pilll/util/shared_preference/keys.dart';
 import 'package:riverpod/riverpod.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
-final notificationBarStateNotifierProvider = StateNotifierProvider.autoDispose<NotificationBarStateStore, NotificationBarState>(
-  (ref) => NotificationBarStateStore(
+final notificationBarStateNotifierProvider = StateNotifierProvider.autoDispose<NotificationBarStateNotifier, NotificationBarState>(
+  (ref) => NotificationBarStateNotifier(
     ref.watch(notificationBarStateProvider),
   ),
 );
@@ -24,8 +24,8 @@ final notificationBarStateProvider = Provider.autoDispose((ref) {
   );
 });
 
-class NotificationBarStateStore extends StateNotifier<NotificationBarState> {
-  NotificationBarStateStore(NotificationBarState state) : super(state);
+class NotificationBarStateNotifier extends StateNotifier<NotificationBarState> {
+  NotificationBarStateNotifier(NotificationBarState state) : super(state);
 
   Future<void> closeRecommendedSignupNotification() async {
     final sharedPreferences = await SharedPreferences.getInstance();

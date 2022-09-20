@@ -11,7 +11,7 @@ import 'package:url_launcher/url_launcher.dart';
 
 class PremiumTrialBegin extends HookConsumerWidget {
   final int latestDay;
-  final NotificationBarStateStore store;
+  final NotificationBarStateNotifier store;
   const PremiumTrialBegin({
     required this.latestDay,
     required this.store,
