@@ -33,8 +33,8 @@ class NotificationBar extends HookConsumerWidget {
   }
 
   Widget? _body(BuildContext context, WidgetRef ref) {
-    final state = ref.watch(notificationBarStoreProvider);
-    final store = ref.watch(notificationBarStoreProvider.notifier);
+    final state = ref.watch(notificationBarStateNotifierProvider);
+    final store = ref.watch(notificationBarStateNotifierProvider.notifier);
     final discountEntitlementDeadlineDate = state.premiumAndTrial.discountEntitlementDeadlineDate;
     final isOverDiscountDeadline = ref.watch(isOverDiscountDeadlineProvider(discountEntitlementDeadlineDate));
     final isJaLocale = ref.watch(isJaLocaleProvider);

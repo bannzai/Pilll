@@ -80,7 +80,7 @@ void main() {
           ProviderScope(
             overrides: [
               isJaLocaleProvider.overrideWithValue(true),
-              notificationBarStoreProvider.overrideWithProvider(StateNotifierProvider.autoDispose((_) => NotificationBarStateStore(state))),
+              notificationBarStateNotifierProvider.overrideWithProvider(StateNotifierProvider.autoDispose((_) => NotificationBarStateStore(state))),
               notificationBarStateProvider.overrideWithProvider(Provider.autoDispose((_) => state)),
               isOverDiscountDeadlineProvider.overrideWithProvider((param) => Provider.autoDispose((_) => false)),
               durationToDiscountPriceDeadline.overrideWithProvider((param) => Provider.autoDispose((_) => const Duration(seconds: 1000))),
@@ -135,7 +135,7 @@ void main() {
           ProviderScope(
             overrides: [
               isJaLocaleProvider.overrideWithValue(true),
-              notificationBarStoreProvider.overrideWithProvider(StateNotifierProvider.autoDispose((_) => NotificationBarStateStore(state))),
+              notificationBarStateNotifierProvider.overrideWithProvider(StateNotifierProvider.autoDispose((_) => NotificationBarStateStore(state))),
               notificationBarStateProvider.overrideWithProvider(Provider.autoDispose((_) => state)),
               isOverDiscountDeadlineProvider.overrideWithProvider((param) => Provider.autoDispose((_) => false)),
               durationToDiscountPriceDeadline.overrideWithProvider((param) => Provider.autoDispose((_) => const Duration(seconds: 1000))),
@@ -190,7 +190,7 @@ void main() {
           ProviderScope(
             overrides: [
               isJaLocaleProvider.overrideWithValue(true),
-              notificationBarStoreProvider.overrideWithProvider(StateNotifierProvider.autoDispose((_) => NotificationBarStateStore(state))),
+              notificationBarStateNotifierProvider.overrideWithProvider(StateNotifierProvider.autoDispose((_) => NotificationBarStateStore(state))),
               notificationBarStateProvider.overrideWithProvider(Provider.autoDispose((_) => state)),
             ],
             child: const MaterialApp(
@@ -244,7 +244,7 @@ void main() {
           ProviderScope(
             overrides: [
               isJaLocaleProvider.overrideWithValue(true),
-              notificationBarStoreProvider.overrideWithProvider(StateNotifierProvider.autoDispose((_) => NotificationBarStateStore(state))),
+              notificationBarStateNotifierProvider.overrideWithProvider(StateNotifierProvider.autoDispose((_) => NotificationBarStateStore(state))),
               notificationBarStateProvider.overrideWithProvider(Provider.autoDispose((_) => state)),
             ],
             child: const MaterialApp(
@@ -298,7 +298,7 @@ void main() {
           ProviderScope(
             overrides: [
               isJaLocaleProvider.overrideWithValue(true),
-              notificationBarStoreProvider.overrideWithProvider(StateNotifierProvider.autoDispose((_) => NotificationBarStateStore(state))),
+              notificationBarStateNotifierProvider.overrideWithProvider(StateNotifierProvider.autoDispose((_) => NotificationBarStateStore(state))),
               notificationBarStateProvider.overrideWithProvider(Provider.autoDispose((_) => state)),
             ],
             child: const MaterialApp(
@@ -352,7 +352,7 @@ void main() {
           ProviderScope(
             overrides: [
               isJaLocaleProvider.overrideWithValue(true),
-              notificationBarStoreProvider.overrideWithProvider(StateNotifierProvider.autoDispose((_) => NotificationBarStateStore(state))),
+              notificationBarStateNotifierProvider.overrideWithProvider(StateNotifierProvider.autoDispose((_) => NotificationBarStateStore(state))),
               notificationBarStateProvider.overrideWithProvider(Provider.autoDispose((_) => state)),
             ],
             child: const MaterialApp(
@@ -405,7 +405,7 @@ void main() {
             ProviderScope(
               overrides: [
                 isJaLocaleProvider.overrideWithValue(true),
-                notificationBarStoreProvider.overrideWithProvider(StateNotifierProvider.autoDispose((_) => NotificationBarStateStore(state))),
+                notificationBarStateNotifierProvider.overrideWithProvider(StateNotifierProvider.autoDispose((_) => NotificationBarStateStore(state))),
                 notificationBarStateProvider.overrideWithProvider(Provider.autoDispose((_) => state)),
               ],
               child: const MaterialApp(
@@ -456,7 +456,7 @@ void main() {
             ProviderScope(
               overrides: [
                 isJaLocaleProvider.overrideWithValue(true),
-                notificationBarStoreProvider.overrideWithProvider(StateNotifierProvider.autoDispose((_) => NotificationBarStateStore(state))),
+                notificationBarStateNotifierProvider.overrideWithProvider(StateNotifierProvider.autoDispose((_) => NotificationBarStateStore(state))),
                 notificationBarStateProvider.overrideWithProvider(Provider.autoDispose((_) => state)),
               ],
               child: const MaterialApp(
@@ -507,7 +507,7 @@ void main() {
             ProviderScope(
               overrides: [
                 isJaLocaleProvider.overrideWithValue(true),
-                notificationBarStoreProvider.overrideWithProvider(StateNotifierProvider.autoDispose((_) => NotificationBarStateStore(state))),
+                notificationBarStateNotifierProvider.overrideWithProvider(StateNotifierProvider.autoDispose((_) => NotificationBarStateStore(state))),
                 notificationBarStateProvider.overrideWithProvider(Provider.autoDispose((_) => state)),
               ],
               child: const MaterialApp(
@@ -558,7 +558,7 @@ void main() {
             ProviderScope(
               overrides: [
                 isJaLocaleProvider.overrideWithValue(true),
-                notificationBarStoreProvider.overrideWithProvider(StateNotifierProvider.autoDispose((_) => NotificationBarStateStore(state))),
+                notificationBarStateNotifierProvider.overrideWithProvider(StateNotifierProvider.autoDispose((_) => NotificationBarStateStore(state))),
                 notificationBarStateProvider.overrideWithProvider(Provider.autoDispose((_) => state)),
               ],
               child: const MaterialApp(
@@ -609,7 +609,7 @@ void main() {
             ProviderScope(
               overrides: [
                 isJaLocaleProvider.overrideWithValue(true),
-                notificationBarStoreProvider.overrideWithProvider(StateNotifierProvider.autoDispose((_) => NotificationBarStateStore(state))),
+                notificationBarStateNotifierProvider.overrideWithProvider(StateNotifierProvider.autoDispose((_) => NotificationBarStateStore(state))),
                 notificationBarStateProvider.overrideWithProvider(Provider.autoDispose((_) => state)),
               ],
               child: const MaterialApp(
@@ -667,7 +667,7 @@ void main() {
             ProviderScope(
               overrides: [
                 isJaLocaleProvider.overrideWithValue(true),
-                notificationBarStoreProvider.overrideWithProvider(StateNotifierProvider.autoDispose((_) => NotificationBarStateStore(state))),
+                notificationBarStateNotifierProvider.overrideWithProvider(StateNotifierProvider.autoDispose((_) => NotificationBarStateStore(state))),
                 notificationBarStateProvider.overrideWithProvider(Provider.autoDispose((_) => state)),
               ],
               child: const MaterialApp(
@@ -720,7 +720,7 @@ void main() {
             ProviderScope(
               overrides: [
                 isJaLocaleProvider.overrideWithValue(true),
-                notificationBarStoreProvider.overrideWithProvider(StateNotifierProvider.autoDispose((_) => NotificationBarStateStore(state))),
+                notificationBarStateNotifierProvider.overrideWithProvider(StateNotifierProvider.autoDispose((_) => NotificationBarStateStore(state))),
                 notificationBarStateProvider.overrideWithProvider(Provider.autoDispose((_) => state)),
               ],
               child: const MaterialApp(
@@ -773,7 +773,7 @@ void main() {
             ProviderScope(
               overrides: [
                 isJaLocaleProvider.overrideWithValue(true),
-                notificationBarStoreProvider.overrideWithProvider(StateNotifierProvider.autoDispose((_) => NotificationBarStateStore(state))),
+                notificationBarStateNotifierProvider.overrideWithProvider(StateNotifierProvider.autoDispose((_) => NotificationBarStateStore(state))),
                 notificationBarStateProvider.overrideWithProvider(Provider.autoDispose((_) => state)),
               ],
               child: const MaterialApp(
@@ -826,7 +826,7 @@ void main() {
             ProviderScope(
               overrides: [
                 isJaLocaleProvider.overrideWithValue(true),
-                notificationBarStoreProvider.overrideWithProvider(StateNotifierProvider.autoDispose((_) => NotificationBarStateStore(state))),
+                notificationBarStateNotifierProvider.overrideWithProvider(StateNotifierProvider.autoDispose((_) => NotificationBarStateStore(state))),
                 notificationBarStateProvider.overrideWithProvider(Provider.autoDispose((_) => state)),
               ],
               child: const MaterialApp(
@@ -879,7 +879,7 @@ void main() {
             ProviderScope(
               overrides: [
                 isJaLocaleProvider.overrideWithValue(true),
-                notificationBarStoreProvider.overrideWithProvider(StateNotifierProvider.autoDispose((_) => NotificationBarStateStore(state))),
+                notificationBarStateNotifierProvider.overrideWithProvider(StateNotifierProvider.autoDispose((_) => NotificationBarStateStore(state))),
                 notificationBarStateProvider.overrideWithProvider(Provider.autoDispose((_) => state)),
               ],
               child: const MaterialApp(
@@ -932,7 +932,7 @@ void main() {
             ProviderScope(
               overrides: [
                 isJaLocaleProvider.overrideWithValue(true),
-                notificationBarStoreProvider.overrideWithProvider(StateNotifierProvider.autoDispose((_) => NotificationBarStateStore(state))),
+                notificationBarStateNotifierProvider.overrideWithProvider(StateNotifierProvider.autoDispose((_) => NotificationBarStateStore(state))),
                 notificationBarStateProvider.overrideWithProvider(Provider.autoDispose((_) => state)),
               ],
               child: const MaterialApp(
@@ -986,7 +986,7 @@ void main() {
           ProviderScope(
             overrides: [
               isJaLocaleProvider.overrideWithValue(true),
-              notificationBarStoreProvider.overrideWithProvider(StateNotifierProvider.autoDispose((_) => NotificationBarStateStore(state))),
+              notificationBarStateNotifierProvider.overrideWithProvider(StateNotifierProvider.autoDispose((_) => NotificationBarStateStore(state))),
               notificationBarStateProvider.overrideWithProvider(Provider.autoDispose((_) => state)),
             ],
             child: const MaterialApp(
@@ -1040,7 +1040,7 @@ void main() {
           ProviderScope(
             overrides: [
               isJaLocaleProvider.overrideWithValue(true),
-              notificationBarStoreProvider.overrideWithProvider(StateNotifierProvider.autoDispose((_) => NotificationBarStateStore(state))),
+              notificationBarStateNotifierProvider.overrideWithProvider(StateNotifierProvider.autoDispose((_) => NotificationBarStateStore(state))),
               notificationBarStateProvider.overrideWithProvider(Provider.autoDispose((_) => state)),
             ],
             child: const MaterialApp(
@@ -1094,7 +1094,7 @@ void main() {
           ProviderScope(
             overrides: [
               isJaLocaleProvider.overrideWithValue(true),
-              notificationBarStoreProvider.overrideWithProvider(StateNotifierProvider.autoDispose((_) => NotificationBarStateStore(state))),
+              notificationBarStateNotifierProvider.overrideWithProvider(StateNotifierProvider.autoDispose((_) => NotificationBarStateStore(state))),
               notificationBarStateProvider.overrideWithProvider(Provider.autoDispose((_) => state)),
             ],
             child: const MaterialApp(

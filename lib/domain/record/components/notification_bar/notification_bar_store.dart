@@ -6,7 +6,7 @@ import 'package:pilll/util/shared_preference/keys.dart';
 import 'package:riverpod/riverpod.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
-final notificationBarStoreProvider = StateNotifierProvider.autoDispose<NotificationBarStateStore, NotificationBarState>(
+final notificationBarStateNotifierProvider = StateNotifierProvider.autoDispose<NotificationBarStateStore, NotificationBarState>(
   (ref) => NotificationBarStateStore(
     ref.watch(notificationBarStateProvider),
   ),
