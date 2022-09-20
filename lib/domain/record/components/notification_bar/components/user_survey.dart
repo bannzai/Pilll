@@ -1,40 +1,39 @@
 import 'package:flutter/material.dart';
-
-import 'package:hooks_riverpod/hooks_riverpod.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:pilll/analytics.dart';
 import 'package:pilll/components/atoms/color.dart';
 import 'package:pilll/components/atoms/font.dart';
 import 'package:pilll/components/atoms/text_color.dart';
-import 'package:pilll/domain/record/components/notification_bar/state_notifier.dart';
+import 'package:pilll/util/shared_preference/keys.dart';
 import 'package:url_launcher/url_launcher.dart';
 
-class PremiumTrialBegin extends HookConsumerWidget {
-  final int latestDay;
-  final NotificationBarStateNotifier store;
-  const PremiumTrialBegin({
-    required this.latestDay,
-    required this.store,
+class UserSurvey extends StatelessWidget {
+  final VoidCallback onTap;
+  final VoidCallback onClose;
+  const UserSurvey({
     Key? key,
+    required this.onTap,
+    required this.onClose,
   }) : super(key: key);
 
   @override
-  Widget build(BuildContext context, WidgetRef ref) {
+  Widget build(BuildContext context) {
     return Container(
-      padding: const EdgeInsets.symmetric(horizontal: 8),
+      padding: const EdgeInsets.symmetric(horizontal: 8, vertical: 8),
       color: PilllColors.secondary,
       child: GestureDetector(
         onTap: () async {
-          analytics.logEvent(name: "p_premium_trial_begin_n_b");
-          await launchUrl(Uri.parse("https://pilll.wraptas.site/3abd690f501549c48f813fd310b5f242"));
+          analytics.logEvent(name: "user_survey_open", parameters: {"key": BoolKey.userAnsweredSurvey});
+          await launchUrl(Uri.parse("https://docs.google.com/forms/d/e/1FAIpQLSda8_Ri7SSMAwj5mTBryc6_GBVgTw14u9l5txPRnA1xrqiUZw/viewform"));
+          onTap();
         },
         child: Row(
           crossAxisAlignment: CrossAxisAlignment.center,
           children: [
             GestureDetector(
               onTap: () {
-                analytics.logEvent(name: "p_premium_trial_begin_n_b_close");
-                store.closePremiumTrialBeginNotification();
+                analytics.logEvent(name: "user_survey_close", parameters: {"key": BoolKey.userClosedSurvey});
+                onClose();
               },
               child: const Padding(
                 padding: EdgeInsets.symmetric(vertical: 10),
@@ -47,7 +46,7 @@ class PremiumTrialBegin extends HookConsumerWidget {
             ),
             const Spacer(),
             Text(
-              "$latestDay日後まですべての機能を使えます",
+              "サービス改善のアンケートにご協力ください\n所要時間：1分",
               style: TextColorStyle.white.merge(FontType.descriptionBold),
               textAlign: TextAlign.center,
             ),

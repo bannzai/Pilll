@@ -29,7 +29,6 @@ final recordPageAsyncStateProvider = Provider.autoDispose<AsyncValue<RecordPageS
 
   try {
     final sharedPreferences = sharedPreferencesAsyncValue.value!;
-
     return AsyncValue.data(RecordPageState(
       pillSheetGroup: latestPillSheetGroup.value,
       setting: setting.value!,
@@ -37,10 +36,7 @@ final recordPageAsyncStateProvider = Provider.autoDispose<AsyncValue<RecordPageS
       totalCountOfActionForTakenPill: sharedPreferences.getInt(IntKey.totalCountOfActionForTakenPill) ?? 0,
       shouldShowMigrateInfo: ref.watch(shouldShowMigrationInformationProvider(sharedPreferences)),
       isAlreadyShowPremiumSurvey: sharedPreferences.getBool(BoolKey.isAlreadyShowPremiumSurvey) ?? false,
-      recommendedSignupNotificationIsAlreadyShow: sharedPreferences.getBool(BoolKey.recommendedSignupNotificationIsAlreadyShow) ?? false,
-      premiumTrialBeginAnouncementIsClosed: sharedPreferences.getBool(BoolKey.premiumTrialBeginAnouncementIsClosed) ?? false,
       isLinkedLoginProvider: ref.watch(isLinkedProvider),
-      premiumUserIsClosedAdsMederiPill: sharedPreferences.getBool(BoolKey.premiumUserIsClosedAdsMederiPill) ?? false,
       timestamp: now(),
     ));
   } catch (error, stackTrace) {
@@ -59,10 +55,7 @@ class RecordPageState with _$RecordPageState {
     required int totalCountOfActionForTakenPill,
     required bool isAlreadyShowPremiumSurvey,
     required bool shouldShowMigrateInfo,
-    required bool recommendedSignupNotificationIsAlreadyShow,
-    required bool premiumTrialBeginAnouncementIsClosed,
     required bool isLinkedLoginProvider,
-    required bool premiumUserIsClosedAdsMederiPill,
     // Workaround for no update RecordPageStateNotifier when pillSheetGroup.activedPillSheet.restDurations is change
     // Add and always update timestamp when every stream or provider changed to avoid this issue
     required DateTime timestamp,

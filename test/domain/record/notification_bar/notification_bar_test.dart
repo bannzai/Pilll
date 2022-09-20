@@ -6,7 +6,7 @@ import 'package:pilll/domain/record/components/notification_bar/components/pilll
 import 'package:pilll/domain/record/components/notification_bar/components/premium_trial_begin.dart';
 import 'package:pilll/domain/record/components/notification_bar/notification_bar.dart';
 import 'package:pilll/domain/record/components/notification_bar/notification_bar_state.codegen.dart';
-import 'package:pilll/domain/record/components/notification_bar/notification_bar_store.dart';
+import 'package:pilll/domain/record/components/notification_bar/state_notifier.dart';
 import 'package:pilll/domain/record/components/notification_bar/components/premium_trial_limit.dart';
 import 'package:pilll/domain/record/components/notification_bar/components/recommend_signup.dart';
 import 'package:pilll/domain/record/components/notification_bar/components/recommend_signup_premium.dart';
@@ -74,13 +74,16 @@ void main() {
           premiumTrialBeginAnouncementIsClosed: false,
           premiumUserIsClosedAdsMederiPill: false,
           recommendedSignupNotificationIsAlreadyShow: false,
+          userAnsweredSurvey: true,
+          userClosedSurvey: true,
         );
 
         await tester.pumpWidget(
           ProviderScope(
             overrides: [
               isJaLocaleProvider.overrideWithValue(true),
-              notificationBarStoreProvider.overrideWithProvider(StateNotifierProvider.autoDispose((_) => NotificationBarStateStore(state))),
+              notificationBarStateNotifierProvider
+                  .overrideWithProvider(StateNotifierProvider.autoDispose((_) => NotificationBarStateNotifier(state))),
               notificationBarStateProvider.overrideWithProvider(Provider.autoDispose((_) => state)),
               isOverDiscountDeadlineProvider.overrideWithProvider((param) => Provider.autoDispose((_) => false)),
               durationToDiscountPriceDeadline.overrideWithProvider((param) => Provider.autoDispose((_) => const Duration(seconds: 1000))),
@@ -129,13 +132,16 @@ void main() {
           premiumTrialBeginAnouncementIsClosed: true,
           premiumUserIsClosedAdsMederiPill: false,
           recommendedSignupNotificationIsAlreadyShow: false,
+          userAnsweredSurvey: true,
+          userClosedSurvey: true,
         );
 
         await tester.pumpWidget(
           ProviderScope(
             overrides: [
               isJaLocaleProvider.overrideWithValue(true),
-              notificationBarStoreProvider.overrideWithProvider(StateNotifierProvider.autoDispose((_) => NotificationBarStateStore(state))),
+              notificationBarStateNotifierProvider
+                  .overrideWithProvider(StateNotifierProvider.autoDispose((_) => NotificationBarStateNotifier(state))),
               notificationBarStateProvider.overrideWithProvider(Provider.autoDispose((_) => state)),
               isOverDiscountDeadlineProvider.overrideWithProvider((param) => Provider.autoDispose((_) => false)),
               durationToDiscountPriceDeadline.overrideWithProvider((param) => Provider.autoDispose((_) => const Duration(seconds: 1000))),
@@ -184,13 +190,16 @@ void main() {
           premiumTrialBeginAnouncementIsClosed: true,
           premiumUserIsClosedAdsMederiPill: false,
           recommendedSignupNotificationIsAlreadyShow: false,
+          userAnsweredSurvey: true,
+          userClosedSurvey: true,
         );
 
         await tester.pumpWidget(
           ProviderScope(
             overrides: [
               isJaLocaleProvider.overrideWithValue(true),
-              notificationBarStoreProvider.overrideWithProvider(StateNotifierProvider.autoDispose((_) => NotificationBarStateStore(state))),
+              notificationBarStateNotifierProvider
+                  .overrideWithProvider(StateNotifierProvider.autoDispose((_) => NotificationBarStateNotifier(state))),
               notificationBarStateProvider.overrideWithProvider(Provider.autoDispose((_) => state)),
             ],
             child: const MaterialApp(
@@ -238,13 +247,16 @@ void main() {
           premiumTrialBeginAnouncementIsClosed: true,
           premiumUserIsClosedAdsMederiPill: false,
           recommendedSignupNotificationIsAlreadyShow: false,
+          userAnsweredSurvey: true,
+          userClosedSurvey: true,
         );
 
         await tester.pumpWidget(
           ProviderScope(
             overrides: [
               isJaLocaleProvider.overrideWithValue(true),
-              notificationBarStoreProvider.overrideWithProvider(StateNotifierProvider.autoDispose((_) => NotificationBarStateStore(state))),
+              notificationBarStateNotifierProvider
+                  .overrideWithProvider(StateNotifierProvider.autoDispose((_) => NotificationBarStateNotifier(state))),
               notificationBarStateProvider.overrideWithProvider(Provider.autoDispose((_) => state)),
             ],
             child: const MaterialApp(
@@ -292,13 +304,16 @@ void main() {
           premiumTrialBeginAnouncementIsClosed: true,
           premiumUserIsClosedAdsMederiPill: false,
           recommendedSignupNotificationIsAlreadyShow: false,
+          userAnsweredSurvey: true,
+          userClosedSurvey: true,
         );
 
         await tester.pumpWidget(
           ProviderScope(
             overrides: [
               isJaLocaleProvider.overrideWithValue(true),
-              notificationBarStoreProvider.overrideWithProvider(StateNotifierProvider.autoDispose((_) => NotificationBarStateStore(state))),
+              notificationBarStateNotifierProvider
+                  .overrideWithProvider(StateNotifierProvider.autoDispose((_) => NotificationBarStateNotifier(state))),
               notificationBarStateProvider.overrideWithProvider(Provider.autoDispose((_) => state)),
             ],
             child: const MaterialApp(
@@ -346,13 +361,16 @@ void main() {
           premiumTrialBeginAnouncementIsClosed: true,
           premiumUserIsClosedAdsMederiPill: false,
           recommendedSignupNotificationIsAlreadyShow: false,
+          userAnsweredSurvey: true,
+          userClosedSurvey: true,
         );
 
         await tester.pumpWidget(
           ProviderScope(
             overrides: [
               isJaLocaleProvider.overrideWithValue(true),
-              notificationBarStoreProvider.overrideWithProvider(StateNotifierProvider.autoDispose((_) => NotificationBarStateStore(state))),
+              notificationBarStateNotifierProvider
+                  .overrideWithProvider(StateNotifierProvider.autoDispose((_) => NotificationBarStateNotifier(state))),
               notificationBarStateProvider.overrideWithProvider(Provider.autoDispose((_) => state)),
             ],
             child: const MaterialApp(
@@ -399,13 +417,16 @@ void main() {
             premiumTrialBeginAnouncementIsClosed: false,
             premiumUserIsClosedAdsMederiPill: false,
             recommendedSignupNotificationIsAlreadyShow: false,
+            userAnsweredSurvey: true,
+            userClosedSurvey: true,
           );
 
           await tester.pumpWidget(
             ProviderScope(
               overrides: [
                 isJaLocaleProvider.overrideWithValue(true),
-                notificationBarStoreProvider.overrideWithProvider(StateNotifierProvider.autoDispose((_) => NotificationBarStateStore(state))),
+                notificationBarStateNotifierProvider
+                    .overrideWithProvider(StateNotifierProvider.autoDispose((_) => NotificationBarStateNotifier(state))),
                 notificationBarStateProvider.overrideWithProvider(Provider.autoDispose((_) => state)),
               ],
               child: const MaterialApp(
@@ -450,13 +471,16 @@ void main() {
             premiumTrialBeginAnouncementIsClosed: false,
             premiumUserIsClosedAdsMederiPill: false,
             recommendedSignupNotificationIsAlreadyShow: false,
+            userAnsweredSurvey: true,
+            userClosedSurvey: true,
           );
 
           await tester.pumpWidget(
             ProviderScope(
               overrides: [
                 isJaLocaleProvider.overrideWithValue(true),
-                notificationBarStoreProvider.overrideWithProvider(StateNotifierProvider.autoDispose((_) => NotificationBarStateStore(state))),
+                notificationBarStateNotifierProvider
+                    .overrideWithProvider(StateNotifierProvider.autoDispose((_) => NotificationBarStateNotifier(state))),
                 notificationBarStateProvider.overrideWithProvider(Provider.autoDispose((_) => state)),
               ],
               child: const MaterialApp(
@@ -501,13 +525,16 @@ void main() {
             premiumTrialBeginAnouncementIsClosed: false,
             premiumUserIsClosedAdsMederiPill: false,
             recommendedSignupNotificationIsAlreadyShow: false,
+            userAnsweredSurvey: true,
+            userClosedSurvey: true,
           );
 
           await tester.pumpWidget(
             ProviderScope(
               overrides: [
                 isJaLocaleProvider.overrideWithValue(true),
-                notificationBarStoreProvider.overrideWithProvider(StateNotifierProvider.autoDispose((_) => NotificationBarStateStore(state))),
+                notificationBarStateNotifierProvider
+                    .overrideWithProvider(StateNotifierProvider.autoDispose((_) => NotificationBarStateNotifier(state))),
                 notificationBarStateProvider.overrideWithProvider(Provider.autoDispose((_) => state)),
               ],
               child: const MaterialApp(
@@ -552,13 +579,16 @@ void main() {
             premiumTrialBeginAnouncementIsClosed: false,
             premiumUserIsClosedAdsMederiPill: false,
             recommendedSignupNotificationIsAlreadyShow: false,
+            userAnsweredSurvey: true,
+            userClosedSurvey: true,
           );
 
           await tester.pumpWidget(
             ProviderScope(
               overrides: [
                 isJaLocaleProvider.overrideWithValue(true),
-                notificationBarStoreProvider.overrideWithProvider(StateNotifierProvider.autoDispose((_) => NotificationBarStateStore(state))),
+                notificationBarStateNotifierProvider
+                    .overrideWithProvider(StateNotifierProvider.autoDispose((_) => NotificationBarStateNotifier(state))),
                 notificationBarStateProvider.overrideWithProvider(Provider.autoDispose((_) => state)),
               ],
               child: const MaterialApp(
@@ -603,13 +633,16 @@ void main() {
             premiumTrialBeginAnouncementIsClosed: false,
             premiumUserIsClosedAdsMederiPill: false,
             recommendedSignupNotificationIsAlreadyShow: false,
+            userAnsweredSurvey: true,
+            userClosedSurvey: true,
           );
 
           await tester.pumpWidget(
             ProviderScope(
               overrides: [
                 isJaLocaleProvider.overrideWithValue(true),
-                notificationBarStoreProvider.overrideWithProvider(StateNotifierProvider.autoDispose((_) => NotificationBarStateStore(state))),
+                notificationBarStateNotifierProvider
+                    .overrideWithProvider(StateNotifierProvider.autoDispose((_) => NotificationBarStateNotifier(state))),
                 notificationBarStateProvider.overrideWithProvider(Provider.autoDispose((_) => state)),
               ],
               child: const MaterialApp(
@@ -661,13 +694,16 @@ void main() {
             premiumTrialBeginAnouncementIsClosed: true,
             premiumUserIsClosedAdsMederiPill: false,
             recommendedSignupNotificationIsAlreadyShow: false,
+            userAnsweredSurvey: true,
+            userClosedSurvey: true,
           );
 
           await tester.pumpWidget(
             ProviderScope(
               overrides: [
                 isJaLocaleProvider.overrideWithValue(true),
-                notificationBarStoreProvider.overrideWithProvider(StateNotifierProvider.autoDispose((_) => NotificationBarStateStore(state))),
+                notificationBarStateNotifierProvider
+                    .overrideWithProvider(StateNotifierProvider.autoDispose((_) => NotificationBarStateNotifier(state))),
                 notificationBarStateProvider.overrideWithProvider(Provider.autoDispose((_) => state)),
               ],
               child: const MaterialApp(
@@ -714,13 +750,16 @@ void main() {
             premiumTrialBeginAnouncementIsClosed: true,
             premiumUserIsClosedAdsMederiPill: false,
             recommendedSignupNotificationIsAlreadyShow: false,
+            userAnsweredSurvey: true,
+            userClosedSurvey: true,
           );
 
           await tester.pumpWidget(
             ProviderScope(
               overrides: [
                 isJaLocaleProvider.overrideWithValue(true),
-                notificationBarStoreProvider.overrideWithProvider(StateNotifierProvider.autoDispose((_) => NotificationBarStateStore(state))),
+                notificationBarStateNotifierProvider
+                    .overrideWithProvider(StateNotifierProvider.autoDispose((_) => NotificationBarStateNotifier(state))),
                 notificationBarStateProvider.overrideWithProvider(Provider.autoDispose((_) => state)),
               ],
               child: const MaterialApp(
@@ -767,13 +806,16 @@ void main() {
             premiumTrialBeginAnouncementIsClosed: true,
             premiumUserIsClosedAdsMederiPill: false,
             recommendedSignupNotificationIsAlreadyShow: false,
+            userAnsweredSurvey: true,
+            userClosedSurvey: true,
           );
 
           await tester.pumpWidget(
             ProviderScope(
               overrides: [
                 isJaLocaleProvider.overrideWithValue(true),
-                notificationBarStoreProvider.overrideWithProvider(StateNotifierProvider.autoDispose((_) => NotificationBarStateStore(state))),
+                notificationBarStateNotifierProvider
+                    .overrideWithProvider(StateNotifierProvider.autoDispose((_) => NotificationBarStateNotifier(state))),
                 notificationBarStateProvider.overrideWithProvider(Provider.autoDispose((_) => state)),
               ],
               child: const MaterialApp(
@@ -820,13 +862,16 @@ void main() {
             premiumTrialBeginAnouncementIsClosed: true,
             premiumUserIsClosedAdsMederiPill: false,
             recommendedSignupNotificationIsAlreadyShow: false,
+            userAnsweredSurvey: true,
+            userClosedSurvey: true,
           );
 
           await tester.pumpWidget(
             ProviderScope(
               overrides: [
                 isJaLocaleProvider.overrideWithValue(true),
-                notificationBarStoreProvider.overrideWithProvider(StateNotifierProvider.autoDispose((_) => NotificationBarStateStore(state))),
+                notificationBarStateNotifierProvider
+                    .overrideWithProvider(StateNotifierProvider.autoDispose((_) => NotificationBarStateNotifier(state))),
                 notificationBarStateProvider.overrideWithProvider(Provider.autoDispose((_) => state)),
               ],
               child: const MaterialApp(
@@ -873,13 +918,16 @@ void main() {
             premiumTrialBeginAnouncementIsClosed: true,
             premiumUserIsClosedAdsMederiPill: true,
             recommendedSignupNotificationIsAlreadyShow: false,
+            userAnsweredSurvey: true,
+            userClosedSurvey: true,
           );
 
           await tester.pumpWidget(
             ProviderScope(
               overrides: [
                 isJaLocaleProvider.overrideWithValue(true),
-                notificationBarStoreProvider.overrideWithProvider(StateNotifierProvider.autoDispose((_) => NotificationBarStateStore(state))),
+                notificationBarStateNotifierProvider
+                    .overrideWithProvider(StateNotifierProvider.autoDispose((_) => NotificationBarStateNotifier(state))),
                 notificationBarStateProvider.overrideWithProvider(Provider.autoDispose((_) => state)),
               ],
               child: const MaterialApp(
@@ -926,13 +974,16 @@ void main() {
             premiumTrialBeginAnouncementIsClosed: true,
             premiumUserIsClosedAdsMederiPill: false,
             recommendedSignupNotificationIsAlreadyShow: false,
+            userAnsweredSurvey: true,
+            userClosedSurvey: true,
           );
 
           await tester.pumpWidget(
             ProviderScope(
               overrides: [
                 isJaLocaleProvider.overrideWithValue(true),
-                notificationBarStoreProvider.overrideWithProvider(StateNotifierProvider.autoDispose((_) => NotificationBarStateStore(state))),
+                notificationBarStateNotifierProvider
+                    .overrideWithProvider(StateNotifierProvider.autoDispose((_) => NotificationBarStateNotifier(state))),
                 notificationBarStateProvider.overrideWithProvider(Provider.autoDispose((_) => state)),
               ],
               child: const MaterialApp(
@@ -980,13 +1031,16 @@ void main() {
           premiumTrialBeginAnouncementIsClosed: true,
           premiumUserIsClosedAdsMederiPill: true,
           recommendedSignupNotificationIsAlreadyShow: false,
+          userAnsweredSurvey: true,
+          userClosedSurvey: true,
         );
 
         await tester.pumpWidget(
           ProviderScope(
             overrides: [
               isJaLocaleProvider.overrideWithValue(true),
-              notificationBarStoreProvider.overrideWithProvider(StateNotifierProvider.autoDispose((_) => NotificationBarStateStore(state))),
+              notificationBarStateNotifierProvider
+                  .overrideWithProvider(StateNotifierProvider.autoDispose((_) => NotificationBarStateNotifier(state))),
               notificationBarStateProvider.overrideWithProvider(Provider.autoDispose((_) => state)),
             ],
             child: const MaterialApp(
@@ -1034,13 +1088,16 @@ void main() {
           premiumTrialBeginAnouncementIsClosed: true,
           premiumUserIsClosedAdsMederiPill: true,
           recommendedSignupNotificationIsAlreadyShow: false,
+          userAnsweredSurvey: true,
+          userClosedSurvey: true,
         );
 
         await tester.pumpWidget(
           ProviderScope(
             overrides: [
               isJaLocaleProvider.overrideWithValue(true),
-              notificationBarStoreProvider.overrideWithProvider(StateNotifierProvider.autoDispose((_) => NotificationBarStateStore(state))),
+              notificationBarStateNotifierProvider
+                  .overrideWithProvider(StateNotifierProvider.autoDispose((_) => NotificationBarStateNotifier(state))),
               notificationBarStateProvider.overrideWithProvider(Provider.autoDispose((_) => state)),
             ],
             child: const MaterialApp(
@@ -1088,13 +1145,16 @@ void main() {
           premiumTrialBeginAnouncementIsClosed: true,
           premiumUserIsClosedAdsMederiPill: true,
           recommendedSignupNotificationIsAlreadyShow: false,
+          userAnsweredSurvey: true,
+          userClosedSurvey: true,
         );
 
         await tester.pumpWidget(
           ProviderScope(
             overrides: [
               isJaLocaleProvider.overrideWithValue(true),
-              notificationBarStoreProvider.overrideWithProvider(StateNotifierProvider.autoDispose((_) => NotificationBarStateStore(state))),
+              notificationBarStateNotifierProvider
+                  .overrideWithProvider(StateNotifierProvider.autoDispose((_) => NotificationBarStateNotifier(state))),
               notificationBarStateProvider.overrideWithProvider(Provider.autoDispose((_) => state)),
             ],
             child: const MaterialApp(

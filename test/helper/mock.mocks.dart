@@ -31,7 +31,7 @@ import 'package:pilll/domain/premium_introduction/premium_introduction_store.dar
     as _i32;
 import 'package:pilll/domain/record/components/notification_bar/notification_bar_state.codegen.dart'
     as _i9;
-import 'package:pilll/domain/record/components/notification_bar/notification_bar_store.dart'
+import 'package:pilll/domain/record/components/notification_bar/state_notifier.dart'
     as _i31;
 import 'package:pilll/domain/record/record_page_async_action.dart' as _i7;
 import 'package:pilll/domain/record/record_page_state.codegen.dart' as _i29;
@@ -754,12 +754,12 @@ class MockRecordPageStateNotifier extends _i1.Mock
       );
 }
 
-/// A class which mocks [NotificationBarStateStore].
+/// A class which mocks [NotificationBarStateNotifier].
 ///
 /// See the documentation for Mockito's code generation for more information.
-class MockNotificationBarStateStore extends _i1.Mock
-    implements _i31.NotificationBarStateStore {
-  MockNotificationBarStateStore() {
+class MockNotificationBarStateNotifier extends _i1.Mock
+    implements _i31.NotificationBarStateNotifier {
+  MockNotificationBarStateNotifier() {
     _i1.throwOnMissingStub(this);
   }
 
@@ -826,6 +826,24 @@ class MockNotificationBarStateStore extends _i1.Mock
   _i20.Future<void> closeAds() => (super.noSuchMethod(
         Invocation.method(
           #closeAds,
+          [],
+        ),
+        returnValue: Future<void>.value(),
+        returnValueForMissingStub: Future<void>.value(),
+      ) as _i20.Future<void>);
+  @override
+  _i20.Future<void> closeUserSurvey() => (super.noSuchMethod(
+        Invocation.method(
+          #closeUserSurvey,
+          [],
+        ),
+        returnValue: Future<void>.value(),
+        returnValueForMissingStub: Future<void>.value(),
+      ) as _i20.Future<void>);
+  @override
+  _i20.Future<void> openUserSurvey() => (super.noSuchMethod(
+        Invocation.method(
+          #openUserSurvey,
           [],
         ),
         returnValue: Future<void>.value(),

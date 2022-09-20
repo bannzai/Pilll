@@ -1,5 +1,3 @@
-import 'dart:io';
-
 import 'package:flutter/material.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
 import 'package:pilll/analytics.dart';
@@ -9,7 +7,8 @@ import 'package:pilll/domain/record/components/notification_bar/components/disco
 import 'package:pilll/domain/record/components/notification_bar/components/ended_pill_sheet.dart';
 import 'package:pilll/domain/record/components/notification_bar/components/pilll_ads.dart';
 import 'package:pilll/domain/record/components/notification_bar/components/premium_trial_begin.dart';
-import 'package:pilll/domain/record/components/notification_bar/notification_bar_store.dart';
+import 'package:pilll/domain/record/components/notification_bar/components/user_survey.dart';
+import 'package:pilll/domain/record/components/notification_bar/state_notifier.dart';
 import 'package:pilll/domain/record/components/notification_bar/components/premium_trial_limit.dart';
 import 'package:pilll/domain/record/components/notification_bar/components/recommend_signup.dart';
 import 'package:pilll/domain/record/components/notification_bar/components/recommend_signup_premium.dart';
@@ -33,8 +32,8 @@ class NotificationBar extends HookConsumerWidget {
   }
 
   Widget? _body(BuildContext context, WidgetRef ref) {
-    final state = ref.watch(notificationBarStoreProvider);
-    final store = ref.watch(notificationBarStoreProvider.notifier);
+    final state = ref.watch(notificationBarStateNotifierProvider);
+    final stateNotifier = ref.watch(notificationBarStateNotifierProvider.notifier);
     final discountEntitlementDeadlineDate = state.premiumAndTrial.discountEntitlementDeadlineDate;
     final isOverDiscountDeadline = ref.watch(isOverDiscountDeadlineProvider(discountEntitlementDeadlineDate));
     final isJaLocale = ref.watch(isJaLocaleProvider);
@@ -46,6 +45,18 @@ class NotificationBar extends HookConsumerWidget {
       final end = DateTime(2022, 8, 23, 23, 59, 59);
       return now().isBefore(begin) || now().isAfter(end);
     }();
+
+    // TODO: ある程度数が集まったら消す。テストも書かない
+    if (!state.premiumAndTrial.isTrial) {
+      if (!state.userClosedSurvey) {
+        if (!state.userAnsweredSurvey) {
+          return UserSurvey(
+            onClose: () => stateNotifier.closeUserSurvey(),
+            onTap: () => stateNotifier.openUserSurvey(),
+          );
+        }
+      }
+    }
 
     if (!state.premiumAndTrial.isPremium) {
       final premiumTrialLimit = state.premiumTrialLimit;
@@ -59,7 +70,7 @@ class NotificationBar extends HookConsumerWidget {
           if (beginTrialDate != null) {
             final between = daysBetween(beginTrialDate, now());
             if (between <= 3) {
-              return PremiumTrialBegin(latestDay: (30 - between), store: store);
+              return PremiumTrialBegin(latestDay: (30 - between), store: stateNotifier);
             }
           }
         }
@@ -100,7 +111,7 @@ class NotificationBar extends HookConsumerWidget {
                 },
                 onClose: () {
                   analytics.logEvent(name: "record_page_signing_notification_closed");
-                  store.closeRecommendedSignupNotification();
+                  stateNotifier.closeRecommendedSignupNotification();
                 },
               );
             }
@@ -123,7 +134,7 @@ class NotificationBar extends HookConsumerWidget {
     } else {
       if (!state.premiumUserIsClosedAdsMederiPill) {
         if (!isAdsDisabled) {
-          return PilllAdsNotificationBar(onClose: () => store.closeAds());
+          return PilllAdsNotificationBar(onClose: () => stateNotifier.closeAds());
         }
       }
       if (state.shownRecommendSignupNotificationForPremium) {
