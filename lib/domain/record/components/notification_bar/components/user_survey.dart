@@ -25,6 +25,7 @@ class UserSurvey extends StatelessWidget {
         onTap: () async {
           analytics.logEvent(name: "user_survey_open", parameters: {"key": BoolKey.userAnsweredSurvey});
           await launchUrl(Uri.parse("https://docs.google.com/forms/d/e/1FAIpQLSda8_Ri7SSMAwj5mTBryc6_GBVgTw14u9l5txPRnA1xrqiUZw/viewform"));
+          onTap();
         },
         child: Row(
           crossAxisAlignment: CrossAxisAlignment.center,
