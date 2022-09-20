@@ -33,7 +33,7 @@ class NotificationBar extends HookConsumerWidget {
 
   Widget? _body(BuildContext context, WidgetRef ref) {
     final state = ref.watch(notificationBarStateNotifierProvider);
-    final store = ref.watch(notificationBarStateNotifierProvider.notifier);
+    final stateNotifier = ref.watch(notificationBarStateNotifierProvider.notifier);
     final discountEntitlementDeadlineDate = state.premiumAndTrial.discountEntitlementDeadlineDate;
     final isOverDiscountDeadline = ref.watch(isOverDiscountDeadlineProvider(discountEntitlementDeadlineDate));
     final isJaLocale = ref.watch(isJaLocaleProvider);
@@ -50,8 +50,8 @@ class NotificationBar extends HookConsumerWidget {
       if (!state.userClosedSurvey) {
         if (!state.userAnsweredSurvey) {
           return UserSurvey(
-            onClose: () => store.closeUserSurvey(),
-            onTap: () => store.openUserSurvey(),
+            onClose: () => stateNotifier.closeUserSurvey(),
+            onTap: () => stateNotifier.openUserSurvey(),
           );
         }
       }
@@ -69,7 +69,7 @@ class NotificationBar extends HookConsumerWidget {
           if (beginTrialDate != null) {
             final between = daysBetween(beginTrialDate, now());
             if (between <= 3) {
-              return PremiumTrialBegin(latestDay: (30 - between), store: store);
+              return PremiumTrialBegin(latestDay: (30 - between), store: stateNotifier);
             }
           }
         }
@@ -110,7 +110,7 @@ class NotificationBar extends HookConsumerWidget {
                 },
                 onClose: () {
                   analytics.logEvent(name: "record_page_signing_notification_closed");
-                  store.closeRecommendedSignupNotification();
+                  stateNotifier.closeRecommendedSignupNotification();
                 },
               );
             }
@@ -133,7 +133,7 @@ class NotificationBar extends HookConsumerWidget {
     } else {
       if (!state.premiumUserIsClosedAdsMederiPill) {
         if (!isAdsDisabled) {
-          return PilllAdsNotificationBar(onClose: () => store.closeAds());
+          return PilllAdsNotificationBar(onClose: () => stateNotifier.closeAds());
         }
       }
       if (state.shownRecommendSignupNotificationForPremium) {
