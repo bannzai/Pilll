@@ -47,6 +47,13 @@ class NotificationBar extends HookConsumerWidget {
       return now().isBefore(begin) || now().isAfter(end);
     }();
 
+    if (!state.userClosedSurvey) {
+      if (!state.userAnsweredSurvey) {
+        // TODO:
+        return Container();
+      }
+    }
+
     if (!state.premiumAndTrial.isPremium) {
       final premiumTrialLimit = state.premiumTrialLimit;
       if (premiumTrialLimit != null) {
