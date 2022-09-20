@@ -31,7 +31,7 @@ import 'package:pilll/domain/premium_introduction/premium_introduction_store.dar
     as _i32;
 import 'package:pilll/domain/record/components/notification_bar/notification_bar_state.codegen.dart'
     as _i9;
-import 'package:pilll/domain/record/components/notification_bar/notification_bar_state_notifier.dart'
+import 'package:pilll/domain/record/components/notification_bar/state_notifier.dart'
     as _i31;
 import 'package:pilll/domain/record/record_page_async_action.dart' as _i7;
 import 'package:pilll/domain/record/record_page_state.codegen.dart' as _i29;

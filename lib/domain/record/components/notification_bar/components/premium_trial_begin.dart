@@ -6,7 +6,7 @@ import 'package:pilll/analytics.dart';
 import 'package:pilll/components/atoms/color.dart';
 import 'package:pilll/components/atoms/font.dart';
 import 'package:pilll/components/atoms/text_color.dart';
-import 'package:pilll/domain/record/components/notification_bar/notification_bar_state_notifier.dart';
+import 'package:pilll/domain/record/components/notification_bar/state_notifier.dart';
 import 'package:url_launcher/url_launcher.dart';
 
 class PremiumTrialBegin extends HookConsumerWidget {

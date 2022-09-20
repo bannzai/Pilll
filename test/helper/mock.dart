@@ -5,7 +5,7 @@ import 'package:pilll/domain/calendar/calendar_page_async_action.dart';
 import 'package:pilll/domain/menstruation/menstruation_page_async_action.dart';
 import 'package:pilll/domain/menstruation_edit/menstruation_edit_page_async_action.dart';
 import 'package:pilll/domain/premium_introduction/premium_introduction_store.dart';
-import 'package:pilll/domain/record/components/notification_bar/notification_bar_state_notifier.dart';
+import 'package:pilll/domain/record/components/notification_bar/state_notifier.dart';
 import 'package:pilll/domain/record/record_page_async_action.dart';
 import 'package:pilll/domain/record/record_page_state_notifier.dart';
 import 'package:pilll/domain/settings/setting_page_async_action.dart';
