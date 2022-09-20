@@ -83,10 +83,7 @@ void main() {
         totalCountOfActionForTakenPill: 0,
         isAlreadyShowPremiumSurvey: false,
         shouldShowMigrateInfo: false,
-        recommendedSignupNotificationIsAlreadyShow: false,
-        premiumTrialBeginAnouncementIsClosed: false,
         isLinkedLoginProvider: false,
-        premiumUserIsClosedAdsMederiPill: false,
         timestamp: now(),
       );
 
@@ -165,10 +162,7 @@ void main() {
         totalCountOfActionForTakenPill: 0,
         isAlreadyShowPremiumSurvey: false,
         shouldShowMigrateInfo: false,
-        recommendedSignupNotificationIsAlreadyShow: false,
-        premiumTrialBeginAnouncementIsClosed: false,
         isLinkedLoginProvider: false,
-        premiumUserIsClosedAdsMederiPill: false,
         timestamp: now(),
       );
 
