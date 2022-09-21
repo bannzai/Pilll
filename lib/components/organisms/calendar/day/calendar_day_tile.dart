@@ -49,12 +49,27 @@ class CalendarDayTile extends StatelessWidget {
           height: CalendarConstants.tileHeight,
           child: Stack(
             children: <Widget>[
-              if (showsDiaryMark) ...[
-                Positioned.fill(
-                  top: 8,
-                  child: Align(alignment: Alignment.topCenter, child: _diaryMarkWidget()),
-                )
-              ],
+              Positioned.fill(
+                top: 8,
+                child: Align(
+                  alignment: Alignment.topCenter,
+                  child: Row(
+                    children: [
+                      const Spacer(),
+                      if (showsDiaryMark) ...[
+                        _diaryMarkWidget(),
+                      ],
+                      if (showsDiaryMark && showsScheduleMark) ...[
+                        const SizedBox(width: 4),
+                      ],
+                      if (showsScheduleMark) ...[
+                        _scheduleMarkWidget(),
+                      ],
+                      const Spacer(),
+                    ],
+                  ),
+                ),
+              ),
               Positioned(
                 child: Align(
                   alignment: Alignment.center,
@@ -152,6 +167,14 @@ class CalendarDayTile extends StatelessWidget {
       width: 8,
       height: 8,
       decoration: BoxDecoration(color: PilllColors.gray, borderRadius: BorderRadius.circular(4)),
+    );
+  }
+
+  Widget _scheduleMarkWidget() {
+    return Container(
+      width: 8,
+      height: 8,
+      decoration: BoxDecoration(color: PilllColors.secondary, borderRadius: BorderRadius.circular(4)),
     );
   }
 
