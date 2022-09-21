@@ -28,10 +28,23 @@ extension Date on DateTime {
   }
 }
 
+extension DateTimeBeginEnd on DateTime {
+  DateTime beginOfDay() {
+    return DateTime(year, month, day, 0, 0, 0);
+  }
+
+  DateTime endOfDay() {
+    return DateTime(year, month, day, 23, 59, 59);
+  }
+
+  DateTimeRange dateTimeRange() {
+    return DateTimeRange(start: beginOfDay(), end: endOfDay());
+  }
+}
+
 extension MonthDateTimeRange on DateTimeRange {
   static DateTimeRange monthRange({required DateTime dateForMonth}) {
-    return DateTimeRange(
-        start: DateTime(dateForMonth.year, dateForMonth.month, 1), end: DateTime(dateForMonth.year, dateForMonth.month + 1, 0, 23, 59, 59));
+    return DateTimeRange(start: DateTime(dateForMonth.year, dateForMonth.month, 1), end: DateTime(dateForMonth.year, dateForMonth.month + 1, 0));
   }
 }
 
