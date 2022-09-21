@@ -29,16 +29,16 @@ extension Date on DateTime {
 }
 
 extension DateTimeBeginEnd on DateTime {
-  DateTime begin() {
+  DateTime beginOfDay() {
     return DateTime(year, month, day, 0, 0, 0);
   }
 
-  DateTime end() {
+  DateTime endOfDay() {
     return DateTime(year, month, day, 23, 59, 59);
   }
 
   DateTimeRange dateTimeRange() {
-    return DateTimeRange(start: begin(), end: end());
+    return DateTimeRange(start: beginOfDay(), end: endOfDay());
   }
 }
 
