@@ -54,8 +54,8 @@ class MenstruationCalendarHeader extends StatelessWidget {
                         return CalendarDayTile(
                             weekday: weekday,
                             date: date,
-                            shouldShowDiaryMark: isExistsPostedDiary(state.diariesForAround90Days, date),
-                            shouldShowMenstruationMark: false,
+                            showsDiaryMark: isExistsPostedDiary(state.diariesForAround90Days, date),
+                            showsMenstruationMark: false,
                             onTap: (date) {
                               analytics.logEvent(name: "did_select_day_tile_on_menstruation");
                               transitionWhenCalendarDayTapped(context,

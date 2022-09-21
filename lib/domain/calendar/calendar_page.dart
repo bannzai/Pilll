@@ -125,8 +125,8 @@ class _CalendarPage extends StatelessWidget {
                               return CalendarDayTile(
                                 weekday: weekday,
                                 date: date,
-                                shouldShowDiaryMark: isExistsPostedDiary(monthCalendarState.diaries, date),
-                                shouldShowMenstruationMark: false,
+                                showsDiaryMark: isExistsPostedDiary(monthCalendarState.diaries, date),
+                                showsMenstruationMark: false,
                                 onTap: (date) {
                                   analytics.logEvent(name: "did_select_day_tile_on_calendar_card");
                                   transitionWhenCalendarDayTapped(context,

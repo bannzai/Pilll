@@ -64,8 +64,8 @@ class MonthCalendar extends HookConsumerWidget {
                   return CalendarDayTile(
                       weekday: weekday,
                       date: date,
-                      shouldShowDiaryMark: false,
-                      shouldShowMenstruationMark: () {
+                      showsDiaryMark: false,
+                      showsMenstruationMark: () {
                         final menstruation = state.menstruation;
                         if (menstruation == null) {
                           return false;

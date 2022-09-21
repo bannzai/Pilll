@@ -10,9 +10,9 @@ import 'package:pilll/util/datetime/day.dart';
 class CalendarDayTile extends StatelessWidget {
   final DateTime date;
   final Weekday weekday;
-  final bool shouldShowDiaryMark;
+  final bool showsDiaryMark;
   final bool showsScheduleMark;
-  final bool shouldShowMenstruationMark;
+  final bool showsMenstruationMark;
   final Function(DateTime)? onTap;
 
   const CalendarDayTile.grayout({
@@ -23,8 +23,8 @@ class CalendarDayTile extends StatelessWidget {
           key: key,
           onTap: null,
           weekday: weekday,
-          shouldShowDiaryMark: false,
-          shouldShowMenstruationMark: false,
+          showsDiaryMark: false,
+          showsMenstruationMark: false,
           date: date,
         );
 
@@ -32,8 +32,8 @@ class CalendarDayTile extends StatelessWidget {
     Key? key,
     required this.date,
     required this.weekday,
-    required this.shouldShowDiaryMark,
-    required this.shouldShowMenstruationMark,
+    required this.showsDiaryMark,
+    required this.showsMenstruationMark,
     required this.onTap,
   }) : super(key: key);
 
@@ -47,7 +47,7 @@ class CalendarDayTile extends StatelessWidget {
           height: CalendarConstants.tileHeight,
           child: Stack(
             children: <Widget>[
-              if (shouldShowDiaryMark) ...[
+              if (showsDiaryMark) ...[
                 Positioned.fill(
                   top: 8,
                   child: Align(alignment: Alignment.topCenter, child: _diaryMarkWidget()),
@@ -72,7 +72,7 @@ class CalendarDayTile extends StatelessWidget {
       height: 40,
       child: Stack(
         children: [
-          if (shouldShowMenstruationMark)
+          if (showsMenstruationMark)
             Positioned.fill(
               child: Align(
                 alignment: Alignment.center,
