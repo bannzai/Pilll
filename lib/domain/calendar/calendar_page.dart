@@ -13,6 +13,7 @@ import 'package:pilll/components/atoms/color.dart';
 import 'package:pilll/domain/calendar/components/pill_sheet_modified_history/pill_sheet_modified_history_card.dart';
 import 'package:pilll/domain/calendar/calendar_page_state_notifier.dart';
 import 'package:flutter/material.dart';
+import 'package:pilll/domain/diary_post/diary_post_page.dart';
 import 'package:pilll/domain/schedule_post/schedule_post_page.dart';
 import 'package:pilll/error/universal_error_page.dart';
 import 'package:pilll/util/datetime/day.dart';
@@ -61,11 +62,7 @@ class _CalendarPage extends StatelessWidget {
           onPressed: () {
             analytics.logEvent(name: "calendar_fab_pressed");
             final date = today();
-            if (date.date().isAfter(tomorrow())) {
-              Navigator.of(context).push(SchedulePostPageRoute.route(date));
-            } else {
-              transitionToDiaryPost(context, date, state.todayMonthCalendar.diaries);
-            }
+            Navigator.of(context).push(DiaryPostPageRoute.route(date, null));
           },
           child: const Icon(Icons.add, color: Colors.white),
           backgroundColor: PilllColors.secondary,
@@ -132,15 +129,8 @@ class _CalendarPage extends StatelessWidget {
                                 shouldShowMenstruationMark: false,
                                 onTap: (date) {
                                   analytics.logEvent(name: "did_select_day_tile_on_calendar_card");
-                                  if (date.date().isAfter(tomorrow())) {
-                                    Navigator.of(context).push(SchedulePostPageRoute.route(date));
-                                  } else {
-                                    transitionToDiaryPost(
-                                      context,
-                                      date,
-                                      monthCalendarState.diaries,
-                                    );
-                                  }
+                                  transitionWhenCalendarDayTapped(context,
+                                      date: date, diaries: monthCalendarState.diaries, schedules: monthCalendarState.schedules);
                                 },
                               );
                             },

@@ -9,9 +9,7 @@ import 'package:pilll/domain/calendar/date_range.dart';
 import 'package:pilll/domain/menstruation/menstruation_page.dart';
 import 'package:pilll/domain/menstruation/menstruation_state.codegen.dart';
 import 'package:pilll/domain/record/weekday_badge.dart';
-import 'package:pilll/domain/schedule_post/schedule_post_page.dart';
 import 'package:pilll/entity/weekday.dart';
-import 'package:pilll/util/datetime/day.dart';
 
 const double _horizontalPadding = 10;
 
@@ -60,11 +58,8 @@ class MenstruationCalendarHeader extends StatelessWidget {
                             shouldShowMenstruationMark: false,
                             onTap: (date) {
                               analytics.logEvent(name: "did_select_day_tile_on_menstruation");
-                              if (date.date().isAfter(tomorrow())) {
-                                Navigator.of(context).push(SchedulePostPageRoute.route(date));
-                              } else {
-                                transitionToDiaryPost(context, date, state.diariesForAround90Days);
-                              }
+                              transitionWhenCalendarDayTapped(context,
+                                  date: date, diaries: state.diariesForAround90Days, schedules: state.schedulesForAround90Days);
                             });
                       },
                       calendarMenstruationBandModels: state.calendarMenstruationBandModels,
