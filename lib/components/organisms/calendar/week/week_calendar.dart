@@ -150,6 +150,16 @@ void transitionWhenCalendarDayTapped(
     );
     return;
   }
+  if (isExistsPostedDiary(diaries, date) && isExistsSchedule(schedules, date)) {
+    showModalBottomSheet(
+      context: context,
+      builder: (context) => DiaryOrScheduleSheet(
+          showDiary: () => Navigator.of(context).push(DiaryPostPageRoute.route(date, null)),
+          showSchedule: () => Navigator.of(context).push(SchedulePostPageRoute.route(date))),
+      backgroundColor: Colors.transparent,
+    );
+    return;
+  }
 
   if (!isExistsPostedDiary(diaries, date)) {
     Navigator.of(context).push(DiaryPostPageRoute.route(date, null));
