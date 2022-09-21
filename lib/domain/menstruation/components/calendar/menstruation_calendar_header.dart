@@ -3,6 +3,8 @@ import 'package:flutter/widgets.dart';
 import 'package:pilll/analytics.dart';
 import 'package:pilll/components/molecules/shadow_container.dart';
 import 'package:pilll/components/organisms/calendar/band/calendar_band_model.dart';
+import 'package:pilll/components/organisms/calendar/day/calendar_day_tile.dart';
+import 'package:pilll/components/organisms/calendar/week/week_calendar_state.dart';
 import 'package:pilll/domain/menstruation/components/calendar/menstruation_single_line_state.dart';
 import 'package:pilll/components/organisms/calendar/week/week_calendar.dart';
 import 'package:pilll/domain/calendar/date_range.dart';
@@ -51,21 +53,22 @@ class MenstruationCalendarHeader extends StatelessWidget {
                     width: MediaQuery.of(context).size.width - _horizontalPadding * 2,
                     height: MenstruationPageConst.tileHeight,
                     child: CalendarWeekLine(
-                      state: MenstruationSinglelineWeekCalendarState(
-                        dateRange: DateRange(days.first, days.last),
-                        diariesForMonth: state.diariesForAround90Days,
-                        allBandModels: buildBandModels(state.latestPillSheetGroup, state.setting, state.menstruations, 12)
-                            .where((element) => element is! CalendarNextPillSheetBandModel)
-                            .toList(),
-                      ),
+                      dateRange: DateRange(days.first, days.last),
                       horizontalPadding: _horizontalPadding,
-                      onTap: (weekCalendarState, date) {
-                        analytics.logEvent(name: "did_select_day_tile_on_menstruation");
-                        if (date.date().isAfter(tomorrow())) {
-                          Navigator.of(context).push(SchedulePostPageRoute.route(date));
-                        } else {
-                          transitionToDiaryPost(context, date, state.diariesForAround90Days);
-                        }
+                      day: (context, weekday, date) {
+                        return CalendarDayTile(
+                            weekday: weekday,
+                            date: date,
+                            shouldShowDiaryMark: isExistsPostedDiary(state.diariesForAround90Days, date),
+                            shouldShowMenstruationMark: false,
+                            onTap: (date) {
+                              analytics.logEvent(name: "did_select_day_tile_on_menstruation");
+                              if (date.date().isAfter(tomorrow())) {
+                                Navigator.of(context).push(SchedulePostPageRoute.route(date));
+                              } else {
+                                transitionToDiaryPost(context, date, state.diariesForAround90Days);
+                              }
+                            });
                       },
                       calendarMenstruationBandModels: state.calendarMenstruationBandModels,
                       calendarNextPillSheetBandModels: state.calendarNextPillSheetBandModels,

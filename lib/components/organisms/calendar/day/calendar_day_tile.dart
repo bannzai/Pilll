@@ -18,13 +18,12 @@ class CalendarDayTile extends StatelessWidget {
     Key? key,
     required DateTime date,
     required Weekday weekday,
-    required bool shouldShowMenstruationMark,
   }) : this(
           key: key,
           onTap: null,
           weekday: weekday,
           shouldShowDiaryMark: false,
-          shouldShowMenstruationMark: shouldShowMenstruationMark,
+          shouldShowMenstruationMark: false,
           date: date,
         );
 
