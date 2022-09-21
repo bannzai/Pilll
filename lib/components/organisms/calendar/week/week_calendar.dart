@@ -17,7 +17,7 @@ import 'package:pilll/domain/diary/confirm_diary_sheet.dart';
 import 'package:pilll/util/datetime/date_compare.dart';
 import 'package:pilll/util/datetime/day.dart';
 
-class CalendarWeekdayLine extends StatelessWidget {
+class CalendarWeekLine extends StatelessWidget {
   final WeekCalendarState state;
   final double horizontalPadding;
   final List<CalendarMenstruationBandModel> calendarMenstruationBandModels;
@@ -25,7 +25,7 @@ class CalendarWeekdayLine extends StatelessWidget {
   final List<CalendarNextPillSheetBandModel> calendarNextPillSheetBandModels;
   final Function(WeekCalendarState, DateTime) onTap;
 
-  const CalendarWeekdayLine({
+  const CalendarWeekLine({
     Key? key,
     required this.state,
     required this.calendarMenstruationBandModels,

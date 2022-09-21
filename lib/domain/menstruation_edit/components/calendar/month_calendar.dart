@@ -53,8 +53,7 @@ class MonthCalendar extends HookConsumerWidget {
           return Column(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
-              _weekdayLine(context,
-                  weekCalendarState: weekCalendarStatuses[offset]),
+              _weekdayLine(context, weekCalendarState: weekCalendarStatuses[offset]),
               const Divider(height: 1),
             ],
           );
@@ -67,7 +66,7 @@ class MonthCalendar extends HookConsumerWidget {
     BuildContext context, {
     required MenstruationEditWeekCalendarState weekCalendarState,
   }) {
-    return CalendarWeekdayLine(
+    return CalendarWeekLine(
         state: weekCalendarState,
         calendarMenstruationBandModels: const [],
         calendarScheduledMenstruationBandModels: const [],

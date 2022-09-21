@@ -53,7 +53,7 @@ void main() {
             home: MonthCalendar(
               dateForMonth: DateTime(2020, 09, 14),
               weekCalendarBuilder: (context, monthState, weekState) {
-                return CalendarWeekdayLine(
+                return CalendarWeekLine(
                   state: weekState,
                   calendarMenstruationBandModels: const [],
                   calendarScheduledMenstruationBandModels: const [],
@@ -111,7 +111,7 @@ void main() {
             home: MonthCalendar(
               dateForMonth: DateTime(2020, 09, 14),
               weekCalendarBuilder: (context, monthState, weekState) {
-                return CalendarWeekdayLine(
+                return CalendarWeekLine(
                   state: weekState,
                   calendarMenstruationBandModels: const [],
                   calendarScheduledMenstruationBandModels: const [],
@@ -156,7 +156,7 @@ void main() {
             home: MonthCalendar(
               dateForMonth: DateTime(2020, 09, 14),
               weekCalendarBuilder: (context, monthState, weekState) {
-                return CalendarWeekdayLine(
+                return CalendarWeekLine(
                   state: weekState,
                   calendarMenstruationBandModels: const [],
                   calendarScheduledMenstruationBandModels: const [],
@@ -195,7 +195,7 @@ void main() {
             home: MonthCalendar(
               dateForMonth: DateTime(2020, 09, 14),
               weekCalendarBuilder: (context, monthState, weekState) {
-                return CalendarWeekdayLine(
+                return CalendarWeekLine(
                   state: weekState,
                   calendarMenstruationBandModels: const [],
                   calendarScheduledMenstruationBandModels: const [],

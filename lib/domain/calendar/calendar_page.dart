@@ -110,7 +110,7 @@ class _CalendarPage extends StatelessWidget {
                     child: MonthCalendar(
                         dateForMonth: state.displayMonth,
                         weekCalendarBuilder: (context, monthCalendarState, weekCalendarState) {
-                          return CalendarWeekdayLine(
+                          return CalendarWeekLine(
                             state: weekCalendarState,
                             calendarMenstruationBandModels: state.calendarMenstruationBandModels,
                             calendarScheduledMenstruationBandModels: state.calendarScheduledMenstruationBandModels,

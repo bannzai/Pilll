@@ -50,7 +50,7 @@ class MenstruationCalendarHeader extends StatelessWidget {
                   return SizedBox(
                     width: MediaQuery.of(context).size.width - _horizontalPadding * 2,
                     height: MenstruationPageConst.tileHeight,
-                    child: CalendarWeekdayLine(
+                    child: CalendarWeekLine(
                       state: MenstruationSinglelineWeekCalendarState(
                         dateRange: DateRange(days.first, days.last),
                         diariesForMonth: state.diariesForAround90Days,
