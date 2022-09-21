@@ -13,6 +13,7 @@ import 'package:pilll/entity/schedule.codegen.dart';
 import 'package:pilll/error/universal_error_page.dart';
 import 'package:pilll/util/const.dart';
 import 'package:pilll/util/formatter/date_time_formatter.dart';
+import 'package:pilll/util/datetime/day.dart';
 
 class SchedulePostPage extends HookConsumerWidget {
   final DateTime date;
@@ -64,10 +65,12 @@ class _SchedulePostPage extends HookConsumerWidget {
         actions: [
           AlertButton(
             text: "保存",
-            onPressed: () async {
-              await stateNotifier.post(schedule: schedule);
-              Navigator.of(context).pop();
-            },
+            onPressed: state.date.date().isAfter(today())
+                ? () async {
+                    await stateNotifier.post(schedule: schedule);
+                    Navigator.of(context).pop();
+                  }
+                : null,
           ),
         ],
         backgroundColor: PilllColors.white,
