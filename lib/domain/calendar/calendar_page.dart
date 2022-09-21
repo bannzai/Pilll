@@ -3,7 +3,7 @@ import 'package:hooks_riverpod/hooks_riverpod.dart';
 import 'package:pilll/analytics.dart';
 import 'package:pilll/components/molecules/indicator.dart';
 import 'package:pilll/components/organisms/calendar/day/calendar_day_tile.dart';
-import 'package:pilll/components/organisms/calendar/week/week_calendar_state.dart';
+import 'package:pilll/components/organisms/calendar/week/utility.dart';
 import 'package:pilll/domain/calendar/calendar_page_index_state_notifier.dart';
 import 'package:pilll/domain/calendar/calendar_page_state.codegen.dart';
 import 'package:pilll/domain/calendar/components/title/calendar_page_title.dart';
