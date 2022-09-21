@@ -20,15 +20,19 @@ class DiaryOrScheduleSheet extends StatelessWidget {
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             const SizedBox(height: 24),
-            _tile(title: "日記を記録", onTap: () => showDiary()),
-            _tile(title: "予定を記入", onTap: () => showSchedule()),
+            _tile(
+              title: "日記を記録",
+              onTap: () => showDiary(),
+              leading: const Icon(Icons.note_alt),
+            ),
+            _tile(title: "予定を記入", onTap: () => showSchedule(), leading: const Icon(Icons.event)),
           ],
         ),
       ),
     );
   }
 
-  Widget _tile({required String title, required VoidCallback onTap}) {
+  Widget _tile({required String title, required VoidCallback onTap, required Widget leading}) {
     return SizedBox(
       height: _tileHeight,
       child: ListTile(
@@ -36,6 +40,7 @@ class DiaryOrScheduleSheet extends StatelessWidget {
           title,
           style: FontType.assisting.merge(TextColorStyle.main),
         ),
+        leading: leading,
         onTap: () => onTap(),
       ),
     );
