@@ -17,14 +17,3 @@ extension DateTimeForCalnedarState on DateTime {
     return isBefore(date);
   }
 }
-
-abstract class WeekCalendarState {
-  DateRange get dateRange;
-  List<Diary> get diariesForMonth;
-
-  bool isGrayoutTile(DateTime date);
-  bool showsDiaryMark(List<Diary> diaries, DateTime date);
-  bool showsScheduleMark(List<Schedule> schedules, DateTime date);
-  bool showsMenstruationMark(DateTime date);
-  Alignment get contentAlignment;
-}
