@@ -14,7 +14,6 @@ import 'package:pilll/domain/calendar/components/pill_sheet_modified_history/pil
 import 'package:pilll/domain/calendar/calendar_page_state_notifier.dart';
 import 'package:flutter/material.dart';
 import 'package:pilll/domain/diary_post/diary_post_page.dart';
-import 'package:pilll/domain/schedule_post/schedule_post_page.dart';
 import 'package:pilll/error/universal_error_page.dart';
 import 'package:pilll/util/datetime/day.dart';
 
@@ -126,6 +125,7 @@ class _CalendarPage extends StatelessWidget {
                                 weekday: weekday,
                                 date: date,
                                 showsDiaryMark: isExistsPostedDiary(monthCalendarState.diaries, date),
+                                showsScheduleMark: isExistsSchedule(monthCalendarState.schedules, date),
                                 showsMenstruationMark: false,
                                 onTap: (date) {
                                   analytics.logEvent(name: "did_select_day_tile_on_calendar_card");
