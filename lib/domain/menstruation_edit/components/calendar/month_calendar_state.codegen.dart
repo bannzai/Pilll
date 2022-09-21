@@ -14,5 +14,5 @@ class MonthCalendarState with _$MonthCalendarState {
   MonthCalendarState._();
 
   late final WeekCalendarDateRangeCalculator _range = WeekCalendarDateRangeCalculator(dateForMonth);
-  late List<DateRange> weeks = List.generate(_range.weeklineCount(), (index) => index + 1).map((line) => _range.dateRangeOfLine(line)).toList();
+  late final List<DateRange> weeks = List.generate(_range.weeklineCount(), (index) => index + 1).map((line) => _range.dateRangeOfLine(line)).toList();
 }
