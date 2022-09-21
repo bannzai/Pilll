@@ -11,6 +11,7 @@ class CalendarDayTile extends StatelessWidget {
   final DateTime date;
   final Weekday weekday;
   final bool shouldShowDiaryMark;
+  final bool showsScheduleMark;
   final bool shouldShowMenstruationMark;
   final Function(DateTime)? onTap;
 
