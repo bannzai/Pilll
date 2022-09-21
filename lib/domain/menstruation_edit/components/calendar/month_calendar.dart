@@ -1,8 +1,9 @@
 import 'package:hooks_riverpod/hooks_riverpod.dart';
 import 'package:pilll/analytics.dart';
+import 'package:pilll/components/organisms/calendar/day/calendar_day_tile.dart';
 import 'package:pilll/components/organisms/calendar/week/week_calendar.dart';
+import 'package:pilll/domain/calendar/date_range.dart';
 import 'package:pilll/domain/menstruation_edit/components/calendar/month_calendar_state.codegen.dart';
-import 'package:pilll/domain/menstruation_edit/components/calendar/week_calendar_state.dart';
 import 'package:pilll/domain/menstruation_edit/menstruation_edit_page_state.codegen.dart';
 import 'package:pilll/domain/menstruation_edit/menstruation_edit_page_state_notifier.dart';
 import 'package:pilll/domain/record/weekday_badge.dart';
@@ -30,7 +31,7 @@ class MonthCalendar extends HookConsumerWidget {
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {
-    final weekCalendarStatuses = monthCalendarState.weekCalendarStatuses;
+    final weeks = monthCalendarState.weeks;
 
     return Column(
       children: [
@@ -46,35 +47,42 @@ class MonthCalendar extends HookConsumerWidget {
         ),
         const Divider(height: 1),
         ...List.generate(6, (offset) {
-          if (weekCalendarStatuses.length <= offset) {
+          if (weeks.length <= offset) {
             return Container(height: CalendarConstants.tileHeight);
           }
 
           return Column(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
-              _weekdayLine(context, weekCalendarState: weekCalendarStatuses[offset]),
+              CalendarWeekLine(
+                dateRange: weeks[offset],
+                calendarMenstruationBandModels: const [],
+                calendarScheduledMenstruationBandModels: const [],
+                calendarNextPillSheetBandModels: const [],
+                horizontalPadding: 0,
+                day: (context, weekday, date) {
+                  return CalendarDayTile(
+                      weekday: weekday,
+                      date: date,
+                      shouldShowDiaryMark: false,
+                      shouldShowMenstruationMark: () {
+                        final menstruation = state.menstruation;
+                        if (menstruation == null) {
+                          return false;
+                        }
+                        return DateRange(menstruation.beginDate, menstruation.endDate).inRange(date);
+                      }(),
+                      onTap: (date) {
+                        analytics.logEvent(name: "selected_day_tile_on_menstruation_edit");
+                        store.tappedDate(date, state.setting);
+                      });
+                },
+              ),
               const Divider(height: 1),
             ],
           );
         }),
       ],
     );
-  }
-
-  Widget _weekdayLine(
-    BuildContext context, {
-    required MenstruationEditWeekCalendarState weekCalendarState,
-  }) {
-    return CalendarWeekLine(
-        state: weekCalendarState,
-        calendarMenstruationBandModels: const [],
-        calendarScheduledMenstruationBandModels: const [],
-        calendarNextPillSheetBandModels: const [],
-        horizontalPadding: 0,
-        onTap: (weekCalendarState, date) {
-          analytics.logEvent(name: "selected_day_tile_on_menstruation_edit");
-          store.tappedDate(date, state.setting);
-        });
   }
 }
