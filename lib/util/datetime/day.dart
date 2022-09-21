@@ -28,20 +28,6 @@ extension Date on DateTime {
   }
 }
 
-extension DateTimeBeginEnd on DateTime {
-  DateTime beginOfDay() {
-    return DateTime(year, month, day, 0, 0, 0);
-  }
-
-  DateTime endOfDay() {
-    return DateTime(year, month, day, 23, 59, 59);
-  }
-
-  DateTimeRange dateTimeRange() {
-    return DateTimeRange(start: beginOfDay(), end: endOfDay());
-  }
-}
-
 // Reference: https://stackoverflow.com/questions/52713115/flutter-find-the-number-of-days-between-two-dates/67679455#67679455
 int daysBetween(DateTime from, DateTime to) {
   from = DateTime(from.year, from.month, from.day);
