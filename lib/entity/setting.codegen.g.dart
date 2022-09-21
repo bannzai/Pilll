@@ -59,7 +59,7 @@ Map<String, dynamic> _$$_SettingToJson(_$_Setting instance) =>
       'isOnReminder': instance.isOnReminder,
       'isOnNotifyInNotTakenDuration': instance.isOnNotifyInNotTakenDuration,
       'pillSheetAppearanceMode':
-          _$PillSheetAppearanceModeEnumMap[instance.pillSheetAppearanceMode],
+          _$PillSheetAppearanceModeEnumMap[instance.pillSheetAppearanceMode]!,
       'isAutomaticallyCreatePillSheet': instance.isAutomaticallyCreatePillSheet,
       'reminderNotificationCustomization':
           instance.reminderNotificationCustomization.toJson(),
