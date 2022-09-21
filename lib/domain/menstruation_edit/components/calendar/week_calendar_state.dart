@@ -3,6 +3,7 @@ import 'package:pilll/components/organisms/calendar/week/week_calendar_state.dar
 import 'package:pilll/domain/calendar/date_range.dart';
 import 'package:pilll/entity/diary.codegen.dart';
 import 'package:pilll/entity/menstruation.codegen.dart';
+import 'package:pilll/entity/schedule.codegen.dart';
 
 class MenstruationEditWeekCalendarState extends WeekCalendarState {
   @override
@@ -23,6 +24,8 @@ class MenstruationEditWeekCalendarState extends WeekCalendarState {
   bool isGrayoutTile(DateTime date) => date.isPreviousMonth(dateForMonth);
   @override
   bool showsDiaryMark(List<Diary> diaries, DateTime date) => false;
+  @override
+  bool showsScheduleMark(List<Schedule> schedules, DateTime date) => false;
   @override
   bool showsMenstruationMark(DateTime date) {
     final menstruation = this.menstruation;

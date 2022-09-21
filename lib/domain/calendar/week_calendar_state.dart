@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:pilll/domain/calendar/date_range.dart';
 import 'package:pilll/components/organisms/calendar/week/week_calendar_state.dart';
 import 'package:pilll/entity/diary.codegen.dart';
+import 'package:pilll/entity/schedule.codegen.dart';
 
 class CalendarTabWeekCalendarState extends WeekCalendarState {
   @override
@@ -20,6 +21,8 @@ class CalendarTabWeekCalendarState extends WeekCalendarState {
   bool isGrayoutTile(DateTime date) => date.isPreviousMonth(targetDateOfMonth);
   @override
   bool showsDiaryMark(List<Diary> diaries, DateTime date) => isExistsPostedDiary(diaries, date);
+  @override
+  bool showsScheduleMark(List<Schedule> schedules, DateTime date) => isExistsSchedule(schedules, date);
   @override
   bool showsMenstruationMark(DateTime date) => false;
   @override
