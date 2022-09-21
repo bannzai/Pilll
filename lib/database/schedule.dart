@@ -16,3 +16,14 @@ final schedulesProvider = FutureProvider.family((ref, DateTime dateForMonth) asy
       .get()
       .then((value) => value.docs.map((e) => e.data()).toList());
 });
+
+final schedulesAround90Days = StreamProvider.family((ref, DateTime base) {
+  return ref
+      .watch(databaseProvider)
+      .schedulesReference()
+      .where(ScheduleFirestoreKey.date,
+          isLessThanOrEqualTo: DateTime(base.year, base.month, 90), isGreaterThanOrEqualTo: DateTime(base.year, base.month, -90))
+      .orderBy(ScheduleFirestoreKey.date)
+      .snapshots()
+      .map((event) => event.docs.map((e) => e.data()).toList());
+});
