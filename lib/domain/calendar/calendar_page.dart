@@ -33,7 +33,7 @@ class CalendarPage extends HookConsumerWidget {
     });
 
     return state.when(
-      data: (state) => _CalendarPage(store: store, state: state, pageController: pageController),
+      data: (state) => _CalendarPage(stateNotifier: store, state: state, pageController: pageController),
       error: (error, _) => UniversalErrorPage(
         error: error,
         child: null,
@@ -45,11 +45,11 @@ class CalendarPage extends HookConsumerWidget {
 }
 
 class _CalendarPage extends StatelessWidget {
-  final CalendarPageStateNotifier store;
+  final CalendarPageStateNotifier stateNotifier;
   final CalendarPageState state;
   final PageController pageController;
 
-  const _CalendarPage({Key? key, required this.store, required this.state, required this.pageController}) : super(key: key);
+  const _CalendarPage({Key? key, required this.stateNotifier, required this.state, required this.pageController}) : super(key: key);
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -74,7 +74,7 @@ class _CalendarPage extends StatelessWidget {
         title: CalendarPageTitle(
           state: state,
           pageController: pageController,
-          store: store,
+          store: stateNotifier,
         ),
         centerTitle: true,
         elevation: 0,
@@ -138,7 +138,7 @@ class _CalendarPage extends StatelessWidget {
             Padding(
               padding: const EdgeInsets.only(left: 16, right: 16),
               child: CalendarPillSheetModifiedHistoryCard(
-                store: store,
+                store: stateNotifier,
                 state: CalendarPillSheetModifiedHistoryCardState(
                   state.pillSheetModifiedHistories,
                   isPremium: state.premiumAndTrial.isPremium,
