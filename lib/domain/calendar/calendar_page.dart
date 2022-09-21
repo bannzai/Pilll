@@ -2,6 +2,8 @@ import 'package:flutter_hooks/flutter_hooks.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
 import 'package:pilll/analytics.dart';
 import 'package:pilll/components/molecules/indicator.dart';
+import 'package:pilll/components/organisms/calendar/day/calendar_day_tile.dart';
+import 'package:pilll/components/organisms/calendar/week/week_calendar_state.dart';
 import 'package:pilll/domain/calendar/calendar_page_index_state_notifier.dart';
 import 'package:pilll/domain/calendar/calendar_page_state.codegen.dart';
 import 'package:pilll/domain/calendar/components/title/calendar_page_title.dart';
@@ -109,24 +111,38 @@ class _CalendarPage extends StatelessWidget {
                     width: MediaQuery.of(context).size.width,
                     child: MonthCalendar(
                         dateForMonth: state.displayMonth,
-                        weekCalendarBuilder: (context, monthCalendarState, weekCalendarState) {
+                        weekCalendarBuilder: (context, monthCalendarState, weekDateRange) {
                           return CalendarWeekLine(
-                            state: weekCalendarState,
+                            dateRange: weekDateRange,
                             calendarMenstruationBandModels: state.calendarMenstruationBandModels,
                             calendarScheduledMenstruationBandModels: state.calendarScheduledMenstruationBandModels,
                             calendarNextPillSheetBandModels: state.calendarNextPillSheetBandModels,
                             horizontalPadding: 0,
-                            onTap: (weekCalendarState, date) {
-                              analytics.logEvent(name: "did_select_day_tile_on_calendar_card");
-                              if (date.date().isAfter(tomorrow())) {
-                                Navigator.of(context).push(SchedulePostPageRoute.route(date));
-                              } else {
-                                transitionToDiaryPost(
-                                  context,
-                                  date,
-                                  monthCalendarState.diaries,
+                            day: (context, weekday, date) {
+                              if (state.displayMonth.isPreviousMonth(date)) {
+                                return CalendarDayTile.grayout(
+                                  weekday: weekday,
+                                  date: date,
                                 );
                               }
+                              return CalendarDayTile(
+                                weekday: weekday,
+                                date: date,
+                                shouldShowDiaryMark: isExistsPostedDiary(monthCalendarState.diaries, date),
+                                shouldShowMenstruationMark: false,
+                                onTap: (date) {
+                                  analytics.logEvent(name: "did_select_day_tile_on_calendar_card");
+                                  if (date.date().isAfter(tomorrow())) {
+                                    Navigator.of(context).push(SchedulePostPageRoute.route(date));
+                                  } else {
+                                    transitionToDiaryPost(
+                                      context,
+                                      date,
+                                      monthCalendarState.diaries,
+                                    );
+                                  }
+                                },
+                              );
                             },
                           );
                         }),
