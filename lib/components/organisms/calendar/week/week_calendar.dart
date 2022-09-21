@@ -52,23 +52,6 @@ class CalendarWeekLine extends HookConsumerWidget {
             }
 
             return day(context, weekday, date);
-
-//            if (state.isGrayoutTile(date)) {
-//              return CalendarDayTile.grayout(
-//                weekday: weekday,
-//                shouldShowMenstruationMark: state.showsMenstruationMark(date),
-//                contentAlignment: state.contentAlignment,
-//                date: date,
-//              );
-//            }
-//            return CalendarDayTile(
-//              weekday: weekday,
-//              date: date,
-//              shouldShowDiaryMark: state.showsDiaryMark(state.diariesForMonth, date),
-//              shouldShowMenstruationMark: state.showsMenstruationMark(date),
-//              contentAlignment: state.contentAlignment,
-//              onTap: (date) => onTap(state, date),
-//            );
           }).toList(),
         ),
         ...calendarMenstruationBandModels.where(_contains).map(

@@ -55,12 +55,6 @@ class CalendarDayTile extends StatelessWidget {
                   child: Align(alignment: Alignment.topCenter, child: _diaryMarkWidget()),
                 )
               ],
-              if (showsDiaryMark) ...[
-                Positioned.fill(
-                  top: 8,
-                  child: Align(alignment: Alignment.topCenter, child: _diaryMarkWidget()),
-                )
-              ],
               Positioned(
                 child: Align(
                   alignment: Alignment.center,
