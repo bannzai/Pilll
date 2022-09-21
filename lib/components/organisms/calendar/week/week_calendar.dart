@@ -152,11 +152,8 @@ void transitionWhenCalendarDayTapped(
   required List<Diary> diaries,
   required List<Schedule> schedules,
 }) {
-  if (date.date().isAfter(tomorrow())) {
-    Navigator.of(context).push(SchedulePostPageRoute.route(date));
-    return;
-  }
   if (date.date().isAfter(today())) {
+    Navigator.of(context).push(SchedulePostPageRoute.route(date));
     return;
   }
 
