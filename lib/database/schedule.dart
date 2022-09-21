@@ -4,7 +4,7 @@ import 'package:riverpod/riverpod.dart';
 import 'package:pilll/util/datetime/day.dart';
 
 final schedulesProvider = FutureProvider.family((ref, DateTime dateForMonth) async {
-  final range = dateForMonth.dateTimeRange();
+  final range = MonthDateTimeRange.monthRange(dateForMonth: dateForMonth);
   return await ref
       .watch(databaseProvider)
       .schedulesReference()

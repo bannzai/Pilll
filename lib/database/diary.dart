@@ -7,7 +7,7 @@ import 'package:pilll/util/datetime/day.dart';
 final diaryDatastoreProvider = Provider<DiaryDatastore>((ref) => DiaryDatastore(ref.watch(databaseProvider)));
 
 final diariesStreamForMonthProvider = StreamProvider.family((ref, DateTime dateForMonth) {
-  final range = dateForMonth.dateTimeRange();
+  final range = MonthDateTimeRange.monthRange(dateForMonth: dateForMonth);
   return ref
       .watch(databaseProvider)
       .diariesReference()

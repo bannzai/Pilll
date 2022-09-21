@@ -23,12 +23,13 @@ void main() {
     });
   });
 
-  group("#dateRange", () {
-    test("difference in 1 hour", () {
+  group("#MonthDateTimeRange.monthRange", () {
+    test("", () {
       DateTime date = DateTime.parse("2020-01-09 23:00:00.299871");
+      final range = MonthDateTimeRange.monthRange(dateForMonth: date);
 
-      expect(date.dateTimeRange().start, DateTime(2020, 1, 9));
-      expect(date.dateTimeRange().end, DateTime(2020, 1, 9, 23, 59, 59));
+      expect(range.start, DateTime(2020, 1, 1));
+      expect(range.end, DateTime(2020, 1, 31, 23, 59, 59));
     });
   });
 }
