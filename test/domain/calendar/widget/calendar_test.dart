@@ -52,14 +52,14 @@ void main() {
           child: MaterialApp(
             home: MonthCalendar(
               dateForMonth: DateTime(2020, 09, 14),
-              weekCalendarBuilder: (context, monthState, weekState) {
+              weekCalendarBuilder: (context, monthState, weekDateRange) {
                 return CalendarWeekLine(
-                  state: weekState,
+                  dateRange: weekDateRange,
                   calendarMenstruationBandModels: const [],
                   calendarScheduledMenstruationBandModels: const [],
                   calendarNextPillSheetBandModels: [model],
                   horizontalPadding: 0,
-                  onTap: (_, __) => {},
+                  day: (p0, p1, p2) => Container(),
                 );
               },
             ),
@@ -110,14 +110,14 @@ void main() {
           child: MaterialApp(
             home: MonthCalendar(
               dateForMonth: DateTime(2020, 09, 14),
-              weekCalendarBuilder: (context, monthState, weekState) {
+              weekCalendarBuilder: (context, monthState, weekDateRange) {
                 return CalendarWeekLine(
-                  state: weekState,
+                  dateRange: weekDateRange,
                   calendarMenstruationBandModels: const [],
                   calendarScheduledMenstruationBandModels: const [],
                   calendarNextPillSheetBandModels: [model],
                   horizontalPadding: 0,
-                  onTap: (_, __) => {},
+                  day: (p0, p1, p2) => Container(),
                 );
               },
             ),
@@ -155,14 +155,14 @@ void main() {
           child: MaterialApp(
             home: MonthCalendar(
               dateForMonth: DateTime(2020, 09, 14),
-              weekCalendarBuilder: (context, monthState, weekState) {
+              weekCalendarBuilder: (context, monthState, weekDateRange) {
                 return CalendarWeekLine(
-                  state: weekState,
+                  dateRange: weekDateRange,
                   calendarMenstruationBandModels: const [],
                   calendarScheduledMenstruationBandModels: const [],
                   calendarNextPillSheetBandModels: [model],
                   horizontalPadding: 0,
-                  onTap: (_, __) => {},
+                  day: (p0, p1, p2) => Container(),
                 );
               },
             ),
@@ -194,14 +194,14 @@ void main() {
           child: MaterialApp(
             home: MonthCalendar(
               dateForMonth: DateTime(2020, 09, 14),
-              weekCalendarBuilder: (context, monthState, weekState) {
+              weekCalendarBuilder: (context, monthState, weekDateRange) {
                 return CalendarWeekLine(
-                  state: weekState,
+                  dateRange: weekDateRange,
                   calendarMenstruationBandModels: const [],
                   calendarScheduledMenstruationBandModels: const [],
                   calendarNextPillSheetBandModels: [model],
                   horizontalPadding: 0,
-                  onTap: (_, __) => {},
+                  day: (p0, p1, p2) => Container(),
                 );
               },
             ),
