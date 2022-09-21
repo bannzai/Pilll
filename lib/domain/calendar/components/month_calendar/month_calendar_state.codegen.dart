@@ -3,7 +3,7 @@ import 'package:pilll/components/organisms/calendar/week/utility.dart';
 import 'package:pilll/database/diary.dart';
 import 'package:pilll/database/menstruation.dart';
 import 'package:pilll/database/schedule.dart';
-import 'package:pilll/domain/calendar/week_calendar_state.dart';
+import 'package:pilll/domain/calendar/date_range.dart';
 import 'package:pilll/entity/diary.codegen.dart';
 import 'package:pilll/entity/menstruation.codegen.dart';
 import 'package:pilll/entity/schedule.codegen.dart';
@@ -40,15 +40,6 @@ class MonthCalendarState with _$MonthCalendarState {
   }) = _MonthCalendarState;
   MonthCalendarState._();
 
-  late final WeekCalendarDateRangeCalculator _range = WeekCalendarDateRangeCalculator(dateForMonth);
-
-  List<CalendarTabWeekCalendarState> get weekCalendarStatuses => List.generate(_range.weeklineCount(), (index) => index + 1)
-      .map(
-        (line) => CalendarTabWeekCalendarState(
-          dateRange: _range.dateRangeOfLine(line),
-          diariesForMonth: diaries,
-          targetDateOfMonth: dateForMonth,
-        ),
-      )
-      .toList();
+  WeekCalendarDateRangeCalculator get _range => WeekCalendarDateRangeCalculator(dateForMonth);
+  late List<DateRange> weeks = List.generate(_range.weeklineCount(), (index) => index + 1).map((line) => _range.dateRangeOfLine(line)).toList();
 }
