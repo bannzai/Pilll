@@ -4,8 +4,7 @@ import 'package:pilll/entity/diary.codegen.dart';
 import 'package:pilll/util/datetime/date_compare.dart';
 
 bool isPostedDiary(Diary diary, DateTime date) => isSameDay(diary.date, date);
-bool isExistsPostedDiary(List<Diary> diaries, DateTime date) =>
-    diaries.where((element) => isPostedDiary(element, date)).isNotEmpty;
+bool isExistsPostedDiary(List<Diary> diaries, DateTime date) => diaries.where((element) => isPostedDiary(element, date)).isNotEmpty;
 
 extension DateTimeForCalnedarState on DateTime {
   bool isPreviousMonth(DateTime date) {
@@ -21,7 +20,7 @@ abstract class WeekCalendarState {
   List<Diary> get diariesForMonth;
 
   bool isGrayoutTile(DateTime date);
-  bool hasDiaryMark(List<Diary> diaries, DateTime date);
-  bool hasMenstruationMark(DateTime date);
+  bool showsDiaryMark(List<Diary> diaries, DateTime date);
+  bool showsMenstruationMark(DateTime date);
   Alignment get contentAlignment;
 }

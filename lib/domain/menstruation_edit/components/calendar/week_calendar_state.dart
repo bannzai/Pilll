@@ -22,15 +22,14 @@ class MenstruationEditWeekCalendarState extends WeekCalendarState {
   @override
   bool isGrayoutTile(DateTime date) => date.isPreviousMonth(dateForMonth);
   @override
-  bool hasDiaryMark(List<Diary> diaries, DateTime date) => false;
+  bool showsDiaryMark(List<Diary> diaries, DateTime date) => false;
   @override
-  bool hasMenstruationMark(DateTime date) {
+  bool showsMenstruationMark(DateTime date) {
     final menstruation = this.menstruation;
     if (menstruation == null) {
       return false;
     }
-    return DateRange(menstruation.beginDate, menstruation.endDate)
-        .inRange(date);
+    return DateRange(menstruation.beginDate, menstruation.endDate).inRange(date);
   }
 
   @override

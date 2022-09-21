@@ -19,10 +19,9 @@ class CalendarTabWeekCalendarState extends WeekCalendarState {
   @override
   bool isGrayoutTile(DateTime date) => date.isPreviousMonth(targetDateOfMonth);
   @override
-  bool hasDiaryMark(List<Diary> diaries, DateTime date) =>
-      isExistsPostedDiary(diaries, date);
+  bool showsDiaryMark(List<Diary> diaries, DateTime date) => isExistsPostedDiary(diaries, date);
   @override
-  bool hasMenstruationMark(DateTime date) => false;
+  bool showsMenstruationMark(DateTime date) => false;
   @override
   Alignment get contentAlignment => Alignment.center;
 }
