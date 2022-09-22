@@ -1,3 +1,4 @@
+import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_hooks/flutter_hooks.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
@@ -7,8 +8,8 @@ import 'package:pilll/components/atoms/color.dart';
 import 'package:pilll/components/atoms/font.dart';
 import 'package:pilll/components/atoms/text_color.dart';
 import 'package:pilll/components/molecules/indicator.dart';
+import 'package:pilll/database/database.dart';
 import 'package:pilll/domain/schedule_post/state.codegen.dart';
-import 'package:pilll/domain/schedule_post/state_notifier.dart';
 import 'package:pilll/entity/schedule.codegen.dart';
 import 'package:pilll/error/universal_error_page.dart';
 import 'package:pilll/util/const.dart';
@@ -21,7 +22,7 @@ class SchedulePostPage extends HookConsumerWidget {
   const SchedulePostPage({Key? key, required this.date}) : super(key: key);
   @override
   Widget build(BuildContext context, WidgetRef ref) {
-    final asyncState = ref.watch(schedulePostStateNotifierProvider(date));
+    final asyncState = ref.watch(schedulePostAsyncStateProvider(date));
 
     return asyncState.when(
       data: (state) => _SchedulePostPage(state: state),
@@ -50,7 +51,6 @@ class _SchedulePostPage extends HookConsumerWidget {
     final textEditingController = useTextEditingController(text: title.value);
     final focusNode = useFocusNode();
     final scrollController = useScrollController();
-    final stateNotifier = ref.watch(schedulePostStateNotifierProvider(state.date).notifier);
 
     return Scaffold(
       backgroundColor: PilllColors.white,
@@ -67,7 +67,7 @@ class _SchedulePostPage extends HookConsumerWidget {
             text: "保存",
             onPressed: state.date.date().isAfter(today())
                 ? () async {
-                    await stateNotifier.post(schedule: schedule);
+                    await ref.read(databaseProvider).schedulesReference().doc().set(schedule, SetOptions(merge: true));
                     Navigator.of(context).pop();
                   }
                 : null,
