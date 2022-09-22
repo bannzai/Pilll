@@ -11,7 +11,7 @@ part 'state.codegen.freezed.dart';
 final schedulePostAsyncStateProvider = Provider.autoDispose.family<AsyncValue<SchedulePostState>, DateTime>((ref, date) {
   final user = ref.watch(userStreamProvider);
   final premiumAndTrial = ref.watch(premiumAndTrialProvider);
-  final schedules = ref.watch(schedulesProvider(date));
+  final schedules = ref.watch(schedulesForDateProvider(date));
 
   if (user is AsyncLoading || premiumAndTrial is AsyncLoading || schedules is AsyncLoading) {
     return const AsyncValue.loading();

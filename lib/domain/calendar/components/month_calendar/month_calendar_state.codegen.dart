@@ -13,7 +13,7 @@ part 'month_calendar_state.codegen.freezed.dart';
 
 final monthCalendarStateProvider = Provider.family<AsyncValue<MonthCalendarState>, DateTime>((ref, DateTime dateForMonth) {
   final diaries = ref.watch(diariesStreamForMonthProvider(dateForMonth));
-  final schedules = ref.watch(schedulesProvider(dateForMonth));
+  final schedules = ref.watch(schedulesForMonthProvider(dateForMonth));
   final menstruations = ref.watch(menstruationsStreamForMonthProvider(dateForMonth));
 
   try {
