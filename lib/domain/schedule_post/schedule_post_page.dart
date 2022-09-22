@@ -67,7 +67,7 @@ class _SchedulePostPage extends HookConsumerWidget {
             text: "保存",
             onPressed: state.date.date().isAfter(today())
                 ? () async {
-                    await ref.read(databaseProvider).schedulesReference().doc().set(schedule, SetOptions(merge: true));
+                    await ref.read(databaseProvider).schedulesReference().doc().set(schedule.copyWith(title: title.value), SetOptions(merge: true));
                     Navigator.of(context).pop();
                   }
                 : null,
