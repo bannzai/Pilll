@@ -46,8 +46,9 @@ class _SchedulePostPage extends HookConsumerWidget {
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {
-    final schedule = state.scheduleOrNull(index: 0) ?? Schedule(title: "", date: state.date, createdDateTime: DateTime.now());
+    final schedule = state.scheduleOrNull(index: 0) ?? Schedule(title: "", remindDateTime: null, date: state.date, createdDateTime: DateTime.now());
     final title = useState(schedule.title);
+    final isOnRemind = useState(schedule.remindDateTime != null);
     final textEditingController = useTextEditingController(text: title.value);
     final focusNode = useFocusNode();
     final scrollController = useScrollController();
@@ -109,8 +110,18 @@ class _SchedulePostPage extends HookConsumerWidget {
                         focusNode: focusNode,
                       ),
                     ),
-                    SizedBox(
-                      height: MediaQuery.of(context).viewInsets.bottom + keyboardToolbarHeight + 60,
+                    SwitchListTile(
+                      title: const Text("当日9:00に通知を受け取る", style: FontType.listRow),
+                      activeColor: PilllColors.primary,
+                      onChanged: (bool value) {
+                        isOnRemind.value = value;
+                        analytics.logEvent(
+                          name: "schedule_post_remind_toggle",
+                        );
+                      },
+                      value: isOnRemind.value,
+                      // NOTE: when configured subtitle, the space between elements becomes very narrow
+                      contentPadding: const EdgeInsets.all(0),
                     ),
                   ],
                 ),
