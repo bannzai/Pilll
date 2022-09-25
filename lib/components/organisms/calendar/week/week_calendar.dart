@@ -140,16 +140,7 @@ void transitionWhenCalendarDayTapped(
     return;
   }
 
-  if (isSameDay(date.date(), today()) && isExistsSchedule(schedules, date)) {
-    showModalBottomSheet(
-      context: context,
-      builder: (context) => DiaryOrScheduleSheet(
-          showDiary: () => Navigator.of(context).push(DiaryPostPageRoute.route(date, null)),
-          showSchedule: () => Navigator.of(context).push(SchedulePostPageRoute.route(date))),
-    );
-    return;
-  }
-  if (isExistsPostedDiary(diaries, date) && isExistsSchedule(schedules, date)) {
+  if (isExistsSchedule(schedules, date)) {
     showModalBottomSheet(
       context: context,
       builder: (context) => DiaryOrScheduleSheet(
