@@ -12,20 +12,24 @@ class ScheduleFirestoreKey {
 @freezed
 class Schedule with _$Schedule {
   @JsonSerializable(explicitToJson: true)
-  const factory Schedule({
-    String? id,
-    required String title,
-    @JsonKey(
-      fromJson: NonNullTimestampConverter.timestampToDateTime,
-      toJson: NonNullTimestampConverter.dateTimeToTimestamp,
-    )
-        required DateTime date,
-    @JsonKey(
-      fromJson: NonNullTimestampConverter.timestampToDateTime,
-      toJson: NonNullTimestampConverter.dateTimeToTimestamp,
-    )
-        required DateTime createdDateTime
-  }) = _Schedule;
+  const factory Schedule(
+      {String? id,
+      required String title,
+      @JsonKey(
+        fromJson: NonNullTimestampConverter.timestampToDateTime,
+        toJson: NonNullTimestampConverter.dateTimeToTimestamp,
+      )
+          required DateTime date,
+      @JsonKey(
+        fromJson: TimestampConverter.timestampToDateTime,
+        toJson: TimestampConverter.dateTimeToTimestamp,
+      )
+          required DateTime? remindDateTime,
+      @JsonKey(
+        fromJson: NonNullTimestampConverter.timestampToDateTime,
+        toJson: NonNullTimestampConverter.dateTimeToTimestamp,
+      )
+          required DateTime createdDateTime}) = _Schedule;
   const Schedule._();
 
   factory Schedule.fromJson(Map<String, dynamic> json) => _$ScheduleFromJson(json);

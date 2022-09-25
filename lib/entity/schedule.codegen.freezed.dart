@@ -27,12 +27,15 @@ class _$ScheduleTearOff {
       required String title,
       @JsonKey(fromJson: NonNullTimestampConverter.timestampToDateTime, toJson: NonNullTimestampConverter.dateTimeToTimestamp)
           required DateTime date,
+      @JsonKey(fromJson: TimestampConverter.timestampToDateTime, toJson: TimestampConverter.dateTimeToTimestamp)
+          required DateTime? remindDateTime,
       @JsonKey(fromJson: NonNullTimestampConverter.timestampToDateTime, toJson: NonNullTimestampConverter.dateTimeToTimestamp)
           required DateTime createdDateTime}) {
     return _Schedule(
       id: id,
       title: title,
       date: date,
+      remindDateTime: remindDateTime,
       createdDateTime: createdDateTime,
     );
   }
@@ -54,6 +57,10 @@ mixin _$Schedule {
       toJson: NonNullTimestampConverter.dateTimeToTimestamp)
   DateTime get date => throw _privateConstructorUsedError;
   @JsonKey(
+      fromJson: TimestampConverter.timestampToDateTime,
+      toJson: TimestampConverter.dateTimeToTimestamp)
+  DateTime? get remindDateTime => throw _privateConstructorUsedError;
+  @JsonKey(
       fromJson: NonNullTimestampConverter.timestampToDateTime,
       toJson: NonNullTimestampConverter.dateTimeToTimestamp)
   DateTime get createdDateTime => throw _privateConstructorUsedError;
@@ -73,6 +80,8 @@ abstract class $ScheduleCopyWith<$Res> {
       String title,
       @JsonKey(fromJson: NonNullTimestampConverter.timestampToDateTime, toJson: NonNullTimestampConverter.dateTimeToTimestamp)
           DateTime date,
+      @JsonKey(fromJson: TimestampConverter.timestampToDateTime, toJson: TimestampConverter.dateTimeToTimestamp)
+          DateTime? remindDateTime,
       @JsonKey(fromJson: NonNullTimestampConverter.timestampToDateTime, toJson: NonNullTimestampConverter.dateTimeToTimestamp)
           DateTime createdDateTime});
 }
@@ -90,6 +99,7 @@ class _$ScheduleCopyWithImpl<$Res> implements $ScheduleCopyWith<$Res> {
     Object? id = freezed,
     Object? title = freezed,
     Object? date = freezed,
+    Object? remindDateTime = freezed,
     Object? createdDateTime = freezed,
   }) {
     return _then(_value.copyWith(
@@ -105,6 +115,10 @@ class _$ScheduleCopyWithImpl<$Res> implements $ScheduleCopyWith<$Res> {
           ? _value.date
           : date // ignore: cast_nullable_to_non_nullable
               as DateTime,
+      remindDateTime: remindDateTime == freezed
+          ? _value.remindDateTime
+          : remindDateTime // ignore: cast_nullable_to_non_nullable
+              as DateTime?,
       createdDateTime: createdDateTime == freezed
           ? _value.createdDateTime
           : createdDateTime // ignore: cast_nullable_to_non_nullable
@@ -123,6 +137,8 @@ abstract class _$ScheduleCopyWith<$Res> implements $ScheduleCopyWith<$Res> {
       String title,
       @JsonKey(fromJson: NonNullTimestampConverter.timestampToDateTime, toJson: NonNullTimestampConverter.dateTimeToTimestamp)
           DateTime date,
+      @JsonKey(fromJson: TimestampConverter.timestampToDateTime, toJson: TimestampConverter.dateTimeToTimestamp)
+          DateTime? remindDateTime,
       @JsonKey(fromJson: NonNullTimestampConverter.timestampToDateTime, toJson: NonNullTimestampConverter.dateTimeToTimestamp)
           DateTime createdDateTime});
 }
@@ -141,6 +157,7 @@ class __$ScheduleCopyWithImpl<$Res> extends _$ScheduleCopyWithImpl<$Res>
     Object? id = freezed,
     Object? title = freezed,
     Object? date = freezed,
+    Object? remindDateTime = freezed,
     Object? createdDateTime = freezed,
   }) {
     return _then(_Schedule(
@@ -156,6 +173,10 @@ class __$ScheduleCopyWithImpl<$Res> extends _$ScheduleCopyWithImpl<$Res>
           ? _value.date
           : date // ignore: cast_nullable_to_non_nullable
               as DateTime,
+      remindDateTime: remindDateTime == freezed
+          ? _value.remindDateTime
+          : remindDateTime // ignore: cast_nullable_to_non_nullable
+              as DateTime?,
       createdDateTime: createdDateTime == freezed
           ? _value.createdDateTime
           : createdDateTime // ignore: cast_nullable_to_non_nullable
@@ -173,6 +194,8 @@ class _$_Schedule extends _Schedule {
       required this.title,
       @JsonKey(fromJson: NonNullTimestampConverter.timestampToDateTime, toJson: NonNullTimestampConverter.dateTimeToTimestamp)
           required this.date,
+      @JsonKey(fromJson: TimestampConverter.timestampToDateTime, toJson: TimestampConverter.dateTimeToTimestamp)
+          required this.remindDateTime,
       @JsonKey(fromJson: NonNullTimestampConverter.timestampToDateTime, toJson: NonNullTimestampConverter.dateTimeToTimestamp)
           required this.createdDateTime})
       : super._();
@@ -191,13 +214,18 @@ class _$_Schedule extends _Schedule {
   final DateTime date;
   @override
   @JsonKey(
+      fromJson: TimestampConverter.timestampToDateTime,
+      toJson: TimestampConverter.dateTimeToTimestamp)
+  final DateTime? remindDateTime;
+  @override
+  @JsonKey(
       fromJson: NonNullTimestampConverter.timestampToDateTime,
       toJson: NonNullTimestampConverter.dateTimeToTimestamp)
   final DateTime createdDateTime;
 
   @override
   String toString() {
-    return 'Schedule(id: $id, title: $title, date: $date, createdDateTime: $createdDateTime)';
+    return 'Schedule(id: $id, title: $title, date: $date, remindDateTime: $remindDateTime, createdDateTime: $createdDateTime)';
   }
 
   @override
@@ -209,6 +237,8 @@ class _$_Schedule extends _Schedule {
             const DeepCollectionEquality().equals(other.title, title) &&
             const DeepCollectionEquality().equals(other.date, date) &&
             const DeepCollectionEquality()
+                .equals(other.remindDateTime, remindDateTime) &&
+            const DeepCollectionEquality()
                 .equals(other.createdDateTime, createdDateTime));
   }
 
@@ -218,6 +248,7 @@ class _$_Schedule extends _Schedule {
       const DeepCollectionEquality().hash(id),
       const DeepCollectionEquality().hash(title),
       const DeepCollectionEquality().hash(date),
+      const DeepCollectionEquality().hash(remindDateTime),
       const DeepCollectionEquality().hash(createdDateTime));
 
   @JsonKey(ignore: true)
@@ -237,6 +268,8 @@ abstract class _Schedule extends Schedule {
       required String title,
       @JsonKey(fromJson: NonNullTimestampConverter.timestampToDateTime, toJson: NonNullTimestampConverter.dateTimeToTimestamp)
           required DateTime date,
+      @JsonKey(fromJson: TimestampConverter.timestampToDateTime, toJson: TimestampConverter.dateTimeToTimestamp)
+          required DateTime? remindDateTime,
       @JsonKey(fromJson: NonNullTimestampConverter.timestampToDateTime, toJson: NonNullTimestampConverter.dateTimeToTimestamp)
           required DateTime createdDateTime}) = _$_Schedule;
   const _Schedule._() : super._();
@@ -252,6 +285,11 @@ abstract class _Schedule extends Schedule {
       fromJson: NonNullTimestampConverter.timestampToDateTime,
       toJson: NonNullTimestampConverter.dateTimeToTimestamp)
   DateTime get date;
+  @override
+  @JsonKey(
+      fromJson: TimestampConverter.timestampToDateTime,
+      toJson: TimestampConverter.dateTimeToTimestamp)
+  DateTime? get remindDateTime;
   @override
   @JsonKey(
       fromJson: NonNullTimestampConverter.timestampToDateTime,

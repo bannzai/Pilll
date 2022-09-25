@@ -11,6 +11,8 @@ _$_Schedule _$$_ScheduleFromJson(Map<String, dynamic> json) => _$_Schedule(
       title: json['title'] as String,
       date: NonNullTimestampConverter.timestampToDateTime(
           json['date'] as Timestamp),
+      remindDateTime: TimestampConverter.timestampToDateTime(
+          json['remindDateTime'] as Timestamp?),
       createdDateTime: NonNullTimestampConverter.timestampToDateTime(
           json['createdDateTime'] as Timestamp),
     );
@@ -20,6 +22,8 @@ Map<String, dynamic> _$$_ScheduleToJson(_$_Schedule instance) =>
       'id': instance.id,
       'title': instance.title,
       'date': NonNullTimestampConverter.dateTimeToTimestamp(instance.date),
+      'remindDateTime':
+          TimestampConverter.dateTimeToTimestamp(instance.remindDateTime),
       'createdDateTime': NonNullTimestampConverter.dateTimeToTimestamp(
           instance.createdDateTime),
     };
