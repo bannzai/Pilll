@@ -19,6 +19,8 @@ jobs:
     - uses: maxim-lobanov/setup-xcode@v1
       with:
         xcode-version: latest-stable
+    - name: print xcode version
+      run: sudo xcode-select -p
     - uses: actions/setup-java@v1
       with:
         java-version: '12.x'
