@@ -67,6 +67,7 @@ class _SchedulePostPage extends HookConsumerWidget {
             text: "保存",
             onPressed: state.date.date().isAfter(today())
                 ? () async {
+                    analytics.logEvent(name: "schedule_post_pressed");
                     await ref.read(databaseProvider).schedulesReference().doc().set(schedule.copyWith(title: title.value), SetOptions(merge: true));
                     Navigator.of(context).pop();
                   }
@@ -134,7 +135,7 @@ class _SchedulePostPage extends HookConsumerWidget {
             AlertButton(
               text: '完了',
               onPressed: () async {
-                analytics.logEvent(name: "post_schedule_done_button_pressed");
+                analytics.logEvent(name: "schedule_post_toolbar_done");
                 focusNode.unfocus();
               },
             ),
