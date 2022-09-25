@@ -53,6 +53,8 @@ class _SchedulePostPage extends HookConsumerWidget {
     final focusNode = useFocusNode();
     final scrollController = useScrollController();
 
+    isInvalid() => state.date.date().isAfter(today()) || title.value.isEmpty;
+
     return Scaffold(
       backgroundColor: PilllColors.white,
       resizeToAvoidBottomInset: false,
@@ -66,10 +68,16 @@ class _SchedulePostPage extends HookConsumerWidget {
         actions: [
           AlertButton(
             text: "保存",
-            onPressed: state.date.date().isAfter(today())
+            onPressed: isInvalid()
                 ? () async {
                     analytics.logEvent(name: "schedule_post_pressed");
-                    await ref.read(databaseProvider).schedulesReference().doc().set(schedule.copyWith(title: title.value), SetOptions(merge: true));
+                    await ref.read(databaseProvider).schedulesReference().doc().set(
+                          schedule.copyWith(
+                            title: title.value,
+                            remindDateTime: isOnRemind.value ? DateTime(state.date.year, state.date.month, state.date.day, 9) : null,
+                          ),
+                          SetOptions(merge: true),
+                        );
                     Navigator.of(context).pop();
                   }
                 : null,
@@ -114,10 +122,10 @@ class _SchedulePostPage extends HookConsumerWidget {
                       title: const Text("当日9:00に通知を受け取る", style: FontType.listRow),
                       activeColor: PilllColors.primary,
                       onChanged: (bool value) {
-                        isOnRemind.value = value;
                         analytics.logEvent(
                           name: "schedule_post_remind_toggle",
                         );
+                        isOnRemind.value = value;
                       },
                       value: isOnRemind.value,
                       // NOTE: when configured subtitle, the space between elements becomes very narrow
