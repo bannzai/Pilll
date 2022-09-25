@@ -1,4 +1,5 @@
 import 'dart:async';
+
 import 'dart:math';
 
 import 'package:flutter_local_notifications/flutter_local_notifications.dart';
@@ -24,7 +25,7 @@ const notificationIdentifierOffsetBase = 100000;
 const scheduleNotificationIdentifierOffset = 1 * notificationIdentifierOffsetBase;
 
 // NOTE: It can not be use Future.wait(processes) when register notification.
-class LocalNotification {
+class LocalNotificationService {
   final plugin = FlutterLocalNotificationsPlugin();
 
   static Future<void> setupTimeZone() async {
@@ -102,4 +103,4 @@ class LocalNotification {
   }
 }
 
-final localNotification = LocalNotification();
+final localNotificationService = LocalNotificationService();

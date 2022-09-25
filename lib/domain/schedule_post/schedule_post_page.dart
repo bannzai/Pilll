@@ -1,3 +1,5 @@
+import 'dart:math';
+
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_hooks/flutter_hooks.dart';
@@ -12,6 +14,7 @@ import 'package:pilll/database/database.dart';
 import 'package:pilll/domain/schedule_post/state.codegen.dart';
 import 'package:pilll/entity/schedule.codegen.dart';
 import 'package:pilll/error/universal_error_page.dart';
+import 'package:pilll/service/local_notification.dart';
 import 'package:pilll/util/const.dart';
 import 'package:pilll/util/formatter/date_time_formatter.dart';
 import 'package:pilll/util/datetime/day.dart';
@@ -46,12 +49,19 @@ class _SchedulePostPage extends HookConsumerWidget {
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {
-    final schedule = state.scheduleOrNull(index: 0) ?? Schedule(title: "", remindDateTime: null, date: state.date, createdDateTime: DateTime.now());
+    final schedule =
+        state.scheduleOrNull(index: 0) ?? Schedule(title: "", localNotification: null, date: state.date, createdDateTime: DateTime.now());
     final title = useState(schedule.title);
-    final isOnRemind = useState(schedule.remindDateTime != null);
+    final isOnRemind = useState(schedule.localNotification != null);
     final textEditingController = useTextEditingController(text: title.value);
     final focusNode = useFocusNode();
     final scrollController = useScrollController();
+    final localNotification = isOnRemind.value
+        ? LocalNotification(
+            localNotificationID: Random().nextInt(scheduleNotificationIdentifierOffset),
+            remindDateTime: DateTime(state.date.year, state.date.month, state.date.day, 9),
+          )
+        : null;
 
     isInvalid() => state.date.date().isAfter(today()) || title.value.isEmpty;
 
@@ -71,10 +81,20 @@ class _SchedulePostPage extends HookConsumerWidget {
             onPressed: isInvalid()
                 ? () async {
                     analytics.logEvent(name: "schedule_post_pressed");
+                    if (localNotification == null) {
+                      final localNotificationID = schedule.localNotification?.localNotificationID;
+                      if (localNotificationID != null) {
+                        await localNotificationService.cancelNotification(localNotificationID: localNotificationID);
+                      }
+                    }
+                    if (localNotification != null) {
+                      await localNotificationService.scheduleCalendarScheduleNotification(schedule: schedule);
+                    }
+
                     await ref.read(databaseProvider).schedulesReference().doc().set(
                           schedule.copyWith(
                             title: title.value,
-                            remindDateTime: isOnRemind.value ? DateTime(state.date.year, state.date.month, state.date.day, 9) : null,
+                            localNotification: localNotification,
                           ),
                           SetOptions(merge: true),
                         );
