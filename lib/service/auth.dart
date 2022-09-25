@@ -1,5 +1,5 @@
 import 'dart:async';
-
+import 'package:firebase_auth/firebase_auth.dart';
 import 'package:pilll/analytics.dart';
 import 'package:pilll/auth/apple.dart';
 import 'package:pilll/auth/google.dart';
@@ -17,8 +17,7 @@ final authStateStreamProvider = StreamProvider<User>(
   (ref) => _userAuthStateChanges().where((event) => event != null).cast(),
 );
 
-final isLinkedProvider =
-    Provider((ref) => apple.isLinkedApple() || google.isLinkedGoogle());
+final isLinkedProvider = Provider((ref) => apple.isLinkedApple() || google.isLinkedGoogle());
 
 class AuthService {
   // 退会時は一時的にnullになる。なのでOptional型のこのstreamを使う
@@ -57,9 +56,7 @@ Future<User> cachedUserOrSignInAnonymously() async {
   );
 
   if (currentUser != null) {
-    analytics.logEvent(
-        name: "cached_current_user_exists",
-        parameters: _logginParameters(currentUser));
+    analytics.logEvent(name: "cached_current_user_exists", parameters: _logginParameters(currentUser));
 
     final sharedPreferences = await SharedPreferences.getInstance();
     final existsUID = sharedPreferences.getString(StringKey.currentUserUID);
@@ -93,26 +90,21 @@ Future<User> cachedUserOrSignInAnonymously() async {
     }
 
     final anonymousUser = await FirebaseAuth.instance.signInAnonymously();
-    analytics.logEvent(
-        name: "signin_anonymously",
-        parameters: _logginParameters(anonymousUser.user));
+    analytics.logEvent(name: "signin_anonymously", parameters: _logginParameters(anonymousUser.user));
 
     final sharedPreferences = await SharedPreferences.getInstance();
-    final existsUID =
-        sharedPreferences.getString(StringKey.lastSignInAnonymousUID);
+    final existsUID = sharedPreferences.getString(StringKey.lastSignInAnonymousUID);
     if (existsUID == null || existsUID.isEmpty) {
       final user = anonymousUser.user;
       if (user != null) {
-        await sharedPreferences.setString(
-            StringKey.lastSignInAnonymousUID, user.uid);
+        await sharedPreferences.setString(StringKey.lastSignInAnonymousUID, user.uid);
       }
     }
 
     // keep until FirebaseAuth.instance user state updated
     final obtainLatestChangedUserState = Future<User>(() {
       final completer = Completer<User>();
-      final Stream<User> nonOptionalStream =
-          _userAuthStateChanges().where((event) => event != null).cast();
+      final Stream<User> nonOptionalStream = _userAuthStateChanges().where((event) => event != null).cast();
 
       StreamSubscription<User>? subscription;
       subscription = nonOptionalStream.listen((firebaseUser) {
@@ -136,11 +128,7 @@ Map<String, dynamic> _logginParameters(User? currentUser) {
   return {
     "uid": currentUser.uid,
     "isAnonymous": currentUser.isAnonymous,
-    "hasGoogleProviderData": currentUser.providerData
-        .where((element) => element.providerId == googleProviderID)
-        .isNotEmpty,
-    "hasAppleProviderData": currentUser.providerData
-        .where((element) => element.providerId == appleProviderID)
-        .isNotEmpty,
+    "hasGoogleProviderData": currentUser.providerData.where((element) => element.providerId == googleProviderID).isNotEmpty,
+    "hasAppleProviderData": currentUser.providerData.where((element) => element.providerId == appleProviderID).isNotEmpty,
   };
 }
