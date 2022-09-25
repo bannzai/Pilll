@@ -16,6 +16,11 @@ jobs:
     if: ${{ !contains(github.event.pull_request.title, '[Skip CI]') }}
     steps:
     - uses: actions/checkout@v1
+    - uses: maxim-lobanov/setup-xcode@v1
+      with:
+        xcode-version: '14.0'
+    - name: print xcode version
+      run: sudo xcode-select -p
     - uses: actions/setup-java@v1
       with:
         java-version: '12.x'
