@@ -92,7 +92,7 @@ class _SchedulePostPage extends HookConsumerWidget {
                         await localNotificationService.scheduleCalendarScheduleNotification(schedule: newSchedule);
                       }
 
-                      await ref.read(databaseProvider).schedulesReference().doc().set(
+                      await ref.read(databaseProvider).schedulesReference().doc(newSchedule.id).set(
                             newSchedule,
                             SetOptions(merge: true),
                           );
