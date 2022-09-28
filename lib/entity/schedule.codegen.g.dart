@@ -19,15 +19,23 @@ _$_Schedule _$$_ScheduleFromJson(Map<String, dynamic> json) => _$_Schedule(
           json['createdDateTime'] as Timestamp),
     );
 
-Map<String, dynamic> _$$_ScheduleToJson(_$_Schedule instance) =>
-    <String, dynamic>{
-      'id': instance.id,
-      'title': instance.title,
-      'date': NonNullTimestampConverter.dateTimeToTimestamp(instance.date),
-      'localNotification': instance.localNotification?.toJson(),
-      'createdDateTime': NonNullTimestampConverter.dateTimeToTimestamp(
-          instance.createdDateTime),
-    };
+Map<String, dynamic> _$$_ScheduleToJson(_$_Schedule instance) {
+  final val = <String, dynamic>{};
+
+  void writeNotNull(String key, dynamic value) {
+    if (value != null) {
+      val[key] = value;
+    }
+  }
+
+  writeNotNull('id', toNull(instance.id));
+  val['title'] = instance.title;
+  val['date'] = NonNullTimestampConverter.dateTimeToTimestamp(instance.date);
+  val['localNotification'] = instance.localNotification?.toJson();
+  val['createdDateTime'] =
+      NonNullTimestampConverter.dateTimeToTimestamp(instance.createdDateTime);
+  return val;
+}
 
 _$_LocalNotification _$$_LocalNotificationFromJson(Map<String, dynamic> json) =>
     _$_LocalNotification(

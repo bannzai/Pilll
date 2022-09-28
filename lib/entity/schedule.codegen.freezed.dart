@@ -23,7 +23,8 @@ class _$ScheduleTearOff {
   const _$ScheduleTearOff();
 
   _Schedule call(
-      {String? id,
+      {@JsonKey(includeIfNull: false, toJson: toNull)
+          String? id,
       required String title,
       @JsonKey(fromJson: NonNullTimestampConverter.timestampToDateTime, toJson: NonNullTimestampConverter.dateTimeToTimestamp)
           required DateTime date,
@@ -49,6 +50,7 @@ const $Schedule = _$ScheduleTearOff();
 
 /// @nodoc
 mixin _$Schedule {
+  @JsonKey(includeIfNull: false, toJson: toNull)
   String? get id => throw _privateConstructorUsedError;
   String get title => throw _privateConstructorUsedError;
   @JsonKey(
@@ -73,7 +75,8 @@ abstract class $ScheduleCopyWith<$Res> {
   factory $ScheduleCopyWith(Schedule value, $Res Function(Schedule) then) =
       _$ScheduleCopyWithImpl<$Res>;
   $Res call(
-      {String? id,
+      {@JsonKey(includeIfNull: false, toJson: toNull)
+          String? id,
       String title,
       @JsonKey(fromJson: NonNullTimestampConverter.timestampToDateTime, toJson: NonNullTimestampConverter.dateTimeToTimestamp)
           DateTime date,
@@ -142,7 +145,8 @@ abstract class _$ScheduleCopyWith<$Res> implements $ScheduleCopyWith<$Res> {
       __$ScheduleCopyWithImpl<$Res>;
   @override
   $Res call(
-      {String? id,
+      {@JsonKey(includeIfNull: false, toJson: toNull)
+          String? id,
       String title,
       @JsonKey(fromJson: NonNullTimestampConverter.timestampToDateTime, toJson: NonNullTimestampConverter.dateTimeToTimestamp)
           DateTime date,
@@ -201,7 +205,8 @@ class __$ScheduleCopyWithImpl<$Res> extends _$ScheduleCopyWithImpl<$Res>
 @JsonSerializable(explicitToJson: true)
 class _$_Schedule extends _Schedule {
   const _$_Schedule(
-      {this.id,
+      {@JsonKey(includeIfNull: false, toJson: toNull)
+          this.id,
       required this.title,
       @JsonKey(fromJson: NonNullTimestampConverter.timestampToDateTime, toJson: NonNullTimestampConverter.dateTimeToTimestamp)
           required this.date,
@@ -214,6 +219,7 @@ class _$_Schedule extends _Schedule {
       _$$_ScheduleFromJson(json);
 
   @override
+  @JsonKey(includeIfNull: false, toJson: toNull)
   final String? id;
   @override
   final String title;
@@ -271,7 +277,8 @@ class _$_Schedule extends _Schedule {
 
 abstract class _Schedule extends Schedule {
   const factory _Schedule(
-      {String? id,
+      {@JsonKey(includeIfNull: false, toJson: toNull)
+          String? id,
       required String title,
       @JsonKey(fromJson: NonNullTimestampConverter.timestampToDateTime, toJson: NonNullTimestampConverter.dateTimeToTimestamp)
           required DateTime date,
@@ -283,6 +290,7 @@ abstract class _Schedule extends Schedule {
   factory _Schedule.fromJson(Map<String, dynamic> json) = _$_Schedule.fromJson;
 
   @override
+  @JsonKey(includeIfNull: false, toJson: toNull)
   String? get id;
   @override
   String get title;

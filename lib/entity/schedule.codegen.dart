@@ -1,3 +1,4 @@
+import 'package:pilll/entity/firestore_document_id_escaping_to_json.dart';
 import 'package:pilll/entity/firestore_timestamp_converter.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
@@ -13,7 +14,8 @@ class ScheduleFirestoreKey {
 class Schedule with _$Schedule {
   @JsonSerializable(explicitToJson: true)
   const factory Schedule({
-    String? id,
+    @JsonKey(includeIfNull: false, toJson: toNull)
+        String? id,
     required String title,
     @JsonKey(
       fromJson: NonNullTimestampConverter.timestampToDateTime,
