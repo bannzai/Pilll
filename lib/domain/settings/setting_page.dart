@@ -6,6 +6,7 @@ import 'package:pilll/components/atoms/buttons.dart';
 import 'package:pilll/components/atoms/font.dart';
 import 'package:pilll/components/molecules/indicator.dart';
 import 'package:pilll/components/page/discard_dialog.dart';
+import 'package:pilll/components/page/web_view.dart';
 import 'package:pilll/domain/settings/components/rows/creating_new_pillsheet.dart';
 import 'package:pilll/domain/settings/components/rows/health_care.dart';
 import 'package:pilll/domain/settings/components/rows/menstruation.dart';
@@ -101,6 +102,27 @@ class SettingPageBody extends StatelessWidget {
                         onTap: () {
                           analytics.logEvent(name: "did_select_about_trial", parameters: {});
                           launchUrl(Uri.parse("https://pilll.wraptas.site/3abd690f501549c48f813fd310b5f242"), mode: LaunchMode.inAppWebView);
+                        },
+                      ),
+                      _separator(),
+                    ],
+                    if (state.premiumAndTrial.isPremium) ...[
+                      ListTile(
+                        title: const Text("解約はこちら", style: FontType.listRow),
+                        onTap: () async {
+                          analytics.logEvent(name: "did_select_churn", parameters: {});
+                          await Navigator.of(context).push(
+                            WebViewPageRoute.route(
+                              title: "解約時アンケートご協力のお願い",
+                              url: "https://docs.google.com/forms/d/e/1FAIpQLScmxg1amJik_8viuPI3MeDCzz7FuBDXeIHWzorbXRKR38yp7g/viewform",
+                            ),
+                          );
+                          if (Platform.isAndroid) {
+                            launchUrl(Uri.parse("https://play.google.com/store/account/subscriptions"), mode: LaunchMode.externalApplication);
+                          }
+                          if (Platform.isIOS) {
+                            launchUrl(Uri.parse("https://apps.apple.com/account/subscriptions"), mode: LaunchMode.externalApplication);
+                          }
                         },
                       ),
                       _separator(),
