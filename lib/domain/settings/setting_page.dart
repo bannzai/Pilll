@@ -7,6 +7,7 @@ import 'package:pilll/components/atoms/font.dart';
 import 'package:pilll/components/molecules/indicator.dart';
 import 'package:pilll/components/page/discard_dialog.dart';
 import 'package:pilll/components/page/web_view.dart';
+import 'package:pilll/domain/settings/components/churn/churn_survey_complete_dialog.dart';
 import 'package:pilll/domain/settings/components/rows/creating_new_pillsheet.dart';
 import 'package:pilll/domain/settings/components/rows/health_care.dart';
 import 'package:pilll/domain/settings/components/rows/menstruation.dart';
@@ -23,6 +24,7 @@ import 'package:pilll/domain/settings/components/rows/today_pill_number.dart';
 import 'package:pilll/domain/settings/components/rows/update_from_132.dart';
 import 'package:pilll/domain/settings/components/setting_section_title.dart';
 import 'package:pilll/domain/settings/setting_page_state.codegen.dart';
+import 'package:pilll/error/error_alert.dart';
 import 'package:pilll/error/universal_error_page.dart';
 import 'package:pilll/domain/settings/components/inquiry/inquiry.dart';
 import 'package:pilll/domain/settings/setting_page_state_notifier.dart';
@@ -117,12 +119,7 @@ class SettingPageBody extends StatelessWidget {
                               url: "https://docs.google.com/forms/d/e/1FAIpQLScmxg1amJik_8viuPI3MeDCzz7FuBDXeIHWzorbXRKR38yp7g/viewform",
                             ),
                           );
-                          if (Platform.isAndroid) {
-                            launchUrl(Uri.parse("https://play.google.com/store/account/subscriptions"), mode: LaunchMode.externalApplication);
-                          }
-                          if (Platform.isIOS) {
-                            launchUrl(Uri.parse("https://apps.apple.com/account/subscriptions"), mode: LaunchMode.externalApplication);
-                          }
+                          showDialog(context: context, builder: (_) => const ChurnSurveyCompleteDialog());
                         },
                       ),
                       _separator(),
