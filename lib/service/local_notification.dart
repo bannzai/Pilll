@@ -2,6 +2,7 @@ import 'dart:async';
 
 import 'dart:math';
 
+import 'package:flutter/material.dart';
 import 'package:flutter_local_notifications/flutter_local_notifications.dart';
 import 'package:pilll/entity/schedule.codegen.dart';
 import 'package:pilll/util/datetime/day.dart';
@@ -39,6 +40,7 @@ class LocalNotificationService {
         android: AndroidInitializationSettings(
           "@mipmap/ic_launcher",
         ),
+        iOS: DarwinInitializationSettings(defaultPresentAlert: true, defaultPresentBadge: true, defaultPresentSound: true),
       ),
     );
   }
@@ -48,11 +50,13 @@ class LocalNotificationService {
   }) async {
     final localNotification = schedule.localNotification;
     if (localNotification != null) {
+      final remindDate = tz.TZDateTime.from(localNotification.remindDateTime, tz.local);
+      debugPrint("$remindDate");
       await plugin.zonedSchedule(
         localNotification.localNotificationID,
         "本日の予定です",
         schedule.title,
-        tz.TZDateTime.from(localNotification.remindDateTime, tz.local),
+        remindDate,
         const NotificationDetails(
           android: AndroidNotificationDetails(
             androidReminderNotificationChannelID,
@@ -62,7 +66,6 @@ class LocalNotificationService {
           ),
           iOS: DarwinNotificationDetails(
             sound: "becho.caf",
-            presentSound: true,
           ),
         ),
         androidAllowWhileIdle: true,

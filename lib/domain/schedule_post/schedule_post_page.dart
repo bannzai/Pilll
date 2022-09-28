@@ -11,7 +11,6 @@ import 'package:pilll/components/atoms/font.dart';
 import 'package:pilll/components/atoms/text_color.dart';
 import 'package:pilll/components/molecules/indicator.dart';
 import 'package:pilll/database/database.dart';
-import 'package:pilll/domain/record/components/pill_sheet/components/record_page_rest_duration_dialog.dart';
 import 'package:pilll/domain/schedule_post/state.codegen.dart';
 import 'package:pilll/entity/schedule.codegen.dart';
 import 'package:pilll/error/error_alert.dart';
@@ -58,13 +57,6 @@ class _SchedulePostPage extends HookConsumerWidget {
     final textEditingController = useTextEditingController(text: title.value);
     final focusNode = useFocusNode();
     final scrollController = useScrollController();
-    final localNotification = isOnRemind.value
-        ? LocalNotification(
-            localNotificationID: Random().nextInt(scheduleNotificationIdentifierOffset),
-            remindDateTime: DateTime(state.date.year, state.date.month, state.date.day, 9),
-          )
-        : null;
-
     isInvalid() => state.date.date().isAfter(today()) || title.value.isEmpty;
 
     return Scaffold(
@@ -84,21 +76,24 @@ class _SchedulePostPage extends HookConsumerWidget {
                 ? () async {
                     analytics.logEvent(name: "schedule_post_pressed");
                     try {
-                      if (localNotification == null) {
-                        final localNotificationID = schedule.localNotification?.localNotificationID;
-                        if (localNotificationID != null) {
-                          await localNotificationService.cancelNotification(localNotificationID: localNotificationID);
-                        }
+                      final localNotificationID = schedule.localNotification?.localNotificationID;
+                      if (localNotificationID != null) {
+                        await localNotificationService.cancelNotification(localNotificationID: localNotificationID);
                       }
-                      if (localNotification != null) {
-                        await localNotificationService.scheduleCalendarScheduleNotification(schedule: schedule);
+
+                      final newSchedule = schedule.copyWith(
+                        title: title.value,
+                        localNotification: LocalNotification(
+                          localNotificationID: Random().nextInt(scheduleNotificationIdentifierOffset),
+                          remindDateTime: DateTime(state.date.year, state.date.month, state.date.day, 9),
+                        ),
+                      );
+                      if (isOnRemind.value) {
+                        await localNotificationService.scheduleCalendarScheduleNotification(schedule: newSchedule);
                       }
 
                       await ref.read(databaseProvider).schedulesReference().doc().set(
-                            schedule.copyWith(
-                              title: title.value,
-                              localNotification: localNotification,
-                            ),
+                            newSchedule,
                             SetOptions(merge: true),
                           );
                       Navigator.of(context).pop();
