@@ -4,30 +4,28 @@ import 'package:pilll/components/atoms/font.dart';
 import 'package:pilll/components/atoms/text_color.dart';
 import 'package:pilll/domain/calendar/components/month_calendar/month_calendar.dart';
 import 'package:pilll/entity/weekday.dart';
+import 'package:pilll/util/datetime/date_compare.dart';
+import 'package:pilll/util/datetime/day.dart';
 
 class CalendarDayTile extends StatelessWidget {
   final DateTime date;
   final Weekday weekday;
-  final bool isToday;
-  final bool shouldShowDiaryMark;
-  final bool shouldShowMenstruationMark;
-  final Alignment contentAlignment;
+  final bool showsDiaryMark;
+  final bool showsScheduleMark;
+  final bool showsMenstruationMark;
   final Function(DateTime)? onTap;
 
   const CalendarDayTile.grayout({
     Key? key,
     required DateTime date,
     required Weekday weekday,
-    required bool shouldShowMenstruationMark,
-    required Alignment contentAlignment,
   }) : this(
           key: key,
-          isToday: false,
           onTap: null,
           weekday: weekday,
-          shouldShowDiaryMark: false,
-          shouldShowMenstruationMark: shouldShowMenstruationMark,
-          contentAlignment: contentAlignment,
+          showsDiaryMark: false,
+          showsScheduleMark: false,
+          showsMenstruationMark: false,
           date: date,
         );
 
@@ -35,10 +33,9 @@ class CalendarDayTile extends StatelessWidget {
     Key? key,
     required this.date,
     required this.weekday,
-    required this.isToday,
-    required this.shouldShowDiaryMark,
-    required this.shouldShowMenstruationMark,
-    required this.contentAlignment,
+    required this.showsDiaryMark,
+    required this.showsScheduleMark,
+    required this.showsMenstruationMark,
     required this.onTap,
   }) : super(key: key);
 
@@ -52,17 +49,30 @@ class CalendarDayTile extends StatelessWidget {
           height: CalendarConstants.tileHeight,
           child: Stack(
             children: <Widget>[
-              if (shouldShowDiaryMark) ...[
-                Positioned.fill(
-                  top: 8,
-                  child: Align(
-                      alignment: Alignment.topCenter,
-                      child: _diaryMarkWidget()),
-                )
-              ],
+              Positioned.fill(
+                top: 8,
+                child: Align(
+                  alignment: Alignment.topCenter,
+                  child: Row(
+                    children: [
+                      const Spacer(),
+                      if (showsDiaryMark) ...[
+                        _diaryMarkWidget(),
+                      ],
+                      if (showsDiaryMark && showsScheduleMark) ...[
+                        const SizedBox(width: 4),
+                      ],
+                      if (showsScheduleMark) ...[
+                        _scheduleMarkWidget(),
+                      ],
+                      const Spacer(),
+                    ],
+                  ),
+                ),
+              ),
               Positioned(
                 child: Align(
-                  alignment: contentAlignment,
+                  alignment: Alignment.center,
                   child: _content(),
                 ),
               ),
@@ -79,7 +89,7 @@ class CalendarDayTile extends StatelessWidget {
       height: 40,
       child: Stack(
         children: [
-          if (shouldShowMenstruationMark)
+          if (showsMenstruationMark)
             Positioned.fill(
               child: Align(
                 alignment: Alignment.center,
@@ -93,7 +103,7 @@ class CalendarDayTile extends StatelessWidget {
                 ),
               ),
             ),
-          if (isToday)
+          if (_isToday)
             Positioned(
               child: Align(
                 alignment: Alignment.center,
@@ -126,7 +136,7 @@ class CalendarDayTile extends StatelessWidget {
   }
 
   Color _textColor() {
-    if (isToday) {
+    if (_isToday) {
       return PilllColors.white;
     }
     final weekdayColor = () {
@@ -156,8 +166,17 @@ class CalendarDayTile extends StatelessWidget {
     return Container(
       width: 8,
       height: 8,
-      decoration: BoxDecoration(
-          color: PilllColors.gray, borderRadius: BorderRadius.circular(4)),
+      decoration: BoxDecoration(color: PilllColors.gray, borderRadius: BorderRadius.circular(4)),
     );
   }
+
+  Widget _scheduleMarkWidget() {
+    return Container(
+      width: 8,
+      height: 8,
+      decoration: BoxDecoration(color: PilllColors.secondary, borderRadius: BorderRadius.circular(4)),
+    );
+  }
+
+  bool get _isToday => isSameDay(date, today());
 }

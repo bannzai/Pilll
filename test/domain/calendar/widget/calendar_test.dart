@@ -14,8 +14,7 @@ void main() {
   setUp(() {
     TestWidgetsFlutterBinding.ensureInitialized();
     SharedPreferences.setMockInitialValues({});
-    WidgetsBinding.instance.renderView.configuration =
-        TestViewConfiguration(size: const Size(375.0, 667.0));
+    WidgetsBinding.instance.renderView.configuration = TestViewConfiguration(size: const Size(375.0, 667.0));
   });
   group("Appearance Next Sheet Label", () {
     testWidgets('when showing 新しいシート開始 ▶︎', (WidgetTester tester) async {
@@ -31,8 +30,7 @@ void main() {
   27   28  29  30  
     */
       var now = DateTime(2020, 09, 14);
-      var model = CalendarNextPillSheetBandModel(
-          DateTime(2020, 09, 15), DateTime(2020, 09, 18));
+      var model = CalendarNextPillSheetBandModel(DateTime(2020, 09, 15), DateTime(2020, 09, 18));
       final diaries = [Diary.fromDate(now)];
 
       await tester.pumpWidget(
@@ -44,6 +42,7 @@ void main() {
                   MonthCalendarState(
                     dateForMonth: argument,
                     diaries: diaries,
+                    schedules: [],
                     menstruations: [],
                   ),
                 ),
@@ -53,14 +52,14 @@ void main() {
           child: MaterialApp(
             home: MonthCalendar(
               dateForMonth: DateTime(2020, 09, 14),
-              weekCalendarBuilder: (context, monthState, weekState) {
-                return CalendarWeekdayLine(
-                  state: weekState,
+              weekCalendarBuilder: (context, monthState, weekDateRange) {
+                return CalendarWeekLine(
+                  dateRange: weekDateRange,
                   calendarMenstruationBandModels: const [],
                   calendarScheduledMenstruationBandModels: const [],
                   calendarNextPillSheetBandModels: [model],
                   horizontalPadding: 0,
-                  onTap: (_, __) => {},
+                  day: (p0, p1, p2) => Container(),
                 );
               },
             ),
@@ -73,13 +72,10 @@ void main() {
       expect(find.byType(CalendarNextPillSheetBand), findsOneWidget);
       expect(
           find.byWidgetPredicate((widget) =>
-              (widget is CalendarNextPillSheetBand &&
-                  DateRange.isSameDay(widget.begin, model.begin) &&
-                  DateRange.isSameDay(widget.end, model.end))),
+              (widget is CalendarNextPillSheetBand && DateRange.isSameDay(widget.begin, model.begin) && DateRange.isSameDay(widget.end, model.end))),
           findsOneWidget);
     });
-    testWidgets('when showing 新しいシート開始 ▶︎ with linebreak',
-        (WidgetTester tester) async {
+    testWidgets('when showing 新しいシート開始 ▶︎ with linebreak', (WidgetTester tester) async {
       /*
   30   31   1   2   3   4   5  
 
@@ -92,8 +88,7 @@ void main() {
   27   28  29  30  
     */
       var now = DateTime(2020, 09, 14);
-      var model = CalendarNextPillSheetBandModel(
-          DateTime(2020, 09, 19), DateTime(2020, 09, 21));
+      var model = CalendarNextPillSheetBandModel(DateTime(2020, 09, 19), DateTime(2020, 09, 21));
       final diaries = [Diary.fromDate(now)];
 
       await tester.pumpWidget(
@@ -105,6 +100,7 @@ void main() {
                   MonthCalendarState(
                     dateForMonth: argument,
                     diaries: diaries,
+                    schedules: [],
                     menstruations: [],
                   ),
                 ),
@@ -114,14 +110,14 @@ void main() {
           child: MaterialApp(
             home: MonthCalendar(
               dateForMonth: DateTime(2020, 09, 14),
-              weekCalendarBuilder: (context, monthState, weekState) {
-                return CalendarWeekdayLine(
-                  state: weekState,
+              weekCalendarBuilder: (context, monthState, weekDateRange) {
+                return CalendarWeekLine(
+                  dateRange: weekDateRange,
                   calendarMenstruationBandModels: const [],
                   calendarScheduledMenstruationBandModels: const [],
                   calendarNextPillSheetBandModels: [model],
                   horizontalPadding: 0,
-                  onTap: (_, __) => {},
+                  day: (p0, p1, p2) => Container(),
                 );
               },
             ),
@@ -134,15 +130,11 @@ void main() {
       expect(find.byType(CalendarNextPillSheetBand), findsNWidgets(2));
       expect(
           find.byWidgetPredicate((widget) =>
-              (widget is CalendarNextPillSheetBand &&
-                  DateRange.isSameDay(widget.begin, model.begin) &&
-                  DateRange.isSameDay(widget.end, model.end))),
+              (widget is CalendarNextPillSheetBand && DateRange.isSameDay(widget.begin, model.begin) && DateRange.isSameDay(widget.end, model.end))),
           findsNWidgets(2));
     });
-    testWidgets('when showing new sheet label to next month',
-        (WidgetTester tester) async {
-      final model = CalendarNextPillSheetBandModel(
-          DateTime(2020, 10, 15), DateTime(2020, 10, 18));
+    testWidgets('when showing new sheet label to next month', (WidgetTester tester) async {
+      final model = CalendarNextPillSheetBandModel(DateTime(2020, 10, 15), DateTime(2020, 10, 18));
 
       await tester.pumpWidget(
         ProviderScope(
@@ -153,6 +145,7 @@ void main() {
                   MonthCalendarState(
                     dateForMonth: argument,
                     diaries: [],
+                    schedules: [],
                     menstruations: [],
                   ),
                 ),
@@ -162,14 +155,14 @@ void main() {
           child: MaterialApp(
             home: MonthCalendar(
               dateForMonth: DateTime(2020, 09, 14),
-              weekCalendarBuilder: (context, monthState, weekState) {
-                return CalendarWeekdayLine(
-                  state: weekState,
+              weekCalendarBuilder: (context, monthState, weekDateRange) {
+                return CalendarWeekLine(
+                  dateRange: weekDateRange,
                   calendarMenstruationBandModels: const [],
                   calendarScheduledMenstruationBandModels: const [],
                   calendarNextPillSheetBandModels: [model],
                   horizontalPadding: 0,
-                  onTap: (_, __) => {},
+                  day: (p0, p1, p2) => Container(),
                 );
               },
             ),
@@ -179,10 +172,8 @@ void main() {
       expect(find.text("新しいシート開始 ▶︎"), isNot(findsWidgets));
       expect(find.byType(CalendarNextPillSheetBand), isNot(findsWidgets));
     });
-    testWidgets('when showing new sheet label to before month',
-        (WidgetTester tester) async {
-      final model = CalendarNextPillSheetBandModel(
-          DateTime(2020, 10, 15), DateTime(2020, 10, 18));
+    testWidgets('when showing new sheet label to before month', (WidgetTester tester) async {
+      final model = CalendarNextPillSheetBandModel(DateTime(2020, 10, 15), DateTime(2020, 10, 18));
 
       await tester.pumpWidget(
         ProviderScope(
@@ -193,6 +184,7 @@ void main() {
                   MonthCalendarState(
                     dateForMonth: argument,
                     diaries: [],
+                    schedules: [],
                     menstruations: [],
                   ),
                 ),
@@ -202,14 +194,14 @@ void main() {
           child: MaterialApp(
             home: MonthCalendar(
               dateForMonth: DateTime(2020, 09, 14),
-              weekCalendarBuilder: (context, monthState, weekState) {
-                return CalendarWeekdayLine(
-                  state: weekState,
+              weekCalendarBuilder: (context, monthState, weekDateRange) {
+                return CalendarWeekLine(
+                  dateRange: weekDateRange,
                   calendarMenstruationBandModels: const [],
                   calendarScheduledMenstruationBandModels: const [],
                   calendarNextPillSheetBandModels: [model],
                   horizontalPadding: 0,
-                  onTap: (_, __) => {},
+                  day: (p0, p1, p2) => Container(),
                 );
               },
             ),

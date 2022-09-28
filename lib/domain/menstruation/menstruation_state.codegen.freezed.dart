@@ -22,6 +22,7 @@ class _$MenstruationStateTearOff {
       {required int currentCalendarPageIndex,
       required int todayCalendarPageIndex,
       required List<Diary> diariesForAround90Days,
+      required List<Schedule> schedulesForAround90Days,
       required List<Menstruation> menstruations,
       required PremiumAndTrial premiumAndTrial,
       required Setting setting,
@@ -36,6 +37,7 @@ class _$MenstruationStateTearOff {
       currentCalendarPageIndex: currentCalendarPageIndex,
       todayCalendarPageIndex: todayCalendarPageIndex,
       diariesForAround90Days: diariesForAround90Days,
+      schedulesForAround90Days: schedulesForAround90Days,
       menstruations: menstruations,
       premiumAndTrial: premiumAndTrial,
       setting: setting,
@@ -56,6 +58,8 @@ mixin _$MenstruationState {
   int get currentCalendarPageIndex => throw _privateConstructorUsedError;
   int get todayCalendarPageIndex => throw _privateConstructorUsedError;
   List<Diary> get diariesForAround90Days => throw _privateConstructorUsedError;
+  List<Schedule> get schedulesForAround90Days =>
+      throw _privateConstructorUsedError;
   List<Menstruation> get menstruations => throw _privateConstructorUsedError;
   PremiumAndTrial get premiumAndTrial => throw _privateConstructorUsedError;
   Setting get setting => throw _privateConstructorUsedError;
@@ -83,6 +87,7 @@ abstract class $MenstruationStateCopyWith<$Res> {
       {int currentCalendarPageIndex,
       int todayCalendarPageIndex,
       List<Diary> diariesForAround90Days,
+      List<Schedule> schedulesForAround90Days,
       List<Menstruation> menstruations,
       PremiumAndTrial premiumAndTrial,
       Setting setting,
@@ -111,6 +116,7 @@ class _$MenstruationStateCopyWithImpl<$Res>
     Object? currentCalendarPageIndex = freezed,
     Object? todayCalendarPageIndex = freezed,
     Object? diariesForAround90Days = freezed,
+    Object? schedulesForAround90Days = freezed,
     Object? menstruations = freezed,
     Object? premiumAndTrial = freezed,
     Object? setting = freezed,
@@ -132,6 +138,10 @@ class _$MenstruationStateCopyWithImpl<$Res>
           ? _value.diariesForAround90Days
           : diariesForAround90Days // ignore: cast_nullable_to_non_nullable
               as List<Diary>,
+      schedulesForAround90Days: schedulesForAround90Days == freezed
+          ? _value.schedulesForAround90Days
+          : schedulesForAround90Days // ignore: cast_nullable_to_non_nullable
+              as List<Schedule>,
       menstruations: menstruations == freezed
           ? _value.menstruations
           : menstruations // ignore: cast_nullable_to_non_nullable
@@ -202,6 +212,7 @@ abstract class _$MenstruationStateCopyWith<$Res>
       {int currentCalendarPageIndex,
       int todayCalendarPageIndex,
       List<Diary> diariesForAround90Days,
+      List<Schedule> schedulesForAround90Days,
       List<Menstruation> menstruations,
       PremiumAndTrial premiumAndTrial,
       Setting setting,
@@ -235,6 +246,7 @@ class __$MenstruationStateCopyWithImpl<$Res>
     Object? currentCalendarPageIndex = freezed,
     Object? todayCalendarPageIndex = freezed,
     Object? diariesForAround90Days = freezed,
+    Object? schedulesForAround90Days = freezed,
     Object? menstruations = freezed,
     Object? premiumAndTrial = freezed,
     Object? setting = freezed,
@@ -256,6 +268,10 @@ class __$MenstruationStateCopyWithImpl<$Res>
           ? _value.diariesForAround90Days
           : diariesForAround90Days // ignore: cast_nullable_to_non_nullable
               as List<Diary>,
+      schedulesForAround90Days: schedulesForAround90Days == freezed
+          ? _value.schedulesForAround90Days
+          : schedulesForAround90Days // ignore: cast_nullable_to_non_nullable
+              as List<Schedule>,
       menstruations: menstruations == freezed
           ? _value.menstruations
           : menstruations // ignore: cast_nullable_to_non_nullable
@@ -297,6 +313,7 @@ class _$_MenstruationState extends _MenstruationState {
       {required this.currentCalendarPageIndex,
       required this.todayCalendarPageIndex,
       required this.diariesForAround90Days,
+      required this.schedulesForAround90Days,
       required this.menstruations,
       required this.premiumAndTrial,
       required this.setting,
@@ -312,6 +329,8 @@ class _$_MenstruationState extends _MenstruationState {
   final int todayCalendarPageIndex;
   @override
   final List<Diary> diariesForAround90Days;
+  @override
+  final List<Schedule> schedulesForAround90Days;
   @override
   final List<Menstruation> menstruations;
   @override
@@ -330,7 +349,7 @@ class _$_MenstruationState extends _MenstruationState {
 
   @override
   String toString() {
-    return 'MenstruationState(currentCalendarPageIndex: $currentCalendarPageIndex, todayCalendarPageIndex: $todayCalendarPageIndex, diariesForAround90Days: $diariesForAround90Days, menstruations: $menstruations, premiumAndTrial: $premiumAndTrial, setting: $setting, latestPillSheetGroup: $latestPillSheetGroup, calendarMenstruationBandModels: $calendarMenstruationBandModels, calendarScheduledMenstruationBandModels: $calendarScheduledMenstruationBandModels, calendarNextPillSheetBandModels: $calendarNextPillSheetBandModels)';
+    return 'MenstruationState(currentCalendarPageIndex: $currentCalendarPageIndex, todayCalendarPageIndex: $todayCalendarPageIndex, diariesForAround90Days: $diariesForAround90Days, schedulesForAround90Days: $schedulesForAround90Days, menstruations: $menstruations, premiumAndTrial: $premiumAndTrial, setting: $setting, latestPillSheetGroup: $latestPillSheetGroup, calendarMenstruationBandModels: $calendarMenstruationBandModels, calendarScheduledMenstruationBandModels: $calendarScheduledMenstruationBandModels, calendarNextPillSheetBandModels: $calendarNextPillSheetBandModels)';
   }
 
   @override
@@ -344,6 +363,8 @@ class _$_MenstruationState extends _MenstruationState {
                 .equals(other.todayCalendarPageIndex, todayCalendarPageIndex) &&
             const DeepCollectionEquality()
                 .equals(other.diariesForAround90Days, diariesForAround90Days) &&
+            const DeepCollectionEquality().equals(
+                other.schedulesForAround90Days, schedulesForAround90Days) &&
             const DeepCollectionEquality()
                 .equals(other.menstruations, menstruations) &&
             const DeepCollectionEquality()
@@ -368,6 +389,7 @@ class _$_MenstruationState extends _MenstruationState {
       const DeepCollectionEquality().hash(currentCalendarPageIndex),
       const DeepCollectionEquality().hash(todayCalendarPageIndex),
       const DeepCollectionEquality().hash(diariesForAround90Days),
+      const DeepCollectionEquality().hash(schedulesForAround90Days),
       const DeepCollectionEquality().hash(menstruations),
       const DeepCollectionEquality().hash(premiumAndTrial),
       const DeepCollectionEquality().hash(setting),
@@ -388,6 +410,7 @@ abstract class _MenstruationState extends MenstruationState {
       {required int currentCalendarPageIndex,
       required int todayCalendarPageIndex,
       required List<Diary> diariesForAround90Days,
+      required List<Schedule> schedulesForAround90Days,
       required List<Menstruation> menstruations,
       required PremiumAndTrial premiumAndTrial,
       required Setting setting,
@@ -406,6 +429,8 @@ abstract class _MenstruationState extends MenstruationState {
   int get todayCalendarPageIndex;
   @override
   List<Diary> get diariesForAround90Days;
+  @override
+  List<Schedule> get schedulesForAround90Days;
   @override
   List<Menstruation> get menstruations;
   @override

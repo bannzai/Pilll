@@ -1,7 +1,7 @@
 import 'package:hooks_riverpod/hooks_riverpod.dart';
 import 'package:pilll/components/molecules/indicator.dart';
-import 'package:pilll/components/organisms/calendar/week/week_calendar_state.dart';
 import 'package:pilll/domain/calendar/components/month_calendar/month_calendar_state.codegen.dart';
+import 'package:pilll/domain/calendar/date_range.dart';
 import 'package:pilll/domain/record/weekday_badge.dart';
 import 'package:pilll/entity/weekday.dart';
 import 'package:flutter/material.dart';
@@ -13,7 +13,7 @@ abstract class CalendarConstants {
 
 class MonthCalendar extends HookConsumerWidget {
   final DateTime dateForMonth;
-  final Widget Function(BuildContext, MonthCalendarState, WeekCalendarState) weekCalendarBuilder;
+  final Widget Function(BuildContext, MonthCalendarState, DateRange) weekCalendarBuilder;
 
   const MonthCalendar({
     Key? key,
@@ -27,7 +27,7 @@ class MonthCalendar extends HookConsumerWidget {
 
     return state.when(
       data: (state) {
-        final weekCalendarStatuses = state.weekCalendarStatuses;
+        final weeks = state.weeks;
 
         return Column(
           children: [
@@ -43,11 +43,11 @@ class MonthCalendar extends HookConsumerWidget {
             ),
             const Divider(height: 1),
             ...List.generate(6, (offset) {
-              if (weekCalendarStatuses.length <= offset) {
+              if (weeks.length <= offset) {
                 return Container(height: CalendarConstants.tileHeight);
               }
 
-              final weekCalendar = weekCalendarBuilder(context, state, weekCalendarStatuses[offset]);
+              final weekCalendar = weekCalendarBuilder(context, state, weeks[offset]);
               return Column(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [

@@ -14,13 +14,11 @@ import 'package:pilll/components/atoms/text_color.dart';
 import 'package:pilll/entity/diary_setting.codegen.dart';
 import 'package:pilll/error/universal_error_page.dart';
 import 'package:pilll/util/formatter/date_time_formatter.dart';
+import 'package:pilll/util/const.dart';
+
 import 'package:flutter/material.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
 import 'package:flutter_svg/svg.dart';
-
-abstract class DiaryPostPageConst {
-  static double keyboardToobarHeight = 44;
-}
 
 const _secitonTitle = TextStyle(fontFamily: FontFamily.japanese, fontWeight: FontWeight.w300, fontSize: FontSize.sLarge, color: TextColor.black);
 
@@ -58,7 +56,7 @@ class DiaryPostPage extends HookConsumerWidget {
       if (focusNode.hasFocus) {
         // NOTE: The final keyboard height cannot be got at the moment of focus via MediaQuery.of(context).viewInsets.bottom. so it is delayed.
         Future.delayed(const Duration(milliseconds: 100)).then((_) {
-          final overwrapHeight = focusNode.rect.bottom - (MediaQuery.of(context).viewInsets.bottom + DiaryPostPageConst.keyboardToobarHeight);
+          final overwrapHeight = focusNode.rect.bottom - (MediaQuery.of(context).viewInsets.bottom + keyboardToolbarHeight);
           if (overwrapHeight > 0) {
             scrollController.animateTo(overwrapHeight, duration: const Duration(milliseconds: 300), curve: Curves.easeInOut);
           }
@@ -105,7 +103,7 @@ class DiaryPostPage extends HookConsumerWidget {
                       _memo(context, textEditingController, focusNode, stateNotifier, state),
                     ].map((e) => _withContentSpacer(e)),
                     SizedBox(
-                      height: MediaQuery.of(context).viewInsets.bottom + DiaryPostPageConst.keyboardToobarHeight + 60,
+                      height: MediaQuery.of(context).viewInsets.bottom + keyboardToolbarHeight + 60,
                     ),
                   ],
                 ),
@@ -263,7 +261,7 @@ class DiaryPostPage extends HookConsumerWidget {
     return Positioned(
       bottom: MediaQuery.of(context).viewInsets.bottom,
       child: Container(
-        height: DiaryPostPageConst.keyboardToobarHeight,
+        height: keyboardToolbarHeight,
         width: MediaQuery.of(context).size.width,
         child: Row(
           children: [

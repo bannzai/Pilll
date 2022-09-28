@@ -10,6 +10,7 @@ import 'package:pilll/entity/menstruation.codegen.dart';
 import 'package:pilll/entity/pill_sheet.codegen.dart';
 import 'package:pilll/entity/pill_sheet_group.codegen.dart';
 import 'package:pilll/entity/pill_sheet_modified_history.codegen.dart';
+import 'package:pilll/entity/schedule.codegen.dart';
 import 'package:pilll/entity/user.codegen.dart';
 import 'package:pilll/service/auth.dart';
 
@@ -32,6 +33,8 @@ abstract class _CollectionPath {
   static String userPrivates(String userID) => "$users/$userID/privates";
   static String menstruations(String userID) => "$users/$userID/menstruations";
   static String pillSheetModifiedHistories(String userID) => "$users/$userID/pill_sheet_modified_histories";
+  static String schedule({required String userID, required String scheduleID}) => "$users/$userID/schedules/$scheduleID";
+  static String schedules({required String userID}) => "$users/$userID/schedules";
 }
 
 class DatabaseConnection {
@@ -118,6 +121,20 @@ class DatabaseConnection {
       FirebaseFirestore.instance.collection(_CollectionPath.pillSheetGroups(_userID)).doc(pillSheetGroupID).withConverter(
             fromFirestore: _pillSheetGroupFromFirestore,
             toFirestore: _pillSheetGroupToFirestore,
+          );
+
+  final FromFirestore<Schedule> _scheduleFromFirestore =
+      (snapshot, options) => Schedule.fromJson(snapshot.data()!..putIfAbsent("id", () => snapshot.id));
+  final ToFirestore<Schedule> _scheduleToFirestore = (schedule, options) => schedule.toJson();
+  CollectionReference<Schedule> schedulesReference() =>
+      FirebaseFirestore.instance.collection(_CollectionPath.schedules(userID: _userID)).withConverter(
+            fromFirestore: _scheduleFromFirestore,
+            toFirestore: _scheduleToFirestore,
+          );
+  DocumentReference<Schedule> scheduleReference(String scheduleID) =>
+      FirebaseFirestore.instance.doc(_CollectionPath.schedule(userID: _userID, scheduleID: scheduleID)).withConverter(
+            fromFirestore: _scheduleFromFirestore,
+            toFirestore: _scheduleToFirestore,
           );
 
   Future<T> transaction<T>(TransactionHandler<T> transactionHandler) {

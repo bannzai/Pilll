@@ -9,20 +9,15 @@ class DateRange {
 
   DateRange(this._begin, this._end);
 
-  static bool isSameDay(DateTime a, DateTime b) =>
-      a.year == b.year && a.month == b.month && a.day == b.day;
-  bool inRange(DateTime date) =>
-      (date.isAfter(begin) && date.isBefore(end)) ||
-      DateRange.isSameDay(date, begin) ||
-      DateRange.isSameDay(date, end);
+  static bool isSameDay(DateTime a, DateTime b) => a.year == b.year && a.month == b.month && a.day == b.day;
+  bool inRange(DateTime date) => (date.isAfter(begin) && date.isBefore(end)) || DateRange.isSameDay(date, begin) || DateRange.isSameDay(date, end);
   DateRange union(DateRange range) {
     var l = begin.isAfter(range.begin) ? begin : range.begin;
     var r = end.isBefore(range.end) ? end : range.end;
     return DateRange(l, r);
   }
 
-  List<DateTime> list() =>
-      List.generate(days + 1, (index) => _begin.add(Duration(days: index)));
+  List<DateTime> list() => List.generate(days + 1, (index) => _begin.add(Duration(days: index)));
 
   T map<T extends dynamic>(T Function(DateRange) converter) {
     return converter(this);

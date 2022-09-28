@@ -291,24 +291,6 @@ class MockDiaryDatastore extends _i1.Mock implements _i22.DiaryDatastore {
   }
 
   @override
-  _i20.Future<List<_i4.Diary>> fetchListAround90Days(DateTime? base) =>
-      (super.noSuchMethod(
-        Invocation.method(
-          #fetchListAround90Days,
-          [base],
-        ),
-        returnValue: Future<List<_i4.Diary>>.value(<_i4.Diary>[]),
-      ) as _i20.Future<List<_i4.Diary>>);
-  @override
-  _i20.Future<List<_i4.Diary>> fetchListForMonth(DateTime? dateTimeOfMonth) =>
-      (super.noSuchMethod(
-        Invocation.method(
-          #fetchListForMonth,
-          [dateTimeOfMonth],
-        ),
-        returnValue: Future<List<_i4.Diary>>.value(<_i4.Diary>[]),
-      ) as _i20.Future<List<_i4.Diary>>);
-  @override
   _i20.Future<_i4.Diary> register(_i4.Diary? diary) => (super.noSuchMethod(
         Invocation.method(
           #register,
@@ -337,26 +319,6 @@ class MockDiaryDatastore extends _i1.Mock implements _i22.DiaryDatastore {
         Invocation.method(
           #stream,
           [],
-        ),
-        returnValue: Stream<List<_i4.Diary>>.empty(),
-      ) as _i20.Stream<List<_i4.Diary>>);
-  @override
-  _i20.Stream<List<_i4.Diary>> streamForMonth({DateTime? dateForMonth}) =>
-      (super.noSuchMethod(
-        Invocation.method(
-          #streamForMonth,
-          [],
-          {#dateForMonth: dateForMonth},
-        ),
-        returnValue: Stream<List<_i4.Diary>>.empty(),
-      ) as _i20.Stream<List<_i4.Diary>>);
-  @override
-  _i20.Stream<List<_i4.Diary>> streamForAround90Days({DateTime? base}) =>
-      (super.noSuchMethod(
-        Invocation.method(
-          #streamForAround90Days,
-          [],
-          {#base: base},
         ),
         returnValue: Stream<List<_i4.Diary>>.empty(),
       ) as _i20.Stream<List<_i4.Diary>>);

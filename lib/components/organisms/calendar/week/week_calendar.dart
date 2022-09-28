@@ -1,3 +1,4 @@
+import 'package:hooks_riverpod/hooks_riverpod.dart';
 import 'package:pilll/analytics.dart';
 import 'package:pilll/components/organisms/calendar/band/calendar_band.dart';
 
@@ -5,65 +6,52 @@ import 'package:pilll/components/organisms/calendar/band/calendar_band_model.dar
 import 'package:pilll/components/organisms/calendar/band/calendar_menstruation_band.dart';
 import 'package:pilll/components/organisms/calendar/band/calendar_next_pill_sheet_band.dart';
 import 'package:pilll/components/organisms/calendar/band/calendar_scheduled_menstruation_band.dart';
-import 'package:pilll/components/organisms/calendar/day/calendar_day_tile.dart';
 import 'package:pilll/components/organisms/calendar/band/calendar_band_function.dart';
-import 'package:pilll/components/organisms/calendar/week/week_calendar_state.dart';
+import 'package:pilll/components/organisms/calendar/week/utility.dart';
+import 'package:pilll/domain/calendar/components/diary_or_schedule/diary_or_schedule_sheet.dart';
+import 'package:pilll/domain/calendar/date_range.dart';
 import 'package:pilll/domain/diary_post/diary_post_page.dart';
 import 'package:flutter/material.dart';
 import 'package:pilll/domain/menstruation_edit/menstruation_edit_page.dart';
+import 'package:pilll/domain/schedule_post/schedule_post_page.dart';
 import 'package:pilll/entity/diary.codegen.dart';
+import 'package:pilll/entity/schedule.codegen.dart';
 import 'package:pilll/entity/weekday.dart';
 import 'package:pilll/domain/diary/confirm_diary_sheet.dart';
 import 'package:pilll/util/datetime/date_compare.dart';
 import 'package:pilll/util/datetime/day.dart';
 
-class CalendarWeekdayLine extends StatelessWidget {
-  final WeekCalendarState state;
+class CalendarWeekLine extends HookConsumerWidget {
+  final DateRange dateRange;
   final double horizontalPadding;
+  final Widget Function(BuildContext, Weekday, DateTime) day;
   final List<CalendarMenstruationBandModel> calendarMenstruationBandModels;
   final List<CalendarScheduledMenstruationBandModel> calendarScheduledMenstruationBandModels;
   final List<CalendarNextPillSheetBandModel> calendarNextPillSheetBandModels;
-  final Function(WeekCalendarState, DateTime) onTap;
 
-  const CalendarWeekdayLine({
+  const CalendarWeekLine({
     Key? key,
-    required this.state,
+    required this.dateRange,
+    required this.horizontalPadding,
+    required this.day,
     required this.calendarMenstruationBandModels,
     required this.calendarScheduledMenstruationBandModels,
     required this.calendarNextPillSheetBandModels,
-    required this.horizontalPadding,
-    required this.onTap,
   }) : super(key: key);
   @override
-  Widget build(BuildContext context) {
+  Widget build(BuildContext context, WidgetRef ref) {
     var tileWidth = (MediaQuery.of(context).size.width - horizontalPadding * 2) / Weekday.values.length;
     return Stack(
       children: [
         Row(
           children: Weekday.values.map((weekday) {
             final date = _buildDate(weekday);
-            final isOutOfBoundsInLine = !state.dateRange.inRange(date);
+            final isOutOfBoundsInLine = !dateRange.inRange(date);
             if (isOutOfBoundsInLine) {
               return Expanded(child: Container());
             }
 
-            if (state.isGrayoutTile(date)) {
-              return CalendarDayTile.grayout(
-                weekday: weekday,
-                shouldShowMenstruationMark: state.hasMenstruationMark(date),
-                contentAlignment: state.contentAlignment,
-                date: date,
-              );
-            }
-            return CalendarDayTile(
-              isToday: isSameDay(today(), date),
-              weekday: weekday,
-              date: date,
-              shouldShowDiaryMark: state.hasDiaryMark(state.diariesForMonth, date),
-              shouldShowMenstruationMark: state.hasMenstruationMark(date),
-              contentAlignment: state.contentAlignment,
-              onTap: (date) => onTap(state, date),
-            );
+            return day(context, weekday, date);
           }).toList(),
         ),
         ...calendarMenstruationBandModels.where(_contains).map(
@@ -114,7 +102,7 @@ class CalendarWeekdayLine extends StatelessWidget {
   }
 
   bool _contains(CalendarBandModel calendarBandModel) {
-    final isInRange = state.dateRange.inRange(calendarBandModel.begin) || state.dateRange.inRange(calendarBandModel.end);
+    final isInRange = dateRange.inRange(calendarBandModel.begin) || dateRange.inRange(calendarBandModel.end);
     return isInRange;
   }
 
@@ -124,9 +112,9 @@ class CalendarWeekdayLine extends StatelessWidget {
     required double tileWidth,
     required Widget Function(bool isLineBreak, double width) bandBuilder,
   }) {
-    bool isLineBreak = isNecessaryLineBreak(calendarBandModel.begin, state.dateRange);
-    int start = offsetForStartPositionAtLine(calendarBandModel.begin, state.dateRange);
-    final length = bandLength(state.dateRange, calendarBandModel, isLineBreak);
+    bool isLineBreak = isNecessaryLineBreak(calendarBandModel.begin, dateRange);
+    int start = offsetForStartPositionAtLine(calendarBandModel.begin, dateRange);
+    final length = bandLength(dateRange, calendarBandModel, isLineBreak);
 
     return Positioned(
       left: start.toDouble() * tileWidth,
@@ -137,18 +125,31 @@ class CalendarWeekdayLine extends StatelessWidget {
   }
 
   DateTime _buildDate(Weekday weekday) {
-    return state.dateRange.begin.add(Duration(days: weekday.index));
+    return dateRange.begin.add(Duration(days: weekday.index));
   }
 }
 
-void transitionToDiaryPost(
-  BuildContext context,
-  DateTime date,
-  List<Diary> diaries,
-) {
-  if (date.isAfter(today())) {
+void transitionWhenCalendarDayTapped(
+  BuildContext context, {
+  required DateTime date,
+  required List<Diary> diaries,
+  required List<Schedule> schedules,
+}) {
+  if (date.date().isAfter(today())) {
+    Navigator.of(context).push(SchedulePostPageRoute.route(date));
     return;
   }
+
+  if (isExistsSchedule(schedules, date)) {
+    showModalBottomSheet(
+      context: context,
+      builder: (context) => DiaryOrScheduleSheet(
+          showDiary: () => Navigator.of(context).push(DiaryPostPageRoute.route(date, null)),
+          showSchedule: () => Navigator.of(context).push(SchedulePostPageRoute.route(date))),
+    );
+    return;
+  }
+
   if (!isExistsPostedDiary(diaries, date)) {
     Navigator.of(context).push(DiaryPostPageRoute.route(date, null));
   } else {

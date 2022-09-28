@@ -1,3 +1,4 @@
+import 'package:flutter/material.dart';
 import 'package:pilll/entity/weekday.dart';
 import 'package:pilll/service/day.dart';
 
@@ -9,19 +10,42 @@ DateTime now() {
   return todayRepository.now();
 }
 
+DateTime tomorrow() {
+  return today().add(const Duration(days: 1));
+}
+
 DateTime firstDayOfWeekday(DateTime day) {
   return day.subtract(Duration(days: day.weekday == 7 ? 0 : day.weekday));
 }
 
 DateTime endDayOfWeekday(DateTime day) {
-  return day
-      .subtract(Duration(days: day.weekday == 7 ? 0 : day.weekday))
-      .add(Duration(days: Weekday.values.length - 1));
+  return day.subtract(Duration(days: day.weekday == 7 ? 0 : day.weekday)).add(Duration(days: Weekday.values.length - 1));
 }
 
 extension Date on DateTime {
   DateTime date() {
     return DateTime(year, month, day);
+  }
+}
+
+extension DateTimeBeginEnd on DateTime {
+  DateTime beginOfDay() {
+    return DateTime(year, month, day, 0, 0, 0);
+  }
+
+  DateTime endOfDay() {
+    return DateTime(year, month, day, 23, 59, 59);
+  }
+
+  DateTimeRange dateTimeRange() {
+    return DateTimeRange(start: beginOfDay(), end: endOfDay());
+  }
+}
+
+extension MonthDateTimeRange on DateTimeRange {
+  static DateTimeRange monthRange({required DateTime dateForMonth}) {
+    return DateTimeRange(
+        start: DateTime(dateForMonth.year, dateForMonth.month, 1), end: DateTime(dateForMonth.year, dateForMonth.month + 1, 0, 23, 59, 59));
   }
 }
 
