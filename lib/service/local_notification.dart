@@ -106,4 +106,4 @@ class LocalNotificationService {
   }
 }
 
-final localNotificationService = LocalNotificationService();
+final localNotificationService = LocalNotificationService()..initialize();
