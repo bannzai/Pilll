@@ -14,6 +14,7 @@ import 'package:flutter_native_timezone/flutter_native_timezone.dart';
 const iOSRecordPillActionIdentifier = "RECORD_PILL_LOCAL";
 const iOSQuickRecordPillCategoryIdentifier = "PILL_REMINDER_LOCAL";
 const androidReminderNotificationChannelID = "androidReminderNotificationChannelID";
+const androidCalendarScheduleNotificationChannelID = "androidCalendarScheduleNotificationChannelID";
 const androidReminderNotificationActionIdentifier = "androidReminderNotificationActionIdentifier";
 const androidReminderNotificationGroupKey = "androidReminderNotificationGroupKey";
 
@@ -38,7 +39,7 @@ class LocalNotificationService {
     await plugin.initialize(
       const InitializationSettings(
         android: AndroidInitializationSettings(
-          "@mipmap/ic_launcher",
+          "ic_notification",
         ),
         iOS: DarwinInitializationSettings(defaultPresentAlert: true, defaultPresentBadge: true, defaultPresentSound: true),
       ),
@@ -59,8 +60,8 @@ class LocalNotificationService {
         remindDate,
         const NotificationDetails(
           android: AndroidNotificationDetails(
-            androidReminderNotificationChannelID,
-            "服用通知",
+            androidCalendarScheduleNotificationChannelID,
+            "カレンダーの予定",
             groupKey: null,
             category: AndroidNotificationCategory(androidNotificationCategoryCalendarSchedule),
           ),
