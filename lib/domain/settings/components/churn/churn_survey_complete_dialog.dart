@@ -69,7 +69,6 @@ class ChurnSurveyCompleteDialog extends StatelessWidget {
             if (Platform.isAndroid) {
               launchUrl(Uri.parse("https://play.google.com/store/account/subscriptions"), mode: LaunchMode.externalApplication);
             }
-            Navigator.of(context).pop();
           },
         ),
       ],
