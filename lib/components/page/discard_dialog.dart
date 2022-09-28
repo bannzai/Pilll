@@ -40,7 +40,7 @@ class DiscardDialog extends StatelessWidget {
   }
 }
 
-showDiscardDialog(
+void showDiscardDialog(
   BuildContext context, {
   required String title,
   required String message,
@@ -50,8 +50,7 @@ showDiscardDialog(
     context: context,
     builder: (context) => DiscardDialog(
       title: title,
-      message:
-          Text(message, style: FontType.assisting.merge(TextColorStyle.main)),
+      message: Text(message, style: FontType.assisting.merge(TextColorStyle.main)),
       actions: actions,
     ),
   );
