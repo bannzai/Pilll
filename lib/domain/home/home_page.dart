@@ -20,8 +20,7 @@ class HomePage extends StatefulWidget {
 
 enum HomePageTabType { record, menstruation, calendar, setting }
 
-class _HomePageState extends State<HomePage>
-    with SingleTickerProviderStateMixin, RouteAware {
+class _HomePageState extends State<HomePage> with SingleTickerProviderStateMixin, RouteAware {
   late TabController _tabController;
   int _selectedIndex = 0;
   HomePageTabType get _selectedTab {
@@ -31,13 +30,12 @@ class _HomePageState extends State<HomePage>
   @override
   void initState() {
     super.initState();
-    _tabController = TabController(
-        length: HomePageTabType.values.length,
-        vsync: this,
-        initialIndex: _selectedIndex);
+    _tabController = TabController(length: HomePageTabType.values.length, vsync: this, initialIndex: _selectedIndex);
     _tabController.addListener(_handleTabSelection);
 
     Future(() async {
+      // Android 13ユーザー向けに通知の許可を取る必要がある。古いバージョンからアップグレードしたユーザーへの許可はアプリのメインストリームが始まってから取得するようにする
+      // https://developer.android.com/guide/topics/ui/notifiers/notification-permission
       await requestNotificationPermissions();
       listenNotificationEvents();
     });
@@ -52,8 +50,7 @@ class _HomePageState extends State<HomePage>
         appBar: null,
         bottomNavigationBar: Container(
           decoration: const BoxDecoration(
-            border:
-                Border(top: BorderSide(width: 1, color: PilllColors.border)),
+            border: Border(top: BorderSide(width: 1, color: PilllColors.border)),
           ),
           child: Ink(
             color: PilllColors.bottomBar,
@@ -67,31 +64,26 @@ class _HomePageState extends State<HomePage>
                 tabs: <Tab>[
                   Tab(
                     text: "ピル",
-                    icon: SvgPicture.asset(
-                        _tabController.index == HomePageTabType.record.index
-                            ? "images/tab_icon_pill_enable.svg"
-                            : "images/tab_icon_pill_disable.svg"),
+                    icon: SvgPicture.asset(_tabController.index == HomePageTabType.record.index
+                        ? "images/tab_icon_pill_enable.svg"
+                        : "images/tab_icon_pill_disable.svg"),
                   ),
                   Tab(
                     text: "生理",
-                    icon: SvgPicture.asset(_tabController.index ==
-                            HomePageTabType.menstruation.index
-                        ? "images/menstruation.svg"
-                        : "images/menstruation_disable.svg"),
+                    icon: SvgPicture.asset(
+                        _tabController.index == HomePageTabType.menstruation.index ? "images/menstruation.svg" : "images/menstruation_disable.svg"),
                   ),
                   Tab(
                     text: "カレンダー",
-                    icon: SvgPicture.asset(
-                        _tabController.index == HomePageTabType.calendar.index
-                            ? "images/tab_icon_calendar_enable.svg"
-                            : "images/tab_icon_calendar_disable.svg"),
+                    icon: SvgPicture.asset(_tabController.index == HomePageTabType.calendar.index
+                        ? "images/tab_icon_calendar_enable.svg"
+                        : "images/tab_icon_calendar_disable.svg"),
                   ),
                   Tab(
                     text: "設定",
-                    icon: SvgPicture.asset(
-                        _tabController.index == HomePageTabType.setting.index
-                            ? "images/tab_icon_setting_enable.svg"
-                            : "images/tab_icon_setting_disable.svg"),
+                    icon: SvgPicture.asset(_tabController.index == HomePageTabType.setting.index
+                        ? "images/tab_icon_setting_enable.svg"
+                        : "images/tab_icon_setting_disable.svg"),
                   ),
                 ],
               ),
