@@ -11,8 +11,10 @@ import 'package:pilll/components/atoms/font.dart';
 import 'package:pilll/components/atoms/text_color.dart';
 import 'package:pilll/components/molecules/indicator.dart';
 import 'package:pilll/database/database.dart';
+import 'package:pilll/domain/record/components/pill_sheet/components/record_page_rest_duration_dialog.dart';
 import 'package:pilll/domain/schedule_post/state.codegen.dart';
 import 'package:pilll/entity/schedule.codegen.dart';
+import 'package:pilll/error/error_alert.dart';
 import 'package:pilll/error/universal_error_page.dart';
 import 'package:pilll/service/local_notification.dart';
 import 'package:pilll/util/const.dart';
@@ -81,24 +83,28 @@ class _SchedulePostPage extends HookConsumerWidget {
             onPressed: isInvalid()
                 ? () async {
                     analytics.logEvent(name: "schedule_post_pressed");
-                    if (localNotification == null) {
-                      final localNotificationID = schedule.localNotification?.localNotificationID;
-                      if (localNotificationID != null) {
-                        await localNotificationService.cancelNotification(localNotificationID: localNotificationID);
+                    try {
+                      if (localNotification == null) {
+                        final localNotificationID = schedule.localNotification?.localNotificationID;
+                        if (localNotificationID != null) {
+                          await localNotificationService.cancelNotification(localNotificationID: localNotificationID);
+                        }
                       }
-                    }
-                    if (localNotification != null) {
-                      await localNotificationService.scheduleCalendarScheduleNotification(schedule: schedule);
-                    }
+                      if (localNotification != null) {
+                        await localNotificationService.scheduleCalendarScheduleNotification(schedule: schedule);
+                      }
 
-                    await ref.read(databaseProvider).schedulesReference().doc().set(
-                          schedule.copyWith(
-                            title: title.value,
-                            localNotification: localNotification,
-                          ),
-                          SetOptions(merge: true),
-                        );
-                    Navigator.of(context).pop();
+                      await ref.read(databaseProvider).schedulesReference().doc().set(
+                            schedule.copyWith(
+                              title: title.value,
+                              localNotification: localNotification,
+                            ),
+                            SetOptions(merge: true),
+                          );
+                      Navigator.of(context).pop();
+                    } catch (error) {
+                      showErrorAlert(context, error);
+                    }
                   }
                 : null,
           ),
