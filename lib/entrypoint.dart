@@ -35,6 +35,7 @@ Future<void> entrypoint() async {
     if (Environment.isLocal) {
       connectToEmulator();
     }
+    await LocalNotificationService.setupTimeZone();
 
     ErrorWidget.builder = (FlutterErrorDetails details) {
       return UniversalErrorPage(
