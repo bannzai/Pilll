@@ -11,6 +11,7 @@ import 'package:pilll/components/atoms/font.dart';
 import 'package:pilll/domain/root/root.dart';
 import 'package:pilll/error/universal_error_page.dart';
 import 'package:pilll/native/channel.dart';
+import 'package:pilll/service/local_notification.dart';
 import 'package:pilll/util/datetime/debug_print.dart';
 import 'package:pilll/util/environment.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
@@ -52,8 +53,7 @@ Future<void> entrypoint() async {
 
 void connectToEmulator() {
   final domain = Platform.isAndroid ? '10.0.2.2' : 'localhost';
-  FirebaseFirestore.instance.settings = Settings(
-      persistenceEnabled: false, host: '$domain:8080', sslEnabled: false);
+  FirebaseFirestore.instance.settings = Settings(persistenceEnabled: false, host: '$domain:8080', sslEnabled: false);
 }
 
 class App extends StatelessWidget {
@@ -62,9 +62,7 @@ class App extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      navigatorObservers: [
-        FirebaseAnalyticsObserver(analytics: firebaseAnalytics)
-      ],
+      navigatorObservers: [FirebaseAnalyticsObserver(analytics: firebaseAnalytics)],
       theme: ThemeData(
         appBarTheme: const AppBarTheme(
           systemOverlayStyle: SystemUiOverlayStyle.dark,
@@ -78,8 +76,7 @@ class App extends StatelessWidget {
         primaryColor: PilllColors.primary,
         visualDensity: VisualDensity.adaptivePlatformDensity,
         toggleableActiveColor: PilllColors.primary,
-        cupertinoOverrideTheme: const NoDefaultCupertinoThemeData(
-            textTheme: CupertinoTextThemeData(textStyle: FontType.xBigTitle)),
+        cupertinoOverrideTheme: const NoDefaultCupertinoThemeData(textTheme: CupertinoTextThemeData(textStyle: FontType.xBigTitle)),
         buttonTheme: const ButtonThemeData(
           buttonColor: PilllColors.secondary,
           disabledColor: PilllColors.disable,
