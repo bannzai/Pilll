@@ -42,7 +42,7 @@ class ReleaseNote extends StatelessWidget {
                       child: Container(
                         padding: const EdgeInsets.only(top: 40, left: 40, right: 40),
                         child: Text(
-                          "ロック画面で服用するピルの番号を確認できるようになりました",
+                          "カレンダーに予定を入力できるようになりました",
                           style: FontType.subTitle.merge(TextColorStyle.black),
                           textAlign: TextAlign.center,
                         ),
@@ -57,7 +57,7 @@ class ReleaseNote extends StatelessWidget {
                     children: [
                       Text(
                         '''
-ロック画面にPilllのウィジェットが配置できるようになりました。本日服用するピルの番号が一目で確認できます。追加方法は詳細よりご確認ください
+カレンダー画面に予定を入力できるようになりました。当日に通知も送ることができます。Pilll上で予定を管理したい方はご利用ください
                         ''',
                         style: FontType.assisting.merge(TextColorStyle.main),
                       ),
@@ -85,7 +85,7 @@ class ReleaseNote extends StatelessWidget {
 }
 
 void showReleaseNotePreDialog(BuildContext context) async {
-  const key = ReleaseNoteKey.version3_14_0;
+  const key = ReleaseNoteKey.version3_15_0;
   final storage = await SharedPreferences.getInstance();
   if (storage.getBool(key) ?? false) {
     return;
