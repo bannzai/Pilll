@@ -81,15 +81,21 @@ class _SchedulePostPage extends HookConsumerWidget {
                         await localNotificationService.cancelNotification(localNotificationID: localNotificationID);
                       }
 
-                      final newSchedule = schedule.copyWith(
-                        title: title.value,
-                        localNotification: LocalNotification(
-                          localNotificationID: Random().nextInt(scheduleNotificationIdentifierOffset),
-                          remindDateTime: DateTime(state.date.year, state.date.month, state.date.day, 9),
-                        ),
-                      );
+                      final Schedule newSchedule;
                       if (isOnRemind.value) {
+                        newSchedule = schedule.copyWith(
+                          title: title.value,
+                          localNotification: LocalNotification(
+                            localNotificationID: Random().nextInt(scheduleNotificationIdentifierOffset),
+                            remindDateTime: DateTime(state.date.year, state.date.month, state.date.day, 9),
+                          ),
+                        );
                         await localNotificationService.scheduleCalendarScheduleNotification(schedule: newSchedule);
+                      } else {
+                        newSchedule = schedule.copyWith(
+                          title: title.value,
+                          localNotification: null,
+                        );
                       }
 
                       await ref.read(databaseProvider).schedulesReference().doc(newSchedule.id).set(
