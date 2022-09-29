@@ -352,7 +352,7 @@ class AlertButton extends HookWidget {
                 fontFamily: FontFamily.japanese,
                 fontWeight: FontWeight.w600,
                 fontSize: FontSize.normal,
-                color: isProcessing.value ? TextColor.gray : TextColor.primary),
+                color: (isProcessing.value || onPressed == null) ? TextColor.gray : TextColor.primary),
           ),
           if (isProcessing.value) _Loading(),
         ],
