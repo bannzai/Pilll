@@ -18,8 +18,6 @@ class WebViewPage extends StatefulWidget {
 }
 
 class _WebViewPageState extends State<WebViewPage> {
-  WebViewController? _webViewController;
-
   @override
   void initState() {
     super.initState();
@@ -43,9 +41,7 @@ class _WebViewPageState extends State<WebViewPage> {
       body: WebView(
         initialUrl: widget.url,
         javascriptMode: JavascriptMode.unrestricted,
-        onWebViewCreated: (WebViewController webViewController) {
-          _webViewController = webViewController;
-        },
+        onWebViewCreated: (WebViewController webViewController) {},
       ),
     );
   }
