@@ -5,7 +5,6 @@ import 'package:pilll/analytics.dart';
 import 'package:pilll/components/atoms/buttons.dart';
 import 'package:pilll/components/atoms/font.dart';
 import 'package:pilll/components/atoms/text_color.dart';
-import 'package:pilll/util/platform/platform.dart';
 import 'package:url_launcher/url_launcher.dart';
 
 class ChurnSurveyCompleteDialog extends StatelessWidget {
