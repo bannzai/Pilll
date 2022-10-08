@@ -88,6 +88,9 @@ android {
         }
     }
     ndkVersion '23.1.7779620'
+    buildFeatures {
+        viewBinding true
+    }
 }
 
 flutter {
