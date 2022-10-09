@@ -1,5 +1,4 @@
 <resources>
-
     <style name="Theme.Android.AppWidgetContainerParent" parent="@android:style/Theme.DeviceDefault">
         <!-- Radius of the outer bound of widgets to make the rounded corners -->
         <item name="appWidgetRadius">16dp</item>
@@ -10,7 +9,8 @@
         <item name="appWidgetInnerRadius">8dp</item>
     </style>
 
-    <style name="Theme.Android.AppWidgetContainer" parent="Theme.Android.AppWidgetContainerParent">
+    <style name="Theme.Android.AppWidgetContainer"
+        parent="Theme.Android.AppWidgetContainerParent">
         <!-- Apply padding to avoid the content of the widget colliding with the rounded corners -->
         <item name="appWidgetPadding">16dp</item>
     </style>
