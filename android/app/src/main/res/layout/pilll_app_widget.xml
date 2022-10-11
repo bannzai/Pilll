@@ -4,6 +4,12 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
+    <ImageView
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:layout_alignParentRight="true"
+        android:src="@drawable/pilll-widget-icon" />
+
     <TextView
         style="@style/Widget.Android.AppWidget.InnerView"
         android:id="@+id/appwidget_text"
@@ -16,4 +22,31 @@
         android:textStyle="bold|italic"
         android:layout_margin="8dp"
         android:contentDescription="@string/appwidget_text" />
+
+    <LinearLayout
+        android:layout_width="190dp"
+        android:layout_height="318dp"
+        android:orientation="vertical">
+
+        <EditText
+            android:id="@+id/editTextTextPersonName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:inputType="textPersonName"
+            android:text="月曜日"
+            android:background="@android:color/transparent"
+            />
+
+        <EditText
+            android:id="@+id/editTextTextPersonName2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:inputType="textPersonName"
+            android:text="22"
+            android:textSize="36sp"
+            android:background="@android:color/transparent"
+            />
+    </LinearLayout>
 </RelativeLayout>
