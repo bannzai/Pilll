@@ -23,7 +23,7 @@
         android:orientation="vertical">
 
         <EditText
-            android:id="@+id/weekday"
+            android:id="@+id/widget_weekday"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:ems="10"
@@ -34,7 +34,7 @@
             />
 
         <EditText
-            android:id="@+id/day"
+            android:id="@+id/widget_day"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:ems="10"
@@ -69,7 +69,7 @@
             android:layout_alignParentBottom="true">
 
             <EditText
-                android:id="@+id/todayPillNumber"
+                android:id="@+id/widget_todayPillNumber"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:ems="10"
@@ -86,7 +86,7 @@
                 android:layout_height="10dp"/>
 
             <EditText
-                android:id="@+id/status"
+                android:id="@+id/widget_status"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:ems="10"
