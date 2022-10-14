@@ -9,7 +9,7 @@
     android:resizeMode="horizontal|vertical"
     android:widgetCategory="home_screen"
     android:previewLayout="@layout/pilll_app_widget"
-    android:targetCellHeight="1"
-       android:targetCellWidth="1"
+    android:targetCellHeight="2"
+    android:targetCellWidth="3"
     android:initialKeyguardLayout="@layout/pilll_app_widget"
 />
