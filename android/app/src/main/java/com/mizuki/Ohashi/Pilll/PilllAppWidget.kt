@@ -44,6 +44,12 @@ class PilllAppWidget : AppWidgetProvider() {
 
     private fun updateAppWidget(context: Context, appWidgetManager: AppWidgetManager, appWidgetId: Int) {
         val sharedPreferences = context.getSharedPreferences(R.string.PREFERENCE_KEY.toString(), Context.MODE_PRIVATE)
+
+//        if (sharedPreferences.getBoolean(userIsPremiumOrTrial, true)) {
+//            val views = RemoteViews(context.packageName, R.layout.pilll_app_widget)
+//            return
+//        }
+//
         val views = RemoteViews(context.packageName, R.layout.pilll_app_widget)
         val now = LocalDate.now()
 
