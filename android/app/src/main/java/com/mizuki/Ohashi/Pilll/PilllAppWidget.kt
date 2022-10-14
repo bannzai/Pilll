@@ -7,11 +7,7 @@ import android.view.View
 import android.widget.RemoteViews
 import org.threeten.bp.LocalDate
 import java.lang.Integer.max
-import java.sql.Timestamp
 import java.text.SimpleDateFormat
-import java.time.ZoneId
-import java.util.Calendar
-import java.util.Date
 
 /**
  * Implementation of App Widget functionality.
@@ -47,7 +43,6 @@ class PilllAppWidget : AppWidgetProvider() {
         fun updateAppWidget(context: Context, appWidgetManager: AppWidgetManager, appWidgetId: Int) {
             val sharedPreferences = context.getSharedPreferences(R.string.PREFERENCE_KEY.toString(), Context.MODE_PRIVATE)
             val views = RemoteViews(context.packageName, R.layout.pilll_app_widget)
-            Date.
             val now = LocalDate.now()
 
             val format = SimpleDateFormat("EEEE");
