@@ -59,7 +59,7 @@ class PilllAppWidget : AppWidgetProvider() {
         views.setTextViewText(R.id.widget_day, now.dayOfMonth.toString())
         views.setViewVisibility(R.id.widget_check_on, View.INVISIBLE)
 
-        var pillSheetValueLastUpdateDateEpochMilliSecond = sharedPreferences.getLong(pillSheetValueLastUpdateDate, -1)
+        var pillSheetValueLastUpdateDateEpochMilliSecond = sharedPreferences.getLong(pillSheetValueLastUpdateDateTime, -1)
         if (pillSheetValueLastUpdateDateEpochMilliSecond < 0) {
             val pillSheetValueLastUpdateDate = LocalDate.ofEpochDay(pillSheetValueLastUpdateDateEpochMilliSecond)
             val settingPillSheetAppearanceMode =
