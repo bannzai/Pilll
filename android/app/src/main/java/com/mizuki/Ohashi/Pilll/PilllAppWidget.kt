@@ -8,6 +8,7 @@ import android.view.View
 import android.widget.RemoteViews
 import com.example.Pilll.Const
 import org.threeten.bp.LocalDate
+import org.threeten.bp.format.DateTimeFormatter
 import java.lang.Integer.max
 import java.text.SimpleDateFormat
 
@@ -44,8 +45,8 @@ class PilllAppWidget : AppWidgetProvider() {
         val views = RemoteViews(context.packageName, R.layout.pilll_app_widget)
         val now = LocalDate.now()
 
-        val format = SimpleDateFormat("EEEE");
-        val dayOfWeekName = format.format(now)
+
+        val dayOfWeekName = now.format(DateTimeFormatter.ofPattern("EEEE"))
         views.setTextViewText(R.id.widget_weekday, dayOfWeekName)
         views.setTextViewText(R.id.widget_day, now.dayOfMonth.toString())
         views.setViewVisibility(R.id.widget_check_on, View.INVISIBLE)
