@@ -4,6 +4,7 @@ import android.appwidget.AppWidgetManager
 import android.appwidget.AppWidgetProvider
 import android.content.Context
 import android.content.Intent
+import android.util.Log
 import android.view.View
 import android.widget.RemoteViews
 import com.example.Pilll.Const
@@ -52,7 +53,8 @@ class PilllAppWidget : AppWidgetProvider() {
         views.setViewVisibility(R.id.widget_check_on, View.INVISIBLE)
 
         var pillSheetValueLastUpdateDateEpochMilliSecond = sharedPreferences.getLong(Const.pillSheetValueLastUpdateDateTime, -1)
-        if (pillSheetValueLastUpdateDateEpochMilliSecond < 0) {
+        Log.d("[DEBUG]", "pillSheetValueLastUpdateDateEpochMilliSecond: $pillSheetValueLastUpdateDateEpochMilliSecond")
+        if (pillSheetValueLastUpdateDateEpochMilliSecond > 0) {
             val pillSheetValueLastUpdateDate = LocalDate.ofEpochDay(pillSheetValueLastUpdateDateEpochMilliSecond)
             val settingPillSheetAppearanceMode =
                 sharedPreferences.getString(Const.settingPillSheetAppearanceMode, "number")
@@ -61,6 +63,7 @@ class PilllAppWidget : AppWidgetProvider() {
             } else {
                 sharedPreferences.getInt(Const.pillSheetTodayPillNumber, 0)
             }
+            Log.d("[DEBUG]", "todayPillNumberBase: $todayPillNumberBase")
             if (todayPillNumberBase != 0) {
                 val diff = now.dayOfMonth - pillSheetValueLastUpdateDate.dayOfMonth
                 val todayPillNumber = todayPillNumberBase + max(0, diff)
@@ -74,7 +77,7 @@ class PilllAppWidget : AppWidgetProvider() {
         }
 
         val pillSheetLastTakenDateMilliSecond = sharedPreferences.getLong(Const.pillSheetLastTakenDate, -1)
-        if (pillSheetLastTakenDateMilliSecond < 0) {
+        if (pillSheetLastTakenDateMilliSecond > 0) {
             val pillSheetValueLastUpdateDate = LocalDate.ofEpochDay(pillSheetValueLastUpdateDateEpochMilliSecond)
             if (now.isEqual(pillSheetValueLastUpdateDate)) {
                 views.setViewVisibility(R.id.widget_check_on, View.VISIBLE)

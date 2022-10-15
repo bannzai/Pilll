@@ -48,6 +48,7 @@ class MainActivity: FlutterActivity() {
                     result.success(mapOf("result" to "success"))
                 }
                 "syncActivePillSheetValue" -> {
+                    Log.d("[DEBUG]", "${call.argument<Long>(Const.pillSheetValueLastUpdateDateTime)}")
                     val sharedPreferences = getSharedPreferences(R.string.PREFERENCE_KEY.toString(), Context.MODE_PRIVATE).edit()
                     sharedPreferences.putLong(Const.pillSheetValueLastUpdateDateTime, call.argument<Long>(Const.pillSheetValueLastUpdateDateTime) ?: 0).apply()
                     sharedPreferences.putLong(Const.pillSheetLastTakenDate, call.argument<Long>(Const.pillSheetLastTakenDate) ?: 0).apply()
