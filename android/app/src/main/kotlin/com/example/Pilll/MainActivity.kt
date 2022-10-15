@@ -6,6 +6,7 @@ import android.content.Context
 import android.os.Build
 import android.os.Bundle
 import android.util.Log
+import com.example.Pilll.Const
 import io.flutter.embedding.android.FlutterActivity
 import io.flutter.embedding.engine.FlutterEngine
 import io.flutter.embedding.engine.dart.DartExecutor
@@ -30,13 +31,20 @@ class MainActivity: FlutterActivity() {
                 call, result ->
             when (call.method) {
                 "syncUserStatus" -> {
-
+                    val sharedPreferences = getSharedPreferences(R.string.PREFERENCE_KEY.toString(), Context.MODE_PRIVATE).edit()
+                    sharedPreferences.putBoolean(Const.userIsPremiumOrTrial, call.argument<Boolean>(Const.userIsPremiumOrTrial) ?: false).apply()
                 }
                 "syncSetting" -> {
-
+                    val sharedPreferences = getSharedPreferences(R.string.PREFERENCE_KEY.toString(), Context.MODE_PRIVATE).edit()
+                    sharedPreferences.putString(Const.settingPillSheetAppearanceMode, call.argument<String>(Const.settingPillSheetAppearanceMode)).apply()
                 }
                 "syncActivePillSheetValue" -> {
-
+                    val sharedPreferences = getSharedPreferences(R.string.PREFERENCE_KEY.toString(), Context.MODE_PRIVATE).edit()
+                    sharedPreferences.putLong(Const.pillSheetValueLastUpdateDateTime, call.argument<Long>(Const.pillSheetValueLastUpdateDateTime) ?: 0).apply()
+                    sharedPreferences.putLong(Const.pillSheetLastTakenDate, call.argument<Long>(Const.pillSheetLastTakenDate) ?: 0).apply()
+                    sharedPreferences.putInt(Const.pillSheetGroupTodayPillNumber, call.argument<Int>(Const.pillSheetGroupTodayPillNumber) ?: 0).apply()
+                    sharedPreferences.putInt(Const.pillSheetTodayPillNumber, call.argument<Int>(Const.pillSheetTodayPillNumber) ?: 0).apply()
+                    sharedPreferences.putInt(Const.pillSheetEndDisplayPillNumber, call.argument<Int>(Const.pillSheetEndDisplayPillNumber) ?: 0).apply()
                 }
                 else -> {}
             }
