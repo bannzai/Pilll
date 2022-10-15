@@ -7,6 +7,10 @@ import android.os.Build
 import android.os.Bundle
 import android.util.Log
 import io.flutter.embedding.android.FlutterActivity
+import io.flutter.embedding.engine.FlutterEngine
+import io.flutter.embedding.engine.dart.DartExecutor
+import io.flutter.plugin.common.MethodCall
+import io.flutter.plugin.common.MethodChannel
 
 class MainActivity: FlutterActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -19,6 +23,27 @@ class MainActivity: FlutterActivity() {
         Log.d("android message: ", "onStart")
         createNotificationChannel()
     }
+
+    override fun configureFlutterEngine(flutterEngine: FlutterEngine) {
+        super.configureFlutterEngine(flutterEngine)
+        MethodChannel(flutterEngine.dartExecutor.binaryMessenger, CHANNEL).setMethodCallHandler {
+                call, result ->
+            when (call.method) {
+                "syncUserStatus" -> {
+
+                }
+                "syncSetting" -> {
+
+                }
+                "syncActivePillSheetValue" -> {
+
+                }
+                else -> {}
+            }
+        }
+
+    }
+
     private fun createNotificationChannel() {
         // Create the NotificationChannel, but only on API 26+ because
         // the NotificationChannel class is new and not in the support library

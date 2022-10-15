@@ -28,16 +28,6 @@ public class BroadCastActionReceiver: BroadcastReceiver() {
         }
     }
 
-    private fun methodChannel(context: Context): MethodChannel {
-        val flutterEngine = FlutterEngine(context)
-        flutterEngine
-                .dartExecutor
-                .executeDartEntrypoint(
-                        DartExecutor.DartEntrypoint.createDefault()
-                )
-        return MethodChannel(flutterEngine.dartExecutor.binaryMessenger, "method.channel.MizukiOhashi.Pilll")
-    }
-
     private class RecordPillResult(private val pendingResult: PendingResult): MethodChannel.Result {
         override fun success(result: Any?) {
             Log.d(TAG, "successfully record pill $result")
