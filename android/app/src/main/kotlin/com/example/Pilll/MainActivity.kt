@@ -64,7 +64,7 @@ class MainActivity: FlutterActivity() {
 
     private fun updateWidget() {
         val javaClass =
-            Class.forName("PilllAppWidget")
+            Class.forName("com.mizuki.Ohashi.Pilll.PilllAppWidget")
         val intent = Intent(context, javaClass)
         intent.action = AppWidgetManager.ACTION_APPWIDGET_UPDATE
         val ids: IntArray = AppWidgetManager.getInstance(context.applicationContext)
