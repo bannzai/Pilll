@@ -10,6 +10,7 @@ import android.os.Build
 import android.os.Bundle
 import android.util.Log
 import com.example.Pilll.Const
+import com.jakewharton.threetenabp.AndroidThreeTen
 import io.flutter.embedding.android.FlutterActivity
 import io.flutter.embedding.engine.FlutterEngine
 import io.flutter.embedding.engine.dart.DartExecutor
@@ -20,6 +21,7 @@ class MainActivity: FlutterActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         Log.d("android message: ", "onCreate")
+        AndroidThreeTen.init(this);
     }
 
     override fun onStart() {
