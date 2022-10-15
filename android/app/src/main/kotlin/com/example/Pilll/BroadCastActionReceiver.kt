@@ -9,10 +9,6 @@ import com.aboutyou.dart_packages.sign_in_with_apple.TAG
 import io.flutter.embedding.engine.FlutterEngine
 import io.flutter.embedding.engine.dart.DartExecutor
 import io.flutter.plugin.common.MethodChannel
-import kotlinx.coroutines.CoroutineScope
-import kotlinx.coroutines.Dispatchers
-import kotlinx.coroutines.SupervisorJob
-import kotlinx.coroutines.launch
 
 
 public class BroadCastActionReceiver: BroadcastReceiver() {
