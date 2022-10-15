@@ -2,7 +2,10 @@ package com.mizuki.Ohashi.Pilll
 
 import android.app.NotificationChannel
 import android.app.NotificationManager
+import android.appwidget.AppWidgetManager
+import android.content.ComponentName
 import android.content.Context
+import android.content.Intent
 import android.os.Build
 import android.os.Bundle
 import android.util.Log
@@ -33,10 +36,14 @@ class MainActivity: FlutterActivity() {
                 "syncUserStatus" -> {
                     val sharedPreferences = getSharedPreferences(R.string.PREFERENCE_KEY.toString(), Context.MODE_PRIVATE).edit()
                     sharedPreferences.putBoolean(Const.userIsPremiumOrTrial, call.argument<Boolean>(Const.userIsPremiumOrTrial) ?: false).apply()
+                    updateWidget()
+                    result.success(mapOf("result" to "success"))
                 }
                 "syncSetting" -> {
                     val sharedPreferences = getSharedPreferences(R.string.PREFERENCE_KEY.toString(), Context.MODE_PRIVATE).edit()
                     sharedPreferences.putString(Const.settingPillSheetAppearanceMode, call.argument<String>(Const.settingPillSheetAppearanceMode)).apply()
+                    updateWidget()
+                    result.success(mapOf("result" to "success"))
                 }
                 "syncActivePillSheetValue" -> {
                     val sharedPreferences = getSharedPreferences(R.string.PREFERENCE_KEY.toString(), Context.MODE_PRIVATE).edit()
@@ -45,11 +52,23 @@ class MainActivity: FlutterActivity() {
                     sharedPreferences.putInt(Const.pillSheetGroupTodayPillNumber, call.argument<Int>(Const.pillSheetGroupTodayPillNumber) ?: 0).apply()
                     sharedPreferences.putInt(Const.pillSheetTodayPillNumber, call.argument<Int>(Const.pillSheetTodayPillNumber) ?: 0).apply()
                     sharedPreferences.putInt(Const.pillSheetEndDisplayPillNumber, call.argument<Int>(Const.pillSheetEndDisplayPillNumber) ?: 0).apply()
+                    updateWidget()
+                    result.success(mapOf("result" to "success"))
                 }
                 else -> {}
             }
         }
+    }
 
+    private fun updateWidget() {
+        val javaClass =
+            Class.forName("PilllAppWidget")
+        val intent = Intent(context, javaClass)
+        intent.action = AppWidgetManager.ACTION_APPWIDGET_UPDATE
+        val ids: IntArray = AppWidgetManager.getInstance(context.applicationContext)
+            .getAppWidgetIds(ComponentName(context, javaClass))
+        intent.putExtra(AppWidgetManager.EXTRA_APPWIDGET_IDS, ids)
+        context.sendBroadcast(intent)
     }
 
     private fun createNotificationChannel() {

@@ -3,6 +3,7 @@ package com.mizuki.Ohashi.Pilll
 import android.appwidget.AppWidgetManager
 import android.appwidget.AppWidgetProvider
 import android.content.Context
+import android.content.Intent
 import android.view.View
 import android.widget.RemoteViews
 import com.example.Pilll.Const
@@ -14,6 +15,9 @@ import java.text.SimpleDateFormat
  * Implementation of App Widget functionality.
  */
 class PilllAppWidget : AppWidgetProvider() {
+    override fun onReceive(context: Context?, intent: Intent?) {
+        super.onReceive(context, intent)
+    }
     override fun onUpdate(context: Context, appWidgetManager: AppWidgetManager, appWidgetIds: IntArray) {
         // There may be multiple widgets active, so update all of them
         for (appWidgetId in appWidgetIds) {
