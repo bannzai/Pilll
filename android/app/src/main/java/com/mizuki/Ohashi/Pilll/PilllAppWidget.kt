@@ -5,6 +5,7 @@ import android.appwidget.AppWidgetProvider
 import android.content.Context
 import android.view.View
 import android.widget.RemoteViews
+import com.example.Pilll.Const
 import org.threeten.bp.LocalDate
 import java.lang.Integer.max
 import java.text.SimpleDateFormat
@@ -45,20 +46,20 @@ class PilllAppWidget : AppWidgetProvider() {
         views.setTextViewText(R.id.widget_day, now.dayOfMonth.toString())
         views.setViewVisibility(R.id.widget_check_on, View.INVISIBLE)
 
-        var pillSheetValueLastUpdateDateEpochMilliSecond = sharedPreferences.getLong(pillSheetValueLastUpdateDateTime, -1)
+        var pillSheetValueLastUpdateDateEpochMilliSecond = sharedPreferences.getLong(Const.pillSheetValueLastUpdateDateTime, -1)
         if (pillSheetValueLastUpdateDateEpochMilliSecond < 0) {
             val pillSheetValueLastUpdateDate = LocalDate.ofEpochDay(pillSheetValueLastUpdateDateEpochMilliSecond)
             val settingPillSheetAppearanceMode =
-                sharedPreferences.getString(settingPillSheetAppearanceMode, "number")
+                sharedPreferences.getString(Const.settingPillSheetAppearanceMode, "number")
             val todayPillNumberBase = if (settingPillSheetAppearanceMode == "sequential") {
-                sharedPreferences.getInt(pillSheetGroupTodayPillNumber, 0)
+                sharedPreferences.getInt(Const.pillSheetGroupTodayPillNumber, 0)
             } else {
-                sharedPreferences.getInt(pillSheetTodayPillNumber, 0)
+                sharedPreferences.getInt(Const.pillSheetTodayPillNumber, 0)
             }
             if (todayPillNumberBase != 0) {
                 val diff = now.dayOfMonth - pillSheetValueLastUpdateDate.dayOfMonth
                 val todayPillNumber = todayPillNumberBase + max(0, diff)
-                val pillSheetEndDisplayPillNumber = sharedPreferences.getInt(pillSheetEndDisplayPillNumber, 0)
+                val pillSheetEndDisplayPillNumber = sharedPreferences.getInt(Const.pillSheetEndDisplayPillNumber, 0)
                 if (todayPillNumber > pillSheetEndDisplayPillNumber) {
                     views.setTextViewText(R.id.widget_todayPillNumber, "1")
                 } else {
@@ -67,7 +68,7 @@ class PilllAppWidget : AppWidgetProvider() {
             }
         }
 
-        val pillSheetLastTakenDateMilliSecond = sharedPreferences.getLong(pillSheetLastTakenDate, -1)
+        val pillSheetLastTakenDateMilliSecond = sharedPreferences.getLong(Const.pillSheetLastTakenDate, -1)
         if (pillSheetLastTakenDateMilliSecond < 0) {
             val pillSheetValueLastUpdateDate = LocalDate.ofEpochDay(pillSheetValueLastUpdateDateEpochMilliSecond)
             if (now.isEqual(pillSheetValueLastUpdateDate)) {
