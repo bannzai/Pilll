@@ -8,7 +8,9 @@ import android.util.Log
 import android.view.View
 import android.widget.RemoteViews
 import com.example.Pilll.Const
+import org.threeten.bp.Instant
 import org.threeten.bp.LocalDate
+import org.threeten.bp.ZoneId
 import org.threeten.bp.format.DateTimeFormatter
 import java.lang.Integer.max
 import java.text.SimpleDateFormat
@@ -55,7 +57,7 @@ class PilllAppWidget : AppWidgetProvider() {
         var pillSheetValueLastUpdateDateEpochMilliSecond = sharedPreferences.getLong(Const.pillSheetValueLastUpdateDateTime, -1)
         Log.d("[DEBUG]", "pillSheetValueLastUpdateDateEpochMilliSecond: $pillSheetValueLastUpdateDateEpochMilliSecond")
         if (pillSheetValueLastUpdateDateEpochMilliSecond > 0) {
-            val pillSheetValueLastUpdateDate = LocalDate.ofEpochDay(pillSheetValueLastUpdateDateEpochMilliSecond)
+            val pillSheetValueLastUpdateDate = Instant.ofEpochMilli(pillSheetValueLastUpdateDateEpochMilliSecond).atZone(ZoneId.systemDefault()).toLocalDate()
             val settingPillSheetAppearanceMode =
                 sharedPreferences.getString(Const.settingPillSheetAppearanceMode, "number")
             val todayPillNumberBase = if (settingPillSheetAppearanceMode == "sequential") {
@@ -64,22 +66,24 @@ class PilllAppWidget : AppWidgetProvider() {
                 sharedPreferences.getInt(Const.pillSheetTodayPillNumber, 0)
             }
             Log.d("[DEBUG]", "todayPillNumberBase: $todayPillNumberBase")
+            views.setTextViewText(R.id.widget_todayPillNumber, "1日目")
             if (todayPillNumberBase != 0) {
                 val diff = now.dayOfMonth - pillSheetValueLastUpdateDate.dayOfMonth
                 val todayPillNumber = todayPillNumberBase + max(0, diff)
                 val pillSheetEndDisplayPillNumber = sharedPreferences.getInt(Const.pillSheetEndDisplayPillNumber, 0)
-                if (todayPillNumber > pillSheetEndDisplayPillNumber) {
-                    views.setTextViewText(R.id.widget_todayPillNumber, "1")
+                Log.d("[DEBUG]", "pillSheetEndDisplayPillNumber: $pillSheetEndDisplayPillNumber, todayPillNumber: $todayPillNumber")
+                if (pillSheetEndDisplayPillNumber in 1 until todayPillNumber) {
+                    views.setTextViewText(R.id.widget_todayPillNumber, "1日目")
                 } else {
-                    views.setTextViewText(R.id.widget_todayPillNumber, "$todayPillNumber")
+                    views.setTextViewText(R.id.widget_todayPillNumber, "${todayPillNumber}日目")
                 }
             }
         }
 
         val pillSheetLastTakenDateMilliSecond = sharedPreferences.getLong(Const.pillSheetLastTakenDate, -1)
         if (pillSheetLastTakenDateMilliSecond > 0) {
-            val pillSheetValueLastUpdateDate = LocalDate.ofEpochDay(pillSheetValueLastUpdateDateEpochMilliSecond)
-            if (now.isEqual(pillSheetValueLastUpdateDate)) {
+            val pillSheetLastTakenDate = Instant.ofEpochMilli(pillSheetLastTakenDateMilliSecond).atZone(ZoneId.systemDefault()).toLocalDate()
+            if (now.isEqual(pillSheetLastTakenDate)) {
                 views.setViewVisibility(R.id.widget_check_on, View.VISIBLE)
             }
         }
