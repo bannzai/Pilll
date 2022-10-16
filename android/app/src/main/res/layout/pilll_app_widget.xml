@@ -72,20 +72,6 @@
                 android:background="@android:color/transparent"
                 android:maxLines="1"
                 />
-
-            <TextView
-                android:id="@+id/widget_status"
-                android:paddingTop="10dp"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:ems="10"
-                android:inputType="textPersonName"
-                android:text="服用済み"
-                android:textSize="15sp"
-                android:textFontWeight="600"
-                android:background="@android:color/transparent"
-                android:maxLines="1"
-                />
         </LinearLayout>
 
     </LinearLayout>
