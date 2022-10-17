@@ -48,7 +48,6 @@ class PilllAppWidget : AppWidgetProvider() {
         val views = RemoteViews(context.packageName, R.layout.pilll_app_widget)
         val now = LocalDate.now()
 
-
         val dayOfWeekName = now.format(DateTimeFormatter.ofPattern("EEEE"))
         views.setTextViewText(R.id.widget_weekday, dayOfWeekName)
         views.setTextViewText(R.id.widget_day, now.dayOfMonth.toString())
