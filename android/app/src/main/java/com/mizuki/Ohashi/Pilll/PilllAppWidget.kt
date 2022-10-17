@@ -1,5 +1,6 @@
 package com.mizuki.Ohashi.Pilll
 
+import android.app.PendingIntent
 import android.appwidget.AppWidgetManager
 import android.appwidget.AppWidgetProvider
 import android.content.Context
@@ -38,7 +39,15 @@ class PilllAppWidget : AppWidgetProvider() {
 
     private fun updateAppWidget(context: Context, appWidgetManager: AppWidgetManager, appWidgetId: Int) {
         val sharedPreferences = context.getSharedPreferences(R.string.PREFERENCE_KEY.toString(), Context.MODE_PRIVATE)
-        val views = RemoteViews(context.packageName, R.layout.pilll_app_widget)
+        val views = RemoteViews(context.packageName, R.layout.pilll_app_widget).apply {
+            val pendingIntent: PendingIntent = PendingIntent.getActivity(
+                /* context = */ context,
+                /* requestCode = */  0,
+                /* intent = */ Intent(context, MainActivity::class.java),
+                /* flags = */ PendingIntent.FLAG_UPDATE_CURRENT or PendingIntent.FLAG_IMMUTABLE
+            )
+            setOnClickPendingIntent(R.id.widget_dummy_button, pendingIntent)
+        }
 
         views.setViewVisibility(R.id.widget_mainFrame, View.INVISIBLE)
         views.setViewVisibility(R.id.widget_invalidFrame, View.INVISIBLE)
