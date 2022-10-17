@@ -38,15 +38,18 @@ class PilllAppWidget : AppWidgetProvider() {
 
     private fun updateAppWidget(context: Context, appWidgetManager: AppWidgetManager, appWidgetId: Int) {
         val sharedPreferences = context.getSharedPreferences(R.string.PREFERENCE_KEY.toString(), Context.MODE_PRIVATE)
-
-//        if (sharedPreferences.getBoolean(userIsPremiumOrTrial, true)) {
-//            val views = RemoteViews(context.packageName, R.layout.pilll_app_widget)
-//            return
-//        }
-//
         val views = RemoteViews(context.packageName, R.layout.pilll_app_widget)
-        val now = LocalDate.now()
 
+        views.setViewVisibility(R.id.widget_mainFrame, View.INVISIBLE)
+        views.setViewVisibility(R.id.widget_invalidFrame, View.INVISIBLE)
+        if (!sharedPreferences.getBoolean(Const.userIsPremiumOrTrial, false)) {
+            views.setViewVisibility(R.id.widget_invalidFrame, View.VISIBLE)
+            return
+        } else {
+            views.setViewVisibility(R.id.widget_mainFrame, View.VISIBLE)
+        }
+
+        val now = LocalDate.now()
         val dayOfWeekName = now.format(DateTimeFormatter.ofPattern("EEEE"))
         views.setTextViewText(R.id.widget_weekday, dayOfWeekName)
         views.setTextViewText(R.id.widget_day, now.dayOfMonth.toString())
