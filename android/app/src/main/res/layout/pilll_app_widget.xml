@@ -4,6 +4,7 @@
     android:orientation="vertical">
 
     <RelativeLayout
+        android:id="@+id/widget_mainFrame"
         style="@style/Widget.Android.AppWidget.Container"
         android:theme="@style/Theme.Android.AppWidgetContainer"
         android:layout_width="match_parent"
