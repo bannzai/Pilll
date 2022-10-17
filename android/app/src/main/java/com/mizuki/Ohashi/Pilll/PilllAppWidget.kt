@@ -13,7 +13,6 @@ import org.threeten.bp.LocalDate
 import org.threeten.bp.ZoneId
 import org.threeten.bp.format.DateTimeFormatter
 import java.lang.Integer.max
-import java.text.SimpleDateFormat
 
 /**
  * Implementation of App Widget functionality.
