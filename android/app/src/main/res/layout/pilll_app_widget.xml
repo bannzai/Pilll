@@ -1,78 +1,93 @@
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    style="@style/Widget.Android.AppWidget.Container"
-    android:theme="@style/Theme.Android.AppWidgetContainer"
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:orientation="vertical">
 
-    <ImageView
-        android:layout_width="48dp"
-        android:layout_height="48dp"
-        android:layout_alignParentRight="true"
-        android:src="@drawable/pilll_widget_icon" />
+    <RelativeLayout
+        style="@style/Widget.Android.AppWidget.Container"
+        android:theme="@style/Theme.Android.AppWidgetContainer"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
 
-    <ImageView
-        android:id="@+id/widget_check_on"
-        android:layout_width="48dp"
-        android:layout_height="48dp"
-        android:layout_alignParentRight="true"
-        android:layout_alignParentBottom="true"
-        android:src="@drawable/check_icon_on" />
+        <ImageView
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:layout_alignParentRight="true"
+            android:src="@drawable/pilll_widget_icon" />
 
-    <LinearLayout
-        android:layout_width="120dp"
-        android:layout_height="80dp"
-        android:orientation="vertical">
-
-        <TextView
-            android:id="@+id/widget_weekday"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:ems="10"
-            android:inputType="textPersonName"
-            android:text="月曜日"
-            android:maxLines="1"
-            android:background="@android:color/transparent"
-            />
-
-        <TextView
-            android:id="@+id/widget_day"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:ems="10"
-            android:inputType="textPersonName"
-            android:text="22"
-            android:textSize="36sp"
-            android:maxLines="1"
-            android:background="@android:color/transparent"
-            />
-    </LinearLayout>
-
-    <LinearLayout
-        android:layout_width="140dp"
-        android:layout_height="80dp"
-        android:orientation="horizontal"
-        android:layout_alignParentBottom="true">
+        <ImageView
+            android:id="@+id/widget_check_on"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentBottom="true"
+            android:src="@drawable/check_icon_on" />
 
         <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:orientation="vertical"
-            android:gravity="center"
-            android:layout_alignParentBottom="true">
+            android:layout_width="120dp"
+            android:layout_height="80dp"
+            android:orientation="vertical">
 
             <TextView
-                android:id="@+id/widget_todayPillNumber"
+                android:id="@+id/widget_weekday"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:ems="10"
                 android:inputType="textPersonName"
-                android:text="18日目"
-                android:textSize="15sp"
-                android:textFontWeight="600"
-                android:background="@android:color/transparent"
+                android:text="月曜日"
                 android:maxLines="1"
+                android:background="@android:color/transparent"
+                />
+
+            <TextView
+                android:id="@+id/widget_day"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:inputType="textPersonName"
+                android:text="22"
+                android:textSize="36sp"
+                android:maxLines="1"
+                android:background="@android:color/transparent"
                 />
         </LinearLayout>
 
-    </LinearLayout>
-</RelativeLayout>
+        <LinearLayout
+            android:layout_width="140dp"
+            android:layout_height="80dp"
+            android:orientation="horizontal"
+            android:layout_alignParentBottom="true">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:gravity="center"
+                android:layout_alignParentBottom="true">
+
+                <TextView
+                    android:id="@+id/widget_todayPillNumber"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:ems="10"
+                    android:inputType="textPersonName"
+                    android:text="18日目"
+                    android:textSize="15sp"
+                    android:textFontWeight="600"
+                    android:background="@android:color/transparent"
+                    android:maxLines="1"
+                    />
+            </LinearLayout>
+
+        </LinearLayout>
+    </RelativeLayout>
+
+    <Button
+        android:id="@+id/widget_dummy_button"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@android:color/transparent"
+        >
+    </Button>
+
+</FrameLayout>
