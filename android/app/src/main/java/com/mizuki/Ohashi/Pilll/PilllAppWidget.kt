@@ -69,6 +69,7 @@ class PilllAppWidget : AppWidgetProvider() {
         views.setTextViewText(R.id.widget_weekday, dayOfWeekName)
         views.setTextViewText(R.id.widget_day, now.dayOfMonth.toString())
         views.setViewVisibility(R.id.widget_check_on, View.INVISIBLE)
+        views.setViewVisibility(R.id.widget_status, View.GONE)
 
         var pillSheetValueLastUpdateDateEpochMilliSecond = sharedPreferences.getLong(Const.pillSheetValueLastUpdateDateTime, -1)
         Log.d("[DEBUG]", "pillSheetValueLastUpdateDateEpochMilliSecond: $pillSheetValueLastUpdateDateEpochMilliSecond")
@@ -101,6 +102,7 @@ class PilllAppWidget : AppWidgetProvider() {
             val pillSheetLastTakenDate = Instant.ofEpochMilli(pillSheetLastTakenDateMilliSecond).atZone(ZoneId.systemDefault()).toLocalDate()
             if (now.isEqual(pillSheetLastTakenDate)) {
                 views.setViewVisibility(R.id.widget_check_on, View.VISIBLE)
+                views.setViewVisibility(R.id.widget_status, View.VISIBLE)
             }
         }
 
