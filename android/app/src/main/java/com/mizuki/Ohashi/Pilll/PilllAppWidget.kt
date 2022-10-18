@@ -89,10 +89,11 @@ class PilllAppWidget : AppWidgetProvider() {
                 val todayPillNumber = todayPillNumberBase + max(0, diff)
                 val pillSheetEndDisplayPillNumber = sharedPreferences.getInt(Const.pillSheetEndDisplayPillNumber, 0)
                 Log.d("[DEBUG]", "pillSheetEndDisplayPillNumber: $pillSheetEndDisplayPillNumber, todayPillNumber: $todayPillNumber")
+                val suffix = if(sharedPreferences.getString(Const.settingPillSheetAppearanceMode, "number") == "sequential")  "日目" else "番"
                 if (pillSheetEndDisplayPillNumber in 1 until todayPillNumber) {
-                    views.setTextViewText(R.id.widget_todayPillNumber, "1日目")
+                    views.setTextViewText(R.id.widget_todayPillNumber,  "1$suffix")
                 } else {
-                    views.setTextViewText(R.id.widget_todayPillNumber, "${todayPillNumber}日目")
+                    views.setTextViewText(R.id.widget_todayPillNumber, "${todayPillNumber}${suffix}")
                 }
             }
         }
