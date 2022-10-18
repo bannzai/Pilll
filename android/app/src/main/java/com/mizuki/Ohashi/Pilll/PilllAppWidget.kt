@@ -39,6 +39,20 @@ class PilllAppWidget : AppWidgetProvider() {
 
     private fun updateAppWidget(context: Context, appWidgetManager: AppWidgetManager, appWidgetId: Int) {
         val sharedPreferences = context.getSharedPreferences(R.string.PREFERENCE_KEY.toString(), Context.MODE_PRIVATE)
+        if (!sharedPreferences.getBoolean(Const.userIsPremiumOrTrial, false)) {
+            val views = RemoteViews(context.packageName, R.layout.pilll_app_invalid_widget).apply {
+                val pendingIntent: PendingIntent = PendingIntent.getActivity(
+                    /* context = */ context,
+                    /* requestCode = */  0,
+                    /* intent = */ Intent(context, MainActivity::class.java),
+                    /* flags = */ PendingIntent.FLAG_UPDATE_CURRENT or PendingIntent.FLAG_IMMUTABLE
+                )
+                setOnClickPendingIntent(R.id.widget_dummy_button, pendingIntent)
+            }
+
+            appWidgetManager.updateAppWidget(appWidgetId, views)
+            return
+        }
         val views = RemoteViews(context.packageName, R.layout.pilll_app_widget).apply {
             val pendingIntent: PendingIntent = PendingIntent.getActivity(
                 /* context = */ context,
@@ -49,14 +63,6 @@ class PilllAppWidget : AppWidgetProvider() {
             setOnClickPendingIntent(R.id.widget_dummy_button, pendingIntent)
         }
 
-        if (!sharedPreferences.getBoolean(Const.userIsPremiumOrTrial, false)) {
-            views.setViewVisibility(R.id.widget_mainFrame, View.GONE)
-            views.setViewVisibility(R.id.widget_invalidFrame, View.VISIBLE)
-            return
-        } else {
-            views.setViewVisibility(R.id.widget_invalidFrame, View.GONE)
-            views.setViewVisibility(R.id.widget_mainFrame, View.VISIBLE)
-        }
 
         val now = LocalDate.now()
         val dayOfWeekName = now.format(DateTimeFormatter.ofPattern("EEEE"))
