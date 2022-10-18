@@ -49,12 +49,12 @@ class PilllAppWidget : AppWidgetProvider() {
             setOnClickPendingIntent(R.id.widget_dummy_button, pendingIntent)
         }
 
-        views.setViewVisibility(R.id.widget_mainFrame, View.INVISIBLE)
-        views.setViewVisibility(R.id.widget_invalidFrame, View.INVISIBLE)
         if (!sharedPreferences.getBoolean(Const.userIsPremiumOrTrial, false)) {
+            views.setViewVisibility(R.id.widget_mainFrame, View.GONE)
             views.setViewVisibility(R.id.widget_invalidFrame, View.VISIBLE)
             return
         } else {
+            views.setViewVisibility(R.id.widget_invalidFrame, View.GONE)
             views.setViewVisibility(R.id.widget_mainFrame, View.VISIBLE)
         }
 
