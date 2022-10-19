@@ -59,7 +59,7 @@ class ReleaseNote extends StatelessWidget {
                     children: [
                       Text(
                         '''
-ホームウィジェットを追加できるようになりました。本日服用するピルの番号が一目でわかるようになりとても便利です。ぜひご活用ください
+ホームウィジェットを追加できるようになりました。本日服用するピルの番号が一目でわかるようになっています
                         ''',
                         style: FontType.assisting.merge(TextColorStyle.main),
                       ),
