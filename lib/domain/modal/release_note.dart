@@ -44,7 +44,7 @@ class ReleaseNote extends StatelessWidget {
                       child: Container(
                         padding: const EdgeInsets.only(top: 40, left: 40, right: 40),
                         child: Text(
-                          "カレンダーに予定を入力できるようになりました",
+                          "ホームウィジェットが追加できるようになりました",
                           style: FontType.subTitle.merge(TextColorStyle.black),
                           textAlign: TextAlign.center,
                         ),
@@ -59,7 +59,7 @@ class ReleaseNote extends StatelessWidget {
                     children: [
                       Text(
                         '''
-カレンダー画面に予定を入力できるようになりました。当日に通知も送ることができます。Pilll上で予定を管理したい方はご利用ください
+ホームウィジェットを追加できるようになりました。本日服用するピルの番号が一目でわかるようになりとても便利です。ぜひご活用ください
                         ''',
                         style: FontType.assisting.merge(TextColorStyle.main),
                       ),
