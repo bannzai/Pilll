@@ -1,3 +1,5 @@
+import 'dart:io';
+
 import 'package:flutter_inappwebview/flutter_inappwebview.dart';
 import 'package:pilll/analytics.dart';
 import 'package:pilll/components/atoms/buttons.dart';
@@ -85,7 +87,12 @@ class ReleaseNote extends StatelessWidget {
 }
 
 void showReleaseNotePreDialog(BuildContext context) async {
-  const key = ReleaseNoteKey.version3_16_0;
+  final String key;
+  if (Platform.isAndroid) {
+    key = ReleaseNoteKey.version3_16_0;
+  } else {
+    key = ReleaseNoteKey.version3_15_0;
+  }
   final storage = await SharedPreferences.getInstance();
   if (storage.getBool(key) ?? false) {
     return;
