@@ -6,13 +6,7 @@ import android.content.Intent
 import android.util.Log
 import androidx.core.app.NotificationManagerCompat
 import com.aboutyou.dart_packages.sign_in_with_apple.TAG
-import io.flutter.embedding.engine.FlutterEngine
-import io.flutter.embedding.engine.dart.DartExecutor
 import io.flutter.plugin.common.MethodChannel
-import kotlinx.coroutines.CoroutineScope
-import kotlinx.coroutines.Dispatchers
-import kotlinx.coroutines.SupervisorJob
-import kotlinx.coroutines.launch
 
 
 public class BroadCastActionReceiver: BroadcastReceiver() {
@@ -30,16 +24,6 @@ public class BroadCastActionReceiver: BroadcastReceiver() {
                 }
             }
         }
-    }
-
-    private fun methodChannel(context: Context): MethodChannel {
-        val flutterEngine = FlutterEngine(context)
-        flutterEngine
-                .dartExecutor
-                .executeDartEntrypoint(
-                        DartExecutor.DartEntrypoint.createDefault()
-                )
-        return MethodChannel(flutterEngine.dartExecutor.binaryMessenger, "method.channel.MizukiOhashi.Pilll")
     }
 
     private class RecordPillResult(private val pendingResult: PendingResult): MethodChannel.Result {

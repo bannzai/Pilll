@@ -71,10 +71,7 @@ class RootState extends State<Root> {
     }
     if (screenType == ScreenType.forceUpdate) {
       Future.microtask(() async {
-        await showOKDialog(context,
-            title: "アプリをアップデートしてください",
-            message:
-                "お使いのアプリのバージョンのアップデートをお願いしております。$storeNameから最新バージョンにアップデートしてください",
+        await showOKDialog(context, title: "アプリをアップデートしてください", message: "お使いのアプリのバージョンのアップデートをお願いしております。$storeNameから最新バージョンにアップデートしてください",
             ok: () async {
           await launchUrl(
             Uri.parse(storeURL),
@@ -119,8 +116,7 @@ class RootState extends State<Root> {
 
     await forceUpdateTrace.stop();
 
-    final forceUpdate = packageVersion
-        .isLessThan(Version.parse(config.minimumSupportedAppVersion));
+    final forceUpdate = packageVersion.isLessThan(Version.parse(config.minimumSupportedAppVersion));
     if (forceUpdate) {
       analytics.logEvent(
         name: "screen_type_force_update",
@@ -149,8 +145,7 @@ class RootState extends State<Root> {
   Future<ScreenType> _screenType() async {
     final sharedPreferences = await SharedPreferences.getInstance();
 
-    bool? didEndInitialSetting =
-        sharedPreferences.getBool(BoolKey.didEndInitialSetting);
+    bool? didEndInitialSetting = sharedPreferences.getBool(BoolKey.didEndInitialSetting);
     if (didEndInitialSetting == null) {
       analytics.logEvent(name: "did_end_i_s_is_null");
       return ScreenType.initialSetting;
@@ -164,8 +159,7 @@ class RootState extends State<Root> {
     return ScreenType.home;
   }
 
-  Future<User> _mutateUserWithLaunchInfoAnd(
-      firebase_auth.User firebaseUser) async {
+  Future<User> _mutateUserWithLaunchInfoAnd(firebase_auth.User firebaseUser) async {
     final userDatastore = UserDatastore(DatabaseConnection(firebaseUser.uid));
     final user = await userDatastore.fetchOrCreate(firebaseUser.uid);
 
@@ -175,19 +169,15 @@ class RootState extends State<Root> {
     return user;
   }
 
-  Future<ScreenType?> _screenTypeForLegacyUser(
-      firebase_auth.User firebaseUser, User user) async {
+  Future<ScreenType?> _screenTypeForLegacyUser(firebase_auth.User firebaseUser, User user) async {
     if (!user.migratedFlutter) {
       final userDatastore = UserDatastore(DatabaseConnection(firebaseUser.uid));
       await userDatastore.deleteSettings();
       await userDatastore.setFlutterMigrationFlag();
-      analytics.logEvent(
-          name: "user_is_not_migrated_flutter",
-          parameters: {"uid": firebaseUser.uid});
+      analytics.logEvent(name: "user_is_not_migrated_flutter", parameters: {"uid": firebaseUser.uid});
       return ScreenType.initialSetting;
     } else if (user.setting == null) {
-      analytics.logEvent(
-          name: "uset_setting_is_null", parameters: {"uid": firebaseUser.uid});
+      analytics.logEvent(name: "uset_setting_is_null", parameters: {"uid": firebaseUser.uid});
       return ScreenType.initialSetting;
     }
     return null;
@@ -209,9 +199,7 @@ class RootState extends State<Root> {
         errorLogger.recordError(error, stackTrace);
 
         setState(() {
-          _error = AlertError(
-              "起動処理でエラーが発生しました\n${ErrorMessages.connection}\n詳細:" +
-                  error.toString());
+          _error = AlertError("起動処理でエラーが発生しました\n${ErrorMessages.connection}\n詳細:" + error.toString());
         });
       }).whenComplete(() {
         launchTrace.stop();
@@ -230,8 +218,7 @@ class RootState extends State<Root> {
         // NOTE: Below code contains backward-compatible logic from version 1.3.2
         // screenType is determined if necessary, but since it is a special pattern. So, it is determined last
         final user = await _mutateUserWithLaunchInfoAnd(firebaseUser);
-        final screenTypeForLegacyUser =
-            await _screenTypeForLegacyUser(firebaseUser, user);
+        final screenTypeForLegacyUser = await _screenTypeForLegacyUser(firebaseUser, user);
         if (screenTypeForLegacyUser != null) {
           setState(() {
             this.screenType = screenTypeForLegacyUser;
@@ -241,9 +228,7 @@ class RootState extends State<Root> {
         errorLogger.recordError(error, stackTrace);
 
         setState(() {
-          _error = AlertError(
-              "起動処理でエラーが発生しました\n${ErrorMessages.connection}\n詳細:" +
-                  error.toString());
+          _error = AlertError("起動処理でエラーが発生しました\n${ErrorMessages.connection}\n詳細:" + error.toString());
         });
       } finally {
         await launchTrace.stop();

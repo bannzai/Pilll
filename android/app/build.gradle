@@ -80,7 +80,12 @@ android {
         }
     }
     buildTypes {
+        debug {
+            resValue "string", "PREFERENCE_KEY", "preference_key.com.mizuki.Ohashi.Pilll.development"
+        }
         release {
+            resValue "string", "PREFERENCE_KEY", "preference_key.com.mizuki.Ohashi.Pilll"
+
             ndk {
               debugSymbolLevel 'SYMBOL_TABLE'
             }
@@ -88,6 +93,9 @@ android {
         }
     }
     ndkVersion '23.1.7779620'
+    buildFeatures {
+        viewBinding true
+    }
 }
 
 flutter {
@@ -97,6 +105,7 @@ flutter {
 dependencies {
     implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
     implementation 'com.google.firebase:firebase-messaging:20.1.6'
+    implementation 'com.jakewharton.threetenabp:threetenabp:1.2.1'
 }
 
 apply plugin: 'com.google.gms.google-services'

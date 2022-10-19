@@ -108,6 +108,11 @@ class SettingPageBody extends StatelessWidget {
                       ),
                       _separator(),
                     ],
+                    PremiumIntroductionRow(
+                      isPremium: state.premiumAndTrial.isPremium,
+                      trialDeadlineDate: state.premiumAndTrial.trialDeadlineDate,
+                    ),
+                    _separator(),
                     if (state.premiumAndTrial.isPremium) ...[
                       ListTile(
                         title: const Text("解約はこちら", style: FontType.listRow),
@@ -124,11 +129,6 @@ class SettingPageBody extends StatelessWidget {
                       ),
                       _separator(),
                     ],
-                    PremiumIntroductionRow(
-                      isPremium: state.premiumAndTrial.isPremium,
-                      trialDeadlineDate: state.premiumAndTrial.trialDeadlineDate,
-                    ),
-                    _separator(),
                   ]);
                 case SettingSection.pill:
                   return SettingSectionTitle(

@@ -37,11 +37,9 @@ extension UserPrivateFirestoreFieldKeys on String {
 class UserPrivate with _$UserPrivate {
   const UserPrivate._();
   const factory UserPrivate({String? fcmToken}) = _UserPrivate;
-  factory UserPrivate.create({required String fcmToken}) =>
-      UserPrivate(fcmToken: fcmToken);
+  factory UserPrivate.create({required String fcmToken}) => UserPrivate(fcmToken: fcmToken);
 
-  factory UserPrivate.fromJson(Map<String, dynamic> json) =>
-      _$UserPrivateFromJson(json);
+  factory UserPrivate.fromJson(Map<String, dynamic> json) => _$UserPrivateFromJson(json);
 }
 
 extension UserFirestoreFieldKeys on String {
@@ -60,8 +58,7 @@ extension UserFirestoreFieldKeys on String {
   static const beginTrialDate = "beginTrialDate";
   static const trialDeadlineDate = "trialDeadlineDate";
   static const hasDiscountEntitlement = "hasDiscountEntitlement";
-  static const discountEntitlementDeadlineDate =
-      "discountEntitlementDeadlineDate";
+  static const discountEntitlementDeadlineDate = "discountEntitlementDeadlineDate";
 }
 
 @freezed
