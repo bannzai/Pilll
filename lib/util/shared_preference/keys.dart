@@ -38,6 +38,7 @@ extension ReleaseNoteKey on String {
   static const String version3_13_0 = "release_notes_shown_3.13.0";
   static const String version3_14_0 = "release_notes_shown_3.14.0";
   static const String version3_15_0 = "release_notes_shown_3.15.0";
+  static const String version3_16_0 = "release_notes_shown_3.16.0";
 }
 
 extension IntKey on String {

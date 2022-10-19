@@ -1,3 +1,5 @@
+import 'dart:io';
+
 import 'package:flutter_inappwebview/flutter_inappwebview.dart';
 import 'package:pilll/analytics.dart';
 import 'package:pilll/components/atoms/buttons.dart';
@@ -42,7 +44,7 @@ class ReleaseNote extends StatelessWidget {
                       child: Container(
                         padding: const EdgeInsets.only(top: 40, left: 40, right: 40),
                         child: Text(
-                          "カレンダーに予定を入力できるようになりました",
+                          "ホームウィジェットが追加できるようになりました",
                           style: FontType.subTitle.merge(TextColorStyle.black),
                           textAlign: TextAlign.center,
                         ),
@@ -57,7 +59,7 @@ class ReleaseNote extends StatelessWidget {
                     children: [
                       Text(
                         '''
-カレンダー画面に予定を入力できるようになりました。当日に通知も送ることができます。Pilll上で予定を管理したい方はご利用ください
+ホームウィジェットを追加できるようになりました。本日服用するピルの番号が一目でわかるようになっています
                         ''',
                         style: FontType.assisting.merge(TextColorStyle.main),
                       ),
@@ -85,7 +87,12 @@ class ReleaseNote extends StatelessWidget {
 }
 
 void showReleaseNotePreDialog(BuildContext context) async {
-  const key = ReleaseNoteKey.version3_15_0;
+  final String key;
+  if (Platform.isAndroid) {
+    key = ReleaseNoteKey.version3_16_0;
+  } else {
+    key = ReleaseNoteKey.version3_15_0;
+  }
   final storage = await SharedPreferences.getInstance();
   if (storage.getBool(key) ?? false) {
     return;
@@ -102,7 +109,7 @@ void showReleaseNotePreDialog(BuildContext context) async {
 void openReleaseNote() async {
   final ChromeSafariBrowser browser = ChromeSafariBrowser();
   await browser.open(
-      url: Uri.parse("https://pilll.wraptas.site/bf66925d73f942f489096cde95569aaa"),
+      url: Uri.parse("https://pilll.wraptas.site/80cadcaca73b41f4974a568b6e753a2b"),
       options: ChromeSafariBrowserClassOptions(
           android: AndroidChromeCustomTabsOptions(shareState: CustomTabsShareState.SHARE_STATE_OFF),
           ios: IOSSafariOptions(barCollapsingEnabled: true, presentationStyle: IOSUIModalPresentationStyle.PAGE_SHEET)));
