@@ -6,7 +6,6 @@ import 'package:pilll/domain/premium_introduction/util/discount_deadline.dart';
 import 'package:pilll/domain/record/components/notification_bar/components/discount_price_deadline.dart';
 import 'package:pilll/domain/record/components/notification_bar/components/ended_pill_sheet.dart';
 import 'package:pilll/domain/record/components/notification_bar/components/pilll_ads.dart';
-import 'package:pilll/domain/record/components/notification_bar/components/premium_trial_begin.dart';
 import 'package:pilll/domain/record/components/notification_bar/components/user_survey.dart';
 import 'package:pilll/domain/record/components/notification_bar/state_notifier.dart';
 import 'package:pilll/domain/record/components/notification_bar/components/premium_trial_limit.dart';
