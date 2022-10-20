@@ -76,6 +76,6 @@ class NotificationBarState with _$NotificationBarState {
     }
 
     final diff = daysBetween(now(), trialDeadlineDate);
-    return "$diff日後まですべての機能を使えます";
+    return "残り$diff日間すべての機能を使えます";
   }
 }
