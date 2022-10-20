@@ -43,62 +43,6 @@ void main() {
   });
   group('notification bar appearance content type', () {
     group('for it is not premium user', () {
-      testWidgets('#PremiumTrialBegin', (WidgetTester tester) async {
-        final mockTodayRepository = MockTodayService();
-        final today = DateTime(2021, 04, 29);
-
-        when(mockTodayRepository.now()).thenReturn(today);
-        when(mockTodayRepository.now()).thenReturn(today);
-        todayRepository = mockTodayRepository;
-
-        var pillSheet = PillSheet.create(PillSheetType.pillsheet_21);
-        pillSheet = pillSheet.copyWith(
-          lastTakenDate: today,
-          beginingDate: today.subtract(
-            const Duration(days: 25),
-          ),
-        );
-        final pillSheetGroup = PillSheetGroup(pillSheetIDs: ["1"], pillSheets: [pillSheet], createdAt: now());
-        final state = NotificationBarState(
-          latestPillSheetGroup: pillSheetGroup,
-          totalCountOfActionForTakenPill: totalCountOfActionForTakenPillForLongTimeUser,
-          premiumAndTrial: PremiumAndTrial(
-            isPremium: false,
-            isTrial: true,
-            hasDiscountEntitlement: true,
-            trialDeadlineDate: null,
-            beginTrialDate: today,
-            discountEntitlementDeadlineDate: today.subtract(const Duration(days: 1)),
-          ),
-          isLinkedLoginProvider: false,
-          premiumUserIsClosedAdsMederiPill: false,
-          recommendedSignupNotificationIsAlreadyShow: false,
-          userAnsweredSurvey: true,
-          userClosedSurvey: true,
-        );
-
-        await tester.pumpWidget(
-          ProviderScope(
-            overrides: [
-              isJaLocaleProvider.overrideWithValue(true),
-              notificationBarStateNotifierProvider
-                  .overrideWithProvider(StateNotifierProvider.autoDispose((_) => NotificationBarStateNotifier(state))),
-              notificationBarStateProvider.overrideWithProvider(Provider.autoDispose((_) => state)),
-              isOverDiscountDeadlineProvider.overrideWithProvider((param) => Provider.autoDispose((_) => false)),
-              durationToDiscountPriceDeadline.overrideWithProvider((param) => Provider.autoDispose((_) => const Duration(seconds: 1000))),
-            ],
-            child: const MaterialApp(
-              home: Material(child: NotificationBar()),
-            ),
-          ),
-        );
-        await tester.pump();
-
-        expect(
-          find.byWidgetPredicate((widget) => widget is PremiumTrialBegin),
-          findsOneWidget,
-        );
-      });
       testWidgets('#DiscountPriceDeadline', (WidgetTester tester) async {
         final mockTodayRepository = MockTodayService();
         final today = DateTime(2021, 04, 29);

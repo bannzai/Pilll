@@ -776,15 +776,6 @@ class MockNotificationBarStateNotifier extends _i1.Mock
         returnValueForMissingStub: Future<void>.value(),
       ) as _i20.Future<void>);
   @override
-  _i20.Future<void> closePremiumTrialBeginNotification() => (super.noSuchMethod(
-        Invocation.method(
-          #closePremiumTrialBeginNotification,
-          [],
-        ),
-        returnValue: Future<void>.value(),
-        returnValueForMissingStub: Future<void>.value(),
-      ) as _i20.Future<void>);
-  @override
   _i20.Future<void> closeAds() => (super.noSuchMethod(
         Invocation.method(
           #closeAds,
