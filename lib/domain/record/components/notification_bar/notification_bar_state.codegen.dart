@@ -14,7 +14,6 @@ class NotificationBarState with _$NotificationBarState {
     required int totalCountOfActionForTakenPill,
     required PremiumAndTrial premiumAndTrial,
     required bool recommendedSignupNotificationIsAlreadyShow,
-    required bool premiumTrialBeginAnouncementIsClosed,
     required bool isLinkedLoginProvider,
     required bool premiumUserIsClosedAdsMederiPill,
     required bool userAnsweredSurvey,

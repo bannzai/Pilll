@@ -64,16 +64,6 @@ class NotificationBar extends HookConsumerWidget {
         return PremiumTrialLimitNotificationBar(premiumTrialLimit: premiumTrialLimit);
       }
 
-      if (!state.premiumTrialBeginAnouncementIsClosed) {
-        if (state.premiumAndTrial.isTrial) {
-          final beginTrialDate = state.premiumAndTrial.beginTrialDate;
-          if (beginTrialDate != null) {
-            final between = daysBetween(beginTrialDate, now());
-            return PremiumTrialBegin(latestDay: (30 - between), store: stateNotifier);
-          }
-        }
-      }
-
       if (state.premiumAndTrial.hasDiscountEntitlement) {
         if (!state.premiumAndTrial.isTrial) {
           if (discountEntitlementDeadlineDate != null) {
