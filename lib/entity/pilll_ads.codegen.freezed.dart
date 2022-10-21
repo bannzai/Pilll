@@ -14,6 +14,10 @@ T _$identity<T>(T value) => value;
 final _privateConstructorUsedError = UnsupportedError(
     'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more informations: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
 
+PilllAds _$PilllAdsFromJson(Map<String, dynamic> json) {
+  return _PilllAds.fromJson(json);
+}
+
 /// @nodoc
 class _$PilllAdsTearOff {
   const _$PilllAdsTearOff();
@@ -34,6 +38,10 @@ class _$PilllAdsTearOff {
       destinationURL: destinationURL,
     );
   }
+
+  PilllAds fromJson(Map<String, Object?> json) {
+    return PilllAds.fromJson(json);
+  }
 }
 
 /// @nodoc
@@ -53,6 +61,7 @@ mixin _$PilllAds {
   String? get imageURL => throw _privateConstructorUsedError;
   String get destinationURL => throw _privateConstructorUsedError;
 
+  Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
   $PilllAdsCopyWith<PilllAds> get copyWith =>
       throw _privateConstructorUsedError;
@@ -171,7 +180,7 @@ class __$PilllAdsCopyWithImpl<$Res> extends _$PilllAdsCopyWithImpl<$Res>
 }
 
 /// @nodoc
-
+@JsonSerializable()
 class _$_PilllAds extends _PilllAds {
   _$_PilllAds(
       {@JsonKey(fromJson: NonNullTimestampConverter.timestampToDateTime, toJson: NonNullTimestampConverter.dateTimeToTimestamp)
@@ -182,6 +191,9 @@ class _$_PilllAds extends _PilllAds {
       required this.imageURL,
       required this.destinationURL})
       : super._();
+
+  factory _$_PilllAds.fromJson(Map<String, dynamic> json) =>
+      _$$_PilllAdsFromJson(json);
 
   @override
   @JsonKey(
@@ -234,6 +246,11 @@ class _$_PilllAds extends _PilllAds {
   @override
   _$PilllAdsCopyWith<_PilllAds> get copyWith =>
       __$PilllAdsCopyWithImpl<_PilllAds>(this, _$identity);
+
+  @override
+  Map<String, dynamic> toJson() {
+    return _$$_PilllAdsToJson(this);
+  }
 }
 
 abstract class _PilllAds extends PilllAds {
@@ -246,6 +263,8 @@ abstract class _PilllAds extends PilllAds {
       required String? imageURL,
       required String destinationURL}) = _$_PilllAds;
   _PilllAds._() : super._();
+
+  factory _PilllAds.fromJson(Map<String, dynamic> json) = _$_PilllAds.fromJson;
 
   @override
   @JsonKey(
