@@ -29,13 +29,15 @@ class _$PilllAdsTearOff {
           required DateTime endDateTime,
       required String description,
       required String? imageURL,
-      required String destinationURL}) {
+      required String destinationURL,
+      required String hexColor}) {
     return _PilllAds(
       startDateTime: startDateTime,
       endDateTime: endDateTime,
       description: description,
       imageURL: imageURL,
       destinationURL: destinationURL,
+      hexColor: hexColor,
     );
   }
 
@@ -60,6 +62,7 @@ mixin _$PilllAds {
   String get description => throw _privateConstructorUsedError;
   String? get imageURL => throw _privateConstructorUsedError;
   String get destinationURL => throw _privateConstructorUsedError;
+  String get hexColor => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
@@ -78,7 +81,8 @@ abstract class $PilllAdsCopyWith<$Res> {
           DateTime endDateTime,
       String description,
       String? imageURL,
-      String destinationURL});
+      String destinationURL,
+      String hexColor});
 }
 
 /// @nodoc
@@ -96,6 +100,7 @@ class _$PilllAdsCopyWithImpl<$Res> implements $PilllAdsCopyWith<$Res> {
     Object? description = freezed,
     Object? imageURL = freezed,
     Object? destinationURL = freezed,
+    Object? hexColor = freezed,
   }) {
     return _then(_value.copyWith(
       startDateTime: startDateTime == freezed
@@ -118,6 +123,10 @@ class _$PilllAdsCopyWithImpl<$Res> implements $PilllAdsCopyWith<$Res> {
           ? _value.destinationURL
           : destinationURL // ignore: cast_nullable_to_non_nullable
               as String,
+      hexColor: hexColor == freezed
+          ? _value.hexColor
+          : hexColor // ignore: cast_nullable_to_non_nullable
+              as String,
     ));
   }
 }
@@ -134,7 +143,8 @@ abstract class _$PilllAdsCopyWith<$Res> implements $PilllAdsCopyWith<$Res> {
           DateTime endDateTime,
       String description,
       String? imageURL,
-      String destinationURL});
+      String destinationURL,
+      String hexColor});
 }
 
 /// @nodoc
@@ -153,6 +163,7 @@ class __$PilllAdsCopyWithImpl<$Res> extends _$PilllAdsCopyWithImpl<$Res>
     Object? description = freezed,
     Object? imageURL = freezed,
     Object? destinationURL = freezed,
+    Object? hexColor = freezed,
   }) {
     return _then(_PilllAds(
       startDateTime: startDateTime == freezed
@@ -175,6 +186,10 @@ class __$PilllAdsCopyWithImpl<$Res> extends _$PilllAdsCopyWithImpl<$Res>
           ? _value.destinationURL
           : destinationURL // ignore: cast_nullable_to_non_nullable
               as String,
+      hexColor: hexColor == freezed
+          ? _value.hexColor
+          : hexColor // ignore: cast_nullable_to_non_nullable
+              as String,
     ));
   }
 }
@@ -189,7 +204,8 @@ class _$_PilllAds extends _PilllAds {
           required this.endDateTime,
       required this.description,
       required this.imageURL,
-      required this.destinationURL})
+      required this.destinationURL,
+      required this.hexColor})
       : super._();
 
   factory _$_PilllAds.fromJson(Map<String, dynamic> json) =>
@@ -211,10 +227,12 @@ class _$_PilllAds extends _PilllAds {
   final String? imageURL;
   @override
   final String destinationURL;
+  @override
+  final String hexColor;
 
   @override
   String toString() {
-    return 'PilllAds(startDateTime: $startDateTime, endDateTime: $endDateTime, description: $description, imageURL: $imageURL, destinationURL: $destinationURL)';
+    return 'PilllAds(startDateTime: $startDateTime, endDateTime: $endDateTime, description: $description, imageURL: $imageURL, destinationURL: $destinationURL, hexColor: $hexColor)';
   }
 
   @override
@@ -230,7 +248,8 @@ class _$_PilllAds extends _PilllAds {
                 .equals(other.description, description) &&
             const DeepCollectionEquality().equals(other.imageURL, imageURL) &&
             const DeepCollectionEquality()
-                .equals(other.destinationURL, destinationURL));
+                .equals(other.destinationURL, destinationURL) &&
+            const DeepCollectionEquality().equals(other.hexColor, hexColor));
   }
 
   @override
@@ -240,7 +259,8 @@ class _$_PilllAds extends _PilllAds {
       const DeepCollectionEquality().hash(endDateTime),
       const DeepCollectionEquality().hash(description),
       const DeepCollectionEquality().hash(imageURL),
-      const DeepCollectionEquality().hash(destinationURL));
+      const DeepCollectionEquality().hash(destinationURL),
+      const DeepCollectionEquality().hash(hexColor));
 
   @JsonKey(ignore: true)
   @override
@@ -261,7 +281,8 @@ abstract class _PilllAds extends PilllAds {
           required DateTime endDateTime,
       required String description,
       required String? imageURL,
-      required String destinationURL}) = _$_PilllAds;
+      required String destinationURL,
+      required String hexColor}) = _$_PilllAds;
   _PilllAds._() : super._();
 
   factory _PilllAds.fromJson(Map<String, dynamic> json) = _$_PilllAds.fromJson;
@@ -282,6 +303,8 @@ abstract class _PilllAds extends PilllAds {
   String? get imageURL;
   @override
   String get destinationURL;
+  @override
+  String get hexColor;
   @override
   @JsonKey(ignore: true)
   _$PilllAdsCopyWith<_PilllAds> get copyWith =>

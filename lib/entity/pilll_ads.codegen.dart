@@ -19,6 +19,7 @@ class PilllAds with _$PilllAds {
     required String description,
     required String? imageURL,
     required String destinationURL,
+    required String hexColor,
   }) = _PilllAds;
   PilllAds._();
 
