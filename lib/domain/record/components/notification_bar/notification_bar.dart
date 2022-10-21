@@ -6,7 +6,6 @@ import 'package:pilll/domain/premium_introduction/util/discount_deadline.dart';
 import 'package:pilll/domain/record/components/notification_bar/components/discount_price_deadline.dart';
 import 'package:pilll/domain/record/components/notification_bar/components/ended_pill_sheet.dart';
 import 'package:pilll/domain/record/components/notification_bar/components/pilll_ads.dart';
-import 'package:pilll/domain/record/components/notification_bar/components/premium_trial_begin.dart';
 import 'package:pilll/domain/record/components/notification_bar/components/user_survey.dart';
 import 'package:pilll/domain/record/components/notification_bar/state_notifier.dart';
 import 'package:pilll/domain/record/components/notification_bar/components/premium_trial_limit.dart';
@@ -62,18 +61,6 @@ class NotificationBar extends HookConsumerWidget {
       final premiumTrialLimit = state.premiumTrialLimit;
       if (premiumTrialLimit != null) {
         return PremiumTrialLimitNotificationBar(premiumTrialLimit: premiumTrialLimit);
-      }
-
-      if (!state.premiumTrialBeginAnouncementIsClosed) {
-        if (state.premiumAndTrial.isTrial) {
-          final beginTrialDate = state.premiumAndTrial.beginTrialDate;
-          if (beginTrialDate != null) {
-            final between = daysBetween(beginTrialDate, now());
-            if (between <= 3) {
-              return PremiumTrialBegin(latestDay: (30 - between), store: stateNotifier);
-            }
-          }
-        }
       }
 
       if (state.premiumAndTrial.hasDiscountEntitlement) {

@@ -24,7 +24,6 @@ import 'package:pilll/domain/settings/components/rows/today_pill_number.dart';
 import 'package:pilll/domain/settings/components/rows/update_from_132.dart';
 import 'package:pilll/domain/settings/components/setting_section_title.dart';
 import 'package:pilll/domain/settings/setting_page_state.codegen.dart';
-import 'package:pilll/error/error_alert.dart';
 import 'package:pilll/error/universal_error_page.dart';
 import 'package:pilll/domain/settings/components/inquiry/inquiry.dart';
 import 'package:pilll/domain/settings/setting_page_state_notifier.dart';

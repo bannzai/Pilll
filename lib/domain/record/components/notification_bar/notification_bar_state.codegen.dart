@@ -14,7 +14,6 @@ class NotificationBarState with _$NotificationBarState {
     required int totalCountOfActionForTakenPill,
     required PremiumAndTrial premiumAndTrial,
     required bool recommendedSignupNotificationIsAlreadyShow,
-    required bool premiumTrialBeginAnouncementIsClosed,
     required bool isLinkedLoginProvider,
     required bool premiumUserIsClosedAdsMederiPill,
     required bool userAnsweredSurvey,
@@ -76,13 +75,7 @@ class NotificationBarState with _$NotificationBarState {
       return null;
     }
 
-    final diff = daysBetween(now(), trialDeadlineDate) + 1;
-    if (diff < 0) {
-      return null;
-    }
-    if (diff > 10) {
-      return null;
-    }
-    return "$diff日後まですべての機能を使えます";
+    final diff = daysBetween(now(), trialDeadlineDate);
+    return "残り$diff日間すべての機能を使えます";
   }
 }
