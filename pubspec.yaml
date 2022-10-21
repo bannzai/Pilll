@@ -38,10 +38,10 @@ dependencies:
   equatable: ^2.0.0
   json_annotation: ^4.0.0
   mockito: 5.2.0
-  riverpod: ^1.0.3
+  riverpod: ^2.0.0
   freezed_annotation: ^1.1.0
-  flutter_hooks: ^0.18.4
-  hooks_riverpod: ^1.0.1
+  flutter_hooks: ^0.18.5
+  hooks_riverpod: ^2.0.0
   firebase_crashlytics: ^2.8.10
   dotted_border: ^2.0.0-nullsafety.0
   in_app_review: ^2.0.1
