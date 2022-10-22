@@ -2,26 +2,33 @@ import 'package:flutter/material.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:pilll/analytics.dart';
+import 'package:pilll/components/atoms/font.dart';
+import 'package:pilll/database/pilll_ads.dart';
+import 'package:pilll/entity/pilll_ads.codegen.dart';
+import 'package:pilll/util/color.dart';
 import 'package:url_launcher/url_launcher.dart';
 
 class PilllAdsNotificationBar extends HookConsumerWidget {
+  final PilllAds pilllAds;
   final VoidCallback? onClose;
   const PilllAdsNotificationBar({
     Key? key,
+    required this.pilllAds,
     required this.onClose,
   }) : super(key: key);
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {
     final onClose = this.onClose;
+    final imageURL = pilllAds.imageURL;
+
     return Container(
-      color: const Color(0xFFFC7CA4),
+      color: HexColor.fromHex(pilllAds.hexColor),
       padding: const EdgeInsets.symmetric(horizontal: 8),
-      
       child: GestureDetector(
         onTap: () {
           analytics.logEvent(name: "pilll_ads_tapped");
-          launchUrl(Uri.parse("https://mederi.jp/pr/tvcmdoctor01/?utm_source=Pilll_reminder&utm_medium=Pilll_reminder&utm_campaign=202208"));
+          launchUrl(Uri.parse(pilllAds.destinationURL));
         },
         child: Stack(
           alignment: Alignment.center,
@@ -55,7 +62,21 @@ class PilllAdsNotificationBar extends HookConsumerWidget {
                 ),
               ],
             ),
-            Image.asset("images/mederi_pill_ads.png", height: 50),
+            if (imageURL != null) ...[
+              Image.network(
+                imageURL,
+                height: 50,
+              ),
+            ],
+            if (imageURL == null && pilllAds.description.isNotEmpty) ...[
+              Text(pilllAds.description,
+                  style: const TextStyle(
+                    color: Colors.white,
+                    fontSize: 11,
+                    fontFamily: FontFamily.japanese,
+                    fontWeight: FontWeight.w700,
+                  ))
+            ],
           ],
         ),
       ),
