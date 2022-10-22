@@ -5,6 +5,7 @@ part 'pilll_ads.codegen.freezed.dart';
 
 @freezed
 class PilllAds with _$PilllAds {
+  @JsonSerializable(explicitToJson: true)
   factory PilllAds({
     @JsonKey(
       fromJson: NonNullTimestampConverter.timestampToDateTime,

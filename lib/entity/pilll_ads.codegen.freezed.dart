@@ -195,7 +195,8 @@ class __$PilllAdsCopyWithImpl<$Res> extends _$PilllAdsCopyWithImpl<$Res>
 }
 
 /// @nodoc
-@JsonSerializable()
+
+@JsonSerializable(explicitToJson: true)
 class _$_PilllAds extends _PilllAds {
   _$_PilllAds(
       {@JsonKey(fromJson: NonNullTimestampConverter.timestampToDateTime, toJson: NonNullTimestampConverter.dateTimeToTimestamp)
