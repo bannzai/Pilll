@@ -139,8 +139,8 @@ class DatabaseConnection {
             toFirestore: _scheduleToFirestore,
           );
 
-  DocumentReference<PilllAds> pilllAds() => FirebaseFirestore.instance.doc(_CollectionPath.pilllAds()).withConverter(
-        fromFirestore: (snapshot, options) => PilllAds.fromJson(snapshot.data()!),
+  DocumentReference<PilllAds?> pilllAds() => FirebaseFirestore.instance.doc(_CollectionPath.pilllAds()).withConverter(
+        fromFirestore: (snapshot, options) => snapshot.data() == null ? null : PilllAds.fromJson(snapshot.data()!),
         toFirestore: (_, __) => throw UnimplementedError(),
       );
 
