@@ -37,7 +37,7 @@ class NotificationBar extends HookConsumerWidget {
     final discountEntitlementDeadlineDate = state.premiumAndTrial.discountEntitlementDeadlineDate;
     final isOverDiscountDeadline = ref.watch(isOverDiscountDeadlineProvider(discountEntitlementDeadlineDate));
     final isJaLocale = ref.watch(isJaLocaleProvider);
-    final pilllAds = ref.watch(pillAdsProvider).asData?.value;
+    final pilllAds = ref.watch(pilllAdsProvider).asData?.value;
     final isAdsDisabled = () {
       if (!isJaLocale) {
         return true;
