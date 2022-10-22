@@ -3,7 +3,6 @@ import 'package:hooks_riverpod/hooks_riverpod.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:pilll/analytics.dart';
 import 'package:pilll/components/atoms/font.dart';
-import 'package:pilll/database/pilll_ads.dart';
 import 'package:pilll/entity/pilll_ads.codegen.dart';
 import 'package:pilll/util/color.dart';
 import 'package:url_launcher/url_launcher.dart';
