@@ -2,6 +2,7 @@ import 'package:freezed_annotation/freezed_annotation.dart';
 import 'package:pilll/entity/firestore_timestamp_converter.dart';
 
 part 'pilll_ads.codegen.freezed.dart';
+part 'pilll_ads.codegen.g.dart';
 
 @freezed
 class PilllAds with _$PilllAds {
