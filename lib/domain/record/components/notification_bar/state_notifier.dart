@@ -23,7 +23,6 @@ final notificationBarStateProvider = Provider.autoDispose((ref) {
     premiumAndTrial: recordPageState.premiumAndTrial,
     isLinkedLoginProvider: ref.watch(isLinkedProvider),
     recommendedSignupNotificationIsAlreadyShow: sharedPreferences.getBool(BoolKey.recommendedSignupNotificationIsAlreadyShow) ?? false,
-    premiumUserIsClosedAdsMederiPill: sharedPreferences.getBool(BoolKey.premiumUserIsClosedAdsMederiPill) ?? false,
     userAnsweredSurvey: sharedPreferences.getBool(BoolKey.userAnsweredSurvey) ?? false,
     userClosedSurvey: sharedPreferences.getBool(BoolKey.userClosedSurvey) ?? false,
   );
