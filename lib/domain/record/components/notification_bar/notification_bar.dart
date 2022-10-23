@@ -125,11 +125,6 @@ class NotificationBar extends HookConsumerWidget {
         }
       }
     } else {
-      if (!state.premiumUserIsClosedAdsMederiPill) {
-        if (!isAdsDisabled && pilllAds != null) {
-          return PilllAdsNotificationBar(pilllAds: pilllAds, onClose: () => stateNotifier.closeAds());
-        }
-      }
       if (state.shownRecommendSignupNotificationForPremium) {
         return const RecommendSignupForPremiumNotificationBar();
       }
