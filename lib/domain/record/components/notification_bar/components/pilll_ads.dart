@@ -116,33 +116,33 @@ class PilllAdsTextNotificationBar extends StatelessWidget {
           crossAxisAlignment: CrossAxisAlignment.center,
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            IconButton(
-              alignment: Alignment.centerLeft,
-              icon: const Icon(
+            GestureDetector(
+              child: const Icon(
                 Icons.close,
                 color: Colors.white,
                 size: 24,
               ),
-              onPressed: () {
-                analytics.logEvent(name: "pilll_ads_text_is_closed");
-                onClose();
-              },
-              iconSize: 24,
-              padding: EdgeInsets.zero,
             ),
-            const Spacer(),
-            Text(
-              pilllAds.description,
-              style: const TextStyle(
-                color: Colors.white,
-                fontSize: 11,
-                fontFamily: FontFamily.japanese,
-                fontWeight: FontWeight.w700,
+            const SizedBox(width: 10),
+            Expanded(
+              child: Column(
+                children: [
+                  for (final w in pilllAds.description.split("\\n"))
+                    Text(
+                      w,
+                      style: const TextStyle(
+                        color: Colors.white,
+                        fontSize: 11,
+                        fontFamily: FontFamily.japanese,
+                        fontWeight: FontWeight.w700,
+                      ),
+                      textAlign: TextAlign.center,
+                      maxLines: 2,
+                    ),
+                ],
               ),
-              textAlign: TextAlign.center,
-              maxLines: 2,
             ),
-            const Spacer(),
+            const SizedBox(width: 10),
             SvgPicture.asset(
               "images/arrow_right.svg",
               color: Colors.white,
