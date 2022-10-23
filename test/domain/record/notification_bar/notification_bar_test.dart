@@ -761,7 +761,7 @@ void main() {
 
           expect(
             find.byWidgetPredicate((widget) => widget is PilllAdsNotificationBar),
-            findsOneWidget,
+            findsNothing,
           );
         });
         testWidgets('today is 2022-08-11', (WidgetTester tester) async {
@@ -825,7 +825,7 @@ void main() {
 
           expect(
             find.byWidgetPredicate((widget) => widget is PilllAdsNotificationBar),
-            findsOneWidget,
+            findsNothing,
           );
         });
         testWidgets('now is 2022-08-23T23:59:59', (WidgetTester tester) async {
@@ -889,7 +889,7 @@ void main() {
 
           expect(
             find.byWidgetPredicate((widget) => widget is PilllAdsNotificationBar),
-            findsOneWidget,
+            findsNothing,
           );
         });
         testWidgets('now is 2022-08-23T23:59:59 and already closed', (WidgetTester tester) async {
