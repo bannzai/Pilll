@@ -1,4 +1,5 @@
 import 'package:pilll/analytics.dart';
+import 'package:pilll/database/pilll_ads.dart';
 import 'package:pilll/domain/premium_introduction/util/discount_deadline.dart';
 import 'package:pilll/domain/record/components/notification_bar/components/discount_price_deadline.dart';
 import 'package:pilll/domain/record/components/notification_bar/components/ended_pill_sheet.dart';
@@ -13,6 +14,7 @@ import 'package:pilll/domain/record/components/notification_bar/components/rest_
 import 'package:pilll/entity/pill_sheet.codegen.dart';
 import 'package:pilll/entity/pill_sheet_group.codegen.dart';
 import 'package:pilll/entity/pill_sheet_type.dart';
+import 'package:pilll/entity/pilll_ads.codegen.dart';
 import 'package:pilll/provider/locale.dart';
 import 'package:pilll/provider/premium_and_trial.codegen.dart';
 import 'package:pilll/service/day.dart';
@@ -358,6 +360,16 @@ void main() {
                 notificationBarStateNotifierProvider
                     .overrideWithProvider(StateNotifierProvider.autoDispose((_) => NotificationBarStateNotifier(state))),
                 notificationBarStateProvider.overrideWithProvider(Provider.autoDispose((_) => state)),
+                pilllAdsProvider.overrideWithValue(AsyncValue.data(
+                  PilllAds(
+                    description: 'これは広告用のテキスト',
+                    destinationURL: 'https://github.com/bannzai',
+                    endDateTime: DateTime(2022, 8, 23, 23, 59, 59),
+                    startDateTime: DateTime(2022, 8, 10, 0, 0, 0),
+                    hexColor: '#111111',
+                    imageURL: null,
+                  ),
+                ))
               ],
               child: const MaterialApp(
                 home: Material(child: NotificationBar()),
@@ -410,6 +422,16 @@ void main() {
                 notificationBarStateNotifierProvider
                     .overrideWithProvider(StateNotifierProvider.autoDispose((_) => NotificationBarStateNotifier(state))),
                 notificationBarStateProvider.overrideWithProvider(Provider.autoDispose((_) => state)),
+                pilllAdsProvider.overrideWithValue(AsyncValue.data(
+                  PilllAds(
+                    description: 'これは広告用のテキスト',
+                    destinationURL: 'https://github.com/bannzai',
+                    endDateTime: DateTime(2022, 8, 23, 23, 59, 59),
+                    startDateTime: DateTime(2022, 8, 10, 0, 0, 0),
+                    hexColor: '#111111',
+                    imageURL: null,
+                  ),
+                ))
               ],
               child: const MaterialApp(
                 home: Material(child: NotificationBar()),
@@ -462,6 +484,16 @@ void main() {
                 notificationBarStateNotifierProvider
                     .overrideWithProvider(StateNotifierProvider.autoDispose((_) => NotificationBarStateNotifier(state))),
                 notificationBarStateProvider.overrideWithProvider(Provider.autoDispose((_) => state)),
+                pilllAdsProvider.overrideWithValue(AsyncValue.data(
+                  PilllAds(
+                    description: 'これは広告用のテキスト',
+                    destinationURL: 'https://github.com/bannzai',
+                    endDateTime: DateTime(2022, 8, 23, 23, 59, 59),
+                    startDateTime: DateTime(2022, 8, 10, 0, 0, 0),
+                    hexColor: '#111111',
+                    imageURL: null,
+                  ),
+                ))
               ],
               child: const MaterialApp(
                 home: Material(child: NotificationBar()),
@@ -514,6 +546,16 @@ void main() {
                 notificationBarStateNotifierProvider
                     .overrideWithProvider(StateNotifierProvider.autoDispose((_) => NotificationBarStateNotifier(state))),
                 notificationBarStateProvider.overrideWithProvider(Provider.autoDispose((_) => state)),
+                pilllAdsProvider.overrideWithValue(AsyncValue.data(
+                  PilllAds(
+                    description: 'これは広告用のテキスト',
+                    destinationURL: 'https://github.com/bannzai',
+                    endDateTime: DateTime(2022, 8, 23, 23, 59, 59),
+                    startDateTime: DateTime(2022, 8, 10, 0, 0, 0),
+                    hexColor: '#111111',
+                    imageURL: null,
+                  ),
+                ))
               ],
               child: const MaterialApp(
                 home: Material(child: NotificationBar()),
@@ -566,6 +608,16 @@ void main() {
                 notificationBarStateNotifierProvider
                     .overrideWithProvider(StateNotifierProvider.autoDispose((_) => NotificationBarStateNotifier(state))),
                 notificationBarStateProvider.overrideWithProvider(Provider.autoDispose((_) => state)),
+                pilllAdsProvider.overrideWithValue(AsyncValue.data(
+                  PilllAds(
+                    description: 'これは広告用のテキスト',
+                    destinationURL: 'https://github.com/bannzai',
+                    endDateTime: DateTime(2022, 8, 23, 23, 59, 59),
+                    startDateTime: DateTime(2022, 8, 10, 0, 0, 0),
+                    hexColor: '#111111',
+                    imageURL: null,
+                  ),
+                ))
               ],
               child: const MaterialApp(
                 home: Material(child: NotificationBar()),
@@ -625,6 +677,16 @@ void main() {
                 notificationBarStateNotifierProvider
                     .overrideWithProvider(StateNotifierProvider.autoDispose((_) => NotificationBarStateNotifier(state))),
                 notificationBarStateProvider.overrideWithProvider(Provider.autoDispose((_) => state)),
+                pilllAdsProvider.overrideWithValue(AsyncValue.data(
+                  PilllAds(
+                    description: 'これは広告用のテキスト',
+                    destinationURL: 'https://github.com/bannzai',
+                    endDateTime: DateTime(2022, 8, 23, 23, 59, 59),
+                    startDateTime: DateTime(2022, 8, 10, 0, 0, 0),
+                    hexColor: '#111111',
+                    imageURL: null,
+                  ),
+                ))
               ],
               child: const MaterialApp(
                 home: Material(child: NotificationBar()),
@@ -679,6 +741,16 @@ void main() {
                 notificationBarStateNotifierProvider
                     .overrideWithProvider(StateNotifierProvider.autoDispose((_) => NotificationBarStateNotifier(state))),
                 notificationBarStateProvider.overrideWithProvider(Provider.autoDispose((_) => state)),
+                pilllAdsProvider.overrideWithValue(AsyncValue.data(
+                  PilllAds(
+                    description: 'これは広告用のテキスト',
+                    destinationURL: 'https://github.com/bannzai',
+                    endDateTime: DateTime(2022, 8, 23, 23, 59, 59),
+                    startDateTime: DateTime(2022, 8, 10, 0, 0, 0),
+                    hexColor: '#111111',
+                    imageURL: null,
+                  ),
+                ))
               ],
               child: const MaterialApp(
                 home: Material(child: NotificationBar()),
@@ -733,6 +805,16 @@ void main() {
                 notificationBarStateNotifierProvider
                     .overrideWithProvider(StateNotifierProvider.autoDispose((_) => NotificationBarStateNotifier(state))),
                 notificationBarStateProvider.overrideWithProvider(Provider.autoDispose((_) => state)),
+                pilllAdsProvider.overrideWithValue(AsyncValue.data(
+                  PilllAds(
+                    description: 'これは広告用のテキスト',
+                    destinationURL: 'https://github.com/bannzai',
+                    endDateTime: DateTime(2022, 8, 23, 23, 59, 59),
+                    startDateTime: DateTime(2022, 8, 10, 0, 0, 0),
+                    hexColor: '#111111',
+                    imageURL: null,
+                  ),
+                ))
               ],
               child: const MaterialApp(
                 home: Material(child: NotificationBar()),
@@ -787,6 +869,16 @@ void main() {
                 notificationBarStateNotifierProvider
                     .overrideWithProvider(StateNotifierProvider.autoDispose((_) => NotificationBarStateNotifier(state))),
                 notificationBarStateProvider.overrideWithProvider(Provider.autoDispose((_) => state)),
+                pilllAdsProvider.overrideWithValue(AsyncValue.data(
+                  PilllAds(
+                    description: 'これは広告用のテキスト',
+                    destinationURL: 'https://github.com/bannzai',
+                    endDateTime: DateTime(2022, 8, 23, 23, 59, 59),
+                    startDateTime: DateTime(2022, 8, 10, 0, 0, 0),
+                    hexColor: '#111111',
+                    imageURL: null,
+                  ),
+                ))
               ],
               child: const MaterialApp(
                 home: Material(child: NotificationBar()),
@@ -841,6 +933,16 @@ void main() {
                 notificationBarStateNotifierProvider
                     .overrideWithProvider(StateNotifierProvider.autoDispose((_) => NotificationBarStateNotifier(state))),
                 notificationBarStateProvider.overrideWithProvider(Provider.autoDispose((_) => state)),
+                pilllAdsProvider.overrideWithValue(AsyncValue.data(
+                  PilllAds(
+                    description: 'これは広告用のテキスト',
+                    destinationURL: 'https://github.com/bannzai',
+                    endDateTime: DateTime(2022, 8, 23, 23, 59, 59),
+                    startDateTime: DateTime(2022, 8, 10, 0, 0, 0),
+                    hexColor: '#111111',
+                    imageURL: null,
+                  ),
+                ))
               ],
               child: const MaterialApp(
                 home: Material(child: NotificationBar()),
@@ -895,6 +997,16 @@ void main() {
                 notificationBarStateNotifierProvider
                     .overrideWithProvider(StateNotifierProvider.autoDispose((_) => NotificationBarStateNotifier(state))),
                 notificationBarStateProvider.overrideWithProvider(Provider.autoDispose((_) => state)),
+                pilllAdsProvider.overrideWithValue(AsyncValue.data(
+                  PilllAds(
+                    description: 'これは広告用のテキスト',
+                    destinationURL: 'https://github.com/bannzai',
+                    endDateTime: DateTime(2022, 8, 23, 23, 59, 59),
+                    startDateTime: DateTime(2022, 8, 10, 0, 0, 0),
+                    hexColor: '#111111',
+                    imageURL: null,
+                  ),
+                ))
               ],
               child: const MaterialApp(
                 home: Material(child: NotificationBar()),
