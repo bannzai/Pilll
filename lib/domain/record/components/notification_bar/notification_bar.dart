@@ -1,3 +1,4 @@
+import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
 import 'package:pilll/analytics.dart';
@@ -39,8 +40,10 @@ class NotificationBar extends HookConsumerWidget {
     final isJaLocale = ref.watch(isJaLocaleProvider);
     final pilllAds = ref.watch(pilllAdsProvider).asData?.value;
     final isAdsDisabled = () {
-      if (!isJaLocale) {
-        return true;
+      if (!kDebugMode) {
+        if (!isJaLocale) {
+          return true;
+        }
       }
       if (pilllAds == null) {
         return true;
@@ -118,7 +121,7 @@ class NotificationBar extends HookConsumerWidget {
         }
       } else {
         if (!isAdsDisabled && pilllAds != null) {
-          return PilllAdsNotificationBar(pilllAds: pilllAds, onClose: null);
+          return PilllAdsNotificationBar(pilllAds: pilllAds, onClose: () => showPremiumIntroductionSheet(context));
         }
       }
     } else {
