@@ -10,6 +10,7 @@ import 'package:pilll/entity/menstruation.codegen.dart';
 import 'package:pilll/entity/pill_sheet.codegen.dart';
 import 'package:pilll/entity/pill_sheet_group.codegen.dart';
 import 'package:pilll/entity/pill_sheet_modified_history.codegen.dart';
+import 'package:pilll/entity/pilll_ads.codegen.dart';
 import 'package:pilll/entity/schedule.codegen.dart';
 import 'package:pilll/entity/user.codegen.dart';
 import 'package:pilll/service/auth.dart';
@@ -35,6 +36,7 @@ abstract class _CollectionPath {
   static String pillSheetModifiedHistories(String userID) => "$users/$userID/pill_sheet_modified_histories";
   static String schedule({required String userID, required String scheduleID}) => "$users/$userID/schedules/$scheduleID";
   static String schedules({required String userID}) => "$users/$userID/schedules";
+  static String pilllAds() => "globals/pilll_ads";
 }
 
 class DatabaseConnection {
@@ -136,6 +138,11 @@ class DatabaseConnection {
             fromFirestore: _scheduleFromFirestore,
             toFirestore: _scheduleToFirestore,
           );
+
+  DocumentReference<PilllAds?> pilllAds() => FirebaseFirestore.instance.doc(_CollectionPath.pilllAds()).withConverter(
+        fromFirestore: (snapshot, options) => snapshot.data() == null ? null : PilllAds.fromJson(snapshot.data()!),
+        toFirestore: (_, __) => throw UnimplementedError(),
+      );
 
   Future<T> transaction<T>(TransactionHandler<T> transactionHandler) {
     return FirebaseFirestore.instance.runTransaction(transactionHandler);
