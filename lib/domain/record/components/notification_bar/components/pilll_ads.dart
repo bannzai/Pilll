@@ -122,6 +122,10 @@ class PilllAdsTextNotificationBar extends StatelessWidget {
                 color: Colors.white,
                 size: 24,
               ),
+              onTap: () {
+                analytics.logEvent(name: "pilll_ads_text_is_closed");
+                onClose();
+              },
             ),
             const SizedBox(width: 10),
             Expanded(
