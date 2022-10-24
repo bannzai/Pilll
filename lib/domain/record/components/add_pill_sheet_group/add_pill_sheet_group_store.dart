@@ -12,6 +12,7 @@ import 'package:pilll/database/pill_sheet_modified_history.dart';
 import 'package:pilll/database/setting.dart';
 import 'package:pilll/util/datetime/day.dart';
 import 'package:riverpod/riverpod.dart';
+import 'package:uuid/uuid.dart';
 
 final addPillSheetGroupStateStoreProvider = StateNotifierProvider.autoDispose<AddPillSheetGroupStateStore, AddPillSheetGroupState>(
   (ref) {
@@ -80,27 +81,25 @@ class AddPillSheetGroupStateStore extends StateNotifier<AddPillSheetGroupState> 
     final batch = _batchFactory.batch();
 
     final n = now();
-    final createdPillSheets = _pillSheetDatastore.register(
-      batch,
-      setting.pillSheetTypes.asMap().keys.map((pageIndex) {
-        final pillSheetType = setting.pillSheetEnumTypes[pageIndex];
-        final offset = summarizedPillCountWithPillSheetTypesToEndIndex(pillSheetTypes: setting.pillSheetEnumTypes, endIndex: pageIndex);
-        return PillSheet(
-          typeInfo: pillSheetType.typeInfo,
-          beginingDate: n.add(
-            Duration(days: offset),
-          ),
-          groupIndex: pageIndex,
-        );
-      }).toList(),
-    );
+    final pillSheets = setting.pillSheetTypes.asMap().keys.map((pageIndex) {
+      final pillSheetType = setting.pillSheetEnumTypes[pageIndex];
+      final offset = summarizedPillCountWithPillSheetTypesToEndIndex(pillSheetTypes: setting.pillSheetEnumTypes, endIndex: pageIndex);
+      return PillSheet(
+        id: const Uuid().v4(),
+        typeInfo: pillSheetType.typeInfo,
+        beginingDate: n.add(
+          Duration(days: offset),
+        ),
+        groupIndex: pageIndex,
+      );
+    }).toList();
 
-    final pillSheetIDs = createdPillSheets.map((e) => e.id!).toList();
+    final pillSheetIDs = pillSheets.map((e) => e.id).toList();
     final createdPillSheetGroup = _pillSheetGroupDatastore.register(
       batch,
       PillSheetGroup(
         pillSheetIDs: pillSheetIDs,
-        pillSheets: createdPillSheets,
+        pillSheets: pillSheets,
         displayNumberSetting: () {
           if (state.pillSheetAppearanceMode == PillSheetAppearanceMode.sequential) {
             if (state.displayNumberSetting != null) {
