@@ -43,7 +43,7 @@ Map<String, dynamic> _$$_RestDurationToJson(_$_RestDuration instance) =>
     };
 
 _$_PillSheet _$$_PillSheetFromJson(Map<String, dynamic> json) => _$_PillSheet(
-      id: json['id'] as String,
+      id: json['id'] as String? ?? "",
       typeInfo:
           PillSheetTypeInfo.fromJson(json['typeInfo'] as Map<String, dynamic>),
       beginingDate: NonNullTimestampConverter.timestampToDateTime(

@@ -494,7 +494,7 @@ class _$PillSheetTearOff {
   const _$PillSheetTearOff();
 
   _PillSheet call(
-      {required String id,
+      {String id = "",
       @JsonKey()
           required PillSheetTypeInfo typeInfo,
       @JsonKey(fromJson: NonNullTimestampConverter.timestampToDateTime, toJson: NonNullTimestampConverter.dateTimeToTimestamp)
@@ -729,7 +729,7 @@ class __$PillSheetCopyWithImpl<$Res> extends _$PillSheetCopyWithImpl<$Res>
 @JsonSerializable(explicitToJson: true)
 class _$_PillSheet extends _PillSheet {
   const _$_PillSheet(
-      {required this.id,
+      {this.id = "",
       @JsonKey()
           required this.typeInfo,
       @JsonKey(fromJson: NonNullTimestampConverter.timestampToDateTime, toJson: NonNullTimestampConverter.dateTimeToTimestamp)
@@ -747,6 +747,7 @@ class _$_PillSheet extends _PillSheet {
   factory _$_PillSheet.fromJson(Map<String, dynamic> json) =>
       _$$_PillSheetFromJson(json);
 
+  @JsonKey()
   @override
   final String id;
   @override
@@ -828,7 +829,7 @@ class _$_PillSheet extends _PillSheet {
 
 abstract class _PillSheet extends PillSheet {
   const factory _PillSheet(
-      {required String id,
+      {String id,
       @JsonKey()
           required PillSheetTypeInfo typeInfo,
       @JsonKey(fromJson: NonNullTimestampConverter.timestampToDateTime, toJson: NonNullTimestampConverter.dateTimeToTimestamp)
