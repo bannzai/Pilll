@@ -15,7 +15,6 @@ import 'package:pilll/provider/premium_and_trial.codegen.dart';
 import 'package:pilll/service/auth.dart';
 import 'package:pilll/database/diary.dart';
 import 'package:pilll/database/menstruation.dart';
-import 'package:pilll/database/pill_sheet.dart';
 import 'package:pilll/database/pill_sheet_group.dart';
 import 'package:pilll/database/pill_sheet_modified_history.dart';
 import 'package:pilll/database/setting.dart';
@@ -24,7 +23,6 @@ import 'package:pilll/database/user.dart';
 import 'package:mockito/annotations.dart';
 
 @GenerateMocks([
-  PillSheetDatastore,
   TodayService,
   SettingDatastore,
   Analytics,
