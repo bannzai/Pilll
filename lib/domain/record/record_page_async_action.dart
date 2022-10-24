@@ -149,10 +149,6 @@ class RecordPageAsyncAction {
     }
 
     final batch = _batchFactory.batch();
-    _pillSheetDatastore.update(
-      batch,
-      updatedPillSheets,
-    );
     _pillSheetGroupDatastore.updateWithBatch(batch, updatedPillSheetGroup);
 
     final before = pillSheetGroup.pillSheets[updatedIndexses.last];
@@ -252,7 +248,6 @@ class RecordPageAsyncAction {
     final updatedPillSheetGroup = pillSheetGroup.replaced(updatedPillSheet);
 
     final batch = _batchFactory.batch();
-    _pillSheetDatastore.update(batch, updatedPillSheetGroup.pillSheets);
     _pillSheetGroupDatastore.updateWithBatch(batch, updatedPillSheetGroup);
     _pillSheetModifiedHistoryDatastore.add(
       batch,
@@ -284,7 +279,6 @@ class RecordPageAsyncAction {
     final updatedPillSheetGroup = pillSheetGroup.replaced(updatedPillSheet);
 
     final batch = _batchFactory.batch();
-    _pillSheetDatastore.update(batch, updatedPillSheetGroup.pillSheets);
     _pillSheetGroupDatastore.updateWithBatch(batch, updatedPillSheetGroup);
     _pillSheetModifiedHistoryDatastore.add(
       batch,
@@ -320,7 +314,6 @@ class RecordPageAsyncAction {
 
 final recordPageAsyncActionProvider = Provider((ref) => RecordPageAsyncAction(
       ref.watch(batchFactoryProvider),
-      ref.watch(pillSheetDatastoreProvider),
       ref.watch(settingDatastoreProvider),
       ref.watch(pillSheetModifiedHistoryDatastoreProvider),
       ref.watch(pillSheetGroupDatastoreProvider),
