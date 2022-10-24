@@ -9,7 +9,6 @@ import 'package:mockito/mockito.dart';
 import 'package:pilll/entity/setting.codegen.dart';
 import 'package:pilll/service/auth.dart';
 import 'package:pilll/service/day.dart';
-import 'package:pilll/database/pill_sheet.dart';
 import 'package:pilll/database/pill_sheet_group.dart';
 import 'package:pilll/database/pill_sheet_modified_history.dart';
 import 'package:pilll/database/setting.dart';
@@ -17,12 +16,12 @@ import 'package:pilll/database/user.dart';
 import 'package:pilll/util/datetime/day.dart';
 import 'package:riverpod/riverpod.dart';
 import 'package:shared_preferences/shared_preferences.dart';
+import 'package:uuid/uuid.dart';
 
 import '../../helper/mock.mocks.dart';
 
 void main() {
-  const MethodChannel timezoneChannel =
-      MethodChannel('flutter_native_timezone');
+  const MethodChannel timezoneChannel = MethodChannel('flutter_native_timezone');
 
   setUp(() {
     TestWidgetsFlutterBinding.ensureInitialized();
@@ -41,12 +40,9 @@ void main() {
       final batchFactory = MockBatchFactory();
       final userDatastore = MockUserDatastore();
       final authService = MockAuthService();
-      when(authService.stream())
-          .thenAnswer((realInvocation) => const Stream.empty());
+      when(authService.stream()).thenAnswer((realInvocation) => const Stream.empty());
       final settingDatastore = MockSettingDatastore();
-      final pillSheetDatastore = MockPillSheetDatastore();
-      final pillSheetModifiedHistoryDatastore =
-          MockPillSheetModifiedHistoryDatastore();
+      final pillSheetModifiedHistoryDatastore = MockPillSheetModifiedHistoryDatastore();
       final pillSheetGroupDatastore = MockPillSheetGroupDatastore();
 
       final container = ProviderContainer(
@@ -55,11 +51,8 @@ void main() {
           batchFactoryProvider.overrideWithValue(batchFactory),
           authServiceProvider.overrideWithValue(authService),
           settingDatastoreProvider.overrideWithValue(settingDatastore),
-          pillSheetDatastoreProvider.overrideWithValue(pillSheetDatastore),
-          pillSheetModifiedHistoryDatastoreProvider
-              .overrideWithValue(pillSheetModifiedHistoryDatastore),
-          pillSheetGroupDatastoreProvider
-              .overrideWithValue(pillSheetGroupDatastore),
+          pillSheetModifiedHistoryDatastoreProvider.overrideWithValue(pillSheetModifiedHistoryDatastore),
+          pillSheetGroupDatastoreProvider.overrideWithValue(pillSheetGroupDatastore),
         ],
       );
       final store = container.read(initialSettingStoreProvider.notifier);
@@ -75,12 +68,9 @@ void main() {
       final userDatastore = MockUserDatastore();
       final batchFactory = MockBatchFactory();
       final authService = MockAuthService();
-      when(authService.stream())
-          .thenAnswer((realInvocation) => const Stream.empty());
+      when(authService.stream()).thenAnswer((realInvocation) => const Stream.empty());
       final settingDatastore = MockSettingDatastore();
-      final pillSheetDatastore = MockPillSheetDatastore();
-      final pillSheetModifiedHistoryDatastore =
-          MockPillSheetModifiedHistoryDatastore();
+      final pillSheetModifiedHistoryDatastore = MockPillSheetModifiedHistoryDatastore();
       final pillSheetGroupDatastore = MockPillSheetGroupDatastore();
 
       final container = ProviderContainer(
@@ -89,11 +79,8 @@ void main() {
           batchFactoryProvider.overrideWithValue(batchFactory),
           authServiceProvider.overrideWithValue(authService),
           settingDatastoreProvider.overrideWithValue(settingDatastore),
-          pillSheetDatastoreProvider.overrideWithValue(pillSheetDatastore),
-          pillSheetModifiedHistoryDatastoreProvider
-              .overrideWithValue(pillSheetModifiedHistoryDatastore),
-          pillSheetGroupDatastoreProvider
-              .overrideWithValue(pillSheetGroupDatastore),
+          pillSheetModifiedHistoryDatastoreProvider.overrideWithValue(pillSheetModifiedHistoryDatastore),
+          pillSheetGroupDatastoreProvider.overrideWithValue(pillSheetGroupDatastore),
         ],
       );
       final store = container.read(initialSettingStoreProvider.notifier);
@@ -118,12 +105,9 @@ void main() {
       final userDatastore = MockUserDatastore();
       final batchFactory = MockBatchFactory();
       final authService = MockAuthService();
-      when(authService.stream())
-          .thenAnswer((realInvocation) => const Stream.empty());
+      when(authService.stream()).thenAnswer((realInvocation) => const Stream.empty());
       final settingDatastore = MockSettingDatastore();
-      final pillSheetDatastore = MockPillSheetDatastore();
-      final pillSheetModifiedHistoryDatastore =
-          MockPillSheetModifiedHistoryDatastore();
+      final pillSheetModifiedHistoryDatastore = MockPillSheetModifiedHistoryDatastore();
       final pillSheetGroupDatastore = MockPillSheetGroupDatastore();
 
       final container = ProviderContainer(
@@ -132,11 +116,8 @@ void main() {
           batchFactoryProvider.overrideWithValue(batchFactory),
           authServiceProvider.overrideWithValue(authService),
           settingDatastoreProvider.overrideWithValue(settingDatastore),
-          pillSheetDatastoreProvider.overrideWithValue(pillSheetDatastore),
-          pillSheetModifiedHistoryDatastoreProvider
-              .overrideWithValue(pillSheetModifiedHistoryDatastore),
-          pillSheetGroupDatastoreProvider
-              .overrideWithValue(pillSheetGroupDatastore),
+          pillSheetModifiedHistoryDatastoreProvider.overrideWithValue(pillSheetModifiedHistoryDatastore),
+          pillSheetGroupDatastoreProvider.overrideWithValue(pillSheetGroupDatastore),
         ],
       );
       final store = container.read(initialSettingStoreProvider.notifier);
@@ -156,12 +137,9 @@ void main() {
       final userDatastore = MockUserDatastore();
       final batchFactory = MockBatchFactory();
       final authService = MockAuthService();
-      when(authService.stream())
-          .thenAnswer((realInvocation) => const Stream.empty());
+      when(authService.stream()).thenAnswer((realInvocation) => const Stream.empty());
       final settingDatastore = MockSettingDatastore();
-      final pillSheetDatastore = MockPillSheetDatastore();
-      final pillSheetModifiedHistoryDatastore =
-          MockPillSheetModifiedHistoryDatastore();
+      final pillSheetModifiedHistoryDatastore = MockPillSheetModifiedHistoryDatastore();
       final pillSheetGroupDatastore = MockPillSheetGroupDatastore();
 
       final container = ProviderContainer(
@@ -170,11 +148,8 @@ void main() {
           batchFactoryProvider.overrideWithValue(batchFactory),
           authServiceProvider.overrideWithValue(authService),
           settingDatastoreProvider.overrideWithValue(settingDatastore),
-          pillSheetDatastoreProvider.overrideWithValue(pillSheetDatastore),
-          pillSheetModifiedHistoryDatastoreProvider
-              .overrideWithValue(pillSheetModifiedHistoryDatastore),
-          pillSheetGroupDatastoreProvider
-              .overrideWithValue(pillSheetGroupDatastore),
+          pillSheetModifiedHistoryDatastoreProvider.overrideWithValue(pillSheetModifiedHistoryDatastore),
+          pillSheetGroupDatastoreProvider.overrideWithValue(pillSheetGroupDatastore),
         ],
       );
       final store = container.read(initialSettingStoreProvider.notifier);
@@ -195,12 +170,9 @@ void main() {
       final userDatastore = MockUserDatastore();
       final batchFactory = MockBatchFactory();
       final authService = MockAuthService();
-      when(authService.stream())
-          .thenAnswer((realInvocation) => const Stream.empty());
+      when(authService.stream()).thenAnswer((realInvocation) => const Stream.empty());
       final settingDatastore = MockSettingDatastore();
-      final pillSheetDatastore = MockPillSheetDatastore();
-      final pillSheetModifiedHistoryDatastore =
-          MockPillSheetModifiedHistoryDatastore();
+      final pillSheetModifiedHistoryDatastore = MockPillSheetModifiedHistoryDatastore();
       final pillSheetGroupDatastore = MockPillSheetGroupDatastore();
 
       final container = ProviderContainer(
@@ -209,11 +181,8 @@ void main() {
           batchFactoryProvider.overrideWithValue(batchFactory),
           authServiceProvider.overrideWithValue(authService),
           settingDatastoreProvider.overrideWithValue(settingDatastore),
-          pillSheetDatastoreProvider.overrideWithValue(pillSheetDatastore),
-          pillSheetModifiedHistoryDatastoreProvider
-              .overrideWithValue(pillSheetModifiedHistoryDatastore),
-          pillSheetGroupDatastoreProvider
-              .overrideWithValue(pillSheetGroupDatastore),
+          pillSheetModifiedHistoryDatastoreProvider.overrideWithValue(pillSheetModifiedHistoryDatastore),
+          pillSheetGroupDatastoreProvider.overrideWithValue(pillSheetGroupDatastore),
         ],
       );
       final store = container.read(initialSettingStoreProvider.notifier);
@@ -233,18 +202,14 @@ void main() {
     test("replace default reminderTime", () {
       final mockTodayRepository = MockTodayService();
       todayRepository = mockTodayRepository;
-      when(mockTodayRepository.now())
-          .thenReturn(DateTime(2020, 9, 29, 20, 0, 0));
+      when(mockTodayRepository.now()).thenReturn(DateTime(2020, 9, 29, 20, 0, 0));
 
       final userDatastore = MockUserDatastore();
       final batchFactory = MockBatchFactory();
       final authService = MockAuthService();
-      when(authService.stream())
-          .thenAnswer((realInvocation) => const Stream.empty());
+      when(authService.stream()).thenAnswer((realInvocation) => const Stream.empty());
       final settingDatastore = MockSettingDatastore();
-      final pillSheetDatastore = MockPillSheetDatastore();
-      final pillSheetModifiedHistoryDatastore =
-          MockPillSheetModifiedHistoryDatastore();
+      final pillSheetModifiedHistoryDatastore = MockPillSheetModifiedHistoryDatastore();
       final pillSheetGroupDatastore = MockPillSheetGroupDatastore();
 
       final container = ProviderContainer(
@@ -253,36 +218,27 @@ void main() {
           batchFactoryProvider.overrideWithValue(batchFactory),
           authServiceProvider.overrideWithValue(authService),
           settingDatastoreProvider.overrideWithValue(settingDatastore),
-          pillSheetDatastoreProvider.overrideWithValue(pillSheetDatastore),
-          pillSheetModifiedHistoryDatastoreProvider
-              .overrideWithValue(pillSheetModifiedHistoryDatastore),
-          pillSheetGroupDatastoreProvider
-              .overrideWithValue(pillSheetGroupDatastore),
+          pillSheetModifiedHistoryDatastoreProvider.overrideWithValue(pillSheetModifiedHistoryDatastore),
+          pillSheetGroupDatastoreProvider.overrideWithValue(pillSheetGroupDatastore),
         ],
       );
       final store = container.read(initialSettingStoreProvider.notifier);
 
       store.setReminderTime(index: 0, hour: 22, minute: 10);
-      expect(container.read(initialSettingStateProvider).reminderTimes, [
-        const ReminderTime(hour: 22, minute: 10),
-        const ReminderTime(hour: 21, minute: 0)
-      ]);
+      expect(container.read(initialSettingStateProvider).reminderTimes,
+          [const ReminderTime(hour: 22, minute: 10), const ReminderTime(hour: 21, minute: 0)]);
     });
     test("add reminderTime", () {
       final mockTodayRepository = MockTodayService();
       todayRepository = mockTodayRepository;
-      when(mockTodayRepository.now())
-          .thenReturn(DateTime(2020, 9, 29, 20, 0, 0));
+      when(mockTodayRepository.now()).thenReturn(DateTime(2020, 9, 29, 20, 0, 0));
 
       final userDatastore = MockUserDatastore();
       final batchFactory = MockBatchFactory();
       final authService = MockAuthService();
-      when(authService.stream())
-          .thenAnswer((realInvocation) => const Stream.empty());
+      when(authService.stream()).thenAnswer((realInvocation) => const Stream.empty());
       final settingDatastore = MockSettingDatastore();
-      final pillSheetDatastore = MockPillSheetDatastore();
-      final pillSheetModifiedHistoryDatastore =
-          MockPillSheetModifiedHistoryDatastore();
+      final pillSheetModifiedHistoryDatastore = MockPillSheetModifiedHistoryDatastore();
       final pillSheetGroupDatastore = MockPillSheetGroupDatastore();
 
       final container = ProviderContainer(
@@ -291,21 +247,15 @@ void main() {
           batchFactoryProvider.overrideWithValue(batchFactory),
           authServiceProvider.overrideWithValue(authService),
           settingDatastoreProvider.overrideWithValue(settingDatastore),
-          pillSheetDatastoreProvider.overrideWithValue(pillSheetDatastore),
-          pillSheetModifiedHistoryDatastoreProvider
-              .overrideWithValue(pillSheetModifiedHistoryDatastore),
-          pillSheetGroupDatastoreProvider
-              .overrideWithValue(pillSheetGroupDatastore),
+          pillSheetModifiedHistoryDatastoreProvider.overrideWithValue(pillSheetModifiedHistoryDatastore),
+          pillSheetGroupDatastoreProvider.overrideWithValue(pillSheetGroupDatastore),
         ],
       );
       final store = container.read(initialSettingStoreProvider.notifier);
 
       store.setReminderTime(index: 2, hour: 22, minute: 10);
-      expect(container.read(initialSettingStateProvider).reminderTimes, [
-        const ReminderTime(hour: 20, minute: 0),
-        const ReminderTime(hour: 21, minute: 0),
-        const ReminderTime(hour: 22, minute: 10)
-      ]);
+      expect(container.read(initialSettingStateProvider).reminderTimes,
+          [const ReminderTime(hour: 20, minute: 0), const ReminderTime(hour: 21, minute: 0), const ReminderTime(hour: 22, minute: 10)]);
     });
   });
   group("#register", () {
@@ -321,39 +271,26 @@ void main() {
       final batch = MockWriteBatch();
       when(batchFactory.batch()).thenReturn(batch);
       final authService = MockAuthService();
-      when(authService.stream())
-          .thenAnswer((realInvocation) => const Stream.empty());
+      when(authService.stream()).thenAnswer((realInvocation) => const Stream.empty());
 
-      final pillSheet = PillSheet(
-          typeInfo: PillSheetType.pillsheet_21.typeInfo, beginingDate: _today);
+      final pillSheet = PillSheet(id: const Uuid().v4(), typeInfo: PillSheetType.pillsheet_21.typeInfo, beginingDate: _today);
       final pillSheetDatastore = MockPillSheetDatastore();
-      when(pillSheetDatastore.register(batch, [pillSheet]))
-          .thenReturn([pillSheet.copyWith(id: "sheet_id")]);
+      when(pillSheetDatastore.register(batch, [pillSheet])).thenReturn([pillSheet.copyWith(id: "sheet_id")]);
 
-      final pillSheetGroup = PillSheetGroup(
-          pillSheetIDs: ["sheet_id"],
-          pillSheets: [pillSheet.copyWith(id: "sheet_id")],
-          createdAt: now());
+      final pillSheetGroup = PillSheetGroup(pillSheetIDs: ["sheet_id"], pillSheets: [pillSheet.copyWith(id: "sheet_id")], createdAt: now());
       final pillSheetGroupDatastore = MockPillSheetGroupDatastore();
-      when(pillSheetGroupDatastore.register(batch, pillSheetGroup))
-          .thenReturn(pillSheetGroup.copyWith(id: "group_id"));
+      when(pillSheetGroupDatastore.register(batch, pillSheetGroup)).thenReturn(pillSheetGroup.copyWith(id: "group_id"));
 
-      final history = PillSheetModifiedHistoryServiceActionFactory
-          .createCreatedPillSheetAction(
-              pillSheetGroupID: "group_id", pillSheetIDs: ["sheet_id"]);
-      final pillSheetModifiedHistoryDatastore =
-          MockPillSheetModifiedHistoryDatastore();
-      when(pillSheetModifiedHistoryDatastore.add(batch, history))
-          .thenReturn(null);
+      final history =
+          PillSheetModifiedHistoryServiceActionFactory.createCreatedPillSheetAction(pillSheetGroupID: "group_id", pillSheetIDs: ["sheet_id"]);
+      final pillSheetModifiedHistoryDatastore = MockPillSheetModifiedHistoryDatastore();
+      when(pillSheetModifiedHistoryDatastore.add(batch, history)).thenReturn(null);
 
       const setting = Setting(
         pillNumberForFromMenstruation: 24,
         durationMenstruation: 4,
         isOnReminder: true,
-        reminderTimes: [
-          ReminderTime(hour: 21, minute: 20),
-          ReminderTime(hour: 21, minute: 0)
-        ],
+        reminderTimes: [ReminderTime(hour: 21, minute: 20), ReminderTime(hour: 21, minute: 0)],
         pillSheetTypes: [PillSheetType.pillsheet_21],
         timezoneDatabaseName: null,
       );
@@ -366,11 +303,8 @@ void main() {
           batchFactoryProvider.overrideWithValue(batchFactory),
           authServiceProvider.overrideWithValue(authService),
           settingDatastoreProvider.overrideWithValue(settingDatastore),
-          pillSheetDatastoreProvider.overrideWithValue(pillSheetDatastore),
-          pillSheetModifiedHistoryDatastoreProvider
-              .overrideWithValue(pillSheetModifiedHistoryDatastore),
-          pillSheetGroupDatastoreProvider
-              .overrideWithValue(pillSheetGroupDatastore),
+          pillSheetModifiedHistoryDatastoreProvider.overrideWithValue(pillSheetModifiedHistoryDatastore),
+          pillSheetGroupDatastoreProvider.overrideWithValue(pillSheetGroupDatastore),
         ],
       );
       final store = container.read(initialSettingStoreProvider.notifier);
@@ -395,10 +329,10 @@ void main() {
       final batch = MockWriteBatch();
       when(batchFactory.batch()).thenReturn(batch);
       final authService = MockAuthService();
-      when(authService.stream())
-          .thenAnswer((realInvocation) => const Stream.empty());
+      when(authService.stream()).thenAnswer((realInvocation) => const Stream.empty());
 
       final pillSheet = PillSheet(
+        id: const Uuid().v4(),
         typeInfo: PillSheetType.pillsheet_28_0.typeInfo,
         beginingDate: _today.subtract(
           const Duration(days: 28),
@@ -407,6 +341,7 @@ void main() {
         lastTakenDate: DateTime.parse("2020-09-18"),
       );
       final pillSheet2 = PillSheet(
+        id: const Uuid().v4(),
         typeInfo: PillSheetType.pillsheet_21.typeInfo,
         beginingDate: _today,
         lastTakenDate: _today.subtract(const Duration(days: 1)),
@@ -415,10 +350,7 @@ void main() {
       final pillSheetDatastore = MockPillSheetDatastore();
 
       when(pillSheetDatastore.register(batch, [pillSheet, pillSheet2]))
-          .thenReturn([
-        pillSheet.copyWith(id: "sheet_id"),
-        pillSheet2.copyWith(id: "sheet_id2")
-      ]);
+          .thenReturn([pillSheet.copyWith(id: "sheet_id"), pillSheet2.copyWith(id: "sheet_id2")]);
 
       final pillSheetGroup = PillSheetGroup(
         pillSheetIDs: ["sheet_id", "sheet_id2"],
@@ -429,31 +361,20 @@ void main() {
         createdAt: now(),
       );
       final pillSheetGroupDatastore = MockPillSheetGroupDatastore();
-      when(pillSheetGroupDatastore.register(batch, pillSheetGroup))
-          .thenReturn(pillSheetGroup.copyWith(id: "group_id"));
+      when(pillSheetGroupDatastore.register(batch, pillSheetGroup)).thenReturn(pillSheetGroup.copyWith(id: "group_id"));
 
-      final history = PillSheetModifiedHistoryServiceActionFactory
-          .createCreatedPillSheetAction(
-              pillSheetGroupID: "group_id",
-              pillSheetIDs: ["sheet_id", "sheet_id2"]);
-      final pillSheetModifiedHistoryDatastore =
-          MockPillSheetModifiedHistoryDatastore();
-      when(pillSheetModifiedHistoryDatastore.add(batch, history))
-          .thenReturn(null);
+      final history = PillSheetModifiedHistoryServiceActionFactory.createCreatedPillSheetAction(
+          pillSheetGroupID: "group_id", pillSheetIDs: ["sheet_id", "sheet_id2"]);
+      final pillSheetModifiedHistoryDatastore = MockPillSheetModifiedHistoryDatastore();
+      when(pillSheetModifiedHistoryDatastore.add(batch, history)).thenReturn(null);
 
       const setting = Setting(
         pillSheetAppearanceMode: PillSheetAppearanceMode.sequential,
         pillNumberForFromMenstruation: 52,
         durationMenstruation: 4,
         isOnReminder: true,
-        reminderTimes: [
-          ReminderTime(hour: 21, minute: 20),
-          ReminderTime(hour: 22, minute: 0)
-        ],
-        pillSheetTypes: [
-          PillSheetType.pillsheet_28_0,
-          PillSheetType.pillsheet_21
-        ],
+        reminderTimes: [ReminderTime(hour: 21, minute: 20), ReminderTime(hour: 22, minute: 0)],
+        pillSheetTypes: [PillSheetType.pillsheet_28_0, PillSheetType.pillsheet_21],
         timezoneDatabaseName: null,
       );
       final settingDatastore = MockSettingDatastore();
@@ -465,11 +386,8 @@ void main() {
           batchFactoryProvider.overrideWithValue(batchFactory),
           authServiceProvider.overrideWithValue(authService),
           settingDatastoreProvider.overrideWithValue(settingDatastore),
-          pillSheetDatastoreProvider.overrideWithValue(pillSheetDatastore),
-          pillSheetModifiedHistoryDatastoreProvider
-              .overrideWithValue(pillSheetModifiedHistoryDatastore),
-          pillSheetGroupDatastoreProvider
-              .overrideWithValue(pillSheetGroupDatastore),
+          pillSheetModifiedHistoryDatastoreProvider.overrideWithValue(pillSheetModifiedHistoryDatastore),
+          pillSheetGroupDatastoreProvider.overrideWithValue(pillSheetGroupDatastore),
         ],
       );
       final store = container.read(initialSettingStoreProvider.notifier);
@@ -485,23 +403,18 @@ void main() {
     });
 
     // ref: https://github.com/bannzai/Pilll/pull/534
-    test("state.pillSheetTypes is [PillSheetType.pillsheet_24_rest_4]",
-        () async {
+    test("state.pillSheetTypes is [PillSheetType.pillsheet_24_rest_4]", () async {
       const setting = Setting(
         pillNumberForFromMenstruation: 24,
         durationMenstruation: 4,
         isOnReminder: true,
-        reminderTimes: [
-          ReminderTime(hour: 21, minute: 20),
-          ReminderTime(hour: 22, minute: 0)
-        ],
+        reminderTimes: [ReminderTime(hour: 21, minute: 20), ReminderTime(hour: 22, minute: 0)],
         pillSheetTypes: [PillSheetType.pillsheet_24_rest_4],
         timezoneDatabaseName: null,
       );
 
       final userDatastore = MockUserDatastore();
-      when(userDatastore.endInitialSetting(setting))
-          .thenAnswer((_) => Future.value());
+      when(userDatastore.endInitialSetting(setting)).thenAnswer((_) => Future.value());
 
       var mockTodayRepository = MockTodayService();
       final _today = DateTime.parse("2020-09-19");
@@ -513,31 +426,20 @@ void main() {
       final batch = MockWriteBatch();
       when(batchFactory.batch()).thenReturn(batch);
       final authService = MockAuthService();
-      when(authService.stream())
-          .thenAnswer((realInvocation) => const Stream.empty());
+      when(authService.stream()).thenAnswer((realInvocation) => const Stream.empty());
 
-      final pillSheet = PillSheet(
-          typeInfo: PillSheetType.pillsheet_24_rest_4.typeInfo,
-          beginingDate: _today);
+      final pillSheet = PillSheet(id: const Uuid().v4(), typeInfo: PillSheetType.pillsheet_24_rest_4.typeInfo, beginingDate: _today);
       final pillSheetDatastore = MockPillSheetDatastore();
-      when(pillSheetDatastore.register(batch, [pillSheet]))
-          .thenReturn([pillSheet.copyWith(id: "sheet_id")]);
+      when(pillSheetDatastore.register(batch, [pillSheet])).thenReturn([pillSheet.copyWith(id: "sheet_id")]);
 
-      final pillSheetGroup = PillSheetGroup(
-          pillSheetIDs: ["sheet_id"],
-          pillSheets: [pillSheet.copyWith(id: "sheet_id")],
-          createdAt: now());
+      final pillSheetGroup = PillSheetGroup(pillSheetIDs: ["sheet_id"], pillSheets: [pillSheet.copyWith(id: "sheet_id")], createdAt: now());
       final pillSheetGroupDatastore = MockPillSheetGroupDatastore();
-      when(pillSheetGroupDatastore.register(batch, pillSheetGroup))
-          .thenReturn(pillSheetGroup.copyWith(id: "group_id"));
+      when(pillSheetGroupDatastore.register(batch, pillSheetGroup)).thenReturn(pillSheetGroup.copyWith(id: "group_id"));
 
-      final history = PillSheetModifiedHistoryServiceActionFactory
-          .createCreatedPillSheetAction(
-              pillSheetGroupID: "group_id", pillSheetIDs: ["sheet_id"]);
-      final pillSheetModifiedHistoryDatastore =
-          MockPillSheetModifiedHistoryDatastore();
-      when(pillSheetModifiedHistoryDatastore.add(batch, history))
-          .thenReturn(null);
+      final history =
+          PillSheetModifiedHistoryServiceActionFactory.createCreatedPillSheetAction(pillSheetGroupID: "group_id", pillSheetIDs: ["sheet_id"]);
+      final pillSheetModifiedHistoryDatastore = MockPillSheetModifiedHistoryDatastore();
+      when(pillSheetModifiedHistoryDatastore.add(batch, history)).thenReturn(null);
 
       final settingDatastore = MockSettingDatastore();
       when(settingDatastore.updateWithBatch(batch, setting)).thenReturn(null);
@@ -548,11 +450,8 @@ void main() {
           batchFactoryProvider.overrideWithValue(batchFactory),
           authServiceProvider.overrideWithValue(authService),
           settingDatastoreProvider.overrideWithValue(settingDatastore),
-          pillSheetDatastoreProvider.overrideWithValue(pillSheetDatastore),
-          pillSheetModifiedHistoryDatastoreProvider
-              .overrideWithValue(pillSheetModifiedHistoryDatastore),
-          pillSheetGroupDatastoreProvider
-              .overrideWithValue(pillSheetGroupDatastore),
+          pillSheetModifiedHistoryDatastoreProvider.overrideWithValue(pillSheetModifiedHistoryDatastore),
+          pillSheetGroupDatastoreProvider.overrideWithValue(pillSheetGroupDatastore),
         ],
       );
       final store = container.read(initialSettingStoreProvider.notifier);
