@@ -85,7 +85,7 @@ class SettingPageAsyncAction {
     required PillSheet activedPillSheet,
   }) async {
     final batch = _batchFactory.batch();
-    final updatedPillSheet = _pillSheetDatastore.delete(batch, activedPillSheet);
+    final updatedPillSheet = activedPillSheet.copyWith(deletedAt: DateTime.now());
     final history = PillSheetModifiedHistoryServiceActionFactory.createDeletedPillSheetAction(
       pillSheetGroupID: latestPillSheetGroup.id,
       pillSheetIDs: latestPillSheetGroup.pillSheetIDs,
