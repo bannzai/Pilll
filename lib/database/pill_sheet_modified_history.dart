@@ -8,11 +8,9 @@ import 'package:pilll/util/datetime/day.dart';
 import 'package:riverpod/riverpod.dart';
 
 final pillSheetModifiedHistoryDatastoreProvider =
-    Provider<PillSheetModifiedHistoryDatastore>((ref) =>
-        PillSheetModifiedHistoryDatastore(ref.watch(databaseProvider)));
+    Provider<PillSheetModifiedHistoryDatastore>((ref) => PillSheetModifiedHistoryDatastore(ref.watch(databaseProvider)));
 
-final pillSheetModifiedHistoryStreamForLatest7 = StreamProvider(
-    (ref) => ref.watch(pillSheetModifiedHistoryDatastoreProvider).stream(7));
+final pillSheetModifiedHistoryStreamForLatest7 = StreamProvider((ref) => ref.watch(pillSheetModifiedHistoryDatastoreProvider).stream(7));
 
 class PillSheetModifiedHistoryDatastore {
   final DatabaseConnection _database;
@@ -22,9 +20,7 @@ class PillSheetModifiedHistoryDatastore {
   Future<List<PillSheetModifiedHistory>> fetchList(DateTime? after, int limit) {
     return _database
         .pillSheetModifiedHistoriesReference()
-        .orderBy(
-            PillSheetModifiedHistoryFirestoreKeys.estimatedEventCausingDate,
-            descending: true)
+        .orderBy(PillSheetModifiedHistoryFirestoreKeys.estimatedEventCausingDate, descending: true)
         .startAfter([after])
         .limit(limit)
         .get()
@@ -40,18 +36,13 @@ class PillSheetModifiedHistoryDatastore {
   }
 
   Future<void> update(PillSheetModifiedHistory pillSheetModifiedHistory) async {
-    await _database
-        .pillSheetModifiedHistoriesReference()
-        .doc(pillSheetModifiedHistory.id)
-        .set(pillSheetModifiedHistory, SetOptions(merge: true));
+    await _database.pillSheetModifiedHistoriesReference().doc(pillSheetModifiedHistory.id).set(pillSheetModifiedHistory, SetOptions(merge: true));
   }
 
   Stream<List<PillSheetModifiedHistory>> stream(int limit) {
     return _database
         .pillSheetModifiedHistoriesReference()
-        .orderBy(
-            PillSheetModifiedHistoryFirestoreKeys.estimatedEventCausingDate,
-            descending: true)
+        .orderBy(PillSheetModifiedHistoryFirestoreKeys.estimatedEventCausingDate, descending: true)
         .limit(limit)
         .snapshots()
         .map((reference) => reference.docs)
@@ -59,14 +50,12 @@ class PillSheetModifiedHistoryDatastore {
   }
 
   void add(WriteBatch batch, PillSheetModifiedHistory history) {
-    batch.set(_database.pillSheetModifiedHistoriesReference().doc(), history,
-        SetOptions(merge: true));
+    batch.set(_database.pillSheetModifiedHistoriesReference().doc(), history, SetOptions(merge: true));
   }
 }
 
 // Factories
-extension PillSheetModifiedHistoryServiceActionFactory
-    on PillSheetModifiedHistoryDatastore {
+extension PillSheetModifiedHistoryServiceActionFactory on PillSheetModifiedHistoryDatastore {
   static PillSheetModifiedHistory _create({
     required PillSheet? before,
     required PillSheet? after,
@@ -101,9 +90,8 @@ extension PillSheetModifiedHistoryServiceActionFactory
 
     final afterID = after.id;
     final afterLastTakenDate = after.lastTakenDate;
-    if (afterID == null || afterLastTakenDate == null) {
-      throw FormatException(
-          "unexpected afterPillSheetID: $afterID or lastTakenDate:${after.lastTakenDate} is null for takenPill action");
+    if (afterLastTakenDate == null) {
+      throw FormatException("unexpected afterPillSheetID: $afterID or lastTakenDate:${after.lastTakenDate} is null for takenPill action");
     }
     return _create(
       actionType: PillSheetModifiedActionType.takenPill,
@@ -133,13 +121,12 @@ extension PillSheetModifiedHistoryServiceActionFactory
 
     final afterID = after.id;
     final afterLastTakenDate = after.lastTakenDate;
-    if (afterID == null || afterLastTakenDate == null) {
-      throw FormatException(
-          "unexpected afterPillSheetID: $afterID or lastTakenDate:${after.lastTakenDate} is null for revertTakenPill action");
+    if (afterLastTakenDate == null) {
+      throw FormatException("unexpected afterPillSheetID: $afterID or lastTakenDate:${after.lastTakenDate} is null for revertTakenPill action");
     }
     final beforeID = before.id;
     final beforeLastTakenDate = before.lastTakenDate;
-    if (beforeID == null || beforeLastTakenDate == null) {
+    if (beforeLastTakenDate == null) {
       throw FormatException(
           "unexpected before pill sheet id or lastTakenDate is null id: ${before.id}, lastTakenDate: ${before.lastTakenDate} for revertTakenPill action");
     }
@@ -191,9 +178,8 @@ extension PillSheetModifiedHistoryServiceActionFactory
     assert(pillSheetGroupID != null);
 
     final afterID = after.id;
-    if (afterID == null || pillSheetGroupID == null) {
-      throw FormatException(
-          "unexpected pillSheetGroupID: $pillSheetGroupID, or afterPillSheetID: $afterID  is null for changePillNumber action");
+    if (pillSheetGroupID == null) {
+      throw FormatException("unexpected pillSheetGroupID: $pillSheetGroupID, or afterPillSheetID: $afterID  is null for changePillNumber action");
     }
 
     return _create(

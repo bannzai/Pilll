@@ -55,7 +55,7 @@ void main() {
         activedPillSheet = activedPillSheet.copyWith(groupIndex: 0);
         pillSheetGroup = PillSheetGroup(
           id: "group_id",
-          pillSheetIDs: [activedPillSheet.id!],
+          pillSheetIDs: [activedPillSheet.id],
           pillSheets: [activedPillSheet],
           createdAt: _today,
         );
@@ -126,7 +126,7 @@ void main() {
         final takenDate = _today.add(const Duration(seconds: 1));
         pillSheetGroup = PillSheetGroup(
           id: "group_id",
-          pillSheetIDs: [previousPillSheet.id!, activedPillSheet.id!, nextPillSheet.id!],
+          pillSheetIDs: [previousPillSheet.id, activedPillSheet.id, nextPillSheet.id],
           pillSheets: [previousPillSheet, activedPillSheet, nextPillSheet],
           createdAt: _today,
         );
@@ -167,7 +167,7 @@ void main() {
         activedPillSheet = activedPillSheet.copyWith(lastTakenDate: takenDate);
         pillSheetGroup = PillSheetGroup(
           id: "group_id",
-          pillSheetIDs: [previousPillSheet.id!, activedPillSheet.id!, nextPillSheet.id!],
+          pillSheetIDs: [previousPillSheet.id, activedPillSheet.id, nextPillSheet.id],
           pillSheets: [previousPillSheet, activedPillSheet, nextPillSheet],
           createdAt: _today,
         );
@@ -195,7 +195,7 @@ void main() {
         final takenDate = activedPillSheet.estimatedEndTakenDate;
         pillSheetGroup = PillSheetGroup(
           id: "group_id",
-          pillSheetIDs: [previousPillSheet.id!, activedPillSheet.id!, nextPillSheet.id!],
+          pillSheetIDs: [previousPillSheet.id, activedPillSheet.id, nextPillSheet.id],
           pillSheets: [previousPillSheet, activedPillSheet, nextPillSheet],
           createdAt: _today,
         );
@@ -236,7 +236,7 @@ void main() {
         final takenDate = activedPillSheet.estimatedEndTakenDate.add(const Duration(seconds: 1));
         pillSheetGroup = PillSheetGroup(
           id: "group_id",
-          pillSheetIDs: [previousPillSheet.id!, activedPillSheet.id!, nextPillSheet.id!],
+          pillSheetIDs: [previousPillSheet.id, activedPillSheet.id, nextPillSheet.id],
           pillSheets: [previousPillSheet, activedPillSheet, nextPillSheet],
           createdAt: _today,
         );
@@ -280,7 +280,7 @@ void main() {
         activedPillSheet = activedPillSheet.copyWith(lastTakenDate: activedPillSheet.estimatedEndTakenDate.subtract(const Duration(days: 10)));
         pillSheetGroup = PillSheetGroup(
           id: "group_id",
-          pillSheetIDs: [previousPillSheet.id!, activedPillSheet.id!, nextPillSheet.id!],
+          pillSheetIDs: [previousPillSheet.id, activedPillSheet.id, nextPillSheet.id],
           pillSheets: [previousPillSheet, activedPillSheet, nextPillSheet],
           createdAt: _today,
         );
@@ -321,7 +321,7 @@ void main() {
         previousPillSheet = previousPillSheet.copyWith(lastTakenDate: previousPillSheet.lastTakenDate!.subtract(const Duration(days: 1)));
         pillSheetGroup = PillSheetGroup(
           id: "group_id",
-          pillSheetIDs: [previousPillSheet.id!, activedPillSheet.id!, nextPillSheet.id!],
+          pillSheetIDs: [previousPillSheet.id, activedPillSheet.id, nextPillSheet.id],
           pillSheets: [previousPillSheet, activedPillSheet, nextPillSheet],
           createdAt: _today,
         );
@@ -361,7 +361,7 @@ void main() {
         previousPillSheet = previousPillSheet.copyWith(lastTakenDate: previousPillSheet.lastTakenDate!.subtract(const Duration(days: 1)));
         pillSheetGroup = PillSheetGroup(
           id: "group_id",
-          pillSheetIDs: [previousPillSheet.id!, activedPillSheet.id!, nextPillSheet.id!],
+          pillSheetIDs: [previousPillSheet.id, activedPillSheet.id, nextPillSheet.id],
           pillSheets: [previousPillSheet, activedPillSheet, nextPillSheet],
           createdAt: _today,
         );
@@ -407,7 +407,7 @@ void main() {
         activedPillSheet = activedPillSheet.copyWith(lastTakenDate: activedPillSheet.beginingDate.subtract(const Duration(days: 1)));
         pillSheetGroup = PillSheetGroup(
           id: "group_id",
-          pillSheetIDs: [previousPillSheet.id!, activedPillSheet.id!, nextPillSheet.id!],
+          pillSheetIDs: [previousPillSheet.id, activedPillSheet.id, nextPillSheet.id],
           pillSheets: [previousPillSheet, activedPillSheet, nextPillSheet],
           createdAt: _today,
         );
@@ -457,7 +457,7 @@ void main() {
         activedPillSheet = activedPillSheet.copyWith(beginingDate: DateTime.parse("2022-07-24T19:02:21"), lastTakenDate: null);
         pillSheetGroup = PillSheetGroup(
           id: "group_id",
-          pillSheetIDs: [previousPillSheet.id!, activedPillSheet.id!, nextPillSheet.id!],
+          pillSheetIDs: [previousPillSheet.id, activedPillSheet.id, nextPillSheet.id],
           pillSheets: [previousPillSheet, activedPillSheet, nextPillSheet],
           createdAt: _today,
         );
@@ -465,7 +465,7 @@ void main() {
         final takenDate = _today.add(const Duration(seconds: 1));
         pillSheetGroup = PillSheetGroup(
           id: "group_id",
-          pillSheetIDs: [previousPillSheet.id!, activedPillSheet.id!, nextPillSheet.id!],
+          pillSheetIDs: [previousPillSheet.id, activedPillSheet.id, nextPillSheet.id],
           pillSheets: [previousPillSheet, activedPillSheet, nextPillSheet],
           createdAt: _today,
         );
@@ -533,7 +533,7 @@ void main() {
         );
         pillSheetGroup = PillSheetGroup(
           id: "group_id",
-          pillSheetIDs: [previousPillSheet.id!, activedPillSheet.id!, nextPillSheet.id!],
+          pillSheetIDs: [previousPillSheet.id, activedPillSheet.id, nextPillSheet.id],
           pillSheets: [previousPillSheet, activedPillSheet, nextPillSheet],
           createdAt: _today,
         );
@@ -541,7 +541,7 @@ void main() {
         final takenDate = _today.add(const Duration(seconds: 1));
         pillSheetGroup = PillSheetGroup(
           id: "group_id",
-          pillSheetIDs: [previousPillSheet.id!, activedPillSheet.id!, nextPillSheet.id!],
+          pillSheetIDs: [previousPillSheet.id, activedPillSheet.id, nextPillSheet.id],
           pillSheets: [previousPillSheet, activedPillSheet, nextPillSheet],
           createdAt: _today,
         );
