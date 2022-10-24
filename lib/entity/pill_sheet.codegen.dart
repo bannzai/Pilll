@@ -5,6 +5,7 @@ import 'package:pilll/util/datetime/date_compare.dart';
 import 'package:pilll/util/datetime/day.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';
+import 'package:uuid/uuid.dart';
 part 'pill_sheet.codegen.g.dart';
 part 'pill_sheet.codegen.freezed.dart';
 
@@ -55,15 +56,13 @@ class RestDuration with _$RestDuration {
 
 @freezed
 class PillSheet with _$PillSheet {
-  String? get documentID => id;
-
   PillSheetType get sheetType => PillSheetTypeFunctions.fromRawPath(typeInfo.pillSheetTypeReferencePath);
 
   const PillSheet._();
   @JsonSerializable(explicitToJson: true)
   const factory PillSheet({
     @JsonKey(includeIfNull: false)
-        String? id,
+        required String? id,
     @JsonKey()
         required PillSheetTypeInfo typeInfo,
     @JsonKey(
@@ -92,6 +91,7 @@ class PillSheet with _$PillSheet {
         List<RestDuration> restDurations,
   }) = _PillSheet;
   factory PillSheet.create(PillSheetType type) => PillSheet(
+        id: const Uuid().v4(),
         typeInfo: type.typeInfo,
         beginingDate: today(),
         lastTakenDate: null,
