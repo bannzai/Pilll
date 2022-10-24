@@ -9,13 +9,13 @@ import 'package:flutter_test/flutter_test.dart';
 import 'package:mockito/mockito.dart';
 import 'package:pilll/entity/setting.codegen.dart';
 import 'package:pilll/service/day.dart';
-import 'package:pilll/database/pill_sheet.dart';
 import 'package:pilll/database/pill_sheet_group.dart';
 import 'package:pilll/database/pill_sheet_modified_history.dart';
 import 'package:pilll/database/setting.dart';
 import 'package:pilll/util/datetime/day.dart';
 import 'package:riverpod/riverpod.dart';
 import 'package:shared_preferences/shared_preferences.dart';
+import 'package:uuid/uuid.dart';
 
 import '../../helper/fake.dart';
 import '../../helper/mock.mocks.dart';
@@ -38,6 +38,7 @@ void main() {
       when(batchFactory.batch()).thenReturn(batch);
 
       final pillSheet = PillSheet(
+        id: const Uuid().v4(),
         typeInfo: PillSheetType.pillsheet_28_0.typeInfo,
         beginingDate: _today,
         groupIndex: 0,
@@ -92,7 +93,6 @@ void main() {
           recordPageAsyncStateProvider.overrideWithValue(AsyncValue.data(recordPageState)),
           batchFactoryProvider.overrideWithValue(batchFactory),
           settingDatastoreProvider.overrideWithValue(settingDatastore),
-          pillSheetDatastoreProvider.overrideWithValue(pillSheetDatastore),
           pillSheetModifiedHistoryDatastoreProvider.overrideWithValue(pillSheetModifiedHistoryDatastore),
           pillSheetGroupDatastoreProvider.overrideWithValue(pillSheetGroupDatastore),
         ],
@@ -113,12 +113,14 @@ void main() {
       when(batchFactory.batch()).thenReturn(batch);
 
       final pillSheet = PillSheet(
+        id: const Uuid().v4(),
         typeInfo: PillSheetType.pillsheet_28_0.typeInfo,
         beginingDate: _today,
         groupIndex: 0,
         lastTakenDate: null,
       );
       final pillSheet2 = PillSheet(
+        id: const Uuid().v4(),
         typeInfo: PillSheetType.pillsheet_21.typeInfo,
         beginingDate: _today.add(const Duration(days: 28)),
         lastTakenDate: null,
@@ -171,7 +173,6 @@ void main() {
           recordPageAsyncStateProvider.overrideWithValue(AsyncValue.data(recordPageState)),
           batchFactoryProvider.overrideWithValue(batchFactory),
           settingDatastoreProvider.overrideWithValue(settingDatastore),
-          pillSheetDatastoreProvider.overrideWithValue(pillSheetDatastore),
           pillSheetModifiedHistoryDatastoreProvider.overrideWithValue(pillSheetModifiedHistoryDatastore),
           pillSheetGroupDatastoreProvider.overrideWithValue(pillSheetGroupDatastore),
         ],
@@ -250,7 +251,6 @@ void main() {
         overrides: [
           batchFactoryProvider.overrideWithValue(batchFactory),
           settingDatastoreProvider.overrideWithValue(settingDatastore),
-          pillSheetDatastoreProvider.overrideWithValue(pillSheetDatastore),
           pillSheetModifiedHistoryDatastoreProvider.overrideWithValue(pillSheetModifiedHistoryDatastore),
           pillSheetGroupDatastoreProvider.overrideWithValue(pillSheetGroupDatastore),
         ],
@@ -342,7 +342,6 @@ void main() {
         overrides: [
           batchFactoryProvider.overrideWithValue(batchFactory),
           settingDatastoreProvider.overrideWithValue(settingDatastore),
-          pillSheetDatastoreProvider.overrideWithValue(pillSheetDatastore),
           pillSheetModifiedHistoryDatastoreProvider.overrideWithValue(pillSheetModifiedHistoryDatastore),
           pillSheetGroupDatastoreProvider.overrideWithValue(pillSheetGroupDatastore),
         ],
@@ -434,7 +433,6 @@ void main() {
         overrides: [
           batchFactoryProvider.overrideWithValue(batchFactory),
           settingDatastoreProvider.overrideWithValue(settingDatastore),
-          pillSheetDatastoreProvider.overrideWithValue(pillSheetDatastore),
           pillSheetModifiedHistoryDatastoreProvider.overrideWithValue(pillSheetModifiedHistoryDatastore),
           pillSheetGroupDatastoreProvider.overrideWithValue(pillSheetGroupDatastore),
         ],
@@ -526,7 +524,6 @@ void main() {
         overrides: [
           batchFactoryProvider.overrideWithValue(batchFactory),
           settingDatastoreProvider.overrideWithValue(settingDatastore),
-          pillSheetDatastoreProvider.overrideWithValue(pillSheetDatastore),
           pillSheetModifiedHistoryDatastoreProvider.overrideWithValue(pillSheetModifiedHistoryDatastore),
           pillSheetGroupDatastoreProvider.overrideWithValue(pillSheetGroupDatastore),
         ],
@@ -609,7 +606,6 @@ void main() {
           overrides: [
             batchFactoryProvider.overrideWithValue(batchFactory),
             settingDatastoreProvider.overrideWithValue(settingDatastore),
-            pillSheetDatastoreProvider.overrideWithValue(pillSheetDatastore),
             pillSheetModifiedHistoryDatastoreProvider.overrideWithValue(pillSheetModifiedHistoryDatastore),
             pillSheetGroupDatastoreProvider.overrideWithValue(pillSheetGroupDatastore),
           ],
@@ -688,7 +684,6 @@ void main() {
           overrides: [
             batchFactoryProvider.overrideWithValue(batchFactory),
             settingDatastoreProvider.overrideWithValue(settingDatastore),
-            pillSheetDatastoreProvider.overrideWithValue(pillSheetDatastore),
             pillSheetModifiedHistoryDatastoreProvider.overrideWithValue(pillSheetModifiedHistoryDatastore),
             pillSheetGroupDatastoreProvider.overrideWithValue(pillSheetGroupDatastore),
           ],
@@ -778,7 +773,6 @@ void main() {
           overrides: [
             batchFactoryProvider.overrideWithValue(batchFactory),
             settingDatastoreProvider.overrideWithValue(settingDatastore),
-            pillSheetDatastoreProvider.overrideWithValue(pillSheetDatastore),
             pillSheetModifiedHistoryDatastoreProvider.overrideWithValue(pillSheetModifiedHistoryDatastore),
             pillSheetGroupDatastoreProvider.overrideWithValue(pillSheetGroupDatastore),
           ],
@@ -866,7 +860,6 @@ void main() {
           overrides: [
             batchFactoryProvider.overrideWithValue(batchFactory),
             settingDatastoreProvider.overrideWithValue(settingDatastore),
-            pillSheetDatastoreProvider.overrideWithValue(pillSheetDatastore),
             pillSheetModifiedHistoryDatastoreProvider.overrideWithValue(pillSheetModifiedHistoryDatastore),
             pillSheetGroupDatastoreProvider.overrideWithValue(pillSheetGroupDatastore),
           ],
@@ -960,7 +953,6 @@ void main() {
           overrides: [
             batchFactoryProvider.overrideWithValue(batchFactory),
             settingDatastoreProvider.overrideWithValue(settingDatastore),
-            pillSheetDatastoreProvider.overrideWithValue(pillSheetDatastore),
             pillSheetModifiedHistoryDatastoreProvider.overrideWithValue(pillSheetModifiedHistoryDatastore),
             pillSheetGroupDatastoreProvider.overrideWithValue(pillSheetGroupDatastore),
           ],
@@ -1047,7 +1039,6 @@ void main() {
           overrides: [
             batchFactoryProvider.overrideWithValue(batchFactory),
             settingDatastoreProvider.overrideWithValue(settingDatastore),
-            pillSheetDatastoreProvider.overrideWithValue(pillSheetDatastore),
             pillSheetModifiedHistoryDatastoreProvider.overrideWithValue(pillSheetModifiedHistoryDatastore),
             pillSheetGroupDatastoreProvider.overrideWithValue(pillSheetGroupDatastore),
           ],
@@ -1138,7 +1129,6 @@ void main() {
           overrides: [
             batchFactoryProvider.overrideWithValue(batchFactory),
             settingDatastoreProvider.overrideWithValue(settingDatastore),
-            pillSheetDatastoreProvider.overrideWithValue(pillSheetDatastore),
             pillSheetModifiedHistoryDatastoreProvider.overrideWithValue(pillSheetModifiedHistoryDatastore),
             pillSheetGroupDatastoreProvider.overrideWithValue(pillSheetGroupDatastore),
           ],

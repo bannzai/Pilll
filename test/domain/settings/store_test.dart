@@ -63,33 +63,24 @@ void main() {
         timezoneDatabaseName: null,
       );
 
-      when(settingDatastore.fetch())
-          .thenAnswer((realInvocation) => Future.value(setting));
-      when(settingDatastore.stream())
-          .thenAnswer((realInvocation) => Stream.value(setting));
+      when(settingDatastore.fetch()).thenAnswer((realInvocation) => Future.value(setting));
+      when(settingDatastore.stream()).thenAnswer((realInvocation) => Stream.value(setting));
 
       final batchFactory = MockBatchFactory();
       final pillSheet = PillSheet.create(PillSheetType.pillsheet_21);
-      final pillSheetDatastore = MockPillSheetDatastore();
-      final pillSheetGroup = PillSheetGroup(
-          pillSheetIDs: ["1"], pillSheets: [pillSheet], createdAt: now());
+      final pillSheetGroup = PillSheetGroup(pillSheetIDs: ["1"], pillSheets: [pillSheet], createdAt: now());
 
       final userDatastore = MockUserDatastore();
-      when(userDatastore.fetch())
-          .thenAnswer((realInvocation) => Future.value(_FakeUser()));
-      when(userDatastore.stream())
-          .thenAnswer((realInvocation) => const Stream.empty());
+      when(userDatastore.fetch()).thenAnswer((realInvocation) => Future.value(_FakeUser()));
+      when(userDatastore.stream()).thenAnswer((realInvocation) => const Stream.empty());
       final pillSheetModifiedService = MockPillSheetModifiedHistoryDatastore();
       final pillSheetGroupDatastore = MockPillSheetGroupDatastore();
-      when(pillSheetGroupDatastore.fetchLatest())
-          .thenAnswer((realInvocation) => Future.value(pillSheetGroup));
-      when(pillSheetGroupDatastore.latestPillSheetGroupStream())
-          .thenAnswer((realInvocation) => const Stream.empty());
+      when(pillSheetGroupDatastore.fetchLatest()).thenAnswer((realInvocation) => Future.value(pillSheetGroup));
+      when(pillSheetGroupDatastore.latestPillSheetGroupStream()).thenAnswer((realInvocation) => const Stream.empty());
 
       final asyncAction = SettingPageAsyncAction(
         batchFactory,
         settingDatastore,
-        pillSheetDatastore,
         pillSheetModifiedService,
         pillSheetGroupDatastore,
       );
@@ -111,51 +102,33 @@ void main() {
         const ReminderTime(hour: 3, minute: 0),
       ])));
     });
-    test(
-        "return exception when setting has reminderTimes count is ${ReminderTime.maximumCount}",
-        () {
+    test("return exception when setting has reminderTimes count is ${ReminderTime.maximumCount}", () {
       final settingDatastore = MockSettingDatastore();
-      final setting = _FakeSetting([
-        const ReminderTime(hour: 1, minute: 0),
-        const ReminderTime(hour: 2, minute: 0),
-        const ReminderTime(hour: 3, minute: 0)
-      ]);
-      when(settingDatastore.fetch())
-          .thenAnswer((realInvocation) => Future.value(setting));
-      when(settingDatastore.stream())
-          .thenAnswer((realInvocation) => Stream.value(setting));
+      final setting =
+          _FakeSetting([const ReminderTime(hour: 1, minute: 0), const ReminderTime(hour: 2, minute: 0), const ReminderTime(hour: 3, minute: 0)]);
+      when(settingDatastore.fetch()).thenAnswer((realInvocation) => Future.value(setting));
+      when(settingDatastore.stream()).thenAnswer((realInvocation) => Stream.value(setting));
 
       final batchFactory = MockBatchFactory();
       final pillSheet = PillSheet.create(PillSheetType.pillsheet_21);
-      final pillSheetGroup = PillSheetGroup(
-          pillSheetIDs: ["1"], pillSheets: [pillSheet], createdAt: now());
+      final pillSheetGroup = PillSheetGroup(pillSheetIDs: ["1"], pillSheets: [pillSheet], createdAt: now());
 
-      final pillSheetDatastore = MockPillSheetDatastore();
       final userDatastore = MockUserDatastore();
-      when(userDatastore.fetch())
-          .thenAnswer((realInvocation) => Future.value(_FakeUser()));
-      when(userDatastore.stream())
-          .thenAnswer((realInvocation) => const Stream.empty());
+      when(userDatastore.fetch()).thenAnswer((realInvocation) => Future.value(_FakeUser()));
+      when(userDatastore.stream()).thenAnswer((realInvocation) => const Stream.empty());
       final pillSheetModifiedService = MockPillSheetModifiedHistoryDatastore();
       final pillSheetGroupDatastore = MockPillSheetGroupDatastore();
-      when(pillSheetGroupDatastore.fetchLatest())
-          .thenAnswer((realInvocation) => Future.value(pillSheetGroup));
-      when(pillSheetGroupDatastore.latestPillSheetGroupStream())
-          .thenAnswer((realInvocation) => const Stream.empty());
+      when(pillSheetGroupDatastore.fetchLatest()).thenAnswer((realInvocation) => Future.value(pillSheetGroup));
+      when(pillSheetGroupDatastore.latestPillSheetGroupStream()).thenAnswer((realInvocation) => const Stream.empty());
 
       final asyncAction = SettingPageAsyncAction(
         batchFactory,
         settingDatastore,
-        pillSheetDatastore,
         pillSheetModifiedService,
         pillSheetGroupDatastore,
       );
 
-      expect(
-          () => asyncAction.addReminderTimes(
-              reminderTime: const ReminderTime(hour: 4, minute: 0),
-              setting: setting),
-          throwsException);
+      expect(() => asyncAction.addReminderTimes(reminderTime: const ReminderTime(hour: 4, minute: 0), setting: setting), throwsException);
     });
   });
   group("#deleteReminderTimes", () {
@@ -172,33 +145,24 @@ void main() {
         pillSheetTypes: [PillSheetType.pillsheet_28_4],
         timezoneDatabaseName: null,
       );
-      when(settingDatastore.fetch())
-          .thenAnswer((realInvocation) => Future.value(setting));
-      when(settingDatastore.stream())
-          .thenAnswer((realInvocation) => Stream.value(setting));
+      when(settingDatastore.fetch()).thenAnswer((realInvocation) => Future.value(setting));
+      when(settingDatastore.stream()).thenAnswer((realInvocation) => Stream.value(setting));
 
       final pillSheet = PillSheet.create(PillSheetType.pillsheet_21);
-      final pillSheetGroup = PillSheetGroup(
-          pillSheetIDs: ["1"], pillSheets: [pillSheet], createdAt: now());
+      final pillSheetGroup = PillSheetGroup(pillSheetIDs: ["1"], pillSheets: [pillSheet], createdAt: now());
 
       final batchFactory = MockBatchFactory();
-      final pillSheetDatastore = MockPillSheetDatastore();
       final userDatastore = MockUserDatastore();
-      when(userDatastore.fetch())
-          .thenAnswer((realInvocation) => Future.value(_FakeUser()));
-      when(userDatastore.stream())
-          .thenAnswer((realInvocation) => const Stream.empty());
+      when(userDatastore.fetch()).thenAnswer((realInvocation) => Future.value(_FakeUser()));
+      when(userDatastore.stream()).thenAnswer((realInvocation) => const Stream.empty());
       final pillSheetModifiedService = MockPillSheetModifiedHistoryDatastore();
       final pillSheetGroupDatastore = MockPillSheetGroupDatastore();
-      when(pillSheetGroupDatastore.fetchLatest())
-          .thenAnswer((realInvocation) => Future.value(pillSheetGroup));
-      when(pillSheetGroupDatastore.latestPillSheetGroupStream())
-          .thenAnswer((realInvocation) => const Stream.empty());
+      when(pillSheetGroupDatastore.fetchLatest()).thenAnswer((realInvocation) => Future.value(pillSheetGroup));
+      when(pillSheetGroupDatastore.latestPillSheetGroupStream()).thenAnswer((realInvocation) => const Stream.empty());
 
       final asyncAction = SettingPageAsyncAction(
         batchFactory,
         settingDatastore,
-        pillSheetDatastore,
         pillSheetModifiedService,
         pillSheetGroupDatastore,
       );
@@ -213,47 +177,34 @@ void main() {
         const ReminderTime(hour: 1, minute: 0),
       ])));
     });
-    test(
-        "return exception when setting has remindertimes count is ${ReminderTime.minimumCount}",
-        () {
+    test("return exception when setting has remindertimes count is ${ReminderTime.minimumCount}", () {
       final settingDatastore = MockSettingDatastore();
       final setting = _FakeSetting([
         const ReminderTime(hour: 1, minute: 0),
       ]);
-      when(settingDatastore.fetch())
-          .thenAnswer((realInvocation) => Future.value(setting));
-      when(settingDatastore.stream())
-          .thenAnswer((realInvocation) => Stream.value(setting));
+      when(settingDatastore.fetch()).thenAnswer((realInvocation) => Future.value(setting));
+      when(settingDatastore.stream()).thenAnswer((realInvocation) => Stream.value(setting));
 
       final batchFactory = MockBatchFactory();
       final pillSheet = PillSheet.create(PillSheetType.pillsheet_21);
-      final pillSheetGroup = PillSheetGroup(
-          pillSheetIDs: ["1"], pillSheets: [pillSheet], createdAt: now());
-
-      final pillSheetDatastore = MockPillSheetDatastore();
+      final pillSheetGroup = PillSheetGroup(pillSheetIDs: ["1"], pillSheets: [pillSheet], createdAt: now());
 
       final userDatastore = MockUserDatastore();
-      when(userDatastore.fetch())
-          .thenAnswer((realInvocation) => Future.value(_FakeUser()));
-      when(userDatastore.stream())
-          .thenAnswer((realInvocation) => const Stream.empty());
+      when(userDatastore.fetch()).thenAnswer((realInvocation) => Future.value(_FakeUser()));
+      when(userDatastore.stream()).thenAnswer((realInvocation) => const Stream.empty());
       final pillSheetModifiedService = MockPillSheetModifiedHistoryDatastore();
       final pillSheetGroupDatastore = MockPillSheetGroupDatastore();
-      when(pillSheetGroupDatastore.fetchLatest())
-          .thenAnswer((realInvocation) => Future.value(pillSheetGroup));
-      when(pillSheetGroupDatastore.latestPillSheetGroupStream())
-          .thenAnswer((realInvocation) => const Stream.empty());
+      when(pillSheetGroupDatastore.fetchLatest()).thenAnswer((realInvocation) => Future.value(pillSheetGroup));
+      when(pillSheetGroupDatastore.latestPillSheetGroupStream()).thenAnswer((realInvocation) => const Stream.empty());
 
       final asyncAction = SettingPageAsyncAction(
         batchFactory,
         settingDatastore,
-        pillSheetDatastore,
         pillSheetModifiedService,
         pillSheetGroupDatastore,
       );
 
-      expect(() => asyncAction.deleteReminderTimes(index: 0, setting: setting),
-          throwsException);
+      expect(() => asyncAction.deleteReminderTimes(index: 0, setting: setting), throwsException);
     });
   });
 }
