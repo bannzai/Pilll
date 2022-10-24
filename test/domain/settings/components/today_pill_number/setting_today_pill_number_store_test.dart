@@ -47,7 +47,6 @@ void main() {
           const Duration(days: 1),
         ),
       );
-      when(pillSheetDatastore.update(batch, [updatedPillSheet])).thenReturn(null);
 
       final pillSheetGroup = PillSheetGroup(
         id: "group_id",
@@ -121,7 +120,6 @@ void main() {
           const Duration(days: 1),
         ),
       );
-      when(pillSheetDatastore.update(batch, [updatedPillSheet])).thenReturn(null);
 
       final pillSheetGroup = PillSheetGroup(
         id: "group_id",
@@ -211,11 +209,6 @@ void main() {
       final updatedRight = right.copyWith(
         beginingDate: DateTime.parse("2022-05-30"),
       );
-      when(pillSheetDatastore.update(batch, [
-        updatedLeft,
-        updatedMiddle,
-        updatedRight,
-      ])).thenReturn(null);
 
       final pillSheetGroup = PillSheetGroup(
         id: "group_id",
@@ -311,11 +304,6 @@ void main() {
       final updatedRight = right.copyWith(
         beginingDate: DateTime.parse("2022-05-30"),
       );
-      when(pillSheetDatastore.update(batch, [
-        updatedLeft,
-        updatedMiddle,
-        updatedRight,
-      ])).thenReturn(null);
 
       final pillSheetGroup = PillSheetGroup(
         id: "group_id",
@@ -412,11 +400,6 @@ void main() {
         beginingDate: DateTime.parse("2022-05-01"),
         lastTakenDate: DateTime.parse("2022-04-30"),
       );
-      when(pillSheetDatastore.update(batch, [
-        updatedLeft,
-        updatedMiddle,
-        updatedRight,
-      ])).thenReturn(null);
 
       final pillSheetGroup = PillSheetGroup(
         id: "group_id",

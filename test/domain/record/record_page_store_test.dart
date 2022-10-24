@@ -44,9 +44,6 @@ void main() {
         groupIndex: 0,
         lastTakenDate: null,
       );
-      when(pillSheetDatastore.register(batch, [pillSheet])).thenReturn([
-        pillSheet.copyWith(id: "sheet_id"),
-      ]);
 
       final pillSheetGroup = PillSheetGroup(
         pillSheetIDs: ["sheet_id"],
@@ -125,8 +122,6 @@ void main() {
         lastTakenDate: null,
         groupIndex: 1,
       );
-      when(pillSheetDatastore.register(batch, [pillSheet, pillSheet2]))
-          .thenReturn([pillSheet.copyWith(id: "sheet_id"), pillSheet2.copyWith(id: "sheet_id2")]);
 
       final pillSheetGroup = PillSheetGroup(
         pillSheetIDs: ["sheet_id", "sheet_id2"],
@@ -199,7 +194,6 @@ void main() {
         groupIndex: 0,
         lastTakenDate: null,
       );
-      when(pillSheetDatastore.update(batch, [pillSheet.copyWith(lastTakenDate: _today)])).thenReturn(null);
 
       final pillSheetGroup = PillSheetGroup(
         id: "group_id",
@@ -283,10 +277,6 @@ void main() {
         groupIndex: 1,
         lastTakenDate: null,
       );
-      when(pillSheetDatastore.update(batch, [
-        pillSheet.copyWith(lastTakenDate: _today),
-        pillSheet2,
-      ])).thenReturn(null);
 
       final pillSheetGroup = PillSheetGroup(
         id: "group_id",
@@ -373,10 +363,6 @@ void main() {
         groupIndex: 1,
         lastTakenDate: null,
       );
-      when(pillSheetDatastore.update(batch, [
-        pillSheet,
-        pillSheet2.copyWith(lastTakenDate: _today),
-      ])).thenReturn(null);
 
       final pillSheetGroup = PillSheetGroup(
         id: "group_id",
@@ -463,9 +449,6 @@ void main() {
         groupIndex: 1,
         lastTakenDate: null,
       );
-      when(pillSheetDatastore
-              .update(batch, [pillSheet.copyWith(lastTakenDate: DateTime.parse("2020-09-18 23:59:59")), pillSheet2.copyWith(lastTakenDate: _today)]))
-          .thenReturn(null);
 
       final pillSheetGroup = PillSheetGroup(
         id: "group_id",
@@ -551,7 +534,6 @@ void main() {
           groupIndex: 0,
           lastTakenDate: today(),
         );
-        when(pillSheetDatastore.update(batch, [pillSheet.copyWith(lastTakenDate: yesterday.subtract(const Duration(days: 1)))])).thenReturn(null);
 
         final pillSheetGroup = PillSheetGroup(
           id: "group_id",
@@ -628,7 +610,6 @@ void main() {
           groupIndex: 0,
           lastTakenDate: today(),
         );
-        when(pillSheetDatastore.update(batch, [pillSheet.copyWith(lastTakenDate: yesterday)])).thenReturn(null);
 
         final pillSheetGroup = PillSheetGroup(
           id: "group_id",
@@ -712,10 +693,6 @@ void main() {
             ),
           ],
         );
-        when(pillSheetDatastore.update(
-          batch,
-          [pillSheet.copyWith(lastTakenDate: beginDate.subtract(const Duration(days: 1)), restDurations: [])],
-        )).thenReturn(null);
 
         final pillSheetGroup = PillSheetGroup(
           id: "group_id",
@@ -801,10 +778,6 @@ void main() {
             ),
           ],
         );
-        when(pillSheetDatastore.update(
-          batch,
-          [pillSheet.copyWith(lastTakenDate: yesterday)],
-        )).thenReturn(null);
 
         final pillSheetGroup = PillSheetGroup(
           id: "group_id",
@@ -891,11 +864,6 @@ void main() {
           groupIndex: 1,
         );
 
-        when(pillSheetDatastore.update(batch, [
-          pillSheet,
-          pillSheet2.copyWith(lastTakenDate: yesterday),
-        ])).thenReturn(null);
-
         final pillSheetGroup = PillSheetGroup(
           id: "group_id",
           pillSheetIDs: ["1", "2"],
@@ -981,11 +949,6 @@ void main() {
           groupIndex: 1,
         );
 
-        when(pillSheetDatastore.update(batch, [
-          pillSheet.copyWith(lastTakenDate: _today.subtract(const Duration(days: 4))),
-          pillSheet2.copyWith(lastTakenDate: pillSheet2.beginingDate.subtract(const Duration(days: 1))),
-        ])).thenReturn(null);
-
         final pillSheetGroup = PillSheetGroup(
           id: "group_id",
           pillSheetIDs: ["1", "2"],
@@ -1067,11 +1030,6 @@ void main() {
             RestDuration(beginDate: yesterday, createdDate: yesterday, endDate: _today),
           ],
         );
-
-        when(pillSheetDatastore.update(batch, [
-          pillSheet.copyWith(lastTakenDate: _today.subtract(const Duration(days: 4))),
-          pillSheet2.copyWith(lastTakenDate: pillSheet2.beginingDate.subtract(const Duration(days: 1)), restDurations: []),
-        ])).thenReturn(null);
 
         final pillSheetGroup = PillSheetGroup(
           id: "group_id",
