@@ -22,7 +22,6 @@ class RecordPageAsyncAction {
 
   RecordPageAsyncAction(
     this._batchFactory,
-    this._pillSheetDatastore,
     this._settingDatastore,
     this._pillSheetModifiedHistoryDatastore,
     this._pillSheetGroupDatastore,
@@ -38,7 +37,6 @@ class RecordPageAsyncAction {
     }
     final takePill = TakePill(
       batchFactory: _batchFactory,
-      pillSheetDatastore: _pillSheetDatastore,
       pillSheetModifiedHistoryDatastore: _pillSheetModifiedHistoryDatastore,
       pillSheetGroupDatastore: _pillSheetGroupDatastore,
     );
