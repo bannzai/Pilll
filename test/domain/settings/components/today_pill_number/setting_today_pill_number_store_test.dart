@@ -47,7 +47,6 @@ void main() {
           const Duration(days: 1),
         ),
       );
-      final pillSheetDatastore = MockPillSheetDatastore();
       when(pillSheetDatastore.update(batch, [updatedPillSheet])).thenReturn(null);
 
       final pillSheetGroup = PillSheetGroup(
@@ -122,7 +121,6 @@ void main() {
           const Duration(days: 1),
         ),
       );
-      final pillSheetDatastore = MockPillSheetDatastore();
       when(pillSheetDatastore.update(batch, [updatedPillSheet])).thenReturn(null);
 
       final pillSheetGroup = PillSheetGroup(
@@ -213,7 +211,6 @@ void main() {
       final updatedRight = right.copyWith(
         beginingDate: DateTime.parse("2022-05-30"),
       );
-      final pillSheetDatastore = MockPillSheetDatastore();
       when(pillSheetDatastore.update(batch, [
         updatedLeft,
         updatedMiddle,
@@ -314,7 +311,6 @@ void main() {
       final updatedRight = right.copyWith(
         beginingDate: DateTime.parse("2022-05-30"),
       );
-      final pillSheetDatastore = MockPillSheetDatastore();
       when(pillSheetDatastore.update(batch, [
         updatedLeft,
         updatedMiddle,
@@ -416,7 +412,6 @@ void main() {
         beginingDate: DateTime.parse("2022-05-01"),
         lastTakenDate: DateTime.parse("2022-04-30"),
       );
-      final pillSheetDatastore = MockPillSheetDatastore();
       when(pillSheetDatastore.update(batch, [
         updatedLeft,
         updatedMiddle,
@@ -526,8 +521,6 @@ void main() {
       final updatedRight = right.copyWith(
         beginingDate: DateTime.parse("2022-05-31"),
       );
-      final pillSheetDatastore = MockPillSheetDatastore();
-      when(pillSheetDatastore.update(batch, [
         updatedLeft,
         updatedMiddle,
         updatedRight,

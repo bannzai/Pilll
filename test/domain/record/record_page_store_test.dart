@@ -44,7 +44,6 @@ void main() {
         groupIndex: 0,
         lastTakenDate: null,
       );
-      final pillSheetDatastore = MockPillSheetDatastore();
       when(pillSheetDatastore.register(batch, [pillSheet])).thenReturn([
         pillSheet.copyWith(id: "sheet_id"),
       ]);
@@ -126,7 +125,6 @@ void main() {
         lastTakenDate: null,
         groupIndex: 1,
       );
-      final pillSheetDatastore = MockPillSheetDatastore();
       when(pillSheetDatastore.register(batch, [pillSheet, pillSheet2]))
           .thenReturn([pillSheet.copyWith(id: "sheet_id"), pillSheet2.copyWith(id: "sheet_id2")]);
 
@@ -201,7 +199,6 @@ void main() {
         groupIndex: 0,
         lastTakenDate: null,
       );
-      final pillSheetDatastore = MockPillSheetDatastore();
       when(pillSheetDatastore.update(batch, [pillSheet.copyWith(lastTakenDate: _today)])).thenReturn(null);
 
       final pillSheetGroup = PillSheetGroup(
@@ -286,7 +283,6 @@ void main() {
         groupIndex: 1,
         lastTakenDate: null,
       );
-      final pillSheetDatastore = MockPillSheetDatastore();
       when(pillSheetDatastore.update(batch, [
         pillSheet.copyWith(lastTakenDate: _today),
         pillSheet2,
@@ -377,7 +373,6 @@ void main() {
         groupIndex: 1,
         lastTakenDate: null,
       );
-      final pillSheetDatastore = MockPillSheetDatastore();
       when(pillSheetDatastore.update(batch, [
         pillSheet,
         pillSheet2.copyWith(lastTakenDate: _today),
@@ -468,7 +463,6 @@ void main() {
         groupIndex: 1,
         lastTakenDate: null,
       );
-      final pillSheetDatastore = MockPillSheetDatastore();
       when(pillSheetDatastore
               .update(batch, [pillSheet.copyWith(lastTakenDate: DateTime.parse("2020-09-18 23:59:59")), pillSheet2.copyWith(lastTakenDate: _today)]))
           .thenReturn(null);
@@ -557,7 +551,6 @@ void main() {
           groupIndex: 0,
           lastTakenDate: today(),
         );
-        final pillSheetDatastore = MockPillSheetDatastore();
         when(pillSheetDatastore.update(batch, [pillSheet.copyWith(lastTakenDate: yesterday.subtract(const Duration(days: 1)))])).thenReturn(null);
 
         final pillSheetGroup = PillSheetGroup(
@@ -635,7 +628,6 @@ void main() {
           groupIndex: 0,
           lastTakenDate: today(),
         );
-        final pillSheetDatastore = MockPillSheetDatastore();
         when(pillSheetDatastore.update(batch, [pillSheet.copyWith(lastTakenDate: yesterday)])).thenReturn(null);
 
         final pillSheetGroup = PillSheetGroup(
@@ -720,7 +712,6 @@ void main() {
             ),
           ],
         );
-        final pillSheetDatastore = MockPillSheetDatastore();
         when(pillSheetDatastore.update(
           batch,
           [pillSheet.copyWith(lastTakenDate: beginDate.subtract(const Duration(days: 1)), restDurations: [])],
@@ -810,7 +801,6 @@ void main() {
             ),
           ],
         );
-        final pillSheetDatastore = MockPillSheetDatastore();
         when(pillSheetDatastore.update(
           batch,
           [pillSheet.copyWith(lastTakenDate: yesterday)],
@@ -901,7 +891,6 @@ void main() {
           groupIndex: 1,
         );
 
-        final pillSheetDatastore = MockPillSheetDatastore();
         when(pillSheetDatastore.update(batch, [
           pillSheet,
           pillSheet2.copyWith(lastTakenDate: yesterday),
@@ -992,7 +981,6 @@ void main() {
           groupIndex: 1,
         );
 
-        final pillSheetDatastore = MockPillSheetDatastore();
         when(pillSheetDatastore.update(batch, [
           pillSheet.copyWith(lastTakenDate: _today.subtract(const Duration(days: 4))),
           pillSheet2.copyWith(lastTakenDate: pillSheet2.beginingDate.subtract(const Duration(days: 1))),
@@ -1080,7 +1068,6 @@ void main() {
           ],
         );
 
-        final pillSheetDatastore = MockPillSheetDatastore();
         when(pillSheetDatastore.update(batch, [
           pillSheet.copyWith(lastTakenDate: _today.subtract(const Duration(days: 4))),
           pillSheet2.copyWith(lastTakenDate: pillSheet2.beginingDate.subtract(const Duration(days: 1)), restDurations: []),

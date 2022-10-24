@@ -68,7 +68,6 @@ void main() {
         final batch = MockWriteBatch();
         when(batchFactory.batch()).thenReturn(batch);
 
-        final pillSheetDatastore = MockPillSheetDatastore();
         final updatedActivePillSheet = activedPillSheet.copyWith(lastTakenDate: takenDate);
         when(pillSheetDatastore.update(batch, [updatedActivePillSheet])).thenReturn(null);
 
@@ -106,7 +105,6 @@ void main() {
         activedPillSheet = activedPillSheet.copyWith(lastTakenDate: takenDate);
 
         final batchFactory = MockBatchFactory();
-        final pillSheetDatastore = MockPillSheetDatastore();
         final pillSheetModifiedHistoryDatastore = MockPillSheetModifiedHistoryDatastore();
         final pillSheetGroupDatastore = MockPillSheetGroupDatastore();
 
@@ -141,7 +139,6 @@ void main() {
         final batch = MockWriteBatch();
         when(batchFactory.batch()).thenReturn(batch);
 
-        final pillSheetDatastore = MockPillSheetDatastore();
         final updatedActivePillSheet = activedPillSheet.copyWith(lastTakenDate: takenDate);
         when(pillSheetDatastore.update(batch, [previousPillSheet, updatedActivePillSheet, nextPillSheet])).thenReturn(null);
 
@@ -184,7 +181,6 @@ void main() {
         );
 
         final batchFactory = MockBatchFactory();
-        final pillSheetDatastore = MockPillSheetDatastore();
         final pillSheetModifiedHistoryDatastore = MockPillSheetModifiedHistoryDatastore();
         final pillSheetGroupDatastore = MockPillSheetGroupDatastore();
 
@@ -217,7 +213,6 @@ void main() {
         final batch = MockWriteBatch();
         when(batchFactory.batch()).thenReturn(batch);
 
-        final pillSheetDatastore = MockPillSheetDatastore();
         final updatedActivePillSheet = activedPillSheet.copyWith(lastTakenDate: takenDate);
         when(pillSheetDatastore.update(batch, [previousPillSheet, updatedActivePillSheet, nextPillSheet])).thenReturn(null);
 
@@ -262,7 +257,6 @@ void main() {
         final batch = MockWriteBatch();
         when(batchFactory.batch()).thenReturn(batch);
 
-        final pillSheetDatastore = MockPillSheetDatastore();
         final updatedActivePillSheet = activedPillSheet.copyWith(lastTakenDate: activedPillSheet.estimatedEndTakenDate);
         when(pillSheetDatastore.update(batch, [previousPillSheet, updatedActivePillSheet, nextPillSheet])).thenReturn(null);
 
@@ -311,7 +305,6 @@ void main() {
         final batch = MockWriteBatch();
         when(batchFactory.batch()).thenReturn(batch);
 
-        final pillSheetDatastore = MockPillSheetDatastore();
         final updatedActivePillSheet = activedPillSheet.copyWith(lastTakenDate: activedPillSheet.estimatedEndTakenDate);
         when(pillSheetDatastore.update(batch, [previousPillSheet, updatedActivePillSheet, nextPillSheet])).thenReturn(null);
 
@@ -356,7 +349,6 @@ void main() {
         final batch = MockWriteBatch();
         when(batchFactory.batch()).thenReturn(batch);
 
-        final pillSheetDatastore = MockPillSheetDatastore();
         final updatedPreviousPillSheet = previousPillSheet.copyWith(lastTakenDate: previousPillSheet.estimatedEndTakenDate);
         final updatedActivePillSheet = activedPillSheet.copyWith(lastTakenDate: takenDate);
         when(pillSheetDatastore.update(batch, [updatedPreviousPillSheet, updatedActivePillSheet, nextPillSheet])).thenReturn(null);
@@ -402,7 +394,6 @@ void main() {
         final batch = MockWriteBatch();
         when(batchFactory.batch()).thenReturn(batch);
 
-        final pillSheetDatastore = MockPillSheetDatastore();
         final updatedPreviousPillSheet = previousPillSheet.copyWith(lastTakenDate: previousPillSheet.estimatedEndTakenDate);
         when(pillSheetDatastore.update(batch, [updatedPreviousPillSheet, activedPillSheet, nextPillSheet])).thenReturn(null);
 
@@ -452,7 +443,6 @@ void main() {
         final batch = MockWriteBatch();
         when(batchFactory.batch()).thenReturn(batch);
 
-        final pillSheetDatastore = MockPillSheetDatastore();
         final updatedPreviousPillSheet = previousPillSheet.copyWith(lastTakenDate: takenDate);
         when(pillSheetDatastore.update(batch, [updatedPreviousPillSheet, activedPillSheet, nextPillSheet])).thenReturn(null);
 
@@ -514,7 +504,6 @@ void main() {
         final batch = MockWriteBatch();
         when(batchFactory.batch()).thenReturn(batch);
 
-        final pillSheetDatastore = MockPillSheetDatastore();
         final updatedActivePillSheet = activedPillSheet.copyWith(lastTakenDate: takenDate);
         when(pillSheetDatastore.update(batch, [previousPillSheet, updatedActivePillSheet, nextPillSheet])).thenReturn(null);
 
@@ -595,7 +584,6 @@ void main() {
         final batch = MockWriteBatch();
         when(batchFactory.batch()).thenReturn(batch);
 
-        final pillSheetDatastore = MockPillSheetDatastore();
         final updatedActivePillSheet = activedPillSheet.copyWith(lastTakenDate: takenDate);
         when(pillSheetDatastore.update(batch, [previousPillSheet, updatedActivePillSheet, nextPillSheet])).thenReturn(null);
 
