@@ -494,9 +494,7 @@ class _$PillSheetTearOff {
   const _$PillSheetTearOff();
 
   _PillSheet call(
-      {@JsonKey(includeIfNull: false)
-          String? id,
-      @JsonKey()
+      {@JsonKey()
           required PillSheetTypeInfo typeInfo,
       @JsonKey(fromJson: NonNullTimestampConverter.timestampToDateTime, toJson: NonNullTimestampConverter.dateTimeToTimestamp)
           required DateTime beginingDate,
@@ -509,7 +507,6 @@ class _$PillSheetTearOff {
       int groupIndex = 0,
       List<RestDuration> restDurations = const []}) {
     return _PillSheet(
-      id: id,
       typeInfo: typeInfo,
       beginingDate: beginingDate,
       lastTakenDate: lastTakenDate,
@@ -530,8 +527,6 @@ const $PillSheet = _$PillSheetTearOff();
 
 /// @nodoc
 mixin _$PillSheet {
-  @JsonKey(includeIfNull: false)
-  String? get id => throw _privateConstructorUsedError;
   @JsonKey()
   PillSheetTypeInfo get typeInfo => throw _privateConstructorUsedError;
   @JsonKey(
@@ -564,9 +559,7 @@ abstract class $PillSheetCopyWith<$Res> {
   factory $PillSheetCopyWith(PillSheet value, $Res Function(PillSheet) then) =
       _$PillSheetCopyWithImpl<$Res>;
   $Res call(
-      {@JsonKey(includeIfNull: false)
-          String? id,
-      @JsonKey()
+      {@JsonKey()
           PillSheetTypeInfo typeInfo,
       @JsonKey(fromJson: NonNullTimestampConverter.timestampToDateTime, toJson: NonNullTimestampConverter.dateTimeToTimestamp)
           DateTime beginingDate,
@@ -592,7 +585,6 @@ class _$PillSheetCopyWithImpl<$Res> implements $PillSheetCopyWith<$Res> {
 
   @override
   $Res call({
-    Object? id = freezed,
     Object? typeInfo = freezed,
     Object? beginingDate = freezed,
     Object? lastTakenDate = freezed,
@@ -602,10 +594,6 @@ class _$PillSheetCopyWithImpl<$Res> implements $PillSheetCopyWith<$Res> {
     Object? restDurations = freezed,
   }) {
     return _then(_value.copyWith(
-      id: id == freezed
-          ? _value.id
-          : id // ignore: cast_nullable_to_non_nullable
-              as String?,
       typeInfo: typeInfo == freezed
           ? _value.typeInfo
           : typeInfo // ignore: cast_nullable_to_non_nullable
@@ -652,9 +640,7 @@ abstract class _$PillSheetCopyWith<$Res> implements $PillSheetCopyWith<$Res> {
       __$PillSheetCopyWithImpl<$Res>;
   @override
   $Res call(
-      {@JsonKey(includeIfNull: false)
-          String? id,
-      @JsonKey()
+      {@JsonKey()
           PillSheetTypeInfo typeInfo,
       @JsonKey(fromJson: NonNullTimestampConverter.timestampToDateTime, toJson: NonNullTimestampConverter.dateTimeToTimestamp)
           DateTime beginingDate,
@@ -682,7 +668,6 @@ class __$PillSheetCopyWithImpl<$Res> extends _$PillSheetCopyWithImpl<$Res>
 
   @override
   $Res call({
-    Object? id = freezed,
     Object? typeInfo = freezed,
     Object? beginingDate = freezed,
     Object? lastTakenDate = freezed,
@@ -692,10 +677,6 @@ class __$PillSheetCopyWithImpl<$Res> extends _$PillSheetCopyWithImpl<$Res>
     Object? restDurations = freezed,
   }) {
     return _then(_PillSheet(
-      id: id == freezed
-          ? _value.id
-          : id // ignore: cast_nullable_to_non_nullable
-              as String?,
       typeInfo: typeInfo == freezed
           ? _value.typeInfo
           : typeInfo // ignore: cast_nullable_to_non_nullable
@@ -733,9 +714,7 @@ class __$PillSheetCopyWithImpl<$Res> extends _$PillSheetCopyWithImpl<$Res>
 @JsonSerializable(explicitToJson: true)
 class _$_PillSheet extends _PillSheet {
   const _$_PillSheet(
-      {@JsonKey(includeIfNull: false)
-          this.id,
-      @JsonKey()
+      {@JsonKey()
           required this.typeInfo,
       @JsonKey(fromJson: NonNullTimestampConverter.timestampToDateTime, toJson: NonNullTimestampConverter.dateTimeToTimestamp)
           required this.beginingDate,
@@ -752,9 +731,6 @@ class _$_PillSheet extends _PillSheet {
   factory _$_PillSheet.fromJson(Map<String, dynamic> json) =>
       _$$_PillSheetFromJson(json);
 
-  @override
-  @JsonKey(includeIfNull: false)
-  final String? id;
   @override
   @JsonKey()
   final PillSheetTypeInfo typeInfo;
@@ -787,7 +763,7 @@ class _$_PillSheet extends _PillSheet {
 
   @override
   String toString() {
-    return 'PillSheet(id: $id, typeInfo: $typeInfo, beginingDate: $beginingDate, lastTakenDate: $lastTakenDate, createdAt: $createdAt, deletedAt: $deletedAt, groupIndex: $groupIndex, restDurations: $restDurations)';
+    return 'PillSheet(typeInfo: $typeInfo, beginingDate: $beginingDate, lastTakenDate: $lastTakenDate, createdAt: $createdAt, deletedAt: $deletedAt, groupIndex: $groupIndex, restDurations: $restDurations)';
   }
 
   @override
@@ -795,7 +771,6 @@ class _$_PillSheet extends _PillSheet {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _PillSheet &&
-            const DeepCollectionEquality().equals(other.id, id) &&
             const DeepCollectionEquality().equals(other.typeInfo, typeInfo) &&
             const DeepCollectionEquality()
                 .equals(other.beginingDate, beginingDate) &&
@@ -812,7 +787,6 @@ class _$_PillSheet extends _PillSheet {
   @override
   int get hashCode => Object.hash(
       runtimeType,
-      const DeepCollectionEquality().hash(id),
       const DeepCollectionEquality().hash(typeInfo),
       const DeepCollectionEquality().hash(beginingDate),
       const DeepCollectionEquality().hash(lastTakenDate),
@@ -834,9 +808,7 @@ class _$_PillSheet extends _PillSheet {
 
 abstract class _PillSheet extends PillSheet {
   const factory _PillSheet(
-      {@JsonKey(includeIfNull: false)
-          String? id,
-      @JsonKey()
+      {@JsonKey()
           required PillSheetTypeInfo typeInfo,
       @JsonKey(fromJson: NonNullTimestampConverter.timestampToDateTime, toJson: NonNullTimestampConverter.dateTimeToTimestamp)
           required DateTime beginingDate,
@@ -853,9 +825,6 @@ abstract class _PillSheet extends PillSheet {
   factory _PillSheet.fromJson(Map<String, dynamic> json) =
       _$_PillSheet.fromJson;
 
-  @override
-  @JsonKey(includeIfNull: false)
-  String? get id;
   @override
   @JsonKey()
   PillSheetTypeInfo get typeInfo;
