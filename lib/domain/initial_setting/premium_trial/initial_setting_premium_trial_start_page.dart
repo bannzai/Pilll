@@ -1,3 +1,5 @@
+import 'dart:io';
+
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
@@ -54,14 +56,13 @@ class IntiialSettingPremiumTrialStartPage extends HookConsumerWidget {
                         ],
                       ),
                       Padding(
-                        padding: const EdgeInsets.only(
-                            left: 24.5, right: 24.5, top: 24),
+                        padding: const EdgeInsets.only(left: 24.5, right: 24.5, top: 24),
                         child: Stack(
                           clipBehavior: Clip.none,
                           alignment: AlignmentDirectional.topEnd,
                           children: [
                             Image.asset(
-                              "ios-images/quick-record.gif",
+                              Platform.isIOS ? "images/ios-quick-record.gif" : "images/android-quick-record.gif",
                             ),
                             Positioned(
                               right: -27,
@@ -144,12 +145,10 @@ class IntiialSettingPremiumTrialStartPage extends HookConsumerWidget {
   }
 }
 
-extension IntiialSettingPremiumTrialStartPageRoute
-    on IntiialSettingPremiumTrialStartPage {
+extension IntiialSettingPremiumTrialStartPageRoute on IntiialSettingPremiumTrialStartPage {
   static Route<dynamic> route() {
     return MaterialPageRoute(
-      settings:
-          const RouteSettings(name: "IntiialSettingPremiumTrialStartPage"),
+      settings: const RouteSettings(name: "IntiialSettingPremiumTrialStartPage"),
       builder: (_) => const IntiialSettingPremiumTrialStartPage(),
     );
   }
