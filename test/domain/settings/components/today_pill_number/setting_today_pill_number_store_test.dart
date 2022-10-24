@@ -504,10 +504,6 @@ void main() {
       final updatedRight = right.copyWith(
         beginingDate: DateTime.parse("2022-05-31"),
       );
-        updatedLeft,
-        updatedMiddle,
-        updatedRight,
-      ])).thenReturn(null);
 
       final pillSheetGroup = PillSheetGroup(
         id: "group_id",

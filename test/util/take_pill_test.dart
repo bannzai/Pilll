@@ -81,7 +81,6 @@ void main() {
 
         final takePill = TakePill(
           batchFactory: batchFactory,
-          pillSheetDatastore: pillSheetDatastore,
           pillSheetModifiedHistoryDatastore: pillSheetModifiedHistoryDatastore,
           pillSheetGroupDatastore: pillSheetGroupDatastore,
         );
@@ -92,7 +91,6 @@ void main() {
           isQuickRecord: false,
         );
 
-        verify(pillSheetDatastore.update(batch, [updatedActivePillSheet])).called(1);
         verify(pillSheetModifiedHistoryDatastore.add(batch, history)).called(1);
         verify(pillSheetGroupDatastore.updateWithBatch(batch, updatedPillSheetGroup)).called(1);
 
@@ -109,7 +107,6 @@ void main() {
 
         final takePill = TakePill(
           batchFactory: batchFactory,
-          pillSheetDatastore: pillSheetDatastore,
           pillSheetModifiedHistoryDatastore: pillSheetModifiedHistoryDatastore,
           pillSheetGroupDatastore: pillSheetGroupDatastore,
         );
@@ -150,7 +147,6 @@ void main() {
 
         final takePill = TakePill(
           batchFactory: batchFactory,
-          pillSheetDatastore: pillSheetDatastore,
           pillSheetModifiedHistoryDatastore: pillSheetModifiedHistoryDatastore,
           pillSheetGroupDatastore: pillSheetGroupDatastore,
         );
@@ -161,7 +157,6 @@ void main() {
           isQuickRecord: false,
         );
 
-        verify(pillSheetDatastore.update(batch, [previousPillSheet, updatedActivePillSheet, nextPillSheet])).called(1);
         verify(pillSheetModifiedHistoryDatastore.add(batch, history)).called(1);
         verify(pillSheetGroupDatastore.updateWithBatch(batch, updatedPillSheetGroup)).called(1);
         expect(result, updatedPillSheetGroup);
@@ -183,7 +178,6 @@ void main() {
 
         final takePill = TakePill(
           batchFactory: batchFactory,
-          pillSheetDatastore: pillSheetDatastore,
           pillSheetModifiedHistoryDatastore: pillSheetModifiedHistoryDatastore,
           pillSheetGroupDatastore: pillSheetGroupDatastore,
         );
@@ -223,7 +217,6 @@ void main() {
 
         final takePill = TakePill(
           batchFactory: batchFactory,
-          pillSheetDatastore: pillSheetDatastore,
           pillSheetModifiedHistoryDatastore: pillSheetModifiedHistoryDatastore,
           pillSheetGroupDatastore: pillSheetGroupDatastore,
         );
@@ -234,7 +227,6 @@ void main() {
           isQuickRecord: false,
         );
 
-        verify(pillSheetDatastore.update(batch, [previousPillSheet, updatedActivePillSheet, nextPillSheet])).called(1);
         verify(pillSheetModifiedHistoryDatastore.add(batch, history)).called(1);
         verify(pillSheetGroupDatastore.updateWithBatch(batch, updatedPillSheetGroup)).called(1);
 
@@ -265,7 +257,6 @@ void main() {
 
         final takePill = TakePill(
           batchFactory: batchFactory,
-          pillSheetDatastore: pillSheetDatastore,
           pillSheetModifiedHistoryDatastore: pillSheetModifiedHistoryDatastore,
           pillSheetGroupDatastore: pillSheetGroupDatastore,
         );
@@ -276,7 +267,6 @@ void main() {
           isQuickRecord: false,
         );
 
-        verify(pillSheetDatastore.update(batch, [previousPillSheet, updatedActivePillSheet, nextPillSheet])).called(1);
         verify(pillSheetModifiedHistoryDatastore.add(batch, history)).called(1);
         verify(pillSheetGroupDatastore.updateWithBatch(batch, updatedPillSheetGroup)).called(1);
 
@@ -312,7 +302,6 @@ void main() {
 
         final takePill = TakePill(
           batchFactory: batchFactory,
-          pillSheetDatastore: pillSheetDatastore,
           pillSheetModifiedHistoryDatastore: pillSheetModifiedHistoryDatastore,
           pillSheetGroupDatastore: pillSheetGroupDatastore,
         );
@@ -323,7 +312,6 @@ void main() {
           isQuickRecord: false,
         );
 
-        verify(pillSheetDatastore.update(batch, [previousPillSheet, updatedActivePillSheet, nextPillSheet])).called(1);
         verify(pillSheetModifiedHistoryDatastore.add(batch, history)).called(1);
         verify(pillSheetGroupDatastore.updateWithBatch(batch, updatedPillSheetGroup)).called(1);
         expect(result, updatedPillSheetGroup);
@@ -355,7 +343,6 @@ void main() {
 
         final takePill = TakePill(
           batchFactory: batchFactory,
-          pillSheetDatastore: pillSheetDatastore,
           pillSheetModifiedHistoryDatastore: pillSheetModifiedHistoryDatastore,
           pillSheetGroupDatastore: pillSheetGroupDatastore,
         );
@@ -366,7 +353,6 @@ void main() {
           isQuickRecord: false,
         );
 
-        verify(pillSheetDatastore.update(batch, [updatedPreviousPillSheet, updatedActivePillSheet, nextPillSheet])).called(1);
         verify(pillSheetModifiedHistoryDatastore.add(batch, history)).called(1);
         verify(pillSheetGroupDatastore.updateWithBatch(batch, updatedPillSheetGroup)).called(1);
         expect(result, updatedPillSheetGroup);
@@ -398,7 +384,6 @@ void main() {
 
         final takePill = TakePill(
           batchFactory: batchFactory,
-          pillSheetDatastore: pillSheetDatastore,
           pillSheetModifiedHistoryDatastore: pillSheetModifiedHistoryDatastore,
           pillSheetGroupDatastore: pillSheetGroupDatastore,
         );
@@ -409,7 +394,6 @@ void main() {
           isQuickRecord: false,
         );
 
-        verify(pillSheetDatastore.update(batch, [updatedPreviousPillSheet, activedPillSheet, nextPillSheet])).called(1);
         verify(pillSheetModifiedHistoryDatastore.add(batch, history)).called(1);
         verify(pillSheetGroupDatastore.updateWithBatch(batch, updatedPillSheetGroup)).called(1);
         expect(result, updatedPillSheetGroup);
@@ -445,7 +429,6 @@ void main() {
 
         final takePill = TakePill(
           batchFactory: batchFactory,
-          pillSheetDatastore: pillSheetDatastore,
           pillSheetModifiedHistoryDatastore: pillSheetModifiedHistoryDatastore,
           pillSheetGroupDatastore: pillSheetGroupDatastore,
         );
@@ -456,7 +439,6 @@ void main() {
           isQuickRecord: false,
         );
 
-        verify(pillSheetDatastore.update(batch, [updatedPreviousPillSheet, activedPillSheet, nextPillSheet])).called(1);
         verify(pillSheetModifiedHistoryDatastore.add(batch, history)).called(1);
         verify(pillSheetGroupDatastore.updateWithBatch(batch, updatedPillSheetGroup)).called(1);
 
@@ -504,7 +486,6 @@ void main() {
 
         final takePill = TakePill(
           batchFactory: batchFactory,
-          pillSheetDatastore: pillSheetDatastore,
           pillSheetModifiedHistoryDatastore: pillSheetModifiedHistoryDatastore,
           pillSheetGroupDatastore: pillSheetGroupDatastore,
         );
@@ -515,7 +496,6 @@ void main() {
           isQuickRecord: false,
         );
 
-        verify(pillSheetDatastore.update(batch, [previousPillSheet, updatedActivePillSheet, nextPillSheet])).called(1);
         verify(pillSheetModifiedHistoryDatastore.add(batch, history)).called(1);
         verify(pillSheetGroupDatastore.updateWithBatch(batch, updatedPillSheetGroup)).called(1);
         expect(result, updatedPillSheetGroup);
@@ -581,7 +561,6 @@ void main() {
 
         final takePill = TakePill(
           batchFactory: batchFactory,
-          pillSheetDatastore: pillSheetDatastore,
           pillSheetModifiedHistoryDatastore: pillSheetModifiedHistoryDatastore,
           pillSheetGroupDatastore: pillSheetGroupDatastore,
         );
@@ -592,7 +571,6 @@ void main() {
           isQuickRecord: false,
         );
 
-        verifyNever(pillSheetDatastore.update(batch, [previousPillSheet, updatedActivePillSheet, nextPillSheet]));
         verifyNever(pillSheetModifiedHistoryDatastore.add(batch, history));
         verifyNever(pillSheetGroupDatastore.updateWithBatch(batch, pillSheetGroup));
         expect(result, null);
