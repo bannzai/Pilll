@@ -13,7 +13,6 @@ import 'package:pilll/entity/pill_sheet_group.codegen.dart';
 import 'package:pilll/entity/pill_sheet_type.dart';
 import 'package:pilll/entity/setting.codegen.dart';
 import 'package:pilll/service/auth.dart';
-import 'package:pilll/database/pill_sheet.dart';
 import 'package:pilll/database/pill_sheet_group.dart';
 import 'package:pilll/database/pill_sheet_modified_history.dart';
 import 'package:pilll/database/setting.dart';
@@ -22,13 +21,11 @@ import 'package:pilll/util/datetime/day.dart';
 import 'package:purchases_flutter/purchases_flutter.dart';
 import 'package:riverpod/riverpod.dart';
 
-final initialSettingStoreProvider = StateNotifierProvider.autoDispose<
-    InitialSettingStateStore, InitialSettingState>(
+final initialSettingStoreProvider = StateNotifierProvider.autoDispose<InitialSettingStateStore, InitialSettingState>(
   (ref) => InitialSettingStateStore(
     ref.watch(userDatastoreProvider),
     ref.watch(batchFactoryProvider),
     ref.watch(settingDatastoreProvider),
-    ref.watch(pillSheetDatastoreProvider),
     ref.watch(pillSheetModifiedHistoryDatastoreProvider),
     ref.watch(pillSheetGroupDatastoreProvider),
     ref.watch(authServiceProvider),
@@ -36,14 +33,12 @@ final initialSettingStoreProvider = StateNotifierProvider.autoDispose<
   ),
 );
 
-final initialSettingStateProvider =
-    StateProvider.autoDispose((ref) => ref.watch(initialSettingStoreProvider));
+final initialSettingStateProvider = StateProvider.autoDispose((ref) => ref.watch(initialSettingStoreProvider));
 
 class InitialSettingStateStore extends StateNotifier<InitialSettingState> {
   final UserDatastore _userDatastore;
   final BatchFactory _batchFactory;
   final SettingDatastore _settingDatastore;
-  final PillSheetDatastore _pillSheetDatastore;
   final PillSheetModifiedHistoryDatastore _pillSheetModifiedHistoryDatastore;
   final PillSheetGroupDatastore _pillSheetGroupDatastore;
   final AuthService _authService;
@@ -52,7 +47,6 @@ class InitialSettingStateStore extends StateNotifier<InitialSettingState> {
     this._userDatastore,
     this._batchFactory,
     this._settingDatastore,
-    this._pillSheetDatastore,
     this._pillSheetModifiedHistoryDatastore,
     this._pillSheetGroupDatastore,
     this._authService,
@@ -101,8 +95,7 @@ class InitialSettingStateStore extends StateNotifier<InitialSettingState> {
   }
 
   void addPillSheetType(PillSheetType pillSheetType) {
-    state = state
-        .copyWith(pillSheetTypes: [...state.pillSheetTypes, pillSheetType]);
+    state = state.copyWith(pillSheetTypes: [...state.pillSheetTypes, pillSheetType]);
   }
 
   void changePillSheetType(int index, PillSheetType pillSheetType) {
@@ -149,8 +142,7 @@ class InitialSettingStateStore extends StateNotifier<InitialSettingState> {
 
   Future<void> register() async {
     if (state.pillSheetTypes.isEmpty) {
-      throw AssertionError(
-          "Must not be null for pillSheet when register initial settings");
+      throw AssertionError("Must not be null for pillSheet when register initial settings");
     }
 
     final batch = _batchFactory.batch();
@@ -178,8 +170,7 @@ class InitialSettingStateStore extends StateNotifier<InitialSettingState> {
         ),
       );
 
-      final history = PillSheetModifiedHistoryServiceActionFactory
-          .createCreatedPillSheetAction(
+      final history = PillSheetModifiedHistoryServiceActionFactory.createCreatedPillSheetAction(
         pillSheetIDs: pillSheetIDs,
         pillSheetGroupID: createdPillSheetGroup.id,
       );

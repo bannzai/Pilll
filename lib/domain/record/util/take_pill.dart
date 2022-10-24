@@ -3,7 +3,6 @@ import 'package:flutter/material.dart';
 import 'package:pilll/database/batch.dart';
 import 'package:pilll/entity/pill_sheet.codegen.dart';
 import 'package:pilll/entity/pill_sheet_group.codegen.dart';
-import 'package:pilll/database/pill_sheet.dart';
 import 'package:pilll/database/pill_sheet_group.dart';
 import 'package:pilll/database/pill_sheet_modified_history.dart';
 import 'package:pilll/error_log.dart';
@@ -11,13 +10,11 @@ import 'package:pilll/util/datetime/day.dart';
 
 class TakePill {
   final BatchFactory batchFactory;
-  final PillSheetDatastore pillSheetDatastore;
   final PillSheetModifiedHistoryDatastore pillSheetModifiedHistoryDatastore;
   final PillSheetGroupDatastore pillSheetGroupDatastore;
 
   TakePill({
     required this.batchFactory,
-    required this.pillSheetDatastore,
     required this.pillSheetModifiedHistoryDatastore,
     required this.pillSheetGroupDatastore,
   });
@@ -77,10 +74,6 @@ class TakePill {
     }
 
     final batch = batchFactory.batch();
-    pillSheetDatastore.update(
-      batch,
-      updatedPillSheets,
-    );
     pillSheetGroupDatastore.updateWithBatch(batch, updatedPillSheetGroup);
 
     final before = pillSheetGroup.pillSheets[updatedIndexses.first];
