@@ -149,23 +149,20 @@ class InitialSettingStateStore extends StateNotifier<InitialSettingState> {
 
     final todayPillNumber = state.todayPillNumber;
     if (todayPillNumber != null) {
-      final createdPillSheets = _pillSheetDatastore.register(
-        batch,
-        state.pillSheetTypes.asMap().keys.map((pageIndex) {
-          return InitialSettingState.buildPillSheet(
-            pageIndex: pageIndex,
-            todayPillNumber: todayPillNumber,
-            pillSheetTypes: state.pillSheetTypes,
-          );
-        }).toList(),
-      );
+      final pillSheets = state.pillSheetTypes.asMap().keys.map((pageIndex) {
+        return InitialSettingState.buildPillSheet(
+          pageIndex: pageIndex,
+          todayPillNumber: todayPillNumber,
+          pillSheetTypes: state.pillSheetTypes,
+        );
+      }).toList();
 
-      final pillSheetIDs = createdPillSheets.map((e) => e.id!).toList();
+      final pillSheetIDs = pillSheets.map((e) => e.id).toList();
       final createdPillSheetGroup = _pillSheetGroupDatastore.register(
         batch,
         PillSheetGroup(
           pillSheetIDs: pillSheetIDs,
-          pillSheets: createdPillSheets,
+          pillSheets: pillSheets,
           createdAt: now(),
         ),
       );
