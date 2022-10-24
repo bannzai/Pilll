@@ -19,7 +19,6 @@ final addPillSheetGroupStateStoreProvider = StateNotifierProvider.autoDispose<Ad
       ref.watch(recordPageAsyncStateProvider).value!.pillSheetGroup,
       ref.watch(recordPageAsyncStateProvider).value!.appearanceMode,
       ref.watch(recordPageAsyncStateProvider).value!.setting,
-      ref.watch(pillSheetDatastoreProvider),
       ref.watch(pillSheetGroupDatastoreProvider),
       ref.watch(settingDatastoreProvider),
       ref.watch(pillSheetModifiedHistoryDatastoreProvider),
@@ -29,7 +28,6 @@ final addPillSheetGroupStateStoreProvider = StateNotifierProvider.autoDispose<Ad
 );
 
 class AddPillSheetGroupStateStore extends StateNotifier<AddPillSheetGroupState> {
-  final PillSheetDatastore _pillSheetDatastore;
   final PillSheetGroupDatastore _pillSheetGroupDatastore;
   final SettingDatastore _settingDatastore;
   final PillSheetModifiedHistoryDatastore _pillSheetModifiedHistoryDatastore;
@@ -38,7 +36,6 @@ class AddPillSheetGroupStateStore extends StateNotifier<AddPillSheetGroupState> 
     PillSheetGroup? pillSheetGroup,
     PillSheetAppearanceMode pillSheetAppearanceMode,
     Setting? setting,
-    this._pillSheetDatastore,
     this._pillSheetGroupDatastore,
     this._settingDatastore,
     this._pillSheetModifiedHistoryDatastore,
