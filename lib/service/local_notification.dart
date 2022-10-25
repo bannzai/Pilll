@@ -70,6 +70,7 @@ class LocalNotificationService {
           ),
         ),
         androidAllowWhileIdle: true,
+        matchDateTimeComponents: DateTimeComponents.dateAndTime,
         uiLocalNotificationDateInterpretation: UILocalNotificationDateInterpretation.absoluteTime,
       );
     }
