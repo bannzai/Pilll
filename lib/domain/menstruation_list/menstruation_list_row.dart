@@ -7,95 +7,36 @@ import 'package:pilll/entity/menstruation.codegen.dart';
 import 'package:pilll/util/formatter/date_time_formatter.dart';
 import 'package:flutter/material.dart';
 
-class MenstruationListRowState {
+class MenstruationListRow extends StatelessWidget {
   final Menstruation menstruation;
   final String? prefix;
-  int? menstruationDuration;
+  final int? menstruationDuration;
 
-  MenstruationListRowState(this.menstruation, this.prefix);
-
-  static int diff(MenstruationListRowState lhs, MenstruationListRowState rhs) {
-    final range =
-        DateRange(lhs.menstruation.beginDate, rhs.menstruation.beginDate);
-    return range.days.abs() - 1;
-  }
-
-  static List<MenstruationListRowState> rows(List<Menstruation> menstruations) {
-    return [...menstruations]
-        .asMap()
-        .map((index, element) =>
-            MapEntry(index, MenstruationListRowState(element, _prefix(index))))
-        .values
-        .toList()
-        .fold<List<MenstruationListRowState>>([], (value, element) {
-      if (value.isEmpty) {
-        return [element];
-      }
-      return value
-        ..last.menstruationDuration =
-            MenstruationListRowState.diff(value.last, element)
-        ..add(element);
-    }).toList();
-  }
-
-  static String? _prefix(int i) {
-    if (i == 0) {
-      return "前回";
-    }
-    if (i == 1) {
-      return "前々回";
-    }
-    return null;
-  }
-
-  String get dateRange {
-    return "(${DateTimeFormatter.monthAndDay(menstruation.beginDate)} - ${DateTimeFormatter.monthAndDay(menstruation.endDate)})";
-  }
-
-  String get duration {
-    final menstruationDuration = this.menstruationDuration;
-    if (menstruationDuration == null) {
-      return "-";
-    }
-    return "$menstruationDuration日周期";
-  }
-
-  double get width {
-    const double widthForDay = 10;
-    final menstruationDuration = this.menstruationDuration;
-    if (menstruationDuration == null) {
-      return widthForDay * 28;
-    }
-    return widthForDay * menstruationDuration;
-  }
-}
-
-class MenstruationListRow extends StatelessWidget {
-  final MenstruationListRowState state;
-
-  const MenstruationListRow({Key? key, required this.state}) : super(key: key);
+  const MenstruationListRow({
+    Key? key,
+    required this.menstruation,
+    required this.prefix,
+    required this.menstruationDuration,
+  }) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
     return GestureDetector(
       onTap: () {
-        showMenstruationEditPage(context, menstruation: state.menstruation);
+        showMenstruationEditPage(context, menstruation: menstruation);
       },
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
           Row(
             children: [
-              if (state.prefix != null)
-                Text(state.prefix ?? "",
-                    style: FontType.descriptionBold.merge(TextColorStyle.main)),
-              Text(state.dateRange,
-                  style: FontType.description.merge(TextColorStyle.main)),
+              if (prefix != null) Text(prefix ?? "", style: FontType.descriptionBold.merge(TextColorStyle.main)),
+              Text(_dateRange, style: FontType.description.merge(TextColorStyle.main)),
             ],
           ),
           const SizedBox(height: 6),
           Container(
-            width: state.width,
+            width: _dotLineWidth,
             decoration: BoxDecoration(
               color: PilllColors.tinBackground,
               borderRadius: BorderRadius.circular(26),
@@ -106,14 +47,14 @@ class MenstruationListRow extends StatelessWidget {
               child: Row(
                 children: [
                   ...List.generate(
-                    state.menstruation.dateRange.days + 1,
+                    menstruation.dateRange.days + 1,
                     (index) {
                       return [_circle(), const SizedBox(width: 4)];
                     },
                   ).expand((element) => element).toList(),
                   const Spacer(),
                   Text(
-                    state.duration,
+                    _duration,
                     textAlign: TextAlign.end,
                     style: const TextStyle(
                       color: TextColor.main,
@@ -141,5 +82,31 @@ class MenstruationListRow extends StatelessWidget {
       width: 12,
       height: 12,
     );
+  }
+
+  String get _dateRange {
+    return "(${DateTimeFormatter.monthAndDay(menstruation.beginDate)} - ${DateTimeFormatter.monthAndDay(menstruation.endDate)})";
+  }
+
+  String get _duration {
+    final menstruationDuration = this.menstruationDuration;
+    if (menstruationDuration == null) {
+      return "-";
+    }
+    return "$menstruationDuration日周期";
+  }
+
+  double get _dotLineWidth {
+    const double widthForDay = 10;
+    final menstruationDuration = this.menstruationDuration;
+    if (menstruationDuration == null) {
+      return widthForDay * 28;
+    }
+    return widthForDay * menstruationDuration;
+  }
+
+  static int diff(Menstruation lhs, Menstruation rhs) {
+    final range = DateRange(lhs.beginDate, rhs.beginDate);
+    return range.days.abs() - 1;
   }
 }
