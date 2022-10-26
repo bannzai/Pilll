@@ -87,9 +87,33 @@ class MenstruationHistoryCardList extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final activeMenstruation = state.activeMenstruation;
+    final previousMenstruation = state.previousMenstruation;
+    final secondPreviousMenstruation = state.secondPreviousMenstruation;
+    final thirdPreviousMenstruation = state.thirdPreviousMenstruation;
+
     return Column(
       mainAxisSize: MainAxisSize.max,
-      children: state.pastRows.map((e) => [MenstruationListRow(state: e), const SizedBox(height: 20)]).expand((e) => e).toList(),
+      children: [
+        if (activeMenstruation != null)
+          MenstruationListRow(
+            menstruation: activeMenstruation,
+            previousMenstruation: previousMenstruation,
+            prefix: "今回",
+          ),
+        if (previousMenstruation != null)
+          MenstruationListRow(
+            menstruation: previousMenstruation,
+            previousMenstruation: secondPreviousMenstruation,
+            prefix: "前回",
+          ),
+        if (secondPreviousMenstruation != null)
+          MenstruationListRow(
+            menstruation: secondPreviousMenstruation,
+            previousMenstruation: thirdPreviousMenstruation,
+            prefix: "前々回",
+          ),
+      ],
     );
   }
 }

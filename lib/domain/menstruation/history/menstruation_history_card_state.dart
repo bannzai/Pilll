@@ -1,7 +1,6 @@
+import 'package:collection/collection.dart';
 import 'dart:math';
 
-import 'package:pilll/domain/menstruation/utility.dart';
-import 'package:pilll/domain/menstruation_list/menstruation_list_row.dart';
 import 'package:pilll/entity/menstruation.codegen.dart';
 import 'package:pilll/util/datetime/day.dart';
 
@@ -20,38 +19,56 @@ class MenstruationHistoryCardState {
     required this.trialDeadlineDate,
   });
 
-  bool get moreButtonIsHidden => latestMenstruation.dateRange.inRange(today()) ? allMenstruations.length <= 3 : allMenstruations.length <= 2;
-  List<MenstruationListRowState> get pastRows {
-    if (allMenstruations.isEmpty) {
-      return [];
+  bool get moreButtonIsHidden =>
+      allMenstruations.firstWhereOrNull((element) => element.isActive) != null ? allMenstruations.length <= 3 : allMenstruations.length <= 2;
+  Menstruation? get activeMenstruation {
+    if (latestMenstruation.isActive) {
+      return latestMenstruation;
     }
-    var menstruations = dropInTheMiddleMenstruation(allMenstruations);
-    if (menstruations.isEmpty) {
-      return [];
+    return null;
+  }
+
+  Menstruation? get previousMenstruation {
+    final filtered = allMenstruations.where((element) => !element.isActive);
+    if (filtered.isEmpty) {
+      return null;
     }
-    final rows = MenstruationListRowState.rows(menstruations);
-    final length = min(2, rows.length);
-    return rows.sublist(0, length);
+    return filtered.first;
+  }
+
+  Menstruation? get secondPreviousMenstruation {
+    final filtered = allMenstruations.where((element) => !element.isActive);
+    if (filtered.length <= 1) {
+      return null;
+    }
+    return filtered.toList()[1];
+  }
+
+  Menstruation? get thirdPreviousMenstruation {
+    final filtered = allMenstruations.where((element) => !element.isActive);
+    if (filtered.length <= 2) {
+      return null;
+    }
+    return filtered.toList()[2];
   }
 
   String get avalageMenstruationDuration {
     if (allMenstruations.length <= 1) {
       return "-";
     }
-    final rows = MenstruationListRowState.rows(allMenstruations);
 
-    int count = 0;
     int totalMenstruationDuration = 0;
-    for (final row in rows) {
-      final menstruationDuration = row.menstruationDuration;
-      if (menstruationDuration == null) {
-        continue;
+    for (var i = 0; i < allMenstruations.length; i++) {
+      if (i <= allMenstruations.length - 1) {
+        break;
       }
-      count += 1;
-      totalMenstruationDuration += menstruationDuration;
+      final menstruation = allMenstruations[i];
+      final menstruationDuration = menstruationsDiff(menstruation, allMenstruations[i + 1]);
+      if (menstruationDuration != null) {
+        totalMenstruationDuration += menstruationDuration;
+      }
     }
-
-    return (totalMenstruationDuration / count).round().toString();
+    return (totalMenstruationDuration / allMenstruations.length).round().toString();
   }
 
   String get avalageMenstruationPeriod {
@@ -59,14 +76,12 @@ class MenstruationHistoryCardState {
       return "-";
     }
 
-    int count = 0;
     int totalMenstruationPeriod = 0;
-    for (final menstruation in dropInTheMiddleMenstruation(allMenstruations)) {
+    for (final menstruation in allMenstruations) {
       final menstruationPeriod = menstruation.dateRange.days + 1;
-      count += 1;
       totalMenstruationPeriod += menstruationPeriod;
     }
 
-    return (totalMenstruationPeriod / count).round().toString();
+    return (totalMenstruationPeriod / allMenstruations.length).round().toString();
   }
 }
