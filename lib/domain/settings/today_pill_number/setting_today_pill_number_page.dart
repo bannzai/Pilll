@@ -32,8 +32,7 @@ class SettingTodayPillNumberPage extends HookConsumerWidget {
       activedPillSheet: activedPillSheet,
     );
     final state = ref.watch(settingTodayPillNumberStoreProvider(parameter));
-    final store =
-        ref.watch(settingTodayPillNumberStoreProvider(parameter).notifier);
+    final store = ref.watch(settingTodayPillNumberStoreProvider(parameter).notifier);
 
     return Scaffold(
       backgroundColor: PilllColors.background,
@@ -63,16 +62,11 @@ class SettingTodayPillNumberPage extends HookConsumerWidget {
                   const SizedBox(height: 56),
                   Center(
                     child: SettingTodayPillNumberPillSheetList(
-                      pillSheetTypes: pillSheetGroup.pillSheets
-                          .map((e) => e.pillSheetType)
-                          .toList(),
+                      pillSheetTypes: pillSheetGroup.pillSheets.map((e) => e.pillSheetType).toList(),
                       appearanceMode: state.appearanceMode,
-                      selectedTodayPillNumberIntoPillSheet:
-                          state.selectedTodayPillNumberIntoPillSheet,
+                      selectedTodayPillNumberIntoPillSheet: state.selectedTodayPillNumberIntoPillSheet,
                       markSelected: (pageIndex, pillNumberIntoPillSheet) =>
-                          store.markSelected(
-                              pageIndex: pageIndex,
-                              pillNumberIntoPillSheet: pillNumberIntoPillSheet),
+                          store.markSelected(pageIndex: pageIndex, pillNumberIntoPillSheet: pillNumberIntoPillSheet),
                     ),
                   ),
                   const SizedBox(height: 20),
@@ -83,15 +77,18 @@ class SettingTodayPillNumberPage extends HookConsumerWidget {
                 child: Column(
                   mainAxisAlignment: MainAxisAlignment.end,
                   children: [
-                    PrimaryButton(
-                      onPressed: () async {
-                        unawaited(store.modifiyTodayPillNumber(
-                          pillSheetGroup: pillSheetGroup,
-                          activedPillSheet: activedPillSheet,
-                        ));
-                        Navigator.of(context).pop();
-                      },
-                      text: "変更する",
+                    SizedBox(
+                      width: 180,
+                      child: PrimaryButton(
+                        onPressed: () async {
+                          unawaited(store.modifiyTodayPillNumber(
+                            pillSheetGroup: pillSheetGroup,
+                            activedPillSheet: activedPillSheet,
+                          ));
+                          Navigator.of(context).pop();
+                        },
+                        text: "変更する",
+                      ),
                     ),
                     const SizedBox(height: 35),
                   ],

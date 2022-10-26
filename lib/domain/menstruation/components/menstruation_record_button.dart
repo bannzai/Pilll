@@ -22,50 +22,48 @@ class MenstruationRecordButton extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return PrimaryButton(
-      onPressed: () async {
-        analytics.logEvent(name: "pressed_menstruation_record");
-        final latestMenstruation = state.latestMenstruation;
-        if (latestMenstruation != null &&
-            latestMenstruation.dateRange.inRange(today())) {
-          showMenstruationEditPage(context, menstruation: latestMenstruation);
-          return;
-        }
+    return SizedBox(
+      width: 180,
+      child: PrimaryButton(
+        onPressed: () async {
+          analytics.logEvent(name: "pressed_menstruation_record");
+          final latestMenstruation = state.latestMenstruation;
+          if (latestMenstruation != null && latestMenstruation.dateRange.inRange(today())) {
+            showMenstruationEditPage(context, menstruation: latestMenstruation);
+            return;
+          }
 
-        final setting = state.setting;
+          final setting = state.setting;
 
-        if (setting.durationMenstruation == 0) {
-          return showMenstruationEditPage(context, menstruation: null);
-        }
-        showModalBottomSheet(
-          context: context,
-          builder: (_) =>
-              MenstruationSelectModifyTypeSheet(onTap: (type) async {
-            switch (type) {
-              case MenstruationSelectModifyType.today:
-                analytics.logEvent(name: "tapped_menstruation_record_today");
-                final created =
-                    await store.asyncAction.recordFromToday(setting: setting);
-                onRecord(created);
-                Navigator.of(context).pop();
-                return;
-              case MenstruationSelectModifyType.yesterday:
-                analytics.logEvent(
-                    name: "tapped_menstruation_record_yesterday");
-                final created = await store.asyncAction
-                    .recordFromYesterday(setting: setting);
-                onRecord(created);
-                Navigator.of(context).pop();
-                return;
-              case MenstruationSelectModifyType.begin:
-                analytics.logEvent(name: "tapped_menstruation_record_begin");
-                Navigator.of(context).pop();
-                return showMenstruationEditPage(context, menstruation: null);
-            }
-          }),
-        );
-      },
-      text: state.buttonString,
+          if (setting.durationMenstruation == 0) {
+            return showMenstruationEditPage(context, menstruation: null);
+          }
+          showModalBottomSheet(
+            context: context,
+            builder: (_) => MenstruationSelectModifyTypeSheet(onTap: (type) async {
+              switch (type) {
+                case MenstruationSelectModifyType.today:
+                  analytics.logEvent(name: "tapped_menstruation_record_today");
+                  final created = await store.asyncAction.recordFromToday(setting: setting);
+                  onRecord(created);
+                  Navigator.of(context).pop();
+                  return;
+                case MenstruationSelectModifyType.yesterday:
+                  analytics.logEvent(name: "tapped_menstruation_record_yesterday");
+                  final created = await store.asyncAction.recordFromYesterday(setting: setting);
+                  onRecord(created);
+                  Navigator.of(context).pop();
+                  return;
+                case MenstruationSelectModifyType.begin:
+                  analytics.logEvent(name: "tapped_menstruation_record_begin");
+                  Navigator.of(context).pop();
+                  return showMenstruationEditPage(context, menstruation: null);
+              }
+            }),
+          );
+        },
+        text: state.buttonString,
+      ),
     );
   }
 }
