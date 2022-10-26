@@ -51,3 +51,11 @@ class Menstruation with _$Menstruation {
   DateRange get dateRange => DateRange(beginDate, endDate);
   bool get isActive => dateRange.inRange(today());
 }
+
+int? menstruationsDiff(Menstruation lhs, Menstruation? rhs) {
+  if (rhs == null) {
+    return null;
+  }
+  final range = DateRange(lhs.beginDate, rhs.beginDate);
+  return range.days.abs() - 1;
+}
