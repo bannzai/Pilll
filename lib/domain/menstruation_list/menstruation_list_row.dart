@@ -29,7 +29,6 @@ class MenstruationListRow extends StatelessWidget {
         children: [
           Row(
             children: [
-              if (prefix != null) Text(prefix ?? "", style: FontType.descriptionBold.merge(TextColorStyle.main)),
               Text(_dateRange, style: FontType.description.merge(TextColorStyle.main)),
             ],
           ),
@@ -84,7 +83,7 @@ class MenstruationListRow extends StatelessWidget {
   }
 
   String get _dateRange {
-    return "(${DateTimeFormatter.monthAndDay(menstruation.beginDate)} - ${DateTimeFormatter.monthAndDay(menstruation.endDate)})";
+    return "${DateTimeFormatter.monthAndDay(menstruation.beginDate)} - ${DateTimeFormatter.monthAndDay(menstruation.endDate)}";
   }
 
   String get _duration {
