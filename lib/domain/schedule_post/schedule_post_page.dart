@@ -10,6 +10,7 @@ import 'package:pilll/components/atoms/color.dart';
 import 'package:pilll/components/atoms/font.dart';
 import 'package:pilll/components/atoms/text_color.dart';
 import 'package:pilll/components/molecules/indicator.dart';
+import 'package:pilll/components/page/discard_dialog.dart';
 import 'package:pilll/database/database.dart';
 import 'package:pilll/domain/schedule_post/state.codegen.dart';
 import 'package:pilll/entity/schedule.codegen.dart';
@@ -118,64 +119,84 @@ class _SchedulePostPage extends HookConsumerWidget {
                       contentPadding: const EdgeInsets.all(0),
                     ),
                     const Spacer(),
-                    PrimaryButton(
-                      text: "保存",
-                      onPressed: isInvalid()
-                          ? null
-                          : () async {
-                              analytics.logEvent(name: "schedule_post_pressed");
-                              try {
-                                final localNotificationID = schedule.localNotification?.localNotificationID;
-                                if (localNotificationID != null) {
-                                  await localNotificationService.cancelNotification(localNotificationID: localNotificationID);
-                                }
+                    if (state.date.date().isAfter(today())) ...[
+                      PrimaryButton(
+                        text: "保存",
+                        onPressed: isInvalid()
+                            ? null
+                            : () async {
+                                analytics.logEvent(name: "schedule_post_pressed");
+                                try {
+                                  final localNotificationID = schedule.localNotification?.localNotificationID;
+                                  if (localNotificationID != null) {
+                                    await localNotificationService.cancelNotification(localNotificationID: localNotificationID);
+                                  }
 
-                                final Schedule newSchedule;
-                                if (isOnRemind.value) {
-                                  newSchedule = schedule.copyWith(
-                                    title: title.value,
-                                    localNotification: LocalNotification(
-                                      localNotificationID: Random().nextInt(scheduleNotificationIdentifierOffset),
-                                      remindDateTime: DateTime(state.date.year, state.date.month, state.date.day, 9),
-                                    ),
-                                  );
-                                  await localNotificationService.scheduleCalendarScheduleNotification(schedule: newSchedule);
-                                } else {
-                                  newSchedule = schedule.copyWith(
-                                    title: title.value,
-                                    localNotification: null,
-                                  );
-                                }
-
-                                await ref.read(databaseProvider).schedulesReference().doc(newSchedule.id).set(
-                                      newSchedule,
-                                      SetOptions(merge: true),
+                                  final Schedule newSchedule;
+                                  if (isOnRemind.value) {
+                                    newSchedule = schedule.copyWith(
+                                      title: title.value,
+                                      localNotification: LocalNotification(
+                                        localNotificationID: Random().nextInt(scheduleNotificationIdentifierOffset),
+                                        remindDateTime: DateTime(state.date.year, state.date.month, state.date.day, 9),
+                                      ),
                                     );
-                                Navigator.of(context).pop();
-                              } catch (error) {
-                                showErrorAlert(context, error);
-                              }
-                            },
-                    ),
-                    const SizedBox(height: 10),
-                    if (scheduleID != null)
-                      AppOutlinedButton(
-                        text: "削除",
-                        onPressed: () async {
-                          analytics.logEvent(name: "schedule_delete_pressed");
-                          try {
-                            final localNotificationID = schedule.localNotification?.localNotificationID;
-                            if (localNotificationID != null) {
-                              await localNotificationService.cancelNotification(localNotificationID: localNotificationID);
-                            }
+                                    await localNotificationService.scheduleCalendarScheduleNotification(schedule: newSchedule);
+                                  } else {
+                                    newSchedule = schedule.copyWith(
+                                      title: title.value,
+                                      localNotification: null,
+                                    );
+                                  }
 
-                            await ref.read(databaseProvider).schedulesReference().doc(scheduleID).delete();
-                            Navigator.of(context).pop();
-                          } catch (error) {
-                            showErrorAlert(context, error);
-                          }
-                        },
+                                  await ref.read(databaseProvider).schedulesReference().doc(newSchedule.id).set(
+                                        newSchedule,
+                                        SetOptions(merge: true),
+                                      );
+                                  Navigator.of(context).pop();
+                                } catch (error) {
+                                  showErrorAlert(context, error);
+                                }
+                              },
                       ),
+                      const SizedBox(height: 10),
+                      if (scheduleID != null)
+                        AppOutlinedButton(
+                          text: "削除",
+                          onPressed: () async {
+                            analytics.logEvent(name: "schedule_delete_pressed");
+                            showDiscardDialog(
+                              context,
+                              title: "予定を削除します",
+                              message: "削除された予定は復元ができません",
+                              actions: [
+                                AlertButton(
+                                  text: "キャンセル",
+                                  onPressed: () async {
+                                    Navigator.of(context).pop();
+                                  },
+                                ),
+                                AlertButton(
+                                  text: "削除する",
+                                  onPressed: () async {
+                                    try {
+                                      final localNotificationID = schedule.localNotification?.localNotificationID;
+                                      if (localNotificationID != null) {
+                                        await localNotificationService.cancelNotification(localNotificationID: localNotificationID);
+                                      }
+
+                                      await ref.read(databaseProvider).schedulesReference().doc(scheduleID).delete();
+                                      Navigator.of(context).popUntil((route) => route.isFirst);
+                                    } catch (error) {
+                                      showErrorAlert(context, error);
+                                    }
+                                  },
+                                ),
+                              ],
+                            );
+                          },
+                        ),
+                    ],
                     const SizedBox(height: 20),
                   ],
                 ),
