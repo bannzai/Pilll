@@ -56,17 +56,19 @@ class MenstruationHistoryCardState {
     }
 
     int totalMenstruationDuration = 0;
+    int count = 0;
     for (var i = 0; i < allMenstruations.length; i++) {
-      if (i <= allMenstruations.length - 1) {
+      if (i >= allMenstruations.length - 1) {
         break;
       }
       final menstruation = allMenstruations[i];
       final menstruationDuration = menstruationsDiff(menstruation, allMenstruations[i + 1]);
       if (menstruationDuration != null) {
         totalMenstruationDuration += menstruationDuration;
+        count += 1;
       }
     }
-    return (totalMenstruationDuration / allMenstruations.length).round().toString();
+    return (totalMenstruationDuration / count).round().toString();
   }
 
   String get avalageMenstruationPeriod {
@@ -75,11 +77,13 @@ class MenstruationHistoryCardState {
     }
 
     int totalMenstruationPeriod = 0;
+    int count = 0;
     for (final menstruation in allMenstruations) {
       final menstruationPeriod = menstruation.dateRange.days + 1;
       totalMenstruationPeriod += menstruationPeriod;
+      count += 1;
     }
 
-    return (totalMenstruationPeriod / allMenstruations.length).round().toString();
+    return (totalMenstruationPeriod / count).round().toString();
   }
 }
