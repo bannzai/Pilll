@@ -12,7 +12,7 @@ class MenstruationListPage extends HookConsumerWidget {
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {
-    final state = ref.watch(menstruationListStoreProvider);
+    final state = ref.watch(menstruationListStateNotifierProvider);
 
     if (state.isNotYetLoaded) {
       return const ScaffoldIndicator();
