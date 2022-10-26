@@ -48,7 +48,7 @@ class DiaryPostPage extends HookConsumerWidget {
       return UniversalErrorPage(error: error, child: null, reload: () => ref.refresh(diaryPostAsyncStateProvider(_family())));
     }
 
-    final TextEditingController? textEditingController = useTextEditingController(text: state.diary.memo);
+    final textEditingController = useTextEditingController(text: state.diary.memo);
     final focusNode = useFocusNode();
     final scrollController = useScrollController();
     final offset = MediaQuery.of(context).viewInsets.bottom + keyboardToolbarHeight + 60;
@@ -263,7 +263,7 @@ class DiaryPostPage extends HookConsumerWidget {
 
   Widget _memo(
     BuildContext context,
-    TextEditingController? textEditingController,
+    TextEditingController textEditingController,
     FocusNode focusNode,
     DiaryPostStateNotifier store,
     DiaryPostState state,
