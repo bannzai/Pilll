@@ -43,24 +43,16 @@ class AddPillSheetGroupPage extends HookConsumerWidget {
               SettingPillSheetGroup(
                 pillSheetTypes: setting.pillSheetEnumTypes,
                 onAdd: (pillSheetType) {
-                  analytics.logEvent(
-                      name: "setting_add_pill_sheet_group",
-                      parameters: {"pill_sheet_type": pillSheetType.fullName});
+                  analytics.logEvent(name: "setting_add_pill_sheet_group", parameters: {"pill_sheet_type": pillSheetType.fullName});
                   store.addPillSheetType(pillSheetType, setting);
                 },
                 onChange: (index, pillSheetType) {
-                  analytics.logEvent(
-                      name: "setting_change_pill_sheet_group",
-                      parameters: {
-                        "index": index,
-                        "pill_sheet_type": pillSheetType.fullName
-                      });
+                  analytics
+                      .logEvent(name: "setting_change_pill_sheet_group", parameters: {"index": index, "pill_sheet_type": pillSheetType.fullName});
                   store.changePillSheetType(index, pillSheetType, setting);
                 },
                 onDelete: (index) {
-                  analytics.logEvent(
-                      name: "setting_delete_pill_sheet_group",
-                      parameters: {"index": index});
+                  analytics.logEvent(name: "setting_delete_pill_sheet_group", parameters: {"index": index});
                   store.removePillSheetType(index, setting);
                 },
               ),
@@ -75,14 +67,16 @@ class AddPillSheetGroupPage extends HookConsumerWidget {
                       children: [
                         DisplayNumberSetting(store: store, state: state),
                         const SizedBox(height: 24),
-                        PrimaryButton(
-                          text: "追加",
-                          onPressed: () async {
-                            analytics.logEvent(
-                                name: "pressed_add_pill_sheet_group");
-                            await store.register(setting);
-                            Navigator.of(context).pop();
-                          },
+                        SizedBox(
+                          width: 180,
+                          child: PrimaryButton(
+                            text: "追加",
+                            onPressed: () async {
+                              analytics.logEvent(name: "pressed_add_pill_sheet_group");
+                              await store.register(setting);
+                              Navigator.of(context).pop();
+                            },
+                          ),
                         ),
                       ],
                     ),

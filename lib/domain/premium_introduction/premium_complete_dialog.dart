@@ -4,12 +4,10 @@ import 'package:pilll/components/atoms/buttons.dart';
 import 'package:pilll/components/atoms/font.dart';
 import 'package:pilll/components/atoms/text_color.dart';
 
-
 class PremiumCompleteDialog extends StatelessWidget {
   final VoidCallback onClose;
 
-  const PremiumCompleteDialog({Key? key, required this.onClose})
-      : super(key: key);
+  const PremiumCompleteDialog({Key? key, required this.onClose}) : super(key: key);
   @override
   Widget build(BuildContext context) {
     return AlertDialog(
@@ -42,12 +40,15 @@ class PremiumCompleteDialog extends StatelessWidget {
             textAlign: TextAlign.center,
           ),
           const SizedBox(height: 24),
-          PrimaryButton(
-            onPressed: () async {
-              Navigator.of(context).pop();
-              onClose();
-            },
-            text: "OK",
+          SizedBox(
+            width: 180,
+            child: PrimaryButton(
+              onPressed: () async {
+                Navigator.of(context).pop();
+                onClose();
+              },
+              text: "OK",
+            ),
           ),
         ],
       ),
