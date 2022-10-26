@@ -20,10 +20,8 @@ class MenstruationHistoryCardState {
     required this.trialDeadlineDate,
   });
 
-  bool get moreButtonIsHidden => latestMenstruation.dateRange.inRange(today())
-      ? allMenstruations.length <= 3
-      : allMenstruations.length <= 2;
-  List<MenstruationListRowState> get rows {
+  bool get moreButtonIsHidden => latestMenstruation.dateRange.inRange(today()) ? allMenstruations.length <= 3 : allMenstruations.length <= 2;
+  List<MenstruationListRowState> get pastRows {
     if (allMenstruations.isEmpty) {
       return [];
     }
