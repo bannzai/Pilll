@@ -95,24 +95,30 @@ class MenstruationHistoryCardList extends StatelessWidget {
     return Column(
       mainAxisSize: MainAxisSize.max,
       children: [
-        if (activeMenstruation != null)
+        if (activeMenstruation != null) ...[
           MenstruationListRow(
             menstruation: activeMenstruation,
             previousMenstruation: previousMenstruation,
             prefix: "今回",
           ),
-        if (previousMenstruation != null)
+          const SizedBox(height: 20),
+        ],
+        if (previousMenstruation != null) ...[
           MenstruationListRow(
             menstruation: previousMenstruation,
             previousMenstruation: secondPreviousMenstruation,
             prefix: "前回",
           ),
-        if (secondPreviousMenstruation != null)
+          const SizedBox(height: 20),
+        ],
+        if (secondPreviousMenstruation != null) ...[
           MenstruationListRow(
             menstruation: secondPreviousMenstruation,
             previousMenstruation: thirdPreviousMenstruation,
             prefix: "前々回",
           ),
+          const SizedBox(height: 20),
+        ],
       ],
     );
   }

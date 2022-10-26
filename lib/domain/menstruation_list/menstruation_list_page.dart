@@ -4,6 +4,7 @@ import 'package:pilll/components/atoms/color.dart';
 import 'package:pilll/components/atoms/font.dart';
 import 'package:pilll/components/atoms/text_color.dart';
 import 'package:pilll/components/molecules/indicator.dart';
+import 'package:pilll/database/menstruation.dart';
 import 'package:pilll/domain/menstruation_list/menstruation_list_row.dart';
 import 'package:pilll/domain/menstruation_list/menstruation_list_store.dart';
 
@@ -39,12 +40,14 @@ class MenstruationListPage extends HookConsumerWidget {
           child: ListView(
             padding: const EdgeInsets.all(32),
             children: [
-              ...state.allRows.map((row) {
-                return [
-                  MenstruationListRow(state: row),
-                  const SizedBox(height: 8),
-                ];
-              }).expand((element) => element),
+              for (var i = 0; i < state.allMenstruations.length - 1; i++) ...[
+                MenstruationListRow(
+                  menstruation: state.allMenstruations[i],
+                  previousMenstruation: state.allMenstruations.length >= i ? null : state.allMenstruations[i + 1],
+                  prefix: "",
+                ),
+                const SizedBox(height: 8),
+              ],
             ],
           ),
         ),
