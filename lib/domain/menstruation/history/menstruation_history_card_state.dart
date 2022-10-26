@@ -1,8 +1,6 @@
 import 'package:collection/collection.dart';
-import 'dart:math';
 
 import 'package:pilll/entity/menstruation.codegen.dart';
-import 'package:pilll/util/datetime/day.dart';
 
 class MenstruationHistoryCardState {
   final List<Menstruation> allMenstruations;
