@@ -39,10 +39,10 @@ class MenstruationListPage extends HookConsumerWidget {
           child: ListView(
             padding: const EdgeInsets.all(32),
             children: [
-              for (var i = 0; i < state.allMenstruations.length - 1; i++) ...[
+              for (var i = 0; i < state.allMenstruations.length; i++) ...[
                 MenstruationListRow(
                   menstruation: state.allMenstruations[i],
-                  previousMenstruation: state.allMenstruations.length >= i ? null : state.allMenstruations[i + 1],
+                  previousMenstruation: state.allMenstruations.length - 1 >= i ? null : state.allMenstruations[i + 1],
                   prefix: "",
                 ),
                 const SizedBox(height: 8),
