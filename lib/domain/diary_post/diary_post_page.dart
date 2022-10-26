@@ -36,6 +36,10 @@ class DiaryPostPage extends HookConsumerWidget {
   Widget build(BuildContext context, WidgetRef ref) {
     final stateNotifier = ref.watch(diaryPostStateNotifierProvider(_family()).notifier);
     final asyncState = ref.watch(diaryPostStateNotifierProvider(_family()));
+    final textEditingController = useTextEditingController(text: "");
+    final focusNode = useFocusNode();
+    final scrollController = useScrollController();
+    final offset = MediaQuery.of(context).viewInsets.bottom + keyboardToolbarHeight + 60;
 
     if (asyncState is AsyncLoading) {
       return const ScaffoldIndicator();
@@ -48,10 +52,9 @@ class DiaryPostPage extends HookConsumerWidget {
       return UniversalErrorPage(error: error, child: null, reload: () => ref.refresh(diaryPostAsyncStateProvider(_family())));
     }
 
-    final textEditingController = useTextEditingController(text: state.diary.memo);
-    final focusNode = useFocusNode();
-    final scrollController = useScrollController();
-    final offset = MediaQuery.of(context).viewInsets.bottom + keyboardToolbarHeight + 60;
+    useEffect(() {
+      textEditingController.text = state.diary.memo;
+    }, [state.diary.memo]);
 
     return Scaffold(
       backgroundColor: PilllColors.white,
