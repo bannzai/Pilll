@@ -57,5 +57,5 @@ int? menstruationsDiff(Menstruation lhs, Menstruation? rhs) {
     return null;
   }
   final range = DateRange(lhs.beginDate, rhs.beginDate);
-  return range.days.abs() - 1;
+  return range.days.abs();
 }
