@@ -52,12 +52,12 @@ class _SchedulePostPage extends HookConsumerWidget {
   Widget build(BuildContext context, WidgetRef ref) {
     final schedule =
         state.scheduleOrNull(index: 0) ?? Schedule(title: "", localNotification: null, date: state.date, createdDateTime: DateTime.now());
+    final scheduleID = schedule.id;
     final title = useState(schedule.title);
     final isOnRemind = useState(schedule.localNotification != null);
     final textEditingController = useTextEditingController(text: title.value);
     final focusNode = useFocusNode();
-    final scrollController = useScrollController();
-    isInvalid() => state.date.date().isAfter(today()) || title.value.isEmpty;
+    isInvalid() => !(state.date.date().isAfter(today())) || title.value.isEmpty;
 
     return Scaffold(
       backgroundColor: PilllColors.white,
@@ -69,47 +69,7 @@ class _SchedulePostPage extends HookConsumerWidget {
           icon: const Icon(Icons.close, color: Colors.black),
           onPressed: () => Navigator.of(context).pop(),
         ),
-        actions: [
-          AlertButton(
-            text: "保存",
-            onPressed: isInvalid()
-                ? () async {
-                    analytics.logEvent(name: "schedule_post_pressed");
-                    try {
-                      final localNotificationID = schedule.localNotification?.localNotificationID;
-                      if (localNotificationID != null) {
-                        await localNotificationService.cancelNotification(localNotificationID: localNotificationID);
-                      }
-
-                      final Schedule newSchedule;
-                      if (isOnRemind.value) {
-                        newSchedule = schedule.copyWith(
-                          title: title.value,
-                          localNotification: LocalNotification(
-                            localNotificationID: Random().nextInt(scheduleNotificationIdentifierOffset),
-                            remindDateTime: DateTime(state.date.year, state.date.month, state.date.day, 9),
-                          ),
-                        );
-                        await localNotificationService.scheduleCalendarScheduleNotification(schedule: newSchedule);
-                      } else {
-                        newSchedule = schedule.copyWith(
-                          title: title.value,
-                          localNotification: null,
-                        );
-                      }
-
-                      await ref.read(databaseProvider).schedulesReference().doc(newSchedule.id).set(
-                            newSchedule,
-                            SetOptions(merge: true),
-                          );
-                      Navigator.of(context).pop();
-                    } catch (error) {
-                      showErrorAlert(context, error);
-                    }
-                  }
-                : null,
-          ),
-        ],
+        actions: [],
         backgroundColor: PilllColors.white,
       ),
       body: SafeArea(
@@ -120,8 +80,7 @@ class _SchedulePostPage extends HookConsumerWidget {
               width: MediaQuery.of(context).size.width,
               child: Padding(
                 padding: const EdgeInsets.all(16.0),
-                child: ListView(
-                  controller: scrollController,
+                child: Column(
                   children: [
                     ConstrainedBox(
                       constraints: BoxConstraints(
@@ -158,6 +117,66 @@ class _SchedulePostPage extends HookConsumerWidget {
                       // NOTE: when configured subtitle, the space between elements becomes very narrow
                       contentPadding: const EdgeInsets.all(0),
                     ),
+                    const Spacer(),
+                    PrimaryButton(
+                      text: "保存",
+                      onPressed: isInvalid()
+                          ? null
+                          : () async {
+                              analytics.logEvent(name: "schedule_post_pressed");
+                              try {
+                                final localNotificationID = schedule.localNotification?.localNotificationID;
+                                if (localNotificationID != null) {
+                                  await localNotificationService.cancelNotification(localNotificationID: localNotificationID);
+                                }
+
+                                final Schedule newSchedule;
+                                if (isOnRemind.value) {
+                                  newSchedule = schedule.copyWith(
+                                    title: title.value,
+                                    localNotification: LocalNotification(
+                                      localNotificationID: Random().nextInt(scheduleNotificationIdentifierOffset),
+                                      remindDateTime: DateTime(state.date.year, state.date.month, state.date.day, 9),
+                                    ),
+                                  );
+                                  await localNotificationService.scheduleCalendarScheduleNotification(schedule: newSchedule);
+                                } else {
+                                  newSchedule = schedule.copyWith(
+                                    title: title.value,
+                                    localNotification: null,
+                                  );
+                                }
+
+                                await ref.read(databaseProvider).schedulesReference().doc(newSchedule.id).set(
+                                      newSchedule,
+                                      SetOptions(merge: true),
+                                    );
+                                Navigator.of(context).pop();
+                              } catch (error) {
+                                showErrorAlert(context, error);
+                              }
+                            },
+                    ),
+                    const SizedBox(height: 10),
+                    if (scheduleID != null)
+                      AppOutlinedButton(
+                        text: "削除",
+                        onPressed: () async {
+                          analytics.logEvent(name: "schedule_delete_pressed");
+                          try {
+                            final localNotificationID = schedule.localNotification?.localNotificationID;
+                            if (localNotificationID != null) {
+                              await localNotificationService.cancelNotification(localNotificationID: localNotificationID);
+                            }
+
+                            await ref.read(databaseProvider).schedulesReference().doc(scheduleID).delete();
+                            Navigator.of(context).pop();
+                          } catch (error) {
+                            showErrorAlert(context, error);
+                          }
+                        },
+                      ),
+                    const SizedBox(height: 20),
                   ],
                 ),
               ),
