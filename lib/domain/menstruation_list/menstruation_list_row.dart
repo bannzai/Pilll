@@ -9,14 +9,14 @@ import 'package:flutter/material.dart';
 
 class MenstruationListRow extends StatelessWidget {
   final Menstruation menstruation;
+  final Menstruation? previousMenstruation;
   final String? prefix;
-  final int? menstruationDuration;
 
   const MenstruationListRow({
     Key? key,
     required this.menstruation,
+    required this.previousMenstruation,
     required this.prefix,
-    required this.menstruationDuration,
   }) : super(key: key);
 
   @override
@@ -89,7 +89,7 @@ class MenstruationListRow extends StatelessWidget {
   }
 
   String get _duration {
-    final menstruationDuration = this.menstruationDuration;
+    final menstruationDuration = _menstruationDuration;
     if (menstruationDuration == null) {
       return "-";
     }
@@ -98,15 +98,12 @@ class MenstruationListRow extends StatelessWidget {
 
   double get _dotLineWidth {
     const double widthForDay = 10;
-    final menstruationDuration = this.menstruationDuration;
+    final menstruationDuration = _menstruationDuration;
     if (menstruationDuration == null) {
       return widthForDay * 28;
     }
     return widthForDay * menstruationDuration;
   }
 
-  static int diff(Menstruation lhs, Menstruation rhs) {
-    final range = DateRange(lhs.beginDate, rhs.beginDate);
-    return range.days.abs() - 1;
-  }
+  int? get _menstruationDuration => menstruationsDiff(menstruation, previousMenstruation);
 }
