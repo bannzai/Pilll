@@ -26,7 +26,7 @@ class PrimaryButton extends HookWidget {
       children: [
         ElevatedButton(
           child: ConstrainedBox(
-            constraints: const BoxConstraints(maxHeight: 44, minHeight: 44, minWidth: 180, maxWidth: 180),
+            constraints: const BoxConstraints(maxHeight: 44, minHeight: 44, minWidth: 180),
             child: Center(child: Text(text, style: ButtonTextStyle.main)),
           ),
           style: ButtonStyle(backgroundColor: MaterialStateProperty.resolveWith((statuses) {

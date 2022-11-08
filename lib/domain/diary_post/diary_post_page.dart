@@ -48,23 +48,11 @@ class DiaryPostPage extends HookConsumerWidget {
       return UniversalErrorPage(error: error, child: null, reload: () => ref.refresh(diaryPostAsyncStateProvider(_family())));
     }
 
-    final TextEditingController? textEditingController = useTextEditingController(text: state.diary.memo);
+    final textEditingController = useTextEditingController(text: state.diary.memo);
     final focusNode = useFocusNode();
     final scrollController = useScrollController();
+    final offset = MediaQuery.of(context).viewInsets.bottom + keyboardToolbarHeight + 60;
 
-    focusNode.addListener(() {
-      if (focusNode.hasFocus) {
-        // NOTE: The final keyboard height cannot be got at the moment of focus via MediaQuery.of(context).viewInsets.bottom. so it is delayed.
-        Future.delayed(const Duration(milliseconds: 100)).then((_) {
-          final overwrapHeight = focusNode.rect.bottom - (MediaQuery.of(context).viewInsets.bottom + keyboardToolbarHeight);
-          if (overwrapHeight > 0) {
-            scrollController.animateTo(overwrapHeight, duration: const Duration(milliseconds: 300), curve: Curves.easeInOut);
-          }
-        });
-      } else {
-        scrollController.animateTo(scrollController.position.minScrollExtent, duration: const Duration(milliseconds: 300), curve: Curves.easeInOut);
-      }
-    });
     return Scaffold(
       backgroundColor: PilllColors.white,
       resizeToAvoidBottomInset: false,
@@ -87,26 +75,19 @@ class DiaryPostPage extends HookConsumerWidget {
       body: SafeArea(
         child: Stack(
           children: [
-            SizedBox(
-              height: MediaQuery.of(context).size.height,
-              width: MediaQuery.of(context).size.width,
-              child: Padding(
-                padding: const EdgeInsets.all(16.0),
-                child: ListView(
-                  controller: scrollController,
-                  children: [
-                    Text(DateTimeFormatter.yearAndMonthAndDay(date), style: FontType.sBigTitle.merge(TextColorStyle.main)),
-                    ...[
-                      _physicalConditions(stateNotifier, state),
-                      _physicalConditionDetails(context, stateNotifier, state),
-                      _sex(stateNotifier, state),
-                      _memo(context, textEditingController, focusNode, stateNotifier, state),
-                    ].map((e) => _withContentSpacer(e)),
-                    SizedBox(
-                      height: MediaQuery.of(context).viewInsets.bottom + keyboardToolbarHeight + 60,
-                    ),
-                  ],
-                ),
+            Padding(
+              padding: EdgeInsets.fromLTRB(16, 16, 16, offset),
+              child: ListView(
+                controller: scrollController,
+                children: [
+                  Text(DateTimeFormatter.yearAndMonthAndDay(date), style: FontType.sBigTitle.merge(TextColorStyle.main)),
+                  ...[
+                    _physicalConditions(stateNotifier, state),
+                    _physicalConditionDetails(context, stateNotifier, state),
+                    _sex(stateNotifier, state),
+                    _memo(context, textEditingController, focusNode, stateNotifier, state),
+                  ].map((e) => _withContentSpacer(e)),
+                ],
               ),
             ),
             if (focusNode.hasFocus) _keyboardToolbar(context, focusNode),
@@ -282,7 +263,7 @@ class DiaryPostPage extends HookConsumerWidget {
 
   Widget _memo(
     BuildContext context,
-    TextEditingController? textEditingController,
+    TextEditingController textEditingController,
     FocusNode focusNode,
     DiaryPostStateNotifier store,
     DiaryPostState state,

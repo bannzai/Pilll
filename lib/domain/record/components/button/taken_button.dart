@@ -29,25 +29,28 @@ class TakenButton extends HookConsumerWidget {
   Widget build(BuildContext context, WidgetRef ref) {
     final store = ref.watch(recordPageStateNotifierProvider.notifier);
 
-    return PrimaryButton(
-      text: "飲んだ",
-      onPressed: () async {
-        try {
-          analytics.logEvent(name: "taken_button_pressed", parameters: {
-            "last_taken_pill_number": pillSheet.lastTakenPillNumber,
-            "today_pill_number": pillSheet.todayPillNumber,
-          });
-          // NOTE: batch.commit でリモートのDBに書き込む時間がかかるので事前にバッジを0にする
-          FlutterAppBadger.removeBadge();
-          requestInAppReview();
-          showReleaseNotePreDialog(context);
-          final updatedPillSheetGroup = await store.asyncAction.taken(pillSheetGroup: pillSheetGroup);
-          syncActivePillSheetValue(pillSheetGroup: updatedPillSheetGroup);
-        } catch (exception, stack) {
-          errorLogger.recordError(exception, stack);
-          showErrorAlert(context, exception);
-        }
-      },
+    return SizedBox(
+      width: 180,
+      child: PrimaryButton(
+        text: "飲んだ",
+        onPressed: () async {
+          try {
+            analytics.logEvent(name: "taken_button_pressed", parameters: {
+              "last_taken_pill_number": pillSheet.lastTakenPillNumber,
+              "today_pill_number": pillSheet.todayPillNumber,
+            });
+            // NOTE: batch.commit でリモートのDBに書き込む時間がかかるので事前にバッジを0にする
+            FlutterAppBadger.removeBadge();
+            requestInAppReview();
+            showReleaseNotePreDialog(context);
+            final updatedPillSheetGroup = await store.asyncAction.taken(pillSheetGroup: pillSheetGroup);
+            syncActivePillSheetValue(pillSheetGroup: updatedPillSheetGroup);
+          } catch (exception, stack) {
+            errorLogger.recordError(exception, stack);
+            showErrorAlert(context, exception);
+          }
+        },
+      ),
     );
   }
 }

@@ -1,3 +1,4 @@
+import 'package:collection/collection.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
 import 'package:pilll/analytics.dart';
 import 'package:pilll/components/organisms/calendar/band/calendar_band.dart';
@@ -140,24 +141,37 @@ void transitionWhenCalendarDayTapped(
     return;
   }
 
+  final diary = diaries.lastWhereOrNull((element) => isSameDay(element.date, date));
   if (isExistsSchedule(schedules, date)) {
-    showModalBottomSheet(
-      context: context,
-      builder: (context) => DiaryOrScheduleSheet(
-          showDiary: () => Navigator.of(context).push(DiaryPostPageRoute.route(date, null)),
-          showSchedule: () => Navigator.of(context).push(SchedulePostPageRoute.route(date))),
-    );
+    if (diary == null) {
+      showModalBottomSheet(
+        context: context,
+        builder: (context) => DiaryOrScheduleSheet(
+            showDiary: () => Navigator.of(context).push(DiaryPostPageRoute.route(date, null)),
+            showSchedule: () => Navigator.of(context).push(SchedulePostPageRoute.route(date))),
+      );
+    } else {
+      showModalBottomSheet(
+        context: context,
+        builder: (context) => DiaryOrScheduleSheet(
+            showDiary: () => _showConfirmDiarySheet(context, diary),
+            showSchedule: () => Navigator.of(context).push(SchedulePostPageRoute.route(date))),
+      );
+    }
     return;
   }
 
-  if (!isExistsPostedDiary(diaries, date)) {
+  if (diary == null) {
     Navigator.of(context).push(DiaryPostPageRoute.route(date, null));
   } else {
-    final diary = diaries.lastWhere((element) => isSameDay(element.date, date));
-    showModalBottomSheet(
-      context: context,
-      builder: (context) => ConfirmDiarySheet(diary),
-      backgroundColor: Colors.transparent,
-    );
+    _showConfirmDiarySheet(context, diary);
   }
+}
+
+void _showConfirmDiarySheet(BuildContext context, Diary diary) {
+  showModalBottomSheet(
+    context: context,
+    builder: (context) => ConfirmDiarySheet(diary),
+    backgroundColor: Colors.transparent,
+  );
 }
