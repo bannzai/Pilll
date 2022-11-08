@@ -34,7 +34,8 @@ class PillSheetGroup with _$PillSheetGroup {
     DisplayNumberSetting? displayNumberSetting,
   }) = _PillSheetGroup;
 
-  factory PillSheetGroup.fromJson(Map<String, dynamic> json) => _$PillSheetGroupFromJson(json);
+  factory PillSheetGroup.fromJson(Map<String, dynamic> json) =>
+      _$PillSheetGroupFromJson(json);
 
   PillSheet? get activedPillSheet {
     final filtered = pillSheets.where((element) => element.isActive);
@@ -42,7 +43,11 @@ class PillSheetGroup with _$PillSheetGroup {
   }
 
   PillSheetGroup replaced(PillSheet pillSheet) {
-    final index = pillSheets.indexWhere((element) => element.id == pillSheet.id);
+    if (pillSheet.id == null) {
+      throw const FormatException("ピルシートの置き換えによる更新できませんでした");
+    }
+    final index =
+        pillSheets.indexWhere((element) => element.id == pillSheet.id);
     if (index == -1) {
       throw FormatException("ピルシートの置き換えによる更新できませんでした。id: ${pillSheet.id}");
     }
@@ -63,10 +68,13 @@ class PillSheetGroup with _$PillSheetGroup {
       return 0;
     }
 
-    final passedPillCountForPillSheetTypes = summarizedPillCountWithPillSheetTypesToEndIndex(
-        pillSheetTypes: pillSheets.map((e) => e.pillSheetType).toList(), endIndex: activedPillSheet.groupIndex);
+    final passedPillCountForPillSheetTypes =
+        summarizedPillCountWithPillSheetTypesToEndIndex(
+            pillSheetTypes: pillSheets.map((e) => e.pillSheetType).toList(),
+            endIndex: activedPillSheet.groupIndex);
 
-    var sequentialTodayPillNumber = passedPillCountForPillSheetTypes + activedPillSheet.todayPillNumber;
+    var sequentialTodayPillNumber =
+        passedPillCountForPillSheetTypes + activedPillSheet.todayPillNumber;
 
     final displayNumberSetting = this.displayNumberSetting;
     if (displayNumberSetting != null) {
@@ -96,10 +104,13 @@ class PillSheetGroup with _$PillSheetGroup {
       return 0;
     }
 
-    final passedPillCountForPillSheetTypes = summarizedPillCountWithPillSheetTypesToEndIndex(
-        pillSheetTypes: pillSheets.map((e) => e.pillSheetType).toList(), endIndex: activedPillSheet.groupIndex);
+    final passedPillCountForPillSheetTypes =
+        summarizedPillCountWithPillSheetTypesToEndIndex(
+            pillSheetTypes: pillSheets.map((e) => e.pillSheetType).toList(),
+            endIndex: activedPillSheet.groupIndex);
 
-    var sequentialLastTakenPillNumber = passedPillCountForPillSheetTypes + activedPillSheet.lastTakenPillNumber;
+    var sequentialLastTakenPillNumber =
+        passedPillCountForPillSheetTypes + activedPillSheet.lastTakenPillNumber;
 
     final displayNumberSetting = this.displayNumberSetting;
     if (displayNumberSetting != null) {
@@ -122,7 +133,9 @@ class PillSheetGroup with _$PillSheetGroup {
 
   int get estimatedEndPillNumber {
     var estimatedEndPillNumber =
-        summarizedPillCountWithPillSheetTypesToEndIndex(pillSheetTypes: pillSheets.map((e) => e.pillSheetType).toList(), endIndex: pillSheets.length);
+        summarizedPillCountWithPillSheetTypesToEndIndex(
+            pillSheetTypes: pillSheets.map((e) => e.pillSheetType).toList(),
+            endIndex: pillSheets.length);
 
     final displayNumberSetting = this.displayNumberSetting;
     if (displayNumberSetting != null) {
@@ -152,5 +165,6 @@ class DisplayNumberSetting with _$DisplayNumberSetting {
     int? endPillNumber,
   }) = _DisplayNumberSetting;
 
-  factory DisplayNumberSetting.fromJson(Map<String, dynamic> json) => _$DisplayNumberSettingFromJson(json);
+  factory DisplayNumberSetting.fromJson(Map<String, dynamic> json) =>
+      _$DisplayNumberSettingFromJson(json);
 }

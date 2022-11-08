@@ -8,6 +8,7 @@ import 'package:pilll/entity/pill_sheet.codegen.dart';
 import 'package:pilll/entity/pill_sheet_group.codegen.dart';
 import 'package:pilll/entity/pill_sheet_type.dart';
 import 'package:pilll/entity/setting.codegen.dart';
+import 'package:pilll/database/pill_sheet.dart';
 import 'package:pilll/database/pill_sheet_group.dart';
 import 'package:pilll/database/pill_sheet_modified_history.dart';
 import 'package:pilll/database/setting.dart';
@@ -16,12 +17,14 @@ import 'package:riverpod/riverpod.dart';
 
 class RecordPageAsyncAction {
   final BatchFactory _batchFactory;
+  final PillSheetDatastore _pillSheetDatastore;
   final SettingDatastore _settingDatastore;
   final PillSheetModifiedHistoryDatastore _pillSheetModifiedHistoryDatastore;
   final PillSheetGroupDatastore _pillSheetGroupDatastore;
 
   RecordPageAsyncAction(
     this._batchFactory,
+    this._pillSheetDatastore,
     this._settingDatastore,
     this._pillSheetModifiedHistoryDatastore,
     this._pillSheetGroupDatastore,
@@ -37,6 +40,7 @@ class RecordPageAsyncAction {
     }
     final takePill = TakePill(
       batchFactory: _batchFactory,
+      pillSheetDatastore: _pillSheetDatastore,
       pillSheetModifiedHistoryDatastore: _pillSheetModifiedHistoryDatastore,
       pillSheetGroupDatastore: _pillSheetGroupDatastore,
     );
@@ -149,6 +153,10 @@ class RecordPageAsyncAction {
     }
 
     final batch = _batchFactory.batch();
+    _pillSheetDatastore.update(
+      batch,
+      updatedPillSheets,
+    );
     _pillSheetGroupDatastore.updateWithBatch(batch, updatedPillSheetGroup);
 
     final before = pillSheetGroup.pillSheets[updatedIndexses.last];
@@ -248,6 +256,7 @@ class RecordPageAsyncAction {
     final updatedPillSheetGroup = pillSheetGroup.replaced(updatedPillSheet);
 
     final batch = _batchFactory.batch();
+    _pillSheetDatastore.update(batch, updatedPillSheetGroup.pillSheets);
     _pillSheetGroupDatastore.updateWithBatch(batch, updatedPillSheetGroup);
     _pillSheetModifiedHistoryDatastore.add(
       batch,
@@ -279,6 +288,7 @@ class RecordPageAsyncAction {
     final updatedPillSheetGroup = pillSheetGroup.replaced(updatedPillSheet);
 
     final batch = _batchFactory.batch();
+    _pillSheetDatastore.update(batch, updatedPillSheetGroup.pillSheets);
     _pillSheetGroupDatastore.updateWithBatch(batch, updatedPillSheetGroup);
     _pillSheetModifiedHistoryDatastore.add(
       batch,
@@ -314,6 +324,7 @@ class RecordPageAsyncAction {
 
 final recordPageAsyncActionProvider = Provider((ref) => RecordPageAsyncAction(
       ref.watch(batchFactoryProvider),
+      ref.watch(pillSheetDatastoreProvider),
       ref.watch(settingDatastoreProvider),
       ref.watch(pillSheetModifiedHistoryDatastoreProvider),
       ref.watch(pillSheetGroupDatastoreProvider),

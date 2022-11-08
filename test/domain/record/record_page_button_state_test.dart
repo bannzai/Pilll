@@ -14,7 +14,6 @@ import 'package:hooks_riverpod/hooks_riverpod.dart';
 import 'package:intl/date_symbol_data_local.dart';
 import 'package:pilll/util/shared_preference/keys.dart';
 import 'package:shared_preferences/shared_preferences.dart';
-import 'package:uuid/uuid.dart';
 
 import '../../helper/mock.mocks.dart';
 
@@ -31,7 +30,6 @@ void main() {
     testWidgets('today pill not taken', (WidgetTester tester) async {
       final yesterday = today().subtract(const Duration(days: 1));
       final pillSheet = PillSheet(
-        id: const Uuid().v4(),
         typeInfo: PillSheetType.pillsheet_21.typeInfo,
         beginingDate: yesterday,
         lastTakenDate: yesterday,
@@ -57,7 +55,6 @@ void main() {
   });
   testWidgets('today pill is already taken', (WidgetTester tester) async {
     final pillSheet = PillSheet(
-      id: const Uuid().v4(),
       typeInfo: PillSheetType.pillsheet_21.typeInfo,
       beginingDate: today(),
       lastTakenDate: today(),
