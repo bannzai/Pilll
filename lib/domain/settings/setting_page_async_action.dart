@@ -4,7 +4,6 @@ import 'package:pilll/database/batch.dart';
 import 'package:pilll/entity/pill_sheet.codegen.dart';
 import 'package:pilll/entity/pill_sheet_group.codegen.dart';
 import 'package:pilll/entity/setting.codegen.dart';
-import 'package:pilll/database/pill_sheet.dart';
 import 'package:pilll/database/pill_sheet_group.dart';
 import 'package:pilll/database/pill_sheet_modified_history.dart';
 import 'package:pilll/database/setting.dart';
@@ -14,7 +13,6 @@ final settingPageAsyncActionProvider = Provider(
   (ref) => SettingPageAsyncAction(
     ref.watch(batchFactoryProvider),
     ref.watch(settingDatastoreProvider),
-    ref.watch(pillSheetDatastoreProvider),
     ref.watch(pillSheetModifiedHistoryDatastoreProvider),
     ref.watch(pillSheetGroupDatastoreProvider),
   ),
@@ -23,14 +21,12 @@ final settingPageAsyncActionProvider = Provider(
 class SettingPageAsyncAction {
   final BatchFactory _batchFactory;
   final SettingDatastore _settingDatastore;
-  final PillSheetDatastore _pillSheetDatastore;
   final PillSheetModifiedHistoryDatastore _pillSheetModifiedHistoryDatastore;
   final PillSheetGroupDatastore _pillSheetGroupDatastore;
 
   SettingPageAsyncAction(
     this._batchFactory,
     this._settingDatastore,
-    this._pillSheetDatastore,
     this._pillSheetModifiedHistoryDatastore,
     this._pillSheetGroupDatastore,
   );
@@ -45,8 +41,7 @@ class SettingPageAsyncAction {
     if (reminderTimes.length < ReminderTime.minimumCount) {
       throw Exception("通知時刻は最低${ReminderTime.minimumCount}件必要です");
     }
-    await _settingDatastore
-        .update(setting.copyWith(reminderTimes: reminderTimes));
+    await _settingDatastore.update(setting.copyWith(reminderTimes: reminderTimes));
   }
 
   Future<void> addReminderTimes({
@@ -78,14 +73,11 @@ class SettingPageAsyncAction {
   }
 
   Future<void> modifyIsOnReminder(bool isOnReminder, Setting setting) async {
-    await _settingDatastore
-        .update(setting.copyWith(isOnReminder: isOnReminder));
+    await _settingDatastore.update(setting.copyWith(isOnReminder: isOnReminder));
   }
 
-  Future<void> modifyIsOnNotifyInNotTakenDuration(
-      bool isOn, Setting setting) async {
-    await _settingDatastore
-        .update(setting.copyWith(isOnNotifyInNotTakenDuration: isOn));
+  Future<void> modifyIsOnNotifyInNotTakenDuration(bool isOn, Setting setting) async {
+    await _settingDatastore.update(setting.copyWith(isOnNotifyInNotTakenDuration: isOn));
   }
 
   Future<void> deletePillSheet({
@@ -93,74 +85,51 @@ class SettingPageAsyncAction {
     required PillSheet activedPillSheet,
   }) async {
     final batch = _batchFactory.batch();
-    final updatedPillSheet =
-        _pillSheetDatastore.delete(batch, activedPillSheet);
-    final history = PillSheetModifiedHistoryServiceActionFactory
-        .createDeletedPillSheetAction(
+    final updatedPillSheet = activedPillSheet.copyWith(deletedAt: DateTime.now());
+    final history = PillSheetModifiedHistoryServiceActionFactory.createDeletedPillSheetAction(
       pillSheetGroupID: latestPillSheetGroup.id,
       pillSheetIDs: latestPillSheetGroup.pillSheetIDs,
     );
     _pillSheetModifiedHistoryDatastore.add(batch, history);
-    _pillSheetGroupDatastore.delete(
-        batch, latestPillSheetGroup.replaced(updatedPillSheet));
+    _pillSheetGroupDatastore.delete(batch, latestPillSheetGroup.replaced(updatedPillSheet));
 
     return batch.commit();
   }
 
-  Future<void> modifiyIsAutomaticallyCreatePillSheet(
-      bool isOn, Setting setting) async {
-    await _settingDatastore
-        .update(setting.copyWith(isAutomaticallyCreatePillSheet: isOn));
+  Future<void> modifiyIsAutomaticallyCreatePillSheet(bool isOn, Setting setting) async {
+    await _settingDatastore.update(setting.copyWith(isAutomaticallyCreatePillSheet: isOn));
   }
 
-  Future<void> reminderNotificationWordSubmit(
-      String word, Setting setting) async {
-    var reminderNotificationCustomization =
-        setting.reminderNotificationCustomization;
-    reminderNotificationCustomization =
-        reminderNotificationCustomization.copyWith(word: word);
+  Future<void> reminderNotificationWordSubmit(String word, Setting setting) async {
+    var reminderNotificationCustomization = setting.reminderNotificationCustomization;
+    reminderNotificationCustomization = reminderNotificationCustomization.copyWith(word: word);
 
-    await _settingDatastore.update(setting.copyWith(
-        reminderNotificationCustomization: reminderNotificationCustomization));
+    await _settingDatastore.update(setting.copyWith(reminderNotificationCustomization: reminderNotificationCustomization));
   }
 
-  Future<void> setIsInVisibleReminderDate(
-      bool isInVisibleReminderDate, Setting setting) async {
-    var reminderNotificationCustomization =
-        setting.reminderNotificationCustomization;
-    reminderNotificationCustomization = reminderNotificationCustomization
-        .copyWith(isInVisibleReminderDate: isInVisibleReminderDate);
+  Future<void> setIsInVisibleReminderDate(bool isInVisibleReminderDate, Setting setting) async {
+    var reminderNotificationCustomization = setting.reminderNotificationCustomization;
+    reminderNotificationCustomization = reminderNotificationCustomization.copyWith(isInVisibleReminderDate: isInVisibleReminderDate);
 
-    await _settingDatastore.update(setting.copyWith(
-        reminderNotificationCustomization: reminderNotificationCustomization));
+    await _settingDatastore.update(setting.copyWith(reminderNotificationCustomization: reminderNotificationCustomization));
   }
 
-  Future<void> setIsInVisiblePillNumber(
-      bool isInVisiblePillNumber, Setting setting) async {
-    var reminderNotificationCustomization =
-        setting.reminderNotificationCustomization;
-    reminderNotificationCustomization = reminderNotificationCustomization
-        .copyWith(isInVisiblePillNumber: isInVisiblePillNumber);
+  Future<void> setIsInVisiblePillNumber(bool isInVisiblePillNumber, Setting setting) async {
+    var reminderNotificationCustomization = setting.reminderNotificationCustomization;
+    reminderNotificationCustomization = reminderNotificationCustomization.copyWith(isInVisiblePillNumber: isInVisiblePillNumber);
 
-    await _settingDatastore.update(setting.copyWith(
-        reminderNotificationCustomization: reminderNotificationCustomization));
+    await _settingDatastore.update(setting.copyWith(reminderNotificationCustomization: reminderNotificationCustomization));
   }
 
-  Future<void> setIsInVisibleDescription(
-      bool isInVisibleDescription, Setting setting) async {
-    var reminderNotificationCustomization =
-        setting.reminderNotificationCustomization;
-    reminderNotificationCustomization = reminderNotificationCustomization
-        .copyWith(isInVisibleDescription: isInVisibleDescription);
+  Future<void> setIsInVisibleDescription(bool isInVisibleDescription, Setting setting) async {
+    var reminderNotificationCustomization = setting.reminderNotificationCustomization;
+    reminderNotificationCustomization = reminderNotificationCustomization.copyWith(isInVisibleDescription: isInVisibleDescription);
 
-    await _settingDatastore.update(setting.copyWith(
-        reminderNotificationCustomization: reminderNotificationCustomization));
+    await _settingDatastore.update(setting.copyWith(reminderNotificationCustomization: reminderNotificationCustomization));
   }
 
-  Future<void> updateTimezoneDatabaseName(
-      {required Setting setting, required String timezoneDatabaseName}) async {
-    final updated =
-        setting.copyWith(timezoneDatabaseName: timezoneDatabaseName);
+  Future<void> updateTimezoneDatabaseName({required Setting setting, required String timezoneDatabaseName}) async {
+    final updated = setting.copyWith(timezoneDatabaseName: timezoneDatabaseName);
     await _settingDatastore.update(updated);
   }
 }

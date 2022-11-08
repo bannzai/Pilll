@@ -7,7 +7,6 @@ import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
 import 'package:pilll/entity/diary_setting.codegen.dart';
 import 'package:pilll/entity/menstruation.codegen.dart';
-import 'package:pilll/entity/pill_sheet.codegen.dart';
 import 'package:pilll/entity/pill_sheet_group.codegen.dart';
 import 'package:pilll/entity/pill_sheet_modified_history.codegen.dart';
 import 'package:pilll/entity/pilll_ads.codegen.dart';
@@ -28,7 +27,6 @@ final databaseProvider = Provider<DatabaseConnection>((ref) {
 abstract class _CollectionPath {
   static const String users = "users";
   static String settings(String userID) => "$users/$userID/settings";
-  static String pillSheets(String userID) => "$users/$userID/pill_sheets";
   static String pillSheetGroups(String userID) => "$users/$userID/pill_sheet_groups";
   static String diaries(String userID) => "$users/$userID/diaries";
   static String userPrivates(String userID) => "$users/$userID/privates";
@@ -58,19 +56,6 @@ class DatabaseConnection {
       FirebaseFirestore.instance.collection(_CollectionPath.settings(_userID)).doc("diary").withConverter(
             fromFirestore: _diarySettingFromFirestore,
             toFirestore: _diarySettingToFirestore,
-          );
-
-  final FromFirestore<PillSheet> _pillSheetFromFirestore = (snapshot, options) => PillSheet.fromJson(snapshot.data()!);
-  final ToFirestore<PillSheet> _pillSheetToFirestore = (pillSheet, options) => pillSheet.toJson();
-  CollectionReference<PillSheet> pillSheetsReference() => FirebaseFirestore.instance.collection(_CollectionPath.pillSheets(_userID)).withConverter(
-        fromFirestore: _pillSheetFromFirestore,
-        toFirestore: _pillSheetToFirestore,
-      );
-
-  DocumentReference<PillSheet> pillSheetReference(String pillSheetID) =>
-      FirebaseFirestore.instance.collection(_CollectionPath.pillSheets(_userID)).doc(pillSheetID).withConverter(
-            fromFirestore: _pillSheetFromFirestore,
-            toFirestore: _pillSheetToFirestore,
           );
 
   final FromFirestore<Diary> _diaryFromFirestore = (snapshot, options) => Diary.fromJson(snapshot.data()!);

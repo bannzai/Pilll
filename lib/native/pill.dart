@@ -5,7 +5,6 @@ import 'package:pilll/analytics.dart';
 import 'package:pilll/database/batch.dart';
 import 'package:pilll/database/database.dart';
 import 'package:pilll/domain/record/util/take_pill.dart';
-import 'package:pilll/database/pill_sheet.dart';
 import 'package:pilll/database/pill_sheet_group.dart';
 import 'package:pilll/database/pill_sheet_modified_history.dart';
 import 'package:pilll/entity/pill_sheet_group.codegen.dart';
@@ -22,7 +21,6 @@ Future<PillSheetGroup?> recordPill() async {
   }
 
   final database = DatabaseConnection(firebaseUser.uid);
-  final pillSheetDatastore = PillSheetDatastore(database);
   final pillSheetModifiedHistoryDatastore = PillSheetModifiedHistoryDatastore(database);
   final pillSheetGroupDatastore = PillSheetGroupDatastore(database);
   final pillSheetGroup = await pillSheetGroupDatastore.fetchLatest();
@@ -42,7 +40,6 @@ Future<PillSheetGroup?> recordPill() async {
 
   final takePill = TakePill(
     batchFactory: batchFactory,
-    pillSheetDatastore: pillSheetDatastore,
     pillSheetModifiedHistoryDatastore: pillSheetModifiedHistoryDatastore,
     pillSheetGroupDatastore: pillSheetGroupDatastore,
   );
