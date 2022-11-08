@@ -5,7 +5,6 @@ import 'package:freezed_annotation/freezed_annotation.dart';
 import 'package:pilll/entity/pill_sheet.codegen.dart';
 import 'package:pilll/entity/pill_sheet_type.dart';
 import 'package:pilll/entity/setting.codegen.dart';
-import 'package:uuid/uuid.dart';
 
 part 'initial_setting_state.codegen.freezed.dart';
 
@@ -47,7 +46,9 @@ class InitialSettingState with _$InitialSettingState {
 
   Future<Setting> buildSetting() async {
     const menstruationDuration = 4;
-    final maxPillCount = pillSheetTypes.map((e) => e.totalCount).reduce((value, element) => value + element);
+    final maxPillCount = pillSheetTypes
+        .map((e) => e.totalCount)
+        .reduce((value, element) => value + element);
     final pillNumberForFromMenstruation = maxPillCount - menstruationDuration;
 
     final setting = Setting(
@@ -68,7 +69,6 @@ class InitialSettingState with _$InitialSettingState {
   }) {
     final pillSheetType = pillSheetTypes[pageIndex];
     return PillSheet(
-      id: const Uuid().v4(),
       groupIndex: pageIndex,
       beginingDate: _beginingDate(
         pageIndex: pageIndex,
@@ -92,15 +92,20 @@ class InitialSettingState with _$InitialSettingState {
     if (pageIndex <= todayPillNumber.pageIndex) {
       // Left side from todayPillNumber.pageIndex
       // Or current pageIndex == todayPillNumber.pageIndex
-      final passedTotalCountElement = pillSheetTypes.sublist(0, todayPillNumber.pageIndex - pageIndex).map((e) => e.totalCount);
+      final passedTotalCountElement = pillSheetTypes
+          .sublist(0, todayPillNumber.pageIndex - pageIndex)
+          .map((e) => e.totalCount);
       final int passedTotalCount;
       if (passedTotalCountElement.isEmpty) {
         passedTotalCount = 0;
       } else {
-        passedTotalCount = passedTotalCountElement.reduce((value, element) => value + element);
+        passedTotalCount =
+            passedTotalCountElement.reduce((value, element) => value + element);
       }
 
-      return today().subtract(Duration(days: passedTotalCount + (todayPillNumber.pillNumberIntoPillSheet - 1)));
+      return today().subtract(Duration(
+          days: passedTotalCount +
+              (todayPillNumber.pillNumberIntoPillSheet - 1)));
     } else {
       // Right Side from todayPillNumber.pageIndex
       final beforePillSheetBeginingDate = _beginingDate(
@@ -109,7 +114,8 @@ class InitialSettingState with _$InitialSettingState {
         pillSheetTypes: pillSheetTypes,
       );
       final beforePillSheetType = pillSheetTypes[pageIndex - 1];
-      return beforePillSheetBeginingDate.add(Duration(days: beforePillSheetType.totalCount));
+      return beforePillSheetBeginingDate
+          .add(Duration(days: beforePillSheetType.totalCount));
     }
   }
 
@@ -118,7 +124,9 @@ class InitialSettingState with _$InitialSettingState {
     required InitialSettingTodayPillNumber todayPillNumber,
     required List<PillSheetType> pillSheetTypes,
   }) {
-    if (pageIndex == 0 && todayPillNumber.pageIndex == 0 && todayPillNumber.pillNumberIntoPillSheet == 1) {
+    if (pageIndex == 0 &&
+        todayPillNumber.pageIndex == 0 &&
+        todayPillNumber.pillNumberIntoPillSheet == 1) {
       return null;
     }
     final pillSheetType = pillSheetTypes[pageIndex];
@@ -145,7 +153,8 @@ class InitialSettingState with _$InitialSettingState {
   DateTime reminderDateTime(int index) {
     var t = DateTime.now();
     final reminderTime = reminderTimes[index];
-    return DateTime(t.year, t.month, t.day, reminderTime.hour, reminderTime.minute, t.second, t.millisecond, t.microsecond);
+    return DateTime(t.year, t.month, t.day, reminderTime.hour,
+        reminderTime.minute, t.second, t.millisecond, t.microsecond);
   }
 
   int? selectedTodayPillNumberIntoPillSheet({required int pageIndex}) {

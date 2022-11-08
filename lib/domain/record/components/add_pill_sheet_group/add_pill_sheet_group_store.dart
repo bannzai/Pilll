@@ -7,19 +7,21 @@ import 'package:pilll/entity/pill_sheet.codegen.dart';
 import 'package:pilll/entity/pill_sheet_group.codegen.dart';
 import 'package:pilll/entity/pill_sheet_type.dart';
 import 'package:pilll/entity/setting.codegen.dart';
+import 'package:pilll/database/pill_sheet.dart';
 import 'package:pilll/database/pill_sheet_group.dart';
 import 'package:pilll/database/pill_sheet_modified_history.dart';
 import 'package:pilll/database/setting.dart';
 import 'package:pilll/util/datetime/day.dart';
 import 'package:riverpod/riverpod.dart';
-import 'package:uuid/uuid.dart';
 
-final addPillSheetGroupStateStoreProvider = StateNotifierProvider.autoDispose<AddPillSheetGroupStateStore, AddPillSheetGroupState>(
+final addPillSheetGroupStateStoreProvider = StateNotifierProvider.autoDispose<
+    AddPillSheetGroupStateStore, AddPillSheetGroupState>(
   (ref) {
     return AddPillSheetGroupStateStore(
       ref.watch(recordPageAsyncStateProvider).value!.pillSheetGroup,
       ref.watch(recordPageAsyncStateProvider).value!.appearanceMode,
       ref.watch(recordPageAsyncStateProvider).value!.setting,
+      ref.watch(pillSheetDatastoreProvider),
       ref.watch(pillSheetGroupDatastoreProvider),
       ref.watch(settingDatastoreProvider),
       ref.watch(pillSheetModifiedHistoryDatastoreProvider),
@@ -28,7 +30,9 @@ final addPillSheetGroupStateStoreProvider = StateNotifierProvider.autoDispose<Ad
   },
 );
 
-class AddPillSheetGroupStateStore extends StateNotifier<AddPillSheetGroupState> {
+class AddPillSheetGroupStateStore
+    extends StateNotifier<AddPillSheetGroupState> {
+  final PillSheetDatastore _pillSheetDatastore;
   final PillSheetGroupDatastore _pillSheetGroupDatastore;
   final SettingDatastore _settingDatastore;
   final PillSheetModifiedHistoryDatastore _pillSheetModifiedHistoryDatastore;
@@ -37,6 +41,7 @@ class AddPillSheetGroupStateStore extends StateNotifier<AddPillSheetGroupState> 
     PillSheetGroup? pillSheetGroup,
     PillSheetAppearanceMode pillSheetAppearanceMode,
     Setting? setting,
+    this._pillSheetDatastore,
     this._pillSheetGroupDatastore,
     this._settingDatastore,
     this._pillSheetModifiedHistoryDatastore,
@@ -48,11 +53,13 @@ class AddPillSheetGroupStateStore extends StateNotifier<AddPillSheetGroupState> 
         ));
 
   void addPillSheetType(PillSheetType pillSheetType, Setting setting) {
-    final updatedSetting = setting.copyWith(pillSheetTypes: setting.pillSheetTypes..add(pillSheetType));
+    final updatedSetting = setting.copyWith(
+        pillSheetTypes: setting.pillSheetTypes..add(pillSheetType));
     state = state.copyWith(setting: updatedSetting);
   }
 
-  void changePillSheetType(int index, PillSheetType pillSheetType, Setting setting) {
+  void changePillSheetType(
+      int index, PillSheetType pillSheetType, Setting setting) {
     final copied = [...setting.pillSheetTypes];
     copied[index] = pillSheetType;
 
@@ -81,27 +88,31 @@ class AddPillSheetGroupStateStore extends StateNotifier<AddPillSheetGroupState> 
     final batch = _batchFactory.batch();
 
     final n = now();
-    final pillSheets = setting.pillSheetTypes.asMap().keys.map((pageIndex) {
-      final pillSheetType = setting.pillSheetEnumTypes[pageIndex];
-      final offset = summarizedPillCountWithPillSheetTypesToEndIndex(pillSheetTypes: setting.pillSheetEnumTypes, endIndex: pageIndex);
-      return PillSheet(
-        id: const Uuid().v4(),
-        typeInfo: pillSheetType.typeInfo,
-        beginingDate: n.add(
-          Duration(days: offset),
-        ),
-        groupIndex: pageIndex,
-      );
-    }).toList();
+    final createdPillSheets = _pillSheetDatastore.register(
+      batch,
+      setting.pillSheetTypes.asMap().keys.map((pageIndex) {
+        final pillSheetType = setting.pillSheetEnumTypes[pageIndex];
+        final offset = summarizedPillCountWithPillSheetTypesToEndIndex(
+            pillSheetTypes: setting.pillSheetEnumTypes, endIndex: pageIndex);
+        return PillSheet(
+          typeInfo: pillSheetType.typeInfo,
+          beginingDate: n.add(
+            Duration(days: offset),
+          ),
+          groupIndex: pageIndex,
+        );
+      }).toList(),
+    );
 
-    final pillSheetIDs = pillSheets.map((e) => e.id).toList();
+    final pillSheetIDs = createdPillSheets.map((e) => e.id!).toList();
     final createdPillSheetGroup = _pillSheetGroupDatastore.register(
       batch,
       PillSheetGroup(
         pillSheetIDs: pillSheetIDs,
-        pillSheets: pillSheets,
+        pillSheets: createdPillSheets,
         displayNumberSetting: () {
-          if (state.pillSheetAppearanceMode == PillSheetAppearanceMode.sequential) {
+          if (state.pillSheetAppearanceMode ==
+              PillSheetAppearanceMode.sequential) {
             if (state.displayNumberSetting != null) {
               return state.displayNumberSetting;
             }
@@ -121,7 +132,8 @@ class AddPillSheetGroupStateStore extends StateNotifier<AddPillSheetGroupState> 
       ),
     );
 
-    final history = PillSheetModifiedHistoryServiceActionFactory.createCreatedPillSheetAction(
+    final history = PillSheetModifiedHistoryServiceActionFactory
+        .createCreatedPillSheetAction(
       pillSheetIDs: pillSheetIDs,
       pillSheetGroupID: createdPillSheetGroup.id,
     );

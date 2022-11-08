@@ -14,7 +14,6 @@ import 'package:pilll/service/day.dart';
 import 'package:pilll/domain/menstruation/menstruation_page_state_notifier.dart';
 import 'package:pilll/util/datetime/day.dart';
 import 'package:shared_preferences/shared_preferences.dart';
-import 'package:uuid/uuid.dart';
 
 import '../../helper/delay.dart';
 import '../../helper/mock.mocks.dart';
@@ -168,7 +167,6 @@ void main() {
           pillSheetIDs: ["1"],
           pillSheets: [
             PillSheet(
-              id: const Uuid().v4(),
               typeInfo: PillSheetType.pillsheet_21.typeInfo,
               beginingDate: DateTime(2021, 04, 22),
             ),
@@ -230,7 +228,6 @@ void main() {
           pillSheetIDs: ["1"],
           pillSheets: [
             PillSheet(
-              id: const Uuid().v4(),
               typeInfo: PillSheetType.pillsheet_21.typeInfo,
               beginingDate: DateTime(2021, 04, 07),
             ),

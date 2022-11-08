@@ -9,13 +9,13 @@ import 'package:flutter_test/flutter_test.dart';
 import 'package:mockito/mockito.dart';
 import 'package:pilll/entity/setting.codegen.dart';
 import 'package:pilll/service/day.dart';
+import 'package:pilll/database/pill_sheet.dart';
 import 'package:pilll/database/pill_sheet_group.dart';
 import 'package:pilll/database/pill_sheet_modified_history.dart';
 import 'package:pilll/database/setting.dart';
 import 'package:pilll/util/datetime/day.dart';
 import 'package:riverpod/riverpod.dart';
 import 'package:shared_preferences/shared_preferences.dart';
-import 'package:uuid/uuid.dart';
 
 import '../../helper/fake.dart';
 import '../../helper/mock.mocks.dart';
@@ -38,12 +38,15 @@ void main() {
       when(batchFactory.batch()).thenReturn(batch);
 
       final pillSheet = PillSheet(
-        id: const Uuid().v4(),
         typeInfo: PillSheetType.pillsheet_28_0.typeInfo,
         beginingDate: _today,
         groupIndex: 0,
         lastTakenDate: null,
       );
+      final pillSheetDatastore = MockPillSheetDatastore();
+      when(pillSheetDatastore.register(batch, [pillSheet])).thenReturn([
+        pillSheet.copyWith(id: "sheet_id"),
+      ]);
 
       final pillSheetGroup = PillSheetGroup(
         pillSheetIDs: ["sheet_id"],
@@ -89,6 +92,7 @@ void main() {
           recordPageAsyncStateProvider.overrideWithValue(AsyncValue.data(recordPageState)),
           batchFactoryProvider.overrideWithValue(batchFactory),
           settingDatastoreProvider.overrideWithValue(settingDatastore),
+          pillSheetDatastoreProvider.overrideWithValue(pillSheetDatastore),
           pillSheetModifiedHistoryDatastoreProvider.overrideWithValue(pillSheetModifiedHistoryDatastore),
           pillSheetGroupDatastoreProvider.overrideWithValue(pillSheetGroupDatastore),
         ],
@@ -109,19 +113,20 @@ void main() {
       when(batchFactory.batch()).thenReturn(batch);
 
       final pillSheet = PillSheet(
-        id: const Uuid().v4(),
         typeInfo: PillSheetType.pillsheet_28_0.typeInfo,
         beginingDate: _today,
         groupIndex: 0,
         lastTakenDate: null,
       );
       final pillSheet2 = PillSheet(
-        id: const Uuid().v4(),
         typeInfo: PillSheetType.pillsheet_21.typeInfo,
         beginingDate: _today.add(const Duration(days: 28)),
         lastTakenDate: null,
         groupIndex: 1,
       );
+      final pillSheetDatastore = MockPillSheetDatastore();
+      when(pillSheetDatastore.register(batch, [pillSheet, pillSheet2]))
+          .thenReturn([pillSheet.copyWith(id: "sheet_id"), pillSheet2.copyWith(id: "sheet_id2")]);
 
       final pillSheetGroup = PillSheetGroup(
         pillSheetIDs: ["sheet_id", "sheet_id2"],
@@ -166,6 +171,7 @@ void main() {
           recordPageAsyncStateProvider.overrideWithValue(AsyncValue.data(recordPageState)),
           batchFactoryProvider.overrideWithValue(batchFactory),
           settingDatastoreProvider.overrideWithValue(settingDatastore),
+          pillSheetDatastoreProvider.overrideWithValue(pillSheetDatastore),
           pillSheetModifiedHistoryDatastoreProvider.overrideWithValue(pillSheetModifiedHistoryDatastore),
           pillSheetGroupDatastoreProvider.overrideWithValue(pillSheetGroupDatastore),
         ],
@@ -194,6 +200,8 @@ void main() {
         groupIndex: 0,
         lastTakenDate: null,
       );
+      final pillSheetDatastore = MockPillSheetDatastore();
+      when(pillSheetDatastore.update(batch, [pillSheet.copyWith(lastTakenDate: _today)])).thenReturn(null);
 
       final pillSheetGroup = PillSheetGroup(
         id: "group_id",
@@ -242,6 +250,7 @@ void main() {
         overrides: [
           batchFactoryProvider.overrideWithValue(batchFactory),
           settingDatastoreProvider.overrideWithValue(settingDatastore),
+          pillSheetDatastoreProvider.overrideWithValue(pillSheetDatastore),
           pillSheetModifiedHistoryDatastoreProvider.overrideWithValue(pillSheetModifiedHistoryDatastore),
           pillSheetGroupDatastoreProvider.overrideWithValue(pillSheetGroupDatastore),
         ],
@@ -277,6 +286,11 @@ void main() {
         groupIndex: 1,
         lastTakenDate: null,
       );
+      final pillSheetDatastore = MockPillSheetDatastore();
+      when(pillSheetDatastore.update(batch, [
+        pillSheet.copyWith(lastTakenDate: _today),
+        pillSheet2,
+      ])).thenReturn(null);
 
       final pillSheetGroup = PillSheetGroup(
         id: "group_id",
@@ -328,6 +342,7 @@ void main() {
         overrides: [
           batchFactoryProvider.overrideWithValue(batchFactory),
           settingDatastoreProvider.overrideWithValue(settingDatastore),
+          pillSheetDatastoreProvider.overrideWithValue(pillSheetDatastore),
           pillSheetModifiedHistoryDatastoreProvider.overrideWithValue(pillSheetModifiedHistoryDatastore),
           pillSheetGroupDatastoreProvider.overrideWithValue(pillSheetGroupDatastore),
         ],
@@ -363,6 +378,11 @@ void main() {
         groupIndex: 1,
         lastTakenDate: null,
       );
+      final pillSheetDatastore = MockPillSheetDatastore();
+      when(pillSheetDatastore.update(batch, [
+        pillSheet,
+        pillSheet2.copyWith(lastTakenDate: _today),
+      ])).thenReturn(null);
 
       final pillSheetGroup = PillSheetGroup(
         id: "group_id",
@@ -414,6 +434,7 @@ void main() {
         overrides: [
           batchFactoryProvider.overrideWithValue(batchFactory),
           settingDatastoreProvider.overrideWithValue(settingDatastore),
+          pillSheetDatastoreProvider.overrideWithValue(pillSheetDatastore),
           pillSheetModifiedHistoryDatastoreProvider.overrideWithValue(pillSheetModifiedHistoryDatastore),
           pillSheetGroupDatastoreProvider.overrideWithValue(pillSheetGroupDatastore),
         ],
@@ -449,6 +470,10 @@ void main() {
         groupIndex: 1,
         lastTakenDate: null,
       );
+      final pillSheetDatastore = MockPillSheetDatastore();
+      when(pillSheetDatastore
+              .update(batch, [pillSheet.copyWith(lastTakenDate: DateTime.parse("2020-09-18 23:59:59")), pillSheet2.copyWith(lastTakenDate: _today)]))
+          .thenReturn(null);
 
       final pillSheetGroup = PillSheetGroup(
         id: "group_id",
@@ -501,6 +526,7 @@ void main() {
         overrides: [
           batchFactoryProvider.overrideWithValue(batchFactory),
           settingDatastoreProvider.overrideWithValue(settingDatastore),
+          pillSheetDatastoreProvider.overrideWithValue(pillSheetDatastore),
           pillSheetModifiedHistoryDatastoreProvider.overrideWithValue(pillSheetModifiedHistoryDatastore),
           pillSheetGroupDatastoreProvider.overrideWithValue(pillSheetGroupDatastore),
         ],
@@ -534,6 +560,8 @@ void main() {
           groupIndex: 0,
           lastTakenDate: today(),
         );
+        final pillSheetDatastore = MockPillSheetDatastore();
+        when(pillSheetDatastore.update(batch, [pillSheet.copyWith(lastTakenDate: yesterday.subtract(const Duration(days: 1)))])).thenReturn(null);
 
         final pillSheetGroup = PillSheetGroup(
           id: "group_id",
@@ -581,6 +609,7 @@ void main() {
           overrides: [
             batchFactoryProvider.overrideWithValue(batchFactory),
             settingDatastoreProvider.overrideWithValue(settingDatastore),
+            pillSheetDatastoreProvider.overrideWithValue(pillSheetDatastore),
             pillSheetModifiedHistoryDatastoreProvider.overrideWithValue(pillSheetModifiedHistoryDatastore),
             pillSheetGroupDatastoreProvider.overrideWithValue(pillSheetGroupDatastore),
           ],
@@ -610,6 +639,8 @@ void main() {
           groupIndex: 0,
           lastTakenDate: today(),
         );
+        final pillSheetDatastore = MockPillSheetDatastore();
+        when(pillSheetDatastore.update(batch, [pillSheet.copyWith(lastTakenDate: yesterday)])).thenReturn(null);
 
         final pillSheetGroup = PillSheetGroup(
           id: "group_id",
@@ -657,6 +688,7 @@ void main() {
           overrides: [
             batchFactoryProvider.overrideWithValue(batchFactory),
             settingDatastoreProvider.overrideWithValue(settingDatastore),
+            pillSheetDatastoreProvider.overrideWithValue(pillSheetDatastore),
             pillSheetModifiedHistoryDatastoreProvider.overrideWithValue(pillSheetModifiedHistoryDatastore),
             pillSheetGroupDatastoreProvider.overrideWithValue(pillSheetGroupDatastore),
           ],
@@ -693,6 +725,11 @@ void main() {
             ),
           ],
         );
+        final pillSheetDatastore = MockPillSheetDatastore();
+        when(pillSheetDatastore.update(
+          batch,
+          [pillSheet.copyWith(lastTakenDate: beginDate.subtract(const Duration(days: 1)), restDurations: [])],
+        )).thenReturn(null);
 
         final pillSheetGroup = PillSheetGroup(
           id: "group_id",
@@ -741,6 +778,7 @@ void main() {
           overrides: [
             batchFactoryProvider.overrideWithValue(batchFactory),
             settingDatastoreProvider.overrideWithValue(settingDatastore),
+            pillSheetDatastoreProvider.overrideWithValue(pillSheetDatastore),
             pillSheetModifiedHistoryDatastoreProvider.overrideWithValue(pillSheetModifiedHistoryDatastore),
             pillSheetGroupDatastoreProvider.overrideWithValue(pillSheetGroupDatastore),
           ],
@@ -778,6 +816,11 @@ void main() {
             ),
           ],
         );
+        final pillSheetDatastore = MockPillSheetDatastore();
+        when(pillSheetDatastore.update(
+          batch,
+          [pillSheet.copyWith(lastTakenDate: yesterday)],
+        )).thenReturn(null);
 
         final pillSheetGroup = PillSheetGroup(
           id: "group_id",
@@ -823,6 +866,7 @@ void main() {
           overrides: [
             batchFactoryProvider.overrideWithValue(batchFactory),
             settingDatastoreProvider.overrideWithValue(settingDatastore),
+            pillSheetDatastoreProvider.overrideWithValue(pillSheetDatastore),
             pillSheetModifiedHistoryDatastoreProvider.overrideWithValue(pillSheetModifiedHistoryDatastore),
             pillSheetGroupDatastoreProvider.overrideWithValue(pillSheetGroupDatastore),
           ],
@@ -863,6 +907,12 @@ void main() {
           lastTakenDate: _today,
           groupIndex: 1,
         );
+
+        final pillSheetDatastore = MockPillSheetDatastore();
+        when(pillSheetDatastore.update(batch, [
+          pillSheet,
+          pillSheet2.copyWith(lastTakenDate: yesterday),
+        ])).thenReturn(null);
 
         final pillSheetGroup = PillSheetGroup(
           id: "group_id",
@@ -910,6 +960,7 @@ void main() {
           overrides: [
             batchFactoryProvider.overrideWithValue(batchFactory),
             settingDatastoreProvider.overrideWithValue(settingDatastore),
+            pillSheetDatastoreProvider.overrideWithValue(pillSheetDatastore),
             pillSheetModifiedHistoryDatastoreProvider.overrideWithValue(pillSheetModifiedHistoryDatastore),
             pillSheetGroupDatastoreProvider.overrideWithValue(pillSheetGroupDatastore),
           ],
@@ -948,6 +999,12 @@ void main() {
           lastTakenDate: _today,
           groupIndex: 1,
         );
+
+        final pillSheetDatastore = MockPillSheetDatastore();
+        when(pillSheetDatastore.update(batch, [
+          pillSheet.copyWith(lastTakenDate: _today.subtract(const Duration(days: 4))),
+          pillSheet2.copyWith(lastTakenDate: pillSheet2.beginingDate.subtract(const Duration(days: 1))),
+        ])).thenReturn(null);
 
         final pillSheetGroup = PillSheetGroup(
           id: "group_id",
@@ -990,6 +1047,7 @@ void main() {
           overrides: [
             batchFactoryProvider.overrideWithValue(batchFactory),
             settingDatastoreProvider.overrideWithValue(settingDatastore),
+            pillSheetDatastoreProvider.overrideWithValue(pillSheetDatastore),
             pillSheetModifiedHistoryDatastoreProvider.overrideWithValue(pillSheetModifiedHistoryDatastore),
             pillSheetGroupDatastoreProvider.overrideWithValue(pillSheetGroupDatastore),
           ],
@@ -1030,6 +1088,12 @@ void main() {
             RestDuration(beginDate: yesterday, createdDate: yesterday, endDate: _today),
           ],
         );
+
+        final pillSheetDatastore = MockPillSheetDatastore();
+        when(pillSheetDatastore.update(batch, [
+          pillSheet.copyWith(lastTakenDate: _today.subtract(const Duration(days: 4))),
+          pillSheet2.copyWith(lastTakenDate: pillSheet2.beginingDate.subtract(const Duration(days: 1)), restDurations: []),
+        ])).thenReturn(null);
 
         final pillSheetGroup = PillSheetGroup(
           id: "group_id",
@@ -1074,6 +1138,7 @@ void main() {
           overrides: [
             batchFactoryProvider.overrideWithValue(batchFactory),
             settingDatastoreProvider.overrideWithValue(settingDatastore),
+            pillSheetDatastoreProvider.overrideWithValue(pillSheetDatastore),
             pillSheetModifiedHistoryDatastoreProvider.overrideWithValue(pillSheetModifiedHistoryDatastore),
             pillSheetGroupDatastoreProvider.overrideWithValue(pillSheetGroupDatastore),
           ],

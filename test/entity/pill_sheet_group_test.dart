@@ -5,7 +5,6 @@ import 'package:pilll/service/day.dart';
 import 'package:flutter_test/flutter_test.dart';
 import 'package:mockito/mockito.dart';
 import 'package:shared_preferences/shared_preferences.dart';
-import 'package:uuid/uuid.dart';
 
 import '../helper/mock.mocks.dart';
 
@@ -20,11 +19,11 @@ void main() {
       test("today: 2020-09-19, begin: 2020-09-14, end: 2020-09-18", () {
         final mockTodayRepository = MockTodayService();
         todayRepository = mockTodayRepository;
-        when(mockTodayRepository.now()).thenReturn(DateTime.parse("2020-09-19"));
+        when(mockTodayRepository.now())
+            .thenReturn(DateTime.parse("2020-09-19"));
 
         const sheetType = PillSheetType.pillsheet_21;
         final pillSheet = PillSheet(
-          id: const Uuid().v4(),
           beginingDate: DateTime.parse("2020-09-14"),
           lastTakenDate: DateTime.parse("2020-09-18"),
           typeInfo: PillSheetTypeInfo(
@@ -45,11 +44,11 @@ void main() {
       test("today: 2020-09-28, begin: 2020-09-01, end: 2020-09-28", () {
         final mockTodayRepository = MockTodayService();
         todayRepository = mockTodayRepository;
-        when(mockTodayRepository.now()).thenReturn(DateTime.parse("2020-09-28"));
+        when(mockTodayRepository.now())
+            .thenReturn(DateTime.parse("2020-09-28"));
 
         const sheetType = PillSheetType.pillsheet_21;
         final pillSheet = PillSheet(
-          id: const Uuid().v4(),
           beginingDate: DateTime.parse("2020-09-01"),
           lastTakenDate: DateTime.parse("2020-09-28"),
           typeInfo: PillSheetTypeInfo(
@@ -71,11 +70,11 @@ void main() {
         test("rest duration is not end", () {
           final mockTodayRepository = MockTodayService();
           todayRepository = mockTodayRepository;
-          when(mockTodayRepository.now()).thenReturn(DateTime.parse("2020-09-28"));
+          when(mockTodayRepository.now())
+              .thenReturn(DateTime.parse("2020-09-28"));
 
           const sheetType = PillSheetType.pillsheet_21;
           final pillSheet = PillSheet(
-            id: const Uuid().v4(),
             beginingDate: DateTime.parse("2020-09-01"),
             lastTakenDate: DateTime.parse("2020-09-28"),
             restDurations: [
@@ -103,11 +102,11 @@ void main() {
         test("rest duration is ended", () {
           final mockTodayRepository = MockTodayService();
           todayRepository = mockTodayRepository;
-          when(mockTodayRepository.now()).thenReturn(DateTime.parse("2020-09-28"));
+          when(mockTodayRepository.now())
+              .thenReturn(DateTime.parse("2020-09-28"));
 
           const sheetType = PillSheetType.pillsheet_21;
           final pillSheet = PillSheet(
-            id: const Uuid().v4(),
             beginingDate: DateTime.parse("2020-09-01"),
             lastTakenDate: DateTime.parse("2020-09-28"),
             restDurations: [
@@ -136,11 +135,11 @@ void main() {
           test("last rest duration is not ended", () {
             final mockTodayRepository = MockTodayService();
             todayRepository = mockTodayRepository;
-            when(mockTodayRepository.now()).thenReturn(DateTime.parse("2020-09-28"));
+            when(mockTodayRepository.now())
+                .thenReturn(DateTime.parse("2020-09-28"));
 
             const sheetType = PillSheetType.pillsheet_21;
             final pillSheet = PillSheet(
-              id: const Uuid().v4(),
               beginingDate: DateTime.parse("2020-09-01"),
               lastTakenDate: DateTime.parse("2020-09-28"),
               restDurations: [
@@ -172,11 +171,11 @@ void main() {
           test("last rest duration is ended", () {
             final mockTodayRepository = MockTodayService();
             todayRepository = mockTodayRepository;
-            when(mockTodayRepository.now()).thenReturn(DateTime.parse("2020-09-28"));
+            when(mockTodayRepository.now())
+                .thenReturn(DateTime.parse("2020-09-28"));
 
             const sheetType = PillSheetType.pillsheet_21;
             final pillSheet = PillSheet(
-              id: const Uuid().v4(),
               beginingDate: DateTime.parse("2020-09-01"),
               lastTakenDate: DateTime.parse("2020-09-28"),
               restDurations: [
@@ -213,11 +212,11 @@ void main() {
       test("it is plane pattern", () {
         final mockTodayRepository = MockTodayService();
         todayRepository = mockTodayRepository;
-        when(mockTodayRepository.now()).thenReturn(DateTime.parse("2022-03-29"));
+        when(mockTodayRepository.now())
+            .thenReturn(DateTime.parse("2022-03-29"));
 
         const sheetType = PillSheetType.pillsheet_21;
         final pillSheet1 = PillSheet(
-          id: const Uuid().v4(),
           beginingDate: DateTime.parse("2022-03-01"),
           lastTakenDate: DateTime.parse("2020-03-28"),
           groupIndex: 0,
@@ -229,7 +228,6 @@ void main() {
           ),
         );
         final pillSheet2 = PillSheet(
-          id: const Uuid().v4(),
           beginingDate: DateTime.parse("2022-03-29"),
           lastTakenDate: null,
           groupIndex: 1,
@@ -251,11 +249,11 @@ void main() {
       test("with begin display number setting", () {
         final mockTodayRepository = MockTodayService();
         todayRepository = mockTodayRepository;
-        when(mockTodayRepository.now()).thenReturn(DateTime.parse("2022-03-29"));
+        when(mockTodayRepository.now())
+            .thenReturn(DateTime.parse("2022-03-29"));
 
         const sheetType = PillSheetType.pillsheet_21;
         final pillSheet1 = PillSheet(
-          id: const Uuid().v4(),
           beginingDate: DateTime.parse("2022-03-01"),
           lastTakenDate: DateTime.parse("2020-03-28"),
           groupIndex: 0,
@@ -267,7 +265,6 @@ void main() {
           ),
         );
         final pillSheet2 = PillSheet(
-          id: const Uuid().v4(),
           beginingDate: DateTime.parse("2022-03-29"),
           lastTakenDate: null,
           groupIndex: 1,
@@ -290,11 +287,11 @@ void main() {
       test("with end display number setting", () {
         final mockTodayRepository = MockTodayService();
         todayRepository = mockTodayRepository;
-        when(mockTodayRepository.now()).thenReturn(DateTime.parse("2022-03-29"));
+        when(mockTodayRepository.now())
+            .thenReturn(DateTime.parse("2022-03-29"));
 
         const sheetType = PillSheetType.pillsheet_21;
         final pillSheet1 = PillSheet(
-          id: const Uuid().v4(),
           beginingDate: DateTime.parse("2022-03-01"),
           lastTakenDate: DateTime.parse("2020-03-28"),
           groupIndex: 0,
@@ -306,7 +303,6 @@ void main() {
           ),
         );
         final pillSheet2 = PillSheet(
-          id: const Uuid().v4(),
           beginingDate: DateTime.parse("2022-03-29"),
           lastTakenDate: null,
           groupIndex: 1,
@@ -329,11 +325,11 @@ void main() {
       test("with begin and end display number setting", () {
         final mockTodayRepository = MockTodayService();
         todayRepository = mockTodayRepository;
-        when(mockTodayRepository.now()).thenReturn(DateTime.parse("2022-03-29"));
+        when(mockTodayRepository.now())
+            .thenReturn(DateTime.parse("2022-03-29"));
 
         const sheetType = PillSheetType.pillsheet_21;
         final pillSheet1 = PillSheet(
-          id: const Uuid().v4(),
           beginingDate: DateTime.parse("2022-03-01"),
           lastTakenDate: DateTime.parse("2020-03-28"),
           groupIndex: 0,
@@ -345,7 +341,6 @@ void main() {
           ),
         );
         final pillSheet2 = PillSheet(
-          id: const Uuid().v4(),
           beginingDate: DateTime.parse("2022-03-29"),
           lastTakenDate: null,
           groupIndex: 1,
@@ -373,11 +368,11 @@ void main() {
       test("it is not taken yet", () {
         final mockTodayRepository = MockTodayService();
         todayRepository = mockTodayRepository;
-        when(mockTodayRepository.now()).thenReturn(DateTime.parse("2020-09-19"));
+        when(mockTodayRepository.now())
+            .thenReturn(DateTime.parse("2020-09-19"));
 
         const sheetType = PillSheetType.pillsheet_21;
         final pillSheet = PillSheet(
-          id: const Uuid().v4(),
           beginingDate: DateTime.parse("2020-09-14"),
           typeInfo: PillSheetTypeInfo(
             dosingPeriod: sheetType.dosingPeriod,
@@ -397,11 +392,11 @@ void main() {
       test("it is taken", () {
         final mockTodayRepository = MockTodayService();
         todayRepository = mockTodayRepository;
-        when(mockTodayRepository.now()).thenReturn(DateTime.parse("2020-09-19"));
+        when(mockTodayRepository.now())
+            .thenReturn(DateTime.parse("2020-09-19"));
 
         const sheetType = PillSheetType.pillsheet_21;
         final pillSheet = PillSheet(
-          id: const Uuid().v4(),
           beginingDate: DateTime.parse("2020-09-14"),
           lastTakenDate: DateTime.parse("2020-09-17"),
           typeInfo: PillSheetTypeInfo(
@@ -422,11 +417,11 @@ void main() {
       test("it is boundary test", () {
         final mockTodayRepository = MockTodayService();
         todayRepository = mockTodayRepository;
-        when(mockTodayRepository.now()).thenReturn(DateTime.parse("2020-09-28"));
+        when(mockTodayRepository.now())
+            .thenReturn(DateTime.parse("2020-09-28"));
 
         const sheetType = PillSheetType.pillsheet_21;
         final pillSheet = PillSheet(
-          id: const Uuid().v4(),
           beginingDate: DateTime.parse("2020-09-01"),
           lastTakenDate: DateTime.parse("2020-09-28"),
           typeInfo: PillSheetTypeInfo(
@@ -448,11 +443,11 @@ void main() {
         test("rest duration is not ended", () {
           final mockTodayRepository = MockTodayService();
           todayRepository = mockTodayRepository;
-          when(mockTodayRepository.now()).thenReturn(DateTime.parse("2020-09-28"));
+          when(mockTodayRepository.now())
+              .thenReturn(DateTime.parse("2020-09-28"));
 
           const sheetType = PillSheetType.pillsheet_21;
           final pillSheet = PillSheet(
-            id: const Uuid().v4(),
             beginingDate: DateTime.parse("2020-09-01"),
             lastTakenDate: DateTime.parse("2020-09-22"),
             restDurations: [
@@ -479,11 +474,11 @@ void main() {
         test("rest duration is ended", () {
           final mockTodayRepository = MockTodayService();
           todayRepository = mockTodayRepository;
-          when(mockTodayRepository.now()).thenReturn(DateTime.parse("2020-09-28"));
+          when(mockTodayRepository.now())
+              .thenReturn(DateTime.parse("2020-09-28"));
 
           const sheetType = PillSheetType.pillsheet_21;
           final pillSheet = PillSheet(
-            id: const Uuid().v4(),
             beginingDate: DateTime.parse("2020-09-01"),
             lastTakenDate: DateTime.parse("2020-09-27"),
             restDurations: [
@@ -511,11 +506,11 @@ void main() {
         test("rest duration is ended and not yet taken pill", () {
           final mockTodayRepository = MockTodayService();
           todayRepository = mockTodayRepository;
-          when(mockTodayRepository.now()).thenReturn(DateTime.parse("2020-09-28"));
+          when(mockTodayRepository.now())
+              .thenReturn(DateTime.parse("2020-09-28"));
 
           const sheetType = PillSheetType.pillsheet_21;
           final pillSheet = PillSheet(
-            id: const Uuid().v4(),
             beginingDate: DateTime.parse("2020-09-01"),
             lastTakenDate: null,
             restDurations: [
@@ -545,11 +540,11 @@ void main() {
           test("last rest duration is not ended", () {
             final mockTodayRepository = MockTodayService();
             todayRepository = mockTodayRepository;
-            when(mockTodayRepository.now()).thenReturn(DateTime.parse("2020-09-28"));
+            when(mockTodayRepository.now())
+                .thenReturn(DateTime.parse("2020-09-28"));
 
             const sheetType = PillSheetType.pillsheet_21;
             final pillSheet = PillSheet(
-              id: const Uuid().v4(),
               beginingDate: DateTime.parse("2020-09-01"),
               lastTakenDate: DateTime.parse("2020-09-22"),
               restDurations: [
@@ -581,11 +576,11 @@ void main() {
           test("last rest duration is ended", () {
             final mockTodayRepository = MockTodayService();
             todayRepository = mockTodayRepository;
-            when(mockTodayRepository.now()).thenReturn(DateTime.parse("2020-09-28"));
+            when(mockTodayRepository.now())
+                .thenReturn(DateTime.parse("2020-09-28"));
 
             const sheetType = PillSheetType.pillsheet_21;
             final pillSheet = PillSheet(
-              id: const Uuid().v4(),
               beginingDate: DateTime.parse("2020-09-01"),
               lastTakenDate: DateTime.parse("2020-09-22"),
               restDurations: [
@@ -621,11 +616,11 @@ void main() {
         test("it is plane pattern", () {
           final mockTodayRepository = MockTodayService();
           todayRepository = mockTodayRepository;
-          when(mockTodayRepository.now()).thenReturn(DateTime.parse("2022-03-30"));
+          when(mockTodayRepository.now())
+              .thenReturn(DateTime.parse("2022-03-30"));
 
           const sheetType = PillSheetType.pillsheet_21;
           final pillSheet1 = PillSheet(
-            id: const Uuid().v4(),
             beginingDate: DateTime.parse("2022-03-01"),
             lastTakenDate: DateTime.parse("2020-03-28"),
             groupIndex: 0,
@@ -637,7 +632,6 @@ void main() {
             ),
           );
           final pillSheet2 = PillSheet(
-            id: const Uuid().v4(),
             beginingDate: DateTime.parse("2022-03-29"),
             lastTakenDate: DateTime.parse("2022-03-29"),
             groupIndex: 1,
@@ -659,11 +653,11 @@ void main() {
         test("with begin display number setting", () {
           final mockTodayRepository = MockTodayService();
           todayRepository = mockTodayRepository;
-          when(mockTodayRepository.now()).thenReturn(DateTime.parse("2022-03-30"));
+          when(mockTodayRepository.now())
+              .thenReturn(DateTime.parse("2022-03-30"));
 
           const sheetType = PillSheetType.pillsheet_21;
           final pillSheet1 = PillSheet(
-            id: const Uuid().v4(),
             beginingDate: DateTime.parse("2022-03-01"),
             lastTakenDate: DateTime.parse("2020-03-28"),
             groupIndex: 0,
@@ -675,7 +669,6 @@ void main() {
             ),
           );
           final pillSheet2 = PillSheet(
-            id: const Uuid().v4(),
             beginingDate: DateTime.parse("2022-03-29"),
             lastTakenDate: DateTime.parse("2022-03-29"),
             groupIndex: 1,
@@ -691,18 +684,19 @@ void main() {
             pillSheetIDs: ["sheet_id", "sheet_id2"],
             pillSheets: [pillSheet1, pillSheet2],
             createdAt: DateTime.now(),
-            displayNumberSetting: const DisplayNumberSetting(beginPillNumber: 2),
+            displayNumberSetting:
+                const DisplayNumberSetting(beginPillNumber: 2),
           );
           expect(pillSheetGroup.sequentialLastTakenPillNumber, 30);
         });
         test("with end display number setting", () {
           final mockTodayRepository = MockTodayService();
           todayRepository = mockTodayRepository;
-          when(mockTodayRepository.now()).thenReturn(DateTime.parse("2022-03-30"));
+          when(mockTodayRepository.now())
+              .thenReturn(DateTime.parse("2022-03-30"));
 
           const sheetType = PillSheetType.pillsheet_21;
           final pillSheet1 = PillSheet(
-            id: const Uuid().v4(),
             beginingDate: DateTime.parse("2022-03-01"),
             lastTakenDate: DateTime.parse("2020-03-28"),
             groupIndex: 0,
@@ -714,7 +708,6 @@ void main() {
             ),
           );
           final pillSheet2 = PillSheet(
-            id: const Uuid().v4(),
             beginingDate: DateTime.parse("2022-03-29"),
             lastTakenDate: DateTime.parse("2022-03-29"),
             groupIndex: 1,
@@ -738,11 +731,11 @@ void main() {
         test("with end display number setting", () {
           final mockTodayRepository = MockTodayService();
           todayRepository = mockTodayRepository;
-          when(mockTodayRepository.now()).thenReturn(DateTime.parse("2022-03-30"));
+          when(mockTodayRepository.now())
+              .thenReturn(DateTime.parse("2022-03-30"));
 
           const sheetType = PillSheetType.pillsheet_21;
           final pillSheet1 = PillSheet(
-            id: const Uuid().v4(),
             beginingDate: DateTime.parse("2022-03-01"),
             lastTakenDate: DateTime.parse("2020-03-28"),
             groupIndex: 0,
@@ -754,7 +747,6 @@ void main() {
             ),
           );
           final pillSheet2 = PillSheet(
-            id: const Uuid().v4(),
             beginingDate: DateTime.parse("2022-03-29"),
             lastTakenDate: DateTime.parse("2022-03-29"),
             groupIndex: 1,
@@ -777,11 +769,11 @@ void main() {
         test("with begin and end display number setting", () {
           final mockTodayRepository = MockTodayService();
           todayRepository = mockTodayRepository;
-          when(mockTodayRepository.now()).thenReturn(DateTime.parse("2022-03-30"));
+          when(mockTodayRepository.now())
+              .thenReturn(DateTime.parse("2022-03-30"));
 
           const sheetType = PillSheetType.pillsheet_21;
           final pillSheet1 = PillSheet(
-            id: const Uuid().v4(),
             beginingDate: DateTime.parse("2022-03-01"),
             lastTakenDate: DateTime.parse("2020-03-28"),
             groupIndex: 0,
@@ -793,7 +785,6 @@ void main() {
             ),
           );
           final pillSheet2 = PillSheet(
-            id: const Uuid().v4(),
             beginingDate: DateTime.parse("2022-03-29"),
             lastTakenDate: DateTime.parse("2022-03-29"),
             groupIndex: 1,
@@ -809,7 +800,8 @@ void main() {
             pillSheetIDs: ["sheet_id", "sheet_id2"],
             pillSheets: [pillSheet1, pillSheet2],
             createdAt: DateTime.now(),
-            displayNumberSetting: const DisplayNumberSetting(beginPillNumber: 2, endPillNumber: 28),
+            displayNumberSetting: const DisplayNumberSetting(
+                beginPillNumber: 2, endPillNumber: 28),
           );
           expect(pillSheetGroup.sequentialLastTakenPillNumber, 2);
         });
