@@ -41,7 +41,7 @@ final recordPageAsyncStateProvider = Provider.autoDispose<AsyncValue<RecordPageS
     ));
   } catch (error, stackTrace) {
     errorLogger.recordError(error, stackTrace);
-    return AsyncValue.error(error, stackTrace: stackTrace);
+    return AsyncValue.error(error, stackTrace);
   }
 });
 

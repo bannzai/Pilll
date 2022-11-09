@@ -26,7 +26,7 @@ final monthCalendarStateProvider = Provider.family<AsyncValue<MonthCalendarState
       ),
     );
   } catch (error, stackTrace) {
-    return AsyncValue.error(error, stackTrace: stackTrace);
+    return AsyncValue.error(error, stackTrace);
   }
 });
 

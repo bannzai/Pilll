@@ -51,7 +51,7 @@ final settingStateProvider = Provider<AsyncValue<SettingState>>((ref) {
       ),
     );
   } catch (error, stacktrace) {
-    return AsyncValue.error(error, stackTrace: stacktrace);
+    return AsyncValue.error(error, stacktrace);
   }
 });
 

@@ -17,7 +17,7 @@ final diarySettingPhysicalConditionDetailAsyncStateProvider = Provider.autoDispo
       diarySetting: diarySetting.value,
     ));
   } catch (error, stackTrace) {
-    return AsyncValue.error(error, stackTrace: stackTrace);
+    return AsyncValue.error(error, stackTrace);
   }
 });
 

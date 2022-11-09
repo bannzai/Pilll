@@ -425,7 +425,7 @@ packages:
       name: flutter_riverpod
       url: "https://pub.dartlang.org"
     source: hosted
-    version: "1.0.3+1"
+    version: "2.1.1"
   flutter_svg:
     dependency: "direct main"
     description:
@@ -519,7 +519,7 @@ packages:
       name: hooks_riverpod
       url: "https://pub.dartlang.org"
     source: hosted
-    version: "1.0.3+1"
+    version: "2.1.1"
   http:
     dependency: transitive
     description:
@@ -764,7 +764,7 @@ packages:
       name: riverpod
       url: "https://pub.dartlang.org"
     source: hosted
-    version: "1.0.3+1"
+    version: "2.1.1"
   shared_preferences:
     dependency: "direct main"
     description:

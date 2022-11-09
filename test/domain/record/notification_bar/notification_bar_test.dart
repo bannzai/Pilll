@@ -82,9 +82,8 @@ void main() {
           ProviderScope(
             overrides: [
               isJaLocaleProvider.overrideWithValue(true),
-              notificationBarStateNotifierProvider
-                  .overrideWithProvider(StateNotifierProvider.autoDispose((_) => NotificationBarStateNotifier(state))),
-              notificationBarStateProvider.overrideWithProvider(Provider.autoDispose((_) => state)),
+              notificationBarStateNotifierProvider.overrideWith(((ref) => NotificationBarStateNotifier(state))),
+              notificationBarStateProvider.overrideWithValue(state),
               isOverDiscountDeadlineProvider.overrideWithProvider((param) => Provider.autoDispose((_) => false)),
               durationToDiscountPriceDeadline.overrideWithProvider((param) => Provider.autoDispose((_) => const Duration(seconds: 1000))),
             ],
@@ -138,9 +137,8 @@ void main() {
           ProviderScope(
             overrides: [
               isJaLocaleProvider.overrideWithValue(true),
-              notificationBarStateNotifierProvider
-                  .overrideWithProvider(StateNotifierProvider.autoDispose((_) => NotificationBarStateNotifier(state))),
-              notificationBarStateProvider.overrideWithProvider(Provider.autoDispose((_) => state)),
+              notificationBarStateNotifierProvider.overrideWith(((ref) => NotificationBarStateNotifier(state))),
+              notificationBarStateProvider.overrideWithValue(state),
             ],
             child: const MaterialApp(
               home: Material(child: NotificationBar()),
@@ -193,9 +191,8 @@ void main() {
           ProviderScope(
             overrides: [
               isJaLocaleProvider.overrideWithValue(true),
-              notificationBarStateNotifierProvider
-                  .overrideWithProvider(StateNotifierProvider.autoDispose((_) => NotificationBarStateNotifier(state))),
-              notificationBarStateProvider.overrideWithProvider(Provider.autoDispose((_) => state)),
+              notificationBarStateNotifierProvider.overrideWith(((ref) => NotificationBarStateNotifier(state))),
+              notificationBarStateProvider.overrideWithValue(state),
             ],
             child: const MaterialApp(
               home: Material(child: NotificationBar()),
@@ -248,9 +245,8 @@ void main() {
           ProviderScope(
             overrides: [
               isJaLocaleProvider.overrideWithValue(true),
-              notificationBarStateNotifierProvider
-                  .overrideWithProvider(StateNotifierProvider.autoDispose((_) => NotificationBarStateNotifier(state))),
-              notificationBarStateProvider.overrideWithProvider(Provider.autoDispose((_) => state)),
+              notificationBarStateNotifierProvider.overrideWith(((ref) => NotificationBarStateNotifier(state))),
+              notificationBarStateProvider.overrideWithValue(state),
             ],
             child: const MaterialApp(
               home: Material(child: NotificationBar()),
@@ -303,9 +299,8 @@ void main() {
           ProviderScope(
             overrides: [
               isJaLocaleProvider.overrideWithValue(true),
-              notificationBarStateNotifierProvider
-                  .overrideWithProvider(StateNotifierProvider.autoDispose((_) => NotificationBarStateNotifier(state))),
-              notificationBarStateProvider.overrideWithProvider(Provider.autoDispose((_) => state)),
+              notificationBarStateNotifierProvider.overrideWith(((ref) => NotificationBarStateNotifier(state))),
+              notificationBarStateProvider.overrideWithValue(state),
             ],
             child: const MaterialApp(
               home: Material(child: NotificationBar()),
@@ -357,19 +352,18 @@ void main() {
             ProviderScope(
               overrides: [
                 isJaLocaleProvider.overrideWithValue(true),
-                notificationBarStateNotifierProvider
-                    .overrideWithProvider(StateNotifierProvider.autoDispose((_) => NotificationBarStateNotifier(state))),
-                notificationBarStateProvider.overrideWithProvider(Provider.autoDispose((_) => state)),
-                pilllAdsProvider.overrideWithValue(AsyncValue.data(
-                  PilllAds(
+                notificationBarStateNotifierProvider.overrideWith(((ref) => NotificationBarStateNotifier(state))),
+                notificationBarStateProvider.overrideWithValue(state),
+                pilllAdsProvider.overrideWith(
+                  (ref) => Stream.value(PilllAds(
                     description: 'これは広告用のテキスト',
                     destinationURL: 'https://github.com/bannzai',
                     endDateTime: DateTime(2022, 8, 23, 23, 59, 59),
                     startDateTime: DateTime(2022, 8, 10, 0, 0, 0),
                     hexColor: '#111111',
                     imageURL: null,
-                  ),
-                ))
+                  )),
+                ),
               ],
               child: const MaterialApp(
                 home: Material(child: NotificationBar()),
@@ -419,19 +413,20 @@ void main() {
             ProviderScope(
               overrides: [
                 isJaLocaleProvider.overrideWithValue(true),
-                notificationBarStateNotifierProvider
-                    .overrideWithProvider(StateNotifierProvider.autoDispose((_) => NotificationBarStateNotifier(state))),
-                notificationBarStateProvider.overrideWithProvider(Provider.autoDispose((_) => state)),
-                pilllAdsProvider.overrideWithValue(AsyncValue.data(
-                  PilllAds(
-                    description: 'これは広告用のテキスト',
-                    destinationURL: 'https://github.com/bannzai',
-                    endDateTime: DateTime(2022, 8, 23, 23, 59, 59),
-                    startDateTime: DateTime(2022, 8, 10, 0, 0, 0),
-                    hexColor: '#111111',
-                    imageURL: null,
+                notificationBarStateNotifierProvider.overrideWith(((ref) => NotificationBarStateNotifier(state))),
+                notificationBarStateProvider.overrideWithValue(state),
+                pilllAdsProvider.overrideWith(
+                  (ref) => Stream.value(
+                    PilllAds(
+                      description: 'これは広告用のテキスト',
+                      destinationURL: 'https://github.com/bannzai',
+                      endDateTime: DateTime(2022, 8, 23, 23, 59, 59),
+                      startDateTime: DateTime(2022, 8, 10, 0, 0, 0),
+                      hexColor: '#111111',
+                      imageURL: null,
+                    ),
                   ),
-                ))
+                )
               ],
               child: const MaterialApp(
                 home: Material(child: NotificationBar()),
@@ -481,19 +476,20 @@ void main() {
             ProviderScope(
               overrides: [
                 isJaLocaleProvider.overrideWithValue(true),
-                notificationBarStateNotifierProvider
-                    .overrideWithProvider(StateNotifierProvider.autoDispose((_) => NotificationBarStateNotifier(state))),
-                notificationBarStateProvider.overrideWithProvider(Provider.autoDispose((_) => state)),
-                pilllAdsProvider.overrideWithValue(AsyncValue.data(
-                  PilllAds(
-                    description: 'これは広告用のテキスト',
-                    destinationURL: 'https://github.com/bannzai',
-                    endDateTime: DateTime(2022, 8, 23, 23, 59, 59),
-                    startDateTime: DateTime(2022, 8, 10, 0, 0, 0),
-                    hexColor: '#111111',
-                    imageURL: null,
+                notificationBarStateNotifierProvider.overrideWith(((ref) => NotificationBarStateNotifier(state))),
+                notificationBarStateProvider.overrideWithValue(state),
+                pilllAdsProvider.overrideWith(
+                  (ref) => Stream.value(
+                    PilllAds(
+                      description: 'これは広告用のテキスト',
+                      destinationURL: 'https://github.com/bannzai',
+                      endDateTime: DateTime(2022, 8, 23, 23, 59, 59),
+                      startDateTime: DateTime(2022, 8, 10, 0, 0, 0),
+                      hexColor: '#111111',
+                      imageURL: null,
+                    ),
                   ),
-                ))
+                )
               ],
               child: const MaterialApp(
                 home: Material(child: NotificationBar()),
@@ -543,19 +539,20 @@ void main() {
             ProviderScope(
               overrides: [
                 isJaLocaleProvider.overrideWithValue(true),
-                notificationBarStateNotifierProvider
-                    .overrideWithProvider(StateNotifierProvider.autoDispose((_) => NotificationBarStateNotifier(state))),
-                notificationBarStateProvider.overrideWithProvider(Provider.autoDispose((_) => state)),
-                pilllAdsProvider.overrideWithValue(AsyncValue.data(
-                  PilllAds(
-                    description: 'これは広告用のテキスト',
-                    destinationURL: 'https://github.com/bannzai',
-                    endDateTime: DateTime(2022, 8, 23, 23, 59, 59),
-                    startDateTime: DateTime(2022, 8, 10, 0, 0, 0),
-                    hexColor: '#111111',
-                    imageURL: null,
+                notificationBarStateNotifierProvider.overrideWith(((ref) => NotificationBarStateNotifier(state))),
+                notificationBarStateProvider.overrideWithValue(state),
+                pilllAdsProvider.overrideWith(
+                  (ref) => Stream.value(
+                    PilllAds(
+                      description: 'これは広告用のテキスト',
+                      destinationURL: 'https://github.com/bannzai',
+                      endDateTime: DateTime(2022, 8, 23, 23, 59, 59),
+                      startDateTime: DateTime(2022, 8, 10, 0, 0, 0),
+                      hexColor: '#111111',
+                      imageURL: null,
+                    ),
                   ),
-                ))
+                )
               ],
               child: const MaterialApp(
                 home: Material(child: NotificationBar()),
@@ -605,19 +602,20 @@ void main() {
             ProviderScope(
               overrides: [
                 isJaLocaleProvider.overrideWithValue(true),
-                notificationBarStateNotifierProvider
-                    .overrideWithProvider(StateNotifierProvider.autoDispose((_) => NotificationBarStateNotifier(state))),
-                notificationBarStateProvider.overrideWithProvider(Provider.autoDispose((_) => state)),
-                pilllAdsProvider.overrideWithValue(AsyncValue.data(
-                  PilllAds(
-                    description: 'これは広告用のテキスト',
-                    destinationURL: 'https://github.com/bannzai',
-                    endDateTime: DateTime(2022, 8, 23, 23, 59, 59),
-                    startDateTime: DateTime(2022, 8, 10, 0, 0, 0),
-                    hexColor: '#111111',
-                    imageURL: null,
+                notificationBarStateNotifierProvider.overrideWith(((ref) => NotificationBarStateNotifier(state))),
+                notificationBarStateProvider.overrideWithValue(state),
+                pilllAdsProvider.overrideWith(
+                  (ref) => Stream.value(
+                    PilllAds(
+                      description: 'これは広告用のテキスト',
+                      destinationURL: 'https://github.com/bannzai',
+                      endDateTime: DateTime(2022, 8, 23, 23, 59, 59),
+                      startDateTime: DateTime(2022, 8, 10, 0, 0, 0),
+                      hexColor: '#111111',
+                      imageURL: null,
+                    ),
                   ),
-                ))
+                )
               ],
               child: const MaterialApp(
                 home: Material(child: NotificationBar()),
@@ -674,19 +672,18 @@ void main() {
             ProviderScope(
               overrides: [
                 isJaLocaleProvider.overrideWithValue(true),
-                notificationBarStateNotifierProvider
-                    .overrideWithProvider(StateNotifierProvider.autoDispose((_) => NotificationBarStateNotifier(state))),
-                notificationBarStateProvider.overrideWithProvider(Provider.autoDispose((_) => state)),
-                pilllAdsProvider.overrideWithValue(AsyncValue.data(
-                  PilllAds(
-                    description: 'これは広告用のテキスト',
-                    destinationURL: 'https://github.com/bannzai',
-                    endDateTime: DateTime(2022, 8, 23, 23, 59, 59),
-                    startDateTime: DateTime(2022, 8, 10, 0, 0, 0),
-                    hexColor: '#111111',
-                    imageURL: null,
-                  ),
-                ))
+                notificationBarStateNotifierProvider.overrideWith(((ref) => NotificationBarStateNotifier(state))),
+                notificationBarStateProvider.overrideWithValue(state),
+                pilllAdsProvider.overrideWith((ref) => Stream.value(
+                      PilllAds(
+                        description: 'これは広告用のテキスト',
+                        destinationURL: 'https://github.com/bannzai',
+                        endDateTime: DateTime(2022, 8, 23, 23, 59, 59),
+                        startDateTime: DateTime(2022, 8, 10, 0, 0, 0),
+                        hexColor: '#111111',
+                        imageURL: null,
+                      ),
+                    ))
               ],
               child: const MaterialApp(
                 home: Material(child: NotificationBar()),
@@ -738,19 +735,18 @@ void main() {
             ProviderScope(
               overrides: [
                 isJaLocaleProvider.overrideWithValue(true),
-                notificationBarStateNotifierProvider
-                    .overrideWithProvider(StateNotifierProvider.autoDispose((_) => NotificationBarStateNotifier(state))),
-                notificationBarStateProvider.overrideWithProvider(Provider.autoDispose((_) => state)),
-                pilllAdsProvider.overrideWithValue(AsyncValue.data(
-                  PilllAds(
-                    description: 'これは広告用のテキスト',
-                    destinationURL: 'https://github.com/bannzai',
-                    endDateTime: DateTime(2022, 8, 23, 23, 59, 59),
-                    startDateTime: DateTime(2022, 8, 10, 0, 0, 0),
-                    hexColor: '#111111',
-                    imageURL: null,
-                  ),
-                ))
+                notificationBarStateNotifierProvider.overrideWith(((ref) => NotificationBarStateNotifier(state))),
+                notificationBarStateProvider.overrideWithValue(state),
+                pilllAdsProvider.overrideWith((ref) => Stream.value(
+                      PilllAds(
+                        description: 'これは広告用のテキスト',
+                        destinationURL: 'https://github.com/bannzai',
+                        endDateTime: DateTime(2022, 8, 23, 23, 59, 59),
+                        startDateTime: DateTime(2022, 8, 10, 0, 0, 0),
+                        hexColor: '#111111',
+                        imageURL: null,
+                      ),
+                    ))
               ],
               child: const MaterialApp(
                 home: Material(child: NotificationBar()),
@@ -802,19 +798,18 @@ void main() {
             ProviderScope(
               overrides: [
                 isJaLocaleProvider.overrideWithValue(true),
-                notificationBarStateNotifierProvider
-                    .overrideWithProvider(StateNotifierProvider.autoDispose((_) => NotificationBarStateNotifier(state))),
-                notificationBarStateProvider.overrideWithProvider(Provider.autoDispose((_) => state)),
-                pilllAdsProvider.overrideWithValue(AsyncValue.data(
-                  PilllAds(
-                    description: 'これは広告用のテキスト',
-                    destinationURL: 'https://github.com/bannzai',
-                    endDateTime: DateTime(2022, 8, 23, 23, 59, 59),
-                    startDateTime: DateTime(2022, 8, 10, 0, 0, 0),
-                    hexColor: '#111111',
-                    imageURL: null,
-                  ),
-                ))
+                notificationBarStateNotifierProvider.overrideWith(((ref) => NotificationBarStateNotifier(state))),
+                notificationBarStateProvider.overrideWithValue(state),
+                pilllAdsProvider.overrideWith((ref) => Stream.value(
+                      PilllAds(
+                        description: 'これは広告用のテキスト',
+                        destinationURL: 'https://github.com/bannzai',
+                        endDateTime: DateTime(2022, 8, 23, 23, 59, 59),
+                        startDateTime: DateTime(2022, 8, 10, 0, 0, 0),
+                        hexColor: '#111111',
+                        imageURL: null,
+                      ),
+                    ))
               ],
               child: const MaterialApp(
                 home: Material(child: NotificationBar()),
@@ -866,19 +861,18 @@ void main() {
             ProviderScope(
               overrides: [
                 isJaLocaleProvider.overrideWithValue(true),
-                notificationBarStateNotifierProvider
-                    .overrideWithProvider(StateNotifierProvider.autoDispose((_) => NotificationBarStateNotifier(state))),
-                notificationBarStateProvider.overrideWithProvider(Provider.autoDispose((_) => state)),
-                pilllAdsProvider.overrideWithValue(AsyncValue.data(
-                  PilllAds(
-                    description: 'これは広告用のテキスト',
-                    destinationURL: 'https://github.com/bannzai',
-                    endDateTime: DateTime(2022, 8, 23, 23, 59, 59),
-                    startDateTime: DateTime(2022, 8, 10, 0, 0, 0),
-                    hexColor: '#111111',
-                    imageURL: null,
-                  ),
-                ))
+                notificationBarStateNotifierProvider.overrideWith(((ref) => NotificationBarStateNotifier(state))),
+                notificationBarStateProvider.overrideWithValue(state),
+                pilllAdsProvider.overrideWith((ref) => Stream.value(
+                      PilllAds(
+                        description: 'これは広告用のテキスト',
+                        destinationURL: 'https://github.com/bannzai',
+                        endDateTime: DateTime(2022, 8, 23, 23, 59, 59),
+                        startDateTime: DateTime(2022, 8, 10, 0, 0, 0),
+                        hexColor: '#111111',
+                        imageURL: null,
+                      ),
+                    ))
               ],
               child: const MaterialApp(
                 home: Material(child: NotificationBar()),
@@ -930,19 +924,18 @@ void main() {
             ProviderScope(
               overrides: [
                 isJaLocaleProvider.overrideWithValue(true),
-                notificationBarStateNotifierProvider
-                    .overrideWithProvider(StateNotifierProvider.autoDispose((_) => NotificationBarStateNotifier(state))),
-                notificationBarStateProvider.overrideWithProvider(Provider.autoDispose((_) => state)),
-                pilllAdsProvider.overrideWithValue(AsyncValue.data(
-                  PilllAds(
-                    description: 'これは広告用のテキスト',
-                    destinationURL: 'https://github.com/bannzai',
-                    endDateTime: DateTime(2022, 8, 23, 23, 59, 59),
-                    startDateTime: DateTime(2022, 8, 10, 0, 0, 0),
-                    hexColor: '#111111',
-                    imageURL: null,
-                  ),
-                ))
+                notificationBarStateNotifierProvider.overrideWith(((ref) => NotificationBarStateNotifier(state))),
+                notificationBarStateProvider.overrideWithValue(state),
+                pilllAdsProvider.overrideWith((ref) => Stream.value(
+                      PilllAds(
+                        description: 'これは広告用のテキスト',
+                        destinationURL: 'https://github.com/bannzai',
+                        endDateTime: DateTime(2022, 8, 23, 23, 59, 59),
+                        startDateTime: DateTime(2022, 8, 10, 0, 0, 0),
+                        hexColor: '#111111',
+                        imageURL: null,
+                      ),
+                    ))
               ],
               child: const MaterialApp(
                 home: Material(child: NotificationBar()),
@@ -994,19 +987,18 @@ void main() {
             ProviderScope(
               overrides: [
                 isJaLocaleProvider.overrideWithValue(true),
-                notificationBarStateNotifierProvider
-                    .overrideWithProvider(StateNotifierProvider.autoDispose((_) => NotificationBarStateNotifier(state))),
-                notificationBarStateProvider.overrideWithProvider(Provider.autoDispose((_) => state)),
-                pilllAdsProvider.overrideWithValue(AsyncValue.data(
-                  PilllAds(
-                    description: 'これは広告用のテキスト',
-                    destinationURL: 'https://github.com/bannzai',
-                    endDateTime: DateTime(2022, 8, 23, 23, 59, 59),
-                    startDateTime: DateTime(2022, 8, 10, 0, 0, 0),
-                    hexColor: '#111111',
-                    imageURL: null,
-                  ),
-                ))
+                notificationBarStateNotifierProvider.overrideWith(((ref) => NotificationBarStateNotifier(state))),
+                notificationBarStateProvider.overrideWithValue(state),
+                pilllAdsProvider.overrideWith((ref) => Stream.value(
+                      PilllAds(
+                        description: 'これは広告用のテキスト',
+                        destinationURL: 'https://github.com/bannzai',
+                        endDateTime: DateTime(2022, 8, 23, 23, 59, 59),
+                        startDateTime: DateTime(2022, 8, 10, 0, 0, 0),
+                        hexColor: '#111111',
+                        imageURL: null,
+                      ),
+                    ))
               ],
               child: const MaterialApp(
                 home: Material(child: NotificationBar()),
@@ -1059,9 +1051,8 @@ void main() {
           ProviderScope(
             overrides: [
               isJaLocaleProvider.overrideWithValue(true),
-              notificationBarStateNotifierProvider
-                  .overrideWithProvider(StateNotifierProvider.autoDispose((_) => NotificationBarStateNotifier(state))),
-              notificationBarStateProvider.overrideWithProvider(Provider.autoDispose((_) => state)),
+              notificationBarStateNotifierProvider.overrideWith(((ref) => NotificationBarStateNotifier(state))),
+              notificationBarStateProvider.overrideWithValue(state),
             ],
             child: const MaterialApp(
               home: Material(child: NotificationBar()),
@@ -1114,9 +1105,8 @@ void main() {
           ProviderScope(
             overrides: [
               isJaLocaleProvider.overrideWithValue(true),
-              notificationBarStateNotifierProvider
-                  .overrideWithProvider(StateNotifierProvider.autoDispose((_) => NotificationBarStateNotifier(state))),
-              notificationBarStateProvider.overrideWithProvider(Provider.autoDispose((_) => state)),
+              notificationBarStateNotifierProvider.overrideWith(((ref) => NotificationBarStateNotifier(state))),
+              notificationBarStateProvider.overrideWithValue(state),
             ],
             child: const MaterialApp(
               home: Material(child: NotificationBar()),
@@ -1169,9 +1159,8 @@ void main() {
           ProviderScope(
             overrides: [
               isJaLocaleProvider.overrideWithValue(true),
-              notificationBarStateNotifierProvider
-                  .overrideWithProvider(StateNotifierProvider.autoDispose((_) => NotificationBarStateNotifier(state))),
-              notificationBarStateProvider.overrideWithProvider(Provider.autoDispose((_) => state)),
+              notificationBarStateNotifierProvider.overrideWith(((ref) => NotificationBarStateNotifier(state))),
+              notificationBarStateProvider.overrideWithValue(state),
             ],
             child: const MaterialApp(
               home: Material(child: NotificationBar()),

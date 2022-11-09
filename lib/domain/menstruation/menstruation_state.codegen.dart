@@ -64,7 +64,7 @@ final menstruationPageStateProvider = Provider<AsyncValue<MenstruationState>>((r
       ),
     );
   } catch (error, stackTrace) {
-    return AsyncValue.error(error, stackTrace: stackTrace);
+    return AsyncValue.error(error, stackTrace);
   }
 });
 
