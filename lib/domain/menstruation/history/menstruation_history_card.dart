@@ -15,15 +15,13 @@ import 'package:pilll/domain/premium_introduction/premium_introduction_sheet.dar
 class MenstruationHistoryCard extends StatelessWidget {
   final MenstruationHistoryCardState state;
 
-  const MenstruationHistoryCard({Key? key, required this.state})
-      : super(key: key);
+  const MenstruationHistoryCard({Key? key, required this.state}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
     return AppCard(
       child: Padding(
-        padding:
-            const EdgeInsets.only(top: 16, left: 16, bottom: 16, right: 16),
+        padding: const EdgeInsets.only(top: 16, left: 16, bottom: 16, right: 16),
         child: GestureDetector(
           onTap: () {
             analytics.logEvent(name: "menstruation_history_card_tapped");
@@ -89,13 +87,39 @@ class MenstruationHistoryCardList extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final activeMenstruation = state.activeMenstruation;
+    final previousMenstruation = state.previousMenstruation;
+    final secondPreviousMenstruation = state.secondPreviousMenstruation;
+    final thirdPreviousMenstruation = state.thirdPreviousMenstruation;
+
     return Column(
       mainAxisSize: MainAxisSize.max,
-      children: state.rows
-          .map((e) =>
-              [MenstruationListRow(state: e), const SizedBox(height: 20)])
-          .expand((e) => e)
-          .toList(),
+      children: [
+        if (activeMenstruation != null) ...[
+          MenstruationListRow(
+            menstruation: activeMenstruation,
+            previousMenstruation: previousMenstruation,
+            prefix: "今回",
+          ),
+          const SizedBox(height: 20),
+        ],
+        if (previousMenstruation != null) ...[
+          MenstruationListRow(
+            menstruation: previousMenstruation,
+            previousMenstruation: secondPreviousMenstruation,
+            prefix: "前回",
+          ),
+          const SizedBox(height: 20),
+        ],
+        if (secondPreviousMenstruation != null) ...[
+          MenstruationListRow(
+            menstruation: secondPreviousMenstruation,
+            previousMenstruation: thirdPreviousMenstruation,
+            prefix: "前々回",
+          ),
+          const SizedBox(height: 20),
+        ],
+      ],
     );
   }
 }
@@ -115,9 +139,7 @@ class MenstruationHisotryCardAvarageInformation extends StatelessWidget {
         const Spacer(),
         CounterUnitLayout(
           title: "平均周期",
-          number: (state.isPremium || state.isTrial)
-              ? state.avalageMenstruationDuration
-              : "🔒",
+          number: (state.isPremium || state.isTrial) ? state.avalageMenstruationDuration : "🔒",
           unit: "日",
         ),
         const SizedBox(width: 30),
@@ -130,9 +152,7 @@ class MenstruationHisotryCardAvarageInformation extends StatelessWidget {
         const SizedBox(width: 30),
         CounterUnitLayout(
           title: "平均日数",
-          number: (state.isPremium || state.isTrial)
-              ? state.avalageMenstruationPeriod
-              : "🔒",
+          number: (state.isPremium || state.isTrial) ? state.avalageMenstruationPeriod : "🔒",
           unit: "日",
         ),
         const Spacer(),

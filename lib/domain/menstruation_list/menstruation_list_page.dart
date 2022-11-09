@@ -12,7 +12,7 @@ class MenstruationListPage extends HookConsumerWidget {
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {
-    final state = ref.watch(menstruationListStoreProvider);
+    final state = ref.watch(menstruationListStateNotifierProvider);
 
     if (state.isNotYetLoaded) {
       return const ScaffoldIndicator();
@@ -39,12 +39,14 @@ class MenstruationListPage extends HookConsumerWidget {
           child: ListView(
             padding: const EdgeInsets.all(32),
             children: [
-              ...state.allRows.map((row) {
-                return [
-                  MenstruationListRow(state: row),
-                  const SizedBox(height: 8),
-                ];
-              }).expand((element) => element),
+              for (var i = 0; i < state.allMenstruations.length; i++) ...[
+                MenstruationListRow(
+                  menstruation: state.allMenstruations[i],
+                  previousMenstruation: state.allMenstruations.length - 1 >= i ? null : state.allMenstruations[i + 1],
+                  prefix: "",
+                ),
+                const SizedBox(height: 8),
+              ],
             ],
           ),
         ),

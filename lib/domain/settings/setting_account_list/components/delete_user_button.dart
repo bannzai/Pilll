@@ -136,12 +136,15 @@ class _CompletedDialog extends StatelessWidget {
             textAlign: TextAlign.center,
           ),
           const SizedBox(height: 24),
-          PrimaryButton(
-            onPressed: () async {
-              Navigator.of(context).pop();
-              await onClose();
-            },
-            text: "OK",
+          SizedBox(
+            width: 180,
+            child: PrimaryButton(
+              onPressed: () async {
+                Navigator.of(context).pop();
+                await onClose();
+              },
+              text: "OK",
+            ),
           ),
         ],
       ),

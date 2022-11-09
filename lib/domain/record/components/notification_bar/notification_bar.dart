@@ -1,6 +1,8 @@
+import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
 import 'package:pilll/analytics.dart';
+import 'package:pilll/database/pilll_ads.dart';
 import 'package:pilll/domain/premium_introduction/premium_introduction_sheet.dart';
 import 'package:pilll/domain/premium_introduction/util/discount_deadline.dart';
 import 'package:pilll/domain/record/components/notification_bar/components/discount_price_deadline.dart';
@@ -36,13 +38,17 @@ class NotificationBar extends HookConsumerWidget {
     final discountEntitlementDeadlineDate = state.premiumAndTrial.discountEntitlementDeadlineDate;
     final isOverDiscountDeadline = ref.watch(isOverDiscountDeadlineProvider(discountEntitlementDeadlineDate));
     final isJaLocale = ref.watch(isJaLocaleProvider);
+    final pilllAds = ref.watch(pilllAdsProvider).asData?.value;
     final isAdsDisabled = () {
-      if (!isJaLocale) {
+      if (!kDebugMode) {
+        if (!isJaLocale) {
+          return true;
+        }
+      }
+      if (pilllAds == null) {
         return true;
       }
-      final begin = DateTime(2022, 8, 10, 0, 0, 0);
-      final end = DateTime(2022, 8, 23, 23, 59, 59);
-      return now().isBefore(begin) || now().isAfter(end);
+      return now().isBefore(pilllAds.startDateTime) || now().isAfter(pilllAds.endDateTime);
     }();
 
     // TODO: ある程度数が集まったら消す。テストも書かない
@@ -114,16 +120,11 @@ class NotificationBar extends HookConsumerWidget {
           );
         }
       } else {
-        if (!isAdsDisabled) {
-          return const PilllAdsNotificationBar(onClose: null);
+        if (!isAdsDisabled && pilllAds != null) {
+          return PilllAdsNotificationBar(pilllAds: pilllAds, onClose: () => showPremiumIntroductionSheet(context));
         }
       }
     } else {
-      if (!state.premiumUserIsClosedAdsMederiPill) {
-        if (!isAdsDisabled) {
-          return PilllAdsNotificationBar(onClose: () => stateNotifier.closeAds());
-        }
-      }
       if (state.shownRecommendSignupNotificationForPremium) {
         return const RecommendSignupForPremiumNotificationBar();
       }

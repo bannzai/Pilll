@@ -22,8 +22,7 @@ class SettingMenstruationPage extends HookConsumerWidget {
       pillSheetList: SettingMenstruationPillSheetList(
         pillSheetTypes: setting.pillSheetEnumTypes,
         appearanceMode: PillSheetAppearanceMode.sequential,
-        selectedPillNumber: (pageIndex) =>
-            store.retrieveMenstruationSelectedPillNumber(setting, pageIndex),
+        selectedPillNumber: (pageIndex) => store.retrieveMenstruationSelectedPillNumber(setting, pageIndex),
         markSelected: (pageIndex, number) {
           analytics.logEvent(name: "from_menstruation_setting", parameters: {
             "number": number,
@@ -40,9 +39,7 @@ class SettingMenstruationPage extends HookConsumerWidget {
         pillSheetTypes: setting.pillSheetEnumTypes,
         fromMenstruation: setting.pillNumberForFromMenstruation,
         fromMenstructionDidDecide: (number) {
-          analytics.logEvent(
-              name: "from_menstruation_initial_setting",
-              parameters: {"number": number});
+          analytics.logEvent(name: "from_menstruation_initial_setting", parameters: {"number": number});
           store.modifyFromMenstruationFromPicker(
             setting: setting,
             serializedPillNumberIntoGroup: number,
@@ -50,9 +47,7 @@ class SettingMenstruationPage extends HookConsumerWidget {
         },
         durationMenstruation: setting.durationMenstruation,
         durationMenstructionDidDecide: (number) {
-          analytics.logEvent(
-              name: "duration_menstruation_initial_setting",
-              parameters: {"number": number});
+          analytics.logEvent(name: "duration_menstruation_initial_setting", parameters: {"number": number});
           store.modifyDurationMenstruation(
             setting: setting,
             durationMenstruation: number,
