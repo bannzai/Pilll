@@ -61,7 +61,7 @@ final calendarPageStateProvider =
       calendarNextPillSheetBandModels: calendarNextPillSheetBandModels.value!,
     ));
   } catch (error, stackTrace) {
-    return AsyncValue.error(error, stackTrace: stackTrace);
+    return AsyncValue.error(error, stackTrace);
   }
 });
 

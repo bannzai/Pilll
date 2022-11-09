@@ -20,7 +20,7 @@ final calendarMenstruationBandListProvider =
           .toList(),
     );
   } catch (error, stackTrace) {
-    return AsyncValue.error(error, stackTrace: stackTrace);
+    return AsyncValue.error(error, stackTrace);
   }
 });
 
@@ -58,7 +58,7 @@ final calendarScheduledMenstruationBandListProvider =
           .toList(),
     );
   } catch (error, stackTrace) {
-    return AsyncValue.error(error, stackTrace: stackTrace);
+    return AsyncValue.error(error, stackTrace);
   }
 });
 
@@ -83,6 +83,6 @@ final calendarNextPillSheetBandListProvider =
           .toList(),
     );
   } catch (error, stackTrace) {
-    return AsyncValue.error(error, stackTrace: stackTrace);
+    return AsyncValue.error(error, stackTrace);
   }
 });

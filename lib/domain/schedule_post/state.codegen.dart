@@ -21,7 +21,7 @@ final schedulePostAsyncStateProvider = Provider.autoDispose.family<AsyncValue<Sc
     return AsyncValue.data(
         SchedulePostState(date: date, user: user.value!, premiumAndTrial: premiumAndTrial.value!, schedules: schedules.value ?? []));
   } catch (error, stackTrace) {
-    return AsyncValue.error(error, stackTrace: stackTrace);
+    return AsyncValue.error(error, stackTrace);
   }
 });
 

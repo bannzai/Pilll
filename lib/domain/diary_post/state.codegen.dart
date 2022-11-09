@@ -23,7 +23,7 @@ final diaryPostAsyncStateProvider = Provider.autoDispose.family<AsyncValue<Diary
       diarySetting: diarySetting,
     ));
   } catch (error, stackTrace) {
-    return AsyncValue.error(error, stackTrace: stackTrace);
+    return AsyncValue.error(error, stackTrace);
   }
 });
 
