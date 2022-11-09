@@ -38,7 +38,7 @@ void main() {
       await tester.pumpWidget(
         ProviderScope(
           overrides: [
-            recordPageStateNotifierProvider.overrideWithProvider(StateNotifierProvider.autoDispose((ref) => MockRecordPageStateNotifier())),
+            recordPageStateNotifierProvider.overrideWith((ref) => MockRecordPageStateNotifier()),
           ],
           child: MaterialApp(
             home: RecordPageButton(
@@ -63,7 +63,7 @@ void main() {
     await tester.pumpWidget(
       ProviderScope(
         overrides: [
-          recordPageStateNotifierProvider.overrideWithProvider(StateNotifierProvider.autoDispose((ref) => MockRecordPageStateNotifier())),
+          recordPageStateNotifierProvider.overrideWith((ref) => MockRecordPageStateNotifier()),
         ],
         child: MaterialApp(
           home: RecordPageButton(

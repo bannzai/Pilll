@@ -44,8 +44,7 @@ class _AnnualFakePackage extends Fake implements Package {
   Product get product => _AnnualFakeProduct();
 }
 
-class _FakePremiumIntroductionState extends Fake
-    implements PremiumIntroductionState {
+class _FakePremiumIntroductionState extends Fake implements PremiumIntroductionState {
   _FakePremiumIntroductionState({
     required this.fakeIsPremium,
     required this.fakeHasDiscountEntitlement,
@@ -68,8 +67,7 @@ class _FakePremiumIntroductionState extends Fake
   @override
   bool get hasDiscountEntitlement => fakeHasDiscountEntitlement;
   @override
-  DateTime? get discountEntitlementDeadlineDate =>
-      fakeDiscountEntitlementDeadlineDate;
+  DateTime? get discountEntitlementDeadlineDate => fakeDiscountEntitlementDeadlineDate;
   @override
   OfferingType get currentOfferingType => OfferingType.premium;
   @override
@@ -81,27 +79,22 @@ class _FakePremiumIntroductionState extends Fake
 void main() {
   setUp(() {
     TestWidgetsFlutterBinding.ensureInitialized();
-    SharedPreferences.setMockInitialValues(
-        {BoolKey.recommendedSignupNotificationIsAlreadyShow: true});
+    SharedPreferences.setMockInitialValues({BoolKey.recommendedSignupNotificationIsAlreadyShow: true});
     initializeDateFormatting('ja_JP');
     Environment.isTest = true;
     analytics = MockAnalytics();
-    WidgetsBinding.instance.renderView.configuration =
-        TestViewConfiguration(size: const Size(375.0, 667.0));
+    WidgetsBinding.instance.renderView.configuration = TestViewConfiguration(size: const Size(375.0, 667.0));
   });
   group('#PremiumIntroductionSheet', () {
     final mockTodayRepository = MockTodayService();
     final today = DateTime(2021, 04, 29);
-    final discountEntitlementDeadlineDate =
-        today.subtract(const Duration(days: 1));
+    final discountEntitlementDeadlineDate = today.subtract(const Duration(days: 1));
 
     when(mockTodayRepository.now()).thenReturn(today);
     todayRepository = mockTodayRepository;
 
     group('user is premium', () {
-      testWidgets(
-          '#PremiumIntroductionDiscountRow is not found and #PremiumUserThanksRow is found',
-          (WidgetTester tester) async {
+      testWidgets('#PremiumIntroductionDiscountRow is not found and #PremiumUserThanksRow is found', (WidgetTester tester) async {
         final state = _FakePremiumIntroductionState(
           fakeIsPremium: true,
           fakeHasDiscountEntitlement: true, // NOTE: Nasty data
@@ -114,13 +107,9 @@ void main() {
             home: ProviderScope(
               overrides: [
                 premiumIntroductionStateProvider.overrideWithValue(state),
-                premiumIntroductionStoreProvider.overrideWithProvider(
-                    StateNotifierProvider.autoDispose(
-                        (ref) => MockPremiumIntroductionStore())),
-                isOverDiscountDeadlineProvider.overrideWithProvider(
-                    (param) => Provider.autoDispose((_) => true)),
-                durationToDiscountPriceDeadline.overrideWithProvider((param) =>
-                    Provider.autoDispose((_) => const Duration(seconds: 1000))),
+                premiumIntroductionStoreProvider.overrideWith((ref) => MockPremiumIntroductionStore()),
+                isOverDiscountDeadlineProvider.overrideWithProvider((param) => Provider.autoDispose((_) => true)),
+                durationToDiscountPriceDeadline.overrideWithProvider((param) => Provider.autoDispose((_) => const Duration(seconds: 1000))),
               ],
               child: const MaterialApp(
                 home: sheet,
@@ -131,8 +120,7 @@ void main() {
         await tester.pump();
 
         expect(
-          find.byWidgetPredicate(
-              (widget) => widget is PremiumIntroductionDiscountRow),
+          find.byWidgetPredicate((widget) => widget is PremiumIntroductionDiscountRow),
           findsNothing,
         );
         expect(
@@ -144,8 +132,7 @@ void main() {
     group('user has discount entitlements', () {
       const hasDiscountEntitlement = true;
       const isOverDiscountDeadline = false;
-      testWidgets('#PremiumIntroductionDiscountRow is found',
-          (WidgetTester tester) async {
+      testWidgets('#PremiumIntroductionDiscountRow is found', (WidgetTester tester) async {
         var state = _FakePremiumIntroductionState(
           fakeIsPremium: false,
           fakeHasDiscountEntitlement: hasDiscountEntitlement,
@@ -158,13 +145,9 @@ void main() {
             home: ProviderScope(
               overrides: [
                 premiumIntroductionStateProvider.overrideWithValue(state),
-                premiumIntroductionStoreProvider.overrideWithProvider(
-                    StateNotifierProvider.autoDispose(
-                        (ref) => MockPremiumIntroductionStore())),
-                isOverDiscountDeadlineProvider.overrideWithProvider((param) =>
-                    Provider.autoDispose((_) => isOverDiscountDeadline)),
-                durationToDiscountPriceDeadline.overrideWithProvider((param) =>
-                    Provider.autoDispose((_) => const Duration(seconds: 1000))),
+                premiumIntroductionStoreProvider.overrideWith((ref) => MockPremiumIntroductionStore()),
+                isOverDiscountDeadlineProvider.overrideWithProvider((param) => Provider.autoDispose((_) => isOverDiscountDeadline)),
+                durationToDiscountPriceDeadline.overrideWithProvider((param) => Provider.autoDispose((_) => const Duration(seconds: 1000))),
               ],
               child: const MaterialApp(
                 home: sheet,
@@ -175,16 +158,14 @@ void main() {
         await tester.pump();
 
         expect(
-          find.byWidgetPredicate(
-              (widget) => widget is PremiumIntroductionDiscountRow),
+          find.byWidgetPredicate((widget) => widget is PremiumIntroductionDiscountRow),
           findsOneWidget,
         );
       });
     });
     group('user does not has discount entitlements', () {
       const hasDiscountEntitlement = false;
-      testWidgets('#PremiumIntroductionDiscountRow is not found',
-          (WidgetTester tester) async {
+      testWidgets('#PremiumIntroductionDiscountRow is not found', (WidgetTester tester) async {
         final mockTodayRepository = MockTodayService();
         final today = DateTime(2021, 04, 29);
 
@@ -194,8 +175,7 @@ void main() {
         final state = _FakePremiumIntroductionState(
           fakeIsPremium: false,
           fakeHasDiscountEntitlement: hasDiscountEntitlement,
-          fakeDiscountEntitlementDeadlineDate:
-              today.subtract(const Duration(days: 1)),
+          fakeDiscountEntitlementDeadlineDate: today.subtract(const Duration(days: 1)),
         );
 
         const sheet = PremiumIntroductionSheet();
@@ -204,13 +184,9 @@ void main() {
             home: ProviderScope(
               overrides: [
                 premiumIntroductionStateProvider.overrideWithValue(state),
-                premiumIntroductionStoreProvider.overrideWithProvider(
-                    StateNotifierProvider.autoDispose(
-                        (ref) => MockPremiumIntroductionStore())),
-                isOverDiscountDeadlineProvider.overrideWithProvider(
-                    (param) => Provider.autoDispose((_) => false)),
-                durationToDiscountPriceDeadline.overrideWithProvider((param) =>
-                    Provider.autoDispose((_) => const Duration(seconds: 1000))),
+                premiumIntroductionStoreProvider.overrideWith((ref) => MockPremiumIntroductionStore()),
+                isOverDiscountDeadlineProvider.overrideWithProvider((param) => Provider.autoDispose((_) => false)),
+                durationToDiscountPriceDeadline.overrideWithProvider((param) => Provider.autoDispose((_) => const Duration(seconds: 1000))),
               ],
               child: const MaterialApp(
                 home: sheet,
@@ -221,16 +197,14 @@ void main() {
         await tester.pump();
 
         expect(
-          find.byWidgetPredicate(
-              (widget) => widget is PremiumIntroductionDiscountRow),
+          find.byWidgetPredicate((widget) => widget is PremiumIntroductionDiscountRow),
           findsNothing,
         );
       });
     });
     group('is over discount deadline ', () {
       const isOverDiscountDeadline = true;
-      testWidgets('#PremiumIntroductionDiscountRow is found',
-          (WidgetTester tester) async {
+      testWidgets('#PremiumIntroductionDiscountRow is found', (WidgetTester tester) async {
         final mockTodayRepository = MockTodayService();
         final today = DateTime(2021, 04, 29);
 
@@ -240,8 +214,7 @@ void main() {
         final state = _FakePremiumIntroductionState(
           fakeIsPremium: false,
           fakeHasDiscountEntitlement: true,
-          fakeDiscountEntitlementDeadlineDate:
-              today.subtract(const Duration(days: 1)),
+          fakeDiscountEntitlementDeadlineDate: today.subtract(const Duration(days: 1)),
         );
 
         const sheet = PremiumIntroductionSheet();
@@ -250,13 +223,9 @@ void main() {
             home: ProviderScope(
               overrides: [
                 premiumIntroductionStateProvider.overrideWithValue(state),
-                premiumIntroductionStoreProvider.overrideWithProvider(
-                    StateNotifierProvider.autoDispose(
-                        (ref) => MockPremiumIntroductionStore())),
-                isOverDiscountDeadlineProvider.overrideWithProvider((param) =>
-                    Provider.autoDispose((_) => isOverDiscountDeadline)),
-                durationToDiscountPriceDeadline.overrideWithProvider((param) =>
-                    Provider.autoDispose((_) => const Duration(seconds: 1000))),
+                premiumIntroductionStoreProvider.overrideWith((ref) => MockPremiumIntroductionStore()),
+                isOverDiscountDeadlineProvider.overrideWithProvider((param) => Provider.autoDispose((_) => isOverDiscountDeadline)),
+                durationToDiscountPriceDeadline.overrideWithProvider((param) => Provider.autoDispose((_) => const Duration(seconds: 1000))),
               ],
               child: const MaterialApp(
                 home: sheet,
@@ -267,15 +236,13 @@ void main() {
         await tester.pump();
 
         expect(
-          find.byWidgetPredicate(
-              (widget) => widget is PremiumIntroductionDiscountRow),
+          find.byWidgetPredicate((widget) => widget is PremiumIntroductionDiscountRow),
           findsOneWidget,
         );
       });
     });
     group('discount entitlemenet deadline date is null', () {
-      testWidgets('#PremiumIntroductionDiscountRow is found',
-          (WidgetTester tester) async {
+      testWidgets('#PremiumIntroductionDiscountRow is found', (WidgetTester tester) async {
         final mockTodayRepository = MockTodayService();
         final today = DateTime(2021, 04, 29);
 
@@ -294,13 +261,9 @@ void main() {
             home: ProviderScope(
               overrides: [
                 premiumIntroductionStateProvider.overrideWithValue(state),
-                premiumIntroductionStoreProvider.overrideWithProvider(
-                    StateNotifierProvider.autoDispose(
-                        (ref) => MockPremiumIntroductionStore())),
-                isOverDiscountDeadlineProvider.overrideWithProvider(
-                    (param) => Provider.autoDispose((_) => false)),
-                durationToDiscountPriceDeadline.overrideWithProvider((param) =>
-                    Provider.autoDispose((_) => const Duration(seconds: 1000))),
+                premiumIntroductionStoreProvider.overrideWith((ref) => MockPremiumIntroductionStore()),
+                isOverDiscountDeadlineProvider.overrideWithProvider((param) => Provider.autoDispose((_) => false)),
+                durationToDiscountPriceDeadline.overrideWithProvider((param) => Provider.autoDispose((_) => const Duration(seconds: 1000))),
               ],
               child: const MaterialApp(
                 home: sheet,
@@ -311,8 +274,7 @@ void main() {
         await tester.pump();
 
         expect(
-          find.byWidgetPredicate(
-              (widget) => widget is PremiumIntroductionDiscountRow),
+          find.byWidgetPredicate((widget) => widget is PremiumIntroductionDiscountRow),
           findsWidgets,
         );
       });
