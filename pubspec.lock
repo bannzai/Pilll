@@ -7,14 +7,14 @@ packages:
       name: _fe_analyzer_shared
       url: "https://pub.dartlang.org"
     source: hosted
-    version: "38.0.0"
+    version: "47.0.0"
   analyzer:
     dependency: transitive
     description:
       name: analyzer
       url: "https://pub.dartlang.org"
     source: hosted
-    version: "3.4.1"
+    version: "4.7.0"
   args:
     dependency: transitive
     description:
@@ -456,14 +456,14 @@ packages:
       name: freezed
       url: "https://pub.dartlang.org"
     source: hosted
-    version: "1.1.1"
+    version: "2.2.0"
   freezed_annotation:
     dependency: "direct main"
     description:
       name: freezed_annotation
       url: "https://pub.dartlang.org"
     source: hosted
-    version: "1.1.0"
+    version: "2.2.0"
   frontend_server_client:
     dependency: transitive
     description:
@@ -757,7 +757,7 @@ packages:
       name: purchases_flutter
       url: "https://pub.dartlang.org"
     source: hosted
-    version: "3.10.0"
+    version: "3.8.0"
   quiver:
     dependency: transitive
     description:
@@ -772,6 +772,20 @@ packages:
       url: "https://pub.dartlang.org"
     source: hosted
     version: "2.1.1"
+  riverpod_annotation:
+    dependency: "direct main"
+    description:
+      name: riverpod_annotation
+      url: "https://pub.dartlang.org"
+    source: hosted
+    version: "1.0.6"
+  riverpod_generator:
+    dependency: "direct dev"
+    description:
+      name: riverpod_generator
+      url: "https://pub.dartlang.org"
+    source: hosted
+    version: "1.0.6"
   shared_preferences:
     dependency: "direct main"
     description:
@@ -874,7 +888,7 @@ packages:
       name: source_gen
       url: "https://pub.dartlang.org"
     source: hosted
-    version: "1.2.2"
+    version: "1.2.6"
   source_helper:
     dependency: transitive
     description:
