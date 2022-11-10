@@ -103,7 +103,6 @@ class RecordPage extends HookConsumerWidget {
           totalCountOfActionForTakenPill: totalCountOfActionForTakenPill ?? 0,
           isAlreadyShowPremiumSurvey: isAlreadyShowPremiumSurvey ?? false,
           isLinkedLoginProvider: isLinked,
-          timestamp: now(),
         );
       },
       error: (error, stackTrace) => UniversalErrorPage(
@@ -116,6 +115,7 @@ class RecordPage extends HookConsumerWidget {
   }
 }
 
+// TODO: pillSheetGroup.activedPillSheet.restDurations を更新したときに画面が変更されるかを確認する。（timestampを使っていた部分のテスト）
 class RecordPageBody extends HookConsumerWidget {
 //  final RecordPageStateNotifier store;
 //  final RecordPageState state;
@@ -127,9 +127,6 @@ class RecordPageBody extends HookConsumerWidget {
   final bool isAlreadyShowPremiumSurvey;
   final bool shouldShowMigrateInfo;
   final bool isLinkedLoginProvider;
-  // Workaround for no update RecordPageStateNotifier when pillSheetGroup.activedPillSheet.restDurations is change
-  // Add and always update timestamp when every stream or provider changed to avoid this issue
-  final DateTime timestamp;
 
   const RecordPageBody({
     Key? key,
@@ -140,7 +137,6 @@ class RecordPageBody extends HookConsumerWidget {
     required this.isAlreadyShowPremiumSurvey,
     required this.shouldShowMigrateInfo,
     required this.isLinkedLoginProvider,
-    required this.timestamp,
   }) : super(key: key);
 
   @override
