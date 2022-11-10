@@ -30,6 +30,8 @@ import 'package:uuid/uuid.dart';
 
 GlobalKey<RootState> rootKey = GlobalKey();
 
+// TODO: Replace to HookConsumerWidget
+// TODO: Instantiate and cache SharedPreferences with Provider on RootPage(this file)
 class Root extends StatefulWidget {
   const Root({Key? key}) : super(key: key);
 
