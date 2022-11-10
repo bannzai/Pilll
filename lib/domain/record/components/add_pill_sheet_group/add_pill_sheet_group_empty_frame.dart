@@ -11,12 +11,10 @@ class AddPillSheetGroupEmptyFrame extends StatelessWidget {
   const AddPillSheetGroupEmptyFrame({
     Key? key,
     required this.context,
-    required this.store,
     required this.setting,
   }) : super(key: key);
 
   final BuildContext context;
-  final RecordPageStateNotifier store;
   final Setting setting;
 
   @override
@@ -37,8 +35,7 @@ class AddPillSheetGroupEmptyFrame extends StatelessWidget {
               mainAxisAlignment: MainAxisAlignment.center,
               children: <Widget>[
                 const Icon(Icons.add, color: TextColor.noshime),
-                Text("ピルシートを追加",
-                    style: FontType.assisting.merge(TextColorStyle.noshime)),
+                Text("ピルシートを追加", style: FontType.assisting.merge(TextColorStyle.noshime)),
               ],
             )),
           ],

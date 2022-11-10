@@ -80,7 +80,7 @@ class RecordPage extends HookConsumerWidget {
     }, [state.asData?.value.pillSheetGroup]);
 
     final isLinked = ref.watch(isLinkedProvider);
-    AsyncValueGroup.group6(
+    return AsyncValueGroup.group6(
       ref.watch(latestPillSheetGroupStreamProvider),
       ref.watch(premiumAndTrialProvider),
       ref.watch(settingStreamProvider),
@@ -207,7 +207,6 @@ class RecordPageBody extends HookConsumerWidget {
     if (activedPillSheet == null || pillSheetGroup == null || pillSheetGroup.isDeactived) {
       return AddPillSheetGroupEmptyFrame(
         context: context,
-        store: store,
         setting: setting,
       );
     } else {
