@@ -214,11 +214,10 @@ class RecordPageBody extends HookConsumerWidget {
         mainAxisAlignment: MainAxisAlignment.start,
         children: [
           RecordPagePillSheetSupportActions(
-            state: state,
-            store: store,
             pillSheetGroup: pillSheetGroup,
             activedPillSheet: activedPillSheet,
             setting: setting,
+            premiumAndTrial: premiumAndTrial,
           ),
           const SizedBox(height: 16),
           RecordPagePillSheetList(

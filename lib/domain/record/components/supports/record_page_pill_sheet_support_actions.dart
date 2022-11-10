@@ -19,8 +19,6 @@ class RecordPagePillSheetSupportActions extends StatelessWidget {
 
   const RecordPagePillSheetSupportActions({
     Key? key,
-    required this.store,
-    required this.state,
     required this.pillSheetGroup,
     required this.activedPillSheet,
     required this.setting,
@@ -74,7 +72,6 @@ class RecordPagePillSheetSupportActions extends StatelessWidget {
               appearanceMode: setting.pillSheetAppearanceMode,
               activedPillSheet: activedPillSheet,
               pillSheetGroup: pillSheetGroup,
-              store: store,
               didBeginRestDuration: () {
                 ScaffoldMessenger.of(context).showSnackBar(
                   const SnackBar(
