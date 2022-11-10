@@ -46,14 +46,16 @@ dependencies:
   dotted_border: ^2.0.0-nullsafety.0
   in_app_review: ^2.0.1
   uuid: 3.0.6
+  async_value_group: ^1.0.0
 
   # The following adds the Cupertino Icons font to your application.
   # Use with the CupertinoIcons class for iOS style icons.
-  cupertino_icons: ^1.0.2
+  cupertino_icons:
+    ^1.0.2
     # flutter_inappwebview: ^5.4.3
     # Use https://github.com/pichillilorenzo/flutter_inappwebview/pull/1238
   flutter_inappwebview:
-    git: 
+    git:
       url: ssh://git@github.com/bannzai/flutter_inappwebview.git
       ref: master
   flutter_app_badger: ^1.2.0
