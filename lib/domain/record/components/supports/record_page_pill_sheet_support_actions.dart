@@ -12,8 +12,6 @@ import 'package:pilll/entity/setting.codegen.dart';
 import 'package:pilll/provider/premium_and_trial.codegen.dart';
 
 class RecordPagePillSheetSupportActions extends StatelessWidget {
-  final RecordPageStateNotifier store;
-  final RecordPageState state;
   final PillSheetGroup pillSheetGroup;
   final PillSheet activedPillSheet;
   final Setting setting;
@@ -45,7 +43,6 @@ class RecordPagePillSheetSupportActions extends StatelessWidget {
           if (setting.pillSheetAppearanceMode == PillSheetAppearanceMode.sequential) ...[
             DisplayNumberSettingButton(
               pillSheetGroup: pillSheetGroup,
-              store: store,
             ),
           ],
           const Spacer(),

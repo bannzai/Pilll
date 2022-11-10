@@ -67,7 +67,7 @@ class DatabaseConnection {
         toFirestore: _pillSheetToFirestore,
       );
 
-  DocumentReference<PillSheet> pillSheetReference(String pillSheetID) =>
+  DocumentReference<PillSheet> pillSheetReference(String? pillSheetID) =>
       FirebaseFirestore.instance.collection(_CollectionPath.pillSheets(_userID)).doc(pillSheetID).withConverter(
             fromFirestore: _pillSheetFromFirestore,
             toFirestore: _pillSheetToFirestore,
@@ -109,6 +109,11 @@ class DatabaseConnection {
             fromFirestore: _pillSheetModifiedHistoryFromFirestore,
             toFirestore: _pillSheetModifiedHistoryToFirestore,
           );
+  DocumentReference<PillSheetModifiedHistory> pillSheetModifiedHistoryReference({required String? pillSheetModifiedHistoryID}) =>
+      FirebaseFirestore.instance.collection(_CollectionPath.pillSheetModifiedHistories(_userID)).doc(pillSheetModifiedHistoryID).withConverter(
+            fromFirestore: _pillSheetModifiedHistoryFromFirestore,
+            toFirestore: _pillSheetModifiedHistoryToFirestore,
+          );
 
   final FromFirestore<PillSheetGroup> _pillSheetGroupFromFirestore =
       (snapshot, options) => PillSheetGroup.fromJson(snapshot.data()!..putIfAbsent("id", () => snapshot.id));
@@ -119,7 +124,7 @@ class DatabaseConnection {
             toFirestore: _pillSheetGroupToFirestore,
           );
 
-  DocumentReference<PillSheetGroup> pillSheetGroupReference(String pillSheetGroupID) =>
+  DocumentReference<PillSheetGroup> pillSheetGroupReference(String? pillSheetGroupID) =>
       FirebaseFirestore.instance.collection(_CollectionPath.pillSheetGroups(_userID)).doc(pillSheetGroupID).withConverter(
             fromFirestore: _pillSheetGroupFromFirestore,
             toFirestore: _pillSheetGroupToFirestore,

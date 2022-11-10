@@ -1,12 +1,17 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:pilll/database/database.dart';
 import 'package:pilll/entity/pill_sheet.codegen.dart';
+import 'package:riverpod/riverpod.dart';
 
-class BatchSetPillSheet {
+final batchSetPillSheetsProvider = Provider((ref) => BatchSetPillSheets(ref.watch(databaseProvider)));
+
+class BatchSetPillSheets {
   final DatabaseConnection databaseConnection;
-  BatchSetPillSheet(this.databaseConnection);
+  BatchSetPillSheets(this.databaseConnection);
 
-  void call(WriteBatch batch, {required PillSheet pillSheet}) async {
-    batch.set(databaseConnection.pillSheetReference(pillSheet.id), pillSheet, SetOptions(merge: true));
+  void call(WriteBatch batch, {required List<PillSheet> pillSheets}) async {
+    for (var pillSheet in pillSheets) {
+      batch.set(databaseConnection.pillSheetReference(pillSheet.id), pillSheet, SetOptions(merge: true));
+    }
   }
 }
