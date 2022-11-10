@@ -25,6 +25,7 @@ import 'package:pilll/native/widget.dart';
 import 'package:pilll/provider/premium_and_trial.codegen.dart';
 import 'package:pilll/provider/root.dart';
 import 'package:pilll/provider/shared_preference.dart';
+import 'package:pilll/provider/shared_preferences.dart';
 import 'package:pilll/service/auth.dart';
 import 'package:pilll/util/datetime/day.dart';
 import 'package:pilll/util/shared_preference/keys.dart';
@@ -79,26 +80,28 @@ class RecordPage extends HookConsumerWidget {
     }, [state.asData?.value.pillSheetGroup]);
 
     final isLinked = ref.watch(isLinkedProvider);
-    AsyncValueGroup.group5(
+    AsyncValueGroup.group6(
       ref.watch(latestPillSheetGroupStreamProvider),
       ref.watch(premiumAndTrialProvider),
       ref.watch(settingStreamProvider),
-      ref.watch(sharedPreferenceProvider),
       ref.watch(shouldShowMigrationInformationProvider),
+      ref.watch(intSharedPreferencesProvider(IntKey.totalCountOfActionForTakenPill)),
+      ref.watch(boolSharedPreferencesProvider(BoolKey.isAlreadyShowPremiumSurvey)),
     ).when(
       data: (data) {
         final latestPillSheetGroup = data.t1;
         final premiumAndTrial = data.t2;
         final setting = data.t3;
-        final sharedPreferences = data.t4;
-        final shouldShowMigrationInformation = data.t5;
+        final shouldShowMigrationInformation = data.t4;
+        final totalCountOfActionForTakenPill = data.t5;
+        final isAlreadyShowPremiumSurvey = data.t6;
         return RecordPageBody(
           pillSheetGroup: latestPillSheetGroup,
           setting: setting,
           premiumAndTrial: premiumAndTrial,
-          totalCountOfActionForTakenPill: sharedPreferences.getInt(IntKey.totalCountOfActionForTakenPill) ?? 0,
           shouldShowMigrateInfo: shouldShowMigrationInformation,
-          isAlreadyShowPremiumSurvey: sharedPreferences.getBool(BoolKey.isAlreadyShowPremiumSurvey) ?? false,
+          totalCountOfActionForTakenPill: totalCountOfActionForTakenPill ?? 0,
+          isAlreadyShowPremiumSurvey: isAlreadyShowPremiumSurvey ?? false,
           isLinkedLoginProvider: isLinked,
           timestamp: now(),
         );

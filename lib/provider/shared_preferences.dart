@@ -23,7 +23,7 @@ class BoolSharedPreferences extends FamilyAsyncNotifier<bool?, String> {
   }
 }
 
-final intSharedPreferencesProvider = AsyncNotifierProvider.family<IntSharedPreferences, int, String>(() => IntSharedPreferences());
+final intSharedPreferencesProvider = AsyncNotifierProvider.family<IntSharedPreferences, int?, String>(() => IntSharedPreferences());
 
 class IntSharedPreferences extends FamilyAsyncNotifier<int?, String> {
   late String key;
