@@ -116,7 +116,7 @@ class RecordPage extends HookConsumerWidget {
   }
 }
 
-class RecordPageBody extends StatelessWidget {
+class RecordPageBody extends HookConsumerWidget {
 //  final RecordPageStateNotifier store;
 //  final RecordPageState state;
 //
@@ -144,7 +144,8 @@ class RecordPageBody extends StatelessWidget {
   }) : super(key: key);
 
   @override
-  Widget build(BuildContext context) {
+  Widget build(BuildContext context, WidgetRef ref) {
+    final isAlreadyShowPremiumSurveyNotifier = ref.watch(boolSharedPreferencesProvider(BoolKey.isAlreadyShowPremiumSurvey).notifier);
     Future.microtask(() async {
       if (shouldShowMigrateInfo) {
         showDialog(
@@ -154,7 +155,7 @@ class RecordPageBody extends StatelessWidget {
               return const MigrateInfo();
             });
       } else if (_shouldShowPremiumFunctionSurvey) {
-        await store.setTrueIsAlreadyShowPremiumFunctionSurvey();
+        isAlreadyShowPremiumSurveyNotifier.set(true);
         Navigator.of(context).push(PremiumFunctionSurveyPageRoutes.route());
       }
     });
