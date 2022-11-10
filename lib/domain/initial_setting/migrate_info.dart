@@ -1,15 +1,16 @@
+import 'package:hooks_riverpod/hooks_riverpod.dart';
 import 'package:pilll/components/atoms/buttons.dart';
 import 'package:pilll/components/atoms/color.dart';
 import 'package:pilll/components/atoms/font.dart';
 import 'package:pilll/components/atoms/text_color.dart';
 import 'package:flutter/material.dart';
+import 'package:pilll/util/shared_preference/keys.dart';
 
-class MigrateInfo extends StatelessWidget {
-  final VoidCallback onClose;
-
-  const MigrateInfo({Key? key, required this.onClose}) : super(key: key);
+class MigrateInfo extends HookConsumerWidget {
+  const MigrateInfo({Key? key}) : super(key: key);
   @override
-  Widget build(BuildContext context) {
+  Widget build(BuildContext context, WidgetRef ref) {
+    final sharedPreferences = ref.watch(sharedPreferenceProvider).requireValue;
     return Scaffold(
       backgroundColor: PilllColors.background,
       body: SingleChildScrollView(
@@ -30,14 +31,12 @@ class MigrateInfo extends StatelessWidget {
                   text: TextSpan(
                     children: [
                       TextSpan(
-                        text:
-                            "今回のアップデートにより大型リニューアル前のアプリでピルシートを服用していたときのデータを参照できるようにしました。",
+                        text: "今回のアップデートにより大型リニューアル前のアプリでピルシートを服用していたときのデータを参照できるようにしました。",
                         style: FontType.assisting.merge(TextColorStyle.main),
                       ),
                       TextSpan(
                         text: "設定 > 大型アップデート前の情報 ",
-                        style:
-                            FontType.assistingBold.merge(TextColorStyle.main),
+                        style: FontType.assistingBold.merge(TextColorStyle.main),
                       ),
                       TextSpan(
                         text: "から表示されます。",
@@ -57,14 +56,12 @@ class MigrateInfo extends StatelessWidget {
                   text: TextSpan(
                     children: [
                       TextSpan(
-                        text:
-                            "同じようにお困りの方はこちらの表示を参考にしてピルシートの番号を調整していただくようお願いします。ピル番号の調整はピルシートを作っていただいてから",
+                        text: "同じようにお困りの方はこちらの表示を参考にしてピルシートの番号を調整していただくようお願いします。ピル番号の調整はピルシートを作っていただいてから",
                         style: FontType.assisting.merge(TextColorStyle.main),
                       ),
                       TextSpan(
                         text: "設定 > 今日飲むピル番号の変更",
-                        style:
-                            FontType.assistingBold.merge(TextColorStyle.main),
+                        style: FontType.assistingBold.merge(TextColorStyle.main),
                       ),
                       TextSpan(
                         text: "へおすすみください。今日服用するピルの番号を調整できます。",
@@ -93,7 +90,12 @@ class MigrateInfo extends StatelessWidget {
                   child: SizedBox(
                       width: 230,
                       child: PrimaryButton(
-                          onPressed: () async => onClose(), text: "閉じる")),
+                          onPressed: () async {
+                            sharedPreferences.setBool(BoolKey.migrateFrom132IsShown, true);
+                            ref.invalidate(sharedPreferenceProvider);
+                            Navigator.of(context).pop();
+                          },
+                          text: "閉じる")),
                 ),
                 const SizedBox(height: 32),
               ],
