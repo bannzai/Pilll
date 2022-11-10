@@ -142,6 +142,7 @@ class RecordPageBody extends HookConsumerWidget {
   @override
   Widget build(BuildContext context, WidgetRef ref) {
     final isAlreadyShowPremiumSurveyNotifier = ref.watch(boolSharedPreferencesProvider(BoolKey.isAlreadyShowPremiumSurvey).notifier);
+    final activePillSheet = pillSheetGroup?.activedPillSheet;
     Future.microtask(() async {
       if (shouldShowMigrateInfo) {
         showDialog(
@@ -184,10 +185,10 @@ class RecordPageBody extends HookConsumerWidget {
               ],
             ),
           ),
-          if (activedPillSheet != null && pillSheetGroup != null && !pillSheetGroup.isDeactived) ...[
+          if (activePillSheet != null && pillSheetGroup != null && !pillSheetGroup.isDeactived) ...[
             RecordPageButton(
               pillSheetGroup: pillSheetGroup,
-              currentPillSheet: activedPillSheet,
+              currentPillSheet: activePillSheet,
               userIsPremiumOtTrial: state.premiumAndTrial.premiumOrTrial,
             ),
             const SizedBox(height: 40),
