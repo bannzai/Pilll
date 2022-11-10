@@ -1,5 +1,9 @@
+import 'package:async_value_group/async_value_group.dart';
 import 'package:flutter_hooks/flutter_hooks.dart';
 import 'package:pilll/components/molecules/indicator.dart';
+import 'package:pilll/database/database.dart';
+import 'package:pilll/database/pill_sheet_group.dart';
+import 'package:pilll/database/setting.dart';
 import 'package:pilll/domain/initial_setting/migrate_info.dart';
 import 'package:pilll/domain/premium_function_survey/premium_function_survey_page.dart';
 import 'package:pilll/domain/record/components/add_pill_sheet_group/add_pill_sheet_group_empty_frame.dart';
@@ -10,12 +14,19 @@ import 'package:pilll/domain/record/components/pill_sheet/record_page_pill_sheet
 import 'package:pilll/domain/record/record_page_state.codegen.dart';
 import 'package:pilll/domain/record/record_page_state_notifier.dart';
 import 'package:pilll/domain/record/components/header/record_page_header.dart';
+import 'package:pilll/domain/root/provider.dart';
+import 'package:pilll/entity/pill_sheet_group.codegen.dart';
 import 'package:pilll/entity/setting.codegen.dart';
 import 'package:pilll/error/universal_error_page.dart';
 import 'package:pilll/components/atoms/color.dart';
 import 'package:flutter/material.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
 import 'package:pilll/native/widget.dart';
+import 'package:pilll/provider/premium_and_trial.codegen.dart';
+import 'package:pilll/provider/shared_preference.dart';
+import 'package:pilll/service/auth.dart';
+import 'package:pilll/util/datetime/day.dart';
+import 'package:pilll/util/shared_preference/keys.dart';
 
 class RecordPage extends HookConsumerWidget {
   const RecordPage({Key? key}) : super(key: key);
@@ -65,6 +76,39 @@ class RecordPage extends HookConsumerWidget {
       return null;
     }, [state.asData?.value.pillSheetGroup]);
 
+    final isLinked = ref.watch(isLinkedProvider);
+    AsyncValueGroup.group5(
+      ref.watch(latestPillSheetGroupStreamProvider),
+      ref.watch(premiumAndTrialProvider),
+      ref.watch(settingStreamProvider),
+      ref.watch(sharedPreferenceProvider),
+      ref.watch(shouldShowMigrationInformationProvider),
+    ).when(
+      data: (data) {
+        final latestPillSheetGroup = data.t1;
+        final premiumAndTrial = data.t2;
+        final setting = data.t3;
+        final sharedPreferences = data.t4;
+        final shouldShowMigrationInformation = data.t5;
+        return RecordPageBody(
+          pillSheetGroup: latestPillSheetGroup,
+          setting: setting,
+          premiumAndTrial: premiumAndTrial,
+          totalCountOfActionForTakenPill: sharedPreferences.getInt(IntKey.totalCountOfActionForTakenPill) ?? 0,
+          shouldShowMigrateInfo: shouldShowMigrationInformation,
+          isAlreadyShowPremiumSurvey: sharedPreferences.getBool(BoolKey.isAlreadyShowPremiumSurvey) ?? false,
+          isLinkedLoginProvider: isLinked,
+          timestamp: now(),
+        );
+      },
+      error: (error, stackTrace) => UniversalErrorPage(
+        error: error,
+        reload: () => ref.refresh(refreshAppProvider),
+        child: null,
+      ),
+      loading: () => const Indicator(),
+    );
+
     return state.when(
       data: (state) => RecordPageBody(store: store, state: state),
       error: (error, stackTrace) => UniversalErrorPage(
@@ -78,14 +122,32 @@ class RecordPage extends HookConsumerWidget {
 }
 
 class RecordPageBody extends StatelessWidget {
-  final RecordPageStateNotifier store;
-  final RecordPageState state;
+//  final RecordPageStateNotifier store;
+//  final RecordPageState state;
+//
+  final PillSheetGroup? pillSheetGroup;
+  final Setting setting;
+  final PremiumAndTrial premiumAndTrial;
+  final int totalCountOfActionForTakenPill;
+  final bool isAlreadyShowPremiumSurvey;
+  final bool shouldShowMigrateInfo;
+  final bool isLinkedLoginProvider;
+  // Workaround for no update RecordPageStateNotifier when pillSheetGroup.activedPillSheet.restDurations is change
+  // Add and always update timestamp when every stream or provider changed to avoid this issue
+  final DateTime timestamp;
 
   const RecordPageBody({
     Key? key,
-    required this.store,
-    required this.state,
+    this.pillSheetGroup,
+    required this.setting,
+    required this.premiumAndTrial,
+    required this.totalCountOfActionForTakenPill,
+    required this.isAlreadyShowPremiumSurvey,
+    required this.shouldShowMigrateInfo,
+    required this.isLinkedLoginProvider,
+    required this.timestamp,
   }) : super(key: key);
+
   @override
   Widget build(BuildContext context) {
     final pillSheetGroup = state.pillSheetGroup;
