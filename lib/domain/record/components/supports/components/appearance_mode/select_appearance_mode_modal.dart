@@ -12,6 +12,9 @@ import 'package:pilll/domain/record/record_page_state_notifier.dart';
 import 'package:pilll/entity/setting.codegen.dart';
 import 'package:riverpod_annotation/riverpod_annotation.dart';
 
+part 'select_appearance_mode_modal.g.dart';
+
+@riverpod
 Future<void> switchingAppearanceMode(
   WidgetRef ref, {
   required PillSheetAppearanceMode mode,
