@@ -9,6 +9,7 @@ import 'package:pilll/domain/record/record_page_state_notifier.dart';
 import 'package:pilll/entity/pill_sheet.codegen.dart';
 import 'package:pilll/entity/pill_sheet_group.codegen.dart';
 import 'package:pilll/entity/setting.codegen.dart';
+import 'package:pilll/provider/premium_and_trial.codegen.dart';
 
 class RecordPagePillSheetSupportActions extends StatelessWidget {
   final RecordPageStateNotifier store;
@@ -16,6 +17,7 @@ class RecordPagePillSheetSupportActions extends StatelessWidget {
   final PillSheetGroup pillSheetGroup;
   final PillSheet activedPillSheet;
   final Setting setting;
+  final PremiumAndTrial premiumAndTrial;
 
   const RecordPagePillSheetSupportActions({
     Key? key,
@@ -24,6 +26,7 @@ class RecordPagePillSheetSupportActions extends StatelessWidget {
     required this.pillSheetGroup,
     required this.activedPillSheet,
     required this.setting,
+    required this.premiumAndTrial,
   }) : super(key: key);
 
   @override
@@ -34,10 +37,12 @@ class RecordPagePillSheetSupportActions extends StatelessWidget {
       width: PillSheetViewLayout.width,
       child: Row(
         children: [
-          SwitchingAppearanceMode(store: store, state: state),
+          SwitchingAppearanceMode(
+            setting: setting,
+            premiumAndTrial: premiumAndTrial,
+          ),
           const Spacer(),
-          if (setting.pillSheetAppearanceMode ==
-              PillSheetAppearanceMode.sequential) ...[
+          if (setting.pillSheetAppearanceMode == PillSheetAppearanceMode.sequential) ...[
             DisplayNumberSettingButton(
               pillSheetGroup: pillSheetGroup,
               store: store,
@@ -51,9 +56,7 @@ class RecordPagePillSheetSupportActions extends StatelessWidget {
               pillSheetGroup: pillSheetGroup,
               store: store,
               didEndRestDuration: () {
-                if (pillSheetGroup.sequentialLastTakenPillNumber > 0 &&
-                    setting.pillSheetAppearanceMode ==
-                        PillSheetAppearanceMode.sequential) {
+                if (pillSheetGroup.sequentialLastTakenPillNumber > 0 && setting.pillSheetAppearanceMode == PillSheetAppearanceMode.sequential) {
                   showEndRestDurationModal(
                     context,
                     pillSheetGroup: pillSheetGroup,

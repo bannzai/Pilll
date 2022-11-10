@@ -11,6 +11,7 @@ final settingDatastoreProvider =
 
 final settingStreamProvider =
     StreamProvider((ref) => ref.watch(settingDatastoreProvider).stream());
+    
 
 class SettingDatastore {
   final DatabaseConnection _database;
