@@ -10,17 +10,17 @@ import 'package:pilll/domain/premium_introduction/premium_introduction_sheet.dar
 import 'package:pilll/domain/record/record_page_state.codegen.dart';
 import 'package:pilll/domain/record/record_page_state_notifier.dart';
 import 'package:pilll/entity/setting.codegen.dart';
-import 'package:riverpod_annotation/riverpod_annotation.dart';
 
-part 'select_appearance_mode_modal.g.dart';
+class SwitchingAppearanceMode {
+  final SettingDatastore _settingDatastore;
 
-@riverpod
-Future<void> switchingAppearanceMode(
-  WidgetRef ref, {
-  required PillSheetAppearanceMode mode,
-  required Setting setting,
-}) async {
-  await ref.watch(settingDatastoreProvider).update(setting.copyWith(pillSheetAppearanceMode: mode));
+  SwitchingAppearanceMode(this._settingDatastore);
+  Future<void> call({
+    required PillSheetAppearanceMode mode,
+    required Setting setting,
+  }) async {
+    await _settingDatastore.update(setting.copyWith(pillSheetAppearanceMode: mode));
+  }
 }
 
 class SelectAppearanceModeModal extends HookConsumerWidget {
