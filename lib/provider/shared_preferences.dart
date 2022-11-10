@@ -55,7 +55,7 @@ class StringSharedPreferences extends FamilyAsyncNotifier<String?, String> {
     ref.invalidateSelf();
   }
 
-  bool contains() => sharedPreferences.containsKey(key);
+  bool containsKey() => sharedPreferences.containsKey(key);
 
   @override
   FutureOr<String?> build(String arg) async {
