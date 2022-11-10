@@ -12,32 +12,7 @@ part of 'menstruation_edit_page_state.codegen.dart';
 T _$identity<T>(T value) => value;
 
 final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more informations: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
-
-/// @nodoc
-class _$MenstruationEditPageStateTearOff {
-  const _$MenstruationEditPageStateTearOff();
-
-  _MenstruationEditPageState call(
-      {bool isAlreadyAdjsutScrollOffset = false,
-      required Menstruation? menstruation,
-      required Setting setting,
-      required List<DateTime> displayedDates,
-      required PremiumAndTrial premiumAndTrial,
-      String? invalidMessage}) {
-    return _MenstruationEditPageState(
-      isAlreadyAdjsutScrollOffset: isAlreadyAdjsutScrollOffset,
-      menstruation: menstruation,
-      setting: setting,
-      displayedDates: displayedDates,
-      premiumAndTrial: premiumAndTrial,
-      invalidMessage: invalidMessage,
-    );
-  }
-}
-
-/// @nodoc
-const $MenstruationEditPageState = _$MenstruationEditPageStateTearOff();
+    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
 
 /// @nodoc
 mixin _$MenstruationEditPageState {
@@ -57,7 +32,8 @@ mixin _$MenstruationEditPageState {
 abstract class $MenstruationEditPageStateCopyWith<$Res> {
   factory $MenstruationEditPageStateCopyWith(MenstruationEditPageState value,
           $Res Function(MenstruationEditPageState) then) =
-      _$MenstruationEditPageStateCopyWithImpl<$Res>;
+      _$MenstruationEditPageStateCopyWithImpl<$Res, MenstruationEditPageState>;
+  @useResult
   $Res call(
       {bool isAlreadyAdjsutScrollOffset,
       Menstruation? menstruation,
@@ -72,84 +48,92 @@ abstract class $MenstruationEditPageStateCopyWith<$Res> {
 }
 
 /// @nodoc
-class _$MenstruationEditPageStateCopyWithImpl<$Res>
+class _$MenstruationEditPageStateCopyWithImpl<$Res,
+        $Val extends MenstruationEditPageState>
     implements $MenstruationEditPageStateCopyWith<$Res> {
   _$MenstruationEditPageStateCopyWithImpl(this._value, this._then);
 
-  final MenstruationEditPageState _value;
   // ignore: unused_field
-  final $Res Function(MenstruationEditPageState) _then;
+  final $Val _value;
+  // ignore: unused_field
+  final $Res Function($Val) _then;
 
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? isAlreadyAdjsutScrollOffset = freezed,
+    Object? isAlreadyAdjsutScrollOffset = null,
     Object? menstruation = freezed,
-    Object? setting = freezed,
-    Object? displayedDates = freezed,
-    Object? premiumAndTrial = freezed,
+    Object? setting = null,
+    Object? displayedDates = null,
+    Object? premiumAndTrial = null,
     Object? invalidMessage = freezed,
   }) {
     return _then(_value.copyWith(
-      isAlreadyAdjsutScrollOffset: isAlreadyAdjsutScrollOffset == freezed
+      isAlreadyAdjsutScrollOffset: null == isAlreadyAdjsutScrollOffset
           ? _value.isAlreadyAdjsutScrollOffset
           : isAlreadyAdjsutScrollOffset // ignore: cast_nullable_to_non_nullable
               as bool,
-      menstruation: menstruation == freezed
+      menstruation: freezed == menstruation
           ? _value.menstruation
           : menstruation // ignore: cast_nullable_to_non_nullable
               as Menstruation?,
-      setting: setting == freezed
+      setting: null == setting
           ? _value.setting
           : setting // ignore: cast_nullable_to_non_nullable
               as Setting,
-      displayedDates: displayedDates == freezed
+      displayedDates: null == displayedDates
           ? _value.displayedDates
           : displayedDates // ignore: cast_nullable_to_non_nullable
               as List<DateTime>,
-      premiumAndTrial: premiumAndTrial == freezed
+      premiumAndTrial: null == premiumAndTrial
           ? _value.premiumAndTrial
           : premiumAndTrial // ignore: cast_nullable_to_non_nullable
               as PremiumAndTrial,
-      invalidMessage: invalidMessage == freezed
+      invalidMessage: freezed == invalidMessage
           ? _value.invalidMessage
           : invalidMessage // ignore: cast_nullable_to_non_nullable
               as String?,
-    ));
+    ) as $Val);
   }
 
   @override
+  @pragma('vm:prefer-inline')
   $MenstruationCopyWith<$Res>? get menstruation {
     if (_value.menstruation == null) {
       return null;
     }
 
     return $MenstruationCopyWith<$Res>(_value.menstruation!, (value) {
-      return _then(_value.copyWith(menstruation: value));
+      return _then(_value.copyWith(menstruation: value) as $Val);
     });
   }
 
   @override
+  @pragma('vm:prefer-inline')
   $SettingCopyWith<$Res> get setting {
     return $SettingCopyWith<$Res>(_value.setting, (value) {
-      return _then(_value.copyWith(setting: value));
+      return _then(_value.copyWith(setting: value) as $Val);
     });
   }
 
   @override
+  @pragma('vm:prefer-inline')
   $PremiumAndTrialCopyWith<$Res> get premiumAndTrial {
     return $PremiumAndTrialCopyWith<$Res>(_value.premiumAndTrial, (value) {
-      return _then(_value.copyWith(premiumAndTrial: value));
+      return _then(_value.copyWith(premiumAndTrial: value) as $Val);
     });
   }
 }
 
 /// @nodoc
-abstract class _$MenstruationEditPageStateCopyWith<$Res>
+abstract class _$$_MenstruationEditPageStateCopyWith<$Res>
     implements $MenstruationEditPageStateCopyWith<$Res> {
-  factory _$MenstruationEditPageStateCopyWith(_MenstruationEditPageState value,
-          $Res Function(_MenstruationEditPageState) then) =
-      __$MenstruationEditPageStateCopyWithImpl<$Res>;
+  factory _$$_MenstruationEditPageStateCopyWith(
+          _$_MenstruationEditPageState value,
+          $Res Function(_$_MenstruationEditPageState) then) =
+      __$$_MenstruationEditPageStateCopyWithImpl<$Res>;
   @override
+  @useResult
   $Res call(
       {bool isAlreadyAdjsutScrollOffset,
       Menstruation? menstruation,
@@ -167,48 +151,47 @@ abstract class _$MenstruationEditPageStateCopyWith<$Res>
 }
 
 /// @nodoc
-class __$MenstruationEditPageStateCopyWithImpl<$Res>
-    extends _$MenstruationEditPageStateCopyWithImpl<$Res>
-    implements _$MenstruationEditPageStateCopyWith<$Res> {
-  __$MenstruationEditPageStateCopyWithImpl(_MenstruationEditPageState _value,
-      $Res Function(_MenstruationEditPageState) _then)
-      : super(_value, (v) => _then(v as _MenstruationEditPageState));
+class __$$_MenstruationEditPageStateCopyWithImpl<$Res>
+    extends _$MenstruationEditPageStateCopyWithImpl<$Res,
+        _$_MenstruationEditPageState>
+    implements _$$_MenstruationEditPageStateCopyWith<$Res> {
+  __$$_MenstruationEditPageStateCopyWithImpl(
+      _$_MenstruationEditPageState _value,
+      $Res Function(_$_MenstruationEditPageState) _then)
+      : super(_value, _then);
 
-  @override
-  _MenstruationEditPageState get _value =>
-      super._value as _MenstruationEditPageState;
-
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? isAlreadyAdjsutScrollOffset = freezed,
+    Object? isAlreadyAdjsutScrollOffset = null,
     Object? menstruation = freezed,
-    Object? setting = freezed,
-    Object? displayedDates = freezed,
-    Object? premiumAndTrial = freezed,
+    Object? setting = null,
+    Object? displayedDates = null,
+    Object? premiumAndTrial = null,
     Object? invalidMessage = freezed,
   }) {
-    return _then(_MenstruationEditPageState(
-      isAlreadyAdjsutScrollOffset: isAlreadyAdjsutScrollOffset == freezed
+    return _then(_$_MenstruationEditPageState(
+      isAlreadyAdjsutScrollOffset: null == isAlreadyAdjsutScrollOffset
           ? _value.isAlreadyAdjsutScrollOffset
           : isAlreadyAdjsutScrollOffset // ignore: cast_nullable_to_non_nullable
               as bool,
-      menstruation: menstruation == freezed
+      menstruation: freezed == menstruation
           ? _value.menstruation
           : menstruation // ignore: cast_nullable_to_non_nullable
               as Menstruation?,
-      setting: setting == freezed
+      setting: null == setting
           ? _value.setting
           : setting // ignore: cast_nullable_to_non_nullable
               as Setting,
-      displayedDates: displayedDates == freezed
-          ? _value.displayedDates
+      displayedDates: null == displayedDates
+          ? _value._displayedDates
           : displayedDates // ignore: cast_nullable_to_non_nullable
               as List<DateTime>,
-      premiumAndTrial: premiumAndTrial == freezed
+      premiumAndTrial: null == premiumAndTrial
           ? _value.premiumAndTrial
           : premiumAndTrial // ignore: cast_nullable_to_non_nullable
               as PremiumAndTrial,
-      invalidMessage: invalidMessage == freezed
+      invalidMessage: freezed == invalidMessage
           ? _value.invalidMessage
           : invalidMessage // ignore: cast_nullable_to_non_nullable
               as String?,
@@ -223,20 +206,26 @@ class _$_MenstruationEditPageState extends _MenstruationEditPageState {
       {this.isAlreadyAdjsutScrollOffset = false,
       required this.menstruation,
       required this.setting,
-      required this.displayedDates,
+      required final List<DateTime> displayedDates,
       required this.premiumAndTrial,
       this.invalidMessage})
-      : super._();
+      : _displayedDates = displayedDates,
+        super._();
 
-  @JsonKey()
   @override
+  @JsonKey()
   final bool isAlreadyAdjsutScrollOffset;
   @override
   final Menstruation? menstruation;
   @override
   final Setting setting;
+  final List<DateTime> _displayedDates;
   @override
-  final List<DateTime> displayedDates;
+  List<DateTime> get displayedDates {
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(_displayedDates);
+  }
+
   @override
   final PremiumAndTrial premiumAndTrial;
   @override
@@ -251,47 +240,48 @@ class _$_MenstruationEditPageState extends _MenstruationEditPageState {
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _MenstruationEditPageState &&
-            const DeepCollectionEquality().equals(
-                other.isAlreadyAdjsutScrollOffset,
-                isAlreadyAdjsutScrollOffset) &&
+            other is _$_MenstruationEditPageState &&
+            (identical(other.isAlreadyAdjsutScrollOffset,
+                    isAlreadyAdjsutScrollOffset) ||
+                other.isAlreadyAdjsutScrollOffset ==
+                    isAlreadyAdjsutScrollOffset) &&
+            (identical(other.menstruation, menstruation) ||
+                other.menstruation == menstruation) &&
+            (identical(other.setting, setting) || other.setting == setting) &&
             const DeepCollectionEquality()
-                .equals(other.menstruation, menstruation) &&
-            const DeepCollectionEquality().equals(other.setting, setting) &&
-            const DeepCollectionEquality()
-                .equals(other.displayedDates, displayedDates) &&
-            const DeepCollectionEquality()
-                .equals(other.premiumAndTrial, premiumAndTrial) &&
-            const DeepCollectionEquality()
-                .equals(other.invalidMessage, invalidMessage));
+                .equals(other._displayedDates, _displayedDates) &&
+            (identical(other.premiumAndTrial, premiumAndTrial) ||
+                other.premiumAndTrial == premiumAndTrial) &&
+            (identical(other.invalidMessage, invalidMessage) ||
+                other.invalidMessage == invalidMessage));
   }
 
   @override
   int get hashCode => Object.hash(
       runtimeType,
-      const DeepCollectionEquality().hash(isAlreadyAdjsutScrollOffset),
-      const DeepCollectionEquality().hash(menstruation),
-      const DeepCollectionEquality().hash(setting),
-      const DeepCollectionEquality().hash(displayedDates),
-      const DeepCollectionEquality().hash(premiumAndTrial),
-      const DeepCollectionEquality().hash(invalidMessage));
+      isAlreadyAdjsutScrollOffset,
+      menstruation,
+      setting,
+      const DeepCollectionEquality().hash(_displayedDates),
+      premiumAndTrial,
+      invalidMessage);
 
   @JsonKey(ignore: true)
   @override
-  _$MenstruationEditPageStateCopyWith<_MenstruationEditPageState>
-      get copyWith =>
-          __$MenstruationEditPageStateCopyWithImpl<_MenstruationEditPageState>(
-              this, _$identity);
+  @pragma('vm:prefer-inline')
+  _$$_MenstruationEditPageStateCopyWith<_$_MenstruationEditPageState>
+      get copyWith => __$$_MenstruationEditPageStateCopyWithImpl<
+          _$_MenstruationEditPageState>(this, _$identity);
 }
 
 abstract class _MenstruationEditPageState extends MenstruationEditPageState {
   const factory _MenstruationEditPageState(
-      {bool isAlreadyAdjsutScrollOffset,
-      required Menstruation? menstruation,
-      required Setting setting,
-      required List<DateTime> displayedDates,
-      required PremiumAndTrial premiumAndTrial,
-      String? invalidMessage}) = _$_MenstruationEditPageState;
+      {final bool isAlreadyAdjsutScrollOffset,
+      required final Menstruation? menstruation,
+      required final Setting setting,
+      required final List<DateTime> displayedDates,
+      required final PremiumAndTrial premiumAndTrial,
+      final String? invalidMessage}) = _$_MenstruationEditPageState;
   const _MenstruationEditPageState._() : super._();
 
   @override
@@ -308,6 +298,6 @@ abstract class _MenstruationEditPageState extends MenstruationEditPageState {
   String? get invalidMessage;
   @override
   @JsonKey(ignore: true)
-  _$MenstruationEditPageStateCopyWith<_MenstruationEditPageState>
+  _$$_MenstruationEditPageStateCopyWith<_$_MenstruationEditPageState>
       get copyWith => throw _privateConstructorUsedError;
 }

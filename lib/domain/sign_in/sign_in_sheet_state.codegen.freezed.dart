@@ -12,26 +12,7 @@ part of 'sign_in_sheet_state.codegen.dart';
 T _$identity<T>(T value) => value;
 
 final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more informations: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
-
-/// @nodoc
-class _$SignInSheetStateTearOff {
-  const _$SignInSheetStateTearOff();
-
-  _SignInSheetState call(
-      {bool isLoading = false,
-      required SignInSheetStateContext context,
-      Object? exception}) {
-    return _SignInSheetState(
-      isLoading: isLoading,
-      context: context,
-      exception: exception,
-    );
-  }
-}
-
-/// @nodoc
-const $SignInSheetState = _$SignInSheetStateTearOff();
+    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
 
 /// @nodoc
 mixin _$SignInSheetState {
@@ -48,78 +29,80 @@ mixin _$SignInSheetState {
 abstract class $SignInSheetStateCopyWith<$Res> {
   factory $SignInSheetStateCopyWith(
           SignInSheetState value, $Res Function(SignInSheetState) then) =
-      _$SignInSheetStateCopyWithImpl<$Res>;
+      _$SignInSheetStateCopyWithImpl<$Res, SignInSheetState>;
+  @useResult
   $Res call(
       {bool isLoading, SignInSheetStateContext context, Object? exception});
 }
 
 /// @nodoc
-class _$SignInSheetStateCopyWithImpl<$Res>
+class _$SignInSheetStateCopyWithImpl<$Res, $Val extends SignInSheetState>
     implements $SignInSheetStateCopyWith<$Res> {
   _$SignInSheetStateCopyWithImpl(this._value, this._then);
 
-  final SignInSheetState _value;
   // ignore: unused_field
-  final $Res Function(SignInSheetState) _then;
+  final $Val _value;
+  // ignore: unused_field
+  final $Res Function($Val) _then;
 
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? isLoading = freezed,
-    Object? context = freezed,
+    Object? isLoading = null,
+    Object? context = null,
     Object? exception = freezed,
   }) {
     return _then(_value.copyWith(
-      isLoading: isLoading == freezed
+      isLoading: null == isLoading
           ? _value.isLoading
           : isLoading // ignore: cast_nullable_to_non_nullable
               as bool,
-      context: context == freezed
+      context: null == context
           ? _value.context
           : context // ignore: cast_nullable_to_non_nullable
               as SignInSheetStateContext,
-      exception: exception == freezed ? _value.exception : exception,
-    ));
+      exception: freezed == exception ? _value.exception : exception,
+    ) as $Val);
   }
 }
 
 /// @nodoc
-abstract class _$SignInSheetStateCopyWith<$Res>
+abstract class _$$_SignInSheetStateCopyWith<$Res>
     implements $SignInSheetStateCopyWith<$Res> {
-  factory _$SignInSheetStateCopyWith(
-          _SignInSheetState value, $Res Function(_SignInSheetState) then) =
-      __$SignInSheetStateCopyWithImpl<$Res>;
+  factory _$$_SignInSheetStateCopyWith(
+          _$_SignInSheetState value, $Res Function(_$_SignInSheetState) then) =
+      __$$_SignInSheetStateCopyWithImpl<$Res>;
   @override
+  @useResult
   $Res call(
       {bool isLoading, SignInSheetStateContext context, Object? exception});
 }
 
 /// @nodoc
-class __$SignInSheetStateCopyWithImpl<$Res>
-    extends _$SignInSheetStateCopyWithImpl<$Res>
-    implements _$SignInSheetStateCopyWith<$Res> {
-  __$SignInSheetStateCopyWithImpl(
-      _SignInSheetState _value, $Res Function(_SignInSheetState) _then)
-      : super(_value, (v) => _then(v as _SignInSheetState));
+class __$$_SignInSheetStateCopyWithImpl<$Res>
+    extends _$SignInSheetStateCopyWithImpl<$Res, _$_SignInSheetState>
+    implements _$$_SignInSheetStateCopyWith<$Res> {
+  __$$_SignInSheetStateCopyWithImpl(
+      _$_SignInSheetState _value, $Res Function(_$_SignInSheetState) _then)
+      : super(_value, _then);
 
-  @override
-  _SignInSheetState get _value => super._value as _SignInSheetState;
-
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? isLoading = freezed,
-    Object? context = freezed,
+    Object? isLoading = null,
+    Object? context = null,
     Object? exception = freezed,
   }) {
-    return _then(_SignInSheetState(
-      isLoading: isLoading == freezed
+    return _then(_$_SignInSheetState(
+      isLoading: null == isLoading
           ? _value.isLoading
           : isLoading // ignore: cast_nullable_to_non_nullable
               as bool,
-      context: context == freezed
+      context: null == context
           ? _value.context
           : context // ignore: cast_nullable_to_non_nullable
               as SignInSheetStateContext,
-      exception: exception == freezed ? _value.exception : exception,
+      exception: freezed == exception ? _value.exception : exception,
     ));
   }
 }
@@ -131,8 +114,8 @@ class _$_SignInSheetState extends _SignInSheetState {
       {this.isLoading = false, required this.context, this.exception})
       : super._();
 
-  @JsonKey()
   @override
+  @JsonKey()
   final bool isLoading;
   @override
   final SignInSheetStateContext context;
@@ -148,30 +131,29 @@ class _$_SignInSheetState extends _SignInSheetState {
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _SignInSheetState &&
-            const DeepCollectionEquality().equals(other.isLoading, isLoading) &&
-            const DeepCollectionEquality().equals(other.context, context) &&
+            other is _$_SignInSheetState &&
+            (identical(other.isLoading, isLoading) ||
+                other.isLoading == isLoading) &&
+            (identical(other.context, context) || other.context == context) &&
             const DeepCollectionEquality().equals(other.exception, exception));
   }
 
   @override
-  int get hashCode => Object.hash(
-      runtimeType,
-      const DeepCollectionEquality().hash(isLoading),
-      const DeepCollectionEquality().hash(context),
+  int get hashCode => Object.hash(runtimeType, isLoading, context,
       const DeepCollectionEquality().hash(exception));
 
   @JsonKey(ignore: true)
   @override
-  _$SignInSheetStateCopyWith<_SignInSheetState> get copyWith =>
-      __$SignInSheetStateCopyWithImpl<_SignInSheetState>(this, _$identity);
+  @pragma('vm:prefer-inline')
+  _$$_SignInSheetStateCopyWith<_$_SignInSheetState> get copyWith =>
+      __$$_SignInSheetStateCopyWithImpl<_$_SignInSheetState>(this, _$identity);
 }
 
 abstract class _SignInSheetState extends SignInSheetState {
   const factory _SignInSheetState(
-      {bool isLoading,
-      required SignInSheetStateContext context,
-      Object? exception}) = _$_SignInSheetState;
+      {final bool isLoading,
+      required final SignInSheetStateContext context,
+      final Object? exception}) = _$_SignInSheetState;
   const _SignInSheetState._() : super._();
 
   @override
@@ -182,6 +164,6 @@ abstract class _SignInSheetState extends SignInSheetState {
   Object? get exception;
   @override
   @JsonKey(ignore: true)
-  _$SignInSheetStateCopyWith<_SignInSheetState> get copyWith =>
+  _$$_SignInSheetStateCopyWith<_$_SignInSheetState> get copyWith =>
       throw _privateConstructorUsedError;
 }

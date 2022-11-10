@@ -12,54 +12,12 @@ part of 'pill_sheet_modified_history.codegen.dart';
 T _$identity<T>(T value) => value;
 
 final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more informations: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
+    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
 
 PillSheetModifiedHistory _$PillSheetModifiedHistoryFromJson(
     Map<String, dynamic> json) {
   return _PillSheetModifiedHistory.fromJson(json);
 }
-
-/// @nodoc
-class _$PillSheetModifiedHistoryTearOff {
-  const _$PillSheetModifiedHistoryTearOff();
-
-  _PillSheetModifiedHistory call(
-      {@JsonKey(includeIfNull: false, toJson: toNull)
-          required String? id,
-      required String actionType,
-      required PillSheetModifiedHistoryValue value,
-      required String? pillSheetID,
-      required String? pillSheetGroupID,
-      required String? beforePillSheetID,
-      required String? afterPillSheetID,
-      required PillSheet? before,
-      required PillSheet? after,
-      @JsonKey(fromJson: NonNullTimestampConverter.timestampToDateTime, toJson: NonNullTimestampConverter.dateTimeToTimestamp)
-          required DateTime estimatedEventCausingDate,
-      @JsonKey(fromJson: NonNullTimestampConverter.timestampToDateTime, toJson: NonNullTimestampConverter.dateTimeToTimestamp)
-          required DateTime createdAt}) {
-    return _PillSheetModifiedHistory(
-      id: id,
-      actionType: actionType,
-      value: value,
-      pillSheetID: pillSheetID,
-      pillSheetGroupID: pillSheetGroupID,
-      beforePillSheetID: beforePillSheetID,
-      afterPillSheetID: afterPillSheetID,
-      before: before,
-      after: after,
-      estimatedEventCausingDate: estimatedEventCausingDate,
-      createdAt: createdAt,
-    );
-  }
-
-  PillSheetModifiedHistory fromJson(Map<String, Object?> json) {
-    return PillSheetModifiedHistory.fromJson(json);
-  }
-}
-
-/// @nodoc
-const $PillSheetModifiedHistory = _$PillSheetModifiedHistoryTearOff();
 
 /// @nodoc
 mixin _$PillSheetModifiedHistory {
@@ -97,7 +55,8 @@ mixin _$PillSheetModifiedHistory {
 abstract class $PillSheetModifiedHistoryCopyWith<$Res> {
   factory $PillSheetModifiedHistoryCopyWith(PillSheetModifiedHistory value,
           $Res Function(PillSheetModifiedHistory) then) =
-      _$PillSheetModifiedHistoryCopyWithImpl<$Res>;
+      _$PillSheetModifiedHistoryCopyWithImpl<$Res, PillSheetModifiedHistory>;
+  @useResult
   $Res call(
       {@JsonKey(includeIfNull: false, toJson: toNull)
           String? id,
@@ -120,113 +79,121 @@ abstract class $PillSheetModifiedHistoryCopyWith<$Res> {
 }
 
 /// @nodoc
-class _$PillSheetModifiedHistoryCopyWithImpl<$Res>
+class _$PillSheetModifiedHistoryCopyWithImpl<$Res,
+        $Val extends PillSheetModifiedHistory>
     implements $PillSheetModifiedHistoryCopyWith<$Res> {
   _$PillSheetModifiedHistoryCopyWithImpl(this._value, this._then);
 
-  final PillSheetModifiedHistory _value;
   // ignore: unused_field
-  final $Res Function(PillSheetModifiedHistory) _then;
+  final $Val _value;
+  // ignore: unused_field
+  final $Res Function($Val) _then;
 
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
     Object? id = freezed,
-    Object? actionType = freezed,
-    Object? value = freezed,
+    Object? actionType = null,
+    Object? value = null,
     Object? pillSheetID = freezed,
     Object? pillSheetGroupID = freezed,
     Object? beforePillSheetID = freezed,
     Object? afterPillSheetID = freezed,
     Object? before = freezed,
     Object? after = freezed,
-    Object? estimatedEventCausingDate = freezed,
-    Object? createdAt = freezed,
+    Object? estimatedEventCausingDate = null,
+    Object? createdAt = null,
   }) {
     return _then(_value.copyWith(
-      id: id == freezed
+      id: freezed == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
               as String?,
-      actionType: actionType == freezed
+      actionType: null == actionType
           ? _value.actionType
           : actionType // ignore: cast_nullable_to_non_nullable
               as String,
-      value: value == freezed
+      value: null == value
           ? _value.value
           : value // ignore: cast_nullable_to_non_nullable
               as PillSheetModifiedHistoryValue,
-      pillSheetID: pillSheetID == freezed
+      pillSheetID: freezed == pillSheetID
           ? _value.pillSheetID
           : pillSheetID // ignore: cast_nullable_to_non_nullable
               as String?,
-      pillSheetGroupID: pillSheetGroupID == freezed
+      pillSheetGroupID: freezed == pillSheetGroupID
           ? _value.pillSheetGroupID
           : pillSheetGroupID // ignore: cast_nullable_to_non_nullable
               as String?,
-      beforePillSheetID: beforePillSheetID == freezed
+      beforePillSheetID: freezed == beforePillSheetID
           ? _value.beforePillSheetID
           : beforePillSheetID // ignore: cast_nullable_to_non_nullable
               as String?,
-      afterPillSheetID: afterPillSheetID == freezed
+      afterPillSheetID: freezed == afterPillSheetID
           ? _value.afterPillSheetID
           : afterPillSheetID // ignore: cast_nullable_to_non_nullable
               as String?,
-      before: before == freezed
+      before: freezed == before
           ? _value.before
           : before // ignore: cast_nullable_to_non_nullable
               as PillSheet?,
-      after: after == freezed
+      after: freezed == after
           ? _value.after
           : after // ignore: cast_nullable_to_non_nullable
               as PillSheet?,
-      estimatedEventCausingDate: estimatedEventCausingDate == freezed
+      estimatedEventCausingDate: null == estimatedEventCausingDate
           ? _value.estimatedEventCausingDate
           : estimatedEventCausingDate // ignore: cast_nullable_to_non_nullable
               as DateTime,
-      createdAt: createdAt == freezed
+      createdAt: null == createdAt
           ? _value.createdAt
           : createdAt // ignore: cast_nullable_to_non_nullable
               as DateTime,
-    ));
+    ) as $Val);
   }
 
   @override
+  @pragma('vm:prefer-inline')
   $PillSheetModifiedHistoryValueCopyWith<$Res> get value {
     return $PillSheetModifiedHistoryValueCopyWith<$Res>(_value.value, (value) {
-      return _then(_value.copyWith(value: value));
+      return _then(_value.copyWith(value: value) as $Val);
     });
   }
 
   @override
+  @pragma('vm:prefer-inline')
   $PillSheetCopyWith<$Res>? get before {
     if (_value.before == null) {
       return null;
     }
 
     return $PillSheetCopyWith<$Res>(_value.before!, (value) {
-      return _then(_value.copyWith(before: value));
+      return _then(_value.copyWith(before: value) as $Val);
     });
   }
 
   @override
+  @pragma('vm:prefer-inline')
   $PillSheetCopyWith<$Res>? get after {
     if (_value.after == null) {
       return null;
     }
 
     return $PillSheetCopyWith<$Res>(_value.after!, (value) {
-      return _then(_value.copyWith(after: value));
+      return _then(_value.copyWith(after: value) as $Val);
     });
   }
 }
 
 /// @nodoc
-abstract class _$PillSheetModifiedHistoryCopyWith<$Res>
+abstract class _$$_PillSheetModifiedHistoryCopyWith<$Res>
     implements $PillSheetModifiedHistoryCopyWith<$Res> {
-  factory _$PillSheetModifiedHistoryCopyWith(_PillSheetModifiedHistory value,
-          $Res Function(_PillSheetModifiedHistory) then) =
-      __$PillSheetModifiedHistoryCopyWithImpl<$Res>;
+  factory _$$_PillSheetModifiedHistoryCopyWith(
+          _$_PillSheetModifiedHistory value,
+          $Res Function(_$_PillSheetModifiedHistory) then) =
+      __$$_PillSheetModifiedHistoryCopyWithImpl<$Res>;
   @override
+  @useResult
   $Res call(
       {@JsonKey(includeIfNull: false, toJson: toNull)
           String? id,
@@ -252,73 +219,71 @@ abstract class _$PillSheetModifiedHistoryCopyWith<$Res>
 }
 
 /// @nodoc
-class __$PillSheetModifiedHistoryCopyWithImpl<$Res>
-    extends _$PillSheetModifiedHistoryCopyWithImpl<$Res>
-    implements _$PillSheetModifiedHistoryCopyWith<$Res> {
-  __$PillSheetModifiedHistoryCopyWithImpl(_PillSheetModifiedHistory _value,
-      $Res Function(_PillSheetModifiedHistory) _then)
-      : super(_value, (v) => _then(v as _PillSheetModifiedHistory));
+class __$$_PillSheetModifiedHistoryCopyWithImpl<$Res>
+    extends _$PillSheetModifiedHistoryCopyWithImpl<$Res,
+        _$_PillSheetModifiedHistory>
+    implements _$$_PillSheetModifiedHistoryCopyWith<$Res> {
+  __$$_PillSheetModifiedHistoryCopyWithImpl(_$_PillSheetModifiedHistory _value,
+      $Res Function(_$_PillSheetModifiedHistory) _then)
+      : super(_value, _then);
 
-  @override
-  _PillSheetModifiedHistory get _value =>
-      super._value as _PillSheetModifiedHistory;
-
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
     Object? id = freezed,
-    Object? actionType = freezed,
-    Object? value = freezed,
+    Object? actionType = null,
+    Object? value = null,
     Object? pillSheetID = freezed,
     Object? pillSheetGroupID = freezed,
     Object? beforePillSheetID = freezed,
     Object? afterPillSheetID = freezed,
     Object? before = freezed,
     Object? after = freezed,
-    Object? estimatedEventCausingDate = freezed,
-    Object? createdAt = freezed,
+    Object? estimatedEventCausingDate = null,
+    Object? createdAt = null,
   }) {
-    return _then(_PillSheetModifiedHistory(
-      id: id == freezed
+    return _then(_$_PillSheetModifiedHistory(
+      id: freezed == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
               as String?,
-      actionType: actionType == freezed
+      actionType: null == actionType
           ? _value.actionType
           : actionType // ignore: cast_nullable_to_non_nullable
               as String,
-      value: value == freezed
+      value: null == value
           ? _value.value
           : value // ignore: cast_nullable_to_non_nullable
               as PillSheetModifiedHistoryValue,
-      pillSheetID: pillSheetID == freezed
+      pillSheetID: freezed == pillSheetID
           ? _value.pillSheetID
           : pillSheetID // ignore: cast_nullable_to_non_nullable
               as String?,
-      pillSheetGroupID: pillSheetGroupID == freezed
+      pillSheetGroupID: freezed == pillSheetGroupID
           ? _value.pillSheetGroupID
           : pillSheetGroupID // ignore: cast_nullable_to_non_nullable
               as String?,
-      beforePillSheetID: beforePillSheetID == freezed
+      beforePillSheetID: freezed == beforePillSheetID
           ? _value.beforePillSheetID
           : beforePillSheetID // ignore: cast_nullable_to_non_nullable
               as String?,
-      afterPillSheetID: afterPillSheetID == freezed
+      afterPillSheetID: freezed == afterPillSheetID
           ? _value.afterPillSheetID
           : afterPillSheetID // ignore: cast_nullable_to_non_nullable
               as String?,
-      before: before == freezed
+      before: freezed == before
           ? _value.before
           : before // ignore: cast_nullable_to_non_nullable
               as PillSheet?,
-      after: after == freezed
+      after: freezed == after
           ? _value.after
           : after // ignore: cast_nullable_to_non_nullable
               as PillSheet?,
-      estimatedEventCausingDate: estimatedEventCausingDate == freezed
+      estimatedEventCausingDate: null == estimatedEventCausingDate
           ? _value.estimatedEventCausingDate
           : estimatedEventCausingDate // ignore: cast_nullable_to_non_nullable
               as DateTime,
-      createdAt: createdAt == freezed
+      createdAt: null == createdAt
           ? _value.createdAt
           : createdAt // ignore: cast_nullable_to_non_nullable
               as DateTime,
@@ -357,17 +322,20 @@ class _$_PillSheetModifiedHistory extends _PillSheetModifiedHistory {
   final String actionType;
   @override
   final PillSheetModifiedHistoryValue value;
-  @override // This is deprecated property.
+// This is deprecated property.
 // Instead of beforePillSheetID and afterPillSheetID
+  @override
   final String? pillSheetID;
-  @override // There are new properties for pill_sheet grouping. So it's all optional
+// There are new properties for pill_sheet grouping. So it's all optional
+  @override
   final String? pillSheetGroupID;
   @override
   final String? beforePillSheetID;
   @override
   final String? afterPillSheetID;
-  @override // before and after is nullable
+// before and after is nullable
 // Because, actions for createdPillSheet and deletedPillSheet are not exists target single pill sheet
+  @override
   final PillSheet? before;
   @override
   final PillSheet? after;
@@ -391,69 +359,75 @@ class _$_PillSheetModifiedHistory extends _PillSheetModifiedHistory {
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _PillSheetModifiedHistory &&
-            const DeepCollectionEquality().equals(other.id, id) &&
-            const DeepCollectionEquality()
-                .equals(other.actionType, actionType) &&
-            const DeepCollectionEquality().equals(other.value, value) &&
-            const DeepCollectionEquality()
-                .equals(other.pillSheetID, pillSheetID) &&
-            const DeepCollectionEquality()
-                .equals(other.pillSheetGroupID, pillSheetGroupID) &&
-            const DeepCollectionEquality()
-                .equals(other.beforePillSheetID, beforePillSheetID) &&
-            const DeepCollectionEquality()
-                .equals(other.afterPillSheetID, afterPillSheetID) &&
-            const DeepCollectionEquality().equals(other.before, before) &&
-            const DeepCollectionEquality().equals(other.after, after) &&
-            const DeepCollectionEquality().equals(
-                other.estimatedEventCausingDate, estimatedEventCausingDate) &&
-            const DeepCollectionEquality().equals(other.createdAt, createdAt));
+            other is _$_PillSheetModifiedHistory &&
+            (identical(other.id, id) || other.id == id) &&
+            (identical(other.actionType, actionType) ||
+                other.actionType == actionType) &&
+            (identical(other.value, value) || other.value == value) &&
+            (identical(other.pillSheetID, pillSheetID) ||
+                other.pillSheetID == pillSheetID) &&
+            (identical(other.pillSheetGroupID, pillSheetGroupID) ||
+                other.pillSheetGroupID == pillSheetGroupID) &&
+            (identical(other.beforePillSheetID, beforePillSheetID) ||
+                other.beforePillSheetID == beforePillSheetID) &&
+            (identical(other.afterPillSheetID, afterPillSheetID) ||
+                other.afterPillSheetID == afterPillSheetID) &&
+            (identical(other.before, before) || other.before == before) &&
+            (identical(other.after, after) || other.after == after) &&
+            (identical(other.estimatedEventCausingDate,
+                    estimatedEventCausingDate) ||
+                other.estimatedEventCausingDate == estimatedEventCausingDate) &&
+            (identical(other.createdAt, createdAt) ||
+                other.createdAt == createdAt));
   }
-
-  @override
-  int get hashCode => Object.hash(
-      runtimeType,
-      const DeepCollectionEquality().hash(id),
-      const DeepCollectionEquality().hash(actionType),
-      const DeepCollectionEquality().hash(value),
-      const DeepCollectionEquality().hash(pillSheetID),
-      const DeepCollectionEquality().hash(pillSheetGroupID),
-      const DeepCollectionEquality().hash(beforePillSheetID),
-      const DeepCollectionEquality().hash(afterPillSheetID),
-      const DeepCollectionEquality().hash(before),
-      const DeepCollectionEquality().hash(after),
-      const DeepCollectionEquality().hash(estimatedEventCausingDate),
-      const DeepCollectionEquality().hash(createdAt));
 
   @JsonKey(ignore: true)
   @override
-  _$PillSheetModifiedHistoryCopyWith<_PillSheetModifiedHistory> get copyWith =>
-      __$PillSheetModifiedHistoryCopyWithImpl<_PillSheetModifiedHistory>(
-          this, _$identity);
+  int get hashCode => Object.hash(
+      runtimeType,
+      id,
+      actionType,
+      value,
+      pillSheetID,
+      pillSheetGroupID,
+      beforePillSheetID,
+      afterPillSheetID,
+      before,
+      after,
+      estimatedEventCausingDate,
+      createdAt);
+
+  @JsonKey(ignore: true)
+  @override
+  @pragma('vm:prefer-inline')
+  _$$_PillSheetModifiedHistoryCopyWith<_$_PillSheetModifiedHistory>
+      get copyWith => __$$_PillSheetModifiedHistoryCopyWithImpl<
+          _$_PillSheetModifiedHistory>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_PillSheetModifiedHistoryToJson(this);
+    return _$$_PillSheetModifiedHistoryToJson(
+      this,
+    );
   }
 }
 
 abstract class _PillSheetModifiedHistory extends PillSheetModifiedHistory {
   const factory _PillSheetModifiedHistory(
       {@JsonKey(includeIfNull: false, toJson: toNull)
-          required String? id,
-      required String actionType,
-      required PillSheetModifiedHistoryValue value,
-      required String? pillSheetID,
-      required String? pillSheetGroupID,
-      required String? beforePillSheetID,
-      required String? afterPillSheetID,
-      required PillSheet? before,
-      required PillSheet? after,
+          required final String? id,
+      required final String actionType,
+      required final PillSheetModifiedHistoryValue value,
+      required final String? pillSheetID,
+      required final String? pillSheetGroupID,
+      required final String? beforePillSheetID,
+      required final String? afterPillSheetID,
+      required final PillSheet? before,
+      required final PillSheet? after,
       @JsonKey(fromJson: NonNullTimestampConverter.timestampToDateTime, toJson: NonNullTimestampConverter.dateTimeToTimestamp)
-          required DateTime estimatedEventCausingDate,
+          required final DateTime estimatedEventCausingDate,
       @JsonKey(fromJson: NonNullTimestampConverter.timestampToDateTime, toJson: NonNullTimestampConverter.dateTimeToTimestamp)
-          required DateTime createdAt}) = _$_PillSheetModifiedHistory;
+          required final DateTime createdAt}) = _$_PillSheetModifiedHistory;
   const _PillSheetModifiedHistory._() : super._();
 
   factory _PillSheetModifiedHistory.fromJson(Map<String, dynamic> json) =
@@ -492,6 +466,6 @@ abstract class _PillSheetModifiedHistory extends PillSheetModifiedHistory {
   DateTime get createdAt;
   @override
   @JsonKey(ignore: true)
-  _$PillSheetModifiedHistoryCopyWith<_PillSheetModifiedHistory> get copyWith =>
-      throw _privateConstructorUsedError;
+  _$$_PillSheetModifiedHistoryCopyWith<_$_PillSheetModifiedHistory>
+      get copyWith => throw _privateConstructorUsedError;
 }

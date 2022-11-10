@@ -12,26 +12,7 @@ part of 'setting_today_pill_number_state.codegen.dart';
 T _$identity<T>(T value) => value;
 
 final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more informations: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
-
-/// @nodoc
-class _$SettingTodayPillNumberStateTearOff {
-  const _$SettingTodayPillNumberStateTearOff();
-
-  _SettingTodayPillNumberState call(
-      {int selectedPillSheetPageIndex = 0,
-      int selectedPillMarkNumberIntoPillSheet = 0,
-      required PillSheetAppearanceMode appearanceMode}) {
-    return _SettingTodayPillNumberState(
-      selectedPillSheetPageIndex: selectedPillSheetPageIndex,
-      selectedPillMarkNumberIntoPillSheet: selectedPillMarkNumberIntoPillSheet,
-      appearanceMode: appearanceMode,
-    );
-  }
-}
-
-/// @nodoc
-const $SettingTodayPillNumberState = _$SettingTodayPillNumberStateTearOff();
+    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
 
 /// @nodoc
 mixin _$SettingTodayPillNumberState {
@@ -51,7 +32,9 @@ abstract class $SettingTodayPillNumberStateCopyWith<$Res> {
   factory $SettingTodayPillNumberStateCopyWith(
           SettingTodayPillNumberState value,
           $Res Function(SettingTodayPillNumberState) then) =
-      _$SettingTodayPillNumberStateCopyWithImpl<$Res>;
+      _$SettingTodayPillNumberStateCopyWithImpl<$Res,
+          SettingTodayPillNumberState>;
+  @useResult
   $Res call(
       {int selectedPillSheetPageIndex,
       int selectedPillMarkNumberIntoPillSheet,
@@ -59,46 +42,50 @@ abstract class $SettingTodayPillNumberStateCopyWith<$Res> {
 }
 
 /// @nodoc
-class _$SettingTodayPillNumberStateCopyWithImpl<$Res>
+class _$SettingTodayPillNumberStateCopyWithImpl<$Res,
+        $Val extends SettingTodayPillNumberState>
     implements $SettingTodayPillNumberStateCopyWith<$Res> {
   _$SettingTodayPillNumberStateCopyWithImpl(this._value, this._then);
 
-  final SettingTodayPillNumberState _value;
   // ignore: unused_field
-  final $Res Function(SettingTodayPillNumberState) _then;
+  final $Val _value;
+  // ignore: unused_field
+  final $Res Function($Val) _then;
 
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? selectedPillSheetPageIndex = freezed,
-    Object? selectedPillMarkNumberIntoPillSheet = freezed,
-    Object? appearanceMode = freezed,
+    Object? selectedPillSheetPageIndex = null,
+    Object? selectedPillMarkNumberIntoPillSheet = null,
+    Object? appearanceMode = null,
   }) {
     return _then(_value.copyWith(
-      selectedPillSheetPageIndex: selectedPillSheetPageIndex == freezed
+      selectedPillSheetPageIndex: null == selectedPillSheetPageIndex
           ? _value.selectedPillSheetPageIndex
           : selectedPillSheetPageIndex // ignore: cast_nullable_to_non_nullable
               as int,
-      selectedPillMarkNumberIntoPillSheet: selectedPillMarkNumberIntoPillSheet ==
-              freezed
+      selectedPillMarkNumberIntoPillSheet: null ==
+              selectedPillMarkNumberIntoPillSheet
           ? _value.selectedPillMarkNumberIntoPillSheet
           : selectedPillMarkNumberIntoPillSheet // ignore: cast_nullable_to_non_nullable
               as int,
-      appearanceMode: appearanceMode == freezed
+      appearanceMode: null == appearanceMode
           ? _value.appearanceMode
           : appearanceMode // ignore: cast_nullable_to_non_nullable
               as PillSheetAppearanceMode,
-    ));
+    ) as $Val);
   }
 }
 
 /// @nodoc
-abstract class _$SettingTodayPillNumberStateCopyWith<$Res>
+abstract class _$$_SettingTodayPillNumberStateCopyWith<$Res>
     implements $SettingTodayPillNumberStateCopyWith<$Res> {
-  factory _$SettingTodayPillNumberStateCopyWith(
-          _SettingTodayPillNumberState value,
-          $Res Function(_SettingTodayPillNumberState) then) =
-      __$SettingTodayPillNumberStateCopyWithImpl<$Res>;
+  factory _$$_SettingTodayPillNumberStateCopyWith(
+          _$_SettingTodayPillNumberState value,
+          $Res Function(_$_SettingTodayPillNumberState) then) =
+      __$$_SettingTodayPillNumberStateCopyWithImpl<$Res>;
   @override
+  @useResult
   $Res call(
       {int selectedPillSheetPageIndex,
       int selectedPillMarkNumberIntoPillSheet,
@@ -106,35 +93,33 @@ abstract class _$SettingTodayPillNumberStateCopyWith<$Res>
 }
 
 /// @nodoc
-class __$SettingTodayPillNumberStateCopyWithImpl<$Res>
-    extends _$SettingTodayPillNumberStateCopyWithImpl<$Res>
-    implements _$SettingTodayPillNumberStateCopyWith<$Res> {
-  __$SettingTodayPillNumberStateCopyWithImpl(
-      _SettingTodayPillNumberState _value,
-      $Res Function(_SettingTodayPillNumberState) _then)
-      : super(_value, (v) => _then(v as _SettingTodayPillNumberState));
+class __$$_SettingTodayPillNumberStateCopyWithImpl<$Res>
+    extends _$SettingTodayPillNumberStateCopyWithImpl<$Res,
+        _$_SettingTodayPillNumberState>
+    implements _$$_SettingTodayPillNumberStateCopyWith<$Res> {
+  __$$_SettingTodayPillNumberStateCopyWithImpl(
+      _$_SettingTodayPillNumberState _value,
+      $Res Function(_$_SettingTodayPillNumberState) _then)
+      : super(_value, _then);
 
-  @override
-  _SettingTodayPillNumberState get _value =>
-      super._value as _SettingTodayPillNumberState;
-
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? selectedPillSheetPageIndex = freezed,
-    Object? selectedPillMarkNumberIntoPillSheet = freezed,
-    Object? appearanceMode = freezed,
+    Object? selectedPillSheetPageIndex = null,
+    Object? selectedPillMarkNumberIntoPillSheet = null,
+    Object? appearanceMode = null,
   }) {
-    return _then(_SettingTodayPillNumberState(
-      selectedPillSheetPageIndex: selectedPillSheetPageIndex == freezed
+    return _then(_$_SettingTodayPillNumberState(
+      selectedPillSheetPageIndex: null == selectedPillSheetPageIndex
           ? _value.selectedPillSheetPageIndex
           : selectedPillSheetPageIndex // ignore: cast_nullable_to_non_nullable
               as int,
-      selectedPillMarkNumberIntoPillSheet: selectedPillMarkNumberIntoPillSheet ==
-              freezed
+      selectedPillMarkNumberIntoPillSheet: null ==
+              selectedPillMarkNumberIntoPillSheet
           ? _value.selectedPillMarkNumberIntoPillSheet
           : selectedPillMarkNumberIntoPillSheet // ignore: cast_nullable_to_non_nullable
               as int,
-      appearanceMode: appearanceMode == freezed
+      appearanceMode: null == appearanceMode
           ? _value.appearanceMode
           : appearanceMode // ignore: cast_nullable_to_non_nullable
               as PillSheetAppearanceMode,
@@ -151,11 +136,11 @@ class _$_SettingTodayPillNumberState extends _SettingTodayPillNumberState {
       required this.appearanceMode})
       : super._();
 
-  @JsonKey()
   @override
+  @JsonKey()
   final int selectedPillSheetPageIndex;
-  @JsonKey()
   @override
+  @JsonKey()
   final int selectedPillMarkNumberIntoPillSheet;
   @override
   final PillSheetAppearanceMode appearanceMode;
@@ -169,36 +154,37 @@ class _$_SettingTodayPillNumberState extends _SettingTodayPillNumberState {
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _SettingTodayPillNumberState &&
-            const DeepCollectionEquality().equals(
-                other.selectedPillSheetPageIndex, selectedPillSheetPageIndex) &&
-            const DeepCollectionEquality().equals(
-                other.selectedPillMarkNumberIntoPillSheet,
-                selectedPillMarkNumberIntoPillSheet) &&
-            const DeepCollectionEquality()
-                .equals(other.appearanceMode, appearanceMode));
+            other is _$_SettingTodayPillNumberState &&
+            (identical(other.selectedPillSheetPageIndex,
+                    selectedPillSheetPageIndex) ||
+                other.selectedPillSheetPageIndex ==
+                    selectedPillSheetPageIndex) &&
+            (identical(other.selectedPillMarkNumberIntoPillSheet,
+                    selectedPillMarkNumberIntoPillSheet) ||
+                other.selectedPillMarkNumberIntoPillSheet ==
+                    selectedPillMarkNumberIntoPillSheet) &&
+            (identical(other.appearanceMode, appearanceMode) ||
+                other.appearanceMode == appearanceMode));
   }
 
   @override
-  int get hashCode => Object.hash(
-      runtimeType,
-      const DeepCollectionEquality().hash(selectedPillSheetPageIndex),
-      const DeepCollectionEquality().hash(selectedPillMarkNumberIntoPillSheet),
-      const DeepCollectionEquality().hash(appearanceMode));
+  int get hashCode => Object.hash(runtimeType, selectedPillSheetPageIndex,
+      selectedPillMarkNumberIntoPillSheet, appearanceMode);
 
   @JsonKey(ignore: true)
   @override
-  _$SettingTodayPillNumberStateCopyWith<_SettingTodayPillNumberState>
-      get copyWith => __$SettingTodayPillNumberStateCopyWithImpl<
-          _SettingTodayPillNumberState>(this, _$identity);
+  @pragma('vm:prefer-inline')
+  _$$_SettingTodayPillNumberStateCopyWith<_$_SettingTodayPillNumberState>
+      get copyWith => __$$_SettingTodayPillNumberStateCopyWithImpl<
+          _$_SettingTodayPillNumberState>(this, _$identity);
 }
 
 abstract class _SettingTodayPillNumberState
     extends SettingTodayPillNumberState {
   const factory _SettingTodayPillNumberState(
-          {int selectedPillSheetPageIndex,
-          int selectedPillMarkNumberIntoPillSheet,
-          required PillSheetAppearanceMode appearanceMode}) =
+          {final int selectedPillSheetPageIndex,
+          final int selectedPillMarkNumberIntoPillSheet,
+          required final PillSheetAppearanceMode appearanceMode}) =
       _$_SettingTodayPillNumberState;
   const _SettingTodayPillNumberState._() : super._();
 
@@ -210,6 +196,6 @@ abstract class _SettingTodayPillNumberState
   PillSheetAppearanceMode get appearanceMode;
   @override
   @JsonKey(ignore: true)
-  _$SettingTodayPillNumberStateCopyWith<_SettingTodayPillNumberState>
+  _$$_SettingTodayPillNumberStateCopyWith<_$_SettingTodayPillNumberState>
       get copyWith => throw _privateConstructorUsedError;
 }

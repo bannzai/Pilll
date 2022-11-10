@@ -12,23 +12,7 @@ part of 'month_calendar_state.codegen.dart';
 T _$identity<T>(T value) => value;
 
 final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more informations: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
-
-/// @nodoc
-class _$MonthCalendarStateTearOff {
-  const _$MonthCalendarStateTearOff();
-
-  _MonthCalendarState call(
-      {required DateTime dateForMonth, required Menstruation? menstruation}) {
-    return _MonthCalendarState(
-      dateForMonth: dateForMonth,
-      menstruation: menstruation,
-    );
-  }
-}
-
-/// @nodoc
-const $MonthCalendarState = _$MonthCalendarStateTearOff();
+    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
 
 /// @nodoc
 mixin _$MonthCalendarState {
@@ -44,57 +28,62 @@ mixin _$MonthCalendarState {
 abstract class $MonthCalendarStateCopyWith<$Res> {
   factory $MonthCalendarStateCopyWith(
           MonthCalendarState value, $Res Function(MonthCalendarState) then) =
-      _$MonthCalendarStateCopyWithImpl<$Res>;
+      _$MonthCalendarStateCopyWithImpl<$Res, MonthCalendarState>;
+  @useResult
   $Res call({DateTime dateForMonth, Menstruation? menstruation});
 
   $MenstruationCopyWith<$Res>? get menstruation;
 }
 
 /// @nodoc
-class _$MonthCalendarStateCopyWithImpl<$Res>
+class _$MonthCalendarStateCopyWithImpl<$Res, $Val extends MonthCalendarState>
     implements $MonthCalendarStateCopyWith<$Res> {
   _$MonthCalendarStateCopyWithImpl(this._value, this._then);
 
-  final MonthCalendarState _value;
   // ignore: unused_field
-  final $Res Function(MonthCalendarState) _then;
+  final $Val _value;
+  // ignore: unused_field
+  final $Res Function($Val) _then;
 
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? dateForMonth = freezed,
+    Object? dateForMonth = null,
     Object? menstruation = freezed,
   }) {
     return _then(_value.copyWith(
-      dateForMonth: dateForMonth == freezed
+      dateForMonth: null == dateForMonth
           ? _value.dateForMonth
           : dateForMonth // ignore: cast_nullable_to_non_nullable
               as DateTime,
-      menstruation: menstruation == freezed
+      menstruation: freezed == menstruation
           ? _value.menstruation
           : menstruation // ignore: cast_nullable_to_non_nullable
               as Menstruation?,
-    ));
+    ) as $Val);
   }
 
   @override
+  @pragma('vm:prefer-inline')
   $MenstruationCopyWith<$Res>? get menstruation {
     if (_value.menstruation == null) {
       return null;
     }
 
     return $MenstruationCopyWith<$Res>(_value.menstruation!, (value) {
-      return _then(_value.copyWith(menstruation: value));
+      return _then(_value.copyWith(menstruation: value) as $Val);
     });
   }
 }
 
 /// @nodoc
-abstract class _$MonthCalendarStateCopyWith<$Res>
+abstract class _$$_MonthCalendarStateCopyWith<$Res>
     implements $MonthCalendarStateCopyWith<$Res> {
-  factory _$MonthCalendarStateCopyWith(
-          _MonthCalendarState value, $Res Function(_MonthCalendarState) then) =
-      __$MonthCalendarStateCopyWithImpl<$Res>;
+  factory _$$_MonthCalendarStateCopyWith(_$_MonthCalendarState value,
+          $Res Function(_$_MonthCalendarState) then) =
+      __$$_MonthCalendarStateCopyWithImpl<$Res>;
   @override
+  @useResult
   $Res call({DateTime dateForMonth, Menstruation? menstruation});
 
   @override
@@ -102,27 +91,25 @@ abstract class _$MonthCalendarStateCopyWith<$Res>
 }
 
 /// @nodoc
-class __$MonthCalendarStateCopyWithImpl<$Res>
-    extends _$MonthCalendarStateCopyWithImpl<$Res>
-    implements _$MonthCalendarStateCopyWith<$Res> {
-  __$MonthCalendarStateCopyWithImpl(
-      _MonthCalendarState _value, $Res Function(_MonthCalendarState) _then)
-      : super(_value, (v) => _then(v as _MonthCalendarState));
+class __$$_MonthCalendarStateCopyWithImpl<$Res>
+    extends _$MonthCalendarStateCopyWithImpl<$Res, _$_MonthCalendarState>
+    implements _$$_MonthCalendarStateCopyWith<$Res> {
+  __$$_MonthCalendarStateCopyWithImpl(
+      _$_MonthCalendarState _value, $Res Function(_$_MonthCalendarState) _then)
+      : super(_value, _then);
 
-  @override
-  _MonthCalendarState get _value => super._value as _MonthCalendarState;
-
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? dateForMonth = freezed,
+    Object? dateForMonth = null,
     Object? menstruation = freezed,
   }) {
-    return _then(_MonthCalendarState(
-      dateForMonth: dateForMonth == freezed
+    return _then(_$_MonthCalendarState(
+      dateForMonth: null == dateForMonth
           ? _value.dateForMonth
           : dateForMonth // ignore: cast_nullable_to_non_nullable
               as DateTime,
-      menstruation: menstruation == freezed
+      menstruation: freezed == menstruation
           ? _value.menstruation
           : menstruation // ignore: cast_nullable_to_non_nullable
               as Menstruation?,
@@ -151,29 +138,28 @@ class _$_MonthCalendarState extends _MonthCalendarState {
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _MonthCalendarState &&
-            const DeepCollectionEquality()
-                .equals(other.dateForMonth, dateForMonth) &&
-            const DeepCollectionEquality()
-                .equals(other.menstruation, menstruation));
+            other is _$_MonthCalendarState &&
+            (identical(other.dateForMonth, dateForMonth) ||
+                other.dateForMonth == dateForMonth) &&
+            (identical(other.menstruation, menstruation) ||
+                other.menstruation == menstruation));
   }
 
   @override
-  int get hashCode => Object.hash(
-      runtimeType,
-      const DeepCollectionEquality().hash(dateForMonth),
-      const DeepCollectionEquality().hash(menstruation));
+  int get hashCode => Object.hash(runtimeType, dateForMonth, menstruation);
 
   @JsonKey(ignore: true)
   @override
-  _$MonthCalendarStateCopyWith<_MonthCalendarState> get copyWith =>
-      __$MonthCalendarStateCopyWithImpl<_MonthCalendarState>(this, _$identity);
+  @pragma('vm:prefer-inline')
+  _$$_MonthCalendarStateCopyWith<_$_MonthCalendarState> get copyWith =>
+      __$$_MonthCalendarStateCopyWithImpl<_$_MonthCalendarState>(
+          this, _$identity);
 }
 
 abstract class _MonthCalendarState extends MonthCalendarState {
   factory _MonthCalendarState(
-      {required DateTime dateForMonth,
-      required Menstruation? menstruation}) = _$_MonthCalendarState;
+      {required final DateTime dateForMonth,
+      required final Menstruation? menstruation}) = _$_MonthCalendarState;
   _MonthCalendarState._() : super._();
 
   @override
@@ -182,6 +168,6 @@ abstract class _MonthCalendarState extends MonthCalendarState {
   Menstruation? get menstruation;
   @override
   @JsonKey(ignore: true)
-  _$MonthCalendarStateCopyWith<_MonthCalendarState> get copyWith =>
+  _$$_MonthCalendarStateCopyWith<_$_MonthCalendarState> get copyWith =>
       throw _privateConstructorUsedError;
 }

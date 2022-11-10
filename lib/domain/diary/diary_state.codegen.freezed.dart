@@ -12,21 +12,7 @@ part of 'diary_state.codegen.dart';
 T _$identity<T>(T value) => value;
 
 final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more informations: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
-
-/// @nodoc
-class _$DiaryStateTearOff {
-  const _$DiaryStateTearOff();
-
-  _DiaryState call({required Diary diary}) {
-    return _DiaryState(
-      diary: diary,
-    );
-  }
-}
-
-/// @nodoc
-const $DiaryState = _$DiaryStateTearOff();
+    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
 
 /// @nodoc
 mixin _$DiaryState {
@@ -41,46 +27,53 @@ mixin _$DiaryState {
 abstract class $DiaryStateCopyWith<$Res> {
   factory $DiaryStateCopyWith(
           DiaryState value, $Res Function(DiaryState) then) =
-      _$DiaryStateCopyWithImpl<$Res>;
+      _$DiaryStateCopyWithImpl<$Res, DiaryState>;
+  @useResult
   $Res call({Diary diary});
 
   $DiaryCopyWith<$Res> get diary;
 }
 
 /// @nodoc
-class _$DiaryStateCopyWithImpl<$Res> implements $DiaryStateCopyWith<$Res> {
+class _$DiaryStateCopyWithImpl<$Res, $Val extends DiaryState>
+    implements $DiaryStateCopyWith<$Res> {
   _$DiaryStateCopyWithImpl(this._value, this._then);
 
-  final DiaryState _value;
   // ignore: unused_field
-  final $Res Function(DiaryState) _then;
+  final $Val _value;
+  // ignore: unused_field
+  final $Res Function($Val) _then;
 
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? diary = freezed,
+    Object? diary = null,
   }) {
     return _then(_value.copyWith(
-      diary: diary == freezed
+      diary: null == diary
           ? _value.diary
           : diary // ignore: cast_nullable_to_non_nullable
               as Diary,
-    ));
+    ) as $Val);
   }
 
   @override
+  @pragma('vm:prefer-inline')
   $DiaryCopyWith<$Res> get diary {
     return $DiaryCopyWith<$Res>(_value.diary, (value) {
-      return _then(_value.copyWith(diary: value));
+      return _then(_value.copyWith(diary: value) as $Val);
     });
   }
 }
 
 /// @nodoc
-abstract class _$DiaryStateCopyWith<$Res> implements $DiaryStateCopyWith<$Res> {
-  factory _$DiaryStateCopyWith(
-          _DiaryState value, $Res Function(_DiaryState) then) =
-      __$DiaryStateCopyWithImpl<$Res>;
+abstract class _$$_DiaryStateCopyWith<$Res>
+    implements $DiaryStateCopyWith<$Res> {
+  factory _$$_DiaryStateCopyWith(
+          _$_DiaryState value, $Res Function(_$_DiaryState) then) =
+      __$$_DiaryStateCopyWithImpl<$Res>;
   @override
+  @useResult
   $Res call({Diary diary});
 
   @override
@@ -88,21 +81,20 @@ abstract class _$DiaryStateCopyWith<$Res> implements $DiaryStateCopyWith<$Res> {
 }
 
 /// @nodoc
-class __$DiaryStateCopyWithImpl<$Res> extends _$DiaryStateCopyWithImpl<$Res>
-    implements _$DiaryStateCopyWith<$Res> {
-  __$DiaryStateCopyWithImpl(
-      _DiaryState _value, $Res Function(_DiaryState) _then)
-      : super(_value, (v) => _then(v as _DiaryState));
+class __$$_DiaryStateCopyWithImpl<$Res>
+    extends _$DiaryStateCopyWithImpl<$Res, _$_DiaryState>
+    implements _$$_DiaryStateCopyWith<$Res> {
+  __$$_DiaryStateCopyWithImpl(
+      _$_DiaryState _value, $Res Function(_$_DiaryState) _then)
+      : super(_value, _then);
 
-  @override
-  _DiaryState get _value => super._value as _DiaryState;
-
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? diary = freezed,
+    Object? diary = null,
   }) {
-    return _then(_DiaryState(
-      diary: diary == freezed
+    return _then(_$_DiaryState(
+      diary: null == diary
           ? _value.diary
           : diary // ignore: cast_nullable_to_non_nullable
               as Diary,
@@ -127,28 +119,28 @@ class _$_DiaryState extends _DiaryState {
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _DiaryState &&
-            const DeepCollectionEquality().equals(other.diary, diary));
+            other is _$_DiaryState &&
+            (identical(other.diary, diary) || other.diary == diary));
   }
 
   @override
-  int get hashCode =>
-      Object.hash(runtimeType, const DeepCollectionEquality().hash(diary));
+  int get hashCode => Object.hash(runtimeType, diary);
 
   @JsonKey(ignore: true)
   @override
-  _$DiaryStateCopyWith<_DiaryState> get copyWith =>
-      __$DiaryStateCopyWithImpl<_DiaryState>(this, _$identity);
+  @pragma('vm:prefer-inline')
+  _$$_DiaryStateCopyWith<_$_DiaryState> get copyWith =>
+      __$$_DiaryStateCopyWithImpl<_$_DiaryState>(this, _$identity);
 }
 
 abstract class _DiaryState extends DiaryState {
-  const factory _DiaryState({required Diary diary}) = _$_DiaryState;
+  const factory _DiaryState({required final Diary diary}) = _$_DiaryState;
   const _DiaryState._() : super._();
 
   @override
   Diary get diary;
   @override
   @JsonKey(ignore: true)
-  _$DiaryStateCopyWith<_DiaryState> get copyWith =>
+  _$$_DiaryStateCopyWith<_$_DiaryState> get copyWith =>
       throw _privateConstructorUsedError;
 }

@@ -12,43 +12,11 @@ part of 'pill_sheet_group.codegen.dart';
 T _$identity<T>(T value) => value;
 
 final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more informations: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
+    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
 
 PillSheetGroup _$PillSheetGroupFromJson(Map<String, dynamic> json) {
   return _PillSheetGroup.fromJson(json);
 }
-
-/// @nodoc
-class _$PillSheetGroupTearOff {
-  const _$PillSheetGroupTearOff();
-
-  _PillSheetGroup call(
-      {@JsonKey(includeIfNull: false, toJson: toNull)
-          String? id,
-      required List<String> pillSheetIDs,
-      required List<PillSheet> pillSheets,
-      @JsonKey(fromJson: NonNullTimestampConverter.timestampToDateTime, toJson: NonNullTimestampConverter.dateTimeToTimestamp)
-          required DateTime createdAt,
-      @JsonKey(fromJson: TimestampConverter.timestampToDateTime, toJson: TimestampConverter.dateTimeToTimestamp)
-          DateTime? deletedAt,
-      DisplayNumberSetting? displayNumberSetting}) {
-    return _PillSheetGroup(
-      id: id,
-      pillSheetIDs: pillSheetIDs,
-      pillSheets: pillSheets,
-      createdAt: createdAt,
-      deletedAt: deletedAt,
-      displayNumberSetting: displayNumberSetting,
-    );
-  }
-
-  PillSheetGroup fromJson(Map<String, Object?> json) {
-    return PillSheetGroup.fromJson(json);
-  }
-}
-
-/// @nodoc
-const $PillSheetGroup = _$PillSheetGroupTearOff();
 
 /// @nodoc
 mixin _$PillSheetGroup {
@@ -77,7 +45,8 @@ mixin _$PillSheetGroup {
 abstract class $PillSheetGroupCopyWith<$Res> {
   factory $PillSheetGroupCopyWith(
           PillSheetGroup value, $Res Function(PillSheetGroup) then) =
-      _$PillSheetGroupCopyWithImpl<$Res>;
+      _$PillSheetGroupCopyWithImpl<$Res, PillSheetGroup>;
+  @useResult
   $Res call(
       {@JsonKey(includeIfNull: false, toJson: toNull)
           String? id,
@@ -93,52 +62,55 @@ abstract class $PillSheetGroupCopyWith<$Res> {
 }
 
 /// @nodoc
-class _$PillSheetGroupCopyWithImpl<$Res>
+class _$PillSheetGroupCopyWithImpl<$Res, $Val extends PillSheetGroup>
     implements $PillSheetGroupCopyWith<$Res> {
   _$PillSheetGroupCopyWithImpl(this._value, this._then);
 
-  final PillSheetGroup _value;
   // ignore: unused_field
-  final $Res Function(PillSheetGroup) _then;
+  final $Val _value;
+  // ignore: unused_field
+  final $Res Function($Val) _then;
 
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
     Object? id = freezed,
-    Object? pillSheetIDs = freezed,
-    Object? pillSheets = freezed,
-    Object? createdAt = freezed,
+    Object? pillSheetIDs = null,
+    Object? pillSheets = null,
+    Object? createdAt = null,
     Object? deletedAt = freezed,
     Object? displayNumberSetting = freezed,
   }) {
     return _then(_value.copyWith(
-      id: id == freezed
+      id: freezed == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
               as String?,
-      pillSheetIDs: pillSheetIDs == freezed
+      pillSheetIDs: null == pillSheetIDs
           ? _value.pillSheetIDs
           : pillSheetIDs // ignore: cast_nullable_to_non_nullable
               as List<String>,
-      pillSheets: pillSheets == freezed
+      pillSheets: null == pillSheets
           ? _value.pillSheets
           : pillSheets // ignore: cast_nullable_to_non_nullable
               as List<PillSheet>,
-      createdAt: createdAt == freezed
+      createdAt: null == createdAt
           ? _value.createdAt
           : createdAt // ignore: cast_nullable_to_non_nullable
               as DateTime,
-      deletedAt: deletedAt == freezed
+      deletedAt: freezed == deletedAt
           ? _value.deletedAt
           : deletedAt // ignore: cast_nullable_to_non_nullable
               as DateTime?,
-      displayNumberSetting: displayNumberSetting == freezed
+      displayNumberSetting: freezed == displayNumberSetting
           ? _value.displayNumberSetting
           : displayNumberSetting // ignore: cast_nullable_to_non_nullable
               as DisplayNumberSetting?,
-    ));
+    ) as $Val);
   }
 
   @override
+  @pragma('vm:prefer-inline')
   $DisplayNumberSettingCopyWith<$Res>? get displayNumberSetting {
     if (_value.displayNumberSetting == null) {
       return null;
@@ -146,18 +118,19 @@ class _$PillSheetGroupCopyWithImpl<$Res>
 
     return $DisplayNumberSettingCopyWith<$Res>(_value.displayNumberSetting!,
         (value) {
-      return _then(_value.copyWith(displayNumberSetting: value));
+      return _then(_value.copyWith(displayNumberSetting: value) as $Val);
     });
   }
 }
 
 /// @nodoc
-abstract class _$PillSheetGroupCopyWith<$Res>
+abstract class _$$_PillSheetGroupCopyWith<$Res>
     implements $PillSheetGroupCopyWith<$Res> {
-  factory _$PillSheetGroupCopyWith(
-          _PillSheetGroup value, $Res Function(_PillSheetGroup) then) =
-      __$PillSheetGroupCopyWithImpl<$Res>;
+  factory _$$_PillSheetGroupCopyWith(
+          _$_PillSheetGroup value, $Res Function(_$_PillSheetGroup) then) =
+      __$$_PillSheetGroupCopyWithImpl<$Res>;
   @override
+  @useResult
   $Res call(
       {@JsonKey(includeIfNull: false, toJson: toNull)
           String? id,
@@ -174,47 +147,45 @@ abstract class _$PillSheetGroupCopyWith<$Res>
 }
 
 /// @nodoc
-class __$PillSheetGroupCopyWithImpl<$Res>
-    extends _$PillSheetGroupCopyWithImpl<$Res>
-    implements _$PillSheetGroupCopyWith<$Res> {
-  __$PillSheetGroupCopyWithImpl(
-      _PillSheetGroup _value, $Res Function(_PillSheetGroup) _then)
-      : super(_value, (v) => _then(v as _PillSheetGroup));
+class __$$_PillSheetGroupCopyWithImpl<$Res>
+    extends _$PillSheetGroupCopyWithImpl<$Res, _$_PillSheetGroup>
+    implements _$$_PillSheetGroupCopyWith<$Res> {
+  __$$_PillSheetGroupCopyWithImpl(
+      _$_PillSheetGroup _value, $Res Function(_$_PillSheetGroup) _then)
+      : super(_value, _then);
 
-  @override
-  _PillSheetGroup get _value => super._value as _PillSheetGroup;
-
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
     Object? id = freezed,
-    Object? pillSheetIDs = freezed,
-    Object? pillSheets = freezed,
-    Object? createdAt = freezed,
+    Object? pillSheetIDs = null,
+    Object? pillSheets = null,
+    Object? createdAt = null,
     Object? deletedAt = freezed,
     Object? displayNumberSetting = freezed,
   }) {
-    return _then(_PillSheetGroup(
-      id: id == freezed
+    return _then(_$_PillSheetGroup(
+      id: freezed == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
               as String?,
-      pillSheetIDs: pillSheetIDs == freezed
-          ? _value.pillSheetIDs
+      pillSheetIDs: null == pillSheetIDs
+          ? _value._pillSheetIDs
           : pillSheetIDs // ignore: cast_nullable_to_non_nullable
               as List<String>,
-      pillSheets: pillSheets == freezed
-          ? _value.pillSheets
+      pillSheets: null == pillSheets
+          ? _value._pillSheets
           : pillSheets // ignore: cast_nullable_to_non_nullable
               as List<PillSheet>,
-      createdAt: createdAt == freezed
+      createdAt: null == createdAt
           ? _value.createdAt
           : createdAt // ignore: cast_nullable_to_non_nullable
               as DateTime,
-      deletedAt: deletedAt == freezed
+      deletedAt: freezed == deletedAt
           ? _value.deletedAt
           : deletedAt // ignore: cast_nullable_to_non_nullable
               as DateTime?,
-      displayNumberSetting: displayNumberSetting == freezed
+      displayNumberSetting: freezed == displayNumberSetting
           ? _value.displayNumberSetting
           : displayNumberSetting // ignore: cast_nullable_to_non_nullable
               as DisplayNumberSetting?,
@@ -229,14 +200,16 @@ class _$_PillSheetGroup extends _PillSheetGroup {
   const _$_PillSheetGroup(
       {@JsonKey(includeIfNull: false, toJson: toNull)
           this.id,
-      required this.pillSheetIDs,
-      required this.pillSheets,
+      required final List<String> pillSheetIDs,
+      required final List<PillSheet> pillSheets,
       @JsonKey(fromJson: NonNullTimestampConverter.timestampToDateTime, toJson: NonNullTimestampConverter.dateTimeToTimestamp)
           required this.createdAt,
       @JsonKey(fromJson: TimestampConverter.timestampToDateTime, toJson: TimestampConverter.dateTimeToTimestamp)
           this.deletedAt,
       this.displayNumberSetting})
-      : super._();
+      : _pillSheetIDs = pillSheetIDs,
+        _pillSheets = pillSheets,
+        super._();
 
   factory _$_PillSheetGroup.fromJson(Map<String, dynamic> json) =>
       _$$_PillSheetGroupFromJson(json);
@@ -244,10 +217,20 @@ class _$_PillSheetGroup extends _PillSheetGroup {
   @override
   @JsonKey(includeIfNull: false, toJson: toNull)
   final String? id;
+  final List<String> _pillSheetIDs;
   @override
-  final List<String> pillSheetIDs;
+  List<String> get pillSheetIDs {
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(_pillSheetIDs);
+  }
+
+  final List<PillSheet> _pillSheets;
   @override
-  final List<PillSheet> pillSheets;
+  List<PillSheet> get pillSheets {
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(_pillSheets);
+  }
+
   @override
   @JsonKey(
       fromJson: NonNullTimestampConverter.timestampToDateTime,
@@ -270,50 +253,56 @@ class _$_PillSheetGroup extends _PillSheetGroup {
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _PillSheetGroup &&
-            const DeepCollectionEquality().equals(other.id, id) &&
+            other is _$_PillSheetGroup &&
+            (identical(other.id, id) || other.id == id) &&
             const DeepCollectionEquality()
-                .equals(other.pillSheetIDs, pillSheetIDs) &&
+                .equals(other._pillSheetIDs, _pillSheetIDs) &&
             const DeepCollectionEquality()
-                .equals(other.pillSheets, pillSheets) &&
-            const DeepCollectionEquality().equals(other.createdAt, createdAt) &&
-            const DeepCollectionEquality().equals(other.deletedAt, deletedAt) &&
-            const DeepCollectionEquality()
-                .equals(other.displayNumberSetting, displayNumberSetting));
+                .equals(other._pillSheets, _pillSheets) &&
+            (identical(other.createdAt, createdAt) ||
+                other.createdAt == createdAt) &&
+            (identical(other.deletedAt, deletedAt) ||
+                other.deletedAt == deletedAt) &&
+            (identical(other.displayNumberSetting, displayNumberSetting) ||
+                other.displayNumberSetting == displayNumberSetting));
   }
-
-  @override
-  int get hashCode => Object.hash(
-      runtimeType,
-      const DeepCollectionEquality().hash(id),
-      const DeepCollectionEquality().hash(pillSheetIDs),
-      const DeepCollectionEquality().hash(pillSheets),
-      const DeepCollectionEquality().hash(createdAt),
-      const DeepCollectionEquality().hash(deletedAt),
-      const DeepCollectionEquality().hash(displayNumberSetting));
 
   @JsonKey(ignore: true)
   @override
-  _$PillSheetGroupCopyWith<_PillSheetGroup> get copyWith =>
-      __$PillSheetGroupCopyWithImpl<_PillSheetGroup>(this, _$identity);
+  int get hashCode => Object.hash(
+      runtimeType,
+      id,
+      const DeepCollectionEquality().hash(_pillSheetIDs),
+      const DeepCollectionEquality().hash(_pillSheets),
+      createdAt,
+      deletedAt,
+      displayNumberSetting);
+
+  @JsonKey(ignore: true)
+  @override
+  @pragma('vm:prefer-inline')
+  _$$_PillSheetGroupCopyWith<_$_PillSheetGroup> get copyWith =>
+      __$$_PillSheetGroupCopyWithImpl<_$_PillSheetGroup>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_PillSheetGroupToJson(this);
+    return _$$_PillSheetGroupToJson(
+      this,
+    );
   }
 }
 
 abstract class _PillSheetGroup extends PillSheetGroup {
   const factory _PillSheetGroup(
       {@JsonKey(includeIfNull: false, toJson: toNull)
-          String? id,
-      required List<String> pillSheetIDs,
-      required List<PillSheet> pillSheets,
+          final String? id,
+      required final List<String> pillSheetIDs,
+      required final List<PillSheet> pillSheets,
       @JsonKey(fromJson: NonNullTimestampConverter.timestampToDateTime, toJson: NonNullTimestampConverter.dateTimeToTimestamp)
-          required DateTime createdAt,
+          required final DateTime createdAt,
       @JsonKey(fromJson: TimestampConverter.timestampToDateTime, toJson: TimestampConverter.dateTimeToTimestamp)
-          DateTime? deletedAt,
-      DisplayNumberSetting? displayNumberSetting}) = _$_PillSheetGroup;
+          final DateTime? deletedAt,
+      final DisplayNumberSetting? displayNumberSetting}) = _$_PillSheetGroup;
   const _PillSheetGroup._() : super._();
 
   factory _PillSheetGroup.fromJson(Map<String, dynamic> json) =
@@ -340,32 +329,13 @@ abstract class _PillSheetGroup extends PillSheetGroup {
   DisplayNumberSetting? get displayNumberSetting;
   @override
   @JsonKey(ignore: true)
-  _$PillSheetGroupCopyWith<_PillSheetGroup> get copyWith =>
+  _$$_PillSheetGroupCopyWith<_$_PillSheetGroup> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
 DisplayNumberSetting _$DisplayNumberSettingFromJson(Map<String, dynamic> json) {
   return _DisplayNumberSetting.fromJson(json);
 }
-
-/// @nodoc
-class _$DisplayNumberSettingTearOff {
-  const _$DisplayNumberSettingTearOff();
-
-  _DisplayNumberSetting call({int? beginPillNumber, int? endPillNumber}) {
-    return _DisplayNumberSetting(
-      beginPillNumber: beginPillNumber,
-      endPillNumber: endPillNumber,
-    );
-  }
-
-  DisplayNumberSetting fromJson(Map<String, Object?> json) {
-    return DisplayNumberSetting.fromJson(json);
-  }
-}
-
-/// @nodoc
-const $DisplayNumberSetting = _$DisplayNumberSettingTearOff();
 
 /// @nodoc
 mixin _$DisplayNumberSetting {
@@ -382,69 +352,72 @@ mixin _$DisplayNumberSetting {
 abstract class $DisplayNumberSettingCopyWith<$Res> {
   factory $DisplayNumberSettingCopyWith(DisplayNumberSetting value,
           $Res Function(DisplayNumberSetting) then) =
-      _$DisplayNumberSettingCopyWithImpl<$Res>;
+      _$DisplayNumberSettingCopyWithImpl<$Res, DisplayNumberSetting>;
+  @useResult
   $Res call({int? beginPillNumber, int? endPillNumber});
 }
 
 /// @nodoc
-class _$DisplayNumberSettingCopyWithImpl<$Res>
+class _$DisplayNumberSettingCopyWithImpl<$Res,
+        $Val extends DisplayNumberSetting>
     implements $DisplayNumberSettingCopyWith<$Res> {
   _$DisplayNumberSettingCopyWithImpl(this._value, this._then);
 
-  final DisplayNumberSetting _value;
   // ignore: unused_field
-  final $Res Function(DisplayNumberSetting) _then;
+  final $Val _value;
+  // ignore: unused_field
+  final $Res Function($Val) _then;
 
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
     Object? beginPillNumber = freezed,
     Object? endPillNumber = freezed,
   }) {
     return _then(_value.copyWith(
-      beginPillNumber: beginPillNumber == freezed
+      beginPillNumber: freezed == beginPillNumber
           ? _value.beginPillNumber
           : beginPillNumber // ignore: cast_nullable_to_non_nullable
               as int?,
-      endPillNumber: endPillNumber == freezed
+      endPillNumber: freezed == endPillNumber
           ? _value.endPillNumber
           : endPillNumber // ignore: cast_nullable_to_non_nullable
               as int?,
-    ));
+    ) as $Val);
   }
 }
 
 /// @nodoc
-abstract class _$DisplayNumberSettingCopyWith<$Res>
+abstract class _$$_DisplayNumberSettingCopyWith<$Res>
     implements $DisplayNumberSettingCopyWith<$Res> {
-  factory _$DisplayNumberSettingCopyWith(_DisplayNumberSetting value,
-          $Res Function(_DisplayNumberSetting) then) =
-      __$DisplayNumberSettingCopyWithImpl<$Res>;
+  factory _$$_DisplayNumberSettingCopyWith(_$_DisplayNumberSetting value,
+          $Res Function(_$_DisplayNumberSetting) then) =
+      __$$_DisplayNumberSettingCopyWithImpl<$Res>;
   @override
+  @useResult
   $Res call({int? beginPillNumber, int? endPillNumber});
 }
 
 /// @nodoc
-class __$DisplayNumberSettingCopyWithImpl<$Res>
-    extends _$DisplayNumberSettingCopyWithImpl<$Res>
-    implements _$DisplayNumberSettingCopyWith<$Res> {
-  __$DisplayNumberSettingCopyWithImpl(
-      _DisplayNumberSetting _value, $Res Function(_DisplayNumberSetting) _then)
-      : super(_value, (v) => _then(v as _DisplayNumberSetting));
+class __$$_DisplayNumberSettingCopyWithImpl<$Res>
+    extends _$DisplayNumberSettingCopyWithImpl<$Res, _$_DisplayNumberSetting>
+    implements _$$_DisplayNumberSettingCopyWith<$Res> {
+  __$$_DisplayNumberSettingCopyWithImpl(_$_DisplayNumberSetting _value,
+      $Res Function(_$_DisplayNumberSetting) _then)
+      : super(_value, _then);
 
-  @override
-  _DisplayNumberSetting get _value => super._value as _DisplayNumberSetting;
-
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
     Object? beginPillNumber = freezed,
     Object? endPillNumber = freezed,
   }) {
-    return _then(_DisplayNumberSetting(
-      beginPillNumber: beginPillNumber == freezed
+    return _then(_$_DisplayNumberSetting(
+      beginPillNumber: freezed == beginPillNumber
           ? _value.beginPillNumber
           : beginPillNumber // ignore: cast_nullable_to_non_nullable
               as int?,
-      endPillNumber: endPillNumber == freezed
+      endPillNumber: freezed == endPillNumber
           ? _value.endPillNumber
           : endPillNumber // ignore: cast_nullable_to_non_nullable
               as int?,
@@ -475,34 +448,36 @@ class _$_DisplayNumberSetting implements _DisplayNumberSetting {
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _DisplayNumberSetting &&
-            const DeepCollectionEquality()
-                .equals(other.beginPillNumber, beginPillNumber) &&
-            const DeepCollectionEquality()
-                .equals(other.endPillNumber, endPillNumber));
+            other is _$_DisplayNumberSetting &&
+            (identical(other.beginPillNumber, beginPillNumber) ||
+                other.beginPillNumber == beginPillNumber) &&
+            (identical(other.endPillNumber, endPillNumber) ||
+                other.endPillNumber == endPillNumber));
   }
-
-  @override
-  int get hashCode => Object.hash(
-      runtimeType,
-      const DeepCollectionEquality().hash(beginPillNumber),
-      const DeepCollectionEquality().hash(endPillNumber));
 
   @JsonKey(ignore: true)
   @override
-  _$DisplayNumberSettingCopyWith<_DisplayNumberSetting> get copyWith =>
-      __$DisplayNumberSettingCopyWithImpl<_DisplayNumberSetting>(
+  int get hashCode => Object.hash(runtimeType, beginPillNumber, endPillNumber);
+
+  @JsonKey(ignore: true)
+  @override
+  @pragma('vm:prefer-inline')
+  _$$_DisplayNumberSettingCopyWith<_$_DisplayNumberSetting> get copyWith =>
+      __$$_DisplayNumberSettingCopyWithImpl<_$_DisplayNumberSetting>(
           this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_DisplayNumberSettingToJson(this);
+    return _$$_DisplayNumberSettingToJson(
+      this,
+    );
   }
 }
 
 abstract class _DisplayNumberSetting implements DisplayNumberSetting {
   const factory _DisplayNumberSetting(
-      {int? beginPillNumber, int? endPillNumber}) = _$_DisplayNumberSetting;
+      {final int? beginPillNumber,
+      final int? endPillNumber}) = _$_DisplayNumberSetting;
 
   factory _DisplayNumberSetting.fromJson(Map<String, dynamic> json) =
       _$_DisplayNumberSetting.fromJson;
@@ -513,6 +488,6 @@ abstract class _DisplayNumberSetting implements DisplayNumberSetting {
   int? get endPillNumber;
   @override
   @JsonKey(ignore: true)
-  _$DisplayNumberSettingCopyWith<_DisplayNumberSetting> get copyWith =>
+  _$$_DisplayNumberSettingCopyWith<_$_DisplayNumberSetting> get copyWith =>
       throw _privateConstructorUsedError;
 }

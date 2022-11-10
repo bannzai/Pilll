@@ -12,29 +12,11 @@ part of 'config.codegen.dart';
 T _$identity<T>(T value) => value;
 
 final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more informations: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
+    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
 
 Config _$ConfigFromJson(Map<String, dynamic> json) {
   return _Config.fromJson(json);
 }
-
-/// @nodoc
-class _$ConfigTearOff {
-  const _$ConfigTearOff();
-
-  _Config call({required String minimumSupportedAppVersion}) {
-    return _Config(
-      minimumSupportedAppVersion: minimumSupportedAppVersion,
-    );
-  }
-
-  Config fromJson(Map<String, Object?> json) {
-    return Config.fromJson(json);
-  }
-}
-
-/// @nodoc
-const $Config = _$ConfigTearOff();
 
 /// @nodoc
 mixin _$Config {
@@ -48,54 +30,58 @@ mixin _$Config {
 /// @nodoc
 abstract class $ConfigCopyWith<$Res> {
   factory $ConfigCopyWith(Config value, $Res Function(Config) then) =
-      _$ConfigCopyWithImpl<$Res>;
+      _$ConfigCopyWithImpl<$Res, Config>;
+  @useResult
   $Res call({String minimumSupportedAppVersion});
 }
 
 /// @nodoc
-class _$ConfigCopyWithImpl<$Res> implements $ConfigCopyWith<$Res> {
+class _$ConfigCopyWithImpl<$Res, $Val extends Config>
+    implements $ConfigCopyWith<$Res> {
   _$ConfigCopyWithImpl(this._value, this._then);
 
-  final Config _value;
   // ignore: unused_field
-  final $Res Function(Config) _then;
+  final $Val _value;
+  // ignore: unused_field
+  final $Res Function($Val) _then;
 
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? minimumSupportedAppVersion = freezed,
+    Object? minimumSupportedAppVersion = null,
   }) {
     return _then(_value.copyWith(
-      minimumSupportedAppVersion: minimumSupportedAppVersion == freezed
+      minimumSupportedAppVersion: null == minimumSupportedAppVersion
           ? _value.minimumSupportedAppVersion
           : minimumSupportedAppVersion // ignore: cast_nullable_to_non_nullable
               as String,
-    ));
+    ) as $Val);
   }
 }
 
 /// @nodoc
-abstract class _$ConfigCopyWith<$Res> implements $ConfigCopyWith<$Res> {
-  factory _$ConfigCopyWith(_Config value, $Res Function(_Config) then) =
-      __$ConfigCopyWithImpl<$Res>;
+abstract class _$$_ConfigCopyWith<$Res> implements $ConfigCopyWith<$Res> {
+  factory _$$_ConfigCopyWith(_$_Config value, $Res Function(_$_Config) then) =
+      __$$_ConfigCopyWithImpl<$Res>;
   @override
+  @useResult
   $Res call({String minimumSupportedAppVersion});
 }
 
 /// @nodoc
-class __$ConfigCopyWithImpl<$Res> extends _$ConfigCopyWithImpl<$Res>
-    implements _$ConfigCopyWith<$Res> {
-  __$ConfigCopyWithImpl(_Config _value, $Res Function(_Config) _then)
-      : super(_value, (v) => _then(v as _Config));
+class __$$_ConfigCopyWithImpl<$Res>
+    extends _$ConfigCopyWithImpl<$Res, _$_Config>
+    implements _$$_ConfigCopyWith<$Res> {
+  __$$_ConfigCopyWithImpl(_$_Config _value, $Res Function(_$_Config) _then)
+      : super(_value, _then);
 
-  @override
-  _Config get _value => super._value as _Config;
-
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? minimumSupportedAppVersion = freezed,
+    Object? minimumSupportedAppVersion = null,
   }) {
-    return _then(_Config(
-      minimumSupportedAppVersion: minimumSupportedAppVersion == freezed
+    return _then(_$_Config(
+      minimumSupportedAppVersion: null == minimumSupportedAppVersion
           ? _value.minimumSupportedAppVersion
           : minimumSupportedAppVersion // ignore: cast_nullable_to_non_nullable
               as String,
@@ -123,28 +109,34 @@ class _$_Config extends _Config {
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _Config &&
-            const DeepCollectionEquality().equals(
-                other.minimumSupportedAppVersion, minimumSupportedAppVersion));
+            other is _$_Config &&
+            (identical(other.minimumSupportedAppVersion,
+                    minimumSupportedAppVersion) ||
+                other.minimumSupportedAppVersion ==
+                    minimumSupportedAppVersion));
   }
-
-  @override
-  int get hashCode => Object.hash(runtimeType,
-      const DeepCollectionEquality().hash(minimumSupportedAppVersion));
 
   @JsonKey(ignore: true)
   @override
-  _$ConfigCopyWith<_Config> get copyWith =>
-      __$ConfigCopyWithImpl<_Config>(this, _$identity);
+  int get hashCode => Object.hash(runtimeType, minimumSupportedAppVersion);
+
+  @JsonKey(ignore: true)
+  @override
+  @pragma('vm:prefer-inline')
+  _$$_ConfigCopyWith<_$_Config> get copyWith =>
+      __$$_ConfigCopyWithImpl<_$_Config>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_ConfigToJson(this);
+    return _$$_ConfigToJson(
+      this,
+    );
   }
 }
 
 abstract class _Config extends Config {
-  factory _Config({required String minimumSupportedAppVersion}) = _$_Config;
+  factory _Config({required final String minimumSupportedAppVersion}) =
+      _$_Config;
   _Config._() : super._();
 
   factory _Config.fromJson(Map<String, dynamic> json) = _$_Config.fromJson;
@@ -153,5 +145,6 @@ abstract class _Config extends Config {
   String get minimumSupportedAppVersion;
   @override
   @JsonKey(ignore: true)
-  _$ConfigCopyWith<_Config> get copyWith => throw _privateConstructorUsedError;
+  _$$_ConfigCopyWith<_$_Config> get copyWith =>
+      throw _privateConstructorUsedError;
 }

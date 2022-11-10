@@ -12,25 +12,7 @@ part of 'setting_account_cooperation_list_page_state.codegen.dart';
 T _$identity<T>(T value) => value;
 
 final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more informations: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
-
-/// @nodoc
-class _$SettingAccountCooperationListStateTearOff {
-  const _$SettingAccountCooperationListStateTearOff();
-
-  _SettingAccountCooperationListState call(
-      {required User? user, bool isLoading = false, Object? exception}) {
-    return _SettingAccountCooperationListState(
-      user: user,
-      isLoading: isLoading,
-      exception: exception,
-    );
-  }
-}
-
-/// @nodoc
-const $SettingAccountCooperationListState =
-    _$SettingAccountCooperationListStateTearOff();
+    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
 
 /// @nodoc
 mixin _$SettingAccountCooperationListState {
@@ -49,79 +31,83 @@ abstract class $SettingAccountCooperationListStateCopyWith<$Res> {
   factory $SettingAccountCooperationListStateCopyWith(
           SettingAccountCooperationListState value,
           $Res Function(SettingAccountCooperationListState) then) =
-      _$SettingAccountCooperationListStateCopyWithImpl<$Res>;
+      _$SettingAccountCooperationListStateCopyWithImpl<$Res,
+          SettingAccountCooperationListState>;
+  @useResult
   $Res call({User? user, bool isLoading, Object? exception});
 }
 
 /// @nodoc
-class _$SettingAccountCooperationListStateCopyWithImpl<$Res>
+class _$SettingAccountCooperationListStateCopyWithImpl<$Res,
+        $Val extends SettingAccountCooperationListState>
     implements $SettingAccountCooperationListStateCopyWith<$Res> {
   _$SettingAccountCooperationListStateCopyWithImpl(this._value, this._then);
 
-  final SettingAccountCooperationListState _value;
   // ignore: unused_field
-  final $Res Function(SettingAccountCooperationListState) _then;
+  final $Val _value;
+  // ignore: unused_field
+  final $Res Function($Val) _then;
 
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
     Object? user = freezed,
-    Object? isLoading = freezed,
+    Object? isLoading = null,
     Object? exception = freezed,
   }) {
     return _then(_value.copyWith(
-      user: user == freezed
+      user: freezed == user
           ? _value.user
           : user // ignore: cast_nullable_to_non_nullable
               as User?,
-      isLoading: isLoading == freezed
+      isLoading: null == isLoading
           ? _value.isLoading
           : isLoading // ignore: cast_nullable_to_non_nullable
               as bool,
-      exception: exception == freezed ? _value.exception : exception,
-    ));
+      exception: freezed == exception ? _value.exception : exception,
+    ) as $Val);
   }
 }
 
 /// @nodoc
-abstract class _$SettingAccountCooperationListStateCopyWith<$Res>
+abstract class _$$_SettingAccountCooperationListStateCopyWith<$Res>
     implements $SettingAccountCooperationListStateCopyWith<$Res> {
-  factory _$SettingAccountCooperationListStateCopyWith(
-          _SettingAccountCooperationListState value,
-          $Res Function(_SettingAccountCooperationListState) then) =
-      __$SettingAccountCooperationListStateCopyWithImpl<$Res>;
+  factory _$$_SettingAccountCooperationListStateCopyWith(
+          _$_SettingAccountCooperationListState value,
+          $Res Function(_$_SettingAccountCooperationListState) then) =
+      __$$_SettingAccountCooperationListStateCopyWithImpl<$Res>;
   @override
+  @useResult
   $Res call({User? user, bool isLoading, Object? exception});
 }
 
 /// @nodoc
-class __$SettingAccountCooperationListStateCopyWithImpl<$Res>
-    extends _$SettingAccountCooperationListStateCopyWithImpl<$Res>
-    implements _$SettingAccountCooperationListStateCopyWith<$Res> {
-  __$SettingAccountCooperationListStateCopyWithImpl(
-      _SettingAccountCooperationListState _value,
-      $Res Function(_SettingAccountCooperationListState) _then)
-      : super(_value, (v) => _then(v as _SettingAccountCooperationListState));
+class __$$_SettingAccountCooperationListStateCopyWithImpl<$Res>
+    extends _$SettingAccountCooperationListStateCopyWithImpl<$Res,
+        _$_SettingAccountCooperationListState>
+    implements _$$_SettingAccountCooperationListStateCopyWith<$Res> {
+  __$$_SettingAccountCooperationListStateCopyWithImpl(
+      _$_SettingAccountCooperationListState _value,
+      $Res Function(_$_SettingAccountCooperationListState) _then)
+      : super(_value, _then);
 
-  @override
-  _SettingAccountCooperationListState get _value =>
-      super._value as _SettingAccountCooperationListState;
-
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
     Object? user = freezed,
-    Object? isLoading = freezed,
+    Object? isLoading = null,
     Object? exception = freezed,
   }) {
-    return _then(_SettingAccountCooperationListState(
-      user: user == freezed
+    return _then(_$_SettingAccountCooperationListState(
+      user: freezed == user
           ? _value.user
           : user // ignore: cast_nullable_to_non_nullable
               as User?,
-      isLoading: isLoading == freezed
+      isLoading: null == isLoading
           ? _value.isLoading
           : isLoading // ignore: cast_nullable_to_non_nullable
               as bool,
-      exception: exception == freezed ? _value.exception : exception,
+      exception: freezed == exception ? _value.exception : exception,
     ));
   }
 }
@@ -136,8 +122,8 @@ class _$_SettingAccountCooperationListState
 
   @override
   final User? user;
-  @JsonKey()
   @override
+  @JsonKey()
   final bool isLoading;
   @override
   final Object? exception;
@@ -151,33 +137,32 @@ class _$_SettingAccountCooperationListState
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _SettingAccountCooperationListState &&
-            const DeepCollectionEquality().equals(other.user, user) &&
-            const DeepCollectionEquality().equals(other.isLoading, isLoading) &&
+            other is _$_SettingAccountCooperationListState &&
+            (identical(other.user, user) || other.user == user) &&
+            (identical(other.isLoading, isLoading) ||
+                other.isLoading == isLoading) &&
             const DeepCollectionEquality().equals(other.exception, exception));
   }
 
   @override
-  int get hashCode => Object.hash(
-      runtimeType,
-      const DeepCollectionEquality().hash(user),
-      const DeepCollectionEquality().hash(isLoading),
+  int get hashCode => Object.hash(runtimeType, user, isLoading,
       const DeepCollectionEquality().hash(exception));
 
   @JsonKey(ignore: true)
   @override
-  _$SettingAccountCooperationListStateCopyWith<
-          _SettingAccountCooperationListState>
-      get copyWith => __$SettingAccountCooperationListStateCopyWithImpl<
-          _SettingAccountCooperationListState>(this, _$identity);
+  @pragma('vm:prefer-inline')
+  _$$_SettingAccountCooperationListStateCopyWith<
+          _$_SettingAccountCooperationListState>
+      get copyWith => __$$_SettingAccountCooperationListStateCopyWithImpl<
+          _$_SettingAccountCooperationListState>(this, _$identity);
 }
 
 abstract class _SettingAccountCooperationListState
     extends SettingAccountCooperationListState {
   const factory _SettingAccountCooperationListState(
-      {required User? user,
-      bool isLoading,
-      Object? exception}) = _$_SettingAccountCooperationListState;
+      {required final User? user,
+      final bool isLoading,
+      final Object? exception}) = _$_SettingAccountCooperationListState;
   const _SettingAccountCooperationListState._() : super._();
 
   @override
@@ -188,7 +173,7 @@ abstract class _SettingAccountCooperationListState
   Object? get exception;
   @override
   @JsonKey(ignore: true)
-  _$SettingAccountCooperationListStateCopyWith<
-          _SettingAccountCooperationListState>
+  _$$_SettingAccountCooperationListStateCopyWith<
+          _$_SettingAccountCooperationListState>
       get copyWith => throw _privateConstructorUsedError;
 }

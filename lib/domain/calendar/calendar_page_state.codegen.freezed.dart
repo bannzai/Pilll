@@ -12,40 +12,7 @@ part of 'calendar_page_state.codegen.dart';
 T _$identity<T>(T value) => value;
 
 final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more informations: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
-
-/// @nodoc
-class _$CalendarPageStateTearOff {
-  const _$CalendarPageStateTearOff();
-
-  _CalendarPageState call(
-      {required int currentCalendarIndex,
-      required DateTime displayMonth,
-      required MonthCalendarState todayMonthCalendar,
-      required List<CalendarMenstruationBandModel>
-          calendarMenstruationBandModels,
-      required List<CalendarScheduledMenstruationBandModel>
-          calendarScheduledMenstruationBandModels,
-      required List<CalendarNextPillSheetBandModel>
-          calendarNextPillSheetBandModels,
-      required List<PillSheetModifiedHistory> pillSheetModifiedHistories,
-      required PremiumAndTrial premiumAndTrial}) {
-    return _CalendarPageState(
-      currentCalendarIndex: currentCalendarIndex,
-      displayMonth: displayMonth,
-      todayMonthCalendar: todayMonthCalendar,
-      calendarMenstruationBandModels: calendarMenstruationBandModels,
-      calendarScheduledMenstruationBandModels:
-          calendarScheduledMenstruationBandModels,
-      calendarNextPillSheetBandModels: calendarNextPillSheetBandModels,
-      pillSheetModifiedHistories: pillSheetModifiedHistories,
-      premiumAndTrial: premiumAndTrial,
-    );
-  }
-}
-
-/// @nodoc
-const $CalendarPageState = _$CalendarPageStateTearOff();
+    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
 
 /// @nodoc
 mixin _$CalendarPageState {
@@ -73,7 +40,8 @@ mixin _$CalendarPageState {
 abstract class $CalendarPageStateCopyWith<$Res> {
   factory $CalendarPageStateCopyWith(
           CalendarPageState value, $Res Function(CalendarPageState) then) =
-      _$CalendarPageStateCopyWithImpl<$Res>;
+      _$CalendarPageStateCopyWithImpl<$Res, CalendarPageState>;
+  @useResult
   $Res call(
       {int currentCalendarIndex,
       DateTime displayMonth,
@@ -90,86 +58,90 @@ abstract class $CalendarPageStateCopyWith<$Res> {
 }
 
 /// @nodoc
-class _$CalendarPageStateCopyWithImpl<$Res>
+class _$CalendarPageStateCopyWithImpl<$Res, $Val extends CalendarPageState>
     implements $CalendarPageStateCopyWith<$Res> {
   _$CalendarPageStateCopyWithImpl(this._value, this._then);
 
-  final CalendarPageState _value;
   // ignore: unused_field
-  final $Res Function(CalendarPageState) _then;
+  final $Val _value;
+  // ignore: unused_field
+  final $Res Function($Val) _then;
 
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? currentCalendarIndex = freezed,
-    Object? displayMonth = freezed,
-    Object? todayMonthCalendar = freezed,
-    Object? calendarMenstruationBandModels = freezed,
-    Object? calendarScheduledMenstruationBandModels = freezed,
-    Object? calendarNextPillSheetBandModels = freezed,
-    Object? pillSheetModifiedHistories = freezed,
-    Object? premiumAndTrial = freezed,
+    Object? currentCalendarIndex = null,
+    Object? displayMonth = null,
+    Object? todayMonthCalendar = null,
+    Object? calendarMenstruationBandModels = null,
+    Object? calendarScheduledMenstruationBandModels = null,
+    Object? calendarNextPillSheetBandModels = null,
+    Object? pillSheetModifiedHistories = null,
+    Object? premiumAndTrial = null,
   }) {
     return _then(_value.copyWith(
-      currentCalendarIndex: currentCalendarIndex == freezed
+      currentCalendarIndex: null == currentCalendarIndex
           ? _value.currentCalendarIndex
           : currentCalendarIndex // ignore: cast_nullable_to_non_nullable
               as int,
-      displayMonth: displayMonth == freezed
+      displayMonth: null == displayMonth
           ? _value.displayMonth
           : displayMonth // ignore: cast_nullable_to_non_nullable
               as DateTime,
-      todayMonthCalendar: todayMonthCalendar == freezed
+      todayMonthCalendar: null == todayMonthCalendar
           ? _value.todayMonthCalendar
           : todayMonthCalendar // ignore: cast_nullable_to_non_nullable
               as MonthCalendarState,
-      calendarMenstruationBandModels: calendarMenstruationBandModels == freezed
+      calendarMenstruationBandModels: null == calendarMenstruationBandModels
           ? _value.calendarMenstruationBandModels
           : calendarMenstruationBandModels // ignore: cast_nullable_to_non_nullable
               as List<CalendarMenstruationBandModel>,
-      calendarScheduledMenstruationBandModels:
-          calendarScheduledMenstruationBandModels == freezed
-              ? _value.calendarScheduledMenstruationBandModels
-              : calendarScheduledMenstruationBandModels // ignore: cast_nullable_to_non_nullable
-                  as List<CalendarScheduledMenstruationBandModel>,
-      calendarNextPillSheetBandModels: calendarNextPillSheetBandModels ==
-              freezed
+      calendarScheduledMenstruationBandModels: null ==
+              calendarScheduledMenstruationBandModels
+          ? _value.calendarScheduledMenstruationBandModels
+          : calendarScheduledMenstruationBandModels // ignore: cast_nullable_to_non_nullable
+              as List<CalendarScheduledMenstruationBandModel>,
+      calendarNextPillSheetBandModels: null == calendarNextPillSheetBandModels
           ? _value.calendarNextPillSheetBandModels
           : calendarNextPillSheetBandModels // ignore: cast_nullable_to_non_nullable
               as List<CalendarNextPillSheetBandModel>,
-      pillSheetModifiedHistories: pillSheetModifiedHistories == freezed
+      pillSheetModifiedHistories: null == pillSheetModifiedHistories
           ? _value.pillSheetModifiedHistories
           : pillSheetModifiedHistories // ignore: cast_nullable_to_non_nullable
               as List<PillSheetModifiedHistory>,
-      premiumAndTrial: premiumAndTrial == freezed
+      premiumAndTrial: null == premiumAndTrial
           ? _value.premiumAndTrial
           : premiumAndTrial // ignore: cast_nullable_to_non_nullable
               as PremiumAndTrial,
-    ));
+    ) as $Val);
   }
 
   @override
+  @pragma('vm:prefer-inline')
   $MonthCalendarStateCopyWith<$Res> get todayMonthCalendar {
     return $MonthCalendarStateCopyWith<$Res>(_value.todayMonthCalendar,
         (value) {
-      return _then(_value.copyWith(todayMonthCalendar: value));
+      return _then(_value.copyWith(todayMonthCalendar: value) as $Val);
     });
   }
 
   @override
+  @pragma('vm:prefer-inline')
   $PremiumAndTrialCopyWith<$Res> get premiumAndTrial {
     return $PremiumAndTrialCopyWith<$Res>(_value.premiumAndTrial, (value) {
-      return _then(_value.copyWith(premiumAndTrial: value));
+      return _then(_value.copyWith(premiumAndTrial: value) as $Val);
     });
   }
 }
 
 /// @nodoc
-abstract class _$CalendarPageStateCopyWith<$Res>
+abstract class _$$_CalendarPageStateCopyWith<$Res>
     implements $CalendarPageStateCopyWith<$Res> {
-  factory _$CalendarPageStateCopyWith(
-          _CalendarPageState value, $Res Function(_CalendarPageState) then) =
-      __$CalendarPageStateCopyWithImpl<$Res>;
+  factory _$$_CalendarPageStateCopyWith(_$_CalendarPageState value,
+          $Res Function(_$_CalendarPageState) then) =
+      __$$_CalendarPageStateCopyWithImpl<$Res>;
   @override
+  @useResult
   $Res call(
       {int currentCalendarIndex,
       DateTime displayMonth,
@@ -188,59 +160,56 @@ abstract class _$CalendarPageStateCopyWith<$Res>
 }
 
 /// @nodoc
-class __$CalendarPageStateCopyWithImpl<$Res>
-    extends _$CalendarPageStateCopyWithImpl<$Res>
-    implements _$CalendarPageStateCopyWith<$Res> {
-  __$CalendarPageStateCopyWithImpl(
-      _CalendarPageState _value, $Res Function(_CalendarPageState) _then)
-      : super(_value, (v) => _then(v as _CalendarPageState));
+class __$$_CalendarPageStateCopyWithImpl<$Res>
+    extends _$CalendarPageStateCopyWithImpl<$Res, _$_CalendarPageState>
+    implements _$$_CalendarPageStateCopyWith<$Res> {
+  __$$_CalendarPageStateCopyWithImpl(
+      _$_CalendarPageState _value, $Res Function(_$_CalendarPageState) _then)
+      : super(_value, _then);
 
-  @override
-  _CalendarPageState get _value => super._value as _CalendarPageState;
-
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? currentCalendarIndex = freezed,
-    Object? displayMonth = freezed,
-    Object? todayMonthCalendar = freezed,
-    Object? calendarMenstruationBandModels = freezed,
-    Object? calendarScheduledMenstruationBandModels = freezed,
-    Object? calendarNextPillSheetBandModels = freezed,
-    Object? pillSheetModifiedHistories = freezed,
-    Object? premiumAndTrial = freezed,
+    Object? currentCalendarIndex = null,
+    Object? displayMonth = null,
+    Object? todayMonthCalendar = null,
+    Object? calendarMenstruationBandModels = null,
+    Object? calendarScheduledMenstruationBandModels = null,
+    Object? calendarNextPillSheetBandModels = null,
+    Object? pillSheetModifiedHistories = null,
+    Object? premiumAndTrial = null,
   }) {
-    return _then(_CalendarPageState(
-      currentCalendarIndex: currentCalendarIndex == freezed
+    return _then(_$_CalendarPageState(
+      currentCalendarIndex: null == currentCalendarIndex
           ? _value.currentCalendarIndex
           : currentCalendarIndex // ignore: cast_nullable_to_non_nullable
               as int,
-      displayMonth: displayMonth == freezed
+      displayMonth: null == displayMonth
           ? _value.displayMonth
           : displayMonth // ignore: cast_nullable_to_non_nullable
               as DateTime,
-      todayMonthCalendar: todayMonthCalendar == freezed
+      todayMonthCalendar: null == todayMonthCalendar
           ? _value.todayMonthCalendar
           : todayMonthCalendar // ignore: cast_nullable_to_non_nullable
               as MonthCalendarState,
-      calendarMenstruationBandModels: calendarMenstruationBandModels == freezed
-          ? _value.calendarMenstruationBandModels
+      calendarMenstruationBandModels: null == calendarMenstruationBandModels
+          ? _value._calendarMenstruationBandModels
           : calendarMenstruationBandModels // ignore: cast_nullable_to_non_nullable
               as List<CalendarMenstruationBandModel>,
-      calendarScheduledMenstruationBandModels:
-          calendarScheduledMenstruationBandModels == freezed
-              ? _value.calendarScheduledMenstruationBandModels
-              : calendarScheduledMenstruationBandModels // ignore: cast_nullable_to_non_nullable
-                  as List<CalendarScheduledMenstruationBandModel>,
-      calendarNextPillSheetBandModels: calendarNextPillSheetBandModels ==
-              freezed
-          ? _value.calendarNextPillSheetBandModels
+      calendarScheduledMenstruationBandModels: null ==
+              calendarScheduledMenstruationBandModels
+          ? _value._calendarScheduledMenstruationBandModels
+          : calendarScheduledMenstruationBandModels // ignore: cast_nullable_to_non_nullable
+              as List<CalendarScheduledMenstruationBandModel>,
+      calendarNextPillSheetBandModels: null == calendarNextPillSheetBandModels
+          ? _value._calendarNextPillSheetBandModels
           : calendarNextPillSheetBandModels // ignore: cast_nullable_to_non_nullable
               as List<CalendarNextPillSheetBandModel>,
-      pillSheetModifiedHistories: pillSheetModifiedHistories == freezed
-          ? _value.pillSheetModifiedHistories
+      pillSheetModifiedHistories: null == pillSheetModifiedHistories
+          ? _value._pillSheetModifiedHistories
           : pillSheetModifiedHistories // ignore: cast_nullable_to_non_nullable
               as List<PillSheetModifiedHistory>,
-      premiumAndTrial: premiumAndTrial == freezed
+      premiumAndTrial: null == premiumAndTrial
           ? _value.premiumAndTrial
           : premiumAndTrial // ignore: cast_nullable_to_non_nullable
               as PremiumAndTrial,
@@ -255,12 +224,20 @@ class _$_CalendarPageState extends _CalendarPageState {
       {required this.currentCalendarIndex,
       required this.displayMonth,
       required this.todayMonthCalendar,
-      required this.calendarMenstruationBandModels,
-      required this.calendarScheduledMenstruationBandModels,
-      required this.calendarNextPillSheetBandModels,
-      required this.pillSheetModifiedHistories,
+      required final List<CalendarMenstruationBandModel>
+          calendarMenstruationBandModels,
+      required final List<CalendarScheduledMenstruationBandModel>
+          calendarScheduledMenstruationBandModels,
+      required final List<CalendarNextPillSheetBandModel>
+          calendarNextPillSheetBandModels,
+      required final List<PillSheetModifiedHistory> pillSheetModifiedHistories,
       required this.premiumAndTrial})
-      : super._();
+      : _calendarMenstruationBandModels = calendarMenstruationBandModels,
+        _calendarScheduledMenstruationBandModels =
+            calendarScheduledMenstruationBandModels,
+        _calendarNextPillSheetBandModels = calendarNextPillSheetBandModels,
+        _pillSheetModifiedHistories = pillSheetModifiedHistories,
+        super._();
 
   @override
   final int currentCalendarIndex;
@@ -268,15 +245,36 @@ class _$_CalendarPageState extends _CalendarPageState {
   final DateTime displayMonth;
   @override
   final MonthCalendarState todayMonthCalendar;
+  final List<CalendarMenstruationBandModel> _calendarMenstruationBandModels;
   @override
-  final List<CalendarMenstruationBandModel> calendarMenstruationBandModels;
-  @override
+  List<CalendarMenstruationBandModel> get calendarMenstruationBandModels {
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(_calendarMenstruationBandModels);
+  }
+
   final List<CalendarScheduledMenstruationBandModel>
-      calendarScheduledMenstruationBandModels;
+      _calendarScheduledMenstruationBandModels;
   @override
-  final List<CalendarNextPillSheetBandModel> calendarNextPillSheetBandModels;
+  List<CalendarScheduledMenstruationBandModel>
+      get calendarScheduledMenstruationBandModels {
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(_calendarScheduledMenstruationBandModels);
+  }
+
+  final List<CalendarNextPillSheetBandModel> _calendarNextPillSheetBandModels;
   @override
-  final List<PillSheetModifiedHistory> pillSheetModifiedHistories;
+  List<CalendarNextPillSheetBandModel> get calendarNextPillSheetBandModels {
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(_calendarNextPillSheetBandModels);
+  }
+
+  final List<PillSheetModifiedHistory> _pillSheetModifiedHistories;
+  @override
+  List<PillSheetModifiedHistory> get pillSheetModifiedHistories {
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(_pillSheetModifiedHistories);
+  }
+
   @override
   final PremiumAndTrial premiumAndTrial;
 
@@ -289,60 +287,63 @@ class _$_CalendarPageState extends _CalendarPageState {
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _CalendarPageState &&
-            const DeepCollectionEquality()
-                .equals(other.currentCalendarIndex, currentCalendarIndex) &&
-            const DeepCollectionEquality()
-                .equals(other.displayMonth, displayMonth) &&
-            const DeepCollectionEquality()
-                .equals(other.todayMonthCalendar, todayMonthCalendar) &&
+            other is _$_CalendarPageState &&
+            (identical(other.currentCalendarIndex, currentCalendarIndex) ||
+                other.currentCalendarIndex == currentCalendarIndex) &&
+            (identical(other.displayMonth, displayMonth) ||
+                other.displayMonth == displayMonth) &&
+            (identical(other.todayMonthCalendar, todayMonthCalendar) ||
+                other.todayMonthCalendar == todayMonthCalendar) &&
             const DeepCollectionEquality().equals(
-                other.calendarMenstruationBandModels,
-                calendarMenstruationBandModels) &&
+                other._calendarMenstruationBandModels,
+                _calendarMenstruationBandModels) &&
             const DeepCollectionEquality().equals(
-                other.calendarScheduledMenstruationBandModels,
-                calendarScheduledMenstruationBandModels) &&
+                other._calendarScheduledMenstruationBandModels,
+                _calendarScheduledMenstruationBandModels) &&
             const DeepCollectionEquality().equals(
-                other.calendarNextPillSheetBandModels,
-                calendarNextPillSheetBandModels) &&
+                other._calendarNextPillSheetBandModels,
+                _calendarNextPillSheetBandModels) &&
             const DeepCollectionEquality().equals(
-                other.pillSheetModifiedHistories, pillSheetModifiedHistories) &&
-            const DeepCollectionEquality()
-                .equals(other.premiumAndTrial, premiumAndTrial));
+                other._pillSheetModifiedHistories,
+                _pillSheetModifiedHistories) &&
+            (identical(other.premiumAndTrial, premiumAndTrial) ||
+                other.premiumAndTrial == premiumAndTrial));
   }
 
   @override
   int get hashCode => Object.hash(
       runtimeType,
-      const DeepCollectionEquality().hash(currentCalendarIndex),
-      const DeepCollectionEquality().hash(displayMonth),
-      const DeepCollectionEquality().hash(todayMonthCalendar),
-      const DeepCollectionEquality().hash(calendarMenstruationBandModels),
+      currentCalendarIndex,
+      displayMonth,
+      todayMonthCalendar,
+      const DeepCollectionEquality().hash(_calendarMenstruationBandModels),
       const DeepCollectionEquality()
-          .hash(calendarScheduledMenstruationBandModels),
-      const DeepCollectionEquality().hash(calendarNextPillSheetBandModels),
-      const DeepCollectionEquality().hash(pillSheetModifiedHistories),
-      const DeepCollectionEquality().hash(premiumAndTrial));
+          .hash(_calendarScheduledMenstruationBandModels),
+      const DeepCollectionEquality().hash(_calendarNextPillSheetBandModels),
+      const DeepCollectionEquality().hash(_pillSheetModifiedHistories),
+      premiumAndTrial);
 
   @JsonKey(ignore: true)
   @override
-  _$CalendarPageStateCopyWith<_CalendarPageState> get copyWith =>
-      __$CalendarPageStateCopyWithImpl<_CalendarPageState>(this, _$identity);
+  @pragma('vm:prefer-inline')
+  _$$_CalendarPageStateCopyWith<_$_CalendarPageState> get copyWith =>
+      __$$_CalendarPageStateCopyWithImpl<_$_CalendarPageState>(
+          this, _$identity);
 }
 
 abstract class _CalendarPageState extends CalendarPageState {
   factory _CalendarPageState(
-      {required int currentCalendarIndex,
-      required DateTime displayMonth,
-      required MonthCalendarState todayMonthCalendar,
-      required List<CalendarMenstruationBandModel>
+      {required final int currentCalendarIndex,
+      required final DateTime displayMonth,
+      required final MonthCalendarState todayMonthCalendar,
+      required final List<CalendarMenstruationBandModel>
           calendarMenstruationBandModels,
-      required List<CalendarScheduledMenstruationBandModel>
+      required final List<CalendarScheduledMenstruationBandModel>
           calendarScheduledMenstruationBandModels,
-      required List<CalendarNextPillSheetBandModel>
+      required final List<CalendarNextPillSheetBandModel>
           calendarNextPillSheetBandModels,
-      required List<PillSheetModifiedHistory> pillSheetModifiedHistories,
-      required PremiumAndTrial premiumAndTrial}) = _$_CalendarPageState;
+      required final List<PillSheetModifiedHistory> pillSheetModifiedHistories,
+      required final PremiumAndTrial premiumAndTrial}) = _$_CalendarPageState;
   _CalendarPageState._() : super._();
 
   @override
@@ -364,6 +365,6 @@ abstract class _CalendarPageState extends CalendarPageState {
   PremiumAndTrial get premiumAndTrial;
   @override
   @JsonKey(ignore: true)
-  _$CalendarPageStateCopyWith<_CalendarPageState> get copyWith =>
+  _$$_CalendarPageStateCopyWith<_$_CalendarPageState> get copyWith =>
       throw _privateConstructorUsedError;
 }

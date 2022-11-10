@@ -12,28 +12,7 @@ part of 'state.codegen.dart';
 T _$identity<T>(T value) => value;
 
 final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more informations: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
-
-/// @nodoc
-class _$SchedulePostStateTearOff {
-  const _$SchedulePostStateTearOff();
-
-  _SchedulePostState call(
-      {required DateTime date,
-      required User user,
-      required PremiumAndTrial premiumAndTrial,
-      required List<Schedule> schedules}) {
-    return _SchedulePostState(
-      date: date,
-      user: user,
-      premiumAndTrial: premiumAndTrial,
-      schedules: schedules,
-    );
-  }
-}
-
-/// @nodoc
-const $SchedulePostState = _$SchedulePostStateTearOff();
+    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
 
 /// @nodoc
 mixin _$SchedulePostState {
@@ -51,7 +30,8 @@ mixin _$SchedulePostState {
 abstract class $SchedulePostStateCopyWith<$Res> {
   factory $SchedulePostStateCopyWith(
           SchedulePostState value, $Res Function(SchedulePostState) then) =
-      _$SchedulePostStateCopyWithImpl<$Res>;
+      _$SchedulePostStateCopyWithImpl<$Res, SchedulePostState>;
+  @useResult
   $Res call(
       {DateTime date,
       User user,
@@ -63,63 +43,68 @@ abstract class $SchedulePostStateCopyWith<$Res> {
 }
 
 /// @nodoc
-class _$SchedulePostStateCopyWithImpl<$Res>
+class _$SchedulePostStateCopyWithImpl<$Res, $Val extends SchedulePostState>
     implements $SchedulePostStateCopyWith<$Res> {
   _$SchedulePostStateCopyWithImpl(this._value, this._then);
 
-  final SchedulePostState _value;
   // ignore: unused_field
-  final $Res Function(SchedulePostState) _then;
+  final $Val _value;
+  // ignore: unused_field
+  final $Res Function($Val) _then;
 
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? date = freezed,
-    Object? user = freezed,
-    Object? premiumAndTrial = freezed,
-    Object? schedules = freezed,
+    Object? date = null,
+    Object? user = null,
+    Object? premiumAndTrial = null,
+    Object? schedules = null,
   }) {
     return _then(_value.copyWith(
-      date: date == freezed
+      date: null == date
           ? _value.date
           : date // ignore: cast_nullable_to_non_nullable
               as DateTime,
-      user: user == freezed
+      user: null == user
           ? _value.user
           : user // ignore: cast_nullable_to_non_nullable
               as User,
-      premiumAndTrial: premiumAndTrial == freezed
+      premiumAndTrial: null == premiumAndTrial
           ? _value.premiumAndTrial
           : premiumAndTrial // ignore: cast_nullable_to_non_nullable
               as PremiumAndTrial,
-      schedules: schedules == freezed
+      schedules: null == schedules
           ? _value.schedules
           : schedules // ignore: cast_nullable_to_non_nullable
               as List<Schedule>,
-    ));
+    ) as $Val);
   }
 
   @override
+  @pragma('vm:prefer-inline')
   $UserCopyWith<$Res> get user {
     return $UserCopyWith<$Res>(_value.user, (value) {
-      return _then(_value.copyWith(user: value));
+      return _then(_value.copyWith(user: value) as $Val);
     });
   }
 
   @override
+  @pragma('vm:prefer-inline')
   $PremiumAndTrialCopyWith<$Res> get premiumAndTrial {
     return $PremiumAndTrialCopyWith<$Res>(_value.premiumAndTrial, (value) {
-      return _then(_value.copyWith(premiumAndTrial: value));
+      return _then(_value.copyWith(premiumAndTrial: value) as $Val);
     });
   }
 }
 
 /// @nodoc
-abstract class _$SchedulePostStateCopyWith<$Res>
+abstract class _$$_SchedulePostStateCopyWith<$Res>
     implements $SchedulePostStateCopyWith<$Res> {
-  factory _$SchedulePostStateCopyWith(
-          _SchedulePostState value, $Res Function(_SchedulePostState) then) =
-      __$SchedulePostStateCopyWithImpl<$Res>;
+  factory _$$_SchedulePostStateCopyWith(_$_SchedulePostState value,
+          $Res Function(_$_SchedulePostState) then) =
+      __$$_SchedulePostStateCopyWithImpl<$Res>;
   @override
+  @useResult
   $Res call(
       {DateTime date,
       User user,
@@ -133,38 +118,36 @@ abstract class _$SchedulePostStateCopyWith<$Res>
 }
 
 /// @nodoc
-class __$SchedulePostStateCopyWithImpl<$Res>
-    extends _$SchedulePostStateCopyWithImpl<$Res>
-    implements _$SchedulePostStateCopyWith<$Res> {
-  __$SchedulePostStateCopyWithImpl(
-      _SchedulePostState _value, $Res Function(_SchedulePostState) _then)
-      : super(_value, (v) => _then(v as _SchedulePostState));
+class __$$_SchedulePostStateCopyWithImpl<$Res>
+    extends _$SchedulePostStateCopyWithImpl<$Res, _$_SchedulePostState>
+    implements _$$_SchedulePostStateCopyWith<$Res> {
+  __$$_SchedulePostStateCopyWithImpl(
+      _$_SchedulePostState _value, $Res Function(_$_SchedulePostState) _then)
+      : super(_value, _then);
 
-  @override
-  _SchedulePostState get _value => super._value as _SchedulePostState;
-
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? date = freezed,
-    Object? user = freezed,
-    Object? premiumAndTrial = freezed,
-    Object? schedules = freezed,
+    Object? date = null,
+    Object? user = null,
+    Object? premiumAndTrial = null,
+    Object? schedules = null,
   }) {
-    return _then(_SchedulePostState(
-      date: date == freezed
+    return _then(_$_SchedulePostState(
+      date: null == date
           ? _value.date
           : date // ignore: cast_nullable_to_non_nullable
               as DateTime,
-      user: user == freezed
+      user: null == user
           ? _value.user
           : user // ignore: cast_nullable_to_non_nullable
               as User,
-      premiumAndTrial: premiumAndTrial == freezed
+      premiumAndTrial: null == premiumAndTrial
           ? _value.premiumAndTrial
           : premiumAndTrial // ignore: cast_nullable_to_non_nullable
               as PremiumAndTrial,
-      schedules: schedules == freezed
-          ? _value.schedules
+      schedules: null == schedules
+          ? _value._schedules
           : schedules // ignore: cast_nullable_to_non_nullable
               as List<Schedule>,
     ));
@@ -178,8 +161,9 @@ class _$_SchedulePostState extends _SchedulePostState {
       {required this.date,
       required this.user,
       required this.premiumAndTrial,
-      required this.schedules})
-      : super._();
+      required final List<Schedule> schedules})
+      : _schedules = schedules,
+        super._();
 
   @override
   final DateTime date;
@@ -187,8 +171,12 @@ class _$_SchedulePostState extends _SchedulePostState {
   final User user;
   @override
   final PremiumAndTrial premiumAndTrial;
+  final List<Schedule> _schedules;
   @override
-  final List<Schedule> schedules;
+  List<Schedule> get schedules {
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(_schedules);
+  }
 
   @override
   String toString() {
@@ -199,34 +187,33 @@ class _$_SchedulePostState extends _SchedulePostState {
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _SchedulePostState &&
-            const DeepCollectionEquality().equals(other.date, date) &&
-            const DeepCollectionEquality().equals(other.user, user) &&
+            other is _$_SchedulePostState &&
+            (identical(other.date, date) || other.date == date) &&
+            (identical(other.user, user) || other.user == user) &&
+            (identical(other.premiumAndTrial, premiumAndTrial) ||
+                other.premiumAndTrial == premiumAndTrial) &&
             const DeepCollectionEquality()
-                .equals(other.premiumAndTrial, premiumAndTrial) &&
-            const DeepCollectionEquality().equals(other.schedules, schedules));
+                .equals(other._schedules, _schedules));
   }
 
   @override
-  int get hashCode => Object.hash(
-      runtimeType,
-      const DeepCollectionEquality().hash(date),
-      const DeepCollectionEquality().hash(user),
-      const DeepCollectionEquality().hash(premiumAndTrial),
-      const DeepCollectionEquality().hash(schedules));
+  int get hashCode => Object.hash(runtimeType, date, user, premiumAndTrial,
+      const DeepCollectionEquality().hash(_schedules));
 
   @JsonKey(ignore: true)
   @override
-  _$SchedulePostStateCopyWith<_SchedulePostState> get copyWith =>
-      __$SchedulePostStateCopyWithImpl<_SchedulePostState>(this, _$identity);
+  @pragma('vm:prefer-inline')
+  _$$_SchedulePostStateCopyWith<_$_SchedulePostState> get copyWith =>
+      __$$_SchedulePostStateCopyWithImpl<_$_SchedulePostState>(
+          this, _$identity);
 }
 
 abstract class _SchedulePostState extends SchedulePostState {
   factory _SchedulePostState(
-      {required DateTime date,
-      required User user,
-      required PremiumAndTrial premiumAndTrial,
-      required List<Schedule> schedules}) = _$_SchedulePostState;
+      {required final DateTime date,
+      required final User user,
+      required final PremiumAndTrial premiumAndTrial,
+      required final List<Schedule> schedules}) = _$_SchedulePostState;
   _SchedulePostState._() : super._();
 
   @override
@@ -239,6 +226,6 @@ abstract class _SchedulePostState extends SchedulePostState {
   List<Schedule> get schedules;
   @override
   @JsonKey(ignore: true)
-  _$SchedulePostStateCopyWith<_SchedulePostState> get copyWith =>
+  _$$_SchedulePostStateCopyWith<_$_SchedulePostState> get copyWith =>
       throw _privateConstructorUsedError;
 }

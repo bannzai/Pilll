@@ -12,19 +12,7 @@ part of 'setting_menstruation_state.codegen.dart';
 T _$identity<T>(T value) => value;
 
 final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more informations: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
-
-/// @nodoc
-class _$SettingMenstruationStateTearOff {
-  const _$SettingMenstruationStateTearOff();
-
-  _SettingMenstruationState call() {
-    return const _SettingMenstruationState();
-  }
-}
-
-/// @nodoc
-const $SettingMenstruationState = _$SettingMenstruationStateTearOff();
+    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
 
 /// @nodoc
 mixin _$SettingMenstruationState {}
@@ -33,37 +21,37 @@ mixin _$SettingMenstruationState {}
 abstract class $SettingMenstruationStateCopyWith<$Res> {
   factory $SettingMenstruationStateCopyWith(SettingMenstruationState value,
           $Res Function(SettingMenstruationState) then) =
-      _$SettingMenstruationStateCopyWithImpl<$Res>;
+      _$SettingMenstruationStateCopyWithImpl<$Res, SettingMenstruationState>;
 }
 
 /// @nodoc
-class _$SettingMenstruationStateCopyWithImpl<$Res>
+class _$SettingMenstruationStateCopyWithImpl<$Res,
+        $Val extends SettingMenstruationState>
     implements $SettingMenstruationStateCopyWith<$Res> {
   _$SettingMenstruationStateCopyWithImpl(this._value, this._then);
 
-  final SettingMenstruationState _value;
   // ignore: unused_field
-  final $Res Function(SettingMenstruationState) _then;
+  final $Val _value;
+  // ignore: unused_field
+  final $Res Function($Val) _then;
 }
 
 /// @nodoc
-abstract class _$SettingMenstruationStateCopyWith<$Res> {
-  factory _$SettingMenstruationStateCopyWith(_SettingMenstruationState value,
-          $Res Function(_SettingMenstruationState) then) =
-      __$SettingMenstruationStateCopyWithImpl<$Res>;
+abstract class _$$_SettingMenstruationStateCopyWith<$Res> {
+  factory _$$_SettingMenstruationStateCopyWith(
+          _$_SettingMenstruationState value,
+          $Res Function(_$_SettingMenstruationState) then) =
+      __$$_SettingMenstruationStateCopyWithImpl<$Res>;
 }
 
 /// @nodoc
-class __$SettingMenstruationStateCopyWithImpl<$Res>
-    extends _$SettingMenstruationStateCopyWithImpl<$Res>
-    implements _$SettingMenstruationStateCopyWith<$Res> {
-  __$SettingMenstruationStateCopyWithImpl(_SettingMenstruationState _value,
-      $Res Function(_SettingMenstruationState) _then)
-      : super(_value, (v) => _then(v as _SettingMenstruationState));
-
-  @override
-  _SettingMenstruationState get _value =>
-      super._value as _SettingMenstruationState;
+class __$$_SettingMenstruationStateCopyWithImpl<$Res>
+    extends _$SettingMenstruationStateCopyWithImpl<$Res,
+        _$_SettingMenstruationState>
+    implements _$$_SettingMenstruationStateCopyWith<$Res> {
+  __$$_SettingMenstruationStateCopyWithImpl(_$_SettingMenstruationState _value,
+      $Res Function(_$_SettingMenstruationState) _then)
+      : super(_value, _then);
 }
 
 /// @nodoc
@@ -80,7 +68,7 @@ class _$_SettingMenstruationState extends _SettingMenstruationState {
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _SettingMenstruationState);
+            other is _$_SettingMenstruationState);
   }
 
   @override

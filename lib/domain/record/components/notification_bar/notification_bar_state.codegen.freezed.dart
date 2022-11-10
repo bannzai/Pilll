@@ -12,35 +12,7 @@ part of 'notification_bar_state.codegen.dart';
 T _$identity<T>(T value) => value;
 
 final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more informations: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
-
-/// @nodoc
-class _$NotificationBarStateTearOff {
-  const _$NotificationBarStateTearOff();
-
-  _NotificationBarState call(
-      {required PillSheetGroup? latestPillSheetGroup,
-      required int totalCountOfActionForTakenPill,
-      required PremiumAndTrial premiumAndTrial,
-      required bool recommendedSignupNotificationIsAlreadyShow,
-      required bool isLinkedLoginProvider,
-      required bool userAnsweredSurvey,
-      required bool userClosedSurvey}) {
-    return _NotificationBarState(
-      latestPillSheetGroup: latestPillSheetGroup,
-      totalCountOfActionForTakenPill: totalCountOfActionForTakenPill,
-      premiumAndTrial: premiumAndTrial,
-      recommendedSignupNotificationIsAlreadyShow:
-          recommendedSignupNotificationIsAlreadyShow,
-      isLinkedLoginProvider: isLinkedLoginProvider,
-      userAnsweredSurvey: userAnsweredSurvey,
-      userClosedSurvey: userClosedSurvey,
-    );
-  }
-}
-
-/// @nodoc
-const $NotificationBarState = _$NotificationBarStateTearOff();
+    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
 
 /// @nodoc
 mixin _$NotificationBarState {
@@ -63,7 +35,8 @@ mixin _$NotificationBarState {
 abstract class $NotificationBarStateCopyWith<$Res> {
   factory $NotificationBarStateCopyWith(NotificationBarState value,
           $Res Function(NotificationBarState) then) =
-      _$NotificationBarStateCopyWithImpl<$Res>;
+      _$NotificationBarStateCopyWithImpl<$Res, NotificationBarState>;
+  @useResult
   $Res call(
       {PillSheetGroup? latestPillSheetGroup,
       int totalCountOfActionForTakenPill,
@@ -78,83 +51,89 @@ abstract class $NotificationBarStateCopyWith<$Res> {
 }
 
 /// @nodoc
-class _$NotificationBarStateCopyWithImpl<$Res>
+class _$NotificationBarStateCopyWithImpl<$Res,
+        $Val extends NotificationBarState>
     implements $NotificationBarStateCopyWith<$Res> {
   _$NotificationBarStateCopyWithImpl(this._value, this._then);
 
-  final NotificationBarState _value;
   // ignore: unused_field
-  final $Res Function(NotificationBarState) _then;
+  final $Val _value;
+  // ignore: unused_field
+  final $Res Function($Val) _then;
 
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
     Object? latestPillSheetGroup = freezed,
-    Object? totalCountOfActionForTakenPill = freezed,
-    Object? premiumAndTrial = freezed,
-    Object? recommendedSignupNotificationIsAlreadyShow = freezed,
-    Object? isLinkedLoginProvider = freezed,
-    Object? userAnsweredSurvey = freezed,
-    Object? userClosedSurvey = freezed,
+    Object? totalCountOfActionForTakenPill = null,
+    Object? premiumAndTrial = null,
+    Object? recommendedSignupNotificationIsAlreadyShow = null,
+    Object? isLinkedLoginProvider = null,
+    Object? userAnsweredSurvey = null,
+    Object? userClosedSurvey = null,
   }) {
     return _then(_value.copyWith(
-      latestPillSheetGroup: latestPillSheetGroup == freezed
+      latestPillSheetGroup: freezed == latestPillSheetGroup
           ? _value.latestPillSheetGroup
           : latestPillSheetGroup // ignore: cast_nullable_to_non_nullable
               as PillSheetGroup?,
-      totalCountOfActionForTakenPill: totalCountOfActionForTakenPill == freezed
+      totalCountOfActionForTakenPill: null == totalCountOfActionForTakenPill
           ? _value.totalCountOfActionForTakenPill
           : totalCountOfActionForTakenPill // ignore: cast_nullable_to_non_nullable
               as int,
-      premiumAndTrial: premiumAndTrial == freezed
+      premiumAndTrial: null == premiumAndTrial
           ? _value.premiumAndTrial
           : premiumAndTrial // ignore: cast_nullable_to_non_nullable
               as PremiumAndTrial,
-      recommendedSignupNotificationIsAlreadyShow:
-          recommendedSignupNotificationIsAlreadyShow == freezed
-              ? _value.recommendedSignupNotificationIsAlreadyShow
-              : recommendedSignupNotificationIsAlreadyShow // ignore: cast_nullable_to_non_nullable
-                  as bool,
-      isLinkedLoginProvider: isLinkedLoginProvider == freezed
+      recommendedSignupNotificationIsAlreadyShow: null ==
+              recommendedSignupNotificationIsAlreadyShow
+          ? _value.recommendedSignupNotificationIsAlreadyShow
+          : recommendedSignupNotificationIsAlreadyShow // ignore: cast_nullable_to_non_nullable
+              as bool,
+      isLinkedLoginProvider: null == isLinkedLoginProvider
           ? _value.isLinkedLoginProvider
           : isLinkedLoginProvider // ignore: cast_nullable_to_non_nullable
               as bool,
-      userAnsweredSurvey: userAnsweredSurvey == freezed
+      userAnsweredSurvey: null == userAnsweredSurvey
           ? _value.userAnsweredSurvey
           : userAnsweredSurvey // ignore: cast_nullable_to_non_nullable
               as bool,
-      userClosedSurvey: userClosedSurvey == freezed
+      userClosedSurvey: null == userClosedSurvey
           ? _value.userClosedSurvey
           : userClosedSurvey // ignore: cast_nullable_to_non_nullable
               as bool,
-    ));
+    ) as $Val);
   }
 
   @override
+  @pragma('vm:prefer-inline')
   $PillSheetGroupCopyWith<$Res>? get latestPillSheetGroup {
     if (_value.latestPillSheetGroup == null) {
       return null;
     }
 
     return $PillSheetGroupCopyWith<$Res>(_value.latestPillSheetGroup!, (value) {
-      return _then(_value.copyWith(latestPillSheetGroup: value));
+      return _then(_value.copyWith(latestPillSheetGroup: value) as $Val);
     });
   }
 
   @override
+  @pragma('vm:prefer-inline')
   $PremiumAndTrialCopyWith<$Res> get premiumAndTrial {
     return $PremiumAndTrialCopyWith<$Res>(_value.premiumAndTrial, (value) {
-      return _then(_value.copyWith(premiumAndTrial: value));
+      return _then(_value.copyWith(premiumAndTrial: value) as $Val);
     });
   }
 }
 
 /// @nodoc
-abstract class _$NotificationBarStateCopyWith<$Res>
+abstract class _$$_NotificationBarStateCopyWith<$Res>
     implements $NotificationBarStateCopyWith<$Res> {
-  factory _$NotificationBarStateCopyWith(_NotificationBarState value,
-          $Res Function(_NotificationBarState) then) =
-      __$NotificationBarStateCopyWithImpl<$Res>;
+  factory _$$_NotificationBarStateCopyWith(_$_NotificationBarState value,
+          $Res Function(_$_NotificationBarState) then) =
+      __$$_NotificationBarStateCopyWithImpl<$Res>;
   @override
+  @useResult
   $Res call(
       {PillSheetGroup? latestPillSheetGroup,
       int totalCountOfActionForTakenPill,
@@ -171,53 +150,51 @@ abstract class _$NotificationBarStateCopyWith<$Res>
 }
 
 /// @nodoc
-class __$NotificationBarStateCopyWithImpl<$Res>
-    extends _$NotificationBarStateCopyWithImpl<$Res>
-    implements _$NotificationBarStateCopyWith<$Res> {
-  __$NotificationBarStateCopyWithImpl(
-      _NotificationBarState _value, $Res Function(_NotificationBarState) _then)
-      : super(_value, (v) => _then(v as _NotificationBarState));
+class __$$_NotificationBarStateCopyWithImpl<$Res>
+    extends _$NotificationBarStateCopyWithImpl<$Res, _$_NotificationBarState>
+    implements _$$_NotificationBarStateCopyWith<$Res> {
+  __$$_NotificationBarStateCopyWithImpl(_$_NotificationBarState _value,
+      $Res Function(_$_NotificationBarState) _then)
+      : super(_value, _then);
 
-  @override
-  _NotificationBarState get _value => super._value as _NotificationBarState;
-
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
     Object? latestPillSheetGroup = freezed,
-    Object? totalCountOfActionForTakenPill = freezed,
-    Object? premiumAndTrial = freezed,
-    Object? recommendedSignupNotificationIsAlreadyShow = freezed,
-    Object? isLinkedLoginProvider = freezed,
-    Object? userAnsweredSurvey = freezed,
-    Object? userClosedSurvey = freezed,
+    Object? totalCountOfActionForTakenPill = null,
+    Object? premiumAndTrial = null,
+    Object? recommendedSignupNotificationIsAlreadyShow = null,
+    Object? isLinkedLoginProvider = null,
+    Object? userAnsweredSurvey = null,
+    Object? userClosedSurvey = null,
   }) {
-    return _then(_NotificationBarState(
-      latestPillSheetGroup: latestPillSheetGroup == freezed
+    return _then(_$_NotificationBarState(
+      latestPillSheetGroup: freezed == latestPillSheetGroup
           ? _value.latestPillSheetGroup
           : latestPillSheetGroup // ignore: cast_nullable_to_non_nullable
               as PillSheetGroup?,
-      totalCountOfActionForTakenPill: totalCountOfActionForTakenPill == freezed
+      totalCountOfActionForTakenPill: null == totalCountOfActionForTakenPill
           ? _value.totalCountOfActionForTakenPill
           : totalCountOfActionForTakenPill // ignore: cast_nullable_to_non_nullable
               as int,
-      premiumAndTrial: premiumAndTrial == freezed
+      premiumAndTrial: null == premiumAndTrial
           ? _value.premiumAndTrial
           : premiumAndTrial // ignore: cast_nullable_to_non_nullable
               as PremiumAndTrial,
-      recommendedSignupNotificationIsAlreadyShow:
-          recommendedSignupNotificationIsAlreadyShow == freezed
-              ? _value.recommendedSignupNotificationIsAlreadyShow
-              : recommendedSignupNotificationIsAlreadyShow // ignore: cast_nullable_to_non_nullable
-                  as bool,
-      isLinkedLoginProvider: isLinkedLoginProvider == freezed
+      recommendedSignupNotificationIsAlreadyShow: null ==
+              recommendedSignupNotificationIsAlreadyShow
+          ? _value.recommendedSignupNotificationIsAlreadyShow
+          : recommendedSignupNotificationIsAlreadyShow // ignore: cast_nullable_to_non_nullable
+              as bool,
+      isLinkedLoginProvider: null == isLinkedLoginProvider
           ? _value.isLinkedLoginProvider
           : isLinkedLoginProvider // ignore: cast_nullable_to_non_nullable
               as bool,
-      userAnsweredSurvey: userAnsweredSurvey == freezed
+      userAnsweredSurvey: null == userAnsweredSurvey
           ? _value.userAnsweredSurvey
           : userAnsweredSurvey // ignore: cast_nullable_to_non_nullable
               as bool,
-      userClosedSurvey: userClosedSurvey == freezed
+      userClosedSurvey: null == userClosedSurvey
           ? _value.userClosedSurvey
           : userClosedSurvey // ignore: cast_nullable_to_non_nullable
               as bool,
@@ -262,53 +239,55 @@ class _$_NotificationBarState extends _NotificationBarState {
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _NotificationBarState &&
-            const DeepCollectionEquality()
-                .equals(other.latestPillSheetGroup, latestPillSheetGroup) &&
-            const DeepCollectionEquality().equals(
-                other.totalCountOfActionForTakenPill,
-                totalCountOfActionForTakenPill) &&
-            const DeepCollectionEquality()
-                .equals(other.premiumAndTrial, premiumAndTrial) &&
-            const DeepCollectionEquality().equals(
-                other.recommendedSignupNotificationIsAlreadyShow,
-                recommendedSignupNotificationIsAlreadyShow) &&
-            const DeepCollectionEquality()
-                .equals(other.isLinkedLoginProvider, isLinkedLoginProvider) &&
-            const DeepCollectionEquality()
-                .equals(other.userAnsweredSurvey, userAnsweredSurvey) &&
-            const DeepCollectionEquality()
-                .equals(other.userClosedSurvey, userClosedSurvey));
+            other is _$_NotificationBarState &&
+            (identical(other.latestPillSheetGroup, latestPillSheetGroup) ||
+                other.latestPillSheetGroup == latestPillSheetGroup) &&
+            (identical(other.totalCountOfActionForTakenPill,
+                    totalCountOfActionForTakenPill) ||
+                other.totalCountOfActionForTakenPill ==
+                    totalCountOfActionForTakenPill) &&
+            (identical(other.premiumAndTrial, premiumAndTrial) ||
+                other.premiumAndTrial == premiumAndTrial) &&
+            (identical(other.recommendedSignupNotificationIsAlreadyShow,
+                    recommendedSignupNotificationIsAlreadyShow) ||
+                other.recommendedSignupNotificationIsAlreadyShow ==
+                    recommendedSignupNotificationIsAlreadyShow) &&
+            (identical(other.isLinkedLoginProvider, isLinkedLoginProvider) ||
+                other.isLinkedLoginProvider == isLinkedLoginProvider) &&
+            (identical(other.userAnsweredSurvey, userAnsweredSurvey) ||
+                other.userAnsweredSurvey == userAnsweredSurvey) &&
+            (identical(other.userClosedSurvey, userClosedSurvey) ||
+                other.userClosedSurvey == userClosedSurvey));
   }
 
   @override
   int get hashCode => Object.hash(
       runtimeType,
-      const DeepCollectionEquality().hash(latestPillSheetGroup),
-      const DeepCollectionEquality().hash(totalCountOfActionForTakenPill),
-      const DeepCollectionEquality().hash(premiumAndTrial),
-      const DeepCollectionEquality()
-          .hash(recommendedSignupNotificationIsAlreadyShow),
-      const DeepCollectionEquality().hash(isLinkedLoginProvider),
-      const DeepCollectionEquality().hash(userAnsweredSurvey),
-      const DeepCollectionEquality().hash(userClosedSurvey));
+      latestPillSheetGroup,
+      totalCountOfActionForTakenPill,
+      premiumAndTrial,
+      recommendedSignupNotificationIsAlreadyShow,
+      isLinkedLoginProvider,
+      userAnsweredSurvey,
+      userClosedSurvey);
 
   @JsonKey(ignore: true)
   @override
-  _$NotificationBarStateCopyWith<_NotificationBarState> get copyWith =>
-      __$NotificationBarStateCopyWithImpl<_NotificationBarState>(
+  @pragma('vm:prefer-inline')
+  _$$_NotificationBarStateCopyWith<_$_NotificationBarState> get copyWith =>
+      __$$_NotificationBarStateCopyWithImpl<_$_NotificationBarState>(
           this, _$identity);
 }
 
 abstract class _NotificationBarState extends NotificationBarState {
   const factory _NotificationBarState(
-      {required PillSheetGroup? latestPillSheetGroup,
-      required int totalCountOfActionForTakenPill,
-      required PremiumAndTrial premiumAndTrial,
-      required bool recommendedSignupNotificationIsAlreadyShow,
-      required bool isLinkedLoginProvider,
-      required bool userAnsweredSurvey,
-      required bool userClosedSurvey}) = _$_NotificationBarState;
+      {required final PillSheetGroup? latestPillSheetGroup,
+      required final int totalCountOfActionForTakenPill,
+      required final PremiumAndTrial premiumAndTrial,
+      required final bool recommendedSignupNotificationIsAlreadyShow,
+      required final bool isLinkedLoginProvider,
+      required final bool userAnsweredSurvey,
+      required final bool userClosedSurvey}) = _$_NotificationBarState;
   const _NotificationBarState._() : super._();
 
   @override
@@ -327,6 +306,6 @@ abstract class _NotificationBarState extends NotificationBarState {
   bool get userClosedSurvey;
   @override
   @JsonKey(ignore: true)
-  _$NotificationBarStateCopyWith<_NotificationBarState> get copyWith =>
+  _$$_NotificationBarStateCopyWith<_$_NotificationBarState> get copyWith =>
       throw _privateConstructorUsedError;
 }

@@ -5,10 +5,20 @@ import 'package:pilll/components/atoms/font.dart';
 import 'package:pilll/components/atoms/text_color.dart';
 import 'package:pilll/components/molecules/premium_badge.dart';
 import 'package:pilll/components/molecules/select_circle.dart';
+import 'package:pilll/database/setting.dart';
 import 'package:pilll/domain/premium_introduction/premium_introduction_sheet.dart';
 import 'package:pilll/domain/record/record_page_state.codegen.dart';
 import 'package:pilll/domain/record/record_page_state_notifier.dart';
 import 'package:pilll/entity/setting.codegen.dart';
+import 'package:riverpod_annotation/riverpod_annotation.dart';
+
+Future<void> switchingAppearanceMode(
+  WidgetRef ref, {
+  required PillSheetAppearanceMode mode,
+  required Setting setting,
+}) async {
+  await ref.watch(settingDatastoreProvider).update(setting.copyWith(pillSheetAppearanceMode: mode));
+}
 
 class SelectAppearanceModeModal extends HookConsumerWidget {
   final RecordPageStateNotifier store;
@@ -18,6 +28,7 @@ class SelectAppearanceModeModal extends HookConsumerWidget {
   @override
   Widget build(BuildContext context, WidgetRef ref) {
     final state = ref.watch(recordPageStateNotifierProvider).value!;
+    final switchingAppearanceMode = ref.watch(switchingAppearanceModeProvider);
 
     return Container(
       color: Colors.white,
@@ -83,21 +94,16 @@ class SelectAppearanceModeModal extends HookConsumerWidget {
       onTap: () async {
         analytics.logEvent(
           name: "did_select_pill_sheet_appearance",
-          parameters: {
-            "mode": mode.toString(),
-            "isPremiumFunction": isPremiumFunction
-          },
+          parameters: {"mode": mode.toString(), "isPremiumFunction": isPremiumFunction},
         );
 
         if (state.premiumAndTrial.isPremium || state.premiumAndTrial.isTrial) {
-          await store.asyncAction
-              .switchingAppearanceMode(mode: mode, setting: state.setting);
+          await store.asyncAction.switchingAppearanceMode(mode: mode, setting: state.setting);
         } else if (isPremiumFunction) {
           showPremiumIntroductionSheet(context);
         } else {
           // User selected non premium function mode
-          await store.asyncAction
-              .switchingAppearanceMode(mode: mode, setting: state.setting);
+          await store.asyncAction.switchingAppearanceMode(mode: mode, setting: state.setting);
         }
       },
       child: SizedBox(

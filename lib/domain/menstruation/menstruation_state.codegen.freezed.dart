@@ -12,46 +12,7 @@ part of 'menstruation_state.codegen.dart';
 T _$identity<T>(T value) => value;
 
 final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more informations: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
-
-/// @nodoc
-class _$MenstruationStateTearOff {
-  const _$MenstruationStateTearOff();
-
-  _MenstruationState call(
-      {required int currentCalendarPageIndex,
-      required int todayCalendarPageIndex,
-      required List<Diary> diariesForAround90Days,
-      required List<Schedule> schedulesForAround90Days,
-      required List<Menstruation> menstruations,
-      required PremiumAndTrial premiumAndTrial,
-      required Setting setting,
-      required PillSheetGroup? latestPillSheetGroup,
-      required List<CalendarMenstruationBandModel>
-          calendarMenstruationBandModels,
-      required List<CalendarScheduledMenstruationBandModel>
-          calendarScheduledMenstruationBandModels,
-      required List<CalendarNextPillSheetBandModel>
-          calendarNextPillSheetBandModels}) {
-    return _MenstruationState(
-      currentCalendarPageIndex: currentCalendarPageIndex,
-      todayCalendarPageIndex: todayCalendarPageIndex,
-      diariesForAround90Days: diariesForAround90Days,
-      schedulesForAround90Days: schedulesForAround90Days,
-      menstruations: menstruations,
-      premiumAndTrial: premiumAndTrial,
-      setting: setting,
-      latestPillSheetGroup: latestPillSheetGroup,
-      calendarMenstruationBandModels: calendarMenstruationBandModels,
-      calendarScheduledMenstruationBandModels:
-          calendarScheduledMenstruationBandModels,
-      calendarNextPillSheetBandModels: calendarNextPillSheetBandModels,
-    );
-  }
-}
-
-/// @nodoc
-const $MenstruationState = _$MenstruationStateTearOff();
+    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
 
 /// @nodoc
 mixin _$MenstruationState {
@@ -82,7 +43,8 @@ mixin _$MenstruationState {
 abstract class $MenstruationStateCopyWith<$Res> {
   factory $MenstruationStateCopyWith(
           MenstruationState value, $Res Function(MenstruationState) then) =
-      _$MenstruationStateCopyWithImpl<$Res>;
+      _$MenstruationStateCopyWithImpl<$Res, MenstruationState>;
+  @useResult
   $Res call(
       {int currentCalendarPageIndex,
       int todayCalendarPageIndex,
@@ -103,111 +65,116 @@ abstract class $MenstruationStateCopyWith<$Res> {
 }
 
 /// @nodoc
-class _$MenstruationStateCopyWithImpl<$Res>
+class _$MenstruationStateCopyWithImpl<$Res, $Val extends MenstruationState>
     implements $MenstruationStateCopyWith<$Res> {
   _$MenstruationStateCopyWithImpl(this._value, this._then);
 
-  final MenstruationState _value;
   // ignore: unused_field
-  final $Res Function(MenstruationState) _then;
+  final $Val _value;
+  // ignore: unused_field
+  final $Res Function($Val) _then;
 
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? currentCalendarPageIndex = freezed,
-    Object? todayCalendarPageIndex = freezed,
-    Object? diariesForAround90Days = freezed,
-    Object? schedulesForAround90Days = freezed,
-    Object? menstruations = freezed,
-    Object? premiumAndTrial = freezed,
-    Object? setting = freezed,
+    Object? currentCalendarPageIndex = null,
+    Object? todayCalendarPageIndex = null,
+    Object? diariesForAround90Days = null,
+    Object? schedulesForAround90Days = null,
+    Object? menstruations = null,
+    Object? premiumAndTrial = null,
+    Object? setting = null,
     Object? latestPillSheetGroup = freezed,
-    Object? calendarMenstruationBandModels = freezed,
-    Object? calendarScheduledMenstruationBandModels = freezed,
-    Object? calendarNextPillSheetBandModels = freezed,
+    Object? calendarMenstruationBandModels = null,
+    Object? calendarScheduledMenstruationBandModels = null,
+    Object? calendarNextPillSheetBandModels = null,
   }) {
     return _then(_value.copyWith(
-      currentCalendarPageIndex: currentCalendarPageIndex == freezed
+      currentCalendarPageIndex: null == currentCalendarPageIndex
           ? _value.currentCalendarPageIndex
           : currentCalendarPageIndex // ignore: cast_nullable_to_non_nullable
               as int,
-      todayCalendarPageIndex: todayCalendarPageIndex == freezed
+      todayCalendarPageIndex: null == todayCalendarPageIndex
           ? _value.todayCalendarPageIndex
           : todayCalendarPageIndex // ignore: cast_nullable_to_non_nullable
               as int,
-      diariesForAround90Days: diariesForAround90Days == freezed
+      diariesForAround90Days: null == diariesForAround90Days
           ? _value.diariesForAround90Days
           : diariesForAround90Days // ignore: cast_nullable_to_non_nullable
               as List<Diary>,
-      schedulesForAround90Days: schedulesForAround90Days == freezed
+      schedulesForAround90Days: null == schedulesForAround90Days
           ? _value.schedulesForAround90Days
           : schedulesForAround90Days // ignore: cast_nullable_to_non_nullable
               as List<Schedule>,
-      menstruations: menstruations == freezed
+      menstruations: null == menstruations
           ? _value.menstruations
           : menstruations // ignore: cast_nullable_to_non_nullable
               as List<Menstruation>,
-      premiumAndTrial: premiumAndTrial == freezed
+      premiumAndTrial: null == premiumAndTrial
           ? _value.premiumAndTrial
           : premiumAndTrial // ignore: cast_nullable_to_non_nullable
               as PremiumAndTrial,
-      setting: setting == freezed
+      setting: null == setting
           ? _value.setting
           : setting // ignore: cast_nullable_to_non_nullable
               as Setting,
-      latestPillSheetGroup: latestPillSheetGroup == freezed
+      latestPillSheetGroup: freezed == latestPillSheetGroup
           ? _value.latestPillSheetGroup
           : latestPillSheetGroup // ignore: cast_nullable_to_non_nullable
               as PillSheetGroup?,
-      calendarMenstruationBandModels: calendarMenstruationBandModels == freezed
+      calendarMenstruationBandModels: null == calendarMenstruationBandModels
           ? _value.calendarMenstruationBandModels
           : calendarMenstruationBandModels // ignore: cast_nullable_to_non_nullable
               as List<CalendarMenstruationBandModel>,
-      calendarScheduledMenstruationBandModels:
-          calendarScheduledMenstruationBandModels == freezed
-              ? _value.calendarScheduledMenstruationBandModels
-              : calendarScheduledMenstruationBandModels // ignore: cast_nullable_to_non_nullable
-                  as List<CalendarScheduledMenstruationBandModel>,
-      calendarNextPillSheetBandModels: calendarNextPillSheetBandModels ==
-              freezed
+      calendarScheduledMenstruationBandModels: null ==
+              calendarScheduledMenstruationBandModels
+          ? _value.calendarScheduledMenstruationBandModels
+          : calendarScheduledMenstruationBandModels // ignore: cast_nullable_to_non_nullable
+              as List<CalendarScheduledMenstruationBandModel>,
+      calendarNextPillSheetBandModels: null == calendarNextPillSheetBandModels
           ? _value.calendarNextPillSheetBandModels
           : calendarNextPillSheetBandModels // ignore: cast_nullable_to_non_nullable
               as List<CalendarNextPillSheetBandModel>,
-    ));
+    ) as $Val);
   }
 
   @override
+  @pragma('vm:prefer-inline')
   $PremiumAndTrialCopyWith<$Res> get premiumAndTrial {
     return $PremiumAndTrialCopyWith<$Res>(_value.premiumAndTrial, (value) {
-      return _then(_value.copyWith(premiumAndTrial: value));
+      return _then(_value.copyWith(premiumAndTrial: value) as $Val);
     });
   }
 
   @override
+  @pragma('vm:prefer-inline')
   $SettingCopyWith<$Res> get setting {
     return $SettingCopyWith<$Res>(_value.setting, (value) {
-      return _then(_value.copyWith(setting: value));
+      return _then(_value.copyWith(setting: value) as $Val);
     });
   }
 
   @override
+  @pragma('vm:prefer-inline')
   $PillSheetGroupCopyWith<$Res>? get latestPillSheetGroup {
     if (_value.latestPillSheetGroup == null) {
       return null;
     }
 
     return $PillSheetGroupCopyWith<$Res>(_value.latestPillSheetGroup!, (value) {
-      return _then(_value.copyWith(latestPillSheetGroup: value));
+      return _then(_value.copyWith(latestPillSheetGroup: value) as $Val);
     });
   }
 }
 
 /// @nodoc
-abstract class _$MenstruationStateCopyWith<$Res>
+abstract class _$$_MenstruationStateCopyWith<$Res>
     implements $MenstruationStateCopyWith<$Res> {
-  factory _$MenstruationStateCopyWith(
-          _MenstruationState value, $Res Function(_MenstruationState) then) =
-      __$MenstruationStateCopyWithImpl<$Res>;
+  factory _$$_MenstruationStateCopyWith(_$_MenstruationState value,
+          $Res Function(_$_MenstruationState) then) =
+      __$$_MenstruationStateCopyWithImpl<$Res>;
   @override
+  @useResult
   $Res call(
       {int currentCalendarPageIndex,
       int todayCalendarPageIndex,
@@ -231,75 +198,72 @@ abstract class _$MenstruationStateCopyWith<$Res>
 }
 
 /// @nodoc
-class __$MenstruationStateCopyWithImpl<$Res>
-    extends _$MenstruationStateCopyWithImpl<$Res>
-    implements _$MenstruationStateCopyWith<$Res> {
-  __$MenstruationStateCopyWithImpl(
-      _MenstruationState _value, $Res Function(_MenstruationState) _then)
-      : super(_value, (v) => _then(v as _MenstruationState));
+class __$$_MenstruationStateCopyWithImpl<$Res>
+    extends _$MenstruationStateCopyWithImpl<$Res, _$_MenstruationState>
+    implements _$$_MenstruationStateCopyWith<$Res> {
+  __$$_MenstruationStateCopyWithImpl(
+      _$_MenstruationState _value, $Res Function(_$_MenstruationState) _then)
+      : super(_value, _then);
 
-  @override
-  _MenstruationState get _value => super._value as _MenstruationState;
-
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? currentCalendarPageIndex = freezed,
-    Object? todayCalendarPageIndex = freezed,
-    Object? diariesForAround90Days = freezed,
-    Object? schedulesForAround90Days = freezed,
-    Object? menstruations = freezed,
-    Object? premiumAndTrial = freezed,
-    Object? setting = freezed,
+    Object? currentCalendarPageIndex = null,
+    Object? todayCalendarPageIndex = null,
+    Object? diariesForAround90Days = null,
+    Object? schedulesForAround90Days = null,
+    Object? menstruations = null,
+    Object? premiumAndTrial = null,
+    Object? setting = null,
     Object? latestPillSheetGroup = freezed,
-    Object? calendarMenstruationBandModels = freezed,
-    Object? calendarScheduledMenstruationBandModels = freezed,
-    Object? calendarNextPillSheetBandModels = freezed,
+    Object? calendarMenstruationBandModels = null,
+    Object? calendarScheduledMenstruationBandModels = null,
+    Object? calendarNextPillSheetBandModels = null,
   }) {
-    return _then(_MenstruationState(
-      currentCalendarPageIndex: currentCalendarPageIndex == freezed
+    return _then(_$_MenstruationState(
+      currentCalendarPageIndex: null == currentCalendarPageIndex
           ? _value.currentCalendarPageIndex
           : currentCalendarPageIndex // ignore: cast_nullable_to_non_nullable
               as int,
-      todayCalendarPageIndex: todayCalendarPageIndex == freezed
+      todayCalendarPageIndex: null == todayCalendarPageIndex
           ? _value.todayCalendarPageIndex
           : todayCalendarPageIndex // ignore: cast_nullable_to_non_nullable
               as int,
-      diariesForAround90Days: diariesForAround90Days == freezed
-          ? _value.diariesForAround90Days
+      diariesForAround90Days: null == diariesForAround90Days
+          ? _value._diariesForAround90Days
           : diariesForAround90Days // ignore: cast_nullable_to_non_nullable
               as List<Diary>,
-      schedulesForAround90Days: schedulesForAround90Days == freezed
-          ? _value.schedulesForAround90Days
+      schedulesForAround90Days: null == schedulesForAround90Days
+          ? _value._schedulesForAround90Days
           : schedulesForAround90Days // ignore: cast_nullable_to_non_nullable
               as List<Schedule>,
-      menstruations: menstruations == freezed
-          ? _value.menstruations
+      menstruations: null == menstruations
+          ? _value._menstruations
           : menstruations // ignore: cast_nullable_to_non_nullable
               as List<Menstruation>,
-      premiumAndTrial: premiumAndTrial == freezed
+      premiumAndTrial: null == premiumAndTrial
           ? _value.premiumAndTrial
           : premiumAndTrial // ignore: cast_nullable_to_non_nullable
               as PremiumAndTrial,
-      setting: setting == freezed
+      setting: null == setting
           ? _value.setting
           : setting // ignore: cast_nullable_to_non_nullable
               as Setting,
-      latestPillSheetGroup: latestPillSheetGroup == freezed
+      latestPillSheetGroup: freezed == latestPillSheetGroup
           ? _value.latestPillSheetGroup
           : latestPillSheetGroup // ignore: cast_nullable_to_non_nullable
               as PillSheetGroup?,
-      calendarMenstruationBandModels: calendarMenstruationBandModels == freezed
-          ? _value.calendarMenstruationBandModels
+      calendarMenstruationBandModels: null == calendarMenstruationBandModels
+          ? _value._calendarMenstruationBandModels
           : calendarMenstruationBandModels // ignore: cast_nullable_to_non_nullable
               as List<CalendarMenstruationBandModel>,
-      calendarScheduledMenstruationBandModels:
-          calendarScheduledMenstruationBandModels == freezed
-              ? _value.calendarScheduledMenstruationBandModels
-              : calendarScheduledMenstruationBandModels // ignore: cast_nullable_to_non_nullable
-                  as List<CalendarScheduledMenstruationBandModel>,
-      calendarNextPillSheetBandModels: calendarNextPillSheetBandModels ==
-              freezed
-          ? _value.calendarNextPillSheetBandModels
+      calendarScheduledMenstruationBandModels: null ==
+              calendarScheduledMenstruationBandModels
+          ? _value._calendarScheduledMenstruationBandModels
+          : calendarScheduledMenstruationBandModels // ignore: cast_nullable_to_non_nullable
+              as List<CalendarScheduledMenstruationBandModel>,
+      calendarNextPillSheetBandModels: null == calendarNextPillSheetBandModels
+          ? _value._calendarNextPillSheetBandModels
           : calendarNextPillSheetBandModels // ignore: cast_nullable_to_non_nullable
               as List<CalendarNextPillSheetBandModel>,
     ));
@@ -312,40 +276,80 @@ class _$_MenstruationState extends _MenstruationState {
   _$_MenstruationState(
       {required this.currentCalendarPageIndex,
       required this.todayCalendarPageIndex,
-      required this.diariesForAround90Days,
-      required this.schedulesForAround90Days,
-      required this.menstruations,
+      required final List<Diary> diariesForAround90Days,
+      required final List<Schedule> schedulesForAround90Days,
+      required final List<Menstruation> menstruations,
       required this.premiumAndTrial,
       required this.setting,
       required this.latestPillSheetGroup,
-      required this.calendarMenstruationBandModels,
-      required this.calendarScheduledMenstruationBandModels,
-      required this.calendarNextPillSheetBandModels})
-      : super._();
+      required final List<CalendarMenstruationBandModel>
+          calendarMenstruationBandModels,
+      required final List<CalendarScheduledMenstruationBandModel>
+          calendarScheduledMenstruationBandModels,
+      required final List<CalendarNextPillSheetBandModel>
+          calendarNextPillSheetBandModels})
+      : _diariesForAround90Days = diariesForAround90Days,
+        _schedulesForAround90Days = schedulesForAround90Days,
+        _menstruations = menstruations,
+        _calendarMenstruationBandModels = calendarMenstruationBandModels,
+        _calendarScheduledMenstruationBandModels =
+            calendarScheduledMenstruationBandModels,
+        _calendarNextPillSheetBandModels = calendarNextPillSheetBandModels,
+        super._();
 
   @override
   final int currentCalendarPageIndex;
   @override
   final int todayCalendarPageIndex;
+  final List<Diary> _diariesForAround90Days;
   @override
-  final List<Diary> diariesForAround90Days;
+  List<Diary> get diariesForAround90Days {
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(_diariesForAround90Days);
+  }
+
+  final List<Schedule> _schedulesForAround90Days;
   @override
-  final List<Schedule> schedulesForAround90Days;
+  List<Schedule> get schedulesForAround90Days {
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(_schedulesForAround90Days);
+  }
+
+  final List<Menstruation> _menstruations;
   @override
-  final List<Menstruation> menstruations;
+  List<Menstruation> get menstruations {
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(_menstruations);
+  }
+
   @override
   final PremiumAndTrial premiumAndTrial;
   @override
   final Setting setting;
   @override
   final PillSheetGroup? latestPillSheetGroup;
+  final List<CalendarMenstruationBandModel> _calendarMenstruationBandModels;
   @override
-  final List<CalendarMenstruationBandModel> calendarMenstruationBandModels;
-  @override
+  List<CalendarMenstruationBandModel> get calendarMenstruationBandModels {
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(_calendarMenstruationBandModels);
+  }
+
   final List<CalendarScheduledMenstruationBandModel>
-      calendarScheduledMenstruationBandModels;
+      _calendarScheduledMenstruationBandModels;
   @override
-  final List<CalendarNextPillSheetBandModel> calendarNextPillSheetBandModels;
+  List<CalendarScheduledMenstruationBandModel>
+      get calendarScheduledMenstruationBandModels {
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(_calendarScheduledMenstruationBandModels);
+  }
+
+  final List<CalendarNextPillSheetBandModel> _calendarNextPillSheetBandModels;
+  @override
+  List<CalendarNextPillSheetBandModel> get calendarNextPillSheetBandModels {
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(_calendarNextPillSheetBandModels);
+  }
 
   @override
   String toString() {
@@ -356,70 +360,73 @@ class _$_MenstruationState extends _MenstruationState {
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _MenstruationState &&
+            other is _$_MenstruationState &&
+            (identical(
+                    other.currentCalendarPageIndex, currentCalendarPageIndex) ||
+                other.currentCalendarPageIndex == currentCalendarPageIndex) &&
+            (identical(other.todayCalendarPageIndex, todayCalendarPageIndex) ||
+                other.todayCalendarPageIndex == todayCalendarPageIndex) &&
             const DeepCollectionEquality().equals(
-                other.currentCalendarPageIndex, currentCalendarPageIndex) &&
-            const DeepCollectionEquality()
-                .equals(other.todayCalendarPageIndex, todayCalendarPageIndex) &&
-            const DeepCollectionEquality()
-                .equals(other.diariesForAround90Days, diariesForAround90Days) &&
+                other._diariesForAround90Days, _diariesForAround90Days) &&
             const DeepCollectionEquality().equals(
-                other.schedulesForAround90Days, schedulesForAround90Days) &&
+                other._schedulesForAround90Days, _schedulesForAround90Days) &&
             const DeepCollectionEquality()
-                .equals(other.menstruations, menstruations) &&
-            const DeepCollectionEquality()
-                .equals(other.premiumAndTrial, premiumAndTrial) &&
-            const DeepCollectionEquality().equals(other.setting, setting) &&
-            const DeepCollectionEquality()
-                .equals(other.latestPillSheetGroup, latestPillSheetGroup) &&
+                .equals(other._menstruations, _menstruations) &&
+            (identical(other.premiumAndTrial, premiumAndTrial) ||
+                other.premiumAndTrial == premiumAndTrial) &&
+            (identical(other.setting, setting) || other.setting == setting) &&
+            (identical(other.latestPillSheetGroup, latestPillSheetGroup) ||
+                other.latestPillSheetGroup == latestPillSheetGroup) &&
             const DeepCollectionEquality().equals(
-                other.calendarMenstruationBandModels,
-                calendarMenstruationBandModels) &&
+                other._calendarMenstruationBandModels,
+                _calendarMenstruationBandModels) &&
             const DeepCollectionEquality().equals(
-                other.calendarScheduledMenstruationBandModels,
-                calendarScheduledMenstruationBandModels) &&
+                other._calendarScheduledMenstruationBandModels,
+                _calendarScheduledMenstruationBandModels) &&
             const DeepCollectionEquality().equals(
-                other.calendarNextPillSheetBandModels,
-                calendarNextPillSheetBandModels));
+                other._calendarNextPillSheetBandModels,
+                _calendarNextPillSheetBandModels));
   }
 
   @override
   int get hashCode => Object.hash(
       runtimeType,
-      const DeepCollectionEquality().hash(currentCalendarPageIndex),
-      const DeepCollectionEquality().hash(todayCalendarPageIndex),
-      const DeepCollectionEquality().hash(diariesForAround90Days),
-      const DeepCollectionEquality().hash(schedulesForAround90Days),
-      const DeepCollectionEquality().hash(menstruations),
-      const DeepCollectionEquality().hash(premiumAndTrial),
-      const DeepCollectionEquality().hash(setting),
-      const DeepCollectionEquality().hash(latestPillSheetGroup),
-      const DeepCollectionEquality().hash(calendarMenstruationBandModels),
+      currentCalendarPageIndex,
+      todayCalendarPageIndex,
+      const DeepCollectionEquality().hash(_diariesForAround90Days),
+      const DeepCollectionEquality().hash(_schedulesForAround90Days),
+      const DeepCollectionEquality().hash(_menstruations),
+      premiumAndTrial,
+      setting,
+      latestPillSheetGroup,
+      const DeepCollectionEquality().hash(_calendarMenstruationBandModels),
       const DeepCollectionEquality()
-          .hash(calendarScheduledMenstruationBandModels),
-      const DeepCollectionEquality().hash(calendarNextPillSheetBandModels));
+          .hash(_calendarScheduledMenstruationBandModels),
+      const DeepCollectionEquality().hash(_calendarNextPillSheetBandModels));
 
   @JsonKey(ignore: true)
   @override
-  _$MenstruationStateCopyWith<_MenstruationState> get copyWith =>
-      __$MenstruationStateCopyWithImpl<_MenstruationState>(this, _$identity);
+  @pragma('vm:prefer-inline')
+  _$$_MenstruationStateCopyWith<_$_MenstruationState> get copyWith =>
+      __$$_MenstruationStateCopyWithImpl<_$_MenstruationState>(
+          this, _$identity);
 }
 
 abstract class _MenstruationState extends MenstruationState {
   factory _MenstruationState(
-      {required int currentCalendarPageIndex,
-      required int todayCalendarPageIndex,
-      required List<Diary> diariesForAround90Days,
-      required List<Schedule> schedulesForAround90Days,
-      required List<Menstruation> menstruations,
-      required PremiumAndTrial premiumAndTrial,
-      required Setting setting,
-      required PillSheetGroup? latestPillSheetGroup,
-      required List<CalendarMenstruationBandModel>
+      {required final int currentCalendarPageIndex,
+      required final int todayCalendarPageIndex,
+      required final List<Diary> diariesForAround90Days,
+      required final List<Schedule> schedulesForAround90Days,
+      required final List<Menstruation> menstruations,
+      required final PremiumAndTrial premiumAndTrial,
+      required final Setting setting,
+      required final PillSheetGroup? latestPillSheetGroup,
+      required final List<CalendarMenstruationBandModel>
           calendarMenstruationBandModels,
-      required List<CalendarScheduledMenstruationBandModel>
+      required final List<CalendarScheduledMenstruationBandModel>
           calendarScheduledMenstruationBandModels,
-      required List<CalendarNextPillSheetBandModel>
+      required final List<CalendarNextPillSheetBandModel>
           calendarNextPillSheetBandModels}) = _$_MenstruationState;
   _MenstruationState._() : super._();
 
@@ -448,6 +455,6 @@ abstract class _MenstruationState extends MenstruationState {
   List<CalendarNextPillSheetBandModel> get calendarNextPillSheetBandModels;
   @override
   @JsonKey(ignore: true)
-  _$MenstruationStateCopyWith<_MenstruationState> get copyWith =>
+  _$$_MenstruationStateCopyWith<_$_MenstruationState> get copyWith =>
       throw _privateConstructorUsedError;
 }

@@ -12,36 +12,7 @@ part of 'record_page_state.codegen.dart';
 T _$identity<T>(T value) => value;
 
 final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more informations: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
-
-/// @nodoc
-class _$RecordPageStateTearOff {
-  const _$RecordPageStateTearOff();
-
-  _RecordPageState call(
-      {required PillSheetGroup? pillSheetGroup,
-      required Setting setting,
-      required PremiumAndTrial premiumAndTrial,
-      required int totalCountOfActionForTakenPill,
-      required bool isAlreadyShowPremiumSurvey,
-      required bool shouldShowMigrateInfo,
-      required bool isLinkedLoginProvider,
-      required DateTime timestamp}) {
-    return _RecordPageState(
-      pillSheetGroup: pillSheetGroup,
-      setting: setting,
-      premiumAndTrial: premiumAndTrial,
-      totalCountOfActionForTakenPill: totalCountOfActionForTakenPill,
-      isAlreadyShowPremiumSurvey: isAlreadyShowPremiumSurvey,
-      shouldShowMigrateInfo: shouldShowMigrateInfo,
-      isLinkedLoginProvider: isLinkedLoginProvider,
-      timestamp: timestamp,
-    );
-  }
-}
-
-/// @nodoc
-const $RecordPageState = _$RecordPageStateTearOff();
+    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
 
 /// @nodoc
 mixin _$RecordPageState {
@@ -65,7 +36,8 @@ mixin _$RecordPageState {
 abstract class $RecordPageStateCopyWith<$Res> {
   factory $RecordPageStateCopyWith(
           RecordPageState value, $Res Function(RecordPageState) then) =
-      _$RecordPageStateCopyWithImpl<$Res>;
+      _$RecordPageStateCopyWithImpl<$Res, RecordPageState>;
+  @useResult
   $Res call(
       {PillSheetGroup? pillSheetGroup,
       Setting setting,
@@ -82,94 +54,100 @@ abstract class $RecordPageStateCopyWith<$Res> {
 }
 
 /// @nodoc
-class _$RecordPageStateCopyWithImpl<$Res>
+class _$RecordPageStateCopyWithImpl<$Res, $Val extends RecordPageState>
     implements $RecordPageStateCopyWith<$Res> {
   _$RecordPageStateCopyWithImpl(this._value, this._then);
 
-  final RecordPageState _value;
   // ignore: unused_field
-  final $Res Function(RecordPageState) _then;
+  final $Val _value;
+  // ignore: unused_field
+  final $Res Function($Val) _then;
 
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
     Object? pillSheetGroup = freezed,
-    Object? setting = freezed,
-    Object? premiumAndTrial = freezed,
-    Object? totalCountOfActionForTakenPill = freezed,
-    Object? isAlreadyShowPremiumSurvey = freezed,
-    Object? shouldShowMigrateInfo = freezed,
-    Object? isLinkedLoginProvider = freezed,
-    Object? timestamp = freezed,
+    Object? setting = null,
+    Object? premiumAndTrial = null,
+    Object? totalCountOfActionForTakenPill = null,
+    Object? isAlreadyShowPremiumSurvey = null,
+    Object? shouldShowMigrateInfo = null,
+    Object? isLinkedLoginProvider = null,
+    Object? timestamp = null,
   }) {
     return _then(_value.copyWith(
-      pillSheetGroup: pillSheetGroup == freezed
+      pillSheetGroup: freezed == pillSheetGroup
           ? _value.pillSheetGroup
           : pillSheetGroup // ignore: cast_nullable_to_non_nullable
               as PillSheetGroup?,
-      setting: setting == freezed
+      setting: null == setting
           ? _value.setting
           : setting // ignore: cast_nullable_to_non_nullable
               as Setting,
-      premiumAndTrial: premiumAndTrial == freezed
+      premiumAndTrial: null == premiumAndTrial
           ? _value.premiumAndTrial
           : premiumAndTrial // ignore: cast_nullable_to_non_nullable
               as PremiumAndTrial,
-      totalCountOfActionForTakenPill: totalCountOfActionForTakenPill == freezed
+      totalCountOfActionForTakenPill: null == totalCountOfActionForTakenPill
           ? _value.totalCountOfActionForTakenPill
           : totalCountOfActionForTakenPill // ignore: cast_nullable_to_non_nullable
               as int,
-      isAlreadyShowPremiumSurvey: isAlreadyShowPremiumSurvey == freezed
+      isAlreadyShowPremiumSurvey: null == isAlreadyShowPremiumSurvey
           ? _value.isAlreadyShowPremiumSurvey
           : isAlreadyShowPremiumSurvey // ignore: cast_nullable_to_non_nullable
               as bool,
-      shouldShowMigrateInfo: shouldShowMigrateInfo == freezed
+      shouldShowMigrateInfo: null == shouldShowMigrateInfo
           ? _value.shouldShowMigrateInfo
           : shouldShowMigrateInfo // ignore: cast_nullable_to_non_nullable
               as bool,
-      isLinkedLoginProvider: isLinkedLoginProvider == freezed
+      isLinkedLoginProvider: null == isLinkedLoginProvider
           ? _value.isLinkedLoginProvider
           : isLinkedLoginProvider // ignore: cast_nullable_to_non_nullable
               as bool,
-      timestamp: timestamp == freezed
+      timestamp: null == timestamp
           ? _value.timestamp
           : timestamp // ignore: cast_nullable_to_non_nullable
               as DateTime,
-    ));
+    ) as $Val);
   }
 
   @override
+  @pragma('vm:prefer-inline')
   $PillSheetGroupCopyWith<$Res>? get pillSheetGroup {
     if (_value.pillSheetGroup == null) {
       return null;
     }
 
     return $PillSheetGroupCopyWith<$Res>(_value.pillSheetGroup!, (value) {
-      return _then(_value.copyWith(pillSheetGroup: value));
+      return _then(_value.copyWith(pillSheetGroup: value) as $Val);
     });
   }
 
   @override
+  @pragma('vm:prefer-inline')
   $SettingCopyWith<$Res> get setting {
     return $SettingCopyWith<$Res>(_value.setting, (value) {
-      return _then(_value.copyWith(setting: value));
+      return _then(_value.copyWith(setting: value) as $Val);
     });
   }
 
   @override
+  @pragma('vm:prefer-inline')
   $PremiumAndTrialCopyWith<$Res> get premiumAndTrial {
     return $PremiumAndTrialCopyWith<$Res>(_value.premiumAndTrial, (value) {
-      return _then(_value.copyWith(premiumAndTrial: value));
+      return _then(_value.copyWith(premiumAndTrial: value) as $Val);
     });
   }
 }
 
 /// @nodoc
-abstract class _$RecordPageStateCopyWith<$Res>
+abstract class _$$_RecordPageStateCopyWith<$Res>
     implements $RecordPageStateCopyWith<$Res> {
-  factory _$RecordPageStateCopyWith(
-          _RecordPageState value, $Res Function(_RecordPageState) then) =
-      __$RecordPageStateCopyWithImpl<$Res>;
+  factory _$$_RecordPageStateCopyWith(
+          _$_RecordPageState value, $Res Function(_$_RecordPageState) then) =
+      __$$_RecordPageStateCopyWithImpl<$Res>;
   @override
+  @useResult
   $Res call(
       {PillSheetGroup? pillSheetGroup,
       Setting setting,
@@ -189,57 +167,55 @@ abstract class _$RecordPageStateCopyWith<$Res>
 }
 
 /// @nodoc
-class __$RecordPageStateCopyWithImpl<$Res>
-    extends _$RecordPageStateCopyWithImpl<$Res>
-    implements _$RecordPageStateCopyWith<$Res> {
-  __$RecordPageStateCopyWithImpl(
-      _RecordPageState _value, $Res Function(_RecordPageState) _then)
-      : super(_value, (v) => _then(v as _RecordPageState));
+class __$$_RecordPageStateCopyWithImpl<$Res>
+    extends _$RecordPageStateCopyWithImpl<$Res, _$_RecordPageState>
+    implements _$$_RecordPageStateCopyWith<$Res> {
+  __$$_RecordPageStateCopyWithImpl(
+      _$_RecordPageState _value, $Res Function(_$_RecordPageState) _then)
+      : super(_value, _then);
 
-  @override
-  _RecordPageState get _value => super._value as _RecordPageState;
-
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
     Object? pillSheetGroup = freezed,
-    Object? setting = freezed,
-    Object? premiumAndTrial = freezed,
-    Object? totalCountOfActionForTakenPill = freezed,
-    Object? isAlreadyShowPremiumSurvey = freezed,
-    Object? shouldShowMigrateInfo = freezed,
-    Object? isLinkedLoginProvider = freezed,
-    Object? timestamp = freezed,
+    Object? setting = null,
+    Object? premiumAndTrial = null,
+    Object? totalCountOfActionForTakenPill = null,
+    Object? isAlreadyShowPremiumSurvey = null,
+    Object? shouldShowMigrateInfo = null,
+    Object? isLinkedLoginProvider = null,
+    Object? timestamp = null,
   }) {
-    return _then(_RecordPageState(
-      pillSheetGroup: pillSheetGroup == freezed
+    return _then(_$_RecordPageState(
+      pillSheetGroup: freezed == pillSheetGroup
           ? _value.pillSheetGroup
           : pillSheetGroup // ignore: cast_nullable_to_non_nullable
               as PillSheetGroup?,
-      setting: setting == freezed
+      setting: null == setting
           ? _value.setting
           : setting // ignore: cast_nullable_to_non_nullable
               as Setting,
-      premiumAndTrial: premiumAndTrial == freezed
+      premiumAndTrial: null == premiumAndTrial
           ? _value.premiumAndTrial
           : premiumAndTrial // ignore: cast_nullable_to_non_nullable
               as PremiumAndTrial,
-      totalCountOfActionForTakenPill: totalCountOfActionForTakenPill == freezed
+      totalCountOfActionForTakenPill: null == totalCountOfActionForTakenPill
           ? _value.totalCountOfActionForTakenPill
           : totalCountOfActionForTakenPill // ignore: cast_nullable_to_non_nullable
               as int,
-      isAlreadyShowPremiumSurvey: isAlreadyShowPremiumSurvey == freezed
+      isAlreadyShowPremiumSurvey: null == isAlreadyShowPremiumSurvey
           ? _value.isAlreadyShowPremiumSurvey
           : isAlreadyShowPremiumSurvey // ignore: cast_nullable_to_non_nullable
               as bool,
-      shouldShowMigrateInfo: shouldShowMigrateInfo == freezed
+      shouldShowMigrateInfo: null == shouldShowMigrateInfo
           ? _value.shouldShowMigrateInfo
           : shouldShowMigrateInfo // ignore: cast_nullable_to_non_nullable
               as bool,
-      isLinkedLoginProvider: isLinkedLoginProvider == freezed
+      isLinkedLoginProvider: null == isLinkedLoginProvider
           ? _value.isLinkedLoginProvider
           : isLinkedLoginProvider // ignore: cast_nullable_to_non_nullable
               as bool,
-      timestamp: timestamp == freezed
+      timestamp: null == timestamp
           ? _value.timestamp
           : timestamp // ignore: cast_nullable_to_non_nullable
               as DateTime,
@@ -275,8 +251,9 @@ class _$_RecordPageState extends _RecordPageState {
   final bool shouldShowMigrateInfo;
   @override
   final bool isLinkedLoginProvider;
-  @override // Workaround for no update RecordPageStateNotifier when pillSheetGroup.activedPillSheet.restDurations is change
+// Workaround for no update RecordPageStateNotifier when pillSheetGroup.activedPillSheet.restDurations is change
 // Add and always update timestamp when every stream or provider changed to avoid this issue
+  @override
   final DateTime timestamp;
 
   @override
@@ -288,52 +265,57 @@ class _$_RecordPageState extends _RecordPageState {
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _RecordPageState &&
-            const DeepCollectionEquality()
-                .equals(other.pillSheetGroup, pillSheetGroup) &&
-            const DeepCollectionEquality().equals(other.setting, setting) &&
-            const DeepCollectionEquality()
-                .equals(other.premiumAndTrial, premiumAndTrial) &&
-            const DeepCollectionEquality().equals(
-                other.totalCountOfActionForTakenPill,
-                totalCountOfActionForTakenPill) &&
-            const DeepCollectionEquality().equals(
-                other.isAlreadyShowPremiumSurvey, isAlreadyShowPremiumSurvey) &&
-            const DeepCollectionEquality()
-                .equals(other.shouldShowMigrateInfo, shouldShowMigrateInfo) &&
-            const DeepCollectionEquality()
-                .equals(other.isLinkedLoginProvider, isLinkedLoginProvider) &&
-            const DeepCollectionEquality().equals(other.timestamp, timestamp));
+            other is _$_RecordPageState &&
+            (identical(other.pillSheetGroup, pillSheetGroup) ||
+                other.pillSheetGroup == pillSheetGroup) &&
+            (identical(other.setting, setting) || other.setting == setting) &&
+            (identical(other.premiumAndTrial, premiumAndTrial) ||
+                other.premiumAndTrial == premiumAndTrial) &&
+            (identical(other.totalCountOfActionForTakenPill,
+                    totalCountOfActionForTakenPill) ||
+                other.totalCountOfActionForTakenPill ==
+                    totalCountOfActionForTakenPill) &&
+            (identical(other.isAlreadyShowPremiumSurvey,
+                    isAlreadyShowPremiumSurvey) ||
+                other.isAlreadyShowPremiumSurvey ==
+                    isAlreadyShowPremiumSurvey) &&
+            (identical(other.shouldShowMigrateInfo, shouldShowMigrateInfo) ||
+                other.shouldShowMigrateInfo == shouldShowMigrateInfo) &&
+            (identical(other.isLinkedLoginProvider, isLinkedLoginProvider) ||
+                other.isLinkedLoginProvider == isLinkedLoginProvider) &&
+            (identical(other.timestamp, timestamp) ||
+                other.timestamp == timestamp));
   }
 
   @override
   int get hashCode => Object.hash(
       runtimeType,
-      const DeepCollectionEquality().hash(pillSheetGroup),
-      const DeepCollectionEquality().hash(setting),
-      const DeepCollectionEquality().hash(premiumAndTrial),
-      const DeepCollectionEquality().hash(totalCountOfActionForTakenPill),
-      const DeepCollectionEquality().hash(isAlreadyShowPremiumSurvey),
-      const DeepCollectionEquality().hash(shouldShowMigrateInfo),
-      const DeepCollectionEquality().hash(isLinkedLoginProvider),
-      const DeepCollectionEquality().hash(timestamp));
+      pillSheetGroup,
+      setting,
+      premiumAndTrial,
+      totalCountOfActionForTakenPill,
+      isAlreadyShowPremiumSurvey,
+      shouldShowMigrateInfo,
+      isLinkedLoginProvider,
+      timestamp);
 
   @JsonKey(ignore: true)
   @override
-  _$RecordPageStateCopyWith<_RecordPageState> get copyWith =>
-      __$RecordPageStateCopyWithImpl<_RecordPageState>(this, _$identity);
+  @pragma('vm:prefer-inline')
+  _$$_RecordPageStateCopyWith<_$_RecordPageState> get copyWith =>
+      __$$_RecordPageStateCopyWithImpl<_$_RecordPageState>(this, _$identity);
 }
 
 abstract class _RecordPageState extends RecordPageState {
   const factory _RecordPageState(
-      {required PillSheetGroup? pillSheetGroup,
-      required Setting setting,
-      required PremiumAndTrial premiumAndTrial,
-      required int totalCountOfActionForTakenPill,
-      required bool isAlreadyShowPremiumSurvey,
-      required bool shouldShowMigrateInfo,
-      required bool isLinkedLoginProvider,
-      required DateTime timestamp}) = _$_RecordPageState;
+      {required final PillSheetGroup? pillSheetGroup,
+      required final Setting setting,
+      required final PremiumAndTrial premiumAndTrial,
+      required final int totalCountOfActionForTakenPill,
+      required final bool isAlreadyShowPremiumSurvey,
+      required final bool shouldShowMigrateInfo,
+      required final bool isLinkedLoginProvider,
+      required final DateTime timestamp}) = _$_RecordPageState;
   const _RecordPageState._() : super._();
 
   @override
@@ -355,6 +337,6 @@ abstract class _RecordPageState extends RecordPageState {
   DateTime get timestamp;
   @override
   @JsonKey(ignore: true)
-  _$RecordPageStateCopyWith<_RecordPageState> get copyWith =>
+  _$$_RecordPageStateCopyWith<_$_RecordPageState> get copyWith =>
       throw _privateConstructorUsedError;
 }
