@@ -13,3 +13,14 @@ class BatchSetPillSheetGroup {
     batch.set(databaseConnection.pillSheetGroupReference(pillSheetGroup.id), pillSheetGroup, SetOptions(merge: true));
   }
 }
+
+final setPillSheetGroupProvider = Provider((ref) => SetPillSheetGroup(ref.watch(databaseProvider)));
+
+class SetPillSheetGroup {
+  final DatabaseConnection databaseConnection;
+  SetPillSheetGroup(this.databaseConnection);
+
+  Future<void> call(PillSheetGroup pillSheetGroup) async {
+    await databaseConnection.pillSheetGroupReference(pillSheetGroup.id).set(pillSheetGroup, SetOptions(merge: true));
+  }
+}

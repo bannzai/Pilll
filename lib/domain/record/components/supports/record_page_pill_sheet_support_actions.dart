@@ -51,13 +51,11 @@ class RecordPagePillSheetSupportActions extends StatelessWidget {
               restDuration: restDuration,
               activedPillSheet: activedPillSheet,
               pillSheetGroup: pillSheetGroup,
-              store: store,
               didEndRestDuration: () {
                 if (pillSheetGroup.sequentialLastTakenPillNumber > 0 && setting.pillSheetAppearanceMode == PillSheetAppearanceMode.sequential) {
                   showEndRestDurationModal(
                     context,
                     pillSheetGroup: pillSheetGroup,
-                    store: store,
                   );
                 } else {
                   ScaffoldMessenger.of(context).showSnackBar(

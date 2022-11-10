@@ -1,4 +1,3 @@
-import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/material.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
 import 'package:pilll/analytics.dart';
@@ -20,7 +19,6 @@ class EndManualRestDurationButton extends HookConsumerWidget {
   final RestDuration restDuration;
   final PillSheet activedPillSheet;
   final PillSheetGroup pillSheetGroup;
-  final RecordPageStateNotifier store;
   final VoidCallback didEndRestDuration;
 
   const EndManualRestDurationButton({
@@ -28,7 +26,6 @@ class EndManualRestDurationButton extends HookConsumerWidget {
     required this.restDuration,
     required this.activedPillSheet,
     required this.pillSheetGroup,
-    required this.store,
     required this.didEndRestDuration,
   }) : super(key: key);
 
@@ -92,19 +89,18 @@ class EndManualRestDurationButton extends HookConsumerWidget {
   }
 }
 
-class EndRestDurationModal extends StatelessWidget {
+class EndRestDurationModal extends HookConsumerWidget {
   final PillSheetGroup pillSheetGroup;
-  final RecordPageStateNotifier store;
 
   const EndRestDurationModal({
     Key? key,
     required this.pillSheetGroup,
-    required this.store,
   }) : super(key: key);
 
   @override
-  Widget build(BuildContext context) {
+  Widget build(BuildContext context, WidgetRef ref) {
     final lastTakenPillNumber = pillSheetGroup.sequentialLastTakenPillNumber;
+    final setPillSheetGroup = ref.watch(setPillSheetGroupProvider);
     return Center(
       child: Container(
         constraints: BoxConstraints(maxWidth: MediaQuery.of(context).size.width - 32),
@@ -176,10 +172,7 @@ class EndRestDurationModal extends StatelessWidget {
                   child: AppOutlinedButton(
                     onPressed: () async {
                       analytics.logEvent(name: "display_number_setting_modal_yes");
-                      await store.asyncAction.setDisplayNumberSettingEndNumber(
-                        end: lastTakenPillNumber,
-                        pillSheetGroup: pillSheetGroup,
-                      );
+                      await _setDisplayNumberSettingEndNumber(setPillSheetGroup, end: lastTakenPillNumber, pillSheetGroup: pillSheetGroup);
                       Navigator.of(context).pop();
                     },
                     text: "はい",
@@ -192,18 +185,33 @@ class EndRestDurationModal extends StatelessWidget {
       ),
     );
   }
+
+  Future<void> _setDisplayNumberSettingEndNumber(
+    SetPillSheetGroup setPillSheetGroup, {
+    required int end,
+    required PillSheetGroup pillSheetGroup,
+  }) async {
+    final offsetPillNumber = pillSheetGroup.displayNumberSetting;
+    final PillSheetGroup updatedPillSheetGroup;
+    if (offsetPillNumber == null) {
+      final newDisplayNumberSetting = DisplayNumberSetting(endPillNumber: end);
+      updatedPillSheetGroup = pillSheetGroup.copyWith(displayNumberSetting: newDisplayNumberSetting);
+    } else {
+      final newDisplayNumberSetting = offsetPillNumber.copyWith(endPillNumber: end);
+      updatedPillSheetGroup = pillSheetGroup.copyWith(displayNumberSetting: newDisplayNumberSetting);
+    }
+    await setPillSheetGroup(updatedPillSheetGroup);
+  }
 }
 
 void showEndRestDurationModal(
   BuildContext context, {
   required PillSheetGroup pillSheetGroup,
-  required RecordPageStateNotifier store,
 }) {
   showDialog(
     context: context,
     builder: (context) => EndRestDurationModal(
       pillSheetGroup: pillSheetGroup,
-      store: store,
     ),
   );
 }
