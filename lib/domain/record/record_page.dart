@@ -23,6 +23,7 @@ import 'package:flutter/material.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
 import 'package:pilll/native/widget.dart';
 import 'package:pilll/provider/premium_and_trial.codegen.dart';
+import 'package:pilll/provider/root.dart';
 import 'package:pilll/provider/shared_preference.dart';
 import 'package:pilll/service/auth.dart';
 import 'package:pilll/util/datetime/day.dart';
