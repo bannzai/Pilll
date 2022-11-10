@@ -141,6 +141,7 @@ class RecordPageBody extends HookConsumerWidget {
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {
+    final pillSheetGroup = this.pillSheetGroup;
     final isAlreadyShowPremiumSurveyNotifier = ref.watch(boolSharedPreferencesProvider(BoolKey.isAlreadyShowPremiumSurvey).notifier);
     final activePillSheet = pillSheetGroup?.activedPillSheet;
     Future.microtask(() async {
@@ -180,7 +181,7 @@ class RecordPageBody extends HookConsumerWidget {
               children: [
                 const NotificationBar(),
                 const SizedBox(height: 37),
-                _content(context, setting, state, store),
+                _content(context),
                 const SizedBox(height: 20),
               ],
             ),
@@ -189,7 +190,7 @@ class RecordPageBody extends HookConsumerWidget {
             RecordPageButton(
               pillSheetGroup: pillSheetGroup,
               currentPillSheet: activePillSheet,
-              userIsPremiumOtTrial: state.premiumAndTrial.premiumOrTrial,
+              userIsPremiumOtTrial: premiumAndTrial.premiumOrTrial,
             ),
             const SizedBox(height: 40),
           ],
@@ -200,11 +201,8 @@ class RecordPageBody extends HookConsumerWidget {
 
   Widget _content(
     BuildContext context,
-    Setting setting,
-    RecordPageState state,
-    RecordPageStateNotifier store,
   ) {
-    final pillSheetGroup = state.pillSheetGroup;
+    final pillSheetGroup = this.pillSheetGroup;
     final activedPillSheet = pillSheetGroup?.activedPillSheet;
     if (activedPillSheet == null || pillSheetGroup == null || pillSheetGroup.isDeactived) {
       return AddPillSheetGroupEmptyFrame(
