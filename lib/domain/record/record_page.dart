@@ -169,9 +169,8 @@ class RecordPageBody extends StatelessWidget {
           children: [
             RecordPageInformationHeader(
               today: DateTime.now(),
-              pillSheetGroup: state.pillSheetGroup,
+              pillSheetGroup: pillSheetGroup,
               setting: setting,
-              store: store,
             ),
           ],
         ),

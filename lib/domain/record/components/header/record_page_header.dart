@@ -18,13 +18,11 @@ class RecordPageInformationHeader extends StatelessWidget {
   final DateTime today;
   final PillSheetGroup? pillSheetGroup;
   final Setting setting;
-  final RecordPageStateNotifier store;
   const RecordPageInformationHeader({
     Key? key,
     required this.today,
     required this.pillSheetGroup,
     required this.setting,
-    required this.store,
   }) : super(key: key);
 
   String _formattedToday() => DateTimeFormatter.monthAndDay(today);
@@ -58,11 +56,8 @@ class RecordPageInformationHeader extends StatelessWidget {
                   pillSheetGroup: pillSheetGroup,
                   setting: setting,
                   onPressed: () {
-                    analytics.logEvent(
-                        name: "tapped_record_information_header");
-                    if (activedPillSheet != null &&
-                        pillSheetGroup != null &&
-                        !pillSheetGroup.isDeactived) {
+                    analytics.logEvent(name: "tapped_record_information_header");
+                    if (activedPillSheet != null && pillSheetGroup != null && !pillSheetGroup.isDeactived) {
                       Navigator.of(context).push(
                         SettingTodayPillNumberPageRoute.route(
                           pillSheetGroup: pillSheetGroup,
