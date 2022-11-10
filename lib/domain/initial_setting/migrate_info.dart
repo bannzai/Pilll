@@ -4,13 +4,16 @@ import 'package:pilll/components/atoms/color.dart';
 import 'package:pilll/components/atoms/font.dart';
 import 'package:pilll/components/atoms/text_color.dart';
 import 'package:flutter/material.dart';
+import 'package:pilll/provider/shared_preference.dart';
+import 'package:pilll/provider/shared_preferences.dart';
 import 'package:pilll/util/shared_preference/keys.dart';
 
 class MigrateInfo extends HookConsumerWidget {
   const MigrateInfo({Key? key}) : super(key: key);
   @override
   Widget build(BuildContext context, WidgetRef ref) {
-    final sharedPreferences = ref.watch(sharedPreferenceProvider).requireValue;
+    final sharedPreferences = ref.watch(boolSharedPreferencesProvider(BoolKey.migrateFrom132IsShown).notifier);
+
     return Scaffold(
       backgroundColor: PilllColors.background,
       body: SingleChildScrollView(
@@ -91,7 +94,7 @@ class MigrateInfo extends HookConsumerWidget {
                       width: 230,
                       child: PrimaryButton(
                           onPressed: () async {
-                            sharedPreferences.setBool(BoolKey.migrateFrom132IsShown, true);
+                            sharedPreferences.value = true;
                             ref.invalidate(sharedPreferenceProvider);
                             Navigator.of(context).pop();
                           },
