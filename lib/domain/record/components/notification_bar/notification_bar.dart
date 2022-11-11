@@ -44,6 +44,8 @@ class NotificationBar extends HookConsumerWidget {
     final isLinkedLoginProvider = ref.watch(isLinkedProvider);
     final recommendedSignupNotificationIsAlreadyShow =
         ref.watch(boolSharedPreferencesProvider(BoolKey.recommendedSignupNotificationIsAlreadyShow)).valueOrNull ?? false;
+    final recommendedSignupNotificationIsAlreadyShowNotifier =
+        ref.watch(boolSharedPreferencesProvider(BoolKey.recommendedSignupNotificationIsAlreadyShow).notifier);
     final userAnsweredSurvey = ref.watch(boolSharedPreferencesProvider(BoolKey.userAnsweredSurvey)).valueOrNull ?? false;
     final userAnsweredSurveyNotifier = ref.watch(boolSharedPreferencesProvider(BoolKey.userAnsweredSurvey).notifier);
     final userClosedSurvey = ref.watch(boolSharedPreferencesProvider(BoolKey.userClosedSurvey)).valueOrNull ?? false;
@@ -118,7 +120,7 @@ class NotificationBar extends HookConsumerWidget {
                 },
                 onClose: () {
                   analytics.logEvent(name: "record_page_signing_notification_closed");
-                  stateNotifier.closeRecommendedSignupNotification();
+                  recommendedSignupNotificationIsAlreadyShowNotifier.set(true);
                 },
               );
             }
