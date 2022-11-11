@@ -68,24 +68,24 @@ void main() {
         final batch = MockWriteBatch();
         when(batchFactory.batch()).thenReturn(batch);
 
-        final pillSheetDatastore = MockPillSheetDatastore();
+        final batchSetPillSheets = MockBatchSetPillSheets();
         final updatedActivePillSheet = activedPillSheet.copyWith(lastTakenDate: takenDate);
-        when(pillSheetDatastore.update(batch, [updatedActivePillSheet])).thenReturn(null);
+        when(batchSetPillSheets(batch, pillSheets: [updatedActivePillSheet])).thenReturn(null);
 
-        final pillSheetModifiedHistoryDatastore = MockPillSheetModifiedHistoryDatastore();
+        final batchSetPillSheetModifiedHistory = MockBatchSetPillSheetModifiedHistory();
         final history = PillSheetModifiedHistoryServiceActionFactory.createTakenPillAction(
             pillSheetGroupID: pillSheetGroup.id, isQuickRecord: false, before: activedPillSheet, after: updatedActivePillSheet);
-        when(pillSheetModifiedHistoryDatastore.add(batch, history)).thenReturn(null);
+        when(batchSetPillSheetModifiedHistory(batch, history: history)).thenReturn(null);
 
-        final pillSheetGroupDatastore = MockPillSheetGroupDatastore();
+        final batchSetPillSheetGroup = MockBatchSetPillSheetGroup();
         final updatedPillSheetGroup = pillSheetGroup.copyWith(pillSheets: [updatedActivePillSheet]);
-        when(pillSheetGroupDatastore.updateWithBatch(batch, updatedPillSheetGroup)).thenReturn(null);
+        when(batchSetPillSheetGroup(batch, updatedPillSheetGroup)).thenReturn(null);
 
         final takePill = TakePill(
           batchFactory: batchFactory,
-          batchSetPillSheets: pillSheetDatastore,
-          batchSetPillSheetModifiedHistory: pillSheetModifiedHistoryDatastore,
-          batchSetPillSheetGroup: pillSheetGroupDatastore,
+          batchSetPillSheets: batchSetPillSheets,
+          batchSetPillSheetModifiedHistory: batchSetPillSheetModifiedHistory,
+          batchSetPillSheetGroup: batchSetPillSheetGroup,
         );
         final result = await takePill(
           takenDate: takenDate,
@@ -106,15 +106,15 @@ void main() {
         activedPillSheet = activedPillSheet.copyWith(lastTakenDate: takenDate);
 
         final batchFactory = MockBatchFactory();
-        final pillSheetDatastore = MockPillSheetDatastore();
-        final pillSheetModifiedHistoryDatastore = MockPillSheetModifiedHistoryDatastore();
-        final pillSheetGroupDatastore = MockPillSheetGroupDatastore();
+        final batchSetPillSheets = MockBatchSetPillSheets();
+        final batchSetPillSheetModifiedHistory = MockBatchSetPillSheetModifiedHistory();
+        final batchSetPillSheetGroup = MockBatchSetPillSheetGroup();
 
         final takePill = TakePill(
           batchFactory: batchFactory,
-          batchSetPillSheets: pillSheetDatastore,
-          batchSetPillSheetModifiedHistory: pillSheetModifiedHistoryDatastore,
-          batchSetPillSheetGroup: pillSheetGroupDatastore,
+          batchSetPillSheets: batchSetPillSheets,
+          batchSetPillSheetModifiedHistory: batchSetPillSheetModifiedHistory,
+          batchSetPillSheetGroup: batchSetPillSheetGroup,
         );
         final result = await takePill(
           takenDate: takenDate,
