@@ -2,7 +2,7 @@ import 'dart:async';
 import 'dart:math';
 
 import 'package:pilll/database/batch.dart';
-import 'package:pilll/domain/record/util/take_pill.dart';
+import 'package:pilll/provider/take_pill.dart';
 import 'package:pilll/entity/pill_mark_type.dart';
 import 'package:pilll/entity/pill_sheet.codegen.dart';
 import 'package:pilll/entity/pill_sheet_group.codegen.dart';
@@ -40,9 +40,9 @@ class RecordPageAsyncAction {
     }
     final takePill = TakePill(
       batchFactory: _batchFactory,
-      pillSheetDatastore: _pillSheetDatastore,
-      pillSheetModifiedHistoryDatastore: _pillSheetModifiedHistoryDatastore,
-      pillSheetGroupDatastore: _pillSheetGroupDatastore,
+      batchSetPillSheets: _pillSheetDatastore,
+      batchSetPillSheetModifiedHistory: _pillSheetModifiedHistoryDatastore,
+      batchSetPillSheetGroup: _pillSheetGroupDatastore,
     );
     final updatedPillSheetGroup = await takePill(
       takenDate: takenDate,

@@ -10,16 +10,14 @@ import 'package:pilll/util/shared_preference/keys.dart';
 import 'package:riverpod/riverpod.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
-final recordPageStateNotifierProvider = StateNotifierProvider.autoDispose<
-    RecordPageStateNotifier, AsyncValue<RecordPageState>>(
+final recordPageStateNotifierProvider = StateNotifierProvider.autoDispose<RecordPageStateNotifier, AsyncValue<RecordPageState>>(
   (ref) => RecordPageStateNotifier(
     asyncAction: ref.watch(recordPageAsyncActionProvider),
     initialState: ref.watch(recordPageAsyncStateProvider),
   ),
 );
 
-class RecordPageStateNotifier
-    extends StateNotifier<AsyncValue<RecordPageState>> {
+class RecordPageStateNotifier extends StateNotifier<AsyncValue<RecordPageState>> {
   final RecordPageAsyncAction asyncAction;
   RecordPageStateNotifier({
     required this.asyncAction,
@@ -67,28 +65,8 @@ class RecordPageStateNotifier
     final sharedPreferences = await SharedPreferences.getInstance();
     sharedPreferences.setBool(BoolKey.isAlreadyShowPremiumSurvey, true);
 
-    state =
-        AsyncValue.data(_stateValue.copyWith(isAlreadyShowPremiumSurvey: true));
+    state = AsyncValue.data(_stateValue.copyWith(isAlreadyShowPremiumSurvey: true));
   }
-}
-
-PillMarkType pillMarkFor({
-  required int pillNumberIntoPillSheet,
-  required PillSheet pillSheet,
-}) {
-  if (pillNumberIntoPillSheet > pillSheet.typeInfo.dosingPeriod) {
-    return (pillSheet.pillSheetType == PillSheetType.pillsheet_21 ||
-            pillSheet.pillSheetType == PillSheetType.pillsheet_24_rest_4)
-        ? PillMarkType.rest
-        : PillMarkType.fake;
-  }
-  if (pillNumberIntoPillSheet <= pillSheet.lastTakenPillNumber) {
-    return PillMarkType.done;
-  }
-  if (pillNumberIntoPillSheet < pillSheet.todayPillNumber) {
-    return PillMarkType.normal;
-  }
-  return PillMarkType.normal;
 }
 
 bool shouldPillMarkAnimation({
@@ -115,6 +93,5 @@ bool shouldPillMarkAnimation({
     return false;
   }
 
-  return pillNumberIntoPillSheet > activedPillSheet.lastTakenPillNumber &&
-      pillNumberIntoPillSheet <= activedPillSheet.todayPillNumber;
+  return pillNumberIntoPillSheet > activedPillSheet.lastTakenPillNumber && pillNumberIntoPillSheet <= activedPillSheet.todayPillNumber;
 }
