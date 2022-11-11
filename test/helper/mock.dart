@@ -11,7 +11,11 @@ import 'package:pilll/domain/record/record_page_state_notifier.dart';
 import 'package:pilll/domain/settings/setting_page_async_action.dart';
 import 'package:pilll/domain/settings/setting_page_state_notifier.dart';
 import 'package:pilll/entity/setting.codegen.dart';
+import 'package:pilll/provider/pill_sheet.dart';
+import 'package:pilll/provider/pill_sheet_group.dart';
+import 'package:pilll/provider/pill_sheet_modified_history.dart';
 import 'package:pilll/provider/premium_and_trial.codegen.dart';
+import 'package:pilll/provider/setting.dart';
 import 'package:pilll/service/auth.dart';
 import 'package:pilll/database/diary.dart';
 import 'package:pilll/database/menstruation.dart';
@@ -45,5 +49,10 @@ import 'package:mockito/annotations.dart';
   PremiumAndTrial,
   Setting,
   SettingStateNotifier,
+  BatchSetPillSheetGroup,
+  BatchSetPillSheets,
+  BatchSetPillSheetModifiedHistory,
+  SetSetting,
+  SetPillSheetGroup,
 ])
 abstract class KeepGeneratedMocks {}

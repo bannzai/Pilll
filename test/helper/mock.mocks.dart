@@ -48,7 +48,11 @@ import 'package:pilll/entity/reminder_notification_customization.codegen.dart'
     as _i13;
 import 'package:pilll/entity/setting.codegen.dart' as _i3;
 import 'package:pilll/entity/user.codegen.dart' as _i6;
+import 'package:pilll/provider/pill_sheet.dart' as _i43;
+import 'package:pilll/provider/pill_sheet_group.dart' as _i42;
+import 'package:pilll/provider/pill_sheet_modified_history.dart' as _i44;
 import 'package:pilll/provider/premium_and_trial.codegen.dart' as _i12;
+import 'package:pilll/provider/setting.dart' as _i45;
 import 'package:pilll/service/auth.dart' as _i23;
 import 'package:pilll/service/day.dart' as _i17;
 import 'package:purchases_flutter/purchases_flutter.dart' as _i30;
@@ -1567,4 +1571,140 @@ class MockSettingStateNotifier extends _i1.Mock
         ),
         returnValueForMissingStub: null,
       );
+}
+
+/// A class which mocks [BatchSetPillSheetGroup].
+///
+/// See the documentation for Mockito's code generation for more information.
+class MockBatchSetPillSheetGroup extends _i1.Mock
+    implements _i42.BatchSetPillSheetGroup {
+  MockBatchSetPillSheetGroup() {
+    _i1.throwOnMissingStub(this);
+  }
+
+  @override
+  _i10.DatabaseConnection get databaseConnection => (super.noSuchMethod(
+        Invocation.getter(#databaseConnection),
+        returnValue: _FakeDatabaseConnection_9(),
+      ) as _i10.DatabaseConnection);
+  @override
+  void call(
+    _i11.WriteBatch? batch, {
+    _i9.PillSheetGroup? pillSheetGroup,
+  }) =>
+      super.noSuchMethod(
+        Invocation.method(
+          #call,
+          [batch],
+          {#pillSheetGroup: pillSheetGroup},
+        ),
+        returnValueForMissingStub: null,
+      );
+}
+
+/// A class which mocks [BatchSetPillSheets].
+///
+/// See the documentation for Mockito's code generation for more information.
+class MockBatchSetPillSheets extends _i1.Mock
+    implements _i43.BatchSetPillSheets {
+  MockBatchSetPillSheets() {
+    _i1.throwOnMissingStub(this);
+  }
+
+  @override
+  _i10.DatabaseConnection get databaseConnection => (super.noSuchMethod(
+        Invocation.getter(#databaseConnection),
+        returnValue: _FakeDatabaseConnection_9(),
+      ) as _i10.DatabaseConnection);
+  @override
+  void call(
+    _i11.WriteBatch? batch, {
+    List<_i2.PillSheet>? pillSheets,
+  }) =>
+      super.noSuchMethod(
+        Invocation.method(
+          #call,
+          [batch],
+          {#pillSheets: pillSheets},
+        ),
+        returnValueForMissingStub: null,
+      );
+}
+
+/// A class which mocks [BatchSetPillSheetModifiedHistory].
+///
+/// See the documentation for Mockito's code generation for more information.
+class MockBatchSetPillSheetModifiedHistory extends _i1.Mock
+    implements _i44.BatchSetPillSheetModifiedHistory {
+  MockBatchSetPillSheetModifiedHistory() {
+    _i1.throwOnMissingStub(this);
+  }
+
+  @override
+  _i10.DatabaseConnection get databaseConnection => (super.noSuchMethod(
+        Invocation.getter(#databaseConnection),
+        returnValue: _FakeDatabaseConnection_9(),
+      ) as _i10.DatabaseConnection);
+  @override
+  void call(
+    _i11.WriteBatch? batch, {
+    _i32.PillSheetModifiedHistory? history,
+  }) =>
+      super.noSuchMethod(
+        Invocation.method(
+          #call,
+          [batch],
+          {#history: history},
+        ),
+        returnValueForMissingStub: null,
+      );
+}
+
+/// A class which mocks [SetSetting].
+///
+/// See the documentation for Mockito's code generation for more information.
+class MockSetSetting extends _i1.Mock implements _i45.SetSetting {
+  MockSetSetting() {
+    _i1.throwOnMissingStub(this);
+  }
+
+  @override
+  _i10.DatabaseConnection get databaseConnection => (super.noSuchMethod(
+        Invocation.getter(#databaseConnection),
+        returnValue: _FakeDatabaseConnection_9(),
+      ) as _i10.DatabaseConnection);
+  @override
+  _i19.Future<void> call(_i3.Setting? setting) => (super.noSuchMethod(
+        Invocation.method(
+          #call,
+          [setting],
+        ),
+        returnValue: Future<void>.value(),
+        returnValueForMissingStub: Future<void>.value(),
+      ) as _i19.Future<void>);
+}
+
+/// A class which mocks [SetPillSheetGroup].
+///
+/// See the documentation for Mockito's code generation for more information.
+class MockSetPillSheetGroup extends _i1.Mock implements _i42.SetPillSheetGroup {
+  MockSetPillSheetGroup() {
+    _i1.throwOnMissingStub(this);
+  }
+
+  @override
+  _i10.DatabaseConnection get databaseConnection => (super.noSuchMethod(
+        Invocation.getter(#databaseConnection),
+        returnValue: _FakeDatabaseConnection_9(),
+      ) as _i10.DatabaseConnection);
+  @override
+  _i19.Future<void> call(_i9.PillSheetGroup? pillSheetGroup) =>
+      (super.noSuchMethod(
+        Invocation.method(
+          #call,
+          [pillSheetGroup],
+        ),
+        returnValue: Future<void>.value(),
+        returnValueForMissingStub: Future<void>.value(),
+      ) as _i19.Future<void>);
 }
