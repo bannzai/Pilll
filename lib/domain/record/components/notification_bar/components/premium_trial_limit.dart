@@ -4,6 +4,8 @@ import 'package:pilll/analytics.dart';
 import 'package:pilll/components/atoms/color.dart';
 import 'package:pilll/components/atoms/font.dart';
 import 'package:pilll/components/atoms/text_color.dart';
+import 'package:pilll/provider/premium_and_trial.codegen.dart';
+import 'package:pilll/util/datetime/day.dart';
 import 'package:url_launcher/url_launcher.dart';
 
 class PremiumTrialLimitNotificationBar extends StatelessWidget {
@@ -46,5 +48,25 @@ class PremiumTrialLimitNotificationBar extends StatelessWidget {
         ),
       ),
     );
+  }
+
+  static String? retrievePremiumTrialLimit(PremiumAndTrial premiumAndTrial) {
+    if (premiumAndTrial.isPremium) {
+      return null;
+    }
+    if (!premiumAndTrial.isTrial) {
+      return null;
+    }
+    final trialDeadlineDate = premiumAndTrial.trialDeadlineDate;
+    if (trialDeadlineDate == null) {
+      return null;
+    }
+
+    if (trialDeadlineDate.isBefore(now())) {
+      return null;
+    }
+
+    final diff = daysBetween(now(), trialDeadlineDate);
+    return "残り$diff日間すべての機能を使えます";
   }
 }
