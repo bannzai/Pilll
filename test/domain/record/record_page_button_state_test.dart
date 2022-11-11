@@ -38,7 +38,7 @@ void main() {
       await tester.pumpWidget(
         ProviderScope(
           overrides: [
-            recordPageStateNotifierProvider.overrideWith((ref) => MockRecordPageStateNotifier()),
+            databaseProvider.overrideWith((ref) => MockDatabaseConnection()),
           ],
           child: MaterialApp(
             home: RecordPageButton(
@@ -63,7 +63,7 @@ void main() {
     await tester.pumpWidget(
       ProviderScope(
         overrides: [
-          recordPageStateNotifierProvider.overrideWith((ref) => MockRecordPageStateNotifier()),
+          databaseProvider.overrideWith((ref) => MockDatabaseConnection()),
         ],
         child: MaterialApp(
           home: RecordPageButton(
