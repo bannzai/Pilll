@@ -65,8 +65,7 @@ class EndManualRestDurationButton extends HookConsumerWidget {
     final batch = batchFactory.batch();
     final updatedRestDuration = restDuration.copyWith(endDate: now());
     final updatedPillSheet = activedPillSheet.copyWith(
-      restDurations: activedPillSheet.restDurations
-        ..replaceRange(
+      restDurations: [...activedPillSheet.restDurations]..replaceRange(
           activedPillSheet.restDurations.length - 1,
           activedPillSheet.restDurations.length,
           [updatedRestDuration],
