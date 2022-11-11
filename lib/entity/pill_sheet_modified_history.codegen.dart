@@ -1,3 +1,4 @@
+import 'package:collection/collection.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';
 import 'package:pilll/entity/firestore_document_id_escaping_to_json.dart';
@@ -75,10 +76,7 @@ class PillSheetModifiedHistory with _$PillSheetModifiedHistory {
   }) = _PillSheetModifiedHistory;
   const PillSheetModifiedHistory._();
 
-  factory PillSheetModifiedHistory.fromJson(Map<String, dynamic> json) =>
-      _$PillSheetModifiedHistoryFromJson(json);
+  factory PillSheetModifiedHistory.fromJson(Map<String, dynamic> json) => _$PillSheetModifiedHistoryFromJson(json);
 
-  PillSheetModifiedActionType? get enumActionType =>
-      PillSheetModifiedActionType.values
-          .firstWhereOrNull((element) => element.name == actionType);
+  PillSheetModifiedActionType? get enumActionType => PillSheetModifiedActionType.values.firstWhereOrNull((element) => element.name == actionType);
 }
