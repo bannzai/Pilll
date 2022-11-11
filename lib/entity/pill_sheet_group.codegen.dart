@@ -155,5 +155,5 @@ class PillSheetGroupDisplayNumberSetting with _$PillSheetGroupDisplayNumberSetti
     int? endPillNumber,
   }) = _PillSheetGroupDisplayNumberSetting;
 
-  factory PillSheetGroupDisplayNumberSetting.fromJson(Map<String, dynamic> json) => _$PillSheetGroupDisplayNumberSetting(json);
+  factory PillSheetGroupDisplayNumberSetting.fromJson(Map<String, dynamic> json) => _$PillSheetGroupDisplayNumberSettingFromJson(json);
 }
