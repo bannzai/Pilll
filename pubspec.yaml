@@ -61,7 +61,7 @@ dependencies:
   flutter_app_badger: ^1.2.0
   sign_in_with_apple: ^3.0.0
   google_sign_in: ^5.4.1
-  purchases_flutter: ^3.2.2
+  purchases_flutter: ^4.4.0
   firebase_performance: ^0.8.0+7
   flutter_native_timezone: ^2.0.0
   flutter_local_notifications: ^11.0.1
