@@ -13,7 +13,7 @@ import 'package:pilll/util/formatter/text_input_formatter.dart';
 class DisplayNumberSetting extends HookConsumerWidget {
   final PillSheetAppearanceMode pillSheetAppearanceMode;
   final PillSheetGroup pillSheetGroup;
-  final Function(int) onChanged;
+  final Function(PillSheetGroupDisplayNumberSetting) onChanged;
 
   const DisplayNumberSetting({
     Key? key,
@@ -78,7 +78,7 @@ class DisplayNumberSetting extends HookConsumerWidget {
                   try {
                     analytics.logEvent(name: "on_changed_display_number", parameters: {"text": text});
                     beginDisplayPillNumber.value = int.parse(text);
-                    store.setBeginDisplayPillNumber(beginDisplayPillNumber.value);
+                    onChanged(PillSheetGroupDisplayNumberSetting(beginPillNumber: beginDisplayPillNumber.value));
                   } catch (_) {}
                 },
               ),

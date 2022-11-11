@@ -7,6 +7,7 @@ import 'package:pilll/components/atoms/buttons.dart';
 import 'package:pilll/components/atoms/color.dart';
 import 'package:pilll/components/atoms/text_color.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
+import 'package:pilll/domain/record/components/add_pill_sheet_group/display_number_setting.dart';
 import 'package:pilll/domain/record/components/add_pill_sheet_group/provider.dart';
 import 'package:pilll/entity/pill_sheet_group.codegen.dart';
 import 'package:pilll/entity/pill_sheet_type.dart';
@@ -22,6 +23,7 @@ class AddPillSheetGroupPage extends HookConsumerWidget {
     final pillSheetGroup = this.pillSheetGroup;
     final addPillSheetGroup = ref.watch(addPillSheetGroupProvider);
     final pillSheetTypes = useState(setting.pillSheetTypes);
+    final displayNumberSetting = useState<PillSheetGroupDisplayNumberSetting?>(null);
 
     return Scaffold(
       backgroundColor: PilllColors.background,
@@ -68,9 +70,13 @@ class AddPillSheetGroupPage extends HookConsumerWidget {
                     child: Column(
                       mainAxisSize: MainAxisSize.min,
                       children: [
-                        if (pillSheetGroup != null) ...[
-                        PillSheetGroupDisplayNumberSetting(pillSheetAppearanceMode: setting.pillSheetAppearanceMode, pillSheetGroup: pillSheetGroup, onChanged: (value) { }),
-                        ]
+                        if (pillSheetGroup != null)
+                          DisplayNumberSetting(
+                              pillSheetAppearanceMode: setting.pillSheetAppearanceMode,
+                              pillSheetGroup: pillSheetGroup,
+                              onChanged: (value) {
+                                displayNumberSetting.value = value;
+                              }),
                         const SizedBox(height: 24),
                         SizedBox(
                           width: 180,
@@ -78,7 +84,12 @@ class AddPillSheetGroupPage extends HookConsumerWidget {
                             text: "追加",
                             onPressed: () async {
                               analytics.logEvent(name: "pressed_add_pill_sheet_group");
-                              await addPillSheetGroup.call(setting: setting, pillSheetGroup: pillSheetGroup, pillSheetTypes: pillSheetTypes.value, displayNumberSetting: displayNumberSetting)
+                              await addPillSheetGroup.call(
+                                setting: setting,
+                                pillSheetGroup: pillSheetGroup,
+                                pillSheetTypes: pillSheetTypes.value,
+                                displayNumberSetting: displayNumberSetting.value,
+                              );
                               Navigator.of(context).pop();
                             },
                           ),
@@ -98,11 +109,11 @@ class AddPillSheetGroupPage extends HookConsumerWidget {
 }
 
 extension AddPillSheetGroupPageRoute on AddPillSheetGroupPage {
-  static Route<dynamic> route({required Setting setting}) {
+  static Route<dynamic> route({required PillSheetGroup? pillSheetGroup, required Setting setting}) {
     return MaterialPageRoute(
       fullscreenDialog: true,
       settings: const RouteSettings(name: "RecordPageAddingPillSheetGroupPage"),
-      builder: (_) => AddPillSheetGroupPage(setting: setting),
+      builder: (_) => AddPillSheetGroupPage(pillSheetGroup: pillSheetGroup, setting: setting),
     );
   }
 }
