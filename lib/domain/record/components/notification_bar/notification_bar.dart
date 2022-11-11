@@ -50,7 +50,6 @@ class NotificationBar extends HookConsumerWidget {
     final userAnsweredSurveyNotifier = ref.watch(boolSharedPreferencesProvider(BoolKey.userAnsweredSurvey).notifier);
     final userClosedSurvey = ref.watch(boolSharedPreferencesProvider(BoolKey.userClosedSurvey)).valueOrNull ?? false;
     final userClosedSurveyNotifier = ref.watch(boolSharedPreferencesProvider(BoolKey.userClosedSurvey).notifier);
-    final stateNotifier = ref.watch(notificationBarStateNotifierProvider.notifier);
     final discountEntitlementDeadlineDate = premiumAndTrial.discountEntitlementDeadlineDate;
     final isOverDiscountDeadline = ref.watch(isOverDiscountDeadlineProvider(discountEntitlementDeadlineDate));
     final isJaLocale = ref.watch(isJaLocaleProvider);
