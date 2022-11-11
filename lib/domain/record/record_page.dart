@@ -211,6 +211,7 @@ class RecordPageBody extends HookConsumerWidget {
     if (activedPillSheet == null || pillSheetGroup == null || pillSheetGroup.isDeactived) {
       return AddPillSheetGroupEmptyFrame(
         context: context,
+        pillSheetGroup: pillSheetGroup,
         setting: setting,
       );
     } else {
