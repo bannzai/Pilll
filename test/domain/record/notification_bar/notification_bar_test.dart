@@ -5,8 +5,6 @@ import 'package:pilll/domain/record/components/notification_bar/components/disco
 import 'package:pilll/domain/record/components/notification_bar/components/ended_pill_sheet.dart';
 import 'package:pilll/domain/record/components/notification_bar/components/pilll_ads.dart';
 import 'package:pilll/domain/record/components/notification_bar/notification_bar.dart';
-import 'package:pilll/domain/record/components/notification_bar/notification_bar_state.codegen.dart';
-import 'package:pilll/domain/record/components/notification_bar/state_notifier.dart';
 import 'package:pilll/domain/record/components/notification_bar/components/premium_trial_limit.dart';
 import 'package:pilll/domain/record/components/notification_bar/components/recommend_signup.dart';
 import 'package:pilll/domain/record/components/notification_bar/components/recommend_signup_premium.dart';
@@ -29,8 +27,6 @@ import 'package:pilll/util/shared_preference/keys.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
 import '../../../helper/mock.mocks.dart';
-
-class FakeState extends Fake implements NotificationBarState {}
 
 void main() {
   const totalCountOfActionForTakenPillForLongTimeUser = 14;
