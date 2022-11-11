@@ -1,7 +1,6 @@
 import 'package:async_value_group/async_value_group.dart';
 import 'package:flutter_hooks/flutter_hooks.dart';
 import 'package:pilll/components/molecules/indicator.dart';
-import 'package:pilll/database/database.dart';
 import 'package:pilll/database/pill_sheet_group.dart';
 import 'package:pilll/database/setting.dart';
 import 'package:pilll/domain/initial_setting/migrate_info.dart';
@@ -11,10 +10,8 @@ import 'package:pilll/domain/record/components/button/record_page_button.dart';
 import 'package:pilll/domain/record/components/notification_bar/notification_bar.dart';
 import 'package:pilll/domain/record/components/supports/record_page_pill_sheet_support_actions.dart';
 import 'package:pilll/domain/record/components/pill_sheet/record_page_pill_sheet_list.dart';
-import 'package:pilll/domain/record/record_page_state.codegen.dart';
 import 'package:pilll/domain/record/record_page_state_notifier.dart';
 import 'package:pilll/domain/record/components/header/record_page_header.dart';
-import 'package:pilll/provider/provider.dart';
 import 'package:pilll/entity/pill_sheet_group.codegen.dart';
 import 'package:pilll/entity/setting.codegen.dart';
 import 'package:pilll/error/universal_error_page.dart';
@@ -27,9 +24,7 @@ import 'package:pilll/provider/root.dart';
 import 'package:pilll/provider/shared_preference.dart';
 import 'package:pilll/provider/shared_preferences.dart';
 import 'package:pilll/service/auth.dart';
-import 'package:pilll/util/datetime/day.dart';
 import 'package:pilll/util/shared_preference/keys.dart';
-import 'package:shared_preferences/shared_preferences.dart';
 
 class RecordPage extends HookConsumerWidget {
   const RecordPage({Key? key}) : super(key: key);
@@ -37,7 +32,6 @@ class RecordPage extends HookConsumerWidget {
   @override
   Widget build(BuildContext context, WidgetRef ref) {
     final state = ref.watch(recordPageStateNotifierProvider);
-    final store = ref.watch(recordPageStateNotifierProvider.notifier);
     useAutomaticKeepAlive(wantKeepAlive: true);
 
     useEffect(() {

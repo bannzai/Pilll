@@ -4,8 +4,6 @@ import 'package:pilll/domain/record/components/supports/components/appearance_mo
 import 'package:pilll/domain/record/components/supports/components/display_number_setting/display_number_setting_button.dart';
 import 'package:pilll/domain/record/components/supports/components/rest_duration/begin_manual_rest_duration_button.dart';
 import 'package:pilll/domain/record/components/supports/components/rest_duration/end_manual_rest_duration_button.dart';
-import 'package:pilll/domain/record/record_page_state.codegen.dart';
-import 'package:pilll/domain/record/record_page_state_notifier.dart';
 import 'package:pilll/entity/pill_sheet.codegen.dart';
 import 'package:pilll/entity/pill_sheet_group.codegen.dart';
 import 'package:pilll/entity/setting.codegen.dart';
