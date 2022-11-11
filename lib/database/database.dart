@@ -20,7 +20,7 @@ final databaseProvider = Provider<DatabaseConnection>((ref) {
   final uid = stream.asData?.value.uid ?? firebase.FirebaseAuth.instance.currentUser?.uid;
   debugPrint("[DEBUG] database uid is $uid");
   if (uid == null) {
-    throw UnimplementedError("Must be called service/auth.dart callSignIn");
+    throw const FormatException("Must be called service/auth.dart callSignIn");
   }
   return DatabaseConnection(uid);
 });
