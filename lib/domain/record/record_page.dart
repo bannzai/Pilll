@@ -10,7 +10,6 @@ import 'package:pilll/domain/record/components/button/record_page_button.dart';
 import 'package:pilll/domain/record/components/notification_bar/notification_bar.dart';
 import 'package:pilll/domain/record/components/supports/record_page_pill_sheet_support_actions.dart';
 import 'package:pilll/domain/record/components/pill_sheet/record_page_pill_sheet_list.dart';
-import 'package:pilll/domain/record/record_page_state_notifier.dart';
 import 'package:pilll/domain/record/components/header/record_page_header.dart';
 import 'package:pilll/entity/pill_sheet_group.codegen.dart';
 import 'package:pilll/entity/setting.codegen.dart';

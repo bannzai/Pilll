@@ -11,7 +11,6 @@ import 'package:pilll/components/organisms/pill_sheet/pill_sheet_view_layout.dar
 import 'package:pilll/components/organisms/pill_sheet/pill_sheet_view_weekday_line.dart';
 import 'package:pilll/domain/modal/release_note.dart';
 import 'package:pilll/domain/record/components/pill_sheet/components/pill_number.dart';
-import 'package:pilll/domain/record/record_page_state_notifier.dart';
 import 'package:pilll/domain/record/util/request_in_app_review.dart';
 import 'package:pilll/provider/revert_take_pill.dart';
 import 'package:pilll/provider/take_pill.dart';
@@ -347,4 +346,31 @@ class _MenstruationRange {
   _MenstruationRange(this.begin, this.end);
 
   bool contains(int pillNumber) => begin <= pillNumber && pillNumber <= end;
+}
+
+bool shouldPillMarkAnimation({
+  required int pillNumberIntoPillSheet,
+  required PillSheet pillSheet,
+  required PillSheetGroup pillSheetGroup,
+}) {
+  if (pillSheetGroup.activedPillSheet?.activeRestDuration != null) {
+    return false;
+  }
+  final activedPillSheet = pillSheetGroup.activedPillSheet;
+  if (activedPillSheet == null) {
+    throw const FormatException("pill sheet not found");
+  }
+  if (activedPillSheet.groupIndex < pillSheet.groupIndex) {
+    return false;
+  }
+  if (activedPillSheet.id != pillSheet.id) {
+    if (pillSheet.isBegan) {
+      if (pillNumberIntoPillSheet > pillSheet.lastTakenPillNumber) {
+        return true;
+      }
+    }
+    return false;
+  }
+
+  return pillNumberIntoPillSheet > activedPillSheet.lastTakenPillNumber && pillNumberIntoPillSheet <= activedPillSheet.todayPillNumber;
 }

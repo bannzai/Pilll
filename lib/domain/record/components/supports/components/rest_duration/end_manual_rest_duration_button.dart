@@ -7,7 +7,6 @@ import 'package:pilll/components/atoms/font.dart';
 import 'package:pilll/components/atoms/text_color.dart';
 import 'package:pilll/database/batch.dart';
 import 'package:pilll/database/pill_sheet_modified_history.dart';
-import 'package:pilll/domain/record/record_page_state_notifier.dart';
 import 'package:pilll/entity/pill_sheet.codegen.dart';
 import 'package:pilll/entity/pill_sheet_group.codegen.dart';
 import 'package:pilll/provider/pill_sheet.dart';
