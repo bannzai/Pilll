@@ -3,23 +3,34 @@ import 'package:flutter/material.dart';
 import 'package:pilll/database/batch.dart';
 import 'package:pilll/entity/pill_sheet.codegen.dart';
 import 'package:pilll/entity/pill_sheet_group.codegen.dart';
-import 'package:pilll/database/pill_sheet.dart';
-import 'package:pilll/database/pill_sheet_group.dart';
 import 'package:pilll/database/pill_sheet_modified_history.dart';
 import 'package:pilll/error_log.dart';
+import 'package:pilll/provider/pill_sheet.dart';
+import 'package:pilll/provider/pill_sheet_group.dart';
+import 'package:pilll/provider/pill_sheet_modified_history.dart';
 import 'package:pilll/util/datetime/day.dart';
+import 'package:riverpod/riverpod.dart';
+
+final takePillProvider = Provider(
+  (ref) => TakePill(
+    batchFactory: ref.watch(batchFactoryProvider),
+    batchSetPillSheets: ref.watch(batchSetPillSheetsProvider),
+    batchSetPillSheetModifiedHistory: ref.watch(batchSetPillSheetModifiedHistoryProvider),
+    batchSetPillSheetGroup: ref.watch(batchSetPillSheetGroupProvider),
+  ),
+);
 
 class TakePill {
   final BatchFactory batchFactory;
-  final PillSheetDatastore pillSheetDatastore;
-  final PillSheetModifiedHistoryDatastore pillSheetModifiedHistoryDatastore;
-  final PillSheetGroupDatastore pillSheetGroupDatastore;
+  final BatchSetPillSheets batchSetPillSheets;
+  final BatchSetPillSheetModifiedHistory batchSetPillSheetModifiedHistory;
+  final BatchSetPillSheetGroup batchSetPillSheetGroup;
 
   TakePill({
     required this.batchFactory,
-    required this.pillSheetDatastore,
-    required this.pillSheetModifiedHistoryDatastore,
-    required this.pillSheetGroupDatastore,
+    required this.batchSetPillSheets,
+    required this.batchSetPillSheetModifiedHistory,
+    required this.batchSetPillSheetGroup,
   });
 
   Future<PillSheetGroup?> call({
@@ -77,11 +88,11 @@ class TakePill {
     }
 
     final batch = batchFactory.batch();
-    pillSheetDatastore.update(
+    batchSetPillSheets(
       batch,
-      updatedPillSheets,
+      pillSheets: updatedPillSheets,
     );
-    pillSheetGroupDatastore.updateWithBatch(batch, updatedPillSheetGroup);
+    batchSetPillSheetGroup(batch, pillSheetGroup: updatedPillSheetGroup);
 
     final before = pillSheetGroup.pillSheets[updatedIndexses.first];
     final after = updatedPillSheetGroup.pillSheets[updatedIndexses.last];
@@ -92,7 +103,7 @@ class TakePill {
       after: after,
       isQuickRecord: isQuickRecord,
     );
-    pillSheetModifiedHistoryDatastore.add(batch, history);
+    batchSetPillSheetModifiedHistory(batch, history: history);
 
     await batch.commit();
 
