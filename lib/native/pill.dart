@@ -4,6 +4,9 @@ import 'package:flutter_app_badger/flutter_app_badger.dart';
 import 'package:pilll/analytics.dart';
 import 'package:pilll/database/batch.dart';
 import 'package:pilll/database/database.dart';
+import 'package:pilll/provider/pill_sheet.dart';
+import 'package:pilll/provider/pill_sheet_group.dart';
+import 'package:pilll/provider/pill_sheet_modified_history.dart';
 import 'package:pilll/provider/take_pill.dart';
 import 'package:pilll/database/pill_sheet.dart';
 import 'package:pilll/database/pill_sheet_group.dart';
@@ -42,9 +45,9 @@ Future<PillSheetGroup?> quickRecordTakePill() async {
 
   final takePill = TakePill(
     batchFactory: batchFactory,
-    batchSetPillSheets: pillSheetDatastore,
-    batchSetPillSheetModifiedHistory: pillSheetModifiedHistoryDatastore,
-    batchSetPillSheetGroup: pillSheetGroupDatastore,
+    batchSetPillSheets: BatchSetPillSheets(database),
+    batchSetPillSheetModifiedHistory: BatchSetPillSheetModifiedHistory(database),
+    batchSetPillSheetGroup: BatchSetPillSheetGroup(database),
   );
   final updatedPillSheetGroup = await takePill(
     takenDate: takenDate,
