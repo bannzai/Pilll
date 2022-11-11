@@ -4,7 +4,7 @@ import 'package:flutter_app_badger/flutter_app_badger.dart';
 import 'package:pilll/analytics.dart';
 import 'package:pilll/database/batch.dart';
 import 'package:pilll/database/database.dart';
-import 'package:pilll/domain/record/util/take_pill.dart';
+import 'package:pilll/provider/take_pill.dart';
 import 'package:pilll/database/pill_sheet.dart';
 import 'package:pilll/database/pill_sheet_group.dart';
 import 'package:pilll/database/pill_sheet_modified_history.dart';
@@ -42,9 +42,9 @@ Future<PillSheetGroup?> recordPill() async {
 
   final takePill = TakePill(
     batchFactory: batchFactory,
-    pillSheetDatastore: pillSheetDatastore,
-    pillSheetModifiedHistoryDatastore: pillSheetModifiedHistoryDatastore,
-    pillSheetGroupDatastore: pillSheetGroupDatastore,
+    batchSetPillSheets: pillSheetDatastore,
+    batchSetPillSheetModifiedHistory: pillSheetModifiedHistoryDatastore,
+    batchSetPillSheetGroup: pillSheetGroupDatastore,
   );
   final updatedPillSheetGroup = await takePill(
     takenDate: takenDate,
