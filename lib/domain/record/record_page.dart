@@ -144,6 +144,7 @@ class RecordPageBody extends HookConsumerWidget {
     final pillSheetGroup = this.pillSheetGroup;
     final isAlreadyShowPremiumSurveyNotifier = ref.watch(boolSharedPreferencesProvider(BoolKey.isAlreadyShowPremiumSurvey).notifier);
     final activePillSheet = pillSheetGroup?.activedPillSheet;
+
     Future.microtask(() async {
       if (shouldShowMigrateInfo) {
         showDialog(
@@ -199,9 +200,7 @@ class RecordPageBody extends HookConsumerWidget {
     );
   }
 
-  Widget _content(
-    BuildContext context,
-  ) {
+  Widget _content(BuildContext context) {
     final pillSheetGroup = this.pillSheetGroup;
     final activedPillSheet = pillSheetGroup?.activedPillSheet;
     if (activedPillSheet == null || pillSheetGroup == null || pillSheetGroup.isDeactived) {
@@ -221,9 +220,10 @@ class RecordPageBody extends HookConsumerWidget {
           ),
           const SizedBox(height: 16),
           RecordPagePillSheetList(
-            state: state,
-            store: store,
+            pillSheetGroup: pillSheetGroup,
+            activePillSheet: activedPillSheet,
             setting: setting,
+            premiumAndTrial: premiumAndTrial,
           ),
         ],
       );
