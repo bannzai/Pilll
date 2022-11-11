@@ -14,7 +14,7 @@ class PremiumIntroductionFooterStateStore {
   /// Return value is used to display the completion snackbar
   Future<bool> restore() async {
     try {
-      final purchaserInfo = await Purchases.restoreTransactions();
+      final purchaserInfo = await Purchases.restorePurchases();
       final entitlements = purchaserInfo.entitlements.all[premiumEntitlements];
       analytics.logEvent(name: "proceed_restore_purchase_info", parameters: {
         "entitlements": entitlements?.identifier,
@@ -33,11 +33,9 @@ class PremiumIntroductionFooterStateStore {
       });
       throw AlertError("以前の購入情報が見つかりません。アカウントをお確かめの上再度お試しください");
     } on PlatformException catch (exception, stack) {
-      analytics.logEvent(name: "catched_restore_exception", parameters: {
-        "code": exception.code,
-        "details": exception.details.toString(),
-        "message": exception.message
-      });
+      analytics.logEvent(
+          name: "catched_restore_exception",
+          parameters: {"code": exception.code, "details": exception.details.toString(), "message": exception.message});
       final newException = mapToDisplayedException(exception);
       if (newException == null) {
         return Future.value(false);
@@ -45,8 +43,7 @@ class PremiumIntroductionFooterStateStore {
       errorLogger.recordError(exception, stack);
       throw newException;
     } catch (exception, stack) {
-      analytics
-          .logEvent(name: "catched_restore_anonymous_exception", parameters: {
+      analytics.logEvent(name: "catched_restore_anonymous_exception", parameters: {
         "exception_type": exception.runtimeType.toString(),
       });
       errorLogger.recordError(exception, stack);

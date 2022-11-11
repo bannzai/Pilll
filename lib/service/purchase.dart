@@ -26,7 +26,7 @@ class PurchaseService {
 
 const premiumEntitlements = "Premium";
 
-Future<void> callUpdatePurchaseInfo(PurchaserInfo info) async {
+Future<void> callUpdatePurchaseInfo(CustomerInfo info) async {
   analytics.logEvent(name: "start_update_purchase_info");
   final uid = FirebaseAuth.instance.currentUser?.uid;
   if (uid == null) {
@@ -60,7 +60,7 @@ Future<void> syncPurchaseInfo() async {
     return;
   }
 
-  PurchaserInfo purchaserInfo = await Purchases.getPurchaserInfo();
+  final purchaserInfo = await Purchases.getCustomerInfo();
   final premiumEntitlement = purchaserInfo.entitlements.all[premiumEntitlements];
   final isActivated = premiumEntitlement == null ? false : premiumEntitlement.isActive;
 
@@ -76,7 +76,7 @@ Future<void> syncPurchaseInfo() async {
 
 Future<void> initializePurchase(String uid) async {
   await Purchases.setDebugLogsEnabled(Environment.isDevelopment);
-  await Purchases.setup(Secret.revenueCatPublicAPIKey, appUserId: uid);
-  Purchases.addPurchaserInfoUpdateListener(callUpdatePurchaseInfo);
+  Purchases.configure(PurchasesConfiguration(Secret.revenueCatPublicAPIKey)..appUserID = uid);
+  Purchases.addCustomerInfoUpdateListener(callUpdatePurchaseInfo);
   await syncPurchaseInfo();
 }

@@ -20,7 +20,7 @@ import '../../helper/mock.mocks.dart';
 
 class _FakeOfferings extends Fake implements Offerings {}
 
-class _MonthlyFakeProduct extends Fake implements Product {
+class _MonthlyFakeProduct extends Fake implements StoreProduct {
   @override
   String get priceString => "";
   @override
@@ -29,10 +29,10 @@ class _MonthlyFakeProduct extends Fake implements Product {
 
 class _MonthlyFakePackage extends Fake implements Package {
   @override
-  Product get product => _MonthlyFakeProduct();
+  StoreProduct get storeProduct => _MonthlyFakeProduct();
 }
 
-class _AnnualFakeProduct extends Fake implements Product {
+class _AnnualFakeProduct extends Fake implements StoreProduct {
   @override
   String get priceString => "";
   @override
@@ -41,7 +41,7 @@ class _AnnualFakeProduct extends Fake implements Product {
 
 class _AnnualFakePackage extends Fake implements Package {
   @override
-  Product get product => _AnnualFakeProduct();
+  StoreProduct get storeProduct => _AnnualFakeProduct();
 }
 
 class _FakePremiumIntroductionState extends Fake implements PremiumIntroductionState {

@@ -99,7 +99,7 @@ class PremiumIntroductionStore extends StateNotifier<PremiumIntroductionState> {
   /// Return value is used to display the completion page
   Future<bool> purchase(Package package) async {
     try {
-      PurchaserInfo purchaserInfo = await Purchases.purchasePackage(package);
+      final purchaserInfo = await Purchases.purchasePackage(package);
       final premiumEntitlement =
           purchaserInfo.entitlements.all[premiumEntitlements];
       if (premiumEntitlement == null) {

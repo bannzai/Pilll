@@ -19,11 +19,9 @@ class AnnualPurchaseButton extends StatelessWidget {
   }) : super(key: key);
   @override
   Widget build(BuildContext context) {
-    final monthlyPrice = annualPackage.product.price / 12;
+    final monthlyPrice = annualPackage.storeProduct.price / 12;
     Locale locale = Localizations.localeOf(context);
-    final monthlyPriceString =
-        NumberFormat.simpleCurrency(locale: locale.toString(), decimalDigits: 0)
-            .format(monthlyPrice);
+    final monthlyPriceString = NumberFormat.simpleCurrency(locale: locale.toString(), decimalDigits: 0).format(monthlyPrice);
 
     return GestureDetector(
       onTap: () {
@@ -56,7 +54,7 @@ class AnnualPurchaseButton extends StatelessWidget {
                   ),
                 ),
                 Text(
-                  "${annualPackage.product.priceString}/年",
+                  "${annualPackage.storeProduct.priceString}/年",
                   style: const TextStyle(
                     color: TextColor.main,
                     fontFamily: FontFamily.japanese,
@@ -92,8 +90,7 @@ class AnnualPurchaseButton extends StatelessWidget {
 class _DiscountBadge extends StatelessWidget {
   final OfferingType offeringType;
 
-  const _DiscountBadge({Key? key, required this.offeringType})
-      : super(key: key);
+  const _DiscountBadge({Key? key, required this.offeringType}) : super(key: key);
   @override
   Widget build(BuildContext context) {
     return Container(
