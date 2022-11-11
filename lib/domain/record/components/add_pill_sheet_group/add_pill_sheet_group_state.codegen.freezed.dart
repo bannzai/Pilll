@@ -20,7 +20,7 @@ mixin _$AddPillSheetGroupState {
   Setting? get setting => throw _privateConstructorUsedError;
   PillSheetAppearanceMode get pillSheetAppearanceMode =>
       throw _privateConstructorUsedError;
-  DisplayNumberSetting? get displayNumberSetting =>
+  PillSheetGroupDisplayNumberSetting? get displayNumberSetting =>
       throw _privateConstructorUsedError;
 
   @JsonKey(ignore: true)
@@ -38,11 +38,11 @@ abstract class $AddPillSheetGroupStateCopyWith<$Res> {
       {PillSheetGroup? pillSheetGroup,
       Setting? setting,
       PillSheetAppearanceMode pillSheetAppearanceMode,
-      DisplayNumberSetting? displayNumberSetting});
+      PillSheetGroupDisplayNumberSetting? displayNumberSetting});
 
   $PillSheetGroupCopyWith<$Res>? get pillSheetGroup;
   $SettingCopyWith<$Res>? get setting;
-  $DisplayNumberSettingCopyWith<$Res>? get displayNumberSetting;
+  $PillSheetGroupDisplayNumberSettingCopyWith<$Res>? get displayNumberSetting;
 }
 
 /// @nodoc
@@ -80,7 +80,7 @@ class _$AddPillSheetGroupStateCopyWithImpl<$Res,
       displayNumberSetting: freezed == displayNumberSetting
           ? _value.displayNumberSetting
           : displayNumberSetting // ignore: cast_nullable_to_non_nullable
-              as DisplayNumberSetting?,
+              as PillSheetGroupDisplayNumberSetting?,
     ) as $Val);
   }
 
@@ -110,13 +110,13 @@ class _$AddPillSheetGroupStateCopyWithImpl<$Res,
 
   @override
   @pragma('vm:prefer-inline')
-  $DisplayNumberSettingCopyWith<$Res>? get displayNumberSetting {
+  $PillSheetGroupDisplayNumberSettingCopyWith<$Res>? get displayNumberSetting {
     if (_value.displayNumberSetting == null) {
       return null;
     }
 
-    return $DisplayNumberSettingCopyWith<$Res>(_value.displayNumberSetting!,
-        (value) {
+    return $PillSheetGroupDisplayNumberSettingCopyWith<$Res>(
+        _value.displayNumberSetting!, (value) {
       return _then(_value.copyWith(displayNumberSetting: value) as $Val);
     });
   }
@@ -134,14 +134,14 @@ abstract class _$$_AddPillSheetGroupStateCopyWith<$Res>
       {PillSheetGroup? pillSheetGroup,
       Setting? setting,
       PillSheetAppearanceMode pillSheetAppearanceMode,
-      DisplayNumberSetting? displayNumberSetting});
+      PillSheetGroupDisplayNumberSetting? displayNumberSetting});
 
   @override
   $PillSheetGroupCopyWith<$Res>? get pillSheetGroup;
   @override
   $SettingCopyWith<$Res>? get setting;
   @override
-  $DisplayNumberSettingCopyWith<$Res>? get displayNumberSetting;
+  $PillSheetGroupDisplayNumberSettingCopyWith<$Res>? get displayNumberSetting;
 }
 
 /// @nodoc
@@ -177,7 +177,7 @@ class __$$_AddPillSheetGroupStateCopyWithImpl<$Res>
       displayNumberSetting: freezed == displayNumberSetting
           ? _value.displayNumberSetting
           : displayNumberSetting // ignore: cast_nullable_to_non_nullable
-              as DisplayNumberSetting?,
+              as PillSheetGroupDisplayNumberSetting?,
     ));
   }
 }
@@ -199,7 +199,7 @@ class _$_AddPillSheetGroupState extends _AddPillSheetGroupState {
   @override
   final PillSheetAppearanceMode pillSheetAppearanceMode;
   @override
-  final DisplayNumberSetting? displayNumberSetting;
+  final PillSheetGroupDisplayNumberSetting? displayNumberSetting;
 
   @override
   String toString() {
@@ -238,7 +238,7 @@ abstract class _AddPillSheetGroupState extends AddPillSheetGroupState {
           {required final PillSheetGroup? pillSheetGroup,
           required final Setting? setting,
           required final PillSheetAppearanceMode pillSheetAppearanceMode,
-          final DisplayNumberSetting? displayNumberSetting}) =
+          final PillSheetGroupDisplayNumberSetting? displayNumberSetting}) =
       _$_AddPillSheetGroupState;
   _AddPillSheetGroupState._() : super._();
 
@@ -249,7 +249,7 @@ abstract class _AddPillSheetGroupState extends AddPillSheetGroupState {
   @override
   PillSheetAppearanceMode get pillSheetAppearanceMode;
   @override
-  DisplayNumberSetting? get displayNumberSetting;
+  PillSheetGroupDisplayNumberSetting? get displayNumberSetting;
   @override
   @JsonKey(ignore: true)
   _$$_AddPillSheetGroupStateCopyWith<_$_AddPillSheetGroupState> get copyWith =>

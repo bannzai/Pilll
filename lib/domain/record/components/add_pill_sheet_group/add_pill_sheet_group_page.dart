@@ -69,7 +69,7 @@ class AddPillSheetGroupPage extends HookConsumerWidget {
                       mainAxisSize: MainAxisSize.min,
                       children: [
                         if (pillSheetGroup != null) ...[
-                        DisplayNumberSetting(pillSheetAppearanceMode: setting.pillSheetAppearanceMode, pillSheetGroup: pillSheetGroup, onChanged: (value) { }),
+                        PillSheetGroupDisplayNumberSetting(pillSheetAppearanceMode: setting.pillSheetAppearanceMode, pillSheetGroup: pillSheetGroup, onChanged: (value) { }),
                         ]
                         const SizedBox(height: 24),
                         SizedBox(

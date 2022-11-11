@@ -1597,11 +1597,11 @@ class MockBatchSetPillSheetGroup extends _i1.Mock
         returnValue: _FakeDatabaseConnection_9(),
       ) as _i10.DatabaseConnection);
   @override
-  void call(
+  _i9.PillSheetGroup call(
     _i11.WriteBatch? batch,
     _i9.PillSheetGroup? pillSheetGroup,
   ) =>
-      super.noSuchMethod(
+      (super.noSuchMethod(
         Invocation.method(
           #call,
           [
@@ -1609,8 +1609,8 @@ class MockBatchSetPillSheetGroup extends _i1.Mock
             pillSheetGroup,
           ],
         ),
-        returnValueForMissingStub: null,
-      );
+        returnValue: _FakePillSheetGroup_8(),
+      ) as _i9.PillSheetGroup);
 }
 
 /// A class which mocks [BatchSetPillSheets].
@@ -1628,11 +1628,11 @@ class MockBatchSetPillSheets extends _i1.Mock
         returnValue: _FakeDatabaseConnection_9(),
       ) as _i10.DatabaseConnection);
   @override
-  void call(
+  List<_i2.PillSheet> call(
     _i11.WriteBatch? batch,
     List<_i2.PillSheet>? pillSheets,
   ) =>
-      super.noSuchMethod(
+      (super.noSuchMethod(
         Invocation.method(
           #call,
           [
@@ -1640,8 +1640,8 @@ class MockBatchSetPillSheets extends _i1.Mock
             pillSheets,
           ],
         ),
-        returnValueForMissingStub: null,
-      );
+        returnValue: <_i2.PillSheet>[],
+      ) as List<_i2.PillSheet>);
 }
 
 /// A class which mocks [BatchSetPillSheetModifiedHistory].

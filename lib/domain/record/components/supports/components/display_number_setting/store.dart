@@ -44,7 +44,7 @@ class DisplayNumberSettingStateStore extends StateNotifier<DisplayNumberSettingS
     if (displayNumberSetting == null) {
       state = state.copyWith(
         pillSheetGroup: state.pillSheetGroup.copyWith(
-          displayNumberSetting: DisplayNumberSetting(
+          displayNumberSetting: PillSheetGroupDisplayNumberSetting(
             beginPillNumber: beginDisplayPillNumber,
           ),
         ),
@@ -67,7 +67,7 @@ class DisplayNumberSettingStateStore extends StateNotifier<DisplayNumberSettingS
     if (displayNumberSetting == null) {
       state = state.copyWith(
         pillSheetGroup: state.pillSheetGroup.copyWith(
-          displayNumberSetting: DisplayNumberSetting(
+          displayNumberSetting: PillSheetGroupDisplayNumberSetting(
             endPillNumber: endDisplayPillNumber,
           ),
         ),

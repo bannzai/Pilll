@@ -75,7 +75,7 @@ class AddPillSheetGroupStateStore extends StateNotifier<AddPillSheetGroupState> 
     int beginDisplayPillNumber,
   ) {
     state = state.copyWith(
-        displayNumberSetting: DisplayNumberSetting(
+        displayNumberSetting: PillSheetGroupDisplayNumberSetting(
       beginPillNumber: beginDisplayPillNumber,
     ));
   }
@@ -112,7 +112,7 @@ class AddPillSheetGroupStateStore extends StateNotifier<AddPillSheetGroupState> 
             }
             final pillSheetGroup = state.pillSheetGroup;
             if (pillSheetGroup != null) {
-              return DisplayNumberSetting(
+              return PillSheetGroupDisplayNumberSetting(
                 beginPillNumber: pillSheetGroup.estimatedEndPillNumber + 1,
               );
             }

@@ -2824,9 +2824,9 @@ ChangedBeginDisplayNumberValue _$ChangedBeginDisplayNumberValueFromJson(
 
 /// @nodoc
 mixin _$ChangedBeginDisplayNumberValue {
-  DisplayNumberSetting? get beforeDisplayNumberSetting =>
+  PillSheetGroupDisplayNumberSetting? get beforeDisplayNumberSetting =>
       throw _privateConstructorUsedError;
-  DisplayNumberSetting get afterDisplayNumberSetting =>
+  PillSheetGroupDisplayNumberSetting get afterDisplayNumberSetting =>
       throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
@@ -2844,11 +2844,13 @@ abstract class $ChangedBeginDisplayNumberValueCopyWith<$Res> {
           ChangedBeginDisplayNumberValue>;
   @useResult
   $Res call(
-      {DisplayNumberSetting? beforeDisplayNumberSetting,
-      DisplayNumberSetting afterDisplayNumberSetting});
+      {PillSheetGroupDisplayNumberSetting? beforeDisplayNumberSetting,
+      PillSheetGroupDisplayNumberSetting afterDisplayNumberSetting});
 
-  $DisplayNumberSettingCopyWith<$Res>? get beforeDisplayNumberSetting;
-  $DisplayNumberSettingCopyWith<$Res> get afterDisplayNumberSetting;
+  $PillSheetGroupDisplayNumberSettingCopyWith<$Res>?
+      get beforeDisplayNumberSetting;
+  $PillSheetGroupDisplayNumberSettingCopyWith<$Res>
+      get afterDisplayNumberSetting;
 }
 
 /// @nodoc
@@ -2872,22 +2874,23 @@ class _$ChangedBeginDisplayNumberValueCopyWithImpl<$Res,
       beforeDisplayNumberSetting: freezed == beforeDisplayNumberSetting
           ? _value.beforeDisplayNumberSetting
           : beforeDisplayNumberSetting // ignore: cast_nullable_to_non_nullable
-              as DisplayNumberSetting?,
+              as PillSheetGroupDisplayNumberSetting?,
       afterDisplayNumberSetting: null == afterDisplayNumberSetting
           ? _value.afterDisplayNumberSetting
           : afterDisplayNumberSetting // ignore: cast_nullable_to_non_nullable
-              as DisplayNumberSetting,
+              as PillSheetGroupDisplayNumberSetting,
     ) as $Val);
   }
 
   @override
   @pragma('vm:prefer-inline')
-  $DisplayNumberSettingCopyWith<$Res>? get beforeDisplayNumberSetting {
+  $PillSheetGroupDisplayNumberSettingCopyWith<$Res>?
+      get beforeDisplayNumberSetting {
     if (_value.beforeDisplayNumberSetting == null) {
       return null;
     }
 
-    return $DisplayNumberSettingCopyWith<$Res>(
+    return $PillSheetGroupDisplayNumberSettingCopyWith<$Res>(
         _value.beforeDisplayNumberSetting!, (value) {
       return _then(_value.copyWith(beforeDisplayNumberSetting: value) as $Val);
     });
@@ -2895,9 +2898,10 @@ class _$ChangedBeginDisplayNumberValueCopyWithImpl<$Res,
 
   @override
   @pragma('vm:prefer-inline')
-  $DisplayNumberSettingCopyWith<$Res> get afterDisplayNumberSetting {
-    return $DisplayNumberSettingCopyWith<$Res>(_value.afterDisplayNumberSetting,
-        (value) {
+  $PillSheetGroupDisplayNumberSettingCopyWith<$Res>
+      get afterDisplayNumberSetting {
+    return $PillSheetGroupDisplayNumberSettingCopyWith<$Res>(
+        _value.afterDisplayNumberSetting, (value) {
       return _then(_value.copyWith(afterDisplayNumberSetting: value) as $Val);
     });
   }
@@ -2913,13 +2917,15 @@ abstract class _$$_ChangedBeginDisplayNumberValueCopyWith<$Res>
   @override
   @useResult
   $Res call(
-      {DisplayNumberSetting? beforeDisplayNumberSetting,
-      DisplayNumberSetting afterDisplayNumberSetting});
+      {PillSheetGroupDisplayNumberSetting? beforeDisplayNumberSetting,
+      PillSheetGroupDisplayNumberSetting afterDisplayNumberSetting});
 
   @override
-  $DisplayNumberSettingCopyWith<$Res>? get beforeDisplayNumberSetting;
+  $PillSheetGroupDisplayNumberSettingCopyWith<$Res>?
+      get beforeDisplayNumberSetting;
   @override
-  $DisplayNumberSettingCopyWith<$Res> get afterDisplayNumberSetting;
+  $PillSheetGroupDisplayNumberSettingCopyWith<$Res>
+      get afterDisplayNumberSetting;
 }
 
 /// @nodoc
@@ -2942,11 +2948,11 @@ class __$$_ChangedBeginDisplayNumberValueCopyWithImpl<$Res>
       beforeDisplayNumberSetting: freezed == beforeDisplayNumberSetting
           ? _value.beforeDisplayNumberSetting
           : beforeDisplayNumberSetting // ignore: cast_nullable_to_non_nullable
-              as DisplayNumberSetting?,
+              as PillSheetGroupDisplayNumberSetting?,
       afterDisplayNumberSetting: null == afterDisplayNumberSetting
           ? _value.afterDisplayNumberSetting
           : afterDisplayNumberSetting // ignore: cast_nullable_to_non_nullable
-              as DisplayNumberSetting,
+              as PillSheetGroupDisplayNumberSetting,
     ));
   }
 }
@@ -2966,9 +2972,9 @@ class _$_ChangedBeginDisplayNumberValue
       _$$_ChangedBeginDisplayNumberValueFromJson(json);
 
   @override
-  final DisplayNumberSetting? beforeDisplayNumberSetting;
+  final PillSheetGroupDisplayNumberSetting? beforeDisplayNumberSetting;
   @override
-  final DisplayNumberSetting afterDisplayNumberSetting;
+  final PillSheetGroupDisplayNumberSetting afterDisplayNumberSetting;
 
   @override
   String toString() {
@@ -3012,18 +3018,19 @@ class _$_ChangedBeginDisplayNumberValue
 abstract class _ChangedBeginDisplayNumberValue
     extends ChangedBeginDisplayNumberValue {
   const factory _ChangedBeginDisplayNumberValue(
-          {required final DisplayNumberSetting? beforeDisplayNumberSetting,
-          required final DisplayNumberSetting afterDisplayNumberSetting}) =
-      _$_ChangedBeginDisplayNumberValue;
+      {required final PillSheetGroupDisplayNumberSetting?
+          beforeDisplayNumberSetting,
+      required final PillSheetGroupDisplayNumberSetting
+          afterDisplayNumberSetting}) = _$_ChangedBeginDisplayNumberValue;
   const _ChangedBeginDisplayNumberValue._() : super._();
 
   factory _ChangedBeginDisplayNumberValue.fromJson(Map<String, dynamic> json) =
       _$_ChangedBeginDisplayNumberValue.fromJson;
 
   @override
-  DisplayNumberSetting? get beforeDisplayNumberSetting;
+  PillSheetGroupDisplayNumberSetting? get beforeDisplayNumberSetting;
   @override
-  DisplayNumberSetting get afterDisplayNumberSetting;
+  PillSheetGroupDisplayNumberSetting get afterDisplayNumberSetting;
   @override
   @JsonKey(ignore: true)
   _$$_ChangedBeginDisplayNumberValueCopyWith<_$_ChangedBeginDisplayNumberValue>
@@ -3037,9 +3044,9 @@ ChangedEndDisplayNumberValue _$ChangedEndDisplayNumberValueFromJson(
 
 /// @nodoc
 mixin _$ChangedEndDisplayNumberValue {
-  DisplayNumberSetting? get beforeDisplayNumberSetting =>
+  PillSheetGroupDisplayNumberSetting? get beforeDisplayNumberSetting =>
       throw _privateConstructorUsedError;
-  DisplayNumberSetting get afterDisplayNumberSetting =>
+  PillSheetGroupDisplayNumberSetting get afterDisplayNumberSetting =>
       throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
@@ -3057,11 +3064,13 @@ abstract class $ChangedEndDisplayNumberValueCopyWith<$Res> {
           ChangedEndDisplayNumberValue>;
   @useResult
   $Res call(
-      {DisplayNumberSetting? beforeDisplayNumberSetting,
-      DisplayNumberSetting afterDisplayNumberSetting});
+      {PillSheetGroupDisplayNumberSetting? beforeDisplayNumberSetting,
+      PillSheetGroupDisplayNumberSetting afterDisplayNumberSetting});
 
-  $DisplayNumberSettingCopyWith<$Res>? get beforeDisplayNumberSetting;
-  $DisplayNumberSettingCopyWith<$Res> get afterDisplayNumberSetting;
+  $PillSheetGroupDisplayNumberSettingCopyWith<$Res>?
+      get beforeDisplayNumberSetting;
+  $PillSheetGroupDisplayNumberSettingCopyWith<$Res>
+      get afterDisplayNumberSetting;
 }
 
 /// @nodoc
@@ -3085,22 +3094,23 @@ class _$ChangedEndDisplayNumberValueCopyWithImpl<$Res,
       beforeDisplayNumberSetting: freezed == beforeDisplayNumberSetting
           ? _value.beforeDisplayNumberSetting
           : beforeDisplayNumberSetting // ignore: cast_nullable_to_non_nullable
-              as DisplayNumberSetting?,
+              as PillSheetGroupDisplayNumberSetting?,
       afterDisplayNumberSetting: null == afterDisplayNumberSetting
           ? _value.afterDisplayNumberSetting
           : afterDisplayNumberSetting // ignore: cast_nullable_to_non_nullable
-              as DisplayNumberSetting,
+              as PillSheetGroupDisplayNumberSetting,
     ) as $Val);
   }
 
   @override
   @pragma('vm:prefer-inline')
-  $DisplayNumberSettingCopyWith<$Res>? get beforeDisplayNumberSetting {
+  $PillSheetGroupDisplayNumberSettingCopyWith<$Res>?
+      get beforeDisplayNumberSetting {
     if (_value.beforeDisplayNumberSetting == null) {
       return null;
     }
 
-    return $DisplayNumberSettingCopyWith<$Res>(
+    return $PillSheetGroupDisplayNumberSettingCopyWith<$Res>(
         _value.beforeDisplayNumberSetting!, (value) {
       return _then(_value.copyWith(beforeDisplayNumberSetting: value) as $Val);
     });
@@ -3108,9 +3118,10 @@ class _$ChangedEndDisplayNumberValueCopyWithImpl<$Res,
 
   @override
   @pragma('vm:prefer-inline')
-  $DisplayNumberSettingCopyWith<$Res> get afterDisplayNumberSetting {
-    return $DisplayNumberSettingCopyWith<$Res>(_value.afterDisplayNumberSetting,
-        (value) {
+  $PillSheetGroupDisplayNumberSettingCopyWith<$Res>
+      get afterDisplayNumberSetting {
+    return $PillSheetGroupDisplayNumberSettingCopyWith<$Res>(
+        _value.afterDisplayNumberSetting, (value) {
       return _then(_value.copyWith(afterDisplayNumberSetting: value) as $Val);
     });
   }
@@ -3126,13 +3137,15 @@ abstract class _$$_ChangedEndDisplayNumberValueCopyWith<$Res>
   @override
   @useResult
   $Res call(
-      {DisplayNumberSetting? beforeDisplayNumberSetting,
-      DisplayNumberSetting afterDisplayNumberSetting});
+      {PillSheetGroupDisplayNumberSetting? beforeDisplayNumberSetting,
+      PillSheetGroupDisplayNumberSetting afterDisplayNumberSetting});
 
   @override
-  $DisplayNumberSettingCopyWith<$Res>? get beforeDisplayNumberSetting;
+  $PillSheetGroupDisplayNumberSettingCopyWith<$Res>?
+      get beforeDisplayNumberSetting;
   @override
-  $DisplayNumberSettingCopyWith<$Res> get afterDisplayNumberSetting;
+  $PillSheetGroupDisplayNumberSettingCopyWith<$Res>
+      get afterDisplayNumberSetting;
 }
 
 /// @nodoc
@@ -3155,11 +3168,11 @@ class __$$_ChangedEndDisplayNumberValueCopyWithImpl<$Res>
       beforeDisplayNumberSetting: freezed == beforeDisplayNumberSetting
           ? _value.beforeDisplayNumberSetting
           : beforeDisplayNumberSetting // ignore: cast_nullable_to_non_nullable
-              as DisplayNumberSetting?,
+              as PillSheetGroupDisplayNumberSetting?,
       afterDisplayNumberSetting: null == afterDisplayNumberSetting
           ? _value.afterDisplayNumberSetting
           : afterDisplayNumberSetting // ignore: cast_nullable_to_non_nullable
-              as DisplayNumberSetting,
+              as PillSheetGroupDisplayNumberSetting,
     ));
   }
 }
@@ -3177,9 +3190,9 @@ class _$_ChangedEndDisplayNumberValue extends _ChangedEndDisplayNumberValue {
       _$$_ChangedEndDisplayNumberValueFromJson(json);
 
   @override
-  final DisplayNumberSetting? beforeDisplayNumberSetting;
+  final PillSheetGroupDisplayNumberSetting? beforeDisplayNumberSetting;
   @override
-  final DisplayNumberSetting afterDisplayNumberSetting;
+  final PillSheetGroupDisplayNumberSetting afterDisplayNumberSetting;
 
   @override
   String toString() {
@@ -3223,18 +3236,19 @@ class _$_ChangedEndDisplayNumberValue extends _ChangedEndDisplayNumberValue {
 abstract class _ChangedEndDisplayNumberValue
     extends ChangedEndDisplayNumberValue {
   const factory _ChangedEndDisplayNumberValue(
-          {required final DisplayNumberSetting? beforeDisplayNumberSetting,
-          required final DisplayNumberSetting afterDisplayNumberSetting}) =
-      _$_ChangedEndDisplayNumberValue;
+      {required final PillSheetGroupDisplayNumberSetting?
+          beforeDisplayNumberSetting,
+      required final PillSheetGroupDisplayNumberSetting
+          afterDisplayNumberSetting}) = _$_ChangedEndDisplayNumberValue;
   const _ChangedEndDisplayNumberValue._() : super._();
 
   factory _ChangedEndDisplayNumberValue.fromJson(Map<String, dynamic> json) =
       _$_ChangedEndDisplayNumberValue.fromJson;
 
   @override
-  DisplayNumberSetting? get beforeDisplayNumberSetting;
+  PillSheetGroupDisplayNumberSetting? get beforeDisplayNumberSetting;
   @override
-  DisplayNumberSetting get afterDisplayNumberSetting;
+  PillSheetGroupDisplayNumberSetting get afterDisplayNumberSetting;
   @override
   @JsonKey(ignore: true)
   _$$_ChangedEndDisplayNumberValueCopyWith<_$_ChangedEndDisplayNumberValue>

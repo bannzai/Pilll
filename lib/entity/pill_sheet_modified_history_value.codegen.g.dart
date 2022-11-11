@@ -284,9 +284,9 @@ _$_ChangedBeginDisplayNumberValue _$$_ChangedBeginDisplayNumberValueFromJson(
     _$_ChangedBeginDisplayNumberValue(
       beforeDisplayNumberSetting: json['beforeDisplayNumberSetting'] == null
           ? null
-          : DisplayNumberSetting.fromJson(
+          : PillSheetGroupDisplayNumberSetting.fromJson(
               json['beforeDisplayNumberSetting'] as Map<String, dynamic>),
-      afterDisplayNumberSetting: DisplayNumberSetting.fromJson(
+      afterDisplayNumberSetting: PillSheetGroupDisplayNumberSetting.fromJson(
           json['afterDisplayNumberSetting'] as Map<String, dynamic>),
     );
 
@@ -303,9 +303,9 @@ _$_ChangedEndDisplayNumberValue _$$_ChangedEndDisplayNumberValueFromJson(
     _$_ChangedEndDisplayNumberValue(
       beforeDisplayNumberSetting: json['beforeDisplayNumberSetting'] == null
           ? null
-          : DisplayNumberSetting.fromJson(
+          : PillSheetGroupDisplayNumberSetting.fromJson(
               json['beforeDisplayNumberSetting'] as Map<String, dynamic>),
-      afterDisplayNumberSetting: DisplayNumberSetting.fromJson(
+      afterDisplayNumberSetting: PillSheetGroupDisplayNumberSetting.fromJson(
           json['afterDisplayNumberSetting'] as Map<String, dynamic>),
     );
 

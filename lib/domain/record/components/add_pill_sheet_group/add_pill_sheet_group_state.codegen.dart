@@ -10,7 +10,7 @@ class AddPillSheetGroupState with _$AddPillSheetGroupState {
     required PillSheetGroup? pillSheetGroup,
     required Setting? setting,
     required PillSheetAppearanceMode pillSheetAppearanceMode,
-    DisplayNumberSetting? displayNumberSetting,
+    PillSheetGroupDisplayNumberSetting? displayNumberSetting,
   }) = _AddPillSheetGroupState;
   AddPillSheetGroupState._();
 }

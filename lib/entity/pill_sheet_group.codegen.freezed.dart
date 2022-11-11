@@ -32,7 +32,7 @@ mixin _$PillSheetGroup {
       fromJson: TimestampConverter.timestampToDateTime,
       toJson: TimestampConverter.dateTimeToTimestamp)
   DateTime? get deletedAt => throw _privateConstructorUsedError;
-  DisplayNumberSetting? get displayNumberSetting =>
+  PillSheetGroupDisplayNumberSetting? get displayNumberSetting =>
       throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
@@ -56,9 +56,9 @@ abstract class $PillSheetGroupCopyWith<$Res> {
           DateTime createdAt,
       @JsonKey(fromJson: TimestampConverter.timestampToDateTime, toJson: TimestampConverter.dateTimeToTimestamp)
           DateTime? deletedAt,
-      DisplayNumberSetting? displayNumberSetting});
+      PillSheetGroupDisplayNumberSetting? displayNumberSetting});
 
-  $DisplayNumberSettingCopyWith<$Res>? get displayNumberSetting;
+  $PillSheetGroupDisplayNumberSettingCopyWith<$Res>? get displayNumberSetting;
 }
 
 /// @nodoc
@@ -105,19 +105,19 @@ class _$PillSheetGroupCopyWithImpl<$Res, $Val extends PillSheetGroup>
       displayNumberSetting: freezed == displayNumberSetting
           ? _value.displayNumberSetting
           : displayNumberSetting // ignore: cast_nullable_to_non_nullable
-              as DisplayNumberSetting?,
+              as PillSheetGroupDisplayNumberSetting?,
     ) as $Val);
   }
 
   @override
   @pragma('vm:prefer-inline')
-  $DisplayNumberSettingCopyWith<$Res>? get displayNumberSetting {
+  $PillSheetGroupDisplayNumberSettingCopyWith<$Res>? get displayNumberSetting {
     if (_value.displayNumberSetting == null) {
       return null;
     }
 
-    return $DisplayNumberSettingCopyWith<$Res>(_value.displayNumberSetting!,
-        (value) {
+    return $PillSheetGroupDisplayNumberSettingCopyWith<$Res>(
+        _value.displayNumberSetting!, (value) {
       return _then(_value.copyWith(displayNumberSetting: value) as $Val);
     });
   }
@@ -140,10 +140,10 @@ abstract class _$$_PillSheetGroupCopyWith<$Res>
           DateTime createdAt,
       @JsonKey(fromJson: TimestampConverter.timestampToDateTime, toJson: TimestampConverter.dateTimeToTimestamp)
           DateTime? deletedAt,
-      DisplayNumberSetting? displayNumberSetting});
+      PillSheetGroupDisplayNumberSetting? displayNumberSetting});
 
   @override
-  $DisplayNumberSettingCopyWith<$Res>? get displayNumberSetting;
+  $PillSheetGroupDisplayNumberSettingCopyWith<$Res>? get displayNumberSetting;
 }
 
 /// @nodoc
@@ -188,7 +188,7 @@ class __$$_PillSheetGroupCopyWithImpl<$Res>
       displayNumberSetting: freezed == displayNumberSetting
           ? _value.displayNumberSetting
           : displayNumberSetting // ignore: cast_nullable_to_non_nullable
-              as DisplayNumberSetting?,
+              as PillSheetGroupDisplayNumberSetting?,
     ));
   }
 }
@@ -242,7 +242,7 @@ class _$_PillSheetGroup extends _PillSheetGroup {
       toJson: TimestampConverter.dateTimeToTimestamp)
   final DateTime? deletedAt;
   @override
-  final DisplayNumberSetting? displayNumberSetting;
+  final PillSheetGroupDisplayNumberSetting? displayNumberSetting;
 
   @override
   String toString() {
@@ -302,7 +302,7 @@ abstract class _PillSheetGroup extends PillSheetGroup {
           required final DateTime createdAt,
       @JsonKey(fromJson: TimestampConverter.timestampToDateTime, toJson: TimestampConverter.dateTimeToTimestamp)
           final DateTime? deletedAt,
-      final DisplayNumberSetting? displayNumberSetting}) = _$_PillSheetGroup;
+      final PillSheetGroupDisplayNumberSetting? displayNumberSetting}) = _$_PillSheetGroup;
   const _PillSheetGroup._() : super._();
 
   factory _PillSheetGroup.fromJson(Map<String, dynamic> json) =
@@ -326,42 +326,46 @@ abstract class _PillSheetGroup extends PillSheetGroup {
       toJson: TimestampConverter.dateTimeToTimestamp)
   DateTime? get deletedAt;
   @override
-  DisplayNumberSetting? get displayNumberSetting;
+  PillSheetGroupDisplayNumberSetting? get displayNumberSetting;
   @override
   @JsonKey(ignore: true)
   _$$_PillSheetGroupCopyWith<_$_PillSheetGroup> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
-DisplayNumberSetting _$DisplayNumberSettingFromJson(Map<String, dynamic> json) {
-  return _DisplayNumberSetting.fromJson(json);
+PillSheetGroupDisplayNumberSetting _$PillSheetGroupDisplayNumberSettingFromJson(
+    Map<String, dynamic> json) {
+  return _PillSheetGroupDisplayNumberSetting.fromJson(json);
 }
 
 /// @nodoc
-mixin _$DisplayNumberSetting {
+mixin _$PillSheetGroupDisplayNumberSetting {
   int? get beginPillNumber => throw _privateConstructorUsedError;
   int? get endPillNumber => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
-  $DisplayNumberSettingCopyWith<DisplayNumberSetting> get copyWith =>
-      throw _privateConstructorUsedError;
+  $PillSheetGroupDisplayNumberSettingCopyWith<
+          PillSheetGroupDisplayNumberSetting>
+      get copyWith => throw _privateConstructorUsedError;
 }
 
 /// @nodoc
-abstract class $DisplayNumberSettingCopyWith<$Res> {
-  factory $DisplayNumberSettingCopyWith(DisplayNumberSetting value,
-          $Res Function(DisplayNumberSetting) then) =
-      _$DisplayNumberSettingCopyWithImpl<$Res, DisplayNumberSetting>;
+abstract class $PillSheetGroupDisplayNumberSettingCopyWith<$Res> {
+  factory $PillSheetGroupDisplayNumberSettingCopyWith(
+          PillSheetGroupDisplayNumberSetting value,
+          $Res Function(PillSheetGroupDisplayNumberSetting) then) =
+      _$PillSheetGroupDisplayNumberSettingCopyWithImpl<$Res,
+          PillSheetGroupDisplayNumberSetting>;
   @useResult
   $Res call({int? beginPillNumber, int? endPillNumber});
 }
 
 /// @nodoc
-class _$DisplayNumberSettingCopyWithImpl<$Res,
-        $Val extends DisplayNumberSetting>
-    implements $DisplayNumberSettingCopyWith<$Res> {
-  _$DisplayNumberSettingCopyWithImpl(this._value, this._then);
+class _$PillSheetGroupDisplayNumberSettingCopyWithImpl<$Res,
+        $Val extends PillSheetGroupDisplayNumberSetting>
+    implements $PillSheetGroupDisplayNumberSettingCopyWith<$Res> {
+  _$PillSheetGroupDisplayNumberSettingCopyWithImpl(this._value, this._then);
 
   // ignore: unused_field
   final $Val _value;
@@ -388,22 +392,25 @@ class _$DisplayNumberSettingCopyWithImpl<$Res,
 }
 
 /// @nodoc
-abstract class _$$_DisplayNumberSettingCopyWith<$Res>
-    implements $DisplayNumberSettingCopyWith<$Res> {
-  factory _$$_DisplayNumberSettingCopyWith(_$_DisplayNumberSetting value,
-          $Res Function(_$_DisplayNumberSetting) then) =
-      __$$_DisplayNumberSettingCopyWithImpl<$Res>;
+abstract class _$$_PillSheetGroupDisplayNumberSettingCopyWith<$Res>
+    implements $PillSheetGroupDisplayNumberSettingCopyWith<$Res> {
+  factory _$$_PillSheetGroupDisplayNumberSettingCopyWith(
+          _$_PillSheetGroupDisplayNumberSetting value,
+          $Res Function(_$_PillSheetGroupDisplayNumberSetting) then) =
+      __$$_PillSheetGroupDisplayNumberSettingCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call({int? beginPillNumber, int? endPillNumber});
 }
 
 /// @nodoc
-class __$$_DisplayNumberSettingCopyWithImpl<$Res>
-    extends _$DisplayNumberSettingCopyWithImpl<$Res, _$_DisplayNumberSetting>
-    implements _$$_DisplayNumberSettingCopyWith<$Res> {
-  __$$_DisplayNumberSettingCopyWithImpl(_$_DisplayNumberSetting _value,
-      $Res Function(_$_DisplayNumberSetting) _then)
+class __$$_PillSheetGroupDisplayNumberSettingCopyWithImpl<$Res>
+    extends _$PillSheetGroupDisplayNumberSettingCopyWithImpl<$Res,
+        _$_PillSheetGroupDisplayNumberSetting>
+    implements _$$_PillSheetGroupDisplayNumberSettingCopyWith<$Res> {
+  __$$_PillSheetGroupDisplayNumberSettingCopyWithImpl(
+      _$_PillSheetGroupDisplayNumberSetting _value,
+      $Res Function(_$_PillSheetGroupDisplayNumberSetting) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -412,7 +419,7 @@ class __$$_DisplayNumberSettingCopyWithImpl<$Res>
     Object? beginPillNumber = freezed,
     Object? endPillNumber = freezed,
   }) {
-    return _then(_$_DisplayNumberSetting(
+    return _then(_$_PillSheetGroupDisplayNumberSetting(
       beginPillNumber: freezed == beginPillNumber
           ? _value.beginPillNumber
           : beginPillNumber // ignore: cast_nullable_to_non_nullable
@@ -428,11 +435,14 @@ class __$$_DisplayNumberSettingCopyWithImpl<$Res>
 /// @nodoc
 
 @JsonSerializable(explicitToJson: true)
-class _$_DisplayNumberSetting implements _DisplayNumberSetting {
-  const _$_DisplayNumberSetting({this.beginPillNumber, this.endPillNumber});
+class _$_PillSheetGroupDisplayNumberSetting
+    implements _PillSheetGroupDisplayNumberSetting {
+  const _$_PillSheetGroupDisplayNumberSetting(
+      {this.beginPillNumber, this.endPillNumber});
 
-  factory _$_DisplayNumberSetting.fromJson(Map<String, dynamic> json) =>
-      _$$_DisplayNumberSettingFromJson(json);
+  factory _$_PillSheetGroupDisplayNumberSetting.fromJson(
+          Map<String, dynamic> json) =>
+      _$$_PillSheetGroupDisplayNumberSettingFromJson(json);
 
   @override
   final int? beginPillNumber;
@@ -441,14 +451,14 @@ class _$_DisplayNumberSetting implements _DisplayNumberSetting {
 
   @override
   String toString() {
-    return 'DisplayNumberSetting(beginPillNumber: $beginPillNumber, endPillNumber: $endPillNumber)';
+    return 'PillSheetGroupDisplayNumberSetting(beginPillNumber: $beginPillNumber, endPillNumber: $endPillNumber)';
   }
 
   @override
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_DisplayNumberSetting &&
+            other is _$_PillSheetGroupDisplayNumberSetting &&
             (identical(other.beginPillNumber, beginPillNumber) ||
                 other.beginPillNumber == beginPillNumber) &&
             (identical(other.endPillNumber, endPillNumber) ||
@@ -462,25 +472,28 @@ class _$_DisplayNumberSetting implements _DisplayNumberSetting {
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$_DisplayNumberSettingCopyWith<_$_DisplayNumberSetting> get copyWith =>
-      __$$_DisplayNumberSettingCopyWithImpl<_$_DisplayNumberSetting>(
-          this, _$identity);
+  _$$_PillSheetGroupDisplayNumberSettingCopyWith<
+          _$_PillSheetGroupDisplayNumberSetting>
+      get copyWith => __$$_PillSheetGroupDisplayNumberSettingCopyWithImpl<
+          _$_PillSheetGroupDisplayNumberSetting>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_DisplayNumberSettingToJson(
+    return _$$_PillSheetGroupDisplayNumberSettingToJson(
       this,
     );
   }
 }
 
-abstract class _DisplayNumberSetting implements DisplayNumberSetting {
-  const factory _DisplayNumberSetting(
+abstract class _PillSheetGroupDisplayNumberSetting
+    implements PillSheetGroupDisplayNumberSetting {
+  const factory _PillSheetGroupDisplayNumberSetting(
       {final int? beginPillNumber,
-      final int? endPillNumber}) = _$_DisplayNumberSetting;
+      final int? endPillNumber}) = _$_PillSheetGroupDisplayNumberSetting;
 
-  factory _DisplayNumberSetting.fromJson(Map<String, dynamic> json) =
-      _$_DisplayNumberSetting.fromJson;
+  factory _PillSheetGroupDisplayNumberSetting.fromJson(
+          Map<String, dynamic> json) =
+      _$_PillSheetGroupDisplayNumberSetting.fromJson;
 
   @override
   int? get beginPillNumber;
@@ -488,6 +501,7 @@ abstract class _DisplayNumberSetting implements DisplayNumberSetting {
   int? get endPillNumber;
   @override
   @JsonKey(ignore: true)
-  _$$_DisplayNumberSettingCopyWith<_$_DisplayNumberSetting> get copyWith =>
-      throw _privateConstructorUsedError;
+  _$$_PillSheetGroupDisplayNumberSettingCopyWith<
+          _$_PillSheetGroupDisplayNumberSetting>
+      get copyWith => throw _privateConstructorUsedError;
 }

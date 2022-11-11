@@ -14,9 +14,7 @@ class PillSheetModifiedHistoryValue with _$PillSheetModifiedHistoryValue {
   const factory PillSheetModifiedHistoryValue({
     DateTime? beginTrialDate,
     @Default(null) CreatedPillSheetValue? createdPillSheet,
-    @Default(null)
-        AutomaticallyRecordedLastTakenDateValue?
-            automaticallyRecordedLastTakenDate,
+    @Default(null) AutomaticallyRecordedLastTakenDateValue? automaticallyRecordedLastTakenDate,
     @Default(null) DeletedPillSheetValue? deletedPillSheet,
     @Default(null) TakenPillValue? takenPill,
     @Default(null) RevertTakenPillValue? revertTakenPill,
@@ -28,8 +26,7 @@ class PillSheetModifiedHistoryValue with _$PillSheetModifiedHistoryValue {
     @Default(null) ChangedEndDisplayNumberValue? changedEndDisplayNumber,
   }) = _PillSheetModifiedHistoryValue;
 
-  factory PillSheetModifiedHistoryValue.fromJson(Map<String, dynamic> json) =>
-      _$PillSheetModifiedHistoryValueFromJson(json);
+  factory PillSheetModifiedHistoryValue.fromJson(Map<String, dynamic> json) => _$PillSheetModifiedHistoryValueFromJson(json);
 }
 
 @freezed
@@ -46,13 +43,11 @@ class CreatedPillSheetValue with _$CreatedPillSheetValue {
         List<String> pillSheetIDs,
   }) = _CreatedPillSheetValue;
 
-  factory CreatedPillSheetValue.fromJson(Map<String, dynamic> json) =>
-      _$CreatedPillSheetValueFromJson(json);
+  factory CreatedPillSheetValue.fromJson(Map<String, dynamic> json) => _$CreatedPillSheetValueFromJson(json);
 }
 
 @freezed
-class AutomaticallyRecordedLastTakenDateValue
-    with _$AutomaticallyRecordedLastTakenDateValue {
+class AutomaticallyRecordedLastTakenDateValue with _$AutomaticallyRecordedLastTakenDateValue {
   const AutomaticallyRecordedLastTakenDateValue._();
   @JsonSerializable(explicitToJson: true)
   const factory AutomaticallyRecordedLastTakenDateValue({
@@ -70,9 +65,7 @@ class AutomaticallyRecordedLastTakenDateValue
     required int afterLastTakenPillNumber,
   }) = _AutomaticallyRecordedLastTakenDateValue;
 
-  factory AutomaticallyRecordedLastTakenDateValue.fromJson(
-          Map<String, dynamic> json) =>
-      _$AutomaticallyRecordedLastTakenDateValueFromJson(json);
+  factory AutomaticallyRecordedLastTakenDateValue.fromJson(Map<String, dynamic> json) => _$AutomaticallyRecordedLastTakenDateValueFromJson(json);
 }
 
 @freezed
@@ -89,8 +82,7 @@ class DeletedPillSheetValue with _$DeletedPillSheetValue {
         List<String> pillSheetIDs,
   }) = _DeletedPillSheetValue;
 
-  factory DeletedPillSheetValue.fromJson(Map<String, dynamic> json) =>
-      _$DeletedPillSheetValueFromJson(json);
+  factory DeletedPillSheetValue.fromJson(Map<String, dynamic> json) => _$DeletedPillSheetValueFromJson(json);
 }
 
 @freezed
@@ -115,8 +107,7 @@ class TakenPillValue with _$TakenPillValue {
     TakenPillEditedValue? edited,
   }) = _TakenPillValue;
 
-  factory TakenPillValue.fromJson(Map<String, dynamic> json) =>
-      _$TakenPillValueFromJson(json);
+  factory TakenPillValue.fromJson(Map<String, dynamic> json) => _$TakenPillValueFromJson(json);
 }
 
 @freezed
@@ -142,8 +133,7 @@ class TakenPillEditedValue with _$TakenPillEditedValue {
   }) = _TakenPillEditedValue;
   const TakenPillEditedValue._();
 
-  factory TakenPillEditedValue.fromJson(Map<String, dynamic> json) =>
-      _$TakenPillEditedValueFromJson(json);
+  factory TakenPillEditedValue.fromJson(Map<String, dynamic> json) => _$TakenPillEditedValueFromJson(json);
 }
 
 @freezed
@@ -165,8 +155,7 @@ class RevertTakenPillValue with _$RevertTakenPillValue {
     required int afterLastTakenPillNumber,
   }) = _RevertTakenPillValue;
 
-  factory RevertTakenPillValue.fromJson(Map<String, dynamic> json) =>
-      _$RevertTakenPillValueFromJson(json);
+  factory RevertTakenPillValue.fromJson(Map<String, dynamic> json) => _$RevertTakenPillValueFromJson(json);
 }
 
 @freezed
@@ -192,8 +181,7 @@ class ChangedPillNumberValue with _$ChangedPillNumberValue {
         int afterGroupIndex,
   }) = _ChangedPillNumberValue;
 
-  factory ChangedPillNumberValue.fromJson(Map<String, dynamic> json) =>
-      _$ChangedPillNumberValueFromJson(json);
+  factory ChangedPillNumberValue.fromJson(Map<String, dynamic> json) => _$ChangedPillNumberValueFromJson(json);
 }
 
 @freezed
@@ -213,8 +201,7 @@ class EndedPillSheetValue with _$EndedPillSheetValue {
         required DateTime lastTakenDate,
   }) = _EndedPillSheetValue;
 
-  factory EndedPillSheetValue.fromJson(Map<String, dynamic> json) =>
-      _$EndedPillSheetValueFromJson(json);
+  factory EndedPillSheetValue.fromJson(Map<String, dynamic> json) => _$EndedPillSheetValueFromJson(json);
 }
 
 @freezed
@@ -225,8 +212,7 @@ class BeganRestDurationValue with _$BeganRestDurationValue {
     required RestDuration restDuration,
   }) = _BeganRestDurationValue;
 
-  factory BeganRestDurationValue.fromJson(Map<String, dynamic> json) =>
-      _$BeganRestDurationValueFromJson(json);
+  factory BeganRestDurationValue.fromJson(Map<String, dynamic> json) => _$BeganRestDurationValueFromJson(json);
 }
 
 @freezed
@@ -237,8 +223,7 @@ class EndedRestDurationValue with _$EndedRestDurationValue {
     required RestDuration restDuration,
   }) = _EndedRestDurationValue;
 
-  factory EndedRestDurationValue.fromJson(Map<String, dynamic> json) =>
-      _$EndedRestDurationValueFromJson(json);
+  factory EndedRestDurationValue.fromJson(Map<String, dynamic> json) => _$EndedRestDurationValueFromJson(json);
 }
 
 @freezed
@@ -246,12 +231,11 @@ class ChangedBeginDisplayNumberValue with _$ChangedBeginDisplayNumberValue {
   const ChangedBeginDisplayNumberValue._();
   @JsonSerializable(explicitToJson: true)
   const factory ChangedBeginDisplayNumberValue({
-    required DisplayNumberSetting? beforeDisplayNumberSetting,
-    required DisplayNumberSetting afterDisplayNumberSetting,
+    required PillSheetGroupDisplayNumberSetting? beforeDisplayNumberSetting,
+    required PillSheetGroupDisplayNumberSetting afterDisplayNumberSetting,
   }) = _ChangedBeginDisplayNumberValue;
 
-  factory ChangedBeginDisplayNumberValue.fromJson(Map<String, dynamic> json) =>
-      _$ChangedBeginDisplayNumberValueFromJson(json);
+  factory ChangedBeginDisplayNumberValue.fromJson(Map<String, dynamic> json) => _$ChangedBeginDisplayNumberValueFromJson(json);
 }
 
 @freezed
@@ -259,10 +243,9 @@ class ChangedEndDisplayNumberValue with _$ChangedEndDisplayNumberValue {
   const ChangedEndDisplayNumberValue._();
   @JsonSerializable(explicitToJson: true)
   const factory ChangedEndDisplayNumberValue({
-    required DisplayNumberSetting? beforeDisplayNumberSetting,
-    required DisplayNumberSetting afterDisplayNumberSetting,
+    required PillSheetGroupDisplayNumberSetting? beforeDisplayNumberSetting,
+    required PillSheetGroupDisplayNumberSetting afterDisplayNumberSetting,
   }) = _ChangedEndDisplayNumberValue;
 
-  factory ChangedEndDisplayNumberValue.fromJson(Map<String, dynamic> json) =>
-      _$ChangedEndDisplayNumberValueFromJson(json);
+  factory ChangedEndDisplayNumberValue.fromJson(Map<String, dynamic> json) => _$ChangedEndDisplayNumberValueFromJson(json);
 }

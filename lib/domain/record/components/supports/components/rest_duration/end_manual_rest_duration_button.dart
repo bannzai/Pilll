@@ -193,7 +193,7 @@ class EndRestDurationModal extends HookConsumerWidget {
     final offsetPillNumber = pillSheetGroup.displayNumberSetting;
     final PillSheetGroup updatedPillSheetGroup;
     if (offsetPillNumber == null) {
-      final newDisplayNumberSetting = DisplayNumberSetting(endPillNumber: end);
+      final newDisplayNumberSetting = PillSheetGroupDisplayNumberSetting(endPillNumber: end);
       updatedPillSheetGroup = pillSheetGroup.copyWith(displayNumberSetting: newDisplayNumberSetting);
     } else {
       final newDisplayNumberSetting = offsetPillNumber.copyWith(endPillNumber: end);

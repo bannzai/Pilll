@@ -40,7 +40,7 @@ class AddPillSheetGroup {
     required Setting setting,
     required PillSheetGroup? pillSheetGroup,
     required List<PillSheetType> pillSheetTypes,
-    required DisplayNumberSetting? displayNumberSetting,
+    required PillSheetGroupDisplayNumberSetting? displayNumberSetting,
   }) async {
     final batch = batchFactory.batch();
 
@@ -72,7 +72,7 @@ class AddPillSheetGroup {
               return displayNumberSetting;
             }
             if (pillSheetGroup != null) {
-              return DisplayNumberSetting(
+              return PillSheetGroupDisplayNumberSetting(
                 beginPillNumber: pillSheetGroup.estimatedEndPillNumber + 1,
               );
             }
