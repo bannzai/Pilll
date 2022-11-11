@@ -9,7 +9,7 @@ class BatchSetPillSheetGroup {
   final DatabaseConnection databaseConnection;
   BatchSetPillSheetGroup(this.databaseConnection);
 
-  void call(WriteBatch batch, {required PillSheetGroup pillSheetGroup}) async {
+  void call(WriteBatch batch, PillSheetGroup pillSheetGroup) async {
     batch.set(databaseConnection.pillSheetGroupReference(pillSheetGroup.id), pillSheetGroup, SetOptions(merge: true));
   }
 }

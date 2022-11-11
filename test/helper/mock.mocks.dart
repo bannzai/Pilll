@@ -1589,14 +1589,16 @@ class MockBatchSetPillSheetGroup extends _i1.Mock
       ) as _i10.DatabaseConnection);
   @override
   void call(
-    _i11.WriteBatch? batch, {
+    _i11.WriteBatch? batch,
     _i9.PillSheetGroup? pillSheetGroup,
-  }) =>
+  ) =>
       super.noSuchMethod(
         Invocation.method(
           #call,
-          [batch],
-          {#pillSheetGroup: pillSheetGroup},
+          [
+            batch,
+            pillSheetGroup,
+          ],
         ),
         returnValueForMissingStub: null,
       );
@@ -1618,14 +1620,16 @@ class MockBatchSetPillSheets extends _i1.Mock
       ) as _i10.DatabaseConnection);
   @override
   void call(
-    _i11.WriteBatch? batch, {
+    _i11.WriteBatch? batch,
     List<_i2.PillSheet>? pillSheets,
-  }) =>
+  ) =>
       super.noSuchMethod(
         Invocation.method(
           #call,
-          [batch],
-          {#pillSheets: pillSheets},
+          [
+            batch,
+            pillSheets,
+          ],
         ),
         returnValueForMissingStub: null,
       );
@@ -1647,14 +1651,16 @@ class MockBatchSetPillSheetModifiedHistory extends _i1.Mock
       ) as _i10.DatabaseConnection);
   @override
   void call(
-    _i11.WriteBatch? batch, {
+    _i11.WriteBatch? batch,
     _i32.PillSheetModifiedHistory? history,
-  }) =>
+  ) =>
       super.noSuchMethod(
         Invocation.method(
           #call,
-          [batch],
-          {#history: history},
+          [
+            batch,
+            history,
+          ],
         ),
         returnValueForMissingStub: null,
       );

@@ -79,9 +79,9 @@ class RevertTakePill {
     final batch = batchFactory.batch();
     batchSetPillSheets(
       batch,
-      pillSheets: updatedPillSheets,
+      updatedPillSheets,
     );
-    batchSetPillSheetGroup(batch, pillSheetGroup: updatedPillSheetGroup);
+    batchSetPillSheetGroup(batch, updatedPillSheetGroup);
 
     final before = pillSheetGroup.pillSheets[updatedIndexses.last];
     final after = updatedPillSheetGroup.pillSheets[updatedIndexses.first];
@@ -90,7 +90,7 @@ class RevertTakePill {
       before: before,
       after: after,
     );
-    batchSetPillSheetModifiedHistory(batch, history: history);
+    batchSetPillSheetModifiedHistory(batch, history);
 
     await batch.commit();
 

@@ -9,7 +9,7 @@ class BatchSetPillSheetModifiedHistory {
   final DatabaseConnection databaseConnection;
   BatchSetPillSheetModifiedHistory(this.databaseConnection);
 
-  void call(WriteBatch batch, {required PillSheetModifiedHistory history}) async {
+  void call(WriteBatch batch, PillSheetModifiedHistory history) async {
     batch.set(databaseConnection.pillSheetModifiedHistoryReference(pillSheetModifiedHistoryID: null), history, SetOptions(merge: true));
   }
 }

@@ -90,9 +90,9 @@ class TakePill {
     final batch = batchFactory.batch();
     batchSetPillSheets(
       batch,
-      pillSheets: updatedPillSheets,
+      updatedPillSheets,
     );
-    batchSetPillSheetGroup(batch, pillSheetGroup: updatedPillSheetGroup);
+    batchSetPillSheetGroup(batch, updatedPillSheetGroup);
 
     final before = pillSheetGroup.pillSheets[updatedIndexses.first];
     final after = updatedPillSheetGroup.pillSheets[updatedIndexses.last];
@@ -103,7 +103,7 @@ class TakePill {
       after: after,
       isQuickRecord: isQuickRecord,
     );
-    batchSetPillSheetModifiedHistory(batch, history: history);
+    batchSetPillSheetModifiedHistory(batch, history);
 
     await batch.commit();
 

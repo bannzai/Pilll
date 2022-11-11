@@ -73,11 +73,11 @@ class EndManualRestDurationButton extends HookConsumerWidget {
         ),
     );
     final updatedPillSheetGroup = pillSheetGroup.replaced(updatedPillSheet);
-    batchSetPillSheets(batch, pillSheets: updatedPillSheetGroup.pillSheets);
-    batchSetPillSheetGroup(batch, pillSheetGroup: updatedPillSheetGroup);
+    batchSetPillSheets(batch, updatedPillSheetGroup.pillSheets);
+    batchSetPillSheetGroup(batch, updatedPillSheetGroup);
     batchSetPillSheetModifiedHistory(
       batch,
-      history: PillSheetModifiedHistoryServiceActionFactory.createEndedRestDurationAction(
+      PillSheetModifiedHistoryServiceActionFactory.createEndedRestDurationAction(
         pillSheetGroupID: pillSheetGroup.id,
         before: activedPillSheet,
         after: updatedPillSheet,

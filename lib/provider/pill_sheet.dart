@@ -9,7 +9,7 @@ class BatchSetPillSheets {
   final DatabaseConnection databaseConnection;
   BatchSetPillSheets(this.databaseConnection);
 
-  void call(WriteBatch batch, {required List<PillSheet> pillSheets}) async {
+  void call(WriteBatch batch, List<PillSheet> pillSheets) async {
     for (var pillSheet in pillSheets) {
       batch.set(databaseConnection.pillSheetReference(pillSheet.id), pillSheet, SetOptions(merge: true));
     }
