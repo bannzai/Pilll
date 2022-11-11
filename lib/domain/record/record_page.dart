@@ -21,6 +21,7 @@ import 'package:hooks_riverpod/hooks_riverpod.dart';
 import 'package:pilll/native/widget.dart';
 import 'package:pilll/provider/premium_and_trial.codegen.dart';
 import 'package:pilll/provider/root.dart';
+import 'package:pilll/provider/setting.dart';
 import 'package:pilll/provider/shared_preference.dart';
 import 'package:pilll/provider/shared_preferences.dart';
 import 'package:pilll/service/auth.dart';
@@ -31,13 +32,18 @@ class RecordPage extends HookConsumerWidget {
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {
-    final state = ref.watch(recordPageStateNotifierProvider);
+    final premiumAndTrial = ref.watch(premiumAndTrialProvider);
+    final setting = ref.watch(settingProvider);
+    final latestPillSheetGroup = ref.watch(latestPillSheetGroupStreamProvider);
     useAutomaticKeepAlive(wantKeepAlive: true);
 
     useEffect(() {
       final f = (() async {
+        if (premiumAndTrial.isLoading) {
+          return;
+        }
         try {
-          syncUserStatus(premiumAndTrial: state.asData?.value.premiumAndTrial);
+          syncUserStatus(premiumAndTrial: premiumAndTrial.asData?.value);
         } catch (error) {
           debugPrint(error.toString());
         }
@@ -45,12 +51,15 @@ class RecordPage extends HookConsumerWidget {
 
       f();
       return null;
-    }, [state.asData?.value.premiumAndTrial]);
+    }, [premiumAndTrial.asData?.value]);
 
     useEffect(() {
       final f = (() async {
+        if (setting.isLoading) {
+          return;
+        }
         try {
-          syncSetting(setting: state.asData?.value.setting);
+          syncSetting(setting: setting.asData?.value);
         } catch (error) {
           debugPrint(error.toString());
         }
@@ -58,12 +67,15 @@ class RecordPage extends HookConsumerWidget {
 
       f();
       return null;
-    }, [state.asData?.value.setting]);
+    }, [setting.asData?.value]);
 
     useEffect(() {
       final f = (() async {
+        if (latestPillSheetGroup.isLoading) {
+          return;
+        }
         try {
-          syncActivePillSheetValue(pillSheetGroup: state.asData?.value.pillSheetGroup);
+          syncActivePillSheetValue(pillSheetGroup: latestPillSheetGroup.asData?.value);
         } catch (error) {
           debugPrint(error.toString());
         }
@@ -71,7 +83,7 @@ class RecordPage extends HookConsumerWidget {
 
       f();
       return null;
-    }, [state.asData?.value.pillSheetGroup]);
+    }, [latestPillSheetGroup.asData?.value]);
 
     final isLinked = ref.watch(isLinkedProvider);
     return AsyncValueGroup.group6(

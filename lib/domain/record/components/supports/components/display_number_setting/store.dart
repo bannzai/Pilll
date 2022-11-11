@@ -7,19 +7,16 @@ import 'package:pilll/database/pill_sheet_modified_history.dart';
 import 'state.codegen.dart';
 import 'package:riverpod/riverpod.dart';
 
-final displayNumberSettingStateStoreProvider =
-    StateNotifierProvider.autoDispose<DisplayNumberSettingStateStore,
-        DisplayNumberSettingState>((ref) {
+final displayNumberSettingStateStoreProvider = StateNotifierProvider.autoDispose<DisplayNumberSettingStateStore, DisplayNumberSettingState>((ref) {
   return DisplayNumberSettingStateStore(
     ref.watch(batchFactoryProvider),
     ref.watch(pillSheetGroupDatastoreProvider),
     ref.watch(pillSheetModifiedHistoryDatastoreProvider),
-    pillSheetGroup: ref.watch(recordPageStateNotifierProvider).value!.pillSheetGroup!,
+    pillSheetGroup: ref.watch(latestPillSheetGroupStreamProvider).requireValue!,
   );
 });
 
-class DisplayNumberSettingStateStore
-    extends StateNotifier<DisplayNumberSettingState> {
+class DisplayNumberSettingStateStore extends StateNotifier<DisplayNumberSettingState> {
   final BatchFactory _batchFactory;
   final PillSheetGroupDatastore _pillSheetGroupDatastore;
   final PillSheetModifiedHistoryDatastore _pillSheetModifiedHistoryDatastore;
@@ -37,8 +34,7 @@ class DisplayNumberSettingStateStore
   }
 
   void setup() async {
-    final beforePillSheetGroup =
-        await _pillSheetGroupDatastore.fetchBeforePillSheetGroup();
+    final beforePillSheetGroup = await _pillSheetGroupDatastore.fetchBeforePillSheetGroup();
     state = state.copyWith(beforePillSheetGroup: beforePillSheetGroup);
   }
 
@@ -95,29 +91,23 @@ class DisplayNumberSettingStateStore
     }
 
     final batch = _batchFactory.batch();
-    if (displayNumberSetting.beginPillNumber !=
-        state.originalPillSheetGroup.displayNumberSetting?.beginPillNumber) {
+    if (displayNumberSetting.beginPillNumber != state.originalPillSheetGroup.displayNumberSetting?.beginPillNumber) {
       _pillSheetModifiedHistoryDatastore.add(
         batch,
-        PillSheetModifiedHistoryServiceActionFactory
-            .createChangedBeginDisplayNumberAction(
+        PillSheetModifiedHistoryServiceActionFactory.createChangedBeginDisplayNumberAction(
           pillSheetGroupID: state.pillSheetGroup.id,
-          beforeDisplayNumberSetting:
-              state.originalPillSheetGroup.displayNumberSetting,
+          beforeDisplayNumberSetting: state.originalPillSheetGroup.displayNumberSetting,
           afterDisplayNumberSetting: displayNumberSetting,
         ),
       );
     }
 
-    if (displayNumberSetting.endPillNumber !=
-        state.originalPillSheetGroup.displayNumberSetting?.endPillNumber) {
+    if (displayNumberSetting.endPillNumber != state.originalPillSheetGroup.displayNumberSetting?.endPillNumber) {
       _pillSheetModifiedHistoryDatastore.add(
         batch,
-        PillSheetModifiedHistoryServiceActionFactory
-            .createChangedEndDisplayNumberAction(
+        PillSheetModifiedHistoryServiceActionFactory.createChangedEndDisplayNumberAction(
           pillSheetGroupID: state.pillSheetGroup.id,
-          beforeDisplayNumberSetting:
-              state.originalPillSheetGroup.displayNumberSetting,
+          beforeDisplayNumberSetting: state.originalPillSheetGroup.displayNumberSetting,
           afterDisplayNumberSetting: displayNumberSetting,
         ),
       );
