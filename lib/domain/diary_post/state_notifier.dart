@@ -21,7 +21,7 @@ class DiaryPostStateNotifier extends StateNotifier<AsyncValue<DiaryPostState>> {
   }
 
   void addPhysicalCondition(String physicalCondition) {
-    state = AsyncValue.data(value.copyWith(diary: value.diary.copyWith(physicalConditions: value.diary.physicalConditions..add(physicalCondition))));
+    state = AsyncValue.data(value.copyWith(diary: value.diary.copyWith(physicalConditions: [...value.diary.physicalConditions, physicalCondition])));
   }
 
   void switchingPhysicalCondition(PhysicalConditionStatus status) {

@@ -83,7 +83,7 @@ class BeginManualRestDurationButton extends HookConsumerWidget {
       createdDate: now(),
     );
     final updatedPillSheet = activedPillSheet.copyWith(
-      restDurations: activedPillSheet.restDurations..add(restDuration),
+      restDurations: [...activedPillSheet.restDurations, restDuration],
     );
     final updatedPillSheetGroup = pillSheetGroup.replaced(updatedPillSheet);
     batchSetPillSheets(batch, updatedPillSheetGroup.pillSheets);
