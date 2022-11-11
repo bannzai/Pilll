@@ -37,6 +37,7 @@ import 'package:pilll/domain/settings/setting_page_async_action.dart' as _i14;
 import 'package:pilll/domain/settings/setting_page_state.codegen.dart' as _i41;
 import 'package:pilll/domain/settings/setting_page_state_notifier.dart' as _i40;
 import 'package:pilll/entity/diary.codegen.dart' as _i4;
+import 'package:pilll/entity/diary_setting.codegen.dart' as _i46;
 import 'package:pilll/entity/menstruation.codegen.dart' as _i5;
 import 'package:pilll/entity/pill_sheet.codegen.dart' as _i2;
 import 'package:pilll/entity/pill_sheet_group.codegen.dart' as _i9;
@@ -44,8 +45,10 @@ import 'package:pilll/entity/pill_sheet_modified_history.codegen.dart' as _i32;
 import 'package:pilll/entity/pill_sheet_modified_history_value.codegen.dart'
     as _i38;
 import 'package:pilll/entity/pill_sheet_type.dart' as _i39;
+import 'package:pilll/entity/pilll_ads.codegen.dart' as _i48;
 import 'package:pilll/entity/reminder_notification_customization.codegen.dart'
     as _i13;
+import 'package:pilll/entity/schedule.codegen.dart' as _i47;
 import 'package:pilll/entity/setting.codegen.dart' as _i3;
 import 'package:pilll/entity/user.codegen.dart' as _i6;
 import 'package:pilll/provider/pill_sheet.dart' as _i43;
@@ -107,6 +110,12 @@ class _FakeSettingPageAsyncAction_14 extends _i1.Fake
     implements _i14.SettingPageAsyncAction {}
 
 class _FakeAsyncValue_15<T> extends _i1.Fake implements _i15.AsyncValue<T> {}
+
+class _FakeDocumentReference_16<T extends Object?> extends _i1.Fake
+    implements _i11.DocumentReference<T> {}
+
+class _FakeCollectionReference_17<T extends Object?> extends _i1.Fake
+    implements _i11.CollectionReference<T> {}
 
 /// A class which mocks [PillSheetDatastore].
 ///
@@ -1713,4 +1722,194 @@ class MockSetPillSheetGroup extends _i1.Mock implements _i42.SetPillSheetGroup {
         returnValue: Future<void>.value(),
         returnValueForMissingStub: Future<void>.value(),
       ) as _i19.Future<void>);
+}
+
+/// A class which mocks [DatabaseConnection].
+///
+/// See the documentation for Mockito's code generation for more information.
+class MockDatabaseConnection extends _i1.Mock
+    implements _i10.DatabaseConnection {
+  MockDatabaseConnection() {
+    _i1.throwOnMissingStub(this);
+  }
+
+  @override
+  String get userID => (super.noSuchMethod(
+        Invocation.getter(#userID),
+        returnValue: '',
+      ) as String);
+  @override
+  _i11.DocumentReference<_i6.User> userReference() => (super.noSuchMethod(
+        Invocation.method(
+          #userReference,
+          [],
+        ),
+        returnValue: _FakeDocumentReference_16<_i6.User>(),
+      ) as _i11.DocumentReference<_i6.User>);
+  @override
+  _i11.DocumentReference<Object?> userRawReference() => (super.noSuchMethod(
+        Invocation.method(
+          #userRawReference,
+          [],
+        ),
+        returnValue: _FakeDocumentReference_16<Object?>(),
+      ) as _i11.DocumentReference<Object?>);
+  @override
+  _i11.DocumentReference<_i46.DiarySetting> diarySettingReference() =>
+      (super.noSuchMethod(
+        Invocation.method(
+          #diarySettingReference,
+          [],
+        ),
+        returnValue: _FakeDocumentReference_16<_i46.DiarySetting>(),
+      ) as _i11.DocumentReference<_i46.DiarySetting>);
+  @override
+  _i11.CollectionReference<_i2.PillSheet> pillSheetsReference() =>
+      (super.noSuchMethod(
+        Invocation.method(
+          #pillSheetsReference,
+          [],
+        ),
+        returnValue: _FakeCollectionReference_17<_i2.PillSheet>(),
+      ) as _i11.CollectionReference<_i2.PillSheet>);
+  @override
+  _i11.DocumentReference<_i2.PillSheet> pillSheetReference(
+          String? pillSheetID) =>
+      (super.noSuchMethod(
+        Invocation.method(
+          #pillSheetReference,
+          [pillSheetID],
+        ),
+        returnValue: _FakeDocumentReference_16<_i2.PillSheet>(),
+      ) as _i11.DocumentReference<_i2.PillSheet>);
+  @override
+  _i11.CollectionReference<_i4.Diary> diariesReference() => (super.noSuchMethod(
+        Invocation.method(
+          #diariesReference,
+          [],
+        ),
+        returnValue: _FakeCollectionReference_17<_i4.Diary>(),
+      ) as _i11.CollectionReference<_i4.Diary>);
+  @override
+  _i11.DocumentReference<_i4.Diary> diaryReference(_i4.Diary? diary) =>
+      (super.noSuchMethod(
+        Invocation.method(
+          #diaryReference,
+          [diary],
+        ),
+        returnValue: _FakeDocumentReference_16<_i4.Diary>(),
+      ) as _i11.DocumentReference<_i4.Diary>);
+  @override
+  _i11.DocumentReference<Object?> userPrivateRawReference() =>
+      (super.noSuchMethod(
+        Invocation.method(
+          #userPrivateRawReference,
+          [],
+        ),
+        returnValue: _FakeDocumentReference_16<Object?>(),
+      ) as _i11.DocumentReference<Object?>);
+  @override
+  _i11.CollectionReference<_i5.Menstruation> menstruationsReference() =>
+      (super.noSuchMethod(
+        Invocation.method(
+          #menstruationsReference,
+          [],
+        ),
+        returnValue: _FakeCollectionReference_17<_i5.Menstruation>(),
+      ) as _i11.CollectionReference<_i5.Menstruation>);
+  @override
+  _i11.DocumentReference<_i5.Menstruation> menstruationReference(
+          String? menstruationID) =>
+      (super.noSuchMethod(
+        Invocation.method(
+          #menstruationReference,
+          [menstruationID],
+        ),
+        returnValue: _FakeDocumentReference_16<_i5.Menstruation>(),
+      ) as _i11.DocumentReference<_i5.Menstruation>);
+  @override
+  _i11.CollectionReference<_i32.PillSheetModifiedHistory>
+      pillSheetModifiedHistoriesReference() => (super.noSuchMethod(
+            Invocation.method(
+              #pillSheetModifiedHistoriesReference,
+              [],
+            ),
+            returnValue:
+                _FakeCollectionReference_17<_i32.PillSheetModifiedHistory>(),
+          ) as _i11.CollectionReference<_i32.PillSheetModifiedHistory>);
+  @override
+  _i11.DocumentReference<_i32.PillSheetModifiedHistory>
+      pillSheetModifiedHistoryReference({String? pillSheetModifiedHistoryID}) =>
+          (super.noSuchMethod(
+            Invocation.method(
+              #pillSheetModifiedHistoryReference,
+              [],
+              {#pillSheetModifiedHistoryID: pillSheetModifiedHistoryID},
+            ),
+            returnValue:
+                _FakeDocumentReference_16<_i32.PillSheetModifiedHistory>(),
+          ) as _i11.DocumentReference<_i32.PillSheetModifiedHistory>);
+  @override
+  _i11.CollectionReference<_i9.PillSheetGroup> pillSheetGroupsReference() =>
+      (super.noSuchMethod(
+        Invocation.method(
+          #pillSheetGroupsReference,
+          [],
+        ),
+        returnValue: _FakeCollectionReference_17<_i9.PillSheetGroup>(),
+      ) as _i11.CollectionReference<_i9.PillSheetGroup>);
+  @override
+  _i11.DocumentReference<_i9.PillSheetGroup> pillSheetGroupReference(
+          String? pillSheetGroupID) =>
+      (super.noSuchMethod(
+        Invocation.method(
+          #pillSheetGroupReference,
+          [pillSheetGroupID],
+        ),
+        returnValue: _FakeDocumentReference_16<_i9.PillSheetGroup>(),
+      ) as _i11.DocumentReference<_i9.PillSheetGroup>);
+  @override
+  _i11.CollectionReference<_i47.Schedule> schedulesReference() =>
+      (super.noSuchMethod(
+        Invocation.method(
+          #schedulesReference,
+          [],
+        ),
+        returnValue: _FakeCollectionReference_17<_i47.Schedule>(),
+      ) as _i11.CollectionReference<_i47.Schedule>);
+  @override
+  _i11.DocumentReference<_i47.Schedule> scheduleReference(String? scheduleID) =>
+      (super.noSuchMethod(
+        Invocation.method(
+          #scheduleReference,
+          [scheduleID],
+        ),
+        returnValue: _FakeDocumentReference_16<_i47.Schedule>(),
+      ) as _i11.DocumentReference<_i47.Schedule>);
+  @override
+  _i11.DocumentReference<_i48.PilllAds?> pilllAds() => (super.noSuchMethod(
+        Invocation.method(
+          #pilllAds,
+          [],
+        ),
+        returnValue: _FakeDocumentReference_16<_i48.PilllAds?>(),
+      ) as _i11.DocumentReference<_i48.PilllAds?>);
+  @override
+  _i19.Future<T> transaction<T>(
+          _i11.TransactionHandler<T>? transactionHandler) =>
+      (super.noSuchMethod(
+        Invocation.method(
+          #transaction,
+          [transactionHandler],
+        ),
+        returnValue: Future<T>.value(null),
+      ) as _i19.Future<T>);
+  @override
+  _i11.WriteBatch batch() => (super.noSuchMethod(
+        Invocation.method(
+          #batch,
+          [],
+        ),
+        returnValue: _FakeWriteBatch_10(),
+      ) as _i11.WriteBatch);
 }

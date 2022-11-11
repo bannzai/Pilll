@@ -1,4 +1,5 @@
 import 'package:pilll/analytics.dart';
+import 'package:pilll/database/database.dart';
 import 'package:pilll/domain/record/components/button/cancel_button.dart';
 import 'package:pilll/domain/record/components/button/record_page_button.dart';
 import 'package:pilll/domain/record/components/button/taken_button.dart';
