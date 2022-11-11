@@ -70,12 +70,12 @@ void main() {
 
         final batchSetPillSheets = MockBatchSetPillSheets();
         final updatedActivePillSheet = activedPillSheet.copyWith(lastTakenDate: takenDate);
-        when(batchSetPillSheets(batch, pillSheets: [updatedActivePillSheet])).thenReturn(null);
+        when(batchSetPillSheets(batch, [updatedActivePillSheet])).thenReturn(null);
 
         final batchSetPillSheetModifiedHistory = MockBatchSetPillSheetModifiedHistory();
         final history = PillSheetModifiedHistoryServiceActionFactory.createTakenPillAction(
             pillSheetGroupID: pillSheetGroup.id, isQuickRecord: false, before: activedPillSheet, after: updatedActivePillSheet);
-        when(batchSetPillSheetModifiedHistory(batch, history: history)).thenReturn(null);
+        when(batchSetPillSheetModifiedHistory(batch, history)).thenReturn(null);
 
         final batchSetPillSheetGroup = MockBatchSetPillSheetGroup();
         final updatedPillSheetGroup = pillSheetGroup.copyWith(pillSheets: [updatedActivePillSheet]);
