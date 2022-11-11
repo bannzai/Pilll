@@ -9,6 +9,17 @@ import 'package:pilll/provider/pill_sheet_group.dart';
 import 'package:pilll/provider/pill_sheet_modified_history.dart';
 import 'package:pilll/provider/setting.dart';
 import 'package:pilll/util/datetime/day.dart';
+import 'package:riverpod/riverpod.dart';
+
+final addPillSheetGroupProvider = Provider(
+  (ref) => AddPillSheetGroup(
+    batchFactory: ref.watch(batchFactoryProvider),
+    batchSetPillSheetGroup: ref.watch(batchSetPillSheetGroupProvider),
+    batchSetPillSheetModifiedHistory: ref.watch(batchSetPillSheetModifiedHistoryProvider),
+    batchSetPillSheets: ref.watch(batchSetPillSheetsProvider),
+    batchSetSetting: ref.watch(batchSetSettingProvider),
+  ),
+);
 
 class AddPillSheetGroup {
   final BatchFactory batchFactory;

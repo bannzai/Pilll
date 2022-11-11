@@ -42,7 +42,7 @@ class AddPillSheetGroupEmptyFrame extends StatelessWidget {
       ),
       onTap: () async {
         analytics.logEvent(name: "adding_pill_sheet_tapped");
-        Navigator.of(context).push(AddPillSheetGroupPageRoute.route());
+        Navigator.of(context).push(AddPillSheetGroupPageRoute.route(setting: setting));
       },
     );
   }

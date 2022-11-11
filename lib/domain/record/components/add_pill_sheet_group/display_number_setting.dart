@@ -6,33 +6,31 @@ import 'package:pilll/analytics.dart';
 import 'package:pilll/components/atoms/color.dart';
 import 'package:pilll/components/atoms/font.dart';
 import 'package:pilll/components/atoms/text_color.dart';
-import 'package:pilll/domain/record/components/add_pill_sheet_group/add_pill_sheet_group_state.codegen.dart';
-import 'package:pilll/domain/record/components/add_pill_sheet_group/add_pill_sheet_group_store.dart';
+import 'package:pilll/entity/pill_sheet_group.codegen.dart';
 import 'package:pilll/entity/setting.codegen.dart';
 import 'package:pilll/util/formatter/text_input_formatter.dart';
 
 class DisplayNumberSetting extends HookConsumerWidget {
-  final AddPillSheetGroupStateStore store;
-  final AddPillSheetGroupState state;
+  final PillSheetAppearanceMode pillSheetAppearanceMode;
+  final PillSheetGroup pillSheetGroup;
+  final Function(int) onChanged;
 
   const DisplayNumberSetting({
     Key? key,
-    required this.store,
-    required this.state,
+    required this.pillSheetAppearanceMode,
+    required this.pillSheetGroup,
+    required this.onChanged,
   }) : super(key: key);
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {
-    final pillSheetGroup = state.pillSheetGroup;
-    if (pillSheetGroup == null ||
-        state.pillSheetAppearanceMode != PillSheetAppearanceMode.sequential) {
+    if (pillSheetAppearanceMode != PillSheetAppearanceMode.sequential) {
       return Container();
     }
 
     final estimatedEndPillNumber = pillSheetGroup.estimatedEndPillNumber;
     final beginDisplayPillNumber = useState(estimatedEndPillNumber + 1);
-    final textFieldController =
-        useTextEditingController(text: "${beginDisplayPillNumber.value}");
+    final textFieldController = useTextEditingController(text: "${beginDisplayPillNumber.value}");
 
     return Column(
       crossAxisAlignment: CrossAxisAlignment.center,
@@ -78,12 +76,9 @@ class DisplayNumberSetting extends HookConsumerWidget {
                 ),
                 onChanged: (text) {
                   try {
-                    analytics.logEvent(
-                        name: "on_changed_display_number",
-                        parameters: {"text": text});
+                    analytics.logEvent(name: "on_changed_display_number", parameters: {"text": text});
                     beginDisplayPillNumber.value = int.parse(text);
-                    store.setBeginDisplayPillNumber(
-                        beginDisplayPillNumber.value);
+                    store.setBeginDisplayPillNumber(beginDisplayPillNumber.value);
                   } catch (_) {}
                 },
               ),
