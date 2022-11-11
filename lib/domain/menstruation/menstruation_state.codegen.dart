@@ -13,6 +13,7 @@ import 'package:pilll/entity/pill_sheet_group.codegen.dart';
 import 'package:pilll/entity/schedule.codegen.dart';
 import 'package:pilll/entity/setting.codegen.dart';
 import 'package:pilll/provider/premium_and_trial.codegen.dart';
+import 'package:pilll/provider/setting.dart';
 import 'package:pilll/util/datetime/date_compare.dart';
 import 'package:pilll/util/formatter/date_time_formatter.dart';
 import 'package:pilll/entity/weekday.dart';
@@ -27,7 +28,7 @@ final todayCalendarPageIndex =
 final menstruationPageStateProvider = Provider<AsyncValue<MenstruationState>>((ref) {
   final latestPillSheetGroup = ref.watch(latestPillSheetGroupStreamProvider);
   final premiumAndTrial = ref.watch(premiumAndTrialProvider);
-  final setting = ref.watch(settingStreamProvider);
+  final setting = ref.watch(settingProvider);
   final diaries = ref.watch(diariesStreamAround90Days(today()));
   final menstruations = ref.watch(allMenstruationStreamProvider);
   final schedules = ref.watch(schedulesAround90Days(today()));

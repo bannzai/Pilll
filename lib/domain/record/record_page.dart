@@ -88,7 +88,7 @@ class RecordPage extends HookConsumerWidget {
     return AsyncValueGroup.group6(
       ref.watch(latestPillSheetGroupStreamProvider),
       ref.watch(premiumAndTrialProvider),
-      ref.watch(settingStreamProvider),
+      ref.watch(settingProvider),
       ref.watch(shouldShowMigrationInformationProvider),
       ref.watch(intSharedPreferencesProvider(IntKey.totalCountOfActionForTakenPill)),
       ref.watch(boolSharedPreferencesProvider(BoolKey.isAlreadyShowPremiumSurvey)),
