@@ -17,3 +17,18 @@ class SetSetting {
     await databaseConnection.userRawReference().set({UserFirestoreFieldKeys.settings: setting}, SetOptions(merge: true));
   }
 }
+
+final batchSetSettingProvider = Provider((ref) => BatchSetSetting(ref.watch(databaseProvider)));
+
+class BatchSetSetting {
+  final DatabaseConnection databaseConnection;
+  BatchSetSetting(this.databaseConnection);
+
+  void call(WriteBatch batch, Setting setting) {
+    batch.set(
+      databaseConnection.userRawReference(),
+      {UserFirestoreFieldKeys.settings: setting.toJson()},
+      SetOptions(merge: true),
+    );
+  }
+}
