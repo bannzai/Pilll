@@ -11,7 +11,7 @@ import 'package:pilll/database/pill_sheet_modified_history.dart';
 import 'package:pilll/entity/pill_sheet_group.codegen.dart';
 import 'package:pilll/util/datetime/day.dart';
 
-Future<PillSheetGroup?> recordPill() async {
+Future<PillSheetGroup?> quickRecordTakePill() async {
   // 通知からの起動の時に、FirebaseAuth.instanceを参照すると、まだinitializeされてないよ．的なエラーが出る
   if (Firebase.apps.isEmpty) {
     await Firebase.initializeApp();

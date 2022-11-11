@@ -9,7 +9,7 @@ void definedChannel() {
   methodChannel.setMethodCallHandler((MethodCall call) async {
     switch (call.method) {
       case 'recordPill':
-        final pillSheetGroup = await recordPill();
+        final pillSheetGroup = await quickRecordTakePill();
         syncActivePillSheetValue(pillSheetGroup: pillSheetGroup);
         return;
       case "salvagedOldStartTakenDate":
