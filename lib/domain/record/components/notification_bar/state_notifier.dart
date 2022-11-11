@@ -1,8 +1,9 @@
 import 'dart:async';
 
+import 'package:pilll/database/pill_sheet_group.dart';
 import 'package:pilll/domain/record/components/notification_bar/notification_bar_state.codegen.dart';
-import 'package:pilll/domain/record/record_page_state_notifier.dart';
-import 'package:pilll/provider/shared_preference.dart';
+import 'package:pilll/provider/premium_and_trial.codegen.dart';
+import 'package:pilll/provider/shared_preferences.dart';
 import 'package:pilll/service/auth.dart';
 import 'package:pilll/util/shared_preference/keys.dart';
 import 'package:riverpod/riverpod.dart';
@@ -14,17 +15,15 @@ final notificationBarStateNotifierProvider = StateNotifierProvider.autoDispose<N
   ),
 );
 final notificationBarStateProvider = Provider.autoDispose((ref) {
-  final recordPageState = ref.watch(recordPageStateNotifierProvider).value!;
-  final sharedPreferences = ref.watch(sharedPreferenceProvider).value!;
-
   return NotificationBarState(
-    latestPillSheetGroup: recordPageState.pillSheetGroup,
-    totalCountOfActionForTakenPill: sharedPreferences.getInt(IntKey.totalCountOfActionForTakenPill) ?? 0,
-    premiumAndTrial: recordPageState.premiumAndTrial,
+    latestPillSheetGroup: ref.watch(latestPillSheetGroupStreamProvider).requireValue,
+    totalCountOfActionForTakenPill: ref.watch(intSharedPreferencesProvider(IntKey.totalCountOfActionForTakenPill)).valueOrNull ?? 0,
+    premiumAndTrial: ref.watch(premiumAndTrialProvider).requireValue,
     isLinkedLoginProvider: ref.watch(isLinkedProvider),
-    recommendedSignupNotificationIsAlreadyShow: sharedPreferences.getBool(BoolKey.recommendedSignupNotificationIsAlreadyShow) ?? false,
-    userAnsweredSurvey: sharedPreferences.getBool(BoolKey.userAnsweredSurvey) ?? false,
-    userClosedSurvey: sharedPreferences.getBool(BoolKey.userClosedSurvey) ?? false,
+    recommendedSignupNotificationIsAlreadyShow:
+        ref.watch(boolSharedPreferencesProvider(BoolKey.recommendedSignupNotificationIsAlreadyShow)).valueOrNull ?? false,
+    userAnsweredSurvey: ref.watch(boolSharedPreferencesProvider(BoolKey.userAnsweredSurvey)).valueOrNull ?? false,
+    userClosedSurvey: ref.watch(boolSharedPreferencesProvider(BoolKey.userClosedSurvey)).valueOrNull ?? false,
   );
 });
 
