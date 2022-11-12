@@ -21,7 +21,7 @@ final diariesStreamForMonthProvider = StreamProvider.family((ref, DateTime dateF
       .map((diaries) => sortedDiaries(diaries));
 });
 
-final diariesStreamAround90Days = StreamProvider.family((ref, DateTime base) {
+final diariesStream90Days = StreamProvider.family((ref, DateTime base) {
   return ref
       .watch(databaseProvider)
       .diariesReference()

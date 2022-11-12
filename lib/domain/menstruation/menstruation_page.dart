@@ -5,6 +5,7 @@ import 'package:hooks_riverpod/hooks_riverpod.dart';
 import 'package:pilll/components/atoms/color.dart';
 import 'package:pilll/components/atoms/text_color.dart';
 import 'package:pilll/components/molecules/indicator.dart';
+import 'package:pilll/components/organisms/calendar/band/calendar_band_model.dart';
 import 'package:pilll/components/organisms/calendar/band/calendar_band_provider.dart';
 import 'package:pilll/database/diary.dart';
 import 'package:pilll/database/menstruation.dart';
@@ -18,6 +19,8 @@ import 'package:pilll/domain/menstruation/menstruation_calendar_page_index_state
 import 'package:pilll/domain/menstruation/menstruation_state.codegen.dart';
 import 'package:pilll/domain/record/weekday_badge.dart';
 import 'package:pilll/domain/menstruation/menstruation_page_state_notifier.dart';
+import 'package:pilll/entity/diary.codegen.dart';
+import 'package:pilll/entity/schedule.codegen.dart';
 import 'package:pilll/error/universal_error_page.dart';
 import 'package:pilll/provider/premium_and_trial.codegen.dart';
 import 'package:pilll/provider/setting.dart';
@@ -51,16 +54,14 @@ class MenstruationPage extends HookConsumerWidget {
       ref.watch(latestPillSheetGroupStreamProvider),
       ref.watch(premiumAndTrialProvider),
       ref.watch(settingProvider),
-      ref.watch(diariesStreamAround90Days(today())),
+      ref.watch(diariesStream90Days(today())),
       ref.watch(allMenstruationStreamProvider),
-      ref.watch(schedulesAround90Days(today())),
+      ref.watch(schedules90Days(today())),
       ref.watch(calendarMenstruationBandListProvider),
       ref.watch(calendarScheduledMenstruationBandListProvider),
       ref.watch(calendarNextPillSheetBandListProvider),
     ).when(
-      data: (data) {
-        
-      },
+      data: (data) {},
       error: (error, _) => UniversalErrorPage(
         error: error,
         child: null,
@@ -84,6 +85,12 @@ class MenstruationPage extends HookConsumerWidget {
 class MenstruationPageBody extends StatelessWidget {
   final MenstruationPageStateNotifier store;
   final MenstruationState state;
+  final PageController pageController;
+  final List<CalendarMenstruationBandModel> calendarMenstruationBandModels;
+  final List<CalendarScheduledMenstruationBandModel> calendarScheduledMenstruationBandModels;
+  final List<CalendarNextPillSheetBandModel> calendarNextPillSheetBandModels;
+  final List<Diary> diaries;
+  final List<Schedule> schedules;
   final PageController pageController;
 
   const MenstruationPageBody({

@@ -70,8 +70,8 @@ void main() {
             MenstruationState(
               currentCalendarPageIndex: todayCalendarPageIndex,
               todayCalendarPageIndex: todayCalendarPageIndex,
-              diariesForAround90Days: [],
-              schedulesForAround90Days: [],
+              diariesFor90Days: [],
+              schedulesFor90Days: [],
               menstruations: menstruations,
               premiumAndTrial: MockPremiumAndTrial(),
               setting: setting,
@@ -130,8 +130,8 @@ void main() {
             MenstruationState(
               currentCalendarPageIndex: todayCalendarPageIndex,
               todayCalendarPageIndex: todayCalendarPageIndex,
-              diariesForAround90Days: [],
-              schedulesForAround90Days: [],
+              diariesFor90Days: [],
+              schedulesFor90Days: [],
               menstruations: menstruations,
               premiumAndTrial: MockPremiumAndTrial(),
               setting: setting,
@@ -192,8 +192,8 @@ void main() {
             MenstruationState(
               currentCalendarPageIndex: todayCalendarPageIndex,
               todayCalendarPageIndex: todayCalendarPageIndex,
-              diariesForAround90Days: [],
-              schedulesForAround90Days: [],
+              diariesFor90Days: [],
+              schedulesFor90Days: [],
               menstruations: [],
               premiumAndTrial: MockPremiumAndTrial(),
               setting: setting,
@@ -261,8 +261,8 @@ void main() {
             MenstruationState(
               currentCalendarPageIndex: todayCalendarPageIndex,
               todayCalendarPageIndex: todayCalendarPageIndex,
-              diariesForAround90Days: [],
-              schedulesForAround90Days: [],
+              diariesFor90Days: [],
+              schedulesFor90Days: [],
               menstruations: menstruations,
               premiumAndTrial: MockPremiumAndTrial(),
               setting: setting,

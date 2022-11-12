@@ -28,9 +28,9 @@ final menstruationPageStateProvider = Provider<AsyncValue<MenstruationState>>((r
   final latestPillSheetGroup = ref.watch(latestPillSheetGroupStreamProvider);
   final premiumAndTrial = ref.watch(premiumAndTrialProvider);
   final setting = ref.watch(settingProvider);
-  final diaries = ref.watch(diariesStreamAround90Days(today()));
+  final diaries = ref.watch(diariesStream90Days(today()));
   final menstruations = ref.watch(allMenstruationStreamProvider);
-  final schedules = ref.watch(schedulesAround90Days(today()));
+  final schedules = ref.watch(schedules90Days(today()));
 
   final calendarMenstruationBandModels = ref.watch(calendarMenstruationBandListProvider);
   final calendarScheduledMenstruationBandModels = ref.watch(calendarScheduledMenstruationBandListProvider);
@@ -52,8 +52,8 @@ final menstruationPageStateProvider = Provider<AsyncValue<MenstruationState>>((r
       MenstruationState(
         currentCalendarPageIndex: currentCalendarPageIndex,
         todayCalendarPageIndex: todayCalendarPageIndex,
-        diariesForAround90Days: diaries.value!,
-        schedulesForAround90Days: schedules.value!,
+        diariesFor90Days: diaries.value!,
+        schedulesFor90Days: schedules.value!,
         menstruations: menstruations.value!,
         premiumAndTrial: premiumAndTrial.value!,
         setting: setting.value!,
@@ -74,8 +74,8 @@ class MenstruationState with _$MenstruationState {
   factory MenstruationState({
     required int currentCalendarPageIndex,
     required int todayCalendarPageIndex,
-    required List<Diary> diariesForAround90Days,
-    required List<Schedule> schedulesForAround90Days,
+    required List<Diary> diariesFor90Days,
+    required List<Schedule> schedulesFor90Days,
     required List<Menstruation> menstruations,
     required PremiumAndTrial premiumAndTrial,
     required Setting setting,
