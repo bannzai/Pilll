@@ -23,8 +23,10 @@ import 'package:pilll/entity/diary.codegen.dart';
 import 'package:pilll/entity/menstruation.codegen.dart';
 import 'package:pilll/entity/pill_sheet_group.codegen.dart';
 import 'package:pilll/entity/schedule.codegen.dart';
+import 'package:pilll/entity/setting.codegen.dart';
 import 'package:pilll/entity/weekday.dart';
 import 'package:pilll/error/universal_error_page.dart';
+import 'package:pilll/provider/menstruation.dart';
 import 'package:pilll/provider/premium_and_trial.codegen.dart';
 import 'package:pilll/provider/setting.dart';
 import 'package:pilll/util/datetime/day.dart';
@@ -58,6 +60,7 @@ class MenstruationPage extends HookConsumerWidget {
       ref.watch(premiumAndTrialProvider),
       ref.watch(settingProvider),
       ref.watch(allMenstruationStreamProvider),
+      ref.watch(latestMenstruationProvider),
       ref.watch(diariesStream90Days(today())),
       ref.watch(schedules90Days(today())),
       ref.watch(calendarMenstruationBandListProvider),
@@ -88,7 +91,9 @@ class MenstruationPage extends HookConsumerWidget {
 class MenstruationPageBody extends StatelessWidget {
   final PillSheetGroup latestPillSheetGroup;
   final PremiumAndTrial premiumAndTrial;
-  final List<Menstruation> allMenstruations;
+  final List<Menstruation> allMenstruation;
+  final Menstruation? latestMenstruation;
+  final Setting setting;
   final List<Diary> diaries;
   final List<Schedule> schedules;
   final List<CalendarMenstruationBandModel> calendarMenstruationBandModels;
@@ -100,7 +105,9 @@ class MenstruationPageBody extends StatelessWidget {
     Key? key,
     required this.latestPillSheetGroup,
     required this.premiumAndTrial,
-    required this.allMenstruations,
+    required this.allMenstruation,
+    required this.latestMenstruation,
+    required this.setting,
     required this.diaries,
     required this.schedules,
     required this.calendarMenstruationBandModels,
@@ -134,7 +141,14 @@ class MenstruationPageBody extends StatelessWidget {
                   schedules: schedules,
                 ),
                 Expanded(
-                  child: MenstruationCardList(store: store),
+                  child: MenstruationCardList(
+                    calendarScheduledMenstruationBandModels: calendarScheduledMenstruationBandModels,
+                    premiumAndTrial: premiumAndTrial,
+                    setting: setting,
+                    latestPillSheetGroup: latestPillSheetGroup,
+                    latestMenstruation: latestMenstruation,
+                    allMenstruation: allMenstruation,
+                  ),
                 ),
                 const SizedBox(height: 40),
               ],

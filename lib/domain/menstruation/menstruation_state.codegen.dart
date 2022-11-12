@@ -92,16 +92,6 @@ class MenstruationState with _$MenstruationState {
   }
 
   String get displayMonth => DateTimeFormatter.jaMonth(_targetEndDayOfWeekday());
-  String get buttonString {
-    final latestMenstruation = this.latestMenstruation;
-    if (latestMenstruation == null) {
-      return "生理を記録";
-    }
-    if (latestMenstruation.dateRange.inRange(today())) {
-      return "生理期間を編集";
-    }
-    return "生理を記録";
-  }
 
   Menstruation? get latestMenstruation {
     return menstruations.isEmpty ? null : menstruations.first;
