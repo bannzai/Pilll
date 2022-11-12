@@ -1,15 +1,15 @@
 import 'package:flutter/material.dart';
+import 'package:hooks_riverpod/hooks_riverpod.dart';
 import 'package:pilll/analytics.dart';
 import 'package:pilll/components/atoms/buttons.dart';
-import 'package:pilll/domain/menstruation/menstruation_state.codegen.dart';
 import 'package:pilll/domain/menstruation_edit/menstruation_edit_page.dart';
 import 'package:pilll/domain/menstruation/menstruation_select_modify_type_sheet.dart';
-import 'package:pilll/domain/menstruation/menstruation_page_state_notifier.dart';
 import 'package:pilll/entity/menstruation.codegen.dart';
 import 'package:pilll/entity/setting.codegen.dart';
+import 'package:pilll/provider/menstruation.dart';
 import 'package:pilll/util/datetime/day.dart';
 
-class MenstruationRecordButton extends StatelessWidget {
+class MenstruationRecordButton extends HookConsumerWidget {
   final Menstruation? latestMenstruation;
   final Setting setting;
   final Function(Menstruation) onRecord;
@@ -22,7 +22,8 @@ class MenstruationRecordButton extends StatelessWidget {
   }) : super(key: key);
 
   @override
-  Widget build(BuildContext context) {
+  Widget build(BuildContext context, WidgetRef ref) {
+    final beginMenstruation = ref.watch(beginMenstruationProvider);
     return SizedBox(
       width: 180,
       child: PrimaryButton(
@@ -43,13 +44,13 @@ class MenstruationRecordButton extends StatelessWidget {
               switch (type) {
                 case MenstruationSelectModifyType.today:
                   analytics.logEvent(name: "tapped_menstruation_record_today");
-                  final created = await store.asyncAction.recordFromToday(setting: setting);
+                  final created = await beginMenstruation(today(), setting: setting);
                   onRecord(created);
                   Navigator.of(context).pop();
                   return;
                 case MenstruationSelectModifyType.yesterday:
                   analytics.logEvent(name: "tapped_menstruation_record_yesterday");
-                  final created = await store.asyncAction.recordFromYesterday(setting: setting);
+                  final created = await beginMenstruation(yesterday(), setting: setting);
                   onRecord(created);
                   Navigator.of(context).pop();
                   return;

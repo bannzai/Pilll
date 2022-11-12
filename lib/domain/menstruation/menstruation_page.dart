@@ -158,8 +158,8 @@ class MenstruationPageBody extends StatelessWidget {
               child: Padding(
                 padding: const EdgeInsets.only(bottom: 20.0),
                 child: MenstruationRecordButton(
-                    state: state,
-                    store: store,
+                    latestMenstruation: latestMenstruation,
+                    setting: setting,
                     onRecord: (menstruation) {
                       ScaffoldMessenger.of(context).showSnackBar(
                         SnackBar(
