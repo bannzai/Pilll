@@ -139,15 +139,13 @@ class MenstruationPageBody extends HookConsumerWidget {
                   diaries: diaries,
                   schedules: schedules,
                 ),
-                Expanded(
-                  child: MenstruationCardList(
-                    calendarScheduledMenstruationBandModels: calendarScheduledMenstruationBandModels,
-                    premiumAndTrial: premiumAndTrial,
-                    setting: setting,
-                    latestPillSheetGroup: latestPillSheetGroup,
-                    latestMenstruation: latestMenstruation,
-                    allMenstruation: allMenstruation,
-                  ),
+                MenstruationCardList(
+                  calendarScheduledMenstruationBandModels: calendarScheduledMenstruationBandModels,
+                  premiumAndTrial: premiumAndTrial,
+                  setting: setting,
+                  latestPillSheetGroup: latestPillSheetGroup,
+                  latestMenstruation: latestMenstruation,
+                  allMenstruation: allMenstruation,
                 ),
                 const SizedBox(height: 40),
               ],

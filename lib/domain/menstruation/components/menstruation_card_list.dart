@@ -34,18 +34,20 @@ class MenstruationCardList extends StatelessWidget {
   Widget build(BuildContext context) {
     final cardState = _cardState();
     final historyCardState = _historyCardState();
-    return Container(
-      color: PilllColors.background,
-      child: ListView(
-        padding: const EdgeInsets.only(top: 16, left: 16, right: 16),
-        scrollDirection: Axis.vertical,
-        children: [
-          if (cardState != null) ...[
-            MenstruationCard(cardState),
-            const SizedBox(height: 24),
+    return Expanded(
+      child: Container(
+        color: PilllColors.background,
+        child: ListView(
+          padding: const EdgeInsets.only(top: 16, left: 16, right: 16),
+          scrollDirection: Axis.vertical,
+          children: [
+            if (cardState != null) ...[
+              MenstruationCard(cardState),
+              const SizedBox(height: 24),
+            ],
+            if (historyCardState != null) MenstruationHistoryCard(state: historyCardState),
           ],
-          if (historyCardState != null) MenstruationHistoryCard(state: historyCardState),
-        ],
+        ),
       ),
     );
   }
