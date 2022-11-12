@@ -1,4 +1,7 @@
+import 'dart:async';
+
 import 'package:pilll/analytics.dart';
+import 'package:pilll/database/pill_sheet_group.dart';
 import 'package:pilll/database/pilll_ads.dart';
 import 'package:pilll/domain/premium_introduction/util/discount_deadline.dart';
 import 'package:pilll/domain/record/components/notification_bar/components/discount_price_deadline.dart';
@@ -15,6 +18,8 @@ import 'package:pilll/entity/pill_sheet_type.dart';
 import 'package:pilll/entity/pilll_ads.codegen.dart';
 import 'package:pilll/provider/locale.dart';
 import 'package:pilll/provider/premium_and_trial.codegen.dart';
+import 'package:pilll/provider/shared_preferences.dart';
+import 'package:pilll/service/auth.dart';
 import 'package:pilll/service/day.dart';
 import 'package:pilll/util/datetime/day.dart';
 import 'package:pilll/util/environment.dart';
@@ -32,7 +37,12 @@ void main() {
   const totalCountOfActionForTakenPillForLongTimeUser = 14;
   setUp(() {
     TestWidgetsFlutterBinding.ensureInitialized();
-    SharedPreferences.setMockInitialValues({BoolKey.recommendedSignupNotificationIsAlreadyShow: true});
+    SharedPreferences.setMockInitialValues({
+      BoolKey.recommendedSignupNotificationIsAlreadyShow: true,
+      BoolKey.userAnsweredSurvey: false,
+      BoolKey.userClosedSurvey: false,
+      IntKey.totalCountOfActionForTakenPill: 0,
+    });
     initializeDateFormatting('ja_JP');
     Environment.isTest = true;
     analytics = MockAnalytics();
@@ -57,29 +67,29 @@ void main() {
           ),
         );
         final pillSheetGroup = PillSheetGroup(pillSheetIDs: ["1"], pillSheets: [pillSheet], createdAt: now());
-        final state = NotificationBarState(
-          latestPillSheetGroup: pillSheetGroup,
-          totalCountOfActionForTakenPill: totalCountOfActionForTakenPillForLongTimeUser,
-          premiumAndTrial: PremiumAndTrial(
-            isPremium: false,
-            isTrial: false,
-            hasDiscountEntitlement: true,
-            trialDeadlineDate: null,
-            beginTrialDate: null,
-            discountEntitlementDeadlineDate: today.subtract(const Duration(days: 1)),
-          ),
-          isLinkedLoginProvider: false,
-          recommendedSignupNotificationIsAlreadyShow: false,
-          userAnsweredSurvey: true,
-          userClosedSurvey: true,
-        );
-
+        SharedPreferences.setMockInitialValues({
+          BoolKey.recommendedSignupNotificationIsAlreadyShow: false,
+          BoolKey.userAnsweredSurvey: true,
+          BoolKey.userClosedSurvey: true,
+        });
         await tester.pumpWidget(
           ProviderScope(
             overrides: [
+              latestPillSheetGroupStreamProvider.overrideWith((ref) => Stream.value(pillSheetGroup)),
+              premiumAndTrialProvider.overrideWithValue(
+                AsyncData(
+                  PremiumAndTrial(
+                    isPremium: false,
+                    isTrial: false,
+                    hasDiscountEntitlement: true,
+                    trialDeadlineDate: null,
+                    beginTrialDate: null,
+                    discountEntitlementDeadlineDate: today.subtract(const Duration(days: 1)),
+                  ),
+                ),
+              ),
+              isLinkedProvider.overrideWithValue(false),
               isJaLocaleProvider.overrideWithValue(true),
-              notificationBarStateNotifierProvider.overrideWith(((ref) => NotificationBarStateNotifier(state))),
-              notificationBarStateProvider.overrideWithValue(state),
               isOverDiscountDeadlineProvider.overrideWithProvider((param) => Provider.autoDispose((_) => false)),
               durationToDiscountPriceDeadline.overrideWithProvider((param) => Provider.autoDispose((_) => const Duration(seconds: 1000))),
             ],
