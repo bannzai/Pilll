@@ -50,6 +50,8 @@ abstract class $PremiumIntroductionStateCopyWith<$Res> {
       bool hasDiscountEntitlement,
       DateTime? beginTrialDate,
       DateTime? discountEntitlementDeadlineDate});
+
+  $OfferingsCopyWith<$Res>? get offerings;
 }
 
 /// @nodoc
@@ -121,6 +123,18 @@ class _$PremiumIntroductionStateCopyWithImpl<$Res,
               as DateTime?,
     ) as $Val);
   }
+
+  @override
+  @pragma('vm:prefer-inline')
+  $OfferingsCopyWith<$Res>? get offerings {
+    if (_value.offerings == null) {
+      return null;
+    }
+
+    return $OfferingsCopyWith<$Res>(_value.offerings!, (value) {
+      return _then(_value.copyWith(offerings: value) as $Val);
+    });
+  }
 }
 
 /// @nodoc
@@ -143,6 +157,9 @@ abstract class _$$_PremiumIntroductionStateCopyWith<$Res>
       bool hasDiscountEntitlement,
       DateTime? beginTrialDate,
       DateTime? discountEntitlementDeadlineDate});
+
+  @override
+  $OfferingsCopyWith<$Res>? get offerings;
 }
 
 /// @nodoc
