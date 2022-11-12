@@ -15,7 +15,6 @@ import 'package:pilll/domain/calendar/components/month_calendar/month_calendar.d
 import 'package:pilll/domain/menstruation/components/calendar/menstruation_calendar_header.dart';
 import 'package:pilll/domain/menstruation/components/menstruation_card_list.dart';
 import 'package:pilll/domain/menstruation/components/menstruation_record_button.dart';
-import 'package:pilll/domain/menstruation/menstruation_calendar_page_index_state_notifier.dart';
 import 'package:pilll/domain/menstruation/data.dart';
 import 'package:pilll/domain/record/weekday_badge.dart';
 import 'package:pilll/entity/diary.codegen.dart';
@@ -43,15 +42,7 @@ class MenstruationPage extends HookConsumerWidget {
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {
-    final calendarPageIndexStateNotifier = ref.watch(menstruationCalendarPageIndexStateNotifierProvider.notifier);
     useAutomaticKeepAlive(wantKeepAlive: true);
-
-    final pageController = usePageController(initialPage: todayCalendarPageIndex);
-    pageController.addListener(() {
-      final index = (pageController.page ?? pageController.initialPage).round();
-
-      calendarPageIndexStateNotifier.set(index);
-    });
 
     return AsyncValueGroup.group10(
       ref.watch(latestPillSheetGroupStreamProvider),
@@ -77,7 +68,6 @@ class MenstruationPage extends HookConsumerWidget {
           calendarMenstruationBandModels: data.t8,
           calendarScheduledMenstruationBandModels: data.t9,
           calendarNextPillSheetBandModels: data.t10,
-          pageController: pageController,
         );
       },
       error: (error, _) => UniversalErrorPage(
@@ -90,7 +80,7 @@ class MenstruationPage extends HookConsumerWidget {
   }
 }
 
-class MenstruationPageBody extends StatelessWidget {
+class MenstruationPageBody extends HookConsumerWidget {
   final PillSheetGroup? latestPillSheetGroup;
   final PremiumAndTrial premiumAndTrial;
   final List<Menstruation> allMenstruation;
@@ -101,7 +91,6 @@ class MenstruationPageBody extends StatelessWidget {
   final List<CalendarMenstruationBandModel> calendarMenstruationBandModels;
   final List<CalendarScheduledMenstruationBandModel> calendarScheduledMenstruationBandModels;
   final List<CalendarNextPillSheetBandModel> calendarNextPillSheetBandModels;
-  final PageController pageController;
 
   const MenstruationPageBody({
     Key? key,
@@ -115,11 +104,12 @@ class MenstruationPageBody extends StatelessWidget {
     required this.calendarMenstruationBandModels,
     required this.calendarScheduledMenstruationBandModels,
     required this.calendarNextPillSheetBandModels,
-    required this.pageController,
   }) : super(key: key);
 
   @override
-  Widget build(BuildContext context) {
+  Widget build(BuildContext context, WidgetRef ref) {
+    final pageController = usePageController(initialPage: todayCalendarPageIndex);
+
     return Scaffold(
       backgroundColor: PilllColors.background,
       appBar: AppBar(
