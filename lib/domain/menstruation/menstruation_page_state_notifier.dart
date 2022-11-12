@@ -7,16 +7,14 @@ import 'package:pilll/util/datetime/day.dart';
 
 import 'history/menstruation_history_card_state.dart';
 
-final menstruationPageStateNotifierProvider = StateNotifierProvider<
-    MenstruationPageStateNotifier, AsyncValue<MenstruationState>>(
+final menstruationPageStateNotifierProvider = StateNotifierProvider<MenstruationPageStateNotifier, AsyncValue<MenstruationState>>(
   (ref) => MenstruationPageStateNotifier(
     asyncAction: ref.watch(menstruationPageAsyncActionProvider),
     initialState: ref.watch(menstruationPageStateProvider),
   ),
 );
 
-class MenstruationPageStateNotifier
-    extends StateNotifier<AsyncValue<MenstruationState>> {
+class MenstruationPageStateNotifier extends StateNotifier<AsyncValue<MenstruationState>> {
   final MenstruationPageAsyncAction asyncAction;
   MenstruationPageStateNotifier({
     required this.asyncAction,
@@ -27,38 +25,29 @@ class MenstruationPageStateNotifier
 
   MenstruationCardState? cardState() {
     final latestMenstruation = stateValue.latestMenstruation;
-    if (latestMenstruation != null &&
-        latestMenstruation.dateRange.inRange(today())) {
+    if (latestMenstruation != null && latestMenstruation.dateRange.inRange(today())) {
       return MenstruationCardState.record(menstruation: latestMenstruation);
     }
 
     final latestPillSheetGroup = stateValue.latestPillSheetGroup;
     final setting = stateValue.setting;
-    if (latestPillSheetGroup == null ||
-        latestPillSheetGroup.pillSheets.isEmpty) {
+    if (latestPillSheetGroup == null || latestPillSheetGroup.pillSheets.isEmpty) {
       return null;
     }
-    if (setting.pillNumberForFromMenstruation == 0 ||
-        setting.durationMenstruation == 0) {
+    if (setting.pillNumberForFromMenstruation == 0 || setting.durationMenstruation == 0) {
       return null;
     }
 
-    final menstruationDateRanges =
-        stateValue.calendarScheduledMenstruationBandModels;
-    final inTheMiddleDateRanges = menstruationDateRanges
-        .map((e) => DateRange(e.begin, e.end))
-        .where((element) => element.inRange(today()));
+    final menstruationDateRanges = stateValue.calendarScheduledMenstruationBandModels;
+    final inTheMiddleDateRanges = menstruationDateRanges.map((e) => DateRange(e.begin, e.end)).where((element) => element.inRange(today()));
 
     if (inTheMiddleDateRanges.isNotEmpty) {
-      return MenstruationCardState.inTheMiddle(
-          scheduledDate: inTheMiddleDateRanges.first.begin);
+      return MenstruationCardState.inTheMiddle(scheduledDate: inTheMiddleDateRanges.first.begin);
     }
 
-    final futureDateRanges = menstruationDateRanges
-        .where((element) => element.begin.isAfter(today()));
+    final futureDateRanges = menstruationDateRanges.where((element) => element.begin.isAfter(today()));
     if (futureDateRanges.isNotEmpty) {
-      return MenstruationCardState.future(
-          nextSchedule: futureDateRanges.first.begin);
+      return MenstruationCardState.future(nextSchedule: futureDateRanges.first.begin);
     }
 
     assert(false);
@@ -70,8 +59,7 @@ class MenstruationPageStateNotifier
     if (latestMenstruation == null) {
       return null;
     }
-    if (stateValue.menstruations.length == 1 &&
-        latestMenstruation.dateRange.inRange(today())) {
+    if (stateValue.menstruations.length == 1 && latestMenstruation.dateRange.inRange(today())) {
       return null;
     }
     return MenstruationHistoryCardState(

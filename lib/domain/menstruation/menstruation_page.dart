@@ -20,7 +20,10 @@ import 'package:pilll/domain/menstruation/menstruation_state.codegen.dart';
 import 'package:pilll/domain/record/weekday_badge.dart';
 import 'package:pilll/domain/menstruation/menstruation_page_state_notifier.dart';
 import 'package:pilll/entity/diary.codegen.dart';
+import 'package:pilll/entity/menstruation.codegen.dart';
+import 'package:pilll/entity/pill_sheet_group.codegen.dart';
 import 'package:pilll/entity/schedule.codegen.dart';
+import 'package:pilll/entity/weekday.dart';
 import 'package:pilll/error/universal_error_page.dart';
 import 'package:pilll/provider/premium_and_trial.codegen.dart';
 import 'package:pilll/provider/setting.dart';
@@ -50,12 +53,12 @@ class MenstruationPage extends HookConsumerWidget {
       calendarPageIndexStateNotifier.set(index);
     });
 
-    AsyncValueGroup.group9(
+    AsyncValueGroup.group10(
       ref.watch(latestPillSheetGroupStreamProvider),
       ref.watch(premiumAndTrialProvider),
       ref.watch(settingProvider),
-      ref.watch(diariesStream90Days(today())),
       ref.watch(allMenstruationStreamProvider),
+      ref.watch(diariesStream90Days(today())),
       ref.watch(schedules90Days(today())),
       ref.watch(calendarMenstruationBandListProvider),
       ref.watch(calendarScheduledMenstruationBandListProvider),
@@ -83,20 +86,26 @@ class MenstruationPage extends HookConsumerWidget {
 }
 
 class MenstruationPageBody extends StatelessWidget {
-  final MenstruationPageStateNotifier store;
-  final MenstruationState state;
-  final PageController pageController;
+  final PillSheetGroup latestPillSheetGroup;
+  final PremiumAndTrial premiumAndTrial;
+  final List<Menstruation> allMenstruations;
+  final List<Diary> diaries;
+  final List<Schedule> schedules;
   final List<CalendarMenstruationBandModel> calendarMenstruationBandModels;
   final List<CalendarScheduledMenstruationBandModel> calendarScheduledMenstruationBandModels;
   final List<CalendarNextPillSheetBandModel> calendarNextPillSheetBandModels;
-  final List<Diary> diaries;
-  final List<Schedule> schedules;
   final PageController pageController;
 
   const MenstruationPageBody({
     Key? key,
-    required this.store,
-    required this.state,
+    required this.latestPillSheetGroup,
+    required this.premiumAndTrial,
+    required this.allMenstruations,
+    required this.diaries,
+    required this.schedules,
+    required this.calendarMenstruationBandModels,
+    required this.calendarScheduledMenstruationBandModels,
+    required this.calendarNextPillSheetBandModels,
     required this.pageController,
   }) : super(key: key);
 
@@ -106,10 +115,7 @@ class MenstruationPageBody extends StatelessWidget {
       backgroundColor: PilllColors.background,
       appBar: AppBar(
         title: SizedBox(
-          child: Text(
-            state.displayMonth,
-            style: const TextStyle(color: TextColor.black),
-          ),
+          child: Text(_displayMonth, style: const TextStyle(color: TextColor.black)),
         ),
         backgroundColor: PilllColors.white,
         elevation: 0,
@@ -121,7 +127,11 @@ class MenstruationPageBody extends StatelessWidget {
               children: [
                 MenstruationCalendarHeader(
                   pageController: pageController,
-                  state: state,
+                  calendarMenstruationBandModels: calendarMenstruationBandModels,
+                  calendarNextPillSheetBandModels: calendarNextPillSheetBandModels,
+                  calendarScheduledMenstruationBandModels: calendarScheduledMenstruationBandModels,
+                  diaries: diaries,
+                  schedules: schedules,
                 ),
                 Expanded(
                   child: MenstruationCardList(store: store),
@@ -150,5 +160,12 @@ class MenstruationPageBody extends StatelessWidget {
         ),
       ),
     );
+  }
+
+  String get _displayMonth => DateTimeFormatter.jaMonth(_targetEndDayOfWeekday());
+  DateTime _targetEndDayOfWeekday() {
+    final diff = (pageController.page ?? pageController.initialPage).round() - todayCalendarPageIndex;
+    final base = today().add(Duration(days: diff * Weekday.values.length));
+    return endDayOfWeekday(base);
   }
 }
