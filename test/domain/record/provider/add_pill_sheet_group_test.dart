@@ -17,8 +17,8 @@ import 'package:pilll/util/datetime/day.dart';
 import 'package:riverpod/riverpod.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
-import '../../helper/fake.dart';
-import '../../helper/mock.mocks.dart';
+import '../../../helper/fake.dart';
+import '../../../helper/mock.mocks.dart';
 
 void main() {
   setUp(() {
