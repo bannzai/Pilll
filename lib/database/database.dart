@@ -95,7 +95,7 @@ class DatabaseConnection {
             fromFirestore: _menstruationFromFirestore,
             toFirestore: _menstruationToFirestore,
           );
-  DocumentReference<Menstruation> menstruationReference(String menstruationID) =>
+  DocumentReference<Menstruation> menstruationReference(String? menstruationID) =>
       FirebaseFirestore.instance.collection(_CollectionPath.menstruations(_userID)).doc(menstruationID).withConverter(
             fromFirestore: _menstruationFromFirestore,
             toFirestore: _menstruationToFirestore,

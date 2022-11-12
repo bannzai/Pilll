@@ -1,5 +1,6 @@
 import 'dart:io';
 
+import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:collection/collection.dart';
 import 'package:pilll/database/database.dart';
 import 'package:pilll/entity/menstruation.codegen.dart';
@@ -43,5 +44,17 @@ class BeginMenstruation {
       }
     }
     return false;
+  }
+}
+
+final setMenstruationProvider = Provider((ref) => SetMenstruation(ref.watch(databaseProvider)));
+
+class SetMenstruation {
+  final DatabaseConnection databaseConnection;
+  SetMenstruation(this.databaseConnection);
+  Future<Menstruation> call(Menstruation menstruation) async {
+    final doc = databaseConnection.menstruationReference(menstruation.id);
+    await doc.set(menstruation, SetOptions(merge: true));
+    return menstruation.copyWith(id: doc.id);
   }
 }
