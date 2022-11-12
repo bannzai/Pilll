@@ -2,7 +2,6 @@ import 'package:async_value_group/async_value_group.dart';
 import 'package:flutter_hooks/flutter_hooks.dart';
 import 'package:pilll/components/molecules/indicator.dart';
 import 'package:pilll/database/pill_sheet_group.dart';
-import 'package:pilll/database/setting.dart';
 import 'package:pilll/domain/initial_setting/migrate_info.dart';
 import 'package:pilll/domain/premium_function_survey/premium_function_survey_page.dart';
 import 'package:pilll/domain/record/components/add_pill_sheet_group/add_pill_sheet_group_empty_frame.dart';

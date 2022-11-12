@@ -1,6 +1,5 @@
 import 'package:flutter_native_timezone/flutter_native_timezone.dart';
 import 'package:pilll/database/pill_sheet_group.dart';
-import 'package:pilll/database/setting.dart';
 import 'package:pilll/entity/pill_sheet_group.codegen.dart';
 import 'package:pilll/entity/setting.codegen.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';

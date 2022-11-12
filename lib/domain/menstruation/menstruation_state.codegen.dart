@@ -4,7 +4,6 @@ import 'package:pilll/database/diary.dart';
 import 'package:pilll/database/menstruation.dart';
 import 'package:pilll/database/pill_sheet_group.dart';
 import 'package:pilll/database/schedule.dart';
-import 'package:pilll/database/setting.dart';
 import 'package:pilll/domain/menstruation/menstruation_calendar_page_index_state_notifier.dart';
 import 'package:pilll/entity/diary.codegen.dart';
 import 'package:pilll/entity/menstruation.codegen.dart';

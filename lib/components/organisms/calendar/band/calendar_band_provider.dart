@@ -2,7 +2,6 @@ import 'package:pilll/components/organisms/calendar/band/calendar_band_function.
 import 'package:pilll/components/organisms/calendar/band/calendar_band_model.dart';
 import 'package:pilll/database/menstruation.dart';
 import 'package:pilll/database/pill_sheet_group.dart';
-import 'package:pilll/database/setting.dart';
 import 'package:pilll/provider/setting.dart';
 import 'package:riverpod/riverpod.dart';
 

@@ -1,17 +1,13 @@
-import 'package:pilll/database/batch.dart';
 import 'package:pilll/entity/pill_sheet.codegen.dart';
 import 'package:pilll/entity/pill_sheet_group.codegen.dart';
 import 'package:pilll/entity/pill_sheet_type.dart';
 import 'package:flutter_test/flutter_test.dart';
 import 'package:mockito/mockito.dart';
 import 'package:pilll/entity/setting.codegen.dart';
+import 'package:pilll/provider/revert_take_pill.dart';
 import 'package:pilll/service/day.dart';
-import 'package:pilll/database/pill_sheet.dart';
-import 'package:pilll/database/pill_sheet_group.dart';
 import 'package:pilll/database/pill_sheet_modified_history.dart';
-import 'package:pilll/database/setting.dart';
 import 'package:pilll/util/datetime/day.dart';
-import 'package:riverpod/riverpod.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
 import '../../../helper/mock.mocks.dart';
@@ -44,7 +40,8 @@ void main() {
           lastTakenDate: today(),
         );
         final batchSetPillSheets = MockBatchSetPillSheets();
-        when(batchSetPillSheets(batch, [pillSheet.copyWith(lastTakenDate: yesterday.subtract(const Duration(days: 1)))])).thenReturn(null);
+        when(batchSetPillSheets(batch, [pillSheet.copyWith(lastTakenDate: yesterday.subtract(const Duration(days: 1)))]))
+            .thenReturn([pillSheet.copyWith(lastTakenDate: yesterday.subtract(const Duration(days: 1)))]);
 
         final pillSheetGroup = PillSheetGroup(
           id: "group_id",
@@ -63,7 +60,7 @@ void main() {
           createdAt: now(),
         );
         final batchSetPillSheetGroup = MockBatchSetPillSheetGroup();
-        when(batchSetPillSheetGroup(batch, updatedPillSheetGroup)).thenReturn(null);
+        when(batchSetPillSheetGroup(batch, updatedPillSheetGroup)).thenReturn(updatedPillSheetGroup);
 
         final history = PillSheetModifiedHistoryServiceActionFactory.createRevertTakenPillAction(
           pillSheetGroupID: "group_id",
@@ -88,19 +85,13 @@ void main() {
         final bachSetSetting = MockBatchSetSetting();
         when(bachSetSetting(batch, setting)).thenReturn(null);
 
-        final container = ProviderContainer(
-          overrides: [
-            batchFactoryProvider.overrideWithValue(batchFactory),
-            settingDatastoreProvider.overrideWithValue(settingDatastore),
-            pillSheetDatastoreProvider.overrideWithValue(pillSheetDatastore),
-            pillSheetModifiedHistoryDatastoreProvider.overrideWithValue(pillSheetModifiedHistoryDatastore),
-            pillSheetGroupDatastoreProvider.overrideWithValue(pillSheetGroupDatastore),
-          ],
-        );
-        final asyncAction = container.read(recordPageAsyncActionProvider);
+        final revertTakePill = RevertTakePill(
+            batchFactory: batchFactory,
+            batchSetPillSheets: batchSetPillSheets,
+            batchSetPillSheetModifiedHistory: batchSetPillSheetModifiedHistory,
+            batchSetPillSheetGroup: batchSetPillSheetGroup);
 
-        await Future.delayed(const Duration(seconds: 1));
-        await asyncAction.revertTaken(pillSheetGroup: pillSheetGroup, pageIndex: 0, pillNumberIntoPillSheet: 1);
+        await revertTakePill.call(pillSheetGroup: pillSheetGroup, pageIndex: 0, pillNumberIntoPillSheet: 1);
       });
 
       test("Revert today pill", () async {
@@ -123,7 +114,7 @@ void main() {
           lastTakenDate: today(),
         );
         final batchSetPillSheets = MockBatchSetPillSheets();
-        when(batchSetPillSheets(batch, [pillSheet.copyWith(lastTakenDate: yesterday)])).thenReturn(null);
+        when(batchSetPillSheets(batch, [pillSheet.copyWith(lastTakenDate: yesterday)])).thenReturn([pillSheet.copyWith(lastTakenDate: yesterday)]);
 
         final pillSheetGroup = PillSheetGroup(
           id: "group_id",
@@ -167,19 +158,13 @@ void main() {
         final bachSetSetting = MockBatchSetSetting();
         when(bachSetSetting(batch, setting)).thenReturn(null);
 
-        final container = ProviderContainer(
-          overrides: [
-            batchFactoryProvider.overrideWithValue(batchFactory),
-            settingDatastoreProvider.overrideWithValue(settingDatastore),
-            pillSheetDatastoreProvider.overrideWithValue(pillSheetDatastore),
-            pillSheetModifiedHistoryDatastoreProvider.overrideWithValue(pillSheetModifiedHistoryDatastore),
-            pillSheetGroupDatastoreProvider.overrideWithValue(pillSheetGroupDatastore),
-          ],
-        );
-        final asyncAction = container.read(recordPageAsyncActionProvider);
+        final revertTakePill = RevertTakePill(
+            batchFactory: batchFactory,
+            batchSetPillSheets: batchSetPillSheets,
+            batchSetPillSheetModifiedHistory: batchSetPillSheetModifiedHistory,
+            batchSetPillSheetGroup: batchSetPillSheetGroup);
 
-        await Future.delayed(const Duration(seconds: 1));
-        await asyncAction.revertTaken(pillSheetGroup: pillSheetGroup, pageIndex: 0, pillNumberIntoPillSheet: 2);
+        await revertTakePill.call(pillSheetGroup: pillSheetGroup, pageIndex: 0, pillNumberIntoPillSheet: 2);
       });
 
       test("revert with rest durations and removed rest duration", () async {
@@ -231,7 +216,7 @@ void main() {
           createdAt: now(),
         );
         final batchSetPillSheetGroup = MockBatchSetPillSheetGroup();
-        when(batchSetPillSheetGroup(batch, updatedPillSheetGroup)).thenReturn(null);
+        when(batchSetPillSheetGroup(batch, updatedPillSheetGroup)).thenReturn(updatedPillSheetGroup);
 
         final history = PillSheetModifiedHistoryServiceActionFactory.createRevertTakenPillAction(
           pillSheetGroupID: "group_id",
@@ -257,19 +242,13 @@ void main() {
         final bachSetSetting = MockBatchSetSetting();
         when(bachSetSetting(batch, setting)).thenReturn(null);
 
-        final container = ProviderContainer(
-          overrides: [
-            batchFactoryProvider.overrideWithValue(batchFactory),
-            settingDatastoreProvider.overrideWithValue(settingDatastore),
-            pillSheetDatastoreProvider.overrideWithValue(pillSheetDatastore),
-            pillSheetModifiedHistoryDatastoreProvider.overrideWithValue(pillSheetModifiedHistoryDatastore),
-            pillSheetGroupDatastoreProvider.overrideWithValue(pillSheetGroupDatastore),
-          ],
-        );
-        final asyncAction = container.read(recordPageAsyncActionProvider);
+        final revertTakePill = RevertTakePill(
+            batchFactory: batchFactory,
+            batchSetPillSheets: batchSetPillSheets,
+            batchSetPillSheetModifiedHistory: batchSetPillSheetModifiedHistory,
+            batchSetPillSheetGroup: batchSetPillSheetGroup);
 
-        await Future.delayed(const Duration(seconds: 1));
-        await asyncAction.revertTaken(pillSheetGroup: pillSheetGroup, pageIndex: 0, pillNumberIntoPillSheet: 1);
+        await revertTakePill.call(pillSheetGroup: pillSheetGroup, pageIndex: 0, pillNumberIntoPillSheet: 1);
       });
 
       test("revert with rest durations but no removed rest duration", () async {
@@ -322,7 +301,7 @@ void main() {
           createdAt: now(),
         );
         final batchSetPillSheetGroup = MockBatchSetPillSheetGroup();
-        when(batchSetPillSheetGroup(batch, updatedPillSheetGroup)).thenReturn(null);
+        when(batchSetPillSheetGroup(batch, updatedPillSheetGroup)).thenReturn(updatedPillSheetGroup);
 
         final history = PillSheetModifiedHistoryServiceActionFactory.createRevertTakenPillAction(
           pillSheetGroupID: "group_id",
@@ -345,19 +324,13 @@ void main() {
         final bachSetSetting = MockBatchSetSetting();
         when(bachSetSetting(batch, setting)).thenReturn(null);
 
-        final container = ProviderContainer(
-          overrides: [
-            batchFactoryProvider.overrideWithValue(batchFactory),
-            settingDatastoreProvider.overrideWithValue(settingDatastore),
-            pillSheetDatastoreProvider.overrideWithValue(pillSheetDatastore),
-            pillSheetModifiedHistoryDatastoreProvider.overrideWithValue(pillSheetModifiedHistoryDatastore),
-            pillSheetGroupDatastoreProvider.overrideWithValue(pillSheetGroupDatastore),
-          ],
-        );
-        final asyncAction = container.read(recordPageAsyncActionProvider);
+        final revertTakePill = RevertTakePill(
+            batchFactory: batchFactory,
+            batchSetPillSheets: batchSetPillSheets,
+            batchSetPillSheetModifiedHistory: batchSetPillSheetModifiedHistory,
+            batchSetPillSheetGroup: batchSetPillSheetGroup);
 
-        await Future.delayed(const Duration(seconds: 1));
-        await asyncAction.revertTaken(pillSheetGroup: pillSheetGroup, pageIndex: 0, pillNumberIntoPillSheet: 11);
+        await revertTakePill.call(pillSheetGroup: pillSheetGroup, pageIndex: 0, pillNumberIntoPillSheet: 11);
       });
     });
 
@@ -416,7 +389,7 @@ void main() {
           createdAt: now(),
         );
         final batchSetPillSheetGroup = MockBatchSetPillSheetGroup();
-        when(batchSetPillSheetGroup(batch, updatedPillSheetGroup)).thenReturn(null);
+        when(batchSetPillSheetGroup(batch, updatedPillSheetGroup)).thenReturn(updatedPillSheetGroup);
 
         final history = PillSheetModifiedHistoryServiceActionFactory.createRevertTakenPillAction(
           pillSheetGroupID: "group_id",
@@ -442,19 +415,13 @@ void main() {
         final bachSetSetting = MockBatchSetSetting();
         when(bachSetSetting(batch, setting)).thenReturn(null);
 
-        final container = ProviderContainer(
-          overrides: [
-            batchFactoryProvider.overrideWithValue(batchFactory),
-            settingDatastoreProvider.overrideWithValue(settingDatastore),
-            pillSheetDatastoreProvider.overrideWithValue(pillSheetDatastore),
-            pillSheetModifiedHistoryDatastoreProvider.overrideWithValue(pillSheetModifiedHistoryDatastore),
-            pillSheetGroupDatastoreProvider.overrideWithValue(pillSheetGroupDatastore),
-          ],
-        );
-        final asyncAction = container.read(recordPageAsyncActionProvider);
+        final revertTakePill = RevertTakePill(
+            batchFactory: batchFactory,
+            batchSetPillSheets: batchSetPillSheets,
+            batchSetPillSheetModifiedHistory: batchSetPillSheetModifiedHistory,
+            batchSetPillSheetGroup: batchSetPillSheetGroup);
 
-        await Future.delayed(const Duration(seconds: 1));
-        await asyncAction.revertTaken(pillSheetGroup: pillSheetGroup, pageIndex: 1, pillNumberIntoPillSheet: 2);
+        await revertTakePill.call(pillSheetGroup: pillSheetGroup, pageIndex: 1, pillNumberIntoPillSheet: 2);
       });
 
       test("call revert from actived pill sheet to before pill sheet", () async {
@@ -532,19 +499,13 @@ void main() {
         final bachSetSetting = MockBatchSetSetting();
         when(bachSetSetting(batch, setting)).thenReturn(null);
 
-        final container = ProviderContainer(
-          overrides: [
-            batchFactoryProvider.overrideWithValue(batchFactory),
-            settingDatastoreProvider.overrideWithValue(settingDatastore),
-            pillSheetDatastoreProvider.overrideWithValue(pillSheetDatastore),
-            pillSheetModifiedHistoryDatastoreProvider.overrideWithValue(pillSheetModifiedHistoryDatastore),
-            pillSheetGroupDatastoreProvider.overrideWithValue(pillSheetGroupDatastore),
-          ],
-        );
-        final asyncAction = container.read(recordPageAsyncActionProvider);
+        final revertTakePill = RevertTakePill(
+            batchFactory: batchFactory,
+            batchSetPillSheets: batchSetPillSheets,
+            batchSetPillSheetModifiedHistory: batchSetPillSheetModifiedHistory,
+            batchSetPillSheetGroup: batchSetPillSheetGroup);
 
-        await Future.delayed(const Duration(seconds: 1));
-        await asyncAction.revertTaken(pillSheetGroup: pillSheetGroup, pageIndex: 0, pillNumberIntoPillSheet: 27);
+        await revertTakePill.call(pillSheetGroup: pillSheetGroup, pageIndex: 0, pillNumberIntoPillSheet: 27);
       });
       test("call revert with rest duration", () async {
         var mockTodayRepository = MockTodayService();
@@ -626,19 +587,13 @@ void main() {
         final bachSetSetting = MockBatchSetSetting();
         when(bachSetSetting(batch, setting)).thenReturn(null);
 
-        final container = ProviderContainer(
-          overrides: [
-            batchFactoryProvider.overrideWithValue(batchFactory),
-            settingDatastoreProvider.overrideWithValue(settingDatastore),
-            pillSheetDatastoreProvider.overrideWithValue(pillSheetDatastore),
-            pillSheetModifiedHistoryDatastoreProvider.overrideWithValue(pillSheetModifiedHistoryDatastore),
-            pillSheetGroupDatastoreProvider.overrideWithValue(pillSheetGroupDatastore),
-          ],
-        );
-        final asycnAction = container.read(recordPageAsyncActionProvider);
+        final revertTakePill = RevertTakePill(
+            batchFactory: batchFactory,
+            batchSetPillSheets: batchSetPillSheets,
+            batchSetPillSheetModifiedHistory: batchSetPillSheetModifiedHistory,
+            batchSetPillSheetGroup: batchSetPillSheetGroup);
 
-        await Future.delayed(const Duration(seconds: 1));
-        await asycnAction.revertTaken(pillSheetGroup: pillSheetGroup, pageIndex: 0, pillNumberIntoPillSheet: 27);
+        await revertTakePill.call(pillSheetGroup: pillSheetGroup, pageIndex: 0, pillNumberIntoPillSheet: 27);
       });
     });
   });
