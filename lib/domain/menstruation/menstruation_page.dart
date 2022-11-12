@@ -16,9 +16,8 @@ import 'package:pilll/domain/menstruation/components/calendar/menstruation_calen
 import 'package:pilll/domain/menstruation/components/menstruation_card_list.dart';
 import 'package:pilll/domain/menstruation/components/menstruation_record_button.dart';
 import 'package:pilll/domain/menstruation/menstruation_calendar_page_index_state_notifier.dart';
-import 'package:pilll/domain/menstruation/menstruation_state.codegen.dart';
+import 'package:pilll/domain/menstruation/data.dart';
 import 'package:pilll/domain/record/weekday_badge.dart';
-import 'package:pilll/domain/menstruation/menstruation_page_state_notifier.dart';
 import 'package:pilll/entity/diary.codegen.dart';
 import 'package:pilll/entity/menstruation.codegen.dart';
 import 'package:pilll/entity/pill_sheet_group.codegen.dart';
@@ -28,6 +27,7 @@ import 'package:pilll/entity/weekday.dart';
 import 'package:pilll/error/universal_error_page.dart';
 import 'package:pilll/provider/menstruation.dart';
 import 'package:pilll/provider/premium_and_trial.codegen.dart';
+import 'package:pilll/provider/root.dart';
 import 'package:pilll/provider/setting.dart';
 import 'package:pilll/util/datetime/day.dart';
 import 'package:pilll/util/formatter/date_time_formatter.dart';
@@ -43,8 +43,6 @@ class MenstruationPage extends HookConsumerWidget {
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {
-    final store = ref.watch(menstruationPageStateNotifierProvider.notifier);
-    final state = ref.watch(menstruationPageStateNotifierProvider);
     final calendarPageIndexStateNotifier = ref.watch(menstruationCalendarPageIndexStateNotifierProvider.notifier);
     useAutomaticKeepAlive(wantKeepAlive: true);
 
@@ -85,7 +83,7 @@ class MenstruationPage extends HookConsumerWidget {
       error: (error, _) => UniversalErrorPage(
         error: error,
         child: null,
-        reload: () => ref.refresh(menstruationPageStateProvider),
+        reload: () => ref.refresh(refreshAppProvider),
       ),
       loading: () => const ScaffoldIndicator(),
     );
