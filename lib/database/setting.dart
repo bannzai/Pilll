@@ -14,6 +14,10 @@ class SettingDatastore {
   final DatabaseConnection _database;
   SettingDatastore(this._database);
 
+  Future<Setting> fetch() {
+    return _database.userReference().get().then((event) => event.data()!.setting!);
+  }
+
   Stream<Setting> stream() => _database.userReference().snapshots().map((event) => event.data()?.setting).where((data) => data != null).cast();
 
   Future<Setting> update(Setting setting) {
