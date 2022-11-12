@@ -1,27 +1,46 @@
+import 'package:async_value_group/async_value_group.dart';
+import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
+import 'package:hooks_riverpod/hooks_riverpod.dart';
 import 'package:pilll/analytics.dart';
 import 'package:pilll/components/molecules/shadow_container.dart';
+import 'package:pilll/components/organisms/calendar/band/calendar_band_model.dart';
+import 'package:pilll/components/organisms/calendar/band/calendar_band_provider.dart';
 import 'package:pilll/components/organisms/calendar/day/calendar_day_tile.dart';
 import 'package:pilll/components/organisms/calendar/week/utility.dart';
 import 'package:pilll/components/organisms/calendar/week/week_calendar.dart';
+import 'package:pilll/database/diary.dart';
+import 'package:pilll/database/schedule.dart';
 import 'package:pilll/domain/calendar/date_range.dart';
 import 'package:pilll/domain/menstruation/menstruation_page.dart';
 import 'package:pilll/domain/menstruation/menstruation_state.codegen.dart';
 import 'package:pilll/domain/record/weekday_badge.dart';
+import 'package:pilll/entity/diary.codegen.dart';
+import 'package:pilll/entity/schedule.codegen.dart';
 import 'package:pilll/entity/weekday.dart';
+
+import '../../../../util/datetime/day.dart';
 
 const double _horizontalPadding = 10;
 
 class MenstruationCalendarHeader extends StatelessWidget {
-  const MenstruationCalendarHeader({
-    Key? key,
-    required this.state,
-    required this.pageController,
-  }) : super(key: key);
-
-  final MenstruationState state;
+  final List<CalendarMenstruationBandModel> calendarMenstruationBandModels;
+  final List<CalendarScheduledMenstruationBandModel> calendarScheduledMenstruationBandModels;
+  final List<CalendarNextPillSheetBandModel> calendarNextPillSheetBandModels;
+  final List<Diary> diaries;
+  final List<Schedule> schedules;
   final PageController pageController;
+
+  const MenstruationCalendarHeader(
+      {Key? key,
+      required this.calendarMenstruationBandModels,
+      required this.calendarScheduledMenstruationBandModels,
+      required this.calendarNextPillSheetBandModels,
+      required this.diaries,
+      required this.schedules,
+      required this.pageController})
+      : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -54,18 +73,17 @@ class MenstruationCalendarHeader extends StatelessWidget {
                         return CalendarDayTile(
                             weekday: weekday,
                             date: date,
-                            showsDiaryMark: isExistsPostedDiary(state.diariesForAround90Days, date),
-                            showsScheduleMark: isExistsSchedule(state.schedulesForAround90Days, date),
+                            showsDiaryMark: isExistsPostedDiary(diaries, date),
+                            showsScheduleMark: isExistsSchedule(schedules, date),
                             showsMenstruationMark: false,
                             onTap: (date) {
                               analytics.logEvent(name: "did_select_day_tile_on_menstruation");
-                              transitionWhenCalendarDayTapped(context,
-                                  date: date, diaries: state.diariesForAround90Days, schedules: state.schedulesForAround90Days);
+                              transitionWhenCalendarDayTapped(context, date: date, diaries: diaries, schedules: schedules);
                             });
                       },
-                      calendarMenstruationBandModels: state.calendarMenstruationBandModels,
-                      calendarNextPillSheetBandModels: state.calendarNextPillSheetBandModels,
-                      calendarScheduledMenstruationBandModels: state.calendarScheduledMenstruationBandModels,
+                      calendarMenstruationBandModels: calendarMenstruationBandModels,
+                      calendarNextPillSheetBandModels: calendarNextPillSheetBandModels,
+                      calendarScheduledMenstruationBandModels: calendarScheduledMenstruationBandModels,
                     ),
                   );
                 },

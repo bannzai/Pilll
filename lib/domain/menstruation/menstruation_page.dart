@@ -1,9 +1,15 @@
+import 'package:async_value_group/async_value_group.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_hooks/flutter_hooks.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
 import 'package:pilll/components/atoms/color.dart';
 import 'package:pilll/components/atoms/text_color.dart';
 import 'package:pilll/components/molecules/indicator.dart';
+import 'package:pilll/components/organisms/calendar/band/calendar_band_provider.dart';
+import 'package:pilll/database/diary.dart';
+import 'package:pilll/database/menstruation.dart';
+import 'package:pilll/database/pill_sheet_group.dart';
+import 'package:pilll/database/schedule.dart';
 import 'package:pilll/domain/calendar/components/month_calendar/month_calendar.dart';
 import 'package:pilll/domain/menstruation/components/calendar/menstruation_calendar_header.dart';
 import 'package:pilll/domain/menstruation/components/menstruation_card_list.dart';
@@ -13,6 +19,9 @@ import 'package:pilll/domain/menstruation/menstruation_state.codegen.dart';
 import 'package:pilll/domain/record/weekday_badge.dart';
 import 'package:pilll/domain/menstruation/menstruation_page_state_notifier.dart';
 import 'package:pilll/error/universal_error_page.dart';
+import 'package:pilll/provider/premium_and_trial.codegen.dart';
+import 'package:pilll/provider/setting.dart';
+import 'package:pilll/util/datetime/day.dart';
 import 'package:pilll/util/formatter/date_time_formatter.dart';
 
 abstract class MenstruationPageConst {
@@ -37,6 +46,28 @@ class MenstruationPage extends HookConsumerWidget {
 
       calendarPageIndexStateNotifier.set(index);
     });
+
+    AsyncValueGroup.group9(
+      ref.watch(latestPillSheetGroupStreamProvider),
+      ref.watch(premiumAndTrialProvider),
+      ref.watch(settingProvider),
+      ref.watch(diariesStreamAround90Days(today())),
+      ref.watch(allMenstruationStreamProvider),
+      ref.watch(schedulesAround90Days(today())),
+      ref.watch(calendarMenstruationBandListProvider),
+      ref.watch(calendarScheduledMenstruationBandListProvider),
+      ref.watch(calendarNextPillSheetBandListProvider),
+    ).when(
+      data: (data) {
+        
+      },
+      error: (error, _) => UniversalErrorPage(
+        error: error,
+        child: null,
+        reload: () => ref.refresh(menstruationPageStateProvider),
+      ),
+      loading: () => const ScaffoldIndicator(),
+    );
 
     return state.when(
       data: (state) => MenstruationPageBody(store: store, state: state, pageController: pageController),

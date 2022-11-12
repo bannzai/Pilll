@@ -1,3 +1,4 @@
+import 'package:async_value_group/async_value_group.dart';
 import 'package:pilll/components/organisms/calendar/band/calendar_band_function.dart';
 import 'package:pilll/components/organisms/calendar/band/calendar_band_model.dart';
 import 'package:pilll/database/menstruation.dart';
@@ -22,33 +23,18 @@ final calendarMenstruationBandListProvider = Provider<AsyncValue<List<CalendarMe
 });
 
 final calendarScheduledMenstruationBandListProvider = Provider<AsyncValue<List<CalendarScheduledMenstruationBandModel>>>((ref) {
-  final allMenstruations = ref.watch(allMenstruationStreamProvider);
-  final pillSheetGroup = ref.watch(latestPillSheetGroupStreamProvider);
-  final setting = ref.watch(settingProvider);
-
-  if (allMenstruations is AsyncLoading || pillSheetGroup is AsyncLoading || setting is AsyncLoading) {
-    return const AsyncValue.loading();
-  }
-
-  final pillSheetGroupValue = pillSheetGroup.value;
-  final settingValue = setting.value;
-  final allMenstruationsValue = allMenstruations.value;
-  if (pillSheetGroupValue == null || settingValue == null || allMenstruationsValue == null) {
-    return const AsyncValue.data([]);
-  }
-
-  try {
-    return AsyncValue.data(
-      scheduledOrInTheMiddleMenstruationDateRanges(
-        pillSheetGroupValue,
-        settingValue,
-        allMenstruationsValue,
-        15,
-      ).map((dateRange) => CalendarScheduledMenstruationBandModel(dateRange.begin, dateRange.end)).toList(),
-    );
-  } catch (error, stackTrace) {
-    return AsyncValue.error(error, stackTrace);
-  }
+  return AsyncValueGroup.group3(
+    ref.watch(latestPillSheetGroupStreamProvider),
+    ref.watch(settingProvider),
+    ref.watch(allMenstruationStreamProvider),
+  ).whenData(
+    (t) => scheduledOrInTheMiddleMenstruationDateRanges(
+      t.t1,
+      t.t2,
+      t.t3,
+      15,
+    ).map((dateRange) => CalendarScheduledMenstruationBandModel(dateRange.begin, dateRange.end)).toList(),
+  );
 });
 
 final calendarNextPillSheetBandListProvider = Provider<AsyncValue<List<CalendarNextPillSheetBandModel>>>((ref) {
