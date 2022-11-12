@@ -114,7 +114,7 @@ class MenstruationPageBody extends HookConsumerWidget {
       backgroundColor: PilllColors.background,
       appBar: AppBar(
         title: SizedBox(
-          child: Text(_displayMonth, style: const TextStyle(color: TextColor.black)),
+          child: Text(_displayMonth(pageController), style: const TextStyle(color: TextColor.black)),
         ),
         backgroundColor: PilllColors.white,
         elevation: 0,
@@ -168,8 +168,8 @@ class MenstruationPageBody extends HookConsumerWidget {
     );
   }
 
-  String get _displayMonth => DateTimeFormatter.jaMonth(_targetEndDayOfWeekday());
-  DateTime _targetEndDayOfWeekday() {
+  String _displayMonth(PageController pageController) => DateTimeFormatter.jaMonth(_targetEndDayOfWeekday(pageController));
+  DateTime _targetEndDayOfWeekday(PageController pageController) {
     final diff = (pageController.page ?? pageController.initialPage).round() - todayCalendarPageIndex;
     final base = today().add(Duration(days: diff * Weekday.values.length));
     return endDayOfWeekday(base);
