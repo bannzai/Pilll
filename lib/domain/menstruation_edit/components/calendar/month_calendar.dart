@@ -20,6 +20,7 @@ class MonthCalendar extends HookConsumerWidget {
   final MenstruationEditPageState state;
   final MonthCalendarState monthCalendarState;
   final MenstruationEditPageStateNotifier store;
+  final Function(DateTime) onTap;
 
   const MonthCalendar({
     Key? key,
@@ -27,6 +28,7 @@ class MonthCalendar extends HookConsumerWidget {
     required this.state,
     required this.monthCalendarState,
     required this.store,
+    required this.onTap,
   }) : super(key: key);
 
   @override
@@ -75,7 +77,7 @@ class MonthCalendar extends HookConsumerWidget {
                       }(),
                       onTap: (date) {
                         analytics.logEvent(name: "selected_day_tile_on_menstruation_edit");
-                        store.tappedDate(date, state.setting);
+                        onTap(date);
                       });
                 },
               ),

@@ -7,8 +7,7 @@ import 'package:pilll/database/menstruation.dart';
 import 'package:pilll/util/datetime/day.dart';
 import 'package:riverpod/riverpod.dart';
 
-final menstruationEditPageAsyncActionProvider = Provider((ref) =>
-    MenstruationEditPageAsyncAction(ref.watch(menstruationDatastoreProvider)));
+final menstruationEditPageAsyncActionProvider = Provider((ref) => MenstruationEditPageAsyncAction(ref.watch(menstruationDatastoreProvider)));
 
 class MenstruationEditPageAsyncAction {
   final MenstruationDatastore _menstruationDatastore;
@@ -27,19 +26,15 @@ class MenstruationEditPageAsyncAction {
     final documentID = initialMenstruation?.documentID;
     if (documentID == null) {
       if (await _canHealthKitDataSave(menstruation: menstruation)) {
-        final healthKitSampleDataUUID =
-            await addMenstruationFlowHealthKitData(menstruation);
-        menstruation = menstruation.copyWith(
-            healthKitSampleDataUUID: healthKitSampleDataUUID);
+        final healthKitSampleDataUUID = await addMenstruationFlowHealthKitData(menstruation);
+        menstruation = menstruation.copyWith(healthKitSampleDataUUID: healthKitSampleDataUUID);
       }
 
       return _menstruationDatastore.create(menstruation);
     } else {
       if (await _canHealthKitDataSave(menstruation: menstruation)) {
-        final healthKitSampleDataUUID =
-            await updateOrAddMenstruationFlowHealthKitData(menstruation);
-        menstruation = menstruation.copyWith(
-            healthKitSampleDataUUID: healthKitSampleDataUUID);
+        final healthKitSampleDataUUID = await updateOrAddMenstruationFlowHealthKitData(menstruation);
+        menstruation = menstruation.copyWith(healthKitSampleDataUUID: healthKitSampleDataUUID);
       }
       return _menstruationDatastore.update(documentID, menstruation);
     }
@@ -50,31 +45,25 @@ class MenstruationEditPageAsyncAction {
     required Menstruation? menstruation,
   }) async {
     if (initialMenstruation == null) {
-      throw const FormatException(
-          "menstruation is not exists from db when delete");
+      throw const FormatException("menstruation is not exists from db when delete");
     }
     final documentID = initialMenstruation.documentID;
     if (documentID == null) {
-      throw const FormatException(
-          "menstruation is not exists document id from db when delete");
+      throw const FormatException("menstruation is not exists document id from db when delete");
     }
     if (menstruation != null) {
-      throw const FormatException(
-          "missing condition about state.menstruation is exists when delete. state.menstruation should flushed on edit page");
+      throw const FormatException("missing condition about state.menstruation is exists when delete. state.menstruation should flushed on edit page");
     }
 
     if (await _canHealthKitDataSave(menstruation: menstruation)) {
       await deleteMenstruationFlowHealthKitData(initialMenstruation);
-      initialMenstruation =
-          initialMenstruation.copyWith(healthKitSampleDataUUID: null);
+      initialMenstruation = initialMenstruation.copyWith(healthKitSampleDataUUID: null);
     }
 
-    await _menstruationDatastore.update(
-        documentID, initialMenstruation.copyWith(deletedAt: now()));
+    await _menstruationDatastore.update(documentID, initialMenstruation.copyWith(deletedAt: now()));
   }
 
-  Future<bool> _canHealthKitDataSave(
-      {required Menstruation? menstruation}) async {
+  Future<bool> _canHealthKitDataSave({required Menstruation? menstruation}) async {
     if (Platform.isIOS) {
       if (await isHealthDataAvailable()) {
         if (await isAuthorizedReadAndShareToHealthKitData()) {

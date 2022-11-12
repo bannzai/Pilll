@@ -10,7 +10,7 @@ import 'package:pilll/entity/menstruation.codegen.dart';
 
 class MenstruationEditPageHeader extends StatelessWidget {
   final String title;
-  final MenstruationEditPageState state;
+  final Menstruation? menstruation;
   final MenstruationEditPageStateNotifier store;
   final Function() onDeleted;
   final Function(Menstruation) onSaved;
@@ -18,7 +18,7 @@ class MenstruationEditPageHeader extends StatelessWidget {
   const MenstruationEditPageHeader({
     Key? key,
     required this.title,
-    required this.state,
+    required this.menstruation,
     required this.store,
     required this.onDeleted,
     required this.onSaved,
@@ -44,8 +44,7 @@ class MenstruationEditPageHeader extends StatelessWidget {
                     AlertButton(
                       text: "キャンセル",
                       onPressed: () async {
-                        analytics.logEvent(
-                            name: "cancelled_delete_menstruation");
+                        analytics.logEvent(name: "cancelled_delete_menstruation");
                         Navigator.of(context).pop();
                       },
                     ),
@@ -54,7 +53,7 @@ class MenstruationEditPageHeader extends StatelessWidget {
                       onPressed: () async {
                         await store.asyncAction.delete(
                           initialMenstruation: store.initialMenstruation,
-                          menstruation: state.menstruation,
+                          menstruation: menstruation,
                         );
                         onDeleted();
 
@@ -71,7 +70,7 @@ class MenstruationEditPageHeader extends StatelessWidget {
               store.asyncAction
                   .save(
                     initialMenstruation: store.initialMenstruation,
-                    menstruation: state.menstruation,
+                    menstruation: menstruation,
                   )
                   .then((value) => onSaved(value));
             }

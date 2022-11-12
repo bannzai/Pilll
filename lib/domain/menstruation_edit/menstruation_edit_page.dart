@@ -1,3 +1,5 @@
+import 'dart:math';
+
 import 'package:flutter/material.dart';
 import 'package:flutter_hooks/flutter_hooks.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
@@ -10,12 +12,18 @@ import 'package:pilll/domain/menstruation_edit/components/calendar/month_calenda
 import 'package:pilll/domain/menstruation_edit/components/header/menstruation_edit_page_header.dart';
 import 'package:pilll/entity/menstruation.codegen.dart';
 import 'package:pilll/domain/menstruation_edit/menstruation_edit_page_state_notifier.dart';
+import 'package:pilll/entity/setting.codegen.dart';
+import 'package:pilll/provider/premium_and_trial.codegen.dart';
+import 'package:pilll/provider/setting.dart';
+import 'package:pilll/util/datetime/date_compare.dart';
+import 'package:pilll/util/datetime/day.dart';
 import 'package:pilll/util/formatter/date_time_formatter.dart';
 
 class MenstruationEditPage extends HookConsumerWidget {
   final Menstruation? menstruation;
   final Function(Menstruation) onSaved;
   final VoidCallback onDeleted;
+
   const MenstruationEditPage({
     Key? key,
     required this.menstruation,
@@ -25,11 +33,12 @@ class MenstruationEditPage extends HookConsumerWidget {
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {
-    final store = ref.watch(
-        menstruationEditPageStateNotifierProvider(menstruation).notifier);
-    final state =
-        ref.watch(menstruationEditPageStateNotifierProvider(menstruation));
-    final invalidMessage = state.invalidMessage;
+    final store = ref.watch(menstruationEditPageStateNotifierProvider(menstruation).notifier);
+    final state = ref.watch(menstruationEditPageStateNotifierProvider(menstruation));
+    final setting = ref.watch(settingProvider).requireValue;
+    final invalidMessage = useState("");
+    final begin = useState(menstruation?.beginDate);
+    final end = useState(menstruation?.endDate);
 
     final scrollController = useScrollController();
     Future.microtask(() {
@@ -38,9 +47,7 @@ class MenstruationEditPage extends HookConsumerWidget {
       }
       store.adjustedScrollOffset();
       const double estimatedSectionTitleHeight = 95;
-      scrollController.jumpTo(
-          CalendarConstants.tileHeight * CalendarConstants.maxLineCount +
-              estimatedSectionTitleHeight);
+      scrollController.jumpTo(CalendarConstants.tileHeight * CalendarConstants.maxLineCount + estimatedSectionTitleHeight);
     });
 
     return DraggableScrollableSheet(
@@ -58,8 +65,7 @@ class MenstruationEditPage extends HookConsumerWidget {
             child: Column(
               children: [
                 Padding(
-                  padding:
-                      const EdgeInsets.only(top: 21.0, left: 16, right: 16),
+                  padding: const EdgeInsets.only(top: 21.0, left: 16, right: 16),
                   child: Column(
                     mainAxisAlignment: MainAxisAlignment.start,
                     crossAxisAlignment: CrossAxisAlignment.start,
@@ -71,11 +77,9 @@ class MenstruationEditPage extends HookConsumerWidget {
                         onDeleted: onDeleted,
                         onSaved: onSaved,
                       ),
-                      if (invalidMessage != null) ...[
+                      if (invalidMessage.value.isNotEmpty) ...[
                         const SizedBox(height: 12),
-                        Text(invalidMessage,
-                            style: FontType.assisting
-                                .merge(TextColorStyle.danger)),
+                        Text(invalidMessage.value, style: FontType.assisting.merge(TextColorStyle.danger)),
                       ],
                     ],
                   ),
@@ -92,8 +96,15 @@ class MenstruationEditPage extends HookConsumerWidget {
                                 dateForMonth: dateForMonth,
                                 state: state,
                                 store: store,
-                                monthCalendarState:
-                                    state.monthCalendarStatuses(dateForMonth),
+                                monthCalendarState: state.monthCalendarStatuses(dateForMonth),
+                                onTap: (date) {
+                                  final menstruation = this.menstruation;
+                                  if (date.isAfter(today()) && menstruation == null) {
+                                    invalidMessage.value = "未来の日付は選択できません";
+                                  } else {
+                                    _tappedDate(date: date, setting: setting, begin: begin, end: end);
+                                  }
+                                },
                               )
                             ];
                           })
@@ -108,6 +119,47 @@ class MenstruationEditPage extends HookConsumerWidget {
         );
       },
     );
+  }
+
+  void _tappedDate({
+    required DateTime date,
+    required Setting setting,
+    required ValueNotifier<DateTime?> begin,
+    required ValueNotifier<DateTime?> end,
+  }) async {
+    final menstruation = this.menstruation;
+    if (menstruation == null) {
+      final menstruationBegin = date;
+      final menstruationEnd = menstruationBegin.add(Duration(days: max(setting.durationMenstruation - 1, 0)));
+      begin.value = menstruationBegin;
+      end.value = menstruationEnd;
+      return;
+    } else {
+      if (isSameDay(menstruation.beginDate, date) && isSameDay(menstruation.endDate, date)) {
+        begin.value = null;
+        end.value = null;
+        return;
+      }
+
+      if (date.isBefore(menstruation.beginDate)) {
+        begin.value = date;
+        return;
+      }
+      if (date.isAfter(menstruation.endDate)) {
+        end.value = date;
+        return;
+      }
+
+      if ((isSameDay(menstruation.beginDate, date) || date.isAfter(menstruation.beginDate)) && date.isBefore(menstruation.endDate)) {
+        end.value = date;
+        return;
+      }
+
+      if (isSameDay(menstruation.endDate, date)) {
+        end.value = date.subtract(const Duration(days: 1));
+        return;
+      }
+    }
   }
 }
 
@@ -125,8 +177,7 @@ void showMenstruationEditPage(
           ScaffoldMessenger.of(context).showSnackBar(
             SnackBar(
               duration: const Duration(seconds: 2),
-              content: Text(
-                  "${DateTimeFormatter.monthAndDay(savedMenstruation.beginDate)}から生理開始で記録しました"),
+              content: Text("${DateTimeFormatter.monthAndDay(savedMenstruation.beginDate)}から生理開始で記録しました"),
             ),
           );
         } else {
