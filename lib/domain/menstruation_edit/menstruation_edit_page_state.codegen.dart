@@ -1,8 +1,8 @@
 import 'package:freezed_annotation/freezed_annotation.dart';
-import 'package:pilll/domain/menstruation/menstruation_page_state_notifier.dart';
 import 'package:pilll/entity/menstruation.codegen.dart';
 import 'package:pilll/entity/setting.codegen.dart';
 import 'package:pilll/provider/premium_and_trial.codegen.dart';
+import 'package:pilll/provider/setting.dart';
 import 'package:pilll/util/datetime/day.dart';
 import 'package:riverpod/riverpod.dart';
 
@@ -10,13 +10,12 @@ import 'components/calendar/month_calendar_state.codegen.dart';
 
 part 'menstruation_edit_page_state.codegen.freezed.dart';
 
-final menstruationEditPageStateProvider =
-    Provider.autoDispose.family((ref, Menstruation? menstruation) {
+final menstruationEditPageStateProvider = Provider.autoDispose.family((ref, Menstruation? menstruation) {
   final premiumAndTrial = ref.watch(premiumAndTrialProvider).value!;
-  final menstruationState = ref.watch(menstruationPageStateNotifierProvider);
+  final setting = ref.watch(settingProvider).requireValue;
   return MenstruationEditPageState(
     menstruation: menstruation,
-    setting: menstruationState.value!.setting,
+    setting: setting,
     displayedDates: _displayedDates(menstruation),
     premiumAndTrial: premiumAndTrial,
   );
@@ -34,19 +33,15 @@ class MenstruationEditPageState with _$MenstruationEditPageState {
     String? invalidMessage,
   }) = _MenstruationEditPageState;
 
-  MonthCalendarState monthCalendarStatuses(DateTime dateForMonth) =>
-      MonthCalendarState(
-          dateForMonth: dateForMonth, menstruation: menstruation);
+  MonthCalendarState monthCalendarStatuses(DateTime dateForMonth) => MonthCalendarState(dateForMonth: dateForMonth, menstruation: menstruation);
 }
 
 List<DateTime> _displayedDates(Menstruation? menstruation) {
   if (menstruation != null) {
     return [
-      DateTime(
-          menstruation.beginDate.year, menstruation.beginDate.month - 1, 1),
+      DateTime(menstruation.beginDate.year, menstruation.beginDate.month - 1, 1),
       menstruation.beginDate,
-      DateTime(
-          menstruation.beginDate.year, menstruation.beginDate.month + 1, 1),
+      DateTime(menstruation.beginDate.year, menstruation.beginDate.month + 1, 1),
     ];
   } else {
     final t = today();
