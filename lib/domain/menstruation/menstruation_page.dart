@@ -55,29 +55,33 @@ class MenstruationPage extends HookConsumerWidget {
       calendarPageIndexStateNotifier.set(index);
     });
 
-    AsyncValueGroup.group10(
+    return AsyncValueGroup.group10(
       ref.watch(latestPillSheetGroupStreamProvider),
       ref.watch(premiumAndTrialProvider),
-      ref.watch(settingProvider),
       ref.watch(allMenstruationStreamProvider),
       ref.watch(latestMenstruationProvider),
+      ref.watch(settingProvider),
       ref.watch(diariesStream90Days(today())),
       ref.watch(schedules90Days(today())),
       ref.watch(calendarMenstruationBandListProvider),
       ref.watch(calendarScheduledMenstruationBandListProvider),
       ref.watch(calendarNextPillSheetBandListProvider),
     ).when(
-      data: (data) {},
-      error: (error, _) => UniversalErrorPage(
-        error: error,
-        child: null,
-        reload: () => ref.refresh(menstruationPageStateProvider),
-      ),
-      loading: () => const ScaffoldIndicator(),
-    );
-
-    return state.when(
-      data: (state) => MenstruationPageBody(store: store, state: state, pageController: pageController),
+      data: (data) {
+        return MenstruationPageBody(
+          latestPillSheetGroup: data.t1,
+          premiumAndTrial: data.t2,
+          allMenstruation: data.t3,
+          latestMenstruation: data.t4,
+          setting: data.t5,
+          diaries: data.t6,
+          schedules: data.t7,
+          calendarMenstruationBandModels: data.t8,
+          calendarScheduledMenstruationBandModels: data.t9,
+          calendarNextPillSheetBandModels: data.t10,
+          pageController: pageController,
+        );
+      },
       error: (error, _) => UniversalErrorPage(
         error: error,
         child: null,
@@ -89,7 +93,7 @@ class MenstruationPage extends HookConsumerWidget {
 }
 
 class MenstruationPageBody extends StatelessWidget {
-  final PillSheetGroup latestPillSheetGroup;
+  final PillSheetGroup? latestPillSheetGroup;
   final PremiumAndTrial premiumAndTrial;
   final List<Menstruation> allMenstruation;
   final Menstruation? latestMenstruation;

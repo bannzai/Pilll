@@ -16,7 +16,7 @@ final allMenstruationProvider = StreamProvider<List<Menstruation>>((ref) => ref
     .snapshots()
     .map((event) => event.docs.map((doc) => doc.data()).toList())
     .map((value) => value.where((element) => element.deletedAt == null).toList()));
-final latestMenstruationProvider = Provider((ref) => ref.watch(allMenstruationProvider)..whenData((menstruations) => menstruations.firstOrNull));
+final latestMenstruationProvider = Provider((ref) => ref.watch(allMenstruationProvider).whenData((menstruations) => menstruations.firstOrNull));
 
 final beginMenstruationProvider = Provider((ref) => BeginMenstruation(ref.watch(databaseProvider)));
 
