@@ -49,6 +49,7 @@ import 'package:mockito/annotations.dart';
   BatchSetPillSheetGroup,
   BatchSetPillSheets,
   BatchSetPillSheetModifiedHistory,
+  BatchSetSetting,
   SetSetting,
   SetPillSheetGroup,
   DatabaseConnection,
