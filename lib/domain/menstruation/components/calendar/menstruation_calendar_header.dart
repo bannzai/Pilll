@@ -1,26 +1,18 @@
-import 'package:async_value_group/async_value_group.dart';
-import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
-import 'package:hooks_riverpod/hooks_riverpod.dart';
 import 'package:pilll/analytics.dart';
 import 'package:pilll/components/molecules/shadow_container.dart';
 import 'package:pilll/components/organisms/calendar/band/calendar_band_model.dart';
-import 'package:pilll/components/organisms/calendar/band/calendar_band_provider.dart';
 import 'package:pilll/components/organisms/calendar/day/calendar_day_tile.dart';
 import 'package:pilll/components/organisms/calendar/week/utility.dart';
 import 'package:pilll/components/organisms/calendar/week/week_calendar.dart';
-import 'package:pilll/database/diary.dart';
-import 'package:pilll/database/schedule.dart';
 import 'package:pilll/domain/calendar/date_range.dart';
+import 'package:pilll/domain/menstruation/data.dart';
 import 'package:pilll/domain/menstruation/menstruation_page.dart';
-import 'package:pilll/domain/menstruation/menstruation_state.codegen.dart';
 import 'package:pilll/domain/record/weekday_badge.dart';
 import 'package:pilll/entity/diary.codegen.dart';
 import 'package:pilll/entity/schedule.codegen.dart';
 import 'package:pilll/entity/weekday.dart';
-
-import '../../../../util/datetime/day.dart';
 
 const double _horizontalPadding = 10;
 
