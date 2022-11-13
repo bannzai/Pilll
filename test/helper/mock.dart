@@ -8,6 +8,7 @@ import 'package:pilll/domain/premium_introduction/premium_introduction_store.dar
 import 'package:pilll/domain/settings/setting_page_async_action.dart';
 import 'package:pilll/domain/settings/setting_page_state_notifier.dart';
 import 'package:pilll/entity/setting.codegen.dart';
+import 'package:pilll/provider/menstruation.dart';
 import 'package:pilll/provider/pill_sheet.dart';
 import 'package:pilll/provider/pill_sheet_group.dart';
 import 'package:pilll/provider/pill_sheet_modified_history.dart';
@@ -39,7 +40,6 @@ import 'package:mockito/annotations.dart';
   BatchFactory,
   WriteBatch,
   SettingPageAsyncAction,
-  MenstruationEditPageAsyncAction,
   CalendarPageAsyncAction,
   PremiumAndTrial,
   Setting,
@@ -50,6 +50,9 @@ import 'package:mockito/annotations.dart';
   BatchSetSetting,
   SetSetting,
   SetPillSheetGroup,
+  DeleteMenstruation,
+  SetMenstruation,
+  BeginMenstruation,
   DatabaseConnection,
 ])
 abstract class KeepGeneratedMocks {}
