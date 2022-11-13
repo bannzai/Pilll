@@ -1,3 +1,4 @@
+import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:pilll/database/database.dart';
 import 'package:pilll/entity/diary.codegen.dart';
 import 'package:riverpod/riverpod.dart';
@@ -35,6 +36,16 @@ List<Diary> _sortedDiaries(List<Diary> diaries) {
   diaries.sort(_sortDiary);
   return diaries;
 }
+
+final setDiaryProvider = Provider((ref) => SetDiary(ref.watch(databaseProvider));
+class SetDiary {
+  final DatabaseConnection databaseConnection;
+  SetDiary(this.databaseConnection);
+
+  Future<void> call(Diary diary) async {
+    await databaseConnection.diaryReference(diary).set(diary, SetOptions(merge: true));
+  }
+ }
 
 final deleteDiaryProvider = Provider((ref) => DeleteDiary(ref.watch(databaseProvider));
 class DeleteDiary {
