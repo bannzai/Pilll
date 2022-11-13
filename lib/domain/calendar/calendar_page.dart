@@ -1,9 +1,14 @@
+import 'package:async_value_group/async_value_group.dart';
 import 'package:flutter_hooks/flutter_hooks.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
 import 'package:pilll/analytics.dart';
 import 'package:pilll/components/molecules/indicator.dart';
+import 'package:pilll/components/organisms/calendar/band/calendar_band_model.dart';
+import 'package:pilll/components/organisms/calendar/band/calendar_band_provider.dart';
 import 'package:pilll/components/organisms/calendar/day/calendar_day_tile.dart';
 import 'package:pilll/components/organisms/calendar/week/utility.dart';
+import 'package:pilll/database/diary.dart';
+import 'package:pilll/database/schedule.dart';
 import 'package:pilll/domain/calendar/calendar_page_index_state_notifier.dart';
 import 'package:pilll/domain/calendar/calendar_page_state.codegen.dart';
 import 'package:pilll/domain/calendar/components/title/calendar_page_title.dart';
@@ -14,8 +19,17 @@ import 'package:pilll/domain/calendar/components/pill_sheet_modified_history/pil
 import 'package:pilll/domain/calendar/calendar_page_state_notifier.dart';
 import 'package:flutter/material.dart';
 import 'package:pilll/domain/diary_post/diary_post_page.dart';
+import 'package:pilll/entity/diary.codegen.dart';
+import 'package:pilll/entity/schedule.codegen.dart';
 import 'package:pilll/error/universal_error_page.dart';
+import 'package:pilll/provider/premium_and_trial.codegen.dart';
+import 'package:pilll/util/datetime/date_compare.dart';
 import 'package:pilll/util/datetime/day.dart';
+
+const _calendarDataSourceLength = 24;
+final _calendarDataSource =
+    List.generate(_calendarDataSourceLength, (index) => (index + 1) - 12).map((e) => DateTime(today().year, today().month + e, 1)).toList();
+final _todayCalendarPageIndex = _calendarDataSource.lastIndexWhere((element) => isSameMonth(element, today()));
 
 class CalendarPage extends HookConsumerWidget {
   const CalendarPage({Key? key}) : super(key: key);
@@ -24,18 +38,36 @@ class CalendarPage extends HookConsumerWidget {
   Widget build(BuildContext context, WidgetRef ref) {
     final store = ref.watch(calendarPageStateNotifierProvider.notifier);
     final state = ref.watch(calendarPageStateNotifierProvider);
-    final calendarPageIndexStateNotifier = ref.watch(calendarPageIndexStateNotifierProvider.notifier);
+
+    final page = useState(_todayCalendarPageIndex);
+    final pageController = usePageController(initialPage: _todayCalendarPageIndex);
+    pageController.addListener(() {
+      final index = (pageController.page ?? pageController.initialPage).round();
+      page.value = index;
+    });
 
     useAutomaticKeepAlive(wantKeepAlive: true);
 
-    final pageController = usePageController(initialPage: todayCalendarPageIndex);
-    pageController.addListener(() {
-      final index = (pageController.page ?? pageController.initialPage).round();
-      calendarPageIndexStateNotifier.set(index);
-    });
-
-    return state.when(
-      data: (state) => _CalendarPage(stateNotifier: store, state: state, pageController: pageController),
+    final displayedMonth = _calendarDataSource[page.value];
+    return AsyncValueGroup.group6(
+      ref.watch(diariesStreamForMonthProvider(displayedMonth)),
+      ref.watch(schedulesForDateProvider(displayedMonth)),
+      ref.watch(premiumAndTrialProvider),
+      ref.watch(calendarMenstruationBandListProvider),
+      ref.watch(calendarScheduledMenstruationBandListProvider),
+      ref.watch(calendarNextPillSheetBandListProvider),
+    ).when(
+      data: (data) => _CalendarPageBody(
+        diaries: data.t1,
+        schedules: data.t2,
+        premiumAndTrial: data.t3,
+        calendarMenstruationBandModels: data.t4,
+        calendarScheduledMenstruationBandModels: data.t5,
+        calendarNextPillSheetBandModels: data.t6,
+        displayedMonth: displayedMonth,
+        page: page.value,
+        pageController: pageController,
+      ),
       error: (error, _) => UniversalErrorPage(
         error: error,
         child: null,
@@ -46,12 +78,30 @@ class CalendarPage extends HookConsumerWidget {
   }
 }
 
-class _CalendarPage extends StatelessWidget {
-  final CalendarPageStateNotifier stateNotifier;
-  final CalendarPageState state;
+class _CalendarPageBody extends StatelessWidget {
+  final List<Diary> diaries;
+  final List<Schedule> schedules;
+  final PremiumAndTrial premiumAndTrial;
+  final List<CalendarMenstruationBandModel> calendarMenstruationBandModels;
+  final List<CalendarScheduledMenstruationBandModel> calendarScheduledMenstruationBandModels;
+  final List<CalendarNextPillSheetBandModel> calendarNextPillSheetBandModels;
+  final DateTime displayedMonth;
+  final int page;
   final PageController pageController;
 
-  const _CalendarPage({Key? key, required this.stateNotifier, required this.state, required this.pageController}) : super(key: key);
+  const _CalendarPageBody({
+    Key? key,
+    required this.diaries,
+    required this.schedules,
+    required this.premiumAndTrial,
+    required this.calendarMenstruationBandModels,
+    required this.calendarScheduledMenstruationBandModels,
+    required this.calendarNextPillSheetBandModels,
+    required this.displayedMonth,
+    required this.page,
+    required this.pageController,
+  }) : super(key: key);
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -60,8 +110,7 @@ class _CalendarPage extends StatelessWidget {
         child: FloatingActionButton(
           onPressed: () {
             analytics.logEvent(name: "calendar_fab_pressed");
-            final date = today();
-            Navigator.of(context).push(DiaryPostPageRoute.route(date, null));
+            Navigator.of(context).push(DiaryPostPageRoute.route(today(), null));
           },
           child: const Icon(Icons.add, color: Colors.white),
           backgroundColor: PilllColors.secondary,
@@ -70,9 +119,9 @@ class _CalendarPage extends StatelessWidget {
       backgroundColor: PilllColors.background,
       appBar: AppBar(
         title: CalendarPageTitle(
-          state: state,
+          displayedMonth: displayedMonth,
+          page: page,
           pageController: pageController,
-          store: stateNotifier,
         ),
         centerTitle: true,
         elevation: 0,
@@ -89,7 +138,7 @@ class _CalendarPage extends StatelessWidget {
                 controller: pageController,
                 scrollDirection: Axis.horizontal,
                 physics: const PageScrollPhysics(),
-                children: List.generate(calendarDataSourceLength, (index) {
+                children: List.generate(_calendarDataSourceLength, (index) {
                   return Container(
                     margin: const EdgeInsets.only(bottom: 10),
                     decoration: BoxDecoration(
@@ -106,7 +155,7 @@ class _CalendarPage extends StatelessWidget {
                     height: 444 - 10,
                     width: MediaQuery.of(context).size.width,
                     child: MonthCalendar(
-                        dateForMonth: state.displayMonth,
+                        dateForMonth: displayedMonth,
                         weekCalendarBuilder: (context, monthCalendarState, weekDateRange) {
                           return CalendarWeekLine(
                             dateRange: weekDateRange,
