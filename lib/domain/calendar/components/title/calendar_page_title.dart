@@ -32,6 +32,7 @@ class CalendarPageTitle extends HookConsumerWidget {
 
             analytics.logEvent(name: "pressed_previous_month", parameters: {"current_index": page, "previous_index": previousMonthIndex});
 
+
             pageController.jumpToPage(previousMonthIndex);
             calendarPageIndexStateNotifier.set(previousMonthIndex);
           },
