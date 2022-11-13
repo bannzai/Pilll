@@ -7,6 +7,7 @@ import 'package:pilll/components/organisms/calendar/band/calendar_band_model.dar
 import 'package:pilll/components/organisms/calendar/band/calendar_band_provider.dart';
 import 'package:pilll/components/organisms/calendar/day/calendar_day_tile.dart';
 import 'package:pilll/components/organisms/calendar/week/utility.dart';
+import 'package:pilll/database/database.dart';
 import 'package:pilll/database/diary.dart';
 import 'package:pilll/database/schedule.dart';
 import 'package:pilll/domain/calendar/calendar_page_state.codegen.dart';
@@ -70,7 +71,7 @@ class CalendarPage extends HookConsumerWidget {
       error: (error, _) => UniversalErrorPage(
         error: error,
         child: null,
-        reload: () => ref.refresh(calendarPageStateProvider),
+        reload: () => ref.refresh(databaseProvider),
       ),
       loading: () => const ScaffoldIndicator(),
     );
