@@ -9,17 +9,14 @@ import 'package:pilll/components/organisms/calendar/day/calendar_day_tile.dart';
 import 'package:pilll/components/organisms/calendar/week/utility.dart';
 import 'package:pilll/database/diary.dart';
 import 'package:pilll/database/schedule.dart';
-import 'package:pilll/domain/calendar/calendar_page_index_state_notifier.dart';
 import 'package:pilll/domain/calendar/calendar_page_state.codegen.dart';
 import 'package:pilll/domain/calendar/components/title/calendar_page_title.dart';
 import 'package:pilll/domain/calendar/components/month_calendar/month_calendar.dart';
 import 'package:pilll/components/organisms/calendar/week/week_calendar.dart';
 import 'package:pilll/components/atoms/color.dart';
 import 'package:pilll/domain/calendar/components/pill_sheet_modified_history/pill_sheet_modified_history_card.dart';
-import 'package:pilll/domain/calendar/calendar_page_state_notifier.dart';
 import 'package:flutter/material.dart';
 import 'package:pilll/domain/diary_post/diary_post_page.dart';
-import 'package:pilll/domain/pill_sheet_modified_history/pill_sheet_modified_history_store.dart';
 import 'package:pilll/entity/diary.codegen.dart';
 import 'package:pilll/entity/pill_sheet_modified_history.codegen.dart';
 import 'package:pilll/entity/schedule.codegen.dart';
@@ -39,9 +36,6 @@ class CalendarPage extends HookConsumerWidget {
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {
-    final store = ref.watch(calendarPageStateNotifierProvider.notifier);
-    final state = ref.watch(calendarPageStateNotifierProvider);
-
     final page = useState(_todayCalendarPageIndex);
     final pageController = usePageController(initialPage: _todayCalendarPageIndex);
     pageController.addListener(() {

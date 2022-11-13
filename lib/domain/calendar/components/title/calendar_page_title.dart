@@ -4,7 +4,6 @@ import 'package:pilll/analytics.dart';
 import 'package:pilll/domain/calendar/calendar_page_index_state_notifier.dart';
 import 'package:pilll/components/atoms/font.dart';
 import 'package:pilll/components/atoms/text_color.dart';
-import 'package:pilll/domain/calendar/calendar_page_state_notifier.dart';
 import 'package:flutter/material.dart';
 import 'package:pilll/util/formatter/date_time_formatter.dart';
 
