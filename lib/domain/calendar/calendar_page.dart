@@ -64,7 +64,7 @@ class CalendarPage extends HookConsumerWidget {
         calendarScheduledMenstruationBandModels: data.t6,
         calendarNextPillSheetBandModels: data.t7,
         displayedMonth: displayedMonth,
-        page: page.value,
+        page: page,
         pageController: pageController,
       ),
       error: (error, _) => UniversalErrorPage(
@@ -86,7 +86,7 @@ class _CalendarPageBody extends StatelessWidget {
   final List<CalendarScheduledMenstruationBandModel> calendarScheduledMenstruationBandModels;
   final List<CalendarNextPillSheetBandModel> calendarNextPillSheetBandModels;
   final DateTime displayedMonth;
-  final int page;
+  final ValueNotifier<int> page;
   final PageController pageController;
 
   const _CalendarPageBody({

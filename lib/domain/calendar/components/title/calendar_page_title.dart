@@ -1,15 +1,13 @@
 import 'package:flutter_svg/flutter_svg.dart';
-import 'package:hooks_riverpod/hooks_riverpod.dart';
 import 'package:pilll/analytics.dart';
-import 'package:pilll/domain/calendar/calendar_page_index_state_notifier.dart';
 import 'package:pilll/components/atoms/font.dart';
 import 'package:pilll/components/atoms/text_color.dart';
 import 'package:flutter/material.dart';
 import 'package:pilll/util/formatter/date_time_formatter.dart';
 
-class CalendarPageTitle extends HookConsumerWidget {
+class CalendarPageTitle extends StatelessWidget {
   final DateTime displayedMonth;
-  final int page;
+  final ValueNotifier<int> page;
   final PageController pageController;
 
   const CalendarPageTitle({
@@ -20,21 +18,19 @@ class CalendarPageTitle extends HookConsumerWidget {
   }) : super(key: key);
 
   @override
-  Widget build(BuildContext context, WidgetRef ref) {
-    final calendarPageIndexStateNotifier = ref.watch(calendarPageIndexStateNotifierProvider.notifier);
+  Widget build(BuildContext context) {
     return Row(
       mainAxisAlignment: MainAxisAlignment.center,
       children: [
         IconButton(
           icon: SvgPicture.asset("images/arrow_left.svg"),
           onPressed: () {
-            final previousMonthIndex = page - 1;
+            final previousMonthIndex = page.value - 1;
 
-            analytics.logEvent(name: "pressed_previous_month", parameters: {"current_index": page, "previous_index": previousMonthIndex});
-
+            analytics.logEvent(name: "pressed_previous_month", parameters: {"current_index": page.value, "previous_index": previousMonthIndex});
 
             pageController.jumpToPage(previousMonthIndex);
-            calendarPageIndexStateNotifier.set(previousMonthIndex);
+            page.value = previousMonthIndex;
           },
         ),
         Text(
@@ -44,12 +40,12 @@ class CalendarPageTitle extends HookConsumerWidget {
         IconButton(
           icon: SvgPicture.asset("images/arrow_right.svg"),
           onPressed: () {
-            final nextMonthIndex = page + 1;
+            final nextMonthIndex = page.value + 1;
 
-            analytics.logEvent(name: "pressed_next_month", parameters: {"current_index": page, "next_index": nextMonthIndex});
+            analytics.logEvent(name: "pressed_next_month", parameters: {"current_index": page.value, "next_index": nextMonthIndex});
 
             pageController.jumpToPage(nextMonthIndex);
-            calendarPageIndexStateNotifier.set(nextMonthIndex);
+            page.value = nextMonthIndex;
           },
         ),
       ],
