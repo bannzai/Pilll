@@ -6,17 +6,18 @@ import 'package:pilll/components/atoms/text_color.dart';
 import 'package:pilll/components/molecules/indicator.dart';
 import 'package:pilll/domain/menstruation_list/menstruation_list_row.dart';
 import 'package:pilll/domain/menstruation_list/menstruation_list_store.dart';
+import 'package:pilll/provider/menstruation.dart';
 
 class MenstruationListPage extends HookConsumerWidget {
   const MenstruationListPage({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {
-    final state = ref.watch(menstruationListStateNotifierProvider);
-
-    if (state.isNotYetLoaded) {
+    final menstruationsAsyncValue = ref.watch(allMenstruationProvider);
+    if (menstruationsAsyncValue.isLoading) {
       return const ScaffoldIndicator();
     }
+    final menstruations = menstruationsAsyncValue.valueOrNull ?? [];
 
     return Scaffold(
       backgroundColor: PilllColors.background,
@@ -39,10 +40,10 @@ class MenstruationListPage extends HookConsumerWidget {
           child: ListView(
             padding: const EdgeInsets.all(32),
             children: [
-              for (var i = 0; i < state.allMenstruations.length; i++) ...[
+              for (var i = 0; i < menstruations.length; i++) ...[
                 MenstruationListRow(
-                  menstruation: state.allMenstruations[i],
-                  previousMenstruation: state.allMenstruations.length - 1 >= i ? null : state.allMenstruations[i + 1],
+                  menstruation: menstruations[i],
+                  previousMenstruation: menstruations.length - 1 >= i ? null : menstruations[i + 1],
                   prefix: "",
                 ),
                 const SizedBox(height: 8),
