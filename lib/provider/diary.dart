@@ -1,6 +1,5 @@
 import 'package:pilll/database/database.dart';
 import 'package:pilll/entity/diary.codegen.dart';
-import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:riverpod/riverpod.dart';
 import 'package:pilll/util/datetime/day.dart';
 
@@ -35,4 +34,14 @@ int _sortDiary(Diary a, Diary b) => a.date.compareTo(b.date);
 List<Diary> _sortedDiaries(List<Diary> diaries) {
   diaries.sort(_sortDiary);
   return diaries;
+}
+
+final deleteDiaryProvider = Provider((ref) => DeleteDiary(ref.watch(databaseProvider));
+class DeleteDiary {
+  final DatabaseConnection databaseConnection;
+  DeleteDiary(this.databaseConnection);
+
+  Future<void> call(Diary diary) async {
+    await databaseConnection.diaryReference(diary).delete();
+  }
 }
