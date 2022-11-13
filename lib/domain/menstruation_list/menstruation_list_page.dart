@@ -5,7 +5,6 @@ import 'package:pilll/components/atoms/font.dart';
 import 'package:pilll/components/atoms/text_color.dart';
 import 'package:pilll/components/molecules/indicator.dart';
 import 'package:pilll/domain/menstruation_list/menstruation_list_row.dart';
-import 'package:pilll/domain/menstruation_list/menstruation_list_store.dart';
 import 'package:pilll/provider/menstruation.dart';
 
 class MenstruationListPage extends HookConsumerWidget {
