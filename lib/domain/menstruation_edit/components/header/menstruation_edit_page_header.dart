@@ -74,6 +74,7 @@ class MenstruationEditPageHeader extends HookConsumerWidget {
                 final menstruation = initialMenstruation.copyWith(beginDate: editingDateRangeValue.begin, endDate: editingDateRangeValue.end);
                 await setMenstruation(menstruation);
               }
+              onSaved();
             }
           },
           text: "保存",
