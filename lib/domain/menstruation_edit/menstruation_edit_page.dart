@@ -10,6 +10,7 @@ import 'package:pilll/components/atoms/text_color.dart';
 import 'package:pilll/domain/calendar/date_range.dart';
 import 'package:pilll/domain/menstruation_edit/components/calendar/calendar_date_header.dart';
 import 'package:pilll/domain/menstruation_edit/components/calendar/month_calendar.dart';
+import 'package:pilll/domain/menstruation_edit/components/calendar/month_calendar_state.codegen.dart';
 import 'package:pilll/domain/menstruation_edit/components/header/menstruation_edit_page_header.dart';
 import 'package:pilll/entity/menstruation.codegen.dart';
 import 'package:pilll/domain/menstruation_edit/menstruation_edit_page_state_notifier.dart';
@@ -89,13 +90,13 @@ class MenstruationEditPage extends HookConsumerWidget {
                   child: ListView(
                     controller: scrollController,
                     children: [
-                      ...state.displayedDates
+                      ..._displayedDates()
                           .map((dateForMonth) {
                             return [
                               CalendarDateHeader(date: dateForMonth),
                               MonthCalendar(
                                 editingDateRange: editingDateRange.value,
-                                monthCalendarState: state.monthCalendarStatuses(dateForMonth),
+                                monthCalendarState: _monthCalendarStatuses(dateForMonth),
                                 onTap: (date) {
                                   final menstruation = this.initialMenstruation;
                                   if (date.isAfter(today()) && menstruation == null) {
@@ -156,6 +157,27 @@ class MenstruationEditPage extends HookConsumerWidget {
       }
     }
   }
+
+  List<DateTime> _displayedDates() {
+    final baseMenstruation = initialMenstruation;
+    if (baseMenstruation != null) {
+      return [
+        DateTime(baseMenstruation.beginDate.year, baseMenstruation.beginDate.month - 1, 1),
+        baseMenstruation.beginDate,
+        DateTime(baseMenstruation.beginDate.year, baseMenstruation.beginDate.month + 1, 1),
+      ];
+    } else {
+      final t = today();
+      return [
+        DateTime(t.year, t.month - 1, 1),
+        t,
+        DateTime(t.year, t.month + 1, 1),
+      ];
+    }
+  }
+
+  MonthCalendarState _monthCalendarStatuses(DateTime dateForMonth) =>
+      MonthCalendarState(dateForMonth: dateForMonth, menstruation: initialMenstruation);
 }
 
 void showMenstruationEditPage(

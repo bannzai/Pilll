@@ -35,20 +35,3 @@ class MenstruationEditPageState with _$MenstruationEditPageState {
 
   MonthCalendarState monthCalendarStatuses(DateTime dateForMonth) => MonthCalendarState(dateForMonth: dateForMonth, menstruation: menstruation);
 }
-
-List<DateTime> _displayedDates(Menstruation? menstruation) {
-  if (menstruation != null) {
-    return [
-      DateTime(menstruation.beginDate.year, menstruation.beginDate.month - 1, 1),
-      menstruation.beginDate,
-      DateTime(menstruation.beginDate.year, menstruation.beginDate.month + 1, 1),
-    ];
-  } else {
-    final t = today();
-    return [
-      DateTime(t.year, t.month - 1, 1),
-      t,
-      DateTime(t.year, t.month + 1, 1),
-    ];
-  }
-}
