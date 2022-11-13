@@ -4,8 +4,6 @@ import 'package:pilll/components/organisms/calendar/day/calendar_day_tile.dart';
 import 'package:pilll/components/organisms/calendar/week/week_calendar.dart';
 import 'package:pilll/domain/calendar/date_range.dart';
 import 'package:pilll/domain/menstruation_edit/components/calendar/month_calendar_state.codegen.dart';
-import 'package:pilll/domain/menstruation_edit/menstruation_edit_page_state.codegen.dart';
-import 'package:pilll/domain/menstruation_edit/menstruation_edit_page_state_notifier.dart';
 import 'package:pilll/domain/record/weekday_badge.dart';
 import 'package:pilll/entity/weekday.dart';
 import 'package:flutter/material.dart';

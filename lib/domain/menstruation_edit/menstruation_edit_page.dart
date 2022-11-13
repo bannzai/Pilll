@@ -13,7 +13,6 @@ import 'package:pilll/domain/menstruation_edit/components/calendar/month_calenda
 import 'package:pilll/domain/menstruation_edit/components/calendar/month_calendar_state.codegen.dart';
 import 'package:pilll/domain/menstruation_edit/components/header/menstruation_edit_page_header.dart';
 import 'package:pilll/entity/menstruation.codegen.dart';
-import 'package:pilll/domain/menstruation_edit/menstruation_edit_page_state_notifier.dart';
 import 'package:pilll/entity/setting.codegen.dart';
 import 'package:pilll/provider/setting.dart';
 import 'package:pilll/util/datetime/date_compare.dart';
@@ -36,7 +35,6 @@ class MenstruationEditPage extends HookConsumerWidget {
   @override
   Widget build(BuildContext context, WidgetRef ref) {
     final initialMenstruation = this.initialMenstruation;
-    final state = ref.watch(menstruationEditPageStateNotifierProvider(initialMenstruation));
     final setting = ref.watch(settingProvider).requireValue;
     final invalidMessage = useState("");
     final editingDateRange =

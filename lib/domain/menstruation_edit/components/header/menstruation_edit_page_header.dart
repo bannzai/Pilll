@@ -6,7 +6,6 @@ import 'package:pilll/components/atoms/font.dart';
 import 'package:pilll/components/atoms/text_color.dart';
 import 'package:pilll/components/page/discard_dialog.dart';
 import 'package:pilll/domain/calendar/date_range.dart';
-import 'package:pilll/domain/menstruation_edit/menstruation_edit_page_state_notifier.dart';
 import 'package:pilll/entity/menstruation.codegen.dart';
 import 'package:pilll/provider/menstruation.dart';
 
