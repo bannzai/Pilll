@@ -2,8 +2,6 @@ import 'package:async_value_group/async_value_group.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
 import 'package:pilll/components/molecules/indicator.dart';
 import 'package:pilll/components/organisms/calendar/week/utility.dart';
-import 'package:pilll/database/diary.dart';
-import 'package:pilll/database/schedule.dart';
 import 'package:pilll/domain/calendar/date_range.dart';
 import 'package:pilll/domain/record/weekday_badge.dart';
 import 'package:pilll/entity/diary.codegen.dart';
@@ -11,6 +9,7 @@ import 'package:pilll/entity/schedule.codegen.dart';
 import 'package:pilll/entity/weekday.dart';
 import 'package:flutter/material.dart';
 import 'package:pilll/provider/diary.dart';
+import 'package:pilll/provider/schedule.dart';
 
 abstract class CalendarConstants {
   static const double tileHeight = 66;

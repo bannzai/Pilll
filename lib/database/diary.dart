@@ -2,7 +2,6 @@ import 'package:pilll/database/database.dart';
 import 'package:pilll/entity/diary.codegen.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:riverpod/riverpod.dart';
-import 'package:pilll/util/datetime/day.dart';
 
 final diaryDatastoreProvider = Provider<DiaryDatastore>((ref) => DiaryDatastore(ref.watch(databaseProvider)));
 
@@ -25,7 +24,4 @@ class DiaryDatastore {
   Future<Diary> delete(Diary diary) {
     return _database.diaryReference(diary).delete().then((_) => diary);
   }
-
-  Stream<List<Diary>> stream() =>
-      _database.diariesReference().snapshots().map((event) => event.docs.map((e) => e.data()).toList()).map((diaries) => sortedDiaries(diaries));
 }
