@@ -2,7 +2,6 @@ import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:pilll/analytics.dart';
 import 'package:pilll/database/batch.dart';
 import 'package:pilll/database/database.dart';
-import 'package:pilll/domain/calendar/calendar_page_async_action.dart';
 import 'package:pilll/domain/premium_introduction/premium_introduction_store.dart';
 import 'package:pilll/domain/settings/setting_page_async_action.dart';
 import 'package:pilll/domain/settings/setting_page_state_notifier.dart';
@@ -37,7 +36,6 @@ import 'package:mockito/annotations.dart';
   BatchFactory,
   WriteBatch,
   SettingPageAsyncAction,
-  CalendarPageAsyncAction,
   PremiumAndTrial,
   Setting,
   SettingStateNotifier,
