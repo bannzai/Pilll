@@ -12,8 +12,6 @@ import 'package:riverpod/riverpod.dart';
 
 part 'setting_page_state.codegen.freezed.dart';
 
-final isHealthDataAvailableProvider = FutureProvider((ref) => isHealthDataAvailable());
-final deviceTimezoneNameProvider = FutureProvider((ref) => FlutterNativeTimezone.getLocalTimezone());
 
 final settingStateProvider = Provider<AsyncValue<SettingState>>((ref) {
   final latestPillSheetGroup = ;
