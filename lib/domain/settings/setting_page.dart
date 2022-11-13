@@ -50,9 +50,6 @@ class SettingPage extends HookConsumerWidget {
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {
-    final store = ref.watch(settingStateNotifierProvider.notifier);
-    final state = ref.watch(settingStateNotifierProvider);
-
     useAutomaticKeepAlive(wantKeepAlive: true);
 
     return AsyncValueGroup.group6(
@@ -221,7 +218,7 @@ class SettingPageBody extends StatelessWidget {
                   return SettingSectionTitle(
                     text: "生理",
                     children: [
-                      MenstruationRow(store, setting),
+                      MenstruationRow(setting),
                       _separator(),
                       if (Platform.isIOS && isHealthDataAvailable) ...[
                         HealthCareRow(

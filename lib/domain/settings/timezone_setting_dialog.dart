@@ -1,34 +1,34 @@
 import 'package:flutter/material.dart';
+import 'package:hooks_riverpod/hooks_riverpod.dart';
 import 'package:pilll/analytics.dart';
 import 'package:pilll/components/atoms/buttons.dart';
 import 'package:pilll/components/atoms/font.dart';
 import 'package:pilll/components/atoms/text_color.dart';
-import 'package:pilll/domain/settings/setting_page_state.codegen.dart';
-import 'package:pilll/domain/settings/setting_page_state_notifier.dart';
+import 'package:pilll/entity/setting.codegen.dart';
 import 'package:pilll/error/error_alert.dart';
+import 'package:pilll/provider/setting.dart';
 
-class TimezoneSettingDialog extends StatelessWidget {
-  final SettingState state;
-  final SettingStateNotifier stateNotifier;
+class TimezoneSettingDialog extends HookConsumerWidget {
+  final Setting setting;
+  final String deviceTimezoneName;
   final Function(String) onDone;
 
   const TimezoneSettingDialog({
     Key? key,
-    required this.state,
-    required this.stateNotifier,
+    required this.setting,
+    required this.deviceTimezoneName,
     required this.onDone,
   }) : super(key: key);
 
   @override
-  Widget build(BuildContext context) {
+  Widget build(BuildContext context, WidgetRef ref) {
+    final setSetting = ref.watch(setSettingProvider);
     return AlertDialog(
-      shape: const RoundedRectangleBorder(
-          borderRadius: BorderRadius.all(Radius.circular(20.0))),
-      contentPadding:
-          const EdgeInsets.only(left: 24, right: 24, top: 32, bottom: 20),
+      shape: const RoundedRectangleBorder(borderRadius: BorderRadius.all(Radius.circular(20.0))),
+      contentPadding: const EdgeInsets.only(left: 24, right: 24, top: 32, bottom: 20),
       actionsPadding: const EdgeInsets.only(left: 24, right: 24),
       title: Text(
-        "端末のタイムゾーン(${state.deviceTimezoneName})と同期しますか？",
+        "端末のタイムゾーン($deviceTimezoneName)と同期しますか？",
         style: const TextStyle(
           fontFamily: FontFamily.japanese,
           fontSize: 17,
@@ -51,7 +51,7 @@ class TimezoneSettingDialog extends StatelessWidget {
           ),
           const SizedBox(height: 12),
           Text(
-            state.setting.timezoneDatabaseName ?? "Asia/Tokyo",
+            setting.timezoneDatabaseName ?? "Asia/Tokyo",
             style: const TextStyle(
               fontFamily: FontFamily.japanese,
               fontSize: 14,
@@ -67,15 +67,13 @@ class TimezoneSettingDialog extends StatelessWidget {
             analytics.logEvent(
               name: "pressed_timezone_yes",
               parameters: {
-                "user_timezone": state.setting.timezoneDatabaseName,
-                "device_timezone": state.deviceTimezoneName,
+                "user_timezone": setting.timezoneDatabaseName,
+                "device_timezone": deviceTimezoneName,
               },
             );
             try {
-              await stateNotifier.asyncAction.updateTimezoneDatabaseName(
-                  setting: state.setting,
-                  timezoneDatabaseName: state.deviceTimezoneName);
-              onDone(state.deviceTimezoneName);
+              await setSetting(setting.copyWith(timezoneDatabaseName: deviceTimezoneName));
+              onDone(deviceTimezoneName);
             } catch (error) {
               showErrorAlert(context, error);
             }
@@ -91,8 +89,8 @@ class TimezoneSettingDialog extends StatelessWidget {
               analytics.logEvent(
                 name: "pressed_timezone_no",
                 parameters: {
-                  "user_timezone": state.setting.timezoneDatabaseName,
-                  "device_timezone": state.deviceTimezoneName,
+                  "user_timezone": setting.timezoneDatabaseName,
+                  "device_timezone": deviceTimezoneName,
                 },
               );
               Navigator.of(context).pop();

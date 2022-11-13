@@ -4,11 +4,11 @@ import 'package:pilll/analytics.dart';
 import 'package:pilll/domain/settings/setting_page_state.codegen.dart';
 import 'package:pilll/domain/settings/timezone_setting_dialog.dart';
 import 'package:pilll/entity/setting.codegen.dart';
-import 'package:pilll/domain/settings/setting_page_state_notifier.dart';
 import 'package:pilll/components/atoms/color.dart';
 import 'package:pilll/components/atoms/font.dart';
 import 'package:pilll/components/atoms/text_color.dart';
 import 'package:pilll/error/error_alert.dart';
+import 'package:pilll/provider/setting.dart';
 import 'package:pilll/util/formatter/date_time_formatter.dart';
 import 'package:pilll/util/toolbar/time_picker.dart';
 import 'package:flutter/material.dart';
@@ -16,17 +16,13 @@ import 'package:hooks_riverpod/hooks_riverpod.dart';
 import 'package:flutter_svg/svg.dart';
 
 class ReminderTimesPage extends HookConsumerWidget {
-  final SettingStateNotifier store;
-
-  const ReminderTimesPage({
-    Key? key,
-    required this.store,
-  }) : super(key: key);
+  const ReminderTimesPage({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {
-    final state = ref.watch(settingStateProvider).value!;
-    final setting = state.setting;
+    final setting = ref.watch(settingProvider).requireValue;
+    final deviceTimezoneName = ref.watch(deviceTimezoneNameProvider).requireValue;
+    final setSetting = ref.watch(setSettingProvider);
 
     return Scaffold(
       backgroundColor: PilllColors.background,
@@ -44,22 +40,22 @@ class ReminderTimesPage extends HookConsumerWidget {
               onPressed: () {
                 analytics.logEvent(name: "pressed_tz_setting_action");
                 showDialog(
-                    context: context,
-                    builder: (_) => TimezoneSettingDialog(
-                          state: state,
-                          stateNotifier: store,
-                          onDone: (tz) {
-                            ScaffoldMessenger.of(context).showSnackBar(
-                              SnackBar(
-                                duration: const Duration(seconds: 2),
-                                content: Text("$tzに変更しました"),
-                              ),
-                            );
-                          },
-                        ));
+                  context: context,
+                  builder: (_) => TimezoneSettingDialog(
+                    setting: setting,
+                    deviceTimezoneName: deviceTimezoneName,
+                    onDone: (tz) {
+                      ScaffoldMessenger.of(context).showSnackBar(
+                        SnackBar(
+                          duration: const Duration(seconds: 2),
+                          content: Text("$tzに変更しました"),
+                        ),
+                      );
+                    },
+                  ),
+                );
               },
-              icon:
-                  const Icon(Icons.timer_sharp, color: PilllColors.secondary)),
+              icon: const Icon(Icons.timer_sharp, color: PilllColors.secondary)),
         ],
         backgroundColor: PilllColors.background,
       ),
@@ -80,8 +76,7 @@ class ReminderTimesPage extends HookConsumerWidget {
                             color: PilllColors.border,
                           ),
                         ),
-                        _component(
-                            context, store, setting, reminderTime, offset + 1)
+                        _component(context, setting: setting, reminderTime: reminderTime, setSetting: setSetting, number: offset + 1)
                       ],
                     ),
                   ),
@@ -94,7 +89,7 @@ class ReminderTimesPage extends HookConsumerWidget {
                 color: PilllColors.border,
               ),
             ),
-            _add(context, state, store),
+            _add(context, setting: setting, setSetting: setSetting),
           ],
         ),
       ),
@@ -102,16 +97,16 @@ class ReminderTimesPage extends HookConsumerWidget {
   }
 
   Widget _component(
-    BuildContext context,
-    SettingStateNotifier store,
-    Setting setting,
-    ReminderTime reminderTime,
-    int number,
-  ) {
+    BuildContext context, {
+    required Setting setting,
+    required ReminderTime reminderTime,
+    required SetSetting setSetting,
+    required int number,
+  }) {
     Widget body = GestureDetector(
       onTap: () {
         analytics.logEvent(name: "show_modify_reminder_time");
-        _showPicker(context, store, setting, number - 1);
+        _showPicker(context, setting: setting, setSetting: setSetting, index: number - 1);
       },
       child: ListTile(
         title: Text("通知$number"),
@@ -128,9 +123,11 @@ class ReminderTimesPage extends HookConsumerWidget {
           ? null
           : (direction) {
               analytics.logEvent(name: "delete_reminder_time");
-              store.asyncAction
-                  .deleteReminderTimes(index: number - 1, setting: setting)
-                  .catchError((error) => showErrorAlert(context, error));
+              _deleteReminderTimes(
+                index: number - 1,
+                setting: setting,
+                setSetting: setSetting,
+              ).catchError((error) => showErrorAlert(context, error));
             },
       background: Container(
         color: Colors.red,
@@ -153,16 +150,14 @@ class ReminderTimesPage extends HookConsumerWidget {
     );
   }
 
-  Widget _add(
-      BuildContext context, SettingState state, SettingStateNotifier store) {
-    final setting = state.setting;
+  Widget _add(BuildContext context, {required Setting setting, required SetSetting setSetting}) {
     if (setting.reminderTimes.length >= ReminderTime.maximumCount) {
       return Container();
     }
     return GestureDetector(
       onTap: () {
         analytics.logEvent(name: "pressed_add_reminder_time");
-        _showPicker(context, store, setting, null);
+        _showPicker(context, setSetting: setSetting, setting: setting, index: null);
       },
       child: SizedBox(
         height: 64,
@@ -180,35 +175,34 @@ class ReminderTimesPage extends HookConsumerWidget {
     );
   }
 
-  void _showPicker(BuildContext context, SettingStateNotifier store,
-      Setting setting, int? index) {
+  void _showPicker(
+    BuildContext context, {
+    required Setting setting,
+    required SetSetting setSetting,
+    required int? index,
+  }) {
     final isEditing = index != null;
     showModalBottomSheet(
       context: context,
       builder: (BuildContext context) {
         return TimePicker(
-          initialDateTime: isEditing
-              ? setting.reminderTimes[index].dateTime()
-              : const ReminderTime(hour: 20, minute: 0).dateTime(),
+          initialDateTime: isEditing ? setting.reminderTimes[index].dateTime() : const ReminderTime(hour: 20, minute: 0).dateTime(),
           done: (dateTime) {
             if (isEditing) {
               analytics.logEvent(name: "edited_reminder_time");
-              unawaited(store.asyncAction
-                  .editReminderTime(
-                    index: index,
-                    reminderTime: ReminderTime(
-                        hour: dateTime.hour, minute: dateTime.minute),
-                    setting: setting,
-                  )
-                  .catchError((error) => showErrorAlert(context, error)));
+              unawaited(_editReminderTime(
+                index: index,
+                reminderTime: ReminderTime(hour: dateTime.hour, minute: dateTime.minute),
+                setting: setting,
+                setSetting: setSetting,
+              ).catchError((error) => showErrorAlert(context, error)));
             } else {
               analytics.logEvent(name: "added_reminder_time");
-              unawaited(store.asyncAction
-                  .addReminderTimes(
-                      reminderTime: ReminderTime(
-                          hour: dateTime.hour, minute: dateTime.minute),
-                      setting: setting)
-                  .catchError((error) => showErrorAlert(context, error)));
+              unawaited(_addReminderTimes(
+                reminderTime: ReminderTime(hour: dateTime.hour, minute: dateTime.minute),
+                setting: setting,
+                setSetting: setSetting,
+              ).catchError((error) => showErrorAlert(context, error)));
             }
 
             Navigator.pop(context);
@@ -217,15 +211,58 @@ class ReminderTimesPage extends HookConsumerWidget {
       },
     );
   }
+
+  Future<void> _addReminderTimes({
+    required Setting setting,
+    required ReminderTime reminderTime,
+    required SetSetting setSetting,
+  }) async {
+    List<ReminderTime> copied = [...setting.reminderTimes];
+    copied.add(reminderTime);
+    await _modifyReminderTimes(setting: setting, reminderTimes: copied, setSetting: setSetting);
+  }
+
+  Future<void> _editReminderTime({
+    required Setting setting,
+    required int index,
+    required ReminderTime reminderTime,
+    required SetSetting setSetting,
+  }) async {
+    List<ReminderTime> copied = [...setting.reminderTimes];
+    copied[index] = reminderTime;
+    await _modifyReminderTimes(setting: setting, reminderTimes: copied, setSetting: setSetting);
+  }
+
+  Future<void> _deleteReminderTimes({
+    required Setting setting,
+    required int index,
+    required SetSetting setSetting,
+  }) async {
+    List<ReminderTime> copied = [...setting.reminderTimes];
+    copied.removeAt(index);
+    await _modifyReminderTimes(setting: setting, reminderTimes: copied, setSetting: setSetting);
+  }
+
+  Future<void> _modifyReminderTimes({
+    required Setting setting,
+    required List<ReminderTime> reminderTimes,
+    required SetSetting setSetting,
+  }) async {
+    if (reminderTimes.length > ReminderTime.maximumCount) {
+      throw Exception("登録できる上限に達しました。${ReminderTime.maximumCount}件以内に収めてください");
+    }
+    if (reminderTimes.length < ReminderTime.minimumCount) {
+      throw Exception("通知時刻は最低${ReminderTime.minimumCount}件必要です");
+    }
+    await setSetting(setting.copyWith(reminderTimes: reminderTimes));
+  }
 }
 
 extension ReminderTimesPageRoute on ReminderTimesPage {
-  static Route<dynamic> route({
-    required SettingStateNotifier store,
-  }) {
+  static Route<dynamic> route() {
     return MaterialPageRoute(
       settings: const RouteSettings(name: "ReminderTimesPage"),
-      builder: (_) => ReminderTimesPage(store: store),
+      builder: (_) => const ReminderTimesPage(),
     );
   }
 }
