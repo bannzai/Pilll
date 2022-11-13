@@ -44,7 +44,6 @@ class MenstruationListPage extends HookConsumerWidget {
                 MenstruationListRow(
                   menstruation: menstruations[i],
                   previousMenstruation: menstruations.length - 1 >= i ? null : menstruations[i + 1],
-                  prefix: "",
                 ),
                 const SizedBox(height: 8),
               ],

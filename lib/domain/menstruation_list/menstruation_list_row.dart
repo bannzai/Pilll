@@ -9,13 +9,11 @@ import 'package:flutter/material.dart';
 class MenstruationListRow extends StatelessWidget {
   final Menstruation menstruation;
   final Menstruation? previousMenstruation;
-  final String? prefix;
 
   const MenstruationListRow({
     Key? key,
     required this.menstruation,
     required this.previousMenstruation,
-    required this.prefix,
   }) : super(key: key);
 
   @override
