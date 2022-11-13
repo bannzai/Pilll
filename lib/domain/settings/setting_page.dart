@@ -25,15 +25,15 @@ import 'package:pilll/domain/settings/components/rows/taking_pill_notification.d
 import 'package:pilll/domain/settings/components/rows/today_pill_number.dart';
 import 'package:pilll/domain/settings/components/rows/update_from_132.dart';
 import 'package:pilll/domain/settings/components/setting_section_title.dart';
-import 'package:pilll/domain/settings/setting_page_state.codegen.dart';
+import 'package:pilll/domain/settings/provider.dart';
 import 'package:pilll/entity/pill_sheet_group.codegen.dart';
 import 'package:pilll/entity/setting.codegen.dart';
 import 'package:pilll/error/universal_error_page.dart';
 import 'package:pilll/domain/settings/components/inquiry/inquiry.dart';
-import 'package:pilll/domain/settings/setting_page_state_notifier.dart';
 import 'package:pilll/components/atoms/color.dart';
 import 'package:pilll/components/atoms/text_color.dart';
 import 'package:pilll/provider/premium_and_trial.codegen.dart';
+import 'package:pilll/provider/root.dart';
 import 'package:pilll/provider/setting.dart';
 import 'package:pilll/provider/shared_preference.dart';
 import 'package:pilll/util/environment.dart';
@@ -76,7 +76,7 @@ class SettingPage extends HookConsumerWidget {
       error: (error, _) => UniversalErrorPage(
         error: error,
         child: null,
-        reload: () => ref.refresh(settingStateProvider),
+        reload: () => ref.refresh(refreshAppProvider),
       ),
       loading: () => const ScaffoldIndicator(),
     );
@@ -192,7 +192,7 @@ class SettingPageBody extends StatelessWidget {
                     children: [
                       TakingPillNotification(setting: setting),
                       _separator(),
-                      NotificationTimeRow(store: store, state: state),
+                      NotificationTimeRow(setting: setting),
                       _separator(),
                       if (activedPillSheet != null && activedPillSheet.pillSheetHasRestOrFakeDuration) ...[
                         NotificationInRestDuration(setting: setting, pillSheet: activedPillSheet),
