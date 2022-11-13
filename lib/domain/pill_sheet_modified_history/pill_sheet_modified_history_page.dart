@@ -24,6 +24,7 @@ class PillSheetModifiedHistoriesPage extends HookConsumerWidget {
     final pillSheetModifiedHistoryAsyncValue = ref.watch(pillSheetModifiedHistoriesProvider(afterCursor.value));
     useEffect(() {
       loadingNext.value = false;
+      return null;
     }, [pillSheetModifiedHistoryAsyncValue.asData?.value]);
 
     return AsyncValueGroup.group2(
