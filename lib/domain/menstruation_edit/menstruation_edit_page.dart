@@ -128,7 +128,6 @@ class MenstruationEditPage extends HookConsumerWidget {
     required Setting setting,
     required ValueNotifier<DateRange?> dateRange,
   }) async {
-    final menstruation = this.initialMenstruation;
     final dateRangeValue = dateRange.value;
     if (dateRangeValue == null) {
       final begin = date;
