@@ -4,7 +4,6 @@ import 'package:pilll/components/molecules/indicator.dart';
 import 'package:pilll/components/organisms/calendar/week/utility.dart';
 import 'package:pilll/database/diary.dart';
 import 'package:pilll/database/schedule.dart';
-import 'package:pilll/domain/calendar/components/month_calendar/month_calendar_state.codegen.dart';
 import 'package:pilll/domain/calendar/date_range.dart';
 import 'package:pilll/domain/record/weekday_badge.dart';
 import 'package:pilll/entity/diary.codegen.dart';

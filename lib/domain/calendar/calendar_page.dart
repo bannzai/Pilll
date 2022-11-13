@@ -158,7 +158,7 @@ class _CalendarPageBody extends StatelessWidget {
                     width: MediaQuery.of(context).size.width,
                     child: MonthCalendar(
                         dateForMonth: displayedMonth,
-                        weekCalendarBuilder: (context, monthCalendarState, weekDateRange) {
+                        weekCalendarBuilder: (context, diaries, schedules, weekDateRange) {
                           return CalendarWeekLine(
                             dateRange: weekDateRange,
                             calendarMenstruationBandModels: calendarMenstruationBandModels,
@@ -175,13 +175,12 @@ class _CalendarPageBody extends StatelessWidget {
                               return CalendarDayTile(
                                 weekday: weekday,
                                 date: date,
-                                showsDiaryMark: isExistsPostedDiary(monthCalendarState.diaries, date),
-                                showsScheduleMark: isExistsSchedule(monthCalendarState.schedules, date),
+                                showsDiaryMark: isExistsPostedDiary(diaries, date),
+                                showsScheduleMark: isExistsSchedule(schedules, date),
                                 showsMenstruationMark: false,
                                 onTap: (date) {
                                   analytics.logEvent(name: "did_select_day_tile_on_calendar_card");
-                                  transitionWhenCalendarDayTapped(context,
-                                      date: date, diaries: monthCalendarState.diaries, schedules: monthCalendarState.schedules);
+                                  transitionWhenCalendarDayTapped(context, date: date, diaries: diaries, schedules: schedules);
                                 },
                               );
                             },
