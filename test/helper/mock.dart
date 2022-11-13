@@ -3,7 +3,6 @@ import 'package:pilll/analytics.dart';
 import 'package:pilll/database/batch.dart';
 import 'package:pilll/database/database.dart';
 import 'package:pilll/domain/calendar/calendar_page_async_action.dart';
-import 'package:pilll/domain/menstruation_edit/menstruation_edit_page_async_action.dart';
 import 'package:pilll/domain/premium_introduction/premium_introduction_store.dart';
 import 'package:pilll/domain/settings/setting_page_async_action.dart';
 import 'package:pilll/domain/settings/setting_page_state_notifier.dart';
