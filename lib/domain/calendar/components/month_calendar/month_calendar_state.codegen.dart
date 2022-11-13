@@ -4,7 +4,6 @@ import 'package:pilll/database/diary.dart';
 import 'package:pilll/database/schedule.dart';
 import 'package:pilll/domain/calendar/date_range.dart';
 import 'package:pilll/entity/diary.codegen.dart';
-import 'package:pilll/entity/menstruation.codegen.dart';
 import 'package:pilll/entity/schedule.codegen.dart';
 import 'package:riverpod/riverpod.dart';
 
