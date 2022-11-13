@@ -32,8 +32,8 @@ class MenstruationCardList extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final cardState = _cardState();
-    final historyCardState = _historyCardState();
+    final _cardState = cardState(latestPillSheetGroup, latestMenstruation, setting, calendarScheduledMenstruationBandModels);
+    final _historyCardState = historyCardState(latestMenstruation, allMenstruation, premiumAndTrial);
     return Expanded(
       child: Container(
         color: PilllColors.background,
@@ -41,61 +41,67 @@ class MenstruationCardList extends StatelessWidget {
           padding: const EdgeInsets.only(top: 16, left: 16, right: 16),
           scrollDirection: Axis.vertical,
           children: [
-            if (cardState != null) ...[
-              MenstruationCard(cardState),
+            if (_cardState != null) ...[
+              MenstruationCard(_cardState),
               const SizedBox(height: 24),
             ],
-            if (historyCardState != null) MenstruationHistoryCard(state: historyCardState),
+            if (_historyCardState != null) MenstruationHistoryCard(state: _historyCardState),
           ],
         ),
       ),
     );
   }
+}
 
-  MenstruationCardState? _cardState() {
-    final latestMenstruation = this.latestMenstruation;
-    if (latestMenstruation != null && latestMenstruation.dateRange.inRange(today())) {
-      return MenstruationCardState.record(menstruation: latestMenstruation);
-    }
+MenstruationCardState? cardState(
+  PillSheetGroup? pillSheetGroup,
+  Menstruation? menstration,
+  Setting setting,
+  List<CalendarScheduledMenstruationBandModel> calendarScheduledMenstruationBandModels,
+) {
+  if (menstration != null && menstration.dateRange.inRange(today())) {
+    return MenstruationCardState.record(menstruation: menstration);
+  }
 
-    final latestPillSheetGroup = this.latestPillSheetGroup;
-    if (latestPillSheetGroup == null || latestPillSheetGroup.pillSheets.isEmpty) {
-      return null;
-    }
-    if (setting.pillNumberForFromMenstruation == 0 || setting.durationMenstruation == 0) {
-      return null;
-    }
-
-    final menstruationDateRanges = calendarScheduledMenstruationBandModels;
-    final inTheMiddleDateRanges = menstruationDateRanges.map((e) => DateRange(e.begin, e.end)).where((element) => element.inRange(today()));
-
-    if (inTheMiddleDateRanges.isNotEmpty) {
-      return MenstruationCardState.inTheMiddle(scheduledDate: inTheMiddleDateRanges.first.begin);
-    }
-
-    final futureDateRanges = menstruationDateRanges.where((element) => element.begin.isAfter(today()));
-    if (futureDateRanges.isNotEmpty) {
-      return MenstruationCardState.future(nextSchedule: futureDateRanges.first.begin);
-    }
-
-    assert(false);
+  if (pillSheetGroup == null || pillSheetGroup.pillSheets.isEmpty) {
+    return null;
+  }
+  if (setting.pillNumberForFromMenstruation == 0 || setting.durationMenstruation == 0) {
     return null;
   }
 
-  MenstruationHistoryCardState? _historyCardState() {
-    final latestMenstruation = this.latestMenstruation;
-    if (latestMenstruation == null) {
-      return null;
-    }
-    if (allMenstruation.length == 1 && latestMenstruation.dateRange.inRange(today())) {
-      return null;
-    }
-    return MenstruationHistoryCardState(
-      allMenstruations: allMenstruation,
-      latestMenstruation: latestMenstruation,
-      isPremium: premiumAndTrial.isPremium,
-      isTrial: premiumAndTrial.isTrial,
-      trialDeadlineDate: premiumAndTrial.trialDeadlineDate,
-    );
+  final menstruationDateRanges = calendarScheduledMenstruationBandModels;
+  final inTheMiddleDateRanges = menstruationDateRanges.map((e) => DateRange(e.begin, e.end)).where((element) => element.inRange(today()));
+
+  if (inTheMiddleDateRanges.isNotEmpty) {
+    return MenstruationCardState.inTheMiddle(scheduledDate: inTheMiddleDateRanges.first.begin);
   }
+
+  final futureDateRanges = menstruationDateRanges.where((element) => element.begin.isAfter(today()));
+  if (futureDateRanges.isNotEmpty) {
+    return MenstruationCardState.future(nextSchedule: futureDateRanges.first.begin);
+  }
+
+  assert(false);
+  return null;
+}
+
+MenstruationHistoryCardState? historyCardState(
+  Menstruation? menstruation,
+  List<Menstruation> allMenstruation,
+  PremiumAndTrial premiumAndTrial,
+) {
+  if (menstruation == null) {
+    return null;
+  }
+  if (allMenstruation.length == 1 && menstruation.dateRange.inRange(today())) {
+    return null;
+  }
+  return MenstruationHistoryCardState(
+    allMenstruations: allMenstruation,
+    latestMenstruation: menstruation,
+    isPremium: premiumAndTrial.isPremium,
+    isTrial: premiumAndTrial.isTrial,
+    trialDeadlineDate: premiumAndTrial.trialDeadlineDate,
+  );
 }

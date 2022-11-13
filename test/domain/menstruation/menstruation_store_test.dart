@@ -1,8 +1,8 @@
 import 'package:flutter_test/flutter_test.dart';
-import 'package:hooks_riverpod/hooks_riverpod.dart';
 import 'package:mockito/mockito.dart';
 import 'package:pilll/components/organisms/calendar/band/calendar_band_function.dart';
 import 'package:pilll/components/organisms/calendar/band/calendar_band_model.dart';
+import 'package:pilll/domain/menstruation/components/menstruation_card_list.dart';
 import 'package:pilll/domain/menstruation/menstruation_card_state.codegen.dart';
 import 'package:pilll/entity/menstruation.codegen.dart';
 import 'package:pilll/entity/pill_sheet.codegen.dart';
@@ -13,7 +13,6 @@ import 'package:pilll/service/day.dart';
 import 'package:pilll/util/datetime/day.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
-import '../../helper/delay.dart';
 import '../../helper/mock.mocks.dart';
 
 void main() {
@@ -59,30 +58,8 @@ void main() {
         final calendarScheduledMenstruationBandModels = scheduledOrInTheMiddleMenstruationDateRanges(pillSheetGroup, setting, menstruations, 12)
             .map((e) => CalendarScheduledMenstruationBandModel(e.begin, e.end))
             .toList();
-        final calendarMenstruationBandModels = menstruations.map((e) => CalendarMenstruationBandModel(e)).toList();
-        final calendarNextPillSheetBandModels =
-            nextPillSheetDateRanges(pillSheetGroup, 12).map((e) => CalendarNextPillSheetBandModel(e.begin, e.end)).toList();
-        final store = MenstruationPageStateNotifier(
-          asyncAction: MockMenstruationPageAsyncAction(),
-          initialState: AsyncValue.data(
-            MenstruationState(
-              currentCalendarPageIndex: todayCalendarPageIndex,
-              todayCalendarPageIndex: todayCalendarPageIndex,
-              diariesFor90Days: [],
-              schedulesFor90Days: [],
-              menstruations: menstruations,
-              premiumAndTrial: MockPremiumAndTrial(),
-              setting: setting,
-              latestPillSheetGroup: pillSheetGroup,
-              calendarMenstruationBandModels: calendarMenstruationBandModels,
-              calendarScheduledMenstruationBandModels: calendarScheduledMenstruationBandModels,
-              calendarNextPillSheetBandModels: calendarNextPillSheetBandModels,
-            ),
-          ),
-        );
 
-        await waitForResetStoreState();
-        final actual = store.cardState();
+        final actual = cardState(pillSheetGroup, menstruations.first, setting, calendarScheduledMenstruationBandModels);
 
         expect(actual, MenstruationCardState(title: "生理開始日", scheduleDate: DateTime(2021, 04, 28), countdownString: "2日目"));
       },
@@ -119,31 +96,8 @@ void main() {
         final calendarScheduledMenstruationBandModels = scheduledOrInTheMiddleMenstruationDateRanges(pillSheetGroup, setting, menstruations, 12)
             .map((e) => CalendarScheduledMenstruationBandModel(e.begin, e.end))
             .toList();
-        final calendarMenstruationBandModels = menstruations.map((e) => CalendarMenstruationBandModel(e)).toList();
-        final calendarNextPillSheetBandModels =
-            nextPillSheetDateRanges(pillSheetGroup, 12).map((e) => CalendarNextPillSheetBandModel(e.begin, e.end)).toList();
-        final store = MenstruationPageStateNotifier(
-          asyncAction: MockMenstruationPageAsyncAction(),
-          initialState: AsyncValue.data(
-            MenstruationState(
-              currentCalendarPageIndex: todayCalendarPageIndex,
-              todayCalendarPageIndex: todayCalendarPageIndex,
-              diariesFor90Days: [],
-              schedulesFor90Days: [],
-              menstruations: menstruations,
-              premiumAndTrial: MockPremiumAndTrial(),
-              setting: setting,
-              latestPillSheetGroup: pillSheetGroup,
-              calendarMenstruationBandModels: calendarMenstruationBandModels,
-              calendarScheduledMenstruationBandModels: calendarScheduledMenstruationBandModels,
-              calendarNextPillSheetBandModels: calendarNextPillSheetBandModels,
-            ),
-          ),
-        );
 
-        await waitForResetStoreState();
-        final actual = store.cardState();
-
+        final actual = cardState(pillSheetGroup, menstruations.first, setting, calendarScheduledMenstruationBandModels);
         expect(actual, null);
       },
     );
@@ -182,30 +136,8 @@ void main() {
         final calendarScheduledMenstruationBandModels = scheduledOrInTheMiddleMenstruationDateRanges(pillSheetGroup, setting, [], 12)
             .map((e) => CalendarScheduledMenstruationBandModel(e.begin, e.end))
             .toList();
-        final calendarNextPillSheetBandModels =
-            nextPillSheetDateRanges(pillSheetGroup, 12).map((e) => CalendarNextPillSheetBandModel(e.begin, e.end)).toList();
-        final store = MenstruationPageStateNotifier(
-          asyncAction: MockMenstruationPageAsyncAction(),
-          initialState: AsyncValue.data(
-            MenstruationState(
-              currentCalendarPageIndex: todayCalendarPageIndex,
-              todayCalendarPageIndex: todayCalendarPageIndex,
-              diariesFor90Days: [],
-              schedulesFor90Days: [],
-              menstruations: [],
-              premiumAndTrial: MockPremiumAndTrial(),
-              setting: setting,
-              latestPillSheetGroup: pillSheetGroup,
-              calendarMenstruationBandModels: [],
-              calendarScheduledMenstruationBandModels: calendarScheduledMenstruationBandModels,
-              calendarNextPillSheetBandModels: calendarNextPillSheetBandModels,
-            ),
-          ),
-        );
 
-        await waitForResetStoreState();
-        final actual = store.cardState();
-
+        final actual = cardState(pillSheetGroup, null, setting, calendarScheduledMenstruationBandModels);
         expect(actual, MenstruationCardState(title: "生理予定日", scheduleDate: DateTime(2021, 05, 13), countdownString: "あと14日"));
       },
     );
@@ -250,31 +182,7 @@ void main() {
         final calendarScheduledMenstruationBandModels = scheduledOrInTheMiddleMenstruationDateRanges(pillSheetGroup, setting, menstruations, 12)
             .map((e) => CalendarScheduledMenstruationBandModel(e.begin, e.end))
             .toList();
-        final calendarMenstruationBandModels = menstruations.map((e) => CalendarMenstruationBandModel(e)).toList();
-        final calendarNextPillSheetBandModels =
-            nextPillSheetDateRanges(pillSheetGroup, 12).map((e) => CalendarNextPillSheetBandModel(e.begin, e.end)).toList();
-        final store = MenstruationPageStateNotifier(
-          asyncAction: MockMenstruationPageAsyncAction(),
-          initialState: AsyncValue.data(
-            MenstruationState(
-              currentCalendarPageIndex: todayCalendarPageIndex,
-              todayCalendarPageIndex: todayCalendarPageIndex,
-              diariesFor90Days: [],
-              schedulesFor90Days: [],
-              menstruations: menstruations,
-              premiumAndTrial: MockPremiumAndTrial(),
-              setting: setting,
-              latestPillSheetGroup: pillSheetGroup,
-              calendarMenstruationBandModels: calendarMenstruationBandModels,
-              calendarScheduledMenstruationBandModels: calendarScheduledMenstruationBandModels,
-              calendarNextPillSheetBandModels: calendarNextPillSheetBandModels,
-            ),
-          ),
-        );
-
-        await waitForResetStoreState();
-        final actual = store.cardState();
-
+        final actual = cardState(pillSheetGroup, menstruations.first, setting, calendarScheduledMenstruationBandModels);
         expect(
           actual,
           MenstruationCardState(title: "生理予定日", scheduleDate: DateTime(2021, 04, 28), countdownString: "生理予定：2日目"),
