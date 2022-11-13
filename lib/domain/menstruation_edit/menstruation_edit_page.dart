@@ -160,15 +160,15 @@ class MenstruationEditPage extends HookConsumerWidget {
 
 void showMenstruationEditPage(
   BuildContext context, {
-  required Menstruation? menstruation,
+  required Menstruation? initialMenstruation,
 }) {
   analytics.setCurrentScreen(screenName: "MenstruationEditPage");
   showModalBottomSheet(
     context: context,
     builder: (context) => MenstruationEditPage(
-      initialMenstruation: menstruation,
+      initialMenstruation: initialMenstruation,
       onSaved: (savedMenstruation) {
-        if (menstruation == null) {
+        if (initialMenstruation == null) {
           ScaffoldMessenger.of(context).showSnackBar(
             SnackBar(
               duration: const Duration(seconds: 2),

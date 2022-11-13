@@ -67,7 +67,7 @@ class CalendarWeekLine extends HookConsumerWidget {
                     analytics.logEvent(name: "tap_calendar_menstruation_band");
                     showMenstruationEditPage(
                       context,
-                      menstruation: menstruation,
+                      initialMenstruation: menstruation,
                     );
                   },
                 ),

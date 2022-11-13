@@ -29,14 +29,13 @@ class MenstruationRecordButton extends HookConsumerWidget {
       child: PrimaryButton(
         onPressed: () async {
           analytics.logEvent(name: "pressed_menstruation_record");
+
           final latestMenstruation = this.latestMenstruation;
           if (latestMenstruation != null && latestMenstruation.dateRange.inRange(today())) {
-            showMenstruationEditPage(context, menstruation: latestMenstruation);
-            return;
+            return showMenstruationEditPage(context, initialMenstruation: latestMenstruation);
           }
-
           if (setting.durationMenstruation == 0) {
-            return showMenstruationEditPage(context, menstruation: null);
+            return showMenstruationEditPage(context, initialMenstruation: null);
           }
           showModalBottomSheet(
             context: context,
@@ -57,7 +56,7 @@ class MenstruationRecordButton extends HookConsumerWidget {
                 case MenstruationSelectModifyType.begin:
                   analytics.logEvent(name: "tapped_menstruation_record_begin");
                   Navigator.of(context).pop();
-                  return showMenstruationEditPage(context, menstruation: null);
+                  return showMenstruationEditPage(context, initialMenstruation: null);
               }
             }),
           );
