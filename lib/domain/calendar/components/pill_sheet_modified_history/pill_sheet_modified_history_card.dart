@@ -103,7 +103,7 @@ class CalendarPillSheetModifiedHistoryCard extends StatelessWidget {
                         padding: null,
                         scrollPhysics: const NeverScrollableScrollPhysics(),
                         pillSheetModifiedHistories: histories,
-                        onEditTakenPillAction: null,
+                        premiumAndTrial: premiumAndTrial,
                       ),
                       Positioned.fill(
                         child: ClipRect(
