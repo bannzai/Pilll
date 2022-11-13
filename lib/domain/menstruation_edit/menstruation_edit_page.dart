@@ -35,19 +35,19 @@ class MenstruationEditPage extends HookConsumerWidget {
   @override
   Widget build(BuildContext context, WidgetRef ref) {
     final initialMenstruation = this.initialMenstruation;
-    final store = ref.watch(menstruationEditPageStateNotifierProvider(initialMenstruation).notifier);
     final state = ref.watch(menstruationEditPageStateNotifierProvider(initialMenstruation));
     final setting = ref.watch(settingProvider).requireValue;
     final invalidMessage = useState("");
     final editingDateRange =
         useState<DateRange?>(initialMenstruation == null ? null : DateRange(initialMenstruation.beginDate, initialMenstruation.endDate));
 
+    final adjustedInitialScrollOffset = useState(false);
     final scrollController = useScrollController();
     Future.microtask(() {
-      if (state.isAlreadyAdjsutScrollOffset) {
+      if (adjustedInitialScrollOffset.value) {
         return;
       }
-      store.adjustedScrollOffset();
+      adjustedInitialScrollOffset.value = true;
       const double estimatedSectionTitleHeight = 95;
       scrollController.jumpTo(CalendarConstants.tileHeight * CalendarConstants.maxLineCount + estimatedSectionTitleHeight);
     });
