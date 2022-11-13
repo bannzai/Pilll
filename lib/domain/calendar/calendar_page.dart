@@ -19,9 +19,12 @@ import 'package:pilll/domain/calendar/components/pill_sheet_modified_history/pil
 import 'package:pilll/domain/calendar/calendar_page_state_notifier.dart';
 import 'package:flutter/material.dart';
 import 'package:pilll/domain/diary_post/diary_post_page.dart';
+import 'package:pilll/domain/pill_sheet_modified_history/pill_sheet_modified_history_store.dart';
 import 'package:pilll/entity/diary.codegen.dart';
+import 'package:pilll/entity/pill_sheet_modified_history.codegen.dart';
 import 'package:pilll/entity/schedule.codegen.dart';
 import 'package:pilll/error/universal_error_page.dart';
+import 'package:pilll/provider/pill_sheet_modified_history.dart';
 import 'package:pilll/provider/premium_and_trial.codegen.dart';
 import 'package:pilll/util/datetime/date_compare.dart';
 import 'package:pilll/util/datetime/day.dart';
@@ -49,9 +52,10 @@ class CalendarPage extends HookConsumerWidget {
     useAutomaticKeepAlive(wantKeepAlive: true);
 
     final displayedMonth = _calendarDataSource[page.value];
-    return AsyncValueGroup.group6(
+    return AsyncValueGroup.group7(
       ref.watch(diariesStreamForMonthProvider(displayedMonth)),
       ref.watch(schedulesForDateProvider(displayedMonth)),
+      ref.watch(pillSheetModifiedHistoriesWithLimitProvider(CalendarPillSheetModifiedHistoryCardState.pillSheetModifiedHistoriesThreshold + 1)),
       ref.watch(premiumAndTrialProvider),
       ref.watch(calendarMenstruationBandListProvider),
       ref.watch(calendarScheduledMenstruationBandListProvider),
@@ -60,10 +64,11 @@ class CalendarPage extends HookConsumerWidget {
       data: (data) => _CalendarPageBody(
         diaries: data.t1,
         schedules: data.t2,
-        premiumAndTrial: data.t3,
-        calendarMenstruationBandModels: data.t4,
-        calendarScheduledMenstruationBandModels: data.t5,
-        calendarNextPillSheetBandModels: data.t6,
+        histories: data.t3,
+        premiumAndTrial: data.t4,
+        calendarMenstruationBandModels: data.t5,
+        calendarScheduledMenstruationBandModels: data.t6,
+        calendarNextPillSheetBandModels: data.t7,
         displayedMonth: displayedMonth,
         page: page.value,
         pageController: pageController,
@@ -81,6 +86,7 @@ class CalendarPage extends HookConsumerWidget {
 class _CalendarPageBody extends StatelessWidget {
   final List<Diary> diaries;
   final List<Schedule> schedules;
+  final List<PillSheetModifiedHistory> histories;
   final PremiumAndTrial premiumAndTrial;
   final List<CalendarMenstruationBandModel> calendarMenstruationBandModels;
   final List<CalendarScheduledMenstruationBandModel> calendarScheduledMenstruationBandModels;
@@ -93,6 +99,7 @@ class _CalendarPageBody extends StatelessWidget {
     Key? key,
     required this.diaries,
     required this.schedules,
+    required this.histories,
     required this.premiumAndTrial,
     required this.calendarMenstruationBandModels,
     required this.calendarScheduledMenstruationBandModels,
@@ -159,12 +166,12 @@ class _CalendarPageBody extends StatelessWidget {
                         weekCalendarBuilder: (context, monthCalendarState, weekDateRange) {
                           return CalendarWeekLine(
                             dateRange: weekDateRange,
-                            calendarMenstruationBandModels: state.calendarMenstruationBandModels,
-                            calendarScheduledMenstruationBandModels: state.calendarScheduledMenstruationBandModels,
-                            calendarNextPillSheetBandModels: state.calendarNextPillSheetBandModels,
+                            calendarMenstruationBandModels: calendarMenstruationBandModels,
+                            calendarScheduledMenstruationBandModels: calendarScheduledMenstruationBandModels,
+                            calendarNextPillSheetBandModels: calendarNextPillSheetBandModels,
                             horizontalPadding: 0,
                             day: (context, weekday, date) {
-                              if (state.displayMonth.isPreviousMonth(date)) {
+                              if (displayedMonth.isPreviousMonth(date)) {
                                 return CalendarDayTile.grayout(
                                   weekday: weekday,
                                   date: date,
@@ -193,13 +200,8 @@ class _CalendarPageBody extends StatelessWidget {
             Padding(
               padding: const EdgeInsets.only(left: 16, right: 16),
               child: CalendarPillSheetModifiedHistoryCard(
-                store: stateNotifier,
-                state: CalendarPillSheetModifiedHistoryCardState(
-                  state.pillSheetModifiedHistories,
-                  isPremium: state.premiumAndTrial.isPremium,
-                  isTrial: state.premiumAndTrial.isTrial,
-                  trialDeadlineDate: state.premiumAndTrial.trialDeadlineDate,
-                ),
+                histories: histories,
+                premiumAndTrial: premiumAndTrial,
               ),
             ),
             const SizedBox(height: 120),
