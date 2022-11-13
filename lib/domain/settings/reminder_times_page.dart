@@ -1,13 +1,17 @@
 import 'dart:async';
 
+import 'package:async_value_group/async_value_group.dart';
 import 'package:pilll/analytics.dart';
-import 'package:pilll/domain/settings/setting_page_state.codegen.dart';
+import 'package:pilll/components/molecules/indicator.dart';
+import 'package:pilll/database/database.dart';
+import 'package:pilll/domain/settings/provider.dart';
 import 'package:pilll/domain/settings/timezone_setting_dialog.dart';
 import 'package:pilll/entity/setting.codegen.dart';
 import 'package:pilll/components/atoms/color.dart';
 import 'package:pilll/components/atoms/font.dart';
 import 'package:pilll/components/atoms/text_color.dart';
 import 'package:pilll/error/error_alert.dart';
+import 'package:pilll/error/universal_error_page.dart';
 import 'package:pilll/provider/setting.dart';
 import 'package:pilll/util/formatter/date_time_formatter.dart';
 import 'package:pilll/util/toolbar/time_picker.dart';
@@ -20,79 +24,93 @@ class ReminderTimesPage extends HookConsumerWidget {
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {
-    final setting = ref.watch(settingProvider).requireValue;
-    final deviceTimezoneName = ref.watch(deviceTimezoneNameProvider).requireValue;
     final setSetting = ref.watch(setSettingProvider);
 
-    return Scaffold(
-      backgroundColor: PilllColors.background,
-      appBar: AppBar(
-        leading: IconButton(
-          icon: const Icon(Icons.arrow_back, color: Colors.black),
-          onPressed: () => Navigator.of(context).pop(),
-        ),
-        title: const Text(
-          "通知時間",
-          style: TextStyle(color: TextColor.black),
-        ),
-        actions: [
-          IconButton(
-              onPressed: () {
-                analytics.logEvent(name: "pressed_tz_setting_action");
-                showDialog(
-                  context: context,
-                  builder: (_) => TimezoneSettingDialog(
-                    setting: setting,
-                    deviceTimezoneName: deviceTimezoneName,
-                    onDone: (tz) {
-                      ScaffoldMessenger.of(context).showSnackBar(
-                        SnackBar(
-                          duration: const Duration(seconds: 2),
-                          content: Text("$tzに変更しました"),
-                        ),
-                      );
-                    },
-                  ),
-                );
-              },
-              icon: const Icon(Icons.timer_sharp, color: PilllColors.secondary)),
-        ],
-        backgroundColor: PilllColors.background,
-      ),
-      body: SafeArea(
-        child: ListView(
-          children: [
-            ...setting.reminderTimes
-                .asMap()
-                .map(
-                  (offset, reminderTime) => MapEntry(
-                    offset,
-                    Column(
-                      children: [
-                        Padding(
-                          padding: const EdgeInsets.only(left: 15, right: 15),
-                          child: Container(
-                            height: 1,
-                            color: PilllColors.border,
-                          ),
-                        ),
-                        _component(context, setting: setting, reminderTime: reminderTime, setSetting: setSetting, number: offset + 1)
-                      ],
-                    ),
-                  ),
-                )
-                .values,
-            Padding(
-              padding: const EdgeInsets.only(left: 15, right: 15),
-              child: Container(
-                height: 1,
-                color: PilllColors.border,
-              ),
+    return AsyncValueGroup.group2(
+      ref.watch(settingProvider),
+      ref.watch(deviceTimezoneNameProvider),
+    ).when(
+      data: (data) {
+        final setting = data.t1;
+        final deviceTimezoneName = data.t2;
+        return Scaffold(
+          backgroundColor: PilllColors.background,
+          appBar: AppBar(
+            leading: IconButton(
+              icon: const Icon(Icons.arrow_back, color: Colors.black),
+              onPressed: () => Navigator.of(context).pop(),
             ),
-            _add(context, setting: setting, setSetting: setSetting),
-          ],
-        ),
+            title: const Text(
+              "通知時間",
+              style: TextStyle(color: TextColor.black),
+            ),
+            actions: [
+              IconButton(
+                onPressed: () {
+                  analytics.logEvent(name: "pressed_tz_setting_action");
+                  showDialog(
+                    context: context,
+                    builder: (_) => TimezoneSettingDialog(
+                      setting: setting,
+                      deviceTimezoneName: deviceTimezoneName,
+                      onDone: (tz) {
+                        ScaffoldMessenger.of(context).showSnackBar(
+                          SnackBar(
+                            duration: const Duration(seconds: 2),
+                            content: Text("$tzに変更しました"),
+                          ),
+                        );
+                      },
+                    ),
+                  );
+                },
+                icon: const Icon(Icons.timer_sharp, color: PilllColors.secondary),
+              ),
+            ],
+            backgroundColor: PilllColors.background,
+          ),
+          body: SafeArea(
+            child: ListView(
+              children: [
+                ...setting.reminderTimes
+                    .asMap()
+                    .map(
+                      (offset, reminderTime) => MapEntry(
+                        offset,
+                        Column(
+                          children: [
+                            Padding(
+                              padding: const EdgeInsets.only(left: 15, right: 15),
+                              child: Container(
+                                height: 1,
+                                color: PilllColors.border,
+                              ),
+                            ),
+                            _component(context, setting: setting, reminderTime: reminderTime, setSetting: setSetting, number: offset + 1)
+                          ],
+                        ),
+                      ),
+                    )
+                    .values,
+                Padding(
+                  padding: const EdgeInsets.only(left: 15, right: 15),
+                  child: Container(
+                    height: 1,
+                    color: PilllColors.border,
+                  ),
+                ),
+                _add(context, setting: setting, setSetting: setSetting),
+              ],
+            ),
+          ),
+        );
+      },
+      error: (error, _) => UniversalErrorPage(
+        error: error,
+        child: null,
+        reload: () => ref.refresh(databaseProvider),
       ),
+      loading: () => const ScaffoldIndicator(),
     );
   }
 
@@ -265,4 +283,3 @@ extension ReminderTimesPageRoute on ReminderTimesPage {
       builder: (_) => const ReminderTimesPage(),
     );
   }
-}
