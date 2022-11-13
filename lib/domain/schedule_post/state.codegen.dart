@@ -1,6 +1,5 @@
 import 'package:freezed_annotation/freezed_annotation.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
-import 'package:pilll/database/schedule.dart';
 import 'package:pilll/database/user.dart';
 import 'package:pilll/entity/schedule.codegen.dart';
 import 'package:pilll/entity/user.codegen.dart';
