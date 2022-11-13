@@ -62,6 +62,8 @@ class SetMenstruation {
   }
 }
 
+final deleteMenstruationProvider = Provider((ref) => DeleteMenstruation(ref.watch(databaseProvider)));
+
 class DeleteMenstruation {
   final DatabaseConnection databaseConnection;
   DeleteMenstruation(this.databaseConnection);

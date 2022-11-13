@@ -8,16 +8,13 @@ import 'package:pilll/domain/menstruation_edit/menstruation_edit_page_state.code
 import 'package:pilll/util/datetime/date_compare.dart';
 import 'package:pilll/util/datetime/day.dart';
 
-final menstruationEditPageStateNotifierProvider = StateNotifierProvider.family
-    .autoDispose<MenstruationEditPageStateNotifier, MenstruationEditPageState,
-        Menstruation?>(
+final menstruationEditPageStateNotifierProvider =
+    StateNotifierProvider.family.autoDispose<MenstruationEditPageStateNotifier, MenstruationEditPageState, Menstruation?>(
   (ref, menstruation) => MenstruationEditPageStateNotifier(
-      asyncAction: ref.watch(menstruationEditPageAsyncActionProvider),
-      initialState: ref.watch(menstruationEditPageStateProvider(menstruation))),
+      asyncAction: ref.watch(menstruationEditPageAsyncActionProvider), initialState: ref.watch(menstruationEditPageStateProvider(menstruation))),
 );
 
-class MenstruationEditPageStateNotifier
-    extends StateNotifier<MenstruationEditPageState> {
+class MenstruationEditPageStateNotifier extends StateNotifier<MenstruationEditPageState> {
   final MenstruationEditPageAsyncAction asyncAction;
   final MenstruationEditPageState initialState;
 
@@ -27,10 +24,8 @@ class MenstruationEditPageStateNotifier
   }) : super(initialState);
 
   Menstruation? get initialMenstruation => initialState.menstruation;
-  bool shouldShowDiscardDialog() =>
-      state.menstruation == null && initialMenstruation != null;
-  bool isDismissWhenSaveButtonPressed() =>
-      !shouldShowDiscardDialog() && state.menstruation == null;
+  bool shouldShowDiscardDialog() => state.menstruation == null && initialMenstruation != null;
+  bool isDismissWhenSaveButtonPressed() => !shouldShowDiscardDialog() && state.menstruation == null;
 
   void tappedDate(DateTime date, Setting setting) async {
     final menstruation = state.menstruation;
@@ -42,8 +37,7 @@ class MenstruationEditPageStateNotifier
 
     if (menstruation == null) {
       final begin = date;
-      final end =
-          date.add(Duration(days: max(setting.durationMenstruation - 1, 0)));
+      final end = date.add(Duration(days: max(setting.durationMenstruation - 1, 0)));
       late final Menstruation menstruation;
       final initialMenstruation = this.initialMenstruation;
       if (initialMenstruation != null) {
@@ -62,35 +56,27 @@ class MenstruationEditPageStateNotifier
       return;
     }
 
-    if (isSameDay(menstruation.beginDate, date) &&
-        isSameDay(menstruation.endDate, date)) {
+    if (isSameDay(menstruation.beginDate, date) && isSameDay(menstruation.endDate, date)) {
       state = state.copyWith(menstruation: null);
       return;
     }
 
     if (date.isBefore(menstruation.beginDate)) {
-      state =
-          state.copyWith(menstruation: menstruation.copyWith(beginDate: date));
+      state = state.copyWith(menstruation: menstruation.copyWith(beginDate: date));
       return;
     }
     if (date.isAfter(menstruation.endDate)) {
-      state =
-          state.copyWith(menstruation: menstruation.copyWith(endDate: date));
+      state = state.copyWith(menstruation: menstruation.copyWith(endDate: date));
       return;
     }
 
-    if ((isSameDay(menstruation.beginDate, date) ||
-            date.isAfter(menstruation.beginDate)) &&
-        date.isBefore(menstruation.endDate)) {
-      state =
-          state.copyWith(menstruation: menstruation.copyWith(endDate: date));
+    if ((isSameDay(menstruation.beginDate, date) || date.isAfter(menstruation.beginDate)) && date.isBefore(menstruation.endDate)) {
+      state = state.copyWith(menstruation: menstruation.copyWith(endDate: date));
       return;
     }
 
     if (isSameDay(menstruation.endDate, date)) {
-      state = state.copyWith(
-          menstruation: menstruation.copyWith(
-              endDate: date.subtract(const Duration(days: 1))));
+      state = state.copyWith(menstruation: menstruation.copyWith(endDate: date.subtract(const Duration(days: 1))));
       return;
     }
   }

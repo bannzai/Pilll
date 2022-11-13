@@ -7,6 +7,7 @@ import 'package:pilll/analytics.dart';
 import 'package:pilll/components/atoms/color.dart';
 import 'package:pilll/components/atoms/font.dart';
 import 'package:pilll/components/atoms/text_color.dart';
+import 'package:pilll/domain/calendar/date_range.dart';
 import 'package:pilll/domain/menstruation_edit/components/calendar/calendar_date_header.dart';
 import 'package:pilll/domain/menstruation_edit/components/calendar/month_calendar.dart';
 import 'package:pilll/domain/menstruation_edit/components/header/menstruation_edit_page_header.dart';
@@ -20,25 +21,27 @@ import 'package:pilll/util/datetime/day.dart';
 import 'package:pilll/util/formatter/date_time_formatter.dart';
 
 class MenstruationEditPage extends HookConsumerWidget {
-  final Menstruation? menstruation;
+  final Menstruation? initialMenstruation;
   final Function(Menstruation) onSaved;
+
   final VoidCallback onDeleted;
 
   const MenstruationEditPage({
     Key? key,
-    required this.menstruation,
+    required this.initialMenstruation,
     required this.onSaved,
     required this.onDeleted,
   }) : super(key: key);
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {
-    final store = ref.watch(menstruationEditPageStateNotifierProvider(menstruation).notifier);
-    final state = ref.watch(menstruationEditPageStateNotifierProvider(menstruation));
+    final initialMenstruation = this.initialMenstruation;
+    final store = ref.watch(menstruationEditPageStateNotifierProvider(initialMenstruation).notifier);
+    final state = ref.watch(menstruationEditPageStateNotifierProvider(initialMenstruation));
     final setting = ref.watch(settingProvider).requireValue;
     final invalidMessage = useState("");
-    final begin = useState(menstruation?.beginDate);
-    final end = useState(menstruation?.endDate);
+    final editingDateRange =
+        useState<DateRange?>(initialMenstruation == null ? null : DateRange(initialMenstruation.beginDate, initialMenstruation.endDate));
 
     final scrollController = useScrollController();
     Future.microtask(() {
@@ -71,9 +74,8 @@ class MenstruationEditPage extends HookConsumerWidget {
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
                       MenstruationEditPageHeader(
-                        title: menstruation == null ? "生理開始日を選択" : "生理期間の編集",
-                        state: state,
-                        store: store,
+                        initialMenstruation: initialMenstruation,
+                        editingDateRange: editingDateRange,
                         onDeleted: onDeleted,
                         onSaved: onSaved,
                       ),
@@ -98,11 +100,11 @@ class MenstruationEditPage extends HookConsumerWidget {
                                 store: store,
                                 monthCalendarState: state.monthCalendarStatuses(dateForMonth),
                                 onTap: (date) {
-                                  final menstruation = this.menstruation;
+                                  final menstruation = this.initialMenstruation;
                                   if (date.isAfter(today()) && menstruation == null) {
                                     invalidMessage.value = "未来の日付は選択できません";
                                   } else {
-                                    _tappedDate(date: date, setting: setting, begin: begin, end: end);
+                                    _tappedDate(date: date, setting: setting, dateRange: editingDateRange);
                                   }
                                 },
                               )
@@ -124,39 +126,36 @@ class MenstruationEditPage extends HookConsumerWidget {
   void _tappedDate({
     required DateTime date,
     required Setting setting,
-    required ValueNotifier<DateTime?> begin,
-    required ValueNotifier<DateTime?> end,
+    required ValueNotifier<DateRange?> dateRange,
   }) async {
-    final menstruation = this.menstruation;
-    if (menstruation == null) {
-      final menstruationBegin = date;
-      final menstruationEnd = menstruationBegin.add(Duration(days: max(setting.durationMenstruation - 1, 0)));
-      begin.value = menstruationBegin;
-      end.value = menstruationEnd;
-      return;
+    final menstruation = this.initialMenstruation;
+    final dateRangeValue = dateRange.value;
+    if (dateRangeValue == null) {
+      final begin = date;
+      final end = date.add(Duration(days: max(setting.durationMenstruation - 1, 0)));
+      dateRange.value = DateRange(begin, end);
     } else {
-      if (isSameDay(menstruation.beginDate, date) && isSameDay(menstruation.endDate, date)) {
-        begin.value = null;
-        end.value = null;
+      if (isSameDay(dateRangeValue.begin, date) && isSameDay(dateRangeValue.end, date)) {
+        dateRange.value = null;
         return;
       }
 
-      if (date.isBefore(menstruation.beginDate)) {
-        begin.value = date;
+      if (date.isBefore(dateRangeValue.begin)) {
+        dateRange.value = DateRange(date, dateRangeValue.end);
         return;
       }
-      if (date.isAfter(menstruation.endDate)) {
-        end.value = date;
-        return;
-      }
-
-      if ((isSameDay(menstruation.beginDate, date) || date.isAfter(menstruation.beginDate)) && date.isBefore(menstruation.endDate)) {
-        end.value = date;
+      if (date.isAfter(dateRangeValue.end)) {
+        dateRange.value = DateRange(dateRangeValue.begin, date);
         return;
       }
 
-      if (isSameDay(menstruation.endDate, date)) {
-        end.value = date.subtract(const Duration(days: 1));
+      if ((isSameDay(dateRangeValue.begin, date) || date.isAfter(dateRangeValue.begin)) && date.isBefore(dateRangeValue.end)) {
+        dateRange.value = DateRange(dateRangeValue.begin, date);
+        return;
+      }
+
+      if (isSameDay(dateRangeValue.end, date)) {
+        dateRange.value = DateRange(dateRangeValue.begin, date.subtract(const Duration(days: 1)));
         return;
       }
     }
@@ -171,7 +170,7 @@ void showMenstruationEditPage(
   showModalBottomSheet(
     context: context,
     builder: (context) => MenstruationEditPage(
-      menstruation: menstruation,
+      initialMenstruation: menstruation,
       onSaved: (savedMenstruation) {
         if (menstruation == null) {
           ScaffoldMessenger.of(context).showSnackBar(
