@@ -16,12 +16,12 @@ final isHealthDataAvailableProvider = FutureProvider((ref) => isHealthDataAvaila
 final deviceTimezoneNameProvider = FutureProvider((ref) => FlutterNativeTimezone.getLocalTimezone());
 
 final settingStateProvider = Provider<AsyncValue<SettingState>>((ref) {
-  final latestPillSheetGroup = ref.watch(latestPillSheetGroupStreamProvider);
-  final premiumAndTrial = ref.watch(premiumAndTrialProvider);
+  final latestPillSheetGroup = ;
+  final premiumAndTrial = ;
   final setting = ref.watch(settingProvider);
-  final sharedPreferencesAsyncValue = ref.watch(sharedPreferenceProvider);
-  final isHealthDataAvailable = ref.watch(isHealthDataAvailableProvider);
-  final deviceTimezoneName = ref.watch(deviceTimezoneNameProvider);
+  final sharedPreferencesAsyncValue = ;
+  final isHealthDataAvailable = ;
+  final deviceTimezoneName = ;
 
   if (latestPillSheetGroup is AsyncLoading ||
       premiumAndTrial is AsyncLoading ||
