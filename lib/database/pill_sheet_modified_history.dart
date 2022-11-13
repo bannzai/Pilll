@@ -312,27 +312,3 @@ extension PillSheetModifiedHistoryServiceActionFactory on PillSheetModifiedHisto
     );
   }
 }
-
-Future<void> updateForEditTakenValue({
-  required PillSheetModifiedHistoryDatastore service,
-  required DateTime actualTakenDate,
-  required PillSheetModifiedHistory history,
-  required PillSheetModifiedHistoryValue value,
-  required TakenPillValue takenPillValue,
-}) {
-  final editedTakenPillValue = takenPillValue.copyWith(
-    edited: TakenPillEditedValue(
-      createdDate: DateTime.now(),
-      actualTakenDate: actualTakenDate,
-      historyRecordedDate: history.estimatedEventCausingDate,
-    ),
-  );
-  final editedHistory = history.copyWith(
-    estimatedEventCausingDate: actualTakenDate,
-    value: value.copyWith(
-      takenPill: editedTakenPillValue,
-    ),
-  );
-
-  return service.update(editedHistory);
-}

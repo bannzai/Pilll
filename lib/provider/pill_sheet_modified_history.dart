@@ -3,6 +3,17 @@ import 'package:hooks_riverpod/hooks_riverpod.dart';
 import 'package:pilll/database/database.dart';
 import 'package:pilll/entity/pill_sheet_modified_history.codegen.dart';
 
+final pillSheetModifiedHistoriesProvider = StreamProvider.family((ref, DateTime? afterCursor) {
+  return ref
+      .watch(databaseProvider)
+      .pillSheetModifiedHistoriesReference()
+      .orderBy(PillSheetModifiedHistoryFirestoreKeys.estimatedEventCausingDate, descending: true)
+      .startAfter([afterCursor])
+      .limit(20)
+      .snapshots()
+      .map((reference) => reference.docs)
+      .map((docs) => docs.map((doc) => doc.data()).toList());
+});
 final pillSheetModifiedHistoriesWithLimitProvider = StreamProvider.family((ref, int limit) {
   return ref
       .watch(databaseProvider)
@@ -22,5 +33,16 @@ class BatchSetPillSheetModifiedHistory {
 
   void call(WriteBatch batch, PillSheetModifiedHistory history) async {
     batch.set(databaseConnection.pillSheetModifiedHistoryReference(pillSheetModifiedHistoryID: null), history, SetOptions(merge: true));
+  }
+}
+
+final setPillSheetModifiedHistoryProvider = Provider((ref) => SetPillSheetModifiedHistory(ref.watch(databaseProvider)));
+
+class SetPillSheetModifiedHistory {
+  final DatabaseConnection databaseConnection;
+  SetPillSheetModifiedHistory(this.databaseConnection);
+
+  Future<void> call(PillSheetModifiedHistory history) async {
+    await databaseConnection.pillSheetModifiedHistoryReference(pillSheetModifiedHistoryID: history.id).set(history, SetOptions(merge: true));
   }
 }
