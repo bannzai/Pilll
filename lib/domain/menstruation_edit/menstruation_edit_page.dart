@@ -14,7 +14,6 @@ import 'package:pilll/domain/menstruation_edit/components/header/menstruation_ed
 import 'package:pilll/entity/menstruation.codegen.dart';
 import 'package:pilll/domain/menstruation_edit/menstruation_edit_page_state_notifier.dart';
 import 'package:pilll/entity/setting.codegen.dart';
-import 'package:pilll/provider/premium_and_trial.codegen.dart';
 import 'package:pilll/provider/setting.dart';
 import 'package:pilll/util/datetime/date_compare.dart';
 import 'package:pilll/util/datetime/day.dart';
@@ -95,9 +94,7 @@ class MenstruationEditPage extends HookConsumerWidget {
                             return [
                               CalendarDateHeader(date: dateForMonth),
                               MonthCalendar(
-                                dateForMonth: dateForMonth,
-                                state: state,
-                                store: store,
+                                editingDateRange: editingDateRange.value,
                                 monthCalendarState: state.monthCalendarStatuses(dateForMonth),
                                 onTap: (date) {
                                   final menstruation = this.initialMenstruation;

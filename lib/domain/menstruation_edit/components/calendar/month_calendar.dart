@@ -16,18 +16,14 @@ abstract class CalendarConstants {
 }
 
 class MonthCalendar extends HookConsumerWidget {
-  final DateTime dateForMonth;
-  final MenstruationEditPageState state;
+  final DateRange? editingDateRange;
   final MonthCalendarState monthCalendarState;
-  final MenstruationEditPageStateNotifier store;
   final Function(DateTime) onTap;
 
   const MonthCalendar({
     Key? key,
-    required this.dateForMonth,
-    required this.state,
+    required this.editingDateRange,
     required this.monthCalendarState,
-    required this.store,
     required this.onTap,
   }) : super(key: key);
 
@@ -69,11 +65,11 @@ class MonthCalendar extends HookConsumerWidget {
                       showsDiaryMark: false,
                       showsScheduleMark: false,
                       showsMenstruationMark: () {
-                        final menstruation = state.menstruation;
-                        if (menstruation == null) {
+                        final editingDateRange = this.editingDateRange;
+                        if (editingDateRange == null) {
                           return false;
                         }
-                        return DateRange(menstruation.beginDate, menstruation.endDate).inRange(date);
+                        return editingDateRange.inRange(date);
                       }(),
                       onTap: (date) {
                         analytics.logEvent(name: "selected_day_tile_on_menstruation_edit");
