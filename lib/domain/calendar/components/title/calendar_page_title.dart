@@ -46,7 +46,7 @@ class CalendarPageTitle extends HookConsumerWidget {
           onPressed: () {
             final nextMonthIndex = page + 1;
 
-            analytics.logEvent(name: "pressed_next_month", parameters: {"current_index": state.currentCalendarIndex, "next_index": nextMonthIndex});
+            analytics.logEvent(name: "pressed_next_month", parameters: {"current_index": page, "next_index": nextMonthIndex});
 
             pageController.jumpToPage(nextMonthIndex);
             calendarPageIndexStateNotifier.set(nextMonthIndex);
