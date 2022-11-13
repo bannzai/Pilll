@@ -17,7 +17,6 @@ final _privateConstructorUsedError = UnsupportedError(
 /// @nodoc
 mixin _$MonthCalendarState {
   DateTime get dateForMonth => throw _privateConstructorUsedError;
-  Menstruation? get menstruation => throw _privateConstructorUsedError;
 
   @JsonKey(ignore: true)
   $MonthCalendarStateCopyWith<MonthCalendarState> get copyWith =>
@@ -30,9 +29,7 @@ abstract class $MonthCalendarStateCopyWith<$Res> {
           MonthCalendarState value, $Res Function(MonthCalendarState) then) =
       _$MonthCalendarStateCopyWithImpl<$Res, MonthCalendarState>;
   @useResult
-  $Res call({DateTime dateForMonth, Menstruation? menstruation});
-
-  $MenstruationCopyWith<$Res>? get menstruation;
+  $Res call({DateTime dateForMonth});
 }
 
 /// @nodoc
@@ -49,30 +46,13 @@ class _$MonthCalendarStateCopyWithImpl<$Res, $Val extends MonthCalendarState>
   @override
   $Res call({
     Object? dateForMonth = null,
-    Object? menstruation = freezed,
   }) {
     return _then(_value.copyWith(
       dateForMonth: null == dateForMonth
           ? _value.dateForMonth
           : dateForMonth // ignore: cast_nullable_to_non_nullable
               as DateTime,
-      menstruation: freezed == menstruation
-          ? _value.menstruation
-          : menstruation // ignore: cast_nullable_to_non_nullable
-              as Menstruation?,
     ) as $Val);
-  }
-
-  @override
-  @pragma('vm:prefer-inline')
-  $MenstruationCopyWith<$Res>? get menstruation {
-    if (_value.menstruation == null) {
-      return null;
-    }
-
-    return $MenstruationCopyWith<$Res>(_value.menstruation!, (value) {
-      return _then(_value.copyWith(menstruation: value) as $Val);
-    });
   }
 }
 
@@ -84,10 +64,7 @@ abstract class _$$_MonthCalendarStateCopyWith<$Res>
       __$$_MonthCalendarStateCopyWithImpl<$Res>;
   @override
   @useResult
-  $Res call({DateTime dateForMonth, Menstruation? menstruation});
-
-  @override
-  $MenstruationCopyWith<$Res>? get menstruation;
+  $Res call({DateTime dateForMonth});
 }
 
 /// @nodoc
@@ -102,17 +79,12 @@ class __$$_MonthCalendarStateCopyWithImpl<$Res>
   @override
   $Res call({
     Object? dateForMonth = null,
-    Object? menstruation = freezed,
   }) {
     return _then(_$_MonthCalendarState(
       dateForMonth: null == dateForMonth
           ? _value.dateForMonth
           : dateForMonth // ignore: cast_nullable_to_non_nullable
               as DateTime,
-      menstruation: freezed == menstruation
-          ? _value.menstruation
-          : menstruation // ignore: cast_nullable_to_non_nullable
-              as Menstruation?,
     ));
   }
 }
@@ -120,18 +92,14 @@ class __$$_MonthCalendarStateCopyWithImpl<$Res>
 /// @nodoc
 
 class _$_MonthCalendarState extends _MonthCalendarState {
-  _$_MonthCalendarState(
-      {required this.dateForMonth, required this.menstruation})
-      : super._();
+  _$_MonthCalendarState({required this.dateForMonth}) : super._();
 
   @override
   final DateTime dateForMonth;
-  @override
-  final Menstruation? menstruation;
 
   @override
   String toString() {
-    return 'MonthCalendarState(dateForMonth: $dateForMonth, menstruation: $menstruation)';
+    return 'MonthCalendarState(dateForMonth: $dateForMonth)';
   }
 
   @override
@@ -140,13 +108,11 @@ class _$_MonthCalendarState extends _MonthCalendarState {
         (other.runtimeType == runtimeType &&
             other is _$_MonthCalendarState &&
             (identical(other.dateForMonth, dateForMonth) ||
-                other.dateForMonth == dateForMonth) &&
-            (identical(other.menstruation, menstruation) ||
-                other.menstruation == menstruation));
+                other.dateForMonth == dateForMonth));
   }
 
   @override
-  int get hashCode => Object.hash(runtimeType, dateForMonth, menstruation);
+  int get hashCode => Object.hash(runtimeType, dateForMonth);
 
   @JsonKey(ignore: true)
   @override
@@ -157,15 +123,12 @@ class _$_MonthCalendarState extends _MonthCalendarState {
 }
 
 abstract class _MonthCalendarState extends MonthCalendarState {
-  factory _MonthCalendarState(
-      {required final DateTime dateForMonth,
-      required final Menstruation? menstruation}) = _$_MonthCalendarState;
+  factory _MonthCalendarState({required final DateTime dateForMonth}) =
+      _$_MonthCalendarState;
   _MonthCalendarState._() : super._();
 
   @override
   DateTime get dateForMonth;
-  @override
-  Menstruation? get menstruation;
   @override
   @JsonKey(ignore: true)
   _$$_MonthCalendarStateCopyWith<_$_MonthCalendarState> get copyWith =>

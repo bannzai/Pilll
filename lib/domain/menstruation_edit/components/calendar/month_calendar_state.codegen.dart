@@ -9,7 +9,6 @@ part 'month_calendar_state.codegen.freezed.dart';
 class MonthCalendarState with _$MonthCalendarState {
   factory MonthCalendarState({
     required DateTime dateForMonth,
-    required Menstruation? menstruation,
   }) = _MonthCalendarState;
   MonthCalendarState._();
 
