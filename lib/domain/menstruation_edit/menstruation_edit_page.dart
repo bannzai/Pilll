@@ -176,8 +176,7 @@ class MenstruationEditPage extends HookConsumerWidget {
     }
   }
 
-  MonthCalendarState _monthCalendarStatuses(DateTime dateForMonth) =>
-      MonthCalendarState(dateForMonth: dateForMonth, menstruation: initialMenstruation);
+  MonthCalendarState _monthCalendarStatuses(DateTime dateForMonth) => MonthCalendarState(dateForMonth: dateForMonth);
 }
 
 void showMenstruationEditPage(
