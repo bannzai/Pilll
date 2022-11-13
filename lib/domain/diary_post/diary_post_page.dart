@@ -28,10 +28,6 @@ class DiaryPostPage extends HookConsumerWidget {
 
   const DiaryPostPage(this.date, this.diary, {Key? key}) : super(key: key);
 
-  DiaryPostStateProviderFamily _family() {
-    return DiaryPostStateProviderFamily(date: date, diary: diary);
-  }
-
   @override
   Widget build(BuildContext context, WidgetRef ref) {
     final stateNotifier = ref.watch(diaryPostStateNotifierProvider(_family()).notifier);
