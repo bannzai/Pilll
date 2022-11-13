@@ -93,8 +93,8 @@ class MenstruationEditPage extends HookConsumerWidget {
                             return [
                               CalendarDateHeader(date: dateForMonth),
                               MonthCalendar(
+                                dateForMonth: dateForMonth,
                                 editingDateRange: editingDateRange.value,
-                                monthCalendarState: _monthCalendarStatuses(dateForMonth),
                                 onTap: (date) {
                                   final menstruation = this.initialMenstruation;
                                   if (date.isAfter(today()) && menstruation == null) {

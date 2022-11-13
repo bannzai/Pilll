@@ -1,9 +1,9 @@
 import 'package:hooks_riverpod/hooks_riverpod.dart';
 import 'package:pilll/analytics.dart';
 import 'package:pilll/components/organisms/calendar/day/calendar_day_tile.dart';
+import 'package:pilll/components/organisms/calendar/week/utility.dart';
 import 'package:pilll/components/organisms/calendar/week/week_calendar.dart';
 import 'package:pilll/domain/calendar/date_range.dart';
-import 'package:pilll/domain/menstruation_edit/components/calendar/month_calendar_state.codegen.dart';
 import 'package:pilll/domain/record/weekday_badge.dart';
 import 'package:pilll/entity/weekday.dart';
 import 'package:flutter/material.dart';
@@ -14,20 +14,20 @@ abstract class CalendarConstants {
 }
 
 class MonthCalendar extends HookConsumerWidget {
+  final DateTime dateForMonth;
   final DateRange? editingDateRange;
-  final MonthCalendarState monthCalendarState;
   final Function(DateTime) onTap;
 
   const MonthCalendar({
     Key? key,
+    required this.dateForMonth,
     required this.editingDateRange,
-    required this.monthCalendarState,
     required this.onTap,
   }) : super(key: key);
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {
-    final weeks = monthCalendarState.weeks;
+    final weeks = _weeks;
 
     return Column(
       children: [
@@ -82,4 +82,7 @@ class MonthCalendar extends HookConsumerWidget {
       ],
     );
   }
+
+  WeekCalendarDateRangeCalculator get _range => WeekCalendarDateRangeCalculator(dateForMonth);
+  List<DateRange> get _weeks => List.generate(_range.weeklineCount(), (index) => index + 1).map((line) => _range.dateRangeOfLine(line)).toList();
 }

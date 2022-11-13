@@ -6,6 +6,7 @@ part 'month_calendar_state.codegen.freezed.dart';
 
 @freezed
 class MonthCalendarState with _$MonthCalendarState {
+  
   factory MonthCalendarState({
     required DateTime dateForMonth,
   }) = _MonthCalendarState;
