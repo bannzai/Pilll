@@ -283,3 +283,4 @@ extension ReminderTimesPageRoute on ReminderTimesPage {
       builder: (_) => const ReminderTimesPage(),
     );
   }
+}
