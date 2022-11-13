@@ -37,7 +37,8 @@ List<Diary> _sortedDiaries(List<Diary> diaries) {
   return diaries;
 }
 
-final setDiaryProvider = Provider((ref) => SetDiary(ref.watch(databaseProvider));
+final setDiaryProvider = Provider((ref) => SetDiary(ref.watch(databaseProvider)));
+
 class SetDiary {
   final DatabaseConnection databaseConnection;
   SetDiary(this.databaseConnection);
@@ -45,9 +46,10 @@ class SetDiary {
   Future<void> call(Diary diary) async {
     await databaseConnection.diaryReference(diary).set(diary, SetOptions(merge: true));
   }
- }
+}
 
-final deleteDiaryProvider = Provider((ref) => DeleteDiary(ref.watch(databaseProvider));
+final deleteDiaryProvider = Provider((ref) => DeleteDiary(ref.watch(databaseProvider)));
+
 class DeleteDiary {
   final DatabaseConnection databaseConnection;
   DeleteDiary(this.databaseConnection);
