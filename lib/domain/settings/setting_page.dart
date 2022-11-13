@@ -52,16 +52,15 @@ class SettingPage extends HookConsumerWidget {
   Widget build(BuildContext context, WidgetRef ref) {
     useAutomaticKeepAlive(wantKeepAlive: true);
 
-    return AsyncValueGroup.group6(
+    return AsyncValueGroup.group5(
       ref.watch(settingProvider),
       ref.watch(latestPillSheetGroupStreamProvider),
       ref.watch(premiumAndTrialProvider),
       ref.watch(isHealthDataAvailableProvider),
-      ref.watch(deviceTimezoneNameProvider),
       ref.watch(sharedPreferenceProvider),
     ).when(
       data: (data) {
-        final sharedPreferences = data.t6;
+        final sharedPreferences = data.t5;
         final userIsMigratedFrom132 =
             sharedPreferences.containsKey(StringKey.salvagedOldStartTakenDate) && sharedPreferences.containsKey(StringKey.salvagedOldLastTakenDate);
         return SettingPageBody(
@@ -69,7 +68,6 @@ class SettingPage extends HookConsumerWidget {
           latestPillSheetGroup: data.t2,
           premiumAndTrial: data.t3,
           isHealthDataAvailable: data.t4,
-          deviceTimezoneName: data.t5,
           userIsUpdatedFrom132: userIsMigratedFrom132,
         );
       },
@@ -88,7 +86,6 @@ class SettingPageBody extends StatelessWidget {
   final PillSheetGroup? latestPillSheetGroup;
   final PremiumAndTrial premiumAndTrial;
   final bool isHealthDataAvailable;
-  final String deviceTimezoneName;
   final bool userIsUpdatedFrom132;
 
   const SettingPageBody({
@@ -97,7 +94,6 @@ class SettingPageBody extends StatelessWidget {
     required this.latestPillSheetGroup,
     required this.premiumAndTrial,
     required this.isHealthDataAvailable,
-    required this.deviceTimezoneName,
     required this.userIsUpdatedFrom132,
   }) : super(key: key);
 
