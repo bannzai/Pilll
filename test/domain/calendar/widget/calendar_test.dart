@@ -51,7 +51,7 @@ void main() {
           child: MaterialApp(
             home: MonthCalendar(
               dateForMonth: DateTime(2020, 09, 14),
-              weekCalendarBuilder: (context, monthState, weekDateRange) {
+              weekCalendarBuilder: (context, diaries, schedules, weekDateRange) {
                 return CalendarWeekLine(
                   dateRange: weekDateRange,
                   calendarMenstruationBandModels: const [],

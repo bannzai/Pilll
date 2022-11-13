@@ -10,6 +10,7 @@ import 'package:pilll/entity/diary.codegen.dart';
 import 'package:pilll/entity/schedule.codegen.dart';
 import 'package:pilll/entity/weekday.dart';
 import 'package:flutter/material.dart';
+import 'package:pilll/provider/diary.dart';
 
 abstract class CalendarConstants {
   static const double tileHeight = 66;
