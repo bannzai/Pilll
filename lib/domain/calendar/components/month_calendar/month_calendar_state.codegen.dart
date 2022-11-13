@@ -1,7 +1,6 @@
 import 'package:freezed_annotation/freezed_annotation.dart';
 import 'package:pilll/components/organisms/calendar/week/utility.dart';
 import 'package:pilll/database/diary.dart';
-import 'package:pilll/database/menstruation.dart';
 import 'package:pilll/database/schedule.dart';
 import 'package:pilll/domain/calendar/date_range.dart';
 import 'package:pilll/entity/diary.codegen.dart';
@@ -14,7 +13,6 @@ part 'month_calendar_state.codegen.freezed.dart';
 final monthCalendarStateProvider = Provider.family<AsyncValue<MonthCalendarState>, DateTime>((ref, DateTime dateForMonth) {
   final diaries = ref.watch(diariesStreamForMonthProvider(dateForMonth));
   final schedules = ref.watch(schedulesForMonthProvider(dateForMonth));
-  final menstruations = ref.watch(menstruationsStreamForMonthProvider(dateForMonth));
 
   try {
     return AsyncValue.data(
@@ -22,7 +20,6 @@ final monthCalendarStateProvider = Provider.family<AsyncValue<MonthCalendarState
         dateForMonth: dateForMonth,
         diaries: diaries.asData?.value ?? [],
         schedules: schedules.asData?.value ?? [],
-        menstruations: menstruations.asData?.value ?? [],
       ),
     );
   } catch (error, stackTrace) {
@@ -36,7 +33,6 @@ class MonthCalendarState with _$MonthCalendarState {
     required DateTime dateForMonth,
     required List<Diary> diaries,
     required List<Schedule> schedules,
-    required List<Menstruation> menstruations,
   }) = _MonthCalendarState;
   MonthCalendarState._();
 

@@ -8,7 +8,6 @@ import 'package:pilll/components/molecules/indicator.dart';
 import 'package:pilll/components/organisms/calendar/band/calendar_band_model.dart';
 import 'package:pilll/components/organisms/calendar/band/calendar_band_provider.dart';
 import 'package:pilll/database/diary.dart';
-import 'package:pilll/database/menstruation.dart';
 import 'package:pilll/database/pill_sheet_group.dart';
 import 'package:pilll/database/schedule.dart';
 import 'package:pilll/domain/calendar/components/month_calendar/month_calendar.dart';
@@ -47,7 +46,7 @@ class MenstruationPage extends HookConsumerWidget {
     return AsyncValueGroup.group10(
       ref.watch(latestPillSheetGroupStreamProvider),
       ref.watch(premiumAndTrialProvider),
-      ref.watch(allMenstruationStreamProvider),
+      ref.watch(allMenstruationProvider),
       ref.watch(latestMenstruationProvider),
       ref.watch(settingProvider),
       ref.watch(diariesStream90Days(today())),

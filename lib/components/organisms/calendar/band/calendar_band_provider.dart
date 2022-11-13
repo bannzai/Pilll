@@ -1,13 +1,13 @@
 import 'package:async_value_group/async_value_group.dart';
 import 'package:pilll/components/organisms/calendar/band/calendar_band_function.dart';
 import 'package:pilll/components/organisms/calendar/band/calendar_band_model.dart';
-import 'package:pilll/database/menstruation.dart';
 import 'package:pilll/database/pill_sheet_group.dart';
+import 'package:pilll/provider/menstruation.dart';
 import 'package:pilll/provider/setting.dart';
 import 'package:riverpod/riverpod.dart';
 
 final calendarMenstruationBandListProvider = Provider<AsyncValue<List<CalendarMenstruationBandModel>>>((ref) {
-  final allMenstruations = ref.watch(allMenstruationStreamProvider);
+  final allMenstruations = ref.watch(allMenstruationProvider);
 
   if (allMenstruations is AsyncLoading) {
     return const AsyncValue.loading();
@@ -26,7 +26,7 @@ final calendarScheduledMenstruationBandListProvider = Provider<AsyncValue<List<C
   return AsyncValueGroup.group3(
     ref.watch(latestPillSheetGroupStreamProvider),
     ref.watch(settingProvider),
-    ref.watch(allMenstruationStreamProvider),
+    ref.watch(allMenstruationProvider),
   ).whenData(
     (t) => scheduledOrInTheMiddleMenstruationDateRanges(
       t.t1,
