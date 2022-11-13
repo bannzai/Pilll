@@ -10,7 +10,6 @@ import 'package:pilll/components/atoms/text_color.dart';
 import 'package:pilll/domain/calendar/date_range.dart';
 import 'package:pilll/domain/menstruation_edit/components/calendar/calendar_date_header.dart';
 import 'package:pilll/domain/menstruation_edit/components/calendar/month_calendar.dart';
-import 'package:pilll/domain/menstruation_edit/components/calendar/month_calendar_state.codegen.dart';
 import 'package:pilll/domain/menstruation_edit/components/header/menstruation_edit_page_header.dart';
 import 'package:pilll/entity/menstruation.codegen.dart';
 import 'package:pilll/entity/setting.codegen.dart';
@@ -173,8 +172,6 @@ class MenstruationEditPage extends HookConsumerWidget {
       ];
     }
   }
-
-  MonthCalendarState _monthCalendarStatuses(DateTime dateForMonth) => MonthCalendarState(dateForMonth: dateForMonth);
 }
 
 void showMenstruationEditPage(
