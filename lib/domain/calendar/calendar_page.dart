@@ -8,9 +8,6 @@ import 'package:pilll/components/organisms/calendar/band/calendar_band_provider.
 import 'package:pilll/components/organisms/calendar/day/calendar_day_tile.dart';
 import 'package:pilll/components/organisms/calendar/week/utility.dart';
 import 'package:pilll/database/database.dart';
-import 'package:pilll/database/diary.dart';
-import 'package:pilll/database/schedule.dart';
-import 'package:pilll/domain/calendar/calendar_page_state.codegen.dart';
 import 'package:pilll/domain/calendar/components/title/calendar_page_title.dart';
 import 'package:pilll/domain/calendar/components/month_calendar/month_calendar.dart';
 import 'package:pilll/components/organisms/calendar/week/week_calendar.dart';
@@ -18,9 +15,7 @@ import 'package:pilll/components/atoms/color.dart';
 import 'package:pilll/domain/calendar/components/pill_sheet_modified_history/pill_sheet_modified_history_card.dart';
 import 'package:flutter/material.dart';
 import 'package:pilll/domain/diary_post/diary_post_page.dart';
-import 'package:pilll/entity/diary.codegen.dart';
 import 'package:pilll/entity/pill_sheet_modified_history.codegen.dart';
-import 'package:pilll/entity/schedule.codegen.dart';
 import 'package:pilll/error/universal_error_page.dart';
 import 'package:pilll/provider/pill_sheet_modified_history.dart';
 import 'package:pilll/provider/premium_and_trial.codegen.dart';
@@ -47,9 +42,7 @@ class CalendarPage extends HookConsumerWidget {
     useAutomaticKeepAlive(wantKeepAlive: true);
 
     final displayedMonth = _calendarDataSource[page.value];
-    return AsyncValueGroup.group7(
-      ref.watch(diariesStreamForMonthProvider(displayedMonth)),
-      ref.watch(schedulesForDateProvider(displayedMonth)),
+    return AsyncValueGroup.group5(
       ref.watch(pillSheetModifiedHistoriesWithLimitProvider(CalendarPillSheetModifiedHistoryCardState.pillSheetModifiedHistoriesThreshold + 1)),
       ref.watch(premiumAndTrialProvider),
       ref.watch(calendarMenstruationBandListProvider),
@@ -57,13 +50,11 @@ class CalendarPage extends HookConsumerWidget {
       ref.watch(calendarNextPillSheetBandListProvider),
     ).when(
       data: (data) => _CalendarPageBody(
-        diaries: data.t1,
-        schedules: data.t2,
-        histories: data.t3,
-        premiumAndTrial: data.t4,
-        calendarMenstruationBandModels: data.t5,
-        calendarScheduledMenstruationBandModels: data.t6,
-        calendarNextPillSheetBandModels: data.t7,
+        histories: data.t1,
+        premiumAndTrial: data.t2,
+        calendarMenstruationBandModels: data.t3,
+        calendarScheduledMenstruationBandModels: data.t4,
+        calendarNextPillSheetBandModels: data.t5,
         displayedMonth: displayedMonth,
         page: page,
         pageController: pageController,
@@ -79,8 +70,6 @@ class CalendarPage extends HookConsumerWidget {
 }
 
 class _CalendarPageBody extends StatelessWidget {
-  final List<Diary> diaries;
-  final List<Schedule> schedules;
   final List<PillSheetModifiedHistory> histories;
   final PremiumAndTrial premiumAndTrial;
   final List<CalendarMenstruationBandModel> calendarMenstruationBandModels;
@@ -92,8 +81,6 @@ class _CalendarPageBody extends StatelessWidget {
 
   const _CalendarPageBody({
     Key? key,
-    required this.diaries,
-    required this.schedules,
     required this.histories,
     required this.premiumAndTrial,
     required this.calendarMenstruationBandModels,
