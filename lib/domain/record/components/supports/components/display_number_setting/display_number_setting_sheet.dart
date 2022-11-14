@@ -27,7 +27,7 @@ class DisplayNumberSettingSheet extends HookConsumerWidget {
     final beginTextFieldController = useTextEditingController(text: "${begin.value ?? 1}");
     final endTextFieldController = useTextEditingController(text: "${end.value ?? pillSheetGroup.estimatedEndPillNumber}");
 
-    final beforePillSheetGroup = ref.watch(beforePillSheetGroupProvider);
+    final beforePillSheetGroup = ref.watch(beforePillSheetGroupProvider).valueOrNull;
 
     const estimatedKeyboardHeight = 216;
     const offset = 24;
