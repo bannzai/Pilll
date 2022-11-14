@@ -117,7 +117,7 @@ void main() {
         ),
       );
       final batchSetPillSheets = MockBatchSetPillSheets();
-      when(batchSetPillSheets(batch, [updatedPillSheet])).thenReturn(null);
+      when(batchSetPillSheets(batch, [updatedPillSheet])).thenReturn([updatedPillSheet]);
 
       final pillSheetGroup = PillSheetGroup(
         id: "group_id",
