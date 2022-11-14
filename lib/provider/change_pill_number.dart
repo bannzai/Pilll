@@ -31,7 +31,7 @@ class ChangePillNumber {
     required this.batchSetPillSheetGroup,
   });
 
-  void call({
+  Future<void> call({
     required PillSheetGroup pillSheetGroup,
     required PillSheet activedPillSheet,
     required int pillSheetPageIndex,
