@@ -10,6 +10,7 @@ import 'package:hooks_riverpod/hooks_riverpod.dart';
 import 'package:intl/date_symbol_data_local.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
+import '../../helper/mock.mocks.dart';
 import '../../helper/supported_device.dart';
 
 void main() {
@@ -39,6 +40,7 @@ void main() {
           overrides: [
             settingProvider.overrideWith((ref) => Stream.value(setting)),
             deviceTimezoneNameProvider.overrideWith((ref) => Future.value("Asia/Tokyo")),
+            setSettingProvider.overrideWith((ref) => MockSetSetting()),
           ],
           child: const MaterialApp(home: ReminderTimesPage()),
         ),
@@ -65,6 +67,7 @@ void main() {
           overrides: [
             settingProvider.overrideWith((ref) => Stream.value(setting)),
             deviceTimezoneNameProvider.overrideWith((ref) => Future.value("Asia/Tokyo")),
+            setSettingProvider.overrideWith((ref) => MockSetSetting()),
           ],
           child: const MaterialApp(home: ReminderTimesPage()),
         ),
