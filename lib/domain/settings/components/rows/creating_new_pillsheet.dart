@@ -43,7 +43,7 @@ class CreatingNewPillSheetRow extends HookConsumerWidget {
         );
         if (isPremium || isTrial) {
           ScaffoldMessenger.of(context).hideCurrentSnackBar();
-          await setSetting(setting.copyWith(isAutomaticallyCreatePillSheet: !setting.isAutomaticallyCreatePillSheet));
+          await setSetting(setting.copyWith(isAutomaticallyCreatePillSheet: value));
           ScaffoldMessenger.of(context).showSnackBar(SnackBar(
             duration: const Duration(seconds: 2),
             content: Text(

@@ -8,6 +8,7 @@ import 'package:pilll/entity/pill_sheet.codegen.dart';
 import 'package:pilll/entity/pill_sheet_type.dart';
 import 'package:pilll/entity/setting.codegen.dart';
 import 'package:pilll/error/error_alert.dart';
+import 'package:pilll/provider/setting.dart';
 
 class NotificationInRestDuration extends HookConsumerWidget {
   final PillSheet pillSheet;
@@ -21,31 +22,25 @@ class NotificationInRestDuration extends HookConsumerWidget {
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {
-    final store = ref.watch(settingStateNotifierProvider.notifier);
+    final setSetting = ref.watch(setSettingProvider);
     return SwitchListTile(
-      title: Text("${pillSheet.pillSheetType.notTakenWord}期間の通知",
-          style: FontType.listRow),
-      subtitle: Text(
-          "通知オフの場合は、${pillSheet.pillSheetType.notTakenWord}期間の服用記録も自動で付けられます",
-          style: FontType.assisting),
+      title: Text("${pillSheet.pillSheetType.notTakenWord}期間の通知", style: FontType.listRow),
+      subtitle: Text("通知オフの場合は、${pillSheet.pillSheetType.notTakenWord}期間の服用記録も自動で付けられます", style: FontType.assisting),
       activeColor: PilllColors.primary,
-      onChanged: (bool value) {
+      onChanged: (bool value) async {
         analytics.logEvent(
           name: "toggle_notify_not_taken_duration",
         );
         ScaffoldMessenger.of(context).hideCurrentSnackBar();
-        store.asyncAction
-            .modifyIsOnNotifyInNotTakenDuration(
-                !setting.isOnNotifyInNotTakenDuration, setting)
-            .catchError((error) => showErrorAlert(context, error))
-            .then((_) => ScaffoldMessenger.of(context).showSnackBar(
-                  SnackBar(
-                    duration: const Duration(seconds: 2),
-                    content: Text(
-                      "${pillSheet.pillSheetType.notTakenWord}期間の通知を${value ? "ON" : "OFF"}にしました",
-                    ),
-                  ),
-                ));
+        await setSetting(setting.copyWith(isOnNotifyInNotTakenDuration: value));
+        ScaffoldMessenger.of(context).showSnackBar(
+          SnackBar(
+            duration: const Duration(seconds: 2),
+            content: Text(
+              "${pillSheet.pillSheetType.notTakenWord}期間の通知を${value ? "ON" : "OFF"}にしました",
+            ),
+          ),
+        );
       },
       value: setting.isOnNotifyInNotTakenDuration,
       // NOTE: when configured subtitle, the space between elements becomes very narrow
