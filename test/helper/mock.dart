@@ -4,7 +4,6 @@ import 'package:pilll/database/batch.dart';
 import 'package:pilll/database/database.dart';
 import 'package:pilll/domain/premium_introduction/premium_introduction_store.dart';
 import 'package:pilll/domain/settings/setting_page_async_action.dart';
-import 'package:pilll/domain/settings/setting_page_state_notifier.dart';
 import 'package:pilll/entity/setting.codegen.dart';
 import 'package:pilll/provider/menstruation.dart';
 import 'package:pilll/provider/pill_sheet.dart';
@@ -36,7 +35,6 @@ import 'package:mockito/annotations.dart';
   SettingPageAsyncAction,
   PremiumAndTrial,
   Setting,
-  SettingStateNotifier,
   BatchSetPillSheetGroup,
   BatchSetPillSheets,
   BatchSetPillSheetModifiedHistory,
