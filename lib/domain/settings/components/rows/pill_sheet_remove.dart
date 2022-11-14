@@ -5,10 +5,14 @@ import 'package:pilll/components/atoms/buttons.dart';
 import 'package:pilll/components/atoms/font.dart';
 import 'package:pilll/components/atoms/text_color.dart';
 import 'package:pilll/components/page/discard_dialog.dart';
-import 'package:pilll/domain/settings/setting_page_state_notifier.dart';
+import 'package:pilll/database/batch.dart';
 import 'package:pilll/entity/pill_sheet.codegen.dart';
 import 'package:pilll/entity/pill_sheet_group.codegen.dart';
 import 'package:pilll/error/error_alert.dart';
+import 'package:pilll/provider/delete_pill_sheet.dart';
+import 'package:pilll/provider/pill_sheet.dart';
+import 'package:pilll/provider/pill_sheet_group.dart';
+import 'package:pilll/provider/pill_sheet_modified_history.dart';
 
 class PillSheetRemoveRow extends HookConsumerWidget {
   final PillSheetGroup latestPillSheetGroup;
@@ -22,7 +26,7 @@ class PillSheetRemoveRow extends HookConsumerWidget {
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {
-    final store = ref.watch(settingStateNotifierProvider.notifier);
+    final deletePillSheetGroup = ref.watch(deletePillSheetGroupProvider);
     return ListTile(
       title: const Text("ピルシートをすべて破棄", style: FontType.listRow),
       onTap: () {
@@ -63,13 +67,12 @@ class PillSheetRemoveRow extends HookConsumerWidget {
                 AlertButton(
                   text: "破棄する",
                   onPressed: () async {
-                    store.asyncAction
-                        .deletePillSheet(
-                          latestPillSheetGroup: latestPillSheetGroup,
-                          activedPillSheet: activedPillSheet,
-                        )
-                        .catchError((error) => showErrorAlert(context, error));
-                    Navigator.of(context).pop();
+                    try {
+                      await deletePillSheetGroup(latestPillSheetGroup: latestPillSheetGroup, activedPillSheet: activedPillSheet);
+                      Navigator.of(context).pop();
+                    } catch (error) {
+                      showErrorAlert(context, error);
+                    }
                   },
                 ),
               ],

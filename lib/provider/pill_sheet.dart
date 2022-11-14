@@ -10,12 +10,25 @@ class BatchSetPillSheets {
   BatchSetPillSheets(this.databaseConnection);
 
   List<PillSheet> call(WriteBatch batch, List<PillSheet> pillSheets) {
-    final List<PillSheet> pillSheets = [];
+    final List<PillSheet> updated = [];
     for (var pillSheet in pillSheets) {
       final doc = databaseConnection.pillSheetReference(pillSheet.id);
       batch.set(doc, pillSheet, SetOptions(merge: true));
-      pillSheets.add(pillSheet.copyWith(id: doc.id));
+      updated.add(pillSheet.copyWith(id: doc.id));
     }
-    return pillSheets;
+    return updated;
+  }
+}
+
+final batchSetPillSheetProvider = Provider((ref) => BatchSetPillSheet(ref.watch(databaseProvider)));
+
+class BatchSetPillSheet {
+  final DatabaseConnection databaseConnection;
+
+  BatchSetPillSheet(this.databaseConnection);
+
+  void call(WriteBatch batch, PillSheet pillSheet) {
+    final doc = databaseConnection.pillSheetReference(pillSheet.id);
+    batch.set(doc, pillSheet, SetOptions(merge: true));
   }
 }
