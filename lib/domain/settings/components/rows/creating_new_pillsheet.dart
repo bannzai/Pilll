@@ -5,9 +5,8 @@ import 'package:pilll/components/atoms/color.dart';
 import 'package:pilll/components/atoms/font.dart';
 import 'package:pilll/components/molecules/premium_badge.dart';
 import 'package:pilll/domain/premium_introduction/premium_introduction_sheet.dart';
-import 'package:pilll/domain/settings/setting_page_state_notifier.dart';
 import 'package:pilll/entity/setting.codegen.dart';
-import 'package:pilll/error/error_alert.dart';
+import 'package:pilll/provider/setting.dart';
 
 class CreatingNewPillSheetRow extends HookConsumerWidget {
   final Setting setting;
@@ -25,7 +24,7 @@ class CreatingNewPillSheetRow extends HookConsumerWidget {
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {
-    final store = ref.watch(settingStateNotifierProvider.notifier);
+    final setSetting = ref.watch(setSettingProvider);
     return SwitchListTile(
       title: Row(
         children: [
@@ -36,29 +35,21 @@ class CreatingNewPillSheetRow extends HookConsumerWidget {
           ]
         ],
       ),
-      subtitle: const Text("ピルをすべて服用済みの場合、新しいシートを自動で追加します",
-          style: FontType.assisting),
+      subtitle: const Text("ピルをすべて服用済みの場合、新しいシートを自動で追加します", style: FontType.assisting),
       activeColor: PilllColors.primary,
-      onChanged: (bool value) {
+      onChanged: (bool value) async {
         analytics.logEvent(
           name: "toggle_creating_new_pillsheet",
         );
         if (isPremium || isTrial) {
           ScaffoldMessenger.of(context).hideCurrentSnackBar();
-          store.asyncAction
-              .modifiyIsAutomaticallyCreatePillSheet(
-                  !setting.isAutomaticallyCreatePillSheet, setting)
-              .catchError((error) => showErrorAlert(context, error))
-              .then(
-                (_) => ScaffoldMessenger.of(context).showSnackBar(
-                  SnackBar(
-                    duration: const Duration(seconds: 2),
-                    content: Text(
-                      "ピルシートグループの自動追加を${value ? "ON" : "OFF"}にしました",
-                    ),
-                  ),
-                ),
-              );
+          await setSetting(setting.copyWith(isAutomaticallyCreatePillSheet: !setting.isAutomaticallyCreatePillSheet));
+          ScaffoldMessenger.of(context).showSnackBar(SnackBar(
+            duration: const Duration(seconds: 2),
+            content: Text(
+              "ピルシートグループの自動追加を${value ? "ON" : "OFF"}にしました",
+            ),
+          ));
         } else if (!isPremium) {
           showPremiumIntroductionSheet(context);
         }
