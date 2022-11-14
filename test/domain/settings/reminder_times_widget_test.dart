@@ -1,3 +1,4 @@
+import 'package:pilll/domain/settings/provider.dart';
 import 'package:pilll/entity/pill_sheet_type.dart';
 import 'package:pilll/entity/setting.codegen.dart';
 import 'package:pilll/domain/settings/reminder_times_page.dart';
@@ -37,6 +38,7 @@ void main() {
         ProviderScope(
           overrides: [
             settingProvider.overrideWith((ref) => Stream.value(setting)),
+            deviceTimezoneNameProvider.overrideWith((ref) => Future.value("Asia/Tokyo")),
           ],
           child: const MaterialApp(home: ReminderTimesPage()),
         ),
@@ -62,6 +64,7 @@ void main() {
         ProviderScope(
           overrides: [
             settingProvider.overrideWith((ref) => Stream.value(setting)),
+            deviceTimezoneNameProvider.overrideWith((ref) => Future.value("Asia/Tokyo")),
           ],
           child: const MaterialApp(home: ReminderTimesPage()),
         ),
