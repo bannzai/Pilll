@@ -3,6 +3,15 @@ import 'package:pilll/database/database.dart';
 import 'package:pilll/entity/pill_sheet_group.codegen.dart';
 import 'package:riverpod/riverpod.dart';
 
+final beforePillSheetGroupProvider = FutureProvider<PillSheetGroup?>((ref) async {
+  final database = ref.watch(databaseProvider);
+  final snapshot = await database.pillSheetGroupsReference().orderBy(PillSheetGroupFirestoreKeys.createdAt).limitToLast(2).get();
+  if (snapshot.docs.length <= 1) {
+    return null;
+  }
+  return snapshot.docs[0].data();
+});
+
 final batchSetPillSheetGroupProvider = Provider((ref) => BatchSetPillSheetGroup(ref.watch(databaseProvider)));
 
 class BatchSetPillSheetGroup {

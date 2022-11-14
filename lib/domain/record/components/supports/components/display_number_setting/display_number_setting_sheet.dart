@@ -8,35 +8,34 @@ import 'package:pilll/components/atoms/buttons.dart';
 import 'package:pilll/components/atoms/color.dart';
 import 'package:pilll/components/atoms/font.dart';
 import 'package:pilll/components/atoms/text_color.dart';
-import 'package:pilll/domain/record/components/supports/components/display_number_setting/store.dart';
+import 'package:pilll/database/batch.dart';
+import 'package:pilll/database/pill_sheet_modified_history.dart';
+import 'package:pilll/entity/pill_sheet_group.codegen.dart';
+import 'package:pilll/provider/pill_sheet_group.dart';
+import 'package:pilll/provider/pill_sheet_modified_history.dart';
 import 'package:pilll/util/formatter/text_input_formatter.dart';
 
 class DisplayNumberSettingSheet extends HookConsumerWidget {
-  const DisplayNumberSettingSheet({Key? key}) : super(key: key);
+  final PillSheetGroup pillSheetGroup;
+  const DisplayNumberSettingSheet({Key? key, required this.pillSheetGroup}) : super(key: key);
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {
-    final state = ref.watch(displayNumberSettingStateStoreProvider);
-    final store = ref.watch(displayNumberSettingStateStoreProvider.notifier);
+    final begin = useState(pillSheetGroup.displayNumberSetting?.beginPillNumber);
+    final end = useState(pillSheetGroup.displayNumberSetting?.endPillNumber);
 
-    final begin = useState(
-        state.pillSheetGroup.displayNumberSetting?.beginPillNumber ?? 1);
-    final end = useState(
-        state.pillSheetGroup.displayNumberSetting?.endPillNumber ??
-            state.pillSheetGroup.estimatedEndPillNumber);
+    final beginTextFieldController = useTextEditingController(text: "${begin.value ?? 1}");
+    final endTextFieldController = useTextEditingController(text: "${end.value ?? pillSheetGroup.estimatedEndPillNumber}");
 
-    final beginTextFieldController =
-        useTextEditingController(text: "${begin.value}");
-    final endTextFieldController =
-        useTextEditingController(text: "${end.value}");
-
-    final beforePillSheetGroup = state.beforePillSheetGroup;
+    final beforePillSheetGroup = ref.watch(beforePillSheetGroupProvider);
 
     const estimatedKeyboardHeight = 216;
     const offset = 24;
-    final height = 1 -
-        ((estimatedKeyboardHeight - offset) /
-            MediaQuery.of(context).size.height);
+    final height = 1 - ((estimatedKeyboardHeight - offset) / MediaQuery.of(context).size.height);
+
+    final batchFactory = ref.watch(batchFactoryProvider);
+    final batchSetPillSheetGroup = ref.watch(batchSetPillSheetGroupProvider);
+    final batchSetPillSheetModifiedHistory = ref.watch(batchSetPillSheetModifiedHistoryProvider);
 
     return DraggableScrollableSheet(
       initialChildSize: height,
@@ -71,7 +70,13 @@ class DisplayNumberSettingSheet extends HookConsumerWidget {
                     analytics.logEvent(
                       name: "sheet_change_display_number_setting",
                     );
-                    await store.modify();
+                    await _submit(
+                      batchFactory: batchFactory,
+                      batchSetPillSheetGroup: batchSetPillSheetGroup,
+                      batchSetPillSheetModifiedHistory: batchSetPillSheetModifiedHistory,
+                      begin: begin,
+                      end: end,
+                    );
                     Navigator.of(context).pop();
                   },
                 )
@@ -86,8 +91,7 @@ class DisplayNumberSettingSheet extends HookConsumerWidget {
                     children: [
                       Row(
                         children: [
-                          SvgPicture.asset(
-                              "images/begin_display_number_setting.svg"),
+                          SvgPicture.asset("images/begin_display_number_setting.svg"),
                           const SizedBox(width: 4),
                           const Text(
                             "服用日数の始まり",
@@ -141,7 +145,6 @@ class DisplayNumberSettingSheet extends HookConsumerWidget {
                               onChanged: (text) {
                                 try {
                                   begin.value = int.parse(text);
-                                  store.setBeginDisplayPillNumber(begin.value);
                                 } catch (_) {}
                               },
                             ),
@@ -226,7 +229,6 @@ class DisplayNumberSettingSheet extends HookConsumerWidget {
                           onChanged: (text) {
                             try {
                               end.value = int.parse(text);
-                              store.setEndDisplayPillNumber(end.value);
                             } catch (_) {}
                           },
                         ),
@@ -251,15 +253,71 @@ class DisplayNumberSettingSheet extends HookConsumerWidget {
       },
     );
   }
+
+  Future<void> _submit({
+    required BatchFactory batchFactory,
+    required BatchSetPillSheetGroup batchSetPillSheetGroup,
+    required BatchSetPillSheetModifiedHistory batchSetPillSheetModifiedHistory,
+    required ValueNotifier<int?> begin,
+    required ValueNotifier<int?> end,
+  }) async {
+    final PillSheetGroupDisplayNumberSetting? updatedDisplayNumberSetting;
+    if (begin.value == null && end.value == null) {
+      updatedDisplayNumberSetting = null;
+    } else {
+      updatedDisplayNumberSetting = PillSheetGroupDisplayNumberSetting(
+        beginPillNumber: begin.value ?? 1,
+        endPillNumber: end.value ?? 1,
+      );
+    }
+    if (updatedDisplayNumberSetting == null) {
+      return;
+    }
+
+    final batch = batchFactory.batch();
+    if (begin.value != pillSheetGroup.displayNumberSetting?.beginPillNumber) {
+      batchSetPillSheetModifiedHistory(
+        batch,
+        PillSheetModifiedHistoryServiceActionFactory.createChangedBeginDisplayNumberAction(
+          pillSheetGroupID: pillSheetGroup.id,
+          beforeDisplayNumberSetting: pillSheetGroup.displayNumberSetting,
+          afterDisplayNumberSetting: updatedDisplayNumberSetting,
+        ),
+      );
+    }
+
+    if (end.value != pillSheetGroup.displayNumberSetting?.endPillNumber) {
+      batchSetPillSheetModifiedHistory(
+        batch,
+        PillSheetModifiedHistoryServiceActionFactory.createChangedEndDisplayNumberAction(
+          pillSheetGroupID: pillSheetGroup.id,
+          beforeDisplayNumberSetting: pillSheetGroup.displayNumberSetting,
+          afterDisplayNumberSetting: updatedDisplayNumberSetting,
+        ),
+      );
+    }
+
+    batchSetPillSheetGroup(
+      batch,
+      pillSheetGroup.copyWith(
+        displayNumberSetting: updatedDisplayNumberSetting,
+      ),
+    );
+
+    await batch.commit();
+  }
 }
 
 void showDisplayNumberSettingSheet(
-  BuildContext context,
-) {
+  BuildContext context, {
+  required PillSheetGroup pillSheetGroup,
+}) {
   analytics.setCurrentScreen(screenName: "DisplayNumberSettingSheet");
   showModalBottomSheet(
     context: context,
-    builder: (context) => const DisplayNumberSettingSheet(),
+    builder: (context) => DisplayNumberSettingSheet(
+      pillSheetGroup: pillSheetGroup,
+    ),
     backgroundColor: Colors.transparent,
     isScrollControlled: true,
   );
