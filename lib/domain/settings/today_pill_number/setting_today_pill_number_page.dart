@@ -11,6 +11,7 @@ import 'package:pilll/entity/pill_sheet.codegen.dart';
 import 'package:pilll/entity/pill_sheet_group.codegen.dart';
 import 'package:pilll/entity/pill_sheet_type.dart';
 import 'package:pilll/entity/setting.codegen.dart';
+import 'package:pilll/provider/change_pill_number.dart';
 import 'package:pilll/provider/pill_sheet.dart';
 import 'package:pilll/provider/pill_sheet_group.dart';
 import 'package:pilll/provider/pill_sheet_modified_history.dart';
@@ -32,11 +33,7 @@ class SettingTodayPillNumberPage extends HookConsumerWidget {
   Widget build(BuildContext context, WidgetRef ref) {
     final pillNumberIntoPillSheet = useState(_pillNumberIntoPillSheet(activedPillSheet: activedPillSheet, pillSheetGroup: pillSheetGroup));
     final pillSheetPageIndex = useState(activedPillSheet.groupIndex);
-
-    final batchFactory = ref.watch(batchFactoryProvider);
-    final batchSetPillSheets = ref.watch(batchSetPillSheetsProvider);
-    final batchSetPillSheetGroup = ref.watch(batchSetPillSheetGroupProvider);
-    final batchSetPillSheetModifiedHistory = ref.watch(batchSetPillSheetModifiedHistoryProvider);
+    final changePillNumber = ref.watch(changePillNumberProvider);
 
     return Scaffold(
       backgroundColor: PilllColors.background,
@@ -91,13 +88,9 @@ class SettingTodayPillNumberPage extends HookConsumerWidget {
                       width: 180,
                       child: PrimaryButton(
                         onPressed: () async {
-                          _submit(
+                          changePillNumber(
                               pillSheetGroup: pillSheetGroup,
                               activedPillSheet: activedPillSheet,
-                              batchFactory: batchFactory,
-                              batchSetPillSheetGroup: batchSetPillSheetGroup,
-                              batchSetPillSheets: batchSetPillSheets,
-                              batchSetPillSheetModifiedHistory: batchSetPillSheetModifiedHistory,
                               pillSheetPageIndex: pillSheetPageIndex.value,
                               pillNumberIntoPillSheet: pillNumberIntoPillSheet.value);
 
@@ -115,65 +108,6 @@ class SettingTodayPillNumberPage extends HookConsumerWidget {
         ),
       ),
     );
-  }
-
-  void _submit({
-    required PillSheetGroup pillSheetGroup,
-    required PillSheet activedPillSheet,
-    required BatchFactory batchFactory,
-    required BatchSetPillSheetGroup batchSetPillSheetGroup,
-    required BatchSetPillSheets batchSetPillSheets,
-    required BatchSetPillSheetModifiedHistory batchSetPillSheetModifiedHistory,
-    required int pillSheetPageIndex,
-    required int pillNumberIntoPillSheet,
-  }) async {
-    final batch = batchFactory.batch();
-
-    final pillSheetTypes = pillSheetGroup.pillSheets.map((e) => e.pillSheetType).toList();
-    final nextSerializedPillNumber = summarizedPillCountWithPillSheetTypesToEndIndex(
-          pillSheetTypes: pillSheetTypes,
-          endIndex: pillSheetPageIndex,
-        ) +
-        pillNumberIntoPillSheet;
-    final firstPilSheetBeginDate = today().subtract(Duration(days: nextSerializedPillNumber - 1));
-
-    final List<PillSheet> updatedPillSheets = [];
-    pillSheetGroup.pillSheets.asMap().keys.forEach((index) {
-      final pillSheet = pillSheetGroup.pillSheets[index];
-
-      final DateTime beginDate;
-      if (index == 0) {
-        beginDate = firstPilSheetBeginDate;
-      } else {
-        final passedTotalCount = summarizedPillCountWithPillSheetTypesToEndIndex(pillSheetTypes: pillSheetTypes, endIndex: index);
-        beginDate = firstPilSheetBeginDate.add(Duration(days: passedTotalCount));
-      }
-
-      final DateTime? lastTakenDate;
-      if (pillSheetPageIndex == index) {
-        lastTakenDate = beginDate.add(Duration(days: pillNumberIntoPillSheet - 2));
-      } else if (pillSheetPageIndex > index) {
-        lastTakenDate = beginDate.add(Duration(days: pillSheet.pillSheetType.totalCount - 1));
-      } else {
-        // state.selectedPillMarkNumberIntoPillSheet < index
-        lastTakenDate = null;
-      }
-
-      final updatedPillSheet = pillSheet.copyWith(beginingDate: beginDate, lastTakenDate: lastTakenDate, restDurations: []);
-      updatedPillSheets.add(updatedPillSheet);
-    });
-
-    batchSetPillSheets(batch, updatedPillSheets);
-
-    final history = PillSheetModifiedHistoryServiceActionFactory.createChangedPillNumberAction(
-      pillSheetGroupID: pillSheetGroup.id,
-      before: activedPillSheet,
-      after: updatedPillSheets[pillSheetPageIndex],
-    );
-    batchSetPillSheetModifiedHistory(batch, history);
-    batchSetPillSheetGroup(batch, pillSheetGroup.copyWith(pillSheets: updatedPillSheets));
-
-    await batch.commit();
   }
 
   String _today() {
