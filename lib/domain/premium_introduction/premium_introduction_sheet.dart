@@ -8,14 +8,12 @@ import 'package:pilll/components/atoms/buttons.dart';
 import 'package:pilll/components/atoms/color.dart';
 import 'package:pilll/components/molecules/indicator.dart';
 import 'package:pilll/components/page/hud.dart';
-import 'package:pilll/provider/user.dart';
 import 'package:pilll/domain/premium_introduction/components/premium_introduction_footer.dart';
 import 'package:pilll/domain/premium_introduction/components/premium_introduction_header.dart';
 import 'package:pilll/domain/premium_introduction/components/premium_introduction_discount.dart';
 import 'package:pilll/domain/premium_introduction/components/premium_user_thanks.dart';
 import 'package:pilll/domain/premium_introduction/components/purchase_buttons.dart';
 import 'package:pilll/domain/premium_introduction/util/discount_deadline.dart';
-import 'package:pilll/entity/user.codegen.dart';
 import 'package:pilll/error/universal_error_page.dart';
 import 'package:pilll/provider/premium_and_trial.codegen.dart';
 import 'package:pilll/provider/root.dart';
@@ -29,15 +27,13 @@ class PremiumIntroductionSheet extends HookConsumerWidget {
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {
-    return AsyncValueGroup.group3(
-      ref.watch(userProvider),
+    return AsyncValueGroup.group2(
       ref.watch(purchaseOfferingsProvider),
       ref.watch(premiumAndTrialProvider),
     ).when(
       data: (data) => PremiumIntroductionSheetBody(
-        user: data.t1,
-        offerings: data.t2,
-        premiumAndTrial: data.t3,
+        offerings: data.t1,
+        premiumAndTrial: data.t2,
       ),
       error: (error, stackTrace) => UniversalErrorPage(
         error: error,
@@ -53,13 +49,11 @@ class PremiumIntroductionSheet extends HookConsumerWidget {
 }
 
 class PremiumIntroductionSheetBody extends HookConsumerWidget {
-  final User user;
   final Offerings offerings;
   final PremiumAndTrial premiumAndTrial;
 
   const PremiumIntroductionSheetBody({
     Key? key,
-    required this.user,
     required this.offerings,
     required this.premiumAndTrial,
   }) : super(key: key);
