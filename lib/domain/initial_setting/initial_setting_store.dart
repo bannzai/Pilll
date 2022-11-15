@@ -1,15 +1,8 @@
 import 'dart:async';
 
 import 'package:firebase_auth/firebase_auth.dart';
-import 'package:firebase_crashlytics/firebase_crashlytics.dart';
-import 'package:flutter/foundation.dart';
-import 'package:pilll/analytics.dart';
-import 'package:pilll/auth/apple.dart';
-import 'package:pilll/auth/google.dart';
 import 'package:pilll/database/batch.dart';
-import 'package:pilll/database/database.dart';
 import 'package:pilll/domain/initial_setting/initial_setting_state.codegen.dart';
-import 'package:pilll/entity/link_account_type.dart';
 import 'package:pilll/entity/pill_sheet_group.codegen.dart';
 import 'package:pilll/entity/pill_sheet_type.dart';
 import 'package:pilll/entity/setting.codegen.dart';
@@ -18,13 +11,9 @@ import 'package:pilll/provider/pill_sheet_group.dart';
 import 'package:pilll/provider/pill_sheet_modified_history.dart';
 import 'package:pilll/provider/setting.dart';
 import 'package:pilll/service/auth.dart';
-import 'package:pilll/database/pill_sheet.dart';
-import 'package:pilll/database/pill_sheet_group.dart';
 import 'package:pilll/database/pill_sheet_modified_history.dart';
-import 'package:pilll/database/setting.dart';
 import 'package:pilll/database/user.dart';
 import 'package:pilll/util/datetime/day.dart';
-import 'package:purchases_flutter/purchases_flutter.dart';
 import 'package:riverpod/riverpod.dart';
 
 final initialSettingStoreProvider = StateNotifierProvider.autoDispose<InitialSettingStateStore, InitialSettingState>(
