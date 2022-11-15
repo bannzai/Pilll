@@ -26,7 +26,6 @@ import 'package:flutter/material.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 import 'package:pilll/util/version/version.dart';
 import 'package:url_launcher/url_launcher.dart';
-import 'package:uuid/uuid.dart';
 
 // TODO: Replace to HookConsumerWidget
 // TODO: Instantiate and cache SharedPreferences with Provider on RootPage(this file)
