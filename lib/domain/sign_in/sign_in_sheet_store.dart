@@ -6,15 +6,13 @@ import 'package:pilll/database/user.dart';
 import 'package:pilll/domain/sign_in/sign_in_sheet_state.codegen.dart';
 import 'package:riverpod/riverpod.dart';
 
-final signinSheetStoreProvider = StateNotifierProvider.autoDispose
-    .family<SignInSheetStore, SignInSheetState, SignInSheetStateContext>(
+final signinSheetStoreProvider = StateNotifierProvider.autoDispose.family<SignInSheetStore, SignInSheetState, SignInSheetStateContext>(
   (ref, context) => SignInSheetStore(context, ref.watch(userDatastoreProvider)),
 );
 
 class SignInSheetStore extends StateNotifier<SignInSheetState> {
   final UserDatastore _userDatastore;
-  SignInSheetStore(SignInSheetStateContext context, this._userDatastore)
-      : super(SignInSheetState(context: context)) {
+  SignInSheetStore(SignInSheetStateContext context, this._userDatastore) : super(SignInSheetState(context: context)) {
     reset();
   }
 
@@ -23,11 +21,9 @@ class SignInSheetStore extends StateNotifier<SignInSheetState> {
   }
 
   Future<SignInWithAppleState> handleApple() {
-    if (state.isLoginMode) {
+    if (_isLoginMode) {
       analytics.logEvent(name: "signin_sheet_sign_in_apple");
-      return signInWithApple().then((value) => value == null
-          ? SignInWithAppleState.cancel
-          : SignInWithAppleState.determined);
+      return signInWithApple().then((value) => value == null ? SignInWithAppleState.cancel : SignInWithAppleState.determined);
     } else {
       analytics.logEvent(name: "signin_sheet_link_with_apple");
       return callLinkWithApple(_userDatastore);
@@ -35,11 +31,9 @@ class SignInSheetStore extends StateNotifier<SignInSheetState> {
   }
 
   Future<SignInWithGoogleState> handleGoogle() {
-    if (state.isLoginMode) {
+    if (_isLoginMode) {
       analytics.logEvent(name: "signin_sheet_sign_in_google");
-      return signInWithGoogle().then((value) => value == null
-          ? SignInWithGoogleState.cancel
-          : SignInWithGoogleState.determined);
+      return signInWithGoogle().then((value) => value == null ? SignInWithGoogleState.cancel : SignInWithGoogleState.determined);
     } else {
       analytics.logEvent(name: "signin_sheet_link_with_google");
       return callLinkWithGoogle(_userDatastore);

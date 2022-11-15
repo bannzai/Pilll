@@ -1,13 +1,16 @@
+import 'package:flutter_hooks/flutter_hooks.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:flutter/material.dart';
 import 'package:pilll/analytics.dart';
 import 'package:pilll/auth/apple.dart';
+import 'package:pilll/auth/boilerplate.dart';
 import 'package:pilll/auth/google.dart';
 import 'package:pilll/components/atoms/color.dart';
 import 'package:pilll/components/atoms/font.dart';
 import 'package:pilll/components/atoms/text_color.dart';
 import 'package:pilll/components/page/hud.dart';
+import 'package:pilll/database/user.dart';
 import 'package:pilll/entity/link_account_type.dart';
 import 'package:pilll/error/alert_error.dart';
 import 'package:pilll/error/error_alert.dart';
@@ -30,44 +33,38 @@ class SignInSheet extends HookConsumerWidget {
   }) : super(key: key);
   @override
   Widget build(BuildContext context, WidgetRef ref) {
-    final store = ref.watch(signinSheetStoreProvider(stateContext).notifier);
-    final state = ref.watch(signinSheetStoreProvider(stateContext));
+    final isLoading = useState(false);
+    final linkApple = ref.watch(linkAppleProvider);
+    final linkGoogle = ref.watch(linkGoogleProvider);
+
     return HUD(
-      shown: state.isLoading,
-      child: UniversalErrorPage(
-        error: state.exception,
-        reload: () => store.reset(),
-        child: Container(
-          constraints: BoxConstraints(
-            maxHeight: 333,
-            minHeight: 300,
-            minWidth: MediaQuery.of(context).size.width,
-          ),
-          color: Colors.white,
-          child: SafeArea(
-            child: Padding(
-              padding: const EdgeInsets.only(left: 16, right: 16),
-              child: Column(
-                mainAxisAlignment: MainAxisAlignment.start,
-                mainAxisSize: MainAxisSize.min,
-                children: [
-                  const SizedBox(height: 14),
-                  SvgPicture.asset("images/draggable_bar.svg", height: 6),
-                  const SizedBox(height: 24),
-                  Text(state.title,
-                      textAlign: TextAlign.center,
-                      style: TextColorStyle.main.merge(FontType.sBigTitle)),
-                  const SizedBox(height: 16),
-                  Text(state.message,
-                      textAlign: TextAlign.center,
-                      style: TextColorStyle.main.merge(FontType.assisting)),
-                  const SizedBox(height: 24),
-                  _appleButton(context, store, state),
-                  const SizedBox(height: 24),
-                  _googleButton(context, store, state),
-                  const Spacer(),
-                ],
-              ),
+      shown: isLoading.value,
+      child: Container(
+        constraints: BoxConstraints(
+          maxHeight: 333,
+          minHeight: 300,
+          minWidth: MediaQuery.of(context).size.width,
+        ),
+        color: Colors.white,
+        child: SafeArea(
+          child: Padding(
+            padding: const EdgeInsets.only(left: 16, right: 16),
+            child: Column(
+              mainAxisAlignment: MainAxisAlignment.start,
+              mainAxisSize: MainAxisSize.min,
+              children: [
+                const SizedBox(height: 14),
+                SvgPicture.asset("images/draggable_bar.svg", height: 6),
+                const SizedBox(height: 24),
+                Text(_title, textAlign: TextAlign.center, style: TextColorStyle.main.merge(FontType.sBigTitle)),
+                const SizedBox(height: 16),
+                Text(_message, textAlign: TextAlign.center, style: TextColorStyle.main.merge(FontType.assisting)),
+                const SizedBox(height: 24),
+                _appleButton(context, linkApple, isLoading),
+                const SizedBox(height: 24),
+                _googleButton(context, linkGoogle, isLoading),
+                const Spacer(),
+              ],
             ),
           ),
         ),
@@ -77,8 +74,8 @@ class SignInSheet extends HookConsumerWidget {
 
   Widget _appleButton(
     BuildContext context,
-    SignInSheetStore store,
-    SignInSheetState state,
+    LinkApple linkApple,
+    ValueNotifier<bool> isLoading,
   ) {
     return OutlinedButton(
       style: ButtonStyle(
@@ -91,9 +88,9 @@ class SignInSheet extends HookConsumerWidget {
       ),
       onPressed: () async {
         analytics.logEvent(name: "signin_sheet_selected_apple");
-        store.showHUD();
+        isLoading.value = true;
         try {
-          final signinState = await store.handleApple();
+          final signinState = await _handleApple(linkApple);
           switch (signinState) {
             case SignInWithAppleState.determined:
               Navigator.of(context).pop();
@@ -103,13 +100,9 @@ class SignInSheet extends HookConsumerWidget {
               return;
           }
         } catch (error) {
-          if (error is AlertError) {
-            showErrorAlert(context, error);
-          } else {
-            store.handleException(error);
-          }
+          showErrorAlert(context, error);
         } finally {
-          store.hideHUD();
+          isLoading.value = false;
         }
       },
       child: SizedBox(
@@ -124,7 +117,7 @@ class SignInSheet extends HookConsumerWidget {
               Padding(
                 padding: const EdgeInsets.only(left: 10),
                 child: Text(
-                  state.appleButtonText,
+                  _appleButtonText,
                   style: FontType.subTitle.merge(TextColorStyle.white),
                 ),
               )
@@ -137,8 +130,8 @@ class SignInSheet extends HookConsumerWidget {
 
   Widget _googleButton(
     BuildContext context,
-    SignInSheetStore store,
-    SignInSheetState state,
+    LinkGoogle linkGoogle,
+    ValueNotifier<bool> isLoading,
   ) {
     return OutlinedButton(
       style: ButtonStyle(
@@ -152,9 +145,9 @@ class SignInSheet extends HookConsumerWidget {
       ),
       onPressed: () async {
         analytics.logEvent(name: "signin_sheet_selected_google");
-        store.showHUD();
+        isLoading.value = true;
         try {
-          final signinState = await store.handleGoogle();
+          final signinState = await _handleGoogle(linkGoogle);
           switch (signinState) {
             case SignInWithGoogleState.determined:
               Navigator.of(context).pop();
@@ -164,13 +157,9 @@ class SignInSheet extends HookConsumerWidget {
               return;
           }
         } catch (error) {
-          if (error is AlertError) {
-            showErrorAlert(context, error);
-          } else {
-            store.handleException(error);
-          }
+          showErrorAlert(context, error);
         } finally {
-          store.hideHUD();
+          isLoading.value = false;
         }
       },
       child: SizedBox(
@@ -185,7 +174,7 @@ class SignInSheet extends HookConsumerWidget {
               Padding(
                 padding: const EdgeInsets.only(left: 10),
                 child: Text(
-                  state.googleButtonText,
+                  _googleButtonText,
                   style: FontType.subTitle.merge(TextColorStyle.main),
                 ),
               ),
@@ -195,10 +184,94 @@ class SignInSheet extends HookConsumerWidget {
       ),
     );
   }
+
+  bool get _isLoginMode {
+    switch (stateContext) {
+      case SignInSheetStateContext.initialSetting:
+        return true;
+      case SignInSheetStateContext.recordPage:
+        return false;
+      case SignInSheetStateContext.premium:
+        return false;
+      case SignInSheetStateContext.setting:
+        return false;
+    }
+  }
+
+  String get _title {
+    switch (stateContext) {
+      case SignInSheetStateContext.initialSetting:
+        return "ログイン";
+      case SignInSheetStateContext.recordPage:
+        return "アカウント登録";
+      case SignInSheetStateContext.premium:
+        return "プレミアム登録の前に…";
+      case SignInSheetStateContext.setting:
+        return "アカウント登録";
+    }
+  }
+
+  String get _message {
+    switch (stateContext) {
+      case SignInSheetStateContext.initialSetting:
+        return "Pilllにまだログインしたことが無い場合は新しくアカウントが作成されます";
+      case SignInSheetStateContext.recordPage:
+        return "アカウント登録するとデータの引き継ぎが可能になります";
+      case SignInSheetStateContext.premium:
+        return "アカウント情報を保持するため、アカウント登録をお願いします";
+      case SignInSheetStateContext.setting:
+        return "アカウント登録するとデータの引き継ぎが可能になります";
+    }
+  }
+
+  String get _appleButtonText {
+    switch (stateContext) {
+      case SignInSheetStateContext.initialSetting:
+        return LinkAccountType.apple.loginContentName + "でサインイン";
+      case SignInSheetStateContext.recordPage:
+        return LinkAccountType.apple.loginContentName + "で登録";
+      case SignInSheetStateContext.premium:
+        return LinkAccountType.apple.loginContentName + "で登録";
+      case SignInSheetStateContext.setting:
+        return LinkAccountType.apple.loginContentName + "で登録";
+    }
+  }
+
+  String get _googleButtonText {
+    switch (stateContext) {
+      case SignInSheetStateContext.initialSetting:
+        return LinkAccountType.google.loginContentName + "でサインイン";
+      case SignInSheetStateContext.recordPage:
+        return LinkAccountType.google.loginContentName + "で登録";
+      case SignInSheetStateContext.premium:
+        return LinkAccountType.google.loginContentName + "で登録";
+      case SignInSheetStateContext.setting:
+        return LinkAccountType.google.loginContentName + "で登録";
+    }
+  }
+
+  Future<SignInWithAppleState> _handleApple(LinkApple linkApple) {
+    if (_isLoginMode) {
+      analytics.logEvent(name: "signin_sheet_sign_in_apple");
+      return signInWithApple().then((value) => value == null ? SignInWithAppleState.cancel : SignInWithAppleState.determined);
+    } else {
+      analytics.logEvent(name: "signin_sheet_link_with_apple");
+      return callLinkWithApple(linkApple);
+    }
+  }
+
+  Future<SignInWithGoogleState> _handleGoogle(LinkGoogle linkGoogle) {
+    if (_isLoginMode) {
+      analytics.logEvent(name: "signin_sheet_sign_in_google");
+      return signInWithGoogle().then((value) => value == null ? SignInWithGoogleState.cancel : SignInWithGoogleState.determined);
+    } else {
+      analytics.logEvent(name: "signin_sheet_link_with_google");
+      return callLinkWithGoogle(linkGoogle);
+    }
+  }
 }
 
-showSignInSheet(BuildContext context, SignInSheetStateContext stateContext,
-    Function(LinkAccountType)? onSignIn) {
+showSignInSheet(BuildContext context, SignInSheetStateContext stateContext, Function(LinkAccountType)? onSignIn) {
   analytics.setCurrentScreen(screenName: "SigninSheet");
   showModalBottomSheet(
     context: context,

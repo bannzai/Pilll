@@ -57,26 +57,6 @@ class UserDatastore {
     }, SetOptions(merge: true));
   }
 
-  Future<void> linkApple(String? email) async {
-    await _database.userRawReference().set({
-      UserFirestoreFieldKeys.isAnonymous: false,
-    }, SetOptions(merge: true));
-    return _database.userPrivateRawReference().set({
-      if (email != null) UserPrivateFirestoreFieldKeys.appleEmail: email,
-      UserPrivateFirestoreFieldKeys.isLinkedApple: true,
-    }, SetOptions(merge: true));
-  }
-
-  Future<void> linkGoogle(String? email) async {
-    await _database.userRawReference().set({
-      UserFirestoreFieldKeys.isAnonymous: false,
-    }, SetOptions(merge: true));
-    return _database.userPrivateRawReference().set({
-      if (email != null) UserPrivateFirestoreFieldKeys.googleEmail: email,
-      UserPrivateFirestoreFieldKeys.isLinkedGoogle: true,
-    }, SetOptions(merge: true));
-  }
-
   Future<void> sendPremiumFunctionSurvey(List<PremiumFunctionSurveyElementType> elements, String message) async {
     final PremiumFunctionSurvey premiumFunctionSurvey = PremiumFunctionSurvey(
       elements: elements,
@@ -127,6 +107,42 @@ class FetchOrCreateUser {
       },
       SetOptions(merge: true),
     );
+  }
+}
+
+final linkAppleProvider = Provider((ref) => LinkApple(ref.watch(databaseProvider)));
+
+class LinkApple {
+  final DatabaseConnection databaseConnection;
+  LinkApple(this.databaseConnection);
+
+  Future<void> call(String? email) async {
+    await databaseConnection.userRawReference().set({
+      UserFirestoreFieldKeys.isAnonymous: false,
+    }, SetOptions(merge: true));
+
+    await databaseConnection.userPrivateRawReference().set({
+      if (email != null) UserPrivateFirestoreFieldKeys.appleEmail: email,
+      UserPrivateFirestoreFieldKeys.isLinkedApple: true,
+    }, SetOptions(merge: true));
+  }
+}
+
+final linkGoogleProvider = Provider((ref) => LinkGoogle(ref.watch(databaseProvider)));
+
+class LinkGoogle {
+  final DatabaseConnection databaseConnection;
+  LinkGoogle(this.databaseConnection);
+
+  Future<void> call(String? email) async {
+    await databaseConnection.userRawReference().set({
+      UserFirestoreFieldKeys.isAnonymous: false,
+    }, SetOptions(merge: true));
+
+    await databaseConnection.userPrivateRawReference().set({
+      if (email != null) UserPrivateFirestoreFieldKeys.googleEmail: email,
+      UserPrivateFirestoreFieldKeys.isLinkedGoogle: true,
+    }, SetOptions(merge: true));
   }
 }
 
