@@ -1,4 +1,5 @@
 import 'package:flutter/cupertino.dart';
+
 import 'package:flutter/services.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
 import 'package:pilll/app/secret.dart';
@@ -27,8 +28,8 @@ extension OfferingTypeFunction on OfferingType {
   }
 }
 
-final purchaseServiceProvider = Provider((ref) => PurchaseService());
-final purchaseOfferingsProvider = FutureProvider((ref) => ref.watch(purchaseServiceProvider).fetchOfferings());
+final _purchaseServiceProvider = Provider((ref) => PurchaseService());
+final purchaseOfferingsProvider = FutureProvider((ref) => ref.watch(_purchaseServiceProvider).fetchOfferings());
 final currentOfferingTypeProvider = Provider.family.autoDispose((ref, PremiumAndTrial premiumAndTrial) {
   final isOverDiscountDeadline = ref.watch(isOverDiscountDeadlineProvider(premiumAndTrial.discountEntitlementDeadlineDate));
   if (!premiumAndTrial.hasDiscountEntitlement) {
@@ -40,7 +41,7 @@ final currentOfferingTypeProvider = Provider.family.autoDispose((ref, PremiumAnd
     return OfferingType.limited;
   }
 });
-final currentOfferingPackagesProvider = Provider.family.autoDispose((ref, PremiumAndTrial premiumAndTrial) {
+final currentOfferingPackagesProvider = Provider.family.autoDispose<List<Package>, PremiumAndTrial>((ref, PremiumAndTrial premiumAndTrial) {
   final currentOfferingType = ref.watch(currentOfferingTypeProvider(premiumAndTrial));
   final offering = ref.watch(purchaseOfferingsProvider).valueOrNull?.all[currentOfferingType.name];
   if (offering != null) {

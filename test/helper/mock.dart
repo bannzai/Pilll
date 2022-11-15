@@ -12,6 +12,7 @@ import 'package:pilll/provider/setting.dart';
 import 'package:pilll/provider/user.dart';
 import 'package:pilll/service/day.dart';
 import 'package:mockito/annotations.dart';
+import 'package:pilll/service/purchase.dart';
 
 @GenerateMocks([
   TodayService,
@@ -31,5 +32,6 @@ import 'package:mockito/annotations.dart';
   BeginMenstruation,
   DatabaseConnection,
   EndInitialSetting,
+  PurchaseService,
 ])
 abstract class KeepGeneratedMocks {}

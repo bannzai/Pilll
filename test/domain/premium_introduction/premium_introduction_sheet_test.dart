@@ -3,6 +3,7 @@ import 'package:pilll/domain/premium_introduction/components/premium_introductio
 import 'package:pilll/domain/premium_introduction/components/premium_user_thanks.dart';
 import 'package:pilll/domain/premium_introduction/premium_introduction_sheet.dart';
 import 'package:pilll/domain/premium_introduction/util/discount_deadline.dart';
+import 'package:pilll/provider/premium_and_trial.codegen.dart';
 import 'package:pilll/service/day.dart';
 import 'package:pilll/service/purchase.dart';
 import 'package:pilll/util/environment.dart';
@@ -29,6 +30,8 @@ class _MonthlyFakeProduct extends Fake implements StoreProduct {
 class _MonthlyFakePackage extends Fake implements Package {
   @override
   StoreProduct get storeProduct => _MonthlyFakeProduct();
+  @override
+  PackageType get packageType => PackageType.monthly;
 }
 
 class _AnnualFakeProduct extends Fake implements StoreProduct {
@@ -41,10 +44,12 @@ class _AnnualFakeProduct extends Fake implements StoreProduct {
 class _AnnualFakePackage extends Fake implements Package {
   @override
   StoreProduct get storeProduct => _AnnualFakeProduct();
+  @override
+  PackageType get packageType => PackageType.annual;
 }
 
-class _FakePremiumIntroductionState extends Fake implements PremiumIntroductionState {
-  _FakePremiumIntroductionState({
+class _FakePremiumAndTrial extends Fake implements PremiumAndTrial {
+  _FakePremiumAndTrial({
     required this.fakeIsPremium,
     required this.fakeHasDiscountEntitlement,
     required this.fakeDiscountEntitlementDeadlineDate,
@@ -54,25 +59,11 @@ class _FakePremiumIntroductionState extends Fake implements PremiumIntroductionS
   final DateTime? fakeDiscountEntitlementDeadlineDate;
 
   @override
-  Offerings get offerings => _FakeOfferings();
-  @override
-  Package? get monthlyPackage => _MonthlyFakePackage();
-  @override
-  Package? get monthlyPremiumPackage => _MonthlyFakePackage();
-  @override
-  Package? get annualPackage => _AnnualFakePackage();
-  @override
   bool get isPremium => fakeIsPremium;
   @override
   bool get hasDiscountEntitlement => fakeHasDiscountEntitlement;
   @override
   DateTime? get discountEntitlementDeadlineDate => fakeDiscountEntitlementDeadlineDate;
-  @override
-  OfferingType get currentOfferingType => OfferingType.premium;
-  @override
-  bool get isNotYetLoad => false;
-  @override
-  bool get isLoading => false;
 }
 
 void main() {
@@ -94,7 +85,7 @@ void main() {
 
     group('user is premium', () {
       testWidgets('#PremiumIntroductionDiscountRow is not found and #PremiumUserThanksRow is found', (WidgetTester tester) async {
-        final state = _FakePremiumIntroductionState(
+        final premiumAndTrial = _FakePremiumAndTrial(
           fakeIsPremium: true,
           fakeHasDiscountEntitlement: true, // NOTE: Nasty data
           fakeDiscountEntitlementDeadlineDate: null,
@@ -105,8 +96,10 @@ void main() {
           MaterialApp(
             home: ProviderScope(
               overrides: [
-                premiumIntroductionStateProvider.overrideWithValue(state),
-                premiumIntroductionStoreProvider.overrideWith((ref) => MockPremiumIntroductionStore()),
+                purchaseOfferingsProvider.overrideWith((ref) => _FakeOfferings()),
+                currentOfferingPackagesProvider.overrideWith((ref, arg) => [_MonthlyFakePackage(), _AnnualFakePackage()]),
+                monthlyPremiumPackageProvider.overrideWith((ref, arg) => _MonthlyFakePackage()),
+                premiumAndTrialProvider.overrideWith((ref) => AsyncValue.data(premiumAndTrial)),
                 isOverDiscountDeadlineProvider.overrideWithProvider((param) => Provider.autoDispose((_) => true)),
                 durationToDiscountPriceDeadline.overrideWithProvider((param) => Provider.autoDispose((_) => const Duration(seconds: 1000))),
               ],
@@ -132,7 +125,7 @@ void main() {
       const hasDiscountEntitlement = true;
       const isOverDiscountDeadline = false;
       testWidgets('#PremiumIntroductionDiscountRow is found', (WidgetTester tester) async {
-        var state = _FakePremiumIntroductionState(
+        var premiumAndTrial = _FakePremiumAndTrial(
           fakeIsPremium: false,
           fakeHasDiscountEntitlement: hasDiscountEntitlement,
           fakeDiscountEntitlementDeadlineDate: discountEntitlementDeadlineDate,
@@ -143,8 +136,10 @@ void main() {
           MaterialApp(
             home: ProviderScope(
               overrides: [
-                premiumIntroductionStateProvider.overrideWithValue(state),
-                premiumIntroductionStoreProvider.overrideWith((ref) => MockPremiumIntroductionStore()),
+                purchaseOfferingsProvider.overrideWith((ref) => _FakeOfferings()),
+                currentOfferingPackagesProvider.overrideWith((ref, arg) => [_MonthlyFakePackage(), _AnnualFakePackage()]),
+                monthlyPremiumPackageProvider.overrideWith((ref, arg) => _MonthlyFakePackage()),
+                premiumAndTrialProvider.overrideWith((ref) => AsyncValue.data(premiumAndTrial)),
                 isOverDiscountDeadlineProvider.overrideWithProvider((param) => Provider.autoDispose((_) => isOverDiscountDeadline)),
                 durationToDiscountPriceDeadline.overrideWithProvider((param) => Provider.autoDispose((_) => const Duration(seconds: 1000))),
               ],
@@ -171,7 +166,7 @@ void main() {
         when(mockTodayRepository.now()).thenReturn(today);
         todayRepository = mockTodayRepository;
 
-        final state = _FakePremiumIntroductionState(
+        final premiumAndTrial = _FakePremiumAndTrial(
           fakeIsPremium: false,
           fakeHasDiscountEntitlement: hasDiscountEntitlement,
           fakeDiscountEntitlementDeadlineDate: today.subtract(const Duration(days: 1)),
@@ -182,8 +177,10 @@ void main() {
           MaterialApp(
             home: ProviderScope(
               overrides: [
-                premiumIntroductionStateProvider.overrideWithValue(state),
-                premiumIntroductionStoreProvider.overrideWith((ref) => MockPremiumIntroductionStore()),
+                purchaseOfferingsProvider.overrideWith((ref) => _FakeOfferings()),
+                currentOfferingPackagesProvider.overrideWith((ref, arg) => [_MonthlyFakePackage(), _AnnualFakePackage()]),
+                monthlyPremiumPackageProvider.overrideWith((ref, arg) => _MonthlyFakePackage()),
+                premiumAndTrialProvider.overrideWith((ref) => AsyncValue.data(premiumAndTrial)),
                 isOverDiscountDeadlineProvider.overrideWithProvider((param) => Provider.autoDispose((_) => false)),
                 durationToDiscountPriceDeadline.overrideWithProvider((param) => Provider.autoDispose((_) => const Duration(seconds: 1000))),
               ],
@@ -210,7 +207,7 @@ void main() {
         when(mockTodayRepository.now()).thenReturn(today);
         todayRepository = mockTodayRepository;
 
-        final state = _FakePremiumIntroductionState(
+        final premiumAndTrial = _FakePremiumAndTrial(
           fakeIsPremium: false,
           fakeHasDiscountEntitlement: true,
           fakeDiscountEntitlementDeadlineDate: today.subtract(const Duration(days: 1)),
@@ -221,8 +218,10 @@ void main() {
           MaterialApp(
             home: ProviderScope(
               overrides: [
-                premiumIntroductionStateProvider.overrideWithValue(state),
-                premiumIntroductionStoreProvider.overrideWith((ref) => MockPremiumIntroductionStore()),
+                purchaseOfferingsProvider.overrideWith((ref) => _FakeOfferings()),
+                currentOfferingPackagesProvider.overrideWith((ref, arg) => [_MonthlyFakePackage(), _AnnualFakePackage()]),
+                monthlyPremiumPackageProvider.overrideWith((ref, arg) => _MonthlyFakePackage()),
+                premiumAndTrialProvider.overrideWith((ref) => AsyncValue.data(premiumAndTrial)),
                 isOverDiscountDeadlineProvider.overrideWithProvider((param) => Provider.autoDispose((_) => isOverDiscountDeadline)),
                 durationToDiscountPriceDeadline.overrideWithProvider((param) => Provider.autoDispose((_) => const Duration(seconds: 1000))),
               ],
@@ -248,7 +247,7 @@ void main() {
         when(mockTodayRepository.now()).thenReturn(today);
         todayRepository = mockTodayRepository;
 
-        var state = _FakePremiumIntroductionState(
+        var premiumAndTrial = _FakePremiumAndTrial(
           fakeIsPremium: false,
           fakeHasDiscountEntitlement: true,
           fakeDiscountEntitlementDeadlineDate: null,
@@ -259,8 +258,10 @@ void main() {
           MaterialApp(
             home: ProviderScope(
               overrides: [
-                premiumIntroductionStateProvider.overrideWithValue(state),
-                premiumIntroductionStoreProvider.overrideWith((ref) => MockPremiumIntroductionStore()),
+                purchaseOfferingsProvider.overrideWith((ref) => _FakeOfferings()),
+                currentOfferingPackagesProvider.overrideWith((ref, arg) => [_MonthlyFakePackage(), _AnnualFakePackage()]),
+                monthlyPremiumPackageProvider.overrideWith((ref, arg) => _MonthlyFakePackage()),
+                premiumAndTrialProvider.overrideWith((ref) => AsyncValue.data(premiumAndTrial)),
                 isOverDiscountDeadlineProvider.overrideWithProvider((param) => Provider.autoDispose((_) => false)),
                 durationToDiscountPriceDeadline.overrideWithProvider((param) => Provider.autoDispose((_) => const Duration(seconds: 1000))),
               ],
