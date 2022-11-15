@@ -130,7 +130,7 @@ class FetchOrCreateUser {
   }
 }
 
-final registerRemotePushNotificationToken = Provider((ref) => RegisterRemotePushNotificationToken(ref.watch(databaseProvider)));
+final registerRemotePushNotificationTokenProvider = Provider((ref) => RegisterRemotePushNotificationToken(ref.watch(databaseProvider)));
 
 class RegisterRemotePushNotificationToken {
   final DatabaseConnection databaseConnection;
