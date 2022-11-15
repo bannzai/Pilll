@@ -12,15 +12,14 @@ class AppRouter {
 // So, Don't forget when this function is edited. Both test necessary .
   static void endInitialSetting(BuildContext context) {
     analytics.logEvent(name: "end_initial_setting");
-    // TODO: Remove this line after 2022-07-01
-    analytics.logEvent(name: "end_initial_setteing");
     SharedPreferences.getInstance().then((storage) {
       storage.setBool(BoolKey.didEndInitialSetting, true);
-      requestNotificationPermissions().then((value) {
-        listenNotificationEvents();
-        Navigator.popUntil(context, (router) => router.isFirst);
-        // rootKey.currentState?.showHome();
-      });
+      Navigator.popUntil(context, (router) => router.isFirst);
+// TODO: Remove
+//      requestNotificationPermissions().then((value) {
+//        listenNotificationEvents();
+//        // rootKey.currentState?.showHome();
+//      });
     });
   }
 
