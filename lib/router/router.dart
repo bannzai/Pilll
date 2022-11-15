@@ -19,15 +19,13 @@ class AppRouter {
       requestNotificationPermissions().then((value) {
         listenNotificationEvents();
         Navigator.popUntil(context, (router) => router.isFirst);
-        rootKey.currentState?.showHome();
+        // rootKey.currentState?.showHome();
       });
     });
   }
 
   static void signInAccount(BuildContext context) {
-    analytics.logEvent(
-        name: "initial_setting_signin_account",
-        parameters: {"uid": FirebaseAuth.instance.currentUser?.uid});
+    analytics.logEvent(name: "initial_setting_signin_account", parameters: {"uid": FirebaseAuth.instance.currentUser?.uid});
     return endInitialSetting(context);
   }
 
@@ -36,6 +34,6 @@ class AppRouter {
     final storage = await SharedPreferences.getInstance();
     await storage.setBool(BoolKey.didEndInitialSetting, false);
     Navigator.popUntil(context, (router) => router.isFirst);
-    rootKey.currentState?.reload();
+    // rootKey.currentState?.reload();
   }
 }

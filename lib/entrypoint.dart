@@ -37,15 +37,6 @@ Future<void> entrypoint() async {
     }
     await LocalNotificationService.setupTimeZone();
 
-    ErrorWidget.builder = (FlutterErrorDetails details) {
-      return UniversalErrorPage(
-        error: details.exception.toString(),
-        child: null,
-        reload: () {
-          rootKey.currentState?.reload();
-        },
-      );
-    };
     // MEMO: FirebaseCrashlytics#recordFlutterError called dumpErrorToConsole in function.
     FlutterError.onError = FirebaseCrashlytics.instance.recordFlutterError;
     runApp(const ProviderScope(child: App()));

@@ -31,8 +31,6 @@ import 'package:url_launcher/url_launcher.dart';
 // TODO: Replace to HookConsumerWidget
 // TODO: Instantiate and cache SharedPreferences with Provider on RootPage(this file)
 
-GlobalKey<Root> rootKey = GlobalKey();
-
 class Root extends HookConsumerWidget {
   const Root({Key? key}) : super(key: key);
 
@@ -42,6 +40,15 @@ class Root extends HookConsumerWidget {
     final firebaseUserID = useState<String?>(null);
     final error = useState<LaunchException?>(null);
     final firebaseUserAsyncValue = ref.watch(authStateStreamProvider);
+
+    // Set global error page
+    ErrorWidget.builder = (FlutterErrorDetails details) {
+      return UniversalErrorPage(
+        error: details.exception.toString(),
+        child: null,
+        reload: () => ref.read(refreshAppProvider),
+      );
+    };
 
     // For force update
     if (shouldForceUpdate.value) {

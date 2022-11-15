@@ -35,7 +35,7 @@ final initialSettingStoreProvider = StateNotifierProvider.autoDispose<InitialSet
     ref.watch(batchSetPillSheetsProvider),
     ref.watch(batchSetPillSheetModifiedHistoryProvider),
     ref.watch(batchSetPillSheetGroupProvider),
-    ref.watch(authStateStreamProvider),
+    ref.watch(authStateStreamProvider.stream),
     now(),
   ),
 );
@@ -49,7 +49,7 @@ class InitialSettingStateStore extends StateNotifier<InitialSettingState> {
   final BatchSetPillSheets batchSetPillSheets;
   final BatchSetPillSheetModifiedHistory batchSetPillSheetModifiedHistory;
   final BatchSetPillSheetGroup batchSetPillSheetGroup;
-  final Stream<User> authStateStream;
+  final Stream<User?> authStateStream;
 
   InitialSettingStateStore(
     this.userDatastore,
