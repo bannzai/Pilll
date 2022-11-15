@@ -23,6 +23,7 @@ import 'package:pilll/database/user.dart';
 import 'package:pilll/util/platform/platform.dart';
 import 'package:pilll/util/shared_preference/keys.dart';
 import 'package:flutter/material.dart';
+import 'package:purchases_flutter/purchases_flutter.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 import 'package:pilll/util/version/version.dart';
 import 'package:url_launcher/url_launcher.dart';
@@ -30,25 +31,20 @@ import 'package:url_launcher/url_launcher.dart';
 // TODO: Replace to HookConsumerWidget
 // TODO: Instantiate and cache SharedPreferences with Provider on RootPage(this file)
 
-enum ScreenType { loading, home, initialSetting, forceUpdate }
+GlobalKey<Root> rootKey = GlobalKey();
 
 class Root extends HookConsumerWidget {
   const Root({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {
-    final screenType = useState<ScreenType>(ScreenType.loading);
-    void setScreenType(ScreenType _screenType) {
-      if (screenType.value != ScreenType.forceUpdate) {
-        screenType.value = _screenType;
-      }
-    }
-
+    final shouldForceUpdate = useState(false);
+    final firebaseUserID = useState<String?>(null);
     final error = useState<LaunchException?>(null);
     final firebaseUserAsyncValue = ref.watch(authStateStreamProvider);
 
     // For force update
-    if (screenType.value == ScreenType.forceUpdate) {
+    if (shouldForceUpdate.value) {
       Future.microtask(() async {
         await showOKDialog(context, title: "アプリをアップデートしてください", message: "お使いのアプリのバージョンのアップデートをお願いしております。$storeNameから最新バージョンにアップデートしてください",
             ok: () async {
@@ -63,10 +59,8 @@ class Root extends HookConsumerWidget {
     useEffect(() {
       f() async {
         try {
-          final shouldForceUpdate = await _checkForceUpdate();
-
-          if (shouldForceUpdate) {
-            setScreenType(ScreenType.forceUpdate);
+          if (await _checkForceUpdate()) {
+            shouldForceUpdate.value = true;
           }
         } catch (e, st) {
           errorLogger.recordError(e, st);
@@ -84,37 +78,19 @@ class Root extends HookConsumerWidget {
         final firebaseUser = firebaseUserAsyncValue.asData?.value;
         if (firebaseUser == null) {
           try {
+            firebaseUserID.value = null;
             // SignIn first. Keep in mind that this method is called first.
-            final firebaseUser = await ref.read(signInProvider.future);
+            final firebaseUser = await ref.read(firebaseSignInProvider.future);
+            firebaseUserID.value = firebaseUser.uid;
 
             unawaited(FirebaseCrashlytics.instance.setUserIdentifier(firebaseUser.uid));
             unawaited(firebaseAnalytics.setUserId(id: firebaseUser.uid));
+            unawaited(Purchases.logIn(firebaseUser.uid));
             unawaited(initializePurchase(firebaseUser.uid));
           } catch (e, st) {
             errorLogger.recordError(e, st);
             error.value = LaunchException("認証時にエラーが発生しました\n${ErrorMessages.connection}\n詳細:", e);
           }
-        } else {
-          // **** BEGIN: Do not break the sequence. ****
-          await Future(() async {
-            try {
-              // Decide screen type. Keep in mind that this method is called when user is logged in.
-              setScreenType(await _screenType());
-
-              // Retrieve user from app DB.
-              final user = await _mutateUserWithLaunchInfo(firebaseUser);
-
-              // Rescue for old users
-              final screenTypeForLegacyUser = await _screenTypeForOldUser(firebaseUser, user);
-              if (screenTypeForLegacyUser != null) {
-                setScreenType(screenTypeForLegacyUser);
-              }
-            } catch (e, st) {
-              errorLogger.recordError(e, st);
-              error.value = LaunchException("起動時にエラーが発生しました\n${ErrorMessages.connection}\n詳細:", e);
-            }
-          });
-          // **** END: Do not break the sequence. ****
         }
       }
 
@@ -126,15 +102,11 @@ class Root extends HookConsumerWidget {
       error: error.value,
       reload: () => ref.refresh(refreshAppProvider),
       child: () {
-        switch (screenType.value) {
-          case ScreenType.loading:
-            return const ScaffoldIndicator();
-          case ScreenType.initialSetting:
-            return InitialSettingPillSheetGroupPageRoute.screen();
-          case ScreenType.home:
-            return HomePage(key: homeKey);
-          case ScreenType.forceUpdate:
-            return const ScaffoldIndicator();
+        final uid = firebaseUserID.value;
+        if (uid == null) {
+          return const ScaffoldIndicator();
+        } else {
+          return _InitialSettingOrAppPage(firebaseUserID: uid);
         }
       }(),
     );
@@ -159,47 +131,6 @@ class Root extends HookConsumerWidget {
     }
     return forceUpdate;
   }
-
-  Future<ScreenType> _screenType() async {
-    final sharedPreferences = await SharedPreferences.getInstance();
-
-    bool? didEndInitialSetting = sharedPreferences.getBool(BoolKey.didEndInitialSetting);
-    if (didEndInitialSetting == null) {
-      analytics.logEvent(name: "did_end_i_s_is_null");
-      return ScreenType.initialSetting;
-    }
-    if (!didEndInitialSetting) {
-      analytics.logEvent(name: "did_end_i_s_is_false");
-      return ScreenType.initialSetting;
-    }
-
-    analytics.logEvent(name: "screen_type_is_home");
-    return ScreenType.home;
-  }
-
-  Future<User> _mutateUserWithLaunchInfo(firebase_auth.User firebaseUser) async {
-    final userDatastore = UserDatastore(DatabaseConnection(firebaseUser.uid));
-    final user = await userDatastore.fetchOrCreate(firebaseUser.uid);
-
-    userDatastore.saveUserLaunchInfo(user);
-    userDatastore.temporarySyncronizeDiscountEntitlement(user);
-
-    return user;
-  }
-
-  Future<ScreenType?> _screenTypeForOldUser(firebase_auth.User firebaseUser, User user) async {
-    if (!user.migratedFlutter) {
-      final userDatastore = UserDatastore(DatabaseConnection(firebaseUser.uid));
-      await userDatastore.deleteSettings();
-      await userDatastore.setFlutterMigrationFlag();
-      analytics.logEvent(name: "user_is_not_migrated_flutter", parameters: {"uid": firebaseUser.uid});
-      return ScreenType.initialSetting;
-    } else if (user.setting == null) {
-      analytics.logEvent(name: "uset_setting_is_null", parameters: {"uid": firebaseUser.uid});
-      return ScreenType.initialSetting;
-    }
-    return null;
-  }
 }
 
 class LaunchException {
@@ -213,4 +144,105 @@ class LaunchException {
 
   @override
   String toString() => message + underlyingException.toString();
+}
+
+enum _InitialSettingOrAppPageScreenType { loading, initialSetting, app }
+
+class _InitialSettingOrAppPage extends HookConsumerWidget {
+  final String firebaseUserID;
+  const _InitialSettingOrAppPage({Key? key, required this.firebaseUserID}) : super(key: key);
+
+  @override
+  Widget build(BuildContext context, WidgetRef ref) {
+    final screenType = useState(_InitialSettingOrAppPageScreenType.loading);
+    final appUser = useState<User?>(null);
+    final fetchOrCreateUser = ref.watch(fetchOrCreateUserProvider);
+    final saveUserLaunchInfo = ref.watch(saveUserLaunchInfoProvider);
+    final markAsMigratedToFlutter = ref.watch(markAsMigratedToFlutterProvider);
+    final error = useState<LaunchException?>(null);
+
+    useEffect(() {
+      f() async {
+        // **** BEGIN: Do not break the sequence. ****
+        try {
+          // Decide screen type. Keep in mind that this method is called when user is logged in.
+          screenType.value = await _screenType();
+
+          if (appUser.value == null) {
+            // Retrieve user from app DB.
+            final user = await fetchOrCreateUser(firebaseUserID);
+            saveUserLaunchInfo(user);
+            appUser.value = user;
+
+            // Rescue for old users
+            final screenTypeForLegacyUser = await _screenTypeForOldUser(firebaseUserID, user);
+            if (screenTypeForLegacyUser != null) {
+              screenType.value = screenTypeForLegacyUser;
+            }
+            if (!user.migratedFlutter) {
+              markAsMigratedToFlutter();
+              analytics.logEvent(name: "user_is_not_migrated_flutter", parameters: {"uid": firebaseUserID});
+              screenType.value = _InitialSettingOrAppPageScreenType.initialSetting;
+            } else if (user.setting == null) {
+              analytics.logEvent(name: "uset_setting_is_null", parameters: {"uid": firebaseUserID});
+              screenType.value = _InitialSettingOrAppPageScreenType.initialSetting;
+            }
+          }
+        } catch (e, st) {
+          errorLogger.recordError(e, st);
+          error.value = LaunchException("起動時にエラーが発生しました\n${ErrorMessages.connection}\n詳細:", e);
+        }
+        // **** END: Do not break the sequence. ****
+      }
+
+      f();
+      return null;
+    }, [error.value]);
+
+    return UniversalErrorPage(
+      error: error.value,
+      reload: () => ref.refresh(refreshAppProvider),
+      child: () {
+        switch (screenType.value) {
+          case _InitialSettingOrAppPageScreenType.loading:
+            return const ScaffoldIndicator();
+          case _InitialSettingOrAppPageScreenType.initialSetting:
+            return InitialSettingPillSheetGroupPageRoute.screen();
+          case _InitialSettingOrAppPageScreenType.app:
+            return HomePage(key: key);
+        }
+      }(),
+    );
+  }
+
+  Future<_InitialSettingOrAppPageScreenType?> _screenTypeForOldUser(String userID, User user) async {
+    if (!user.migratedFlutter) {
+      final userDatastore = UserDatastore(DatabaseConnection(userID));
+      await userDatastore.deleteSettings();
+      await userDatastore._setFlutterMigrationFlag();
+      analytics.logEvent(name: "user_is_not_migrated_flutter", parameters: {"uid": userID});
+      return _InitialSettingOrAppPageScreenType.initialSetting;
+    } else if (user.setting == null) {
+      analytics.logEvent(name: "uset_setting_is_null", parameters: {"uid": userID});
+      return _InitialSettingOrAppPageScreenType.initialSetting;
+    }
+    return null;
+  }
+
+  Future<_InitialSettingOrAppPageScreenType> _screenType() async {
+    final sharedPreferences = await SharedPreferences.getInstance();
+
+    bool? didEndInitialSetting = sharedPreferences.getBool(BoolKey.didEndInitialSetting);
+    if (didEndInitialSetting == null) {
+      analytics.logEvent(name: "did_end_i_s_is_null");
+      return _InitialSettingOrAppPageScreenType.initialSetting;
+    }
+    if (!didEndInitialSetting) {
+      analytics.logEvent(name: "did_end_i_s_is_false");
+      return _InitialSettingOrAppPageScreenType.initialSetting;
+    }
+
+    analytics.logEvent(name: "screen_type_is_home");
+    return _InitialSettingOrAppPageScreenType.app;
+  }
 }

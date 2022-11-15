@@ -1,5 +1,6 @@
 import 'dart:async';
 
+import 'package:firebase_auth/firebase_auth.dart';
 import 'package:firebase_crashlytics/firebase_crashlytics.dart';
 import 'package:flutter/foundation.dart';
 import 'package:pilll/analytics.dart';
@@ -30,11 +31,11 @@ final initialSettingStoreProvider = StateNotifierProvider.autoDispose<InitialSet
   (ref) => InitialSettingStateStore(
     ref.watch(userDatastoreProvider),
     ref.watch(batchFactoryProvider),
-    ref.watch(settingDatastoreProvider),
-    ref.watch(pillSheetDatastoreProvider),
-    ref.watch(pillSheetModifiedHistoryDatastoreProvider),
-    ref.watch(pillSheetGroupDatastoreProvider),
-    ref.watch(authServiceProvider),
+    ref.watch(batchSetSettingProvider),
+    ref.watch(batchSetPillSheetsProvider),
+    ref.watch(batchSetPillSheetModifiedHistoryProvider),
+    ref.watch(batchSetPillSheetGroupProvider),
+    ref.watch(authStateStreamProvider),
     now(),
   ),
 );
@@ -48,7 +49,7 @@ class InitialSettingStateStore extends StateNotifier<InitialSettingState> {
   final BatchSetPillSheets batchSetPillSheets;
   final BatchSetPillSheetModifiedHistory batchSetPillSheetModifiedHistory;
   final BatchSetPillSheetGroup batchSetPillSheetGroup;
-  final AuthService authService;
+  final Stream<User> authStateStream;
 
   InitialSettingStateStore(
     this.userDatastore,
@@ -57,7 +58,7 @@ class InitialSettingStateStore extends StateNotifier<InitialSettingState> {
     this.batchSetPillSheets,
     this.batchSetPillSheetModifiedHistory,
     this.batchSetPillSheetGroup,
-    this.authService,
+    this.authStateStream,
     DateTime _now,
   ) : super(
           InitialSettingState(reminderTimes: [
@@ -68,7 +69,7 @@ class InitialSettingStateStore extends StateNotifier<InitialSettingState> {
 
   StreamSubscription? _authServiceCanceller;
   void fetch() {
-    _authServiceCanceller = _authService.stream().listen((user) async {
+    _authServiceCanceller = authStateStream.listen((user) async {
       debugPrint("watch sign state user: $user");
 
       final userIsNotAnonymous = !user.isAnonymous;
@@ -76,10 +77,6 @@ class InitialSettingStateStore extends StateNotifier<InitialSettingState> {
         final userDatastore = UserDatastore(DatabaseConnection(user.uid));
         final dbUser = await userDatastore.fetchOrCreate(user.uid);
         userDatastore.saveUserLaunchInfo(dbUser);
-
-        unawaited(FirebaseCrashlytics.instance.setUserIdentifier(user.uid));
-        unawaited(firebaseAnalytics.setUserId(id: user.uid));
-        await Purchases.logIn(user.uid);
 
         state = state.copyWith(userIsNotAnonymous: userIsNotAnonymous);
         state = state.copyWith(settingIsExist: dbUser.setting != null);
