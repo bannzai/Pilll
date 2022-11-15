@@ -132,7 +132,9 @@ class PremiumIntroductionSheetBody extends HookConsumerWidget {
                         },
                         text: "プレミアム機能を見る"),
                     const SizedBox(height: 24),
-                    const PremiumIntroductionFotter(),
+                    PremiumIntroductionFotter(
+                      isLoading: isLoading,
+                    ),
                   ],
                 ),
               ),

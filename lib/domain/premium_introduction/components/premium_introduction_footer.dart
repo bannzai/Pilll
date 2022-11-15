@@ -17,7 +17,8 @@ import 'package:purchases_flutter/purchases_flutter.dart';
 import 'package:url_launcher/url_launcher.dart';
 
 class PremiumIntroductionFotter extends StatelessWidget {
-  const PremiumIntroductionFotter({Key? key}) : super(key: key);
+  final ValueNotifier<bool> isLoading;
+  const PremiumIntroductionFotter({Key? key, required this.isLoading}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -85,7 +86,7 @@ class PremiumIntroductionFotter extends StatelessWidget {
           GestureDetector(
             onTap: () async {
               try {
-                HUD.of(context).show();
+                isLoading.value = true;
                 final shouldShowSnackbar = await _restore();
                 if (shouldShowSnackbar) {
                   ScaffoldMessenger.of(context).showSnackBar(
@@ -98,13 +99,9 @@ class PremiumIntroductionFotter extends StatelessWidget {
                   );
                 }
               } catch (error) {
-                if (error is AlertError) {
-                  showErrorAlert(context, error);
-                } else {
-                  UniversalErrorPage.of(context).showError(error);
-                }
+                showErrorAlert(context, error);
               } finally {
-                HUD.of(context).hide();
+                isLoading.value = false;
               }
             },
             child: Text(
