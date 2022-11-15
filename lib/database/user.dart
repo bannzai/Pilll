@@ -19,7 +19,7 @@ import 'package:shared_preferences/shared_preferences.dart';
 
 final userDatastoreProvider = Provider((ref) => UserDatastore(ref.watch(databaseProvider)));
 
-final userProvider = StreamProvider((ref) => ref.watch(userDatastoreProvider).stream());
+final userProvider = StreamProvider((ref) => ref.watch(databaseProvider).userReference().snapshots().map((event) => event.data()!));
 
 class UserDatastore {
   final DatabaseConnection _database;
