@@ -1,6 +1,8 @@
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:google_sign_in/google_sign_in.dart';
+import 'package:hooks_riverpod/hooks_riverpod.dart';
 import 'package:pilll/auth/link_value_container.dart';
+import 'package:pilll/service/auth.dart';
 
 const googleProviderID = 'google.com';
 
@@ -56,18 +58,24 @@ Future<UserCredential?> signInWithGoogle() async {
   return await FirebaseAuth.instance.signInWithCredential(credential);
 }
 
-bool isLinkedGoogle() {
-  final user = FirebaseAuth.instance.currentUser;
-  if (user == null) {
+final isGoogleLinkedProvider = Provider((ref) {
+  final user = ref.watch(authStateStreamProvider);
+  final userValue = user.valueOrNull;
+  if (userValue == null) {
     return false;
   }
-  return isLinkedGoogleFor(user);
-}
+  return isLinkedGoogleFor(userValue);
+});
+// bool isLinkedGoogle() {
+//   final user = FirebaseAuth.instance.currentUser;
+//   if (user == null) {
+//     return false;
+//   }
+//   return isLinkedGoogleFor(user);
+// }
 
 bool isLinkedGoogleFor(User user) {
-  return user.providerData
-      .where((element) => element.providerId == googleProviderID)
-      .isNotEmpty;
+  return user.providerData.where((element) => element.providerId == googleProviderID).isNotEmpty;
 }
 
 Future<bool> googleReauthentification() async {
@@ -89,7 +97,6 @@ Future<bool> googleReauthentification() async {
     idToken: googleAuth.idToken,
   );
 
-  await FirebaseAuth.instance.currentUser
-      ?.reauthenticateWithCredential(credential);
+  await FirebaseAuth.instance.currentUser?.reauthenticateWithCredential(credential);
   return true;
 }
