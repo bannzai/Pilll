@@ -1,5 +1,5 @@
 import 'package:freezed_annotation/freezed_annotation.dart';
-import 'package:pilll/database/user.dart';
+import 'package:pilll/provider/user.dart';
 import 'package:riverpod/riverpod.dart';
 
 part 'premium_and_trial.codegen.freezed.dart';

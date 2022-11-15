@@ -1,7 +1,7 @@
 import 'package:flutter_hooks/flutter_hooks.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
 import 'package:pilll/analytics.dart';
-import 'package:pilll/database/user.dart';
+import 'package:pilll/provider/user.dart';
 import 'package:pilll/domain/calendar/calendar_page.dart';
 import 'package:pilll/domain/menstruation/menstruation_page.dart';
 import 'package:pilll/domain/record/record_page.dart';

@@ -3,7 +3,7 @@ import 'dart:io';
 
 import 'package:flutter/foundation.dart';
 import 'package:pilll/analytics.dart';
-import 'package:pilll/database/user.dart';
+import 'package:pilll/provider/user.dart';
 import 'package:firebase_messaging/firebase_messaging.dart';
 
 Future<void> requestNotificationPermissions(RegisterRemotePushNotificationToken registerRemotePushNotificationToken) async {

@@ -17,7 +17,7 @@ import 'package:pilll/error/template.dart';
 import 'package:pilll/error/universal_error_page.dart';
 import 'package:pilll/error_log.dart';
 import 'package:pilll/service/purchase.dart';
-import 'package:pilll/database/user.dart';
+import 'package:pilll/provider/user.dart';
 import 'package:pilll/util/platform/platform.dart';
 import 'package:pilll/util/shared_preference/keys.dart';
 import 'package:flutter/material.dart';

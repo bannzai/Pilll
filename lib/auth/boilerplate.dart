@@ -3,7 +3,7 @@ import 'package:flutter/foundation.dart';
 import 'package:pilll/auth/exception.dart';
 import 'package:pilll/entity/link_account_type.dart';
 import 'package:pilll/error_log.dart';
-import 'package:pilll/database/user.dart';
+import 'package:pilll/provider/user.dart';
 import 'package:pilll/auth/apple.dart';
 import 'package:pilll/auth/google.dart';
 

@@ -6,7 +6,7 @@ import 'package:pilll/components/atoms/buttons.dart';
 import 'package:pilll/components/atoms/color.dart';
 import 'package:pilll/components/atoms/font.dart';
 import 'package:pilll/components/atoms/text_color.dart';
-import 'package:pilll/database/user.dart';
+import 'package:pilll/provider/user.dart';
 import 'package:pilll/domain/premium_function_survey/premium_function_survey_element.dart';
 import 'package:pilll/domain/premium_function_survey/premium_function_survey_element_type.dart';
 import 'package:pilll/error/error_alert.dart';
