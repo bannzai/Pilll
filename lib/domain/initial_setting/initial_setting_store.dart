@@ -29,7 +29,7 @@ import 'package:riverpod/riverpod.dart';
 
 final initialSettingStoreProvider = StateNotifierProvider.autoDispose<InitialSettingStateStore, InitialSettingState>(
   (ref) => InitialSettingStateStore(
-    ref.watch(userDatastoreProvider),
+    ref.watch(endInitialSettingProvider),
     ref.watch(batchFactoryProvider),
     ref.watch(batchSetSettingProvider),
     ref.watch(batchSetPillSheetsProvider),
@@ -43,7 +43,7 @@ final initialSettingStoreProvider = StateNotifierProvider.autoDispose<InitialSet
 final initialSettingStateProvider = StateProvider.autoDispose((ref) => ref.watch(initialSettingStoreProvider));
 
 class InitialSettingStateStore extends StateNotifier<InitialSettingState> {
-  final UserDatastore userDatastore;
+  final EndInitialSetting endInitialSetting;
   final BatchFactory batchFactory;
   final BatchSetSetting batchSetSetting;
   final BatchSetPillSheets batchSetPillSheets;
@@ -52,7 +52,7 @@ class InitialSettingStateStore extends StateNotifier<InitialSettingState> {
   final Stream<User?> authStateStream;
 
   InitialSettingStateStore(
-    this.userDatastore,
+    this.endInitialSetting,
     this.batchFactory,
     this.batchSetSetting,
     this.batchSetPillSheets,
@@ -126,11 +126,11 @@ class InitialSettingStateStore extends StateNotifier<InitialSettingState> {
       throw AssertionError("Must not be null for pillSheet when register initial settings");
     }
 
-    final batch = _batchFactory.batch();
+    final batch = batchFactory.batch();
 
     final todayPillNumber = state.todayPillNumber;
     if (todayPillNumber != null) {
-      final createdPillSheets = _pillSheetDatastore.register(
+      final createdPillSheets = batchSetPillSheets(
         batch,
         state.pillSheetTypes.asMap().keys.map((pageIndex) {
           return InitialSettingState.buildPillSheet(
@@ -142,7 +142,7 @@ class InitialSettingStateStore extends StateNotifier<InitialSettingState> {
       );
 
       final pillSheetIDs = createdPillSheets.map((e) => e.id!).toList();
-      final createdPillSheetGroup = _pillSheetGroupDatastore.register(
+      final createdPillSheetGroup = batchSetPillSheetGroup(
         batch,
         PillSheetGroup(
           pillSheetIDs: pillSheetIDs,
@@ -155,15 +155,14 @@ class InitialSettingStateStore extends StateNotifier<InitialSettingState> {
         pillSheetIDs: pillSheetIDs,
         pillSheetGroupID: createdPillSheetGroup.id,
       );
-      _pillSheetModifiedHistoryDatastore.add(batch, history);
+      batchSetPillSheetModifiedHistory(batch, history);
     }
 
     final setting = await state.buildSetting();
-    _settingDatastore.updateWithBatch(batch, setting);
+    batchSetSetting(batch, setting);
 
     await batch.commit();
-
-    await _userDatastore.endInitialSetting(setting);
+    await endInitialSetting(setting);
   }
 
   void showHUD() {

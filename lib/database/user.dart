@@ -85,21 +85,6 @@ class UserDatastore {
     }, SetOptions(merge: true));
   }
 
-  Future<void> endInitialSetting(Setting setting) {
-    final settingForTrial = setting.copyWith(
-      pillSheetAppearanceMode: PillSheetAppearanceMode.date,
-      isAutomaticallyCreatePillSheet: true,
-    );
-
-    return _database.userRawReference().set({
-      UserFirestoreFieldKeys.isTrial: true,
-      UserFirestoreFieldKeys.beginTrialDate: now(),
-      UserFirestoreFieldKeys.trialDeadlineDate: now().add(const Duration(days: 30)),
-      UserFirestoreFieldKeys.settings: settingForTrial.toJson(),
-      UserFirestoreFieldKeys.hasDiscountEntitlement: true,
-    }, SetOptions(merge: true));
-  }
-
   Future<void> sendPremiumFunctionSurvey(List<PremiumFunctionSurveyElementType> elements, String message) async {
     final PremiumFunctionSurvey premiumFunctionSurvey = PremiumFunctionSurvey(
       elements: elements,
@@ -250,6 +235,7 @@ final markAsMigratedToFlutterProvider = Provider((ref) => MarkAsMigratedToFlutte
 class MarkAsMigratedToFlutter {
   final DatabaseConnection databaseConnection;
   MarkAsMigratedToFlutter(this.databaseConnection);
+
   Future<void> call() async {
     await _deleteSettings();
     await _setFlutterMigrationFlag();
@@ -264,5 +250,27 @@ class MarkAsMigratedToFlutter {
       {UserFirestoreFieldKeys.migratedFlutter: true},
       SetOptions(merge: true),
     );
+  }
+}
+
+final endInitialSettingProvider = Provider((ref) => EndInitialSetting(ref.watch(databaseProvider)));
+
+class EndInitialSetting {
+  final DatabaseConnection databaseConnection;
+  EndInitialSetting(this.databaseConnection);
+
+  Future<void> call(Setting setting) {
+    final settingForTrial = setting.copyWith(
+      pillSheetAppearanceMode: PillSheetAppearanceMode.date,
+      isAutomaticallyCreatePillSheet: true,
+    );
+
+    return databaseConnection.userRawReference().set({
+      UserFirestoreFieldKeys.isTrial: true,
+      UserFirestoreFieldKeys.beginTrialDate: now(),
+      UserFirestoreFieldKeys.trialDeadlineDate: now().add(const Duration(days: 30)),
+      UserFirestoreFieldKeys.settings: settingForTrial.toJson(),
+      UserFirestoreFieldKeys.hasDiscountEntitlement: true,
+    }, SetOptions(merge: true));
   }
 }
