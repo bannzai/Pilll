@@ -2,7 +2,7 @@ import 'package:async_value_group/async_value_group.dart';
 import 'package:flutter_hooks/flutter_hooks.dart';
 import 'package:pilll/analytics.dart';
 import 'package:pilll/components/molecules/indicator.dart';
-import 'package:pilll/database/diary_setting.dart';
+import 'package:pilll/provider/diary_setting.dart';
 import 'package:pilll/domain/diary_setting_physical_condtion_detail/page.dart';
 import 'package:pilll/domain/premium_introduction/premium_introduction_sheet.dart';
 import 'package:pilll/entity/diary.codegen.dart';
@@ -34,7 +34,7 @@ class DiaryPostPage extends HookConsumerWidget {
   Widget build(BuildContext context, WidgetRef ref) {
     final diary = this.diary ?? Diary.fromDate(date);
 
-    return AsyncValueGroup.group2(ref.watch(premiumAndTrialProvider), ref.watch(diarySettingStreamProvider)).when(
+    return AsyncValueGroup.group2(ref.watch(premiumAndTrialProvider), ref.watch(diarySettingProvider)).when(
       data: (data) => DiaryPostPageBody(
         date: date,
         diary: diary,
