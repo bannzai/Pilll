@@ -1,6 +1,7 @@
 import 'dart:async';
 
 import 'package:hooks_riverpod/hooks_riverpod.dart';
+import 'package:pilll/auth/apple.dart';
 import 'package:pilll/domain/premium_introduction/premium_introduction_state.codegen.dart';
 import 'package:pilll/service/auth.dart';
 import 'package:pilll/service/purchase.dart';
@@ -13,42 +14,35 @@ import 'package:flutter/services.dart';
 import 'package:pilll/analytics.dart';
 import 'package:riverpod/riverpod.dart';
 
-final premiumIntroductionStoreProvider = StateNotifierProvider.autoDispose<
-    PremiumIntroductionStore, PremiumIntroductionState>(
+final premiumIntroductionStoreProvider = StateNotifierProvider.autoDispose<PremiumIntroductionStore, PremiumIntroductionState>(
   (ref) => PremiumIntroductionStore(
-    ref.watch(userDatastoreProvider),
+    ref.watch(userProvider),
+    ref.watch(isAppleLinkedProvider),
     ref.watch(authServiceProvider),
     ref.watch(purchaseServiceProvider),
   ),
 );
-final premiumIntroductionStateProvider =
-    Provider.autoDispose((ref) => ref.watch(premiumIntroductionStoreProvider));
+final premiumIntroductionStateProvider = Provider.autoDispose((ref) => ref.watch(premiumIntroductionStoreProvider));
 
 class PremiumIntroductionStore extends StateNotifier<PremiumIntroductionState> {
   final UserDatastore _userDatastore;
+  final bool isAppleLinked;
   final AuthService _authService;
   final PurchaseService _purchaseService;
-  PremiumIntroductionStore(
-      this._userDatastore, this._authService, this._purchaseService)
-      : super(const PremiumIntroductionState()) {
-    reset();
-  }
 
   reset() {
     Future(() async {
       _subscribe();
 
       state = state.copyWith(
-        hasLoginProvider:
-            _authService.isLinkedApple() || _authService.isLinkedGoogle(),
+        hasLoginProvider: _authService.isLinkedApple() || _authService.isLinkedGoogle(),
       );
       _userDatastore.fetch().then((value) {
         state = state.copyWith(
           isPremium: value.isPremium,
           isTrial: value.isTrial,
           beginTrialDate: value.beginTrialDate,
-          discountEntitlementDeadlineDate:
-              value.discountEntitlementDeadlineDate,
+          discountEntitlementDeadlineDate: value.discountEntitlementDeadlineDate,
           hasDiscountEntitlement: value.hasDiscountEntitlement,
         );
       });
@@ -71,9 +65,7 @@ class PremiumIntroductionStore extends StateNotifier<PremiumIntroductionState> {
     });
     _authStreamCanceller?.cancel();
     _authStreamCanceller = _authService.stream().listen((_) {
-      state = state.copyWith(
-          hasLoginProvider:
-              _authService.isLinkedApple() || _authService.isLinkedGoogle());
+      state = state.copyWith(hasLoginProvider: _authService.isLinkedApple() || _authService.isLinkedGoogle());
     });
   }
 
@@ -100,8 +92,7 @@ class PremiumIntroductionStore extends StateNotifier<PremiumIntroductionState> {
   Future<bool> purchase(Package package) async {
     try {
       final purchaserInfo = await Purchases.purchasePackage(package);
-      final premiumEntitlement =
-          purchaserInfo.entitlements.all[premiumEntitlements];
+      final premiumEntitlement = purchaserInfo.entitlements.all[premiumEntitlements];
       if (premiumEntitlement == null) {
         throw AssertionError("unexpected premium entitlements is not exists");
       }
@@ -111,11 +102,9 @@ class PremiumIntroductionStore extends StateNotifier<PremiumIntroductionState> {
       await callUpdatePurchaseInfo(purchaserInfo);
       return Future.value(true);
     } on PlatformException catch (exception, stack) {
-      analytics.logEvent(name: "catched_purchase_exception", parameters: {
-        "code": exception.code,
-        "details": exception.details.toString(),
-        "message": exception.message
-      });
+      analytics.logEvent(
+          name: "catched_purchase_exception",
+          parameters: {"code": exception.code, "details": exception.details.toString(), "message": exception.message});
       final newException = mapToDisplayedException(exception);
       if (newException == null) {
         return Future.value(false);
