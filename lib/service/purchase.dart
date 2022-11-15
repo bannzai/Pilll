@@ -15,6 +15,19 @@ import 'package:pilll/analytics.dart';
 import 'package:pilll/database/database.dart';
 import 'package:pilll/database/user.dart';
 
+enum OfferingType { limited, premium }
+
+extension OfferingTypeFunction on OfferingType {
+  String get name {
+    switch (this) {
+      case OfferingType.limited:
+        return "Limited";
+      case OfferingType.premium:
+        return "Premium";
+    }
+  }
+}
+
 final purchaseServiceProvider = Provider((ref) => PurchaseService());
 final purchaseOfferingsProvider = FutureProvider((ref) => ref.watch(purchaseServiceProvider).fetchOfferings());
 final currentOfferingTypeProvider = Provider.family.autoDispose((ref, PremiumAndTrial premiumAndTrial) {

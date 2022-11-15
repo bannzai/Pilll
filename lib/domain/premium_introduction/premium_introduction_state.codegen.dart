@@ -48,16 +48,14 @@ class PremiumIntroductionState with _$PremiumIntroductionState {
     if (_currentOfferingPackages.isEmpty) {
       return null;
     }
-    return _currentOfferingPackages
-        .firstWhere((element) => element.packageType == PackageType.annual);
+    return _currentOfferingPackages.firstWhere((element) => element.packageType == PackageType.annual);
   }
 
   Package? get monthlyPackage {
     if (_currentOfferingPackages.isEmpty) {
       return null;
     }
-    return _currentOfferingPackages
-        .firstWhere((element) => element.packageType == PackageType.monthly);
+    return _currentOfferingPackages.firstWhere((element) => element.packageType == PackageType.monthly);
   }
 
   Package? get monthlyPremiumPackage {
@@ -66,20 +64,6 @@ class PremiumIntroductionState with _$PremiumIntroductionState {
     if (offering == null) {
       return null;
     }
-    return offering.availablePackages
-        .firstWhere((element) => element.packageType == PackageType.monthly);
-  }
-}
-
-enum OfferingType { limited, premium }
-
-extension OfferingTypeFunction on OfferingType {
-  String get name {
-    switch (this) {
-      case OfferingType.limited:
-        return "Limited";
-      case OfferingType.premium:
-        return "Premium";
-    }
+    return offering.availablePackages.firstWhere((element) => element.packageType == PackageType.monthly);
   }
 }
