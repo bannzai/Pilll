@@ -126,11 +126,11 @@ Future<void> callUpdatePurchaseInfo(CustomerInfo info) async {
     return;
   }
 
-  final userDatastore = UserDatastore(DatabaseConnection(uid));
+  final updatePurchaseInfo = UpdatePurchaseInfo(DatabaseConnection(uid));
   final premiumEntitlement = info.entitlements.all[premiumEntitlements];
   try {
     analytics.logEvent(name: "call_update_purchase_info");
-    await userDatastore.updatePurchaseInfo(
+    await updatePurchaseInfo(
       isActivated: premiumEntitlement?.isActive,
       entitlementIdentifier: premiumEntitlement?.identifier,
       premiumPlanIdentifier: premiumEntitlement?.productIdentifier,
@@ -157,9 +157,9 @@ Future<void> syncPurchaseInfo() async {
   final isActivated = premiumEntitlement == null ? false : premiumEntitlement.isActive;
 
   try {
-    final userDatastore = UserDatastore(DatabaseConnection(uid));
+    final syncPurchaseInfo = SyncPurchaseInfo(DatabaseConnection(uid));
     analytics.logEvent(name: "call_service_sync_purchase_info");
-    await userDatastore.syncPurchaseInfo(isActivated: isActivated);
+    await syncPurchaseInfo(isActivated: isActivated);
     analytics.logEvent(name: "end_sync_purchase_info");
   } catch (exception, stack) {
     errorLogger.recordError(exception, stack);

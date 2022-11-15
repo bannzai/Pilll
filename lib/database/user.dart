@@ -17,17 +17,13 @@ import 'package:package_info/package_info.dart';
 import 'package:riverpod/riverpod.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
-final userDatastoreProvider = Provider((ref) => UserDatastore(ref.watch(databaseProvider)));
-
 final userProvider = StreamProvider((ref) => ref.watch(databaseProvider).userReference().snapshots().map((event) => event.data()!));
 
-class UserDatastore {
-  final DatabaseConnection _database;
-  UserDatastore(this._database);
+class UpdatePurchaseInfo {
+  final DatabaseConnection databaseConnection;
+  UpdatePurchaseInfo(this.databaseConnection);
 
-  Stream<User> stream() => _database.userReference().snapshots().map((event) => event.data()!);
-
-  Future<void> updatePurchaseInfo({
+  Future<void> call({
     required bool? isActivated,
     required String? entitlementIdentifier,
     required String? premiumPlanIdentifier,
@@ -35,7 +31,7 @@ class UserDatastore {
     required List<String> activeSubscriptions,
     required String? originalPurchaseDate,
   }) async {
-    await _database.userRawReference().set(
+    await databaseConnection.userRawReference().set(
         {if (isActivated != null) UserFirestoreFieldKeys.isPremium: isActivated, UserFirestoreFieldKeys.purchaseAppID: purchaseAppID},
         SetOptions(merge: true));
     final privates = {
@@ -45,14 +41,19 @@ class UserDatastore {
       if (entitlementIdentifier != null) UserPrivateFirestoreFieldKeys.entitlementIdentifier: entitlementIdentifier,
     };
     if (privates.isNotEmpty) {
-      await _database.userPrivateRawReference().set({...privates}, SetOptions(merge: true));
+      await databaseConnection.userPrivateRawReference().set({...privates}, SetOptions(merge: true));
     }
   }
+}
 
-  Future<void> syncPurchaseInfo({
+class SyncPurchaseInfo {
+  final DatabaseConnection databaseConnection;
+  SyncPurchaseInfo(this.databaseConnection);
+
+  Future<void> call({
     required bool isActivated,
   }) async {
-    await _database.userRawReference().set({
+    await databaseConnection.userRawReference().set({
       UserFirestoreFieldKeys.isPremium: isActivated,
     }, SetOptions(merge: true));
   }
