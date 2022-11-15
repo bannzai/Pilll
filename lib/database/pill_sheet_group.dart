@@ -5,22 +5,10 @@ import 'package:riverpod/riverpod.dart';
 
 final pillSheetGroupDatastoreProvider = Provider<PillSheetGroupDatastore>((ref) => PillSheetGroupDatastore(ref.watch(databaseProvider)));
 
-final latestPillSheetGroupStreamProvider = StreamProvider((ref) => ref.watch(pillSheetGroupDatastoreProvider).latestPillSheetGroupStream());
-
 class PillSheetGroupDatastore {
   final DatabaseConnection _database;
 
   PillSheetGroupDatastore(this._database);
-
-  Query<PillSheetGroup> _latestQuery() {
-    return _database.pillSheetGroupsReference().orderBy(PillSheetGroupFirestoreKeys.createdAt).limitToLast(1);
-  }
-
-  PillSheetGroup? _filter(QuerySnapshot<PillSheetGroup> snapshot) {
-    if (snapshot.docs.isEmpty) return null;
-    if (!snapshot.docs.last.exists) return null;
-    return snapshot.docs.last.data();
-  }
 
   Future<PillSheetGroup?> fetchLatest() async {
     final snapshot = await _latestQuery().get();
@@ -35,8 +23,6 @@ class PillSheetGroupDatastore {
 
     return snapshot.docs[0].data();
   }
-
-  Stream<PillSheetGroup?> latestPillSheetGroupStream() => _latestQuery().snapshots().map(((event) => _filter(event)));
 
   // Return new PillSheet document id
   PillSheetGroup register(WriteBatch batch, PillSheetGroup pillSheetGroup) {

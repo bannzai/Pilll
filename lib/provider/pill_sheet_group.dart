@@ -3,6 +3,20 @@ import 'package:pilll/database/database.dart';
 import 'package:pilll/entity/pill_sheet_group.codegen.dart';
 import 'package:riverpod/riverpod.dart';
 
+PillSheetGroup? _filter(QuerySnapshot<PillSheetGroup> snapshot) {
+  if (snapshot.docs.isEmpty) return null;
+  if (!snapshot.docs.last.exists) return null;
+  return snapshot.docs.last.data();
+}
+
+final latestPillSheetGroupStreamProvider = StreamProvider((ref) => ref
+    .watch(databaseProvider)
+    .pillSheetGroupsReference()
+    .orderBy(PillSheetGroupFirestoreKeys.createdAt)
+    .limitToLast(1)
+    .snapshots()
+    .map(((event) => _filter(event))));
+
 final beforePillSheetGroupProvider = FutureProvider<PillSheetGroup?>((ref) async {
   final database = ref.watch(databaseProvider);
   final snapshot = await database.pillSheetGroupsReference().orderBy(PillSheetGroupFirestoreKeys.createdAt).limitToLast(2).get();

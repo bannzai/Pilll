@@ -36,12 +36,12 @@ Future<String> debugInfo(String separator) async {
 
   PillSheetGroup? pillSheetGroup;
   try {
-    pillSheetGroup = await PillSheetGroupDatastore(databaseConnection).fetchLatest();
+    pillSheetGroup = databaseConnection.pillSheetGroupReference(pillSheetGroupID)
   } catch (_) {}
 
   Setting? setting;
   try {
-    setting = await SettingDatastore(databaseConnection).fetch();
+    setting = await databaseConnection.userReference().get().then((event) => event.data()?.setting);
   } catch (_) {}
 
   PackageInfo? package;
