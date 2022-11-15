@@ -19,7 +19,6 @@ import 'package:pilll/entity/pill_sheet_type.dart';
 import 'package:pilll/service/auth.dart';
 import 'package:pilll/entity/link_account_type.dart';
 import 'package:pilll/domain/sign_in/sign_in_sheet.dart';
-import 'package:pilll/domain/sign_in/sign_in_sheet_state.codegen.dart';
 
 class InitialSettingPillSheetGroupPage extends HookConsumerWidget {
   const InitialSettingPillSheetGroupPage({Key? key}) : super(key: key);
