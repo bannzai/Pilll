@@ -20,8 +20,8 @@ class InitialSettingReminderTimesPage extends HookConsumerWidget {
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {
-    final store = ref.watch(initialSettingStoreProvider.notifier);
-    final state = ref.watch(initialSettingStoreProvider);
+    final store = ref.watch(initialSettingStateNotifierProvider.notifier);
+    final state = ref.watch(initialSettingStateNotifierProvider);
     return Scaffold(
       backgroundColor: PilllColors.background,
       appBar: AppBar(
@@ -118,7 +118,7 @@ class InitialSettingReminderTimesPage extends HookConsumerWidget {
     BuildContext context,
     int index,
     InitialSettingState state,
-    InitialSettingStateStore store,
+    InitialSettingStateNotifier store,
   ) {
     analytics.logEvent(name: "show_initial_setting_reminder_picker");
     final reminderDateTime = state.reminderTimeOrNull(index);
@@ -141,7 +141,7 @@ class InitialSettingReminderTimesPage extends HookConsumerWidget {
 
   Widget _form(
     BuildContext context,
-    InitialSettingStateStore store,
+    InitialSettingStateNotifier store,
     InitialSettingState state,
     int index,
   ) {

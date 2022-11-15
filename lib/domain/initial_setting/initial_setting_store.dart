@@ -16,8 +16,8 @@ import 'package:pilll/database/user.dart';
 import 'package:pilll/util/datetime/day.dart';
 import 'package:riverpod/riverpod.dart';
 
-final initialSettingStoreProvider = StateNotifierProvider.autoDispose<InitialSettingStateStore, InitialSettingState>(
-  (ref) => InitialSettingStateStore(
+final initialSettingStateNotifierProvider = StateNotifierProvider.autoDispose<InitialSettingStateNotifier, InitialSettingState>(
+  (ref) => InitialSettingStateNotifier(
     ref.watch(endInitialSettingProvider),
     ref.watch(batchFactoryProvider),
     ref.watch(batchSetSettingProvider),
@@ -29,9 +29,7 @@ final initialSettingStoreProvider = StateNotifierProvider.autoDispose<InitialSet
   ),
 );
 
-final initialSettingStateProvider = StateProvider.autoDispose((ref) => ref.watch(initialSettingStoreProvider));
-
-class InitialSettingStateStore extends StateNotifier<InitialSettingState> {
+class InitialSettingStateNotifier extends StateNotifier<InitialSettingState> {
   final EndInitialSetting endInitialSetting;
   final BatchFactory batchFactory;
   final BatchSetSetting batchSetSetting;
@@ -40,7 +38,7 @@ class InitialSettingStateStore extends StateNotifier<InitialSettingState> {
   final BatchSetPillSheetGroup batchSetPillSheetGroup;
   final Stream<User?> authStateStream;
 
-  InitialSettingStateStore(
+  InitialSettingStateNotifier(
     this.endInitialSetting,
     this.batchFactory,
     this.batchSetSetting,

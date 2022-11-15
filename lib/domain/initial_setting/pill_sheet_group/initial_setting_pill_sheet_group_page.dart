@@ -25,8 +25,8 @@ class InitialSettingPillSheetGroupPage extends HookConsumerWidget {
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {
-    final store = ref.watch(initialSettingStoreProvider.notifier);
-    final state = ref.watch(initialSettingStoreProvider);
+    final store = ref.watch(initialSettingStateNotifierProvider.notifier);
+    final state = ref.watch(initialSettingStateNotifierProvider);
     final authStream = ref.watch(authStateStreamProvider.stream);
     final isAppleLinked = ref.watch(isAppleLinkedProvider);
     final isGoogleLinked = ref.watch(isGoogleLinkedProvider);
@@ -150,7 +150,7 @@ class InitialSettingPillSheetGroupPageBody extends StatelessWidget {
   }) : super(key: key);
 
   final InitialSettingState state;
-  final InitialSettingStateStore store;
+  final InitialSettingStateNotifier store;
 
   @override
   Widget build(BuildContext context) {

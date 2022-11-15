@@ -17,7 +17,7 @@ class IntiialSettingPremiumTrialStartPage extends HookConsumerWidget {
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {
-    final store = ref.watch(initialSettingStoreProvider.notifier);
+    final store = ref.watch(initialSettingStateNotifierProvider.notifier);
 
     return Scaffold(
       backgroundColor: PilllColors.background,

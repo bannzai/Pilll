@@ -10,7 +10,7 @@ class ExplainPillNumber extends HookConsumerWidget {
   const ExplainPillNumber({Key? key, required this.today}) : super(key: key);
   @override
   Widget build(BuildContext context, WidgetRef ref) {
-    final state = ref.watch(initialSettingStoreProvider);
+    final state = ref.watch(initialSettingStateNotifierProvider);
     return Center(
       child: Row(
         mainAxisAlignment: MainAxisAlignment.center,
@@ -24,10 +24,8 @@ class ExplainPillNumber extends HookConsumerWidget {
             ];
           }
           return <Widget>[
-            Text("$todayに飲むピルは",
-                style: FontType.description.merge(TextColorStyle.main)),
-            Text("${todayPillNumber.pillNumberIntoPillSheet}",
-                style: FontType.largeNumber.merge(TextColorStyle.main)),
+            Text("$todayに飲むピルは", style: FontType.description.merge(TextColorStyle.main)),
+            Text("${todayPillNumber.pillNumberIntoPillSheet}", style: FontType.largeNumber.merge(TextColorStyle.main)),
             Text("番", style: FontType.description.merge(TextColorStyle.main)),
           ];
         }(),
