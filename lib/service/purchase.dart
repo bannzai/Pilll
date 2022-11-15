@@ -1,7 +1,13 @@
 import 'package:flutter/cupertino.dart';
+import 'package:flutter/services.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
 import 'package:pilll/app/secret.dart';
+import 'package:pilll/domain/premium_introduction/premium_introduction_state.codegen.dart';
+import 'package:pilll/domain/premium_introduction/util/discount_deadline.dart';
+import 'package:pilll/domain/premium_introduction/util/map_to_error.dart';
+import 'package:pilll/error/alert_error.dart';
 import 'package:pilll/error_log.dart';
+import 'package:pilll/provider/premium_and_trial.codegen.dart';
 import 'package:pilll/util/environment.dart';
 import 'package:purchases_flutter/purchases_flutter.dart';
 import 'package:firebase_auth/firebase_auth.dart';
@@ -10,6 +16,80 @@ import 'package:pilll/database/database.dart';
 import 'package:pilll/database/user.dart';
 
 final purchaseServiceProvider = Provider((ref) => PurchaseService());
+final purchaseOfferingsProvider = FutureProvider((ref) => ref.watch(purchaseServiceProvider).fetchOfferings());
+final currentOfferingTypeProvider = Provider.family.autoDispose((ref, PremiumAndTrial premiumAndTrial) {
+  final isOverDiscountDeadline = ref.watch(isOverDiscountDeadlineProvider(premiumAndTrial.discountEntitlementDeadlineDate));
+  if (!premiumAndTrial.hasDiscountEntitlement) {
+    return OfferingType.premium;
+  }
+  if (isOverDiscountDeadline) {
+    return OfferingType.premium;
+  } else {
+    return OfferingType.limited;
+  }
+});
+final currentOfferingPackagesProvider = Provider.family.autoDispose((ref, PremiumAndTrial premiumAndTrial) {
+  final currentOfferingType = ref.watch(currentOfferingTypeProvider(premiumAndTrial));
+  final offering = ref.watch(purchaseOfferingsProvider).valueOrNull?.all[currentOfferingType.name];
+  if (offering != null) {
+    return offering.availablePackages;
+  }
+  return [];
+});
+final annualPackageProvider = Provider.family.autoDispose((ref, PremiumAndTrial premiumAndTrial) {
+  final currentOfferingPackages = ref.watch(currentOfferingPackagesProvider(premiumAndTrial));
+  return currentOfferingPackages.firstWhere((element) => element.packageType == PackageType.annual);
+});
+final monthlyPackageProvider = Provider.family.autoDispose((ref, PremiumAndTrial premiumAndTrial) {
+  final currentOfferingPackages = ref.watch(currentOfferingPackagesProvider(premiumAndTrial));
+  return currentOfferingPackages.firstWhere((element) => element.packageType == PackageType.monthly);
+});
+final monthlyPremiumPackageProvider = Provider.family.autoDispose((ref, PremiumAndTrial premiumAndTrial) {
+  const premiumPackageOfferingType = OfferingType.premium;
+  final offering = ref.watch(purchaseOfferingsProvider).valueOrNull?.all[premiumPackageOfferingType.name];
+  if (offering == null) {
+    return null;
+  }
+  return offering.availablePackages.firstWhere((element) => element.packageType == PackageType.monthly);
+});
+
+final purchaseProvider = Provider((ref) => Purchase());
+
+class Purchase {
+  /// Return true indicates end of regularllly pattern.
+  /// Return false indicates not regulally pattern.
+  /// Return value is used to display the completion page
+  Future<bool> call(Package package) async {
+    try {
+      final purchaserInfo = await Purchases.purchasePackage(package);
+      final premiumEntitlement = purchaserInfo.entitlements.all[premiumEntitlements];
+      if (premiumEntitlement == null) {
+        throw AssertionError("unexpected premium entitlements is not exists");
+      }
+      if (!premiumEntitlement.isActive) {
+        throw AlertError("課金の有効化が完了しておりません。しばらく時間をおいてからご確認ください");
+      }
+      await callUpdatePurchaseInfo(purchaserInfo);
+      return Future.value(true);
+    } on PlatformException catch (exception, stack) {
+      analytics.logEvent(
+          name: "catched_purchase_exception",
+          parameters: {"code": exception.code, "details": exception.details.toString(), "message": exception.message});
+      final newException = mapToDisplayedException(exception);
+      if (newException == null) {
+        return Future.value(false);
+      }
+      errorLogger.recordError(exception, stack);
+      throw newException;
+    } catch (exception, stack) {
+      analytics.logEvent(name: "catched_purchase_anonymous", parameters: {
+        "exception_type": exception.runtimeType.toString(),
+      });
+      errorLogger.recordError(exception, stack);
+      rethrow;
+    }
+  }
+}
 
 class PurchaseService {
   Future<Offerings> fetchOfferings() async {
