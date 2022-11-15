@@ -1,11 +1,11 @@
+import 'package:collection/collection.dart';
 import 'dart:io';
 
 import 'package:firebase_auth/firebase_auth.dart' as auth;
 import 'package:pilll/entity/pill_sheet_group.codegen.dart';
 import 'package:pilll/provider/database.dart';
 import 'package:pilll/entity/setting.codegen.dart';
-import 'package:pilll/database/pill_sheet_group.dart';
-import 'package:pilll/database/setting.dart';
+import 'package:pilll/provider/pill_sheet_group.dart';
 import 'package:pilll/util/environment.dart';
 import 'package:package_info/package_info.dart';
 import 'package:url_launcher/url_launcher.dart';
@@ -36,7 +36,10 @@ Future<String> debugInfo(String separator) async {
 
   PillSheetGroup? pillSheetGroup;
   try {
-    pillSheetGroup = databaseConnection.pillSheetGroupReference(pillSheetGroupID)
+    pillSheetGroup = (await databaseConnection.pillSheetGroupsReference().orderBy(PillSheetGroupFirestoreKeys.createdAt).limitToLast(1).get())
+        .docs
+        .lastOrNull
+        ?.data();
   } catch (_) {}
 
   Setting? setting;
