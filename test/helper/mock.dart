@@ -1,7 +1,7 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:pilll/analytics.dart';
 import 'package:pilll/provider/batch.dart';
-import 'package:pilll/database/database.dart';
+import 'package:pilll/provider/database.dart';
 import 'package:pilll/entity/setting.codegen.dart';
 import 'package:pilll/provider/menstruation.dart';
 import 'package:pilll/provider/pill_sheet.dart';

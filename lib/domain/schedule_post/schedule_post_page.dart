@@ -13,7 +13,7 @@ import 'package:pilll/components/atoms/font.dart';
 import 'package:pilll/components/atoms/text_color.dart';
 import 'package:pilll/components/molecules/indicator.dart';
 import 'package:pilll/components/page/discard_dialog.dart';
-import 'package:pilll/database/database.dart';
+import 'package:pilll/provider/database.dart';
 import 'package:pilll/entity/schedule.codegen.dart';
 import 'package:pilll/error/error_alert.dart';
 import 'package:pilll/error/universal_error_page.dart';

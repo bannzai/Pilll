@@ -9,7 +9,7 @@ import 'package:cloud_firestore/cloud_firestore.dart' as _i6;
 import 'package:mockito/mockito.dart' as _i1;
 import 'package:pilll/analytics.dart' as _i14;
 import 'package:pilll/provider/batch.dart' as _i18;
-import 'package:pilll/database/database.dart' as _i5;
+import 'package:pilll/provider/database.dart' as _i5;
 import 'package:pilll/database/pill_sheet.dart' as _i10;
 import 'package:pilll/database/pill_sheet_group.dart' as _i17;
 import 'package:pilll/database/pill_sheet_modified_history.dart' as _i15;

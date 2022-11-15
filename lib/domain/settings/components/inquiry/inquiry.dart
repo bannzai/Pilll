@@ -2,7 +2,7 @@ import 'dart:io';
 
 import 'package:firebase_auth/firebase_auth.dart' as auth;
 import 'package:pilll/entity/pill_sheet_group.codegen.dart';
-import 'package:pilll/database/database.dart';
+import 'package:pilll/provider/database.dart';
 import 'package:pilll/entity/setting.codegen.dart';
 import 'package:pilll/database/pill_sheet_group.dart';
 import 'package:pilll/database/setting.dart';

@@ -11,7 +11,7 @@ import 'package:pilll/util/environment.dart';
 import 'package:purchases_flutter/purchases_flutter.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:pilll/analytics.dart';
-import 'package:pilll/database/database.dart';
+import 'package:pilll/provider/database.dart';
 import 'package:pilll/provider/user.dart';
 
 enum OfferingType { limited, premium }

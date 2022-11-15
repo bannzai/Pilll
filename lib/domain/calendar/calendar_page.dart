@@ -7,7 +7,7 @@ import 'package:pilll/components/organisms/calendar/band/calendar_band_model.dar
 import 'package:pilll/components/organisms/calendar/band/calendar_band_provider.dart';
 import 'package:pilll/components/organisms/calendar/day/calendar_day_tile.dart';
 import 'package:pilll/components/organisms/calendar/week/utility.dart';
-import 'package:pilll/database/database.dart';
+import 'package:pilll/provider/database.dart';
 import 'package:pilll/domain/calendar/components/title/calendar_page_title.dart';
 import 'package:pilll/domain/calendar/components/month_calendar/month_calendar.dart';
 import 'package:pilll/components/organisms/calendar/week/week_calendar.dart';

@@ -3,7 +3,7 @@ import 'dart:async';
 import 'package:async_value_group/async_value_group.dart';
 import 'package:pilll/analytics.dart';
 import 'package:pilll/components/molecules/indicator.dart';
-import 'package:pilll/database/database.dart';
+import 'package:pilll/provider/database.dart';
 import 'package:pilll/domain/settings/provider.dart';
 import 'package:pilll/domain/settings/timezone_setting_dialog.dart';
 import 'package:pilll/entity/setting.codegen.dart';

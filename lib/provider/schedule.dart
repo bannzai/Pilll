@@ -1,4 +1,4 @@
-import 'package:pilll/database/database.dart';
+import 'package:pilll/provider/database.dart';
 import 'package:pilll/entity/schedule.codegen.dart';
 import 'package:riverpod/riverpod.dart';
 import 'package:pilll/util/datetime/day.dart';
