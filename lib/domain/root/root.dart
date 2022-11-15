@@ -3,17 +3,16 @@ import 'dart:async';
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:firebase_auth/firebase_auth.dart' as firebase_auth;
 import 'package:firebase_crashlytics/firebase_crashlytics.dart';
-import 'package:firebase_performance/firebase_performance.dart';
+import 'package:flutter_hooks/flutter_hooks.dart';
+import 'package:hooks_riverpod/hooks_riverpod.dart';
 import 'package:pilll/analytics.dart';
 import 'package:pilll/components/page/ok_dialog.dart';
 import 'package:pilll/domain/initial_setting/pill_sheet_group/initial_setting_pill_sheet_group_page.dart';
 import 'package:pilll/entity/config.codegen.dart';
 import 'package:pilll/entity/user.codegen.dart';
-import 'package:pilll/performance.dart';
 import 'package:pilll/service/auth.dart';
 import 'package:pilll/database/database.dart';
 import 'package:pilll/domain/home/home_page.dart';
-import 'package:pilll/error/alert_error.dart';
 import 'package:pilll/components/molecules/indicator.dart';
 import 'package:pilll/error/template.dart';
 import 'package:pilll/error/universal_error_page.dart';
@@ -28,50 +27,28 @@ import 'package:pilll/util/version/version.dart';
 import 'package:url_launcher/url_launcher.dart';
 import 'package:uuid/uuid.dart';
 
-GlobalKey<RootState> rootKey = GlobalKey();
-
 // TODO: Replace to HookConsumerWidget
 // TODO: Instantiate and cache SharedPreferences with Provider on RootPage(this file)
-class Root extends StatefulWidget {
+
+enum ScreenType { loading, home, initialSetting, forceUpdate }
+
+class Root extends HookConsumerWidget {
   const Root({Key? key}) : super(key: key);
 
   @override
-  RootState createState() => RootState();
-}
-
-enum ScreenType { home, initialSetting, forceUpdate }
-
-class RootState extends State<Root> {
-  final String _traceUUID = const Uuid().v4();
-
-  dynamic _error;
-  ScreenType? screenType;
-  showHome() {
-    setState(() {
-      screenType = ScreenType.home;
-    });
-  }
-
-  reload() {
-    setState(() {
-      screenType = null;
-      _error = null;
-      _decideScreenType();
-    });
-  }
-
-  @override
-  void initState() {
-    _decideScreenType();
-    super.initState();
-  }
-
-  @override
-  Widget build(BuildContext context) {
-    if (screenType == null && _error == null) {
-      return const ScaffoldIndicator();
+  Widget build(BuildContext context, WidgetRef ref) {
+    final screenType = useState<ScreenType>(ScreenType.loading);
+    void setScreenType(ScreenType _screenType) {
+      if (screenType.value != ScreenType.forceUpdate) {
+        screenType.value = _screenType;
+      }
     }
-    if (screenType == ScreenType.forceUpdate) {
+
+    final error = useState<LaunchException?>(null);
+    final firebaseUserAsyncValue = ref.watch(authStateStreamProvider);
+
+    // For force update
+    if (screenType.value == ScreenType.forceUpdate) {
       Future.microtask(() async {
         await showOKDialog(context, title: "アプリをアップデートしてください", message: "お使いのアプリのバージョンのアップデートをお願いしております。$storeNameから最新バージョンにアップデートしてください",
             ok: () async {
@@ -83,40 +60,92 @@ class RootState extends State<Root> {
       });
       return const ScaffoldIndicator();
     }
+    useEffect(() {
+      f() async {
+        try {
+          final shouldForceUpdate = await _checkForceUpdate();
+
+          if (shouldForceUpdate) {
+            setScreenType(ScreenType.forceUpdate);
+          }
+        } catch (e, st) {
+          errorLogger.recordError(e, st);
+          error.value = LaunchException("起動処理でエラーが発生しました\n${ErrorMessages.connection}\n詳細:", e);
+        }
+      }
+
+      f();
+      return null;
+    }, [true]);
+
+    // For app screen state
+    useEffect(() {
+      f() async {
+        final firebaseUser = firebaseUserAsyncValue.asData?.value;
+        if (firebaseUser == null) {
+          try {
+            // SignIn first. Keep in mind that this method is called first.
+            final firebaseUser = await ref.read(signInProvider.future);
+
+            unawaited(FirebaseCrashlytics.instance.setUserIdentifier(firebaseUser.uid));
+            unawaited(firebaseAnalytics.setUserId(id: firebaseUser.uid));
+            unawaited(initializePurchase(firebaseUser.uid));
+          } catch (e, st) {
+            errorLogger.recordError(e, st);
+            error.value = LaunchException("認証時にエラーが発生しました\n${ErrorMessages.connection}\n詳細:", e);
+          }
+        } else {
+          // **** BEGIN: Do not break the sequence. ****
+          await Future(() async {
+            try {
+              // Decide screen type. Keep in mind that this method is called when user is logged in.
+              setScreenType(await _screenType());
+
+              // Retrieve user from app DB.
+              final user = await _mutateUserWithLaunchInfo(firebaseUser);
+
+              // Rescue for old users
+              final screenTypeForLegacyUser = await _screenTypeForOldUser(firebaseUser, user);
+              if (screenTypeForLegacyUser != null) {
+                setScreenType(screenTypeForLegacyUser);
+              }
+            } catch (e, st) {
+              errorLogger.recordError(e, st);
+              error.value = LaunchException("起動時にエラーが発生しました\n${ErrorMessages.connection}\n詳細:", e);
+            }
+          });
+          // **** END: Do not break the sequence. ****
+        }
+      }
+
+      f();
+      return null;
+    }, [firebaseUserAsyncValue.asData?.value?.uid]);
 
     return UniversalErrorPage(
       error: _error,
       reload: () => reload(),
       child: () {
-        switch (screenType) {
-          case ScreenType.home:
-            return HomePage(key: homeKey);
+        switch (screenType.value) {
+          case ScreenType.loading:
+            return const ScaffoldIndicator();
           case ScreenType.initialSetting:
             return InitialSettingPillSheetGroupPageRoute.screen();
-          default:
+          case ScreenType.home:
+            return HomePage(key: homeKey);
+          case ScreenType.forceUpdate:
             return const ScaffoldIndicator();
         }
       }(),
     );
   }
 
-  Trace _trace({required String name, required String uuid}) {
-    final trace = performance.newTrace(name);
-    trace.putAttribute("uuid", uuid);
-    return trace;
-  }
-
 // Return false: should not force update
 // Return true: should force update
   Future<bool> _checkForceUpdate() async {
-    final forceUpdateTrace = _trace(name: "forceUpdate", uuid: _traceUUID);
-    await forceUpdateTrace.start();
-
     final doc = await FirebaseFirestore.instance.doc("/globals/config").get();
     final config = Config.fromJson(doc.data() as Map<String, dynamic>);
     final packageVersion = await Version.fromPackage();
-
-    await forceUpdateTrace.stop();
 
     final forceUpdate = packageVersion.isLessThan(Version.parse(config.minimumSupportedAppVersion));
     if (forceUpdate) {
@@ -129,19 +158,6 @@ class RootState extends State<Root> {
       );
     }
     return forceUpdate;
-  }
-
-  Future<firebase_auth.User> _signIn() async {
-    final signInTrace = _trace(name: "signInTrace", uuid: _traceUUID);
-    await signInTrace.start();
-    final firebaseUser = await cachedUserOrSignInAnonymously();
-    await signInTrace.stop();
-
-    unawaited(FirebaseCrashlytics.instance.setUserIdentifier(firebaseUser.uid));
-    unawaited(firebaseAnalytics.setUserId(id: firebaseUser.uid));
-    unawaited(initializePurchase(firebaseUser.uid));
-
-    return firebaseUser;
   }
 
   Future<ScreenType> _screenType() async {
@@ -161,7 +177,7 @@ class RootState extends State<Root> {
     return ScreenType.home;
   }
 
-  Future<User> _mutateUserWithLaunchInfoAnd(firebase_auth.User firebaseUser) async {
+  Future<User> _mutateUserWithLaunchInfo(firebase_auth.User firebaseUser) async {
     final userDatastore = UserDatastore(DatabaseConnection(firebaseUser.uid));
     final user = await userDatastore.fetchOrCreate(firebaseUser.uid);
 
@@ -171,7 +187,7 @@ class RootState extends State<Root> {
     return user;
   }
 
-  Future<ScreenType?> _screenTypeForLegacyUser(firebase_auth.User firebaseUser, User user) async {
+  Future<ScreenType?> _screenTypeForOldUser(firebase_auth.User firebaseUser, User user) async {
     if (!user.migratedFlutter) {
       final userDatastore = UserDatastore(DatabaseConnection(firebaseUser.uid));
       await userDatastore.deleteSettings();
@@ -184,57 +200,17 @@ class RootState extends State<Root> {
     }
     return null;
   }
+}
 
-  void _decideScreenType() {
-    Future(() async {
-      final launchTrace = _trace(name: "appLaunch", uuid: _traceUUID);
-      await launchTrace.start();
+class LaunchException {
+  final String message;
+  final Object underlyingException;
 
-      // check force update is very slow(avarage 2 sec). So, should check asynchronously. And we tolerate for user tapped record button in 2 second.
-      _checkForceUpdate().then((shouldForceUpdate) {
-        if (shouldForceUpdate) {
-          setState(() {
-            screenType = ScreenType.forceUpdate;
-          });
-        }
-      }).catchError((error, stackTrace) {
-        errorLogger.recordError(error, stackTrace);
+  LaunchException(
+    this.message,
+    this.underlyingException,
+  );
 
-        setState(() {
-          _error = AlertError("起動処理でエラーが発生しました\n${ErrorMessages.connection}\n詳細:" + error.toString());
-        });
-      }).whenComplete(() {
-        launchTrace.stop();
-      });
-
-      try {
-        // Keep first, call signIn
-        final firebaseUser = await _signIn();
-
-        // Keep after call signIn
-        final screenType = await _screenType();
-        setState(() {
-          this.screenType = screenType;
-        });
-
-        // NOTE: Below code contains backward-compatible logic from version 1.3.2
-        // screenType is determined if necessary, but since it is a special pattern. So, it is determined last
-        final user = await _mutateUserWithLaunchInfoAnd(firebaseUser);
-        final screenTypeForLegacyUser = await _screenTypeForLegacyUser(firebaseUser, user);
-        if (screenTypeForLegacyUser != null) {
-          setState(() {
-            this.screenType = screenTypeForLegacyUser;
-          });
-        }
-      } catch (error, stackTrace) {
-        errorLogger.recordError(error, stackTrace);
-
-        setState(() {
-          _error = AlertError("起動処理でエラーが発生しました\n${ErrorMessages.connection}\n詳細:" + error.toString());
-        });
-      } finally {
-        await launchTrace.stop();
-      }
-    });
-  }
+  @override
+  String toString() => message + underlyingException.toString();
 }

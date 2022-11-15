@@ -1,4 +1,4 @@
-import 'package:pilll/database/database.dart';
+import 'package:pilll/service/auth.dart';
 import 'package:riverpod/riverpod.dart';
 
-Provider get refreshAppProvider => databaseProvider;
+StreamProvider get refreshAppProvider => authStateStreamProvider;
