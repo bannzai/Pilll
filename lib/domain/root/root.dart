@@ -182,10 +182,6 @@ class _InitialSettingOrAppPage extends HookConsumerWidget {
             appUser.value = user;
 
             // Rescue for old users
-            final screenTypeForLegacyUser = await _screenTypeForOldUser(firebaseUserID, user);
-            if (screenTypeForLegacyUser != null) {
-              screenType.value = screenTypeForLegacyUser;
-            }
             if (!user.migratedFlutter) {
               markAsMigratedToFlutter();
               analytics.logEvent(name: "user_is_not_migrated_flutter", parameters: {"uid": firebaseUserID});
@@ -216,24 +212,10 @@ class _InitialSettingOrAppPage extends HookConsumerWidget {
           case _InitialSettingOrAppPageScreenType.initialSetting:
             return InitialSettingPillSheetGroupPageRoute.screen();
           case _InitialSettingOrAppPageScreenType.app:
-            return HomePage(key: key);
+            return const HomePage();
         }
       }(),
     );
-  }
-
-  Future<_InitialSettingOrAppPageScreenType?> _screenTypeForOldUser(String userID, User user) async {
-    if (!user.migratedFlutter) {
-      final userDatastore = UserDatastore(DatabaseConnection(userID));
-      await userDatastore.deleteSettings();
-      await userDatastore._setFlutterMigrationFlag();
-      analytics.logEvent(name: "user_is_not_migrated_flutter", parameters: {"uid": userID});
-      return _InitialSettingOrAppPageScreenType.initialSetting;
-    } else if (user.setting == null) {
-      analytics.logEvent(name: "uset_setting_is_null", parameters: {"uid": userID});
-      return _InitialSettingOrAppPageScreenType.initialSetting;
-    }
-    return null;
   }
 
   Future<_InitialSettingOrAppPageScreenType> _screenType() async {
