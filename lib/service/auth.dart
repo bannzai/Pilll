@@ -13,41 +13,12 @@ final authServiceProvider = Provider(
   (ref) => AuthService(),
 );
 
-final authStateStreamProvider = StreamProvider<User>(
-  (ref) => _userAuthStateChanges().where((event) => event != null).cast(),
+final authStateStreamProvider = StreamProvider<User?>(
+  (ref) => FirebaseAuth.instance.userChanges(),
 );
 
-final isLinkedProvider = Provider((ref) => apple.isLinkedApple() || google.isLinkedGoogle());
-
-class AuthService {
-  // 退会時は一時的にnullになる。なのでOptional型のこのstreamを使う
-  Stream<User?> optionalStream() {
-    return _userAuthStateChanges();
-  }
-
-  Stream<User> stream() {
-    return _userAuthStateChanges().where((event) => event != null).cast();
-  }
-
-  bool isLinkedApple() {
-    return apple.isLinkedApple();
-  }
-
-  bool isLinkedGoogle() {
-    return google.isLinkedGoogle();
-  }
-}
-
-Stream<User?> _userAuthStateChanges() {
-  return FirebaseAuth.instance.userChanges();
-}
-
-// Obtain the latest users form FirebaseAuth.
-// If it is not exists:
-//   -> wait userAuthStateChanges stream complete that firebase auth setup complete:
-//     -> return result of signin anonymous;
-Future<User> cachedUserOrSignInAnonymously() async {
-  analytics.logEvent(name: "call_sign_in");
+final currentUserProvider = FutureProvider((ref) async {
+  analytics.logEvent(name: "current_user_provider");
   final currentUser = FirebaseAuth.instance.currentUser;
 
   analytics.logEvent(
@@ -57,30 +28,23 @@ Future<User> cachedUserOrSignInAnonymously() async {
 
   if (currentUser != null) {
     analytics.logEvent(name: "cached_current_user_exists", parameters: _logginParameters(currentUser));
-
-    final sharedPreferences = await SharedPreferences.getInstance();
-    final existsUID = sharedPreferences.getString(StringKey.currentUserUID);
-    if (existsUID == null || existsUID.isEmpty) {
-      sharedPreferences.setString(StringKey.currentUserUID, currentUser.uid);
-    }
-
     return currentUser;
   } else {
     analytics.logEvent(name: "cached_current_user_not_exists");
 
     // keep until FirebaseAuth.instance user state updated
-    final obtainLatestChangedOptionalUserState = Future<User?>(() {
+    final waitLatestChangedOptionalUser = Future<User?>(() {
       final completer = Completer<User?>();
 
       StreamSubscription<User?>? subscription;
-      subscription = _userAuthStateChanges().listen((firebaseUser) {
+      subscription = FirebaseAuth.instance.userChanges().listen((firebaseUser) {
         completer.complete(firebaseUser);
         subscription?.cancel();
       });
       return completer.future;
     });
 
-    final obtainedUser = await obtainLatestChangedOptionalUserState;
+    final obtainedUser = await waitLatestChangedOptionalUser;
     if (obtainedUser != null) {
       analytics.logEvent(
         name: "obtained_current_user_exists",
@@ -102,9 +66,9 @@ Future<User> cachedUserOrSignInAnonymously() async {
     }
 
     // keep until FirebaseAuth.instance user state updated
-    final obtainLatestChangedUserState = Future<User>(() {
+    final waitLatestChangedUser = Future<User>(() {
       final completer = Completer<User>();
-      final Stream<User> nonOptionalStream = _userAuthStateChanges().where((event) => event != null).cast();
+      final Stream<User> nonOptionalStream = FirebaseAuth.instance.userChanges().where((event) => event != null).cast();
 
       StreamSubscription<User>? subscription;
       subscription = nonOptionalStream.listen((firebaseUser) {
@@ -114,9 +78,21 @@ Future<User> cachedUserOrSignInAnonymously() async {
       return completer.future;
     });
 
-    final User signedUser = await obtainLatestChangedUserState;
+    final User signedUser = await waitLatestChangedUser;
     assert(anonymousUser.user?.uid == signedUser.uid);
     return signedUser;
+  }
+});
+
+final isLinkedProvider = Provider((ref) => apple.isLinkedApple() || google.isLinkedGoogle());
+
+class AuthService {
+  bool isLinkedApple() {
+    return apple.isLinkedApple();
+  }
+
+  bool isLinkedGoogle() {
+    return google.isLinkedGoogle();
   }
 }
 
