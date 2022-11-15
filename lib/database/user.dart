@@ -57,14 +57,6 @@ class UserDatastore {
     }, SetOptions(merge: true));
   }
 
-  Future<void> registerRemoteNotificationToken(String? token) {
-    debugPrint("token: $token");
-    return _database.userPrivateRawReference().set(
-      {UserPrivateFirestoreFieldKeys.fcmToken: token},
-      SetOptions(merge: true),
-    );
-  }
-
   Future<void> linkApple(String? email) async {
     await _database.userRawReference().set({
       UserFirestoreFieldKeys.isAnonymous: false,
@@ -133,6 +125,21 @@ class FetchOrCreateUser {
         if (anonymousUserID != null) UserFirestoreFieldKeys.anonymousUserID: anonymousUserID,
         UserFirestoreFieldKeys.userIDWhenCreateUser: uid,
       },
+      SetOptions(merge: true),
+    );
+  }
+}
+
+final registerRemotePushNotificationToken = Provider((ref) => RegisterRemotePushNotificationToken(ref.watch(databaseProvider)));
+
+class RegisterRemotePushNotificationToken {
+  final DatabaseConnection databaseConnection;
+  RegisterRemotePushNotificationToken(this.databaseConnection);
+
+  Future<void> call(String? token) {
+    debugPrint("token: $token");
+    return databaseConnection.userPrivateRawReference().set(
+      {UserPrivateFirestoreFieldKeys.fcmToken: token},
       SetOptions(merge: true),
     );
   }

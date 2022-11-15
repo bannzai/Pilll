@@ -23,9 +23,6 @@ enum HomePageTabType { record, menstruation, calendar, setting }
 class _HomePageState extends State<HomePage> with SingleTickerProviderStateMixin, RouteAware {
   late TabController _tabController;
   int _selectedIndex = 0;
-  HomePageTabType get _selectedTab {
-    return HomePageTabType.values[_selectedIndex];
-  }
 
   @override
   void initState() {
@@ -111,13 +108,6 @@ class _HomePageState extends State<HomePage> with SingleTickerProviderStateMixin
         _screenTracking();
       }
     });
-  }
-
-  selectTab(HomePageTabType tab) {
-    if (_selectedTab == tab) {
-      return;
-    }
-    _tabController.animateTo(tab.index);
   }
 
   @override
