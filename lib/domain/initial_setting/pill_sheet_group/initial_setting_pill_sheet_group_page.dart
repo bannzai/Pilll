@@ -29,6 +29,8 @@ class InitialSettingPillSheetGroupPage extends HookConsumerWidget {
     final store = ref.watch(initialSettingStoreProvider.notifier);
     final state = ref.watch(initialSettingStoreProvider);
     final authStream = ref.watch(authStateStreamProvider.stream);
+    final isAppleLinked = ref.watch(isAppleLinkedProvider);
+    final isGoogleLinked = ref.watch(isGoogleLinkedProvider);
 
     useEffect(() {
       final subscription = authStream.listen((user) {
@@ -37,9 +39,9 @@ class InitialSettingPillSheetGroupPage extends HookConsumerWidget {
             analytics.logEvent(name: "initial_setting_signin_account", parameters: {"uid": user.uid});
 
             final LinkAccountType? accountType = () {
-              if (isLinkedApple()) {
+              if (isAppleLinked) {
                 return LinkAccountType.apple;
-              } else if (isLinkedGoogle()) {
+              } else if (isGoogleLinked) {
                 return LinkAccountType.google;
               } else {
                 return null;
