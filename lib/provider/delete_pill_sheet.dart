@@ -1,4 +1,4 @@
-import 'package:pilll/database/batch.dart';
+import 'package:pilll/provider/batch.dart';
 import 'package:pilll/database/pill_sheet_modified_history.dart';
 import 'package:pilll/entity/pill_sheet.codegen.dart';
 import 'package:pilll/entity/pill_sheet_group.codegen.dart';
