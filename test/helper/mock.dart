@@ -2,7 +2,6 @@ import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:pilll/analytics.dart';
 import 'package:pilll/database/batch.dart';
 import 'package:pilll/database/database.dart';
-import 'package:pilll/domain/premium_introduction/premium_introduction_store.dart';
 import 'package:pilll/domain/settings/setting_page_async_action.dart';
 import 'package:pilll/entity/setting.codegen.dart';
 import 'package:pilll/provider/menstruation.dart';
@@ -11,7 +10,6 @@ import 'package:pilll/provider/pill_sheet_group.dart';
 import 'package:pilll/provider/pill_sheet_modified_history.dart';
 import 'package:pilll/provider/premium_and_trial.codegen.dart';
 import 'package:pilll/provider/setting.dart';
-import 'package:pilll/service/auth.dart';
 import 'package:pilll/database/pill_sheet.dart';
 import 'package:pilll/database/pill_sheet_group.dart';
 import 'package:pilll/database/pill_sheet_modified_history.dart';
@@ -25,9 +23,7 @@ import 'package:mockito/annotations.dart';
   TodayService,
   SettingDatastore,
   Analytics,
-  AuthService,
   UserDatastore,
-  PremiumIntroductionStore,
   PillSheetModifiedHistoryDatastore,
   PillSheetGroupDatastore,
   BatchFactory,
