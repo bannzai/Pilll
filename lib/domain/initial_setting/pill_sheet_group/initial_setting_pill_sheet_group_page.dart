@@ -1,6 +1,8 @@
 import 'package:flutter_hooks/flutter_hooks.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:pilll/analytics.dart';
+import 'package:pilll/auth/apple.dart';
+import 'package:pilll/auth/google.dart';
 import 'package:pilll/components/atoms/font.dart';
 import 'package:pilll/components/page/hud.dart';
 import 'package:pilll/components/template/setting_pill_sheet_group/pill_sheet_group_select_pill_sheet_type_page.dart';
@@ -27,34 +29,39 @@ class InitialSettingPillSheetGroupPage extends HookConsumerWidget {
   Widget build(BuildContext context, WidgetRef ref) {
     final store = ref.watch(initialSettingStoreProvider.notifier);
     final state = ref.watch(initialSettingStoreProvider);
-    final authStream = ref.watch(authStateStreamProvider);
+    final authStream = ref.watch(authStateStreamProvider.stream);
 
     useEffect(() {
-      store.fetch();
-      return null;
-    }, [authStream]);
+      final subscription = authStream.listen((user) {
+        if (user != null) {
+          if (!user.isAnonymous) {
+            analytics.logEvent(name: "initial_setting_signin_account", parameters: {"uid": user.uid});
 
-    useEffect(() {
-      if (state.userIsNotAnonymous) {
-        final accountType = state.accountType;
-        if (accountType != null) {
-          Future.microtask(() {
-            ScaffoldMessenger.of(context).showSnackBar(
-              SnackBar(
-                duration: const Duration(seconds: 2),
-                content: Text("${accountType.providerName}でログインしました"),
-              ),
-            );
-          });
+            final LinkAccountType? accountType = () {
+              if (isLinkedApple()) {
+                return LinkAccountType.apple;
+              } else if (isLinkedGoogle()) {
+                return LinkAccountType.google;
+              } else {
+                return null;
+              }
+            }();
+            if (accountType != null) {
+              Future.microtask(() {
+                ScaffoldMessenger.of(context).showSnackBar(
+                  SnackBar(
+                    duration: const Duration(seconds: 2),
+                    content: Text("${accountType.providerName}でログインしました"),
+                  ),
+                );
+              });
+            }
+          }
         }
+      });
 
-        if (state.settingIsExist) {
-          AppRouter.signInAccount(context);
-        }
-      }
-
-      return null;
-    }, [state.userIsNotAnonymous, state.accountType, state.settingIsExist]);
+      return subscription.cancel;
+    }, [true]);
 
     return HUD(
       shown: state.isLoading,

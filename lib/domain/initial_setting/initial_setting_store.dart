@@ -67,30 +67,6 @@ class InitialSettingStateStore extends StateNotifier<InitialSettingState> {
           ]),
         );
 
-  StreamSubscription? _authServiceCanceller;
-  void fetch() {
-    _authServiceCanceller = authStateStream.listen((user) async {
-      debugPrint("watch sign state user: $user");
-
-      final userIsNotAnonymous = !user.isAnonymous;
-      if (userIsNotAnonymous) {
-        final userDatastore = UserDatastore(DatabaseConnection(user.uid));
-        final dbUser = await userDatastore.fetchOrCreate(user.uid);
-        userDatastore.saveUserLaunchInfo(dbUser);
-
-        state = state.copyWith(userIsNotAnonymous: userIsNotAnonymous);
-        state = state.copyWith(settingIsExist: dbUser.setting != null);
-        if (isLinkedApple()) {
-          state = state.copyWith(accountType: LinkAccountType.apple);
-        } else if (isLinkedGoogle()) {
-          state = state.copyWith(accountType: LinkAccountType.google);
-        }
-      }
-
-      _authServiceCanceller?.cancel();
-    });
-  }
-
   void selectedFirstPillSheetType(PillSheetType pillSheetType) {
     state = state.copyWith(pillSheetTypes: [
       pillSheetType,
