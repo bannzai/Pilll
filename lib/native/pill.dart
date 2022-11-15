@@ -8,7 +8,6 @@ import 'package:pilll/provider/pill_sheet.dart';
 import 'package:pilll/provider/pill_sheet_group.dart';
 import 'package:pilll/provider/pill_sheet_modified_history.dart';
 import 'package:pilll/provider/take_pill.dart';
-import 'package:pilll/database/pill_sheet_group.dart';
 import 'package:pilll/entity/pill_sheet_group.codegen.dart';
 import 'package:pilll/util/datetime/day.dart';
 
@@ -23,8 +22,7 @@ Future<PillSheetGroup?> quickRecordTakePill() async {
   }
 
   final database = DatabaseConnection(firebaseUser.uid);
-  final pillSheetGroupDatastore = PillSheetGroupDatastore(database);
-  final pillSheetGroup = await pillSheetGroupDatastore.fetchLatest();
+  final pillSheetGroup = await latestPillSheetGroup(database);
   if (pillSheetGroup == null) {
     return null;
   }

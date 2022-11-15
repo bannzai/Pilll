@@ -1,3 +1,4 @@
+import 'package:collection/collection.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:pilll/provider/database.dart';
 import 'package:pilll/entity/pill_sheet_group.codegen.dart';
@@ -7,6 +8,13 @@ PillSheetGroup? _filter(QuerySnapshot<PillSheetGroup> snapshot) {
   if (snapshot.docs.isEmpty) return null;
   if (!snapshot.docs.last.exists) return null;
   return snapshot.docs.last.data();
+}
+
+Future<PillSheetGroup?> latestPillSheetGroup(DatabaseConnection databaseConnection) async {
+  return (await databaseConnection.pillSheetGroupsReference().orderBy(PillSheetGroupFirestoreKeys.createdAt).limitToLast(1).get())
+      .docs
+      .lastOrNull
+      ?.data();
 }
 
 final latestPillSheetGroupProvider = StreamProvider((ref) => ref

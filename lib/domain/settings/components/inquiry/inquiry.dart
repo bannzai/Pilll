@@ -36,10 +36,7 @@ Future<String> debugInfo(String separator) async {
 
   PillSheetGroup? pillSheetGroup;
   try {
-    pillSheetGroup = (await databaseConnection.pillSheetGroupsReference().orderBy(PillSheetGroupFirestoreKeys.createdAt).limitToLast(1).get())
-        .docs
-        .lastOrNull
-        ?.data();
+    pillSheetGroup = await latestPillSheetGroup(databaseConnection);
   } catch (_) {}
 
   Setting? setting;
