@@ -22,7 +22,7 @@ class PremiumAndTrial with _$PremiumAndTrial {
 }
 
 final premiumAndTrialProvider = Provider<AsyncValue<PremiumAndTrial>>((ref) {
-  final user = ref.watch(userStreamProvider).asData;
+  final user = ref.watch(userProvider).asData;
   if (user == null) {
     return const AsyncValue.loading();
   }
