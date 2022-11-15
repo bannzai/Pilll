@@ -24,7 +24,7 @@ final calendarMenstruationBandListProvider = Provider<AsyncValue<List<CalendarMe
 
 final calendarScheduledMenstruationBandListProvider = Provider<AsyncValue<List<CalendarScheduledMenstruationBandModel>>>((ref) {
   return AsyncValueGroup.group3(
-    ref.watch(latestPillSheetGroupStreamProvider),
+    ref.watch(latestPillSheetGroupProvider),
     ref.watch(settingProvider),
     ref.watch(allMenstruationProvider),
   ).whenData(
@@ -38,7 +38,7 @@ final calendarScheduledMenstruationBandListProvider = Provider<AsyncValue<List<C
 });
 
 final calendarNextPillSheetBandListProvider = Provider<AsyncValue<List<CalendarNextPillSheetBandModel>>>((ref) {
-  final pillSheetGroup = ref.watch(latestPillSheetGroupStreamProvider);
+  final pillSheetGroup = ref.watch(latestPillSheetGroupProvider);
 
   if (pillSheetGroup is AsyncLoading) {
     return const AsyncValue.loading();

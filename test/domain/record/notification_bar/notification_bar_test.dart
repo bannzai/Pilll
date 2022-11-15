@@ -70,7 +70,7 @@ void main() {
         await tester.pumpWidget(
           ProviderScope(
             overrides: [
-              latestPillSheetGroupStreamProvider.overrideWith((ref) => Stream.value(pillSheetGroup)),
+              latestPillSheetGroupProvider.overrideWith((ref) => Stream.value(pillSheetGroup)),
               premiumAndTrialProvider.overrideWithValue(
                 AsyncData(
                   PremiumAndTrial(
@@ -126,7 +126,7 @@ void main() {
         await tester.pumpWidget(
           ProviderScope(
             overrides: [
-              latestPillSheetGroupStreamProvider.overrideWith((ref) => Stream.value(pillSheetGroup)),
+              latestPillSheetGroupProvider.overrideWith((ref) => Stream.value(pillSheetGroup)),
               premiumAndTrialProvider.overrideWithValue(
                 AsyncData(
                   PremiumAndTrial(
@@ -184,7 +184,7 @@ void main() {
         await tester.pumpWidget(
           ProviderScope(
             overrides: [
-              latestPillSheetGroupStreamProvider.overrideWith((ref) => Stream.value(pillSheetGroup)),
+              latestPillSheetGroupProvider.overrideWith((ref) => Stream.value(pillSheetGroup)),
               premiumAndTrialProvider.overrideWithValue(
                 AsyncData(
                   PremiumAndTrial(
@@ -241,7 +241,7 @@ void main() {
         await tester.pumpWidget(
           ProviderScope(
             overrides: [
-              latestPillSheetGroupStreamProvider.overrideWith((ref) => Stream.value(pillSheetGroup)),
+              latestPillSheetGroupProvider.overrideWith((ref) => Stream.value(pillSheetGroup)),
               premiumAndTrialProvider.overrideWithValue(
                 AsyncData(
                   PremiumAndTrial(
@@ -299,7 +299,7 @@ void main() {
         await tester.pumpWidget(
           ProviderScope(
             overrides: [
-              latestPillSheetGroupStreamProvider.overrideWith((ref) => Stream.value(pillSheetGroup)),
+              latestPillSheetGroupProvider.overrideWith((ref) => Stream.value(pillSheetGroup)),
               premiumAndTrialProvider.overrideWithValue(
                 AsyncData(
                   PremiumAndTrial(
@@ -356,7 +356,7 @@ void main() {
           await tester.pumpWidget(
             ProviderScope(
               overrides: [
-                latestPillSheetGroupStreamProvider.overrideWith((ref) => Stream.value(pillSheetGroup)),
+                latestPillSheetGroupProvider.overrideWith((ref) => Stream.value(pillSheetGroup)),
                 premiumAndTrialProvider.overrideWithValue(
                   AsyncData(
                     PremiumAndTrial(
@@ -421,7 +421,7 @@ void main() {
           await tester.pumpWidget(
             ProviderScope(
               overrides: [
-                latestPillSheetGroupStreamProvider.overrideWith((ref) => Stream.value(pillSheetGroup)),
+                latestPillSheetGroupProvider.overrideWith((ref) => Stream.value(pillSheetGroup)),
                 premiumAndTrialProvider.overrideWithValue(
                   AsyncData(
                     PremiumAndTrial(
@@ -488,7 +488,7 @@ void main() {
           await tester.pumpWidget(
             ProviderScope(
               overrides: [
-                latestPillSheetGroupStreamProvider.overrideWith((ref) => Stream.value(pillSheetGroup)),
+                latestPillSheetGroupProvider.overrideWith((ref) => Stream.value(pillSheetGroup)),
                 premiumAndTrialProvider.overrideWithValue(
                   AsyncData(
                     PremiumAndTrial(
@@ -555,7 +555,7 @@ void main() {
           await tester.pumpWidget(
             ProviderScope(
               overrides: [
-                latestPillSheetGroupStreamProvider.overrideWith((ref) => Stream.value(pillSheetGroup)),
+                latestPillSheetGroupProvider.overrideWith((ref) => Stream.value(pillSheetGroup)),
                 premiumAndTrialProvider.overrideWithValue(
                   AsyncData(
                     PremiumAndTrial(
@@ -622,7 +622,7 @@ void main() {
           await tester.pumpWidget(
             ProviderScope(
               overrides: [
-                latestPillSheetGroupStreamProvider.overrideWith((ref) => Stream.value(pillSheetGroup)),
+                latestPillSheetGroupProvider.overrideWith((ref) => Stream.value(pillSheetGroup)),
                 premiumAndTrialProvider.overrideWithValue(
                   AsyncData(
                     PremiumAndTrial(
@@ -696,7 +696,7 @@ void main() {
           await tester.pumpWidget(
             ProviderScope(
               overrides: [
-                latestPillSheetGroupStreamProvider.overrideWith((ref) => Stream.value(pillSheetGroup)),
+                latestPillSheetGroupProvider.overrideWith((ref) => Stream.value(pillSheetGroup)),
                 premiumAndTrialProvider.overrideWithValue(
                   AsyncData(
                     PremiumAndTrial(
@@ -765,7 +765,7 @@ void main() {
           await tester.pumpWidget(
             ProviderScope(
               overrides: [
-                latestPillSheetGroupStreamProvider.overrideWith((ref) => Stream.value(pillSheetGroup)),
+                latestPillSheetGroupProvider.overrideWith((ref) => Stream.value(pillSheetGroup)),
                 premiumAndTrialProvider.overrideWithValue(
                   AsyncData(
                     PremiumAndTrial(
@@ -834,7 +834,7 @@ void main() {
           await tester.pumpWidget(
             ProviderScope(
               overrides: [
-                latestPillSheetGroupStreamProvider.overrideWith((ref) => Stream.value(pillSheetGroup)),
+                latestPillSheetGroupProvider.overrideWith((ref) => Stream.value(pillSheetGroup)),
                 premiumAndTrialProvider.overrideWithValue(
                   AsyncData(
                     PremiumAndTrial(
@@ -903,7 +903,7 @@ void main() {
           await tester.pumpWidget(
             ProviderScope(
               overrides: [
-                latestPillSheetGroupStreamProvider.overrideWith((ref) => Stream.value(pillSheetGroup)),
+                latestPillSheetGroupProvider.overrideWith((ref) => Stream.value(pillSheetGroup)),
                 premiumAndTrialProvider.overrideWithValue(
                   AsyncData(
                     PremiumAndTrial(
@@ -972,7 +972,7 @@ void main() {
           await tester.pumpWidget(
             ProviderScope(
               overrides: [
-                latestPillSheetGroupStreamProvider.overrideWith((ref) => Stream.value(pillSheetGroup)),
+                latestPillSheetGroupProvider.overrideWith((ref) => Stream.value(pillSheetGroup)),
                 premiumAndTrialProvider.overrideWithValue(
                   AsyncData(
                     PremiumAndTrial(
@@ -1041,7 +1041,7 @@ void main() {
           await tester.pumpWidget(
             ProviderScope(
               overrides: [
-                latestPillSheetGroupStreamProvider.overrideWith((ref) => Stream.value(pillSheetGroup)),
+                latestPillSheetGroupProvider.overrideWith((ref) => Stream.value(pillSheetGroup)),
                 premiumAndTrialProvider.overrideWithValue(
                   AsyncData(
                     PremiumAndTrial(
@@ -1111,7 +1111,7 @@ void main() {
         await tester.pumpWidget(
           ProviderScope(
             overrides: [
-              latestPillSheetGroupStreamProvider.overrideWith((ref) => Stream.value(pillSheetGroup)),
+              latestPillSheetGroupProvider.overrideWith((ref) => Stream.value(pillSheetGroup)),
               premiumAndTrialProvider.overrideWithValue(
                 AsyncData(
                   PremiumAndTrial(
@@ -1169,7 +1169,7 @@ void main() {
         await tester.pumpWidget(
           ProviderScope(
             overrides: [
-              latestPillSheetGroupStreamProvider.overrideWith((ref) => Stream.value(pillSheetGroup)),
+              latestPillSheetGroupProvider.overrideWith((ref) => Stream.value(pillSheetGroup)),
               premiumAndTrialProvider.overrideWithValue(
                 AsyncData(
                   PremiumAndTrial(
@@ -1227,7 +1227,7 @@ void main() {
         await tester.pumpWidget(
           ProviderScope(
             overrides: [
-              latestPillSheetGroupStreamProvider.overrideWith((ref) => Stream.value(pillSheetGroup)),
+              latestPillSheetGroupProvider.overrideWith((ref) => Stream.value(pillSheetGroup)),
               premiumAndTrialProvider.overrideWithValue(
                 AsyncData(
                   PremiumAndTrial(

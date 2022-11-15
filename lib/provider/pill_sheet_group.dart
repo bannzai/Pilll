@@ -9,7 +9,7 @@ PillSheetGroup? _filter(QuerySnapshot<PillSheetGroup> snapshot) {
   return snapshot.docs.last.data();
 }
 
-final latestPillSheetGroupStreamProvider = StreamProvider((ref) => ref
+final latestPillSheetGroupProvider = StreamProvider((ref) => ref
     .watch(databaseProvider)
     .pillSheetGroupsReference()
     .orderBy(PillSheetGroupFirestoreKeys.createdAt)

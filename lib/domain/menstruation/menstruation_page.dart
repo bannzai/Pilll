@@ -44,7 +44,7 @@ class MenstruationPage extends HookConsumerWidget {
     useAutomaticKeepAlive(wantKeepAlive: true);
 
     return AsyncValueGroup.group10(
-      ref.watch(latestPillSheetGroupStreamProvider),
+      ref.watch(latestPillSheetGroupProvider),
       ref.watch(premiumAndTrialProvider),
       ref.watch(allMenstruationProvider),
       ref.watch(latestMenstruationProvider),

@@ -36,7 +36,7 @@ class NotificationBar extends HookConsumerWidget {
   }
 
   Widget? _body(BuildContext context, WidgetRef ref) {
-    final latestPillSheetGroup = ref.watch(latestPillSheetGroupStreamProvider).valueOrNull;
+    final latestPillSheetGroup = ref.watch(latestPillSheetGroupProvider).valueOrNull;
     final totalCountOfActionForTakenPill = ref.watch(intSharedPreferencesProvider(IntKey.totalCountOfActionForTakenPill)).valueOrNull ?? 0;
     final premiumAndTrial = ref.watch(premiumAndTrialProvider).requireValue;
     final isLinkedLoginProvider = ref.watch(isLinkedProvider);

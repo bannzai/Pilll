@@ -54,7 +54,7 @@ class SettingPage extends HookConsumerWidget {
 
     return AsyncValueGroup.group5(
       ref.watch(settingProvider),
-      ref.watch(latestPillSheetGroupStreamProvider),
+      ref.watch(latestPillSheetGroupProvider),
       ref.watch(premiumAndTrialProvider),
       ref.watch(isHealthDataAvailableProvider),
       ref.watch(sharedPreferenceProvider),

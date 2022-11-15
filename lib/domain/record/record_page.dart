@@ -32,7 +32,7 @@ class RecordPage extends HookConsumerWidget {
   Widget build(BuildContext context, WidgetRef ref) {
     final premiumAndTrial = ref.watch(premiumAndTrialProvider);
     final setting = ref.watch(settingProvider);
-    final latestPillSheetGroup = ref.watch(latestPillSheetGroupStreamProvider);
+    final latestPillSheetGroup = ref.watch(latestPillSheetGroupProvider);
     useAutomaticKeepAlive(wantKeepAlive: true);
 
     useEffect(() {
@@ -85,7 +85,7 @@ class RecordPage extends HookConsumerWidget {
 
     final isLinked = ref.watch(isLinkedProvider);
     return AsyncValueGroup.group6(
-      ref.watch(latestPillSheetGroupStreamProvider),
+      ref.watch(latestPillSheetGroupProvider),
       ref.watch(premiumAndTrialProvider),
       ref.watch(settingProvider),
       ref.watch(shouldShowMigrationInformationProvider),
