@@ -6,12 +6,6 @@ import 'package:pilll/auth/google.dart';
 import 'package:pilll/util/shared_preference/keys.dart';
 import 'package:riverpod/riverpod.dart';
 import 'package:shared_preferences/shared_preferences.dart';
-import 'package:pilll/auth/apple.dart' as apple;
-import 'package:pilll/auth/google.dart' as google;
-
-final authServiceProvider = Provider(
-  (ref) => AuthService(),
-);
 
 final authStateStreamProvider = StreamProvider<User?>(
   (ref) => FirebaseAuth.instance.userChanges(),
@@ -84,17 +78,7 @@ final firebaseSignInProvider = FutureProvider((ref) async {
   }
 });
 
-final isLinkedProvider = Provider((ref) => apple.isLinkedApple() || google.isLinkedGoogle());
-
-class AuthService {
-  bool isLinkedApple() {
-    return apple.isLinkedApple();
-  }
-
-  bool isLinkedGoogle() {
-    return google.isLinkedGoogle();
-  }
-}
+final isLinkedProvider = Provider((ref) => ref.watch(isAppleLinkedProvider) || ref.watch(isGoogleLinkedProvider));
 
 Map<String, dynamic> _logginParameters(User? currentUser) {
   if (currentUser == null) {
