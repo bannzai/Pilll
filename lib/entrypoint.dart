@@ -79,10 +79,8 @@ class App extends StatelessWidget {
           ),
         ),
       ),
-      home: ProviderScope(
-        child: Root(
-          key: rootKey,
-        ),
+      home: const ProviderScope(
+        child: Root(),
       ),
       localizationsDelegates: AppLocalizations.localizationsDelegates,
       supportedLocales: AppLocalizations.supportedLocales,
