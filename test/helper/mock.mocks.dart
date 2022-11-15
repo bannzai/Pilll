@@ -17,26 +17,25 @@ import 'package:pilll/database/setting.dart' as _i12;
 import 'package:pilll/database/user.dart' as _i15;
 import 'package:pilll/domain/premium_function_survey/premium_function_survey_element_type.dart'
     as _i17;
-import 'package:pilll/domain/settings/setting_page_async_action.dart' as _i22;
-import 'package:pilll/entity/diary.codegen.dart' as _i30;
-import 'package:pilll/entity/diary_setting.codegen.dart' as _i29;
+import 'package:pilll/entity/diary.codegen.dart' as _i29;
+import 'package:pilll/entity/diary_setting.codegen.dart' as _i28;
 import 'package:pilll/entity/menstruation.codegen.dart' as _i9;
 import 'package:pilll/entity/pill_sheet.codegen.dart' as _i2;
 import 'package:pilll/entity/pill_sheet_group.codegen.dart' as _i4;
 import 'package:pilll/entity/pill_sheet_modified_history.codegen.dart' as _i19;
-import 'package:pilll/entity/pill_sheet_type.dart' as _i23;
-import 'package:pilll/entity/pilll_ads.codegen.dart' as _i32;
+import 'package:pilll/entity/pill_sheet_type.dart' as _i22;
+import 'package:pilll/entity/pilll_ads.codegen.dart' as _i31;
 import 'package:pilll/entity/reminder_notification_customization.codegen.dart'
     as _i8;
-import 'package:pilll/entity/schedule.codegen.dart' as _i31;
+import 'package:pilll/entity/schedule.codegen.dart' as _i30;
 import 'package:pilll/entity/setting.codegen.dart' as _i3;
 import 'package:pilll/entity/user.codegen.dart' as _i16;
-import 'package:pilll/provider/menstruation.dart' as _i28;
-import 'package:pilll/provider/pill_sheet.dart' as _i25;
-import 'package:pilll/provider/pill_sheet_group.dart' as _i24;
-import 'package:pilll/provider/pill_sheet_modified_history.dart' as _i26;
+import 'package:pilll/provider/menstruation.dart' as _i27;
+import 'package:pilll/provider/pill_sheet.dart' as _i24;
+import 'package:pilll/provider/pill_sheet_group.dart' as _i23;
+import 'package:pilll/provider/pill_sheet_modified_history.dart' as _i25;
 import 'package:pilll/provider/premium_and_trial.codegen.dart' as _i7;
-import 'package:pilll/provider/setting.dart' as _i27;
+import 'package:pilll/provider/setting.dart' as _i26;
 import 'package:pilll/service/day.dart' as _i11;
 
 // ignore_for_file: type=lint
@@ -566,216 +565,6 @@ class MockWriteBatch extends _i1.Mock implements _i6.WriteBatch {
       );
 }
 
-/// A class which mocks [SettingPageAsyncAction].
-///
-/// See the documentation for Mockito's code generation for more information.
-class MockSettingPageAsyncAction extends _i1.Mock
-    implements _i22.SettingPageAsyncAction {
-  MockSettingPageAsyncAction() {
-    _i1.throwOnMissingStub(this);
-  }
-
-  @override
-  _i13.Future<void> addReminderTimes({
-    _i3.Setting? setting,
-    _i3.ReminderTime? reminderTime,
-  }) =>
-      (super.noSuchMethod(
-        Invocation.method(
-          #addReminderTimes,
-          [],
-          {
-            #setting: setting,
-            #reminderTime: reminderTime,
-          },
-        ),
-        returnValue: Future<void>.value(),
-        returnValueForMissingStub: Future<void>.value(),
-      ) as _i13.Future<void>);
-  @override
-  _i13.Future<void> editReminderTime({
-    int? index,
-    _i3.Setting? setting,
-    _i3.ReminderTime? reminderTime,
-  }) =>
-      (super.noSuchMethod(
-        Invocation.method(
-          #editReminderTime,
-          [],
-          {
-            #index: index,
-            #setting: setting,
-            #reminderTime: reminderTime,
-          },
-        ),
-        returnValue: Future<void>.value(),
-        returnValueForMissingStub: Future<void>.value(),
-      ) as _i13.Future<void>);
-  @override
-  _i13.Future<void> deleteReminderTimes({
-    int? index,
-    _i3.Setting? setting,
-  }) =>
-      (super.noSuchMethod(
-        Invocation.method(
-          #deleteReminderTimes,
-          [],
-          {
-            #index: index,
-            #setting: setting,
-          },
-        ),
-        returnValue: Future<void>.value(),
-        returnValueForMissingStub: Future<void>.value(),
-      ) as _i13.Future<void>);
-  @override
-  _i13.Future<void> modifyIsOnReminder(
-    bool? isOnReminder,
-    _i3.Setting? setting,
-  ) =>
-      (super.noSuchMethod(
-        Invocation.method(
-          #modifyIsOnReminder,
-          [
-            isOnReminder,
-            setting,
-          ],
-        ),
-        returnValue: Future<void>.value(),
-        returnValueForMissingStub: Future<void>.value(),
-      ) as _i13.Future<void>);
-  @override
-  _i13.Future<void> modifyIsOnNotifyInNotTakenDuration(
-    bool? isOn,
-    _i3.Setting? setting,
-  ) =>
-      (super.noSuchMethod(
-        Invocation.method(
-          #modifyIsOnNotifyInNotTakenDuration,
-          [
-            isOn,
-            setting,
-          ],
-        ),
-        returnValue: Future<void>.value(),
-        returnValueForMissingStub: Future<void>.value(),
-      ) as _i13.Future<void>);
-  @override
-  _i13.Future<void> deletePillSheet({
-    _i4.PillSheetGroup? latestPillSheetGroup,
-    _i2.PillSheet? activedPillSheet,
-  }) =>
-      (super.noSuchMethod(
-        Invocation.method(
-          #deletePillSheet,
-          [],
-          {
-            #latestPillSheetGroup: latestPillSheetGroup,
-            #activedPillSheet: activedPillSheet,
-          },
-        ),
-        returnValue: Future<void>.value(),
-        returnValueForMissingStub: Future<void>.value(),
-      ) as _i13.Future<void>);
-  @override
-  _i13.Future<void> modifiyIsAutomaticallyCreatePillSheet(
-    bool? isOn,
-    _i3.Setting? setting,
-  ) =>
-      (super.noSuchMethod(
-        Invocation.method(
-          #modifiyIsAutomaticallyCreatePillSheet,
-          [
-            isOn,
-            setting,
-          ],
-        ),
-        returnValue: Future<void>.value(),
-        returnValueForMissingStub: Future<void>.value(),
-      ) as _i13.Future<void>);
-  @override
-  _i13.Future<void> reminderNotificationWordSubmit(
-    String? word,
-    _i3.Setting? setting,
-  ) =>
-      (super.noSuchMethod(
-        Invocation.method(
-          #reminderNotificationWordSubmit,
-          [
-            word,
-            setting,
-          ],
-        ),
-        returnValue: Future<void>.value(),
-        returnValueForMissingStub: Future<void>.value(),
-      ) as _i13.Future<void>);
-  @override
-  _i13.Future<void> setIsInVisibleReminderDate(
-    bool? isInVisibleReminderDate,
-    _i3.Setting? setting,
-  ) =>
-      (super.noSuchMethod(
-        Invocation.method(
-          #setIsInVisibleReminderDate,
-          [
-            isInVisibleReminderDate,
-            setting,
-          ],
-        ),
-        returnValue: Future<void>.value(),
-        returnValueForMissingStub: Future<void>.value(),
-      ) as _i13.Future<void>);
-  @override
-  _i13.Future<void> setIsInVisiblePillNumber(
-    bool? isInVisiblePillNumber,
-    _i3.Setting? setting,
-  ) =>
-      (super.noSuchMethod(
-        Invocation.method(
-          #setIsInVisiblePillNumber,
-          [
-            isInVisiblePillNumber,
-            setting,
-          ],
-        ),
-        returnValue: Future<void>.value(),
-        returnValueForMissingStub: Future<void>.value(),
-      ) as _i13.Future<void>);
-  @override
-  _i13.Future<void> setIsInVisibleDescription(
-    bool? isInVisibleDescription,
-    _i3.Setting? setting,
-  ) =>
-      (super.noSuchMethod(
-        Invocation.method(
-          #setIsInVisibleDescription,
-          [
-            isInVisibleDescription,
-            setting,
-          ],
-        ),
-        returnValue: Future<void>.value(),
-        returnValueForMissingStub: Future<void>.value(),
-      ) as _i13.Future<void>);
-  @override
-  _i13.Future<void> updateTimezoneDatabaseName({
-    _i3.Setting? setting,
-    String? timezoneDatabaseName,
-  }) =>
-      (super.noSuchMethod(
-        Invocation.method(
-          #updateTimezoneDatabaseName,
-          [],
-          {
-            #setting: setting,
-            #timezoneDatabaseName: timezoneDatabaseName,
-          },
-        ),
-        returnValue: Future<void>.value(),
-        returnValueForMissingStub: Future<void>.value(),
-      ) as _i13.Future<void>);
-}
-
 /// A class which mocks [PremiumAndTrial].
 ///
 /// See the documentation for Mockito's code generation for more information.
@@ -831,15 +620,15 @@ class MockSetting extends _i1.Mock implements _i3.Setting {
   }
 
   @override
-  List<_i23.PillSheetType> get pillSheetEnumTypes => (super.noSuchMethod(
+  List<_i22.PillSheetType> get pillSheetEnumTypes => (super.noSuchMethod(
         Invocation.getter(#pillSheetEnumTypes),
-        returnValue: <_i23.PillSheetType>[],
-      ) as List<_i23.PillSheetType>);
+        returnValue: <_i22.PillSheetType>[],
+      ) as List<_i22.PillSheetType>);
   @override
-  List<_i23.PillSheetType?> get pillSheetTypes => (super.noSuchMethod(
+  List<_i22.PillSheetType?> get pillSheetTypes => (super.noSuchMethod(
         Invocation.getter(#pillSheetTypes),
-        returnValue: <_i23.PillSheetType?>[],
-      ) as List<_i23.PillSheetType?>);
+        returnValue: <_i22.PillSheetType?>[],
+      ) as List<_i22.PillSheetType?>);
   @override
   int get pillNumberForFromMenstruation => (super.noSuchMethod(
         Invocation.getter(#pillNumberForFromMenstruation),
@@ -901,7 +690,7 @@ class MockSetting extends _i1.Mock implements _i3.Setting {
 ///
 /// See the documentation for Mockito's code generation for more information.
 class MockBatchSetPillSheetGroup extends _i1.Mock
-    implements _i24.BatchSetPillSheetGroup {
+    implements _i23.BatchSetPillSheetGroup {
   MockBatchSetPillSheetGroup() {
     _i1.throwOnMissingStub(this);
   }
@@ -932,7 +721,7 @@ class MockBatchSetPillSheetGroup extends _i1.Mock
 ///
 /// See the documentation for Mockito's code generation for more information.
 class MockBatchSetPillSheets extends _i1.Mock
-    implements _i25.BatchSetPillSheets {
+    implements _i24.BatchSetPillSheets {
   MockBatchSetPillSheets() {
     _i1.throwOnMissingStub(this);
   }
@@ -963,7 +752,7 @@ class MockBatchSetPillSheets extends _i1.Mock
 ///
 /// See the documentation for Mockito's code generation for more information.
 class MockBatchSetPillSheetModifiedHistory extends _i1.Mock
-    implements _i26.BatchSetPillSheetModifiedHistory {
+    implements _i25.BatchSetPillSheetModifiedHistory {
   MockBatchSetPillSheetModifiedHistory() {
     _i1.throwOnMissingStub(this);
   }
@@ -993,7 +782,7 @@ class MockBatchSetPillSheetModifiedHistory extends _i1.Mock
 /// A class which mocks [BatchSetSetting].
 ///
 /// See the documentation for Mockito's code generation for more information.
-class MockBatchSetSetting extends _i1.Mock implements _i27.BatchSetSetting {
+class MockBatchSetSetting extends _i1.Mock implements _i26.BatchSetSetting {
   MockBatchSetSetting() {
     _i1.throwOnMissingStub(this);
   }
@@ -1023,7 +812,7 @@ class MockBatchSetSetting extends _i1.Mock implements _i27.BatchSetSetting {
 /// A class which mocks [SetSetting].
 ///
 /// See the documentation for Mockito's code generation for more information.
-class MockSetSetting extends _i1.Mock implements _i27.SetSetting {
+class MockSetSetting extends _i1.Mock implements _i26.SetSetting {
   MockSetSetting() {
     _i1.throwOnMissingStub(this);
   }
@@ -1047,7 +836,7 @@ class MockSetSetting extends _i1.Mock implements _i27.SetSetting {
 /// A class which mocks [SetPillSheetGroup].
 ///
 /// See the documentation for Mockito's code generation for more information.
-class MockSetPillSheetGroup extends _i1.Mock implements _i24.SetPillSheetGroup {
+class MockSetPillSheetGroup extends _i1.Mock implements _i23.SetPillSheetGroup {
   MockSetPillSheetGroup() {
     _i1.throwOnMissingStub(this);
   }
@@ -1073,7 +862,7 @@ class MockSetPillSheetGroup extends _i1.Mock implements _i24.SetPillSheetGroup {
 ///
 /// See the documentation for Mockito's code generation for more information.
 class MockDeleteMenstruation extends _i1.Mock
-    implements _i28.DeleteMenstruation {
+    implements _i27.DeleteMenstruation {
   MockDeleteMenstruation() {
     _i1.throwOnMissingStub(this);
   }
@@ -1097,7 +886,7 @@ class MockDeleteMenstruation extends _i1.Mock
 /// A class which mocks [SetMenstruation].
 ///
 /// See the documentation for Mockito's code generation for more information.
-class MockSetMenstruation extends _i1.Mock implements _i28.SetMenstruation {
+class MockSetMenstruation extends _i1.Mock implements _i27.SetMenstruation {
   MockSetMenstruation() {
     _i1.throwOnMissingStub(this);
   }
@@ -1121,7 +910,7 @@ class MockSetMenstruation extends _i1.Mock implements _i28.SetMenstruation {
 /// A class which mocks [BeginMenstruation].
 ///
 /// See the documentation for Mockito's code generation for more information.
-class MockBeginMenstruation extends _i1.Mock implements _i28.BeginMenstruation {
+class MockBeginMenstruation extends _i1.Mock implements _i27.BeginMenstruation {
   MockBeginMenstruation() {
     _i1.throwOnMissingStub(this);
   }
@@ -1177,14 +966,14 @@ class MockDatabaseConnection extends _i1.Mock
         returnValue: _FakeDocumentReference_10<Object?>(),
       ) as _i6.DocumentReference<Object?>);
   @override
-  _i6.DocumentReference<_i29.DiarySetting> diarySettingReference() =>
+  _i6.DocumentReference<_i28.DiarySetting> diarySettingReference() =>
       (super.noSuchMethod(
         Invocation.method(
           #diarySettingReference,
           [],
         ),
-        returnValue: _FakeDocumentReference_10<_i29.DiarySetting>(),
-      ) as _i6.DocumentReference<_i29.DiarySetting>);
+        returnValue: _FakeDocumentReference_10<_i28.DiarySetting>(),
+      ) as _i6.DocumentReference<_i28.DiarySetting>);
   @override
   _i6.CollectionReference<_i2.PillSheet> pillSheetsReference() =>
       (super.noSuchMethod(
@@ -1205,22 +994,22 @@ class MockDatabaseConnection extends _i1.Mock
         returnValue: _FakeDocumentReference_10<_i2.PillSheet>(),
       ) as _i6.DocumentReference<_i2.PillSheet>);
   @override
-  _i6.CollectionReference<_i30.Diary> diariesReference() => (super.noSuchMethod(
+  _i6.CollectionReference<_i29.Diary> diariesReference() => (super.noSuchMethod(
         Invocation.method(
           #diariesReference,
           [],
         ),
-        returnValue: _FakeCollectionReference_11<_i30.Diary>(),
-      ) as _i6.CollectionReference<_i30.Diary>);
+        returnValue: _FakeCollectionReference_11<_i29.Diary>(),
+      ) as _i6.CollectionReference<_i29.Diary>);
   @override
-  _i6.DocumentReference<_i30.Diary> diaryReference(_i30.Diary? diary) =>
+  _i6.DocumentReference<_i29.Diary> diaryReference(_i29.Diary? diary) =>
       (super.noSuchMethod(
         Invocation.method(
           #diaryReference,
           [diary],
         ),
-        returnValue: _FakeDocumentReference_10<_i30.Diary>(),
-      ) as _i6.DocumentReference<_i30.Diary>);
+        returnValue: _FakeDocumentReference_10<_i29.Diary>(),
+      ) as _i6.DocumentReference<_i29.Diary>);
   @override
   _i6.DocumentReference<Object?> userPrivateRawReference() =>
       (super.noSuchMethod(
@@ -1291,31 +1080,31 @@ class MockDatabaseConnection extends _i1.Mock
         returnValue: _FakeDocumentReference_10<_i4.PillSheetGroup>(),
       ) as _i6.DocumentReference<_i4.PillSheetGroup>);
   @override
-  _i6.CollectionReference<_i31.Schedule> schedulesReference() =>
+  _i6.CollectionReference<_i30.Schedule> schedulesReference() =>
       (super.noSuchMethod(
         Invocation.method(
           #schedulesReference,
           [],
         ),
-        returnValue: _FakeCollectionReference_11<_i31.Schedule>(),
-      ) as _i6.CollectionReference<_i31.Schedule>);
+        returnValue: _FakeCollectionReference_11<_i30.Schedule>(),
+      ) as _i6.CollectionReference<_i30.Schedule>);
   @override
-  _i6.DocumentReference<_i31.Schedule> scheduleReference(String? scheduleID) =>
+  _i6.DocumentReference<_i30.Schedule> scheduleReference(String? scheduleID) =>
       (super.noSuchMethod(
         Invocation.method(
           #scheduleReference,
           [scheduleID],
         ),
-        returnValue: _FakeDocumentReference_10<_i31.Schedule>(),
-      ) as _i6.DocumentReference<_i31.Schedule>);
+        returnValue: _FakeDocumentReference_10<_i30.Schedule>(),
+      ) as _i6.DocumentReference<_i30.Schedule>);
   @override
-  _i6.DocumentReference<_i32.PilllAds?> pilllAds() => (super.noSuchMethod(
+  _i6.DocumentReference<_i31.PilllAds?> pilllAds() => (super.noSuchMethod(
         Invocation.method(
           #pilllAds,
           [],
         ),
-        returnValue: _FakeDocumentReference_10<_i32.PilllAds?>(),
-      ) as _i6.DocumentReference<_i32.PilllAds?>);
+        returnValue: _FakeDocumentReference_10<_i31.PilllAds?>(),
+      ) as _i6.DocumentReference<_i31.PilllAds?>);
   @override
   _i13.Future<T> transaction<T>(
           _i6.TransactionHandler<T>? transactionHandler) =>
