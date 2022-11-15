@@ -1,7 +1,6 @@
 import 'dart:io';
 
 import 'package:firebase_auth/firebase_auth.dart' as auth;
-import 'package:pilll/database/user.dart';
 import 'package:pilll/entity/pill_sheet_group.codegen.dart';
 import 'package:pilll/database/database.dart';
 import 'package:pilll/entity/setting.codegen.dart';
@@ -32,13 +31,12 @@ Future<String> debugInfo(String separator) async {
 
   User? user;
   try {
-    user = await UserDatastore(databaseConnection).fetch();
+    user = (await databaseConnection.userReference().get()).data();
   } catch (_) {}
 
   PillSheetGroup? pillSheetGroup;
   try {
-    pillSheetGroup =
-        await PillSheetGroupDatastore(databaseConnection).fetchLatest();
+    pillSheetGroup = await PillSheetGroupDatastore(databaseConnection).fetchLatest();
   } catch (_) {}
 
   Setting? setting;
@@ -60,14 +58,10 @@ Future<String> debugInfo(String separator) async {
   final Map<String, dynamic> activedPillSheetDebugInfo = <String, dynamic>{};
   if (activedPillSheet != null) {
     activedPillSheetDebugInfo["id"] = activedPillSheet.id;
-    activedPillSheetDebugInfo["beginingDate"] =
-        activedPillSheet.beginingDate.toIso8601String();
-    activedPillSheetDebugInfo["lastTakenDate"] =
-        activedPillSheet.lastTakenDate?.toIso8601String();
-    activedPillSheetDebugInfo["createdAt"] =
-        activedPillSheet.createdAt?.toIso8601String();
-    activedPillSheetDebugInfo["deletedAt"] =
-        activedPillSheet.deletedAt?.toIso8601String();
+    activedPillSheetDebugInfo["beginingDate"] = activedPillSheet.beginingDate.toIso8601String();
+    activedPillSheetDebugInfo["lastTakenDate"] = activedPillSheet.lastTakenDate?.toIso8601String();
+    activedPillSheetDebugInfo["createdAt"] = activedPillSheet.createdAt?.toIso8601String();
+    activedPillSheetDebugInfo["deletedAt"] = activedPillSheet.deletedAt?.toIso8601String();
   }
 
   final contents = [
