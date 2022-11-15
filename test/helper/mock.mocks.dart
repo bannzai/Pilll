@@ -29,6 +29,7 @@ import 'package:pilll/provider/pill_sheet_group.dart' as _i14;
 import 'package:pilll/provider/pill_sheet_modified_history.dart' as _i17;
 import 'package:pilll/provider/premium_and_trial.codegen.dart' as _i4;
 import 'package:pilll/provider/setting.dart' as _i19;
+import 'package:pilll/provider/user.dart' as _i26;
 import 'package:pilll/service/day.dart' as _i9;
 
 // ignore_for_file: type=lint
@@ -773,4 +774,28 @@ class MockDatabaseConnection extends _i1.Mock
         ),
         returnValue: _FakeWriteBatch_2(),
       ) as _i3.WriteBatch);
+}
+
+/// A class which mocks [EndInitialSetting].
+///
+/// See the documentation for Mockito's code generation for more information.
+class MockEndInitialSetting extends _i1.Mock implements _i26.EndInitialSetting {
+  MockEndInitialSetting() {
+    _i1.throwOnMissingStub(this);
+  }
+
+  @override
+  _i2.DatabaseConnection get databaseConnection => (super.noSuchMethod(
+        Invocation.getter(#databaseConnection),
+        returnValue: _FakeDatabaseConnection_1(),
+      ) as _i2.DatabaseConnection);
+  @override
+  _i12.Future<void> call(_i6.Setting? setting) => (super.noSuchMethod(
+        Invocation.method(
+          #call,
+          [setting],
+        ),
+        returnValue: Future<void>.value(),
+        returnValueForMissingStub: Future<void>.value(),
+      ) as _i12.Future<void>);
 }
