@@ -1,13 +1,14 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_hooks/flutter_hooks.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
 import 'package:pilll/analytics.dart';
 import 'package:pilll/components/atoms/buttons.dart';
 import 'package:pilll/components/atoms/color.dart';
 import 'package:pilll/components/atoms/font.dart';
 import 'package:pilll/components/atoms/text_color.dart';
+import 'package:pilll/database/user.dart';
 import 'package:pilll/domain/premium_function_survey/premium_function_survey_element.dart';
 import 'package:pilll/domain/premium_function_survey/premium_function_survey_element_type.dart';
-import 'package:pilll/domain/premium_function_survey/premium_function_survey_store.dart';
 import 'package:pilll/error/error_alert.dart';
 import 'package:pilll/util/links.dart';
 import 'package:url_launcher/url_launcher.dart';
@@ -17,8 +18,10 @@ class PremiumFunctionSurveyPage extends HookConsumerWidget {
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {
-    final store = ref.watch(premiumFunctionSurveyStoreProvider.notifier);
-    final state = ref.watch(premiumFunctionSurveyStoreProvider);
+    final message = useState("");
+    final selectedElements = useState<List<PremiumFunctionSurveyElementType>>([]);
+
+    final sendPremiumFunctionSurvey = ref.watch(sendPremiumFunctionSurveyProvider);
 
     return Scaffold(
       backgroundColor: PilllColors.background,
@@ -64,11 +67,7 @@ class PremiumFunctionSurveyPage extends HookConsumerWidget {
                       await launchUrl(Uri.parse(preimumLink));
                     },
                     child: const Text("プレミアム機能の詳細はこちら",
-                        style: TextStyle(
-                            fontSize: 12,
-                            fontFamily: FontFamily.japanese,
-                            fontWeight: FontWeight.w400,
-                            color: TextColor.primary)),
+                        style: TextStyle(fontSize: 12, fontFamily: FontFamily.japanese, fontWeight: FontWeight.w400, color: TextColor.primary)),
                   ),
                   const SizedBox(height: 24),
                   Column(
@@ -76,9 +75,8 @@ class PremiumFunctionSurveyPage extends HookConsumerWidget {
                     children: [
                       ...PremiumFunctionSurveyElementType.values.map(
                         (e) => PremiumFunctionSurveyElement(
-                          store: store,
-                          state: state,
                           element: e,
+                          selectedElements: selectedElements,
                         ),
                       ),
                     ],
@@ -89,11 +87,7 @@ class PremiumFunctionSurveyPage extends HookConsumerWidget {
                     children: [
                       const Text(
                         "その他ご意見等あれば教えて下さい",
-                        style: TextStyle(
-                            color: TextColor.main,
-                            fontFamily: FontFamily.japanese,
-                            fontSize: 12,
-                            fontWeight: FontWeight.w500),
+                        style: TextStyle(color: TextColor.main, fontFamily: FontFamily.japanese, fontSize: 12, fontWeight: FontWeight.w500),
                       ),
                       const SizedBox(height: 10),
                       TextField(
@@ -110,7 +104,7 @@ class PremiumFunctionSurveyPage extends HookConsumerWidget {
                           ),
                         ),
                         onChanged: (text) {
-                          store.inputMessage(text);
+                          message.value = text;
                         },
                       ),
                     ],
@@ -120,10 +114,9 @@ class PremiumFunctionSurveyPage extends HookConsumerWidget {
                     padding: const EdgeInsets.only(bottom: 44),
                     child: PrimaryButton(
                       onPressed: () async {
-                        analytics.logEvent(
-                            name: "send_premium_function_survey");
+                        analytics.logEvent(name: "send_premium_function_survey");
                         try {
-                          await store.send();
+                          await sendPremiumFunctionSurvey(selectedElements.value, message.value);
                           Navigator.of(context).pop();
                         } catch (error) {
                           showErrorAlert(context, error);

@@ -56,16 +56,6 @@ class UserDatastore {
       UserFirestoreFieldKeys.isPremium: isActivated,
     }, SetOptions(merge: true));
   }
-
-  Future<void> sendPremiumFunctionSurvey(List<PremiumFunctionSurveyElementType> elements, String message) async {
-    final PremiumFunctionSurvey premiumFunctionSurvey = PremiumFunctionSurvey(
-      elements: elements,
-      message: message,
-    );
-    return _database
-        .userPrivateRawReference()
-        .set({UserPrivateFirestoreFieldKeys.premiumFunctionSurvey: premiumFunctionSurvey.toJson()}, SetOptions(merge: true));
-  }
 }
 
 final fetchOrCreateUserProvider = Provider((ref) => FetchOrCreateUser(ref.watch(databaseProvider)));
@@ -107,6 +97,23 @@ class FetchOrCreateUser {
       },
       SetOptions(merge: true),
     );
+  }
+}
+
+final sendPremiumFunctionSurveyProvider = Provider((ref) => SendPremiumFunctionSurvey(ref.watch(databaseProvider)));
+
+class SendPremiumFunctionSurvey {
+  final DatabaseConnection databaseConnection;
+  SendPremiumFunctionSurvey(this.databaseConnection);
+
+  Future<void> call(List<PremiumFunctionSurveyElementType> elements, String message) async {
+    final PremiumFunctionSurvey premiumFunctionSurvey = PremiumFunctionSurvey(
+      elements: elements,
+      message: message,
+    );
+    return databaseConnection
+        .userPrivateRawReference()
+        .set({UserPrivateFirestoreFieldKeys.premiumFunctionSurvey: premiumFunctionSurvey.toJson()}, SetOptions(merge: true));
   }
 }
 
