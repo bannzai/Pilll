@@ -87,7 +87,9 @@ class Root extends HookConsumerWidget {
 
             unawaited(FirebaseCrashlytics.instance.setUserIdentifier(firebaseUser.uid));
             unawaited(firebaseAnalytics.setUserId(id: firebaseUser.uid));
-            unawaited(initializePurchase(firebaseUser.uid));
+
+            // Keep call initialPurchase before logIn.
+            await initializePurchase(firebaseUser.uid);
             unawaited(Purchases.logIn(firebaseUser.uid));
           } catch (e, st) {
             errorLogger.recordError(e, st);
