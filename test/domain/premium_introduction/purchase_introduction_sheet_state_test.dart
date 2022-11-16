@@ -1,6 +1,5 @@
 import 'package:pilll/analytics.dart';
 import 'package:flutter_test/flutter_test.dart';
-import 'package:pilll/domain/premium_introduction/premium_introduction_state.codegen.dart';
 import 'package:purchases_flutter/purchases_flutter.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
