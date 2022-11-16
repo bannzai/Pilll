@@ -87,8 +87,8 @@ class Root extends HookConsumerWidget {
 
             unawaited(FirebaseCrashlytics.instance.setUserIdentifier(firebaseUser.uid));
             unawaited(firebaseAnalytics.setUserId(id: firebaseUser.uid));
-            unawaited(Purchases.logIn(firebaseUser.uid));
             unawaited(initializePurchase(firebaseUser.uid));
+            unawaited(Purchases.logIn(firebaseUser.uid));
           } catch (e, st) {
             errorLogger.recordError(e, st);
             error.value = LaunchException("認証時にエラーが発生しました\n${ErrorMessages.connection}\n詳細:", e);
