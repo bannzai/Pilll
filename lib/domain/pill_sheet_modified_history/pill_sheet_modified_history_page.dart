@@ -5,6 +5,7 @@ import 'package:hooks_riverpod/hooks_riverpod.dart';
 import 'package:pilll/components/atoms/color.dart';
 import 'package:pilll/components/atoms/text_color.dart';
 import 'package:pilll/components/molecules/indicator.dart';
+import 'package:pilll/entity/pill_sheet_modified_history.codegen.dart';
 import 'package:pilll/provider/database.dart';
 import 'package:pilll/domain/calendar/components/pill_sheet_modified_history/pill_sheet_modified_history_list.dart';
 import 'package:pilll/domain/calendar/components/pill_sheet_modified_history/pill_sheet_modified_history_list_header.dart';
@@ -21,74 +22,72 @@ class PillSheetModifiedHistoriesPage extends HookConsumerWidget {
 
     final loadingNext = useState(false);
     final afterCursor = useState<DateTime?>(null);
+    final histories = useState<List<PillSheetModifiedHistory>>([]);
     final pillSheetModifiedHistoryAsyncValue = ref.watch(pillSheetModifiedHistoriesProvider(afterCursor.value));
     useEffect(() {
       loadingNext.value = false;
+
+      final pillSheetModifiedHistoriesValue = pillSheetModifiedHistoryAsyncValue.asData?.value;
+      if (pillSheetModifiedHistoriesValue != null) {
+        histories.value = [...histories.value, ...pillSheetModifiedHistoriesValue];
+      }
       return null;
     }, [pillSheetModifiedHistoryAsyncValue.asData?.value]);
 
-    return AsyncValueGroup.group2(
-      pillSheetModifiedHistoryAsyncValue,
-      ref.watch(premiumAndTrialProvider),
-    ).when(
-      error: (error, _) => UniversalErrorPage(
-        error: error,
-        child: null,
-        reload: () => ref.refresh(databaseProvider),
-      ),
-      loading: () => const ScaffoldIndicator(),
-      data: (data) {
-        final pillSheetModifiedHistories = data.t1;
-        final premiumAndTrial = data.t2;
-
-        return Scaffold(
-          backgroundColor: PilllColors.white,
-          appBar: AppBar(
-            leading: IconButton(
-              icon: const Icon(Icons.arrow_back, color: Colors.black),
-              onPressed: () => Navigator.of(context).pop(),
-            ),
-            title: const Text(
-              "服用履歴",
-              style: TextStyle(color: TextColor.main),
-            ),
-            centerTitle: false,
-            backgroundColor: PilllColors.white,
+    return ref.watch(premiumAndTrialProvider).when(
+          error: (error, _) => UniversalErrorPage(
+            error: error,
+            child: null,
+            reload: () => ref.refresh(databaseProvider),
           ),
-          body: SafeArea(
-            child: NotificationListener<ScrollNotification>(
-              onNotification: (notification) {
-                if (!loadingNext.value &&
-                    notification.metrics.pixels >= notification.metrics.maxScrollExtent &&
-                    pillSheetModifiedHistories.isNotEmpty) {
-                  loadingNext.value = true;
-                  afterCursor.value = pillSheetModifiedHistories.last.estimatedEventCausingDate;
-                }
-                return true;
-              },
-              child: Container(
-                padding: const EdgeInsets.only(left: 24, right: 24, top: 24),
-                child: Column(
-                  mainAxisSize: MainAxisSize.min,
-                  children: [
-                    const PillSheetModifiedHisotiryListHeader(),
-                    const SizedBox(height: 4),
-                    Expanded(
-                      child: PillSheetModifiedHistoryList(
-                        padding: const EdgeInsets.only(bottom: 20),
-                        scrollPhysics: const AlwaysScrollableScrollPhysics(),
-                        pillSheetModifiedHistories: pillSheetModifiedHistories,
-                        premiumAndTrial: premiumAndTrial,
-                      ),
+          loading: () => const ScaffoldIndicator(),
+          data: (premiumAndTrial) {
+            return Scaffold(
+              backgroundColor: PilllColors.white,
+              appBar: AppBar(
+                leading: IconButton(
+                  icon: const Icon(Icons.arrow_back, color: Colors.black),
+                  onPressed: () => Navigator.of(context).pop(),
+                ),
+                title: const Text(
+                  "服用履歴",
+                  style: TextStyle(color: TextColor.main),
+                ),
+                centerTitle: false,
+                backgroundColor: PilllColors.white,
+              ),
+              body: SafeArea(
+                child: NotificationListener<ScrollNotification>(
+                  onNotification: (notification) {
+                    if (!loadingNext.value && notification.metrics.pixels >= notification.metrics.maxScrollExtent && histories.value.isNotEmpty) {
+                      loadingNext.value = true;
+                      afterCursor.value = histories.value.last.estimatedEventCausingDate;
+                    }
+                    return true;
+                  },
+                  child: Container(
+                    padding: const EdgeInsets.only(left: 24, right: 24, top: 24),
+                    child: Column(
+                      mainAxisSize: MainAxisSize.min,
+                      children: [
+                        const PillSheetModifiedHisotiryListHeader(),
+                        const SizedBox(height: 4),
+                        Expanded(
+                          child: PillSheetModifiedHistoryList(
+                            padding: const EdgeInsets.only(bottom: 20),
+                            scrollPhysics: const AlwaysScrollableScrollPhysics(),
+                            pillSheetModifiedHistories: histories.value,
+                            premiumAndTrial: premiumAndTrial,
+                          ),
+                        ),
+                      ],
                     ),
-                  ],
+                  ),
                 ),
               ),
-            ),
-          ),
+            );
+          },
         );
-      },
-    );
   }
 }
 

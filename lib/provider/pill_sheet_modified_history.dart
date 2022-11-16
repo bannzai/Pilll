@@ -3,16 +3,27 @@ import 'package:hooks_riverpod/hooks_riverpod.dart';
 import 'package:pilll/provider/database.dart';
 import 'package:pilll/entity/pill_sheet_modified_history.codegen.dart';
 
-final pillSheetModifiedHistoriesProvider = StreamProvider.family((ref, DateTime? afterCursor) {
-  return ref
-      .watch(databaseProvider)
-      .pillSheetModifiedHistoriesReference()
-      .orderBy(PillSheetModifiedHistoryFirestoreKeys.estimatedEventCausingDate, descending: true)
-      .startAfter([afterCursor])
-      .limit(20)
-      .snapshots()
-      .map((reference) => reference.docs)
-      .map((docs) => docs.map((doc) => doc.data()).toList());
+final pillSheetModifiedHistoriesProvider = StreamProvider.family.autoDispose((ref, DateTime? afterCursor) {
+  if (afterCursor != null) {
+    return ref
+        .watch(databaseProvider)
+        .pillSheetModifiedHistoriesReference()
+        .orderBy(PillSheetModifiedHistoryFirestoreKeys.estimatedEventCausingDate, descending: true)
+        .startAfter([afterCursor])
+        .limit(20)
+        .snapshots()
+        .map((reference) => reference.docs)
+        .map((docs) => docs.map((doc) => doc.data()).toList());
+  } else {
+    return ref
+        .watch(databaseProvider)
+        .pillSheetModifiedHistoriesReference()
+        .orderBy(PillSheetModifiedHistoryFirestoreKeys.estimatedEventCausingDate, descending: true)
+        .limit(20)
+        .snapshots()
+        .map((reference) => reference.docs)
+        .map((docs) => docs.map((doc) => doc.data()).toList());
+  }
 });
 final pillSheetModifiedHistoriesWithLimitProvider = StreamProvider.family((ref, int limit) {
   return ref
