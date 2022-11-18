@@ -285,18 +285,20 @@ class RecordPageAsyncAction {
           [updatedRestDuration],
         ),
     );
-    final updatedPillSheets = pillSheetGroup.pillSheets.map((pillSheet) {
+    final updatedPillSheets = <PillSheet>[];
+    for (final pillSheet in pillSheetGroup.pillSheets) {
       if (pillSheet.id == activedPillSheet.id) {
-        return updatedPillSheet;
+        updatedPillSheets.add(updatedPillSheet);
       } else if (pillSheet.groupIndex > activedPillSheet.groupIndex) {
-        final beforePillSheet = pillSheetGroup.pillSheets[pillSheet.groupIndex - 1];
-        return pillSheet.copyWith(
-          beginingDate: beforePillSheet.estimatedEndTakenDate.add(const Duration(days: 1)),
-        );
+        // 前回のピルシートのbeginDateが更新され、estimatedEndTakenDateが変わっている場合も考慮する必要があるのでupdatedPillSheetsでアクセスする
+        final beforeUpdatedPillSheet = updatedPillSheets[pillSheet.groupIndex - 1];
+        updatedPillSheets.add(pillSheet.copyWith(
+          beginingDate: beforeUpdatedPillSheet.estimatedEndTakenDate.add(const Duration(days: 1)),
+        ));
       } else {
-        return pillSheet;
+        updatedPillSheets.add(pillSheet);
       }
-    }).toList();
+    }
 
     final batch = _batchFactory.batch();
     _pillSheetDatastore.update(batch, updatedPillSheets);
