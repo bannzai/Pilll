@@ -285,11 +285,22 @@ class RecordPageAsyncAction {
           [updatedRestDuration],
         ),
     );
-    final updatedPillSheetGroup = pillSheetGroup.replaced(updatedPillSheet);
+    final updatedPillSheets = pillSheetGroup.pillSheets.map((pillSheet) {
+      if (pillSheet.id == activedPillSheet.id) {
+        return updatedPillSheet;
+      } else if (pillSheet.groupIndex > activedPillSheet.groupIndex) {
+        final beforePillSheet = pillSheetGroup.pillSheets[pillSheet.groupIndex - 1];
+        return pillSheet.copyWith(
+          beginingDate: beforePillSheet.estimatedEndTakenDate.add(const Duration(days: 1)),
+        );
+      } else {
+        return pillSheet;
+      }
+    }).toList();
 
     final batch = _batchFactory.batch();
-    _pillSheetDatastore.update(batch, updatedPillSheetGroup.pillSheets);
-    _pillSheetGroupDatastore.updateWithBatch(batch, updatedPillSheetGroup);
+    _pillSheetDatastore.update(batch, updatedPillSheets);
+    _pillSheetGroupDatastore.updateWithBatch(batch, pillSheetGroup.copyWith(pillSheets: updatedPillSheets));
     _pillSheetModifiedHistoryDatastore.add(
       batch,
       PillSheetModifiedHistoryServiceActionFactory.createEndedRestDurationAction(
