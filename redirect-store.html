@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+<script>
+function getMobileOperatingSystem() {
+  var userAgent = navigator.userAgent || navigator.vendor || window.opera;
+      // Windows Phone must come first because its UA also contains "Android"
+    if (/windows phone/i.test(userAgent)) {
+        return "Windows Phone";
+    }
+    if (/android/i.test(userAgent)) {
+        return "Android";
+    }
+    // iOS detection from: http://stackoverflow.com/a/9039885/177710
+    if (/iPad|iPhone|iPod/.test(userAgent) && !window.MSStream) {
+        return "iOS";
+    }
+    return "unknown";
+}</script>
+<script>
+function DetectAndServe(){
+    let os = getMobileOperatingSystem();
+    if (os == "Android") {
+        window.location.href = "https://play.google.com/store/apps/details?id=com.mizuki.Ohashi.Pilll";
+    } else if (os == "iOS") {
+        window.location.href = "https://apps.apple.com/jp/app/pilll-%E3%83%94%E3%83%AB%E3%83%AA%E3%83%9E%E3%82%A4%E3%83%B3%E3%83%80%E3%83%BC%E3%81%B4%E3%82%8B%E3%82%8B/id1405931017";
+    } else if (os == "Windows Phone") {
+        window.location.href = "https://play.google.com/store/apps/details?id=com.mizuki.Ohashi.Pilll";
+    } else {
+        window.location.href = "https://apps.apple.com/jp/app/pilll-%E3%83%94%E3%83%AB%E3%83%AA%E3%83%9E%E3%82%A4%E3%83%B3%E3%83%80%E3%83%BC%E3%81%B4%E3%82%8B%E3%82%8B/id1405931017";
+    }
+}
+</script>
+</head>
+<body onload="DetectAndServe()">
+</body>
+</html>
