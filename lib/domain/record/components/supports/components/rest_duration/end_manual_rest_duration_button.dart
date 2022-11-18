@@ -71,9 +71,22 @@ class EndManualRestDurationButton extends HookConsumerWidget {
           [updatedRestDuration],
         ),
     );
-    final updatedPillSheetGroup = pillSheetGroup.replaced(updatedPillSheet);
-    batchSetPillSheets(batch, updatedPillSheetGroup.pillSheets);
-    batchSetPillSheetGroup(batch, updatedPillSheetGroup);
+    final updatedPillSheets = <PillSheet>[];
+    for (final pillSheet in pillSheetGroup.pillSheets) {
+      if (pillSheet.id == activedPillSheet.id) {
+        updatedPillSheets.add(updatedPillSheet);
+      } else if (pillSheet.groupIndex > activedPillSheet.groupIndex) {
+        // 前回のピルシートのbeginDateが更新され、estimatedEndTakenDateが変わっている場合も考慮する必要があるのでupdatedPillSheetsでアクセスする
+        final beforeUpdatedPillSheet = updatedPillSheets[pillSheet.groupIndex - 1];
+        updatedPillSheets.add(pillSheet.copyWith(
+          beginingDate: beforeUpdatedPillSheet.estimatedEndTakenDate.add(const Duration(days: 1)),
+        ));
+      } else {
+        updatedPillSheets.add(pillSheet);
+      }
+    }
+    batchSetPillSheets(batch, updatedPillSheets);
+    batchSetPillSheetGroup(batch, pillSheetGroup.copyWith(pillSheets: updatedPillSheets));
     batchSetPillSheetModifiedHistory(
       batch,
       PillSheetModifiedHistoryServiceActionFactory.createEndedRestDurationAction(
