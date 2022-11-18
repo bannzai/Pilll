@@ -157,7 +157,9 @@ class RecordPagePillSheet extends StatelessWidget {
       pageIndex: pageIndex,
     );
     if (isPremiumOrTrial && setting.pillSheetAppearanceMode == PillSheetAppearanceMode.date) {
-      final DateTime date = pillSheet.displayPillTakeDate(pillNumberIntoPillSheet);
+      final DateTime date = pillSheet.displayPillTakeDate(
+          pillNumberIntoPillSheet: pillNumberIntoPillSheet,
+          beforePillSheetEstimateLastTakenDate: pillSheetGroup.beforeActivePillSheet?.estimatedEndTakenDate);
 
       if (setting.pillNumberForFromMenstruation == 0 || setting.durationMenstruation == 0) {
         return PlainPillDate(date: date);
