@@ -21,7 +21,8 @@ class RecordPageRestDurationDialog extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return AlertDialog(
-      shape: const RoundedRectangleBorder(borderRadius: BorderRadius.all(Radius.circular(20.0))),
+      shape: const RoundedRectangleBorder(
+          borderRadius: BorderRadius.all(Radius.circular(20.0))),
       contentPadding: const EdgeInsets.only(left: 24, right: 24, top: 32),
       actionsPadding: const EdgeInsets.only(left: 24, right: 24),
       content: Column(
@@ -29,7 +30,8 @@ class RecordPageRestDurationDialog extends StatelessWidget {
         children: <Widget>[
           title,
           const SizedBox(height: 24),
-          Text("休薬するとピル番号は進みません", style: FontType.assisting.merge(TextColorStyle.main)),
+          Text("休薬するとピル番号は進みません",
+              style: FontType.assisting.merge(TextColorStyle.main)),
           const SizedBox(height: 24),
           SvgPicture.asset("images/explain_rest_duration.svg"),
           const SizedBox(height: 24),
@@ -85,7 +87,10 @@ showRecordPageRestDurationDialog(
   showDialog(
     context: context,
     builder: (context) => RecordPageRestDurationDialog(
-      title: RecordPageRestDurationDialogTitle(appearanceMode: appearanceMode, activedPillSheet: activedPillSheet, pillSheetGroup: pillSheetGroup),
+      title: RecordPageRestDurationDialogTitle(
+          appearanceMode: appearanceMode,
+          activedPillSheet: activedPillSheet,
+          pillSheetGroup: pillSheetGroup),
       onDone: onDone,
     ),
   );
@@ -119,10 +124,8 @@ class RecordPageRestDurationDialogTitle extends StatelessWidget {
       case PillSheetAppearanceMode.number:
         return "${activedPillSheet.lastTakenPillNumber + 1}番";
       case PillSheetAppearanceMode.date:
-        final date = activedPillSheet.displayPillTakeDate(
-          pillNumberIntoPillSheet: activedPillSheet.lastTakenPillNumber + 1,
-          beforePillSheetEstimateLastTakenDate: pillSheetGroup.beforeActivePillSheet?.estimatedEndTakenDate,
-        );
+        final date = activedPillSheet
+            .displayPillTakeDate(activedPillSheet.lastTakenPillNumber + 1);
         final dateString = DateTimeFormatter.monthAndDay(date);
         return dateString;
       case PillSheetAppearanceMode.sequential:

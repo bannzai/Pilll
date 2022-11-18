@@ -1,6 +1,5 @@
 import 'dart:async';
 import 'dart:math';
-import 'package:collection/collection.dart';
 
 import 'package:pilll/database/batch.dart';
 import 'package:pilll/domain/record/util/take_pill.dart';
@@ -85,10 +84,7 @@ class RecordPageAsyncAction {
       return null;
     }
 
-    final takenDate = pillSheet.displayPillTakeDate(
-      pillNumberIntoPillSheet: pillNumberIntoPillSheet,
-      beforePillSheetEstimateLastTakenDate: pillSheetGroup.beforeActivePillSheet?.estimatedEndTakenDate,
-    );
+    final takenDate = pillSheet.displayPillTakeDate(pillNumberIntoPillSheet);
     return _take(takenDate: takenDate, pillSheetGroup: pillSheetGroup);
   }
 
@@ -119,13 +115,7 @@ class RecordPageAsyncAction {
     }
 
     final targetPillSheet = pillSheetGroup.pillSheets[pageIndex];
-    final takenDate = targetPillSheet
-        .displayPillTakeDate(
-          pillNumberIntoPillSheet: pillNumberIntoPillSheet,
-          beforePillSheetEstimateLastTakenDate: pillSheetGroup.beforeActivePillSheet?.estimatedEndTakenDate,
-        )
-        .subtract(const Duration(days: 1))
-        .date();
+    final takenDate = targetPillSheet.displayPillTakeDate(pillNumberIntoPillSheet).subtract(const Duration(days: 1)).date();
 
     final updatedPillSheets = pillSheetGroup.pillSheets.map((pillSheet) {
       final lastTakenDate = pillSheet.lastTakenDate;
