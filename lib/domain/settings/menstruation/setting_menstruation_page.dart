@@ -4,54 +4,57 @@ import 'package:pilll/analytics.dart';
 import 'package:pilll/components/template/setting_menstruation/setting_menstruation_dynamic_description.dart';
 import 'package:pilll/components/template/setting_menstruation/setting_menstruation_page_template.dart';
 import 'package:pilll/components/template/setting_menstruation/setting_menstruation_pill_sheet_list.dart';
-import 'package:pilll/domain/settings/menstruation/setting_menstruation_store.dart';
-import 'package:pilll/domain/settings/setting_page_state_notifier.dart';
+import 'package:pilll/entity/pill_sheet_type.dart';
 import 'package:pilll/entity/setting.codegen.dart';
+import 'package:pilll/provider/setting.dart';
 
 class SettingMenstruationPage extends HookConsumerWidget {
   const SettingMenstruationPage({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {
-    final store = ref.watch(settingMenstruationStoreProvider.notifier);
-    final state = ref.watch(settingStateNotifierProvider).value!;
-    final setting = state.setting;
+    final setting = ref.watch(settingProvider).requireValue;
+    final setSetting = ref.watch(setSettingProvider);
 
     return SettingMenstruationPageTemplate(
       title: "生理について",
       pillSheetList: SettingMenstruationPillSheetList(
         pillSheetTypes: setting.pillSheetEnumTypes,
         appearanceMode: PillSheetAppearanceMode.sequential,
-        selectedPillNumber: (pageIndex) => store.retrieveMenstruationSelectedPillNumber(setting, pageIndex),
-        markSelected: (pageIndex, number) {
+        selectedPillNumber: (pageIndex) {
+          final _passedTotalCount = summarizedPillCountWithPillSheetTypesToEndIndex(pillSheetTypes: setting.pillSheetEnumTypes, endIndex: pageIndex);
+          if (_passedTotalCount >= setting.pillNumberForFromMenstruation) {
+            return setting.pillNumberForFromMenstruation;
+          }
+          final diff = setting.pillNumberForFromMenstruation - _passedTotalCount;
+          if (diff > setting.pillSheetEnumTypes[pageIndex].totalCount) {
+            return null;
+          }
+          return diff;
+        },
+        markSelected: (pageIndex, fromMenstruation) async {
           analytics.logEvent(name: "from_menstruation_setting", parameters: {
-            "number": number,
+            "number": fromMenstruation,
             "page": pageIndex,
           });
-          store.modifyFromMenstruation(
-            setting: setting,
-            pageIndex: pageIndex,
-            fromMenstruation: number,
-          );
+          final offset = summarizedPillCountWithPillSheetTypesToEndIndex(pillSheetTypes: setting.pillSheetEnumTypes, endIndex: pageIndex);
+          final updated = setting.copyWith(pillNumberForFromMenstruation: fromMenstruation + offset);
+          await setSetting(updated);
         },
       ),
       dynamicDescription: SettingMenstruationDynamicDescription(
         pillSheetTypes: setting.pillSheetEnumTypes,
         fromMenstruation: setting.pillNumberForFromMenstruation,
-        fromMenstructionDidDecide: (number) {
-          analytics.logEvent(name: "from_menstruation_initial_setting", parameters: {"number": number});
-          store.modifyFromMenstruationFromPicker(
-            setting: setting,
-            serializedPillNumberIntoGroup: number,
-          );
+        fromMenstructionDidDecide: (serializedPillNumberIntoGroup) async {
+          analytics.logEvent(name: "from_menstruation_initial_setting", parameters: {"number": serializedPillNumberIntoGroup});
+          final updated = setting.copyWith(pillNumberForFromMenstruation: serializedPillNumberIntoGroup);
+          await setSetting(updated);
         },
         durationMenstruation: setting.durationMenstruation,
-        durationMenstructionDidDecide: (number) {
-          analytics.logEvent(name: "duration_menstruation_initial_setting", parameters: {"number": number});
-          store.modifyDurationMenstruation(
-            setting: setting,
-            durationMenstruation: number,
-          );
+        durationMenstructionDidDecide: (durationMenstruation) {
+          analytics.logEvent(name: "duration_menstruation_initial_setting", parameters: {"number": durationMenstruation});
+          final updated = setting.copyWith(durationMenstruation: durationMenstruation);
+          setSetting(updated);
         },
       ),
       doneButton: null,

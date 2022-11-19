@@ -3,44 +3,37 @@ import 'package:hooks_riverpod/hooks_riverpod.dart';
 import 'package:pilll/components/molecules/dots_page_indicator.dart';
 import 'package:pilll/components/organisms/pill_sheet/pill_sheet_view_layout.dart';
 import 'package:pilll/domain/record/components/pill_sheet/record_page_pill_sheet.dart';
-import 'package:pilll/domain/record/record_page_state.codegen.dart';
-import 'package:pilll/domain/record/record_page_state_notifier.dart';
+import 'package:pilll/entity/pill_sheet.codegen.dart';
+import 'package:pilll/entity/pill_sheet_group.codegen.dart';
 import 'package:pilll/entity/pill_sheet_type.dart';
 import 'package:pilll/entity/setting.codegen.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:pilll/provider/premium_and_trial.codegen.dart';
 
 class RecordPagePillSheetList extends HookConsumerWidget {
+  final PillSheetGroup pillSheetGroup;
+  final PillSheet activePillSheet;
+  final Setting setting;
+  final PremiumAndTrial premiumAndTrial;
+
   const RecordPagePillSheetList({
     Key? key,
-    required this.state,
-    required this.store,
+    required this.pillSheetGroup,
+    required this.activePillSheet,
     required this.setting,
+    required this.premiumAndTrial,
   }) : super(key: key);
-
-  final RecordPageState state;
-  final RecordPageStateNotifier store;
-  final Setting setting;
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {
-    final pillSheetGroup = state.pillSheetGroup;
-    if (pillSheetGroup == null) {
-      return Container();
-    }
-
     final pageController = usePageController(
-        initialPage: state.initialPageIndex,
-        viewportFraction: (PillSheetViewLayout.width + 20) /
-            MediaQuery.of(context).size.width);
+        initialPage: activePillSheet.groupIndex, viewportFraction: (PillSheetViewLayout.width + 20) / MediaQuery.of(context).size.width);
     return Column(
       children: [
         SizedBox(
           height: PillSheetViewLayout.calcHeight(
-            PillSheetViewLayout.mostLargePillSheetType(pillSheetGroup.pillSheets
-                    .map((e) => e.pillSheetType)
-                    .toList())
-                .numberOfLineInPillSheet,
+            PillSheetViewLayout.mostLargePillSheetType(pillSheetGroup.pillSheets.map((e) => e.pillSheetType).toList()).numberOfLineInPillSheet,
             false,
           ),
           child: PageView(
@@ -55,9 +48,8 @@ class RecordPagePillSheetList extends HookConsumerWidget {
                       child: RecordPagePillSheet(
                         pillSheetGroup: pillSheetGroup,
                         pillSheet: pillSheet,
-                        store: store,
-                        state: state,
                         setting: setting,
+                        premiumAndTrial: premiumAndTrial,
                       ),
                     ),
                   ];

@@ -4,26 +4,23 @@ import 'package:pilll/domain/record/components/supports/components/appearance_mo
 import 'package:pilll/domain/record/components/supports/components/display_number_setting/display_number_setting_button.dart';
 import 'package:pilll/domain/record/components/supports/components/rest_duration/begin_manual_rest_duration_button.dart';
 import 'package:pilll/domain/record/components/supports/components/rest_duration/end_manual_rest_duration_button.dart';
-import 'package:pilll/domain/record/record_page_state.codegen.dart';
-import 'package:pilll/domain/record/record_page_state_notifier.dart';
 import 'package:pilll/entity/pill_sheet.codegen.dart';
 import 'package:pilll/entity/pill_sheet_group.codegen.dart';
 import 'package:pilll/entity/setting.codegen.dart';
+import 'package:pilll/provider/premium_and_trial.codegen.dart';
 
 class RecordPagePillSheetSupportActions extends StatelessWidget {
-  final RecordPageStateNotifier store;
-  final RecordPageState state;
   final PillSheetGroup pillSheetGroup;
   final PillSheet activedPillSheet;
   final Setting setting;
+  final PremiumAndTrial premiumAndTrial;
 
   const RecordPagePillSheetSupportActions({
     Key? key,
-    required this.store,
-    required this.state,
     required this.pillSheetGroup,
     required this.activedPillSheet,
     required this.setting,
+    required this.premiumAndTrial,
   }) : super(key: key);
 
   @override
@@ -34,13 +31,14 @@ class RecordPagePillSheetSupportActions extends StatelessWidget {
       width: PillSheetViewLayout.width,
       child: Row(
         children: [
-          SwitchingAppearanceMode(store: store, state: state),
+          SwitchingAppearanceMode(
+            setting: setting,
+            premiumAndTrial: premiumAndTrial,
+          ),
           const Spacer(),
-          if (setting.pillSheetAppearanceMode ==
-              PillSheetAppearanceMode.sequential) ...[
+          if (setting.pillSheetAppearanceMode == PillSheetAppearanceMode.sequential) ...[
             DisplayNumberSettingButton(
               pillSheetGroup: pillSheetGroup,
-              store: store,
             ),
           ],
           const Spacer(),
@@ -49,15 +47,11 @@ class RecordPagePillSheetSupportActions extends StatelessWidget {
               restDuration: restDuration,
               activedPillSheet: activedPillSheet,
               pillSheetGroup: pillSheetGroup,
-              store: store,
               didEndRestDuration: () {
-                if (pillSheetGroup.sequentialLastTakenPillNumber > 0 &&
-                    setting.pillSheetAppearanceMode ==
-                        PillSheetAppearanceMode.sequential) {
+                if (pillSheetGroup.sequentialLastTakenPillNumber > 0 && setting.pillSheetAppearanceMode == PillSheetAppearanceMode.sequential) {
                   showEndRestDurationModal(
                     context,
                     pillSheetGroup: pillSheetGroup,
-                    store: store,
                   );
                 } else {
                   ScaffoldMessenger.of(context).showSnackBar(
@@ -76,7 +70,6 @@ class RecordPagePillSheetSupportActions extends StatelessWidget {
               appearanceMode: setting.pillSheetAppearanceMode,
               activedPillSheet: activedPillSheet,
               pillSheetGroup: pillSheetGroup,
-              store: store,
               didBeginRestDuration: () {
                 ScaffoldMessenger.of(context).showSnackBar(
                   const SnackBar(

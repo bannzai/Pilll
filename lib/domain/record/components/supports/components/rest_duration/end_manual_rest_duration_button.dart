@@ -1,18 +1,23 @@
 import 'package:flutter/material.dart';
+import 'package:hooks_riverpod/hooks_riverpod.dart';
 import 'package:pilll/analytics.dart';
 import 'package:pilll/components/atoms/buttons.dart';
 import 'package:pilll/components/atoms/color.dart';
 import 'package:pilll/components/atoms/font.dart';
 import 'package:pilll/components/atoms/text_color.dart';
-import 'package:pilll/domain/record/record_page_state_notifier.dart';
+import 'package:pilll/entity/pill_sheet_modified_history.codegen.dart';
+import 'package:pilll/provider/batch.dart';
 import 'package:pilll/entity/pill_sheet.codegen.dart';
 import 'package:pilll/entity/pill_sheet_group.codegen.dart';
+import 'package:pilll/provider/pill_sheet.dart';
+import 'package:pilll/provider/pill_sheet_group.dart';
+import 'package:pilll/provider/pill_sheet_modified_history.dart';
+import 'package:pilll/util/datetime/day.dart';
 
-class EndManualRestDurationButton extends StatelessWidget {
+class EndManualRestDurationButton extends HookConsumerWidget {
   final RestDuration restDuration;
   final PillSheet activedPillSheet;
   final PillSheetGroup pillSheetGroup;
-  final RecordPageStateNotifier store;
   final VoidCallback didEndRestDuration;
 
   const EndManualRestDurationButton({
@@ -20,12 +25,15 @@ class EndManualRestDurationButton extends StatelessWidget {
     required this.restDuration,
     required this.activedPillSheet,
     required this.pillSheetGroup,
-    required this.store,
     required this.didEndRestDuration,
   }) : super(key: key);
 
   @override
-  Widget build(BuildContext context) {
+  Widget build(BuildContext context, WidgetRef ref) {
+    final batchFactory = ref.watch(batchFactoryProvider);
+    final batchSetPillSheets = ref.watch(batchSetPillSheetsProvider);
+    final batchSetPillSheetGroup = ref.watch(batchSetPillSheetGroupProvider);
+    final batchSetPillSheetModifiedHistory = ref.watch(batchSetPillSheetModifiedHistoryProvider);
     return SizedBox(
       width: 80,
       child: SmallAppOutlinedButton(
@@ -35,10 +43,11 @@ class EndManualRestDurationButton extends StatelessWidget {
             name: "end_manual_rest_duration_pressed",
           );
 
-          await store.asyncAction.endRestDuration(
-            pillSheetGroup: pillSheetGroup,
-            activedPillSheet: activedPillSheet,
-            restDuration: restDuration,
+          await _endRestDuration(
+            batchFactory,
+            batchSetPillSheets: batchSetPillSheets,
+            batchSetPillSheetGroup: batchSetPillSheetGroup,
+            batchSetPillSheetModifiedHistory: batchSetPillSheetModifiedHistory,
           );
 
           didEndRestDuration();
@@ -46,25 +55,66 @@ class EndManualRestDurationButton extends StatelessWidget {
       ),
     );
   }
+
+  Future<void> _endRestDuration(
+    BatchFactory batchFactory, {
+    required BatchSetPillSheets batchSetPillSheets,
+    required BatchSetPillSheetGroup batchSetPillSheetGroup,
+    required BatchSetPillSheetModifiedHistory batchSetPillSheetModifiedHistory,
+  }) async {
+    final batch = batchFactory.batch();
+    final updatedRestDuration = restDuration.copyWith(endDate: now());
+    final updatedPillSheet = activedPillSheet.copyWith(
+      restDurations: [...activedPillSheet.restDurations]..replaceRange(
+          activedPillSheet.restDurations.length - 1,
+          activedPillSheet.restDurations.length,
+          [updatedRestDuration],
+        ),
+    );
+    final updatedPillSheets = <PillSheet>[];
+    for (final pillSheet in pillSheetGroup.pillSheets) {
+      if (pillSheet.id == activedPillSheet.id) {
+        updatedPillSheets.add(updatedPillSheet);
+      } else if (pillSheet.groupIndex > activedPillSheet.groupIndex) {
+        // 前回のピルシートのbeginDateが更新され、estimatedEndTakenDateが変わっている場合も考慮する必要があるのでupdatedPillSheetsでアクセスする
+        final beforeUpdatedPillSheet = updatedPillSheets[pillSheet.groupIndex - 1];
+        updatedPillSheets.add(pillSheet.copyWith(
+          beginingDate: beforeUpdatedPillSheet.estimatedEndTakenDate.add(const Duration(days: 1)),
+        ));
+      } else {
+        updatedPillSheets.add(pillSheet);
+      }
+    }
+    batchSetPillSheets(batch, updatedPillSheets);
+    batchSetPillSheetGroup(batch, pillSheetGroup.copyWith(pillSheets: updatedPillSheets));
+    batchSetPillSheetModifiedHistory(
+      batch,
+      PillSheetModifiedHistoryServiceActionFactory.createEndedRestDurationAction(
+        pillSheetGroupID: pillSheetGroup.id,
+        before: activedPillSheet,
+        after: updatedPillSheet,
+        restDuration: updatedRestDuration,
+      ),
+    );
+    await batch.commit();
+  }
 }
 
-class EndRestDurationModal extends StatelessWidget {
+class EndRestDurationModal extends HookConsumerWidget {
   final PillSheetGroup pillSheetGroup;
-  final RecordPageStateNotifier store;
 
   const EndRestDurationModal({
     Key? key,
     required this.pillSheetGroup,
-    required this.store,
   }) : super(key: key);
 
   @override
-  Widget build(BuildContext context) {
+  Widget build(BuildContext context, WidgetRef ref) {
     final lastTakenPillNumber = pillSheetGroup.sequentialLastTakenPillNumber;
+    final setPillSheetGroup = ref.watch(setPillSheetGroupProvider);
     return Center(
       child: Container(
-        constraints:
-            BoxConstraints(maxWidth: MediaQuery.of(context).size.width - 32),
+        constraints: BoxConstraints(maxWidth: MediaQuery.of(context).size.width - 32),
         decoration: BoxDecoration(
           color: PilllColors.white,
           borderRadius: BorderRadius.circular(20),
@@ -122,8 +172,7 @@ class EndRestDurationModal extends StatelessWidget {
                 Expanded(
                   child: AppOutlinedButton(
                     onPressed: () async {
-                      analytics.logEvent(
-                          name: "display_number_setting_modal_no");
+                      analytics.logEvent(name: "display_number_setting_modal_no");
                       Navigator.of(context).pop();
                     },
                     text: "いいえ",
@@ -133,12 +182,8 @@ class EndRestDurationModal extends StatelessWidget {
                 Expanded(
                   child: AppOutlinedButton(
                     onPressed: () async {
-                      analytics.logEvent(
-                          name: "display_number_setting_modal_yes");
-                      await store.asyncAction.setDisplayNumberSettingEndNumber(
-                        end: lastTakenPillNumber,
-                        pillSheetGroup: pillSheetGroup,
-                      );
+                      analytics.logEvent(name: "display_number_setting_modal_yes");
+                      await _setDisplayNumberSettingEndNumber(setPillSheetGroup, end: lastTakenPillNumber, pillSheetGroup: pillSheetGroup);
                       Navigator.of(context).pop();
                     },
                     text: "はい",
@@ -151,18 +196,33 @@ class EndRestDurationModal extends StatelessWidget {
       ),
     );
   }
+
+  Future<void> _setDisplayNumberSettingEndNumber(
+    SetPillSheetGroup setPillSheetGroup, {
+    required int end,
+    required PillSheetGroup pillSheetGroup,
+  }) async {
+    final offsetPillNumber = pillSheetGroup.displayNumberSetting;
+    final PillSheetGroup updatedPillSheetGroup;
+    if (offsetPillNumber == null) {
+      final newDisplayNumberSetting = PillSheetGroupDisplayNumberSetting(endPillNumber: end);
+      updatedPillSheetGroup = pillSheetGroup.copyWith(displayNumberSetting: newDisplayNumberSetting);
+    } else {
+      final newDisplayNumberSetting = offsetPillNumber.copyWith(endPillNumber: end);
+      updatedPillSheetGroup = pillSheetGroup.copyWith(displayNumberSetting: newDisplayNumberSetting);
+    }
+    await setPillSheetGroup(updatedPillSheetGroup);
+  }
 }
 
 void showEndRestDurationModal(
   BuildContext context, {
   required PillSheetGroup pillSheetGroup,
-  required RecordPageStateNotifier store,
 }) {
   showDialog(
     context: context,
     builder: (context) => EndRestDurationModal(
       pillSheetGroup: pillSheetGroup,
-      store: store,
     ),
   );
 }

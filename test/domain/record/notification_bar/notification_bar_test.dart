@@ -1,12 +1,13 @@
+import 'dart:async';
+
 import 'package:pilll/analytics.dart';
-import 'package:pilll/database/pilll_ads.dart';
+import 'package:pilll/provider/pill_sheet_group.dart';
+import 'package:pilll/provider/pilll_ads.dart';
 import 'package:pilll/domain/premium_introduction/util/discount_deadline.dart';
 import 'package:pilll/domain/record/components/notification_bar/components/discount_price_deadline.dart';
 import 'package:pilll/domain/record/components/notification_bar/components/ended_pill_sheet.dart';
 import 'package:pilll/domain/record/components/notification_bar/components/pilll_ads.dart';
 import 'package:pilll/domain/record/components/notification_bar/notification_bar.dart';
-import 'package:pilll/domain/record/components/notification_bar/notification_bar_state.codegen.dart';
-import 'package:pilll/domain/record/components/notification_bar/state_notifier.dart';
 import 'package:pilll/domain/record/components/notification_bar/components/premium_trial_limit.dart';
 import 'package:pilll/domain/record/components/notification_bar/components/recommend_signup.dart';
 import 'package:pilll/domain/record/components/notification_bar/components/recommend_signup_premium.dart';
@@ -17,6 +18,7 @@ import 'package:pilll/entity/pill_sheet_type.dart';
 import 'package:pilll/entity/pilll_ads.codegen.dart';
 import 'package:pilll/provider/locale.dart';
 import 'package:pilll/provider/premium_and_trial.codegen.dart';
+import 'package:pilll/service/auth.dart';
 import 'package:pilll/service/day.dart';
 import 'package:pilll/util/datetime/day.dart';
 import 'package:pilll/util/environment.dart';
@@ -30,18 +32,16 @@ import 'package:shared_preferences/shared_preferences.dart';
 
 import '../../../helper/mock.mocks.dart';
 
-class FakeState extends Fake implements NotificationBarState {}
-
 void main() {
   const totalCountOfActionForTakenPillForLongTimeUser = 14;
   setUp(() {
     TestWidgetsFlutterBinding.ensureInitialized();
-    SharedPreferences.setMockInitialValues({BoolKey.recommendedSignupNotificationIsAlreadyShow: true});
     initializeDateFormatting('ja_JP');
     Environment.isTest = true;
     analytics = MockAnalytics();
     WidgetsBinding.instance.renderView.configuration = TestViewConfiguration(size: const Size(375.0, 667.0));
   });
+
   group('notification bar appearance content type', () {
     group('for it is not premium user', () {
       testWidgets('#DiscountPriceDeadline', (WidgetTester tester) async {
@@ -61,29 +61,30 @@ void main() {
           ),
         );
         final pillSheetGroup = PillSheetGroup(pillSheetIDs: ["1"], pillSheets: [pillSheet], createdAt: now());
-        final state = NotificationBarState(
-          latestPillSheetGroup: pillSheetGroup,
-          totalCountOfActionForTakenPill: totalCountOfActionForTakenPillForLongTimeUser,
-          premiumAndTrial: PremiumAndTrial(
-            isPremium: false,
-            isTrial: false,
-            hasDiscountEntitlement: true,
-            trialDeadlineDate: null,
-            beginTrialDate: null,
-            discountEntitlementDeadlineDate: today.subtract(const Duration(days: 1)),
-          ),
-          isLinkedLoginProvider: false,
-          recommendedSignupNotificationIsAlreadyShow: false,
-          userAnsweredSurvey: true,
-          userClosedSurvey: true,
-        );
-
+        SharedPreferences.setMockInitialValues({
+          BoolKey.recommendedSignupNotificationIsAlreadyShow: false,
+          BoolKey.userAnsweredSurvey: true,
+          BoolKey.userClosedSurvey: true,
+          IntKey.totalCountOfActionForTakenPill: totalCountOfActionForTakenPillForLongTimeUser,
+        });
         await tester.pumpWidget(
           ProviderScope(
             overrides: [
+              latestPillSheetGroupProvider.overrideWith((ref) => Stream.value(pillSheetGroup)),
+              premiumAndTrialProvider.overrideWithValue(
+                AsyncData(
+                  PremiumAndTrial(
+                    isPremium: false,
+                    isTrial: false,
+                    hasDiscountEntitlement: true,
+                    trialDeadlineDate: null,
+                    beginTrialDate: null,
+                    discountEntitlementDeadlineDate: today.subtract(const Duration(days: 1)),
+                  ),
+                ),
+              ),
+              isLinkedProvider.overrideWithValue(false),
               isJaLocaleProvider.overrideWithValue(true),
-              notificationBarStateNotifierProvider.overrideWith(((ref) => NotificationBarStateNotifier(state))),
-              notificationBarStateProvider.overrideWithValue(state),
               isOverDiscountDeadlineProvider.overrideWithProvider((param) => Provider.autoDispose((_) => false)),
               durationToDiscountPriceDeadline.overrideWithProvider((param) => Provider.autoDispose((_) => const Duration(seconds: 1000))),
             ],
@@ -116,29 +117,32 @@ void main() {
           ),
         );
         final pillSheetGroup = PillSheetGroup(pillSheetIDs: ["1"], pillSheets: [pillSheet], createdAt: now());
-        final state = NotificationBarState(
-          latestPillSheetGroup: pillSheetGroup,
-          totalCountOfActionForTakenPill: totalCountOfActionForTakenPillForLongTimeUser,
-          premiumAndTrial: PremiumAndTrial(
-            isPremium: false,
-            isTrial: true,
-            hasDiscountEntitlement: true,
-            trialDeadlineDate: null,
-            beginTrialDate: null,
-            discountEntitlementDeadlineDate: null,
-          ),
-          isLinkedLoginProvider: false,
-          recommendedSignupNotificationIsAlreadyShow: false,
-          userAnsweredSurvey: true,
-          userClosedSurvey: true,
-        );
-
+        SharedPreferences.setMockInitialValues({
+          IntKey.totalCountOfActionForTakenPill: totalCountOfActionForTakenPillForLongTimeUser,
+          BoolKey.recommendedSignupNotificationIsAlreadyShow: false,
+          BoolKey.userAnsweredSurvey: true,
+          BoolKey.userClosedSurvey: true,
+        });
         await tester.pumpWidget(
           ProviderScope(
             overrides: [
+              latestPillSheetGroupProvider.overrideWith((ref) => Stream.value(pillSheetGroup)),
+              premiumAndTrialProvider.overrideWithValue(
+                AsyncData(
+                  PremiumAndTrial(
+                    isPremium: false,
+                    isTrial: true,
+                    hasDiscountEntitlement: true,
+                    trialDeadlineDate: null,
+                    beginTrialDate: null,
+                    discountEntitlementDeadlineDate: null,
+                  ),
+                ),
+              ),
+              isLinkedProvider.overrideWithValue(false),
               isJaLocaleProvider.overrideWithValue(true),
-              notificationBarStateNotifierProvider.overrideWith(((ref) => NotificationBarStateNotifier(state))),
-              notificationBarStateProvider.overrideWithValue(state),
+              isOverDiscountDeadlineProvider.overrideWithProvider((param) => Provider.autoDispose((_) => false)),
+              durationToDiscountPriceDeadline.overrideWithProvider((param) => Provider.autoDispose((_) => const Duration(seconds: 1000))),
             ],
             child: const MaterialApp(
               home: Material(child: NotificationBar()),
@@ -170,29 +174,33 @@ void main() {
           ),
         );
         final pillSheetGroup = PillSheetGroup(pillSheetIDs: ["1"], pillSheets: [pillSheet], createdAt: now());
-        final state = NotificationBarState(
-          latestPillSheetGroup: pillSheetGroup,
-          totalCountOfActionForTakenPill: totalCountOfActionForTakenPillForLongTimeUser,
-          premiumAndTrial: PremiumAndTrial(
-            isPremium: false,
-            isTrial: true,
-            hasDiscountEntitlement: true,
-            trialDeadlineDate: null,
-            beginTrialDate: null,
-            discountEntitlementDeadlineDate: null,
-          ),
-          isLinkedLoginProvider: false,
-          recommendedSignupNotificationIsAlreadyShow: false,
-          userAnsweredSurvey: true,
-          userClosedSurvey: true,
-        );
 
+        SharedPreferences.setMockInitialValues({
+          IntKey.totalCountOfActionForTakenPill: totalCountOfActionForTakenPillForLongTimeUser,
+          BoolKey.recommendedSignupNotificationIsAlreadyShow: false,
+          BoolKey.userAnsweredSurvey: true,
+          BoolKey.userClosedSurvey: true,
+        });
         await tester.pumpWidget(
           ProviderScope(
             overrides: [
+              latestPillSheetGroupProvider.overrideWith((ref) => Stream.value(pillSheetGroup)),
+              premiumAndTrialProvider.overrideWithValue(
+                AsyncData(
+                  PremiumAndTrial(
+                    isPremium: false,
+                    isTrial: true,
+                    hasDiscountEntitlement: true,
+                    trialDeadlineDate: null,
+                    beginTrialDate: null,
+                    discountEntitlementDeadlineDate: null,
+                  ),
+                ),
+              ),
+              isLinkedProvider.overrideWithValue(false),
               isJaLocaleProvider.overrideWithValue(true),
-              notificationBarStateNotifierProvider.overrideWith(((ref) => NotificationBarStateNotifier(state))),
-              notificationBarStateProvider.overrideWithValue(state),
+              isOverDiscountDeadlineProvider.overrideWithProvider((param) => Provider.autoDispose((_) => false)),
+              durationToDiscountPriceDeadline.overrideWithProvider((param) => Provider.autoDispose((_) => const Duration(seconds: 1000))),
             ],
             child: const MaterialApp(
               home: Material(child: NotificationBar()),
@@ -224,29 +232,32 @@ void main() {
           ),
         );
         final pillSheetGroup = PillSheetGroup(pillSheetIDs: ["1"], pillSheets: [pillSheet], createdAt: now());
-        final state = NotificationBarState(
-          latestPillSheetGroup: pillSheetGroup,
-          totalCountOfActionForTakenPill: totalCountOfActionForTakenPillForLongTimeUser,
-          premiumAndTrial: PremiumAndTrial(
-            isPremium: false,
-            isTrial: true,
-            hasDiscountEntitlement: true,
-            trialDeadlineDate: today.add(const Duration(days: 1)),
-            beginTrialDate: null,
-            discountEntitlementDeadlineDate: null,
-          ),
-          isLinkedLoginProvider: true,
-          recommendedSignupNotificationIsAlreadyShow: false,
-          userAnsweredSurvey: true,
-          userClosedSurvey: true,
-        );
-
+        SharedPreferences.setMockInitialValues({
+          IntKey.totalCountOfActionForTakenPill: totalCountOfActionForTakenPillForLongTimeUser,
+          BoolKey.recommendedSignupNotificationIsAlreadyShow: false,
+          BoolKey.userAnsweredSurvey: true,
+          BoolKey.userClosedSurvey: true,
+        });
         await tester.pumpWidget(
           ProviderScope(
             overrides: [
+              latestPillSheetGroupProvider.overrideWith((ref) => Stream.value(pillSheetGroup)),
+              premiumAndTrialProvider.overrideWithValue(
+                AsyncData(
+                  PremiumAndTrial(
+                    isPremium: false,
+                    isTrial: true,
+                    hasDiscountEntitlement: true,
+                    trialDeadlineDate: today.add(const Duration(days: 1)),
+                    beginTrialDate: null,
+                    discountEntitlementDeadlineDate: null,
+                  ),
+                ),
+              ),
+              isLinkedProvider.overrideWithValue(false),
               isJaLocaleProvider.overrideWithValue(true),
-              notificationBarStateNotifierProvider.overrideWith(((ref) => NotificationBarStateNotifier(state))),
-              notificationBarStateProvider.overrideWithValue(state),
+              isOverDiscountDeadlineProvider.overrideWithProvider((param) => Provider.autoDispose((_) => false)),
+              durationToDiscountPriceDeadline.overrideWithProvider((param) => Provider.autoDispose((_) => const Duration(seconds: 1000))),
             ],
             child: const MaterialApp(
               home: Material(child: NotificationBar()),
@@ -278,36 +289,40 @@ void main() {
           ),
         );
         final pillSheetGroup = PillSheetGroup(pillSheetIDs: ["1"], pillSheets: [pillSheet], createdAt: now());
-        final state = NotificationBarState(
-          latestPillSheetGroup: pillSheetGroup,
-          totalCountOfActionForTakenPill: totalCountOfActionForTakenPillForLongTimeUser,
-          premiumAndTrial: PremiumAndTrial(
-            isPremium: false,
-            isTrial: true,
-            hasDiscountEntitlement: true,
-            trialDeadlineDate: null,
-            beginTrialDate: null,
-            discountEntitlementDeadlineDate: null,
-          ),
-          isLinkedLoginProvider: true,
-          recommendedSignupNotificationIsAlreadyShow: false,
-          userAnsweredSurvey: true,
-          userClosedSurvey: true,
-        );
 
+        SharedPreferences.setMockInitialValues({
+          IntKey.totalCountOfActionForTakenPill: totalCountOfActionForTakenPillForLongTimeUser,
+          BoolKey.recommendedSignupNotificationIsAlreadyShow: false,
+          BoolKey.userAnsweredSurvey: true,
+          BoolKey.userClosedSurvey: true,
+        });
         await tester.pumpWidget(
           ProviderScope(
             overrides: [
+              latestPillSheetGroupProvider.overrideWith((ref) => Stream.value(pillSheetGroup)),
+              premiumAndTrialProvider.overrideWithValue(
+                AsyncData(
+                  PremiumAndTrial(
+                    isPremium: false,
+                    isTrial: true,
+                    hasDiscountEntitlement: true,
+                    trialDeadlineDate: null,
+                    beginTrialDate: null,
+                    discountEntitlementDeadlineDate: null,
+                  ),
+                ),
+              ),
+              isLinkedProvider.overrideWithValue(true),
               isJaLocaleProvider.overrideWithValue(true),
-              notificationBarStateNotifierProvider.overrideWith(((ref) => NotificationBarStateNotifier(state))),
-              notificationBarStateProvider.overrideWithValue(state),
+              isOverDiscountDeadlineProvider.overrideWithProvider((param) => Provider.autoDispose((_) => false)),
+              durationToDiscountPriceDeadline.overrideWithProvider((param) => Provider.autoDispose((_) => const Duration(seconds: 1000))),
             ],
             child: const MaterialApp(
               home: Material(child: NotificationBar()),
             ),
           ),
         );
-        await tester.pump();
+        await tester.pumpAndSettle(const Duration(milliseconds: 400));
 
         expect(
           find.byWidgetPredicate((widget) => widget is EndedPillSheet),
@@ -331,29 +346,33 @@ void main() {
             ),
           );
           final pillSheetGroup = PillSheetGroup(pillSheetIDs: ["1"], pillSheets: [pillSheet], createdAt: now());
-          final state = NotificationBarState(
-            latestPillSheetGroup: pillSheetGroup,
-            totalCountOfActionForTakenPill: totalCountOfActionForTakenPillForLongTimeUser,
-            premiumAndTrial: PremiumAndTrial(
-              isPremium: false,
-              isTrial: false,
-              hasDiscountEntitlement: true,
-              trialDeadlineDate: null,
-              beginTrialDate: null,
-              discountEntitlementDeadlineDate: null,
-            ),
-            isLinkedLoginProvider: false,
-            recommendedSignupNotificationIsAlreadyShow: false,
-            userAnsweredSurvey: true,
-            userClosedSurvey: true,
-          );
 
+          SharedPreferences.setMockInitialValues({
+            IntKey.totalCountOfActionForTakenPill: totalCountOfActionForTakenPillForLongTimeUser,
+            BoolKey.recommendedSignupNotificationIsAlreadyShow: false,
+            BoolKey.userAnsweredSurvey: true,
+            BoolKey.userClosedSurvey: true,
+          });
           await tester.pumpWidget(
             ProviderScope(
               overrides: [
+                latestPillSheetGroupProvider.overrideWith((ref) => Stream.value(pillSheetGroup)),
+                premiumAndTrialProvider.overrideWithValue(
+                  AsyncData(
+                    PremiumAndTrial(
+                      isPremium: false,
+                      isTrial: false,
+                      hasDiscountEntitlement: true,
+                      trialDeadlineDate: null,
+                      beginTrialDate: null,
+                      discountEntitlementDeadlineDate: null,
+                    ),
+                  ),
+                ),
+                isLinkedProvider.overrideWithValue(false),
                 isJaLocaleProvider.overrideWithValue(true),
-                notificationBarStateNotifierProvider.overrideWith(((ref) => NotificationBarStateNotifier(state))),
-                notificationBarStateProvider.overrideWithValue(state),
+                isOverDiscountDeadlineProvider.overrideWithProvider((param) => Provider.autoDispose((_) => false)),
+                durationToDiscountPriceDeadline.overrideWithProvider((param) => Provider.autoDispose((_) => const Duration(seconds: 1000))),
                 pilllAdsProvider.overrideWith(
                   (ref) => Stream.value(PilllAds(
                     description: 'これは広告用のテキスト',
@@ -370,7 +389,7 @@ void main() {
               ),
             ),
           );
-          await tester.pump();
+          await tester.pumpAndSettle(const Duration(milliseconds: 400));
 
           expect(
             find.byWidgetPredicate((widget) => widget is PilllAdsNotificationBar),
@@ -392,29 +411,33 @@ void main() {
             ),
           );
           final pillSheetGroup = PillSheetGroup(pillSheetIDs: ["1"], pillSheets: [pillSheet], createdAt: now());
-          final state = NotificationBarState(
-            latestPillSheetGroup: pillSheetGroup,
-            totalCountOfActionForTakenPill: totalCountOfActionForTakenPillForLongTimeUser,
-            premiumAndTrial: PremiumAndTrial(
-              isPremium: false,
-              isTrial: false,
-              hasDiscountEntitlement: true,
-              trialDeadlineDate: null,
-              beginTrialDate: null,
-              discountEntitlementDeadlineDate: null,
-            ),
-            isLinkedLoginProvider: false,
-            recommendedSignupNotificationIsAlreadyShow: false,
-            userAnsweredSurvey: true,
-            userClosedSurvey: true,
-          );
 
+          SharedPreferences.setMockInitialValues({
+            IntKey.totalCountOfActionForTakenPill: totalCountOfActionForTakenPillForLongTimeUser,
+            BoolKey.recommendedSignupNotificationIsAlreadyShow: false,
+            BoolKey.userAnsweredSurvey: true,
+            BoolKey.userClosedSurvey: true,
+          });
           await tester.pumpWidget(
             ProviderScope(
               overrides: [
+                latestPillSheetGroupProvider.overrideWith((ref) => Stream.value(pillSheetGroup)),
+                premiumAndTrialProvider.overrideWithValue(
+                  AsyncData(
+                    PremiumAndTrial(
+                      isPremium: false,
+                      isTrial: false,
+                      hasDiscountEntitlement: true,
+                      trialDeadlineDate: null,
+                      beginTrialDate: null,
+                      discountEntitlementDeadlineDate: null,
+                    ),
+                  ),
+                ),
+                isLinkedProvider.overrideWithValue(false),
                 isJaLocaleProvider.overrideWithValue(true),
-                notificationBarStateNotifierProvider.overrideWith(((ref) => NotificationBarStateNotifier(state))),
-                notificationBarStateProvider.overrideWithValue(state),
+                isOverDiscountDeadlineProvider.overrideWithProvider((param) => Provider.autoDispose((_) => false)),
+                durationToDiscountPriceDeadline.overrideWithProvider((param) => Provider.autoDispose((_) => const Duration(seconds: 1000))),
                 pilllAdsProvider.overrideWith(
                   (ref) => Stream.value(
                     PilllAds(
@@ -426,7 +449,7 @@ void main() {
                       imageURL: null,
                     ),
                   ),
-                )
+                ),
               ],
               child: const MaterialApp(
                 home: Material(child: NotificationBar()),
@@ -455,29 +478,33 @@ void main() {
             ),
           );
           final pillSheetGroup = PillSheetGroup(pillSheetIDs: ["1"], pillSheets: [pillSheet], createdAt: now());
-          final state = NotificationBarState(
-            latestPillSheetGroup: pillSheetGroup,
-            totalCountOfActionForTakenPill: totalCountOfActionForTakenPillForLongTimeUser,
-            premiumAndTrial: PremiumAndTrial(
-              isPremium: false,
-              isTrial: false,
-              hasDiscountEntitlement: true,
-              trialDeadlineDate: null,
-              beginTrialDate: null,
-              discountEntitlementDeadlineDate: null,
-            ),
-            isLinkedLoginProvider: false,
-            recommendedSignupNotificationIsAlreadyShow: false,
-            userAnsweredSurvey: true,
-            userClosedSurvey: true,
-          );
 
+          SharedPreferences.setMockInitialValues({
+            IntKey.totalCountOfActionForTakenPill: totalCountOfActionForTakenPillForLongTimeUser,
+            BoolKey.recommendedSignupNotificationIsAlreadyShow: false,
+            BoolKey.userAnsweredSurvey: true,
+            BoolKey.userClosedSurvey: true,
+          });
           await tester.pumpWidget(
             ProviderScope(
               overrides: [
+                latestPillSheetGroupProvider.overrideWith((ref) => Stream.value(pillSheetGroup)),
+                premiumAndTrialProvider.overrideWithValue(
+                  AsyncData(
+                    PremiumAndTrial(
+                      isPremium: false,
+                      isTrial: false,
+                      hasDiscountEntitlement: true,
+                      trialDeadlineDate: null,
+                      beginTrialDate: null,
+                      discountEntitlementDeadlineDate: null,
+                    ),
+                  ),
+                ),
+                isLinkedProvider.overrideWithValue(false),
                 isJaLocaleProvider.overrideWithValue(true),
-                notificationBarStateNotifierProvider.overrideWith(((ref) => NotificationBarStateNotifier(state))),
-                notificationBarStateProvider.overrideWithValue(state),
+                isOverDiscountDeadlineProvider.overrideWithProvider((param) => Provider.autoDispose((_) => false)),
+                durationToDiscountPriceDeadline.overrideWithProvider((param) => Provider.autoDispose((_) => const Duration(seconds: 1000))),
                 pilllAdsProvider.overrideWith(
                   (ref) => Stream.value(
                     PilllAds(
@@ -489,7 +516,7 @@ void main() {
                       imageURL: null,
                     ),
                   ),
-                )
+                ),
               ],
               child: const MaterialApp(
                 home: Material(child: NotificationBar()),
@@ -518,29 +545,33 @@ void main() {
             ),
           );
           final pillSheetGroup = PillSheetGroup(pillSheetIDs: ["1"], pillSheets: [pillSheet], createdAt: now());
-          final state = NotificationBarState(
-            latestPillSheetGroup: pillSheetGroup,
-            totalCountOfActionForTakenPill: totalCountOfActionForTakenPillForLongTimeUser,
-            premiumAndTrial: PremiumAndTrial(
-              isPremium: false,
-              isTrial: false,
-              hasDiscountEntitlement: true,
-              trialDeadlineDate: null,
-              beginTrialDate: null,
-              discountEntitlementDeadlineDate: null,
-            ),
-            isLinkedLoginProvider: false,
-            recommendedSignupNotificationIsAlreadyShow: false,
-            userAnsweredSurvey: true,
-            userClosedSurvey: true,
-          );
 
+          SharedPreferences.setMockInitialValues({
+            IntKey.totalCountOfActionForTakenPill: totalCountOfActionForTakenPillForLongTimeUser,
+            BoolKey.recommendedSignupNotificationIsAlreadyShow: false,
+            BoolKey.userAnsweredSurvey: true,
+            BoolKey.userClosedSurvey: true,
+          });
           await tester.pumpWidget(
             ProviderScope(
               overrides: [
+                latestPillSheetGroupProvider.overrideWith((ref) => Stream.value(pillSheetGroup)),
+                premiumAndTrialProvider.overrideWithValue(
+                  AsyncData(
+                    PremiumAndTrial(
+                      isPremium: false,
+                      isTrial: false,
+                      hasDiscountEntitlement: true,
+                      trialDeadlineDate: null,
+                      beginTrialDate: null,
+                      discountEntitlementDeadlineDate: null,
+                    ),
+                  ),
+                ),
+                isLinkedProvider.overrideWithValue(false),
                 isJaLocaleProvider.overrideWithValue(true),
-                notificationBarStateNotifierProvider.overrideWith(((ref) => NotificationBarStateNotifier(state))),
-                notificationBarStateProvider.overrideWithValue(state),
+                isOverDiscountDeadlineProvider.overrideWithProvider((param) => Provider.autoDispose((_) => false)),
+                durationToDiscountPriceDeadline.overrideWithProvider((param) => Provider.autoDispose((_) => const Duration(seconds: 1000))),
                 pilllAdsProvider.overrideWith(
                   (ref) => Stream.value(
                     PilllAds(
@@ -581,29 +612,33 @@ void main() {
             ),
           );
           final pillSheetGroup = PillSheetGroup(pillSheetIDs: ["1"], pillSheets: [pillSheet], createdAt: now());
-          final state = NotificationBarState(
-            latestPillSheetGroup: pillSheetGroup,
-            totalCountOfActionForTakenPill: totalCountOfActionForTakenPillForLongTimeUser,
-            premiumAndTrial: PremiumAndTrial(
-              isPremium: false,
-              isTrial: false,
-              hasDiscountEntitlement: true,
-              trialDeadlineDate: null,
-              beginTrialDate: null,
-              discountEntitlementDeadlineDate: null,
-            ),
-            isLinkedLoginProvider: false,
-            recommendedSignupNotificationIsAlreadyShow: false,
-            userAnsweredSurvey: true,
-            userClosedSurvey: true,
-          );
 
+          SharedPreferences.setMockInitialValues({
+            IntKey.totalCountOfActionForTakenPill: totalCountOfActionForTakenPillForLongTimeUser,
+            BoolKey.recommendedSignupNotificationIsAlreadyShow: false,
+            BoolKey.userAnsweredSurvey: true,
+            BoolKey.userClosedSurvey: true,
+          });
           await tester.pumpWidget(
             ProviderScope(
               overrides: [
+                latestPillSheetGroupProvider.overrideWith((ref) => Stream.value(pillSheetGroup)),
+                premiumAndTrialProvider.overrideWithValue(
+                  AsyncData(
+                    PremiumAndTrial(
+                      isPremium: false,
+                      isTrial: false,
+                      hasDiscountEntitlement: true,
+                      trialDeadlineDate: null,
+                      beginTrialDate: null,
+                      discountEntitlementDeadlineDate: null,
+                    ),
+                  ),
+                ),
+                isLinkedProvider.overrideWithValue(false),
                 isJaLocaleProvider.overrideWithValue(true),
-                notificationBarStateNotifierProvider.overrideWith(((ref) => NotificationBarStateNotifier(state))),
-                notificationBarStateProvider.overrideWithValue(state),
+                isOverDiscountDeadlineProvider.overrideWithProvider((param) => Provider.autoDispose((_) => false)),
+                durationToDiscountPriceDeadline.overrideWithProvider((param) => Provider.autoDispose((_) => const Duration(seconds: 1000))),
                 pilllAdsProvider.overrideWith(
                   (ref) => Stream.value(
                     PilllAds(
@@ -651,39 +686,45 @@ void main() {
             ),
           );
           final pillSheetGroup = PillSheetGroup(pillSheetIDs: ["1"], pillSheets: [pillSheet], createdAt: now());
-          final state = NotificationBarState(
-            latestPillSheetGroup: pillSheetGroup,
-            totalCountOfActionForTakenPill: totalCountOfActionForTakenPillForLongTimeUser,
-            premiumAndTrial: PremiumAndTrial(
-              isPremium: true,
-              isTrial: true,
-              hasDiscountEntitlement: true,
-              trialDeadlineDate: null,
-              beginTrialDate: null,
-              discountEntitlementDeadlineDate: null,
-            ),
-            isLinkedLoginProvider: false,
-            recommendedSignupNotificationIsAlreadyShow: false,
-            userAnsweredSurvey: true,
-            userClosedSurvey: true,
-          );
 
+          SharedPreferences.setMockInitialValues({
+            IntKey.totalCountOfActionForTakenPill: totalCountOfActionForTakenPillForLongTimeUser,
+            BoolKey.recommendedSignupNotificationIsAlreadyShow: false,
+            BoolKey.userAnsweredSurvey: true,
+            BoolKey.userClosedSurvey: true,
+          });
           await tester.pumpWidget(
             ProviderScope(
               overrides: [
+                latestPillSheetGroupProvider.overrideWith((ref) => Stream.value(pillSheetGroup)),
+                premiumAndTrialProvider.overrideWithValue(
+                  AsyncData(
+                    PremiumAndTrial(
+                      isPremium: true,
+                      isTrial: true,
+                      hasDiscountEntitlement: true,
+                      trialDeadlineDate: null,
+                      beginTrialDate: null,
+                      discountEntitlementDeadlineDate: null,
+                    ),
+                  ),
+                ),
+                isLinkedProvider.overrideWithValue(false),
                 isJaLocaleProvider.overrideWithValue(true),
-                notificationBarStateNotifierProvider.overrideWith(((ref) => NotificationBarStateNotifier(state))),
-                notificationBarStateProvider.overrideWithValue(state),
-                pilllAdsProvider.overrideWith((ref) => Stream.value(
-                      PilllAds(
-                        description: 'これは広告用のテキスト',
-                        destinationURL: 'https://github.com/bannzai',
-                        endDateTime: DateTime(2022, 8, 23, 23, 59, 59),
-                        startDateTime: DateTime(2022, 8, 10, 0, 0, 0),
-                        hexColor: '#111111',
-                        imageURL: null,
-                      ),
-                    ))
+                isOverDiscountDeadlineProvider.overrideWithProvider((param) => Provider.autoDispose((_) => false)),
+                durationToDiscountPriceDeadline.overrideWithProvider((param) => Provider.autoDispose((_) => const Duration(seconds: 1000))),
+                pilllAdsProvider.overrideWith(
+                  (ref) => Stream.value(
+                    PilllAds(
+                      description: 'これは広告用のテキスト',
+                      destinationURL: 'https://github.com/bannzai',
+                      endDateTime: DateTime(2022, 8, 23, 23, 59, 59),
+                      startDateTime: DateTime(2022, 8, 10, 0, 0, 0),
+                      hexColor: '#111111',
+                      imageURL: null,
+                    ),
+                  ),
+                )
               ],
               child: const MaterialApp(
                 home: Material(child: NotificationBar()),
@@ -714,39 +755,45 @@ void main() {
             ),
           );
           final pillSheetGroup = PillSheetGroup(pillSheetIDs: ["1"], pillSheets: [pillSheet], createdAt: now());
-          final state = NotificationBarState(
-            latestPillSheetGroup: pillSheetGroup,
-            totalCountOfActionForTakenPill: totalCountOfActionForTakenPillForLongTimeUser,
-            premiumAndTrial: PremiumAndTrial(
-              isPremium: true,
-              isTrial: true,
-              hasDiscountEntitlement: true,
-              trialDeadlineDate: null,
-              beginTrialDate: null,
-              discountEntitlementDeadlineDate: null,
-            ),
-            isLinkedLoginProvider: false,
-            recommendedSignupNotificationIsAlreadyShow: false,
-            userAnsweredSurvey: true,
-            userClosedSurvey: true,
-          );
 
+          SharedPreferences.setMockInitialValues({
+            IntKey.totalCountOfActionForTakenPill: totalCountOfActionForTakenPillForLongTimeUser,
+            BoolKey.recommendedSignupNotificationIsAlreadyShow: false,
+            BoolKey.userAnsweredSurvey: true,
+            BoolKey.userClosedSurvey: true,
+          });
           await tester.pumpWidget(
             ProviderScope(
               overrides: [
+                latestPillSheetGroupProvider.overrideWith((ref) => Stream.value(pillSheetGroup)),
+                premiumAndTrialProvider.overrideWithValue(
+                  AsyncData(
+                    PremiumAndTrial(
+                      isPremium: true,
+                      isTrial: true,
+                      hasDiscountEntitlement: true,
+                      trialDeadlineDate: null,
+                      beginTrialDate: null,
+                      discountEntitlementDeadlineDate: null,
+                    ),
+                  ),
+                ),
+                isLinkedProvider.overrideWithValue(false),
                 isJaLocaleProvider.overrideWithValue(true),
-                notificationBarStateNotifierProvider.overrideWith(((ref) => NotificationBarStateNotifier(state))),
-                notificationBarStateProvider.overrideWithValue(state),
-                pilllAdsProvider.overrideWith((ref) => Stream.value(
-                      PilllAds(
-                        description: 'これは広告用のテキスト',
-                        destinationURL: 'https://github.com/bannzai',
-                        endDateTime: DateTime(2022, 8, 23, 23, 59, 59),
-                        startDateTime: DateTime(2022, 8, 10, 0, 0, 0),
-                        hexColor: '#111111',
-                        imageURL: null,
-                      ),
-                    ))
+                isOverDiscountDeadlineProvider.overrideWithProvider((param) => Provider.autoDispose((_) => false)),
+                durationToDiscountPriceDeadline.overrideWithProvider((param) => Provider.autoDispose((_) => const Duration(seconds: 1000))),
+                pilllAdsProvider.overrideWith(
+                  (ref) => Stream.value(
+                    PilllAds(
+                      description: 'これは広告用のテキスト',
+                      destinationURL: 'https://github.com/bannzai',
+                      endDateTime: DateTime(2022, 8, 23, 23, 59, 59),
+                      startDateTime: DateTime(2022, 8, 10, 0, 0, 0),
+                      hexColor: '#111111',
+                      imageURL: null,
+                    ),
+                  ),
+                )
               ],
               child: const MaterialApp(
                 home: Material(child: NotificationBar()),
@@ -777,39 +824,45 @@ void main() {
             ),
           );
           final pillSheetGroup = PillSheetGroup(pillSheetIDs: ["1"], pillSheets: [pillSheet], createdAt: now());
-          final state = NotificationBarState(
-            latestPillSheetGroup: pillSheetGroup,
-            totalCountOfActionForTakenPill: totalCountOfActionForTakenPillForLongTimeUser,
-            premiumAndTrial: PremiumAndTrial(
-              isPremium: true,
-              isTrial: true,
-              hasDiscountEntitlement: true,
-              trialDeadlineDate: null,
-              beginTrialDate: null,
-              discountEntitlementDeadlineDate: null,
-            ),
-            isLinkedLoginProvider: false,
-            recommendedSignupNotificationIsAlreadyShow: false,
-            userAnsweredSurvey: true,
-            userClosedSurvey: true,
-          );
 
+          SharedPreferences.setMockInitialValues({
+            IntKey.totalCountOfActionForTakenPill: totalCountOfActionForTakenPillForLongTimeUser,
+            BoolKey.recommendedSignupNotificationIsAlreadyShow: false,
+            BoolKey.userAnsweredSurvey: true,
+            BoolKey.userClosedSurvey: true,
+          });
           await tester.pumpWidget(
             ProviderScope(
               overrides: [
+                latestPillSheetGroupProvider.overrideWith((ref) => Stream.value(pillSheetGroup)),
+                premiumAndTrialProvider.overrideWithValue(
+                  AsyncData(
+                    PremiumAndTrial(
+                      isPremium: true,
+                      isTrial: true,
+                      hasDiscountEntitlement: true,
+                      trialDeadlineDate: null,
+                      beginTrialDate: null,
+                      discountEntitlementDeadlineDate: null,
+                    ),
+                  ),
+                ),
+                isLinkedProvider.overrideWithValue(false),
                 isJaLocaleProvider.overrideWithValue(true),
-                notificationBarStateNotifierProvider.overrideWith(((ref) => NotificationBarStateNotifier(state))),
-                notificationBarStateProvider.overrideWithValue(state),
-                pilllAdsProvider.overrideWith((ref) => Stream.value(
-                      PilllAds(
-                        description: 'これは広告用のテキスト',
-                        destinationURL: 'https://github.com/bannzai',
-                        endDateTime: DateTime(2022, 8, 23, 23, 59, 59),
-                        startDateTime: DateTime(2022, 8, 10, 0, 0, 0),
-                        hexColor: '#111111',
-                        imageURL: null,
-                      ),
-                    ))
+                isOverDiscountDeadlineProvider.overrideWithProvider((param) => Provider.autoDispose((_) => false)),
+                durationToDiscountPriceDeadline.overrideWithProvider((param) => Provider.autoDispose((_) => const Duration(seconds: 1000))),
+                pilllAdsProvider.overrideWith(
+                  (ref) => Stream.value(
+                    PilllAds(
+                      description: 'これは広告用のテキスト',
+                      destinationURL: 'https://github.com/bannzai',
+                      endDateTime: DateTime(2022, 8, 23, 23, 59, 59),
+                      startDateTime: DateTime(2022, 8, 10, 0, 0, 0),
+                      hexColor: '#111111',
+                      imageURL: null,
+                    ),
+                  ),
+                )
               ],
               child: const MaterialApp(
                 home: Material(child: NotificationBar()),
@@ -840,39 +893,45 @@ void main() {
             ),
           );
           final pillSheetGroup = PillSheetGroup(pillSheetIDs: ["1"], pillSheets: [pillSheet], createdAt: now());
-          final state = NotificationBarState(
-            latestPillSheetGroup: pillSheetGroup,
-            totalCountOfActionForTakenPill: totalCountOfActionForTakenPillForLongTimeUser,
-            premiumAndTrial: PremiumAndTrial(
-              isPremium: true,
-              isTrial: true,
-              hasDiscountEntitlement: true,
-              trialDeadlineDate: null,
-              beginTrialDate: null,
-              discountEntitlementDeadlineDate: null,
-            ),
-            isLinkedLoginProvider: false,
-            recommendedSignupNotificationIsAlreadyShow: false,
-            userAnsweredSurvey: true,
-            userClosedSurvey: true,
-          );
 
+          SharedPreferences.setMockInitialValues({
+            IntKey.totalCountOfActionForTakenPill: totalCountOfActionForTakenPillForLongTimeUser,
+            BoolKey.recommendedSignupNotificationIsAlreadyShow: false,
+            BoolKey.userAnsweredSurvey: true,
+            BoolKey.userClosedSurvey: true,
+          });
           await tester.pumpWidget(
             ProviderScope(
               overrides: [
+                latestPillSheetGroupProvider.overrideWith((ref) => Stream.value(pillSheetGroup)),
+                premiumAndTrialProvider.overrideWithValue(
+                  AsyncData(
+                    PremiumAndTrial(
+                      isPremium: true,
+                      isTrial: true,
+                      hasDiscountEntitlement: true,
+                      trialDeadlineDate: null,
+                      beginTrialDate: null,
+                      discountEntitlementDeadlineDate: null,
+                    ),
+                  ),
+                ),
+                isLinkedProvider.overrideWithValue(false),
                 isJaLocaleProvider.overrideWithValue(true),
-                notificationBarStateNotifierProvider.overrideWith(((ref) => NotificationBarStateNotifier(state))),
-                notificationBarStateProvider.overrideWithValue(state),
-                pilllAdsProvider.overrideWith((ref) => Stream.value(
-                      PilllAds(
-                        description: 'これは広告用のテキスト',
-                        destinationURL: 'https://github.com/bannzai',
-                        endDateTime: DateTime(2022, 8, 23, 23, 59, 59),
-                        startDateTime: DateTime(2022, 8, 10, 0, 0, 0),
-                        hexColor: '#111111',
-                        imageURL: null,
-                      ),
-                    ))
+                isOverDiscountDeadlineProvider.overrideWithProvider((param) => Provider.autoDispose((_) => false)),
+                durationToDiscountPriceDeadline.overrideWithProvider((param) => Provider.autoDispose((_) => const Duration(seconds: 1000))),
+                pilllAdsProvider.overrideWith(
+                  (ref) => Stream.value(
+                    PilllAds(
+                      description: 'これは広告用のテキスト',
+                      destinationURL: 'https://github.com/bannzai',
+                      endDateTime: DateTime(2022, 8, 23, 23, 59, 59),
+                      startDateTime: DateTime(2022, 8, 10, 0, 0, 0),
+                      hexColor: '#111111',
+                      imageURL: null,
+                    ),
+                  ),
+                )
               ],
               child: const MaterialApp(
                 home: Material(child: NotificationBar()),
@@ -903,39 +962,45 @@ void main() {
             ),
           );
           final pillSheetGroup = PillSheetGroup(pillSheetIDs: ["1"], pillSheets: [pillSheet], createdAt: now());
-          final state = NotificationBarState(
-            latestPillSheetGroup: pillSheetGroup,
-            totalCountOfActionForTakenPill: totalCountOfActionForTakenPillForLongTimeUser,
-            premiumAndTrial: PremiumAndTrial(
-              isPremium: true,
-              isTrial: true,
-              hasDiscountEntitlement: true,
-              trialDeadlineDate: null,
-              beginTrialDate: null,
-              discountEntitlementDeadlineDate: null,
-            ),
-            isLinkedLoginProvider: false,
-            recommendedSignupNotificationIsAlreadyShow: false,
-            userAnsweredSurvey: true,
-            userClosedSurvey: true,
-          );
 
+          SharedPreferences.setMockInitialValues({
+            IntKey.totalCountOfActionForTakenPill: totalCountOfActionForTakenPillForLongTimeUser,
+            BoolKey.recommendedSignupNotificationIsAlreadyShow: false,
+            BoolKey.userAnsweredSurvey: true,
+            BoolKey.userClosedSurvey: true,
+          });
           await tester.pumpWidget(
             ProviderScope(
               overrides: [
+                latestPillSheetGroupProvider.overrideWith((ref) => Stream.value(pillSheetGroup)),
+                premiumAndTrialProvider.overrideWithValue(
+                  AsyncData(
+                    PremiumAndTrial(
+                      isPremium: true,
+                      isTrial: true,
+                      hasDiscountEntitlement: true,
+                      trialDeadlineDate: null,
+                      beginTrialDate: null,
+                      discountEntitlementDeadlineDate: null,
+                    ),
+                  ),
+                ),
+                isLinkedProvider.overrideWithValue(false),
                 isJaLocaleProvider.overrideWithValue(true),
-                notificationBarStateNotifierProvider.overrideWith(((ref) => NotificationBarStateNotifier(state))),
-                notificationBarStateProvider.overrideWithValue(state),
-                pilllAdsProvider.overrideWith((ref) => Stream.value(
-                      PilllAds(
-                        description: 'これは広告用のテキスト',
-                        destinationURL: 'https://github.com/bannzai',
-                        endDateTime: DateTime(2022, 8, 23, 23, 59, 59),
-                        startDateTime: DateTime(2022, 8, 10, 0, 0, 0),
-                        hexColor: '#111111',
-                        imageURL: null,
-                      ),
-                    ))
+                isOverDiscountDeadlineProvider.overrideWithProvider((param) => Provider.autoDispose((_) => false)),
+                durationToDiscountPriceDeadline.overrideWithProvider((param) => Provider.autoDispose((_) => const Duration(seconds: 1000))),
+                pilllAdsProvider.overrideWith(
+                  (ref) => Stream.value(
+                    PilllAds(
+                      description: 'これは広告用のテキスト',
+                      destinationURL: 'https://github.com/bannzai',
+                      endDateTime: DateTime(2022, 8, 23, 23, 59, 59),
+                      startDateTime: DateTime(2022, 8, 10, 0, 0, 0),
+                      hexColor: '#111111',
+                      imageURL: null,
+                    ),
+                  ),
+                )
               ],
               child: const MaterialApp(
                 home: Material(child: NotificationBar()),
@@ -966,39 +1031,45 @@ void main() {
             ),
           );
           final pillSheetGroup = PillSheetGroup(pillSheetIDs: ["1"], pillSheets: [pillSheet], createdAt: now());
-          final state = NotificationBarState(
-            latestPillSheetGroup: pillSheetGroup,
-            totalCountOfActionForTakenPill: totalCountOfActionForTakenPillForLongTimeUser,
-            premiumAndTrial: PremiumAndTrial(
-              isPremium: true,
-              isTrial: true,
-              hasDiscountEntitlement: true,
-              trialDeadlineDate: null,
-              beginTrialDate: null,
-              discountEntitlementDeadlineDate: null,
-            ),
-            isLinkedLoginProvider: false,
-            recommendedSignupNotificationIsAlreadyShow: false,
-            userAnsweredSurvey: true,
-            userClosedSurvey: true,
-          );
 
+          SharedPreferences.setMockInitialValues({
+            IntKey.totalCountOfActionForTakenPill: totalCountOfActionForTakenPillForLongTimeUser,
+            BoolKey.recommendedSignupNotificationIsAlreadyShow: false,
+            BoolKey.userAnsweredSurvey: true,
+            BoolKey.userClosedSurvey: true,
+          });
           await tester.pumpWidget(
             ProviderScope(
               overrides: [
+                latestPillSheetGroupProvider.overrideWith((ref) => Stream.value(pillSheetGroup)),
+                premiumAndTrialProvider.overrideWithValue(
+                  AsyncData(
+                    PremiumAndTrial(
+                      isPremium: true,
+                      isTrial: true,
+                      hasDiscountEntitlement: true,
+                      trialDeadlineDate: null,
+                      beginTrialDate: null,
+                      discountEntitlementDeadlineDate: null,
+                    ),
+                  ),
+                ),
+                isLinkedProvider.overrideWithValue(false),
                 isJaLocaleProvider.overrideWithValue(true),
-                notificationBarStateNotifierProvider.overrideWith(((ref) => NotificationBarStateNotifier(state))),
-                notificationBarStateProvider.overrideWithValue(state),
-                pilllAdsProvider.overrideWith((ref) => Stream.value(
-                      PilllAds(
-                        description: 'これは広告用のテキスト',
-                        destinationURL: 'https://github.com/bannzai',
-                        endDateTime: DateTime(2022, 8, 23, 23, 59, 59),
-                        startDateTime: DateTime(2022, 8, 10, 0, 0, 0),
-                        hexColor: '#111111',
-                        imageURL: null,
-                      ),
-                    ))
+                isOverDiscountDeadlineProvider.overrideWithProvider((param) => Provider.autoDispose((_) => false)),
+                durationToDiscountPriceDeadline.overrideWithProvider((param) => Provider.autoDispose((_) => const Duration(seconds: 1000))),
+                pilllAdsProvider.overrideWith(
+                  (ref) => Stream.value(
+                    PilllAds(
+                      description: 'これは広告用のテキスト',
+                      destinationURL: 'https://github.com/bannzai',
+                      endDateTime: DateTime(2022, 8, 23, 23, 59, 59),
+                      startDateTime: DateTime(2022, 8, 10, 0, 0, 0),
+                      hexColor: '#111111',
+                      imageURL: null,
+                    ),
+                  ),
+                )
               ],
               child: const MaterialApp(
                 home: Material(child: NotificationBar()),
@@ -1030,29 +1101,33 @@ void main() {
           ),
         );
         final pillSheetGroup = PillSheetGroup(pillSheetIDs: ["1"], pillSheets: [pillSheet], createdAt: now());
-        final state = NotificationBarState(
-          latestPillSheetGroup: pillSheetGroup,
-          totalCountOfActionForTakenPill: totalCountOfActionForTakenPillForLongTimeUser,
-          premiumAndTrial: PremiumAndTrial(
-            isPremium: true,
-            isTrial: true,
-            hasDiscountEntitlement: true,
-            trialDeadlineDate: null,
-            beginTrialDate: null,
-            discountEntitlementDeadlineDate: null,
-          ),
-          isLinkedLoginProvider: false,
-          recommendedSignupNotificationIsAlreadyShow: false,
-          userAnsweredSurvey: true,
-          userClosedSurvey: true,
-        );
 
+        SharedPreferences.setMockInitialValues({
+          IntKey.totalCountOfActionForTakenPill: totalCountOfActionForTakenPillForLongTimeUser,
+          BoolKey.recommendedSignupNotificationIsAlreadyShow: false,
+          BoolKey.userAnsweredSurvey: true,
+          BoolKey.userClosedSurvey: true,
+        });
         await tester.pumpWidget(
           ProviderScope(
             overrides: [
+              latestPillSheetGroupProvider.overrideWith((ref) => Stream.value(pillSheetGroup)),
+              premiumAndTrialProvider.overrideWithValue(
+                AsyncData(
+                  PremiumAndTrial(
+                    isPremium: true,
+                    isTrial: true,
+                    hasDiscountEntitlement: true,
+                    trialDeadlineDate: null,
+                    beginTrialDate: null,
+                    discountEntitlementDeadlineDate: null,
+                  ),
+                ),
+              ),
+              isLinkedProvider.overrideWithValue(false),
               isJaLocaleProvider.overrideWithValue(true),
-              notificationBarStateNotifierProvider.overrideWith(((ref) => NotificationBarStateNotifier(state))),
-              notificationBarStateProvider.overrideWithValue(state),
+              isOverDiscountDeadlineProvider.overrideWithProvider((param) => Provider.autoDispose((_) => false)),
+              durationToDiscountPriceDeadline.overrideWithProvider((param) => Provider.autoDispose((_) => const Duration(seconds: 1000))),
             ],
             child: const MaterialApp(
               home: Material(child: NotificationBar()),
@@ -1084,29 +1159,33 @@ void main() {
           ),
         );
         final pillSheetGroup = PillSheetGroup(pillSheetIDs: ["1"], pillSheets: [pillSheet], createdAt: now());
-        final state = NotificationBarState(
-          latestPillSheetGroup: pillSheetGroup,
-          totalCountOfActionForTakenPill: totalCountOfActionForTakenPillForLongTimeUser,
-          premiumAndTrial: PremiumAndTrial(
-            isPremium: true,
-            isTrial: false,
-            hasDiscountEntitlement: true,
-            trialDeadlineDate: null,
-            beginTrialDate: null,
-            discountEntitlementDeadlineDate: null,
-          ),
-          isLinkedLoginProvider: true,
-          recommendedSignupNotificationIsAlreadyShow: false,
-          userAnsweredSurvey: true,
-          userClosedSurvey: true,
-        );
 
+        SharedPreferences.setMockInitialValues({
+          IntKey.totalCountOfActionForTakenPill: totalCountOfActionForTakenPillForLongTimeUser,
+          BoolKey.recommendedSignupNotificationIsAlreadyShow: false,
+          BoolKey.userAnsweredSurvey: true,
+          BoolKey.userClosedSurvey: true,
+        });
         await tester.pumpWidget(
           ProviderScope(
             overrides: [
+              latestPillSheetGroupProvider.overrideWith((ref) => Stream.value(pillSheetGroup)),
+              premiumAndTrialProvider.overrideWithValue(
+                AsyncData(
+                  PremiumAndTrial(
+                    isPremium: true,
+                    isTrial: false,
+                    hasDiscountEntitlement: true,
+                    trialDeadlineDate: null,
+                    beginTrialDate: null,
+                    discountEntitlementDeadlineDate: null,
+                  ),
+                ),
+              ),
+              isLinkedProvider.overrideWithValue(true),
               isJaLocaleProvider.overrideWithValue(true),
-              notificationBarStateNotifierProvider.overrideWith(((ref) => NotificationBarStateNotifier(state))),
-              notificationBarStateProvider.overrideWithValue(state),
+              isOverDiscountDeadlineProvider.overrideWithProvider((param) => Provider.autoDispose((_) => false)),
+              durationToDiscountPriceDeadline.overrideWithProvider((param) => Provider.autoDispose((_) => const Duration(seconds: 1000))),
             ],
             child: const MaterialApp(
               home: Material(child: NotificationBar()),
@@ -1138,29 +1217,33 @@ void main() {
           ),
         );
         final pillSheetGroup = PillSheetGroup(pillSheetIDs: ["1"], pillSheets: [pillSheet], createdAt: now());
-        final state = NotificationBarState(
-          latestPillSheetGroup: pillSheetGroup,
-          totalCountOfActionForTakenPill: totalCountOfActionForTakenPillForLongTimeUser,
-          premiumAndTrial: PremiumAndTrial(
-            isPremium: true,
-            isTrial: true,
-            hasDiscountEntitlement: true,
-            trialDeadlineDate: null,
-            beginTrialDate: null,
-            discountEntitlementDeadlineDate: null,
-          ),
-          isLinkedLoginProvider: true,
-          recommendedSignupNotificationIsAlreadyShow: false,
-          userAnsweredSurvey: true,
-          userClosedSurvey: true,
-        );
 
+        SharedPreferences.setMockInitialValues({
+          IntKey.totalCountOfActionForTakenPill: totalCountOfActionForTakenPillForLongTimeUser,
+          BoolKey.recommendedSignupNotificationIsAlreadyShow: false,
+          BoolKey.userAnsweredSurvey: true,
+          BoolKey.userClosedSurvey: true,
+        });
         await tester.pumpWidget(
           ProviderScope(
             overrides: [
+              latestPillSheetGroupProvider.overrideWith((ref) => Stream.value(pillSheetGroup)),
+              premiumAndTrialProvider.overrideWithValue(
+                AsyncData(
+                  PremiumAndTrial(
+                    isPremium: true,
+                    isTrial: true,
+                    hasDiscountEntitlement: true,
+                    trialDeadlineDate: null,
+                    beginTrialDate: null,
+                    discountEntitlementDeadlineDate: null,
+                  ),
+                ),
+              ),
+              isLinkedProvider.overrideWithValue(true),
               isJaLocaleProvider.overrideWithValue(true),
-              notificationBarStateNotifierProvider.overrideWith(((ref) => NotificationBarStateNotifier(state))),
-              notificationBarStateProvider.overrideWithValue(state),
+              isOverDiscountDeadlineProvider.overrideWithProvider((param) => Provider.autoDispose((_) => false)),
+              durationToDiscountPriceDeadline.overrideWithProvider((param) => Provider.autoDispose((_) => const Duration(seconds: 1000))),
             ],
             child: const MaterialApp(
               home: Material(child: NotificationBar()),

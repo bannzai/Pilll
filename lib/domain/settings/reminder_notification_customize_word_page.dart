@@ -2,20 +2,21 @@ import 'package:flutter_hooks/flutter_hooks.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:pilll/analytics.dart';
 import 'package:pilll/components/atoms/font.dart';
-import 'package:pilll/domain/settings/setting_page_state_notifier.dart';
 import 'package:pilll/components/atoms/color.dart';
 import 'package:pilll/components/atoms/text_color.dart';
 import 'package:flutter/material.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
+import 'package:pilll/entity/setting.codegen.dart';
 import 'package:pilll/error/error_alert.dart';
+import 'package:pilll/provider/setting.dart';
 
 class ReminderNotificationCustomizeWordPage extends HookConsumerWidget {
   const ReminderNotificationCustomizeWordPage({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {
-    final stateNotifier = ref.watch(settingStateNotifierProvider.notifier);
-    final setting = ref.watch(settingStateNotifierProvider).value!.setting;
+    final setSetting = ref.watch(setSettingProvider);
+    final setting = ref.watch(settingProvider).requireValue;
 
     final textFieldControlelr = useTextEditingController(text: setting.reminderNotificationCustomization.word);
     final word = useState(setting.reminderNotificationCustomization.word);
@@ -78,7 +79,7 @@ class ReminderNotificationCustomizeWordPage extends HookConsumerWidget {
                     onSubmitted: (word) async {
                       analytics.logEvent(name: "submit_reminder_notification_customize");
                       try {
-                        await stateNotifier.asyncAction.reminderNotificationWordSubmit(word, setting);
+                        await _reminderNotificationWordSubmit(word: word, setting: setting, setSetting: setSetting);
                         Navigator.of(context).pop();
                       } catch (error) {
                         showErrorAlert(context, error);
@@ -102,7 +103,7 @@ class ReminderNotificationCustomizeWordPage extends HookConsumerWidget {
                         (value) async {
                           analytics.logEvent(name: "change_reminder_notification_date");
                           try {
-                            await stateNotifier.asyncAction.setIsInVisibleReminderDate(!value, setting);
+                            await _setIsInVisibleReminderDate(isInVisibleReminderDate: !value, setting: setting, setSetting: setSetting);
                             isInVisibleReminderDate.value = !value;
                           } catch (error) {
                             showErrorAlert(context, error);
@@ -116,7 +117,7 @@ class ReminderNotificationCustomizeWordPage extends HookConsumerWidget {
                         (value) async {
                           analytics.logEvent(name: "change_reminder_notification_number");
                           try {
-                            await stateNotifier.asyncAction.setIsInVisiblePillNumber(!value, setting);
+                            await _setIsInVisiblePillNumber(isInVisiblePillNumber: !value, setting: setting, setSetting: setSetting);
                             isInVisiblePillNumber.value = !value;
                           } catch (error) {
                             showErrorAlert(context, error);
@@ -130,7 +131,7 @@ class ReminderNotificationCustomizeWordPage extends HookConsumerWidget {
                         (value) async {
                           analytics.logEvent(name: "change_reminder_notification_desc");
                           try {
-                            await stateNotifier.asyncAction.setIsInVisibleDescription(!value, setting);
+                            await _setIsInVisibleDescription(isInVisibleDescription: !value, setting: setting, setSetting: setSetting);
                             isInVisibleDescription.value = !value;
                           } catch (error) {
                             showErrorAlert(context, error);
@@ -171,6 +172,50 @@ class ReminderNotificationCustomizeWordPage extends HookConsumerWidget {
         ],
       ),
     );
+  }
+
+  Future<void> _reminderNotificationWordSubmit({
+    required String word,
+    required Setting setting,
+    required SetSetting setSetting,
+  }) async {
+    var reminderNotificationCustomization = setting.reminderNotificationCustomization;
+    reminderNotificationCustomization = reminderNotificationCustomization.copyWith(word: word);
+
+    setSetting(setting.copyWith(reminderNotificationCustomization: reminderNotificationCustomization));
+  }
+
+  Future<void> _setIsInVisibleReminderDate({
+    required bool isInVisibleReminderDate,
+    required Setting setting,
+    required SetSetting setSetting,
+  }) async {
+    var reminderNotificationCustomization = setting.reminderNotificationCustomization;
+    reminderNotificationCustomization = reminderNotificationCustomization.copyWith(isInVisibleReminderDate: isInVisibleReminderDate);
+
+    setSetting(setting.copyWith(reminderNotificationCustomization: reminderNotificationCustomization));
+  }
+
+  Future<void> _setIsInVisiblePillNumber({
+    required bool isInVisiblePillNumber,
+    required Setting setting,
+    required SetSetting setSetting,
+  }) async {
+    var reminderNotificationCustomization = setting.reminderNotificationCustomization;
+    reminderNotificationCustomization = reminderNotificationCustomization.copyWith(isInVisiblePillNumber: isInVisiblePillNumber);
+
+    setSetting(setting.copyWith(reminderNotificationCustomization: reminderNotificationCustomization));
+  }
+
+  Future<void> _setIsInVisibleDescription({
+    required bool isInVisibleDescription,
+    required Setting setting,
+    required SetSetting setSetting,
+  }) async {
+    var reminderNotificationCustomization = setting.reminderNotificationCustomization;
+    reminderNotificationCustomization = reminderNotificationCustomization.copyWith(isInVisibleDescription: isInVisibleDescription);
+
+    await setSetting(setting.copyWith(reminderNotificationCustomization: reminderNotificationCustomization));
   }
 }
 

@@ -24,14 +24,14 @@ class RecordPageButton extends StatelessWidget {
     } else if (currentPillSheet.todayPillIsAlreadyTaken) {
       return CancelButton(
         pillSheetGroup: pillSheetGroup,
-        pillSheet: currentPillSheet,
+        activePillSheet: currentPillSheet,
         userIsPremiumOtTrial: userIsPremiumOtTrial,
       );
     } else {
       return TakenButton(
         parentContext: context,
         pillSheetGroup: pillSheetGroup,
-        pillSheet: currentPillSheet,
+        activePillSheet: currentPillSheet,
         userIsPremiumOtTrial: userIsPremiumOtTrial,
       );
     }

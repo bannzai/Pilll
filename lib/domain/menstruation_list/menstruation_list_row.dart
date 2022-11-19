@@ -9,20 +9,18 @@ import 'package:flutter/material.dart';
 class MenstruationListRow extends StatelessWidget {
   final Menstruation menstruation;
   final Menstruation? previousMenstruation;
-  final String? prefix;
 
   const MenstruationListRow({
     Key? key,
     required this.menstruation,
     required this.previousMenstruation,
-    required this.prefix,
   }) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
     return GestureDetector(
       onTap: () {
-        showMenstruationEditPage(context, menstruation: menstruation);
+        showMenstruationEditPage(context, initialMenstruation: menstruation);
       },
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,

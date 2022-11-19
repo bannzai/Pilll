@@ -62,6 +62,10 @@ class Setting with _$Setting {
   // NOTE: v3.9.6 で PillSheetType.pillsheet_24_rest_4 を含めた状態でのコード生成をしていなかった
   // 本来初期設定でpillsheet_24_rest_4を選択したユーザーの pillSheetTypes の値が null が入ってしまっている
   List<PillSheetType> get pillSheetEnumTypes {
-    return pillSheetTypes.map((e) => e ?? PillSheetType.pillsheet_24_rest_4).toList();
+    return backportPillSheetTypes(pillSheetTypes);
   }
+}
+
+List<PillSheetType> backportPillSheetTypes(List<PillSheetType?> pillSheetTypes) {
+  return pillSheetTypes.map((e) => e ?? PillSheetType.pillsheet_24_rest_4).toList();
 }

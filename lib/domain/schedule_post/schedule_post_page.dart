@@ -1,5 +1,7 @@
 import 'dart:math';
 
+import 'package:collection/collection.dart';
+import 'package:async_value_group/async_value_group.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_hooks/flutter_hooks.dart';
@@ -11,11 +13,13 @@ import 'package:pilll/components/atoms/font.dart';
 import 'package:pilll/components/atoms/text_color.dart';
 import 'package:pilll/components/molecules/indicator.dart';
 import 'package:pilll/components/page/discard_dialog.dart';
-import 'package:pilll/database/database.dart';
-import 'package:pilll/domain/schedule_post/state.codegen.dart';
+import 'package:pilll/provider/database.dart';
 import 'package:pilll/entity/schedule.codegen.dart';
 import 'package:pilll/error/error_alert.dart';
 import 'package:pilll/error/universal_error_page.dart';
+import 'package:pilll/provider/premium_and_trial.codegen.dart';
+import 'package:pilll/provider/root.dart';
+import 'package:pilll/provider/schedule.dart';
 import 'package:pilll/service/local_notification.dart';
 import 'package:pilll/util/const.dart';
 import 'package:pilll/util/formatter/date_time_formatter.dart';
@@ -27,14 +31,16 @@ class SchedulePostPage extends HookConsumerWidget {
   const SchedulePostPage({Key? key, required this.date}) : super(key: key);
   @override
   Widget build(BuildContext context, WidgetRef ref) {
-    final asyncState = ref.watch(schedulePostAsyncStateProvider(date));
-
-    return asyncState.when(
-      data: (state) => _SchedulePostPage(state: state),
+    return AsyncValueGroup.group2(ref.watch(premiumAndTrialProvider), ref.watch(schedulesForDateProvider(date))).when(
+      data: (data) => _SchedulePostPage(
+        date: date,
+        premiumAndTrial: data.t1,
+        schedule: data.t2.firstOrNull ?? Schedule(title: "", localNotification: null, date: date, createdDateTime: DateTime.now()),
+      ),
       error: (error, _) => UniversalErrorPage(
         error: error,
         child: null,
-        reload: () => ref.refresh(schedulePostAsyncStateProvider(date)),
+        reload: () => ref.refresh(refreshAppProvider),
       ),
       loading: () => const ScaffoldIndicator(),
     );
@@ -42,35 +48,36 @@ class SchedulePostPage extends HookConsumerWidget {
 }
 
 class _SchedulePostPage extends HookConsumerWidget {
-  final SchedulePostState state;
+  final DateTime date;
+  final Schedule schedule;
+  final PremiumAndTrial premiumAndTrial;
 
   const _SchedulePostPage({
     Key? key,
-    required this.state,
+    required this.date,
+    required this.schedule,
+    required this.premiumAndTrial,
   }) : super(key: key);
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {
-    final schedule =
-        state.scheduleOrNull(index: 0) ?? Schedule(title: "", localNotification: null, date: state.date, createdDateTime: DateTime.now());
     final scheduleID = schedule.id;
     final title = useState(schedule.title);
     final isOnRemind = useState(schedule.localNotification != null);
     final textEditingController = useTextEditingController(text: title.value);
     final focusNode = useFocusNode();
-    isInvalid() => !(state.date.date().isAfter(today())) || title.value.isEmpty;
+    isInvalid() => !(date.date().isAfter(today())) || title.value.isEmpty;
 
     return Scaffold(
       backgroundColor: PilllColors.white,
       resizeToAvoidBottomInset: false,
       appBar: AppBar(
         elevation: 0.0,
-        title: Text(DateTimeFormatter.yearAndMonthAndDay(state.date), style: FontType.sBigTitle.merge(TextColorStyle.main)),
+        title: Text(DateTimeFormatter.yearAndMonthAndDay(date), style: FontType.sBigTitle.merge(TextColorStyle.main)),
         leading: IconButton(
           icon: const Icon(Icons.close, color: Colors.black),
           onPressed: () => Navigator.of(context).pop(),
         ),
-        actions: [],
         backgroundColor: PilllColors.white,
       ),
       body: SafeArea(
@@ -119,7 +126,7 @@ class _SchedulePostPage extends HookConsumerWidget {
                       contentPadding: const EdgeInsets.all(0),
                     ),
                     const Spacer(),
-                    if (state.date.date().isAfter(today())) ...[
+                    if (date.date().isAfter(today())) ...[
                       PrimaryButton(
                         text: "保存",
                         onPressed: isInvalid()
@@ -138,7 +145,7 @@ class _SchedulePostPage extends HookConsumerWidget {
                                       title: title.value,
                                       localNotification: LocalNotification(
                                         localNotificationID: Random().nextInt(scheduleNotificationIdentifierOffset),
-                                        remindDateTime: DateTime(state.date.year, state.date.month, state.date.day, 9),
+                                        remindDateTime: DateTime(date.year, date.month, date.day, 9),
                                       ),
                                     );
                                     await localNotificationService.scheduleCalendarScheduleNotification(schedule: newSchedule);

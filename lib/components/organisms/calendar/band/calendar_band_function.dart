@@ -11,11 +11,14 @@ import 'package:pilll/util/datetime/date_compare.dart';
 import 'package:pilll/util/datetime/day.dart';
 
 List<DateRange> scheduledOrInTheMiddleMenstruationDateRanges(
-  PillSheetGroup pillSheetGroup,
-  Setting setting,
+  PillSheetGroup? pillSheetGroup,
+  Setting? setting,
   List<Menstruation> menstruations,
   int maxPageCount,
 ) {
+  if (pillSheetGroup == null || setting == null) {
+    return [];
+  }
   if (pillSheetGroup.pillSheets.isEmpty) {
     return [];
   }

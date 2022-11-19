@@ -1,42 +1,41 @@
 import 'package:flutter/material.dart';
+import 'package:hooks_riverpod/hooks_riverpod.dart';
 import 'package:pilll/analytics.dart';
 import 'package:pilll/components/atoms/buttons.dart';
-import 'package:pilll/domain/menstruation/menstruation_state.codegen.dart';
 import 'package:pilll/domain/menstruation_edit/menstruation_edit_page.dart';
 import 'package:pilll/domain/menstruation/menstruation_select_modify_type_sheet.dart';
-import 'package:pilll/domain/menstruation/menstruation_page_state_notifier.dart';
 import 'package:pilll/entity/menstruation.codegen.dart';
+import 'package:pilll/entity/setting.codegen.dart';
+import 'package:pilll/provider/menstruation.dart';
 import 'package:pilll/util/datetime/day.dart';
 
-class MenstruationRecordButton extends StatelessWidget {
+class MenstruationRecordButton extends HookConsumerWidget {
+  final Menstruation? latestMenstruation;
+  final Setting setting;
+  final Function(Menstruation) onRecord;
+
   const MenstruationRecordButton({
     Key? key,
-    required this.state,
-    required this.store,
+    required this.latestMenstruation,
+    required this.setting,
     required this.onRecord,
   }) : super(key: key);
 
-  final MenstruationState state;
-  final MenstruationPageStateNotifier store;
-  final Function(Menstruation) onRecord;
-
   @override
-  Widget build(BuildContext context) {
+  Widget build(BuildContext context, WidgetRef ref) {
+    final beginMenstruation = ref.watch(beginMenstruationProvider);
     return SizedBox(
       width: 180,
       child: PrimaryButton(
         onPressed: () async {
           analytics.logEvent(name: "pressed_menstruation_record");
-          final latestMenstruation = state.latestMenstruation;
+
+          final latestMenstruation = this.latestMenstruation;
           if (latestMenstruation != null && latestMenstruation.dateRange.inRange(today())) {
-            showMenstruationEditPage(context, menstruation: latestMenstruation);
-            return;
+            return showMenstruationEditPage(context, initialMenstruation: latestMenstruation);
           }
-
-          final setting = state.setting;
-
           if (setting.durationMenstruation == 0) {
-            return showMenstruationEditPage(context, menstruation: null);
+            return showMenstruationEditPage(context, initialMenstruation: null);
           }
           showModalBottomSheet(
             context: context,
@@ -44,26 +43,37 @@ class MenstruationRecordButton extends StatelessWidget {
               switch (type) {
                 case MenstruationSelectModifyType.today:
                   analytics.logEvent(name: "tapped_menstruation_record_today");
-                  final created = await store.asyncAction.recordFromToday(setting: setting);
+                  final created = await beginMenstruation(today(), setting: setting);
                   onRecord(created);
                   Navigator.of(context).pop();
                   return;
                 case MenstruationSelectModifyType.yesterday:
                   analytics.logEvent(name: "tapped_menstruation_record_yesterday");
-                  final created = await store.asyncAction.recordFromYesterday(setting: setting);
+                  final created = await beginMenstruation(yesterday(), setting: setting);
                   onRecord(created);
                   Navigator.of(context).pop();
                   return;
                 case MenstruationSelectModifyType.begin:
                   analytics.logEvent(name: "tapped_menstruation_record_begin");
                   Navigator.of(context).pop();
-                  return showMenstruationEditPage(context, menstruation: null);
+                  return showMenstruationEditPage(context, initialMenstruation: null);
               }
             }),
           );
         },
-        text: state.buttonString,
+        text: _buttonString,
       ),
     );
+  }
+
+  String get _buttonString {
+    final latestMenstruation = this.latestMenstruation;
+    if (latestMenstruation == null) {
+      return "生理を記録";
+    }
+    if (latestMenstruation.dateRange.inRange(today())) {
+      return "生理期間を編集";
+    }
+    return "生理を記録";
   }
 }

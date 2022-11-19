@@ -4,30 +4,31 @@ import 'package:hooks_riverpod/hooks_riverpod.dart';
 import 'package:pilll/analytics.dart';
 import 'package:pilll/components/atoms/buttons.dart';
 import 'package:pilll/domain/modal/release_note.dart';
-import 'package:pilll/domain/record/record_page_state_notifier.dart';
 import 'package:pilll/domain/record/util/request_in_app_review.dart';
 import 'package:pilll/entity/pill_sheet.codegen.dart';
 import 'package:pilll/entity/pill_sheet_group.codegen.dart';
 import 'package:pilll/error/error_alert.dart';
 import 'package:pilll/error_log.dart';
 import 'package:pilll/native/widget.dart';
+import 'package:pilll/provider/take_pill.dart';
+import 'package:pilll/util/datetime/day.dart';
 
 class TakenButton extends HookConsumerWidget {
   final BuildContext parentContext;
   final PillSheetGroup pillSheetGroup;
-  final PillSheet pillSheet;
+  final PillSheet activePillSheet;
   final bool userIsPremiumOtTrial;
 
   const TakenButton({
     Key? key,
     required this.parentContext,
     required this.pillSheetGroup,
-    required this.pillSheet,
+    required this.activePillSheet,
     required this.userIsPremiumOtTrial,
   }) : super(key: key);
   @override
   Widget build(BuildContext context, WidgetRef ref) {
-    final store = ref.watch(recordPageStateNotifierProvider.notifier);
+    final takePill = ref.watch(takePillProvider);
 
     return SizedBox(
       width: 180,
@@ -36,14 +37,19 @@ class TakenButton extends HookConsumerWidget {
         onPressed: () async {
           try {
             analytics.logEvent(name: "taken_button_pressed", parameters: {
-              "last_taken_pill_number": pillSheet.lastTakenPillNumber,
-              "today_pill_number": pillSheet.todayPillNumber,
+              "last_taken_pill_number": activePillSheet.lastTakenPillNumber,
+              "today_pill_number": activePillSheet.todayPillNumber,
             });
             // NOTE: batch.commit でリモートのDBに書き込む時間がかかるので事前にバッジを0にする
             FlutterAppBadger.removeBadge();
             requestInAppReview();
             showReleaseNotePreDialog(context);
-            final updatedPillSheetGroup = await store.asyncAction.taken(pillSheetGroup: pillSheetGroup);
+            final updatedPillSheetGroup = await takePill(
+              takenDate: now(),
+              pillSheetGroup: pillSheetGroup,
+              activedPillSheet: activePillSheet,
+              isQuickRecord: false,
+            );
             syncActivePillSheetValue(pillSheetGroup: updatedPillSheetGroup);
           } catch (exception, stack) {
             errorLogger.recordError(exception, stack);

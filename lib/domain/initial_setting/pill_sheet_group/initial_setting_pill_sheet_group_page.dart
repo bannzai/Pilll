@@ -1,60 +1,67 @@
 import 'package:flutter_hooks/flutter_hooks.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:pilll/analytics.dart';
+import 'package:pilll/auth/apple.dart';
+import 'package:pilll/auth/google.dart';
 import 'package:pilll/components/atoms/font.dart';
 import 'package:pilll/components/page/hud.dart';
 import 'package:pilll/components/template/setting_pill_sheet_group/pill_sheet_group_select_pill_sheet_type_page.dart';
 import 'package:pilll/components/template/setting_pill_sheet_group/setting_pill_sheet_group.dart';
 import 'package:pilll/domain/initial_setting/initial_setting_state.codegen.dart';
 import 'package:pilll/domain/initial_setting/today_pill_number/initial_setting_select_today_pill_number_page.dart';
-import 'package:pilll/domain/initial_setting/initial_setting_store.dart';
+import 'package:pilll/domain/initial_setting/initial_setting_state_notifier.dart';
 import 'package:pilll/components/atoms/buttons.dart';
 import 'package:pilll/components/atoms/color.dart';
 import 'package:pilll/components/atoms/text_color.dart';
 import 'package:flutter/material.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
 import 'package:pilll/entity/pill_sheet_type.dart';
-import 'package:pilll/router/router.dart';
 import 'package:pilll/service/auth.dart';
 import 'package:pilll/entity/link_account_type.dart';
 import 'package:pilll/domain/sign_in/sign_in_sheet.dart';
-import 'package:pilll/domain/sign_in/sign_in_sheet_state.codegen.dart';
 
 class InitialSettingPillSheetGroupPage extends HookConsumerWidget {
   const InitialSettingPillSheetGroupPage({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {
-    final store = ref.watch(initialSettingStoreProvider.notifier);
-    final state = ref.watch(initialSettingStoreProvider);
-    final authStream = ref.watch(authStateStreamProvider);
+    final store = ref.watch(initialSettingStateNotifierProvider.notifier);
+    final state = ref.watch(initialSettingStateNotifierProvider);
+    final authStream = ref.watch(authStateStreamProvider.stream);
+    final isAppleLinked = ref.watch(isAppleLinkedProvider);
+    final isGoogleLinked = ref.watch(isGoogleLinkedProvider);
 
     useEffect(() {
-      store.fetch();
-      return null;
-    }, [authStream]);
+      final subscription = authStream.listen((user) {
+        if (user != null) {
+          if (!user.isAnonymous) {
+            analytics.logEvent(name: "initial_setting_signin_account", parameters: {"uid": user.uid});
 
-    useEffect(() {
-      if (state.userIsNotAnonymous) {
-        final accountType = state.accountType;
-        if (accountType != null) {
-          Future.microtask(() {
-            ScaffoldMessenger.of(context).showSnackBar(
-              SnackBar(
-                duration: const Duration(seconds: 2),
-                content: Text("${accountType.providerName}でログインしました"),
-              ),
-            );
-          });
+            final LinkAccountType? accountType = () {
+              if (isAppleLinked) {
+                return LinkAccountType.apple;
+              } else if (isGoogleLinked) {
+                return LinkAccountType.google;
+              } else {
+                return null;
+              }
+            }();
+            if (accountType != null) {
+              Future.microtask(() {
+                ScaffoldMessenger.of(context).showSnackBar(
+                  SnackBar(
+                    duration: const Duration(seconds: 2),
+                    content: Text("${accountType.providerName}でログインしました"),
+                  ),
+                );
+              });
+            }
+          }
         }
+      });
 
-        if (state.settingIsExist) {
-          AppRouter.signInAccount(context);
-        }
-      }
-
-      return null;
-    }, [state.userIsNotAnonymous, state.accountType, state.settingIsExist]);
+      return subscription.cancel;
+    }, [true]);
 
     return HUD(
       shown: state.isLoading,
@@ -143,7 +150,7 @@ class InitialSettingPillSheetGroupPageBody extends StatelessWidget {
   }) : super(key: key);
 
   final InitialSettingState state;
-  final InitialSettingStateStore store;
+  final InitialSettingStateNotifier store;
 
   @override
   Widget build(BuildContext context) {

@@ -18,13 +18,11 @@ class PremiumIntroductionDiscountRow extends HookConsumerWidget {
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {
-    final discountEntitlementDeadlineDate =
-        this.discountEntitlementDeadlineDate;
+    final discountEntitlementDeadlineDate = this.discountEntitlementDeadlineDate;
     final Duration? diff;
     final String? countdown;
     if (discountEntitlementDeadlineDate != null) {
-      final _diff = ref.watch(
-          durationToDiscountPriceDeadline(discountEntitlementDeadlineDate));
+      final _diff = ref.watch(durationToDiscountPriceDeadline(discountEntitlementDeadlineDate));
       countdown = discountPriceDeadlineCountdownString(_diff);
       diff = _diff;
     } else {
@@ -81,7 +79,7 @@ class PremiumIntroductionDiscountRow extends HookConsumerWidget {
           Stack(
             children: [
               Text(
-                monthlyPremiumPackage.product.priceString,
+                monthlyPremiumPackage.storeProduct.priceString,
                 textAlign: TextAlign.center,
                 style: TextColorStyle.main.merge(
                   const TextStyle(

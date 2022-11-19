@@ -99,7 +99,6 @@ class MenstruationHistoryCardList extends StatelessWidget {
           MenstruationListRow(
             menstruation: activeMenstruation,
             previousMenstruation: previousMenstruation,
-            prefix: "今回",
           ),
           const SizedBox(height: 20),
         ],
@@ -107,7 +106,6 @@ class MenstruationHistoryCardList extends StatelessWidget {
           MenstruationListRow(
             menstruation: previousMenstruation,
             previousMenstruation: secondPreviousMenstruation,
-            prefix: "前回",
           ),
           const SizedBox(height: 20),
         ],
@@ -115,7 +113,6 @@ class MenstruationHistoryCardList extends StatelessWidget {
           MenstruationListRow(
             menstruation: secondPreviousMenstruation,
             previousMenstruation: thirdPreviousMenstruation,
-            prefix: "前々回",
           ),
           const SizedBox(height: 20),
         ],

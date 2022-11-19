@@ -6,18 +6,19 @@ import 'package:pilll/components/atoms/text_color.dart';
 import 'package:pilll/components/molecules/premium_badge.dart';
 import 'package:pilll/components/molecules/select_circle.dart';
 import 'package:pilll/domain/premium_introduction/premium_introduction_sheet.dart';
-import 'package:pilll/domain/record/record_page_state.codegen.dart';
-import 'package:pilll/domain/record/record_page_state_notifier.dart';
 import 'package:pilll/entity/setting.codegen.dart';
+import 'package:pilll/provider/premium_and_trial.codegen.dart';
+import 'package:pilll/provider/setting.dart';
 
 class SelectAppearanceModeModal extends HookConsumerWidget {
-  final RecordPageStateNotifier store;
+  final Setting setting;
+  final PremiumAndTrial premiumAndTrial;
 
-  const SelectAppearanceModeModal(this.store, {Key? key}) : super(key: key);
+  const SelectAppearanceModeModal({Key? key, required this.setting, required this.premiumAndTrial}) : super(key: key);
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {
-    final state = ref.watch(recordPageStateNotifierProvider).value!;
+    final setSetting = ref.watch(setSettingProvider);
 
     return Container(
       color: Colors.white,
@@ -41,24 +42,27 @@ class SelectAppearanceModeModal extends HookConsumerWidget {
               children: [
                 _row(
                   context,
-                  store: store,
-                  state: state,
+                  setting: setting,
+                  setSetting: setSetting,
+                  premiumAndTrial: premiumAndTrial,
                   mode: PillSheetAppearanceMode.date,
                   text: "日付表示",
                   isPremiumFunction: true,
                 ),
                 _row(
                   context,
-                  store: store,
-                  state: state,
+                  setting: setting,
+                  setSetting: setSetting,
+                  premiumAndTrial: premiumAndTrial,
                   mode: PillSheetAppearanceMode.number,
                   text: "ピル番号",
                   isPremiumFunction: false,
                 ),
                 _row(
                   context,
-                  store: store,
-                  state: state,
+                  setting: setting,
+                  setSetting: setSetting,
+                  premiumAndTrial: premiumAndTrial,
                   mode: PillSheetAppearanceMode.sequential,
                   text: "服用日数",
                   isPremiumFunction: false,
@@ -73,8 +77,9 @@ class SelectAppearanceModeModal extends HookConsumerWidget {
 
   Widget _row(
     BuildContext context, {
-    required RecordPageStateNotifier store,
-    required RecordPageState state,
+    required SetSetting setSetting,
+    required Setting setting,
+    required PremiumAndTrial premiumAndTrial,
     required PillSheetAppearanceMode mode,
     required String text,
     required bool isPremiumFunction,
@@ -83,28 +88,23 @@ class SelectAppearanceModeModal extends HookConsumerWidget {
       onTap: () async {
         analytics.logEvent(
           name: "did_select_pill_sheet_appearance",
-          parameters: {
-            "mode": mode.toString(),
-            "isPremiumFunction": isPremiumFunction
-          },
+          parameters: {"mode": mode.toString(), "isPremiumFunction": isPremiumFunction},
         );
 
-        if (state.premiumAndTrial.isPremium || state.premiumAndTrial.isTrial) {
-          await store.asyncAction
-              .switchingAppearanceMode(mode: mode, setting: state.setting);
+        if (premiumAndTrial.isPremium || premiumAndTrial.isTrial) {
+          await setSetting(setting.copyWith(pillSheetAppearanceMode: mode));
         } else if (isPremiumFunction) {
           showPremiumIntroductionSheet(context);
         } else {
           // User selected non premium function mode
-          await store.asyncAction
-              .switchingAppearanceMode(mode: mode, setting: state.setting);
+          await setSetting(setting.copyWith(pillSheetAppearanceMode: mode));
         }
       },
       child: SizedBox(
         height: 48,
         child: Row(
           children: [
-            SelectCircle(isSelected: mode == state.appearanceMode),
+            SelectCircle(isSelected: mode == setting.pillSheetAppearanceMode),
             const SizedBox(width: 34),
             Text(
               text,
@@ -126,13 +126,17 @@ class SelectAppearanceModeModal extends HookConsumerWidget {
 }
 
 void showSelectAppearanceModeModal(
-  BuildContext context,
-  RecordPageStateNotifier store,
-) {
+  BuildContext context, {
+  required Setting setting,
+  required PremiumAndTrial premiumAndTrial,
+}) {
   analytics.setCurrentScreen(screenName: "SelectAppearanceModeModal");
   showModalBottomSheet(
     context: context,
-    builder: (context) => SelectAppearanceModeModal(store),
+    builder: (context) => SelectAppearanceModeModal(
+      setting: setting,
+      premiumAndTrial: premiumAndTrial,
+    ),
     backgroundColor: Colors.transparent,
   );
 }

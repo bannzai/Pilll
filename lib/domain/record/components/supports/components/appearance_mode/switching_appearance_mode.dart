@@ -4,16 +4,17 @@ import 'package:pilll/analytics.dart';
 import 'package:pilll/components/atoms/font.dart';
 import 'package:pilll/components/atoms/text_color.dart';
 import 'package:pilll/domain/record/components/supports/components/appearance_mode/select_appearance_mode_modal.dart';
-import 'package:pilll/domain/record/record_page_state.codegen.dart';
-import 'package:pilll/domain/record/record_page_state_notifier.dart';
+import 'package:pilll/entity/setting.codegen.dart';
+import 'package:pilll/provider/premium_and_trial.codegen.dart';
 
 class SwitchingAppearanceMode extends StatelessWidget {
-  final RecordPageStateNotifier store;
-  final RecordPageState state;
+  final Setting setting;
+  final PremiumAndTrial premiumAndTrial;
+
   const SwitchingAppearanceMode({
     Key? key,
-    required this.store,
-    required this.state,
+    required this.setting,
+    required this.premiumAndTrial,
   }) : super(key: key);
 
   @override
@@ -34,7 +35,7 @@ class SwitchingAppearanceMode extends StatelessWidget {
       ]),
       onTap: () {
         analytics.logEvent(name: "did_tapped_record_page_appearance_mode");
-        showSelectAppearanceModeModal(context, store);
+        showSelectAppearanceModeModal(context, setting: setting, premiumAndTrial: premiumAndTrial);
       },
     );
   }

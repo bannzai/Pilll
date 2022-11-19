@@ -2,6 +2,7 @@ import 'dart:io';
 
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
+import 'package:hooks_riverpod/hooks_riverpod.dart';
 import 'package:pilll/analytics.dart';
 import 'package:pilll/auth/apple.dart';
 import 'package:pilll/auth/google.dart';
@@ -13,11 +14,13 @@ import 'package:pilll/error/error_alert.dart';
 import 'package:pilll/error_log.dart';
 import 'package:pilll/router/router.dart';
 
-class DeleteUserButton extends StatelessWidget {
+class DeleteUserButton extends HookConsumerWidget {
   const DeleteUserButton({Key? key}) : super(key: key);
 
   @override
-  Widget build(BuildContext context) {
+  Widget build(BuildContext context, WidgetRef ref) {
+    final isAppleLinked = ref.watch(isAppleLinkedProvider);
+    final isGoogleLinked = ref.watch(isGoogleLinkedProvider);
     return Container(
       padding: const EdgeInsets.only(top: 54),
       child: AlertButton(
@@ -38,7 +41,7 @@ class DeleteUserButton extends StatelessWidget {
                 text: "退会する",
                 onPressed: () async {
                   analytics.logEvent(name: "pressed_delete_user_button");
-                  await _delete(context);
+                  await _delete(context, isAppleLinked: isAppleLinked, isGoogleLinked: isGoogleLinked);
                 },
               ),
             ],
@@ -49,7 +52,11 @@ class DeleteUserButton extends StatelessWidget {
     );
   }
 
-  Future<void> _delete(BuildContext context) async {
+  Future<void> _delete(
+    BuildContext context, {
+    required bool isAppleLinked,
+    required bool isGoogleLinked,
+  }) async {
     try {
       await FirebaseAuth.instance.currentUser?.delete();
       showDialog(
@@ -78,16 +85,16 @@ class DeleteUserButton extends StatelessWidget {
             AlertButton(
               text: "再ログイン",
               onPressed: () async {
-                if (isLinkedApple()) {
+                if (isAppleLinked) {
                   await appleReauthentification();
-                } else if (isLinkedGoogle()) {
+                } else if (isGoogleLinked) {
                   await googleReauthentification();
                 } else {
                   errorLogger.log("it is not cooperate account");
                   exit(1);
                 }
                 Navigator.of(context).pop();
-                await _delete(context);
+                await _delete(context, isAppleLinked: isAppleLinked, isGoogleLinked: isGoogleLinked);
               },
             ),
           ],

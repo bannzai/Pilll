@@ -1,7 +1,7 @@
 import 'package:pilll/analytics.dart';
 import 'package:pilll/domain/initial_setting/initial_setting_state.codegen.dart';
 import 'package:pilll/domain/initial_setting/premium_trial/initial_setting_premium_trial_start_page.dart';
-import 'package:pilll/domain/initial_setting/initial_setting_store.dart';
+import 'package:pilll/domain/initial_setting/initial_setting_state_notifier.dart';
 import 'package:pilll/components/atoms/buttons.dart';
 import 'package:pilll/components/atoms/color.dart';
 import 'package:pilll/components/atoms/font.dart';
@@ -20,8 +20,8 @@ class InitialSettingReminderTimesPage extends HookConsumerWidget {
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {
-    final store = ref.watch(initialSettingStoreProvider.notifier);
-    final state = ref.watch(initialSettingStoreProvider);
+    final store = ref.watch(initialSettingStateNotifierProvider.notifier);
+    final state = ref.watch(initialSettingStateNotifierProvider);
     return Scaffold(
       backgroundColor: PilllColors.background,
       appBar: AppBar(
@@ -118,7 +118,7 @@ class InitialSettingReminderTimesPage extends HookConsumerWidget {
     BuildContext context,
     int index,
     InitialSettingState state,
-    InitialSettingStateStore store,
+    InitialSettingStateNotifier store,
   ) {
     analytics.logEvent(name: "show_initial_setting_reminder_picker");
     final reminderDateTime = state.reminderTimeOrNull(index);
@@ -141,7 +141,7 @@ class InitialSettingReminderTimesPage extends HookConsumerWidget {
 
   Widget _form(
     BuildContext context,
-    InitialSettingStateStore store,
+    InitialSettingStateNotifier store,
     InitialSettingState state,
     int index,
   ) {

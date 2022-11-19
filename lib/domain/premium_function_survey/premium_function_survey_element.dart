@@ -4,19 +4,15 @@ import 'package:pilll/components/atoms/color.dart';
 import 'package:pilll/components/atoms/font.dart';
 import 'package:pilll/components/atoms/text_color.dart';
 import 'package:pilll/domain/premium_function_survey/premium_function_survey_element_type.dart';
-import 'package:pilll/domain/premium_function_survey/premium_function_survey_state.codegen.dart';
-import 'package:pilll/domain/premium_function_survey/premium_function_survey_store.dart';
 
 class PremiumFunctionSurveyElement extends StatelessWidget {
-  final PremiumFunctionSurveyStateStore store;
-  final PremiumFunctionSurveyState state;
   final PremiumFunctionSurveyElementType element;
+  final ValueNotifier<List<PremiumFunctionSurveyElementType>> selectedElements;
 
   const PremiumFunctionSurveyElement({
     Key? key,
-    required this.store,
-    required this.state,
     required this.element,
+    required this.selectedElements,
   }) : super(key: key);
 
   @override
@@ -28,27 +24,22 @@ class PremiumFunctionSurveyElement extends StatelessWidget {
             width: 34,
             height: 34,
             child: Checkbox(
-              value: state.selectedElements.contains(element),
+              value: selectedElements.value.contains(element),
               onChanged: (isOn) {
-                analytics.logEvent(
-                    name: "toggle_premium_survey_check_box",
-                    parameters: {"isOn": isOn, "element": element.toString()});
-                store.handleCheckEvent(element);
+                analytics.logEvent(name: "toggle_premium_survey_check_box", parameters: {"isOn": isOn, "element": element.toString()});
+                if (selectedElements.value.contains(element)) {
+                  selectedElements.value = [...selectedElements.value]..remove(element);
+                } else {
+                  selectedElements.value = [...selectedElements.value, element];
+                }
               },
               checkColor: PilllColors.white,
               activeColor: PilllColors.secondary,
             ),
           ),
-          data: ThemeData(
-              primaryColor: PilllColors.thinSecondary,
-              unselectedWidgetColor: PilllColors.secondary),
+          data: ThemeData(primaryColor: PilllColors.thinSecondary, unselectedWidgetColor: PilllColors.secondary),
         ),
-        Text(_word,
-            style: const TextStyle(
-                fontFamily: FontFamily.japanese,
-                fontSize: 14,
-                fontWeight: FontWeight.w400,
-                color: TextColor.main)),
+        Text(_word, style: const TextStyle(fontFamily: FontFamily.japanese, fontSize: 14, fontWeight: FontWeight.w400, color: TextColor.main)),
       ],
     );
   }

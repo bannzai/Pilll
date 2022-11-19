@@ -9,7 +9,6 @@ import 'package:pilll/analytics.dart';
 import 'package:pilll/components/atoms/color.dart';
 import 'package:pilll/components/atoms/font.dart';
 import 'package:pilll/domain/root/root.dart';
-import 'package:pilll/error/universal_error_page.dart';
 import 'package:pilll/native/channel.dart';
 import 'package:pilll/service/local_notification.dart';
 import 'package:pilll/util/datetime/debug_print.dart';
@@ -37,15 +36,6 @@ Future<void> entrypoint() async {
     }
     await LocalNotificationService.setupTimeZone();
 
-    ErrorWidget.builder = (FlutterErrorDetails details) {
-      return UniversalErrorPage(
-        error: details.exception.toString(),
-        child: null,
-        reload: () {
-          rootKey.currentState?.reload();
-        },
-      );
-    };
     // MEMO: FirebaseCrashlytics#recordFlutterError called dumpErrorToConsole in function.
     FlutterError.onError = FirebaseCrashlytics.instance.recordFlutterError;
     runApp(const ProviderScope(child: App()));
@@ -88,10 +78,8 @@ class App extends StatelessWidget {
           ),
         ),
       ),
-      home: ProviderScope(
-        child: Root(
-          key: rootKey,
-        ),
+      home: const ProviderScope(
+        child: Root(),
       ),
       localizationsDelegates: AppLocalizations.localizationsDelegates,
       supportedLocales: AppLocalizations.supportedLocales,

@@ -1,6 +1,6 @@
 import 'package:pilll/analytics.dart';
 import 'package:pilll/domain/record/components/add_pill_sheet_group/add_pill_sheet_group_page.dart';
-import 'package:pilll/domain/record/record_page_state_notifier.dart';
+import 'package:pilll/entity/pill_sheet_group.codegen.dart';
 import 'package:pilll/entity/setting.codegen.dart';
 import 'package:pilll/components/atoms/font.dart';
 import 'package:pilll/components/atoms/text_color.dart';
@@ -11,12 +11,12 @@ class AddPillSheetGroupEmptyFrame extends StatelessWidget {
   const AddPillSheetGroupEmptyFrame({
     Key? key,
     required this.context,
-    required this.store,
+    required this.pillSheetGroup,
     required this.setting,
   }) : super(key: key);
 
   final BuildContext context;
-  final RecordPageStateNotifier store;
+  final PillSheetGroup? pillSheetGroup;
   final Setting setting;
 
   @override
@@ -37,8 +37,7 @@ class AddPillSheetGroupEmptyFrame extends StatelessWidget {
               mainAxisAlignment: MainAxisAlignment.center,
               children: <Widget>[
                 const Icon(Icons.add, color: TextColor.noshime),
-                Text("ピルシートを追加",
-                    style: FontType.assisting.merge(TextColorStyle.noshime)),
+                Text("ピルシートを追加", style: FontType.assisting.merge(TextColorStyle.noshime)),
               ],
             )),
           ],
@@ -46,7 +45,10 @@ class AddPillSheetGroupEmptyFrame extends StatelessWidget {
       ),
       onTap: () async {
         analytics.logEvent(name: "adding_pill_sheet_tapped");
-        Navigator.of(context).push(AddPillSheetGroupPageRoute.route());
+        Navigator.of(context).push(AddPillSheetGroupPageRoute.route(
+          pillSheetGroup: pillSheetGroup,
+          setting: setting,
+        ));
       },
     );
   }

@@ -12,45 +12,11 @@ part of 'menstruation.codegen.dart';
 T _$identity<T>(T value) => value;
 
 final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more informations: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
+    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
 
 Menstruation _$MenstruationFromJson(Map<String, dynamic> json) {
   return _Menstruation.fromJson(json);
 }
-
-/// @nodoc
-class _$MenstruationTearOff {
-  const _$MenstruationTearOff();
-
-  _Menstruation call(
-      {@JsonKey(includeIfNull: false, toJson: toNull)
-          String? id,
-      @JsonKey(fromJson: NonNullTimestampConverter.timestampToDateTime, toJson: NonNullTimestampConverter.dateTimeToTimestamp)
-          required DateTime beginDate,
-      @JsonKey(fromJson: NonNullTimestampConverter.timestampToDateTime, toJson: NonNullTimestampConverter.dateTimeToTimestamp)
-          required DateTime endDate,
-      @JsonKey(fromJson: TimestampConverter.timestampToDateTime, toJson: TimestampConverter.dateTimeToTimestamp)
-          DateTime? deletedAt,
-      @JsonKey(fromJson: NonNullTimestampConverter.timestampToDateTime, toJson: NonNullTimestampConverter.dateTimeToTimestamp)
-          required DateTime createdAt,
-      String? healthKitSampleDataUUID}) {
-    return _Menstruation(
-      id: id,
-      beginDate: beginDate,
-      endDate: endDate,
-      deletedAt: deletedAt,
-      createdAt: createdAt,
-      healthKitSampleDataUUID: healthKitSampleDataUUID,
-    );
-  }
-
-  Menstruation fromJson(Map<String, Object?> json) {
-    return Menstruation.fromJson(json);
-  }
-}
-
-/// @nodoc
-const $Menstruation = _$MenstruationTearOff();
 
 /// @nodoc
 mixin _$Menstruation {
@@ -84,7 +50,8 @@ mixin _$Menstruation {
 abstract class $MenstruationCopyWith<$Res> {
   factory $MenstruationCopyWith(
           Menstruation value, $Res Function(Menstruation) then) =
-      _$MenstruationCopyWithImpl<$Res>;
+      _$MenstruationCopyWithImpl<$Res, Menstruation>;
+  @useResult
   $Res call(
       {@JsonKey(includeIfNull: false, toJson: toNull)
           String? id,
@@ -100,58 +67,62 @@ abstract class $MenstruationCopyWith<$Res> {
 }
 
 /// @nodoc
-class _$MenstruationCopyWithImpl<$Res> implements $MenstruationCopyWith<$Res> {
+class _$MenstruationCopyWithImpl<$Res, $Val extends Menstruation>
+    implements $MenstruationCopyWith<$Res> {
   _$MenstruationCopyWithImpl(this._value, this._then);
 
-  final Menstruation _value;
   // ignore: unused_field
-  final $Res Function(Menstruation) _then;
+  final $Val _value;
+  // ignore: unused_field
+  final $Res Function($Val) _then;
 
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
     Object? id = freezed,
-    Object? beginDate = freezed,
-    Object? endDate = freezed,
+    Object? beginDate = null,
+    Object? endDate = null,
     Object? deletedAt = freezed,
-    Object? createdAt = freezed,
+    Object? createdAt = null,
     Object? healthKitSampleDataUUID = freezed,
   }) {
     return _then(_value.copyWith(
-      id: id == freezed
+      id: freezed == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
               as String?,
-      beginDate: beginDate == freezed
+      beginDate: null == beginDate
           ? _value.beginDate
           : beginDate // ignore: cast_nullable_to_non_nullable
               as DateTime,
-      endDate: endDate == freezed
+      endDate: null == endDate
           ? _value.endDate
           : endDate // ignore: cast_nullable_to_non_nullable
               as DateTime,
-      deletedAt: deletedAt == freezed
+      deletedAt: freezed == deletedAt
           ? _value.deletedAt
           : deletedAt // ignore: cast_nullable_to_non_nullable
               as DateTime?,
-      createdAt: createdAt == freezed
+      createdAt: null == createdAt
           ? _value.createdAt
           : createdAt // ignore: cast_nullable_to_non_nullable
               as DateTime,
-      healthKitSampleDataUUID: healthKitSampleDataUUID == freezed
+      healthKitSampleDataUUID: freezed == healthKitSampleDataUUID
           ? _value.healthKitSampleDataUUID
           : healthKitSampleDataUUID // ignore: cast_nullable_to_non_nullable
               as String?,
-    ));
+    ) as $Val);
   }
 }
 
 /// @nodoc
-abstract class _$MenstruationCopyWith<$Res>
+abstract class _$$_MenstruationCopyWith<$Res>
     implements $MenstruationCopyWith<$Res> {
-  factory _$MenstruationCopyWith(
-          _Menstruation value, $Res Function(_Menstruation) then) =
-      __$MenstruationCopyWithImpl<$Res>;
+  factory _$$_MenstruationCopyWith(
+          _$_Menstruation value, $Res Function(_$_Menstruation) then) =
+      __$$_MenstruationCopyWithImpl<$Res>;
   @override
+  @useResult
   $Res call(
       {@JsonKey(includeIfNull: false, toJson: toNull)
           String? id,
@@ -167,46 +138,45 @@ abstract class _$MenstruationCopyWith<$Res>
 }
 
 /// @nodoc
-class __$MenstruationCopyWithImpl<$Res> extends _$MenstruationCopyWithImpl<$Res>
-    implements _$MenstruationCopyWith<$Res> {
-  __$MenstruationCopyWithImpl(
-      _Menstruation _value, $Res Function(_Menstruation) _then)
-      : super(_value, (v) => _then(v as _Menstruation));
+class __$$_MenstruationCopyWithImpl<$Res>
+    extends _$MenstruationCopyWithImpl<$Res, _$_Menstruation>
+    implements _$$_MenstruationCopyWith<$Res> {
+  __$$_MenstruationCopyWithImpl(
+      _$_Menstruation _value, $Res Function(_$_Menstruation) _then)
+      : super(_value, _then);
 
-  @override
-  _Menstruation get _value => super._value as _Menstruation;
-
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
     Object? id = freezed,
-    Object? beginDate = freezed,
-    Object? endDate = freezed,
+    Object? beginDate = null,
+    Object? endDate = null,
     Object? deletedAt = freezed,
-    Object? createdAt = freezed,
+    Object? createdAt = null,
     Object? healthKitSampleDataUUID = freezed,
   }) {
-    return _then(_Menstruation(
-      id: id == freezed
+    return _then(_$_Menstruation(
+      id: freezed == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
               as String?,
-      beginDate: beginDate == freezed
+      beginDate: null == beginDate
           ? _value.beginDate
           : beginDate // ignore: cast_nullable_to_non_nullable
               as DateTime,
-      endDate: endDate == freezed
+      endDate: null == endDate
           ? _value.endDate
           : endDate // ignore: cast_nullable_to_non_nullable
               as DateTime,
-      deletedAt: deletedAt == freezed
+      deletedAt: freezed == deletedAt
           ? _value.deletedAt
           : deletedAt // ignore: cast_nullable_to_non_nullable
               as DateTime?,
-      createdAt: createdAt == freezed
+      createdAt: null == createdAt
           ? _value.createdAt
           : createdAt // ignore: cast_nullable_to_non_nullable
               as DateTime,
-      healthKitSampleDataUUID: healthKitSampleDataUUID == freezed
+      healthKitSampleDataUUID: freezed == healthKitSampleDataUUID
           ? _value.healthKitSampleDataUUID
           : healthKitSampleDataUUID // ignore: cast_nullable_to_non_nullable
               as String?,
@@ -270,50 +240,52 @@ class _$_Menstruation extends _Menstruation {
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _Menstruation &&
-            const DeepCollectionEquality().equals(other.id, id) &&
-            const DeepCollectionEquality().equals(other.beginDate, beginDate) &&
-            const DeepCollectionEquality().equals(other.endDate, endDate) &&
-            const DeepCollectionEquality().equals(other.deletedAt, deletedAt) &&
-            const DeepCollectionEquality().equals(other.createdAt, createdAt) &&
-            const DeepCollectionEquality().equals(
-                other.healthKitSampleDataUUID, healthKitSampleDataUUID));
+            other is _$_Menstruation &&
+            (identical(other.id, id) || other.id == id) &&
+            (identical(other.beginDate, beginDate) ||
+                other.beginDate == beginDate) &&
+            (identical(other.endDate, endDate) || other.endDate == endDate) &&
+            (identical(other.deletedAt, deletedAt) ||
+                other.deletedAt == deletedAt) &&
+            (identical(other.createdAt, createdAt) ||
+                other.createdAt == createdAt) &&
+            (identical(
+                    other.healthKitSampleDataUUID, healthKitSampleDataUUID) ||
+                other.healthKitSampleDataUUID == healthKitSampleDataUUID));
   }
-
-  @override
-  int get hashCode => Object.hash(
-      runtimeType,
-      const DeepCollectionEquality().hash(id),
-      const DeepCollectionEquality().hash(beginDate),
-      const DeepCollectionEquality().hash(endDate),
-      const DeepCollectionEquality().hash(deletedAt),
-      const DeepCollectionEquality().hash(createdAt),
-      const DeepCollectionEquality().hash(healthKitSampleDataUUID));
 
   @JsonKey(ignore: true)
   @override
-  _$MenstruationCopyWith<_Menstruation> get copyWith =>
-      __$MenstruationCopyWithImpl<_Menstruation>(this, _$identity);
+  int get hashCode => Object.hash(runtimeType, id, beginDate, endDate,
+      deletedAt, createdAt, healthKitSampleDataUUID);
+
+  @JsonKey(ignore: true)
+  @override
+  @pragma('vm:prefer-inline')
+  _$$_MenstruationCopyWith<_$_Menstruation> get copyWith =>
+      __$$_MenstruationCopyWithImpl<_$_Menstruation>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_MenstruationToJson(this);
+    return _$$_MenstruationToJson(
+      this,
+    );
   }
 }
 
 abstract class _Menstruation extends Menstruation {
   const factory _Menstruation(
       {@JsonKey(includeIfNull: false, toJson: toNull)
-          String? id,
+          final String? id,
       @JsonKey(fromJson: NonNullTimestampConverter.timestampToDateTime, toJson: NonNullTimestampConverter.dateTimeToTimestamp)
-          required DateTime beginDate,
+          required final DateTime beginDate,
       @JsonKey(fromJson: NonNullTimestampConverter.timestampToDateTime, toJson: NonNullTimestampConverter.dateTimeToTimestamp)
-          required DateTime endDate,
+          required final DateTime endDate,
       @JsonKey(fromJson: TimestampConverter.timestampToDateTime, toJson: TimestampConverter.dateTimeToTimestamp)
-          DateTime? deletedAt,
+          final DateTime? deletedAt,
       @JsonKey(fromJson: NonNullTimestampConverter.timestampToDateTime, toJson: NonNullTimestampConverter.dateTimeToTimestamp)
-          required DateTime createdAt,
-      String? healthKitSampleDataUUID}) = _$_Menstruation;
+          required final DateTime createdAt,
+      final String? healthKitSampleDataUUID}) = _$_Menstruation;
   const _Menstruation._() : super._();
 
   factory _Menstruation.fromJson(Map<String, dynamic> json) =
@@ -346,6 +318,6 @@ abstract class _Menstruation extends Menstruation {
   String? get healthKitSampleDataUUID;
   @override
   @JsonKey(ignore: true)
-  _$MenstruationCopyWith<_Menstruation> get copyWith =>
+  _$$_MenstruationCopyWith<_$_Menstruation> get copyWith =>
       throw _privateConstructorUsedError;
 }

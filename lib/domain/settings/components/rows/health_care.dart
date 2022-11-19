@@ -1,9 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:pilll/analytics.dart';
 import 'package:pilll/components/atoms/font.dart';
-import 'package:pilll/error/alert_error.dart';
 import 'package:pilll/error/error_alert.dart';
-import 'package:pilll/error/universal_error_page.dart';
 import 'package:pilll/native/health_care.dart';
 import 'package:url_launcher/url_launcher.dart';
 
@@ -39,11 +37,7 @@ class HealthCareRow extends StatelessWidget {
             }
           }
         } catch (error) {
-          if (error is AlertError) {
-            showErrorAlert(context, error);
-          } else {
-            UniversalErrorPage.of(context).showError(error);
-          }
+          showErrorAlert(context, error);
         }
       },
     );

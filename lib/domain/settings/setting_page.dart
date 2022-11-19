@@ -1,5 +1,6 @@
 import 'dart:io';
 
+import 'package:async_value_group/async_value_group.dart';
 import 'package:flutter_hooks/flutter_hooks.dart';
 import 'package:pilll/analytics.dart';
 import 'package:pilll/components/atoms/buttons.dart';
@@ -23,16 +24,23 @@ import 'package:pilll/domain/settings/components/rows/taking_pill_notification.d
 import 'package:pilll/domain/settings/components/rows/today_pill_number.dart';
 import 'package:pilll/domain/settings/components/rows/update_from_132.dart';
 import 'package:pilll/domain/settings/components/setting_section_title.dart';
-import 'package:pilll/domain/settings/setting_page_state.codegen.dart';
+import 'package:pilll/domain/settings/provider.dart';
+import 'package:pilll/entity/pill_sheet_group.codegen.dart';
+import 'package:pilll/entity/setting.codegen.dart';
 import 'package:pilll/error/universal_error_page.dart';
 import 'package:pilll/domain/settings/components/inquiry/inquiry.dart';
-import 'package:pilll/domain/settings/setting_page_state_notifier.dart';
 import 'package:pilll/components/atoms/color.dart';
 import 'package:pilll/components/atoms/text_color.dart';
+import 'package:pilll/provider/pill_sheet_group.dart';
+import 'package:pilll/provider/premium_and_trial.codegen.dart';
+import 'package:pilll/provider/root.dart';
+import 'package:pilll/provider/setting.dart';
+import 'package:pilll/provider/shared_preference.dart';
 import 'package:pilll/util/environment.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
+import 'package:pilll/util/shared_preference/keys.dart';
 import 'package:url_launcher/url_launcher.dart';
 
 enum SettingSection { account, premium, pill, notification, menstruation, other }
@@ -42,17 +50,31 @@ class SettingPage extends HookConsumerWidget {
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {
-    final store = ref.watch(settingStateNotifierProvider.notifier);
-    final state = ref.watch(settingStateNotifierProvider);
-
     useAutomaticKeepAlive(wantKeepAlive: true);
 
-    return state.when(
-      data: (state) => SettingPageBody(store: store, state: state),
+    return AsyncValueGroup.group5(
+      ref.watch(settingProvider),
+      ref.watch(latestPillSheetGroupProvider),
+      ref.watch(premiumAndTrialProvider),
+      ref.watch(isHealthDataAvailableProvider),
+      ref.watch(sharedPreferenceProvider),
+    ).when(
+      data: (data) {
+        final sharedPreferences = data.t5;
+        final userIsMigratedFrom132 =
+            sharedPreferences.containsKey(StringKey.salvagedOldStartTakenDate) && sharedPreferences.containsKey(StringKey.salvagedOldLastTakenDate);
+        return SettingPageBody(
+          setting: data.t1,
+          latestPillSheetGroup: data.t2,
+          premiumAndTrial: data.t3,
+          isHealthDataAvailable: data.t4,
+          userIsUpdatedFrom132: userIsMigratedFrom132,
+        );
+      },
       error: (error, _) => UniversalErrorPage(
         error: error,
         child: null,
-        reload: () => ref.refresh(settingStateProvider),
+        reload: () => ref.refresh(refreshAppProvider),
       ),
       loading: () => const ScaffoldIndicator(),
     );
@@ -60,19 +82,24 @@ class SettingPage extends HookConsumerWidget {
 }
 
 class SettingPageBody extends StatelessWidget {
-  final SettingStateNotifier store;
-  final SettingState state;
+  final Setting setting;
+  final PillSheetGroup? latestPillSheetGroup;
+  final PremiumAndTrial premiumAndTrial;
+  final bool isHealthDataAvailable;
+  final bool userIsUpdatedFrom132;
 
   const SettingPageBody({
     Key? key,
-    required this.store,
-    required this.state,
+    required this.setting,
+    required this.latestPillSheetGroup,
+    required this.premiumAndTrial,
+    required this.isHealthDataAvailable,
+    required this.userIsUpdatedFrom132,
   }) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
-    final setting = state.setting;
-    final pillSheetGroup = state.latestPillSheetGroup;
+    final pillSheetGroup = latestPillSheetGroup;
     final activedPillSheet = pillSheetGroup?.activedPillSheet;
     return Scaffold(
       backgroundColor: PilllColors.background,
@@ -97,7 +124,7 @@ class SettingPageBody extends StatelessWidget {
                   );
                 case SettingSection.premium:
                   return SettingSectionTitle(text: "Pilllプレミアム", children: [
-                    if (state.premiumAndTrial.isTrial) ...[
+                    if (premiumAndTrial.isTrial) ...[
                       ListTile(
                         title: const Text("機能無制限の期間について", style: FontType.listRow),
                         onTap: () {
@@ -108,11 +135,11 @@ class SettingPageBody extends StatelessWidget {
                       _separator(),
                     ],
                     PremiumIntroductionRow(
-                      isPremium: state.premiumAndTrial.isPremium,
-                      trialDeadlineDate: state.premiumAndTrial.trialDeadlineDate,
+                      isPremium: premiumAndTrial.isPremium,
+                      trialDeadlineDate: premiumAndTrial.trialDeadlineDate,
                     ),
                     _separator(),
-                    if (state.premiumAndTrial.isPremium) ...[
+                    if (premiumAndTrial.isPremium) ...[
                       ListTile(
                         title: const Text("解約はこちら", style: FontType.listRow),
                         onTap: () async {
@@ -148,9 +175,9 @@ class SettingPageBody extends StatelessWidget {
                       ],
                       CreatingNewPillSheetRow(
                         setting: setting,
-                        isPremium: state.premiumAndTrial.isPremium,
-                        isTrial: state.premiumAndTrial.isTrial,
-                        trialDeadlineDate: state.premiumAndTrial.trialDeadlineDate,
+                        isPremium: premiumAndTrial.isPremium,
+                        isTrial: premiumAndTrial.isTrial,
+                        trialDeadlineDate: premiumAndTrial.trialDeadlineDate,
                       ),
                       _separator(),
                     ],
@@ -161,24 +188,24 @@ class SettingPageBody extends StatelessWidget {
                     children: [
                       TakingPillNotification(setting: setting),
                       _separator(),
-                      NotificationTimeRow(store: store, state: state),
+                      NotificationTimeRow(setting: setting),
                       _separator(),
                       if (activedPillSheet != null && activedPillSheet.pillSheetHasRestOrFakeDuration) ...[
                         NotificationInRestDuration(setting: setting, pillSheet: activedPillSheet),
                         _separator(),
                       ],
-                      if (!state.premiumAndTrial.isPremium) ...[
+                      if (!premiumAndTrial.isPremium) ...[
                         QuickRecordRow(
-                          isTrial: state.premiumAndTrial.isTrial,
-                          trialDeadlineDate: state.premiumAndTrial.trialDeadlineDate,
+                          isTrial: premiumAndTrial.isTrial,
+                          trialDeadlineDate: premiumAndTrial.trialDeadlineDate,
                         ),
                         _separator(),
                       ],
                       ReminderNotificationCustomizeWord(
                         setting: setting,
-                        isTrial: state.premiumAndTrial.isTrial,
-                        isPremium: state.premiumAndTrial.isPremium,
-                        trialDeadlineDate: state.premiumAndTrial.trialDeadlineDate,
+                        isTrial: premiumAndTrial.isTrial,
+                        isPremium: premiumAndTrial.isPremium,
+                        trialDeadlineDate: premiumAndTrial.trialDeadlineDate,
                       ),
                       _separator(),
                     ],
@@ -187,11 +214,11 @@ class SettingPageBody extends StatelessWidget {
                   return SettingSectionTitle(
                     text: "生理",
                     children: [
-                      MenstruationRow(store, setting),
+                      MenstruationRow(setting),
                       _separator(),
-                      if (Platform.isIOS && state.isHealthDataAvailable) ...[
+                      if (Platform.isIOS && isHealthDataAvailable) ...[
                         HealthCareRow(
-                          trialDeadlineDate: state.premiumAndTrial.trialDeadlineDate,
+                          trialDeadlineDate: premiumAndTrial.trialDeadlineDate,
                         ),
                         _separator(),
                       ]
@@ -201,7 +228,7 @@ class SettingPageBody extends StatelessWidget {
                   return SettingSectionTitle(
                     text: "その他",
                     children: [
-                      if (state.userIsUpdatedFrom132) ...[
+                      if (userIsUpdatedFrom132) ...[
                         const UpdateFrom132Row(),
                         _separator(),
                       ],

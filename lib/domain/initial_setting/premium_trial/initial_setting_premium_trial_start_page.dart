@@ -8,7 +8,7 @@ import 'package:pilll/components/atoms/buttons.dart';
 import 'package:pilll/components/atoms/color.dart';
 import 'package:pilll/components/atoms/font.dart';
 import 'package:pilll/components/atoms/text_color.dart';
-import 'package:pilll/domain/initial_setting/initial_setting_store.dart';
+import 'package:pilll/domain/initial_setting/initial_setting_state_notifier.dart';
 import 'package:pilll/error/error_alert.dart';
 import 'package:pilll/router/router.dart';
 
@@ -17,7 +17,7 @@ class IntiialSettingPremiumTrialStartPage extends HookConsumerWidget {
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {
-    final store = ref.watch(initialSettingStoreProvider.notifier);
+    final store = ref.watch(initialSettingStateNotifierProvider.notifier);
 
     return Scaffold(
       backgroundColor: PilllColors.background,

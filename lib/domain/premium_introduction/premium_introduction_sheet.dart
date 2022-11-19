@@ -1,3 +1,5 @@
+import 'package:async_value_group/async_value_group.dart';
+import 'package:flutter_hooks/flutter_hooks.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
 
 import 'package:flutter/material.dart';
@@ -11,10 +13,13 @@ import 'package:pilll/domain/premium_introduction/components/premium_introductio
 import 'package:pilll/domain/premium_introduction/components/premium_introduction_discount.dart';
 import 'package:pilll/domain/premium_introduction/components/premium_user_thanks.dart';
 import 'package:pilll/domain/premium_introduction/components/purchase_buttons.dart';
-import 'package:pilll/domain/premium_introduction/premium_introduction_store.dart';
 import 'package:pilll/domain/premium_introduction/util/discount_deadline.dart';
 import 'package:pilll/error/universal_error_page.dart';
+import 'package:pilll/provider/premium_and_trial.codegen.dart';
+import 'package:pilll/provider/root.dart';
+import 'package:pilll/service/purchase.dart';
 import 'package:pilll/util/links.dart';
+import 'package:purchases_flutter/purchases_flutter.dart';
 import 'package:url_launcher/url_launcher.dart';
 
 class PremiumIntroductionSheet extends HookConsumerWidget {
@@ -22,103 +27,123 @@ class PremiumIntroductionSheet extends HookConsumerWidget {
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {
-    final store = ref.watch(premiumIntroductionStoreProvider.notifier);
-    final state = ref.watch(premiumIntroductionStateProvider);
-    final offerings = state.offerings;
-    final offeringType = state.currentOfferingType;
-    final monthlyPackage = state.monthlyPackage;
-    final annualPackage = state.annualPackage;
-    final discountEntitlementDeadlineDate =
-        state.discountEntitlementDeadlineDate;
-    final isOverDiscountDeadline = ref
-        .watch(isOverDiscountDeadlineProvider(discountEntitlementDeadlineDate));
-    final monthlyPremiumPackage = state.monthlyPremiumPackage;
-    if (state.isNotYetLoad) {
-      return const Indicator();
-    }
+    return AsyncValueGroup.group2(
+      ref.watch(purchaseOfferingsProvider),
+      ref.watch(premiumAndTrialProvider),
+    ).when(
+      data: (data) => PremiumIntroductionSheetBody(
+        offerings: data.t1,
+        premiumAndTrial: data.t2,
+      ),
+      error: (error, stackTrace) => UniversalErrorPage(
+        error: error,
+        reload: () {
+          ref.invalidate(purchaseOfferingsProvider);
+          ref.invalidate(refreshAppProvider);
+        },
+        child: null,
+      ),
+      loading: () => const Indicator(),
+    );
+  }
+}
+
+class PremiumIntroductionSheetBody extends HookConsumerWidget {
+  final Offerings offerings;
+  final PremiumAndTrial premiumAndTrial;
+
+  const PremiumIntroductionSheetBody({
+    Key? key,
+    required this.offerings,
+    required this.premiumAndTrial,
+  }) : super(key: key);
+
+  @override
+  Widget build(BuildContext context, WidgetRef ref) {
+    final offeringType = ref.watch(currentOfferingTypeProvider(premiumAndTrial));
+    final monthlyPackage = ref.watch(monthlyPackageProvider(premiumAndTrial));
+    final annualPackage = ref.watch(annualPackageProvider(premiumAndTrial));
+    final isOverDiscountDeadline = ref.watch(isOverDiscountDeadlineProvider(premiumAndTrial.discountEntitlementDeadlineDate));
+    final monthlyPremiumPackage = ref.watch(monthlyPremiumPackageProvider(premiumAndTrial));
+
+    final isLoading = useState(false);
 
     return HUD(
-      shown: state.isLoading,
-      child: UniversalErrorPage(
-          error: null,
-          reload: () => store.reset(),
-          child: Scaffold(
-            body: Container(
-              padding: const EdgeInsets.only(top: 20),
-              width: MediaQuery.of(context).size.width,
-              color: PilllColors.white,
-              child: Stack(
-                children: [
-                  Container(
-                    decoration: BoxDecoration(
-                      color: Colors.transparent,
-                      image: !state.isPremium && !isOverDiscountDeadline
-                          ? const DecorationImage(
-                              image:
-                                  AssetImage("images/premium_background.png"),
-                              fit: BoxFit.cover,
-                            )
-                          : null,
-                    ),
-                    padding:
-                        const EdgeInsets.only(left: 40, right: 40, bottom: 40),
-                    width: MediaQuery.of(context).size.width,
-                  ),
-                  SingleChildScrollView(
-                    padding: const EdgeInsets.only(bottom: 100),
-                    child: Column(
-                      mainAxisSize: MainAxisSize.min,
-                      children: [
-                        const PremiumIntroductionHeader(),
-                        if (state.isPremium) ...[
-                          const SizedBox(height: 32),
-                          const PremiumUserThanksRow(),
-                        ],
-                        if (!state.isPremium) ...[
-                          if (state.hasDiscountEntitlement)
-                            if (monthlyPremiumPackage != null)
-                              PremiumIntroductionDiscountRow(
-                                monthlyPremiumPackage: monthlyPremiumPackage,
-                                discountEntitlementDeadlineDate:
-                                    discountEntitlementDeadlineDate,
-                              ),
-                          if (offerings != null)
-                            if (monthlyPackage != null)
-                              if (annualPackage != null) ...[
-                                const SizedBox(height: 32),
-                                PurchaseButtons(
-                                  store: store,
-                                  offeringType: offeringType,
-                                  monthlyPackage: monthlyPackage,
-                                  annualPackage: annualPackage,
-                                ),
-                              ],
-                        ],
-                        const SizedBox(height: 24),
-                        AlertButton(
-                            onPressed: () async {
-                              analytics.logEvent(
-                                  name: "pressed_premium_functions_on_sheet");
-                              await launchUrl(Uri.parse(preimumLink));
-                            },
-                            text: "プレミアム機能を見る"),
-                        const SizedBox(height: 24),
-                        const PremiumIntroductionFotter(),
-                      ],
-                    ),
-                  ),
-                  Positioned(
-                    left: 7,
-                    top: 20,
-                    child: IconButton(
-                      icon: const Icon(Icons.close, color: Colors.black),
-                      onPressed: () => Navigator.of(context).pop(),
-                    ),
-                  ),
-                ],
+      shown: isLoading.value,
+      child: Scaffold(
+        body: Container(
+          padding: const EdgeInsets.only(top: 20),
+          width: MediaQuery.of(context).size.width,
+          color: PilllColors.white,
+          child: Stack(
+            children: [
+              Container(
+                decoration: BoxDecoration(
+                  color: Colors.transparent,
+                  image: !premiumAndTrial.isPremium && !isOverDiscountDeadline
+                      ? const DecorationImage(
+                          image: AssetImage("images/premium_background.png"),
+                          fit: BoxFit.cover,
+                        )
+                      : null,
+                ),
+                padding: const EdgeInsets.only(left: 40, right: 40, bottom: 40),
+                width: MediaQuery.of(context).size.width,
               ),
-            ),
-          )),
+              SingleChildScrollView(
+                padding: const EdgeInsets.only(bottom: 100),
+                child: Column(
+                  mainAxisSize: MainAxisSize.min,
+                  children: [
+                    const PremiumIntroductionHeader(),
+                    if (premiumAndTrial.isPremium) ...[
+                      const SizedBox(height: 32),
+                      const PremiumUserThanksRow(),
+                    ],
+                    if (!premiumAndTrial.isPremium) ...[
+                      if (premiumAndTrial.hasDiscountEntitlement)
+                        if (monthlyPremiumPackage != null)
+                          PremiumIntroductionDiscountRow(
+                            monthlyPremiumPackage: monthlyPremiumPackage,
+                            discountEntitlementDeadlineDate: premiumAndTrial.discountEntitlementDeadlineDate,
+                          ),
+                      if (monthlyPackage != null)
+                        if (annualPackage != null) ...[
+                          const SizedBox(height: 32),
+                          PurchaseButtons(
+                            offeringType: offeringType,
+                            monthlyPackage: monthlyPackage,
+                            annualPackage: annualPackage,
+                            isLoading: isLoading,
+                          ),
+                        ],
+                    ],
+                    const SizedBox(height: 24),
+                    AlertButton(
+                        onPressed: () async {
+                          analytics.logEvent(name: "pressed_premium_functions_on_sheet");
+                          await launchUrl(Uri.parse(preimumLink));
+                        },
+                        text: "プレミアム機能を見る"),
+                    const SizedBox(height: 24),
+                    PremiumIntroductionFotter(
+                      isLoading: isLoading,
+                    ),
+                  ],
+                ),
+              ),
+              Positioned(
+                left: 7,
+                top: 20,
+                child: IconButton(
+                  icon: const Icon(Icons.close, color: Colors.black),
+                  onPressed: () => Navigator.of(context).pop(),
+                ),
+              ),
+            ],
+          ),
+        ),
+      ),
     );
   }
 }

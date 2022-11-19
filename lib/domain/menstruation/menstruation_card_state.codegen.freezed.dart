@@ -12,26 +12,7 @@ part of 'menstruation_card_state.codegen.dart';
 T _$identity<T>(T value) => value;
 
 final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more informations: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
-
-/// @nodoc
-class _$MenstruationCardStateTearOff {
-  const _$MenstruationCardStateTearOff();
-
-  _MenstruationCardState call(
-      {required String title,
-      required DateTime scheduleDate,
-      required String countdownString}) {
-    return _MenstruationCardState(
-      title: title,
-      scheduleDate: scheduleDate,
-      countdownString: countdownString,
-    );
-  }
-}
-
-/// @nodoc
-const $MenstruationCardState = _$MenstruationCardStateTearOff();
+    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
 
 /// @nodoc
 mixin _$MenstruationCardState {
@@ -48,79 +29,82 @@ mixin _$MenstruationCardState {
 abstract class $MenstruationCardStateCopyWith<$Res> {
   factory $MenstruationCardStateCopyWith(MenstruationCardState value,
           $Res Function(MenstruationCardState) then) =
-      _$MenstruationCardStateCopyWithImpl<$Res>;
+      _$MenstruationCardStateCopyWithImpl<$Res, MenstruationCardState>;
+  @useResult
   $Res call({String title, DateTime scheduleDate, String countdownString});
 }
 
 /// @nodoc
-class _$MenstruationCardStateCopyWithImpl<$Res>
+class _$MenstruationCardStateCopyWithImpl<$Res,
+        $Val extends MenstruationCardState>
     implements $MenstruationCardStateCopyWith<$Res> {
   _$MenstruationCardStateCopyWithImpl(this._value, this._then);
 
-  final MenstruationCardState _value;
   // ignore: unused_field
-  final $Res Function(MenstruationCardState) _then;
+  final $Val _value;
+  // ignore: unused_field
+  final $Res Function($Val) _then;
 
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? title = freezed,
-    Object? scheduleDate = freezed,
-    Object? countdownString = freezed,
+    Object? title = null,
+    Object? scheduleDate = null,
+    Object? countdownString = null,
   }) {
     return _then(_value.copyWith(
-      title: title == freezed
+      title: null == title
           ? _value.title
           : title // ignore: cast_nullable_to_non_nullable
               as String,
-      scheduleDate: scheduleDate == freezed
+      scheduleDate: null == scheduleDate
           ? _value.scheduleDate
           : scheduleDate // ignore: cast_nullable_to_non_nullable
               as DateTime,
-      countdownString: countdownString == freezed
+      countdownString: null == countdownString
           ? _value.countdownString
           : countdownString // ignore: cast_nullable_to_non_nullable
               as String,
-    ));
+    ) as $Val);
   }
 }
 
 /// @nodoc
-abstract class _$MenstruationCardStateCopyWith<$Res>
+abstract class _$$_MenstruationCardStateCopyWith<$Res>
     implements $MenstruationCardStateCopyWith<$Res> {
-  factory _$MenstruationCardStateCopyWith(_MenstruationCardState value,
-          $Res Function(_MenstruationCardState) then) =
-      __$MenstruationCardStateCopyWithImpl<$Res>;
+  factory _$$_MenstruationCardStateCopyWith(_$_MenstruationCardState value,
+          $Res Function(_$_MenstruationCardState) then) =
+      __$$_MenstruationCardStateCopyWithImpl<$Res>;
   @override
+  @useResult
   $Res call({String title, DateTime scheduleDate, String countdownString});
 }
 
 /// @nodoc
-class __$MenstruationCardStateCopyWithImpl<$Res>
-    extends _$MenstruationCardStateCopyWithImpl<$Res>
-    implements _$MenstruationCardStateCopyWith<$Res> {
-  __$MenstruationCardStateCopyWithImpl(_MenstruationCardState _value,
-      $Res Function(_MenstruationCardState) _then)
-      : super(_value, (v) => _then(v as _MenstruationCardState));
+class __$$_MenstruationCardStateCopyWithImpl<$Res>
+    extends _$MenstruationCardStateCopyWithImpl<$Res, _$_MenstruationCardState>
+    implements _$$_MenstruationCardStateCopyWith<$Res> {
+  __$$_MenstruationCardStateCopyWithImpl(_$_MenstruationCardState _value,
+      $Res Function(_$_MenstruationCardState) _then)
+      : super(_value, _then);
 
-  @override
-  _MenstruationCardState get _value => super._value as _MenstruationCardState;
-
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? title = freezed,
-    Object? scheduleDate = freezed,
-    Object? countdownString = freezed,
+    Object? title = null,
+    Object? scheduleDate = null,
+    Object? countdownString = null,
   }) {
-    return _then(_MenstruationCardState(
-      title: title == freezed
+    return _then(_$_MenstruationCardState(
+      title: null == title
           ? _value.title
           : title // ignore: cast_nullable_to_non_nullable
               as String,
-      scheduleDate: scheduleDate == freezed
+      scheduleDate: null == scheduleDate
           ? _value.scheduleDate
           : scheduleDate // ignore: cast_nullable_to_non_nullable
               as DateTime,
-      countdownString: countdownString == freezed
+      countdownString: null == countdownString
           ? _value.countdownString
           : countdownString // ignore: cast_nullable_to_non_nullable
               as String,
@@ -153,33 +137,31 @@ class _$_MenstruationCardState extends _MenstruationCardState {
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _MenstruationCardState &&
-            const DeepCollectionEquality().equals(other.title, title) &&
-            const DeepCollectionEquality()
-                .equals(other.scheduleDate, scheduleDate) &&
-            const DeepCollectionEquality()
-                .equals(other.countdownString, countdownString));
+            other is _$_MenstruationCardState &&
+            (identical(other.title, title) || other.title == title) &&
+            (identical(other.scheduleDate, scheduleDate) ||
+                other.scheduleDate == scheduleDate) &&
+            (identical(other.countdownString, countdownString) ||
+                other.countdownString == countdownString));
   }
 
   @override
-  int get hashCode => Object.hash(
-      runtimeType,
-      const DeepCollectionEquality().hash(title),
-      const DeepCollectionEquality().hash(scheduleDate),
-      const DeepCollectionEquality().hash(countdownString));
+  int get hashCode =>
+      Object.hash(runtimeType, title, scheduleDate, countdownString);
 
   @JsonKey(ignore: true)
   @override
-  _$MenstruationCardStateCopyWith<_MenstruationCardState> get copyWith =>
-      __$MenstruationCardStateCopyWithImpl<_MenstruationCardState>(
+  @pragma('vm:prefer-inline')
+  _$$_MenstruationCardStateCopyWith<_$_MenstruationCardState> get copyWith =>
+      __$$_MenstruationCardStateCopyWithImpl<_$_MenstruationCardState>(
           this, _$identity);
 }
 
 abstract class _MenstruationCardState extends MenstruationCardState {
   const factory _MenstruationCardState(
-      {required String title,
-      required DateTime scheduleDate,
-      required String countdownString}) = _$_MenstruationCardState;
+      {required final String title,
+      required final DateTime scheduleDate,
+      required final String countdownString}) = _$_MenstruationCardState;
   const _MenstruationCardState._() : super._();
 
   @override
@@ -190,6 +172,6 @@ abstract class _MenstruationCardState extends MenstruationCardState {
   String get countdownString;
   @override
   @JsonKey(ignore: true)
-  _$MenstruationCardStateCopyWith<_MenstruationCardState> get copyWith =>
+  _$$_MenstruationCardStateCopyWith<_$_MenstruationCardState> get copyWith =>
       throw _privateConstructorUsedError;
 }

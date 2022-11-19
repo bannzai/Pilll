@@ -6,13 +6,13 @@ import 'package:pilll/components/molecules/dots_page_indicator.dart';
 import 'package:pilll/components/organisms/pill_sheet/pill_sheet_view_layout.dart';
 import 'package:pilll/components/organisms/pill_sheet/setting_pill_sheet_view.dart';
 import 'package:pilll/domain/initial_setting/initial_setting_state.codegen.dart';
-import 'package:pilll/domain/initial_setting/initial_setting_store.dart';
+import 'package:pilll/domain/initial_setting/initial_setting_state_notifier.dart';
 import 'package:pilll/entity/pill_sheet_type.dart';
 import 'package:pilll/entity/setting.codegen.dart';
 
 class SelectTodayPillNumberPillSheetList extends HookConsumerWidget {
   final InitialSettingState state;
-  final InitialSettingStateStore store;
+  final InitialSettingStateNotifier store;
 
   const SelectTodayPillNumberPillSheetList({
     Key? key,
@@ -22,15 +22,12 @@ class SelectTodayPillNumberPillSheetList extends HookConsumerWidget {
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {
-    final pageController = usePageController(
-        viewportFraction: (PillSheetViewLayout.width + 20) /
-            MediaQuery.of(context).size.width);
+    final pageController = usePageController(viewportFraction: (PillSheetViewLayout.width + 20) / MediaQuery.of(context).size.width);
     return Column(
       children: [
         SizedBox(
           height: PillSheetViewLayout.calcHeight(
-            PillSheetViewLayout.mostLargePillSheetType(state.pillSheetTypes)
-                .numberOfLineInPillSheet,
+            PillSheetViewLayout.mostLargePillSheetType(state.pillSheetTypes).numberOfLineInPillSheet,
             true,
           ),
           child: PageView(
@@ -47,16 +44,12 @@ class SelectTodayPillNumberPillSheetList extends HookConsumerWidget {
                       pageIndex: index,
                       appearanceMode: PillSheetAppearanceMode.number,
                       pillSheetTypes: state.pillSheetTypes,
-                      selectedPillNumberIntoPillSheet:
-                          state.selectedTodayPillNumberIntoPillSheet(
-                              pageIndex: index),
+                      selectedPillNumberIntoPillSheet: state.selectedTodayPillNumberIntoPillSheet(pageIndex: index),
                       markSelected: (pageIndex, number) {
-                        analytics.logEvent(
-                            name: "selected_today_number_initial_setting",
-                            parameters: {
-                              "pill_number": number,
-                              "page": pageIndex,
-                            });
+                        analytics.logEvent(name: "selected_today_number_initial_setting", parameters: {
+                          "pill_number": number,
+                          "page": pageIndex,
+                        });
                         store.setTodayPillNumber(
                           pageIndex: pageIndex,
                           pillNumberIntoPillSheet: number,

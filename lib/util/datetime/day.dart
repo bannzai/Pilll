@@ -14,6 +14,10 @@ DateTime tomorrow() {
   return today().add(const Duration(days: 1));
 }
 
+DateTime yesterday() {
+  return today().subtract(const Duration(days: 1));
+}
+
 DateTime firstDayOfWeekday(DateTime day) {
   return day.subtract(Duration(days: day.weekday == 7 ? 0 : day.weekday));
 }

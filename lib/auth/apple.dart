@@ -1,7 +1,9 @@
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/foundation.dart';
+import 'package:hooks_riverpod/hooks_riverpod.dart';
 import 'package:pilll/auth/hash.dart';
 import 'package:pilll/auth/link_value_container.dart';
+import 'package:pilll/service/auth.dart';
 import 'package:pilll/util/environment.dart';
 import 'package:sign_in_with_apple/sign_in_with_apple.dart';
 
@@ -78,18 +80,24 @@ Future<UserCredential?> signInWithApple() async {
   }
 }
 
-bool isLinkedApple() {
-  final user = FirebaseAuth.instance.currentUser;
-  if (user == null) {
+final isAppleLinkedProvider = Provider((ref) {
+  final user = ref.watch(authStateStreamProvider);
+  final userValue = user.valueOrNull;
+  if (userValue == null) {
     return false;
   }
-  return isLinkedAppleFor(user);
-}
+  return isLinkedAppleFor(userValue);
+});
+// bool isLinkedApple() {
+//   final user = FirebaseAuth.instance.currentUser;
+//   if (user == null) {
+//     return false;
+//   }
+//   return isLinkedAppleFor(user);
+// }
 
 bool isLinkedAppleFor(User user) {
-  return user.providerData
-      .where((element) => element.providerId == appleProviderID)
-      .isNotEmpty;
+  return user.providerData.where((element) => element.providerId == appleProviderID).isNotEmpty;
 }
 
 Future<bool> appleReauthentification() async {
@@ -114,7 +122,6 @@ Future<bool> appleReauthentification() async {
     rawNonce: rawNonce,
   );
 
-  await FirebaseAuth.instance.currentUser
-      ?.reauthenticateWithCredential(credential);
+  await FirebaseAuth.instance.currentUser?.reauthenticateWithCredential(credential);
   return true;
 }

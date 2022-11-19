@@ -1,5 +1,5 @@
 import 'package:pilll/analytics.dart';
-import 'package:pilll/domain/initial_setting/initial_setting_store.dart';
+import 'package:pilll/domain/initial_setting/initial_setting_state_notifier.dart';
 import 'package:pilll/components/atoms/buttons.dart';
 import 'package:pilll/components/atoms/color.dart';
 import 'package:pilll/components/atoms/font.dart';
@@ -21,8 +21,8 @@ class InitialSettingSelectTodayPillNumberPage extends HookConsumerWidget {
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {
-    final store = ref.watch(initialSettingStoreProvider.notifier);
-    final state = ref.watch(initialSettingStoreProvider);
+    final store = ref.watch(initialSettingStateNotifierProvider.notifier);
+    final state = ref.watch(initialSettingStateNotifierProvider);
     return Scaffold(
       backgroundColor: PilllColors.background,
       appBar: AppBar(

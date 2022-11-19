@@ -12,23 +12,7 @@ part of 'state.codegen.dart';
 T _$identity<T>(T value) => value;
 
 final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more informations: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
-
-/// @nodoc
-class _$DiarySettingPhysicalConditionDetailStateTearOff {
-  const _$DiarySettingPhysicalConditionDetailStateTearOff();
-
-  _DiarySettingPhysicalConditionDetailState call(
-      {required DiarySetting? diarySetting}) {
-    return _DiarySettingPhysicalConditionDetailState(
-      diarySetting: diarySetting,
-    );
-  }
-}
-
-/// @nodoc
-const $DiarySettingPhysicalConditionDetailState =
-    _$DiarySettingPhysicalConditionDetailStateTearOff();
+    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
 
 /// @nodoc
 mixin _$DiarySettingPhysicalConditionDetailState {
@@ -45,54 +29,61 @@ abstract class $DiarySettingPhysicalConditionDetailStateCopyWith<$Res> {
   factory $DiarySettingPhysicalConditionDetailStateCopyWith(
           DiarySettingPhysicalConditionDetailState value,
           $Res Function(DiarySettingPhysicalConditionDetailState) then) =
-      _$DiarySettingPhysicalConditionDetailStateCopyWithImpl<$Res>;
+      _$DiarySettingPhysicalConditionDetailStateCopyWithImpl<$Res,
+          DiarySettingPhysicalConditionDetailState>;
+  @useResult
   $Res call({DiarySetting? diarySetting});
 
   $DiarySettingCopyWith<$Res>? get diarySetting;
 }
 
 /// @nodoc
-class _$DiarySettingPhysicalConditionDetailStateCopyWithImpl<$Res>
+class _$DiarySettingPhysicalConditionDetailStateCopyWithImpl<$Res,
+        $Val extends DiarySettingPhysicalConditionDetailState>
     implements $DiarySettingPhysicalConditionDetailStateCopyWith<$Res> {
   _$DiarySettingPhysicalConditionDetailStateCopyWithImpl(
       this._value, this._then);
 
-  final DiarySettingPhysicalConditionDetailState _value;
   // ignore: unused_field
-  final $Res Function(DiarySettingPhysicalConditionDetailState) _then;
+  final $Val _value;
+  // ignore: unused_field
+  final $Res Function($Val) _then;
 
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
     Object? diarySetting = freezed,
   }) {
     return _then(_value.copyWith(
-      diarySetting: diarySetting == freezed
+      diarySetting: freezed == diarySetting
           ? _value.diarySetting
           : diarySetting // ignore: cast_nullable_to_non_nullable
               as DiarySetting?,
-    ));
+    ) as $Val);
   }
 
   @override
+  @pragma('vm:prefer-inline')
   $DiarySettingCopyWith<$Res>? get diarySetting {
     if (_value.diarySetting == null) {
       return null;
     }
 
     return $DiarySettingCopyWith<$Res>(_value.diarySetting!, (value) {
-      return _then(_value.copyWith(diarySetting: value));
+      return _then(_value.copyWith(diarySetting: value) as $Val);
     });
   }
 }
 
 /// @nodoc
-abstract class _$DiarySettingPhysicalConditionDetailStateCopyWith<$Res>
+abstract class _$$_DiarySettingPhysicalConditionDetailStateCopyWith<$Res>
     implements $DiarySettingPhysicalConditionDetailStateCopyWith<$Res> {
-  factory _$DiarySettingPhysicalConditionDetailStateCopyWith(
-          _DiarySettingPhysicalConditionDetailState value,
-          $Res Function(_DiarySettingPhysicalConditionDetailState) then) =
-      __$DiarySettingPhysicalConditionDetailStateCopyWithImpl<$Res>;
+  factory _$$_DiarySettingPhysicalConditionDetailStateCopyWith(
+          _$_DiarySettingPhysicalConditionDetailState value,
+          $Res Function(_$_DiarySettingPhysicalConditionDetailState) then) =
+      __$$_DiarySettingPhysicalConditionDetailStateCopyWithImpl<$Res>;
   @override
+  @useResult
   $Res call({DiarySetting? diarySetting});
 
   @override
@@ -100,25 +91,22 @@ abstract class _$DiarySettingPhysicalConditionDetailStateCopyWith<$Res>
 }
 
 /// @nodoc
-class __$DiarySettingPhysicalConditionDetailStateCopyWithImpl<$Res>
-    extends _$DiarySettingPhysicalConditionDetailStateCopyWithImpl<$Res>
-    implements _$DiarySettingPhysicalConditionDetailStateCopyWith<$Res> {
-  __$DiarySettingPhysicalConditionDetailStateCopyWithImpl(
-      _DiarySettingPhysicalConditionDetailState _value,
-      $Res Function(_DiarySettingPhysicalConditionDetailState) _then)
-      : super(_value,
-            (v) => _then(v as _DiarySettingPhysicalConditionDetailState));
+class __$$_DiarySettingPhysicalConditionDetailStateCopyWithImpl<$Res>
+    extends _$DiarySettingPhysicalConditionDetailStateCopyWithImpl<$Res,
+        _$_DiarySettingPhysicalConditionDetailState>
+    implements _$$_DiarySettingPhysicalConditionDetailStateCopyWith<$Res> {
+  __$$_DiarySettingPhysicalConditionDetailStateCopyWithImpl(
+      _$_DiarySettingPhysicalConditionDetailState _value,
+      $Res Function(_$_DiarySettingPhysicalConditionDetailState) _then)
+      : super(_value, _then);
 
-  @override
-  _DiarySettingPhysicalConditionDetailState get _value =>
-      super._value as _DiarySettingPhysicalConditionDetailState;
-
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
     Object? diarySetting = freezed,
   }) {
-    return _then(_DiarySettingPhysicalConditionDetailState(
-      diarySetting: diarySetting == freezed
+    return _then(_$_DiarySettingPhysicalConditionDetailState(
+      diarySetting: freezed == diarySetting
           ? _value.diarySetting
           : diarySetting // ignore: cast_nullable_to_non_nullable
               as DiarySetting?,
@@ -145,27 +133,27 @@ class _$_DiarySettingPhysicalConditionDetailState
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _DiarySettingPhysicalConditionDetailState &&
-            const DeepCollectionEquality()
-                .equals(other.diarySetting, diarySetting));
+            other is _$_DiarySettingPhysicalConditionDetailState &&
+            (identical(other.diarySetting, diarySetting) ||
+                other.diarySetting == diarySetting));
   }
 
   @override
-  int get hashCode => Object.hash(
-      runtimeType, const DeepCollectionEquality().hash(diarySetting));
+  int get hashCode => Object.hash(runtimeType, diarySetting);
 
   @JsonKey(ignore: true)
   @override
-  _$DiarySettingPhysicalConditionDetailStateCopyWith<
-          _DiarySettingPhysicalConditionDetailState>
-      get copyWith => __$DiarySettingPhysicalConditionDetailStateCopyWithImpl<
-          _DiarySettingPhysicalConditionDetailState>(this, _$identity);
+  @pragma('vm:prefer-inline')
+  _$$_DiarySettingPhysicalConditionDetailStateCopyWith<
+          _$_DiarySettingPhysicalConditionDetailState>
+      get copyWith => __$$_DiarySettingPhysicalConditionDetailStateCopyWithImpl<
+          _$_DiarySettingPhysicalConditionDetailState>(this, _$identity);
 }
 
 abstract class _DiarySettingPhysicalConditionDetailState
     extends DiarySettingPhysicalConditionDetailState {
   factory _DiarySettingPhysicalConditionDetailState(
-          {required DiarySetting? diarySetting}) =
+          {required final DiarySetting? diarySetting}) =
       _$_DiarySettingPhysicalConditionDetailState;
   _DiarySettingPhysicalConditionDetailState._() : super._();
 
@@ -173,7 +161,7 @@ abstract class _DiarySettingPhysicalConditionDetailState
   DiarySetting? get diarySetting;
   @override
   @JsonKey(ignore: true)
-  _$DiarySettingPhysicalConditionDetailStateCopyWith<
-          _DiarySettingPhysicalConditionDetailState>
+  _$$_DiarySettingPhysicalConditionDetailStateCopyWith<
+          _$_DiarySettingPhysicalConditionDetailState>
       get copyWith => throw _privateConstructorUsedError;
 }

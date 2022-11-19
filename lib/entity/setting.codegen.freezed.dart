@@ -12,30 +12,11 @@ part of 'setting.codegen.dart';
 T _$identity<T>(T value) => value;
 
 final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more informations: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
+    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
 
 ReminderTime _$ReminderTimeFromJson(Map<String, dynamic> json) {
   return _ReminderTime.fromJson(json);
 }
-
-/// @nodoc
-class _$ReminderTimeTearOff {
-  const _$ReminderTimeTearOff();
-
-  _ReminderTime call({required int hour, required int minute}) {
-    return _ReminderTime(
-      hour: hour,
-      minute: minute,
-    );
-  }
-
-  ReminderTime fromJson(Map<String, Object?> json) {
-    return ReminderTime.fromJson(json);
-  }
-}
-
-/// @nodoc
-const $ReminderTime = _$ReminderTimeTearOff();
 
 /// @nodoc
 mixin _$ReminderTime {
@@ -52,67 +33,71 @@ mixin _$ReminderTime {
 abstract class $ReminderTimeCopyWith<$Res> {
   factory $ReminderTimeCopyWith(
           ReminderTime value, $Res Function(ReminderTime) then) =
-      _$ReminderTimeCopyWithImpl<$Res>;
+      _$ReminderTimeCopyWithImpl<$Res, ReminderTime>;
+  @useResult
   $Res call({int hour, int minute});
 }
 
 /// @nodoc
-class _$ReminderTimeCopyWithImpl<$Res> implements $ReminderTimeCopyWith<$Res> {
+class _$ReminderTimeCopyWithImpl<$Res, $Val extends ReminderTime>
+    implements $ReminderTimeCopyWith<$Res> {
   _$ReminderTimeCopyWithImpl(this._value, this._then);
 
-  final ReminderTime _value;
   // ignore: unused_field
-  final $Res Function(ReminderTime) _then;
+  final $Val _value;
+  // ignore: unused_field
+  final $Res Function($Val) _then;
 
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? hour = freezed,
-    Object? minute = freezed,
+    Object? hour = null,
+    Object? minute = null,
   }) {
     return _then(_value.copyWith(
-      hour: hour == freezed
+      hour: null == hour
           ? _value.hour
           : hour // ignore: cast_nullable_to_non_nullable
               as int,
-      minute: minute == freezed
+      minute: null == minute
           ? _value.minute
           : minute // ignore: cast_nullable_to_non_nullable
               as int,
-    ));
+    ) as $Val);
   }
 }
 
 /// @nodoc
-abstract class _$ReminderTimeCopyWith<$Res>
+abstract class _$$_ReminderTimeCopyWith<$Res>
     implements $ReminderTimeCopyWith<$Res> {
-  factory _$ReminderTimeCopyWith(
-          _ReminderTime value, $Res Function(_ReminderTime) then) =
-      __$ReminderTimeCopyWithImpl<$Res>;
+  factory _$$_ReminderTimeCopyWith(
+          _$_ReminderTime value, $Res Function(_$_ReminderTime) then) =
+      __$$_ReminderTimeCopyWithImpl<$Res>;
   @override
+  @useResult
   $Res call({int hour, int minute});
 }
 
 /// @nodoc
-class __$ReminderTimeCopyWithImpl<$Res> extends _$ReminderTimeCopyWithImpl<$Res>
-    implements _$ReminderTimeCopyWith<$Res> {
-  __$ReminderTimeCopyWithImpl(
-      _ReminderTime _value, $Res Function(_ReminderTime) _then)
-      : super(_value, (v) => _then(v as _ReminderTime));
+class __$$_ReminderTimeCopyWithImpl<$Res>
+    extends _$ReminderTimeCopyWithImpl<$Res, _$_ReminderTime>
+    implements _$$_ReminderTimeCopyWith<$Res> {
+  __$$_ReminderTimeCopyWithImpl(
+      _$_ReminderTime _value, $Res Function(_$_ReminderTime) _then)
+      : super(_value, _then);
 
-  @override
-  _ReminderTime get _value => super._value as _ReminderTime;
-
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? hour = freezed,
-    Object? minute = freezed,
+    Object? hour = null,
+    Object? minute = null,
   }) {
-    return _then(_ReminderTime(
-      hour: hour == freezed
+    return _then(_$_ReminderTime(
+      hour: null == hour
           ? _value.hour
           : hour // ignore: cast_nullable_to_non_nullable
               as int,
-      minute: minute == freezed
+      minute: null == minute
           ? _value.minute
           : minute // ignore: cast_nullable_to_non_nullable
               as int,
@@ -152,31 +137,32 @@ class _$_ReminderTime extends _ReminderTime with DiagnosticableTreeMixin {
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _ReminderTime &&
-            const DeepCollectionEquality().equals(other.hour, hour) &&
-            const DeepCollectionEquality().equals(other.minute, minute));
+            other is _$_ReminderTime &&
+            (identical(other.hour, hour) || other.hour == hour) &&
+            (identical(other.minute, minute) || other.minute == minute));
   }
-
-  @override
-  int get hashCode => Object.hash(
-      runtimeType,
-      const DeepCollectionEquality().hash(hour),
-      const DeepCollectionEquality().hash(minute));
 
   @JsonKey(ignore: true)
   @override
-  _$ReminderTimeCopyWith<_ReminderTime> get copyWith =>
-      __$ReminderTimeCopyWithImpl<_ReminderTime>(this, _$identity);
+  int get hashCode => Object.hash(runtimeType, hour, minute);
+
+  @JsonKey(ignore: true)
+  @override
+  @pragma('vm:prefer-inline')
+  _$$_ReminderTimeCopyWith<_$_ReminderTime> get copyWith =>
+      __$$_ReminderTimeCopyWithImpl<_$_ReminderTime>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_ReminderTimeToJson(this);
+    return _$$_ReminderTimeToJson(
+      this,
+    );
   }
 }
 
 abstract class _ReminderTime extends ReminderTime {
-  const factory _ReminderTime({required int hour, required int minute}) =
-      _$_ReminderTime;
+  const factory _ReminderTime(
+      {required final int hour, required final int minute}) = _$_ReminderTime;
   const _ReminderTime._() : super._();
 
   factory _ReminderTime.fromJson(Map<String, dynamic> json) =
@@ -188,52 +174,13 @@ abstract class _ReminderTime extends ReminderTime {
   int get minute;
   @override
   @JsonKey(ignore: true)
-  _$ReminderTimeCopyWith<_ReminderTime> get copyWith =>
+  _$$_ReminderTimeCopyWith<_$_ReminderTime> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
 Setting _$SettingFromJson(Map<String, dynamic> json) {
   return _Setting.fromJson(json);
 }
-
-/// @nodoc
-class _$SettingTearOff {
-  const _$SettingTearOff();
-
-  _Setting call(
-      {List<PillSheetType?> pillSheetTypes = const [],
-      required int pillNumberForFromMenstruation,
-      required int durationMenstruation,
-      List<ReminderTime> reminderTimes = const [],
-      required bool isOnReminder,
-      bool isOnNotifyInNotTakenDuration = true,
-      PillSheetAppearanceMode pillSheetAppearanceMode =
-          PillSheetAppearanceMode.number,
-      bool isAutomaticallyCreatePillSheet = false,
-      ReminderNotificationCustomization reminderNotificationCustomization =
-          const ReminderNotificationCustomization(),
-      required String? timezoneDatabaseName}) {
-    return _Setting(
-      pillSheetTypes: pillSheetTypes,
-      pillNumberForFromMenstruation: pillNumberForFromMenstruation,
-      durationMenstruation: durationMenstruation,
-      reminderTimes: reminderTimes,
-      isOnReminder: isOnReminder,
-      isOnNotifyInNotTakenDuration: isOnNotifyInNotTakenDuration,
-      pillSheetAppearanceMode: pillSheetAppearanceMode,
-      isAutomaticallyCreatePillSheet: isAutomaticallyCreatePillSheet,
-      reminderNotificationCustomization: reminderNotificationCustomization,
-      timezoneDatabaseName: timezoneDatabaseName,
-    );
-  }
-
-  Setting fromJson(Map<String, Object?> json) {
-    return Setting.fromJson(json);
-  }
-}
-
-/// @nodoc
-const $Setting = _$SettingTearOff();
 
 /// @nodoc
 mixin _$Setting {
@@ -258,7 +205,8 @@ mixin _$Setting {
 /// @nodoc
 abstract class $SettingCopyWith<$Res> {
   factory $SettingCopyWith(Setting value, $Res Function(Setting) then) =
-      _$SettingCopyWithImpl<$Res>;
+      _$SettingCopyWithImpl<$Res, Setting>;
+  @useResult
   $Res call(
       {List<PillSheetType?> pillSheetTypes,
       int pillNumberForFromMenstruation,
@@ -276,86 +224,93 @@ abstract class $SettingCopyWith<$Res> {
 }
 
 /// @nodoc
-class _$SettingCopyWithImpl<$Res> implements $SettingCopyWith<$Res> {
+class _$SettingCopyWithImpl<$Res, $Val extends Setting>
+    implements $SettingCopyWith<$Res> {
   _$SettingCopyWithImpl(this._value, this._then);
 
-  final Setting _value;
   // ignore: unused_field
-  final $Res Function(Setting) _then;
+  final $Val _value;
+  // ignore: unused_field
+  final $Res Function($Val) _then;
 
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? pillSheetTypes = freezed,
-    Object? pillNumberForFromMenstruation = freezed,
-    Object? durationMenstruation = freezed,
-    Object? reminderTimes = freezed,
-    Object? isOnReminder = freezed,
-    Object? isOnNotifyInNotTakenDuration = freezed,
-    Object? pillSheetAppearanceMode = freezed,
-    Object? isAutomaticallyCreatePillSheet = freezed,
-    Object? reminderNotificationCustomization = freezed,
+    Object? pillSheetTypes = null,
+    Object? pillNumberForFromMenstruation = null,
+    Object? durationMenstruation = null,
+    Object? reminderTimes = null,
+    Object? isOnReminder = null,
+    Object? isOnNotifyInNotTakenDuration = null,
+    Object? pillSheetAppearanceMode = null,
+    Object? isAutomaticallyCreatePillSheet = null,
+    Object? reminderNotificationCustomization = null,
     Object? timezoneDatabaseName = freezed,
   }) {
     return _then(_value.copyWith(
-      pillSheetTypes: pillSheetTypes == freezed
+      pillSheetTypes: null == pillSheetTypes
           ? _value.pillSheetTypes
           : pillSheetTypes // ignore: cast_nullable_to_non_nullable
               as List<PillSheetType?>,
-      pillNumberForFromMenstruation: pillNumberForFromMenstruation == freezed
+      pillNumberForFromMenstruation: null == pillNumberForFromMenstruation
           ? _value.pillNumberForFromMenstruation
           : pillNumberForFromMenstruation // ignore: cast_nullable_to_non_nullable
               as int,
-      durationMenstruation: durationMenstruation == freezed
+      durationMenstruation: null == durationMenstruation
           ? _value.durationMenstruation
           : durationMenstruation // ignore: cast_nullable_to_non_nullable
               as int,
-      reminderTimes: reminderTimes == freezed
+      reminderTimes: null == reminderTimes
           ? _value.reminderTimes
           : reminderTimes // ignore: cast_nullable_to_non_nullable
               as List<ReminderTime>,
-      isOnReminder: isOnReminder == freezed
+      isOnReminder: null == isOnReminder
           ? _value.isOnReminder
           : isOnReminder // ignore: cast_nullable_to_non_nullable
               as bool,
-      isOnNotifyInNotTakenDuration: isOnNotifyInNotTakenDuration == freezed
+      isOnNotifyInNotTakenDuration: null == isOnNotifyInNotTakenDuration
           ? _value.isOnNotifyInNotTakenDuration
           : isOnNotifyInNotTakenDuration // ignore: cast_nullable_to_non_nullable
               as bool,
-      pillSheetAppearanceMode: pillSheetAppearanceMode == freezed
+      pillSheetAppearanceMode: null == pillSheetAppearanceMode
           ? _value.pillSheetAppearanceMode
           : pillSheetAppearanceMode // ignore: cast_nullable_to_non_nullable
               as PillSheetAppearanceMode,
-      isAutomaticallyCreatePillSheet: isAutomaticallyCreatePillSheet == freezed
+      isAutomaticallyCreatePillSheet: null == isAutomaticallyCreatePillSheet
           ? _value.isAutomaticallyCreatePillSheet
           : isAutomaticallyCreatePillSheet // ignore: cast_nullable_to_non_nullable
               as bool,
-      reminderNotificationCustomization: reminderNotificationCustomization ==
-              freezed
+      reminderNotificationCustomization: null ==
+              reminderNotificationCustomization
           ? _value.reminderNotificationCustomization
           : reminderNotificationCustomization // ignore: cast_nullable_to_non_nullable
               as ReminderNotificationCustomization,
-      timezoneDatabaseName: timezoneDatabaseName == freezed
+      timezoneDatabaseName: freezed == timezoneDatabaseName
           ? _value.timezoneDatabaseName
           : timezoneDatabaseName // ignore: cast_nullable_to_non_nullable
               as String?,
-    ));
+    ) as $Val);
   }
 
   @override
+  @pragma('vm:prefer-inline')
   $ReminderNotificationCustomizationCopyWith<$Res>
       get reminderNotificationCustomization {
     return $ReminderNotificationCustomizationCopyWith<$Res>(
         _value.reminderNotificationCustomization, (value) {
-      return _then(_value.copyWith(reminderNotificationCustomization: value));
+      return _then(
+          _value.copyWith(reminderNotificationCustomization: value) as $Val);
     });
   }
 }
 
 /// @nodoc
-abstract class _$SettingCopyWith<$Res> implements $SettingCopyWith<$Res> {
-  factory _$SettingCopyWith(_Setting value, $Res Function(_Setting) then) =
-      __$SettingCopyWithImpl<$Res>;
+abstract class _$$_SettingCopyWith<$Res> implements $SettingCopyWith<$Res> {
+  factory _$$_SettingCopyWith(
+          _$_Setting value, $Res Function(_$_Setting) then) =
+      __$$_SettingCopyWithImpl<$Res>;
   @override
+  @useResult
   $Res call(
       {List<PillSheetType?> pillSheetTypes,
       int pillNumberForFromMenstruation,
@@ -374,66 +329,65 @@ abstract class _$SettingCopyWith<$Res> implements $SettingCopyWith<$Res> {
 }
 
 /// @nodoc
-class __$SettingCopyWithImpl<$Res> extends _$SettingCopyWithImpl<$Res>
-    implements _$SettingCopyWith<$Res> {
-  __$SettingCopyWithImpl(_Setting _value, $Res Function(_Setting) _then)
-      : super(_value, (v) => _then(v as _Setting));
+class __$$_SettingCopyWithImpl<$Res>
+    extends _$SettingCopyWithImpl<$Res, _$_Setting>
+    implements _$$_SettingCopyWith<$Res> {
+  __$$_SettingCopyWithImpl(_$_Setting _value, $Res Function(_$_Setting) _then)
+      : super(_value, _then);
 
-  @override
-  _Setting get _value => super._value as _Setting;
-
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? pillSheetTypes = freezed,
-    Object? pillNumberForFromMenstruation = freezed,
-    Object? durationMenstruation = freezed,
-    Object? reminderTimes = freezed,
-    Object? isOnReminder = freezed,
-    Object? isOnNotifyInNotTakenDuration = freezed,
-    Object? pillSheetAppearanceMode = freezed,
-    Object? isAutomaticallyCreatePillSheet = freezed,
-    Object? reminderNotificationCustomization = freezed,
+    Object? pillSheetTypes = null,
+    Object? pillNumberForFromMenstruation = null,
+    Object? durationMenstruation = null,
+    Object? reminderTimes = null,
+    Object? isOnReminder = null,
+    Object? isOnNotifyInNotTakenDuration = null,
+    Object? pillSheetAppearanceMode = null,
+    Object? isAutomaticallyCreatePillSheet = null,
+    Object? reminderNotificationCustomization = null,
     Object? timezoneDatabaseName = freezed,
   }) {
-    return _then(_Setting(
-      pillSheetTypes: pillSheetTypes == freezed
-          ? _value.pillSheetTypes
+    return _then(_$_Setting(
+      pillSheetTypes: null == pillSheetTypes
+          ? _value._pillSheetTypes
           : pillSheetTypes // ignore: cast_nullable_to_non_nullable
               as List<PillSheetType?>,
-      pillNumberForFromMenstruation: pillNumberForFromMenstruation == freezed
+      pillNumberForFromMenstruation: null == pillNumberForFromMenstruation
           ? _value.pillNumberForFromMenstruation
           : pillNumberForFromMenstruation // ignore: cast_nullable_to_non_nullable
               as int,
-      durationMenstruation: durationMenstruation == freezed
+      durationMenstruation: null == durationMenstruation
           ? _value.durationMenstruation
           : durationMenstruation // ignore: cast_nullable_to_non_nullable
               as int,
-      reminderTimes: reminderTimes == freezed
-          ? _value.reminderTimes
+      reminderTimes: null == reminderTimes
+          ? _value._reminderTimes
           : reminderTimes // ignore: cast_nullable_to_non_nullable
               as List<ReminderTime>,
-      isOnReminder: isOnReminder == freezed
+      isOnReminder: null == isOnReminder
           ? _value.isOnReminder
           : isOnReminder // ignore: cast_nullable_to_non_nullable
               as bool,
-      isOnNotifyInNotTakenDuration: isOnNotifyInNotTakenDuration == freezed
+      isOnNotifyInNotTakenDuration: null == isOnNotifyInNotTakenDuration
           ? _value.isOnNotifyInNotTakenDuration
           : isOnNotifyInNotTakenDuration // ignore: cast_nullable_to_non_nullable
               as bool,
-      pillSheetAppearanceMode: pillSheetAppearanceMode == freezed
+      pillSheetAppearanceMode: null == pillSheetAppearanceMode
           ? _value.pillSheetAppearanceMode
           : pillSheetAppearanceMode // ignore: cast_nullable_to_non_nullable
               as PillSheetAppearanceMode,
-      isAutomaticallyCreatePillSheet: isAutomaticallyCreatePillSheet == freezed
+      isAutomaticallyCreatePillSheet: null == isAutomaticallyCreatePillSheet
           ? _value.isAutomaticallyCreatePillSheet
           : isAutomaticallyCreatePillSheet // ignore: cast_nullable_to_non_nullable
               as bool,
-      reminderNotificationCustomization: reminderNotificationCustomization ==
-              freezed
+      reminderNotificationCustomization: null ==
+              reminderNotificationCustomization
           ? _value.reminderNotificationCustomization
           : reminderNotificationCustomization // ignore: cast_nullable_to_non_nullable
               as ReminderNotificationCustomization,
-      timezoneDatabaseName: timezoneDatabaseName == freezed
+      timezoneDatabaseName: freezed == timezoneDatabaseName
           ? _value.timezoneDatabaseName
           : timezoneDatabaseName // ignore: cast_nullable_to_non_nullable
               as String?,
@@ -446,10 +400,10 @@ class __$SettingCopyWithImpl<$Res> extends _$SettingCopyWithImpl<$Res>
 @JsonSerializable(explicitToJson: true)
 class _$_Setting extends _Setting with DiagnosticableTreeMixin {
   const _$_Setting(
-      {this.pillSheetTypes = const [],
+      {final List<PillSheetType?> pillSheetTypes = const [],
       required this.pillNumberForFromMenstruation,
       required this.durationMenstruation,
-      this.reminderTimes = const [],
+      final List<ReminderTime> reminderTimes = const [],
       required this.isOnReminder,
       this.isOnNotifyInNotTakenDuration = true,
       this.pillSheetAppearanceMode = PillSheetAppearanceMode.number,
@@ -457,34 +411,46 @@ class _$_Setting extends _Setting with DiagnosticableTreeMixin {
       this.reminderNotificationCustomization =
           const ReminderNotificationCustomization(),
       required this.timezoneDatabaseName})
-      : super._();
+      : _pillSheetTypes = pillSheetTypes,
+        _reminderTimes = reminderTimes,
+        super._();
 
   factory _$_Setting.fromJson(Map<String, dynamic> json) =>
       _$$_SettingFromJson(json);
 
-  @JsonKey()
+  final List<PillSheetType?> _pillSheetTypes;
   @override
-  final List<PillSheetType?> pillSheetTypes;
+  @JsonKey()
+  List<PillSheetType?> get pillSheetTypes {
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(_pillSheetTypes);
+  }
+
   @override
   final int pillNumberForFromMenstruation;
   @override
   final int durationMenstruation;
-  @JsonKey()
+  final List<ReminderTime> _reminderTimes;
   @override
-  final List<ReminderTime> reminderTimes;
+  @JsonKey()
+  List<ReminderTime> get reminderTimes {
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(_reminderTimes);
+  }
+
   @override
   final bool isOnReminder;
-  @JsonKey()
   @override
+  @JsonKey()
   final bool isOnNotifyInNotTakenDuration;
-  @JsonKey()
   @override
+  @JsonKey()
   final PillSheetAppearanceMode pillSheetAppearanceMode;
-  @JsonKey()
   @override
+  @JsonKey()
   final bool isAutomaticallyCreatePillSheet;
-  @JsonKey()
   @override
+  @JsonKey()
   final ReminderNotificationCustomization reminderNotificationCustomization;
   @override
   final String? timezoneDatabaseName;
@@ -520,70 +486,79 @@ class _$_Setting extends _Setting with DiagnosticableTreeMixin {
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _Setting &&
+            other is _$_Setting &&
             const DeepCollectionEquality()
-                .equals(other.pillSheetTypes, pillSheetTypes) &&
-            const DeepCollectionEquality().equals(
-                other.pillNumberForFromMenstruation,
-                pillNumberForFromMenstruation) &&
+                .equals(other._pillSheetTypes, _pillSheetTypes) &&
+            (identical(other.pillNumberForFromMenstruation,
+                    pillNumberForFromMenstruation) ||
+                other.pillNumberForFromMenstruation ==
+                    pillNumberForFromMenstruation) &&
+            (identical(other.durationMenstruation, durationMenstruation) ||
+                other.durationMenstruation == durationMenstruation) &&
             const DeepCollectionEquality()
-                .equals(other.durationMenstruation, durationMenstruation) &&
-            const DeepCollectionEquality()
-                .equals(other.reminderTimes, reminderTimes) &&
-            const DeepCollectionEquality()
-                .equals(other.isOnReminder, isOnReminder) &&
-            const DeepCollectionEquality().equals(
-                other.isOnNotifyInNotTakenDuration,
-                isOnNotifyInNotTakenDuration) &&
-            const DeepCollectionEquality().equals(
-                other.pillSheetAppearanceMode, pillSheetAppearanceMode) &&
-            const DeepCollectionEquality().equals(
-                other.isAutomaticallyCreatePillSheet,
-                isAutomaticallyCreatePillSheet) &&
-            const DeepCollectionEquality().equals(
-                other.reminderNotificationCustomization,
-                reminderNotificationCustomization) &&
-            const DeepCollectionEquality()
-                .equals(other.timezoneDatabaseName, timezoneDatabaseName));
+                .equals(other._reminderTimes, _reminderTimes) &&
+            (identical(other.isOnReminder, isOnReminder) ||
+                other.isOnReminder == isOnReminder) &&
+            (identical(other.isOnNotifyInNotTakenDuration,
+                    isOnNotifyInNotTakenDuration) ||
+                other.isOnNotifyInNotTakenDuration ==
+                    isOnNotifyInNotTakenDuration) &&
+            (identical(
+                    other.pillSheetAppearanceMode, pillSheetAppearanceMode) ||
+                other.pillSheetAppearanceMode == pillSheetAppearanceMode) &&
+            (identical(other.isAutomaticallyCreatePillSheet,
+                    isAutomaticallyCreatePillSheet) ||
+                other.isAutomaticallyCreatePillSheet ==
+                    isAutomaticallyCreatePillSheet) &&
+            (identical(other.reminderNotificationCustomization,
+                    reminderNotificationCustomization) ||
+                other.reminderNotificationCustomization ==
+                    reminderNotificationCustomization) &&
+            (identical(other.timezoneDatabaseName, timezoneDatabaseName) ||
+                other.timezoneDatabaseName == timezoneDatabaseName));
   }
-
-  @override
-  int get hashCode => Object.hash(
-      runtimeType,
-      const DeepCollectionEquality().hash(pillSheetTypes),
-      const DeepCollectionEquality().hash(pillNumberForFromMenstruation),
-      const DeepCollectionEquality().hash(durationMenstruation),
-      const DeepCollectionEquality().hash(reminderTimes),
-      const DeepCollectionEquality().hash(isOnReminder),
-      const DeepCollectionEquality().hash(isOnNotifyInNotTakenDuration),
-      const DeepCollectionEquality().hash(pillSheetAppearanceMode),
-      const DeepCollectionEquality().hash(isAutomaticallyCreatePillSheet),
-      const DeepCollectionEquality().hash(reminderNotificationCustomization),
-      const DeepCollectionEquality().hash(timezoneDatabaseName));
 
   @JsonKey(ignore: true)
   @override
-  _$SettingCopyWith<_Setting> get copyWith =>
-      __$SettingCopyWithImpl<_Setting>(this, _$identity);
+  int get hashCode => Object.hash(
+      runtimeType,
+      const DeepCollectionEquality().hash(_pillSheetTypes),
+      pillNumberForFromMenstruation,
+      durationMenstruation,
+      const DeepCollectionEquality().hash(_reminderTimes),
+      isOnReminder,
+      isOnNotifyInNotTakenDuration,
+      pillSheetAppearanceMode,
+      isAutomaticallyCreatePillSheet,
+      reminderNotificationCustomization,
+      timezoneDatabaseName);
+
+  @JsonKey(ignore: true)
+  @override
+  @pragma('vm:prefer-inline')
+  _$$_SettingCopyWith<_$_Setting> get copyWith =>
+      __$$_SettingCopyWithImpl<_$_Setting>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_SettingToJson(this);
+    return _$$_SettingToJson(
+      this,
+    );
   }
 }
 
 abstract class _Setting extends Setting {
   const factory _Setting(
-      {List<PillSheetType?> pillSheetTypes,
-      required int pillNumberForFromMenstruation,
-      required int durationMenstruation,
-      List<ReminderTime> reminderTimes,
-      required bool isOnReminder,
-      bool isOnNotifyInNotTakenDuration,
-      PillSheetAppearanceMode pillSheetAppearanceMode,
-      bool isAutomaticallyCreatePillSheet,
-      ReminderNotificationCustomization reminderNotificationCustomization,
-      required String? timezoneDatabaseName}) = _$_Setting;
+      {final List<PillSheetType?> pillSheetTypes,
+      required final int pillNumberForFromMenstruation,
+      required final int durationMenstruation,
+      final List<ReminderTime> reminderTimes,
+      required final bool isOnReminder,
+      final bool isOnNotifyInNotTakenDuration,
+      final PillSheetAppearanceMode pillSheetAppearanceMode,
+      final bool isAutomaticallyCreatePillSheet,
+      final ReminderNotificationCustomization reminderNotificationCustomization,
+      required final String? timezoneDatabaseName}) = _$_Setting;
   const _Setting._() : super._();
 
   factory _Setting.fromJson(Map<String, dynamic> json) = _$_Setting.fromJson;
@@ -610,6 +585,6 @@ abstract class _Setting extends Setting {
   String? get timezoneDatabaseName;
   @override
   @JsonKey(ignore: true)
-  _$SettingCopyWith<_Setting> get copyWith =>
+  _$$_SettingCopyWith<_$_Setting> get copyWith =>
       throw _privateConstructorUsedError;
 }

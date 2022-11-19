@@ -67,7 +67,7 @@ class CalendarWeekLine extends HookConsumerWidget {
                     analytics.logEvent(name: "tap_calendar_menstruation_band");
                     showMenstruationEditPage(
                       context,
-                      menstruation: menstruation,
+                      initialMenstruation: menstruation,
                     );
                   },
                 ),
@@ -171,7 +171,7 @@ void transitionWhenCalendarDayTapped(
 void _showConfirmDiarySheet(BuildContext context, Diary diary) {
   showModalBottomSheet(
     context: context,
-    builder: (context) => ConfirmDiarySheet(diary),
+    builder: (context) => ConfirmDiarySheet(diary: diary),
     backgroundColor: Colors.transparent,
   );
 }

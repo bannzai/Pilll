@@ -1,5 +1,5 @@
 import 'package:flutter_test/flutter_test.dart';
-import 'package:pilll/domain/menstruation/menstruation_state.codegen.dart';
+import 'package:pilll/domain/menstruation/data.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
 void main() {

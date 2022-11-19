@@ -12,42 +12,11 @@ part of 'pilll_ads.codegen.dart';
 T _$identity<T>(T value) => value;
 
 final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more informations: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
+    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
 
 PilllAds _$PilllAdsFromJson(Map<String, dynamic> json) {
   return _PilllAds.fromJson(json);
 }
-
-/// @nodoc
-class _$PilllAdsTearOff {
-  const _$PilllAdsTearOff();
-
-  _PilllAds call(
-      {@JsonKey(fromJson: NonNullTimestampConverter.timestampToDateTime, toJson: NonNullTimestampConverter.dateTimeToTimestamp)
-          required DateTime startDateTime,
-      @JsonKey(fromJson: NonNullTimestampConverter.timestampToDateTime, toJson: NonNullTimestampConverter.dateTimeToTimestamp)
-          required DateTime endDateTime,
-      required String description,
-      required String? imageURL,
-      required String destinationURL,
-      required String hexColor}) {
-    return _PilllAds(
-      startDateTime: startDateTime,
-      endDateTime: endDateTime,
-      description: description,
-      imageURL: imageURL,
-      destinationURL: destinationURL,
-      hexColor: hexColor,
-    );
-  }
-
-  PilllAds fromJson(Map<String, Object?> json) {
-    return PilllAds.fromJson(json);
-  }
-}
-
-/// @nodoc
-const $PilllAds = _$PilllAdsTearOff();
 
 /// @nodoc
 mixin _$PilllAds {
@@ -73,7 +42,8 @@ mixin _$PilllAds {
 /// @nodoc
 abstract class $PilllAdsCopyWith<$Res> {
   factory $PilllAdsCopyWith(PilllAds value, $Res Function(PilllAds) then) =
-      _$PilllAdsCopyWithImpl<$Res>;
+      _$PilllAdsCopyWithImpl<$Res, PilllAds>;
+  @useResult
   $Res call(
       {@JsonKey(fromJson: NonNullTimestampConverter.timestampToDateTime, toJson: NonNullTimestampConverter.dateTimeToTimestamp)
           DateTime startDateTime,
@@ -86,56 +56,61 @@ abstract class $PilllAdsCopyWith<$Res> {
 }
 
 /// @nodoc
-class _$PilllAdsCopyWithImpl<$Res> implements $PilllAdsCopyWith<$Res> {
+class _$PilllAdsCopyWithImpl<$Res, $Val extends PilllAds>
+    implements $PilllAdsCopyWith<$Res> {
   _$PilllAdsCopyWithImpl(this._value, this._then);
 
-  final PilllAds _value;
   // ignore: unused_field
-  final $Res Function(PilllAds) _then;
+  final $Val _value;
+  // ignore: unused_field
+  final $Res Function($Val) _then;
 
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? startDateTime = freezed,
-    Object? endDateTime = freezed,
-    Object? description = freezed,
+    Object? startDateTime = null,
+    Object? endDateTime = null,
+    Object? description = null,
     Object? imageURL = freezed,
-    Object? destinationURL = freezed,
-    Object? hexColor = freezed,
+    Object? destinationURL = null,
+    Object? hexColor = null,
   }) {
     return _then(_value.copyWith(
-      startDateTime: startDateTime == freezed
+      startDateTime: null == startDateTime
           ? _value.startDateTime
           : startDateTime // ignore: cast_nullable_to_non_nullable
               as DateTime,
-      endDateTime: endDateTime == freezed
+      endDateTime: null == endDateTime
           ? _value.endDateTime
           : endDateTime // ignore: cast_nullable_to_non_nullable
               as DateTime,
-      description: description == freezed
+      description: null == description
           ? _value.description
           : description // ignore: cast_nullable_to_non_nullable
               as String,
-      imageURL: imageURL == freezed
+      imageURL: freezed == imageURL
           ? _value.imageURL
           : imageURL // ignore: cast_nullable_to_non_nullable
               as String?,
-      destinationURL: destinationURL == freezed
+      destinationURL: null == destinationURL
           ? _value.destinationURL
           : destinationURL // ignore: cast_nullable_to_non_nullable
               as String,
-      hexColor: hexColor == freezed
+      hexColor: null == hexColor
           ? _value.hexColor
           : hexColor // ignore: cast_nullable_to_non_nullable
               as String,
-    ));
+    ) as $Val);
   }
 }
 
 /// @nodoc
-abstract class _$PilllAdsCopyWith<$Res> implements $PilllAdsCopyWith<$Res> {
-  factory _$PilllAdsCopyWith(_PilllAds value, $Res Function(_PilllAds) then) =
-      __$PilllAdsCopyWithImpl<$Res>;
+abstract class _$$_PilllAdsCopyWith<$Res> implements $PilllAdsCopyWith<$Res> {
+  factory _$$_PilllAdsCopyWith(
+          _$_PilllAds value, $Res Function(_$_PilllAds) then) =
+      __$$_PilllAdsCopyWithImpl<$Res>;
   @override
+  @useResult
   $Res call(
       {@JsonKey(fromJson: NonNullTimestampConverter.timestampToDateTime, toJson: NonNullTimestampConverter.dateTimeToTimestamp)
           DateTime startDateTime,
@@ -148,45 +123,45 @@ abstract class _$PilllAdsCopyWith<$Res> implements $PilllAdsCopyWith<$Res> {
 }
 
 /// @nodoc
-class __$PilllAdsCopyWithImpl<$Res> extends _$PilllAdsCopyWithImpl<$Res>
-    implements _$PilllAdsCopyWith<$Res> {
-  __$PilllAdsCopyWithImpl(_PilllAds _value, $Res Function(_PilllAds) _then)
-      : super(_value, (v) => _then(v as _PilllAds));
+class __$$_PilllAdsCopyWithImpl<$Res>
+    extends _$PilllAdsCopyWithImpl<$Res, _$_PilllAds>
+    implements _$$_PilllAdsCopyWith<$Res> {
+  __$$_PilllAdsCopyWithImpl(
+      _$_PilllAds _value, $Res Function(_$_PilllAds) _then)
+      : super(_value, _then);
 
-  @override
-  _PilllAds get _value => super._value as _PilllAds;
-
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? startDateTime = freezed,
-    Object? endDateTime = freezed,
-    Object? description = freezed,
+    Object? startDateTime = null,
+    Object? endDateTime = null,
+    Object? description = null,
     Object? imageURL = freezed,
-    Object? destinationURL = freezed,
-    Object? hexColor = freezed,
+    Object? destinationURL = null,
+    Object? hexColor = null,
   }) {
-    return _then(_PilllAds(
-      startDateTime: startDateTime == freezed
+    return _then(_$_PilllAds(
+      startDateTime: null == startDateTime
           ? _value.startDateTime
           : startDateTime // ignore: cast_nullable_to_non_nullable
               as DateTime,
-      endDateTime: endDateTime == freezed
+      endDateTime: null == endDateTime
           ? _value.endDateTime
           : endDateTime // ignore: cast_nullable_to_non_nullable
               as DateTime,
-      description: description == freezed
+      description: null == description
           ? _value.description
           : description // ignore: cast_nullable_to_non_nullable
               as String,
-      imageURL: imageURL == freezed
+      imageURL: freezed == imageURL
           ? _value.imageURL
           : imageURL // ignore: cast_nullable_to_non_nullable
               as String?,
-      destinationURL: destinationURL == freezed
+      destinationURL: null == destinationURL
           ? _value.destinationURL
           : destinationURL // ignore: cast_nullable_to_non_nullable
               as String,
-      hexColor: hexColor == freezed
+      hexColor: null == hexColor
           ? _value.hexColor
           : hexColor // ignore: cast_nullable_to_non_nullable
               as String,
@@ -240,50 +215,50 @@ class _$_PilllAds extends _PilllAds {
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _PilllAds &&
-            const DeepCollectionEquality()
-                .equals(other.startDateTime, startDateTime) &&
-            const DeepCollectionEquality()
-                .equals(other.endDateTime, endDateTime) &&
-            const DeepCollectionEquality()
-                .equals(other.description, description) &&
-            const DeepCollectionEquality().equals(other.imageURL, imageURL) &&
-            const DeepCollectionEquality()
-                .equals(other.destinationURL, destinationURL) &&
-            const DeepCollectionEquality().equals(other.hexColor, hexColor));
+            other is _$_PilllAds &&
+            (identical(other.startDateTime, startDateTime) ||
+                other.startDateTime == startDateTime) &&
+            (identical(other.endDateTime, endDateTime) ||
+                other.endDateTime == endDateTime) &&
+            (identical(other.description, description) ||
+                other.description == description) &&
+            (identical(other.imageURL, imageURL) ||
+                other.imageURL == imageURL) &&
+            (identical(other.destinationURL, destinationURL) ||
+                other.destinationURL == destinationURL) &&
+            (identical(other.hexColor, hexColor) ||
+                other.hexColor == hexColor));
   }
-
-  @override
-  int get hashCode => Object.hash(
-      runtimeType,
-      const DeepCollectionEquality().hash(startDateTime),
-      const DeepCollectionEquality().hash(endDateTime),
-      const DeepCollectionEquality().hash(description),
-      const DeepCollectionEquality().hash(imageURL),
-      const DeepCollectionEquality().hash(destinationURL),
-      const DeepCollectionEquality().hash(hexColor));
 
   @JsonKey(ignore: true)
   @override
-  _$PilllAdsCopyWith<_PilllAds> get copyWith =>
-      __$PilllAdsCopyWithImpl<_PilllAds>(this, _$identity);
+  int get hashCode => Object.hash(runtimeType, startDateTime, endDateTime,
+      description, imageURL, destinationURL, hexColor);
+
+  @JsonKey(ignore: true)
+  @override
+  @pragma('vm:prefer-inline')
+  _$$_PilllAdsCopyWith<_$_PilllAds> get copyWith =>
+      __$$_PilllAdsCopyWithImpl<_$_PilllAds>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_PilllAdsToJson(this);
+    return _$$_PilllAdsToJson(
+      this,
+    );
   }
 }
 
 abstract class _PilllAds extends PilllAds {
   factory _PilllAds(
       {@JsonKey(fromJson: NonNullTimestampConverter.timestampToDateTime, toJson: NonNullTimestampConverter.dateTimeToTimestamp)
-          required DateTime startDateTime,
+          required final DateTime startDateTime,
       @JsonKey(fromJson: NonNullTimestampConverter.timestampToDateTime, toJson: NonNullTimestampConverter.dateTimeToTimestamp)
-          required DateTime endDateTime,
-      required String description,
-      required String? imageURL,
-      required String destinationURL,
-      required String hexColor}) = _$_PilllAds;
+          required final DateTime endDateTime,
+      required final String description,
+      required final String? imageURL,
+      required final String destinationURL,
+      required final String hexColor}) = _$_PilllAds;
   _PilllAds._() : super._();
 
   factory _PilllAds.fromJson(Map<String, dynamic> json) = _$_PilllAds.fromJson;
@@ -308,6 +283,6 @@ abstract class _PilllAds extends PilllAds {
   String get hexColor;
   @override
   @JsonKey(ignore: true)
-  _$PilllAdsCopyWith<_PilllAds> get copyWith =>
+  _$$_PilllAdsCopyWith<_$_PilllAds> get copyWith =>
       throw _privateConstructorUsedError;
 }

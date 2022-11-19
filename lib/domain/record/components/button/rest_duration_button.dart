@@ -13,8 +13,7 @@ class RestDurationButton extends StatelessWidget {
       height: 44,
       child: TextButton(
         style: TextButton.styleFrom(backgroundColor: PilllColors.disable),
-        child: Text("休薬中",
-            style: ButtonTextStyle.main.merge(TextColorStyle.lightGray)),
+        child: Text("休薬中", style: ButtonTextStyle.main.merge(TextColorStyle.lightGray)),
         onPressed: null,
       ),
     );

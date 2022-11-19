@@ -2,12 +2,13 @@ import 'package:pilll/components/organisms/calendar/band/calendar_band_model.dar
 import 'package:pilll/components/organisms/calendar/band/calendar_next_pill_sheet_band.dart';
 import 'package:pilll/domain/calendar/components/month_calendar/month_calendar.dart';
 import 'package:pilll/components/organisms/calendar/week/week_calendar.dart';
-import 'package:pilll/domain/calendar/components/month_calendar/month_calendar_state.codegen.dart';
 import 'package:pilll/domain/calendar/date_range.dart';
 import 'package:pilll/entity/diary.codegen.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_test/flutter_test.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
+import 'package:pilll/provider/diary.dart';
+import 'package:pilll/provider/schedule.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
 void main() {
@@ -36,23 +37,13 @@ void main() {
       await tester.pumpWidget(
         ProviderScope(
           overrides: [
-            monthCalendarStateProvider.overrideWithProvider(
-              (argument) => Provider(
-                (_) => AsyncValue.data(
-                  MonthCalendarState(
-                    dateForMonth: argument,
-                    diaries: diaries,
-                    schedules: [],
-                    menstruations: [],
-                  ),
-                ),
-              ),
-            ),
+            diariesStreamForMonthProvider.overrideWith((ref, arg) => Stream.value(diaries)),
+            schedulesForMonthProvider.overrideWith((ref, arg) => Stream.value([])),
           ],
           child: MaterialApp(
             home: MonthCalendar(
               dateForMonth: DateTime(2020, 09, 14),
-              weekCalendarBuilder: (context, monthState, weekDateRange) {
+              weekCalendarBuilder: (context, diaries, schedules, weekDateRange) {
                 return CalendarWeekLine(
                   dateRange: weekDateRange,
                   calendarMenstruationBandModels: const [],
@@ -94,23 +85,13 @@ void main() {
       await tester.pumpWidget(
         ProviderScope(
           overrides: [
-            monthCalendarStateProvider.overrideWithProvider(
-              (argument) => Provider(
-                (_) => AsyncValue.data(
-                  MonthCalendarState(
-                    dateForMonth: argument,
-                    diaries: diaries,
-                    schedules: [],
-                    menstruations: [],
-                  ),
-                ),
-              ),
-            ),
+            diariesStreamForMonthProvider.overrideWith((ref, arg) => Stream.value(diaries)),
+            schedulesForMonthProvider.overrideWith((ref, arg) => Stream.value([])),
           ],
           child: MaterialApp(
             home: MonthCalendar(
               dateForMonth: DateTime(2020, 09, 14),
-              weekCalendarBuilder: (context, monthState, weekDateRange) {
+              weekCalendarBuilder: (context, diaries, schedules, weekDateRange) {
                 return CalendarWeekLine(
                   dateRange: weekDateRange,
                   calendarMenstruationBandModels: const [],
@@ -139,23 +120,13 @@ void main() {
       await tester.pumpWidget(
         ProviderScope(
           overrides: [
-            monthCalendarStateProvider.overrideWithProvider(
-              (argument) => Provider(
-                (_) => AsyncValue.data(
-                  MonthCalendarState(
-                    dateForMonth: argument,
-                    diaries: [],
-                    schedules: [],
-                    menstruations: [],
-                  ),
-                ),
-              ),
-            ),
+            diariesStreamForMonthProvider.overrideWith((ref, arg) => Stream.value([])),
+            schedulesForMonthProvider.overrideWith((ref, arg) => Stream.value([])),
           ],
           child: MaterialApp(
             home: MonthCalendar(
               dateForMonth: DateTime(2020, 09, 14),
-              weekCalendarBuilder: (context, monthState, weekDateRange) {
+              weekCalendarBuilder: (context, diaries, schedules, weekDateRange) {
                 return CalendarWeekLine(
                   dateRange: weekDateRange,
                   calendarMenstruationBandModels: const [],
@@ -178,23 +149,13 @@ void main() {
       await tester.pumpWidget(
         ProviderScope(
           overrides: [
-            monthCalendarStateProvider.overrideWithProvider(
-              (argument) => Provider(
-                (_) => AsyncValue.data(
-                  MonthCalendarState(
-                    dateForMonth: argument,
-                    diaries: [],
-                    schedules: [],
-                    menstruations: [],
-                  ),
-                ),
-              ),
-            ),
+            diariesStreamForMonthProvider.overrideWith((ref, arg) => Stream.value([])),
+            schedulesForMonthProvider.overrideWith((ref, arg) => Stream.value([])),
           ],
           child: MaterialApp(
             home: MonthCalendar(
               dateForMonth: DateTime(2020, 09, 14),
-              weekCalendarBuilder: (context, monthState, weekDateRange) {
+              weekCalendarBuilder: (context, diaries, schedules, weekDateRange) {
                 return CalendarWeekLine(
                   dateRange: weekDateRange,
                   calendarMenstruationBandModels: const [],

@@ -13,7 +13,6 @@ extension StringKey on String {
   static const String salvagedOldStartTakenDate = "salvagedOldStartTakenDate";
   static const String salvagedOldLastTakenDate = "salvagedOldLastTakenDate";
   static const String beginVersion = "beginingVersion";
-  static const String currentUserUID = "currentUserUID";
   static const String lastSignInAnonymousUID = "lastSigninAnonymousUID";
 }
 

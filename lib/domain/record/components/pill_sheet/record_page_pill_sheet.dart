@@ -1,5 +1,8 @@
+import 'dart:math';
+
 import 'package:flutter/material.dart';
 import 'package:flutter_app_badger/flutter_app_badger.dart';
+import 'package:hooks_riverpod/hooks_riverpod.dart';
 import 'package:pilll/analytics.dart';
 import 'package:pilll/components/organisms/pill_mark/pill_mark.dart';
 import 'package:pilll/components/organisms/pill_mark/pill_mark_line.dart';
@@ -8,9 +11,10 @@ import 'package:pilll/components/organisms/pill_sheet/pill_sheet_view_layout.dar
 import 'package:pilll/components/organisms/pill_sheet/pill_sheet_view_weekday_line.dart';
 import 'package:pilll/domain/modal/release_note.dart';
 import 'package:pilll/domain/record/components/pill_sheet/components/pill_number.dart';
-import 'package:pilll/domain/record/record_page_state.codegen.dart';
-import 'package:pilll/domain/record/record_page_state_notifier.dart';
 import 'package:pilll/domain/record/util/request_in_app_review.dart';
+import 'package:pilll/provider/revert_take_pill.dart';
+import 'package:pilll/provider/take_pill.dart';
+import 'package:pilll/entity/pill_mark_type.dart';
 import 'package:pilll/entity/pill_sheet.codegen.dart';
 import 'package:pilll/entity/pill_sheet_group.codegen.dart';
 import 'package:pilll/entity/pill_sheet_type.dart';
@@ -21,12 +25,11 @@ import 'package:pilll/error_log.dart';
 import 'package:pilll/provider/premium_and_trial.codegen.dart';
 import 'package:pilll/util/datetime/day.dart';
 
-class RecordPagePillSheet extends StatelessWidget {
+class RecordPagePillSheet extends HookConsumerWidget {
   final PillSheetGroup pillSheetGroup;
   final PillSheet pillSheet;
   final Setting setting;
-  final RecordPageStateNotifier store;
-  final RecordPageState state;
+  final PremiumAndTrial premiumAndTrial;
 
   List<PillSheetType> get pillSheetTypes => pillSheetGroup.pillSheets.map((e) => e.pillSheetType).toList();
 
@@ -35,14 +38,15 @@ class RecordPagePillSheet extends StatelessWidget {
     required this.pillSheetGroup,
     required this.pillSheet,
     required this.setting,
-    required this.store,
-    required this.state,
+    required this.premiumAndTrial,
   }) : super(key: key);
 
   @override
-  Widget build(BuildContext context) {
+  Widget build(BuildContext context, WidgetRef ref) {
     final weekdayDate =
         pillSheet.beginingDate.add(Duration(days: summarizedRestDuration(restDurations: pillSheet.restDurations, upperDate: today())));
+    final takePill = ref.watch(takePillProvider);
+    final revertTakePill = ref.watch(revertTakePillProvider);
 
     return PillSheetViewLayout(
       weekdayLines: PillSheetViewWeekdayLine(
@@ -54,6 +58,8 @@ class RecordPagePillSheet extends StatelessWidget {
           return PillMarkLine(
             pillMarks: _pillMarks(
               context,
+              takePill: takePill,
+              revertTakePill: revertTakePill,
               lineIndex: index,
               pageIndex: pillSheet.groupIndex,
             ),
@@ -65,6 +71,8 @@ class RecordPagePillSheet extends StatelessWidget {
 
   List<Widget> _pillMarks(
     BuildContext context, {
+    required TakePill takePill,
+    required RevertTakePill revertTakePill,
     required int lineIndex,
     required int pageIndex,
   }) {
@@ -83,7 +91,7 @@ class RecordPagePillSheet extends StatelessWidget {
         width: PillSheetViewLayout.componentWidth,
         child: PillMarkWithNumberLayout(
           textOfPillNumber: textOfPillNumber(
-            premiumAndTrial: state.premiumAndTrial,
+            premiumAndTrial: premiumAndTrial,
             pillSheetGroup: pillSheetGroup,
             pillSheet: pillSheet,
             setting: setting,
@@ -96,9 +104,8 @@ class RecordPagePillSheet extends StatelessWidget {
               pillSheet: pillSheet,
               pillSheetGroup: pillSheetGroup,
             ),
-            showsCheckmark: store.isDone(
+            showsCheckmark: _isDone(
               pillNumberIntoPillSheet: pillNumberIntoPillSheet,
-              pillSheet: pillSheet,
             ),
             pillMarkType: pillMarkFor(
               pillNumberIntoPillSheet: pillNumberIntoPillSheet,
@@ -117,15 +124,15 @@ class RecordPagePillSheet extends StatelessWidget {
               }
 
               if (pillSheet.lastTakenPillNumber >= pillNumberIntoPillSheet) {
-                await store.asyncAction
-                    .revertTaken(pillSheetGroup: pillSheetGroup, pageIndex: pageIndex, pillNumberIntoPillSheet: pillNumberIntoPillSheet);
+                await revertTakePill(pillSheetGroup: pillSheetGroup, pageIndex: pageIndex, pillNumberIntoPillSheet: pillNumberIntoPillSheet);
               } else {
                 // NOTE: batch.commit でリモートのDBに書き込む時間がかかるので事前にバッジを0にする
                 FlutterAppBadger.removeBadge();
                 requestInAppReview();
                 showReleaseNotePreDialog(context);
 
-                await store.asyncAction.takenWithPillNumber(
+                await _takeWithPillNumber(
+                  takePill,
                   pillSheetGroup: pillSheetGroup,
                   pillNumberIntoPillSheet: pillNumberIntoPillSheet,
                   pillSheet: pillSheet,
@@ -139,6 +146,48 @@ class RecordPagePillSheet extends StatelessWidget {
         ),
       );
     });
+  }
+
+  Future<PillSheetGroup?> _takeWithPillNumber(
+    TakePill takePill, {
+    required int pillNumberIntoPillSheet,
+    required PillSheetGroup pillSheetGroup,
+    required PillSheet pillSheet,
+  }) async {
+    if (pillNumberIntoPillSheet <= pillSheet.lastTakenPillNumber) {
+      return null;
+    }
+    final activedPillSheet = pillSheetGroup.activedPillSheet;
+    if (activedPillSheet == null) {
+      return null;
+    }
+    if (activedPillSheet.activeRestDuration != null) {
+      return null;
+    }
+    if (activedPillSheet.groupIndex < pillSheet.groupIndex) {
+      return null;
+    }
+    var diff = min(pillSheet.todayPillNumber, pillSheet.typeInfo.totalCount) - pillNumberIntoPillSheet;
+    if (diff < 0) {
+      // User tapped future pill number
+      return null;
+    }
+    if (activedPillSheet.todayPillIsAlreadyTaken) {
+      return null;
+    }
+
+    final takenDate = pillSheet.displayPillTakeDate(pillNumberIntoPillSheet);
+
+    final updatedPillSheetGroup = await takePill(
+      takenDate: takenDate,
+      pillSheetGroup: pillSheetGroup,
+      activedPillSheet: activedPillSheet,
+      isQuickRecord: false,
+    );
+    if (updatedPillSheetGroup == null) {
+      return null;
+    }
+    return updatedPillSheetGroup;
   }
 
   static Widget textOfPillNumber({
@@ -248,6 +297,46 @@ class RecordPagePillSheet extends StatelessWidget {
     final isContainedMenstruationDuration = menstruationRangeList.where((element) => element.contains(serialiedPillNumber)).isNotEmpty;
     return isContainedMenstruationDuration;
   }
+
+  bool _isDone({
+    required int pillNumberIntoPillSheet,
+  }) {
+    final activedPillSheet = pillSheetGroup.activedPillSheet;
+    if (activedPillSheet == null) {
+      throw const FormatException("pill sheet not found");
+    }
+    if (activedPillSheet.groupIndex < pillSheet.groupIndex) {
+      return false;
+    }
+    if (activedPillSheet.id != pillSheet.id) {
+      if (pillSheet.isBegan) {
+        if (pillNumberIntoPillSheet > pillSheet.lastTakenPillNumber) {
+          return false;
+        }
+      }
+      return true;
+    }
+
+    return pillNumberIntoPillSheet <= activedPillSheet.lastTakenPillNumber;
+  }
+}
+
+PillMarkType pillMarkFor({
+  required int pillNumberIntoPillSheet,
+  required PillSheet pillSheet,
+}) {
+  if (pillNumberIntoPillSheet > pillSheet.typeInfo.dosingPeriod) {
+    return (pillSheet.pillSheetType == PillSheetType.pillsheet_21 || pillSheet.pillSheetType == PillSheetType.pillsheet_24_rest_4)
+        ? PillMarkType.rest
+        : PillMarkType.fake;
+  }
+  if (pillNumberIntoPillSheet <= pillSheet.lastTakenPillNumber) {
+    return PillMarkType.done;
+  }
+  if (pillNumberIntoPillSheet < pillSheet.todayPillNumber) {
+    return PillMarkType.normal;
+  }
+  return PillMarkType.normal;
 }
 
 class _MenstruationRange {
@@ -257,4 +346,31 @@ class _MenstruationRange {
   _MenstruationRange(this.begin, this.end);
 
   bool contains(int pillNumber) => begin <= pillNumber && pillNumber <= end;
+}
+
+bool shouldPillMarkAnimation({
+  required int pillNumberIntoPillSheet,
+  required PillSheet pillSheet,
+  required PillSheetGroup pillSheetGroup,
+}) {
+  if (pillSheetGroup.activedPillSheet?.activeRestDuration != null) {
+    return false;
+  }
+  final activedPillSheet = pillSheetGroup.activedPillSheet;
+  if (activedPillSheet == null) {
+    throw const FormatException("pill sheet not found");
+  }
+  if (activedPillSheet.groupIndex < pillSheet.groupIndex) {
+    return false;
+  }
+  if (activedPillSheet.id != pillSheet.id) {
+    if (pillSheet.isBegan) {
+      if (pillNumberIntoPillSheet > pillSheet.lastTakenPillNumber) {
+        return true;
+      }
+    }
+    return false;
+  }
+
+  return pillNumberIntoPillSheet > activedPillSheet.lastTakenPillNumber && pillNumberIntoPillSheet <= activedPillSheet.todayPillNumber;
 }

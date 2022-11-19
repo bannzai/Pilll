@@ -1,16 +1,15 @@
-import 'dart:async';
-
+import 'package:flutter_hooks/flutter_hooks.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
 import 'package:pilll/components/atoms/buttons.dart';
 import 'package:pilll/components/atoms/color.dart';
 import 'package:pilll/components/atoms/font.dart';
 import 'package:pilll/components/atoms/text_color.dart';
-import 'package:pilll/domain/settings/today_pill_number/setting_today_pill_number_store.dart';
 import 'package:pilll/domain/settings/today_pill_number/setting_today_pill_number_pill_sheet_list.dart';
-import 'package:pilll/domain/settings/today_pill_number/setting_today_pill_number_store_parameter.codegen.dart';
 import 'package:pilll/entity/pill_sheet.codegen.dart';
 import 'package:pilll/entity/pill_sheet_group.codegen.dart';
+import 'package:pilll/entity/pill_sheet_type.dart';
 import 'package:pilll/entity/setting.codegen.dart';
+import 'package:pilll/provider/change_pill_number.dart';
 import 'package:pilll/util/formatter/date_time_formatter.dart';
 import 'package:flutter/material.dart';
 
@@ -26,13 +25,9 @@ class SettingTodayPillNumberPage extends HookConsumerWidget {
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {
-    final parameter = SettingTodayPillNumberStoreParameter(
-      appearanceMode: PillSheetAppearanceMode.number,
-      pillSheetGroup: pillSheetGroup,
-      activedPillSheet: activedPillSheet,
-    );
-    final state = ref.watch(settingTodayPillNumberStoreProvider(parameter));
-    final store = ref.watch(settingTodayPillNumberStoreProvider(parameter).notifier);
+    final pillNumberIntoPillSheet = useState(_pillNumberIntoPillSheet(activedPillSheet: activedPillSheet, pillSheetGroup: pillSheetGroup));
+    final pillSheetPageIndex = useState(activedPillSheet.groupIndex);
+    final changePillNumber = ref.watch(changePillNumberProvider);
 
     return Scaffold(
       backgroundColor: PilllColors.background,
@@ -62,12 +57,18 @@ class SettingTodayPillNumberPage extends HookConsumerWidget {
                   const SizedBox(height: 56),
                   Center(
                     child: SettingTodayPillNumberPillSheetList(
-                      pillSheetTypes: pillSheetGroup.pillSheets.map((e) => e.pillSheetType).toList(),
-                      appearanceMode: state.appearanceMode,
-                      selectedTodayPillNumberIntoPillSheet: state.selectedTodayPillNumberIntoPillSheet,
-                      markSelected: (pageIndex, pillNumberIntoPillSheet) =>
-                          store.markSelected(pageIndex: pageIndex, pillNumberIntoPillSheet: pillNumberIntoPillSheet),
-                    ),
+                        pillSheetTypes: pillSheetGroup.pillSheets.map((e) => e.pillSheetType).toList(),
+                        appearanceMode: PillSheetAppearanceMode.number,
+                        selectedTodayPillNumberIntoPillSheet: (pageIndex) {
+                          if (pillSheetPageIndex.value != pageIndex) {
+                            return null;
+                          }
+                          return pillNumberIntoPillSheet.value;
+                        },
+                        markSelected: (_pillSheetPageIndex, _pillNumberIntoPillSheet) {
+                          pillSheetPageIndex.value = _pillSheetPageIndex;
+                          pillNumberIntoPillSheet.value = _pillNumberIntoPillSheet;
+                        }),
                   ),
                   const SizedBox(height: 20),
                 ],
@@ -81,10 +82,12 @@ class SettingTodayPillNumberPage extends HookConsumerWidget {
                       width: 180,
                       child: PrimaryButton(
                         onPressed: () async {
-                          unawaited(store.modifiyTodayPillNumber(
-                            pillSheetGroup: pillSheetGroup,
-                            activedPillSheet: activedPillSheet,
-                          ));
+                          changePillNumber(
+                              pillSheetGroup: pillSheetGroup,
+                              activedPillSheet: activedPillSheet,
+                              pillSheetPageIndex: pillSheetPageIndex.value,
+                              pillNumberIntoPillSheet: pillNumberIntoPillSheet.value);
+
                           Navigator.of(context).pop();
                         },
                         text: "変更する",
@@ -103,6 +106,18 @@ class SettingTodayPillNumberPage extends HookConsumerWidget {
 
   String _today() {
     return "${DateTimeFormatter.slashYearAndMonthAndDay(DateTime.now())}(${DateTimeFormatter.weekday(DateTime.now())})";
+  }
+
+  int _pillNumberIntoPillSheet({
+    required PillSheet activedPillSheet,
+    required PillSheetGroup pillSheetGroup,
+  }) {
+    final pillSheetTypes = pillSheetGroup.pillSheets.map((e) => e.pillSheetType).toList();
+    final _passedTotalCount = summarizedPillCountWithPillSheetTypesToEndIndex(pillSheetTypes: pillSheetTypes, endIndex: activedPillSheet.groupIndex);
+    if (_passedTotalCount >= activedPillSheet.todayPillNumber) {
+      return activedPillSheet.todayPillNumber;
+    }
+    return activedPillSheet.todayPillNumber - _passedTotalCount;
   }
 }
 

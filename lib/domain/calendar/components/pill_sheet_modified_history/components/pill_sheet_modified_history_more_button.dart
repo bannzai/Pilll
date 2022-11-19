@@ -1,17 +1,16 @@
 import 'package:pilll/analytics.dart';
 import 'package:pilll/components/atoms/buttons.dart';
-import 'package:pilll/domain/calendar/components/pill_sheet_modified_history/pill_sheet_modified_history_card.dart';
 import 'package:pilll/domain/pill_sheet_modified_history/pill_sheet_modified_history_page.dart';
 import 'package:pilll/domain/premium_introduction/premium_introduction_sheet.dart';
 import 'package:flutter/material.dart';
+import 'package:pilll/provider/premium_and_trial.codegen.dart';
 
 class PillSheetModifiedHistoryMoreButton extends StatelessWidget {
+  final PremiumAndTrial premiumAndTrial;
   const PillSheetModifiedHistoryMoreButton({
     Key? key,
-    required this.state,
+    required this.premiumAndTrial,
   }) : super(key: key);
-
-  final CalendarPillSheetModifiedHistoryCardState state;
 
   @override
   Widget build(BuildContext context) {
@@ -22,9 +21,8 @@ class PillSheetModifiedHistoryMoreButton extends StatelessWidget {
             text: "もっと見る",
             onPressed: () async {
               analytics.logEvent(name: "pill_sheet_modified_history_more");
-              if (state.isPremium || state.isTrial) {
-                Navigator.of(context)
-                    .push(PillSheetModifiedHistoriesPageRoute.route());
+              if (premiumAndTrial.isPremium || premiumAndTrial.isTrial) {
+                Navigator.of(context).push(PillSheetModifiedHistoriesPageRoute.route());
               } else {
                 showPremiumIntroductionSheet(context);
               }

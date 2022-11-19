@@ -34,21 +34,6 @@ class UniversalErrorPage extends StatefulWidget {
 
   @override
   _UniversalErrorPageState createState() => _UniversalErrorPageState();
-
-  static _UniversalErrorPageState of(BuildContext context) {
-    final exactType = context
-        .getElementForInheritedWidgetOfExactType<_InheritedWidget>()
-        ?.widget;
-    final stateWidget = exactType as _InheritedWidget?;
-    final state = stateWidget?.state;
-    if (state == null) {
-      throw AssertionError('''
-      Not found UniversalErrorMessage from this context: $context
-      The context should contains UniversalErrorMessage widget into current widget tree
-      ''');
-    }
-    return state;
-  }
 }
 
 class _UniversalErrorPageState extends State<UniversalErrorPage> {
@@ -97,16 +82,14 @@ class _UniversalErrorPageState extends State<UniversalErrorPage> {
                 height: 190,
               ),
               const SizedBox(height: 25),
-              Text(message,
-                  style: FontType.assisting.merge(TextColorStyle.main)),
+              Text(message, style: FontType.assisting.merge(TextColorStyle.main)),
               const SizedBox(height: 25),
               TextButton.icon(
                 icon: const Icon(
                   Icons.refresh,
                   size: 20,
                 ),
-                label: Text("画面を再読み込み",
-                    style: FontType.assisting.merge(TextColorStyle.black)),
+                label: Text("画面を再読み込み", style: FontType.assisting.merge(TextColorStyle.black)),
                 onPressed: () {
                   analytics.logEvent(name: "reload_button_pressed");
                   setState(() {
@@ -123,8 +106,7 @@ class _UniversalErrorPageState extends State<UniversalErrorPage> {
                   Icons.mail,
                   size: 20,
                 ),
-                label: Text("解決しない場合はこちら",
-                    style: FontType.assisting.merge(TextColorStyle.black)),
+                label: Text("解決しない場合はこちら", style: FontType.assisting.merge(TextColorStyle.black)),
                 onPressed: () {
                   analytics.logEvent(name: "problem_unresolved_button_pressed");
                   inquiry();

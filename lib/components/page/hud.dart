@@ -30,21 +30,6 @@ class HUD extends StatefulWidget {
 
   @override
   _HUDState createState() => _HUDState();
-
-  static _HUDState of(BuildContext context) {
-    final exactType = context
-        .getElementForInheritedWidgetOfExactType<_InheritedWidget>()
-        ?.widget;
-    final stateWidget = exactType as _InheritedWidget?;
-    final state = stateWidget?.state;
-    if (state == null) {
-      throw AssertionError('''
-      Not found HUD from this context: $context
-      The context should contains HUD widget into current widget tree
-      ''');
-    }
-    return state;
-  }
 }
 
 class _HUDState extends State<HUD> {

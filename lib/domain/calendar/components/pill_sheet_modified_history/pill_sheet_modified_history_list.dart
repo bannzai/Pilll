@@ -13,7 +13,7 @@ import 'package:pilll/domain/calendar/components/pill_sheet_modified_history/com
 import 'package:pilll/domain/calendar/components/pill_sheet_modified_history/components/rows/pill_sheet_modified_history_revert_taken_pill_action.dart';
 import 'package:pilll/domain/calendar/components/pill_sheet_modified_history/components/rows/pill_sheet_modified_history_taken_pill_action.dart';
 import 'package:pilll/entity/pill_sheet_modified_history.codegen.dart';
-import 'package:pilll/entity/pill_sheet_modified_history_value.codegen.dart';
+import 'package:pilll/provider/premium_and_trial.codegen.dart';
 import 'package:pilll/util/datetime/date_compare.dart';
 
 class PillSheetModifiedHistoryListModel {
@@ -29,20 +29,14 @@ class PillSheetModifiedHistoryList extends StatelessWidget {
   final EdgeInsets? padding;
   final ScrollPhysics scrollPhysics;
   final List<PillSheetModifiedHistory> pillSheetModifiedHistories;
-
-  final Future<void> Function(
-    DateTime actualTakenDate,
-    PillSheetModifiedHistory history,
-    PillSheetModifiedHistoryValue value,
-    TakenPillValue takenPillValue,
-  )? onEditTakenPillAction;
+  final PremiumAndTrial premiumAndTrial;
 
   const PillSheetModifiedHistoryList({
     Key? key,
     required this.padding,
     required this.scrollPhysics,
     required this.pillSheetModifiedHistories,
-    required this.onEditTakenPillAction,
+    required this.premiumAndTrial,
   }) : super(key: key);
 
   @override
@@ -52,15 +46,11 @@ class PillSheetModifiedHistoryList extends StatelessWidget {
       shrinkWrap: true,
       physics: scrollPhysics,
       scrollDirection: Axis.vertical,
-      children: _summarizedForEachMonth
-          .map((model) => _monthlyHeaderAndRelationaHistories(model))
-          .expand((element) => element)
-          .toList(),
+      children: _summarizedForEachMonth.map((model) => _monthlyHeaderAndRelationaHistories(model)).expand((element) => element).toList(),
     );
   }
 
-  List<Widget> _monthlyHeaderAndRelationaHistories(
-      PillSheetModifiedHistoryListModel model) {
+  List<Widget> _monthlyHeaderAndRelationaHistories(PillSheetModifiedHistoryListModel model) {
     var dirtyIndex = 0;
 
     return [
@@ -77,10 +67,8 @@ class PillSheetModifiedHistoryList extends StatelessWidget {
 
             var isNecessaryDots = false;
             if (dirtyIndex != 0) {
-              final oneBeforeHistory =
-                  model.pillSheetModifiedHistories[dirtyIndex - 1];
-              final diff = oneBeforeHistory.estimatedEventCausingDate.day -
-                  history.estimatedEventCausingDate.day;
+              final oneBeforeHistory = model.pillSheetModifiedHistories[dirtyIndex - 1];
+              final diff = oneBeforeHistory.estimatedEventCausingDate.day - history.estimatedEventCausingDate.day;
               if (diff > 1) {
                 isNecessaryDots = true;
               }
@@ -92,47 +80,36 @@ class PillSheetModifiedHistoryList extends StatelessWidget {
               switch (actionType) {
                 case PillSheetModifiedActionType.createdPillSheet:
                   return PillSheetModifiedHistoryCreatePillSheetAction(
-                    estimatedEventCausingDate:
-                        history.estimatedEventCausingDate,
+                    estimatedEventCausingDate: history.estimatedEventCausingDate,
                     value: history.value.createdPillSheet,
                   );
-                case PillSheetModifiedActionType
-                    .automaticallyRecordedLastTakenDate:
+                case PillSheetModifiedActionType.automaticallyRecordedLastTakenDate:
                   return PillSheetModifiedHistoryAutomaticallyRecordedLastTakenDateAction(
-                    estimatedEventCausingDate:
-                        history.estimatedEventCausingDate,
+                    estimatedEventCausingDate: history.estimatedEventCausingDate,
                     value: history.value.automaticallyRecordedLastTakenDate,
                   );
                 case PillSheetModifiedActionType.deletedPillSheet:
                   return PillSheetModifiedHistoryDeletedPillSheetAction(
-                    estimatedEventCausingDate:
-                        history.estimatedEventCausingDate,
+                    estimatedEventCausingDate: history.estimatedEventCausingDate,
                     value: history.value.deletedPillSheet,
                   );
                 case PillSheetModifiedActionType.takenPill:
                   return PillSheetModifiedHistoryTakenPillAction(
-                    onEdit: onEditTakenPillAction == null
-                        ? null
-                        : (actualDateTime, takenPillValue) {
-                            return onEditTakenPillAction!(actualDateTime,
-                                history, history.value, takenPillValue);
-                          },
-                    estimatedEventCausingDate:
-                        history.estimatedEventCausingDate,
+                    premiumAndTrial: premiumAndTrial,
+                    estimatedEventCausingDate: history.estimatedEventCausingDate,
+                    history: history,
                     value: history.value.takenPill,
                     beforePillSheet: history.before,
                     afterPillSheet: history.after,
                   );
                 case PillSheetModifiedActionType.revertTakenPill:
                   return PillSheetModifiedHistoryRevertTakenPillAction(
-                    estimatedEventCausingDate:
-                        history.estimatedEventCausingDate,
+                    estimatedEventCausingDate: history.estimatedEventCausingDate,
                     value: history.value.revertTakenPill,
                   );
                 case PillSheetModifiedActionType.changedPillNumber:
                   return PillSheetModifiedHistoryChangedPillNumberAction(
-                    estimatedEventCausingDate:
-                        history.estimatedEventCausingDate,
+                    estimatedEventCausingDate: history.estimatedEventCausingDate,
                     value: history.value.changedPillNumber,
                   );
                 case PillSheetModifiedActionType.endedPillSheet:
@@ -141,26 +118,22 @@ class PillSheetModifiedHistoryList extends StatelessWidget {
                   );
                 case PillSheetModifiedActionType.beganRestDuration:
                   return PillSheetModifiedHistoryBeganRestDuration(
-                    estimatedEventCausingDate:
-                        history.estimatedEventCausingDate,
+                    estimatedEventCausingDate: history.estimatedEventCausingDate,
                     value: history.value.beganRestDurationValue,
                   );
                 case PillSheetModifiedActionType.endedRestDuration:
                   return PillSheetModifiedHistoryEndedRestDuration(
-                    estimatedEventCausingDate:
-                        history.estimatedEventCausingDate,
+                    estimatedEventCausingDate: history.estimatedEventCausingDate,
                     value: history.value.endedRestDurationValue,
                   );
                 case PillSheetModifiedActionType.changedBeginDisplayNumber:
                   return PillSheetModifiedHistoryChangedBeginDisplayNumberAction(
-                    estimatedEventCausingDate:
-                        history.estimatedEventCausingDate,
+                    estimatedEventCausingDate: history.estimatedEventCausingDate,
                     value: history.value.changedBeginDisplayNumber,
                   );
                 case PillSheetModifiedActionType.changedEndDisplayNumber:
                   return PillSheetModifiedHistoryChangedEndDisplayNumberAction(
-                    estimatedEventCausingDate:
-                        history.estimatedEventCausingDate,
+                    estimatedEventCausingDate: history.estimatedEventCausingDate,
                     value: history.value.changedEndDisplayNumber,
                   );
               }
