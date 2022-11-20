@@ -1,13 +1,12 @@
 import 'dart:async';
 
-import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:firebase_crashlytics/firebase_crashlytics.dart';
 import 'package:flutter_hooks/flutter_hooks.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
+import 'package:pilll/provider/force_update.dart';
 import 'package:pilll/utils/analytics.dart';
 import 'package:pilll/components/page/ok_dialog.dart';
 import 'package:pilll/features/initial_setting/pill_sheet_group/initial_setting_pill_sheet_group_page.dart';
-import 'package:pilll/entity/config.codegen.dart';
 import 'package:pilll/entity/user.codegen.dart';
 import 'package:pilll/provider/root.dart';
 import 'package:pilll/provider/auth.dart';
@@ -23,7 +22,6 @@ import 'package:pilll/utils/shared_preference/keys.dart';
 import 'package:flutter/material.dart';
 import 'package:purchases_flutter/purchases_flutter.dart';
 import 'package:shared_preferences/shared_preferences.dart';
-import 'package:pilll/utils/version/version.dart';
 import 'package:url_launcher/url_launcher.dart';
 
 class Root extends HookConsumerWidget {
@@ -35,6 +33,7 @@ class Root extends HookConsumerWidget {
     final firebaseUserID = useState<String?>(null);
     final error = useState<LaunchException?>(null);
     final firebaseUserAsyncValue = ref.watch(authStateStreamProvider);
+    final checkForceUpdate = ref.watch(checkForceUpdateProvider);
 
     // Set global error page
     ErrorWidget.builder = (FlutterErrorDetails details) {
@@ -61,7 +60,7 @@ class Root extends HookConsumerWidget {
     useEffect(() {
       f() async {
         try {
-          if (await _checkForceUpdate()) {
+          if (await checkForceUpdate()) {
             shouldForceUpdate.value = true;
           }
         } catch (e, st) {
@@ -114,26 +113,6 @@ class Root extends HookConsumerWidget {
         }
       }(),
     );
-  }
-
-// Return false: should not force update
-// Return true: should force update
-  Future<bool> _checkForceUpdate() async {
-    final doc = await FirebaseFirestore.instance.doc("/globals/config").get();
-    final config = Config.fromJson(doc.data() as Map<String, dynamic>);
-    final packageVersion = await Version.fromPackage();
-
-    final forceUpdate = packageVersion.isLessThan(Version.parse(config.minimumSupportedAppVersion));
-    if (forceUpdate) {
-      analytics.logEvent(
-        name: "screen_type_force_update",
-        parameters: {
-          "package_version": packageVersion.toString(),
-          "minimum_app_version": config.minimumSupportedAppVersion,
-        },
-      );
-    }
-    return forceUpdate;
   }
 }
 
