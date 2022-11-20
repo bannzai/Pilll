@@ -9,10 +9,4 @@ class FontFamily {
   static const String roboto = "Roboto";
 }
 
-class FontType {
-  static const TextStyle sSmallSentence = TextStyle(
-    fontFamily: FontFamily.japanese,
-    fontWeight: FontWeight.w300,
-    fontSize: 10,
-  );
-}
+class FontType {}

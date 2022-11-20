@@ -77,7 +77,11 @@ class InitialSettingReminderTimesPage extends HookConsumerWidget {
                       children: [
                         TextSpan(
                           text: "プライバシーポリシー",
-                          style: FontType.sSmallSentence.merge(TextColorStyle.link),
+                          style: const TextStyle(
+                            fontFamily: FontFamily.japanese,
+                            fontWeight: FontWeight.w300,
+                            fontSize: 10,
+                          ).merge(TextColorStyle.link),
                           recognizer: TapGestureRecognizer()
                             ..onTap = () {
                               launchUrl(Uri.parse("https://bannzai.github.io/Pilll/PrivacyPolicy"), mode: LaunchMode.inAppWebView);
@@ -85,11 +89,19 @@ class InitialSettingReminderTimesPage extends HookConsumerWidget {
                         ),
                         TextSpan(
                           text: "と",
-                          style: FontType.sSmallSentence.merge(TextColorStyle.gray),
+                          style: const TextStyle(
+                            fontFamily: FontFamily.japanese,
+                            fontWeight: FontWeight.w300,
+                            fontSize: 10,
+                          ).merge(TextColorStyle.gray),
                         ),
                         TextSpan(
                           text: "利用規約",
-                          style: FontType.sSmallSentence.merge(TextColorStyle.link),
+                          style: const TextStyle(
+                            fontFamily: FontFamily.japanese,
+                            fontWeight: FontWeight.w300,
+                            fontSize: 10,
+                          ).merge(TextColorStyle.link),
                           recognizer: TapGestureRecognizer()
                             ..onTap = () {
                               launchUrl(Uri.parse("https://bannzai.github.io/Pilll/Terms"), mode: LaunchMode.inAppWebView);
@@ -97,7 +109,11 @@ class InitialSettingReminderTimesPage extends HookConsumerWidget {
                         ),
                         TextSpan(
                           text: "を読んで\n利用をはじめてください",
-                          style: FontType.sSmallSentence.merge(TextColorStyle.gray),
+                          style: const TextStyle(
+                            fontFamily: FontFamily.japanese,
+                            fontWeight: FontWeight.w300,
+                            fontSize: 10,
+                          ).merge(TextColorStyle.gray),
                         ),
                       ],
                     ),
