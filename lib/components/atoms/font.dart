@@ -9,139 +9,126 @@ class FontFamily {
   static const String roboto = "Roboto";
 }
 
-class FontSize {
-  static const double xHuge = 40;
-  static const double huge = 34;
-  static const double xBig = 24;
-  static const double big = 22;
-  static const double sBig = 20;
-  static const double large = 17;
-  static const double sLarge = 16;
-  static const double normal = 14;
-  static const double small = 12;
-  static const double sSmall = 10;
-}
-
 class FontType {
   static const TextStyle xHugeNumber = TextStyle(
     fontFamily: FontFamily.number,
     fontWeight: FontWeight.w500,
-    fontSize: FontSize.xHuge,
+    fontSize: 40,
   );
   static const TextStyle largeNumber = TextStyle(
     fontFamily: FontFamily.japanese,
     fontWeight: FontWeight.w500,
-    fontSize: FontSize.huge,
+    fontSize: 34,
   );
   static const TextStyle title = TextStyle(
     fontFamily: FontFamily.japanese,
     fontWeight: FontWeight.w600,
-    fontSize: FontSize.large,
+    fontSize: 17,
   );
   static const TextStyle subTitle = TextStyle(
     fontFamily: FontFamily.japanese,
     fontWeight: FontWeight.w600,
-    fontSize: FontSize.sLarge,
+    fontSize: 16,
   );
   static const TextStyle xBigTitle = TextStyle(
     fontFamily: FontFamily.number,
     fontWeight: FontWeight.w500,
-    fontSize: FontSize.xBig,
+    fontSize: 24,
   );
   static const TextStyle xBigNumber = TextStyle(
     fontFamily: FontFamily.number,
     fontWeight: FontWeight.w600,
-    fontSize: FontSize.xBig,
+    fontSize: 24,
   );
   static const TextStyle sBigTitle = TextStyle(
     fontFamily: FontFamily.japanese,
     fontWeight: FontWeight.w500,
-    fontSize: FontSize.sBig,
+    fontSize: 20,
   );
   static const TextStyle cardHeader = TextStyle(
     fontFamily: FontFamily.number,
     fontWeight: FontWeight.w600,
-    fontSize: FontSize.big,
+    fontSize: 22,
   );
   static const TextStyle thinTitle = TextStyle(
     fontFamily: FontFamily.japanese,
     fontWeight: FontWeight.w300,
-    fontSize: FontSize.sLarge,
+    fontSize: 16,
   );
   static const TextStyle done = TextStyle(
     fontFamily: FontFamily.japanese,
     fontWeight: FontWeight.w600,
-    fontSize: FontSize.sLarge,
+    fontSize: 16,
   );
   static const TextStyle close = TextStyle(
     fontFamily: FontFamily.japanese,
     fontWeight: FontWeight.w600,
-    fontSize: FontSize.normal,
+    fontSize: 14,
   );
   static const TextStyle componentTitle = TextStyle(
     fontFamily: FontFamily.japanese,
     fontWeight: FontWeight.w300,
-    fontSize: FontSize.sLarge,
+    fontSize: 16,
   );
   static const TextStyle gridElement = TextStyle(
     fontFamily: FontFamily.number,
     fontWeight: FontWeight.w600,
-    fontSize: FontSize.sLarge,
+    fontSize: 16,
   );
 
   static const TextStyle helpRow = TextStyle(
     fontFamily: FontFamily.roboto,
     fontWeight: FontWeight.w400,
-    fontSize: FontSize.normal,
+    fontSize: 14,
   );
   static const TextStyle listRow = TextStyle(
     fontFamily: FontFamily.roboto,
     fontWeight: FontWeight.w300,
-    fontSize: FontSize.sLarge,
+    fontSize: 16,
   );
   static const TextStyle assisting = TextStyle(
     fontFamily: FontFamily.japanese,
     fontWeight: FontWeight.w300,
-    fontSize: FontSize.normal,
+    fontSize: 14,
   );
   static const TextStyle assistingBold = TextStyle(
     fontFamily: FontFamily.japanese,
     fontWeight: FontWeight.w600,
-    fontSize: FontSize.normal,
+    fontSize: 14,
   );
   static const TextStyle inputNumber = TextStyle(
     fontFamily: FontFamily.japanese,
     fontWeight: FontWeight.w700,
-    fontSize: FontSize.sLarge,
+    fontSize: 16,
   );
   static const TextStyle description = TextStyle(
     fontFamily: FontFamily.japanese,
     fontWeight: FontWeight.w400,
-    fontSize: FontSize.small,
+    fontSize: 12,
   );
   static const TextStyle descriptionBold = TextStyle(
     fontFamily: FontFamily.japanese,
     fontWeight: FontWeight.w700,
-    fontSize: FontSize.small,
+    fontSize: 12,
   );
   static const TextStyle smallTitle = TextStyle(
     fontFamily: FontFamily.number,
     fontWeight: FontWeight.w500,
-    fontSize: FontSize.small,
+    fontSize: 12,
   );
   static const TextStyle sSmallTitle = TextStyle(
     fontFamily: FontFamily.japanese,
     fontWeight: FontWeight.w600,
-    fontSize: FontSize.sSmall,
+    fontSize: 10,
   );
   static const TextStyle sSmallNumber = TextStyle(
     fontFamily: FontFamily.number,
     fontWeight: FontWeight.w600,
-    fontSize: FontSize.sSmall,
+    fontSize: 10,
   );
   static const TextStyle sSmallSentence = TextStyle(
     fontFamily: FontFamily.japanese,
     fontWeight: FontWeight.w300,
-    fontSize: FontSize.sSmall,
+    fontSize: 10,
   );
 }

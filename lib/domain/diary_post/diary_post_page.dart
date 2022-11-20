@@ -22,7 +22,7 @@ import 'package:flutter/material.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
 import 'package:flutter_svg/svg.dart';
 
-const _secitonTitle = TextStyle(fontFamily: FontFamily.japanese, fontWeight: FontWeight.w300, fontSize: FontSize.sLarge, color: TextColor.black);
+const _secitonTitle = TextStyle(fontFamily: FontFamily.japanese, fontWeight: FontWeight.w300, fontSize: 16, color: TextColor.black);
 
 class DiaryPostPage extends HookConsumerWidget {
   final DateTime date;

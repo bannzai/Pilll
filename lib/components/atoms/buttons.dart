@@ -31,7 +31,7 @@ class PrimaryButton extends HookWidget {
                     style: const TextStyle(
                       fontFamily: FontFamily.japanese,
                       fontWeight: FontWeight.w700,
-                      fontSize: FontSize.sLarge,
+                      fontSize: 16,
                       color: PilllColors.white,
                     ))),
           ),
@@ -90,7 +90,7 @@ class UndoButton extends HookWidget {
                     style: const TextStyle(
                       fontFamily: FontFamily.japanese,
                       fontWeight: FontWeight.w700,
-                      fontSize: FontSize.sLarge,
+                      fontSize: 16,
                       color: PilllColors.white,
                     ))),
           ),
@@ -364,7 +364,7 @@ class AlertButton extends HookWidget {
             style: TextStyle(
                 fontFamily: FontFamily.japanese,
                 fontWeight: FontWeight.w600,
-                fontSize: FontSize.normal,
+                fontSize: 14,
                 color: (isProcessing.value || onPressed == null) ? TextColor.gray : TextColor.primary),
           ),
           if (isProcessing.value) _Loading(),

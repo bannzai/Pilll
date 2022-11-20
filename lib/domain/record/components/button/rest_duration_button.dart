@@ -19,7 +19,7 @@ class RestDurationButton extends StatelessWidget {
             color: TextColor.lightGray,
             fontFamily: FontFamily.japanese,
             fontWeight: FontWeight.w700,
-            fontSize: FontSize.sLarge,
+            fontSize: 16,
           ),
         ),
         onPressed: null,
