@@ -1,10 +1,10 @@
 import 'package:freezed_annotation/freezed_annotation.dart';
-import 'package:pilll/domain/calendar/date_range.dart';
+import 'package:pilll/utils/datetime/date_range.dart';
 import 'package:pilll/entity/firestore_document_id_escaping_to_json.dart';
 import 'package:pilll/entity/firestore_timestamp_converter.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
 
-import '../util/datetime/day.dart';
+import '../utils/datetime/day.dart';
 
 part 'menstruation.codegen.g.dart';
 part 'menstruation.codegen.freezed.dart';

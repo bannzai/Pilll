@@ -2,7 +2,7 @@ import 'dart:io';
 
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:pilll/entity/menstruation.codegen.dart';
-import 'package:pilll/error/alert_error.dart';
+import 'package:pilll/features/error/alert_error.dart';
 import 'package:pilll/native/channel.dart';
 
 Future<bool> isHealthDataAvailable() async {

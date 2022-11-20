@@ -1,6 +1,6 @@
 import 'package:pilll/components/organisms/pill_sheet/pill_sheet_view_layout.dart';
 import 'package:pilll/entity/weekday.dart';
-import 'package:pilll/domain/record/weekday_badge.dart';
+import 'package:pilll/features/record/weekday_badge.dart';
 import 'package:flutter/material.dart';
 
 class PillSheetViewWeekdayLine extends StatelessWidget {

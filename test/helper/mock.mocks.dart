@@ -7,7 +7,7 @@ import 'dart:async' as _i13;
 
 import 'package:cloud_firestore/cloud_firestore.dart' as _i3;
 import 'package:mockito/mockito.dart' as _i1;
-import 'package:pilll/analytics.dart' as _i11;
+import 'package:pilll/utils/analytics.dart' as _i11;
 import 'package:pilll/entity/diary.codegen.dart' as _i24;
 import 'package:pilll/entity/diary_setting.codegen.dart' as _i23;
 import 'package:pilll/entity/menstruation.codegen.dart' as _i8;
@@ -16,8 +16,7 @@ import 'package:pilll/entity/pill_sheet_group.codegen.dart' as _i7;
 import 'package:pilll/entity/pill_sheet_modified_history.codegen.dart' as _i19;
 import 'package:pilll/entity/pill_sheet_type.dart' as _i14;
 import 'package:pilll/entity/pilll_ads.codegen.dart' as _i26;
-import 'package:pilll/entity/reminder_notification_customization.codegen.dart'
-    as _i5;
+import 'package:pilll/entity/reminder_notification_customization.codegen.dart' as _i5;
 import 'package:pilll/entity/schedule.codegen.dart' as _i25;
 import 'package:pilll/entity/setting.codegen.dart' as _i6;
 import 'package:pilll/entity/user.codegen.dart' as _i22;
@@ -30,8 +29,8 @@ import 'package:pilll/provider/pill_sheet_modified_history.dart' as _i18;
 import 'package:pilll/provider/premium_and_trial.codegen.dart' as _i4;
 import 'package:pilll/provider/setting.dart' as _i20;
 import 'package:pilll/provider/user.dart' as _i27;
-import 'package:pilll/service/day.dart' as _i10;
-import 'package:pilll/service/purchase.dart' as _i28;
+import 'package:pilll/utils/datetime/day.dart' as _i10;
+import 'package:pilll/provider/purchase.dart' as _i28;
 import 'package:purchases_flutter/purchases_flutter.dart' as _i9;
 
 // ignore_for_file: type=lint
@@ -46,29 +45,23 @@ import 'package:purchases_flutter/purchases_flutter.dart' as _i9;
 
 class _FakeDateTime_0 extends _i1.Fake implements DateTime {}
 
-class _FakeDatabaseConnection_1 extends _i1.Fake
-    implements _i2.DatabaseConnection {}
+class _FakeDatabaseConnection_1 extends _i1.Fake implements _i2.DatabaseConnection {}
 
 class _FakeWriteBatch_2 extends _i1.Fake implements _i3.WriteBatch {}
 
-class _Fake$PremiumAndTrialCopyWith_3<$Res> extends _i1.Fake
-    implements _i4.$PremiumAndTrialCopyWith<$Res> {}
+class _Fake$PremiumAndTrialCopyWith_3<$Res> extends _i1.Fake implements _i4.$PremiumAndTrialCopyWith<$Res> {}
 
-class _FakeReminderNotificationCustomization_4 extends _i1.Fake
-    implements _i5.ReminderNotificationCustomization {}
+class _FakeReminderNotificationCustomization_4 extends _i1.Fake implements _i5.ReminderNotificationCustomization {}
 
-class _Fake$SettingCopyWith_5<$Res> extends _i1.Fake
-    implements _i6.$SettingCopyWith<$Res> {}
+class _Fake$SettingCopyWith_5<$Res> extends _i1.Fake implements _i6.$SettingCopyWith<$Res> {}
 
 class _FakePillSheetGroup_6 extends _i1.Fake implements _i7.PillSheetGroup {}
 
 class _FakeMenstruation_7 extends _i1.Fake implements _i8.Menstruation {}
 
-class _FakeDocumentReference_8<T extends Object?> extends _i1.Fake
-    implements _i3.DocumentReference<T> {}
+class _FakeDocumentReference_8<T extends Object?> extends _i1.Fake implements _i3.DocumentReference<T> {}
 
-class _FakeCollectionReference_9<T extends Object?> extends _i1.Fake
-    implements _i3.CollectionReference<T> {}
+class _FakeCollectionReference_9<T extends Object?> extends _i1.Fake implements _i3.CollectionReference<T> {}
 
 class _FakeOfferings_10 extends _i1.Fake implements _i9.Offerings {}
 
@@ -259,8 +252,7 @@ class MockPremiumAndTrial extends _i1.Mock implements _i4.PremiumAndTrial {
         returnValue: false,
       ) as bool);
   @override
-  _i4.$PremiumAndTrialCopyWith<_i4.PremiumAndTrial> get copyWith =>
-      (super.noSuchMethod(
+  _i4.$PremiumAndTrialCopyWith<_i4.PremiumAndTrial> get copyWith => (super.noSuchMethod(
         Invocation.getter(#copyWith),
         returnValue: _Fake$PremiumAndTrialCopyWith_3<_i4.PremiumAndTrial>(),
       ) as _i4.$PremiumAndTrialCopyWith<_i4.PremiumAndTrial>);
@@ -310,8 +302,7 @@ class MockSetting extends _i1.Mock implements _i6.Setting {
         returnValue: false,
       ) as bool);
   @override
-  _i6.PillSheetAppearanceMode get pillSheetAppearanceMode =>
-      (super.noSuchMethod(
+  _i6.PillSheetAppearanceMode get pillSheetAppearanceMode => (super.noSuchMethod(
         Invocation.getter(#pillSheetAppearanceMode),
         returnValue: _i6.PillSheetAppearanceMode.number,
       ) as _i6.PillSheetAppearanceMode);
@@ -321,8 +312,7 @@ class MockSetting extends _i1.Mock implements _i6.Setting {
         returnValue: false,
       ) as bool);
   @override
-  _i5.ReminderNotificationCustomization get reminderNotificationCustomization =>
-      (super.noSuchMethod(
+  _i5.ReminderNotificationCustomization get reminderNotificationCustomization => (super.noSuchMethod(
         Invocation.getter(#reminderNotificationCustomization),
         returnValue: _FakeReminderNotificationCustomization_4(),
       ) as _i5.ReminderNotificationCustomization);
@@ -344,8 +334,7 @@ class MockSetting extends _i1.Mock implements _i6.Setting {
 /// A class which mocks [BatchSetPillSheetGroup].
 ///
 /// See the documentation for Mockito's code generation for more information.
-class MockBatchSetPillSheetGroup extends _i1.Mock
-    implements _i15.BatchSetPillSheetGroup {
+class MockBatchSetPillSheetGroup extends _i1.Mock implements _i15.BatchSetPillSheetGroup {
   MockBatchSetPillSheetGroup() {
     _i1.throwOnMissingStub(this);
   }
@@ -375,8 +364,7 @@ class MockBatchSetPillSheetGroup extends _i1.Mock
 /// A class which mocks [BatchSetPillSheets].
 ///
 /// See the documentation for Mockito's code generation for more information.
-class MockBatchSetPillSheets extends _i1.Mock
-    implements _i16.BatchSetPillSheets {
+class MockBatchSetPillSheets extends _i1.Mock implements _i16.BatchSetPillSheets {
   MockBatchSetPillSheets() {
     _i1.throwOnMissingStub(this);
   }
@@ -406,8 +394,7 @@ class MockBatchSetPillSheets extends _i1.Mock
 /// A class which mocks [BatchSetPillSheetModifiedHistory].
 ///
 /// See the documentation for Mockito's code generation for more information.
-class MockBatchSetPillSheetModifiedHistory extends _i1.Mock
-    implements _i18.BatchSetPillSheetModifiedHistory {
+class MockBatchSetPillSheetModifiedHistory extends _i1.Mock implements _i18.BatchSetPillSheetModifiedHistory {
   MockBatchSetPillSheetModifiedHistory() {
     _i1.throwOnMissingStub(this);
   }
@@ -502,8 +489,7 @@ class MockSetPillSheetGroup extends _i1.Mock implements _i15.SetPillSheetGroup {
         returnValue: _FakeDatabaseConnection_1(),
       ) as _i2.DatabaseConnection);
   @override
-  _i13.Future<void> call(_i7.PillSheetGroup? pillSheetGroup) =>
-      (super.noSuchMethod(
+  _i13.Future<void> call(_i7.PillSheetGroup? pillSheetGroup) => (super.noSuchMethod(
         Invocation.method(
           #call,
           [pillSheetGroup],
@@ -516,8 +502,7 @@ class MockSetPillSheetGroup extends _i1.Mock implements _i15.SetPillSheetGroup {
 /// A class which mocks [DeleteMenstruation].
 ///
 /// See the documentation for Mockito's code generation for more information.
-class MockDeleteMenstruation extends _i1.Mock
-    implements _i21.DeleteMenstruation {
+class MockDeleteMenstruation extends _i1.Mock implements _i21.DeleteMenstruation {
   MockDeleteMenstruation() {
     _i1.throwOnMissingStub(this);
   }
@@ -552,8 +537,7 @@ class MockSetMenstruation extends _i1.Mock implements _i21.SetMenstruation {
         returnValue: _FakeDatabaseConnection_1(),
       ) as _i2.DatabaseConnection);
   @override
-  _i13.Future<_i8.Menstruation> call(_i8.Menstruation? _menstruation) =>
-      (super.noSuchMethod(
+  _i13.Future<_i8.Menstruation> call(_i8.Menstruation? _menstruation) => (super.noSuchMethod(
         Invocation.method(
           #call,
           [_menstruation],
@@ -593,8 +577,7 @@ class MockBeginMenstruation extends _i1.Mock implements _i21.BeginMenstruation {
 /// A class which mocks [DatabaseConnection].
 ///
 /// See the documentation for Mockito's code generation for more information.
-class MockDatabaseConnection extends _i1.Mock
-    implements _i2.DatabaseConnection {
+class MockDatabaseConnection extends _i1.Mock implements _i2.DatabaseConnection {
   MockDatabaseConnection() {
     _i1.throwOnMissingStub(this);
   }
@@ -621,8 +604,7 @@ class MockDatabaseConnection extends _i1.Mock
         returnValue: _FakeDocumentReference_8<Object?>(),
       ) as _i3.DocumentReference<Object?>);
   @override
-  _i3.DocumentReference<_i23.DiarySetting> diarySettingReference() =>
-      (super.noSuchMethod(
+  _i3.DocumentReference<_i23.DiarySetting> diarySettingReference() => (super.noSuchMethod(
         Invocation.method(
           #diarySettingReference,
           [],
@@ -630,8 +612,7 @@ class MockDatabaseConnection extends _i1.Mock
         returnValue: _FakeDocumentReference_8<_i23.DiarySetting>(),
       ) as _i3.DocumentReference<_i23.DiarySetting>);
   @override
-  _i3.CollectionReference<_i17.PillSheet> pillSheetsReference() =>
-      (super.noSuchMethod(
+  _i3.CollectionReference<_i17.PillSheet> pillSheetsReference() => (super.noSuchMethod(
         Invocation.method(
           #pillSheetsReference,
           [],
@@ -639,9 +620,7 @@ class MockDatabaseConnection extends _i1.Mock
         returnValue: _FakeCollectionReference_9<_i17.PillSheet>(),
       ) as _i3.CollectionReference<_i17.PillSheet>);
   @override
-  _i3.DocumentReference<_i17.PillSheet> pillSheetReference(
-          String? pillSheetID) =>
-      (super.noSuchMethod(
+  _i3.DocumentReference<_i17.PillSheet> pillSheetReference(String? pillSheetID) => (super.noSuchMethod(
         Invocation.method(
           #pillSheetReference,
           [pillSheetID],
@@ -657,8 +636,7 @@ class MockDatabaseConnection extends _i1.Mock
         returnValue: _FakeCollectionReference_9<_i24.Diary>(),
       ) as _i3.CollectionReference<_i24.Diary>);
   @override
-  _i3.DocumentReference<_i24.Diary> diaryReference(_i24.Diary? diary) =>
-      (super.noSuchMethod(
+  _i3.DocumentReference<_i24.Diary> diaryReference(_i24.Diary? diary) => (super.noSuchMethod(
         Invocation.method(
           #diaryReference,
           [diary],
@@ -666,8 +644,7 @@ class MockDatabaseConnection extends _i1.Mock
         returnValue: _FakeDocumentReference_8<_i24.Diary>(),
       ) as _i3.DocumentReference<_i24.Diary>);
   @override
-  _i3.DocumentReference<Object?> userPrivateRawReference() =>
-      (super.noSuchMethod(
+  _i3.DocumentReference<Object?> userPrivateRawReference() => (super.noSuchMethod(
         Invocation.method(
           #userPrivateRawReference,
           [],
@@ -675,8 +652,7 @@ class MockDatabaseConnection extends _i1.Mock
         returnValue: _FakeDocumentReference_8<Object?>(),
       ) as _i3.DocumentReference<Object?>);
   @override
-  _i3.CollectionReference<_i8.Menstruation> menstruationsReference() =>
-      (super.noSuchMethod(
+  _i3.CollectionReference<_i8.Menstruation> menstruationsReference() => (super.noSuchMethod(
         Invocation.method(
           #menstruationsReference,
           [],
@@ -684,9 +660,7 @@ class MockDatabaseConnection extends _i1.Mock
         returnValue: _FakeCollectionReference_9<_i8.Menstruation>(),
       ) as _i3.CollectionReference<_i8.Menstruation>);
   @override
-  _i3.DocumentReference<_i8.Menstruation> menstruationReference(
-          String? menstruationID) =>
-      (super.noSuchMethod(
+  _i3.DocumentReference<_i8.Menstruation> menstruationReference(String? menstruationID) => (super.noSuchMethod(
         Invocation.method(
           #menstruationReference,
           [menstruationID],
@@ -694,30 +668,24 @@ class MockDatabaseConnection extends _i1.Mock
         returnValue: _FakeDocumentReference_8<_i8.Menstruation>(),
       ) as _i3.DocumentReference<_i8.Menstruation>);
   @override
-  _i3.CollectionReference<_i19.PillSheetModifiedHistory>
-      pillSheetModifiedHistoriesReference() => (super.noSuchMethod(
-            Invocation.method(
-              #pillSheetModifiedHistoriesReference,
-              [],
-            ),
-            returnValue:
-                _FakeCollectionReference_9<_i19.PillSheetModifiedHistory>(),
-          ) as _i3.CollectionReference<_i19.PillSheetModifiedHistory>);
+  _i3.CollectionReference<_i19.PillSheetModifiedHistory> pillSheetModifiedHistoriesReference() => (super.noSuchMethod(
+        Invocation.method(
+          #pillSheetModifiedHistoriesReference,
+          [],
+        ),
+        returnValue: _FakeCollectionReference_9<_i19.PillSheetModifiedHistory>(),
+      ) as _i3.CollectionReference<_i19.PillSheetModifiedHistory>);
   @override
-  _i3.DocumentReference<_i19.PillSheetModifiedHistory>
-      pillSheetModifiedHistoryReference({String? pillSheetModifiedHistoryID}) =>
-          (super.noSuchMethod(
-            Invocation.method(
-              #pillSheetModifiedHistoryReference,
-              [],
-              {#pillSheetModifiedHistoryID: pillSheetModifiedHistoryID},
-            ),
-            returnValue:
-                _FakeDocumentReference_8<_i19.PillSheetModifiedHistory>(),
-          ) as _i3.DocumentReference<_i19.PillSheetModifiedHistory>);
+  _i3.DocumentReference<_i19.PillSheetModifiedHistory> pillSheetModifiedHistoryReference({String? pillSheetModifiedHistoryID}) => (super.noSuchMethod(
+        Invocation.method(
+          #pillSheetModifiedHistoryReference,
+          [],
+          {#pillSheetModifiedHistoryID: pillSheetModifiedHistoryID},
+        ),
+        returnValue: _FakeDocumentReference_8<_i19.PillSheetModifiedHistory>(),
+      ) as _i3.DocumentReference<_i19.PillSheetModifiedHistory>);
   @override
-  _i3.CollectionReference<_i7.PillSheetGroup> pillSheetGroupsReference() =>
-      (super.noSuchMethod(
+  _i3.CollectionReference<_i7.PillSheetGroup> pillSheetGroupsReference() => (super.noSuchMethod(
         Invocation.method(
           #pillSheetGroupsReference,
           [],
@@ -725,9 +693,7 @@ class MockDatabaseConnection extends _i1.Mock
         returnValue: _FakeCollectionReference_9<_i7.PillSheetGroup>(),
       ) as _i3.CollectionReference<_i7.PillSheetGroup>);
   @override
-  _i3.DocumentReference<_i7.PillSheetGroup> pillSheetGroupReference(
-          String? pillSheetGroupID) =>
-      (super.noSuchMethod(
+  _i3.DocumentReference<_i7.PillSheetGroup> pillSheetGroupReference(String? pillSheetGroupID) => (super.noSuchMethod(
         Invocation.method(
           #pillSheetGroupReference,
           [pillSheetGroupID],
@@ -735,8 +701,7 @@ class MockDatabaseConnection extends _i1.Mock
         returnValue: _FakeDocumentReference_8<_i7.PillSheetGroup>(),
       ) as _i3.DocumentReference<_i7.PillSheetGroup>);
   @override
-  _i3.CollectionReference<_i25.Schedule> schedulesReference() =>
-      (super.noSuchMethod(
+  _i3.CollectionReference<_i25.Schedule> schedulesReference() => (super.noSuchMethod(
         Invocation.method(
           #schedulesReference,
           [],
@@ -744,8 +709,7 @@ class MockDatabaseConnection extends _i1.Mock
         returnValue: _FakeCollectionReference_9<_i25.Schedule>(),
       ) as _i3.CollectionReference<_i25.Schedule>);
   @override
-  _i3.DocumentReference<_i25.Schedule> scheduleReference(String? scheduleID) =>
-      (super.noSuchMethod(
+  _i3.DocumentReference<_i25.Schedule> scheduleReference(String? scheduleID) => (super.noSuchMethod(
         Invocation.method(
           #scheduleReference,
           [scheduleID],
@@ -761,9 +725,7 @@ class MockDatabaseConnection extends _i1.Mock
         returnValue: _FakeDocumentReference_8<_i26.PilllAds?>(),
       ) as _i3.DocumentReference<_i26.PilllAds?>);
   @override
-  _i13.Future<T> transaction<T>(
-          _i3.TransactionHandler<T>? transactionHandler) =>
-      (super.noSuchMethod(
+  _i13.Future<T> transaction<T>(_i3.TransactionHandler<T>? transactionHandler) => (super.noSuchMethod(
         Invocation.method(
           #transaction,
           [transactionHandler],

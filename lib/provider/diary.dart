@@ -2,7 +2,7 @@ import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:pilll/provider/database.dart';
 import 'package:pilll/entity/diary.codegen.dart';
 import 'package:riverpod/riverpod.dart';
-import 'package:pilll/util/datetime/day.dart';
+import 'package:pilll/utils/datetime/day.dart';
 
 final diariesStreamForMonthProvider = StreamProvider.family((ref, DateTime dateForMonth) {
   final range = MonthDateTimeRange.monthRange(dateForMonth: dateForMonth);
