@@ -11,7 +11,7 @@ import 'package:pilll/features/calendar/components/pill_sheet_modified_history/c
 import 'package:pilll/features/calendar/components/pill_sheet_modified_history/pill_sheet_modified_history_list.dart';
 import 'package:pilll/features/calendar/components/pill_sheet_modified_history/pill_sheet_modified_history_list_header.dart';
 import 'package:pilll/features/premium_introduction/premium_introduction_sheet.dart';
-import 'package:pilll/emoji/emoji.dart';
+import 'package:pilll/util/emoji/emoji.dart';
 import 'package:pilll/entity/pill_sheet_modified_history.codegen.dart';
 import 'package:pilll/provider/premium_and_trial.codegen.dart';
 
