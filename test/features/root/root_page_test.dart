@@ -1,6 +1,7 @@
 import 'package:firebase_auth/firebase_auth.dart' as firebase_auth;
 import 'package:pilll/components/molecules/indicator.dart';
 import 'package:pilll/components/page/ok_dialog.dart';
+import 'package:pilll/entity/setting.codegen.dart';
 import 'package:pilll/entity/user.codegen.dart';
 import 'package:pilll/features/home/home_page.dart';
 import 'package:pilll/features/initial_setting/pill_sheet_group/initial_setting_pill_sheet_group_page.dart';
@@ -19,6 +20,7 @@ import 'package:hooks_riverpod/hooks_riverpod.dart';
 import 'package:mockito/mockito.dart';
 import 'package:intl/date_symbol_data_local.dart';
 import 'package:pilll/utils/error_log.dart';
+import 'package:pilll/utils/shared_preference/keys.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
 import '../../helper/fake.dart';
@@ -29,12 +31,25 @@ class _FakeFirebaseUser extends Fake implements firebase_auth.User {
   String get uid => "abcdefg";
 }
 
-class _FakeUser extends Fake implements User {}
+class _FakeUser extends Fake implements User {
+  final bool fakeMigratedFlutter;
+  final Setting? fakeSetting;
+
+  // ignore: avoid_init_to_null
+  _FakeUser([this.fakeMigratedFlutter = false, this.fakeSetting = null]);
+
+  @override
+  bool get migratedFlutter => fakeMigratedFlutter;
+
+  @override
+  Setting? get setting => fakeSetting;
+}
+
+class _FakeSetting extends Fake implements Setting {}
 
 void main() {
   setUp(() {
     TestWidgetsFlutterBinding.ensureInitialized();
-    SharedPreferences.setMockInitialValues({});
     initializeDateFormatting('ja_JP');
     Environment.isTest = true;
     analytics = FakeAnalytics();
@@ -67,6 +82,7 @@ void main() {
       final markAsMigratedToFlutter = MockMarkAsMigratedToFlutter();
       when(markAsMigratedToFlutter()).thenAnswer((realInvocation) => Future.value());
 
+      SharedPreferences.setMockInitialValues({});
       await tester.pumpWidget(
         ProviderScope(
           overrides: [
@@ -86,11 +102,11 @@ void main() {
           ),
         ),
       );
-      await tester.pumpAndSettle();
+      await tester.pump();
 
       expect(
         find.byWidgetPredicate((widget) => widget is InitialSettingOrAppPage),
-        findsWidgets,
+        findsOneWidget,
       );
     });
     testWidgets('needs force update', (WidgetTester tester) async {
@@ -117,6 +133,7 @@ void main() {
       final markAsMigratedToFlutter = MockMarkAsMigratedToFlutter();
       when(markAsMigratedToFlutter()).thenAnswer((realInvocation) => Future.value());
 
+      SharedPreferences.setMockInitialValues({});
       await tester.pumpWidget(
         ProviderScope(
           overrides: [
@@ -136,17 +153,190 @@ void main() {
           ),
         ),
       );
-      await tester.pumpAndSettle(const Duration(seconds: 2));
+      await tester.pump();
 
       expect(
         find.byWidgetPredicate((widget) => widget is ScaffoldIndicator),
-        findsWidgets,
+        findsOneWidget,
       );
 // FIXME: Cann't check of did showDialog Widget
 //      expect(
 //        find.byWidgetPredicate((widget) => widget is OKDialog),
-//        findsWidgets,
+//        findsOneWidget,
 //      );
+    });
+  });
+
+  group('#InitialSettingOrAppPage', () {
+    testWidgets('didEndInitialSetting is not exist', (WidgetTester tester) async {
+      final mockTodayRepository = MockTodayService();
+      final today = DateTime(2021, 04, 29);
+      when(mockTodayRepository.now()).thenReturn(today);
+      todayRepository = mockTodayRepository;
+
+      final fakeFirebaseUser = _FakeFirebaseUser();
+      final fakeUser = _FakeUser(true, _FakeSetting());
+
+      final fetchOrCreateUser = MockFetchOrCreateUser();
+      when(fetchOrCreateUser(fakeFirebaseUser.uid)).thenAnswer((realInvocation) => Future.value(fakeUser));
+
+      final saveUserLaunchInfo = MockSaveUserLaunchInfo();
+      when(saveUserLaunchInfo(fakeUser)).thenReturn(null);
+
+      final markAsMigratedToFlutter = MockMarkAsMigratedToFlutter();
+      when(markAsMigratedToFlutter()).thenAnswer((realInvocation) => Future.value());
+
+      SharedPreferences.setMockInitialValues({});
+      await tester.pumpWidget(
+        ProviderScope(
+          overrides: [
+            fetchOrCreateUserProvider.overrideWith((_) => fetchOrCreateUser),
+            databaseProvider.overrideWith((ref) => MockDatabaseConnection()),
+            saveUserLaunchInfoProvider.overrideWith((ref) => saveUserLaunchInfo),
+            markAsMigratedToFlutterProvider.overrideWith((ref) => markAsMigratedToFlutter),
+          ],
+          child: MaterialApp(
+            home: Material(
+              child: InitialSettingOrAppPage(firebaseUserID: fakeFirebaseUser.uid),
+            ),
+          ),
+        ),
+      );
+      await tester.pump();
+
+      expect(
+        find.byWidgetPredicate((widget) => widget is InitialSettingPillSheetGroupPage),
+        findsOneWidget,
+      );
+    });
+    testWidgets('didEndInitialSetting is true', (WidgetTester tester) async {
+      final mockTodayRepository = MockTodayService();
+      final today = DateTime(2021, 04, 29);
+      when(mockTodayRepository.now()).thenReturn(today);
+      todayRepository = mockTodayRepository;
+
+      final fakeFirebaseUser = _FakeFirebaseUser();
+      final fakeUser = _FakeUser(true, _FakeSetting());
+
+      final fetchOrCreateUser = MockFetchOrCreateUser();
+      when(fetchOrCreateUser(fakeFirebaseUser.uid)).thenAnswer((realInvocation) => Future.value(fakeUser));
+
+      final saveUserLaunchInfo = MockSaveUserLaunchInfo();
+      when(saveUserLaunchInfo(fakeUser)).thenReturn(null);
+
+      final markAsMigratedToFlutter = MockMarkAsMigratedToFlutter();
+      when(markAsMigratedToFlutter()).thenAnswer((realInvocation) => Future.value());
+
+      SharedPreferences.setMockInitialValues({
+        BoolKey.didEndInitialSetting: true,
+      });
+      await tester.pumpWidget(
+        ProviderScope(
+          overrides: [
+            fetchOrCreateUserProvider.overrideWith((_) => fetchOrCreateUser),
+            databaseProvider.overrideWith((ref) => MockDatabaseConnection()),
+            saveUserLaunchInfoProvider.overrideWith((ref) => saveUserLaunchInfo),
+            markAsMigratedToFlutterProvider.overrideWith((ref) => markAsMigratedToFlutter),
+          ],
+          child: MaterialApp(
+            home: Material(
+              child: InitialSettingOrAppPage(firebaseUserID: fakeFirebaseUser.uid),
+            ),
+          ),
+        ),
+      );
+      await tester.pump();
+
+      expect(
+        find.byWidgetPredicate((widget) => widget is HomePage),
+        findsOneWidget,
+      );
+    });
+    testWidgets('didEndInitialSetting is true and user.migratedFlutter is false', (WidgetTester tester) async {
+      final mockTodayRepository = MockTodayService();
+      final today = DateTime(2021, 04, 29);
+      when(mockTodayRepository.now()).thenReturn(today);
+      todayRepository = mockTodayRepository;
+
+      final fakeFirebaseUser = _FakeFirebaseUser();
+      final fakeUser = _FakeUser(false, _FakeSetting());
+
+      final fetchOrCreateUser = MockFetchOrCreateUser();
+      when(fetchOrCreateUser(fakeFirebaseUser.uid)).thenAnswer((realInvocation) => Future.value(fakeUser));
+
+      final saveUserLaunchInfo = MockSaveUserLaunchInfo();
+      when(saveUserLaunchInfo(fakeUser)).thenReturn(null);
+
+      final markAsMigratedToFlutter = MockMarkAsMigratedToFlutter();
+      when(markAsMigratedToFlutter()).thenAnswer((realInvocation) => Future.value());
+
+      SharedPreferences.setMockInitialValues({
+        BoolKey.didEndInitialSetting: true,
+      });
+      await tester.pumpWidget(
+        ProviderScope(
+          overrides: [
+            fetchOrCreateUserProvider.overrideWith((_) => fetchOrCreateUser),
+            databaseProvider.overrideWith((ref) => MockDatabaseConnection()),
+            saveUserLaunchInfoProvider.overrideWith((ref) => saveUserLaunchInfo),
+            markAsMigratedToFlutterProvider.overrideWith((ref) => markAsMigratedToFlutter),
+          ],
+          child: MaterialApp(
+            home: Material(
+              child: InitialSettingOrAppPage(firebaseUserID: fakeFirebaseUser.uid),
+            ),
+          ),
+        ),
+      );
+      await tester.pump();
+
+      expect(
+        find.byWidgetPredicate((widget) => widget is InitialSettingPillSheetGroupPage),
+        findsOneWidget,
+      );
+    });
+    testWidgets('didEndInitialSetting is true and user.migratedFlutter is true but setting is null', (WidgetTester tester) async {
+      final mockTodayRepository = MockTodayService();
+      final today = DateTime(2021, 04, 29);
+      when(mockTodayRepository.now()).thenReturn(today);
+      todayRepository = mockTodayRepository;
+
+      final fakeFirebaseUser = _FakeFirebaseUser();
+      final fakeUser = _FakeUser(true, null);
+
+      final fetchOrCreateUser = MockFetchOrCreateUser();
+      when(fetchOrCreateUser(fakeFirebaseUser.uid)).thenAnswer((realInvocation) => Future.value(fakeUser));
+
+      final saveUserLaunchInfo = MockSaveUserLaunchInfo();
+      when(saveUserLaunchInfo(fakeUser)).thenReturn(null);
+
+      final markAsMigratedToFlutter = MockMarkAsMigratedToFlutter();
+      when(markAsMigratedToFlutter()).thenAnswer((realInvocation) => Future.value());
+
+      SharedPreferences.setMockInitialValues({
+        BoolKey.didEndInitialSetting: true,
+      });
+      await tester.pumpWidget(
+        ProviderScope(
+          overrides: [
+            fetchOrCreateUserProvider.overrideWith((_) => fetchOrCreateUser),
+            databaseProvider.overrideWith((ref) => MockDatabaseConnection()),
+            saveUserLaunchInfoProvider.overrideWith((ref) => saveUserLaunchInfo),
+            markAsMigratedToFlutterProvider.overrideWith((ref) => markAsMigratedToFlutter),
+          ],
+          child: MaterialApp(
+            home: Material(
+              child: InitialSettingOrAppPage(firebaseUserID: fakeFirebaseUser.uid),
+            ),
+          ),
+        ),
+      );
+      await tester.pump();
+
+      expect(
+        find.byWidgetPredicate((widget) => widget is InitialSettingPillSheetGroupPage),
+        findsOneWidget,
+      );
     });
   });
 }
