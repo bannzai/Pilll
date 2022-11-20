@@ -10,11 +10,6 @@ class FontFamily {
 }
 
 class FontType {
-  static const TextStyle inputNumber = TextStyle(
-    fontFamily: FontFamily.japanese,
-    fontWeight: FontWeight.w700,
-    fontSize: 16,
-  );
   static const TextStyle description = TextStyle(
     fontFamily: FontFamily.japanese,
     fontWeight: FontWeight.w400,

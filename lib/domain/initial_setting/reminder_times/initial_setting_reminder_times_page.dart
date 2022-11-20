@@ -186,7 +186,12 @@ class InitialSettingReminderTimesPage extends HookConsumerWidget {
                 ),
               ),
               child: Center(
-                child: Text(formValue, style: FontType.inputNumber.merge(TextColorStyle.gray)),
+                child: Text(formValue,
+                    style: const TextStyle(
+                      fontFamily: FontFamily.japanese,
+                      fontWeight: FontWeight.w700,
+                      fontSize: 16,
+                    ).merge(TextColorStyle.gray)),
               ),
             ),
           )

@@ -99,7 +99,12 @@ class SettingMenstruationDynamicDescription extends StatelessWidget {
         ),
       ),
       child: Center(
-        child: Text(fromString, style: FontType.inputNumber.merge(TextColorStyle.gray)),
+        child: Text(fromString,
+            style: const TextStyle(
+              fontFamily: FontFamily.japanese,
+              fontWeight: FontWeight.w700,
+              fontSize: 16,
+            ).merge(TextColorStyle.gray)),
       ),
     );
   }
@@ -122,7 +127,12 @@ class SettingMenstruationDynamicDescription extends StatelessWidget {
         ),
       ),
       child: Center(
-        child: Text(durationString, style: FontType.inputNumber.merge(TextColorStyle.gray)),
+        child: Text(durationString,
+            style: const TextStyle(
+              fontFamily: FontFamily.japanese,
+              fontWeight: FontWeight.w700,
+              fontSize: 16,
+            ).merge(TextColorStyle.gray)),
       ),
     );
   }
