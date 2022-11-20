@@ -18,7 +18,7 @@ import 'package:pilll/features/sign_in/sign_in_sheet.dart';
 import 'package:pilll/provider/locale.dart';
 import 'package:pilll/provider/premium_and_trial.codegen.dart';
 import 'package:pilll/provider/shared_preferences.dart';
-import 'package:pilll/provider/auth.dart';
+import 'package:pilll/service/auth.dart';
 import 'package:pilll/util/datetime/day.dart';
 import 'package:pilll/util/shared_preference/keys.dart';
 
