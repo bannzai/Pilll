@@ -8,7 +8,7 @@ import 'package:pilll/features/record/record_page.dart';
 import 'package:pilll/features/settings/setting_page.dart';
 import 'package:pilll/components/atoms/color.dart';
 import 'package:pilll/components/atoms/text_color.dart';
-import 'package:pilll/service/push_notification.dart';
+import 'package:pilll/util/push_notification.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 
