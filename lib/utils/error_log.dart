@@ -2,17 +2,17 @@ import 'dart:async';
 
 import 'package:firebase_crashlytics/firebase_crashlytics.dart';
 
-final errorLogger = ErrorLogger();
+ErrorLogger errorLogger = ErrorLogger();
 
 class ErrorLogger {
-  recordError(
+  void recordError(
     dynamic exception,
     StackTrace? stack,
   ) {
     unawaited(FirebaseCrashlytics.instance.recordError(exception, stack));
   }
 
-  log(String message) {
+  void log(String message) {
     unawaited(FirebaseCrashlytics.instance.log(message));
   }
 }
