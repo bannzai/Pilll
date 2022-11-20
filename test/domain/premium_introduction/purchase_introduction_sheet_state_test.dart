@@ -3,7 +3,7 @@ import 'package:pilll/analytics.dart';
 import 'package:flutter_test/flutter_test.dart';
 import 'package:pilll/features/premium_introduction/util/discount_deadline.dart';
 import 'package:pilll/provider/premium_and_trial.codegen.dart';
-import 'package:pilll/service/purchase.dart';
+import 'package:pilll/provider/purchase.dart';
 import 'package:purchases_flutter/purchases_flutter.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 

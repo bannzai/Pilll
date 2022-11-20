@@ -5,7 +5,7 @@ import 'package:pilll/features/premium_introduction/components/annual_purchase_b
 import 'package:pilll/features/premium_introduction/components/monthly_purchase_button.dart';
 import 'package:pilll/features/premium_introduction/premium_complete_dialog.dart';
 import 'package:pilll/error/error_alert.dart';
-import 'package:pilll/service/purchase.dart';
+import 'package:pilll/provider/purchase.dart';
 import 'package:purchases_flutter/purchases_flutter.dart';
 
 class PurchaseButtons extends HookConsumerWidget {

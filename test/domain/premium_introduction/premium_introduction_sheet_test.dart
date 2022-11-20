@@ -5,7 +5,7 @@ import 'package:pilll/features/premium_introduction/premium_introduction_sheet.d
 import 'package:pilll/features/premium_introduction/util/discount_deadline.dart';
 import 'package:pilll/provider/premium_and_trial.codegen.dart';
 import 'package:pilll/util/datetime/day.dart';
-import 'package:pilll/service/purchase.dart';
+import 'package:pilll/provider/purchase.dart';
 import 'package:pilll/util/environment.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_test/flutter_test.dart';

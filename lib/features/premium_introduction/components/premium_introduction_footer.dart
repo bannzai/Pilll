@@ -9,7 +9,7 @@ import 'package:pilll/features/premium_introduction/util/map_to_error.dart';
 import 'package:pilll/error/alert_error.dart';
 import 'package:pilll/error/error_alert.dart';
 import 'package:pilll/error_log.dart';
-import 'package:pilll/service/purchase.dart';
+import 'package:pilll/provider/purchase.dart';
 import 'package:pilll/util/platform/platform.dart';
 import 'package:purchases_flutter/purchases_flutter.dart';
 import 'package:url_launcher/url_launcher.dart';

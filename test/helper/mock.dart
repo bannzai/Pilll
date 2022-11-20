@@ -12,7 +12,7 @@ import 'package:pilll/provider/setting.dart';
 import 'package:pilll/provider/user.dart';
 import 'package:pilll/util/datetime/day.dart';
 import 'package:mockito/annotations.dart';
-import 'package:pilll/service/purchase.dart';
+import 'package:pilll/provider/purchase.dart';
 
 @GenerateMocks([
   TodayService,

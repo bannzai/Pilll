@@ -30,7 +30,7 @@ import 'package:pilll/provider/premium_and_trial.codegen.dart' as _i4;
 import 'package:pilll/provider/setting.dart' as _i20;
 import 'package:pilll/provider/user.dart' as _i27;
 import 'package:pilll/util/datetime/day.dart' as _i10;
-import 'package:pilll/service/purchase.dart' as _i28;
+import 'package:pilll/provider/purchase.dart' as _i28;
 import 'package:purchases_flutter/purchases_flutter.dart' as _i9;
 
 // ignore_for_file: type=lint
