@@ -39,7 +39,11 @@ class RecommendSignupForPremiumNotificationBar extends StatelessWidget {
                       const SizedBox(width: 5),
                       Text(
                         "アカウント登録をしてください",
-                        style: TextColorStyle.white.merge(FontType.descriptionBold),
+                        style: TextColorStyle.white.merge(const TextStyle(
+                          fontFamily: FontFamily.japanese,
+                          fontWeight: FontWeight.w700,
+                          fontSize: 12,
+                        )),
                         textAlign: TextAlign.center,
                       ),
                     ],

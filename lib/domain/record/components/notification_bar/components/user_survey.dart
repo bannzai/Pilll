@@ -47,7 +47,11 @@ class UserSurvey extends StatelessWidget {
             const Spacer(),
             Text(
               "サービス改善のアンケートにご協力ください\n所要時間：1分",
-              style: TextColorStyle.white.merge(FontType.descriptionBold),
+              style: TextColorStyle.white.merge(const TextStyle(
+                fontFamily: FontFamily.japanese,
+                fontWeight: FontWeight.w700,
+                fontSize: 12,
+              )),
               textAlign: TextAlign.center,
             ),
             const Spacer(),

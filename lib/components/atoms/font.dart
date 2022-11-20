@@ -15,11 +15,6 @@ class FontType {
     fontWeight: FontWeight.w400,
     fontSize: 12,
   );
-  static const TextStyle descriptionBold = TextStyle(
-    fontFamily: FontFamily.japanese,
-    fontWeight: FontWeight.w700,
-    fontSize: 12,
-  );
   static const TextStyle smallTitle = TextStyle(
     fontFamily: FontFamily.number,
     fontWeight: FontWeight.w500,
