@@ -27,7 +27,12 @@ class OKDialog extends StatelessWidget {
         mainAxisSize: MainAxisSize.min,
         children: <Widget>[
           if (title.isNotEmpty) ...[
-            Text(title, style: FontType.subTitle.merge(TextColorStyle.main)),
+            Text(title,
+                style: const TextStyle(
+                  fontFamily: FontFamily.japanese,
+                  fontWeight: FontWeight.w600,
+                  fontSize: 16,
+                ).merge(TextColorStyle.main)),
             const SizedBox(
               height: 15,
             ),

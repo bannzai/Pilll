@@ -10,11 +10,6 @@ class FontFamily {
 }
 
 class FontType {
-  static const TextStyle subTitle = TextStyle(
-    fontFamily: FontFamily.japanese,
-    fontWeight: FontWeight.w600,
-    fontSize: 16,
-  );
   static const TextStyle xBigTitle = TextStyle(
     fontFamily: FontFamily.number,
     fontWeight: FontWeight.w500,

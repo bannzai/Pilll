@@ -45,7 +45,11 @@ class ReleaseNote extends StatelessWidget {
                         padding: const EdgeInsets.only(top: 40, left: 40, right: 40),
                         child: Text(
                           "ホームウィジェットが追加できるようになりました",
-                          style: FontType.subTitle.merge(TextColorStyle.black),
+                          style: const TextStyle(
+                            fontFamily: FontFamily.japanese,
+                            fontWeight: FontWeight.w600,
+                            fontSize: 16,
+                          ).merge(TextColorStyle.black),
                           textAlign: TextAlign.center,
                         ),
                       ),
