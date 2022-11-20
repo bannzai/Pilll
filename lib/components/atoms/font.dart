@@ -10,11 +10,6 @@ class FontFamily {
 }
 
 class FontType {
-  static const TextStyle thinTitle = TextStyle(
-    fontFamily: FontFamily.japanese,
-    fontWeight: FontWeight.w300,
-    fontSize: 16,
-  );
   static const TextStyle done = TextStyle(
     fontFamily: FontFamily.japanese,
     fontWeight: FontWeight.w600,
