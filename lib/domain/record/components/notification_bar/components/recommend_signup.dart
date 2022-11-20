@@ -18,7 +18,7 @@ class RecommendSignupNotificationBar extends HookConsumerWidget {
   Widget build(BuildContext context, WidgetRef ref) {
     return Container(
       padding: const EdgeInsets.symmetric(vertical: 8, horizontal: 8),
-      color: PilllColors.secondary,
+      color: PilllColors.primary,
       child: GestureDetector(
         onTap: onTap,
         child: Row(
@@ -37,10 +37,10 @@ class RecommendSignupNotificationBar extends HookConsumerWidget {
             ),
             const Spacer(),
             Column(
-              children: [
+              children: const [
                 Text(
                   "機種変更やスマホ紛失時に備えて\nアカウント登録しませんか？",
-                  style: TextColorStyle.white.merge(FontType.descriptionBold),
+                  style: TextStyle(fontFamily: FontFamily.japanese, fontWeight: FontWeight.w700, fontSize: 12, color: TextColor.white),
                   textAlign: TextAlign.center,
                 ),
               ],

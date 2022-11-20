@@ -54,9 +54,23 @@ class SignInSheet extends HookConsumerWidget {
                 const SizedBox(height: 14),
                 SvgPicture.asset("images/draggable_bar.svg", height: 6),
                 const SizedBox(height: 24),
-                Text(_title, textAlign: TextAlign.center, style: TextColorStyle.main.merge(FontType.sBigTitle)),
+                Text(_title,
+                    textAlign: TextAlign.center,
+                    style: const TextStyle(
+                      fontFamily: FontFamily.japanese,
+                      fontWeight: FontWeight.w500,
+                      fontSize: 20,
+                      color: TextColor.main,
+                    )),
                 const SizedBox(height: 16),
-                Text(_message, textAlign: TextAlign.center, style: TextColorStyle.main.merge(FontType.assisting)),
+                Text(_message,
+                    textAlign: TextAlign.center,
+                    style: const TextStyle(
+                      fontFamily: FontFamily.japanese,
+                      fontWeight: FontWeight.w300,
+                      fontSize: 14,
+                      color: TextColor.main,
+                    )),
                 const SizedBox(height: 24),
                 _appleButton(context, linkApple, isLoading),
                 const SizedBox(height: 24),
@@ -116,7 +130,12 @@ class SignInSheet extends HookConsumerWidget {
                 padding: const EdgeInsets.only(left: 10),
                 child: Text(
                   _appleButtonText,
-                  style: FontType.subTitle.merge(TextColorStyle.white),
+                  style: const TextStyle(
+                    fontFamily: FontFamily.japanese,
+                    fontWeight: FontWeight.w600,
+                    fontSize: 16,
+                    color: TextColor.white,
+                  ),
                 ),
               )
             ],
@@ -136,7 +155,7 @@ class SignInSheet extends HookConsumerWidget {
         backgroundColor: MaterialStateProperty.all(Colors.white),
         shape: MaterialStateProperty.all(
           RoundedRectangleBorder(
-            side: const BorderSide(color: PilllColors.secondary),
+            side: const BorderSide(color: PilllColors.primary),
             borderRadius: BorderRadius.circular(6),
           ),
         ),
@@ -173,7 +192,12 @@ class SignInSheet extends HookConsumerWidget {
                 padding: const EdgeInsets.only(left: 10),
                 child: Text(
                   _googleButtonText,
-                  style: FontType.subTitle.merge(TextColorStyle.main),
+                  style: const TextStyle(
+                    fontFamily: FontFamily.japanese,
+                    fontWeight: FontWeight.w600,
+                    fontSize: 16,
+                    color: TextColor.main,
+                  ),
                 ),
               ),
             ],

@@ -2,7 +2,7 @@ import 'package:pilll/analytics.dart';
 import 'package:pilll/domain/initial_setting/initial_setting_state.codegen.dart';
 import 'package:pilll/domain/initial_setting/premium_trial/initial_setting_premium_trial_start_page.dart';
 import 'package:pilll/domain/initial_setting/initial_setting_state_notifier.dart';
-import 'package:pilll/components/atoms/buttons.dart';
+import 'package:pilll/components/atoms/button.dart';
 import 'package:pilll/components/atoms/color.dart';
 import 'package:pilll/components/atoms/font.dart';
 import 'package:pilll/components/atoms/text_color.dart';
@@ -40,9 +40,14 @@ class InitialSettingReminderTimesPage extends HookConsumerWidget {
           child: Column(
             children: <Widget>[
               const SizedBox(height: 24),
-              Text(
+              const Text(
                 "ピルの飲み忘れ通知",
-                style: FontType.title.merge(TextColorStyle.main),
+                style: TextStyle(
+                  fontFamily: FontFamily.japanese,
+                  fontWeight: FontWeight.w600,
+                  fontSize: 17,
+                  color: TextColor.main,
+                ),
                 textAlign: TextAlign.center,
               ),
               const Spacer(),
@@ -56,7 +61,13 @@ class InitialSettingReminderTimesPage extends HookConsumerWidget {
                           return _form(context, store, state, index);
                         })),
                   ),
-                  Text("複数設定しておく事で飲み忘れを防げます", style: FontType.assisting.merge(TextColorStyle.main)),
+                  const Text("複数設定しておく事で飲み忘れを防げます",
+                      style: TextStyle(
+                        fontFamily: FontFamily.japanese,
+                        fontWeight: FontWeight.w300,
+                        fontSize: 14,
+                        color: TextColor.main,
+                      )),
                 ],
               ),
               const Spacer(),
@@ -68,27 +79,47 @@ class InitialSettingReminderTimesPage extends HookConsumerWidget {
                       children: [
                         TextSpan(
                           text: "プライバシーポリシー",
-                          style: FontType.sSmallSentence.merge(TextColorStyle.link),
+                          style: const TextStyle(
+                            fontFamily: FontFamily.japanese,
+                            fontWeight: FontWeight.w300,
+                            fontSize: 10,
+                            color: TextColor.link,
+                          ),
                           recognizer: TapGestureRecognizer()
                             ..onTap = () {
                               launchUrl(Uri.parse("https://bannzai.github.io/Pilll/PrivacyPolicy"), mode: LaunchMode.inAppWebView);
                             },
                         ),
-                        TextSpan(
+                        const TextSpan(
                           text: "と",
-                          style: FontType.sSmallSentence.merge(TextColorStyle.gray),
+                          style: TextStyle(
+                            fontFamily: FontFamily.japanese,
+                            fontWeight: FontWeight.w300,
+                            fontSize: 10,
+                            color: TextColor.gray,
+                          ),
                         ),
                         TextSpan(
                           text: "利用規約",
-                          style: FontType.sSmallSentence.merge(TextColorStyle.link),
+                          style: const TextStyle(
+                            fontFamily: FontFamily.japanese,
+                            fontWeight: FontWeight.w300,
+                            fontSize: 10,
+                            color: TextColor.link,
+                          ),
                           recognizer: TapGestureRecognizer()
                             ..onTap = () {
                               launchUrl(Uri.parse("https://bannzai.github.io/Pilll/Terms"), mode: LaunchMode.inAppWebView);
                             },
                         ),
-                        TextSpan(
+                        const TextSpan(
                           text: "を読んで\n利用をはじめてください",
-                          style: FontType.sSmallSentence.merge(TextColorStyle.gray),
+                          style: TextStyle(
+                            fontFamily: FontFamily.japanese,
+                            fontWeight: FontWeight.w300,
+                            fontSize: 10,
+                            color: TextColor.gray,
+                          ),
                         ),
                       ],
                     ),
@@ -153,7 +184,16 @@ class InitialSettingReminderTimesPage extends HookConsumerWidget {
         children: [
           Row(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
-            children: [SvgPicture.asset("images/alerm.svg"), Text("通知${index + 1}", style: FontType.assisting.merge(TextColorStyle.main))],
+            children: [
+              SvgPicture.asset("images/alerm.svg"),
+              Text("通知${index + 1}",
+                  style: const TextStyle(
+                    fontFamily: FontFamily.japanese,
+                    fontWeight: FontWeight.w300,
+                    fontSize: 14,
+                    color: TextColor.main,
+                  ))
+            ],
           ),
           const SizedBox(height: 8),
           GestureDetector(
@@ -169,7 +209,13 @@ class InitialSettingReminderTimesPage extends HookConsumerWidget {
                 ),
               ),
               child: Center(
-                child: Text(formValue, style: FontType.inputNumber.merge(TextColorStyle.gray)),
+                child: Text(formValue,
+                    style: const TextStyle(
+                      fontFamily: FontFamily.japanese,
+                      fontWeight: FontWeight.w700,
+                      fontSize: 16,
+                      color: TextColor.gray,
+                    )),
               ),
             ),
           )

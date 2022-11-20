@@ -1,4 +1,4 @@
-import 'package:pilll/components/atoms/buttons.dart';
+import 'package:pilll/components/atoms/button.dart';
 import 'package:pilll/components/atoms/font.dart';
 import 'package:pilll/components/atoms/text_color.dart';
 import 'package:flutter/material.dart';
@@ -10,19 +10,27 @@ class ErrorAlert extends StatelessWidget {
   final String errorMessage;
   final String? faqLinkURL;
 
-  const ErrorAlert(
-      {Key? key, this.title, this.faqLinkURL, required this.errorMessage})
-      : super(key: key);
+  const ErrorAlert({Key? key, this.title, this.faqLinkURL, required this.errorMessage}) : super(key: key);
   @override
   Widget build(BuildContext context) {
     final faq = faqLinkURL;
     return AlertDialog(
       title: Text(
         title ?? "エラーが発生しました",
-        style: FontType.subTitle.merge(TextColorStyle.black),
+        style: const TextStyle(
+          fontFamily: FontFamily.japanese,
+          fontWeight: FontWeight.w600,
+          fontSize: 16,
+          color: TextColor.black,
+        ),
       ),
       content: Text(errorMessage,
-          style: FontType.assisting.merge(TextColorStyle.black)),
+          style: const TextStyle(
+            fontFamily: FontFamily.japanese,
+            fontWeight: FontWeight.w300,
+            fontSize: 14,
+            color: TextColor.black,
+          )),
       actions: <Widget>[
         if (faq != null)
           AlertButton(

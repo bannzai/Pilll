@@ -38,7 +38,12 @@ class DiaryOrScheduleSheet extends StatelessWidget {
       child: ListTile(
         title: Text(
           title,
-          style: FontType.assisting.merge(TextColorStyle.main),
+          style: const TextStyle(
+            fontFamily: FontFamily.japanese,
+            fontWeight: FontWeight.w300,
+            fontSize: 14,
+            color: TextColor.main,
+          ),
         ),
         leading: leading,
         onTap: () => onTap(),

@@ -20,7 +20,7 @@ class PremiumTrialLimitNotificationBar extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       padding: const EdgeInsets.symmetric(vertical: 10, horizontal: 8),
-      color: PilllColors.secondary,
+      color: PilllColors.primary,
       child: GestureDetector(
         onTap: () async {
           analytics.logEvent(name: "pressed_trial_limited_notification_bar");
@@ -33,7 +33,12 @@ class PremiumTrialLimitNotificationBar extends StatelessWidget {
             const Spacer(),
             Text(
               premiumTrialLimit,
-              style: FontType.assistingBold.merge(TextColorStyle.white),
+              style: const TextStyle(
+                fontFamily: FontFamily.japanese,
+                fontWeight: FontWeight.w600,
+                fontSize: 14,
+              color: TextColor.white,
+              ),
               textAlign: TextAlign.center,
             ),
             const Spacer(),

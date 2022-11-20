@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
-import 'package:pilll/components/atoms/buttons.dart';
+import 'package:pilll/components/atoms/button.dart';
 import 'package:pilll/components/atoms/font.dart';
 import 'package:pilll/components/atoms/text_color.dart';
 import 'package:pilll/entity/pill_sheet.codegen.dart';
@@ -21,8 +21,7 @@ class RecordPageRestDurationDialog extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return AlertDialog(
-      shape: const RoundedRectangleBorder(
-          borderRadius: BorderRadius.all(Radius.circular(20.0))),
+      shape: const RoundedRectangleBorder(borderRadius: BorderRadius.all(Radius.circular(20.0))),
       contentPadding: const EdgeInsets.only(left: 24, right: 24, top: 32),
       actionsPadding: const EdgeInsets.only(left: 24, right: 24),
       content: Column(
@@ -30,8 +29,13 @@ class RecordPageRestDurationDialog extends StatelessWidget {
         children: <Widget>[
           title,
           const SizedBox(height: 24),
-          Text("休薬するとピル番号は進みません",
-              style: FontType.assisting.merge(TextColorStyle.main)),
+          const Text("休薬するとピル番号は進みません",
+              style: TextStyle(
+                fontFamily: FontFamily.japanese,
+                fontWeight: FontWeight.w300,
+                fontSize: 14,
+                color: TextColor.main,
+              )),
           const SizedBox(height: 24),
           SvgPicture.asset("images/explain_rest_duration.svg"),
           const SizedBox(height: 24),
@@ -87,10 +91,7 @@ showRecordPageRestDurationDialog(
   showDialog(
     context: context,
     builder: (context) => RecordPageRestDurationDialog(
-      title: RecordPageRestDurationDialogTitle(
-          appearanceMode: appearanceMode,
-          activedPillSheet: activedPillSheet,
-          pillSheetGroup: pillSheetGroup),
+      title: RecordPageRestDurationDialogTitle(appearanceMode: appearanceMode, activedPillSheet: activedPillSheet, pillSheetGroup: pillSheetGroup),
       onDone: onDone,
     ),
   );
@@ -124,8 +125,7 @@ class RecordPageRestDurationDialogTitle extends StatelessWidget {
       case PillSheetAppearanceMode.number:
         return "${activedPillSheet.lastTakenPillNumber + 1}番";
       case PillSheetAppearanceMode.date:
-        final date = activedPillSheet
-            .displayPillTakeDate(activedPillSheet.lastTakenPillNumber + 1);
+        final date = activedPillSheet.displayPillTakeDate(activedPillSheet.lastTakenPillNumber + 1);
         final dateString = DateTimeFormatter.monthAndDay(date);
         return dateString;
       case PillSheetAppearanceMode.sequential:

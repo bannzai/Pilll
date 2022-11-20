@@ -1,6 +1,6 @@
 import 'package:pilll/analytics.dart';
 import 'package:pilll/domain/initial_setting/initial_setting_state_notifier.dart';
-import 'package:pilll/components/atoms/buttons.dart';
+import 'package:pilll/components/atoms/button.dart';
 import 'package:pilll/components/atoms/color.dart';
 import 'package:pilll/components/atoms/font.dart';
 import 'package:pilll/components/atoms/text_color.dart';
@@ -46,7 +46,12 @@ class InitialSettingSelectTodayPillNumberPage extends HookConsumerWidget {
                     const SizedBox(height: 24),
                     Text(
                       "今日(${todayString()})\n飲む・飲んだピルの番号をタップ",
-                      style: FontType.sBigTitle.merge(TextColorStyle.main),
+                      style: const TextStyle(
+                        fontFamily: FontFamily.japanese,
+                        fontWeight: FontWeight.w500,
+                        fontSize: 20,
+                        color: TextColor.main,
+                      ),
                       textAlign: TextAlign.center,
                     ),
                     const SizedBox(height: 44),

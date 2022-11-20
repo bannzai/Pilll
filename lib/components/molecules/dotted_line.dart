@@ -26,8 +26,7 @@ class DottedLine extends StatelessWidget {
       width: double.infinity,
       height: 1,
       child: LayoutBuilder(builder: (context, constraints) {
-        final dashAndDashGapCount = _calculateDashAndDashGapCount(
-            min(constraints.maxWidth, lineLength));
+        final dashAndDashGapCount = _calculateDashAndDashGapCount(min(constraints.maxWidth, lineLength));
 
         return Wrap(
           direction: Axis.horizontal,
@@ -53,7 +52,7 @@ class DottedLine extends StatelessWidget {
   Widget _buildDash() {
     return Container(
       decoration: const BoxDecoration(
-        color: PilllColors.secondary,
+        color: PilllColors.primary,
       ),
       width: dashLength,
       height: height,

@@ -50,7 +50,7 @@ class HomePage extends HookConsumerWidget {
             child: SafeArea(
               child: TabBar(
                 controller: tabController,
-                labelColor: PilllColors.secondary,
+                labelColor: PilllColors.primary,
                 labelStyle: const TextStyle(fontSize: 12),
                 indicatorColor: Colors.transparent,
                 unselectedLabelColor: TextColor.gray,

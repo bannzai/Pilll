@@ -27,14 +27,24 @@ class ReminderNotificationCustomizeWord extends HookConsumerWidget {
       minVerticalPadding: 9,
       title: Row(
         children: [
-          const Text("服用通知のカスタマイズ", style: FontType.listRow),
+          const Text("服用通知のカスタマイズ",
+              style: TextStyle(
+                fontFamily: FontFamily.roboto,
+                fontWeight: FontWeight.w300,
+                fontSize: 16,
+              )),
           if (!isPremium) ...[
             const SizedBox(width: 8),
             const PremiumBadge(),
           ]
         ],
       ),
-      subtitle: const Text("服用通知の文言のカスタマイズができます", style: FontType.assisting),
+      subtitle: const Text("服用通知の文言のカスタマイズができます",
+          style: TextStyle(
+            fontFamily: FontFamily.japanese,
+            fontWeight: FontWeight.w300,
+            fontSize: 14,
+          )),
       onTap: () {
         analytics.logEvent(
           name: "did_notification_customize_word",

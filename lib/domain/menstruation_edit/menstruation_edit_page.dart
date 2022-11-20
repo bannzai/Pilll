@@ -78,7 +78,13 @@ class MenstruationEditPage extends HookConsumerWidget {
                       ),
                       if (invalidMessage.value.isNotEmpty) ...[
                         const SizedBox(height: 12),
-                        Text(invalidMessage.value, style: FontType.assisting.merge(TextColorStyle.danger)),
+                        Text(invalidMessage.value,
+                            style: const TextStyle(
+                              fontFamily: FontFamily.japanese,
+                              fontWeight: FontWeight.w300,
+                              fontSize: 14,
+                              color: TextColor.danger,
+                            )),
                       ],
                     ],
                   ),

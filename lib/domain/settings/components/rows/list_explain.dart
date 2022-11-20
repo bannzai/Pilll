@@ -12,8 +12,13 @@ class ListExplainRow extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return ListTile(
-      title:
-          Text(text, style: FontType.assisting.merge(TextColorStyle.darkGray)),
+      title: Text(text,
+          style: const TextStyle(
+            fontFamily: FontFamily.japanese,
+            fontWeight: FontWeight.w300,
+            fontSize: 14,
+            color: TextColor.darkGray,
+          )),
     );
   }
 }

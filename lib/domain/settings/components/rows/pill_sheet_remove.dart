@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
 import 'package:pilll/analytics.dart';
-import 'package:pilll/components/atoms/buttons.dart';
+import 'package:pilll/components/atoms/button.dart';
 import 'package:pilll/components/atoms/font.dart';
 import 'package:pilll/components/atoms/text_color.dart';
 import 'package:pilll/components/page/discard_dialog.dart';
@@ -24,7 +24,12 @@ class PillSheetRemoveRow extends HookConsumerWidget {
   Widget build(BuildContext context, WidgetRef ref) {
     final deletePillSheetGroup = ref.watch(deletePillSheetGroupProvider);
     return ListTile(
-      title: const Text("ピルシートをすべて破棄", style: FontType.listRow),
+      title: const Text("ピルシートをすべて破棄",
+          style: TextStyle(
+            fontFamily: FontFamily.roboto,
+            fontWeight: FontWeight.w300,
+            fontSize: 16,
+          )),
       onTap: () {
         analytics.logEvent(
           name: "did_select_remove_pill_sheet",
@@ -36,19 +41,34 @@ class PillSheetRemoveRow extends HookConsumerWidget {
               title: "ピルシートをすべて破棄しますか？",
               message: RichText(
                 textAlign: TextAlign.start,
-                text: TextSpan(
+                text: const TextSpan(
                   children: [
                     TextSpan(
                       text: "現在表示されている",
-                      style: FontType.assisting.merge(TextColorStyle.main),
+                      style: TextStyle(
+                        fontFamily: FontFamily.japanese,
+                        fontWeight: FontWeight.w300,
+                        fontSize: 14,
+                        color: TextColor.main,
+                      ),
                     ),
                     TextSpan(
                       text: "すべてのピルシート",
-                      style: FontType.assistingBold.merge(TextColorStyle.main),
+                      style: TextStyle(
+                        fontFamily: FontFamily.japanese,
+                        fontWeight: FontWeight.w600,
+                        fontSize: 14,
+                        color: TextColor.main,
+                      ),
                     ),
                     TextSpan(
                       text: "が破棄されます",
-                      style: FontType.assisting.merge(TextColorStyle.main),
+                      style: TextStyle(
+                        fontFamily: FontFamily.japanese,
+                        fontWeight: FontWeight.w300,
+                        fontSize: 14,
+                        color: TextColor.main,
+                      ),
                     ),
                   ],
                 ),

@@ -7,7 +7,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_hooks/flutter_hooks.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
 import 'package:pilll/analytics.dart';
-import 'package:pilll/components/atoms/buttons.dart';
+import 'package:pilll/components/atoms/button.dart';
 import 'package:pilll/components/atoms/color.dart';
 import 'package:pilll/components/atoms/font.dart';
 import 'package:pilll/components/atoms/text_color.dart';
@@ -73,7 +73,13 @@ class _SchedulePostPage extends HookConsumerWidget {
       resizeToAvoidBottomInset: false,
       appBar: AppBar(
         elevation: 0.0,
-        title: Text(DateTimeFormatter.yearAndMonthAndDay(date), style: FontType.sBigTitle.merge(TextColorStyle.main)),
+        title: Text(DateTimeFormatter.yearAndMonthAndDay(date),
+            style: const TextStyle(
+              fontFamily: FontFamily.japanese,
+              fontWeight: FontWeight.w500,
+              fontSize: 20,
+              color: TextColor.main,
+            )),
         leading: IconButton(
           icon: const Icon(Icons.close, color: Colors.black),
           onPressed: () => Navigator.of(context).pop(),
@@ -113,8 +119,13 @@ class _SchedulePostPage extends HookConsumerWidget {
                       ),
                     ),
                     SwitchListTile(
-                      title: const Text("当日9:00に通知を受け取る", style: FontType.listRow),
-                      activeColor: PilllColors.primary,
+                      title: const Text("当日9:00に通知を受け取る",
+                          style: TextStyle(
+                            fontFamily: FontFamily.roboto,
+                            fontWeight: FontWeight.w300,
+                            fontSize: 16,
+                          )),
+                      activeColor: PilllColors.secondary,
                       onChanged: (bool value) {
                         analytics.logEvent(
                           name: "schedule_post_remind_toggle",

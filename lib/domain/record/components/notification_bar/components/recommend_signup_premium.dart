@@ -15,7 +15,7 @@ class RecommendSignupForPremiumNotificationBar extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       padding: const EdgeInsets.only(top: 10, bottom: 8, left: 8, right: 8),
-      color: PilllColors.secondary,
+      color: PilllColors.primary,
       child: GestureDetector(
         onTap: () {
           analytics.logEvent(name: "tapped_premium_signup_notification_bar");
@@ -37,9 +37,14 @@ class RecommendSignupForPremiumNotificationBar extends StatelessWidget {
                         color: Colors.white,
                       ),
                       const SizedBox(width: 5),
-                      Text(
+                      const Text(
                         "アカウント登録をしてください",
-                        style: TextColorStyle.white.merge(FontType.descriptionBold),
+                        style: TextStyle(
+                          fontFamily: FontFamily.japanese,
+                          fontWeight: FontWeight.w700,
+                          fontSize: 12,
+                          color: TextColor.white,
+                        ),
                         textAlign: TextAlign.center,
                       ),
                     ],

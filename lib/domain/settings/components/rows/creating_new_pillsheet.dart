@@ -28,15 +28,25 @@ class CreatingNewPillSheetRow extends HookConsumerWidget {
     return SwitchListTile(
       title: Row(
         children: [
-          const Text("ピルシートグループの自動追加", style: FontType.listRow),
+          const Text("ピルシートグループの自動追加",
+              style: TextStyle(
+                fontFamily: FontFamily.roboto,
+                fontWeight: FontWeight.w300,
+                fontSize: 16,
+              )),
           if (!isPremium) ...[
             const SizedBox(width: 8),
             const PremiumBadge(),
           ]
         ],
       ),
-      subtitle: const Text("ピルをすべて服用済みの場合、新しいシートを自動で追加します", style: FontType.assisting),
-      activeColor: PilllColors.primary,
+      subtitle: const Text("ピルをすべて服用済みの場合、新しいシートを自動で追加します",
+          style: TextStyle(
+            fontFamily: FontFamily.japanese,
+            fontWeight: FontWeight.w300,
+            fontSize: 14,
+          )),
+      activeColor: PilllColors.secondary,
       onChanged: (bool value) async {
         analytics.logEvent(
           name: "toggle_creating_new_pillsheet",

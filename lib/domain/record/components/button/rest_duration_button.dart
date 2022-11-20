@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:pilll/components/atoms/button.dart';
 import 'package:pilll/components/atoms/color.dart';
+import 'package:pilll/components/atoms/font.dart';
 import 'package:pilll/components/atoms/text_color.dart';
 
 class RestDurationButton extends StatelessWidget {
@@ -13,7 +13,15 @@ class RestDurationButton extends StatelessWidget {
       height: 44,
       child: TextButton(
         style: TextButton.styleFrom(backgroundColor: PilllColors.disable),
-        child: Text("休薬中", style: ButtonTextStyle.main.merge(TextColorStyle.lightGray)),
+        child: const Text(
+          "休薬中",
+          style: TextStyle(
+            color: TextColor.lightGray,
+            fontFamily: FontFamily.japanese,
+            fontWeight: FontWeight.w700,
+            fontSize: 16,
+          ),
+        ),
         onPressed: null,
       ),
     );

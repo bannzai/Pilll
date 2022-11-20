@@ -34,10 +34,10 @@ class PremiumFunctionSurveyElement extends StatelessWidget {
                 }
               },
               checkColor: PilllColors.white,
-              activeColor: PilllColors.secondary,
+              activeColor: PilllColors.primary,
             ),
           ),
-          data: ThemeData(primaryColor: PilllColors.thinSecondary, unselectedWidgetColor: PilllColors.secondary),
+          data: ThemeData(primaryColor: PilllColors.thinSecondary, unselectedWidgetColor: PilllColors.primary),
         ),
         Text(_word, style: const TextStyle(fontFamily: FontFamily.japanese, fontSize: 14, fontWeight: FontWeight.w400, color: TextColor.main)),
       ],

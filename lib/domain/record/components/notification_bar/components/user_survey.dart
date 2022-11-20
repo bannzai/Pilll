@@ -20,7 +20,7 @@ class UserSurvey extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       padding: const EdgeInsets.symmetric(horizontal: 8, vertical: 8),
-      color: PilllColors.secondary,
+      color: PilllColors.primary,
       child: GestureDetector(
         onTap: () async {
           analytics.logEvent(name: "user_survey_open", parameters: {"key": BoolKey.userAnsweredSurvey});
@@ -45,9 +45,9 @@ class UserSurvey extends StatelessWidget {
               ),
             ),
             const Spacer(),
-            Text(
+            const Text(
               "サービス改善のアンケートにご協力ください\n所要時間：1分",
-              style: TextColorStyle.white.merge(FontType.descriptionBold),
+              style: TextStyle(fontFamily: FontFamily.japanese, fontWeight: FontWeight.w700, fontSize: 12, color: TextColor.white),
               textAlign: TextAlign.center,
             ),
             const Spacer(),

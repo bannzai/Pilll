@@ -64,7 +64,7 @@ class ReminderTimesPage extends HookConsumerWidget {
                     ),
                   );
                 },
-                icon: const Icon(Icons.timer_sharp, color: PilllColors.secondary),
+                icon: const Icon(Icons.timer_sharp, color: PilllColors.primary),
               ),
             ],
             backgroundColor: PilllColors.background,
@@ -149,15 +149,20 @@ class ReminderTimesPage extends HookConsumerWidget {
             },
       background: Container(
         color: Colors.red,
-        child: SizedBox(
+        child: const SizedBox(
           width: 40,
           child: Padding(
-            padding: const EdgeInsets.all(20.0),
+            padding: EdgeInsets.all(20.0),
             child: Align(
               alignment: Alignment.centerRight,
               child: Text(
                 "削除",
-                style: FontType.assistingBold.merge(TextColorStyle.white),
+                style: TextStyle(
+                  fontFamily: FontFamily.japanese,
+                  fontWeight: FontWeight.w600,
+                  fontSize: 14,
+                  color: TextColor.white,
+                ),
                 textAlign: TextAlign.right,
               ),
             ),
@@ -183,9 +188,14 @@ class ReminderTimesPage extends HookConsumerWidget {
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
             SvgPicture.asset("images/add.svg"),
-            Text(
+            const Text(
               "通知時間の追加",
-              style: FontType.assisting.merge(TextColorStyle.main),
+              style: TextStyle(
+                fontFamily: FontFamily.japanese,
+                fontWeight: FontWeight.w300,
+                fontSize: 14,
+                color: TextColor.main,
+              ),
             )
           ],
         ),

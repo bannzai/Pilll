@@ -16,7 +16,12 @@ class AccountLinkRow extends HookConsumerWidget {
     final isAppleLinked = ref.watch(isAppleLinkedProvider);
     final isGoogleLinked = ref.watch(isGoogleLinkedProvider);
     return ListTile(
-      title: const Text("アカウント設定", style: FontType.listRow),
+      title: const Text("アカウント設定",
+          style: TextStyle(
+            fontFamily: FontFamily.roboto,
+            fontWeight: FontWeight.w300,
+            fontSize: 16,
+          )),
       trailing: _subtitle(isAppleLinked || isGoogleLinked),
       onTap: () {
         analytics.logEvent(name: "did_select_setting_account_cooperation");
@@ -32,7 +37,13 @@ class AccountLinkRow extends HookConsumerWidget {
         children: [
           SvgPicture.asset("images/checkmark_green.svg"),
           const SizedBox(width: 6),
-          Text("連携済み", style: FontType.assisting.merge(TextColorStyle.darkGray)),
+          const Text("連携済み",
+              style: TextStyle(
+                fontFamily: FontFamily.japanese,
+                fontWeight: FontWeight.w300,
+                fontSize: 14,
+                color: TextColor.darkGray,
+              )),
         ],
       );
     } else {
@@ -41,7 +52,13 @@ class AccountLinkRow extends HookConsumerWidget {
         children: [
           SvgPicture.asset("images/alert_24.svg"),
           const SizedBox(width: 6),
-          Text("未登録", style: FontType.assisting.merge(TextColorStyle.darkGray)),
+          const Text("未登録",
+              style: TextStyle(
+                fontFamily: FontFamily.japanese,
+                fontWeight: FontWeight.w300,
+                fontSize: 14,
+                color: TextColor.darkGray,
+              )),
         ],
       );
     }

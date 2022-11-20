@@ -8,11 +8,7 @@ class InformationForBeforeMigrate132 extends StatelessWidget {
   final String salvagedOldStartTakenDate;
   final String salvagedOldLastTakenDate;
 
-  const InformationForBeforeMigrate132(
-      {Key? key,
-      required this.salvagedOldStartTakenDate,
-      required this.salvagedOldLastTakenDate})
-      : super(key: key);
+  const InformationForBeforeMigrate132({Key? key, required this.salvagedOldStartTakenDate, required this.salvagedOldLastTakenDate}) : super(key: key);
 
   int _latestPillNumber() {
     final last = DateTime.parse(salvagedOldLastTakenDate);
@@ -45,44 +41,84 @@ class InformationForBeforeMigrate132 extends StatelessWidget {
               mainAxisAlignment: MainAxisAlignment.center,
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
-                Text(
+                const Text(
                   "大型アップデート前の情報",
-                  style: FontType.sBigTitle.merge(TextColorStyle.main),
+                  style: TextStyle(
+                    fontFamily: FontFamily.japanese,
+                    fontWeight: FontWeight.w500,
+                    fontSize: 20,
+                    color: TextColor.main,
+                  ),
                 ),
                 const SizedBox(height: 32),
-                Text(
+                const Text(
                   "下記の情報はversion 2.0.0以前のアプリの情報になります",
-                  style: FontType.subTitle.merge(TextColorStyle.main),
+                  style: TextStyle(
+                    fontFamily: FontFamily.japanese,
+                    fontWeight: FontWeight.w600,
+                    fontSize: 16,
+                    color: TextColor.main,
+                  ),
                 ),
                 const SizedBox(height: 8),
                 Text(
                   "最後に飲んだ日: $salvagedOldLastTakenDate",
-                  style: FontType.listRow.merge(TextColorStyle.main),
+                  style: const TextStyle(
+                    fontFamily: FontFamily.roboto,
+                    fontWeight: FontWeight.w300,
+                    fontSize: 16,
+                    color: TextColor.main,
+                  ),
                 ),
                 const SizedBox(height: 4),
-                Text(
+                const Text(
                   "※大型アップデート前のアプリで最後にピルの服用記録をつけた日です",
-                  style: FontType.description.merge(TextColorStyle.gray),
+                  style: TextStyle(
+                    fontFamily: FontFamily.japanese,
+                    fontWeight: FontWeight.w400,
+                    fontSize: 12,
+                    color: TextColor.gray,
+                  ),
                 ),
                 const SizedBox(height: 4),
                 Text(
                   "最後に飲んだピル番号: ${_latestPillNumber()}",
-                  style: FontType.listRow.merge(TextColorStyle.main),
+                  style: const TextStyle(
+                    fontFamily: FontFamily.roboto,
+                    fontWeight: FontWeight.w300,
+                    fontSize: 16,
+                    color: TextColor.main,
+                  ),
                 ),
                 const SizedBox(height: 4),
-                Text(
+                const Text(
                   "※大型アップデート前のアプリで最後に服用したピル番号になります",
-                  style: FontType.description.merge(TextColorStyle.gray),
+                  style: TextStyle(
+                    fontFamily: FontFamily.japanese,
+                    fontWeight: FontWeight.w400,
+                    fontSize: 12,
+                    color: TextColor.gray,
+                  ),
                 ),
                 const SizedBox(height: 4),
                 Text(
                   "今日服用予定だったピル番号: ${_todayPillNumber()}",
-                  style: FontType.listRow.merge(TextColorStyle.main),
+                  style: const TextStyle(
+                    fontFamily: FontFamily.roboto,
+                    fontWeight: FontWeight.w300,
+                    fontSize: 16,
+                    color: TextColor.main,
+                  ),
                 ),
                 const SizedBox(height: 4),
-                Text(
+                const Text(
                   "※大型アップデート前のアプリを使用していた場合の本日のピル番号になります",
-                  style: FontType.description.merge(TextColorStyle.gray),
+                  style: TextStyle(
+                    fontFamily: FontFamily.japanese,
+                    fontWeight: FontWeight.w400,
+                    fontSize: 12,
+                    color: TextColor.gray,
+                  ),
                 ),
                 const SizedBox(height: 32),
               ],
@@ -94,11 +130,8 @@ class InformationForBeforeMigrate132 extends StatelessWidget {
   }
 }
 
-extension InformationForBeforeMigrate132Route
-    on InformationForBeforeMigrate132 {
-  static Route<dynamic> route(
-      {required String salvagedOldStartTakenDate,
-      required String salvagedOldLastTakenDate}) {
+extension InformationForBeforeMigrate132Route on InformationForBeforeMigrate132 {
+  static Route<dynamic> route({required String salvagedOldStartTakenDate, required String salvagedOldLastTakenDate}) {
     return MaterialPageRoute(
       settings: const RouteSettings(name: "InformationForBeforeMigrate132Route"),
       builder: (_) => InformationForBeforeMigrate132(

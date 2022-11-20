@@ -1,6 +1,6 @@
 import 'package:flutter_hooks/flutter_hooks.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
-import 'package:pilll/components/atoms/buttons.dart';
+import 'package:pilll/components/atoms/button.dart';
 import 'package:pilll/components/atoms/color.dart';
 import 'package:pilll/components/atoms/font.dart';
 import 'package:pilll/components/atoms/text_color.dart';
@@ -51,7 +51,12 @@ class SettingTodayPillNumberPage extends HookConsumerWidget {
                   const SizedBox(height: 20),
                   Text(
                     "今日(${_today()})\n飲む・飲んだピルの番号をタップ",
-                    style: FontType.sBigTitle.merge(TextColorStyle.main),
+                    style: const TextStyle(
+                      fontFamily: FontFamily.japanese,
+                      fontWeight: FontWeight.w500,
+                      fontSize: 20,
+                      color: TextColor.main,
+                    ),
                     textAlign: TextAlign.center,
                   ),
                   const SizedBox(height: 56),

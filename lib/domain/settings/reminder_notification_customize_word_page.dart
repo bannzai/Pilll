@@ -57,7 +57,7 @@ class ReminderNotificationCustomizeWordPage extends HookConsumerWidget {
                   TextField(
                     decoration: InputDecoration(
                       focusedBorder: const UnderlineInputBorder(
-                        borderSide: BorderSide(color: PilllColors.primary),
+                        borderSide: BorderSide(color: PilllColors.secondary),
                       ),
                       counter: Row(children: [
                         const Text(
@@ -92,9 +92,14 @@ class ReminderNotificationCustomizeWordPage extends HookConsumerWidget {
                   Column(
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
-                      Text(
+                      const Text(
                         "詳細設定",
-                        style: FontType.assisting.merge(TextColorStyle.primary),
+                        style: TextStyle(
+                          fontFamily: FontFamily.japanese,
+                          fontWeight: FontWeight.w300,
+                          fontSize: 14,
+                          color: TextColor.primary,
+                        ),
                       ),
                       const SizedBox(height: 4),
                       _switchRow(

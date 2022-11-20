@@ -22,13 +22,12 @@ class DotsIndicator extends AnimatedWidget {
   }
 
   Widget _buildDot(int index) {
-    final isSelected =
-        index == (controller.page ?? controller.initialPage).round();
+    final isSelected = index == (controller.page ?? controller.initialPage).round();
     return SizedBox(
       width: 25,
       child: Center(
         child: Material(
-          color: isSelected ? PilllColors.secondary : PilllColors.unselect,
+          color: isSelected ? PilllColors.primary : PilllColors.unselect,
           type: MaterialType.circle,
           child: SizedBox(
             width: 8,

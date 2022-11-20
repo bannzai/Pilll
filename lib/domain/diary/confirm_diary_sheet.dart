@@ -1,4 +1,4 @@
-import 'package:pilll/components/atoms/buttons.dart';
+import 'package:pilll/components/atoms/button.dart';
 import 'package:pilll/components/page/discard_dialog.dart';
 import 'package:pilll/domain/diary_post/diary_post_page.dart';
 import 'package:pilll/entity/diary.codegen.dart';
@@ -54,7 +54,8 @@ class ConfirmDiarySheet extends HookConsumerWidget {
     return Row(
       mainAxisSize: MainAxisSize.max,
       children: [
-        Text(DateTimeFormatter.yearAndMonthAndDay(diary.date), style: FontType.sBigTitle.merge(TextColorStyle.main)),
+        Text(DateTimeFormatter.yearAndMonthAndDay(diary.date),
+            style: const TextStyle(fontFamily: FontFamily.japanese, fontWeight: FontWeight.w500, fontSize: 20, color: TextColor.main)),
         const Spacer(),
         IconButton(
           icon: SvgPicture.asset("images/edit.svg"),
@@ -71,7 +72,8 @@ class ConfirmDiarySheet extends HookConsumerWidget {
                 builder: (context) {
                   return DiscardDialog(
                     title: "日記を削除します",
-                    message: Text("削除された日記は復元ができません", style: FontType.assisting.merge(TextColorStyle.main)),
+                    message: const Text("削除された日記は復元ができません",
+                        style: TextStyle(fontFamily: FontFamily.japanese, fontWeight: FontWeight.w300, fontSize: 14, color: TextColor.main)),
                     actions: [
                       AlertButton(
                         text: "キャンセル",
@@ -101,9 +103,9 @@ class ConfirmDiarySheet extends HookConsumerWidget {
   Widget _physicalConditionImage(PhysicalConditionStatus? status) {
     switch (status) {
       case PhysicalConditionStatus.fine:
-        return SvgPicture.asset("images/laugh.svg", color: PilllColors.secondary);
+        return SvgPicture.asset("images/laugh.svg", color: PilllColors.primary);
       case PhysicalConditionStatus.bad:
-        return SvgPicture.asset("images/angry.svg", color: PilllColors.secondary);
+        return SvgPicture.asset("images/angry.svg", color: PilllColors.primary);
       default:
         return Container();
     }
@@ -112,7 +114,13 @@ class ConfirmDiarySheet extends HookConsumerWidget {
   Widget _physicalCondition() {
     return Row(
       children: [
-        Text("体調", style: FontType.componentTitle.merge(TextColorStyle.black)),
+        const Text("体調",
+            style: TextStyle(
+              fontFamily: FontFamily.japanese,
+              fontWeight: FontWeight.w300,
+              fontSize: 16,
+              color: TextColor.black,
+            )),
         const SizedBox(width: 16),
         _physicalConditionImage(diary.physicalConditionStatus),
       ],
@@ -128,8 +136,13 @@ class ConfirmDiarySheet extends HookConsumerWidget {
           children: diary.physicalConditions
               .map((e) => ChoiceChip(
                     label: Text(e),
-                    labelStyle: FontType.assisting.merge(TextColorStyle.white),
-                    selectedColor: PilllColors.secondary,
+                    labelStyle: const TextStyle(
+                      fontFamily: FontFamily.japanese,
+                      fontWeight: FontWeight.w300,
+                      fontSize: 14,
+                      color: TextColor.white,
+                    ),
+                    selectedColor: PilllColors.primary,
                     selected: true,
                     onSelected: (selected) {},
                   ))
@@ -145,7 +158,7 @@ class ConfirmDiarySheet extends HookConsumerWidget {
       width: 32,
       height: 32,
       decoration: BoxDecoration(shape: BoxShape.circle, color: PilllColors.thinSecondary),
-      child: SvgPicture.asset("images/heart.svg", color: PilllColors.secondary),
+      child: SvgPicture.asset("images/heart.svg", color: PilllColors.primary),
     );
   }
 

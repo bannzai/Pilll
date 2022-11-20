@@ -111,7 +111,7 @@ class CalendarDayTile extends StatelessWidget {
                   width: 32,
                   height: 32,
                   decoration: BoxDecoration(
-                    color: PilllColors.secondary,
+                    color: PilllColors.primary,
                     borderRadius: BorderRadius.circular(16),
                   ),
                 ),
@@ -132,7 +132,11 @@ class CalendarDayTile extends StatelessWidget {
   }
 
   TextStyle _font() {
-    return FontType.gridElement;
+    return const TextStyle(
+      fontFamily: FontFamily.number,
+      fontWeight: FontWeight.w600,
+      fontSize: 16,
+    );
   }
 
   Color _textColor() {
@@ -174,7 +178,7 @@ class CalendarDayTile extends StatelessWidget {
     return Container(
       width: 8,
       height: 8,
-      decoration: BoxDecoration(color: PilllColors.secondary, borderRadius: BorderRadius.circular(4)),
+      decoration: BoxDecoration(color: PilllColors.primary, borderRadius: BorderRadius.circular(4)),
     );
   }
 

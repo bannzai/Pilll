@@ -62,18 +62,24 @@ class App extends StatelessWidget {
           elevation: 3,
         ),
         textSelectionTheme: const TextSelectionThemeData(
-          cursorColor: PilllColors.primary,
+          cursorColor: PilllColors.secondary,
         ),
-        primaryColor: PilllColors.primary,
+        primaryColor: PilllColors.secondary,
         visualDensity: VisualDensity.adaptivePlatformDensity,
-        toggleableActiveColor: PilllColors.primary,
-        cupertinoOverrideTheme: const NoDefaultCupertinoThemeData(textTheme: CupertinoTextThemeData(textStyle: FontType.xBigTitle)),
+        toggleableActiveColor: PilllColors.secondary,
+        cupertinoOverrideTheme: const NoDefaultCupertinoThemeData(
+            textTheme: CupertinoTextThemeData(
+                textStyle: TextStyle(
+          fontFamily: FontFamily.number,
+          fontWeight: FontWeight.w500,
+          fontSize: 24,
+        ))),
         buttonTheme: const ButtonThemeData(
-          buttonColor: PilllColors.secondary,
+          buttonColor: PilllColors.primary,
           disabledColor: PilllColors.disable,
           textTheme: ButtonTextTheme.primary,
           colorScheme: ColorScheme.light(
-            primary: PilllColors.primary,
+            primary: PilllColors.secondary,
             secondary: PilllColors.accent,
           ),
         ),

@@ -6,7 +6,7 @@ import 'package:pilll/provider/diary_setting.dart';
 import 'package:pilll/domain/diary_setting_physical_condtion_detail/page.dart';
 import 'package:pilll/domain/premium_introduction/premium_introduction_sheet.dart';
 import 'package:pilll/entity/diary.codegen.dart';
-import 'package:pilll/components/atoms/buttons.dart';
+import 'package:pilll/components/atoms/button.dart';
 import 'package:pilll/components/atoms/color.dart';
 import 'package:pilll/components/atoms/font.dart';
 import 'package:pilll/components/atoms/text_color.dart';
@@ -22,7 +22,7 @@ import 'package:flutter/material.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
 import 'package:flutter_svg/svg.dart';
 
-const _secitonTitle = TextStyle(fontFamily: FontFamily.japanese, fontWeight: FontWeight.w300, fontSize: FontSize.sLarge, color: TextColor.black);
+const _secitonTitle = TextStyle(fontFamily: FontFamily.japanese, fontWeight: FontWeight.w300, fontSize: 16, color: TextColor.black);
 
 class DiaryPostPage extends HookConsumerWidget {
   final DateTime date;
@@ -123,7 +123,13 @@ class DiaryPostPageBody extends HookConsumerWidget {
               child: ListView(
                 controller: scrollController,
                 children: [
-                  Text(DateTimeFormatter.yearAndMonthAndDay(date), style: FontType.sBigTitle.merge(TextColorStyle.main)),
+                  Text(DateTimeFormatter.yearAndMonthAndDay(date),
+                      style: const TextStyle(
+                        fontFamily: FontFamily.japanese,
+                        fontWeight: FontWeight.w500,
+                        fontSize: 20,
+                        color: TextColor.main,
+                      )),
                   ...[
                     _physicalCondition(physicalCondition),
                     _physicalConditionDetails(context, physicalConditionDetails),
@@ -171,7 +177,7 @@ class DiaryPostPageBody extends HookConsumerWidget {
                 ),
                 child: IconButton(
                     icon: SvgPicture.asset("images/angry.svg",
-                        color: diary.hasPhysicalConditionStatusFor(PhysicalConditionStatus.bad) ? PilllColors.secondary : TextColor.darkGray),
+                        color: diary.hasPhysicalConditionStatusFor(PhysicalConditionStatus.bad) ? PilllColors.primary : TextColor.darkGray),
                     onPressed: () {
                       if (diary.hasPhysicalConditionStatusFor(PhysicalConditionStatus.bad)) {
                         physicalCondition.value = null;
@@ -188,7 +194,7 @@ class DiaryPostPageBody extends HookConsumerWidget {
                 ),
                 child: IconButton(
                     icon: SvgPicture.asset("images/laugh.svg",
-                        color: diary.hasPhysicalConditionStatusFor(PhysicalConditionStatus.fine) ? PilllColors.secondary : TextColor.darkGray),
+                        color: diary.hasPhysicalConditionStatusFor(PhysicalConditionStatus.fine) ? PilllColors.primary : TextColor.darkGray),
                     onPressed: () {
                       if (diary.hasPhysicalConditionStatusFor(PhysicalConditionStatus.fine)) {
                         physicalCondition.value = null;
@@ -253,9 +259,14 @@ class DiaryPostPageBody extends HookConsumerWidget {
           children: availablePhysicalConditionDetails
               .map((e) => ChoiceChip(
                     label: Text(e),
-                    labelStyle: FontType.assisting.merge(diary.physicalConditions.contains(e) ? TextColorStyle.white : TextColorStyle.darkGray),
+                    labelStyle: TextStyle(
+                      fontFamily: FontFamily.japanese,
+                      fontWeight: FontWeight.w300,
+                      fontSize: 14,
+                      color: diary.physicalConditions.contains(e) ? TextColor.white : TextColor.darkGray,
+                    ),
                     disabledColor: PilllColors.disabledSheet,
-                    selectedColor: PilllColors.secondary,
+                    selectedColor: PilllColors.primary,
                     selected: diary.physicalConditions.contains(e),
                     onSelected: (selected) {
                       if (diary.physicalConditions.contains(e)) {
@@ -286,7 +297,7 @@ class DiaryPostPageBody extends HookConsumerWidget {
               width: 32,
               height: 32,
               decoration: BoxDecoration(shape: BoxShape.circle, color: diary.hasSex ? PilllColors.thinSecondary : PilllColors.disabledSheet),
-              child: SvgPicture.asset("images/heart.svg", color: diary.hasSex ? PilllColors.secondary : TextColor.darkGray)),
+              child: SvgPicture.asset("images/heart.svg", color: diary.hasSex ? PilllColors.primary : TextColor.darkGray)),
         ),
         const Spacer(),
       ],

@@ -17,15 +17,19 @@ class CalendarDateHeader extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return ConstrainedBox(
-      constraints:
-          BoxConstraints.expand(height: CalendarDateHeaderConst.headerHeight),
+      constraints: BoxConstraints.expand(height: CalendarDateHeaderConst.headerHeight),
       child: Row(
         children: [
           const SizedBox(width: 16),
           Text(
             DateTimeFormatter.yearAndMonth(date),
             textAlign: TextAlign.left,
-            style: FontType.cardHeader.merge(TextColorStyle.noshime),
+            style: const TextStyle(
+              fontFamily: FontFamily.number,
+              fontWeight: FontWeight.w600,
+              fontSize: 22,
+              color: TextColor.noshime,
+            ),
           ),
           const SizedBox(width: 16),
         ],

@@ -24,7 +24,7 @@ class DiscountPriceDeadline extends HookConsumerWidget {
     final countdown = discountPriceDeadlineCountdownString(difference);
     return Container(
       padding: const EdgeInsets.only(top: 10, bottom: 4, left: 8, right: 8),
-      color: PilllColors.secondary,
+      color: PilllColors.primary,
       child: GestureDetector(
         onTap: onTap,
         child: Stack(
@@ -35,7 +35,12 @@ class DiscountPriceDeadline extends HookConsumerWidget {
                 """
 プレミアム登録で引き続きすべての機能が利用できます
 $countdown内の購入で48%OFF!""",
-                style: FontType.assistingBold.merge(TextColorStyle.white),
+                style: const TextStyle(
+                  fontFamily: FontFamily.japanese,
+                  fontWeight: FontWeight.w600,
+                  fontSize: 14,
+                  color: TextColor.white,
+                ),
                 textAlign: TextAlign.center,
               ),
             ),

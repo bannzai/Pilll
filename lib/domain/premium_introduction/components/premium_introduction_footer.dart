@@ -31,9 +31,7 @@ class PremiumIntroductionFotter extends StatelessWidget {
             child: RichText(
               textAlign: TextAlign.start,
               text: TextSpan(
-                style: TextColorStyle.gray.merge(
-                  const TextStyle(fontWeight: FontWeight.w400, fontSize: 10, fontFamily: FontFamily.japanese),
-                ),
+                style: const TextStyle(fontWeight: FontWeight.w400, fontSize: 10, fontFamily: FontFamily.japanese, color: TextColor.gray),
                 children: [
                   const TextSpan(text: "・プレミアム契約期間は開始日から起算して1ヶ月または1年ごとの自動更新となります\n"),
                   const TextSpan(text: "・"),
@@ -102,17 +100,15 @@ class PremiumIntroductionFotter extends StatelessWidget {
                 isLoading.value = false;
               }
             },
-            child: Text(
+            child: const Text(
               '以前購入した方はこちら',
-              style: const TextStyle(
+              style: TextStyle(
                 decoration: TextDecoration.underline,
-              ).merge(TextColorStyle.main).merge(
-                    const TextStyle(
-                      fontWeight: FontWeight.w400,
-                      fontSize: 12,
-                      fontFamily: FontFamily.japanese,
-                    ),
-                  ),
+                color: TextColor.main,
+                fontWeight: FontWeight.w400,
+                fontSize: 12,
+                fontFamily: FontFamily.japanese,
+              ),
             ),
           ),
         ],

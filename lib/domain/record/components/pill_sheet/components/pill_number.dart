@@ -12,7 +12,11 @@ class PlainPillNumber extends StatelessWidget {
   Widget build(BuildContext context) {
     return Text(
       "$pillNumberIntoPillSheet",
-      style: FontType.smallTitle.merge(const TextStyle(color: PilllColors.weekday)),
+      style: const TextStyle(
+        fontFamily: FontFamily.number,
+        fontWeight: FontWeight.w500,
+        fontSize: 12,
+      ).merge(const TextStyle(color: PilllColors.weekday)),
       textScaleFactor: 1,
     );
   }
@@ -47,7 +51,11 @@ class SequentialPillNumber extends StatelessWidget {
 
     return Text(
       "$number",
-      style: FontType.smallTitle.merge(const TextStyle(color: PilllColors.weekday)),
+      style: const TextStyle(
+        fontFamily: FontFamily.number,
+        fontWeight: FontWeight.w500,
+        fontSize: 12,
+      ).merge(const TextStyle(color: PilllColors.weekday)),
       textScaleFactor: 1,
     );
   }
@@ -61,7 +69,11 @@ class PlainPillDate extends StatelessWidget {
   Widget build(BuildContext context) {
     return Text(
       DateTimeFormatter.monthAndDay(date),
-      style: FontType.smallTitle.merge(const TextStyle(color: PilllColors.weekday)),
+      style: const TextStyle(
+        fontFamily: FontFamily.number,
+        fontWeight: FontWeight.w500,
+        fontSize: 12,
+      ).merge(const TextStyle(color: PilllColors.weekday)),
       textScaleFactor: 1,
     );
   }
@@ -75,7 +87,11 @@ class MenstruationPillNumber extends StatelessWidget {
   Widget build(BuildContext context) {
     return Text(
       "$pillNumberIntoPillSheet",
-      style: FontType.smallTitle.merge(const TextStyle(color: PilllColors.primary)),
+      style: const TextStyle(
+        fontFamily: FontFamily.number,
+        fontWeight: FontWeight.w500,
+        fontSize: 12,
+      ).merge(const TextStyle(color: PilllColors.secondary)),
       textScaleFactor: 1,
     );
   }
@@ -111,7 +127,11 @@ class MenstruationSequentialPillNumber extends StatelessWidget {
 
     return Text(
       "$number",
-      style: FontType.smallTitle.merge(const TextStyle(color: PilllColors.primary)),
+      style: const TextStyle(
+        fontFamily: FontFamily.number,
+        fontWeight: FontWeight.w500,
+        fontSize: 12,
+      ).merge(const TextStyle(color: PilllColors.secondary)),
       textScaleFactor: 1,
     );
   }
@@ -125,7 +145,11 @@ class MenstruationPillDate extends StatelessWidget {
   Widget build(BuildContext context) {
     return Text(
       DateTimeFormatter.monthAndDay(date),
-      style: FontType.smallTitle.merge(const TextStyle(color: PilllColors.primary)),
+      style: const TextStyle(
+        fontFamily: FontFamily.number,
+        fontWeight: FontWeight.w500,
+        fontSize: 12,
+      ).merge(const TextStyle(color: PilllColors.secondary)),
       textScaleFactor: 1,
     );
   }

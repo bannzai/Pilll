@@ -82,14 +82,26 @@ class _UniversalErrorPageState extends State<UniversalErrorPage> {
                 height: 190,
               ),
               const SizedBox(height: 25),
-              Text(message, style: FontType.assisting.merge(TextColorStyle.main)),
+              Text(message,
+                  style: const TextStyle(
+                    fontFamily: FontFamily.japanese,
+                    fontWeight: FontWeight.w300,
+                    fontSize: 14,
+                    color: TextColor.main,
+                  )),
               const SizedBox(height: 25),
               TextButton.icon(
                 icon: const Icon(
                   Icons.refresh,
                   size: 20,
                 ),
-                label: Text("画面を再読み込み", style: FontType.assisting.merge(TextColorStyle.black)),
+                label: const Text("画面を再読み込み",
+                    style: TextStyle(
+                      fontFamily: FontFamily.japanese,
+                      fontWeight: FontWeight.w300,
+                      fontSize: 14,
+                      color: TextColor.black,
+                    )),
                 onPressed: () {
                   analytics.logEvent(name: "reload_button_pressed");
                   setState(() {
@@ -106,7 +118,13 @@ class _UniversalErrorPageState extends State<UniversalErrorPage> {
                   Icons.mail,
                   size: 20,
                 ),
-                label: Text("解決しない場合はこちら", style: FontType.assisting.merge(TextColorStyle.black)),
+                label: const Text("解決しない場合はこちら",
+                    style: TextStyle(
+                      fontFamily: FontFamily.japanese,
+                      fontWeight: FontWeight.w300,
+                      fontSize: 14,
+                      color: TextColor.black,
+                    )),
                 onPressed: () {
                   analytics.logEvent(name: "problem_unresolved_button_pressed");
                   inquiry();

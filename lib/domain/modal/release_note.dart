@@ -2,7 +2,7 @@ import 'dart:io';
 
 import 'package:flutter_inappwebview/flutter_inappwebview.dart';
 import 'package:pilll/analytics.dart';
-import 'package:pilll/components/atoms/buttons.dart';
+import 'package:pilll/components/atoms/button.dart';
 import 'package:pilll/components/atoms/color.dart';
 import 'package:pilll/components/atoms/font.dart';
 import 'package:pilll/components/atoms/text_color.dart';
@@ -43,9 +43,14 @@ class ReleaseNote extends StatelessWidget {
                       alignment: Alignment.center,
                       child: Container(
                         padding: const EdgeInsets.only(top: 40, left: 40, right: 40),
-                        child: Text(
+                        child: const Text(
                           "ホームウィジェットが追加できるようになりました",
-                          style: FontType.subTitle.merge(TextColorStyle.black),
+                          style: TextStyle(
+                            fontFamily: FontFamily.japanese,
+                            fontWeight: FontWeight.w600,
+                            fontSize: 16,
+                            color: TextColor.black,
+                          ),
                           textAlign: TextAlign.center,
                         ),
                       ),
@@ -56,12 +61,17 @@ class ReleaseNote extends StatelessWidget {
                   padding: const EdgeInsets.only(top: 25, left: 25, right: 25),
                   child: Column(
                     crossAxisAlignment: CrossAxisAlignment.start,
-                    children: [
+                    children: const [
                       Text(
                         '''
 ホームウィジェットを追加できるようになりました。本日服用するピルの番号が一目でわかるようになっています
                         ''',
-                        style: FontType.assisting.merge(TextColorStyle.main),
+                        style: TextStyle(
+                          fontFamily: FontFamily.japanese,
+                          fontWeight: FontWeight.w300,
+                          fontSize: 14,
+                          color: TextColor.main,
+                        ),
                       ),
                     ],
                   ),

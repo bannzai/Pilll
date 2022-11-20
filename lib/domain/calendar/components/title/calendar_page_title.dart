@@ -35,7 +35,12 @@ class CalendarPageTitle extends StatelessWidget {
         ),
         Text(
           _displayMonthString,
-          style: TextColorStyle.main.merge(FontType.subTitle),
+          style: const TextStyle(
+            color: TextColor.main,
+            fontFamily: FontFamily.japanese,
+            fontWeight: FontWeight.w600,
+            fontSize: 16,
+          ),
         ),
         IconButton(
           icon: SvgPicture.asset("images/arrow_right.svg"),

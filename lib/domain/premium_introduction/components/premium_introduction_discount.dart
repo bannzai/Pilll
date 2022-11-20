@@ -41,15 +41,14 @@ class PremiumIntroductionDiscountRow extends HookConsumerWidget {
         crossAxisAlignment: CrossAxisAlignment.center,
         mainAxisSize: MainAxisSize.min,
         children: [
-          Text(
+          const Text(
             "今なら限定価格でずっと使える",
             textAlign: TextAlign.center,
-            style: TextColorStyle.main.merge(
-              const TextStyle(
-                fontWeight: FontWeight.w700,
-                fontFamily: FontFamily.japanese,
-                fontSize: 20,
-              ),
+            style: TextStyle(
+              fontWeight: FontWeight.w700,
+              fontFamily: FontFamily.japanese,
+              fontSize: 20,
+              color: TextColor.main,
             ),
           ),
           const SizedBox(height: 4),
@@ -64,15 +63,14 @@ class PremiumIntroductionDiscountRow extends HookConsumerWidget {
               ),
             ),
           const SizedBox(height: 20),
-          Text(
+          const Text(
             "通常 月額プラン",
             textAlign: TextAlign.center,
-            style: TextColorStyle.black.merge(
-              const TextStyle(
-                fontWeight: FontWeight.w400,
-                fontSize: 12,
-                fontFamily: FontFamily.japanese,
-              ),
+            style: TextStyle(
+              fontWeight: FontWeight.w400,
+              fontSize: 12,
+              fontFamily: FontFamily.japanese,
+              color: TextColor.black,
             ),
           ),
           const SizedBox(height: 4),
@@ -81,12 +79,11 @@ class PremiumIntroductionDiscountRow extends HookConsumerWidget {
               Text(
                 monthlyPremiumPackage.storeProduct.priceString,
                 textAlign: TextAlign.center,
-                style: TextColorStyle.main.merge(
-                  const TextStyle(
-                    fontWeight: FontWeight.w700,
-                    fontSize: 28,
-                    fontFamily: FontFamily.japanese,
-                  ),
+                style: const TextStyle(
+                  fontWeight: FontWeight.w700,
+                  fontSize: 28,
+                  fontFamily: FontFamily.japanese,
+                  color: TextColor.main,
                 ),
               ),
               Positioned(

@@ -22,9 +22,19 @@ class NotificationInRestDuration extends HookConsumerWidget {
   Widget build(BuildContext context, WidgetRef ref) {
     final setSetting = ref.watch(setSettingProvider);
     return SwitchListTile(
-      title: Text("${pillSheet.pillSheetType.notTakenWord}期間の通知", style: FontType.listRow),
-      subtitle: Text("通知オフの場合は、${pillSheet.pillSheetType.notTakenWord}期間の服用記録も自動で付けられます", style: FontType.assisting),
-      activeColor: PilllColors.primary,
+      title: Text("${pillSheet.pillSheetType.notTakenWord}期間の通知",
+          style: const TextStyle(
+            fontFamily: FontFamily.roboto,
+            fontWeight: FontWeight.w300,
+            fontSize: 16,
+          )),
+      subtitle: Text("通知オフの場合は、${pillSheet.pillSheetType.notTakenWord}期間の服用記録も自動で付けられます",
+          style: const TextStyle(
+            fontFamily: FontFamily.japanese,
+            fontWeight: FontWeight.w300,
+            fontSize: 14,
+          )),
+      activeColor: PilllColors.secondary,
       onChanged: (bool value) async {
         analytics.logEvent(
           name: "toggle_notify_not_taken_duration",

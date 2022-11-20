@@ -76,7 +76,12 @@ class RecordPageInformationHeader extends StatelessWidget {
     return Center(
       child: Text(
         "${_formattedToday()} (${_todayWeekday()})",
-        style: FontType.xBigNumber.merge(TextColorStyle.gray),
+        style: const TextStyle(
+          fontFamily: FontFamily.number,
+          fontWeight: FontWeight.w600,
+          fontSize: 24,
+          color: TextColor.gray,
+        ),
       ),
     );
   }

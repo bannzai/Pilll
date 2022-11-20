@@ -31,32 +31,38 @@ class MenstruationCard extends StatelessWidget {
                       width: 24,
                       color: PilllColors.red,
                     ),
-                    Text(state.title,
-                        style:
-                            TextColorStyle.noshime.merge(FontType.assisting)),
+                    Text(
+                      state.title,
+                      style: const TextStyle(
+                        fontFamily: FontFamily.japanese,
+                        fontWeight: FontWeight.w300,
+                        fontSize: 14,
+                        color: TextColor.noshime,
+                      ),
+                    ),
                   ],
                 ),
                 const SizedBox(width: 12),
                 Text(
                   DateTimeFormatter.monthAndWeekday(state.scheduleDate),
-                  style: const TextStyle(
-                      color: TextColor.gray,
-                      fontSize: 20,
-                      fontWeight: FontWeight.w500,
-                      fontFamily: FontFamily.japanese),
+                  style: const TextStyle(color: TextColor.gray, fontSize: 20, fontWeight: FontWeight.w500, fontFamily: FontFamily.japanese),
                 ),
               ],
             ),
             const SizedBox(height: 8),
             Container(
-              padding:
-                  const EdgeInsets.only(left: 32, right: 32, top: 2, bottom: 2),
+              padding: const EdgeInsets.only(left: 32, right: 32, top: 2, bottom: 2),
               decoration: BoxDecoration(
-                color: PilllColors.secondary,
+                color: PilllColors.primary,
                 borderRadius: BorderRadius.circular(30),
               ),
               child: Text(state.countdownString,
-                  style: TextColorStyle.white.merge(FontType.assistingBold)),
+                  style: const TextStyle(
+                    fontFamily: FontFamily.japanese,
+                    fontWeight: FontWeight.w600,
+                    fontSize: 14,
+                    color: TextColor.white,
+                  )),
             ),
           ],
         ),

@@ -5,7 +5,7 @@ import 'package:hooks_riverpod/hooks_riverpod.dart';
 import 'package:pilll/analytics.dart';
 import 'package:pilll/auth/apple.dart';
 import 'package:pilll/auth/google.dart';
-import 'package:pilll/components/atoms/buttons.dart';
+import 'package:pilll/components/atoms/button.dart';
 import 'package:pilll/components/atoms/color.dart';
 import 'package:pilll/components/atoms/font.dart';
 import 'package:pilll/components/atoms/text_color.dart';
@@ -36,16 +36,21 @@ class SettingAccountCooperationListPage extends HookConsumerWidget {
                 icon: const Icon(Icons.arrow_back, color: Colors.black),
                 onPressed: () => Navigator.of(context).pop(),
               ),
-              title: const Text('アカウント設定', style: TextColorStyle.main),
+              title: const Text('アカウント設定', style: TextStyle(color: TextColor.main)),
               backgroundColor: PilllColors.white,
             ),
             body: ListView(
               children: [
                 Container(
                   padding: const EdgeInsets.only(top: 16, left: 15, right: 16),
-                  child: Text(
+                  child: const Text(
                     "アカウント登録",
-                    style: FontType.assisting.merge(TextColorStyle.primary),
+                    style: TextStyle(
+                      fontFamily: FontFamily.japanese,
+                      fontWeight: FontWeight.w300,
+                      fontSize: 14,
+                      color: TextColor.primary,
+                    ),
                   ),
                 ),
                 SettingAccountCooperationRow(
@@ -204,7 +209,12 @@ class SettingAccountCooperationRow extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return ListTile(
-      title: Text(accountType.loginContentName, style: FontType.listRow),
+      title: Text(accountType.loginContentName,
+          style: const TextStyle(
+            fontFamily: FontFamily.roboto,
+            fontWeight: FontWeight.w300,
+            fontSize: 16,
+          )),
       trailing: _trailing(),
       horizontalTitleGap: 4,
       onTap: () async {
@@ -226,7 +236,13 @@ class SettingAccountCooperationRow extends StatelessWidget {
         children: [
           SvgPicture.asset("images/checkmark_green.svg"),
           const SizedBox(width: 6),
-          Text("連携済み", style: FontType.assisting.merge(TextColorStyle.darkGray)),
+          const Text("連携済み",
+              style: TextStyle(
+                fontFamily: FontFamily.japanese,
+                fontWeight: FontWeight.w300,
+                fontSize: 14,
+                color: TextColor.darkGray,
+              )),
         ],
       );
     } else {

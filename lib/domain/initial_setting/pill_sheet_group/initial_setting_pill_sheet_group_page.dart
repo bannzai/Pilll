@@ -10,7 +10,7 @@ import 'package:pilll/components/template/setting_pill_sheet_group/setting_pill_
 import 'package:pilll/domain/initial_setting/initial_setting_state.codegen.dart';
 import 'package:pilll/domain/initial_setting/today_pill_number/initial_setting_select_today_pill_number_page.dart';
 import 'package:pilll/domain/initial_setting/initial_setting_state_notifier.dart';
-import 'package:pilll/components/atoms/buttons.dart';
+import 'package:pilll/components/atoms/button.dart';
 import 'package:pilll/components/atoms/color.dart';
 import 'package:pilll/components/atoms/text_color.dart';
 import 'package:flutter/material.dart';
@@ -83,9 +83,14 @@ class InitialSettingPillSheetGroupPage extends HookConsumerWidget {
                   child: Column(
                     children: [
                       const SizedBox(height: 24),
-                      Text(
+                      const Text(
                         "処方されるシートについて\n教えてください",
-                        style: FontType.sBigTitle.merge(TextColorStyle.main),
+                        style: TextStyle(
+                          fontFamily: FontFamily.japanese,
+                          fontWeight: FontWeight.w500,
+                          fontSize: 20,
+                          color: TextColor.main,
+                        ),
                         textAlign: TextAlign.center,
                       ),
                       InitialSettingPillSheetGroupPageBody(state: state, store: store),

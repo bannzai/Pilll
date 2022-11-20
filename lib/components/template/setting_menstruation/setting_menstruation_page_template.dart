@@ -1,4 +1,4 @@
-import 'package:pilll/components/atoms/buttons.dart';
+import 'package:pilll/components/atoms/button.dart';
 import 'package:pilll/components/atoms/color.dart';
 import 'package:pilll/components/atoms/font.dart';
 import 'package:pilll/components/atoms/text_color.dart';
@@ -43,9 +43,14 @@ class SettingMenstruationPageTemplate extends StatelessWidget {
               child: ListView(
                 children: <Widget>[
                   const SizedBox(height: 24),
-                  Text(
+                  const Text(
                     "生理がはじまるピル番号をタップ",
-                    style: FontType.sBigTitle.merge(TextColorStyle.main),
+                    style: TextStyle(
+                      fontFamily: FontFamily.japanese,
+                      fontWeight: FontWeight.w500,
+                      fontSize: 20,
+                      color: TextColor.main,
+                    ),
                     textAlign: TextAlign.center,
                   ),
                   const SizedBox(height: 59),
