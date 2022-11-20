@@ -6,7 +6,7 @@ import 'package:pilll/utils/analytics.dart';
 import 'package:purchases_flutter/purchases_flutter.dart';
 import 'package:riverpod/riverpod.dart';
 
-final serUserIDProvider = Provider((_) => SetUserID());
+final setUserIDProvider = Provider((_) => SetUserID());
 
 class SetUserID {
   Future<void> call({required String userID}) async {
