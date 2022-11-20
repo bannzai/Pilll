@@ -16,7 +16,7 @@ import 'package:pilll/entity/user.codegen.dart';
 import 'package:pilll/provider/auth.dart';
 
 final databaseProvider = Provider<DatabaseConnection>((ref) {
-  final stream = ref.watch(authStateStreamProvider);
+  final stream = ref.watch(firebaseUserStateProvider);
   final uid = stream.asData?.value?.uid ?? firebase.FirebaseAuth.instance.currentUser?.uid;
   debugPrint("[DEBUG] database uid is $uid");
   if (uid == null) {

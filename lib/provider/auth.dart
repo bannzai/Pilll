@@ -7,7 +7,7 @@ import 'package:pilll/utils/shared_preference/keys.dart';
 import 'package:riverpod/riverpod.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
-final authStateStreamProvider = StreamProvider<User?>(
+final firebaseUserStateProvider = StreamProvider<User?>(
   (ref) => FirebaseAuth.instance.userChanges(),
 );
 
