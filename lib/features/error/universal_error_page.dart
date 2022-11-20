@@ -38,7 +38,7 @@ class UniversalErrorPage extends StatefulWidget {
 
 class _UniversalErrorPageState extends State<UniversalErrorPage> {
   Object? _error;
-  showError(Object error) {
+  void showError(Object error) {
     setState(() {
       _error = error;
     });
@@ -72,65 +72,67 @@ class _UniversalErrorPageState extends State<UniversalErrorPage> {
       body: Center(
         child: SizedBox(
           width: 300,
-          child: Column(
-            mainAxisSize: MainAxisSize.min,
-            crossAxisAlignment: CrossAxisAlignment.center,
-            children: [
-              Image.asset(
-                "images/universal_error.png",
-                width: 200,
-                height: 190,
-              ),
-              const SizedBox(height: 25),
-              Text(message,
-                  style: const TextStyle(
-                    fontFamily: FontFamily.japanese,
-                    fontWeight: FontWeight.w300,
-                    fontSize: 14,
-                    color: TextColor.main,
-                  )),
-              const SizedBox(height: 25),
-              TextButton.icon(
-                icon: const Icon(
-                  Icons.refresh,
-                  size: 20,
+          child: SingleChildScrollView(
+            child: Column(
+              mainAxisSize: MainAxisSize.min,
+              crossAxisAlignment: CrossAxisAlignment.center,
+              children: [
+                Image.asset(
+                  "images/universal_error.png",
+                  width: 200,
+                  height: 190,
                 ),
-                label: const Text("画面を再読み込み",
-                    style: TextStyle(
+                const SizedBox(height: 25),
+                Text(message,
+                    style: const TextStyle(
                       fontFamily: FontFamily.japanese,
                       fontWeight: FontWeight.w300,
                       fontSize: 14,
-                      color: TextColor.black,
+                      color: TextColor.main,
                     )),
-                onPressed: () {
-                  analytics.logEvent(name: "reload_button_pressed");
-                  setState(() {
-                    _error = null;
-                    final reload = widget.reload;
-                    if (reload != null) {
-                      reload();
-                    }
-                  });
-                },
-              ),
-              TextButton.icon(
-                icon: const Icon(
-                  Icons.mail,
-                  size: 20,
+                const SizedBox(height: 25),
+                TextButton.icon(
+                  icon: const Icon(
+                    Icons.refresh,
+                    size: 20,
+                  ),
+                  label: const Text("画面を再読み込み",
+                      style: TextStyle(
+                        fontFamily: FontFamily.japanese,
+                        fontWeight: FontWeight.w300,
+                        fontSize: 14,
+                        color: TextColor.black,
+                      )),
+                  onPressed: () {
+                    analytics.logEvent(name: "reload_button_pressed");
+                    setState(() {
+                      _error = null;
+                      final reload = widget.reload;
+                      if (reload != null) {
+                        reload();
+                      }
+                    });
+                  },
                 ),
-                label: const Text("解決しない場合はこちら",
-                    style: TextStyle(
-                      fontFamily: FontFamily.japanese,
-                      fontWeight: FontWeight.w300,
-                      fontSize: 14,
-                      color: TextColor.black,
-                    )),
-                onPressed: () {
-                  analytics.logEvent(name: "problem_unresolved_button_pressed");
-                  inquiry();
-                },
-              )
-            ],
+                TextButton.icon(
+                  icon: const Icon(
+                    Icons.mail,
+                    size: 20,
+                  ),
+                  label: const Text("解決しない場合はこちら",
+                      style: TextStyle(
+                        fontFamily: FontFamily.japanese,
+                        fontWeight: FontWeight.w300,
+                        fontSize: 14,
+                        color: TextColor.black,
+                      )),
+                  onPressed: () {
+                    analytics.logEvent(name: "problem_unresolved_button_pressed");
+                    inquiry();
+                  },
+                )
+              ],
+            ),
           ),
         ),
       ),
