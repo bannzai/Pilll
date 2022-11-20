@@ -66,7 +66,7 @@ class Root extends HookConsumerWidget {
     // For app screen state
     useEffect(() {
       f() async {
-        final firebaseUser = firebaseUserAsyncValue.asData?.value;
+        final firebaseUser = firebaseUserAsyncValue.valueOrNull;
         if (firebaseUser == null) {
           try {
             // SignIn first. Keep in mind that this method is called first.
@@ -82,7 +82,7 @@ class Root extends HookConsumerWidget {
 
       f();
       return null;
-    }, [firebaseUserAsyncValue.asData?.value?.uid]);
+    }, [firebaseUserAsyncValue.valueOrNull?.uid]);
 
     // For force update
     if (shouldForceUpdate.value) {
@@ -101,7 +101,7 @@ class Root extends HookConsumerWidget {
       error: error.value,
       reload: () => ref.refresh(refreshAppProvider),
       child: () {
-        final uid = firebaseUserAsyncValue.asData?.value?.uid;
+        final uid = firebaseUserAsyncValue.valueOrNull?.uid;
         if (uid == null) {
           return const ScaffoldIndicator();
         } else {
