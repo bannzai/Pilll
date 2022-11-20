@@ -10,7 +10,7 @@ import 'package:pilll/components/atoms/color.dart';
 import 'package:pilll/components/atoms/font.dart';
 import 'package:pilll/features/root/root.dart';
 import 'package:pilll/native/channel.dart';
-import 'package:pilll/service/local_notification.dart';
+import 'package:pilll/util/local_notification.dart';
 import 'package:pilll/util/datetime/debug_print.dart';
 import 'package:pilll/util/environment.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
