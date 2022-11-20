@@ -10,11 +10,6 @@ class FontFamily {
 }
 
 class FontType {
-  static const TextStyle largeNumber = TextStyle(
-    fontFamily: FontFamily.japanese,
-    fontWeight: FontWeight.w500,
-    fontSize: 34,
-  );
   static const TextStyle title = TextStyle(
     fontFamily: FontFamily.japanese,
     fontWeight: FontWeight.w600,
