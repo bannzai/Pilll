@@ -30,6 +30,7 @@ import 'package:pilll/provider/pill_sheet_modified_history.dart' as _i12;
 import 'package:pilll/provider/premium_and_trial.codegen.dart' as _i4;
 import 'package:pilll/provider/purchase.dart' as _i28;
 import 'package:pilll/provider/revert_take_pill.dart' as _i29;
+import 'package:pilll/provider/set_user_id.dart' as _i32;
 import 'package:pilll/provider/setting.dart' as _i20;
 import 'package:pilll/provider/take_pill.dart' as _i30;
 import 'package:pilll/provider/user.dart' as _i27;
@@ -952,4 +953,24 @@ class MockCheckForceUpdate extends _i1.Mock implements _i31.CheckForceUpdate {
         ),
         returnValue: Future<bool>.value(false),
       ) as _i16.Future<bool>);
+}
+
+/// A class which mocks [SetUserID].
+///
+/// See the documentation for Mockito's code generation for more information.
+class MockSetUserID extends _i1.Mock implements _i32.SetUserID {
+  MockSetUserID() {
+    _i1.throwOnMissingStub(this);
+  }
+
+  @override
+  _i16.Future<void> call({String? userID}) => (super.noSuchMethod(
+        Invocation.method(
+          #call,
+          [],
+          {#userID: userID},
+        ),
+        returnValue: Future<void>.value(),
+        returnValueForMissingStub: Future<void>.value(),
+      ) as _i16.Future<void>);
 }
