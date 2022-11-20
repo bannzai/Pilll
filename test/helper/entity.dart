@@ -2,6 +2,7 @@ import 'package:pilll/entity/pill_sheet.codegen.dart';
 import 'package:pilll/entity/pill_sheet_group.codegen.dart';
 import 'package:pilll/entity/pill_sheet_type.dart';
 import 'package:pilll/entity/setting.codegen.dart';
+import 'package:pilll/provider/premium_and_trial.codegen.dart';
 import 'package:pilll/utils/datetime/day.dart';
 
 List<PillSheet> pillSheet1([int offsetDay = 0]) =>
@@ -31,3 +32,19 @@ Setting setting() => const Setting(
       isOnReminder: true,
       timezoneDatabaseName: "Asia/Tokyo",
     );
+
+PremiumAndTrial trial() => PremiumAndTrial(
+    isTrial: true,
+    isPremium: false,
+    hasDiscountEntitlement: true,
+    beginTrialDate: now().subtract(const Duration(days: 3)),
+    trialDeadlineDate: now().add(const Duration(days: 27)),
+    discountEntitlementDeadlineDate: now().add(const Duration(days: 29)));
+
+PremiumAndTrial premium([bool hasDiscountEntitlement = false]) => PremiumAndTrial(
+    isTrial: false,
+    isPremium: true,
+    hasDiscountEntitlement: hasDiscountEntitlement,
+    beginTrialDate: now().subtract(const Duration(days: 31)),
+    trialDeadlineDate: now().subtract(const Duration(days: 1)),
+    discountEntitlementDeadlineDate: hasDiscountEntitlement ? now().add(const Duration(days: 1)) : now().subtract(const Duration(days: 1)));
