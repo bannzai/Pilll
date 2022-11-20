@@ -37,7 +37,7 @@ class AnnualPurchaseButton extends StatelessWidget {
               borderRadius: const BorderRadius.all(Radius.circular(4)),
               border: Border.all(
                 width: 2,
-                color: PilllColors.secondary,
+                color: PilllColors.primary,
               ),
             ),
             child: Column(
@@ -97,7 +97,7 @@ class _DiscountBadge extends StatelessWidget {
       padding: const EdgeInsets.only(left: 8, right: 8, top: 4, bottom: 4),
       decoration: BoxDecoration(
         borderRadius: BorderRadius.circular(12),
-        color: PilllColors.primary,
+        color: PilllColors.secondary,
       ),
       child: Text(
         offeringType == OfferingType.limited ? "通常月額と比べて48％OFF" : "37.5％OFF",

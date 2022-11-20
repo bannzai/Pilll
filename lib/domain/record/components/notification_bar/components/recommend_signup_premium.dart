@@ -15,7 +15,7 @@ class RecommendSignupForPremiumNotificationBar extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       padding: const EdgeInsets.only(top: 10, bottom: 8, left: 8, right: 8),
-      color: PilllColors.secondary,
+      color: PilllColors.primary,
       child: GestureDetector(
         onTap: () {
           analytics.logEvent(name: "tapped_premium_signup_notification_bar");

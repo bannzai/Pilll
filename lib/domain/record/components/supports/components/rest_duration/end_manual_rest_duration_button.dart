@@ -126,7 +126,7 @@ class EndRestDurationModal extends HookConsumerWidget {
             Container(
               padding: const EdgeInsets.symmetric(vertical: 6, horizontal: 16),
               decoration: BoxDecoration(
-                color: PilllColors.secondary,
+                color: PilllColors.primary,
                 borderRadius: BorderRadius.circular(50),
               ),
               child: const Text(

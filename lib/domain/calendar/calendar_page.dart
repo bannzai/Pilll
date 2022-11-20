@@ -102,7 +102,7 @@ class _CalendarPageBody extends StatelessWidget {
             Navigator.of(context).push(DiaryPostPageRoute.route(today(), null));
           },
           child: const Icon(Icons.add, color: Colors.white),
-          backgroundColor: PilllColors.secondary,
+          backgroundColor: PilllColors.primary,
         ),
       ),
       backgroundColor: PilllColors.background,

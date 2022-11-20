@@ -30,7 +30,7 @@ extension _CellTypeFunction on MenstruationSelectModifyType {
       }
     }
 
-    return SvgPicture.asset(name(), color: PilllColors.secondary);
+    return SvgPicture.asset(name(), color: PilllColors.primary);
   }
 }
 

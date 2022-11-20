@@ -50,7 +50,7 @@ class MenstruationCard extends StatelessWidget {
             Container(
               padding: const EdgeInsets.only(left: 32, right: 32, top: 2, bottom: 2),
               decoration: BoxDecoration(
-                color: PilllColors.secondary,
+                color: PilllColors.primary,
                 borderRadius: BorderRadius.circular(30),
               ),
               child: Text(state.countdownString,

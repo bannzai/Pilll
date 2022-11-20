@@ -26,7 +26,7 @@ class MonthlyPurchaseButton extends StatelessWidget {
           borderRadius: const BorderRadius.all(Radius.circular(4)),
           border: Border.all(
             width: 2,
-            color: PilllColors.secondary,
+            color: PilllColors.primary,
           ),
         ),
         child: Column(

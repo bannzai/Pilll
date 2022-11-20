@@ -24,7 +24,7 @@ class DiscountPriceDeadline extends HookConsumerWidget {
     final countdown = discountPriceDeadlineCountdownString(difference);
     return Container(
       padding: const EdgeInsets.only(top: 10, bottom: 4, left: 8, right: 8),
-      color: PilllColors.secondary,
+      color: PilllColors.primary,
       child: GestureDetector(
         onTap: onTap,
         child: Stack(

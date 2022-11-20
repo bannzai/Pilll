@@ -10,7 +10,7 @@ class TextColor {
   static const Color lightGray = Color(0xFFB1B1B1);
   static const Color lightGray2 = Color(0xFF666666);
   static const Color noshime = Color(0xFF3D4662);
-  static const Color primary = PilllColors.primary;
+  static const Color primary = PilllColors.secondary;
   static const Color main = Color(0xD429304D);
   static const Color primaryDarkBlue = Color(0xFF4E6287);
   static const Color link = primary;

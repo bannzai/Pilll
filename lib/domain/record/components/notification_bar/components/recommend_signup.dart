@@ -18,7 +18,7 @@ class RecommendSignupNotificationBar extends HookConsumerWidget {
   Widget build(BuildContext context, WidgetRef ref) {
     return Container(
       padding: const EdgeInsets.symmetric(vertical: 8, horizontal: 8),
-      color: PilllColors.secondary,
+      color: PilllColors.primary,
       child: GestureDetector(
         onTap: onTap,
         child: Row(

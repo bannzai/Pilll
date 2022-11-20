@@ -57,7 +57,7 @@ class ReminderNotificationCustomizeWordPage extends HookConsumerWidget {
                   TextField(
                     decoration: InputDecoration(
                       focusedBorder: const UnderlineInputBorder(
-                        borderSide: BorderSide(color: PilllColors.primary),
+                        borderSide: BorderSide(color: PilllColors.secondary),
                       ),
                       counter: Row(children: [
                         const Text(

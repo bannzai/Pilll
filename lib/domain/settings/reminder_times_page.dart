@@ -64,7 +64,7 @@ class ReminderTimesPage extends HookConsumerWidget {
                     ),
                   );
                 },
-                icon: const Icon(Icons.timer_sharp, color: PilllColors.secondary),
+                icon: const Icon(Icons.timer_sharp, color: PilllColors.primary),
               ),
             ],
             backgroundColor: PilllColors.background,

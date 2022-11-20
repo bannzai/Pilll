@@ -20,7 +20,7 @@ class UserSurvey extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       padding: const EdgeInsets.symmetric(horizontal: 8, vertical: 8),
-      color: PilllColors.secondary,
+      color: PilllColors.primary,
       child: GestureDetector(
         onTap: () async {
           analytics.logEvent(name: "user_survey_open", parameters: {"key": BoolKey.userAnsweredSurvey});

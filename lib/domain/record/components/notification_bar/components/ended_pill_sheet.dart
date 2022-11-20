@@ -36,7 +36,7 @@ class EndedPillSheet extends StatelessWidget {
       },
       child: Container(
         padding: const EdgeInsets.symmetric(vertical: 8, horizontal: 8),
-        color: PilllColors.secondary,
+        color: PilllColors.primary,
         child: Center(
           child: Column(
             children: [

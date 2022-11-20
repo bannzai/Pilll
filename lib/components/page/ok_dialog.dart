@@ -20,7 +20,7 @@ class OKDialog extends StatelessWidget {
     return AlertDialog(
       title: const Icon(
         Icons.help,
-        color: PilllColors.secondary,
+        color: PilllColors.primary,
       ),
       content: Column(
         mainAxisAlignment: MainAxisAlignment.spaceBetween,

@@ -124,7 +124,7 @@ class _SchedulePostPage extends HookConsumerWidget {
                             fontWeight: FontWeight.w300,
                             fontSize: 16,
                           )),
-                      activeColor: PilllColors.primary,
+                      activeColor: PilllColors.secondary,
                       onChanged: (bool value) {
                         analytics.logEvent(
                           name: "schedule_post_remind_toggle",

@@ -20,7 +20,7 @@ class PremiumTrialLimitNotificationBar extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       padding: const EdgeInsets.symmetric(vertical: 10, horizontal: 8),
-      color: PilllColors.secondary,
+      color: PilllColors.primary,
       child: GestureDetector(
         onTap: () async {
           analytics.logEvent(name: "pressed_trial_limited_notification_bar");

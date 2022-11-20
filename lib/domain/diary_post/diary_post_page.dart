@@ -176,7 +176,7 @@ class DiaryPostPageBody extends HookConsumerWidget {
                 ),
                 child: IconButton(
                     icon: SvgPicture.asset("images/angry.svg",
-                        color: diary.hasPhysicalConditionStatusFor(PhysicalConditionStatus.bad) ? PilllColors.secondary : TextColor.darkGray),
+                        color: diary.hasPhysicalConditionStatusFor(PhysicalConditionStatus.bad) ? PilllColors.primary : TextColor.darkGray),
                     onPressed: () {
                       if (diary.hasPhysicalConditionStatusFor(PhysicalConditionStatus.bad)) {
                         physicalCondition.value = null;
@@ -193,7 +193,7 @@ class DiaryPostPageBody extends HookConsumerWidget {
                 ),
                 child: IconButton(
                     icon: SvgPicture.asset("images/laugh.svg",
-                        color: diary.hasPhysicalConditionStatusFor(PhysicalConditionStatus.fine) ? PilllColors.secondary : TextColor.darkGray),
+                        color: diary.hasPhysicalConditionStatusFor(PhysicalConditionStatus.fine) ? PilllColors.primary : TextColor.darkGray),
                     onPressed: () {
                       if (diary.hasPhysicalConditionStatusFor(PhysicalConditionStatus.fine)) {
                         physicalCondition.value = null;
@@ -264,7 +264,7 @@ class DiaryPostPageBody extends HookConsumerWidget {
                       fontSize: 14,
                     ).merge(diary.physicalConditions.contains(e) ? TextColorStyle.white : TextColorStyle.darkGray),
                     disabledColor: PilllColors.disabledSheet,
-                    selectedColor: PilllColors.secondary,
+                    selectedColor: PilllColors.primary,
                     selected: diary.physicalConditions.contains(e),
                     onSelected: (selected) {
                       if (diary.physicalConditions.contains(e)) {
@@ -295,7 +295,7 @@ class DiaryPostPageBody extends HookConsumerWidget {
               width: 32,
               height: 32,
               decoration: BoxDecoration(shape: BoxShape.circle, color: diary.hasSex ? PilllColors.thinSecondary : PilllColors.disabledSheet),
-              child: SvgPicture.asset("images/heart.svg", color: diary.hasSex ? PilllColors.secondary : TextColor.darkGray)),
+              child: SvgPicture.asset("images/heart.svg", color: diary.hasSex ? PilllColors.primary : TextColor.darkGray)),
         ),
         const Spacer(),
       ],

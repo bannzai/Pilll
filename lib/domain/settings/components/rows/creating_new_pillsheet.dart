@@ -46,7 +46,7 @@ class CreatingNewPillSheetRow extends HookConsumerWidget {
             fontWeight: FontWeight.w300,
             fontSize: 14,
           )),
-      activeColor: PilllColors.primary,
+      activeColor: PilllColors.secondary,
       onChanged: (bool value) async {
         analytics.logEvent(
           name: "toggle_creating_new_pillsheet",

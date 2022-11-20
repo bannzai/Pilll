@@ -39,7 +39,7 @@ class PrimaryButton extends HookWidget {
             if (statuses.contains(MaterialState.disabled)) {
               return PilllColors.lightGray;
             }
-            return PilllColors.secondary;
+            return PilllColors.primary;
           })),
           onPressed: isProcessing.value || onPressed == null
               ? null
@@ -253,11 +253,11 @@ class SmallAppOutlinedButton extends HookWidget {
         ),
       ),
       style: OutlinedButton.styleFrom(
-        foregroundColor: PilllColors.secondary,
+        foregroundColor: PilllColors.primary,
         shape: RoundedRectangleBorder(
           borderRadius: BorderRadius.circular(6),
         ),
-        side: const BorderSide(color: PilllColors.secondary),
+        side: const BorderSide(color: PilllColors.primary),
       ),
       onPressed: onPressed == null
           ? null
@@ -312,11 +312,11 @@ class AppOutlinedButton extends HookWidget {
             ),
           ),
           style: OutlinedButton.styleFrom(
-            foregroundColor: PilllColors.secondary,
+            foregroundColor: PilllColors.primary,
             shape: RoundedRectangleBorder(
               borderRadius: BorderRadius.circular(6),
             ),
-            side: const BorderSide(color: PilllColors.secondary),
+            side: const BorderSide(color: PilllColors.primary),
           ),
           onPressed: onPressed == null
               ? null

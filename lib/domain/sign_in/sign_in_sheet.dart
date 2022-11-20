@@ -152,7 +152,7 @@ class SignInSheet extends HookConsumerWidget {
         backgroundColor: MaterialStateProperty.all(Colors.white),
         shape: MaterialStateProperty.all(
           RoundedRectangleBorder(
-            side: const BorderSide(color: PilllColors.secondary),
+            side: const BorderSide(color: PilllColors.primary),
             borderRadius: BorderRadius.circular(6),
           ),
         ),

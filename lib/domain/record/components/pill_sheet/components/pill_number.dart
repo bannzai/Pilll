@@ -91,7 +91,7 @@ class MenstruationPillNumber extends StatelessWidget {
         fontFamily: FontFamily.number,
         fontWeight: FontWeight.w500,
         fontSize: 12,
-      ).merge(const TextStyle(color: PilllColors.primary)),
+      ).merge(const TextStyle(color: PilllColors.secondary)),
       textScaleFactor: 1,
     );
   }
@@ -131,7 +131,7 @@ class MenstruationSequentialPillNumber extends StatelessWidget {
         fontFamily: FontFamily.number,
         fontWeight: FontWeight.w500,
         fontSize: 12,
-      ).merge(const TextStyle(color: PilllColors.primary)),
+      ).merge(const TextStyle(color: PilllColors.secondary)),
       textScaleFactor: 1,
     );
   }
@@ -149,7 +149,7 @@ class MenstruationPillDate extends StatelessWidget {
         fontFamily: FontFamily.number,
         fontWeight: FontWeight.w500,
         fontSize: 12,
-      ).merge(const TextStyle(color: PilllColors.primary)),
+      ).merge(const TextStyle(color: PilllColors.secondary)),
       textScaleFactor: 1,
     );
   }

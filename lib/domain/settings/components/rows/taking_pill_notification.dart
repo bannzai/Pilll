@@ -26,7 +26,7 @@ class TakingPillNotification extends HookConsumerWidget {
             fontWeight: FontWeight.w300,
             fontSize: 16,
           )),
-      activeColor: PilllColors.primary,
+      activeColor: PilllColors.secondary,
       onChanged: (bool value) async {
         analytics.logEvent(
           name: "did_select_toggle_reminder",

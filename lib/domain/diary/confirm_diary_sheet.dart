@@ -111,9 +111,9 @@ class ConfirmDiarySheet extends HookConsumerWidget {
   Widget _physicalConditionImage(PhysicalConditionStatus? status) {
     switch (status) {
       case PhysicalConditionStatus.fine:
-        return SvgPicture.asset("images/laugh.svg", color: PilllColors.secondary);
+        return SvgPicture.asset("images/laugh.svg", color: PilllColors.primary);
       case PhysicalConditionStatus.bad:
-        return SvgPicture.asset("images/angry.svg", color: PilllColors.secondary);
+        return SvgPicture.asset("images/angry.svg", color: PilllColors.primary);
       default:
         return Container();
     }
@@ -148,7 +148,7 @@ class ConfirmDiarySheet extends HookConsumerWidget {
                       fontWeight: FontWeight.w300,
                       fontSize: 14,
                     ).merge(TextColorStyle.white),
-                    selectedColor: PilllColors.secondary,
+                    selectedColor: PilllColors.primary,
                     selected: true,
                     onSelected: (selected) {},
                   ))
@@ -164,7 +164,7 @@ class ConfirmDiarySheet extends HookConsumerWidget {
       width: 32,
       height: 32,
       decoration: BoxDecoration(shape: BoxShape.circle, color: PilllColors.thinSecondary),
-      child: SvgPicture.asset("images/heart.svg", color: PilllColors.secondary),
+      child: SvgPicture.asset("images/heart.svg", color: PilllColors.primary),
     );
   }
 

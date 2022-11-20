@@ -64,7 +64,7 @@ class DiarySettingPhysicalConditionDetailPage extends HookConsumerWidget {
                   controller: textFieldController,
                   decoration: const InputDecoration(
                     focusedBorder: UnderlineInputBorder(
-                      borderSide: BorderSide(color: PilllColors.primary),
+                      borderSide: BorderSide(color: PilllColors.secondary),
                     ),
                     hintText: "入力して追加",
                   ),
