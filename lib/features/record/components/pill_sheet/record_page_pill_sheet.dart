@@ -9,7 +9,7 @@ import 'package:pilll/components/organisms/pill_mark/pill_mark_line.dart';
 import 'package:pilll/components/organisms/pill_mark/pill_mark_with_number_layout.dart';
 import 'package:pilll/components/organisms/pill_sheet/pill_sheet_view_layout.dart';
 import 'package:pilll/components/organisms/pill_sheet/pill_sheet_view_weekday_line.dart';
-import 'package:pilll/features/modal/release_note.dart';
+import 'package:pilll/features/release_note/release_note.dart';
 import 'package:pilll/features/record/components/pill_sheet/components/pill_number.dart';
 import 'package:pilll/features/record/util/request_in_app_review.dart';
 import 'package:pilll/provider/revert_take_pill.dart';
