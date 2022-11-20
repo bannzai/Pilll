@@ -33,7 +33,11 @@ class PremiumTrialLimitNotificationBar extends StatelessWidget {
             const Spacer(),
             Text(
               premiumTrialLimit,
-              style: FontType.assistingBold.merge(TextColorStyle.white),
+              style: const TextStyle(
+                fontFamily: FontFamily.japanese,
+                fontWeight: FontWeight.w600,
+                fontSize: 14,
+              ).merge(TextColorStyle.white),
               textAlign: TextAlign.center,
             ),
             const Spacer(),

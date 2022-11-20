@@ -15,11 +15,6 @@ class FontType {
     fontWeight: FontWeight.w300,
     fontSize: 14,
   );
-  static const TextStyle assistingBold = TextStyle(
-    fontFamily: FontFamily.japanese,
-    fontWeight: FontWeight.w600,
-    fontSize: 14,
-  );
   static const TextStyle inputNumber = TextStyle(
     fontFamily: FontFamily.japanese,
     fontWeight: FontWeight.w700,

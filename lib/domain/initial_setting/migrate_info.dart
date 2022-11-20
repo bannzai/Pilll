@@ -43,7 +43,11 @@ class MigrateInfo extends HookConsumerWidget {
                       ),
                       TextSpan(
                         text: "設定 > 大型アップデート前の情報 ",
-                        style: FontType.assistingBold.merge(TextColorStyle.main),
+                        style: const TextStyle(
+                          fontFamily: FontFamily.japanese,
+                          fontWeight: FontWeight.w600,
+                          fontSize: 14,
+                        ).merge(TextColorStyle.main),
                       ),
                       TextSpan(
                         text: "から表示されます。",
@@ -68,7 +72,11 @@ class MigrateInfo extends HookConsumerWidget {
                       ),
                       TextSpan(
                         text: "設定 > 今日飲むピル番号の変更",
-                        style: FontType.assistingBold.merge(TextColorStyle.main),
+                        style: const TextStyle(
+                          fontFamily: FontFamily.japanese,
+                          fontWeight: FontWeight.w600,
+                          fontSize: 14,
+                        ).merge(TextColorStyle.main),
                       ),
                       TextSpan(
                         text: "へおすすみください。今日服用するピルの番号を調整できます。",

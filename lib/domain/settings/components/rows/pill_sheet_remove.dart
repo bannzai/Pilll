@@ -49,7 +49,11 @@ class PillSheetRemoveRow extends HookConsumerWidget {
                     ),
                     TextSpan(
                       text: "すべてのピルシート",
-                      style: FontType.assistingBold.merge(TextColorStyle.main),
+                      style: const TextStyle(
+                        fontFamily: FontFamily.japanese,
+                        fontWeight: FontWeight.w600,
+                        fontSize: 14,
+                      ).merge(TextColorStyle.main),
                     ),
                     TextSpan(
                       text: "が破棄されます",

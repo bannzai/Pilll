@@ -42,7 +42,11 @@ class InvalidAlreadyTakenPillDialog extends StatelessWidget {
               children: [
                 TextSpan(
                   text: "今日飲むピルを未服用にしてから",
-                  style: FontType.assistingBold.merge(TextColorStyle.main),
+                  style: const TextStyle(
+                    fontFamily: FontFamily.japanese,
+                    fontWeight: FontWeight.w600,
+                    fontSize: 14,
+                  ).merge(TextColorStyle.main),
                 ),
                 TextSpan(
                   text: "休薬してください。今日以外の日から休薬したい場合は下記を参考にしてください。",

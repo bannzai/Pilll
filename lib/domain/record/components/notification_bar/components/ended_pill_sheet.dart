@@ -42,7 +42,11 @@ class EndedPillSheet extends StatelessWidget {
             children: [
               Text(
                 "ピルシートが終了しました",
-                style: FontType.assistingBold.merge(
+                style: const TextStyle(
+                  fontFamily: FontFamily.japanese,
+                  fontWeight: FontWeight.w600,
+                  fontSize: 14,
+                ).merge(
                   TextColorStyle.white,
                 ),
               ),

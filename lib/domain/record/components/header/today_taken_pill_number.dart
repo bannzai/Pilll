@@ -59,7 +59,11 @@ class TodayTakenPillNumber extends StatelessWidget {
     if (activedPillSheet.inNotTakenDuration) {
       return Text(
         "${activedPillSheet.pillSheetType.notTakenWord}${activedPillSheet.todayPillNumber - activedPillSheet.typeInfo.dosingPeriod}日目",
-        style: FontType.assistingBold.merge(TextColorStyle.main),
+        style: const TextStyle(
+          fontFamily: FontFamily.japanese,
+          fontWeight: FontWeight.w600,
+          fontSize: 14,
+        ).merge(TextColorStyle.main),
       );
     }
     return Row(
@@ -74,7 +78,12 @@ class TodayTakenPillNumber extends StatelessWidget {
                 fontWeight: FontWeight.w500,
                 fontSize: 40,
               ).merge(TextColorStyle.main)),
-          Text("番", style: FontType.assistingBold.merge(TextColorStyle.noshime)),
+          Text("番",
+              style: const TextStyle(
+                fontFamily: FontFamily.japanese,
+                fontWeight: FontWeight.w600,
+                fontSize: 14,
+              ).merge(TextColorStyle.noshime)),
         ],
         if (_appearanceMode == PillSheetAppearanceMode.date) ...[
           Text("${activedPillSheet.todayPillNumber}",
@@ -83,7 +92,12 @@ class TodayTakenPillNumber extends StatelessWidget {
                 fontWeight: FontWeight.w500,
                 fontSize: 40,
               ).merge(TextColorStyle.main)),
-          Text("番", style: FontType.assistingBold.merge(TextColorStyle.noshime)),
+          Text("番",
+              style: const TextStyle(
+                fontFamily: FontFamily.japanese,
+                fontWeight: FontWeight.w600,
+                fontSize: 14,
+              ).merge(TextColorStyle.noshime)),
         ],
         if (_appearanceMode == PillSheetAppearanceMode.sequential) ...[
           Text("${pillSheetGroup.sequentialTodayPillNumber}",
@@ -92,7 +106,12 @@ class TodayTakenPillNumber extends StatelessWidget {
                 fontWeight: FontWeight.w500,
                 fontSize: 40,
               ).merge(TextColorStyle.main)),
-          Text("番", style: FontType.assistingBold.merge(TextColorStyle.noshime)),
+          Text("番",
+              style: const TextStyle(
+                fontFamily: FontFamily.japanese,
+                fontWeight: FontWeight.w600,
+                fontSize: 14,
+              ).merge(TextColorStyle.noshime)),
         ],
       ],
     );
