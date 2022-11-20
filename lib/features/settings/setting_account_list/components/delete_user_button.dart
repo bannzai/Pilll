@@ -10,7 +10,7 @@ import 'package:pilll/components/atoms/button.dart';
 import 'package:pilll/components/atoms/font.dart';
 import 'package:pilll/components/atoms/text_color.dart';
 import 'package:pilll/components/page/discard_dialog.dart';
-import 'package:pilll/error/error_alert.dart';
+import 'package:pilll/features/error/error_alert.dart';
 import 'package:pilll/util/error_log.dart';
 import 'package:pilll/util/router.dart';
 

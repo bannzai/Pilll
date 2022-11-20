@@ -8,8 +8,8 @@ import 'package:pilll/components/atoms/text_color.dart';
 import 'package:pilll/components/molecules/indicator.dart';
 import 'package:pilll/features/diary_setting_physical_condtion_detail/mutation.dart';
 import 'package:pilll/features/diary_setting_physical_condtion_detail/state.codegen.dart';
-import 'package:pilll/error/error_alert.dart';
-import 'package:pilll/error/universal_error_page.dart';
+import 'package:pilll/features/error/error_alert.dart';
+import 'package:pilll/features/error/universal_error_page.dart';
 
 class DiarySettingPhysicalConditionDetailPage extends HookConsumerWidget {
   const DiarySettingPhysicalConditionDetailPage({Key? key}) : super(key: key);

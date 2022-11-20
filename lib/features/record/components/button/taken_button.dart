@@ -7,7 +7,7 @@ import 'package:pilll/features/modal/release_note.dart';
 import 'package:pilll/features/record/util/request_in_app_review.dart';
 import 'package:pilll/entity/pill_sheet.codegen.dart';
 import 'package:pilll/entity/pill_sheet_group.codegen.dart';
-import 'package:pilll/error/error_alert.dart';
+import 'package:pilll/features/error/error_alert.dart';
 import 'package:pilll/util/error_log.dart';
 import 'package:pilll/native/widget.dart';
 import 'package:pilll/provider/take_pill.dart';

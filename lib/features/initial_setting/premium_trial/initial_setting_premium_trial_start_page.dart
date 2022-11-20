@@ -9,7 +9,7 @@ import 'package:pilll/components/atoms/color.dart';
 import 'package:pilll/components/atoms/font.dart';
 import 'package:pilll/components/atoms/text_color.dart';
 import 'package:pilll/features/initial_setting/initial_setting_state_notifier.dart';
-import 'package:pilll/error/error_alert.dart';
+import 'package:pilll/features/error/error_alert.dart';
 import 'package:pilll/util/router.dart';
 
 class IntiialSettingPremiumTrialStartPage extends HookConsumerWidget {

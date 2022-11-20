@@ -7,7 +7,7 @@ import 'package:pilll/components/atoms/text_color.dart';
 import 'package:pilll/components/page/discard_dialog.dart';
 import 'package:pilll/entity/pill_sheet.codegen.dart';
 import 'package:pilll/entity/pill_sheet_group.codegen.dart';
-import 'package:pilll/error/error_alert.dart';
+import 'package:pilll/features/error/error_alert.dart';
 import 'package:pilll/provider/delete_pill_sheet.dart';
 
 class PillSheetRemoveRow extends HookConsumerWidget {

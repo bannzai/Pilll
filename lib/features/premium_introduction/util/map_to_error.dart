@@ -1,5 +1,5 @@
 import 'package:flutter/services.dart';
-import 'package:pilll/error/alert_error.dart';
+import 'package:pilll/features/error/alert_error.dart';
 import 'package:pilll/util/platform/platform.dart';
 import 'package:purchases_flutter/purchases_flutter.dart';
 

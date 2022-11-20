@@ -7,7 +7,7 @@ import 'package:pilll/components/atoms/text_color.dart';
 import 'package:flutter/material.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
 import 'package:pilll/entity/setting.codegen.dart';
-import 'package:pilll/error/error_alert.dart';
+import 'package:pilll/features/error/error_alert.dart';
 import 'package:pilll/provider/setting.dart';
 
 class ReminderNotificationCustomizeWordPage extends HookConsumerWidget {

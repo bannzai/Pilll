@@ -27,7 +27,7 @@ import 'package:pilll/features/settings/components/setting_section_title.dart';
 import 'package:pilll/features/settings/provider.dart';
 import 'package:pilll/entity/pill_sheet_group.codegen.dart';
 import 'package:pilll/entity/setting.codegen.dart';
-import 'package:pilll/error/universal_error_page.dart';
+import 'package:pilll/features/error/universal_error_page.dart';
 import 'package:pilll/features/settings/components/inquiry/inquiry.dart';
 import 'package:pilll/components/atoms/color.dart';
 import 'package:pilll/components/atoms/text_color.dart';

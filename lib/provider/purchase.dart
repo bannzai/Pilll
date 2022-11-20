@@ -5,7 +5,7 @@ import 'package:hooks_riverpod/hooks_riverpod.dart';
 import 'package:pilll/app/secret.dart';
 import 'package:pilll/features/premium_introduction/util/discount_deadline.dart';
 import 'package:pilll/features/premium_introduction/util/map_to_error.dart';
-import 'package:pilll/error/alert_error.dart';
+import 'package:pilll/features/error/alert_error.dart';
 import 'package:pilll/util/error_log.dart';
 import 'package:pilll/provider/premium_and_trial.codegen.dart';
 import 'package:pilll/util/environment.dart';

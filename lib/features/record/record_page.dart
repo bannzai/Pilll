@@ -11,7 +11,7 @@ import 'package:pilll/features/record/components/pill_sheet/record_page_pill_she
 import 'package:pilll/features/record/components/header/record_page_header.dart';
 import 'package:pilll/entity/pill_sheet_group.codegen.dart';
 import 'package:pilll/entity/setting.codegen.dart';
-import 'package:pilll/error/universal_error_page.dart';
+import 'package:pilll/features/error/universal_error_page.dart';
 import 'package:pilll/components/atoms/color.dart';
 import 'package:flutter/material.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';

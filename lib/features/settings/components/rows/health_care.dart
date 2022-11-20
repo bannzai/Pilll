@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:pilll/util/analytics.dart';
 import 'package:pilll/components/atoms/font.dart';
-import 'package:pilll/error/error_alert.dart';
+import 'package:pilll/features/error/error_alert.dart';
 import 'package:pilll/native/health_care.dart';
 import 'package:url_launcher/url_launcher.dart';
 

@@ -16,7 +16,7 @@ import 'package:pilll/features/calendar/components/pill_sheet_modified_history/p
 import 'package:flutter/material.dart';
 import 'package:pilll/features/diary_post/diary_post_page.dart';
 import 'package:pilll/entity/pill_sheet_modified_history.codegen.dart';
-import 'package:pilll/error/universal_error_page.dart';
+import 'package:pilll/features/error/universal_error_page.dart';
 import 'package:pilll/provider/pill_sheet_modified_history.dart';
 import 'package:pilll/provider/premium_and_trial.codegen.dart';
 import 'package:pilll/util/datetime/date_compare.dart';
