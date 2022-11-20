@@ -41,5 +41,8 @@ import 'package:pilll/provider/purchase.dart';
   TakePill,
   CheckForceUpdate,
   SetUserID,
+  FetchOrCreateUser,
+  SaveUserLaunchInfo,
+  MarkAsMigratedToFlutter,
 ])
 abstract class KeepGeneratedMocks {}
