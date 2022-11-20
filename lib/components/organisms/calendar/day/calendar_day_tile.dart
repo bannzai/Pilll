@@ -132,7 +132,11 @@ class CalendarDayTile extends StatelessWidget {
   }
 
   TextStyle _font() {
-    return FontType.gridElement;
+    return const TextStyle(
+      fontFamily: FontFamily.number,
+      fontWeight: FontWeight.w600,
+      fontSize: 16,
+    );
   }
 
   Color _textColor() {

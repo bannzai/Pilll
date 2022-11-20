@@ -10,12 +10,6 @@ class FontFamily {
 }
 
 class FontType {
-  static const TextStyle gridElement = TextStyle(
-    fontFamily: FontFamily.number,
-    fontWeight: FontWeight.w600,
-    fontSize: 16,
-  );
-
   static const TextStyle helpRow = TextStyle(
     fontFamily: FontFamily.roboto,
     fontWeight: FontWeight.w400,
