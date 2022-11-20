@@ -1,8 +1,6 @@
 import 'package:flutter/material.dart';
 
-class PilllColors {
-  const PilllColors();
-
+abstract class PilllColors {
   static const Color primary = Color(0xFFE56A45);
   static const Color secondary = Color(0xFF4E6287);
   static const Color calendarHeader = Color(0XFFB9D7F1);
@@ -34,8 +32,7 @@ class PilllColors {
   static const Color duration = Color(0xFF6A7DA5);
   static final Color overlay = primary.withAlpha(20);
 
-  static final Color modalBackground =
-      const Color(0xFF333333).withAlpha((255 * 0.7).round());
+  static final Color modalBackground = const Color(0xFF333333).withAlpha((255 * 0.7).round());
   static const Color white = Colors.white;
 
   static Color get disabledSheet => PilllColors.pillSheet;
