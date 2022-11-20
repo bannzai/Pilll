@@ -25,7 +25,8 @@ class RestDurationNotificationBar extends StatelessWidget {
               fontFamily: FontFamily.japanese,
               fontWeight: FontWeight.w600,
               fontSize: 14,
-            ).merge(TextColor.white)),
+              color: TextColor.white,
+            )),
       ),
     );
   }

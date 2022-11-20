@@ -31,12 +31,15 @@ class MenstruationCard extends StatelessWidget {
                       width: 24,
                       color: PilllColors.red,
                     ),
-                    Text(state.title,
-                        style: TextColor.noshime.merge(const TextStyle(
-                          fontFamily: FontFamily.japanese,
-                          fontWeight: FontWeight.w300,
-                          fontSize: 14,
-                        ))),
+                    Text(
+                      state.title,
+                      style: const TextStyle(
+                        fontFamily: FontFamily.japanese,
+                        fontWeight: FontWeight.w300,
+                        fontSize: 14,
+                        color: TextColor.noshime,
+                      ),
+                    ),
                   ],
                 ),
                 const SizedBox(width: 12),
@@ -54,11 +57,12 @@ class MenstruationCard extends StatelessWidget {
                 borderRadius: BorderRadius.circular(30),
               ),
               child: Text(state.countdownString,
-                  style: TextColor.white.merge(const TextStyle(
+                  style: const TextStyle(
                     fontFamily: FontFamily.japanese,
                     fontWeight: FontWeight.w600,
                     fontSize: 14,
-                  ))),
+                    color: TextColor.white,
+                  )),
             ),
           ],
         ),

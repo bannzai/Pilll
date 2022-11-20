@@ -78,7 +78,8 @@ class _SchedulePostPage extends HookConsumerWidget {
               fontFamily: FontFamily.japanese,
               fontWeight: FontWeight.w500,
               fontSize: 20,
-            ).merge(TextColor.main)),
+              color: TextColor.main,
+            )),
         leading: IconButton(
           icon: const Icon(Icons.close, color: Colors.black),
           onPressed: () => Navigator.of(context).pop(),

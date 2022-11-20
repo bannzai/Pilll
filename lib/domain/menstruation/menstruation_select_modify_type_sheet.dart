@@ -50,14 +50,15 @@ class MenstruationSelectModifyTypeSheet extends StatelessWidget {
           mainAxisSize: MainAxisSize.min,
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            Padding(
-              padding: const EdgeInsets.only(top: 21, left: 16),
+            const Padding(
+              padding: EdgeInsets.only(top: 21, left: 16),
               child: Text("生理を記録",
-                  style: const TextStyle(
+                  style: TextStyle(
                     fontFamily: FontFamily.japanese,
                     fontWeight: FontWeight.w500,
                     fontSize: 20,
-                  ).merge(TextColor.main)),
+                    color: TextColor.main,
+                  )),
             ),
             const SizedBox(height: 24),
             SizedBox(
@@ -87,7 +88,8 @@ class MenstruationSelectModifyTypeSheet extends StatelessWidget {
             fontFamily: FontFamily.japanese,
             fontWeight: FontWeight.w300,
             fontSize: 14,
-          ).merge(TextColor.main),
+            color: TextColor.main,
+          ),
         ),
         leading: type.icon,
         onTap: () {

@@ -80,7 +80,8 @@ class RecordPageInformationHeader extends StatelessWidget {
           fontFamily: FontFamily.number,
           fontWeight: FontWeight.w600,
           fontSize: 24,
-        ).merge(TextColor.gray),
+          color: TextColor.gray,
+        ),
       ),
     );
   }
