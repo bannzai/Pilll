@@ -37,7 +37,7 @@ class PremiumTrialLimitNotificationBar extends StatelessWidget {
                 fontFamily: FontFamily.japanese,
                 fontWeight: FontWeight.w600,
                 fontSize: 14,
-              ).merge(TextColorStyle.white),
+              ).merge(TextColor.white),
               textAlign: TextAlign.center,
             ),
             const Spacer(),

@@ -161,7 +161,7 @@ class ReminderTimesPage extends HookConsumerWidget {
                   fontFamily: FontFamily.japanese,
                   fontWeight: FontWeight.w600,
                   fontSize: 14,
-                ).merge(TextColorStyle.white),
+                ).merge(TextColor.white),
                 textAlign: TextAlign.right,
               ),
             ),
@@ -193,7 +193,7 @@ class ReminderTimesPage extends HookConsumerWidget {
                 fontFamily: FontFamily.japanese,
                 fontWeight: FontWeight.w300,
                 fontSize: 14,
-              ).merge(TextColorStyle.main),
+              ).merge(TextColor.main),
             )
           ],
         ),

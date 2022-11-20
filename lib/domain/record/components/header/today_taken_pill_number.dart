@@ -34,7 +34,7 @@ class TodayTakenPillNumber extends StatelessWidget {
                 fontFamily: FontFamily.japanese,
                 fontWeight: FontWeight.w300,
                 fontSize: 14,
-              ).merge(TextColorStyle.noshime),
+              ).merge(TextColor.noshime),
             ),
           if (_appearanceMode != PillSheetAppearanceMode.sequential)
             Text(
@@ -43,7 +43,7 @@ class TodayTakenPillNumber extends StatelessWidget {
                 fontFamily: FontFamily.japanese,
                 fontWeight: FontWeight.w300,
                 fontSize: 14,
-              ).merge(TextColorStyle.noshime),
+              ).merge(TextColor.noshime),
             ),
           _content(),
         ],
@@ -69,7 +69,7 @@ class TodayTakenPillNumber extends StatelessWidget {
                 fontFamily: FontFamily.japanese,
                 fontWeight: FontWeight.w300,
                 fontSize: 14,
-              ).merge(TextColorStyle.noshime)));
+              ).merge(TextColor.noshime)));
     }
     if (activedPillSheet.inNotTakenDuration) {
       return Text(
@@ -78,7 +78,7 @@ class TodayTakenPillNumber extends StatelessWidget {
           fontFamily: FontFamily.japanese,
           fontWeight: FontWeight.w600,
           fontSize: 14,
-        ).merge(TextColorStyle.main),
+        ).merge(TextColor.main),
       );
     }
     return Row(
@@ -92,13 +92,13 @@ class TodayTakenPillNumber extends StatelessWidget {
                 fontFamily: FontFamily.number,
                 fontWeight: FontWeight.w500,
                 fontSize: 40,
-              ).merge(TextColorStyle.main)),
+              ).merge(TextColor.main)),
           Text("番",
               style: const TextStyle(
                 fontFamily: FontFamily.japanese,
                 fontWeight: FontWeight.w600,
                 fontSize: 14,
-              ).merge(TextColorStyle.noshime)),
+              ).merge(TextColor.noshime)),
         ],
         if (_appearanceMode == PillSheetAppearanceMode.date) ...[
           Text("${activedPillSheet.todayPillNumber}",
@@ -106,13 +106,13 @@ class TodayTakenPillNumber extends StatelessWidget {
                 fontFamily: FontFamily.number,
                 fontWeight: FontWeight.w500,
                 fontSize: 40,
-              ).merge(TextColorStyle.main)),
+              ).merge(TextColor.main)),
           Text("番",
               style: const TextStyle(
                 fontFamily: FontFamily.japanese,
                 fontWeight: FontWeight.w600,
                 fontSize: 14,
-              ).merge(TextColorStyle.noshime)),
+              ).merge(TextColor.noshime)),
         ],
         if (_appearanceMode == PillSheetAppearanceMode.sequential) ...[
           Text("${pillSheetGroup.sequentialTodayPillNumber}",
@@ -120,13 +120,13 @@ class TodayTakenPillNumber extends StatelessWidget {
                 fontFamily: FontFamily.number,
                 fontWeight: FontWeight.w500,
                 fontSize: 40,
-              ).merge(TextColorStyle.main)),
+              ).merge(TextColor.main)),
           Text("番",
               style: const TextStyle(
                 fontFamily: FontFamily.japanese,
                 fontWeight: FontWeight.w600,
                 fontSize: 14,
-              ).merge(TextColorStyle.noshime)),
+              ).merge(TextColor.noshime)),
         ],
       ],
     );

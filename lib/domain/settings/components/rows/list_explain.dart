@@ -17,7 +17,7 @@ class ListExplainRow extends StatelessWidget {
             fontFamily: FontFamily.japanese,
             fontWeight: FontWeight.w300,
             fontSize: 14,
-          ).merge(TextColorStyle.darkGray)),
+          ).merge(TextColor.darkGray)),
     );
   }
 }

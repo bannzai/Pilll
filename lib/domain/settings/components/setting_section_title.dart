@@ -31,7 +31,7 @@ class SettingSectionTitle extends StatelessWidget {
           fontFamily: FontFamily.japanese,
           fontWeight: FontWeight.w300,
           fontSize: 14,
-        ).merge(TextColorStyle.main),
+        ).merge(TextColor.main),
       ),
     );
   }

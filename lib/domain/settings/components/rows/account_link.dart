@@ -42,7 +42,7 @@ class AccountLinkRow extends HookConsumerWidget {
                 fontFamily: FontFamily.japanese,
                 fontWeight: FontWeight.w300,
                 fontSize: 14,
-              ).merge(TextColorStyle.darkGray)),
+              ).merge(TextColor.darkGray)),
         ],
       );
     } else {
@@ -56,7 +56,7 @@ class AccountLinkRow extends HookConsumerWidget {
                 fontFamily: FontFamily.japanese,
                 fontWeight: FontWeight.w300,
                 fontSize: 14,
-              ).merge(TextColorStyle.darkGray)),
+              ).merge(TextColor.darkGray)),
         ],
       );
     }

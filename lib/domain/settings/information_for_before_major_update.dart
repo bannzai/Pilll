@@ -47,7 +47,7 @@ class InformationForBeforeMigrate132 extends StatelessWidget {
                     fontFamily: FontFamily.japanese,
                     fontWeight: FontWeight.w500,
                     fontSize: 20,
-                  ).merge(TextColorStyle.main),
+                  ).merge(TextColor.main),
                 ),
                 const SizedBox(height: 32),
                 Text(
@@ -56,7 +56,7 @@ class InformationForBeforeMigrate132 extends StatelessWidget {
                     fontFamily: FontFamily.japanese,
                     fontWeight: FontWeight.w600,
                     fontSize: 16,
-                  ).merge(TextColorStyle.main),
+                  ).merge(TextColor.main),
                 ),
                 const SizedBox(height: 8),
                 Text(
@@ -65,7 +65,7 @@ class InformationForBeforeMigrate132 extends StatelessWidget {
                     fontFamily: FontFamily.roboto,
                     fontWeight: FontWeight.w300,
                     fontSize: 16,
-                  ).merge(TextColorStyle.main),
+                  ).merge(TextColor.main),
                 ),
                 const SizedBox(height: 4),
                 Text(
@@ -74,7 +74,7 @@ class InformationForBeforeMigrate132 extends StatelessWidget {
                     fontFamily: FontFamily.japanese,
                     fontWeight: FontWeight.w400,
                     fontSize: 12,
-                  ).merge(TextColorStyle.gray),
+                  ).merge(TextColor.gray),
                 ),
                 const SizedBox(height: 4),
                 Text(
@@ -83,7 +83,7 @@ class InformationForBeforeMigrate132 extends StatelessWidget {
                     fontFamily: FontFamily.roboto,
                     fontWeight: FontWeight.w300,
                     fontSize: 16,
-                  ).merge(TextColorStyle.main),
+                  ).merge(TextColor.main),
                 ),
                 const SizedBox(height: 4),
                 Text(
@@ -92,7 +92,7 @@ class InformationForBeforeMigrate132 extends StatelessWidget {
                     fontFamily: FontFamily.japanese,
                     fontWeight: FontWeight.w400,
                     fontSize: 12,
-                  ).merge(TextColorStyle.gray),
+                  ).merge(TextColor.gray),
                 ),
                 const SizedBox(height: 4),
                 Text(
@@ -101,7 +101,7 @@ class InformationForBeforeMigrate132 extends StatelessWidget {
                     fontFamily: FontFamily.roboto,
                     fontWeight: FontWeight.w300,
                     fontSize: 16,
-                  ).merge(TextColorStyle.main),
+                  ).merge(TextColor.main),
                 ),
                 const SizedBox(height: 4),
                 Text(
@@ -110,7 +110,7 @@ class InformationForBeforeMigrate132 extends StatelessWidget {
                     fontFamily: FontFamily.japanese,
                     fontWeight: FontWeight.w400,
                     fontSize: 12,
-                  ).merge(TextColorStyle.gray),
+                  ).merge(TextColor.gray),
                 ),
                 const SizedBox(height: 32),
               ],

@@ -49,7 +49,7 @@ class PillSheetRemoveRow extends HookConsumerWidget {
                         fontFamily: FontFamily.japanese,
                         fontWeight: FontWeight.w300,
                         fontSize: 14,
-                      ).merge(TextColorStyle.main),
+                      ).merge(TextColor.main),
                     ),
                     TextSpan(
                       text: "すべてのピルシート",
@@ -57,7 +57,7 @@ class PillSheetRemoveRow extends HookConsumerWidget {
                         fontFamily: FontFamily.japanese,
                         fontWeight: FontWeight.w600,
                         fontSize: 14,
-                      ).merge(TextColorStyle.main),
+                      ).merge(TextColor.main),
                     ),
                     TextSpan(
                       text: "が破棄されます",
@@ -65,7 +65,7 @@ class PillSheetRemoveRow extends HookConsumerWidget {
                         fontFamily: FontFamily.japanese,
                         fontWeight: FontWeight.w300,
                         fontSize: 14,
-                      ).merge(TextColorStyle.main),
+                      ).merge(TextColor.main),
                     ),
                   ],
                 ),

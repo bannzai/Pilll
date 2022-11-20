@@ -47,7 +47,7 @@ class EndedPillSheet extends StatelessWidget {
                   fontWeight: FontWeight.w600,
                   fontSize: 14,
                 ).merge(
-                  TextColorStyle.white,
+                  TextColor.white,
                 ),
               ),
               const Text(

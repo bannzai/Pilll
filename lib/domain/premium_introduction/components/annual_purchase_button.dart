@@ -101,7 +101,7 @@ class _DiscountBadge extends StatelessWidget {
       ),
       child: Text(
         offeringType == OfferingType.limited ? "通常月額と比べて48％OFF" : "37.5％OFF",
-        style: TextColorStyle.white.merge(
+        style: TextColor.white.merge(
           const TextStyle(
             fontWeight: FontWeight.w700,
             fontSize: 10,

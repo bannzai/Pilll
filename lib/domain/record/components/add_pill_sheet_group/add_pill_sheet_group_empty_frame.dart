@@ -42,7 +42,7 @@ class AddPillSheetGroupEmptyFrame extends StatelessWidget {
                       fontFamily: FontFamily.japanese,
                       fontWeight: FontWeight.w300,
                       fontSize: 14,
-                    ).merge(TextColorStyle.noshime)),
+                    ).merge(TextColor.noshime)),
               ],
             )),
           ],

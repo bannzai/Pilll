@@ -57,7 +57,7 @@ class MenstruationSelectModifyTypeSheet extends StatelessWidget {
                     fontFamily: FontFamily.japanese,
                     fontWeight: FontWeight.w500,
                     fontSize: 20,
-                  ).merge(TextColorStyle.main)),
+                  ).merge(TextColor.main)),
             ),
             const SizedBox(height: 24),
             SizedBox(
@@ -87,7 +87,7 @@ class MenstruationSelectModifyTypeSheet extends StatelessWidget {
             fontFamily: FontFamily.japanese,
             fontWeight: FontWeight.w300,
             fontSize: 14,
-          ).merge(TextColorStyle.main),
+          ).merge(TextColor.main),
         ),
         leading: type.icon,
         onTap: () {

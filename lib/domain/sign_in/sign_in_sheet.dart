@@ -56,7 +56,7 @@ class SignInSheet extends HookConsumerWidget {
                 const SizedBox(height: 24),
                 Text(_title,
                     textAlign: TextAlign.center,
-                    style: TextColorStyle.main.merge(const TextStyle(
+                    style: TextColor.main.merge(const TextStyle(
                       fontFamily: FontFamily.japanese,
                       fontWeight: FontWeight.w500,
                       fontSize: 20,
@@ -64,7 +64,7 @@ class SignInSheet extends HookConsumerWidget {
                 const SizedBox(height: 16),
                 Text(_message,
                     textAlign: TextAlign.center,
-                    style: TextColorStyle.main.merge(const TextStyle(
+                    style: TextColor.main.merge(const TextStyle(
                       fontFamily: FontFamily.japanese,
                       fontWeight: FontWeight.w300,
                       fontSize: 14,
@@ -132,7 +132,7 @@ class SignInSheet extends HookConsumerWidget {
                     fontFamily: FontFamily.japanese,
                     fontWeight: FontWeight.w600,
                     fontSize: 16,
-                  ).merge(TextColorStyle.white),
+                  ).merge(TextColor.white),
                 ),
               )
             ],
@@ -193,7 +193,7 @@ class SignInSheet extends HookConsumerWidget {
                     fontFamily: FontFamily.japanese,
                     fontWeight: FontWeight.w600,
                     fontSize: 16,
-                  ).merge(TextColorStyle.main),
+                  ).merge(TextColor.main),
                 ),
               ),
             ],

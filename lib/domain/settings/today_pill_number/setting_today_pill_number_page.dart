@@ -55,7 +55,7 @@ class SettingTodayPillNumberPage extends HookConsumerWidget {
                       fontFamily: FontFamily.japanese,
                       fontWeight: FontWeight.w500,
                       fontSize: 20,
-                    ).merge(TextColorStyle.main),
+                    ).merge(TextColor.main),
                     textAlign: TextAlign.center,
                   ),
                   const SizedBox(height: 56),

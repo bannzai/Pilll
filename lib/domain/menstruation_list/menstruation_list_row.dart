@@ -32,7 +32,7 @@ class MenstruationListRow extends StatelessWidget {
                     fontFamily: FontFamily.japanese,
                     fontWeight: FontWeight.w400,
                     fontSize: 12,
-                  ).merge(TextColorStyle.main)),
+                  ).merge(TextColor.main)),
             ],
           ),
           const SizedBox(height: 6),

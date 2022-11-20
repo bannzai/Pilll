@@ -34,7 +34,7 @@ class RecordPageRestDurationDialog extends StatelessWidget {
                 fontFamily: FontFamily.japanese,
                 fontWeight: FontWeight.w300,
                 fontSize: 14,
-              ).merge(TextColorStyle.main)),
+              ).merge(TextColor.main)),
           const SizedBox(height: 24),
           SvgPicture.asset("images/explain_rest_duration.svg"),
           const SizedBox(height: 24),

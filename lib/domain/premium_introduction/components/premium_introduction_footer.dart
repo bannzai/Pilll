@@ -31,7 +31,7 @@ class PremiumIntroductionFotter extends StatelessWidget {
             child: RichText(
               textAlign: TextAlign.start,
               text: TextSpan(
-                style: TextColorStyle.gray.merge(
+                style: TextColor.gray.merge(
                   const TextStyle(fontWeight: FontWeight.w400, fontSize: 10, fontFamily: FontFamily.japanese),
                 ),
                 children: [
@@ -106,7 +106,7 @@ class PremiumIntroductionFotter extends StatelessWidget {
               '以前購入した方はこちら',
               style: const TextStyle(
                 decoration: TextDecoration.underline,
-              ).merge(TextColorStyle.main).merge(
+              ).merge(TextColor.main).merge(
                     const TextStyle(
                       fontWeight: FontWeight.w400,
                       fontSize: 12,

@@ -32,7 +32,7 @@ class MenstruationCard extends StatelessWidget {
                       color: PilllColors.red,
                     ),
                     Text(state.title,
-                        style: TextColorStyle.noshime.merge(const TextStyle(
+                        style: TextColor.noshime.merge(const TextStyle(
                           fontFamily: FontFamily.japanese,
                           fontWeight: FontWeight.w300,
                           fontSize: 14,
@@ -54,7 +54,7 @@ class MenstruationCard extends StatelessWidget {
                 borderRadius: BorderRadius.circular(30),
               ),
               child: Text(state.countdownString,
-                  style: TextColorStyle.white.merge(const TextStyle(
+                  style: TextColor.white.merge(const TextStyle(
                     fontFamily: FontFamily.japanese,
                     fontWeight: FontWeight.w600,
                     fontSize: 14,
