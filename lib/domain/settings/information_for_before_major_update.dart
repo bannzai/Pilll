@@ -70,7 +70,11 @@ class InformationForBeforeMigrate132 extends StatelessWidget {
                 const SizedBox(height: 4),
                 Text(
                   "※大型アップデート前のアプリで最後にピルの服用記録をつけた日です",
-                  style: FontType.description.merge(TextColorStyle.gray),
+                  style: const TextStyle(
+                    fontFamily: FontFamily.japanese,
+                    fontWeight: FontWeight.w400,
+                    fontSize: 12,
+                  ).merge(TextColorStyle.gray),
                 ),
                 const SizedBox(height: 4),
                 Text(
@@ -84,7 +88,11 @@ class InformationForBeforeMigrate132 extends StatelessWidget {
                 const SizedBox(height: 4),
                 Text(
                   "※大型アップデート前のアプリで最後に服用したピル番号になります",
-                  style: FontType.description.merge(TextColorStyle.gray),
+                  style: const TextStyle(
+                    fontFamily: FontFamily.japanese,
+                    fontWeight: FontWeight.w400,
+                    fontSize: 12,
+                  ).merge(TextColorStyle.gray),
                 ),
                 const SizedBox(height: 4),
                 Text(
@@ -98,7 +106,11 @@ class InformationForBeforeMigrate132 extends StatelessWidget {
                 const SizedBox(height: 4),
                 Text(
                   "※大型アップデート前のアプリを使用していた場合の本日のピル番号になります",
-                  style: FontType.description.merge(TextColorStyle.gray),
+                  style: const TextStyle(
+                    fontFamily: FontFamily.japanese,
+                    fontWeight: FontWeight.w400,
+                    fontSize: 12,
+                  ).merge(TextColorStyle.gray),
                 ),
                 const SizedBox(height: 32),
               ],

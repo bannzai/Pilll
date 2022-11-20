@@ -29,14 +29,24 @@ class ExplainPillNumber extends HookConsumerWidget {
             ];
           }
           return <Widget>[
-            Text("$todayに飲むピルは", style: FontType.description.merge(TextColorStyle.main)),
+            Text("$todayに飲むピルは",
+                style: const TextStyle(
+                  fontFamily: FontFamily.japanese,
+                  fontWeight: FontWeight.w400,
+                  fontSize: 12,
+                ).merge(TextColorStyle.main)),
             Text("${todayPillNumber.pillNumberIntoPillSheet}",
                 style: const TextStyle(
                   fontFamily: FontFamily.japanese,
                   fontWeight: FontWeight.w500,
                   fontSize: 34,
                 ).merge(TextColorStyle.main)),
-            Text("番", style: FontType.description.merge(TextColorStyle.main)),
+            Text("番",
+                style: const TextStyle(
+                  fontFamily: FontFamily.japanese,
+                  fontWeight: FontWeight.w400,
+                  fontSize: 12,
+                ).merge(TextColorStyle.main)),
           ];
         }(),
       ),
