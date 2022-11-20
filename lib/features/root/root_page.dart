@@ -4,6 +4,7 @@ import 'package:firebase_crashlytics/firebase_crashlytics.dart';
 import 'package:flutter_hooks/flutter_hooks.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
 import 'package:pilll/provider/force_update.dart';
+import 'package:pilll/provider/set_user_id.dart';
 import 'package:pilll/utils/analytics.dart';
 import 'package:pilll/components/page/ok_dialog.dart';
 import 'package:pilll/features/initial_setting/pill_sheet_group/initial_setting_pill_sheet_group_page.dart';
@@ -29,11 +30,11 @@ class Root extends HookConsumerWidget {
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {
-    final firebaseUserAsyncValue = ref.watch(authStateStreamProvider);
+    final firebaseUserAsyncValue = ref.watch(firebaseUserStateProvider);
     final checkForceUpdate = ref.watch(checkForceUpdateProvider);
+    final setUserID = ref.watch(serUserIDProvider);
 
     final shouldForceUpdate = useState(false);
-    final firebaseUserID = useState<String?>(null);
     final error = useState<LaunchException?>(null);
 
     // Set global error page
@@ -80,21 +81,14 @@ class Root extends HookConsumerWidget {
         final firebaseUser = firebaseUserAsyncValue.asData?.value;
         if (firebaseUser == null) {
           try {
-            firebaseUserID.value = null;
             // SignIn first. Keep in mind that this method is called first.
-            final firebaseUser = await ref.read(firebaseSignInProvider.future);
-            firebaseUserID.value = firebaseUser.uid;
-
-            unawaited(FirebaseCrashlytics.instance.setUserIdentifier(firebaseUser.uid));
-            unawaited(firebaseAnalytics.setUserId(id: firebaseUser.uid));
-
-            // Keep call initialPurchase before logIn.
-            await initializePurchase(firebaseUser.uid);
-            unawaited(Purchases.logIn(firebaseUser.uid));
+            final _ = await ref.read(firebaseSignInProvider.future);
           } catch (e, st) {
             errorLogger.recordError(e, st);
             error.value = LaunchException("認証時にエラーが発生しました\n${ErrorMessages.connection}\n詳細:", e);
           }
+        } else {
+          setUserID(userID: firebaseUser.uid);
         }
       }
 
@@ -106,11 +100,11 @@ class Root extends HookConsumerWidget {
       error: error.value,
       reload: () => ref.refresh(refreshAppProvider),
       child: () {
-        final uid = firebaseUserID.value;
+        final uid = firebaseUserAsyncValue.asData?.value?.uid;
         if (uid == null) {
           return const ScaffoldIndicator();
         } else {
-          return _InitialSettingOrAppPage(firebaseUserID: uid);
+          return InitialSettingOrAppPage(firebaseUserID: uid);
         }
       }(),
     );
@@ -132,9 +126,9 @@ class LaunchException {
 
 enum _InitialSettingOrAppPageScreenType { loading, initialSetting, app }
 
-class _InitialSettingOrAppPage extends HookConsumerWidget {
+class InitialSettingOrAppPage extends HookConsumerWidget {
   final String firebaseUserID;
-  const _InitialSettingOrAppPage({Key? key, required this.firebaseUserID}) : super(key: key);
+  const InitialSettingOrAppPage({Key? key, required this.firebaseUserID}) : super(key: key);
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {
