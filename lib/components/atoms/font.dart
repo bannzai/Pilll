@@ -10,11 +10,6 @@ class FontFamily {
 }
 
 class FontType {
-  static const TextStyle xBigTitle = TextStyle(
-    fontFamily: FontFamily.number,
-    fontWeight: FontWeight.w500,
-    fontSize: 24,
-  );
   static const TextStyle xBigNumber = TextStyle(
     fontFamily: FontFamily.number,
     fontWeight: FontWeight.w600,
