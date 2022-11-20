@@ -1,6 +1,6 @@
 import 'package:collection/collection.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
-import 'package:pilll/analytics.dart';
+import 'package:pilll/util/analytics.dart';
 import 'package:pilll/components/organisms/calendar/band/calendar_band.dart';
 
 import 'package:pilll/components/organisms/calendar/band/calendar_band_model.dart';

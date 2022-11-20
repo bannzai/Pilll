@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:pilll/analytics.dart';
+import 'package:pilll/util/analytics.dart';
 import 'package:pilll/components/atoms/font.dart';
 import 'package:pilll/error/error_alert.dart';
 import 'package:pilll/native/health_care.dart';

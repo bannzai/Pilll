@@ -1,7 +1,7 @@
 import 'dart:async';
 
 import 'package:async_value_group/async_value_group.dart';
-import 'package:pilll/analytics.dart';
+import 'package:pilll/util/analytics.dart';
 import 'package:pilll/components/molecules/indicator.dart';
 import 'package:pilll/provider/database.dart';
 import 'package:pilll/features/settings/provider.dart';

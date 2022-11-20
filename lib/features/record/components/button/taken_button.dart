@@ -1,14 +1,14 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_app_badger/flutter_app_badger.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
-import 'package:pilll/analytics.dart';
+import 'package:pilll/util/analytics.dart';
 import 'package:pilll/components/atoms/button.dart';
 import 'package:pilll/features/modal/release_note.dart';
 import 'package:pilll/features/record/util/request_in_app_review.dart';
 import 'package:pilll/entity/pill_sheet.codegen.dart';
 import 'package:pilll/entity/pill_sheet_group.codegen.dart';
 import 'package:pilll/error/error_alert.dart';
-import 'package:pilll/error_log.dart';
+import 'package:pilll/util/error_log.dart';
 import 'package:pilll/native/widget.dart';
 import 'package:pilll/provider/take_pill.dart';
 import 'package:pilll/util/datetime/day.dart';

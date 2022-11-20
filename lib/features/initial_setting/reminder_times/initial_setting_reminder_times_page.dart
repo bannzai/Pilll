@@ -1,4 +1,4 @@
-import 'package:pilll/analytics.dart';
+import 'package:pilll/util/analytics.dart';
 import 'package:pilll/features/initial_setting/initial_setting_state.codegen.dart';
 import 'package:pilll/features/initial_setting/premium_trial/initial_setting_premium_trial_start_page.dart';
 import 'package:pilll/features/initial_setting/initial_setting_state_notifier.dart';

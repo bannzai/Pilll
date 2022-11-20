@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-import 'package:pilll/analytics.dart';
+import 'package:pilll/util/analytics.dart';
 import 'package:pilll/components/atoms/font.dart';
 import 'package:pilll/features/settings/information_for_before_major_update.dart';
 import 'package:pilll/util/shared_preference/keys.dart';

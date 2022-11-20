@@ -1,4 +1,4 @@
-import 'package:pilll/analytics.dart';
+import 'package:pilll/util/analytics.dart';
 import 'package:pilll/components/organisms/pill_sheet/pill_sheet_type_column.dart';
 import 'package:pilll/entity/pill_sheet_type.dart';
 import 'package:flutter/material.dart';

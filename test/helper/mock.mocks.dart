@@ -7,7 +7,7 @@ import 'dart:async' as _i13;
 
 import 'package:cloud_firestore/cloud_firestore.dart' as _i3;
 import 'package:mockito/mockito.dart' as _i1;
-import 'package:pilll/analytics.dart' as _i11;
+import 'package:pilll/util/analytics.dart' as _i11;
 import 'package:pilll/entity/diary.codegen.dart' as _i24;
 import 'package:pilll/entity/diary_setting.codegen.dart' as _i23;
 import 'package:pilll/entity/menstruation.codegen.dart' as _i8;
