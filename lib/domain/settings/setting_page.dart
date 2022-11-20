@@ -126,7 +126,12 @@ class SettingPageBody extends StatelessWidget {
                   return SettingSectionTitle(text: "Pilllプレミアム", children: [
                     if (premiumAndTrial.isTrial) ...[
                       ListTile(
-                        title: const Text("機能無制限の期間について", style: FontType.listRow),
+                        title: const Text("機能無制限の期間について",
+                            style: const TextStyle(
+                              fontFamily: FontFamily.roboto,
+                              fontWeight: FontWeight.w300,
+                              fontSize: 16,
+                            )),
                         onTap: () {
                           analytics.logEvent(name: "did_select_about_trial", parameters: {});
                           launchUrl(Uri.parse("https://pilll.wraptas.site/3abd690f501549c48f813fd310b5f242"), mode: LaunchMode.inAppWebView);
@@ -141,7 +146,12 @@ class SettingPageBody extends StatelessWidget {
                     _separator(),
                     if (premiumAndTrial.isPremium) ...[
                       ListTile(
-                        title: const Text("解約はこちら", style: FontType.listRow),
+                        title: const Text("解約はこちら",
+                            style: const TextStyle(
+                              fontFamily: FontFamily.roboto,
+                              fontWeight: FontWeight.w300,
+                              fontSize: 16,
+                            )),
                         onTap: () async {
                           analytics.logEvent(name: "did_select_churn", parameters: {});
                           await Navigator.of(context).push(
@@ -233,35 +243,60 @@ class SettingPageBody extends StatelessWidget {
                         _separator(),
                       ],
                       ListTile(
-                          title: const Text("利用規約", style: FontType.listRow),
+                          title: const Text("利用規約",
+                              style: const TextStyle(
+                                fontFamily: FontFamily.roboto,
+                                fontWeight: FontWeight.w300,
+                                fontSize: 16,
+                              )),
                           onTap: () {
                             analytics.logEvent(name: "did_select_terms", parameters: {});
                             launchUrl(Uri.parse("https://bannzai.github.io/Pilll/Terms"), mode: LaunchMode.inAppWebView);
                           }),
                       _separator(),
                       ListTile(
-                          title: const Text("プライバシーポリシー", style: FontType.listRow),
+                          title: const Text("プライバシーポリシー",
+                              style: const TextStyle(
+                                fontFamily: FontFamily.roboto,
+                                fontWeight: FontWeight.w300,
+                                fontSize: 16,
+                              )),
                           onTap: () {
                             analytics.logEvent(name: "did_select_privacy_policy", parameters: {});
                             launchUrl(Uri.parse("https://bannzai.github.io/Pilll/PrivacyPolicy"), mode: LaunchMode.inAppWebView);
                           }),
                       _separator(),
                       ListTile(
-                          title: const Text("FAQ", style: FontType.listRow),
+                          title: const Text("FAQ",
+                              style: const TextStyle(
+                                fontFamily: FontFamily.roboto,
+                                fontWeight: FontWeight.w300,
+                                fontSize: 16,
+                              )),
                           onTap: () {
                             analytics.logEvent(name: "did_select_faq", parameters: {});
                             launchUrl(Uri.parse("https://pilll.wraptas.site/bb1f49eeded64b57929b7a13e9224d69"), mode: LaunchMode.inAppWebView);
                           }),
                       _separator(),
                       ListTile(
-                          title: const Text("新機能紹介", style: FontType.listRow),
+                          title: const Text("新機能紹介",
+                              style: const TextStyle(
+                                fontFamily: FontFamily.roboto,
+                                fontWeight: FontWeight.w300,
+                                fontSize: 16,
+                              )),
                           onTap: () {
                             analytics.logEvent(name: "setting_did_select_release_note", parameters: {});
                             launchUrl(Uri.parse("https://pilll.wraptas.site/172cae6bced04bbabeab1d8acad91a61"));
                           }),
                       _separator(),
                       ListTile(
-                          title: const Text("お問い合わせ", style: FontType.listRow),
+                          title: const Text("お問い合わせ",
+                              style: const TextStyle(
+                                fontFamily: FontFamily.roboto,
+                                fontWeight: FontWeight.w300,
+                                fontSize: 16,
+                              )),
                           onTap: () {
                             analytics.logEvent(name: "did_select_inquiry", parameters: {});
                             inquiry();

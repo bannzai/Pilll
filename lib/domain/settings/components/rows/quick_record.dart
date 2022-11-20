@@ -19,7 +19,12 @@ class QuickRecordRow extends StatelessWidget {
       minVerticalPadding: 9,
       title: Row(
         children: const [
-          Text("クイックレコード", style: FontType.listRow),
+          Text("クイックレコード",
+              style: const TextStyle(
+                fontFamily: FontFamily.roboto,
+                fontWeight: FontWeight.w300,
+                fontSize: 16,
+              )),
           SizedBox(width: 7),
           PremiumBadge(),
         ],

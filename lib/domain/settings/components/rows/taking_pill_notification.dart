@@ -20,7 +20,12 @@ class TakingPillNotification extends HookConsumerWidget {
     final setSetting = ref.watch(setSettingProvider);
 
     return SwitchListTile(
-      title: const Text("ピルの服用通知", style: FontType.listRow),
+      title: const Text("ピルの服用通知",
+          style: const TextStyle(
+            fontFamily: FontFamily.roboto,
+            fontWeight: FontWeight.w300,
+            fontSize: 16,
+          )),
       activeColor: PilllColors.primary,
       onChanged: (bool value) async {
         analytics.logEvent(
