@@ -22,8 +22,8 @@ import 'package:pilll/provider/auth.dart';
 import 'package:pilll/utils/datetime/day.dart';
 import 'package:pilll/utils/shared_preference/keys.dart';
 
-class NotificationBar extends HookConsumerWidget {
-  const NotificationBar({Key? key}) : super(key: key);
+class AnnouncementBar extends HookConsumerWidget {
+  const AnnouncementBar({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {
@@ -77,9 +77,9 @@ class NotificationBar extends HookConsumerWidget {
     }
 
     if (!premiumAndTrial.isPremium) {
-      final premiumTrialLimit = PremiumTrialLimitNotificationBar.retrievePremiumTrialLimit(premiumAndTrial);
+      final premiumTrialLimit = PremiumTrialLimitAnnouncementBar.retrievePremiumTrialLimit(premiumAndTrial);
       if (premiumTrialLimit != null) {
-        return PremiumTrialLimitNotificationBar(premiumTrialLimit: premiumTrialLimit);
+        return PremiumTrialLimitAnnouncementBar(premiumTrialLimit: premiumTrialLimit);
       }
 
       if (premiumAndTrial.hasDiscountEntitlement) {
@@ -98,15 +98,15 @@ class NotificationBar extends HookConsumerWidget {
       }
 
       if (premiumAndTrial.isTrial) {
-        final restDurationNotification = RestDurationNotificationBar.retrieveRestDurationNotification(latestPillSheetGroup: latestPillSheetGroup);
+        final restDurationNotification = RestDurationAnnouncementBar.retrieveRestDurationNotification(latestPillSheetGroup: latestPillSheetGroup);
         if (restDurationNotification != null) {
-          return RestDurationNotificationBar(restDurationNotification: restDurationNotification);
+          return RestDurationAnnouncementBar(restDurationNotification: restDurationNotification);
         }
 
         if (!isLinkedLoginProvider) {
           if (totalCountOfActionForTakenPill >= 7) {
             if (!recommendedSignupNotificationIsAlreadyShow) {
-              return RecommendSignupNotificationBar(
+              return RecommendSignupAnnouncementBar(
                 onTap: () {
                   analytics.logEvent(name: "tapped_signup_notification_bar");
                   showSignInSheet(
@@ -134,7 +134,7 @@ class NotificationBar extends HookConsumerWidget {
         }
       } else {
         if (!isAdsDisabled && pilllAds != null) {
-          return PilllAdsNotificationBar(pilllAds: pilllAds, onClose: () => showPremiumIntroductionSheet(context));
+          return PilllAdsAnnouncementBar(pilllAds: pilllAds, onClose: () => showPremiumIntroductionSheet(context));
         }
       }
     } else {
@@ -149,12 +149,12 @@ class NotificationBar extends HookConsumerWidget {
       }();
 
       if (shownRecommendSignupNotificationForPremium) {
-        return const RecommendSignupForPremiumNotificationBar();
+        return const RecommendSignupForPremiumAnnouncementBar();
       }
 
-      final restDurationNotification = RestDurationNotificationBar.retrieveRestDurationNotification(latestPillSheetGroup: latestPillSheetGroup);
+      final restDurationNotification = RestDurationAnnouncementBar.retrieveRestDurationNotification(latestPillSheetGroup: latestPillSheetGroup);
       if (restDurationNotification != null) {
-        return RestDurationNotificationBar(restDurationNotification: restDurationNotification);
+        return RestDurationAnnouncementBar(restDurationNotification: restDurationNotification);
       }
 
       if (latestPillSheetGroup != null && latestPillSheetGroup.activedPillSheet == null) {

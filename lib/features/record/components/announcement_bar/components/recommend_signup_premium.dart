@@ -6,8 +6,8 @@ import 'package:pilll/components/atoms/font.dart';
 import 'package:pilll/components/atoms/text_color.dart';
 import 'package:pilll/features/sign_in/sign_in_sheet.dart';
 
-class RecommendSignupForPremiumNotificationBar extends StatelessWidget {
-  const RecommendSignupForPremiumNotificationBar({
+class RecommendSignupForPremiumAnnouncementBar extends StatelessWidget {
+  const RecommendSignupForPremiumAnnouncementBar({
     Key? key,
   }) : super(key: key);
 

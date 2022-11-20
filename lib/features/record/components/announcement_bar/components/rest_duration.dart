@@ -6,8 +6,8 @@ import 'package:pilll/entity/pill_sheet_group.codegen.dart';
 import 'package:pilll/entity/pill_sheet_type.dart';
 import 'package:pilll/utils/datetime/day.dart';
 
-class RestDurationNotificationBar extends StatelessWidget {
-  const RestDurationNotificationBar({
+class RestDurationAnnouncementBar extends StatelessWidget {
+  const RestDurationAnnouncementBar({
     Key? key,
     required this.restDurationNotification,
   }) : super(key: key);

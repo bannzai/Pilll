@@ -181,7 +181,7 @@ class RecordPageBody extends HookConsumerWidget {
           Expanded(
             child: ListView(
               children: [
-                const NotificationBar(),
+                const AnnouncementBar(),
                 const SizedBox(height: 37),
                 _content(context),
                 const SizedBox(height: 20),

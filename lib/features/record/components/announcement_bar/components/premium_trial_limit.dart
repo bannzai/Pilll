@@ -8,8 +8,8 @@ import 'package:pilll/provider/premium_and_trial.codegen.dart';
 import 'package:pilll/utils/datetime/day.dart';
 import 'package:url_launcher/url_launcher.dart';
 
-class PremiumTrialLimitNotificationBar extends StatelessWidget {
-  const PremiumTrialLimitNotificationBar({
+class PremiumTrialLimitAnnouncementBar extends StatelessWidget {
+  const PremiumTrialLimitAnnouncementBar({
     Key? key,
     required this.premiumTrialLimit,
   }) : super(key: key);
@@ -37,7 +37,7 @@ class PremiumTrialLimitNotificationBar extends StatelessWidget {
                 fontFamily: FontFamily.japanese,
                 fontWeight: FontWeight.w600,
                 fontSize: 14,
-              color: TextColor.white,
+                color: TextColor.white,
               ),
               textAlign: TextAlign.center,
             ),
