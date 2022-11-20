@@ -5,8 +5,8 @@ import 'package:pilll/entity/pill_sheet_type.dart';
 import 'package:flutter_test/flutter_test.dart';
 import 'package:mockito/mockito.dart';
 import 'package:pilll/provider/change_pill_number.dart';
-import 'package:pilll/util/datetime/day.dart';
-import 'package:pilll/util/datetime/day.dart';
+import 'package:pilll/utils/datetime/day.dart';
+import 'package:pilll/utils/datetime/day.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
 import '../../../../helper/mock.mocks.dart';

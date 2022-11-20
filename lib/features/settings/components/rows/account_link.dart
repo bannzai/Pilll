@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
-import 'package:pilll/util/analytics.dart';
-import 'package:pilll/util/auth/apple.dart';
-import 'package:pilll/util/auth/google.dart';
+import 'package:pilll/utils/analytics.dart';
+import 'package:pilll/utils/auth/apple.dart';
+import 'package:pilll/utils/auth/google.dart';
 import 'package:pilll/components/atoms/font.dart';
 import 'package:pilll/components/atoms/text_color.dart';
 import 'package:pilll/features/settings/setting_account_list/setting_account_cooperation_list_page.dart';

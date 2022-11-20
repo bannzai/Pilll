@@ -1,6 +1,6 @@
 import 'package:async_value_group/async_value_group.dart';
 import 'package:flutter_hooks/flutter_hooks.dart';
-import 'package:pilll/util/analytics.dart';
+import 'package:pilll/utils/analytics.dart';
 import 'package:pilll/components/molecules/indicator.dart';
 import 'package:pilll/provider/diary_setting.dart';
 import 'package:pilll/features/diary_setting_physical_condtion_detail/page.dart';
@@ -15,8 +15,8 @@ import 'package:pilll/features/error/universal_error_page.dart';
 import 'package:pilll/provider/diary.dart';
 import 'package:pilll/provider/premium_and_trial.codegen.dart';
 import 'package:pilll/provider/root.dart';
-import 'package:pilll/util/formatter/date_time_formatter.dart';
-import 'package:pilll/util/const.dart';
+import 'package:pilll/utils/formatter/date_time_formatter.dart';
+import 'package:pilll/utils/const.dart';
 
 import 'package:flutter/material.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';

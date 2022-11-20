@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:pilll/util/analytics.dart';
+import 'package:pilll/utils/analytics.dart';
 import 'package:pilll/components/atoms/font.dart';
 import 'package:pilll/components/molecules/premium_badge.dart';
 import 'package:pilll/features/premium_introduction/premium_introduction_sheet.dart';

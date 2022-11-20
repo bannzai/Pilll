@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_hooks/flutter_hooks.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
-import 'package:pilll/util/analytics.dart';
+import 'package:pilll/utils/analytics.dart';
 import 'package:pilll/components/atoms/button.dart';
 import 'package:pilll/components/atoms/color.dart';
 import 'package:pilll/components/atoms/font.dart';
@@ -10,7 +10,7 @@ import 'package:pilll/provider/user.dart';
 import 'package:pilll/features/premium_function_survey/premium_function_survey_element.dart';
 import 'package:pilll/features/premium_function_survey/premium_function_survey_element_type.dart';
 import 'package:pilll/features/error/error_alert.dart';
-import 'package:pilll/util/links.dart';
+import 'package:pilll/utils/links.dart';
 import 'package:url_launcher/url_launcher.dart';
 
 class PremiumFunctionSurveyPage extends HookConsumerWidget {

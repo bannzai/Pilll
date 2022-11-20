@@ -1,8 +1,8 @@
 import 'package:pilll/features/calendar/date_range.dart';
 import 'package:pilll/entity/firestore_timestamp_converter.dart';
 import 'package:pilll/entity/pill_sheet_type.dart';
-import 'package:pilll/util/datetime/date_compare.dart';
-import 'package:pilll/util/datetime/day.dart';
+import 'package:pilll/utils/datetime/date_compare.dart';
+import 'package:pilll/utils/datetime/day.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';
 part 'pill_sheet.codegen.g.dart';

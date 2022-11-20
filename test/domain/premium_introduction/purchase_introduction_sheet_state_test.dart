@@ -1,5 +1,5 @@
 import 'package:hooks_riverpod/hooks_riverpod.dart';
-import 'package:pilll/util/analytics.dart';
+import 'package:pilll/utils/analytics.dart';
 import 'package:flutter_test/flutter_test.dart';
 import 'package:pilll/features/premium_introduction/util/discount_deadline.dart';
 import 'package:pilll/provider/premium_and_trial.codegen.dart';

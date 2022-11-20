@@ -1,4 +1,4 @@
-import 'package:pilll/util/analytics.dart';
+import 'package:pilll/utils/analytics.dart';
 import 'package:pilll/components/atoms/button.dart';
 import 'package:pilll/components/atoms/color.dart';
 import 'package:pilll/components/atoms/font.dart';

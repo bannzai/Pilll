@@ -6,7 +6,7 @@ import 'package:pilll/components/atoms/text_color.dart';
 import 'package:flutter/material.dart';
 import 'package:pilll/provider/shared_preference.dart';
 import 'package:pilll/provider/shared_preferences.dart';
-import 'package:pilll/util/shared_preference/keys.dart';
+import 'package:pilll/utils/shared_preference/keys.dart';
 
 class MigrateInfo extends HookConsumerWidget {
   const MigrateInfo({Key? key}) : super(key: key);

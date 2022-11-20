@@ -1,7 +1,7 @@
 import 'dart:async';
 
 import 'package:hooks_riverpod/hooks_riverpod.dart';
-import 'package:pilll/util/datetime/day.dart';
+import 'package:pilll/utils/datetime/day.dart';
 import 'package:riverpod/riverpod.dart';
 
 final timerStoreProvider = StateNotifierProvider<TimerStateStore, DateTime>(

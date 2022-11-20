@@ -3,7 +3,7 @@ import 'package:flutter/services.dart';
 import 'package:flutter_hooks/flutter_hooks.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
-import 'package:pilll/util/analytics.dart';
+import 'package:pilll/utils/analytics.dart';
 import 'package:pilll/components/atoms/button.dart';
 import 'package:pilll/components/atoms/color.dart';
 import 'package:pilll/components/atoms/font.dart';
@@ -13,7 +13,7 @@ import 'package:pilll/provider/batch.dart';
 import 'package:pilll/entity/pill_sheet_group.codegen.dart';
 import 'package:pilll/provider/pill_sheet_group.dart';
 import 'package:pilll/provider/pill_sheet_modified_history.dart';
-import 'package:pilll/util/formatter/text_input_formatter.dart';
+import 'package:pilll/utils/formatter/text_input_formatter.dart';
 
 class DisplayNumberSettingSheet extends HookConsumerWidget {
   final PillSheetGroup pillSheetGroup;

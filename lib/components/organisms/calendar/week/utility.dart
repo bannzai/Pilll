@@ -1,6 +1,6 @@
 import 'package:pilll/entity/diary.codegen.dart';
 import 'package:pilll/entity/schedule.codegen.dart';
-import 'package:pilll/util/datetime/date_compare.dart';
+import 'package:pilll/utils/datetime/date_compare.dart';
 import 'package:pilll/features/calendar/date_range.dart';
 import 'package:pilll/entity/weekday.dart';
 

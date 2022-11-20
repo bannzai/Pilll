@@ -1,5 +1,5 @@
 import 'package:package_info/package_info.dart';
-import 'package:pilll/util/environment.dart';
+import 'package:pilll/utils/environment.dart';
 
 class Version {
   final int major;

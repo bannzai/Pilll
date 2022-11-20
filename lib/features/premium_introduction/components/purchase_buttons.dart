@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
-import 'package:pilll/util/analytics.dart';
+import 'package:pilll/utils/analytics.dart';
 import 'package:pilll/features/premium_introduction/components/annual_purchase_button.dart';
 import 'package:pilll/features/premium_introduction/components/monthly_purchase_button.dart';
 import 'package:pilll/features/premium_introduction/premium_complete_dialog.dart';

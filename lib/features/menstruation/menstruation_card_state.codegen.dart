@@ -1,6 +1,6 @@
 import 'package:pilll/entity/menstruation.codegen.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';
-import 'package:pilll/util/datetime/day.dart';
+import 'package:pilll/utils/datetime/day.dart';
 
 part '../../features/menstruation/menstruation_card_state.codegen.freezed.dart';
 

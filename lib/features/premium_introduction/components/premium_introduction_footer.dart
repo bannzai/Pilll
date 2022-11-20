@@ -1,16 +1,16 @@
 import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
-import 'package:pilll/util/analytics.dart';
+import 'package:pilll/utils/analytics.dart';
 import 'package:pilll/components/atoms/color.dart';
 import 'package:pilll/components/atoms/font.dart';
 import 'package:pilll/components/atoms/text_color.dart';
 import 'package:pilll/features/premium_introduction/util/map_to_error.dart';
 import 'package:pilll/features/error/alert_error.dart';
 import 'package:pilll/features/error/error_alert.dart';
-import 'package:pilll/util/error_log.dart';
+import 'package:pilll/utils/error_log.dart';
 import 'package:pilll/provider/purchase.dart';
-import 'package:pilll/util/platform/platform.dart';
+import 'package:pilll/utils/platform/platform.dart';
 import 'package:purchases_flutter/purchases_flutter.dart';
 import 'package:url_launcher/url_launcher.dart';
 

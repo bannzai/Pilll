@@ -1,6 +1,6 @@
 import 'package:hooks_riverpod/hooks_riverpod.dart';
-import 'package:pilll/util/datetime/timer.dart';
-import 'package:pilll/util/formatter/date_time_formatter.dart';
+import 'package:pilll/utils/datetime/timer.dart';
+import 'package:pilll/utils/formatter/date_time_formatter.dart';
 
 final isOverDiscountDeadlineProvider = Provider.family
     .autoDispose((ref, DateTime? discountEntitlementDeadlineDate) {

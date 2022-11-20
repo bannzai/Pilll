@@ -2,7 +2,7 @@ import 'dart:io';
 
 import 'package:async_value_group/async_value_group.dart';
 import 'package:flutter_hooks/flutter_hooks.dart';
-import 'package:pilll/util/analytics.dart';
+import 'package:pilll/utils/analytics.dart';
 import 'package:pilll/components/atoms/button.dart';
 import 'package:pilll/components/atoms/font.dart';
 import 'package:pilll/components/molecules/indicator.dart';
@@ -36,11 +36,11 @@ import 'package:pilll/provider/premium_and_trial.codegen.dart';
 import 'package:pilll/provider/root.dart';
 import 'package:pilll/provider/setting.dart';
 import 'package:pilll/provider/shared_preference.dart';
-import 'package:pilll/util/environment.dart';
+import 'package:pilll/utils/environment.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
-import 'package:pilll/util/shared_preference/keys.dart';
+import 'package:pilll/utils/shared_preference/keys.dart';
 import 'package:url_launcher/url_launcher.dart';
 
 enum SettingSection { account, premium, pill, notification, menstruation, other }

@@ -1,5 +1,5 @@
 import 'package:flutter_test/flutter_test.dart';
-import 'package:pilll/util/version/version.dart';
+import 'package:pilll/utils/version/version.dart';
 
 void main() {
   group("#Version.parse", () {

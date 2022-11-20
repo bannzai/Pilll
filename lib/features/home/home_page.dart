@@ -1,6 +1,6 @@
 import 'package:flutter_hooks/flutter_hooks.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
-import 'package:pilll/util/analytics.dart';
+import 'package:pilll/utils/analytics.dart';
 import 'package:pilll/provider/user.dart';
 import 'package:pilll/features/calendar/calendar_page.dart';
 import 'package:pilll/features/menstruation/menstruation_page.dart';
@@ -8,7 +8,7 @@ import 'package:pilll/features/record/record_page.dart';
 import 'package:pilll/features/settings/setting_page.dart';
 import 'package:pilll/components/atoms/color.dart';
 import 'package:pilll/components/atoms/text_color.dart';
-import 'package:pilll/util/push_notification.dart';
+import 'package:pilll/utils/push_notification.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 

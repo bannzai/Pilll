@@ -1,5 +1,5 @@
 import 'package:flutter_test/flutter_test.dart';
-import 'package:pilll/util/datetime/day.dart';
+import 'package:pilll/utils/datetime/day.dart';
 
 void main() {
   group("#daysBetween", () {

@@ -1,5 +1,5 @@
 import 'package:flutter/services.dart';
-import 'package:pilll/util/analytics.dart';
+import 'package:pilll/utils/analytics.dart';
 import 'package:pilll/native/legacy.dart';
 import 'package:pilll/native/pill.dart';
 import 'package:pilll/native/widget.dart';

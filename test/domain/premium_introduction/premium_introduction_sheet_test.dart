@@ -1,18 +1,18 @@
-import 'package:pilll/util/analytics.dart';
+import 'package:pilll/utils/analytics.dart';
 import 'package:pilll/features/premium_introduction/components/premium_introduction_discount.dart';
 import 'package:pilll/features/premium_introduction/components/premium_user_thanks.dart';
 import 'package:pilll/features/premium_introduction/premium_introduction_sheet.dart';
 import 'package:pilll/features/premium_introduction/util/discount_deadline.dart';
 import 'package:pilll/provider/premium_and_trial.codegen.dart';
-import 'package:pilll/util/datetime/day.dart';
+import 'package:pilll/utils/datetime/day.dart';
 import 'package:pilll/provider/purchase.dart';
-import 'package:pilll/util/environment.dart';
+import 'package:pilll/utils/environment.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_test/flutter_test.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
 import 'package:mockito/mockito.dart';
 import 'package:intl/date_symbol_data_local.dart';
-import 'package:pilll/util/shared_preference/keys.dart';
+import 'package:pilll/utils/shared_preference/keys.dart';
 import 'package:purchases_flutter/object_wrappers.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 

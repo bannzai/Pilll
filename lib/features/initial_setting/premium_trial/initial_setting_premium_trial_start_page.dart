@@ -3,14 +3,14 @@ import 'dart:io';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
-import 'package:pilll/util/analytics.dart';
+import 'package:pilll/utils/analytics.dart';
 import 'package:pilll/components/atoms/button.dart';
 import 'package:pilll/components/atoms/color.dart';
 import 'package:pilll/components/atoms/font.dart';
 import 'package:pilll/components/atoms/text_color.dart';
 import 'package:pilll/features/initial_setting/initial_setting_state_notifier.dart';
 import 'package:pilll/features/error/error_alert.dart';
-import 'package:pilll/util/router.dart';
+import 'package:pilll/utils/router.dart';
 
 class IntiialSettingPremiumTrialStartPage extends HookConsumerWidget {
   const IntiialSettingPremiumTrialStartPage({Key? key}) : super(key: key);

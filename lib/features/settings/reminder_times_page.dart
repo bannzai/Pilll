@@ -1,7 +1,7 @@
 import 'dart:async';
 
 import 'package:async_value_group/async_value_group.dart';
-import 'package:pilll/util/analytics.dart';
+import 'package:pilll/utils/analytics.dart';
 import 'package:pilll/components/molecules/indicator.dart';
 import 'package:pilll/provider/database.dart';
 import 'package:pilll/features/settings/provider.dart';
@@ -13,8 +13,8 @@ import 'package:pilll/components/atoms/text_color.dart';
 import 'package:pilll/features/error/error_alert.dart';
 import 'package:pilll/features/error/universal_error_page.dart';
 import 'package:pilll/provider/setting.dart';
-import 'package:pilll/util/formatter/date_time_formatter.dart';
-import 'package:pilll/util/toolbar/time_picker.dart';
+import 'package:pilll/utils/formatter/date_time_formatter.dart';
+import 'package:pilll/utils/toolbar/time_picker.dart';
 import 'package:flutter/material.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
 import 'package:flutter_svg/svg.dart';

@@ -1,9 +1,9 @@
 import 'dart:async';
 import 'package:firebase_auth/firebase_auth.dart';
-import 'package:pilll/util/analytics.dart';
-import 'package:pilll/util/auth/apple.dart';
-import 'package:pilll/util/auth/google.dart';
-import 'package:pilll/util/shared_preference/keys.dart';
+import 'package:pilll/utils/analytics.dart';
+import 'package:pilll/utils/auth/apple.dart';
+import 'package:pilll/utils/auth/google.dart';
+import 'package:pilll/utils/shared_preference/keys.dart';
 import 'package:riverpod/riverpod.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 

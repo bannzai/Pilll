@@ -13,8 +13,8 @@ import 'package:pilll/provider/pill_sheet_group.dart';
 import 'package:pilll/provider/pill_sheet_modified_history.dart';
 import 'package:pilll/provider/setting.dart';
 import 'package:pilll/provider/user.dart';
-import 'package:pilll/util/datetime/day.dart';
-import 'package:pilll/util/datetime/day.dart';
+import 'package:pilll/utils/datetime/day.dart';
+import 'package:pilll/utils/datetime/day.dart';
 import 'package:riverpod/riverpod.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 

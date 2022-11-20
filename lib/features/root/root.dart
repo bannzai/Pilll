@@ -4,7 +4,7 @@ import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:firebase_crashlytics/firebase_crashlytics.dart';
 import 'package:flutter_hooks/flutter_hooks.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
-import 'package:pilll/util/analytics.dart';
+import 'package:pilll/utils/analytics.dart';
 import 'package:pilll/components/page/ok_dialog.dart';
 import 'package:pilll/features/initial_setting/pill_sheet_group/initial_setting_pill_sheet_group_page.dart';
 import 'package:pilll/entity/config.codegen.dart';
@@ -15,15 +15,15 @@ import 'package:pilll/features/home/home_page.dart';
 import 'package:pilll/components/molecules/indicator.dart';
 import 'package:pilll/features/error/template.dart';
 import 'package:pilll/features/error/universal_error_page.dart';
-import 'package:pilll/util/error_log.dart';
+import 'package:pilll/utils/error_log.dart';
 import 'package:pilll/provider/purchase.dart';
 import 'package:pilll/provider/user.dart';
-import 'package:pilll/util/platform/platform.dart';
-import 'package:pilll/util/shared_preference/keys.dart';
+import 'package:pilll/utils/platform/platform.dart';
+import 'package:pilll/utils/shared_preference/keys.dart';
 import 'package:flutter/material.dart';
 import 'package:purchases_flutter/purchases_flutter.dart';
 import 'package:shared_preferences/shared_preferences.dart';
-import 'package:pilll/util/version/version.dart';
+import 'package:pilll/utils/version/version.dart';
 import 'package:url_launcher/url_launcher.dart';
 
 class Root extends HookConsumerWidget {

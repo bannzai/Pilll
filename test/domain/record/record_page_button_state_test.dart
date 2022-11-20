@@ -1,4 +1,4 @@
-import 'package:pilll/util/analytics.dart';
+import 'package:pilll/utils/analytics.dart';
 import 'package:pilll/provider/database.dart';
 import 'package:pilll/features/record/components/button/cancel_button.dart';
 import 'package:pilll/features/record/components/button/record_page_button.dart';
@@ -6,13 +6,13 @@ import 'package:pilll/features/record/components/button/taken_button.dart';
 import 'package:pilll/entity/pill_sheet.codegen.dart';
 import 'package:pilll/entity/pill_sheet_group.codegen.dart';
 import 'package:pilll/entity/pill_sheet_type.dart';
-import 'package:pilll/util/datetime/day.dart';
-import 'package:pilll/util/environment.dart';
+import 'package:pilll/utils/datetime/day.dart';
+import 'package:pilll/utils/environment.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_test/flutter_test.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
 import 'package:intl/date_symbol_data_local.dart';
-import 'package:pilll/util/shared_preference/keys.dart';
+import 'package:pilll/utils/shared_preference/keys.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
 import '../../helper/mock.mocks.dart';

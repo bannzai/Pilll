@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
-import 'package:pilll/util/analytics.dart';
+import 'package:pilll/utils/analytics.dart';
 import 'package:pilll/features/calendar/components/pill_sheet_modified_history/components/core/day.dart';
 import 'package:pilll/features/calendar/components/pill_sheet_modified_history/components/core/effective_pill_number.dart';
 import 'package:pilll/features/calendar/components/pill_sheet_modified_history/components/core/row_layout.dart';
@@ -12,8 +12,8 @@ import 'package:pilll/entity/pill_sheet_modified_history_value.codegen.dart';
 import 'package:pilll/features/error/error_alert.dart';
 import 'package:pilll/provider/pill_sheet_modified_history.dart';
 import 'package:pilll/provider/premium_and_trial.codegen.dart';
-import 'package:pilll/util/formatter/date_time_formatter.dart';
-import 'package:pilll/util/toolbar/date_and_time_picker.dart';
+import 'package:pilll/utils/formatter/date_time_formatter.dart';
+import 'package:pilll/utils/toolbar/date_and_time_picker.dart';
 
 class PillSheetModifiedHistoryTakenPillAction extends HookConsumerWidget {
   final PremiumAndTrial premiumAndTrial;

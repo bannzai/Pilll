@@ -14,7 +14,7 @@ import 'package:pilll/features/calendar/components/pill_sheet_modified_history/c
 import 'package:pilll/features/calendar/components/pill_sheet_modified_history/components/rows/pill_sheet_modified_history_taken_pill_action.dart';
 import 'package:pilll/entity/pill_sheet_modified_history.codegen.dart';
 import 'package:pilll/provider/premium_and_trial.codegen.dart';
-import 'package:pilll/util/datetime/date_compare.dart';
+import 'package:pilll/utils/datetime/date_compare.dart';
 
 class PillSheetModifiedHistoryListModel {
   final DateTime dateTimeOfMonth;

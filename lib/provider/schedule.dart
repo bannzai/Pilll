@@ -1,7 +1,7 @@
 import 'package:pilll/provider/database.dart';
 import 'package:pilll/entity/schedule.codegen.dart';
 import 'package:riverpod/riverpod.dart';
-import 'package:pilll/util/datetime/day.dart';
+import 'package:pilll/utils/datetime/day.dart';
 
 final schedulesForDateProvider = StreamProvider.family((ref, DateTime date) {
   final range = date.dateTimeRange();

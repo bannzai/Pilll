@@ -3,7 +3,7 @@ import 'dart:math';
 import 'package:flutter/material.dart';
 import 'package:flutter_hooks/flutter_hooks.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
-import 'package:pilll/util/analytics.dart';
+import 'package:pilll/utils/analytics.dart';
 import 'package:pilll/components/atoms/color.dart';
 import 'package:pilll/components/atoms/font.dart';
 import 'package:pilll/components/atoms/text_color.dart';
@@ -14,9 +14,9 @@ import 'package:pilll/features/menstruation_edit/components/header/menstruation_
 import 'package:pilll/entity/menstruation.codegen.dart';
 import 'package:pilll/entity/setting.codegen.dart';
 import 'package:pilll/provider/setting.dart';
-import 'package:pilll/util/datetime/date_compare.dart';
-import 'package:pilll/util/datetime/day.dart';
-import 'package:pilll/util/formatter/date_time_formatter.dart';
+import 'package:pilll/utils/datetime/date_compare.dart';
+import 'package:pilll/utils/datetime/day.dart';
+import 'package:pilll/utils/formatter/date_time_formatter.dart';
 
 class MenstruationEditPage extends HookConsumerWidget {
   final Menstruation? initialMenstruation;

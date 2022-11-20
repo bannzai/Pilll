@@ -6,7 +6,7 @@ import 'package:pilll/components/atoms/text_color.dart';
 import 'package:pilll/entity/pill_sheet.codegen.dart';
 import 'package:pilll/entity/pill_sheet_group.codegen.dart';
 import 'package:pilll/entity/setting.codegen.dart';
-import 'package:pilll/util/formatter/date_time_formatter.dart';
+import 'package:pilll/utils/formatter/date_time_formatter.dart';
 
 class RecordPageRestDurationDialog extends StatelessWidget {
   final RecordPageRestDurationDialogTitle title;

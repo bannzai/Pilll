@@ -1,4 +1,4 @@
-import 'package:pilll/util/datetime/day.dart';
+import 'package:pilll/utils/datetime/day.dart';
 
 class DateRange {
   final DateTime _begin;

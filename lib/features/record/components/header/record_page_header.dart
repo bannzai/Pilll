@@ -1,4 +1,4 @@
-import 'package:pilll/util/analytics.dart';
+import 'package:pilll/utils/analytics.dart';
 import 'package:pilll/components/atoms/color.dart';
 import 'package:pilll/components/atoms/font.dart';
 import 'package:pilll/components/atoms/text_color.dart';
@@ -6,7 +6,7 @@ import 'package:pilll/features/record/components/header/today_taken_pill_number.
 import 'package:pilll/features/settings/today_pill_number/setting_today_pill_number_page.dart';
 import 'package:pilll/entity/pill_sheet_group.codegen.dart';
 import 'package:pilll/entity/setting.codegen.dart';
-import 'package:pilll/util/formatter/date_time_formatter.dart';
+import 'package:pilll/utils/formatter/date_time_formatter.dart';
 import 'package:flutter/material.dart';
 
 abstract class RecordPageInformationHeaderConst {

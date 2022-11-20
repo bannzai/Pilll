@@ -1,5 +1,5 @@
 import 'package:pilll/provider/shared_preferences.dart';
-import 'package:pilll/util/shared_preference/keys.dart';
+import 'package:pilll/utils/shared_preference/keys.dart';
 import 'package:riverpod/riverpod.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 

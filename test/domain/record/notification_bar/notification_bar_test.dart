@@ -1,6 +1,6 @@
 import 'dart:async';
 
-import 'package:pilll/util/analytics.dart';
+import 'package:pilll/utils/analytics.dart';
 import 'package:pilll/provider/pill_sheet_group.dart';
 import 'package:pilll/provider/pilll_ads.dart';
 import 'package:pilll/features/premium_introduction/util/discount_deadline.dart';
@@ -19,15 +19,15 @@ import 'package:pilll/entity/pilll_ads.codegen.dart';
 import 'package:pilll/provider/locale.dart';
 import 'package:pilll/provider/premium_and_trial.codegen.dart';
 import 'package:pilll/provider/auth.dart';
-import 'package:pilll/util/datetime/day.dart';
-import 'package:pilll/util/datetime/day.dart';
-import 'package:pilll/util/environment.dart';
+import 'package:pilll/utils/datetime/day.dart';
+import 'package:pilll/utils/datetime/day.dart';
+import 'package:pilll/utils/environment.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_test/flutter_test.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
 import 'package:mockito/mockito.dart';
 import 'package:intl/date_symbol_data_local.dart';
-import 'package:pilll/util/shared_preference/keys.dart';
+import 'package:pilll/utils/shared_preference/keys.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
 import '../../../helper/mock.mocks.dart';

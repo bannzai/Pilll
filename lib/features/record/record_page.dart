@@ -23,7 +23,7 @@ import 'package:pilll/provider/setting.dart';
 import 'package:pilll/provider/shared_preference.dart';
 import 'package:pilll/provider/shared_preferences.dart';
 import 'package:pilll/provider/auth.dart';
-import 'package:pilll/util/shared_preference/keys.dart';
+import 'package:pilll/utils/shared_preference/keys.dart';
 
 class RecordPage extends HookConsumerWidget {
   const RecordPage({Key? key}) : super(key: key);

@@ -1,4 +1,4 @@
-import 'package:pilll/util/analytics.dart';
+import 'package:pilll/utils/analytics.dart';
 import 'package:pilll/features/initial_setting/initial_setting_state_notifier.dart';
 import 'package:pilll/components/atoms/button.dart';
 import 'package:pilll/components/atoms/color.dart';
@@ -7,7 +7,7 @@ import 'package:pilll/components/atoms/text_color.dart';
 import 'package:pilll/features/initial_setting/reminder_times/initial_setting_reminder_times_page.dart';
 import 'package:pilll/features/initial_setting/today_pill_number/explain_label.dart';
 import 'package:pilll/features/initial_setting/today_pill_number/select_today_pill_number_pill_sheet_list.dart';
-import 'package:pilll/util/datetime/day.dart';
+import 'package:pilll/utils/datetime/day.dart';
 import 'package:flutter/material.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
 import 'package:intl/intl.dart';

@@ -1,6 +1,6 @@
 import 'package:flutter/services.dart';
 import 'package:pilll/features/error/alert_error.dart';
-import 'package:pilll/util/platform/platform.dart';
+import 'package:pilll/utils/platform/platform.dart';
 import 'package:purchases_flutter/purchases_flutter.dart';
 
 // See also: https://docs.revenuecat.com/docs/errors

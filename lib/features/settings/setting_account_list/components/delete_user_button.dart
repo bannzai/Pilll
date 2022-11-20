@@ -3,16 +3,16 @@ import 'dart:io';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
-import 'package:pilll/util/analytics.dart';
-import 'package:pilll/util/auth/apple.dart';
-import 'package:pilll/util/auth/google.dart';
+import 'package:pilll/utils/analytics.dart';
+import 'package:pilll/utils/auth/apple.dart';
+import 'package:pilll/utils/auth/google.dart';
 import 'package:pilll/components/atoms/button.dart';
 import 'package:pilll/components/atoms/font.dart';
 import 'package:pilll/components/atoms/text_color.dart';
 import 'package:pilll/components/page/discard_dialog.dart';
 import 'package:pilll/features/error/error_alert.dart';
-import 'package:pilll/util/error_log.dart';
-import 'package:pilll/util/router.dart';
+import 'package:pilll/utils/error_log.dart';
+import 'package:pilll/utils/router.dart';
 
 class DeleteUserButton extends HookConsumerWidget {
   const DeleteUserButton({Key? key}) : super(key: key);

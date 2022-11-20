@@ -1,6 +1,6 @@
 import 'package:pilll/entity/weekday.dart';
-import 'package:pilll/util/datetime/date_compare.dart';
-import 'package:pilll/util/datetime/day.dart';
+import 'package:pilll/utils/datetime/date_compare.dart';
+import 'package:pilll/utils/datetime/day.dart';
 
 final todayCalendarPageIndex =
     menstruationWeekCalendarDataSource.lastIndexWhere((element) => element.where((element) => isSameDay(element, today())).isNotEmpty);

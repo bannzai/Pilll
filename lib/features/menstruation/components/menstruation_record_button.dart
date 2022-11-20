@@ -1,13 +1,13 @@
 import 'package:flutter/material.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
-import 'package:pilll/util/analytics.dart';
+import 'package:pilll/utils/analytics.dart';
 import 'package:pilll/components/atoms/button.dart';
 import 'package:pilll/features/menstruation_edit/menstruation_edit_page.dart';
 import 'package:pilll/features/menstruation/menstruation_select_modify_type_sheet.dart';
 import 'package:pilll/entity/menstruation.codegen.dart';
 import 'package:pilll/entity/setting.codegen.dart';
 import 'package:pilll/provider/menstruation.dart';
-import 'package:pilll/util/datetime/day.dart';
+import 'package:pilll/utils/datetime/day.dart';
 
 class MenstruationRecordButton extends HookConsumerWidget {
   final Menstruation? latestMenstruation;

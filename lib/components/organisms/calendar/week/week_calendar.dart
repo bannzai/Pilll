@@ -1,6 +1,6 @@
 import 'package:collection/collection.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
-import 'package:pilll/util/analytics.dart';
+import 'package:pilll/utils/analytics.dart';
 import 'package:pilll/components/organisms/calendar/band/calendar_band.dart';
 
 import 'package:pilll/components/organisms/calendar/band/calendar_band_model.dart';
@@ -19,8 +19,8 @@ import 'package:pilll/entity/diary.codegen.dart';
 import 'package:pilll/entity/schedule.codegen.dart';
 import 'package:pilll/entity/weekday.dart';
 import 'package:pilll/features/diary/confirm_diary_sheet.dart';
-import 'package:pilll/util/datetime/date_compare.dart';
-import 'package:pilll/util/datetime/day.dart';
+import 'package:pilll/utils/datetime/date_compare.dart';
+import 'package:pilll/utils/datetime/day.dart';
 
 class CalendarWeekLine extends HookConsumerWidget {
   final DateRange dateRange;

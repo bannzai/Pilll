@@ -6,7 +6,7 @@ import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_hooks/flutter_hooks.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
-import 'package:pilll/util/analytics.dart';
+import 'package:pilll/utils/analytics.dart';
 import 'package:pilll/components/atoms/button.dart';
 import 'package:pilll/components/atoms/color.dart';
 import 'package:pilll/components/atoms/font.dart';
@@ -20,10 +20,10 @@ import 'package:pilll/features/error/universal_error_page.dart';
 import 'package:pilll/provider/premium_and_trial.codegen.dart';
 import 'package:pilll/provider/root.dart';
 import 'package:pilll/provider/schedule.dart';
-import 'package:pilll/util/local_notification.dart';
-import 'package:pilll/util/const.dart';
-import 'package:pilll/util/formatter/date_time_formatter.dart';
-import 'package:pilll/util/datetime/day.dart';
+import 'package:pilll/utils/local_notification.dart';
+import 'package:pilll/utils/const.dart';
+import 'package:pilll/utils/formatter/date_time_formatter.dart';
+import 'package:pilll/utils/datetime/day.dart';
 
 class SchedulePostPage extends HookConsumerWidget {
   final DateTime date;

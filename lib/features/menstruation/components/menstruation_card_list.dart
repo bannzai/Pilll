@@ -10,7 +10,7 @@ import 'package:pilll/entity/menstruation.codegen.dart';
 import 'package:pilll/entity/pill_sheet_group.codegen.dart';
 import 'package:pilll/entity/setting.codegen.dart';
 import 'package:pilll/provider/premium_and_trial.codegen.dart';
-import 'package:pilll/util/datetime/day.dart';
+import 'package:pilll/utils/datetime/day.dart';
 
 class MenstruationCardList extends StatelessWidget {
   final List<CalendarScheduledMenstruationBandModel> calendarScheduledMenstruationBandModels;

@@ -1,5 +1,5 @@
 import 'package:freezed_annotation/freezed_annotation.dart';
-import 'package:pilll/util/emoji/emoji.dart';
+import 'package:pilll/utils/emoji/emoji.dart';
 
 part 'reminder_notification_customization.codegen.g.dart';
 part 'reminder_notification_customization.codegen.freezed.dart';

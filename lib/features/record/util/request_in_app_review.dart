@@ -1,5 +1,5 @@
 import 'package:in_app_review/in_app_review.dart';
-import 'package:pilll/util/shared_preference/keys.dart';
+import 'package:pilll/utils/shared_preference/keys.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
 void requestInAppReview() {

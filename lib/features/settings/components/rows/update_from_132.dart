@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 
-import 'package:pilll/util/analytics.dart';
+import 'package:pilll/utils/analytics.dart';
 import 'package:pilll/components/atoms/font.dart';
 import 'package:pilll/features/settings/information_for_before_major_update.dart';
-import 'package:pilll/util/shared_preference/keys.dart';
+import 'package:pilll/utils/shared_preference/keys.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
 class UpdateFrom132Row extends StatelessWidget {

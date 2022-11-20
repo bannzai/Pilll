@@ -7,8 +7,8 @@ import 'package:pilll/entity/pill_sheet_group.codegen.dart';
 import 'package:pilll/entity/pill_sheet_type.dart';
 import 'package:pilll/entity/setting.codegen.dart';
 import 'package:pilll/entity/weekday.dart';
-import 'package:pilll/util/datetime/date_compare.dart';
-import 'package:pilll/util/datetime/day.dart';
+import 'package:pilll/utils/datetime/date_compare.dart';
+import 'package:pilll/utils/datetime/day.dart';
 
 List<DateRange> scheduledOrInTheMiddleMenstruationDateRanges(
   PillSheetGroup? pillSheetGroup,

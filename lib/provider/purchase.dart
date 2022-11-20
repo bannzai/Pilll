@@ -6,12 +6,12 @@ import 'package:pilll/secret/secret.dart';
 import 'package:pilll/features/premium_introduction/util/discount_deadline.dart';
 import 'package:pilll/features/premium_introduction/util/map_to_error.dart';
 import 'package:pilll/features/error/alert_error.dart';
-import 'package:pilll/util/error_log.dart';
+import 'package:pilll/utils/error_log.dart';
 import 'package:pilll/provider/premium_and_trial.codegen.dart';
-import 'package:pilll/util/environment.dart';
+import 'package:pilll/utils/environment.dart';
 import 'package:purchases_flutter/purchases_flutter.dart';
 import 'package:firebase_auth/firebase_auth.dart';
-import 'package:pilll/util/analytics.dart';
+import 'package:pilll/utils/analytics.dart';
 import 'package:pilll/provider/database.dart';
 import 'package:pilll/provider/user.dart';
 

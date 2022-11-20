@@ -3,7 +3,7 @@ import 'package:pilll/components/atoms/font.dart';
 import 'package:pilll/components/atoms/text_color.dart';
 import 'package:pilll/features/menstruation_edit/menstruation_edit_page.dart';
 import 'package:pilll/entity/menstruation.codegen.dart';
-import 'package:pilll/util/formatter/date_time_formatter.dart';
+import 'package:pilll/utils/formatter/date_time_formatter.dart';
 import 'package:flutter/material.dart';
 
 class MenstruationListRow extends StatelessWidget {

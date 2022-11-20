@@ -1,7 +1,7 @@
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
-import 'package:pilll/util/analytics.dart';
+import 'package:pilll/utils/analytics.dart';
 import 'package:pilll/provider/pill_sheet_group.dart';
 import 'package:pilll/provider/pilll_ads.dart';
 import 'package:pilll/features/premium_introduction/premium_introduction_sheet.dart';
@@ -19,8 +19,8 @@ import 'package:pilll/provider/locale.dart';
 import 'package:pilll/provider/premium_and_trial.codegen.dart';
 import 'package:pilll/provider/shared_preferences.dart';
 import 'package:pilll/provider/auth.dart';
-import 'package:pilll/util/datetime/day.dart';
-import 'package:pilll/util/shared_preference/keys.dart';
+import 'package:pilll/utils/datetime/day.dart';
+import 'package:pilll/utils/shared_preference/keys.dart';
 
 class NotificationBar extends HookConsumerWidget {
   const NotificationBar({Key? key}) : super(key: key);

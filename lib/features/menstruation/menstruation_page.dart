@@ -27,8 +27,8 @@ import 'package:pilll/provider/premium_and_trial.codegen.dart';
 import 'package:pilll/provider/root.dart';
 import 'package:pilll/provider/schedule.dart';
 import 'package:pilll/provider/setting.dart';
-import 'package:pilll/util/datetime/day.dart';
-import 'package:pilll/util/formatter/date_time_formatter.dart';
+import 'package:pilll/utils/datetime/day.dart';
+import 'package:pilll/utils/formatter/date_time_formatter.dart';
 
 abstract class MenstruationPageConst {
   static const double calendarHeaderDropShadowOffset = 2;

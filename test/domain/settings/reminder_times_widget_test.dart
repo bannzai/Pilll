@@ -3,7 +3,7 @@ import 'package:pilll/entity/pill_sheet_type.dart';
 import 'package:pilll/entity/setting.codegen.dart';
 import 'package:pilll/features/settings/reminder_times_page.dart';
 import 'package:pilll/provider/setting.dart';
-import 'package:pilll/util/environment.dart';
+import 'package:pilll/utils/environment.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_test/flutter_test.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';

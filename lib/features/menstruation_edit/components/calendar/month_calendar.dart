@@ -1,5 +1,5 @@
 import 'package:hooks_riverpod/hooks_riverpod.dart';
-import 'package:pilll/util/analytics.dart';
+import 'package:pilll/utils/analytics.dart';
 import 'package:pilll/components/organisms/calendar/day/calendar_day_tile.dart';
 import 'package:pilll/components/organisms/calendar/week/utility.dart';
 import 'package:pilll/components/organisms/calendar/week/week_calendar.dart';

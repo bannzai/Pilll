@@ -1,4 +1,4 @@
-import 'package:pilll/util/analytics.dart';
+import 'package:pilll/utils/analytics.dart';
 import 'package:pilll/features/initial_setting/initial_setting_state.codegen.dart';
 import 'package:pilll/features/initial_setting/premium_trial/initial_setting_premium_trial_start_page.dart';
 import 'package:pilll/features/initial_setting/initial_setting_state_notifier.dart';
@@ -6,9 +6,9 @@ import 'package:pilll/components/atoms/button.dart';
 import 'package:pilll/components/atoms/color.dart';
 import 'package:pilll/components/atoms/font.dart';
 import 'package:pilll/components/atoms/text_color.dart';
-import 'package:pilll/util/datetime/day.dart';
-import 'package:pilll/util/formatter/date_time_formatter.dart';
-import 'package:pilll/util/toolbar/time_picker.dart';
+import 'package:pilll/utils/datetime/day.dart';
+import 'package:pilll/utils/formatter/date_time_formatter.dart';
+import 'package:pilll/utils/toolbar/time_picker.dart';
 import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
