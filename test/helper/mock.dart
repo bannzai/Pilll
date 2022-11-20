@@ -17,6 +17,7 @@ import 'package:pilll/provider/user.dart';
 import 'package:pilll/utils/datetime/day.dart';
 import 'package:mockito/annotations.dart';
 import 'package:pilll/provider/purchase.dart';
+import 'package:pilll/utils/error_log.dart';
 
 @GenerateMocks([
   TodayService,
@@ -44,5 +45,6 @@ import 'package:pilll/provider/purchase.dart';
   FetchOrCreateUser,
   SaveUserLaunchInfo,
   MarkAsMigratedToFlutter,
+  ErrorLogger,
 ])
 abstract class KeepGeneratedMocks {}

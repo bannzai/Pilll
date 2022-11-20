@@ -36,6 +36,7 @@ import 'package:pilll/provider/take_pill.dart' as _i30;
 import 'package:pilll/provider/user.dart' as _i27;
 import 'package:pilll/utils/analytics.dart' as _i16;
 import 'package:pilll/utils/datetime/day.dart' as _i15;
+import 'package:pilll/utils/error_log.dart' as _i33;
 import 'package:purchases_flutter/purchases_flutter.dart' as _i9;
 
 // ignore_for_file: type=lint
@@ -1047,4 +1048,37 @@ class MockMarkAsMigratedToFlutter extends _i1.Mock
         returnValue: Future<void>.value(),
         returnValueForMissingStub: Future<void>.value(),
       ) as _i17.Future<void>);
+}
+
+/// A class which mocks [ErrorLogger].
+///
+/// See the documentation for Mockito's code generation for more information.
+class MockErrorLogger extends _i1.Mock implements _i33.ErrorLogger {
+  MockErrorLogger() {
+    _i1.throwOnMissingStub(this);
+  }
+
+  @override
+  void recordError(
+    dynamic exception,
+    StackTrace? stack,
+  ) =>
+      super.noSuchMethod(
+        Invocation.method(
+          #recordError,
+          [
+            exception,
+            stack,
+          ],
+        ),
+        returnValueForMissingStub: null,
+      );
+  @override
+  void log(String? message) => super.noSuchMethod(
+        Invocation.method(
+          #log,
+          [message],
+        ),
+        returnValueForMissingStub: null,
+      );
 }
