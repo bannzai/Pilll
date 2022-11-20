@@ -16,7 +16,12 @@ class AccountLinkRow extends HookConsumerWidget {
     final isAppleLinked = ref.watch(isAppleLinkedProvider);
     final isGoogleLinked = ref.watch(isGoogleLinkedProvider);
     return ListTile(
-      title: const Text("アカウント設定", style: FontType.listRow),
+      title: const Text("アカウント設定",
+          style: TextStyle(
+            fontFamily: FontFamily.roboto,
+            fontWeight: FontWeight.w300,
+            fontSize: 16,
+          )),
       trailing: _subtitle(isAppleLinked || isGoogleLinked),
       onTap: () {
         analytics.logEvent(name: "did_select_setting_account_cooperation");

@@ -61,7 +61,11 @@ class InformationForBeforeMigrate132 extends StatelessWidget {
                 const SizedBox(height: 8),
                 Text(
                   "最後に飲んだ日: $salvagedOldLastTakenDate",
-                  style: FontType.listRow.merge(TextColorStyle.main),
+                  style: TextStyle(
+                    fontFamily: FontFamily.roboto,
+                    fontWeight: FontWeight.w300,
+                    fontSize: 16,
+                  ).merge(TextColorStyle.main),
                 ),
                 const SizedBox(height: 4),
                 Text(
@@ -71,7 +75,11 @@ class InformationForBeforeMigrate132 extends StatelessWidget {
                 const SizedBox(height: 4),
                 Text(
                   "最後に飲んだピル番号: ${_latestPillNumber()}",
-                  style: FontType.listRow.merge(TextColorStyle.main),
+                  style: TextStyle(
+                    fontFamily: FontFamily.roboto,
+                    fontWeight: FontWeight.w300,
+                    fontSize: 16,
+                  ).merge(TextColorStyle.main),
                 ),
                 const SizedBox(height: 4),
                 Text(
@@ -81,7 +89,11 @@ class InformationForBeforeMigrate132 extends StatelessWidget {
                 const SizedBox(height: 4),
                 Text(
                   "今日服用予定だったピル番号: ${_todayPillNumber()}",
-                  style: FontType.listRow.merge(TextColorStyle.main),
+                  style: TextStyle(
+                    fontFamily: FontFamily.roboto,
+                    fontWeight: FontWeight.w300,
+                    fontSize: 16,
+                  ).merge(TextColorStyle.main),
                 ),
                 const SizedBox(height: 4),
                 Text(

@@ -28,7 +28,12 @@ class CreatingNewPillSheetRow extends HookConsumerWidget {
     return SwitchListTile(
       title: Row(
         children: [
-          const Text("ピルシートグループの自動追加", style: FontType.listRow),
+          const Text("ピルシートグループの自動追加",
+              style: TextStyle(
+                fontFamily: FontFamily.roboto,
+                fontWeight: FontWeight.w300,
+                fontSize: 16,
+              )),
           if (!isPremium) ...[
             const SizedBox(width: 8),
             const PremiumBadge(),

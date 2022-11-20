@@ -118,7 +118,12 @@ class _SchedulePostPage extends HookConsumerWidget {
                       ),
                     ),
                     SwitchListTile(
-                      title: const Text("当日9:00に通知を受け取る", style: FontType.listRow),
+                      title: const Text("当日9:00に通知を受け取る",
+                          style: TextStyle(
+                            fontFamily: FontFamily.roboto,
+                            fontWeight: FontWeight.w300,
+                            fontSize: 16,
+                          )),
                       activeColor: PilllColors.primary,
                       onChanged: (bool value) {
                         analytics.logEvent(

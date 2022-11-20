@@ -204,7 +204,12 @@ class SettingAccountCooperationRow extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return ListTile(
-      title: Text(accountType.loginContentName, style: FontType.listRow),
+      title: Text(accountType.loginContentName,
+          style: TextStyle(
+            fontFamily: FontFamily.roboto,
+            fontWeight: FontWeight.w300,
+            fontSize: 16,
+          )),
       trailing: _trailing(),
       horizontalTitleGap: 4,
       onTap: () async {
