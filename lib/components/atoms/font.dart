@@ -10,6 +10,11 @@ class FontFamily {
 }
 
 class FontType {
+  static const TextStyle listRow = TextStyle(
+    fontFamily: FontFamily.roboto,
+    fontWeight: FontWeight.w300,
+    fontSize: 16,
+  );
   static const TextStyle assisting = TextStyle(
     fontFamily: FontFamily.japanese,
     fontWeight: FontWeight.w300,

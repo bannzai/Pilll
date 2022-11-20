@@ -15,12 +15,7 @@ class NotificationTimeRow extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return ListTile(
-      title: const Text("通知時刻",
-          style: TextStyle(
-            fontFamily: FontFamily.roboto,
-            fontWeight: FontWeight.w300,
-            fontSize: 16,
-          )),
+      title: const Text("通知時刻", style: FontType.listRow),
       subtitle: Text(setting.reminderTimes.map((e) => DateTimeFormatter.militaryTime(e.dateTime())).join(", ")),
       onTap: () {
         analytics.logEvent(

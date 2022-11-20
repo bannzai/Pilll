@@ -24,12 +24,7 @@ class PremiumIntroductionRow extends StatelessWidget {
         children: [
           SvgPicture.asset("images/crown.svg", width: 24),
           const SizedBox(width: 8),
-          const Text("プレミアムプランを見る",
-              style: TextStyle(
-                fontFamily: FontFamily.roboto,
-                fontWeight: FontWeight.w300,
-                fontSize: 16,
-              )),
+          const Text("プレミアムプランを見る", style: FontType.listRow),
         ],
       ),
     );

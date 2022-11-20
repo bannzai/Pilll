@@ -27,12 +27,7 @@ class ReminderNotificationCustomizeWord extends HookConsumerWidget {
       minVerticalPadding: 9,
       title: Row(
         children: [
-          const Text("服用通知のカスタマイズ",
-              style: TextStyle(
-                fontFamily: FontFamily.roboto,
-                fontWeight: FontWeight.w300,
-                fontSize: 16,
-              )),
+          const Text("服用通知のカスタマイズ", style: FontType.listRow),
           if (!isPremium) ...[
             const SizedBox(width: 8),
             const PremiumBadge(),
