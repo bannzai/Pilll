@@ -29,11 +29,12 @@ class Root extends HookConsumerWidget {
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {
+    final firebaseUserAsyncValue = ref.watch(authStateStreamProvider);
+    final checkForceUpdate = ref.watch(checkForceUpdateProvider);
+
     final shouldForceUpdate = useState(false);
     final firebaseUserID = useState<String?>(null);
     final error = useState<LaunchException?>(null);
-    final firebaseUserAsyncValue = ref.watch(authStateStreamProvider);
-    final checkForceUpdate = ref.watch(checkForceUpdateProvider);
 
     // Set global error page
     ErrorWidget.builder = (FlutterErrorDetails details) {
