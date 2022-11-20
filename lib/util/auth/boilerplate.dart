@@ -1,11 +1,11 @@
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/foundation.dart';
-import 'package:pilll/auth/exception.dart';
+import 'package:pilll/util/auth/exception.dart';
 import 'package:pilll/entity/link_account_type.dart';
 import 'package:pilll/error_log.dart';
 import 'package:pilll/provider/user.dart';
-import 'package:pilll/auth/apple.dart';
-import 'package:pilll/auth/google.dart';
+import 'package:pilll/util/auth/apple.dart';
+import 'package:pilll/util/auth/google.dart';
 
 Future<SignInWithAppleState> callLinkWithApple(LinkApple linkApple) async {
   final user = FirebaseAuth.instance.currentUser;
