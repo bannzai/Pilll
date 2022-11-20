@@ -1,5 +1,5 @@
 import 'package:pilll/analytics.dart';
-import 'package:pilll/components/atoms/buttons.dart';
+import 'package:pilll/components/atoms/button.dart';
 import 'package:pilll/domain/pill_sheet_modified_history/pill_sheet_modified_history_page.dart';
 import 'package:pilll/domain/premium_introduction/premium_introduction_sheet.dart';
 import 'package:flutter/material.dart';

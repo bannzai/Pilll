@@ -6,7 +6,7 @@ import 'package:pilll/provider/diary_setting.dart';
 import 'package:pilll/domain/diary_setting_physical_condtion_detail/page.dart';
 import 'package:pilll/domain/premium_introduction/premium_introduction_sheet.dart';
 import 'package:pilll/entity/diary.codegen.dart';
-import 'package:pilll/components/atoms/buttons.dart';
+import 'package:pilll/components/atoms/button.dart';
 import 'package:pilll/components/atoms/color.dart';
 import 'package:pilll/components/atoms/font.dart';
 import 'package:pilll/components/atoms/text_color.dart';

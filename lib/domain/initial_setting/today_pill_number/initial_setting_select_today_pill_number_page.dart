@@ -1,6 +1,6 @@
 import 'package:pilll/analytics.dart';
 import 'package:pilll/domain/initial_setting/initial_setting_state_notifier.dart';
-import 'package:pilll/components/atoms/buttons.dart';
+import 'package:pilll/components/atoms/button.dart';
 import 'package:pilll/components/atoms/color.dart';
 import 'package:pilll/components/atoms/font.dart';
 import 'package:pilll/components/atoms/text_color.dart';
