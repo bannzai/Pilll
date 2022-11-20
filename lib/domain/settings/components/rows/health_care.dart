@@ -20,7 +20,7 @@ class HealthCareRow extends StatelessWidget {
       title: Row(
         children: const [
           Text("ヘルスケア連携",
-              style: const TextStyle(
+              style: TextStyle(
                 fontFamily: FontFamily.roboto,
                 fontWeight: FontWeight.w300,
                 fontSize: 16,

@@ -13,7 +13,7 @@ class UpdateFrom132Row extends StatelessWidget {
   Widget build(BuildContext context) {
     return ListTile(
       title: const Text("大型アップデート前の情報",
-          style: const TextStyle(
+          style: TextStyle(
             fontFamily: FontFamily.roboto,
             fontWeight: FontWeight.w300,
             fontSize: 16,

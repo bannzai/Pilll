@@ -29,7 +29,7 @@ class CreatingNewPillSheetRow extends HookConsumerWidget {
       title: Row(
         children: [
           const Text("ピルシートグループの自動追加",
-              style: const TextStyle(
+              style: TextStyle(
                 fontFamily: FontFamily.roboto,
                 fontWeight: FontWeight.w300,
                 fontSize: 16,
@@ -41,7 +41,7 @@ class CreatingNewPillSheetRow extends HookConsumerWidget {
         ],
       ),
       subtitle: const Text("ピルをすべて服用済みの場合、新しいシートを自動で追加します",
-          style: const TextStyle(
+          style: TextStyle(
             fontFamily: FontFamily.japanese,
             fontWeight: FontWeight.w300,
             fontSize: 14,

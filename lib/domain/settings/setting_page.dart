@@ -127,7 +127,7 @@ class SettingPageBody extends StatelessWidget {
                     if (premiumAndTrial.isTrial) ...[
                       ListTile(
                         title: const Text("機能無制限の期間について",
-                            style: const TextStyle(
+                            style: TextStyle(
                               fontFamily: FontFamily.roboto,
                               fontWeight: FontWeight.w300,
                               fontSize: 16,
@@ -147,7 +147,7 @@ class SettingPageBody extends StatelessWidget {
                     if (premiumAndTrial.isPremium) ...[
                       ListTile(
                         title: const Text("解約はこちら",
-                            style: const TextStyle(
+                            style: TextStyle(
                               fontFamily: FontFamily.roboto,
                               fontWeight: FontWeight.w300,
                               fontSize: 16,
@@ -244,7 +244,7 @@ class SettingPageBody extends StatelessWidget {
                       ],
                       ListTile(
                           title: const Text("利用規約",
-                              style: const TextStyle(
+                              style: TextStyle(
                                 fontFamily: FontFamily.roboto,
                                 fontWeight: FontWeight.w300,
                                 fontSize: 16,
@@ -256,7 +256,7 @@ class SettingPageBody extends StatelessWidget {
                       _separator(),
                       ListTile(
                           title: const Text("プライバシーポリシー",
-                              style: const TextStyle(
+                              style: TextStyle(
                                 fontFamily: FontFamily.roboto,
                                 fontWeight: FontWeight.w300,
                                 fontSize: 16,
@@ -268,7 +268,7 @@ class SettingPageBody extends StatelessWidget {
                       _separator(),
                       ListTile(
                           title: const Text("FAQ",
-                              style: const TextStyle(
+                              style: TextStyle(
                                 fontFamily: FontFamily.roboto,
                                 fontWeight: FontWeight.w300,
                                 fontSize: 16,
@@ -280,7 +280,7 @@ class SettingPageBody extends StatelessWidget {
                       _separator(),
                       ListTile(
                           title: const Text("新機能紹介",
-                              style: const TextStyle(
+                              style: TextStyle(
                                 fontFamily: FontFamily.roboto,
                                 fontWeight: FontWeight.w300,
                                 fontSize: 16,
@@ -292,7 +292,7 @@ class SettingPageBody extends StatelessWidget {
                       _separator(),
                       ListTile(
                           title: const Text("お問い合わせ",
-                              style: const TextStyle(
+                              style: TextStyle(
                                 fontFamily: FontFamily.roboto,
                                 fontWeight: FontWeight.w300,
                                 fontSize: 16,

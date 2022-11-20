@@ -16,7 +16,7 @@ class NotificationTimeRow extends StatelessWidget {
   Widget build(BuildContext context) {
     return ListTile(
       title: const Text("通知時刻",
-          style: const TextStyle(
+          style: TextStyle(
             fontFamily: FontFamily.roboto,
             fontWeight: FontWeight.w300,
             fontSize: 16,

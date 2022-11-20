@@ -119,7 +119,7 @@ class _SchedulePostPage extends HookConsumerWidget {
                     ),
                     SwitchListTile(
                       title: const Text("当日9:00に通知を受け取る",
-                          style: const TextStyle(
+                          style: TextStyle(
                             fontFamily: FontFamily.roboto,
                             fontWeight: FontWeight.w300,
                             fontSize: 16,

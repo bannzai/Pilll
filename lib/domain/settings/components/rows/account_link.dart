@@ -17,7 +17,7 @@ class AccountLinkRow extends HookConsumerWidget {
     final isGoogleLinked = ref.watch(isGoogleLinkedProvider);
     return ListTile(
       title: const Text("アカウント設定",
-          style: const TextStyle(
+          style: TextStyle(
             fontFamily: FontFamily.roboto,
             fontWeight: FontWeight.w300,
             fontSize: 16,

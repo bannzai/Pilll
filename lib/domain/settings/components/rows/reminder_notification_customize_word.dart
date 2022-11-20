@@ -28,7 +28,7 @@ class ReminderNotificationCustomizeWord extends HookConsumerWidget {
       title: Row(
         children: [
           const Text("服用通知のカスタマイズ",
-              style: const TextStyle(
+              style: TextStyle(
                 fontFamily: FontFamily.roboto,
                 fontWeight: FontWeight.w300,
                 fontSize: 16,
@@ -40,7 +40,7 @@ class ReminderNotificationCustomizeWord extends HookConsumerWidget {
         ],
       ),
       subtitle: const Text("服用通知の文言のカスタマイズができます",
-          style: const TextStyle(
+          style: TextStyle(
             fontFamily: FontFamily.japanese,
             fontWeight: FontWeight.w300,
             fontSize: 14,

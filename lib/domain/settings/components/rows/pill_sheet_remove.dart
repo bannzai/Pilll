@@ -25,7 +25,7 @@ class PillSheetRemoveRow extends HookConsumerWidget {
     final deletePillSheetGroup = ref.watch(deletePillSheetGroupProvider);
     return ListTile(
       title: const Text("ピルシートをすべて破棄",
-          style: const TextStyle(
+          style: TextStyle(
             fontFamily: FontFamily.roboto,
             fontWeight: FontWeight.w300,
             fontSize: 16,

@@ -1,5 +1,3 @@
-import 'package:flutter/material.dart';
-
 class FontFamily {
   static String get standarad => japanese;
 

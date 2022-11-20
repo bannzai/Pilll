@@ -21,7 +21,7 @@ class TakingPillNotification extends HookConsumerWidget {
 
     return SwitchListTile(
       title: const Text("ピルの服用通知",
-          style: const TextStyle(
+          style: TextStyle(
             fontFamily: FontFamily.roboto,
             fontWeight: FontWeight.w300,
             fontSize: 16,

@@ -20,7 +20,7 @@ class QuickRecordRow extends StatelessWidget {
       title: Row(
         children: const [
           Text("クイックレコード",
-              style: const TextStyle(
+              style: TextStyle(
                 fontFamily: FontFamily.roboto,
                 fontWeight: FontWeight.w300,
                 fontSize: 16,

@@ -18,7 +18,7 @@ class MenstruationRow extends HookConsumerWidget {
       title: Row(
         children: [
           const Text("生理について",
-              style: const TextStyle(
+              style: TextStyle(
                 fontFamily: FontFamily.roboto,
                 fontWeight: FontWeight.w300,
                 fontSize: 16,
