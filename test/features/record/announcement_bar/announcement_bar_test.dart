@@ -4,14 +4,14 @@ import 'package:pilll/utils/analytics.dart';
 import 'package:pilll/provider/pill_sheet_group.dart';
 import 'package:pilll/provider/pilll_ads.dart';
 import 'package:pilll/features/premium_introduction/util/discount_deadline.dart';
-import 'package:pilll/features/record/components/notification_bar/components/discount_price_deadline.dart';
-import 'package:pilll/features/record/components/notification_bar/components/ended_pill_sheet.dart';
-import 'package:pilll/features/record/components/notification_bar/components/pilll_ads.dart';
-import 'package:pilll/features/record/components/notification_bar/notification_bar.dart';
-import 'package:pilll/features/record/components/notification_bar/components/premium_trial_limit.dart';
-import 'package:pilll/features/record/components/notification_bar/components/recommend_signup.dart';
-import 'package:pilll/features/record/components/notification_bar/components/recommend_signup_premium.dart';
-import 'package:pilll/features/record/components/notification_bar/components/rest_duration.dart';
+import 'package:pilll/features/record/components/announcement_bar/components/discount_price_deadline.dart';
+import 'package:pilll/features/record/components/announcement_bar/components/ended_pill_sheet.dart';
+import 'package:pilll/features/record/components/announcement_bar/components/pilll_ads.dart';
+import 'package:pilll/features/record/components/announcement_bar/notification_bar.dart';
+import 'package:pilll/features/record/components/announcement_bar/components/premium_trial_limit.dart';
+import 'package:pilll/features/record/components/announcement_bar/components/recommend_signup.dart';
+import 'package:pilll/features/record/components/announcement_bar/components/recommend_signup_premium.dart';
+import 'package:pilll/features/record/components/announcement_bar/components/rest_duration.dart';
 import 'package:pilll/entity/pill_sheet.codegen.dart';
 import 'package:pilll/entity/pill_sheet_group.codegen.dart';
 import 'package:pilll/entity/pill_sheet_type.dart';
@@ -88,7 +88,7 @@ void main() {
               durationToDiscountPriceDeadline.overrideWithProvider((param) => Provider.autoDispose((_) => const Duration(seconds: 1000))),
             ],
             child: const MaterialApp(
-              home: Material(child: NotificationBar()),
+              home: Material(child: AnnouncementBar()),
             ),
           ),
         );
@@ -99,7 +99,7 @@ void main() {
           findsOneWidget,
         );
       });
-      testWidgets('#RestDurationNotificationBar', (WidgetTester tester) async {
+      testWidgets('#RestDurationAnnouncementBar', (WidgetTester tester) async {
         final mockTodayRepository = MockTodayService();
         final today = DateTime(2021, 04, 29);
 
@@ -144,19 +144,19 @@ void main() {
               durationToDiscountPriceDeadline.overrideWithProvider((param) => Provider.autoDispose((_) => const Duration(seconds: 1000))),
             ],
             child: const MaterialApp(
-              home: Material(child: NotificationBar()),
+              home: Material(child: AnnouncementBar()),
             ),
           ),
         );
         await tester.pump();
 
         expect(
-          find.byWidgetPredicate((widget) => widget is RestDurationNotificationBar),
+          find.byWidgetPredicate((widget) => widget is RestDurationAnnouncementBar),
           findsOneWidget,
         );
       });
 
-      testWidgets('#RecommendSignupNotificationBar', (WidgetTester tester) async {
+      testWidgets('#RecommendSignupAnnouncementBar', (WidgetTester tester) async {
         final mockTodayRepository = MockTodayService();
         final today = DateTime(2021, 04, 29);
 
@@ -202,18 +202,18 @@ void main() {
               durationToDiscountPriceDeadline.overrideWithProvider((param) => Provider.autoDispose((_) => const Duration(seconds: 1000))),
             ],
             child: const MaterialApp(
-              home: Material(child: NotificationBar()),
+              home: Material(child: AnnouncementBar()),
             ),
           ),
         );
         await tester.pumpAndSettle(const Duration(milliseconds: 400));
 
         expect(
-          find.byWidgetPredicate((widget) => widget is RecommendSignupNotificationBar),
+          find.byWidgetPredicate((widget) => widget is RecommendSignupAnnouncementBar),
           findsOneWidget,
         );
       });
-      testWidgets('#PremiumTrialLimitNotificationBar', (WidgetTester tester) async {
+      testWidgets('#PremiumTrialLimitAnnouncementBar', (WidgetTester tester) async {
         final mockTodayRepository = MockTodayService();
         final today = DateTime(2021, 04, 29);
         final n = today;
@@ -259,14 +259,14 @@ void main() {
               durationToDiscountPriceDeadline.overrideWithProvider((param) => Provider.autoDispose((_) => const Duration(seconds: 1000))),
             ],
             child: const MaterialApp(
-              home: Material(child: NotificationBar()),
+              home: Material(child: AnnouncementBar()),
             ),
           ),
         );
         await tester.pump();
 
         expect(
-          find.byWidgetPredicate((widget) => widget is PremiumTrialLimitNotificationBar),
+          find.byWidgetPredicate((widget) => widget is PremiumTrialLimitAnnouncementBar),
           findsOneWidget,
         );
       });
@@ -317,7 +317,7 @@ void main() {
               durationToDiscountPriceDeadline.overrideWithProvider((param) => Provider.autoDispose((_) => const Duration(seconds: 1000))),
             ],
             child: const MaterialApp(
-              home: Material(child: NotificationBar()),
+              home: Material(child: AnnouncementBar()),
             ),
           ),
         );
@@ -329,7 +329,7 @@ void main() {
         );
       });
 
-      group("#PilllAdsNotificationBar", () {
+      group("#PilllAdsAnnouncementBar", () {
         testWidgets('today is before 2022-08-10', (WidgetTester tester) async {
           final mockTodayRepository = MockTodayService();
           final today = DateTime(2022, 08, 10).subtract(const Duration(seconds: 1));
@@ -384,14 +384,14 @@ void main() {
                 ),
               ],
               child: const MaterialApp(
-                home: Material(child: NotificationBar()),
+                home: Material(child: AnnouncementBar()),
               ),
             ),
           );
           await tester.pumpAndSettle(const Duration(milliseconds: 400));
 
           expect(
-            find.byWidgetPredicate((widget) => widget is PilllAdsNotificationBar),
+            find.byWidgetPredicate((widget) => widget is PilllAdsAnnouncementBar),
             findsNothing,
           );
         });
@@ -451,14 +451,14 @@ void main() {
                 ),
               ],
               child: const MaterialApp(
-                home: Material(child: NotificationBar()),
+                home: Material(child: AnnouncementBar()),
               ),
             ),
           );
           await tester.pump();
 
           expect(
-            find.byWidgetPredicate((widget) => widget is PilllAdsNotificationBar),
+            find.byWidgetPredicate((widget) => widget is PilllAdsAnnouncementBar),
             findsOneWidget,
           );
         });
@@ -518,14 +518,14 @@ void main() {
                 ),
               ],
               child: const MaterialApp(
-                home: Material(child: NotificationBar()),
+                home: Material(child: AnnouncementBar()),
               ),
             ),
           );
           await tester.pump();
 
           expect(
-            find.byWidgetPredicate((widget) => widget is PilllAdsNotificationBar),
+            find.byWidgetPredicate((widget) => widget is PilllAdsAnnouncementBar),
             findsOneWidget,
           );
         });
@@ -585,14 +585,14 @@ void main() {
                 )
               ],
               child: const MaterialApp(
-                home: Material(child: NotificationBar()),
+                home: Material(child: AnnouncementBar()),
               ),
             ),
           );
           await tester.pump();
 
           expect(
-            find.byWidgetPredicate((widget) => widget is PilllAdsNotificationBar),
+            find.byWidgetPredicate((widget) => widget is PilllAdsAnnouncementBar),
             findsOneWidget,
           );
         });
@@ -652,14 +652,14 @@ void main() {
                 )
               ],
               child: const MaterialApp(
-                home: Material(child: NotificationBar()),
+                home: Material(child: AnnouncementBar()),
               ),
             ),
           );
           await tester.pump();
 
           expect(
-            find.byWidgetPredicate((widget) => widget is PilllAdsNotificationBar),
+            find.byWidgetPredicate((widget) => widget is PilllAdsAnnouncementBar),
             findsNothing,
           );
         });
@@ -667,7 +667,7 @@ void main() {
     });
 
     group('for it is premium user', () {
-      group("#PilllAdsNotificationBar", () {
+      group("#PilllAdsAnnouncementBar", () {
         testWidgets('today is before 2022-08-10', (WidgetTester tester) async {
           final mockTodayRepository = MockTodayService();
           final today = DateTime(2022, 08, 10).subtract(const Duration(seconds: 1));
@@ -726,14 +726,14 @@ void main() {
                 )
               ],
               child: const MaterialApp(
-                home: Material(child: NotificationBar()),
+                home: Material(child: AnnouncementBar()),
               ),
             ),
           );
           await tester.pump();
 
           expect(
-            find.byWidgetPredicate((widget) => widget is PilllAdsNotificationBar),
+            find.byWidgetPredicate((widget) => widget is PilllAdsAnnouncementBar),
             findsNothing,
           );
         });
@@ -795,14 +795,14 @@ void main() {
                 )
               ],
               child: const MaterialApp(
-                home: Material(child: NotificationBar()),
+                home: Material(child: AnnouncementBar()),
               ),
             ),
           );
           await tester.pump();
 
           expect(
-            find.byWidgetPredicate((widget) => widget is PilllAdsNotificationBar),
+            find.byWidgetPredicate((widget) => widget is PilllAdsAnnouncementBar),
             findsNothing,
           );
         });
@@ -864,14 +864,14 @@ void main() {
                 )
               ],
               child: const MaterialApp(
-                home: Material(child: NotificationBar()),
+                home: Material(child: AnnouncementBar()),
               ),
             ),
           );
           await tester.pump();
 
           expect(
-            find.byWidgetPredicate((widget) => widget is PilllAdsNotificationBar),
+            find.byWidgetPredicate((widget) => widget is PilllAdsAnnouncementBar),
             findsNothing,
           );
         });
@@ -933,14 +933,14 @@ void main() {
                 )
               ],
               child: const MaterialApp(
-                home: Material(child: NotificationBar()),
+                home: Material(child: AnnouncementBar()),
               ),
             ),
           );
           await tester.pump();
 
           expect(
-            find.byWidgetPredicate((widget) => widget is PilllAdsNotificationBar),
+            find.byWidgetPredicate((widget) => widget is PilllAdsAnnouncementBar),
             findsNothing,
           );
         });
@@ -1002,14 +1002,14 @@ void main() {
                 )
               ],
               child: const MaterialApp(
-                home: Material(child: NotificationBar()),
+                home: Material(child: AnnouncementBar()),
               ),
             ),
           );
           await tester.pump();
 
           expect(
-            find.byWidgetPredicate((widget) => widget is PilllAdsNotificationBar),
+            find.byWidgetPredicate((widget) => widget is PilllAdsAnnouncementBar),
             findsNothing,
           );
         });
@@ -1071,19 +1071,19 @@ void main() {
                 )
               ],
               child: const MaterialApp(
-                home: Material(child: NotificationBar()),
+                home: Material(child: AnnouncementBar()),
               ),
             ),
           );
           await tester.pump();
 
           expect(
-            find.byWidgetPredicate((widget) => widget is PilllAdsNotificationBar),
+            find.byWidgetPredicate((widget) => widget is PilllAdsAnnouncementBar),
             findsNothing,
           );
         });
       });
-      testWidgets('#RecommendSignupForPremiumNotificationBar', (WidgetTester tester) async {
+      testWidgets('#RecommendSignupForPremiumAnnouncementBar', (WidgetTester tester) async {
         final mockTodayRepository = MockTodayService();
         final today = DateTime(2021, 04, 29);
 
@@ -1129,19 +1129,19 @@ void main() {
               durationToDiscountPriceDeadline.overrideWithProvider((param) => Provider.autoDispose((_) => const Duration(seconds: 1000))),
             ],
             child: const MaterialApp(
-              home: Material(child: NotificationBar()),
+              home: Material(child: AnnouncementBar()),
             ),
           ),
         );
         await tester.pump();
 
         expect(
-          find.byWidgetPredicate((widget) => widget is RecommendSignupForPremiumNotificationBar),
+          find.byWidgetPredicate((widget) => widget is RecommendSignupForPremiumAnnouncementBar),
           findsOneWidget,
         );
       });
 
-      testWidgets('#RestDurationNotificationBar', (WidgetTester tester) async {
+      testWidgets('#RestDurationAnnouncementBar', (WidgetTester tester) async {
         final mockTodayRepository = MockTodayService();
         final today = DateTime(2021, 04, 29);
 
@@ -1187,14 +1187,14 @@ void main() {
               durationToDiscountPriceDeadline.overrideWithProvider((param) => Provider.autoDispose((_) => const Duration(seconds: 1000))),
             ],
             child: const MaterialApp(
-              home: Material(child: NotificationBar()),
+              home: Material(child: AnnouncementBar()),
             ),
           ),
         );
         await tester.pump();
 
         expect(
-          find.byWidgetPredicate((widget) => widget is RestDurationNotificationBar),
+          find.byWidgetPredicate((widget) => widget is RestDurationAnnouncementBar),
           findsOneWidget,
         );
       });
@@ -1245,7 +1245,7 @@ void main() {
               durationToDiscountPriceDeadline.overrideWithProvider((param) => Provider.autoDispose((_) => const Duration(seconds: 1000))),
             ],
             child: const MaterialApp(
-              home: Material(child: NotificationBar()),
+              home: Material(child: AnnouncementBar()),
             ),
           ),
         );

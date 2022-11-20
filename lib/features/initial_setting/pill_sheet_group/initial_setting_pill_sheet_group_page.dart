@@ -27,7 +27,7 @@ class InitialSettingPillSheetGroupPage extends HookConsumerWidget {
   Widget build(BuildContext context, WidgetRef ref) {
     final store = ref.watch(initialSettingStateNotifierProvider.notifier);
     final state = ref.watch(initialSettingStateNotifierProvider);
-    final authStream = ref.watch(authStateStreamProvider.stream);
+    final authStream = ref.watch(firebaseUserStateProvider.stream);
     final isAppleLinked = ref.watch(isAppleLinkedProvider);
     final isGoogleLinked = ref.watch(isGoogleLinkedProvider);
 

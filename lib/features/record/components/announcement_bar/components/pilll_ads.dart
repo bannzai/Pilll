@@ -7,10 +7,10 @@ import 'package:pilll/entity/pilll_ads.codegen.dart';
 import 'package:pilll/utils/color.dart';
 import 'package:url_launcher/url_launcher.dart';
 
-class PilllAdsNotificationBar extends HookConsumerWidget {
+class PilllAdsAnnouncementBar extends HookConsumerWidget {
   final PilllAds pilllAds;
   final VoidCallback onClose;
-  const PilllAdsNotificationBar({
+  const PilllAdsAnnouncementBar({
     Key? key,
     required this.pilllAds,
     required this.onClose,
@@ -20,19 +20,19 @@ class PilllAdsNotificationBar extends HookConsumerWidget {
   Widget build(BuildContext context, WidgetRef ref) {
     final imageURL = pilllAds.imageURL;
     if (imageURL != null) {
-      return PilllAdsImageNotificationBar(imageURL: imageURL, pilllAds: pilllAds, onClose: onClose);
+      return PilllAdsImageAnnouncementBar(imageURL: imageURL, pilllAds: pilllAds, onClose: onClose);
     } else {
-      return PilllAdsTextNotificationBar(pilllAds: pilllAds, onClose: onClose);
+      return PilllAdsTextAnnouncementBar(pilllAds: pilllAds, onClose: onClose);
     }
   }
 }
 
-class PilllAdsImageNotificationBar extends StatelessWidget {
+class PilllAdsImageAnnouncementBar extends StatelessWidget {
   final PilllAds pilllAds;
   final String imageURL;
   final VoidCallback onClose;
 
-  const PilllAdsImageNotificationBar({
+  const PilllAdsImageAnnouncementBar({
     Key? key,
     required this.pilllAds,
     required this.imageURL,
@@ -92,11 +92,11 @@ class PilllAdsImageNotificationBar extends StatelessWidget {
   }
 }
 
-class PilllAdsTextNotificationBar extends StatelessWidget {
+class PilllAdsTextAnnouncementBar extends StatelessWidget {
   final PilllAds pilllAds;
   final VoidCallback onClose;
 
-  const PilllAdsTextNotificationBar({
+  const PilllAdsTextAnnouncementBar({
     Key? key,
     required this.pilllAds,
     required this.onClose,

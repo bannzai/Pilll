@@ -1,4 +1,8 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
+import 'package:pilll/provider/force_update.dart';
+import 'package:pilll/provider/revert_take_pill.dart';
+import 'package:pilll/provider/set_user_id.dart';
+import 'package:pilll/provider/take_pill.dart';
 import 'package:pilll/utils/analytics.dart';
 import 'package:pilll/provider/batch.dart';
 import 'package:pilll/provider/database.dart';
@@ -13,6 +17,7 @@ import 'package:pilll/provider/user.dart';
 import 'package:pilll/utils/datetime/day.dart';
 import 'package:mockito/annotations.dart';
 import 'package:pilll/provider/purchase.dart';
+import 'package:pilll/utils/error_log.dart';
 
 @GenerateMocks([
   TodayService,
@@ -33,5 +38,13 @@ import 'package:pilll/provider/purchase.dart';
   DatabaseConnection,
   EndInitialSetting,
   PurchaseService,
+  RevertTakePill,
+  TakePill,
+  CheckForceUpdate,
+  SetUserID,
+  FetchOrCreateUser,
+  SaveUserLaunchInfo,
+  MarkAsMigratedToFlutter,
+  ErrorLogger,
 ])
 abstract class KeepGeneratedMocks {}

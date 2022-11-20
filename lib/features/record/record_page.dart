@@ -5,7 +5,7 @@ import 'package:pilll/features/initial_setting/migrate_info.dart';
 import 'package:pilll/features/premium_function_survey/premium_function_survey_page.dart';
 import 'package:pilll/features/record/components/add_pill_sheet_group/add_pill_sheet_group_empty_frame.dart';
 import 'package:pilll/features/record/components/button/record_page_button.dart';
-import 'package:pilll/features/record/components/notification_bar/notification_bar.dart';
+import 'package:pilll/features/record/components/announcement_bar/notification_bar.dart';
 import 'package:pilll/features/record/components/supports/record_page_pill_sheet_support_actions.dart';
 import 'package:pilll/features/record/components/pill_sheet/record_page_pill_sheet_list.dart';
 import 'package:pilll/features/record/components/header/record_page_header.dart';
@@ -181,7 +181,7 @@ class RecordPageBody extends HookConsumerWidget {
           Expanded(
             child: ListView(
               children: [
-                const NotificationBar(),
+                const AnnouncementBar(),
                 const SizedBox(height: 37),
                 _content(context),
                 const SizedBox(height: 20),

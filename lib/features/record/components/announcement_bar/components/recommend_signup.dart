@@ -5,10 +5,10 @@ import 'package:pilll/components/atoms/color.dart';
 import 'package:pilll/components/atoms/font.dart';
 import 'package:pilll/components/atoms/text_color.dart';
 
-class RecommendSignupNotificationBar extends HookConsumerWidget {
+class RecommendSignupAnnouncementBar extends HookConsumerWidget {
   final VoidCallback onTap;
   final VoidCallback onClose;
-  const RecommendSignupNotificationBar({
+  const RecommendSignupAnnouncementBar({
     required this.onTap,
     required this.onClose,
     Key? key,

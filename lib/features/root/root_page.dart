@@ -1,13 +1,12 @@
 import 'dart:async';
 
-import 'package:cloud_firestore/cloud_firestore.dart';
-import 'package:firebase_crashlytics/firebase_crashlytics.dart';
 import 'package:flutter_hooks/flutter_hooks.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
+import 'package:pilll/provider/force_update.dart';
+import 'package:pilll/provider/set_user_id.dart';
 import 'package:pilll/utils/analytics.dart';
 import 'package:pilll/components/page/ok_dialog.dart';
 import 'package:pilll/features/initial_setting/pill_sheet_group/initial_setting_pill_sheet_group_page.dart';
-import 'package:pilll/entity/config.codegen.dart';
 import 'package:pilll/entity/user.codegen.dart';
 import 'package:pilll/provider/root.dart';
 import 'package:pilll/provider/auth.dart';
@@ -15,15 +14,13 @@ import 'package:pilll/features/home/home_page.dart';
 import 'package:pilll/components/molecules/indicator.dart';
 import 'package:pilll/features/error/template.dart';
 import 'package:pilll/features/error/universal_error_page.dart';
+import 'package:pilll/utils/environment.dart';
 import 'package:pilll/utils/error_log.dart';
-import 'package:pilll/provider/purchase.dart';
 import 'package:pilll/provider/user.dart';
 import 'package:pilll/utils/platform/platform.dart';
 import 'package:pilll/utils/shared_preference/keys.dart';
 import 'package:flutter/material.dart';
-import 'package:purchases_flutter/purchases_flutter.dart';
 import 'package:shared_preferences/shared_preferences.dart';
-import 'package:pilll/utils/version/version.dart';
 import 'package:url_launcher/url_launcher.dart';
 
 class Root extends HookConsumerWidget {
@@ -31,37 +28,29 @@ class Root extends HookConsumerWidget {
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {
+    final firebaseUserAsyncValue = ref.watch(firebaseUserStateProvider);
+    final checkForceUpdate = ref.watch(checkForceUpdateProvider);
+    final setUserID = ref.watch(setUserIDProvider);
+
     final shouldForceUpdate = useState(false);
-    final firebaseUserID = useState<String?>(null);
     final error = useState<LaunchException?>(null);
-    final firebaseUserAsyncValue = ref.watch(authStateStreamProvider);
 
-    // Set global error page
-    ErrorWidget.builder = (FlutterErrorDetails details) {
-      return UniversalErrorPage(
-        error: details.exception.toString(),
-        child: null,
-        reload: () => ref.read(refreshAppProvider),
-      );
-    };
-
-    // For force update
-    if (shouldForceUpdate.value) {
-      Future.microtask(() async {
-        await showOKDialog(context, title: "アプリをアップデートしてください", message: "お使いのアプリのバージョンのアップデートをお願いしております。$storeNameから最新バージョンにアップデートしてください",
-            ok: () async {
-          await launchUrl(
-            Uri.parse(storeURL),
-            mode: LaunchMode.externalApplication,
-          );
-        });
-      });
-      return const ScaffoldIndicator();
-    }
+    // Setup for application
     useEffect(() {
+      if (!Environment.isTest) {
+        // Set global error page
+        ErrorWidget.builder = (FlutterErrorDetails details) {
+          return UniversalErrorPage(
+            error: details.exception.toString(),
+            child: null,
+            reload: () => ref.read(refreshAppProvider),
+          );
+        };
+      }
+
       f() async {
         try {
-          if (await _checkForceUpdate()) {
+          if (await checkForceUpdate()) {
             shouldForceUpdate.value = true;
           }
         } catch (e, st) {
@@ -77,63 +66,49 @@ class Root extends HookConsumerWidget {
     // For app screen state
     useEffect(() {
       f() async {
-        final firebaseUser = firebaseUserAsyncValue.asData?.value;
+        final firebaseUser = firebaseUserAsyncValue.valueOrNull;
         if (firebaseUser == null) {
           try {
-            firebaseUserID.value = null;
             // SignIn first. Keep in mind that this method is called first.
-            final firebaseUser = await ref.read(firebaseSignInProvider.future);
-            firebaseUserID.value = firebaseUser.uid;
-
-            unawaited(FirebaseCrashlytics.instance.setUserIdentifier(firebaseUser.uid));
-            unawaited(firebaseAnalytics.setUserId(id: firebaseUser.uid));
-
-            // Keep call initialPurchase before logIn.
-            await initializePurchase(firebaseUser.uid);
-            unawaited(Purchases.logIn(firebaseUser.uid));
+            final _ = await ref.read(firebaseSignInProvider.future);
           } catch (e, st) {
             errorLogger.recordError(e, st);
             error.value = LaunchException("認証時にエラーが発生しました\n${ErrorMessages.connection}\n詳細:", e);
           }
+        } else {
+          setUserID(userID: firebaseUser.uid);
         }
       }
 
       f();
       return null;
-    }, [firebaseUserAsyncValue.asData?.value?.uid]);
+    }, [firebaseUserAsyncValue.valueOrNull?.uid]);
 
+    // For force update
+    if (shouldForceUpdate.value) {
+      Future.microtask(() async {
+        await showOKDialog(context, title: "アプリをアップデートしてください", message: "お使いのアプリのバージョンのアップデートをお願いしております。$storeNameから最新バージョンにアップデートしてください",
+            ok: () async {
+          await launchUrl(
+            Uri.parse(storeURL),
+            mode: LaunchMode.externalApplication,
+          );
+        });
+      });
+      return const ScaffoldIndicator();
+    }
     return UniversalErrorPage(
       error: error.value,
       reload: () => ref.refresh(refreshAppProvider),
       child: () {
-        final uid = firebaseUserID.value;
+        final uid = firebaseUserAsyncValue.valueOrNull?.uid;
         if (uid == null) {
           return const ScaffoldIndicator();
         } else {
-          return _InitialSettingOrAppPage(firebaseUserID: uid);
+          return InitialSettingOrAppPage(firebaseUserID: uid);
         }
       }(),
     );
-  }
-
-// Return false: should not force update
-// Return true: should force update
-  Future<bool> _checkForceUpdate() async {
-    final doc = await FirebaseFirestore.instance.doc("/globals/config").get();
-    final config = Config.fromJson(doc.data() as Map<String, dynamic>);
-    final packageVersion = await Version.fromPackage();
-
-    final forceUpdate = packageVersion.isLessThan(Version.parse(config.minimumSupportedAppVersion));
-    if (forceUpdate) {
-      analytics.logEvent(
-        name: "screen_type_force_update",
-        parameters: {
-          "package_version": packageVersion.toString(),
-          "minimum_app_version": config.minimumSupportedAppVersion,
-        },
-      );
-    }
-    return forceUpdate;
   }
 }
 
@@ -152,17 +127,18 @@ class LaunchException {
 
 enum _InitialSettingOrAppPageScreenType { loading, initialSetting, app }
 
-class _InitialSettingOrAppPage extends HookConsumerWidget {
+class InitialSettingOrAppPage extends HookConsumerWidget {
   final String firebaseUserID;
-  const _InitialSettingOrAppPage({Key? key, required this.firebaseUserID}) : super(key: key);
+  const InitialSettingOrAppPage({Key? key, required this.firebaseUserID}) : super(key: key);
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {
-    final screenType = useState(_InitialSettingOrAppPageScreenType.loading);
-    final appUser = useState<User?>(null);
     final fetchOrCreateUser = ref.watch(fetchOrCreateUserProvider);
     final saveUserLaunchInfo = ref.watch(saveUserLaunchInfoProvider);
     final markAsMigratedToFlutter = ref.watch(markAsMigratedToFlutterProvider);
+
+    final screenType = useState(_InitialSettingOrAppPageScreenType.loading);
+    final appUser = useState<User?>(null);
     final error = useState<LaunchException?>(null);
 
     useEffect(() {
