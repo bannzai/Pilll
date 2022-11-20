@@ -117,7 +117,12 @@ class ConfirmDiarySheet extends HookConsumerWidget {
   Widget _physicalCondition() {
     return Row(
       children: [
-        Text("体調", style: FontType.componentTitle.merge(TextColorStyle.black)),
+        Text("体調",
+            style: const TextStyle(
+              fontFamily: FontFamily.japanese,
+              fontWeight: FontWeight.w300,
+              fontSize: 16,
+            ).merge(TextColorStyle.black)),
         const SizedBox(width: 16),
         _physicalConditionImage(diary.physicalConditionStatus),
       ],
