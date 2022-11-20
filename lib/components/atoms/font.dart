@@ -10,11 +10,6 @@ class FontFamily {
 }
 
 class FontType {
-  static const TextStyle helpRow = TextStyle(
-    fontFamily: FontFamily.roboto,
-    fontWeight: FontWeight.w400,
-    fontSize: 14,
-  );
   static const TextStyle listRow = TextStyle(
     fontFamily: FontFamily.roboto,
     fontWeight: FontWeight.w300,
