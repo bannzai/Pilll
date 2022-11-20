@@ -20,7 +20,6 @@ import 'package:pilll/provider/locale.dart';
 import 'package:pilll/provider/premium_and_trial.codegen.dart';
 import 'package:pilll/provider/auth.dart';
 import 'package:pilll/utils/datetime/day.dart';
-import 'package:pilll/utils/datetime/day.dart';
 import 'package:pilll/utils/environment.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_test/flutter_test.dart';
