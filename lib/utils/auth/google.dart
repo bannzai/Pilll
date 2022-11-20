@@ -59,7 +59,7 @@ Future<UserCredential?> signInWithGoogle() async {
 }
 
 final isGoogleLinkedProvider = Provider((ref) {
-  final user = ref.watch(authStateStreamProvider);
+  final user = ref.watch(firebaseUserStateProvider);
   final userValue = user.valueOrNull;
   if (userValue == null) {
     return false;
