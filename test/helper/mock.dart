@@ -1,4 +1,6 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
+import 'package:pilll/provider/revert_take_pill.dart';
+import 'package:pilll/provider/take_pill.dart';
 import 'package:pilll/utils/analytics.dart';
 import 'package:pilll/provider/batch.dart';
 import 'package:pilll/provider/database.dart';
@@ -33,5 +35,7 @@ import 'package:pilll/provider/purchase.dart';
   DatabaseConnection,
   EndInitialSetting,
   PurchaseService,
+  RevertTakePill,
+  TakePill,
 ])
 abstract class KeepGeneratedMocks {}
