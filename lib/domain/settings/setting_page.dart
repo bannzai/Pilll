@@ -104,7 +104,7 @@ class SettingPageBody extends StatelessWidget {
     return Scaffold(
       backgroundColor: PilllColors.background,
       appBar: AppBar(
-        title: const Text('設定', style: TextColor.main),
+        title: const Text('設定', style: TextStyle(color: TextColor.main)),
         backgroundColor: PilllColors.white,
       ),
       body: ListView.builder(
@@ -322,7 +322,7 @@ class SettingPageBody extends StatelessWidget {
     return Padding(
       padding: const EdgeInsets.only(left: 10, right: 10, bottom: 20, top: 20),
       child: GestureDetector(
-        child: const Center(child: Text("COPY DEBUG INFO", style: TextColor.primary)),
+        child: const Center(child: Text("COPY DEBUG INFO", style: TextStyle(color: TextColor.primary))),
         onTap: () async {
           Clipboard.setData(ClipboardData(text: await debugInfo("\n")));
         },

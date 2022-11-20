@@ -20,7 +20,8 @@ class PickerToolbar extends StatelessWidget {
                   fontFamily: FontFamily.japanese,
                   fontWeight: FontWeight.w300,
                   fontSize: 14,
-                ).merge(TextColor.primary)),
+                  color: TextColor.primary,
+                )),
             onPressed: () {
               cancel();
             },
@@ -35,7 +36,8 @@ class PickerToolbar extends StatelessWidget {
                   fontFamily: FontFamily.japanese,
                   fontWeight: FontWeight.w600,
                   fontSize: 16,
-                ).merge(TextColor.primary)),
+                  color: TextColor.primary,
+                )),
             onPressed: () {
               done();
             },

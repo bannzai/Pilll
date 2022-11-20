@@ -36,7 +36,7 @@ class SettingAccountCooperationListPage extends HookConsumerWidget {
                 icon: const Icon(Icons.arrow_back, color: Colors.black),
                 onPressed: () => Navigator.of(context).pop(),
               ),
-              title: const Text('アカウント設定', style: TextColor.main),
+              title: const Text('アカウント設定', style: TextStyle(color: TextColor.main)),
               backgroundColor: PilllColors.white,
             ),
             body: ListView(
@@ -49,7 +49,8 @@ class SettingAccountCooperationListPage extends HookConsumerWidget {
                       fontFamily: FontFamily.japanese,
                       fontWeight: FontWeight.w300,
                       fontSize: 14,
-                    ).merge(TextColor.primary),
+                      color: TextColor.primary,
+                    ),
                   ),
                 ),
                 SettingAccountCooperationRow(
@@ -240,7 +241,8 @@ class SettingAccountCooperationRow extends StatelessWidget {
                 fontFamily: FontFamily.japanese,
                 fontWeight: FontWeight.w300,
                 fontSize: 14,
-              ).merge(TextColor.darkGray)),
+                color: TextColor.darkGray,
+              )),
         ],
       );
     } else {

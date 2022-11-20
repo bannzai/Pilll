@@ -87,7 +87,8 @@ class _UniversalErrorPageState extends State<UniversalErrorPage> {
                     fontFamily: FontFamily.japanese,
                     fontWeight: FontWeight.w300,
                     fontSize: 14,
-                  ).merge(TextColor.main)),
+                    color: TextColor.main,
+                  )),
               const SizedBox(height: 25),
               TextButton.icon(
                 icon: const Icon(
@@ -99,7 +100,8 @@ class _UniversalErrorPageState extends State<UniversalErrorPage> {
                       fontFamily: FontFamily.japanese,
                       fontWeight: FontWeight.w300,
                       fontSize: 14,
-                    ).merge(TextColor.black)),
+                      color: TextColor.black,
+                    )),
                 onPressed: () {
                   analytics.logEvent(name: "reload_button_pressed");
                   setState(() {
@@ -121,7 +123,8 @@ class _UniversalErrorPageState extends State<UniversalErrorPage> {
                       fontFamily: FontFamily.japanese,
                       fontWeight: FontWeight.w300,
                       fontSize: 14,
-                    ).merge(TextColor.black)),
+                      color: TextColor.black,
+                    )),
                 onPressed: () {
                   analytics.logEvent(name: "problem_unresolved_button_pressed");
                   inquiry();

@@ -21,14 +21,16 @@ class ErrorAlert extends StatelessWidget {
           fontFamily: FontFamily.japanese,
           fontWeight: FontWeight.w600,
           fontSize: 16,
-        ).merge(TextColor.black),
+          color: TextColor.black,
+        ),
       ),
       content: Text(errorMessage,
           style: const TextStyle(
             fontFamily: FontFamily.japanese,
             fontWeight: FontWeight.w300,
             fontSize: 14,
-          ).merge(TextColor.black)),
+            color: TextColor.black,
+          )),
       actions: <Widget>[
         if (faq != null)
           AlertButton(
