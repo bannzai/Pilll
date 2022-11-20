@@ -5,7 +5,7 @@ import 'package:pilll/provider/take_pill.dart';
 import 'package:pilll/entity/pill_sheet.codegen.dart';
 import 'package:pilll/entity/pill_sheet_group.codegen.dart';
 import 'package:pilll/entity/pill_sheet_type.dart';
-import 'package:pilll/service/day.dart';
+import 'package:pilll/util/datetime/day.dart';
 
 import '../helper/mock.mocks.dart';
 

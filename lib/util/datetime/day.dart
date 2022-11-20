@@ -1,6 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:pilll/entity/weekday.dart';
-import 'package:pilll/service/day.dart';
+
+class TodayService {
+  DateTime now() => DateTime.now();
+}
+
+TodayService todayRepository = TodayService();
 
 DateTime today() {
   return todayRepository.now().date();

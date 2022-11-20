@@ -2,7 +2,7 @@ import 'package:flutter/services.dart';
 import 'package:pilll/features/initial_setting/initial_setting_state.codegen.dart';
 import 'package:pilll/entity/pill_sheet.codegen.dart';
 import 'package:pilll/entity/pill_sheet_type.dart';
-import 'package:pilll/service/day.dart';
+import 'package:pilll/util/datetime/day.dart';
 import 'package:flutter_test/flutter_test.dart';
 import 'package:mockito/mockito.dart';
 import 'package:shared_preferences/shared_preferences.dart';
@@ -10,8 +10,7 @@ import 'package:shared_preferences/shared_preferences.dart';
 import '../../helper/mock.mocks.dart';
 
 void main() {
-  const MethodChannel timezoneChannel =
-      MethodChannel('flutter_native_timezone');
+  const MethodChannel timezoneChannel = MethodChannel('flutter_native_timezone');
 
   setUp(() {
     TestWidgetsFlutterBinding.ensureInitialized();
@@ -26,8 +25,7 @@ void main() {
     timezoneChannel.setMockMethodCallHandler(null);
   });
   group("#InitialSettingState.buildPillSheet", () {
-    test("it is builded pillSheet.gropuIndex == todayPillNumber.pageIndex ",
-        () {
+    test("it is builded pillSheet.gropuIndex == todayPillNumber.pageIndex ", () {
       final mockTodayRepository = MockTodayService();
       final today = DateTime.parse("2020-11-23");
       todayRepository = mockTodayRepository;
@@ -35,8 +33,7 @@ void main() {
 
       final pillSheet = InitialSettingState.buildPillSheet(
         pageIndex: 0,
-        todayPillNumber: const InitialSettingTodayPillNumber(
-            pageIndex: 0, pillNumberIntoPillSheet: 1),
+        todayPillNumber: const InitialSettingTodayPillNumber(pageIndex: 0, pillNumberIntoPillSheet: 1),
         pillSheetTypes: [PillSheetType.pillsheet_21],
       );
 
@@ -55,8 +52,7 @@ void main() {
 
       final pillSheet = InitialSettingState.buildPillSheet(
         pageIndex: 1,
-        todayPillNumber: const InitialSettingTodayPillNumber(
-            pageIndex: 0, pillNumberIntoPillSheet: 1),
+        todayPillNumber: const InitialSettingTodayPillNumber(pageIndex: 0, pillNumberIntoPillSheet: 1),
         pillSheetTypes: [
           PillSheetType.pillsheet_21,
           PillSheetType.pillsheet_24_0,
@@ -80,8 +76,7 @@ void main() {
 
       final pillSheet = InitialSettingState.buildPillSheet(
         pageIndex: 0,
-        todayPillNumber: const InitialSettingTodayPillNumber(
-            pageIndex: 1, pillNumberIntoPillSheet: 1),
+        todayPillNumber: const InitialSettingTodayPillNumber(pageIndex: 1, pillNumberIntoPillSheet: 1),
         pillSheetTypes: [
           PillSheetType.pillsheet_21,
           PillSheetType.pillsheet_24_0,

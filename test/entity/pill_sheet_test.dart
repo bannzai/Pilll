@@ -1,6 +1,6 @@
 import 'package:pilll/entity/pill_sheet.codegen.dart';
 import 'package:pilll/entity/pill_sheet_type.dart';
-import 'package:pilll/service/day.dart';
+import 'package:pilll/util/datetime/day.dart';
 import 'package:flutter_test/flutter_test.dart';
 import 'package:mockito/mockito.dart';
 import 'package:pilll/util/datetime/day.dart';
@@ -54,8 +54,7 @@ void main() {
       test("rest duration is not end", () {
         final mockTodayRepository = MockTodayService();
         todayRepository = mockTodayRepository;
-        when(mockTodayRepository.now())
-            .thenReturn(DateTime.parse("2020-09-28"));
+        when(mockTodayRepository.now()).thenReturn(DateTime.parse("2020-09-28"));
 
         const sheetType = PillSheetType.pillsheet_21;
         final model = PillSheet(
@@ -80,8 +79,7 @@ void main() {
       test("rest duration is ended", () {
         final mockTodayRepository = MockTodayService();
         todayRepository = mockTodayRepository;
-        when(mockTodayRepository.now())
-            .thenReturn(DateTime.parse("2020-09-28"));
+        when(mockTodayRepository.now()).thenReturn(DateTime.parse("2020-09-28"));
 
         const sheetType = PillSheetType.pillsheet_21;
         final model = PillSheet(
@@ -107,8 +105,7 @@ void main() {
         test("last rest duration is not ended", () {
           final mockTodayRepository = MockTodayService();
           todayRepository = mockTodayRepository;
-          when(mockTodayRepository.now())
-              .thenReturn(DateTime.parse("2020-09-28"));
+          when(mockTodayRepository.now()).thenReturn(DateTime.parse("2020-09-28"));
 
           const sheetType = PillSheetType.pillsheet_21;
           final model = PillSheet(
@@ -137,8 +134,7 @@ void main() {
         test("last rest duration is ended", () {
           final mockTodayRepository = MockTodayService();
           todayRepository = mockTodayRepository;
-          when(mockTodayRepository.now())
-              .thenReturn(DateTime.parse("2020-09-28"));
+          when(mockTodayRepository.now()).thenReturn(DateTime.parse("2020-09-28"));
 
           const sheetType = PillSheetType.pillsheet_21;
           final model = PillSheet(
@@ -186,9 +182,7 @@ void main() {
       );
       expect(model.isActive, true);
     });
-    test(
-        "it is active pattern. Boundary testing. today: 2020-09-28, begin: 2020-09-01",
-        () {
+    test("it is active pattern. Boundary testing. today: 2020-09-28, begin: 2020-09-01", () {
       final mockTodayRepository = MockTodayService();
       todayRepository = mockTodayRepository;
       when(mockTodayRepository.now()).thenReturn(DateTime.parse("2020-09-28"));
@@ -205,9 +199,7 @@ void main() {
       );
       expect(model.isActive, true);
     });
-    test(
-        "it is deactive pattern. Boundary testing. today: 2020-09-29, begin: 2020-09-01",
-        () {
+    test("it is deactive pattern. Boundary testing. today: 2020-09-29, begin: 2020-09-01", () {
       final mockTodayRepository = MockTodayService();
       todayRepository = mockTodayRepository;
       when(mockTodayRepository.now()).thenReturn(DateTime.parse("2020-09-29"));
@@ -224,13 +216,10 @@ void main() {
       );
       expect(model.isActive, false);
     });
-    test(
-        "it is active pattern. Boundary testing. now: 2020-09-28 23:59:59, begin: 2020-09-01",
-        () {
+    test("it is active pattern. Boundary testing. now: 2020-09-28 23:59:59, begin: 2020-09-01", () {
       final mockTodayRepository = MockTodayService();
       todayRepository = mockTodayRepository;
-      when(mockTodayRepository.now())
-          .thenReturn(DateTime(2020, 9, 28, 23, 59, 59));
+      when(mockTodayRepository.now()).thenReturn(DateTime(2020, 9, 28, 23, 59, 59));
 
       const sheetType = PillSheetType.pillsheet_21;
       final model = PillSheet(
@@ -244,39 +233,10 @@ void main() {
       );
       expect(model.isActive, true);
     });
-    test(
-        "it is active pattern. for avoid out of active duration when during rest duration",
-        () {
+    test("it is active pattern. for avoid out of active duration when during rest duration", () {
       final mockTodayRepository = MockTodayService();
       todayRepository = mockTodayRepository;
-      when(mockTodayRepository.now())
-          .thenReturn(DateTime(2020, 9, 29, 23, 59, 59));
-
-      const sheetType = PillSheetType.pillsheet_21;
-      final model = PillSheet(
-        beginingDate: DateTime.parse("2020-09-01"),
-        typeInfo: PillSheetTypeInfo(
-          dosingPeriod: sheetType.dosingPeriod,
-          name: sheetType.fullName,
-          totalCount: sheetType.totalCount,
-          pillSheetTypeReferencePath: sheetType.rawPath,
-        ),
-        restDurations: [
-          RestDuration(
-              beginDate: DateTime.parse("2020-09-20"),
-              createdDate: DateTime.parse("2020-09-20"),
-              endDate: null),
-        ],
-      );
-      expect(model.isActive, true);
-    });
-    test(
-        "it is active pattern. for avoid out of active duration when contains ended rest duration",
-        () {
-      final mockTodayRepository = MockTodayService();
-      todayRepository = mockTodayRepository;
-      when(mockTodayRepository.now())
-          .thenReturn(DateTime(2020, 9, 29, 23, 59, 59));
+      when(mockTodayRepository.now()).thenReturn(DateTime(2020, 9, 29, 23, 59, 59));
 
       const sheetType = PillSheetType.pillsheet_21;
       final model = PillSheet(
@@ -288,21 +248,35 @@ void main() {
           pillSheetTypeReferencePath: sheetType.rawPath,
         ),
         restDurations: [
-          RestDuration(
-              beginDate: DateTime.parse("2020-09-20"),
-              createdDate: DateTime.parse("2020-09-20"),
-              endDate: DateTime.parse("2020-09-22")),
+          RestDuration(beginDate: DateTime.parse("2020-09-20"), createdDate: DateTime.parse("2020-09-20"), endDate: null),
         ],
       );
       expect(model.isActive, true);
     });
-    test(
-        "it is deactive pattern. Boundary testing. now: 2020-09-29 23:59:59, begin: 2020-09-01",
-        () {
+    test("it is active pattern. for avoid out of active duration when contains ended rest duration", () {
       final mockTodayRepository = MockTodayService();
       todayRepository = mockTodayRepository;
-      when(mockTodayRepository.now())
-          .thenReturn(DateTime(2020, 9, 29, 23, 59, 59));
+      when(mockTodayRepository.now()).thenReturn(DateTime(2020, 9, 29, 23, 59, 59));
+
+      const sheetType = PillSheetType.pillsheet_21;
+      final model = PillSheet(
+        beginingDate: DateTime.parse("2020-09-01"),
+        typeInfo: PillSheetTypeInfo(
+          dosingPeriod: sheetType.dosingPeriod,
+          name: sheetType.fullName,
+          totalCount: sheetType.totalCount,
+          pillSheetTypeReferencePath: sheetType.rawPath,
+        ),
+        restDurations: [
+          RestDuration(beginDate: DateTime.parse("2020-09-20"), createdDate: DateTime.parse("2020-09-20"), endDate: DateTime.parse("2020-09-22")),
+        ],
+      );
+      expect(model.isActive, true);
+    });
+    test("it is deactive pattern. Boundary testing. now: 2020-09-29 23:59:59, begin: 2020-09-01", () {
+      final mockTodayRepository = MockTodayService();
+      todayRepository = mockTodayRepository;
+      when(mockTodayRepository.now()).thenReturn(DateTime(2020, 9, 29, 23, 59, 59));
 
       const sheetType = PillSheetType.pillsheet_21;
       final model = PillSheet(
@@ -336,8 +310,7 @@ void main() {
     test("it is deactive pattern. for contains ended rest duration", () {
       final mockTodayRepository = MockTodayService();
       todayRepository = mockTodayRepository;
-      when(mockTodayRepository.now())
-          .thenReturn(DateTime(2020, 9, 30, 23, 59, 59));
+      when(mockTodayRepository.now()).thenReturn(DateTime(2020, 9, 30, 23, 59, 59));
 
       const sheetType = PillSheetType.pillsheet_21;
       final model = PillSheet(
@@ -360,8 +333,7 @@ void main() {
     });
   });
   group("#isBegan", () {
-    test("it is not out of range pattern. today: 2020-09-19, begin: 2020-09-14",
-        () {
+    test("it is not out of range pattern. today: 2020-09-19, begin: 2020-09-14", () {
       final mockTodayRepository = MockTodayService();
       todayRepository = mockTodayRepository;
       when(mockTodayRepository.now()).thenReturn(DateTime.parse("2020-09-19"));
@@ -378,9 +350,7 @@ void main() {
       );
       expect(model.isBegan, true);
     });
-    test(
-        "it is not out of range pattern. Boundary testing. now: 2020-09-28, begin: 2020-09-01",
-        () {
+    test("it is not out of range pattern. Boundary testing. now: 2020-09-28, begin: 2020-09-01", () {
       final mockTodayRepository = MockTodayService();
       todayRepository = mockTodayRepository;
       when(mockTodayRepository.now()).thenReturn(DateTime.parse("2020-09-28"));
@@ -397,9 +367,7 @@ void main() {
       );
       expect(model.isBegan, true);
     });
-    test(
-        "it is out of range pattern. Boundary testing. now: 2020-09-29, begin: 2020-09-01",
-        () {
+    test("it is out of range pattern. Boundary testing. now: 2020-09-29, begin: 2020-09-01", () {
       final mockTodayRepository = MockTodayService();
       todayRepository = mockTodayRepository;
       when(mockTodayRepository.now()).thenReturn(DateTime.parse("2020-09-29"));
@@ -492,8 +460,7 @@ void main() {
       test("rest duration is not ended", () {
         final mockTodayRepository = MockTodayService();
         todayRepository = mockTodayRepository;
-        when(mockTodayRepository.now())
-            .thenReturn(DateTime.parse("2020-09-28"));
+        when(mockTodayRepository.now()).thenReturn(DateTime.parse("2020-09-28"));
 
         const sheetType = PillSheetType.pillsheet_21;
         final model = PillSheet(
@@ -517,8 +484,7 @@ void main() {
       test("rest duration is ended", () {
         final mockTodayRepository = MockTodayService();
         todayRepository = mockTodayRepository;
-        when(mockTodayRepository.now())
-            .thenReturn(DateTime.parse("2020-09-28"));
+        when(mockTodayRepository.now()).thenReturn(DateTime.parse("2020-09-28"));
 
         const sheetType = PillSheetType.pillsheet_21;
         final model = PillSheet(
@@ -543,8 +509,7 @@ void main() {
       test("rest duration is ended and not yet taken pill", () {
         final mockTodayRepository = MockTodayService();
         todayRepository = mockTodayRepository;
-        when(mockTodayRepository.now())
-            .thenReturn(DateTime.parse("2020-09-28"));
+        when(mockTodayRepository.now()).thenReturn(DateTime.parse("2020-09-28"));
 
         const sheetType = PillSheetType.pillsheet_21;
         final model = PillSheet(
@@ -571,8 +536,7 @@ void main() {
         test("last rest duration is not ended", () {
           final mockTodayRepository = MockTodayService();
           todayRepository = mockTodayRepository;
-          when(mockTodayRepository.now())
-              .thenReturn(DateTime.parse("2020-09-28"));
+          when(mockTodayRepository.now()).thenReturn(DateTime.parse("2020-09-28"));
 
           const sheetType = PillSheetType.pillsheet_21;
           final model = PillSheet(
@@ -601,8 +565,7 @@ void main() {
         test("last rest duration is ended", () {
           final mockTodayRepository = MockTodayService();
           todayRepository = mockTodayRepository;
-          when(mockTodayRepository.now())
-              .thenReturn(DateTime.parse("2020-09-28"));
+          when(mockTodayRepository.now()).thenReturn(DateTime.parse("2020-09-28"));
 
           const sheetType = PillSheetType.pillsheet_21;
           final model = PillSheet(
@@ -648,16 +611,14 @@ void main() {
           pillSheetTypeReferencePath: sheetType.rawPath,
         ),
       );
-      expect(pillSheet.estimatedEndTakenDate,
-          DateTime.parse("2022-05-29").subtract(const Duration(seconds: 1)));
+      expect(pillSheet.estimatedEndTakenDate, DateTime.parse("2022-05-29").subtract(const Duration(seconds: 1)));
     });
 
     group("pillsheet has rest durations", () {
       test("rest duration is not ended", () {
         final mockTodayRepository = MockTodayService();
         todayRepository = mockTodayRepository;
-        when(mockTodayRepository.now())
-            .thenReturn(DateTime.parse("2022-05-10"));
+        when(mockTodayRepository.now()).thenReturn(DateTime.parse("2022-05-10"));
 
         const sheetType = PillSheetType.pillsheet_21;
         final pillSheet = PillSheet(
@@ -675,14 +636,12 @@ void main() {
             pillSheetTypeReferencePath: sheetType.rawPath,
           ),
         );
-        expect(pillSheet.estimatedEndTakenDate,
-            DateTime.parse("2022-06-05").subtract(const Duration(seconds: 1)));
+        expect(pillSheet.estimatedEndTakenDate, DateTime.parse("2022-06-05").subtract(const Duration(seconds: 1)));
       });
       test("rest duration is ended", () {
         final mockTodayRepository = MockTodayService();
         todayRepository = mockTodayRepository;
-        when(mockTodayRepository.now())
-            .thenReturn(DateTime.parse("2022-05-10"));
+        when(mockTodayRepository.now()).thenReturn(DateTime.parse("2022-05-10"));
 
         const sheetType = PillSheetType.pillsheet_21;
         final pillSheet = PillSheet(
@@ -701,16 +660,14 @@ void main() {
             pillSheetTypeReferencePath: sheetType.rawPath,
           ),
         );
-        expect(pillSheet.estimatedEndTakenDate,
-            DateTime.parse("2022-05-31").subtract(const Duration(seconds: 1)));
+        expect(pillSheet.estimatedEndTakenDate, DateTime.parse("2022-05-31").subtract(const Duration(seconds: 1)));
       });
 
       group("pillsheet has plural rest duration", () {
         test("last rest duration is not ended", () {
           final mockTodayRepository = MockTodayService();
           todayRepository = mockTodayRepository;
-          when(mockTodayRepository.now())
-              .thenReturn(DateTime.parse("2022-05-10"));
+          when(mockTodayRepository.now()).thenReturn(DateTime.parse("2022-05-10"));
 
           const sheetType = PillSheetType.pillsheet_21;
           final pillSheet = PillSheet(
@@ -733,16 +690,12 @@ void main() {
               pillSheetTypeReferencePath: sheetType.rawPath,
             ),
           );
-          expect(
-              pillSheet.estimatedEndTakenDate,
-              DateTime.parse("2022-06-03")
-                  .subtract(const Duration(seconds: 1)));
+          expect(pillSheet.estimatedEndTakenDate, DateTime.parse("2022-06-03").subtract(const Duration(seconds: 1)));
         });
         test("last rest duration is ended", () {
           final mockTodayRepository = MockTodayService();
           todayRepository = mockTodayRepository;
-          when(mockTodayRepository.now())
-              .thenReturn(DateTime.parse("2022-05-10"));
+          when(mockTodayRepository.now()).thenReturn(DateTime.parse("2022-05-10"));
 
           const sheetType = PillSheetType.pillsheet_21;
           final pillSheet = PillSheet(
@@ -766,10 +719,7 @@ void main() {
               pillSheetTypeReferencePath: sheetType.rawPath,
             ),
           );
-          expect(
-              pillSheet.estimatedEndTakenDate,
-              DateTime.parse("2022-06-01")
-                  .subtract(const Duration(seconds: 1)));
+          expect(pillSheet.estimatedEndTakenDate, DateTime.parse("2022-06-01").subtract(const Duration(seconds: 1)));
         });
       });
     });
@@ -777,17 +727,14 @@ void main() {
       test("restDurations isEmpty", () {
         final mockTodayRepository = MockTodayService();
         todayRepository = mockTodayRepository;
-        when(mockTodayRepository.now())
-            .thenReturn(DateTime.parse("2022-05-10"));
+        when(mockTodayRepository.now()).thenReturn(DateTime.parse("2022-05-10"));
 
-        expect(
-            summarizedRestDuration(restDurations: [], upperDate: today()), 0);
+        expect(summarizedRestDuration(restDurations: [], upperDate: today()), 0);
       });
       test("last restDuration is not ended", () {
         final mockTodayRepository = MockTodayService();
         todayRepository = mockTodayRepository;
-        when(mockTodayRepository.now())
-            .thenReturn(DateTime.parse("2022-05-10"));
+        when(mockTodayRepository.now()).thenReturn(DateTime.parse("2022-05-10"));
 
         final restDurations = [
           RestDuration(
@@ -795,16 +742,12 @@ void main() {
             createdDate: DateTime.parse("2022-05-07"),
           ),
         ];
-        expect(
-            summarizedRestDuration(
-                restDurations: restDurations, upperDate: today()),
-            3);
+        expect(summarizedRestDuration(restDurations: restDurations, upperDate: today()), 3);
       });
       test("last restDuration is ended", () {
         final mockTodayRepository = MockTodayService();
         todayRepository = mockTodayRepository;
-        when(mockTodayRepository.now())
-            .thenReturn(DateTime.parse("2022-05-10"));
+        when(mockTodayRepository.now()).thenReturn(DateTime.parse("2022-05-10"));
 
         final restDurations = [
           RestDuration(
@@ -813,10 +756,7 @@ void main() {
             endDate: DateTime.parse("2022-05-08"),
           ),
         ];
-        expect(
-            summarizedRestDuration(
-                restDurations: restDurations, upperDate: today()),
-            1);
+        expect(summarizedRestDuration(restDurations: restDurations, upperDate: today()), 1);
       });
     });
   });

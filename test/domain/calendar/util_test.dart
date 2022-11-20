@@ -7,7 +7,7 @@ import 'package:pilll/entity/pill_sheet_group.codegen.dart';
 import 'package:pilll/entity/pill_sheet_type.dart';
 import 'package:pilll/entity/setting.codegen.dart';
 import 'package:flutter_test/flutter_test.dart';
-import 'package:pilll/service/day.dart';
+import 'package:pilll/util/datetime/day.dart';
 import 'package:pilll/util/datetime/day.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
@@ -26,10 +26,8 @@ void main() {
           final originalTodayRepository = todayRepository;
           final mockTodayRepository = MockTodayService();
           todayRepository = mockTodayRepository;
-          when(mockTodayRepository.now())
-              .thenReturn(DateTime.parse("2020-09-01"));
-          when(mockTodayRepository.now())
-              .thenReturn(DateTime.parse("2020-09-01"));
+          when(mockTodayRepository.now()).thenReturn(DateTime.parse("2020-09-01"));
+          when(mockTodayRepository.now()).thenReturn(DateTime.parse("2020-09-01"));
           addTearDown(() {
             todayRepository = originalTodayRepository;
           });
@@ -51,10 +49,7 @@ void main() {
             createdAt: now(),
           );
           var setting = const Setting(
-            pillSheetTypes: [
-              PillSheetType.pillsheet_28_7,
-              PillSheetType.pillsheet_24_0
-            ],
+            pillSheetTypes: [PillSheetType.pillsheet_28_7, PillSheetType.pillsheet_24_0],
             pillNumberForFromMenstruation: 23,
             durationMenstruation: 3,
             isOnReminder: false,
@@ -62,8 +57,7 @@ void main() {
             timezoneDatabaseName: null,
           );
           expect(
-            scheduledOrInTheMiddleMenstruationDateRanges(
-                pillSheetGroup, setting, [], 2),
+            scheduledOrInTheMiddleMenstruationDateRanges(pillSheetGroup, setting, [], 2),
             [
               DateRange(
                 DateTime.parse("2020-09-23"),
@@ -83,10 +77,8 @@ void main() {
           final originalTodayRepository = todayRepository;
           final mockTodayRepository = MockTodayService();
           todayRepository = mockTodayRepository;
-          when(mockTodayRepository.now())
-              .thenReturn(DateTime.parse("2020-09-01"));
-          when(mockTodayRepository.now())
-              .thenReturn(DateTime.parse("2020-09-01"));
+          when(mockTodayRepository.now()).thenReturn(DateTime.parse("2020-09-01"));
+          when(mockTodayRepository.now()).thenReturn(DateTime.parse("2020-09-01"));
           addTearDown(() {
             todayRepository = originalTodayRepository;
           });
@@ -108,10 +100,7 @@ void main() {
             createdAt: now(),
           );
           var setting = const Setting(
-            pillSheetTypes: [
-              PillSheetType.pillsheet_28_7,
-              PillSheetType.pillsheet_21_0
-            ],
+            pillSheetTypes: [PillSheetType.pillsheet_28_7, PillSheetType.pillsheet_21_0],
             pillNumberForFromMenstruation: 23,
             durationMenstruation: 3,
             isOnReminder: false,
@@ -119,8 +108,7 @@ void main() {
             timezoneDatabaseName: null,
           );
           expect(
-            scheduledOrInTheMiddleMenstruationDateRanges(
-                pillSheetGroup, setting, [], 2),
+            scheduledOrInTheMiddleMenstruationDateRanges(pillSheetGroup, setting, [], 2),
             [
               DateRange(
                 DateTime.parse("2020-09-23"),
@@ -140,10 +128,8 @@ void main() {
           final originalTodayRepository = todayRepository;
           final mockTodayRepository = MockTodayService();
           todayRepository = mockTodayRepository;
-          when(mockTodayRepository.now())
-              .thenReturn(DateTime.parse("2020-09-01"));
-          when(mockTodayRepository.now())
-              .thenReturn(DateTime.parse("2020-09-01"));
+          when(mockTodayRepository.now()).thenReturn(DateTime.parse("2020-09-01"));
+          when(mockTodayRepository.now()).thenReturn(DateTime.parse("2020-09-01"));
           addTearDown(() {
             todayRepository = originalTodayRepository;
           });
@@ -165,10 +151,7 @@ void main() {
             createdAt: now(),
           );
           var setting = const Setting(
-            pillSheetTypes: [
-              PillSheetType.pillsheet_28_7,
-              PillSheetType.pillsheet_24_0
-            ],
+            pillSheetTypes: [PillSheetType.pillsheet_28_7, PillSheetType.pillsheet_24_0],
             pillNumberForFromMenstruation: 23,
             durationMenstruation: 3,
             isOnReminder: false,
@@ -176,8 +159,7 @@ void main() {
             timezoneDatabaseName: null,
           );
           expect(
-            scheduledOrInTheMiddleMenstruationDateRanges(
-                pillSheetGroup, setting, [], 4),
+            scheduledOrInTheMiddleMenstruationDateRanges(pillSheetGroup, setting, [], 4),
             [
               DateRange(
                 DateTime.parse("2020-09-23"),
@@ -223,10 +205,8 @@ void main() {
           final originalTodayRepository = todayRepository;
           final mockTodayRepository = MockTodayService();
           todayRepository = mockTodayRepository;
-          when(mockTodayRepository.now())
-              .thenReturn(DateTime.parse("2020-09-01"));
-          when(mockTodayRepository.now())
-              .thenReturn(DateTime.parse("2020-09-01"));
+          when(mockTodayRepository.now()).thenReturn(DateTime.parse("2020-09-01"));
+          when(mockTodayRepository.now()).thenReturn(DateTime.parse("2020-09-01"));
           addTearDown(() {
             todayRepository = originalTodayRepository;
           });
@@ -240,8 +220,7 @@ void main() {
             beginingDate: beginingDate,
             lastTakenDate: null,
           );
-          final pillSheetGroup = PillSheetGroup(
-              pillSheetIDs: ["1"], pillSheets: [pillSheet], createdAt: now());
+          final pillSheetGroup = PillSheetGroup(pillSheetIDs: ["1"], pillSheets: [pillSheet], createdAt: now());
           var setting = Setting(
             pillSheetTypes: [pillSheetType],
             pillNumberForFromMenstruation: fromMenstruation,
@@ -253,8 +232,7 @@ void main() {
           assert(pillSheetType.dosingPeriod == 21,
               "scheduledMenstruationDateRange adding value with dosingPeriod when it will create DateRange. pillsheet_28_7 type has 24 dosingPeriod");
           expect(
-            scheduledOrInTheMiddleMenstruationDateRanges(
-                pillSheetGroup, setting, [], 1),
+            scheduledOrInTheMiddleMenstruationDateRanges(pillSheetGroup, setting, [], 1),
             [
               DateRange(
                 DateTime.parse("2020-09-23"),
@@ -270,10 +248,8 @@ void main() {
           final originalTodayRepository = todayRepository;
           final mockTodayRepository = MockTodayService();
           todayRepository = mockTodayRepository;
-          when(mockTodayRepository.now())
-              .thenReturn(DateTime.parse("2020-09-01"));
-          when(mockTodayRepository.now())
-              .thenReturn(DateTime.parse("2020-09-01"));
+          when(mockTodayRepository.now()).thenReturn(DateTime.parse("2020-09-01"));
+          when(mockTodayRepository.now()).thenReturn(DateTime.parse("2020-09-01"));
           addTearDown(() {
             todayRepository = originalTodayRepository;
           });
@@ -287,8 +263,7 @@ void main() {
             beginingDate: beginingDate,
             lastTakenDate: null,
           );
-          final pillSheetGroup = PillSheetGroup(
-              pillSheetIDs: ["1"], pillSheets: [pillSheet], createdAt: now());
+          final pillSheetGroup = PillSheetGroup(pillSheetIDs: ["1"], pillSheets: [pillSheet], createdAt: now());
 
           var setting = Setting(
             pillSheetTypes: [pillSheetType],
@@ -301,8 +276,7 @@ void main() {
           assert(pillSheetType.dosingPeriod == 21,
               "scheduledMenstruationDateRange adding value with dosingPeriod when it will create DateRange. pillsheet_28_7 type has 24 dosingPeriod");
           expect(
-            scheduledOrInTheMiddleMenstruationDateRanges(
-                pillSheetGroup, setting, [], 2),
+            scheduledOrInTheMiddleMenstruationDateRanges(pillSheetGroup, setting, [], 2),
             [
               DateRange(
                 DateTime.parse("2020-09-23"),
@@ -322,10 +296,8 @@ void main() {
           final originalTodayRepository = todayRepository;
           final mockTodayRepository = MockTodayService();
           todayRepository = mockTodayRepository;
-          when(mockTodayRepository.now())
-              .thenReturn(DateTime.parse("2020-09-01"));
-          when(mockTodayRepository.now())
-              .thenReturn(DateTime.parse("2020-09-01"));
+          when(mockTodayRepository.now()).thenReturn(DateTime.parse("2020-09-01"));
+          when(mockTodayRepository.now()).thenReturn(DateTime.parse("2020-09-01"));
           addTearDown(() {
             todayRepository = originalTodayRepository;
           });
@@ -339,8 +311,7 @@ void main() {
             beginingDate: beginingDate,
             lastTakenDate: null,
           );
-          final pillSheetGroup = PillSheetGroup(
-              pillSheetIDs: ["1"], pillSheets: [pillSheet], createdAt: now());
+          final pillSheetGroup = PillSheetGroup(pillSheetIDs: ["1"], pillSheets: [pillSheet], createdAt: now());
           var setting = Setting(
             pillSheetTypes: [pillSheetType],
             pillNumberForFromMenstruation: fromMenstruation,
@@ -352,8 +323,7 @@ void main() {
           assert(pillSheetType.dosingPeriod == 21,
               "scheduledMenstruationDateRange adding value with dosingPeriod when it will create DateRange. pillsheet_28_7 type has 24 dosingPeriod");
           expect(
-            scheduledOrInTheMiddleMenstruationDateRanges(
-                pillSheetGroup, setting, [], 3),
+            scheduledOrInTheMiddleMenstruationDateRanges(pillSheetGroup, setting, [], 3),
             [
               DateRange(
                 DateTime.parse("2020-09-23"),
@@ -377,10 +347,8 @@ void main() {
           final originalTodayRepository = todayRepository;
           final mockTodayRepository = MockTodayService();
           todayRepository = mockTodayRepository;
-          when(mockTodayRepository.now())
-              .thenReturn(DateTime.parse("2021-01-18"));
-          when(mockTodayRepository.now())
-              .thenReturn(DateTime.parse("2021-01-18"));
+          when(mockTodayRepository.now()).thenReturn(DateTime.parse("2021-01-18"));
+          when(mockTodayRepository.now()).thenReturn(DateTime.parse("2021-01-18"));
           addTearDown(() {
             todayRepository = originalTodayRepository;
           });
@@ -394,8 +362,7 @@ void main() {
             beginingDate: beginingDate,
             lastTakenDate: null,
           );
-          final pillSheetGroup = PillSheetGroup(
-              pillSheetIDs: ["1"], pillSheets: [pillSheet], createdAt: now());
+          final pillSheetGroup = PillSheetGroup(pillSheetIDs: ["1"], pillSheets: [pillSheet], createdAt: now());
           var setting = Setting(
             pillSheetTypes: [pillSheetType],
             pillNumberForFromMenstruation: fromMenstruation,
@@ -407,8 +374,7 @@ void main() {
           assert(pillSheetType.dosingPeriod == 28,
               "scheduledMenstruationDateRange adding value with dosingPeriod when it will create DateRange. pillsheet_28_7 type has 24 dosingPeriod");
           expect(
-            scheduledOrInTheMiddleMenstruationDateRanges(
-                pillSheetGroup, setting, [], 1),
+            scheduledOrInTheMiddleMenstruationDateRanges(pillSheetGroup, setting, [], 1),
             [
               DateRange(
                 DateTime.parse("2021-02-09"),
@@ -424,10 +390,8 @@ void main() {
           final originalTodayRepository = todayRepository;
           final mockTodayRepository = MockTodayService();
           todayRepository = mockTodayRepository;
-          when(mockTodayRepository.now())
-              .thenReturn(DateTime.parse("2021-01-01"));
-          when(mockTodayRepository.now())
-              .thenReturn(DateTime.parse("2021-01-01"));
+          when(mockTodayRepository.now()).thenReturn(DateTime.parse("2021-01-01"));
+          when(mockTodayRepository.now()).thenReturn(DateTime.parse("2021-01-01"));
           addTearDown(() {
             todayRepository = originalTodayRepository;
           });
@@ -439,8 +403,7 @@ void main() {
             beginingDate: beginingDate,
             lastTakenDate: null,
           );
-          final pillSheetGroup = PillSheetGroup(
-              pillSheetIDs: ["1"], pillSheets: [pillSheet], createdAt: now());
+          final pillSheetGroup = PillSheetGroup(pillSheetIDs: ["1"], pillSheets: [pillSheet], createdAt: now());
           var setting = Setting(
             pillSheetTypes: [pillSheetType],
             pillNumberForFromMenstruation: 23,
@@ -450,8 +413,7 @@ void main() {
             timezoneDatabaseName: null,
           );
           expect(
-            scheduledOrInTheMiddleMenstruationDateRanges(
-                pillSheetGroup, setting, [], 3),
+            scheduledOrInTheMiddleMenstruationDateRanges(pillSheetGroup, setting, [], 3),
             [
               DateRange(
                 DateTime.parse("2021-01-23"),
@@ -475,10 +437,8 @@ void main() {
           final originalTodayRepository = todayRepository;
           final mockTodayRepository = MockTodayService();
           todayRepository = mockTodayRepository;
-          when(mockTodayRepository.now())
-              .thenReturn(DateTime.parse("2021-01-18"));
-          when(mockTodayRepository.now())
-              .thenReturn(DateTime.parse("2021-01-18"));
+          when(mockTodayRepository.now()).thenReturn(DateTime.parse("2021-01-18"));
+          when(mockTodayRepository.now()).thenReturn(DateTime.parse("2021-01-18"));
           addTearDown(() {
             todayRepository = originalTodayRepository;
           });
@@ -491,8 +451,7 @@ void main() {
             beginingDate: beginingDate,
             lastTakenDate: null,
           );
-          final pillSheetGroup = PillSheetGroup(
-              pillSheetIDs: ["1"], pillSheets: [pillSheet], createdAt: now());
+          final pillSheetGroup = PillSheetGroup(pillSheetIDs: ["1"], pillSheets: [pillSheet], createdAt: now());
           var setting = Setting(
             pillSheetTypes: [pillSheetType],
             pillNumberForFromMenstruation: 0,
@@ -504,8 +463,7 @@ void main() {
           assert(pillSheetType.dosingPeriod == 28,
               "scheduledMenstruationDateRange adding value with dosingPeriod when it will create DateRange. pillsheet_28_7 type has 24 dosingPeriod");
           expect(
-            scheduledOrInTheMiddleMenstruationDateRanges(
-                pillSheetGroup, setting, [], 1),
+            scheduledOrInTheMiddleMenstruationDateRanges(pillSheetGroup, setting, [], 1),
             [],
           );
         },
@@ -520,10 +478,8 @@ void main() {
           final originalTodayRepository = todayRepository;
           final mockTodayRepository = MockTodayService();
           todayRepository = mockTodayRepository;
-          when(mockTodayRepository.now())
-              .thenReturn(DateTime.parse("2020-09-01"));
-          when(mockTodayRepository.now())
-              .thenReturn(DateTime.parse("2020-09-01"));
+          when(mockTodayRepository.now()).thenReturn(DateTime.parse("2020-09-01"));
+          when(mockTodayRepository.now()).thenReturn(DateTime.parse("2020-09-01"));
           addTearDown(() {
             todayRepository = originalTodayRepository;
           });
@@ -585,10 +541,8 @@ void main() {
           final originalTodayRepository = todayRepository;
           final mockTodayRepository = MockTodayService();
           todayRepository = mockTodayRepository;
-          when(mockTodayRepository.now())
-              .thenReturn(DateTime.parse("2020-09-01"));
-          when(mockTodayRepository.now())
-              .thenReturn(DateTime.parse("2020-09-01"));
+          when(mockTodayRepository.now()).thenReturn(DateTime.parse("2020-09-01"));
+          when(mockTodayRepository.now()).thenReturn(DateTime.parse("2020-09-01"));
           addTearDown(() {
             todayRepository = originalTodayRepository;
           });
@@ -600,8 +554,7 @@ void main() {
             beginingDate: beginingDate,
             lastTakenDate: null,
           );
-          final pillSheetGroup = PillSheetGroup(
-              pillSheetIDs: ["1"], pillSheets: [pillSheet], createdAt: now());
+          final pillSheetGroup = PillSheetGroup(pillSheetIDs: ["1"], pillSheets: [pillSheet], createdAt: now());
           expect(
             nextPillSheetDateRanges(pillSheetGroup, 1),
             [
@@ -619,10 +572,8 @@ void main() {
           final originalTodayRepository = todayRepository;
           final mockTodayRepository = MockTodayService();
           todayRepository = mockTodayRepository;
-          when(mockTodayRepository.now())
-              .thenReturn(DateTime.parse("2020-09-01"));
-          when(mockTodayRepository.now())
-              .thenReturn(DateTime.parse("2020-09-01"));
+          when(mockTodayRepository.now()).thenReturn(DateTime.parse("2020-09-01"));
+          when(mockTodayRepository.now()).thenReturn(DateTime.parse("2020-09-01"));
           addTearDown(() {
             todayRepository = originalTodayRepository;
           });
@@ -634,8 +585,7 @@ void main() {
             beginingDate: beginingDate,
             lastTakenDate: null,
           );
-          final pillSheetGroup = PillSheetGroup(
-              pillSheetIDs: ["1"], pillSheets: [pillSheet], createdAt: now());
+          final pillSheetGroup = PillSheetGroup(pillSheetIDs: ["1"], pillSheets: [pillSheet], createdAt: now());
           expect(
             nextPillSheetDateRanges(pillSheetGroup, 2),
             [
@@ -657,10 +607,8 @@ void main() {
           final originalTodayRepository = todayRepository;
           final mockTodayRepository = MockTodayService();
           todayRepository = mockTodayRepository;
-          when(mockTodayRepository.now())
-              .thenReturn(DateTime.parse("2020-09-01"));
-          when(mockTodayRepository.now())
-              .thenReturn(DateTime.parse("2020-09-01"));
+          when(mockTodayRepository.now()).thenReturn(DateTime.parse("2020-09-01"));
+          when(mockTodayRepository.now()).thenReturn(DateTime.parse("2020-09-01"));
           addTearDown(() {
             todayRepository = originalTodayRepository;
           });
@@ -672,8 +620,7 @@ void main() {
             beginingDate: beginingDate,
             lastTakenDate: null,
           );
-          final pillSheetGroup = PillSheetGroup(
-              pillSheetIDs: ["1"], pillSheets: [pillSheet], createdAt: now());
+          final pillSheetGroup = PillSheetGroup(pillSheetIDs: ["1"], pillSheets: [pillSheet], createdAt: now());
           expect(
             nextPillSheetDateRanges(pillSheetGroup, 3),
             [
@@ -716,10 +663,8 @@ void main() {
           final originalTodayRepository = todayRepository;
           final mockTodayRepository = MockTodayService();
           todayRepository = mockTodayRepository;
-          when(mockTodayRepository.now())
-              .thenReturn(DateTime.parse("2020-09-01"));
-          when(mockTodayRepository.now())
-              .thenReturn(DateTime.parse("2020-09-01"));
+          when(mockTodayRepository.now()).thenReturn(DateTime.parse("2020-09-01"));
+          when(mockTodayRepository.now()).thenReturn(DateTime.parse("2020-09-01"));
           addTearDown(() {
             todayRepository = originalTodayRepository;
           });
@@ -731,8 +676,7 @@ void main() {
             beginingDate: beginingDate,
             lastTakenDate: null,
           );
-          final pillSheetGroup = PillSheetGroup(
-              pillSheetIDs: ["1"], pillSheets: [pillSheet], createdAt: now());
+          final pillSheetGroup = PillSheetGroup(pillSheetIDs: ["1"], pillSheets: [pillSheet], createdAt: now());
           expect(
             nextPillSheetDateRanges(pillSheetGroup, 1),
             [
