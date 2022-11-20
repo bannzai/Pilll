@@ -26,17 +26,14 @@ class CalendarNextPillSheetBand extends StatelessWidget {
       child: Stack(
         children: [
           CustomPaint(
-            painter: DiagonalStripedLine(color: PilllColors.duration, isNecessaryBorder: false),
+            painter: DiagonalStripedLine(
+                color: PilllColors.duration, isNecessaryBorder: false),
             size: Size(width, CalendarBandConst.height),
           ),
           Container(
             padding: const EdgeInsets.only(left: 10),
             child: Text(isLineBreak ? "" : "新しいシート開始 ▶︎",
-                style: const TextStyle(
-                  fontFamily: FontFamily.number,
-                  fontWeight: FontWeight.w500,
-                  fontSize: 12,
-                ).merge(TextColorStyle.white)),
+                style: FontType.sSmallTitle.merge(TextColorStyle.white)),
           ),
         ],
       ),

@@ -23,11 +23,8 @@ class WeekdayBadge extends StatelessWidget {
       child: Center(
         child: Text(weekday.weekdayString(),
             textAlign: TextAlign.end,
-            style: const TextStyle(
-              fontFamily: FontFamily.number,
-              fontWeight: FontWeight.w500,
-              fontSize: 12,
-            ).merge(TextStyle(color: weekday.weekdayColor()))),
+            style: FontType.sSmallTitle
+                .merge(TextStyle(color: weekday.weekdayColor()))),
       ),
     );
   }
