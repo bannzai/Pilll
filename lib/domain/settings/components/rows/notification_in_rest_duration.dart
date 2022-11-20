@@ -28,7 +28,12 @@ class NotificationInRestDuration extends HookConsumerWidget {
             fontWeight: FontWeight.w300,
             fontSize: 16,
           )),
-      subtitle: Text("通知オフの場合は、${pillSheet.pillSheetType.notTakenWord}期間の服用記録も自動で付けられます", style: FontType.assisting),
+      subtitle: Text("通知オフの場合は、${pillSheet.pillSheetType.notTakenWord}期間の服用記録も自動で付けられます",
+          style: const TextStyle(
+            fontFamily: FontFamily.japanese,
+            fontWeight: FontWeight.w300,
+            fontSize: 14,
+          )),
       activeColor: PilllColors.primary,
       onChanged: (bool value) async {
         analytics.logEvent(

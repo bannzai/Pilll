@@ -60,7 +60,12 @@ class InitialSettingReminderTimesPage extends HookConsumerWidget {
                           return _form(context, store, state, index);
                         })),
                   ),
-                  Text("複数設定しておく事で飲み忘れを防げます", style: FontType.assisting.merge(TextColorStyle.main)),
+                  Text("複数設定しておく事で飲み忘れを防げます",
+                      style: const TextStyle(
+                        fontFamily: FontFamily.japanese,
+                        fontWeight: FontWeight.w300,
+                        fontSize: 14,
+                      ).merge(TextColorStyle.main)),
                 ],
               ),
               const Spacer(),
@@ -157,7 +162,15 @@ class InitialSettingReminderTimesPage extends HookConsumerWidget {
         children: [
           Row(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
-            children: [SvgPicture.asset("images/alerm.svg"), Text("通知${index + 1}", style: FontType.assisting.merge(TextColorStyle.main))],
+            children: [
+              SvgPicture.asset("images/alerm.svg"),
+              Text("通知${index + 1}",
+                  style: const TextStyle(
+                    fontFamily: FontFamily.japanese,
+                    fontWeight: FontWeight.w300,
+                    fontSize: 14,
+                  ).merge(TextColorStyle.main))
+            ],
           ),
           const SizedBox(height: 8),
           GestureDetector(

@@ -27,7 +27,11 @@ class SettingSectionTitle extends StatelessWidget {
       padding: const EdgeInsets.only(top: 32, left: 15, right: 16),
       child: Text(
         text,
-        style: FontType.assisting.merge(TextColorStyle.main),
+        style: const TextStyle(
+          fontFamily: FontFamily.japanese,
+          fontWeight: FontWeight.w300,
+          fontSize: 14,
+        ).merge(TextColorStyle.main),
       ),
     );
   }

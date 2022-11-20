@@ -37,7 +37,12 @@ class AccountLinkRow extends HookConsumerWidget {
         children: [
           SvgPicture.asset("images/checkmark_green.svg"),
           const SizedBox(width: 6),
-          Text("連携済み", style: FontType.assisting.merge(TextColorStyle.darkGray)),
+          Text("連携済み",
+              style: const TextStyle(
+                fontFamily: FontFamily.japanese,
+                fontWeight: FontWeight.w300,
+                fontSize: 14,
+              ).merge(TextColorStyle.darkGray)),
         ],
       );
     } else {
@@ -46,7 +51,12 @@ class AccountLinkRow extends HookConsumerWidget {
         children: [
           SvgPicture.asset("images/alert_24.svg"),
           const SizedBox(width: 6),
-          Text("未登録", style: FontType.assisting.merge(TextColorStyle.darkGray)),
+          Text("未登録",
+              style: const TextStyle(
+                fontFamily: FontFamily.japanese,
+                fontWeight: FontWeight.w300,
+                fontSize: 14,
+              ).merge(TextColorStyle.darkGray)),
         ],
       );
     }

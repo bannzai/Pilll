@@ -94,7 +94,11 @@ class ReminderNotificationCustomizeWordPage extends HookConsumerWidget {
                     children: [
                       Text(
                         "詳細設定",
-                        style: FontType.assisting.merge(TextColorStyle.primary),
+                        style: const TextStyle(
+                          fontFamily: FontFamily.japanese,
+                          fontWeight: FontWeight.w300,
+                          fontSize: 14,
+                        ).merge(TextColorStyle.primary),
                       ),
                       const SizedBox(height: 4),
                       _switchRow(

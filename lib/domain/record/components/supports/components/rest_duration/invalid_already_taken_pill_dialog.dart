@@ -50,7 +50,11 @@ class InvalidAlreadyTakenPillDialog extends StatelessWidget {
                 ),
                 TextSpan(
                   text: "休薬してください。今日以外の日から休薬したい場合は下記を参考にしてください。",
-                  style: FontType.assisting.merge(TextColorStyle.main),
+                  style: const TextStyle(
+                    fontFamily: FontFamily.japanese,
+                    fontWeight: FontWeight.w300,
+                    fontSize: 14,
+                  ).merge(TextColorStyle.main),
                 ),
               ],
             ),

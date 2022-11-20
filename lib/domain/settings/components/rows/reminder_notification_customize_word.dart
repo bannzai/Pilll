@@ -39,7 +39,12 @@ class ReminderNotificationCustomizeWord extends HookConsumerWidget {
           ]
         ],
       ),
-      subtitle: const Text("服用通知の文言のカスタマイズができます", style: FontType.assisting),
+      subtitle: const Text("服用通知の文言のカスタマイズができます",
+          style: const TextStyle(
+            fontFamily: FontFamily.japanese,
+            fontWeight: FontWeight.w300,
+            fontSize: 14,
+          )),
       onTap: () {
         analytics.logEvent(
           name: "did_notification_customize_word",

@@ -189,7 +189,11 @@ class ReminderTimesPage extends HookConsumerWidget {
             SvgPicture.asset("images/add.svg"),
             Text(
               "通知時間の追加",
-              style: FontType.assisting.merge(TextColorStyle.main),
+              style: const TextStyle(
+                fontFamily: FontFamily.japanese,
+                fontWeight: FontWeight.w300,
+                fontSize: 14,
+              ).merge(TextColorStyle.main),
             )
           ],
         ),

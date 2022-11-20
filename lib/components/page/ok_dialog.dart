@@ -37,7 +37,12 @@ class OKDialog extends StatelessWidget {
               height: 15,
             ),
           ],
-          Text(message, style: FontType.assisting.merge(TextColorStyle.main)),
+          Text(message,
+              style: const TextStyle(
+                fontFamily: FontFamily.japanese,
+                fontWeight: FontWeight.w300,
+                fontSize: 14,
+              ).merge(TextColorStyle.main)),
         ],
       ),
       actions: <Widget>[

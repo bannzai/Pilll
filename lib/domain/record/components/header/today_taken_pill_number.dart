@@ -30,12 +30,20 @@ class TodayTakenPillNumber extends StatelessWidget {
           if (_appearanceMode == PillSheetAppearanceMode.sequential)
             Text(
               "💊 今日は服用",
-              style: FontType.assisting.merge(TextColorStyle.noshime),
+              style: const TextStyle(
+                fontFamily: FontFamily.japanese,
+                fontWeight: FontWeight.w300,
+                fontSize: 14,
+              ).merge(TextColorStyle.noshime),
             ),
           if (_appearanceMode != PillSheetAppearanceMode.sequential)
             Text(
               "💊 今日飲むピル",
-              style: FontType.assisting.merge(TextColorStyle.noshime),
+              style: const TextStyle(
+                fontFamily: FontFamily.japanese,
+                fontWeight: FontWeight.w300,
+                fontSize: 14,
+              ).merge(TextColorStyle.noshime),
             ),
           _content(),
         ],
@@ -54,7 +62,14 @@ class TodayTakenPillNumber extends StatelessWidget {
     final pillSheetGroup = this.pillSheetGroup;
     final activedPillSheet = this.pillSheetGroup?.activedPillSheet;
     if (pillSheetGroup == null || activedPillSheet == null || pillSheetGroup.isDeactived || activedPillSheet.activeRestDuration != null) {
-      return Padding(padding: const EdgeInsets.only(top: 8), child: Text("-", style: FontType.assisting.merge(TextColorStyle.noshime)));
+      return Padding(
+          padding: const EdgeInsets.only(top: 8),
+          child: Text("-",
+              style: const TextStyle(
+                fontFamily: FontFamily.japanese,
+                fontWeight: FontWeight.w300,
+                fontSize: 14,
+              ).merge(TextColorStyle.noshime)));
     }
     if (activedPillSheet.inNotTakenDuration) {
       return Text(

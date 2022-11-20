@@ -83,7 +83,11 @@ class MenstruationSelectModifyTypeSheet extends StatelessWidget {
       child: ListTile(
         title: Text(
           type.title,
-          style: FontType.assisting.merge(TextColorStyle.main),
+          style: const TextStyle(
+            fontFamily: FontFamily.japanese,
+            fontWeight: FontWeight.w300,
+            fontSize: 14,
+          ).merge(TextColorStyle.main),
         ),
         leading: type.icon,
         onTap: () {

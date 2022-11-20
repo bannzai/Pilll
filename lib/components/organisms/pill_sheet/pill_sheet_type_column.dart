@@ -51,7 +51,12 @@ class PillSheetTypeColumn extends StatelessWidget {
                   fontSize: 16,
                 ).merge(TextColorStyle.main)),
             const SizedBox(height: 2),
-            Text(_subtitle(pillSheetType), style: FontType.assisting.merge(TextColorStyle.main)),
+            Text(_subtitle(pillSheetType),
+                style: const TextStyle(
+                  fontFamily: FontFamily.japanese,
+                  fontWeight: FontWeight.w300,
+                  fontSize: 14,
+                ).merge(TextColorStyle.main)),
             const SizedBox(height: 9),
             pillSheetType.image,
           ],

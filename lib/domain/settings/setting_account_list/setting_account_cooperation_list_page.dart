@@ -45,7 +45,11 @@ class SettingAccountCooperationListPage extends HookConsumerWidget {
                   padding: const EdgeInsets.only(top: 16, left: 15, right: 16),
                   child: Text(
                     "アカウント登録",
-                    style: FontType.assisting.merge(TextColorStyle.primary),
+                    style: const TextStyle(
+                      fontFamily: FontFamily.japanese,
+                      fontWeight: FontWeight.w300,
+                      fontSize: 14,
+                    ).merge(TextColorStyle.primary),
                   ),
                 ),
                 SettingAccountCooperationRow(
@@ -231,7 +235,12 @@ class SettingAccountCooperationRow extends StatelessWidget {
         children: [
           SvgPicture.asset("images/checkmark_green.svg"),
           const SizedBox(width: 6),
-          Text("連携済み", style: FontType.assisting.merge(TextColorStyle.darkGray)),
+          Text("連携済み",
+              style: const TextStyle(
+                fontFamily: FontFamily.japanese,
+                fontWeight: FontWeight.w300,
+                fontSize: 14,
+              ).merge(TextColorStyle.darkGray)),
         ],
       );
     } else {

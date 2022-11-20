@@ -31,7 +31,12 @@ class MenstruationCard extends StatelessWidget {
                       width: 24,
                       color: PilllColors.red,
                     ),
-                    Text(state.title, style: TextColorStyle.noshime.merge(FontType.assisting)),
+                    Text(state.title,
+                        style: TextColorStyle.noshime.merge(const TextStyle(
+                          fontFamily: FontFamily.japanese,
+                          fontWeight: FontWeight.w300,
+                          fontSize: 14,
+                        ))),
                   ],
                 ),
                 const SizedBox(width: 12),

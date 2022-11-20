@@ -37,12 +37,22 @@ class SettingMenstruationDynamicDescription extends StatelessWidget {
         Row(
           mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget>[
-            Text("ピル番号 ", style: FontType.assisting.merge(TextColorStyle.main)),
+            Text("ピル番号 ",
+                style: const TextStyle(
+                  fontFamily: FontFamily.japanese,
+                  fontWeight: FontWeight.w300,
+                  fontSize: 14,
+                ).merge(TextColorStyle.main)),
             GestureDetector(
               onTap: () => _showFromModalSheet(context),
               child: _from(),
             ),
-            Text(" 番ごとに", style: FontType.assisting.merge(TextColorStyle.main)),
+            Text(" 番ごとに",
+                style: const TextStyle(
+                  fontFamily: FontFamily.japanese,
+                  fontWeight: FontWeight.w300,
+                  fontSize: 14,
+                ).merge(TextColorStyle.main)),
           ],
         ),
         Text("何日間生理が続く？",
@@ -59,7 +69,12 @@ class SettingMenstruationDynamicDescription extends StatelessWidget {
               onTap: () => _showDurationModalSheet(context),
               child: _duration(),
             ),
-            Text(" 日間生理が続く", style: FontType.assisting.merge(TextColorStyle.main)),
+            Text(" 日間生理が続く",
+                style: const TextStyle(
+                  fontFamily: FontFamily.japanese,
+                  fontWeight: FontWeight.w300,
+                  fontSize: 14,
+                ).merge(TextColorStyle.main)),
           ],
         )
       ],

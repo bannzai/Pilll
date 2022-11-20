@@ -76,7 +76,12 @@ class ConfirmDiarySheet extends HookConsumerWidget {
                 builder: (context) {
                   return DiscardDialog(
                     title: "日記を削除します",
-                    message: Text("削除された日記は復元ができません", style: FontType.assisting.merge(TextColorStyle.main)),
+                    message: Text("削除された日記は復元ができません",
+                        style: const TextStyle(
+                          fontFamily: FontFamily.japanese,
+                          fontWeight: FontWeight.w300,
+                          fontSize: 14,
+                        ).merge(TextColorStyle.main)),
                     actions: [
                       AlertButton(
                         text: "キャンセル",
@@ -138,7 +143,11 @@ class ConfirmDiarySheet extends HookConsumerWidget {
           children: diary.physicalConditions
               .map((e) => ChoiceChip(
                     label: Text(e),
-                    labelStyle: FontType.assisting.merge(TextColorStyle.white),
+                    labelStyle: const TextStyle(
+                      fontFamily: FontFamily.japanese,
+                      fontWeight: FontWeight.w300,
+                      fontSize: 14,
+                    ).merge(TextColorStyle.white),
                     selectedColor: PilllColors.secondary,
                     selected: true,
                     onSelected: (selected) {},

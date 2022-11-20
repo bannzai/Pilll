@@ -54,7 +54,12 @@ void showDiscardDialog(
     context: context,
     builder: (context) => DiscardDialog(
       title: title,
-      message: Text(message, style: FontType.assisting.merge(TextColorStyle.main)),
+      message: Text(message,
+          style: const TextStyle(
+            fontFamily: FontFamily.japanese,
+            fontWeight: FontWeight.w300,
+            fontSize: 14,
+          ).merge(TextColorStyle.main)),
       actions: actions,
     ),
   );
