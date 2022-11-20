@@ -10,11 +10,6 @@ class FontFamily {
 }
 
 class FontType {
-  static const TextStyle done = TextStyle(
-    fontFamily: FontFamily.japanese,
-    fontWeight: FontWeight.w600,
-    fontSize: 16,
-  );
   static const TextStyle close = TextStyle(
     fontFamily: FontFamily.japanese,
     fontWeight: FontWeight.w600,

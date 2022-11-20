@@ -6,8 +6,7 @@ class PickerToolbar extends StatelessWidget {
   final VoidCallback done;
   final VoidCallback cancel;
 
-  const PickerToolbar({Key? key, required this.done, required this.cancel})
-      : super(key: key);
+  const PickerToolbar({Key? key, required this.done, required this.cancel}) : super(key: key);
   @override
   Widget build(BuildContext context) {
     return SizedBox(
@@ -16,8 +15,7 @@ class PickerToolbar extends StatelessWidget {
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: <Widget>[
           CupertinoButton(
-            child: Text('キャンセル',
-                style: FontType.assisting.merge(TextColorStyle.primary)),
+            child: Text('キャンセル', style: FontType.assisting.merge(TextColorStyle.primary)),
             onPressed: () {
               cancel();
             },
@@ -27,8 +25,12 @@ class PickerToolbar extends StatelessWidget {
             ),
           ),
           CupertinoButton(
-            child:
-                Text('完了', style: FontType.done.merge(TextColorStyle.primary)),
+            child: Text('完了',
+                style: TextStyle(
+                  fontFamily: FontFamily.japanese,
+                  fontWeight: FontWeight.w600,
+                  fontSize: 16,
+                ).merge(TextColorStyle.primary)),
             onPressed: () {
               done();
             },
