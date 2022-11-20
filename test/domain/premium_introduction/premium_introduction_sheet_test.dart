@@ -1,8 +1,8 @@
 import 'package:pilll/analytics.dart';
-import 'package:pilll/domain/premium_introduction/components/premium_introduction_discount.dart';
-import 'package:pilll/domain/premium_introduction/components/premium_user_thanks.dart';
-import 'package:pilll/domain/premium_introduction/premium_introduction_sheet.dart';
-import 'package:pilll/domain/premium_introduction/util/discount_deadline.dart';
+import 'package:pilll/features/premium_introduction/components/premium_introduction_discount.dart';
+import 'package:pilll/features/premium_introduction/components/premium_user_thanks.dart';
+import 'package:pilll/features/premium_introduction/premium_introduction_sheet.dart';
+import 'package:pilll/features/premium_introduction/util/discount_deadline.dart';
 import 'package:pilll/provider/premium_and_trial.codegen.dart';
 import 'package:pilll/service/day.dart';
 import 'package:pilll/service/purchase.dart';

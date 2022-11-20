@@ -1,8 +1,8 @@
 import 'package:pilll/analytics.dart';
 import 'package:pilll/provider/database.dart';
-import 'package:pilll/domain/record/components/button/cancel_button.dart';
-import 'package:pilll/domain/record/components/button/record_page_button.dart';
-import 'package:pilll/domain/record/components/button/taken_button.dart';
+import 'package:pilll/features/record/components/button/cancel_button.dart';
+import 'package:pilll/features/record/components/button/record_page_button.dart';
+import 'package:pilll/features/record/components/button/taken_button.dart';
 import 'package:pilll/entity/pill_sheet.codegen.dart';
 import 'package:pilll/entity/pill_sheet_group.codegen.dart';
 import 'package:pilll/entity/pill_sheet_type.dart';

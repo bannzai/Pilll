@@ -1,6 +1,6 @@
 import 'package:mockito/mockito.dart';
-import 'package:pilll/domain/record/components/pill_sheet/components/pill_number.dart';
-import 'package:pilll/domain/record/components/pill_sheet/record_page_pill_sheet.dart';
+import 'package:pilll/features/record/components/pill_sheet/components/pill_number.dart';
+import 'package:pilll/features/record/components/pill_sheet/record_page_pill_sheet.dart';
 import 'package:pilll/entity/pill_sheet.codegen.dart';
 import 'package:pilll/entity/pill_sheet_group.codegen.dart';
 import 'package:pilll/entity/pill_sheet_type.dart';

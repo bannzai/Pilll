@@ -1,7 +1,7 @@
-import 'package:pilll/domain/settings/provider.dart';
+import 'package:pilll/features/settings/provider.dart';
 import 'package:pilll/entity/pill_sheet_type.dart';
 import 'package:pilll/entity/setting.codegen.dart';
-import 'package:pilll/domain/settings/reminder_times_page.dart';
+import 'package:pilll/features/settings/reminder_times_page.dart';
 import 'package:pilll/provider/setting.dart';
 import 'package:pilll/util/environment.dart';
 import 'package:flutter/material.dart';

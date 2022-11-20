@@ -1,5 +1,5 @@
 import 'package:flutter/services.dart';
-import 'package:pilll/domain/initial_setting/initial_setting_state.codegen.dart';
+import 'package:pilll/features/initial_setting/initial_setting_state.codegen.dart';
 import 'package:pilll/entity/pill_sheet.codegen.dart';
 import 'package:pilll/entity/pill_sheet_type.dart';
 import 'package:pilll/service/day.dart';

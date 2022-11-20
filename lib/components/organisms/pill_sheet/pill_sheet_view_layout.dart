@@ -1,5 +1,5 @@
 import 'package:pilll/components/atoms/color.dart';
-import 'package:pilll/domain/record/weekday_badge.dart';
+import 'package:pilll/features/record/weekday_badge.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:pilll/entity/pill_sheet_type.dart';

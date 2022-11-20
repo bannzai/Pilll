@@ -2,7 +2,7 @@ import 'package:pilll/analytics.dart';
 import 'package:pilll/components/atoms/color.dart';
 import 'package:pilll/components/atoms/font.dart';
 import 'package:pilll/components/atoms/text_color.dart';
-import 'package:pilll/domain/settings/components/inquiry/inquiry.dart';
+import 'package:pilll/features/settings/components/inquiry/inquiry.dart';
 import 'package:flutter/material.dart';
 
 class _InheritedWidget extends InheritedWidget {
