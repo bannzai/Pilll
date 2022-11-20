@@ -10,11 +10,6 @@ class FontFamily {
 }
 
 class FontType {
-  static const TextStyle xHugeNumber = TextStyle(
-    fontFamily: FontFamily.number,
-    fontWeight: FontWeight.w500,
-    fontSize: 40,
-  );
   static const TextStyle largeNumber = TextStyle(
     fontFamily: FontFamily.japanese,
     fontWeight: FontWeight.w500,
