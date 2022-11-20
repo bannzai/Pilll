@@ -51,7 +51,11 @@ class SettingTodayPillNumberPage extends HookConsumerWidget {
                   const SizedBox(height: 20),
                   Text(
                     "今日(${_today()})\n飲む・飲んだピルの番号をタップ",
-                    style: FontType.sBigTitle.merge(TextColorStyle.main),
+                    style: const TextStyle(
+                      fontFamily: FontFamily.japanese,
+                      fontWeight: FontWeight.w500,
+                      fontSize: 20,
+                    ).merge(TextColorStyle.main),
                     textAlign: TextAlign.center,
                   ),
                   const SizedBox(height: 56),

@@ -43,7 +43,11 @@ class InformationForBeforeMigrate132 extends StatelessWidget {
               children: [
                 Text(
                   "大型アップデート前の情報",
-                  style: FontType.sBigTitle.merge(TextColorStyle.main),
+                  style: const TextStyle(
+                    fontFamily: FontFamily.japanese,
+                    fontWeight: FontWeight.w500,
+                    fontSize: 20,
+                  ).merge(TextColorStyle.main),
                 ),
                 const SizedBox(height: 32),
                 Text(

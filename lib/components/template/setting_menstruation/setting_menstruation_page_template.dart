@@ -45,7 +45,11 @@ class SettingMenstruationPageTemplate extends StatelessWidget {
                   const SizedBox(height: 24),
                   Text(
                     "生理がはじまるピル番号をタップ",
-                    style: FontType.sBigTitle.merge(TextColorStyle.main),
+                    style: const TextStyle(
+                      fontFamily: FontFamily.japanese,
+                      fontWeight: FontWeight.w500,
+                      fontSize: 20,
+                    ).merge(TextColorStyle.main),
                     textAlign: TextAlign.center,
                   ),
                   const SizedBox(height: 59),

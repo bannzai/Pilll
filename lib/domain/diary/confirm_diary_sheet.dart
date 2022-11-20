@@ -54,7 +54,12 @@ class ConfirmDiarySheet extends HookConsumerWidget {
     return Row(
       mainAxisSize: MainAxisSize.max,
       children: [
-        Text(DateTimeFormatter.yearAndMonthAndDay(diary.date), style: FontType.sBigTitle.merge(TextColorStyle.main)),
+        Text(DateTimeFormatter.yearAndMonthAndDay(diary.date),
+            style: const TextStyle(
+              fontFamily: FontFamily.japanese,
+              fontWeight: FontWeight.w500,
+              fontSize: 20,
+            ).merge(TextColorStyle.main)),
         const Spacer(),
         IconButton(
           icon: SvgPicture.asset("images/edit.svg"),

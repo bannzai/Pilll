@@ -26,7 +26,11 @@ class MigrateInfo extends HookConsumerWidget {
               children: [
                 Text(
                   "お知らせとお詫び",
-                  style: FontType.sBigTitle.merge(TextColorStyle.main),
+                  style: const TextStyle(
+                    fontFamily: FontFamily.japanese,
+                    fontWeight: FontWeight.w500,
+                    fontSize: 20,
+                  ).merge(TextColorStyle.main),
                 ),
                 const SizedBox(height: 20),
                 RichText(

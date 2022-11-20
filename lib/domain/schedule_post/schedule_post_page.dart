@@ -73,7 +73,12 @@ class _SchedulePostPage extends HookConsumerWidget {
       resizeToAvoidBottomInset: false,
       appBar: AppBar(
         elevation: 0.0,
-        title: Text(DateTimeFormatter.yearAndMonthAndDay(date), style: FontType.sBigTitle.merge(TextColorStyle.main)),
+        title: Text(DateTimeFormatter.yearAndMonthAndDay(date),
+            style: const TextStyle(
+              fontFamily: FontFamily.japanese,
+              fontWeight: FontWeight.w500,
+              fontSize: 20,
+            ).merge(TextColorStyle.main)),
         leading: IconButton(
           icon: const Icon(Icons.close, color: Colors.black),
           onPressed: () => Navigator.of(context).pop(),

@@ -39,8 +39,7 @@ const double _tileHeight = 48;
 class MenstruationSelectModifyTypeSheet extends StatelessWidget {
   final Function(MenstruationSelectModifyType) onTap;
 
-  const MenstruationSelectModifyTypeSheet({Key? key, required this.onTap})
-      : super(key: key);
+  const MenstruationSelectModifyTypeSheet({Key? key, required this.onTap}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -54,7 +53,11 @@ class MenstruationSelectModifyTypeSheet extends StatelessWidget {
             Padding(
               padding: const EdgeInsets.only(top: 21, left: 16),
               child: Text("生理を記録",
-                  style: FontType.sBigTitle.merge(TextColorStyle.main)),
+                  style: const TextStyle(
+                    fontFamily: FontFamily.japanese,
+                    fontWeight: FontWeight.w500,
+                    fontSize: 20,
+                  ).merge(TextColorStyle.main)),
             ),
             const SizedBox(height: 24),
             SizedBox(

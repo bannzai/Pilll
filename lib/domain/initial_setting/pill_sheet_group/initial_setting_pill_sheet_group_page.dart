@@ -85,7 +85,11 @@ class InitialSettingPillSheetGroupPage extends HookConsumerWidget {
                       const SizedBox(height: 24),
                       Text(
                         "処方されるシートについて\n教えてください",
-                        style: FontType.sBigTitle.merge(TextColorStyle.main),
+                        style: const TextStyle(
+                          fontFamily: FontFamily.japanese,
+                          fontWeight: FontWeight.w500,
+                          fontSize: 20,
+                        ).merge(TextColorStyle.main),
                         textAlign: TextAlign.center,
                       ),
                       InitialSettingPillSheetGroupPageBody(state: state, store: store),

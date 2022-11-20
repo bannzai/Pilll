@@ -32,7 +32,12 @@ class MenstruationEditPageHeader extends HookConsumerWidget {
     return Row(
       crossAxisAlignment: CrossAxisAlignment.center,
       children: [
-        Text(_title, style: FontType.sBigTitle.merge(TextColorStyle.main)),
+        Text(_title,
+            style: const TextStyle(
+              fontFamily: FontFamily.japanese,
+              fontWeight: FontWeight.w500,
+              fontSize: 20,
+            ).merge(TextColorStyle.main)),
         const Spacer(),
         AlertButton(
           onPressed: () async {

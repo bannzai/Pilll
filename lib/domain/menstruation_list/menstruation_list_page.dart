@@ -28,7 +28,11 @@ class MenstruationListPage extends HookConsumerWidget {
         centerTitle: false,
         title: Text(
           "生理履歴",
-          style: TextColorStyle.main.merge(FontType.sBigTitle),
+          style: TextColorStyle.main.merge(const TextStyle(
+            fontFamily: FontFamily.japanese,
+            fontWeight: FontWeight.w500,
+            fontSize: 20,
+          )),
         ),
         backgroundColor: PilllColors.white,
         elevation: 0,

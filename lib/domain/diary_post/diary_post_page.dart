@@ -123,7 +123,12 @@ class DiaryPostPageBody extends HookConsumerWidget {
               child: ListView(
                 controller: scrollController,
                 children: [
-                  Text(DateTimeFormatter.yearAndMonthAndDay(date), style: FontType.sBigTitle.merge(TextColorStyle.main)),
+                  Text(DateTimeFormatter.yearAndMonthAndDay(date),
+                      style: const TextStyle(
+                        fontFamily: FontFamily.japanese,
+                        fontWeight: FontWeight.w500,
+                        fontSize: 20,
+                      ).merge(TextColorStyle.main)),
                   ...[
                     _physicalCondition(physicalCondition),
                     _physicalConditionDetails(context, physicalConditionDetails),
