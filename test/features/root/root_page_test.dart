@@ -1,6 +1,5 @@
 import 'package:firebase_auth/firebase_auth.dart' as firebase_auth;
 import 'package:pilll/components/molecules/indicator.dart';
-import 'package:pilll/components/page/ok_dialog.dart';
 import 'package:pilll/entity/setting.codegen.dart';
 import 'package:pilll/entity/user.codegen.dart';
 import 'package:pilll/features/home/home_page.dart';
@@ -12,7 +11,6 @@ import 'package:pilll/provider/force_update.dart';
 import 'package:pilll/provider/set_user_id.dart';
 import 'package:pilll/provider/user.dart';
 import 'package:pilll/utils/analytics.dart';
-import 'package:pilll/utils/datetime/day.dart';
 import 'package:pilll/utils/environment.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_test/flutter_test.dart';
@@ -59,11 +57,6 @@ void main() {
 
   group('#RootPage', () {
     testWidgets('no need force update', (WidgetTester tester) async {
-      final mockTodayRepository = MockTodayService();
-      final today = DateTime(2021, 04, 29);
-      when(mockTodayRepository.now()).thenReturn(today);
-      todayRepository = mockTodayRepository;
-
       final fakeFirebaseUser = _FakeFirebaseUser();
       final fakeUser = _FakeUser();
 
@@ -110,11 +103,6 @@ void main() {
       );
     });
     testWidgets('needs force update', (WidgetTester tester) async {
-      final mockTodayRepository = MockTodayService();
-      final today = DateTime(2021, 04, 29);
-      when(mockTodayRepository.now()).thenReturn(today);
-      todayRepository = mockTodayRepository;
-
       final fakeFirebaseUser = _FakeFirebaseUser();
       final fakeUser = _FakeUser();
 
@@ -169,11 +157,6 @@ void main() {
 
   group('#InitialSettingOrAppPage', () {
     testWidgets('didEndInitialSetting is not exist', (WidgetTester tester) async {
-      final mockTodayRepository = MockTodayService();
-      final today = DateTime(2021, 04, 29);
-      when(mockTodayRepository.now()).thenReturn(today);
-      todayRepository = mockTodayRepository;
-
       final fakeFirebaseUser = _FakeFirebaseUser();
       final fakeUser = _FakeUser(true, _FakeSetting());
 
@@ -210,11 +193,6 @@ void main() {
       );
     });
     testWidgets('didEndInitialSetting is true', (WidgetTester tester) async {
-      final mockTodayRepository = MockTodayService();
-      final today = DateTime(2021, 04, 29);
-      when(mockTodayRepository.now()).thenReturn(today);
-      todayRepository = mockTodayRepository;
-
       final fakeFirebaseUser = _FakeFirebaseUser();
       final fakeUser = _FakeUser(true, _FakeSetting());
 
@@ -253,11 +231,6 @@ void main() {
       );
     });
     testWidgets('didEndInitialSetting is true and user.migratedFlutter is false', (WidgetTester tester) async {
-      final mockTodayRepository = MockTodayService();
-      final today = DateTime(2021, 04, 29);
-      when(mockTodayRepository.now()).thenReturn(today);
-      todayRepository = mockTodayRepository;
-
       final fakeFirebaseUser = _FakeFirebaseUser();
       final fakeUser = _FakeUser(false, _FakeSetting());
 
@@ -296,11 +269,6 @@ void main() {
       );
     });
     testWidgets('didEndInitialSetting is true and user.migratedFlutter is true but setting is null', (WidgetTester tester) async {
-      final mockTodayRepository = MockTodayService();
-      final today = DateTime(2021, 04, 29);
-      when(mockTodayRepository.now()).thenReturn(today);
-      todayRepository = mockTodayRepository;
-
       final fakeFirebaseUser = _FakeFirebaseUser();
       final fakeUser = _FakeUser(true, null);
 
