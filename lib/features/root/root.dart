@@ -10,7 +10,7 @@ import 'package:pilll/features/initial_setting/pill_sheet_group/initial_setting_
 import 'package:pilll/entity/config.codegen.dart';
 import 'package:pilll/entity/user.codegen.dart';
 import 'package:pilll/provider/root.dart';
-import 'package:pilll/service/auth.dart';
+import 'package:pilll/provider/auth.dart';
 import 'package:pilll/features/home/home_page.dart';
 import 'package:pilll/components/molecules/indicator.dart';
 import 'package:pilll/error/template.dart';

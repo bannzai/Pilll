@@ -3,7 +3,7 @@ import 'package:flutter/foundation.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
 import 'package:pilll/auth/hash.dart';
 import 'package:pilll/auth/link_value_container.dart';
-import 'package:pilll/service/auth.dart';
+import 'package:pilll/provider/auth.dart';
 import 'package:pilll/util/environment.dart';
 import 'package:sign_in_with_apple/sign_in_with_apple.dart';
 
