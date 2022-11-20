@@ -6,13 +6,13 @@ import 'package:pilll/provider/premium_and_trial.codegen.dart';
 import 'package:pilll/utils/datetime/day.dart';
 
 List<PillSheet> pillSheet1([int offsetDay = 0]) =>
-    [PillSheet(id: "pill_sheet_id_1", typeInfo: PillSheetType.pillsheet_28_0.typeInfo, beginingDate: now().add(Duration(days: offsetDay)))];
+    [PillSheet(id: "pill_sheet_id_1", typeInfo: PillSheetType.pillsheet_28_0.typeInfo, beginingDate: now().subtract(Duration(days: offsetDay)))];
 List<PillSheet> pillSheets2([int offsetDay = 0]) => [
       ...pillSheet1(offsetDay),
       PillSheet(
         id: "pill_sheet_id_2",
         typeInfo: PillSheetType.pillsheet_28_0.typeInfo,
-        beginingDate: now().add(Duration(days: offsetDay)).add(const Duration(days: 28)),
+        beginingDate: now().subtract(Duration(days: offsetDay)).add(const Duration(days: 28)),
       )
     ];
 List<PillSheet> pillSheets3([int offsetDay = 0]) => [
@@ -20,7 +20,7 @@ List<PillSheet> pillSheets3([int offsetDay = 0]) => [
       PillSheet(
         id: "pill_sheet_id_3",
         typeInfo: PillSheetType.pillsheet_28_0.typeInfo,
-        beginingDate: now().add(Duration(days: offsetDay)).add(const Duration(days: 56)),
+        beginingDate: now().subtract(Duration(days: offsetDay)).add(const Duration(days: 56)),
       )
     ];
 PillSheetGroup pillSheetGroup(List<PillSheet> pillSheets) =>
