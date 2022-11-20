@@ -1,5 +1,7 @@
 import 'package:mockito/mockito.dart';
 import 'package:pilll/provider/premium_and_trial.codegen.dart';
+import 'package:pilll/utils/analytics.dart';
+import 'package:pilll/utils/error_log.dart';
 
 class FakePremiumAndTrial extends Mock implements PremiumAndTrial {
   FakePremiumAndTrial({
@@ -29,6 +31,24 @@ class FakePremiumAndTrial extends Mock implements PremiumAndTrial {
   @override
   DateTime? get trialDeadlineDate => fakeTrialDeadlineDate;
   @override
-  DateTime? get discountEntitlementDeadlineDate =>
-      fakeDiscountEntitlementDeadlineDate;
+  DateTime? get discountEntitlementDeadlineDate => fakeDiscountEntitlementDeadlineDate;
+}
+
+class FakeAnalytics extends Fake implements Analytics {
+  @override
+  void logEvent({required String name, Map<String, dynamic>? parameters}) {}
+
+  @override
+  void setCurrentScreen({required String screenName, String screenClassOverride = 'Flutter'}) {}
+
+  @override
+  void setUserProperties(String name, value) {}
+}
+
+class FakeErrorLogger extends Fake implements ErrorLogger {
+  @override
+  void log(String message) {}
+
+  @override
+  void recordError(exception, StackTrace? stack) {}
 }
