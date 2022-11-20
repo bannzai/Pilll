@@ -1,6 +1,5 @@
 import 'dart:async';
 
-import 'package:firebase_crashlytics/firebase_crashlytics.dart';
 import 'package:flutter_hooks/flutter_hooks.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
 import 'package:pilll/provider/force_update.dart';
@@ -15,13 +14,12 @@ import 'package:pilll/features/home/home_page.dart';
 import 'package:pilll/components/molecules/indicator.dart';
 import 'package:pilll/features/error/template.dart';
 import 'package:pilll/features/error/universal_error_page.dart';
+import 'package:pilll/utils/environment.dart';
 import 'package:pilll/utils/error_log.dart';
-import 'package:pilll/provider/purchase.dart';
 import 'package:pilll/provider/user.dart';
 import 'package:pilll/utils/platform/platform.dart';
 import 'package:pilll/utils/shared_preference/keys.dart';
 import 'package:flutter/material.dart';
-import 'package:purchases_flutter/purchases_flutter.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 import 'package:url_launcher/url_launcher.dart';
 
@@ -32,34 +30,24 @@ class Root extends HookConsumerWidget {
   Widget build(BuildContext context, WidgetRef ref) {
     final firebaseUserAsyncValue = ref.watch(firebaseUserStateProvider);
     final checkForceUpdate = ref.watch(checkForceUpdateProvider);
-    final setUserID = ref.watch(serUserIDProvider);
+    final setUserID = ref.watch(setUserIDProvider);
 
     final shouldForceUpdate = useState(false);
     final error = useState<LaunchException?>(null);
 
-    // Set global error page
-    ErrorWidget.builder = (FlutterErrorDetails details) {
-      return UniversalErrorPage(
-        error: details.exception.toString(),
-        child: null,
-        reload: () => ref.read(refreshAppProvider),
-      );
-    };
-
-    // For force update
-    if (shouldForceUpdate.value) {
-      Future.microtask(() async {
-        await showOKDialog(context, title: "アプリをアップデートしてください", message: "お使いのアプリのバージョンのアップデートをお願いしております。$storeNameから最新バージョンにアップデートしてください",
-            ok: () async {
-          await launchUrl(
-            Uri.parse(storeURL),
-            mode: LaunchMode.externalApplication,
-          );
-        });
-      });
-      return const ScaffoldIndicator();
-    }
+    // Setup for application
     useEffect(() {
+      if (!Environment.isTest) {
+        // Set global error page
+        ErrorWidget.builder = (FlutterErrorDetails details) {
+          return UniversalErrorPage(
+            error: details.exception.toString(),
+            child: null,
+            reload: () => ref.read(refreshAppProvider),
+          );
+        };
+      }
+
       f() async {
         try {
           if (await checkForceUpdate()) {
@@ -96,6 +84,19 @@ class Root extends HookConsumerWidget {
       return null;
     }, [firebaseUserAsyncValue.asData?.value?.uid]);
 
+    // For force update
+    if (shouldForceUpdate.value) {
+      Future.microtask(() async {
+        await showOKDialog(context, title: "アプリをアップデートしてください", message: "お使いのアプリのバージョンのアップデートをお願いしております。$storeNameから最新バージョンにアップデートしてください",
+            ok: () async {
+          await launchUrl(
+            Uri.parse(storeURL),
+            mode: LaunchMode.externalApplication,
+          );
+        });
+      });
+      return const ScaffoldIndicator();
+    }
     return UniversalErrorPage(
       error: error.value,
       reload: () => ref.refresh(refreshAppProvider),
@@ -132,11 +133,12 @@ class InitialSettingOrAppPage extends HookConsumerWidget {
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {
-    final screenType = useState(_InitialSettingOrAppPageScreenType.loading);
-    final appUser = useState<User?>(null);
     final fetchOrCreateUser = ref.watch(fetchOrCreateUserProvider);
     final saveUserLaunchInfo = ref.watch(saveUserLaunchInfoProvider);
     final markAsMigratedToFlutter = ref.watch(markAsMigratedToFlutterProvider);
+
+    final screenType = useState(_InitialSettingOrAppPageScreenType.loading);
+    final appUser = useState<User?>(null);
     final error = useState<LaunchException?>(null);
 
     useEffect(() {
