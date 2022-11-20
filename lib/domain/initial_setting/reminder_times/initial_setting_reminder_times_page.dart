@@ -42,7 +42,11 @@ class InitialSettingReminderTimesPage extends HookConsumerWidget {
               const SizedBox(height: 24),
               Text(
                 "ピルの飲み忘れ通知",
-                style: FontType.title.merge(TextColorStyle.main),
+                style: const TextStyle(
+                  fontFamily: FontFamily.japanese,
+                  fontWeight: FontWeight.w600,
+                  fontSize: 17,
+                ).merge(TextColorStyle.main),
                 textAlign: TextAlign.center,
               ),
               const Spacer(),
