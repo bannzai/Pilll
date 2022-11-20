@@ -1,6 +1,7 @@
 import 'package:pilll/entity/pill_sheet.codegen.dart';
 import 'package:pilll/entity/pill_sheet_group.codegen.dart';
 import 'package:pilll/entity/pill_sheet_type.dart';
+import 'package:pilll/entity/setting.codegen.dart';
 import 'package:pilll/utils/datetime/day.dart';
 
 List<PillSheet> pillSheet1([int offsetDay = 0]) =>
@@ -23,3 +24,10 @@ List<PillSheet> pillSheets3([int offsetDay = 0]) => [
     ];
 PillSheetGroup pillSheetGroup(List<PillSheet> pillSheets) =>
     PillSheetGroup(pillSheetIDs: pillSheets.map((e) => e.id!).toList(), pillSheets: pillSheets, createdAt: now());
+
+Setting setting() => const Setting(
+      pillNumberForFromMenstruation: 40,
+      durationMenstruation: 4,
+      isOnReminder: true,
+      timezoneDatabaseName: "Asia/Tokyo",
+    );
