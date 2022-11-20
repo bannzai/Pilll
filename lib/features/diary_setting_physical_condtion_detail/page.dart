@@ -6,7 +6,7 @@ import 'package:pilll/components/atoms/color.dart';
 import 'package:pilll/components/atoms/font.dart';
 import 'package:pilll/components/atoms/text_color.dart';
 import 'package:pilll/components/molecules/indicator.dart';
-import 'package:pilll/features/diary_setting_physical_condtion_detail/mutation.dart';
+import 'package:pilll/features/diary_setting_physical_condtion_detail/provider.dart';
 import 'package:pilll/features/diary_setting_physical_condtion_detail/state.codegen.dart';
 import 'package:pilll/features/error/error_alert.dart';
 import 'package:pilll/features/error/universal_error_page.dart';
