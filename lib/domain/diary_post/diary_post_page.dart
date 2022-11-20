@@ -128,7 +128,8 @@ class DiaryPostPageBody extends HookConsumerWidget {
                         fontFamily: FontFamily.japanese,
                         fontWeight: FontWeight.w500,
                         fontSize: 20,
-                      ).merge(TextColorStyle.main)),
+                        color: TextColor.main,
+                      )),
                   ...[
                     _physicalCondition(physicalCondition),
                     _physicalConditionDetails(context, physicalConditionDetails),
@@ -258,11 +259,12 @@ class DiaryPostPageBody extends HookConsumerWidget {
           children: availablePhysicalConditionDetails
               .map((e) => ChoiceChip(
                     label: Text(e),
-                    labelStyle: const TextStyle(
+                    labelStyle: TextStyle(
                       fontFamily: FontFamily.japanese,
                       fontWeight: FontWeight.w300,
                       fontSize: 14,
-                    ).merge(diary.physicalConditions.contains(e) ? TextColorStyle.white : TextColorStyle.darkGray),
+                      color: diary.physicalConditions.contains(e) ? TextColor.white : TextColor.darkGray,
+                    ),
                     disabledColor: PilllColors.disabledSheet,
                     selectedColor: PilllColors.primary,
                     selected: diary.physicalConditions.contains(e),

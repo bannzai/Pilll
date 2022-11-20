@@ -145,7 +145,7 @@ class RedTextButton extends HookWidget {
         child: Stack(
           alignment: Alignment.center,
           children: [
-            Text(text, style: isProcessing.value ? TextColorStyle.gray : TextColorStyle.primary),
+            Text(text, style: TextStyle(color: isProcessing.value ? TextColor.gray : TextColor.primary)),
             if (isProcessing.value) _Loading(),
           ],
         ),
@@ -193,7 +193,7 @@ class InconspicuousButton extends HookWidget {
         child: Stack(
           alignment: Alignment.center,
           children: [
-            Text(text, style: isProcessing.value ? TextColorStyle.lightGray : TextColorStyle.gray),
+            Text(text, style: TextStyle(color: isProcessing.value ? TextColor.lightGray : TextColor.gray)),
             if (isProcessing.value) _Loading(),
           ],
         ),

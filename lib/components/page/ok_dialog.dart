@@ -32,7 +32,8 @@ class OKDialog extends StatelessWidget {
                   fontFamily: FontFamily.japanese,
                   fontWeight: FontWeight.w600,
                   fontSize: 16,
-                ).merge(TextColorStyle.main)),
+                  color: TextColor.main,
+                )),
             const SizedBox(
               height: 15,
             ),
@@ -42,7 +43,8 @@ class OKDialog extends StatelessWidget {
                 fontFamily: FontFamily.japanese,
                 fontWeight: FontWeight.w300,
                 fontSize: 14,
-              ).merge(TextColorStyle.main)),
+                color: TextColor.main,
+              )),
         ],
       ),
       actions: <Widget>[

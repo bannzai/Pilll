@@ -37,30 +37,33 @@ class SettingMenstruationDynamicDescription extends StatelessWidget {
         Row(
           mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget>[
-            Text("ピル番号 ",
-                style: const TextStyle(
+            const Text("ピル番号 ",
+                style: TextStyle(
                   fontFamily: FontFamily.japanese,
                   fontWeight: FontWeight.w300,
                   fontSize: 14,
-                ).merge(TextColorStyle.main)),
+                  color: TextColor.main,
+                )),
             GestureDetector(
               onTap: () => _showFromModalSheet(context),
               child: _from(),
             ),
-            Text(" 番ごとに",
-                style: const TextStyle(
+            const Text(" 番ごとに",
+                style: TextStyle(
                   fontFamily: FontFamily.japanese,
                   fontWeight: FontWeight.w300,
                   fontSize: 14,
-                ).merge(TextColorStyle.main)),
+                  color: TextColor.main,
+                )),
           ],
         ),
-        Text("何日間生理が続く？",
-            style: const TextStyle(
+        const Text("何日間生理が続く？",
+            style: TextStyle(
               fontFamily: FontFamily.japanese,
               fontWeight: FontWeight.w600,
               fontSize: 14,
-            ).merge(TextColorStyle.main)),
+              color: TextColor.main,
+            )),
         const SizedBox(height: 4),
         Row(
           mainAxisAlignment: MainAxisAlignment.center,
@@ -69,12 +72,8 @@ class SettingMenstruationDynamicDescription extends StatelessWidget {
               onTap: () => _showDurationModalSheet(context),
               child: _duration(),
             ),
-            Text(" 日間生理が続く",
-                style: const TextStyle(
-                  fontFamily: FontFamily.japanese,
-                  fontWeight: FontWeight.w300,
-                  fontSize: 14,
-                ).merge(TextColorStyle.main)),
+            const Text(" 日間生理が続く",
+                style: TextStyle(fontFamily: FontFamily.japanese, fontWeight: FontWeight.w300, fontSize: 14, color: TextColor.main)),
           ],
         )
       ],
@@ -104,7 +103,8 @@ class SettingMenstruationDynamicDescription extends StatelessWidget {
               fontFamily: FontFamily.japanese,
               fontWeight: FontWeight.w700,
               fontSize: 16,
-            ).merge(TextColorStyle.gray)),
+              color: TextColor.gray,
+            )),
       ),
     );
   }
@@ -132,7 +132,8 @@ class SettingMenstruationDynamicDescription extends StatelessWidget {
               fontFamily: FontFamily.japanese,
               fontWeight: FontWeight.w700,
               fontSize: 16,
-            ).merge(TextColorStyle.gray)),
+              color: TextColor.gray,
+            )),
       ),
     );
   }

@@ -43,13 +43,14 @@ class SettingMenstruationPageTemplate extends StatelessWidget {
               child: ListView(
                 children: <Widget>[
                   const SizedBox(height: 24),
-                  Text(
+                  const Text(
                     "生理がはじまるピル番号をタップ",
-                    style: const TextStyle(
+                    style: TextStyle(
                       fontFamily: FontFamily.japanese,
                       fontWeight: FontWeight.w500,
                       fontSize: 20,
-                    ).merge(TextColorStyle.main),
+                      color: TextColor.main,
+                    ),
                     textAlign: TextAlign.center,
                   ),
                   const SizedBox(height: 59),

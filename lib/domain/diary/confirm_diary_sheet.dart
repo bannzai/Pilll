@@ -55,11 +55,7 @@ class ConfirmDiarySheet extends HookConsumerWidget {
       mainAxisSize: MainAxisSize.max,
       children: [
         Text(DateTimeFormatter.yearAndMonthAndDay(diary.date),
-            style: const TextStyle(
-              fontFamily: FontFamily.japanese,
-              fontWeight: FontWeight.w500,
-              fontSize: 20,
-            ).merge(TextColorStyle.main)),
+            style: const TextStyle(fontFamily: FontFamily.japanese, fontWeight: FontWeight.w500, fontSize: 20, color: TextColor.main)),
         const Spacer(),
         IconButton(
           icon: SvgPicture.asset("images/edit.svg"),
@@ -76,12 +72,8 @@ class ConfirmDiarySheet extends HookConsumerWidget {
                 builder: (context) {
                   return DiscardDialog(
                     title: "日記を削除します",
-                    message: Text("削除された日記は復元ができません",
-                        style: const TextStyle(
-                          fontFamily: FontFamily.japanese,
-                          fontWeight: FontWeight.w300,
-                          fontSize: 14,
-                        ).merge(TextColorStyle.main)),
+                    message: const Text("削除された日記は復元ができません",
+                        style: TextStyle(fontFamily: FontFamily.japanese, fontWeight: FontWeight.w300, fontSize: 14, color: TextColor.main)),
                     actions: [
                       AlertButton(
                         text: "キャンセル",
@@ -122,12 +114,13 @@ class ConfirmDiarySheet extends HookConsumerWidget {
   Widget _physicalCondition() {
     return Row(
       children: [
-        Text("体調",
-            style: const TextStyle(
+        const Text("体調",
+            style: TextStyle(
               fontFamily: FontFamily.japanese,
               fontWeight: FontWeight.w300,
               fontSize: 16,
-            ).merge(TextColorStyle.black)),
+              color: TextColor.black,
+            )),
         const SizedBox(width: 16),
         _physicalConditionImage(diary.physicalConditionStatus),
       ],
@@ -147,7 +140,8 @@ class ConfirmDiarySheet extends HookConsumerWidget {
                       fontFamily: FontFamily.japanese,
                       fontWeight: FontWeight.w300,
                       fontSize: 14,
-                    ).merge(TextColorStyle.white),
+                      color: TextColor.white,
+                    ),
                     selectedColor: PilllColors.primary,
                     selected: true,
                     onSelected: (selected) {},

@@ -37,7 +37,8 @@ class MenstruationEditPageHeader extends HookConsumerWidget {
               fontFamily: FontFamily.japanese,
               fontWeight: FontWeight.w500,
               fontSize: 20,
-            ).merge(TextColorStyle.main)),
+              color: TextColor.main,
+            )),
         const Spacer(),
         AlertButton(
           onPressed: () async {

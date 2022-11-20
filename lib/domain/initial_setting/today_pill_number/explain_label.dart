@@ -20,12 +20,13 @@ class ExplainPillNumber extends HookConsumerWidget {
           final todayPillNumber = state.todayPillNumber;
           if (todayPillNumber == null) {
             return <Widget>[
-              Text("",
-                  style: const TextStyle(
+              const Text("",
+                  style: TextStyle(
                     fontFamily: FontFamily.japanese,
                     fontWeight: FontWeight.w500,
                     fontSize: 34,
-                  ).merge(TextColorStyle.main)),
+                    color: TextColor.main,
+                  )),
             ];
           }
           return <Widget>[
@@ -34,19 +35,22 @@ class ExplainPillNumber extends HookConsumerWidget {
                   fontFamily: FontFamily.japanese,
                   fontWeight: FontWeight.w400,
                   fontSize: 12,
-                ).merge(TextColorStyle.main)),
+                  color: TextColor.main,
+                )),
             Text("${todayPillNumber.pillNumberIntoPillSheet}",
                 style: const TextStyle(
                   fontFamily: FontFamily.japanese,
                   fontWeight: FontWeight.w500,
                   fontSize: 34,
-                ).merge(TextColorStyle.main)),
-            Text("番",
-                style: const TextStyle(
+                  color: TextColor.main,
+                )),
+            const Text("番",
+                style: TextStyle(
                   fontFamily: FontFamily.japanese,
                   fontWeight: FontWeight.w400,
                   fontSize: 12,
-                ).merge(TextColorStyle.main)),
+                  color: TextColor.main,
+                )),
           ];
         }(),
       ),

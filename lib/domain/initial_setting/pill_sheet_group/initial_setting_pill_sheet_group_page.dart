@@ -83,13 +83,14 @@ class InitialSettingPillSheetGroupPage extends HookConsumerWidget {
                   child: Column(
                     children: [
                       const SizedBox(height: 24),
-                      Text(
+                      const Text(
                         "処方されるシートについて\n教えてください",
-                        style: const TextStyle(
+                        style: TextStyle(
                           fontFamily: FontFamily.japanese,
                           fontWeight: FontWeight.w500,
                           fontSize: 20,
-                        ).merge(TextColorStyle.main),
+                          color: TextColor.main,
+                        ),
                         textAlign: TextAlign.center,
                       ),
                       InitialSettingPillSheetGroupPageBody(state: state, store: store),

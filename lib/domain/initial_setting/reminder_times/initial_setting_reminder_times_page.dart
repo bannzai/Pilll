@@ -40,13 +40,14 @@ class InitialSettingReminderTimesPage extends HookConsumerWidget {
           child: Column(
             children: <Widget>[
               const SizedBox(height: 24),
-              Text(
+              const Text(
                 "ピルの飲み忘れ通知",
-                style: const TextStyle(
+                style: TextStyle(
                   fontFamily: FontFamily.japanese,
                   fontWeight: FontWeight.w600,
                   fontSize: 17,
-                ).merge(TextColorStyle.main),
+                  color: TextColor.main,
+                ),
                 textAlign: TextAlign.center,
               ),
               const Spacer(),
@@ -60,12 +61,13 @@ class InitialSettingReminderTimesPage extends HookConsumerWidget {
                           return _form(context, store, state, index);
                         })),
                   ),
-                  Text("複数設定しておく事で飲み忘れを防げます",
-                      style: const TextStyle(
+                  const Text("複数設定しておく事で飲み忘れを防げます",
+                      style: TextStyle(
                         fontFamily: FontFamily.japanese,
                         fontWeight: FontWeight.w300,
                         fontSize: 14,
-                      ).merge(TextColorStyle.main)),
+                        color: TextColor.main,
+                      )),
                 ],
               ),
               const Spacer(),
@@ -81,19 +83,21 @@ class InitialSettingReminderTimesPage extends HookConsumerWidget {
                             fontFamily: FontFamily.japanese,
                             fontWeight: FontWeight.w300,
                             fontSize: 10,
-                          ).merge(TextColorStyle.link),
+                            color: TextColor.link,
+                          ),
                           recognizer: TapGestureRecognizer()
                             ..onTap = () {
                               launchUrl(Uri.parse("https://bannzai.github.io/Pilll/PrivacyPolicy"), mode: LaunchMode.inAppWebView);
                             },
                         ),
-                        TextSpan(
+                        const TextSpan(
                           text: "と",
-                          style: const TextStyle(
+                          style: TextStyle(
                             fontFamily: FontFamily.japanese,
                             fontWeight: FontWeight.w300,
                             fontSize: 10,
-                          ).merge(TextColorStyle.gray),
+                            color: TextColor.gray,
+                          ),
                         ),
                         TextSpan(
                           text: "利用規約",
@@ -101,19 +105,21 @@ class InitialSettingReminderTimesPage extends HookConsumerWidget {
                             fontFamily: FontFamily.japanese,
                             fontWeight: FontWeight.w300,
                             fontSize: 10,
-                          ).merge(TextColorStyle.link),
+                            color: TextColor.link,
+                          ),
                           recognizer: TapGestureRecognizer()
                             ..onTap = () {
                               launchUrl(Uri.parse("https://bannzai.github.io/Pilll/Terms"), mode: LaunchMode.inAppWebView);
                             },
                         ),
-                        TextSpan(
+                        const TextSpan(
                           text: "を読んで\n利用をはじめてください",
-                          style: const TextStyle(
+                          style: TextStyle(
                             fontFamily: FontFamily.japanese,
                             fontWeight: FontWeight.w300,
                             fontSize: 10,
-                          ).merge(TextColorStyle.gray),
+                            color: TextColor.gray,
+                          ),
                         ),
                       ],
                     ),
@@ -185,7 +191,8 @@ class InitialSettingReminderTimesPage extends HookConsumerWidget {
                     fontFamily: FontFamily.japanese,
                     fontWeight: FontWeight.w300,
                     fontSize: 14,
-                  ).merge(TextColorStyle.main))
+                    color: TextColor.main,
+                  ))
             ],
           ),
           const SizedBox(height: 8),
@@ -207,7 +214,8 @@ class InitialSettingReminderTimesPage extends HookConsumerWidget {
                       fontFamily: FontFamily.japanese,
                       fontWeight: FontWeight.w700,
                       fontSize: 16,
-                    ).merge(TextColorStyle.gray)),
+                      color: TextColor.gray,
+                    )),
               ),
             ),
           )
