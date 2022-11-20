@@ -41,10 +41,10 @@ class PremiumIntroductionDiscountRow extends HookConsumerWidget {
         crossAxisAlignment: CrossAxisAlignment.center,
         mainAxisSize: MainAxisSize.min,
         children: [
-          Text(
+          const Text(
             "今なら限定価格でずっと使える",
             textAlign: TextAlign.center,
-            style: const TextStyle(
+            style: TextStyle(
               fontWeight: FontWeight.w700,
               fontFamily: FontFamily.japanese,
               fontSize: 20,
@@ -63,10 +63,10 @@ class PremiumIntroductionDiscountRow extends HookConsumerWidget {
               ),
             ),
           const SizedBox(height: 20),
-          Text(
+          const Text(
             "通常 月額プラン",
             textAlign: TextAlign.center,
-            style: const TextStyle(
+            style: TextStyle(
               fontWeight: FontWeight.w400,
               fontSize: 12,
               fontFamily: FontFamily.japanese,

@@ -38,9 +38,9 @@ class TodayTakenPillNumber extends StatelessWidget {
               ),
             ),
           if (_appearanceMode != PillSheetAppearanceMode.sequential)
-            Text(
+            const Text(
               "💊 今日飲むピル",
-              style: const TextStyle(
+              style: TextStyle(
                 fontFamily: FontFamily.japanese,
                 fontWeight: FontWeight.w300,
                 fontSize: 14,
@@ -64,10 +64,10 @@ class TodayTakenPillNumber extends StatelessWidget {
     final pillSheetGroup = this.pillSheetGroup;
     final activedPillSheet = this.pillSheetGroup?.activedPillSheet;
     if (pillSheetGroup == null || activedPillSheet == null || pillSheetGroup.isDeactived || activedPillSheet.activeRestDuration != null) {
-      return Padding(
-          padding: const EdgeInsets.only(top: 8),
+      return const Padding(
+          padding: EdgeInsets.only(top: 8),
           child: Text("-",
-              style: const TextStyle(
+              style: TextStyle(
                 fontFamily: FontFamily.japanese,
                 fontWeight: FontWeight.w300,
                 fontSize: 14,
@@ -98,8 +98,8 @@ class TodayTakenPillNumber extends StatelessWidget {
                 fontSize: 40,
                 color: TextColor.main,
               )),
-          Text("番",
-              style: const TextStyle(
+          const Text("番",
+              style: TextStyle(
                 fontFamily: FontFamily.japanese,
                 fontWeight: FontWeight.w600,
                 fontSize: 14,
@@ -114,8 +114,8 @@ class TodayTakenPillNumber extends StatelessWidget {
                 fontSize: 40,
                 color: TextColor.main,
               )),
-          Text("番",
-              style: const TextStyle(
+          const Text("番",
+              style: TextStyle(
                 fontFamily: FontFamily.japanese,
                 fontWeight: FontWeight.w600,
                 fontSize: 14,
@@ -130,8 +130,8 @@ class TodayTakenPillNumber extends StatelessWidget {
                 fontSize: 40,
                 color: TextColor.main,
               )),
-          Text("番",
-              style: const TextStyle(
+          const Text("番",
+              style: TextStyle(
                 fontFamily: FontFamily.japanese,
                 fontWeight: FontWeight.w600,
                 fontSize: 14,

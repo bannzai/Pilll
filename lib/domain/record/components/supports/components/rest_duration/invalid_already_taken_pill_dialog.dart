@@ -21,9 +21,9 @@ class InvalidAlreadyTakenPillDialog extends StatelessWidget {
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
         mainAxisSize: MainAxisSize.min,
         children: <Widget>[
-          Text(
+          const Text(
             "今日飲むピルが服用済みの場合\n休薬できません",
-            style: const TextStyle(
+            style: TextStyle(
               fontFamily: FontFamily.japanese,
               fontWeight: FontWeight.w600,
               fontSize: 16,
@@ -38,12 +38,12 @@ class InvalidAlreadyTakenPillDialog extends StatelessWidget {
           ),
           RichText(
             textAlign: TextAlign.center,
-            text: TextSpan(
-              style: const TextStyle(height: 1.7),
+            text: const TextSpan(
+              style: TextStyle(height: 1.7),
               children: [
                 TextSpan(
                   text: "今日飲むピルを未服用にしてから",
-                  style: const TextStyle(
+                  style: TextStyle(
                     fontFamily: FontFamily.japanese,
                     fontWeight: FontWeight.w600,
                     fontSize: 14,
@@ -52,7 +52,7 @@ class InvalidAlreadyTakenPillDialog extends StatelessWidget {
                 ),
                 TextSpan(
                   text: "休薬してください。今日以外の日から休薬したい場合は下記を参考にしてください。",
-                  style: const TextStyle(
+                  style: TextStyle(
                     fontFamily: FontFamily.japanese,
                     fontWeight: FontWeight.w300,
                     fontSize: 14,

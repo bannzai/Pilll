@@ -149,15 +149,15 @@ class ReminderTimesPage extends HookConsumerWidget {
             },
       background: Container(
         color: Colors.red,
-        child: SizedBox(
+        child: const SizedBox(
           width: 40,
           child: Padding(
-            padding: const EdgeInsets.all(20.0),
+            padding: EdgeInsets.all(20.0),
             child: Align(
               alignment: Alignment.centerRight,
               child: Text(
                 "削除",
-                style: const TextStyle(
+                style: TextStyle(
                   fontFamily: FontFamily.japanese,
                   fontWeight: FontWeight.w600,
                   fontSize: 14,
@@ -188,9 +188,9 @@ class ReminderTimesPage extends HookConsumerWidget {
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
             SvgPicture.asset("images/add.svg"),
-            Text(
+            const Text(
               "通知時間の追加",
-              style: const TextStyle(
+              style: TextStyle(
                 fontFamily: FontFamily.japanese,
                 fontWeight: FontWeight.w300,
                 fontSize: 14,

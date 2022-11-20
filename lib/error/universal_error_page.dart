@@ -95,8 +95,8 @@ class _UniversalErrorPageState extends State<UniversalErrorPage> {
                   Icons.refresh,
                   size: 20,
                 ),
-                label: Text("画面を再読み込み",
-                    style: const TextStyle(
+                label: const Text("画面を再読み込み",
+                    style: TextStyle(
                       fontFamily: FontFamily.japanese,
                       fontWeight: FontWeight.w300,
                       fontSize: 14,
@@ -118,8 +118,8 @@ class _UniversalErrorPageState extends State<UniversalErrorPage> {
                   Icons.mail,
                   size: 20,
                 ),
-                label: Text("解決しない場合はこちら",
-                    style: const TextStyle(
+                label: const Text("解決しない場合はこちら",
+                    style: TextStyle(
                       fontFamily: FontFamily.japanese,
                       fontWeight: FontWeight.w300,
                       fontSize: 14,

@@ -29,8 +29,8 @@ class RecordPageRestDurationDialog extends StatelessWidget {
         children: <Widget>[
           title,
           const SizedBox(height: 24),
-          Text("休薬するとピル番号は進みません",
-              style: const TextStyle(
+          const Text("休薬するとピル番号は進みません",
+              style: TextStyle(
                 fontFamily: FontFamily.japanese,
                 fontWeight: FontWeight.w300,
                 fontSize: 14,

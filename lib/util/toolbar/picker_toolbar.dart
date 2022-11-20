@@ -15,8 +15,8 @@ class PickerToolbar extends StatelessWidget {
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: <Widget>[
           CupertinoButton(
-            child: Text('キャンセル',
-                style: const TextStyle(
+            child: const Text('キャンセル',
+                style: TextStyle(
                   fontFamily: FontFamily.japanese,
                   fontWeight: FontWeight.w300,
                   fontSize: 14,
@@ -31,7 +31,7 @@ class PickerToolbar extends StatelessWidget {
             ),
           ),
           CupertinoButton(
-            child: Text('完了',
+            child: const Text('完了',
                 style: TextStyle(
                   fontFamily: FontFamily.japanese,
                   fontWeight: FontWeight.w600,

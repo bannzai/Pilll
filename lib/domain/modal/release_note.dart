@@ -43,9 +43,9 @@ class ReleaseNote extends StatelessWidget {
                       alignment: Alignment.center,
                       child: Container(
                         padding: const EdgeInsets.only(top: 40, left: 40, right: 40),
-                        child: Text(
+                        child: const Text(
                           "ホームウィジェットが追加できるようになりました",
-                          style: const TextStyle(
+                          style: TextStyle(
                             fontFamily: FontFamily.japanese,
                             fontWeight: FontWeight.w600,
                             fontSize: 16,
@@ -61,12 +61,12 @@ class ReleaseNote extends StatelessWidget {
                   padding: const EdgeInsets.only(top: 25, left: 25, right: 25),
                   child: Column(
                     crossAxisAlignment: CrossAxisAlignment.start,
-                    children: [
+                    children: const [
                       Text(
                         '''
 ホームウィジェットを追加できるようになりました。本日服用するピルの番号が一目でわかるようになっています
                         ''',
-                        style: const TextStyle(
+                        style: TextStyle(
                           fontFamily: FontFamily.japanese,
                           fontWeight: FontWeight.w300,
                           fontSize: 14,

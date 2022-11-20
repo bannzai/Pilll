@@ -37,10 +37,10 @@ class RecommendSignupNotificationBar extends HookConsumerWidget {
             ),
             const Spacer(),
             Column(
-              children: [
+              children: const [
                 Text(
                   "機種変更やスマホ紛失時に備えて\nアカウント登録しませんか？",
-                  style: const TextStyle(fontFamily: FontFamily.japanese, fontWeight: FontWeight.w700, fontSize: 12, color: TextColor.white),
+                  style: TextStyle(fontFamily: FontFamily.japanese, fontWeight: FontWeight.w700, fontSize: 12, color: TextColor.white),
                   textAlign: TextAlign.center,
                 ),
               ],

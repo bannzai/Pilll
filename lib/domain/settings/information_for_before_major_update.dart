@@ -41,9 +41,9 @@ class InformationForBeforeMigrate132 extends StatelessWidget {
               mainAxisAlignment: MainAxisAlignment.center,
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
-                Text(
+                const Text(
                   "大型アップデート前の情報",
-                  style: const TextStyle(
+                  style: TextStyle(
                     fontFamily: FontFamily.japanese,
                     fontWeight: FontWeight.w500,
                     fontSize: 20,
@@ -51,9 +51,9 @@ class InformationForBeforeMigrate132 extends StatelessWidget {
                   ),
                 ),
                 const SizedBox(height: 32),
-                Text(
+                const Text(
                   "下記の情報はversion 2.0.0以前のアプリの情報になります",
-                  style: const TextStyle(
+                  style: TextStyle(
                     fontFamily: FontFamily.japanese,
                     fontWeight: FontWeight.w600,
                     fontSize: 16,
@@ -71,9 +71,9 @@ class InformationForBeforeMigrate132 extends StatelessWidget {
                   ),
                 ),
                 const SizedBox(height: 4),
-                Text(
+                const Text(
                   "※大型アップデート前のアプリで最後にピルの服用記録をつけた日です",
-                  style: const TextStyle(
+                  style: TextStyle(
                     fontFamily: FontFamily.japanese,
                     fontWeight: FontWeight.w400,
                     fontSize: 12,
@@ -91,9 +91,9 @@ class InformationForBeforeMigrate132 extends StatelessWidget {
                   ),
                 ),
                 const SizedBox(height: 4),
-                Text(
+                const Text(
                   "※大型アップデート前のアプリで最後に服用したピル番号になります",
-                  style: const TextStyle(
+                  style: TextStyle(
                     fontFamily: FontFamily.japanese,
                     fontWeight: FontWeight.w400,
                     fontSize: 12,
@@ -111,9 +111,9 @@ class InformationForBeforeMigrate132 extends StatelessWidget {
                   ),
                 ),
                 const SizedBox(height: 4),
-                Text(
+                const Text(
                   "※大型アップデート前のアプリを使用していた場合の本日のピル番号になります",
-                  style: const TextStyle(
+                  style: TextStyle(
                     fontFamily: FontFamily.japanese,
                     fontWeight: FontWeight.w400,
                     fontSize: 12,

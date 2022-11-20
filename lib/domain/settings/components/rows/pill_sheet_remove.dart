@@ -41,11 +41,11 @@ class PillSheetRemoveRow extends HookConsumerWidget {
               title: "ピルシートをすべて破棄しますか？",
               message: RichText(
                 textAlign: TextAlign.start,
-                text: TextSpan(
+                text: const TextSpan(
                   children: [
                     TextSpan(
                       text: "現在表示されている",
-                      style: const TextStyle(
+                      style: TextStyle(
                         fontFamily: FontFamily.japanese,
                         fontWeight: FontWeight.w300,
                         fontSize: 14,
@@ -54,7 +54,7 @@ class PillSheetRemoveRow extends HookConsumerWidget {
                     ),
                     TextSpan(
                       text: "すべてのピルシート",
-                      style: const TextStyle(
+                      style: TextStyle(
                         fontFamily: FontFamily.japanese,
                         fontWeight: FontWeight.w600,
                         fontSize: 14,
@@ -63,7 +63,7 @@ class PillSheetRemoveRow extends HookConsumerWidget {
                     ),
                     TextSpan(
                       text: "が破棄されます",
-                      style: const TextStyle(
+                      style: TextStyle(
                         fontFamily: FontFamily.japanese,
                         fontWeight: FontWeight.w300,
                         fontSize: 14,

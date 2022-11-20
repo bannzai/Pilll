@@ -35,10 +35,10 @@ class AddPillSheetGroupEmptyFrame extends StatelessWidget {
             Center(
                 child: Row(
               mainAxisAlignment: MainAxisAlignment.center,
-              children: <Widget>[
-                const Icon(Icons.add, color: TextColor.noshime),
+              children: const <Widget>[
+                Icon(Icons.add, color: TextColor.noshime),
                 Text("ピルシートを追加",
-                    style: const TextStyle(
+                    style: TextStyle(
                       fontFamily: FontFamily.japanese,
                       fontWeight: FontWeight.w300,
                       fontSize: 14,

@@ -92,9 +92,9 @@ class ReminderNotificationCustomizeWordPage extends HookConsumerWidget {
                   Column(
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
-                      Text(
+                      const Text(
                         "詳細設定",
-                        style: const TextStyle(
+                        style: TextStyle(
                           fontFamily: FontFamily.japanese,
                           fontWeight: FontWeight.w300,
                           fontSize: 14,
