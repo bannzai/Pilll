@@ -1,5 +1,6 @@
 import 'package:firebase_auth/firebase_auth.dart' as firebase_auth;
 import 'package:pilll/components/molecules/indicator.dart';
+import 'package:pilll/components/page/ok_dialog.dart';
 import 'package:pilll/entity/user.codegen.dart';
 import 'package:pilll/features/home/home_page.dart';
 import 'package:pilll/features/initial_setting/pill_sheet_group/initial_setting_pill_sheet_group_page.dart';
@@ -42,7 +43,7 @@ void main() {
   });
 
   group('#RootPage', () {
-    testWidgets('firebase use and app user are exists', (WidgetTester tester) async {
+    testWidgets('no need force update', (WidgetTester tester) async {
       final mockTodayRepository = MockTodayService();
       final today = DateTime(2021, 04, 29);
       when(mockTodayRepository.now()).thenReturn(today);
@@ -78,7 +79,7 @@ void main() {
             markAsMigratedToFlutterProvider.overrideWith((ref) => markAsMigratedToFlutter),
             firebaseSignInProvider.overrideWith((ref) => Future.value(fakeFirebaseUser)),
           ],
-          child: MaterialApp(
+          child: const MaterialApp(
             home: Material(
               child: Root(),
             ),
@@ -91,6 +92,61 @@ void main() {
         find.byWidgetPredicate((widget) => widget is InitialSettingOrAppPage),
         findsWidgets,
       );
+    });
+    testWidgets('needs force update', (WidgetTester tester) async {
+      final mockTodayRepository = MockTodayService();
+      final today = DateTime(2021, 04, 29);
+      when(mockTodayRepository.now()).thenReturn(today);
+      todayRepository = mockTodayRepository;
+
+      final fakeFirebaseUser = _FakeFirebaseUser();
+      final fakeUser = _FakeUser();
+
+      final checkForceUpdate = MockCheckForceUpdate();
+      when(checkForceUpdate()).thenAnswer((_) => Future.value(true));
+
+      final setUserID = MockSetUserID();
+      when(setUserID(userID: fakeFirebaseUser.uid)).thenAnswer((realInvocation) => Future.value());
+
+      final fetchOrCreateUser = MockFetchOrCreateUser();
+      when(fetchOrCreateUser(fakeFirebaseUser.uid)).thenAnswer((realInvocation) => Future.value(fakeUser));
+
+      final saveUserLaunchInfo = MockSaveUserLaunchInfo();
+      when(saveUserLaunchInfo(fakeUser)).thenReturn(null);
+
+      final markAsMigratedToFlutter = MockMarkAsMigratedToFlutter();
+      when(markAsMigratedToFlutter()).thenAnswer((realInvocation) => Future.value());
+
+      await tester.pumpWidget(
+        ProviderScope(
+          overrides: [
+            firebaseUserStateProvider.overrideWith((ref) => Stream.value(fakeFirebaseUser)),
+            checkForceUpdateProvider.overrideWith((_) => checkForceUpdate),
+            setUserIDProvider.overrideWith((ref) => setUserID),
+            databaseProvider.overrideWith((ref) => MockDatabaseConnection()),
+            fetchOrCreateUserProvider.overrideWith((_) => fetchOrCreateUser),
+            saveUserLaunchInfoProvider.overrideWith((ref) => saveUserLaunchInfo),
+            markAsMigratedToFlutterProvider.overrideWith((ref) => markAsMigratedToFlutter),
+            firebaseSignInProvider.overrideWith((ref) => Future.value(fakeFirebaseUser)),
+          ],
+          child: const MaterialApp(
+            home: Material(
+              child: Root(),
+            ),
+          ),
+        ),
+      );
+      await tester.pumpAndSettle(const Duration(seconds: 2));
+
+      expect(
+        find.byWidgetPredicate((widget) => widget is ScaffoldIndicator),
+        findsWidgets,
+      );
+// FIXME: Cann't check of did showDialog Widget
+//      expect(
+//        find.byWidgetPredicate((widget) => widget is OKDialog),
+//        findsWidgets,
+//      );
     });
   });
 }
