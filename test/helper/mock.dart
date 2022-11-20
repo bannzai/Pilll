@@ -1,4 +1,5 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
+import 'package:pilll/provider/force_update.dart';
 import 'package:pilll/provider/revert_take_pill.dart';
 import 'package:pilll/provider/take_pill.dart';
 import 'package:pilll/utils/analytics.dart';
@@ -37,5 +38,6 @@ import 'package:pilll/provider/purchase.dart';
   PurchaseService,
   RevertTakePill,
   TakePill,
+  CheckForceUpdate,
 ])
 abstract class KeepGeneratedMocks {}

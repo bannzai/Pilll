@@ -22,6 +22,7 @@ import 'package:pilll/entity/setting.codegen.dart' as _i6;
 import 'package:pilll/entity/user.codegen.dart' as _i22;
 import 'package:pilll/provider/batch.dart' as _i10;
 import 'package:pilll/provider/database.dart' as _i2;
+import 'package:pilll/provider/force_update.dart' as _i31;
 import 'package:pilll/provider/menstruation.dart' as _i21;
 import 'package:pilll/provider/pill_sheet.dart' as _i11;
 import 'package:pilll/provider/pill_sheet_group.dart' as _i13;
@@ -933,4 +934,22 @@ class MockTakePill extends _i1.Mock implements _i30.TakePill {
         ),
         returnValue: Future<_i7.PillSheetGroup?>.value(),
       ) as _i16.Future<_i7.PillSheetGroup?>);
+}
+
+/// A class which mocks [CheckForceUpdate].
+///
+/// See the documentation for Mockito's code generation for more information.
+class MockCheckForceUpdate extends _i1.Mock implements _i31.CheckForceUpdate {
+  MockCheckForceUpdate() {
+    _i1.throwOnMissingStub(this);
+  }
+
+  @override
+  _i16.Future<bool> call() => (super.noSuchMethod(
+        Invocation.method(
+          #call,
+          [],
+        ),
+        returnValue: Future<bool>.value(false),
+      ) as _i16.Future<bool>);
 }
