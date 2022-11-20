@@ -8,5 +8,3 @@ class FontFamily {
   static const String japanese = "Noto Sans CJK JP";
   static const String roboto = "Roboto";
 }
-
-class FontType {}
