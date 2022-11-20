@@ -22,7 +22,7 @@ import 'package:pilll/provider/root.dart';
 import 'package:pilll/provider/setting.dart';
 import 'package:pilll/provider/shared_preference.dart';
 import 'package:pilll/provider/shared_preferences.dart';
-import 'package:pilll/service/auth.dart';
+import 'package:pilll/provider/auth.dart';
 import 'package:pilll/util/shared_preference/keys.dart';
 
 class RecordPage extends HookConsumerWidget {

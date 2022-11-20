@@ -13,7 +13,7 @@ import 'package:pilll/entity/pill_sheet_modified_history.codegen.dart';
 import 'package:pilll/entity/pilll_ads.codegen.dart';
 import 'package:pilll/entity/schedule.codegen.dart';
 import 'package:pilll/entity/user.codegen.dart';
-import 'package:pilll/service/auth.dart';
+import 'package:pilll/provider/auth.dart';
 
 final databaseProvider = Provider<DatabaseConnection>((ref) {
   final stream = ref.watch(authStateStreamProvider);

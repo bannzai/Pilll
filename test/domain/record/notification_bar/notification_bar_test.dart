@@ -18,7 +18,7 @@ import 'package:pilll/entity/pill_sheet_type.dart';
 import 'package:pilll/entity/pilll_ads.codegen.dart';
 import 'package:pilll/provider/locale.dart';
 import 'package:pilll/provider/premium_and_trial.codegen.dart';
-import 'package:pilll/service/auth.dart';
+import 'package:pilll/provider/auth.dart';
 import 'package:pilll/service/day.dart';
 import 'package:pilll/util/datetime/day.dart';
 import 'package:pilll/util/environment.dart';
