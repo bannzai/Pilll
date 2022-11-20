@@ -10,11 +10,6 @@ class FontFamily {
 }
 
 class FontType {
-  static const TextStyle cardHeader = TextStyle(
-    fontFamily: FontFamily.number,
-    fontWeight: FontWeight.w600,
-    fontSize: 22,
-  );
   static const TextStyle thinTitle = TextStyle(
     fontFamily: FontFamily.japanese,
     fontWeight: FontWeight.w300,
