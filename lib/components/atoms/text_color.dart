@@ -1,8 +1,7 @@
 import 'package:pilll/components/atoms/color.dart';
 import 'package:flutter/material.dart';
 
-class TextColor {
-  static Color get standard => black;
+abstract class TextColor {
   static const Color black = Colors.black;
   static const Color white = Colors.white;
   static const Color darkGray = Color(0xD449454F);
