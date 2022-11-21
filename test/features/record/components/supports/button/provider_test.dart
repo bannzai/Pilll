@@ -110,5 +110,80 @@ void main() {
       verify(batchSetPillSheetGroup(batch, updatedPillSheetGroup)).called(1);
       verify(batchSetPillSheetModifiedHistory(batch, history)).called(1);
     });
+    test("group has three pill sheets", () async {
+      var mockTodayRepository = MockTodayService();
+      final _today = DateTime.parse("2020-09-19");
+      todayRepository = mockTodayRepository;
+      when(mockTodayRepository.now()).thenReturn(_today);
+
+      final notYetEndRestDuration = RestDuration(
+        beginDate: now().subtract(const Duration(days: 1)),
+        createdDate: now().subtract(const Duration(days: 1)),
+        endDate: null,
+      );
+      final endedRestDuration = notYetEndRestDuration.copyWith(
+        endDate: now(),
+      );
+
+      final batchFactory = MockBatchFactory();
+      final batch = MockWriteBatch();
+      when(batchFactory.batch()).thenReturn(batch);
+
+      final firstPillSheetBeginDate = now().subtract(const Duration(days: 10));
+      var pillSheets = [
+        PillSheet(
+          id: "pill_sheet_id_1",
+          groupIndex: 0,
+          typeInfo: PillSheetType.pillsheet_28_0.typeInfo,
+          beginingDate: firstPillSheetBeginDate,
+          restDurations: [notYetEndRestDuration],
+        ),
+        PillSheet(
+          id: "pill_sheet_id_2",
+          groupIndex: 1,
+          typeInfo: PillSheetType.pillsheet_28_0.typeInfo,
+          beginingDate: firstPillSheetBeginDate.add(const Duration(days: 28)),
+        ),
+        PillSheet(
+          id: "pill_sheet_id_3",
+          groupIndex: 2,
+          typeInfo: PillSheetType.pillsheet_28_0.typeInfo,
+          beginingDate: firstPillSheetBeginDate.add(const Duration(days: 56)),
+        )
+      ];
+      final updatedPillSheet1 = pillSheets[0].copyWith(restDurations: [endedRestDuration]);
+      final updatedPillSheet2 = pillSheets[1].copyWith(beginingDate: updatedPillSheet1.estimatedEndTakenDate.add(const Duration(days: 1)));
+      final updatedPillSheet3 = pillSheets[2].copyWith(beginingDate: updatedPillSheet2.estimatedEndTakenDate.add(const Duration(days: 1)));
+      final updatedPillSheets = [
+        updatedPillSheet1,
+        updatedPillSheet2,
+        updatedPillSheet3,
+      ];
+      final batchSetPillSheets = MockBatchSetPillSheets();
+      when(batchSetPillSheets(batch, updatedPillSheets)).thenReturn(updatedPillSheets);
+
+      final pillSheetGroup =
+          PillSheetGroup(id: "group_id", pillSheetIDs: pillSheets.map((e) => e.id!).toList(), pillSheets: pillSheets, createdAt: now());
+      final updatedPillSheetGroup = pillSheetGroup.copyWith(pillSheets: updatedPillSheets);
+      final batchSetPillSheetGroup = MockBatchSetPillSheetGroup();
+      when(batchSetPillSheetGroup(batch, updatedPillSheetGroup)).thenReturn(updatedPillSheetGroup.copyWith(id: "group_id"));
+
+      final history = PillSheetModifiedHistoryServiceActionFactory.createEndedRestDurationAction(
+          pillSheetGroupID: "group_id", before: pillSheets[0], after: updatedPillSheets[0], restDuration: endedRestDuration);
+      final batchSetPillSheetModifiedHistory = MockBatchSetPillSheetModifiedHistory();
+      when(batchSetPillSheetModifiedHistory(batch, history)).thenReturn(null);
+
+      final endRestDuration = EndRestDuration(
+          batchFactory: batchFactory,
+          batchSetPillSheets: batchSetPillSheets,
+          batchSetPillSheetGroup: batchSetPillSheetGroup,
+          batchSetPillSheetModifiedHistory: batchSetPillSheetModifiedHistory);
+      await endRestDuration.call(activePillSheet: pillSheets[0], pillSheetGroup: pillSheetGroup, restDuration: notYetEndRestDuration);
+
+      verify(batchFactory.batch()).called(1);
+      verify(batchSetPillSheets(batch, updatedPillSheets)).called(1);
+      verify(batchSetPillSheetGroup(batch, updatedPillSheetGroup)).called(1);
+      verify(batchSetPillSheetModifiedHistory(batch, history)).called(1);
+    });
   });
 }
