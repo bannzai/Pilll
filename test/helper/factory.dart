@@ -28,14 +28,14 @@ abstract class Factory {
       PillSheetGroup(pillSheetIDs: pillSheets.map((e) => e.id!).toList(), pillSheets: pillSheets, createdAt: now());
 
   static RestDuration notYetEndRestDuration() => RestDuration(
-        beginDate: now().subtract(const Duration(seconds: 1)),
-        createdDate: now().subtract(const Duration(seconds: 1)),
+        beginDate: now(),
+        createdDate: now(),
         endDate: null,
       );
   static RestDuration endedRestDuration() => RestDuration(
         beginDate: now().subtract(const Duration(days: 1)),
         createdDate: now().subtract(const Duration(days: 1)),
-        endDate: now().subtract(const Duration(seconds: 1)),
+        endDate: now(),
       );
 
   static Setting setting() => const Setting(
