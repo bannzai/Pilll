@@ -52,49 +52,6 @@ class EndManualRestDurationButton extends HookConsumerWidget {
       ),
     );
   }
-
-  Future<void> _endRestDuration(
-    BatchFactory batchFactory, {
-    required BatchSetPillSheets batchSetPillSheets,
-    required BatchSetPillSheetGroup batchSetPillSheetGroup,
-    required BatchSetPillSheetModifiedHistory batchSetPillSheetModifiedHistory,
-  }) async {
-    final batch = batchFactory.batch();
-    final updatedRestDuration = restDuration.copyWith(endDate: now());
-    final updatedPillSheet = activedPillSheet.copyWith(
-      restDurations: [...activedPillSheet.restDurations]..replaceRange(
-          activedPillSheet.restDurations.length - 1,
-          activedPillSheet.restDurations.length,
-          [updatedRestDuration],
-        ),
-    );
-    final updatedPillSheets = <PillSheet>[];
-    for (final pillSheet in pillSheetGroup.pillSheets) {
-      if (pillSheet.id == activedPillSheet.id) {
-        updatedPillSheets.add(updatedPillSheet);
-      } else if (pillSheet.groupIndex > activedPillSheet.groupIndex) {
-        // 前回のピルシートのbeginDateが更新され、estimatedEndTakenDateが変わっている場合も考慮する必要があるのでupdatedPillSheetsでアクセスする
-        final beforeUpdatedPillSheet = updatedPillSheets[pillSheet.groupIndex - 1];
-        updatedPillSheets.add(pillSheet.copyWith(
-          beginingDate: beforeUpdatedPillSheet.estimatedEndTakenDate.add(const Duration(days: 1)),
-        ));
-      } else {
-        updatedPillSheets.add(pillSheet);
-      }
-    }
-    batchSetPillSheets(batch, updatedPillSheets);
-    batchSetPillSheetGroup(batch, pillSheetGroup.copyWith(pillSheets: updatedPillSheets));
-    batchSetPillSheetModifiedHistory(
-      batch,
-      PillSheetModifiedHistoryServiceActionFactory.createEndedRestDurationAction(
-        pillSheetGroupID: pillSheetGroup.id,
-        before: activedPillSheet,
-        after: updatedPillSheet,
-        restDuration: updatedRestDuration,
-      ),
-    );
-    await batch.commit();
-  }
 }
 
 class EndRestDurationModal extends HookConsumerWidget {
