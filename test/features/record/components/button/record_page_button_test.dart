@@ -28,17 +28,18 @@ void main() {
   group('#RecordPageButton', () {
     group('#RestDurationButton', () {
       testWidgets('pill sheet has activeRestDuration', (WidgetTester tester) async {
-        final mockTodayRepository = MockTodayService();
-        final today = DateTime(2021, 04, 29);
-        when(mockTodayRepository.now()).thenReturn(today);
-        todayRepository = mockTodayRepository;
-
-        var pillSheets = Factory.pillSheets3();
-        final activePillSheet = pillSheets[0].copyWith(restDurations: [Factory.notYetEndRestDuration()]);
+        var pillSheets = Factory.pillSheets3(10);
+        final pillSheetGroup = Factory.pillSheetGroup(pillSheets);
+        // Reason for subtract seconds: 1, pass condition of if (restDurations.last.beginDate.isBefore(now()))
+        final activePillSheet = pillSheetGroup.activedPillSheet!.copyWith(
+          restDurations: [
+            Factory.notYetEndRestDuration().copyWith(
+              beginDate: now().subtract(const Duration(seconds: 1)),
+            ),
+          ],
+        );
         pillSheets.replaceRange(0, 1, [activePillSheet]);
         expect(activePillSheet.activeRestDuration, isNotNull);
-
-        final pillSheetGroup = Factory.pillSheetGroup(pillSheets);
         expect(pillSheetGroup.activedPillSheet, activePillSheet);
 
         await tester.pumpWidget(
@@ -65,18 +66,17 @@ void main() {
     });
     group('#CancelButton', () {
       testWidgets('activePillSheet.todayPillIsAlreadyTaken', (WidgetTester tester) async {
-        final mockTodayRepository = MockTodayService();
-        final today = DateTime(2021, 04, 29);
-        when(mockTodayRepository.now()).thenReturn(today);
-        todayRepository = mockTodayRepository;
-
-        var pillSheets = Factory.pillSheets3();
-        final activePillSheet = pillSheets[0].copyWith(restDurations: [Factory.endedRestDuration()], lastTakenDate: now());
+        var pillSheets = Factory.pillSheets3(10);
+        final pillSheetGroup = Factory.pillSheetGroup(pillSheets);
+        final activePillSheet = pillSheetGroup.activedPillSheet!.copyWith(
+          restDurations: [
+            Factory.endedRestDuration(),
+          ],
+          lastTakenDate: now(),
+        );
         pillSheets.replaceRange(0, 1, [activePillSheet]);
         expect(activePillSheet.activeRestDuration, isNull);
         expect(activePillSheet.todayPillIsAlreadyTaken, true);
-
-        final pillSheetGroup = Factory.pillSheetGroup(pillSheets);
         expect(pillSheetGroup.activedPillSheet, activePillSheet);
 
         await tester.pumpWidget(
@@ -103,18 +103,18 @@ void main() {
     });
     group('#TakenButton', () {
       testWidgets('show TakenButton', (WidgetTester tester) async {
-        final mockTodayRepository = MockTodayService();
-        final today = DateTime(2021, 04, 29);
-        when(mockTodayRepository.now()).thenReturn(today);
-        todayRepository = mockTodayRepository;
-
-        var pillSheets = Factory.pillSheets3();
-        final activePillSheet = pillSheets[0].copyWith(restDurations: [Factory.endedRestDuration()], lastTakenDate: yesterday());
+        var pillSheets = Factory.pillSheets3(10);
+        final pillSheetGroup = Factory.pillSheetGroup(pillSheets);
+        // Reason for subtract seconds: 1, pass condition of if (restDurations.last.endDate.isBefore(now()))
+        final activePillSheet = pillSheetGroup.activedPillSheet!.copyWith(
+          restDurations: [
+            Factory.endedRestDuration().copyWith(endDate: now().subtract(const Duration(seconds: 1))),
+          ],
+          lastTakenDate: yesterday(),
+        );
         pillSheets.replaceRange(0, 1, [activePillSheet]);
         expect(activePillSheet.activeRestDuration, isNull);
         expect(activePillSheet.todayPillIsAlreadyTaken, false);
-
-        final pillSheetGroup = Factory.pillSheetGroup(pillSheets);
         expect(pillSheetGroup.activedPillSheet, activePillSheet);
 
         await tester.pumpWidget(
