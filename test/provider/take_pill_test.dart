@@ -341,10 +341,10 @@ void main() {
           isQuickRecord: false,
         );
 
-        verify(batchSetPillSheets(batch, [previousPillSheet, updatedActivePillSheet, nextPillSheet])).called(1);
-        verify(batchSetPillSheetModifiedHistory(batch, history)).called(1);
-        verify(batchSetPillSheetGroup(batch, updatedPillSheetGroup)).called(1);
-        expect(result, updatedPillSheetGroup);
+        verifyNever(batchSetPillSheets(batch, [previousPillSheet, updatedActivePillSheet, nextPillSheet]));
+        verifyNever(batchSetPillSheetModifiedHistory(batch, history));
+        verifyNever(batchSetPillSheetGroup(batch, updatedPillSheetGroup));
+        expect(result, isNull);
       });
       test("when previous pill sheet is not taken all.", () async {
         final takenDate = _today.add(const Duration(seconds: 1));
