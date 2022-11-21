@@ -8,6 +8,58 @@ import 'package:pilll/provider/pill_sheet_group.dart';
 import 'package:pilll/provider/pill_sheet_modified_history.dart';
 import 'package:pilll/utils/datetime/day.dart';
 
+final beginRestDurationProvider = Provider(
+  (ref) => BeginRestDuration(
+    batchFactory: ref.watch(batchFactoryProvider),
+    batchSetPillSheets: ref.watch(batchSetPillSheetsProvider),
+    batchSetPillSheetGroup: ref.watch(batchSetPillSheetGroupProvider),
+    batchSetPillSheetModifiedHistory: ref.watch(batchSetPillSheetModifiedHistoryProvider),
+  ),
+);
+
+class BeginRestDuration {
+  final BatchFactory batchFactory;
+  final BatchSetPillSheets batchSetPillSheets;
+  final BatchSetPillSheetGroup batchSetPillSheetGroup;
+  final BatchSetPillSheetModifiedHistory batchSetPillSheetModifiedHistory;
+
+  BeginRestDuration({
+    required this.batchFactory,
+    required this.batchSetPillSheets,
+    required this.batchSetPillSheetGroup,
+    required this.batchSetPillSheetModifiedHistory,
+  });
+
+  Future<void> call({
+    required PillSheet activePillSheet,
+    required PillSheetGroup pillSheetGroup,
+  }) async {
+    final batch = batchFactory.batch();
+
+    final restDuration = RestDuration(
+      beginDate: now(),
+      createdDate: now(),
+    );
+    final updatedPillSheet = activePillSheet.copyWith(
+      restDurations: [...activePillSheet.restDurations, restDuration],
+    );
+    final updatedPillSheetGroup = pillSheetGroup.replaced(updatedPillSheet);
+    batchSetPillSheets(batch, updatedPillSheetGroup.pillSheets);
+    batchSetPillSheetGroup(batch, updatedPillSheetGroup);
+    batchSetPillSheetModifiedHistory(
+      batch,
+      PillSheetModifiedHistoryServiceActionFactory.createBeganRestDurationAction(
+        pillSheetGroupID: pillSheetGroup.id,
+        before: activePillSheet,
+        after: updatedPillSheet,
+        restDuration: restDuration,
+      ),
+    );
+
+    await batch.commit();
+  }
+}
+
 final endRestDurationProvider = Provider(
   (ref) => EndRestDuration(
     batchFactory: ref.watch(batchFactoryProvider),
@@ -69,58 +121,6 @@ class EndRestDuration {
         restDuration: updatedRestDuration,
       ),
     );
-    await batch.commit();
-  }
-}
-
-final beginRestDurationProvider = Provider(
-  (ref) => BeginRestDuration(
-    batchFactory: ref.watch(batchFactoryProvider),
-    batchSetPillSheets: ref.watch(batchSetPillSheetsProvider),
-    batchSetPillSheetGroup: ref.watch(batchSetPillSheetGroupProvider),
-    batchSetPillSheetModifiedHistory: ref.watch(batchSetPillSheetModifiedHistoryProvider),
-  ),
-);
-
-class BeginRestDuration {
-  final BatchFactory batchFactory;
-  final BatchSetPillSheets batchSetPillSheets;
-  final BatchSetPillSheetGroup batchSetPillSheetGroup;
-  final BatchSetPillSheetModifiedHistory batchSetPillSheetModifiedHistory;
-
-  BeginRestDuration({
-    required this.batchFactory,
-    required this.batchSetPillSheets,
-    required this.batchSetPillSheetGroup,
-    required this.batchSetPillSheetModifiedHistory,
-  });
-
-  Future<void> call({
-    required PillSheet activePillSheet,
-    required PillSheetGroup pillSheetGroup,
-  }) async {
-    final batch = batchFactory.batch();
-
-    final restDuration = RestDuration(
-      beginDate: now(),
-      createdDate: now(),
-    );
-    final updatedPillSheet = activePillSheet.copyWith(
-      restDurations: [...activePillSheet.restDurations, restDuration],
-    );
-    final updatedPillSheetGroup = pillSheetGroup.replaced(updatedPillSheet);
-    batchSetPillSheets(batch, updatedPillSheetGroup.pillSheets);
-    batchSetPillSheetGroup(batch, updatedPillSheetGroup);
-    batchSetPillSheetModifiedHistory(
-      batch,
-      PillSheetModifiedHistoryServiceActionFactory.createBeganRestDurationAction(
-        pillSheetGroupID: pillSheetGroup.id,
-        before: activePillSheet,
-        after: updatedPillSheet,
-        restDuration: restDuration,
-      ),
-    );
-
     await batch.commit();
   }
 }
