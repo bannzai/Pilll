@@ -5,6 +5,7 @@ import 'package:flutter_test/flutter_test.dart';
 import 'package:mockito/mockito.dart';
 import 'package:pilll/entity/pill_sheet_type.dart';
 import 'package:pilll/features/record/components/supports/components/rest_duration/provider.dart';
+import 'package:pilll/utils/datetime/date_compare.dart';
 import 'package:pilll/utils/datetime/day.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
@@ -161,6 +162,18 @@ void main() {
       ];
       final batchSetPillSheets = MockBatchSetPillSheets();
       when(batchSetPillSheets(batch, updatedPillSheets)).thenReturn(updatedPillSheets);
+      expect(
+        isSameDay(pillSheets[0].beginingDate, updatedPillSheet1.beginingDate),
+        true,
+      );
+      expect(
+        isSameDay(pillSheets[1].beginingDate, updatedPillSheet2.beginingDate),
+        false,
+      );
+      expect(
+        isSameDay(pillSheets[2].beginingDate, updatedPillSheet3.beginingDate),
+        false,
+      );
 
       final pillSheetGroup =
           PillSheetGroup(id: "group_id", pillSheetIDs: pillSheets.map((e) => e.id!).toList(), pillSheets: pillSheets, createdAt: now());
