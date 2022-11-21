@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
+import 'package:pilll/features/record/components/supports/components/rest_duration/provider.dart';
 import 'package:pilll/utils/analytics.dart';
 import 'package:pilll/components/atoms/button.dart';
 import 'package:pilll/components/atoms/color.dart';
@@ -30,10 +31,7 @@ class EndManualRestDurationButton extends HookConsumerWidget {
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {
-    final batchFactory = ref.watch(batchFactoryProvider);
-    final batchSetPillSheets = ref.watch(batchSetPillSheetsProvider);
-    final batchSetPillSheetGroup = ref.watch(batchSetPillSheetGroupProvider);
-    final batchSetPillSheetModifiedHistory = ref.watch(batchSetPillSheetModifiedHistoryProvider);
+    final endRestDuration = ref.watch(endRestDurationProvider);
     return SizedBox(
       width: 80,
       child: SmallAppOutlinedButton(
@@ -43,11 +41,10 @@ class EndManualRestDurationButton extends HookConsumerWidget {
             name: "end_manual_rest_duration_pressed",
           );
 
-          await _endRestDuration(
-            batchFactory,
-            batchSetPillSheets: batchSetPillSheets,
-            batchSetPillSheetGroup: batchSetPillSheetGroup,
-            batchSetPillSheetModifiedHistory: batchSetPillSheetModifiedHistory,
+          await endRestDuration(
+            restDuration: restDuration,
+            activePillSheet: activedPillSheet,
+            pillSheetGroup: pillSheetGroup,
           );
 
           didEndRestDuration();
