@@ -1,12 +1,13 @@
 import 'package:pilll/entity/pill_sheet.codegen.dart';
+import 'package:pilll/entity/pill_sheet_group.codegen.dart';
 import 'package:pilll/entity/pill_sheet_modified_history.codegen.dart';
 import 'package:flutter_test/flutter_test.dart';
 import 'package:mockito/mockito.dart';
+import 'package:pilll/entity/pill_sheet_type.dart';
 import 'package:pilll/features/record/components/supports/components/rest_duration/provider.dart';
 import 'package:pilll/utils/datetime/day.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
-import '../../../../../helper/factory.dart';
 import '../../../../../helper/mock.mocks.dart';
 
 void main() {
@@ -21,24 +22,29 @@ void main() {
       todayRepository = mockTodayRepository;
       when(mockTodayRepository.now()).thenReturn(_today);
 
-      final restDuration = Factory.notYetEndRestDuration();
+      final notYetEndRestDuration = RestDuration(
+        beginDate: now(),
+        createdDate: now(),
+        endDate: null,
+      );
 
       final batchFactory = MockBatchFactory();
       final batch = MockWriteBatch();
       when(batchFactory.batch()).thenReturn(batch);
 
-      final pillSheet = Factory.pillSheet1()[0];
-      final updatedPillSheet = pillSheet.copyWith(restDurations: [restDuration]);
+      final pillSheet = PillSheet(id: "pill_sheet_id_1", typeInfo: PillSheetType.pillsheet_28_0.typeInfo, beginingDate: now());
+      final updatedPillSheet = pillSheet.copyWith(restDurations: [notYetEndRestDuration]);
       final batchSetPillSheets = MockBatchSetPillSheets();
       when(batchSetPillSheets(batch, [updatedPillSheet])).thenReturn([updatedPillSheet]);
 
-      final pillSheetGroup = Factory.pillSheetGroup([pillSheet]).copyWith(id: "group_id");
-      final updatedPillSheetGroup = Factory.pillSheetGroup([updatedPillSheet]).copyWith(id: "group_id");
+      final pillSheetGroup = PillSheetGroup(id: "group_id", pillSheetIDs: ["pill_sheet_id_1"].toList(), pillSheets: [pillSheet], createdAt: now());
+      final updatedPillSheetGroup =
+          PillSheetGroup(id: "group_id", pillSheetIDs: ["pill_sheet_id_1"].toList(), pillSheets: [updatedPillSheet], createdAt: now());
       final batchSetPillSheetGroup = MockBatchSetPillSheetGroup();
       when(batchSetPillSheetGroup(batch, updatedPillSheetGroup)).thenReturn(updatedPillSheetGroup.copyWith(id: "group_id"));
 
       final history = PillSheetModifiedHistoryServiceActionFactory.createBeganRestDurationAction(
-          pillSheetGroupID: "group_id", before: pillSheet, after: updatedPillSheet, restDuration: restDuration);
+          pillSheetGroupID: "group_id", before: pillSheet, after: updatedPillSheet, restDuration: notYetEndRestDuration);
       final batchSetPillSheetModifiedHistory = MockBatchSetPillSheetModifiedHistory();
       when(batchSetPillSheetModifiedHistory(batch, history)).thenReturn(null);
 
@@ -75,13 +81,15 @@ void main() {
       final batch = MockWriteBatch();
       when(batchFactory.batch()).thenReturn(batch);
 
-      final pillSheet = Factory.pillSheet1()[0].copyWith(restDurations: [notYetEndRestDuration]);
+      final pillSheet = PillSheet(
+          id: "pill_sheet_id_1", typeInfo: PillSheetType.pillsheet_28_0.typeInfo, beginingDate: now(), restDurations: [notYetEndRestDuration]);
       final updatedPillSheet = pillSheet.copyWith(restDurations: [endedRestDuration]);
       final batchSetPillSheets = MockBatchSetPillSheets();
       when(batchSetPillSheets(batch, [updatedPillSheet])).thenReturn([updatedPillSheet]);
 
-      final pillSheetGroup = Factory.pillSheetGroup([pillSheet]).copyWith(id: "group_id");
-      final updatedPillSheetGroup = Factory.pillSheetGroup([updatedPillSheet]).copyWith(id: "group_id");
+      final pillSheetGroup = PillSheetGroup(id: "group_id", pillSheetIDs: ["pill_sheet_id_1"].toList(), pillSheets: [pillSheet], createdAt: now());
+      final updatedPillSheetGroup =
+          PillSheetGroup(id: "group_id", pillSheetIDs: ["pill_sheet_id_1"].toList(), pillSheets: [updatedPillSheet], createdAt: now());
       final batchSetPillSheetGroup = MockBatchSetPillSheetGroup();
       when(batchSetPillSheetGroup(batch, updatedPillSheetGroup)).thenReturn(updatedPillSheetGroup.copyWith(id: "group_id"));
 
