@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
+import 'package:pilll/features/record/components/supports/components/rest_duration/provider.dart';
 import 'package:pilll/utils/analytics.dart';
 import 'package:pilll/components/atoms/button.dart';
 import 'package:pilll/components/atoms/color.dart';
@@ -30,10 +31,7 @@ class EndManualRestDurationButton extends HookConsumerWidget {
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {
-    final batchFactory = ref.watch(batchFactoryProvider);
-    final batchSetPillSheets = ref.watch(batchSetPillSheetsProvider);
-    final batchSetPillSheetGroup = ref.watch(batchSetPillSheetGroupProvider);
-    final batchSetPillSheetModifiedHistory = ref.watch(batchSetPillSheetModifiedHistoryProvider);
+    final endRestDuration = ref.watch(endRestDurationProvider);
     return SizedBox(
       width: 80,
       child: SmallAppOutlinedButton(
@@ -43,60 +41,16 @@ class EndManualRestDurationButton extends HookConsumerWidget {
             name: "end_manual_rest_duration_pressed",
           );
 
-          await _endRestDuration(
-            batchFactory,
-            batchSetPillSheets: batchSetPillSheets,
-            batchSetPillSheetGroup: batchSetPillSheetGroup,
-            batchSetPillSheetModifiedHistory: batchSetPillSheetModifiedHistory,
+          await endRestDuration(
+            restDuration: restDuration,
+            activePillSheet: activedPillSheet,
+            pillSheetGroup: pillSheetGroup,
           );
 
           didEndRestDuration();
         },
       ),
     );
-  }
-
-  Future<void> _endRestDuration(
-    BatchFactory batchFactory, {
-    required BatchSetPillSheets batchSetPillSheets,
-    required BatchSetPillSheetGroup batchSetPillSheetGroup,
-    required BatchSetPillSheetModifiedHistory batchSetPillSheetModifiedHistory,
-  }) async {
-    final batch = batchFactory.batch();
-    final updatedRestDuration = restDuration.copyWith(endDate: now());
-    final updatedPillSheet = activedPillSheet.copyWith(
-      restDurations: [...activedPillSheet.restDurations]..replaceRange(
-          activedPillSheet.restDurations.length - 1,
-          activedPillSheet.restDurations.length,
-          [updatedRestDuration],
-        ),
-    );
-    final updatedPillSheets = <PillSheet>[];
-    for (final pillSheet in pillSheetGroup.pillSheets) {
-      if (pillSheet.id == activedPillSheet.id) {
-        updatedPillSheets.add(updatedPillSheet);
-      } else if (pillSheet.groupIndex > activedPillSheet.groupIndex) {
-        // 前回のピルシートのbeginDateが更新され、estimatedEndTakenDateが変わっている場合も考慮する必要があるのでupdatedPillSheetsでアクセスする
-        final beforeUpdatedPillSheet = updatedPillSheets[pillSheet.groupIndex - 1];
-        updatedPillSheets.add(pillSheet.copyWith(
-          beginingDate: beforeUpdatedPillSheet.estimatedEndTakenDate.add(const Duration(days: 1)),
-        ));
-      } else {
-        updatedPillSheets.add(pillSheet);
-      }
-    }
-    batchSetPillSheets(batch, updatedPillSheets);
-    batchSetPillSheetGroup(batch, pillSheetGroup.copyWith(pillSheets: updatedPillSheets));
-    batchSetPillSheetModifiedHistory(
-      batch,
-      PillSheetModifiedHistoryServiceActionFactory.createEndedRestDurationAction(
-        pillSheetGroupID: pillSheetGroup.id,
-        before: activedPillSheet,
-        after: updatedPillSheet,
-        restDuration: updatedRestDuration,
-      ),
-    );
-    await batch.commit();
   }
 }
 
