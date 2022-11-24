@@ -5,9 +5,9 @@
 	<key>AppGroupKey</key>
 	<string>$(APP_GROUP_KEY)</string>
 	<key>NSHealthShareUsageDescription</key>
-	<string>ヘルスケアアプリから生理情報の取得を許可してください</string>
+	<string>ヘルスケアアプリの生理情報と共有するために使用します</string>
 	<key>NSHealthUpdateUsageDescription</key>
-	<string>ヘルスケアアプリにPilllの生理情報の更新を許可してください</string>
+	<string>Pilllの生理記録をヘルスケアアプリにも反映させる許可してください</string>
 	<key>ITSAppUsesNonExemptEncryption</key>
 	<false/>
 	<key>CFBundleURLTypes</key>
