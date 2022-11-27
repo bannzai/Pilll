@@ -63,7 +63,7 @@ class PillSheet with _$PillSheet {
   @JsonSerializable(explicitToJson: true)
   const factory PillSheet({
     @JsonKey(includeIfNull: false)
-        String? id,
+        required String? id,
     @JsonKey()
         required PillSheetTypeInfo typeInfo,
     @JsonKey(
