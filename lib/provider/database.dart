@@ -58,19 +58,6 @@ class DatabaseConnection {
             toFirestore: _diarySettingToFirestore,
           );
 
-  final FromFirestore<PillSheet> _pillSheetFromFirestore = (snapshot, options) => PillSheet.fromJson(snapshot.data()!);
-  final ToFirestore<PillSheet> _pillSheetToFirestore = (pillSheet, options) => pillSheet.toJson();
-  CollectionReference<PillSheet> pillSheetsReference() => FirebaseFirestore.instance.collection(_CollectionPath.pillSheets(_userID)).withConverter(
-        fromFirestore: _pillSheetFromFirestore,
-        toFirestore: _pillSheetToFirestore,
-      );
-
-  DocumentReference<PillSheet> pillSheetReference(String? pillSheetID) =>
-      FirebaseFirestore.instance.collection(_CollectionPath.pillSheets(_userID)).doc(pillSheetID).withConverter(
-            fromFirestore: _pillSheetFromFirestore,
-            toFirestore: _pillSheetToFirestore,
-          );
-
   final FromFirestore<Diary> _diaryFromFirestore = (snapshot, options) => Diary.fromJson(snapshot.data()!);
   final ToFirestore<Diary> _diaryToFirestore = (diary, options) => diary.toJson();
   CollectionReference<Diary> diariesReference() => FirebaseFirestore.instance.collection(_CollectionPath.diaries(_userID)).withConverter(
