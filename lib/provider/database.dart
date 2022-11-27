@@ -29,6 +29,7 @@ abstract class _CollectionPath {
   static const String users = "users";
   static String settings(String userID) => "$users/$userID/settings";
   static String diaries(String userID) => "$users/$userID/diaries";
+  static String pillSheetGroups(String userID) => "$users/$userID/pill_sheet_groups";
   static String userPrivates(String userID) => "$users/$userID/privates";
   static String menstruations(String userID) => "$users/$userID/menstruations";
   static String pillSheetModifiedHistories(String userID) => "$users/$userID/pill_sheet_modified_histories";
