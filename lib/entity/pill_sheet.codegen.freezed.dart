@@ -660,7 +660,7 @@ class __$$_PillSheetCopyWithImpl<$Res>
 class _$_PillSheet extends _PillSheet {
   const _$_PillSheet(
       {@JsonKey(includeIfNull: false)
-          this.id,
+          required this.id,
       @JsonKey()
           required this.typeInfo,
       @JsonKey(fromJson: NonNullTimestampConverter.timestampToDateTime, toJson: NonNullTimestampConverter.dateTimeToTimestamp)
@@ -773,7 +773,7 @@ class _$_PillSheet extends _PillSheet {
 abstract class _PillSheet extends PillSheet {
   const factory _PillSheet(
       {@JsonKey(includeIfNull: false)
-          final String? id,
+          required final String? id,
       @JsonKey()
           required final PillSheetTypeInfo typeInfo,
       @JsonKey(fromJson: NonNullTimestampConverter.timestampToDateTime, toJson: NonNullTimestampConverter.dateTimeToTimestamp)
