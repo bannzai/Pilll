@@ -34,6 +34,8 @@ class DisplayNumberSettingSheet extends HookConsumerWidget {
     final height = 1 - ((estimatedKeyboardHeight - offset) / MediaQuery.of(context).size.height);
 
     final batchFactory = ref.watch(batchFactoryProvider);
+    final batchSetPillSheetGroup = ref.watch(batchSetPillSheetGroupProvider);
+    final batchSetPillSheetModifiedHistory = ref.watch(batchSetPillSheetModifiedHistoryProvider);
 
     return DraggableScrollableSheet(
       initialChildSize: height,
