@@ -1,4 +1,3 @@
-import 'package:pilll/entity/firestore_id_generator.dart';
 import 'package:pilll/utils/datetime/date_range.dart';
 import 'package:pilll/entity/firestore_timestamp_converter.dart';
 import 'package:pilll/entity/pill_sheet_type.dart';
@@ -6,7 +5,6 @@ import 'package:pilll/utils/datetime/date_compare.dart';
 import 'package:pilll/utils/datetime/day.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';
-import 'package:uuid/uuid.dart';
 part 'pill_sheet.codegen.g.dart';
 part 'pill_sheet.codegen.freezed.dart';
 
@@ -65,8 +63,7 @@ class PillSheet with _$PillSheet {
   @JsonSerializable(explicitToJson: true)
   const factory PillSheet({
     @JsonKey(includeIfNull: false)
-    @Default(IDDefault)
-        String id,
+        required String? id,
     @JsonKey()
         required PillSheetTypeInfo typeInfo,
     @JsonKey(
