@@ -34,8 +34,6 @@ final beforePillSheetGroupProvider = FutureProvider<PillSheetGroup?>((ref) async
   return snapshot.docs[0].data();
 });
 
-final batchSetPillSheetGroupProvider = Provider((ref) => BatchSetPillSheetGroup(ref.watch(databaseProvider)));
-
 class BatchSetPillSheetGroup {
   final DatabaseConnection databaseConnection;
   BatchSetPillSheetGroup(this.databaseConnection);

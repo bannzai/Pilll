@@ -36,8 +36,6 @@ final pillSheetModifiedHistoriesWithLimitProvider = StreamProvider.family((ref, 
       .map((docs) => docs.map((doc) => doc.data()).toList());
 });
 
-final batchSetPillSheetModifiedHistoryProvider = Provider((ref) => BatchSetPillSheetModifiedHistory(ref.watch(databaseProvider)));
-
 class BatchSetPillSheetModifiedHistory {
   final DatabaseConnection databaseConnection;
   BatchSetPillSheetModifiedHistory(this.databaseConnection);

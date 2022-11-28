@@ -39,9 +39,9 @@ void main() {
       final batchFactory = MockBatchFactory();
       final endInitialSetting = MockEndInitialSetting();
       final batchSetSetting = MockBatchSetSetting();
-      final batchSetPillSheets = MockBatchSetPillSheets();
-      final batchSetPillSheetModifiedHistory = MockBatchSetPillSheetModifiedHistory();
-      final batchSetPillSheetGroup = MockBatchSetPillSheetGroup();
+      
+      
+      
 
       final container = ProviderContainer(
         overrides: [
@@ -66,9 +66,9 @@ void main() {
       final endInitialSetting = MockEndInitialSetting();
       final batchFactory = MockBatchFactory();
       final batchSetSetting = MockBatchSetSetting();
-      final batchSetPillSheets = MockBatchSetPillSheets();
-      final batchSetPillSheetModifiedHistory = MockBatchSetPillSheetModifiedHistory();
-      final batchSetPillSheetGroup = MockBatchSetPillSheetGroup();
+      
+      
+      
 
       final container = ProviderContainer(
         overrides: [
@@ -103,9 +103,9 @@ void main() {
       final endInitialSetting = MockEndInitialSetting();
       final batchFactory = MockBatchFactory();
       final batchSetSetting = MockBatchSetSetting();
-      final batchSetPillSheets = MockBatchSetPillSheets();
-      final batchSetPillSheetModifiedHistory = MockBatchSetPillSheetModifiedHistory();
-      final batchSetPillSheetGroup = MockBatchSetPillSheetGroup();
+      
+      
+      
 
       final container = ProviderContainer(
         overrides: [
@@ -134,9 +134,9 @@ void main() {
       final endInitialSetting = MockEndInitialSetting();
       final batchFactory = MockBatchFactory();
       final batchSetSetting = MockBatchSetSetting();
-      final batchSetPillSheets = MockBatchSetPillSheets();
-      final batchSetPillSheetModifiedHistory = MockBatchSetPillSheetModifiedHistory();
-      final batchSetPillSheetGroup = MockBatchSetPillSheetGroup();
+      
+      
+      
 
       final container = ProviderContainer(
         overrides: [
@@ -166,9 +166,9 @@ void main() {
       final endInitialSetting = MockEndInitialSetting();
       final batchFactory = MockBatchFactory();
       final batchSetSetting = MockBatchSetSetting();
-      final batchSetPillSheets = MockBatchSetPillSheets();
-      final batchSetPillSheetModifiedHistory = MockBatchSetPillSheetModifiedHistory();
-      final batchSetPillSheetGroup = MockBatchSetPillSheetGroup();
+      
+      
+      
 
       final container = ProviderContainer(
         overrides: [
@@ -202,9 +202,9 @@ void main() {
       final endInitialSetting = MockEndInitialSetting();
       final batchFactory = MockBatchFactory();
       final batchSetSetting = MockBatchSetSetting();
-      final batchSetPillSheets = MockBatchSetPillSheets();
-      final batchSetPillSheetModifiedHistory = MockBatchSetPillSheetModifiedHistory();
-      final batchSetPillSheetGroup = MockBatchSetPillSheetGroup();
+      
+      
+      
 
       final container = ProviderContainer(
         overrides: [
@@ -230,9 +230,9 @@ void main() {
       final endInitialSetting = MockEndInitialSetting();
       final batchFactory = MockBatchFactory();
       final batchSetSetting = MockBatchSetSetting();
-      final batchSetPillSheets = MockBatchSetPillSheets();
-      final batchSetPillSheetModifiedHistory = MockBatchSetPillSheetModifiedHistory();
-      final batchSetPillSheetGroup = MockBatchSetPillSheetGroup();
+      
+      
+      
 
       final container = ProviderContainer(
         overrides: [
@@ -265,16 +265,16 @@ void main() {
       when(batchFactory.batch()).thenReturn(batch);
 
       final pillSheet = PillSheet(id: firestoreIDGenerator(), typeInfo: PillSheetType.pillsheet_21.typeInfo, beginingDate: _today);
-      final batchSetPillSheets = MockBatchSetPillSheets();
+      
       when(batchSetPillSheets(batch, [pillSheet])).thenReturn([pillSheet.copyWith(id: "sheet_id")]);
 
       final pillSheetGroup = PillSheetGroup(pillSheetIDs: ["sheet_id"], pillSheets: [pillSheet.copyWith(id: "sheet_id")], createdAt: now());
-      final batchSetPillSheetGroup = MockBatchSetPillSheetGroup();
+      
       when(batchSetPillSheetGroup(batch, pillSheetGroup)).thenReturn(pillSheetGroup.copyWith(id: "group_id"));
 
       final history =
           PillSheetModifiedHistoryServiceActionFactory.createCreatedPillSheetAction(pillSheetGroupID: "group_id", pillSheetIDs: ["sheet_id"]);
-      final batchSetPillSheetModifiedHistory = MockBatchSetPillSheetModifiedHistory();
+      
       when(batchSetPillSheetModifiedHistory(batch, history)).thenReturn(null);
 
       const setting = Setting(
@@ -336,7 +336,7 @@ void main() {
         lastTakenDate: _today.subtract(const Duration(days: 1)),
         groupIndex: 1,
       );
-      final batchSetPillSheets = MockBatchSetPillSheets();
+      
 
       when(batchSetPillSheets(batch, [pillSheet, pillSheet2])).thenReturn([pillSheet.copyWith(id: "sheet_id"), pillSheet2.copyWith(id: "sheet_id2")]);
 
@@ -348,12 +348,12 @@ void main() {
         ],
         createdAt: now(),
       );
-      final batchSetPillSheetGroup = MockBatchSetPillSheetGroup();
+      
       when(batchSetPillSheetGroup(batch, pillSheetGroup)).thenReturn(pillSheetGroup.copyWith(id: "group_id"));
 
       final history = PillSheetModifiedHistoryServiceActionFactory.createCreatedPillSheetAction(
           pillSheetGroupID: "group_id", pillSheetIDs: ["sheet_id", "sheet_id2"]);
-      final batchSetPillSheetModifiedHistory = MockBatchSetPillSheetModifiedHistory();
+      
       when(batchSetPillSheetModifiedHistory(batch, history)).thenReturn(null);
 
       const setting = Setting(
@@ -415,16 +415,16 @@ void main() {
       when(batchFactory.batch()).thenReturn(batch);
 
       final pillSheet = PillSheet(id: firestoreIDGenerator(), typeInfo: PillSheetType.pillsheet_24_rest_4.typeInfo, beginingDate: _today);
-      final batchSetPillSheets = MockBatchSetPillSheets();
+      
       when(batchSetPillSheets(batch, [pillSheet])).thenReturn([pillSheet.copyWith(id: "sheet_id")]);
 
       final pillSheetGroup = PillSheetGroup(pillSheetIDs: ["sheet_id"], pillSheets: [pillSheet.copyWith(id: "sheet_id")], createdAt: now());
-      final batchSetPillSheetGroup = MockBatchSetPillSheetGroup();
+      
       when(batchSetPillSheetGroup(batch, pillSheetGroup)).thenReturn(pillSheetGroup.copyWith(id: "group_id"));
 
       final history =
           PillSheetModifiedHistoryServiceActionFactory.createCreatedPillSheetAction(pillSheetGroupID: "group_id", pillSheetIDs: ["sheet_id"]);
-      final batchSetPillSheetModifiedHistory = MockBatchSetPillSheetModifiedHistory();
+      
       when(batchSetPillSheetModifiedHistory(batch, history)).thenReturn(null);
 
       final batchSetSetting = MockBatchSetSetting();

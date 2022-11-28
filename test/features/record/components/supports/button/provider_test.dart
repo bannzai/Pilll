@@ -36,18 +36,18 @@ void main() {
       final pillSheet =
           PillSheet(id: firestoreIDGenerator(), id: "pill_sheet_id_1", typeInfo: PillSheetType.pillsheet_28_0.typeInfo, beginingDate: now());
       final updatedPillSheet = pillSheet.copyWith(restDurations: [notYetEndRestDuration]);
-      final batchSetPillSheets = MockBatchSetPillSheets();
+
       when(batchSetPillSheets(batch, [updatedPillSheet])).thenReturn([updatedPillSheet]);
 
       final pillSheetGroup = PillSheetGroup(id: "group_id", pillSheetIDs: ["pill_sheet_id_1"].toList(), pillSheets: [pillSheet], createdAt: now());
       final updatedPillSheetGroup =
           PillSheetGroup(id: "group_id", pillSheetIDs: ["pill_sheet_id_1"].toList(), pillSheets: [updatedPillSheet], createdAt: now());
-      final batchSetPillSheetGroup = MockBatchSetPillSheetGroup();
+
       when(batchSetPillSheetGroup(batch, updatedPillSheetGroup)).thenReturn(updatedPillSheetGroup.copyWith(id: "group_id"));
 
       final history = PillSheetModifiedHistoryServiceActionFactory.createBeganRestDurationAction(
           pillSheetGroupID: "group_id", before: pillSheet, after: updatedPillSheet, restDuration: notYetEndRestDuration);
-      final batchSetPillSheetModifiedHistory = MockBatchSetPillSheetModifiedHistory();
+
       when(batchSetPillSheetModifiedHistory(batch, history)).thenReturn(null);
 
       final beginRestDuration = BeginRestDuration(
@@ -89,18 +89,18 @@ void main() {
           beginingDate: now(),
           restDurations: [notYetEndRestDuration]);
       final updatedPillSheet = pillSheet.copyWith(restDurations: [endedRestDuration]);
-      final batchSetPillSheets = MockBatchSetPillSheets();
+
       when(batchSetPillSheets(batch, [updatedPillSheet])).thenReturn([updatedPillSheet]);
 
       final pillSheetGroup = PillSheetGroup(id: "group_id", pillSheetIDs: ["pill_sheet_id_1"].toList(), pillSheets: [pillSheet], createdAt: now());
       final updatedPillSheetGroup =
           PillSheetGroup(id: "group_id", pillSheetIDs: ["pill_sheet_id_1"].toList(), pillSheets: [updatedPillSheet], createdAt: now());
-      final batchSetPillSheetGroup = MockBatchSetPillSheetGroup();
+
       when(batchSetPillSheetGroup(batch, updatedPillSheetGroup)).thenReturn(updatedPillSheetGroup.copyWith(id: "group_id"));
 
       final history = PillSheetModifiedHistoryServiceActionFactory.createEndedRestDurationAction(
           pillSheetGroupID: "group_id", before: pillSheet, after: updatedPillSheet, restDuration: endedRestDuration);
-      final batchSetPillSheetModifiedHistory = MockBatchSetPillSheetModifiedHistory();
+
       when(batchSetPillSheetModifiedHistory(batch, history)).thenReturn(null);
 
       final endRestDuration = EndRestDuration(
@@ -166,7 +166,7 @@ void main() {
         updatedPillSheet2,
         updatedPillSheet3,
       ];
-      final batchSetPillSheets = MockBatchSetPillSheets();
+
       when(batchSetPillSheets(batch, updatedPillSheets)).thenReturn(updatedPillSheets);
       expect(
         isSameDay(pillSheets[0].beginingDate, updatedPillSheet1.beginingDate),
@@ -184,12 +184,12 @@ void main() {
       final pillSheetGroup =
           PillSheetGroup(id: "group_id", pillSheetIDs: pillSheets.map((e) => e.id!).toList(), pillSheets: pillSheets, createdAt: now());
       final updatedPillSheetGroup = pillSheetGroup.copyWith(pillSheets: updatedPillSheets);
-      final batchSetPillSheetGroup = MockBatchSetPillSheetGroup();
+
       when(batchSetPillSheetGroup(batch, updatedPillSheetGroup)).thenReturn(updatedPillSheetGroup.copyWith(id: "group_id"));
 
       final history = PillSheetModifiedHistoryServiceActionFactory.createEndedRestDurationAction(
           pillSheetGroupID: "group_id", before: pillSheets[0], after: updatedPillSheets[0], restDuration: endedRestDuration);
-      final batchSetPillSheetModifiedHistory = MockBatchSetPillSheetModifiedHistory();
+
       when(batchSetPillSheetModifiedHistory(batch, history)).thenReturn(null);
 
       final endRestDuration = EndRestDuration(

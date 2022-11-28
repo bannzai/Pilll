@@ -38,7 +38,7 @@ void main() {
           groupIndex: 0,
           lastTakenDate: today(),
         );
-        final batchSetPillSheets = MockBatchSetPillSheets();
+
         when(batchSetPillSheets(batch, [pillSheet.copyWith(lastTakenDate: yesterday.subtract(const Duration(days: 1)))]))
             .thenReturn([pillSheet.copyWith(lastTakenDate: yesterday.subtract(const Duration(days: 1)))]);
 
@@ -58,7 +58,7 @@ void main() {
           ],
           createdAt: now(),
         );
-        final batchSetPillSheetGroup = MockBatchSetPillSheetGroup();
+
         when(batchSetPillSheetGroup(batch, updatedPillSheetGroup)).thenReturn(updatedPillSheetGroup);
 
         final history = PillSheetModifiedHistoryServiceActionFactory.createRevertTakenPillAction(
@@ -68,7 +68,7 @@ void main() {
             lastTakenDate: yesterday.subtract(const Duration(days: 1)),
           ),
         );
-        final batchSetPillSheetModifiedHistory = MockBatchSetPillSheetModifiedHistory();
+
         when(batchSetPillSheetModifiedHistory(batch, history)).thenReturn(null);
 
         const setting = Setting(
@@ -111,7 +111,7 @@ void main() {
           groupIndex: 0,
           lastTakenDate: today(),
         );
-        final batchSetPillSheets = MockBatchSetPillSheets();
+
         when(batchSetPillSheets(batch, [pillSheet.copyWith(lastTakenDate: yesterday)])).thenReturn([pillSheet.copyWith(lastTakenDate: yesterday)]);
 
         final pillSheetGroup = PillSheetGroup(
@@ -130,7 +130,7 @@ void main() {
           ],
           createdAt: now(),
         );
-        final batchSetPillSheetGroup = MockBatchSetPillSheetGroup();
+
         when(batchSetPillSheetGroup(batch, updatedPillSheetGroup)).thenReturn(updatedPillSheetGroup);
 
         final history = PillSheetModifiedHistoryServiceActionFactory.createRevertTakenPillAction(
@@ -140,7 +140,7 @@ void main() {
             lastTakenDate: yesterday,
           ),
         );
-        final batchSetPillSheetModifiedHistory = MockBatchSetPillSheetModifiedHistory();
+
         when(batchSetPillSheetModifiedHistory(batch, history)).thenReturn(null);
 
         const setting = Setting(
@@ -190,7 +190,7 @@ void main() {
             ),
           ],
         );
-        final batchSetPillSheets = MockBatchSetPillSheets();
+
         when(batchSetPillSheets(
           batch,
           [pillSheet.copyWith(lastTakenDate: beginDate.subtract(const Duration(days: 1)), restDurations: [])],
@@ -212,7 +212,7 @@ void main() {
           ],
           createdAt: now(),
         );
-        final batchSetPillSheetGroup = MockBatchSetPillSheetGroup();
+
         when(batchSetPillSheetGroup(batch, updatedPillSheetGroup)).thenReturn(updatedPillSheetGroup);
 
         final history = PillSheetModifiedHistoryServiceActionFactory.createRevertTakenPillAction(
@@ -223,7 +223,7 @@ void main() {
             restDurations: [],
           ),
         );
-        final batchSetPillSheetModifiedHistory = MockBatchSetPillSheetModifiedHistory();
+
         when(batchSetPillSheetModifiedHistory(batch, history)).thenReturn(null);
 
         const setting = Setting(
@@ -274,7 +274,7 @@ void main() {
             ),
           ],
         );
-        final batchSetPillSheets = MockBatchSetPillSheets();
+
         when(batchSetPillSheets(
           batch,
           [pillSheet.copyWith(lastTakenDate: yesterday)],
@@ -296,7 +296,7 @@ void main() {
           ],
           createdAt: now(),
         );
-        final batchSetPillSheetGroup = MockBatchSetPillSheetGroup();
+
         when(batchSetPillSheetGroup(batch, updatedPillSheetGroup)).thenReturn(updatedPillSheetGroup);
 
         final history = PillSheetModifiedHistoryServiceActionFactory.createRevertTakenPillAction(
@@ -304,7 +304,7 @@ void main() {
           before: pillSheet,
           after: pillSheet.copyWith(lastTakenDate: yesterday),
         );
-        final batchSetPillSheetModifiedHistory = MockBatchSetPillSheetModifiedHistory();
+
         when(batchSetPillSheetModifiedHistory(batch, history)).thenReturn(null);
 
         const setting = Setting(
@@ -359,7 +359,6 @@ void main() {
           groupIndex: 1,
         );
 
-        final batchSetPillSheets = MockBatchSetPillSheets();
         when(batchSetPillSheets(batch, [
           pillSheet,
           pillSheet2.copyWith(lastTakenDate: yesterday),
@@ -383,7 +382,7 @@ void main() {
           ],
           createdAt: now(),
         );
-        final batchSetPillSheetGroup = MockBatchSetPillSheetGroup();
+
         when(batchSetPillSheetGroup(batch, updatedPillSheetGroup)).thenReturn(updatedPillSheetGroup);
 
         final history = PillSheetModifiedHistoryServiceActionFactory.createRevertTakenPillAction(
@@ -393,7 +392,7 @@ void main() {
             lastTakenDate: yesterday,
           ),
         );
-        final batchSetPillSheetModifiedHistory = MockBatchSetPillSheetModifiedHistory();
+
         when(batchSetPillSheetModifiedHistory(batch, history)).thenReturn(null);
 
         const setting = Setting(
@@ -447,7 +446,6 @@ void main() {
           groupIndex: 1,
         );
 
-        final batchSetPillSheets = MockBatchSetPillSheets();
         when(batchSetPillSheets(batch, [
           pillSheet.copyWith(lastTakenDate: _today.subtract(const Duration(days: 4))),
           pillSheet2.copyWith(lastTakenDate: pillSheet2.beginingDate.subtract(const Duration(days: 1))),
@@ -471,12 +469,12 @@ void main() {
           ],
           createdAt: now(),
         );
-        final batchSetPillSheetGroup = MockBatchSetPillSheetGroup();
+
         when(batchSetPillSheetGroup(batch, updatedPillSheetGroup)).thenReturn(updatedPillSheetGroup);
 
         final history = PillSheetModifiedHistoryServiceActionFactory.createRevertTakenPillAction(
             pillSheetGroupID: "group_id", before: pillSheet2, after: pillSheet.copyWith(lastTakenDate: _today.subtract(const Duration(days: 4))));
-        final batchSetPillSheetModifiedHistory = MockBatchSetPillSheetModifiedHistory();
+
         when(batchSetPillSheetModifiedHistory(batch, history)).thenReturn(null);
 
         const setting = Setting(
@@ -532,7 +530,6 @@ void main() {
           ],
         );
 
-        final batchSetPillSheets = MockBatchSetPillSheets();
         when(batchSetPillSheets(batch, [
           pillSheet.copyWith(lastTakenDate: _today.subtract(const Duration(days: 4))),
           pillSheet2.copyWith(lastTakenDate: pillSheet2.beginingDate.subtract(const Duration(days: 1)), restDurations: []),
@@ -556,14 +553,14 @@ void main() {
           ],
           createdAt: now(),
         );
-        final batchSetPillSheetGroup = MockBatchSetPillSheetGroup();
+
         when(batchSetPillSheetGroup(batch, updatedPillSheetGroup)).thenReturn(updatedPillSheetGroup);
 
         final history = PillSheetModifiedHistoryServiceActionFactory.createRevertTakenPillAction(
             pillSheetGroupID: "group_id",
             before: pillSheet2,
             after: pillSheet.copyWith(lastTakenDate: _today.subtract(const Duration(days: 4)), restDurations: []));
-        final batchSetPillSheetModifiedHistory = MockBatchSetPillSheetModifiedHistory();
+
         when(batchSetPillSheetModifiedHistory(batch, history)).thenReturn(null);
 
         const setting = Setting(
