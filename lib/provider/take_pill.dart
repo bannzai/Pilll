@@ -22,7 +22,7 @@ final takePillProvider = Provider(
 
 class TakePill {
   final BatchFactory batchFactory;
-  final BatchSetPillSheets batchSetPillSheets;
+
   final BatchSetPillSheetModifiedHistory batchSetPillSheetModifiedHistory;
   final BatchSetPillSheetGroup batchSetPillSheetGroup;
 

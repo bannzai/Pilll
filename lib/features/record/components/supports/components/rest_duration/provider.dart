@@ -19,7 +19,7 @@ final beginRestDurationProvider = Provider(
 
 class BeginRestDuration {
   final BatchFactory batchFactory;
-  final BatchSetPillSheets batchSetPillSheets;
+
   final BatchSetPillSheetGroup batchSetPillSheetGroup;
   final BatchSetPillSheetModifiedHistory batchSetPillSheetModifiedHistory;
 
@@ -71,7 +71,7 @@ final endRestDurationProvider = Provider(
 
 class EndRestDuration {
   final BatchFactory batchFactory;
-  final BatchSetPillSheets batchSetPillSheets;
+
   final BatchSetPillSheetGroup batchSetPillSheetGroup;
   final BatchSetPillSheetModifiedHistory batchSetPillSheetModifiedHistory;
 

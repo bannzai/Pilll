@@ -24,7 +24,7 @@ final addPillSheetGroupProvider = Provider(
 class AddPillSheetGroup {
   final BatchFactory batchFactory;
   final BatchSetPillSheetGroup batchSetPillSheetGroup;
-  final BatchSetPillSheets batchSetPillSheets;
+
   final BatchSetPillSheetModifiedHistory batchSetPillSheetModifiedHistory;
   final BatchSetSetting batchSetSetting;
 

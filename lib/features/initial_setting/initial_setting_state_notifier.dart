@@ -30,7 +30,7 @@ class InitialSettingStateNotifier extends StateNotifier<InitialSettingState> {
   final EndInitialSetting endInitialSetting;
   final BatchFactory batchFactory;
   final BatchSetSetting batchSetSetting;
-  final BatchSetPillSheets batchSetPillSheets;
+
   final BatchSetPillSheetModifiedHistory batchSetPillSheetModifiedHistory;
   final BatchSetPillSheetGroup batchSetPillSheetGroup;
 
