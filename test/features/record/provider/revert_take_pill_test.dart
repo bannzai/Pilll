@@ -112,8 +112,6 @@ void main() {
           lastTakenDate: today(),
         );
 
-        when(batchSetPillSheets(batch, [pillSheet.copyWith(lastTakenDate: yesterday)])).thenReturn([pillSheet.copyWith(lastTakenDate: yesterday)]);
-
         final pillSheetGroup = PillSheetGroup(
           id: "group_id",
           pillSheetIDs: ["sheet_id"],

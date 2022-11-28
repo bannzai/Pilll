@@ -117,8 +117,6 @@ void main() {
         groupIndex: 1,
       );
 
-      when(batchSetPillSheets(batch, [pillSheet, pillSheet2])).thenReturn([pillSheet.copyWith(id: "sheet_id"), pillSheet2.copyWith(id: "sheet_id2")]);
-
       final pillSheetGroup = PillSheetGroup(
         pillSheetIDs: ["sheet_id", "sheet_id2"],
         pillSheets: [

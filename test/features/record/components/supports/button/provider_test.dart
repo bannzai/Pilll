@@ -37,8 +37,6 @@ void main() {
           PillSheet(id: firestoreIDGenerator(), id: "pill_sheet_id_1", typeInfo: PillSheetType.pillsheet_28_0.typeInfo, beginingDate: now());
       final updatedPillSheet = pillSheet.copyWith(restDurations: [notYetEndRestDuration]);
 
-      when(batchSetPillSheets(batch, [updatedPillSheet])).thenReturn([updatedPillSheet]);
-
       final pillSheetGroup = PillSheetGroup(id: "group_id", pillSheetIDs: ["pill_sheet_id_1"].toList(), pillSheets: [pillSheet], createdAt: now());
       final updatedPillSheetGroup =
           PillSheetGroup(id: "group_id", pillSheetIDs: ["pill_sheet_id_1"].toList(), pillSheets: [updatedPillSheet], createdAt: now());
@@ -89,8 +87,6 @@ void main() {
           beginingDate: now(),
           restDurations: [notYetEndRestDuration]);
       final updatedPillSheet = pillSheet.copyWith(restDurations: [endedRestDuration]);
-
-      when(batchSetPillSheets(batch, [updatedPillSheet])).thenReturn([updatedPillSheet]);
 
       final pillSheetGroup = PillSheetGroup(id: "group_id", pillSheetIDs: ["pill_sheet_id_1"].toList(), pillSheets: [pillSheet], createdAt: now());
       final updatedPillSheetGroup =
@@ -167,7 +163,6 @@ void main() {
         updatedPillSheet3,
       ];
 
-      when(batchSetPillSheets(batch, updatedPillSheets)).thenReturn(updatedPillSheets);
       expect(
         isSameDay(pillSheets[0].beginingDate, updatedPillSheet1.beginingDate),
         true,

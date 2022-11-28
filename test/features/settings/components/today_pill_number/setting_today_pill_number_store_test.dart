@@ -43,8 +43,6 @@ void main() {
         ),
       );
 
-      when(batchSetPillSheets(batch, [updatedPillSheet])).thenReturn([updatedPillSheet]);
-
       final pillSheetGroup = PillSheetGroup(
         id: "group_id",
         pillSheetIDs: ["sheet_id"],
@@ -108,8 +106,6 @@ void main() {
           const Duration(days: 1),
         ),
       );
-
-      when(batchSetPillSheets(batch, [updatedPillSheet])).thenReturn([updatedPillSheet]);
 
       final pillSheetGroup = PillSheetGroup(
         id: "group_id",

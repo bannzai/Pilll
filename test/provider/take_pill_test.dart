@@ -69,7 +69,6 @@ void main() {
         when(batchFactory.batch()).thenReturn(batch);
 
         final updatedActivePillSheet = activedPillSheet.copyWith(lastTakenDate: takenDate);
-        when(batchSetPillSheets(batch, [updatedActivePillSheet])).thenReturn([updatedActivePillSheet]);
 
         final batchSetPillSheetModifiedHistory = MockBatchSetPillSheetModifiedHistory();
         final history = PillSheetModifiedHistoryServiceActionFactory.createTakenPillAction(
