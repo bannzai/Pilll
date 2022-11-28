@@ -71,8 +71,6 @@ class ChangePillNumber {
       updatedPillSheets.add(updatedPillSheet);
     });
 
-    batchSetPillSheets(batch, updatedPillSheets);
-
     final history = PillSheetModifiedHistoryServiceActionFactory.createChangedPillNumberAction(
       pillSheetGroupID: pillSheetGroup.id,
       before: activedPillSheet,

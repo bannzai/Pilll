@@ -42,7 +42,7 @@ class BeginRestDuration {
       restDurations: [...activePillSheet.restDurations, restDuration],
     );
     final updatedPillSheetGroup = pillSheetGroup.replaced(updatedPillSheet);
-    batchSetPillSheets(batch, updatedPillSheetGroup.pillSheets);
+    
     batchSetPillSheetGroup(batch, updatedPillSheetGroup);
     batchSetPillSheetModifiedHistory(
       batch,
@@ -106,7 +106,7 @@ class EndRestDuration {
         updatedPillSheets.add(pillSheet);
       }
     }
-    batchSetPillSheets(batch, updatedPillSheets);
+    
     batchSetPillSheetGroup(batch, pillSheetGroup.copyWith(pillSheets: updatedPillSheets));
     batchSetPillSheetModifiedHistory(
       batch,
