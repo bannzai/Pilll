@@ -254,11 +254,15 @@ void main() {
       when(mockTodayRepository.now()).thenReturn(_today);
       when(mockTodayRepository.now()).thenReturn(_today);
 
+      final mockIDGenerator = MockFirestoreIDGenerator();
+      when(mockIDGenerator.call()).thenReturn("sheet_id");
+      firestoreIDGenerator = mockIDGenerator;
+
       final batchFactory = MockBatchFactory();
       final batch = MockWriteBatch();
       when(batchFactory.batch()).thenReturn(batch);
 
-      final pillSheet = PillSheet(id: firestoreIDGenerator(), typeInfo: PillSheetType.pillsheet_21.typeInfo, beginingDate: _today);
+      final pillSheet = PillSheet(id: "sheet_id", typeInfo: PillSheetType.pillsheet_21.typeInfo, beginingDate: _today);
 
       final pillSheetGroup = PillSheetGroup(pillSheetIDs: ["sheet_id"], pillSheets: [pillSheet.copyWith(id: "sheet_id")], createdAt: now());
       final batchSetPillSheetGroup = MockBatchSetPillSheetGroup();
@@ -307,12 +311,17 @@ void main() {
       when(mockTodayRepository.now()).thenReturn(_today);
       when(mockTodayRepository.now()).thenReturn(_today);
 
+      var idGeneratorCallCount = 0;
+      final mockIDGenerator = MockFirestoreIDGenerator();
+      when(mockIDGenerator.call()).thenAnswer((_) => ["sheet_id", "sheet_id2"][idGeneratorCallCount++]);
+      firestoreIDGenerator = mockIDGenerator;
+
       final batchFactory = MockBatchFactory();
       final batch = MockWriteBatch();
       when(batchFactory.batch()).thenReturn(batch);
 
       final pillSheet = PillSheet(
-        id: firestoreIDGenerator(),
+        id: "sheet_id",
         typeInfo: PillSheetType.pillsheet_28_0.typeInfo,
         beginingDate: _today.subtract(
           const Duration(days: 28),
@@ -321,7 +330,7 @@ void main() {
         lastTakenDate: DateTime.parse("2020-09-18"),
       );
       final pillSheet2 = PillSheet(
-        id: firestoreIDGenerator(),
+        id: "sheet_id2",
         typeInfo: PillSheetType.pillsheet_21.typeInfo,
         beginingDate: _today,
         lastTakenDate: _today.subtract(const Duration(days: 1)),
@@ -397,11 +406,15 @@ void main() {
       when(mockTodayRepository.now()).thenReturn(_today);
       when(mockTodayRepository.now()).thenReturn(_today);
 
+      final mockIDGenerator = MockFirestoreIDGenerator();
+      when(mockIDGenerator.call()).thenReturn("sheet_id");
+      firestoreIDGenerator = mockIDGenerator;
+
       final batchFactory = MockBatchFactory();
       final batch = MockWriteBatch();
       when(batchFactory.batch()).thenReturn(batch);
 
-      final pillSheet = PillSheet(id: firestoreIDGenerator(), typeInfo: PillSheetType.pillsheet_24_rest_4.typeInfo, beginingDate: _today);
+      final pillSheet = PillSheet(id: "sheet_id", typeInfo: PillSheetType.pillsheet_24_rest_4.typeInfo, beginingDate: _today);
 
       final pillSheetGroup = PillSheetGroup(pillSheetIDs: ["sheet_id"], pillSheets: [pillSheet.copyWith(id: "sheet_id")], createdAt: now());
       final batchSetPillSheetGroup = MockBatchSetPillSheetGroup();
