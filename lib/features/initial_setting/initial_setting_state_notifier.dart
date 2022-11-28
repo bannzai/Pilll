@@ -19,7 +19,6 @@ final initialSettingStateNotifierProvider = StateNotifierProvider.autoDispose<In
     ref.watch(endInitialSettingProvider),
     ref.watch(batchFactoryProvider),
     ref.watch(batchSetSettingProvider),
-    
     ref.watch(batchSetPillSheetModifiedHistoryProvider),
     ref.watch(batchSetPillSheetGroupProvider),
     now(),
@@ -111,16 +110,13 @@ class InitialSettingStateNotifier extends StateNotifier<InitialSettingState> {
 
     final todayPillNumber = state.todayPillNumber;
     if (todayPillNumber != null) {
-      final createdPillSheets = batchSetPillSheets(
-        batch,
-        state.pillSheetTypes.asMap().keys.map((pageIndex) {
-          return InitialSettingState.buildPillSheet(
-            pageIndex: pageIndex,
-            todayPillNumber: todayPillNumber,
-            pillSheetTypes: state.pillSheetTypes,
-          );
-        }).toList(),
-      );
+      final createdPillSheets = state.pillSheetTypes.asMap().keys.map((pageIndex) {
+        return InitialSettingState.buildPillSheet(
+          pageIndex: pageIndex,
+          todayPillNumber: todayPillNumber,
+          pillSheetTypes: state.pillSheetTypes,
+        );
+      }).toList();
 
       final pillSheetIDs = createdPillSheets.map((e) => e.id!).toList();
       final createdPillSheetGroup = batchSetPillSheetGroup(
