@@ -83,7 +83,7 @@ class PillSheet with _$PillSheet {
       fromJson: TimestampConverter.timestampToDateTime,
       toJson: TimestampConverter.dateTimeToTimestamp,
     )
-        DateTime? createdAt,
+        required DateTime? createdAt,
     @JsonKey(
       fromJson: TimestampConverter.timestampToDateTime,
       toJson: TimestampConverter.dateTimeToTimestamp,
