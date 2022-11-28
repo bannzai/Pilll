@@ -27,6 +27,7 @@ import 'package:pilll/utils/error_log.dart';
   PremiumAndTrial,
   Setting,
   BatchSetPillSheetGroup,
+  BatchSetPillSheets,
   BatchSetPillSheetModifiedHistory,
   BatchSetSetting,
   SetSetting,

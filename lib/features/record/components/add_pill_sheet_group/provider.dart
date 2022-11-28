@@ -16,7 +16,7 @@ final addPillSheetGroupProvider = Provider(
     batchFactory: ref.watch(batchFactoryProvider),
     batchSetPillSheetGroup: ref.watch(batchSetPillSheetGroupProvider),
     batchSetPillSheetModifiedHistory: ref.watch(batchSetPillSheetModifiedHistoryProvider),
-
+    batchSetPillSheets: ref.watch(batchSetPillSheetsProvider),
     batchSetSetting: ref.watch(batchSetSettingProvider),
   ),
 );
@@ -24,13 +24,14 @@ final addPillSheetGroupProvider = Provider(
 class AddPillSheetGroup {
   final BatchFactory batchFactory;
   final BatchSetPillSheetGroup batchSetPillSheetGroup;
+  final BatchSetPillSheets batchSetPillSheets;
   final BatchSetPillSheetModifiedHistory batchSetPillSheetModifiedHistory;
   final BatchSetSetting batchSetSetting;
 
   AddPillSheetGroup({
     required this.batchFactory,
     required this.batchSetPillSheetGroup,
-
+    required this.batchSetPillSheets,
     required this.batchSetPillSheetModifiedHistory,
     required this.batchSetSetting,
   });
@@ -44,7 +45,7 @@ class AddPillSheetGroup {
     final batch = batchFactory.batch();
 
     final n = now();
-
+    final createdPillSheets = batchSetPillSheets(
       batch,
       pillSheetTypes.asMap().keys.map((pageIndex) {
         final pillSheetType = backportPillSheetTypes(pillSheetTypes)[pageIndex];

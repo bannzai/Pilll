@@ -34,8 +34,8 @@ void main() {
         groupIndex: 0,
         lastTakenDate: null,
       );
-
-
+      final batchSetPillSheets = MockBatchSetPillSheets();
+      when(batchSetPillSheets(batch, [pillSheet])).thenReturn([
         pillSheet.copyWith(id: "sheet_id"),
       ]);
 
@@ -79,7 +79,7 @@ void main() {
       final addPillSheetGroup = AddPillSheetGroup(
         batchFactory: batchFactory,
         batchSetPillSheetGroup: batchSetPillSheetGroup,
-
+        batchSetPillSheets: batchSetPillSheets,
         batchSetPillSheetModifiedHistory: batchSetPillSheetModifiedHistory,
         batchSetSetting: batchSetSetting,
       );
@@ -114,8 +114,8 @@ void main() {
         lastTakenDate: null,
         groupIndex: 1,
       );
-
-
+      final batchSetPillSheets = MockBatchSetPillSheets();
+      when(batchSetPillSheets(batch, [pillSheet, pillSheet2])).thenReturn([pillSheet.copyWith(id: "sheet_id"), pillSheet2.copyWith(id: "sheet_id2")]);
 
       final pillSheetGroup = PillSheetGroup(
         pillSheetIDs: ["sheet_id", "sheet_id2"],
@@ -157,7 +157,7 @@ void main() {
       final addPillSheetGroup = AddPillSheetGroup(
         batchFactory: batchFactory,
         batchSetPillSheetGroup: batchSetPillSheetGroup,
-
+        batchSetPillSheets: batchSetPillSheets,
         batchSetPillSheetModifiedHistory: batchSetPillSheetModifiedHistory,
         batchSetSetting: batchSetSetting,
       );
