@@ -117,43 +117,52 @@ class MockAnalytics extends _i1.Mock implements _i16.Analytics {
   }
 
   @override
-  dynamic logEvent({
+  void logEvent({
     String? name,
     Map<String, dynamic>? parameters,
   }) =>
-      super.noSuchMethod(Invocation.method(
-        #logEvent,
-        [],
-        {
-          #name: name,
-          #parameters: parameters,
-        },
-      ));
+      super.noSuchMethod(
+        Invocation.method(
+          #logEvent,
+          [],
+          {
+            #name: name,
+            #parameters: parameters,
+          },
+        ),
+        returnValueForMissingStub: null,
+      );
   @override
-  dynamic setCurrentScreen({
+  void setCurrentScreen({
     String? screenName,
     String? screenClassOverride = r'Flutter',
   }) =>
-      super.noSuchMethod(Invocation.method(
-        #setCurrentScreen,
-        [],
-        {
-          #screenName: screenName,
-          #screenClassOverride: screenClassOverride,
-        },
-      ));
+      super.noSuchMethod(
+        Invocation.method(
+          #setCurrentScreen,
+          [],
+          {
+            #screenName: screenName,
+            #screenClassOverride: screenClassOverride,
+          },
+        ),
+        returnValueForMissingStub: null,
+      );
   @override
-  dynamic setUserProperties(
+  void setUserProperties(
     String? name,
     dynamic value,
   ) =>
-      super.noSuchMethod(Invocation.method(
-        #setUserProperties,
-        [
-          name,
-          value,
-        ],
-      ));
+      super.noSuchMethod(
+        Invocation.method(
+          #setUserProperties,
+          [
+            name,
+            value,
+          ],
+        ),
+        returnValueForMissingStub: null,
+      );
 }
 
 /// A class which mocks [BatchFactory].
@@ -647,25 +656,6 @@ class MockDatabaseConnection extends _i1.Mock
         ),
         returnValue: _FakeDocumentReference_8<_i23.DiarySetting>(),
       ) as _i3.DocumentReference<_i23.DiarySetting>);
-  @override
-  _i3.CollectionReference<_i19.PillSheet> pillSheetsReference() =>
-      (super.noSuchMethod(
-        Invocation.method(
-          #pillSheetsReference,
-          [],
-        ),
-        returnValue: _FakeCollectionReference_9<_i19.PillSheet>(),
-      ) as _i3.CollectionReference<_i19.PillSheet>);
-  @override
-  _i3.DocumentReference<_i19.PillSheet> pillSheetReference(
-          String? pillSheetID) =>
-      (super.noSuchMethod(
-        Invocation.method(
-          #pillSheetReference,
-          [pillSheetID],
-        ),
-        returnValue: _FakeDocumentReference_8<_i19.PillSheet>(),
-      ) as _i3.DocumentReference<_i19.PillSheet>);
   @override
   _i3.CollectionReference<_i24.Diary> diariesReference() => (super.noSuchMethod(
         Invocation.method(

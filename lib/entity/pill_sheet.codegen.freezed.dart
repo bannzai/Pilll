@@ -451,7 +451,7 @@ PillSheet _$PillSheetFromJson(Map<String, dynamic> json) {
 /// @nodoc
 mixin _$PillSheet {
   @JsonKey(includeIfNull: false)
-  String? get id => throw _privateConstructorUsedError;
+  String get id => throw _privateConstructorUsedError;
   @JsonKey()
   PillSheetTypeInfo get typeInfo => throw _privateConstructorUsedError;
   @JsonKey(
@@ -486,7 +486,7 @@ abstract class $PillSheetCopyWith<$Res> {
   @useResult
   $Res call(
       {@JsonKey(includeIfNull: false)
-          String? id,
+          String id,
       @JsonKey()
           PillSheetTypeInfo typeInfo,
       @JsonKey(fromJson: NonNullTimestampConverter.timestampToDateTime, toJson: NonNullTimestampConverter.dateTimeToTimestamp)
@@ -516,7 +516,7 @@ class _$PillSheetCopyWithImpl<$Res, $Val extends PillSheet>
   @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? id = freezed,
+    Object? id = null,
     Object? typeInfo = null,
     Object? beginingDate = null,
     Object? lastTakenDate = freezed,
@@ -526,10 +526,10 @@ class _$PillSheetCopyWithImpl<$Res, $Val extends PillSheet>
     Object? restDurations = null,
   }) {
     return _then(_value.copyWith(
-      id: freezed == id
+      id: null == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
-              as String?,
+              as String,
       typeInfo: null == typeInfo
           ? _value.typeInfo
           : typeInfo // ignore: cast_nullable_to_non_nullable
@@ -579,7 +579,7 @@ abstract class _$$_PillSheetCopyWith<$Res> implements $PillSheetCopyWith<$Res> {
   @useResult
   $Res call(
       {@JsonKey(includeIfNull: false)
-          String? id,
+          String id,
       @JsonKey()
           PillSheetTypeInfo typeInfo,
       @JsonKey(fromJson: NonNullTimestampConverter.timestampToDateTime, toJson: NonNullTimestampConverter.dateTimeToTimestamp)
@@ -608,7 +608,7 @@ class __$$_PillSheetCopyWithImpl<$Res>
   @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? id = freezed,
+    Object? id = null,
     Object? typeInfo = null,
     Object? beginingDate = null,
     Object? lastTakenDate = freezed,
@@ -618,10 +618,10 @@ class __$$_PillSheetCopyWithImpl<$Res>
     Object? restDurations = null,
   }) {
     return _then(_$_PillSheet(
-      id: freezed == id
+      id: null == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
-              as String?,
+              as String,
       typeInfo: null == typeInfo
           ? _value.typeInfo
           : typeInfo // ignore: cast_nullable_to_non_nullable
@@ -660,7 +660,7 @@ class __$$_PillSheetCopyWithImpl<$Res>
 class _$_PillSheet extends _PillSheet {
   const _$_PillSheet(
       {@JsonKey(includeIfNull: false)
-          this.id,
+          this.id = IDDefault,
       @JsonKey()
           required this.typeInfo,
       @JsonKey(fromJson: NonNullTimestampConverter.timestampToDateTime, toJson: NonNullTimestampConverter.dateTimeToTimestamp)
@@ -681,7 +681,7 @@ class _$_PillSheet extends _PillSheet {
 
   @override
   @JsonKey(includeIfNull: false)
-  final String? id;
+  final String id;
   @override
   @JsonKey()
   final PillSheetTypeInfo typeInfo;
@@ -773,7 +773,7 @@ class _$_PillSheet extends _PillSheet {
 abstract class _PillSheet extends PillSheet {
   const factory _PillSheet(
       {@JsonKey(includeIfNull: false)
-          final String? id,
+          final String id,
       @JsonKey()
           required final PillSheetTypeInfo typeInfo,
       @JsonKey(fromJson: NonNullTimestampConverter.timestampToDateTime, toJson: NonNullTimestampConverter.dateTimeToTimestamp)
@@ -793,7 +793,7 @@ abstract class _PillSheet extends PillSheet {
 
   @override
   @JsonKey(includeIfNull: false)
-  String? get id;
+  String get id;
   @override
   @JsonKey()
   PillSheetTypeInfo get typeInfo;
