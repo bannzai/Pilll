@@ -16,7 +16,6 @@ final addPillSheetGroupProvider = Provider(
     batchFactory: ref.watch(batchFactoryProvider),
     batchSetPillSheetGroup: ref.watch(batchSetPillSheetGroupProvider),
     batchSetPillSheetModifiedHistory: ref.watch(batchSetPillSheetModifiedHistoryProvider),
-    
     batchSetSetting: ref.watch(batchSetSettingProvider),
   ),
 );
@@ -44,20 +43,17 @@ class AddPillSheetGroup {
     final batch = batchFactory.batch();
 
     final n = now();
-    final createdPillSheets = batchSetPillSheets(
-      batch,
-      pillSheetTypes.asMap().keys.map((pageIndex) {
-        final pillSheetType = backportPillSheetTypes(pillSheetTypes)[pageIndex];
-        final offset = summarizedPillCountWithPillSheetTypesToEndIndex(pillSheetTypes: setting.pillSheetEnumTypes, endIndex: pageIndex);
-        return PillSheet(
-          typeInfo: pillSheetType.typeInfo,
-          beginingDate: n.add(
-            Duration(days: offset),
-          ),
-          groupIndex: pageIndex,
-        );
-      }).toList(),
-    );
+    final createdPillSheets = pillSheetTypes.asMap().keys.map((pageIndex) {
+      final pillSheetType = backportPillSheetTypes(pillSheetTypes)[pageIndex];
+      final offset = summarizedPillCountWithPillSheetTypesToEndIndex(pillSheetTypes: setting.pillSheetEnumTypes, endIndex: pageIndex);
+      return PillSheet(
+        typeInfo: pillSheetType.typeInfo,
+        beginingDate: n.add(
+          Duration(days: offset),
+        ),
+        groupIndex: pageIndex,
+      );
+    }).toList();
 
     final pillSheetIDs = createdPillSheets.map((e) => e.id!).toList();
     final createdPillSheetGroup = batchSetPillSheetGroup(
