@@ -1,4 +1,3 @@
-import 'package:freezed_annotation/freezed_annotation.dart';
 import 'package:uuid/uuid.dart';
 
 class FirestoreIDGenerator {
@@ -6,10 +5,3 @@ class FirestoreIDGenerator {
 }
 
 FirestoreIDGenerator firestoreIDGenerator = FirestoreIDGenerator();
-
-class IDDefault implements Default {
-  const IDDefault();
-
-  @override
-  String get defaultValue => firestoreIDGenerator();
-}
