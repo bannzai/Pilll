@@ -25,6 +25,10 @@ void main() {
       when(mockTodayRepository.now()).thenReturn(_today);
       when(mockTodayRepository.now()).thenReturn(_today);
 
+      final mockIDGenerator = MockFirestoreIDGenerator();
+      when(mockIDGenerator.call()).thenReturn("sheet_id");
+      firestoreIDGenerator = mockIDGenerator;
+
       final batchFactory = MockBatchFactory();
       final batch = MockWriteBatch();
       when(batchFactory.batch()).thenReturn(batch);
@@ -94,6 +98,11 @@ void main() {
       todayRepository = mockTodayRepository;
       when(mockTodayRepository.now()).thenReturn(_today);
       when(mockTodayRepository.now()).thenReturn(_today);
+
+      var idGeneratorCallCount = 0;
+      final mockIDGenerator = MockFirestoreIDGenerator();
+      when(mockIDGenerator.call()).thenAnswer((_) => ["sheet_id", "sheet_id2"][idGeneratorCallCount++]);
+      firestoreIDGenerator = mockIDGenerator;
 
       final batchFactory = MockBatchFactory();
       final batch = MockWriteBatch();
