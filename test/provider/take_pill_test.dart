@@ -91,7 +91,6 @@ void main() {
           isQuickRecord: false,
         );
 
-        verify(batchSetPillSheets(batch, [updatedActivePillSheet])).called(1);
         verify(batchSetPillSheetModifiedHistory(batch, history)).called(1);
         verify(batchSetPillSheetGroup(batch, updatedPillSheetGroup)).called(1);
 
@@ -160,7 +159,6 @@ void main() {
           isQuickRecord: false,
         );
 
-        verify(batchSetPillSheets(batch, [previousPillSheet, updatedActivePillSheet, nextPillSheet])).called(1);
         verify(batchSetPillSheetModifiedHistory(batch, history)).called(1);
         verify(batchSetPillSheetGroup(batch, updatedPillSheetGroup)).called(1);
         expect(result, updatedPillSheetGroup);
@@ -232,7 +230,6 @@ void main() {
           isQuickRecord: false,
         );
 
-        verify(batchSetPillSheets(batch, [previousPillSheet, updatedActivePillSheet, nextPillSheet])).called(1);
         verify(batchSetPillSheetModifiedHistory(batch, history)).called(1);
         verify(batchSetPillSheetGroup(batch, updatedPillSheetGroup)).called(1);
 
@@ -274,7 +271,6 @@ void main() {
           isQuickRecord: false,
         );
 
-        verify(batchSetPillSheets(batch, [previousPillSheet, updatedActivePillSheet, nextPillSheet])).called(1);
         verify(batchSetPillSheetModifiedHistory(batch, history)).called(1);
         verify(batchSetPillSheetGroup(batch, updatedPillSheetGroup)).called(1);
 
@@ -363,7 +359,6 @@ void main() {
           isQuickRecord: false,
         );
 
-        verify(batchSetPillSheets(batch, [updatedPreviousPillSheet, updatedActivePillSheet, nextPillSheet])).called(1);
         verify(batchSetPillSheetModifiedHistory(batch, history)).called(1);
         verify(batchSetPillSheetGroup(batch, updatedPillSheetGroup)).called(1);
         expect(result, updatedPillSheetGroup);
@@ -405,7 +400,6 @@ void main() {
           isQuickRecord: false,
         );
 
-        verify(batchSetPillSheets(batch, [updatedPreviousPillSheet, activedPillSheet, nextPillSheet])).called(1);
         verify(batchSetPillSheetModifiedHistory(batch, history)).called(1);
         verify(batchSetPillSheetGroup(batch, updatedPillSheetGroup)).called(1);
         expect(result, updatedPillSheetGroup);
@@ -452,7 +446,6 @@ void main() {
           isQuickRecord: false,
         );
 
-        verify(batchSetPillSheets(batch, [updatedPreviousPillSheet, activedPillSheet, nextPillSheet])).called(1);
         verify(batchSetPillSheetModifiedHistory(batch, history)).called(1);
         verify(batchSetPillSheetGroup(batch, updatedPillSheetGroup)).called(1);
 
@@ -511,7 +504,6 @@ void main() {
           isQuickRecord: false,
         );
 
-        verify(batchSetPillSheets(batch, [previousPillSheet, updatedActivePillSheet, nextPillSheet])).called(1);
         verify(batchSetPillSheetModifiedHistory(batch, history)).called(1);
         verify(batchSetPillSheetGroup(batch, updatedPillSheetGroup)).called(1);
         expect(result, updatedPillSheetGroup);

@@ -55,7 +55,7 @@ void main() {
       await beginRestDuration.call(activePillSheet: pillSheet, pillSheetGroup: pillSheetGroup);
 
       verify(batchFactory.batch()).called(1);
-      verify(batchSetPillSheets(batch, [updatedPillSheet])).called(1);
+
       verify(batchSetPillSheetGroup(batch, updatedPillSheetGroup)).called(1);
       verify(batchSetPillSheetModifiedHistory(batch, history)).called(1);
     });
@@ -106,7 +106,7 @@ void main() {
       await endRestDuration.call(activePillSheet: pillSheet, pillSheetGroup: pillSheetGroup, restDuration: notYetEndRestDuration);
 
       verify(batchFactory.batch()).called(1);
-      verify(batchSetPillSheets(batch, [updatedPillSheet])).called(1);
+
       verify(batchSetPillSheetGroup(batch, updatedPillSheetGroup)).called(1);
       verify(batchSetPillSheetModifiedHistory(batch, history)).called(1);
     });
@@ -194,7 +194,7 @@ void main() {
       await endRestDuration.call(activePillSheet: pillSheets[0], pillSheetGroup: pillSheetGroup, restDuration: notYetEndRestDuration);
 
       verify(batchFactory.batch()).called(1);
-      verify(batchSetPillSheets(batch, updatedPillSheets)).called(1);
+
       verify(batchSetPillSheetGroup(batch, updatedPillSheetGroup)).called(1);
       verify(batchSetPillSheetModifiedHistory(batch, history)).called(1);
     });
