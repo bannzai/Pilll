@@ -316,7 +316,6 @@ void main() {
           isQuickRecord: false,
         );
 
-        verifyNever(batchSetPillSheets(batch, [previousPillSheet, updatedActivePillSheet, nextPillSheet]));
         verifyNever(batchSetPillSheetModifiedHistory(batch, history));
         verifyNever(batchSetPillSheetGroup(batch, updatedPillSheetGroup));
         expect(result, isNull);
@@ -580,7 +579,6 @@ void main() {
           isQuickRecord: false,
         );
 
-        verifyNever(batchSetPillSheets(batch, [previousPillSheet, updatedActivePillSheet, nextPillSheet]));
         verifyNever(batchSetPillSheetModifiedHistory(batch, history));
         verifyNever(batchSetPillSheetGroup(batch, pillSheetGroup));
         expect(result, null);
