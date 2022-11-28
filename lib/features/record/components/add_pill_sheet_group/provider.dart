@@ -1,3 +1,4 @@
+import 'package:pilll/entity/firestore_id_generator.dart';
 import 'package:pilll/entity/pill_sheet_modified_history.codegen.dart';
 import 'package:pilll/provider/batch.dart';
 import 'package:pilll/entity/pill_sheet.codegen.dart';

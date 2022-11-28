@@ -32,7 +32,6 @@ void main() {
         when(batchFactory.batch()).thenReturn(batch);
 
         final pillSheet = PillSheet(
-          id: firestoreIDGenerator(),
           id: "sheet_id",
           typeInfo: PillSheetType.pillsheet_28_0.typeInfo,
           beginingDate: yesterday,
@@ -106,7 +105,6 @@ void main() {
         when(batchFactory.batch()).thenReturn(batch);
 
         final pillSheet = PillSheet(
-          id: firestoreIDGenerator(),
           id: "sheet_id",
           typeInfo: PillSheetType.pillsheet_28_0.typeInfo,
           beginingDate: yesterday,
@@ -179,7 +177,6 @@ void main() {
         when(batchFactory.batch()).thenReturn(batch);
 
         final pillSheet = PillSheet(
-          id: firestoreIDGenerator(),
           id: "sheet_id",
           typeInfo: PillSheetType.pillsheet_28_0.typeInfo,
           beginingDate: beginDate,
@@ -264,7 +261,6 @@ void main() {
         when(batchFactory.batch()).thenReturn(batch);
 
         final pillSheet = PillSheet(
-          id: firestoreIDGenerator(),
           id: "sheet_id",
           typeInfo: PillSheetType.pillsheet_28_0.typeInfo,
           beginingDate: beginDate,
@@ -347,7 +343,6 @@ void main() {
         when(batchFactory.batch()).thenReturn(batch);
 
         final pillSheet = PillSheet(
-          id: firestoreIDGenerator(),
           id: "1",
           typeInfo: PillSheetType.pillsheet_28_0.typeInfo,
           beginingDate: _today.subtract(const Duration(days: 29)),
@@ -357,7 +352,6 @@ void main() {
 
         // actived pill sheet
         final pillSheet2 = PillSheet(
-          id: firestoreIDGenerator(),
           id: "2",
           typeInfo: PillSheetType.pillsheet_21.typeInfo,
           beginingDate: yesterday,
@@ -437,7 +431,6 @@ void main() {
         when(batchFactory.batch()).thenReturn(batch);
 
         final pillSheet = PillSheet(
-          id: firestoreIDGenerator(),
           id: "1",
           typeInfo: PillSheetType.pillsheet_28_0.typeInfo,
           beginingDate: _today.subtract(const Duration(days: 29)),
@@ -447,7 +440,6 @@ void main() {
 
         // actived pill sheet
         final pillSheet2 = PillSheet(
-          id: firestoreIDGenerator(),
           id: "2",
           typeInfo: PillSheetType.pillsheet_21.typeInfo,
           beginingDate: yesterday,
@@ -521,7 +513,6 @@ void main() {
         when(batchFactory.batch()).thenReturn(batch);
 
         final pillSheet = PillSheet(
-          id: firestoreIDGenerator(),
           id: "1",
           typeInfo: PillSheetType.pillsheet_28_0.typeInfo,
           beginingDate: _today.subtract(const Duration(days: 29)),
@@ -531,7 +522,6 @@ void main() {
 
         // actived pill sheet
         final pillSheet2 = PillSheet(
-          id: firestoreIDGenerator(),
           id: "2",
           typeInfo: PillSheetType.pillsheet_21.typeInfo,
           beginingDate: yesterday,
