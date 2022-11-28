@@ -79,8 +79,8 @@ class _FakeOfferings_10 extends _i1.Fake implements _i9.Offerings {}
 
 class _FakeBatchFactory_11 extends _i1.Fake implements _i10.BatchFactory {}
 
-class _FakeBatchSetPillSheets_12 extends _i1.Fake
-    implements _i11.BatchSetPillSheets {}
+
+
 
 class _FakeBatchSetPillSheetModifiedHistory_13 extends _i1.Fake
     implements _i12.BatchSetPillSheetModifiedHistory {}
@@ -390,12 +390,12 @@ class MockBatchSetPillSheetGroup extends _i1.Mock
       ) as _i7.PillSheetGroup);
 }
 
-/// A class which mocks [BatchSetPillSheets].
+
 ///
 /// See the documentation for Mockito's code generation for more information.
-class MockBatchSetPillSheets extends _i1.Mock
-    implements _i11.BatchSetPillSheets {
-  MockBatchSetPillSheets() {
+
+
+
     _i1.throwOnMissingStub(this);
   }
 
@@ -854,10 +854,10 @@ class MockRevertTakePill extends _i1.Mock implements _i29.RevertTakePill {
         returnValue: _FakeBatchFactory_11(),
       ) as _i10.BatchFactory);
   @override
-  _i11.BatchSetPillSheets get batchSetPillSheets => (super.noSuchMethod(
-        Invocation.getter(#batchSetPillSheets),
-        returnValue: _FakeBatchSetPillSheets_12(),
-      ) as _i11.BatchSetPillSheets);
+
+
+
+
   @override
   _i12.BatchSetPillSheetModifiedHistory get batchSetPillSheetModifiedHistory =>
       (super.noSuchMethod(
@@ -903,10 +903,10 @@ class MockTakePill extends _i1.Mock implements _i30.TakePill {
         returnValue: _FakeBatchFactory_11(),
       ) as _i10.BatchFactory);
   @override
-  _i11.BatchSetPillSheets get batchSetPillSheets => (super.noSuchMethod(
-        Invocation.getter(#batchSetPillSheets),
-        returnValue: _FakeBatchSetPillSheets_12(),
-      ) as _i11.BatchSetPillSheets);
+
+
+
+
   @override
   _i12.BatchSetPillSheetModifiedHistory get batchSetPillSheetModifiedHistory =>
       (super.noSuchMethod(

@@ -10,7 +10,7 @@ import 'package:riverpod/riverpod.dart';
 final revertTakePillProvider = Provider(
   (ref) => RevertTakePill(
     batchFactory: ref.watch(batchFactoryProvider),
-    batchSetPillSheets: ref.watch(batchSetPillSheetsProvider),
+
     batchSetPillSheetModifiedHistory: ref.watch(batchSetPillSheetModifiedHistoryProvider),
     batchSetPillSheetGroup: ref.watch(batchSetPillSheetGroupProvider),
   ),
@@ -18,13 +18,13 @@ final revertTakePillProvider = Provider(
 
 class RevertTakePill {
   final BatchFactory batchFactory;
-  final BatchSetPillSheets batchSetPillSheets;
+
   final BatchSetPillSheetModifiedHistory batchSetPillSheetModifiedHistory;
   final BatchSetPillSheetGroup batchSetPillSheetGroup;
 
   RevertTakePill({
     required this.batchFactory,
-    required this.batchSetPillSheets,
+
     required this.batchSetPillSheetModifiedHistory,
     required this.batchSetPillSheetGroup,
   });
@@ -77,7 +77,7 @@ class RevertTakePill {
     }
 
     final batch = batchFactory.batch();
-    batchSetPillSheets(
+
       batch,
       updatedPillSheets,
     );

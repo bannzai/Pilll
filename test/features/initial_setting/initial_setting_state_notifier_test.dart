@@ -39,7 +39,7 @@ void main() {
       final batchFactory = MockBatchFactory();
       final endInitialSetting = MockEndInitialSetting();
       final batchSetSetting = MockBatchSetSetting();
-      final batchSetPillSheets = MockBatchSetPillSheets();
+
       final batchSetPillSheetModifiedHistory = MockBatchSetPillSheetModifiedHistory();
       final batchSetPillSheetGroup = MockBatchSetPillSheetGroup();
 
@@ -48,7 +48,6 @@ void main() {
           endInitialSettingProvider.overrideWith((ref) => endInitialSetting),
           batchFactoryProvider.overrideWithValue(batchFactory),
           batchSetSettingProvider.overrideWith((ref) => batchSetSetting),
-          batchSetPillSheetsProvider.overrideWith((ref) => batchSetPillSheets),
           batchSetPillSheetModifiedHistoryProvider.overrideWith((ref) => batchSetPillSheetModifiedHistory),
           batchSetPillSheetGroupProvider.overrideWith((ref) => batchSetPillSheetGroup),
         ],
@@ -66,7 +65,7 @@ void main() {
       final endInitialSetting = MockEndInitialSetting();
       final batchFactory = MockBatchFactory();
       final batchSetSetting = MockBatchSetSetting();
-      final batchSetPillSheets = MockBatchSetPillSheets();
+
       final batchSetPillSheetModifiedHistory = MockBatchSetPillSheetModifiedHistory();
       final batchSetPillSheetGroup = MockBatchSetPillSheetGroup();
 
@@ -75,7 +74,6 @@ void main() {
           endInitialSettingProvider.overrideWith((ref) => endInitialSetting),
           batchFactoryProvider.overrideWithValue(batchFactory),
           batchSetSettingProvider.overrideWith((ref) => batchSetSetting),
-          batchSetPillSheetsProvider.overrideWith((ref) => batchSetPillSheets),
           batchSetPillSheetModifiedHistoryProvider.overrideWith((ref) => batchSetPillSheetModifiedHistory),
           batchSetPillSheetModifiedHistoryProvider.overrideWith((ref) => batchSetPillSheetModifiedHistory),
           batchSetPillSheetGroupProvider.overrideWith((ref) => batchSetPillSheetGroup),
@@ -103,7 +101,7 @@ void main() {
       final endInitialSetting = MockEndInitialSetting();
       final batchFactory = MockBatchFactory();
       final batchSetSetting = MockBatchSetSetting();
-      final batchSetPillSheets = MockBatchSetPillSheets();
+
       final batchSetPillSheetModifiedHistory = MockBatchSetPillSheetModifiedHistory();
       final batchSetPillSheetGroup = MockBatchSetPillSheetGroup();
 
@@ -112,7 +110,6 @@ void main() {
           endInitialSettingProvider.overrideWith((ref) => endInitialSetting),
           batchFactoryProvider.overrideWithValue(batchFactory),
           batchSetSettingProvider.overrideWith((ref) => batchSetSetting),
-          batchSetPillSheetsProvider.overrideWith((ref) => batchSetPillSheets),
           batchSetPillSheetModifiedHistoryProvider.overrideWith((ref) => batchSetPillSheetModifiedHistory),
           batchSetPillSheetGroupProvider.overrideWith((ref) => batchSetPillSheetGroup),
         ],
@@ -134,7 +131,7 @@ void main() {
       final endInitialSetting = MockEndInitialSetting();
       final batchFactory = MockBatchFactory();
       final batchSetSetting = MockBatchSetSetting();
-      final batchSetPillSheets = MockBatchSetPillSheets();
+
       final batchSetPillSheetModifiedHistory = MockBatchSetPillSheetModifiedHistory();
       final batchSetPillSheetGroup = MockBatchSetPillSheetGroup();
 
@@ -143,7 +140,6 @@ void main() {
           endInitialSettingProvider.overrideWith((ref) => endInitialSetting),
           batchFactoryProvider.overrideWithValue(batchFactory),
           batchSetSettingProvider.overrideWith((ref) => batchSetSetting),
-          batchSetPillSheetsProvider.overrideWith((ref) => batchSetPillSheets),
           batchSetPillSheetModifiedHistoryProvider.overrideWith((ref) => batchSetPillSheetModifiedHistory),
           batchSetPillSheetGroupProvider.overrideWith((ref) => batchSetPillSheetGroup),
         ],
@@ -166,7 +162,7 @@ void main() {
       final endInitialSetting = MockEndInitialSetting();
       final batchFactory = MockBatchFactory();
       final batchSetSetting = MockBatchSetSetting();
-      final batchSetPillSheets = MockBatchSetPillSheets();
+
       final batchSetPillSheetModifiedHistory = MockBatchSetPillSheetModifiedHistory();
       final batchSetPillSheetGroup = MockBatchSetPillSheetGroup();
 
@@ -175,7 +171,6 @@ void main() {
           endInitialSettingProvider.overrideWith((ref) => endInitialSetting),
           batchFactoryProvider.overrideWithValue(batchFactory),
           batchSetSettingProvider.overrideWith((ref) => batchSetSetting),
-          batchSetPillSheetsProvider.overrideWith((ref) => batchSetPillSheets),
           batchSetPillSheetModifiedHistoryProvider.overrideWith((ref) => batchSetPillSheetModifiedHistory),
           batchSetPillSheetGroupProvider.overrideWith((ref) => batchSetPillSheetGroup),
         ],
@@ -202,7 +197,7 @@ void main() {
       final endInitialSetting = MockEndInitialSetting();
       final batchFactory = MockBatchFactory();
       final batchSetSetting = MockBatchSetSetting();
-      final batchSetPillSheets = MockBatchSetPillSheets();
+
       final batchSetPillSheetModifiedHistory = MockBatchSetPillSheetModifiedHistory();
       final batchSetPillSheetGroup = MockBatchSetPillSheetGroup();
 
@@ -211,7 +206,6 @@ void main() {
           endInitialSettingProvider.overrideWith((ref) => endInitialSetting),
           batchFactoryProvider.overrideWithValue(batchFactory),
           batchSetSettingProvider.overrideWith((ref) => batchSetSetting),
-          batchSetPillSheetsProvider.overrideWith((ref) => batchSetPillSheets),
           batchSetPillSheetModifiedHistoryProvider.overrideWith((ref) => batchSetPillSheetModifiedHistory),
           batchSetPillSheetGroupProvider.overrideWith((ref) => batchSetPillSheetGroup),
         ],
@@ -230,7 +224,7 @@ void main() {
       final endInitialSetting = MockEndInitialSetting();
       final batchFactory = MockBatchFactory();
       final batchSetSetting = MockBatchSetSetting();
-      final batchSetPillSheets = MockBatchSetPillSheets();
+
       final batchSetPillSheetModifiedHistory = MockBatchSetPillSheetModifiedHistory();
       final batchSetPillSheetGroup = MockBatchSetPillSheetGroup();
 
@@ -239,7 +233,6 @@ void main() {
           endInitialSettingProvider.overrideWith((ref) => endInitialSetting),
           batchFactoryProvider.overrideWithValue(batchFactory),
           batchSetSettingProvider.overrideWith((ref) => batchSetSetting),
-          batchSetPillSheetsProvider.overrideWith((ref) => batchSetPillSheets),
           batchSetPillSheetModifiedHistoryProvider.overrideWith((ref) => batchSetPillSheetModifiedHistory),
           batchSetPillSheetGroupProvider.overrideWith((ref) => batchSetPillSheetGroup),
         ],
@@ -265,8 +258,6 @@ void main() {
       when(batchFactory.batch()).thenReturn(batch);
 
       final pillSheet = PillSheet(typeInfo: PillSheetType.pillsheet_21.typeInfo, beginingDate: _today);
-      final batchSetPillSheets = MockBatchSetPillSheets();
-      when(batchSetPillSheets(batch, [pillSheet])).thenReturn([pillSheet.copyWith(id: "sheet_id")]);
 
       final pillSheetGroup = PillSheetGroup(pillSheetIDs: ["sheet_id"], pillSheets: [pillSheet.copyWith(id: "sheet_id")], createdAt: now());
       final batchSetPillSheetGroup = MockBatchSetPillSheetGroup();
@@ -293,7 +284,6 @@ void main() {
           endInitialSettingProvider.overrideWith((ref) => endInitialSetting),
           batchFactoryProvider.overrideWithValue(batchFactory),
           batchSetSettingProvider.overrideWith((ref) => batchSetSetting),
-          batchSetPillSheetsProvider.overrideWith((ref) => batchSetPillSheets),
           batchSetPillSheetModifiedHistoryProvider.overrideWith((ref) => batchSetPillSheetModifiedHistory),
           batchSetPillSheetGroupProvider.overrideWith((ref) => batchSetPillSheetGroup),
         ],
@@ -334,9 +324,6 @@ void main() {
         lastTakenDate: _today.subtract(const Duration(days: 1)),
         groupIndex: 1,
       );
-      final batchSetPillSheets = MockBatchSetPillSheets();
-
-      when(batchSetPillSheets(batch, [pillSheet, pillSheet2])).thenReturn([pillSheet.copyWith(id: "sheet_id"), pillSheet2.copyWith(id: "sheet_id2")]);
 
       final pillSheetGroup = PillSheetGroup(
         pillSheetIDs: ["sheet_id", "sheet_id2"],
@@ -371,7 +358,6 @@ void main() {
           endInitialSettingProvider.overrideWith((ref) => endInitialSetting),
           batchFactoryProvider.overrideWithValue(batchFactory),
           batchSetSettingProvider.overrideWith((ref) => batchSetSetting),
-          batchSetPillSheetsProvider.overrideWith((ref) => batchSetPillSheets),
           batchSetPillSheetModifiedHistoryProvider.overrideWith((ref) => batchSetPillSheetModifiedHistory),
           batchSetPillSheetGroupProvider.overrideWith((ref) => batchSetPillSheetGroup),
         ],
@@ -413,8 +399,6 @@ void main() {
       when(batchFactory.batch()).thenReturn(batch);
 
       final pillSheet = PillSheet(typeInfo: PillSheetType.pillsheet_24_rest_4.typeInfo, beginingDate: _today);
-      final batchSetPillSheets = MockBatchSetPillSheets();
-      when(batchSetPillSheets(batch, [pillSheet])).thenReturn([pillSheet.copyWith(id: "sheet_id")]);
 
       final pillSheetGroup = PillSheetGroup(pillSheetIDs: ["sheet_id"], pillSheets: [pillSheet.copyWith(id: "sheet_id")], createdAt: now());
       final batchSetPillSheetGroup = MockBatchSetPillSheetGroup();
@@ -433,7 +417,6 @@ void main() {
           endInitialSettingProvider.overrideWith((ref) => endInitialSetting),
           batchFactoryProvider.overrideWithValue(batchFactory),
           batchSetSettingProvider.overrideWith((ref) => batchSetSetting),
-          batchSetPillSheetsProvider.overrideWith((ref) => batchSetPillSheets),
           batchSetPillSheetModifiedHistoryProvider.overrideWith((ref) => batchSetPillSheetModifiedHistory),
           batchSetPillSheetGroupProvider.overrideWith((ref) => batchSetPillSheetGroup),
         ],

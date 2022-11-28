@@ -11,7 +11,6 @@ import 'package:pilll/utils/datetime/day.dart';
 final beginRestDurationProvider = Provider(
   (ref) => BeginRestDuration(
     batchFactory: ref.watch(batchFactoryProvider),
-    batchSetPillSheets: ref.watch(batchSetPillSheetsProvider),
     batchSetPillSheetGroup: ref.watch(batchSetPillSheetGroupProvider),
     batchSetPillSheetModifiedHistory: ref.watch(batchSetPillSheetModifiedHistoryProvider),
   ),
@@ -19,13 +18,12 @@ final beginRestDurationProvider = Provider(
 
 class BeginRestDuration {
   final BatchFactory batchFactory;
-  final BatchSetPillSheets batchSetPillSheets;
+
   final BatchSetPillSheetGroup batchSetPillSheetGroup;
   final BatchSetPillSheetModifiedHistory batchSetPillSheetModifiedHistory;
 
   BeginRestDuration({
     required this.batchFactory,
-    required this.batchSetPillSheets,
     required this.batchSetPillSheetGroup,
     required this.batchSetPillSheetModifiedHistory,
   });
@@ -44,7 +42,7 @@ class BeginRestDuration {
       restDurations: [...activePillSheet.restDurations, restDuration],
     );
     final updatedPillSheetGroup = pillSheetGroup.replaced(updatedPillSheet);
-    batchSetPillSheets(batch, updatedPillSheetGroup.pillSheets);
+
     batchSetPillSheetGroup(batch, updatedPillSheetGroup);
     batchSetPillSheetModifiedHistory(
       batch,
@@ -63,7 +61,6 @@ class BeginRestDuration {
 final endRestDurationProvider = Provider(
   (ref) => EndRestDuration(
     batchFactory: ref.watch(batchFactoryProvider),
-    batchSetPillSheets: ref.watch(batchSetPillSheetsProvider),
     batchSetPillSheetGroup: ref.watch(batchSetPillSheetGroupProvider),
     batchSetPillSheetModifiedHistory: ref.watch(batchSetPillSheetModifiedHistoryProvider),
   ),
@@ -71,13 +68,12 @@ final endRestDurationProvider = Provider(
 
 class EndRestDuration {
   final BatchFactory batchFactory;
-  final BatchSetPillSheets batchSetPillSheets;
+
   final BatchSetPillSheetGroup batchSetPillSheetGroup;
   final BatchSetPillSheetModifiedHistory batchSetPillSheetModifiedHistory;
 
   EndRestDuration({
     required this.batchFactory,
-    required this.batchSetPillSheets,
     required this.batchSetPillSheetGroup,
     required this.batchSetPillSheetModifiedHistory,
   });
@@ -110,7 +106,7 @@ class EndRestDuration {
         updatedPillSheets.add(pillSheet);
       }
     }
-    batchSetPillSheets(batch, updatedPillSheets);
+
     batchSetPillSheetGroup(batch, pillSheetGroup.copyWith(pillSheets: updatedPillSheets));
     batchSetPillSheetModifiedHistory(
       batch,

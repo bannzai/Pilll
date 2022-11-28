@@ -35,8 +35,6 @@ void main() {
 
       final pillSheet = PillSheet(id: "pill_sheet_id_1", typeInfo: PillSheetType.pillsheet_28_0.typeInfo, beginingDate: now());
       final updatedPillSheet = pillSheet.copyWith(restDurations: [notYetEndRestDuration]);
-      final batchSetPillSheets = MockBatchSetPillSheets();
-      when(batchSetPillSheets(batch, [updatedPillSheet])).thenReturn([updatedPillSheet]);
 
       final pillSheetGroup = PillSheetGroup(id: "group_id", pillSheetIDs: ["pill_sheet_id_1"].toList(), pillSheets: [pillSheet], createdAt: now());
       final updatedPillSheetGroup =
@@ -51,13 +49,12 @@ void main() {
 
       final beginRestDuration = BeginRestDuration(
           batchFactory: batchFactory,
-          batchSetPillSheets: batchSetPillSheets,
           batchSetPillSheetGroup: batchSetPillSheetGroup,
           batchSetPillSheetModifiedHistory: batchSetPillSheetModifiedHistory);
       await beginRestDuration.call(activePillSheet: pillSheet, pillSheetGroup: pillSheetGroup);
 
       verify(batchFactory.batch()).called(1);
-      verify(batchSetPillSheets(batch, [updatedPillSheet])).called(1);
+
       verify(batchSetPillSheetGroup(batch, updatedPillSheetGroup)).called(1);
       verify(batchSetPillSheetModifiedHistory(batch, history)).called(1);
     });
@@ -85,8 +82,6 @@ void main() {
       final pillSheet = PillSheet(
           id: "pill_sheet_id_1", typeInfo: PillSheetType.pillsheet_28_0.typeInfo, beginingDate: now(), restDurations: [notYetEndRestDuration]);
       final updatedPillSheet = pillSheet.copyWith(restDurations: [endedRestDuration]);
-      final batchSetPillSheets = MockBatchSetPillSheets();
-      when(batchSetPillSheets(batch, [updatedPillSheet])).thenReturn([updatedPillSheet]);
 
       final pillSheetGroup = PillSheetGroup(id: "group_id", pillSheetIDs: ["pill_sheet_id_1"].toList(), pillSheets: [pillSheet], createdAt: now());
       final updatedPillSheetGroup =
@@ -101,13 +96,12 @@ void main() {
 
       final endRestDuration = EndRestDuration(
           batchFactory: batchFactory,
-          batchSetPillSheets: batchSetPillSheets,
           batchSetPillSheetGroup: batchSetPillSheetGroup,
           batchSetPillSheetModifiedHistory: batchSetPillSheetModifiedHistory);
       await endRestDuration.call(activePillSheet: pillSheet, pillSheetGroup: pillSheetGroup, restDuration: notYetEndRestDuration);
 
       verify(batchFactory.batch()).called(1);
-      verify(batchSetPillSheets(batch, [updatedPillSheet])).called(1);
+
       verify(batchSetPillSheetGroup(batch, updatedPillSheetGroup)).called(1);
       verify(batchSetPillSheetModifiedHistory(batch, history)).called(1);
     });
@@ -160,8 +154,7 @@ void main() {
         updatedPillSheet2,
         updatedPillSheet3,
       ];
-      final batchSetPillSheets = MockBatchSetPillSheets();
-      when(batchSetPillSheets(batch, updatedPillSheets)).thenReturn(updatedPillSheets);
+
       expect(
         isSameDay(pillSheets[0].beginingDate, updatedPillSheet1.beginingDate),
         true,
@@ -188,13 +181,12 @@ void main() {
 
       final endRestDuration = EndRestDuration(
           batchFactory: batchFactory,
-          batchSetPillSheets: batchSetPillSheets,
           batchSetPillSheetGroup: batchSetPillSheetGroup,
           batchSetPillSheetModifiedHistory: batchSetPillSheetModifiedHistory);
       await endRestDuration.call(activePillSheet: pillSheets[0], pillSheetGroup: pillSheetGroup, restDuration: notYetEndRestDuration);
 
       verify(batchFactory.batch()).called(1);
-      verify(batchSetPillSheets(batch, updatedPillSheets)).called(1);
+
       verify(batchSetPillSheetGroup(batch, updatedPillSheetGroup)).called(1);
       verify(batchSetPillSheetModifiedHistory(batch, history)).called(1);
     });
