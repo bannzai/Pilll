@@ -39,9 +39,6 @@ void main() {
           lastTakenDate: today(),
         );
 
-        when(batchSetPillSheets(batch, [pillSheet.copyWith(lastTakenDate: yesterday.subtract(const Duration(days: 1)))]))
-            .thenReturn([pillSheet.copyWith(lastTakenDate: yesterday.subtract(const Duration(days: 1)))]);
-
         final pillSheetGroup = PillSheetGroup(
           id: "group_id",
           pillSheetIDs: ["sheet_id"],
