@@ -79,7 +79,6 @@ void main() {
       final addPillSheetGroup = AddPillSheetGroup(
         batchFactory: batchFactory,
         batchSetPillSheetGroup: batchSetPillSheetGroup,
-        batchSetPillSheets: batchSetPillSheets,
         batchSetPillSheetModifiedHistory: batchSetPillSheetModifiedHistory,
         batchSetSetting: batchSetSetting,
       );
@@ -157,7 +156,6 @@ void main() {
       final addPillSheetGroup = AddPillSheetGroup(
         batchFactory: batchFactory,
         batchSetPillSheetGroup: batchSetPillSheetGroup,
-        batchSetPillSheets: batchSetPillSheets,
         batchSetPillSheetModifiedHistory: batchSetPillSheetModifiedHistory,
         batchSetSetting: batchSetSetting,
       );

@@ -86,7 +86,6 @@ void main() {
 
         final revertTakePill = RevertTakePill(
             batchFactory: batchFactory,
-            batchSetPillSheets: batchSetPillSheets,
             batchSetPillSheetModifiedHistory: batchSetPillSheetModifiedHistory,
             batchSetPillSheetGroup: batchSetPillSheetGroup);
 
@@ -159,7 +158,6 @@ void main() {
 
         final revertTakePill = RevertTakePill(
             batchFactory: batchFactory,
-            batchSetPillSheets: batchSetPillSheets,
             batchSetPillSheetModifiedHistory: batchSetPillSheetModifiedHistory,
             batchSetPillSheetGroup: batchSetPillSheetGroup);
 
@@ -243,7 +241,6 @@ void main() {
 
         final revertTakePill = RevertTakePill(
             batchFactory: batchFactory,
-            batchSetPillSheets: batchSetPillSheets,
             batchSetPillSheetModifiedHistory: batchSetPillSheetModifiedHistory,
             batchSetPillSheetGroup: batchSetPillSheetGroup);
 
@@ -325,7 +322,6 @@ void main() {
 
         final revertTakePill = RevertTakePill(
             batchFactory: batchFactory,
-            batchSetPillSheets: batchSetPillSheets,
             batchSetPillSheetModifiedHistory: batchSetPillSheetModifiedHistory,
             batchSetPillSheetGroup: batchSetPillSheetGroup);
 
@@ -416,7 +412,6 @@ void main() {
 
         final revertTakePill = RevertTakePill(
             batchFactory: batchFactory,
-            batchSetPillSheets: batchSetPillSheets,
             batchSetPillSheetModifiedHistory: batchSetPillSheetModifiedHistory,
             batchSetPillSheetGroup: batchSetPillSheetGroup);
 
@@ -500,7 +495,6 @@ void main() {
 
         final revertTakePill = RevertTakePill(
             batchFactory: batchFactory,
-            batchSetPillSheets: batchSetPillSheets,
             batchSetPillSheetModifiedHistory: batchSetPillSheetModifiedHistory,
             batchSetPillSheetGroup: batchSetPillSheetGroup);
 
@@ -588,7 +582,6 @@ void main() {
 
         final revertTakePill = RevertTakePill(
             batchFactory: batchFactory,
-            batchSetPillSheets: batchSetPillSheets,
             batchSetPillSheetModifiedHistory: batchSetPillSheetModifiedHistory,
             batchSetPillSheetGroup: batchSetPillSheetGroup);
 

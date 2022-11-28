@@ -51,7 +51,6 @@ void main() {
 
       final beginRestDuration = BeginRestDuration(
           batchFactory: batchFactory,
-          batchSetPillSheets: batchSetPillSheets,
           batchSetPillSheetGroup: batchSetPillSheetGroup,
           batchSetPillSheetModifiedHistory: batchSetPillSheetModifiedHistory);
       await beginRestDuration.call(activePillSheet: pillSheet, pillSheetGroup: pillSheetGroup);
@@ -101,7 +100,6 @@ void main() {
 
       final endRestDuration = EndRestDuration(
           batchFactory: batchFactory,
-          batchSetPillSheets: batchSetPillSheets,
           batchSetPillSheetGroup: batchSetPillSheetGroup,
           batchSetPillSheetModifiedHistory: batchSetPillSheetModifiedHistory);
       await endRestDuration.call(activePillSheet: pillSheet, pillSheetGroup: pillSheetGroup, restDuration: notYetEndRestDuration);
@@ -188,7 +186,6 @@ void main() {
 
       final endRestDuration = EndRestDuration(
           batchFactory: batchFactory,
-          batchSetPillSheets: batchSetPillSheets,
           batchSetPillSheetGroup: batchSetPillSheetGroup,
           batchSetPillSheetModifiedHistory: batchSetPillSheetModifiedHistory);
       await endRestDuration.call(activePillSheet: pillSheets[0], pillSheetGroup: pillSheetGroup, restDuration: notYetEndRestDuration);

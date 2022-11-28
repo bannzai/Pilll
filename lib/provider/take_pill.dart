@@ -14,7 +14,6 @@ import 'package:riverpod/riverpod.dart';
 final takePillProvider = Provider(
   (ref) => TakePill(
     batchFactory: ref.watch(batchFactoryProvider),
-    batchSetPillSheets: 
     batchSetPillSheetModifiedHistory: ref.watch(batchSetPillSheetModifiedHistoryProvider),
     batchSetPillSheetGroup: ref.watch(batchSetPillSheetGroupProvider),
   ),

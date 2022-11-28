@@ -67,7 +67,6 @@ void main() {
 
       final changePillNumber = ChangePillNumber(
         batchFactory: batchFactory,
-        batchSetPillSheets: batchSetPillSheets,
         batchSetPillSheetModifiedHistory: batchSetPillSheetModifiedHistory,
         batchSetPillSheetGroup: batchSetPillSheetGroup,
       );
@@ -133,7 +132,6 @@ void main() {
 
       final changePillNumber = ChangePillNumber(
         batchFactory: batchFactory,
-        batchSetPillSheets: batchSetPillSheets,
         batchSetPillSheetModifiedHistory: batchSetPillSheetModifiedHistory,
         batchSetPillSheetGroup: batchSetPillSheetGroup,
       );
@@ -229,7 +227,6 @@ void main() {
 
       final changePillNumber = ChangePillNumber(
         batchFactory: batchFactory,
-        batchSetPillSheets: batchSetPillSheets,
         batchSetPillSheetModifiedHistory: batchSetPillSheetModifiedHistory,
         batchSetPillSheetGroup: batchSetPillSheetGroup,
       );
@@ -325,7 +322,6 @@ void main() {
 
       final changePillNumber = ChangePillNumber(
         batchFactory: batchFactory,
-        batchSetPillSheets: batchSetPillSheets,
         batchSetPillSheetModifiedHistory: batchSetPillSheetModifiedHistory,
         batchSetPillSheetGroup: batchSetPillSheetGroup,
       );
@@ -422,7 +418,6 @@ void main() {
 
       final changePillNumber = ChangePillNumber(
         batchFactory: batchFactory,
-        batchSetPillSheets: batchSetPillSheets,
         batchSetPillSheetModifiedHistory: batchSetPillSheetModifiedHistory,
         batchSetPillSheetGroup: batchSetPillSheetGroup,
       );
@@ -527,7 +522,6 @@ void main() {
 
       final changePillNumber = ChangePillNumber(
         batchFactory: batchFactory,
-        batchSetPillSheets: batchSetPillSheets,
         batchSetPillSheetModifiedHistory: batchSetPillSheetModifiedHistory,
         batchSetPillSheetGroup: batchSetPillSheetGroup,
       );

@@ -39,7 +39,6 @@ Future<PillSheetGroup?> quickRecordTakePill() async {
 
   final takePill = TakePill(
     batchFactory: batchFactory,
-    batchSetPillSheets: BatchSetPillSheets(database),
     batchSetPillSheetModifiedHistory: BatchSetPillSheetModifiedHistory(database),
     batchSetPillSheetGroup: BatchSetPillSheetGroup(database),
   );
