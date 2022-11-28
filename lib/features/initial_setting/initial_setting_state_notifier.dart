@@ -6,6 +6,7 @@ import 'package:pilll/features/initial_setting/initial_setting_state.codegen.dar
 import 'package:pilll/entity/pill_sheet_group.codegen.dart';
 import 'package:pilll/entity/pill_sheet_type.dart';
 import 'package:pilll/entity/setting.codegen.dart';
+import 'package:pilll/provider/pill_sheet.dart';
 import 'package:pilll/provider/pill_sheet_group.dart';
 import 'package:pilll/provider/pill_sheet_modified_history.dart';
 import 'package:pilll/provider/setting.dart';
@@ -18,6 +19,7 @@ final initialSettingStateNotifierProvider = StateNotifierProvider.autoDispose<In
     ref.watch(endInitialSettingProvider),
     ref.watch(batchFactoryProvider),
     ref.watch(batchSetSettingProvider),
+    ref.watch(batchSetPillSheetsProvider),
     ref.watch(batchSetPillSheetModifiedHistoryProvider),
     ref.watch(batchSetPillSheetGroupProvider),
     now(),
@@ -28,6 +30,7 @@ class InitialSettingStateNotifier extends StateNotifier<InitialSettingState> {
   final EndInitialSetting endInitialSetting;
   final BatchFactory batchFactory;
   final BatchSetSetting batchSetSetting;
+  final BatchSetPillSheets batchSetPillSheets;
   final BatchSetPillSheetModifiedHistory batchSetPillSheetModifiedHistory;
   final BatchSetPillSheetGroup batchSetPillSheetGroup;
 
@@ -35,6 +38,7 @@ class InitialSettingStateNotifier extends StateNotifier<InitialSettingState> {
     this.endInitialSetting,
     this.batchFactory,
     this.batchSetSetting,
+    this.batchSetPillSheets,
     this.batchSetPillSheetModifiedHistory,
     this.batchSetPillSheetGroup,
     DateTime _now,
@@ -108,13 +112,16 @@ class InitialSettingStateNotifier extends StateNotifier<InitialSettingState> {
 
     final todayPillNumber = state.todayPillNumber;
     if (todayPillNumber != null) {
-      final createdPillSheets = state.pillSheetTypes.asMap().keys.map((pageIndex) {
-        return InitialSettingState.buildPillSheet(
-          pageIndex: pageIndex,
-          todayPillNumber: todayPillNumber,
-          pillSheetTypes: state.pillSheetTypes,
-        );
-      }).toList();
+      final createdPillSheets = batchSetPillSheets(
+        batch,
+        state.pillSheetTypes.asMap().keys.map((pageIndex) {
+          return InitialSettingState.buildPillSheet(
+            pageIndex: pageIndex,
+            todayPillNumber: todayPillNumber,
+            pillSheetTypes: state.pillSheetTypes,
+          );
+        }).toList(),
+      );
 
       final pillSheetIDs = createdPillSheets.map((e) => e.id!).toList();
       final createdPillSheetGroup = batchSetPillSheetGroup(
