@@ -186,11 +186,6 @@ void main() {
           ],
         );
 
-        when(batchSetPillSheets(
-          batch,
-          [pillSheet.copyWith(lastTakenDate: beginDate.subtract(const Duration(days: 1)), restDurations: [])],
-        )).thenReturn([pillSheet.copyWith(lastTakenDate: beginDate.subtract(const Duration(days: 1)), restDurations: [])]);
-
         final pillSheetGroup = PillSheetGroup(
           id: "group_id",
           pillSheetIDs: ["sheet_id"],
@@ -269,11 +264,6 @@ void main() {
             ),
           ],
         );
-
-        when(batchSetPillSheets(
-          batch,
-          [pillSheet.copyWith(lastTakenDate: yesterday)],
-        )).thenReturn([pillSheet.copyWith(lastTakenDate: yesterday)]);
 
         final pillSheetGroup = PillSheetGroup(
           id: "group_id",
