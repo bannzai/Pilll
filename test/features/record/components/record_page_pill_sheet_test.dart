@@ -1,4 +1,5 @@
 import 'package:mockito/mockito.dart';
+import 'package:pilll/entity/firestore_id_generator.dart';
 import 'package:pilll/features/record/components/pill_sheet/components/pill_number.dart';
 import 'package:pilll/features/record/components/pill_sheet/record_page_pill_sheet.dart';
 import 'package:pilll/entity/pill_sheet.codegen.dart';
@@ -40,7 +41,7 @@ void main() {
           timezoneDatabaseName: null,
           pillSheetAppearanceMode: pillSheetAppearanceMode,
         );
-        final pillSheet = PillSheet(typeInfo: PillSheetType.pillsheet_21.typeInfo, beginingDate: today);
+        final pillSheet = PillSheet(id: firestoreIDGenerator(), typeInfo: PillSheetType.pillsheet_21.typeInfo, beginingDate: today);
         final pillSheetGroup = PillSheetGroup(pillSheetIDs: ["pill_sheet_id"], pillSheets: [pillSheet], createdAt: today);
         for (int i = 0; i < 28; i++) {
           final pillNumberIntoPillSheet = i + 1;
@@ -83,7 +84,7 @@ void main() {
           pillSheetAppearanceMode: pillSheetAppearanceMode,
         );
 
-        final pillSheet = PillSheet(typeInfo: PillSheetType.pillsheet_21.typeInfo, beginingDate: today);
+        final pillSheet = PillSheet(id: firestoreIDGenerator(), typeInfo: PillSheetType.pillsheet_21.typeInfo, beginingDate: today);
         final pillSheetGroup = PillSheetGroup(pillSheetIDs: ["pill_sheet_id"], pillSheets: [pillSheet], createdAt: today);
 
         for (int i = 0; i < 28; i++) {
@@ -125,7 +126,7 @@ void main() {
           timezoneDatabaseName: null,
           pillSheetAppearanceMode: pillSheetAppearanceMode,
         );
-        final pillSheet = PillSheet(typeInfo: PillSheetType.pillsheet_21.typeInfo, beginingDate: today);
+        final pillSheet = PillSheet(id: firestoreIDGenerator(), typeInfo: PillSheetType.pillsheet_21.typeInfo, beginingDate: today);
         final pillSheetGroup = PillSheetGroup(pillSheetIDs: ["pill_sheet_id"], pillSheets: [pillSheet], createdAt: today);
 
         for (int i = 0; i < 28; i++) {
@@ -170,7 +171,7 @@ void main() {
           timezoneDatabaseName: null,
           pillSheetAppearanceMode: pillSheetAppearanceMode,
         );
-        final pillSheet = PillSheet(typeInfo: PillSheetType.pillsheet_21.typeInfo, beginingDate: today);
+        final pillSheet = PillSheet(id: firestoreIDGenerator(), typeInfo: PillSheetType.pillsheet_21.typeInfo, beginingDate: today);
         final pillSheetGroup = PillSheetGroup(pillSheetIDs: ["pill_sheet_id"], pillSheets: [pillSheet], createdAt: today);
 
         for (int i = 0; i < 28; i++) {
@@ -212,7 +213,7 @@ void main() {
           timezoneDatabaseName: null,
           pillSheetAppearanceMode: pillSheetAppearanceMode,
         );
-        final pillSheet = PillSheet(typeInfo: PillSheetType.pillsheet_21.typeInfo, beginingDate: today);
+        final pillSheet = PillSheet(id: firestoreIDGenerator(), typeInfo: PillSheetType.pillsheet_21.typeInfo, beginingDate: today);
         final pillSheetGroup = PillSheetGroup(pillSheetIDs: ["pill_sheet_id"], pillSheets: [pillSheet], createdAt: today);
 
         for (int i = 0; i < 28; i++) {
@@ -254,7 +255,7 @@ void main() {
           timezoneDatabaseName: null,
           pillSheetAppearanceMode: pillSheetAppearanceMode,
         );
-        final pillSheet = PillSheet(typeInfo: PillSheetType.pillsheet_21.typeInfo, beginingDate: today);
+        final pillSheet = PillSheet(id: firestoreIDGenerator(), typeInfo: PillSheetType.pillsheet_21.typeInfo, beginingDate: today);
         final pillSheetGroup = PillSheetGroup(pillSheetIDs: ["pill_sheet_id"], pillSheets: [pillSheet], createdAt: today);
 
         for (int i = 0; i < 28; i++) {
@@ -299,7 +300,7 @@ void main() {
           timezoneDatabaseName: null,
           pillSheetAppearanceMode: pillSheetAppearanceMode,
         );
-        final pillSheet = PillSheet(typeInfo: PillSheetType.pillsheet_21.typeInfo, beginingDate: today);
+        final pillSheet = PillSheet(id: firestoreIDGenerator(), typeInfo: PillSheetType.pillsheet_21.typeInfo, beginingDate: today);
         final pillSheetGroup = PillSheetGroup(pillSheetIDs: ["pill_sheet_id"], pillSheets: [pillSheet], createdAt: today);
         for (int i = 0; i < 28; i++) {
           final pillNumberIntoPillSheet = i + 1;
@@ -340,7 +341,7 @@ void main() {
           timezoneDatabaseName: null,
           pillSheetAppearanceMode: pillSheetAppearanceMode,
         );
-        final pillSheet = PillSheet(typeInfo: PillSheetType.pillsheet_21.typeInfo, beginingDate: today);
+        final pillSheet = PillSheet(id: firestoreIDGenerator(), typeInfo: PillSheetType.pillsheet_21.typeInfo, beginingDate: today);
         final pillSheetGroup = PillSheetGroup(pillSheetIDs: ["pill_sheet_id"], pillSheets: [pillSheet], createdAt: today);
 
         for (int i = 0; i < 28; i++) {
@@ -382,7 +383,7 @@ void main() {
           timezoneDatabaseName: null,
           pillSheetAppearanceMode: pillSheetAppearanceMode,
         );
-        final pillSheet = PillSheet(typeInfo: PillSheetType.pillsheet_21.typeInfo, beginingDate: today);
+        final pillSheet = PillSheet(id: firestoreIDGenerator(), typeInfo: PillSheetType.pillsheet_21.typeInfo, beginingDate: today);
         final pillSheetGroup = PillSheetGroup(pillSheetIDs: ["pill_sheet_id"], pillSheets: [pillSheet], createdAt: today);
 
         for (int i = 0; i < 28; i++) {
@@ -417,7 +418,8 @@ void main() {
         todayRepository = originalTodayRepository;
       });
 
-      final PillSheet pillSheet = PillSheet(typeInfo: PillSheetType.pillsheet_21_0.typeInfo, beginingDate: DateTime.parse("2020-09-01"));
+      final PillSheet pillSheet =
+          PillSheet(id: firestoreIDGenerator(), typeInfo: PillSheetType.pillsheet_21_0.typeInfo, beginingDate: DateTime.parse("2020-09-01"));
 
       expect(pillSheet.displayPillTakeDate(1), DateTime.parse("2020-09-01"));
       expect(pillSheet.displayPillTakeDate(2), DateTime.parse("2020-09-02"));
@@ -444,6 +446,7 @@ void main() {
           });
 
           final PillSheet pillSheet = PillSheet(
+            id: firestoreIDGenerator(),
             typeInfo: PillSheetType.pillsheet_21_0.typeInfo,
             beginingDate: DateTime.parse("2020-09-01"),
             lastTakenDate: DateTime.parse("2020-09-10"),
@@ -478,6 +481,7 @@ void main() {
           });
 
           final PillSheet pillSheet = PillSheet(
+            id: firestoreIDGenerator(),
             typeInfo: PillSheetType.pillsheet_21_0.typeInfo,
             beginingDate: DateTime.parse("2020-09-01"),
             lastTakenDate: DateTime.parse("2020-09-10"),
@@ -514,6 +518,7 @@ void main() {
           });
 
           final PillSheet pillSheet = PillSheet(
+            id: firestoreIDGenerator(),
             typeInfo: PillSheetType.pillsheet_21_0.typeInfo,
             beginingDate: DateTime.parse("2020-09-01"),
             lastTakenDate: DateTime.parse("2020-09-10"),
@@ -550,6 +555,7 @@ void main() {
           });
 
           final PillSheet pillSheet = PillSheet(
+            id: firestoreIDGenerator(),
             typeInfo: PillSheetType.pillsheet_21_0.typeInfo,
             beginingDate: DateTime.parse("2020-09-01"),
             lastTakenDate: DateTime.parse("2020-09-10"),
@@ -589,6 +595,7 @@ void main() {
           });
 
           final PillSheet pillSheet = PillSheet(
+            id: firestoreIDGenerator(),
             typeInfo: PillSheetType.pillsheet_28_4.typeInfo,
             beginingDate: DateTime.parse("2021-12-17"),
             lastTakenDate: DateTime.parse("2022-01-19"),
@@ -622,6 +629,7 @@ void main() {
     test("group has only one pill sheet", () async {
       final anyDate = DateTime.parse("2020-09-19");
       final pillSheet = PillSheet(
+        id: firestoreIDGenerator(),
         typeInfo: PillSheetType.pillsheet_28_0.typeInfo,
         beginingDate: anyDate,
         groupIndex: 0,
@@ -651,16 +659,19 @@ void main() {
     test("group has three pill sheet and scheduled menstruation begin No.2 pillSheet", () async {
       final anyDate = DateTime.parse("2020-09-19");
       final one = PillSheet(
+        id: firestoreIDGenerator(),
         typeInfo: PillSheetType.pillsheet_28_0.typeInfo,
         beginingDate: anyDate,
         groupIndex: 0,
       );
       final two = PillSheet(
+        id: firestoreIDGenerator(),
         typeInfo: PillSheetType.pillsheet_28_0.typeInfo,
         beginingDate: anyDate,
         groupIndex: 1,
       );
       final three = PillSheet(
+        id: firestoreIDGenerator(),
         typeInfo: PillSheetType.pillsheet_28_0.typeInfo,
         beginingDate: anyDate,
         groupIndex: 2,
@@ -696,16 +707,19 @@ void main() {
     test("group has three pill sheet and scheduled menstruation have all sheets", () async {
       final anyDate = DateTime.parse("2020-09-19");
       final one = PillSheet(
+        id: firestoreIDGenerator(),
         typeInfo: PillSheetType.pillsheet_28_0.typeInfo,
         beginingDate: anyDate,
         groupIndex: 0,
       );
       final two = PillSheet(
+        id: firestoreIDGenerator(),
         typeInfo: PillSheetType.pillsheet_28_0.typeInfo,
         beginingDate: anyDate,
         groupIndex: 1,
       );
       final three = PillSheet(
+        id: firestoreIDGenerator(),
         typeInfo: PillSheetType.pillsheet_28_0.typeInfo,
         beginingDate: anyDate,
         groupIndex: 2,
@@ -742,26 +756,31 @@ void main() {
     test("group has five pill sheet and scheduled menstruation begin No.2 pillSheet", () async {
       final anyDate = DateTime.parse("2020-09-19");
       final one = PillSheet(
+        id: firestoreIDGenerator(),
         typeInfo: PillSheetType.pillsheet_28_0.typeInfo,
         beginingDate: anyDate,
         groupIndex: 0,
       );
       final two = PillSheet(
+        id: firestoreIDGenerator(),
         typeInfo: PillSheetType.pillsheet_28_0.typeInfo,
         beginingDate: anyDate,
         groupIndex: 1,
       );
       final three = PillSheet(
+        id: firestoreIDGenerator(),
         typeInfo: PillSheetType.pillsheet_28_0.typeInfo,
         beginingDate: anyDate,
         groupIndex: 2,
       );
       final four = PillSheet(
+        id: firestoreIDGenerator(),
         typeInfo: PillSheetType.pillsheet_28_0.typeInfo,
         beginingDate: anyDate,
         groupIndex: 3,
       );
       final five = PillSheet(
+        id: firestoreIDGenerator(),
         typeInfo: PillSheetType.pillsheet_28_0.typeInfo,
         beginingDate: anyDate,
         groupIndex: 4,
@@ -813,26 +832,31 @@ void main() {
     test("for ヤーズフレックス", () async {
       final anyDate = DateTime.parse("2020-09-19");
       final one = PillSheet(
+        id: firestoreIDGenerator(),
         typeInfo: PillSheetType.pillsheet_28_0.typeInfo,
         beginingDate: anyDate,
         groupIndex: 0,
       );
       final two = PillSheet(
+        id: firestoreIDGenerator(),
         typeInfo: PillSheetType.pillsheet_28_0.typeInfo,
         beginingDate: anyDate,
         groupIndex: 1,
       );
       final three = PillSheet(
+        id: firestoreIDGenerator(),
         typeInfo: PillSheetType.pillsheet_28_0.typeInfo,
         beginingDate: anyDate,
         groupIndex: 2,
       );
       final four = PillSheet(
+        id: firestoreIDGenerator(),
         typeInfo: PillSheetType.pillsheet_28_0.typeInfo,
         beginingDate: anyDate,
         groupIndex: 3,
       );
       final five = PillSheet(
+        id: firestoreIDGenerator(),
         typeInfo: PillSheetType.pillsheet_28_0.typeInfo,
         beginingDate: anyDate,
         groupIndex: 4,

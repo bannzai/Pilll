@@ -1,7 +1,7 @@
 import 'package:pilll/entity/pill_sheet_modified_history.codegen.dart';
 import 'package:pilll/provider/batch.dart';
 import 'package:pilll/entity/pill_sheet_group.codegen.dart';
-import 'package:pilll/provider/pill_sheet.dart';
+
 import 'package:pilll/provider/pill_sheet_group.dart';
 import 'package:pilll/provider/pill_sheet_modified_history.dart';
 import 'package:pilll/utils/datetime/day.dart';
@@ -10,7 +10,6 @@ import 'package:riverpod/riverpod.dart';
 final revertTakePillProvider = Provider(
   (ref) => RevertTakePill(
     batchFactory: ref.watch(batchFactoryProvider),
-    batchSetPillSheets: ref.watch(batchSetPillSheetsProvider),
     batchSetPillSheetModifiedHistory: ref.watch(batchSetPillSheetModifiedHistoryProvider),
     batchSetPillSheetGroup: ref.watch(batchSetPillSheetGroupProvider),
   ),
@@ -18,13 +17,12 @@ final revertTakePillProvider = Provider(
 
 class RevertTakePill {
   final BatchFactory batchFactory;
-  final BatchSetPillSheets batchSetPillSheets;
+
   final BatchSetPillSheetModifiedHistory batchSetPillSheetModifiedHistory;
   final BatchSetPillSheetGroup batchSetPillSheetGroup;
 
   RevertTakePill({
     required this.batchFactory,
-    required this.batchSetPillSheets,
     required this.batchSetPillSheetModifiedHistory,
     required this.batchSetPillSheetGroup,
   });
@@ -77,10 +75,6 @@ class RevertTakePill {
     }
 
     final batch = batchFactory.batch();
-    batchSetPillSheets(
-      batch,
-      updatedPillSheets,
-    );
     batchSetPillSheetGroup(batch, updatedPillSheetGroup);
 
     final before = pillSheetGroup.pillSheets[updatedIndexses.last];

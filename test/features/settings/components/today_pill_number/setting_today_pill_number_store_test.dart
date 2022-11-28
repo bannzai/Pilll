@@ -41,8 +41,6 @@ void main() {
           const Duration(days: 1),
         ),
       );
-      final batchSetPillSheets = MockBatchSetPillSheets();
-      when(batchSetPillSheets(batch, [updatedPillSheet])).thenReturn([updatedPillSheet]);
 
       final pillSheetGroup = PillSheetGroup(
         id: "group_id",
@@ -67,7 +65,6 @@ void main() {
 
       final changePillNumber = ChangePillNumber(
         batchFactory: batchFactory,
-        batchSetPillSheets: batchSetPillSheets,
         batchSetPillSheetModifiedHistory: batchSetPillSheetModifiedHistory,
         batchSetPillSheetGroup: batchSetPillSheetGroup,
       );
@@ -107,8 +104,6 @@ void main() {
           const Duration(days: 1),
         ),
       );
-      final batchSetPillSheets = MockBatchSetPillSheets();
-      when(batchSetPillSheets(batch, [updatedPillSheet])).thenReturn([updatedPillSheet]);
 
       final pillSheetGroup = PillSheetGroup(
         id: "group_id",
@@ -133,7 +128,6 @@ void main() {
 
       final changePillNumber = ChangePillNumber(
         batchFactory: batchFactory,
-        batchSetPillSheets: batchSetPillSheets,
         batchSetPillSheetModifiedHistory: batchSetPillSheetModifiedHistory,
         batchSetPillSheetGroup: batchSetPillSheetGroup,
       );
@@ -189,16 +183,6 @@ void main() {
       final updatedRight = right.copyWith(
         beginingDate: DateTime.parse("2022-05-30"),
       );
-      final batchSetPillSheets = MockBatchSetPillSheets();
-      when(batchSetPillSheets(batch, [
-        updatedLeft,
-        updatedMiddle,
-        updatedRight,
-      ])).thenReturn([
-        updatedLeft,
-        updatedMiddle,
-        updatedRight,
-      ]);
 
       final pillSheetGroup = PillSheetGroup(
         id: "group_id",
@@ -229,7 +213,6 @@ void main() {
 
       final changePillNumber = ChangePillNumber(
         batchFactory: batchFactory,
-        batchSetPillSheets: batchSetPillSheets,
         batchSetPillSheetModifiedHistory: batchSetPillSheetModifiedHistory,
         batchSetPillSheetGroup: batchSetPillSheetGroup,
       );
@@ -285,16 +268,6 @@ void main() {
       final updatedRight = right.copyWith(
         beginingDate: DateTime.parse("2022-05-30"),
       );
-      final batchSetPillSheets = MockBatchSetPillSheets();
-      when(batchSetPillSheets(batch, [
-        updatedLeft,
-        updatedMiddle,
-        updatedRight,
-      ])).thenReturn([
-        updatedLeft,
-        updatedMiddle,
-        updatedRight,
-      ]);
 
       final pillSheetGroup = PillSheetGroup(
         id: "group_id",
@@ -325,7 +298,6 @@ void main() {
 
       final changePillNumber = ChangePillNumber(
         batchFactory: batchFactory,
-        batchSetPillSheets: batchSetPillSheets,
         batchSetPillSheetModifiedHistory: batchSetPillSheetModifiedHistory,
         batchSetPillSheetGroup: batchSetPillSheetGroup,
       );
@@ -382,16 +354,6 @@ void main() {
         beginingDate: DateTime.parse("2022-05-01"),
         lastTakenDate: DateTime.parse("2022-04-30"),
       );
-      final batchSetPillSheets = MockBatchSetPillSheets();
-      when(batchSetPillSheets(batch, [
-        updatedLeft,
-        updatedMiddle,
-        updatedRight,
-      ])).thenReturn([
-        updatedLeft,
-        updatedMiddle,
-        updatedRight,
-      ]);
 
       final pillSheetGroup = PillSheetGroup(
         id: "group_id",
@@ -422,7 +384,6 @@ void main() {
 
       final changePillNumber = ChangePillNumber(
         batchFactory: batchFactory,
-        batchSetPillSheets: batchSetPillSheets,
         batchSetPillSheetModifiedHistory: batchSetPillSheetModifiedHistory,
         batchSetPillSheetGroup: batchSetPillSheetGroup,
       );
@@ -487,16 +448,6 @@ void main() {
       final updatedRight = right.copyWith(
         beginingDate: DateTime.parse("2022-05-31"),
       );
-      final batchSetPillSheets = MockBatchSetPillSheets();
-      when(batchSetPillSheets(batch, [
-        updatedLeft,
-        updatedMiddle,
-        updatedRight,
-      ])).thenReturn([
-        updatedLeft,
-        updatedMiddle,
-        updatedRight,
-      ]);
 
       final pillSheetGroup = PillSheetGroup(
         id: "group_id",
@@ -527,7 +478,6 @@ void main() {
 
       final changePillNumber = ChangePillNumber(
         batchFactory: batchFactory,
-        batchSetPillSheets: batchSetPillSheets,
         batchSetPillSheetModifiedHistory: batchSetPillSheetModifiedHistory,
         batchSetPillSheetGroup: batchSetPillSheetGroup,
       );

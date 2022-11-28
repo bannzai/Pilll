@@ -2,7 +2,7 @@ import 'package:pilll/entity/pill_sheet_modified_history.codegen.dart';
 import 'package:pilll/provider/batch.dart';
 import 'package:pilll/entity/pill_sheet.codegen.dart';
 import 'package:pilll/entity/pill_sheet_group.codegen.dart';
-import 'package:pilll/provider/pill_sheet.dart';
+
 import 'package:pilll/provider/pill_sheet_group.dart';
 import 'package:pilll/provider/pill_sheet_modified_history.dart';
 import 'package:riverpod/riverpod.dart';
@@ -10,7 +10,6 @@ import 'package:riverpod/riverpod.dart';
 final deletePillSheetGroupProvider = Provider(
   (ref) => DeletePillSheetGroup(
     ref.watch(batchFactoryProvider),
-    ref.watch(batchSetPillSheetProvider),
     ref.watch(batchSetPillSheetModifiedHistoryProvider),
     ref.watch(batchSetPillSheetGroupProvider),
   ),
@@ -18,11 +17,10 @@ final deletePillSheetGroupProvider = Provider(
 
 class DeletePillSheetGroup {
   final BatchFactory batchFactory;
-  final BatchSetPillSheet batchSetPillSheet;
   final BatchSetPillSheetModifiedHistory batchSetPillSheetModifiedHistory;
   final BatchSetPillSheetGroup batchSetPillSheetGroup;
 
-  DeletePillSheetGroup(this.batchFactory, this.batchSetPillSheet, this.batchSetPillSheetModifiedHistory, this.batchSetPillSheetGroup);
+  DeletePillSheetGroup(this.batchFactory, this.batchSetPillSheetModifiedHistory, this.batchSetPillSheetGroup);
 
   Future<void> call({
     required PillSheetGroup latestPillSheetGroup,
@@ -35,7 +33,6 @@ class DeletePillSheetGroup {
       pillSheetGroupID: latestPillSheetGroup.id,
       pillSheetIDs: latestPillSheetGroup.pillSheetIDs,
     );
-    batchSetPillSheet(batch, updatedPillSheet);
     batchSetPillSheetModifiedHistory(batch, history);
     batchSetPillSheetGroup(batch, updatedPillSheetGroup);
     await batch.commit();

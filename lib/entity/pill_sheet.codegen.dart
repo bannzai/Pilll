@@ -1,3 +1,4 @@
+import 'package:pilll/entity/firestore_id_generator.dart';
 import 'package:pilll/utils/datetime/date_range.dart';
 import 'package:pilll/entity/firestore_timestamp_converter.dart';
 import 'package:pilll/entity/pill_sheet_type.dart';
@@ -63,7 +64,7 @@ class PillSheet with _$PillSheet {
   @JsonSerializable(explicitToJson: true)
   const factory PillSheet({
     @JsonKey(includeIfNull: false)
-        String? id,
+        required String? id,
     @JsonKey()
         required PillSheetTypeInfo typeInfo,
     @JsonKey(
@@ -92,6 +93,7 @@ class PillSheet with _$PillSheet {
         List<RestDuration> restDurations,
   }) = _PillSheet;
   factory PillSheet.create(PillSheetType type) => PillSheet(
+        id: firestoreIDGenerator(),
         typeInfo: type.typeInfo,
         beginingDate: today(),
         lastTakenDate: null,

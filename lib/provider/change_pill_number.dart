@@ -4,7 +4,7 @@ import 'package:pilll/provider/batch.dart';
 import 'package:pilll/entity/pill_sheet.codegen.dart';
 import 'package:pilll/entity/pill_sheet_group.codegen.dart';
 import 'package:pilll/entity/pill_sheet_type.dart';
-import 'package:pilll/provider/pill_sheet.dart';
+
 import 'package:pilll/provider/pill_sheet_group.dart';
 import 'package:pilll/provider/pill_sheet_modified_history.dart';
 import 'package:pilll/utils/datetime/day.dart';
@@ -12,7 +12,6 @@ import 'package:pilll/utils/datetime/day.dart';
 final changePillNumberProvider = Provider(
   (ref) => ChangePillNumber(
     batchFactory: ref.watch(batchFactoryProvider),
-    batchSetPillSheets: ref.watch(batchSetPillSheetsProvider),
     batchSetPillSheetModifiedHistory: ref.watch(batchSetPillSheetModifiedHistoryProvider),
     batchSetPillSheetGroup: ref.watch(batchSetPillSheetGroupProvider),
   ),
@@ -20,13 +19,12 @@ final changePillNumberProvider = Provider(
 
 class ChangePillNumber {
   final BatchFactory batchFactory;
-  final BatchSetPillSheets batchSetPillSheets;
+
   final BatchSetPillSheetModifiedHistory batchSetPillSheetModifiedHistory;
   final BatchSetPillSheetGroup batchSetPillSheetGroup;
 
   ChangePillNumber({
     required this.batchFactory,
-    required this.batchSetPillSheets,
     required this.batchSetPillSheetModifiedHistory,
     required this.batchSetPillSheetGroup,
   });
@@ -72,8 +70,6 @@ class ChangePillNumber {
       final updatedPillSheet = pillSheet.copyWith(beginingDate: beginDate, lastTakenDate: lastTakenDate, restDurations: []);
       updatedPillSheets.add(updatedPillSheet);
     });
-
-    batchSetPillSheets(batch, updatedPillSheets);
 
     final history = PillSheetModifiedHistoryServiceActionFactory.createChangedPillNumberAction(
       pillSheetGroupID: pillSheetGroup.id,

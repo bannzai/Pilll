@@ -1,3 +1,4 @@
+import 'package:pilll/entity/firestore_id_generator.dart';
 import 'package:pilll/features/record/components/add_pill_sheet_group/provider.dart';
 import 'package:pilll/entity/pill_sheet.codegen.dart';
 import 'package:pilll/entity/pill_sheet_group.codegen.dart';
@@ -24,20 +25,21 @@ void main() {
       when(mockTodayRepository.now()).thenReturn(_today);
       when(mockTodayRepository.now()).thenReturn(_today);
 
+      final mockIDGenerator = MockFirestoreIDGenerator();
+      when(mockIDGenerator.call()).thenReturn("sheet_id");
+      firestoreIDGenerator = mockIDGenerator;
+
       final batchFactory = MockBatchFactory();
       final batch = MockWriteBatch();
       when(batchFactory.batch()).thenReturn(batch);
 
       final pillSheet = PillSheet(
+        id: "sheet_id",
         typeInfo: PillSheetType.pillsheet_28_0.typeInfo,
         beginingDate: _today,
         groupIndex: 0,
         lastTakenDate: null,
       );
-      final batchSetPillSheets = MockBatchSetPillSheets();
-      when(batchSetPillSheets(batch, [pillSheet])).thenReturn([
-        pillSheet.copyWith(id: "sheet_id"),
-      ]);
 
       final pillSheetGroup = PillSheetGroup(
         pillSheetIDs: ["sheet_id"],
@@ -79,7 +81,6 @@ void main() {
       final addPillSheetGroup = AddPillSheetGroup(
         batchFactory: batchFactory,
         batchSetPillSheetGroup: batchSetPillSheetGroup,
-        batchSetPillSheets: batchSetPillSheets,
         batchSetPillSheetModifiedHistory: batchSetPillSheetModifiedHistory,
         batchSetSetting: batchSetSetting,
       );
@@ -98,24 +99,29 @@ void main() {
       when(mockTodayRepository.now()).thenReturn(_today);
       when(mockTodayRepository.now()).thenReturn(_today);
 
+      var idGeneratorCallCount = 0;
+      final mockIDGenerator = MockFirestoreIDGenerator();
+      when(mockIDGenerator.call()).thenAnswer((_) => ["sheet_id", "sheet_id2"][idGeneratorCallCount++]);
+      firestoreIDGenerator = mockIDGenerator;
+
       final batchFactory = MockBatchFactory();
       final batch = MockWriteBatch();
       when(batchFactory.batch()).thenReturn(batch);
 
       final pillSheet = PillSheet(
+        id: "sheet_id",
         typeInfo: PillSheetType.pillsheet_28_0.typeInfo,
         beginingDate: _today,
         groupIndex: 0,
         lastTakenDate: null,
       );
       final pillSheet2 = PillSheet(
+        id: "sheet_id2",
         typeInfo: PillSheetType.pillsheet_21.typeInfo,
         beginingDate: _today.add(const Duration(days: 28)),
         lastTakenDate: null,
         groupIndex: 1,
       );
-      final batchSetPillSheets = MockBatchSetPillSheets();
-      when(batchSetPillSheets(batch, [pillSheet, pillSheet2])).thenReturn([pillSheet.copyWith(id: "sheet_id"), pillSheet2.copyWith(id: "sheet_id2")]);
 
       final pillSheetGroup = PillSheetGroup(
         pillSheetIDs: ["sheet_id", "sheet_id2"],
@@ -157,7 +163,6 @@ void main() {
       final addPillSheetGroup = AddPillSheetGroup(
         batchFactory: batchFactory,
         batchSetPillSheetGroup: batchSetPillSheetGroup,
-        batchSetPillSheets: batchSetPillSheets,
         batchSetPillSheetModifiedHistory: batchSetPillSheetModifiedHistory,
         batchSetSetting: batchSetSetting,
       );

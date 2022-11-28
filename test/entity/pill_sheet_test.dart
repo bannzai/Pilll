@@ -1,3 +1,4 @@
+import 'package:pilll/entity/firestore_id_generator.dart';
 import 'package:pilll/entity/pill_sheet.codegen.dart';
 import 'package:pilll/entity/pill_sheet_type.dart';
 import 'package:pilll/utils/datetime/day.dart';
@@ -20,6 +21,7 @@ void main() {
 
       const sheetType = PillSheetType.pillsheet_21;
       final model = PillSheet(
+        id: firestoreIDGenerator(),
         beginingDate: DateTime.parse("2020-09-14"),
         lastTakenDate: DateTime.parse("2020-09-18"),
         typeInfo: PillSheetTypeInfo(
@@ -38,6 +40,7 @@ void main() {
 
       const sheetType = PillSheetType.pillsheet_21;
       final model = PillSheet(
+        id: firestoreIDGenerator(),
         beginingDate: DateTime.parse("2020-09-01"),
         lastTakenDate: DateTime.parse("2020-09-28"),
         typeInfo: PillSheetTypeInfo(
@@ -57,6 +60,7 @@ void main() {
 
         const sheetType = PillSheetType.pillsheet_21;
         final model = PillSheet(
+          id: firestoreIDGenerator(),
           beginingDate: DateTime.parse("2020-09-01"),
           lastTakenDate: DateTime.parse("2020-09-28"),
           restDurations: [
@@ -82,6 +86,7 @@ void main() {
 
         const sheetType = PillSheetType.pillsheet_21;
         final model = PillSheet(
+          id: firestoreIDGenerator(),
           beginingDate: DateTime.parse("2020-09-01"),
           lastTakenDate: DateTime.parse("2020-09-28"),
           restDurations: [
@@ -108,6 +113,7 @@ void main() {
 
           const sheetType = PillSheetType.pillsheet_21;
           final model = PillSheet(
+            id: firestoreIDGenerator(),
             beginingDate: DateTime.parse("2020-09-01"),
             lastTakenDate: DateTime.parse("2020-09-28"),
             restDurations: [
@@ -137,6 +143,7 @@ void main() {
 
           const sheetType = PillSheetType.pillsheet_21;
           final model = PillSheet(
+            id: firestoreIDGenerator(),
             beginingDate: DateTime.parse("2020-09-01"),
             lastTakenDate: DateTime.parse("2020-09-28"),
             restDurations: [
@@ -171,6 +178,7 @@ void main() {
 
       const sheetType = PillSheetType.pillsheet_21;
       final model = PillSheet(
+        id: firestoreIDGenerator(),
         beginingDate: DateTime.parse("2020-09-14"),
         typeInfo: PillSheetTypeInfo(
           dosingPeriod: sheetType.dosingPeriod,
@@ -188,6 +196,7 @@ void main() {
 
       const sheetType = PillSheetType.pillsheet_21;
       final model = PillSheet(
+        id: firestoreIDGenerator(),
         beginingDate: DateTime.parse("2020-09-01"),
         typeInfo: PillSheetTypeInfo(
           dosingPeriod: sheetType.dosingPeriod,
@@ -205,6 +214,7 @@ void main() {
 
       const sheetType = PillSheetType.pillsheet_21;
       final model = PillSheet(
+        id: firestoreIDGenerator(),
         beginingDate: DateTime.parse("2020-09-01"),
         typeInfo: PillSheetTypeInfo(
           dosingPeriod: sheetType.dosingPeriod,
@@ -222,6 +232,7 @@ void main() {
 
       const sheetType = PillSheetType.pillsheet_21;
       final model = PillSheet(
+        id: firestoreIDGenerator(),
         beginingDate: DateTime.parse("2020-09-01"),
         typeInfo: PillSheetTypeInfo(
           dosingPeriod: sheetType.dosingPeriod,
@@ -239,6 +250,7 @@ void main() {
 
       const sheetType = PillSheetType.pillsheet_21;
       final model = PillSheet(
+        id: firestoreIDGenerator(),
         beginingDate: DateTime.parse("2020-09-01"),
         typeInfo: PillSheetTypeInfo(
           dosingPeriod: sheetType.dosingPeriod,
@@ -259,6 +271,7 @@ void main() {
 
       const sheetType = PillSheetType.pillsheet_21;
       final model = PillSheet(
+        id: firestoreIDGenerator(),
         beginingDate: DateTime.parse("2020-09-01"),
         typeInfo: PillSheetTypeInfo(
           dosingPeriod: sheetType.dosingPeriod,
@@ -279,6 +292,7 @@ void main() {
 
       const sheetType = PillSheetType.pillsheet_21;
       final model = PillSheet(
+        id: firestoreIDGenerator(),
         beginingDate: DateTime.parse("2020-09-01"),
         typeInfo: PillSheetTypeInfo(
           dosingPeriod: sheetType.dosingPeriod,
@@ -296,6 +310,7 @@ void main() {
 
       const sheetType = PillSheetType.pillsheet_21;
       final model = PillSheet(
+        id: firestoreIDGenerator(),
         beginingDate: DateTime.parse("2020-09-01"),
         typeInfo: PillSheetTypeInfo(
           dosingPeriod: sheetType.dosingPeriod,
@@ -313,6 +328,7 @@ void main() {
 
       const sheetType = PillSheetType.pillsheet_21;
       final model = PillSheet(
+        id: firestoreIDGenerator(),
         beginingDate: DateTime.parse("2020-09-01"),
         typeInfo: PillSheetTypeInfo(
           dosingPeriod: sheetType.dosingPeriod,
@@ -339,6 +355,7 @@ void main() {
 
       const sheetType = PillSheetType.pillsheet_21;
       final model = PillSheet(
+        id: firestoreIDGenerator(),
         beginingDate: DateTime.parse("2020-09-14"),
         typeInfo: PillSheetTypeInfo(
           dosingPeriod: sheetType.dosingPeriod,
@@ -356,6 +373,7 @@ void main() {
 
       const sheetType = PillSheetType.pillsheet_21;
       final model = PillSheet(
+        id: firestoreIDGenerator(),
         beginingDate: DateTime.parse("2020-09-01"),
         typeInfo: PillSheetTypeInfo(
           dosingPeriod: sheetType.dosingPeriod,
@@ -373,6 +391,7 @@ void main() {
 
       const sheetType = PillSheetType.pillsheet_21;
       final model = PillSheet(
+        id: firestoreIDGenerator(),
         beginingDate: DateTime.parse("2020-09-01"),
         typeInfo: PillSheetTypeInfo(
           dosingPeriod: sheetType.dosingPeriod,
@@ -390,6 +409,7 @@ void main() {
 
       const sheetType = PillSheetType.pillsheet_21;
       final model = PillSheet(
+        id: firestoreIDGenerator(),
         beginingDate: DateTime.parse("2020-09-01"),
         typeInfo: PillSheetTypeInfo(
           dosingPeriod: sheetType.dosingPeriod,
@@ -409,6 +429,7 @@ void main() {
 
       const sheetType = PillSheetType.pillsheet_21;
       final model = PillSheet(
+        id: firestoreIDGenerator(),
         beginingDate: DateTime.parse("2020-09-14"),
         typeInfo: PillSheetTypeInfo(
           dosingPeriod: sheetType.dosingPeriod,
@@ -426,6 +447,7 @@ void main() {
 
       const sheetType = PillSheetType.pillsheet_21;
       final model = PillSheet(
+        id: firestoreIDGenerator(),
         beginingDate: DateTime.parse("2020-09-14"),
         lastTakenDate: DateTime.parse("2020-09-17"),
         typeInfo: PillSheetTypeInfo(
@@ -444,6 +466,7 @@ void main() {
 
       const sheetType = PillSheetType.pillsheet_21;
       final model = PillSheet(
+        id: firestoreIDGenerator(),
         beginingDate: DateTime.parse("2020-09-01"),
         lastTakenDate: DateTime.parse("2020-09-28"),
         typeInfo: PillSheetTypeInfo(
@@ -463,6 +486,7 @@ void main() {
 
         const sheetType = PillSheetType.pillsheet_21;
         final model = PillSheet(
+          id: firestoreIDGenerator(),
           beginingDate: DateTime.parse("2020-09-01"),
           lastTakenDate: DateTime.parse("2020-09-22"),
           restDurations: [
@@ -487,6 +511,7 @@ void main() {
 
         const sheetType = PillSheetType.pillsheet_21;
         final model = PillSheet(
+          id: firestoreIDGenerator(),
           beginingDate: DateTime.parse("2020-09-01"),
           lastTakenDate: DateTime.parse("2020-09-27"),
           restDurations: [
@@ -512,6 +537,7 @@ void main() {
 
         const sheetType = PillSheetType.pillsheet_21;
         final model = PillSheet(
+          id: firestoreIDGenerator(),
           beginingDate: DateTime.parse("2020-09-01"),
           lastTakenDate: null,
           restDurations: [
@@ -539,6 +565,7 @@ void main() {
 
           const sheetType = PillSheetType.pillsheet_21;
           final model = PillSheet(
+            id: firestoreIDGenerator(),
             beginingDate: DateTime.parse("2020-09-01"),
             lastTakenDate: DateTime.parse("2020-09-22"),
             restDurations: [
@@ -568,6 +595,7 @@ void main() {
 
           const sheetType = PillSheetType.pillsheet_21;
           final model = PillSheet(
+            id: firestoreIDGenerator(),
             beginingDate: DateTime.parse("2020-09-01"),
             lastTakenDate: DateTime.parse("2020-09-22"),
             restDurations: [
@@ -602,6 +630,7 @@ void main() {
 
       const sheetType = PillSheetType.pillsheet_21;
       final pillSheet = PillSheet(
+        id: firestoreIDGenerator(),
         beginingDate: DateTime.parse("2022-05-01"),
         typeInfo: PillSheetTypeInfo(
           dosingPeriod: sheetType.dosingPeriod,
@@ -621,6 +650,7 @@ void main() {
 
         const sheetType = PillSheetType.pillsheet_21;
         final pillSheet = PillSheet(
+          id: firestoreIDGenerator(),
           beginingDate: DateTime.parse("2022-05-01"),
           restDurations: [
             RestDuration(
@@ -644,6 +674,7 @@ void main() {
 
         const sheetType = PillSheetType.pillsheet_21;
         final pillSheet = PillSheet(
+          id: firestoreIDGenerator(),
           beginingDate: DateTime.parse("2022-05-01"),
           restDurations: [
             RestDuration(
@@ -670,6 +701,7 @@ void main() {
 
           const sheetType = PillSheetType.pillsheet_21;
           final pillSheet = PillSheet(
+            id: firestoreIDGenerator(),
             beginingDate: DateTime.parse("2022-05-01"),
             restDurations: [
               RestDuration(
@@ -698,6 +730,7 @@ void main() {
 
           const sheetType = PillSheetType.pillsheet_21;
           final pillSheet = PillSheet(
+            id: firestoreIDGenerator(),
             beginingDate: DateTime.parse("2022-05-01"),
             restDurations: [
               RestDuration(
