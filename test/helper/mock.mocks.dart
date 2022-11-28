@@ -9,6 +9,7 @@ import 'package:cloud_firestore/cloud_firestore.dart' as _i3;
 import 'package:mockito/mockito.dart' as _i1;
 import 'package:pilll/entity/diary.codegen.dart' as _i22;
 import 'package:pilll/entity/diary_setting.codegen.dart' as _i21;
+import 'package:pilll/entity/firestore_id_generator.dart' as _i33;
 import 'package:pilll/entity/menstruation.codegen.dart' as _i8;
 import 'package:pilll/entity/pill_sheet.codegen.dart' as _i29;
 import 'package:pilll/entity/pill_sheet_group.codegen.dart' as _i7;
@@ -1026,4 +1027,23 @@ class MockErrorLogger extends _i1.Mock implements _i32.ErrorLogger {
         ),
         returnValueForMissingStub: null,
       );
+}
+
+/// A class which mocks [FirestoreIDGenerator].
+///
+/// See the documentation for Mockito's code generation for more information.
+class MockFirestoreIDGenerator extends _i1.Mock
+    implements _i33.FirestoreIDGenerator {
+  MockFirestoreIDGenerator() {
+    _i1.throwOnMissingStub(this);
+  }
+
+  @override
+  String call() => (super.noSuchMethod(
+        Invocation.method(
+          #call,
+          [],
+        ),
+        returnValue: '',
+      ) as String);
 }
