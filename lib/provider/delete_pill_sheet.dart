@@ -33,7 +33,6 @@ class DeletePillSheetGroup {
       pillSheetGroupID: latestPillSheetGroup.id,
       pillSheetIDs: latestPillSheetGroup.pillSheetIDs,
     );
-    batchSetPillSheet(batch, updatedPillSheet);
     batchSetPillSheetModifiedHistory(batch, history);
     batchSetPillSheetGroup(batch, updatedPillSheetGroup);
     await batch.commit();
