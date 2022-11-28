@@ -26,7 +26,6 @@ class ChangePillNumber {
 
   ChangePillNumber({
     required this.batchFactory,
-    required this.batchSetPillSheets,
     required this.batchSetPillSheetModifiedHistory,
     required this.batchSetPillSheetGroup,
   });

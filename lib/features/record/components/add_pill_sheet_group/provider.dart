@@ -31,7 +31,6 @@ class AddPillSheetGroup {
   AddPillSheetGroup({
     required this.batchFactory,
     required this.batchSetPillSheetGroup,
-    required this.batchSetPillSheets,
     required this.batchSetPillSheetModifiedHistory,
     required this.batchSetSetting,
   });

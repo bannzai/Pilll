@@ -24,7 +24,6 @@ class RevertTakePill {
 
   RevertTakePill({
     required this.batchFactory,
-    required this.batchSetPillSheets,
     required this.batchSetPillSheetModifiedHistory,
     required this.batchSetPillSheetGroup,
   });

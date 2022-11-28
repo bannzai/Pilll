@@ -25,7 +25,6 @@ class BeginRestDuration {
 
   BeginRestDuration({
     required this.batchFactory,
-    required this.batchSetPillSheets,
     required this.batchSetPillSheetGroup,
     required this.batchSetPillSheetModifiedHistory,
   });
@@ -77,7 +76,6 @@ class EndRestDuration {
 
   EndRestDuration({
     required this.batchFactory,
-    required this.batchSetPillSheets,
     required this.batchSetPillSheetGroup,
     required this.batchSetPillSheetModifiedHistory,
   });

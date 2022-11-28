@@ -28,7 +28,6 @@ class TakePill {
 
   TakePill({
     required this.batchFactory,
-    required this.batchSetPillSheets,
     required this.batchSetPillSheetModifiedHistory,
     required this.batchSetPillSheetGroup,
   });

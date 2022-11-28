@@ -38,7 +38,6 @@ class InitialSettingStateNotifier extends StateNotifier<InitialSettingState> {
     this.endInitialSetting,
     this.batchFactory,
     this.batchSetSetting,
-    this.batchSetPillSheets,
     this.batchSetPillSheetModifiedHistory,
     this.batchSetPillSheetGroup,
     DateTime _now,
