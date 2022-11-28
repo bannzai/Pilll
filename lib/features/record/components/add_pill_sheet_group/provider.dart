@@ -24,14 +24,12 @@ final addPillSheetGroupProvider = Provider(
 class AddPillSheetGroup {
   final BatchFactory batchFactory;
   final BatchSetPillSheetGroup batchSetPillSheetGroup;
-  final BatchSetPillSheets batchSetPillSheets;
   final BatchSetPillSheetModifiedHistory batchSetPillSheetModifiedHistory;
   final BatchSetSetting batchSetSetting;
 
   AddPillSheetGroup({
     required this.batchFactory,
     required this.batchSetPillSheetGroup,
-    required this.batchSetPillSheets,
     required this.batchSetPillSheetModifiedHistory,
     required this.batchSetSetting,
   });

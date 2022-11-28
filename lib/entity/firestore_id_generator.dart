@@ -8,8 +8,6 @@ class FirestoreIDGenerator {
 FirestoreIDGenerator firestoreIDGenerator = FirestoreIDGenerator();
 
 class IDDefault implements Default {
-  const IDDefault();
-
   @override
   String get defaultValue => firestoreIDGenerator();
 }
