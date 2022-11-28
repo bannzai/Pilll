@@ -118,6 +118,7 @@ void main() {
           pillSheetIDs: ["1"],
           pillSheets: [
             PillSheet(
+              id: firestoreIDGenerator(),
               typeInfo: PillSheetType.pillsheet_21.typeInfo,
               beginingDate: DateTime(2021, 04, 22),
             ),
@@ -157,6 +158,7 @@ void main() {
           pillSheetIDs: ["1"],
           pillSheets: [
             PillSheet(
+              id: firestoreIDGenerator(),
               typeInfo: PillSheetType.pillsheet_21.typeInfo,
               beginingDate: DateTime(2021, 04, 07),
             ),

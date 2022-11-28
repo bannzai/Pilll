@@ -67,6 +67,7 @@ class InitialSettingState with _$InitialSettingState {
   }) {
     final pillSheetType = pillSheetTypes[pageIndex];
     return PillSheet(
+      id: firestoreIDGenerator(),
       groupIndex: pageIndex,
       beginingDate: _beginingDate(
         pageIndex: pageIndex,

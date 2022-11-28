@@ -33,11 +33,13 @@ void main() {
 
           var beginingDate = DateTime.parse("2020-09-01");
           var pillSheet = PillSheet(
+            id: firestoreIDGenerator(),
             typeInfo: PillSheetType.pillsheet_28_7.typeInfo,
             beginingDate: beginingDate,
             lastTakenDate: null,
           );
           var pillSheet2 = PillSheet(
+            id: firestoreIDGenerator(),
             typeInfo: PillSheetType.pillsheet_24_0.typeInfo,
             beginingDate: beginingDate.add(const Duration(days: 28)),
             lastTakenDate: null,
@@ -84,11 +86,13 @@ void main() {
 
           var beginingDate = DateTime.parse("2020-09-01");
           var pillSheet = PillSheet(
+            id: firestoreIDGenerator(),
             typeInfo: PillSheetType.pillsheet_28_7.typeInfo,
             beginingDate: beginingDate,
             lastTakenDate: null,
           );
           var pillSheet2 = PillSheet(
+            id: firestoreIDGenerator(),
             typeInfo: PillSheetType.pillsheet_21_0.typeInfo,
             beginingDate: beginingDate.add(const Duration(days: 28)),
             lastTakenDate: null,
@@ -135,11 +139,13 @@ void main() {
 
           var beginingDate = DateTime.parse("2020-09-01");
           var pillSheet = PillSheet(
+            id: firestoreIDGenerator(),
             typeInfo: PillSheetType.pillsheet_28_7.typeInfo,
             beginingDate: beginingDate,
             lastTakenDate: null,
           );
           var pillSheet2 = PillSheet(
+            id: firestoreIDGenerator(),
             typeInfo: PillSheetType.pillsheet_24_0.typeInfo,
             beginingDate: beginingDate.add(const Duration(days: 28)),
             lastTakenDate: null,
@@ -215,6 +221,7 @@ void main() {
           var fromMenstruation = 23;
           var durationMenstruation = 3;
           var pillSheet = PillSheet(
+            id: firestoreIDGenerator(),
             typeInfo: pillSheetType.typeInfo,
             beginingDate: beginingDate,
             lastTakenDate: null,
@@ -258,6 +265,7 @@ void main() {
           var fromMenstruation = 23;
           var durationMenstruation = 3;
           var pillSheet = PillSheet(
+            id: firestoreIDGenerator(),
             typeInfo: pillSheetType.typeInfo,
             beginingDate: beginingDate,
             lastTakenDate: null,
@@ -306,6 +314,7 @@ void main() {
           var fromMenstruation = 23;
           var durationMenstruation = 3;
           var pillSheet = PillSheet(
+            id: firestoreIDGenerator(),
             typeInfo: pillSheetType.typeInfo,
             beginingDate: beginingDate,
             lastTakenDate: null,
@@ -357,6 +366,7 @@ void main() {
           var fromMenstruation = 23;
           var durationMenstruation = 3;
           var pillSheet = PillSheet(
+            id: firestoreIDGenerator(),
             typeInfo: pillSheetType.typeInfo,
             beginingDate: beginingDate,
             lastTakenDate: null,
@@ -398,6 +408,7 @@ void main() {
           var pillSheetType = PillSheetType.pillsheet_28_0;
           var beginingDate = DateTime.parse("2021-01-01");
           var pillSheet = PillSheet(
+            id: firestoreIDGenerator(),
             typeInfo: pillSheetType.typeInfo,
             beginingDate: beginingDate,
             lastTakenDate: null,
@@ -446,6 +457,7 @@ void main() {
           var beginingDate = DateTime.parse("2021-01-18");
           var durationMenstruation = 3;
           var pillSheet = PillSheet(
+            id: firestoreIDGenerator(),
             typeInfo: pillSheetType.typeInfo,
             beginingDate: beginingDate,
             lastTakenDate: null,
@@ -485,11 +497,13 @@ void main() {
 
           var beginingDate = DateTime.parse("2020-09-01");
           var pillSheet = PillSheet(
+            id: firestoreIDGenerator(),
             typeInfo: PillSheetType.pillsheet_28_7.typeInfo,
             beginingDate: beginingDate,
             lastTakenDate: null,
           );
           var pillSheet2 = PillSheet(
+            id: firestoreIDGenerator(),
             typeInfo: PillSheetType.pillsheet_21_0.typeInfo,
             beginingDate: beginingDate.add(const Duration(days: 28)),
             lastTakenDate: null,
@@ -549,6 +563,7 @@ void main() {
           var pillSheetType = PillSheetType.pillsheet_28_7;
           var beginingDate = DateTime.parse("2020-09-01");
           var pillSheet = PillSheet(
+            id: firestoreIDGenerator(),
             typeInfo: pillSheetType.typeInfo,
             beginingDate: beginingDate,
             lastTakenDate: null,
@@ -580,6 +595,7 @@ void main() {
           var pillSheetType = PillSheetType.pillsheet_28_7;
           var beginingDate = DateTime.parse("2020-09-01");
           var pillSheet = PillSheet(
+            id: firestoreIDGenerator(),
             typeInfo: pillSheetType.typeInfo,
             beginingDate: beginingDate,
             lastTakenDate: null,
@@ -615,6 +631,7 @@ void main() {
           var pillSheetType = PillSheetType.pillsheet_28_7;
           var beginingDate = DateTime.parse("2020-09-01");
           var pillSheet = PillSheet(
+            id: firestoreIDGenerator(),
             typeInfo: pillSheetType.typeInfo,
             beginingDate: beginingDate,
             lastTakenDate: null,
@@ -671,6 +688,7 @@ void main() {
           var pillSheetType = PillSheetType.pillsheet_28_0;
           var beginingDate = DateTime.parse("2020-09-01");
           var pillSheet = PillSheet(
+            id: firestoreIDGenerator(),
             typeInfo: pillSheetType.typeInfo,
             beginingDate: beginingDate,
             lastTakenDate: null,

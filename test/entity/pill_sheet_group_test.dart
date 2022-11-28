@@ -23,6 +23,7 @@ void main() {
 
         const sheetType = PillSheetType.pillsheet_21;
         final pillSheet = PillSheet(
+          id: firestoreIDGenerator(),
           beginingDate: DateTime.parse("2020-09-14"),
           lastTakenDate: DateTime.parse("2020-09-18"),
           typeInfo: PillSheetTypeInfo(
@@ -47,6 +48,7 @@ void main() {
 
         const sheetType = PillSheetType.pillsheet_21;
         final pillSheet = PillSheet(
+          id: firestoreIDGenerator(),
           beginingDate: DateTime.parse("2020-09-01"),
           lastTakenDate: DateTime.parse("2020-09-28"),
           typeInfo: PillSheetTypeInfo(
@@ -72,6 +74,7 @@ void main() {
 
           const sheetType = PillSheetType.pillsheet_21;
           final pillSheet = PillSheet(
+            id: firestoreIDGenerator(),
             beginingDate: DateTime.parse("2020-09-01"),
             lastTakenDate: DateTime.parse("2020-09-28"),
             restDurations: [
@@ -103,6 +106,7 @@ void main() {
 
           const sheetType = PillSheetType.pillsheet_21;
           final pillSheet = PillSheet(
+            id: firestoreIDGenerator(),
             beginingDate: DateTime.parse("2020-09-01"),
             lastTakenDate: DateTime.parse("2020-09-28"),
             restDurations: [
@@ -135,6 +139,7 @@ void main() {
 
             const sheetType = PillSheetType.pillsheet_21;
             final pillSheet = PillSheet(
+              id: firestoreIDGenerator(),
               beginingDate: DateTime.parse("2020-09-01"),
               lastTakenDate: DateTime.parse("2020-09-28"),
               restDurations: [
@@ -170,6 +175,7 @@ void main() {
 
             const sheetType = PillSheetType.pillsheet_21;
             final pillSheet = PillSheet(
+              id: firestoreIDGenerator(),
               beginingDate: DateTime.parse("2020-09-01"),
               lastTakenDate: DateTime.parse("2020-09-28"),
               restDurations: [
@@ -210,6 +216,7 @@ void main() {
 
         const sheetType = PillSheetType.pillsheet_21;
         final pillSheet1 = PillSheet(
+          id: firestoreIDGenerator(),
           beginingDate: DateTime.parse("2022-03-01"),
           lastTakenDate: DateTime.parse("2020-03-28"),
           groupIndex: 0,
@@ -221,6 +228,7 @@ void main() {
           ),
         );
         final pillSheet2 = PillSheet(
+          id: firestoreIDGenerator(),
           beginingDate: DateTime.parse("2022-03-29"),
           lastTakenDate: null,
           groupIndex: 1,
@@ -246,6 +254,7 @@ void main() {
 
         const sheetType = PillSheetType.pillsheet_21;
         final pillSheet1 = PillSheet(
+          id: firestoreIDGenerator(),
           beginingDate: DateTime.parse("2022-03-01"),
           lastTakenDate: DateTime.parse("2020-03-28"),
           groupIndex: 0,
@@ -257,6 +266,7 @@ void main() {
           ),
         );
         final pillSheet2 = PillSheet(
+          id: firestoreIDGenerator(),
           beginingDate: DateTime.parse("2022-03-29"),
           lastTakenDate: null,
           groupIndex: 1,
@@ -283,6 +293,7 @@ void main() {
 
         const sheetType = PillSheetType.pillsheet_21;
         final pillSheet1 = PillSheet(
+          id: firestoreIDGenerator(),
           beginingDate: DateTime.parse("2022-03-01"),
           lastTakenDate: DateTime.parse("2020-03-28"),
           groupIndex: 0,
@@ -294,6 +305,7 @@ void main() {
           ),
         );
         final pillSheet2 = PillSheet(
+          id: firestoreIDGenerator(),
           beginingDate: DateTime.parse("2022-03-29"),
           lastTakenDate: null,
           groupIndex: 1,
@@ -320,6 +332,7 @@ void main() {
 
         const sheetType = PillSheetType.pillsheet_21;
         final pillSheet1 = PillSheet(
+          id: firestoreIDGenerator(),
           beginingDate: DateTime.parse("2022-03-01"),
           lastTakenDate: DateTime.parse("2020-03-28"),
           groupIndex: 0,
@@ -331,6 +344,7 @@ void main() {
           ),
         );
         final pillSheet2 = PillSheet(
+          id: firestoreIDGenerator(),
           beginingDate: DateTime.parse("2022-03-29"),
           lastTakenDate: null,
           groupIndex: 1,
@@ -362,6 +376,7 @@ void main() {
 
         const sheetType = PillSheetType.pillsheet_21;
         final pillSheet = PillSheet(
+          id: firestoreIDGenerator(),
           beginingDate: DateTime.parse("2020-09-14"),
           typeInfo: PillSheetTypeInfo(
             dosingPeriod: sheetType.dosingPeriod,
@@ -385,6 +400,7 @@ void main() {
 
         const sheetType = PillSheetType.pillsheet_21;
         final pillSheet = PillSheet(
+          id: firestoreIDGenerator(),
           beginingDate: DateTime.parse("2020-09-14"),
           lastTakenDate: DateTime.parse("2020-09-17"),
           typeInfo: PillSheetTypeInfo(
@@ -409,6 +425,7 @@ void main() {
 
         const sheetType = PillSheetType.pillsheet_21;
         final pillSheet = PillSheet(
+          id: firestoreIDGenerator(),
           beginingDate: DateTime.parse("2020-09-01"),
           lastTakenDate: DateTime.parse("2020-09-28"),
           typeInfo: PillSheetTypeInfo(
@@ -434,6 +451,7 @@ void main() {
 
           const sheetType = PillSheetType.pillsheet_21;
           final pillSheet = PillSheet(
+            id: firestoreIDGenerator(),
             beginingDate: DateTime.parse("2020-09-01"),
             lastTakenDate: DateTime.parse("2020-09-22"),
             restDurations: [
@@ -464,6 +482,7 @@ void main() {
 
           const sheetType = PillSheetType.pillsheet_21;
           final pillSheet = PillSheet(
+            id: firestoreIDGenerator(),
             beginingDate: DateTime.parse("2020-09-01"),
             lastTakenDate: DateTime.parse("2020-09-27"),
             restDurations: [
@@ -495,6 +514,7 @@ void main() {
 
           const sheetType = PillSheetType.pillsheet_21;
           final pillSheet = PillSheet(
+            id: firestoreIDGenerator(),
             beginingDate: DateTime.parse("2020-09-01"),
             lastTakenDate: null,
             restDurations: [
@@ -528,6 +548,7 @@ void main() {
 
             const sheetType = PillSheetType.pillsheet_21;
             final pillSheet = PillSheet(
+              id: firestoreIDGenerator(),
               beginingDate: DateTime.parse("2020-09-01"),
               lastTakenDate: DateTime.parse("2020-09-22"),
               restDurations: [
@@ -563,6 +584,7 @@ void main() {
 
             const sheetType = PillSheetType.pillsheet_21;
             final pillSheet = PillSheet(
+              id: firestoreIDGenerator(),
               beginingDate: DateTime.parse("2020-09-01"),
               lastTakenDate: DateTime.parse("2020-09-22"),
               restDurations: [
@@ -602,6 +624,7 @@ void main() {
 
           const sheetType = PillSheetType.pillsheet_21;
           final pillSheet1 = PillSheet(
+            id: firestoreIDGenerator(),
             beginingDate: DateTime.parse("2022-03-01"),
             lastTakenDate: DateTime.parse("2020-03-28"),
             groupIndex: 0,
@@ -613,6 +636,7 @@ void main() {
             ),
           );
           final pillSheet2 = PillSheet(
+            id: firestoreIDGenerator(),
             beginingDate: DateTime.parse("2022-03-29"),
             lastTakenDate: DateTime.parse("2022-03-29"),
             groupIndex: 1,
@@ -638,6 +662,7 @@ void main() {
 
           const sheetType = PillSheetType.pillsheet_21;
           final pillSheet1 = PillSheet(
+            id: firestoreIDGenerator(),
             beginingDate: DateTime.parse("2022-03-01"),
             lastTakenDate: DateTime.parse("2020-03-28"),
             groupIndex: 0,
@@ -649,6 +674,7 @@ void main() {
             ),
           );
           final pillSheet2 = PillSheet(
+            id: firestoreIDGenerator(),
             beginingDate: DateTime.parse("2022-03-29"),
             lastTakenDate: DateTime.parse("2022-03-29"),
             groupIndex: 1,
@@ -675,6 +701,7 @@ void main() {
 
           const sheetType = PillSheetType.pillsheet_21;
           final pillSheet1 = PillSheet(
+            id: firestoreIDGenerator(),
             beginingDate: DateTime.parse("2022-03-01"),
             lastTakenDate: DateTime.parse("2020-03-28"),
             groupIndex: 0,
@@ -686,6 +713,7 @@ void main() {
             ),
           );
           final pillSheet2 = PillSheet(
+            id: firestoreIDGenerator(),
             beginingDate: DateTime.parse("2022-03-29"),
             lastTakenDate: DateTime.parse("2022-03-29"),
             groupIndex: 1,
@@ -713,6 +741,7 @@ void main() {
 
           const sheetType = PillSheetType.pillsheet_21;
           final pillSheet1 = PillSheet(
+            id: firestoreIDGenerator(),
             beginingDate: DateTime.parse("2022-03-01"),
             lastTakenDate: DateTime.parse("2020-03-28"),
             groupIndex: 0,
@@ -724,6 +753,7 @@ void main() {
             ),
           );
           final pillSheet2 = PillSheet(
+            id: firestoreIDGenerator(),
             beginingDate: DateTime.parse("2022-03-29"),
             lastTakenDate: DateTime.parse("2022-03-29"),
             groupIndex: 1,
@@ -750,6 +780,7 @@ void main() {
 
           const sheetType = PillSheetType.pillsheet_21;
           final pillSheet1 = PillSheet(
+            id: firestoreIDGenerator(),
             beginingDate: DateTime.parse("2022-03-01"),
             lastTakenDate: DateTime.parse("2020-03-28"),
             groupIndex: 0,
@@ -761,6 +792,7 @@ void main() {
             ),
           );
           final pillSheet2 = PillSheet(
+            id: firestoreIDGenerator(),
             beginingDate: DateTime.parse("2022-03-29"),
             lastTakenDate: DateTime.parse("2022-03-29"),
             groupIndex: 1,

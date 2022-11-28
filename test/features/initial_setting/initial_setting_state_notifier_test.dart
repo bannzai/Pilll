@@ -264,7 +264,7 @@ void main() {
       final batch = MockWriteBatch();
       when(batchFactory.batch()).thenReturn(batch);
 
-      final pillSheet = PillSheet(typeInfo: PillSheetType.pillsheet_21.typeInfo, beginingDate: _today);
+      final pillSheet = PillSheet(id: firestoreIDGenerator(), typeInfo: PillSheetType.pillsheet_21.typeInfo, beginingDate: _today);
       final batchSetPillSheets = MockBatchSetPillSheets();
       when(batchSetPillSheets(batch, [pillSheet])).thenReturn([pillSheet.copyWith(id: "sheet_id")]);
 
@@ -321,6 +321,7 @@ void main() {
       when(batchFactory.batch()).thenReturn(batch);
 
       final pillSheet = PillSheet(
+        id: firestoreIDGenerator(),
         typeInfo: PillSheetType.pillsheet_28_0.typeInfo,
         beginingDate: _today.subtract(
           const Duration(days: 28),
@@ -329,6 +330,7 @@ void main() {
         lastTakenDate: DateTime.parse("2020-09-18"),
       );
       final pillSheet2 = PillSheet(
+        id: firestoreIDGenerator(),
         typeInfo: PillSheetType.pillsheet_21.typeInfo,
         beginingDate: _today,
         lastTakenDate: _today.subtract(const Duration(days: 1)),
@@ -412,7 +414,7 @@ void main() {
       final batch = MockWriteBatch();
       when(batchFactory.batch()).thenReturn(batch);
 
-      final pillSheet = PillSheet(typeInfo: PillSheetType.pillsheet_24_rest_4.typeInfo, beginingDate: _today);
+      final pillSheet = PillSheet(id: firestoreIDGenerator(), typeInfo: PillSheetType.pillsheet_24_rest_4.typeInfo, beginingDate: _today);
       final batchSetPillSheets = MockBatchSetPillSheets();
       when(batchSetPillSheets(batch, [pillSheet])).thenReturn([pillSheet.copyWith(id: "sheet_id")]);
 

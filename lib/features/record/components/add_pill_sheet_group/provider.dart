@@ -47,6 +47,7 @@ class AddPillSheetGroup {
       final pillSheetType = backportPillSheetTypes(pillSheetTypes)[pageIndex];
       final offset = summarizedPillCountWithPillSheetTypesToEndIndex(pillSheetTypes: setting.pillSheetEnumTypes, endIndex: pageIndex);
       return PillSheet(
+        id: firestoreIDGenerator(),
         typeInfo: pillSheetType.typeInfo,
         beginingDate: n.add(
           Duration(days: offset),

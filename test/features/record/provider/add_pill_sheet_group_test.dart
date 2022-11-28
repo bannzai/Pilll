@@ -29,6 +29,7 @@ void main() {
       when(batchFactory.batch()).thenReturn(batch);
 
       final pillSheet = PillSheet(
+        id: firestoreIDGenerator(),
         typeInfo: PillSheetType.pillsheet_28_0.typeInfo,
         beginingDate: _today,
         groupIndex: 0,
@@ -102,12 +103,14 @@ void main() {
       when(batchFactory.batch()).thenReturn(batch);
 
       final pillSheet = PillSheet(
+        id: firestoreIDGenerator(),
         typeInfo: PillSheetType.pillsheet_28_0.typeInfo,
         beginingDate: _today,
         groupIndex: 0,
         lastTakenDate: null,
       );
       final pillSheet2 = PillSheet(
+        id: firestoreIDGenerator(),
         typeInfo: PillSheetType.pillsheet_21.typeInfo,
         beginingDate: _today.add(const Duration(days: 28)),
         lastTakenDate: null,

@@ -29,6 +29,7 @@ void main() {
       activePillSheetBeginDate = _today;
       activePillSheetLastTakenDate = null;
       previousPillSheet = PillSheet(
+        id: firestoreIDGenerator(),
         id: "previous_pill_sheet_id",
         groupIndex: 0,
         typeInfo: PillSheetType.pillsheet_28_7.typeInfo,
@@ -36,6 +37,7 @@ void main() {
         lastTakenDate: activePillSheetBeginDate.subtract(const Duration(days: 1)),
       );
       activedPillSheet = PillSheet(
+        id: firestoreIDGenerator(),
         id: "active_pill_sheet_id",
         groupIndex: 1,
         typeInfo: PillSheetType.pillsheet_28_7.typeInfo,
@@ -43,6 +45,7 @@ void main() {
         lastTakenDate: activePillSheetLastTakenDate,
       );
       nextPillSheet = PillSheet(
+        id: firestoreIDGenerator(),
         id: "next_pill_sheet_id",
         groupIndex: 2,
         typeInfo: PillSheetType.pillsheet_28_7.typeInfo,
@@ -567,6 +570,7 @@ void main() {
               endDate: DateTime.parse("2022-08-08T19:47:49"))
         ]);
         nextPillSheet = PillSheet(
+          id: firestoreIDGenerator(),
           id: "next_pill_sheet_id",
           groupIndex: 2,
           typeInfo: PillSheetType.pillsheet_28_7.typeInfo,

@@ -27,6 +27,7 @@ void main() {
       final batch = MockWriteBatch();
       when(batchFactory.batch()).thenReturn(batch);
       final pillSheet = PillSheet(
+        id: firestoreIDGenerator(),
         id: "sheet_id",
         typeInfo: PillSheetType.pillsheet_28_0.typeInfo,
         beginingDate: _today,
@@ -92,6 +93,7 @@ void main() {
       final batch = MockWriteBatch();
       when(batchFactory.batch()).thenReturn(batch);
       final pillSheet = PillSheet(
+        id: firestoreIDGenerator(),
         id: "sheet_id",
         typeInfo: PillSheetType.pillsheet_28_0.typeInfo,
         beginingDate: _today,
@@ -157,6 +159,7 @@ void main() {
       final batch = MockWriteBatch();
       when(batchFactory.batch()).thenReturn(batch);
       final left = PillSheet(
+        id: firestoreIDGenerator(),
         id: "sheet_id_left",
         typeInfo: PillSheetType.pillsheet_28_0.typeInfo,
         beginingDate: DateTime.parse("2022-04-03"),
@@ -164,6 +167,7 @@ void main() {
         lastTakenDate: DateTime.parse("2022-04-30"),
       );
       final middle = PillSheet(
+        id: firestoreIDGenerator(),
         id: "sheet_id_middle",
         typeInfo: PillSheetType.pillsheet_28_0.typeInfo,
         beginingDate: DateTime.parse("2022-05-01"),
@@ -171,6 +175,7 @@ void main() {
         lastTakenDate: null,
       );
       final right = PillSheet(
+        id: firestoreIDGenerator(),
         id: "sheet_id_right",
         typeInfo: PillSheetType.pillsheet_28_0.typeInfo,
         beginingDate: DateTime.parse("2022-05-29"),
@@ -251,6 +256,7 @@ void main() {
       final batch = MockWriteBatch();
       when(batchFactory.batch()).thenReturn(batch);
       final left = PillSheet(
+        id: firestoreIDGenerator(),
         id: "sheet_id_left",
         typeInfo: PillSheetType.pillsheet_28_0.typeInfo,
         beginingDate: DateTime.parse("2022-04-03"),
@@ -258,6 +264,7 @@ void main() {
         lastTakenDate: DateTime.parse("2022-04-30"),
       );
       final middle = PillSheet(
+        id: firestoreIDGenerator(),
         id: "sheet_id_middle",
         typeInfo: PillSheetType.pillsheet_28_0.typeInfo,
         beginingDate: DateTime.parse("2022-05-01"),
@@ -265,6 +272,7 @@ void main() {
         lastTakenDate: DateTime.parse("2022-05-01"),
       );
       final right = PillSheet(
+        id: firestoreIDGenerator(),
         id: "sheet_id_right",
         typeInfo: PillSheetType.pillsheet_28_0.typeInfo,
         beginingDate: DateTime.parse("2022-05-29"),
@@ -346,6 +354,7 @@ void main() {
       final batch = MockWriteBatch();
       when(batchFactory.batch()).thenReturn(batch);
       final left = PillSheet(
+        id: firestoreIDGenerator(),
         id: "sheet_id_left",
         typeInfo: PillSheetType.pillsheet_28_0.typeInfo,
         beginingDate: DateTime.parse("2022-04-03"),
@@ -353,6 +362,7 @@ void main() {
         lastTakenDate: DateTime.parse("2022-04-30"),
       );
       final middle = PillSheet(
+        id: firestoreIDGenerator(),
         id: "sheet_id_middle",
         typeInfo: PillSheetType.pillsheet_28_0.typeInfo,
         beginingDate: DateTime.parse("2022-05-01"),
@@ -360,6 +370,7 @@ void main() {
         lastTakenDate: null,
       );
       final right = PillSheet(
+        id: firestoreIDGenerator(),
         id: "sheet_id_right",
         typeInfo: PillSheetType.pillsheet_28_0.typeInfo,
         beginingDate: DateTime.parse("2022-05-29"),
@@ -444,6 +455,7 @@ void main() {
       final batch = MockWriteBatch();
       when(batchFactory.batch()).thenReturn(batch);
       final left = PillSheet(
+        id: firestoreIDGenerator(),
         id: "sheet_id_left",
         typeInfo: PillSheetType.pillsheet_28_0.typeInfo,
         beginingDate: DateTime.parse("2022-04-03"),
@@ -458,6 +470,7 @@ void main() {
         ],
       );
       final middle = PillSheet(
+        id: firestoreIDGenerator(),
         id: "sheet_id_middle",
         typeInfo: PillSheetType.pillsheet_28_0.typeInfo,
         beginingDate: DateTime.parse("2022-05-02"),
@@ -465,6 +478,7 @@ void main() {
         lastTakenDate: null,
       );
       final right = PillSheet(
+        id: firestoreIDGenerator(),
         id: "sheet_id_right",
         typeInfo: PillSheetType.pillsheet_28_0.typeInfo,
         beginingDate: DateTime.parse("2022-05-29"),
