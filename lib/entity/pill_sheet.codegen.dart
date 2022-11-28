@@ -66,8 +66,7 @@ class PillSheet with _$PillSheet {
   @JsonSerializable(explicitToJson: true)
   const factory PillSheet({
     @JsonKey(includeIfNull: false)
-    @Default(IDDefault)
-        String id,
+        String? id,
     @JsonKey()
         required PillSheetTypeInfo typeInfo,
     @JsonKey(
@@ -84,8 +83,7 @@ class PillSheet with _$PillSheet {
       fromJson: TimestampConverter.timestampToDateTime,
       toJson: TimestampConverter.dateTimeToTimestamp,
     )
-    @Default(ClientTimestamp)
-        DateTime createdAt,
+        required DateTime? createdAt,
     @JsonKey(
       fromJson: TimestampConverter.timestampToDateTime,
       toJson: TimestampConverter.dateTimeToTimestamp,
