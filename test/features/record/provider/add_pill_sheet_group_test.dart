@@ -1,3 +1,4 @@
+import 'package:pilll/entity/firestore_id_generator.dart';
 import 'package:pilll/features/record/components/add_pill_sheet_group/provider.dart';
 import 'package:pilll/entity/pill_sheet.codegen.dart';
 import 'package:pilll/entity/pill_sheet_group.codegen.dart';
@@ -35,10 +36,6 @@ void main() {
         groupIndex: 0,
         lastTakenDate: null,
       );
-
-      when(batchSetPillSheets(batch, [pillSheet])).thenReturn([
-        pillSheet.copyWith(id: "sheet_id"),
-      ]);
 
       final pillSheetGroup = PillSheetGroup(
         pillSheetIDs: ["sheet_id"],
