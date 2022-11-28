@@ -10,7 +10,6 @@ import 'package:riverpod/riverpod.dart';
 final deletePillSheetGroupProvider = Provider(
   (ref) => DeletePillSheetGroup(
     ref.watch(batchFactoryProvider),
-    ref.watch(batchSetPillSheetProvider),
     ref.watch(batchSetPillSheetModifiedHistoryProvider),
     ref.watch(batchSetPillSheetGroupProvider),
   ),
@@ -18,11 +17,10 @@ final deletePillSheetGroupProvider = Provider(
 
 class DeletePillSheetGroup {
   final BatchFactory batchFactory;
-  final BatchSetPillSheet batchSetPillSheet;
   final BatchSetPillSheetModifiedHistory batchSetPillSheetModifiedHistory;
   final BatchSetPillSheetGroup batchSetPillSheetGroup;
 
-  DeletePillSheetGroup(this.batchFactory, this.batchSetPillSheet, this.batchSetPillSheetModifiedHistory, this.batchSetPillSheetGroup);
+  DeletePillSheetGroup(this.batchFactory, this.batchSetPillSheetModifiedHistory, this.batchSetPillSheetGroup);
 
   Future<void> call({
     required PillSheetGroup latestPillSheetGroup,
