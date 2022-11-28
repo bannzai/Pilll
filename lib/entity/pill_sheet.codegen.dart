@@ -1,4 +1,3 @@
-import 'package:pilll/entity/client_timestamp.dart';
 import 'package:pilll/entity/firestore_id_generator.dart';
 import 'package:pilll/utils/datetime/date_range.dart';
 import 'package:pilll/entity/firestore_timestamp_converter.dart';
@@ -84,8 +83,7 @@ class PillSheet with _$PillSheet {
       fromJson: TimestampConverter.timestampToDateTime,
       toJson: TimestampConverter.dateTimeToTimestamp,
     )
-    @Default(ClientTimestamp)
-        DateTime createdAt,
+        required DateTime? createdAt,
     @JsonKey(
       fromJson: TimestampConverter.timestampToDateTime,
       toJson: TimestampConverter.dateTimeToTimestamp,
@@ -100,7 +98,6 @@ class PillSheet with _$PillSheet {
         typeInfo: type.typeInfo,
         beginingDate: today(),
         lastTakenDate: null,
-        createdAt: now(),
       );
 
   factory PillSheet.fromJson(Map<String, dynamic> json) => _$PillSheetFromJson(json);
