@@ -11,7 +11,7 @@ import 'package:pilll/utils/datetime/day.dart';
 final beginRestDurationProvider = Provider(
   (ref) => BeginRestDuration(
     batchFactory: ref.watch(batchFactoryProvider),
-    batchSetPillSheets: ref.watch(batchSetPillSheetsProvider),
+    batchSetPillSheets: 
     batchSetPillSheetGroup: ref.watch(batchSetPillSheetGroupProvider),
     batchSetPillSheetModifiedHistory: ref.watch(batchSetPillSheetModifiedHistoryProvider),
   ),
@@ -62,7 +62,7 @@ class BeginRestDuration {
 final endRestDurationProvider = Provider(
   (ref) => EndRestDuration(
     batchFactory: ref.watch(batchFactoryProvider),
-    batchSetPillSheets: ref.watch(batchSetPillSheetsProvider),
+    batchSetPillSheets: 
     batchSetPillSheetGroup: ref.watch(batchSetPillSheetGroupProvider),
     batchSetPillSheetModifiedHistory: ref.watch(batchSetPillSheetModifiedHistoryProvider),
   ),

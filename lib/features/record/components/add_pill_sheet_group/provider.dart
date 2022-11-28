@@ -16,7 +16,7 @@ final addPillSheetGroupProvider = Provider(
     batchFactory: ref.watch(batchFactoryProvider),
     batchSetPillSheetGroup: ref.watch(batchSetPillSheetGroupProvider),
     batchSetPillSheetModifiedHistory: ref.watch(batchSetPillSheetModifiedHistoryProvider),
-    batchSetPillSheets: ref.watch(batchSetPillSheetsProvider),
+    batchSetPillSheets: 
     batchSetSetting: ref.watch(batchSetSettingProvider),
   ),
 );

@@ -12,7 +12,7 @@ import 'package:pilll/utils/datetime/day.dart';
 final changePillNumberProvider = Provider(
   (ref) => ChangePillNumber(
     batchFactory: ref.watch(batchFactoryProvider),
-    batchSetPillSheets: ref.watch(batchSetPillSheetsProvider),
+    batchSetPillSheets: 
     batchSetPillSheetModifiedHistory: ref.watch(batchSetPillSheetModifiedHistoryProvider),
     batchSetPillSheetGroup: ref.watch(batchSetPillSheetGroupProvider),
   ),

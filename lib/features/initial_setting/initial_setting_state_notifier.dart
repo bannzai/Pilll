@@ -19,7 +19,7 @@ final initialSettingStateNotifierProvider = StateNotifierProvider.autoDispose<In
     ref.watch(endInitialSettingProvider),
     ref.watch(batchFactoryProvider),
     ref.watch(batchSetSettingProvider),
-    ref.watch(batchSetPillSheetsProvider),
+    
     ref.watch(batchSetPillSheetModifiedHistoryProvider),
     ref.watch(batchSetPillSheetGroupProvider),
     now(),
