@@ -42,7 +42,7 @@ void main() {
           const Duration(days: 1),
         ),
       );
-      final batchSetPillSheets = MockBatchSetPillSheets();
+
       when(batchSetPillSheets(batch, [updatedPillSheet])).thenReturn([updatedPillSheet]);
 
       final pillSheetGroup = PillSheetGroup(
@@ -108,7 +108,7 @@ void main() {
           const Duration(days: 1),
         ),
       );
-      final batchSetPillSheets = MockBatchSetPillSheets();
+
       when(batchSetPillSheets(batch, [updatedPillSheet])).thenReturn([updatedPillSheet]);
 
       final pillSheetGroup = PillSheetGroup(
@@ -192,7 +192,7 @@ void main() {
       final updatedRight = right.copyWith(
         beginingDate: DateTime.parse("2022-05-30"),
       );
-      final batchSetPillSheets = MockBatchSetPillSheets();
+
       when(batchSetPillSheets(batch, [
         updatedLeft,
         updatedMiddle,
@@ -290,7 +290,7 @@ void main() {
       final updatedRight = right.copyWith(
         beginingDate: DateTime.parse("2022-05-30"),
       );
-      final batchSetPillSheets = MockBatchSetPillSheets();
+
       when(batchSetPillSheets(batch, [
         updatedLeft,
         updatedMiddle,
@@ -389,7 +389,7 @@ void main() {
         beginingDate: DateTime.parse("2022-05-01"),
         lastTakenDate: DateTime.parse("2022-04-30"),
       );
-      final batchSetPillSheets = MockBatchSetPillSheets();
+
       when(batchSetPillSheets(batch, [
         updatedLeft,
         updatedMiddle,
@@ -496,7 +496,7 @@ void main() {
       final updatedRight = right.copyWith(
         beginingDate: DateTime.parse("2022-05-31"),
       );
-      final batchSetPillSheets = MockBatchSetPillSheets();
+
       when(batchSetPillSheets(batch, [
         updatedLeft,
         updatedMiddle,

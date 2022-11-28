@@ -38,7 +38,7 @@ void main() {
           groupIndex: 0,
           lastTakenDate: today(),
         );
-        final batchSetPillSheets = MockBatchSetPillSheets();
+
         when(batchSetPillSheets(batch, [pillSheet.copyWith(lastTakenDate: yesterday.subtract(const Duration(days: 1)))]))
             .thenReturn([pillSheet.copyWith(lastTakenDate: yesterday.subtract(const Duration(days: 1)))]);
 
@@ -111,7 +111,7 @@ void main() {
           groupIndex: 0,
           lastTakenDate: today(),
         );
-        final batchSetPillSheets = MockBatchSetPillSheets();
+
         when(batchSetPillSheets(batch, [pillSheet.copyWith(lastTakenDate: yesterday)])).thenReturn([pillSheet.copyWith(lastTakenDate: yesterday)]);
 
         final pillSheetGroup = PillSheetGroup(
@@ -190,7 +190,7 @@ void main() {
             ),
           ],
         );
-        final batchSetPillSheets = MockBatchSetPillSheets();
+
         when(batchSetPillSheets(
           batch,
           [pillSheet.copyWith(lastTakenDate: beginDate.subtract(const Duration(days: 1)), restDurations: [])],
@@ -274,7 +274,7 @@ void main() {
             ),
           ],
         );
-        final batchSetPillSheets = MockBatchSetPillSheets();
+
         when(batchSetPillSheets(
           batch,
           [pillSheet.copyWith(lastTakenDate: yesterday)],
@@ -359,7 +359,6 @@ void main() {
           groupIndex: 1,
         );
 
-        final batchSetPillSheets = MockBatchSetPillSheets();
         when(batchSetPillSheets(batch, [
           pillSheet,
           pillSheet2.copyWith(lastTakenDate: yesterday),
@@ -447,7 +446,6 @@ void main() {
           groupIndex: 1,
         );
 
-        final batchSetPillSheets = MockBatchSetPillSheets();
         when(batchSetPillSheets(batch, [
           pillSheet.copyWith(lastTakenDate: _today.subtract(const Duration(days: 4))),
           pillSheet2.copyWith(lastTakenDate: pillSheet2.beginingDate.subtract(const Duration(days: 1))),
@@ -532,7 +530,6 @@ void main() {
           ],
         );
 
-        final batchSetPillSheets = MockBatchSetPillSheets();
         when(batchSetPillSheets(batch, [
           pillSheet.copyWith(lastTakenDate: _today.subtract(const Duration(days: 4))),
           pillSheet2.copyWith(lastTakenDate: pillSheet2.beginingDate.subtract(const Duration(days: 1)), restDurations: []),

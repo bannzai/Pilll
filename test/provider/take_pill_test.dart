@@ -68,7 +68,6 @@ void main() {
         final batch = MockWriteBatch();
         when(batchFactory.batch()).thenReturn(batch);
 
-        final batchSetPillSheets = MockBatchSetPillSheets();
         final updatedActivePillSheet = activedPillSheet.copyWith(lastTakenDate: takenDate);
         when(batchSetPillSheets(batch, [updatedActivePillSheet])).thenReturn([updatedActivePillSheet]);
 
@@ -105,7 +104,7 @@ void main() {
         activedPillSheet = activedPillSheet.copyWith(lastTakenDate: takenDate);
 
         final batchFactory = MockBatchFactory();
-        final batchSetPillSheets = MockBatchSetPillSheets();
+
         final batchSetPillSheetModifiedHistory = MockBatchSetPillSheetModifiedHistory();
         final batchSetPillSheetGroup = MockBatchSetPillSheetGroup();
 
@@ -139,7 +138,6 @@ void main() {
         final batch = MockWriteBatch();
         when(batchFactory.batch()).thenReturn(batch);
 
-        final batchSetPillSheets = MockBatchSetPillSheets();
         final updatedActivePillSheet = activedPillSheet.copyWith(lastTakenDate: takenDate);
         when(batchSetPillSheets(batch, [previousPillSheet, updatedActivePillSheet, nextPillSheet]))
             .thenReturn([previousPillSheet, updatedActivePillSheet, nextPillSheet]);
@@ -182,7 +180,7 @@ void main() {
         );
 
         final batchFactory = MockBatchFactory();
-        final batchSetPillSheets = MockBatchSetPillSheets();
+
         final batchSetPillSheetModifiedHistory = MockBatchSetPillSheetModifiedHistory();
         final batchSetPillSheetGroup = MockBatchSetPillSheetGroup();
 
@@ -214,7 +212,6 @@ void main() {
         final batch = MockWriteBatch();
         when(batchFactory.batch()).thenReturn(batch);
 
-        final batchSetPillSheets = MockBatchSetPillSheets();
         final updatedActivePillSheet = activedPillSheet.copyWith(lastTakenDate: takenDate);
         when(batchSetPillSheets(batch, [previousPillSheet, updatedActivePillSheet, nextPillSheet]))
             .thenReturn([previousPillSheet, updatedActivePillSheet, nextPillSheet]);
@@ -259,7 +256,6 @@ void main() {
         final batch = MockWriteBatch();
         when(batchFactory.batch()).thenReturn(batch);
 
-        final batchSetPillSheets = MockBatchSetPillSheets();
         final updatedActivePillSheet = activedPillSheet.copyWith(lastTakenDate: activedPillSheet.estimatedEndTakenDate);
         when(batchSetPillSheets(batch, [previousPillSheet, updatedActivePillSheet, nextPillSheet]))
             .thenReturn([previousPillSheet, updatedActivePillSheet, nextPillSheet]);
@@ -308,7 +304,6 @@ void main() {
         final batch = MockWriteBatch();
         when(batchFactory.batch()).thenReturn(batch);
 
-        final batchSetPillSheets = MockBatchSetPillSheets();
         final updatedActivePillSheet = activedPillSheet.copyWith(lastTakenDate: activedPillSheet.estimatedEndTakenDate);
         when(batchSetPillSheets(batch, [previousPillSheet, updatedActivePillSheet, nextPillSheet]))
             .thenReturn([previousPillSheet, updatedActivePillSheet, nextPillSheet]);
@@ -353,7 +348,6 @@ void main() {
         final batch = MockWriteBatch();
         when(batchFactory.batch()).thenReturn(batch);
 
-        final batchSetPillSheets = MockBatchSetPillSheets();
         final updatedPreviousPillSheet = previousPillSheet.copyWith(lastTakenDate: previousPillSheet.estimatedEndTakenDate);
         final updatedActivePillSheet = activedPillSheet.copyWith(lastTakenDate: takenDate);
         when(batchSetPillSheets(batch, [updatedPreviousPillSheet, updatedActivePillSheet, nextPillSheet]))
@@ -399,7 +393,6 @@ void main() {
         final batch = MockWriteBatch();
         when(batchFactory.batch()).thenReturn(batch);
 
-        final batchSetPillSheets = MockBatchSetPillSheets();
         final updatedPreviousPillSheet = previousPillSheet.copyWith(lastTakenDate: previousPillSheet.estimatedEndTakenDate);
         when(batchSetPillSheets(batch, [updatedPreviousPillSheet, activedPillSheet, nextPillSheet]))
             .thenReturn([updatedPreviousPillSheet, activedPillSheet, nextPillSheet]);
@@ -449,7 +442,6 @@ void main() {
         final batch = MockWriteBatch();
         when(batchFactory.batch()).thenReturn(batch);
 
-        final batchSetPillSheets = MockBatchSetPillSheets();
         final updatedPreviousPillSheet = previousPillSheet.copyWith(lastTakenDate: takenDate);
         when(batchSetPillSheets(batch, [updatedPreviousPillSheet, activedPillSheet, nextPillSheet]))
             .thenReturn([updatedPreviousPillSheet, activedPillSheet, nextPillSheet]);
@@ -511,7 +503,6 @@ void main() {
         final batch = MockWriteBatch();
         when(batchFactory.batch()).thenReturn(batch);
 
-        final batchSetPillSheets = MockBatchSetPillSheets();
         final updatedActivePillSheet = activedPillSheet.copyWith(lastTakenDate: takenDate);
         when(batchSetPillSheets(batch, [previousPillSheet, updatedActivePillSheet, nextPillSheet]))
             .thenReturn([previousPillSheet, updatedActivePillSheet, nextPillSheet]);
@@ -592,7 +583,6 @@ void main() {
         final batch = MockWriteBatch();
         when(batchFactory.batch()).thenReturn(batch);
 
-        final batchSetPillSheets = MockBatchSetPillSheets();
         final updatedActivePillSheet = activedPillSheet.copyWith(lastTakenDate: takenDate);
         when(batchSetPillSheets(batch, [previousPillSheet, updatedActivePillSheet, nextPillSheet]))
             .thenReturn([previousPillSheet, updatedActivePillSheet, nextPillSheet]);
