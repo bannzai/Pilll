@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
+import 'package:pilll/components/atoms/color.dart';
 import 'package:pilll/entity/diary.codegen.dart';
 import 'package:pilll/features/diary_post/util.dart';
 

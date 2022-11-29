@@ -83,7 +83,6 @@ class DiaryPostPageBody extends HookConsumerWidget {
     final textEditingController = useTextEditingController(text: diary.memo);
     final focusNode = useFocusNode();
     final scrollController = useScrollController();
-    final offset = MediaQuery.of(context).viewInsets.bottom + keyboardToolbarHeight + 60;
 
     final physicalCondition = useState<PhysicalConditionStatus?>(diary.physicalConditionStatus);
     final physicalConditionDetails = useState(diary.physicalConditions);
@@ -125,6 +124,7 @@ class DiaryPostPageBody extends HookConsumerWidget {
             Padding(
               padding: EdgeInsets.fromLTRB(16, 16, 16, offset),
               child: ListView(
+                padding: const EdgeInsets.only(top: 10, bottom: 10),
                 controller: scrollController,
                 children: [
                   Text(DateTimeFormatter.yearAndMonthAndDay(date),
@@ -134,17 +134,15 @@ class DiaryPostPageBody extends HookConsumerWidget {
                         fontSize: 20,
                         color: TextColor.main,
                       )),
-                  ...[
-                    DiaryPostPhysicalCondition(diary: diary, physicalCondition: physicalCondition),
-                    DiaryPostPhysicalConditionDetails(
-                        premiumAndTrial: premiumAndTrial,
-                        diarySetting: diarySetting,
-                        diary: diary,
-                        context: context,
-                        physicalConditionDetails: physicalConditionDetails),
-                    DiaryPostSex(diary: diary, sex: sex),
-                    DiaryPostMemo(textEditingController: textEditingController, focusNode: focusNode, memo: memo),
-                  ].map((e) => _withContentSpacer(e)),
+                  DiaryPostPhysicalCondition(diary: diary, physicalCondition: physicalCondition),
+                  DiaryPostPhysicalConditionDetails(
+                      premiumAndTrial: premiumAndTrial,
+                      diarySetting: diarySetting,
+                      diary: diary,
+                      context: context,
+                      physicalConditionDetails: physicalConditionDetails),
+                  DiaryPostSex(diary: diary, sex: sex),
+                  DiaryPostMemo(textEditingController: textEditingController, focusNode: focusNode, memo: memo),
                 ],
               ),
             ),
