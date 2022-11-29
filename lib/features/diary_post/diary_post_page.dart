@@ -117,7 +117,7 @@ class DiaryPostPageBody extends HookConsumerWidget {
           children: [
             Expanded(
               child: ListView(
-                padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 24),
+                padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 16),
                 controller: scrollController,
                 children: [
                   Text(DateTimeFormatter.yearAndMonthAndDay(date),
@@ -127,14 +127,18 @@ class DiaryPostPageBody extends HookConsumerWidget {
                         fontSize: 20,
                         color: TextColor.main,
                       )),
+                  const SizedBox(height: 20),
                   DiaryPostPhysicalCondition(diary: diary, physicalCondition: physicalCondition),
+                  const SizedBox(height: 20),
                   DiaryPostPhysicalConditionDetails(
                       premiumAndTrial: premiumAndTrial,
                       diarySetting: diarySetting,
                       diary: diary,
                       context: context,
                       physicalConditionDetails: physicalConditionDetails),
+                  const SizedBox(height: 20),
                   DiaryPostSex(diary: diary, sex: sex),
+                  const SizedBox(height: 20),
                   DiaryPostMemo(textEditingController: textEditingController, focusNode: focusNode, memo: memo),
                 ],
               ),
