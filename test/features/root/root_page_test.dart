@@ -13,6 +13,8 @@ import 'package:pilll/provider/shared_preference.dart';
 import 'package:pilll/provider/shared_preferences.dart';
 import 'package:pilll/provider/user.dart';
 import 'package:pilll/utils/analytics.dart';
+import 'package:pilll/utils/auth/apple.dart';
+import 'package:pilll/utils/auth/google.dart';
 import 'package:pilll/utils/environment.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_test/flutter_test.dart';
@@ -90,6 +92,9 @@ void main() {
             markAsMigratedToFlutterProvider.overrideWith((ref) => markAsMigratedToFlutter),
             firebaseSignInProvider.overrideWith((ref) => Future.value(fakeFirebaseUser)),
             didEndInitialSettingProvider.overrideWithValue(const AsyncValue.data(null)),
+            // For InitialSettingPillSheetGroupPage
+            isAppleLinkedProvider.overrideWith((ref) => false),
+            isGoogleLinkedProvider.overrideWith((ref) => false),
           ],
           child: const MaterialApp(
             home: Material(
@@ -137,6 +142,9 @@ void main() {
             markAsMigratedToFlutterProvider.overrideWith((ref) => markAsMigratedToFlutter),
             firebaseSignInProvider.overrideWith((ref) => Future.value(fakeFirebaseUser)),
             didEndInitialSettingProvider.overrideWithValue(const AsyncValue.data(null)),
+            // For InitialSettingPillSheetGroupPage
+            isAppleLinkedProvider.overrideWith((ref) => false),
+            isGoogleLinkedProvider.overrideWith((ref) => false),
           ],
           child: const MaterialApp(
             home: Material(
