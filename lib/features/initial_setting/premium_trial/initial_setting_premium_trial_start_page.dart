@@ -3,6 +3,7 @@ import 'dart:io';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
+import 'package:pilll/provider/shared_preferences.dart';
 import 'package:pilll/utils/analytics.dart';
 import 'package:pilll/components/atoms/button.dart';
 import 'package:pilll/components/atoms/color.dart';
@@ -11,6 +12,7 @@ import 'package:pilll/components/atoms/text_color.dart';
 import 'package:pilll/features/initial_setting/initial_setting_state_notifier.dart';
 import 'package:pilll/features/error/error_alert.dart';
 import 'package:pilll/utils/router.dart';
+import 'package:pilll/utils/shared_preference/keys.dart';
 
 class IntiialSettingPremiumTrialStartPage extends HookConsumerWidget {
   const IntiialSettingPremiumTrialStartPage({Key? key}) : super(key: key);
@@ -18,6 +20,7 @@ class IntiialSettingPremiumTrialStartPage extends HookConsumerWidget {
   @override
   Widget build(BuildContext context, WidgetRef ref) {
     final store = ref.watch(initialSettingStateNotifierProvider.notifier);
+    final didEndInitialSettingNotifier = ref.watch(boolSharedPreferencesProvider(BoolKey.didEndInitialSetting).notifier);
 
     return Scaffold(
       backgroundColor: PilllColors.background,
@@ -130,7 +133,7 @@ class IntiialSettingPremiumTrialStartPage extends HookConsumerWidget {
                   analytics.logEvent(name: "pressed_start_app_preiun_trial");
                   try {
                     await store.register();
-                    AppRouter.endInitialSetting(context);
+                    AppRouter.endInitialSetting(context, didEndInitialSettingNotifier);
                   } catch (error) {
                     showErrorAlert(context, error.toString());
                   }
