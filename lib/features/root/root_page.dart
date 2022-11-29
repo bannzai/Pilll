@@ -4,6 +4,7 @@ import 'package:flutter_hooks/flutter_hooks.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
 import 'package:pilll/provider/force_update.dart';
 import 'package:pilll/provider/set_user_id.dart';
+import 'package:pilll/provider/shared_preferences.dart';
 import 'package:pilll/utils/analytics.dart';
 import 'package:pilll/components/page/ok_dialog.dart';
 import 'package:pilll/features/initial_setting/pill_sheet_group/initial_setting_pill_sheet_group_page.dart';
@@ -141,12 +142,14 @@ class InitialSettingOrAppPage extends HookConsumerWidget {
     final appUser = useState<User?>(null);
     final error = useState<LaunchException?>(null);
 
+    final didEndInitialSetting = ref.watch(boolSharedPreferencesProvider(BoolKey.didEndInitialSetting));
+
     useEffect(() {
       f() async {
         // **** BEGIN: Do not break the sequence. ****
         try {
           // Decide screen type. Keep in mind that this method is called when user is logged in.
-          screenType.value = await _screenType();
+          screenType.value = _screenType(didEndInitialSetting: didEndInitialSetting.value);
 
           if (appUser.value == null) {
             // Retrieve user from app DB.
@@ -191,10 +194,7 @@ class InitialSettingOrAppPage extends HookConsumerWidget {
     );
   }
 
-  Future<_InitialSettingOrAppPageScreenType> _screenType() async {
-    final sharedPreferences = await SharedPreferences.getInstance();
-
-    bool? didEndInitialSetting = sharedPreferences.getBool(BoolKey.didEndInitialSetting);
+  _InitialSettingOrAppPageScreenType _screenType({required bool? didEndInitialSetting}) {
     if (didEndInitialSetting == null) {
       analytics.logEvent(name: "did_end_i_s_is_null");
       return _InitialSettingOrAppPageScreenType.initialSetting;
