@@ -5,12 +5,9 @@ import 'package:pilll/features/diary_post/memo.dart';
 import 'package:pilll/features/diary_post/physical_condition.dart';
 import 'package:pilll/features/diary_post/physical_condition_details.dart';
 import 'package:pilll/features/diary_post/sex.dart';
-import 'package:pilll/features/diary_post/util.dart';
 import 'package:pilll/utils/analytics.dart';
 import 'package:pilll/components/molecules/indicator.dart';
 import 'package:pilll/provider/diary_setting.dart';
-import 'package:pilll/features/diary_setting_physical_condtion_detail/page.dart';
-import 'package:pilll/features/premium_introduction/premium_introduction_sheet.dart';
 import 'package:pilll/entity/diary.codegen.dart';
 import 'package:pilll/components/atoms/button.dart';
 import 'package:pilll/components/atoms/color.dart';
@@ -22,11 +19,8 @@ import 'package:pilll/provider/diary.dart';
 import 'package:pilll/provider/premium_and_trial.codegen.dart';
 import 'package:pilll/provider/root.dart';
 import 'package:pilll/utils/formatter/date_time_formatter.dart';
-import 'package:pilll/utils/const.dart';
-
 import 'package:flutter/material.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
-import 'package:flutter_svg/svg.dart';
 
 class DiaryPostPage extends HookConsumerWidget {
   final DateTime date;
@@ -159,13 +153,6 @@ class DiaryPostPageBody extends HookConsumerWidget {
           ],
         ),
       ),
-    );
-  }
-
-  Widget _withContentSpacer(Widget content) {
-    return Container(
-      child: content,
-      padding: const EdgeInsets.only(top: 10, bottom: 10),
     );
   }
 }
