@@ -9,6 +9,8 @@ import 'package:pilll/provider/auth.dart';
 import 'package:pilll/provider/database.dart';
 import 'package:pilll/provider/force_update.dart';
 import 'package:pilll/provider/set_user_id.dart';
+import 'package:pilll/provider/shared_preference.dart';
+import 'package:pilll/provider/shared_preferences.dart';
 import 'package:pilll/provider/user.dart';
 import 'package:pilll/utils/analytics.dart';
 import 'package:pilll/utils/environment.dart';
@@ -87,6 +89,7 @@ void main() {
             saveUserLaunchInfoProvider.overrideWith((ref) => saveUserLaunchInfo),
             markAsMigratedToFlutterProvider.overrideWith((ref) => markAsMigratedToFlutter),
             firebaseSignInProvider.overrideWith((ref) => Future.value(fakeFirebaseUser)),
+            didEndInitialSettingProvider.overrideWithValue(const AsyncValue.data(null)),
           ],
           child: const MaterialApp(
             home: Material(
@@ -133,6 +136,7 @@ void main() {
             saveUserLaunchInfoProvider.overrideWith((ref) => saveUserLaunchInfo),
             markAsMigratedToFlutterProvider.overrideWith((ref) => markAsMigratedToFlutter),
             firebaseSignInProvider.overrideWith((ref) => Future.value(fakeFirebaseUser)),
+            didEndInitialSettingProvider.overrideWithValue(const AsyncValue.data(null)),
           ],
           child: const MaterialApp(
             home: Material(
@@ -177,6 +181,7 @@ void main() {
             databaseProvider.overrideWith((ref) => MockDatabaseConnection()),
             saveUserLaunchInfoProvider.overrideWith((ref) => saveUserLaunchInfo),
             markAsMigratedToFlutterProvider.overrideWith((ref) => markAsMigratedToFlutter),
+            didEndInitialSettingProvider.overrideWithValue(const AsyncValue.data(null)),
           ],
           child: MaterialApp(
             home: Material(
@@ -215,6 +220,7 @@ void main() {
             databaseProvider.overrideWith((ref) => MockDatabaseConnection()),
             saveUserLaunchInfoProvider.overrideWith((ref) => saveUserLaunchInfo),
             markAsMigratedToFlutterProvider.overrideWith((ref) => markAsMigratedToFlutter),
+            didEndInitialSettingProvider.overrideWithValue(const AsyncValue.data(true)),
           ],
           child: MaterialApp(
             home: Material(
@@ -253,6 +259,7 @@ void main() {
             databaseProvider.overrideWith((ref) => MockDatabaseConnection()),
             saveUserLaunchInfoProvider.overrideWith((ref) => saveUserLaunchInfo),
             markAsMigratedToFlutterProvider.overrideWith((ref) => markAsMigratedToFlutter),
+            didEndInitialSettingProvider.overrideWithValue(const AsyncValue.data(true)),
           ],
           child: MaterialApp(
             home: Material(
@@ -291,6 +298,7 @@ void main() {
             databaseProvider.overrideWith((ref) => MockDatabaseConnection()),
             saveUserLaunchInfoProvider.overrideWith((ref) => saveUserLaunchInfo),
             markAsMigratedToFlutterProvider.overrideWith((ref) => markAsMigratedToFlutter),
+            didEndInitialSettingProvider.overrideWithValue(const AsyncValue.data(true)),
           ],
           child: MaterialApp(
             home: Material(

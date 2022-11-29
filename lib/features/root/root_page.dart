@@ -23,6 +23,9 @@ import 'package:pilll/utils/shared_preference/keys.dart';
 import 'package:flutter/material.dart';
 import 'package:url_launcher/url_launcher.dart';
 
+// FIXME: test 時にboolSharedPreferencesProviderをそのまま使うとフリーズする
+final didEndInitialSettingProvider = Provider((ref) => ref.watch(boolSharedPreferencesProvider(BoolKey.didEndInitialSetting)));
+
 class Root extends HookConsumerWidget {
   const Root({Key? key}) : super(key: key);
 
@@ -141,7 +144,7 @@ class InitialSettingOrAppPage extends HookConsumerWidget {
     final appUser = useState<User?>(null);
     final error = useState<LaunchException?>(null);
 
-    final didEndInitialSetting = ref.watch(boolSharedPreferencesProvider(BoolKey.didEndInitialSetting));
+    final didEndInitialSetting = ref.watch(didEndInitialSettingProvider);
 
     useEffect(() {
       f() async {
