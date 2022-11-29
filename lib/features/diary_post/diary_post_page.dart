@@ -119,12 +119,11 @@ class DiaryPostPageBody extends HookConsumerWidget {
         backgroundColor: PilllColors.white,
       ),
       body: SafeArea(
-        child: Stack(
+        child: Column(
           children: [
-            Padding(
-              padding: EdgeInsets.fromLTRB(16, 16, 16, offset),
+            Expanded(
               child: ListView(
-                padding: const EdgeInsets.only(top: 10, bottom: 10),
+                padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 24),
                 controller: scrollController,
                 children: [
                   Text(DateTimeFormatter.yearAndMonthAndDay(date),
