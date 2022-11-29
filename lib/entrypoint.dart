@@ -47,12 +47,15 @@ void connectToEmulator() {
   FirebaseFirestore.instance.settings = Settings(persistenceEnabled: false, host: '$domain:8080', sslEnabled: false);
 }
 
+final navigatorKey = GlobalKey<NavigatorState>();
+
 class App extends StatelessWidget {
   const App({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      navigatorKey: navigatorKey,
       navigatorObservers: [FirebaseAnalyticsObserver(analytics: firebaseAnalytics)],
       theme: ThemeData(
         appBarTheme: const AppBarTheme(
