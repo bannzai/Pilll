@@ -8,11 +8,9 @@ import 'package:flutter_svg/svg.dart';
 class DiaryPostPhysicalCondition extends StatelessWidget {
   const DiaryPostPhysicalCondition({
     Key? key,
-    required this.diary,
     required this.physicalCondition,
   }) : super(key: key);
 
-  final Diary diary;
   final ValueNotifier<PhysicalConditionStatus?> physicalCondition;
 
   @override
@@ -36,13 +34,13 @@ class DiaryPostPhysicalCondition extends StatelessWidget {
               Container(
                 decoration: BoxDecoration(
                   borderRadius: const BorderRadius.only(topLeft: Radius.circular(8), bottomLeft: Radius.circular(8)),
-                  color: diary.hasPhysicalConditionStatusFor(PhysicalConditionStatus.bad) ? PilllColors.thinSecondary : Colors.transparent,
+                  color: physicalCondition.value == PhysicalConditionStatus.bad ? PilllColors.thinSecondary : Colors.transparent,
                 ),
                 child: IconButton(
                     icon: SvgPicture.asset("images/angry.svg",
-                        color: diary.hasPhysicalConditionStatusFor(PhysicalConditionStatus.bad) ? PilllColors.primary : TextColor.darkGray),
+                        color: physicalCondition.value == PhysicalConditionStatus.bad ? PilllColors.primary : TextColor.darkGray),
                     onPressed: () {
-                      if (diary.hasPhysicalConditionStatusFor(PhysicalConditionStatus.bad)) {
+                      if (physicalCondition.value == PhysicalConditionStatus.bad) {
                         physicalCondition.value = null;
                       } else {
                         physicalCondition.value = PhysicalConditionStatus.bad;
@@ -53,13 +51,13 @@ class DiaryPostPhysicalCondition extends StatelessWidget {
               Container(
                 decoration: BoxDecoration(
                   borderRadius: const BorderRadius.only(topRight: Radius.circular(8), bottomRight: Radius.circular(8)),
-                  color: diary.hasPhysicalConditionStatusFor(PhysicalConditionStatus.fine) ? PilllColors.thinSecondary : Colors.transparent,
+                  color: physicalCondition.value == PhysicalConditionStatus.fine ? PilllColors.thinSecondary : Colors.transparent,
                 ),
                 child: IconButton(
                     icon: SvgPicture.asset("images/laugh.svg",
-                        color: diary.hasPhysicalConditionStatusFor(PhysicalConditionStatus.fine) ? PilllColors.primary : TextColor.darkGray),
+                        color: physicalCondition.value == PhysicalConditionStatus.fine ? PilllColors.primary : TextColor.darkGray),
                     onPressed: () {
-                      if (diary.hasPhysicalConditionStatusFor(PhysicalConditionStatus.fine)) {
+                      if (physicalCondition.value == PhysicalConditionStatus.fine) {
                         physicalCondition.value = null;
                       } else {
                         physicalCondition.value = PhysicalConditionStatus.fine;
