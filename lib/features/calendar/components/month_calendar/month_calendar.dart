@@ -1,4 +1,5 @@
 import 'package:async_value_group/async_value_group.dart';
+import 'package:flutter_hooks/flutter_hooks.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
 import 'package:pilll/components/molecules/indicator.dart';
 import 'package:pilll/components/organisms/calendar/week/utility.dart';
@@ -28,6 +29,14 @@ class MonthCalendar extends HookConsumerWidget {
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {
+    useEffect(() {
+      // Prefetch
+      ref.read(diariesStreamForMonthProvider(DateTime(dateForMonth.year, dateForMonth.month + 1, 1)));
+      ref.read(diariesStreamForMonthProvider(DateTime(dateForMonth.year, dateForMonth.month - 1, 1)));
+      ref.read(schedulesForMonthProvider(DateTime(dateForMonth.year, dateForMonth.month + 1, 1)));
+      ref.read(schedulesForMonthProvider(DateTime(dateForMonth.year, dateForMonth.month - 1, 1)));
+      return null;
+    }, [dateForMonth]);
     return AsyncValueGroup.group2(
       ref.watch(diariesStreamForMonthProvider(dateForMonth)),
       ref.watch(schedulesForMonthProvider(dateForMonth)),
