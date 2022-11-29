@@ -175,7 +175,7 @@ class InitialSettingOrAppPage extends HookConsumerWidget {
 
       f();
       return null;
-    }, [error.value]);
+    }, [error.value, didEndInitialSetting.value]);
 
     return UniversalErrorPage(
       error: error.value,
