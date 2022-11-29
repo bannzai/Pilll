@@ -21,7 +21,6 @@ import 'package:pilll/provider/user.dart';
 import 'package:pilll/utils/platform/platform.dart';
 import 'package:pilll/utils/shared_preference/keys.dart';
 import 'package:flutter/material.dart';
-import 'package:shared_preferences/shared_preferences.dart';
 import 'package:url_launcher/url_launcher.dart';
 
 class Root extends HookConsumerWidget {

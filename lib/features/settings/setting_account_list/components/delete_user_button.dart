@@ -3,6 +3,7 @@ import 'dart:io';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
+import 'package:pilll/provider/shared_preferences.dart';
 import 'package:pilll/utils/analytics.dart';
 import 'package:pilll/utils/auth/apple.dart';
 import 'package:pilll/utils/auth/google.dart';
@@ -13,6 +14,7 @@ import 'package:pilll/components/page/discard_dialog.dart';
 import 'package:pilll/features/error/error_alert.dart';
 import 'package:pilll/utils/error_log.dart';
 import 'package:pilll/utils/router.dart';
+import 'package:pilll/utils/shared_preference/keys.dart';
 
 class DeleteUserButton extends HookConsumerWidget {
   const DeleteUserButton({Key? key}) : super(key: key);
@@ -21,6 +23,7 @@ class DeleteUserButton extends HookConsumerWidget {
   Widget build(BuildContext context, WidgetRef ref) {
     final isAppleLinked = ref.watch(isAppleLinkedProvider);
     final isGoogleLinked = ref.watch(isGoogleLinkedProvider);
+    final didEndInitialSettingNotifier = ref.watch(boolSharedPreferencesProvider(BoolKey.didEndInitialSetting).notifier);
     return Container(
       padding: const EdgeInsets.only(top: 54),
       child: AlertButton(
@@ -41,7 +44,12 @@ class DeleteUserButton extends HookConsumerWidget {
                 text: "退会する",
                 onPressed: () async {
                   analytics.logEvent(name: "pressed_delete_user_button");
-                  await _delete(context, isAppleLinked: isAppleLinked, isGoogleLinked: isGoogleLinked);
+                  await _delete(
+                    context,
+                    isAppleLinked: isAppleLinked,
+                    isGoogleLinked: isGoogleLinked,
+                    didEndInitialSettingNotifier: didEndInitialSettingNotifier,
+                  );
                 },
               ),
             ],
@@ -56,6 +64,7 @@ class DeleteUserButton extends HookConsumerWidget {
     BuildContext context, {
     required bool isAppleLinked,
     required bool isGoogleLinked,
+    required BoolSharedPreferences didEndInitialSettingNotifier,
   }) async {
     try {
       await FirebaseAuth.instance.currentUser?.delete();
@@ -64,7 +73,7 @@ class DeleteUserButton extends HookConsumerWidget {
         builder: (context) {
           return _CompletedDialog(
             onClose: () async {
-              await AppRouter.routeToInitialSetting(context);
+              await AppRouter.routeToInitialSetting(context, didEndInitialSettingNotifier);
             },
           );
         },
@@ -94,7 +103,8 @@ class DeleteUserButton extends HookConsumerWidget {
                   exit(1);
                 }
                 Navigator.of(context).pop();
-                await _delete(context, isAppleLinked: isAppleLinked, isGoogleLinked: isGoogleLinked);
+                await _delete(context,
+                    isAppleLinked: isAppleLinked, isGoogleLinked: isGoogleLinked, didEndInitialSettingNotifier: didEndInitialSettingNotifier);
               },
             ),
           ],
