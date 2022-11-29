@@ -1,5 +1,6 @@
 import 'package:async_value_group/async_value_group.dart';
 import 'package:flutter_hooks/flutter_hooks.dart';
+import 'package:pilll/components/molecules/keyboard_toolbar.dart';
 import 'package:pilll/utils/analytics.dart';
 import 'package:pilll/components/molecules/indicator.dart';
 import 'package:pilll/provider/diary_setting.dart';
@@ -139,7 +140,17 @@ class DiaryPostPageBody extends HookConsumerWidget {
                 ],
               ),
             ),
-            if (focusNode.hasFocus) _keyboardToolbar(context, focusNode),
+            if (focusNode.hasFocus) ...[
+              KeyboardToolbar(
+                doneButton: AlertButton(
+                  text: '完了',
+                  onPressed: () async {
+                    analytics.logEvent(name: "post_diary_done_button_pressed");
+                    focusNode.unfocus();
+                  },
+                ),
+              ),
+            ],
           ],
         ),
       ),
@@ -301,29 +312,6 @@ class DiaryPostPageBody extends HookConsumerWidget {
         ),
         const Spacer(),
       ],
-    );
-  }
-
-  Widget _keyboardToolbar(BuildContext context, FocusNode focusNode) {
-    return Positioned(
-      bottom: MediaQuery.of(context).viewInsets.bottom,
-      child: Container(
-        height: keyboardToolbarHeight,
-        width: MediaQuery.of(context).size.width,
-        child: Row(
-          children: [
-            const Spacer(),
-            AlertButton(
-              text: '完了',
-              onPressed: () async {
-                analytics.logEvent(name: "post_diary_done_button_pressed");
-                focusNode.unfocus();
-              },
-            ),
-          ],
-        ),
-        decoration: const BoxDecoration(color: PilllColors.white),
-      ),
     );
   }
 
