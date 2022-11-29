@@ -133,7 +133,6 @@ class DiaryPostPageBody extends HookConsumerWidget {
                   DiaryPostPhysicalConditionDetails(
                       premiumAndTrial: premiumAndTrial,
                       diarySetting: diarySetting,
-                      diary: diary,
                       context: context,
                       physicalConditionDetails: physicalConditionDetails),
                   const SizedBox(height: 20),

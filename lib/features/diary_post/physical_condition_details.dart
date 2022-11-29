@@ -2,7 +2,6 @@ import 'package:pilll/features/diary_post/util.dart';
 import 'package:pilll/utils/analytics.dart';
 import 'package:pilll/features/diary_setting_physical_condtion_detail/page.dart';
 import 'package:pilll/features/premium_introduction/premium_introduction_sheet.dart';
-import 'package:pilll/entity/diary.codegen.dart';
 import 'package:pilll/components/atoms/color.dart';
 import 'package:pilll/components/atoms/font.dart';
 import 'package:pilll/components/atoms/text_color.dart';
@@ -15,14 +14,12 @@ class DiaryPostPhysicalConditionDetails extends StatelessWidget {
     Key? key,
     required this.premiumAndTrial,
     required this.diarySetting,
-    required this.diary,
     required this.context,
     required this.physicalConditionDetails,
   }) : super(key: key);
 
   final PremiumAndTrial premiumAndTrial;
   final DiarySetting? diarySetting;
-  final Diary diary;
   final BuildContext context;
   final ValueNotifier<List<String>> physicalConditionDetails;
 
@@ -79,13 +76,13 @@ class DiaryPostPhysicalConditionDetails extends StatelessWidget {
                       fontFamily: FontFamily.japanese,
                       fontWeight: FontWeight.w300,
                       fontSize: 14,
-                      color: diary.physicalConditions.contains(e) ? TextColor.white : TextColor.darkGray,
+                      color: physicalConditionDetails.value.contains(e) ? TextColor.white : TextColor.darkGray,
                     ),
                     disabledColor: PilllColors.disabledSheet,
                     selectedColor: PilllColors.primary,
-                    selected: diary.physicalConditions.contains(e),
+                    selected: physicalConditionDetails.value.contains(e),
                     onSelected: (selected) {
-                      if (diary.physicalConditions.contains(e)) {
+                      if (physicalConditionDetails.value.contains(e)) {
                         physicalConditionDetails.value = [...physicalConditionDetails.value]..remove(e);
                       } else {
                         physicalConditionDetails.value = [...physicalConditionDetails.value, e];
