@@ -136,7 +136,7 @@ class DiaryPostPageBody extends HookConsumerWidget {
                       context: context,
                       physicalConditionDetails: physicalConditionDetails),
                   const SizedBox(height: 20),
-                  DiaryPostSex(diary: diary, sex: sex),
+                  DiaryPostSex(sex: sex),
                   const SizedBox(height: 20),
                   DiaryPostMemo(textEditingController: textEditingController, focusNode: focusNode, memo: memo),
                 ],
