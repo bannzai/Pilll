@@ -1,6 +1,7 @@
 import 'package:async_value_group/async_value_group.dart';
 import 'package:flutter_hooks/flutter_hooks.dart';
 import 'package:pilll/components/molecules/keyboard_toolbar.dart';
+import 'package:pilll/features/diary_post/memo.dart';
 import 'package:pilll/utils/analytics.dart';
 import 'package:pilll/components/molecules/indicator.dart';
 import 'package:pilll/provider/diary_setting.dart';
@@ -135,7 +136,7 @@ class DiaryPostPageBody extends HookConsumerWidget {
                     _physicalCondition(physicalCondition),
                     _physicalConditionDetails(context, physicalConditionDetails),
                     _sex(sex),
-                    _memo(context, textEditingController, focusNode, memo),
+                    DiaryPostMemo(textEditingController: textEditingController, focusNode: focusNode, memo: memo),
                   ].map((e) => _withContentSpacer(e)),
                 ],
               ),
@@ -312,37 +313,6 @@ class DiaryPostPageBody extends HookConsumerWidget {
         ),
         const Spacer(),
       ],
-    );
-  }
-
-  Widget _memo(
-    BuildContext context,
-    TextEditingController textEditingController,
-    FocusNode focusNode,
-    ValueNotifier<String> memo,
-  ) {
-    const textLength = 120;
-    return ConstrainedBox(
-      constraints: BoxConstraints(
-        minWidth: MediaQuery.of(context).size.width,
-        maxWidth: MediaQuery.of(context).size.width,
-        minHeight: 40,
-        maxHeight: 200,
-      ),
-      child: TextFormField(
-        onChanged: (text) {
-          memo.value = text;
-        },
-        decoration: const InputDecoration(
-          hintText: "メモ",
-          border: OutlineInputBorder(),
-        ),
-        controller: textEditingController,
-        maxLines: null,
-        maxLength: textLength,
-        keyboardType: TextInputType.multiline,
-        focusNode: focusNode,
-      ),
     );
   }
 }
