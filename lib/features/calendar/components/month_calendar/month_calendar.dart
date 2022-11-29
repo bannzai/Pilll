@@ -42,12 +42,13 @@ class MonthCalendar extends HookConsumerWidget {
             Row(
               mainAxisAlignment: MainAxisAlignment.start,
               children: List.generate(
-                  Weekday.values.length,
-                  (index) => Expanded(
-                        child: WeekdayBadge(
-                          weekday: Weekday.values[index],
-                        ),
-                      )),
+                Weekday.values.length,
+                (index) => Expanded(
+                  child: WeekdayBadge(
+                    weekday: Weekday.values[index],
+                  ),
+                ),
+              ),
             ),
             const Divider(height: 1),
             ...List.generate(6, (offset) {
