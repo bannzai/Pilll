@@ -4,7 +4,7 @@ import 'package:pilll/entity/diary.codegen.dart';
 import 'package:riverpod/riverpod.dart';
 import 'package:pilll/utils/datetime/day.dart';
 
-final diariesStreamForMonthProvider = StreamProvider.family((ref, DateTime dateForMonth) {
+final diariesForMonthProvider = StreamProvider.family((ref, DateTime dateForMonth) {
   final range = MonthDateTimeRange.monthRange(dateForMonth: dateForMonth);
   return ref
       .watch(databaseProvider)
@@ -19,7 +19,7 @@ final diariesStreamForMonthProvider = StreamProvider.family((ref, DateTime dateF
       .map((diaries) => _sortedDiaries(diaries));
 });
 
-final diariesStream90Days = StreamProvider.family((ref, DateTime base) {
+final diariesFor90Days = StreamProvider.family((ref, DateTime base) {
   return ref
       .watch(databaseProvider)
       .diariesReference()
