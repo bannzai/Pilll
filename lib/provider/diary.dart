@@ -1,9 +1,23 @@
+import 'package:collection/collection.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:pilll/provider/database.dart';
 import 'package:pilll/entity/diary.codegen.dart';
 import 'package:riverpod/riverpod.dart';
 import 'package:pilll/utils/datetime/day.dart';
 
+final diaryForTodayProvider = StreamProvider((ref) {
+  return ref
+      .watch(databaseProvider)
+      .diariesReference()
+      .where(
+        DiaryFirestoreKey.date,
+        isGreaterThanOrEqualTo: today(),
+        isLessThanOrEqualTo: today()..add(const Duration(days: 1)),
+      )
+      .limitToLast(1)
+      .snapshots()
+      .map((event) => event.docs.map((e) => e.data()).toList().lastOrNull);
+});
 final diariesForMonthProvider = StreamProvider.family((ref, DateTime dateForMonth) {
   final range = MonthDateTimeRange.monthRange(dateForMonth: dateForMonth);
   return ref
