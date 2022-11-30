@@ -14,7 +14,6 @@ final diaryForTodayProvider = StreamProvider((ref) {
         isGreaterThanOrEqualTo: today(),
         isLessThanOrEqualTo: today()..add(const Duration(days: 1)),
       )
-      .limitToLast(1)
       .snapshots()
       .map((event) => event.docs.map((e) => e.data()).toList().lastOrNull);
 });
