@@ -159,7 +159,7 @@ class _CalendarPageBody extends StatelessWidget {
                             calendarNextPillSheetBandModels: calendarNextPillSheetBandModels,
                             horizontalPadding: 0,
                             day: (context, weekday, date) {
-                              if (displayedMonth.isPreviousMonth(date)) {
+                              if (date.isPreviousMonth(displayedMonth)) {
                                 return CalendarDayTile.grayout(
                                   weekday: weekday,
                                   date: date,
