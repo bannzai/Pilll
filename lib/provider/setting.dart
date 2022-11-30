@@ -14,7 +14,7 @@ class SetSetting {
   SetSetting(this.databaseConnection);
 
   Future<void> call(Setting setting) async {
-    await databaseConnection.userRawReference().set({UserFirestoreFieldKeys.settings: setting}, SetOptions(merge: true));
+    await databaseConnection.userRawReference().set({UserFirestoreFieldKeys.settings: setting.toJson()}, SetOptions(merge: true));
   }
 }
 

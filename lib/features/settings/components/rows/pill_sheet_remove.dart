@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
+import 'package:pilll/entrypoint.dart';
 import 'package:pilll/utils/analytics.dart';
 import 'package:pilll/components/atoms/button.dart';
 import 'package:pilll/components/atoms/font.dart';
@@ -85,9 +86,15 @@ class PillSheetRemoveRow extends HookConsumerWidget {
                   onPressed: () async {
                     try {
                       await deletePillSheetGroup(latestPillSheetGroup: latestPillSheetGroup, activedPillSheet: activedPillSheet);
-                      Navigator.of(context).pop();
+                      navigatorKey.currentState?.pop();
+                      ScaffoldMessenger.of(navigatorKey.currentContext!).showSnackBar(
+                        const SnackBar(
+                          duration: Duration(seconds: 2),
+                          content: Text("ピルシートを破棄しました"),
+                        ),
+                      );
                     } catch (error) {
-                      showErrorAlert(context, error);
+                      showErrorAlert(navigatorKey.currentContext, error);
                     }
                   },
                 ),

@@ -50,7 +50,10 @@ class ErrorAlert extends StatelessWidget {
   }
 }
 
-void showErrorAlert(BuildContext context, Object error) {
+void showErrorAlert(BuildContext? context, Object error) {
+  if (context == null) {
+    return;
+  }
   final String title;
   final String message;
   final String? faqLinkURL;
