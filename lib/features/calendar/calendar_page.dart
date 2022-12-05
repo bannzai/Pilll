@@ -1,6 +1,8 @@
 import 'package:async_value_group/async_value_group.dart';
 import 'package:flutter_hooks/flutter_hooks.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
+import 'package:pilll/entity/diary.codegen.dart';
+import 'package:pilll/provider/diary.dart';
 import 'package:pilll/utils/analytics.dart';
 import 'package:pilll/components/molecules/indicator.dart';
 import 'package:pilll/components/organisms/calendar/band/calendar_band_model.dart';
@@ -42,12 +44,13 @@ class CalendarPage extends HookConsumerWidget {
     useAutomaticKeepAlive(wantKeepAlive: true);
 
     final displayedMonth = _calendarDataSource[page.value];
-    return AsyncValueGroup.group5(
+    return AsyncValueGroup.group6(
       ref.watch(pillSheetModifiedHistoriesWithLimitProvider(CalendarPillSheetModifiedHistoryCardState.pillSheetModifiedHistoriesThreshold + 1)),
       ref.watch(premiumAndTrialProvider),
       ref.watch(calendarMenstruationBandListProvider),
       ref.watch(calendarScheduledMenstruationBandListProvider),
       ref.watch(calendarNextPillSheetBandListProvider),
+      ref.watch(diaryForTodayProvider),
     ).when(
       data: (data) => _CalendarPageBody(
         histories: data.t1,
@@ -55,6 +58,7 @@ class CalendarPage extends HookConsumerWidget {
         calendarMenstruationBandModels: data.t3,
         calendarScheduledMenstruationBandModels: data.t4,
         calendarNextPillSheetBandModels: data.t5,
+        todayDiary: data.t6,
         displayedMonth: displayedMonth,
         page: page,
         pageController: pageController,
@@ -76,6 +80,7 @@ class _CalendarPageBody extends StatelessWidget {
   final List<CalendarScheduledMenstruationBandModel> calendarScheduledMenstruationBandModels;
   final List<CalendarNextPillSheetBandModel> calendarNextPillSheetBandModels;
   final DateTime displayedMonth;
+  final Diary? todayDiary;
   final ValueNotifier<int> page;
   final PageController pageController;
 
@@ -86,6 +91,7 @@ class _CalendarPageBody extends StatelessWidget {
     required this.calendarMenstruationBandModels,
     required this.calendarScheduledMenstruationBandModels,
     required this.calendarNextPillSheetBandModels,
+    required this.todayDiary,
     required this.displayedMonth,
     required this.page,
     required this.pageController,
@@ -99,7 +105,7 @@ class _CalendarPageBody extends StatelessWidget {
         child: FloatingActionButton(
           onPressed: () {
             analytics.logEvent(name: "calendar_fab_pressed");
-            Navigator.of(context).push(DiaryPostPageRoute.route(today(), null));
+            Navigator.of(context).push(DiaryPostPageRoute.route(today(), todayDiary));
           },
           child: const Icon(Icons.add, color: Colors.white),
           backgroundColor: PilllColors.primary,
@@ -153,7 +159,7 @@ class _CalendarPageBody extends StatelessWidget {
                             calendarNextPillSheetBandModels: calendarNextPillSheetBandModels,
                             horizontalPadding: 0,
                             day: (context, weekday, date) {
-                              if (displayedMonth.isPreviousMonth(date)) {
+                              if (date.isPreviousMonth(displayedMonth)) {
                                 return CalendarDayTile.grayout(
                                   weekday: weekday,
                                   date: date,

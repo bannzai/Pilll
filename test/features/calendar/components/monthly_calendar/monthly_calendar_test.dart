@@ -37,7 +37,7 @@ void main() {
       await tester.pumpWidget(
         ProviderScope(
           overrides: [
-            diariesStreamForMonthProvider.overrideWith((ref, arg) => Stream.value(diaries)),
+            diariesForMonthProvider.overrideWith((ref, arg) => Stream.value(diaries)),
             schedulesForMonthProvider.overrideWith((ref, arg) => Stream.value([])),
           ],
           child: MaterialApp(
@@ -85,7 +85,7 @@ void main() {
       await tester.pumpWidget(
         ProviderScope(
           overrides: [
-            diariesStreamForMonthProvider.overrideWith((ref, arg) => Stream.value(diaries)),
+            diariesForMonthProvider.overrideWith((ref, arg) => Stream.value(diaries)),
             schedulesForMonthProvider.overrideWith((ref, arg) => Stream.value([])),
           ],
           child: MaterialApp(
@@ -120,7 +120,7 @@ void main() {
       await tester.pumpWidget(
         ProviderScope(
           overrides: [
-            diariesStreamForMonthProvider.overrideWith((ref, arg) => Stream.value([])),
+            diariesForMonthProvider.overrideWith((ref, arg) => Stream.value([])),
             schedulesForMonthProvider.overrideWith((ref, arg) => Stream.value([])),
           ],
           child: MaterialApp(
@@ -149,7 +149,7 @@ void main() {
       await tester.pumpWidget(
         ProviderScope(
           overrides: [
-            diariesStreamForMonthProvider.overrideWith((ref, arg) => Stream.value([])),
+            diariesForMonthProvider.overrideWith((ref, arg) => Stream.value([])),
             schedulesForMonthProvider.overrideWith((ref, arg) => Stream.value([])),
           ],
           child: MaterialApp(

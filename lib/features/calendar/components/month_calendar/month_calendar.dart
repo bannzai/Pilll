@@ -31,14 +31,14 @@ class MonthCalendar extends HookConsumerWidget {
   Widget build(BuildContext context, WidgetRef ref) {
     useEffect(() {
       // Prefetch
-      ref.read(diariesStreamForMonthProvider(DateTime(dateForMonth.year, dateForMonth.month + 1, 1)));
-      ref.read(diariesStreamForMonthProvider(DateTime(dateForMonth.year, dateForMonth.month - 1, 1)));
+      ref.read(diariesForMonthProvider(DateTime(dateForMonth.year, dateForMonth.month + 1, 1)));
+      ref.read(diariesForMonthProvider(DateTime(dateForMonth.year, dateForMonth.month - 1, 1)));
       ref.read(schedulesForMonthProvider(DateTime(dateForMonth.year, dateForMonth.month + 1, 1)));
       ref.read(schedulesForMonthProvider(DateTime(dateForMonth.year, dateForMonth.month - 1, 1)));
       return null;
     }, [dateForMonth]);
     return AsyncValueGroup.group2(
-      ref.watch(diariesStreamForMonthProvider(dateForMonth)),
+      ref.watch(diariesForMonthProvider(dateForMonth)),
       ref.watch(schedulesForMonthProvider(dateForMonth)),
     ).when(
       data: (data) {

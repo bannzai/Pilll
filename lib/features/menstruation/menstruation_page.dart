@@ -49,7 +49,7 @@ class MenstruationPage extends HookConsumerWidget {
       ref.watch(allMenstruationProvider),
       ref.watch(latestMenstruationProvider),
       ref.watch(settingProvider),
-      ref.watch(diariesStream90Days(today())),
+      ref.watch(diariesFor90Days(today())),
       ref.watch(schedules90Days(today())),
       ref.watch(calendarMenstruationBandListProvider),
       ref.watch(calendarScheduledMenstruationBandListProvider),
