@@ -37,6 +37,7 @@ void main() {
           beginingDate: yesterday,
           groupIndex: 0,
           lastTakenDate: today(),
+          createdAt: DateTime.now(),
         );
 
         final pillSheetGroup = PillSheetGroup(
@@ -107,6 +108,7 @@ void main() {
           beginingDate: yesterday,
           groupIndex: 0,
           lastTakenDate: today(),
+          createdAt: DateTime.now(),
         );
 
         final pillSheetGroup = PillSheetGroup(
@@ -177,6 +179,7 @@ void main() {
           beginingDate: beginDate,
           groupIndex: 0,
           lastTakenDate: today(),
+          createdAt: DateTime.now(),
           restDurations: [
             RestDuration(
               beginDate: _today.subtract(const Duration(days: 2)),
@@ -256,6 +259,7 @@ void main() {
           beginingDate: beginDate,
           groupIndex: 0,
           lastTakenDate: today(),
+          createdAt: DateTime.now(),
           restDurations: [
             RestDuration(
               beginDate: _today.subtract(const Duration(days: 8)),
@@ -333,6 +337,7 @@ void main() {
           beginingDate: _today.subtract(const Duration(days: 29)),
           groupIndex: 0,
           lastTakenDate: _today.subtract(const Duration(days: 2)),
+          createdAt: DateTime.now(),
         );
 
         // actived pill sheet
@@ -342,6 +347,7 @@ void main() {
           beginingDate: yesterday,
           lastTakenDate: _today,
           groupIndex: 1,
+          createdAt: DateTime.now(),
         );
 
         final pillSheetGroup = PillSheetGroup(
@@ -412,6 +418,7 @@ void main() {
           beginingDate: _today.subtract(const Duration(days: 29)),
           groupIndex: 0,
           lastTakenDate: _today.subtract(const Duration(days: 2)),
+          createdAt: DateTime.now(),
         );
 
         // actived pill sheet
@@ -421,6 +428,7 @@ void main() {
           beginingDate: yesterday,
           lastTakenDate: _today,
           groupIndex: 1,
+          createdAt: DateTime.now(),
         );
 
         final pillSheetGroup = PillSheetGroup(
@@ -485,6 +493,7 @@ void main() {
           beginingDate: _today.subtract(const Duration(days: 29)),
           groupIndex: 0,
           lastTakenDate: _today.subtract(const Duration(days: 2)),
+          createdAt: DateTime.now(),
         );
 
         // actived pill sheet
@@ -497,6 +506,7 @@ void main() {
           restDurations: [
             RestDuration(beginDate: yesterday, createdDate: yesterday, endDate: _today),
           ],
+          createdAt: DateTime.now(),
         );
 
         final pillSheetGroup = PillSheetGroup(

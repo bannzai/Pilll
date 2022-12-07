@@ -34,6 +34,7 @@ class PillSheetGroup with _$PillSheetGroup {
     PillSheetGroupDisplayNumberSetting? displayNumberSetting,
   }) = _PillSheetGroup;
 
+
   factory PillSheetGroup.fromJson(Map<String, dynamic> json) => _$PillSheetGroupFromJson(json);
 
   PillSheet? get activedPillSheet {

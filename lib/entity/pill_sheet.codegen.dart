@@ -81,7 +81,7 @@ class PillSheet with _$PillSheet {
       fromJson: TimestampConverter.timestampToDateTime,
       toJson: TimestampConverter.dateTimeToTimestamp,
     )
-        DateTime? createdAt,
+        required DateTime? createdAt,
     @JsonKey(
       fromJson: TimestampConverter.timestampToDateTime,
       toJson: TimestampConverter.dateTimeToTimestamp,
@@ -97,6 +97,7 @@ class PillSheet with _$PillSheet {
         typeInfo: type.typeInfo,
         beginingDate: today(),
         lastTakenDate: null,
+        createdAt: DateTime.now(),
       );
 
   factory PillSheet.fromJson(Map<String, dynamic> json) => _$PillSheetFromJson(json);

@@ -39,6 +39,7 @@ void main() {
         beginingDate: _today,
         groupIndex: 0,
         lastTakenDate: null,
+        createdAt: DateTime.now(),
       );
 
       final pillSheetGroup = PillSheetGroup(
@@ -114,6 +115,7 @@ void main() {
         beginingDate: _today,
         groupIndex: 0,
         lastTakenDate: null,
+        createdAt: DateTime.now(),
       );
       final pillSheet2 = PillSheet(
         id: "sheet_id2",
@@ -121,6 +123,7 @@ void main() {
         beginingDate: _today.add(const Duration(days: 28)),
         lastTakenDate: null,
         groupIndex: 1,
+        createdAt: DateTime.now(),
       );
 
       final pillSheetGroup = PillSheetGroup(

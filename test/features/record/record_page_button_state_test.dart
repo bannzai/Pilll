@@ -35,6 +35,7 @@ void main() {
         typeInfo: PillSheetType.pillsheet_21.typeInfo,
         beginingDate: yesterday,
         lastTakenDate: yesterday,
+        createdAt: DateTime.now(),
       );
 
       await tester.pumpWidget(
@@ -61,6 +62,7 @@ void main() {
       typeInfo: PillSheetType.pillsheet_21.typeInfo,
       beginingDate: today(),
       lastTakenDate: today(),
+      createdAt: DateTime.now(),
     );
 
     await tester.pumpWidget(

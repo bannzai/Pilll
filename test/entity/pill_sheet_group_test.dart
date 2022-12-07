@@ -27,6 +27,7 @@ void main() {
           id: firestoreIDGenerator(),
           beginingDate: DateTime.parse("2020-09-14"),
           lastTakenDate: DateTime.parse("2020-09-18"),
+          createdAt: DateTime.now(),
           typeInfo: PillSheetTypeInfo(
             dosingPeriod: sheetType.dosingPeriod,
             name: sheetType.fullName,
@@ -52,6 +53,7 @@ void main() {
           id: firestoreIDGenerator(),
           beginingDate: DateTime.parse("2020-09-01"),
           lastTakenDate: DateTime.parse("2020-09-28"),
+          createdAt: DateTime.now(),
           typeInfo: PillSheetTypeInfo(
             dosingPeriod: sheetType.dosingPeriod,
             name: sheetType.fullName,
@@ -78,6 +80,7 @@ void main() {
             id: firestoreIDGenerator(),
             beginingDate: DateTime.parse("2020-09-01"),
             lastTakenDate: DateTime.parse("2020-09-28"),
+            createdAt: DateTime.now(),
             restDurations: [
               RestDuration(
                 beginDate: DateTime.parse("2020-09-22"),
@@ -110,6 +113,7 @@ void main() {
             id: firestoreIDGenerator(),
             beginingDate: DateTime.parse("2020-09-01"),
             lastTakenDate: DateTime.parse("2020-09-28"),
+            createdAt: DateTime.now(),
             restDurations: [
               RestDuration(
                 beginDate: DateTime.parse("2020-09-22"),
@@ -143,6 +147,7 @@ void main() {
               id: firestoreIDGenerator(),
               beginingDate: DateTime.parse("2020-09-01"),
               lastTakenDate: DateTime.parse("2020-09-28"),
+              createdAt: DateTime.now(),
               restDurations: [
                 RestDuration(
                   beginDate: DateTime.parse("2020-09-12"),
@@ -179,6 +184,7 @@ void main() {
               id: firestoreIDGenerator(),
               beginingDate: DateTime.parse("2020-09-01"),
               lastTakenDate: DateTime.parse("2020-09-28"),
+              createdAt: DateTime.now(),
               restDurations: [
                 RestDuration(
                   beginDate: DateTime.parse("2020-09-12"),
@@ -220,6 +226,7 @@ void main() {
           id: firestoreIDGenerator(),
           beginingDate: DateTime.parse("2022-03-01"),
           lastTakenDate: DateTime.parse("2020-03-28"),
+          createdAt: DateTime.now(),
           groupIndex: 0,
           typeInfo: PillSheetTypeInfo(
             dosingPeriod: sheetType.dosingPeriod,
@@ -233,6 +240,7 @@ void main() {
           beginingDate: DateTime.parse("2022-03-29"),
           lastTakenDate: null,
           groupIndex: 1,
+          createdAt: DateTime.now(),
           typeInfo: PillSheetTypeInfo(
             dosingPeriod: sheetType.dosingPeriod,
             name: sheetType.fullName,
@@ -258,6 +266,7 @@ void main() {
           id: firestoreIDGenerator(),
           beginingDate: DateTime.parse("2022-03-01"),
           lastTakenDate: DateTime.parse("2020-03-28"),
+          createdAt: DateTime.now(),
           groupIndex: 0,
           typeInfo: PillSheetTypeInfo(
             dosingPeriod: sheetType.dosingPeriod,
@@ -270,6 +279,7 @@ void main() {
           id: firestoreIDGenerator(),
           beginingDate: DateTime.parse("2022-03-29"),
           lastTakenDate: null,
+          createdAt: DateTime.now(),
           groupIndex: 1,
           typeInfo: PillSheetTypeInfo(
             dosingPeriod: sheetType.dosingPeriod,
@@ -297,6 +307,7 @@ void main() {
           id: firestoreIDGenerator(),
           beginingDate: DateTime.parse("2022-03-01"),
           lastTakenDate: DateTime.parse("2020-03-28"),
+          createdAt: DateTime.now(),
           groupIndex: 0,
           typeInfo: PillSheetTypeInfo(
             dosingPeriod: sheetType.dosingPeriod,
@@ -309,6 +320,7 @@ void main() {
           id: firestoreIDGenerator(),
           beginingDate: DateTime.parse("2022-03-29"),
           lastTakenDate: null,
+          createdAt: DateTime.now(),
           groupIndex: 1,
           typeInfo: PillSheetTypeInfo(
             dosingPeriod: sheetType.dosingPeriod,
@@ -336,6 +348,7 @@ void main() {
           id: firestoreIDGenerator(),
           beginingDate: DateTime.parse("2022-03-01"),
           lastTakenDate: DateTime.parse("2020-03-28"),
+          createdAt: DateTime.now(),
           groupIndex: 0,
           typeInfo: PillSheetTypeInfo(
             dosingPeriod: sheetType.dosingPeriod,
@@ -348,6 +361,7 @@ void main() {
           id: firestoreIDGenerator(),
           beginingDate: DateTime.parse("2022-03-29"),
           lastTakenDate: null,
+          createdAt: DateTime.now(),
           groupIndex: 1,
           typeInfo: PillSheetTypeInfo(
             dosingPeriod: sheetType.dosingPeriod,
@@ -385,6 +399,7 @@ void main() {
             totalCount: sheetType.totalCount,
             pillSheetTypeReferencePath: sheetType.rawPath,
           ),
+          createdAt: DateTime.now(),
         );
         // created at and id are anything value
         final pillSheetGroup = PillSheetGroup(
@@ -410,6 +425,7 @@ void main() {
             totalCount: sheetType.totalCount,
             pillSheetTypeReferencePath: sheetType.rawPath,
           ),
+          createdAt: DateTime.now(),
         );
         // created at and id are anything value
         final pillSheetGroup = PillSheetGroup(
@@ -435,6 +451,7 @@ void main() {
             totalCount: sheetType.totalCount,
             pillSheetTypeReferencePath: sheetType.rawPath,
           ),
+          createdAt: DateTime.now(),
         );
         // created at and id are anything value
         final pillSheetGroup = PillSheetGroup(
@@ -455,6 +472,7 @@ void main() {
             id: firestoreIDGenerator(),
             beginingDate: DateTime.parse("2020-09-01"),
             lastTakenDate: DateTime.parse("2020-09-22"),
+            createdAt: DateTime.now(),
             restDurations: [
               RestDuration(
                 beginDate: DateTime.parse("2020-09-23"),
@@ -486,6 +504,7 @@ void main() {
             id: firestoreIDGenerator(),
             beginingDate: DateTime.parse("2020-09-01"),
             lastTakenDate: DateTime.parse("2020-09-27"),
+            createdAt: DateTime.now(),
             restDurations: [
               RestDuration(
                 beginDate: DateTime.parse("2020-09-23"),
@@ -518,6 +537,7 @@ void main() {
             id: firestoreIDGenerator(),
             beginingDate: DateTime.parse("2020-09-01"),
             lastTakenDate: null,
+            createdAt: DateTime.now(),
             restDurations: [
               RestDuration(
                 beginDate: DateTime.parse("2020-09-23"),
@@ -552,6 +572,7 @@ void main() {
               id: firestoreIDGenerator(),
               beginingDate: DateTime.parse("2020-09-01"),
               lastTakenDate: DateTime.parse("2020-09-22"),
+              createdAt: DateTime.now(),
               restDurations: [
                 RestDuration(
                   beginDate: DateTime.parse("2020-09-12"),
@@ -588,6 +609,7 @@ void main() {
               id: firestoreIDGenerator(),
               beginingDate: DateTime.parse("2020-09-01"),
               lastTakenDate: DateTime.parse("2020-09-22"),
+              createdAt: DateTime.now(),
               restDurations: [
                 RestDuration(
                   beginDate: DateTime.parse("2020-09-12"),
@@ -628,6 +650,7 @@ void main() {
             id: firestoreIDGenerator(),
             beginingDate: DateTime.parse("2022-03-01"),
             lastTakenDate: DateTime.parse("2020-03-28"),
+            createdAt: DateTime.now(),
             groupIndex: 0,
             typeInfo: PillSheetTypeInfo(
               dosingPeriod: sheetType.dosingPeriod,
@@ -640,6 +663,7 @@ void main() {
             id: firestoreIDGenerator(),
             beginingDate: DateTime.parse("2022-03-29"),
             lastTakenDate: DateTime.parse("2022-03-29"),
+            createdAt: DateTime.now(),
             groupIndex: 1,
             typeInfo: PillSheetTypeInfo(
               dosingPeriod: sheetType.dosingPeriod,
@@ -666,6 +690,7 @@ void main() {
             id: firestoreIDGenerator(),
             beginingDate: DateTime.parse("2022-03-01"),
             lastTakenDate: DateTime.parse("2020-03-28"),
+            createdAt: DateTime.now(),
             groupIndex: 0,
             typeInfo: PillSheetTypeInfo(
               dosingPeriod: sheetType.dosingPeriod,
@@ -678,6 +703,7 @@ void main() {
             id: firestoreIDGenerator(),
             beginingDate: DateTime.parse("2022-03-29"),
             lastTakenDate: DateTime.parse("2022-03-29"),
+            createdAt: DateTime.now(),
             groupIndex: 1,
             typeInfo: PillSheetTypeInfo(
               dosingPeriod: sheetType.dosingPeriod,
@@ -705,6 +731,7 @@ void main() {
             id: firestoreIDGenerator(),
             beginingDate: DateTime.parse("2022-03-01"),
             lastTakenDate: DateTime.parse("2020-03-28"),
+            createdAt: DateTime.now(),
             groupIndex: 0,
             typeInfo: PillSheetTypeInfo(
               dosingPeriod: sheetType.dosingPeriod,
@@ -717,6 +744,7 @@ void main() {
             id: firestoreIDGenerator(),
             beginingDate: DateTime.parse("2022-03-29"),
             lastTakenDate: DateTime.parse("2022-03-29"),
+            createdAt: DateTime.now(),
             groupIndex: 1,
             typeInfo: PillSheetTypeInfo(
               dosingPeriod: sheetType.dosingPeriod,
@@ -745,6 +773,7 @@ void main() {
             id: firestoreIDGenerator(),
             beginingDate: DateTime.parse("2022-03-01"),
             lastTakenDate: DateTime.parse("2020-03-28"),
+            createdAt: DateTime.now(),
             groupIndex: 0,
             typeInfo: PillSheetTypeInfo(
               dosingPeriod: sheetType.dosingPeriod,
@@ -757,6 +786,7 @@ void main() {
             id: firestoreIDGenerator(),
             beginingDate: DateTime.parse("2022-03-29"),
             lastTakenDate: DateTime.parse("2022-03-29"),
+            createdAt: DateTime.now(),
             groupIndex: 1,
             typeInfo: PillSheetTypeInfo(
               dosingPeriod: sheetType.dosingPeriod,
@@ -784,6 +814,7 @@ void main() {
             id: firestoreIDGenerator(),
             beginingDate: DateTime.parse("2022-03-01"),
             lastTakenDate: DateTime.parse("2020-03-28"),
+            createdAt: DateTime.now(),
             groupIndex: 0,
             typeInfo: PillSheetTypeInfo(
               dosingPeriod: sheetType.dosingPeriod,
@@ -796,6 +827,7 @@ void main() {
             id: firestoreIDGenerator(),
             beginingDate: DateTime.parse("2022-03-29"),
             lastTakenDate: DateTime.parse("2022-03-29"),
+            createdAt: DateTime.now(),
             groupIndex: 1,
             typeInfo: PillSheetTypeInfo(
               dosingPeriod: sheetType.dosingPeriod,
