@@ -9,8 +9,8 @@ class BoolSharedPreferences extends FamilyAsyncNotifier<bool?, String> {
   late String key;
   late SharedPreferences sharedPreferences;
 
-  void set(bool value) {
-    sharedPreferences.setBool(key, value);
+  Future<void> set(bool value) async {
+    await sharedPreferences.setBool(key, value);
     // NOTE: Allow recreate AsyncNotifier everytime. Not call update((_) => value), Keep SSoT with fetching data via shared_preferences
     ref.invalidateSelf();
   }
@@ -29,8 +29,8 @@ class IntSharedPreferences extends FamilyAsyncNotifier<int?, String> {
   late String key;
   late SharedPreferences sharedPreferences;
 
-  void set(int value) {
-    sharedPreferences.setInt(key, value);
+  Future<void> set(int value) async {
+    await sharedPreferences.setInt(key, value);
     // NOTE: Allow recreate AsyncNotifier everytime. Not call update((_) => value), Keep SSoT with fetching data via shared_preferences
     ref.invalidateSelf();
   }
@@ -49,8 +49,8 @@ class StringSharedPreferences extends FamilyAsyncNotifier<String?, String> {
   late String key;
   late SharedPreferences sharedPreferences;
 
-  void set(String value) {
-    sharedPreferences.setString(key, value);
+  Future<void> set(String value) async {
+    await sharedPreferences.setString(key, value);
     // NOTE: Allow recreate AsyncNotifier everytime. Not call update((_) => value), Keep SSoT with fetching data via shared_preferences
     ref.invalidateSelf();
   }
