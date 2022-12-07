@@ -133,7 +133,7 @@ class IntiialSettingPremiumTrialStartPage extends HookConsumerWidget {
                   analytics.logEvent(name: "pressed_start_app_preiun_trial");
                   try {
                     await store.register();
-                    AppRouter.endInitialSetting(context, didEndInitialSettingNotifier);
+                    await AppRouter.endInitialSetting(context, didEndInitialSettingNotifier);
                   } catch (error) {
                     showErrorAlert(context, error.toString());
                   }

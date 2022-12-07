@@ -6,15 +6,15 @@ class AppRouter {
 // NOTE: This method call after user end all initialSetting
 // OR user signed with 3rd party provider
 // So, Don't forget when this function is edited. Both test necessary .
-  static void endInitialSetting(BuildContext context, BoolSharedPreferences didEndInitialSettingNotifier) {
+  static Future<void> endInitialSetting(BuildContext context, BoolSharedPreferences didEndInitialSettingNotifier) async {
     analytics.logEvent(name: "end_initial_setting");
-    didEndInitialSettingNotifier.set(true);
+    await didEndInitialSettingNotifier.set(true);
     Navigator.popUntil(context, (router) => router.isFirst);
   }
 
   static Future<void> routeToInitialSetting(BuildContext context, BoolSharedPreferences didEndInitialSettingNotifier) async {
     analytics.logEvent(name: "route_to_initial_settings");
-    didEndInitialSettingNotifier.set(false);
+    await didEndInitialSettingNotifier.set(false);
     Navigator.popUntil(context, (router) => router.isFirst);
   }
 }
