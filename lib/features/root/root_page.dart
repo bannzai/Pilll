@@ -1,5 +1,6 @@
 import 'dart:async';
 
+import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter_hooks/flutter_hooks.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
 import 'package:pilll/provider/force_update.dart';
@@ -69,7 +70,13 @@ class Root extends HookConsumerWidget {
     // For app screen state
     useEffect(() {
       f() async {
-        final firebaseUser = firebaseUserAsyncValue.valueOrNull;
+        // Do not use firebaseUserAsyncValue.valueOrNull because it can access when not yet user data fetch.
+        final firebaseUserData = firebaseUserAsyncValue.asData;
+        if (firebaseUserData == null) {
+          return;
+        }
+
+        final firebaseUser = firebaseUserData.value;
         if (firebaseUser == null) {
           try {
             // SignIn first. Keep in mind that this method is called first.
