@@ -21,6 +21,15 @@ class HomePage extends HookConsumerWidget {
   Widget build(BuildContext context, WidgetRef ref) {
     final user = ref.watch(userProvider);
     final registerRemotePushNotificationToken = ref.watch(registerRemotePushNotificationTokenProvider);
+
+    final tabIndex = useState(0);
+    final ticker = useSingleTickerProvider();
+    final tabController = useTabController(initialLength: HomePageTabType.values.length, vsync: ticker);
+    tabController.addListener(() {
+      tabIndex.value = tabController.index;
+      _screenTracking(tabController.index);
+    });
+
     useEffect(() {
       final userValue = user.valueOrNull;
       if (userValue != null) {
@@ -30,12 +39,6 @@ class HomePage extends HookConsumerWidget {
       }
       return null;
     }, [user.valueOrNull]);
-
-    final ticker = useSingleTickerProvider();
-    final tabController = useTabController(initialLength: HomePageTabType.values.length, vsync: ticker);
-    tabController.addListener(() {
-      _screenTracking(tabController.index);
-    });
 
     return DefaultTabController(
       length: HomePageTabType.values.length,
@@ -59,22 +62,22 @@ class HomePage extends HookConsumerWidget {
                   Tab(
                     text: "ピル",
                     icon: SvgPicture.asset(
-                        tabController.index == HomePageTabType.record.index ? "images/tab_icon_pill_enable.svg" : "images/tab_icon_pill_disable.svg"),
+                        tabIndex.value == HomePageTabType.record.index ? "images/tab_icon_pill_enable.svg" : "images/tab_icon_pill_disable.svg"),
                   ),
                   Tab(
                     text: "生理",
                     icon: SvgPicture.asset(
-                        tabController.index == HomePageTabType.menstruation.index ? "images/menstruation.svg" : "images/menstruation_disable.svg"),
+                        tabIndex.value == HomePageTabType.menstruation.index ? "images/menstruation.svg" : "images/menstruation_disable.svg"),
                   ),
                   Tab(
                     text: "カレンダー",
-                    icon: SvgPicture.asset(tabController.index == HomePageTabType.calendar.index
+                    icon: SvgPicture.asset(tabIndex.value == HomePageTabType.calendar.index
                         ? "images/tab_icon_calendar_enable.svg"
                         : "images/tab_icon_calendar_disable.svg"),
                   ),
                   Tab(
                     text: "設定",
-                    icon: SvgPicture.asset(tabController.index == HomePageTabType.setting.index
+                    icon: SvgPicture.asset(tabIndex.value == HomePageTabType.setting.index
                         ? "images/tab_icon_setting_enable.svg"
                         : "images/tab_icon_setting_disable.svg"),
                   ),
