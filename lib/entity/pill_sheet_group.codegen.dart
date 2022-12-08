@@ -57,6 +57,10 @@ class PillSheetGroup with _$PillSheetGroup {
   bool get _isDeleted => deletedAt != null;
   bool get isDeactived => activedPillSheet == null || _isDeleted;
 
+  DateTime get beginDate {
+    return pillSheets[0].beginingDate;
+  }
+
   int get sequentialTodayPillNumber {
     if (pillSheets.isEmpty) {
       return 0;
