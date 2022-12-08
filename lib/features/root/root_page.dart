@@ -153,7 +153,8 @@ class InitialSettingOrAppPage extends HookConsumerWidget {
           // Decide screen type. Keep in mind that this method is called when user is logged in.
           screenType.value = _screenType(didEndInitialSetting: didEndInitialSetting.value);
 
-          if (appUser.value == null) {
+          final appUserValue = appUser.value;
+          if (appUserValue == null) {
             // Retrieve user from app DB.
             final user = await fetchOrCreateUser(firebaseUserID);
             saveUserLaunchInfo(user);
@@ -168,6 +169,8 @@ class InitialSettingOrAppPage extends HookConsumerWidget {
               analytics.logEvent(name: "uset_setting_is_null", parameters: {"uid": firebaseUserID});
               screenType.value = _InitialSettingOrAppPageScreenType.initialSetting;
             }
+          } else {
+            saveUserLaunchInfo(appUserValue);
           }
         } catch (e, st) {
           errorLogger.recordError(e, st);
