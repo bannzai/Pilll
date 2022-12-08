@@ -11,13 +11,13 @@ import 'package:pilll/provider/premium_and_trial.codegen.dart';
 import 'package:pilll/provider/setting.dart';
 
 class SelectAppearanceModeModal extends HookConsumerWidget {
-  final Setting setting;
   final PremiumAndTrial premiumAndTrial;
 
-  const SelectAppearanceModeModal({Key? key, required this.setting, required this.premiumAndTrial}) : super(key: key);
+  const SelectAppearanceModeModal({Key? key, required this.premiumAndTrial}) : super(key: key);
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {
+    final setting = ref.watch(settingProvider).requireValue;
     final setSetting = ref.watch(setSettingProvider);
 
     return Container(
@@ -127,14 +127,12 @@ class SelectAppearanceModeModal extends HookConsumerWidget {
 
 void showSelectAppearanceModeModal(
   BuildContext context, {
-  required Setting setting,
   required PremiumAndTrial premiumAndTrial,
 }) {
   analytics.setCurrentScreen(screenName: "SelectAppearanceModeModal");
   showModalBottomSheet(
     context: context,
     builder: (context) => SelectAppearanceModeModal(
-      setting: setting,
       premiumAndTrial: premiumAndTrial,
     ),
     backgroundColor: Colors.transparent,
