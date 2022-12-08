@@ -31,7 +31,8 @@ class HomePage extends HookConsumerWidget {
       return null;
     }, [user.valueOrNull]);
 
-    final tabController = useTabController(initialLength: HomePageTabType.values.length);
+    final ticker = useSingleTickerProvider();
+    final tabController = useTabController(initialLength: HomePageTabType.values.length, vsync: ticker);
     tabController.addListener(() {
       _screenTracking(tabController.index);
     });
