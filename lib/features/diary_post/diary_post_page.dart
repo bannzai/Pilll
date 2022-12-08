@@ -85,6 +85,14 @@ class DiaryPostPageBody extends HookConsumerWidget {
 
     final setDiary = ref.watch(setDiaryProvider);
 
+    // FIXME: なぜかFocusScope.of(context).hasFocusになりKeyboardToolbarが表示されてしまうのでunfocusする
+    useEffect(() {
+      WidgetsBinding.instance.addPostFrameCallback((timeStamp) {
+        FocusScope.of(context).unfocus();
+      });
+      return null;
+    }, [true]);
+
     return Scaffold(
       backgroundColor: PilllColors.white,
       resizeToAvoidBottomInset: false,
@@ -142,7 +150,7 @@ class DiaryPostPageBody extends HookConsumerWidget {
                 ],
               ),
             ),
-            if (focusNode.hasFocus) ...[
+            if (focusNode.hasPrimaryFocus) ...[
               KeyboardToolbar(
                 doneButton: AlertButton(
                   text: '完了',

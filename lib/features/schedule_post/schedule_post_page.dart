@@ -216,7 +216,7 @@ class _SchedulePostPage extends HookConsumerWidget {
                 ],
               ),
             ),
-            if (focusNode.hasFocus) ...[
+            if (focusNode.hasPrimaryFocus) ...[
               KeyboardToolbar(
                 doneButton: AlertButton(
                   text: '完了',

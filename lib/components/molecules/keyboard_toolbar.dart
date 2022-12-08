@@ -18,7 +18,7 @@ class KeyboardToolbar extends StatelessWidget {
             children: [
               const Spacer(),
               doneButton,
-              const SizedBox(width: 20),
+              const SizedBox(width: 10),
             ],
           ),
         ),
