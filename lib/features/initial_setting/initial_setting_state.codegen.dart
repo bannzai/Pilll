@@ -81,7 +81,7 @@ class InitialSettingState with _$InitialSettingState {
         pillSheetTypes: pillSheetTypes,
       ),
       typeInfo: pillSheetType.typeInfo,
-      createdAt: DateTime.now(),
+      createdAt: now(),
     );
   }
 

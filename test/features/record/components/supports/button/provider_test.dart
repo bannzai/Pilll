@@ -33,8 +33,7 @@ void main() {
       final batch = MockWriteBatch();
       when(batchFactory.batch()).thenReturn(batch);
 
-      final pillSheet =
-          PillSheet(id: "pill_sheet_id_1", typeInfo: PillSheetType.pillsheet_28_0.typeInfo, beginingDate: now(), createdAt: DateTime.now());
+      final pillSheet = PillSheet(id: "pill_sheet_id_1", typeInfo: PillSheetType.pillsheet_28_0.typeInfo, beginingDate: now(), createdAt: now());
       final updatedPillSheet = pillSheet.copyWith(restDurations: [notYetEndRestDuration]);
 
       final pillSheetGroup = PillSheetGroup(id: "group_id", pillSheetIDs: ["pill_sheet_id_1"].toList(), pillSheets: [pillSheet], createdAt: now());
@@ -85,7 +84,7 @@ void main() {
           typeInfo: PillSheetType.pillsheet_28_0.typeInfo,
           beginingDate: now(),
           restDurations: [notYetEndRestDuration],
-          createdAt: DateTime.now());
+          createdAt: now());
       final updatedPillSheet = pillSheet.copyWith(restDurations: [endedRestDuration]);
 
       final pillSheetGroup = PillSheetGroup(id: "group_id", pillSheetIDs: ["pill_sheet_id_1"].toList(), pillSheets: [pillSheet], createdAt: now());
@@ -137,21 +136,21 @@ void main() {
           typeInfo: PillSheetType.pillsheet_28_0.typeInfo,
           beginingDate: firstPillSheetBeginDate,
           restDurations: [notYetEndRestDuration],
-          createdAt: DateTime.now(),
+          createdAt: now(),
         ),
         PillSheet(
           id: "pill_sheet_id_2",
           groupIndex: 1,
           typeInfo: PillSheetType.pillsheet_28_0.typeInfo,
           beginingDate: firstPillSheetBeginDate.add(const Duration(days: 28)),
-          createdAt: DateTime.now(),
+          createdAt: now(),
         ),
         PillSheet(
           id: "pill_sheet_id_3",
           groupIndex: 2,
           typeInfo: PillSheetType.pillsheet_28_0.typeInfo,
           beginingDate: firstPillSheetBeginDate.add(const Duration(days: 56)),
-          createdAt: DateTime.now(),
+          createdAt: now(),
         )
       ];
       final updatedPillSheet1 = pillSheets[0].copyWith(restDurations: [endedRestDuration]);

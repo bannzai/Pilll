@@ -54,7 +54,7 @@ class AddPillSheetGroup {
           Duration(days: offset),
         ),
         groupIndex: pageIndex,
-        createdAt: DateTime.now(),
+        createdAt: now(),
       );
     }).toList();
 

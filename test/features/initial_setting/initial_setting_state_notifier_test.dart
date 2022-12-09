@@ -266,7 +266,7 @@ void main() {
         id: "sheet_id",
         typeInfo: PillSheetType.pillsheet_21.typeInfo,
         beginingDate: _today,
-        createdAt: DateTime.now(),
+        createdAt: now(),
       );
 
       final pillSheetGroup = PillSheetGroup(pillSheetIDs: ["sheet_id"], pillSheets: [pillSheet.copyWith(id: "sheet_id")], createdAt: now());
@@ -333,7 +333,7 @@ void main() {
         ),
         groupIndex: 0,
         lastTakenDate: DateTime.parse("2020-09-18"),
-        createdAt: DateTime.now(),
+        createdAt: now(),
       );
       final pillSheet2 = PillSheet(
         id: "sheet_id2",
@@ -341,7 +341,7 @@ void main() {
         beginingDate: _today,
         lastTakenDate: _today.subtract(const Duration(days: 1)),
         groupIndex: 1,
-        createdAt: DateTime.now(),
+        createdAt: now(),
       );
 
       final pillSheetGroup = PillSheetGroup(
@@ -425,7 +425,7 @@ void main() {
         id: "sheet_id",
         typeInfo: PillSheetType.pillsheet_24_rest_4.typeInfo,
         beginingDate: _today,
-        createdAt: DateTime.now(),
+        createdAt: now(),
       );
 
       final pillSheetGroup = PillSheetGroup(pillSheetIDs: ["sheet_id"], pillSheets: [pillSheet.copyWith(id: "sheet_id")], createdAt: now());
