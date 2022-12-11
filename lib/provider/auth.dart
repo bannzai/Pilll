@@ -12,6 +12,8 @@ final firebaseUserStateProvider = StreamProvider<User?>(
 );
 
 final firebaseSignInProvider = FutureProvider<User>((ref) async {
+  final firebaseUserChanges = ref.watch(firebaseUserStateProvider.stream);
+
   analytics.logEvent(name: "current_user_provider");
   final currentUser = FirebaseAuth.instance.currentUser;
 
@@ -31,9 +33,14 @@ final firebaseSignInProvider = FutureProvider<User>((ref) async {
       final completer = Completer<User?>();
 
       StreamSubscription<User?>? subscription;
-      subscription = FirebaseAuth.instance.userChanges().listen((firebaseUser) {
+      subscription = firebaseUserChanges.listen((firebaseUser) {
         completer.complete(firebaseUser);
         subscription?.cancel();
+      });
+      Future.delayed(const Duration(seconds: 30)).then((_) {
+        if (!completer.isCompleted) {
+          completer.completeError(const FormatException("タイムアウトしました。通信環境をお確かめの上再度お試しください"));
+        }
       });
       return completer.future;
     });
@@ -62,7 +69,7 @@ final firebaseSignInProvider = FutureProvider<User>((ref) async {
     // keep until FirebaseAuth.instance user state updated
     final waitLatestChangedUser = Future<User>(() {
       final completer = Completer<User>();
-      final Stream<User> nonOptionalStream = FirebaseAuth.instance.userChanges().where((event) => event != null).cast();
+      final Stream<User> nonOptionalStream = firebaseUserChanges.where((event) => event != null).cast();
 
       StreamSubscription<User>? subscription;
       subscription = nonOptionalStream.listen((firebaseUser) {

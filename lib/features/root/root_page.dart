@@ -32,10 +32,11 @@ class Root extends HookConsumerWidget {
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {
-    final firebaseUserAsyncValue = ref.watch(firebaseUserStateProvider);
+    final signInFirebaseUser = ref.watch(firebaseSignInProvider.future);
     final checkForceUpdate = ref.watch(checkForceUpdateProvider);
     final setUserID = ref.watch(setUserIDProvider);
 
+    final userID = useState<String?>(null);
     final shouldForceUpdate = useState(false);
     final error = useState<LaunchException?>(null);
 
@@ -47,7 +48,7 @@ class Root extends HookConsumerWidget {
           return UniversalErrorPage(
             error: details.exception.toString(),
             child: null,
-            reload: () => ref.read(refreshAppProvider),
+            reload: () => ref.refresh(refreshAppProvider),
           );
         };
       }
@@ -70,29 +71,28 @@ class Root extends HookConsumerWidget {
     // For app screen state
     useEffect(() {
       f() async {
-        // Do not use firebaseUserAsyncValue.valueOrNull because it can access when not yet user data fetch.
-        final firebaseUserData = firebaseUserAsyncValue.asData;
-        if (firebaseUserData == null) {
-          return;
-        }
-
-        final firebaseUser = firebaseUserData.value;
-        if (firebaseUser == null) {
-          try {
-            // SignIn first. Keep in mind that this method is called first.
-            final _ = await ref.read(firebaseSignInProvider.future);
-          } catch (e, st) {
-            errorLogger.recordError(e, st);
-            error.value = LaunchException("認証時にエラーが発生しました\n${ErrorMessages.connection}\n詳細:", e);
-          }
-        } else {
-          setUserID(userID: firebaseUser.uid);
+        // SignIn first. Keep in mind that this method is called first.
+        try {
+          final firebaseUser = await signInFirebaseUser;
+          userID.value = firebaseUser.uid;
+        } catch (e, st) {
+          errorLogger.recordError(e, st);
+          error.value = LaunchException("認証時にエラーが発生しました\n${ErrorMessages.connection}\n詳細:", e);
         }
       }
 
       f();
       return null;
-    }, [firebaseUserAsyncValue.valueOrNull?.uid]);
+    }, [signInFirebaseUser]);
+
+    useEffect(() {
+      final userIDValue = userID.value;
+      if (userIDValue != null) {
+        setUserID(userID: userIDValue);
+      }
+
+      return null;
+    }, [userID.value]);
 
     // For force update
     if (shouldForceUpdate.value) {
@@ -111,7 +111,7 @@ class Root extends HookConsumerWidget {
       error: error.value,
       reload: () => ref.refresh(refreshAppProvider),
       child: () {
-        final uid = firebaseUserAsyncValue.valueOrNull?.uid;
+        final uid = userID.value;
         if (uid == null) {
           return const ScaffoldIndicator();
         } else {

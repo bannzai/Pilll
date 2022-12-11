@@ -7,6 +7,8 @@ import 'package:pilll/entity/setting.codegen.dart';
 import 'package:pilll/provider/pill_sheet_group.dart';
 import 'package:pilll/utils/environment.dart';
 import 'package:package_info/package_info.dart';
+import 'package:pilll/utils/shared_preference/keys.dart';
+import 'package:shared_preferences/shared_preferences.dart';
 import 'package:url_launcher/url_launcher.dart';
 
 import '../../../../entity/user.codegen.dart';
@@ -23,7 +25,8 @@ inquiry() {
 Future<String> debugInfo(String separator) async {
   final userID = auth.FirebaseAuth.instance.currentUser?.uid;
   if (userID == null) {
-    return Future.value("DEBUG INFO user is not found");
+    final sharedPreferences = await SharedPreferences.getInstance();
+    return Future.value("DEBUG INFO user is not found. lastest last login id ${sharedPreferences.getString(StringKey.lastSignInAnonymousUID)}");
   }
 
   DatabaseConnection databaseConnection = DatabaseConnection(userID);
