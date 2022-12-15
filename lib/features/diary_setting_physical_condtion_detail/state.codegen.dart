@@ -3,7 +3,7 @@ import 'package:hooks_riverpod/hooks_riverpod.dart';
 import 'package:pilll/provider/diary_setting.dart';
 import 'package:pilll/entity/diary_setting.codegen.dart';
 
-part 'features/diary_setting_physical_condtion_detail/state.codegen.freezed.dart';
+part 'state.codegen.freezed.dart';
 
 final diarySettingPhysicalConditionDetailAsyncStateProvider = Provider.autoDispose<AsyncValue<DiarySettingPhysicalConditionDetailState>>((ref) {
   final diarySetting = ref.watch(diarySettingProvider);

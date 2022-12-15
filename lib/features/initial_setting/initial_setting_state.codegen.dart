@@ -7,7 +7,7 @@ import 'package:pilll/entity/pill_sheet.codegen.dart';
 import 'package:pilll/entity/pill_sheet_type.dart';
 import 'package:pilll/entity/setting.codegen.dart';
 
-part 'features/initial_setting/initial_setting_state.codegen.freezed.dart';
+part 'initial_setting_state.codegen.freezed.dart';
 
 @freezed
 class InitialSettingTodayPillNumber with _$InitialSettingTodayPillNumber {
