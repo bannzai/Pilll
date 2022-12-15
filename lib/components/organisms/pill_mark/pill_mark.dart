@@ -3,7 +3,7 @@ import 'package:pilll/components/organisms/pill_mark/done_mark.dart';
 import 'package:pilll/components/organisms/pill_mark/pill_marks.dart';
 import 'package:pilll/entity/pill_mark_type.dart';
 import 'package:pilll/components/atoms/color.dart';
-import 'package:pilll/util/environment.dart';
+import 'package:pilll/utils/environment.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 
@@ -61,8 +61,7 @@ class _PillMarkState extends State<PillMark> with TickerProviderStateMixin {
           alignment: Alignment.center,
           children: [
             _mark(widget.pillMarkType),
-            if (widget.showsCheckmark)
-              const Align(alignment: Alignment.center, child: PillMarkDoneMark()),
+            if (widget.showsCheckmark) const Align(alignment: Alignment.center, child: PillMarkDoneMark()),
           ],
         ),
         if (widget.showsRippleAnimation)
@@ -72,11 +71,10 @@ class _PillMarkState extends State<PillMark> with TickerProviderStateMixin {
             left: -30,
             top: -30,
             child: CustomPaint(
-              size: const Size(
-                  PillMarkConst.edgeOfRipple, PillMarkConst.edgeOfRipple),
+              size: const Size(PillMarkConst.edgeOfRipple, PillMarkConst.edgeOfRipple),
               painter: Ripple(
                 _controller,
-                color: PilllColors.primary,
+                color: PilllColors.secondary,
               ),
             ),
           ),

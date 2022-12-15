@@ -12,32 +12,7 @@ part of 'premium_and_trial.codegen.dart';
 T _$identity<T>(T value) => value;
 
 final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more informations: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
-
-/// @nodoc
-class _$PremiumAndTrialTearOff {
-  const _$PremiumAndTrialTearOff();
-
-  _PremiumAndTrial call(
-      {required bool isTrial,
-      required bool isPremium,
-      required bool hasDiscountEntitlement,
-      required DateTime? beginTrialDate,
-      required DateTime? trialDeadlineDate,
-      required DateTime? discountEntitlementDeadlineDate}) {
-    return _PremiumAndTrial(
-      isTrial: isTrial,
-      isPremium: isPremium,
-      hasDiscountEntitlement: hasDiscountEntitlement,
-      beginTrialDate: beginTrialDate,
-      trialDeadlineDate: trialDeadlineDate,
-      discountEntitlementDeadlineDate: discountEntitlementDeadlineDate,
-    );
-  }
-}
-
-/// @nodoc
-const $PremiumAndTrial = _$PremiumAndTrialTearOff();
+    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
 
 /// @nodoc
 mixin _$PremiumAndTrial {
@@ -58,7 +33,8 @@ mixin _$PremiumAndTrial {
 abstract class $PremiumAndTrialCopyWith<$Res> {
   factory $PremiumAndTrialCopyWith(
           PremiumAndTrial value, $Res Function(PremiumAndTrial) then) =
-      _$PremiumAndTrialCopyWithImpl<$Res>;
+      _$PremiumAndTrialCopyWithImpl<$Res, PremiumAndTrial>;
+  @useResult
   $Res call(
       {bool isTrial,
       bool isPremium,
@@ -69,60 +45,63 @@ abstract class $PremiumAndTrialCopyWith<$Res> {
 }
 
 /// @nodoc
-class _$PremiumAndTrialCopyWithImpl<$Res>
+class _$PremiumAndTrialCopyWithImpl<$Res, $Val extends PremiumAndTrial>
     implements $PremiumAndTrialCopyWith<$Res> {
   _$PremiumAndTrialCopyWithImpl(this._value, this._then);
 
-  final PremiumAndTrial _value;
   // ignore: unused_field
-  final $Res Function(PremiumAndTrial) _then;
+  final $Val _value;
+  // ignore: unused_field
+  final $Res Function($Val) _then;
 
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? isTrial = freezed,
-    Object? isPremium = freezed,
-    Object? hasDiscountEntitlement = freezed,
+    Object? isTrial = null,
+    Object? isPremium = null,
+    Object? hasDiscountEntitlement = null,
     Object? beginTrialDate = freezed,
     Object? trialDeadlineDate = freezed,
     Object? discountEntitlementDeadlineDate = freezed,
   }) {
     return _then(_value.copyWith(
-      isTrial: isTrial == freezed
+      isTrial: null == isTrial
           ? _value.isTrial
           : isTrial // ignore: cast_nullable_to_non_nullable
               as bool,
-      isPremium: isPremium == freezed
+      isPremium: null == isPremium
           ? _value.isPremium
           : isPremium // ignore: cast_nullable_to_non_nullable
               as bool,
-      hasDiscountEntitlement: hasDiscountEntitlement == freezed
+      hasDiscountEntitlement: null == hasDiscountEntitlement
           ? _value.hasDiscountEntitlement
           : hasDiscountEntitlement // ignore: cast_nullable_to_non_nullable
               as bool,
-      beginTrialDate: beginTrialDate == freezed
+      beginTrialDate: freezed == beginTrialDate
           ? _value.beginTrialDate
           : beginTrialDate // ignore: cast_nullable_to_non_nullable
               as DateTime?,
-      trialDeadlineDate: trialDeadlineDate == freezed
+      trialDeadlineDate: freezed == trialDeadlineDate
           ? _value.trialDeadlineDate
           : trialDeadlineDate // ignore: cast_nullable_to_non_nullable
               as DateTime?,
-      discountEntitlementDeadlineDate: discountEntitlementDeadlineDate ==
-              freezed
+      discountEntitlementDeadlineDate: freezed ==
+              discountEntitlementDeadlineDate
           ? _value.discountEntitlementDeadlineDate
           : discountEntitlementDeadlineDate // ignore: cast_nullable_to_non_nullable
               as DateTime?,
-    ));
+    ) as $Val);
   }
 }
 
 /// @nodoc
-abstract class _$PremiumAndTrialCopyWith<$Res>
+abstract class _$$_PremiumAndTrialCopyWith<$Res>
     implements $PremiumAndTrialCopyWith<$Res> {
-  factory _$PremiumAndTrialCopyWith(
-          _PremiumAndTrial value, $Res Function(_PremiumAndTrial) then) =
-      __$PremiumAndTrialCopyWithImpl<$Res>;
+  factory _$$_PremiumAndTrialCopyWith(
+          _$_PremiumAndTrial value, $Res Function(_$_PremiumAndTrial) then) =
+      __$$_PremiumAndTrialCopyWithImpl<$Res>;
   @override
+  @useResult
   $Res call(
       {bool isTrial,
       bool isPremium,
@@ -133,48 +112,46 @@ abstract class _$PremiumAndTrialCopyWith<$Res>
 }
 
 /// @nodoc
-class __$PremiumAndTrialCopyWithImpl<$Res>
-    extends _$PremiumAndTrialCopyWithImpl<$Res>
-    implements _$PremiumAndTrialCopyWith<$Res> {
-  __$PremiumAndTrialCopyWithImpl(
-      _PremiumAndTrial _value, $Res Function(_PremiumAndTrial) _then)
-      : super(_value, (v) => _then(v as _PremiumAndTrial));
+class __$$_PremiumAndTrialCopyWithImpl<$Res>
+    extends _$PremiumAndTrialCopyWithImpl<$Res, _$_PremiumAndTrial>
+    implements _$$_PremiumAndTrialCopyWith<$Res> {
+  __$$_PremiumAndTrialCopyWithImpl(
+      _$_PremiumAndTrial _value, $Res Function(_$_PremiumAndTrial) _then)
+      : super(_value, _then);
 
-  @override
-  _PremiumAndTrial get _value => super._value as _PremiumAndTrial;
-
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? isTrial = freezed,
-    Object? isPremium = freezed,
-    Object? hasDiscountEntitlement = freezed,
+    Object? isTrial = null,
+    Object? isPremium = null,
+    Object? hasDiscountEntitlement = null,
     Object? beginTrialDate = freezed,
     Object? trialDeadlineDate = freezed,
     Object? discountEntitlementDeadlineDate = freezed,
   }) {
-    return _then(_PremiumAndTrial(
-      isTrial: isTrial == freezed
+    return _then(_$_PremiumAndTrial(
+      isTrial: null == isTrial
           ? _value.isTrial
           : isTrial // ignore: cast_nullable_to_non_nullable
               as bool,
-      isPremium: isPremium == freezed
+      isPremium: null == isPremium
           ? _value.isPremium
           : isPremium // ignore: cast_nullable_to_non_nullable
               as bool,
-      hasDiscountEntitlement: hasDiscountEntitlement == freezed
+      hasDiscountEntitlement: null == hasDiscountEntitlement
           ? _value.hasDiscountEntitlement
           : hasDiscountEntitlement // ignore: cast_nullable_to_non_nullable
               as bool,
-      beginTrialDate: beginTrialDate == freezed
+      beginTrialDate: freezed == beginTrialDate
           ? _value.beginTrialDate
           : beginTrialDate // ignore: cast_nullable_to_non_nullable
               as DateTime?,
-      trialDeadlineDate: trialDeadlineDate == freezed
+      trialDeadlineDate: freezed == trialDeadlineDate
           ? _value.trialDeadlineDate
           : trialDeadlineDate // ignore: cast_nullable_to_non_nullable
               as DateTime?,
-      discountEntitlementDeadlineDate: discountEntitlementDeadlineDate ==
-              freezed
+      discountEntitlementDeadlineDate: freezed ==
+              discountEntitlementDeadlineDate
           ? _value.discountEntitlementDeadlineDate
           : discountEntitlementDeadlineDate // ignore: cast_nullable_to_non_nullable
               as DateTime?,
@@ -216,44 +193,48 @@ class _$_PremiumAndTrial extends _PremiumAndTrial {
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _PremiumAndTrial &&
-            const DeepCollectionEquality().equals(other.isTrial, isTrial) &&
-            const DeepCollectionEquality().equals(other.isPremium, isPremium) &&
-            const DeepCollectionEquality()
-                .equals(other.hasDiscountEntitlement, hasDiscountEntitlement) &&
-            const DeepCollectionEquality()
-                .equals(other.beginTrialDate, beginTrialDate) &&
-            const DeepCollectionEquality()
-                .equals(other.trialDeadlineDate, trialDeadlineDate) &&
-            const DeepCollectionEquality().equals(
-                other.discountEntitlementDeadlineDate,
-                discountEntitlementDeadlineDate));
+            other is _$_PremiumAndTrial &&
+            (identical(other.isTrial, isTrial) || other.isTrial == isTrial) &&
+            (identical(other.isPremium, isPremium) ||
+                other.isPremium == isPremium) &&
+            (identical(other.hasDiscountEntitlement, hasDiscountEntitlement) ||
+                other.hasDiscountEntitlement == hasDiscountEntitlement) &&
+            (identical(other.beginTrialDate, beginTrialDate) ||
+                other.beginTrialDate == beginTrialDate) &&
+            (identical(other.trialDeadlineDate, trialDeadlineDate) ||
+                other.trialDeadlineDate == trialDeadlineDate) &&
+            (identical(other.discountEntitlementDeadlineDate,
+                    discountEntitlementDeadlineDate) ||
+                other.discountEntitlementDeadlineDate ==
+                    discountEntitlementDeadlineDate));
   }
 
   @override
   int get hashCode => Object.hash(
       runtimeType,
-      const DeepCollectionEquality().hash(isTrial),
-      const DeepCollectionEquality().hash(isPremium),
-      const DeepCollectionEquality().hash(hasDiscountEntitlement),
-      const DeepCollectionEquality().hash(beginTrialDate),
-      const DeepCollectionEquality().hash(trialDeadlineDate),
-      const DeepCollectionEquality().hash(discountEntitlementDeadlineDate));
+      isTrial,
+      isPremium,
+      hasDiscountEntitlement,
+      beginTrialDate,
+      trialDeadlineDate,
+      discountEntitlementDeadlineDate);
 
   @JsonKey(ignore: true)
   @override
-  _$PremiumAndTrialCopyWith<_PremiumAndTrial> get copyWith =>
-      __$PremiumAndTrialCopyWithImpl<_PremiumAndTrial>(this, _$identity);
+  @pragma('vm:prefer-inline')
+  _$$_PremiumAndTrialCopyWith<_$_PremiumAndTrial> get copyWith =>
+      __$$_PremiumAndTrialCopyWithImpl<_$_PremiumAndTrial>(this, _$identity);
 }
 
 abstract class _PremiumAndTrial extends PremiumAndTrial {
   factory _PremiumAndTrial(
-      {required bool isTrial,
-      required bool isPremium,
-      required bool hasDiscountEntitlement,
-      required DateTime? beginTrialDate,
-      required DateTime? trialDeadlineDate,
-      required DateTime? discountEntitlementDeadlineDate}) = _$_PremiumAndTrial;
+          {required final bool isTrial,
+          required final bool isPremium,
+          required final bool hasDiscountEntitlement,
+          required final DateTime? beginTrialDate,
+          required final DateTime? trialDeadlineDate,
+          required final DateTime? discountEntitlementDeadlineDate}) =
+      _$_PremiumAndTrial;
   _PremiumAndTrial._() : super._();
 
   @override
@@ -270,6 +251,6 @@ abstract class _PremiumAndTrial extends PremiumAndTrial {
   DateTime? get discountEntitlementDeadlineDate;
   @override
   @JsonKey(ignore: true)
-  _$PremiumAndTrialCopyWith<_PremiumAndTrial> get copyWith =>
+  _$$_PremiumAndTrialCopyWith<_$_PremiumAndTrial> get copyWith =>
       throw _privateConstructorUsedError;
 }

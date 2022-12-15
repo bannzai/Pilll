@@ -1,5 +1,5 @@
 import 'package:freezed_annotation/freezed_annotation.dart';
-import 'package:pilll/domain/premium_function_survey/premium_function_survey_element_type.dart';
+import 'package:pilll/features/premium_function_survey/premium_function_survey_element_type.dart';
 
 part 'premium_function_survey.codegen.g.dart';
 part 'premium_function_survey.codegen.freezed.dart';

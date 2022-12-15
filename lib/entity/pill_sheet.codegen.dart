@@ -1,8 +1,9 @@
-import 'package:pilll/domain/calendar/date_range.dart';
+import 'package:pilll/entity/firestore_id_generator.dart';
+import 'package:pilll/utils/datetime/date_range.dart';
 import 'package:pilll/entity/firestore_timestamp_converter.dart';
 import 'package:pilll/entity/pill_sheet_type.dart';
-import 'package:pilll/util/datetime/date_compare.dart';
-import 'package:pilll/util/datetime/day.dart';
+import 'package:pilll/utils/datetime/date_compare.dart';
+import 'package:pilll/utils/datetime/day.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';
 part 'pill_sheet.codegen.g.dart';
@@ -26,8 +27,7 @@ class PillSheetTypeInfo with _$PillSheetTypeInfo {
     required int dosingPeriod,
   }) = _PillSheetTypeInfo;
 
-  factory PillSheetTypeInfo.fromJson(Map<String, dynamic> json) =>
-      _$PillSheetTypeInfoFromJson(json);
+  factory PillSheetTypeInfo.fromJson(Map<String, dynamic> json) => _$PillSheetTypeInfoFromJson(json);
 }
 
 @freezed
@@ -51,22 +51,20 @@ class RestDuration with _$RestDuration {
         required DateTime createdDate,
   }) = _RestDuration;
 
-  factory RestDuration.fromJson(Map<String, dynamic> json) =>
-      _$RestDurationFromJson(json);
+  factory RestDuration.fromJson(Map<String, dynamic> json) => _$RestDurationFromJson(json);
 }
 
 @freezed
 class PillSheet with _$PillSheet {
   String? get documentID => id;
 
-  PillSheetType get sheetType =>
-      PillSheetTypeFunctions.fromRawPath(typeInfo.pillSheetTypeReferencePath);
+  PillSheetType get sheetType => PillSheetTypeFunctions.fromRawPath(typeInfo.pillSheetTypeReferencePath);
 
   const PillSheet._();
   @JsonSerializable(explicitToJson: true)
   const factory PillSheet({
     @JsonKey(includeIfNull: false)
-        String? id,
+        required String? id,
     @JsonKey()
         required PillSheetTypeInfo typeInfo,
     @JsonKey(
@@ -83,7 +81,7 @@ class PillSheet with _$PillSheet {
       fromJson: TimestampConverter.timestampToDateTime,
       toJson: TimestampConverter.dateTimeToTimestamp,
     )
-        DateTime? createdAt,
+        required DateTime? createdAt,
     @JsonKey(
       fromJson: TimestampConverter.timestampToDateTime,
       toJson: TimestampConverter.dateTimeToTimestamp,
@@ -95,16 +93,16 @@ class PillSheet with _$PillSheet {
         List<RestDuration> restDurations,
   }) = _PillSheet;
   factory PillSheet.create(PillSheetType type) => PillSheet(
+        id: firestoreIDGenerator(),
         typeInfo: type.typeInfo,
         beginingDate: today(),
         lastTakenDate: null,
+        createdAt: now(),
       );
 
-  factory PillSheet.fromJson(Map<String, dynamic> json) =>
-      _$PillSheetFromJson(json);
+  factory PillSheet.fromJson(Map<String, dynamic> json) => _$PillSheetFromJson(json);
 
-  PillSheetType get pillSheetType =>
-      PillSheetTypeFunctions.fromRawPath(typeInfo.pillSheetTypeReferencePath);
+  PillSheetType get pillSheetType => PillSheetTypeFunctions.fromRawPath(typeInfo.pillSheetTypeReferencePath);
 
   int get todayPillNumber {
     return pillSheetPillNumber(pillSheet: this, targetDate: today());
@@ -122,31 +120,29 @@ class PillSheet with _$PillSheet {
     return pillSheetPillNumber(pillSheet: this, targetDate: lastTakenDate);
   }
 
-  bool get todayPillIsAlreadyTaken => todayPillNumber == lastTakenPillNumber;
+  bool get todayPillIsAlreadyTaken {
+    final lastTakenDate = this.lastTakenDate;
+    if (lastTakenDate == null) {
+      return false;
+    }
+    return lastTakenDate.isAfter(today()) || isSameDay(lastTakenDate, today());
+  }
+
   bool get isEnded => typeInfo.totalCount == lastTakenPillNumber;
-  bool get isBegan =>
-      beginingDate.date().toUtc().millisecondsSinceEpoch <
-      now().toUtc().millisecondsSinceEpoch;
+  bool get isBegan => beginingDate.date().toUtc().millisecondsSinceEpoch < now().toUtc().millisecondsSinceEpoch;
   bool get inNotTakenDuration => todayPillNumber > typeInfo.dosingPeriod;
-  bool get pillSheetHasRestOrFakeDuration =>
-      !pillSheetType.isNotExistsNotTakenDuration;
+  bool get pillSheetHasRestOrFakeDuration => !pillSheetType.isNotExistsNotTakenDuration;
   bool get isActive {
     final n = now();
     final begin = beginingDate.date();
     final totalCount = typeInfo.totalCount;
-    final end = begin.add(Duration(
-        days: totalCount +
-            summarizedRestDuration(
-                restDurations: restDurations, upperDate: today()) -
-            1));
+    final end = begin.add(Duration(days: totalCount + summarizedRestDuration(restDurations: restDurations, upperDate: today()) - 1));
     return DateRange(begin, end).inRange(n);
   }
 
   DateTime get estimatedEndTakenDate => beginingDate
       .add(Duration(days: pillSheetType.totalCount - 1))
-      .add(Duration(
-          days: summarizedRestDuration(
-              restDurations: restDurations, upperDate: today())))
+      .add(Duration(days: summarizedRestDuration(restDurations: restDurations, upperDate: today())))
       .date()
       .add(const Duration(days: 1))
       .subtract(const Duration(seconds: 1));
@@ -155,8 +151,7 @@ class PillSheet with _$PillSheet {
     if (restDurations.isEmpty) {
       return null;
     } else {
-      if (restDurations.last.endDate == null &&
-          restDurations.last.beginDate.isBefore(now())) {
+      if (restDurations.last.endDate == null && restDurations.last.beginDate.isBefore(now())) {
         return restDurations.last;
       } else {
         return null;
@@ -165,8 +160,7 @@ class PillSheet with _$PillSheet {
   }
 
   DateTime displayPillTakeDate(int pillNumberIntoPillSheet) {
-    final originDate =
-        beginingDate.add(Duration(days: pillNumberIntoPillSheet - 1)).date();
+    final originDate = beginingDate.add(Duration(days: pillNumberIntoPillSheet - 1)).date();
 
     if (restDurations.isEmpty) {
       return originDate;
@@ -223,7 +217,6 @@ int pillSheetPillNumber({
   required DateTime targetDate,
 }) {
   return daysBetween(pillSheet.beginingDate.date(), targetDate) -
-      summarizedRestDuration(
-          restDurations: pillSheet.restDurations, upperDate: targetDate) +
+      summarizedRestDuration(restDurations: pillSheet.restDurations, upperDate: targetDate) +
       1;
 }

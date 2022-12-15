@@ -1,21 +1,24 @@
 import 'dart:math';
 
 import 'package:pilll/components/organisms/calendar/band/calendar_band_model.dart';
-import 'package:pilll/domain/calendar/date_range.dart';
+import 'package:pilll/utils/datetime/date_range.dart';
 import 'package:pilll/entity/menstruation.codegen.dart';
 import 'package:pilll/entity/pill_sheet_group.codegen.dart';
 import 'package:pilll/entity/pill_sheet_type.dart';
 import 'package:pilll/entity/setting.codegen.dart';
 import 'package:pilll/entity/weekday.dart';
-import 'package:pilll/util/datetime/date_compare.dart';
-import 'package:pilll/util/datetime/day.dart';
+import 'package:pilll/utils/datetime/date_compare.dart';
+import 'package:pilll/utils/datetime/day.dart';
 
 List<DateRange> scheduledOrInTheMiddleMenstruationDateRanges(
-  PillSheetGroup pillSheetGroup,
-  Setting setting,
+  PillSheetGroup? pillSheetGroup,
+  Setting? setting,
   List<Menstruation> menstruations,
   int maxPageCount,
 ) {
+  if (pillSheetGroup == null || setting == null) {
+    return [];
+  }
   if (pillSheetGroup.pillSheets.isEmpty) {
     return [];
   }

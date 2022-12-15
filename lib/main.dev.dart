@@ -1,6 +1,6 @@
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:pilll/entrypoint.dart';
-import 'package:pilll/util/environment.dart';
+import 'package:pilll/utils/environment.dart';
 
 Future<void> main() async {
   Environment.flavor = Flavor.DEVELOP;

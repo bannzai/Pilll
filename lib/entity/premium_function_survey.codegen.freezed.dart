@@ -12,33 +12,12 @@ part of 'premium_function_survey.codegen.dart';
 T _$identity<T>(T value) => value;
 
 final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more informations: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
+    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
 
 PremiumFunctionSurvey _$PremiumFunctionSurveyFromJson(
     Map<String, dynamic> json) {
   return _PremiumFunctionSurvey.fromJson(json);
 }
-
-/// @nodoc
-class _$PremiumFunctionSurveyTearOff {
-  const _$PremiumFunctionSurveyTearOff();
-
-  _PremiumFunctionSurvey call(
-      {required List<PremiumFunctionSurveyElementType> elements,
-      required String message}) {
-    return _PremiumFunctionSurvey(
-      elements: elements,
-      message: message,
-    );
-  }
-
-  PremiumFunctionSurvey fromJson(Map<String, Object?> json) {
-    return PremiumFunctionSurvey.fromJson(json);
-  }
-}
-
-/// @nodoc
-const $PremiumFunctionSurvey = _$PremiumFunctionSurveyTearOff();
 
 /// @nodoc
 mixin _$PremiumFunctionSurvey {
@@ -56,69 +35,72 @@ mixin _$PremiumFunctionSurvey {
 abstract class $PremiumFunctionSurveyCopyWith<$Res> {
   factory $PremiumFunctionSurveyCopyWith(PremiumFunctionSurvey value,
           $Res Function(PremiumFunctionSurvey) then) =
-      _$PremiumFunctionSurveyCopyWithImpl<$Res>;
+      _$PremiumFunctionSurveyCopyWithImpl<$Res, PremiumFunctionSurvey>;
+  @useResult
   $Res call({List<PremiumFunctionSurveyElementType> elements, String message});
 }
 
 /// @nodoc
-class _$PremiumFunctionSurveyCopyWithImpl<$Res>
+class _$PremiumFunctionSurveyCopyWithImpl<$Res,
+        $Val extends PremiumFunctionSurvey>
     implements $PremiumFunctionSurveyCopyWith<$Res> {
   _$PremiumFunctionSurveyCopyWithImpl(this._value, this._then);
 
-  final PremiumFunctionSurvey _value;
   // ignore: unused_field
-  final $Res Function(PremiumFunctionSurvey) _then;
+  final $Val _value;
+  // ignore: unused_field
+  final $Res Function($Val) _then;
 
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? elements = freezed,
-    Object? message = freezed,
+    Object? elements = null,
+    Object? message = null,
   }) {
     return _then(_value.copyWith(
-      elements: elements == freezed
+      elements: null == elements
           ? _value.elements
           : elements // ignore: cast_nullable_to_non_nullable
               as List<PremiumFunctionSurveyElementType>,
-      message: message == freezed
+      message: null == message
           ? _value.message
           : message // ignore: cast_nullable_to_non_nullable
               as String,
-    ));
+    ) as $Val);
   }
 }
 
 /// @nodoc
-abstract class _$PremiumFunctionSurveyCopyWith<$Res>
+abstract class _$$_PremiumFunctionSurveyCopyWith<$Res>
     implements $PremiumFunctionSurveyCopyWith<$Res> {
-  factory _$PremiumFunctionSurveyCopyWith(_PremiumFunctionSurvey value,
-          $Res Function(_PremiumFunctionSurvey) then) =
-      __$PremiumFunctionSurveyCopyWithImpl<$Res>;
+  factory _$$_PremiumFunctionSurveyCopyWith(_$_PremiumFunctionSurvey value,
+          $Res Function(_$_PremiumFunctionSurvey) then) =
+      __$$_PremiumFunctionSurveyCopyWithImpl<$Res>;
   @override
+  @useResult
   $Res call({List<PremiumFunctionSurveyElementType> elements, String message});
 }
 
 /// @nodoc
-class __$PremiumFunctionSurveyCopyWithImpl<$Res>
-    extends _$PremiumFunctionSurveyCopyWithImpl<$Res>
-    implements _$PremiumFunctionSurveyCopyWith<$Res> {
-  __$PremiumFunctionSurveyCopyWithImpl(_PremiumFunctionSurvey _value,
-      $Res Function(_PremiumFunctionSurvey) _then)
-      : super(_value, (v) => _then(v as _PremiumFunctionSurvey));
+class __$$_PremiumFunctionSurveyCopyWithImpl<$Res>
+    extends _$PremiumFunctionSurveyCopyWithImpl<$Res, _$_PremiumFunctionSurvey>
+    implements _$$_PremiumFunctionSurveyCopyWith<$Res> {
+  __$$_PremiumFunctionSurveyCopyWithImpl(_$_PremiumFunctionSurvey _value,
+      $Res Function(_$_PremiumFunctionSurvey) _then)
+      : super(_value, _then);
 
-  @override
-  _PremiumFunctionSurvey get _value => super._value as _PremiumFunctionSurvey;
-
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? elements = freezed,
-    Object? message = freezed,
+    Object? elements = null,
+    Object? message = null,
   }) {
-    return _then(_PremiumFunctionSurvey(
-      elements: elements == freezed
-          ? _value.elements
+    return _then(_$_PremiumFunctionSurvey(
+      elements: null == elements
+          ? _value._elements
           : elements // ignore: cast_nullable_to_non_nullable
               as List<PremiumFunctionSurveyElementType>,
-      message: message == freezed
+      message: null == message
           ? _value.message
           : message // ignore: cast_nullable_to_non_nullable
               as String,
@@ -131,14 +113,21 @@ class __$PremiumFunctionSurveyCopyWithImpl<$Res>
 @JsonSerializable(explicitToJson: true)
 class _$_PremiumFunctionSurvey extends _PremiumFunctionSurvey {
   const _$_PremiumFunctionSurvey(
-      {required this.elements, required this.message})
-      : super._();
+      {required final List<PremiumFunctionSurveyElementType> elements,
+      required this.message})
+      : _elements = elements,
+        super._();
 
   factory _$_PremiumFunctionSurvey.fromJson(Map<String, dynamic> json) =>
       _$$_PremiumFunctionSurveyFromJson(json);
 
+  final List<PremiumFunctionSurveyElementType> _elements;
   @override
-  final List<PremiumFunctionSurveyElementType> elements;
+  List<PremiumFunctionSurveyElementType> get elements {
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(_elements);
+  }
+
   @override
   final String message;
 
@@ -151,33 +140,35 @@ class _$_PremiumFunctionSurvey extends _PremiumFunctionSurvey {
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _PremiumFunctionSurvey &&
-            const DeepCollectionEquality().equals(other.elements, elements) &&
-            const DeepCollectionEquality().equals(other.message, message));
+            other is _$_PremiumFunctionSurvey &&
+            const DeepCollectionEquality().equals(other._elements, _elements) &&
+            (identical(other.message, message) || other.message == message));
   }
-
-  @override
-  int get hashCode => Object.hash(
-      runtimeType,
-      const DeepCollectionEquality().hash(elements),
-      const DeepCollectionEquality().hash(message));
 
   @JsonKey(ignore: true)
   @override
-  _$PremiumFunctionSurveyCopyWith<_PremiumFunctionSurvey> get copyWith =>
-      __$PremiumFunctionSurveyCopyWithImpl<_PremiumFunctionSurvey>(
+  int get hashCode => Object.hash(
+      runtimeType, const DeepCollectionEquality().hash(_elements), message);
+
+  @JsonKey(ignore: true)
+  @override
+  @pragma('vm:prefer-inline')
+  _$$_PremiumFunctionSurveyCopyWith<_$_PremiumFunctionSurvey> get copyWith =>
+      __$$_PremiumFunctionSurveyCopyWithImpl<_$_PremiumFunctionSurvey>(
           this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_PremiumFunctionSurveyToJson(this);
+    return _$$_PremiumFunctionSurveyToJson(
+      this,
+    );
   }
 }
 
 abstract class _PremiumFunctionSurvey extends PremiumFunctionSurvey {
   const factory _PremiumFunctionSurvey(
-      {required List<PremiumFunctionSurveyElementType> elements,
-      required String message}) = _$_PremiumFunctionSurvey;
+      {required final List<PremiumFunctionSurveyElementType> elements,
+      required final String message}) = _$_PremiumFunctionSurvey;
   const _PremiumFunctionSurvey._() : super._();
 
   factory _PremiumFunctionSurvey.fromJson(Map<String, dynamic> json) =
@@ -189,6 +180,6 @@ abstract class _PremiumFunctionSurvey extends PremiumFunctionSurvey {
   String get message;
   @override
   @JsonKey(ignore: true)
-  _$PremiumFunctionSurveyCopyWith<_PremiumFunctionSurvey> get copyWith =>
+  _$$_PremiumFunctionSurveyCopyWith<_$_PremiumFunctionSurvey> get copyWith =>
       throw _privateConstructorUsedError;
 }

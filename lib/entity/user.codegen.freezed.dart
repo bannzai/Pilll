@@ -12,29 +12,11 @@ part of 'user.codegen.dart';
 T _$identity<T>(T value) => value;
 
 final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more informations: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
+    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
 
 UserPrivate _$UserPrivateFromJson(Map<String, dynamic> json) {
   return _UserPrivate.fromJson(json);
 }
-
-/// @nodoc
-class _$UserPrivateTearOff {
-  const _$UserPrivateTearOff();
-
-  _UserPrivate call({String? fcmToken}) {
-    return _UserPrivate(
-      fcmToken: fcmToken,
-    );
-  }
-
-  UserPrivate fromJson(Map<String, Object?> json) {
-    return UserPrivate.fromJson(json);
-  }
-}
-
-/// @nodoc
-const $UserPrivate = _$UserPrivateTearOff();
 
 /// @nodoc
 mixin _$UserPrivate {
@@ -50,57 +32,61 @@ mixin _$UserPrivate {
 abstract class $UserPrivateCopyWith<$Res> {
   factory $UserPrivateCopyWith(
           UserPrivate value, $Res Function(UserPrivate) then) =
-      _$UserPrivateCopyWithImpl<$Res>;
+      _$UserPrivateCopyWithImpl<$Res, UserPrivate>;
+  @useResult
   $Res call({String? fcmToken});
 }
 
 /// @nodoc
-class _$UserPrivateCopyWithImpl<$Res> implements $UserPrivateCopyWith<$Res> {
+class _$UserPrivateCopyWithImpl<$Res, $Val extends UserPrivate>
+    implements $UserPrivateCopyWith<$Res> {
   _$UserPrivateCopyWithImpl(this._value, this._then);
 
-  final UserPrivate _value;
   // ignore: unused_field
-  final $Res Function(UserPrivate) _then;
+  final $Val _value;
+  // ignore: unused_field
+  final $Res Function($Val) _then;
 
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
     Object? fcmToken = freezed,
   }) {
     return _then(_value.copyWith(
-      fcmToken: fcmToken == freezed
+      fcmToken: freezed == fcmToken
           ? _value.fcmToken
           : fcmToken // ignore: cast_nullable_to_non_nullable
               as String?,
-    ));
+    ) as $Val);
   }
 }
 
 /// @nodoc
-abstract class _$UserPrivateCopyWith<$Res>
+abstract class _$$_UserPrivateCopyWith<$Res>
     implements $UserPrivateCopyWith<$Res> {
-  factory _$UserPrivateCopyWith(
-          _UserPrivate value, $Res Function(_UserPrivate) then) =
-      __$UserPrivateCopyWithImpl<$Res>;
+  factory _$$_UserPrivateCopyWith(
+          _$_UserPrivate value, $Res Function(_$_UserPrivate) then) =
+      __$$_UserPrivateCopyWithImpl<$Res>;
   @override
+  @useResult
   $Res call({String? fcmToken});
 }
 
 /// @nodoc
-class __$UserPrivateCopyWithImpl<$Res> extends _$UserPrivateCopyWithImpl<$Res>
-    implements _$UserPrivateCopyWith<$Res> {
-  __$UserPrivateCopyWithImpl(
-      _UserPrivate _value, $Res Function(_UserPrivate) _then)
-      : super(_value, (v) => _then(v as _UserPrivate));
+class __$$_UserPrivateCopyWithImpl<$Res>
+    extends _$UserPrivateCopyWithImpl<$Res, _$_UserPrivate>
+    implements _$$_UserPrivateCopyWith<$Res> {
+  __$$_UserPrivateCopyWithImpl(
+      _$_UserPrivate _value, $Res Function(_$_UserPrivate) _then)
+      : super(_value, _then);
 
-  @override
-  _UserPrivate get _value => super._value as _UserPrivate;
-
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
     Object? fcmToken = freezed,
   }) {
-    return _then(_UserPrivate(
-      fcmToken: fcmToken == freezed
+    return _then(_$_UserPrivate(
+      fcmToken: freezed == fcmToken
           ? _value.fcmToken
           : fcmToken // ignore: cast_nullable_to_non_nullable
               as String?,
@@ -128,27 +114,31 @@ class _$_UserPrivate extends _UserPrivate {
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _UserPrivate &&
-            const DeepCollectionEquality().equals(other.fcmToken, fcmToken));
+            other is _$_UserPrivate &&
+            (identical(other.fcmToken, fcmToken) ||
+                other.fcmToken == fcmToken));
   }
-
-  @override
-  int get hashCode =>
-      Object.hash(runtimeType, const DeepCollectionEquality().hash(fcmToken));
 
   @JsonKey(ignore: true)
   @override
-  _$UserPrivateCopyWith<_UserPrivate> get copyWith =>
-      __$UserPrivateCopyWithImpl<_UserPrivate>(this, _$identity);
+  int get hashCode => Object.hash(runtimeType, fcmToken);
+
+  @JsonKey(ignore: true)
+  @override
+  @pragma('vm:prefer-inline')
+  _$$_UserPrivateCopyWith<_$_UserPrivate> get copyWith =>
+      __$$_UserPrivateCopyWithImpl<_$_UserPrivate>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_UserPrivateToJson(this);
+    return _$$_UserPrivateToJson(
+      this,
+    );
   }
 }
 
 abstract class _UserPrivate extends UserPrivate {
-  const factory _UserPrivate({String? fcmToken}) = _$_UserPrivate;
+  const factory _UserPrivate({final String? fcmToken}) = _$_UserPrivate;
   const _UserPrivate._() : super._();
 
   factory _UserPrivate.fromJson(Map<String, dynamic> json) =
@@ -158,62 +148,13 @@ abstract class _UserPrivate extends UserPrivate {
   String? get fcmToken;
   @override
   @JsonKey(ignore: true)
-  _$UserPrivateCopyWith<_UserPrivate> get copyWith =>
+  _$$_UserPrivateCopyWith<_$_UserPrivate> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
 User _$UserFromJson(Map<String, dynamic> json) {
   return _User.fromJson(json);
 }
-
-/// @nodoc
-class _$UserTearOff {
-  const _$UserTearOff();
-
-  _User call(
-      {String? id,
-      @JsonKey(name: "settings")
-          Setting? setting,
-      bool migratedFlutter = false,
-      String? userIDWhenCreateUser,
-      String? anonymousUserID,
-      List<String> userDocumentIDSets = const [],
-      List<String> anonymousUserIDSets = const [],
-      List<String> firebaseCurrentUserIDSets = const [],
-      bool isPremium = false,
-      bool isTrial = false,
-      bool hasDiscountEntitlement = false,
-      @JsonKey(fromJson: TimestampConverter.timestampToDateTime, toJson: TimestampConverter.dateTimeToTimestamp)
-          DateTime? beginTrialDate,
-      @JsonKey(fromJson: TimestampConverter.timestampToDateTime, toJson: TimestampConverter.dateTimeToTimestamp)
-          DateTime? trialDeadlineDate,
-      @JsonKey(fromJson: TimestampConverter.timestampToDateTime, toJson: TimestampConverter.dateTimeToTimestamp)
-          DateTime? discountEntitlementDeadlineDate}) {
-    return _User(
-      id: id,
-      setting: setting,
-      migratedFlutter: migratedFlutter,
-      userIDWhenCreateUser: userIDWhenCreateUser,
-      anonymousUserID: anonymousUserID,
-      userDocumentIDSets: userDocumentIDSets,
-      anonymousUserIDSets: anonymousUserIDSets,
-      firebaseCurrentUserIDSets: firebaseCurrentUserIDSets,
-      isPremium: isPremium,
-      isTrial: isTrial,
-      hasDiscountEntitlement: hasDiscountEntitlement,
-      beginTrialDate: beginTrialDate,
-      trialDeadlineDate: trialDeadlineDate,
-      discountEntitlementDeadlineDate: discountEntitlementDeadlineDate,
-    );
-  }
-
-  User fromJson(Map<String, Object?> json) {
-    return User.fromJson(json);
-  }
-}
-
-/// @nodoc
-const $User = _$UserTearOff();
 
 /// @nodoc
 mixin _$User {
@@ -252,7 +193,8 @@ mixin _$User {
 /// @nodoc
 abstract class $UserCopyWith<$Res> {
   factory $UserCopyWith(User value, $Res Function(User) then) =
-      _$UserCopyWithImpl<$Res>;
+      _$UserCopyWithImpl<$Res, User>;
+  @useResult
   $Res call(
       {String? id,
       @JsonKey(name: "settings")
@@ -277,108 +219,113 @@ abstract class $UserCopyWith<$Res> {
 }
 
 /// @nodoc
-class _$UserCopyWithImpl<$Res> implements $UserCopyWith<$Res> {
+class _$UserCopyWithImpl<$Res, $Val extends User>
+    implements $UserCopyWith<$Res> {
   _$UserCopyWithImpl(this._value, this._then);
 
-  final User _value;
   // ignore: unused_field
-  final $Res Function(User) _then;
+  final $Val _value;
+  // ignore: unused_field
+  final $Res Function($Val) _then;
 
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
     Object? id = freezed,
     Object? setting = freezed,
-    Object? migratedFlutter = freezed,
+    Object? migratedFlutter = null,
     Object? userIDWhenCreateUser = freezed,
     Object? anonymousUserID = freezed,
-    Object? userDocumentIDSets = freezed,
-    Object? anonymousUserIDSets = freezed,
-    Object? firebaseCurrentUserIDSets = freezed,
-    Object? isPremium = freezed,
-    Object? isTrial = freezed,
-    Object? hasDiscountEntitlement = freezed,
+    Object? userDocumentIDSets = null,
+    Object? anonymousUserIDSets = null,
+    Object? firebaseCurrentUserIDSets = null,
+    Object? isPremium = null,
+    Object? isTrial = null,
+    Object? hasDiscountEntitlement = null,
     Object? beginTrialDate = freezed,
     Object? trialDeadlineDate = freezed,
     Object? discountEntitlementDeadlineDate = freezed,
   }) {
     return _then(_value.copyWith(
-      id: id == freezed
+      id: freezed == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
               as String?,
-      setting: setting == freezed
+      setting: freezed == setting
           ? _value.setting
           : setting // ignore: cast_nullable_to_non_nullable
               as Setting?,
-      migratedFlutter: migratedFlutter == freezed
+      migratedFlutter: null == migratedFlutter
           ? _value.migratedFlutter
           : migratedFlutter // ignore: cast_nullable_to_non_nullable
               as bool,
-      userIDWhenCreateUser: userIDWhenCreateUser == freezed
+      userIDWhenCreateUser: freezed == userIDWhenCreateUser
           ? _value.userIDWhenCreateUser
           : userIDWhenCreateUser // ignore: cast_nullable_to_non_nullable
               as String?,
-      anonymousUserID: anonymousUserID == freezed
+      anonymousUserID: freezed == anonymousUserID
           ? _value.anonymousUserID
           : anonymousUserID // ignore: cast_nullable_to_non_nullable
               as String?,
-      userDocumentIDSets: userDocumentIDSets == freezed
+      userDocumentIDSets: null == userDocumentIDSets
           ? _value.userDocumentIDSets
           : userDocumentIDSets // ignore: cast_nullable_to_non_nullable
               as List<String>,
-      anonymousUserIDSets: anonymousUserIDSets == freezed
+      anonymousUserIDSets: null == anonymousUserIDSets
           ? _value.anonymousUserIDSets
           : anonymousUserIDSets // ignore: cast_nullable_to_non_nullable
               as List<String>,
-      firebaseCurrentUserIDSets: firebaseCurrentUserIDSets == freezed
+      firebaseCurrentUserIDSets: null == firebaseCurrentUserIDSets
           ? _value.firebaseCurrentUserIDSets
           : firebaseCurrentUserIDSets // ignore: cast_nullable_to_non_nullable
               as List<String>,
-      isPremium: isPremium == freezed
+      isPremium: null == isPremium
           ? _value.isPremium
           : isPremium // ignore: cast_nullable_to_non_nullable
               as bool,
-      isTrial: isTrial == freezed
+      isTrial: null == isTrial
           ? _value.isTrial
           : isTrial // ignore: cast_nullable_to_non_nullable
               as bool,
-      hasDiscountEntitlement: hasDiscountEntitlement == freezed
+      hasDiscountEntitlement: null == hasDiscountEntitlement
           ? _value.hasDiscountEntitlement
           : hasDiscountEntitlement // ignore: cast_nullable_to_non_nullable
               as bool,
-      beginTrialDate: beginTrialDate == freezed
+      beginTrialDate: freezed == beginTrialDate
           ? _value.beginTrialDate
           : beginTrialDate // ignore: cast_nullable_to_non_nullable
               as DateTime?,
-      trialDeadlineDate: trialDeadlineDate == freezed
+      trialDeadlineDate: freezed == trialDeadlineDate
           ? _value.trialDeadlineDate
           : trialDeadlineDate // ignore: cast_nullable_to_non_nullable
               as DateTime?,
-      discountEntitlementDeadlineDate: discountEntitlementDeadlineDate ==
-              freezed
+      discountEntitlementDeadlineDate: freezed ==
+              discountEntitlementDeadlineDate
           ? _value.discountEntitlementDeadlineDate
           : discountEntitlementDeadlineDate // ignore: cast_nullable_to_non_nullable
               as DateTime?,
-    ));
+    ) as $Val);
   }
 
   @override
+  @pragma('vm:prefer-inline')
   $SettingCopyWith<$Res>? get setting {
     if (_value.setting == null) {
       return null;
     }
 
     return $SettingCopyWith<$Res>(_value.setting!, (value) {
-      return _then(_value.copyWith(setting: value));
+      return _then(_value.copyWith(setting: value) as $Val);
     });
   }
 }
 
 /// @nodoc
-abstract class _$UserCopyWith<$Res> implements $UserCopyWith<$Res> {
-  factory _$UserCopyWith(_User value, $Res Function(_User) then) =
-      __$UserCopyWithImpl<$Res>;
+abstract class _$$_UserCopyWith<$Res> implements $UserCopyWith<$Res> {
+  factory _$$_UserCopyWith(_$_User value, $Res Function(_$_User) then) =
+      __$$_UserCopyWithImpl<$Res>;
   @override
+  @useResult
   $Res call(
       {String? id,
       @JsonKey(name: "settings")
@@ -404,86 +351,84 @@ abstract class _$UserCopyWith<$Res> implements $UserCopyWith<$Res> {
 }
 
 /// @nodoc
-class __$UserCopyWithImpl<$Res> extends _$UserCopyWithImpl<$Res>
-    implements _$UserCopyWith<$Res> {
-  __$UserCopyWithImpl(_User _value, $Res Function(_User) _then)
-      : super(_value, (v) => _then(v as _User));
+class __$$_UserCopyWithImpl<$Res> extends _$UserCopyWithImpl<$Res, _$_User>
+    implements _$$_UserCopyWith<$Res> {
+  __$$_UserCopyWithImpl(_$_User _value, $Res Function(_$_User) _then)
+      : super(_value, _then);
 
-  @override
-  _User get _value => super._value as _User;
-
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
     Object? id = freezed,
     Object? setting = freezed,
-    Object? migratedFlutter = freezed,
+    Object? migratedFlutter = null,
     Object? userIDWhenCreateUser = freezed,
     Object? anonymousUserID = freezed,
-    Object? userDocumentIDSets = freezed,
-    Object? anonymousUserIDSets = freezed,
-    Object? firebaseCurrentUserIDSets = freezed,
-    Object? isPremium = freezed,
-    Object? isTrial = freezed,
-    Object? hasDiscountEntitlement = freezed,
+    Object? userDocumentIDSets = null,
+    Object? anonymousUserIDSets = null,
+    Object? firebaseCurrentUserIDSets = null,
+    Object? isPremium = null,
+    Object? isTrial = null,
+    Object? hasDiscountEntitlement = null,
     Object? beginTrialDate = freezed,
     Object? trialDeadlineDate = freezed,
     Object? discountEntitlementDeadlineDate = freezed,
   }) {
-    return _then(_User(
-      id: id == freezed
+    return _then(_$_User(
+      id: freezed == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
               as String?,
-      setting: setting == freezed
+      setting: freezed == setting
           ? _value.setting
           : setting // ignore: cast_nullable_to_non_nullable
               as Setting?,
-      migratedFlutter: migratedFlutter == freezed
+      migratedFlutter: null == migratedFlutter
           ? _value.migratedFlutter
           : migratedFlutter // ignore: cast_nullable_to_non_nullable
               as bool,
-      userIDWhenCreateUser: userIDWhenCreateUser == freezed
+      userIDWhenCreateUser: freezed == userIDWhenCreateUser
           ? _value.userIDWhenCreateUser
           : userIDWhenCreateUser // ignore: cast_nullable_to_non_nullable
               as String?,
-      anonymousUserID: anonymousUserID == freezed
+      anonymousUserID: freezed == anonymousUserID
           ? _value.anonymousUserID
           : anonymousUserID // ignore: cast_nullable_to_non_nullable
               as String?,
-      userDocumentIDSets: userDocumentIDSets == freezed
-          ? _value.userDocumentIDSets
+      userDocumentIDSets: null == userDocumentIDSets
+          ? _value._userDocumentIDSets
           : userDocumentIDSets // ignore: cast_nullable_to_non_nullable
               as List<String>,
-      anonymousUserIDSets: anonymousUserIDSets == freezed
-          ? _value.anonymousUserIDSets
+      anonymousUserIDSets: null == anonymousUserIDSets
+          ? _value._anonymousUserIDSets
           : anonymousUserIDSets // ignore: cast_nullable_to_non_nullable
               as List<String>,
-      firebaseCurrentUserIDSets: firebaseCurrentUserIDSets == freezed
-          ? _value.firebaseCurrentUserIDSets
+      firebaseCurrentUserIDSets: null == firebaseCurrentUserIDSets
+          ? _value._firebaseCurrentUserIDSets
           : firebaseCurrentUserIDSets // ignore: cast_nullable_to_non_nullable
               as List<String>,
-      isPremium: isPremium == freezed
+      isPremium: null == isPremium
           ? _value.isPremium
           : isPremium // ignore: cast_nullable_to_non_nullable
               as bool,
-      isTrial: isTrial == freezed
+      isTrial: null == isTrial
           ? _value.isTrial
           : isTrial // ignore: cast_nullable_to_non_nullable
               as bool,
-      hasDiscountEntitlement: hasDiscountEntitlement == freezed
+      hasDiscountEntitlement: null == hasDiscountEntitlement
           ? _value.hasDiscountEntitlement
           : hasDiscountEntitlement // ignore: cast_nullable_to_non_nullable
               as bool,
-      beginTrialDate: beginTrialDate == freezed
+      beginTrialDate: freezed == beginTrialDate
           ? _value.beginTrialDate
           : beginTrialDate // ignore: cast_nullable_to_non_nullable
               as DateTime?,
-      trialDeadlineDate: trialDeadlineDate == freezed
+      trialDeadlineDate: freezed == trialDeadlineDate
           ? _value.trialDeadlineDate
           : trialDeadlineDate // ignore: cast_nullable_to_non_nullable
               as DateTime?,
-      discountEntitlementDeadlineDate: discountEntitlementDeadlineDate ==
-              freezed
+      discountEntitlementDeadlineDate: freezed ==
+              discountEntitlementDeadlineDate
           ? _value.discountEntitlementDeadlineDate
           : discountEntitlementDeadlineDate // ignore: cast_nullable_to_non_nullable
               as DateTime?,
@@ -502,9 +447,9 @@ class _$_User extends _User {
       this.migratedFlutter = false,
       this.userIDWhenCreateUser,
       this.anonymousUserID,
-      this.userDocumentIDSets = const [],
-      this.anonymousUserIDSets = const [],
-      this.firebaseCurrentUserIDSets = const [],
+      final List<String> userDocumentIDSets = const [],
+      final List<String> anonymousUserIDSets = const [],
+      final List<String> firebaseCurrentUserIDSets = const [],
       this.isPremium = false,
       this.isTrial = false,
       this.hasDiscountEntitlement = false,
@@ -514,7 +459,10 @@ class _$_User extends _User {
           this.trialDeadlineDate,
       @JsonKey(fromJson: TimestampConverter.timestampToDateTime, toJson: TimestampConverter.dateTimeToTimestamp)
           this.discountEntitlementDeadlineDate})
-      : super._();
+      : _userDocumentIDSets = userDocumentIDSets,
+        _anonymousUserIDSets = anonymousUserIDSets,
+        _firebaseCurrentUserIDSets = firebaseCurrentUserIDSets,
+        super._();
 
   factory _$_User.fromJson(Map<String, dynamic> json) => _$$_UserFromJson(json);
 
@@ -523,30 +471,45 @@ class _$_User extends _User {
   @override
   @JsonKey(name: "settings")
   final Setting? setting;
-  @JsonKey()
   @override
+  @JsonKey()
   final bool migratedFlutter;
   @override
   final String? userIDWhenCreateUser;
   @override
   final String? anonymousUserID;
-  @JsonKey()
+  final List<String> _userDocumentIDSets;
   @override
-  final List<String> userDocumentIDSets;
   @JsonKey()
+  List<String> get userDocumentIDSets {
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(_userDocumentIDSets);
+  }
+
+  final List<String> _anonymousUserIDSets;
   @override
-  final List<String> anonymousUserIDSets;
   @JsonKey()
+  List<String> get anonymousUserIDSets {
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(_anonymousUserIDSets);
+  }
+
+  final List<String> _firebaseCurrentUserIDSets;
   @override
-  final List<String> firebaseCurrentUserIDSets;
   @JsonKey()
+  List<String> get firebaseCurrentUserIDSets {
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(_firebaseCurrentUserIDSets);
+  }
+
   @override
+  @JsonKey()
   final bool isPremium;
-  @JsonKey()
   @override
+  @JsonKey()
   final bool isTrial;
-  @JsonKey()
   @override
+  @JsonKey()
   final bool hasDiscountEntitlement;
   @override
   @JsonKey(
@@ -573,83 +536,89 @@ class _$_User extends _User {
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _User &&
-            const DeepCollectionEquality().equals(other.id, id) &&
-            const DeepCollectionEquality().equals(other.setting, setting) &&
+            other is _$_User &&
+            (identical(other.id, id) || other.id == id) &&
+            (identical(other.setting, setting) || other.setting == setting) &&
+            (identical(other.migratedFlutter, migratedFlutter) ||
+                other.migratedFlutter == migratedFlutter) &&
+            (identical(other.userIDWhenCreateUser, userIDWhenCreateUser) ||
+                other.userIDWhenCreateUser == userIDWhenCreateUser) &&
+            (identical(other.anonymousUserID, anonymousUserID) ||
+                other.anonymousUserID == anonymousUserID) &&
             const DeepCollectionEquality()
-                .equals(other.migratedFlutter, migratedFlutter) &&
+                .equals(other._userDocumentIDSets, _userDocumentIDSets) &&
             const DeepCollectionEquality()
-                .equals(other.userIDWhenCreateUser, userIDWhenCreateUser) &&
-            const DeepCollectionEquality()
-                .equals(other.anonymousUserID, anonymousUserID) &&
-            const DeepCollectionEquality()
-                .equals(other.userDocumentIDSets, userDocumentIDSets) &&
-            const DeepCollectionEquality()
-                .equals(other.anonymousUserIDSets, anonymousUserIDSets) &&
+                .equals(other._anonymousUserIDSets, _anonymousUserIDSets) &&
             const DeepCollectionEquality().equals(
-                other.firebaseCurrentUserIDSets, firebaseCurrentUserIDSets) &&
-            const DeepCollectionEquality().equals(other.isPremium, isPremium) &&
-            const DeepCollectionEquality().equals(other.isTrial, isTrial) &&
-            const DeepCollectionEquality()
-                .equals(other.hasDiscountEntitlement, hasDiscountEntitlement) &&
-            const DeepCollectionEquality()
-                .equals(other.beginTrialDate, beginTrialDate) &&
-            const DeepCollectionEquality()
-                .equals(other.trialDeadlineDate, trialDeadlineDate) &&
-            const DeepCollectionEquality().equals(
-                other.discountEntitlementDeadlineDate,
-                discountEntitlementDeadlineDate));
+                other._firebaseCurrentUserIDSets, _firebaseCurrentUserIDSets) &&
+            (identical(other.isPremium, isPremium) ||
+                other.isPremium == isPremium) &&
+            (identical(other.isTrial, isTrial) || other.isTrial == isTrial) &&
+            (identical(other.hasDiscountEntitlement, hasDiscountEntitlement) ||
+                other.hasDiscountEntitlement == hasDiscountEntitlement) &&
+            (identical(other.beginTrialDate, beginTrialDate) ||
+                other.beginTrialDate == beginTrialDate) &&
+            (identical(other.trialDeadlineDate, trialDeadlineDate) ||
+                other.trialDeadlineDate == trialDeadlineDate) &&
+            (identical(other.discountEntitlementDeadlineDate,
+                    discountEntitlementDeadlineDate) ||
+                other.discountEntitlementDeadlineDate ==
+                    discountEntitlementDeadlineDate));
   }
-
-  @override
-  int get hashCode => Object.hash(
-      runtimeType,
-      const DeepCollectionEquality().hash(id),
-      const DeepCollectionEquality().hash(setting),
-      const DeepCollectionEquality().hash(migratedFlutter),
-      const DeepCollectionEquality().hash(userIDWhenCreateUser),
-      const DeepCollectionEquality().hash(anonymousUserID),
-      const DeepCollectionEquality().hash(userDocumentIDSets),
-      const DeepCollectionEquality().hash(anonymousUserIDSets),
-      const DeepCollectionEquality().hash(firebaseCurrentUserIDSets),
-      const DeepCollectionEquality().hash(isPremium),
-      const DeepCollectionEquality().hash(isTrial),
-      const DeepCollectionEquality().hash(hasDiscountEntitlement),
-      const DeepCollectionEquality().hash(beginTrialDate),
-      const DeepCollectionEquality().hash(trialDeadlineDate),
-      const DeepCollectionEquality().hash(discountEntitlementDeadlineDate));
 
   @JsonKey(ignore: true)
   @override
-  _$UserCopyWith<_User> get copyWith =>
-      __$UserCopyWithImpl<_User>(this, _$identity);
+  int get hashCode => Object.hash(
+      runtimeType,
+      id,
+      setting,
+      migratedFlutter,
+      userIDWhenCreateUser,
+      anonymousUserID,
+      const DeepCollectionEquality().hash(_userDocumentIDSets),
+      const DeepCollectionEquality().hash(_anonymousUserIDSets),
+      const DeepCollectionEquality().hash(_firebaseCurrentUserIDSets),
+      isPremium,
+      isTrial,
+      hasDiscountEntitlement,
+      beginTrialDate,
+      trialDeadlineDate,
+      discountEntitlementDeadlineDate);
+
+  @JsonKey(ignore: true)
+  @override
+  @pragma('vm:prefer-inline')
+  _$$_UserCopyWith<_$_User> get copyWith =>
+      __$$_UserCopyWithImpl<_$_User>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_UserToJson(this);
+    return _$$_UserToJson(
+      this,
+    );
   }
 }
 
 abstract class _User extends User {
   const factory _User(
-      {String? id,
+      {final String? id,
       @JsonKey(name: "settings")
-          Setting? setting,
-      bool migratedFlutter,
-      String? userIDWhenCreateUser,
-      String? anonymousUserID,
-      List<String> userDocumentIDSets,
-      List<String> anonymousUserIDSets,
-      List<String> firebaseCurrentUserIDSets,
-      bool isPremium,
-      bool isTrial,
-      bool hasDiscountEntitlement,
+          final Setting? setting,
+      final bool migratedFlutter,
+      final String? userIDWhenCreateUser,
+      final String? anonymousUserID,
+      final List<String> userDocumentIDSets,
+      final List<String> anonymousUserIDSets,
+      final List<String> firebaseCurrentUserIDSets,
+      final bool isPremium,
+      final bool isTrial,
+      final bool hasDiscountEntitlement,
       @JsonKey(fromJson: TimestampConverter.timestampToDateTime, toJson: TimestampConverter.dateTimeToTimestamp)
-          DateTime? beginTrialDate,
+          final DateTime? beginTrialDate,
       @JsonKey(fromJson: TimestampConverter.timestampToDateTime, toJson: TimestampConverter.dateTimeToTimestamp)
-          DateTime? trialDeadlineDate,
+          final DateTime? trialDeadlineDate,
       @JsonKey(fromJson: TimestampConverter.timestampToDateTime, toJson: TimestampConverter.dateTimeToTimestamp)
-          DateTime? discountEntitlementDeadlineDate}) = _$_User;
+          final DateTime? discountEntitlementDeadlineDate}) = _$_User;
   const _User._() : super._();
 
   factory _User.fromJson(Map<String, dynamic> json) = _$_User.fromJson;
@@ -694,5 +663,5 @@ abstract class _User extends User {
   DateTime? get discountEntitlementDeadlineDate;
   @override
   @JsonKey(ignore: true)
-  _$UserCopyWith<_User> get copyWith => throw _privateConstructorUsedError;
+  _$$_UserCopyWith<_$_User> get copyWith => throw _privateConstructorUsedError;
 }

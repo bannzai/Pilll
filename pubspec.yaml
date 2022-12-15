@@ -38,28 +38,30 @@ dependencies:
   equatable: ^2.0.0
   json_annotation: ^4.0.0
   mockito: 5.2.0
+  freezed_annotation: ^2.2.0
   riverpod: ^2.0.0
-  freezed_annotation: ^1.1.0
-  flutter_hooks: ^0.18.5
   hooks_riverpod: ^2.0.0
+  flutter_hooks: ^0.18.5
   firebase_crashlytics: ^2.8.10
   dotted_border: ^2.0.0-nullsafety.0
   in_app_review: ^2.0.1
   uuid: 3.0.6
+  async_value_group: ^1.0.0
 
   # The following adds the Cupertino Icons font to your application.
   # Use with the CupertinoIcons class for iOS style icons.
-  cupertino_icons: ^1.0.2
+  cupertino_icons:
+    ^1.0.2
     # flutter_inappwebview: ^5.4.3
     # Use https://github.com/pichillilorenzo/flutter_inappwebview/pull/1238
   flutter_inappwebview:
-    git: 
+    git:
       url: ssh://git@github.com/bannzai/flutter_inappwebview.git
       ref: master
   flutter_app_badger: ^1.2.0
   sign_in_with_apple: ^3.0.0
   google_sign_in: ^5.4.1
-  purchases_flutter: ^3.2.2
+  purchases_flutter: ^4.4.0
   firebase_performance: ^0.8.0+7
   flutter_native_timezone: ^2.0.0
   flutter_local_notifications: ^11.0.1
@@ -77,7 +79,7 @@ dev_dependencies:
     sdk: flutter
   build_runner:
   json_serializable:
-  freezed: ^1.1.0
+  freezed: ^2.2.0
 
 # For information on the generic Dart part of this file, see the
 # following page: https://dart.dev/tools/pub/pubspec

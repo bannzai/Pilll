@@ -12,42 +12,11 @@ part of 'diary.codegen.dart';
 T _$identity<T>(T value) => value;
 
 final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more informations: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
+    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
 
 Diary _$DiaryFromJson(Map<String, dynamic> json) {
   return _Diary.fromJson(json);
 }
-
-/// @nodoc
-class _$DiaryTearOff {
-  const _$DiaryTearOff();
-
-  _Diary call(
-      {@JsonKey(fromJson: NonNullTimestampConverter.timestampToDateTime, toJson: NonNullTimestampConverter.dateTimeToTimestamp)
-          required DateTime date,
-      @JsonKey(fromJson: TimestampConverter.timestampToDateTime, toJson: TimestampConverter.dateTimeToTimestamp)
-          required DateTime? createdAt,
-      PhysicalConditionStatus? physicalConditionStatus,
-      required List<String> physicalConditions,
-      required bool hasSex,
-      required String memo}) {
-    return _Diary(
-      date: date,
-      createdAt: createdAt,
-      physicalConditionStatus: physicalConditionStatus,
-      physicalConditions: physicalConditions,
-      hasSex: hasSex,
-      memo: memo,
-    );
-  }
-
-  Diary fromJson(Map<String, Object?> json) {
-    return Diary.fromJson(json);
-  }
-}
-
-/// @nodoc
-const $Diary = _$DiaryTearOff();
 
 /// @nodoc
 mixin _$Diary {
@@ -74,7 +43,8 @@ mixin _$Diary {
 /// @nodoc
 abstract class $DiaryCopyWith<$Res> {
   factory $DiaryCopyWith(Diary value, $Res Function(Diary) then) =
-      _$DiaryCopyWithImpl<$Res>;
+      _$DiaryCopyWithImpl<$Res, Diary>;
+  @useResult
   $Res call(
       {@JsonKey(fromJson: NonNullTimestampConverter.timestampToDateTime, toJson: NonNullTimestampConverter.dateTimeToTimestamp)
           DateTime date,
@@ -87,56 +57,60 @@ abstract class $DiaryCopyWith<$Res> {
 }
 
 /// @nodoc
-class _$DiaryCopyWithImpl<$Res> implements $DiaryCopyWith<$Res> {
+class _$DiaryCopyWithImpl<$Res, $Val extends Diary>
+    implements $DiaryCopyWith<$Res> {
   _$DiaryCopyWithImpl(this._value, this._then);
 
-  final Diary _value;
   // ignore: unused_field
-  final $Res Function(Diary) _then;
+  final $Val _value;
+  // ignore: unused_field
+  final $Res Function($Val) _then;
 
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? date = freezed,
+    Object? date = null,
     Object? createdAt = freezed,
     Object? physicalConditionStatus = freezed,
-    Object? physicalConditions = freezed,
-    Object? hasSex = freezed,
-    Object? memo = freezed,
+    Object? physicalConditions = null,
+    Object? hasSex = null,
+    Object? memo = null,
   }) {
     return _then(_value.copyWith(
-      date: date == freezed
+      date: null == date
           ? _value.date
           : date // ignore: cast_nullable_to_non_nullable
               as DateTime,
-      createdAt: createdAt == freezed
+      createdAt: freezed == createdAt
           ? _value.createdAt
           : createdAt // ignore: cast_nullable_to_non_nullable
               as DateTime?,
-      physicalConditionStatus: physicalConditionStatus == freezed
+      physicalConditionStatus: freezed == physicalConditionStatus
           ? _value.physicalConditionStatus
           : physicalConditionStatus // ignore: cast_nullable_to_non_nullable
               as PhysicalConditionStatus?,
-      physicalConditions: physicalConditions == freezed
+      physicalConditions: null == physicalConditions
           ? _value.physicalConditions
           : physicalConditions // ignore: cast_nullable_to_non_nullable
               as List<String>,
-      hasSex: hasSex == freezed
+      hasSex: null == hasSex
           ? _value.hasSex
           : hasSex // ignore: cast_nullable_to_non_nullable
               as bool,
-      memo: memo == freezed
+      memo: null == memo
           ? _value.memo
           : memo // ignore: cast_nullable_to_non_nullable
               as String,
-    ));
+    ) as $Val);
   }
 }
 
 /// @nodoc
-abstract class _$DiaryCopyWith<$Res> implements $DiaryCopyWith<$Res> {
-  factory _$DiaryCopyWith(_Diary value, $Res Function(_Diary) then) =
-      __$DiaryCopyWithImpl<$Res>;
+abstract class _$$_DiaryCopyWith<$Res> implements $DiaryCopyWith<$Res> {
+  factory _$$_DiaryCopyWith(_$_Diary value, $Res Function(_$_Diary) then) =
+      __$$_DiaryCopyWithImpl<$Res>;
   @override
+  @useResult
   $Res call(
       {@JsonKey(fromJson: NonNullTimestampConverter.timestampToDateTime, toJson: NonNullTimestampConverter.dateTimeToTimestamp)
           DateTime date,
@@ -149,45 +123,43 @@ abstract class _$DiaryCopyWith<$Res> implements $DiaryCopyWith<$Res> {
 }
 
 /// @nodoc
-class __$DiaryCopyWithImpl<$Res> extends _$DiaryCopyWithImpl<$Res>
-    implements _$DiaryCopyWith<$Res> {
-  __$DiaryCopyWithImpl(_Diary _value, $Res Function(_Diary) _then)
-      : super(_value, (v) => _then(v as _Diary));
+class __$$_DiaryCopyWithImpl<$Res> extends _$DiaryCopyWithImpl<$Res, _$_Diary>
+    implements _$$_DiaryCopyWith<$Res> {
+  __$$_DiaryCopyWithImpl(_$_Diary _value, $Res Function(_$_Diary) _then)
+      : super(_value, _then);
 
-  @override
-  _Diary get _value => super._value as _Diary;
-
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? date = freezed,
+    Object? date = null,
     Object? createdAt = freezed,
     Object? physicalConditionStatus = freezed,
-    Object? physicalConditions = freezed,
-    Object? hasSex = freezed,
-    Object? memo = freezed,
+    Object? physicalConditions = null,
+    Object? hasSex = null,
+    Object? memo = null,
   }) {
-    return _then(_Diary(
-      date: date == freezed
+    return _then(_$_Diary(
+      date: null == date
           ? _value.date
           : date // ignore: cast_nullable_to_non_nullable
               as DateTime,
-      createdAt: createdAt == freezed
+      createdAt: freezed == createdAt
           ? _value.createdAt
           : createdAt // ignore: cast_nullable_to_non_nullable
               as DateTime?,
-      physicalConditionStatus: physicalConditionStatus == freezed
+      physicalConditionStatus: freezed == physicalConditionStatus
           ? _value.physicalConditionStatus
           : physicalConditionStatus // ignore: cast_nullable_to_non_nullable
               as PhysicalConditionStatus?,
-      physicalConditions: physicalConditions == freezed
-          ? _value.physicalConditions
+      physicalConditions: null == physicalConditions
+          ? _value._physicalConditions
           : physicalConditions // ignore: cast_nullable_to_non_nullable
               as List<String>,
-      hasSex: hasSex == freezed
+      hasSex: null == hasSex
           ? _value.hasSex
           : hasSex // ignore: cast_nullable_to_non_nullable
               as bool,
-      memo: memo == freezed
+      memo: null == memo
           ? _value.memo
           : memo // ignore: cast_nullable_to_non_nullable
               as String,
@@ -205,10 +177,11 @@ class _$_Diary extends _Diary {
       @JsonKey(fromJson: TimestampConverter.timestampToDateTime, toJson: TimestampConverter.dateTimeToTimestamp)
           required this.createdAt,
       this.physicalConditionStatus,
-      required this.physicalConditions,
+      required final List<String> physicalConditions,
       required this.hasSex,
       required this.memo})
-      : super._();
+      : _physicalConditions = physicalConditions,
+        super._();
 
   factory _$_Diary.fromJson(Map<String, dynamic> json) =>
       _$$_DiaryFromJson(json);
@@ -218,15 +191,21 @@ class _$_Diary extends _Diary {
       fromJson: NonNullTimestampConverter.timestampToDateTime,
       toJson: NonNullTimestampConverter.dateTimeToTimestamp)
   final DateTime date;
-  @override // NOTE: OLD data does't have createdAt
+// NOTE: OLD data does't have createdAt
+  @override
   @JsonKey(
       fromJson: TimestampConverter.timestampToDateTime,
       toJson: TimestampConverter.dateTimeToTimestamp)
   final DateTime? createdAt;
   @override
   final PhysicalConditionStatus? physicalConditionStatus;
+  final List<String> _physicalConditions;
   @override
-  final List<String> physicalConditions;
+  List<String> get physicalConditions {
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(_physicalConditions);
+  }
+
   @override
   final bool hasSex;
   @override
@@ -241,48 +220,54 @@ class _$_Diary extends _Diary {
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _Diary &&
-            const DeepCollectionEquality().equals(other.date, date) &&
-            const DeepCollectionEquality().equals(other.createdAt, createdAt) &&
-            const DeepCollectionEquality().equals(
-                other.physicalConditionStatus, physicalConditionStatus) &&
+            other is _$_Diary &&
+            (identical(other.date, date) || other.date == date) &&
+            (identical(other.createdAt, createdAt) ||
+                other.createdAt == createdAt) &&
+            (identical(
+                    other.physicalConditionStatus, physicalConditionStatus) ||
+                other.physicalConditionStatus == physicalConditionStatus) &&
             const DeepCollectionEquality()
-                .equals(other.physicalConditions, physicalConditions) &&
-            const DeepCollectionEquality().equals(other.hasSex, hasSex) &&
-            const DeepCollectionEquality().equals(other.memo, memo));
+                .equals(other._physicalConditions, _physicalConditions) &&
+            (identical(other.hasSex, hasSex) || other.hasSex == hasSex) &&
+            (identical(other.memo, memo) || other.memo == memo));
   }
-
-  @override
-  int get hashCode => Object.hash(
-      runtimeType,
-      const DeepCollectionEquality().hash(date),
-      const DeepCollectionEquality().hash(createdAt),
-      const DeepCollectionEquality().hash(physicalConditionStatus),
-      const DeepCollectionEquality().hash(physicalConditions),
-      const DeepCollectionEquality().hash(hasSex),
-      const DeepCollectionEquality().hash(memo));
 
   @JsonKey(ignore: true)
   @override
-  _$DiaryCopyWith<_Diary> get copyWith =>
-      __$DiaryCopyWithImpl<_Diary>(this, _$identity);
+  int get hashCode => Object.hash(
+      runtimeType,
+      date,
+      createdAt,
+      physicalConditionStatus,
+      const DeepCollectionEquality().hash(_physicalConditions),
+      hasSex,
+      memo);
+
+  @JsonKey(ignore: true)
+  @override
+  @pragma('vm:prefer-inline')
+  _$$_DiaryCopyWith<_$_Diary> get copyWith =>
+      __$$_DiaryCopyWithImpl<_$_Diary>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_DiaryToJson(this);
+    return _$$_DiaryToJson(
+      this,
+    );
   }
 }
 
 abstract class _Diary extends Diary {
   const factory _Diary(
       {@JsonKey(fromJson: NonNullTimestampConverter.timestampToDateTime, toJson: NonNullTimestampConverter.dateTimeToTimestamp)
-          required DateTime date,
+          required final DateTime date,
       @JsonKey(fromJson: TimestampConverter.timestampToDateTime, toJson: TimestampConverter.dateTimeToTimestamp)
-          required DateTime? createdAt,
-      PhysicalConditionStatus? physicalConditionStatus,
-      required List<String> physicalConditions,
-      required bool hasSex,
-      required String memo}) = _$_Diary;
+          required final DateTime? createdAt,
+      final PhysicalConditionStatus? physicalConditionStatus,
+      required final List<String> physicalConditions,
+      required final bool hasSex,
+      required final String memo}) = _$_Diary;
   const _Diary._() : super._();
 
   factory _Diary.fromJson(Map<String, dynamic> json) = _$_Diary.fromJson;
@@ -307,5 +292,6 @@ abstract class _Diary extends Diary {
   String get memo;
   @override
   @JsonKey(ignore: true)
-  _$DiaryCopyWith<_Diary> get copyWith => throw _privateConstructorUsedError;
+  _$$_DiaryCopyWith<_$_Diary> get copyWith =>
+      throw _privateConstructorUsedError;
 }

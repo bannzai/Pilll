@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:pilll/components/atoms/buttons.dart';
+import 'package:pilll/components/atoms/button.dart';
 import 'package:pilll/components/atoms/color.dart';
 import 'package:pilll/components/atoms/font.dart';
 import 'package:pilll/components/atoms/text_color.dart';
@@ -20,19 +20,31 @@ class OKDialog extends StatelessWidget {
     return AlertDialog(
       title: const Icon(
         Icons.help,
-        color: PilllColors.secondary,
+        color: PilllColors.primary,
       ),
       content: Column(
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
         mainAxisSize: MainAxisSize.min,
         children: <Widget>[
           if (title.isNotEmpty) ...[
-            Text(title, style: FontType.subTitle.merge(TextColorStyle.main)),
+            Text(title,
+                style: const TextStyle(
+                  fontFamily: FontFamily.japanese,
+                  fontWeight: FontWeight.w600,
+                  fontSize: 16,
+                  color: TextColor.main,
+                )),
             const SizedBox(
               height: 15,
             ),
           ],
-          Text(message, style: FontType.assisting.merge(TextColorStyle.main)),
+          Text(message,
+              style: const TextStyle(
+                fontFamily: FontFamily.japanese,
+                fontWeight: FontWeight.w300,
+                fontSize: 14,
+                color: TextColor.main,
+              )),
         ],
       ),
       actions: <Widget>[

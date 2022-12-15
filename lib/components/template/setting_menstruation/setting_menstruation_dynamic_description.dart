@@ -4,15 +4,12 @@ import 'package:pilll/components/atoms/color.dart';
 import 'package:pilll/components/atoms/font.dart';
 import 'package:pilll/components/atoms/text_color.dart';
 import 'package:pilll/entity/pill_sheet_type.dart';
-import 'package:pilll/util/toolbar/picker_toolbar.dart';
+import 'package:pilll/utils/toolbar/picker_toolbar.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
 abstract class SettingMenstruationDynamicDescriptionConstants {
-  static final List<String> durationList = [
-    "-",
-    ...List<String>.generate(7, (index) => (index + 1).toString())
-  ];
+  static final List<String> durationList = ["-", ...List<String>.generate(7, (index) => (index + 1).toString())];
 }
 
 class SettingMenstruationDynamicDescription extends StatelessWidget {
@@ -40,18 +37,33 @@ class SettingMenstruationDynamicDescription extends StatelessWidget {
         Row(
           mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget>[
-            Text("ピル番号 ",
-                style: FontType.assisting.merge(TextColorStyle.main)),
+            const Text("ピル番号 ",
+                style: TextStyle(
+                  fontFamily: FontFamily.japanese,
+                  fontWeight: FontWeight.w300,
+                  fontSize: 14,
+                  color: TextColor.main,
+                )),
             GestureDetector(
               onTap: () => _showFromModalSheet(context),
               child: _from(),
             ),
-            Text(" 番ごとに",
-                style: FontType.assisting.merge(TextColorStyle.main)),
+            const Text(" 番ごとに",
+                style: TextStyle(
+                  fontFamily: FontFamily.japanese,
+                  fontWeight: FontWeight.w300,
+                  fontSize: 14,
+                  color: TextColor.main,
+                )),
           ],
         ),
-        Text("何日間生理が続く？",
-            style: FontType.assistingBold.merge(TextColorStyle.main)),
+        const Text("何日間生理が続く？",
+            style: TextStyle(
+              fontFamily: FontFamily.japanese,
+              fontWeight: FontWeight.w600,
+              fontSize: 14,
+              color: TextColor.main,
+            )),
         const SizedBox(height: 4),
         Row(
           mainAxisAlignment: MainAxisAlignment.center,
@@ -60,8 +72,8 @@ class SettingMenstruationDynamicDescription extends StatelessWidget {
               onTap: () => _showDurationModalSheet(context),
               child: _duration(),
             ),
-            Text(" 日間生理が続く",
-                style: FontType.assisting.merge(TextColorStyle.main)),
+            const Text(" 日間生理が続く",
+                style: TextStyle(fontFamily: FontFamily.japanese, fontWeight: FontWeight.w300, fontSize: 14, color: TextColor.main)),
           ],
         )
       ],
@@ -87,7 +99,12 @@ class SettingMenstruationDynamicDescription extends StatelessWidget {
       ),
       child: Center(
         child: Text(fromString,
-            style: FontType.inputNumber.merge(TextColorStyle.gray)),
+            style: const TextStyle(
+              fontFamily: FontFamily.japanese,
+              fontWeight: FontWeight.w700,
+              fontSize: 16,
+              color: TextColor.gray,
+            )),
       ),
     );
   }
@@ -111,15 +128,18 @@ class SettingMenstruationDynamicDescription extends StatelessWidget {
       ),
       child: Center(
         child: Text(durationString,
-            style: FontType.inputNumber.merge(TextColorStyle.gray)),
+            style: const TextStyle(
+              fontFamily: FontFamily.japanese,
+              fontWeight: FontWeight.w700,
+              fontSize: 16,
+              color: TextColor.gray,
+            )),
       ),
     );
   }
 
   void _showFromModalSheet(BuildContext context) {
-    final maximumCount = pillSheetTypes
-        .map((e) => e.totalCount)
-        .reduce((value, element) => value + element);
+    final maximumCount = pillSheetTypes.map((e) => e.totalCount).reduce((value, element) => value + element);
     int keepSelectedFromMenstruation = min(fromMenstruation, maximumCount);
     showModalBottomSheet(
       context: context,
@@ -154,8 +174,7 @@ class SettingMenstruationDynamicDescription extends StatelessWidget {
                   onSelectedItemChanged: (index) {
                     keepSelectedFromMenstruation = index;
                   },
-                  scrollController: FixedExtentScrollController(
-                      initialItem: keepSelectedFromMenstruation),
+                  scrollController: FixedExtentScrollController(initialItem: keepSelectedFromMenstruation),
                 ),
               ),
             ),
@@ -191,15 +210,11 @@ class SettingMenstruationDynamicDescription extends StatelessWidget {
                 },
                 child: CupertinoPicker(
                   itemExtent: 40,
-                  children: SettingMenstruationDynamicDescriptionConstants
-                      .durationList
-                      .map(_pickerItem)
-                      .toList(),
+                  children: SettingMenstruationDynamicDescriptionConstants.durationList.map(_pickerItem).toList(),
                   onSelectedItemChanged: (index) {
                     keepSelectedDurationMenstruation = index;
                   },
-                  scrollController: FixedExtentScrollController(
-                      initialItem: keepSelectedDurationMenstruation),
+                  scrollController: FixedExtentScrollController(initialItem: keepSelectedDurationMenstruation),
                 ),
               ),
             ),
