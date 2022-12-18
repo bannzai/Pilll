@@ -3,6 +3,7 @@ import 'dart:async';
 import 'dart:math';
 
 import 'package:firebase_auth/firebase_auth.dart';
+import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_local_notifications/flutter_local_notifications.dart';
 import 'package:pilll/entity/pill_sheet.codegen.dart';
@@ -36,7 +37,7 @@ const androidNotificationCategoryRemindNotification = "androidNotificationCatego
 
 // Notification ID offset
 const scheduleNotificationIdentifierOffset = 100000;
-const reminderNotificationIdentifierOffset = 1000000;
+const reminderNotificationIdentifierOffset = 1000000000;
 
 // NOTE: It can not be use Future.wait(processes) when register notification.
 class LocalNotificationService {
@@ -100,12 +101,19 @@ class LocalNotificationService {
     await plugin.cancel(localNotificationID);
   }
 
-  // reminder time id is 10{hour:2}{minute:2}{pillNumberIntoPillSheet:2}
-  // for example return value 10223014 means, `10` is prefix, `22` is hour, `30` is minute, `14` is pill number into pill sheet
+  // reminder time id is 10{groupIndex:2}{hour:2}{minute:2}{pillNumberIntoPillSheet:2}
+  // for example return value 1002223014 means,  `10` is prefix, gropuIndex: `02` is third pillSheet,`22` is hour, `30` is minute, `14` is pill number into pill sheet
+  // 1000000000 = reminderNotificationIdentifierOffset
+  // 10000000 = pillSheetGroupIndex
+  // 100000 = reminderTime.hour
+  // 1000 = reminderTime.minute
+  // 10 = pillNumberIntoPillSheet
   int _calcLocalNotificationID({
+    required int pillSheetGroupIndex,
     required ReminderTime reminderTime,
     required int pillNumberIntoPillSheet,
   }) {
+    final groupIndex = pillSheetGroupIndex * 10000000;
     final hour = reminderTime.hour * 100000;
     final minute = reminderTime.minute * 1000;
     return reminderNotificationIdentifierOffset + hour + minute + pillNumberIntoPillSheet;
@@ -123,20 +131,25 @@ class LocalNotificationService {
     for (final reminderTime in setting.reminderTimes) {
       // 新規ピルシートグループの作成後に通知のスケジュールができないため、多めに通知をスケジュールする
       // ユーザーの何かしらのアクションでどこかでスケジュールされるだろう
-      for (final daysOffset in List.generate(14, (index) => index)) {
-        final reminderDate =
-            tzNow.add(Duration(days: daysOffset)).add(Duration(hours: reminderTime.hour)).add(Duration(minutes: reminderTime.minute));
+      for (final offset in List.generate(14, (index) => index)) {
+        final reminderDate = tzNow.add(Duration(days: offset)).add(Duration(hours: reminderTime.hour)).add(Duration(minutes: reminderTime.minute));
         // NOTE: LocalNotification must be scheduled at least 3 minutes after the current time (in iOS, Android not confirm).
         // Delay five minutes just to be sure.
         if (!reminderDate.add(const Duration(minutes: 5)).isAfter(tzNow)) {
           continue;
         }
 
-        final notificationID = () {
-          return daysOffset + reminderNotificationIdentifierOffset;
-        }();
-        const message = '';
+        var targetPillSheet = activePillSheet;
+        var pillNumberIntoPillSheet = activePillSheet.todayPillNumber + offset;
+        if (pillNumberIntoPillSheet > activePillSheet.typeInfo.totalCount) {
+          targetPillSheet = pillSheetGroup.pillSheets[activePillSheet.groupIndex + 1];
 
+          const nextPillSheetFirstNumber = 1;
+          pillNumberIntoPillSheet = nextPillSheetFirstNumber + offset;
+        }
+
+        final notificationID = _calcLocalNotificationID(
+            pillSheetGroupIndex: targetPillSheet.groupIndex, reminderTime: reminderTime, pillNumberIntoPillSheet: pillNumberIntoPillSheet);
         if (isTrialOrPremium) {
           final title = () {
             var result = setting.reminderNotificationCustomization.word;
@@ -146,7 +159,7 @@ class LocalNotificationService {
             }
             if (!setting.reminderNotificationCustomization.isInVisiblePillNumber) {
               result += " ";
-              result += "${pillSheetPillNumber(pillSheet: activePillSheet, targetDate: reminderDate)}番";
+              result += "$pillNumberIntoPillSheet番";
             }
             return result;
           }();
@@ -156,7 +169,7 @@ class LocalNotificationService {
             await plugin.zonedSchedule(
               notificationID,
               title,
-              message,
+              '',
               reminderDate,
               const NotificationDetails(
                 android: AndroidNotificationDetails(
@@ -191,7 +204,7 @@ class LocalNotificationService {
             await plugin.zonedSchedule(
               notificationID,
               title,
-              message,
+              '',
               reminderDate,
               const NotificationDetails(
                 android: AndroidNotificationDetails(
