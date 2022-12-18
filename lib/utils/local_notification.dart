@@ -119,7 +119,11 @@ class LocalNotificationService {
     return reminderNotificationIdentifierOffset + groupIndex + hour + minute + pillNumberIntoPillSheet;
   }
 
-  // 休薬終了や初期設定完了後に使う
+  // UseCase:
+  // - 休薬終了後
+  // - 初期設定完了後
+  // - リマインダーの通知がOFF->ONになった時
+  // - 久しぶりにアプリを開いたが、通知がスケジュールされていない時
   // 7日間分の通知をスケジュールする
   Future<void> scheduleAllRemiderNotification({
     required PillSheetGroup pillSheetGroup,
