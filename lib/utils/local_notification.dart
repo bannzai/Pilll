@@ -96,6 +96,10 @@ class LocalNotificationService {
     }
   }
 
+  Future<void> cancelNotification({required int localNotificationID}) async {
+    await plugin.cancel(localNotificationID);
+  }
+
   // reminder time id is 10{hour:2}{minute:2}{pillNumberIntoPillSheet:2}
   // for example return value 10223014 means, `10` is prefix, `22` is hour, `30` is minute, `14` is pill number into pill sheet
   int _calcLocalNotificationID({
