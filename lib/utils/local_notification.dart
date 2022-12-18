@@ -119,6 +119,7 @@ class LocalNotificationService {
     return reminderNotificationIdentifierOffset + groupIndex + hour + minute + pillNumberIntoPillSheet;
   }
 
+  // 休薬終了や初期設定完了後に使う
   Future<void> scheduleAllRemiderNotification({
     required PillSheetGroup pillSheetGroup,
     required PillSheet activePillSheet,
