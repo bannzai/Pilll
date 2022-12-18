@@ -47,31 +47,32 @@ class LocalNotificationService {
   }
 
   Future<void> scheduleCalendarScheduleNotification({
-    required int localNotificationID,
-    required DateTime remindDateTime,
-    required String title,
+    required Schedule schedule,
   }) async {
-    final zonedReminderDateTime = tz.TZDateTime.from(remindDateTime, tz.local);
-    debugPrint("$zonedReminderDateTime");
-    await plugin.zonedSchedule(
-      localNotificationID,
-      "本日の予定です",
-      title,
-      zonedReminderDateTime,
-      const NotificationDetails(
-        android: AndroidNotificationDetails(
-          androidCalendarScheduleNotificationChannelID,
-          "カレンダーの予定",
-          groupKey: null,
-          category: AndroidNotificationCategory(androidNotificationCategoryCalendarSchedule),
+    final localNotification = schedule.localNotification;
+    if (localNotification != null) {
+      final remindDate = tz.TZDateTime.from(localNotification.remindDateTime, tz.local);
+      debugPrint("$remindDate");
+      await plugin.zonedSchedule(
+        localNotification.localNotificationID,
+        "本日の予定です",
+        schedule.title,
+        remindDate,
+        const NotificationDetails(
+          android: AndroidNotificationDetails(
+            androidCalendarScheduleNotificationChannelID,
+            "カレンダーの予定",
+            groupKey: null,
+            category: AndroidNotificationCategory(androidNotificationCategoryCalendarSchedule),
+          ),
+          iOS: DarwinNotificationDetails(
+            sound: "becho.caf",
+          ),
         ),
-        iOS: DarwinNotificationDetails(
-          sound: "becho.caf",
-        ),
-      ),
-      androidAllowWhileIdle: true,
-      uiLocalNotificationDateInterpretation: UILocalNotificationDateInterpretation.absoluteTime,
-    );
+        androidAllowWhileIdle: true,
+        uiLocalNotificationDateInterpretation: UILocalNotificationDateInterpretation.absoluteTime,
+      );
+    }
   }
 
   Future<void> cancelNotification({required int localNotificationID}) async {
