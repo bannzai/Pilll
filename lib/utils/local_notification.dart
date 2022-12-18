@@ -116,10 +116,10 @@ class LocalNotificationService {
     final groupIndex = pillSheetGroupIndex * 10000000;
     final hour = reminderTime.hour * 100000;
     final minute = reminderTime.minute * 1000;
-    return reminderNotificationIdentifierOffset + hour + minute + pillNumberIntoPillSheet;
+    return reminderNotificationIdentifierOffset + groupIndex + hour + minute + pillNumberIntoPillSheet;
   }
 
-  Future<void> scheduleRemiderNotification({
+  Future<void> scheduleAllRemiderNotification({
     required PillSheetGroup pillSheetGroup,
     required PillSheet activePillSheet,
     required bool isTrialOrPremium,
