@@ -2,9 +2,16 @@ import 'dart:async';
 
 import 'dart:math';
 
+import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_local_notifications/flutter_local_notifications.dart';
 import 'package:pilll/entity/schedule.codegen.dart';
+import 'package:pilll/native/pill.dart';
+import 'package:pilll/provider/batch.dart';
+import 'package:pilll/provider/database.dart';
+import 'package:pilll/provider/pill_sheet_group.dart';
+import 'package:pilll/provider/pill_sheet_modified_history.dart';
+import 'package:pilll/provider/take_pill.dart';
 import 'package:pilll/utils/datetime/day.dart';
 import 'package:timezone/data/latest_all.dart' as tz;
 import 'package:timezone/timezone.dart' as tz;
@@ -37,13 +44,22 @@ class LocalNotificationService {
 
   Future<void> initialize() async {
     await plugin.initialize(
-      const InitializationSettings(
-        android: AndroidInitializationSettings(
-          "ic_notification",
+        InitializationSettings(
+          android: const AndroidInitializationSettings(
+            "ic_notification",
+          ),
+          iOS: DarwinInitializationSettings(
+            notificationCategories: [
+              DarwinNotificationCategory(
+                iOSQuickRecordPillCategoryIdentifier,
+                actions: [
+                  DarwinNotificationAction.plain(iOSRecordPillActionIdentifier, "飲んだ"),
+                ],
+              ),
+            ],
+          ),
         ),
-        iOS: DarwinInitializationSettings(defaultPresentAlert: true, defaultPresentBadge: true, defaultPresentSound: true),
-      ),
-    );
+        onDidReceiveNotificationResponse: onDidReceiveNotificationResponse);
   }
 
   Future<void> scheduleCalendarScheduleNotification({
@@ -108,3 +124,10 @@ class LocalNotificationService {
 }
 
 final localNotificationService = LocalNotificationService()..initialize();
+
+// onDidReceiveNotificationResponse must be static method or global method
+void onDidReceiveNotificationResponse(NotificationResponse details) {
+  if (details.actionId == iOSRecordPillActionIdentifier) {
+    quickRecordTakePill();
+  }
+}
