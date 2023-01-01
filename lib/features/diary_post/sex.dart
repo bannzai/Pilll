@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:pilll/components/atoms/color.dart';
-import 'package:pilll/components/atoms/text_color.dart';
 import 'package:pilll/features/diary_post/util.dart';
 
 class DiaryPostSex extends StatelessWidget {
@@ -23,11 +22,12 @@ class DiaryPostSex extends StatelessWidget {
             sex.value = !sex.value;
           },
           child: Container(
-              padding: const EdgeInsets.all(4),
-              width: 32,
-              height: 32,
-              decoration: BoxDecoration(shape: BoxShape.circle, color: sex.value ? PilllColors.thinSecondary : PilllColors.disabledSheet),
-              child: SvgPicture.asset("images/heart.svg", color: sex.value ? PilllColors.primary : TextColor.darkGray)),
+            padding: const EdgeInsets.all(4),
+            width: 32,
+            height: 32,
+            decoration: BoxDecoration(shape: BoxShape.circle, color: sex.value ? PilllColors.thinSecondary : PilllColors.disabledSheet),
+            child: SvgPicture.asset(sex.value ? "images/heart.svg" : "images/heart-stroke.svg"),
+          ),
         ),
         const Spacer(),
       ],
