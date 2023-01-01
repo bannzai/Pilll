@@ -22,7 +22,7 @@ class AddPillSheetGroupPage extends HookConsumerWidget {
   Widget build(BuildContext context, WidgetRef ref) {
     final pillSheetGroup = this.pillSheetGroup;
     final addPillSheetGroup = ref.watch(addPillSheetGroupProvider);
-    final pillSheetTypes = useState(setting.pillSheetTypes);
+    final pillSheetTypes = useState(setting.pillSheetEnumTypes);
     final displayNumberSetting = useState<PillSheetGroupDisplayNumberSetting?>(null);
 
     return Scaffold(
@@ -44,7 +44,7 @@ class AddPillSheetGroupPage extends HookConsumerWidget {
           child: Stack(
             children: [
               SettingPillSheetGroup(
-                pillSheetTypes: setting.pillSheetEnumTypes,
+                pillSheetTypes: pillSheetTypes.value,
                 onAdd: (pillSheetType) {
                   analytics.logEvent(name: "setting_add_pill_sheet_group", parameters: {"pill_sheet_type": pillSheetType.fullName});
                   pillSheetTypes.value = [...pillSheetTypes.value, pillSheetType];
@@ -52,7 +52,7 @@ class AddPillSheetGroupPage extends HookConsumerWidget {
                 onChange: (index, pillSheetType) {
                   analytics
                       .logEvent(name: "setting_change_pill_sheet_group", parameters: {"index": index, "pill_sheet_type": pillSheetType.fullName});
-                  final copied = [...setting.pillSheetTypes];
+                  final copied = [...pillSheetTypes.value];
                   copied[index] = pillSheetType;
                   pillSheetTypes.value = copied;
                 },
