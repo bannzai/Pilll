@@ -39,7 +39,8 @@ final firebaseSignInProvider = FutureProvider<User>((ref) async {
       });
       Future.delayed(const Duration(seconds: 30)).then((_) {
         if (!completer.isCompleted) {
-          completer.completeError(const FormatException("タイムアウトしました。通信環境をお確かめの上再度お試しください"));
+          completer.complete(null);
+          subscription?.cancel();
         }
       });
       return completer.future;
