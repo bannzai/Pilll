@@ -110,7 +110,10 @@ class Root extends HookConsumerWidget {
     // Main stream
     return UniversalErrorPage(
       error: error.value,
-      reload: () => ref.refresh(refreshAppProvider),
+      reload: () {
+        error.value = null;
+        return ref.refresh(refreshAppProvider);
+      },
       child: () {
         final uid = userID.value;
         if (uid == null) {
