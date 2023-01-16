@@ -26,7 +26,6 @@ import 'package:url_launcher/url_launcher.dart';
 
 // FIXME: test 時にboolSharedPreferencesProviderをそのまま使うとフリーズする
 final didEndInitialSettingProvider = Provider((ref) => ref.watch(boolSharedPreferencesProvider(BoolKey.didEndInitialSetting)));
-final didEndInitialSettingNotifierProvider = Provider((ref) => ref.watch(boolSharedPreferencesProvider(BoolKey.didEndInitialSetting).notifier));
 
 class Root extends HookConsumerWidget {
   const Root({Key? key}) : super(key: key);
@@ -36,8 +35,6 @@ class Root extends HookConsumerWidget {
     final signInFirebaseUser = ref.watch(firebaseSignInProvider.future);
     final checkForceUpdate = ref.watch(checkForceUpdateProvider);
     final setUserID = ref.watch(setUserIDProvider);
-    final userStream = ref.watch(firebaseUserStateProvider);
-    final didEndInitialSettingNotifier = ref.watch(didEndInitialSettingNotifierProvider);
 
     final userID = useState<String?>(null);
     final shouldForceUpdate = useState(false);
@@ -96,15 +93,6 @@ class Root extends HookConsumerWidget {
 
       return null;
     }, [userID.value]);
-
-    // Logout(DEBUG) or User deleted
-    useEffect(() {
-      if (userID.value != null && userStream.asData?.value == null) {
-        userID.value = null;
-        didEndInitialSettingNotifier.set(false);
-      }
-      return null;
-    }, [userStream, userID.value]);
 
     // For force update
     if (shouldForceUpdate.value) {

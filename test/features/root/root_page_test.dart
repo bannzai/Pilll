@@ -9,7 +9,6 @@ import 'package:pilll/provider/auth.dart';
 import 'package:pilll/provider/database.dart';
 import 'package:pilll/provider/force_update.dart';
 import 'package:pilll/provider/set_user_id.dart';
-import 'package:pilll/provider/shared_preferences.dart';
 import 'package:pilll/provider/user.dart';
 import 'package:pilll/utils/analytics.dart';
 import 'package:pilll/utils/auth/apple.dart';
@@ -91,7 +90,6 @@ void main() {
             markAsMigratedToFlutterProvider.overrideWith((ref) => markAsMigratedToFlutter),
             firebaseSignInProvider.overrideWith((ref) => Future.value(fakeFirebaseUser)),
             didEndInitialSettingProvider.overrideWithValue(const AsyncValue.data(null)),
-            didEndInitialSettingNotifierProvider.overrideWith((ref) => BoolSharedPreferences()),
             // For InitialSettingPillSheetGroupPage
             isAppleLinkedProvider.overrideWith((ref) => false),
             isGoogleLinkedProvider.overrideWith((ref) => false),
@@ -142,7 +140,6 @@ void main() {
             markAsMigratedToFlutterProvider.overrideWith((ref) => markAsMigratedToFlutter),
             firebaseSignInProvider.overrideWith((ref) => Future.value(fakeFirebaseUser)),
             didEndInitialSettingProvider.overrideWithValue(const AsyncValue.data(null)),
-            didEndInitialSettingNotifierProvider.overrideWith((ref) => BoolSharedPreferences()),
             // For InitialSettingPillSheetGroupPage
             isAppleLinkedProvider.overrideWith((ref) => false),
             isGoogleLinkedProvider.overrideWith((ref) => false),
@@ -191,7 +188,6 @@ void main() {
             saveUserLaunchInfoProvider.overrideWith((ref) => saveUserLaunchInfo),
             markAsMigratedToFlutterProvider.overrideWith((ref) => markAsMigratedToFlutter),
             didEndInitialSettingProvider.overrideWithValue(const AsyncValue.data(null)),
-            didEndInitialSettingNotifierProvider.overrideWith((ref) => BoolSharedPreferences()),
           ],
           child: MaterialApp(
             home: Material(
@@ -231,7 +227,6 @@ void main() {
             saveUserLaunchInfoProvider.overrideWith((ref) => saveUserLaunchInfo),
             markAsMigratedToFlutterProvider.overrideWith((ref) => markAsMigratedToFlutter),
             didEndInitialSettingProvider.overrideWithValue(const AsyncValue.data(true)),
-            didEndInitialSettingNotifierProvider.overrideWith((ref) => BoolSharedPreferences()),
           ],
           child: MaterialApp(
             home: Material(
@@ -271,7 +266,6 @@ void main() {
             saveUserLaunchInfoProvider.overrideWith((ref) => saveUserLaunchInfo),
             markAsMigratedToFlutterProvider.overrideWith((ref) => markAsMigratedToFlutter),
             didEndInitialSettingProvider.overrideWithValue(const AsyncValue.data(true)),
-            didEndInitialSettingNotifierProvider.overrideWith((ref) => BoolSharedPreferences()),
           ],
           child: MaterialApp(
             home: Material(
@@ -311,7 +305,6 @@ void main() {
             saveUserLaunchInfoProvider.overrideWith((ref) => saveUserLaunchInfo),
             markAsMigratedToFlutterProvider.overrideWith((ref) => markAsMigratedToFlutter),
             didEndInitialSettingProvider.overrideWithValue(const AsyncValue.data(true)),
-            didEndInitialSettingNotifierProvider.overrideWith((ref) => BoolSharedPreferences()),
           ],
           child: MaterialApp(
             home: Material(
