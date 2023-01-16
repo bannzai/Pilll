@@ -112,7 +112,7 @@ class Root extends HookConsumerWidget {
       error: error.value,
       reload: () {
         error.value = null;
-        return ref.refresh(refreshAppProvider);
+        ref.invalidate(refreshAppProvider);
       },
       child: () {
         final uid = userID.value;
@@ -155,8 +155,9 @@ class InitialSettingOrAppPage extends HookConsumerWidget {
     final appUser = useState<User?>(null);
     final error = useState<LaunchException?>(null);
 
-    final didEndInitialSetting = ref.watch(didEndInitialSettingProvider);
+    final didEndInitialSetting = ref.watch(boolSharedPreferencesProvider(BoolKey.didEndInitialSetting));
 
+    // It is ok, every time this effect is evaluted;
     useEffect(() {
       f() async {
         // **** BEGIN: Do not break the sequence. ****
@@ -180,8 +181,6 @@ class InitialSettingOrAppPage extends HookConsumerWidget {
               analytics.logEvent(name: "uset_setting_is_null", parameters: {"uid": firebaseUserID});
               screenType.value = _InitialSettingOrAppPageScreenType.initialSetting;
             }
-          } else {
-            saveUserLaunchInfo(appUserValue);
           }
         } catch (e, st) {
           errorLogger.recordError(e, st);
@@ -192,7 +191,15 @@ class InitialSettingOrAppPage extends HookConsumerWidget {
 
       f();
       return null;
-    }, [error.value, didEndInitialSetting.value]);
+    });
+
+    useEffect(() {
+      final appUserValue = appUser.value;
+      if (appUserValue != null) {
+        saveUserLaunchInfo(appUserValue);
+      }
+      return null;
+    }, [appUser.value]);
 
     return UniversalErrorPage(
       error: error.value,
