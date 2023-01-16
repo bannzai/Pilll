@@ -1,6 +1,5 @@
 import 'dart:async';
 
-import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter_hooks/flutter_hooks.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
 import 'package:pilll/provider/force_update.dart';
@@ -107,9 +106,14 @@ class Root extends HookConsumerWidget {
       });
       return const ScaffoldIndicator();
     }
+
+    // Main stream
     return UniversalErrorPage(
       error: error.value,
-      reload: () => ref.refresh(refreshAppProvider),
+      reload: () {
+        error.value = null;
+        return ref.refresh(refreshAppProvider);
+      },
       child: () {
         final uid = userID.value;
         if (uid == null) {

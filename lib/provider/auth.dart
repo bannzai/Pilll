@@ -37,9 +37,10 @@ final firebaseSignInProvider = FutureProvider<User>((ref) async {
         completer.complete(firebaseUser);
         subscription?.cancel();
       });
-      Future.delayed(const Duration(seconds: 30)).then((_) {
+      Future.delayed(const Duration(seconds: 10)).then((_) {
         if (!completer.isCompleted) {
-          completer.completeError(const FormatException("タイムアウトしました。通信環境をお確かめの上再度お試しください"));
+          completer.complete(null);
+          subscription?.cancel();
         }
       });
       return completer.future;
@@ -75,6 +76,12 @@ final firebaseSignInProvider = FutureProvider<User>((ref) async {
       subscription = nonOptionalStream.listen((firebaseUser) {
         completer.complete(firebaseUser);
         subscription?.cancel();
+      });
+      Future.delayed(const Duration(seconds: 10)).then((_) {
+        if (!completer.isCompleted) {
+          completer.completeError(const FormatException("タイムアウトしました。通信環境をお確かめの上再度お試しください"));
+          subscription?.cancel();
+        }
       });
       return completer.future;
     });
