@@ -107,6 +107,8 @@ class Root extends HookConsumerWidget {
       });
       return const ScaffoldIndicator();
     }
+
+    // Main stream
     return UniversalErrorPage(
       error: error.value,
       reload: () => ref.refresh(refreshAppProvider),
