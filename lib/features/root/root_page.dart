@@ -31,7 +31,6 @@ class Root extends HookConsumerWidget {
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {
-    final firebaseUser = ref.watch(firebaseUserStateProvider);
     final signInFirebaseUser = ref.watch(firebaseSignInProvider.future);
     final checkForceUpdate = ref.watch(checkForceUpdateProvider);
     final setUserID = ref.watch(setUserIDProvider);
@@ -68,7 +67,7 @@ class Root extends HookConsumerWidget {
       return null;
     }, [true]);
 
-    // For app screen state
+    // SignIn once
     useEffect(() {
       f() async {
         // SignIn first. Keep in mind that this method is called first.
@@ -83,7 +82,7 @@ class Root extends HookConsumerWidget {
 
       f();
       return null;
-    }, [firebaseUser.asData?.value?.uid]);
+    }, []);
 
     useEffect(() {
       final userIDValue = userID.value;
