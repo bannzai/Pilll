@@ -157,7 +157,6 @@ class InitialSettingOrAppPage extends HookConsumerWidget {
 
     final didEndInitialSetting = ref.watch(didEndInitialSettingProvider);
 
-    // It is ok, every time this effect is evaluted;
     useEffect(() {
       f() async {
         // **** BEGIN: Do not break the sequence. ****
@@ -193,7 +192,7 @@ class InitialSettingOrAppPage extends HookConsumerWidget {
 
       f();
       return null;
-    });
+    }, [didEndInitialSetting]);
 
     useEffect(() {
       final appUserValue = appUser.value;
