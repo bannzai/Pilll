@@ -156,7 +156,7 @@ class InitialSettingOrAppPage extends HookConsumerWidget {
     final appUser = useState<User?>(null);
     final error = useState<LaunchException?>(null);
 
-    final didEndInitialSetting = ref.watch(boolSharedPreferencesProvider(BoolKey.didEndInitialSetting));
+    final didEndInitialSetting = ref.watch(didEndInitialSettingProvider);
 
     // It is ok, every time this effect is evaluted;
     useEffect(() {
