@@ -163,9 +163,8 @@ class InitialSettingOrAppPage extends HookConsumerWidget {
         // **** BEGIN: Do not break the sequence. ****
         try {
           // Decide screen type. Keep in mind that this method is called when user is logged in.
-          final didInitialSettingValue = didEndInitialSetting.value;
-          if (didInitialSettingValue != null) {
-            screenType.value = _screenType(didEndInitialSetting: didEndInitialSetting.value);
+          if (didEndInitialSetting is AsyncData) {
+            screenType.value = _screenType(didEndInitialSetting: didEndInitialSetting.requireValue);
 
             final appUserValue = appUser.value;
             if (appUserValue == null) {
