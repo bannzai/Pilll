@@ -163,23 +163,26 @@ class InitialSettingOrAppPage extends HookConsumerWidget {
         // **** BEGIN: Do not break the sequence. ****
         try {
           // Decide screen type. Keep in mind that this method is called when user is logged in.
-          screenType.value = _screenType(didEndInitialSetting: didEndInitialSetting.value);
+          final didInitialSettingValue = didEndInitialSetting.value;
+          if (didInitialSettingValue != null) {
+            screenType.value = _screenType(didEndInitialSetting: didEndInitialSetting.value);
 
-          final appUserValue = appUser.value;
-          if (appUserValue == null) {
-            // Retrieve user from app DB.
-            final user = await fetchOrCreateUser(firebaseUserID);
-            saveUserLaunchInfo(user);
-            appUser.value = user;
+            final appUserValue = appUser.value;
+            if (appUserValue == null) {
+              // Retrieve user from app DB.
+              final user = await fetchOrCreateUser(firebaseUserID);
+              saveUserLaunchInfo(user);
+              appUser.value = user;
 
-            // Rescue for old users
-            if (!user.migratedFlutter) {
-              markAsMigratedToFlutter();
-              analytics.logEvent(name: "user_is_not_migrated_flutter", parameters: {"uid": firebaseUserID});
-              screenType.value = _InitialSettingOrAppPageScreenType.initialSetting;
-            } else if (user.setting == null) {
-              analytics.logEvent(name: "uset_setting_is_null", parameters: {"uid": firebaseUserID});
-              screenType.value = _InitialSettingOrAppPageScreenType.initialSetting;
+              // Rescue for old users
+              if (!user.migratedFlutter) {
+                markAsMigratedToFlutter();
+                analytics.logEvent(name: "user_is_not_migrated_flutter", parameters: {"uid": firebaseUserID});
+                screenType.value = _InitialSettingOrAppPageScreenType.initialSetting;
+              } else if (user.setting == null) {
+                analytics.logEvent(name: "uset_setting_is_null", parameters: {"uid": firebaseUserID});
+                screenType.value = _InitialSettingOrAppPageScreenType.initialSetting;
+              }
             }
           }
         } catch (e, st) {
