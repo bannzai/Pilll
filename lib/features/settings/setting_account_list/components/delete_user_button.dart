@@ -13,7 +13,6 @@ import 'package:pilll/components/atoms/text_color.dart';
 import 'package:pilll/components/page/discard_dialog.dart';
 import 'package:pilll/features/error/error_alert.dart';
 import 'package:pilll/utils/error_log.dart';
-import 'package:pilll/utils/router.dart';
 import 'package:pilll/utils/shared_preference/keys.dart';
 
 class DeleteUserButton extends HookConsumerWidget {
@@ -68,15 +67,10 @@ class DeleteUserButton extends HookConsumerWidget {
   }) async {
     try {
       await FirebaseAuth.instance.currentUser?.delete();
+      await didEndInitialSettingNotifier.set(false);
       showDialog(
         context: context,
-        builder: (context) {
-          return _CompletedDialog(
-            onClose: () async {
-              await AppRouter.routeToInitialSetting(context, didEndInitialSettingNotifier);
-            },
-          );
-        },
+        builder: (context) => const _CompletedDialog(),
       );
     } on FirebaseAuthException catch (error, stackTrace) {
       if (error.code == "requires-recent-login") {
@@ -120,9 +114,7 @@ class DeleteUserButton extends HookConsumerWidget {
 }
 
 class _CompletedDialog extends StatelessWidget {
-  final Future<void> Function() onClose;
-
-  const _CompletedDialog({Key? key, required this.onClose}) : super(key: key);
+  const _CompletedDialog({Key? key}) : super(key: key);
   @override
   Widget build(BuildContext context) {
     return AlertDialog(
@@ -143,7 +135,7 @@ class _CompletedDialog extends StatelessWidget {
           ),
           const SizedBox(height: 24),
           const Text(
-            "初期設定画面に移動します。新しいアカウントとして引き続きご利用になる場合は再度設定をお願いいたします",
+            "アプリを一度終了します。新しく始める場合はアプリを再起動後、初期設定を行ってください。",
             style: TextStyle(
               color: TextColor.main,
               fontFamily: FontFamily.japanese,
@@ -157,8 +149,7 @@ class _CompletedDialog extends StatelessWidget {
             width: 180,
             child: PrimaryButton(
               onPressed: () async {
-                Navigator.of(context).pop();
-                await onClose();
+                exit(0);
               },
               text: "OK",
             ),

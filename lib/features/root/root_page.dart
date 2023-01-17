@@ -67,7 +67,7 @@ class Root extends HookConsumerWidget {
       return null;
     }, [true]);
 
-    // For app screen state
+    // SignIn once
     useEffect(() {
       f() async {
         // SignIn first. Keep in mind that this method is called first.
@@ -82,7 +82,7 @@ class Root extends HookConsumerWidget {
 
       f();
       return null;
-    }, [signInFirebaseUser]);
+    }, []);
 
     useEffect(() {
       final userIDValue = userID.value;
@@ -112,7 +112,7 @@ class Root extends HookConsumerWidget {
       error: error.value,
       reload: () {
         error.value = null;
-        return ref.refresh(refreshAppProvider);
+        ref.invalidate(refreshAppProvider);
       },
       child: () {
         final uid = userID.value;
@@ -162,26 +162,26 @@ class InitialSettingOrAppPage extends HookConsumerWidget {
         // **** BEGIN: Do not break the sequence. ****
         try {
           // Decide screen type. Keep in mind that this method is called when user is logged in.
-          screenType.value = _screenType(didEndInitialSetting: didEndInitialSetting.value);
+          if (didEndInitialSetting is AsyncData) {
+            screenType.value = _screenType(didEndInitialSetting: didEndInitialSetting.requireValue);
 
-          final appUserValue = appUser.value;
-          if (appUserValue == null) {
-            // Retrieve user from app DB.
-            final user = await fetchOrCreateUser(firebaseUserID);
-            saveUserLaunchInfo(user);
-            appUser.value = user;
+            final appUserValue = appUser.value;
+            if (appUserValue == null) {
+              // Retrieve user from app DB.
+              final user = await fetchOrCreateUser(firebaseUserID);
+              saveUserLaunchInfo(user);
+              appUser.value = user;
 
-            // Rescue for old users
-            if (!user.migratedFlutter) {
-              markAsMigratedToFlutter();
-              analytics.logEvent(name: "user_is_not_migrated_flutter", parameters: {"uid": firebaseUserID});
-              screenType.value = _InitialSettingOrAppPageScreenType.initialSetting;
-            } else if (user.setting == null) {
-              analytics.logEvent(name: "uset_setting_is_null", parameters: {"uid": firebaseUserID});
-              screenType.value = _InitialSettingOrAppPageScreenType.initialSetting;
+              // Rescue for old users
+              if (!user.migratedFlutter) {
+                markAsMigratedToFlutter();
+                analytics.logEvent(name: "user_is_not_migrated_flutter", parameters: {"uid": firebaseUserID});
+                screenType.value = _InitialSettingOrAppPageScreenType.initialSetting;
+              } else if (user.setting == null) {
+                analytics.logEvent(name: "uset_setting_is_null", parameters: {"uid": firebaseUserID});
+                screenType.value = _InitialSettingOrAppPageScreenType.initialSetting;
+              }
             }
-          } else {
-            saveUserLaunchInfo(appUserValue);
           }
         } catch (e, st) {
           errorLogger.recordError(e, st);
@@ -192,7 +192,15 @@ class InitialSettingOrAppPage extends HookConsumerWidget {
 
       f();
       return null;
-    }, [error.value, didEndInitialSetting.value]);
+    }, [didEndInitialSetting]);
+
+    useEffect(() {
+      final appUserValue = appUser.value;
+      if (appUserValue != null) {
+        saveUserLaunchInfo(appUserValue);
+      }
+      return null;
+    }, [appUser.value]);
 
     return UniversalErrorPage(
       error: error.value,
