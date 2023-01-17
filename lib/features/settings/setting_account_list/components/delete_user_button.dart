@@ -13,7 +13,6 @@ import 'package:pilll/components/atoms/text_color.dart';
 import 'package:pilll/components/page/discard_dialog.dart';
 import 'package:pilll/features/error/error_alert.dart';
 import 'package:pilll/utils/error_log.dart';
-import 'package:pilll/utils/router.dart';
 import 'package:pilll/utils/shared_preference/keys.dart';
 
 class DeleteUserButton extends HookConsumerWidget {
