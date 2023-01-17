@@ -31,6 +31,7 @@ class Root extends HookConsumerWidget {
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {
+    final firebaseUser = ref.watch(firebaseUserStateProvider);
     final signInFirebaseUser = ref.watch(firebaseSignInProvider.future);
     final checkForceUpdate = ref.watch(checkForceUpdateProvider);
     final setUserID = ref.watch(setUserIDProvider);
@@ -82,7 +83,7 @@ class Root extends HookConsumerWidget {
 
       f();
       return null;
-    }, [signInFirebaseUser]);
+    }, [firebaseUser.asData?.value?.uid]);
 
     useEffect(() {
       final userIDValue = userID.value;

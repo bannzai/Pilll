@@ -12,8 +12,6 @@ final firebaseUserStateProvider = StreamProvider<User?>(
 );
 
 final firebaseSignInProvider = FutureProvider<User>((ref) async {
-  final firebaseUserChanges = ref.watch(firebaseUserStateProvider.stream);
-
   analytics.logEvent(name: "current_user_provider");
   final currentUser = FirebaseAuth.instance.currentUser;
 
@@ -28,67 +26,19 @@ final firebaseSignInProvider = FutureProvider<User>((ref) async {
   } else {
     analytics.logEvent(name: "cached_current_user_not_exists");
 
-    // keep until FirebaseAuth.instance user state updated
-    final waitLatestChangedOptionalUser = Future<User?>(() {
-      final completer = Completer<User?>();
-
-      StreamSubscription<User?>? subscription;
-      subscription = firebaseUserChanges.listen((firebaseUser) {
-        completer.complete(firebaseUser);
-        subscription?.cancel();
-      });
-      Future.delayed(const Duration(seconds: 10)).then((_) {
-        if (!completer.isCompleted) {
-          completer.complete(null);
-          subscription?.cancel();
-        }
-      });
-      return completer.future;
-    });
-
-    final obtainedUser = await waitLatestChangedOptionalUser;
-    if (obtainedUser != null) {
-      analytics.logEvent(
-        name: "obtained_current_user_exists",
-        parameters: _logginParameters(obtainedUser),
-      );
-      return obtainedUser;
-    }
-
-    final anonymousUser = await FirebaseAuth.instance.signInAnonymously();
-    analytics.logEvent(name: "signin_anonymously", parameters: _logginParameters(anonymousUser.user));
+    final anonymousUserCredential = await FirebaseAuth.instance.signInAnonymously();
+    analytics.logEvent(name: "signin_anonymously", parameters: _logginParameters(anonymousUserCredential.user));
 
     final sharedPreferences = await SharedPreferences.getInstance();
     final existsUID = sharedPreferences.getString(StringKey.lastSignInAnonymousUID);
     if (existsUID == null || existsUID.isEmpty) {
-      final user = anonymousUser.user;
+      final user = anonymousUserCredential.user;
       if (user != null) {
         await sharedPreferences.setString(StringKey.lastSignInAnonymousUID, user.uid);
       }
     }
 
-    // keep until FirebaseAuth.instance user state updated
-    final waitLatestChangedUser = Future<User>(() {
-      final completer = Completer<User>();
-      final Stream<User> nonOptionalStream = firebaseUserChanges.where((event) => event != null).cast();
-
-      StreamSubscription<User>? subscription;
-      subscription = nonOptionalStream.listen((firebaseUser) {
-        completer.complete(firebaseUser);
-        subscription?.cancel();
-      });
-      Future.delayed(const Duration(seconds: 10)).then((_) {
-        if (!completer.isCompleted) {
-          completer.completeError(const FormatException("タイムアウトしました。通信環境をお確かめの上再度お試しください"));
-          subscription?.cancel();
-        }
-      });
-      return completer.future;
-    });
-
-    final User signedUser = await waitLatestChangedUser;
-    assert(anonymousUser.user?.uid == signedUser.uid);
-    return signedUser;
+    return anonymousUserCredential.user!;
   }
 });
 
