@@ -1,5 +1,7 @@
 import 'package:flutter_hooks/flutter_hooks.dart';
 import 'package:flutter_svg/flutter_svg.dart';
+import 'package:pilll/provider/shared_preferences.dart';
+import 'package:pilll/provider/user.dart';
 import 'package:pilll/utils/analytics.dart';
 import 'package:pilll/utils/auth/apple.dart';
 import 'package:pilll/utils/auth/google.dart';
@@ -19,6 +21,8 @@ import 'package:pilll/entity/pill_sheet_type.dart';
 import 'package:pilll/provider/auth.dart';
 import 'package:pilll/entity/link_account_type.dart';
 import 'package:pilll/features/sign_in/sign_in_sheet.dart';
+import 'package:pilll/utils/router.dart';
+import 'package:pilll/utils/shared_preference/keys.dart';
 
 class InitialSettingPillSheetGroupPage extends HookConsumerWidget {
   const InitialSettingPillSheetGroupPage({Key? key}) : super(key: key);
@@ -28,9 +32,12 @@ class InitialSettingPillSheetGroupPage extends HookConsumerWidget {
     final store = ref.watch(initialSettingStateNotifierProvider.notifier);
     final state = ref.watch(initialSettingStateNotifierProvider);
     final authStream = ref.watch(firebaseUserStateProvider.stream);
+    final userStream = ref.watch(userProvider.stream);
     final isAppleLinked = ref.watch(isAppleLinkedProvider);
     final isGoogleLinked = ref.watch(isGoogleLinkedProvider);
+    final didEndInitialSettingNotifier = ref.watch(boolSharedPreferencesProvider(BoolKey.didEndInitialSetting).notifier);
 
+    // For linked user
     useEffect(() {
       final subscription = authStream.listen((user) {
         if (user != null) {
@@ -57,6 +64,17 @@ class InitialSettingPillSheetGroupPage extends HookConsumerWidget {
               });
             }
           }
+        }
+      });
+
+      return subscription.cancel;
+    }, [true]);
+
+    // Skip initial setting when user already set setting.
+    useEffect(() {
+      final subscription = userStream.listen((user) async {
+        if (user.setting != null) {
+          await AppRouter.endInitialSetting(context, didEndInitialSettingNotifier);
         }
       });
 
