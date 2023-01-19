@@ -35,7 +35,7 @@ class RootPage extends HookConsumerWidget {
     final checkForceUpdate = ref.watch(checkForceUpdateProvider);
     final setUserID = ref.watch(setUserIDProvider);
 
-    final userID = useState<String?>(null);
+    final firebaseUserID = useState<String?>(null);
     final shouldForceUpdate = useState(false);
     final error = useState<LaunchException?>(null);
 
@@ -73,7 +73,7 @@ class RootPage extends HookConsumerWidget {
         // SignIn first. Keep in mind that this method is called first.
         try {
           final firebaseUser = await signInFirebaseUser;
-          userID.value = firebaseUser.uid;
+          firebaseUserID.value = firebaseUser.uid;
         } catch (e, st) {
           errorLogger.recordError(e, st);
           error.value = LaunchException("認証時にエラーが発生しました\n${ErrorMessages.connection}\n詳細:", e);
@@ -85,13 +85,13 @@ class RootPage extends HookConsumerWidget {
     }, []);
 
     useEffect(() {
-      final userIDValue = userID.value;
+      final userIDValue = firebaseUserID.value;
       if (userIDValue != null) {
         setUserID(userID: userIDValue);
       }
 
       return null;
-    }, [userID.value]);
+    }, [firebaseUserID.value]);
 
     // For force update
     if (shouldForceUpdate.value) {
@@ -115,7 +115,7 @@ class RootPage extends HookConsumerWidget {
         ref.invalidate(refreshAppProvider);
       },
       child: () {
-        final uid = userID.value;
+        final uid = firebaseUserID.value;
         if (uid == null) {
           return const ScaffoldIndicator();
         } else {
