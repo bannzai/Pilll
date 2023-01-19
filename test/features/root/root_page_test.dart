@@ -9,7 +9,6 @@ import 'package:pilll/provider/auth.dart';
 import 'package:pilll/provider/database.dart';
 import 'package:pilll/provider/force_update.dart';
 import 'package:pilll/provider/set_user_id.dart';
-import 'package:pilll/provider/shared_preference.dart';
 import 'package:pilll/provider/shared_preferences.dart';
 import 'package:pilll/provider/user.dart';
 import 'package:pilll/utils/analytics.dart';
