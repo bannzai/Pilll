@@ -81,7 +81,6 @@ void main() {
       await tester.pumpWidget(
         ProviderScope(
           overrides: [
-            firebaseSignInProvider.overrideWith((ref) => Future.value(fakeFirebaseUser)),
             checkForceUpdateProvider.overrideWith((_) => checkForceUpdate),
             setUserIDProvider.overrideWith((ref) => setUserID),
             databaseProvider.overrideWith((ref) => MockDatabaseConnection()),
@@ -131,7 +130,6 @@ void main() {
       await tester.pumpWidget(
         ProviderScope(
           overrides: [
-            firebaseSignInProvider.overrideWith((ref) => Future.value(fakeFirebaseUser)),
             checkForceUpdateProvider.overrideWith((_) => checkForceUpdate),
             setUserIDProvider.overrideWith((ref) => setUserID),
             databaseProvider.overrideWith((ref) => MockDatabaseConnection()),
