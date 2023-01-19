@@ -61,7 +61,6 @@ class StringSharedPreferences extends FamilyAsyncNotifier<String?, String> {
   FutureOr<String?> build(String arg) async {
     key = arg;
     sharedPreferences = await ref.watch(sharedPreferenceProvider.future);
-
     return sharedPreferences.getString(key);
   }
 }
