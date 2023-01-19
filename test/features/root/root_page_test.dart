@@ -78,8 +78,9 @@ void main() {
       final markAsMigratedToFlutter = MockMarkAsMigratedToFlutter();
       when(markAsMigratedToFlutter()).thenAnswer((realInvocation) => Future.value());
 
-      final sharedPreferences = await SharedPreferences.getInstance();
       SharedPreferences.setMockInitialValues({});
+      final sharedPreferences = await SharedPreferences.getInstance();
+
       await tester.pumpWidget(
         ProviderScope(
           overrides: [
@@ -131,8 +132,9 @@ void main() {
       final markAsMigratedToFlutter = MockMarkAsMigratedToFlutter();
       when(markAsMigratedToFlutter()).thenAnswer((realInvocation) => Future.value());
 
-      final sharedPreferences = await SharedPreferences.getInstance();
       SharedPreferences.setMockInitialValues({});
+      final sharedPreferences = await SharedPreferences.getInstance();
+
       await tester.pumpWidget(
         ProviderScope(
           overrides: [
@@ -186,8 +188,9 @@ void main() {
       final markAsMigratedToFlutter = MockMarkAsMigratedToFlutter();
       when(markAsMigratedToFlutter()).thenAnswer((realInvocation) => Future.value());
 
-      final sharedPreferences = await SharedPreferences.getInstance();
       SharedPreferences.setMockInitialValues({});
+      final sharedPreferences = await SharedPreferences.getInstance();
+
       await tester.pumpWidget(
         ProviderScope(
           overrides: [
@@ -227,10 +230,11 @@ void main() {
       final markAsMigratedToFlutter = MockMarkAsMigratedToFlutter();
       when(markAsMigratedToFlutter()).thenAnswer((realInvocation) => Future.value());
 
-      final sharedPreferences = await SharedPreferences.getInstance();
       SharedPreferences.setMockInitialValues({
         BoolKey.didEndInitialSetting: true,
       });
+      final sharedPreferences = await SharedPreferences.getInstance();
+
       await tester.pumpWidget(
         ProviderScope(
           overrides: [
@@ -270,10 +274,11 @@ void main() {
       final markAsMigratedToFlutter = MockMarkAsMigratedToFlutter();
       when(markAsMigratedToFlutter()).thenAnswer((realInvocation) => Future.value());
 
-      final sharedPreferences = await SharedPreferences.getInstance();
       SharedPreferences.setMockInitialValues({
         BoolKey.didEndInitialSetting: true,
       });
+      final sharedPreferences = await SharedPreferences.getInstance();
+
       await tester.pumpWidget(
         ProviderScope(
           overrides: [
@@ -313,10 +318,11 @@ void main() {
       final markAsMigratedToFlutter = MockMarkAsMigratedToFlutter();
       when(markAsMigratedToFlutter()).thenAnswer((realInvocation) => Future.value());
 
-      final sharedPreferences = await SharedPreferences.getInstance();
       SharedPreferences.setMockInitialValues({
         BoolKey.didEndInitialSetting: true,
       });
+      final sharedPreferences = await SharedPreferences.getInstance();
+
       await tester.pumpWidget(
         ProviderScope(
           overrides: [
