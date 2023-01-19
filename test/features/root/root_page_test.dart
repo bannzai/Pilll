@@ -2,8 +2,8 @@ import 'package:firebase_auth/firebase_auth.dart' as firebase_auth;
 import 'package:pilll/components/molecules/indicator.dart';
 import 'package:pilll/entity/setting.codegen.dart';
 import 'package:pilll/entity/user.codegen.dart';
-import 'package:pilll/features/home/home_page.dart';
 import 'package:pilll/features/initial_setting/pill_sheet_group/initial_setting_pill_sheet_group_page.dart';
+import 'package:pilll/features/root/initial_setting_or_app_page.dart';
 import 'package:pilll/features/root/root_page.dart';
 import 'package:pilll/provider/auth.dart';
 import 'package:pilll/provider/database.dart';
@@ -21,7 +21,6 @@ import 'package:hooks_riverpod/hooks_riverpod.dart';
 import 'package:mockito/mockito.dart';
 import 'package:intl/date_symbol_data_local.dart';
 import 'package:pilll/utils/error_log.dart';
-import 'package:pilll/utils/shared_preference/keys.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
 import '../../helper/fake.dart';
@@ -186,10 +185,6 @@ void main() {
   });
 
   group('#calcScreenType', () {
-    testWidgets('user or didEndInitialSetting is not fetched', (WidgetTester tester) async {
-      final screenType = calcScreenType(user: null, didEndInitialSettingAsyncValue: const AsyncLoading());
-      expect(screenType, InitialSettingOrAppPageScreenType.loading);
-    });
     testWidgets('didEndInitialSetting is not exist', (WidgetTester tester) async {
       final fakeUser = _FakeUser(true, _FakeSetting());
       final screenType = calcScreenType(user: fakeUser, didEndInitialSettingAsyncValue: const AsyncData(null));

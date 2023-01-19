@@ -5,6 +5,7 @@ import 'package:firebase_analytics/firebase_analytics.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/foundation.dart';
 import 'package:flutter/services.dart';
+import 'package:pilll/features/root/user_setup_page.dart';
 import 'package:pilll/utils/analytics.dart';
 import 'package:pilll/components/atoms/color.dart';
 import 'package:pilll/components/atoms/font.dart';
@@ -88,7 +89,7 @@ class App extends StatelessWidget {
         ),
       ),
       home: ProviderScope(
-        child: RootPage(builder: (_, userID) => InitialSettingOrAppPage(userID: userID)),
+        child: RootPage(builder: (_, userID) => UserSetupPage(userID: userID)),
       ),
       localizationsDelegates: AppLocalizations.localizationsDelegates,
       supportedLocales: AppLocalizations.supportedLocales,
