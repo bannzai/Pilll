@@ -88,7 +88,7 @@ class App extends StatelessWidget {
         ),
       ),
       home: const ProviderScope(
-        child: Root(),
+        child: RootPage(),
       ),
       localizationsDelegates: AppLocalizations.localizationsDelegates,
       supportedLocales: AppLocalizations.supportedLocales,

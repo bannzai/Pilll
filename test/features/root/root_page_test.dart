@@ -101,7 +101,7 @@ void main() {
           ],
           child: const MaterialApp(
             home: Material(
-              child: Root(),
+              child: RootPage(),
             ),
           ),
         ),
@@ -155,7 +155,7 @@ void main() {
           ],
           child: const MaterialApp(
             home: Material(
-              child: Root(),
+              child: RootPage(),
             ),
           ),
         ),

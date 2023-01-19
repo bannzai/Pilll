@@ -26,8 +26,8 @@ import 'package:url_launcher/url_launcher.dart';
 // FIXME: test 時にboolSharedPreferencesProviderをそのまま使うとフリーズする
 final didEndInitialSettingProvider = Provider((ref) => ref.watch(boolSharedPreferencesProvider(BoolKey.didEndInitialSetting)));
 
-class Root extends HookConsumerWidget {
-  const Root({Key? key}) : super(key: key);
+class RootPage extends HookConsumerWidget {
+  const RootPage({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {
