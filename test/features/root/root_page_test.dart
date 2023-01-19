@@ -103,7 +103,6 @@ void main() {
             isGoogleLinkedProvider.overrideWith((ref) => false),
             userProvider.overrideWith((ref) => Stream.value(fakeUser)),
             userIsNotAnonymousProvider.overrideWith((ref) => false),
-            mustSharedPreferenceProvider.overrideWith((ref) => sharedPreferences),
           ],
           child: MaterialApp(
             home: Material(
@@ -139,7 +138,6 @@ void main() {
       when(markAsMigratedToFlutter()).thenAnswer((realInvocation) => Future.value());
 
       SharedPreferences.setMockInitialValues({});
-      final sharedPreferences = await SharedPreferences.getInstance();
 
       await tester.pumpWidget(
         ProviderScope(
@@ -157,7 +155,6 @@ void main() {
             isGoogleLinkedProvider.overrideWith((ref) => false),
             userProvider.overrideWith((ref) => Stream.value(fakeUser)),
             userIsNotAnonymousProvider.overrideWith((ref) => false),
-            mustSharedPreferenceProvider.overrideWith((ref) => sharedPreferences),
           ],
           child: MaterialApp(
             home: Material(
