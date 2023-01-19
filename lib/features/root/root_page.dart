@@ -18,7 +18,7 @@ import 'package:flutter/material.dart';
 import 'package:url_launcher/url_launcher.dart';
 
 class RootPage extends HookConsumerWidget {
-  // NOTE: RootPageより下のWidgetのProviderを用意するのは現実的では無いので、builderからメインストリームのWidgetを決定する
+  // NOTE: テスト時にRootPageより下のWidgetのProviderを用意するのは現実的では無いので、builderからメインストリームのWidgetを決定する。
   final Widget Function(BuildContext, String) builder;
   const RootPage({Key? key, required this.builder}) : super(key: key);
 
@@ -47,6 +47,8 @@ class RootPage extends HookConsumerWidget {
 
       f() async {
         try {
+          // 計測してみたらこの処理が結構長かった。通常の起動時間に影響があるので、この処理を非同期にする。
+          // 多少データが変更される可能性があるが、それは飲み込むことにする。ほとんど問題はないはず
           if (await checkForceUpdate()) {
             shouldForceUpdate.value = true;
           }
