@@ -1,3 +1,4 @@
+import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter_hooks/flutter_hooks.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:pilll/provider/shared_preferences.dart';
@@ -31,7 +32,6 @@ class InitialSettingPillSheetGroupPage extends HookConsumerWidget {
   Widget build(BuildContext context, WidgetRef ref) {
     final store = ref.watch(initialSettingStateNotifierProvider.notifier);
     final state = ref.watch(initialSettingStateNotifierProvider);
-    final authStream = ref.watch(firebaseUserStateProvider.stream);
     final userStream = ref.watch(userProvider.stream);
     final isAppleLinked = ref.watch(isAppleLinkedProvider);
     final isGoogleLinked = ref.watch(isGoogleLinkedProvider);
@@ -39,36 +39,35 @@ class InitialSettingPillSheetGroupPage extends HookConsumerWidget {
 
     // For linked user
     useEffect(() {
-      final subscription = authStream.listen((user) {
-        if (user != null) {
-          if (!user.isAnonymous) {
-            analytics.logEvent(name: "initial_setting_signin_account", parameters: {"uid": user.uid});
+      final user = FirebaseAuth.instance.currentUser;
+      if (user != null) {
+        if (!user.isAnonymous) {
+          analytics.logEvent(name: "initial_setting_signin_account", parameters: {"uid": user.uid});
 
-            final LinkAccountType? accountType = () {
-              if (isAppleLinked) {
-                return LinkAccountType.apple;
-              } else if (isGoogleLinked) {
-                return LinkAccountType.google;
-              } else {
-                return null;
-              }
-            }();
-            if (accountType != null) {
-              Future.microtask(() {
-                ScaffoldMessenger.of(context).showSnackBar(
-                  SnackBar(
-                    duration: const Duration(seconds: 2),
-                    content: Text("${accountType.providerName}でログインしました"),
-                  ),
-                );
-              });
+          final LinkAccountType? accountType = () {
+            if (isAppleLinked) {
+              return LinkAccountType.apple;
+            } else if (isGoogleLinked) {
+              return LinkAccountType.google;
+            } else {
+              return null;
             }
+          }();
+          if (accountType != null) {
+            Future.microtask(() {
+              ScaffoldMessenger.of(context).showSnackBar(
+                SnackBar(
+                  duration: const Duration(seconds: 2),
+                  content: Text("${accountType.providerName}でログインしました"),
+                ),
+              );
+            });
           }
         }
-      });
+      }
 
-      return subscription.cancel;
-    }, [true]);
+      return null;
+    }, [isAppleLinked, isGoogleLinked]);
 
     // Skip initial setting when user already set setting.
     useEffect(() {
