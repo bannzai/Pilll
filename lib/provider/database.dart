@@ -1,6 +1,5 @@
 // ignore_for_file: prefer_function_declarations_over_variables
 
-import 'package:firebase_auth/firebase_auth.dart' as firebase;
 import 'package:flutter/foundation.dart';
 import 'package:pilll/entity/diary.codegen.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
@@ -16,7 +15,7 @@ import 'package:pilll/provider/auth.dart';
 
 final databaseProvider = Provider<DatabaseConnection>((ref) {
   final stream = ref.watch(firebaseUserStateProvider);
-  final uid = stream.asData?.value?.uid ?? firebase.FirebaseAuth.instance.currentUser?.uid;
+  final uid = stream.asData?.value?.uid;
   debugPrint("[DEBUG] database uid is $uid");
   return DatabaseConnection(uid);
 });
