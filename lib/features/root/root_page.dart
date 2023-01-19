@@ -141,7 +141,7 @@ class LaunchException {
 // FIXME: test 時にboolSharedPreferencesProviderをそのまま使うとフリーズする
 final didEndInitialSettingProvider = Provider((ref) => ref.watch(boolSharedPreferencesProvider(BoolKey.didEndInitialSetting)));
 
-enum _InitialSettingOrAppPageScreenType { loading, initialSetting, app }
+enum InitialSettingOrAppPageScreenType { loading, initialSetting, app }
 
 class InitialSettingOrAppPage extends HookConsumerWidget {
   final String userID;
@@ -152,38 +152,23 @@ class InitialSettingOrAppPage extends HookConsumerWidget {
     final fetchOrCreateUser = ref.watch(fetchOrCreateUserProvider);
     final saveUserLaunchInfo = ref.watch(saveUserLaunchInfoProvider);
     final markAsMigratedToFlutter = ref.watch(markAsMigratedToFlutterProvider);
+    final didEndInitialSettingAsyncValue = ref.watch(didEndInitialSettingProvider);
 
-    final screenType = useState(_InitialSettingOrAppPageScreenType.loading);
     final appUser = useState<User?>(null);
     final error = useState<LaunchException?>(null);
+    final screenType = calcScreenType(user: appUser.value, didEndInitialSettingAsyncValue: didEndInitialSettingAsyncValue);
 
-    final didEndInitialSetting = ref.watch(didEndInitialSettingProvider);
-
+    // Setup user
     useEffect(() {
       f() async {
         // **** BEGIN: Do not break the sequence. ****
         try {
           // Decide screen type. Keep in mind that this method is called when user is logged in.
-          if (didEndInitialSetting is AsyncData) {
-            screenType.value = _screenType(didEndInitialSetting: didEndInitialSetting.requireValue);
-
-            final appUserValue = appUser.value;
-            if (appUserValue == null) {
-              // Retrieve user from app DB.
-              final user = await fetchOrCreateUser(userID);
-              saveUserLaunchInfo(user);
-              appUser.value = user;
-
-              // Rescue for old users
-              if (!user.migratedFlutter) {
-                markAsMigratedToFlutter();
-                analytics.logEvent(name: "user_is_not_migrated_flutter", parameters: {"uid": userID});
-                screenType.value = _InitialSettingOrAppPageScreenType.initialSetting;
-              } else if (user.setting == null) {
-                analytics.logEvent(name: "uset_setting_is_null", parameters: {"uid": userID});
-                screenType.value = _InitialSettingOrAppPageScreenType.initialSetting;
-              }
-            }
+          final appUserValue = appUser.value;
+          if (appUserValue == null) {
+            // Retrieve user from app DB.
+            final user = await fetchOrCreateUser(userID);
+            appUser.value = user;
           }
         } catch (e, st) {
           errorLogger.recordError(e, st);
@@ -194,12 +179,20 @@ class InitialSettingOrAppPage extends HookConsumerWidget {
 
       f();
       return null;
-    }, [didEndInitialSetting]);
+    }, []);
 
     useEffect(() {
       final appUserValue = appUser.value;
       if (appUserValue != null) {
         saveUserLaunchInfo(appUserValue);
+
+        // MUST initial setting user
+        if (!appUserValue.migratedFlutter) {
+          markAsMigratedToFlutter();
+          analytics.logEvent(name: "user_is_not_migrated_flutter", parameters: {"uid": userID});
+        } else if (appUserValue.setting == null) {
+          analytics.logEvent(name: "uset_setting_is_null", parameters: {"uid": userID});
+        }
       }
       return null;
     }, [appUser.value]);
@@ -208,29 +201,39 @@ class InitialSettingOrAppPage extends HookConsumerWidget {
       error: error.value,
       reload: () => ref.refresh(refreshAppProvider),
       child: () {
-        switch (screenType.value) {
-          case _InitialSettingOrAppPageScreenType.loading:
+        switch (screenType) {
+          case InitialSettingOrAppPageScreenType.loading:
             return const ScaffoldIndicator();
-          case _InitialSettingOrAppPageScreenType.initialSetting:
+          case InitialSettingOrAppPageScreenType.initialSetting:
             return InitialSettingPillSheetGroupPageRoute.screen();
-          case _InitialSettingOrAppPageScreenType.app:
+          case InitialSettingOrAppPageScreenType.app:
             return const HomePage();
         }
       }(),
     );
   }
+}
 
-  _InitialSettingOrAppPageScreenType _screenType({required bool? didEndInitialSetting}) {
-    if (didEndInitialSetting == null) {
-      analytics.logEvent(name: "did_end_i_s_is_null");
-      return _InitialSettingOrAppPageScreenType.initialSetting;
-    }
-    if (!didEndInitialSetting) {
-      analytics.logEvent(name: "did_end_i_s_is_false");
-      return _InitialSettingOrAppPageScreenType.initialSetting;
-    }
-
-    analytics.logEvent(name: "screen_type_is_home");
-    return _InitialSettingOrAppPageScreenType.app;
+InitialSettingOrAppPageScreenType calcScreenType({required User? user, required AsyncValue<bool?> didEndInitialSettingAsyncValue}) {
+  if (user == null || didEndInitialSettingAsyncValue is! AsyncData) {
+    return InitialSettingOrAppPageScreenType.loading;
   }
+  if (!user.migratedFlutter) {
+    return InitialSettingOrAppPageScreenType.initialSetting;
+  } else if (user.setting == null) {
+    return InitialSettingOrAppPageScreenType.initialSetting;
+  }
+
+  final didEndInitialSetting = didEndInitialSettingAsyncValue.value;
+  if (didEndInitialSetting == null) {
+    analytics.logEvent(name: "did_end_i_s_is_null");
+    return InitialSettingOrAppPageScreenType.initialSetting;
+  }
+  if (!didEndInitialSetting) {
+    analytics.logEvent(name: "did_end_i_s_is_false");
+    return InitialSettingOrAppPageScreenType.initialSetting;
+  }
+
+  analytics.logEvent(name: "screen_type_is_home");
+  return InitialSettingOrAppPageScreenType.app;
 }
