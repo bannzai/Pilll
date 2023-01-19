@@ -64,9 +64,7 @@ class UserSetupPage extends HookConsumerWidget {
         if (appUserValue == null) {
           return const ScaffoldIndicator();
         } else {
-          return InitialSettingOrAppPage(
-            user: appUserValue,
-          );
+          return const InitialSettingOrAppPage();
         }
       }(),
     );

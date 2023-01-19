@@ -21,13 +21,14 @@ enum InitialSettingOrAppPageScreenType { loading, initialSetting, app }
 // InitialSettingかAppのメインストリームのWidgetに分岐する
 // 主にdidEndInitialSettingの値によって分岐するが、下位互換や何らかの理由でuser.settingがnullになってしまったユーザーのためにuserの値を見てinitialSettingに分岐するかも決定する
 class InitialSettingOrAppPage extends HookConsumerWidget {
-  final User user;
-  const InitialSettingOrAppPage({Key? key, required this.user}) : super(key: key);
+  const InitialSettingOrAppPage({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {
     final markAsMigratedToFlutter = ref.watch(markAsMigratedToFlutterProvider);
     final didEndInitialSettingAsyncValue = ref.watch(didEndInitialSettingProvider);
+    // UserSetupPageでUserはできている。ここでwatchしないとInitialSetting -> Appへの遷移が成立しない
+    final user = ref.watch(userProvider).requireValue;
 
     final error = useState<LaunchException?>(null);
     final screenType = calcScreenType(user: user, didEndInitialSettingAsyncValue: didEndInitialSettingAsyncValue);
