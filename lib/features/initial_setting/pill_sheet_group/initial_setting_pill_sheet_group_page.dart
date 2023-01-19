@@ -1,5 +1,8 @@
+import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter_hooks/flutter_hooks.dart';
 import 'package:flutter_svg/flutter_svg.dart';
+import 'package:pilll/provider/shared_preferences.dart';
+import 'package:pilll/provider/user.dart';
 import 'package:pilll/utils/analytics.dart';
 import 'package:pilll/utils/auth/apple.dart';
 import 'package:pilll/utils/auth/google.dart';
@@ -16,9 +19,15 @@ import 'package:pilll/components/atoms/text_color.dart';
 import 'package:flutter/material.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
 import 'package:pilll/entity/pill_sheet_type.dart';
-import 'package:pilll/provider/auth.dart';
 import 'package:pilll/entity/link_account_type.dart';
 import 'package:pilll/features/sign_in/sign_in_sheet.dart';
+import 'package:pilll/utils/router.dart';
+import 'package:pilll/utils/shared_preference/keys.dart';
+
+// FirebaseAuth.instance.currentUser をそのまま使うとテストで FirebaseApp.configureされてないと怒られるのでとりあえずこれで回避
+final userIsNotAnonymousProvider = Provider((ref) {
+  return FirebaseAuth.instance.currentUser?.isAnonymous == false;
+});
 
 class InitialSettingPillSheetGroupPage extends HookConsumerWidget {
   const InitialSettingPillSheetGroupPage({Key? key}) : super(key: key);
@@ -27,36 +36,46 @@ class InitialSettingPillSheetGroupPage extends HookConsumerWidget {
   Widget build(BuildContext context, WidgetRef ref) {
     final store = ref.watch(initialSettingStateNotifierProvider.notifier);
     final state = ref.watch(initialSettingStateNotifierProvider);
-    final authStream = ref.watch(firebaseUserStateProvider.stream);
+    final userStream = ref.watch(userProvider.stream);
     final isAppleLinked = ref.watch(isAppleLinkedProvider);
     final isGoogleLinked = ref.watch(isGoogleLinkedProvider);
+    final didEndInitialSettingNotifier = ref.watch(boolSharedPreferencesProvider(BoolKey.didEndInitialSetting).notifier);
+    final userIsNotAnonymous = ref.watch(userIsNotAnonymousProvider);
 
+    // For linked user
     useEffect(() {
-      final subscription = authStream.listen((user) {
-        if (user != null) {
-          if (!user.isAnonymous) {
-            analytics.logEvent(name: "initial_setting_signin_account", parameters: {"uid": user.uid});
+      if (userIsNotAnonymous) {
+        analytics.logEvent(name: "initial_setting_signin_account", parameters: {"uid": FirebaseAuth.instance.currentUser?.uid});
 
-            final LinkAccountType? accountType = () {
-              if (isAppleLinked) {
-                return LinkAccountType.apple;
-              } else if (isGoogleLinked) {
-                return LinkAccountType.google;
-              } else {
-                return null;
-              }
-            }();
-            if (accountType != null) {
-              Future.microtask(() {
-                ScaffoldMessenger.of(context).showSnackBar(
-                  SnackBar(
-                    duration: const Duration(seconds: 2),
-                    content: Text("${accountType.providerName}でログインしました"),
-                  ),
-                );
-              });
-            }
+        final LinkAccountType? accountType = () {
+          if (isAppleLinked) {
+            return LinkAccountType.apple;
+          } else if (isGoogleLinked) {
+            return LinkAccountType.google;
+          } else {
+            return null;
           }
+        }();
+        if (accountType != null) {
+          Future.microtask(() {
+            ScaffoldMessenger.of(context).showSnackBar(
+              SnackBar(
+                duration: const Duration(seconds: 2),
+                content: Text("${accountType.providerName}でログインしました"),
+              ),
+            );
+          });
+        }
+      }
+
+      return null;
+    }, [isAppleLinked, isGoogleLinked]);
+
+    // Skip initial setting when user already set setting.
+    useEffect(() {
+      final subscription = userStream.listen((user) async {
+        if (user.setting != null) {
+          await AppRouter.endInitialSetting(context, didEndInitialSettingNotifier);
         }
       });
 

@@ -16,6 +16,7 @@ import 'package:pilll/provider/auth.dart';
 
 final databaseProvider = Provider<DatabaseConnection>((ref) {
   final stream = ref.watch(firebaseUserStateProvider);
+  // 初回起動の時には.userChanges()のstreamは流れてこないので、currentUserのidを使う
   final uid = stream.asData?.value?.uid ?? firebase.FirebaseAuth.instance.currentUser?.uid;
   debugPrint("[DEBUG] database uid is $uid");
   return DatabaseConnection(uid);
