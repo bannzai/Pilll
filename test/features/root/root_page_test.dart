@@ -185,180 +185,35 @@ void main() {
     });
   });
 
-  group('#InitialSettingOrAppPage', () {
+  group('#calcScreenType', () {
+    testWidgets('user or didEndInitialSetting is not fetched', (WidgetTester tester) async {
+      final screenType = calcScreenType(user: null, didEndInitialSettingAsyncValue: const AsyncLoading());
+      expect(screenType, InitialSettingOrAppPageScreenType.loading);
+    });
     testWidgets('didEndInitialSetting is not exist', (WidgetTester tester) async {
-      final fakeFirebaseUser = _FakeFirebaseUser();
       final fakeUser = _FakeUser(true, _FakeSetting());
-
-      final fetchOrCreateUser = MockFetchOrCreateUser();
-      when(fetchOrCreateUser(fakeFirebaseUser.uid)).thenAnswer((realInvocation) => Future.value(fakeUser));
-
-      final saveUserLaunchInfo = MockSaveUserLaunchInfo();
-      when(saveUserLaunchInfo(fakeUser)).thenReturn(null);
-
-      final markAsMigratedToFlutter = MockMarkAsMigratedToFlutter();
-      when(markAsMigratedToFlutter()).thenAnswer((realInvocation) => Future.value());
-
-      SharedPreferences.setMockInitialValues({});
-      final sharedPreferences = await SharedPreferences.getInstance();
-
-      await tester.pumpWidget(
-        ProviderScope(
-          overrides: [
-            fetchOrCreateUserProvider.overrideWith((_) => fetchOrCreateUser),
-            databaseProvider.overrideWith((ref) => MockDatabaseConnection()),
-            saveUserLaunchInfoProvider.overrideWith((ref) => saveUserLaunchInfo),
-            markAsMigratedToFlutterProvider.overrideWith((ref) => markAsMigratedToFlutter),
-            didEndInitialSettingProvider.overrideWithValue(const AsyncValue.data(null)),
-            userProvider.overrideWith((ref) => Stream.value(fakeUser)),
-            userIsNotAnonymousProvider.overrideWith((ref) => false),
-            mustSharedPreferenceProvider.overrideWith((ref) => sharedPreferences),
-          ],
-          child: MaterialApp(
-            home: Material(
-              child: InitialSettingOrAppPage(userID: fakeFirebaseUser.uid),
-            ),
-          ),
-        ),
-      );
-      await tester.pump();
-
-      expect(
-        find.byWidgetPredicate((widget) => widget is InitialSettingPillSheetGroupPage),
-        findsOneWidget,
-      );
+      final screenType = calcScreenType(user: fakeUser, didEndInitialSettingAsyncValue: const AsyncData(null));
+      expect(screenType, InitialSettingOrAppPageScreenType.initialSetting);
+    });
+    testWidgets('didEndInitialSetting is false', (WidgetTester tester) async {
+      final fakeUser = _FakeUser(true, _FakeSetting());
+      final screenType = calcScreenType(user: fakeUser, didEndInitialSettingAsyncValue: const AsyncData(false));
+      expect(screenType, InitialSettingOrAppPageScreenType.initialSetting);
     });
     testWidgets('didEndInitialSetting is true', (WidgetTester tester) async {
-      final fakeFirebaseUser = _FakeFirebaseUser();
       final fakeUser = _FakeUser(true, _FakeSetting());
-
-      final fetchOrCreateUser = MockFetchOrCreateUser();
-      when(fetchOrCreateUser(fakeFirebaseUser.uid)).thenAnswer((realInvocation) => Future.value(fakeUser));
-
-      final saveUserLaunchInfo = MockSaveUserLaunchInfo();
-      when(saveUserLaunchInfo(fakeUser)).thenReturn(null);
-
-      final markAsMigratedToFlutter = MockMarkAsMigratedToFlutter();
-      when(markAsMigratedToFlutter()).thenAnswer((realInvocation) => Future.value());
-
-      SharedPreferences.setMockInitialValues({
-        BoolKey.didEndInitialSetting: true,
-      });
-      final sharedPreferences = await SharedPreferences.getInstance();
-
-      await tester.pumpWidget(
-        ProviderScope(
-          overrides: [
-            fetchOrCreateUserProvider.overrideWith((_) => fetchOrCreateUser),
-            databaseProvider.overrideWith((ref) => MockDatabaseConnection()),
-            saveUserLaunchInfoProvider.overrideWith((ref) => saveUserLaunchInfo),
-            markAsMigratedToFlutterProvider.overrideWith((ref) => markAsMigratedToFlutter),
-            didEndInitialSettingProvider.overrideWithValue(const AsyncValue.data(true)),
-            userProvider.overrideWith((ref) => Stream.value(fakeUser)),
-            userIsNotAnonymousProvider.overrideWith((ref) => false),
-            mustSharedPreferenceProvider.overrideWith((ref) => sharedPreferences),
-          ],
-          child: MaterialApp(
-            home: Material(
-              child: InitialSettingOrAppPage(userID: fakeFirebaseUser.uid),
-            ),
-          ),
-        ),
-      );
-      await tester.pump();
-
-      expect(
-        find.byWidgetPredicate((widget) => widget is HomePage),
-        findsOneWidget,
-      );
+      final screenType = calcScreenType(user: fakeUser, didEndInitialSettingAsyncValue: const AsyncData(true));
+      expect(screenType, InitialSettingOrAppPageScreenType.app);
     });
     testWidgets('didEndInitialSetting is true and user.migratedFlutter is false', (WidgetTester tester) async {
-      final fakeFirebaseUser = _FakeFirebaseUser();
       final fakeUser = _FakeUser(false, _FakeSetting());
-
-      final fetchOrCreateUser = MockFetchOrCreateUser();
-      when(fetchOrCreateUser(fakeFirebaseUser.uid)).thenAnswer((realInvocation) => Future.value(fakeUser));
-
-      final saveUserLaunchInfo = MockSaveUserLaunchInfo();
-      when(saveUserLaunchInfo(fakeUser)).thenReturn(null);
-
-      final markAsMigratedToFlutter = MockMarkAsMigratedToFlutter();
-      when(markAsMigratedToFlutter()).thenAnswer((realInvocation) => Future.value());
-
-      SharedPreferences.setMockInitialValues({
-        BoolKey.didEndInitialSetting: true,
-      });
-      final sharedPreferences = await SharedPreferences.getInstance();
-
-      await tester.pumpWidget(
-        ProviderScope(
-          overrides: [
-            fetchOrCreateUserProvider.overrideWith((_) => fetchOrCreateUser),
-            databaseProvider.overrideWith((ref) => MockDatabaseConnection()),
-            saveUserLaunchInfoProvider.overrideWith((ref) => saveUserLaunchInfo),
-            markAsMigratedToFlutterProvider.overrideWith((ref) => markAsMigratedToFlutter),
-            didEndInitialSettingProvider.overrideWithValue(const AsyncValue.data(true)),
-            userProvider.overrideWith((ref) => Stream.value(fakeUser)),
-            userIsNotAnonymousProvider.overrideWith((ref) => false),
-            mustSharedPreferenceProvider.overrideWith((ref) => sharedPreferences),
-          ],
-          child: MaterialApp(
-            home: Material(
-              child: InitialSettingOrAppPage(userID: fakeFirebaseUser.uid),
-            ),
-          ),
-        ),
-      );
-      await tester.pump();
-
-      expect(
-        find.byWidgetPredicate((widget) => widget is InitialSettingPillSheetGroupPage),
-        findsOneWidget,
-      );
+      final screenType = calcScreenType(user: fakeUser, didEndInitialSettingAsyncValue: const AsyncData(true));
+      expect(screenType, InitialSettingOrAppPageScreenType.initialSetting);
     });
     testWidgets('didEndInitialSetting is true and user.migratedFlutter is true but setting is null', (WidgetTester tester) async {
-      final fakeFirebaseUser = _FakeFirebaseUser();
       final fakeUser = _FakeUser(true, null);
-
-      final fetchOrCreateUser = MockFetchOrCreateUser();
-      when(fetchOrCreateUser(fakeFirebaseUser.uid)).thenAnswer((realInvocation) => Future.value(fakeUser));
-
-      final saveUserLaunchInfo = MockSaveUserLaunchInfo();
-      when(saveUserLaunchInfo(fakeUser)).thenReturn(null);
-
-      final markAsMigratedToFlutter = MockMarkAsMigratedToFlutter();
-      when(markAsMigratedToFlutter()).thenAnswer((realInvocation) => Future.value());
-
-      SharedPreferences.setMockInitialValues({
-        BoolKey.didEndInitialSetting: true,
-      });
-      final sharedPreferences = await SharedPreferences.getInstance();
-
-      await tester.pumpWidget(
-        ProviderScope(
-          overrides: [
-            fetchOrCreateUserProvider.overrideWith((_) => fetchOrCreateUser),
-            databaseProvider.overrideWith((ref) => MockDatabaseConnection()),
-            saveUserLaunchInfoProvider.overrideWith((ref) => saveUserLaunchInfo),
-            markAsMigratedToFlutterProvider.overrideWith((ref) => markAsMigratedToFlutter),
-            didEndInitialSettingProvider.overrideWithValue(const AsyncValue.data(true)),
-            userProvider.overrideWith((ref) => Stream.value(fakeUser)),
-            userIsNotAnonymousProvider.overrideWith((ref) => false),
-            mustSharedPreferenceProvider.overrideWith((ref) => sharedPreferences),
-          ],
-          child: MaterialApp(
-            home: Material(
-              child: InitialSettingOrAppPage(userID: fakeFirebaseUser.uid),
-            ),
-          ),
-        ),
-      );
-      await tester.pump();
-
-      expect(
-        find.byWidgetPredicate((widget) => widget is InitialSettingPillSheetGroupPage),
-        findsOneWidget,
-      );
+      final screenType = calcScreenType(user: fakeUser, didEndInitialSettingAsyncValue: const AsyncData(true));
+      expect(screenType, InitialSettingOrAppPageScreenType.initialSetting);
     });
   });
 }
