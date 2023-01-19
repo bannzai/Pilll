@@ -71,7 +71,7 @@ class FetchOrCreateUser {
       if (error is UserNotFound) {
         return _create(uid).then((_) => _fetch(uid));
       }
-      throw FormatException("cause exception when failed fetch and create user. error: $error, stackTrace: ${StackTrace.current.toString()}");
+      throw FormatException("Create user error: $error, stackTrace: ${StackTrace.current.toString()}");
     });
     return user;
   }
