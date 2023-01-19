@@ -9,6 +9,7 @@ import 'package:pilll/provider/auth.dart';
 import 'package:pilll/provider/database.dart';
 import 'package:pilll/provider/force_update.dart';
 import 'package:pilll/provider/set_user_id.dart';
+import 'package:pilll/provider/shared_preference.dart';
 import 'package:pilll/provider/user.dart';
 import 'package:pilll/utils/analytics.dart';
 import 'package:pilll/utils/auth/apple.dart';
@@ -77,6 +78,7 @@ void main() {
       final markAsMigratedToFlutter = MockMarkAsMigratedToFlutter();
       when(markAsMigratedToFlutter()).thenAnswer((realInvocation) => Future.value());
 
+      final sharedPreferences = await SharedPreferences.getInstance();
       SharedPreferences.setMockInitialValues({});
       await tester.pumpWidget(
         ProviderScope(
@@ -94,6 +96,7 @@ void main() {
             isGoogleLinkedProvider.overrideWith((ref) => false),
             userProvider.overrideWith((ref) => Stream.value(fakeUser)),
             userIsNotAnonymousProvider.overrideWith((ref) => false),
+            sharedPreferenceProvider.overrideWith((ref) => sharedPreferences),
           ],
           child: const MaterialApp(
             home: Material(
@@ -128,6 +131,7 @@ void main() {
       final markAsMigratedToFlutter = MockMarkAsMigratedToFlutter();
       when(markAsMigratedToFlutter()).thenAnswer((realInvocation) => Future.value());
 
+      final sharedPreferences = await SharedPreferences.getInstance();
       SharedPreferences.setMockInitialValues({});
       await tester.pumpWidget(
         ProviderScope(
@@ -145,6 +149,7 @@ void main() {
             isGoogleLinkedProvider.overrideWith((ref) => false),
             userProvider.overrideWith((ref) => Stream.value(fakeUser)),
             userIsNotAnonymousProvider.overrideWith((ref) => false),
+            sharedPreferenceProvider.overrideWith((ref) => sharedPreferences),
           ],
           child: const MaterialApp(
             home: Material(
@@ -181,6 +186,7 @@ void main() {
       final markAsMigratedToFlutter = MockMarkAsMigratedToFlutter();
       when(markAsMigratedToFlutter()).thenAnswer((realInvocation) => Future.value());
 
+      final sharedPreferences = await SharedPreferences.getInstance();
       SharedPreferences.setMockInitialValues({});
       await tester.pumpWidget(
         ProviderScope(
@@ -192,6 +198,7 @@ void main() {
             didEndInitialSettingProvider.overrideWithValue(const AsyncValue.data(null)),
             userProvider.overrideWith((ref) => Stream.value(fakeUser)),
             userIsNotAnonymousProvider.overrideWith((ref) => false),
+            sharedPreferenceProvider.overrideWith((ref) => sharedPreferences),
           ],
           child: MaterialApp(
             home: Material(
@@ -220,6 +227,7 @@ void main() {
       final markAsMigratedToFlutter = MockMarkAsMigratedToFlutter();
       when(markAsMigratedToFlutter()).thenAnswer((realInvocation) => Future.value());
 
+      final sharedPreferences = await SharedPreferences.getInstance();
       SharedPreferences.setMockInitialValues({
         BoolKey.didEndInitialSetting: true,
       });
@@ -233,6 +241,7 @@ void main() {
             didEndInitialSettingProvider.overrideWithValue(const AsyncValue.data(true)),
             userProvider.overrideWith((ref) => Stream.value(fakeUser)),
             userIsNotAnonymousProvider.overrideWith((ref) => false),
+            sharedPreferenceProvider.overrideWith((ref) => sharedPreferences),
           ],
           child: MaterialApp(
             home: Material(
@@ -261,6 +270,7 @@ void main() {
       final markAsMigratedToFlutter = MockMarkAsMigratedToFlutter();
       when(markAsMigratedToFlutter()).thenAnswer((realInvocation) => Future.value());
 
+      final sharedPreferences = await SharedPreferences.getInstance();
       SharedPreferences.setMockInitialValues({
         BoolKey.didEndInitialSetting: true,
       });
@@ -274,6 +284,7 @@ void main() {
             didEndInitialSettingProvider.overrideWithValue(const AsyncValue.data(true)),
             userProvider.overrideWith((ref) => Stream.value(fakeUser)),
             userIsNotAnonymousProvider.overrideWith((ref) => false),
+            sharedPreferenceProvider.overrideWith((ref) => sharedPreferences),
           ],
           child: MaterialApp(
             home: Material(
@@ -302,6 +313,7 @@ void main() {
       final markAsMigratedToFlutter = MockMarkAsMigratedToFlutter();
       when(markAsMigratedToFlutter()).thenAnswer((realInvocation) => Future.value());
 
+      final sharedPreferences = await SharedPreferences.getInstance();
       SharedPreferences.setMockInitialValues({
         BoolKey.didEndInitialSetting: true,
       });
@@ -315,6 +327,7 @@ void main() {
             didEndInitialSettingProvider.overrideWithValue(const AsyncValue.data(true)),
             userProvider.overrideWith((ref) => Stream.value(fakeUser)),
             userIsNotAnonymousProvider.overrideWith((ref) => false),
+            sharedPreferenceProvider.overrideWith((ref) => sharedPreferences),
           ],
           child: MaterialApp(
             home: Material(
