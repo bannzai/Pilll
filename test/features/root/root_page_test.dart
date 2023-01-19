@@ -88,6 +88,7 @@ void main() {
             saveUserLaunchInfoProvider.overrideWith((ref) => saveUserLaunchInfo),
             markAsMigratedToFlutterProvider.overrideWith((ref) => markAsMigratedToFlutter),
             firebaseSignInProvider.overrideWith((ref) => Future.value(fakeFirebaseUser)),
+            userProvider.overrideWith((ref) => Stream.value(fakeUser)),
             didEndInitialSettingProvider.overrideWithValue(const AsyncValue.data(null)),
             // For InitialSettingPillSheetGroupPage
             isAppleLinkedProvider.overrideWith((ref) => false),
@@ -137,6 +138,7 @@ void main() {
             saveUserLaunchInfoProvider.overrideWith((ref) => saveUserLaunchInfo),
             markAsMigratedToFlutterProvider.overrideWith((ref) => markAsMigratedToFlutter),
             firebaseSignInProvider.overrideWith((ref) => Future.value(fakeFirebaseUser)),
+            userProvider.overrideWith((ref) => Stream.value(fakeUser)),
             didEndInitialSettingProvider.overrideWithValue(const AsyncValue.data(null)),
             // For InitialSettingPillSheetGroupPage
             isAppleLinkedProvider.overrideWith((ref) => false),
@@ -186,6 +188,7 @@ void main() {
             saveUserLaunchInfoProvider.overrideWith((ref) => saveUserLaunchInfo),
             markAsMigratedToFlutterProvider.overrideWith((ref) => markAsMigratedToFlutter),
             didEndInitialSettingProvider.overrideWithValue(const AsyncValue.data(null)),
+            userProvider.overrideWith((ref) => Stream.value(fakeUser)),
           ],
           child: MaterialApp(
             home: Material(
@@ -225,6 +228,7 @@ void main() {
             saveUserLaunchInfoProvider.overrideWith((ref) => saveUserLaunchInfo),
             markAsMigratedToFlutterProvider.overrideWith((ref) => markAsMigratedToFlutter),
             didEndInitialSettingProvider.overrideWithValue(const AsyncValue.data(true)),
+            userProvider.overrideWith((ref) => Stream.value(fakeUser)),
           ],
           child: MaterialApp(
             home: Material(
@@ -264,6 +268,7 @@ void main() {
             saveUserLaunchInfoProvider.overrideWith((ref) => saveUserLaunchInfo),
             markAsMigratedToFlutterProvider.overrideWith((ref) => markAsMigratedToFlutter),
             didEndInitialSettingProvider.overrideWithValue(const AsyncValue.data(true)),
+            userProvider.overrideWith((ref) => Stream.value(fakeUser)),
           ],
           child: MaterialApp(
             home: Material(
@@ -303,6 +308,7 @@ void main() {
             saveUserLaunchInfoProvider.overrideWith((ref) => saveUserLaunchInfo),
             markAsMigratedToFlutterProvider.overrideWith((ref) => markAsMigratedToFlutter),
             didEndInitialSettingProvider.overrideWithValue(const AsyncValue.data(true)),
+            userProvider.overrideWith((ref) => Stream.value(fakeUser)),
           ],
           child: MaterialApp(
             home: Material(
