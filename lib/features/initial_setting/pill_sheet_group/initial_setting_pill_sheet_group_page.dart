@@ -19,7 +19,6 @@ import 'package:pilll/components/atoms/text_color.dart';
 import 'package:flutter/material.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
 import 'package:pilll/entity/pill_sheet_type.dart';
-import 'package:pilll/provider/auth.dart';
 import 'package:pilll/entity/link_account_type.dart';
 import 'package:pilll/features/sign_in/sign_in_sheet.dart';
 import 'package:pilll/utils/router.dart';
