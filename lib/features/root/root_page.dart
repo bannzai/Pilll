@@ -23,9 +23,6 @@ import 'package:pilll/utils/shared_preference/keys.dart';
 import 'package:flutter/material.dart';
 import 'package:url_launcher/url_launcher.dart';
 
-// FIXME: test 時にboolSharedPreferencesProviderをそのまま使うとフリーズする
-final didEndInitialSettingProvider = Provider((ref) => ref.watch(boolSharedPreferencesProvider(BoolKey.didEndInitialSetting)));
-
 class RootPage extends HookConsumerWidget {
   const RootPage({Key? key}) : super(key: key);
 
@@ -138,6 +135,9 @@ class LaunchException {
   @override
   String toString() => message + underlyingException.toString();
 }
+
+// FIXME: test 時にboolSharedPreferencesProviderをそのまま使うとフリーズする
+final didEndInitialSettingProvider = Provider((ref) => ref.watch(boolSharedPreferencesProvider(BoolKey.didEndInitialSetting)));
 
 enum _InitialSettingOrAppPageScreenType { loading, initialSetting, app }
 
