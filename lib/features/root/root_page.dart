@@ -24,7 +24,9 @@ import 'package:flutter/material.dart';
 import 'package:url_launcher/url_launcher.dart';
 
 class RootPage extends HookConsumerWidget {
-  const RootPage({Key? key}) : super(key: key);
+  // NOTE: RootPageより下のWidgetのProviderを用意するのは現実的では無いので、builderからメインストリームのWidgetを決定する
+  final Widget Function(BuildContext, String) builder;
+  const RootPage({Key? key, required this.builder}) : super(key: key);
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {
@@ -116,7 +118,7 @@ class RootPage extends HookConsumerWidget {
         if (userIDValue == null) {
           return const ScaffoldIndicator();
         } else {
-          return InitialSettingOrAppPage(userID: userIDValue);
+          return builder(context, userIDValue);
         }
       }(),
     );

@@ -32,6 +32,13 @@ class _FakeFirebaseUser extends Fake implements firebase_auth.User {
   String get uid => "abcdefg";
 }
 
+class _FakeWidget extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return Container();
+  }
+}
+
 class _FakeUser extends Fake implements User {
   final bool fakeMigratedFlutter;
   final Setting? fakeSetting;
@@ -99,9 +106,9 @@ void main() {
             userIsNotAnonymousProvider.overrideWith((ref) => false),
             mustSharedPreferenceProvider.overrideWith((ref) => sharedPreferences),
           ],
-          child: const MaterialApp(
+          child: MaterialApp(
             home: Material(
-              child: RootPage(),
+              child: RootPage(builder: (_, __) => _FakeWidget()),
             ),
           ),
         ),
@@ -109,7 +116,7 @@ void main() {
       await tester.pump();
 
       expect(
-        find.byWidgetPredicate((widget) => widget is InitialSettingOrAppPage),
+        find.byWidgetPredicate((widget) => widget is _FakeWidget),
         findsOneWidget,
       );
     });
@@ -153,9 +160,9 @@ void main() {
             userIsNotAnonymousProvider.overrideWith((ref) => false),
             mustSharedPreferenceProvider.overrideWith((ref) => sharedPreferences),
           ],
-          child: const MaterialApp(
+          child: MaterialApp(
             home: Material(
-              child: RootPage(),
+              child: RootPage(builder: (_, __) => _FakeWidget()),
             ),
           ),
         ),
@@ -165,6 +172,10 @@ void main() {
       expect(
         find.byWidgetPredicate((widget) => widget is ScaffoldIndicator),
         findsOneWidget,
+      );
+      expect(
+        find.byWidgetPredicate((widget) => widget is _FakeWidget),
+        findsNothing,
       );
 // FIXME: Cann't check of did showDialog Widget
 //      expect(
