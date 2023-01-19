@@ -10,6 +10,7 @@ import 'package:pilll/provider/database.dart';
 import 'package:pilll/provider/force_update.dart';
 import 'package:pilll/provider/set_user_id.dart';
 import 'package:pilll/provider/shared_preference.dart';
+import 'package:pilll/provider/shared_preferences.dart';
 import 'package:pilll/provider/user.dart';
 import 'package:pilll/utils/analytics.dart';
 import 'package:pilll/utils/auth/apple.dart';
@@ -97,7 +98,7 @@ void main() {
             isGoogleLinkedProvider.overrideWith((ref) => false),
             userProvider.overrideWith((ref) => Stream.value(fakeUser)),
             userIsNotAnonymousProvider.overrideWith((ref) => false),
-            sharedPreferenceProvider.overrideWith((ref) => sharedPreferences),
+            mustSharedPreferenceProvider.overrideWith((ref) => sharedPreferences),
           ],
           child: const MaterialApp(
             home: Material(
@@ -151,7 +152,7 @@ void main() {
             isGoogleLinkedProvider.overrideWith((ref) => false),
             userProvider.overrideWith((ref) => Stream.value(fakeUser)),
             userIsNotAnonymousProvider.overrideWith((ref) => false),
-            sharedPreferenceProvider.overrideWith((ref) => sharedPreferences),
+            mustSharedPreferenceProvider.overrideWith((ref) => sharedPreferences),
           ],
           child: const MaterialApp(
             home: Material(
@@ -201,7 +202,7 @@ void main() {
             didEndInitialSettingProvider.overrideWithValue(const AsyncValue.data(null)),
             userProvider.overrideWith((ref) => Stream.value(fakeUser)),
             userIsNotAnonymousProvider.overrideWith((ref) => false),
-            sharedPreferenceProvider.overrideWith((ref) => sharedPreferences),
+            mustSharedPreferenceProvider.overrideWith((ref) => sharedPreferences),
           ],
           child: MaterialApp(
             home: Material(
@@ -245,7 +246,7 @@ void main() {
             didEndInitialSettingProvider.overrideWithValue(const AsyncValue.data(true)),
             userProvider.overrideWith((ref) => Stream.value(fakeUser)),
             userIsNotAnonymousProvider.overrideWith((ref) => false),
-            sharedPreferenceProvider.overrideWith((ref) => sharedPreferences),
+            mustSharedPreferenceProvider.overrideWith((ref) => sharedPreferences),
           ],
           child: MaterialApp(
             home: Material(
@@ -289,7 +290,7 @@ void main() {
             didEndInitialSettingProvider.overrideWithValue(const AsyncValue.data(true)),
             userProvider.overrideWith((ref) => Stream.value(fakeUser)),
             userIsNotAnonymousProvider.overrideWith((ref) => false),
-            sharedPreferenceProvider.overrideWith((ref) => sharedPreferences),
+            mustSharedPreferenceProvider.overrideWith((ref) => sharedPreferences),
           ],
           child: MaterialApp(
             home: Material(
@@ -333,7 +334,7 @@ void main() {
             didEndInitialSettingProvider.overrideWithValue(const AsyncValue.data(true)),
             userProvider.overrideWith((ref) => Stream.value(fakeUser)),
             userIsNotAnonymousProvider.overrideWith((ref) => false),
-            sharedPreferenceProvider.overrideWith((ref) => sharedPreferences),
+            mustSharedPreferenceProvider.overrideWith((ref) => sharedPreferences),
           ],
           child: MaterialApp(
             home: Material(
