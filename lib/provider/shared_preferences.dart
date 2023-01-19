@@ -1,7 +1,9 @@
 import 'dart:async';
-import 'package:pilll/provider/shared_preference.dart';
 import 'package:riverpod/riverpod.dart';
 import 'package:shared_preferences/shared_preferences.dart';
+
+final sharedPrefenreceProvider = FutureProvider((ref) => SharedPreferences.getInstance());
+final mustSharedPreferencesProvider = Provider((ref) => ref.watch(sharedPrefenreceProvider).value!);
 
 final boolSharedPreferencesProvider = AsyncNotifierProvider.family<BoolSharedPreferences, bool?, String>(() => BoolSharedPreferences());
 
@@ -18,7 +20,7 @@ class BoolSharedPreferences extends FamilyAsyncNotifier<bool?, String> {
   @override
   FutureOr<bool?> build(String arg) async {
     key = arg;
-    sharedPreferences = await ref.watch(sharedPreferenceProvider.future);
+    sharedPreferences = ref.watch(mustSharedPreferencesProvider);
     return sharedPreferences.getBool(key);
   }
 }
@@ -38,7 +40,7 @@ class IntSharedPreferences extends FamilyAsyncNotifier<int?, String> {
   @override
   FutureOr<int?> build(String arg) async {
     key = arg;
-    sharedPreferences = await ref.watch(sharedPreferenceProvider.future);
+    sharedPreferences = ref.watch(mustSharedPreferencesProvider);
     return sharedPreferences.getInt(key);
   }
 }
@@ -60,7 +62,7 @@ class StringSharedPreferences extends FamilyAsyncNotifier<String?, String> {
   @override
   FutureOr<String?> build(String arg) async {
     key = arg;
-    sharedPreferences = await ref.watch(sharedPreferenceProvider.future);
+    sharedPreferences = ref.watch(mustSharedPreferencesProvider);
     return sharedPreferences.getString(key);
   }
 }
