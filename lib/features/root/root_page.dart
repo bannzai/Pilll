@@ -115,11 +115,11 @@ class RootPage extends HookConsumerWidget {
         ref.invalidate(refreshAppProvider);
       },
       child: () {
-        final uid = userID.value;
-        if (uid == null) {
+        final userIDValue = userID.value;
+        if (userIDValue == null) {
           return const ScaffoldIndicator();
         } else {
-          return InitialSettingOrAppPage(firebaseUserID: uid);
+          return InitialSettingOrAppPage(userID: userIDValue);
         }
       }(),
     );
@@ -142,8 +142,8 @@ class LaunchException {
 enum _InitialSettingOrAppPageScreenType { loading, initialSetting, app }
 
 class InitialSettingOrAppPage extends HookConsumerWidget {
-  final String firebaseUserID;
-  const InitialSettingOrAppPage({Key? key, required this.firebaseUserID}) : super(key: key);
+  final String userID;
+  const InitialSettingOrAppPage({Key? key, required this.userID}) : super(key: key);
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {
@@ -168,17 +168,17 @@ class InitialSettingOrAppPage extends HookConsumerWidget {
             final appUserValue = appUser.value;
             if (appUserValue == null) {
               // Retrieve user from app DB.
-              final user = await fetchOrCreateUser(firebaseUserID);
+              final user = await fetchOrCreateUser(userID);
               saveUserLaunchInfo(user);
               appUser.value = user;
 
               // Rescue for old users
               if (!user.migratedFlutter) {
                 markAsMigratedToFlutter();
-                analytics.logEvent(name: "user_is_not_migrated_flutter", parameters: {"uid": firebaseUserID});
+                analytics.logEvent(name: "user_is_not_migrated_flutter", parameters: {"uid": userID});
                 screenType.value = _InitialSettingOrAppPageScreenType.initialSetting;
               } else if (user.setting == null) {
-                analytics.logEvent(name: "uset_setting_is_null", parameters: {"uid": firebaseUserID});
+                analytics.logEvent(name: "uset_setting_is_null", parameters: {"uid": userID});
                 screenType.value = _InitialSettingOrAppPageScreenType.initialSetting;
               }
             }

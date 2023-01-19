@@ -205,7 +205,7 @@ void main() {
           ],
           child: MaterialApp(
             home: Material(
-              child: InitialSettingOrAppPage(firebaseUserID: fakeFirebaseUser.uid),
+              child: InitialSettingOrAppPage(userID: fakeFirebaseUser.uid),
             ),
           ),
         ),
@@ -249,7 +249,7 @@ void main() {
           ],
           child: MaterialApp(
             home: Material(
-              child: InitialSettingOrAppPage(firebaseUserID: fakeFirebaseUser.uid),
+              child: InitialSettingOrAppPage(userID: fakeFirebaseUser.uid),
             ),
           ),
         ),
@@ -293,7 +293,7 @@ void main() {
           ],
           child: MaterialApp(
             home: Material(
-              child: InitialSettingOrAppPage(firebaseUserID: fakeFirebaseUser.uid),
+              child: InitialSettingOrAppPage(userID: fakeFirebaseUser.uid),
             ),
           ),
         ),
@@ -337,7 +337,7 @@ void main() {
           ],
           child: MaterialApp(
             home: Material(
-              child: InitialSettingOrAppPage(firebaseUserID: fakeFirebaseUser.uid),
+              child: InitialSettingOrAppPage(userID: fakeFirebaseUser.uid),
             ),
           ),
         ),
