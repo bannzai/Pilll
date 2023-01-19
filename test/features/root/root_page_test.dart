@@ -2,18 +2,14 @@ import 'package:firebase_auth/firebase_auth.dart' as firebase_auth;
 import 'package:pilll/components/molecules/indicator.dart';
 import 'package:pilll/entity/setting.codegen.dart';
 import 'package:pilll/entity/user.codegen.dart';
-import 'package:pilll/features/initial_setting/pill_sheet_group/initial_setting_pill_sheet_group_page.dart';
 import 'package:pilll/features/root/initial_setting_or_app_page.dart';
 import 'package:pilll/features/root/root_page.dart';
 import 'package:pilll/provider/auth.dart';
 import 'package:pilll/provider/database.dart';
 import 'package:pilll/provider/force_update.dart';
 import 'package:pilll/provider/set_user_id.dart';
-import 'package:pilll/provider/shared_preferences.dart';
 import 'package:pilll/provider/user.dart';
 import 'package:pilll/utils/analytics.dart';
-import 'package:pilll/utils/auth/apple.dart';
-import 'package:pilll/utils/auth/google.dart';
 import 'package:pilll/utils/environment.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_test/flutter_test.dart';
@@ -85,7 +81,6 @@ void main() {
       when(markAsMigratedToFlutter()).thenAnswer((realInvocation) => Future.value());
 
       SharedPreferences.setMockInitialValues({});
-      final sharedPreferences = await SharedPreferences.getInstance();
 
       await tester.pumpWidget(
         ProviderScope(
@@ -98,11 +93,6 @@ void main() {
             markAsMigratedToFlutterProvider.overrideWith((ref) => markAsMigratedToFlutter),
             firebaseSignInProvider.overrideWith((ref) => Future.value(fakeFirebaseUser)),
             didEndInitialSettingProvider.overrideWithValue(const AsyncValue.data(null)),
-            // For InitialSettingPillSheetGroupPage
-            isAppleLinkedProvider.overrideWith((ref) => false),
-            isGoogleLinkedProvider.overrideWith((ref) => false),
-            userProvider.overrideWith((ref) => Stream.value(fakeUser)),
-            userIsNotAnonymousProvider.overrideWith((ref) => false),
           ],
           child: MaterialApp(
             home: Material(
@@ -150,11 +140,6 @@ void main() {
             markAsMigratedToFlutterProvider.overrideWith((ref) => markAsMigratedToFlutter),
             firebaseSignInProvider.overrideWith((ref) => Future.value(fakeFirebaseUser)),
             didEndInitialSettingProvider.overrideWithValue(const AsyncValue.data(null)),
-            // For InitialSettingPillSheetGroupPage
-            isAppleLinkedProvider.overrideWith((ref) => false),
-            isGoogleLinkedProvider.overrideWith((ref) => false),
-            userProvider.overrideWith((ref) => Stream.value(fakeUser)),
-            userIsNotAnonymousProvider.overrideWith((ref) => false),
           ],
           child: MaterialApp(
             home: Material(
