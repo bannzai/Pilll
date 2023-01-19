@@ -93,6 +93,7 @@ void main() {
             isAppleLinkedProvider.overrideWith((ref) => false),
             isGoogleLinkedProvider.overrideWith((ref) => false),
             userProvider.overrideWith((ref) => Stream.value(fakeUser)),
+            userIsNotAnonymousProvider.overrideWith((ref) => false),
           ],
           child: const MaterialApp(
             home: Material(
@@ -143,6 +144,7 @@ void main() {
             isAppleLinkedProvider.overrideWith((ref) => false),
             isGoogleLinkedProvider.overrideWith((ref) => false),
             userProvider.overrideWith((ref) => Stream.value(fakeUser)),
+            userIsNotAnonymousProvider.overrideWith((ref) => false),
           ],
           child: const MaterialApp(
             home: Material(
@@ -189,6 +191,7 @@ void main() {
             markAsMigratedToFlutterProvider.overrideWith((ref) => markAsMigratedToFlutter),
             didEndInitialSettingProvider.overrideWithValue(const AsyncValue.data(null)),
             userProvider.overrideWith((ref) => Stream.value(fakeUser)),
+            userIsNotAnonymousProvider.overrideWith((ref) => false),
           ],
           child: MaterialApp(
             home: Material(
@@ -229,6 +232,7 @@ void main() {
             markAsMigratedToFlutterProvider.overrideWith((ref) => markAsMigratedToFlutter),
             didEndInitialSettingProvider.overrideWithValue(const AsyncValue.data(true)),
             userProvider.overrideWith((ref) => Stream.value(fakeUser)),
+            userIsNotAnonymousProvider.overrideWith((ref) => false),
           ],
           child: MaterialApp(
             home: Material(
@@ -269,6 +273,7 @@ void main() {
             markAsMigratedToFlutterProvider.overrideWith((ref) => markAsMigratedToFlutter),
             didEndInitialSettingProvider.overrideWithValue(const AsyncValue.data(true)),
             userProvider.overrideWith((ref) => Stream.value(fakeUser)),
+            userIsNotAnonymousProvider.overrideWith((ref) => false),
           ],
           child: MaterialApp(
             home: Material(
@@ -309,6 +314,7 @@ void main() {
             markAsMigratedToFlutterProvider.overrideWith((ref) => markAsMigratedToFlutter),
             didEndInitialSettingProvider.overrideWithValue(const AsyncValue.data(true)),
             userProvider.overrideWith((ref) => Stream.value(fakeUser)),
+            userIsNotAnonymousProvider.overrideWith((ref) => false),
           ],
           child: MaterialApp(
             home: Material(

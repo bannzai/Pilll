@@ -24,6 +24,11 @@ import 'package:pilll/features/sign_in/sign_in_sheet.dart';
 import 'package:pilll/utils/router.dart';
 import 'package:pilll/utils/shared_preference/keys.dart';
 
+// FirebaseAuth.instance.currentUser をそのまま使うとテストで FirebaseApp.configureされてないと怒られるのでとりあえずこれで回避
+final userIsNotAnonymousProvider = Provider((ref) {
+  return FirebaseAuth.instance.currentUser?.isAnonymous == false;
+});
+
 class InitialSettingPillSheetGroupPage extends HookConsumerWidget {
   const InitialSettingPillSheetGroupPage({Key? key}) : super(key: key);
 
@@ -35,33 +40,31 @@ class InitialSettingPillSheetGroupPage extends HookConsumerWidget {
     final isAppleLinked = ref.watch(isAppleLinkedProvider);
     final isGoogleLinked = ref.watch(isGoogleLinkedProvider);
     final didEndInitialSettingNotifier = ref.watch(boolSharedPreferencesProvider(BoolKey.didEndInitialSetting).notifier);
+    final userIsNotAnonymous = ref.watch(userIsNotAnonymousProvider);
 
     // For linked user
     useEffect(() {
-      final user = FirebaseAuth.instance.currentUser;
-      if (user != null) {
-        if (!user.isAnonymous) {
-          analytics.logEvent(name: "initial_setting_signin_account", parameters: {"uid": user.uid});
+      if (userIsNotAnonymous) {
+        analytics.logEvent(name: "initial_setting_signin_account", parameters: {"uid": FirebaseAuth.instance.currentUser?.uid});
 
-          final LinkAccountType? accountType = () {
-            if (isAppleLinked) {
-              return LinkAccountType.apple;
-            } else if (isGoogleLinked) {
-              return LinkAccountType.google;
-            } else {
-              return null;
-            }
-          }();
-          if (accountType != null) {
-            Future.microtask(() {
-              ScaffoldMessenger.of(context).showSnackBar(
-                SnackBar(
-                  duration: const Duration(seconds: 2),
-                  content: Text("${accountType.providerName}でログインしました"),
-                ),
-              );
-            });
+        final LinkAccountType? accountType = () {
+          if (isAppleLinked) {
+            return LinkAccountType.apple;
+          } else if (isGoogleLinked) {
+            return LinkAccountType.google;
+          } else {
+            return null;
           }
+        }();
+        if (accountType != null) {
+          Future.microtask(() {
+            ScaffoldMessenger.of(context).showSnackBar(
+              SnackBar(
+                duration: const Duration(seconds: 2),
+                content: Text("${accountType.providerName}でログインしました"),
+              ),
+            );
+          });
         }
       }
 
