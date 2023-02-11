@@ -161,32 +161,30 @@ class PillSheet with _$PillSheet {
 
   DateTime displayPillTakeDate(int pillNumberIntoPillSheet) {
     final originDate = beginingDate.add(Duration(days: pillNumberIntoPillSheet - 1)).date();
-    print("[DEBUG] 1: originDate: $originDate, pillNumberIntoPillSheet: $pillNumberIntoPillSheet");
+
     if (restDurations.isEmpty) {
       return originDate;
     }
 
-    var displayedDate = originDate;
-    for (final restDuration in restDurations) {
-      final restDurationBeginDate = restDuration.beginDate.date();
-      final restDurationEndDate = restDuration.endDate?.date();
+    final distance = restDurations.fold(0, (int result, restDuration) {
+      final beginDate = restDuration.beginDate.date();
+      final endDate = restDuration.endDate?.date();
 
-      if (restDurationEndDate != null && isSameDay(restDurationBeginDate, restDurationEndDate)) {
-        continue;
+      if (endDate != null && isSameDay(beginDate, endDate)) {
+        return result;
       }
-      if (displayedDate.isBefore(restDurationBeginDate)) {
-        continue;
+      if (originDate.isBefore(beginDate)) {
+        return result;
       }
 
-      if (restDurationEndDate != null) {
-        displayedDate = displayedDate.add(Duration(days: daysBetween(restDurationBeginDate, restDurationEndDate)));
+      if (endDate != null) {
+        return result + daysBetween(beginDate, endDate);
       } else {
-        displayedDate = displayedDate.add(Duration(days: daysBetween(restDurationBeginDate, today())));
+        return result + daysBetween(beginDate, today());
       }
-    }
+    });
 
-    print("[DEBUG] 2: originDate: $originDate, pillNumberIntoPillSheet: $pillNumberIntoPillSheet, displayDate: $displayedDate");
-    return displayedDate;
+    return originDate.add(Duration(days: distance));
   }
 }
 
