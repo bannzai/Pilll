@@ -161,30 +161,30 @@ class PillSheet with _$PillSheet {
 
   DateTime displayPillTakeDate(int pillNumberIntoPillSheet) {
     final originDate = beginingDate.add(Duration(days: pillNumberIntoPillSheet - 1)).date();
-
     if (restDurations.isEmpty) {
       return originDate;
     }
 
-    final distance = restDurations.fold(0, (int result, restDuration) {
-      final beginDate = restDuration.beginDate.date();
-      final endDate = restDuration.endDate?.date();
+    var displayedDate = originDate;
+    for (final restDuration in restDurations) {
+      final restDurationBeginDate = restDuration.beginDate.date();
+      final restDurationEndDate = restDuration.endDate?.date();
 
-      if (endDate != null && isSameDay(beginDate, endDate)) {
-        return result;
+      if (restDurationEndDate != null && isSameDay(restDurationBeginDate, restDurationEndDate)) {
+        continue;
       }
-      if (originDate.isBefore(beginDate)) {
-        return result;
+      if (displayedDate.isBefore(restDurationBeginDate)) {
+        continue;
       }
 
-      if (endDate != null) {
-        return result + daysBetween(beginDate, endDate);
+      if (restDurationEndDate != null) {
+        displayedDate = displayedDate.add(Duration(days: daysBetween(restDurationBeginDate, restDurationEndDate)));
       } else {
-        return result + daysBetween(beginDate, today());
+        displayedDate = displayedDate.add(Duration(days: daysBetween(restDurationBeginDate, today())));
       }
-    });
+    }
 
-    return originDate.add(Duration(days: distance));
+    return displayedDate;
   }
 }
 
