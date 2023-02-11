@@ -89,7 +89,7 @@ class AnnouncementBar extends HookConsumerWidget {
               return DiscountPriceDeadline(
                   discountEntitlementDeadlineDate: discountEntitlementDeadlineDate,
                   onTap: () {
-                    analytics.logEvent(name: "pressed_discount_notification_bar");
+                    analytics.logEvent(name: "pressed_discount_announcement_bar");
                     showPremiumIntroductionSheet(context);
                   });
             }
@@ -108,7 +108,7 @@ class AnnouncementBar extends HookConsumerWidget {
             if (!recommendedSignupNotificationIsAlreadyShow) {
               return RecommendSignupAnnouncementBar(
                 onTap: () {
-                  analytics.logEvent(name: "tapped_signup_notification_bar");
+                  analytics.logEvent(name: "tapped_signup_announcement_bar");
                   showSignInSheet(
                     context,
                     SignInSheetStateContext.recordPage,

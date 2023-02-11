@@ -7,7 +7,7 @@ import 'package:pilll/features/premium_introduction/util/discount_deadline.dart'
 import 'package:pilll/features/record/components/announcement_bar/components/discount_price_deadline.dart';
 import 'package:pilll/features/record/components/announcement_bar/components/ended_pill_sheet.dart';
 import 'package:pilll/features/record/components/announcement_bar/components/pilll_ads.dart';
-import 'package:pilll/features/record/components/announcement_bar/notification_bar.dart';
+import 'package:pilll/features/record/components/announcement_bar/announcement_bar.dart';
 import 'package:pilll/features/record/components/announcement_bar/components/premium_trial_limit.dart';
 import 'package:pilll/features/record/components/announcement_bar/components/recommend_signup.dart';
 import 'package:pilll/features/record/components/announcement_bar/components/recommend_signup_premium.dart';
