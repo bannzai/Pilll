@@ -18,7 +18,7 @@ class RecommendSignupForPremiumAnnouncementBar extends StatelessWidget {
       color: PilllColors.primary,
       child: GestureDetector(
         onTap: () {
-          analytics.logEvent(name: "tapped_premium_signup_notification_bar");
+          analytics.logEvent(name: "tapped_premium_signup_announcement_bar");
           showSignInSheet(context, SignInSheetStateContext.recordPage, null);
         },
         child: Stack(
