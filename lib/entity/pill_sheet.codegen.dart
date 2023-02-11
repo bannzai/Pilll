@@ -161,6 +161,7 @@ class PillSheet with _$PillSheet {
 
   DateTime displayPillTakeDate(int pillNumberIntoPillSheet) {
     final originDate = beginingDate.add(Duration(days: pillNumberIntoPillSheet - 1)).date();
+    print("[DEBUG] 1: originDate: $originDate, pillNumberIntoPillSheet: $pillNumberIntoPillSheet");
     if (restDurations.isEmpty) {
       return originDate;
     }
@@ -184,6 +185,7 @@ class PillSheet with _$PillSheet {
       }
     }
 
+    print("[DEBUG] 2: originDate: $originDate, pillNumberIntoPillSheet: $pillNumberIntoPillSheet, displayDate: $displayedDate");
     return displayedDate;
   }
 }
