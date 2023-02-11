@@ -669,6 +669,47 @@ void main() {
         });
       });
     });
+    test("Bugfix 2023-02-11 dev:/users/Ka9rvL7WdFfmV7ZJe24XD9QfBAF2/pill_sheet_groups/pPJ3ncti5k3HfvbxU5Xe", () async {
+      final originalTodayRepository = todayRepository;
+      final mockTodayRepository = MockTodayService();
+      todayRepository = mockTodayRepository;
+      when(mockTodayRepository.now()).thenReturn(DateTime.parse("2023-01-14"));
+      when(mockTodayRepository.now()).thenReturn(DateTime.parse("2023-01-14"));
+      addTearDown(() {
+        todayRepository = originalTodayRepository;
+      });
+
+      final PillSheet pillSheet = PillSheet(
+        id: firestoreIDGenerator(),
+        typeInfo: PillSheetType.pillsheet_28_4.typeInfo,
+        beginingDate: DateTime.parse("2023-01-10"),
+        createdAt: now(),
+        restDurations: [
+          RestDuration(
+            beginDate: DateTime.parse("2023-01-17"),
+            createdDate: DateTime.parse("2023-01-17"),
+            endDate: DateTime.parse("2023-01-24"),
+          ),
+          RestDuration(
+            beginDate: DateTime.parse("2023-02-02"),
+            createdDate: DateTime.parse("2023-02-02"),
+            endDate: DateTime.parse("2023-02-08"),
+          ),
+        ],
+      );
+
+      expect(pillSheet.displayPillTakeDate(1), DateTime.parse("2023-01-10"));
+
+      expect(pillSheet.displayPillTakeDate(7), DateTime.parse("2023-01-16"));
+      expect(pillSheet.displayPillTakeDate(8), DateTime.parse("2023-01-24"));
+
+      expect(pillSheet.displayPillTakeDate(15), DateTime.parse("2023-01-31"));
+      expect(pillSheet.displayPillTakeDate(16), DateTime.parse("2023-02-01"));
+      expect(pillSheet.displayPillTakeDate(17), DateTime.parse("2023-02-08"));
+
+      expect(pillSheet.displayPillTakeDate(19), DateTime.parse("2023-02-10"));
+      expect(pillSheet.displayPillTakeDate(20), DateTime.parse("2023-02-11"));
+    });
   });
   group("#RecordPagePillSheet.isContainedMenstruationDuration", () {
     test("group has only one pill sheet", () async {
