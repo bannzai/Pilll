@@ -66,6 +66,7 @@ class _SchedulePostPage extends HookConsumerWidget {
     final isOnRemind = useState(schedule.localNotification != null);
     final textEditingController = useTextEditingController(text: title.value);
     final focusNode = useFocusNode();
+    final scrollController = useScrollController();
     isInvalid() => !(date.date().isAfter(today())) || title.value.isEmpty;
 
     return Scaffold(
@@ -91,6 +92,7 @@ class _SchedulePostPage extends HookConsumerWidget {
           children: [
             Expanded(
               child: ListView(
+                controller: scrollController,
                 padding: const EdgeInsets.all(16.0),
                 children: [
                   ConstrainedBox(
