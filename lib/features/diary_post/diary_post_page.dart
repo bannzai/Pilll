@@ -91,7 +91,7 @@ class DiaryPostPageBody extends HookConsumerWidget {
         FocusScope.of(context).unfocus();
       });
       return null;
-    }, [true]);
+    }, []);
 
     return Scaffold(
       backgroundColor: PilllColors.white,

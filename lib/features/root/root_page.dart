@@ -60,7 +60,7 @@ class RootPage extends HookConsumerWidget {
 
       f();
       return null;
-    }, [true]);
+    }, []);
 
     // SignIn once
     useEffect(() {

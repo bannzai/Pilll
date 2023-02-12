@@ -71,7 +71,7 @@ class UserSetupPage extends HookConsumerWidget {
   }
 }
 
-InitialSettingOrAppPageScreenType calcScreenType({
+InitialSettingOrAppPageScreenType retrieveScreenType({
   required User? user,
   required AsyncValue<bool> userDocumentIsExist,
   required AsyncValue<bool?> didEndInitialSettingAsyncValue,

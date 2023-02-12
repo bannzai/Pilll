@@ -80,7 +80,7 @@ class InitialSettingPillSheetGroupPage extends HookConsumerWidget {
       });
 
       return subscription.cancel;
-    }, [true]);
+    }, []);
 
     return HUD(
       shown: state.isLoading,
