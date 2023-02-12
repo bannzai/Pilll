@@ -31,7 +31,7 @@ class InitialSettingOrAppPage extends HookConsumerWidget {
     final user = ref.watch(userProvider).requireValue;
 
     final error = useState<LaunchException?>(null);
-    final screenType = calcScreenType(user: user, didEndInitialSettingAsyncValue: didEndInitialSettingAsyncValue);
+    final screenType = retrieveScreenType(user: user, didEndInitialSettingAsyncValue: didEndInitialSettingAsyncValue);
 
     useEffect(() {
       if (!user.migratedFlutter) {
@@ -60,7 +60,7 @@ class InitialSettingOrAppPage extends HookConsumerWidget {
   }
 }
 
-InitialSettingOrAppPageScreenType calcScreenType({
+InitialSettingOrAppPageScreenType retrieveScreenType({
   required User user,
   required AsyncValue<bool?> didEndInitialSettingAsyncValue,
 }) {

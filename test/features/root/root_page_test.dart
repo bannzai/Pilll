@@ -166,30 +166,30 @@ void main() {
     });
   });
 
-  group('#calcScreenType', () {
+  group('#retrieveScreenType', () {
     testWidgets('didEndInitialSetting is not exist', (WidgetTester tester) async {
       final fakeUser = _FakeUser(true, _FakeSetting());
-      final screenType = calcScreenType(user: fakeUser, didEndInitialSettingAsyncValue: const AsyncData(null));
+      final screenType = retrieveScreenType(user: fakeUser, didEndInitialSettingAsyncValue: const AsyncData(null));
       expect(screenType, InitialSettingOrAppPageScreenType.initialSetting);
     });
     testWidgets('didEndInitialSetting is false', (WidgetTester tester) async {
       final fakeUser = _FakeUser(true, _FakeSetting());
-      final screenType = calcScreenType(user: fakeUser, didEndInitialSettingAsyncValue: const AsyncData(false));
+      final screenType = retrieveScreenType(user: fakeUser, didEndInitialSettingAsyncValue: const AsyncData(false));
       expect(screenType, InitialSettingOrAppPageScreenType.initialSetting);
     });
     testWidgets('didEndInitialSetting is true', (WidgetTester tester) async {
       final fakeUser = _FakeUser(true, _FakeSetting());
-      final screenType = calcScreenType(user: fakeUser, didEndInitialSettingAsyncValue: const AsyncData(true));
+      final screenType = retrieveScreenType(user: fakeUser, didEndInitialSettingAsyncValue: const AsyncData(true));
       expect(screenType, InitialSettingOrAppPageScreenType.app);
     });
     testWidgets('didEndInitialSetting is true and user.migratedFlutter is false', (WidgetTester tester) async {
       final fakeUser = _FakeUser(false, _FakeSetting());
-      final screenType = calcScreenType(user: fakeUser, didEndInitialSettingAsyncValue: const AsyncData(true));
+      final screenType = retrieveScreenType(user: fakeUser, didEndInitialSettingAsyncValue: const AsyncData(true));
       expect(screenType, InitialSettingOrAppPageScreenType.initialSetting);
     });
     testWidgets('didEndInitialSetting is true and user.migratedFlutter is true but setting is null', (WidgetTester tester) async {
       final fakeUser = _FakeUser(true, null);
-      final screenType = calcScreenType(user: fakeUser, didEndInitialSettingAsyncValue: const AsyncData(true));
+      final screenType = retrieveScreenType(user: fakeUser, didEndInitialSettingAsyncValue: const AsyncData(true));
       expect(screenType, InitialSettingOrAppPageScreenType.initialSetting);
     });
   });
