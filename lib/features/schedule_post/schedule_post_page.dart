@@ -66,6 +66,7 @@ class _SchedulePostPage extends HookConsumerWidget {
     final isOnRemind = useState(schedule.localNotification != null);
     final textEditingController = useTextEditingController(text: title.value);
     final focusNode = useFocusNode();
+    final scrollController = useScrollController();
     isInvalid() => !(date.date().isAfter(today())) || title.value.isEmpty;
 
     return Scaffold(
@@ -90,7 +91,8 @@ class _SchedulePostPage extends HookConsumerWidget {
         child: Column(
           children: [
             Expanded(
-              child: Container(
+              child: SingleChildScrollView(
+                controller: scrollController,
                 padding: const EdgeInsets.all(16.0),
                 child: Column(
                   children: [
@@ -134,7 +136,6 @@ class _SchedulePostPage extends HookConsumerWidget {
                       // NOTE: when configured subtitle, the space between elements becomes very narrow
                       contentPadding: const EdgeInsets.all(0),
                     ),
-                    const Spacer(),
                     if (date.date().isAfter(today())) ...[
                       PrimaryButton(
                         text: "保存",
