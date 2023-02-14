@@ -65,7 +65,7 @@ void main() {
       });
 
       test("take pill", () async {
-        final takenDate = today.add(const Duration(seconds: 1));
+        final takenDate = mockToday.add(const Duration(seconds: 1));
 
         final batchFactory = MockBatchFactory();
         final batch = MockWriteBatch();
@@ -101,7 +101,7 @@ void main() {
       });
 
       test("activedPillSheet.todayPillIsAlreadyTaken", () async {
-        final takenDate = today.add(const Duration(seconds: 1));
+        final takenDate = mockToday.add(const Duration(seconds: 1));
         activedPillSheet = activedPillSheet.copyWith(lastTakenDate: takenDate);
 
         final batchFactory = MockBatchFactory();
@@ -127,7 +127,7 @@ void main() {
 
     group("three pill sheet", () {
       test("take pill", () async {
-        final takenDate = today.add(const Duration(seconds: 1));
+        final takenDate = mockToday.add(const Duration(seconds: 1));
         pillSheetGroup = PillSheetGroup(
           id: "group_id",
           pillSheetIDs: [previousPillSheet.id!, activedPillSheet.id!, nextPillSheet.id!],
@@ -168,7 +168,7 @@ void main() {
       });
 
       test("activedPillSheet.todayPillIsAlreadyTaken", () async {
-        final takenDate = today.add(const Duration(seconds: 1));
+        final takenDate = mockToday.add(const Duration(seconds: 1));
         activedPillSheet = activedPillSheet.copyWith(lastTakenDate: takenDate);
         pillSheetGroup = PillSheetGroup(
           id: "group_id",
@@ -324,7 +324,7 @@ void main() {
         expect(result, isNull);
       });
       test("when previous pill sheet is not taken all.", () async {
-        final takenDate = today.add(const Duration(seconds: 1));
+        final takenDate = mockToday.add(const Duration(seconds: 1));
         previousPillSheet = previousPillSheet.copyWith(lastTakenDate: previousPillSheet.lastTakenDate!.subtract(const Duration(days: 1)));
         pillSheetGroup = PillSheetGroup(
           id: "group_id",
@@ -471,7 +471,7 @@ void main() {
           createdAt: mockToday,
         );
 
-        final takenDate = today.add(const Duration(seconds: 1));
+        final takenDate = mockToday.add(const Duration(seconds: 1));
         pillSheetGroup = PillSheetGroup(
           id: "group_id",
           pillSheetIDs: [previousPillSheet.id!, activedPillSheet.id!, nextPillSheet.id!],
@@ -549,7 +549,7 @@ void main() {
           createdAt: mockToday,
         );
 
-        final takenDate = today.add(const Duration(seconds: 1));
+        final takenDate = mockToday.add(const Duration(seconds: 1));
         pillSheetGroup = PillSheetGroup(
           id: "group_id",
           pillSheetIDs: [previousPillSheet.id!, activedPillSheet.id!, nextPillSheet.id!],

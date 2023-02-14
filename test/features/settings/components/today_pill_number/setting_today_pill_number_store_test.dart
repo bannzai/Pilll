@@ -35,10 +35,10 @@ void main() {
         createdAt: now(),
       );
       final updatedPillSheet = pillSheet.copyWith(
-        beginingDate: today.subtract(
+        beginingDate: mockToday.subtract(
           const Duration(days: 1),
         ),
-        lastTakenDate: today.subtract(
+        lastTakenDate: mockToday.subtract(
           const Duration(days: 1),
         ),
       );
@@ -99,10 +99,10 @@ void main() {
         createdAt: now(),
       );
       final updatedPillSheet = pillSheet.copyWith(
-        beginingDate: today.subtract(
+        beginingDate: mockToday.subtract(
           const Duration(days: 1),
         ),
-        lastTakenDate: today.subtract(
+        lastTakenDate: mockToday.subtract(
           const Duration(days: 1),
         ),
       );

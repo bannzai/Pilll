@@ -54,7 +54,7 @@ void main() {
         var pillSheet = PillSheet.create(PillSheetType.pillsheet_21);
         pillSheet = pillSheet.copyWith(
           lastTakenDate: mockToday,
-          beginingDate: today.subtract(
+          beginingDate: mockToday.subtract(
 // NOTE: Into rest duration and notification duration
             const Duration(days: 25),
           ),
@@ -78,7 +78,7 @@ void main() {
                     hasDiscountEntitlement: true,
                     trialDeadlineDate: null,
                     beginTrialDate: null,
-                    discountEntitlementDeadlineDate: today.subtract(const Duration(days: 1)),
+                    discountEntitlementDeadlineDate: mockToday.subtract(const Duration(days: 1)),
                   ),
                 ),
               ),
@@ -110,7 +110,7 @@ void main() {
         var pillSheet = PillSheet.create(PillSheetType.pillsheet_21);
         pillSheet = pillSheet.copyWith(
           lastTakenDate: mockToday,
-          beginingDate: today.subtract(
+          beginingDate: mockToday.subtract(
 // NOTE: Into rest duration and notification duration
             const Duration(days: 25),
           ),
@@ -167,7 +167,7 @@ void main() {
         var pillSheet = PillSheet.create(PillSheetType.pillsheet_21);
         pillSheet = pillSheet.copyWith(
           lastTakenDate: mockToday,
-          beginingDate: today.subtract(
+          beginingDate: mockToday.subtract(
 // NOTE: Not into rest duration and notification duration
             const Duration(days: 10),
           ),
@@ -225,7 +225,7 @@ void main() {
         var pillSheet = PillSheet.create(PillSheetType.pillsheet_21);
         pillSheet = pillSheet.copyWith(
           lastTakenDate: mockToday,
-          beginingDate: today.subtract(
+          beginingDate: mockToday.subtract(
 // NOTE: Not into rest duration and notification duration
             const Duration(days: 10),
           ),
@@ -247,7 +247,7 @@ void main() {
                     isPremium: false,
                     isTrial: true,
                     hasDiscountEntitlement: true,
-                    trialDeadlineDate: today.add(const Duration(days: 1)),
+                    trialDeadlineDate: mockToday.add(const Duration(days: 1)),
                     beginTrialDate: null,
                     discountEntitlementDeadlineDate: null,
                   ),
@@ -281,8 +281,8 @@ void main() {
 
         var pillSheet = PillSheet.create(PillSheetType.pillsheet_21);
         pillSheet = pillSheet.copyWith(
-          lastTakenDate: today.subtract(const Duration(days: 1)),
-          beginingDate: today.subtract(
+          lastTakenDate: mockToday.subtract(const Duration(days: 1)),
+          beginingDate: mockToday.subtract(
 // NOTE: To deactive pill sheet
             const Duration(days: 30),
           ),
@@ -339,8 +339,8 @@ void main() {
 
           var pillSheet = PillSheet.create(PillSheetType.pillsheet_21);
           pillSheet = pillSheet.copyWith(
-            lastTakenDate: today.subtract(const Duration(days: 1)),
-            beginingDate: today.subtract(
+            lastTakenDate: mockToday.subtract(const Duration(days: 1)),
+            beginingDate: mockToday.subtract(
               const Duration(days: 25),
             ),
           );
@@ -404,8 +404,8 @@ void main() {
 
           var pillSheet = PillSheet.create(PillSheetType.pillsheet_21);
           pillSheet = pillSheet.copyWith(
-            lastTakenDate: today.subtract(const Duration(days: 1)),
-            beginingDate: today.subtract(
+            lastTakenDate: mockToday.subtract(const Duration(days: 1)),
+            beginingDate: mockToday.subtract(
               const Duration(days: 25),
             ),
           );
@@ -471,8 +471,8 @@ void main() {
 
           var pillSheet = PillSheet.create(PillSheetType.pillsheet_21);
           pillSheet = pillSheet.copyWith(
-            lastTakenDate: today.subtract(const Duration(days: 1)),
-            beginingDate: today.subtract(
+            lastTakenDate: mockToday.subtract(const Duration(days: 1)),
+            beginingDate: mockToday.subtract(
               const Duration(days: 25),
             ),
           );
@@ -538,8 +538,8 @@ void main() {
 
           var pillSheet = PillSheet.create(PillSheetType.pillsheet_21);
           pillSheet = pillSheet.copyWith(
-            lastTakenDate: today.subtract(const Duration(days: 1)),
-            beginingDate: today.subtract(
+            lastTakenDate: mockToday.subtract(const Duration(days: 1)),
+            beginingDate: mockToday.subtract(
               const Duration(days: 25),
             ),
           );
@@ -605,8 +605,8 @@ void main() {
 
           var pillSheet = PillSheet.create(PillSheetType.pillsheet_21);
           pillSheet = pillSheet.copyWith(
-            lastTakenDate: today.subtract(const Duration(days: 1)),
-            beginingDate: today.subtract(
+            lastTakenDate: mockToday.subtract(const Duration(days: 1)),
+            beginingDate: mockToday.subtract(
               const Duration(days: 25),
             ),
           );
@@ -679,7 +679,7 @@ void main() {
           var pillSheet = PillSheet.create(PillSheetType.pillsheet_21);
           pillSheet = pillSheet.copyWith(
             lastTakenDate: mockToday,
-            beginingDate: today.subtract(
+            beginingDate: mockToday.subtract(
               // NOTE: Not into rest duration and notification duration
               const Duration(days: 10),
             ),
@@ -748,7 +748,7 @@ void main() {
           var pillSheet = PillSheet.create(PillSheetType.pillsheet_21);
           pillSheet = pillSheet.copyWith(
             lastTakenDate: mockToday,
-            beginingDate: today.subtract(
+            beginingDate: mockToday.subtract(
               // NOTE: Not into rest duration and notification duration
               const Duration(days: 10),
             ),
@@ -817,7 +817,7 @@ void main() {
           var pillSheet = PillSheet.create(PillSheetType.pillsheet_21);
           pillSheet = pillSheet.copyWith(
             lastTakenDate: mockToday,
-            beginingDate: today.subtract(
+            beginingDate: mockToday.subtract(
               // NOTE: Not into rest duration and notification duration
               const Duration(days: 10),
             ),
@@ -886,7 +886,7 @@ void main() {
           var pillSheet = PillSheet.create(PillSheetType.pillsheet_21);
           pillSheet = pillSheet.copyWith(
             lastTakenDate: mockToday,
-            beginingDate: today.subtract(
+            beginingDate: mockToday.subtract(
               // NOTE: Not into rest duration and notification duration
               const Duration(days: 10),
             ),
@@ -955,7 +955,7 @@ void main() {
           var pillSheet = PillSheet.create(PillSheetType.pillsheet_21);
           pillSheet = pillSheet.copyWith(
             lastTakenDate: mockToday,
-            beginingDate: today.subtract(
+            beginingDate: mockToday.subtract(
               // NOTE: Not into rest duration and notification duration
               const Duration(days: 10),
             ),
@@ -1024,7 +1024,7 @@ void main() {
           var pillSheet = PillSheet.create(PillSheetType.pillsheet_21);
           pillSheet = pillSheet.copyWith(
             lastTakenDate: mockToday,
-            beginingDate: today.subtract(
+            beginingDate: mockToday.subtract(
               // NOTE: Not into rest duration and notification duration
               const Duration(days: 10),
             ),
@@ -1094,7 +1094,7 @@ void main() {
         var pillSheet = PillSheet.create(PillSheetType.pillsheet_21);
         pillSheet = pillSheet.copyWith(
           lastTakenDate: mockToday,
-          beginingDate: today.subtract(
+          beginingDate: mockToday.subtract(
 // NOTE: Not into rest duration and notification duration
             const Duration(days: 10),
           ),
@@ -1152,7 +1152,7 @@ void main() {
         var pillSheet = PillSheet.create(PillSheetType.pillsheet_21);
         pillSheet = pillSheet.copyWith(
           lastTakenDate: mockToday,
-          beginingDate: today.subtract(
+          beginingDate: mockToday.subtract(
 // NOTE: Into rest duration and notification duration
             const Duration(days: 25),
           ),
@@ -1209,8 +1209,8 @@ void main() {
 
         var pillSheet = PillSheet.create(PillSheetType.pillsheet_21);
         pillSheet = pillSheet.copyWith(
-          lastTakenDate: today.subtract(const Duration(days: 1)),
-          beginingDate: today.subtract(
+          lastTakenDate: mockToday.subtract(const Duration(days: 1)),
+          beginingDate: mockToday.subtract(
 // NOTE: To deactive pill sheet
             const Duration(days: 30),
           ),

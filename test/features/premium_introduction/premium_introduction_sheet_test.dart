@@ -78,7 +78,7 @@ void main() {
   group('#PremiumIntroductionSheet', () {
     final mockTodayRepository = MockTodayService();
     final mockToday = DateTime(2021, 04, 29);
-    final discountEntitlementDeadlineDate = today.subtract(const Duration(days: 1));
+    final discountEntitlementDeadlineDate = mockToday.subtract(const Duration(days: 1));
 
     when(mockTodayRepository.now()).thenReturn(mockToday);
     todayRepository = mockTodayRepository;
@@ -169,7 +169,7 @@ void main() {
         final premiumAndTrial = _FakePremiumAndTrial(
           fakeIsPremium: false,
           fakeHasDiscountEntitlement: hasDiscountEntitlement,
-          fakeDiscountEntitlementDeadlineDate: today.subtract(const Duration(days: 1)),
+          fakeDiscountEntitlementDeadlineDate: mockToday.subtract(const Duration(days: 1)),
         );
 
         const sheet = PremiumIntroductionSheet();
@@ -210,7 +210,7 @@ void main() {
         final premiumAndTrial = _FakePremiumAndTrial(
           fakeIsPremium: false,
           fakeHasDiscountEntitlement: true,
-          fakeDiscountEntitlementDeadlineDate: today.subtract(const Duration(days: 1)),
+          fakeDiscountEntitlementDeadlineDate: mockToday.subtract(const Duration(days: 1)),
         );
 
         const sheet = PremiumIntroductionSheet();

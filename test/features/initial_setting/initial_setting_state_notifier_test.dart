@@ -328,7 +328,7 @@ void main() {
       final pillSheet = PillSheet(
         id: "sheet_id",
         typeInfo: PillSheetType.pillsheet_28_0.typeInfo,
-        beginingDate: today.subtract(
+        beginingDate: mockToday.subtract(
           const Duration(days: 28),
         ),
         groupIndex: 0,
@@ -339,7 +339,7 @@ void main() {
         id: "sheet_id2",
         typeInfo: PillSheetType.pillsheet_21.typeInfo,
         beginingDate: mockToday,
-        lastTakenDate: today.subtract(const Duration(days: 1)),
+        lastTakenDate: mockToday.subtract(const Duration(days: 1)),
         groupIndex: 1,
         createdAt: now(),
       );

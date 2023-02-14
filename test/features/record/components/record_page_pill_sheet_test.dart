@@ -476,7 +476,7 @@ void main() {
     });
     group("it is have rest duration", () {
       group("it is not ended rest duration", () {
-        test("simualte begin rest duration. pillSheet.lastTakenDate is yesterday and restDuration.beginDate is today.", () {
+        test("simualte begin rest duration. pillSheet.lastTakenDate is yesterday and restDuration.beginDate is mockToday.", () {
           final originalTodayRepository = todayRepository;
           final mockTodayRepository = MockTodayService();
           todayRepository = mockTodayRepository;

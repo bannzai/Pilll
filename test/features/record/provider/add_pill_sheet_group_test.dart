@@ -120,7 +120,7 @@ void main() {
       final pillSheet2 = PillSheet(
         id: "sheet_id2",
         typeInfo: PillSheetType.pillsheet_21.typeInfo,
-        beginingDate: today.add(const Duration(days: 28)),
+        beginingDate: mockToday.add(const Duration(days: 28)),
         lastTakenDate: null,
         groupIndex: 1,
         createdAt: now(),
