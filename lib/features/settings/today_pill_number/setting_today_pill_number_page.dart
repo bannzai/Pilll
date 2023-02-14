@@ -70,9 +70,9 @@ class SettingTodayPillNumberPage extends HookConsumerWidget {
                           }
                           return pillNumberIntoPillSheet.value;
                         },
-                        markSelected: (_pillSheetPageIndex, _pillNumberIntoPillSheet) {
-                          pillSheetPageIndex.value = _pillSheetPageIndex;
-                          pillNumberIntoPillSheet.value = _pillNumberIntoPillSheet;
+                        markSelected: (pillSheetPageIndex, pillNumberIntoPillSheet) {
+                          pillSheetPageIndex.value = pillSheetPageIndex;
+                          pillNumberIntoPillSheet.value = pillNumberIntoPillSheet;
                         }),
                   ),
                   const SizedBox(height: 20),
@@ -118,11 +118,11 @@ class SettingTodayPillNumberPage extends HookConsumerWidget {
     required PillSheetGroup pillSheetGroup,
   }) {
     final pillSheetTypes = pillSheetGroup.pillSheets.map((e) => e.pillSheetType).toList();
-    final _passedTotalCount = summarizedPillCountWithPillSheetTypesToEndIndex(pillSheetTypes: pillSheetTypes, endIndex: activedPillSheet.groupIndex);
-    if (_passedTotalCount >= activedPillSheet.todayPillNumber) {
+    final passedTotalCount = summarizedPillCountWithPillSheetTypesToEndIndex(pillSheetTypes: pillSheetTypes, endIndex: activedPillSheet.groupIndex);
+    if (passedTotalCount >= activedPillSheet.todayPillNumber) {
       return activedPillSheet.todayPillNumber;
     }
-    return activedPillSheet.todayPillNumber - _passedTotalCount;
+    return activedPillSheet.todayPillNumber - passedTotalCount;
   }
 }
 

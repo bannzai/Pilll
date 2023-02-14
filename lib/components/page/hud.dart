@@ -50,7 +50,7 @@ class _HUDState extends State<HUD> {
 
   @override
   Widget build(BuildContext context) {
-    return _InheritedWidget(child: _body(context), state: this);
+    return _InheritedWidget(state: this, child: _body(context));
   }
 
   Widget _body(BuildContext context) {

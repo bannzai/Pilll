@@ -19,7 +19,7 @@ class ReminderNotificationCustomizeWordPage extends HookConsumerWidget {
     final setting = ref.watch(settingProvider).requireValue;
 
     final textFieldControlelr = useTextEditingController(text: setting.reminderNotificationCustomization.word);
-    final word = useState(setting.reminderNotificationCustomization.word);
+    final wordState = useState(setting.reminderNotificationCustomization.word);
     final isInVisibleReminderDate = useState(setting.reminderNotificationCustomization.isInVisibleReminderDate);
     final isInVisiblePillNumber = useState(setting.reminderNotificationCustomization.isInVisiblePillNumber);
     final isInVisibleDescription = useState(setting.reminderNotificationCustomization.isInVisibleDescription);
@@ -48,7 +48,7 @@ class ReminderNotificationCustomizeWordPage extends HookConsumerWidget {
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
                   _ReminderPushNotificationPreview(
-                    word: word.value,
+                    word: wordState.value,
                     isInVisibleReminderDate: isInVisibleReminderDate.value,
                     isInvisiblePillNumber: isInVisiblePillNumber.value,
                     isInvisibleDescription: isInVisibleDescription.value,
@@ -66,15 +66,15 @@ class ReminderNotificationCustomizeWordPage extends HookConsumerWidget {
                         ),
                         const Spacer(),
                         Text(
-                          "${word.value.characters.length}/8",
+                          "${wordState.value.characters.length}/8",
                           style:
                               const TextStyle(fontFamily: FontFamily.japanese, fontSize: 12, fontWeight: FontWeight.w400, color: TextColor.darkGray),
                         ),
                       ]),
                     ),
                     autofocus: true,
-                    onChanged: (_word) {
-                      word.value = _word;
+                    onChanged: (word) {
+                      wordState.value = word;
                     },
                     onSubmitted: (word) async {
                       analytics.logEvent(name: "submit_reminder_notification_customize");

@@ -18,10 +18,10 @@ void main() {
   group("#modifiyTodayPillNumber", () {
     test("group has only one pill sheet and it is not yet taken", () async {
       var mockTodayRepository = MockTodayService();
-      final _today = DateTime.parse("2020-09-19");
+      final today = DateTime.parse("2020-09-19");
       todayRepository = mockTodayRepository;
-      when(mockTodayRepository.now()).thenReturn(_today);
-      when(mockTodayRepository.now()).thenReturn(_today);
+      when(mockTodayRepository.now()).thenReturn(today);
+      when(mockTodayRepository.now()).thenReturn(today);
 
       final batchFactory = MockBatchFactory();
       final batch = MockWriteBatch();
@@ -29,16 +29,16 @@ void main() {
       final pillSheet = PillSheet(
         id: "sheet_id",
         typeInfo: PillSheetType.pillsheet_28_0.typeInfo,
-        beginingDate: _today,
+        beginingDate: today,
         groupIndex: 0,
         lastTakenDate: null,
         createdAt: now(),
       );
       final updatedPillSheet = pillSheet.copyWith(
-        beginingDate: _today.subtract(
+        beginingDate: today.subtract(
           const Duration(days: 1),
         ),
-        lastTakenDate: _today.subtract(
+        lastTakenDate: today.subtract(
           const Duration(days: 1),
         ),
       );
@@ -82,10 +82,10 @@ void main() {
 
     test("group has only one pill sheet and it is already taken", () async {
       var mockTodayRepository = MockTodayService();
-      final _today = DateTime.parse("2020-09-19");
+      final today = DateTime.parse("2020-09-19");
       todayRepository = mockTodayRepository;
-      when(mockTodayRepository.now()).thenReturn(_today);
-      when(mockTodayRepository.now()).thenReturn(_today);
+      when(mockTodayRepository.now()).thenReturn(today);
+      when(mockTodayRepository.now()).thenReturn(today);
 
       final batchFactory = MockBatchFactory();
       final batch = MockWriteBatch();
@@ -93,16 +93,16 @@ void main() {
       final pillSheet = PillSheet(
         id: "sheet_id",
         typeInfo: PillSheetType.pillsheet_28_0.typeInfo,
-        beginingDate: _today,
+        beginingDate: today,
         groupIndex: 0,
-        lastTakenDate: _today,
+        lastTakenDate: today,
         createdAt: now(),
       );
       final updatedPillSheet = pillSheet.copyWith(
-        beginingDate: _today.subtract(
+        beginingDate: today.subtract(
           const Duration(days: 1),
         ),
-        lastTakenDate: _today.subtract(
+        lastTakenDate: today.subtract(
           const Duration(days: 1),
         ),
       );
@@ -146,10 +146,10 @@ void main() {
 
     test("group has three pill sheet and it is changed direction middle to left", () async {
       var mockTodayRepository = MockTodayService();
-      final _today = DateTime.parse("2022-05-01");
+      final today = DateTime.parse("2022-05-01");
       todayRepository = mockTodayRepository;
-      when(mockTodayRepository.now()).thenReturn(_today);
-      when(mockTodayRepository.now()).thenReturn(_today);
+      when(mockTodayRepository.now()).thenReturn(today);
+      when(mockTodayRepository.now()).thenReturn(today);
 
       final batchFactory = MockBatchFactory();
       final batch = MockWriteBatch();
@@ -233,10 +233,10 @@ void main() {
     });
     test("group has three pill sheet and it is changed direction middle to left and cheking clear lastTakenDate", () async {
       var mockTodayRepository = MockTodayService();
-      final _today = DateTime.parse("2022-05-01");
+      final today = DateTime.parse("2022-05-01");
       todayRepository = mockTodayRepository;
-      when(mockTodayRepository.now()).thenReturn(_today);
-      when(mockTodayRepository.now()).thenReturn(_today);
+      when(mockTodayRepository.now()).thenReturn(today);
+      when(mockTodayRepository.now()).thenReturn(today);
 
       final batchFactory = MockBatchFactory();
       final batch = MockWriteBatch();
@@ -321,10 +321,10 @@ void main() {
     });
     test("group has three pill sheet and it is changed direction middle to right", () async {
       var mockTodayRepository = MockTodayService();
-      final _today = DateTime.parse("2022-05-01");
+      final today = DateTime.parse("2022-05-01");
       todayRepository = mockTodayRepository;
-      when(mockTodayRepository.now()).thenReturn(_today);
-      when(mockTodayRepository.now()).thenReturn(_today);
+      when(mockTodayRepository.now()).thenReturn(today);
+      when(mockTodayRepository.now()).thenReturn(today);
 
       final batchFactory = MockBatchFactory();
       final batch = MockWriteBatch();
@@ -412,10 +412,10 @@ void main() {
   group("pill sheet has rest durations", () {
     test("group has three pill sheet and it is changed direction middle to left", () async {
       var mockTodayRepository = MockTodayService();
-      final _today = DateTime.parse("2022-05-02");
+      final today = DateTime.parse("2022-05-02");
       todayRepository = mockTodayRepository;
-      when(mockTodayRepository.now()).thenReturn(_today);
-      when(mockTodayRepository.now()).thenReturn(_today);
+      when(mockTodayRepository.now()).thenReturn(today);
+      when(mockTodayRepository.now()).thenReturn(today);
 
       final batchFactory = MockBatchFactory();
       final batch = MockWriteBatch();

@@ -15,13 +15,6 @@ class PickerToolbar extends StatelessWidget {
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: <Widget>[
           CupertinoButton(
-            child: const Text('キャンセル',
-                style: TextStyle(
-                  fontFamily: FontFamily.japanese,
-                  fontWeight: FontWeight.w300,
-                  fontSize: 14,
-                  color: TextColor.primary,
-                )),
             onPressed: () {
               cancel();
             },
@@ -29,15 +22,15 @@ class PickerToolbar extends StatelessWidget {
               horizontal: 16.0,
               vertical: 5.0,
             ),
-          ),
-          CupertinoButton(
-            child: const Text('完了',
+            child: const Text('キャンセル',
                 style: TextStyle(
                   fontFamily: FontFamily.japanese,
-                  fontWeight: FontWeight.w600,
-                  fontSize: 16,
+                  fontWeight: FontWeight.w300,
+                  fontSize: 14,
                   color: TextColor.primary,
                 )),
+          ),
+          CupertinoButton(
             onPressed: () {
               done();
             },
@@ -45,6 +38,13 @@ class PickerToolbar extends StatelessWidget {
               horizontal: 16.0,
               vertical: 5.0,
             ),
+            child: const Text('完了',
+                style: TextStyle(
+                  fontFamily: FontFamily.japanese,
+                  fontWeight: FontWeight.w600,
+                  fontSize: 16,
+                  color: TextColor.primary,
+                )),
           )
         ],
       ),

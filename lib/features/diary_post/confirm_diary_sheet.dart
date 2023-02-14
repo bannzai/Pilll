@@ -45,8 +45,8 @@ class ConfirmDiarySheet extends HookConsumerWidget {
 
   Widget _withContentSpacer(Widget content) {
     return Container(
-      child: content,
       padding: const EdgeInsets.only(top: 10, bottom: 10),
+      child: content,
     );
   }
 

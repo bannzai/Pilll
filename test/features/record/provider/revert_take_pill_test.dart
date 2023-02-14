@@ -21,10 +21,10 @@ void main() {
     group("group has only one pill sheet", () {
       test("Revert to first pill sheet", () async {
         var mockTodayRepository = MockTodayService();
-        final _today = DateTime.parse("2022-01-17");
+        final today = DateTime.parse("2022-01-17");
         todayRepository = mockTodayRepository;
-        when(mockTodayRepository.now()).thenReturn(_today);
-        when(mockTodayRepository.now()).thenReturn(_today);
+        when(mockTodayRepository.now()).thenReturn(today);
+        when(mockTodayRepository.now()).thenReturn(today);
         final yesterday = DateTime.parse("2022-01-16");
 
         final batchFactory = MockBatchFactory();
@@ -92,10 +92,10 @@ void main() {
 
       test("Revert today pill", () async {
         var mockTodayRepository = MockTodayService();
-        final _today = DateTime.parse("2022-01-17");
+        final today = DateTime.parse("2022-01-17");
         todayRepository = mockTodayRepository;
-        when(mockTodayRepository.now()).thenReturn(_today);
-        when(mockTodayRepository.now()).thenReturn(_today);
+        when(mockTodayRepository.now()).thenReturn(today);
+        when(mockTodayRepository.now()).thenReturn(today);
         final yesterday = DateTime.parse("2022-01-16");
 
         final batchFactory = MockBatchFactory();
@@ -163,10 +163,10 @@ void main() {
 
       test("revert with rest durations and removed rest duration", () async {
         var mockTodayRepository = MockTodayService();
-        final _today = DateTime.parse("2022-01-17");
+        final today = DateTime.parse("2022-01-17");
         todayRepository = mockTodayRepository;
-        when(mockTodayRepository.now()).thenReturn(_today);
-        when(mockTodayRepository.now()).thenReturn(_today);
+        when(mockTodayRepository.now()).thenReturn(today);
+        when(mockTodayRepository.now()).thenReturn(today);
         final beginDate = DateTime.parse("2022-01-06");
 
         final batchFactory = MockBatchFactory();
@@ -182,9 +182,9 @@ void main() {
           createdAt: now(),
           restDurations: [
             RestDuration(
-              beginDate: _today.subtract(const Duration(days: 2)),
-              createdDate: _today.subtract(const Duration(days: 2)),
-              endDate: _today.subtract(const Duration(days: 1)),
+              beginDate: today.subtract(const Duration(days: 2)),
+              createdDate: today.subtract(const Duration(days: 2)),
+              endDate: today.subtract(const Duration(days: 1)),
             ),
           ],
         );
@@ -242,10 +242,10 @@ void main() {
 
       test("revert with rest durations but no removed rest duration", () async {
         var mockTodayRepository = MockTodayService();
-        final _today = DateTime.parse("2022-01-17");
+        final today = DateTime.parse("2022-01-17");
         todayRepository = mockTodayRepository;
-        when(mockTodayRepository.now()).thenReturn(_today);
-        when(mockTodayRepository.now()).thenReturn(_today);
+        when(mockTodayRepository.now()).thenReturn(today);
+        when(mockTodayRepository.now()).thenReturn(today);
         final beginDate = DateTime.parse("2022-01-06");
         final yesterday = DateTime.parse("2022-01-16");
 
@@ -262,9 +262,9 @@ void main() {
           createdAt: now(),
           restDurations: [
             RestDuration(
-              beginDate: _today.subtract(const Duration(days: 8)),
-              createdDate: _today.subtract(const Duration(days: 8)),
-              endDate: _today.subtract(const Duration(days: 7)),
+              beginDate: today.subtract(const Duration(days: 8)),
+              createdDate: today.subtract(const Duration(days: 8)),
+              endDate: today.subtract(const Duration(days: 7)),
             ),
           ],
         );
@@ -321,10 +321,10 @@ void main() {
     group("group has two pill sheet", () {
       test("call revert into actived pill sheet", () async {
         var mockTodayRepository = MockTodayService();
-        final _today = DateTime.parse("2022-01-17");
+        final today = DateTime.parse("2022-01-17");
         todayRepository = mockTodayRepository;
-        when(mockTodayRepository.now()).thenReturn(_today);
-        when(mockTodayRepository.now()).thenReturn(_today);
+        when(mockTodayRepository.now()).thenReturn(today);
+        when(mockTodayRepository.now()).thenReturn(today);
         final yesterday = DateTime.parse("2022-01-16");
 
         final batchFactory = MockBatchFactory();
@@ -334,9 +334,9 @@ void main() {
         final pillSheet = PillSheet(
           id: "1",
           typeInfo: PillSheetType.pillsheet_28_0.typeInfo,
-          beginingDate: _today.subtract(const Duration(days: 29)),
+          beginingDate: today.subtract(const Duration(days: 29)),
           groupIndex: 0,
-          lastTakenDate: _today.subtract(const Duration(days: 2)),
+          lastTakenDate: today.subtract(const Duration(days: 2)),
           createdAt: now(),
         );
 
@@ -345,7 +345,7 @@ void main() {
           id: "2",
           typeInfo: PillSheetType.pillsheet_21.typeInfo,
           beginingDate: yesterday,
-          lastTakenDate: _today,
+          lastTakenDate: today,
           groupIndex: 1,
           createdAt: now(),
         );
@@ -402,10 +402,10 @@ void main() {
 
       test("call revert from actived pill sheet to before pill sheet", () async {
         var mockTodayRepository = MockTodayService();
-        final _today = DateTime.parse("2022-01-31");
+        final today = DateTime.parse("2022-01-31");
         todayRepository = mockTodayRepository;
-        when(mockTodayRepository.now()).thenReturn(_today);
-        when(mockTodayRepository.now()).thenReturn(_today);
+        when(mockTodayRepository.now()).thenReturn(today);
+        when(mockTodayRepository.now()).thenReturn(today);
         final yesterday = DateTime.parse("2022-01-30");
 
         final batchFactory = MockBatchFactory();
@@ -415,9 +415,9 @@ void main() {
         final pillSheet = PillSheet(
           id: "1",
           typeInfo: PillSheetType.pillsheet_28_0.typeInfo,
-          beginingDate: _today.subtract(const Duration(days: 29)),
+          beginingDate: today.subtract(const Duration(days: 29)),
           groupIndex: 0,
-          lastTakenDate: _today.subtract(const Duration(days: 2)),
+          lastTakenDate: today.subtract(const Duration(days: 2)),
           createdAt: now(),
         );
 
@@ -426,7 +426,7 @@ void main() {
           id: "2",
           typeInfo: PillSheetType.pillsheet_21.typeInfo,
           beginingDate: yesterday,
-          lastTakenDate: _today,
+          lastTakenDate: today,
           groupIndex: 1,
           createdAt: now(),
         );
@@ -441,7 +441,7 @@ void main() {
           id: "group_id",
           pillSheetIDs: ["1", "2"],
           pillSheets: [
-            pillSheet.copyWith(lastTakenDate: _today.subtract(const Duration(days: 4))),
+            pillSheet.copyWith(lastTakenDate: today.subtract(const Duration(days: 4))),
             pillSheet2.copyWith(lastTakenDate: pillSheet2.beginingDate.subtract(const Duration(days: 1))),
           ],
           createdAt: now(),
@@ -450,7 +450,7 @@ void main() {
         when(batchSetPillSheetGroup(batch, updatedPillSheetGroup)).thenReturn(updatedPillSheetGroup);
 
         final history = PillSheetModifiedHistoryServiceActionFactory.createRevertTakenPillAction(
-            pillSheetGroupID: "group_id", before: pillSheet2, after: pillSheet.copyWith(lastTakenDate: _today.subtract(const Duration(days: 4))));
+            pillSheetGroupID: "group_id", before: pillSheet2, after: pillSheet.copyWith(lastTakenDate: today.subtract(const Duration(days: 4))));
         final batchSetPillSheetModifiedHistory = MockBatchSetPillSheetModifiedHistory();
         when(batchSetPillSheetModifiedHistory(batch, history)).thenReturn(null);
 
@@ -477,10 +477,10 @@ void main() {
       });
       test("call revert with rest duration", () async {
         var mockTodayRepository = MockTodayService();
-        final _today = DateTime.parse("2022-01-31");
+        final today = DateTime.parse("2022-01-31");
         todayRepository = mockTodayRepository;
-        when(mockTodayRepository.now()).thenReturn(_today);
-        when(mockTodayRepository.now()).thenReturn(_today);
+        when(mockTodayRepository.now()).thenReturn(today);
+        when(mockTodayRepository.now()).thenReturn(today);
         final yesterday = DateTime.parse("2022-01-30");
 
         final batchFactory = MockBatchFactory();
@@ -490,9 +490,9 @@ void main() {
         final pillSheet = PillSheet(
           id: "1",
           typeInfo: PillSheetType.pillsheet_28_0.typeInfo,
-          beginingDate: _today.subtract(const Duration(days: 29)),
+          beginingDate: today.subtract(const Duration(days: 29)),
           groupIndex: 0,
-          lastTakenDate: _today.subtract(const Duration(days: 2)),
+          lastTakenDate: today.subtract(const Duration(days: 2)),
           createdAt: now(),
         );
 
@@ -501,10 +501,10 @@ void main() {
           id: "2",
           typeInfo: PillSheetType.pillsheet_21.typeInfo,
           beginingDate: yesterday,
-          lastTakenDate: _today,
+          lastTakenDate: today,
           groupIndex: 1,
           restDurations: [
-            RestDuration(beginDate: yesterday, createdDate: yesterday, endDate: _today),
+            RestDuration(beginDate: yesterday, createdDate: yesterday, endDate: today),
           ],
           createdAt: now(),
         );
@@ -519,7 +519,7 @@ void main() {
           id: "group_id",
           pillSheetIDs: ["1", "2"],
           pillSheets: [
-            pillSheet.copyWith(lastTakenDate: _today.subtract(const Duration(days: 4))),
+            pillSheet.copyWith(lastTakenDate: today.subtract(const Duration(days: 4))),
             pillSheet2.copyWith(lastTakenDate: pillSheet2.beginingDate.subtract(const Duration(days: 1)), restDurations: []),
           ],
           createdAt: now(),
@@ -530,7 +530,7 @@ void main() {
         final history = PillSheetModifiedHistoryServiceActionFactory.createRevertTakenPillAction(
             pillSheetGroupID: "group_id",
             before: pillSheet2,
-            after: pillSheet.copyWith(lastTakenDate: _today.subtract(const Duration(days: 4)), restDurations: []));
+            after: pillSheet.copyWith(lastTakenDate: today.subtract(const Duration(days: 4)), restDurations: []));
         final batchSetPillSheetModifiedHistory = MockBatchSetPillSheetModifiedHistory();
         when(batchSetPillSheetModifiedHistory(batch, history)).thenReturn(null);
 

@@ -32,8 +32,8 @@ class MenstruationCardList extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final _cardState = cardState(latestPillSheetGroup, latestMenstruation, setting, calendarScheduledMenstruationBandModels);
-    final _historyCardState = historyCardState(latestMenstruation, allMenstruation, premiumAndTrial);
+    final card = cardState(latestPillSheetGroup, latestMenstruation, setting, calendarScheduledMenstruationBandModels);
+    final historyCard = historyCardState(latestMenstruation, allMenstruation, premiumAndTrial);
     return Expanded(
       child: Container(
         color: PilllColors.background,
@@ -41,11 +41,11 @@ class MenstruationCardList extends StatelessWidget {
           padding: const EdgeInsets.only(top: 16, left: 16, right: 16),
           scrollDirection: Axis.vertical,
           children: [
-            if (_cardState != null) ...[
-              MenstruationCard(_cardState),
+            if (card != null) ...[
+              MenstruationCard(card),
               const SizedBox(height: 24),
             ],
-            if (_historyCardState != null) MenstruationHistoryCard(state: _historyCardState),
+            if (historyCard != null) MenstruationHistoryCard(state: historyCard),
           ],
         ),
       ),

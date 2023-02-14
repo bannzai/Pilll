@@ -42,8 +42,8 @@ final setMenstruationProvider = Provider((ref) => SetMenstruation(ref.watch(data
 class SetMenstruation {
   final DatabaseConnection databaseConnection;
   SetMenstruation(this.databaseConnection);
-  Future<Menstruation> call(Menstruation _menstruation) async {
-    var menstruation = _menstruation;
+  Future<Menstruation> call(Menstruation menstruation) async {
+    var menstruation = menstruation;
     if (menstruation.id == null) {
       if (await _canHealthkitDataSave()) {
         final healthKitSampleDataUUID = await addMenstruationFlowHealthKitData(menstruation);

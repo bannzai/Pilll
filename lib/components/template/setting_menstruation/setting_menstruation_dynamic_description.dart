@@ -165,16 +165,16 @@ class SettingMenstruationDynamicDescription extends StatelessWidget {
                 },
                 child: CupertinoPicker(
                   itemExtent: 40,
+                  onSelectedItemChanged: (index) {
+                    keepSelectedFromMenstruation = index;
+                  },
+                  scrollController: FixedExtentScrollController(initialItem: keepSelectedFromMenstruation),
                   children: List.generate(maximumCount + 1, (index) {
                     if (index == 0) {
                       return "-";
                     }
                     return "$index";
                   }).map(_pickerItem).toList(),
-                  onSelectedItemChanged: (index) {
-                    keepSelectedFromMenstruation = index;
-                  },
-                  scrollController: FixedExtentScrollController(initialItem: keepSelectedFromMenstruation),
                 ),
               ),
             ),
@@ -210,11 +210,11 @@ class SettingMenstruationDynamicDescription extends StatelessWidget {
                 },
                 child: CupertinoPicker(
                   itemExtent: 40,
-                  children: SettingMenstruationDynamicDescriptionConstants.durationList.map(_pickerItem).toList(),
                   onSelectedItemChanged: (index) {
                     keepSelectedDurationMenstruation = index;
                   },
                   scrollController: FixedExtentScrollController(initialItem: keepSelectedDurationMenstruation),
+                  children: SettingMenstruationDynamicDescriptionConstants.durationList.map(_pickerItem).toList(),
                 ),
               ),
             ),

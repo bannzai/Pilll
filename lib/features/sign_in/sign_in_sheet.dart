@@ -249,26 +249,26 @@ class SignInSheet extends HookConsumerWidget {
   String get _appleButtonText {
     switch (stateContext) {
       case SignInSheetStateContext.initialSetting:
-        return LinkAccountType.apple.loginContentName + "でサインイン";
+        return "${LinkAccountType.apple.loginContentName}でサインイン";
       case SignInSheetStateContext.recordPage:
-        return LinkAccountType.apple.loginContentName + "で登録";
+        return "${LinkAccountType.apple.loginContentName}で登録";
       case SignInSheetStateContext.premium:
-        return LinkAccountType.apple.loginContentName + "で登録";
+        return "${LinkAccountType.apple.loginContentName}で登録";
       case SignInSheetStateContext.setting:
-        return LinkAccountType.apple.loginContentName + "で登録";
+        return "${LinkAccountType.apple.loginContentName}で登録";
     }
   }
 
   String get _googleButtonText {
     switch (stateContext) {
       case SignInSheetStateContext.initialSetting:
-        return LinkAccountType.google.loginContentName + "でサインイン";
+        return "${LinkAccountType.google.loginContentName}でサインイン";
       case SignInSheetStateContext.recordPage:
-        return LinkAccountType.google.loginContentName + "で登録";
+        return "${LinkAccountType.google.loginContentName}で登録";
       case SignInSheetStateContext.premium:
-        return LinkAccountType.google.loginContentName + "で登録";
+        return "${LinkAccountType.google.loginContentName}で登録";
       case SignInSheetStateContext.setting:
-        return LinkAccountType.google.loginContentName + "で登録";
+        return "${LinkAccountType.google.loginContentName}で登録";
     }
   }
 
