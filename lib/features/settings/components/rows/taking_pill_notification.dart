@@ -31,10 +31,11 @@ class TakingPillNotification extends HookConsumerWidget {
         analytics.logEvent(
           name: "did_select_toggle_reminder",
         );
-        ScaffoldMessenger.of(context).hideCurrentSnackBar();
+        final messenger = ScaffoldMessenger.of(context);
+        messenger.hideCurrentSnackBar();
         try {
           await setSetting(setting.copyWith(isOnReminder: value));
-          ScaffoldMessenger.of(context).showSnackBar(
+          messenger.showSnackBar(
             SnackBar(
               duration: const Duration(seconds: 2),
               content: Text(
