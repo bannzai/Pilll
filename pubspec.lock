@@ -1052,7 +1052,7 @@ packages:
     source: hosted
     version: "0.4.16"
   timezone:
-    dependency: transitive
+    dependency: "direct main"
     description:
       name: timezone
       sha256: "24c8fcdd49a805d95777a39064862133ff816ebfffe0ceff110fb5960e557964"

@@ -72,6 +72,7 @@ dependencies:
   webview_flutter: ^3.0.4
   collection:
   crypto:
+  timezone:
 
 dev_dependencies:
   # The "flutter_lints" package below contains a set of recommended lints to
