@@ -160,7 +160,7 @@ class ConfirmDiarySheet extends HookConsumerWidget {
       width: 32,
       height: 32,
       decoration: BoxDecoration(shape: BoxShape.circle, color: PilllColors.thinSecondary),
-      child: SvgPicture.asset("images/heart.svg", color: PilllColors.primary),
+      child: SvgPicture.asset("images/heart.svg", colorFilter: const ColorFilter.mode(PilllColors.primary, BlendMode.srcIn)),
     );
   }
 
