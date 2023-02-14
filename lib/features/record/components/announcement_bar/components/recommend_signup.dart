@@ -51,7 +51,7 @@ class RecommendSignupAnnouncementBar extends HookConsumerWidget {
                 IconButton(
                   icon: SvgPicture.asset(
                     "images/arrow_right.svg",
-                    color: Colors.white,
+                    colorFilter: const ColorFilter.mode(Colors.white, BlendMode.srcIn),
                   ),
                   onPressed: () {},
                   iconSize: 24,

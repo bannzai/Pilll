@@ -52,9 +52,10 @@ class CreatingNewPillSheetRow extends HookConsumerWidget {
           name: "toggle_creating_new_pillsheet",
         );
         if (isPremium || isTrial) {
-          ScaffoldMessenger.of(context).hideCurrentSnackBar();
+          final messenger = ScaffoldMessenger.of(context);
+          messenger.hideCurrentSnackBar();
           await setSetting(setting.copyWith(isAutomaticallyCreatePillSheet: value));
-          ScaffoldMessenger.of(context).showSnackBar(SnackBar(
+          messenger.showSnackBar(SnackBar(
             duration: const Duration(seconds: 2),
             content: Text(
               "ピルシートグループの自動追加を${value ? "ON" : "OFF"}にしました",

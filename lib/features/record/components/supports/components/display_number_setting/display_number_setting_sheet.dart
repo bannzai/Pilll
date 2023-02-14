@@ -70,6 +70,7 @@ class DisplayNumberSettingSheet extends HookConsumerWidget {
                     analytics.logEvent(
                       name: "sheet_change_display_number_setting",
                     );
+                    final navigator = Navigator.of(context);
                     await _submit(
                       batchFactory: batchFactory,
                       batchSetPillSheetGroup: batchSetPillSheetGroup,
@@ -77,7 +78,7 @@ class DisplayNumberSettingSheet extends HookConsumerWidget {
                       begin: begin,
                       end: end,
                     );
-                    Navigator.of(context).pop();
+                    navigator.pop();
                   },
                 )
               ]),

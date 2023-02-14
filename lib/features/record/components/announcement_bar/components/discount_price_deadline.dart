@@ -49,7 +49,7 @@ $countdown内の購入で48%OFF!""",
               child: IconButton(
                 icon: SvgPicture.asset(
                   "images/arrow_right.svg",
-                  color: Colors.white,
+                  colorFilter: const ColorFilter.mode(Colors.white, BlendMode.srcIn),
                 ),
                 onPressed: () {},
                 iconSize: 24,

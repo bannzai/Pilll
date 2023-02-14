@@ -53,7 +53,7 @@ class UserSurvey extends StatelessWidget {
             const Spacer(),
             SvgPicture.asset(
               "images/arrow_right.svg",
-              color: Colors.white,
+              colorFilter: const ColorFilter.mode(Colors.white, BlendMode.srcIn),
             ),
           ],
         ),
