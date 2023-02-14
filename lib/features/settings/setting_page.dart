@@ -160,6 +160,7 @@ class SettingPageBody extends StatelessWidget {
                               url: "https://docs.google.com/forms/d/e/1FAIpQLScmxg1amJik_8viuPI3MeDCzz7FuBDXeIHWzorbXRKR38yp7g/viewform",
                             ),
                           );
+                          // ignore: use_build_context_synchronously
                           showDialog(context: context, builder: (_) => const ChurnSurveyCompleteDialog());
                         },
                       ),
@@ -371,8 +372,9 @@ class SettingPageBody extends StatelessWidget {
               AlertButton(
                 text: "削除",
                 onPressed: () async {
+                  final navigator = Navigator.of(context);
                   await deleteUser();
-                  Navigator.of(context).pop();
+                  navigator.pop();
                 },
               ),
             ],

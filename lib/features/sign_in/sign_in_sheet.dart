@@ -101,11 +101,12 @@ class SignInSheet extends HookConsumerWidget {
       onPressed: () async {
         analytics.logEvent(name: "signin_sheet_selected_apple");
         isLoading.value = true;
+        final navigator = Navigator.of(context);
         try {
           final signinState = await _handleApple(linkApple);
           switch (signinState) {
             case SignInWithAppleState.determined:
-              Navigator.of(context).pop();
+              navigator.pop();
               onSignIn?.call(LinkAccountType.apple);
               return;
             case SignInWithAppleState.cancel:
