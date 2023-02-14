@@ -216,7 +216,7 @@ void main() {
       testWidgets('#PremiumTrialLimitAnnouncementBar', (WidgetTester tester) async {
         final mockTodayRepository = MockTodayService();
         final mockToday = DateTime(2021, 04, 29);
-        final n = today;
+        final n = today();
 
         when(mockTodayRepository.now()).thenReturn(mockToday);
         when(mockTodayRepository.now()).thenReturn(n);
@@ -273,7 +273,7 @@ void main() {
       testWidgets('#EndedPillSheet', (WidgetTester tester) async {
         final mockTodayRepository = MockTodayService();
         final mockToday = DateTime(2021, 04, 29);
-        final n = today;
+        final n = today();
 
         when(mockTodayRepository.now()).thenReturn(mockToday);
         when(mockTodayRepository.now()).thenReturn(n);
@@ -1201,7 +1201,7 @@ void main() {
       testWidgets('#EndedPillSheet', (WidgetTester tester) async {
         final mockTodayRepository = MockTodayService();
         final mockToday = DateTime(2021, 04, 29);
-        final n = today;
+        final n = today();
 
         when(mockTodayRepository.now()).thenReturn(mockToday);
         when(mockTodayRepository.now()).thenReturn(n);

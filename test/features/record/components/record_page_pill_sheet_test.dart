@@ -47,7 +47,7 @@ void main() {
           beginingDate: mockToday,
           createdAt: now(),
         );
-        final pillSheetGroup = PillSheetGroup(pillSheetIDs: ["pill_sheet_id"], pillSheets: [pillSheet], createdAt: today);
+        final pillSheetGroup = PillSheetGroup(pillSheetIDs: ["pill_sheet_id"], pillSheets: [pillSheet], createdAt: today());
         for (int i = 0; i < 28; i++) {
           final pillNumberIntoPillSheet = i + 1;
           final widget = RecordPagePillSheet.textOfPillNumber(
@@ -95,7 +95,7 @@ void main() {
           beginingDate: mockToday,
           createdAt: now(),
         );
-        final pillSheetGroup = PillSheetGroup(pillSheetIDs: ["pill_sheet_id"], pillSheets: [pillSheet], createdAt: today);
+        final pillSheetGroup = PillSheetGroup(pillSheetIDs: ["pill_sheet_id"], pillSheets: [pillSheet], createdAt: today());
 
         for (int i = 0; i < 28; i++) {
           final pillNumberIntoPillSheet = i + 1;
@@ -142,7 +142,7 @@ void main() {
           beginingDate: mockToday,
           createdAt: now(),
         );
-        final pillSheetGroup = PillSheetGroup(pillSheetIDs: ["pill_sheet_id"], pillSheets: [pillSheet], createdAt: today);
+        final pillSheetGroup = PillSheetGroup(pillSheetIDs: ["pill_sheet_id"], pillSheets: [pillSheet], createdAt: today());
 
         for (int i = 0; i < 28; i++) {
           final pillNumberIntoPillSheet = i + 1;
@@ -192,7 +192,7 @@ void main() {
           beginingDate: mockToday,
           createdAt: now(),
         );
-        final pillSheetGroup = PillSheetGroup(pillSheetIDs: ["pill_sheet_id"], pillSheets: [pillSheet], createdAt: today);
+        final pillSheetGroup = PillSheetGroup(pillSheetIDs: ["pill_sheet_id"], pillSheets: [pillSheet], createdAt: today());
 
         for (int i = 0; i < 28; i++) {
           final pillNumberIntoPillSheet = i + 1;
@@ -239,7 +239,7 @@ void main() {
           beginingDate: mockToday,
           createdAt: now(),
         );
-        final pillSheetGroup = PillSheetGroup(pillSheetIDs: ["pill_sheet_id"], pillSheets: [pillSheet], createdAt: today);
+        final pillSheetGroup = PillSheetGroup(pillSheetIDs: ["pill_sheet_id"], pillSheets: [pillSheet], createdAt: today());
 
         for (int i = 0; i < 28; i++) {
           final pillNumberIntoPillSheet = i + 1;
@@ -286,7 +286,7 @@ void main() {
           beginingDate: mockToday,
           createdAt: now(),
         );
-        final pillSheetGroup = PillSheetGroup(pillSheetIDs: ["pill_sheet_id"], pillSheets: [pillSheet], createdAt: today);
+        final pillSheetGroup = PillSheetGroup(pillSheetIDs: ["pill_sheet_id"], pillSheets: [pillSheet], createdAt: today());
 
         for (int i = 0; i < 28; i++) {
           final pillNumberIntoPillSheet = i + 1;
@@ -336,7 +336,7 @@ void main() {
           beginingDate: mockToday,
           createdAt: now(),
         );
-        final pillSheetGroup = PillSheetGroup(pillSheetIDs: ["pill_sheet_id"], pillSheets: [pillSheet], createdAt: today);
+        final pillSheetGroup = PillSheetGroup(pillSheetIDs: ["pill_sheet_id"], pillSheets: [pillSheet], createdAt: today());
         for (int i = 0; i < 28; i++) {
           final pillNumberIntoPillSheet = i + 1;
           final widget = RecordPagePillSheet.textOfPillNumber(
@@ -382,7 +382,7 @@ void main() {
           beginingDate: mockToday,
           createdAt: now(),
         );
-        final pillSheetGroup = PillSheetGroup(pillSheetIDs: ["pill_sheet_id"], pillSheets: [pillSheet], createdAt: today);
+        final pillSheetGroup = PillSheetGroup(pillSheetIDs: ["pill_sheet_id"], pillSheets: [pillSheet], createdAt: today());
 
         for (int i = 0; i < 28; i++) {
           final pillNumberIntoPillSheet = i + 1;
@@ -425,7 +425,7 @@ void main() {
         );
         final pillSheet =
             PillSheet(id: firestoreIDGenerator(), typeInfo: PillSheetType.pillsheet_21.typeInfo, beginingDate: mockToday, createdAt: now());
-        final pillSheetGroup = PillSheetGroup(pillSheetIDs: ["pill_sheet_id"], pillSheets: [pillSheet], createdAt: today);
+        final pillSheetGroup = PillSheetGroup(pillSheetIDs: ["pill_sheet_id"], pillSheets: [pillSheet], createdAt: today());
 
         for (int i = 0; i < 28; i++) {
           final pillNumberIntoPillSheet = i + 1;

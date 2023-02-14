@@ -503,7 +503,7 @@ void main() {
           lastTakenDate: mockToday,
           groupIndex: 1,
           restDurations: [
-            RestDuration(beginDate: yesterday, createdDate: yesterday, endDate: today),
+            RestDuration(beginDate: yesterday, createdDate: yesterday, endDate: today()),
           ],
           createdAt: now(),
         );
