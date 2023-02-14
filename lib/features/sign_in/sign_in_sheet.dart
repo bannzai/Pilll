@@ -163,11 +163,12 @@ class SignInSheet extends HookConsumerWidget {
       onPressed: () async {
         analytics.logEvent(name: "signin_sheet_selected_google");
         isLoading.value = true;
+        final navigator = Navigator.of(context);
         try {
           final signinState = await _handleGoogle(linkGoogle);
           switch (signinState) {
             case SignInWithGoogleState.determined:
-              Navigator.of(context).pop();
+              navigator.pop();
               onSignIn?.call(LinkAccountType.google);
               break;
             case SignInWithGoogleState.cancel:

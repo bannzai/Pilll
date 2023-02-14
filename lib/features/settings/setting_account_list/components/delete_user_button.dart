@@ -68,6 +68,7 @@ class DeleteUserButton extends HookConsumerWidget {
     try {
       await FirebaseAuth.instance.currentUser?.delete();
       await didEndInitialSettingNotifier.set(false);
+      // ignore: use_build_context_synchronously
       showDialog(
         context: context,
         builder: (context) => const _CompletedDialog(),

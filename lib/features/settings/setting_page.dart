@@ -343,8 +343,9 @@ class SettingPageBody extends StatelessWidget {
             AlertButton(
               text: "サインアウト",
               onPressed: () async {
+                final navigator = Navigator.of(context);
                 await signOut();
-                Navigator.of(context).pop();
+                navigator.pop();
               },
             ),
           ]);

@@ -168,7 +168,7 @@ Future<void> syncPurchaseInfo() async {
 }
 
 Future<void> initializePurchase(String uid) async {
-  await Purchases.setDebugLogsEnabled(Environment.isDevelopment);
+  await Purchases.setLogLevel(Environment.isDevelopment ? LogLevel.debug : LogLevel.info);
   Purchases.configure(PurchasesConfiguration(Secret.revenueCatPublicAPIKey)..appUserID = uid);
   Purchases.addCustomerInfoUpdateListener(callUpdatePurchaseInfo);
   await syncPurchaseInfo();
