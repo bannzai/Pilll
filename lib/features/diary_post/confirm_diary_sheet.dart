@@ -85,10 +85,12 @@ class ConfirmDiarySheet extends HookConsumerWidget {
                         text: "削除する",
                         onPressed: () async {
                           int counter = 0;
+                          final navigator = Navigator.of(context);
+
                           await deleteDiary(diary);
 
-                          Navigator.popUntil(context, (route) => counter++ >= 1);
-                          Navigator.of(context).pop();
+                          navigator.popUntil((route) => counter++ >= 1);
+                          navigator.pop();
                         },
                       ),
                     ],
@@ -103,9 +105,9 @@ class ConfirmDiarySheet extends HookConsumerWidget {
   Widget _physicalConditionImage(PhysicalConditionStatus? status) {
     switch (status) {
       case PhysicalConditionStatus.fine:
-        return SvgPicture.asset("images/laugh.svg", color: PilllColors.primary);
+        return SvgPicture.asset("images/laugh.svg", colorFilter: const ColorFilter.mode(PilllColors.primary, BlendMode.srcIn));
       case PhysicalConditionStatus.bad:
-        return SvgPicture.asset("images/angry.svg", color: PilllColors.primary);
+        return SvgPicture.asset("images/angry.svg", colorFilter: const ColorFilter.mode(PilllColors.primary, BlendMode.srcIn));
       default:
         return Container();
     }

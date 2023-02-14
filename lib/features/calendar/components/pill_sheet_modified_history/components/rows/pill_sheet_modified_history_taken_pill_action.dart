@@ -58,6 +58,8 @@ class PillSheetModifiedHistoryTakenPillAction extends HookConsumerWidget {
                   analytics.logEvent(name: "selected_date_taken_history", parameters: {"hour": dateTime.hour, "minute": dateTime.minute});
 
                   try {
+                    final messenger = ScaffoldMessenger.of(context);
+                    final navigator = Navigator.of(context);
                     await updateTakenValue(
                       setPillSheetModifiedHistory: setPillSheetModifiedHistory,
                       actualTakenDate: dateTime,
@@ -66,13 +68,13 @@ class PillSheetModifiedHistoryTakenPillAction extends HookConsumerWidget {
                       takenPillValue: value,
                     );
                     final date = DateTimeFormatter.slashYearAndMonthAndDayAndTime(dateTime);
-                    ScaffoldMessenger.of(context).showSnackBar(
+                    messenger.showSnackBar(
                       SnackBar(
                         duration: const Duration(seconds: 2),
                         content: Text("$dateに変更しました"),
                       ),
                     );
-                    Navigator.pop(context);
+                    navigator.pop();
                   } catch (error) {
                     showErrorAlert(context, '更新に失敗しました。通信環境をお確かめの上、再度変更してください');
                   }
