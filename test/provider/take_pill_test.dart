@@ -26,7 +26,7 @@ void main() {
       todayRepository = mockTodayRepository;
       when(mockTodayRepository.now()).thenReturn(mockToday);
 
-      activePillSheetBeginDate = today;
+      activePillSheetBeginDate = today();
       activePillSheetLastTakenDate = null;
       previousPillSheet = PillSheet(
         id: "previous_pill_sheet_id",
