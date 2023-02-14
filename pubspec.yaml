@@ -66,6 +66,7 @@ dependencies:
   flutter_native_timezone: ^2.0.0
   flutter_local_notifications: ^13.0.0
   webview_flutter: ^3.0.4
+  collection: ^1.17.0
 
 dev_dependencies:
   # The "flutter_lints" package below contains a set of recommended lints to
