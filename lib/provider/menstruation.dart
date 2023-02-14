@@ -43,22 +43,22 @@ class SetMenstruation {
   final DatabaseConnection databaseConnection;
   SetMenstruation(this.databaseConnection);
   Future<Menstruation> call(Menstruation menstruation) async {
-    var menstruation = menstruation;
-    if (menstruation.id == null) {
+    var mutableMenstruation = menstruation;
+    if (mutableMenstruation.id == null) {
       if (await _canHealthkitDataSave()) {
-        final healthKitSampleDataUUID = await addMenstruationFlowHealthKitData(menstruation);
-        menstruation = menstruation.copyWith(healthKitSampleDataUUID: healthKitSampleDataUUID);
+        final healthKitSampleDataUUID = await addMenstruationFlowHealthKitData(mutableMenstruation);
+        mutableMenstruation = mutableMenstruation.copyWith(healthKitSampleDataUUID: healthKitSampleDataUUID);
       }
     } else {
-      if (await _healthKitDateDidSave(menstruation: menstruation)) {
-        final healthKitSampleDataUUID = await updateOrAddMenstruationFlowHealthKitData(menstruation);
-        menstruation = menstruation.copyWith(healthKitSampleDataUUID: healthKitSampleDataUUID);
+      if (await _healthKitDateDidSave(menstruation: mutableMenstruation)) {
+        final healthKitSampleDataUUID = await updateOrAddMenstruationFlowHealthKitData(mutableMenstruation);
+        mutableMenstruation = mutableMenstruation.copyWith(healthKitSampleDataUUID: healthKitSampleDataUUID);
       }
     }
 
-    final doc = databaseConnection.menstruationReference(menstruation.id);
-    await doc.set(menstruation, SetOptions(merge: true));
-    return menstruation.copyWith(id: doc.id);
+    final doc = databaseConnection.menstruationReference(mutableMenstruation.id);
+    await doc.set(mutableMenstruation, SetOptions(merge: true));
+    return mutableMenstruation.copyWith(id: doc.id);
   }
 }
 

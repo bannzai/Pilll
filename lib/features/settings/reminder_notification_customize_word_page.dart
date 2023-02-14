@@ -80,6 +80,7 @@ class ReminderNotificationCustomizeWordPage extends HookConsumerWidget {
                       analytics.logEvent(name: "submit_reminder_notification_customize");
                       try {
                         await _reminderNotificationWordSubmit(word: word, setting: setting, setSetting: setSetting);
+                        // ignore: use_build_context_synchronously
                         Navigator.of(context).pop();
                       } catch (error) {
                         showErrorAlert(context, error);
