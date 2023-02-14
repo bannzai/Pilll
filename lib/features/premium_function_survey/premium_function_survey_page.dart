@@ -116,8 +116,9 @@ class PremiumFunctionSurveyPage extends HookConsumerWidget {
                       onPressed: () async {
                         analytics.logEvent(name: "send_premium_function_survey");
                         try {
+                          final navigator = Navigator.of(context);
                           await sendPremiumFunctionSurvey(selectedElements.value, message.value);
-                          Navigator.of(context).pop();
+                          navigator.pop();
                         } catch (error) {
                           showErrorAlert(context, error);
                         }
