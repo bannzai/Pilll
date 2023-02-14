@@ -27,21 +27,24 @@ class InitialSettingOrAppPage extends HookConsumerWidget {
   Widget build(BuildContext context, WidgetRef ref) {
     final markAsMigratedToFlutter = ref.watch(markAsMigratedToFlutterProvider);
     final didEndInitialSettingAsyncValue = ref.watch(didEndInitialSettingProvider);
-    // UserSetupPageでUserはできている。ここでwatchしないとInitialSetting -> Appへの遷移が成立しない
-    final user = ref.watch(userProvider).requireValue;
+    // UserSetupPageでUserはできているのでfetchが終わり次第値は必ず入る。ここでwatchしないとInitialSetting -> Appへの遷移が成立しない
+    final user = ref.watch(userProvider).valueOrNull;
 
     final error = useState<LaunchException?>(null);
     final screenType = retrieveScreenType(user: user, didEndInitialSettingAsyncValue: didEndInitialSettingAsyncValue);
 
     useEffect(() {
-      if (!user.migratedFlutter) {
-        markAsMigratedToFlutter();
-        analytics.logEvent(name: "user_is_not_migrated_flutter", parameters: {"uid": user.id});
-      } else if (user.setting == null) {
-        analytics.logEvent(name: "uset_setting_is_null", parameters: {"uid": user.id});
+      if (user != null) {
+        if (!user.migratedFlutter) {
+          markAsMigratedToFlutter();
+          analytics.logEvent(name: "user_is_not_migrated_flutter", parameters: {"uid": user.id});
+        } else if (user.setting == null) {
+          analytics.logEvent(name: "uset_setting_is_null", parameters: {"uid": user.id});
+        }
       }
+
       return null;
-    }, []);
+    }, [user]);
 
     return UniversalErrorPage(
       error: error.value,
@@ -61,9 +64,12 @@ class InitialSettingOrAppPage extends HookConsumerWidget {
 }
 
 InitialSettingOrAppPageScreenType retrieveScreenType({
-  required User user,
+  required User? user,
   required AsyncValue<bool?> didEndInitialSettingAsyncValue,
 }) {
+  if (user == null) {
+    return InitialSettingOrAppPageScreenType.loading;
+  }
   if (didEndInitialSettingAsyncValue is! AsyncData) {
     return InitialSettingOrAppPageScreenType.loading;
   }
