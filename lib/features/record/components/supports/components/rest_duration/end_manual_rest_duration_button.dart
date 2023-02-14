@@ -133,8 +133,9 @@ class EndRestDurationModal extends HookConsumerWidget {
                   child: AppOutlinedButton(
                     onPressed: () async {
                       analytics.logEvent(name: "display_number_setting_modal_yes");
+                      final navigator = Navigator.of(context);
                       await _setDisplayNumberSettingEndNumber(setPillSheetGroup, end: lastTakenPillNumber, pillSheetGroup: pillSheetGroup);
-                      Navigator.of(context).pop();
+                      navigator.pop();
                     },
                     text: "はい",
                   ),
