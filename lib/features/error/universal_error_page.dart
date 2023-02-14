@@ -12,7 +12,7 @@ class _InheritedWidget extends InheritedWidget {
     required this.state,
   }) : super(key: key, child: child);
 
-  final _UniversalErrorPageState state;
+  final UniversalErrorPageState state;
 
   @override
   bool updateShouldNotify(covariant _InheritedWidget oldWidget) {
@@ -33,10 +33,10 @@ class UniversalErrorPage extends StatefulWidget {
   }) : super(key: key);
 
   @override
-  _UniversalErrorPageState createState() => _UniversalErrorPageState();
+  UniversalErrorPageState createState() => UniversalErrorPageState();
 }
 
-class _UniversalErrorPageState extends State<UniversalErrorPage> {
+class UniversalErrorPageState extends State<UniversalErrorPage> {
   Object? _error;
   void showError(Object error) {
     setState(() {
