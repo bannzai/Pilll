@@ -24,10 +24,10 @@ void main() {
       test("it is isPremium or isTrial", () {
         final originalTodayRepository = todayRepository;
         final mockTodayRepository = MockTodayService();
-        final today = DateTime.parse("2020-09-01");
+        final mockToday = DateTime.parse("2020-09-01");
         todayRepository = mockTodayRepository;
-        when(mockTodayRepository.now()).thenReturn(today);
-        when(mockTodayRepository.now()).thenReturn(today);
+        when(mockTodayRepository.now()).thenReturn(mockToday);
+        when(mockTodayRepository.now()).thenReturn(mockToday);
         addTearDown(() {
           todayRepository = originalTodayRepository;
         });
@@ -44,7 +44,7 @@ void main() {
         final pillSheet = PillSheet(
           id: firestoreIDGenerator(),
           typeInfo: PillSheetType.pillsheet_21.typeInfo,
-          beginingDate: today,
+          beginingDate: mockToday,
           createdAt: now(),
         );
         final pillSheetGroup = PillSheetGroup(pillSheetIDs: ["pill_sheet_id"], pillSheets: [pillSheet], createdAt: today);
@@ -71,10 +71,10 @@ void main() {
       test("it is not isPremium and isTrial", () {
         final originalTodayRepository = todayRepository;
         final mockTodayRepository = MockTodayService();
-        final today = DateTime.parse("2020-09-01");
+        final mockToday = DateTime.parse("2020-09-01");
         todayRepository = mockTodayRepository;
-        when(mockTodayRepository.now()).thenReturn(today);
-        when(mockTodayRepository.now()).thenReturn(today);
+        when(mockTodayRepository.now()).thenReturn(mockToday);
+        when(mockTodayRepository.now()).thenReturn(mockToday);
         addTearDown(() {
           todayRepository = originalTodayRepository;
         });
@@ -92,7 +92,7 @@ void main() {
         final pillSheet = PillSheet(
           id: firestoreIDGenerator(),
           typeInfo: PillSheetType.pillsheet_21.typeInfo,
-          beginingDate: today,
+          beginingDate: mockToday,
           createdAt: now(),
         );
         final pillSheetGroup = PillSheetGroup(pillSheetIDs: ["pill_sheet_id"], pillSheets: [pillSheet], createdAt: today);
@@ -119,10 +119,10 @@ void main() {
       test("setting.pillNumberForFromMenstruation == 0 || setting.durationMenstruation == 0", () {
         final originalTodayRepository = todayRepository;
         final mockTodayRepository = MockTodayService();
-        final today = DateTime.parse("2020-09-01");
+        final mockToday = DateTime.parse("2020-09-01");
         todayRepository = mockTodayRepository;
-        when(mockTodayRepository.now()).thenReturn(today);
-        when(mockTodayRepository.now()).thenReturn(today);
+        when(mockTodayRepository.now()).thenReturn(mockToday);
+        when(mockTodayRepository.now()).thenReturn(mockToday);
         addTearDown(() {
           todayRepository = originalTodayRepository;
         });
@@ -139,7 +139,7 @@ void main() {
         final pillSheet = PillSheet(
           id: firestoreIDGenerator(),
           typeInfo: PillSheetType.pillsheet_21.typeInfo,
-          beginingDate: today,
+          beginingDate: mockToday,
           createdAt: now(),
         );
         final pillSheetGroup = PillSheetGroup(pillSheetIDs: ["pill_sheet_id"], pillSheets: [pillSheet], createdAt: today);
@@ -169,10 +169,10 @@ void main() {
       test("it is isPremium or isTrial", () {
         final originalTodayRepository = todayRepository;
         final mockTodayRepository = MockTodayService();
-        final today = DateTime.parse("2020-09-01");
+        final mockToday = DateTime.parse("2020-09-01");
         todayRepository = mockTodayRepository;
-        when(mockTodayRepository.now()).thenReturn(today);
-        when(mockTodayRepository.now()).thenReturn(today);
+        when(mockTodayRepository.now()).thenReturn(mockToday);
+        when(mockTodayRepository.now()).thenReturn(mockToday);
         addTearDown(() {
           todayRepository = originalTodayRepository;
         });
@@ -189,7 +189,7 @@ void main() {
         final pillSheet = PillSheet(
           id: firestoreIDGenerator(),
           typeInfo: PillSheetType.pillsheet_21.typeInfo,
-          beginingDate: today,
+          beginingDate: mockToday,
           createdAt: now(),
         );
         final pillSheetGroup = PillSheetGroup(pillSheetIDs: ["pill_sheet_id"], pillSheets: [pillSheet], createdAt: today);
@@ -216,10 +216,10 @@ void main() {
       test("it is not isPremium and isTrial. it is means expired trial or premium user", () {
         final originalTodayRepository = todayRepository;
         final mockTodayRepository = MockTodayService();
-        final today = DateTime.parse("2020-09-01");
+        final mockToday = DateTime.parse("2020-09-01");
         todayRepository = mockTodayRepository;
-        when(mockTodayRepository.now()).thenReturn(today);
-        when(mockTodayRepository.now()).thenReturn(today);
+        when(mockTodayRepository.now()).thenReturn(mockToday);
+        when(mockTodayRepository.now()).thenReturn(mockToday);
         addTearDown(() {
           todayRepository = originalTodayRepository;
         });
@@ -236,7 +236,7 @@ void main() {
         final pillSheet = PillSheet(
           id: firestoreIDGenerator(),
           typeInfo: PillSheetType.pillsheet_21.typeInfo,
-          beginingDate: today,
+          beginingDate: mockToday,
           createdAt: now(),
         );
         final pillSheetGroup = PillSheetGroup(pillSheetIDs: ["pill_sheet_id"], pillSheets: [pillSheet], createdAt: today);
@@ -263,10 +263,10 @@ void main() {
       test("isPremium == true && (setting.pillNumberForFromMenstruation == 0 || setting.durationMenstruation == 0)", () {
         final originalTodayRepository = todayRepository;
         final mockTodayRepository = MockTodayService();
-        final today = DateTime.parse("2020-09-01");
+        final mockToday = DateTime.parse("2020-09-01");
         todayRepository = mockTodayRepository;
-        when(mockTodayRepository.now()).thenReturn(today);
-        when(mockTodayRepository.now()).thenReturn(today);
+        when(mockTodayRepository.now()).thenReturn(mockToday);
+        when(mockTodayRepository.now()).thenReturn(mockToday);
         addTearDown(() {
           todayRepository = originalTodayRepository;
         });
@@ -283,7 +283,7 @@ void main() {
         final pillSheet = PillSheet(
           id: firestoreIDGenerator(),
           typeInfo: PillSheetType.pillsheet_21.typeInfo,
-          beginingDate: today,
+          beginingDate: mockToday,
           createdAt: now(),
         );
         final pillSheetGroup = PillSheetGroup(pillSheetIDs: ["pill_sheet_id"], pillSheets: [pillSheet], createdAt: today);
@@ -313,10 +313,10 @@ void main() {
       test("it is isPremium or isTrial", () {
         final originalTodayRepository = todayRepository;
         final mockTodayRepository = MockTodayService();
-        final today = DateTime.parse("2020-09-01");
+        final mockToday = DateTime.parse("2020-09-01");
         todayRepository = mockTodayRepository;
-        when(mockTodayRepository.now()).thenReturn(today);
-        when(mockTodayRepository.now()).thenReturn(today);
+        when(mockTodayRepository.now()).thenReturn(mockToday);
+        when(mockTodayRepository.now()).thenReturn(mockToday);
         addTearDown(() {
           todayRepository = originalTodayRepository;
         });
@@ -333,7 +333,7 @@ void main() {
         final pillSheet = PillSheet(
           id: firestoreIDGenerator(),
           typeInfo: PillSheetType.pillsheet_21.typeInfo,
-          beginingDate: today,
+          beginingDate: mockToday,
           createdAt: now(),
         );
         final pillSheetGroup = PillSheetGroup(pillSheetIDs: ["pill_sheet_id"], pillSheets: [pillSheet], createdAt: today);
@@ -359,10 +359,10 @@ void main() {
       test("it is not isPremium and isTrial", () {
         final originalTodayRepository = todayRepository;
         final mockTodayRepository = MockTodayService();
-        final today = DateTime.parse("2020-09-01");
+        final mockToday = DateTime.parse("2020-09-01");
         todayRepository = mockTodayRepository;
-        when(mockTodayRepository.now()).thenReturn(today);
-        when(mockTodayRepository.now()).thenReturn(today);
+        when(mockTodayRepository.now()).thenReturn(mockToday);
+        when(mockTodayRepository.now()).thenReturn(mockToday);
         addTearDown(() {
           todayRepository = originalTodayRepository;
         });
@@ -379,7 +379,7 @@ void main() {
         final pillSheet = PillSheet(
           id: firestoreIDGenerator(),
           typeInfo: PillSheetType.pillsheet_21.typeInfo,
-          beginingDate: today,
+          beginingDate: mockToday,
           createdAt: now(),
         );
         final pillSheetGroup = PillSheetGroup(pillSheetIDs: ["pill_sheet_id"], pillSheets: [pillSheet], createdAt: today);
@@ -406,10 +406,10 @@ void main() {
       test("setting.pillNumberForFromMenstruation == 0 || setting.durationMenstruation == 0", () {
         final originalTodayRepository = todayRepository;
         final mockTodayRepository = MockTodayService();
-        final today = DateTime.parse("2020-09-01");
+        final mockToday = DateTime.parse("2020-09-01");
         todayRepository = mockTodayRepository;
-        when(mockTodayRepository.now()).thenReturn(today);
-        when(mockTodayRepository.now()).thenReturn(today);
+        when(mockTodayRepository.now()).thenReturn(mockToday);
+        when(mockTodayRepository.now()).thenReturn(mockToday);
         addTearDown(() {
           todayRepository = originalTodayRepository;
         });
@@ -423,7 +423,8 @@ void main() {
           timezoneDatabaseName: null,
           pillSheetAppearanceMode: pillSheetAppearanceMode,
         );
-        final pillSheet = PillSheet(id: firestoreIDGenerator(), typeInfo: PillSheetType.pillsheet_21.typeInfo, beginingDate: today, createdAt: now());
+        final pillSheet =
+            PillSheet(id: firestoreIDGenerator(), typeInfo: PillSheetType.pillsheet_21.typeInfo, beginingDate: mockToday, createdAt: now());
         final pillSheetGroup = PillSheetGroup(pillSheetIDs: ["pill_sheet_id"], pillSheets: [pillSheet], createdAt: today);
 
         for (int i = 0; i < 28; i++) {

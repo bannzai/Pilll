@@ -77,10 +77,10 @@ void main() {
   });
   group('#PremiumIntroductionSheet', () {
     final mockTodayRepository = MockTodayService();
-    final today = DateTime(2021, 04, 29);
+    final mockToday = DateTime(2021, 04, 29);
     final discountEntitlementDeadlineDate = today.subtract(const Duration(days: 1));
 
-    when(mockTodayRepository.now()).thenReturn(today);
+    when(mockTodayRepository.now()).thenReturn(mockToday);
     todayRepository = mockTodayRepository;
 
     group('user is premium', () {
@@ -161,9 +161,9 @@ void main() {
       const hasDiscountEntitlement = false;
       testWidgets('#PremiumIntroductionDiscountRow is not found', (WidgetTester tester) async {
         final mockTodayRepository = MockTodayService();
-        final today = DateTime(2021, 04, 29);
+        final mockToday = DateTime(2021, 04, 29);
 
-        when(mockTodayRepository.now()).thenReturn(today);
+        when(mockTodayRepository.now()).thenReturn(mockToday);
         todayRepository = mockTodayRepository;
 
         final premiumAndTrial = _FakePremiumAndTrial(
@@ -202,9 +202,9 @@ void main() {
       const isOverDiscountDeadline = true;
       testWidgets('#PremiumIntroductionDiscountRow is found', (WidgetTester tester) async {
         final mockTodayRepository = MockTodayService();
-        final today = DateTime(2021, 04, 29);
+        final mockToday = DateTime(2021, 04, 29);
 
-        when(mockTodayRepository.now()).thenReturn(today);
+        when(mockTodayRepository.now()).thenReturn(mockToday);
         todayRepository = mockTodayRepository;
 
         final premiumAndTrial = _FakePremiumAndTrial(
@@ -242,9 +242,9 @@ void main() {
     group('discount entitlemenet deadline date is null', () {
       testWidgets('#PremiumIntroductionDiscountRow is found', (WidgetTester tester) async {
         final mockTodayRepository = MockTodayService();
-        final today = DateTime(2021, 04, 29);
+        final mockToday = DateTime(2021, 04, 29);
 
-        when(mockTodayRepository.now()).thenReturn(today);
+        when(mockTodayRepository.now()).thenReturn(mockToday);
         todayRepository = mockTodayRepository;
 
         var premiumAndTrial = _FakePremiumAndTrial(

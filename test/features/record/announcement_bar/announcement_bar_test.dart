@@ -45,15 +45,15 @@ void main() {
     group('for it is not premium user', () {
       testWidgets('#DiscountPriceDeadline', (WidgetTester tester) async {
         final mockTodayRepository = MockTodayService();
-        final today = DateTime(2021, 04, 29);
+        final mockToday = DateTime(2021, 04, 29);
 
-        when(mockTodayRepository.now()).thenReturn(today);
-        when(mockTodayRepository.now()).thenReturn(today);
+        when(mockTodayRepository.now()).thenReturn(mockToday);
+        when(mockTodayRepository.now()).thenReturn(mockToday);
         todayRepository = mockTodayRepository;
 
         var pillSheet = PillSheet.create(PillSheetType.pillsheet_21);
         pillSheet = pillSheet.copyWith(
-          lastTakenDate: today,
+          lastTakenDate: mockToday,
           beginingDate: today.subtract(
 // NOTE: Into rest duration and notification duration
             const Duration(days: 25),
@@ -101,15 +101,15 @@ void main() {
       });
       testWidgets('#RestDurationAnnouncementBar', (WidgetTester tester) async {
         final mockTodayRepository = MockTodayService();
-        final today = DateTime(2021, 04, 29);
+        final mockToday = DateTime(2021, 04, 29);
 
-        when(mockTodayRepository.now()).thenReturn(today);
-        when(mockTodayRepository.now()).thenReturn(today);
+        when(mockTodayRepository.now()).thenReturn(mockToday);
+        when(mockTodayRepository.now()).thenReturn(mockToday);
         todayRepository = mockTodayRepository;
 
         var pillSheet = PillSheet.create(PillSheetType.pillsheet_21);
         pillSheet = pillSheet.copyWith(
-          lastTakenDate: today,
+          lastTakenDate: mockToday,
           beginingDate: today.subtract(
 // NOTE: Into rest duration and notification duration
             const Duration(days: 25),
@@ -158,15 +158,15 @@ void main() {
 
       testWidgets('#RecommendSignupAnnouncementBar', (WidgetTester tester) async {
         final mockTodayRepository = MockTodayService();
-        final today = DateTime(2021, 04, 29);
+        final mockToday = DateTime(2021, 04, 29);
 
-        when(mockTodayRepository.now()).thenReturn(today);
-        when(mockTodayRepository.now()).thenReturn(today);
+        when(mockTodayRepository.now()).thenReturn(mockToday);
+        when(mockTodayRepository.now()).thenReturn(mockToday);
         todayRepository = mockTodayRepository;
 
         var pillSheet = PillSheet.create(PillSheetType.pillsheet_21);
         pillSheet = pillSheet.copyWith(
-          lastTakenDate: today,
+          lastTakenDate: mockToday,
           beginingDate: today.subtract(
 // NOTE: Not into rest duration and notification duration
             const Duration(days: 10),
@@ -215,16 +215,16 @@ void main() {
       });
       testWidgets('#PremiumTrialLimitAnnouncementBar', (WidgetTester tester) async {
         final mockTodayRepository = MockTodayService();
-        final today = DateTime(2021, 04, 29);
+        final mockToday = DateTime(2021, 04, 29);
         final n = today;
 
-        when(mockTodayRepository.now()).thenReturn(today);
+        when(mockTodayRepository.now()).thenReturn(mockToday);
         when(mockTodayRepository.now()).thenReturn(n);
         todayRepository = mockTodayRepository;
 
         var pillSheet = PillSheet.create(PillSheetType.pillsheet_21);
         pillSheet = pillSheet.copyWith(
-          lastTakenDate: today,
+          lastTakenDate: mockToday,
           beginingDate: today.subtract(
 // NOTE: Not into rest duration and notification duration
             const Duration(days: 10),
@@ -272,10 +272,10 @@ void main() {
       });
       testWidgets('#EndedPillSheet', (WidgetTester tester) async {
         final mockTodayRepository = MockTodayService();
-        final today = DateTime(2021, 04, 29);
+        final mockToday = DateTime(2021, 04, 29);
         final n = today;
 
-        when(mockTodayRepository.now()).thenReturn(today);
+        when(mockTodayRepository.now()).thenReturn(mockToday);
         when(mockTodayRepository.now()).thenReturn(n);
         todayRepository = mockTodayRepository;
 
@@ -332,9 +332,9 @@ void main() {
       group("#PilllAdsAnnouncementBar", () {
         testWidgets('today is before 2022-08-10', (WidgetTester tester) async {
           final mockTodayRepository = MockTodayService();
-          final today = DateTime(2022, 08, 10).subtract(const Duration(seconds: 1));
+          final mockToday = DateTime(2022, 08, 10).subtract(const Duration(seconds: 1));
 
-          when(mockTodayRepository.now()).thenReturn(today);
+          when(mockTodayRepository.now()).thenReturn(mockToday);
           todayRepository = mockTodayRepository;
 
           var pillSheet = PillSheet.create(PillSheetType.pillsheet_21);
@@ -397,9 +397,9 @@ void main() {
         });
         testWidgets('today is 2022-08-10', (WidgetTester tester) async {
           final mockTodayRepository = MockTodayService();
-          final today = DateTime(2022, 08, 10);
+          final mockToday = DateTime(2022, 08, 10);
 
-          when(mockTodayRepository.now()).thenReturn(today);
+          when(mockTodayRepository.now()).thenReturn(mockToday);
           todayRepository = mockTodayRepository;
 
           var pillSheet = PillSheet.create(PillSheetType.pillsheet_21);
@@ -464,9 +464,9 @@ void main() {
         });
         testWidgets('today is 2022-08-11', (WidgetTester tester) async {
           final mockTodayRepository = MockTodayService();
-          final today = DateTime(2022, 08, 11);
+          final mockToday = DateTime(2022, 08, 11);
 
-          when(mockTodayRepository.now()).thenReturn(today);
+          when(mockTodayRepository.now()).thenReturn(mockToday);
           todayRepository = mockTodayRepository;
 
           var pillSheet = PillSheet.create(PillSheetType.pillsheet_21);
@@ -531,9 +531,9 @@ void main() {
         });
         testWidgets('now is 2022-08-23T23:59:59', (WidgetTester tester) async {
           final mockTodayRepository = MockTodayService();
-          final today = DateTime(2022, 08, 23, 23, 59, 59);
+          final mockToday = DateTime(2022, 08, 23, 23, 59, 59);
 
-          when(mockTodayRepository.now()).thenReturn(today);
+          when(mockTodayRepository.now()).thenReturn(mockToday);
           todayRepository = mockTodayRepository;
 
           var pillSheet = PillSheet.create(PillSheetType.pillsheet_21);
@@ -598,9 +598,9 @@ void main() {
         });
         testWidgets('now is 2022-08-24T00:00:00', (WidgetTester tester) async {
           final mockTodayRepository = MockTodayService();
-          final today = DateTime(2022, 08, 24);
+          final mockToday = DateTime(2022, 08, 24);
 
-          when(mockTodayRepository.now()).thenReturn(today);
+          when(mockTodayRepository.now()).thenReturn(mockToday);
           todayRepository = mockTodayRepository;
 
           var pillSheet = PillSheet.create(PillSheetType.pillsheet_21);
@@ -670,15 +670,15 @@ void main() {
       group("#PilllAdsAnnouncementBar", () {
         testWidgets('today is before 2022-08-10', (WidgetTester tester) async {
           final mockTodayRepository = MockTodayService();
-          final today = DateTime(2022, 08, 10).subtract(const Duration(seconds: 1));
+          final mockToday = DateTime(2022, 08, 10).subtract(const Duration(seconds: 1));
 
-          when(mockTodayRepository.now()).thenReturn(today);
-          when(mockTodayRepository.now()).thenReturn(today);
+          when(mockTodayRepository.now()).thenReturn(mockToday);
+          when(mockTodayRepository.now()).thenReturn(mockToday);
           todayRepository = mockTodayRepository;
 
           var pillSheet = PillSheet.create(PillSheetType.pillsheet_21);
           pillSheet = pillSheet.copyWith(
-            lastTakenDate: today,
+            lastTakenDate: mockToday,
             beginingDate: today.subtract(
               // NOTE: Not into rest duration and notification duration
               const Duration(days: 10),
@@ -739,15 +739,15 @@ void main() {
         });
         testWidgets('today is 2022-08-10', (WidgetTester tester) async {
           final mockTodayRepository = MockTodayService();
-          final today = DateTime(2022, 08, 10);
+          final mockToday = DateTime(2022, 08, 10);
 
-          when(mockTodayRepository.now()).thenReturn(today);
-          when(mockTodayRepository.now()).thenReturn(today);
+          when(mockTodayRepository.now()).thenReturn(mockToday);
+          when(mockTodayRepository.now()).thenReturn(mockToday);
           todayRepository = mockTodayRepository;
 
           var pillSheet = PillSheet.create(PillSheetType.pillsheet_21);
           pillSheet = pillSheet.copyWith(
-            lastTakenDate: today,
+            lastTakenDate: mockToday,
             beginingDate: today.subtract(
               // NOTE: Not into rest duration and notification duration
               const Duration(days: 10),
@@ -808,15 +808,15 @@ void main() {
         });
         testWidgets('today is 2022-08-11', (WidgetTester tester) async {
           final mockTodayRepository = MockTodayService();
-          final today = DateTime(2022, 08, 11);
+          final mockToday = DateTime(2022, 08, 11);
 
-          when(mockTodayRepository.now()).thenReturn(today);
-          when(mockTodayRepository.now()).thenReturn(today);
+          when(mockTodayRepository.now()).thenReturn(mockToday);
+          when(mockTodayRepository.now()).thenReturn(mockToday);
           todayRepository = mockTodayRepository;
 
           var pillSheet = PillSheet.create(PillSheetType.pillsheet_21);
           pillSheet = pillSheet.copyWith(
-            lastTakenDate: today,
+            lastTakenDate: mockToday,
             beginingDate: today.subtract(
               // NOTE: Not into rest duration and notification duration
               const Duration(days: 10),
@@ -877,15 +877,15 @@ void main() {
         });
         testWidgets('now is 2022-08-23T23:59:59', (WidgetTester tester) async {
           final mockTodayRepository = MockTodayService();
-          final today = DateTime(2022, 08, 23, 23, 59, 59);
+          final mockToday = DateTime(2022, 08, 23, 23, 59, 59);
 
-          when(mockTodayRepository.now()).thenReturn(today);
-          when(mockTodayRepository.now()).thenReturn(today);
+          when(mockTodayRepository.now()).thenReturn(mockToday);
+          when(mockTodayRepository.now()).thenReturn(mockToday);
           todayRepository = mockTodayRepository;
 
           var pillSheet = PillSheet.create(PillSheetType.pillsheet_21);
           pillSheet = pillSheet.copyWith(
-            lastTakenDate: today,
+            lastTakenDate: mockToday,
             beginingDate: today.subtract(
               // NOTE: Not into rest duration and notification duration
               const Duration(days: 10),
@@ -946,15 +946,15 @@ void main() {
         });
         testWidgets('now is 2022-08-23T23:59:59 and already closed', (WidgetTester tester) async {
           final mockTodayRepository = MockTodayService();
-          final today = DateTime(2022, 08, 23, 23, 59, 59);
+          final mockToday = DateTime(2022, 08, 23, 23, 59, 59);
 
-          when(mockTodayRepository.now()).thenReturn(today);
-          when(mockTodayRepository.now()).thenReturn(today);
+          when(mockTodayRepository.now()).thenReturn(mockToday);
+          when(mockTodayRepository.now()).thenReturn(mockToday);
           todayRepository = mockTodayRepository;
 
           var pillSheet = PillSheet.create(PillSheetType.pillsheet_21);
           pillSheet = pillSheet.copyWith(
-            lastTakenDate: today,
+            lastTakenDate: mockToday,
             beginingDate: today.subtract(
               // NOTE: Not into rest duration and notification duration
               const Duration(days: 10),
@@ -1015,15 +1015,15 @@ void main() {
         });
         testWidgets('now is 2022-08-24T00:00:00', (WidgetTester tester) async {
           final mockTodayRepository = MockTodayService();
-          final today = DateTime(2022, 08, 24);
+          final mockToday = DateTime(2022, 08, 24);
 
-          when(mockTodayRepository.now()).thenReturn(today);
-          when(mockTodayRepository.now()).thenReturn(today);
+          when(mockTodayRepository.now()).thenReturn(mockToday);
+          when(mockTodayRepository.now()).thenReturn(mockToday);
           todayRepository = mockTodayRepository;
 
           var pillSheet = PillSheet.create(PillSheetType.pillsheet_21);
           pillSheet = pillSheet.copyWith(
-            lastTakenDate: today,
+            lastTakenDate: mockToday,
             beginingDate: today.subtract(
               // NOTE: Not into rest duration and notification duration
               const Duration(days: 10),
@@ -1085,15 +1085,15 @@ void main() {
       });
       testWidgets('#RecommendSignupForPremiumAnnouncementBar', (WidgetTester tester) async {
         final mockTodayRepository = MockTodayService();
-        final today = DateTime(2021, 04, 29);
+        final mockToday = DateTime(2021, 04, 29);
 
-        when(mockTodayRepository.now()).thenReturn(today);
-        when(mockTodayRepository.now()).thenReturn(today);
+        when(mockTodayRepository.now()).thenReturn(mockToday);
+        when(mockTodayRepository.now()).thenReturn(mockToday);
         todayRepository = mockTodayRepository;
 
         var pillSheet = PillSheet.create(PillSheetType.pillsheet_21);
         pillSheet = pillSheet.copyWith(
-          lastTakenDate: today,
+          lastTakenDate: mockToday,
           beginingDate: today.subtract(
 // NOTE: Not into rest duration and notification duration
             const Duration(days: 10),
@@ -1143,15 +1143,15 @@ void main() {
 
       testWidgets('#RestDurationAnnouncementBar', (WidgetTester tester) async {
         final mockTodayRepository = MockTodayService();
-        final today = DateTime(2021, 04, 29);
+        final mockToday = DateTime(2021, 04, 29);
 
-        when(mockTodayRepository.now()).thenReturn(today);
-        when(mockTodayRepository.now()).thenReturn(today);
+        when(mockTodayRepository.now()).thenReturn(mockToday);
+        when(mockTodayRepository.now()).thenReturn(mockToday);
         todayRepository = mockTodayRepository;
 
         var pillSheet = PillSheet.create(PillSheetType.pillsheet_21);
         pillSheet = pillSheet.copyWith(
-          lastTakenDate: today,
+          lastTakenDate: mockToday,
           beginingDate: today.subtract(
 // NOTE: Into rest duration and notification duration
             const Duration(days: 25),
@@ -1200,10 +1200,10 @@ void main() {
       });
       testWidgets('#EndedPillSheet', (WidgetTester tester) async {
         final mockTodayRepository = MockTodayService();
-        final today = DateTime(2021, 04, 29);
+        final mockToday = DateTime(2021, 04, 29);
         final n = today;
 
-        when(mockTodayRepository.now()).thenReturn(today);
+        when(mockTodayRepository.now()).thenReturn(mockToday);
         when(mockTodayRepository.now()).thenReturn(n);
         todayRepository = mockTodayRepository;
 

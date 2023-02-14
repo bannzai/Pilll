@@ -28,9 +28,9 @@ void main() {
   group("#InitialSettingState.buildPillSheet", () {
     test("it is builded pillSheet.gropuIndex == todayPillNumber.pageIndex ", () {
       final mockTodayRepository = MockTodayService();
-      final today = DateTime.parse("2020-11-23");
+      final mockToday = DateTime.parse("2020-11-23");
       todayRepository = mockTodayRepository;
-      when(mockTodayRepository.now()).thenReturn(today);
+      when(mockTodayRepository.now()).thenReturn(mockToday);
 
       final mockIDGenerator = MockFirestoreIDGenerator();
       when(mockIDGenerator.call()).thenReturn("sheet_id");
@@ -53,9 +53,9 @@ void main() {
     });
     test("it is builded pillSheet.gropuIndex > todayPillNumber.pageIndex ", () {
       final mockTodayRepository = MockTodayService();
-      final today = DateTime.parse("2020-11-23");
+      final mockToday = DateTime.parse("2020-11-23");
       todayRepository = mockTodayRepository;
-      when(mockTodayRepository.now()).thenReturn(today);
+      when(mockTodayRepository.now()).thenReturn(mockToday);
 
       final mockIDGenerator = MockFirestoreIDGenerator();
       when(mockIDGenerator.call()).thenReturn("sheet_id2");
@@ -83,9 +83,9 @@ void main() {
     });
     test("it is builded pillSheet.gropuIndex < todayPillNumber.pageIndex ", () {
       final mockTodayRepository = MockTodayService();
-      final today = DateTime.parse("2020-11-23");
+      final mockToday = DateTime.parse("2020-11-23");
       todayRepository = mockTodayRepository;
-      when(mockTodayRepository.now()).thenReturn(today);
+      when(mockTodayRepository.now()).thenReturn(mockToday);
 
       var idGeneratorCallCount = 0;
       final mockIDGenerator = MockFirestoreIDGenerator();

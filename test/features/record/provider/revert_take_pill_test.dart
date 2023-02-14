@@ -21,10 +21,10 @@ void main() {
     group("group has only one pill sheet", () {
       test("Revert to first pill sheet", () async {
         var mockTodayRepository = MockTodayService();
-        final today = DateTime.parse("2022-01-17");
+        final mockToday = DateTime.parse("2022-01-17");
         todayRepository = mockTodayRepository;
-        when(mockTodayRepository.now()).thenReturn(today);
-        when(mockTodayRepository.now()).thenReturn(today);
+        when(mockTodayRepository.now()).thenReturn(mockToday);
+        when(mockTodayRepository.now()).thenReturn(mockToday);
         final yesterday = DateTime.parse("2022-01-16");
 
         final batchFactory = MockBatchFactory();
@@ -92,10 +92,9 @@ void main() {
 
       test("Revert today pill", () async {
         var mockTodayRepository = MockTodayService();
-        final today = DateTime.parse("2022-01-17");
+        final mockToday = DateTime.parse("2022-01-17");
         todayRepository = mockTodayRepository;
-        when(mockTodayRepository.now()).thenReturn(today);
-        when(mockTodayRepository.now()).thenReturn(today);
+        when(mockTodayRepository.now()).thenReturn(mockToday);
         final yesterday = DateTime.parse("2022-01-16");
 
         final batchFactory = MockBatchFactory();
@@ -163,10 +162,10 @@ void main() {
 
       test("revert with rest durations and removed rest duration", () async {
         var mockTodayRepository = MockTodayService();
-        final today = DateTime.parse("2022-01-17");
+        final mockToday = DateTime.parse("2022-01-17");
         todayRepository = mockTodayRepository;
-        when(mockTodayRepository.now()).thenReturn(today);
-        when(mockTodayRepository.now()).thenReturn(today);
+        when(mockTodayRepository.now()).thenReturn(mockToday);
+        when(mockTodayRepository.now()).thenReturn(mockToday);
         final beginDate = DateTime.parse("2022-01-06");
 
         final batchFactory = MockBatchFactory();
@@ -242,10 +241,10 @@ void main() {
 
       test("revert with rest durations but no removed rest duration", () async {
         var mockTodayRepository = MockTodayService();
-        final today = DateTime.parse("2022-01-17");
+        final mockToday = DateTime.parse("2022-01-17");
         todayRepository = mockTodayRepository;
-        when(mockTodayRepository.now()).thenReturn(today);
-        when(mockTodayRepository.now()).thenReturn(today);
+        when(mockTodayRepository.now()).thenReturn(mockToday);
+        when(mockTodayRepository.now()).thenReturn(mockToday);
         final beginDate = DateTime.parse("2022-01-06");
         final yesterday = DateTime.parse("2022-01-16");
 
@@ -321,10 +320,10 @@ void main() {
     group("group has two pill sheet", () {
       test("call revert into actived pill sheet", () async {
         var mockTodayRepository = MockTodayService();
-        final today = DateTime.parse("2022-01-17");
+        final mockToday = DateTime.parse("2022-01-17");
         todayRepository = mockTodayRepository;
-        when(mockTodayRepository.now()).thenReturn(today);
-        when(mockTodayRepository.now()).thenReturn(today);
+        when(mockTodayRepository.now()).thenReturn(mockToday);
+        when(mockTodayRepository.now()).thenReturn(mockToday);
         final yesterday = DateTime.parse("2022-01-16");
 
         final batchFactory = MockBatchFactory();
@@ -345,7 +344,7 @@ void main() {
           id: "2",
           typeInfo: PillSheetType.pillsheet_21.typeInfo,
           beginingDate: yesterday,
-          lastTakenDate: today,
+          lastTakenDate: mockToday,
           groupIndex: 1,
           createdAt: now(),
         );
@@ -402,10 +401,10 @@ void main() {
 
       test("call revert from actived pill sheet to before pill sheet", () async {
         var mockTodayRepository = MockTodayService();
-        final today = DateTime.parse("2022-01-31");
+        final mockToday = DateTime.parse("2022-01-31");
         todayRepository = mockTodayRepository;
-        when(mockTodayRepository.now()).thenReturn(today);
-        when(mockTodayRepository.now()).thenReturn(today);
+        when(mockTodayRepository.now()).thenReturn(mockToday);
+        when(mockTodayRepository.now()).thenReturn(mockToday);
         final yesterday = DateTime.parse("2022-01-30");
 
         final batchFactory = MockBatchFactory();
@@ -426,7 +425,7 @@ void main() {
           id: "2",
           typeInfo: PillSheetType.pillsheet_21.typeInfo,
           beginingDate: yesterday,
-          lastTakenDate: today,
+          lastTakenDate: mockToday,
           groupIndex: 1,
           createdAt: now(),
         );
@@ -477,10 +476,10 @@ void main() {
       });
       test("call revert with rest duration", () async {
         var mockTodayRepository = MockTodayService();
-        final today = DateTime.parse("2022-01-31");
+        final mockToday = DateTime.parse("2022-01-31");
         todayRepository = mockTodayRepository;
-        when(mockTodayRepository.now()).thenReturn(today);
-        when(mockTodayRepository.now()).thenReturn(today);
+        when(mockTodayRepository.now()).thenReturn(mockToday);
+        when(mockTodayRepository.now()).thenReturn(mockToday);
         final yesterday = DateTime.parse("2022-01-30");
 
         final batchFactory = MockBatchFactory();
@@ -501,7 +500,7 @@ void main() {
           id: "2",
           typeInfo: PillSheetType.pillsheet_21.typeInfo,
           beginingDate: yesterday,
-          lastTakenDate: today,
+          lastTakenDate: mockToday,
           groupIndex: 1,
           restDurations: [
             RestDuration(beginDate: yesterday, createdDate: yesterday, endDate: today),

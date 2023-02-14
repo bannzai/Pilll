@@ -22,14 +22,14 @@ void main() {
 
   group("#cardState", () {
     test(
-      "if latestMenstruation is into today, when return card state of begining about menstruation ",
+      "if latestMenstruation is into mockToday, when return card state of begining about menstruation ",
       () async {
         final originalTodayRepository = todayRepository;
         final mockTodayRepository = MockTodayService();
         todayRepository = mockTodayRepository;
-        final today = DateTime(2021, 04, 29);
-        when(mockTodayRepository.now()).thenReturn(today);
-        when(mockTodayRepository.now()).thenReturn(today);
+        final mockToday = DateTime(2021, 04, 29);
+        when(mockTodayRepository.now()).thenReturn(mockToday);
+        when(mockTodayRepository.now()).thenReturn(mockToday);
         addTearDown(() {
           todayRepository = originalTodayRepository;
         });
@@ -70,9 +70,9 @@ void main() {
         final originalTodayRepository = todayRepository;
         final mockTodayRepository = MockTodayService();
         todayRepository = mockTodayRepository;
-        final today = DateTime(2021, 04, 29);
-        when(mockTodayRepository.now()).thenReturn(today);
-        when(mockTodayRepository.now()).thenReturn(today);
+        final mockToday = DateTime(2021, 04, 29);
+        when(mockTodayRepository.now()).thenReturn(mockToday);
+        when(mockTodayRepository.now()).thenReturn(mockToday);
         addTearDown(() {
           todayRepository = originalTodayRepository;
         });
@@ -103,14 +103,14 @@ void main() {
     );
 
     test(
-      "if latest pillsheet.beginingDate + totalCount < today, when return schedueld card state",
+      "if latest pillsheet.beginingDate + totalCount < mockToday, when return schedueld card state",
       () async {
         final originalTodayRepository = todayRepository;
         final mockTodayRepository = MockTodayService();
         todayRepository = mockTodayRepository;
-        final today = DateTime(2021, 04, 29);
-        when(mockTodayRepository.now()).thenReturn(today);
-        when(mockTodayRepository.now()).thenReturn(today);
+        final mockToday = DateTime(2021, 04, 29);
+        when(mockTodayRepository.now()).thenReturn(mockToday);
+        when(mockTodayRepository.now()).thenReturn(mockToday);
         addTearDown(() {
           todayRepository = originalTodayRepository;
         });
@@ -149,9 +149,9 @@ void main() {
         final originalTodayRepository = todayRepository;
         final mockTodayRepository = MockTodayService();
         todayRepository = mockTodayRepository;
-        final today = DateTime(2021, 04, 29);
-        when(mockTodayRepository.now()).thenReturn(today);
-        when(mockTodayRepository.now()).thenReturn(today);
+        final mockToday = DateTime(2021, 04, 29);
+        when(mockTodayRepository.now()).thenReturn(mockToday);
+        when(mockTodayRepository.now()).thenReturn(mockToday);
         addTearDown(() {
           todayRepository = originalTodayRepository;
         });
