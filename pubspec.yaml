@@ -20,6 +20,10 @@ version: 3.17.2+1671
 environment:
   sdk: ">=2.15.0 <3.0.0"
 
+platforms:
+  android:
+  ios:
+
 dependencies:
   flutter:
     sdk: flutter
