@@ -1,7 +1,7 @@
 // coverage:ignore-file
 // GENERATED CODE - DO NOT MODIFY BY HAND
 // ignore_for_file: type=lint
-// ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target
+// ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target, unnecessary_question_mark
 
 part of 'user.codegen.dart';
 
@@ -482,6 +482,8 @@ class _$_User extends _User {
   @override
   @JsonKey()
   List<String> get userDocumentIDSets {
+    if (_userDocumentIDSets is EqualUnmodifiableListView)
+      return _userDocumentIDSets;
     // ignore: implicit_dynamic_type
     return EqualUnmodifiableListView(_userDocumentIDSets);
   }
@@ -490,6 +492,8 @@ class _$_User extends _User {
   @override
   @JsonKey()
   List<String> get anonymousUserIDSets {
+    if (_anonymousUserIDSets is EqualUnmodifiableListView)
+      return _anonymousUserIDSets;
     // ignore: implicit_dynamic_type
     return EqualUnmodifiableListView(_anonymousUserIDSets);
   }
@@ -498,6 +502,8 @@ class _$_User extends _User {
   @override
   @JsonKey()
   List<String> get firebaseCurrentUserIDSets {
+    if (_firebaseCurrentUserIDSets is EqualUnmodifiableListView)
+      return _firebaseCurrentUserIDSets;
     // ignore: implicit_dynamic_type
     return EqualUnmodifiableListView(_firebaseCurrentUserIDSets);
   }

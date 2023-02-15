@@ -18,6 +18,9 @@ class Analytics {
         if (param is DateTime) {
           parameters[key] = param.toIso8601String();
         }
+        if (param is bool) {
+          parameters[key] = param ? "true" : "false";
+        }
       }
     }
     return firebaseAnalytics.logEvent(name: name, parameters: parameters);

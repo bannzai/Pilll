@@ -25,8 +25,8 @@ class SettingTodayPillNumberPage extends HookConsumerWidget {
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {
-    final pillNumberIntoPillSheet = useState(_pillNumberIntoPillSheet(activedPillSheet: activedPillSheet, pillSheetGroup: pillSheetGroup));
-    final pillSheetPageIndex = useState(activedPillSheet.groupIndex);
+    final pillNumberIntoPillSheetState = useState(_pillNumberIntoPillSheet(activedPillSheet: activedPillSheet, pillSheetGroup: pillSheetGroup));
+    final pillSheetPageIndexState = useState(activedPillSheet.groupIndex);
     final changePillNumber = ref.watch(changePillNumberProvider);
 
     return Scaffold(
@@ -65,14 +65,14 @@ class SettingTodayPillNumberPage extends HookConsumerWidget {
                         pillSheetTypes: pillSheetGroup.pillSheets.map((e) => e.pillSheetType).toList(),
                         appearanceMode: PillSheetAppearanceMode.number,
                         selectedTodayPillNumberIntoPillSheet: (pageIndex) {
-                          if (pillSheetPageIndex.value != pageIndex) {
+                          if (pillSheetPageIndexState.value != pageIndex) {
                             return null;
                           }
-                          return pillNumberIntoPillSheet.value;
+                          return pillNumberIntoPillSheetState.value;
                         },
-                        markSelected: (_pillSheetPageIndex, _pillNumberIntoPillSheet) {
-                          pillSheetPageIndex.value = _pillSheetPageIndex;
-                          pillNumberIntoPillSheet.value = _pillNumberIntoPillSheet;
+                        markSelected: (pillSheetPageIndex, pillNumberIntoPillSheet) {
+                          pillSheetPageIndexState.value = pillSheetPageIndex;
+                          pillNumberIntoPillSheetState.value = pillNumberIntoPillSheet;
                         }),
                   ),
                   const SizedBox(height: 20),
@@ -90,8 +90,8 @@ class SettingTodayPillNumberPage extends HookConsumerWidget {
                           changePillNumber(
                               pillSheetGroup: pillSheetGroup,
                               activedPillSheet: activedPillSheet,
-                              pillSheetPageIndex: pillSheetPageIndex.value,
-                              pillNumberIntoPillSheet: pillNumberIntoPillSheet.value);
+                              pillSheetPageIndex: pillSheetPageIndexState.value,
+                              pillNumberIntoPillSheet: pillNumberIntoPillSheetState.value);
 
                           Navigator.of(context).pop();
                         },
@@ -118,11 +118,11 @@ class SettingTodayPillNumberPage extends HookConsumerWidget {
     required PillSheetGroup pillSheetGroup,
   }) {
     final pillSheetTypes = pillSheetGroup.pillSheets.map((e) => e.pillSheetType).toList();
-    final _passedTotalCount = summarizedPillCountWithPillSheetTypesToEndIndex(pillSheetTypes: pillSheetTypes, endIndex: activedPillSheet.groupIndex);
-    if (_passedTotalCount >= activedPillSheet.todayPillNumber) {
+    final passedTotalCount = summarizedPillCountWithPillSheetTypesToEndIndex(pillSheetTypes: pillSheetTypes, endIndex: activedPillSheet.groupIndex);
+    if (passedTotalCount >= activedPillSheet.todayPillNumber) {
       return activedPillSheet.todayPillNumber;
     }
-    return activedPillSheet.todayPillNumber - _passedTotalCount;
+    return activedPillSheet.todayPillNumber - passedTotalCount;
   }
 }
 

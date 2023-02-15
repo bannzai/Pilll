@@ -42,9 +42,9 @@ void main() {
       await tester.pumpWidget(
         MaterialApp(
           home: SizedBox(
-            child: widget,
             height: PillSheetViewLayout.calcHeight(
                 pillSheetType.numberOfLineInPillSheet, false),
+            child: widget,
           ),
         ),
       );
@@ -70,9 +70,9 @@ void main() {
     await tester.pumpWidget(
       MaterialApp(
         home: SizedBox(
-          child: widget,
           height: PillSheetViewLayout.calcHeight(
               pillSheetType.numberOfLineInPillSheet, false),
+          child: widget,
         ),
       ),
     );

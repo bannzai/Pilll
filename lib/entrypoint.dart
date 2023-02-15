@@ -70,7 +70,6 @@ class App extends StatelessWidget {
         ),
         primaryColor: PilllColors.secondary,
         visualDensity: VisualDensity.adaptivePlatformDensity,
-        toggleableActiveColor: PilllColors.secondary,
         cupertinoOverrideTheme: const NoDefaultCupertinoThemeData(
             textTheme: CupertinoTextThemeData(
                 textStyle: TextStyle(
@@ -86,6 +85,48 @@ class App extends StatelessWidget {
             primary: PilllColors.secondary,
             secondary: PilllColors.accent,
           ),
+        ),
+        switchTheme: SwitchThemeData(
+          thumbColor: MaterialStateProperty.resolveWith<Color?>((Set<MaterialState> states) {
+            if (states.contains(MaterialState.disabled)) {
+              return null;
+            }
+            if (states.contains(MaterialState.selected)) {
+              return PilllColors.secondary;
+            }
+            return null;
+          }),
+          trackColor: MaterialStateProperty.resolveWith<Color?>((Set<MaterialState> states) {
+            if (states.contains(MaterialState.disabled)) {
+              return null;
+            }
+            if (states.contains(MaterialState.selected)) {
+              return PilllColors.secondary;
+            }
+            return null;
+          }),
+        ),
+        radioTheme: RadioThemeData(
+          fillColor: MaterialStateProperty.resolveWith<Color?>((Set<MaterialState> states) {
+            if (states.contains(MaterialState.disabled)) {
+              return null;
+            }
+            if (states.contains(MaterialState.selected)) {
+              return PilllColors.secondary;
+            }
+            return null;
+          }),
+        ),
+        checkboxTheme: CheckboxThemeData(
+          fillColor: MaterialStateProperty.resolveWith<Color?>((Set<MaterialState> states) {
+            if (states.contains(MaterialState.disabled)) {
+              return null;
+            }
+            if (states.contains(MaterialState.selected)) {
+              return PilllColors.secondary;
+            }
+            return null;
+          }),
         ),
       ),
       home: ProviderScope(

@@ -109,6 +109,7 @@ void showReleaseNotePreDialog(BuildContext context) async {
   }
   await storage.setBool(key, true);
 
+  // ignore: use_build_context_synchronously
   showDialog(
       context: context,
       builder: (context) {

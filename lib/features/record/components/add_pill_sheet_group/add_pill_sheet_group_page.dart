@@ -84,13 +84,14 @@ class AddPillSheetGroupPage extends HookConsumerWidget {
                             text: "追加",
                             onPressed: () async {
                               analytics.logEvent(name: "pressed_add_pill_sheet_group");
+                              final navigator = Navigator.of(context);
                               await addPillSheetGroup.call(
                                 setting: setting,
                                 pillSheetGroup: pillSheetGroup,
                                 pillSheetTypes: pillSheetTypes.value,
                                 displayNumberSetting: displayNumberSetting.value,
                               );
-                              Navigator.of(context).pop();
+                              navigator.pop();
                             },
                           ),
                         ),

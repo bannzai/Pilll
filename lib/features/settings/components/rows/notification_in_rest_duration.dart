@@ -39,9 +39,10 @@ class NotificationInRestDuration extends HookConsumerWidget {
         analytics.logEvent(
           name: "toggle_notify_not_taken_duration",
         );
-        ScaffoldMessenger.of(context).hideCurrentSnackBar();
+        final messenger = ScaffoldMessenger.of(context);
+        messenger.hideCurrentSnackBar();
         await setSetting(setting.copyWith(isOnNotifyInNotTakenDuration: value));
-        ScaffoldMessenger.of(context).showSnackBar(
+        messenger.showSnackBar(
           SnackBar(
             duration: const Duration(seconds: 2),
             content: Text(

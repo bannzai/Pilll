@@ -68,6 +68,7 @@ class DeleteUserButton extends HookConsumerWidget {
     try {
       await FirebaseAuth.instance.currentUser?.delete();
       await didEndInitialSettingNotifier.set(false);
+      // ignore: use_build_context_synchronously
       showDialog(
         context: context,
         builder: (context) => const _CompletedDialog(),
@@ -88,6 +89,7 @@ class DeleteUserButton extends HookConsumerWidget {
             AlertButton(
               text: "再ログイン",
               onPressed: () async {
+                final navigator = Navigator.of(context);
                 if (isAppleLinked) {
                   await appleReauthentification();
                 } else if (isGoogleLinked) {
@@ -96,7 +98,8 @@ class DeleteUserButton extends HookConsumerWidget {
                   errorLogger.log("it is not cooperate account");
                   exit(1);
                 }
-                Navigator.of(context).pop();
+                navigator.pop();
+                // ignore: use_build_context_synchronously
                 await _delete(context,
                     isAppleLinked: isAppleLinked, isGoogleLinked: isGoogleLinked, didEndInitialSettingNotifier: didEndInitialSettingNotifier);
               },

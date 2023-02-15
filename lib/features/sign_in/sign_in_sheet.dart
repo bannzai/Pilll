@@ -101,11 +101,12 @@ class SignInSheet extends HookConsumerWidget {
       onPressed: () async {
         analytics.logEvent(name: "signin_sheet_selected_apple");
         isLoading.value = true;
+        final navigator = Navigator.of(context);
         try {
           final signinState = await _handleApple(linkApple);
           switch (signinState) {
             case SignInWithAppleState.determined:
-              Navigator.of(context).pop();
+              navigator.pop();
               onSignIn?.call(LinkAccountType.apple);
               return;
             case SignInWithAppleState.cancel:
@@ -163,11 +164,12 @@ class SignInSheet extends HookConsumerWidget {
       onPressed: () async {
         analytics.logEvent(name: "signin_sheet_selected_google");
         isLoading.value = true;
+        final navigator = Navigator.of(context);
         try {
           final signinState = await _handleGoogle(linkGoogle);
           switch (signinState) {
             case SignInWithGoogleState.determined:
-              Navigator.of(context).pop();
+              navigator.pop();
               onSignIn?.call(LinkAccountType.google);
               break;
             case SignInWithGoogleState.cancel:
@@ -249,26 +251,26 @@ class SignInSheet extends HookConsumerWidget {
   String get _appleButtonText {
     switch (stateContext) {
       case SignInSheetStateContext.initialSetting:
-        return LinkAccountType.apple.loginContentName + "でサインイン";
+        return "${LinkAccountType.apple.loginContentName}でサインイン";
       case SignInSheetStateContext.recordPage:
-        return LinkAccountType.apple.loginContentName + "で登録";
+        return "${LinkAccountType.apple.loginContentName}で登録";
       case SignInSheetStateContext.premium:
-        return LinkAccountType.apple.loginContentName + "で登録";
+        return "${LinkAccountType.apple.loginContentName}で登録";
       case SignInSheetStateContext.setting:
-        return LinkAccountType.apple.loginContentName + "で登録";
+        return "${LinkAccountType.apple.loginContentName}で登録";
     }
   }
 
   String get _googleButtonText {
     switch (stateContext) {
       case SignInSheetStateContext.initialSetting:
-        return LinkAccountType.google.loginContentName + "でサインイン";
+        return "${LinkAccountType.google.loginContentName}でサインイン";
       case SignInSheetStateContext.recordPage:
-        return LinkAccountType.google.loginContentName + "で登録";
+        return "${LinkAccountType.google.loginContentName}で登録";
       case SignInSheetStateContext.premium:
-        return LinkAccountType.google.loginContentName + "で登録";
+        return "${LinkAccountType.google.loginContentName}で登録";
       case SignInSheetStateContext.setting:
-        return LinkAccountType.google.loginContentName + "で登録";
+        return "${LinkAccountType.google.loginContentName}で登録";
     }
   }
 

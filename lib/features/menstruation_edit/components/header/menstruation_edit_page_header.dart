@@ -61,10 +61,11 @@ class MenstruationEditPageHeader extends HookConsumerWidget {
                     AlertButton(
                       text: "削除する",
                       onPressed: () async {
+                        final navigator = Navigator.of(context);
                         await deleteMenstruation(initialMenstruation);
                         onDeleted();
                         analytics.logEvent(name: "pressed_delete_menstruation");
-                        Navigator.of(context).pop();
+                        navigator.pop();
                       },
                     ),
                   ],

@@ -38,7 +38,8 @@ class DiaryPostPhysicalCondition extends StatelessWidget {
                 ),
                 child: IconButton(
                     icon: SvgPicture.asset("images/angry.svg",
-                        color: physicalCondition.value == PhysicalConditionStatus.bad ? PilllColors.primary : TextColor.darkGray),
+                        colorFilter: ColorFilter.mode(
+                            physicalCondition.value == PhysicalConditionStatus.bad ? PilllColors.primary : TextColor.darkGray, BlendMode.srcIn)),
                     onPressed: () {
                       if (physicalCondition.value == PhysicalConditionStatus.bad) {
                         physicalCondition.value = null;
@@ -55,7 +56,8 @@ class DiaryPostPhysicalCondition extends StatelessWidget {
                 ),
                 child: IconButton(
                     icon: SvgPicture.asset("images/laugh.svg",
-                        color: physicalCondition.value == PhysicalConditionStatus.fine ? PilllColors.primary : TextColor.darkGray),
+                        colorFilter: ColorFilter.mode(
+                            physicalCondition.value == PhysicalConditionStatus.fine ? PilllColors.primary : TextColor.darkGray, BlendMode.srcIn)),
                     onPressed: () {
                       if (physicalCondition.value == PhysicalConditionStatus.fine) {
                         physicalCondition.value = null;

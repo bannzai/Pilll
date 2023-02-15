@@ -21,10 +21,10 @@ void main() {
   group("#markFor", () {
     test("it is alredy taken all", () async {
       final mockTodayRepository = MockTodayService();
-      final today = DateTime.parse("2020-11-23");
+      final mockToday = DateTime.parse("2020-11-23");
       todayRepository = mockTodayRepository;
-      when(mockTodayRepository.now()).thenReturn(today);
-      when(mockTodayRepository.now()).thenReturn(today);
+      when(mockTodayRepository.now()).thenReturn(mockToday);
+      when(mockTodayRepository.now()).thenReturn(mockToday);
 
       final pillSheetEntity = PillSheet.create(PillSheetType.pillsheet_21).copyWith(
         beginingDate: DateTime.parse("2020-11-21"),
@@ -42,10 +42,10 @@ void main() {
     });
     test("it is not taken all", () async {
       final mockTodayRepository = MockTodayService();
-      final today = DateTime.parse("2020-11-23");
+      final mockToday = DateTime.parse("2020-11-23");
       todayRepository = mockTodayRepository;
-      when(mockTodayRepository.now()).thenReturn(today);
-      when(mockTodayRepository.now()).thenReturn(today);
+      when(mockTodayRepository.now()).thenReturn(mockToday);
+      when(mockTodayRepository.now()).thenReturn(mockToday);
 
       final pillSheetEntity = PillSheet.create(PillSheetType.pillsheet_21).copyWith(
         beginingDate: DateTime.parse("2020-11-21"),
@@ -65,10 +65,10 @@ void main() {
   group("#shouldPillMarkAnimation", () {
     test("it is alredy taken all", () async {
       final mockTodayRepository = MockTodayService();
-      final today = DateTime.parse("2020-11-23");
+      final mockToday = DateTime.parse("2020-11-23");
       todayRepository = mockTodayRepository;
-      when(mockTodayRepository.now()).thenReturn(today);
-      when(mockTodayRepository.now()).thenReturn(today);
+      when(mockTodayRepository.now()).thenReturn(mockToday);
+      when(mockTodayRepository.now()).thenReturn(mockToday);
 
       final pillSheetEntity = PillSheet.create(PillSheetType.pillsheet_21).copyWith(
         beginingDate: DateTime.parse("2020-11-21"),
@@ -90,10 +90,10 @@ void main() {
     });
     test("it is not taken all", () async {
       final mockTodayRepository = MockTodayService();
-      final today = DateTime.parse("2020-11-23");
+      final mockToday = DateTime.parse("2020-11-23");
       todayRepository = mockTodayRepository;
-      when(mockTodayRepository.now()).thenReturn(today);
-      when(mockTodayRepository.now()).thenReturn(today);
+      when(mockTodayRepository.now()).thenReturn(mockToday);
+      when(mockTodayRepository.now()).thenReturn(mockToday);
 
       final pillSheetEntity = PillSheet.create(PillSheetType.pillsheet_21).copyWith(
         beginingDate: DateTime.parse("2020-11-21"),

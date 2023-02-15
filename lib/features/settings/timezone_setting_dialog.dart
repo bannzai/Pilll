@@ -71,14 +71,15 @@ class TimezoneSettingDialog extends HookConsumerWidget {
                 "device_timezone": deviceTimezoneName,
               },
             );
+
+            final navigator = Navigator.of(context);
             try {
               await setSetting(setting.copyWith(timezoneDatabaseName: deviceTimezoneName));
               onDone(deviceTimezoneName);
             } catch (error) {
               showErrorAlert(context, error);
             }
-
-            Navigator.of(context).pop();
+            navigator.pop();
           },
           text: "はい",
         ),

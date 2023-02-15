@@ -19,9 +19,9 @@ void main() {
   group("#beginRestDuration", () {
     test("group has only one pill sheet", () async {
       var mockTodayRepository = MockTodayService();
-      final _today = DateTime.parse("2020-09-19");
+      final mockToday = DateTime.parse("2020-09-19");
       todayRepository = mockTodayRepository;
-      when(mockTodayRepository.now()).thenReturn(_today);
+      when(mockTodayRepository.now()).thenReturn(mockToday);
 
       final notYetEndRestDuration = RestDuration(
         beginDate: now(),
@@ -62,9 +62,9 @@ void main() {
   group("#endRestDuration", () {
     test("group has only one pill sheet", () async {
       var mockTodayRepository = MockTodayService();
-      final _today = DateTime.parse("2020-09-19");
+      final mockToday = DateTime.parse("2020-09-19");
       todayRepository = mockTodayRepository;
-      when(mockTodayRepository.now()).thenReturn(_today);
+      when(mockTodayRepository.now()).thenReturn(mockToday);
 
       final notYetEndRestDuration = RestDuration(
         beginDate: now().subtract(const Duration(days: 1)),
@@ -111,9 +111,9 @@ void main() {
     });
     test("group has three pill sheets", () async {
       var mockTodayRepository = MockTodayService();
-      final _today = DateTime.parse("2020-09-19");
+      final mockToday = DateTime.parse("2020-09-19");
       todayRepository = mockTodayRepository;
-      when(mockTodayRepository.now()).thenReturn(_today);
+      when(mockTodayRepository.now()).thenReturn(mockToday);
 
       final notYetEndRestDuration = RestDuration(
         beginDate: now().subtract(const Duration(days: 1)),

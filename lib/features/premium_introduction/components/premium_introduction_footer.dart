@@ -83,9 +83,10 @@ class PremiumIntroductionFotter extends StatelessWidget {
             onTap: () async {
               try {
                 isLoading.value = true;
+                final messenger = ScaffoldMessenger.of(context);
                 final shouldShowSnackbar = await _restore();
                 if (shouldShowSnackbar) {
-                  ScaffoldMessenger.of(context).showSnackBar(
+                  messenger.showSnackBar(
                     const SnackBar(
                       duration: Duration(
                         seconds: 2,

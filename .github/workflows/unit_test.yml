@@ -29,7 +29,7 @@ jobs:
         FILE_FIREBASE_IOS_PRODUCTION: ${{ secrets.FILE_FIREBASE_IOS_PRODUCTION }}
     - uses: subosito/flutter-action@v2
       with:
-        flutter-version: '3.3.1'
+        flutter-version: '3.7.3'
     - run: flutter pub get
     - name: Run iOS
       run: flutter build ios --debug --no-codesign --flavor development --target lib/main.dev.dart --no-sound-null-safety
@@ -51,7 +51,7 @@ jobs:
         FILE_FIREBASE_ANDROID_PRODUCTION: ${{ secrets.FILE_FIREBASE_ANDROID_PRODUCTION }}
     - uses: subosito/flutter-action@v2
       with:
-        flutter-version: '3.3.1'
+        flutter-version: '3.7.3'
     - run: flutter pub get
     - run: flutter build apk --debug --flavor development --target lib/main.dev.dart --no-sound-null-safety
   test:
@@ -64,7 +64,7 @@ jobs:
         java-version: '12.x'
     - uses: subosito/flutter-action@v2
       with:
-        flutter-version: '3.3.1'
+        flutter-version: '3.7.3'
     - uses: webfactory/ssh-agent@v0.5.4
       with:
         ssh-private-key: ${{ secrets.SSH_PRIVATE_KEY }}
@@ -81,7 +81,7 @@ jobs:
         java-version: '12.x'
     - uses: subosito/flutter-action@v2
       with:
-        flutter-version: '3.3.1'
+        flutter-version: '3.7.3'
     - uses: webfactory/ssh-agent@v0.5.4
       with:
         ssh-private-key: ${{ secrets.SSH_PRIVATE_KEY }}

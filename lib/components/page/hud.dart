@@ -8,7 +8,7 @@ class _InheritedWidget extends InheritedWidget {
     required this.state,
   }) : super(key: key, child: child);
 
-  final _HUDState state;
+  final HUDState state;
 
   @override
   bool updateShouldNotify(covariant _InheritedWidget oldWidget) {
@@ -29,10 +29,10 @@ class HUD extends StatefulWidget {
   }) : super(key: key);
 
   @override
-  _HUDState createState() => _HUDState();
+  HUDState createState() => HUDState();
 }
 
-class _HUDState extends State<HUD> {
+class HUDState extends State<HUD> {
   bool _shown = false;
   show() {
     setState(() {
@@ -50,7 +50,7 @@ class _HUDState extends State<HUD> {
 
   @override
   Widget build(BuildContext context) {
-    return _InheritedWidget(child: _body(context), state: this);
+    return _InheritedWidget(state: this, child: _body(context));
   }
 
   Widget _body(BuildContext context) {

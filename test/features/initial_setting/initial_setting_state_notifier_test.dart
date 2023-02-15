@@ -249,10 +249,10 @@ void main() {
     test("state.pillSheetTypes has one pillSheetType", () async {
       final endInitialSetting = MockEndInitialSetting();
       var mockTodayRepository = MockTodayService();
-      final _today = DateTime.parse("2020-09-19");
+      final mockToday = DateTime.parse("2020-09-19");
       todayRepository = mockTodayRepository;
-      when(mockTodayRepository.now()).thenReturn(_today);
-      when(mockTodayRepository.now()).thenReturn(_today);
+      when(mockTodayRepository.now()).thenReturn(mockToday);
+      when(mockTodayRepository.now()).thenReturn(mockToday);
 
       final mockIDGenerator = MockFirestoreIDGenerator();
       when(mockIDGenerator.call()).thenReturn("sheet_id");
@@ -265,7 +265,7 @@ void main() {
       final pillSheet = PillSheet(
         id: "sheet_id",
         typeInfo: PillSheetType.pillsheet_21.typeInfo,
-        beginingDate: _today,
+        beginingDate: mockToday,
         createdAt: now(),
       );
 
@@ -311,10 +311,10 @@ void main() {
     test("state.pillSheetTypes has two pillSheetType", () async {
       final endInitialSetting = MockEndInitialSetting();
       var mockTodayRepository = MockTodayService();
-      final _today = DateTime.parse("2020-09-19");
+      final mockToday = DateTime.parse("2020-09-19");
       todayRepository = mockTodayRepository;
-      when(mockTodayRepository.now()).thenReturn(_today);
-      when(mockTodayRepository.now()).thenReturn(_today);
+      when(mockTodayRepository.now()).thenReturn(mockToday);
+      when(mockTodayRepository.now()).thenReturn(mockToday);
 
       var idGeneratorCallCount = 0;
       final mockIDGenerator = MockFirestoreIDGenerator();
@@ -328,7 +328,7 @@ void main() {
       final pillSheet = PillSheet(
         id: "sheet_id",
         typeInfo: PillSheetType.pillsheet_28_0.typeInfo,
-        beginingDate: _today.subtract(
+        beginingDate: mockToday.subtract(
           const Duration(days: 28),
         ),
         groupIndex: 0,
@@ -338,8 +338,8 @@ void main() {
       final pillSheet2 = PillSheet(
         id: "sheet_id2",
         typeInfo: PillSheetType.pillsheet_21.typeInfo,
-        beginingDate: _today,
-        lastTakenDate: _today.subtract(const Duration(days: 1)),
+        beginingDate: mockToday,
+        lastTakenDate: mockToday.subtract(const Duration(days: 1)),
         groupIndex: 1,
         createdAt: now(),
       );
@@ -408,10 +408,10 @@ void main() {
       when(endInitialSetting(setting)).thenAnswer((_) => Future.value());
 
       var mockTodayRepository = MockTodayService();
-      final _today = DateTime.parse("2020-09-19");
+      final mockToday = DateTime.parse("2020-09-19");
       todayRepository = mockTodayRepository;
-      when(mockTodayRepository.now()).thenReturn(_today);
-      when(mockTodayRepository.now()).thenReturn(_today);
+      when(mockTodayRepository.now()).thenReturn(mockToday);
+      when(mockTodayRepository.now()).thenReturn(mockToday);
 
       final mockIDGenerator = MockFirestoreIDGenerator();
       when(mockIDGenerator.call()).thenReturn("sheet_id");
@@ -424,7 +424,7 @@ void main() {
       final pillSheet = PillSheet(
         id: "sheet_id",
         typeInfo: PillSheetType.pillsheet_24_rest_4.typeInfo,
-        beginingDate: _today,
+        beginingDate: mockToday,
         createdAt: now(),
       );
 

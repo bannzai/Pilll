@@ -3,9 +3,7 @@ import 'package:intl/intl.dart';
 class DateTimeFormatter {
   static String militaryTime(DateTime dateTime) {
     var formatter = NumberFormat("00");
-    return formatter.format(dateTime.hour) +
-        ":" +
-        formatter.format(dateTime.minute);
+    return "${formatter.format(dateTime.hour)}:${formatter.format(dateTime.minute)}";
   }
 
   static String yearAndMonth(DateTime dateTime) {
@@ -57,16 +55,12 @@ class DateTimeFormatter {
   // 12:20
   static String hourAndMinute(DateTime dateTime) {
     final format = NumberFormat("00");
-    return format.format(dateTime.hour) + ":" + format.format(dateTime.minute);
+    return "${format.format(dateTime.hour)}:${format.format(dateTime.minute)}";
   }
 
   // 12:20:30
   static String clock(int hour, minute, second) {
     final format = NumberFormat("00");
-    return format.format(hour) +
-        ":" +
-        format.format(minute) +
-        ":" +
-        format.format(second);
+    return "${format.format(hour)}:${format.format(minute)}:${format.format(second)}";
   }
 }

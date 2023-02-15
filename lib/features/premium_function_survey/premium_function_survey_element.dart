@@ -20,6 +20,7 @@ class PremiumFunctionSurveyElement extends StatelessWidget {
     return Row(
       children: [
         Theme(
+          data: ThemeData(primaryColor: PilllColors.thinSecondary, unselectedWidgetColor: PilllColors.primary),
           child: SizedBox(
             width: 34,
             height: 34,
@@ -37,7 +38,6 @@ class PremiumFunctionSurveyElement extends StatelessWidget {
               activeColor: PilllColors.primary,
             ),
           ),
-          data: ThemeData(primaryColor: PilllColors.thinSecondary, unselectedWidgetColor: PilllColors.primary),
         ),
         Text(_word, style: const TextStyle(fontFamily: FontFamily.japanese, fontSize: 14, fontWeight: FontWeight.w400, color: TextColor.main)),
       ],

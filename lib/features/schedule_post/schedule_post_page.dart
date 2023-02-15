@@ -143,6 +143,8 @@ class _SchedulePostPage extends HookConsumerWidget {
                             ? null
                             : () async {
                                 analytics.logEvent(name: "schedule_post_pressed");
+                                final navigator = Navigator.of(context);
+
                                 try {
                                   final localNotificationID = schedule.localNotification?.localNotificationID;
                                   if (localNotificationID != null) {
@@ -170,7 +172,7 @@ class _SchedulePostPage extends HookConsumerWidget {
                                         newSchedule,
                                         SetOptions(merge: true),
                                       );
-                                  Navigator.of(context).pop();
+                                  navigator.pop();
                                 } catch (error) {
                                   showErrorAlert(context, error);
                                 }
@@ -196,6 +198,7 @@ class _SchedulePostPage extends HookConsumerWidget {
                                 AlertButton(
                                   text: "削除する",
                                   onPressed: () async {
+                                    final navigator = Navigator.of(context);
                                     try {
                                       final localNotificationID = schedule.localNotification?.localNotificationID;
                                       if (localNotificationID != null) {
@@ -203,7 +206,7 @@ class _SchedulePostPage extends HookConsumerWidget {
                                       }
 
                                       await ref.read(databaseProvider).schedulesReference().doc(scheduleID).delete();
-                                      Navigator.of(context).popUntil((route) => route.isFirst);
+                                      navigator.popUntil((route) => route.isFirst);
                                     } catch (error) {
                                       showErrorAlert(context, error);
                                     }

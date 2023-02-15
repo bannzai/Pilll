@@ -107,8 +107,8 @@ class _CalendarPageBody extends StatelessWidget {
             analytics.logEvent(name: "calendar_fab_pressed");
             Navigator.of(context).push(DiaryPostPageRoute.route(today(), todayDiary));
           },
-          child: const Icon(Icons.add, color: Colors.white),
           backgroundColor: PilllColors.primary,
+          child: const Icon(Icons.add, color: Colors.white),
         ),
       ),
       backgroundColor: PilllColors.background,

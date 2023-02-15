@@ -44,7 +44,7 @@ class PremiumTrialLimitAnnouncementBar extends StatelessWidget {
             const Spacer(),
             SvgPicture.asset(
               "images/arrow_right.svg",
-              color: Colors.white,
+              colorFilter: const ColorFilter.mode(Colors.white, BlendMode.srcIn),
               width: 16,
               height: 16,
             ),

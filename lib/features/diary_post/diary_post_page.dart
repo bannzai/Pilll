@@ -108,6 +108,7 @@ class DiaryPostPageBody extends HookConsumerWidget {
               onPressed: () async {
                 analytics.logEvent(name: "diary_post_button_tapped");
 
+                final navigator = Navigator.of(context);
                 await setDiary(diary.copyWith(
                   physicalConditionStatus: physicalCondition.value,
                   physicalConditions: physicalConditionDetails.value,
@@ -115,7 +116,7 @@ class DiaryPostPageBody extends HookConsumerWidget {
                   memo: memo.value,
                 ));
 
-                Navigator.of(context).pop();
+                navigator.pop();
               }),
         ],
         backgroundColor: PilllColors.white,

@@ -29,7 +29,7 @@ class MenstruationCard extends StatelessWidget {
                     SvgPicture.asset(
                       "images/menstruation.svg",
                       width: 24,
-                      color: PilllColors.red,
+                      colorFilter: const ColorFilter.mode(PilllColors.red, BlendMode.srcIn),
                     ),
                     Text(
                       state.title,

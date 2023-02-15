@@ -13,6 +13,7 @@ class RestDurationButton extends StatelessWidget {
       height: 44,
       child: TextButton(
         style: TextButton.styleFrom(backgroundColor: PilllColors.disable),
+        onPressed: null,
         child: const Text(
           "休薬中",
           style: TextStyle(
@@ -22,7 +23,6 @@ class RestDurationButton extends StatelessWidget {
             fontSize: 16,
           ),
         ),
-        onPressed: null,
       ),
     );
   }

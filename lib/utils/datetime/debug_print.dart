@@ -4,9 +4,7 @@ void overrideDebugPrint() {
   debugPrint = printWrapped;
 }
 
-void printWrapped(String? _message, {int? wrapWidth}) {
-  final message = _message;
-
+void printWrapped(String? message, {int? wrapWidth}) {
   if (kDebugMode) {
     if (message == null) {
       print("null");

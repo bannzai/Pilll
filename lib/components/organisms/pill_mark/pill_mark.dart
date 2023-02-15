@@ -25,10 +25,10 @@ class PillMark extends StatefulWidget {
   }) : super(key: key);
 
   @override
-  _PillMarkState createState() => _PillMarkState();
+  PillMarkState createState() => PillMarkState();
 }
 
-class _PillMarkState extends State<PillMark> with TickerProviderStateMixin {
+class PillMarkState extends State<PillMark> with TickerProviderStateMixin {
   AnimationController? _controller;
 
   @override

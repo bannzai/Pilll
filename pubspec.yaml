@@ -20,32 +20,36 @@ version: 3.17.2+1671
 environment:
   sdk: ">=2.15.0 <3.0.0"
 
+platforms:
+  android:
+  ios:
+
 dependencies:
   flutter:
     sdk: flutter
   flutter_localizations:
     sdk: flutter
-  flutter_svg: ^1.0.0
+  flutter_svg: ^2.0.1
   shared_preferences: ^2.0.4
   intl: ^0.17.0
-  firebase_core: ^1.22.0
-  firebase_analytics: ^9.3.4
-  firebase_auth: ^3.8.0
-  firebase_messaging: ^13.0.1
-  cloud_firestore: ^3.4.7
+  firebase_core: ^2.5.0
+  firebase_analytics: ^10.1.1
+  firebase_auth: ^4.2.6
+  firebase_messaging: ^14.2.2
+  cloud_firestore: ^4.3.2
   url_launcher: ^6.1.5
   package_info: ^2.0.0
   equatable: ^2.0.0
   json_annotation: ^4.0.0
-  mockito: 5.2.0
+  mockito: ^5.3.2
   freezed_annotation: ^2.2.0
   riverpod: ^2.0.0
   hooks_riverpod: ^2.0.0
   flutter_hooks: ^0.18.5
-  firebase_crashlytics: ^2.8.10
+  firebase_crashlytics: ^3.0.12
   dotted_border: ^2.0.0-nullsafety.0
   in_app_review: ^2.0.1
-  uuid: 3.0.6
+  uuid: ^3.0.7
   async_value_group: ^1.0.0
 
   # The following adds the Cupertino Icons font to your application.
@@ -59,13 +63,16 @@ dependencies:
       url: ssh://git@github.com/bannzai/flutter_inappwebview.git
       ref: master
   flutter_app_badger: ^1.2.0
-  sign_in_with_apple: ^3.0.0
+  sign_in_with_apple: ^4.3.0
   google_sign_in: ^5.4.1
   purchases_flutter: ^4.4.0
-  firebase_performance: ^0.8.0+7
+  firebase_performance: ^0.9.0+11
   flutter_native_timezone: ^2.0.0
-  flutter_local_notifications: ^11.0.1
+  flutter_local_notifications: ^13.0.0
   webview_flutter: ^3.0.4
+  collection:
+  crypto:
+  timezone:
 
 dev_dependencies:
   # The "flutter_lints" package below contains a set of recommended lints to
@@ -73,7 +80,7 @@ dev_dependencies:
   # activated in the `analysis_options.yaml` file located at the root of your
   # package. See that file for information about deactivating specific lint
   # rules and activating additional ones.
-  flutter_lints: ^1.0.0
+  flutter_lints: ^2.0.1
 
   flutter_test:
     sdk: flutter

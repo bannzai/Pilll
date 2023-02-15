@@ -43,15 +43,17 @@ class MenstruationRecordButton extends HookConsumerWidget {
               switch (type) {
                 case MenstruationSelectModifyType.today:
                   analytics.logEvent(name: "tapped_menstruation_record_today");
+                  final navigator = Navigator.of(context);
                   final created = await beginMenstruation(today(), setting: setting);
                   onRecord(created);
-                  Navigator.of(context).pop();
+                  navigator.pop();
                   return;
                 case MenstruationSelectModifyType.yesterday:
                   analytics.logEvent(name: "tapped_menstruation_record_yesterday");
+                  final navigator = Navigator.of(context);
                   final created = await beginMenstruation(yesterday(), setting: setting);
                   onRecord(created);
-                  Navigator.of(context).pop();
+                  navigator.pop();
                   return;
                 case MenstruationSelectModifyType.begin:
                   analytics.logEvent(name: "tapped_menstruation_record_begin");

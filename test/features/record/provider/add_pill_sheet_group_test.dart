@@ -20,10 +20,10 @@ void main() {
   group("#register", () {
     test("group has only one pill sheet", () async {
       var mockTodayRepository = MockTodayService();
-      final _today = DateTime.parse("2020-09-19");
+      final mockToday = DateTime.parse("2020-09-19");
       todayRepository = mockTodayRepository;
-      when(mockTodayRepository.now()).thenReturn(_today);
-      when(mockTodayRepository.now()).thenReturn(_today);
+      when(mockTodayRepository.now()).thenReturn(mockToday);
+      when(mockTodayRepository.now()).thenReturn(mockToday);
 
       final mockIDGenerator = MockFirestoreIDGenerator();
       when(mockIDGenerator.call()).thenReturn("sheet_id");
@@ -36,7 +36,7 @@ void main() {
       final pillSheet = PillSheet(
         id: "sheet_id",
         typeInfo: PillSheetType.pillsheet_28_0.typeInfo,
-        beginingDate: _today,
+        beginingDate: mockToday,
         groupIndex: 0,
         lastTakenDate: null,
         createdAt: now(),
@@ -95,10 +95,10 @@ void main() {
     });
     test("group has two pill sheet", () async {
       var mockTodayRepository = MockTodayService();
-      final _today = DateTime.parse("2020-09-19");
+      final mockToday = DateTime.parse("2020-09-19");
       todayRepository = mockTodayRepository;
-      when(mockTodayRepository.now()).thenReturn(_today);
-      when(mockTodayRepository.now()).thenReturn(_today);
+      when(mockTodayRepository.now()).thenReturn(mockToday);
+      when(mockTodayRepository.now()).thenReturn(mockToday);
 
       var idGeneratorCallCount = 0;
       final mockIDGenerator = MockFirestoreIDGenerator();
@@ -112,7 +112,7 @@ void main() {
       final pillSheet = PillSheet(
         id: "sheet_id",
         typeInfo: PillSheetType.pillsheet_28_0.typeInfo,
-        beginingDate: _today,
+        beginingDate: mockToday,
         groupIndex: 0,
         lastTakenDate: null,
         createdAt: now(),
@@ -120,7 +120,7 @@ void main() {
       final pillSheet2 = PillSheet(
         id: "sheet_id2",
         typeInfo: PillSheetType.pillsheet_21.typeInfo,
-        beginingDate: _today.add(const Duration(days: 28)),
+        beginingDate: mockToday.add(const Duration(days: 28)),
         lastTakenDate: null,
         groupIndex: 1,
         createdAt: now(),

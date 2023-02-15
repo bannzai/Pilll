@@ -58,6 +58,7 @@ class PurchaseButtons extends HookConsumerWidget {
     try {
       final shouldShowCompleteDialog = await purchase(package);
       if (shouldShowCompleteDialog) {
+        // ignore: use_build_context_synchronously
         showDialog(
             context: context,
             builder: (_) {

@@ -75,7 +75,7 @@ class PilllAdsImageAnnouncementBar extends StatelessWidget {
                 const Spacer(),
                 SvgPicture.asset(
                   "images/arrow_right.svg",
-                  color: Colors.white,
+                  colorFilter: const ColorFilter.mode(Colors.white, BlendMode.srcIn),
                   height: 20,
                   width: 20,
                 ),
@@ -149,7 +149,7 @@ class PilllAdsTextAnnouncementBar extends StatelessWidget {
             const SizedBox(width: 10),
             SvgPicture.asset(
               "images/arrow_right.svg",
-              color: Colors.white,
+              colorFilter: const ColorFilter.mode(Colors.white, BlendMode.srcIn),
               height: 20,
               width: 20,
             ),
