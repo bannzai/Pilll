@@ -62,7 +62,6 @@ class TakePill {
 
       return pillSheet.copyWith(lastTakenDate: takenDate);
     }).toList();
-    debugPrint("$updatedPillSheets");
 
     final updatedPillSheetGroup = pillSheetGroup.copyWith(pillSheets: updatedPillSheets);
     final updatedIndexses = pillSheetGroup.pillSheets.asMap().keys.where((index) {
@@ -74,10 +73,7 @@ class TakePill {
       return true;
     }).toList();
 
-    debugPrint("updatedIndexses: $updatedIndexses");
     if (updatedIndexses.isEmpty) {
-      debugPrint("unexpected updatedIndexes is empty");
-
       // NOTE: avoid error for unit test
       if (Firebase.apps.isNotEmpty) {
         errorLogger.recordError(const FormatException("unexpected updatedIndexes is empty"), StackTrace.current);
