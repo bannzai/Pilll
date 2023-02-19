@@ -90,7 +90,6 @@ class TakePill {
 
     final before = pillSheetGroup.pillSheets[updatedIndexses.first];
     final after = updatedPillSheetGroup.pillSheets[updatedIndexses.last];
-    debugPrint("before: $before, after: $after");
     final history = PillSheetModifiedHistoryServiceActionFactory.createTakenPillAction(
       pillSheetGroupID: pillSheetGroup.id,
       before: before,
