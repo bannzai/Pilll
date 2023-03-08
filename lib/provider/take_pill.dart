@@ -62,7 +62,6 @@ class TakePill {
 
       return pillSheet.copyWith(lastTakenDate: takenDate);
     }).toList();
-    debugPrint("$updatedPillSheets");
 
     final updatedPillSheetGroup = pillSheetGroup.copyWith(pillSheets: updatedPillSheets);
     final updatedIndexses = pillSheetGroup.pillSheets.asMap().keys.where((index) {
@@ -74,10 +73,7 @@ class TakePill {
       return true;
     }).toList();
 
-    debugPrint("updatedIndexses: $updatedIndexses");
     if (updatedIndexses.isEmpty) {
-      debugPrint("unexpected updatedIndexes is empty");
-
       // NOTE: avoid error for unit test
       if (Firebase.apps.isNotEmpty) {
         errorLogger.recordError(const FormatException("unexpected updatedIndexes is empty"), StackTrace.current);
@@ -90,7 +86,6 @@ class TakePill {
 
     final before = pillSheetGroup.pillSheets[updatedIndexses.first];
     final after = updatedPillSheetGroup.pillSheets[updatedIndexses.last];
-    debugPrint("before: $before, after: $after");
     final history = PillSheetModifiedHistoryServiceActionFactory.createTakenPillAction(
       pillSheetGroupID: pillSheetGroup.id,
       before: before,
@@ -99,6 +94,8 @@ class TakePill {
     );
     batchSetPillSheetModifiedHistory(batch, history);
 
+    // 服用記録はBackendの通知等によく使われるので、DBに書き込まれたあとにStreamを通じてUIを更新する
+    awaitsPillSheetGroupRemoteDBDataChanged = true;
     await batch.commit();
 
     return updatedPillSheetGroup;
