@@ -53,12 +53,6 @@ func isAuthorizedReadAndShareToHealthKitData(
             completion(.failure(.init(reason: error.localizedDescription)))
         }
     }
-    store.getRequestStatusForAuthorization(toShare: writeTypes, read: readTypes) { status, error in
-        if let error = error {
-        } else {
-            completion(.success(status == .unnecessary))
-        }
-    }
 }
 
 func shouldRequestForAccessToHealthKitData(
