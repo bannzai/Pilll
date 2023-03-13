@@ -2,8 +2,9 @@ import HealthKit
 
 // MARK: - Foundamental
 let store = HKHealthStore()
+let menstrualFlowSampleType = HKSampleType.categoryType(forIdentifier: .menstrualFlow)
 let writeTypes: Set<HKSampleType> = {
-    guard let category = HKSampleType.categoryType(forIdentifier: .menstrualFlow) else {
+    guard let category = menstrualFlowSampleType else {
         return []
     }
     return [category]
@@ -26,7 +27,7 @@ struct HealthKitGeneralError: Error {
 }
 
 // MARK: - Permissions
-func isAuthorizedReadAndShareToHealthKitData(
+func healthKitRequestAuthorizationIsUnnecessary(
     completion: @escaping (Result<Bool, HealthKitGeneralError>) -> Void
 ) {
     if writeTypes.isEmpty {
@@ -34,11 +35,34 @@ func isAuthorizedReadAndShareToHealthKitData(
         return
     }
 
-    store.getRequestStatusForAuthorization(toShare: writeTypes, read: readTypes) { status, error in
-        if let error = error {
+    Task { @MainActor in
+        do {
+            let requestStatusForAuthorization = try await store.statusForAuthorizationRequest(toShare: writeTypes, read: readTypes)
+            completion(.success(requestStatusForAuthorization == .unnecessary))
+        } catch {
             completion(.failure(.init(reason: error.localizedDescription)))
-        } else {
-            completion(.success(status == .unnecessary))
+        }
+    }
+}
+
+func healthKitAuthorizationStatusIsSharingAuthorized(
+    completion: @escaping (Result<Bool, HealthKitGeneralError>) -> Void
+) {
+    if writeTypes.isEmpty {
+        completion(.failure(.init(reason: "ヘルスケアが生理情報の操作に対応していません")))
+        return
+    }
+
+    Task { @MainActor in
+        do {
+            if let menstrualFlowSampleType {
+                let authorizationStatus = store.authorizationStatus(for: menstrualFlowSampleType)
+                completion(.success(authorizationStatus == .sharingAuthorized))
+            } else {
+                completion(.success(false))
+            }
+        } catch {
+            completion(.failure(.init(reason: error.localizedDescription)))
         }
     }
 }
