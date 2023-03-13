@@ -45,7 +45,7 @@ func healthKitRequestAuthorizationIsUnnecessary(
     }
 }
 
-func authorizationStatusIsSharingAuthorized(
+func healthKitAuthorizationStatusIsSharingAuthorized(
     completion: @escaping (Result<Bool, HealthKitGeneralError>) -> Void
 ) {
     if writeTypes.isEmpty {
