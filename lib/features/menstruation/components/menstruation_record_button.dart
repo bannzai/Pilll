@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
+import 'package:pilll/features/error/error_alert.dart';
 import 'package:pilll/utils/analytics.dart';
 import 'package:pilll/components/atoms/button.dart';
 import 'package:pilll/features/menstruation_edit/menstruation_edit_page.dart';
@@ -44,16 +45,25 @@ class MenstruationRecordButton extends HookConsumerWidget {
                 case MenstruationSelectModifyType.today:
                   analytics.logEvent(name: "tapped_menstruation_record_today");
                   final navigator = Navigator.of(context);
-                  final created = await beginMenstruation(today(), setting: setting);
-                  onRecord(created);
-                  navigator.pop();
+                  try {
+                    final created = await beginMenstruation(today(), setting: setting);
+                    onRecord(created);
+                    navigator.pop();
+                    return;
+                  } catch (error) {
+                    showErrorAlert(context, error);
+                  }
                   return;
                 case MenstruationSelectModifyType.yesterday:
                   analytics.logEvent(name: "tapped_menstruation_record_yesterday");
                   final navigator = Navigator.of(context);
-                  final created = await beginMenstruation(yesterday(), setting: setting);
-                  onRecord(created);
-                  navigator.pop();
+                  try {
+                    final created = await beginMenstruation(yesterday(), setting: setting);
+                    onRecord(created);
+                    navigator.pop();
+                  } catch (error) {
+                    showErrorAlert(context, error);
+                  }
                   return;
                 case MenstruationSelectModifyType.begin:
                   analytics.logEvent(name: "tapped_menstruation_record_begin");
