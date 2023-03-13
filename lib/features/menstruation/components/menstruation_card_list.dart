@@ -82,7 +82,8 @@ MenstruationCardState? cardState(
     return MenstruationCardState.future(nextSchedule: futureDateRanges.first.begin);
   }
 
-  assert(false);
+  // 生理設定のfromMenstruationの値がすべてのピルシートタイプの合計よりも小さい場合に起こる
+  // assert(false);
   return null;
 }
 
