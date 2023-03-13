@@ -78,7 +78,7 @@ class DeleteMenstruation {
 Future<bool> _canHealthkitDataSave() async {
   if (Platform.isIOS) {
     if (await isHealthDataAvailable()) {
-      if (await IsUnnecessaryForRequestAuthorizationToHealthKit()) {
+      if (await healthKitRequestAuthorizationIsUnnecessary()) {
         return true;
       }
     }
@@ -89,7 +89,7 @@ Future<bool> _canHealthkitDataSave() async {
 Future<bool> _healthKitDateDidSave({required Menstruation menstruation}) async {
   if (Platform.isIOS) {
     if (await isHealthDataAvailable()) {
-      if (await IsUnnecessaryForRequestAuthorizationToHealthKit()) {
+      if (await healthKitRequestAuthorizationIsUnnecessary()) {
         if (menstruation.healthKitSampleDataUUID != null) {
           return true;
         }

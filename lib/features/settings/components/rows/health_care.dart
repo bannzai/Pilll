@@ -34,7 +34,7 @@ class HealthCareRow extends StatelessWidget {
         );
 
         try {
-          if (await IsUnnecessaryForRequestAuthorizationToHealthKit()) {
+          if (await healthKitRequestAuthorizationIsUnnecessary()) {
             launchUrl(Uri.parse("https://pilll.wraptas.site/9f689858e2a34cf6bc7c08ab85a192cf"));
           } else {
             if (await shouldRequestForAccessToHealthKitData()) {

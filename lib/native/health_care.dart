@@ -14,7 +14,7 @@ Future<bool> isHealthDataAvailable() async {
   return result["isHealthDataAvailable"] == true;
 }
 
-Future<bool> IsUnnecessaryForRequestAuthorizationToHealthKit() async {
+Future<bool> healthKitRequestAuthorizationIsUnnecessary() async {
   if (!Platform.isIOS) {
     throw const FormatException("iOSアプリにのみ対応しています");
   }
@@ -22,8 +22,8 @@ Future<bool> IsUnnecessaryForRequestAuthorizationToHealthKit() async {
     throw const FormatException("ヘルスケアに対応していない端末ではご利用できません");
   }
 
-  final result = await methodChannel.invokeMethod("IsUnnecessaryForRequestAuthorizationToHealthKit");
-  return result["IsUnnecessaryForRequestAuthorizationToHealthKit"] == true;
+  final result = await methodChannel.invokeMethod("healthKitRequestAuthorizationIsUnnecessary");
+  return result["healthKitRequestAuthorizationIsUnnecessary"] == true;
 }
 
 Future<bool> shouldRequestForAccessToHealthKitData() async {
@@ -77,7 +77,7 @@ Future<String> addMenstruationFlowHealthKitData(
   if (!await isHealthDataAvailable()) {
     throw const FormatException("ヘルスケアに対応していない端末ではご利用できません");
   }
-  if (!await IsUnnecessaryForRequestAuthorizationToHealthKit()) {
+  if (!await healthKitRequestAuthorizationIsUnnecessary()) {
     throw const FormatException("設定アプリよりヘルスケアを有効にしてください");
   }
 
@@ -113,7 +113,7 @@ Future<String> updateOrAddMenstruationFlowHealthKitData(
   if (!await isHealthDataAvailable()) {
     throw const FormatException("ヘルスケアに対応していない端末ではご利用できません");
   }
-  if (!await IsUnnecessaryForRequestAuthorizationToHealthKit()) {
+  if (!await healthKitRequestAuthorizationIsUnnecessary()) {
     throw const FormatException("設定アプリよりヘルスケアを有効にしてください");
   }
 
@@ -149,7 +149,7 @@ Future<void> deleteMenstruationFlowHealthKitData(
   if (!await isHealthDataAvailable()) {
     throw const FormatException("ヘルスケアに対応していない端末ではご利用できません");
   }
-  if (!await IsUnnecessaryForRequestAuthorizationToHealthKit()) {
+  if (!await healthKitRequestAuthorizationIsUnnecessary()) {
     throw const FormatException("設定アプリよりヘルスケアを有効にしてください");
   }
 

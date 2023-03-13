@@ -27,7 +27,7 @@ struct HealthKitGeneralError: Error {
 }
 
 // MARK: - Permissions
-func IsUnnecessaryForRequestAuthorizationToHealthKit(
+func healthKitRequestAuthorizationIsUnnecessary(
     completion: @escaping (Result<Bool, HealthKitGeneralError>) -> Void
 ) {
     if writeTypes.isEmpty {
