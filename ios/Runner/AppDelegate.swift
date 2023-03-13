@@ -30,13 +30,13 @@ import WidgetKit
                     "result": "success",
                     "isHealthDataAvailable": HKHealthStore.isHealthDataAvailable()
                 ])
-            case "isAuthorizedReadAndShareToHealthKitData":
-                isAuthorizedReadAndShareToHealthKitData { result in
+            case "IsUnnecessaryForRequestAuthorizationToHealthKit":
+                IsUnnecessaryForRequestAuthorizationToHealthKit { result in
                     switch result {
                     case .success(let isAuthorized):
                         completionHandler([
                             "result": "success",
-                            "isAuthorizedReadAndShareToHealthKitData": isAuthorized
+                            "IsUnnecessaryForRequestAuthorizationToHealthKit": isAuthorized
                         ])
                     case .failure(let failure):
                         completionHandler(failure.toDictionary())

@@ -27,7 +27,7 @@ struct HealthKitGeneralError: Error {
 }
 
 // MARK: - Permissions
-func isAuthorizedReadAndShareToHealthKitData(
+func IsUnnecessaryForRequestAuthorizationToHealthKit(
     completion: @escaping (Result<Bool, HealthKitGeneralError>) -> Void
 ) {
     if writeTypes.isEmpty {
@@ -54,6 +54,7 @@ func isAuthorizedReadAndShareToHealthKitData(
         }
     }
 }
+
 
 func shouldRequestForAccessToHealthKitData(
     completion: @escaping (Result<Bool, HealthKitGeneralError>) -> Void
