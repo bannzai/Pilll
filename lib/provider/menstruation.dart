@@ -79,7 +79,9 @@ Future<bool> _canHealthkitDataSave() async {
   if (Platform.isIOS) {
     if (await isHealthDataAvailable()) {
       if (await healthKitRequestAuthorizationIsUnnecessary()) {
-        return true;
+        if (await healthKitAuthorizationStatusIsSharingAuthorized()) {
+          return true;
+        }
       }
     }
   }
@@ -90,8 +92,10 @@ Future<bool> _healthKitDateDidSave({required Menstruation menstruation}) async {
   if (Platform.isIOS) {
     if (await isHealthDataAvailable()) {
       if (await healthKitRequestAuthorizationIsUnnecessary()) {
-        if (menstruation.healthKitSampleDataUUID != null) {
-          return true;
+        if (await healthKitAuthorizationStatusIsSharingAuthorized()) {
+          if (menstruation.healthKitSampleDataUUID != null) {
+            return true;
+          }
         }
       }
     }

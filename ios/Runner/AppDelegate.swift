@@ -42,6 +42,18 @@ import WidgetKit
                         completionHandler(failure.toDictionary())
                     }
                 }
+            case "healthKitAuthorizationStatusIsSharingAuthorized":
+                healthKitAuthorizationStatusIsSharingAuthorized { result in
+                    switch result {
+                    case .success(let isAuthorized):
+                        completionHandler([
+                            "result": "success",
+                            "healthKitAuthorizationStatusIsSharingAuthorized": isAuthorized
+                        ])
+                    case .failure(let failure):
+                        completionHandler(failure.toDictionary())
+                    }
+                }
             case "shouldRequestForAccessToHealthKitData":
                 shouldRequestForAccessToHealthKitData { result in
                     switch result {

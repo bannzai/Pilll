@@ -26,6 +26,21 @@ Future<bool> healthKitRequestAuthorizationIsUnnecessary() async {
   return result["healthKitRequestAuthorizationIsUnnecessary"] == true;
 }
 
+Future<bool> healthKitAuthorizationStatusIsSharingAuthorized() async {
+  if (!Platform.isIOS) {
+    throw const FormatException("iOSアプリにのみ対応しています");
+  }
+  if (!await isHealthDataAvailable()) {
+    throw const FormatException("ヘルスケアに対応していない端末ではご利用できません");
+  }
+  if (!await healthKitRequestAuthorizationIsUnnecessary()) {
+    throw const FormatException("設定アプリよりヘルスケアを有効にしてください");
+  }
+
+  final result = await methodChannel.invokeMethod("healthKitAuthorizationStatusIsSharingAuthorized");
+  return result["healthKitAuthorizationStatusIsSharingAuthorized"] == true;
+}
+
 Future<bool> shouldRequestForAccessToHealthKitData() async {
   if (!Platform.isIOS) {
     return false;
