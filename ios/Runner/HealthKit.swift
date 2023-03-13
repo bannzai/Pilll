@@ -38,11 +38,23 @@ func IsUnnecessaryForRequestAuthorizationToHealthKit(
     Task { @MainActor in
         do {
             let requestStatusForAuthorization = try await store.statusForAuthorizationRequest(toShare: writeTypes, read: readTypes)
-            if requestStatusForAuthorization != .unnecessary {
-                completion(.success(false))
-                return
-            }
+            completion(.success(requestStatusForAuthorization == .unnecessary))
+        } catch {
+            completion(.failure(.init(reason: error.localizedDescription)))
+        }
+    }
+}
 
+func authorizationStatusIsSharingAuthorized(
+    completion: @escaping (Result<Bool, HealthKitGeneralError>) -> Void
+) {
+    if writeTypes.isEmpty {
+        completion(.failure(.init(reason: "ヘルスケアが生理情報の操作に対応していません")))
+        return
+    }
+
+    Task { @MainActor in
+        do {
             if let menstrualFlowSampleType {
                 let authorizationStatus = store.authorizationStatus(for: menstrualFlowSampleType)
                 completion(.success(authorizationStatus == .sharingAuthorized))
@@ -54,7 +66,6 @@ func IsUnnecessaryForRequestAuthorizationToHealthKit(
         }
     }
 }
-
 
 func shouldRequestForAccessToHealthKitData(
     completion: @escaping (Result<Bool, HealthKitGeneralError>) -> Void
