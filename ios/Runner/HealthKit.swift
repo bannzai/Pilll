@@ -2,8 +2,9 @@ import HealthKit
 
 // MARK: - Foundamental
 let store = HKHealthStore()
+let menstrualFlowSampleType = HKSampleType.categoryType(forIdentifier: .menstrualFlow)
 let writeTypes: Set<HKSampleType> = {
-    guard let category = HKSampleType.categoryType(forIdentifier: .menstrualFlow) else {
+    guard let category = menstrualFlowSampleType else {
         return []
     }
     return [category]
@@ -34,9 +35,26 @@ func isAuthorizedReadAndShareToHealthKitData(
         return
     }
 
+    Task { @MainActor in
+        do {
+            let requestStatusForAuthorization = try await store.statusForAuthorizationRequest(toShare: writeTypes, read: readTypes)
+            if requestStatusForAuthorization != .unnecessary {
+                completion(.success(false))
+                return
+            }
+
+            if let menstrualFlowSampleType {
+                let authorizationStatus = store.authorizationStatus(for: menstrualFlowSampleType)
+                completion(.success(authorizationStatus == .sharingAuthorized))
+            } else {
+                completion(.success(false))
+            }
+        } catch {
+            completion(.failure(.init(reason: error.localizedDescription)))
+        }
+    }
     store.getRequestStatusForAuthorization(toShare: writeTypes, read: readTypes) { status, error in
         if let error = error {
-            completion(.failure(.init(reason: error.localizedDescription)))
         } else {
             completion(.success(status == .unnecessary))
         }
