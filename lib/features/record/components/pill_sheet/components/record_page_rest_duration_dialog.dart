@@ -10,11 +10,13 @@ import 'package:pilll/utils/formatter/date_time_formatter.dart';
 
 class RecordPageRestDurationDialog extends StatelessWidget {
   final RecordPageRestDurationDialogTitle title;
+  final PillSheetAppearanceMode appearanceMode;
   final VoidCallback onDone;
 
   const RecordPageRestDurationDialog({
     Key? key,
     required this.title,
+    required this.appearanceMode,
     required this.onDone,
   }) : super(key: key);
 
@@ -37,7 +39,8 @@ class RecordPageRestDurationDialog extends StatelessWidget {
                 color: TextColor.main,
               )),
           const SizedBox(height: 24),
-          SvgPicture.asset("images/explain_rest_duration.svg"),
+          SvgPicture.asset(
+              appearanceMode == PillSheetAppearanceMode.date ? "images/explain_rest_duration_date.svg" : "images/explain_rest_duration_number.svg"),
           const SizedBox(height: 24),
           const Text(
             "※休薬開始日を変えたい場合",
@@ -92,6 +95,7 @@ showRecordPageRestDurationDialog(
     context: context,
     builder: (context) => RecordPageRestDurationDialog(
       title: RecordPageRestDurationDialogTitle(appearanceMode: appearanceMode, activedPillSheet: activedPillSheet, pillSheetGroup: pillSheetGroup),
+      appearanceMode: appearanceMode,
       onDone: onDone,
     ),
   );
