@@ -31,7 +31,7 @@ class EndManualRestDurationButton extends HookConsumerWidget {
     return SizedBox(
       width: 80,
       child: SmallAppOutlinedButton(
-        text: "休薬終了",
+        text: "服用再開",
         onPressed: () async {
           analytics.logEvent(
             name: "end_manual_rest_duration_pressed",

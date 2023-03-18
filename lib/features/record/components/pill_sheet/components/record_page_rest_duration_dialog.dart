@@ -34,35 +34,13 @@ class RecordPageRestDurationDialog extends StatelessWidget {
           const Text("服用をお休みするとピル番号は進みません",
               style: TextStyle(
                 fontFamily: FontFamily.japanese,
-                fontWeight: FontWeight.w300,
+                fontWeight: FontWeight.w500,
                 fontSize: 14,
                 color: TextColor.main,
               )),
           const SizedBox(height: 24),
           SvgPicture.asset(
               appearanceMode == PillSheetAppearanceMode.date ? "images/explain_rest_duration_date.svg" : "images/explain_rest_duration_number.svg"),
-          const SizedBox(height: 24),
-          const Text(
-            "※休薬開始日を変えたい場合",
-            style: TextStyle(
-              color: TextColor.main,
-              fontSize: 14,
-              fontFamily: FontFamily.japanese,
-              fontWeight: FontWeight.w700,
-            ),
-            textAlign: TextAlign.left,
-          ),
-          const SizedBox(height: 8),
-          const Text(
-            "希望日まで未服用にする必要があります。服用済みのピルマークをタップすることで未服用にできます",
-            style: TextStyle(
-              color: TextColor.main,
-              fontFamily: FontFamily.japanese,
-              fontSize: 14,
-              fontWeight: FontWeight.w400,
-            ),
-            textAlign: TextAlign.left,
-          ),
           const SizedBox(height: 24),
         ],
       ),
@@ -119,7 +97,7 @@ class RecordPageRestDurationDialogTitle extends StatelessWidget {
         style: const TextStyle(
           color: TextColor.main,
           fontSize: 16,
-          fontWeight: FontWeight.w600,
+          fontWeight: FontWeight.w700,
           fontFamily: FontFamily.japanese,
         ));
   }
