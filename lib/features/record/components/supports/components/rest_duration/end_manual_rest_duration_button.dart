@@ -77,7 +77,7 @@ class EndRestDurationModal extends HookConsumerWidget {
                 borderRadius: BorderRadius.circular(50),
               ),
               child: const Text(
-                "休薬期間終了",
+                "服用お休み期間終了",
                 textAlign: TextAlign.center,
                 style: TextStyle(
                   color: TextColor.white,
