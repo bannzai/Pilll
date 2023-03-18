@@ -45,7 +45,7 @@ class InvalidAlreadyTakenPillDialog extends StatelessWidget {
                   text: "今日飲むピルを未服用にしてから",
                   style: TextStyle(
                     fontFamily: FontFamily.japanese,
-                    fontWeight: FontWeight.w600,
+                    fontWeight: FontWeight.w700,
                     fontSize: 14,
                     color: TextColor.main,
                   ),
