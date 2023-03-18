@@ -59,7 +59,7 @@ class RecordPagePillSheetSupportActions extends StatelessWidget {
                       duration: Duration(
                         seconds: 2,
                       ),
-                      content: Text("休薬期間が終了しました"),
+                      content: Text("服用お休みが終了しました"),
                     ),
                   );
                 }
@@ -76,7 +76,7 @@ class RecordPagePillSheetSupportActions extends StatelessWidget {
                     duration: Duration(
                       seconds: 2,
                     ),
-                    content: Text("休薬期間が始まりました"),
+                    content: Text("服用お休みを開始しました"),
                   ),
                 );
                 Navigator.of(context).pop();
