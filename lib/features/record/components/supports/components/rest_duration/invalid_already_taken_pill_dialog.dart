@@ -22,7 +22,7 @@ class InvalidAlreadyTakenPillDialog extends StatelessWidget {
         mainAxisSize: MainAxisSize.min,
         children: <Widget>[
           const Text(
-            "今日飲むピルが服用済みの場合\n休薬できません",
+            "今日飲むピルが服用済みの場合\n服用をお休みできません",
             style: TextStyle(
               fontFamily: FontFamily.japanese,
               fontWeight: FontWeight.w600,
@@ -51,7 +51,7 @@ class InvalidAlreadyTakenPillDialog extends StatelessWidget {
                   ),
                 ),
                 TextSpan(
-                  text: "休薬してください。今日以外の日から休薬したい場合は下記を参考にしてください。",
+                  text: "お休みしてください。今日以外の日から服用お休みしたい場合は下記を参考にしてください。",
                   style: TextStyle(
                     fontFamily: FontFamily.japanese,
                     fontWeight: FontWeight.w300,
@@ -70,7 +70,7 @@ class InvalidAlreadyTakenPillDialog extends StatelessWidget {
             analytics.logEvent(name: "invalid_already_taken_pill_faq");
             launchUrl(Uri.parse("https://pilll.wraptas.site/467128e667ae4d6cbff4d61ee370cce5"));
           },
-          text: "休薬機能の使い方を見る",
+          text: "服用お休みの使い方を見る",
         ),
         Center(
           child: AlertButton(

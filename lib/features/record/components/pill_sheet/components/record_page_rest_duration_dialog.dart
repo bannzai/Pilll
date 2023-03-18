@@ -29,7 +29,7 @@ class RecordPageRestDurationDialog extends StatelessWidget {
         children: <Widget>[
           title,
           const SizedBox(height: 24),
-          const Text("休薬するとピル番号は進みません",
+          const Text("服用をお休みするとピル番号は進みません",
               style: TextStyle(
                 fontFamily: FontFamily.japanese,
                 fontWeight: FontWeight.w300,
@@ -66,7 +66,7 @@ class RecordPageRestDurationDialog extends StatelessWidget {
       actions: <Widget>[
         AppOutlinedButton(
           onPressed: () async => onDone(),
-          text: "休薬する",
+          text: "服用お休みする",
         ),
         Center(
           child: AlertButton(
@@ -111,7 +111,7 @@ class RecordPageRestDurationDialogTitle extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Text("$_numberから休薬しますか？",
+    return Text("$_numberから服用をお休みしますか？",
         style: const TextStyle(
           color: TextColor.main,
           fontSize: 16,
