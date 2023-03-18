@@ -28,24 +28,21 @@ class EndManualRestDurationButton extends HookConsumerWidget {
   @override
   Widget build(BuildContext context, WidgetRef ref) {
     final endRestDuration = ref.watch(endRestDurationProvider);
-    return SizedBox(
-      width: 80,
-      child: SmallAppOutlinedButton(
-        text: "休薬終了",
-        onPressed: () async {
-          analytics.logEvent(
-            name: "end_manual_rest_duration_pressed",
-          );
+    return SmallAppOutlinedButton(
+      text: "服用再開",
+      onPressed: () async {
+        analytics.logEvent(
+          name: "end_manual_rest_duration_pressed",
+        );
 
-          await endRestDuration(
-            restDuration: restDuration,
-            activePillSheet: activedPillSheet,
-            pillSheetGroup: pillSheetGroup,
-          );
+        await endRestDuration(
+          restDuration: restDuration,
+          activePillSheet: activedPillSheet,
+          pillSheetGroup: pillSheetGroup,
+        );
 
-          didEndRestDuration();
-        },
-      ),
+        didEndRestDuration();
+      },
     );
   }
 }
@@ -80,7 +77,7 @@ class EndRestDurationModal extends HookConsumerWidget {
                 borderRadius: BorderRadius.circular(50),
               ),
               child: const Text(
-                "休薬期間終了",
+                "服用お休み期間終了",
                 textAlign: TextAlign.center,
                 style: TextStyle(
                   color: TextColor.white,
@@ -108,6 +105,15 @@ class EndRestDurationModal extends HookConsumerWidget {
                 Text(
                   "服用${lastTakenPillNumber + 1}番→1番",
                   style: const TextStyle(
+                    color: TextColor.main,
+                    fontSize: 14,
+                    fontFamily: FontFamily.japanese,
+                    fontWeight: FontWeight.w400,
+                  ),
+                ),
+                const Text(
+                  "お休みした分だけシート上の曜日もずれます",
+                  style: TextStyle(
                     color: TextColor.main,
                     fontSize: 14,
                     fontFamily: FontFamily.japanese,

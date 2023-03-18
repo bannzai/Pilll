@@ -42,7 +42,7 @@ class RestDurationAnnouncementBar extends StatelessWidget {
     final restDuration = activedPillSheet.activeRestDuration;
     if (restDuration != null) {
       final day = daysBetween(restDuration.beginDate.date(), today()) + 1;
-      return "休薬$day日目";
+      return "🌙 服用お休み $day日目";
     }
 
     if (activedPillSheet.typeInfo.dosingPeriod < activedPillSheet.todayPillNumber) {

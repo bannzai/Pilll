@@ -15,7 +15,7 @@ class RestDurationButton extends StatelessWidget {
         style: TextButton.styleFrom(backgroundColor: PilllColors.disable),
         onPressed: null,
         child: const Text(
-          "休薬中",
+          "服用お休み中",
           style: TextStyle(
             color: TextColor.lightGray,
             fontFamily: FontFamily.japanese,
