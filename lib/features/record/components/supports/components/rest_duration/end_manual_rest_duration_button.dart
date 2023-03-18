@@ -111,6 +111,15 @@ class EndRestDurationModal extends HookConsumerWidget {
                     fontWeight: FontWeight.w400,
                   ),
                 ),
+                const Text(
+                  "お休みした分だけシート上の曜日もずれます",
+                  style: TextStyle(
+                    color: TextColor.main,
+                    fontSize: 14,
+                    fontFamily: FontFamily.japanese,
+                    fontWeight: FontWeight.w400,
+                  ),
+                ),
               ],
             ),
             const SizedBox(height: 24),
