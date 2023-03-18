@@ -25,7 +25,7 @@ class InvalidAlreadyTakenPillDialog extends StatelessWidget {
             "今日飲むピルが服用済みの場合\n「服用お休み」できません",
             style: TextStyle(
               fontFamily: FontFamily.japanese,
-              fontWeight: FontWeight.w600,
+              fontWeight: FontWeight.w700,
               fontSize: 16,
               color: TextColor.main,
             ),
