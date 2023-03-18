@@ -70,7 +70,7 @@ class InvalidAlreadyTakenPillDialog extends StatelessWidget {
             analytics.logEvent(name: "invalid_already_taken_pill_faq");
             launchUrl(Uri.parse("https://pilll.wraptas.site/467128e667ae4d6cbff4d61ee370cce5"));
           },
-          text: "服用お休みの使い方を見る",
+          text: "服用お休み機能の使い方を見る",
         ),
         Center(
           child: AlertButton(
