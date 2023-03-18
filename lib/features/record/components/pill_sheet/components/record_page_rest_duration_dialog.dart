@@ -39,6 +39,16 @@ class RecordPageRestDurationDialog extends StatelessWidget {
                 color: TextColor.main,
               )),
           const SizedBox(height: 24),
+          Text(
+            appearanceMode == PillSheetAppearanceMode.date ? "例えば「1/12から3日間」服用お休みした場合" : "例えば「18番から3日間」服用お休みした場合",
+            style: const TextStyle(
+              color: TextColor.main,
+              fontWeight: FontWeight.w700,
+              fontFamily: FontFamily.japanese,
+              fontSize: 12,
+            ),
+          ),
+          const SizedBox(height: 8),
           SvgPicture.asset(
               appearanceMode == PillSheetAppearanceMode.date ? "images/explain_rest_duration_date.svg" : "images/explain_rest_duration_number.svg"),
           const SizedBox(height: 24),
@@ -47,7 +57,7 @@ class RecordPageRestDurationDialog extends StatelessWidget {
       actions: <Widget>[
         AppOutlinedButton(
           onPressed: () async => onDone(),
-          text: "服用お休みする",
+          text: "服用をお休みする",
         ),
         Center(
           child: AlertButton(
