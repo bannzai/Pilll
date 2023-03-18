@@ -22,7 +22,7 @@ class InvalidAlreadyTakenPillDialog extends StatelessWidget {
         mainAxisSize: MainAxisSize.min,
         children: <Widget>[
           const Text(
-            "今日飲むピルが服用済みの場合\n服用をお休みできません",
+            "今日飲むピルが服用済みの場合\n「服用お休み」できません",
             style: TextStyle(
               fontFamily: FontFamily.japanese,
               fontWeight: FontWeight.w600,
