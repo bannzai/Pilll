@@ -28,35 +28,32 @@ class BeginManualRestDurationButton extends HookConsumerWidget {
   Widget build(BuildContext context, WidgetRef ref) {
     final beginRestDuration = ref.watch(beginRestDurationProvider);
 
-    return SizedBox(
-      width: 80,
-      child: SmallAppOutlinedButton(
-        text: "服用お休み",
-        onPressed: () async {
-          analytics.logEvent(name: "begin_manual_rest_duration_pressed", parameters: {"pill_sheet_id": activedPillSheet.id});
+    return SmallAppOutlinedButton(
+      text: "服用お休み",
+      onPressed: () async {
+        analytics.logEvent(name: "begin_manual_rest_duration_pressed", parameters: {"pill_sheet_id": activedPillSheet.id});
 
-          if (activedPillSheet.todayPillIsAlreadyTaken) {
-            showInvalidAlreadyTakenPillDialog(context);
-          } else {
-            showRecordPageRestDurationDialog(
-              context,
-              appearanceMode: appearanceMode,
-              pillSheetGroup: pillSheetGroup,
-              activedPillSheet: activedPillSheet,
-              onDone: () async {
-                analytics.logEvent(name: "done_rest_duration");
-                // NOTE: batch.commit でリモートのDBに書き込む時間がかかるので事前にバッジを0にする
-                FlutterAppBadger.removeBadge();
-                await beginRestDuration(
-                  activePillSheet: activedPillSheet,
-                  pillSheetGroup: pillSheetGroup,
-                );
-                didBeginRestDuration();
-              },
-            );
-          }
-        },
-      ),
+        if (activedPillSheet.todayPillIsAlreadyTaken) {
+          showInvalidAlreadyTakenPillDialog(context);
+        } else {
+          showRecordPageRestDurationDialog(
+            context,
+            appearanceMode: appearanceMode,
+            pillSheetGroup: pillSheetGroup,
+            activedPillSheet: activedPillSheet,
+            onDone: () async {
+              analytics.logEvent(name: "done_rest_duration");
+              // NOTE: batch.commit でリモートのDBに書き込む時間がかかるので事前にバッジを0にする
+              FlutterAppBadger.removeBadge();
+              await beginRestDuration(
+                activePillSheet: activedPillSheet,
+                pillSheetGroup: pillSheetGroup,
+              );
+              didBeginRestDuration();
+            },
+          );
+        }
+      },
     );
   }
 }

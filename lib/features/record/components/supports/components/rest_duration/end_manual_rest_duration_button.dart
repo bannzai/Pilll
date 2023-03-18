@@ -28,24 +28,21 @@ class EndManualRestDurationButton extends HookConsumerWidget {
   @override
   Widget build(BuildContext context, WidgetRef ref) {
     final endRestDuration = ref.watch(endRestDurationProvider);
-    return SizedBox(
-      width: 80,
-      child: SmallAppOutlinedButton(
-        text: "服用再開",
-        onPressed: () async {
-          analytics.logEvent(
-            name: "end_manual_rest_duration_pressed",
-          );
+    return SmallAppOutlinedButton(
+      text: "服用再開",
+      onPressed: () async {
+        analytics.logEvent(
+          name: "end_manual_rest_duration_pressed",
+        );
 
-          await endRestDuration(
-            restDuration: restDuration,
-            activePillSheet: activedPillSheet,
-            pillSheetGroup: pillSheetGroup,
-          );
+        await endRestDuration(
+          restDuration: restDuration,
+          activePillSheet: activedPillSheet,
+          pillSheetGroup: pillSheetGroup,
+        );
 
-          didEndRestDuration();
-        },
-      ),
+        didEndRestDuration();
+      },
     );
   }
 }
