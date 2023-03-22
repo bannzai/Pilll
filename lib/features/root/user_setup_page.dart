@@ -27,7 +27,7 @@ class UserSetupPage extends HookConsumerWidget {
 
     // Setup user
     useEffect(() {
-      f() async {
+      void f() async {
         // **** BEGIN: Do not break the sequence. ****
         try {
           // Decide screen type. Keep in mind that this method is called when user is logged in.

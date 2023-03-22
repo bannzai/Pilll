@@ -13,7 +13,7 @@ import 'package:url_launcher/url_launcher.dart';
 
 import '../../../../entity/user.codegen.dart';
 
-inquiry() {
+void inquiry() {
   PackageInfo.fromPlatform().then((value) => debugInfo(", ")).then((info) {
     launchUrl(
         Uri.parse(Uri.encodeFull(

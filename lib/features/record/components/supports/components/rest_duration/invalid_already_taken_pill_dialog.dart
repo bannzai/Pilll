@@ -86,7 +86,7 @@ class InvalidAlreadyTakenPillDialog extends StatelessWidget {
   }
 }
 
-showInvalidAlreadyTakenPillDialog(
+void showInvalidAlreadyTakenPillDialog(
   BuildContext context,
 ) {
   analytics.setCurrentScreen(screenName: "InvalidAlreadyTakenPillDialog");
