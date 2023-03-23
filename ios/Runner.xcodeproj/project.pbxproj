@@ -39,9 +39,9 @@
 		97C146FC1CF9000F007C117D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 97C146FA1CF9000F007C117D /* Main.storyboard */; };
 		97C146FE1CF9000F007C117D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 97C146FD1CF9000F007C117D /* Assets.xcassets */; };
 		97C147011CF9000F007C117D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 97C146FF1CF9000F007C117D /* LaunchScreen.storyboard */; };
-		BA158D9D24E440B800164799 /* GoogleService-Info-Development.plist in Resources */ = {isa = PBXBuildFile; fileRef = BA158D9924E440B800164799 /* GoogleService-Info-Development.plist */; };
+		BA158D9D24E440B800164799 /* GoogleService-Info-dev.plist in Resources */ = {isa = PBXBuildFile; fileRef = BA158D9924E440B800164799 /* GoogleService-Info-dev.plist */; };
 		BA158D9F24E440B800164799 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = BA158D9B24E440B800164799 /* GoogleService-Info.plist */; };
-		BA158DA024E440B800164799 /* GoogleService-Info-Production.plist in Resources */ = {isa = PBXBuildFile; fileRef = BA158D9C24E440B800164799 /* GoogleService-Info-Production.plist */; };
+		BA158DA024E440B800164799 /* GoogleService-Info-prod.plist in Resources */ = {isa = PBXBuildFile; fileRef = BA158D9C24E440B800164799 /* GoogleService-Info-prod.plist */; };
 		BA1C2640266B103C0040ACD0 /* StoreKitTestCertificate.cer in Resources */ = {isa = PBXBuildFile; fileRef = BA1C263F266B103C0040ACD0 /* StoreKitTestCertificate.cer */; };
 		BA1C2641266B10E40040ACD0 /* StoreKitTestingConfiguration.storekit in Resources */ = {isa = PBXBuildFile; fileRef = BA28ADE02669BB0F001BCDD1 /* StoreKitTestingConfiguration.storekit */; };
 		BA662A75264507FC003E8CE6 /* Development-Secret.xcconfig in Resources */ = {isa = PBXBuildFile; fileRef = BA662A74264507FC003E8CE6 /* Development-Secret.xcconfig */; };
@@ -136,9 +136,9 @@
 		9D2BBFA3A261B023D33DC267 /* Pods-Runner.debug-production.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Runner.debug-production.xcconfig"; path = "Target Support Files/Pods-Runner/Pods-Runner.debug-production.xcconfig"; sourceTree = "<group>"; };
 		A737815D6C0440CD1B9BAF5D /* Pods-Runner.release-development.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Runner.release-development.xcconfig"; path = "Target Support Files/Pods-Runner/Pods-Runner.release-development.xcconfig"; sourceTree = "<group>"; };
 		AE416912F2E62A65AE242C60 /* Pods-Runner.debug-development.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Runner.debug-development.xcconfig"; path = "Target Support Files/Pods-Runner/Pods-Runner.debug-development.xcconfig"; sourceTree = "<group>"; };
-		BA158D9924E440B800164799 /* GoogleService-Info-Development.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info-Development.plist"; sourceTree = "<group>"; };
+		BA158D9924E440B800164799 /* GoogleService-Info-dev.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info-dev.plist"; sourceTree = "<group>"; };
 		BA158D9B24E440B800164799 /* GoogleService-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
-		BA158D9C24E440B800164799 /* GoogleService-Info-Production.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info-Production.plist"; sourceTree = "<group>"; };
+		BA158D9C24E440B800164799 /* GoogleService-Info-prod.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info-prod.plist"; sourceTree = "<group>"; };
 		BA1C263F266B103C0040ACD0 /* StoreKitTestCertificate.cer */ = {isa = PBXFileReference; lastKnownFileType = file; path = StoreKitTestCertificate.cer; sourceTree = "<group>"; };
 		BA28ADE02669BB0F001BCDD1 /* StoreKitTestingConfiguration.storekit */ = {isa = PBXFileReference; lastKnownFileType = text; path = StoreKitTestingConfiguration.storekit; sourceTree = "<group>"; };
 		BA662A74264507FC003E8CE6 /* Development-Secret.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; name = "Development-Secret.xcconfig"; path = "Flutter/Development-Secret.xcconfig"; sourceTree = "<group>"; };
@@ -292,9 +292,9 @@
 		BA158D9824E440B800164799 /* Firebase */ = {
 			isa = PBXGroup;
 			children = (
-				BA158D9924E440B800164799 /* GoogleService-Info-Development.plist */,
+				BA158D9924E440B800164799 /* GoogleService-Info-dev.plist */,
 				BA158D9B24E440B800164799 /* GoogleService-Info.plist */,
-				BA158D9C24E440B800164799 /* GoogleService-Info-Production.plist */,
+				BA158D9C24E440B800164799 /* GoogleService-Info-prod.plist */,
 			);
 			path = Firebase;
 			sourceTree = "<group>";
@@ -418,7 +418,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				BA158D9F24E440B800164799 /* GoogleService-Info.plist in Resources */,
-				BA158D9D24E440B800164799 /* GoogleService-Info-Development.plist in Resources */,
+				BA158D9D24E440B800164799 /* GoogleService-Info-dev.plist in Resources */,
 				BA662A75264507FC003E8CE6 /* Development-Secret.xcconfig in Resources */,
 				BA1C2641266B10E40040ACD0 /* StoreKitTestingConfiguration.storekit in Resources */,
 				20C768EC27D2B4E700BA525C /* Profile.xcconfig in Resources */,
@@ -428,7 +428,7 @@
 				3379DA5524E3A4DC0002DD85 /* Debug-Development.xcconfig in Resources */,
 				BA1C2640266B103C0040ACD0 /* StoreKitTestCertificate.cer in Resources */,
 				97C147011CF9000F007C117D /* LaunchScreen.storyboard in Resources */,
-				BA158DA024E440B800164799 /* GoogleService-Info-Production.plist in Resources */,
+				BA158DA024E440B800164799 /* GoogleService-Info-prod.plist in Resources */,
 				3B3967161E833CAA004F5970 /* AppFrameworkInfo.plist in Resources */,
 				3379DA5724E3A4DC0002DD85 /* Release-Development.xcconfig in Resources */,
 				BA869E47258AFC9A000EBE33 /* becho.caf in Resources */,
