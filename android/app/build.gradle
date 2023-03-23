@@ -30,6 +30,18 @@ def keystorePropertiesFile = rootProject.file('key.properties')
 if (keystorePropertiesFile.exists()) {
   keystoreProperties.load(new FileInputStream(keystorePropertiesFile))
 }
+
+task selectGoogleServicesJson(type: Copy) {
+    from "src/$FLAVOR/google-services.json"
+    into '.'/
+}
+
+tasks.whenTaskAdded { task ->
+    if (task.name == 'processDebugGoogleServices' || task.name == 'processReleaseGoogleServices') {
+        task.dependsOn selectGoogleServicesJson
+    }
+}
+
 android {
     compileSdkVersion 33
 
