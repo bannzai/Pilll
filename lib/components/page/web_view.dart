@@ -1,6 +1,5 @@
-import 'dart:io';
-
 import 'package:flutter/material.dart';
+import 'package:flutter_inappwebview/flutter_inappwebview.dart';
 import 'package:webview_flutter/webview_flutter.dart';
 
 class WebViewPage extends StatefulWidget {
@@ -18,10 +17,14 @@ class WebViewPage extends StatefulWidget {
 }
 
 class _WebViewPageState extends State<WebViewPage> {
+  late WebViewController webViewController;
+
   @override
   void initState() {
     super.initState();
-    if (Platform.isAndroid) WebView.platform = AndroidWebView();
+    webViewController = WebViewController()
+      ..setJavaScriptMode(JavaScriptMode.unrestricted)
+      ..loadRequest(Uri.parse(widget.url));
   }
 
   @override
@@ -38,10 +41,8 @@ class _WebViewPageState extends State<WebViewPage> {
           onPressed: () => Navigator.of(context).pop(),
         ),
       ),
-      body: WebView(
-        initialUrl: widget.url,
-        javascriptMode: JavascriptMode.unrestricted,
-        onWebViewCreated: (WebViewController webViewController) {},
+      body: WebViewWidget(
+        controller: webViewController,
       ),
     );
   }
