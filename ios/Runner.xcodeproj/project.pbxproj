@@ -1012,6 +1012,7 @@
 					"$(PROJECT_DIR)/Flutter",
 				);
 				MARKETING_VERSION = "";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.mizuki.Ohashi.Pilll$(IOS_APP_ID_SUFFIX)";
 				PRODUCT_NAME = Runner;
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				"PROVISIONING_PROFILE_SPECIFIER[sdk=iphoneos*]" = Pilll.Development.AppStore;
@@ -1107,6 +1108,7 @@
 					"$(PROJECT_DIR)/Flutter",
 				);
 				MARKETING_VERSION = "";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.mizuki.Ohashi.Pilll$(IOS_APP_ID_SUFFIX)";
 				PRODUCT_NAME = Runner;
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				"PROVISIONING_PROFILE_SPECIFIER[sdk=iphoneos*]" = Pilll.Development.AppStore;
@@ -1200,6 +1202,7 @@
 					"$(PROJECT_DIR)/Flutter",
 				);
 				MARKETING_VERSION = "";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.mizuki.Ohashi.Pilll$(IOS_APP_ID_SUFFIX)";
 				PRODUCT_NAME = Runner;
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				"PROVISIONING_PROFILE_SPECIFIER[sdk=iphoneos*]" = Pilll.Production.AppStore;
@@ -1292,6 +1295,7 @@
 					"$(PROJECT_DIR)/Flutter",
 				);
 				MARKETING_VERSION = "";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.mizuki.Ohashi.Pilll$(IOS_APP_ID_SUFFIX)";
 				PRODUCT_NAME = Runner;
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				"PROVISIONING_PROFILE_SPECIFIER[sdk=iphoneos*]" = Pilll.Development.AppStore;
@@ -1387,6 +1391,7 @@
 					"$(PROJECT_DIR)/Flutter",
 				);
 				MARKETING_VERSION = "";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.mizuki.Ohashi.Pilll$(IOS_APP_ID_SUFFIX)";
 				PRODUCT_NAME = Runner;
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				"PROVISIONING_PROFILE_SPECIFIER[sdk=iphoneos*]" = Pilll.Production.AppStore;
@@ -1536,6 +1541,7 @@
 					"$(PROJECT_DIR)/Flutter",
 				);
 				MARKETING_VERSION = "";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.mizuki.Ohashi.Pilll$(IOS_APP_ID_SUFFIX)";
 				PRODUCT_NAME = Runner;
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				"PROVISIONING_PROFILE_SPECIFIER[sdk=iphoneos*]" = Pilll.Development.AppStore;
@@ -1576,6 +1582,7 @@
 					"$(PROJECT_DIR)/Flutter",
 				);
 				MARKETING_VERSION = "";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.mizuki.Ohashi.Pilll$(IOS_APP_ID_SUFFIX)";
 				PRODUCT_NAME = Runner;
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				"PROVISIONING_PROFILE_SPECIFIER[sdk=iphoneos*]" = Pilll.Production.AppStore;
