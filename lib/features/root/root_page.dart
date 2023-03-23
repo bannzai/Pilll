@@ -45,7 +45,7 @@ class RootPage extends HookConsumerWidget {
         };
       }
 
-      f() async {
+      void f() async {
         try {
           // 計測してみたらこの処理が結構長かった。通常の起動時間に影響があるので、この処理を非同期にする。
           // 多少データが変更される可能性があるが、それは飲み込むことにする。ほとんど問題はないはず
@@ -64,7 +64,7 @@ class RootPage extends HookConsumerWidget {
 
     // SignIn once
     useEffect(() {
-      f() async {
+      void f() async {
         // SignIn first. Keep in mind that this method is called first.
         try {
           final firebaseUser = await signInFirebaseUser;

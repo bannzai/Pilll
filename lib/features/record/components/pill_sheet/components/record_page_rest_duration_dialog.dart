@@ -72,7 +72,7 @@ class RecordPageRestDurationDialog extends StatelessWidget {
   }
 }
 
-showRecordPageRestDurationDialog(
+void showRecordPageRestDurationDialog(
   BuildContext context, {
   required PillSheetAppearanceMode appearanceMode,
   required PillSheet activedPillSheet,

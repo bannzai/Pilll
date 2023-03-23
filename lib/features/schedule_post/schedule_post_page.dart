@@ -67,7 +67,7 @@ class _SchedulePostPage extends HookConsumerWidget {
     final textEditingController = useTextEditingController(text: title.value);
     final focusNode = useFocusNode();
     final scrollController = useScrollController();
-    isInvalid() => !(date.date().isAfter(today())) || title.value.isEmpty;
+    bool isInvalid() => !(date.date().isAfter(today())) || title.value.isEmpty;
 
     return Scaffold(
       backgroundColor: PilllColors.white,

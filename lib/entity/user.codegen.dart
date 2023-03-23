@@ -8,14 +8,14 @@ part 'user.codegen.freezed.dart';
 
 class UserNotFound with Exception {
   @override
-  toString() {
+  String toString() {
     return "user not found";
   }
 }
 
 class UserAlreadyExists with Exception {
   @override
-  toString() {
+  String toString() {
     return "user already exists";
   }
 }

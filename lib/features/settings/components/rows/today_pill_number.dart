@@ -32,7 +32,7 @@ class TodayPllNumberRow extends HookConsumerWidget {
     );
   }
 
-  _onTap(BuildContext context, Setting setting, PillSheet activedPillSheet) {
+  void _onTap(BuildContext context, Setting setting, PillSheet activedPillSheet) {
     analytics.logEvent(
       name: "did_select_changing_pill_number",
     );

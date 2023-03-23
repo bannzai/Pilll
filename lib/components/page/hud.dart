@@ -34,13 +34,13 @@ class HUD extends StatefulWidget {
 
 class HUDState extends State<HUD> {
   bool _shown = false;
-  show() {
+  void show() {
     setState(() {
       _shown = true;
     });
   }
 
-  hide() {
+  void hide() {
     setState(() {
       _shown = false;
     });
