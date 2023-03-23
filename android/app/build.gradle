@@ -57,6 +57,8 @@ android {
         targetSdkVersion 33
         versionCode flutterVersionCode.toInteger()
         versionName flutterVersionName
+        applicationIdSuffix ANDROID_APP_ID_SUFFIX
+        resValue "string", "app_name", APP_NAME
     }
 
     signingConfigs {
@@ -69,16 +71,6 @@ android {
     }
     flavorDimensions "flavor-type"
 
-    productFlavors {
-        development {
-            dimension "flavor-type"
-            applicationIdSuffix ".development"
-            versionNameSuffix ".dev"
-        }
-        production {
-            dimension "flavor-type"
-        }
-    }
     buildTypes {
         debug {
             resValue "string", "PREFERENCE_KEY", "preference_key.com.mizuki.Ohashi.Pilll.development"
