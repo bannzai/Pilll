@@ -31,17 +31,6 @@ if (keystorePropertiesFile.exists()) {
   keystoreProperties.load(new FileInputStream(keystorePropertiesFile))
 }
 
-task selectGoogleServicesJson(type: Copy) {
-    from "src/$FLAVOR/google-services.json"
-    into '.'/
-}
-
-tasks.whenTaskAdded { task ->
-    if (task.name == 'processDebugGoogleServices' || task.name == 'processReleaseGoogleServices') {
-        task.dependsOn selectGoogleServicesJson
-    }
-}
-
 android {
     compileSdkVersion 33
 
@@ -115,3 +104,20 @@ dependencies {
 apply plugin: 'com.google.gms.google-services'
 apply plugin: 'com.google.firebase.crashlytics'
 
+task copySources(type: Copy) {
+   from "src/$FLAVOR/res"
+   into 'src/main/res'
+}
+tasks.whenTaskAdded { task ->
+   task.dependsOn copySources
+}
+
+task selectGoogleServicesJson(type: Copy) {
+    from "src/$FLAVOR/google-services.json"
+    into './'
+}
+tasks.whenTaskAdded { task ->
+    if (task.name == 'processDebugGoogleServices' || task.name == 'processReleaseGoogleServices') {
+        task.dependsOn selectGoogleServicesJson
+    }
+}
