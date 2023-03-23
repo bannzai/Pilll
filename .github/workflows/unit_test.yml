@@ -27,6 +27,7 @@ jobs:
       env:
         FILE_FIREBASE_IOS_DEVELOPMENT: ${{ secrets.FILE_FIREBASE_IOS_DEVELOPMENT }}
         FILE_FIREBASE_IOS_PRODUCTION: ${{ secrets.FILE_FIREBASE_IOS_PRODUCTION }}
+        DART_DEFINE_FROM_FILE_DEV: ${{ secrets.DART_DEFINE_FROM_FILE_DEV }}
     - uses: subosito/flutter-action@v2
       with:
         flutter-version: '3.7.3'
@@ -49,6 +50,7 @@ jobs:
       env:
         FILE_FIREBASE_ANDROID_DEVELOPMENT: ${{ secrets.FILE_FIREBASE_ANDROID_DEVELOPMENT }}
         FILE_FIREBASE_ANDROID_PRODUCTION: ${{ secrets.FILE_FIREBASE_ANDROID_PRODUCTION }}
+        DART_DEFINE_FROM_FILE_DEV: ${{ secrets.DART_DEFINE_FROM_FILE_DEV }}
     - uses: subosito/flutter-action@v2
       with:
         flutter-version: '3.7.3'
