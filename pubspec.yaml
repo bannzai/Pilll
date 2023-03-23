@@ -64,12 +64,12 @@ dependencies:
       ref: master
   flutter_app_badger: ^1.2.0
   sign_in_with_apple: ^4.3.0
-  google_sign_in: ^5.4.1
+  google_sign_in: ^6.0.2
   purchases_flutter: ^4.4.0
   firebase_performance: ^0.9.0+11
   flutter_native_timezone: ^2.0.0
   flutter_local_notifications: ^13.0.0
-  webview_flutter: ^3.0.4
+  webview_flutter: ^4.0.7
   collection:
   crypto:
   timezone:
