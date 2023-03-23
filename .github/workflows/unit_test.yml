@@ -32,7 +32,7 @@ jobs:
         flutter-version: '3.7.3'
     - run: flutter pub get
     - name: Run iOS
-      run: flutter build ios --debug --no-codesign --flavor development --target lib/main.dev.dart --no-sound-null-safety
+      run: flutter build ios --debug --no-codesign --flavor development --target lib/main.dev.dart --dart-define-from-file=environment/dev.json
   build-android-debug:
     runs-on: macos-latest
     if: ${{ !contains(github.event.pull_request.title, '[Skip CI]') }}
@@ -53,7 +53,7 @@ jobs:
       with:
         flutter-version: '3.7.3'
     - run: flutter pub get
-    - run: flutter build apk --debug --flavor development --target lib/main.dev.dart --no-sound-null-safety
+    - run: flutter build apk --debug --flavor development --target lib/main.dev.dart --dart-define-from-file=environment/dev.json
   test:
     runs-on: macos-latest
     if: ${{ !contains(github.event.pull_request.title, '[Skip CI]') }}
