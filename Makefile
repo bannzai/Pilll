@@ -13,8 +13,8 @@ secret:
 	echo $(XCCONFIG_SECRET_DEVELOPMENT) | base64 -D > ios/Flutter/Development-Secret.xcconfig
 	echo $(XCCONFIG_SECRET_PRODUCTION) | base64 -D > ios/Flutter/Production-Secret.xcconfig
 	echo $(STOREKIT_TESTING_CONFIGURATION_PUBLIC_CERT) | base64 -D > ios/Runner/StoreKitTestCertificate.cer
-	echo $(DART_DEFINE_FROM_FILE_DEV) | base64 -D > configurations/dev.json
-	echo $(DART_DEFINE_FROM_FILE_PROD) | base64 -D > configurations/prod.json
+	echo $(DART_DEFINE_FROM_FILE_DEV) | base64 -D > environment/dev.json
+	echo $(DART_DEFINE_FROM_FILE_PROD) | base64 -D > environment/prod.json
 	./scripts/secret.sh
 	./android/scripts/key_properties.sh
 
