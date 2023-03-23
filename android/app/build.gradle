@@ -30,6 +30,7 @@ def keystorePropertiesFile = rootProject.file('key.properties')
 if (keystorePropertiesFile.exists()) {
   keystoreProperties.load(new FileInputStream(keystorePropertiesFile))
 }
+
 android {
     compileSdkVersion 33
 
@@ -52,11 +53,12 @@ android {
 
     defaultConfig {
         // TODO: Specify your own unique Application ID (https://developer.android.com/studio/build/application-id.html).
-        applicationId "com.mizuki.Ohashi.Pilll"
+        applicationId ANDROID_APPLICATION_ID
         minSdkVersion 23
         targetSdkVersion 33
         versionCode flutterVersionCode.toInteger()
         versionName flutterVersionName
+        resValue "string", "app_name", APP_NAME
     }
 
     signingConfigs {
@@ -69,16 +71,6 @@ android {
     }
     flavorDimensions "flavor-type"
 
-    productFlavors {
-        development {
-            dimension "flavor-type"
-            applicationIdSuffix ".development"
-            versionNameSuffix ".dev"
-        }
-        production {
-            dimension "flavor-type"
-        }
-    }
     buildTypes {
         debug {
             resValue "string", "PREFERENCE_KEY", "preference_key.com.mizuki.Ohashi.Pilll.development"
@@ -111,3 +103,20 @@ dependencies {
 apply plugin: 'com.google.gms.google-services'
 apply plugin: 'com.google.firebase.crashlytics'
 
+task copySources(type: Copy) {
+   from "src/$FLAVOR/res"
+   into 'src/main/res'
+}
+tasks.whenTaskAdded { task ->
+   task.dependsOn copySources
+}
+
+task selectGoogleServicesJson(type: Copy) {
+    from "src/$FLAVOR/google-services.json"
+    into './'
+}
+tasks.whenTaskAdded { task ->
+    if (task.name == 'processDebugGoogleServices' || task.name == 'processReleaseGoogleServices') {
+        task.dependsOn selectGoogleServicesJson
+    }
+}

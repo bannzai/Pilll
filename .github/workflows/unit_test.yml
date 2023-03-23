@@ -27,12 +27,13 @@ jobs:
       env:
         FILE_FIREBASE_IOS_DEVELOPMENT: ${{ secrets.FILE_FIREBASE_IOS_DEVELOPMENT }}
         FILE_FIREBASE_IOS_PRODUCTION: ${{ secrets.FILE_FIREBASE_IOS_PRODUCTION }}
+        DART_DEFINE_FROM_FILE_DEV: ${{ secrets.DART_DEFINE_FROM_FILE_DEV }}
     - uses: subosito/flutter-action@v2
       with:
         flutter-version: '3.7.3'
     - run: flutter pub get
     - name: Run iOS
-      run: flutter build ios --debug --no-codesign --flavor development --target lib/main.dev.dart --no-sound-null-safety
+      run: flutter build ios --debug --no-codesign --target lib/main.dev.dart --dart-define-from-file=environment/dev.json
   build-android-debug:
     runs-on: macos-latest
     if: ${{ !contains(github.event.pull_request.title, '[Skip CI]') }}
@@ -49,11 +50,12 @@ jobs:
       env:
         FILE_FIREBASE_ANDROID_DEVELOPMENT: ${{ secrets.FILE_FIREBASE_ANDROID_DEVELOPMENT }}
         FILE_FIREBASE_ANDROID_PRODUCTION: ${{ secrets.FILE_FIREBASE_ANDROID_PRODUCTION }}
+        DART_DEFINE_FROM_FILE_DEV: ${{ secrets.DART_DEFINE_FROM_FILE_DEV }}
     - uses: subosito/flutter-action@v2
       with:
         flutter-version: '3.7.3'
     - run: flutter pub get
-    - run: flutter build apk --debug --flavor development --target lib/main.dev.dart --no-sound-null-safety
+    - run: flutter build apk --debug --target lib/main.dev.dart --dart-define-from-file=environment/dev.json
   test:
     runs-on: macos-latest
     if: ${{ !contains(github.event.pull_request.title, '[Skip CI]') }}
