@@ -1,5 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+  <string name="reminder_channel_id">reminder_channel_id</string>
+  <string name="reminder_channel_name">服用通知</string>
+  <string name="reminder_channel_description">飲み忘れ防止のための服用通知です。未服用の場合、設定されている時刻に通知いたします</string>
+    <string name="appwidget_text">Pilll</string>
+    <string name="add_widget">Pilll widget</string>
+    <string name="app_widget_description">今日飲むピルが一目でわかる</string>
+
 </resources>
 
 
