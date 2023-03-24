@@ -52,12 +52,12 @@ android {
     }
 
     defaultConfig {
-        // TODO: Specify your own unique Application ID (https://developer.android.com/studio/build/application-id.html).
-        applicationId ANDROID_APPLICATION_ID
+        applicationId "com.mizuki.Ohashi.Pilll"
         minSdkVersion 23
         targetSdkVersion 33
         versionCode flutterVersionCode.toInteger()
         versionName flutterVersionName
+        applicationIdSuffix ANDROID_APPLICATION_ID_SUFFIX
         resValue "string", "app_name", APP_NAME
     }
 
