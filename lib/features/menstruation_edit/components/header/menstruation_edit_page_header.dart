@@ -89,5 +89,5 @@ class MenstruationEditPageHeader extends HookConsumerWidget {
     );
   }
 
-  String get _title => initialMenstruation == null ? "出血開始日を選択" : "出血期間の編集";
+  String get _title => initialMenstruation == null ? "消退出血開始日を選択" : "消退出血期間の編集";
 }
