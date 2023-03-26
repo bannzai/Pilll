@@ -65,7 +65,7 @@ class HomePage extends HookConsumerWidget {
                         tabIndex.value == HomePageTabType.record.index ? "images/tab_icon_pill_enable.svg" : "images/tab_icon_pill_disable.svg"),
                   ),
                   Tab(
-                    text: "生理",
+                    text: "消退出血",
                     icon: SvgPicture.asset(
                         tabIndex.value == HomePageTabType.menstruation.index ? "images/menstruation.svg" : "images/menstruation_disable.svg"),
                   ),

@@ -160,7 +160,7 @@ class MenstruationPageBody extends HookConsumerWidget {
                       ScaffoldMessenger.of(context).showSnackBar(
                         SnackBar(
                           duration: const Duration(seconds: 2),
-                          content: Text("${DateTimeFormatter.monthAndDay(menstruation.beginDate)}から生理開始で記録しました"),
+                          content: Text("${DateTimeFormatter.monthAndDay(menstruation.beginDate)}から消退出血開始で記録しました"),
                         ),
                       );
                     }),

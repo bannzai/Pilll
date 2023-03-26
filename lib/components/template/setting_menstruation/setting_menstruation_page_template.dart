@@ -44,7 +44,7 @@ class SettingMenstruationPageTemplate extends StatelessWidget {
                 children: <Widget>[
                   const SizedBox(height: 24),
                   const Text(
-                    "生理がはじまるピル番号をタップ",
+                    "消退出血がはじまるピル番号をタップ",
                     style: TextStyle(
                       fontFamily: FontFamily.japanese,
                       fontWeight: FontWeight.w500,

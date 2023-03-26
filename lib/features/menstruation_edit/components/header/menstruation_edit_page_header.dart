@@ -48,7 +48,7 @@ class MenstruationEditPageHeader extends HookConsumerWidget {
               showDialog(
                 context: context,
                 builder: (context) => DiscardDialog(
-                  title: "生理期間を削除しますか？",
+                  title: "消退出血期間を削除しますか？",
                   message: const Text(""),
                   actions: [
                     AlertButton(
@@ -89,5 +89,5 @@ class MenstruationEditPageHeader extends HookConsumerWidget {
     );
   }
 
-  String get _title => initialMenstruation == null ? "生理開始日を選択" : "生理期間の編集";
+  String get _title => initialMenstruation == null ? "出血開始日を選択" : "出血期間の編集";
 }

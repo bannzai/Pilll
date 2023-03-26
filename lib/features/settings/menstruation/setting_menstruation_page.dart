@@ -17,7 +17,7 @@ class SettingMenstruationPage extends HookConsumerWidget {
     final setSetting = ref.watch(setSettingProvider);
 
     return SettingMenstruationPageTemplate(
-      title: "生理について",
+      title: "消退出血について",
       pillSheetList: SettingMenstruationPillSheetList(
         pillSheetTypes: setting.pillSheetEnumTypes,
         appearanceMode: PillSheetAppearanceMode.sequential,
