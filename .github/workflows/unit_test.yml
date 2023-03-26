@@ -19,6 +19,9 @@ jobs:
     - uses: actions/setup-java@v1
       with:
         java-version: '12.x'
+    - uses: webfactory/ssh-agent@v0.5.4
+      with:
+        ssh-private-key: ${{ secrets.SSH_PRIVATE_KEY }}
     - name: Prepare firebase config
       run: make secret
       env:
@@ -39,6 +42,9 @@ jobs:
     - uses: actions/setup-java@v1
       with:
         java-version: '12.x'
+    - uses: webfactory/ssh-agent@v0.5.4
+      with:
+        ssh-private-key: ${{ secrets.SSH_PRIVATE_KEY }}
     - name: Prepare firebase config
       run: make secret
       env:
@@ -61,6 +67,9 @@ jobs:
     - uses: subosito/flutter-action@v2
       with:
         flutter-version: '3.7.3'
+    - uses: webfactory/ssh-agent@v0.5.4
+      with:
+        ssh-private-key: ${{ secrets.SSH_PRIVATE_KEY }}
     - run: make secret
     - run: flutter pub get
     - run: flutter test 
@@ -75,6 +84,9 @@ jobs:
     - uses: subosito/flutter-action@v2
       with:
         flutter-version: '3.7.3'
+    - uses: webfactory/ssh-agent@v0.5.4
+      with:
+        ssh-private-key: ${{ secrets.SSH_PRIVATE_KEY }}
     - run: make secret
     - run: flutter pub get
     - run: flutter pub run build_runner build --delete-conflicting-outputs
