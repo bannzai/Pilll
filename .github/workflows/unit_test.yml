@@ -55,7 +55,7 @@ jobs:
       with:
         flutter-version: '3.7.3'
     - run: flutter pub get
-    - run: flutter build apk --debug --target lib/main.dev.dart --dart-define-from-file=environment/dev.json
+    - run: flutter build apk --debug --flavor dev --target lib/main.dev.dart --dart-define-from-file=environment/dev.json
   test:
     runs-on: macos-latest
     if: ${{ !contains(github.event.pull_request.title, '[Skip CI]') }}
