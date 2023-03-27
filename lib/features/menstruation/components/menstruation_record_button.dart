@@ -81,11 +81,11 @@ class MenstruationRecordButton extends HookConsumerWidget {
   String get _buttonString {
     final latestMenstruation = this.latestMenstruation;
     if (latestMenstruation == null) {
-      return "生理を記録";
+      return "消退出血を記録";
     }
     if (latestMenstruation.dateRange.inRange(today())) {
-      return "生理期間を編集";
+      return "消退出血期間を編集";
     }
-    return "生理を記録";
+    return "消退出血を記録";
   }
 }

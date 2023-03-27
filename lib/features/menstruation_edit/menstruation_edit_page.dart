@@ -194,14 +194,14 @@ void showMenstruationEditPage(
           ScaffoldMessenger.of(context).showSnackBar(
             SnackBar(
               duration: const Duration(seconds: 2),
-              content: Text("${DateTimeFormatter.monthAndDay(savedMenstruation.beginDate)}から生理開始で記録しました"),
+              content: Text("${DateTimeFormatter.monthAndDay(savedMenstruation.beginDate)}から消退出血開始で記録しました"),
             ),
           );
         } else {
           ScaffoldMessenger.of(context).showSnackBar(
             const SnackBar(
               duration: Duration(seconds: 2),
-              content: Text("生理期間を編集しました"),
+              content: Text("消退出血期間を編集しました"),
             ),
           );
         }
@@ -211,7 +211,7 @@ void showMenstruationEditPage(
         ScaffoldMessenger.of(context).showSnackBar(
           const SnackBar(
             duration: Duration(seconds: 2),
-            content: Text("生理期間を削除しました"),
+            content: Text("消退出血期間を削除しました"),
           ),
         );
         Navigator.of(context).pop();

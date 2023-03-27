@@ -27,7 +27,7 @@ class MenstruationListPage extends HookConsumerWidget {
         ),
         centerTitle: false,
         title:
-            const Text("生理履歴", style: TextStyle(fontFamily: FontFamily.japanese, fontWeight: FontWeight.w500, fontSize: 20, color: TextColor.main)),
+            const Text("消退出血履歴", style: TextStyle(fontFamily: FontFamily.japanese, fontWeight: FontWeight.w500, fontSize: 20, color: TextColor.main)),
         backgroundColor: PilllColors.white,
         elevation: 0,
       ),

@@ -27,7 +27,7 @@ class HealthCareRow extends StatelessWidget {
               )),
         ],
       ),
-      subtitle: const Text("Pilllで記録した生理記録を自動でヘルスケアに記録できます"),
+      subtitle: const Text("Pilllで記録した消退出血記録を自動でヘルスケアに記録できます"),
       onTap: () async {
         analytics.logEvent(
           name: "did_select_health_care_row",

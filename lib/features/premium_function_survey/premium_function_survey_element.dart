@@ -57,9 +57,9 @@ class PremiumFunctionSurveyElement extends StatelessWidget {
       case PremiumFunctionSurveyElementType.automaticallyCreatePillSheet:
         return "新しいシートの自動追加";
       case PremiumFunctionSurveyElementType.menstruationHistory:
-        return "生理履歴が全て見れる";
+        return "消退出血履歴が全て見れる";
       case PremiumFunctionSurveyElementType.menstruationAnalytics:
-        return "生理周期 / 日数の平均が分かる";
+        return "消退出血周期 / 日数の平均が分かる";
     }
   }
 }
