@@ -3,7 +3,7 @@
 <plist version="1.0">
 <dict>
 	<key>AppGroupKey</key>
-	<string>$(APP_GROUP_KEY)</string>
+	<string>group.$(APP_GROUP_KEY)</string>
 	<key>NSExtension</key>
 	<dict>
 		<key>NSExtensionPointIdentifier</key>

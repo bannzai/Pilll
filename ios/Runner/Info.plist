@@ -3,7 +3,7 @@
 <plist version="1.0">
 <dict>
 	<key>AppGroupKey</key>
-	<string>$(APP_GROUP_KEY)</string>
+	<string>group.$(PRODUCT_BUNDLE_IDENTIFIER)</string>
 	<key>CADisableMinimumFrameDurationOnPhone</key>
 	<true/>
 	<key>CFBundleDevelopmentRegion</key>
@@ -50,6 +50,8 @@
 	<string>ヘルスケアアプリから生理情報の取得を許可してください</string>
 	<key>NSHealthUpdateUsageDescription</key>
 	<string>ヘルスケアアプリにPilllの生理情報の更新を許可してください</string>
+	<key>UIApplicationSupportsIndirectInputEvents</key>
+	<true/>
 	<key>UIBackgroundModes</key>
 	<array>
 		<string>fetch</string>
@@ -72,7 +74,5 @@
 	</array>
 	<key>UIViewControllerBasedStatusBarAppearance</key>
 	<false/>
-	<key>UIApplicationSupportsIndirectInputEvents</key>
-	<true/>
 </dict>
 </plist>
