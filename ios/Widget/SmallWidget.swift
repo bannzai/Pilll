@@ -87,6 +87,7 @@ struct SmallWidget: WidgetView {
       .background(Color.white)
     case .userIsNotPremiumOrTrial:
       VStack {
+        Text("Plist.appGroupKey: \(Plist.appGroupKey)")
         HStack {
           Spacer()
           Image("pilll-widget-icon")
