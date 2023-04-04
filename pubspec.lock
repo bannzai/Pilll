@@ -433,12 +433,11 @@ packages:
   flutter_inappwebview:
     dependency: "direct main"
     description:
-      path: "."
-      ref: master
-      resolved-ref: "252d836d52bff32870ed1b72231e428b0009e89e"
-      url: "ssh://git@github.com/bannzai/flutter_inappwebview.git"
-    source: git
-    version: "5.4.3+7"
+      name: flutter_inappwebview
+      sha256: f73505c792cf083d5566e1a94002311be497d984b5607f25be36d685cf6361cf
+      url: "https://pub.dev"
+    source: hosted
+    version: "5.7.2+3"
   flutter_lints:
     dependency: "direct dev"
     description:
