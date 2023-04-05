@@ -6,5 +6,7 @@ updates:
     schedule:
       interval: "weekly"
     ignore:
+      - dependency-name: "firebase_*"
+      - dependency-name: "cloud_firestore"
       - dependency-name: "*"
         update-types: [ "version-update:semver-major" ]
