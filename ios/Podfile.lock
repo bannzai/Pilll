@@ -366,7 +366,7 @@ SPEC CHECKSUMS:
   purchases_flutter: 35823ed62a8eca74af719872b27c2faf7c625ab8
   PurchasesHybridCommon: 6e262ca1090bd9f99e85cf604a12d0866b9b80b2
   RevenueCat: 3411bc79fc724c5c130035c92959a802c6d6f5b2
-  shared_preferences_foundation: 297b3ebca31b34ec92be11acd7fb0ba932c822ca
+  shared_preferences_foundation: 986fc17f3d3251412d18b0265f9c64113a8c2472
   sign_in_with_apple: f3bf75217ea4c2c8b91823f225d70230119b8440
   url_launcher_ios: fb12c43172927bb5cf75aeebd073f883801f1993
   webview_flutter_wkwebview: 2e2d318f21a5e036e2c3f26171342e95908bd60a
