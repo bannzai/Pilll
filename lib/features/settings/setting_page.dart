@@ -257,7 +257,7 @@ Pilll ピル服用に特化したピルリマインダーアプリ
 
 iOS: https://onl.bz/e5376aj
 Android: https://onl.bz/ufJggPj
-                            ''';
+''';
                             Clipboard.setData(const ClipboardData(text: text));
                             ScaffoldMessenger.of(context).showSnackBar(
                               const SnackBar(
