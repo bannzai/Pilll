@@ -244,6 +244,29 @@ class SettingPageBody extends StatelessWidget {
                         _separator(),
                       ],
                       ListTile(
+                          title: const Text("友達に教える",
+                              style: TextStyle(
+                                fontFamily: FontFamily.roboto,
+                                fontWeight: FontWeight.w300,
+                                fontSize: 16,
+                              )),
+                          onTap: () async {
+                            analytics.logEvent(name: "tap_share_to_friend", parameters: {});
+                            const text = '''
+Pilll ピル服用に特化したピルリマインダーアプリ
+
+iOS: https://onl.bz/e5376aj
+Android: https://onl.bz/ufJggPj''';
+                            Clipboard.setData(const ClipboardData(text: text));
+                            ScaffoldMessenger.of(context).showSnackBar(
+                              const SnackBar(
+                                duration: const Duration(seconds: 2),
+                                content: Text("クリップボードにリンクをコピーしました"),
+                              ),
+                            );
+                          }),
+                      _separator(),
+                      ListTile(
                           title: const Text("利用規約",
                               style: TextStyle(
                                 fontFamily: FontFamily.roboto,
