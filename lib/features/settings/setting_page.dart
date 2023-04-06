@@ -253,10 +253,10 @@ class SettingPageBody extends StatelessWidget {
                           onTap: () async {
                             analytics.logEvent(name: "tap_share_to_friend", parameters: {});
                             const text = '''
-                            Pilll ピル服用に特化したピルリマインダーアプリ
+Pilll ピル服用に特化したピルリマインダーアプリ
 
-                            iOS: https://onl.bz/e5376aj
-                            Android: https://onl.bz/ufJggPj
+iOS: https://onl.bz/e5376aj
+Android: https://onl.bz/ufJggPj
                             ''';
                             Clipboard.setData(const ClipboardData(text: text));
                             ScaffoldMessenger.of(context).showSnackBar(
