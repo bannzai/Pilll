@@ -1,6 +1,7 @@
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
+import 'package:pilll/features/record/components/announcement_bar/components/price_up_announcement.dart';
 import 'package:pilll/utils/analytics.dart';
 import 'package:pilll/provider/pill_sheet_group.dart';
 import 'package:pilll/provider/pilll_ads.dart';
@@ -51,6 +52,7 @@ class AnnouncementBar extends HookConsumerWidget {
     final discountEntitlementDeadlineDate = premiumAndTrial.discountEntitlementDeadlineDate;
     final isOverDiscountDeadline = ref.watch(isOverDiscountDeadlineProvider(discountEntitlementDeadlineDate));
     final priceUpAnnouncementIsAlreadyShow = ref.watch(boolSharedPreferencesProvider(BoolKey.priceUpAnnouncementIsAlreadyShow)).valueOrNull ?? false;
+    final priceUpAnnouncementIsAlreadyShowNotifier = ref.watch(boolSharedPreferencesProvider(BoolKey.priceUpAnnouncementIsAlreadyShow).notifier);
     final isJaLocale = ref.watch(isJaLocaleProvider);
     final pilllAds = ref.watch(pilllAdsProvider).asData?.value;
     final isAdsDisabled = () {
@@ -126,7 +128,23 @@ class AnnouncementBar extends HookConsumerWidget {
         }
 
         if (!premiumAndTrial.isTrial) {
-          if (!priceUpAnnouncementIsAlreadyShow) {}
+          if (!priceUpAnnouncementIsAlreadyShow) {
+            return PriceUpAnnouncementBar(
+              onTap: () {
+                analytics.logEvent(name: "tapped_price_up_bar");
+                // TOOD: wraptas URL
+                showSignInSheet(
+                  context,
+                  SignInSheetStateContext.recordPage,
+                  null,
+                );
+              },
+              onClose: () {
+                analytics.logEvent(name: "close_price_up_bar");
+                priceUpAnnouncementIsAlreadyShowNotifier.set(true);
+              },
+            );
+          }
         }
 
         if (latestPillSheetGroup != null && latestPillSheetGroup.activedPillSheet == null) {
