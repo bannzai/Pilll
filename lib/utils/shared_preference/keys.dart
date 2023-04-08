@@ -1,6 +1,7 @@
 extension BoolKey on String {
   static const didEndInitialSetting = "isDidEndInitialSettingKey";
   static const recommendedSignupNotificationIsAlreadyShow = "recommendedSignupNotificationIsAlreadyShow";
+  static const priceUpAnnouncementIsAlreadyShow = "priceUpAnnouncementIsAlreadyShow";
   static const isAlreadyShowDemography = "isAlreadyShowDemography";
   static const isAlreadyDoneDemography = "isAlreadyDoneDemography";
   static const isAlreadyShowPremiumSurvey = "isAlreadyShowPremiumSurvey";

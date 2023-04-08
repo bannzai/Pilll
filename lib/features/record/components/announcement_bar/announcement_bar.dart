@@ -50,6 +50,7 @@ class AnnouncementBar extends HookConsumerWidget {
     final userClosedSurveyNotifier = ref.watch(boolSharedPreferencesProvider(BoolKey.userClosedSurvey).notifier);
     final discountEntitlementDeadlineDate = premiumAndTrial.discountEntitlementDeadlineDate;
     final isOverDiscountDeadline = ref.watch(isOverDiscountDeadlineProvider(discountEntitlementDeadlineDate));
+    final priceUpAnnouncementIsAlreadyShow = ref.watch(boolSharedPreferencesProvider(BoolKey.priceUpAnnouncementIsAlreadyShow)).valueOrNull ?? false;
     final isJaLocale = ref.watch(isJaLocaleProvider);
     final pilllAds = ref.watch(pilllAdsProvider).asData?.value;
     final isAdsDisabled = () {
@@ -122,6 +123,10 @@ class AnnouncementBar extends HookConsumerWidget {
               );
             }
           }
+        }
+
+        if (!premiumAndTrial.isTrial) {
+          if (!priceUpAnnouncementIsAlreadyShow) {}
         }
 
         if (latestPillSheetGroup != null && latestPillSheetGroup.activedPillSheet == null) {
