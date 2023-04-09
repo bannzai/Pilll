@@ -39,7 +39,7 @@ class PriceUpAnnouncementBar extends HookConsumerWidget {
             Column(
               children: const [
                 Text(
-                  "有料プランの値上げのお知らせ。新規で課金をお考えの方は今がお得です！タップして詳細を確認",
+                  "プレミアムプラン値上げのお知らせ。プレミアムプランをお考えの方は今がお得です！タップして詳細を確認",
                   style: TextStyle(fontFamily: FontFamily.japanese, fontWeight: FontWeight.w700, fontSize: 12, color: TextColor.white),
                   textAlign: TextAlign.center,
                 ),
