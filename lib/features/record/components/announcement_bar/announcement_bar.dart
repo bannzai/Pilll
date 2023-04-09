@@ -96,7 +96,7 @@ class AnnouncementBar extends HookConsumerWidget {
         }
       }
 
-      // TODO: 値上げと同時に消す
+      // TODO: 値上げと同時に消す。テストも書かない
       if (now().month < 6) {
         if (!priceUpAnnouncementIsAlreadyShow) {
           return PriceUpAnnouncementBar(
