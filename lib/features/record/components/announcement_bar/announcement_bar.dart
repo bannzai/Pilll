@@ -97,7 +97,7 @@ class AnnouncementBar extends HookConsumerWidget {
       }
 
       // TODO: 値上げと同時に消す
-      if (DateTime.now().month < 6) {
+      if (now().month < 6) {
         if (!priceUpAnnouncementIsAlreadyShow) {
           return PriceUpAnnouncementBar(
             onTap: () {

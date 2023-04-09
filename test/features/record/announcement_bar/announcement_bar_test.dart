@@ -121,6 +121,7 @@ void main() {
           BoolKey.recommendedSignupNotificationIsAlreadyShow: false,
           BoolKey.userAnsweredSurvey: true,
           BoolKey.userClosedSurvey: true,
+          BoolKey.priceUpAnnouncementIsAlreadyShow: true,
         });
         await tester.pumpWidget(
           ProviderScope(
@@ -179,6 +180,7 @@ void main() {
           BoolKey.recommendedSignupNotificationIsAlreadyShow: false,
           BoolKey.userAnsweredSurvey: true,
           BoolKey.userClosedSurvey: true,
+          BoolKey.priceUpAnnouncementIsAlreadyShow: true,
         });
         await tester.pumpWidget(
           ProviderScope(
@@ -236,6 +238,7 @@ void main() {
           BoolKey.recommendedSignupNotificationIsAlreadyShow: false,
           BoolKey.userAnsweredSurvey: true,
           BoolKey.userClosedSurvey: true,
+          BoolKey.priceUpAnnouncementIsAlreadyShow: true,
         });
         await tester.pumpWidget(
           ProviderScope(
@@ -294,6 +297,7 @@ void main() {
           BoolKey.recommendedSignupNotificationIsAlreadyShow: false,
           BoolKey.userAnsweredSurvey: true,
           BoolKey.userClosedSurvey: true,
+          BoolKey.priceUpAnnouncementIsAlreadyShow: true,
         });
         await tester.pumpWidget(
           ProviderScope(
@@ -351,6 +355,7 @@ void main() {
             BoolKey.recommendedSignupNotificationIsAlreadyShow: false,
             BoolKey.userAnsweredSurvey: true,
             BoolKey.userClosedSurvey: true,
+            BoolKey.priceUpAnnouncementIsAlreadyShow: true,
           });
           await tester.pumpWidget(
             ProviderScope(
@@ -416,6 +421,7 @@ void main() {
             BoolKey.recommendedSignupNotificationIsAlreadyShow: false,
             BoolKey.userAnsweredSurvey: true,
             BoolKey.userClosedSurvey: true,
+            BoolKey.priceUpAnnouncementIsAlreadyShow: true,
           });
           await tester.pumpWidget(
             ProviderScope(
@@ -483,6 +489,7 @@ void main() {
             BoolKey.recommendedSignupNotificationIsAlreadyShow: false,
             BoolKey.userAnsweredSurvey: true,
             BoolKey.userClosedSurvey: true,
+            BoolKey.priceUpAnnouncementIsAlreadyShow: true,
           });
           await tester.pumpWidget(
             ProviderScope(
@@ -550,6 +557,7 @@ void main() {
             BoolKey.recommendedSignupNotificationIsAlreadyShow: false,
             BoolKey.userAnsweredSurvey: true,
             BoolKey.userClosedSurvey: true,
+            BoolKey.priceUpAnnouncementIsAlreadyShow: true,
           });
           await tester.pumpWidget(
             ProviderScope(
@@ -617,6 +625,7 @@ void main() {
             BoolKey.recommendedSignupNotificationIsAlreadyShow: false,
             BoolKey.userAnsweredSurvey: true,
             BoolKey.userClosedSurvey: true,
+            BoolKey.priceUpAnnouncementIsAlreadyShow: true,
           });
           await tester.pumpWidget(
             ProviderScope(
@@ -691,6 +700,7 @@ void main() {
             BoolKey.recommendedSignupNotificationIsAlreadyShow: false,
             BoolKey.userAnsweredSurvey: true,
             BoolKey.userClosedSurvey: true,
+            BoolKey.priceUpAnnouncementIsAlreadyShow: true,
           });
           await tester.pumpWidget(
             ProviderScope(
@@ -760,6 +770,7 @@ void main() {
             BoolKey.recommendedSignupNotificationIsAlreadyShow: false,
             BoolKey.userAnsweredSurvey: true,
             BoolKey.userClosedSurvey: true,
+            BoolKey.priceUpAnnouncementIsAlreadyShow: true,
           });
           await tester.pumpWidget(
             ProviderScope(
@@ -829,6 +840,7 @@ void main() {
             BoolKey.recommendedSignupNotificationIsAlreadyShow: false,
             BoolKey.userAnsweredSurvey: true,
             BoolKey.userClosedSurvey: true,
+            BoolKey.priceUpAnnouncementIsAlreadyShow: true,
           });
           await tester.pumpWidget(
             ProviderScope(
@@ -898,6 +910,7 @@ void main() {
             BoolKey.recommendedSignupNotificationIsAlreadyShow: false,
             BoolKey.userAnsweredSurvey: true,
             BoolKey.userClosedSurvey: true,
+            BoolKey.priceUpAnnouncementIsAlreadyShow: true,
           });
           await tester.pumpWidget(
             ProviderScope(
@@ -967,6 +980,7 @@ void main() {
             BoolKey.recommendedSignupNotificationIsAlreadyShow: false,
             BoolKey.userAnsweredSurvey: true,
             BoolKey.userClosedSurvey: true,
+            BoolKey.priceUpAnnouncementIsAlreadyShow: true,
           });
           await tester.pumpWidget(
             ProviderScope(
@@ -1036,6 +1050,7 @@ void main() {
             BoolKey.recommendedSignupNotificationIsAlreadyShow: false,
             BoolKey.userAnsweredSurvey: true,
             BoolKey.userClosedSurvey: true,
+            BoolKey.priceUpAnnouncementIsAlreadyShow: true,
           });
           await tester.pumpWidget(
             ProviderScope(
@@ -1106,6 +1121,7 @@ void main() {
           BoolKey.recommendedSignupNotificationIsAlreadyShow: false,
           BoolKey.userAnsweredSurvey: true,
           BoolKey.userClosedSurvey: true,
+          BoolKey.priceUpAnnouncementIsAlreadyShow: true,
         });
         await tester.pumpWidget(
           ProviderScope(
@@ -1164,6 +1180,7 @@ void main() {
           BoolKey.recommendedSignupNotificationIsAlreadyShow: false,
           BoolKey.userAnsweredSurvey: true,
           BoolKey.userClosedSurvey: true,
+          BoolKey.priceUpAnnouncementIsAlreadyShow: true,
         });
         await tester.pumpWidget(
           ProviderScope(
@@ -1222,6 +1239,7 @@ void main() {
           BoolKey.recommendedSignupNotificationIsAlreadyShow: false,
           BoolKey.userAnsweredSurvey: true,
           BoolKey.userClosedSurvey: true,
+          BoolKey.priceUpAnnouncementIsAlreadyShow: true,
         });
         await tester.pumpWidget(
           ProviderScope(
