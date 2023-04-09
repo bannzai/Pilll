@@ -22,6 +22,7 @@ import 'package:pilll/provider/shared_preferences.dart';
 import 'package:pilll/provider/auth.dart';
 import 'package:pilll/utils/datetime/day.dart';
 import 'package:pilll/utils/shared_preference/keys.dart';
+import 'package:url_launcher/url_launcher.dart';
 
 class AnnouncementBar extends HookConsumerWidget {
   const AnnouncementBar({Key? key}) : super(key: key);
@@ -80,11 +81,6 @@ class AnnouncementBar extends HookConsumerWidget {
     }
 
     if (!premiumAndTrial.isPremium) {
-      final premiumTrialLimit = PremiumTrialLimitAnnouncementBar.retrievePremiumTrialLimit(premiumAndTrial);
-      if (premiumTrialLimit != null) {
-        return PremiumTrialLimitAnnouncementBar(premiumTrialLimit: premiumTrialLimit);
-      }
-
       if (premiumAndTrial.hasDiscountEntitlement) {
         if (!premiumAndTrial.isTrial) {
           if (discountEntitlementDeadlineDate != null) {
@@ -98,6 +94,24 @@ class AnnouncementBar extends HookConsumerWidget {
             }
           }
         }
+      }
+
+      if (!priceUpAnnouncementIsAlreadyShow) {
+        return PriceUpAnnouncementBar(
+          onTap: () {
+            analytics.logEvent(name: "tapped_price_up_bar");
+            launchUrl(Uri.parse("https://pilll.wraptas.site/bfce3a94f6bf44258e134c2aa69dbb6d"), mode: LaunchMode.inAppWebView);
+          },
+          onClose: () {
+            analytics.logEvent(name: "close_price_up_bar");
+            priceUpAnnouncementIsAlreadyShowNotifier.set(true);
+          },
+        );
+      }
+
+      final premiumTrialLimit = PremiumTrialLimitAnnouncementBar.retrievePremiumTrialLimit(premiumAndTrial);
+      if (premiumTrialLimit != null) {
+        return PremiumTrialLimitAnnouncementBar(premiumTrialLimit: premiumTrialLimit);
       }
 
       if (premiumAndTrial.isTrial) {
@@ -124,26 +138,6 @@ class AnnouncementBar extends HookConsumerWidget {
                 },
               );
             }
-          }
-        }
-
-        if (!premiumAndTrial.isTrial) {
-          if (!priceUpAnnouncementIsAlreadyShow) {
-            return PriceUpAnnouncementBar(
-              onTap: () {
-                analytics.logEvent(name: "tapped_price_up_bar");
-                // TOOD: wraptas URL
-                showSignInSheet(
-                  context,
-                  SignInSheetStateContext.recordPage,
-                  null,
-                );
-              },
-              onClose: () {
-                analytics.logEvent(name: "close_price_up_bar");
-                priceUpAnnouncementIsAlreadyShowNotifier.set(true);
-              },
-            );
           }
         }
 

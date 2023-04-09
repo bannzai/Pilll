@@ -36,29 +36,22 @@ class PriceUpAnnouncementBar extends HookConsumerWidget {
               padding: EdgeInsets.zero,
             ),
             const Spacer(),
-            Column(
-              children: const [
-                Text(
-                  "プレミアムプラン値上げのお知らせ。プレミアムプランをお考えの方は今がお得です！タップして詳細を確認",
-                  style: TextStyle(fontFamily: FontFamily.japanese, fontWeight: FontWeight.w700, fontSize: 12, color: TextColor.white),
-                  textAlign: TextAlign.center,
-                ),
-              ],
+            const Text(
+              "プレミアムプランをお考えの方は今がお得です！\nタップして詳細を確認",
+              style: TextStyle(fontFamily: FontFamily.japanese, fontWeight: FontWeight.w700, fontSize: 12, color: TextColor.white),
+              maxLines: 2,
+              textAlign: TextAlign.center,
             ),
             const Spacer(),
-            Column(
-              children: [
-                IconButton(
-                  icon: SvgPicture.asset(
-                    "images/arrow_right.svg",
-                    colorFilter: const ColorFilter.mode(Colors.white, BlendMode.srcIn),
-                  ),
-                  onPressed: () {},
-                  iconSize: 24,
-                  padding: const EdgeInsets.all(8),
-                  alignment: Alignment.centerRight,
-                ),
-              ],
+            IconButton(
+              icon: SvgPicture.asset(
+                "images/arrow_right.svg",
+                colorFilter: const ColorFilter.mode(Colors.white, BlendMode.srcIn),
+              ),
+              onPressed: () {},
+              iconSize: 24,
+              padding: const EdgeInsets.all(8),
+              alignment: Alignment.centerRight,
             ),
           ],
         ),
