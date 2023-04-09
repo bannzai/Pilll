@@ -97,17 +97,19 @@ class AnnouncementBar extends HookConsumerWidget {
       }
 
       // TODO: 値上げと同時に消す
-      if (!priceUpAnnouncementIsAlreadyShow) {
-        return PriceUpAnnouncementBar(
-          onTap: () {
-            analytics.logEvent(name: "tapped_price_up_bar");
-            launchUrl(Uri.parse("https://pilll.wraptas.site/bfce3a94f6bf44258e134c2aa69dbb6d"), mode: LaunchMode.inAppWebView);
-          },
-          onClose: () {
-            analytics.logEvent(name: "close_price_up_bar");
-            priceUpAnnouncementIsAlreadyShowNotifier.set(true);
-          },
-        );
+      if (DateTime.now().month < 6) {
+        if (!priceUpAnnouncementIsAlreadyShow) {
+          return PriceUpAnnouncementBar(
+            onTap: () {
+              analytics.logEvent(name: "tapped_price_up_bar");
+              launchUrl(Uri.parse("https://pilll.wraptas.site/bfce3a94f6bf44258e134c2aa69dbb6d"), mode: LaunchMode.inAppWebView);
+            },
+            onClose: () {
+              analytics.logEvent(name: "close_price_up_bar");
+              priceUpAnnouncementIsAlreadyShowNotifier.set(true);
+            },
+          );
+        }
       }
 
       final premiumTrialLimit = PremiumTrialLimitAnnouncementBar.retrievePremiumTrialLimit(premiumAndTrial);
