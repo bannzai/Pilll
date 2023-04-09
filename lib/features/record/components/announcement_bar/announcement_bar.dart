@@ -96,6 +96,7 @@ class AnnouncementBar extends HookConsumerWidget {
         }
       }
 
+      // TODO: 値上げと同時に消す
       if (!priceUpAnnouncementIsAlreadyShow) {
         return PriceUpAnnouncementBar(
           onTap: () {
