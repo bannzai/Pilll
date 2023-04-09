@@ -1,5 +1,6 @@
 import 'dart:async';
 
+import 'package:pilll/provider/shared_preference.dart';
 import 'package:pilll/utils/analytics.dart';
 import 'package:pilll/provider/pill_sheet_group.dart';
 import 'package:pilll/provider/pilll_ads.dart';
@@ -123,6 +124,7 @@ void main() {
           BoolKey.userClosedSurvey: true,
           BoolKey.priceUpAnnouncementIsAlreadyShow: true,
         });
+
         await tester.pumpWidget(
           ProviderScope(
             overrides: [
@@ -132,7 +134,7 @@ void main() {
                   PremiumAndTrial(
                     isPremium: false,
                     isTrial: true,
-                    hasDiscountEntitlement: true,
+                    hasDiscountEntitlement: false,
                     trialDeadlineDate: null,
                     beginTrialDate: null,
                     discountEntitlementDeadlineDate: null,
@@ -191,7 +193,7 @@ void main() {
                   PremiumAndTrial(
                     isPremium: false,
                     isTrial: true,
-                    hasDiscountEntitlement: true,
+                    hasDiscountEntitlement: false,
                     trialDeadlineDate: null,
                     beginTrialDate: null,
                     discountEntitlementDeadlineDate: null,
@@ -249,7 +251,7 @@ void main() {
                   PremiumAndTrial(
                     isPremium: false,
                     isTrial: true,
-                    hasDiscountEntitlement: true,
+                    hasDiscountEntitlement: false,
                     trialDeadlineDate: mockToday.add(const Duration(days: 1)),
                     beginTrialDate: null,
                     discountEntitlementDeadlineDate: null,
@@ -308,7 +310,7 @@ void main() {
                   PremiumAndTrial(
                     isPremium: false,
                     isTrial: true,
-                    hasDiscountEntitlement: true,
+                    hasDiscountEntitlement: false,
                     trialDeadlineDate: null,
                     beginTrialDate: null,
                     discountEntitlementDeadlineDate: null,

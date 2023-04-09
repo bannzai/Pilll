@@ -37,7 +37,7 @@ class PriceUpAnnouncementBar extends HookConsumerWidget {
             ),
             const Spacer(),
             const Text(
-              "プレミアムプランをお考えの方は今がお得です！\nタップして詳細を確認",
+              "プレミアムプランをお考えの方は\n今がお得です！タップして詳細を確認",
               style: TextStyle(fontFamily: FontFamily.japanese, fontWeight: FontWeight.w700, fontSize: 12, color: TextColor.white),
               maxLines: 2,
               textAlign: TextAlign.center,
