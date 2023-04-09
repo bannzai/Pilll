@@ -112,12 +112,12 @@ class AnnouncementBar extends HookConsumerWidget {
         }
       }
 
-      final premiumTrialLimit = PremiumTrialLimitAnnouncementBar.retrievePremiumTrialLimit(premiumAndTrial);
-      if (premiumTrialLimit != null) {
-        return PremiumTrialLimitAnnouncementBar(premiumTrialLimit: premiumTrialLimit);
-      }
-
       if (premiumAndTrial.isTrial) {
+        final premiumTrialLimit = PremiumTrialLimitAnnouncementBar.retrievePremiumTrialLimit(premiumAndTrial);
+        if (premiumTrialLimit != null) {
+          return PremiumTrialLimitAnnouncementBar(premiumTrialLimit: premiumTrialLimit);
+        }
+
         final restDurationNotification = RestDurationAnnouncementBar.retrieveRestDurationNotification(latestPillSheetGroup: latestPillSheetGroup);
         if (restDurationNotification != null) {
           return RestDurationAnnouncementBar(restDurationNotification: restDurationNotification);
