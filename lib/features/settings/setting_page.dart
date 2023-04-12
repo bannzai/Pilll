@@ -144,28 +144,6 @@ class SettingPageBody extends StatelessWidget {
                       trialDeadlineDate: premiumAndTrial.trialDeadlineDate,
                     ),
                     _separator(),
-                    if (premiumAndTrial.isPremium) ...[
-                      ListTile(
-                        title: const Text("解約はこちら",
-                            style: TextStyle(
-                              fontFamily: FontFamily.roboto,
-                              fontWeight: FontWeight.w300,
-                              fontSize: 16,
-                            )),
-                        onTap: () async {
-                          analytics.logEvent(name: "did_select_churn", parameters: {});
-                          await Navigator.of(context).push(
-                            WebViewPageRoute.route(
-                              title: "解約時アンケートご協力のお願い",
-                              url: "https://docs.google.com/forms/d/e/1FAIpQLScmxg1amJik_8viuPI3MeDCzz7FuBDXeIHWzorbXRKR38yp7g/viewform",
-                            ),
-                          );
-                          // ignore: use_build_context_synchronously
-                          showDialog(context: context, builder: (_) => const ChurnSurveyCompleteDialog());
-                        },
-                      ),
-                      _separator(),
-                    ],
                   ]);
                 case SettingSection.pill:
                   return SettingSectionTitle(
