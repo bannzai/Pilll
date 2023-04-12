@@ -40,6 +40,7 @@ _$_User _$$_UserFromJson(Map<String, dynamic> json) => _$_User(
       isPremium: json['isPremium'] as bool? ?? false,
       isTrial: json['isTrial'] as bool? ?? false,
       hasDiscountEntitlement: json['hasDiscountEntitlement'] as bool? ?? false,
+      shouldAskCancelReason: json['shouldAskCancelReason'] as bool? ?? false,
       beginTrialDate: TimestampConverter.timestampToDateTime(
           json['beginTrialDate'] as Timestamp?),
       trialDeadlineDate: TimestampConverter.timestampToDateTime(
@@ -60,6 +61,7 @@ Map<String, dynamic> _$$_UserToJson(_$_User instance) => <String, dynamic>{
       'isPremium': instance.isPremium,
       'isTrial': instance.isTrial,
       'hasDiscountEntitlement': instance.hasDiscountEntitlement,
+      'shouldAskCancelReason': instance.shouldAskCancelReason,
       'beginTrialDate':
           TimestampConverter.dateTimeToTimestamp(instance.beginTrialDate),
       'trialDeadlineDate':

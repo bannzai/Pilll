@@ -171,6 +171,7 @@ mixin _$User {
   bool get isPremium => throw _privateConstructorUsedError;
   bool get isTrial => throw _privateConstructorUsedError;
   bool get hasDiscountEntitlement => throw _privateConstructorUsedError;
+  bool get shouldAskCancelReason => throw _privateConstructorUsedError;
   @JsonKey(
       fromJson: TimestampConverter.timestampToDateTime,
       toJson: TimestampConverter.dateTimeToTimestamp)
@@ -208,6 +209,7 @@ abstract class $UserCopyWith<$Res> {
       bool isPremium,
       bool isTrial,
       bool hasDiscountEntitlement,
+      bool shouldAskCancelReason,
       @JsonKey(fromJson: TimestampConverter.timestampToDateTime, toJson: TimestampConverter.dateTimeToTimestamp)
           DateTime? beginTrialDate,
       @JsonKey(fromJson: TimestampConverter.timestampToDateTime, toJson: TimestampConverter.dateTimeToTimestamp)
@@ -242,6 +244,7 @@ class _$UserCopyWithImpl<$Res, $Val extends User>
     Object? isPremium = null,
     Object? isTrial = null,
     Object? hasDiscountEntitlement = null,
+    Object? shouldAskCancelReason = null,
     Object? beginTrialDate = freezed,
     Object? trialDeadlineDate = freezed,
     Object? discountEntitlementDeadlineDate = freezed,
@@ -291,6 +294,10 @@ class _$UserCopyWithImpl<$Res, $Val extends User>
           ? _value.hasDiscountEntitlement
           : hasDiscountEntitlement // ignore: cast_nullable_to_non_nullable
               as bool,
+      shouldAskCancelReason: null == shouldAskCancelReason
+          ? _value.shouldAskCancelReason
+          : shouldAskCancelReason // ignore: cast_nullable_to_non_nullable
+              as bool,
       beginTrialDate: freezed == beginTrialDate
           ? _value.beginTrialDate
           : beginTrialDate // ignore: cast_nullable_to_non_nullable
@@ -339,6 +346,7 @@ abstract class _$$_UserCopyWith<$Res> implements $UserCopyWith<$Res> {
       bool isPremium,
       bool isTrial,
       bool hasDiscountEntitlement,
+      bool shouldAskCancelReason,
       @JsonKey(fromJson: TimestampConverter.timestampToDateTime, toJson: TimestampConverter.dateTimeToTimestamp)
           DateTime? beginTrialDate,
       @JsonKey(fromJson: TimestampConverter.timestampToDateTime, toJson: TimestampConverter.dateTimeToTimestamp)
@@ -370,6 +378,7 @@ class __$$_UserCopyWithImpl<$Res> extends _$UserCopyWithImpl<$Res, _$_User>
     Object? isPremium = null,
     Object? isTrial = null,
     Object? hasDiscountEntitlement = null,
+    Object? shouldAskCancelReason = null,
     Object? beginTrialDate = freezed,
     Object? trialDeadlineDate = freezed,
     Object? discountEntitlementDeadlineDate = freezed,
@@ -419,6 +428,10 @@ class __$$_UserCopyWithImpl<$Res> extends _$UserCopyWithImpl<$Res, _$_User>
           ? _value.hasDiscountEntitlement
           : hasDiscountEntitlement // ignore: cast_nullable_to_non_nullable
               as bool,
+      shouldAskCancelReason: null == shouldAskCancelReason
+          ? _value.shouldAskCancelReason
+          : shouldAskCancelReason // ignore: cast_nullable_to_non_nullable
+              as bool,
       beginTrialDate: freezed == beginTrialDate
           ? _value.beginTrialDate
           : beginTrialDate // ignore: cast_nullable_to_non_nullable
@@ -453,6 +466,7 @@ class _$_User extends _User {
       this.isPremium = false,
       this.isTrial = false,
       this.hasDiscountEntitlement = false,
+      this.shouldAskCancelReason = false,
       @JsonKey(fromJson: TimestampConverter.timestampToDateTime, toJson: TimestampConverter.dateTimeToTimestamp)
           this.beginTrialDate,
       @JsonKey(fromJson: TimestampConverter.timestampToDateTime, toJson: TimestampConverter.dateTimeToTimestamp)
@@ -518,6 +532,9 @@ class _$_User extends _User {
   @JsonKey()
   final bool hasDiscountEntitlement;
   @override
+  @JsonKey()
+  final bool shouldAskCancelReason;
+  @override
   @JsonKey(
       fromJson: TimestampConverter.timestampToDateTime,
       toJson: TimestampConverter.dateTimeToTimestamp)
@@ -535,7 +552,7 @@ class _$_User extends _User {
 
   @override
   String toString() {
-    return 'User(id: $id, setting: $setting, migratedFlutter: $migratedFlutter, userIDWhenCreateUser: $userIDWhenCreateUser, anonymousUserID: $anonymousUserID, userDocumentIDSets: $userDocumentIDSets, anonymousUserIDSets: $anonymousUserIDSets, firebaseCurrentUserIDSets: $firebaseCurrentUserIDSets, isPremium: $isPremium, isTrial: $isTrial, hasDiscountEntitlement: $hasDiscountEntitlement, beginTrialDate: $beginTrialDate, trialDeadlineDate: $trialDeadlineDate, discountEntitlementDeadlineDate: $discountEntitlementDeadlineDate)';
+    return 'User(id: $id, setting: $setting, migratedFlutter: $migratedFlutter, userIDWhenCreateUser: $userIDWhenCreateUser, anonymousUserID: $anonymousUserID, userDocumentIDSets: $userDocumentIDSets, anonymousUserIDSets: $anonymousUserIDSets, firebaseCurrentUserIDSets: $firebaseCurrentUserIDSets, isPremium: $isPremium, isTrial: $isTrial, hasDiscountEntitlement: $hasDiscountEntitlement, shouldAskCancelReason: $shouldAskCancelReason, beginTrialDate: $beginTrialDate, trialDeadlineDate: $trialDeadlineDate, discountEntitlementDeadlineDate: $discountEntitlementDeadlineDate)';
   }
 
   @override
@@ -562,6 +579,8 @@ class _$_User extends _User {
             (identical(other.isTrial, isTrial) || other.isTrial == isTrial) &&
             (identical(other.hasDiscountEntitlement, hasDiscountEntitlement) ||
                 other.hasDiscountEntitlement == hasDiscountEntitlement) &&
+            (identical(other.shouldAskCancelReason, shouldAskCancelReason) ||
+                other.shouldAskCancelReason == shouldAskCancelReason) &&
             (identical(other.beginTrialDate, beginTrialDate) ||
                 other.beginTrialDate == beginTrialDate) &&
             (identical(other.trialDeadlineDate, trialDeadlineDate) ||
@@ -587,6 +606,7 @@ class _$_User extends _User {
       isPremium,
       isTrial,
       hasDiscountEntitlement,
+      shouldAskCancelReason,
       beginTrialDate,
       trialDeadlineDate,
       discountEntitlementDeadlineDate);
@@ -619,6 +639,7 @@ abstract class _User extends User {
       final bool isPremium,
       final bool isTrial,
       final bool hasDiscountEntitlement,
+      final bool shouldAskCancelReason,
       @JsonKey(fromJson: TimestampConverter.timestampToDateTime, toJson: TimestampConverter.dateTimeToTimestamp)
           final DateTime? beginTrialDate,
       @JsonKey(fromJson: TimestampConverter.timestampToDateTime, toJson: TimestampConverter.dateTimeToTimestamp)
@@ -652,6 +673,8 @@ abstract class _User extends User {
   bool get isTrial;
   @override
   bool get hasDiscountEntitlement;
+  @override
+  bool get shouldAskCancelReason;
   @override
   @JsonKey(
       fromJson: TimestampConverter.timestampToDateTime,
