@@ -5,7 +5,7 @@ PODS:
   - AppAuth/Core (1.6.0)
   - AppAuth/ExternalUserAgent (1.6.0):
     - AppAuth/Core
-  - cloud_firestore (4.4.0):
+  - cloud_firestore (4.5.0):
     - Firebase/Firestore (= 10.1.0)
     - firebase_core
     - Flutter
@@ -32,26 +32,26 @@ PODS:
   - Firebase/Performance (10.1.0):
     - Firebase/CoreOnly
     - FirebasePerformance (~> 10.1.0)
-  - firebase_analytics (10.1.1):
+  - firebase_analytics (10.2.0):
     - Firebase/Analytics (= 10.1.0)
     - firebase_core
     - Flutter
-  - firebase_auth (4.2.6):
+  - firebase_auth (4.4.0):
     - Firebase/Auth (= 10.1.0)
     - firebase_core
     - Flutter
-  - firebase_core (2.5.0):
+  - firebase_core (2.9.0):
     - Firebase/CoreOnly (= 10.1.0)
     - Flutter
-  - firebase_crashlytics (3.0.12):
+  - firebase_crashlytics (3.1.0):
     - Firebase/Crashlytics (= 10.1.0)
     - firebase_core
     - Flutter
-  - firebase_messaging (14.2.2):
+  - firebase_messaging (14.4.0):
     - Firebase/Messaging (= 10.1.0)
     - firebase_core
     - Flutter
-  - firebase_performance (0.9.0-11):
+  - firebase_performance (0.9.1):
     - Firebase/Performance (= 10.1.0)
     - firebase_core
     - Flutter
@@ -210,12 +210,12 @@ PODS:
   - package_info (0.0.1):
     - Flutter
   - PromisesObjC (2.1.1)
-  - purchases_flutter (4.9.1):
+  - purchases_flutter (4.11.1):
     - Flutter
-    - PurchasesHybridCommon (= 4.12.1)
-  - PurchasesHybridCommon (4.12.1):
-    - RevenueCat (= 4.17.4)
-  - RevenueCat (4.17.4)
+    - PurchasesHybridCommon (= 4.14.1)
+  - PurchasesHybridCommon (4.14.1):
+    - RevenueCat (= 4.17.8)
+  - RevenueCat (4.17.8)
   - shared_preferences_foundation (0.0.1):
     - Flutter
     - FlutterMacOS
@@ -327,14 +327,14 @@ CHECKOUT OPTIONS:
 
 SPEC CHECKSUMS:
   AppAuth: 8fca6b5563a5baef2c04bee27538025e4ceb2add
-  cloud_firestore: 82f1359677b7a7379c56cfbd14e57550fc8b0ebd
+  cloud_firestore: d740e0577b12ff714346866324026fded2464cef
   Firebase: 444b35a9c568a516666213c2f6cccd10cb12559f
-  firebase_analytics: 112ad6730597268abf44c08ee5806a4c828bf427
-  firebase_auth: 1b7b85717eff5abe161c6b8cbb0574ea2a83489f
-  firebase_core: 84f790e5f82193664f1c09c28a80adc373e99ba9
-  firebase_crashlytics: 7196b80b7c3e914bdb0c5aa6bc65bc646b30b043
-  firebase_messaging: e1e3d568522d700a6fe2d1976ad0e193b8a1401e
-  firebase_performance: fa8dbd638ca1e1b2352a0a72353f8580ca15be15
+  firebase_analytics: 6267bd2995e431155353ff9dc03c78c02ea3b21c
+  firebase_auth: ba284e5453da389ad1b45757b498f4bbabbb5a5a
+  firebase_core: 00e045b15415061424ccd0f783def00c217df64a
+  firebase_crashlytics: d5050a39450abdddf19ff8b93b02f1c185a2161a
+  firebase_messaging: fde473609aeb2baff36c298100ff3017639d011b
+  firebase_performance: a7957c7a8088d351c079bd5abe60b618a1189b83
   FirebaseABTesting: 8cb5cc4e395c8dce8a2820a6a329020ead56fe2f
   FirebaseAnalytics: 24cb27b52b2e11ad5013528195b4ca0755dec960
   FirebaseAuth: 19a85b8a42e7c1104a2ffa6987c748daa79a5e64
@@ -351,7 +351,7 @@ SPEC CHECKSUMS:
   flutter_inappwebview: bfd58618f49dc62f2676de690fc6dcda1d6c3721
   flutter_local_notifications: 0c0b1ae97e741e1521e4c1629a459d04b9aec743
   flutter_native_timezone: 5f05b2de06c9776b4cc70e1839f03de178394d22
-  google_sign_in_ios: 4f85eb9f937450765c8573bb85fd8cd6a5af675c
+  google_sign_in_ios: 1256ff9d941db546373826966720b0c24804bcdd
   GoogleAppMeasurement: e490e248af3da95afe8fa8e7baac232dc8d020b7
   GoogleDataTransport: ea169759df570f4e37bdee1623ec32a7e64e67c4
   GoogleSignIn: 5651ce3a61e56ca864160e79b484cd9ed3f49b7a
@@ -363,12 +363,12 @@ SPEC CHECKSUMS:
   OrderedSet: aaeb196f7fef5a9edf55d89760da9176ad40b93c
   package_info: 873975fc26034f0b863a300ad47e7f1ac6c7ec62
   PromisesObjC: ab77feca74fa2823e7af4249b8326368e61014cb
-  purchases_flutter: 35823ed62a8eca74af719872b27c2faf7c625ab8
-  PurchasesHybridCommon: 6e262ca1090bd9f99e85cf604a12d0866b9b80b2
-  RevenueCat: 3411bc79fc724c5c130035c92959a802c6d6f5b2
+  purchases_flutter: 941e65870ed6f7439122cb4999fb61636dd86ccf
+  PurchasesHybridCommon: fb1a3319024c1aa9f98d40cc5820476b824409fc
+  RevenueCat: f2f96c2cbde5ddab3a86381923c6f023383342e0
   shared_preferences_foundation: 986fc17f3d3251412d18b0265f9c64113a8c2472
   sign_in_with_apple: f3bf75217ea4c2c8b91823f225d70230119b8440
-  url_launcher_ios: fb12c43172927bb5cf75aeebd073f883801f1993
+  url_launcher_ios: 08a3dfac5fb39e8759aeb0abbd5d9480f30fc8b4
   webview_flutter_wkwebview: 2e2d318f21a5e036e2c3f26171342e95908bd60a
 
 PODFILE CHECKSUM: 5a7a7f380e35a11a5112aba2bec9c574a5554d77
