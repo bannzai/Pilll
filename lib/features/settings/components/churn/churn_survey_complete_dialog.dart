@@ -14,7 +14,7 @@ class ChurnSurveyCompleteDialog extends StatelessWidget {
     return AlertDialog(
       shape: const RoundedRectangleBorder(borderRadius: BorderRadius.all(Radius.circular(20.0))),
       title: const Text(
-        "ご協力頂きありがとうございました",
+        "ご協力頂きありがとうございます",
         style: TextStyle(
           fontFamily: FontFamily.japanese,
           fontSize: 17,
