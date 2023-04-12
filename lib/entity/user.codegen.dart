@@ -59,6 +59,7 @@ extension UserFirestoreFieldKeys on String {
   static const trialDeadlineDate = "trialDeadlineDate";
   static const hasDiscountEntitlement = "hasDiscountEntitlement";
   static const discountEntitlementDeadlineDate = "discountEntitlementDeadlineDate";
+  static const shouldAskCancelReason = "shouldAskCancelReason";
 }
 
 @freezed
@@ -85,6 +86,8 @@ class User with _$User {
         bool isTrial,
     @Default(false)
         bool hasDiscountEntitlement,
+    @Default(false)
+        bool shouldAskCancelReason,
     @JsonKey(
       fromJson: TimestampConverter.timestampToDateTime,
       toJson: TimestampConverter.dateTimeToTimestamp,

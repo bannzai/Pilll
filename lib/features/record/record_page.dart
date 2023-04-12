@@ -1,6 +1,7 @@
 import 'package:async_value_group/async_value_group.dart';
 import 'package:flutter_hooks/flutter_hooks.dart';
 import 'package:pilll/components/molecules/indicator.dart';
+import 'package:pilll/components/page/web_view.dart';
 import 'package:pilll/features/initial_setting/migrate_info.dart';
 import 'package:pilll/features/premium_function_survey/premium_function_survey_page.dart';
 import 'package:pilll/features/record/components/add_pill_sheet_group/add_pill_sheet_group_empty_frame.dart';
@@ -15,6 +16,7 @@ import 'package:pilll/features/error/universal_error_page.dart';
 import 'package:pilll/components/atoms/color.dart';
 import 'package:flutter/material.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
+import 'package:pilll/features/settings/components/churn/churn_survey_complete_dialog.dart';
 import 'package:pilll/native/widget.dart';
 import 'package:pilll/provider/pill_sheet_group.dart';
 import 'package:pilll/provider/premium_and_trial.codegen.dart';
@@ -23,6 +25,7 @@ import 'package:pilll/provider/setting.dart';
 import 'package:pilll/provider/shared_preference.dart';
 import 'package:pilll/provider/shared_preferences.dart';
 import 'package:pilll/provider/auth.dart';
+import 'package:pilll/provider/user.dart';
 import 'package:pilll/utils/shared_preference/keys.dart';
 
 class RecordPage extends HookConsumerWidget {
@@ -84,13 +87,14 @@ class RecordPage extends HookConsumerWidget {
     }, [latestPillSheetGroup.asData?.value]);
 
     final isLinked = ref.watch(isLinkedProvider);
-    return AsyncValueGroup.group6(
+    return AsyncValueGroup.group7(
       ref.watch(latestPillSheetGroupProvider),
       ref.watch(premiumAndTrialProvider),
       ref.watch(settingProvider),
       ref.watch(shouldShowMigrationInformationProvider),
       ref.watch(intSharedPreferencesProvider(IntKey.totalCountOfActionForTakenPill)),
       ref.watch(boolSharedPreferencesProvider(BoolKey.isAlreadyShowPremiumSurvey)),
+      ref.watch(userProvider),
     ).when(
       data: (data) {
         final latestPillSheetGroup = data.t1;
@@ -99,6 +103,7 @@ class RecordPage extends HookConsumerWidget {
         final shouldShowMigrationInformation = data.t4;
         final totalCountOfActionForTakenPill = data.t5;
         final isAlreadyShowPremiumSurvey = data.t6;
+        final shouldAskCancelReason = data.t7.shouldAskCancelReason;
         return RecordPageBody(
           pillSheetGroup: latestPillSheetGroup,
           setting: setting,
@@ -107,6 +112,7 @@ class RecordPage extends HookConsumerWidget {
           totalCountOfActionForTakenPill: totalCountOfActionForTakenPill ?? 0,
           isAlreadyShowPremiumSurvey: isAlreadyShowPremiumSurvey ?? false,
           isLinkedLoginProvider: isLinked,
+          shouldAskCancelReason: shouldAskCancelReason,
         );
       },
       error: (error, stackTrace) => UniversalErrorPage(
@@ -128,6 +134,7 @@ class RecordPageBody extends HookConsumerWidget {
   final bool isAlreadyShowPremiumSurvey;
   final bool shouldShowMigrateInfo;
   final bool isLinkedLoginProvider;
+  final bool shouldAskCancelReason;
 
   const RecordPageBody({
     Key? key,
@@ -138,6 +145,7 @@ class RecordPageBody extends HookConsumerWidget {
     required this.isAlreadyShowPremiumSurvey,
     required this.shouldShowMigrateInfo,
     required this.isLinkedLoginProvider,
+    required this.shouldAskCancelReason,
   }) : super(key: key);
 
   @override
@@ -145,6 +153,7 @@ class RecordPageBody extends HookConsumerWidget {
     final pillSheetGroup = this.pillSheetGroup;
     final isAlreadyShowPremiumSurveyNotifier = ref.watch(boolSharedPreferencesProvider(BoolKey.isAlreadyShowPremiumSurvey).notifier);
     final activePillSheet = pillSheetGroup?.activedPillSheet;
+    final disableShouldAskCancelReason = ref.watch(disableShouldAskCancelReasonProvider);
 
     Future.microtask(() async {
       if (shouldShowMigrateInfo) {
@@ -157,6 +166,16 @@ class RecordPageBody extends HookConsumerWidget {
       } else if (_shouldShowPremiumFunctionSurvey) {
         isAlreadyShowPremiumSurveyNotifier.set(true);
         Navigator.of(context).push(PremiumFunctionSurveyPageRoutes.route());
+      } else if (shouldAskCancelReason) {
+        await Navigator.of(context).push(
+          WebViewPageRoute.route(
+            title: "解約後のアンケートご協力のお願い",
+            url: "https://docs.google.com/forms/d/e/1FAIpQLScmxg1amJik_8viuPI3MeDCzz7FuBDXeIHWzorbXRKR38yp7g/viewform",
+          ),
+        );
+        disableShouldAskCancelReason();
+        // ignore: use_build_context_synchronously
+        showDialog(context: context, builder: (_) => const ChurnSurveyCompleteDialog());
       }
     });
 
