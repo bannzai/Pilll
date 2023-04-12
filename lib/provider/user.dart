@@ -306,6 +306,7 @@ class EndInitialSetting {
   }
 }
 
+final disableShouldAskCancelReasonProvider = Provider((ref) => DisableShouldAskCancelReason(ref.watch(databaseProvider)));
 class DisableShouldAskCancelReason {
   final DatabaseConnection databaseConnection;
   DisableShouldAskCancelReason(this.databaseConnection);

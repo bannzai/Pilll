@@ -153,6 +153,7 @@ class RecordPageBody extends HookConsumerWidget {
     final pillSheetGroup = this.pillSheetGroup;
     final isAlreadyShowPremiumSurveyNotifier = ref.watch(boolSharedPreferencesProvider(BoolKey.isAlreadyShowPremiumSurvey).notifier);
     final activePillSheet = pillSheetGroup?.activedPillSheet;
+    final disableShouldAskCancelReason = ref.watch(disableShouldAskCancelReasonProvider);
 
     Future.microtask(() async {
       if (shouldShowMigrateInfo) {
@@ -172,6 +173,7 @@ class RecordPageBody extends HookConsumerWidget {
             url: "https://docs.google.com/forms/d/e/1FAIpQLScmxg1amJik_8viuPI3MeDCzz7FuBDXeIHWzorbXRKR38yp7g/viewform",
           ),
         );
+        disableShouldAskCancelReason();
         // ignore: use_build_context_synchronously
         showDialog(context: context, builder: (_) => const ChurnSurveyCompleteDialog());
       }
