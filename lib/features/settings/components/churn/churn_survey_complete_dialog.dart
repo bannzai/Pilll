@@ -42,6 +42,7 @@ class ChurnSurveyCompleteDialog extends StatelessWidget {
           text: "閉じる",
           onPressed: () async {
             analytics.logEvent(name: "close_churn");
+            Navigator.of(context).pop();
           },
         ),
       ],
