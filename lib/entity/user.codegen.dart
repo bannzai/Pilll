@@ -85,6 +85,8 @@ class User with _$User {
         bool isTrial,
     @Default(false)
         bool hasDiscountEntitlement,
+    @Default(false)
+        bool shouldAskCancelReason,
     @JsonKey(
       fromJson: TimestampConverter.timestampToDateTime,
       toJson: TimestampConverter.dateTimeToTimestamp,
