@@ -305,3 +305,14 @@ class EndInitialSetting {
     }, SetOptions(merge: true));
   }
 }
+
+class DisableShouldAskCancelReason {
+  final DatabaseConnection databaseConnection;
+  DisableShouldAskCancelReason(this.databaseConnection);
+
+  Future<void> call() async {
+    await databaseConnection.userRawReference().set({
+      UserFirestoreFieldKeys.shouldAskCancelReason: false,
+    }, SetOptions(merge: true));
+  }
+}
