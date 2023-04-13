@@ -68,18 +68,6 @@ class AnnouncementBar extends HookConsumerWidget {
       return now().isBefore(pilllAds.startDateTime) || now().isAfter(pilllAds.endDateTime);
     }();
 
-    // TODO: ある程度数が集まったら消す。テストも書かない
-    if (!premiumAndTrial.isTrial) {
-      if (!userClosedSurvey) {
-        if (!userAnsweredSurvey) {
-          return UserSurvey(
-            onClose: () => userClosedSurveyNotifier.set(true),
-            onTap: () => userAnsweredSurveyNotifier.set(true),
-          );
-        }
-      }
-    }
-
     if (!premiumAndTrial.isPremium) {
       if (premiumAndTrial.hasDiscountEntitlement) {
         if (!premiumAndTrial.isTrial) {
