@@ -10,7 +10,6 @@ import 'package:pilll/features/premium_introduction/util/discount_deadline.dart'
 import 'package:pilll/features/record/components/announcement_bar/components/discount_price_deadline.dart';
 import 'package:pilll/features/record/components/announcement_bar/components/ended_pill_sheet.dart';
 import 'package:pilll/features/record/components/announcement_bar/components/pilll_ads.dart';
-import 'package:pilll/features/record/components/announcement_bar/components/user_survey.dart';
 import 'package:pilll/features/record/components/announcement_bar/components/premium_trial_limit.dart';
 import 'package:pilll/features/record/components/announcement_bar/components/recommend_signup.dart';
 import 'package:pilll/features/record/components/announcement_bar/components/recommend_signup_premium.dart';
@@ -46,10 +45,6 @@ class AnnouncementBar extends HookConsumerWidget {
         ref.watch(boolSharedPreferencesProvider(BoolKey.recommendedSignupNotificationIsAlreadyShow)).valueOrNull ?? false;
     final recommendedSignupNotificationIsAlreadyShowNotifier =
         ref.watch(boolSharedPreferencesProvider(BoolKey.recommendedSignupNotificationIsAlreadyShow).notifier);
-    final userAnsweredSurvey = ref.watch(boolSharedPreferencesProvider(BoolKey.userAnsweredSurvey)).valueOrNull ?? false;
-    final userAnsweredSurveyNotifier = ref.watch(boolSharedPreferencesProvider(BoolKey.userAnsweredSurvey).notifier);
-    final userClosedSurvey = ref.watch(boolSharedPreferencesProvider(BoolKey.userClosedSurvey)).valueOrNull ?? false;
-    final userClosedSurveyNotifier = ref.watch(boolSharedPreferencesProvider(BoolKey.userClosedSurvey).notifier);
     final discountEntitlementDeadlineDate = premiumAndTrial.discountEntitlementDeadlineDate;
     final isOverDiscountDeadline = ref.watch(isOverDiscountDeadlineProvider(discountEntitlementDeadlineDate));
     final priceUpAnnouncementIsAlreadyShow = ref.watch(boolSharedPreferencesProvider(BoolKey.priceUpAnnouncementIsAlreadyShow)).valueOrNull ?? false;
@@ -68,18 +63,6 @@ class AnnouncementBar extends HookConsumerWidget {
       return now().isBefore(pilllAds.startDateTime) || now().isAfter(pilllAds.endDateTime);
     }();
 
-    // TODO: ある程度数が集まったら消す。テストも書かない
-    if (!premiumAndTrial.isTrial) {
-      if (!userClosedSurvey) {
-        if (!userAnsweredSurvey) {
-          return UserSurvey(
-            onClose: () => userClosedSurveyNotifier.set(true),
-            onTap: () => userAnsweredSurveyNotifier.set(true),
-          );
-        }
-      }
-    }
-
     if (!premiumAndTrial.isPremium) {
       if (premiumAndTrial.hasDiscountEntitlement) {
         if (!premiumAndTrial.isTrial) {
@@ -96,23 +79,23 @@ class AnnouncementBar extends HookConsumerWidget {
         }
       }
 
-      // TODO: 値上げと同時に消す。テストも書かない
-      if (now().month < 6) {
-        if (!priceUpAnnouncementIsAlreadyShow) {
-          return PriceUpAnnouncementBar(
-            onTap: () {
-              analytics.logEvent(name: "tapped_price_up_bar");
-              launchUrl(Uri.parse("https://pilll.wraptas.site/bfce3a94f6bf44258e134c2aa69dbb6d"), mode: LaunchMode.inAppWebView);
-            },
-            onClose: () {
-              analytics.logEvent(name: "close_price_up_bar");
-              priceUpAnnouncementIsAlreadyShowNotifier.set(true);
-            },
-          );
-        }
-      }
-
       if (premiumAndTrial.isTrial) {
+        // TODO: 値上げと同時に消す。テストも書かない
+        if (now().month < 6) {
+          if (!priceUpAnnouncementIsAlreadyShow) {
+            return PriceUpAnnouncementBar(
+              onTap: () {
+                analytics.logEvent(name: "tapped_price_up_bar");
+                launchUrl(Uri.parse("https://pilll.wraptas.site/bfce3a94f6bf44258e134c2aa69dbb6d"), mode: LaunchMode.inAppWebView);
+              },
+              onClose: () {
+                analytics.logEvent(name: "close_price_up_bar");
+                priceUpAnnouncementIsAlreadyShowNotifier.set(true);
+              },
+            );
+          }
+        }
+
         final premiumTrialLimit = PremiumTrialLimitAnnouncementBar.retrievePremiumTrialLimit(premiumAndTrial);
         if (premiumTrialLimit != null) {
           return PremiumTrialLimitAnnouncementBar(premiumTrialLimit: premiumTrialLimit);
@@ -155,6 +138,22 @@ class AnnouncementBar extends HookConsumerWidget {
       } else {
         if (!isAdsDisabled && pilllAds != null) {
           return PilllAdsAnnouncementBar(pilllAds: pilllAds, onClose: () => showPremiumIntroductionSheet(context));
+        }
+
+        // TODO: 値上げと同時に消す。テストも書かない
+        if (now().month < 6) {
+          if (!priceUpAnnouncementIsAlreadyShow) {
+            return PriceUpAnnouncementBar(
+              onTap: () {
+                analytics.logEvent(name: "tapped_price_up_bar");
+                launchUrl(Uri.parse("https://pilll.wraptas.site/bfce3a94f6bf44258e134c2aa69dbb6d"), mode: LaunchMode.inAppWebView);
+              },
+              onClose: () {
+                analytics.logEvent(name: "close_price_up_bar");
+                priceUpAnnouncementIsAlreadyShowNotifier.set(true);
+              },
+            );
+          }
         }
       }
     } else {

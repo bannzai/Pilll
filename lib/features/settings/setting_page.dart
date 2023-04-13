@@ -7,8 +7,6 @@ import 'package:pilll/components/atoms/button.dart';
 import 'package:pilll/components/atoms/font.dart';
 import 'package:pilll/components/molecules/indicator.dart';
 import 'package:pilll/components/page/discard_dialog.dart';
-import 'package:pilll/components/page/web_view.dart';
-import 'package:pilll/features/settings/components/churn/churn_survey_complete_dialog.dart';
 import 'package:pilll/features/settings/components/rows/creating_new_pillsheet.dart';
 import 'package:pilll/features/settings/components/rows/health_care.dart';
 import 'package:pilll/features/settings/components/rows/menstruation.dart';
@@ -238,7 +236,7 @@ Android: https://onl.bz/ufJggPj''';
                             Clipboard.setData(const ClipboardData(text: text));
                             ScaffoldMessenger.of(context).showSnackBar(
                               const SnackBar(
-                                duration: const Duration(seconds: 2),
+                                duration: Duration(seconds: 2),
                                 content: Text("クリップボードにリンクをコピーしました"),
                               ),
                             );
