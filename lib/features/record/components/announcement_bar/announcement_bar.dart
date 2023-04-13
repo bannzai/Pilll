@@ -10,7 +10,6 @@ import 'package:pilll/features/premium_introduction/util/discount_deadline.dart'
 import 'package:pilll/features/record/components/announcement_bar/components/discount_price_deadline.dart';
 import 'package:pilll/features/record/components/announcement_bar/components/ended_pill_sheet.dart';
 import 'package:pilll/features/record/components/announcement_bar/components/pilll_ads.dart';
-import 'package:pilll/features/record/components/announcement_bar/components/user_survey.dart';
 import 'package:pilll/features/record/components/announcement_bar/components/premium_trial_limit.dart';
 import 'package:pilll/features/record/components/announcement_bar/components/recommend_signup.dart';
 import 'package:pilll/features/record/components/announcement_bar/components/recommend_signup_premium.dart';
@@ -46,10 +45,6 @@ class AnnouncementBar extends HookConsumerWidget {
         ref.watch(boolSharedPreferencesProvider(BoolKey.recommendedSignupNotificationIsAlreadyShow)).valueOrNull ?? false;
     final recommendedSignupNotificationIsAlreadyShowNotifier =
         ref.watch(boolSharedPreferencesProvider(BoolKey.recommendedSignupNotificationIsAlreadyShow).notifier);
-    final userAnsweredSurvey = ref.watch(boolSharedPreferencesProvider(BoolKey.userAnsweredSurvey)).valueOrNull ?? false;
-    final userAnsweredSurveyNotifier = ref.watch(boolSharedPreferencesProvider(BoolKey.userAnsweredSurvey).notifier);
-    final userClosedSurvey = ref.watch(boolSharedPreferencesProvider(BoolKey.userClosedSurvey)).valueOrNull ?? false;
-    final userClosedSurveyNotifier = ref.watch(boolSharedPreferencesProvider(BoolKey.userClosedSurvey).notifier);
     final discountEntitlementDeadlineDate = premiumAndTrial.discountEntitlementDeadlineDate;
     final isOverDiscountDeadline = ref.watch(isOverDiscountDeadlineProvider(discountEntitlementDeadlineDate));
     final priceUpAnnouncementIsAlreadyShow = ref.watch(boolSharedPreferencesProvider(BoolKey.priceUpAnnouncementIsAlreadyShow)).valueOrNull ?? false;
