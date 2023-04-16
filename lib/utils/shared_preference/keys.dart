@@ -5,6 +5,8 @@ extension BoolKey on String {
   static const isAlreadyShowDemography = "isAlreadyShowDemography";
   static const isAlreadyDoneDemography = "isAlreadyDoneDemography";
   static const isAlreadyShowPremiumSurvey = "isAlreadyShowPremiumSurvey";
+  static const isAlreadyAnsweredPreStoreReviewModal = "isAlreadyAnsweredPreStoreReviewModal";
+  static const isPreStoreReviewGoodAnswer = "isPreStoreReviewGoodAnswer";
   static const migrateFrom132IsShown = "migrate_from_132_is_shown_9";
 }
 
