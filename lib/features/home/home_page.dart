@@ -11,7 +11,6 @@ import 'package:pilll/features/settings/components/churn/churn_survey_complete_d
 import 'package:pilll/features/store_review/pre_store_review_modal.dart';
 import 'package:pilll/provider/premium_and_trial.codegen.dart';
 import 'package:pilll/provider/shared_preference.dart';
-import 'package:pilll/provider/shared_preferences.dart';
 import 'package:pilll/utils/analytics.dart';
 import 'package:pilll/provider/user.dart';
 import 'package:pilll/features/calendar/calendar_page.dart';
@@ -24,6 +23,7 @@ import 'package:pilll/utils/push_notification.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:pilll/utils/shared_preference/keys.dart';
+import 'package:shared_preferences/shared_preferences.dart';
 
 enum HomePageTabType { record, menstruation, calendar, setting }
 
@@ -45,22 +45,18 @@ class HomePage extends HookConsumerWidget {
       return null;
     }, [user.valueOrNull]);
 
-    return AsyncValueGroup.group6(
+    return AsyncValueGroup.group4(
       user,
       ref.watch(premiumAndTrialProvider),
       ref.watch(shouldShowMigrationInformationProvider),
-      ref.watch(boolSharedPreferencesProvider(BoolKey.isAlreadyShowPremiumSurvey)),
-      ref.watch(boolSharedPreferencesProvider(BoolKey.isAlreadyAnsweredPreStoreReviewModal)),
-      ref.watch(intSharedPreferencesProvider(IntKey.totalCountOfActionForTakenPill)),
+      ref.watch(sharedPreferenceProvider),
     ).when(
       data: (data) {
         return HomePageBody(
           user: data.t1,
           premiumAndTrial: data.t2,
           shouldShowMigrateInfo: data.t3,
-          isAlreadyShowPremiumSurvey: data.t4 ?? false,
-          isAlreadyAnsweredPreStoreReviewModal: data.t5 ?? false,
-          totalCountOfActionForTakenPill: data.t6 ?? 0,
+          sharedPreferences: data.t4,
         );
       },
       error: (error, stackTrace) => UniversalErrorPage(
@@ -77,19 +73,11 @@ class HomePageBody extends HookConsumerWidget {
   final User user;
   final PremiumAndTrial premiumAndTrial;
   final bool shouldShowMigrateInfo;
-  final bool isAlreadyShowPremiumSurvey;
-  final bool isAlreadyAnsweredPreStoreReviewModal;
-  final int totalCountOfActionForTakenPill;
+  final SharedPreferences sharedPreferences;
 
-  const HomePageBody({
-    Key? key,
-    required this.user,
-    required this.shouldShowMigrateInfo,
-    required this.premiumAndTrial,
-    required this.isAlreadyShowPremiumSurvey,
-    required this.isAlreadyAnsweredPreStoreReviewModal,
-    required this.totalCountOfActionForTakenPill,
-  }) : super(key: key);
+  const HomePageBody(
+      {Key? key, required this.user, required this.shouldShowMigrateInfo, required this.premiumAndTrial, required this.sharedPreferences})
+      : super(key: key);
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {
@@ -100,11 +88,23 @@ class HomePageBody extends HookConsumerWidget {
       tabIndex.value = tabController.index;
       _screenTracking(tabController.index);
     });
-    final isAlreadyShowPremiumSurveyNotifier = ref.watch(boolSharedPreferencesProvider(BoolKey.isAlreadyShowPremiumSurvey).notifier);
-    final isAlreadyAnsweredPreStoreReviewModalNotifier =
-        ref.watch(boolSharedPreferencesProvider(BoolKey.isAlreadyAnsweredPreStoreReviewModal).notifier);
+    final isAlreadyShowPremiumSurvey = sharedPreferences.getBool(BoolKey.isAlreadyShowPremiumSurvey) ?? false;
+    final isAlreadyAnsweredPreStoreReviewModal = sharedPreferences.getBool(BoolKey.isAlreadyAnsweredPreStoreReviewModal) ?? false;
+    final totalCountOfActionForTakenPill = sharedPreferences.getInt(IntKey.totalCountOfActionForTakenPill) ?? 0;
     final disableShouldAskCancelReason = ref.watch(disableShouldAskCancelReasonProvider);
     final shouldAskCancelReason = user.shouldAskCancelReason;
+    final shouldShowPremiumFunctionSurvey = () {
+      if (premiumAndTrial.trialIsAlreadyBegin) {
+        return false;
+      }
+      if (premiumAndTrial.premiumOrTrial) {
+        return false;
+      }
+      if (premiumAndTrial.isNotYetStartTrial) {
+        return false;
+      }
+      return !isAlreadyShowPremiumSurvey;
+    }();
 
     Future.microtask(() async {
       if (shouldShowMigrateInfo) {
@@ -114,8 +114,8 @@ class HomePageBody extends HookConsumerWidget {
             builder: (context) {
               return const MigrateInfo();
             });
-      } else if (_shouldShowPremiumFunctionSurvey) {
-        isAlreadyShowPremiumSurveyNotifier.set(true);
+      } else if (shouldShowPremiumFunctionSurvey) {
+        sharedPreferences.setBool(BoolKey.isAlreadyShowPremiumSurvey, true);
         Navigator.of(context).push(PremiumFunctionSurveyPageRoutes.route());
       } else if (shouldAskCancelReason) {
         await Navigator.of(context).push(
@@ -133,7 +133,7 @@ class HomePageBody extends HookConsumerWidget {
           backgroundColor: Colors.transparent,
           builder: (_) => const PreStoreReviewModal(),
         );
-        isAlreadyAnsweredPreStoreReviewModalNotifier.set(true);
+        sharedPreferences.setBool(BoolKey.isAlreadyAnsweredPreStoreReviewModal, true);
       }
     });
 
@@ -201,19 +201,6 @@ class HomePageBody extends HookConsumerWidget {
     analytics.setCurrentScreen(
       screenName: HomePageTabType.values[index].screenName,
     );
-  }
-
-  bool get _shouldShowPremiumFunctionSurvey {
-    if (premiumAndTrial.trialIsAlreadyBegin) {
-      return false;
-    }
-    if (premiumAndTrial.premiumOrTrial) {
-      return false;
-    }
-    if (premiumAndTrial.isNotYetStartTrial) {
-      return false;
-    }
-    return !isAlreadyShowPremiumSurvey;
   }
 }
 
