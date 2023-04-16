@@ -22,14 +22,6 @@ class HomePage extends HookConsumerWidget {
     final user = ref.watch(userProvider);
     final registerRemotePushNotificationToken = ref.watch(registerRemotePushNotificationTokenProvider);
 
-    final tabIndex = useState(0);
-    final ticker = useSingleTickerProvider();
-    final tabController = useTabController(initialLength: HomePageTabType.values.length, vsync: ticker);
-    tabController.addListener(() {
-      tabIndex.value = tabController.index;
-      _screenTracking(tabController.index);
-    });
-
     useEffect(() {
       final userValue = user.valueOrNull;
       if (userValue != null) {
@@ -39,6 +31,25 @@ class HomePage extends HookConsumerWidget {
       }
       return null;
     }, [user.valueOrNull]);
+
+    return const HomePageBody();
+  }
+}
+
+class HomePageBody extends HookConsumerWidget {
+  const HomePageBody({
+    Key? key,
+  }) : super(key: key);
+
+  @override
+  Widget build(BuildContext context, WidgetRef ref) {
+    final tabIndex = useState(0);
+    final ticker = useSingleTickerProvider();
+    final tabController = useTabController(initialLength: HomePageTabType.values.length, vsync: ticker);
+    tabController.addListener(() {
+      tabIndex.value = tabController.index;
+      _screenTracking(tabController.index);
+    });
 
     return DefaultTabController(
       length: HomePageTabType.values.length,
