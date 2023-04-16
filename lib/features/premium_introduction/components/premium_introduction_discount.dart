@@ -42,7 +42,7 @@ class PremiumIntroductionDiscountRow extends HookConsumerWidget {
         mainAxisSize: MainAxisSize.min,
         children: [
           const Text(
-            "\ 値上げの今がチャンス /",
+            "\\ 値上げの今がチャンス /",
             style: TextStyle(
               fontWeight: FontWeight.w700,
               fontFamily: FontFamily.japanese,
