@@ -88,6 +88,7 @@ class HomePageBody extends HookConsumerWidget {
       tabIndex.value = tabController.index;
       _screenTracking(tabController.index);
     });
+
     final isAlreadyShowPremiumSurvey = sharedPreferences.getBool(BoolKey.isAlreadyShowPremiumSurvey) ?? false;
     final isAlreadyAnsweredPreStoreReviewModal = sharedPreferences.getBool(BoolKey.isAlreadyAnsweredPreStoreReviewModal) ?? false;
     final totalCountOfActionForTakenPill = sharedPreferences.getInt(IntKey.totalCountOfActionForTakenPill) ?? 0;
