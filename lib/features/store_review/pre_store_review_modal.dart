@@ -183,7 +183,8 @@ class _ThanksDialog extends StatelessWidget {
             );
 
             // ignore: use_build_context_synchronously
-            showDialog(context: context, builder: (_) => const _CompleteDialog());
+            await showDialog(context: context, builder: (_) => const _CompleteDialog());
+            navigator.pop();
           },
         ),
         AlertButton(
