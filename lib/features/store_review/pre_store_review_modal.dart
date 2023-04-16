@@ -1,4 +1,3 @@
-import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_hooks/flutter_hooks.dart';
 import 'package:flutter_svg/svg.dart';
@@ -7,6 +6,7 @@ import 'package:pilll/components/atoms/button.dart';
 import 'package:pilll/components/atoms/color.dart';
 import 'package:pilll/components/atoms/font.dart';
 import 'package:pilll/components/atoms/text_color.dart';
+import 'package:pilll/components/page/web_view.dart';
 
 enum PreStoreReviewModalSelection { good, bad }
 
@@ -16,6 +16,7 @@ class PreStoreReviewModal extends HookConsumerWidget {
   @override
   Widget build(BuildContext context, WidgetRef ref) {
     final selection = useState<PreStoreReviewModalSelection?>(null);
+    final selectionValue = selection.value;
 
     return Container(
       padding: const EdgeInsets.all(20),
@@ -44,9 +45,17 @@ class PreStoreReviewModal extends HookConsumerWidget {
                 _goodOrBad(target: PreStoreReviewModalSelection.bad, selection: selection),
               ],
             ),
-            if (selection.value != null) ...[
+            if (selectionValue != null) ...[
               const Spacer(),
-              PrimaryButton(onPressed: () async {}, text: "決定"),
+              PrimaryButton(
+                onPressed: () async {
+                  showDialog(
+                    context: context,
+                    builder: (_) => ThanksDialog(goodOrBad: selectionValue),
+                  );
+                },
+                text: "決定",
+              ),
             ],
           ],
         ),
@@ -87,6 +96,78 @@ class PreStoreReviewModal extends HookConsumerWidget {
           ),
         ],
       ),
+    );
+  }
+}
+
+class ThanksDialog extends StatelessWidget {
+  final PreStoreReviewModalSelection goodOrBad;
+
+  const ThanksDialog({
+    Key? key,
+    required this.goodOrBad,
+  }) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    final navigator = Navigator.of(context);
+    return AlertDialog(
+      title: const Icon(
+        Icons.thumb_up,
+        color: PilllColors.primary,
+      ),
+      content: Column(
+        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+        mainAxisSize: MainAxisSize.min,
+        children: const [
+          Text("ご協力ありがとうございます",
+              style: TextStyle(
+                fontFamily: FontFamily.japanese,
+                fontWeight: FontWeight.w600,
+                fontSize: 16,
+                color: TextColor.main,
+              )),
+          SizedBox(
+            height: 15,
+          ),
+          Text("よろしければサービス改善のためのアンケートにもご協力ください",
+              style: TextStyle(
+                fontFamily: FontFamily.japanese,
+                fontWeight: FontWeight.w300,
+                fontSize: 14,
+                color: TextColor.main,
+              )),
+        ],
+      ),
+      actions: <Widget>[
+        AlertButton(
+          text: "協力する",
+          onPressed: () async {
+            final String uri;
+            switch (goodOrBad) {
+              case PreStoreReviewModalSelection.good:
+                uri = "https://docs.google.com/forms/d/e/1FAIpQLScljawYCa-f13D94TvJXOoBQ_6lLBtwSpML5c55Zr115ukgeQ/viewform";
+                break;
+              case PreStoreReviewModalSelection.bad:
+                uri = "https://docs.google.com/forms/d/e/1FAIpQLScdNJ5VsiWCNLk7LvSUJpb8ps0DHFnsvXVH8KbPWp9XDtuVMw/viewform";
+                break;
+            }
+            await Navigator.of(context).push(
+              WebViewPageRoute.route(
+                title: "サービス改善アンケート",
+                url: uri,
+              ),
+            );
+            navigator.pop();
+          },
+        ),
+        AlertButton(
+          text: "しない",
+          onPressed: () async {
+            navigator.pop();
+          },
+        ),
+      ],
     );
   }
 }
