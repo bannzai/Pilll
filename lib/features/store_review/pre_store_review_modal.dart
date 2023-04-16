@@ -7,7 +7,9 @@ import 'package:pilll/components/atoms/color.dart';
 import 'package:pilll/components/atoms/font.dart';
 import 'package:pilll/components/atoms/text_color.dart';
 import 'package:pilll/components/page/web_view.dart';
+import 'package:pilll/provider/shared_preferences.dart';
 import 'package:pilll/utils/analytics.dart';
+import 'package:pilll/utils/shared_preference/keys.dart';
 
 enum PreStoreReviewModalSelection { good, bad }
 
@@ -19,6 +21,8 @@ class PreStoreReviewModal extends HookConsumerWidget {
     final selection = useState<PreStoreReviewModalSelection?>(null);
     final selectionValue = selection.value;
     final navigator = Navigator.of(context);
+
+    final isPreStoreReviewGoodAnswerNotifier = ref.watch(boolSharedPreferencesProvider(BoolKey.isPreStoreReviewGoodAnswer).notifier);
 
     return Container(
       padding: const EdgeInsets.all(20),
@@ -54,6 +58,7 @@ class PreStoreReviewModal extends HookConsumerWidget {
                   switch (selectionValue) {
                     case PreStoreReviewModalSelection.good:
                       analytics.logEvent(name: "submit_pre_store_review_modal_good");
+                      isPreStoreReviewGoodAnswerNotifier.set(true);
                       break;
                     case PreStoreReviewModalSelection.bad:
                       analytics.logEvent(name: "submit_pre_store_review_modal_bad");
@@ -134,6 +139,7 @@ class _ThanksDialog extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final navigator = Navigator.of(context);
+
     return AlertDialog(
       title: const Icon(
         Icons.thumb_up,

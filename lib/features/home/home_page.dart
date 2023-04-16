@@ -8,6 +8,7 @@ import 'package:pilll/features/error/universal_error_page.dart';
 import 'package:pilll/features/initial_setting/migrate_info.dart';
 import 'package:pilll/features/premium_function_survey/premium_function_survey_page.dart';
 import 'package:pilll/features/settings/components/churn/churn_survey_complete_dialog.dart';
+import 'package:pilll/features/store_review/pre_store_review_modal.dart';
 import 'package:pilll/provider/premium_and_trial.codegen.dart';
 import 'package:pilll/provider/shared_preference.dart';
 import 'package:pilll/provider/shared_preferences.dart';
@@ -44,11 +45,13 @@ class HomePage extends HookConsumerWidget {
       return null;
     }, [user.valueOrNull]);
 
-    return AsyncValueGroup.group4(
+    return AsyncValueGroup.group6(
       user,
       ref.watch(premiumAndTrialProvider),
       ref.watch(shouldShowMigrationInformationProvider),
       ref.watch(boolSharedPreferencesProvider(BoolKey.isAlreadyShowPremiumSurvey)),
+      ref.watch(boolSharedPreferencesProvider(BoolKey.isAlreadyAnsweredPreStoreReviewModal)),
+      ref.watch(intSharedPreferencesProvider(IntKey.totalCountOfActionForTakenPill)),
     ).when(
       data: (data) {
         return HomePageBody(
@@ -56,6 +59,8 @@ class HomePage extends HookConsumerWidget {
           premiumAndTrial: data.t2,
           shouldShowMigrateInfo: data.t3,
           isAlreadyShowPremiumSurvey: data.t4 ?? false,
+          isAlreadyAnsweredPreStoreReviewModal: data.t5 ?? false,
+          totalCountOfActionForTakenPill: data.t6 ?? 0,
         );
       },
       error: (error, stackTrace) => UniversalErrorPage(
@@ -73,6 +78,8 @@ class HomePageBody extends HookConsumerWidget {
   final PremiumAndTrial premiumAndTrial;
   final bool shouldShowMigrateInfo;
   final bool isAlreadyShowPremiumSurvey;
+  final bool isAlreadyAnsweredPreStoreReviewModal;
+  final int totalCountOfActionForTakenPill;
 
   const HomePageBody({
     Key? key,
@@ -80,6 +87,8 @@ class HomePageBody extends HookConsumerWidget {
     required this.shouldShowMigrateInfo,
     required this.premiumAndTrial,
     required this.isAlreadyShowPremiumSurvey,
+    required this.isAlreadyAnsweredPreStoreReviewModal,
+    required this.totalCountOfActionForTakenPill,
   }) : super(key: key);
 
   @override
@@ -92,6 +101,8 @@ class HomePageBody extends HookConsumerWidget {
       _screenTracking(tabController.index);
     });
     final isAlreadyShowPremiumSurveyNotifier = ref.watch(boolSharedPreferencesProvider(BoolKey.isAlreadyShowPremiumSurvey).notifier);
+    final isAlreadyAnsweredPreStoreReviewModalNotifier =
+        ref.watch(boolSharedPreferencesProvider(BoolKey.isAlreadyAnsweredPreStoreReviewModal).notifier);
     final disableShouldAskCancelReason = ref.watch(disableShouldAskCancelReasonProvider);
     final shouldAskCancelReason = user.shouldAskCancelReason;
 
@@ -116,6 +127,13 @@ class HomePageBody extends HookConsumerWidget {
         disableShouldAskCancelReason();
         // ignore: use_build_context_synchronously
         showDialog(context: context, builder: (_) => const ChurnSurveyCompleteDialog());
+      } else if (!isAlreadyAnsweredPreStoreReviewModal && totalCountOfActionForTakenPill > 10) {
+        await showModalBottomSheet(
+          context: context,
+          backgroundColor: Colors.transparent,
+          builder: (_) => const PreStoreReviewModal(),
+        );
+        isAlreadyAnsweredPreStoreReviewModalNotifier.set(true);
       }
     });
 
