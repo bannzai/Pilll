@@ -50,6 +50,7 @@ class PremiumIntroductionDiscountRow extends HookConsumerWidget {
               color: TextColor.discount,
             ),
           ),
+          const SizedBox(height: 8),
           const Text(
             "今なら限定価格でずっと使える",
             textAlign: TextAlign.center,
