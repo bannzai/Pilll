@@ -7,6 +7,7 @@ import 'package:pilll/components/atoms/color.dart';
 import 'package:pilll/components/atoms/font.dart';
 import 'package:pilll/components/atoms/text_color.dart';
 import 'package:pilll/components/page/web_view.dart';
+import 'package:pilll/utils/analytics.dart';
 
 enum PreStoreReviewModalSelection { good, bad }
 
@@ -17,6 +18,7 @@ class PreStoreReviewModal extends HookConsumerWidget {
   Widget build(BuildContext context, WidgetRef ref) {
     final selection = useState<PreStoreReviewModalSelection?>(null);
     final selectionValue = selection.value;
+    final navigator = Navigator.of(context);
 
     return Container(
       padding: const EdgeInsets.all(20),
@@ -49,10 +51,20 @@ class PreStoreReviewModal extends HookConsumerWidget {
               const Spacer(),
               PrimaryButton(
                 onPressed: () async {
-                  showDialog(
+                  switch (selectionValue) {
+                    case PreStoreReviewModalSelection.good:
+                      analytics.logEvent(name: "submit_pre_store_review_modal_good");
+                      break;
+                    case PreStoreReviewModalSelection.bad:
+                      analytics.logEvent(name: "submit_pre_store_review_modal_bad");
+                      break;
+                  }
+
+                  await showDialog(
                     context: context,
                     builder: (_) => ThanksDialog(goodOrBad: selectionValue),
                   );
+                  navigator.pop();
                 },
                 text: "決定",
               ),
@@ -66,7 +78,18 @@ class PreStoreReviewModal extends HookConsumerWidget {
   Widget _goodOrBad({required PreStoreReviewModalSelection target, required ValueNotifier<PreStoreReviewModalSelection?> selection}) {
     final isSelected = target == selection.value;
     return GestureDetector(
-      onTap: () => selection.value = target,
+      onTap: () {
+        switch (target) {
+          case PreStoreReviewModalSelection.good:
+            analytics.logEvent(name: "pre_store_review_modal_good");
+            break;
+          case PreStoreReviewModalSelection.bad:
+            analytics.logEvent(name: "pre_store_review_modal_bad");
+            break;
+        }
+
+        selection.value = target;
+      },
       child: Column(
         children: [
           Container(
@@ -158,13 +181,61 @@ class ThanksDialog extends StatelessWidget {
                 url: uri,
               ),
             );
-            navigator.pop();
+
+            // ignore: use_build_context_synchronously
+            showDialog(context: context, builder: (_) => const CompleteDialog());
           },
         ),
         AlertButton(
           text: "しない",
           onPressed: () async {
             navigator.pop();
+          },
+        ),
+      ],
+    );
+  }
+}
+
+class CompleteDialog extends StatelessWidget {
+  const CompleteDialog({
+    Key? key,
+  }) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    return AlertDialog(
+      shape: const RoundedRectangleBorder(borderRadius: BorderRadius.all(Radius.circular(20.0))),
+      title: const Text(
+        "ご協力頂きありがとうございます",
+        style: TextStyle(
+          fontFamily: FontFamily.japanese,
+          fontSize: 17,
+          fontWeight: FontWeight.w600,
+          color: TextColor.main,
+        ),
+        textAlign: TextAlign.center,
+      ),
+      content: Column(
+        mainAxisSize: MainAxisSize.min,
+        children: const [
+          Text(
+            "いただいた意見は今後の改善へと活用させていただきます。",
+            style: TextStyle(
+              fontFamily: FontFamily.japanese,
+              fontSize: 14,
+              fontWeight: FontWeight.w300,
+              color: TextColor.main,
+            ),
+          ),
+        ],
+      ),
+      actions: <Widget>[
+        AlertButton(
+          text: "閉じる",
+          onPressed: () async {
+            analytics.logEvent(name: "close_pre_store_review_modal_complete_dialog");
+            Navigator.of(context).pop();
           },
         ),
       ],
