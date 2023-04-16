@@ -62,7 +62,7 @@ class PreStoreReviewModal extends HookConsumerWidget {
 
                   await showDialog(
                     context: context,
-                    builder: (_) => ThanksDialog(goodOrBad: selectionValue),
+                    builder: (_) => _ThanksDialog(goodOrBad: selectionValue),
                   );
                   navigator.pop();
                 },
@@ -123,10 +123,10 @@ class PreStoreReviewModal extends HookConsumerWidget {
   }
 }
 
-class ThanksDialog extends StatelessWidget {
+class _ThanksDialog extends StatelessWidget {
   final PreStoreReviewModalSelection goodOrBad;
 
-  const ThanksDialog({
+  const _ThanksDialog({
     Key? key,
     required this.goodOrBad,
   }) : super(key: key);
@@ -183,7 +183,7 @@ class ThanksDialog extends StatelessWidget {
             );
 
             // ignore: use_build_context_synchronously
-            showDialog(context: context, builder: (_) => const CompleteDialog());
+            showDialog(context: context, builder: (_) => const _CompleteDialog());
           },
         ),
         AlertButton(
@@ -197,8 +197,8 @@ class ThanksDialog extends StatelessWidget {
   }
 }
 
-class CompleteDialog extends StatelessWidget {
-  const CompleteDialog({
+class _CompleteDialog extends StatelessWidget {
+  const _CompleteDialog({
     Key? key,
   }) : super(key: key);
 
