@@ -112,40 +112,6 @@ class PremiumIntroductionDiscountRow extends HookConsumerWidget {
                 ],
               ),
               const SizedBox(width: 16),
-              Column(
-                crossAxisAlignment: CrossAxisAlignment.center,
-                children: [
-                  const Text(
-                    "もうすぐ値上げ",
-                    textAlign: TextAlign.center,
-                    style: TextStyle(
-                      fontWeight: FontWeight.w400,
-                      fontSize: 12,
-                      fontFamily: FontFamily.japanese,
-                      color: TextColor.black,
-                    ),
-                  ),
-                  const SizedBox(height: 4),
-                  Stack(
-                    children: [
-                      const Text(
-                        "¥600",
-                        textAlign: TextAlign.center,
-                        style: TextStyle(
-                          fontWeight: FontWeight.w700,
-                          fontSize: 28,
-                          fontFamily: FontFamily.japanese,
-                          color: TextColor.main,
-                        ),
-                      ),
-                      Positioned(
-                        left: 24,
-                        child: SvgPicture.asset("images/strikethrough.svg"),
-                      ),
-                    ],
-                  ),
-                ],
-              ),
             ],
           ),
           const SizedBox(height: 8),
