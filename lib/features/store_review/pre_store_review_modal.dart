@@ -8,7 +8,6 @@ import 'package:pilll/components/atoms/font.dart';
 import 'package:pilll/components/atoms/text_color.dart';
 import 'package:pilll/components/page/web_view.dart';
 import 'package:pilll/provider/shared_preference.dart';
-import 'package:pilll/provider/shared_preferences.dart';
 import 'package:pilll/utils/analytics.dart';
 import 'package:pilll/utils/shared_preference/keys.dart';
 
