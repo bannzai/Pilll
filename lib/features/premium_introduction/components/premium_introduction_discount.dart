@@ -109,6 +109,29 @@ class PremiumIntroductionDiscountRow extends HookConsumerWidget {
                       ),
                     ],
                   ),
+                  const SizedBox(height: 12),
+                  Row(
+                    children: const [
+                      Text(
+                        "6月以降に価格改定のため",
+                        style: TextStyle(
+                          fontFamily: FontFamily.japanese,
+                          fontSize: 14,
+                          fontWeight: FontWeight.w400,
+                          color: TextColor.main,
+                        ),
+                      ),
+                      Text(
+                        "「¥600/月」",
+                        style: TextStyle(
+                          fontFamily: FontFamily.japanese,
+                          fontSize: 14,
+                          fontWeight: FontWeight.w700,
+                          color: TextColor.main,
+                        ),
+                      ),
+                    ],
+                  )
                 ],
               ),
               const SizedBox(width: 16),
