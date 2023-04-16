@@ -55,9 +55,6 @@ class PreStoreReviewModal extends HookConsumerWidget {
       onTap: () => selection.value = target,
       child: Column(
         children: [
-          Text(target == PreStoreReviewModalSelection.good ? "満足している" : "満足では無い",
-              style: const TextStyle(color: PilllColors.primary, fontWeight: FontWeight.bold, fontFamily: FontFamily.japanese)),
-          const SizedBox(height: 10),
           Container(
             padding: const EdgeInsets.all(20),
             decoration: BoxDecoration(
@@ -68,11 +65,20 @@ class PreStoreReviewModal extends HookConsumerWidget {
               ),
               borderRadius: BorderRadius.circular(10),
             ),
-            child: SvgPicture.asset(target == PreStoreReviewModalSelection.good ? "images/laugh.svg" : "images/angry.svg",
-                colorFilter: ColorFilter.mode(
-                  isSelected ? PilllColors.primary : Colors.grey,
-                  BlendMode.srcIn,
-                )),
+            child: Row(
+              children: [
+                SvgPicture.asset(
+                  target == PreStoreReviewModalSelection.good ? "images/laugh.svg" : "images/angry.svg",
+                  colorFilter: ColorFilter.mode(
+                    isSelected ? PilllColors.primary : Colors.grey,
+                    BlendMode.srcIn,
+                  ),
+                ),
+                const SizedBox(height: 16),
+                Text(target == PreStoreReviewModalSelection.good ? "満足している" : "満足では無い",
+                    style: const TextStyle(color: PilllColors.primary, fontWeight: FontWeight.bold, fontFamily: FontFamily.japanese)),
+              ],
+            ),
           ),
         ],
       ),
