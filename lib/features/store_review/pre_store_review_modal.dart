@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_hooks/flutter_hooks.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
+import 'package:pilll/components/atoms/button.dart';
 import 'package:pilll/components/atoms/color.dart';
 import 'package:pilll/components/atoms/font.dart';
 import 'package:pilll/components/atoms/text_color.dart';
@@ -18,7 +19,7 @@ class PreStoreReviewModal extends HookConsumerWidget {
 
     return Container(
       padding: const EdgeInsets.all(20),
-      height: 300,
+      height: 240,
       color: Colors.white,
       child: SafeArea(
         child: Column(
@@ -43,6 +44,10 @@ class PreStoreReviewModal extends HookConsumerWidget {
                 _goodOrBad(target: PreStoreReviewModalSelection.bad, selection: selection),
               ],
             ),
+            if (selection.value != null) ...[
+              const Spacer(),
+              PrimaryButton(onPressed: () async {}, text: "決定"),
+            ],
           ],
         ),
       ),
