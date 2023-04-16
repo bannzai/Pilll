@@ -42,6 +42,15 @@ class PremiumIntroductionDiscountRow extends HookConsumerWidget {
         mainAxisSize: MainAxisSize.min,
         children: [
           const Text(
+            "\ 値上げの今がチャンス /",
+            style: TextStyle(
+              fontWeight: FontWeight.w700,
+              fontFamily: FontFamily.japanese,
+              fontSize: 20,
+              color: TextColor.discount,
+            ),
+          ),
+          const Text(
             "今なら限定価格でずっと使える",
             textAlign: TextAlign.center,
             style: TextStyle(
