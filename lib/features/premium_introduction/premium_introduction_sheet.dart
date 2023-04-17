@@ -104,7 +104,7 @@ class PremiumIntroductionSheetBody extends HookConsumerWidget {
                     ],
                     if (!premiumAndTrial.isPremium) ...[
                       const Text(
-                        "\\ 値上げの今がチャンス /",
+                        "\\ 値上げ前の今がチャンス /",
                         style: TextStyle(
                           fontWeight: FontWeight.w700,
                           fontFamily: FontFamily.japanese,
