@@ -22,9 +22,9 @@ class PremiumIntroductionDiscountRow extends HookConsumerWidget {
     final Duration? diff;
     final String? countdown;
     if (discountEntitlementDeadlineDate != null) {
-      final diff0 = ref.watch(durationToDiscountPriceDeadline(discountEntitlementDeadlineDate));
-      countdown = discountPriceDeadlineCountdownString(diff0);
-      diff = diff0;
+      final tmpDiff = ref.watch(durationToDiscountPriceDeadline(discountEntitlementDeadlineDate));
+      countdown = discountPriceDeadlineCountdownString(tmpDiff);
+      diff = tmpDiff;
     } else {
       countdown = null;
       diff = null;
@@ -63,32 +63,37 @@ class PremiumIntroductionDiscountRow extends HookConsumerWidget {
               ),
             ),
           const SizedBox(height: 20),
-          const Text(
-            "通常 月額プラン",
-            textAlign: TextAlign.center,
-            style: TextStyle(
-              fontWeight: FontWeight.w400,
-              fontSize: 12,
-              fontFamily: FontFamily.japanese,
-              color: TextColor.black,
-            ),
-          ),
-          const SizedBox(height: 4),
-          Stack(
+          Column(
+            crossAxisAlignment: CrossAxisAlignment.center,
             children: [
-              Text(
-                monthlyPremiumPackage.storeProduct.priceString,
+              const Text(
+                "通常 月額プラン",
                 textAlign: TextAlign.center,
-                style: const TextStyle(
-                  fontWeight: FontWeight.w700,
-                  fontSize: 28,
+                style: TextStyle(
+                  fontWeight: FontWeight.w400,
+                  fontSize: 12,
                   fontFamily: FontFamily.japanese,
-                  color: TextColor.main,
+                  color: TextColor.black,
                 ),
               ),
-              Positioned(
-                left: 24,
-                child: SvgPicture.asset("images/strikethrough.svg"),
+              const SizedBox(height: 4),
+              Stack(
+                children: [
+                  Text(
+                    monthlyPremiumPackage.storeProduct.priceString,
+                    textAlign: TextAlign.center,
+                    style: const TextStyle(
+                      fontWeight: FontWeight.w700,
+                      fontSize: 28,
+                      fontFamily: FontFamily.japanese,
+                      color: TextColor.main,
+                    ),
+                  ),
+                  Positioned(
+                    left: 24,
+                    child: SvgPicture.asset("images/strikethrough.svg"),
+                  ),
+                ],
               ),
             ],
           ),

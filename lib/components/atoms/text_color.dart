@@ -14,6 +14,7 @@ abstract class TextColor {
   static const Color primaryDarkBlue = Color(0xFF4E6287);
   static const Color link = primary;
   static const Color danger = PilllColors.red;
+  static const Color discount = Color(0xFFB00020);
 
   static Color highEmphasis(Color color) => color.withOpacity(0.87);
   static Color mediumEmphasis(Color color) => color.withOpacity(0.6);
