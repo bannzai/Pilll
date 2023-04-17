@@ -63,45 +63,38 @@ class PremiumIntroductionDiscountRow extends HookConsumerWidget {
               ),
             ),
           const SizedBox(height: 20),
-          Row(
-            mainAxisSize: MainAxisSize.min,
-            mainAxisAlignment: MainAxisAlignment.center,
+          Column(
+            crossAxisAlignment: CrossAxisAlignment.center,
             children: [
-              Column(
-                crossAxisAlignment: CrossAxisAlignment.center,
+              const Text(
+                "通常 月額プラン",
+                textAlign: TextAlign.center,
+                style: TextStyle(
+                  fontWeight: FontWeight.w400,
+                  fontSize: 12,
+                  fontFamily: FontFamily.japanese,
+                  color: TextColor.black,
+                ),
+              ),
+              const SizedBox(height: 4),
+              Stack(
                 children: [
-                  const Text(
-                    "通常 月額プラン",
+                  Text(
+                    monthlyPremiumPackage.storeProduct.priceString,
                     textAlign: TextAlign.center,
-                    style: TextStyle(
-                      fontWeight: FontWeight.w400,
-                      fontSize: 12,
+                    style: const TextStyle(
+                      fontWeight: FontWeight.w700,
+                      fontSize: 28,
                       fontFamily: FontFamily.japanese,
-                      color: TextColor.black,
+                      color: TextColor.main,
                     ),
                   ),
-                  const SizedBox(height: 4),
-                  Stack(
-                    children: [
-                      Text(
-                        monthlyPremiumPackage.storeProduct.priceString,
-                        textAlign: TextAlign.center,
-                        style: const TextStyle(
-                          fontWeight: FontWeight.w700,
-                          fontSize: 28,
-                          fontFamily: FontFamily.japanese,
-                          color: TextColor.main,
-                        ),
-                      ),
-                      Positioned(
-                        left: 24,
-                        child: SvgPicture.asset("images/strikethrough.svg"),
-                      ),
-                    ],
+                  Positioned(
+                    left: 24,
+                    child: SvgPicture.asset("images/strikethrough.svg"),
                   ),
                 ],
               ),
-              const SizedBox(width: 16),
             ],
           ),
           const SizedBox(height: 8),
