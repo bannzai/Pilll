@@ -17,7 +17,7 @@ class MenstruationRow extends HookConsumerWidget {
     return ListTile(
       title: Row(
         children: [
-          const Text("消退出血について",
+          const Text("生理について",
               style: TextStyle(
                 fontFamily: FontFamily.roboto,
                 fontWeight: FontWeight.w300,
@@ -27,7 +27,7 @@ class MenstruationRow extends HookConsumerWidget {
           if (_hasError) SvgPicture.asset("images/alert_24.svg", width: 24, height: 24),
         ],
       ),
-      subtitle: _hasError ? const Text("消退出血開始日のピル番号をご確認ください。現在選択しているピルシートタイプには存在しないピル番号が設定されています") : null,
+      subtitle: _hasError ? const Text("生理開始日のピル番号をご確認ください。現在選択しているピルシートタイプには存在しないピル番号が設定されています") : null,
       onTap: () {
         analytics.logEvent(
           name: "did_select_changing_about_menstruation",
