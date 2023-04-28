@@ -61,7 +61,7 @@ void main() {
 
         final actual = cardState(pillSheetGroup, menstruations.first, setting, calendarScheduledMenstruationBandModels);
 
-        expect(actual, MenstruationCardState(title: "消退出血開始日", scheduleDate: DateTime(2021, 04, 28), countdownString: "2日目"));
+        expect(actual, MenstruationCardState(title: "生理開始日", scheduleDate: DateTime(2021, 04, 28), countdownString: "2日目"));
       },
     );
     test(
@@ -140,7 +140,7 @@ void main() {
             .toList();
 
         final actual = cardState(pillSheetGroup, null, setting, calendarScheduledMenstruationBandModels);
-        expect(actual, MenstruationCardState(title: "消退出血予定日", scheduleDate: DateTime(2021, 05, 13), countdownString: "あと14日"));
+        expect(actual, MenstruationCardState(title: "生理予定日", scheduleDate: DateTime(2021, 05, 13), countdownString: "あと14日"));
       },
     );
     test(
@@ -189,7 +189,7 @@ void main() {
         final actual = cardState(pillSheetGroup, menstruations.first, setting, calendarScheduledMenstruationBandModels);
         expect(
           actual,
-          MenstruationCardState(title: "消退出血予定日", scheduleDate: DateTime(2021, 04, 28), countdownString: "消退出血予定：2日目"),
+          MenstruationCardState(title: "生理予定日", scheduleDate: DateTime(2021, 04, 28), countdownString: "生理予定：2日目"),
         );
       },
     );

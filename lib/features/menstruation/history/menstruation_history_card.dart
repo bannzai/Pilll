@@ -171,7 +171,7 @@ class MenstruationHistoryCardTitle extends StatelessWidget {
     return Row(
       children: [
         const Text(
-          "消退出血履歴",
+          "生理履歴",
           style: TextStyle(
             color: TextColor.main,
             fontFamily: FontFamily.japanese,
