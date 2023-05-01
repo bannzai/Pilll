@@ -129,7 +129,7 @@ class HomePageBody extends HookConsumerWidget {
         // ignore: use_build_context_synchronously
         showDialog(context: context, builder: (_) => const ChurnSurveyCompleteDialog());
       } else if (!isAlreadyAnsweredPreStoreReviewModal && totalCountOfActionForTakenPill > 10) {
-        await showModalBottomSheet(
+        showModalBottomSheet(
           context: context,
           backgroundColor: Colors.transparent,
           builder: (_) => const PreStoreReviewModal(),
