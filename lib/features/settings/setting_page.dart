@@ -231,8 +231,8 @@ class SettingPageBody extends StatelessWidget {
                             const text = '''
 Pilll ピル服用に特化したピルリマインダーアプリ
 
-iOS: https://onl.bz/e5376aj
-Android: https://onl.bz/ufJggPj''';
+iOS: https://onl.sc/piiY1A6
+Android: https://onl.sc/c9xnQUk''';
                             Clipboard.setData(const ClipboardData(text: text));
                             ScaffoldMessenger.of(context).showSnackBar(
                               const SnackBar(
