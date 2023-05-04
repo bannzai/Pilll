@@ -54,7 +54,6 @@ class RootPage extends HookConsumerWidget {
           }
         } catch (e, st) {
           errorLogger.recordError(e, st);
-          error.value = LaunchException("起動処理でエラーが発生しました\n${ErrorMessages.connection}\n詳細:", e);
         }
       }
 
@@ -94,7 +93,7 @@ class RootPage extends HookConsumerWidget {
         await showOKDialog(context, title: "アプリをアップデートしてください", message: "お使いのアプリのバージョンのアップデートをお願いしております。$storeNameから最新バージョンにアップデートしてください",
             ok: () async {
           await launchUrl(
-            Uri.parse(storeURL),
+            Uri.parse(forceUpdateStoreURL),
             mode: LaunchMode.externalApplication,
           );
         });
