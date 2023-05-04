@@ -54,7 +54,6 @@ class RootPage extends HookConsumerWidget {
           }
         } catch (e, st) {
           errorLogger.recordError(e, st);
-          error.value = LaunchException("起動処理でエラーが発生しました\n${ErrorMessages.connection}\n詳細:", e);
         }
       }
 
