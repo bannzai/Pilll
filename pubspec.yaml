@@ -82,7 +82,7 @@ dev_dependencies:
   flutter_test:
     sdk: flutter
   build_runner:
-  json_serializable:
+  json_serializable: ^6.6.2
   freezed: ^2.2.0
 
 # For information on the generic Dart part of this file, see the
