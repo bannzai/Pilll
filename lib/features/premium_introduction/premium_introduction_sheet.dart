@@ -124,7 +124,7 @@ class PremiumIntroductionSheetBody extends HookConsumerWidget {
                         mainAxisAlignment: MainAxisAlignment.center,
                         children: const [
                           Text(
-                            "7月以降に価格改定のため",
+                            "6月以降に価格改定のため",
                             style: TextStyle(
                               fontFamily: FontFamily.japanese,
                               fontSize: 14,
