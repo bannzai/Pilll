@@ -7,10 +7,4 @@
     <path
         android:fillColor="#DEECF6"
         android:pathData="M0,0,H108V108H0z" />
-    <path
-        android:name="slash"
-        android:pathData="M53.28,34.5l-8.95,39.16"
-        android:strokeColor="#5bb974"
-        android:strokeLineCap="square"
-        android:strokeWidth="2" />
 </vector>
