@@ -85,11 +85,11 @@ class AnnouncementBar extends HookConsumerWidget {
           if (!priceUpAnnouncementIsAlreadyShow) {
             return PriceUpAnnouncementBar(
               onTap: () {
-                analytics.logEvent(name: "tapped_price_up_bar");
+                analytics.logEvent(name: "tapped_price_up_bar_2");
                 launchUrl(Uri.parse("https://pilll.wraptas.site/bfce3a94f6bf44258e134c2aa69dbb6d"), mode: LaunchMode.inAppWebView);
               },
               onClose: () {
-                analytics.logEvent(name: "close_price_up_bar");
+                analytics.logEvent(name: "close_price_up_bar_2");
                 priceUpAnnouncementIsAlreadyShowNotifier.set(true);
               },
             );
@@ -145,11 +145,11 @@ class AnnouncementBar extends HookConsumerWidget {
           if (!priceUpAnnouncementIsAlreadyShow) {
             return PriceUpAnnouncementBar(
               onTap: () {
-                analytics.logEvent(name: "tapped_price_up_bar");
+                analytics.logEvent(name: "tapped_price_up_bar_2");
                 launchUrl(Uri.parse("https://pilll.wraptas.site/bfce3a94f6bf44258e134c2aa69dbb6d"), mode: LaunchMode.inAppWebView);
               },
               onClose: () {
-                analytics.logEvent(name: "close_price_up_bar");
+                analytics.logEvent(name: "close_price_up_bar_2");
                 priceUpAnnouncementIsAlreadyShowNotifier.set(true);
               },
             );
