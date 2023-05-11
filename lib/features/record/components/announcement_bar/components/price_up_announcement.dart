@@ -21,37 +21,42 @@ class PriceUpAnnouncementBar extends HookConsumerWidget {
       color: PilllColors.primary,
       child: GestureDetector(
         onTap: onTap,
-        child: Row(
-          crossAxisAlignment: CrossAxisAlignment.center,
+        child: Stack(
+          alignment: Alignment.center,
           children: [
-            IconButton(
-              alignment: Alignment.topLeft,
-              icon: const Icon(
-                Icons.close,
-                color: Colors.white,
-                size: 24,
-              ),
-              onPressed: onClose,
-              iconSize: 24,
-              padding: EdgeInsets.zero,
+            Row(
+              crossAxisAlignment: CrossAxisAlignment.center,
+              children: [
+                IconButton(
+                  alignment: Alignment.topLeft,
+                  icon: const Icon(
+                    Icons.close,
+                    color: Colors.white,
+                    size: 24,
+                  ),
+                  onPressed: onClose,
+                  iconSize: 24,
+                  padding: EdgeInsets.zero,
+                ),
+                const Spacer(),
+                const Spacer(),
+                IconButton(
+                  icon: SvgPicture.asset(
+                    "images/arrow_right.svg",
+                    colorFilter: const ColorFilter.mode(Colors.white, BlendMode.srcIn),
+                  ),
+                  onPressed: () {},
+                  iconSize: 24,
+                  padding: const EdgeInsets.all(8),
+                  alignment: Alignment.centerRight,
+                ),
+              ],
             ),
-            const Spacer(),
             const Text(
-              "プレミアムプランをお考えの方は\n今がお得です！タップして詳細を確認",
+              "値上げ前の今がチャンス！\nプレミアムプランでピルの飲み忘れを減らしましょう！",
               style: TextStyle(fontFamily: FontFamily.japanese, fontWeight: FontWeight.w700, fontSize: 12, color: TextColor.white),
               maxLines: 2,
               textAlign: TextAlign.center,
-            ),
-            const Spacer(),
-            IconButton(
-              icon: SvgPicture.asset(
-                "images/arrow_right.svg",
-                colorFilter: const ColorFilter.mode(Colors.white, BlendMode.srcIn),
-              ),
-              onPressed: () {},
-              iconSize: 24,
-              padding: const EdgeInsets.all(8),
-              alignment: Alignment.centerRight,
             ),
           ],
         ),
