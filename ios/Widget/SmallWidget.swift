@@ -23,7 +23,7 @@ struct SmallWidget: WidgetView {
           Spacer()
 
           Image("pilll-widget-icon")
-            .frame(width: 11, height: 16)
+            .frame(width: 14, height: 16)
         }
 
         Spacer()
@@ -90,7 +90,7 @@ struct SmallWidget: WidgetView {
         HStack {
           Spacer()
           Image("pilll-widget-icon")
-            .frame(width: 11, height: 16, alignment: .topTrailing)
+            .frame(width: 14, height: 16, alignment: .topTrailing)
             .padding(.horizontal, 8)
         }
         Spacer()
