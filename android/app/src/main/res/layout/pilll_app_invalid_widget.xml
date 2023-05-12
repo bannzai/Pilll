@@ -40,6 +40,6 @@
         android:layout_alignParentTop="true"
         android:paddingTop="10dp"
         android:paddingRight="10dp"
-        android:src="@drawable/pilll_widget_icon" />
+        android:src="@drawable/launch_splash" />
 
 </RelativeLayout>
