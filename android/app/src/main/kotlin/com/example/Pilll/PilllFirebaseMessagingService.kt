@@ -27,8 +27,6 @@ public class PilllFirebaseMessagingService: FirebaseMessagingService() {
         val body = remoteMessage.data["body"]
         val builder = NotificationCompat.Builder(this, getString(R.string.reminder_channel_id))
             .setSmallIcon(R.mipmap.ic_notification)
-            .setLargeIcon(BitmapFactory.decodeResource(resources,
-                R.mipmap.ic_notification))
             .setContentTitle(title)
             .setContentText(body)
             .setPriority(NotificationCompat.PRIORITY_DEFAULT)
