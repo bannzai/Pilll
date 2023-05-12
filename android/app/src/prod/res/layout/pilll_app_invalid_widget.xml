@@ -40,6 +40,6 @@
         android:layout_alignParentTop="true"
         android:paddingTop="10dp"
         android:paddingRight="10dp"
-        android:src="@drawable/launch_background" />
+        android:src="@drawable/launch_splash" />
 
 </RelativeLayout>
