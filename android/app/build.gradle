@@ -53,12 +53,12 @@ android {
 
     defaultConfig {
         // TODO: Specify your own unique Application ID (https://developer.android.com/studio/build/application-id.html).
-        applicationId ANDROID_APPLICATION_ID
+        applicationId "com.mizuki.Ohashi.Pilll.development"
         minSdkVersion 26
         targetSdkVersion 33
         versionCode flutterVersionCode.toInteger()
         versionName flutterVersionName
-        resValue "string", "app_name", APP_NAME
+        resValue "string", "app_name", "Pilll"
     }
 
     signingConfigs {
@@ -104,7 +104,7 @@ apply plugin: 'com.google.gms.google-services'
 apply plugin: 'com.google.firebase.crashlytics'
 
 task copySources(type: Copy) {
-   from "src/$FLAVOR/res"
+   from "src/dev/res"
    into 'src/main/res'
 }
 tasks.whenTaskAdded { task ->
@@ -112,7 +112,7 @@ tasks.whenTaskAdded { task ->
 }
 
 task selectGoogleServicesJson(type: Copy) {
-    from "src/$FLAVOR/google-services.json"
+    from "src/dev/google-services.json"
     into './'
 }
 tasks.whenTaskAdded { task ->
