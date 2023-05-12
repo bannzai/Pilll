@@ -23,9 +23,7 @@ struct SmallWidget: WidgetView {
           Spacer()
 
           Image("pilll-widget-icon")
-            .resizable()
-            .scaledToFit()
-            .frame(height: 16)
+            .frame(width: 11, height: 16)
         }
 
         Spacer()
@@ -92,10 +90,8 @@ struct SmallWidget: WidgetView {
         HStack {
           Spacer()
           Image("pilll-widget-icon")
-            .resizable()
-            .scaledToFit()
-            .frame(height: 16, alignment: .topTrailing)
-            .padding(.horizontal, 4)
+            .frame(width: 11, height: 16, alignment: .topTrailing)
+            .padding(.horizontal, 8)
         }
         Spacer()
         Text("プレミアムユーザーのみご利用できます")

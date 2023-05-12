@@ -10,9 +10,6 @@ struct AccessoryCircularWidget: WidgetView {
       case let .pill(todayPillNumber, alreadyTaken):
         VStack(spacing: 4) {
           Image("pilll-widget-icon")
-            .resizable()
-            .scaledToFit()
-            .frame(height: 16)
 
           if let todayPillNumber {
             if alreadyTaken {
@@ -30,10 +27,6 @@ struct AccessoryCircularWidget: WidgetView {
       case .userIsNotPremiumOrTrial:
         VStack(spacing: 4) {
           Image("pilll-widget-icon")
-            .resizable()
-            .scaledToFit()
-            .frame(height: 16)
-
 
           Image(systemName: "xmark")
             .font(.system(size: 13))
