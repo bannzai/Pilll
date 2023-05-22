@@ -68,7 +68,7 @@ dependencies:
   flutter_local_notifications: ^13.0.0
   webview_flutter: ^4.0.7
   collection:
-  crypto:
+  crypto: ^3.0.3
   timezone:
 
 dev_dependencies:
