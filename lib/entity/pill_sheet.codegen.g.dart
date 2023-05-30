@@ -60,6 +60,10 @@ _$_PillSheet _$$_PillSheetFromJson(Map<String, dynamic> json) => _$_PillSheet(
               .toList() ??
           const [],
       pillTakenCount: json['pillTakenCount'] ?? 1,
+      pills: (json['pills'] as List<dynamic>?)
+              ?.map((e) => Pill.fromJson(e as Map<String, dynamic>))
+              .toList() ??
+          const [],
     );
 
 Map<String, dynamic> _$$_PillSheetToJson(_$_PillSheet instance) {
@@ -82,5 +86,6 @@ Map<String, dynamic> _$$_PillSheetToJson(_$_PillSheet instance) {
   val['groupIndex'] = instance.groupIndex;
   val['restDurations'] = instance.restDurations.map((e) => e.toJson()).toList();
   val['pillTakenCount'] = instance.pillTakenCount;
+  val['pills'] = instance.pills.map((e) => e.toJson()).toList();
   return val;
 }

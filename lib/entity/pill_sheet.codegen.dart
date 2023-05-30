@@ -1,4 +1,5 @@
 import 'package:pilll/entity/firestore_id_generator.dart';
+import 'package:pilll/entity/pill.codegen.dart';
 import 'package:pilll/utils/datetime/date_range.dart';
 import 'package:pilll/entity/firestore_timestamp_converter.dart';
 import 'package:pilll/entity/pill_sheet_type.dart';
@@ -88,6 +89,7 @@ class PillSheet with _$PillSheet {
     @Default(0) int groupIndex,
     @Default([]) List<RestDuration> restDurations,
     @Default(1) pillTakenCount,
+    @Default([]) required List<Pill> pills,
   }) = _PillSheet;
   factory PillSheet.create(PillSheetType type) => PillSheet(
         id: firestoreIDGenerator(),

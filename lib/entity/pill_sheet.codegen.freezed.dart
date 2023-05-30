@@ -473,6 +473,7 @@ mixin _$PillSheet {
   int get groupIndex => throw _privateConstructorUsedError;
   List<RestDuration> get restDurations => throw _privateConstructorUsedError;
   dynamic get pillTakenCount => throw _privateConstructorUsedError;
+  List<Pill> get pills => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
@@ -500,7 +501,8 @@ abstract class $PillSheetCopyWith<$Res> {
           DateTime? deletedAt,
       int groupIndex,
       List<RestDuration> restDurations,
-      dynamic pillTakenCount});
+      dynamic pillTakenCount,
+      List<Pill> pills});
 
   $PillSheetTypeInfoCopyWith<$Res> get typeInfo;
 }
@@ -527,6 +529,7 @@ class _$PillSheetCopyWithImpl<$Res, $Val extends PillSheet>
     Object? groupIndex = null,
     Object? restDurations = null,
     Object? pillTakenCount = freezed,
+    Object? pills = null,
   }) {
     return _then(_value.copyWith(
       id: freezed == id
@@ -565,6 +568,10 @@ class _$PillSheetCopyWithImpl<$Res, $Val extends PillSheet>
           ? _value.pillTakenCount
           : pillTakenCount // ignore: cast_nullable_to_non_nullable
               as dynamic,
+      pills: null == pills
+          ? _value.pills
+          : pills // ignore: cast_nullable_to_non_nullable
+              as List<Pill>,
     ) as $Val);
   }
 
@@ -599,7 +606,8 @@ abstract class _$$_PillSheetCopyWith<$Res> implements $PillSheetCopyWith<$Res> {
           DateTime? deletedAt,
       int groupIndex,
       List<RestDuration> restDurations,
-      dynamic pillTakenCount});
+      dynamic pillTakenCount,
+      List<Pill> pills});
 
   @override
   $PillSheetTypeInfoCopyWith<$Res> get typeInfo;
@@ -625,6 +633,7 @@ class __$$_PillSheetCopyWithImpl<$Res>
     Object? groupIndex = null,
     Object? restDurations = null,
     Object? pillTakenCount = freezed,
+    Object? pills = null,
   }) {
     return _then(_$_PillSheet(
       id: freezed == id
@@ -661,6 +670,10 @@ class __$$_PillSheetCopyWithImpl<$Res>
               as List<RestDuration>,
       pillTakenCount:
           freezed == pillTakenCount ? _value.pillTakenCount! : pillTakenCount,
+      pills: null == pills
+          ? _value._pills
+          : pills // ignore: cast_nullable_to_non_nullable
+              as List<Pill>,
     ));
   }
 }
@@ -684,8 +697,10 @@ class _$_PillSheet extends _PillSheet {
           this.deletedAt,
       this.groupIndex = 0,
       final List<RestDuration> restDurations = const [],
-      this.pillTakenCount = 1})
+      this.pillTakenCount = 1,
+      required final List<Pill> pills = const []})
       : _restDurations = restDurations,
+        _pills = pills,
         super._();
 
   factory _$_PillSheet.fromJson(Map<String, dynamic> json) =>
@@ -732,10 +747,18 @@ class _$_PillSheet extends _PillSheet {
   @override
   @JsonKey()
   final dynamic pillTakenCount;
+  final List<Pill> _pills;
+  @override
+  @JsonKey()
+  List<Pill> get pills {
+    if (_pills is EqualUnmodifiableListView) return _pills;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(_pills);
+  }
 
   @override
   String toString() {
-    return 'PillSheet(id: $id, typeInfo: $typeInfo, beginingDate: $beginingDate, lastTakenDate: $lastTakenDate, createdAt: $createdAt, deletedAt: $deletedAt, groupIndex: $groupIndex, restDurations: $restDurations, pillTakenCount: $pillTakenCount)';
+    return 'PillSheet(id: $id, typeInfo: $typeInfo, beginingDate: $beginingDate, lastTakenDate: $lastTakenDate, createdAt: $createdAt, deletedAt: $deletedAt, groupIndex: $groupIndex, restDurations: $restDurations, pillTakenCount: $pillTakenCount, pills: $pills)';
   }
 
   @override
@@ -759,7 +782,8 @@ class _$_PillSheet extends _PillSheet {
             const DeepCollectionEquality()
                 .equals(other._restDurations, _restDurations) &&
             const DeepCollectionEquality()
-                .equals(other.pillTakenCount, pillTakenCount));
+                .equals(other.pillTakenCount, pillTakenCount) &&
+            const DeepCollectionEquality().equals(other._pills, _pills));
   }
 
   @JsonKey(ignore: true)
@@ -774,7 +798,8 @@ class _$_PillSheet extends _PillSheet {
       deletedAt,
       groupIndex,
       const DeepCollectionEquality().hash(_restDurations),
-      const DeepCollectionEquality().hash(pillTakenCount));
+      const DeepCollectionEquality().hash(pillTakenCount),
+      const DeepCollectionEquality().hash(_pills));
 
   @JsonKey(ignore: true)
   @override
@@ -806,7 +831,8 @@ abstract class _PillSheet extends PillSheet {
           final DateTime? deletedAt,
       final int groupIndex,
       final List<RestDuration> restDurations,
-      final dynamic pillTakenCount}) = _$_PillSheet;
+      final dynamic pillTakenCount,
+      required final List<Pill> pills}) = _$_PillSheet;
   const _PillSheet._() : super._();
 
   factory _PillSheet.fromJson(Map<String, dynamic> json) =
@@ -844,6 +870,8 @@ abstract class _PillSheet extends PillSheet {
   List<RestDuration> get restDurations;
   @override
   dynamic get pillTakenCount;
+  @override
+  List<Pill> get pills;
   @override
   @JsonKey(ignore: true)
   _$$_PillSheetCopyWith<_$_PillSheet> get copyWith =>
