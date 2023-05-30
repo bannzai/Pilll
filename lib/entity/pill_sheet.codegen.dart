@@ -91,13 +91,10 @@ class PillSheet with _$PillSheet {
     @Default(1) pillTakenCount,
     @Default([]) required List<Pill> pills,
   }) = _PillSheet;
-  factory PillSheet.create(PillSheetType type) => PillSheet(
-        id: firestoreIDGenerator(),
-        typeInfo: type.typeInfo,
-        beginingDate: today(),
-        lastTakenDate: null,
-        createdAt: now(),
-      );
+
+  @visibleForTesting
+  factory PillSheet.create(PillSheetType type) =>
+      PillSheet(id: firestoreIDGenerator(), typeInfo: type.typeInfo, beginingDate: today(), lastTakenDate: null, createdAt: now(), pills: []);
 
   factory PillSheet.fromJson(Map<String, dynamic> json) => _$PillSheetFromJson(json);
 
