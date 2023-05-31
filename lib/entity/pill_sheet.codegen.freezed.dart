@@ -698,7 +698,7 @@ class _$_PillSheet extends _PillSheet {
       this.groupIndex = 0,
       final List<RestDuration> restDurations = const [],
       this.pillTakenCount = 1,
-      required final List<Pill> pills = const []})
+      final List<Pill> pills = const []})
       : _restDurations = restDurations,
         _pills = pills,
         super._();
@@ -832,7 +832,7 @@ abstract class _PillSheet extends PillSheet {
       final int groupIndex,
       final List<RestDuration> restDurations,
       final dynamic pillTakenCount,
-      required final List<Pill> pills}) = _$_PillSheet;
+      final List<Pill> pills}) = _$_PillSheet;
   const _PillSheet._() : super._();
 
   factory _PillSheet.fromJson(Map<String, dynamic> json) =

@@ -89,7 +89,8 @@ class PillSheet with _$PillSheet {
     @Default(0) int groupIndex,
     @Default([]) List<RestDuration> restDurations,
     @Default(1) pillTakenCount,
-    @Default([]) required List<Pill> pills,
+    // from: 2023-06-14 ある程度時間が経ったらrequiredにする。1年くらい。下位互換のためにpillsが無い場合を考慮する
+    @Default([]) List<Pill> pills,
   }) = _PillSheet;
 
   @visibleForTesting
