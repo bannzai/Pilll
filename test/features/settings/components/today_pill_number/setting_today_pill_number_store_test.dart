@@ -27,6 +27,7 @@ void main() {
       final batch = MockWriteBatch();
       when(batchFactory.batch()).thenReturn(batch);
       final pillSheet = PillSheet(
+        pills: [],
         id: "sheet_id",
         typeInfo: PillSheetType.pillsheet_28_0.typeInfo,
         beginingDate: mockToday,
@@ -91,6 +92,7 @@ void main() {
       final batch = MockWriteBatch();
       when(batchFactory.batch()).thenReturn(batch);
       final pillSheet = PillSheet(
+        pills: [],
         id: "sheet_id",
         typeInfo: PillSheetType.pillsheet_28_0.typeInfo,
         beginingDate: mockToday,
@@ -155,6 +157,7 @@ void main() {
       final batch = MockWriteBatch();
       when(batchFactory.batch()).thenReturn(batch);
       final left = PillSheet(
+        pills: [],
         id: "sheet_id_left",
         typeInfo: PillSheetType.pillsheet_28_0.typeInfo,
         beginingDate: DateTime.parse("2022-04-03"),
@@ -163,6 +166,7 @@ void main() {
         createdAt: now(),
       );
       final middle = PillSheet(
+        pills: [],
         id: "sheet_id_middle",
         typeInfo: PillSheetType.pillsheet_28_0.typeInfo,
         beginingDate: DateTime.parse("2022-05-01"),
@@ -171,6 +175,7 @@ void main() {
         createdAt: now(),
       );
       final right = PillSheet(
+        pills: [],
         id: "sheet_id_right",
         typeInfo: PillSheetType.pillsheet_28_0.typeInfo,
         beginingDate: DateTime.parse("2022-05-29"),
@@ -242,6 +247,7 @@ void main() {
       final batch = MockWriteBatch();
       when(batchFactory.batch()).thenReturn(batch);
       final left = PillSheet(
+        pills: [],
         id: "sheet_id_left",
         typeInfo: PillSheetType.pillsheet_28_0.typeInfo,
         beginingDate: DateTime.parse("2022-04-03"),
@@ -250,6 +256,7 @@ void main() {
         createdAt: now(),
       );
       final middle = PillSheet(
+        pills: [],
         id: "sheet_id_middle",
         typeInfo: PillSheetType.pillsheet_28_0.typeInfo,
         beginingDate: DateTime.parse("2022-05-01"),
@@ -258,6 +265,7 @@ void main() {
         createdAt: now(),
       );
       final right = PillSheet(
+        pills: [],
         id: "sheet_id_right",
         typeInfo: PillSheetType.pillsheet_28_0.typeInfo,
         beginingDate: DateTime.parse("2022-05-29"),
@@ -330,6 +338,7 @@ void main() {
       final batch = MockWriteBatch();
       when(batchFactory.batch()).thenReturn(batch);
       final left = PillSheet(
+        pills: [],
         id: "sheet_id_left",
         typeInfo: PillSheetType.pillsheet_28_0.typeInfo,
         beginingDate: DateTime.parse("2022-04-03"),
@@ -338,6 +347,7 @@ void main() {
         createdAt: now(),
       );
       final middle = PillSheet(
+        pills: [],
         id: "sheet_id_middle",
         typeInfo: PillSheetType.pillsheet_28_0.typeInfo,
         beginingDate: DateTime.parse("2022-05-01"),
@@ -346,6 +356,7 @@ void main() {
         createdAt: now(),
       );
       final right = PillSheet(
+        pills: [],
         id: "sheet_id_right",
         typeInfo: PillSheetType.pillsheet_28_0.typeInfo,
         beginingDate: DateTime.parse("2022-05-29"),
@@ -421,6 +432,7 @@ void main() {
       final batch = MockWriteBatch();
       when(batchFactory.batch()).thenReturn(batch);
       final left = PillSheet(
+        pills: [],
         id: "sheet_id_left",
         typeInfo: PillSheetType.pillsheet_28_0.typeInfo,
         beginingDate: DateTime.parse("2022-04-03"),
@@ -436,6 +448,7 @@ void main() {
         ],
       );
       final middle = PillSheet(
+        pills: [],
         id: "sheet_id_middle",
         typeInfo: PillSheetType.pillsheet_28_0.typeInfo,
         beginingDate: DateTime.parse("2022-05-02"),
@@ -444,6 +457,7 @@ void main() {
         createdAt: now(),
       );
       final right = PillSheet(
+        pills: [],
         id: "sheet_id_right",
         typeInfo: PillSheetType.pillsheet_28_0.typeInfo,
         beginingDate: DateTime.parse("2022-05-29"),

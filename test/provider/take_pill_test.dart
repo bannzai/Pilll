@@ -29,6 +29,7 @@ void main() {
       activePillSheetBeginDate = today();
       activePillSheetLastTakenDate = null;
       previousPillSheet = PillSheet(
+        pills: [],
         id: "previous_pill_sheet_id",
         groupIndex: 0,
         typeInfo: PillSheetType.pillsheet_28_7.typeInfo,
@@ -37,6 +38,7 @@ void main() {
         createdAt: now(),
       );
       activedPillSheet = PillSheet(
+        pills: [],
         id: "active_pill_sheet_id",
         groupIndex: 1,
         typeInfo: PillSheetType.pillsheet_28_7.typeInfo,
@@ -45,6 +47,7 @@ void main() {
         createdAt: now(),
       );
       nextPillSheet = PillSheet(
+        pills: [],
         id: "next_pill_sheet_id",
         groupIndex: 2,
         typeInfo: PillSheetType.pillsheet_28_7.typeInfo,
@@ -535,6 +538,7 @@ void main() {
               endDate: DateTime.parse("2022-08-08T19:47:49"))
         ]);
         nextPillSheet = PillSheet(
+          pills: [],
           id: "next_pill_sheet_id",
           groupIndex: 2,
           typeInfo: PillSheetType.pillsheet_28_7.typeInfo,

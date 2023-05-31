@@ -33,7 +33,8 @@ void main() {
       final batch = MockWriteBatch();
       when(batchFactory.batch()).thenReturn(batch);
 
-      final pillSheet = PillSheet(id: "pill_sheet_id_1", typeInfo: PillSheetType.pillsheet_28_0.typeInfo, beginingDate: now(), createdAt: now());
+      final pillSheet =
+          PillSheet(id: "pill_sheet_id_1", typeInfo: PillSheetType.pillsheet_28_0.typeInfo, beginingDate: now(), createdAt: now(), pills: []);
       final updatedPillSheet = pillSheet.copyWith(restDurations: [notYetEndRestDuration]);
 
       final pillSheetGroup = PillSheetGroup(id: "group_id", pillSheetIDs: ["pill_sheet_id_1"].toList(), pillSheets: [pillSheet], createdAt: now());
@@ -80,6 +81,7 @@ void main() {
       when(batchFactory.batch()).thenReturn(batch);
 
       final pillSheet = PillSheet(
+          pills: [],
           id: "pill_sheet_id_1",
           typeInfo: PillSheetType.pillsheet_28_0.typeInfo,
           beginingDate: now(),
@@ -131,6 +133,7 @@ void main() {
       final firstPillSheetBeginDate = now().subtract(const Duration(days: 10));
       var pillSheets = [
         PillSheet(
+          pills: [],
           id: "pill_sheet_id_1",
           groupIndex: 0,
           typeInfo: PillSheetType.pillsheet_28_0.typeInfo,
@@ -139,6 +142,7 @@ void main() {
           createdAt: now(),
         ),
         PillSheet(
+          pills: [],
           id: "pill_sheet_id_2",
           groupIndex: 1,
           typeInfo: PillSheetType.pillsheet_28_0.typeInfo,
@@ -146,6 +150,7 @@ void main() {
           createdAt: now(),
         ),
         PillSheet(
+          pills: [],
           id: "pill_sheet_id_3",
           groupIndex: 2,
           typeInfo: PillSheetType.pillsheet_28_0.typeInfo,

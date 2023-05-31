@@ -34,6 +34,7 @@ void main() {
       when(batchFactory.batch()).thenReturn(batch);
 
       final pillSheet = PillSheet(
+        pills: [],
         id: "sheet_id",
         typeInfo: PillSheetType.pillsheet_28_0.typeInfo,
         beginingDate: mockToday,
@@ -110,6 +111,7 @@ void main() {
       when(batchFactory.batch()).thenReturn(batch);
 
       final pillSheet = PillSheet(
+        pills: [],
         id: "sheet_id",
         typeInfo: PillSheetType.pillsheet_28_0.typeInfo,
         beginingDate: mockToday,
@@ -118,6 +120,7 @@ void main() {
         createdAt: now(),
       );
       final pillSheet2 = PillSheet(
+        pills: [],
         id: "sheet_id2",
         typeInfo: PillSheetType.pillsheet_21.typeInfo,
         beginingDate: mockToday.add(const Duration(days: 28)),

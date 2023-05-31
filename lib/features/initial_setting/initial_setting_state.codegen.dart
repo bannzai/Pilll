@@ -1,6 +1,7 @@
 import 'package:flutter_native_timezone/flutter_native_timezone.dart';
 import 'package:pilll/entity/firestore_id_generator.dart';
 import 'package:pilll/entity/link_account_type.dart';
+import 'package:pilll/entity/pill.codegen.dart';
 import 'package:pilll/utils/datetime/day.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';
 import 'package:pilll/entity/pill_sheet.codegen.dart';
@@ -81,6 +82,15 @@ class InitialSettingState with _$InitialSettingState {
         pillSheetTypes: pillSheetTypes,
       ),
       typeInfo: pillSheetType.typeInfo,
+      pills: List.generate(
+        pillSheetType.totalCount,
+        (index) => Pill(
+          index: index,
+          createdDateTime: DateTime.now(),
+          updatedDateTime: DateTime.now(),
+          pillTakens: [],
+        ),
+      ),
       createdAt: now(),
     );
   }

@@ -32,18 +32,21 @@ void main() {
         final firstPillSheetBeginDate = now().subtract(const Duration(days: 10));
         var pillSheets = [
           PillSheet(
+            pills: [],
             id: "pill_sheet_id_1",
             typeInfo: PillSheetType.pillsheet_28_0.typeInfo,
             beginingDate: firstPillSheetBeginDate,
             createdAt: now(),
           ),
           PillSheet(
+            pills: [],
             id: "pill_sheet_id_2",
             typeInfo: PillSheetType.pillsheet_28_0.typeInfo,
             beginingDate: firstPillSheetBeginDate.add(const Duration(days: 28)),
             createdAt: now(),
           ),
           PillSheet(
+            pills: [],
             id: "pill_sheet_id_3",
             typeInfo: PillSheetType.pillsheet_28_0.typeInfo,
             beginingDate: firstPillSheetBeginDate.add(const Duration(days: 56)),
@@ -96,18 +99,21 @@ void main() {
             typeInfo: PillSheetType.pillsheet_28_0.typeInfo,
             beginingDate: firstPillSheetBeginDate,
             createdAt: now(),
+            pills: [],
           ),
           PillSheet(
             id: "pill_sheet_id_2",
             typeInfo: PillSheetType.pillsheet_28_0.typeInfo,
             beginingDate: firstPillSheetBeginDate.add(const Duration(days: 28)),
             createdAt: now(),
+            pills: [],
           ),
           PillSheet(
             id: "pill_sheet_id_3",
             typeInfo: PillSheetType.pillsheet_28_0.typeInfo,
             beginingDate: firstPillSheetBeginDate.add(const Duration(days: 56)),
             createdAt: now(),
+            pills: [],
           )
         ];
         final pillSheetGroup = PillSheetGroup(pillSheetIDs: pillSheets.map((e) => e.id!).toList(), pillSheets: pillSheets, createdAt: now());
@@ -157,18 +163,21 @@ void main() {
             typeInfo: PillSheetType.pillsheet_28_0.typeInfo,
             beginingDate: firstPillSheetBeginDate,
             createdAt: now(),
+            pills: [],
           ),
           PillSheet(
             id: "pill_sheet_id_2",
             typeInfo: PillSheetType.pillsheet_28_0.typeInfo,
             beginingDate: firstPillSheetBeginDate.add(const Duration(days: 28)),
             createdAt: now(),
+            pills: [],
           ),
           PillSheet(
             id: "pill_sheet_id_3",
             typeInfo: PillSheetType.pillsheet_28_0.typeInfo,
             beginingDate: firstPillSheetBeginDate.add(const Duration(days: 56)),
             createdAt: now(),
+            pills: [],
           )
         ];
         final pillSheetGroup = PillSheetGroup(pillSheetIDs: pillSheets.map((e) => e.id!).toList(), pillSheets: pillSheets, createdAt: now());

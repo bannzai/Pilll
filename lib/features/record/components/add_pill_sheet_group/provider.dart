@@ -1,4 +1,5 @@
 import 'package:pilll/entity/firestore_id_generator.dart';
+import 'package:pilll/entity/pill.codegen.dart';
 import 'package:pilll/entity/pill_sheet_modified_history.codegen.dart';
 import 'package:pilll/provider/batch.dart';
 import 'package:pilll/entity/pill_sheet.codegen.dart';
@@ -54,6 +55,15 @@ class AddPillSheetGroup {
           Duration(days: offset),
         ),
         groupIndex: pageIndex,
+        pills: List.generate(
+          pillSheetType.totalCount,
+          (index) => Pill(
+            index: index,
+            createdDateTime: DateTime.now(),
+            updatedDateTime: DateTime.now(),
+            pillTakens: [],
+          ),
+        ),
         createdAt: now(),
       );
     }).toList();
