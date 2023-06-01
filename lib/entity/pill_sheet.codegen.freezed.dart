@@ -472,7 +472,8 @@ mixin _$PillSheet {
   DateTime? get deletedAt => throw _privateConstructorUsedError;
   int get groupIndex => throw _privateConstructorUsedError;
   List<RestDuration> get restDurations => throw _privateConstructorUsedError;
-  dynamic get pillTakenCount => throw _privateConstructorUsedError;
+  dynamic get pillTakenCount =>
+      throw _privateConstructorUsedError; // from: 2023-06-14 ある程度時間が経ったらrequiredにする。1年くらい。下位互換のためにpillsが無い場合を考慮する
   List<Pill> get pills => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
@@ -747,7 +748,9 @@ class _$_PillSheet extends _PillSheet {
   @override
   @JsonKey()
   final dynamic pillTakenCount;
+// from: 2023-06-14 ある程度時間が経ったらrequiredにする。1年くらい。下位互換のためにpillsが無い場合を考慮する
   final List<Pill> _pills;
+// from: 2023-06-14 ある程度時間が経ったらrequiredにする。1年くらい。下位互換のためにpillsが無い場合を考慮する
   @override
   @JsonKey()
   List<Pill> get pills {
@@ -870,7 +873,7 @@ abstract class _PillSheet extends PillSheet {
   List<RestDuration> get restDurations;
   @override
   dynamic get pillTakenCount;
-  @override
+  @override // from: 2023-06-14 ある程度時間が経ったらrequiredにする。1年くらい。下位互換のためにpillsが無い場合を考慮する
   List<Pill> get pills;
   @override
   @JsonKey(ignore: true)
