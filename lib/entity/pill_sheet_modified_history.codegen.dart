@@ -125,6 +125,8 @@ abstract class PillSheetModifiedHistoryServiceActionFactory {
     required String? pillSheetGroupID,
     required PillSheet before,
     required PillSheet after,
+    required PillSheetGroup beforePillSheetGroup,
+    required PillSheetGroup afterPillSheetGroup,
     required bool isQuickRecord,
   }) {
     assert(pillSheetGroupID != null);
@@ -150,6 +152,8 @@ abstract class PillSheetModifiedHistoryServiceActionFactory {
       afterPillSheetID: afterID,
       pillSheetGroupID: pillSheetGroupID,
       before: before,
+      beforePillSheetGroup: beforePillSheetGroup,
+      afterPillSheetGroup: afterPillSheetGroup,
     );
   }
 
