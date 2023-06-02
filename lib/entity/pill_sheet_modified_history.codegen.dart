@@ -113,6 +113,8 @@ abstract class PillSheetModifiedHistoryServiceActionFactory {
       afterPillSheetID: afterPillSheetID,
       beforePillSheetID: beforePillSheetID,
       before: before,
+      beforePillSheetGroup: beforePillSheetGroup,
+      afterPillSheetGroup: afterPillSheetGroup,
       after: after,
       estimatedEventCausingDate: now(),
       createdAt: now(),
