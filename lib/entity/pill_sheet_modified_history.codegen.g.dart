@@ -23,6 +23,10 @@ _$_PillSheetModifiedHistory _$$_PillSheetModifiedHistoryFromJson(
       after: json['after'] == null
           ? null
           : PillSheet.fromJson(json['after'] as Map<String, dynamic>),
+      beforePillSheetGroup: PillSheetGroup.fromJson(
+          json['beforePillSheetGroup'] as Map<String, dynamic>),
+      afterPillSheetGroup: PillSheetGroup.fromJson(
+          json['afterPillSheetGroup'] as Map<String, dynamic>),
       estimatedEventCausingDate: NonNullTimestampConverter.timestampToDateTime(
           json['estimatedEventCausingDate'] as Timestamp),
       createdAt: NonNullTimestampConverter.timestampToDateTime(
@@ -48,6 +52,8 @@ Map<String, dynamic> _$$_PillSheetModifiedHistoryToJson(
   val['afterPillSheetID'] = instance.afterPillSheetID;
   val['before'] = instance.before?.toJson();
   val['after'] = instance.after?.toJson();
+  val['beforePillSheetGroup'] = instance.beforePillSheetGroup.toJson();
+  val['afterPillSheetGroup'] = instance.afterPillSheetGroup.toJson();
   val['estimatedEventCausingDate'] =
       NonNullTimestampConverter.dateTimeToTimestamp(
           instance.estimatedEventCausingDate);

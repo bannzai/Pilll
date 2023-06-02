@@ -50,8 +50,7 @@ extension PillSheetModifiedActionTypeFunctions on PillSheetModifiedActionType {
 class PillSheetModifiedHistory with _$PillSheetModifiedHistory {
   @JsonSerializable(explicitToJson: true)
   const factory PillSheetModifiedHistory({
-    @JsonKey(includeIfNull: false, toJson: toNull)
-        required String? id,
+    @JsonKey(includeIfNull: false, toJson: toNull) required String? id,
     required String actionType,
     required PillSheetModifiedHistoryValue value,
     // This is deprecated property.
@@ -61,20 +60,26 @@ class PillSheetModifiedHistory with _$PillSheetModifiedHistory {
     required String? pillSheetGroupID,
     required String? beforePillSheetID,
     required String? afterPillSheetID,
+    // This is deprecated property.
+    // Instead of beforePillSheetGroup and afterPillSheetGroup
     // before and after is nullable
     // Because, actions for createdPillSheet and deletedPillSheet are not exists target single pill sheet
     required PillSheet? before,
     required PillSheet? after,
+    // beforePillSheetGroup and afterPillSheetGroup is nullable
+    // Because, actions for createdPillSheet and deletedPillSheet are not exists target single pill sheet
+    required PillSheetGroup beforePillSheetGroup,
+    required PillSheetGroup afterPillSheetGroup,
     @JsonKey(
       fromJson: NonNullTimestampConverter.timestampToDateTime,
       toJson: NonNullTimestampConverter.dateTimeToTimestamp,
     )
-        required DateTime estimatedEventCausingDate,
+    required DateTime estimatedEventCausingDate,
     @JsonKey(
       fromJson: NonNullTimestampConverter.timestampToDateTime,
       toJson: NonNullTimestampConverter.dateTimeToTimestamp,
     )
-        required DateTime createdAt,
+    required DateTime createdAt,
   }) = _PillSheetModifiedHistory;
   const PillSheetModifiedHistory._();
 
@@ -86,11 +91,16 @@ class PillSheetModifiedHistory with _$PillSheetModifiedHistory {
 // Factories
 abstract class PillSheetModifiedHistoryServiceActionFactory {
   static PillSheetModifiedHistory _create({
+    // Deprecated fields begin
     required PillSheet? before,
     required PillSheet? after,
     required String? pillSheetGroupID,
     required String? beforePillSheetID,
     required String? afterPillSheetID,
+    // Deprecated fields end
+
+    required PillSheetGroup beforePillSheetGroup,
+    required PillSheetGroup afterPillSheetGroup,
     required PillSheetModifiedActionType actionType,
     required PillSheetModifiedHistoryValue value,
   }) {
