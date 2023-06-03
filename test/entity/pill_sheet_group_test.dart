@@ -1,4 +1,5 @@
 import 'package:pilll/entity/firestore_id_generator.dart';
+import 'package:pilll/entity/pill.codegen.dart';
 import 'package:pilll/entity/pill_sheet.codegen.dart';
 import 'package:pilll/entity/pill_sheet_group.codegen.dart';
 import 'package:pilll/entity/pill_sheet_type.dart';
@@ -34,7 +35,7 @@ void main() {
             totalCount: sheetType.totalCount,
             pillSheetTypeReferencePath: sheetType.rawPath,
           ),
-          pills: [],
+          pills: Pill.generate(sheetType),
         );
         // created at and id are anything value
         final pillSheetGroup = PillSheetGroup(
@@ -61,7 +62,7 @@ void main() {
             totalCount: sheetType.totalCount,
             pillSheetTypeReferencePath: sheetType.rawPath,
           ),
-          pills: [],
+          pills: Pill.generate(sheetType),
         );
         // created at and id are anything value
         final pillSheetGroup = PillSheetGroup(
@@ -95,7 +96,7 @@ void main() {
               totalCount: sheetType.totalCount,
               pillSheetTypeReferencePath: sheetType.rawPath,
             ),
-            pills: [],
+            pills: Pill.generate(sheetType),
           );
           // created at and id are anything value
           final pillSheetGroup = PillSheetGroup(
@@ -130,7 +131,7 @@ void main() {
               totalCount: sheetType.totalCount,
               pillSheetTypeReferencePath: sheetType.rawPath,
             ),
-            pills: [],
+            pills: Pill.generate(sheetType),
           );
           // created at and id are anything value
           final pillSheetGroup = PillSheetGroup(
@@ -169,7 +170,7 @@ void main() {
                 totalCount: sheetType.totalCount,
                 pillSheetTypeReferencePath: sheetType.rawPath,
               ),
-              pills: [],
+              pills: Pill.generate(sheetType),
             );
             // created at and id are anything value
             final pillSheetGroup = PillSheetGroup(
@@ -208,7 +209,7 @@ void main() {
                 totalCount: sheetType.totalCount,
                 pillSheetTypeReferencePath: sheetType.rawPath,
               ),
-              pills: [],
+              pills: Pill.generate(sheetType),
             );
             // created at and id are anything value
             final pillSheetGroup = PillSheetGroup(
@@ -240,7 +241,7 @@ void main() {
             totalCount: sheetType.totalCount,
             pillSheetTypeReferencePath: sheetType.rawPath,
           ),
-          pills: [],
+          pills: Pill.generate(sheetType),
         );
         final pillSheet2 = PillSheet(
           id: firestoreIDGenerator(),
@@ -254,7 +255,7 @@ void main() {
             totalCount: sheetType.totalCount,
             pillSheetTypeReferencePath: sheetType.rawPath,
           ),
-          pills: [],
+          pills: Pill.generate(sheetType),
         );
         // created at and id are anything value
         final pillSheetGroup = PillSheetGroup(
@@ -282,7 +283,7 @@ void main() {
             totalCount: sheetType.totalCount,
             pillSheetTypeReferencePath: sheetType.rawPath,
           ),
-          pills: [],
+          pills: Pill.generate(sheetType),
         );
         final pillSheet2 = PillSheet(
           id: firestoreIDGenerator(),
@@ -296,7 +297,7 @@ void main() {
             totalCount: sheetType.totalCount,
             pillSheetTypeReferencePath: sheetType.rawPath,
           ),
-          pills: [],
+          pills: Pill.generate(sheetType),
         );
         // created at and id are anything value
         final pillSheetGroup = PillSheetGroup(
@@ -325,7 +326,7 @@ void main() {
             totalCount: sheetType.totalCount,
             pillSheetTypeReferencePath: sheetType.rawPath,
           ),
-          pills: [],
+          pills: Pill.generate(sheetType),
         );
         final pillSheet2 = PillSheet(
           id: firestoreIDGenerator(),
@@ -339,7 +340,7 @@ void main() {
             totalCount: sheetType.totalCount,
             pillSheetTypeReferencePath: sheetType.rawPath,
           ),
-          pills: [],
+          pills: Pill.generate(sheetType),
         );
         // created at and id are anything value
         final pillSheetGroup = PillSheetGroup(
@@ -368,7 +369,7 @@ void main() {
             totalCount: sheetType.totalCount,
             pillSheetTypeReferencePath: sheetType.rawPath,
           ),
-          pills: [],
+          pills: Pill.generate(sheetType),
         );
         final pillSheet2 = PillSheet(
           id: firestoreIDGenerator(),
@@ -382,7 +383,7 @@ void main() {
             totalCount: sheetType.totalCount,
             pillSheetTypeReferencePath: sheetType.rawPath,
           ),
-          pills: [],
+          pills: Pill.generate(sheetType),
         );
         // created at and id are anything value
         final pillSheetGroup = PillSheetGroup(
@@ -414,7 +415,7 @@ void main() {
             pillSheetTypeReferencePath: sheetType.rawPath,
           ),
           createdAt: now(),
-          pills: [],
+          pills: Pill.generate(sheetType),
         );
         // created at and id are anything value
         final pillSheetGroup = PillSheetGroup(
@@ -441,7 +442,7 @@ void main() {
             pillSheetTypeReferencePath: sheetType.rawPath,
           ),
           createdAt: now(),
-          pills: [],
+          pills: Pill.generate(sheetType),
         );
         // created at and id are anything value
         final pillSheetGroup = PillSheetGroup(
@@ -468,7 +469,7 @@ void main() {
             pillSheetTypeReferencePath: sheetType.rawPath,
           ),
           createdAt: now(),
-          pills: [],
+          pills: Pill.generate(sheetType),
         );
         // created at and id are anything value
         final pillSheetGroup = PillSheetGroup(
@@ -502,7 +503,7 @@ void main() {
               totalCount: sheetType.totalCount,
               pillSheetTypeReferencePath: sheetType.rawPath,
             ),
-            pills: [],
+            pills: Pill.generate(sheetType),
           );
           // created at and id are anything value
           final pillSheetGroup = PillSheetGroup(
@@ -536,7 +537,7 @@ void main() {
               totalCount: sheetType.totalCount,
               pillSheetTypeReferencePath: sheetType.rawPath,
             ),
-            pills: [],
+            pills: Pill.generate(sheetType),
           );
           // created at and id are anything value
           final pillSheetGroup = PillSheetGroup(
@@ -570,7 +571,7 @@ void main() {
               totalCount: sheetType.totalCount,
               pillSheetTypeReferencePath: sheetType.rawPath,
             ),
-            pills: [],
+            pills: Pill.generate(sheetType),
           );
           // created at and id are anything value
           final pillSheetGroup = PillSheetGroup(
@@ -610,7 +611,7 @@ void main() {
                 totalCount: sheetType.totalCount,
                 pillSheetTypeReferencePath: sheetType.rawPath,
               ),
-              pills: [],
+              pills: Pill.generate(sheetType),
             );
             // created at and id are anything value
             final pillSheetGroup = PillSheetGroup(
@@ -649,7 +650,7 @@ void main() {
                 totalCount: sheetType.totalCount,
                 pillSheetTypeReferencePath: sheetType.rawPath,
               ),
-              pills: [],
+              pills: Pill.generate(sheetType),
             );
             // created at and id are anything value
             final pillSheetGroup = PillSheetGroup(
@@ -680,7 +681,7 @@ void main() {
               totalCount: sheetType.totalCount,
               pillSheetTypeReferencePath: sheetType.rawPath,
             ),
-            pills: [],
+            pills: Pill.generate(sheetType),
           );
           final pillSheet2 = PillSheet(
             id: firestoreIDGenerator(),
@@ -694,7 +695,7 @@ void main() {
               totalCount: sheetType.totalCount,
               pillSheetTypeReferencePath: sheetType.rawPath,
             ),
-            pills: [],
+            pills: Pill.generate(sheetType),
           );
           // created at and id are anything value
           final pillSheetGroup = PillSheetGroup(
@@ -722,7 +723,7 @@ void main() {
               totalCount: sheetType.totalCount,
               pillSheetTypeReferencePath: sheetType.rawPath,
             ),
-            pills: [],
+            pills: Pill.generate(sheetType),
           );
           final pillSheet2 = PillSheet(
             id: firestoreIDGenerator(),
@@ -736,7 +737,7 @@ void main() {
               totalCount: sheetType.totalCount,
               pillSheetTypeReferencePath: sheetType.rawPath,
             ),
-            pills: [],
+            pills: Pill.generate(sheetType),
           );
           // created at and id are anything value
           final pillSheetGroup = PillSheetGroup(
@@ -765,7 +766,7 @@ void main() {
               totalCount: sheetType.totalCount,
               pillSheetTypeReferencePath: sheetType.rawPath,
             ),
-            pills: [],
+            pills: Pill.generate(sheetType),
           );
           final pillSheet2 = PillSheet(
             id: firestoreIDGenerator(),
@@ -779,7 +780,7 @@ void main() {
               totalCount: sheetType.totalCount,
               pillSheetTypeReferencePath: sheetType.rawPath,
             ),
-            pills: [],
+            pills: Pill.generate(sheetType),
           );
           // created at and id are anything value
           final pillSheetGroup = PillSheetGroup(
@@ -809,7 +810,7 @@ void main() {
               totalCount: sheetType.totalCount,
               pillSheetTypeReferencePath: sheetType.rawPath,
             ),
-            pills: [],
+            pills: Pill.generate(sheetType),
           );
           final pillSheet2 = PillSheet(
             id: firestoreIDGenerator(),
@@ -823,7 +824,7 @@ void main() {
               totalCount: sheetType.totalCount,
               pillSheetTypeReferencePath: sheetType.rawPath,
             ),
-            pills: [],
+            pills: Pill.generate(sheetType),
           );
           // created at and id are anything value
           final pillSheetGroup = PillSheetGroup(
@@ -852,7 +853,7 @@ void main() {
               totalCount: sheetType.totalCount,
               pillSheetTypeReferencePath: sheetType.rawPath,
             ),
-            pills: [],
+            pills: Pill.generate(sheetType),
           );
           final pillSheet2 = PillSheet(
             id: firestoreIDGenerator(),
@@ -866,7 +867,7 @@ void main() {
               totalCount: sheetType.totalCount,
               pillSheetTypeReferencePath: sheetType.rawPath,
             ),
-            pills: [],
+            pills: Pill.generate(sheetType),
           );
           // created at and id are anything value
           final pillSheetGroup = PillSheetGroup(
