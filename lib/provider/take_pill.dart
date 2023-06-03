@@ -90,6 +90,8 @@ class TakePill {
       before: before,
       after: after,
       isQuickRecord: isQuickRecord,
+      beforePillSheetGroup: pillSheetGroup,
+      afterPillSheetGroup: updatedPillSheetGroup,
     );
     batchSetPillSheetModifiedHistory(batch, history);
 

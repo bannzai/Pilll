@@ -71,13 +71,19 @@ class ChangePillNumber {
       updatedPillSheets.add(updatedPillSheet);
     });
 
+    final updatedPillSheetGroup = pillSheetGroup.copyWith(pillSheets: updatedPillSheets);
     final history = PillSheetModifiedHistoryServiceActionFactory.createChangedPillNumberAction(
       pillSheetGroupID: pillSheetGroup.id,
       before: activedPillSheet,
       after: updatedPillSheets[pillSheetPageIndex],
+      beforePillSheetGroup: pillSheetGroup,
+      afterPillSheetGroup: updatedPillSheetGroup,
     );
     batchSetPillSheetModifiedHistory(batch, history);
-    batchSetPillSheetGroup(batch, pillSheetGroup.copyWith(pillSheets: updatedPillSheets));
+    batchSetPillSheetGroup(
+      batch,
+      updatedPillSheetGroup,
+    );
 
     await batch.commit();
   }

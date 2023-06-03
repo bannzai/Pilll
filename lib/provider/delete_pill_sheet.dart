@@ -32,6 +32,8 @@ class DeletePillSheetGroup {
     final history = PillSheetModifiedHistoryServiceActionFactory.createDeletedPillSheetAction(
       pillSheetGroupID: latestPillSheetGroup.id,
       pillSheetIDs: latestPillSheetGroup.pillSheetIDs,
+      beforePillSheetGroup: latestPillSheetGroup,
+      updatedPillSheetGroup: updatedPillSheetGroup,
     );
     batchSetPillSheetModifiedHistory(batch, history);
     batchSetPillSheetGroup(batch, updatedPillSheetGroup);

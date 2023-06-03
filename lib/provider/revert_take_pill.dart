@@ -83,6 +83,8 @@ class RevertTakePill {
       pillSheetGroupID: pillSheetGroup.id,
       before: before,
       after: after,
+      beforePillSheetGroup: pillSheetGroup,
+      afterPillSheetGroup: updatedPillSheetGroup,
     );
     batchSetPillSheetModifiedHistory(batch, history);
 

@@ -275,6 +275,9 @@ class DisplayNumberSettingSheet extends HookConsumerWidget {
       return;
     }
 
+    final updatedPillSheetGroup = pillSheetGroup.copyWith(
+      displayNumberSetting: updatedDisplayNumberSetting,
+    );
     final batch = batchFactory.batch();
     if (begin.value != pillSheetGroup.displayNumberSetting?.beginPillNumber) {
       batchSetPillSheetModifiedHistory(
@@ -283,6 +286,8 @@ class DisplayNumberSettingSheet extends HookConsumerWidget {
           pillSheetGroupID: pillSheetGroup.id,
           beforeDisplayNumberSetting: pillSheetGroup.displayNumberSetting,
           afterDisplayNumberSetting: updatedDisplayNumberSetting,
+          beforePillSheetGroup: pillSheetGroup,
+          afterPillSheetGroup: updatedPillSheetGroup,
         ),
       );
     }
@@ -294,15 +299,15 @@ class DisplayNumberSettingSheet extends HookConsumerWidget {
           pillSheetGroupID: pillSheetGroup.id,
           beforeDisplayNumberSetting: pillSheetGroup.displayNumberSetting,
           afterDisplayNumberSetting: updatedDisplayNumberSetting,
+          beforePillSheetGroup: pillSheetGroup,
+          afterPillSheetGroup: updatedPillSheetGroup,
         ),
       );
     }
 
     batchSetPillSheetGroup(
       batch,
-      pillSheetGroup.copyWith(
-        displayNumberSetting: updatedDisplayNumberSetting,
-      ),
+      updatedPillSheetGroup,
     );
 
     await batch.commit();

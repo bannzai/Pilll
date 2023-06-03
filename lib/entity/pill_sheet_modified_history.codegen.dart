@@ -261,7 +261,8 @@ abstract class PillSheetModifiedHistoryServiceActionFactory {
   }
 
   static PillSheetModifiedHistory createDeletedPillSheetAction({
-    required PillSheetGroup pillSheetGroup,
+    required PillSheetGroup beforePillSheetGroup,
+    required PillSheetGroup updatedPillSheetGroup,
     required String? pillSheetGroupID,
     required List<String> pillSheetIDs,
   }) {
@@ -280,8 +281,8 @@ abstract class PillSheetModifiedHistoryServiceActionFactory {
       afterPillSheetID: null,
       before: null,
       after: null,
-      beforePillSheetGroup: pillSheetGroup,
-      afterPillSheetGroup: null,
+      beforePillSheetGroup: beforePillSheetGroup,
+      afterPillSheetGroup: updatedPillSheetGroup,
     );
   }
 
