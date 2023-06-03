@@ -1,5 +1,6 @@
 import 'package:flutter_test/flutter_test.dart';
 import 'package:mockito/mockito.dart';
+import 'package:pilll/entity/pill.codegen.dart';
 import 'package:pilll/entity/pill_sheet_modified_history.codegen.dart';
 import 'package:pilll/provider/take_pill.dart';
 import 'package:pilll/entity/pill_sheet.codegen.dart';
@@ -29,31 +30,31 @@ void main() {
       activePillSheetBeginDate = today();
       activePillSheetLastTakenDate = null;
       previousPillSheet = PillSheet(
-        pills: [],
         id: "previous_pill_sheet_id",
         groupIndex: 0,
         typeInfo: PillSheetType.pillsheet_28_7.typeInfo,
         beginingDate: activePillSheetBeginDate.subtract(const Duration(days: 28)),
         lastTakenDate: activePillSheetBeginDate.subtract(const Duration(days: 1)),
         createdAt: now(),
+        pills: Pill.generate(PillSheetType.pillsheet_28_7),
       );
       activedPillSheet = PillSheet(
-        pills: [],
         id: "active_pill_sheet_id",
         groupIndex: 1,
         typeInfo: PillSheetType.pillsheet_28_7.typeInfo,
         beginingDate: activePillSheetBeginDate,
         lastTakenDate: activePillSheetLastTakenDate,
         createdAt: now(),
+        pills: Pill.generate(PillSheetType.pillsheet_28_7),
       );
       nextPillSheet = PillSheet(
-        pills: [],
         id: "next_pill_sheet_id",
         groupIndex: 2,
         typeInfo: PillSheetType.pillsheet_28_7.typeInfo,
         beginingDate: activePillSheetBeginDate.add(const Duration(days: 28)),
         lastTakenDate: null,
         createdAt: now(),
+        pills: Pill.generate(PillSheetType.pillsheet_28_7),
       );
     });
     group("one pill sheet", () {
@@ -592,13 +593,13 @@ void main() {
               endDate: DateTime.parse("2022-08-08T19:47:49"))
         ]);
         nextPillSheet = PillSheet(
-          pills: [],
           id: "next_pill_sheet_id",
           groupIndex: 2,
           typeInfo: PillSheetType.pillsheet_28_7.typeInfo,
           beginingDate: activePillSheetBeginDate.add(const Duration(days: 28)),
           lastTakenDate: null,
           createdAt: now(),
+          pills: Pill.generate(PillSheetType.pillsheet_28_7),
         );
         pillSheetGroup = PillSheetGroup(
           id: "group_id",

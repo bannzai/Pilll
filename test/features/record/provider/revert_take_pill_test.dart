@@ -1,3 +1,4 @@
+import 'package:pilll/entity/pill.codegen.dart';
 import 'package:pilll/entity/pill_sheet.codegen.dart';
 import 'package:pilll/entity/pill_sheet_group.codegen.dart';
 import 'package:pilll/entity/pill_sheet_modified_history.codegen.dart';
@@ -32,13 +33,13 @@ void main() {
         when(batchFactory.batch()).thenReturn(batch);
 
         final pillSheet = PillSheet(
-          pills: [],
           id: "sheet_id",
           typeInfo: PillSheetType.pillsheet_28_0.typeInfo,
           beginingDate: yesterday,
           groupIndex: 0,
           lastTakenDate: today(),
           createdAt: now(),
+          pills: Pill.generate(PillSheetType.pillsheet_28_0),
         );
 
         final pillSheetGroup = PillSheetGroup(
@@ -105,13 +106,13 @@ void main() {
         when(batchFactory.batch()).thenReturn(batch);
 
         final pillSheet = PillSheet(
-          pills: [],
           id: "sheet_id",
           typeInfo: PillSheetType.pillsheet_28_0.typeInfo,
           beginingDate: yesterday,
           groupIndex: 0,
           lastTakenDate: today(),
           createdAt: now(),
+          pills: Pill.generate(PillSheetType.pillsheet_28_0),
         );
 
         final pillSheetGroup = PillSheetGroup(
@@ -179,13 +180,13 @@ void main() {
         when(batchFactory.batch()).thenReturn(batch);
 
         final pillSheet = PillSheet(
-          pills: [],
           id: "sheet_id",
           typeInfo: PillSheetType.pillsheet_28_0.typeInfo,
           beginingDate: beginDate,
           groupIndex: 0,
           lastTakenDate: today(),
           createdAt: now(),
+          pills: Pill.generate(PillSheetType.pillsheet_28_0),
           restDurations: [
             RestDuration(
               beginDate: mockToday.subtract(const Duration(days: 2)),
@@ -262,13 +263,13 @@ void main() {
         when(batchFactory.batch()).thenReturn(batch);
 
         final pillSheet = PillSheet(
-          pills: [],
           id: "sheet_id",
           typeInfo: PillSheetType.pillsheet_28_0.typeInfo,
           beginingDate: beginDate,
           groupIndex: 0,
           lastTakenDate: today(),
           createdAt: now(),
+          pills: Pill.generate(PillSheetType.pillsheet_28_0),
           restDurations: [
             RestDuration(
               beginDate: mockToday.subtract(const Duration(days: 8)),
@@ -343,24 +344,24 @@ void main() {
         when(batchFactory.batch()).thenReturn(batch);
 
         final pillSheet = PillSheet(
-          pills: [],
           id: "1",
           typeInfo: PillSheetType.pillsheet_28_0.typeInfo,
           beginingDate: mockToday.subtract(const Duration(days: 29)),
           groupIndex: 0,
           lastTakenDate: mockToday.subtract(const Duration(days: 2)),
           createdAt: now(),
+          pills: Pill.generate(PillSheetType.pillsheet_28_0),
         );
 
         // actived pill sheet
         final pillSheet2 = PillSheet(
-          pills: [],
           id: "2",
           typeInfo: PillSheetType.pillsheet_21.typeInfo,
           beginingDate: yesterday,
           lastTakenDate: mockToday,
           groupIndex: 1,
           createdAt: now(),
+          pills: Pill.generate(PillSheetType.pillsheet_21),
         );
 
         final pillSheetGroup = PillSheetGroup(
@@ -428,24 +429,24 @@ void main() {
         when(batchFactory.batch()).thenReturn(batch);
 
         final pillSheet = PillSheet(
-          pills: [],
           id: "1",
           typeInfo: PillSheetType.pillsheet_28_0.typeInfo,
           beginingDate: mockToday.subtract(const Duration(days: 29)),
           groupIndex: 0,
           lastTakenDate: mockToday.subtract(const Duration(days: 2)),
           createdAt: now(),
+          pills: Pill.generate(PillSheetType.pillsheet_28_0),
         );
 
         // actived pill sheet
         final pillSheet2 = PillSheet(
-          pills: [],
           id: "2",
           typeInfo: PillSheetType.pillsheet_21.typeInfo,
           beginingDate: yesterday,
           lastTakenDate: mockToday,
           groupIndex: 1,
           createdAt: now(),
+          pills: Pill.generate(PillSheetType.pillsheet_21),
         );
 
         final pillSheetGroup = PillSheetGroup(
@@ -510,18 +511,17 @@ void main() {
         when(batchFactory.batch()).thenReturn(batch);
 
         final pillSheet = PillSheet(
-          pills: [],
           id: "1",
           typeInfo: PillSheetType.pillsheet_28_0.typeInfo,
           beginingDate: mockToday.subtract(const Duration(days: 29)),
           groupIndex: 0,
           lastTakenDate: mockToday.subtract(const Duration(days: 2)),
           createdAt: now(),
+          pills: Pill.generate(PillSheetType.pillsheet_28_0),
         );
 
         // actived pill sheet
         final pillSheet2 = PillSheet(
-          pills: [],
           id: "2",
           typeInfo: PillSheetType.pillsheet_21.typeInfo,
           beginingDate: yesterday,
@@ -531,6 +531,7 @@ void main() {
             RestDuration(beginDate: yesterday, createdDate: yesterday, endDate: today()),
           ],
           createdAt: now(),
+          pills: Pill.generate(PillSheetType.pillsheet_21),
         );
 
         final pillSheetGroup = PillSheetGroup(

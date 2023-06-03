@@ -1,4 +1,5 @@
 import 'package:pilll/entity/firestore_id_generator.dart';
+import 'package:pilll/entity/pill.codegen.dart';
 import 'package:pilll/features/record/components/add_pill_sheet_group/provider.dart';
 import 'package:pilll/entity/pill_sheet.codegen.dart';
 import 'package:pilll/entity/pill_sheet_group.codegen.dart';
@@ -34,7 +35,6 @@ void main() {
       when(batchFactory.batch()).thenReturn(batch);
 
       final pillSheet = PillSheet(
-        pills: [],
         id: "sheet_id",
         typeInfo: PillSheetType.pillsheet_28_0.typeInfo,
         beginingDate: mockToday,
@@ -115,22 +115,22 @@ void main() {
       when(batchFactory.batch()).thenReturn(batch);
 
       final pillSheet = PillSheet(
-        pills: [],
         id: "sheet_id",
         typeInfo: PillSheetType.pillsheet_28_0.typeInfo,
         beginingDate: mockToday,
         groupIndex: 0,
         lastTakenDate: null,
         createdAt: now(),
+        pills: Pill.generate(PillSheetType.pillsheet_28_0),
       );
       final pillSheet2 = PillSheet(
-        pills: [],
         id: "sheet_id2",
         typeInfo: PillSheetType.pillsheet_21.typeInfo,
         beginingDate: mockToday.add(const Duration(days: 28)),
         lastTakenDate: null,
         groupIndex: 1,
         createdAt: now(),
+        pills: Pill.generate(PillSheetType.pillsheet_21),
       );
 
       final pillSheetGroup = PillSheetGroup(

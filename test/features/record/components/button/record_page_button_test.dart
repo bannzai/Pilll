@@ -1,3 +1,4 @@
+import 'package:pilll/entity/pill.codegen.dart';
 import 'package:pilll/entity/pill_sheet.codegen.dart';
 import 'package:pilll/entity/pill_sheet_group.codegen.dart';
 import 'package:pilll/entity/pill_sheet_type.dart';
@@ -32,25 +33,25 @@ void main() {
         final firstPillSheetBeginDate = now().subtract(const Duration(days: 10));
         var pillSheets = [
           PillSheet(
-            pills: [],
             id: "pill_sheet_id_1",
             typeInfo: PillSheetType.pillsheet_28_0.typeInfo,
             beginingDate: firstPillSheetBeginDate,
             createdAt: now(),
+            pills: Pill.generate(PillSheetType.pillsheet_28_0),
           ),
           PillSheet(
-            pills: [],
             id: "pill_sheet_id_2",
             typeInfo: PillSheetType.pillsheet_28_0.typeInfo,
             beginingDate: firstPillSheetBeginDate.add(const Duration(days: 28)),
             createdAt: now(),
+            pills: Pill.generate(PillSheetType.pillsheet_28_0),
           ),
           PillSheet(
-            pills: [],
             id: "pill_sheet_id_3",
             typeInfo: PillSheetType.pillsheet_28_0.typeInfo,
             beginingDate: firstPillSheetBeginDate.add(const Duration(days: 56)),
             createdAt: now(),
+            pills: Pill.generate(PillSheetType.pillsheet_28_0),
           )
         ];
         final pillSheetGroup = PillSheetGroup(pillSheetIDs: pillSheets.map((e) => e.id!).toList(), pillSheets: pillSheets, createdAt: now());
@@ -99,21 +100,21 @@ void main() {
             typeInfo: PillSheetType.pillsheet_28_0.typeInfo,
             beginingDate: firstPillSheetBeginDate,
             createdAt: now(),
-            pills: [],
+            pills: Pill.generate(PillSheetType.pillsheet_28_0),
           ),
           PillSheet(
             id: "pill_sheet_id_2",
             typeInfo: PillSheetType.pillsheet_28_0.typeInfo,
             beginingDate: firstPillSheetBeginDate.add(const Duration(days: 28)),
             createdAt: now(),
-            pills: [],
+            pills: Pill.generate(PillSheetType.pillsheet_28_0),
           ),
           PillSheet(
             id: "pill_sheet_id_3",
             typeInfo: PillSheetType.pillsheet_28_0.typeInfo,
             beginingDate: firstPillSheetBeginDate.add(const Duration(days: 56)),
             createdAt: now(),
-            pills: [],
+            pills: Pill.generate(PillSheetType.pillsheet_28_0),
           )
         ];
         final pillSheetGroup = PillSheetGroup(pillSheetIDs: pillSheets.map((e) => e.id!).toList(), pillSheets: pillSheets, createdAt: now());
@@ -163,21 +164,21 @@ void main() {
             typeInfo: PillSheetType.pillsheet_28_0.typeInfo,
             beginingDate: firstPillSheetBeginDate,
             createdAt: now(),
-            pills: [],
+            pills: Pill.generate(PillSheetType.pillsheet_28_0),
           ),
           PillSheet(
             id: "pill_sheet_id_2",
             typeInfo: PillSheetType.pillsheet_28_0.typeInfo,
             beginingDate: firstPillSheetBeginDate.add(const Duration(days: 28)),
             createdAt: now(),
-            pills: [],
+            pills: Pill.generate(PillSheetType.pillsheet_28_0),
           ),
           PillSheet(
             id: "pill_sheet_id_3",
             typeInfo: PillSheetType.pillsheet_28_0.typeInfo,
             beginingDate: firstPillSheetBeginDate.add(const Duration(days: 56)),
             createdAt: now(),
-            pills: [],
+            pills: Pill.generate(PillSheetType.pillsheet_28_0),
           )
         ];
         final pillSheetGroup = PillSheetGroup(pillSheetIDs: pillSheets.map((e) => e.id!).toList(), pillSheets: pillSheets, createdAt: now());

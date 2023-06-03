@@ -1,3 +1,4 @@
+import 'package:pilll/entity/pill.codegen.dart';
 import 'package:pilll/entity/pill_sheet.codegen.dart';
 import 'package:pilll/entity/pill_sheet_group.codegen.dart';
 import 'package:pilll/entity/pill_sheet_modified_history.codegen.dart';
@@ -33,8 +34,13 @@ void main() {
       final batch = MockWriteBatch();
       when(batchFactory.batch()).thenReturn(batch);
 
-      final pillSheet =
-          PillSheet(id: "pill_sheet_id_1", typeInfo: PillSheetType.pillsheet_28_0.typeInfo, beginingDate: now(), createdAt: now(), pills: []);
+      final pillSheet = PillSheet(
+        id: "pill_sheet_id_1",
+        typeInfo: PillSheetType.pillsheet_28_0.typeInfo,
+        beginingDate: now(),
+        createdAt: now(),
+        pills: Pill.generate(PillSheetType.pillsheet_28_0),
+      );
       final updatedPillSheet = pillSheet.copyWith(restDurations: [notYetEndRestDuration]);
 
       final pillSheetGroup = PillSheetGroup(id: "group_id", pillSheetIDs: ["pill_sheet_id_1"].toList(), pillSheets: [pillSheet], createdAt: now());
@@ -87,12 +93,13 @@ void main() {
       when(batchFactory.batch()).thenReturn(batch);
 
       final pillSheet = PillSheet(
-          pills: [],
-          id: "pill_sheet_id_1",
-          typeInfo: PillSheetType.pillsheet_28_0.typeInfo,
-          beginingDate: now(),
-          restDurations: [notYetEndRestDuration],
-          createdAt: now());
+        id: "pill_sheet_id_1",
+        typeInfo: PillSheetType.pillsheet_28_0.typeInfo,
+        beginingDate: now(),
+        restDurations: [notYetEndRestDuration],
+        createdAt: now(),
+        pills: Pill.generate(PillSheetType.pillsheet_28_0),
+      );
       final updatedPillSheet = pillSheet.copyWith(restDurations: [endedRestDuration]);
 
       final pillSheetGroup = PillSheetGroup(id: "group_id", pillSheetIDs: ["pill_sheet_id_1"].toList(), pillSheets: [pillSheet], createdAt: now());
@@ -145,29 +152,29 @@ void main() {
       final firstPillSheetBeginDate = now().subtract(const Duration(days: 10));
       var pillSheets = [
         PillSheet(
-          pills: [],
           id: "pill_sheet_id_1",
           groupIndex: 0,
           typeInfo: PillSheetType.pillsheet_28_0.typeInfo,
           beginingDate: firstPillSheetBeginDate,
           restDurations: [notYetEndRestDuration],
           createdAt: now(),
+          pills: Pill.generate(PillSheetType.pillsheet_28_0),
         ),
         PillSheet(
-          pills: [],
           id: "pill_sheet_id_2",
           groupIndex: 1,
           typeInfo: PillSheetType.pillsheet_28_0.typeInfo,
           beginingDate: firstPillSheetBeginDate.add(const Duration(days: 28)),
           createdAt: now(),
+          pills: Pill.generate(PillSheetType.pillsheet_28_0),
         ),
         PillSheet(
-          pills: [],
           id: "pill_sheet_id_3",
           groupIndex: 2,
           typeInfo: PillSheetType.pillsheet_28_0.typeInfo,
           beginingDate: firstPillSheetBeginDate.add(const Duration(days: 56)),
           createdAt: now(),
+          pills: Pill.generate(PillSheetType.pillsheet_28_0),
         )
       ];
       final updatedPillSheet1 = pillSheets[0].copyWith(restDurations: [endedRestDuration]);

@@ -1,3 +1,4 @@
+import 'package:pilll/entity/pill.codegen.dart';
 import 'package:pilll/entity/pill_sheet.codegen.dart';
 import 'package:pilll/entity/pill_sheet_group.codegen.dart';
 import 'package:pilll/entity/pill_sheet_modified_history.codegen.dart';
@@ -27,13 +28,13 @@ void main() {
       final batch = MockWriteBatch();
       when(batchFactory.batch()).thenReturn(batch);
       final pillSheet = PillSheet(
-        pills: [],
         id: "sheet_id",
         typeInfo: PillSheetType.pillsheet_28_0.typeInfo,
         beginingDate: mockToday,
         groupIndex: 0,
         lastTakenDate: null,
         createdAt: now(),
+        pills: Pill.generate(PillSheetType.pillsheet_28_0),
       );
       final updatedPillSheet = pillSheet.copyWith(
         beginingDate: mockToday.subtract(
@@ -94,13 +95,13 @@ void main() {
       final batch = MockWriteBatch();
       when(batchFactory.batch()).thenReturn(batch);
       final pillSheet = PillSheet(
-        pills: [],
         id: "sheet_id",
         typeInfo: PillSheetType.pillsheet_28_0.typeInfo,
         beginingDate: mockToday,
         groupIndex: 0,
         lastTakenDate: mockToday,
         createdAt: now(),
+        pills: Pill.generate(PillSheetType.pillsheet_28_0),
       );
       final updatedPillSheet = pillSheet.copyWith(
         beginingDate: mockToday.subtract(
@@ -161,31 +162,31 @@ void main() {
       final batch = MockWriteBatch();
       when(batchFactory.batch()).thenReturn(batch);
       final left = PillSheet(
-        pills: [],
         id: "sheet_id_left",
         typeInfo: PillSheetType.pillsheet_28_0.typeInfo,
         beginingDate: DateTime.parse("2022-04-03"),
         groupIndex: 0,
         lastTakenDate: DateTime.parse("2022-04-30"),
         createdAt: now(),
+        pills: Pill.generate(PillSheetType.pillsheet_28_0),
       );
       final middle = PillSheet(
-        pills: [],
         id: "sheet_id_middle",
         typeInfo: PillSheetType.pillsheet_28_0.typeInfo,
         beginingDate: DateTime.parse("2022-05-01"),
         groupIndex: 1,
         lastTakenDate: null,
         createdAt: now(),
+        pills: Pill.generate(PillSheetType.pillsheet_28_0),
       );
       final right = PillSheet(
-        pills: [],
         id: "sheet_id_right",
         typeInfo: PillSheetType.pillsheet_28_0.typeInfo,
         beginingDate: DateTime.parse("2022-05-29"),
         groupIndex: 2,
         lastTakenDate: null,
         createdAt: now(),
+        pills: Pill.generate(PillSheetType.pillsheet_28_0),
       );
       final updatedLeft = left.copyWith(
         beginingDate: DateTime.parse("2022-04-04"),
@@ -253,31 +254,31 @@ void main() {
       final batch = MockWriteBatch();
       when(batchFactory.batch()).thenReturn(batch);
       final left = PillSheet(
-        pills: [],
         id: "sheet_id_left",
         typeInfo: PillSheetType.pillsheet_28_0.typeInfo,
         beginingDate: DateTime.parse("2022-04-03"),
         groupIndex: 0,
         lastTakenDate: DateTime.parse("2022-04-30"),
         createdAt: now(),
+        pills: Pill.generate(PillSheetType.pillsheet_28_0),
       );
       final middle = PillSheet(
-        pills: [],
         id: "sheet_id_middle",
         typeInfo: PillSheetType.pillsheet_28_0.typeInfo,
         beginingDate: DateTime.parse("2022-05-01"),
         groupIndex: 1,
         lastTakenDate: DateTime.parse("2022-05-01"),
         createdAt: now(),
+        pills: Pill.generate(PillSheetType.pillsheet_28_0),
       );
       final right = PillSheet(
-        pills: [],
         id: "sheet_id_right",
         typeInfo: PillSheetType.pillsheet_28_0.typeInfo,
         beginingDate: DateTime.parse("2022-05-29"),
         groupIndex: 2,
         lastTakenDate: null,
         createdAt: now(),
+        pills: Pill.generate(PillSheetType.pillsheet_28_0),
       );
       final updatedLeft = left.copyWith(
         beginingDate: DateTime.parse("2022-04-04"),
@@ -346,31 +347,31 @@ void main() {
       final batch = MockWriteBatch();
       when(batchFactory.batch()).thenReturn(batch);
       final left = PillSheet(
-        pills: [],
         id: "sheet_id_left",
         typeInfo: PillSheetType.pillsheet_28_0.typeInfo,
         beginingDate: DateTime.parse("2022-04-03"),
         groupIndex: 0,
         lastTakenDate: DateTime.parse("2022-04-30"),
         createdAt: now(),
+        pills: Pill.generate(PillSheetType.pillsheet_28_0),
       );
       final middle = PillSheet(
-        pills: [],
         id: "sheet_id_middle",
         typeInfo: PillSheetType.pillsheet_28_0.typeInfo,
         beginingDate: DateTime.parse("2022-05-01"),
         groupIndex: 1,
         lastTakenDate: null,
         createdAt: now(),
+        pills: Pill.generate(PillSheetType.pillsheet_28_0),
       );
       final right = PillSheet(
-        pills: [],
         id: "sheet_id_right",
         typeInfo: PillSheetType.pillsheet_28_0.typeInfo,
         beginingDate: DateTime.parse("2022-05-29"),
         groupIndex: 2,
         lastTakenDate: null,
         createdAt: now(),
+        pills: Pill.generate(PillSheetType.pillsheet_28_0),
       );
       final updatedLeft = left.copyWith(
         beginingDate: DateTime.parse("2022-03-06"),
@@ -442,13 +443,13 @@ void main() {
       final batch = MockWriteBatch();
       when(batchFactory.batch()).thenReturn(batch);
       final left = PillSheet(
-        pills: [],
         id: "sheet_id_left",
         typeInfo: PillSheetType.pillsheet_28_0.typeInfo,
         beginingDate: DateTime.parse("2022-04-03"),
         groupIndex: 0,
         lastTakenDate: DateTime.parse("2022-04-30"),
         createdAt: now(),
+        pills: Pill.generate(PillSheetType.pillsheet_28_0),
         restDurations: [
           RestDuration(
             beginDate: DateTime.parse("2022-04-03"),
@@ -458,22 +459,22 @@ void main() {
         ],
       );
       final middle = PillSheet(
-        pills: [],
         id: "sheet_id_middle",
         typeInfo: PillSheetType.pillsheet_28_0.typeInfo,
         beginingDate: DateTime.parse("2022-05-02"),
         groupIndex: 1,
         lastTakenDate: null,
         createdAt: now(),
+        pills: Pill.generate(PillSheetType.pillsheet_28_0),
       );
       final right = PillSheet(
-        pills: [],
         id: "sheet_id_right",
         typeInfo: PillSheetType.pillsheet_28_0.typeInfo,
         beginingDate: DateTime.parse("2022-05-29"),
         groupIndex: 2,
         lastTakenDate: null,
         createdAt: now(),
+        pills: Pill.generate(PillSheetType.pillsheet_28_0),
       );
       final updatedLeft = left.copyWith(
         beginingDate: DateTime.parse("2022-04-05"),
