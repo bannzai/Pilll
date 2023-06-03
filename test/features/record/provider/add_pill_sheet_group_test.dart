@@ -41,6 +41,7 @@ void main() {
         groupIndex: 0,
         lastTakenDate: null,
         createdAt: now(),
+        pills: Pill.generate(PillSheetType.pillsheet_28_0),
       );
 
       final pillSheetGroup = PillSheetGroup(
