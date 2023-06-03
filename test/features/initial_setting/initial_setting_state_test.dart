@@ -1,5 +1,6 @@
 import 'package:flutter/services.dart';
 import 'package:pilll/entity/firestore_id_generator.dart';
+import 'package:pilll/entity/pill.codegen.dart';
 import 'package:pilll/features/initial_setting/initial_setting_state.codegen.dart';
 import 'package:pilll/entity/pill_sheet.codegen.dart';
 import 'package:pilll/entity/pill_sheet_type.dart';
@@ -47,7 +48,7 @@ void main() {
         typeInfo: PillSheetType.pillsheet_21.typeInfo,
         beginingDate: DateTime.parse("2020-11-23"),
         createdAt: now(),
-        pills: [],
+        pills: Pill.generate(PillSheetType.pillsheet_21),
       );
 
       expect(expected, pillSheet);
@@ -78,7 +79,7 @@ void main() {
         beginingDate: DateTime.parse("2020-12-21"),
         lastTakenDate: null,
         createdAt: now(),
-        pills: [],
+        pills: Pill.generate(PillSheetType.pillsheet_24_0),
       );
 
       expect(expected, pillSheet);
@@ -110,7 +111,7 @@ void main() {
         beginingDate: DateTime.parse("2020-10-26"),
         lastTakenDate: DateTime.parse("2020-11-22"),
         createdAt: now(),
-        pills: [],
+        pills: Pill.generate(PillSheetType.pillsheet_21),
       );
 
       expect(expected, pillSheet);
