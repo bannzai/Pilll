@@ -2,6 +2,7 @@ import 'package:pilll/entity/firestore_timestamp_converter.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:pilll/entity/pill_sheet_type.dart';
+import 'package:pilll/utils/datetime/day.dart';
 
 part 'pill.codegen.g.dart';
 part 'pill.codegen.freezed.dart';
@@ -71,8 +72,8 @@ class Pill with _$Pill {
       pillSheetType.totalCount,
       (index) => Pill(
         index: index,
-        createdDateTime: DateTime.now(),
-        updatedDateTime: DateTime.now(),
+        createdDateTime: now(),
+        updatedDateTime: now(),
         pillTakens: [],
       ),
     );
