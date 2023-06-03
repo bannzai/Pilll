@@ -82,14 +82,8 @@ class InitialSettingState with _$InitialSettingState {
         pillSheetTypes: pillSheetTypes,
       ),
       typeInfo: pillSheetType.typeInfo,
-      pills: List.generate(
-        pillSheetType.totalCount,
-        (index) => Pill(
-          index: index,
-          createdDateTime: DateTime.now(),
-          updatedDateTime: DateTime.now(),
-          pillTakens: [],
-        ),
+      pills: Pill.generate(
+        pillSheetType,
       ),
       createdAt: now(),
     );
