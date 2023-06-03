@@ -278,7 +278,7 @@ void main() {
         pillSheetGroupID: "group_id",
         pillSheetIDs: ["sheet_id"],
         beforePillSheetGroup: null,
-        createdNewPillSheetGroup: pillSheetGroup,
+        createdNewPillSheetGroup: pillSheetGroup.copyWith(id: "group_id"),
       );
       final batchSetPillSheetModifiedHistory = MockBatchSetPillSheetModifiedHistory();
       when(batchSetPillSheetModifiedHistory(batch, history)).thenReturn(null);
@@ -366,7 +366,7 @@ void main() {
         pillSheetGroupID: "group_id",
         pillSheetIDs: ["sheet_id", "sheet_id2"],
         beforePillSheetGroup: null,
-        createdNewPillSheetGroup: pillSheetGroup,
+        createdNewPillSheetGroup: pillSheetGroup.copyWith(id: "group_id"),
       );
       final batchSetPillSheetModifiedHistory = MockBatchSetPillSheetModifiedHistory();
       when(batchSetPillSheetModifiedHistory(batch, history)).thenReturn(null);
@@ -448,7 +448,7 @@ void main() {
         pillSheetGroupID: "group_id",
         pillSheetIDs: ["sheet_id"],
         beforePillSheetGroup: null,
-        createdNewPillSheetGroup: pillSheetGroup,
+        createdNewPillSheetGroup: pillSheetGroup.copyWith(id: "group_id"),
       );
       final batchSetPillSheetModifiedHistory = MockBatchSetPillSheetModifiedHistory();
       when(batchSetPillSheetModifiedHistory(batch, history)).thenReturn(null);
