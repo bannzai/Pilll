@@ -1,6 +1,7 @@
 import 'package:pilll/entity/firestore_timestamp_converter.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
+import 'package:pilll/entity/pill_sheet_type.dart';
 
 part 'pill.codegen.g.dart';
 part 'pill.codegen.freezed.dart';
@@ -64,4 +65,16 @@ class Pill with _$Pill {
       required List<PillTaken> pillTakens}) = _Pill;
 
   factory Pill.fromJson(Map<String, dynamic> json) => _$PillFromJson(json);
+
+  static List<Pill> generate(PillSheetType pillSheetType) {
+    return List.generate(
+      pillSheetType.totalCount,
+      (index) => Pill(
+        index: index,
+        createdDateTime: DateTime.now(),
+        updatedDateTime: DateTime.now(),
+        pillTakens: [],
+      ),
+    );
+  }
 }

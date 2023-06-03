@@ -55,14 +55,8 @@ class AddPillSheetGroup {
           Duration(days: offset),
         ),
         groupIndex: pageIndex,
-        pills: List.generate(
-          pillSheetType.totalCount,
-          (index) => Pill(
-            index: index,
-            createdDateTime: DateTime.now(),
-            updatedDateTime: DateTime.now(),
-            pillTakens: [],
-          ),
+        pills: Pill.generate(
+          pillSheetType,
         ),
         createdAt: now(),
       );
