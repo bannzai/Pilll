@@ -1,4 +1,5 @@
 import 'package:pilll/entity/firestore_id_generator.dart';
+import 'package:pilll/entity/pill.codegen.dart';
 import 'package:pilll/utils/analytics.dart';
 import 'package:pilll/provider/database.dart';
 import 'package:pilll/features/record/components/button/cancel_button.dart';
@@ -31,12 +32,12 @@ void main() {
     testWidgets('today pill not taken', (WidgetTester tester) async {
       final yesterday = today().subtract(const Duration(days: 1));
       final pillSheet = PillSheet(
-        pills: [],
         id: firestoreIDGenerator(),
         typeInfo: PillSheetType.pillsheet_21.typeInfo,
         beginingDate: yesterday,
         lastTakenDate: yesterday,
         createdAt: now(),
+        pills: Pill.generate(PillSheetType.pillsheet_21),
       );
 
       await tester.pumpWidget(
@@ -59,12 +60,12 @@ void main() {
   });
   testWidgets('today pill is already taken', (WidgetTester tester) async {
     final pillSheet = PillSheet(
-      pills: [],
       id: firestoreIDGenerator(),
       typeInfo: PillSheetType.pillsheet_21.typeInfo,
       beginingDate: today(),
       lastTakenDate: today(),
       createdAt: now(),
+      pills: Pill.generate(PillSheetType.pillsheet_21),
     );
 
     await tester.pumpWidget(
