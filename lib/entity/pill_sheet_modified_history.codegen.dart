@@ -201,7 +201,8 @@ abstract class PillSheetModifiedHistoryServiceActionFactory {
   static PillSheetModifiedHistory createCreatedPillSheetAction({
     required String? pillSheetGroupID,
     required List<String> pillSheetIDs,
-    required PillSheetGroup pillSheetGroup,
+    required PillSheetGroup? beforePillSheetGroup,
+    required PillSheetGroup createdNewPillSheetGroup,
   }) {
     assert(pillSheetGroupID != null);
 
@@ -218,8 +219,8 @@ abstract class PillSheetModifiedHistoryServiceActionFactory {
       beforePillSheetID: null,
       after: null,
       afterPillSheetID: null,
-      beforePillSheetGroup: null,
-      afterPillSheetGroup: pillSheetGroup,
+      beforePillSheetGroup: beforePillSheetGroup,
+      afterPillSheetGroup: createdNewPillSheetGroup,
     );
   }
 
