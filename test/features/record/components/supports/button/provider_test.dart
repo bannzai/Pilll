@@ -44,7 +44,13 @@ void main() {
       when(batchSetPillSheetGroup(batch, updatedPillSheetGroup)).thenReturn(updatedPillSheetGroup.copyWith(id: "group_id"));
 
       final history = PillSheetModifiedHistoryServiceActionFactory.createBeganRestDurationAction(
-          pillSheetGroupID: "group_id", before: pillSheet, after: updatedPillSheet, restDuration: notYetEndRestDuration);
+        pillSheetGroupID: "group_id",
+        before: pillSheet,
+        after: updatedPillSheet,
+        restDuration: notYetEndRestDuration,
+        beforePillSheetGroup: pillSheetGroup,
+        afterPillSheetGroup: updatedPillSheetGroup,
+      );
       final batchSetPillSheetModifiedHistory = MockBatchSetPillSheetModifiedHistory();
       when(batchSetPillSheetModifiedHistory(batch, history)).thenReturn(null);
 
@@ -96,7 +102,13 @@ void main() {
       when(batchSetPillSheetGroup(batch, updatedPillSheetGroup)).thenReturn(updatedPillSheetGroup.copyWith(id: "group_id"));
 
       final history = PillSheetModifiedHistoryServiceActionFactory.createEndedRestDurationAction(
-          pillSheetGroupID: "group_id", before: pillSheet, after: updatedPillSheet, restDuration: endedRestDuration);
+        pillSheetGroupID: "group_id",
+        before: pillSheet,
+        after: updatedPillSheet,
+        restDuration: endedRestDuration,
+        beforePillSheetGroup: pillSheetGroup,
+        afterPillSheetGroup: updatedPillSheetGroup,
+      );
       final batchSetPillSheetModifiedHistory = MockBatchSetPillSheetModifiedHistory();
       when(batchSetPillSheetModifiedHistory(batch, history)).thenReturn(null);
 
@@ -187,7 +199,13 @@ void main() {
       when(batchSetPillSheetGroup(batch, updatedPillSheetGroup)).thenReturn(updatedPillSheetGroup.copyWith(id: "group_id"));
 
       final history = PillSheetModifiedHistoryServiceActionFactory.createEndedRestDurationAction(
-          pillSheetGroupID: "group_id", before: pillSheets[0], after: updatedPillSheets[0], restDuration: endedRestDuration);
+        pillSheetGroupID: "group_id",
+        before: pillSheets[0],
+        after: updatedPillSheets[0],
+        restDuration: endedRestDuration,
+        beforePillSheetGroup: pillSheetGroup,
+        afterPillSheetGroup: updatedPillSheetGroup,
+      );
       final batchSetPillSheetModifiedHistory = MockBatchSetPillSheetModifiedHistory();
       when(batchSetPillSheetModifiedHistory(batch, history)).thenReturn(null);
 
