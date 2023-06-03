@@ -60,6 +60,8 @@ void main() {
         pillSheetGroupID: "group_id",
         before: pillSheet,
         after: updatedPillSheet,
+        beforePillSheetGroup: pillSheetGroup,
+        afterPillSheetGroup: updatedPillSheetGroup,
       );
 
       final batchSetPillSheetModifiedHistory = MockBatchSetPillSheetModifiedHistory();
@@ -125,6 +127,8 @@ void main() {
         pillSheetGroupID: "group_id",
         before: pillSheet,
         after: updatedPillSheet,
+        beforePillSheetGroup: pillSheetGroup,
+        afterPillSheetGroup: updatedPillSheetGroup,
       );
 
       final batchSetPillSheetModifiedHistory = MockBatchSetPillSheetModifiedHistory();
@@ -216,6 +220,8 @@ void main() {
         pillSheetGroupID: "group_id",
         before: middle,
         after: updatedLeft,
+        beforePillSheetGroup: pillSheetGroup,
+        afterPillSheetGroup: updatedPillSheetGroup,
       );
 
       final batchSetPillSheetModifiedHistory = MockBatchSetPillSheetModifiedHistory();
@@ -307,6 +313,8 @@ void main() {
         pillSheetGroupID: "group_id",
         before: middle,
         after: updatedLeft,
+        beforePillSheetGroup: pillSheetGroup,
+        afterPillSheetGroup: updatedPillSheetGroup,
       );
 
       final batchSetPillSheetModifiedHistory = MockBatchSetPillSheetModifiedHistory();
@@ -399,6 +407,8 @@ void main() {
         pillSheetGroupID: "group_id",
         before: middle,
         after: updatedRight,
+        beforePillSheetGroup: pillSheetGroup,
+        afterPillSheetGroup: updatedPillSheetGroup,
       );
 
       final batchSetPillSheetModifiedHistory = MockBatchSetPillSheetModifiedHistory();
@@ -499,6 +509,8 @@ void main() {
         pillSheetGroupID: "group_id",
         before: middle,
         after: updatedLeft,
+        beforePillSheetGroup: pillSheetGroup,
+        afterPillSheetGroup: updatedPillSheetGroup,
       );
 
       final batchSetPillSheetModifiedHistory = MockBatchSetPillSheetModifiedHistory();
