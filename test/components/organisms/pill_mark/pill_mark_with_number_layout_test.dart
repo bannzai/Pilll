@@ -7,12 +7,12 @@ void main() {
     SharedPreferences.setMockInitialValues({});
   });
 
-  group("#PillMarkWithNumberLayoutHelper.calcPillNumberIntoPillSheet", () {
+  group("#PillMarkWithNumberLayoutHelper.calcOriginalPillNumberIntoPillSheet", () {
     test(
       "Left boundary pattern",
       () {
         expect(
-          PillMarkWithNumberLayoutHelper.calcPillNumberIntoPillSheet(0, 0),
+          PillMarkWithNumberLayoutHelper.calcOriginalPillNumberIntoPillSheet(0, 0),
           1,
         );
       },
@@ -21,7 +21,7 @@ void main() {
       "Any value. No boundary pattern",
       () {
         expect(
-          PillMarkWithNumberLayoutHelper.calcPillNumberIntoPillSheet(2, 2),
+          PillMarkWithNumberLayoutHelper.calcOriginalPillNumberIntoPillSheet(2, 2),
           17,
         );
       },
@@ -30,7 +30,7 @@ void main() {
       "Right boundary pattern",
       () {
         expect(
-          PillMarkWithNumberLayoutHelper.calcPillNumberIntoPillSheet(6, 3),
+          PillMarkWithNumberLayoutHelper.calcOriginalPillNumberIntoPillSheet(6, 3),
           28,
         );
       },
