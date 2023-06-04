@@ -138,7 +138,11 @@ class PillSheet with _$PillSheet {
   }
 
   bool get todayPillsAreAlreadyTaken {
-    return lastCompletedPillNumber == todayPillNumber;
+    final lastTakenDate = this.lastTakenDate;
+    if (lastTakenDate == null) {
+      return false;
+    }
+    return lastTakenDate.isAfter(today()) || isSameDay(lastTakenDate, today());
   }
 
   bool get isEnded => typeInfo.totalCount == lastCompletedPillNumber;
