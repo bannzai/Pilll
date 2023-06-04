@@ -57,7 +57,7 @@ class EndRestDurationModal extends HookConsumerWidget {
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {
-    final lastTakenPillNumber = pillSheetGroup.sequentialLastTakenPillNumber;
+    final lastCompletedPillNumber = pillSheetGroup.sequentialLastTakenPillNumber;
     final setPillSheetGroup = ref.watch(setPillSheetGroupProvider);
     return Center(
       child: Container(
@@ -103,7 +103,7 @@ class EndRestDurationModal extends HookConsumerWidget {
                 ),
                 const SizedBox(height: 24),
                 Text(
-                  "服用${lastTakenPillNumber + 1}番→1番",
+                  "服用${lastCompletedPillNumber + 1}番→1番",
                   style: const TextStyle(
                     color: TextColor.main,
                     fontSize: 14,
@@ -140,7 +140,7 @@ class EndRestDurationModal extends HookConsumerWidget {
                     onPressed: () async {
                       analytics.logEvent(name: "display_number_setting_modal_yes");
                       final navigator = Navigator.of(context);
-                      await _setDisplayNumberSettingEndNumber(setPillSheetGroup, end: lastTakenPillNumber, pillSheetGroup: pillSheetGroup);
+                      await _setDisplayNumberSettingEndNumber(setPillSheetGroup, end: lastCompletedPillNumber, pillSheetGroup: pillSheetGroup);
                       navigator.pop();
                     },
                     text: "はい",

@@ -112,7 +112,7 @@ class PillSheet with _$PillSheet {
   }
 
   // NOTE: if pill sheet is not yet taken, lastTakenNumber return 0;
-  // Because if lastTakenPillNumber is nullable, ! = null, making it difficult to compare.
+  // Because if lastCompletedPillNumber is nullable, ! = null, making it difficult to compare.
   // lastTakenNumber is often compare todayPillNumber
   int get lastCompletedPillNumber {
     final lastTakenDate = this.lastTakenDate;
@@ -192,7 +192,7 @@ class PillSheet with _$PillSheet {
 }
 
 // upperDate までの休薬期間を集計する
-// upperDate にはlastTakenDate(lastTakenPillNumberを集計したい時)やtoday(todayPillNumberを集計したい時）が入る想定
+// upperDate にはlastTakenDate(lastCompletedPillNumberを集計したい時)やtoday(todayPillNumberを集計したい時）が入る想定
 int summarizedRestDuration({
   required List<RestDuration> restDurations,
   required DateTime upperDate,

@@ -460,7 +460,7 @@ void main() {
       expect(model.isBegan, false);
     });
   });
-  group("#lastTakenPillNumber", () {
+  group("#lastCompletedPillNumber", () {
     test("it is not taken yet", () {
       final mockTodayRepository = MockTodayService();
       todayRepository = mockTodayRepository;
