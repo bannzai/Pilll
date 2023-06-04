@@ -56,8 +56,11 @@ class SettingPillSheetView extends StatelessWidget {
         return Container(width: PillSheetViewLayout.componentWidth);
       }
 
-      final pillNumberIntoPillSheet = PillMarkWithNumberLayoutHelper.calcOriginalPillNumberIntoPillSheet(index, lineIndex);
-      final offset = summarizedPillCountWithPillSheetTypesToEndIndex(pillSheetTypes: pillSheetTypes, endIndex: pageIndex);
+      final pillNumberIntoPillSheet =
+          PillMarkWithNumberLayoutHelper.calcPillNumberIntoPillSheet(
+              index, lineIndex);
+      final offset = summarizedPillCountWithPillSheetTypesToEndIndex(
+          pillSheetTypes: pillSheetTypes, endIndex: pageIndex);
 
       return SizedBox(
         width: PillSheetViewLayout.componentWidth,
@@ -100,7 +103,8 @@ class SettingPillSheetView extends StatelessWidget {
     }
 
     if (pillSheetType.dosingPeriod < pillNumberIntoPillSheet) {
-      return (pillSheetType == PillSheetType.pillsheet_21 || pillSheetType == PillSheetType.pillsheet_24_rest_4)
+      return (pillSheetType == PillSheetType.pillsheet_21 ||
+              pillSheetType == PillSheetType.pillsheet_24_rest_4)
           ? PillMarkType.rest
           : PillMarkType.fake;
     }

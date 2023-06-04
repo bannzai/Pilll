@@ -28,7 +28,7 @@ class PillMarkWithNumberLayout extends StatelessWidget {
 }
 
 extension PillMarkWithNumberLayoutHelper on PillMarkWithNumberLayout {
-  static int calcOriginalPillNumberIntoPillSheet(int columnIndex, int lineIndex) {
+  static int calcPillNumberIntoPillSheet(int columnIndex, int lineIndex) {
     return columnIndex + 1 + (lineIndex) * 7;
   }
 }
