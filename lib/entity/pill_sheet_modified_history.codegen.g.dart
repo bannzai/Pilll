@@ -35,6 +35,8 @@ _$_PillSheetModifiedHistory _$$_PillSheetModifiedHistoryFromJson(
           json['estimatedEventCausingDate'] as Timestamp),
       createdAt: NonNullTimestampConverter.timestampToDateTime(
           json['createdAt'] as Timestamp),
+      timeToLive: TimestampConverter.timestampToDateTime(
+          json['timeToLive'] as Timestamp?),
     );
 
 Map<String, dynamic> _$$_PillSheetModifiedHistoryToJson(
@@ -63,5 +65,7 @@ Map<String, dynamic> _$$_PillSheetModifiedHistoryToJson(
           instance.estimatedEventCausingDate);
   val['createdAt'] =
       NonNullTimestampConverter.dateTimeToTimestamp(instance.createdAt);
+  val['timeToLive'] =
+      TimestampConverter.dateTimeToTimestamp(instance.timeToLive);
   return val;
 }

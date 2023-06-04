@@ -81,6 +81,11 @@ class PillSheetModifiedHistory with _$PillSheetModifiedHistory {
       toJson: NonNullTimestampConverter.dateTimeToTimestamp,
     )
     required DateTime createdAt,
+    @JsonKey(
+      fromJson: TimestampConverter.timestampToDateTime,
+      toJson: TimestampConverter.dateTimeToTimestamp,
+    )
+    DateTime? timeToLive,
   }) = _PillSheetModifiedHistory;
   const PillSheetModifiedHistory._();
 
