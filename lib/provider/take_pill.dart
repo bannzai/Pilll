@@ -115,14 +115,13 @@ extension on PillSheet {
         if (pill.pillTakens.length == pillTakenCount) {
           return pill;
         }
-        final pillTakens = [...pill.pillTakens].sublist(0, pill.pillTakens.length);
+        final pillTakenDoneList = [...pill.pillTakens].sublist(0, pill.pillTakens.length);
 
         if (pill.index != todayPillIndex) {
           // NOTE: 今日以外のピルは、今日のピルを飲んだ時点で、今日のピルの服用記録を追加する
           for (var i = pill.pillTakens.length; i < pillTakenCount; i++) {
-            pillTakens.add(PillTaken(
+            pillTakenDoneList.add(PillTaken(
               takenDateTime: date,
-              revertedDateTime: null,
               createdDateTime: now(),
               updatedDateTime: now(),
             ));
@@ -130,14 +129,13 @@ extension on PillSheet {
         } else {
           // pill == todayPillIndex
           // NOTE: 今日のピルは、今日のピルを飲んだ時点で、今日のピルの服用記録を追加する
-          pillTakens.add(PillTaken(
+          pillTakenDoneList.add(PillTaken(
             takenDateTime: date,
-            revertedDateTime: null,
             createdDateTime: now(),
             updatedDateTime: now(),
           ));
         }
-        return pill.copyWith(pillTakens: pillTakens);
+        return pill.copyWith(pillTakens: pillTakenDoneList);
       }).toList(),
     );
   }
