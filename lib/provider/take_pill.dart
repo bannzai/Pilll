@@ -116,7 +116,20 @@ extension on PillSheet {
           return pill;
         }
         final pillTakens = [...pill.pillTakens].sublist(0, pill.pillTakens.length);
-        for (var i = pill.pillTakens.length; i < pillTakenCount; i++) {
+
+        if (pill.index != todayPillIndex) {
+          // NOTE: 今日以外のピルは、今日のピルを飲んだ時点で、今日のピルの服用記録を追加する
+          for (var i = pill.pillTakens.length; i < pillTakenCount; i++) {
+            pillTakens.add(PillTaken(
+              takenDateTime: date,
+              revertedDateTime: null,
+              createdDateTime: now(),
+              updatedDateTime: now(),
+            ));
+          }
+        } else {
+          // pill == todayPillIndex
+          // NOTE: 今日のピルは、今日のピルを飲んだ時点で、今日のピルの服用記録を追加する
           pillTakens.add(PillTaken(
             takenDateTime: date,
             revertedDateTime: null,
