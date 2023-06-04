@@ -116,17 +116,6 @@ class PillSheet with _$PillSheet {
     return todayPillNumber - 1;
   }
 
-  // 参照で比較したいのでcopyWithは使わない
-  Pill pillAtDate(DateTime date) {
-    final days = date.date().difference(beginingDate.date()).inDays;
-    return pills[days];
-  }
-
-  // 参照で比較したいのでcopyWithは使わない
-  Pill todayPill() {
-    return pillAtDate(today());
-  }
-
   // NOTE: if pill sheet is not yet taken, lastTakenNumber return 0;
   // Because if lastCompletedPillNumber is nullable, ! = null, making it difficult to compare.
   // lastTakenNumber is often compare todayPillNumber
