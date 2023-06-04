@@ -1,9 +1,12 @@
+import 'package:pilll/entity/pill.codegen.dart';
+import 'package:pilll/entity/pill_sheet.codegen.dart';
 import 'package:pilll/entity/pill_sheet_modified_history.codegen.dart';
 import 'package:pilll/provider/batch.dart';
 import 'package:pilll/entity/pill_sheet_group.codegen.dart';
 
 import 'package:pilll/provider/pill_sheet_group.dart';
 import 'package:pilll/provider/pill_sheet_modified_history.dart';
+import 'package:pilll/utils/datetime/date_compare.dart';
 import 'package:pilll/utils/datetime/day.dart';
 import 'package:riverpod/riverpod.dart';
 
@@ -57,11 +60,17 @@ class RevertTakePill {
 
       if (takenDate.isBefore(pillSheet.beginingDate)) {
         // reset pill sheet when back to one before pill sheet
-        return pillSheet.copyWith(lastTakenDate: pillSheet.beginingDate.subtract(const Duration(days: 1)).date(), restDurations: []);
+        return pillSheet.copyWith(
+          lastTakenDate: pillSheet.beginingDate.subtract(const Duration(days: 1)).date(),
+          restDurations: [],
+        );
       } else {
         // Revert対象の日付よりも後ろにある休薬期間のデータは消す
         final remainingResetDurations = pillSheet.restDurations.where((restDuration) => restDuration.beginDate.date().isBefore(takenDate)).toList();
-        return pillSheet.copyWith(lastTakenDate: takenDate, restDurations: remainingResetDurations);
+        return pillSheet.copyWith(
+          lastTakenDate: takenDate,
+          restDurations: remainingResetDurations,
+        );
       }
     }).toList();
 
@@ -91,5 +100,37 @@ class RevertTakePill {
     await batch.commit();
 
     return updatedPillSheetGroup;
+  }
+}
+
+extension on PillSheet {
+  PillSheet _updatedLastTakenDate(DateTime date) {
+    return copyWith(
+      lastTakenDate: date,
+      pills: pills.map((pill) {
+        if (pill.index > todayPillIndex) {
+          return pill;
+        }
+        final pillTakenList = [...pill.pillTakens];
+
+        if (isSameDay(date.date(), today()) && pill.index == todayPillIndex) {
+          // 対象が今日のピルの場合、取り消すのは最後の1回の服用記録
+          if (pillTakenList.isEmpty) {
+            return pill;
+          }
+
+          pillTakenList.removeLast();
+          return pill.copyWith(pillTakens: pillTakenList);
+        }
+
+        if (beginingDate.date().add(Duration(days: pill.index)).isBefore(date)) {
+          return pill;
+        }
+
+        // NOTE: !isSameDay(date.date() ,today()) && pill.index == todayPillIndex
+        // OR pill.index != todayPillIndex。これらの場合は全ての服用記録を消す
+        return pill.copyWith(pillTakens: []);
+      }).toList(),
+    );
   }
 }
