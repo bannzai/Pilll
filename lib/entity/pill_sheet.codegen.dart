@@ -112,6 +112,10 @@ class PillSheet with _$PillSheet {
     return pillSheetPillNumber(pillSheet: this, targetDate: today());
   }
 
+  int get todayPillIndex {
+    return todayPillNumber - 1;
+  }
+
   // NOTE: if pill sheet is not yet taken, lastTakenNumber return 0;
   // Because if lastCompletedPillNumber is nullable, ! = null, making it difficult to compare.
   // lastTakenNumber is often compare todayPillNumber

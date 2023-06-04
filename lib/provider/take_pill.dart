@@ -1,4 +1,5 @@
 import 'package:firebase_core/firebase_core.dart';
+import 'package:pilll/entity/pill.codegen.dart';
 import 'package:pilll/entity/pill_sheet_modified_history.codegen.dart';
 import 'package:pilll/provider/batch.dart';
 import 'package:pilll/entity/pill_sheet.codegen.dart';
@@ -50,7 +51,7 @@ class TakePill {
 
       // takenDateよりも予測するピルシートの最終服用日よりも小さい場合は、そのピルシートの最終日で予測する最終服用日を記録する
       if (takenDate.isAfter(pillSheet.estimatedEndTakenDate)) {
-        return pillSheet.copyWith(lastTakenDate: pillSheet.estimatedEndTakenDate);
+        return pillSheet._updatedLastTakenDate(pillSheet.estimatedEndTakenDate);
       }
 
       // takenDateがピルシートの開始日に満たない場合は、記録の対象になっていないので早期リターン
@@ -59,7 +60,7 @@ class TakePill {
         return pillSheet;
       }
 
-      return pillSheet.copyWith(lastTakenDate: takenDate);
+      return pillSheet._updatedLastTakenDate(takenDate);
     }).toList();
 
     final updatedPillSheetGroup = pillSheetGroup.copyWith(pillSheets: updatedPillSheets);
@@ -100,5 +101,31 @@ class TakePill {
     await batch.commit();
 
     return updatedPillSheetGroup;
+  }
+}
+
+extension on PillSheet {
+  PillSheet _updatedLastTakenDate(DateTime date) {
+    return copyWith(
+      lastTakenDate: date,
+      pills: pills.map((pill) {
+        if (pill.index > todayPillIndex) {
+          return pill;
+        }
+        if (pill.pillTakens.length == pillTakenCount) {
+          return pill;
+        }
+        final pillTakens = [...pill.pillTakens].sublist(0, pill.pillTakens.length);
+        for (var i = pill.pillTakens.length; i < pillTakenCount; i++) {
+          pillTakens.add(PillTaken(
+            takenDateTime: date,
+            revertedDateTime: null,
+            createdDateTime: now(),
+            updatedDateTime: now(),
+          ));
+        }
+        return pill.copyWith(pillTakens: pillTakens);
+      }).toList(),
+    );
   }
 }
