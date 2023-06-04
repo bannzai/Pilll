@@ -176,7 +176,7 @@ class RecordPagePillSheet extends HookConsumerWidget {
       return null;
     }
 
-    final takenDate = pillSheet.displayPillTakeDate(pillNumberIntoPillSheet);
+    final takenDate = pillSheet.pillTakenDateFromPillNumber(pillNumberIntoPillSheet);
 
     final updatedPillSheetGroup = await takePill(
       takenDate: takenDate,
@@ -206,7 +206,7 @@ class RecordPagePillSheet extends HookConsumerWidget {
       pageIndex: pageIndex,
     );
     if (isPremiumOrTrial && setting.pillSheetAppearanceMode == PillSheetAppearanceMode.date) {
-      final DateTime date = pillSheet.displayPillTakeDate(pillNumberIntoPillSheet);
+      final DateTime date = pillSheet.pillTakenDateFromPillNumber(pillNumberIntoPillSheet);
 
       if (setting.pillNumberForFromMenstruation == 0 || setting.durationMenstruation == 0) {
         return PlainPillDate(date: date);

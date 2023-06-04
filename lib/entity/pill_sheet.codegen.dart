@@ -176,7 +176,7 @@ class PillSheet with _$PillSheet {
     }
   }
 
-  DateTime displayPillTakeDate(int pillNumberIntoPillSheet) {
+  DateTime pillTakenDateFromPillNumber(int pillNumberIntoPillSheet) {
     final originDate = beginingDate.add(Duration(days: pillNumberIntoPillSheet - 1)).date();
     if (restDurations.isEmpty) {
       return originDate;

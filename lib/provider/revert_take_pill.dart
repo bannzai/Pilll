@@ -37,7 +37,7 @@ class RevertTakePill {
     }
 
     final targetPillSheet = pillSheetGroup.pillSheets[pageIndex];
-    final takenDate = targetPillSheet.displayPillTakeDate(pillNumberIntoPillSheet).subtract(const Duration(days: 1)).date();
+    final takenDate = targetPillSheet.pillTakenDateFromPillNumber(pillNumberIntoPillSheet).subtract(const Duration(days: 1)).date();
 
     final updatedPillSheets = pillSheetGroup.pillSheets.map((pillSheet) {
       final lastTakenDate = pillSheet.lastTakenDate;
