@@ -1,4 +1,3 @@
-import 'package:pilll/entity/pill.codegen.dart';
 import 'package:pilll/entity/pill_sheet.codegen.dart';
 import 'package:pilll/entity/pill_sheet_modified_history.codegen.dart';
 import 'package:pilll/provider/batch.dart';
@@ -60,17 +59,13 @@ class RevertTakePill {
 
       if (takenDate.isBefore(pillSheet.beginingDate)) {
         // reset pill sheet when back to one before pill sheet
-        return pillSheet.copyWith(
-          lastTakenDate: pillSheet.beginingDate.subtract(const Duration(days: 1)).date(),
-          restDurations: [],
-        );
+        return pillSheet._updatedLastTakenDate(pillSheet.beginingDate.subtract(const Duration(days: 1)).date()).copyWith(restDurations: []);
       } else {
         // Revert対象の日付よりも後ろにある休薬期間のデータは消す
         final remainingResetDurations = pillSheet.restDurations.where((restDuration) => restDuration.beginDate.date().isBefore(takenDate)).toList();
-        return pillSheet.copyWith(
-          lastTakenDate: takenDate,
-          restDurations: remainingResetDurations,
-        );
+        return pillSheet._updatedLastTakenDate(takenDate).copyWith(
+              restDurations: remainingResetDurations,
+            );
       }
     }).toList();
 
