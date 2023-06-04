@@ -26,11 +26,6 @@ class PillTaken with _$PillTaken {
     )
     required DateTime takenDateTime,
     @JsonKey(
-      fromJson: TimestampConverter.timestampToDateTime,
-      toJson: TimestampConverter.dateTimeToTimestamp,
-    )
-    required DateTime? revertedDateTime,
-    @JsonKey(
       fromJson: NonNullTimestampConverter.timestampToDateTime,
       toJson: NonNullTimestampConverter.dateTimeToTimestamp,
     )

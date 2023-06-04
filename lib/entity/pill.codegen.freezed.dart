@@ -26,10 +26,6 @@ mixin _$PillTaken {
       toJson: NonNullTimestampConverter.dateTimeToTimestamp)
   DateTime get takenDateTime => throw _privateConstructorUsedError;
   @JsonKey(
-      fromJson: TimestampConverter.timestampToDateTime,
-      toJson: TimestampConverter.dateTimeToTimestamp)
-  DateTime? get revertedDateTime => throw _privateConstructorUsedError;
-  @JsonKey(
       fromJson: NonNullTimestampConverter.timestampToDateTime,
       toJson: NonNullTimestampConverter.dateTimeToTimestamp)
   DateTime get createdDateTime => throw _privateConstructorUsedError;
@@ -54,8 +50,6 @@ abstract class $PillTakenCopyWith<$Res> {
   $Res call(
       {@JsonKey(fromJson: NonNullTimestampConverter.timestampToDateTime, toJson: NonNullTimestampConverter.dateTimeToTimestamp)
           DateTime takenDateTime,
-      @JsonKey(fromJson: TimestampConverter.timestampToDateTime, toJson: TimestampConverter.dateTimeToTimestamp)
-          DateTime? revertedDateTime,
       @JsonKey(fromJson: NonNullTimestampConverter.timestampToDateTime, toJson: NonNullTimestampConverter.dateTimeToTimestamp)
           DateTime createdDateTime,
       @JsonKey(fromJson: NonNullTimestampConverter.timestampToDateTime, toJson: NonNullTimestampConverter.dateTimeToTimestamp)
@@ -77,7 +71,6 @@ class _$PillTakenCopyWithImpl<$Res, $Val extends PillTaken>
   @override
   $Res call({
     Object? takenDateTime = null,
-    Object? revertedDateTime = freezed,
     Object? createdDateTime = null,
     Object? updatedDateTime = null,
     Object? isAutomaticallyRecorded = null,
@@ -87,10 +80,6 @@ class _$PillTakenCopyWithImpl<$Res, $Val extends PillTaken>
           ? _value.takenDateTime
           : takenDateTime // ignore: cast_nullable_to_non_nullable
               as DateTime,
-      revertedDateTime: freezed == revertedDateTime
-          ? _value.revertedDateTime
-          : revertedDateTime // ignore: cast_nullable_to_non_nullable
-              as DateTime?,
       createdDateTime: null == createdDateTime
           ? _value.createdDateTime
           : createdDateTime // ignore: cast_nullable_to_non_nullable
@@ -117,8 +106,6 @@ abstract class _$$_PillTakenCopyWith<$Res> implements $PillTakenCopyWith<$Res> {
   $Res call(
       {@JsonKey(fromJson: NonNullTimestampConverter.timestampToDateTime, toJson: NonNullTimestampConverter.dateTimeToTimestamp)
           DateTime takenDateTime,
-      @JsonKey(fromJson: TimestampConverter.timestampToDateTime, toJson: TimestampConverter.dateTimeToTimestamp)
-          DateTime? revertedDateTime,
       @JsonKey(fromJson: NonNullTimestampConverter.timestampToDateTime, toJson: NonNullTimestampConverter.dateTimeToTimestamp)
           DateTime createdDateTime,
       @JsonKey(fromJson: NonNullTimestampConverter.timestampToDateTime, toJson: NonNullTimestampConverter.dateTimeToTimestamp)
@@ -138,7 +125,6 @@ class __$$_PillTakenCopyWithImpl<$Res>
   @override
   $Res call({
     Object? takenDateTime = null,
-    Object? revertedDateTime = freezed,
     Object? createdDateTime = null,
     Object? updatedDateTime = null,
     Object? isAutomaticallyRecorded = null,
@@ -148,10 +134,6 @@ class __$$_PillTakenCopyWithImpl<$Res>
           ? _value.takenDateTime
           : takenDateTime // ignore: cast_nullable_to_non_nullable
               as DateTime,
-      revertedDateTime: freezed == revertedDateTime
-          ? _value.revertedDateTime
-          : revertedDateTime // ignore: cast_nullable_to_non_nullable
-              as DateTime?,
       createdDateTime: null == createdDateTime
           ? _value.createdDateTime
           : createdDateTime // ignore: cast_nullable_to_non_nullable
@@ -175,8 +157,6 @@ class _$_PillTaken implements _PillTaken {
   const _$_PillTaken(
       {@JsonKey(fromJson: NonNullTimestampConverter.timestampToDateTime, toJson: NonNullTimestampConverter.dateTimeToTimestamp)
           required this.takenDateTime,
-      @JsonKey(fromJson: TimestampConverter.timestampToDateTime, toJson: TimestampConverter.dateTimeToTimestamp)
-          required this.revertedDateTime,
       @JsonKey(fromJson: NonNullTimestampConverter.timestampToDateTime, toJson: NonNullTimestampConverter.dateTimeToTimestamp)
           required this.createdDateTime,
       @JsonKey(fromJson: NonNullTimestampConverter.timestampToDateTime, toJson: NonNullTimestampConverter.dateTimeToTimestamp)
@@ -194,11 +174,6 @@ class _$_PillTaken implements _PillTaken {
   final DateTime takenDateTime;
   @override
   @JsonKey(
-      fromJson: TimestampConverter.timestampToDateTime,
-      toJson: TimestampConverter.dateTimeToTimestamp)
-  final DateTime? revertedDateTime;
-  @override
-  @JsonKey(
       fromJson: NonNullTimestampConverter.timestampToDateTime,
       toJson: NonNullTimestampConverter.dateTimeToTimestamp)
   final DateTime createdDateTime;
@@ -214,7 +189,7 @@ class _$_PillTaken implements _PillTaken {
 
   @override
   String toString() {
-    return 'PillTaken(takenDateTime: $takenDateTime, revertedDateTime: $revertedDateTime, createdDateTime: $createdDateTime, updatedDateTime: $updatedDateTime, isAutomaticallyRecorded: $isAutomaticallyRecorded)';
+    return 'PillTaken(takenDateTime: $takenDateTime, createdDateTime: $createdDateTime, updatedDateTime: $updatedDateTime, isAutomaticallyRecorded: $isAutomaticallyRecorded)';
   }
 
   @override
@@ -224,8 +199,6 @@ class _$_PillTaken implements _PillTaken {
             other is _$_PillTaken &&
             (identical(other.takenDateTime, takenDateTime) ||
                 other.takenDateTime == takenDateTime) &&
-            (identical(other.revertedDateTime, revertedDateTime) ||
-                other.revertedDateTime == revertedDateTime) &&
             (identical(other.createdDateTime, createdDateTime) ||
                 other.createdDateTime == createdDateTime) &&
             (identical(other.updatedDateTime, updatedDateTime) ||
@@ -237,8 +210,8 @@ class _$_PillTaken implements _PillTaken {
 
   @JsonKey(ignore: true)
   @override
-  int get hashCode => Object.hash(runtimeType, takenDateTime, revertedDateTime,
-      createdDateTime, updatedDateTime, isAutomaticallyRecorded);
+  int get hashCode => Object.hash(runtimeType, takenDateTime, createdDateTime,
+      updatedDateTime, isAutomaticallyRecorded);
 
   @JsonKey(ignore: true)
   @override
@@ -258,8 +231,6 @@ abstract class _PillTaken implements PillTaken {
   const factory _PillTaken(
       {@JsonKey(fromJson: NonNullTimestampConverter.timestampToDateTime, toJson: NonNullTimestampConverter.dateTimeToTimestamp)
           required final DateTime takenDateTime,
-      @JsonKey(fromJson: TimestampConverter.timestampToDateTime, toJson: TimestampConverter.dateTimeToTimestamp)
-          required final DateTime? revertedDateTime,
       @JsonKey(fromJson: NonNullTimestampConverter.timestampToDateTime, toJson: NonNullTimestampConverter.dateTimeToTimestamp)
           required final DateTime createdDateTime,
       @JsonKey(fromJson: NonNullTimestampConverter.timestampToDateTime, toJson: NonNullTimestampConverter.dateTimeToTimestamp)
@@ -274,11 +245,6 @@ abstract class _PillTaken implements PillTaken {
       fromJson: NonNullTimestampConverter.timestampToDateTime,
       toJson: NonNullTimestampConverter.dateTimeToTimestamp)
   DateTime get takenDateTime;
-  @override
-  @JsonKey(
-      fromJson: TimestampConverter.timestampToDateTime,
-      toJson: TimestampConverter.dateTimeToTimestamp)
-  DateTime? get revertedDateTime;
   @override
   @JsonKey(
       fromJson: NonNullTimestampConverter.timestampToDateTime,
