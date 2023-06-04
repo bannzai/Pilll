@@ -114,7 +114,7 @@ class PillSheet with _$PillSheet {
   // NOTE: if pill sheet is not yet taken, lastTakenNumber return 0;
   // Because if lastTakenPillNumber is nullable, ! = null, making it difficult to compare.
   // lastTakenNumber is often compare todayPillNumber
-  int get lastTakenPillNumber {
+  int get lastCompletedPillNumber {
     final lastTakenDate = this.lastTakenDate;
     if (lastTakenDate == null) {
       return 0;
@@ -131,7 +131,7 @@ class PillSheet with _$PillSheet {
     return lastTakenDate.isAfter(today()) || isSameDay(lastTakenDate, today());
   }
 
-  bool get isEnded => typeInfo.totalCount == lastTakenPillNumber;
+  bool get isEnded => typeInfo.totalCount == lastCompletedPillNumber;
   bool get isBegan => beginingDate.date().toUtc().millisecondsSinceEpoch < now().toUtc().millisecondsSinceEpoch;
   bool get inNotTakenDuration => todayPillNumber > typeInfo.dosingPeriod;
   bool get pillSheetHasRestOrFakeDuration => !pillSheetType.isNotExistsNotTakenDuration;

@@ -115,7 +115,7 @@ class RecordPagePillSheet extends HookConsumerWidget {
           onTap: () async {
             try {
               analytics.logEvent(name: "pill_mark_tapped", parameters: {
-                "last_taken_pill_number": pillSheet.lastTakenPillNumber,
+                "last_taken_pill_number": pillSheet.lastCompletedPillNumber,
                 "today_pill_number": pillSheet.todayPillNumber,
               });
 
@@ -123,7 +123,7 @@ class RecordPagePillSheet extends HookConsumerWidget {
                 return;
               }
 
-              if (pillSheet.lastTakenPillNumber >= pillNumberIntoPillSheet) {
+              if (pillSheet.lastCompletedPillNumber >= pillNumberIntoPillSheet) {
                 await revertTakePill(pillSheetGroup: pillSheetGroup, pageIndex: pageIndex, pillNumberIntoPillSheet: pillNumberIntoPillSheet);
               } else {
                 // NOTE: batch.commit でリモートのDBに書き込む時間がかかるので事前にバッジを0にする
@@ -154,7 +154,7 @@ class RecordPagePillSheet extends HookConsumerWidget {
     required PillSheetGroup pillSheetGroup,
     required PillSheet pillSheet,
   }) async {
-    if (pillNumberIntoPillSheet <= pillSheet.lastTakenPillNumber) {
+    if (pillNumberIntoPillSheet <= pillSheet.lastCompletedPillNumber) {
       return null;
     }
     final activedPillSheet = pillSheetGroup.activedPillSheet;
@@ -310,14 +310,14 @@ class RecordPagePillSheet extends HookConsumerWidget {
     }
     if (activedPillSheet.id != pillSheet.id) {
       if (pillSheet.isBegan) {
-        if (pillNumberIntoPillSheet > pillSheet.lastTakenPillNumber) {
+        if (pillNumberIntoPillSheet > pillSheet.lastCompletedPillNumber) {
           return false;
         }
       }
       return true;
     }
 
-    return pillNumberIntoPillSheet <= activedPillSheet.lastTakenPillNumber;
+    return pillNumberIntoPillSheet <= activedPillSheet.lastCompletedPillNumber;
   }
 }
 
@@ -330,7 +330,7 @@ PillMarkType pillMarkFor({
         ? PillMarkType.rest
         : PillMarkType.fake;
   }
-  if (pillNumberIntoPillSheet <= pillSheet.lastTakenPillNumber) {
+  if (pillNumberIntoPillSheet <= pillSheet.lastCompletedPillNumber) {
     return PillMarkType.done;
   }
   if (pillNumberIntoPillSheet < pillSheet.todayPillNumber) {
@@ -365,12 +365,12 @@ bool shouldPillMarkAnimation({
   }
   if (activedPillSheet.id != pillSheet.id) {
     if (pillSheet.isBegan) {
-      if (pillNumberIntoPillSheet > pillSheet.lastTakenPillNumber) {
+      if (pillNumberIntoPillSheet > pillSheet.lastCompletedPillNumber) {
         return true;
       }
     }
     return false;
   }
 
-  return pillNumberIntoPillSheet > activedPillSheet.lastTakenPillNumber && pillNumberIntoPillSheet <= activedPillSheet.todayPillNumber;
+  return pillNumberIntoPillSheet > activedPillSheet.lastCompletedPillNumber && pillNumberIntoPillSheet <= activedPillSheet.todayPillNumber;
 }

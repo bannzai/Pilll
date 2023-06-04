@@ -479,7 +479,7 @@ void main() {
         ),
         pills: Pill.generate(sheetType),
       );
-      expect(model.lastTakenPillNumber, 0);
+      expect(model.lastCompletedPillNumber, 0);
     });
     test("it is taken", () {
       final mockTodayRepository = MockTodayService();
@@ -500,7 +500,7 @@ void main() {
         ),
         pills: Pill.generate(sheetType),
       );
-      expect(model.lastTakenPillNumber, 4);
+      expect(model.lastCompletedPillNumber, 4);
     });
     test("it is boundary test", () {
       final mockTodayRepository = MockTodayService();
@@ -521,7 +521,7 @@ void main() {
         ),
         pills: Pill.generate(sheetType),
       );
-      expect(model.lastTakenPillNumber, 28);
+      expect(model.lastCompletedPillNumber, 28);
     });
     group("pillsheet has rest durations", () {
       test("rest duration is not ended", () {
@@ -549,7 +549,7 @@ void main() {
           ),
           pills: Pill.generate(sheetType),
         );
-        expect(model.lastTakenPillNumber, 22);
+        expect(model.lastCompletedPillNumber, 22);
       });
       test("rest duration is ended", () {
         final mockTodayRepository = MockTodayService();
@@ -577,7 +577,7 @@ void main() {
           ),
           pills: Pill.generate(sheetType),
         );
-        expect(model.lastTakenPillNumber, 25);
+        expect(model.lastCompletedPillNumber, 25);
       });
       test("rest duration is ended and not yet taken pill", () {
         final mockTodayRepository = MockTodayService();
@@ -605,7 +605,7 @@ void main() {
           ),
           pills: Pill.generate(sheetType),
         );
-        expect(model.lastTakenPillNumber, 0);
+        expect(model.lastCompletedPillNumber, 0);
       });
 
       group("pillsheet has plural rest durations", () {
@@ -639,7 +639,7 @@ void main() {
             ),
             pills: Pill.generate(sheetType),
           );
-          expect(model.lastTakenPillNumber, 19);
+          expect(model.lastCompletedPillNumber, 19);
         });
         test("last rest duration is ended", () {
           final mockTodayRepository = MockTodayService();
@@ -672,7 +672,7 @@ void main() {
             ),
             pills: Pill.generate(sheetType),
           );
-          expect(model.lastTakenPillNumber, 19);
+          expect(model.lastCompletedPillNumber, 19);
         });
       });
     });

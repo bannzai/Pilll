@@ -17,23 +17,21 @@ class PillSheetGroup with _$PillSheetGroup {
   const PillSheetGroup._();
   @JsonSerializable(explicitToJson: true)
   const factory PillSheetGroup({
-    @JsonKey(includeIfNull: false, toJson: toNull)
-        String? id,
+    @JsonKey(includeIfNull: false, toJson: toNull) String? id,
     required List<String> pillSheetIDs,
     required List<PillSheet> pillSheets,
     @JsonKey(
       fromJson: NonNullTimestampConverter.timestampToDateTime,
       toJson: NonNullTimestampConverter.dateTimeToTimestamp,
     )
-        required DateTime createdAt,
+    required DateTime createdAt,
     @JsonKey(
       fromJson: TimestampConverter.timestampToDateTime,
       toJson: TimestampConverter.dateTimeToTimestamp,
     )
-        DateTime? deletedAt,
+    DateTime? deletedAt,
     PillSheetGroupDisplayNumberSetting? displayNumberSetting,
   }) = _PillSheetGroup;
-
 
   factory PillSheetGroup.fromJson(Map<String, dynamic> json) => _$PillSheetGroupFromJson(json);
 
@@ -103,7 +101,7 @@ class PillSheetGroup with _$PillSheetGroup {
     final passedPillCountForPillSheetTypes = summarizedPillCountWithPillSheetTypesToEndIndex(
         pillSheetTypes: pillSheets.map((e) => e.pillSheetType).toList(), endIndex: activedPillSheet.groupIndex);
 
-    var sequentialLastTakenPillNumber = passedPillCountForPillSheetTypes + activedPillSheet.lastTakenPillNumber;
+    var sequentialLastTakenPillNumber = passedPillCountForPillSheetTypes + activedPillSheet.lastCompletedPillNumber;
 
     final displayNumberSetting = this.displayNumberSetting;
     if (displayNumberSetting != null) {
