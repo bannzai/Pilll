@@ -86,7 +86,7 @@ class RecordPagePillSheet extends HookConsumerWidget {
       if (columnIndex >= countOfPillMarksInLine) {
         return Container(width: PillSheetViewLayout.componentWidth);
       }
-      final pillNumberIntoPillSheet = PillMarkWithNumberLayoutHelper.calcOriginalPillNumberIntoPillSheet(columnIndex, lineIndex);
+      final originalPillNumberIntoPillSheet = PillMarkWithNumberLayoutHelper.calcOriginalPillNumberIntoPillSheet(columnIndex, lineIndex);
       return SizedBox(
         width: PillSheetViewLayout.componentWidth,
         child: PillMarkWithNumberLayout(
@@ -95,20 +95,20 @@ class RecordPagePillSheet extends HookConsumerWidget {
             pillSheetGroup: pillSheetGroup,
             pillSheet: pillSheet,
             setting: setting,
-            pillNumberIntoPillSheet: pillNumberIntoPillSheet,
+            pillNumberIntoPillSheet: originalPillNumberIntoPillSheet,
             pageIndex: pageIndex,
           ),
           pillMark: PillMark(
             showsRippleAnimation: shouldPillMarkAnimation(
-              pillNumberIntoPillSheet: pillNumberIntoPillSheet,
+              pillNumberIntoPillSheet: originalPillNumberIntoPillSheet,
               pillSheet: pillSheet,
               pillSheetGroup: pillSheetGroup,
             ),
             showsCheckmark: _isDone(
-              pillNumberIntoPillSheet: pillNumberIntoPillSheet,
+              pillNumberIntoPillSheet: originalPillNumberIntoPillSheet,
             ),
             pillMarkType: pillMarkFor(
-              pillNumberIntoPillSheet: pillNumberIntoPillSheet,
+              pillNumberIntoPillSheet: originalPillNumberIntoPillSheet,
               pillSheet: pillSheet,
             ),
           ),
@@ -119,12 +119,12 @@ class RecordPagePillSheet extends HookConsumerWidget {
                 "today_pill_number": pillSheet.todayPillNumber,
               });
 
-              if (pillSheet.todayPillNumber < pillNumberIntoPillSheet) {
+              if (pillSheet.todayPillNumber < originalPillNumberIntoPillSheet) {
                 return;
               }
 
-              if (pillSheet.lastCompletedPillNumber >= pillNumberIntoPillSheet) {
-                await revertTakePill(pillSheetGroup: pillSheetGroup, pageIndex: pageIndex, pillNumberIntoPillSheet: pillNumberIntoPillSheet);
+              if (pillSheet.lastCompletedPillNumber >= originalPillNumberIntoPillSheet) {
+                await revertTakePill(pillSheetGroup: pillSheetGroup, pageIndex: pageIndex, pillNumberIntoPillSheet: originalPillNumberIntoPillSheet);
               } else {
                 // NOTE: batch.commit でリモートのDBに書き込む時間がかかるので事前にバッジを0にする
                 FlutterAppBadger.removeBadge();
@@ -134,7 +134,7 @@ class RecordPagePillSheet extends HookConsumerWidget {
                 await _takeWithPillNumber(
                   takePill,
                   pillSheetGroup: pillSheetGroup,
-                  pillNumberIntoPillSheet: pillNumberIntoPillSheet,
+                  pillNumberIntoPillSheet: originalPillNumberIntoPillSheet,
                   pillSheet: pillSheet,
                 );
               }
