@@ -1,3 +1,4 @@
+import 'package:collection/collection.dart';
 import 'package:pilll/entity/firestore_id_generator.dart';
 import 'package:pilll/entity/pill.codegen.dart';
 import 'package:pilll/utils/datetime/date_range.dart';
@@ -89,7 +90,7 @@ class PillSheet with _$PillSheet {
     @Default(0) int groupIndex,
     @Default([]) List<RestDuration> restDurations,
     @Default(1) pillTakenCount,
-    // from: 2023-06-14 ある程度時間が経ったらrequiredにする。1年くらい。下位互換のためにpillsが無い場合を考慮する
+    // TODO: [PillSheet.Pill] from: 2023-06-14 ある程度時間が経ったらrequiredにする。1年くらい。下位互換のためにpillsが無い場合を考慮する
     @Default([]) List<Pill> pills,
   }) = _PillSheet;
 
@@ -120,7 +121,20 @@ class PillSheet with _$PillSheet {
       return 0;
     }
 
-    return pillSheetPillNumber(pillSheet: this, targetDate: lastTakenDate);
+    // TODO: [PillSheet.Pill] そのうち消す
+    if (pills.isEmpty) {
+      return pillSheetPillNumber(pillSheet: this, targetDate: lastTakenDate);
+    }
+
+    // lastTakenDate is not nullのチェックをしていてこの変数がnullのはずは無いが、将来的にlastTakenDateは消える可能性はあるのでこのロジックは真っ当なチェックになる
+    final lastCompletedPillTakenDate = pills.lastWhereOrNull((element) => element.pillTakens.length == pillTakenCount);
+    if (lastCompletedPillTakenDate == null) {
+      return 0;
+    }
+
+    // lastCompletedPillTakenDateを用意している箇所でlastWhereOrNullの中で空配列じゃ無いことはチェックをしているのでlastでアクセス
+    final lastPillTakenDate = lastCompletedPillTakenDate.pillTakens.last.takenDateTime;
+    return pillSheetPillNumber(pillSheet: this, targetDate: lastPillTakenDate);
   }
 
   bool get todayPillIsAlreadyTaken {
