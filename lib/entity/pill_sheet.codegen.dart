@@ -183,7 +183,7 @@ class PillSheet with _$PillSheet {
       return originDate;
     }
 
-    var displayedDate = originDate;
+    var pillTakenDate = originDate;
     for (final restDuration in restDurations) {
       final restDurationBeginDate = restDuration.beginDate.date();
       final restDurationEndDate = restDuration.endDate?.date();
@@ -191,18 +191,18 @@ class PillSheet with _$PillSheet {
       if (restDurationEndDate != null && isSameDay(restDurationBeginDate, restDurationEndDate)) {
         continue;
       }
-      if (displayedDate.isBefore(restDurationBeginDate)) {
+      if (pillTakenDate.isBefore(restDurationBeginDate)) {
         continue;
       }
 
       if (restDurationEndDate != null) {
-        displayedDate = displayedDate.add(Duration(days: daysBetween(restDurationBeginDate, restDurationEndDate)));
+        pillTakenDate = pillTakenDate.add(Duration(days: daysBetween(restDurationBeginDate, restDurationEndDate)));
       } else {
-        displayedDate = displayedDate.add(Duration(days: daysBetween(restDurationBeginDate, today())));
+        pillTakenDate = pillTakenDate.add(Duration(days: daysBetween(restDurationBeginDate, today())));
       }
     }
 
-    return displayedDate;
+    return pillTakenDate;
   }
 }
 
