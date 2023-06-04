@@ -30,7 +30,7 @@ Future<PillSheetGroup?> quickRecordTakePill() async {
   if (activedPillSheet == null) {
     return pillSheetGroup;
   }
-  if (activedPillSheet.todayPillIsAlreadyTaken) {
+  if (activedPillSheet.todayPillsAreAlreadyTaken) {
     return pillSheetGroup;
   }
 

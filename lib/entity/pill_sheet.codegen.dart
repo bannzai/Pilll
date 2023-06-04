@@ -137,7 +137,7 @@ class PillSheet with _$PillSheet {
     return pillSheetPillNumber(pillSheet: this, targetDate: lastPillTakenDate);
   }
 
-  bool get todayPillIsAlreadyTaken {
+  bool get todayPillsAreAlreadyTaken {
     final lastTakenDate = this.lastTakenDate;
     if (lastTakenDate == null) {
       return false;

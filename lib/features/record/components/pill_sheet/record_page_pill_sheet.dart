@@ -172,7 +172,7 @@ class RecordPagePillSheet extends HookConsumerWidget {
       // User tapped future pill number
       return null;
     }
-    if (activedPillSheet.todayPillIsAlreadyTaken) {
+    if (activedPillSheet.todayPillsAreAlreadyTaken) {
       return null;
     }
 

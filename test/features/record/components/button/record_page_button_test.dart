@@ -130,7 +130,7 @@ void main() {
         );
         pillSheets.replaceRange(0, 1, [activePillSheet]);
         expect(activePillSheet.activeRestDuration, isNull);
-        expect(activePillSheet.todayPillIsAlreadyTaken, true);
+        expect(activePillSheet.todayPillsAreAlreadyTaken, true);
         expect(pillSheetGroup.activedPillSheet, activePillSheet);
 
         await tester.pumpWidget(
@@ -195,7 +195,7 @@ void main() {
         );
         pillSheets.replaceRange(0, 1, [activePillSheet]);
         expect(activePillSheet.activeRestDuration, isNull);
-        expect(activePillSheet.todayPillIsAlreadyTaken, false);
+        expect(activePillSheet.todayPillsAreAlreadyTaken, false);
         expect(pillSheetGroup.activedPillSheet, activePillSheet);
 
         await tester.pumpWidget(
