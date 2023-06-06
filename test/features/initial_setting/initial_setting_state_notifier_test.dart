@@ -268,7 +268,7 @@ void main() {
         typeInfo: PillSheetType.pillsheet_21.typeInfo,
         beginingDate: mockToday,
         createdAt: now(),
-        pills: Pill.generate(PillSheetType.pillsheet_21),
+        pills: Pill.generateAndFillTo(pillSheetType: PillSheetType.pillsheet_21),
       );
 
       final pillSheetGroup = PillSheetGroup(pillSheetIDs: ["sheet_id"], pillSheets: [pillSheet.copyWith(id: "sheet_id")], createdAt: now());
@@ -340,7 +340,7 @@ void main() {
         groupIndex: 0,
         lastTakenDate: DateTime.parse("2020-09-18"),
         createdAt: now(),
-        pills: Pill.generate(PillSheetType.pillsheet_28_0),
+        pills: Pill.generateAndFillTo(pillSheetType: PillSheetType.pillsheet_28_0),
       );
       final pillSheet2 = PillSheet(
         id: "sheet_id2",
@@ -349,7 +349,7 @@ void main() {
         lastTakenDate: mockToday.subtract(const Duration(days: 1)),
         groupIndex: 1,
         createdAt: now(),
-        pills: Pill.generate(PillSheetType.pillsheet_21),
+        pills: Pill.generateAndFillTo(pillSheetType: PillSheetType.pillsheet_21),
       );
 
       final pillSheetGroup = PillSheetGroup(
@@ -438,7 +438,7 @@ void main() {
         typeInfo: PillSheetType.pillsheet_24_rest_4.typeInfo,
         beginingDate: mockToday,
         createdAt: now(),
-        pills: Pill.generate(PillSheetType.pillsheet_24_rest_4),
+        pills: Pill.generateAndFillTo(pillSheetType: PillSheetType.pillsheet_24_rest_4),
       );
 
       final pillSheetGroup = PillSheetGroup(pillSheetIDs: ["sheet_id"], pillSheets: [pillSheet.copyWith(id: "sheet_id")], createdAt: now());

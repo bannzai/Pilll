@@ -37,7 +37,7 @@ void main() {
         beginingDate: yesterday,
         lastTakenDate: yesterday,
         createdAt: now(),
-        pills: Pill.generate(PillSheetType.pillsheet_21),
+        pills: Pill.generateAndFillTo(pillSheetType: PillSheetType.pillsheet_21),
       );
 
       await tester.pumpWidget(
@@ -65,7 +65,7 @@ void main() {
       beginingDate: today(),
       lastTakenDate: today(),
       createdAt: now(),
-      pills: Pill.generate(PillSheetType.pillsheet_21),
+      pills: Pill.generateAndFillTo(pillSheetType: PillSheetType.pillsheet_21),
     );
 
     await tester.pumpWidget(

@@ -36,7 +36,7 @@ void main() {
         beginingDate: activePillSheetBeginDate.subtract(const Duration(days: 28)),
         lastTakenDate: activePillSheetBeginDate.subtract(const Duration(days: 1)),
         createdAt: now(),
-        pills: Pill.generate(PillSheetType.pillsheet_28_7),
+        pills: Pill.generateAndFillTo(pillSheetType: PillSheetType.pillsheet_28_7),
       );
       activedPillSheet = PillSheet(
         id: "active_pill_sheet_id",
@@ -45,7 +45,7 @@ void main() {
         beginingDate: activePillSheetBeginDate,
         lastTakenDate: activePillSheetLastTakenDate,
         createdAt: now(),
-        pills: Pill.generate(PillSheetType.pillsheet_28_7),
+        pills: Pill.generateAndFillTo(pillSheetType: PillSheetType.pillsheet_28_7),
       );
       nextPillSheet = PillSheet(
         id: "next_pill_sheet_id",
@@ -54,7 +54,7 @@ void main() {
         beginingDate: activePillSheetBeginDate.add(const Duration(days: 28)),
         lastTakenDate: null,
         createdAt: now(),
-        pills: Pill.generate(PillSheetType.pillsheet_28_7),
+        pills: Pill.generateAndFillTo(pillSheetType: PillSheetType.pillsheet_28_7),
       );
     });
     group("one pill sheet", () {
@@ -599,7 +599,7 @@ void main() {
           beginingDate: activePillSheetBeginDate.add(const Duration(days: 28)),
           lastTakenDate: null,
           createdAt: now(),
-          pills: Pill.generate(PillSheetType.pillsheet_28_7),
+          pills: Pill.generateAndFillTo(pillSheetType: PillSheetType.pillsheet_28_7),
         );
         pillSheetGroup = PillSheetGroup(
           id: "group_id",
