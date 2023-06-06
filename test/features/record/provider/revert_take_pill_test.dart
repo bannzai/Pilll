@@ -54,7 +54,9 @@ void main() {
           id: "group_id",
           pillSheetIDs: ["sheet_id"],
           pillSheets: [
-            pillSheet.copyWith(lastTakenDate: yesterday.subtract(const Duration(days: 1))),
+            pillSheet.copyWith(
+                lastTakenDate: yesterday.subtract(const Duration(days: 1)),
+                pills: Pill.generateAndFillTo(pillSheetType: PillSheetType.pillsheet_28_0, toDate: yesterday.subtract(const Duration(days: 1)))),
           ],
           createdAt: now(),
         );
