@@ -127,6 +127,7 @@ void main() {
             ),
           ],
           lastTakenDate: now(),
+          pills: Pill.generateAndFillTo(pillSheetType: PillSheetType.pillsheet_28_0, toDate: now()),
         );
         pillSheets.replaceRange(0, 1, [activePillSheet]);
         expect(activePillSheet.activeRestDuration, isNull);
