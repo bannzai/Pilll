@@ -27,10 +27,6 @@ void main() {
         when(mockTodayRepository.now()).thenReturn(mockToday);
         final yesterday = DateTime.parse("2022-01-16");
 
-        final batchFactory = MockBatchFactory();
-        final batch = MockWriteBatch();
-        when(batchFactory.batch()).thenReturn(batch);
-
         final pillSheet = PillSheet(
           id: "sheet_id",
           typeInfo: PillSheetType.pillsheet_28_0.typeInfo,
