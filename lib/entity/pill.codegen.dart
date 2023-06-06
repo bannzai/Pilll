@@ -73,4 +73,27 @@ class Pill with _$Pill {
       ),
     );
   }
+
+  @visibleForTesting
+  static List<Pill> generateAndFillTo({
+    required PillSheetType pillSheetType,
+    required DateTime toDate,
+    int? pillTakenCount,
+  }) {
+    return List.generate(
+      pillSheetType.totalCount,
+      (index) => Pill(
+        index: index,
+        createdDateTime: now(),
+        updatedDateTime: now(),
+        pillTakens: List.generate(
+          pillTakenCount ?? 1,
+          (i) {
+            final date = toDate.subtract(Duration(days: i));
+            return PillTaken(takenDateTime: date, createdDateTime: date, updatedDateTime: date);
+          },
+        ),
+      ),
+    );
+  }
 }
