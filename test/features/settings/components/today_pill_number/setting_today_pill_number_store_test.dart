@@ -474,7 +474,7 @@ void main() {
         groupIndex: 2,
         lastTakenDate: null,
         createdAt: now(),
-        pills: Pill.generateAndFillTo(pillSheetType: PillSheetType.pillsheet_28_0, toDate: null)),
+        pills: Pill.generateAndFillTo(pillSheetType: PillSheetType.pillsheet_28_0, toDate: null),
       );
       final updatedLeft = left.copyWith(
         beginingDate: DateTime.parse("2022-04-05"),
