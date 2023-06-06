@@ -29,13 +29,6 @@ class CancelButton extends HookConsumerWidget {
           "today_pill_number": activePillSheet.todayPillNumber,
         });
 
-        if (!activePillSheet.todayPillsAreAlreadyTaken) {
-          return;
-        }
-        final lastTakenDate = activePillSheet.lastTakenDate;
-        if (lastTakenDate == null) {
-          return;
-        }
         final updatedPillSheetGroup = await _cancelTaken(revertTakePill);
         syncActivePillSheetValue(pillSheetGroup: updatedPillSheetGroup);
       },
