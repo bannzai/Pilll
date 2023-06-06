@@ -74,6 +74,7 @@ class Pill with _$Pill {
     );
   }
 
+  // もし仮にvisibleForTestingを消す場合は required int pillTakenCount にする
   @visibleForTesting
   static List<Pill> generateAndFillTo({
     required PillSheetType pillSheetType,
