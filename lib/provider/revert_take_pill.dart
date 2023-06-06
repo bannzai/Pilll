@@ -98,7 +98,7 @@ class RevertTakePill {
   }
 }
 
-extension on PillSheet {
+extension RevertedPillSheet on PillSheet {
   PillSheet revertedPillSheet(DateTime date) {
     return copyWith(
       lastTakenDate: date,

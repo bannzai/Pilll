@@ -17,6 +17,51 @@ void main() {
     TestWidgetsFlutterBinding.ensureInitialized();
     SharedPreferences.setMockInitialValues({});
   });
+  group("revertedPillSheet", () {
+    group("pill sheet pill taken count is 1(default)", () {
+      test("Revert before begin date", () async {
+        var mockTodayRepository = MockTodayService();
+        final mockToday = DateTime.parse("2022-01-17");
+        todayRepository = mockTodayRepository;
+        when(mockTodayRepository.now()).thenReturn(mockToday);
+        when(mockTodayRepository.now()).thenReturn(mockToday);
+        final yesterday = DateTime.parse("2022-01-16");
+
+        final batchFactory = MockBatchFactory();
+        final batch = MockWriteBatch();
+        when(batchFactory.batch()).thenReturn(batch);
+
+        final pillSheet = PillSheet(
+          id: "sheet_id",
+          typeInfo: PillSheetType.pillsheet_28_0.typeInfo,
+          beginingDate: yesterday,
+          groupIndex: 0,
+          lastTakenDate: today(),
+          createdAt: now(),
+          pills: Pill.generateAndFillTo(pillSheetType: PillSheetType.pillsheet_28_0, toDate: today()),
+          pillTakenCount: 1,
+        );
+        final revertDate = yesterday.subtract(const Duration(days: 1));
+        final reverted = pillSheet.revertedPillSheet(revertDate);
+        final expected = PillSheet(
+          id: "sheet_id",
+          typeInfo: PillSheetType.pillsheet_28_0.typeInfo,
+          beginingDate: yesterday,
+          groupIndex: 0,
+          lastTakenDate: revertDate, // change
+          createdAt: now(),
+          pills: Pill.generate(PillSheetType.pillsheet_28_0), // Change
+          pillTakenCount: 1,
+        );
+        expect(reverted.lastTakenDate, expected.lastTakenDate);
+        expect(reverted.lastCompletedPillNumber, expected.lastCompletedPillNumber);
+        expect(reverted.todayPillNumber, expected.todayPillNumber);
+        expect(reverted.todayPillsAreAlreadyTaken, expected.todayPillsAreAlreadyTaken);
+        expect(reverted.pills, expected.pills);
+        expect(reverted, expected);
+      });
+    });
+  });
 
   group("#revertTaken", () {
     group("group has only one pill sheet", () {
