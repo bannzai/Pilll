@@ -39,7 +39,7 @@ void main() {
         typeInfo: PillSheetType.pillsheet_28_0.typeInfo,
         beginingDate: now(),
         createdAt: now(),
-        pills: Pill.generateAndFillTo(pillSheetType: PillSheetType.pillsheet_28_0),
+        pills: Pill.generateAndFillTo(pillSheetType: PillSheetType.pillsheet_28_0, toDate: null),
       );
       final updatedPillSheet = pillSheet.copyWith(restDurations: [notYetEndRestDuration]);
 
@@ -98,7 +98,7 @@ void main() {
         beginingDate: now(),
         restDurations: [notYetEndRestDuration],
         createdAt: now(),
-        pills: Pill.generateAndFillTo(pillSheetType: PillSheetType.pillsheet_28_0),
+        pills: Pill.generateAndFillTo(pillSheetType: PillSheetType.pillsheet_28_0, toDate: null),
       );
       final updatedPillSheet = pillSheet.copyWith(restDurations: [endedRestDuration]);
 
@@ -158,7 +158,7 @@ void main() {
           beginingDate: firstPillSheetBeginDate,
           restDurations: [notYetEndRestDuration],
           createdAt: now(),
-          pills: Pill.generateAndFillTo(pillSheetType: PillSheetType.pillsheet_28_0),
+          pills: Pill.generateAndFillTo(pillSheetType: PillSheetType.pillsheet_28_0, toDate: null),
         ),
         PillSheet(
           id: "pill_sheet_id_2",
@@ -166,7 +166,7 @@ void main() {
           typeInfo: PillSheetType.pillsheet_28_0.typeInfo,
           beginingDate: firstPillSheetBeginDate.add(const Duration(days: 28)),
           createdAt: now(),
-          pills: Pill.generateAndFillTo(pillSheetType: PillSheetType.pillsheet_28_0),
+          pills: Pill.generateAndFillTo(pillSheetType: PillSheetType.pillsheet_28_0, toDate: null),
         ),
         PillSheet(
           id: "pill_sheet_id_3",
@@ -174,7 +174,7 @@ void main() {
           typeInfo: PillSheetType.pillsheet_28_0.typeInfo,
           beginingDate: firstPillSheetBeginDate.add(const Duration(days: 56)),
           createdAt: now(),
-          pills: Pill.generateAndFillTo(pillSheetType: PillSheetType.pillsheet_28_0),
+          pills: Pill.generateAndFillTo(pillSheetType: PillSheetType.pillsheet_28_0, toDate: null),
         )
       ];
       final updatedPillSheet1 = pillSheets[0].copyWith(restDurations: [endedRestDuration]);

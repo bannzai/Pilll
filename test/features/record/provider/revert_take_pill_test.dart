@@ -39,7 +39,7 @@ void main() {
           groupIndex: 0,
           lastTakenDate: today(),
           createdAt: now(),
-          pills: Pill.generateAndFillTo(pillSheetType: PillSheetType.pillsheet_28_0),
+          pills: Pill.generateAndFillTo(pillSheetType: PillSheetType.pillsheet_28_0, toDate: today()),
         );
 
         final pillSheetGroup = PillSheetGroup(
@@ -112,7 +112,7 @@ void main() {
           groupIndex: 0,
           lastTakenDate: today(),
           createdAt: now(),
-          pills: Pill.generateAndFillTo(pillSheetType: PillSheetType.pillsheet_28_0),
+          pills: Pill.generateAndFillTo(pillSheetType: PillSheetType.pillsheet_28_0, toDate: today()),
         );
 
         final pillSheetGroup = PillSheetGroup(
@@ -186,7 +186,7 @@ void main() {
           groupIndex: 0,
           lastTakenDate: today(),
           createdAt: now(),
-          pills: Pill.generateAndFillTo(pillSheetType: PillSheetType.pillsheet_28_0),
+          pills: Pill.generateAndFillTo(pillSheetType: PillSheetType.pillsheet_28_0, toDate: today()),
           restDurations: [
             RestDuration(
               beginDate: mockToday.subtract(const Duration(days: 2)),
@@ -269,7 +269,7 @@ void main() {
           groupIndex: 0,
           lastTakenDate: today(),
           createdAt: now(),
-          pills: Pill.generateAndFillTo(pillSheetType: PillSheetType.pillsheet_28_0),
+          pills: Pill.generateAndFillTo(pillSheetType: PillSheetType.pillsheet_28_0, toDate: today()),
           restDurations: [
             RestDuration(
               beginDate: mockToday.subtract(const Duration(days: 8)),
@@ -350,7 +350,7 @@ void main() {
           groupIndex: 0,
           lastTakenDate: mockToday.subtract(const Duration(days: 2)),
           createdAt: now(),
-          pills: Pill.generateAndFillTo(pillSheetType: PillSheetType.pillsheet_28_0),
+          pills: Pill.generateAndFillTo(pillSheetType: PillSheetType.pillsheet_28_0, toDate: mockToday.subtract(const Duration(days: 2))),
         );
 
         // actived pill sheet
@@ -361,7 +361,7 @@ void main() {
           lastTakenDate: mockToday,
           groupIndex: 1,
           createdAt: now(),
-          pills: Pill.generateAndFillTo(pillSheetType: PillSheetType.pillsheet_21),
+          pills: Pill.generateAndFillTo(pillSheetType: PillSheetType.pillsheet_21, toDate: mockToday),
         );
 
         final pillSheetGroup = PillSheetGroup(
@@ -435,7 +435,7 @@ void main() {
           groupIndex: 0,
           lastTakenDate: mockToday.subtract(const Duration(days: 2)),
           createdAt: now(),
-          pills: Pill.generateAndFillTo(pillSheetType: PillSheetType.pillsheet_28_0),
+          pills: Pill.generateAndFillTo(pillSheetType: PillSheetType.pillsheet_28_0, toDate: mockToday.subtract(const Duration(days: 2))),
         );
 
         // actived pill sheet
@@ -446,7 +446,7 @@ void main() {
           lastTakenDate: mockToday,
           groupIndex: 1,
           createdAt: now(),
-          pills: Pill.generateAndFillTo(pillSheetType: PillSheetType.pillsheet_21),
+          pills: Pill.generateAndFillTo(pillSheetType: PillSheetType.pillsheet_21, toDate: mockToday),
         );
 
         final pillSheetGroup = PillSheetGroup(
@@ -517,7 +517,7 @@ void main() {
           groupIndex: 0,
           lastTakenDate: mockToday.subtract(const Duration(days: 2)),
           createdAt: now(),
-          pills: Pill.generateAndFillTo(pillSheetType: PillSheetType.pillsheet_28_0),
+          pills: Pill.generateAndFillTo(pillSheetType: PillSheetType.pillsheet_28_0, toDate: mockToday.subtract(const Duration(days: 2))),
         );
 
         // actived pill sheet
@@ -531,7 +531,7 @@ void main() {
             RestDuration(beginDate: yesterday, createdDate: yesterday, endDate: today()),
           ],
           createdAt: now(),
-          pills: Pill.generateAndFillTo(pillSheetType: PillSheetType.pillsheet_21),
+          pills: Pill.generateAndFillTo(pillSheetType: PillSheetType.pillsheet_21, toDate: mockToday),
         );
 
         final pillSheetGroup = PillSheetGroup(
