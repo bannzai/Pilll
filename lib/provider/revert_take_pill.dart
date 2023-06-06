@@ -59,11 +59,11 @@ class RevertTakePill {
 
       if (takenDate.isBefore(pillSheet.beginingDate)) {
         // reset pill sheet when back to one before pill sheet
-        return pillSheet._updatedLastTakenDate(pillSheet.beginingDate.subtract(const Duration(days: 1)).date()).copyWith(restDurations: []);
+        return pillSheet.revertedPillSheet(pillSheet.beginingDate.subtract(const Duration(days: 1)).date()).copyWith(restDurations: []);
       } else {
         // Revert対象の日付よりも後ろにある休薬期間のデータは消す
         final remainingResetDurations = pillSheet.restDurations.where((restDuration) => restDuration.beginDate.date().isBefore(takenDate)).toList();
-        return pillSheet._updatedLastTakenDate(takenDate).copyWith(
+        return pillSheet.revertedPillSheet(takenDate).copyWith(
               restDurations: remainingResetDurations,
             );
       }
@@ -99,7 +99,7 @@ class RevertTakePill {
 }
 
 extension on PillSheet {
-  PillSheet _updatedLastTakenDate(DateTime date) {
+  PillSheet revertedPillSheet(DateTime date) {
     return copyWith(
       lastTakenDate: date,
       pills: pills.map((pill) {
