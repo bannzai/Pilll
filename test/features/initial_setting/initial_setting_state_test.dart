@@ -48,7 +48,7 @@ void main() {
         typeInfo: PillSheetType.pillsheet_21.typeInfo,
         beginingDate: DateTime.parse("2020-11-23"),
         createdAt: now(),
-        pills: Pill.generateAndFillTo(pillSheetType: PillSheetType.pillsheet_21, toDate: null),
+        pills: Pill.generate(PillSheetType.pillsheet_21),
       );
 
       expect(expected, pillSheet);
@@ -79,7 +79,7 @@ void main() {
         beginingDate: DateTime.parse("2020-12-21"),
         lastTakenDate: null,
         createdAt: now(),
-        pills: Pill.generateAndFillTo(pillSheetType: PillSheetType.pillsheet_24_0, toDate: null),
+        pills: Pill.generate(PillSheetType.pillsheet_24_0),
       );
 
       expect(expected, pillSheet);
@@ -111,7 +111,7 @@ void main() {
         beginingDate: DateTime.parse("2020-10-26"),
         lastTakenDate: DateTime.parse("2020-11-22"),
         createdAt: now(),
-        pills: Pill.generateAndFillTo(pillSheetType: PillSheetType.pillsheet_21, toDate: DateTime.parse("2020-11-22")),
+        pills: Pill.generate(PillSheetType.pillsheet_21),
       );
 
       expect(expected, pillSheet);
