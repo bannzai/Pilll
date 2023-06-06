@@ -125,7 +125,7 @@ class PillSheet with _$PillSheet {
       return 0;
     }
 
-    // TODO: [PillSheet.Pill] そのうち消す
+    // TODO: [PillSheet.Pill] そのうち消す。古いPillSheetのPillsは[]になっている
     if (pills.isEmpty) {
       return pillSheetPillNumber(pillSheet: this, targetDate: lastTakenDate);
     }
@@ -143,6 +143,14 @@ class PillSheet with _$PillSheet {
 
   bool get todayPillsAreAlreadyTaken {
     return lastCompletedPillNumber == todayPillNumber;
+  }
+
+  bool get anyTodayPillsAreAlreadyTaken {
+    // TODO: [PillSheet.Pill] そのうち消す。古いPillSheetのPillsは[]になっている
+    if (pills.isEmpty) {
+      return lastCompletedPillNumber == todayPillNumber;
+    }
+    return pills[todayPillIndex].pillTakens.isNotEmpty;
   }
 
   bool get isEnded => typeInfo.totalCount == lastCompletedPillNumber;
