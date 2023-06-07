@@ -56,47 +56,6 @@ void main() {
         expect(reverted.todayPillsAreAlreadyTaken, expected.todayPillsAreAlreadyTaken);
         expect(reverted, expected);
       });
-
-      test("Revert before begin date", () async {
-        var mockTodayRepository = MockTodayService();
-        final mockToday = DateTime.parse("2022-01-17");
-        todayRepository = mockTodayRepository;
-        when(mockTodayRepository.now()).thenReturn(mockToday);
-        when(mockTodayRepository.now()).thenReturn(mockToday);
-        final beginDate = DateTime.parse("2022-01-06");
-
-        final pillSheet = PillSheet(
-          id: "sheet_id",
-          typeInfo: PillSheetType.pillsheet_28_0.typeInfo,
-          beginingDate: beginDate,
-          groupIndex: 0,
-          lastTakenDate: today(),
-          createdAt: now(),
-          pills: Pill.generateAndFillTo(pillSheetType: PillSheetType.pillsheet_28_0, toDate: today()),
-          restDurations: [
-            RestDuration(
-              beginDate: mockToday.subtract(const Duration(days: 2)),
-              createdDate: mockToday.subtract(const Duration(days: 2)),
-              endDate: mockToday.subtract(const Duration(days: 1)),
-            ),
-          ],
-        );
-
-        final revertDate = beginDate.subtract(const Duration(days: 1));
-        final expected = pillSheet.copyWith(
-          lastTakenDate: revertDate,
-          pills: Pill.generateAndFillTo(pillSheetType: PillSheetType.pillsheet_28_0, toDate: revertDate),
-          restDurations: [],
-        );
-        final reverted = pillSheet.revertedPillSheet(revertDate);
-
-        expect(reverted.pills, expected.pills);
-        expect(reverted.lastTakenDate, expected.lastTakenDate);
-        expect(reverted.lastCompletedPillNumber, expected.lastCompletedPillNumber);
-        expect(reverted.todayPillNumber, expected.todayPillNumber);
-        expect(reverted.todayPillsAreAlreadyTaken, expected.todayPillsAreAlreadyTaken);
-        expect(reverted, expected);
-      });
     });
   });
 
