@@ -209,12 +209,7 @@ void main() {
                 totalCount: sheetType.totalCount,
                 pillSheetTypeReferencePath: sheetType.rawPath,
               ),
-              pills: Pill.generateAndFillTo(
-                  pillSheetType: sheetType,
-                  fromDate: DateTime.parse("2020-09-01"),
-                  fromDate: DateTime.parse("2020-09-01"),
-                  fromDate: DateTime.parse("2020-09-01"),
-                  toDate: DateTime.parse("2020-09-28")),
+              pills: Pill.generateAndFillTo(pillSheetType: sheetType, fromDate: DateTime.parse("2020-09-01"), toDate: DateTime.parse("2020-09-28")),
             );
             // created at and id are anything value
             final pillSheetGroup = PillSheetGroup(
@@ -509,7 +504,7 @@ void main() {
               totalCount: sheetType.totalCount,
               pillSheetTypeReferencePath: sheetType.rawPath,
             ),
-            pills: Pill.generateAndFillTo(pillSheetType: sheetType, toDate: DateTime.parse("2020-09-22")),
+            pills: Pill.generateAndFillTo(pillSheetType: sheetType, fromDate: DateTime.parse("2020-09-01"), toDate: DateTime.parse("2020-09-22")),
           );
           // created at and id are anything value
           final pillSheetGroup = PillSheetGroup(
@@ -543,7 +538,7 @@ void main() {
               totalCount: sheetType.totalCount,
               pillSheetTypeReferencePath: sheetType.rawPath,
             ),
-            pills: Pill.generateAndFillTo(pillSheetType: sheetType, toDate: DateTime.parse("2020-09-27")),
+            pills: Pill.generateAndFillTo(pillSheetType: sheetType, fromDate: DateTime.parse("2020-09-01"), toDate: DateTime.parse("2020-09-27")),
           );
           // created at and id are anything value
           final pillSheetGroup = PillSheetGroup(
@@ -577,7 +572,7 @@ void main() {
               totalCount: sheetType.totalCount,
               pillSheetTypeReferencePath: sheetType.rawPath,
             ),
-            pills: Pill.generateAndFillTo(pillSheetType: sheetType, toDate: null),
+            pills: Pill.generateAndFillTo(pillSheetType: sheetType, fromDate: DateTime.parse("2020-09-01"), toDate: null),
           );
           // created at and id are anything value
           final pillSheetGroup = PillSheetGroup(
@@ -617,7 +612,7 @@ void main() {
                 totalCount: sheetType.totalCount,
                 pillSheetTypeReferencePath: sheetType.rawPath,
               ),
-              pills: Pill.generateAndFillTo(pillSheetType: sheetType, toDate: DateTime.parse("2020-09-22")),
+              pills: Pill.generateAndFillTo(pillSheetType: sheetType, fromDate: DateTime.parse("2020-09-01"), toDate: DateTime.parse("2020-09-22")),
             );
             // created at and id are anything value
             final pillSheetGroup = PillSheetGroup(
@@ -656,7 +651,7 @@ void main() {
                 totalCount: sheetType.totalCount,
                 pillSheetTypeReferencePath: sheetType.rawPath,
               ),
-              pills: Pill.generateAndFillTo(pillSheetType: sheetType, toDate: DateTime.parse("2020-09-22")),
+              pills: Pill.generateAndFillTo(pillSheetType: sheetType, fromDate: DateTime.parse("2020-09-01"), toDate: DateTime.parse("2020-09-22")),
             );
             // created at and id are anything value
             final pillSheetGroup = PillSheetGroup(
@@ -687,7 +682,7 @@ void main() {
               totalCount: sheetType.totalCount,
               pillSheetTypeReferencePath: sheetType.rawPath,
             ),
-            pills: Pill.generateAndFillTo(pillSheetType: sheetType, toDate: DateTime.parse("2022-03-28")),
+            pills: Pill.generateAndFillTo(pillSheetType: sheetType, fromDate: DateTime.parse("2022-03-01"), toDate: DateTime.parse("2022-03-28")),
           );
           final pillSheet2 = PillSheet(
             id: firestoreIDGenerator(),
@@ -701,7 +696,7 @@ void main() {
               totalCount: sheetType.totalCount,
               pillSheetTypeReferencePath: sheetType.rawPath,
             ),
-            pills: Pill.generateAndFillTo(pillSheetType: sheetType, toDate: DateTime.parse("2022-03-29")),
+            pills: Pill.generateAndFillTo(pillSheetType: sheetType, fromDate: DateTime.parse("2022-03-29"), toDate: DateTime.parse("2022-03-29")),
           );
           // created at and id are anything value
           final pillSheetGroup = PillSheetGroup(
@@ -729,7 +724,7 @@ void main() {
               totalCount: sheetType.totalCount,
               pillSheetTypeReferencePath: sheetType.rawPath,
             ),
-            pills: Pill.generateAndFillTo(pillSheetType: sheetType, toDate: DateTime.parse("2022-03-28")),
+            pills: Pill.generateAndFillTo(pillSheetType: sheetType, fromDate: DateTime.parse("2022-03-01"), toDate: DateTime.parse("2022-03-28")),
           );
           final pillSheet2 = PillSheet(
             id: firestoreIDGenerator(),
@@ -743,7 +738,7 @@ void main() {
               totalCount: sheetType.totalCount,
               pillSheetTypeReferencePath: sheetType.rawPath,
             ),
-            pills: Pill.generateAndFillTo(pillSheetType: sheetType, toDate: DateTime.parse("2022-03-29")),
+            pills: Pill.generateAndFillTo(pillSheetType: sheetType, fromDate: DateTime.parse("2022-03-29"), toDate: DateTime.parse("2022-03-29")),
           );
           // created at and id are anything value
           final pillSheetGroup = PillSheetGroup(
@@ -772,7 +767,7 @@ void main() {
               totalCount: sheetType.totalCount,
               pillSheetTypeReferencePath: sheetType.rawPath,
             ),
-            pills: Pill.generateAndFillTo(pillSheetType: sheetType, toDate: DateTime.parse("2022-03-28")),
+            pills: Pill.generateAndFillTo(pillSheetType: sheetType, fromDate: DateTime.parse("2022-03-01"), toDate: DateTime.parse("2022-03-28")),
           );
           final pillSheet2 = PillSheet(
             id: firestoreIDGenerator(),
@@ -786,7 +781,7 @@ void main() {
               totalCount: sheetType.totalCount,
               pillSheetTypeReferencePath: sheetType.rawPath,
             ),
-            pills: Pill.generateAndFillTo(pillSheetType: sheetType, toDate: DateTime.parse("2022-03-29")),
+            pills: Pill.generateAndFillTo(pillSheetType: sheetType, fromDate: DateTime.parse("2022-03-29"), toDate: DateTime.parse("2022-03-29")),
           );
           // created at and id are anything value
           final pillSheetGroup = PillSheetGroup(
@@ -816,7 +811,7 @@ void main() {
               totalCount: sheetType.totalCount,
               pillSheetTypeReferencePath: sheetType.rawPath,
             ),
-            pills: Pill.generateAndFillTo(pillSheetType: sheetType, toDate: DateTime.parse("2022-03-28")),
+            pills: Pill.generateAndFillTo(pillSheetType: sheetType, fromDate: DateTime.parse("2022-03-01"), toDate: DateTime.parse("2022-03-28")),
           );
           final pillSheet2 = PillSheet(
             id: firestoreIDGenerator(),
@@ -830,7 +825,7 @@ void main() {
               totalCount: sheetType.totalCount,
               pillSheetTypeReferencePath: sheetType.rawPath,
             ),
-            pills: Pill.generateAndFillTo(pillSheetType: sheetType, toDate: DateTime.parse("2022-03-29")),
+            pills: Pill.generateAndFillTo(pillSheetType: sheetType, fromDate: DateTime.parse("2022-03-29"), toDate: DateTime.parse("2022-03-29")),
           );
           // created at and id are anything value
           final pillSheetGroup = PillSheetGroup(
@@ -859,7 +854,7 @@ void main() {
               totalCount: sheetType.totalCount,
               pillSheetTypeReferencePath: sheetType.rawPath,
             ),
-            pills: Pill.generateAndFillTo(pillSheetType: sheetType, toDate: DateTime.parse("2022-03-28")),
+            pills: Pill.generateAndFillTo(pillSheetType: sheetType, fromDate: DateTime.parse("2022-03-01"), toDate: DateTime.parse("2022-03-28")),
           );
           final pillSheet2 = PillSheet(
             id: firestoreIDGenerator(),
@@ -873,7 +868,7 @@ void main() {
               totalCount: sheetType.totalCount,
               pillSheetTypeReferencePath: sheetType.rawPath,
             ),
-            pills: Pill.generateAndFillTo(pillSheetType: sheetType, toDate: DateTime.parse("2022-03-29")),
+            pills: Pill.generateAndFillTo(pillSheetType: sheetType, fromDate: DateTime.parse("2022-03-29"), toDate: DateTime.parse("2022-03-29")),
           );
           // created at and id are anything value
           final pillSheetGroup = PillSheetGroup(
