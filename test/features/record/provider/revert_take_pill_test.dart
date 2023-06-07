@@ -109,8 +109,15 @@ void main() {
           pillSheetIDs: ["sheet_id"],
           pillSheets: [
             pillSheet.copyWith(
-                lastTakenDate: yesterday.subtract(const Duration(days: 1)),
-                pills: Pill.generateAndFillTo(pillSheetType: PillSheetType.pillsheet_28_0, toDate: yesterday.subtract(const Duration(days: 1)))),
+              lastTakenDate: yesterday.subtract(const Duration(days: 1)),
+              pills: Pill.generateAndFillTo(
+                pillSheetType: PillSheetType.pillsheet_28_0,
+                fromDate: pillSheet.beginingDate,
+                toDate: yesterday.subtract(
+                  const Duration(days: 1),
+                ),
+              ),
+            ),
           ],
           createdAt: now(),
         );
@@ -231,21 +238,10 @@ void main() {
         final batch = MockWriteBatch();
         when(batchFactory.batch()).thenReturn(batch);
 
-        final pillSheet = PillSheet(
-          id: "sheet_id",
-          typeInfo: PillSheetType.pillsheet_28_0.typeInfo,
+        final pillSheet = PillSheet.create(
+          PillSheetType.pillsheet_28_0,
           beginDate: beginDate,
-          groupIndex: 0,
           lastTakenDate: today(),
-          createdAt: now(),
-          pills: Pill.generateAndFillTo(pillSheetType: PillSheetType.pillsheet_28_0, toDate: today()),
-          restDurations: [
-            RestDuration(
-              beginDate: mockToday.subtract(const Duration(days: 2)),
-              createdDate: mockToday.subtract(const Duration(days: 2)),
-              endDate: mockToday.subtract(const Duration(days: 1)),
-            ),
-          ],
         );
 
         final pillSheetGroup = PillSheetGroup(
@@ -340,6 +336,7 @@ void main() {
               lastTakenDate: yesterday,
               pills: Pill.generateAndFillTo(
                 pillSheetType: PillSheetType.pillsheet_28_0,
+                fromDate: pillSheet.beginingDate,
                 toDate: yesterday,
               ),
             ),
