@@ -90,7 +90,12 @@ class Pill with _$Pill {
         createdDateTime: now(),
         updatedDateTime: now(),
         pillTakens: toDate != null && (date.isBefore(toDate) || isSameDay(date, toDate))
-            ? List.generate(pillTakenCount ?? 1, (i) => PillTaken(takenDateTime: date, createdDateTime: now(), updatedDateTime: now()))
+            ? List.generate(
+                pillTakenCount ?? 1,
+                (i) {
+                  return PillTaken(takenDateTime: date, createdDateTime: now(), updatedDateTime: now());
+                },
+              )
             : [],
       );
     });
