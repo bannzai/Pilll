@@ -263,10 +263,13 @@ void main() {
       final batch = MockWriteBatch();
       when(batchFactory.batch()).thenReturn(batch);
 
-      final pillSheet = PillSheet.create(
-        PillSheetType.pillsheet_21,
-        beginDate: mockToday,
+      final pillSheet = PillSheet(
+        id: "sheet_id",
+        typeInfo: PillSheetType.pillsheet_21.typeInfo,
+        beginingDate: mockToday,
         lastTakenDate: null,
+        createdAt: now(),
+        pills: Pill.generate(PillSheetType.pillsheet_21),
       );
 
       final pillSheetGroup = PillSheetGroup(pillSheetIDs: ["sheet_id"], pillSheets: [pillSheet.copyWith(id: "sheet_id")], createdAt: now());
@@ -329,15 +332,25 @@ void main() {
       final batch = MockWriteBatch();
       when(batchFactory.batch()).thenReturn(batch);
 
-      final pillSheet = PillSheet.create(
-        PillSheetType.pillsheet_28_0,
-        beginDate: mockToday.subtract(const Duration(days: 28)),
+      final pillSheet = PillSheet(
+        id: "sheet_id",
+        typeInfo: PillSheetType.pillsheet_28_0.typeInfo,
+        beginingDate: mockToday.subtract(
+          const Duration(days: 28),
+        ),
+        groupIndex: 0,
         lastTakenDate: DateTime.parse("2020-09-18"),
+        createdAt: now(),
+        pills: Pill.generate(PillSheetType.pillsheet_28_0),
       );
-      final pillSheet2 = PillSheet.create(
-        PillSheetType.pillsheet_21,
-        beginDate: mockToday,
+      final pillSheet2 = PillSheet(
+        id: "sheet_id2",
+        typeInfo: PillSheetType.pillsheet_21.typeInfo,
+        beginingDate: mockToday,
         lastTakenDate: mockToday.subtract(const Duration(days: 1)),
+        groupIndex: 1,
+        createdAt: now(),
+        pills: Pill.generate(PillSheetType.pillsheet_21),
       );
 
       final pillSheetGroup = PillSheetGroup(
@@ -421,10 +434,13 @@ void main() {
       final batch = MockWriteBatch();
       when(batchFactory.batch()).thenReturn(batch);
 
-      final pillSheet = PillSheet.create(
-        PillSheetType.pillsheet_24_rest_4,
-        beginDate: mockToday,
+      final pillSheet = PillSheet(
+        id: "sheet_id",
+        typeInfo: PillSheetType.pillsheet_24_rest_4.typeInfo,
+        beginingDate: mockToday,
         lastTakenDate: null,
+        createdAt: now(),
+        pills: Pill.generate(PillSheetType.pillsheet_24_rest_4),
       );
 
       final pillSheetGroup = PillSheetGroup(pillSheetIDs: ["sheet_id"], pillSheets: [pillSheet.copyWith(id: "sheet_id")], createdAt: now());
