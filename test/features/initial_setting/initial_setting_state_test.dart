@@ -46,7 +46,7 @@ void main() {
       final expected = PillSheet(
         id: firestoreIDGenerator(),
         typeInfo: PillSheetType.pillsheet_21.typeInfo,
-        beginingDate: DateTime.parse("2020-11-23"),
+        beginDate: DateTime.parse("2020-11-23"),
         lastTakenDate: null,
         createdAt: now(),
         pills: Pill.generate(PillSheetType.pillsheet_21),
@@ -73,14 +73,10 @@ void main() {
         ],
       );
 
-      final expected = PillSheet(
-        id: "sheet_id2",
-        groupIndex: 1,
-        typeInfo: PillSheetType.pillsheet_24_0.typeInfo,
-        beginingDate: DateTime.parse("2020-12-21"),
+      final expected = PillSheet.create(
+        PillSheetType.pillsheet_24_0,
+        beginDate: DateTime.parse("2020-12-21"),
         lastTakenDate: null,
-        createdAt: now(),
-        pills: Pill.generate(PillSheetType.pillsheet_24_0),
       );
 
       expect(expected, pillSheet);
@@ -96,23 +92,16 @@ void main() {
       when(mockIDGenerator.call()).thenAnswer((_) => ["sheet_id", "sheet_id2"][idGeneratorCallCount++]);
       firestoreIDGenerator = mockIDGenerator;
 
-      final pillSheet = InitialSettingState.buildPillSheet(
-        pageIndex: 0,
-        todayPillNumber: const InitialSettingTodayPillNumber(pageIndex: 1, pillNumberIntoPillSheet: 1),
-        pillSheetTypes: [
-          PillSheetType.pillsheet_21,
-          PillSheetType.pillsheet_24_0,
-        ],
+      final pillSheet = InitialSettingState.buildPillSheet.create(
+        PillSheetType.pillsheet_21,
+        beginDate: DateTime.parse("2020-10-26"),
+        lastTakenDate: DateTime.parse("2020-11-22"),
       );
 
-      final expected = PillSheet(
-        id: "sheet_id",
-        groupIndex: 0,
-        typeInfo: PillSheetType.pillsheet_21.typeInfo,
-        beginingDate: DateTime.parse("2020-10-26"),
+      final expected = PillSheet.create(
+        PillSheetType.pillsheet_21,
+        beginDate: DateTime.parse("2020-10-26"),
         lastTakenDate: DateTime.parse("2020-11-22"),
-        createdAt: now(),
-        pills: Pill.generate(PillSheetType.pillsheet_21),
       );
 
       expect(expected, pillSheet);
