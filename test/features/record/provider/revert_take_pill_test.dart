@@ -49,11 +49,11 @@ void main() {
           pills: Pill.generate(PillSheetType.pillsheet_28_0), // Change
           pillTakenCount: 1,
         );
+        expect(reverted.pills, expected.pills);
         expect(reverted.lastTakenDate, expected.lastTakenDate);
         expect(reverted.lastCompletedPillNumber, expected.lastCompletedPillNumber);
         expect(reverted.todayPillNumber, expected.todayPillNumber);
         expect(reverted.todayPillsAreAlreadyTaken, expected.todayPillsAreAlreadyTaken);
-        expect(reverted.pills, expected.pills);
         expect(reverted, expected);
       });
     });

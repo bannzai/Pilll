@@ -81,13 +81,12 @@ class Pill with _$Pill {
     required DateTime? toDate,
     int? pillTakenCount,
   }) {
-    return List.generate(
-      pillSheetType.totalCount,
-      (index) => Pill(
+    return List.generate(pillSheetType.totalCount, (index) {
+      return Pill(
         index: index,
         createdDateTime: now(),
         updatedDateTime: now(),
-        pillTakens: toDate != null
+        pillTakens: toDate != null && toDate.isAfter(now())
             ? List.generate(
                 pillTakenCount ?? 1,
                 (i) {
@@ -96,7 +95,7 @@ class Pill with _$Pill {
                 },
               )
             : [],
-      ),
-    );
+      );
+    });
   }
 }

@@ -106,15 +106,14 @@ extension RevertedPillSheet on PillSheet {
         if (pill.index > todayPillIndex) {
           return pill;
         }
-        final pillTakenList = [...pill.pillTakens];
 
         if (isSameDay(date.date(), today()) && pill.index == todayPillIndex) {
           // 対象が今日のピルの場合、取り消すのは最後の1回の服用記録
-          if (pillTakenList.isEmpty) {
+          if (pill.pillTakens.isEmpty) {
             return pill;
           }
 
-          return pill.copyWith(pillTakens: [...pillTakenList]..removeLast());
+          return pill.copyWith(pillTakens: [...pill.pillTakens]..removeLast());
         }
 
         if (beginingDate.date().add(Duration(days: pill.index)).isBefore(date)) {
