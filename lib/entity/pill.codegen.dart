@@ -83,16 +83,17 @@ class Pill with _$Pill {
     int? pillTakenCount,
   }) {
     return List.generate(pillSheetType.totalCount, (index) {
+      final diff = pillSheetType.totalCount - (index + 1);
+      final date = toDate?.subtract(Duration(days: diff));
       return Pill(
         index: index,
         createdDateTime: now(),
         updatedDateTime: now(),
-        pillTakens: toDate != null && (toDate.isBefore(now()) || isSameDay(toDate, now()))
+        pillTakens: toDate != null && date != null && (date.isBefore(toDate) || isSameDay(date, toDate))
             ? List.generate(
                 pillTakenCount ?? 1,
                 (i) {
-                  final date = toDate.subtract(Duration(days: i));
-                  return PillTaken(takenDateTime: date, createdDateTime: date, updatedDateTime: date);
+                  return PillTaken(takenDateTime: date, createdDateTime: now(), updatedDateTime: now());
                 },
               )
             : [],

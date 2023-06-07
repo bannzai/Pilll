@@ -103,24 +103,22 @@ extension RevertedPillSheet on PillSheet {
     return copyWith(
       lastTakenDate: date,
       pills: pills.map((pill) {
-        if (pill.index > todayPillIndex) {
-          return pill.copyWith(pillTakens: []);
-        }
-
         if (isSameDay(date.date(), today()) && pill.index == todayPillIndex) {
-          // 対象が今日のピルの場合、取り消すのは最後の1回の服用記録
+          // NOTE: 服用記録がない場合は何もしない
           if (pill.pillTakens.isEmpty) {
             return pill;
           }
 
+          // 対象が今日のピルの場合、取り消すのは最後の1回の服用記録
           return pill.copyWith(pillTakens: [...pill.pillTakens]..removeLast());
         }
 
+        // このpillの日付(begin + pill.index)が対象の日付よりも前の場合は何もしない
         if (beginingDate.date().add(Duration(days: pill.index)).isBefore(date)) {
           return pill;
         }
 
-        // NOTE: !isSameDay(date.date() ,today()) && pill.index == todayPillIndex
+        // NOTE: !(isSameDay(date.date() ,today()) && pill.index == todayPillIndex)
         // OR pill.index != todayPillIndex。これらの場合は全ての服用記録を消す
         return pill.copyWith(pillTakens: []);
       }).toList(),

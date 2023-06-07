@@ -56,6 +56,49 @@ void main() {
         expect(reverted.todayPillsAreAlreadyTaken, expected.todayPillsAreAlreadyTaken);
         expect(reverted, expected);
       });
+      test("Revert to yesterday", () async {
+        var mockTodayRepository = MockTodayService();
+        final mockToday = DateTime.parse("2022-01-17");
+        todayRepository = mockTodayRepository;
+        when(mockTodayRepository.now()).thenReturn(mockToday);
+        when(mockTodayRepository.now()).thenReturn(mockToday);
+        final yesterday = DateTime.parse("2022-01-16");
+
+        final pillSheet = PillSheet(
+          id: "sheet_id",
+          typeInfo: PillSheetType.pillsheet_28_0.typeInfo,
+          beginingDate: DateTime.parse("2022-01-06"),
+          groupIndex: 0,
+          lastTakenDate: today(),
+          createdAt: now(),
+          pills: Pill.generateAndFillTo(pillSheetType: PillSheetType.pillsheet_28_0, toDate: today()),
+          restDurations: [
+            RestDuration(
+              beginDate: mockToday.subtract(const Duration(days: 8)),
+              createdDate: mockToday.subtract(const Duration(days: 8)),
+              endDate: mockToday.subtract(const Duration(days: 7)),
+            ),
+          ],
+        );
+        final revertDate = yesterday;
+        final reverted = pillSheet.revertedPillSheet(revertDate);
+        final expected = PillSheet(
+          id: "sheet_id",
+          typeInfo: PillSheetType.pillsheet_28_0.typeInfo,
+          beginingDate: DateTime.parse("2022-01-06"),
+          groupIndex: 0,
+          lastTakenDate: revertDate, // change
+          createdAt: now(),
+          pills: Pill.generateAndFillTo(pillSheetType: PillSheetType.pillsheet_28_0, toDate: yesterday), // Change
+          pillTakenCount: 1,
+        );
+        expect(reverted.pills, expected.pills);
+        expect(reverted.lastTakenDate, expected.lastTakenDate);
+        expect(reverted.lastCompletedPillNumber, expected.lastCompletedPillNumber);
+        expect(reverted.todayPillNumber, expected.todayPillNumber);
+        expect(reverted.todayPillsAreAlreadyTaken, expected.todayPillsAreAlreadyTaken);
+        expect(reverted, expected);
+      });
     });
   });
 
@@ -338,7 +381,13 @@ void main() {
           id: "group_id",
           pillSheetIDs: ["sheet_id"],
           pillSheets: [
-            pillSheet.copyWith(lastTakenDate: yesterday),
+            pillSheet.copyWith(
+              lastTakenDate: yesterday,
+              pills: Pill.generateAndFillTo(
+                pillSheetType: PillSheetType.pillsheet_28_0,
+                toDate: yesterday,
+              ),
+            ),
           ],
           createdAt: now(),
         );
