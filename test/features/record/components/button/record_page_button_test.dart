@@ -1,4 +1,3 @@
-import 'package:flutter/foundation.dart';
 import 'package:pilll/entity/pill.codegen.dart';
 import 'package:pilll/entity/pill_sheet.codegen.dart';
 import 'package:pilll/entity/pill_sheet_group.codegen.dart';
@@ -116,8 +115,7 @@ void main() {
             ),
           ],
           lastTakenDate: now(),
-          pills: Pill.generateAndFillTo(
-              pillSheetType: PillSheetType.pillsheet_28_0, fromDate: pillSheetGroup.activedPillSheet!.beginingDate, toDate: now()),
+          pills: Pill.generateAndFillTo(pillSheetType: PillSheetType.pillsheet_28_0, toDate: now()),
         );
         pillSheets.replaceRange(0, 1, [activePillSheet]);
         expect(activePillSheet.activeRestDuration, isNull);
