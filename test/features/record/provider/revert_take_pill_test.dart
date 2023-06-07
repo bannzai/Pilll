@@ -90,7 +90,12 @@ void main() {
           lastTakenDate: revertDate, // change
           createdAt: now(),
           pills: Pill.generateAndFillTo(
-              pillSheetType: PillSheetType.pillsheet_28_0, fromDate: DateTime.parse("2022-01-06"), toDate: yesterday), // Change
+            pillSheetType: PillSheetType.pillsheet_28_0,
+            fromDate: DateTime.parse("2022-01-06"),
+            toDate: revertDate.subtract(
+              const Duration(days: 1),
+            ),
+          ), // Change
           pillTakenCount: 1,
         );
         expect(reverted.pills, expected.pills);
