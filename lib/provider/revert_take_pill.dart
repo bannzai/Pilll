@@ -104,7 +104,7 @@ extension RevertedPillSheet on PillSheet {
       lastTakenDate: date,
       pills: pills.map((pill) {
         if (pill.index > todayPillIndex) {
-          return pill;
+          return pill.copyWith(pillTakens: []);
         }
 
         if (isSameDay(date.date(), today()) && pill.index == todayPillIndex) {

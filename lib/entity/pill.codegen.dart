@@ -87,7 +87,7 @@ class Pill with _$Pill {
         index: index,
         createdDateTime: now(),
         updatedDateTime: now(),
-        pillTakens: toDate != null && (toDate.isBefore(now()) || isSameDay(toDate, (now())))
+        pillTakens: toDate != null && (toDate.isBefore(now()) || isSameDay(toDate, now()))
             ? List.generate(
                 pillTakenCount ?? 1,
                 (i) {
