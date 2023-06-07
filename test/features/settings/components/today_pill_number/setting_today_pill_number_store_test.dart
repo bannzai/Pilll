@@ -330,15 +330,15 @@ void main() {
         lastTakenDate: null,
       );
       final updatedLeft = left.copyWith(
-        beginingDate: DateTime.parse("2022-03-06"),
+        beginDate: DateTime.parse("2022-03-06"),
         lastTakenDate: DateTime.parse("2022-04-02"),
       );
       final updatedMiddle = middle.copyWith(
-        beginingDate: DateTime.parse("2022-04-03"),
+        beginDate: DateTime.parse("2022-04-03"),
         lastTakenDate: DateTime.parse("2022-04-30"),
       );
       final updatedRight = right.copyWith(
-        beginingDate: DateTime.parse("2022-05-01"),
+        beginDate: DateTime.parse("2022-05-01"),
         lastTakenDate: DateTime.parse("2022-04-30"),
       );
 
@@ -414,15 +414,15 @@ void main() {
         lastTakenDate: null,
       );
       final updatedLeft = left.copyWith(
-        beginingDate: DateTime.parse("2022-04-05"),
+        beginDate: DateTime.parse("2022-04-05"),
         lastTakenDate: DateTime.parse("2022-05-01"), // todayPillNumber - 1
         restDurations: [],
       );
       final updatedMiddle = middle.copyWith(
-        beginingDate: DateTime.parse("2022-05-03"),
+        beginDate: DateTime.parse("2022-05-03"),
       );
       final updatedRight = right.copyWith(
-        beginingDate: DateTime.parse("2022-05-31"),
+        beginDate: DateTime.parse("2022-05-31"),
       );
 
       final pillSheetGroup = PillSheetGroup(
