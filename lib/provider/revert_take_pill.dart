@@ -114,8 +114,7 @@ extension RevertedPillSheet on PillSheet {
             return pill;
           }
 
-          pillTakenList.removeLast();
-          return pill.copyWith(pillTakens: pillTakenList);
+          return pill.copyWith(pillTakens: [...pillTakenList]..removeLast());
         }
 
         if (beginingDate.date().add(Duration(days: pill.index)).isBefore(date)) {
