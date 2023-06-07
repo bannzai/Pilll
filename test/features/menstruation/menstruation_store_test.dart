@@ -119,13 +119,10 @@ void main() {
         final pillSheetGroup = PillSheetGroup(
           pillSheetIDs: ["1"],
           pillSheets: [
-            PillSheet(
-              id: firestoreIDGenerator(),
-              typeInfo: PillSheetType.pillsheet_21.typeInfo,
-              beginingDate: DateTime(2021, 04, 22),
+            PillSheet.create(
+              PillSheetType.pillsheet_21,
+              beginDate: DateTime(2021, 04, 22),
               lastTakenDate: null,
-              createdAt: now(),
-              pills: Pill.generateAndFillTo(pillSheetType: PillSheetType.pillsheet_21, toDate: null),
             ),
           ],
           createdAt: now(),
@@ -162,13 +159,10 @@ void main() {
         final pillSheetGroup = PillSheetGroup(
           pillSheetIDs: ["1"],
           pillSheets: [
-            PillSheet(
-              id: firestoreIDGenerator(),
-              typeInfo: PillSheetType.pillsheet_21.typeInfo,
-              beginingDate: DateTime(2021, 04, 07),
+            PillSheet.create(
+              PillSheetType.pillsheet_21,
+              beginDate: DateTime(2021, 04, 07),
               lastTakenDate: null,
-              createdAt: now(),
-              pills: Pill.generateAndFillTo(pillSheetType: PillSheetType.pillsheet_21, toDate: null),
             ),
           ],
           createdAt: now(),
