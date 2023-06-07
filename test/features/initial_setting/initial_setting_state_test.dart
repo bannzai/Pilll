@@ -43,10 +43,13 @@ void main() {
         pillSheetTypes: [PillSheetType.pillsheet_21],
       );
 
-      final expected = PillSheet.create(
-        PillSheetType.pillsheet_21,
+      final expected = PillSheet(
+        id: firestoreIDGenerator(),
+        typeInfo: PillSheetType.pillsheet_21.typeInfo,
         beginDate: DateTime.parse("2020-11-23"),
         lastTakenDate: null,
+        createdAt: now(),
+        pills: Pill.generate(PillSheetType.pillsheet_21),
       );
 
       expect(expected, pillSheet);
