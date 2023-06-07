@@ -19,6 +19,58 @@ void main() {
   late PillSheet nextPillSheet;
   late PillSheetGroup pillSheetGroup;
 
+  group("#pillSheet.takenPillSheet", () {
+    setUp(() {
+      TestWidgetsFlutterBinding.ensureInitialized();
+
+      final mockTodayRepository = MockTodayService();
+      todayRepository = mockTodayRepository;
+      when(mockTodayRepository.now()).thenReturn(mockToday);
+
+      activePillSheetBeginDate = today();
+      activePillSheetLastTakenDate = null;
+      previousPillSheet = PillSheet(
+        id: "previous_pill_sheet_id",
+        groupIndex: 0,
+        typeInfo: PillSheetType.pillsheet_28_7.typeInfo,
+        beginingDate: activePillSheetBeginDate.subtract(const Duration(days: 28)),
+        lastTakenDate: activePillSheetBeginDate.subtract(const Duration(days: 1)),
+        createdAt: now(),
+        pills: Pill.generateAndFillTo(
+            pillSheetType: PillSheetType.pillsheet_28_7,
+            fromDate: activePillSheetBeginDate.subtract(const Duration(days: 28)),
+            toDate: activePillSheetBeginDate.subtract(const Duration(days: 1))),
+      );
+      activedPillSheet = PillSheet(
+        id: "active_pill_sheet_id",
+        groupIndex: 1,
+        typeInfo: PillSheetType.pillsheet_28_7.typeInfo,
+        beginingDate: activePillSheetBeginDate,
+        lastTakenDate: activePillSheetLastTakenDate,
+        createdAt: now(),
+        pills: Pill.generateAndFillTo(
+            pillSheetType: PillSheetType.pillsheet_28_7, fromDate: activePillSheetBeginDate, toDate: activePillSheetLastTakenDate),
+      );
+      nextPillSheet = PillSheet(
+        id: "next_pill_sheet_id",
+        groupIndex: 2,
+        typeInfo: PillSheetType.pillsheet_28_7.typeInfo,
+        beginingDate: activePillSheetBeginDate.add(const Duration(days: 28)),
+        lastTakenDate: null,
+        createdAt: now(),
+        pills: Pill.generateAndFillTo(
+            pillSheetType: PillSheetType.pillsheet_28_7, fromDate: activePillSheetBeginDate.add(const Duration(days: 28)), toDate: null),
+      );
+      group("simple", () {
+        test("take pill", () {
+          final takenDate = mockToday.add(const Duration(seconds: 1));
+          final updatedActivePillSheet = activedPillSheet.updatedLastTaken(takenDate);
+          expect(updatedActivePillSheet.lastTakenDate, takenDate);
+        });
+      });
+    });
+  });
+
   group("#TakePill", () {
     setUp(() {
       TestWidgetsFlutterBinding.ensureInitialized();
