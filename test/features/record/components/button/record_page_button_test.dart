@@ -97,7 +97,7 @@ void main() {
       });
     });
     group('#CancelButton', () {
-      testWidgets('activePillSheet.todayPillIsAlreadyTaken', (WidgetTester tester) async {
+      testWidgets('activePillSheet.todayPillsAreAlreadyTaken', (WidgetTester tester) async {
         final firstPillSheetBeginDate = now().subtract(const Duration(days: 10));
         var pillSheets = [
           PillSheet(

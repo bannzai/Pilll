@@ -115,7 +115,7 @@ void main() {
         expect(result, updatedPillSheetGroup);
       });
 
-      test("activedPillSheet.todayPillIsAlreadyTaken", () async {
+      test("activedPillSheet.todayPillsAreAlreadyTaken", () async {
         final takenDate = mockToday.add(const Duration(seconds: 1));
         activedPillSheet = activedPillSheet.updatedLastTaken(takenDate);
 
@@ -188,7 +188,7 @@ void main() {
         expect(result, updatedPillSheetGroup);
       });
 
-      test("activedPillSheet.todayPillIsAlreadyTaken", () async {
+      test("activedPillSheet.todayPillsAreAlreadyTaken", () async {
         final takenDate = mockToday.add(const Duration(seconds: 1));
         activedPillSheet = activedPillSheet.updatedLastTaken(takenDate);
         pillSheetGroup = PillSheetGroup(
