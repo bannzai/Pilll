@@ -491,7 +491,14 @@ void main() {
           pillSheetIDs: ["1", "2"],
           pillSheets: [
             pillSheet,
-            pillSheet2.copyWith(lastTakenDate: yesterday),
+            pillSheet2.copyWith(
+              lastTakenDate: yesterday,
+              pills: Pill.generateAndFillTo(
+                pillSheetType: PillSheetType.pillsheet_21,
+                fromDate: pillSheet2.beginingDate,
+                toDate: yesterday,
+              ),
+            ),
           ],
           createdAt: now(),
         );
