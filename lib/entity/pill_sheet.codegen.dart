@@ -94,14 +94,22 @@ class PillSheet with _$PillSheet {
     @Default([]) List<Pill> pills,
   }) = _PillSheet;
 
+  // NOTE: visibleForTestingを消すならpillTakenCountもrequiredにする
   @visibleForTesting
-  factory PillSheet.create(PillSheetType type) => PillSheet(
+  factory PillSheet.create(
+    PillSheetType type, {
+    required DateTime beginDate,
+    required DateTime? lastTakenDate,
+    int? pillTakenCount,
+  }) =>
+      PillSheet(
         id: firestoreIDGenerator(),
         typeInfo: type.typeInfo,
-        beginingDate: today(),
-        lastTakenDate: null,
+        beginingDate: beginDate,
+        lastTakenDate: lastTakenDate,
         createdAt: now(),
-        pills: Pill.generate(type),
+        pillTakenCount: pillTakenCount,
+        pills: Pill.generateAndFillTo(pillSheetType: type, fromDate: beginDate, toDate: lastTakenDate),
       );
 
   factory PillSheet.fromJson(Map<String, dynamic> json) => _$PillSheetFromJson(json);
