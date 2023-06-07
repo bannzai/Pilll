@@ -193,6 +193,7 @@ void main() {
       final model = PillSheet(
         id: firestoreIDGenerator(),
         beginingDate: DateTime.parse("2020-09-14"),
+        lastTakenDate: null,
         createdAt: now(),
         typeInfo: PillSheetTypeInfo(
           dosingPeriod: sheetType.dosingPeriod,
@@ -213,6 +214,7 @@ void main() {
       final model = PillSheet(
         id: firestoreIDGenerator(),
         beginingDate: DateTime.parse("2020-09-01"),
+        lastTakenDate: null,
         createdAt: now(),
         typeInfo: PillSheetTypeInfo(
           dosingPeriod: sheetType.dosingPeriod,
@@ -233,6 +235,7 @@ void main() {
       final model = PillSheet(
         id: firestoreIDGenerator(),
         beginingDate: DateTime.parse("2020-09-01"),
+        lastTakenDate: null,
         createdAt: now(),
         typeInfo: PillSheetTypeInfo(
           dosingPeriod: sheetType.dosingPeriod,
@@ -253,6 +256,7 @@ void main() {
       final model = PillSheet(
         id: firestoreIDGenerator(),
         beginingDate: DateTime.parse("2020-09-01"),
+        lastTakenDate: null,
         createdAt: now(),
         typeInfo: PillSheetTypeInfo(
           dosingPeriod: sheetType.dosingPeriod,
@@ -273,6 +277,7 @@ void main() {
       final model = PillSheet(
         id: firestoreIDGenerator(),
         beginingDate: DateTime.parse("2020-09-01"),
+        lastTakenDate: null,
         createdAt: now(),
         typeInfo: PillSheetTypeInfo(
           dosingPeriod: sheetType.dosingPeriod,
@@ -296,6 +301,7 @@ void main() {
       final model = PillSheet(
         id: firestoreIDGenerator(),
         beginingDate: DateTime.parse("2020-09-01"),
+        lastTakenDate: null,
         createdAt: now(),
         typeInfo: PillSheetTypeInfo(
           dosingPeriod: sheetType.dosingPeriod,
@@ -319,6 +325,7 @@ void main() {
       final model = PillSheet(
         id: firestoreIDGenerator(),
         beginingDate: DateTime.parse("2020-09-01"),
+        lastTakenDate: null,
         createdAt: now(),
         typeInfo: PillSheetTypeInfo(
           dosingPeriod: sheetType.dosingPeriod,
@@ -339,6 +346,7 @@ void main() {
       final model = PillSheet(
         id: firestoreIDGenerator(),
         beginingDate: DateTime.parse("2020-09-01"),
+        lastTakenDate: null,
         createdAt: now(),
         typeInfo: PillSheetTypeInfo(
           dosingPeriod: sheetType.dosingPeriod,
@@ -359,6 +367,7 @@ void main() {
       final model = PillSheet(
         id: firestoreIDGenerator(),
         beginingDate: DateTime.parse("2020-09-01"),
+        lastTakenDate: null,
         createdAt: now(),
         typeInfo: PillSheetTypeInfo(
           dosingPeriod: sheetType.dosingPeriod,
@@ -388,6 +397,7 @@ void main() {
       final model = PillSheet(
         id: firestoreIDGenerator(),
         beginingDate: DateTime.parse("2020-09-14"),
+        lastTakenDate: null,
         createdAt: now(),
         typeInfo: PillSheetTypeInfo(
           dosingPeriod: sheetType.dosingPeriod,
@@ -408,6 +418,7 @@ void main() {
       final model = PillSheet(
         id: firestoreIDGenerator(),
         beginingDate: DateTime.parse("2020-09-01"),
+        lastTakenDate: null,
         createdAt: now(),
         typeInfo: PillSheetTypeInfo(
           dosingPeriod: sheetType.dosingPeriod,
@@ -428,6 +439,7 @@ void main() {
       final model = PillSheet(
         id: firestoreIDGenerator(),
         beginingDate: DateTime.parse("2020-09-01"),
+        lastTakenDate: null,
         createdAt: now(),
         typeInfo: PillSheetTypeInfo(
           dosingPeriod: sheetType.dosingPeriod,
@@ -448,6 +460,7 @@ void main() {
       final model = PillSheet(
         id: firestoreIDGenerator(),
         beginingDate: DateTime.parse("2020-09-01"),
+        lastTakenDate: null,
         createdAt: now(),
         typeInfo: PillSheetTypeInfo(
           dosingPeriod: sheetType.dosingPeriod,
@@ -470,6 +483,7 @@ void main() {
       final model = PillSheet(
         id: firestoreIDGenerator(),
         beginingDate: DateTime.parse("2020-09-14"),
+        lastTakenDate: null,
         createdAt: now(),
         typeInfo: PillSheetTypeInfo(
           dosingPeriod: sheetType.dosingPeriod,
@@ -687,6 +701,7 @@ void main() {
       final pillSheet = PillSheet(
         id: firestoreIDGenerator(),
         beginingDate: DateTime.parse("2022-05-01"),
+        lastTakenDate: null,
         createdAt: now(),
         typeInfo: PillSheetTypeInfo(
           dosingPeriod: sheetType.dosingPeriod,
@@ -709,6 +724,7 @@ void main() {
         final pillSheet = PillSheet(
           id: firestoreIDGenerator(),
           beginingDate: DateTime.parse("2022-05-01"),
+          lastTakenDate: null,
           createdAt: now(),
           restDurations: [
             RestDuration(
@@ -735,6 +751,7 @@ void main() {
         final pillSheet = PillSheet(
           id: firestoreIDGenerator(),
           beginingDate: DateTime.parse("2022-05-01"),
+          lastTakenDate: null,
           createdAt: now(),
           restDurations: [
             RestDuration(
@@ -764,6 +781,7 @@ void main() {
           final pillSheet = PillSheet(
             id: firestoreIDGenerator(),
             beginingDate: DateTime.parse("2022-05-01"),
+            lastTakenDate: null,
             createdAt: now(),
             restDurations: [
               RestDuration(
@@ -795,6 +813,7 @@ void main() {
           final pillSheet = PillSheet(
             id: firestoreIDGenerator(),
             beginingDate: DateTime.parse("2022-05-01"),
+            lastTakenDate: null,
             createdAt: now(),
             restDurations: [
               RestDuration(

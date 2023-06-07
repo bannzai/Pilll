@@ -267,6 +267,7 @@ void main() {
         id: "sheet_id",
         typeInfo: PillSheetType.pillsheet_21.typeInfo,
         beginingDate: mockToday,
+        lastTakenDate: null,
         createdAt: now(),
         pills: Pill.generate(PillSheetType.pillsheet_21),
       );
@@ -437,6 +438,7 @@ void main() {
         id: "sheet_id",
         typeInfo: PillSheetType.pillsheet_24_rest_4.typeInfo,
         beginingDate: mockToday,
+        lastTakenDate: null,
         createdAt: now(),
         pills: Pill.generate(PillSheetType.pillsheet_24_rest_4),
       );

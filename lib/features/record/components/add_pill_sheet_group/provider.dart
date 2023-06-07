@@ -54,6 +54,7 @@ class AddPillSheetGroup {
         beginingDate: n.add(
           Duration(days: offset),
         ),
+        lastTakenDate: null,
         groupIndex: pageIndex,
         pills: Pill.generate(
           pillSheetType,
