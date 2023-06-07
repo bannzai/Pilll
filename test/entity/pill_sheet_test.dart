@@ -21,13 +21,10 @@ void main() {
       when(mockTodayRepository.now()).thenReturn(DateTime.parse("2020-09-19"));
 
       const sheetType = PillSheetType.pillsheet_21;
-      final model = PillSheet(
-        id: firestoreIDGenerator(),
-        beginingDate: DateTime.parse("2020-09-14"),
+      final model = PillSheet.create(
+        sheetType,
+        beginDate: DateTime.parse("2020-09-14"),
         lastTakenDate: DateTime.parse("2020-09-18"),
-        createdAt: now(),
-        typeInfo: sheetType.typeInfo,
-        pills: Pill.generateAndFillTo(pillSheetType: sheetType, toDate: DateTime.parse("2020-09-18")),
       );
       expect(model.todayPillNumber, 6);
     });
@@ -37,13 +34,10 @@ void main() {
       when(mockTodayRepository.now()).thenReturn(DateTime.parse("2020-09-28"));
 
       const sheetType = PillSheetType.pillsheet_21;
-      final model = PillSheet(
-        id: firestoreIDGenerator(),
-        beginingDate: DateTime.parse("2020-09-01"),
+      final model = PillSheet.create(
+        sheetType,
+        beginDate: DateTime.parse("2020-09-01"),
         lastTakenDate: DateTime.parse("2020-09-28"),
-        createdAt: now(),
-        typeInfo: sheetType.typeInfo,
-        pills: Pill.generateAndFillTo(pillSheetType: sheetType, toDate: DateTime.parse("2020-09-28")),
       );
       expect(model.todayPillNumber, 28);
     });
@@ -54,19 +48,10 @@ void main() {
         when(mockTodayRepository.now()).thenReturn(DateTime.parse("2020-09-28"));
 
         const sheetType = PillSheetType.pillsheet_21;
-        final model = PillSheet(
-          id: firestoreIDGenerator(),
-          beginingDate: DateTime.parse("2020-09-01"),
+        final model = PillSheet.create(
+          sheetType,
+          beginDate: DateTime.parse("2020-09-01"),
           lastTakenDate: DateTime.parse("2020-09-28"),
-          createdAt: now(),
-          restDurations: [
-            RestDuration(
-              beginDate: DateTime.parse("2020-09-22"),
-              createdDate: DateTime.parse("2020-09-22"),
-            )
-          ],
-          typeInfo: sheetType.typeInfo,
-          pills: Pill.generateAndFillTo(pillSheetType: sheetType, toDate: DateTime.parse("2020-09-28")),
         );
         expect(model.todayPillNumber, 22);
       });
@@ -77,20 +62,10 @@ void main() {
         when(mockTodayRepository.now()).thenReturn(DateTime.parse("2020-09-28"));
 
         const sheetType = PillSheetType.pillsheet_21;
-        final model = PillSheet(
-          id: firestoreIDGenerator(),
-          beginingDate: DateTime.parse("2020-09-01"),
+        final model = PillSheet.create(
+          sheetType,
+          beginDate: DateTime.parse("2020-09-01"),
           lastTakenDate: DateTime.parse("2020-09-28"),
-          createdAt: now(),
-          restDurations: [
-            RestDuration(
-              beginDate: DateTime.parse("2020-09-22"),
-              createdDate: DateTime.parse("2020-09-22"),
-              endDate: DateTime.parse("2020-09-25"),
-            )
-          ],
-          typeInfo: sheetType.typeInfo,
-          pills: Pill.generateAndFillTo(pillSheetType: sheetType, toDate: DateTime.parse("2020-09-28")),
         );
         expect(model.todayPillNumber, 25);
       });
@@ -101,24 +76,10 @@ void main() {
           when(mockTodayRepository.now()).thenReturn(DateTime.parse("2020-09-28"));
 
           const sheetType = PillSheetType.pillsheet_21;
-          final model = PillSheet(
-            id: firestoreIDGenerator(),
-            beginingDate: DateTime.parse("2020-09-01"),
+          final model = PillSheet.create(
+            sheetType,
+            beginDate: DateTime.parse("2020-09-01"),
             lastTakenDate: DateTime.parse("2020-09-28"),
-            createdAt: now(),
-            restDurations: [
-              RestDuration(
-                beginDate: DateTime.parse("2020-09-12"),
-                createdDate: DateTime.parse("2020-09-12"),
-                endDate: DateTime.parse("2020-09-15"),
-              ),
-              RestDuration(
-                beginDate: DateTime.parse("2020-09-22"),
-                createdDate: DateTime.parse("2020-09-22"),
-              )
-            ],
-            typeInfo: sheetType.typeInfo,
-            pills: Pill.generateAndFillTo(pillSheetType: sheetType, toDate: DateTime.parse("2020-09-28")),
           );
           expect(model.todayPillNumber, 19);
         });
@@ -128,25 +89,10 @@ void main() {
           when(mockTodayRepository.now()).thenReturn(DateTime.parse("2020-09-28"));
 
           const sheetType = PillSheetType.pillsheet_21;
-          final model = PillSheet(
-            id: firestoreIDGenerator(),
-            beginingDate: DateTime.parse("2020-09-01"),
+          final model = PillSheet.create(
+            sheetType,
+            beginDate: DateTime.parse("2020-09-01"),
             lastTakenDate: DateTime.parse("2020-09-28"),
-            createdAt: now(),
-            restDurations: [
-              RestDuration(
-                beginDate: DateTime.parse("2020-09-12"),
-                createdDate: DateTime.parse("2020-09-12"),
-                endDate: DateTime.parse("2020-09-15"),
-              ),
-              RestDuration(
-                beginDate: DateTime.parse("2020-09-22"),
-                createdDate: DateTime.parse("2020-09-22"),
-                endDate: DateTime.parse("2020-09-25"),
-              )
-            ],
-            typeInfo: sheetType.typeInfo,
-            pills: Pill.generateAndFillTo(pillSheetType: sheetType, toDate: DateTime.parse("2020-09-28")),
           );
           expect(model.todayPillNumber, 22);
         });
@@ -160,13 +106,10 @@ void main() {
       when(mockTodayRepository.now()).thenReturn(DateTime.parse("2020-09-19"));
 
       const sheetType = PillSheetType.pillsheet_21;
-      final model = PillSheet(
-        id: firestoreIDGenerator(),
-        beginingDate: DateTime.parse("2020-09-14"),
+      final model = PillSheet.create(
+        sheetType,
+        beginDate: DateTime.parse("2020-09-14"),
         lastTakenDate: null,
-        createdAt: now(),
-        typeInfo: sheetType.typeInfo,
-        pills: Pill.generateAndFillTo(pillSheetType: sheetType, toDate: null),
       );
       expect(model.isActive, true);
     });
@@ -176,13 +119,10 @@ void main() {
       when(mockTodayRepository.now()).thenReturn(DateTime.parse("2020-09-28"));
 
       const sheetType = PillSheetType.pillsheet_21;
-      final model = PillSheet(
-        id: firestoreIDGenerator(),
-        beginingDate: DateTime.parse("2020-09-01"),
+      final model = PillSheet.create(
+        sheetType,
+        beginDate: DateTime.parse("2020-09-01"),
         lastTakenDate: null,
-        createdAt: now(),
-        typeInfo: sheetType.typeInfo,
-        pills: Pill.generateAndFillTo(pillSheetType: sheetType, toDate: null),
       );
       expect(model.isActive, true);
     });
@@ -192,13 +132,10 @@ void main() {
       when(mockTodayRepository.now()).thenReturn(DateTime.parse("2020-09-29"));
 
       const sheetType = PillSheetType.pillsheet_21;
-      final model = PillSheet(
-        id: firestoreIDGenerator(),
-        beginingDate: DateTime.parse("2020-09-01"),
+      final model = PillSheet.create(
+        sheetType,
+        beginDate: DateTime.parse("2020-09-01"),
         lastTakenDate: null,
-        createdAt: now(),
-        typeInfo: sheetType.typeInfo,
-        pills: Pill.generateAndFillTo(pillSheetType: sheetType, toDate: null),
       );
       expect(model.isActive, false);
     });
@@ -208,13 +145,10 @@ void main() {
       when(mockTodayRepository.now()).thenReturn(DateTime(2020, 9, 28, 23, 59, 59));
 
       const sheetType = PillSheetType.pillsheet_21;
-      final model = PillSheet(
-        id: firestoreIDGenerator(),
-        beginingDate: DateTime.parse("2020-09-01"),
+      final model = PillSheet.create(
+        sheetType,
+        beginDate: DateTime.parse("2020-09-01"),
         lastTakenDate: null,
-        createdAt: now(),
-        typeInfo: sheetType.typeInfo,
-        pills: Pill.generateAndFillTo(pillSheetType: sheetType, toDate: null),
       );
       expect(model.isActive, true);
     });
@@ -224,16 +158,10 @@ void main() {
       when(mockTodayRepository.now()).thenReturn(DateTime(2020, 9, 29, 23, 59, 59));
 
       const sheetType = PillSheetType.pillsheet_21;
-      final model = PillSheet(
-        id: firestoreIDGenerator(),
-        beginingDate: DateTime.parse("2020-09-01"),
+      final model = PillSheet.create(
+        sheetType,
+        beginDate: DateTime.parse("2020-09-01"),
         lastTakenDate: null,
-        createdAt: now(),
-        typeInfo: sheetType.typeInfo,
-        restDurations: [
-          RestDuration(beginDate: DateTime.parse("2020-09-20"), createdDate: DateTime.parse("2020-09-20"), endDate: null),
-        ],
-        pills: Pill.generateAndFillTo(pillSheetType: sheetType, toDate: null),
       );
       expect(model.isActive, true);
     });
@@ -243,16 +171,10 @@ void main() {
       when(mockTodayRepository.now()).thenReturn(DateTime(2020, 9, 29, 23, 59, 59));
 
       const sheetType = PillSheetType.pillsheet_21;
-      final model = PillSheet(
-        id: firestoreIDGenerator(),
-        beginingDate: DateTime.parse("2020-09-01"),
+      final model = PillSheet.create(
+        sheetType,
+        beginDate: DateTime.parse("2020-09-01"),
         lastTakenDate: null,
-        createdAt: now(),
-        typeInfo: sheetType.typeInfo,
-        restDurations: [
-          RestDuration(beginDate: DateTime.parse("2020-09-20"), createdDate: DateTime.parse("2020-09-20"), endDate: DateTime.parse("2020-09-22")),
-        ],
-        pills: Pill.generateAndFillTo(pillSheetType: sheetType, toDate: null),
       );
       expect(model.isActive, true);
     });
@@ -262,13 +184,10 @@ void main() {
       when(mockTodayRepository.now()).thenReturn(DateTime(2020, 9, 29, 23, 59, 59));
 
       const sheetType = PillSheetType.pillsheet_21;
-      final model = PillSheet(
-        id: firestoreIDGenerator(),
-        beginingDate: DateTime.parse("2020-09-01"),
+      final model = PillSheet.create(
+        sheetType,
+        beginDate: DateTime.parse("2020-09-01"),
         lastTakenDate: null,
-        createdAt: now(),
-        typeInfo: sheetType.typeInfo,
-        pills: Pill.generateAndFillTo(pillSheetType: sheetType, toDate: null),
       );
       expect(model.isActive, false);
     });
@@ -278,13 +197,10 @@ void main() {
       when(mockTodayRepository.now()).thenReturn(DateTime.parse("2020-06-29"));
 
       const sheetType = PillSheetType.pillsheet_21;
-      final model = PillSheet(
-        id: firestoreIDGenerator(),
-        beginingDate: DateTime.parse("2020-09-01"),
+      final model = PillSheet.create(
+        sheetType,
+        beginDate: DateTime.parse("2020-09-01"),
         lastTakenDate: null,
-        createdAt: now(),
-        typeInfo: sheetType.typeInfo,
-        pills: Pill.generateAndFillTo(pillSheetType: sheetType, toDate: null),
       );
       expect(model.isActive, false);
     });
@@ -294,20 +210,10 @@ void main() {
       when(mockTodayRepository.now()).thenReturn(DateTime(2020, 9, 30, 23, 59, 59));
 
       const sheetType = PillSheetType.pillsheet_21;
-      final model = PillSheet(
-        id: firestoreIDGenerator(),
-        beginingDate: DateTime.parse("2020-09-01"),
+      final model = PillSheet.create(
+        sheetType,
+        beginDate: DateTime.parse("2020-09-01"),
         lastTakenDate: null,
-        createdAt: now(),
-        typeInfo: sheetType.typeInfo,
-        restDurations: [
-          RestDuration(
-            beginDate: DateTime.parse("2020-09-20"),
-            createdDate: DateTime.parse("2020-09-20"),
-            endDate: DateTime.parse("2020-09-21"),
-          ),
-        ],
-        pills: Pill.generateAndFillTo(pillSheetType: sheetType, toDate: null),
       );
       expect(model.isActive, false);
     });
@@ -319,13 +225,10 @@ void main() {
       when(mockTodayRepository.now()).thenReturn(DateTime.parse("2020-09-19"));
 
       const sheetType = PillSheetType.pillsheet_21;
-      final model = PillSheet(
-        id: firestoreIDGenerator(),
-        beginingDate: DateTime.parse("2020-09-14"),
+      final model = PillSheet.create(
+        sheetType,
+        beginDate: DateTime.parse("2020-09-14"),
         lastTakenDate: null,
-        createdAt: now(),
-        typeInfo: sheetType.typeInfo,
-        pills: Pill.generateAndFillTo(pillSheetType: sheetType, toDate: null),
       );
       expect(model.isBegan, true);
     });
@@ -335,13 +238,10 @@ void main() {
       when(mockTodayRepository.now()).thenReturn(DateTime.parse("2020-09-28"));
 
       const sheetType = PillSheetType.pillsheet_21;
-      final model = PillSheet(
-        id: firestoreIDGenerator(),
-        beginingDate: DateTime.parse("2020-09-01"),
+      final model = PillSheet.create(
+        sheetType,
+        beginDate: DateTime.parse("2020-09-01"),
         lastTakenDate: null,
-        createdAt: now(),
-        typeInfo: sheetType.typeInfo,
-        pills: Pill.generateAndFillTo(pillSheetType: sheetType, toDate: null),
       );
       expect(model.isBegan, true);
     });
@@ -351,13 +251,10 @@ void main() {
       when(mockTodayRepository.now()).thenReturn(DateTime.parse("2020-09-29"));
 
       const sheetType = PillSheetType.pillsheet_21;
-      final model = PillSheet(
-        id: firestoreIDGenerator(),
-        beginingDate: DateTime.parse("2020-09-01"),
+      final model = PillSheet.create(
+        sheetType,
+        beginDate: DateTime.parse("2020-09-01"),
         lastTakenDate: null,
-        createdAt: now(),
-        typeInfo: sheetType.typeInfo,
-        pills: Pill.generateAndFillTo(pillSheetType: sheetType, toDate: null),
       );
       expect(model.isBegan, true);
     });
@@ -367,13 +264,10 @@ void main() {
       when(mockTodayRepository.now()).thenReturn(DateTime.parse("2020-06-29"));
 
       const sheetType = PillSheetType.pillsheet_21;
-      final model = PillSheet(
-        id: firestoreIDGenerator(),
-        beginingDate: DateTime.parse("2020-09-01"),
+      final model = PillSheet.create(
+        sheetType,
+        beginDate: DateTime.parse("2020-09-01"),
         lastTakenDate: null,
-        createdAt: now(),
-        typeInfo: sheetType.typeInfo,
-        pills: Pill.generateAndFillTo(pillSheetType: sheetType, toDate: null),
       );
       expect(model.isBegan, false);
     });
@@ -385,13 +279,10 @@ void main() {
       when(mockTodayRepository.now()).thenReturn(DateTime.parse("2020-09-19"));
 
       const sheetType = PillSheetType.pillsheet_21;
-      final model = PillSheet(
-        id: firestoreIDGenerator(),
-        beginingDate: DateTime.parse("2020-09-14"),
+      final model = PillSheet.create(
+        sheetType,
+        beginDate: DateTime.parse("2020-09-14"),
         lastTakenDate: null,
-        createdAt: now(),
-        typeInfo: sheetType.typeInfo,
-        pills: Pill.generateAndFillTo(pillSheetType: sheetType, toDate: null),
       );
       expect(model.lastCompletedPillNumber, 0);
     });
@@ -401,13 +292,10 @@ void main() {
       when(mockTodayRepository.now()).thenReturn(DateTime.parse("2020-09-19"));
 
       const sheetType = PillSheetType.pillsheet_21;
-      final model = PillSheet(
-        id: firestoreIDGenerator(),
-        beginingDate: DateTime.parse("2020-09-14"),
+      final model = PillSheet.create(
+        sheetType,
+        beginDate: DateTime.parse("2020-09-14"),
         lastTakenDate: DateTime.parse("2020-09-17"),
-        createdAt: now(),
-        typeInfo: sheetType.typeInfo,
-        pills: Pill.generateAndFillTo(pillSheetType: sheetType, toDate: DateTime.parse("2020-09-17")),
       );
       expect(model.lastCompletedPillNumber, 4);
     });
@@ -417,13 +305,10 @@ void main() {
       when(mockTodayRepository.now()).thenReturn(DateTime.parse("2020-09-28"));
 
       const sheetType = PillSheetType.pillsheet_21;
-      final model = PillSheet(
-        id: firestoreIDGenerator(),
-        beginingDate: DateTime.parse("2020-09-01"),
+      final model = PillSheet.create(
+        sheetType,
+        beginDate: DateTime.parse("2020-09-01"),
         lastTakenDate: DateTime.parse("2020-09-28"),
-        createdAt: now(),
-        typeInfo: sheetType.typeInfo,
-        pills: Pill.generateAndFillTo(pillSheetType: sheetType, toDate: DateTime.parse("2020-09-28")),
       );
       expect(model.lastCompletedPillNumber, 28);
     });
@@ -434,19 +319,10 @@ void main() {
         when(mockTodayRepository.now()).thenReturn(DateTime.parse("2020-09-28"));
 
         const sheetType = PillSheetType.pillsheet_21;
-        final model = PillSheet(
-          id: firestoreIDGenerator(),
-          beginingDate: DateTime.parse("2020-09-01"),
+        final model = PillSheet.create(
+          sheetType,
+          beginDate: DateTime.parse("2020-09-01"),
           lastTakenDate: DateTime.parse("2020-09-22"),
-          createdAt: now(),
-          restDurations: [
-            RestDuration(
-              beginDate: DateTime.parse("2020-09-23"),
-              createdDate: DateTime.parse("2020-09-23"),
-            ),
-          ],
-          typeInfo: sheetType.typeInfo,
-          pills: Pill.generateAndFillTo(pillSheetType: sheetType, toDate: DateTime.parse("2020-09-22")),
         );
         expect(model.lastCompletedPillNumber, 22);
       });
@@ -456,20 +332,10 @@ void main() {
         when(mockTodayRepository.now()).thenReturn(DateTime.parse("2020-09-28"));
 
         const sheetType = PillSheetType.pillsheet_21;
-        final model = PillSheet(
-          id: firestoreIDGenerator(),
-          beginingDate: DateTime.parse("2020-09-01"),
+        final model = PillSheet.create(
+          sheetType,
+          beginDate: DateTime.parse("2020-09-01"),
           lastTakenDate: DateTime.parse("2020-09-27"),
-          createdAt: now(),
-          restDurations: [
-            RestDuration(
-              beginDate: DateTime.parse("2020-09-23"),
-              createdDate: DateTime.parse("2020-09-23"),
-              endDate: DateTime.parse("2020-09-25"),
-            ),
-          ],
-          typeInfo: sheetType.typeInfo,
-          pills: Pill.generateAndFillTo(pillSheetType: sheetType, toDate: DateTime.parse("2020-09-27")),
         );
         expect(model.lastCompletedPillNumber, 25);
       });
@@ -479,20 +345,10 @@ void main() {
         when(mockTodayRepository.now()).thenReturn(DateTime.parse("2020-09-28"));
 
         const sheetType = PillSheetType.pillsheet_21;
-        final model = PillSheet(
-          id: firestoreIDGenerator(),
-          beginingDate: DateTime.parse("2020-09-01"),
+        final model = PillSheet.create(
+          sheetType,
+          beginDate: DateTime.parse("2020-09-01"),
           lastTakenDate: null,
-          createdAt: now(),
-          restDurations: [
-            RestDuration(
-              beginDate: DateTime.parse("2020-09-23"),
-              createdDate: DateTime.parse("2020-09-23"),
-              endDate: DateTime.parse("2020-09-25"),
-            ),
-          ],
-          typeInfo: sheetType.typeInfo,
-          pills: Pill.generateAndFillTo(pillSheetType: sheetType, toDate: null),
         );
         expect(model.lastCompletedPillNumber, 0);
       });
@@ -504,24 +360,10 @@ void main() {
           when(mockTodayRepository.now()).thenReturn(DateTime.parse("2020-09-28"));
 
           const sheetType = PillSheetType.pillsheet_21;
-          final model = PillSheet(
-            id: firestoreIDGenerator(),
-            beginingDate: DateTime.parse("2020-09-01"),
+          final model = PillSheet.create(
+            sheetType,
+            beginDate: DateTime.parse("2020-09-01"),
             lastTakenDate: DateTime.parse("2020-09-22"),
-            createdAt: now(),
-            restDurations: [
-              RestDuration(
-                beginDate: DateTime.parse("2020-09-12"),
-                createdDate: DateTime.parse("2020-09-12"),
-                endDate: DateTime.parse("2020-09-15"),
-              ),
-              RestDuration(
-                beginDate: DateTime.parse("2020-09-26"),
-                createdDate: DateTime.parse("2020-09-26"),
-              ),
-            ],
-            typeInfo: sheetType.typeInfo,
-            pills: Pill.generateAndFillTo(pillSheetType: sheetType, toDate: DateTime.parse("2020-09-22")),
           );
           expect(model.lastCompletedPillNumber, 19);
         });
@@ -531,25 +373,10 @@ void main() {
           when(mockTodayRepository.now()).thenReturn(DateTime.parse("2020-09-28"));
 
           const sheetType = PillSheetType.pillsheet_21;
-          final model = PillSheet(
-            id: firestoreIDGenerator(),
-            beginingDate: DateTime.parse("2020-09-01"),
+          final model = PillSheet.create(
+            sheetType,
+            beginDate: DateTime.parse("2020-09-01"),
             lastTakenDate: DateTime.parse("2020-09-22"),
-            createdAt: now(),
-            restDurations: [
-              RestDuration(
-                beginDate: DateTime.parse("2020-09-12"),
-                createdDate: DateTime.parse("2020-09-12"),
-                endDate: DateTime.parse("2020-09-15"),
-              ),
-              RestDuration(
-                beginDate: DateTime.parse("2020-09-26"),
-                createdDate: DateTime.parse("2020-09-26"),
-                endDate: DateTime.parse("2020-09-27"),
-              ),
-            ],
-            typeInfo: sheetType.typeInfo,
-            pills: Pill.generateAndFillTo(pillSheetType: sheetType, toDate: DateTime.parse("2020-09-22")),
           );
           expect(model.lastCompletedPillNumber, 19);
         });
@@ -563,13 +390,10 @@ void main() {
       when(mockTodayRepository.now()).thenReturn(DateTime.parse("2022-05-10"));
 
       const sheetType = PillSheetType.pillsheet_21;
-      final pillSheet = PillSheet(
-        id: firestoreIDGenerator(),
-        beginingDate: DateTime.parse("2022-05-01"),
+      final pillSheet = PillSheet.create(
+        sheetType,
+        beginDate: DateTime.parse("2022-05-01"),
         lastTakenDate: null,
-        createdAt: now(),
-        typeInfo: sheetType.typeInfo,
-        pills: Pill.generateAndFillTo(pillSheetType: sheetType, toDate: null),
       );
       expect(pillSheet.estimatedEndTakenDate, DateTime.parse("2022-05-29").subtract(const Duration(seconds: 1)));
     });
@@ -581,19 +405,10 @@ void main() {
         when(mockTodayRepository.now()).thenReturn(DateTime.parse("2022-05-10"));
 
         const sheetType = PillSheetType.pillsheet_21;
-        final pillSheet = PillSheet(
-          id: firestoreIDGenerator(),
-          beginingDate: DateTime.parse("2022-05-01"),
+        final pillSheet = PillSheet.create(
+          sheetType,
+          beginDate: DateTime.parse("2022-05-01"),
           lastTakenDate: null,
-          createdAt: now(),
-          restDurations: [
-            RestDuration(
-              beginDate: DateTime.parse("2022-05-03"),
-              createdDate: DateTime.parse("2022-05-03"),
-            ),
-          ],
-          typeInfo: sheetType.typeInfo,
-          pills: Pill.generateAndFillTo(pillSheetType: sheetType, toDate: null),
         );
         expect(pillSheet.estimatedEndTakenDate, DateTime.parse("2022-06-05").subtract(const Duration(seconds: 1)));
       });
@@ -603,20 +418,10 @@ void main() {
         when(mockTodayRepository.now()).thenReturn(DateTime.parse("2022-05-10"));
 
         const sheetType = PillSheetType.pillsheet_21;
-        final pillSheet = PillSheet(
-          id: firestoreIDGenerator(),
-          beginingDate: DateTime.parse("2022-05-01"),
+        final pillSheet = PillSheet.create(
+          sheetType,
+          beginDate: DateTime.parse("2022-05-01"),
           lastTakenDate: null,
-          createdAt: now(),
-          restDurations: [
-            RestDuration(
-              beginDate: DateTime.parse("2022-05-03"),
-              createdDate: DateTime.parse("2022-05-03"),
-              endDate: DateTime.parse("2022-05-05"),
-            ),
-          ],
-          typeInfo: sheetType.typeInfo,
-          pills: Pill.generateAndFillTo(pillSheetType: sheetType, toDate: null),
         );
         expect(pillSheet.estimatedEndTakenDate, DateTime.parse("2022-05-31").subtract(const Duration(seconds: 1)));
       });
@@ -628,24 +433,10 @@ void main() {
           when(mockTodayRepository.now()).thenReturn(DateTime.parse("2022-05-10"));
 
           const sheetType = PillSheetType.pillsheet_21;
-          final pillSheet = PillSheet(
-            id: firestoreIDGenerator(),
-            beginingDate: DateTime.parse("2022-05-01"),
+          final pillSheet = PillSheet.create(
+            sheetType,
+            beginDate: DateTime.parse("2022-05-01"),
             lastTakenDate: null,
-            createdAt: now(),
-            restDurations: [
-              RestDuration(
-                beginDate: DateTime.parse("2022-05-03"),
-                createdDate: DateTime.parse("2022-05-03"),
-                endDate: DateTime.parse("2022-05-05"),
-              ),
-              RestDuration(
-                beginDate: DateTime.parse("2022-05-07"),
-                createdDate: DateTime.parse("2022-05-07"),
-              ),
-            ],
-            typeInfo: sheetType.typeInfo,
-            pills: Pill.generateAndFillTo(pillSheetType: sheetType, toDate: null),
           );
           expect(pillSheet.estimatedEndTakenDate, DateTime.parse("2022-06-03").subtract(const Duration(seconds: 1)));
         });
@@ -655,25 +446,10 @@ void main() {
           when(mockTodayRepository.now()).thenReturn(DateTime.parse("2022-05-10"));
 
           const sheetType = PillSheetType.pillsheet_21;
-          final pillSheet = PillSheet(
-            id: firestoreIDGenerator(),
-            beginingDate: DateTime.parse("2022-05-01"),
+          final pillSheet = PillSheet.create(
+            sheetType,
+            beginDate: DateTime.parse("2022-05-01"),
             lastTakenDate: null,
-            createdAt: now(),
-            restDurations: [
-              RestDuration(
-                beginDate: DateTime.parse("2022-05-03"),
-                createdDate: DateTime.parse("2022-05-03"),
-                endDate: DateTime.parse("2022-05-05"),
-              ),
-              RestDuration(
-                beginDate: DateTime.parse("2022-05-07"),
-                createdDate: DateTime.parse("2022-05-07"),
-                endDate: DateTime.parse("2022-05-08"),
-              ),
-            ],
-            typeInfo: sheetType.typeInfo,
-            pills: Pill.generateAndFillTo(pillSheetType: sheetType, toDate: null),
           );
           expect(pillSheet.estimatedEndTakenDate, DateTime.parse("2022-06-01").subtract(const Duration(seconds: 1)));
         });
