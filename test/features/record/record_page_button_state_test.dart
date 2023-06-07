@@ -31,13 +31,10 @@ void main() {
   group('appearance taken button type', () {
     testWidgets('today pill not taken', (WidgetTester tester) async {
       final yesterday = today().subtract(const Duration(days: 1));
-      final pillSheet = PillSheet(
-        id: firestoreIDGenerator(),
-        typeInfo: PillSheetType.pillsheet_21.typeInfo,
-        beginingDate: yesterday,
+      final pillSheet = PillSheet.create(
+        PillSheetType.pillsheet_21,
+        beginDate: yesterday,
         lastTakenDate: yesterday,
-        createdAt: now(),
-        pills: Pill.generateAndFillTo(pillSheetType: PillSheetType.pillsheet_21, toDate: yesterday),
       );
 
       await tester.pumpWidget(
@@ -59,13 +56,10 @@ void main() {
     });
   });
   testWidgets('today pill is already taken', (WidgetTester tester) async {
-    final pillSheet = PillSheet(
-      id: firestoreIDGenerator(),
-      typeInfo: PillSheetType.pillsheet_21.typeInfo,
-      beginingDate: today(),
+    final pillSheet = PillSheet.create(
+      PillSheetType.pillsheet_21,
+      beginDate: today(),
       lastTakenDate: today(),
-      createdAt: now(),
-      pills: Pill.generateAndFillTo(pillSheetType: PillSheetType.pillsheet_21, toDate: today()),
     );
 
     expect(true, pillSheet.todayPillsAreAlreadyTaken);
