@@ -39,14 +39,14 @@ class RevertTakePill {
     }
 
     final targetPillSheet = pillSheetGroup.pillSheets[pageIndex];
-    final takenDate = targetPillSheet.pillTakenDateFromPillNumber(pillNumberIntoPillSheet).subtract(const Duration(days: 1)).date();
+    final revertDate = targetPillSheet.pillTakenDateFromPillNumber(pillNumberIntoPillSheet).subtract(const Duration(days: 1)).date();
 
     final updatedPillSheets = pillSheetGroup.pillSheets.map((pillSheet) {
       final lastTakenDate = pillSheet.lastTakenDate;
       if (lastTakenDate == null) {
         return pillSheet;
       }
-      if (takenDate.isAfter(lastTakenDate)) {
+      if (revertDate.isAfter(lastTakenDate)) {
         return pillSheet;
       }
 
@@ -57,13 +57,13 @@ class RevertTakePill {
         return pillSheet;
       }
 
-      if (takenDate.isBefore(pillSheet.beginingDate)) {
+      if (revertDate.isBefore(pillSheet.beginingDate)) {
         // reset pill sheet when back to one before pill sheet
         return pillSheet.revertedPillSheet(pillSheet.beginingDate.subtract(const Duration(days: 1)).date()).copyWith(restDurations: []);
       } else {
         // Revert対象の日付よりも後ろにある休薬期間のデータは消す
-        final remainingResetDurations = pillSheet.restDurations.where((restDuration) => restDuration.beginDate.date().isBefore(takenDate)).toList();
-        return pillSheet.revertedPillSheet(takenDate).copyWith(
+        final remainingResetDurations = pillSheet.restDurations.where((restDuration) => restDuration.beginDate.date().isBefore(revertDate)).toList();
+        return pillSheet.revertedPillSheet(revertDate).copyWith(
               restDurations: remainingResetDurations,
             );
       }
@@ -99,22 +99,12 @@ class RevertTakePill {
 }
 
 extension RevertedPillSheet on PillSheet {
-  PillSheet revertedPillSheet(DateTime date) {
+  PillSheet revertedPillSheet(DateTime toDate) {
     return copyWith(
-      lastTakenDate: date,
+      lastTakenDate: toDate,
       pills: pills.map((pill) {
-        if (isSameDay(date.date(), today()) && pill.index == todayPillIndex) {
-          // NOTE: 服用記録がない場合は何もしない
-          if (pill.pillTakens.isEmpty) {
-            return pill;
-          }
-
-          // 対象が今日のピルの場合、取り消すのは最後の1回の服用記録
-          return pill.copyWith(pillTakens: [...pill.pillTakens]..removeLast());
-        }
-
         // このpillの日付(begin + pill.index)が対象の日付よりも前の場合は何もしない
-        if (beginingDate.date().add(Duration(days: pill.index)).isBefore(date)) {
+        if (beginingDate.date().add(Duration(days: pill.index)).isBefore(toDate)) {
           return pill;
         }
 
