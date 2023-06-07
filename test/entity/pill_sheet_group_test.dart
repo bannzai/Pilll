@@ -356,13 +356,6 @@ void main() {
             sheetType,
             beginDate: DateTime.parse("2020-09-01"),
             lastTakenDate: DateTime.parse("2020-09-22"),
-          ).copyWith(
-            restDurations: [
-              RestDuration(
-                beginDate: DateTime.parse("2020-09-23"),
-                createdDate: DateTime.parse("2020-09-23"),
-              ),
-            ],
           );
           // created at and id are anything value
           final pillSheetGroup = PillSheetGroup(
