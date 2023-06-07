@@ -487,12 +487,12 @@ void main() {
 
           var beginingDate = DateTime.parse("2020-09-01");
           var pillSheet = PillSheet.create(
-            PillSheetType,
+            PillSheetType.pillsheet_28_7,
             beginDate: beginingDate,
             lastTakenDate: null,
           );
           var pillSheet2 = PillSheet.create(
-            PillSheetType,
+            PillSheetType.pillsheet_21_0,
             beginDate: beginingDate.add(const Duration(days: 28)),
             lastTakenDate: null,
           );
