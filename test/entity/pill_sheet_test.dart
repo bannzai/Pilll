@@ -26,12 +26,7 @@ void main() {
         beginingDate: DateTime.parse("2020-09-14"),
         lastTakenDate: DateTime.parse("2020-09-18"),
         createdAt: now(),
-        typeInfo: PillSheetTypeInfo(
-          dosingPeriod: sheetType.dosingPeriod,
-          name: sheetType.fullName,
-          totalCount: sheetType.totalCount,
-          pillSheetTypeReferencePath: sheetType.rawPath,
-        ),
+        typeInfo: sheetType.typeInfo,
         pills: Pill.generateAndFillTo(pillSheetType: sheetType, toDate: DateTime.parse("2020-09-18")),
       );
       expect(model.todayPillNumber, 6);
@@ -47,12 +42,7 @@ void main() {
         beginingDate: DateTime.parse("2020-09-01"),
         lastTakenDate: DateTime.parse("2020-09-28"),
         createdAt: now(),
-        typeInfo: PillSheetTypeInfo(
-          dosingPeriod: sheetType.dosingPeriod,
-          name: sheetType.fullName,
-          totalCount: sheetType.totalCount,
-          pillSheetTypeReferencePath: sheetType.rawPath,
-        ),
+        typeInfo: sheetType.typeInfo,
         pills: Pill.generateAndFillTo(pillSheetType: sheetType, toDate: DateTime.parse("2020-09-28")),
       );
       expect(model.todayPillNumber, 28);
@@ -75,12 +65,7 @@ void main() {
               createdDate: DateTime.parse("2020-09-22"),
             )
           ],
-          typeInfo: PillSheetTypeInfo(
-            dosingPeriod: sheetType.dosingPeriod,
-            name: sheetType.fullName,
-            totalCount: sheetType.totalCount,
-            pillSheetTypeReferencePath: sheetType.rawPath,
-          ),
+          typeInfo: sheetType.typeInfo,
           pills: Pill.generateAndFillTo(pillSheetType: sheetType, toDate: DateTime.parse("2020-09-28")),
         );
         expect(model.todayPillNumber, 22);
@@ -104,12 +89,7 @@ void main() {
               endDate: DateTime.parse("2020-09-25"),
             )
           ],
-          typeInfo: PillSheetTypeInfo(
-            dosingPeriod: sheetType.dosingPeriod,
-            name: sheetType.fullName,
-            totalCount: sheetType.totalCount,
-            pillSheetTypeReferencePath: sheetType.rawPath,
-          ),
+          typeInfo: sheetType.typeInfo,
           pills: Pill.generateAndFillTo(pillSheetType: sheetType, toDate: DateTime.parse("2020-09-28")),
         );
         expect(model.todayPillNumber, 25);
@@ -137,12 +117,7 @@ void main() {
                 createdDate: DateTime.parse("2020-09-22"),
               )
             ],
-            typeInfo: PillSheetTypeInfo(
-              dosingPeriod: sheetType.dosingPeriod,
-              name: sheetType.fullName,
-              totalCount: sheetType.totalCount,
-              pillSheetTypeReferencePath: sheetType.rawPath,
-            ),
+            typeInfo: sheetType.typeInfo,
             pills: Pill.generateAndFillTo(pillSheetType: sheetType, toDate: DateTime.parse("2020-09-28")),
           );
           expect(model.todayPillNumber, 19);
@@ -170,12 +145,7 @@ void main() {
                 endDate: DateTime.parse("2020-09-25"),
               )
             ],
-            typeInfo: PillSheetTypeInfo(
-              dosingPeriod: sheetType.dosingPeriod,
-              name: sheetType.fullName,
-              totalCount: sheetType.totalCount,
-              pillSheetTypeReferencePath: sheetType.rawPath,
-            ),
+            typeInfo: sheetType.typeInfo,
             pills: Pill.generateAndFillTo(pillSheetType: sheetType, toDate: DateTime.parse("2020-09-28")),
           );
           expect(model.todayPillNumber, 22);
@@ -195,12 +165,7 @@ void main() {
         beginingDate: DateTime.parse("2020-09-14"),
         lastTakenDate: null,
         createdAt: now(),
-        typeInfo: PillSheetTypeInfo(
-          dosingPeriod: sheetType.dosingPeriod,
-          name: sheetType.fullName,
-          totalCount: sheetType.totalCount,
-          pillSheetTypeReferencePath: sheetType.rawPath,
-        ),
+        typeInfo: sheetType.typeInfo,
         pills: Pill.generateAndFillTo(pillSheetType: sheetType, toDate: null),
       );
       expect(model.isActive, true);
@@ -216,12 +181,7 @@ void main() {
         beginingDate: DateTime.parse("2020-09-01"),
         lastTakenDate: null,
         createdAt: now(),
-        typeInfo: PillSheetTypeInfo(
-          dosingPeriod: sheetType.dosingPeriod,
-          name: sheetType.fullName,
-          totalCount: sheetType.totalCount,
-          pillSheetTypeReferencePath: sheetType.rawPath,
-        ),
+        typeInfo: sheetType.typeInfo,
         pills: Pill.generateAndFillTo(pillSheetType: sheetType, toDate: null),
       );
       expect(model.isActive, true);
@@ -237,12 +197,7 @@ void main() {
         beginingDate: DateTime.parse("2020-09-01"),
         lastTakenDate: null,
         createdAt: now(),
-        typeInfo: PillSheetTypeInfo(
-          dosingPeriod: sheetType.dosingPeriod,
-          name: sheetType.fullName,
-          totalCount: sheetType.totalCount,
-          pillSheetTypeReferencePath: sheetType.rawPath,
-        ),
+        typeInfo: sheetType.typeInfo,
         pills: Pill.generateAndFillTo(pillSheetType: sheetType, toDate: null),
       );
       expect(model.isActive, false);
@@ -258,12 +213,7 @@ void main() {
         beginingDate: DateTime.parse("2020-09-01"),
         lastTakenDate: null,
         createdAt: now(),
-        typeInfo: PillSheetTypeInfo(
-          dosingPeriod: sheetType.dosingPeriod,
-          name: sheetType.fullName,
-          totalCount: sheetType.totalCount,
-          pillSheetTypeReferencePath: sheetType.rawPath,
-        ),
+        typeInfo: sheetType.typeInfo,
         pills: Pill.generateAndFillTo(pillSheetType: sheetType, toDate: null),
       );
       expect(model.isActive, true);
@@ -279,12 +229,7 @@ void main() {
         beginingDate: DateTime.parse("2020-09-01"),
         lastTakenDate: null,
         createdAt: now(),
-        typeInfo: PillSheetTypeInfo(
-          dosingPeriod: sheetType.dosingPeriod,
-          name: sheetType.fullName,
-          totalCount: sheetType.totalCount,
-          pillSheetTypeReferencePath: sheetType.rawPath,
-        ),
+        typeInfo: sheetType.typeInfo,
         restDurations: [
           RestDuration(beginDate: DateTime.parse("2020-09-20"), createdDate: DateTime.parse("2020-09-20"), endDate: null),
         ],
@@ -303,12 +248,7 @@ void main() {
         beginingDate: DateTime.parse("2020-09-01"),
         lastTakenDate: null,
         createdAt: now(),
-        typeInfo: PillSheetTypeInfo(
-          dosingPeriod: sheetType.dosingPeriod,
-          name: sheetType.fullName,
-          totalCount: sheetType.totalCount,
-          pillSheetTypeReferencePath: sheetType.rawPath,
-        ),
+        typeInfo: sheetType.typeInfo,
         restDurations: [
           RestDuration(beginDate: DateTime.parse("2020-09-20"), createdDate: DateTime.parse("2020-09-20"), endDate: DateTime.parse("2020-09-22")),
         ],
@@ -327,12 +267,7 @@ void main() {
         beginingDate: DateTime.parse("2020-09-01"),
         lastTakenDate: null,
         createdAt: now(),
-        typeInfo: PillSheetTypeInfo(
-          dosingPeriod: sheetType.dosingPeriod,
-          name: sheetType.fullName,
-          totalCount: sheetType.totalCount,
-          pillSheetTypeReferencePath: sheetType.rawPath,
-        ),
+        typeInfo: sheetType.typeInfo,
         pills: Pill.generateAndFillTo(pillSheetType: sheetType, toDate: null),
       );
       expect(model.isActive, false);
@@ -348,12 +283,7 @@ void main() {
         beginingDate: DateTime.parse("2020-09-01"),
         lastTakenDate: null,
         createdAt: now(),
-        typeInfo: PillSheetTypeInfo(
-          dosingPeriod: sheetType.dosingPeriod,
-          name: sheetType.fullName,
-          totalCount: sheetType.totalCount,
-          pillSheetTypeReferencePath: sheetType.rawPath,
-        ),
+        typeInfo: sheetType.typeInfo,
         pills: Pill.generateAndFillTo(pillSheetType: sheetType, toDate: null),
       );
       expect(model.isActive, false);
@@ -369,12 +299,7 @@ void main() {
         beginingDate: DateTime.parse("2020-09-01"),
         lastTakenDate: null,
         createdAt: now(),
-        typeInfo: PillSheetTypeInfo(
-          dosingPeriod: sheetType.dosingPeriod,
-          name: sheetType.fullName,
-          totalCount: sheetType.totalCount,
-          pillSheetTypeReferencePath: sheetType.rawPath,
-        ),
+        typeInfo: sheetType.typeInfo,
         restDurations: [
           RestDuration(
             beginDate: DateTime.parse("2020-09-20"),
@@ -399,12 +324,7 @@ void main() {
         beginingDate: DateTime.parse("2020-09-14"),
         lastTakenDate: null,
         createdAt: now(),
-        typeInfo: PillSheetTypeInfo(
-          dosingPeriod: sheetType.dosingPeriod,
-          name: sheetType.fullName,
-          totalCount: sheetType.totalCount,
-          pillSheetTypeReferencePath: sheetType.rawPath,
-        ),
+        typeInfo: sheetType.typeInfo,
         pills: Pill.generateAndFillTo(pillSheetType: sheetType, toDate: null),
       );
       expect(model.isBegan, true);
@@ -420,12 +340,7 @@ void main() {
         beginingDate: DateTime.parse("2020-09-01"),
         lastTakenDate: null,
         createdAt: now(),
-        typeInfo: PillSheetTypeInfo(
-          dosingPeriod: sheetType.dosingPeriod,
-          name: sheetType.fullName,
-          totalCount: sheetType.totalCount,
-          pillSheetTypeReferencePath: sheetType.rawPath,
-        ),
+        typeInfo: sheetType.typeInfo,
         pills: Pill.generateAndFillTo(pillSheetType: sheetType, toDate: null),
       );
       expect(model.isBegan, true);
@@ -441,12 +356,7 @@ void main() {
         beginingDate: DateTime.parse("2020-09-01"),
         lastTakenDate: null,
         createdAt: now(),
-        typeInfo: PillSheetTypeInfo(
-          dosingPeriod: sheetType.dosingPeriod,
-          name: sheetType.fullName,
-          totalCount: sheetType.totalCount,
-          pillSheetTypeReferencePath: sheetType.rawPath,
-        ),
+        typeInfo: sheetType.typeInfo,
         pills: Pill.generateAndFillTo(pillSheetType: sheetType, toDate: null),
       );
       expect(model.isBegan, true);
@@ -462,12 +372,7 @@ void main() {
         beginingDate: DateTime.parse("2020-09-01"),
         lastTakenDate: null,
         createdAt: now(),
-        typeInfo: PillSheetTypeInfo(
-          dosingPeriod: sheetType.dosingPeriod,
-          name: sheetType.fullName,
-          totalCount: sheetType.totalCount,
-          pillSheetTypeReferencePath: sheetType.rawPath,
-        ),
+        typeInfo: sheetType.typeInfo,
         pills: Pill.generateAndFillTo(pillSheetType: sheetType, toDate: null),
       );
       expect(model.isBegan, false);
@@ -485,12 +390,7 @@ void main() {
         beginingDate: DateTime.parse("2020-09-14"),
         lastTakenDate: null,
         createdAt: now(),
-        typeInfo: PillSheetTypeInfo(
-          dosingPeriod: sheetType.dosingPeriod,
-          name: sheetType.fullName,
-          totalCount: sheetType.totalCount,
-          pillSheetTypeReferencePath: sheetType.rawPath,
-        ),
+        typeInfo: sheetType.typeInfo,
         pills: Pill.generateAndFillTo(pillSheetType: sheetType, toDate: null),
       );
       expect(model.lastCompletedPillNumber, 0);
@@ -506,12 +406,7 @@ void main() {
         beginingDate: DateTime.parse("2020-09-14"),
         lastTakenDate: DateTime.parse("2020-09-17"),
         createdAt: now(),
-        typeInfo: PillSheetTypeInfo(
-          dosingPeriod: sheetType.dosingPeriod,
-          name: sheetType.fullName,
-          totalCount: sheetType.totalCount,
-          pillSheetTypeReferencePath: sheetType.rawPath,
-        ),
+        typeInfo: sheetType.typeInfo,
         pills: Pill.generateAndFillTo(pillSheetType: sheetType, toDate: DateTime.parse("2020-09-17")),
       );
       expect(model.lastCompletedPillNumber, 4);
@@ -527,12 +422,7 @@ void main() {
         beginingDate: DateTime.parse("2020-09-01"),
         lastTakenDate: DateTime.parse("2020-09-28"),
         createdAt: now(),
-        typeInfo: PillSheetTypeInfo(
-          dosingPeriod: sheetType.dosingPeriod,
-          name: sheetType.fullName,
-          totalCount: sheetType.totalCount,
-          pillSheetTypeReferencePath: sheetType.rawPath,
-        ),
+        typeInfo: sheetType.typeInfo,
         pills: Pill.generateAndFillTo(pillSheetType: sheetType, toDate: DateTime.parse("2020-09-28")),
       );
       expect(model.lastCompletedPillNumber, 28);
@@ -555,12 +445,7 @@ void main() {
               createdDate: DateTime.parse("2020-09-23"),
             ),
           ],
-          typeInfo: PillSheetTypeInfo(
-            dosingPeriod: sheetType.dosingPeriod,
-            name: sheetType.fullName,
-            totalCount: sheetType.totalCount,
-            pillSheetTypeReferencePath: sheetType.rawPath,
-          ),
+          typeInfo: sheetType.typeInfo,
           pills: Pill.generateAndFillTo(pillSheetType: sheetType, toDate: DateTime.parse("2020-09-22")),
         );
         expect(model.lastCompletedPillNumber, 22);
@@ -583,12 +468,7 @@ void main() {
               endDate: DateTime.parse("2020-09-25"),
             ),
           ],
-          typeInfo: PillSheetTypeInfo(
-            dosingPeriod: sheetType.dosingPeriod,
-            name: sheetType.fullName,
-            totalCount: sheetType.totalCount,
-            pillSheetTypeReferencePath: sheetType.rawPath,
-          ),
+          typeInfo: sheetType.typeInfo,
           pills: Pill.generateAndFillTo(pillSheetType: sheetType, toDate: DateTime.parse("2020-09-27")),
         );
         expect(model.lastCompletedPillNumber, 25);
@@ -611,12 +491,7 @@ void main() {
               endDate: DateTime.parse("2020-09-25"),
             ),
           ],
-          typeInfo: PillSheetTypeInfo(
-            dosingPeriod: sheetType.dosingPeriod,
-            name: sheetType.fullName,
-            totalCount: sheetType.totalCount,
-            pillSheetTypeReferencePath: sheetType.rawPath,
-          ),
+          typeInfo: sheetType.typeInfo,
           pills: Pill.generateAndFillTo(pillSheetType: sheetType, toDate: null),
         );
         expect(model.lastCompletedPillNumber, 0);
@@ -645,12 +520,7 @@ void main() {
                 createdDate: DateTime.parse("2020-09-26"),
               ),
             ],
-            typeInfo: PillSheetTypeInfo(
-              dosingPeriod: sheetType.dosingPeriod,
-              name: sheetType.fullName,
-              totalCount: sheetType.totalCount,
-              pillSheetTypeReferencePath: sheetType.rawPath,
-            ),
+            typeInfo: sheetType.typeInfo,
             pills: Pill.generateAndFillTo(pillSheetType: sheetType, toDate: DateTime.parse("2020-09-22")),
           );
           expect(model.lastCompletedPillNumber, 19);
@@ -678,12 +548,7 @@ void main() {
                 endDate: DateTime.parse("2020-09-27"),
               ),
             ],
-            typeInfo: PillSheetTypeInfo(
-              dosingPeriod: sheetType.dosingPeriod,
-              name: sheetType.fullName,
-              totalCount: sheetType.totalCount,
-              pillSheetTypeReferencePath: sheetType.rawPath,
-            ),
+            typeInfo: sheetType.typeInfo,
             pills: Pill.generateAndFillTo(pillSheetType: sheetType, toDate: DateTime.parse("2020-09-22")),
           );
           expect(model.lastCompletedPillNumber, 19);
@@ -703,12 +568,7 @@ void main() {
         beginingDate: DateTime.parse("2022-05-01"),
         lastTakenDate: null,
         createdAt: now(),
-        typeInfo: PillSheetTypeInfo(
-          dosingPeriod: sheetType.dosingPeriod,
-          name: sheetType.fullName,
-          totalCount: sheetType.totalCount,
-          pillSheetTypeReferencePath: sheetType.rawPath,
-        ),
+        typeInfo: sheetType.typeInfo,
         pills: Pill.generateAndFillTo(pillSheetType: sheetType, toDate: null),
       );
       expect(pillSheet.estimatedEndTakenDate, DateTime.parse("2022-05-29").subtract(const Duration(seconds: 1)));
@@ -732,12 +592,7 @@ void main() {
               createdDate: DateTime.parse("2022-05-03"),
             ),
           ],
-          typeInfo: PillSheetTypeInfo(
-            dosingPeriod: sheetType.dosingPeriod,
-            name: sheetType.fullName,
-            totalCount: sheetType.totalCount,
-            pillSheetTypeReferencePath: sheetType.rawPath,
-          ),
+          typeInfo: sheetType.typeInfo,
           pills: Pill.generateAndFillTo(pillSheetType: sheetType, toDate: null),
         );
         expect(pillSheet.estimatedEndTakenDate, DateTime.parse("2022-06-05").subtract(const Duration(seconds: 1)));
@@ -760,12 +615,7 @@ void main() {
               endDate: DateTime.parse("2022-05-05"),
             ),
           ],
-          typeInfo: PillSheetTypeInfo(
-            dosingPeriod: sheetType.dosingPeriod,
-            name: sheetType.fullName,
-            totalCount: sheetType.totalCount,
-            pillSheetTypeReferencePath: sheetType.rawPath,
-          ),
+          typeInfo: sheetType.typeInfo,
           pills: Pill.generateAndFillTo(pillSheetType: sheetType, toDate: null),
         );
         expect(pillSheet.estimatedEndTakenDate, DateTime.parse("2022-05-31").subtract(const Duration(seconds: 1)));
@@ -794,12 +644,7 @@ void main() {
                 createdDate: DateTime.parse("2022-05-07"),
               ),
             ],
-            typeInfo: PillSheetTypeInfo(
-              dosingPeriod: sheetType.dosingPeriod,
-              name: sheetType.fullName,
-              totalCount: sheetType.totalCount,
-              pillSheetTypeReferencePath: sheetType.rawPath,
-            ),
+            typeInfo: sheetType.typeInfo,
             pills: Pill.generateAndFillTo(pillSheetType: sheetType, toDate: null),
           );
           expect(pillSheet.estimatedEndTakenDate, DateTime.parse("2022-06-03").subtract(const Duration(seconds: 1)));
@@ -827,12 +672,7 @@ void main() {
                 endDate: DateTime.parse("2022-05-08"),
               ),
             ],
-            typeInfo: PillSheetTypeInfo(
-              dosingPeriod: sheetType.dosingPeriod,
-              name: sheetType.fullName,
-              totalCount: sheetType.totalCount,
-              pillSheetTypeReferencePath: sheetType.rawPath,
-            ),
+            typeInfo: sheetType.typeInfo,
             pills: Pill.generateAndFillTo(pillSheetType: sheetType, toDate: null),
           );
           expect(pillSheet.estimatedEndTakenDate, DateTime.parse("2022-06-01").subtract(const Duration(seconds: 1)));
