@@ -61,10 +61,15 @@ void main() {
         );
         final revertDate = yesterday;
         final reverted = pillSheet.revertedPillSheet(revertDate);
-        final expected = PillSheet.create(
-          PillSheetType.pillsheet_28_0,
-          pillSheet2.copyWith(lastTakenDate: pillSheet2.beginingDate.subtract(const Duration(days: 1))),
+        final expected = PillSheet(
+          id: "sheet_id",
+          typeInfo: PillSheetType.pillsheet_28_0.typeInfo,
+          beginDate: DateTime.parse("2022-01-06"),
+          groupIndex: 0,
           lastTakenDate: revertDate, // change
+          createdAt: now(),
+          pills: Pill.generateAndFillTo(pillSheetType: PillSheetType.pillsheet_28_0, toDate: yesterday), // Change
+          pillTakenCount: 1,
         );
         expect(reverted.pills, expected.pills);
         expect(reverted.lastTakenDate, expected.lastTakenDate);
