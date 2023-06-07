@@ -99,12 +99,13 @@ class RevertTakePill {
 }
 
 extension RevertedPillSheet on PillSheet {
-  PillSheet revertedPillSheet(DateTime toDate) {
+  PillSheet revertedPillSheet(DateTime lastTakenDate) {
     return copyWith(
-      lastTakenDate: toDate,
+      lastTakenDate: lastTakenDate,
       pills: pills.map((pill) {
         // このpillの日付(begin + pill.index)が対象の日付よりも前の場合は何もしない
-        if (beginingDate.date().add(Duration(days: pill.index)).isBefore(toDate)) {
+        final dateOfPill = beginingDate.date().add(Duration(days: pill.index));
+        if (dateOfPill.isBefore(lastTakenDate) || isSameDay(dateOfPill, lastTakenDate)) {
           return pill;
         }
 
