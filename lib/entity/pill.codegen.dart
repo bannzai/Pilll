@@ -79,17 +79,17 @@ class Pill with _$Pill {
   @visibleForTesting
   static List<Pill> generateAndFillTo({
     required PillSheetType pillSheetType,
+    required DateTime fromDate,
     required DateTime? toDate,
     int? pillTakenCount,
   }) {
     return List.generate(pillSheetType.totalCount, (index) {
-      final diff = pillSheetType.totalCount - (index + 1);
-      final date = toDate?.subtract(Duration(days: diff));
+      final date = fromDate.add(Duration(days: index));
       return Pill(
         index: index,
         createdDateTime: now(),
         updatedDateTime: now(),
-        pillTakens: toDate != null && date != null && (date.isBefore(toDate) || isSameDay(date, toDate))
+        pillTakens: toDate != null && (date.isBefore(toDate) || isSameDay(date, toDate))
             ? List.generate(
                 pillTakenCount ?? 1,
                 (i) {
