@@ -27,27 +27,17 @@ void main() {
         when(mockTodayRepository.now()).thenReturn(mockToday);
         final yesterday = DateTime.parse("2022-01-16");
 
-        final pillSheet = PillSheet(
-          id: "sheet_id",
-          typeInfo: PillSheetType.pillsheet_28_0.typeInfo,
-          beginingDate: yesterday,
-          groupIndex: 0,
+        final pillSheet = PillSheet.create(
+          PillSheetType.pillsheet_28_0,
+          beginDate: yesterday,
           lastTakenDate: today(),
-          createdAt: now(),
-          pills: Pill.generateAndFillTo(pillSheetType: PillSheetType.pillsheet_28_0, toDate: today()),
-          pillTakenCount: 1,
         );
         final revertDate = yesterday.subtract(const Duration(days: 1));
         final reverted = pillSheet.revertedPillSheet(revertDate);
-        final expected = PillSheet(
-          id: "sheet_id",
-          typeInfo: PillSheetType.pillsheet_28_0.typeInfo,
-          beginingDate: yesterday,
-          groupIndex: 0,
+        final expected = PillSheet.create(
+          PillSheetType.pillsheet_28_0,
+          beginDate: yesterday,
           lastTakenDate: revertDate, // change
-          createdAt: now(),
-          pills: Pill.generate(PillSheetType.pillsheet_28_0), // Change
-          pillTakenCount: 1,
         );
         expect(reverted.pills, expected.pills);
         expect(reverted.lastTakenDate, expected.lastTakenDate);
@@ -64,28 +54,17 @@ void main() {
         when(mockTodayRepository.now()).thenReturn(mockToday);
         final yesterday = DateTime.parse("2022-01-16");
 
-        final pillSheet = PillSheet(
-          id: "sheet_id",
-          typeInfo: PillSheetType.pillsheet_28_0.typeInfo,
-          beginingDate: DateTime.parse("2022-01-06"),
-          groupIndex: 0,
+        final pillSheet = PillSheet.create(
+          PillSheetType.pillsheet_28_0,
+          beginDate: DateTime.parse("2022-01-06"),
           lastTakenDate: today(),
-          createdAt: now(),
-          pills: Pill.generateAndFillTo(pillSheetType: PillSheetType.pillsheet_28_0, toDate: today()),
-          restDurations: [
-            RestDuration(
-              beginDate: mockToday.subtract(const Duration(days: 8)),
-              createdDate: mockToday.subtract(const Duration(days: 8)),
-              endDate: mockToday.subtract(const Duration(days: 7)),
-            ),
-          ],
         );
         final revertDate = yesterday;
         final reverted = pillSheet.revertedPillSheet(revertDate);
         final expected = PillSheet(
           id: "sheet_id",
           typeInfo: PillSheetType.pillsheet_28_0.typeInfo,
-          beginingDate: DateTime.parse("2022-01-06"),
+          beginDate: DateTime.parse("2022-01-06"),
           groupIndex: 0,
           lastTakenDate: revertDate, // change
           createdAt: now(),
@@ -116,14 +95,10 @@ void main() {
         final batch = MockWriteBatch();
         when(batchFactory.batch()).thenReturn(batch);
 
-        final pillSheet = PillSheet(
-          id: "sheet_id",
-          typeInfo: PillSheetType.pillsheet_28_0.typeInfo,
-          beginingDate: yesterday,
-          groupIndex: 0,
+        final pillSheet = PillSheet.create(
+          PillSheetType.pillsheet_28_0,
+          beginDate: yesterday,
           lastTakenDate: today(),
-          createdAt: now(),
-          pills: Pill.generateAndFillTo(pillSheetType: PillSheetType.pillsheet_28_0, toDate: today()),
         );
 
         final pillSheetGroup = PillSheetGroup(
@@ -191,14 +166,10 @@ void main() {
         final batch = MockWriteBatch();
         when(batchFactory.batch()).thenReturn(batch);
 
-        final pillSheet = PillSheet(
-          id: "sheet_id",
-          typeInfo: PillSheetType.pillsheet_28_0.typeInfo,
-          beginingDate: yesterday,
-          groupIndex: 0,
+        final pillSheet = PillSheet.create(
+          PillSheetType.pillsheet_28_0,
+          beginDate: yesterday,
           lastTakenDate: today(),
-          createdAt: now(),
-          pills: Pill.generateAndFillTo(pillSheetType: PillSheetType.pillsheet_28_0, toDate: today()),
         );
 
         final pillSheetGroup = PillSheetGroup(
@@ -268,7 +239,7 @@ void main() {
         final pillSheet = PillSheet(
           id: "sheet_id",
           typeInfo: PillSheetType.pillsheet_28_0.typeInfo,
-          beginingDate: beginDate,
+          beginDate: beginDate,
           groupIndex: 0,
           lastTakenDate: today(),
           createdAt: now(),
@@ -352,21 +323,10 @@ void main() {
         final batch = MockWriteBatch();
         when(batchFactory.batch()).thenReturn(batch);
 
-        final pillSheet = PillSheet(
-          id: "sheet_id",
-          typeInfo: PillSheetType.pillsheet_28_0.typeInfo,
-          beginingDate: beginDate,
-          groupIndex: 0,
+        final pillSheet = PillSheet.create(
+          PillSheetType.pillsheet_28_0,
+          beginDate: beginDate,
           lastTakenDate: today(),
-          createdAt: now(),
-          pills: Pill.generateAndFillTo(pillSheetType: PillSheetType.pillsheet_28_0, toDate: today()),
-          restDurations: [
-            RestDuration(
-              beginDate: mockToday.subtract(const Duration(days: 8)),
-              createdDate: mockToday.subtract(const Duration(days: 8)),
-              endDate: mockToday.subtract(const Duration(days: 7)),
-            ),
-          ],
         );
 
         final pillSheetGroup = PillSheetGroup(
@@ -439,25 +399,17 @@ void main() {
         final batch = MockWriteBatch();
         when(batchFactory.batch()).thenReturn(batch);
 
-        final pillSheet = PillSheet(
-          id: "1",
-          typeInfo: PillSheetType.pillsheet_28_0.typeInfo,
-          beginingDate: mockToday.subtract(const Duration(days: 29)),
-          groupIndex: 0,
+        final pillSheet = PillSheet.create(
+          PillSheetType.pillsheet_28_0,
+          beginDate: mockToday.subtract(const Duration(days: 29)),
           lastTakenDate: mockToday.subtract(const Duration(days: 2)),
-          createdAt: now(),
-          pills: Pill.generateAndFillTo(pillSheetType: PillSheetType.pillsheet_28_0, toDate: mockToday.subtract(const Duration(days: 2))),
         );
 
         // actived pill sheet
-        final pillSheet2 = PillSheet(
-          id: "2",
-          typeInfo: PillSheetType.pillsheet_21.typeInfo,
-          beginingDate: yesterday,
+        final pillSheet2 = PillSheet.create(
+          PillSheetType.pillsheet_21,
+          beginDate: yesterday,
           lastTakenDate: mockToday,
-          groupIndex: 1,
-          createdAt: now(),
-          pills: Pill.generateAndFillTo(pillSheetType: PillSheetType.pillsheet_21, toDate: mockToday),
         );
 
         final pillSheetGroup = PillSheetGroup(
@@ -524,25 +476,17 @@ void main() {
         final batch = MockWriteBatch();
         when(batchFactory.batch()).thenReturn(batch);
 
-        final pillSheet = PillSheet(
-          id: "1",
-          typeInfo: PillSheetType.pillsheet_28_0.typeInfo,
-          beginingDate: mockToday.subtract(const Duration(days: 29)),
-          groupIndex: 0,
+        final pillSheet = PillSheet.create(
+          PillSheetType.pillsheet_28_0,
+          beginDate: mockToday.subtract(const Duration(days: 29)),
           lastTakenDate: mockToday.subtract(const Duration(days: 2)),
-          createdAt: now(),
-          pills: Pill.generateAndFillTo(pillSheetType: PillSheetType.pillsheet_28_0, toDate: mockToday.subtract(const Duration(days: 2))),
         );
 
         // actived pill sheet
-        final pillSheet2 = PillSheet(
-          id: "2",
-          typeInfo: PillSheetType.pillsheet_21.typeInfo,
-          beginingDate: yesterday,
+        final pillSheet2 = PillSheet.create(
+          PillSheetType.pillsheet_21,
+          beginDate: yesterday,
           lastTakenDate: mockToday,
-          groupIndex: 1,
-          createdAt: now(),
-          pills: Pill.generateAndFillTo(pillSheetType: PillSheetType.pillsheet_21, toDate: mockToday),
         );
 
         final pillSheetGroup = PillSheetGroup(
@@ -606,28 +550,17 @@ void main() {
         final batch = MockWriteBatch();
         when(batchFactory.batch()).thenReturn(batch);
 
-        final pillSheet = PillSheet(
-          id: "1",
-          typeInfo: PillSheetType.pillsheet_28_0.typeInfo,
-          beginingDate: mockToday.subtract(const Duration(days: 29)),
-          groupIndex: 0,
+        final pillSheet = PillSheet.create(
+          PillSheetType.pillsheet_28_0,
+          beginDate: mockToday.subtract(const Duration(days: 29)),
           lastTakenDate: mockToday.subtract(const Duration(days: 2)),
-          createdAt: now(),
-          pills: Pill.generateAndFillTo(pillSheetType: PillSheetType.pillsheet_28_0, toDate: mockToday.subtract(const Duration(days: 2))),
         );
 
         // actived pill sheet
-        final pillSheet2 = PillSheet(
-          id: "2",
-          typeInfo: PillSheetType.pillsheet_21.typeInfo,
-          beginingDate: yesterday,
+        final pillSheet2 = PillSheet.create(
+          PillSheetType.pillsheet_21,
+          beginDate: yesterday,
           lastTakenDate: mockToday,
-          groupIndex: 1,
-          restDurations: [
-            RestDuration(beginDate: yesterday, createdDate: yesterday, endDate: today()),
-          ],
-          createdAt: now(),
-          pills: Pill.generateAndFillTo(pillSheetType: PillSheetType.pillsheet_21, toDate: mockToday),
         );
 
         final pillSheetGroup = PillSheetGroup(
