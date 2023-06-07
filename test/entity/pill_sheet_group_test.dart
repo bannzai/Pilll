@@ -29,7 +29,12 @@ void main() {
           beginingDate: DateTime.parse("2020-09-14"),
           lastTakenDate: DateTime.parse("2020-09-18"),
           createdAt: now(),
-          typeInfo: sheetType.typeInfo,
+          typeInfo: PillSheetTypeInfo(
+            dosingPeriod: sheetType.dosingPeriod,
+            name: sheetType.fullName,
+            totalCount: sheetType.totalCount,
+            pillSheetTypeReferencePath: sheetType.rawPath,
+          ),
           pills: Pill.generateAndFillTo(pillSheetType: sheetType, toDate: DateTime.parse("2020-09-18")),
         );
         // created at and id are anything value
@@ -51,7 +56,12 @@ void main() {
           beginingDate: DateTime.parse("2020-09-01"),
           lastTakenDate: DateTime.parse("2020-09-28"),
           createdAt: now(),
-          typeInfo: sheetType.typeInfo,
+          typeInfo: PillSheetTypeInfo(
+            dosingPeriod: sheetType.dosingPeriod,
+            name: sheetType.fullName,
+            totalCount: sheetType.totalCount,
+            pillSheetTypeReferencePath: sheetType.rawPath,
+          ),
           pills: Pill.generateAndFillTo(pillSheetType: sheetType, toDate: DateTime.parse("2020-09-28")),
         );
         // created at and id are anything value
@@ -80,7 +90,12 @@ void main() {
                 createdDate: DateTime.parse("2020-09-22"),
               )
             ],
-            typeInfo: sheetType.typeInfo,
+            typeInfo: PillSheetTypeInfo(
+              dosingPeriod: sheetType.dosingPeriod,
+              name: sheetType.fullName,
+              totalCount: sheetType.totalCount,
+              pillSheetTypeReferencePath: sheetType.rawPath,
+            ),
             pills: Pill.generateAndFillTo(pillSheetType: sheetType, toDate: DateTime.parse("2020-09-28")),
           );
           // created at and id are anything value
@@ -110,7 +125,12 @@ void main() {
                 endDate: DateTime.parse("2020-09-25"),
               )
             ],
-            typeInfo: sheetType.typeInfo,
+            typeInfo: PillSheetTypeInfo(
+              dosingPeriod: sheetType.dosingPeriod,
+              name: sheetType.fullName,
+              totalCount: sheetType.totalCount,
+              pillSheetTypeReferencePath: sheetType.rawPath,
+            ),
             pills: Pill.generateAndFillTo(pillSheetType: sheetType, toDate: DateTime.parse("2020-09-28")),
           );
           // created at and id are anything value
@@ -144,7 +164,12 @@ void main() {
                   createdDate: DateTime.parse("2020-09-22"),
                 )
               ],
-              typeInfo: sheetType.typeInfo,
+              typeInfo: PillSheetTypeInfo(
+                dosingPeriod: sheetType.dosingPeriod,
+                name: sheetType.fullName,
+                totalCount: sheetType.totalCount,
+                pillSheetTypeReferencePath: sheetType.rawPath,
+              ),
               pills: Pill.generateAndFillTo(pillSheetType: sheetType, toDate: DateTime.parse("2020-09-28")),
             );
             // created at and id are anything value
@@ -178,7 +203,12 @@ void main() {
                   endDate: DateTime.parse("2020-09-25"),
                 )
               ],
-              typeInfo: sheetType.typeInfo,
+              typeInfo: PillSheetTypeInfo(
+                dosingPeriod: sheetType.dosingPeriod,
+                name: sheetType.fullName,
+                totalCount: sheetType.totalCount,
+                pillSheetTypeReferencePath: sheetType.rawPath,
+              ),
               pills: Pill.generateAndFillTo(pillSheetType: sheetType, toDate: DateTime.parse("2020-09-28")),
             );
             // created at and id are anything value
@@ -205,7 +235,12 @@ void main() {
           lastTakenDate: DateTime.parse("2020-03-28"),
           createdAt: now(),
           groupIndex: 0,
-          typeInfo: sheetType.typeInfo,
+          typeInfo: PillSheetTypeInfo(
+            dosingPeriod: sheetType.dosingPeriod,
+            name: sheetType.fullName,
+            totalCount: sheetType.totalCount,
+            pillSheetTypeReferencePath: sheetType.rawPath,
+          ),
           pills: Pill.generateAndFillTo(pillSheetType: sheetType, toDate: DateTime.parse("2022-03-28")),
         );
         final pillSheet2 = PillSheet(
@@ -214,7 +249,12 @@ void main() {
           lastTakenDate: null,
           groupIndex: 1,
           createdAt: now(),
-          typeInfo: sheetType.typeInfo,
+          typeInfo: PillSheetTypeInfo(
+            dosingPeriod: sheetType.dosingPeriod,
+            name: sheetType.fullName,
+            totalCount: sheetType.totalCount,
+            pillSheetTypeReferencePath: sheetType.rawPath,
+          ),
           pills: Pill.generateAndFillTo(pillSheetType: sheetType, toDate: null),
         );
         // created at and id are anything value
@@ -237,7 +277,12 @@ void main() {
           lastTakenDate: DateTime.parse("2020-03-28"),
           createdAt: now(),
           groupIndex: 0,
-          typeInfo: sheetType.typeInfo,
+          typeInfo: PillSheetTypeInfo(
+            dosingPeriod: sheetType.dosingPeriod,
+            name: sheetType.fullName,
+            totalCount: sheetType.totalCount,
+            pillSheetTypeReferencePath: sheetType.rawPath,
+          ),
           pills: Pill.generateAndFillTo(pillSheetType: sheetType, toDate: DateTime.parse("2022-03-28")),
         );
         final pillSheet2 = PillSheet(
@@ -246,7 +291,12 @@ void main() {
           lastTakenDate: null,
           createdAt: now(),
           groupIndex: 1,
-          typeInfo: sheetType.typeInfo,
+          typeInfo: PillSheetTypeInfo(
+            dosingPeriod: sheetType.dosingPeriod,
+            name: sheetType.fullName,
+            totalCount: sheetType.totalCount,
+            pillSheetTypeReferencePath: sheetType.rawPath,
+          ),
           pills: Pill.generateAndFillTo(pillSheetType: sheetType, toDate: null),
         );
         // created at and id are anything value
@@ -270,7 +320,12 @@ void main() {
           lastTakenDate: DateTime.parse("2020-03-28"),
           createdAt: now(),
           groupIndex: 0,
-          typeInfo: sheetType.typeInfo,
+          typeInfo: PillSheetTypeInfo(
+            dosingPeriod: sheetType.dosingPeriod,
+            name: sheetType.fullName,
+            totalCount: sheetType.totalCount,
+            pillSheetTypeReferencePath: sheetType.rawPath,
+          ),
           pills: Pill.generateAndFillTo(pillSheetType: sheetType, toDate: DateTime.parse("2022-03-28")),
         );
         final pillSheet2 = PillSheet(
@@ -279,7 +334,12 @@ void main() {
           lastTakenDate: null,
           createdAt: now(),
           groupIndex: 1,
-          typeInfo: sheetType.typeInfo,
+          typeInfo: PillSheetTypeInfo(
+            dosingPeriod: sheetType.dosingPeriod,
+            name: sheetType.fullName,
+            totalCount: sheetType.totalCount,
+            pillSheetTypeReferencePath: sheetType.rawPath,
+          ),
           pills: Pill.generateAndFillTo(pillSheetType: sheetType, toDate: null),
         );
         // created at and id are anything value
@@ -303,7 +363,12 @@ void main() {
           lastTakenDate: DateTime.parse("2020-03-28"),
           createdAt: now(),
           groupIndex: 0,
-          typeInfo: sheetType.typeInfo,
+          typeInfo: PillSheetTypeInfo(
+            dosingPeriod: sheetType.dosingPeriod,
+            name: sheetType.fullName,
+            totalCount: sheetType.totalCount,
+            pillSheetTypeReferencePath: sheetType.rawPath,
+          ),
           pills: Pill.generateAndFillTo(pillSheetType: sheetType, toDate: DateTime.parse("2022-03-28")),
         );
         final pillSheet2 = PillSheet(
@@ -312,7 +377,12 @@ void main() {
           lastTakenDate: null,
           createdAt: now(),
           groupIndex: 1,
-          typeInfo: sheetType.typeInfo,
+          typeInfo: PillSheetTypeInfo(
+            dosingPeriod: sheetType.dosingPeriod,
+            name: sheetType.fullName,
+            totalCount: sheetType.totalCount,
+            pillSheetTypeReferencePath: sheetType.rawPath,
+          ),
           pills: Pill.generateAndFillTo(pillSheetType: sheetType, toDate: null),
         );
         // created at and id are anything value
@@ -339,7 +409,12 @@ void main() {
           id: firestoreIDGenerator(),
           beginingDate: DateTime.parse("2020-09-14"),
           lastTakenDate: null,
-          typeInfo: sheetType.typeInfo,
+          typeInfo: PillSheetTypeInfo(
+            dosingPeriod: sheetType.dosingPeriod,
+            name: sheetType.fullName,
+            totalCount: sheetType.totalCount,
+            pillSheetTypeReferencePath: sheetType.rawPath,
+          ),
           createdAt: now(),
           pills: Pill.generateAndFillTo(pillSheetType: sheetType, toDate: null),
         );
@@ -361,7 +436,12 @@ void main() {
           id: firestoreIDGenerator(),
           beginingDate: DateTime.parse("2020-09-14"),
           lastTakenDate: DateTime.parse("2020-09-17"),
-          typeInfo: sheetType.typeInfo,
+          typeInfo: PillSheetTypeInfo(
+            dosingPeriod: sheetType.dosingPeriod,
+            name: sheetType.fullName,
+            totalCount: sheetType.totalCount,
+            pillSheetTypeReferencePath: sheetType.rawPath,
+          ),
           createdAt: now(),
           pills: Pill.generateAndFillTo(pillSheetType: sheetType, toDate: DateTime.parse("2020-09-17")),
         );
@@ -383,7 +463,12 @@ void main() {
           id: firestoreIDGenerator(),
           beginingDate: DateTime.parse("2020-09-01"),
           lastTakenDate: DateTime.parse("2020-09-28"),
-          typeInfo: sheetType.typeInfo,
+          typeInfo: PillSheetTypeInfo(
+            dosingPeriod: sheetType.dosingPeriod,
+            name: sheetType.fullName,
+            totalCount: sheetType.totalCount,
+            pillSheetTypeReferencePath: sheetType.rawPath,
+          ),
           createdAt: now(),
           pills: Pill.generateAndFillTo(pillSheetType: sheetType, toDate: DateTime.parse("2020-09-28")),
         );
@@ -413,7 +498,12 @@ void main() {
                 createdDate: DateTime.parse("2020-09-23"),
               ),
             ],
-            typeInfo: sheetType.typeInfo,
+            typeInfo: PillSheetTypeInfo(
+              dosingPeriod: sheetType.dosingPeriod,
+              name: sheetType.fullName,
+              totalCount: sheetType.totalCount,
+              pillSheetTypeReferencePath: sheetType.rawPath,
+            ),
             pills: Pill.generateAndFillTo(pillSheetType: sheetType, toDate: DateTime.parse("2020-09-22")),
           );
           // created at and id are anything value
@@ -442,7 +532,12 @@ void main() {
                 endDate: DateTime.parse("2020-09-25"),
               ),
             ],
-            typeInfo: sheetType.typeInfo,
+            typeInfo: PillSheetTypeInfo(
+              dosingPeriod: sheetType.dosingPeriod,
+              name: sheetType.fullName,
+              totalCount: sheetType.totalCount,
+              pillSheetTypeReferencePath: sheetType.rawPath,
+            ),
             pills: Pill.generateAndFillTo(pillSheetType: sheetType, toDate: DateTime.parse("2020-09-27")),
           );
           // created at and id are anything value
@@ -471,7 +566,12 @@ void main() {
                 endDate: DateTime.parse("2020-09-25"),
               ),
             ],
-            typeInfo: sheetType.typeInfo,
+            typeInfo: PillSheetTypeInfo(
+              dosingPeriod: sheetType.dosingPeriod,
+              name: sheetType.fullName,
+              totalCount: sheetType.totalCount,
+              pillSheetTypeReferencePath: sheetType.rawPath,
+            ),
             pills: Pill.generateAndFillTo(pillSheetType: sheetType, toDate: null),
           );
           // created at and id are anything value
@@ -506,7 +606,12 @@ void main() {
                   createdDate: DateTime.parse("2020-09-26"),
                 ),
               ],
-              typeInfo: sheetType.typeInfo,
+              typeInfo: PillSheetTypeInfo(
+                dosingPeriod: sheetType.dosingPeriod,
+                name: sheetType.fullName,
+                totalCount: sheetType.totalCount,
+                pillSheetTypeReferencePath: sheetType.rawPath,
+              ),
               pills: Pill.generateAndFillTo(pillSheetType: sheetType, toDate: DateTime.parse("2020-09-22")),
             );
             // created at and id are anything value
@@ -540,7 +645,12 @@ void main() {
                   endDate: DateTime.parse("2020-09-27"),
                 ),
               ],
-              typeInfo: sheetType.typeInfo,
+              typeInfo: PillSheetTypeInfo(
+                dosingPeriod: sheetType.dosingPeriod,
+                name: sheetType.fullName,
+                totalCount: sheetType.totalCount,
+                pillSheetTypeReferencePath: sheetType.rawPath,
+              ),
               pills: Pill.generateAndFillTo(pillSheetType: sheetType, toDate: DateTime.parse("2020-09-22")),
             );
             // created at and id are anything value
@@ -566,7 +676,12 @@ void main() {
             lastTakenDate: DateTime.parse("2020-03-28"),
             createdAt: now(),
             groupIndex: 0,
-            typeInfo: sheetType.typeInfo,
+            typeInfo: PillSheetTypeInfo(
+              dosingPeriod: sheetType.dosingPeriod,
+              name: sheetType.fullName,
+              totalCount: sheetType.totalCount,
+              pillSheetTypeReferencePath: sheetType.rawPath,
+            ),
             pills: Pill.generateAndFillTo(pillSheetType: sheetType, toDate: DateTime.parse("2022-03-28")),
           );
           final pillSheet2 = PillSheet(
@@ -575,7 +690,12 @@ void main() {
             lastTakenDate: DateTime.parse("2022-03-29"),
             createdAt: now(),
             groupIndex: 1,
-            typeInfo: sheetType.typeInfo,
+            typeInfo: PillSheetTypeInfo(
+              dosingPeriod: sheetType.dosingPeriod,
+              name: sheetType.fullName,
+              totalCount: sheetType.totalCount,
+              pillSheetTypeReferencePath: sheetType.rawPath,
+            ),
             pills: Pill.generateAndFillTo(pillSheetType: sheetType, toDate: DateTime.parse("2022-03-29")),
           );
           // created at and id are anything value
@@ -598,7 +718,12 @@ void main() {
             lastTakenDate: DateTime.parse("2020-03-28"),
             createdAt: now(),
             groupIndex: 0,
-            typeInfo: sheetType.typeInfo,
+            typeInfo: PillSheetTypeInfo(
+              dosingPeriod: sheetType.dosingPeriod,
+              name: sheetType.fullName,
+              totalCount: sheetType.totalCount,
+              pillSheetTypeReferencePath: sheetType.rawPath,
+            ),
             pills: Pill.generateAndFillTo(pillSheetType: sheetType, toDate: DateTime.parse("2022-03-28")),
           );
           final pillSheet2 = PillSheet(
@@ -607,7 +732,12 @@ void main() {
             lastTakenDate: DateTime.parse("2022-03-29"),
             createdAt: now(),
             groupIndex: 1,
-            typeInfo: sheetType.typeInfo,
+            typeInfo: PillSheetTypeInfo(
+              dosingPeriod: sheetType.dosingPeriod,
+              name: sheetType.fullName,
+              totalCount: sheetType.totalCount,
+              pillSheetTypeReferencePath: sheetType.rawPath,
+            ),
             pills: Pill.generateAndFillTo(pillSheetType: sheetType, toDate: DateTime.parse("2022-03-29")),
           );
           // created at and id are anything value
@@ -631,7 +761,12 @@ void main() {
             lastTakenDate: DateTime.parse("2020-03-28"),
             createdAt: now(),
             groupIndex: 0,
-            typeInfo: sheetType.typeInfo,
+            typeInfo: PillSheetTypeInfo(
+              dosingPeriod: sheetType.dosingPeriod,
+              name: sheetType.fullName,
+              totalCount: sheetType.totalCount,
+              pillSheetTypeReferencePath: sheetType.rawPath,
+            ),
             pills: Pill.generateAndFillTo(pillSheetType: sheetType, toDate: DateTime.parse("2022-03-28")),
           );
           final pillSheet2 = PillSheet(
@@ -640,7 +775,12 @@ void main() {
             lastTakenDate: DateTime.parse("2022-03-29"),
             createdAt: now(),
             groupIndex: 1,
-            typeInfo: sheetType.typeInfo,
+            typeInfo: PillSheetTypeInfo(
+              dosingPeriod: sheetType.dosingPeriod,
+              name: sheetType.fullName,
+              totalCount: sheetType.totalCount,
+              pillSheetTypeReferencePath: sheetType.rawPath,
+            ),
             pills: Pill.generateAndFillTo(pillSheetType: sheetType, toDate: DateTime.parse("2022-03-29")),
           );
           // created at and id are anything value
@@ -665,7 +805,12 @@ void main() {
             lastTakenDate: DateTime.parse("2020-03-28"),
             createdAt: now(),
             groupIndex: 0,
-            typeInfo: sheetType.typeInfo,
+            typeInfo: PillSheetTypeInfo(
+              dosingPeriod: sheetType.dosingPeriod,
+              name: sheetType.fullName,
+              totalCount: sheetType.totalCount,
+              pillSheetTypeReferencePath: sheetType.rawPath,
+            ),
             pills: Pill.generateAndFillTo(pillSheetType: sheetType, toDate: DateTime.parse("2022-03-28")),
           );
           final pillSheet2 = PillSheet(
@@ -674,7 +819,12 @@ void main() {
             lastTakenDate: DateTime.parse("2022-03-29"),
             createdAt: now(),
             groupIndex: 1,
-            typeInfo: sheetType.typeInfo,
+            typeInfo: PillSheetTypeInfo(
+              dosingPeriod: sheetType.dosingPeriod,
+              name: sheetType.fullName,
+              totalCount: sheetType.totalCount,
+              pillSheetTypeReferencePath: sheetType.rawPath,
+            ),
             pills: Pill.generateAndFillTo(pillSheetType: sheetType, toDate: DateTime.parse("2022-03-29")),
           );
           // created at and id are anything value
@@ -698,7 +848,12 @@ void main() {
             lastTakenDate: DateTime.parse("2020-03-28"),
             createdAt: now(),
             groupIndex: 0,
-            typeInfo: sheetType.typeInfo,
+            typeInfo: PillSheetTypeInfo(
+              dosingPeriod: sheetType.dosingPeriod,
+              name: sheetType.fullName,
+              totalCount: sheetType.totalCount,
+              pillSheetTypeReferencePath: sheetType.rawPath,
+            ),
             pills: Pill.generateAndFillTo(pillSheetType: sheetType, toDate: DateTime.parse("2022-03-28")),
           );
           final pillSheet2 = PillSheet(
@@ -707,7 +862,12 @@ void main() {
             lastTakenDate: DateTime.parse("2022-03-29"),
             createdAt: now(),
             groupIndex: 1,
-            typeInfo: sheetType.typeInfo,
+            typeInfo: PillSheetTypeInfo(
+              dosingPeriod: sheetType.dosingPeriod,
+              name: sheetType.fullName,
+              totalCount: sheetType.totalCount,
+              pillSheetTypeReferencePath: sheetType.rawPath,
+            ),
             pills: Pill.generateAndFillTo(pillSheetType: sheetType, toDate: DateTime.parse("2022-03-29")),
           );
           // created at and id are anything value
