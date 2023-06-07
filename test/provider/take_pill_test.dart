@@ -29,33 +29,20 @@ void main() {
 
       activePillSheetBeginDate = today();
       activePillSheetLastTakenDate = null;
-      previousPillSheet = PillSheet(
-        id: "previous_pill_sheet_id",
-        groupIndex: 0,
-        typeInfo: PillSheetType.pillsheet_28_7.typeInfo,
-        beginingDate: activePillSheetBeginDate.subtract(const Duration(days: 28)),
+      previousPillSheet = PillSheet.create(
+        PillSheetType.pillsheet_28_7,
+        beginDate: activePillSheetBeginDate.subtract(const Duration(days: 28)),
         lastTakenDate: activePillSheetBeginDate.subtract(const Duration(days: 1)),
-        createdAt: now(),
-        pills:
-            Pill.generateAndFillTo(pillSheetType: PillSheetType.pillsheet_28_7, toDate: activePillSheetBeginDate.subtract(const Duration(days: 1))),
       );
-      activedPillSheet = PillSheet(
-        id: "active_pill_sheet_id",
-        groupIndex: 1,
-        typeInfo: PillSheetType.pillsheet_28_7.typeInfo,
-        beginingDate: activePillSheetBeginDate,
+      activedPillSheet = PillSheet.create(
+        PillSheetType.pillsheet_28_7,
+        beginDate: activePillSheetBeginDate,
         lastTakenDate: activePillSheetLastTakenDate,
-        createdAt: now(),
-        pills: Pill.generateAndFillTo(pillSheetType: PillSheetType.pillsheet_28_7, toDate: activePillSheetLastTakenDate),
       );
-      nextPillSheet = PillSheet(
-        id: "next_pill_sheet_id",
-        groupIndex: 2,
-        typeInfo: PillSheetType.pillsheet_28_7.typeInfo,
-        beginingDate: activePillSheetBeginDate.add(const Duration(days: 28)),
+      nextPillSheet = PillSheet.create(
+        PillSheetType.pillsheet_28_7,
+        beginDate: activePillSheetBeginDate.add(const Duration(days: 28)),
         lastTakenDate: null,
-        createdAt: now(),
-        pills: Pill.generateAndFillTo(pillSheetType: PillSheetType.pillsheet_28_7, toDate: null),
       );
     });
     group("one pill sheet", () {
@@ -509,14 +496,14 @@ void main() {
 
       test("Real case 1. Timesensitive pattern(takenDate(19:02:00) < beginingDate(19:02:21)) and with rest durations", () async {
         previousPillSheet =
-            previousPillSheet.copyWith(beginingDate: DateTime.parse("2022-06-22T19:02:21"), lastTakenDate: DateTime.parse("2022-07-23T19:00:04"));
+            previousPillSheet.copyWith(beginDate: DateTime.parse("2022-06-22T19:02:21"), lastTakenDate: DateTime.parse("2022-07-23T19:00:04"));
         previousPillSheet = previousPillSheet.copyWith(restDurations: [
           RestDuration(
               beginDate: DateTime.parse("2022-07-14T18:25:41"),
               createdDate: DateTime.parse("2022-07-14T18:25:41"),
               endDate: DateTime.parse("2022-07-18T18:10:01"))
         ]);
-        activedPillSheet = activedPillSheet.copyWith(beginingDate: DateTime.parse("2022-07-24T19:02:21"), lastTakenDate: null);
+        activedPillSheet = activedPillSheet.copyWith(beginDate: DateTime.parse("2022-07-24T19:02:21"), lastTakenDate: null);
         pillSheetGroup = PillSheetGroup(
           id: "group_id",
           pillSheetIDs: [previousPillSheet.id!, activedPillSheet.id!, nextPillSheet.id!],
@@ -576,9 +563,8 @@ void main() {
         when(mockTodayRepository.now()).thenReturn(mockToday);
 
         previousPillSheet =
-            previousPillSheet.copyWith(beginingDate: DateTime.parse("2022-06-23T00:00:00"), lastTakenDate: DateTime.parse("2022-07-20T00:00:00"));
-        activedPillSheet =
-            activedPillSheet.copyWith(beginingDate: DateTime.parse("2022-07-21T00:00:00"), lastTakenDate: DateTime.parse("2022-08-11"));
+            previousPillSheet.copyWith(beginDate: DateTime.parse("2022-06-23T00:00:00"), lastTakenDate: DateTime.parse("2022-07-20T00:00:00"));
+        activedPillSheet = activedPillSheet.copyWith(beginDate: DateTime.parse("2022-07-21T00:00:00"), lastTakenDate: DateTime.parse("2022-08-11"));
         activedPillSheet = activedPillSheet.copyWith(restDurations: [
           RestDuration(
               beginDate: DateTime.parse("2022-08-04T08:19:04"),
@@ -593,14 +579,10 @@ void main() {
               createdDate: DateTime.parse("2022-08-07T10:48:22"),
               endDate: DateTime.parse("2022-08-08T19:47:49"))
         ]);
-        nextPillSheet = PillSheet(
-          id: "next_pill_sheet_id",
-          groupIndex: 2,
-          typeInfo: PillSheetType.pillsheet_28_7.typeInfo,
-          beginingDate: activePillSheetBeginDate.add(const Duration(days: 28)),
+        nextPillSheet = PillSheet.create(
+          PillSheetType.pillsheet_28_7,
+          beginDate: activePillSheetBeginDate.add(const Duration(days: 28)),
           lastTakenDate: null,
-          createdAt: now(),
-          pills: Pill.generateAndFillTo(pillSheetType: PillSheetType.pillsheet_28_7, toDate: null),
         );
         pillSheetGroup = PillSheetGroup(
           id: "group_id",
