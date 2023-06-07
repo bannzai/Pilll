@@ -33,7 +33,7 @@ void main() {
         lastTakenDate: null,
       );
       final updatedPillSheet = pillSheet.copyWith(
-        beginingDate: mockToday.subtract(
+        beginDate: mockToday.subtract(
           const Duration(days: 1),
         ),
         lastTakenDate: mockToday.subtract(
@@ -96,7 +96,7 @@ void main() {
         lastTakenDate: mockToday,
       );
       final updatedPillSheet = pillSheet.copyWith(
-        beginingDate: mockToday.subtract(
+        beginDate: mockToday.subtract(
           const Duration(days: 1),
         ),
         lastTakenDate: mockToday.subtract(
@@ -169,14 +169,14 @@ void main() {
         lastTakenDate: null,
       );
       final updatedLeft = left.copyWith(
-        beginingDate: DateTime.parse("2022-04-04"),
+        beginDate: DateTime.parse("2022-04-04"),
         lastTakenDate: DateTime.parse("2022-04-30"), // todayPillNumber - 1
       );
       final updatedMiddle = middle.copyWith(
-        beginingDate: DateTime.parse("2022-05-02"),
+        beginDate: DateTime.parse("2022-05-02"),
       );
       final updatedRight = right.copyWith(
-        beginingDate: DateTime.parse("2022-05-30"),
+        beginDate: DateTime.parse("2022-05-30"),
       );
 
       final pillSheetGroup = PillSheetGroup(
@@ -249,15 +249,15 @@ void main() {
         lastTakenDate: null,
       );
       final updatedLeft = left.copyWith(
-        beginingDate: DateTime.parse("2022-04-04"),
+        beginDate: DateTime.parse("2022-04-04"),
         lastTakenDate: DateTime.parse("2022-04-30"), // todayPillNumber - 1
       );
       final updatedMiddle = middle.copyWith(
-        beginingDate: DateTime.parse("2022-05-02"),
+        beginDate: DateTime.parse("2022-05-02"),
         lastTakenDate: null,
       );
       final updatedRight = right.copyWith(
-        beginingDate: DateTime.parse("2022-05-30"),
+        beginDate: DateTime.parse("2022-05-30"),
       );
 
       final pillSheetGroup = PillSheetGroup(
