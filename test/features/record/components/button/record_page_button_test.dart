@@ -32,29 +32,20 @@ void main() {
       testWidgets('pill sheet has activeRestDuration', (WidgetTester tester) async {
         final firstPillSheetBeginDate = now().subtract(const Duration(days: 10));
         var pillSheets = [
-          PillSheet(
-            id: "pill_sheet_id_1",
-            typeInfo: PillSheetType.pillsheet_28_0.typeInfo,
-            beginingDate: firstPillSheetBeginDate,
+          PillSheet.create(
+            PillSheetType.pillsheet_28_0,
+            beginDate: firstPillSheetBeginDate,
             lastTakenDate: null,
-            createdAt: now(),
-            pills: Pill.generateAndFillTo(pillSheetType: PillSheetType.pillsheet_28_0, toDate: null),
           ),
-          PillSheet(
-            id: "pill_sheet_id_2",
-            typeInfo: PillSheetType.pillsheet_28_0.typeInfo,
-            beginingDate: firstPillSheetBeginDate.add(const Duration(days: 28)),
+          PillSheet.create(
+            PillSheetType.pillsheet_28_0,
+            beginDate: firstPillSheetBeginDate.add(const Duration(days: 28)),
             lastTakenDate: null,
-            createdAt: now(),
-            pills: Pill.generateAndFillTo(pillSheetType: PillSheetType.pillsheet_28_0, toDate: null),
           ),
-          PillSheet(
-            id: "pill_sheet_id_3",
-            typeInfo: PillSheetType.pillsheet_28_0.typeInfo,
-            beginingDate: firstPillSheetBeginDate.add(const Duration(days: 56)),
+          PillSheet.create(
+            PillSheetType.pillsheet_28_0,
+            beginDate: firstPillSheetBeginDate.add(const Duration(days: 56)),
             lastTakenDate: null,
-            createdAt: now(),
-            pills: Pill.generateAndFillTo(pillSheetType: PillSheetType.pillsheet_28_0, toDate: null),
           )
         ];
         final pillSheetGroup = PillSheetGroup(pillSheetIDs: pillSheets.map((e) => e.id!).toList(), pillSheets: pillSheets, createdAt: now());
@@ -98,29 +89,20 @@ void main() {
       testWidgets('activePillSheet.todayPillIsAlreadyTaken', (WidgetTester tester) async {
         final firstPillSheetBeginDate = now().subtract(const Duration(days: 10));
         var pillSheets = [
-          PillSheet(
-            id: "pill_sheet_id_1",
-            typeInfo: PillSheetType.pillsheet_28_0.typeInfo,
-            beginingDate: firstPillSheetBeginDate,
+          PillSheet.create(
+            PillSheetType.pillsheet_28_0,
+            beginDate: firstPillSheetBeginDate,
             lastTakenDate: null,
-            createdAt: now(),
-            pills: Pill.generateAndFillTo(pillSheetType: PillSheetType.pillsheet_28_0, toDate: null),
           ),
-          PillSheet(
-            id: "pill_sheet_id_2",
-            typeInfo: PillSheetType.pillsheet_28_0.typeInfo,
-            beginingDate: firstPillSheetBeginDate.add(const Duration(days: 28)),
+          PillSheet.create(
+            PillSheetType.pillsheet_28_0,
+            beginDate: firstPillSheetBeginDate.add(const Duration(days: 28)),
             lastTakenDate: null,
-            createdAt: now(),
-            pills: Pill.generateAndFillTo(pillSheetType: PillSheetType.pillsheet_28_0, toDate: null),
           ),
-          PillSheet(
-            id: "pill_sheet_id_3",
-            typeInfo: PillSheetType.pillsheet_28_0.typeInfo,
-            beginingDate: firstPillSheetBeginDate.add(const Duration(days: 56)),
+          PillSheet.create(
+            PillSheetType.pillsheet_28_0,
+            beginDate: firstPillSheetBeginDate.add(const Duration(days: 56)),
             lastTakenDate: null,
-            createdAt: now(),
-            pills: Pill.generateAndFillTo(pillSheetType: PillSheetType.pillsheet_28_0, toDate: null),
           )
         ];
         final pillSheetGroup = PillSheetGroup(pillSheetIDs: pillSheets.map((e) => e.id!).toList(), pillSheets: pillSheets, createdAt: now());
@@ -166,29 +148,20 @@ void main() {
       testWidgets('show TakenButton', (WidgetTester tester) async {
         final firstPillSheetBeginDate = now().subtract(const Duration(days: 10));
         var pillSheets = [
-          PillSheet(
-            id: "pill_sheet_id_1",
-            typeInfo: PillSheetType.pillsheet_28_0.typeInfo,
-            beginingDate: firstPillSheetBeginDate,
+          PillSheet.create(
+            PillSheetType.pillsheet_28_0,
+            beginDate: firstPillSheetBeginDate,
             lastTakenDate: null,
-            createdAt: now(),
-            pills: Pill.generateAndFillTo(pillSheetType: PillSheetType.pillsheet_28_0, toDate: null),
           ),
-          PillSheet(
-            id: "pill_sheet_id_2",
-            typeInfo: PillSheetType.pillsheet_28_0.typeInfo,
-            beginingDate: firstPillSheetBeginDate.add(const Duration(days: 28)),
+          PillSheet.create(
+            PillSheetType.pillsheet_28_0,
+            beginDate: firstPillSheetBeginDate.add(const Duration(days: 28)),
             lastTakenDate: null,
-            createdAt: now(),
-            pills: Pill.generateAndFillTo(pillSheetType: PillSheetType.pillsheet_28_0, toDate: null),
           ),
-          PillSheet(
-            id: "pill_sheet_id_3",
-            typeInfo: PillSheetType.pillsheet_28_0.typeInfo,
-            beginingDate: firstPillSheetBeginDate.add(const Duration(days: 56)),
+          PillSheet.create(
+            PillSheetType.pillsheet_28_0,
+            beginDate: firstPillSheetBeginDate.add(const Duration(days: 56)),
             lastTakenDate: null,
-            createdAt: now(),
-            pills: Pill.generateAndFillTo(pillSheetType: PillSheetType.pillsheet_28_0, toDate: null),
           )
         ];
         final pillSheetGroup = PillSheetGroup(pillSheetIDs: pillSheets.map((e) => e.id!).toList(), pillSheets: pillSheets, createdAt: now());
