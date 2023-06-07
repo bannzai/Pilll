@@ -108,7 +108,7 @@ class PillSheet with _$PillSheet {
         beginingDate: beginDate,
         lastTakenDate: lastTakenDate,
         createdAt: now(),
-        pillTakenCount: pillTakenCount,
+        pillTakenCount: pillTakenCount ?? 1,
         pills: Pill.generateAndFillTo(pillSheetType: type, fromDate: beginDate, toDate: lastTakenDate),
       );
 
@@ -219,6 +219,10 @@ class PillSheet with _$PillSheet {
     }
 
     return pillTakenDate;
+  }
+
+  PillSheet updatedLastTaken(DateTime date) {
+    return copyWith(lastTakenDate: date, pills: Pill.generateAndFillTo(pillSheetType: pillSheetType, fromDate: beginingDate, toDate: date));
   }
 }
 

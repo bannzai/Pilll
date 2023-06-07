@@ -491,14 +491,7 @@ void main() {
           pillSheetIDs: ["1", "2"],
           pillSheets: [
             pillSheet,
-            pillSheet2.copyWith(
-              lastTakenDate: yesterday,
-              pills: Pill.generateAndFillTo(
-                pillSheetType: PillSheetType.pillsheet_21,
-                fromDate: pillSheet2.beginingDate,
-                toDate: yesterday,
-              ),
-            ),
+            pillSheet2.updatedLastTaken(yesterday),
           ],
           createdAt: now(),
         );
@@ -585,8 +578,8 @@ void main() {
           id: "group_id",
           pillSheetIDs: ["1", "2"],
           pillSheets: [
-            pillSheet.copyWith(lastTakenDate: mockToday.subtract(const Duration(days: 4))),
-            pillSheet2.copyWith(lastTakenDate: pillSheet2.beginingDate.subtract(const Duration(days: 1))),
+            pillSheet.updatedLastTaken(mockToday.subtract(const Duration(days: 4))),
+            pillSheet2.updatedLastTaken(pillSheet2.beginingDate.subtract(const Duration(days: 1))),
           ],
           createdAt: now(),
         );
@@ -673,8 +666,8 @@ void main() {
           id: "group_id",
           pillSheetIDs: ["1", "2"],
           pillSheets: [
-            pillSheet.copyWith(lastTakenDate: mockToday.subtract(const Duration(days: 4))),
-            pillSheet2.copyWith(lastTakenDate: pillSheet2.beginingDate.subtract(const Duration(days: 1)), restDurations: []),
+            pillSheet.updatedLastTaken(mockToday.subtract(const Duration(days: 4))),
+            pillSheet2.updatedLastTaken(pillSheet2.beginingDate.subtract(const Duration(days: 1)), restDurations: []),
           ],
           createdAt: now(),
         );
