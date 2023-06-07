@@ -51,7 +51,7 @@ class TakePill {
 
       // takenDateよりも予測するピルシートの最終服用日よりも小さい場合は、そのピルシートの最終日で予測する最終服用日を記録する
       if (takenDate.isAfter(pillSheet.estimatedEndTakenDate)) {
-        return pillSheet._updatedLastTakenDate(pillSheet.estimatedEndTakenDate);
+        return pillSheet.takenPillSheet(pillSheet.estimatedEndTakenDate);
       }
 
       // takenDateがピルシートの開始日に満たない場合は、記録の対象になっていないので早期リターン
@@ -60,7 +60,7 @@ class TakePill {
         return pillSheet;
       }
 
-      return pillSheet._updatedLastTakenDate(takenDate);
+      return pillSheet.takenPillSheet(takenDate);
     }).toList();
 
     final updatedPillSheetGroup = pillSheetGroup.copyWith(pillSheets: updatedPillSheets);
@@ -105,7 +105,7 @@ class TakePill {
 }
 
 extension on PillSheet {
-  PillSheet _updatedLastTakenDate(DateTime date) {
+  PillSheet takenPillSheet(DateTime date) {
     return copyWith(
       lastTakenDate: date,
       pills: pills.map((pill) {
@@ -115,11 +115,11 @@ extension on PillSheet {
         if (pill.pillTakens.length == pillTakenCount) {
           return pill;
         }
-        final pillTakenDoneList = [...pill.pillTakens].sublist(0, pill.pillTakens.length);
+        final pillTakenDoneList = [...pill.pillTakens];
 
         if (pill.index != todayPillIndex) {
           // NOTE: 今日以外のピルは、今日のピルを飲んだ時点で、今日のピルの服用記録を追加する
-          for (var i = pill.pillTakens.length; i < pillTakenCount; i++) {
+          for (var i = pill.pillTakens.length - 1; i < pillTakenCount; i++) {
             pillTakenDoneList.add(PillTaken(
               takenDateTime: date,
               createdDateTime: now(),
