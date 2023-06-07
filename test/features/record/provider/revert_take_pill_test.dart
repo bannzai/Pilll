@@ -667,7 +667,7 @@ void main() {
           pillSheetIDs: ["1", "2"],
           pillSheets: [
             pillSheet.updatedLastTaken(mockToday.subtract(const Duration(days: 4))),
-            pillSheet2.updatedLastTaken(pillSheet2.beginingDate.subtract(const Duration(days: 1)), restDurations: []),
+            pillSheet2.updatedLastTaken(pillSheet2.beginingDate.subtract(const Duration(days: 1))).copyWith(restDurations: []),
           ],
           createdAt: now(),
         );
