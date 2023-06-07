@@ -2,6 +2,7 @@ import 'package:pilll/entity/firestore_timestamp_converter.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:pilll/entity/pill_sheet_type.dart';
+import 'package:pilll/utils/datetime/date_compare.dart';
 import 'package:pilll/utils/datetime/day.dart';
 
 part 'pill.codegen.g.dart';
@@ -86,7 +87,7 @@ class Pill with _$Pill {
         index: index,
         createdDateTime: now(),
         updatedDateTime: now(),
-        pillTakens: toDate != null && toDate.isAfter(now())
+        pillTakens: toDate != null && (toDate.isBefore(now()) || isSameDay(toDate, (now())))
             ? List.generate(
                 pillTakenCount ?? 1,
                 (i) {
