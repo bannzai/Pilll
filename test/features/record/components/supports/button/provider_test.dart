@@ -34,10 +34,13 @@ void main() {
       final batch = MockWriteBatch();
       when(batchFactory.batch()).thenReturn(batch);
 
-      final pillSheet = PillSheet.create(
-        PillSheetType.pillsheet_28_0,
-        beginDate: now(),
+      final pillSheet = PillSheet(
+        id: "pill_sheet_id_1",
+        typeInfo: PillSheetType.pillsheet_28_0.typeInfo,
         lastTakenDate: null,
+        beginingDate: now(),
+        createdAt: now(),
+        pills: Pill.generateAndFillTo(pillSheetType: PillSheetType.pillsheet_28_0, toDate: null),
       );
       final updatedPillSheet = pillSheet.copyWith(restDurations: [notYetEndRestDuration]);
 
@@ -90,10 +93,14 @@ void main() {
       final batch = MockWriteBatch();
       when(batchFactory.batch()).thenReturn(batch);
 
-      final pillSheet = PillSheet.create(
-        PillSheetType.pillsheet_28_0,
-        beginDate: now(),
+      final pillSheet = PillSheet(
+        id: "pill_sheet_id_1",
+        typeInfo: PillSheetType.pillsheet_28_0.typeInfo,
+        beginingDate: now(),
         lastTakenDate: null,
+        restDurations: [notYetEndRestDuration],
+        createdAt: now(),
+        pills: Pill.generateAndFillTo(pillSheetType: PillSheetType.pillsheet_28_0, toDate: null),
       );
       final updatedPillSheet = pillSheet.copyWith(restDurations: [endedRestDuration]);
 
@@ -146,20 +153,33 @@ void main() {
 
       final firstPillSheetBeginDate = now().subtract(const Duration(days: 10));
       var pillSheets = [
-        PillSheet.create(
-          PillSheetType.pillsheet_28_0,
-          beginDate: firstPillSheetBeginDate,
+        PillSheet(
+          id: "pill_sheet_id_1",
+          groupIndex: 0,
+          typeInfo: PillSheetType.pillsheet_28_0.typeInfo,
+          beginingDate: firstPillSheetBeginDate,
           lastTakenDate: null,
+          restDurations: [notYetEndRestDuration],
+          createdAt: now(),
+          pills: Pill.generateAndFillTo(pillSheetType: PillSheetType.pillsheet_28_0, toDate: null),
         ),
-        PillSheet.create(
-          PillSheetType.pillsheet_28_0,
-          beginDate: firstPillSheetBeginDate.add(const Duration(days: 28)),
+        PillSheet(
+          id: "pill_sheet_id_2",
+          groupIndex: 1,
+          typeInfo: PillSheetType.pillsheet_28_0.typeInfo,
+          beginingDate: firstPillSheetBeginDate.add(const Duration(days: 28)),
           lastTakenDate: null,
+          createdAt: now(),
+          pills: Pill.generateAndFillTo(pillSheetType: PillSheetType.pillsheet_28_0, toDate: null),
         ),
-        PillSheet.create(
-          PillSheetType.pillsheet_28_0,
-          beginDate: firstPillSheetBeginDate.add(const Duration(days: 56)),
+        PillSheet(
+          id: "pill_sheet_id_3",
+          groupIndex: 2,
+          typeInfo: PillSheetType.pillsheet_28_0.typeInfo,
+          beginingDate: firstPillSheetBeginDate.add(const Duration(days: 56)),
           lastTakenDate: null,
+          createdAt: now(),
+          pills: Pill.generateAndFillTo(pillSheetType: PillSheetType.pillsheet_28_0, toDate: null),
         )
       ];
       final updatedPillSheet1 = pillSheets[0].copyWith(restDurations: [endedRestDuration]);
