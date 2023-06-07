@@ -35,6 +35,7 @@ void main() {
           lastTakenDate: today(),
           createdAt: now(),
           pillTakenCount: 1,
+          pills: Pill.generateAndFillTo(pillSheetType: PillSheetType.pillsheet_28_0, fromDate: yesterday, toDate: today()),
         );
         final revertDate = yesterday.subtract(const Duration(days: 1));
         final reverted = pillSheet.revertedPillSheet(revertDate);
