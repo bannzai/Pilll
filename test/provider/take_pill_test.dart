@@ -64,9 +64,11 @@ void main() {
     });
     group("simple", () {
       test("take pill", () {
-        final takenDate = mockToday.add(const Duration(seconds: 1));
-        final updatedActivePillSheet = activedPillSheet.updatedLastTaken(takenDate);
-        expect(updatedActivePillSheet.lastTakenDate, takenDate);
+        final takenDate = activePillSheetBeginDate;
+        final updatedActivePillSheet = activedPillSheet.takenPillSheet(takenDate);
+        final expected = activedPillSheet.updatedLastTaken(takenDate);
+        expect(updatedActivePillSheet.pills, expected.pills);
+        expect(updatedActivePillSheet, expected);
       });
     });
   });

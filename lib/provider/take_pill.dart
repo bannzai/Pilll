@@ -104,7 +104,7 @@ class TakePill {
   }
 }
 
-extension on PillSheet {
+extension TakenPillSheet on PillSheet {
   PillSheet takenPillSheet(DateTime date) {
     return copyWith(
       lastTakenDate: date,
