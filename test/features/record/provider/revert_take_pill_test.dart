@@ -63,7 +63,7 @@ void main() {
         final reverted = pillSheet.revertedPillSheet(revertDate);
         final expected = PillSheet.create(
           PillSheetType.pillsheet_28_0,
-          beginDate: DateTime.parse("2022-01-06"),
+          pillSheet2.copyWith(lastTakenDate: pillSheet2.beginingDate.subtract(const Duration(days: 1))),
           lastTakenDate: revertDate, // change
         );
         expect(reverted.pills, expected.pills);
