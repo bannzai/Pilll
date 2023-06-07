@@ -61,12 +61,12 @@ void main() {
         pills: Pill.generateAndFillTo(
             pillSheetType: PillSheetType.pillsheet_28_7, fromDate: activePillSheetBeginDate.add(const Duration(days: 28)), toDate: null),
       );
-      group("simple", () {
-        test("take pill", () {
-          final takenDate = mockToday.add(const Duration(seconds: 1));
-          final updatedActivePillSheet = activedPillSheet.updatedLastTaken(takenDate);
-          expect(updatedActivePillSheet.lastTakenDate, takenDate);
-        });
+    });
+    group("simple", () {
+      test("take pill", () {
+        final takenDate = mockToday.add(const Duration(seconds: 1));
+        final updatedActivePillSheet = activedPillSheet.updatedLastTaken(takenDate);
+        expect(updatedActivePillSheet.lastTakenDate, takenDate);
       });
     });
   });
