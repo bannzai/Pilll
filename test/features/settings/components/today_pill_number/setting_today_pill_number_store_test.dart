@@ -27,13 +27,17 @@ void main() {
       final batchFactory = MockBatchFactory();
       final batch = MockWriteBatch();
       when(batchFactory.batch()).thenReturn(batch);
-      final pillSheet = PillSheet.create(
-        PillSheetType.pillsheet_28_0,
-        beginDate: mockToday,
+      final pillSheet = PillSheet(
+        id: "sheet_id",
+        typeInfo: PillSheetType.pillsheet_28_0.typeInfo,
+        beginingDate: mockToday,
+        groupIndex: 0,
         lastTakenDate: null,
+        createdAt: now(),
+        pills: Pill.generateAndFillTo(pillSheetType: PillSheetType.pillsheet_28_0, toDate: null),
       );
       final updatedPillSheet = pillSheet.copyWith(
-        beginDate: mockToday.subtract(
+        beginingDate: mockToday.subtract(
           const Duration(days: 1),
         ),
         lastTakenDate: mockToday.subtract(
@@ -90,13 +94,17 @@ void main() {
       final batchFactory = MockBatchFactory();
       final batch = MockWriteBatch();
       when(batchFactory.batch()).thenReturn(batch);
-      final pillSheet = PillSheet.create(
-        PillSheetType.pillsheet_28_0,
-        beginDate: mockToday,
+      final pillSheet = PillSheet(
+        id: "sheet_id",
+        typeInfo: PillSheetType.pillsheet_28_0.typeInfo,
+        beginingDate: mockToday,
+        groupIndex: 0,
         lastTakenDate: mockToday,
+        createdAt: now(),
+        pills: Pill.generateAndFillTo(pillSheetType: PillSheetType.pillsheet_28_0, toDate: mockToday),
       );
       final updatedPillSheet = pillSheet.copyWith(
-        beginDate: mockToday.subtract(
+        beginingDate: mockToday.subtract(
           const Duration(days: 1),
         ),
         lastTakenDate: mockToday.subtract(
@@ -153,30 +161,42 @@ void main() {
       final batchFactory = MockBatchFactory();
       final batch = MockWriteBatch();
       when(batchFactory.batch()).thenReturn(batch);
-      final left = PillSheet.create(
-        PillSheetType.pillsheet_28_0,
-        beginDate: DateTime.parse("2022-04-03"),
+      final left = PillSheet(
+        id: "sheet_id_left",
+        typeInfo: PillSheetType.pillsheet_28_0.typeInfo,
+        beginingDate: DateTime.parse("2022-04-03"),
+        groupIndex: 0,
         lastTakenDate: DateTime.parse("2022-04-30"),
+        createdAt: now(),
+        pills: Pill.generateAndFillTo(pillSheetType: PillSheetType.pillsheet_28_0, toDate: DateTime.parse("2022-04-30")),
       );
-      final middle = PillSheet.create(
-        PillSheetType.pillsheet_28_0,
-        beginDate: DateTime.parse("2022-05-01"),
+      final middle = PillSheet(
+        id: "sheet_id_middle",
+        typeInfo: PillSheetType.pillsheet_28_0.typeInfo,
+        beginingDate: DateTime.parse("2022-05-01"),
+        groupIndex: 1,
         lastTakenDate: null,
+        createdAt: now(),
+        pills: Pill.generateAndFillTo(pillSheetType: PillSheetType.pillsheet_28_0, toDate: DateTime.parse("2022-05-01")),
       );
-      final right = PillSheet.create(
-        PillSheetType.pillsheet_28_0,
-        beginDate: DateTime.parse("2022-05-29"),
+      final right = PillSheet(
+        id: "sheet_id_right",
+        typeInfo: PillSheetType.pillsheet_28_0.typeInfo,
+        beginingDate: DateTime.parse("2022-05-29"),
+        groupIndex: 2,
         lastTakenDate: null,
+        createdAt: now(),
+        pills: Pill.generateAndFillTo(pillSheetType: PillSheetType.pillsheet_28_0, toDate: null),
       );
       final updatedLeft = left.copyWith(
-        beginDate: DateTime.parse("2022-04-04"),
+        beginingDate: DateTime.parse("2022-04-04"),
         lastTakenDate: DateTime.parse("2022-04-30"), // todayPillNumber - 1
       );
       final updatedMiddle = middle.copyWith(
-        beginDate: DateTime.parse("2022-05-02"),
+        beginingDate: DateTime.parse("2022-05-02"),
       );
       final updatedRight = right.copyWith(
-        beginDate: DateTime.parse("2022-05-30"),
+        beginingDate: DateTime.parse("2022-05-30"),
       );
 
       final pillSheetGroup = PillSheetGroup(
@@ -233,31 +253,43 @@ void main() {
       final batchFactory = MockBatchFactory();
       final batch = MockWriteBatch();
       when(batchFactory.batch()).thenReturn(batch);
-      final left = PillSheet.create(
-        PillSheetType.pillsheet_28_0,
-        beginDate: DateTime.parse("2022-04-03"),
+      final left = PillSheet(
+        id: "sheet_id_left",
+        typeInfo: PillSheetType.pillsheet_28_0.typeInfo,
+        beginingDate: DateTime.parse("2022-04-03"),
+        groupIndex: 0,
         lastTakenDate: DateTime.parse("2022-04-30"),
+        createdAt: now(),
+        pills: Pill.generateAndFillTo(pillSheetType: PillSheetType.pillsheet_28_0, toDate: DateTime.parse("2022-04-30")),
       );
-      final middle = PillSheet.create(
-        PillSheetType.pillsheet_28_0,
-        beginDate: DateTime.parse("2022-05-01"),
+      final middle = PillSheet(
+        id: "sheet_id_middle",
+        typeInfo: PillSheetType.pillsheet_28_0.typeInfo,
+        beginingDate: DateTime.parse("2022-05-01"),
+        groupIndex: 1,
         lastTakenDate: DateTime.parse("2022-05-01"),
+        createdAt: now(),
+        pills: Pill.generateAndFillTo(pillSheetType: PillSheetType.pillsheet_28_0, toDate: DateTime.parse("2022-05-01")),
       );
-      final right = PillSheet.create(
-        PillSheetType.pillsheet_28_0,
-        beginDate: DateTime.parse("2022-05-29"),
+      final right = PillSheet(
+        id: "sheet_id_right",
+        typeInfo: PillSheetType.pillsheet_28_0.typeInfo,
+        beginingDate: DateTime.parse("2022-05-29"),
+        groupIndex: 2,
         lastTakenDate: null,
+        createdAt: now(),
+        pills: Pill.generateAndFillTo(pillSheetType: PillSheetType.pillsheet_28_0, toDate: null),
       );
       final updatedLeft = left.copyWith(
-        beginDate: DateTime.parse("2022-04-04"),
+        beginingDate: DateTime.parse("2022-04-04"),
         lastTakenDate: DateTime.parse("2022-04-30"), // todayPillNumber - 1
       );
       final updatedMiddle = middle.copyWith(
-        beginDate: DateTime.parse("2022-05-02"),
+        beginingDate: DateTime.parse("2022-05-02"),
         lastTakenDate: null,
       );
       final updatedRight = right.copyWith(
-        beginDate: DateTime.parse("2022-05-30"),
+        beginingDate: DateTime.parse("2022-05-30"),
       );
 
       final pillSheetGroup = PillSheetGroup(
@@ -314,31 +346,43 @@ void main() {
       final batchFactory = MockBatchFactory();
       final batch = MockWriteBatch();
       when(batchFactory.batch()).thenReturn(batch);
-      final left = PillSheet.create(
-        PillSheetType.pillsheet_28_0,
-        beginDate: DateTime.parse("2022-04-03"),
+      final left = PillSheet(
+        id: "sheet_id_left",
+        typeInfo: PillSheetType.pillsheet_28_0.typeInfo,
+        beginingDate: DateTime.parse("2022-04-03"),
+        groupIndex: 0,
         lastTakenDate: DateTime.parse("2022-04-30"),
+        createdAt: now(),
+        pills: Pill.generateAndFillTo(pillSheetType: PillSheetType.pillsheet_28_0, toDate: DateTime.parse("2022-04-30")),
       );
-      final middle = PillSheet.create(
-        PillSheetType.pillsheet_28_0,
-        beginDate: DateTime.parse("2022-05-01"),
+      final middle = PillSheet(
+        id: "sheet_id_middle",
+        typeInfo: PillSheetType.pillsheet_28_0.typeInfo,
+        beginingDate: DateTime.parse("2022-05-01"),
+        groupIndex: 1,
         lastTakenDate: null,
+        createdAt: now(),
+        pills: Pill.generateAndFillTo(pillSheetType: PillSheetType.pillsheet_28_0, toDate: null),
       );
-      final right = PillSheet.create(
-        PillSheetType.pillsheet_28_0,
-        beginDate: DateTime.parse("2022-05-29"),
+      final right = PillSheet(
+        id: "sheet_id_right",
+        typeInfo: PillSheetType.pillsheet_28_0.typeInfo,
+        beginingDate: DateTime.parse("2022-05-29"),
+        groupIndex: 2,
         lastTakenDate: null,
+        createdAt: now(),
+        pills: Pill.generateAndFillTo(pillSheetType: PillSheetType.pillsheet_28_0, toDate: null),
       );
       final updatedLeft = left.copyWith(
-        beginDate: DateTime.parse("2022-03-06"),
+        beginingDate: DateTime.parse("2022-03-06"),
         lastTakenDate: DateTime.parse("2022-04-02"),
       );
       final updatedMiddle = middle.copyWith(
-        beginDate: DateTime.parse("2022-04-03"),
+        beginingDate: DateTime.parse("2022-04-03"),
         lastTakenDate: DateTime.parse("2022-04-30"),
       );
       final updatedRight = right.copyWith(
-        beginDate: DateTime.parse("2022-05-01"),
+        beginingDate: DateTime.parse("2022-05-01"),
         lastTakenDate: DateTime.parse("2022-04-30"),
       );
 
@@ -398,31 +442,50 @@ void main() {
       final batchFactory = MockBatchFactory();
       final batch = MockWriteBatch();
       when(batchFactory.batch()).thenReturn(batch);
-      final left = PillSheet.create(
-        PillSheetType.pillsheet_28_0,
-        beginDate: DateTime.parse("2022-04-03"),
+      final left = PillSheet(
+        id: "sheet_id_left",
+        typeInfo: PillSheetType.pillsheet_28_0.typeInfo,
+        beginingDate: DateTime.parse("2022-04-03"),
+        groupIndex: 0,
         lastTakenDate: DateTime.parse("2022-04-30"),
+        createdAt: now(),
+        pills: Pill.generateAndFillTo(pillSheetType: PillSheetType.pillsheet_28_0, toDate: DateTime.parse("2022-04-30")),
+        restDurations: [
+          RestDuration(
+            beginDate: DateTime.parse("2022-04-03"),
+            createdDate: DateTime.parse("2022-04-03"),
+            endDate: DateTime.parse("2022-04-04"),
+          ),
+        ],
       );
-      final middle = PillSheet.create(
-        PillSheetType.pillsheet_28_0,
-        beginDate: DateTime.parse("2022-05-02"),
+      final middle = PillSheet(
+        id: "sheet_id_middle",
+        typeInfo: PillSheetType.pillsheet_28_0.typeInfo,
+        beginingDate: DateTime.parse("2022-05-02"),
+        groupIndex: 1,
         lastTakenDate: null,
+        createdAt: now(),
+        pills: Pill.generateAndFillTo(pillSheetType: PillSheetType.pillsheet_28_0, toDate: null),
       );
-      final right = PillSheet.create(
-        PillSheetType.pillsheet_28_0,
-        beginDate: DateTime.parse("2022-05-29"),
+      final right = PillSheet(
+        id: "sheet_id_right",
+        typeInfo: PillSheetType.pillsheet_28_0.typeInfo,
+        beginingDate: DateTime.parse("2022-05-29"),
+        groupIndex: 2,
         lastTakenDate: null,
+        createdAt: now(),
+        pills: Pill.generateAndFillTo(pillSheetType: PillSheetType.pillsheet_28_0, toDate: null),
       );
       final updatedLeft = left.copyWith(
-        beginDate: DateTime.parse("2022-04-05"),
+        beginingDate: DateTime.parse("2022-04-05"),
         lastTakenDate: DateTime.parse("2022-05-01"), // todayPillNumber - 1
         restDurations: [],
       );
       final updatedMiddle = middle.copyWith(
-        beginDate: DateTime.parse("2022-05-03"),
+        beginingDate: DateTime.parse("2022-05-03"),
       );
       final updatedRight = right.copyWith(
-        beginDate: DateTime.parse("2022-05-31"),
+        beginingDate: DateTime.parse("2022-05-31"),
       );
 
       final pillSheetGroup = PillSheetGroup(
