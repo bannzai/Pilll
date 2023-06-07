@@ -48,7 +48,7 @@ void main() {
           beginingDate: mockToday,
           lastTakenDate: null,
           createdAt: now(),
-          pills: Pill.generateAndFillTo(pillSheetType: PillSheetType.pillsheet_21, fromDate: mockToday, fromDate: mockToday, toDate: null),
+          pills: Pill.generateAndFillTo(pillSheetType: PillSheetType.pillsheet_21, fromDate: mockToday, toDate: null),
         );
         final pillSheetGroup = PillSheetGroup(pillSheetIDs: ["pill_sheet_id"], pillSheets: [pillSheet], createdAt: today());
         for (int i = 0; i < 28; i++) {
@@ -609,10 +609,7 @@ void main() {
             lastTakenDate: DateTime.parse("2020-09-10"),
             createdAt: now(),
             pills: Pill.generateAndFillTo(
-                pillSheetType: PillSheetType.pillsheet_21_0,
-                fromDate: DateTime.parse("2020-09-01"),
-                fromDate: DateTime.parse("2020-09-01"),
-                toDate: DateTime.parse("2020-09-10")),
+                pillSheetType: PillSheetType.pillsheet_21_0, fromDate: DateTime.parse("2020-09-01"), toDate: DateTime.parse("2020-09-10")),
             restDurations: [
               RestDuration(
                 beginDate: DateTime.parse("2020-09-11"),

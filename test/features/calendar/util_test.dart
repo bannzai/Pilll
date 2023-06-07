@@ -48,10 +48,7 @@ void main() {
             beginingDate: beginingDate.add(const Duration(days: 28)),
             createdAt: now(),
             pills: Pill.generateAndFillTo(
-                pillSheetType: PillSheetType.pillsheet_24_0,
-                fromDate: beginingDate.add(const Duration(days: 28)),
-                fromDate: beginingDate.add(const Duration(days: 28)),
-                toDate: null),
+                pillSheetType: PillSheetType.pillsheet_24_0, fromDate: beginingDate.add(const Duration(days: 28)), toDate: null),
             lastTakenDate: null,
           );
           final pillSheetGroup = PillSheetGroup(
