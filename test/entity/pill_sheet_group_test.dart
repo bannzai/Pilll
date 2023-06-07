@@ -67,13 +67,6 @@ void main() {
             sheetType,
             beginDate: DateTime.parse("2020-09-01"),
             lastTakenDate: DateTime.parse("2020-09-28"),
-          ).copyWith(
-            restDurations: [
-              RestDuration(
-                beginDate: DateTime.parse("2020-09-22"),
-                createdDate: DateTime.parse("2020-09-22"),
-              )
-            ],
           );
           // created at and id are anything value
           final pillSheetGroup = PillSheetGroup(
@@ -94,14 +87,6 @@ void main() {
             sheetType,
             beginDate: DateTime.parse("2020-09-01"),
             lastTakenDate: DateTime.parse("2020-09-28"),
-          ).copyWith(
-            restDurations: [
-              RestDuration(
-                beginDate: DateTime.parse("2020-09-22"),
-                createdDate: DateTime.parse("2020-09-22"),
-                endDate: DateTime.parse("2020-09-25"),
-              )
-            ],
           );
           // created at and id are anything value
           final pillSheetGroup = PillSheetGroup(
@@ -122,18 +107,6 @@ void main() {
               sheetType,
               beginDate: DateTime.parse("2020-09-01"),
               lastTakenDate: DateTime.parse("2020-09-28"),
-            ).copyWith(
-              restDurations: [
-                RestDuration(
-                  beginDate: DateTime.parse("2020-09-12"),
-                  createdDate: DateTime.parse("2020-09-12"),
-                  endDate: DateTime.parse("2020-09-15"),
-                ),
-                RestDuration(
-                  beginDate: DateTime.parse("2020-09-22"),
-                  createdDate: DateTime.parse("2020-09-22"),
-                )
-              ],
             );
             // created at and id are anything value
             final pillSheetGroup = PillSheetGroup(
@@ -153,19 +126,6 @@ void main() {
               sheetType,
               beginDate: DateTime.parse("2020-09-01"),
               lastTakenDate: DateTime.parse("2020-09-28"),
-            ).copyWith(
-              restDurations: [
-                RestDuration(
-                  beginDate: DateTime.parse("2020-09-12"),
-                  createdDate: DateTime.parse("2020-09-12"),
-                  endDate: DateTime.parse("2020-09-15"),
-                ),
-                RestDuration(
-                  beginDate: DateTime.parse("2020-09-22"),
-                  createdDate: DateTime.parse("2020-09-22"),
-                  endDate: DateTime.parse("2020-09-25"),
-                )
-              ],
             );
             // created at and id are anything value
             final pillSheetGroup = PillSheetGroup(
@@ -194,8 +154,6 @@ void main() {
           sheetType,
           beginDate: DateTime.parse("2022-03-29"),
           lastTakenDate: null,
-        ).copyWith(
-          groupIndex: 1,
         );
         // created at and id are anything value
         final pillSheetGroup = PillSheetGroup(
@@ -220,10 +178,7 @@ void main() {
           sheetType,
           beginDate: DateTime.parse("2022-03-29"),
           lastTakenDate: null,
-        ).copyWith(
-          groupIndex: 1,
         );
-
         // created at and id are anything value
         final pillSheetGroup = PillSheetGroup(
           pillSheetIDs: ["sheet_id", "sheet_id2"],
