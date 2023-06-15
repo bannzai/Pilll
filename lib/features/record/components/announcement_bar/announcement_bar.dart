@@ -81,7 +81,7 @@ class AnnouncementBar extends HookConsumerWidget {
 
       if (premiumAndTrial.isTrial) {
         // TODO: 値上げと同時に消す。テストも書かない
-        if (now().month < 6) {
+        if (now().month < 7) {
           if (!priceUpAnnouncementIsAlreadyShow) {
             return PriceUpAnnouncementBar(
               onTap: () {
@@ -141,7 +141,7 @@ class AnnouncementBar extends HookConsumerWidget {
         }
 
         // TODO: 値上げと同時に消す。テストも書かない
-        if (now().month < 6) {
+        if (now().month < 7) {
           if (!priceUpAnnouncementIsAlreadyShow) {
             return PriceUpAnnouncementBar(
               onTap: () {
