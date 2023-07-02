@@ -23,7 +23,7 @@ extension OfferingTypeFunction on OfferingType {
       case OfferingType.limited:
         return "Limited";
       case OfferingType.premium:
-        return "Premium";
+        return "Premium2";
     }
   }
 }
@@ -117,7 +117,7 @@ class PurchaseService {
   }
 }
 
-const premiumEntitlements = "Premium";
+const premiumEntitlements = "Premium2";
 
 Future<void> callUpdatePurchaseInfo(CustomerInfo info) async {
   analytics.logEvent(name: "start_update_purchase_info");
