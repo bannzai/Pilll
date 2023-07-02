@@ -78,18 +78,13 @@ class FetchOrCreateUser {
 
   Future<User> _fetch(String uid) async {
     debugPrint("#fetch $uid");
-    try {
-      final document = await databaseConnection.userReference().get();
-      if (!document.exists) {
-        debugPrint("user does not exists $uid");
-        throw UserNotFound();
-      }
-
-      return document.data()!;
-    } catch (e) {
-      print("[bannzai] $e");
-      rethrow;
+    final document = await databaseConnection.userReference().get();
+    if (!document.exists) {
+      debugPrint("user does not exists $uid");
+      throw UserNotFound();
     }
+
+    return document.data()!;
   }
 
   Future<void> _create(String uid) async {
@@ -312,7 +307,6 @@ class EndInitialSetting {
 }
 
 final disableShouldAskCancelReasonProvider = Provider((ref) => DisableShouldAskCancelReason(ref.watch(databaseProvider)));
-
 class DisableShouldAskCancelReason {
   final DatabaseConnection databaseConnection;
   DisableShouldAskCancelReason(this.databaseConnection);
