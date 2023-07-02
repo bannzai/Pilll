@@ -40,7 +40,7 @@ PODS:
     - Firebase/Auth (= 10.1.0)
     - firebase_core
     - Flutter
-  - firebase_core (2.5.0):
+  - firebase_core (2.13.0):
     - Firebase/CoreOnly (= 10.1.0)
     - Flutter
   - firebase_crashlytics (3.0.12):
@@ -244,7 +244,7 @@ DEPENDENCIES:
   - in_app_review (from `.symlinks/plugins/in_app_review/ios`)
   - package_info (from `.symlinks/plugins/package_info/ios`)
   - purchases_flutter (from `.symlinks/plugins/purchases_flutter/ios`)
-  - shared_preferences_foundation (from `.symlinks/plugins/shared_preferences_foundation/ios`)
+  - shared_preferences_foundation (from `.symlinks/plugins/shared_preferences_foundation/darwin`)
   - sign_in_with_apple (from `.symlinks/plugins/sign_in_with_apple/ios`)
   - url_launcher_ios (from `.symlinks/plugins/url_launcher_ios/ios`)
   - webview_flutter_wkwebview (from `.symlinks/plugins/webview_flutter_wkwebview/ios`)
@@ -312,7 +312,7 @@ EXTERNAL SOURCES:
   purchases_flutter:
     :path: ".symlinks/plugins/purchases_flutter/ios"
   shared_preferences_foundation:
-    :path: ".symlinks/plugins/shared_preferences_foundation/ios"
+    :path: ".symlinks/plugins/shared_preferences_foundation/darwin"
   sign_in_with_apple:
     :path: ".symlinks/plugins/sign_in_with_apple/ios"
   url_launcher_ios:
@@ -331,7 +331,7 @@ SPEC CHECKSUMS:
   Firebase: 444b35a9c568a516666213c2f6cccd10cb12559f
   firebase_analytics: 112ad6730597268abf44c08ee5806a4c828bf427
   firebase_auth: 1b7b85717eff5abe161c6b8cbb0574ea2a83489f
-  firebase_core: 84f790e5f82193664f1c09c28a80adc373e99ba9
+  firebase_core: 8c5dc38fe77582fc822a57e406d7d5df67c6e052
   firebase_crashlytics: 7196b80b7c3e914bdb0c5aa6bc65bc646b30b043
   firebase_messaging: e1e3d568522d700a6fe2d1976ad0e193b8a1401e
   firebase_performance: fa8dbd638ca1e1b2352a0a72353f8580ca15be15
