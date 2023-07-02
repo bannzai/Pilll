@@ -120,9 +120,9 @@ class PremiumIntroductionSheetBody extends HookConsumerWidget {
                             discountEntitlementDeadlineDate: premiumAndTrial.discountEntitlementDeadlineDate,
                           ),
                       const SizedBox(height: 12),
-                      Row(
+                      const Row(
                         mainAxisAlignment: MainAxisAlignment.center,
-                        children: const [
+                        children: [
                           Text(
                             "7月以降に価格改定のため",
                             style: TextStyle(
