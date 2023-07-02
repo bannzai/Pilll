@@ -103,16 +103,6 @@ class PremiumIntroductionSheetBody extends HookConsumerWidget {
                       const PremiumUserThanksRow(),
                     ],
                     if (!premiumAndTrial.isPremium) ...[
-                      const Text(
-                        "\\ 値上げ前の今がチャンス /",
-                        style: TextStyle(
-                          fontWeight: FontWeight.w700,
-                          fontFamily: FontFamily.japanese,
-                          fontSize: 20,
-                          color: TextColor.discount,
-                        ),
-                      ),
-                      const SizedBox(height: 8),
                       if (premiumAndTrial.hasDiscountEntitlement)
                         if (monthlyPremiumPackage != null)
                           PremiumIntroductionDiscountRow(
