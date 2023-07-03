@@ -108,30 +108,6 @@ class PremiumIntroductionSheetBody extends HookConsumerWidget {
                             discountEntitlementDeadlineDate: premiumAndTrial.discountEntitlementDeadlineDate,
                           ),
                       const SizedBox(height: 12),
-                      const Row(
-                        mainAxisAlignment: MainAxisAlignment.center,
-                        children: [
-                          Text(
-                            "7月以降に価格改定のため",
-                            style: TextStyle(
-                              fontFamily: FontFamily.japanese,
-                              fontSize: 14,
-                              fontWeight: FontWeight.w400,
-                              color: TextColor.main,
-                            ),
-                          ),
-                          Text(
-                            "「¥600/月」",
-                            style: TextStyle(
-                              fontFamily: FontFamily.japanese,
-                              fontSize: 14,
-                              fontWeight: FontWeight.w700,
-                              color: TextColor.main,
-                            ),
-                          ),
-                        ],
-                      ),
-                      const SizedBox(height: 32),
                       PurchaseButtons(
                         offeringType: offeringType,
                         monthlyPackage: monthlyPackage,
