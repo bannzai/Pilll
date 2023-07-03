@@ -18,7 +18,7 @@ import 'package:pilll/provider/user.dart';
 enum OfferingType { limited, premium }
 
 extension OfferingTypeFunction on OfferingType {
-  String get name {
+  String get identifier {
     switch (this) {
       case OfferingType.limited:
         return "Limited";
@@ -43,7 +43,7 @@ final currentOfferingTypeProvider = Provider.family.autoDispose((ref, PremiumAnd
 });
 final currentOfferingPackagesProvider = Provider.family.autoDispose<List<Package>, PremiumAndTrial>((ref, PremiumAndTrial premiumAndTrial) {
   final currentOfferingType = ref.watch(currentOfferingTypeProvider(premiumAndTrial));
-  final offering = ref.watch(purchaseOfferingsProvider).valueOrNull?.all[currentOfferingType.name];
+  final offering = ref.watch(purchaseOfferingsProvider).valueOrNull?.all[currentOfferingType.identifier];
   if (offering != null) {
     return offering.availablePackages;
   }
@@ -59,7 +59,7 @@ final monthlyPackageProvider = Provider.family.autoDispose((ref, PremiumAndTrial
 });
 final monthlyPremiumPackageProvider = Provider.family.autoDispose((ref, PremiumAndTrial premiumAndTrial) {
   const premiumPackageOfferingType = OfferingType.premium;
-  final offering = ref.watch(purchaseOfferingsProvider).valueOrNull?.all[premiumPackageOfferingType.name];
+  final offering = ref.watch(purchaseOfferingsProvider).valueOrNull?.all[premiumPackageOfferingType.identifier];
   if (offering == null) {
     return null;
   }
@@ -108,6 +108,7 @@ class PurchaseService {
   Future<Offerings> fetchOfferings() async {
     try {
       Offerings offerings = await Purchases.getOfferings();
+      debugPrint("[bannzai] ${offerings.all}");
       return offerings;
     } catch (exception, stack) {
       errorLogger.recordError(exception, stack);
@@ -117,7 +118,7 @@ class PurchaseService {
   }
 }
 
-const premiumEntitlements = "Premium2";
+const premiumEntitlements = "Premium";
 
 Future<void> callUpdatePurchaseInfo(CustomerInfo info) async {
   analytics.logEvent(name: "start_update_purchase_info");
