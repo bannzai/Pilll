@@ -91,7 +91,7 @@ class PremiumIntroductionSheetBody extends HookConsumerWidget {
                 width: MediaQuery.of(context).size.width,
               ),
               SingleChildScrollView(
-                padding: const EdgeInsets.only(bottom: 100),
+                padding: const EdgeInsets.only(bottom: 100, top: 20),
                 child: Column(
                   mainAxisSize: MainAxisSize.min,
                   children: [
