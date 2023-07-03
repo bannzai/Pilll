@@ -34,7 +34,7 @@ class DiscountPriceDeadline extends HookConsumerWidget {
               child: Text(
                 """
 プレミアム登録で引き続きすべての機能が利用できます
-$countdown内の購入で48%OFF!""",
+$countdown内の購入で58%OFF!""",
                 style: const TextStyle(
                   fontFamily: FontFamily.japanese,
                   fontWeight: FontWeight.w600,

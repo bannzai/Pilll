@@ -3,8 +3,6 @@ import 'package:flutter_hooks/flutter_hooks.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
 
 import 'package:flutter/material.dart';
-import 'package:pilll/components/atoms/font.dart';
-import 'package:pilll/components/atoms/text_color.dart';
 import 'package:pilll/utils/analytics.dart';
 import 'package:pilll/components/atoms/button.dart';
 import 'package:pilll/components/atoms/color.dart';
@@ -93,7 +91,7 @@ class PremiumIntroductionSheetBody extends HookConsumerWidget {
                 width: MediaQuery.of(context).size.width,
               ),
               SingleChildScrollView(
-                padding: const EdgeInsets.only(bottom: 100),
+                padding: const EdgeInsets.only(bottom: 100, top: 20),
                 child: Column(
                   mainAxisSize: MainAxisSize.min,
                   children: [
@@ -103,16 +101,6 @@ class PremiumIntroductionSheetBody extends HookConsumerWidget {
                       const PremiumUserThanksRow(),
                     ],
                     if (!premiumAndTrial.isPremium) ...[
-                      const Text(
-                        "\\ 値上げ前の今がチャンス /",
-                        style: TextStyle(
-                          fontWeight: FontWeight.w700,
-                          fontFamily: FontFamily.japanese,
-                          fontSize: 20,
-                          color: TextColor.discount,
-                        ),
-                      ),
-                      const SizedBox(height: 8),
                       if (premiumAndTrial.hasDiscountEntitlement)
                         if (monthlyPremiumPackage != null)
                           PremiumIntroductionDiscountRow(
@@ -120,30 +108,6 @@ class PremiumIntroductionSheetBody extends HookConsumerWidget {
                             discountEntitlementDeadlineDate: premiumAndTrial.discountEntitlementDeadlineDate,
                           ),
                       const SizedBox(height: 12),
-                      Row(
-                        mainAxisAlignment: MainAxisAlignment.center,
-                        children: const [
-                          Text(
-                            "7月以降に価格改定のため",
-                            style: TextStyle(
-                              fontFamily: FontFamily.japanese,
-                              fontSize: 14,
-                              fontWeight: FontWeight.w400,
-                              color: TextColor.main,
-                            ),
-                          ),
-                          Text(
-                            "「¥600/月」",
-                            style: TextStyle(
-                              fontFamily: FontFamily.japanese,
-                              fontSize: 14,
-                              fontWeight: FontWeight.w700,
-                              color: TextColor.main,
-                            ),
-                          ),
-                        ],
-                      ),
-                      const SizedBox(height: 32),
                       PurchaseButtons(
                         offeringType: offeringType,
                         monthlyPackage: monthlyPackage,
