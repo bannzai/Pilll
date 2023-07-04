@@ -78,14 +78,12 @@ class PremiumIntroductionSheetBody extends HookConsumerWidget {
           child: Stack(
             children: [
               Container(
-                decoration: BoxDecoration(
+                decoration: const BoxDecoration(
                   color: Colors.transparent,
-                  image: !premiumAndTrial.isPremium && !isOverDiscountDeadline
-                      ? const DecorationImage(
-                          image: AssetImage("images/premium_background.png"),
-                          fit: BoxFit.cover,
-                        )
-                      : null,
+                  image: DecorationImage(
+                    image: AssetImage("images/premium_background.png"),
+                    fit: BoxFit.cover,
+                  ),
                 ),
                 padding: const EdgeInsets.only(left: 40, right: 40, bottom: 40),
                 width: MediaQuery.of(context).size.width,
