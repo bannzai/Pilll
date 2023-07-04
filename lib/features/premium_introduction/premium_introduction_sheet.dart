@@ -13,7 +13,6 @@ import 'package:pilll/features/premium_introduction/components/premium_introduct
 import 'package:pilll/features/premium_introduction/components/premium_introduction_discount.dart';
 import 'package:pilll/features/premium_introduction/components/premium_user_thanks.dart';
 import 'package:pilll/features/premium_introduction/components/purchase_buttons.dart';
-import 'package:pilll/features/premium_introduction/util/discount_deadline.dart';
 import 'package:pilll/features/error/universal_error_page.dart';
 import 'package:pilll/provider/premium_and_trial.codegen.dart';
 import 'package:pilll/provider/root.dart';
@@ -63,7 +62,6 @@ class PremiumIntroductionSheetBody extends HookConsumerWidget {
     final offeringType = ref.watch(currentOfferingTypeProvider(premiumAndTrial));
     final monthlyPackage = ref.watch(monthlyPackageProvider(premiumAndTrial));
     final annualPackage = ref.watch(annualPackageProvider(premiumAndTrial));
-    final isOverDiscountDeadline = ref.watch(isOverDiscountDeadlineProvider(premiumAndTrial.discountEntitlementDeadlineDate));
     final monthlyPremiumPackage = ref.watch(monthlyPremiumPackageProvider(premiumAndTrial));
 
     final isLoading = useState(false);
