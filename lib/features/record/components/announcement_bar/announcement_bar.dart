@@ -1,7 +1,6 @@
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
-import 'package:pilll/features/record/components/announcement_bar/components/price_up_announcement.dart';
 import 'package:pilll/utils/analytics.dart';
 import 'package:pilll/provider/pill_sheet_group.dart';
 import 'package:pilll/provider/pilll_ads.dart';
@@ -21,7 +20,6 @@ import 'package:pilll/provider/shared_preferences.dart';
 import 'package:pilll/provider/auth.dart';
 import 'package:pilll/utils/datetime/day.dart';
 import 'package:pilll/utils/shared_preference/keys.dart';
-import 'package:url_launcher/url_launcher.dart';
 
 class AnnouncementBar extends HookConsumerWidget {
   const AnnouncementBar({Key? key}) : super(key: key);
@@ -47,8 +45,6 @@ class AnnouncementBar extends HookConsumerWidget {
         ref.watch(boolSharedPreferencesProvider(BoolKey.recommendedSignupNotificationIsAlreadyShow).notifier);
     final discountEntitlementDeadlineDate = premiumAndTrial.discountEntitlementDeadlineDate;
     final isOverDiscountDeadline = ref.watch(isOverDiscountDeadlineProvider(discountEntitlementDeadlineDate));
-    final priceUpAnnouncementIsAlreadyShow = ref.watch(boolSharedPreferencesProvider(BoolKey.priceUpAnnouncementIsAlreadyShow)).valueOrNull ?? false;
-    final priceUpAnnouncementIsAlreadyShowNotifier = ref.watch(boolSharedPreferencesProvider(BoolKey.priceUpAnnouncementIsAlreadyShow).notifier);
     final isJaLocale = ref.watch(isJaLocaleProvider);
     final pilllAds = ref.watch(pilllAdsProvider).asData?.value;
     final isAdsDisabled = () {
