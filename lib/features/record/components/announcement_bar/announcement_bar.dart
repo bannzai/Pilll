@@ -80,22 +80,6 @@ class AnnouncementBar extends HookConsumerWidget {
       }
 
       if (premiumAndTrial.isTrial) {
-        // TODO: 値上げと同時に消す。テストも書かない
-        if (now().month < 7) {
-          if (!priceUpAnnouncementIsAlreadyShow) {
-            return PriceUpAnnouncementBar(
-              onTap: () {
-                analytics.logEvent(name: "tapped_price_up_bar_2");
-                launchUrl(Uri.parse("https://pilll.wraptas.site/bfce3a94f6bf44258e134c2aa69dbb6d"), mode: LaunchMode.inAppWebView);
-              },
-              onClose: () {
-                analytics.logEvent(name: "close_price_up_bar_2");
-                priceUpAnnouncementIsAlreadyShowNotifier.set(true);
-              },
-            );
-          }
-        }
-
         final premiumTrialLimit = PremiumTrialLimitAnnouncementBar.retrievePremiumTrialLimit(premiumAndTrial);
         if (premiumTrialLimit != null) {
           return PremiumTrialLimitAnnouncementBar(premiumTrialLimit: premiumTrialLimit);
@@ -138,22 +122,6 @@ class AnnouncementBar extends HookConsumerWidget {
       } else {
         if (!isAdsDisabled && pilllAds != null) {
           return PilllAdsAnnouncementBar(pilllAds: pilllAds, onClose: () => showPremiumIntroductionSheet(context));
-        }
-
-        // TODO: 値上げと同時に消す。テストも書かない
-        if (now().month < 7) {
-          if (!priceUpAnnouncementIsAlreadyShow) {
-            return PriceUpAnnouncementBar(
-              onTap: () {
-                analytics.logEvent(name: "tapped_price_up_bar_2");
-                launchUrl(Uri.parse("https://pilll.wraptas.site/bfce3a94f6bf44258e134c2aa69dbb6d"), mode: LaunchMode.inAppWebView);
-              },
-              onClose: () {
-                analytics.logEvent(name: "close_price_up_bar_2");
-                priceUpAnnouncementIsAlreadyShowNotifier.set(true);
-              },
-            );
-          }
         }
       }
     } else {
