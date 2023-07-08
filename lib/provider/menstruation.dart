@@ -7,6 +7,7 @@ import 'package:pilll/entity/menstruation.codegen.dart';
 import 'package:pilll/entity/setting.codegen.dart';
 import 'package:pilll/native/health_care.dart';
 import 'package:pilll/utils/datetime/day.dart';
+import 'package:pilll/utils/error_log.dart';
 import 'package:riverpod/riverpod.dart';
 
 final allMenstruationProvider = StreamProvider<List<Menstruation>>((ref) => ref
@@ -68,10 +69,12 @@ class DeleteMenstruation {
   final DatabaseConnection databaseConnection;
   DeleteMenstruation(this.databaseConnection);
   Future<void> call(Menstruation menstruation) async {
+    await databaseConnection.menstruationReference(menstruation.id).update({MenstruationFirestoreKey.deletedAt: now()});
+    // DBに書き込んでからヘルスケアの削除を行う。DBに書き込んでからヘルスケアの更新に失敗しても大した問題では無い
+    // また、ヘルスケアの削除はヘルスケアアプリの方で実行できてしまうためデータが存在しておらずエラーになることが度々発生するため後に実行する
     if (await _healthKitDateDidSave(menstruation: menstruation)) {
       await deleteMenstruationFlowHealthKitData(menstruation);
     }
-    await databaseConnection.menstruationReference(menstruation.id).update({MenstruationFirestoreKey.deletedAt: now()});
   }
 }
 
