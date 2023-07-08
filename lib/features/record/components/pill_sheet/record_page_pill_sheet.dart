@@ -93,7 +93,7 @@ class RecordPagePillSheet extends HookConsumerWidget {
           return null;
         }
         if (pillSheet.pillTakenCount > 1) {
-          return pillSheet.pillTakenCount - pillSheet.pills[pillNumberIntoPillSheet].pillTakens.length;
+          return pillSheet.pillTakenCount - pillSheet.pills[pillNumberIntoPillSheet - 1].pillTakens.length;
         } else {
           return null;
         }
