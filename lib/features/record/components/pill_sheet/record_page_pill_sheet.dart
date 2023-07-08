@@ -86,6 +86,7 @@ class RecordPagePillSheet extends HookConsumerWidget {
       if (columnIndex >= countOfPillMarksInLine) {
         return Container(width: PillSheetViewLayout.componentWidth);
       }
+
       final pillNumberIntoPillSheet = PillMarkWithNumberLayoutHelper.calcPillNumberIntoPillSheet(columnIndex, lineIndex);
       return SizedBox(
         width: PillSheetViewLayout.componentWidth,
@@ -111,6 +112,7 @@ class RecordPagePillSheet extends HookConsumerWidget {
               pillNumberIntoPillSheet: pillNumberIntoPillSheet,
               pillSheet: pillSheet,
             ),
+            remainingPillTakenCount: pillSheet.pillTakenCount > 1 ? 
           ),
           onTap: () async {
             try {

@@ -16,12 +16,14 @@ class PillMark extends StatefulWidget {
   final PillMarkType pillMarkType;
   final bool showsCheckmark;
   final bool showsRippleAnimation;
+  final int? remainingPillTakenCount;
 
   const PillMark({
     Key? key,
     required this.pillMarkType,
     required this.showsCheckmark,
     required this.showsRippleAnimation,
+    required this.remainingPillTakenCount,
   }) : super(key: key);
 
   @override
@@ -54,6 +56,7 @@ class PillMarkState extends State<PillMark> with TickerProviderStateMixin {
 
   @override
   Widget build(BuildContext context) {
+    final remainingPillTakenCount = widget.remainingPillTakenCount;
     return Stack(
       clipBehavior: Clip.none,
       children: [
@@ -76,6 +79,7 @@ class PillMarkState extends State<PillMark> with TickerProviderStateMixin {
               }
             }(),
             if (widget.showsCheckmark) const Align(alignment: Alignment.center, child: PillMarkDoneMark()),
+            if (remainingPillTakenCount != null) Text("$remainingPillTakenCount", style: const TextStyle(color: PilllColors.gray, fontSize: 10)),
           ],
         ),
         if (widget.showsRippleAnimation)
