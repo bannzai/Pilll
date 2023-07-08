@@ -60,7 +60,21 @@ class PillMarkState extends State<PillMark> with TickerProviderStateMixin {
         Stack(
           alignment: Alignment.center,
           children: [
-            _mark(widget.pillMarkType),
+            () {
+              // TODO: Rewrite to switch expression after upgrade dart version up to 3.0.1
+              switch (widget.pillMarkType) {
+                case PillMarkType.normal:
+                  return const NormalPillMark();
+                case PillMarkType.rest:
+                  return const RestPillMark();
+                case PillMarkType.fake:
+                  return const FakePillMark();
+                case PillMarkType.selected:
+                  return const SelectedPillMark();
+                case PillMarkType.done:
+                  return const LightGrayPillMark();
+              }
+            }(),
             if (widget.showsCheckmark) const Align(alignment: Alignment.center, child: PillMarkDoneMark()),
           ],
         ),
@@ -80,20 +94,5 @@ class PillMarkState extends State<PillMark> with TickerProviderStateMixin {
           ),
       ],
     );
-  }
-
-  Widget _mark(PillMarkType type) {
-    switch (type) {
-      case PillMarkType.normal:
-        return const NormalPillMark();
-      case PillMarkType.rest:
-        return const RestPillMark();
-      case PillMarkType.fake:
-        return const FakePillMark();
-      case PillMarkType.selected:
-        return const SelectedPillMark();
-      case PillMarkType.done:
-        return const LightGrayPillMark();
-    }
   }
 }
