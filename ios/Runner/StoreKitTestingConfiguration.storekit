@@ -218,10 +218,69 @@
           "type" : "RecurringSubscription"
         }
       ]
+    },
+    {
+      "id" : "469C1E38",
+      "localizations" : [
+
+      ],
+      "name" : "プレミアム2",
+      "subscriptions" : [
+        {
+          "adHocOffers" : [
+
+          ],
+          "codeOffers" : [
+
+          ],
+          "displayPrice" : "600",
+          "familyShareable" : false,
+          "groupNumber" : 1,
+          "internalID" : "53DD32B4",
+          "introductoryOffer" : null,
+          "localizations" : [
+            {
+              "description" : "",
+              "displayName" : "",
+              "locale" : "en_US"
+            }
+          ],
+          "productID" : "pilll_dev_600yen_1month",
+          "recurringSubscriptionPeriod" : "P1M",
+          "referenceName" : "Monthly 600yen",
+          "subscriptionGroupID" : "469C1E38",
+          "type" : "RecurringSubscription"
+        },
+        {
+          "adHocOffers" : [
+
+          ],
+          "codeOffers" : [
+
+          ],
+          "displayPrice" : "4800",
+          "familyShareable" : false,
+          "groupNumber" : 1,
+          "internalID" : "80FB2DE6",
+          "introductoryOffer" : null,
+          "localizations" : [
+            {
+              "description" : "",
+              "displayName" : "",
+              "locale" : "en_US"
+            }
+          ],
+          "productID" : "pilll_dev_4800yen_1year",
+          "recurringSubscriptionPeriod" : "P1Y",
+          "referenceName" : "Annual 4800yen",
+          "subscriptionGroupID" : "469C1E38",
+          "type" : "RecurringSubscription"
+        }
+      ]
     }
   ],
   "version" : {
-    "major" : 1,
-    "minor" : 2
+    "major" : 2,
+    "minor" : 0
   }
 }

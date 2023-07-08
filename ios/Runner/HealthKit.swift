@@ -102,7 +102,7 @@ func requestWriteMenstrualFlowHealthKitDataPermission(
 // MARK: - Read
 func readMenstruationData(arguments: Any?, completion: @escaping (Result<HKSample?, HealthKitGeneralError>) -> Void) {
     guard let json = arguments as? Dictionary<String, Any>, let menstruation = json["menstruation"] as? Dictionary<String, Any> else {
-        completion(.failure(.init(reason: "生理データの読み込みに失敗しました arguments: \(String(describing: arguments))")))
+        completion(.failure(.init(reason: "ヘルスケアの生理データの読み込みに失敗しました arguments: \(String(describing: arguments))")))
         return
     }
     guard let uuidString = menstruation["healthKitSampleDataUUID"] as? String else {
@@ -201,7 +201,7 @@ private func writeMenstrualFlowHealthKitData(
           let beginDate = menstruation["beginDate"] as? NSNumber,
           let endDate = menstruation["endDate"] as? NSNumber
     else {
-        completion(.failure(.init(reason: "生理データの書き込みに失敗しました arguments: \(String(describing: arguments))")))
+        completion(.failure(.init(reason: "ヘルスケアへ生理データの書き込みに失敗しました arguments: \(String(describing: arguments))")))
         return
     }
 
@@ -224,7 +224,7 @@ private func writeMenstrualFlowHealthKitData(
             if isSuccess {
                 completion(.success(.init(healthKitSampleDataUUID: writeData.uuid)))
             } else {
-                completion(.failure(.init(reason: "書き込みに失敗しました")))
+                completion(.failure(.init(reason: "ヘルスケアへの書き込みに失敗しました")))
             }
         }
     })
@@ -260,12 +260,12 @@ func deleteMenstrualFlowHealthKitData(
                         if isSuccess {
                             completion(.success(.init()))
                         } else {
-                            completion(.failure(.init(reason: "削除に失敗しました")))
+                            completion(.failure(.init(reason: "ヘルスケアデータの削除に失敗しました")))
                         }
                     }
                 }
             } else {
-                completion(.failure(.init(reason: "削除するデータの読み込みに失敗しました")))
+                completion(.failure(.init(reason: "ヘルスケアの削除するデータの読み込みに失敗しました")))
             }
         case .failure(let error):
             completion(.failure(.init(reason: error.localizedDescription)))

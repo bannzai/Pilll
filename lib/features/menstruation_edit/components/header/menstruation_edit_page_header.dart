@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
+import 'package:pilll/features/error/error_alert.dart';
 import 'package:pilll/utils/analytics.dart';
 import 'package:pilll/components/atoms/button.dart';
 import 'package:pilll/components/atoms/font.dart';
@@ -62,7 +63,11 @@ class MenstruationEditPageHeader extends HookConsumerWidget {
                       text: "削除する",
                       onPressed: () async {
                         final navigator = Navigator.of(context);
-                        await deleteMenstruation(initialMenstruation);
+                        try {
+                          await deleteMenstruation(initialMenstruation);
+                        } catch (e) {
+                          showErrorAlert(context, e);
+                        }
                         onDeleted();
                         analytics.logEvent(name: "pressed_delete_menstruation");
                         navigator.pop();
@@ -76,10 +81,18 @@ class MenstruationEditPageHeader extends HookConsumerWidget {
             } else {
               if (initialMenstruation == null) {
                 final menstruation = Menstruation(beginDate: editingDateRangeValue.begin, endDate: editingDateRangeValue.end, createdAt: now());
-                onSaved(await setMenstruation(menstruation));
+                try {
+                  onSaved(await setMenstruation(menstruation));
+                } catch (e) {
+                  showErrorAlert(context, e);
+                }
               } else {
                 final menstruation = initialMenstruation.copyWith(beginDate: editingDateRangeValue.begin, endDate: editingDateRangeValue.end);
-                onSaved(await setMenstruation(menstruation));
+                try {
+                  onSaved(await setMenstruation(menstruation));
+                } catch (e) {
+                  showErrorAlert(context, e);
+                }
               }
             }
           },
