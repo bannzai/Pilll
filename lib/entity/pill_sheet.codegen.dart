@@ -220,18 +220,6 @@ class PillSheet with _$PillSheet {
 
     return pillTakenDate;
   }
-
-  PillSheet updatedLastTaken(DateTime? date) {
-    return copyWith(
-      lastTakenDate: date,
-      pills: Pill.generateAndFillTo(
-        pillSheetType: pillSheetType,
-        fromDate: beginingDate,
-        lastTakenDate: date,
-        pillTakenCount: pillTakenCount,
-      ),
-    );
-  }
 }
 
 // upperDate までの休薬期間を集計する
