@@ -38,8 +38,7 @@ void main() {
             beginingDate: firstPillSheetBeginDate,
             lastTakenDate: null,
             createdAt: now(),
-            pills: Pill.generateAndFillTo(
-                pillSheetType: PillSheetType.pillsheet_28_0, fromDate: firstPillSheetBeginDate, toDate: null, pillTakenCount: 1),
+            pills: Pill.generateAndFillTo(pillSheetType: PillSheetType.pillsheet_28_0, fromDate: firstPillSheetBeginDate, toDate: null),
           ),
           PillSheet(
             id: "pill_sheet_id_2",
@@ -107,8 +106,7 @@ void main() {
             beginingDate: firstPillSheetBeginDate,
             lastTakenDate: null,
             createdAt: now(),
-            pills: Pill.generateAndFillTo(
-                pillSheetType: PillSheetType.pillsheet_28_0, fromDate: firstPillSheetBeginDate, toDate: null, pillTakenCount: 1),
+            pills: Pill.generateAndFillTo(pillSheetType: PillSheetType.pillsheet_28_0, fromDate: firstPillSheetBeginDate, toDate: null),
           ),
           PillSheet(
             id: "pill_sheet_id_2",
@@ -179,8 +177,7 @@ void main() {
             beginingDate: firstPillSheetBeginDate,
             lastTakenDate: null,
             createdAt: now(),
-            pills: Pill.generateAndFillTo(
-                pillSheetType: PillSheetType.pillsheet_28_0, fromDate: firstPillSheetBeginDate, toDate: null, pillTakenCount: 1),
+            pills: Pill.generateAndFillTo(pillSheetType: PillSheetType.pillsheet_28_0, fromDate: firstPillSheetBeginDate, toDate: null),
           ),
           PillSheet(
             id: "pill_sheet_id_2",
