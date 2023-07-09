@@ -37,9 +37,11 @@ void main() {
         lastTakenDate: activePillSheetBeginDate.subtract(const Duration(days: 1)),
         createdAt: now(),
         pills: Pill.generateAndFillTo(
-            pillSheetType: PillSheetType.pillsheet_28_7,
-            fromDate: activePillSheetBeginDate.subtract(const Duration(days: 28)),
-            toDate: activePillSheetBeginDate.subtract(const Duration(days: 1))),
+          pillSheetType: PillSheetType.pillsheet_28_7,
+          fromDate: activePillSheetBeginDate.subtract(const Duration(days: 28)),
+          toDate: activePillSheetBeginDate.subtract(const Duration(days: 1)),
+          pillTakenCount: 1,
+        ),
       );
       activedPillSheet = PillSheet(
         id: "active_pill_sheet_id",
@@ -94,9 +96,11 @@ void main() {
         lastTakenDate: activePillSheetBeginDate.subtract(const Duration(days: 1)),
         createdAt: now(),
         pills: Pill.generateAndFillTo(
-            pillSheetType: PillSheetType.pillsheet_28_7,
-            fromDate: activePillSheetBeginDate.subtract(const Duration(days: 28)),
-            toDate: activePillSheetBeginDate.subtract(const Duration(days: 1))),
+          pillSheetType: PillSheetType.pillsheet_28_7,
+          fromDate: activePillSheetBeginDate.subtract(const Duration(days: 28)),
+          toDate: activePillSheetBeginDate.subtract(const Duration(days: 1)),
+          pillTakenCount: 1,
+        ),
       );
       activedPillSheet = PillSheet(
         id: "active_pill_sheet_id",

@@ -94,6 +94,7 @@ void main() {
             pillSheetType: PillSheetType.pillsheet_28_0,
             fromDate: DateTime.parse("2022-01-06"),
             toDate: revertDate,
+            pillTakenCount: 1,
           ), // Change
           restDurations: [
             RestDuration(
@@ -150,11 +151,16 @@ void main() {
           pillSheetIDs: ["sheet_id"],
           pillSheets: [
             pillSheet.copyWith(
-                lastTakenDate: yesterday.subtract(const Duration(days: 1)),
-                pills: Pill.generateAndFillTo(
-                    pillSheetType: PillSheetType.pillsheet_28_0,
-                    fromDate: pillSheet.beginingDate,
-                    toDate: yesterday.subtract(const Duration(days: 1)))),
+              lastTakenDate: yesterday.subtract(const Duration(days: 1)),
+              pills: Pill.generateAndFillTo(
+                pillSheetType: PillSheetType.pillsheet_28_0,
+                fromDate: pillSheet.beginingDate,
+                toDate: yesterday.subtract(
+                  const Duration(days: 1),
+                ),
+                pillTakenCount: 1,
+              ),
+            ),
           ],
           createdAt: now(),
         );
@@ -229,7 +235,8 @@ void main() {
           pillSheets: [
             pillSheet.copyWith(
                 lastTakenDate: yesterday,
-                pills: Pill.generateAndFillTo(pillSheetType: pillSheet.pillSheetType, fromDate: pillSheet.beginingDate, toDate: yesterday),
+                pills: Pill.generateAndFillTo(
+                    pillSheetType: pillSheet.pillSheetType, fromDate: pillSheet.beginingDate, toDate: yesterday, pillTakenCount: 1),
                 pillTakenCount: 1),
           ],
           createdAt: now(),
@@ -408,6 +415,7 @@ void main() {
                 pillSheetType: PillSheetType.pillsheet_28_0,
                 fromDate: pillSheet.beginingDate,
                 toDate: yesterday,
+                pillTakenCount: 1,
               ),
             ),
           ],
@@ -469,9 +477,11 @@ void main() {
           lastTakenDate: mockToday.subtract(const Duration(days: 2)),
           createdAt: now(),
           pills: Pill.generateAndFillTo(
-              pillSheetType: PillSheetType.pillsheet_28_0,
-              fromDate: mockToday.subtract(const Duration(days: 29)),
-              toDate: mockToday.subtract(const Duration(days: 2))),
+            pillSheetType: PillSheetType.pillsheet_28_0,
+            fromDate: mockToday.subtract(const Duration(days: 29)),
+            toDate: mockToday.subtract(const Duration(days: 2)),
+            pillTakenCount: 1,
+          ),
         );
 
         // actived pill sheet
@@ -557,9 +567,11 @@ void main() {
           lastTakenDate: mockToday.subtract(const Duration(days: 2)),
           createdAt: now(),
           pills: Pill.generateAndFillTo(
-              pillSheetType: PillSheetType.pillsheet_28_0,
-              fromDate: mockToday.subtract(const Duration(days: 29)),
-              toDate: mockToday.subtract(const Duration(days: 2))),
+            pillSheetType: PillSheetType.pillsheet_28_0,
+            fromDate: mockToday.subtract(const Duration(days: 29)),
+            toDate: mockToday.subtract(const Duration(days: 2)),
+            pillTakenCount: 1,
+          ),
         );
 
         // actived pill sheet
@@ -642,9 +654,11 @@ void main() {
           lastTakenDate: mockToday.subtract(const Duration(days: 2)),
           createdAt: now(),
           pills: Pill.generateAndFillTo(
-              pillSheetType: PillSheetType.pillsheet_28_0,
-              fromDate: mockToday.subtract(const Duration(days: 29)),
-              toDate: mockToday.subtract(const Duration(days: 2))),
+            pillSheetType: PillSheetType.pillsheet_28_0,
+            fromDate: mockToday.subtract(const Duration(days: 29)),
+            toDate: mockToday.subtract(const Duration(days: 2)),
+            pillTakenCount: 1,
+          ),
         );
 
         // actived pill sheet
