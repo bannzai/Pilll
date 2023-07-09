@@ -79,7 +79,8 @@ class Pill with _$Pill {
             ? List.generate(
                 pillTakenCount,
                 (i) {
-                  return PillTaken(takenDateTime: date, createdDateTime: now(), updatedDateTime: now());
+                  // 本来であればlastTakenDateよりも前の日付のピルもlastTakenDateで上書きする。本来の日付のロジックにもできるが、lastTakenDateで上書きした方がユニットテストが簡単なのでそうしている
+                  return PillTaken(takenDateTime: lastTakenDate, createdDateTime: now(), updatedDateTime: now());
                 },
               )
             : [],
