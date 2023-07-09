@@ -57,8 +57,13 @@ class AddPillSheetGroup {
         ),
         lastTakenDate: null,
         groupIndex: pageIndex,
-        pills: Pill.generate(
-          pillSheetType,
+        pills: Pill.generateAndFillTo(
+          pillSheetType: pillSheetType,
+          fromDate: n.add(
+            Duration(days: offset),
+          ),
+          toDate: null,
+          pillTakenCount: 1,
         ),
         pillTakenCount: takesTwicePerDay ? 2 : 1,
         createdAt: now(),
