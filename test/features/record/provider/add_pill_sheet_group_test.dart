@@ -41,7 +41,7 @@ void main() {
         groupIndex: 0,
         lastTakenDate: null,
         createdAt: now(),
-        pills: Pill.generateAndFillTo(pillSheetType: PillSheetType.pillsheet_28_0, fromDate: mockToday, toDate: null, pillTakenCount: 1),
+        pills: Pill.generateAndFillTo(pillSheetType: PillSheetType.pillsheet_28_0, fromDate: mockToday, lastTakenDate: null, pillTakenCount: 1),
       );
 
       final pillSheetGroup = PillSheetGroup(
@@ -123,7 +123,7 @@ void main() {
         groupIndex: 0,
         lastTakenDate: null,
         createdAt: now(),
-        pills: Pill.generateAndFillTo(pillSheetType: PillSheetType.pillsheet_28_0, fromDate: mockToday, toDate: null, pillTakenCount: 1),
+        pills: Pill.generateAndFillTo(pillSheetType: PillSheetType.pillsheet_28_0, fromDate: mockToday, lastTakenDate: null, pillTakenCount: 1),
       );
       final pillSheet2 = PillSheet(
         id: "sheet_id2",
@@ -133,7 +133,7 @@ void main() {
         groupIndex: 1,
         createdAt: now(),
         pills: Pill.generateAndFillTo(
-            pillSheetType: PillSheetType.pillsheet_21, fromDate: mockToday.add(const Duration(days: 28)), toDate: null, pillTakenCount: 1),
+            pillSheetType: PillSheetType.pillsheet_21, fromDate: mockToday.add(const Duration(days: 28)), lastTakenDate: null, pillTakenCount: 1),
       );
 
       final pillSheetGroup = PillSheetGroup(

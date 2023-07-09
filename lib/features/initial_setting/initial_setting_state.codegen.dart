@@ -91,7 +91,7 @@ class InitialSettingState with _$InitialSettingState {
       pills: Pill.generateAndFillTo(
         pillSheetType: pillSheetType,
         fromDate: beginDate,
-        toDate: lastTakenDate,
+        lastTakenDate: lastTakenDate,
         pillTakenCount: pillTakenCount,
       ),
       pillTakenCount: pillTakenCount,

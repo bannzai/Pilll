@@ -39,7 +39,7 @@ void main() {
             lastTakenDate: null,
             createdAt: now(),
             pills: Pill.generateAndFillTo(
-                pillSheetType: PillSheetType.pillsheet_28_0, fromDate: firstPillSheetBeginDate, toDate: null, pillTakenCount: 1),
+                pillSheetType: PillSheetType.pillsheet_28_0, fromDate: firstPillSheetBeginDate, lastTakenDate: null, pillTakenCount: 1),
           ),
           PillSheet(
             id: "pill_sheet_id_2",
@@ -50,7 +50,7 @@ void main() {
             pills: Pill.generateAndFillTo(
                 pillSheetType: PillSheetType.pillsheet_28_0,
                 fromDate: firstPillSheetBeginDate.add(const Duration(days: 28)),
-                toDate: null,
+                lastTakenDate: null,
                 pillTakenCount: 1),
           ),
           PillSheet(
@@ -62,7 +62,7 @@ void main() {
             pills: Pill.generateAndFillTo(
                 pillSheetType: PillSheetType.pillsheet_28_0,
                 fromDate: firstPillSheetBeginDate.add(const Duration(days: 56)),
-                toDate: null,
+                lastTakenDate: null,
                 pillTakenCount: 1),
           )
         ];
@@ -114,7 +114,7 @@ void main() {
             lastTakenDate: null,
             createdAt: now(),
             pills: Pill.generateAndFillTo(
-                pillSheetType: PillSheetType.pillsheet_28_0, fromDate: firstPillSheetBeginDate, toDate: null, pillTakenCount: 1),
+                pillSheetType: PillSheetType.pillsheet_28_0, fromDate: firstPillSheetBeginDate, lastTakenDate: null, pillTakenCount: 1),
           ),
           PillSheet(
             id: "pill_sheet_id_2",
@@ -125,7 +125,7 @@ void main() {
             pills: Pill.generateAndFillTo(
                 pillSheetType: PillSheetType.pillsheet_28_0,
                 fromDate: firstPillSheetBeginDate.add(const Duration(days: 28)),
-                toDate: null,
+                lastTakenDate: null,
                 pillTakenCount: 1),
           ),
           PillSheet(
@@ -137,7 +137,7 @@ void main() {
             pills: Pill.generateAndFillTo(
                 pillSheetType: PillSheetType.pillsheet_28_0,
                 fromDate: firstPillSheetBeginDate.add(const Duration(days: 56)),
-                toDate: null,
+                lastTakenDate: null,
                 pillTakenCount: 1),
           )
         ];
@@ -152,7 +152,10 @@ void main() {
           ],
           lastTakenDate: now(),
           pills: Pill.generateAndFillTo(
-              pillSheetType: PillSheetType.pillsheet_28_0, fromDate: pillSheetGroup.activedPillSheet!.beginingDate, toDate: now(), pillTakenCount: 1),
+              pillSheetType: PillSheetType.pillsheet_28_0,
+              fromDate: pillSheetGroup.activedPillSheet!.beginingDate,
+              lastTakenDate: now(),
+              pillTakenCount: 1),
         );
         pillSheets.replaceRange(0, 1, [activePillSheet]);
         expect(activePillSheet.activeRestDuration, isNull);
@@ -192,7 +195,7 @@ void main() {
             lastTakenDate: null,
             createdAt: now(),
             pills: Pill.generateAndFillTo(
-                pillSheetType: PillSheetType.pillsheet_28_0, fromDate: firstPillSheetBeginDate, toDate: null, pillTakenCount: 1),
+                pillSheetType: PillSheetType.pillsheet_28_0, fromDate: firstPillSheetBeginDate, lastTakenDate: null, pillTakenCount: 1),
           ),
           PillSheet(
             id: "pill_sheet_id_2",
@@ -203,7 +206,7 @@ void main() {
             pills: Pill.generateAndFillTo(
                 pillSheetType: PillSheetType.pillsheet_28_0,
                 fromDate: firstPillSheetBeginDate.add(const Duration(days: 28)),
-                toDate: null,
+                lastTakenDate: null,
                 pillTakenCount: 1),
           ),
           PillSheet(
@@ -215,7 +218,7 @@ void main() {
             pills: Pill.generateAndFillTo(
                 pillSheetType: PillSheetType.pillsheet_28_0,
                 fromDate: firstPillSheetBeginDate.add(const Duration(days: 56)),
-                toDate: null,
+                lastTakenDate: null,
                 pillTakenCount: 1),
           )
         ];

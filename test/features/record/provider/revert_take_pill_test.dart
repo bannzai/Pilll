@@ -35,7 +35,7 @@ void main() {
           lastTakenDate: today(),
           createdAt: now(),
           pillTakenCount: 1,
-          pills: Pill.generateAndFillTo(pillSheetType: PillSheetType.pillsheet_28_0, fromDate: yesterday, toDate: today(), pillTakenCount: 1),
+          pills: Pill.generateAndFillTo(pillSheetType: PillSheetType.pillsheet_28_0, fromDate: yesterday, lastTakenDate: today(), pillTakenCount: 1),
         );
         final revertDate = yesterday.subtract(const Duration(days: 1));
         final reverted = pillSheet.revertedPillSheet(revertDate);
@@ -49,7 +49,7 @@ void main() {
           pills: Pill.generateAndFillTo(
             pillSheetType: PillSheetType.pillsheet_28_0,
             fromDate: yesterday,
-            toDate: revertDate, // change
+            lastTakenDate: revertDate, // change
             pillTakenCount: 1,
           ), // Change
           pillTakenCount: 1,
@@ -77,7 +77,7 @@ void main() {
           lastTakenDate: today(),
           createdAt: now(),
           pills: Pill.generateAndFillTo(
-              pillSheetType: PillSheetType.pillsheet_28_0, fromDate: DateTime.parse("2022-01-06"), toDate: today(), pillTakenCount: 1),
+              pillSheetType: PillSheetType.pillsheet_28_0, fromDate: DateTime.parse("2022-01-06"), lastTakenDate: today(), pillTakenCount: 1),
           restDurations: [
             RestDuration(
               beginDate: mockToday.subtract(const Duration(days: 8)),
@@ -98,7 +98,7 @@ void main() {
           pills: Pill.generateAndFillTo(
             pillSheetType: PillSheetType.pillsheet_28_0,
             fromDate: DateTime.parse("2022-01-06"),
-            toDate: revertDate,
+            lastTakenDate: revertDate,
             pillTakenCount: 1,
           ), // Change
           restDurations: [
@@ -140,7 +140,7 @@ void main() {
           groupIndex: 0,
           lastTakenDate: today(),
           createdAt: now(),
-          pills: Pill.generateAndFillTo(pillSheetType: PillSheetType.pillsheet_28_0, fromDate: yesterday, toDate: today(), pillTakenCount: 1),
+          pills: Pill.generateAndFillTo(pillSheetType: PillSheetType.pillsheet_28_0, fromDate: yesterday, lastTakenDate: today(), pillTakenCount: 1),
         );
 
         final pillSheetGroup = PillSheetGroup(
@@ -160,7 +160,7 @@ void main() {
               pills: Pill.generateAndFillTo(
                 pillSheetType: PillSheetType.pillsheet_28_0,
                 fromDate: pillSheet.beginingDate,
-                toDate: yesterday.subtract(
+                lastTakenDate: yesterday.subtract(
                   const Duration(days: 1),
                 ),
                 pillTakenCount: 1,
@@ -223,7 +223,7 @@ void main() {
           groupIndex: 0,
           lastTakenDate: today(),
           createdAt: now(),
-          pills: Pill.generateAndFillTo(pillSheetType: PillSheetType.pillsheet_28_0, fromDate: yesterday, toDate: today(), pillTakenCount: 1),
+          pills: Pill.generateAndFillTo(pillSheetType: PillSheetType.pillsheet_28_0, fromDate: yesterday, lastTakenDate: today(), pillTakenCount: 1),
         );
 
         final pillSheetGroup = PillSheetGroup(
@@ -241,7 +241,7 @@ void main() {
             pillSheet.copyWith(
                 lastTakenDate: yesterday,
                 pills: Pill.generateAndFillTo(
-                    pillSheetType: pillSheet.pillSheetType, fromDate: pillSheet.beginingDate, toDate: yesterday, pillTakenCount: 1),
+                    pillSheetType: pillSheet.pillSheetType, fromDate: pillSheet.beginingDate, lastTakenDate: yesterday, pillTakenCount: 1),
                 pillTakenCount: 1),
           ],
           createdAt: now(),
@@ -301,7 +301,7 @@ void main() {
           groupIndex: 0,
           lastTakenDate: today(),
           createdAt: now(),
-          pills: Pill.generateAndFillTo(pillSheetType: PillSheetType.pillsheet_28_0, fromDate: beginDate, toDate: today(), pillTakenCount: 1),
+          pills: Pill.generateAndFillTo(pillSheetType: PillSheetType.pillsheet_28_0, fromDate: beginDate, lastTakenDate: today(), pillTakenCount: 1),
           restDurations: [
             RestDuration(
               beginDate: mockToday.subtract(const Duration(days: 2)),
@@ -328,7 +328,7 @@ void main() {
               pills: Pill.generateAndFillTo(
                   pillSheetType: PillSheetType.pillsheet_28_0,
                   fromDate: pillSheet.beginingDate,
-                  toDate: beginDate.subtract(const Duration(days: 1)),
+                  lastTakenDate: beginDate.subtract(const Duration(days: 1)),
                   pillTakenCount: 1),
               restDurations: [],
             ),
@@ -392,7 +392,7 @@ void main() {
           groupIndex: 0,
           lastTakenDate: today(),
           createdAt: now(),
-          pills: Pill.generateAndFillTo(pillSheetType: PillSheetType.pillsheet_28_0, fromDate: beginDate, toDate: today(), pillTakenCount: 1),
+          pills: Pill.generateAndFillTo(pillSheetType: PillSheetType.pillsheet_28_0, fromDate: beginDate, lastTakenDate: today(), pillTakenCount: 1),
           restDurations: [
             RestDuration(
               beginDate: mockToday.subtract(const Duration(days: 8)),
@@ -419,7 +419,7 @@ void main() {
               pills: Pill.generateAndFillTo(
                 pillSheetType: PillSheetType.pillsheet_28_0,
                 fromDate: pillSheet.beginingDate,
-                toDate: yesterday,
+                lastTakenDate: yesterday,
                 pillTakenCount: 1,
               ),
             ),
@@ -484,7 +484,7 @@ void main() {
           pills: Pill.generateAndFillTo(
             pillSheetType: PillSheetType.pillsheet_28_0,
             fromDate: mockToday.subtract(const Duration(days: 29)),
-            toDate: mockToday.subtract(const Duration(days: 2)),
+            lastTakenDate: mockToday.subtract(const Duration(days: 2)),
             pillTakenCount: 1,
           ),
         );
@@ -497,7 +497,7 @@ void main() {
           lastTakenDate: mockToday,
           groupIndex: 1,
           createdAt: now(),
-          pills: Pill.generateAndFillTo(pillSheetType: PillSheetType.pillsheet_21, fromDate: yesterday, toDate: mockToday, pillTakenCount: 1),
+          pills: Pill.generateAndFillTo(pillSheetType: PillSheetType.pillsheet_21, fromDate: yesterday, lastTakenDate: mockToday, pillTakenCount: 1),
         );
 
         final pillSheetGroup = PillSheetGroup(
@@ -574,7 +574,7 @@ void main() {
           pills: Pill.generateAndFillTo(
             pillSheetType: PillSheetType.pillsheet_28_0,
             fromDate: mockToday.subtract(const Duration(days: 29)),
-            toDate: mockToday.subtract(const Duration(days: 2)),
+            lastTakenDate: mockToday.subtract(const Duration(days: 2)),
             pillTakenCount: 1,
           ),
         );
@@ -587,7 +587,7 @@ void main() {
           lastTakenDate: mockToday,
           groupIndex: 1,
           createdAt: now(),
-          pills: Pill.generateAndFillTo(pillSheetType: PillSheetType.pillsheet_21, fromDate: yesterday, toDate: mockToday, pillTakenCount: 1),
+          pills: Pill.generateAndFillTo(pillSheetType: PillSheetType.pillsheet_21, fromDate: yesterday, lastTakenDate: mockToday, pillTakenCount: 1),
         );
 
         final pillSheetGroup = PillSheetGroup(
@@ -661,7 +661,7 @@ void main() {
           pills: Pill.generateAndFillTo(
             pillSheetType: PillSheetType.pillsheet_28_0,
             fromDate: mockToday.subtract(const Duration(days: 29)),
-            toDate: mockToday.subtract(const Duration(days: 2)),
+            lastTakenDate: mockToday.subtract(const Duration(days: 2)),
             pillTakenCount: 1,
           ),
         );
@@ -677,7 +677,7 @@ void main() {
             RestDuration(beginDate: yesterday, createdDate: yesterday, endDate: today()),
           ],
           createdAt: now(),
-          pills: Pill.generateAndFillTo(pillSheetType: PillSheetType.pillsheet_21, fromDate: yesterday, toDate: mockToday, pillTakenCount: 1),
+          pills: Pill.generateAndFillTo(pillSheetType: PillSheetType.pillsheet_21, fromDate: yesterday, lastTakenDate: mockToday, pillTakenCount: 1),
         );
 
         final pillSheetGroup = PillSheetGroup(

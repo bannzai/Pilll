@@ -1,4 +1,5 @@
 import 'package:firebase_core/firebase_core.dart';
+import 'package:flutter/cupertino.dart';
 import 'package:pilll/entity/pill.codegen.dart';
 import 'package:pilll/entity/pill_sheet_modified_history.codegen.dart';
 import 'package:pilll/provider/batch.dart';
@@ -74,7 +75,7 @@ class TakePill {
     }).toList();
 
     if (updatedIndexses.isEmpty) {
-      // NOTE: avoid error for unit test
+      // NOTE: prevent error for unit test
       if (Firebase.apps.isNotEmpty) {
         errorLogger.recordError(const FormatException("unexpected updatedIndexes is empty"), StackTrace.current);
       }

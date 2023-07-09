@@ -62,7 +62,7 @@ class AddPillSheetGroup {
           fromDate: n.add(
             Duration(days: offset),
           ),
-          toDate: null,
+          lastTakenDate: null,
           pillTakenCount: 1,
         ),
         pillTakenCount: takesTwicePerDay ? 2 : 1,

@@ -34,7 +34,7 @@ void main() {
         groupIndex: 0,
         lastTakenDate: null,
         createdAt: now(),
-        pills: Pill.generateAndFillTo(pillSheetType: PillSheetType.pillsheet_28_0, fromDate: mockToday, toDate: null, pillTakenCount: 1),
+        pills: Pill.generateAndFillTo(pillSheetType: PillSheetType.pillsheet_28_0, fromDate: mockToday, lastTakenDate: null, pillTakenCount: 1),
       );
       final updatedPillSheet = pillSheet.copyWith(
         beginingDate: mockToday.subtract(
@@ -101,7 +101,7 @@ void main() {
         groupIndex: 0,
         lastTakenDate: mockToday,
         createdAt: now(),
-        pills: Pill.generateAndFillTo(pillSheetType: PillSheetType.pillsheet_28_0, fromDate: mockToday, toDate: mockToday, pillTakenCount: 1),
+        pills: Pill.generateAndFillTo(pillSheetType: PillSheetType.pillsheet_28_0, fromDate: mockToday, lastTakenDate: mockToday, pillTakenCount: 1),
       );
       final updatedPillSheet = pillSheet.copyWith(
         beginingDate: mockToday.subtract(
@@ -171,7 +171,7 @@ void main() {
         pills: Pill.generateAndFillTo(
             pillSheetType: PillSheetType.pillsheet_28_0,
             fromDate: DateTime.parse("2022-04-03"),
-            toDate: DateTime.parse("2022-04-30"),
+            lastTakenDate: DateTime.parse("2022-04-30"),
             pillTakenCount: 1),
       );
       final middle = PillSheet(
@@ -184,7 +184,7 @@ void main() {
         pills: Pill.generateAndFillTo(
             pillSheetType: PillSheetType.pillsheet_28_0,
             fromDate: DateTime.parse("2022-05-01"),
-            toDate: DateTime.parse("2022-05-01"),
+            lastTakenDate: DateTime.parse("2022-05-01"),
             pillTakenCount: 1),
       );
       final right = PillSheet(
@@ -195,7 +195,7 @@ void main() {
         lastTakenDate: null,
         createdAt: now(),
         pills: Pill.generateAndFillTo(
-            pillSheetType: PillSheetType.pillsheet_28_0, fromDate: DateTime.parse("2022-05-29"), toDate: null, pillTakenCount: 1),
+            pillSheetType: PillSheetType.pillsheet_28_0, fromDate: DateTime.parse("2022-05-29"), lastTakenDate: null, pillTakenCount: 1),
       );
       final updatedLeft = left.copyWith(
         beginingDate: DateTime.parse("2022-04-04"),
@@ -272,7 +272,7 @@ void main() {
         pills: Pill.generateAndFillTo(
             pillSheetType: PillSheetType.pillsheet_28_0,
             fromDate: DateTime.parse("2022-04-03"),
-            toDate: DateTime.parse("2022-04-30"),
+            lastTakenDate: DateTime.parse("2022-04-30"),
             pillTakenCount: 1),
       );
       final middle = PillSheet(
@@ -285,7 +285,7 @@ void main() {
         pills: Pill.generateAndFillTo(
             pillSheetType: PillSheetType.pillsheet_28_0,
             fromDate: DateTime.parse("2022-05-01"),
-            toDate: DateTime.parse("2022-05-01"),
+            lastTakenDate: DateTime.parse("2022-05-01"),
             pillTakenCount: 1),
       );
       final right = PillSheet(
@@ -296,7 +296,7 @@ void main() {
         lastTakenDate: null,
         createdAt: now(),
         pills: Pill.generateAndFillTo(
-            pillSheetType: PillSheetType.pillsheet_28_0, fromDate: DateTime.parse("2022-05-29"), toDate: null, pillTakenCount: 1),
+            pillSheetType: PillSheetType.pillsheet_28_0, fromDate: DateTime.parse("2022-05-29"), lastTakenDate: null, pillTakenCount: 1),
       );
       final updatedLeft = left.copyWith(
         beginingDate: DateTime.parse("2022-04-04"),
@@ -374,7 +374,7 @@ void main() {
         pills: Pill.generateAndFillTo(
             pillSheetType: PillSheetType.pillsheet_28_0,
             fromDate: DateTime.parse("2022-04-03"),
-            toDate: DateTime.parse("2022-04-30"),
+            lastTakenDate: DateTime.parse("2022-04-30"),
             pillTakenCount: 1),
       );
       final middle = PillSheet(
@@ -385,7 +385,7 @@ void main() {
         lastTakenDate: null,
         createdAt: now(),
         pills: Pill.generateAndFillTo(
-            pillSheetType: PillSheetType.pillsheet_28_0, fromDate: DateTime.parse("2022-05-01"), toDate: null, pillTakenCount: 1),
+            pillSheetType: PillSheetType.pillsheet_28_0, fromDate: DateTime.parse("2022-05-01"), lastTakenDate: null, pillTakenCount: 1),
       );
       final right = PillSheet(
         id: "sheet_id_right",
@@ -395,7 +395,7 @@ void main() {
         lastTakenDate: null,
         createdAt: now(),
         pills: Pill.generateAndFillTo(
-            pillSheetType: PillSheetType.pillsheet_28_0, fromDate: DateTime.parse("2022-05-29"), toDate: null, pillTakenCount: 1),
+            pillSheetType: PillSheetType.pillsheet_28_0, fromDate: DateTime.parse("2022-05-29"), lastTakenDate: null, pillTakenCount: 1),
       );
       final updatedLeft = left.copyWith(
         beginingDate: DateTime.parse("2022-03-06"),
@@ -476,7 +476,7 @@ void main() {
         pills: Pill.generateAndFillTo(
             pillSheetType: PillSheetType.pillsheet_28_0,
             fromDate: DateTime.parse("2022-04-03"),
-            toDate: DateTime.parse("2022-04-30"),
+            lastTakenDate: DateTime.parse("2022-04-30"),
             pillTakenCount: 1),
         restDurations: [
           RestDuration(
@@ -494,7 +494,7 @@ void main() {
         lastTakenDate: null,
         createdAt: now(),
         pills: Pill.generateAndFillTo(
-            pillSheetType: PillSheetType.pillsheet_28_0, fromDate: DateTime.parse("2022-05-02"), toDate: null, pillTakenCount: 1),
+            pillSheetType: PillSheetType.pillsheet_28_0, fromDate: DateTime.parse("2022-05-02"), lastTakenDate: null, pillTakenCount: 1),
       );
       final right = PillSheet(
         id: "sheet_id_right",
@@ -504,7 +504,7 @@ void main() {
         lastTakenDate: null,
         createdAt: now(),
         pills: Pill.generateAndFillTo(
-            pillSheetType: PillSheetType.pillsheet_28_0, fromDate: DateTime.parse("2022-05-29"), toDate: null, pillTakenCount: 1),
+            pillSheetType: PillSheetType.pillsheet_28_0, fromDate: DateTime.parse("2022-05-29"), lastTakenDate: null, pillTakenCount: 1),
       );
       final updatedLeft = left.copyWith(
         beginingDate: DateTime.parse("2022-04-05"),

@@ -109,7 +109,7 @@ class PillSheet with _$PillSheet {
         lastTakenDate: lastTakenDate,
         createdAt: now(),
         pillTakenCount: pillTakenCount ?? 1,
-        pills: Pill.generateAndFillTo(pillSheetType: type, fromDate: beginDate, toDate: lastTakenDate, pillTakenCount: pillTakenCount ?? 1),
+        pills: Pill.generateAndFillTo(pillSheetType: type, fromDate: beginDate, lastTakenDate: lastTakenDate, pillTakenCount: pillTakenCount ?? 1),
       );
 
   factory PillSheet.fromJson(Map<String, dynamic> json) => _$PillSheetFromJson(json);
@@ -223,8 +223,14 @@ class PillSheet with _$PillSheet {
 
   PillSheet updatedLastTaken(DateTime? date) {
     return copyWith(
+      lastTakenDate: date,
+      pills: Pill.generateAndFillTo(
+        pillSheetType: pillSheetType,
+        fromDate: beginingDate,
         lastTakenDate: date,
-        pills: Pill.generateAndFillTo(pillSheetType: pillSheetType, fromDate: beginingDate, toDate: date, pillTakenCount: pillTakenCount));
+        pillTakenCount: pillTakenCount,
+      ),
+    );
   }
 }
 

@@ -269,7 +269,7 @@ void main() {
         beginingDate: mockToday,
         lastTakenDate: null,
         createdAt: now(),
-        pills: Pill.generateAndFillTo(pillSheetType: PillSheetType.pillsheet_21, fromDate: mockToday, toDate: null, pillTakenCount: 1),
+        pills: Pill.generateAndFillTo(pillSheetType: PillSheetType.pillsheet_21, fromDate: mockToday, lastTakenDate: null, pillTakenCount: 1),
       );
 
       final pillSheetGroup = PillSheetGroup(pillSheetIDs: ["sheet_id"], pillSheets: [pillSheet.copyWith(id: "sheet_id")], createdAt: now());
@@ -346,7 +346,7 @@ void main() {
           fromDate: mockToday.subtract(
             const Duration(days: 28),
           ),
-          toDate: DateTime.parse("2020-09-18"),
+          lastTakenDate: DateTime.parse("2020-09-18"),
           pillTakenCount: 1,
         ),
       );
@@ -360,7 +360,7 @@ void main() {
         pills: Pill.generateAndFillTo(
           pillSheetType: PillSheetType.pillsheet_21,
           fromDate: mockToday,
-          toDate: mockToday.subtract(const Duration(days: 1)),
+          lastTakenDate: mockToday.subtract(const Duration(days: 1)),
           pillTakenCount: 1,
         ),
       );
@@ -455,7 +455,7 @@ void main() {
         pills: Pill.generateAndFillTo(
           pillSheetType: PillSheetType.pillsheet_24_rest_4,
           fromDate: mockToday,
-          toDate: null,
+          lastTakenDate: null,
           pillTakenCount: 1,
         ),
       );

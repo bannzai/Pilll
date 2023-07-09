@@ -40,7 +40,7 @@ void main() {
         lastTakenDate: null,
         beginingDate: now(),
         createdAt: now(),
-        pills: Pill.generateAndFillTo(pillSheetType: PillSheetType.pillsheet_28_0, fromDate: now(), toDate: null, pillTakenCount: 1),
+        pills: Pill.generateAndFillTo(pillSheetType: PillSheetType.pillsheet_28_0, fromDate: now(), lastTakenDate: null, pillTakenCount: 1),
       );
       final updatedPillSheet = pillSheet.copyWith(restDurations: [notYetEndRestDuration]);
 
@@ -100,7 +100,7 @@ void main() {
         lastTakenDate: null,
         restDurations: [notYetEndRestDuration],
         createdAt: now(),
-        pills: Pill.generateAndFillTo(pillSheetType: PillSheetType.pillsheet_28_0, fromDate: now(), toDate: null, pillTakenCount: 1),
+        pills: Pill.generateAndFillTo(pillSheetType: PillSheetType.pillsheet_28_0, fromDate: now(), lastTakenDate: null, pillTakenCount: 1),
       );
       final updatedPillSheet = pillSheet.copyWith(restDurations: [endedRestDuration]);
 
@@ -161,8 +161,8 @@ void main() {
           lastTakenDate: null,
           restDurations: [notYetEndRestDuration],
           createdAt: now(),
-          pills:
-              Pill.generateAndFillTo(pillSheetType: PillSheetType.pillsheet_28_0, fromDate: firstPillSheetBeginDate, toDate: null, pillTakenCount: 1),
+          pills: Pill.generateAndFillTo(
+              pillSheetType: PillSheetType.pillsheet_28_0, fromDate: firstPillSheetBeginDate, lastTakenDate: null, pillTakenCount: 1),
         ),
         PillSheet(
           id: "pill_sheet_id_2",
@@ -174,7 +174,7 @@ void main() {
           pills: Pill.generateAndFillTo(
               pillSheetType: PillSheetType.pillsheet_28_0,
               fromDate: firstPillSheetBeginDate.add(const Duration(days: 28)),
-              toDate: null,
+              lastTakenDate: null,
               pillTakenCount: 1),
         ),
         PillSheet(
@@ -187,7 +187,7 @@ void main() {
           pills: Pill.generateAndFillTo(
               pillSheetType: PillSheetType.pillsheet_28_0,
               fromDate: firstPillSheetBeginDate.add(const Duration(days: 56)),
-              toDate: null,
+              lastTakenDate: null,
               pillTakenCount: 1),
         )
       ];

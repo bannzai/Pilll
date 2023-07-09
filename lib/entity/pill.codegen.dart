@@ -66,7 +66,7 @@ class Pill with _$Pill {
   static List<Pill> generateAndFillTo({
     required PillSheetType pillSheetType,
     required DateTime fromDate,
-    required DateTime? toDate,
+    required DateTime? lastTakenDate,
     required int pillTakenCount,
   }) {
     return List.generate(pillSheetType.totalCount, (index) {
@@ -75,7 +75,7 @@ class Pill with _$Pill {
         index: index,
         createdDateTime: now(),
         updatedDateTime: now(),
-        pillTakens: toDate != null && (date.isBefore(toDate) || isSameDay(date, toDate))
+        pillTakens: lastTakenDate != null && (date.isBefore(lastTakenDate) || isSameDay(date, lastTakenDate))
             ? List.generate(
                 pillTakenCount,
                 (i) {
