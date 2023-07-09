@@ -63,25 +63,11 @@ class Pill with _$Pill {
 
   factory Pill.fromJson(Map<String, dynamic> json) => _$PillFromJson(json);
 
-  static List<Pill> generate(PillSheetType pillSheetType) {
-    return List.generate(
-      pillSheetType.totalCount,
-      (index) => Pill(
-        index: index,
-        createdDateTime: now(),
-        updatedDateTime: now(),
-        pillTakens: [],
-      ),
-    );
-  }
-
-  // もし仮にvisibleForTestingを消す場合は required int pillTakenCount にする
-  @visibleForTesting
   static List<Pill> generateAndFillTo({
     required PillSheetType pillSheetType,
     required DateTime fromDate,
     required DateTime? toDate,
-    int? pillTakenCount,
+    required int pillTakenCount,
   }) {
     return List.generate(pillSheetType.totalCount, (index) {
       final date = fromDate.add(Duration(days: index));
@@ -91,7 +77,7 @@ class Pill with _$Pill {
         updatedDateTime: now(),
         pillTakens: toDate != null && (date.isBefore(toDate) || isSameDay(date, toDate))
             ? List.generate(
-                pillTakenCount ?? 1,
+                pillTakenCount,
                 (i) {
                   return PillTaken(takenDateTime: date, createdDateTime: now(), updatedDateTime: now());
                 },
