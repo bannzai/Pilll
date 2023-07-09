@@ -17,12 +17,24 @@ void main() {
   });
 
   group("#generateAndFillTo", () {
-    test("it is not taken yet", () {
+    test("lastTakenDate is null", () {
       final mockTodayRepository = MockTodayService();
       todayRepository = mockTodayRepository;
       when(mockTodayRepository.now()).thenReturn(DateTime.parse("2020-09-19"));
 
       final actual = Pill.generateAndFillTo(pillSheetType: PillSheetType.pillsheet_21, fromDate: now(), lastTakenDate: null, pillTakenCount: 1);
+      final expected = [
+        for (var i = 0; i < PillSheetType.pillsheet_21.totalCount; i++)
+          Pill(index: i, createdDateTime: now(), updatedDateTime: now(), pillTakens: []),
+      ];
+      expect(actual, expected);
+    });
+    test("lastTakenDate is today", () {
+      final mockTodayRepository = MockTodayService();
+      todayRepository = mockTodayRepository;
+      when(mockTodayRepository.now()).thenReturn(DateTime.parse("2020-09-19"));
+
+      final actual = Pill.generateAndFillTo(pillSheetType: PillSheetType.pillsheet_21, fromDate: now(), lastTakenDate: today(), pillTakenCount: 1);
       final expected = [
         for (var i = 0; i < PillSheetType.pillsheet_21.totalCount; i++)
           Pill(index: i, createdDateTime: now(), updatedDateTime: now(), pillTakens: []),
