@@ -40,7 +40,7 @@ void main() {
         lastTakenDate: null,
         beginingDate: now(),
         createdAt: now(),
-        pills: Pill.generateAndFillTo(pillSheetType: PillSheetType.pillsheet_28_0, fromDate: now(), toDate: null),
+        pills: Pill.generateAndFillTo(pillSheetType: PillSheetType.pillsheet_28_0, fromDate: now(), toDate: null, pillTakenCount: 1),
       );
       final updatedPillSheet = pillSheet.copyWith(restDurations: [notYetEndRestDuration]);
 
@@ -100,7 +100,7 @@ void main() {
         lastTakenDate: null,
         restDurations: [notYetEndRestDuration],
         createdAt: now(),
-        pills: Pill.generateAndFillTo(pillSheetType: PillSheetType.pillsheet_28_0, fromDate: now(), toDate: null),
+        pills: Pill.generateAndFillTo(pillSheetType: PillSheetType.pillsheet_28_0, fromDate: now(), toDate: null, pillTakenCount: 1),
       );
       final updatedPillSheet = pillSheet.copyWith(restDurations: [endedRestDuration]);
 
@@ -161,7 +161,8 @@ void main() {
           lastTakenDate: null,
           restDurations: [notYetEndRestDuration],
           createdAt: now(),
-          pills: Pill.generateAndFillTo(pillSheetType: PillSheetType.pillsheet_28_0, fromDate: firstPillSheetBeginDate, toDate: null),
+          pills:
+              Pill.generateAndFillTo(pillSheetType: PillSheetType.pillsheet_28_0, fromDate: firstPillSheetBeginDate, toDate: null, pillTakenCount: 1),
         ),
         PillSheet(
           id: "pill_sheet_id_2",
@@ -171,7 +172,10 @@ void main() {
           lastTakenDate: null,
           createdAt: now(),
           pills: Pill.generateAndFillTo(
-              pillSheetType: PillSheetType.pillsheet_28_0, fromDate: firstPillSheetBeginDate.add(const Duration(days: 28)), toDate: null),
+              pillSheetType: PillSheetType.pillsheet_28_0,
+              fromDate: firstPillSheetBeginDate.add(const Duration(days: 28)),
+              toDate: null,
+              pillTakenCount: 1),
         ),
         PillSheet(
           id: "pill_sheet_id_3",
@@ -181,7 +185,10 @@ void main() {
           lastTakenDate: null,
           createdAt: now(),
           pills: Pill.generateAndFillTo(
-              pillSheetType: PillSheetType.pillsheet_28_0, fromDate: firstPillSheetBeginDate.add(const Duration(days: 56)), toDate: null),
+              pillSheetType: PillSheetType.pillsheet_28_0,
+              fromDate: firstPillSheetBeginDate.add(const Duration(days: 56)),
+              toDate: null,
+              pillTakenCount: 1),
         )
       ];
       final updatedPillSheet1 = pillSheets[0].copyWith(restDurations: [endedRestDuration]);
