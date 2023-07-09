@@ -29,6 +29,7 @@ class InitialSettingState with _$InitialSettingState {
     @Default(false) bool isLoading,
     @Default(false) bool userIsNotAnonymous,
     @Default(false) bool settingIsExist,
+    @Default(false) bool pillSheetTakesTwicePerDay,
     LinkAccountType? accountType,
   }) = _InitialSettingState;
 
@@ -65,6 +66,7 @@ class InitialSettingState with _$InitialSettingState {
   static PillSheet buildPillSheet({
     required int pageIndex,
     required InitialSettingTodayPillNumber todayPillNumber,
+    required bool takesTwicePerDay,
     required List<PillSheetType> pillSheetTypes,
   }) {
     final pillSheetType = pillSheetTypes[pageIndex];
@@ -85,6 +87,7 @@ class InitialSettingState with _$InitialSettingState {
       pills: Pill.generate(
         pillSheetType,
       ),
+      pillTakenCount: takesTwicePerDay ? 2 : 1,
       createdAt: now(),
     );
   }

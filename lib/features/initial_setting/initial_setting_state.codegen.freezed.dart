@@ -175,6 +175,7 @@ mixin _$InitialSettingState {
   bool get isLoading => throw _privateConstructorUsedError;
   bool get userIsNotAnonymous => throw _privateConstructorUsedError;
   bool get settingIsExist => throw _privateConstructorUsedError;
+  bool get pillSheetTakesTwicePerDay => throw _privateConstructorUsedError;
   LinkAccountType? get accountType => throw _privateConstructorUsedError;
 
   @JsonKey(ignore: true)
@@ -196,6 +197,7 @@ abstract class $InitialSettingStateCopyWith<$Res> {
       bool isLoading,
       bool userIsNotAnonymous,
       bool settingIsExist,
+      bool pillSheetTakesTwicePerDay,
       LinkAccountType? accountType});
 
   $InitialSettingTodayPillNumberCopyWith<$Res>? get todayPillNumber;
@@ -221,6 +223,7 @@ class _$InitialSettingStateCopyWithImpl<$Res, $Val extends InitialSettingState>
     Object? isLoading = null,
     Object? userIsNotAnonymous = null,
     Object? settingIsExist = null,
+    Object? pillSheetTakesTwicePerDay = null,
     Object? accountType = freezed,
   }) {
     return _then(_value.copyWith(
@@ -251,6 +254,10 @@ class _$InitialSettingStateCopyWithImpl<$Res, $Val extends InitialSettingState>
       settingIsExist: null == settingIsExist
           ? _value.settingIsExist
           : settingIsExist // ignore: cast_nullable_to_non_nullable
+              as bool,
+      pillSheetTakesTwicePerDay: null == pillSheetTakesTwicePerDay
+          ? _value.pillSheetTakesTwicePerDay
+          : pillSheetTakesTwicePerDay // ignore: cast_nullable_to_non_nullable
               as bool,
       accountType: freezed == accountType
           ? _value.accountType
@@ -289,6 +296,7 @@ abstract class _$$_InitialSettingStateCopyWith<$Res>
       bool isLoading,
       bool userIsNotAnonymous,
       bool settingIsExist,
+      bool pillSheetTakesTwicePerDay,
       LinkAccountType? accountType});
 
   @override
@@ -313,6 +321,7 @@ class __$$_InitialSettingStateCopyWithImpl<$Res>
     Object? isLoading = null,
     Object? userIsNotAnonymous = null,
     Object? settingIsExist = null,
+    Object? pillSheetTakesTwicePerDay = null,
     Object? accountType = freezed,
   }) {
     return _then(_$_InitialSettingState(
@@ -344,6 +353,10 @@ class __$$_InitialSettingStateCopyWithImpl<$Res>
           ? _value.settingIsExist
           : settingIsExist // ignore: cast_nullable_to_non_nullable
               as bool,
+      pillSheetTakesTwicePerDay: null == pillSheetTakesTwicePerDay
+          ? _value.pillSheetTakesTwicePerDay
+          : pillSheetTakesTwicePerDay // ignore: cast_nullable_to_non_nullable
+              as bool,
       accountType: freezed == accountType
           ? _value.accountType
           : accountType // ignore: cast_nullable_to_non_nullable
@@ -363,6 +376,7 @@ class _$_InitialSettingState extends _InitialSettingState {
       this.isLoading = false,
       this.userIsNotAnonymous = false,
       this.settingIsExist = false,
+      this.pillSheetTakesTwicePerDay = false,
       this.accountType})
       : _pillSheetTypes = pillSheetTypes,
         _reminderTimes = reminderTimes,
@@ -400,11 +414,14 @@ class _$_InitialSettingState extends _InitialSettingState {
   @JsonKey()
   final bool settingIsExist;
   @override
+  @JsonKey()
+  final bool pillSheetTakesTwicePerDay;
+  @override
   final LinkAccountType? accountType;
 
   @override
   String toString() {
-    return 'InitialSettingState(pillSheetTypes: $pillSheetTypes, todayPillNumber: $todayPillNumber, reminderTimes: $reminderTimes, isOnReminder: $isOnReminder, isLoading: $isLoading, userIsNotAnonymous: $userIsNotAnonymous, settingIsExist: $settingIsExist, accountType: $accountType)';
+    return 'InitialSettingState(pillSheetTypes: $pillSheetTypes, todayPillNumber: $todayPillNumber, reminderTimes: $reminderTimes, isOnReminder: $isOnReminder, isLoading: $isLoading, userIsNotAnonymous: $userIsNotAnonymous, settingIsExist: $settingIsExist, pillSheetTakesTwicePerDay: $pillSheetTakesTwicePerDay, accountType: $accountType)';
   }
 
   @override
@@ -426,6 +443,9 @@ class _$_InitialSettingState extends _InitialSettingState {
                 other.userIsNotAnonymous == userIsNotAnonymous) &&
             (identical(other.settingIsExist, settingIsExist) ||
                 other.settingIsExist == settingIsExist) &&
+            (identical(other.pillSheetTakesTwicePerDay,
+                    pillSheetTakesTwicePerDay) ||
+                other.pillSheetTakesTwicePerDay == pillSheetTakesTwicePerDay) &&
             (identical(other.accountType, accountType) ||
                 other.accountType == accountType));
   }
@@ -440,6 +460,7 @@ class _$_InitialSettingState extends _InitialSettingState {
       isLoading,
       userIsNotAnonymous,
       settingIsExist,
+      pillSheetTakesTwicePerDay,
       accountType);
 
   @JsonKey(ignore: true)
@@ -459,6 +480,7 @@ abstract class _InitialSettingState extends InitialSettingState {
       final bool isLoading,
       final bool userIsNotAnonymous,
       final bool settingIsExist,
+      final bool pillSheetTakesTwicePerDay,
       final LinkAccountType? accountType}) = _$_InitialSettingState;
   const _InitialSettingState._() : super._();
 
@@ -476,6 +498,8 @@ abstract class _InitialSettingState extends InitialSettingState {
   bool get userIsNotAnonymous;
   @override
   bool get settingIsExist;
+  @override
+  bool get pillSheetTakesTwicePerDay;
   @override
   LinkAccountType? get accountType;
   @override
