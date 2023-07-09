@@ -16,8 +16,8 @@ class SettingPillSheetGroup extends HookConsumerWidget {
   }) : super(key: key);
 
   final List<PillSheetType> pillSheetTypes;
-  final Function(PillSheetType) onAdd;
-  final Function(int, PillSheetType) onChange;
+  final Function(PillSheetType, bool) onAdd;
+  final Function(int, PillSheetType, bool) onChange;
   final Function(int) onDelete;
 
   @override
@@ -30,8 +30,15 @@ class SettingPillSheetGroup extends HookConsumerWidget {
           SettingPillSheetGroupPillSheetTypeSelectRow(
             index: i,
             pillSheetType: pillSheetTypes[i],
-            onSelect: onChange,
+            onSelect: (index, pillSheetType) => onChange(index, pillSheetType, pillSheetIsTwoTaken.value),
             onDelete: onDelete,
+          ),
+        ],
+        if (pillSheetTypes.length < 7) ...[
+          const SizedBox(height: 24),
+          PillSheetTypeAddButton(
+            pillSheetTypes: pillSheetTypes,
+            onAdd: (pillSheetType) => onAdd(pillSheetType, pillSheetIsTwoTaken.value),
           ),
         ],
         Row(children: [
@@ -39,13 +46,6 @@ class SettingPillSheetGroup extends HookConsumerWidget {
           const Spacer(),
           Switch(value: pillSheetIsTwoTaken.value, onChanged: (value) => pillSheetIsTwoTaken.value = value)
         ]),
-        if (pillSheetTypes.length < 7) ...[
-          const SizedBox(height: 24),
-          PillSheetTypeAddButton(
-            pillSheetTypes: pillSheetTypes,
-            onAdd: (pillSheetType) => onAdd(pillSheetType),
-          ),
-        ],
         const SizedBox(height: 80),
       ],
     );
