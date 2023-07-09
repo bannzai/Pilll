@@ -7,6 +7,7 @@ import 'package:flutter_test/flutter_test.dart';
 import 'package:mockito/mockito.dart';
 import 'package:pilll/entity/setting.codegen.dart';
 import 'package:pilll/provider/revert_take_pill.dart';
+import 'package:pilll/provider/take_pill.dart';
 import 'package:pilll/utils/datetime/day.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
@@ -511,7 +512,7 @@ void main() {
           pillSheetIDs: ["1", "2"],
           pillSheets: [
             pillSheet,
-            pillSheet2.updatedLastTaken(yesterday),
+            pillSheet2.takenPillSheet(yesterday),
           ],
           createdAt: now(),
         );
@@ -600,8 +601,8 @@ void main() {
           id: "group_id",
           pillSheetIDs: ["1", "2"],
           pillSheets: [
-            pillSheet.updatedLastTaken(mockToday.subtract(const Duration(days: 4))),
-            pillSheet2.updatedLastTaken(pillSheet2.beginingDate.subtract(const Duration(days: 1))),
+            pillSheet.takenPillSheet(mockToday.subtract(const Duration(days: 4))),
+            pillSheet2.takenPillSheet(pillSheet2.beginingDate.subtract(const Duration(days: 1))),
           ],
           createdAt: now(),
         );
@@ -690,8 +691,8 @@ void main() {
           id: "group_id",
           pillSheetIDs: ["1", "2"],
           pillSheets: [
-            pillSheet.updatedLastTaken(mockToday.subtract(const Duration(days: 4))),
-            pillSheet2.updatedLastTaken(pillSheet2.beginingDate.subtract(const Duration(days: 1))).copyWith(restDurations: []),
+            pillSheet.takenPillSheet(mockToday.subtract(const Duration(days: 4))),
+            pillSheet2.takenPillSheet(pillSheet2.beginingDate.subtract(const Duration(days: 1))).copyWith(restDurations: []),
           ],
           createdAt: now(),
         );
