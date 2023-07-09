@@ -51,7 +51,7 @@ void main() {
         beginingDate: DateTime.parse("2020-11-23"),
         lastTakenDate: null,
         createdAt: now(),
-        pills: Pill.testGenerateAndIterateTo(
+        pills: Pill.generateAndFillTo(
           pillSheetType: PillSheetType.pillsheet_21,
           fromDate: DateTime.parse("2020-11-23"),
           lastTakenDate: null,
@@ -88,7 +88,7 @@ void main() {
         beginingDate: DateTime.parse("2020-12-21"),
         lastTakenDate: null,
         createdAt: now(),
-        pills: Pill.testGenerateAndIterateTo(
+        pills: Pill.generateAndFillTo(
           pillSheetType: PillSheetType.pillsheet_24_0,
           fromDate: DateTime.parse("2020-12-21"),
           lastTakenDate: null,
@@ -126,7 +126,7 @@ void main() {
         beginingDate: DateTime.parse("2020-10-26"),
         lastTakenDate: DateTime.parse("2020-11-22"),
         createdAt: now(),
-        pills: Pill.testGenerateAndIterateTo(
+        pills: Pill.generateAndFillTo(
           pillSheetType: PillSheetType.pillsheet_21,
           fromDate: DateTime.parse("2020-10-26"),
           lastTakenDate: DateTime.parse("2020-11-22"),
