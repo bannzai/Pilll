@@ -29,7 +29,8 @@ class RevertTakePill {
     required this.batchSetPillSheetGroup,
   });
 
-  Future<PillSheetGroup?> call({required PillSheetGroup pillSheetGroup, required int pageIndex, required int pillNumberIntoPillSheetToRevert}) async {
+  Future<PillSheetGroup?> call(
+      {required PillSheetGroup pillSheetGroup, required int pageIndex, required int targetRevertPillNumberIntoPillSheet}) async {
     final activedPillSheet = pillSheetGroup.activedPillSheet;
     if (activedPillSheet == null) {
       throw const FormatException("現在対象となっているピルシートが見つかりませんでした");
@@ -39,7 +40,7 @@ class RevertTakePill {
     }
 
     final targetPillSheet = pillSheetGroup.pillSheets[pageIndex];
-    final revertDate = targetPillSheet.pillTakenDateFromPillNumber(pillNumberIntoPillSheetToRevert).subtract(const Duration(days: 1)).date();
+    final revertDate = targetPillSheet.pillTakenDateFromPillNumber(targetRevertPillNumberIntoPillSheet).subtract(const Duration(days: 1)).date();
 
     final updatedPillSheets = pillSheetGroup.pillSheets.map((pillSheet) {
       final lastTakenDate = pillSheet.lastTakenDate;

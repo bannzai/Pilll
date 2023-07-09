@@ -44,7 +44,7 @@ class CancelButton extends HookConsumerWidget {
     return await revertTakePill(
       pillSheetGroup: pillSheetGroup,
       pageIndex: activePillSheet.groupIndex,
-      pillNumberIntoPillSheetToRevert: activePillSheet.lastCompletedPillNumber,
+      targetRevertPillNumberIntoPillSheet: activePillSheet.lastCompletedPillNumber,
     );
   }
 }

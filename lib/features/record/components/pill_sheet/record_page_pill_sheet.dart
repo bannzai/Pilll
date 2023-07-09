@@ -141,7 +141,8 @@ class RecordPagePillSheet extends HookConsumerWidget {
               }
 
               if (pillSheet.lastCompletedPillNumber >= pillNumberIntoPillSheet) {
-                await revertTakePill(pillSheetGroup: pillSheetGroup, pageIndex: pageIndex, pillNumberIntoPillSheetToRevert: pillNumberIntoPillSheet);
+                await revertTakePill(
+                    pillSheetGroup: pillSheetGroup, pageIndex: pageIndex, targetRevertPillNumberIntoPillSheet: pillNumberIntoPillSheet);
               } else {
                 // NOTE: batch.commit でリモートのDBに書き込む時間がかかるので事前にバッジを0にする
                 FlutterAppBadger.removeBadge();
