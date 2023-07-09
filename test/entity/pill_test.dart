@@ -36,7 +36,15 @@ void main() {
 
       final actual = Pill.generateAndFillTo(pillSheetType: PillSheetType.pillsheet_21, fromDate: now(), lastTakenDate: today(), pillTakenCount: 1);
       final expected = [
-        for (var i = 0; i < PillSheetType.pillsheet_21.totalCount; i++)
+        Pill(
+          index: 0,
+          createdDateTime: now(),
+          updatedDateTime: now(),
+          pillTakens: [
+            PillTaken(takenDateTime: today(), createdDateTime: now(), updatedDateTime: now(), isAutomaticallyRecorded: false),
+          ],
+        ),
+        for (var i = 1; i < PillSheetType.pillsheet_21.totalCount; i++)
           Pill(index: i, createdDateTime: now(), updatedDateTime: now(), pillTakens: []),
       ];
       expect(actual, expected);
