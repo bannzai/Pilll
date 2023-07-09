@@ -46,7 +46,12 @@ void main() {
           groupIndex: 0,
           lastTakenDate: revertDate, // change
           createdAt: now(),
-          pills: Pill.generate(PillSheetType.pillsheet_28_0), // Change
+          pills: Pill.generateAndFillTo(
+            pillSheetType: PillSheetType.pillsheet_28_0,
+            fromDate: yesterday,
+            toDate: revertDate, // change
+            pillTakenCount: 1,
+          ), // Change
           pillTakenCount: 1,
         );
         expect(reverted.pills, expected.pills);

@@ -1,3 +1,4 @@
+import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/services.dart';
 import 'package:pilll/entity/firestore_id_generator.dart';
 import 'package:pilll/entity/pill.codegen.dart';
@@ -41,6 +42,7 @@ void main() {
         pageIndex: 0,
         todayPillNumber: const InitialSettingTodayPillNumber(pageIndex: 0, pillNumberIntoPillSheet: 1),
         pillSheetTypes: [PillSheetType.pillsheet_21],
+        takesTwicePerDay: false,
       );
 
       final expected = PillSheet(
@@ -49,7 +51,12 @@ void main() {
         beginingDate: DateTime.parse("2020-11-23"),
         lastTakenDate: null,
         createdAt: now(),
-        pills: Pill.generate(PillSheetType.pillsheet_21),
+        pills: Pill.generateAndFillTo(
+          pillSheetType: PillSheetType.pillsheet_21,
+          fromDate: DateTime.parse("2020-11-23"),
+          toDate: null,
+          pillTakenCount: 1,
+        ),
       );
 
       expect(expected, pillSheet);
@@ -71,6 +78,7 @@ void main() {
           PillSheetType.pillsheet_21,
           PillSheetType.pillsheet_24_0,
         ],
+        takesTwicePerDay: false,
       );
 
       final expected = PillSheet(
@@ -80,7 +88,12 @@ void main() {
         beginingDate: DateTime.parse("2020-12-21"),
         lastTakenDate: null,
         createdAt: now(),
-        pills: Pill.generate(PillSheetType.pillsheet_24_0),
+        pills: Pill.generateAndFillTo(
+          pillSheetType: PillSheetType.pillsheet_24_0,
+          fromDate: DateTime.parse("2020-12-21"),
+          toDate: null,
+          pillTakenCount: 1,
+        ),
       );
 
       expect(expected, pillSheet);
@@ -103,6 +116,7 @@ void main() {
           PillSheetType.pillsheet_21,
           PillSheetType.pillsheet_24_0,
         ],
+        takesTwicePerDay: false,
       );
 
       final expected = PillSheet(
@@ -112,7 +126,12 @@ void main() {
         beginingDate: DateTime.parse("2020-10-26"),
         lastTakenDate: DateTime.parse("2020-11-22"),
         createdAt: now(),
-        pills: Pill.generate(PillSheetType.pillsheet_21),
+        pills: Pill.generateAndFillTo(
+          pillSheetType: PillSheetType.pillsheet_21,
+          fromDate: DateTime.parse("2020-10-26"),
+          toDate: DateTime.parse("2020-11-22"),
+          pillTakenCount: 1,
+        ),
       );
 
       expect(expected, pillSheet);

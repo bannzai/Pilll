@@ -97,6 +97,7 @@ void main() {
         pillSheetGroup: null,
         pillSheetTypes: [PillSheetType.pillsheet_28_0],
         displayNumberSetting: null,
+        takesTwicePerDay: false,
       );
     });
     test("group has two pill sheet", () async {
@@ -188,6 +189,7 @@ void main() {
         pillSheetGroup: null,
         pillSheetTypes: [PillSheetType.pillsheet_28_0, PillSheetType.pillsheet_21],
         displayNumberSetting: null,
+        takesTwicePerDay: false,
       );
     });
   });
