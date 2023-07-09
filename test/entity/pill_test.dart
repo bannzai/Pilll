@@ -49,12 +49,43 @@ void main() {
       ];
       expect(actual, expected);
     });
+    test("lastTakenDate is estimatedLastTakenDate - 1 day", () {
+      final mockTodayRepository = MockTodayService();
+      todayRepository = mockTodayRepository;
+      when(mockTodayRepository.now()).thenReturn(DateTime.parse("2020-09-19"));
+
+      final lastTakenDate = today().add(Duration(days: PillSheetType.pillsheet_21.totalCount - 1 - 1));
+      final actual = Pill.generateAndFillTo(
+        pillSheetType: PillSheetType.pillsheet_21,
+        fromDate: now(),
+        lastTakenDate: lastTakenDate,
+        pillTakenCount: 1,
+      );
+      final expected = [
+        for (var i = 0; i < PillSheetType.pillsheet_21.totalCount - 1; i++)
+          Pill(
+            index: i,
+            createdDateTime: now(),
+            updatedDateTime: now(),
+            pillTakens: [
+              PillTaken(takenDateTime: lastTakenDate, createdDateTime: now(), updatedDateTime: now(), isAutomaticallyRecorded: false),
+            ],
+          ),
+        Pill(
+          index: PillSheetType.pillsheet_21.totalCount - 1,
+          createdDateTime: now(),
+          updatedDateTime: now(),
+          pillTakens: [],
+        ),
+      ];
+      expect(actual, expected);
+    });
     test("lastTakenDate is estimatedLastTakenDate", () {
       final mockTodayRepository = MockTodayService();
       todayRepository = mockTodayRepository;
       when(mockTodayRepository.now()).thenReturn(DateTime.parse("2020-09-19"));
 
-      final lastTakenDate = today().add(Duration(days: PillSheetType.pillsheet_21.totalCount + 1));
+      final lastTakenDate = today().add(Duration(days: PillSheetType.pillsheet_21.totalCount - 1));
       final actual = Pill.generateAndFillTo(
         pillSheetType: PillSheetType.pillsheet_21,
         fromDate: now(),
