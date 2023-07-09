@@ -87,4 +87,30 @@ class Pill with _$Pill {
       );
     });
   }
+
+  @visibleForTesting
+  static List<Pill> testGenerateAndIterateTo({
+    required PillSheetType pillSheetType,
+    required DateTime fromDate,
+    required DateTime? lastTakenDate,
+    required int pillTakenCount,
+  }) {
+    return List.generate(pillSheetType.totalCount, (index) {
+      final date = fromDate.add(Duration(days: index));
+      return Pill(
+        index: index,
+        createdDateTime: now(),
+        updatedDateTime: now(),
+        pillTakens: lastTakenDate != null && (date.isBefore(lastTakenDate) || isSameDay(date, lastTakenDate))
+            ? List.generate(
+                pillTakenCount,
+                (i) {
+                  // generateAndFillToとの違いはここになる。lastTakenDateではなく、そのピルが通常服用する予定だった服用日がtakenDateTimeにセットされる
+                  return PillTaken(takenDateTime: date, createdDateTime: now(), updatedDateTime: now());
+                },
+              )
+            : [],
+      );
+    });
+  }
 }
