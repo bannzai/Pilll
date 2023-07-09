@@ -92,6 +92,7 @@ class AddPillSheetGroupPage extends HookConsumerWidget {
                                 setting: setting,
                                 pillSheetGroup: pillSheetGroup,
                                 pillSheetTypes: pillSheetTypes.value,
+                                takesTwicePerDay: pillSheetTakesTwicePerDay.value,
                                 displayNumberSetting: displayNumberSetting.value,
                               );
                               navigator.pop();

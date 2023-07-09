@@ -40,6 +40,7 @@ class AddPillSheetGroup {
     required Setting setting,
     required PillSheetGroup? pillSheetGroup,
     required List<PillSheetType> pillSheetTypes,
+    required bool takesTwicePerDay,
     required PillSheetGroupDisplayNumberSetting? displayNumberSetting,
   }) async {
     final batch = batchFactory.batch();
@@ -59,6 +60,7 @@ class AddPillSheetGroup {
         pills: Pill.generate(
           pillSheetType,
         ),
+        pillTakenCount: takesTwicePerDay ? 2 : 1,
         createdAt: now(),
       );
     }).toList();
