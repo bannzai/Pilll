@@ -3,11 +3,13 @@ import 'package:flutter_test/flutter_test.dart';
 import 'package:mockito/mockito.dart';
 import 'package:pilll/entity/pill.codegen.dart';
 import 'package:pilll/entity/pill_sheet_modified_history.codegen.dart';
+import 'package:pilll/provider/revert_take_pill.dart';
 import 'package:pilll/provider/take_pill.dart';
 import 'package:pilll/entity/pill_sheet.codegen.dart';
 import 'package:pilll/entity/pill_sheet_group.codegen.dart';
 import 'package:pilll/entity/pill_sheet_type.dart';
 import 'package:pilll/utils/datetime/day.dart';
+import 'package:pilll/utils/emoji/emoji.dart';
 
 import '../helper/mock.mocks.dart';
 
@@ -37,7 +39,7 @@ void main() {
         beginingDate: activePillSheetBeginDate.subtract(const Duration(days: 28)),
         lastTakenDate: activePillSheetBeginDate.subtract(const Duration(days: 1)),
         createdAt: now(),
-        pills: Pill.testGenerateAndIterateTo(
+        pills: Pill.generateAndFillTo(
           pillSheetType: PillSheetType.pillsheet_28_7,
           fromDate: activePillSheetBeginDate.subtract(const Duration(days: 28)),
           lastTakenDate: activePillSheetBeginDate.subtract(const Duration(days: 1)),
@@ -51,7 +53,7 @@ void main() {
         beginingDate: activePillSheetBeginDate,
         lastTakenDate: activePillSheetLastTakenDate,
         createdAt: now(),
-        pills: Pill.testGenerateAndIterateTo(
+        pills: Pill.generateAndFillTo(
             pillSheetType: PillSheetType.pillsheet_28_7,
             fromDate: activePillSheetBeginDate,
             lastTakenDate: activePillSheetLastTakenDate,
@@ -64,7 +66,7 @@ void main() {
         beginingDate: activePillSheetBeginDate.add(const Duration(days: 28)),
         lastTakenDate: null,
         createdAt: now(),
-        pills: Pill.testGenerateAndIterateTo(
+        pills: Pill.generateAndFillTo(
             pillSheetType: PillSheetType.pillsheet_28_7,
             fromDate: activePillSheetBeginDate.add(const Duration(days: 28)),
             lastTakenDate: null,
@@ -99,7 +101,7 @@ void main() {
         beginingDate: activePillSheetBeginDate.subtract(const Duration(days: 28)),
         lastTakenDate: activePillSheetBeginDate.subtract(const Duration(days: 1)),
         createdAt: now(),
-        pills: Pill.testGenerateAndIterateTo(
+        pills: Pill.generateAndFillTo(
           pillSheetType: PillSheetType.pillsheet_28_7,
           fromDate: activePillSheetBeginDate.subtract(const Duration(days: 28)),
           lastTakenDate: activePillSheetBeginDate.subtract(const Duration(days: 1)),
@@ -113,7 +115,7 @@ void main() {
         beginingDate: activePillSheetBeginDate,
         lastTakenDate: activePillSheetLastTakenDate,
         createdAt: now(),
-        pills: Pill.testGenerateAndIterateTo(
+        pills: Pill.generateAndFillTo(
             pillSheetType: PillSheetType.pillsheet_28_7,
             fromDate: activePillSheetBeginDate,
             lastTakenDate: activePillSheetLastTakenDate,
@@ -126,7 +128,7 @@ void main() {
         beginingDate: activePillSheetBeginDate.add(const Duration(days: 28)),
         lastTakenDate: null,
         createdAt: now(),
-        pills: Pill.testGenerateAndIterateTo(
+        pills: Pill.generateAndFillTo(
             pillSheetType: PillSheetType.pillsheet_28_7,
             fromDate: activePillSheetBeginDate.add(const Duration(days: 28)),
             lastTakenDate: null,
@@ -388,7 +390,16 @@ void main() {
           "bounday test. activePillSheet.lastTakenDate != null and taken activePillSheet.estimatedEndTakenDate + 1.second. it is over active pill sheet range pattern. ",
           () async {
         final takenDate = activedPillSheet.estimatedEndTakenDate.add(const Duration(seconds: 1));
-        activedPillSheet = activedPillSheet.takenPillSheet(activedPillSheet.estimatedEndTakenDate.subtract(const Duration(days: 10)));
+        final lastTakenDate = activedPillSheet.estimatedEndTakenDate.subtract(const Duration(days: 10));
+        activedPillSheet = activedPillSheet.copyWith(
+          lastTakenDate: lastTakenDate,
+          pills: Pill.testGenerateAndIterateTo(
+            pillSheetType: activedPillSheet.pillSheetType,
+            fromDate: activedPillSheet.beginingDate,
+            lastTakenDate: lastTakenDate,
+            pillTakenCount: 1,
+          ),
+        );
         pillSheetGroup = PillSheetGroup(
           id: "group_id",
           pillSheetIDs: [previousPillSheet.id!, activedPillSheet.id!, nextPillSheet.id!],
@@ -429,9 +440,9 @@ void main() {
           isQuickRecord: false,
         );
 
-        verifyNever(batchSetPillSheetModifiedHistory(batch, history));
-        verifyNever(batchSetPillSheetGroup(batch, updatedPillSheetGroup));
-        expect(result, isNull);
+        verify(batchSetPillSheetModifiedHistory(batch, history));
+        verify(batchSetPillSheetGroup(batch, updatedPillSheetGroup));
+        expect(result, isNotNull);
       });
       test("when previous pill sheet is not taken all.", () async {
         final takenDate = mockNow.add(const Duration(seconds: 1));
@@ -675,7 +686,7 @@ void main() {
           beginingDate: activePillSheetBeginDate.add(const Duration(days: 28)),
           lastTakenDate: null,
           createdAt: now(),
-          pills: Pill.testGenerateAndIterateTo(
+          pills: Pill.generateAndFillTo(
               pillSheetType: PillSheetType.pillsheet_28_7,
               fromDate: activePillSheetBeginDate.add(const Duration(days: 28)),
               lastTakenDate: null,
