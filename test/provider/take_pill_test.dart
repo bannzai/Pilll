@@ -11,7 +11,7 @@ import 'package:pilll/utils/datetime/day.dart';
 import '../helper/mock.mocks.dart';
 
 void main() {
-  final mockToday = DateTime.parse("2022-07-24T19:02:00");
+  final mockNow = DateTime.parse("2022-07-24T19:02:00");
   late DateTime activePillSheetBeginDate;
   late DateTime? activePillSheetLastTakenDate;
   late PillSheet previousPillSheet;
@@ -25,7 +25,7 @@ void main() {
 
       final mockTodayRepository = MockTodayService();
       todayRepository = mockTodayRepository;
-      when(mockTodayRepository.now()).thenReturn(mockToday);
+      when(mockTodayRepository.now()).thenReturn(mockNow);
 
       activePillSheetBeginDate = today();
       activePillSheetLastTakenDate = null;
@@ -84,7 +84,7 @@ void main() {
 
       final mockTodayRepository = MockTodayService();
       todayRepository = mockTodayRepository;
-      when(mockTodayRepository.now()).thenReturn(mockToday);
+      when(mockTodayRepository.now()).thenReturn(mockNow);
 
       activePillSheetBeginDate = today();
       activePillSheetLastTakenDate = null;
@@ -133,12 +133,12 @@ void main() {
           id: "group_id",
           pillSheetIDs: [activedPillSheet.id!],
           pillSheets: [activedPillSheet],
-          createdAt: mockToday,
+          createdAt: mockNow,
         );
       });
 
       test("take pill", () async {
-        final takenDate = mockToday.add(const Duration(seconds: 1));
+        final takenDate = mockNow.add(const Duration(seconds: 1));
 
         final batchFactory = MockBatchFactory();
         final batch = MockWriteBatch();
@@ -180,7 +180,7 @@ void main() {
       });
 
       test("activedPillSheet.todayPillsAreAlreadyTaken", () async {
-        final takenDate = mockToday.add(const Duration(seconds: 1));
+        final takenDate = mockNow.add(const Duration(seconds: 1));
         activedPillSheet = activedPillSheet.updatedLastTaken(takenDate);
 
         final batchFactory = MockBatchFactory();
@@ -206,12 +206,12 @@ void main() {
 
     group("three pill sheet", () {
       test("take pill", () async {
-        final takenDate = mockToday.add(const Duration(seconds: 1));
+        final takenDate = mockNow.add(const Duration(seconds: 1));
         pillSheetGroup = PillSheetGroup(
           id: "group_id",
           pillSheetIDs: [previousPillSheet.id!, activedPillSheet.id!, nextPillSheet.id!],
           pillSheets: [previousPillSheet, activedPillSheet, nextPillSheet],
-          createdAt: mockToday,
+          createdAt: mockNow,
         );
 
         final batchFactory = MockBatchFactory();
@@ -253,13 +253,13 @@ void main() {
       });
 
       test("activedPillSheet.todayPillsAreAlreadyTaken", () async {
-        final takenDate = mockToday.add(const Duration(seconds: 1));
+        final takenDate = mockNow.add(const Duration(seconds: 1));
         activedPillSheet = activedPillSheet.updatedLastTaken(takenDate);
         pillSheetGroup = PillSheetGroup(
           id: "group_id",
           pillSheetIDs: [previousPillSheet.id!, activedPillSheet.id!, nextPillSheet.id!],
           pillSheets: [previousPillSheet, activedPillSheet, nextPillSheet],
-          createdAt: mockToday,
+          createdAt: mockNow,
         );
 
         final batchFactory = MockBatchFactory();
@@ -288,7 +288,7 @@ void main() {
           id: "group_id",
           pillSheetIDs: [previousPillSheet.id!, activedPillSheet.id!, nextPillSheet.id!],
           pillSheets: [previousPillSheet, activedPillSheet, nextPillSheet],
-          createdAt: mockToday,
+          createdAt: mockNow,
         );
 
         final batchFactory = MockBatchFactory();
@@ -335,7 +335,7 @@ void main() {
           id: "group_id",
           pillSheetIDs: [previousPillSheet.id!, activedPillSheet.id!, nextPillSheet.id!],
           pillSheets: [previousPillSheet, activedPillSheet, nextPillSheet],
-          createdAt: mockToday,
+          createdAt: mockNow,
         );
 
         final batchFactory = MockBatchFactory();
@@ -386,7 +386,7 @@ void main() {
           id: "group_id",
           pillSheetIDs: [previousPillSheet.id!, activedPillSheet.id!, nextPillSheet.id!],
           pillSheets: [previousPillSheet, activedPillSheet, nextPillSheet],
-          createdAt: mockToday,
+          createdAt: mockNow,
         );
 
         final batchFactory = MockBatchFactory();
@@ -427,13 +427,13 @@ void main() {
         expect(result, isNull);
       });
       test("when previous pill sheet is not taken all.", () async {
-        final takenDate = mockToday.add(const Duration(seconds: 1));
+        final takenDate = mockNow.add(const Duration(seconds: 1));
         previousPillSheet = previousPillSheet.updatedLastTaken(previousPillSheet.lastTakenDate!.subtract(const Duration(days: 1)));
         pillSheetGroup = PillSheetGroup(
           id: "group_id",
           pillSheetIDs: [previousPillSheet.id!, activedPillSheet.id!, nextPillSheet.id!],
           pillSheets: [previousPillSheet, activedPillSheet, nextPillSheet],
-          createdAt: mockToday,
+          createdAt: mockNow,
         );
 
         final batchFactory = MockBatchFactory();
@@ -480,7 +480,7 @@ void main() {
           id: "group_id",
           pillSheetIDs: [previousPillSheet.id!, activedPillSheet.id!, nextPillSheet.id!],
           pillSheets: [previousPillSheet, activedPillSheet, nextPillSheet],
-          createdAt: mockToday,
+          createdAt: mockNow,
         );
         final takenDate = previousPillSheet.estimatedEndTakenDate;
 
@@ -532,7 +532,7 @@ void main() {
           id: "group_id",
           pillSheetIDs: [previousPillSheet.id!, activedPillSheet.id!, nextPillSheet.id!],
           pillSheets: [previousPillSheet, activedPillSheet, nextPillSheet],
-          createdAt: mockToday,
+          createdAt: mockNow,
         );
         final takenDate = previousPillSheet.estimatedEndTakenDate.subtract(const Duration(seconds: 1));
 
@@ -589,15 +589,15 @@ void main() {
           id: "group_id",
           pillSheetIDs: [previousPillSheet.id!, activedPillSheet.id!, nextPillSheet.id!],
           pillSheets: [previousPillSheet, activedPillSheet, nextPillSheet],
-          createdAt: mockToday,
+          createdAt: mockNow,
         );
 
-        final takenDate = mockToday.add(const Duration(seconds: 1));
+        final takenDate = mockNow.add(const Duration(seconds: 1));
         pillSheetGroup = PillSheetGroup(
           id: "group_id",
           pillSheetIDs: [previousPillSheet.id!, activedPillSheet.id!, nextPillSheet.id!],
           pillSheets: [previousPillSheet, activedPillSheet, nextPillSheet],
-          createdAt: mockToday,
+          createdAt: mockNow,
         );
 
         final batchFactory = MockBatchFactory();
