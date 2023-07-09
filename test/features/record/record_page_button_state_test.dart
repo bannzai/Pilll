@@ -37,7 +37,8 @@ void main() {
         beginingDate: yesterday,
         lastTakenDate: yesterday,
         createdAt: now(),
-        pills: Pill.generateAndFillTo(pillSheetType: PillSheetType.pillsheet_21, fromDate: yesterday, lastTakenDate: yesterday, pillTakenCount: 1),
+        pills: Pill.testGenerateAndIterateTo(
+            pillSheetType: PillSheetType.pillsheet_21, fromDate: yesterday, lastTakenDate: yesterday, pillTakenCount: 1),
       );
 
       await tester.pumpWidget(
@@ -65,7 +66,7 @@ void main() {
       beginingDate: today(),
       lastTakenDate: today(),
       createdAt: now(),
-      pills: Pill.generateAndFillTo(pillSheetType: PillSheetType.pillsheet_21, fromDate: today(), lastTakenDate: today(), pillTakenCount: 1),
+      pills: Pill.testGenerateAndIterateTo(pillSheetType: PillSheetType.pillsheet_21, fromDate: today(), lastTakenDate: today(), pillTakenCount: 1),
     );
 
     expect(true, pillSheet.todayPillsAreAlreadyTaken);

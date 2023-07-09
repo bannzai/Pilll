@@ -38,7 +38,7 @@ void main() {
             beginingDate: firstPillSheetBeginDate,
             lastTakenDate: null,
             createdAt: now(),
-            pills: Pill.generateAndFillTo(
+            pills: Pill.testGenerateAndIterateTo(
                 pillSheetType: PillSheetType.pillsheet_28_0, fromDate: firstPillSheetBeginDate, lastTakenDate: null, pillTakenCount: 1),
           ),
           PillSheet(
@@ -47,7 +47,7 @@ void main() {
             beginingDate: firstPillSheetBeginDate.add(const Duration(days: 28)),
             lastTakenDate: null,
             createdAt: now(),
-            pills: Pill.generateAndFillTo(
+            pills: Pill.testGenerateAndIterateTo(
                 pillSheetType: PillSheetType.pillsheet_28_0,
                 fromDate: firstPillSheetBeginDate.add(const Duration(days: 28)),
                 lastTakenDate: null,
@@ -59,7 +59,7 @@ void main() {
             beginingDate: firstPillSheetBeginDate.add(const Duration(days: 56)),
             lastTakenDate: null,
             createdAt: now(),
-            pills: Pill.generateAndFillTo(
+            pills: Pill.testGenerateAndIterateTo(
                 pillSheetType: PillSheetType.pillsheet_28_0,
                 fromDate: firstPillSheetBeginDate.add(const Duration(days: 56)),
                 lastTakenDate: null,
@@ -113,7 +113,7 @@ void main() {
             beginingDate: firstPillSheetBeginDate,
             lastTakenDate: null,
             createdAt: now(),
-            pills: Pill.generateAndFillTo(
+            pills: Pill.testGenerateAndIterateTo(
                 pillSheetType: PillSheetType.pillsheet_28_0, fromDate: firstPillSheetBeginDate, lastTakenDate: null, pillTakenCount: 1),
           ),
           PillSheet(
@@ -122,7 +122,7 @@ void main() {
             beginingDate: firstPillSheetBeginDate.add(const Duration(days: 28)),
             lastTakenDate: null,
             createdAt: now(),
-            pills: Pill.generateAndFillTo(
+            pills: Pill.testGenerateAndIterateTo(
                 pillSheetType: PillSheetType.pillsheet_28_0,
                 fromDate: firstPillSheetBeginDate.add(const Duration(days: 28)),
                 lastTakenDate: null,
@@ -134,7 +134,7 @@ void main() {
             beginingDate: firstPillSheetBeginDate.add(const Duration(days: 56)),
             lastTakenDate: null,
             createdAt: now(),
-            pills: Pill.generateAndFillTo(
+            pills: Pill.testGenerateAndIterateTo(
                 pillSheetType: PillSheetType.pillsheet_28_0,
                 fromDate: firstPillSheetBeginDate.add(const Duration(days: 56)),
                 lastTakenDate: null,
@@ -151,7 +151,7 @@ void main() {
             ),
           ],
           lastTakenDate: now(),
-          pills: Pill.generateAndFillTo(
+          pills: Pill.testGenerateAndIterateTo(
               pillSheetType: PillSheetType.pillsheet_28_0,
               fromDate: pillSheetGroup.activedPillSheet!.beginingDate,
               lastTakenDate: now(),
@@ -194,7 +194,7 @@ void main() {
             beginingDate: firstPillSheetBeginDate,
             lastTakenDate: null,
             createdAt: now(),
-            pills: Pill.generateAndFillTo(
+            pills: Pill.testGenerateAndIterateTo(
                 pillSheetType: PillSheetType.pillsheet_28_0, fromDate: firstPillSheetBeginDate, lastTakenDate: null, pillTakenCount: 1),
           ),
           PillSheet(
@@ -203,7 +203,7 @@ void main() {
             beginingDate: firstPillSheetBeginDate.add(const Duration(days: 28)),
             lastTakenDate: null,
             createdAt: now(),
-            pills: Pill.generateAndFillTo(
+            pills: Pill.testGenerateAndIterateTo(
                 pillSheetType: PillSheetType.pillsheet_28_0,
                 fromDate: firstPillSheetBeginDate.add(const Duration(days: 28)),
                 lastTakenDate: null,
@@ -215,7 +215,7 @@ void main() {
             beginingDate: firstPillSheetBeginDate.add(const Duration(days: 56)),
             lastTakenDate: null,
             createdAt: now(),
-            pills: Pill.generateAndFillTo(
+            pills: Pill.testGenerateAndIterateTo(
                 pillSheetType: PillSheetType.pillsheet_28_0,
                 fromDate: firstPillSheetBeginDate.add(const Duration(days: 56)),
                 lastTakenDate: null,

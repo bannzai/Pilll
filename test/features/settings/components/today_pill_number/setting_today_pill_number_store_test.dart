@@ -34,7 +34,8 @@ void main() {
         groupIndex: 0,
         lastTakenDate: null,
         createdAt: now(),
-        pills: Pill.generateAndFillTo(pillSheetType: PillSheetType.pillsheet_28_0, fromDate: mockToday, lastTakenDate: null, pillTakenCount: 1),
+        pills:
+            Pill.testGenerateAndIterateTo(pillSheetType: PillSheetType.pillsheet_28_0, fromDate: mockToday, lastTakenDate: null, pillTakenCount: 1),
       );
       final updatedPillSheet = pillSheet.copyWith(
         beginingDate: mockToday.subtract(
@@ -101,7 +102,8 @@ void main() {
         groupIndex: 0,
         lastTakenDate: mockToday,
         createdAt: now(),
-        pills: Pill.generateAndFillTo(pillSheetType: PillSheetType.pillsheet_28_0, fromDate: mockToday, lastTakenDate: mockToday, pillTakenCount: 1),
+        pills: Pill.testGenerateAndIterateTo(
+            pillSheetType: PillSheetType.pillsheet_28_0, fromDate: mockToday, lastTakenDate: mockToday, pillTakenCount: 1),
       );
       final updatedPillSheet = pillSheet.copyWith(
         beginingDate: mockToday.subtract(
@@ -168,7 +170,7 @@ void main() {
         groupIndex: 0,
         lastTakenDate: DateTime.parse("2022-04-30"),
         createdAt: now(),
-        pills: Pill.generateAndFillTo(
+        pills: Pill.testGenerateAndIterateTo(
             pillSheetType: PillSheetType.pillsheet_28_0,
             fromDate: DateTime.parse("2022-04-03"),
             lastTakenDate: DateTime.parse("2022-04-30"),
@@ -181,7 +183,7 @@ void main() {
         groupIndex: 1,
         lastTakenDate: null,
         createdAt: now(),
-        pills: Pill.generateAndFillTo(
+        pills: Pill.testGenerateAndIterateTo(
             pillSheetType: PillSheetType.pillsheet_28_0,
             fromDate: DateTime.parse("2022-05-01"),
             lastTakenDate: DateTime.parse("2022-05-01"),
@@ -194,7 +196,7 @@ void main() {
         groupIndex: 2,
         lastTakenDate: null,
         createdAt: now(),
-        pills: Pill.generateAndFillTo(
+        pills: Pill.testGenerateAndIterateTo(
             pillSheetType: PillSheetType.pillsheet_28_0, fromDate: DateTime.parse("2022-05-29"), lastTakenDate: null, pillTakenCount: 1),
       );
       final updatedLeft = left.copyWith(
@@ -269,7 +271,7 @@ void main() {
         groupIndex: 0,
         lastTakenDate: DateTime.parse("2022-04-30"),
         createdAt: now(),
-        pills: Pill.generateAndFillTo(
+        pills: Pill.testGenerateAndIterateTo(
             pillSheetType: PillSheetType.pillsheet_28_0,
             fromDate: DateTime.parse("2022-04-03"),
             lastTakenDate: DateTime.parse("2022-04-30"),
@@ -282,7 +284,7 @@ void main() {
         groupIndex: 1,
         lastTakenDate: DateTime.parse("2022-05-01"),
         createdAt: now(),
-        pills: Pill.generateAndFillTo(
+        pills: Pill.testGenerateAndIterateTo(
             pillSheetType: PillSheetType.pillsheet_28_0,
             fromDate: DateTime.parse("2022-05-01"),
             lastTakenDate: DateTime.parse("2022-05-01"),
@@ -295,7 +297,7 @@ void main() {
         groupIndex: 2,
         lastTakenDate: null,
         createdAt: now(),
-        pills: Pill.generateAndFillTo(
+        pills: Pill.testGenerateAndIterateTo(
             pillSheetType: PillSheetType.pillsheet_28_0, fromDate: DateTime.parse("2022-05-29"), lastTakenDate: null, pillTakenCount: 1),
       );
       final updatedLeft = left.copyWith(
@@ -371,7 +373,7 @@ void main() {
         groupIndex: 0,
         lastTakenDate: DateTime.parse("2022-04-30"),
         createdAt: now(),
-        pills: Pill.generateAndFillTo(
+        pills: Pill.testGenerateAndIterateTo(
             pillSheetType: PillSheetType.pillsheet_28_0,
             fromDate: DateTime.parse("2022-04-03"),
             lastTakenDate: DateTime.parse("2022-04-30"),
@@ -384,7 +386,7 @@ void main() {
         groupIndex: 1,
         lastTakenDate: null,
         createdAt: now(),
-        pills: Pill.generateAndFillTo(
+        pills: Pill.testGenerateAndIterateTo(
             pillSheetType: PillSheetType.pillsheet_28_0, fromDate: DateTime.parse("2022-05-01"), lastTakenDate: null, pillTakenCount: 1),
       );
       final right = PillSheet(
@@ -394,7 +396,7 @@ void main() {
         groupIndex: 2,
         lastTakenDate: null,
         createdAt: now(),
-        pills: Pill.generateAndFillTo(
+        pills: Pill.testGenerateAndIterateTo(
             pillSheetType: PillSheetType.pillsheet_28_0, fromDate: DateTime.parse("2022-05-29"), lastTakenDate: null, pillTakenCount: 1),
       );
       final updatedLeft = left.copyWith(
@@ -473,7 +475,7 @@ void main() {
         groupIndex: 0,
         lastTakenDate: DateTime.parse("2022-04-30"),
         createdAt: now(),
-        pills: Pill.generateAndFillTo(
+        pills: Pill.testGenerateAndIterateTo(
             pillSheetType: PillSheetType.pillsheet_28_0,
             fromDate: DateTime.parse("2022-04-03"),
             lastTakenDate: DateTime.parse("2022-04-30"),
@@ -493,7 +495,7 @@ void main() {
         groupIndex: 1,
         lastTakenDate: null,
         createdAt: now(),
-        pills: Pill.generateAndFillTo(
+        pills: Pill.testGenerateAndIterateTo(
             pillSheetType: PillSheetType.pillsheet_28_0, fromDate: DateTime.parse("2022-05-02"), lastTakenDate: null, pillTakenCount: 1),
       );
       final right = PillSheet(
@@ -503,7 +505,7 @@ void main() {
         groupIndex: 2,
         lastTakenDate: null,
         createdAt: now(),
-        pills: Pill.generateAndFillTo(
+        pills: Pill.testGenerateAndIterateTo(
             pillSheetType: PillSheetType.pillsheet_28_0, fromDate: DateTime.parse("2022-05-29"), lastTakenDate: null, pillTakenCount: 1),
       );
       final updatedLeft = left.copyWith(
