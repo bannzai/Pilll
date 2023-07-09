@@ -16,15 +16,14 @@ void main() {
     SharedPreferences.setMockInitialValues({});
   });
 
-  group("#testGenerateAndIterateTo", () {
+  group("#generateAndFillTo", () {
     group("pillTakenCount = 1", () {
       test("lastTakenDate is null", () {
         final mockTodayRepository = MockTodayService();
         todayRepository = mockTodayRepository;
         when(mockTodayRepository.now()).thenReturn(DateTime.parse("2020-09-19"));
 
-        final actual =
-            Pill.testGenerateAndIterateTo(pillSheetType: PillSheetType.pillsheet_21, fromDate: now(), lastTakenDate: null, pillTakenCount: 1);
+        final actual = Pill.generateAndFillTo(pillSheetType: PillSheetType.pillsheet_21, fromDate: now(), lastTakenDate: null, pillTakenCount: 1);
         final expected = [
           for (var i = 0; i < PillSheetType.pillsheet_21.totalCount; i++)
             Pill(index: i, createdDateTime: now(), updatedDateTime: now(), pillTakens: []),
@@ -36,7 +35,7 @@ void main() {
         todayRepository = mockTodayRepository;
         when(mockTodayRepository.now()).thenReturn(DateTime.parse("2020-09-19"));
 
-        final actual = Pill.testGenerateAndIterateTo(
+        final actual = Pill.generateAndFillTo(
             pillSheetType: PillSheetType.pillsheet_21, fromDate: now(), lastTakenDate: DateTime.parse("2020-09-18"), pillTakenCount: 1);
         final expected = [
           for (var i = 0; i < PillSheetType.pillsheet_21.totalCount; i++)
@@ -49,8 +48,7 @@ void main() {
         todayRepository = mockTodayRepository;
         when(mockTodayRepository.now()).thenReturn(DateTime.parse("2020-09-19"));
 
-        final actual =
-            Pill.testGenerateAndIterateTo(pillSheetType: PillSheetType.pillsheet_21, fromDate: now(), lastTakenDate: today(), pillTakenCount: 1);
+        final actual = Pill.generateAndFillTo(pillSheetType: PillSheetType.pillsheet_21, fromDate: now(), lastTakenDate: today(), pillTakenCount: 1);
         final expected = [
           Pill(
             index: 0,
@@ -71,7 +69,7 @@ void main() {
         when(mockTodayRepository.now()).thenReturn(DateTime.parse("2020-09-19"));
 
         final lastTakenDate = today().add(Duration(days: PillSheetType.pillsheet_21.totalCount - 1 - 1));
-        final actual = Pill.testGenerateAndIterateTo(
+        final actual = Pill.generateAndFillTo(
           pillSheetType: PillSheetType.pillsheet_21,
           fromDate: now(),
           lastTakenDate: lastTakenDate,
@@ -102,7 +100,7 @@ void main() {
         when(mockTodayRepository.now()).thenReturn(DateTime.parse("2020-09-19"));
 
         final lastTakenDate = today().add(Duration(days: PillSheetType.pillsheet_21.totalCount - 1));
-        final actual = Pill.testGenerateAndIterateTo(
+        final actual = Pill.generateAndFillTo(
           pillSheetType: PillSheetType.pillsheet_21,
           fromDate: now(),
           lastTakenDate: lastTakenDate,
@@ -128,8 +126,7 @@ void main() {
         todayRepository = mockTodayRepository;
         when(mockTodayRepository.now()).thenReturn(DateTime.parse("2020-09-19"));
 
-        final actual =
-            Pill.testGenerateAndIterateTo(pillSheetType: PillSheetType.pillsheet_21, fromDate: now(), lastTakenDate: null, pillTakenCount: 2);
+        final actual = Pill.generateAndFillTo(pillSheetType: PillSheetType.pillsheet_21, fromDate: now(), lastTakenDate: null, pillTakenCount: 2);
         final expected = [
           for (var i = 0; i < PillSheetType.pillsheet_21.totalCount; i++)
             Pill(index: i, createdDateTime: now(), updatedDateTime: now(), pillTakens: []),
@@ -141,7 +138,7 @@ void main() {
         todayRepository = mockTodayRepository;
         when(mockTodayRepository.now()).thenReturn(DateTime.parse("2020-09-19"));
 
-        final actual = Pill.testGenerateAndIterateTo(
+        final actual = Pill.generateAndFillTo(
             pillSheetType: PillSheetType.pillsheet_21, fromDate: now(), lastTakenDate: DateTime.parse("2020-09-18"), pillTakenCount: 2);
         final expected = [
           for (var i = 0; i < PillSheetType.pillsheet_21.totalCount; i++)
@@ -154,8 +151,7 @@ void main() {
         todayRepository = mockTodayRepository;
         when(mockTodayRepository.now()).thenReturn(DateTime.parse("2020-09-19"));
 
-        final actual =
-            Pill.testGenerateAndIterateTo(pillSheetType: PillSheetType.pillsheet_21, fromDate: now(), lastTakenDate: today(), pillTakenCount: 2);
+        final actual = Pill.generateAndFillTo(pillSheetType: PillSheetType.pillsheet_21, fromDate: now(), lastTakenDate: today(), pillTakenCount: 2);
         final expected = [
           Pill(
             index: 0,
@@ -177,7 +173,7 @@ void main() {
         when(mockTodayRepository.now()).thenReturn(DateTime.parse("2020-09-19"));
 
         final lastTakenDate = today().add(Duration(days: PillSheetType.pillsheet_21.totalCount - 1 - 1));
-        final actual = Pill.testGenerateAndIterateTo(
+        final actual = Pill.generateAndFillTo(
           pillSheetType: PillSheetType.pillsheet_21,
           fromDate: now(),
           lastTakenDate: lastTakenDate,
@@ -209,7 +205,7 @@ void main() {
         when(mockTodayRepository.now()).thenReturn(DateTime.parse("2020-09-19"));
 
         final lastTakenDate = today().add(Duration(days: PillSheetType.pillsheet_21.totalCount - 1));
-        final actual = Pill.testGenerateAndIterateTo(
+        final actual = Pill.generateAndFillTo(
           pillSheetType: PillSheetType.pillsheet_21,
           fromDate: now(),
           lastTakenDate: lastTakenDate,
