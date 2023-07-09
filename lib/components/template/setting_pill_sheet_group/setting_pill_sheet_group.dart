@@ -1,10 +1,12 @@
+import 'package:flutter_hooks/flutter_hooks.dart';
+import 'package:hooks_riverpod/hooks_riverpod.dart';
 import 'package:pilll/components/template/setting_pill_sheet_group/pill_sheet_type_add_button.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:pilll/components/template/setting_pill_sheet_group/setting_pill_sheet_group_pill_sheet_type_select_row.dart';
 import 'package:pilll/entity/pill_sheet_type.dart';
 
-class SettingPillSheetGroup extends StatelessWidget {
+class SettingPillSheetGroup extends HookConsumerWidget {
   const SettingPillSheetGroup({
     Key? key,
     required this.pillSheetTypes,
@@ -19,7 +21,8 @@ class SettingPillSheetGroup extends StatelessWidget {
   final Function(int) onDelete;
 
   @override
-  Widget build(BuildContext context) {
+  Widget build(BuildContext context, WidgetRef ref) {
+    final pillSheetIsTwoTaken = useState(false);
     return Column(
       children: [
         for (var i = 0; i < pillSheetTypes.length; i++) ...[
@@ -31,6 +34,11 @@ class SettingPillSheetGroup extends StatelessWidget {
             onDelete: onDelete,
           ),
         ],
+        Row(children: [
+          const Text("1日に2回服用する"),
+          const Spacer(),
+          Switch(value: pillSheetIsTwoTaken.value, onChanged: (value) => pillSheetIsTwoTaken.value = value)
+        ]),
         if (pillSheetTypes.length < 7) ...[
           const SizedBox(height: 24),
           PillSheetTypeAddButton(
