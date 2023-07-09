@@ -45,17 +45,17 @@ class SettingPillSheetGroup extends StatelessWidget {
   }
 }
 
-class SettingPillSheetIsTwoTakenToggle extends HookConsumerWidget {
-  final bool initialValue;
-  final Function(bool) onChanged;
-  const SettingPillSheetIsTwoTakenToggle({Key? key, required this.initialValue, required this.onChanged}) : super(key: key);
+class SettingPillSheetTakesTwicePerDayToggle extends HookConsumerWidget {
+  final ValueNotifier<bool> value;
+
+  const SettingPillSheetTakesTwicePerDayToggle(this.value, {Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {
     return Row(children: [
       const Text("1日に2回服用する"),
       const Spacer(),
-      Switch(value: initialValue, onChanged: onChanged),
+      Switch(value: value.value, onChanged: (value) => this.value.value = value),
     ]);
   }
 }

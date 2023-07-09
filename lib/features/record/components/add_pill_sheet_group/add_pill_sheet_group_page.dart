@@ -24,6 +24,7 @@ class AddPillSheetGroupPage extends HookConsumerWidget {
     final addPillSheetGroup = ref.watch(addPillSheetGroupProvider);
     final pillSheetTypes = useState(setting.pillSheetEnumTypes);
     final displayNumberSetting = useState<PillSheetGroupDisplayNumberSetting?>(null);
+    final pillSheetTakesTwicePerDay = useState(false);
 
     return Scaffold(
       backgroundColor: PilllColors.background,
@@ -70,6 +71,8 @@ class AddPillSheetGroupPage extends HookConsumerWidget {
                     child: Column(
                       mainAxisSize: MainAxisSize.min,
                       children: [
+                        const SizedBox(height: 20),
+                        SettingPillSheetTakesTwicePerDayToggle(pillSheetTakesTwicePerDay),
                         if (pillSheetGroup != null)
                           DisplayNumberSetting(
                               pillSheetAppearanceMode: setting.pillSheetAppearanceMode,
