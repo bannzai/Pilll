@@ -40,7 +40,7 @@ void main() {
         lastTakenDate: null,
         beginingDate: now(),
         createdAt: now(),
-        pills: Pill.generateAndFillTo(pillSheetType: PillSheetType.pillsheet_28_0, fromDate: now(), toDate: null),
+        pills: Pill.generateAndFillTo(pillSheetType: PillSheetType.pillsheet_28_0, fromDate: now(), toDate: null, pillTakenCount: 1),
       );
       final updatedPillSheet = pillSheet.copyWith(restDurations: [notYetEndRestDuration]);
 
@@ -100,7 +100,7 @@ void main() {
         lastTakenDate: null,
         restDurations: [notYetEndRestDuration],
         createdAt: now(),
-        pills: Pill.generateAndFillTo(pillSheetType: PillSheetType.pillsheet_28_0, fromDate: now(), toDate: null),
+        pills: Pill.generateAndFillTo(pillSheetType: PillSheetType.pillsheet_28_0, fromDate: now(), toDate: null, pillTakenCount: 1),
       );
       final updatedPillSheet = pillSheet.copyWith(restDurations: [endedRestDuration]);
 
@@ -161,7 +161,8 @@ void main() {
           lastTakenDate: null,
           restDurations: [notYetEndRestDuration],
           createdAt: now(),
-          pills: Pill.generateAndFillTo(pillSheetType: PillSheetType.pillsheet_28_0, fromDate: firstPillSheetBeginDate, toDate: null),
+          pills:
+              Pill.generateAndFillTo(pillSheetType: PillSheetType.pillsheet_28_0, fromDate: firstPillSheetBeginDate, toDate: null, pillTakenCount: 1),
         ),
         PillSheet(
           id: "pill_sheet_id_2",

@@ -125,7 +125,8 @@ void main() {
               beginingDate: DateTime(2021, 04, 22),
               lastTakenDate: null,
               createdAt: now(),
-              pills: Pill.generateAndFillTo(pillSheetType: PillSheetType.pillsheet_21, fromDate: DateTime(2021, 04, 22), toDate: null),
+              pills: Pill.generateAndFillTo(
+                  pillSheetType: PillSheetType.pillsheet_21, fromDate: DateTime(2021, 04, 22), toDate: null, pillTakenCount: 1),
             ),
           ],
           createdAt: now(),
@@ -168,7 +169,8 @@ void main() {
               beginingDate: DateTime(2021, 04, 07),
               lastTakenDate: null,
               createdAt: now(),
-              pills: Pill.generateAndFillTo(pillSheetType: PillSheetType.pillsheet_21, fromDate: DateTime(2021, 04, 07), toDate: null),
+              pills: Pill.generateAndFillTo(
+                  pillSheetType: PillSheetType.pillsheet_21, fromDate: DateTime(2021, 04, 07), toDate: null, pillTakenCount: 1),
             ),
           ],
           createdAt: now(),
