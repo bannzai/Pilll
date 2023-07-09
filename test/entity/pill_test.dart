@@ -159,6 +159,7 @@ void main() {
             updatedDateTime: now(),
             pillTakens: [
               PillTaken(takenDateTime: today(), createdDateTime: now(), updatedDateTime: now(), isAutomaticallyRecorded: false),
+              PillTaken(takenDateTime: today(), createdDateTime: now(), updatedDateTime: now(), isAutomaticallyRecorded: false),
             ],
           ),
           for (var i = 1; i < PillSheetType.pillsheet_21.totalCount; i++)
@@ -185,6 +186,7 @@ void main() {
               createdDateTime: now(),
               updatedDateTime: now(),
               pillTakens: [
+                PillTaken(takenDateTime: lastTakenDate, createdDateTime: now(), updatedDateTime: now(), isAutomaticallyRecorded: false),
                 PillTaken(takenDateTime: lastTakenDate, createdDateTime: now(), updatedDateTime: now(), isAutomaticallyRecorded: false),
               ],
             ),
@@ -216,6 +218,7 @@ void main() {
               createdDateTime: now(),
               updatedDateTime: now(),
               pillTakens: [
+                PillTaken(takenDateTime: lastTakenDate, createdDateTime: now(), updatedDateTime: now(), isAutomaticallyRecorded: false),
                 PillTaken(takenDateTime: lastTakenDate, createdDateTime: now(), updatedDateTime: now(), isAutomaticallyRecorded: false),
               ],
             ),
