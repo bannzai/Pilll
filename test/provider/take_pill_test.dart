@@ -446,7 +446,16 @@ void main() {
       });
       test("when previous pill sheet is not taken all.", () async {
         final takenDate = mockNow.add(const Duration(seconds: 1));
-        previousPillSheet = previousPillSheet.takenPillSheet(previousPillSheet.lastTakenDate!.subtract(const Duration(days: 1)));
+        final lastTakenDate = previousPillSheet.lastTakenDate!.subtract(const Duration(days: 1));
+        previousPillSheet = previousPillSheet.copyWith(
+          lastTakenDate: lastTakenDate,
+          pills: Pill.testGenerateAndIterateTo(
+            pillSheetType: activedPillSheet.pillSheetType,
+            fromDate: activedPillSheet.beginingDate,
+            lastTakenDate: lastTakenDate,
+            pillTakenCount: 1,
+          ),
+        );
         pillSheetGroup = PillSheetGroup(
           id: "group_id",
           pillSheetIDs: [previousPillSheet.id!, activedPillSheet.id!, nextPillSheet.id!],
@@ -493,7 +502,16 @@ void main() {
         expect(result, updatedPillSheetGroup);
       });
       test("when previous pill sheet is not taken all. and takenDate is previous pill sheet estimate last taken date", () async {
-        previousPillSheet = previousPillSheet.takenPillSheet(previousPillSheet.lastTakenDate!.subtract(const Duration(days: 1)));
+        final lastTakenDate = previousPillSheet.lastTakenDate!.subtract(const Duration(days: 1));
+        previousPillSheet = previousPillSheet.copyWith(
+          lastTakenDate: lastTakenDate,
+          pills: Pill.testGenerateAndIterateTo(
+            pillSheetType: activedPillSheet.pillSheetType,
+            fromDate: activedPillSheet.beginingDate,
+            lastTakenDate: lastTakenDate,
+            pillTakenCount: 1,
+          ),
+        );
         pillSheetGroup = PillSheetGroup(
           id: "group_id",
           pillSheetIDs: [previousPillSheet.id!, activedPillSheet.id!, nextPillSheet.id!],
@@ -544,8 +562,27 @@ void main() {
       test(
           "when previous pill sheet is not taken all. And active pill sheet lastTakenDate equal beginDate minus 1 that means reverted taken first pill. And record previous pill sheet last taken date",
           () async {
-        previousPillSheet = previousPillSheet.takenPillSheet(previousPillSheet.lastTakenDate!.subtract(const Duration(days: 1)));
-        activedPillSheet = activedPillSheet.takenPillSheet(activedPillSheet.beginingDate.subtract(const Duration(days: 1)));
+        final previousPillSheetLastTakenDate = previousPillSheet.lastTakenDate!.subtract(const Duration(days: 1));
+        previousPillSheet = previousPillSheet.copyWith(
+          lastTakenDate: previousPillSheetLastTakenDate,
+          pills: Pill.testGenerateAndIterateTo(
+            pillSheetType: activedPillSheet.pillSheetType,
+            fromDate: activedPillSheet.beginingDate,
+            lastTakenDate: previousPillSheetLastTakenDate,
+            pillTakenCount: 1,
+          ),
+        );
+        final activePillSheetLastTakenDate = activedPillSheet.beginingDate.subtract(const Duration(days: 1));
+        activedPillSheet = activedPillSheet.copyWith(
+          lastTakenDate: activePillSheetLastTakenDate,
+          pills: Pill.testGenerateAndIterateTo(
+            pillSheetType: activedPillSheet.pillSheetType,
+            fromDate: activedPillSheet.beginingDate,
+            lastTakenDate: activePillSheetLastTakenDate,
+            pillTakenCount: 1,
+          ),
+        );
+
         pillSheetGroup = PillSheetGroup(
           id: "group_id",
           pillSheetIDs: [previousPillSheet.id!, activedPillSheet.id!, nextPillSheet.id!],
