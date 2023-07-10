@@ -9,6 +9,7 @@ import 'package:pilll/entity/setting.codegen.dart';
 import 'package:pilll/provider/revert_take_pill.dart';
 import 'package:pilll/provider/take_pill.dart';
 import 'package:pilll/utils/datetime/day.dart';
+import 'package:pilll/utils/emoji/emoji.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
 import '../../../helper/mock.mocks.dart';
@@ -518,7 +519,15 @@ void main() {
           pillSheetIDs: ["1", "2"],
           pillSheets: [
             pillSheet,
-            pillSheet2.takenPillSheet(yesterday),
+            pillSheet2.copyWith(
+              lastTakenDate: yesterday,
+              pills: Pill.testGenerateAndIterateTo(
+                pillSheetType: pillSheet2.pillSheetType,
+                fromDate: pillSheet2.beginingDate,
+                lastTakenDate: yesterday,
+                pillTakenCount: 1,
+              ),
+            ),
           ],
           createdAt: now(),
         );
@@ -608,8 +617,24 @@ void main() {
           id: "group_id",
           pillSheetIDs: ["1", "2"],
           pillSheets: [
-            pillSheet.takenPillSheet(mockToday.subtract(const Duration(days: 4))),
-            pillSheet2.takenPillSheet(pillSheet2.beginingDate.subtract(const Duration(days: 1))),
+            pillSheet.copyWith(
+              lastTakenDate: mockToday.subtract(const Duration(days: 4)),
+              pills: Pill.testGenerateAndIterateTo(
+                pillSheetType: pillSheet.pillSheetType,
+                fromDate: pillSheet.beginingDate,
+                lastTakenDate: mockToday.subtract(const Duration(days: 4)),
+                pillTakenCount: 1,
+              ),
+            ),
+            pillSheet2.copyWith(
+              lastTakenDate: pillSheet2.beginingDate.subtract(const Duration(days: 1)),
+              pills: Pill.testGenerateAndIterateTo(
+                pillSheetType: pillSheet2.pillSheetType,
+                fromDate: pillSheet2.beginingDate,
+                lastTakenDate: pillSheet2.beginingDate.subtract(const Duration(days: 1)),
+                pillTakenCount: 1,
+              ),
+            ),
           ],
           createdAt: now(),
         );
@@ -699,8 +724,25 @@ void main() {
           id: "group_id",
           pillSheetIDs: ["1", "2"],
           pillSheets: [
-            pillSheet.takenPillSheet(mockToday.subtract(const Duration(days: 4))),
-            pillSheet2.takenPillSheet(pillSheet2.beginingDate.subtract(const Duration(days: 1))).copyWith(restDurations: []),
+            pillSheet.copyWith(
+              lastTakenDate: mockToday.subtract(const Duration(days: 4)),
+              pills: Pill.testGenerateAndIterateTo(
+                pillSheetType: pillSheet.pillSheetType,
+                fromDate: pillSheet.beginingDate,
+                lastTakenDate: mockToday.subtract(const Duration(days: 4)),
+                pillTakenCount: 1,
+              ),
+            ),
+            pillSheet2.copyWith(
+              lastTakenDate: pillSheet2.beginingDate.subtract(const Duration(days: 1)),
+              pills: Pill.testGenerateAndIterateTo(
+                pillSheetType: pillSheet2.pillSheetType,
+                fromDate: pillSheet2.beginingDate,
+                lastTakenDate: pillSheet2.beginingDate.subtract(const Duration(days: 1)),
+                pillTakenCount: 1,
+              ),
+              restDurations: [],
+            )
           ],
           createdAt: now(),
         );
