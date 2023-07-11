@@ -6,14 +6,14 @@ import 'package:freezed_annotation/freezed_annotation.dart';
 part 'user.codegen.g.dart';
 part 'user.codegen.freezed.dart';
 
-class UserNotFound with Exception {
+class UserNotFound implements Exception {
   @override
   String toString() {
     return "user not found";
   }
 }
 
-class UserAlreadyExists with Exception {
+class UserAlreadyExists implements Exception {
   @override
   String toString() {
     return "user already exists";
@@ -68,41 +68,32 @@ class User with _$User {
   @JsonSerializable(explicitToJson: true)
   const factory User({
     String? id,
-    @JsonKey(name: "settings")
-        Setting? setting,
-    @Default(false)
-        bool migratedFlutter,
+    @JsonKey(name: "settings") Setting? setting,
+    @Default(false) bool migratedFlutter,
     String? userIDWhenCreateUser,
     String? anonymousUserID,
-    @Default([])
-        List<String> userDocumentIDSets,
-    @Default([])
-        List<String> anonymousUserIDSets,
-    @Default([])
-        List<String> firebaseCurrentUserIDSets,
-    @Default(false)
-        bool isPremium,
-    @Default(false)
-        bool isTrial,
-    @Default(false)
-        bool hasDiscountEntitlement,
-    @Default(false)
-        bool shouldAskCancelReason,
+    @Default([]) List<String> userDocumentIDSets,
+    @Default([]) List<String> anonymousUserIDSets,
+    @Default([]) List<String> firebaseCurrentUserIDSets,
+    @Default(false) bool isPremium,
+    @Default(false) bool isTrial,
+    @Default(false) bool hasDiscountEntitlement,
+    @Default(false) bool shouldAskCancelReason,
     @JsonKey(
       fromJson: TimestampConverter.timestampToDateTime,
       toJson: TimestampConverter.dateTimeToTimestamp,
     )
-        DateTime? beginTrialDate,
+    DateTime? beginTrialDate,
     @JsonKey(
       fromJson: TimestampConverter.timestampToDateTime,
       toJson: TimestampConverter.dateTimeToTimestamp,
     )
-        DateTime? trialDeadlineDate,
+    DateTime? trialDeadlineDate,
     @JsonKey(
       fromJson: TimestampConverter.timestampToDateTime,
       toJson: TimestampConverter.dateTimeToTimestamp,
     )
-        DateTime? discountEntitlementDeadlineDate,
+    DateTime? discountEntitlementDeadlineDate,
   }) = _User;
 
   factory User.fromJson(Map<String, dynamic> json) => _$UserFromJson(json);
