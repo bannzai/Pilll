@@ -1,4 +1,4 @@
-class AlertError with Exception {
+class AlertError implements Exception {
   final String? title;
   final String displayedMessage;
   final String? faqLinkURL;
