@@ -99,6 +99,7 @@ class LocalNotificationService {
 extension ReminderLocalNotificationService on LocalNotificationService {
   // UseCase:
   // - ピルシート追加
+  // - 通知の文言を変えた時
   // - 休薬終了後
   // - 初期設定完了後
   // - 番号変更後
