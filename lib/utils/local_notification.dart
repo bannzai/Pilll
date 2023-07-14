@@ -28,8 +28,8 @@ const androidNotificationCategoryCalendarSchedule = "androidNotificationCategory
 const androidNotificationCategoryRemindNotification = "androidNotificationCategoryRemindNotification";
 
 // Notification ID offset
-const notificationIdentifierOffsetBase = 100000;
-const scheduleNotificationIdentifierOffset = 1 * notificationIdentifierOffsetBase;
+const scheduleNotificationIdentifierOffset = 100000;
+const reminderNotificationIdentifierOffset = 1000000000;
 
 // NOTE: It can not be use Future.wait(processes) when register notification.
 class LocalNotificationService {
@@ -98,6 +98,7 @@ class LocalNotificationService {
 // Reminder
 extension ReminderLocalNotificationService on LocalNotificationService {
   // UseCase:
+  // - ピルシート追加
   // - 休薬終了後
   // - 初期設定完了後
   // - 番号変更後
