@@ -99,12 +99,14 @@ class LocalNotificationService {
 extension ReminderLocalNotificationService on LocalNotificationService {
   // UseCase:
   // - ピルシート追加
+  // - 服用記録
+  // - 服用キャンセル
+  // - クイックレコード
   // - 通知の文言を変えた時
   // - 休薬終了後
   // - 初期設定完了後
   // - 番号変更後
   // - リマインダーの通知がOFF->ONになった時
-  // - クイックレコード
   // - 久しぶりにアプリを開いたが、通知がスケジュールされていない時
   // - トライアル終了後/プレミアム加入後 → これは服用は続けられているので何もしない。有料機能をしばらく使えてもヨシとする
   // 7日間分の通知をスケジュールする
