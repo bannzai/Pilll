@@ -152,68 +152,72 @@ extension ReminderLocalNotificationService on LocalNotificationService {
             return result;
           }();
 
-          futures.add(Future(() async {
-            await plugin.cancel(notificationID);
-            await plugin.zonedSchedule(
-              notificationID,
-              title,
-              '',
-              reminderDate,
-              const NotificationDetails(
-                android: AndroidNotificationDetails(
-                  androidReminderNotificationChannelID,
-                  "服用通知",
-                  channelShowBadge: true,
-                  setAsGroupSummary: true,
-                  groupKey: androidReminderNotificationGroupKey,
-                  category: AndroidNotificationCategory(androidNotificationCategoryRemindNotification),
-                  actions: [
-                    AndroidNotificationAction(
-                      androidReminderNotificationActionIdentifier,
-                      "飲んだ",
-                    )
-                  ],
+          futures.add(
+            Future(() async {
+              await plugin.cancel(notificationID);
+              await plugin.zonedSchedule(
+                notificationID,
+                title,
+                '',
+                reminderDate,
+                const NotificationDetails(
+                  android: AndroidNotificationDetails(
+                    androidReminderNotificationChannelID,
+                    "服用通知",
+                    channelShowBadge: true,
+                    setAsGroupSummary: true,
+                    groupKey: androidReminderNotificationGroupKey,
+                    category: AndroidNotificationCategory(androidNotificationCategoryRemindNotification),
+                    actions: [
+                      AndroidNotificationAction(
+                        androidReminderNotificationActionIdentifier,
+                        "飲んだ",
+                      )
+                    ],
+                  ),
+                  iOS: DarwinNotificationDetails(
+                    categoryIdentifier: iOSQuickRecordPillCategoryIdentifier,
+                    presentBadge: true,
+                    sound: "becho.caf",
+                    presentSound: true,
+                  ),
                 ),
-                iOS: DarwinNotificationDetails(
-                  categoryIdentifier: iOSQuickRecordPillCategoryIdentifier,
-                  presentBadge: true,
-                  sound: "becho.caf",
-                  presentSound: true,
-                ),
-              ),
-              androidAllowWhileIdle: true,
-              uiLocalNotificationDateInterpretation: UILocalNotificationDateInterpretation.absoluteTime,
-            );
-          }));
+                androidAllowWhileIdle: true,
+                uiLocalNotificationDateInterpretation: UILocalNotificationDateInterpretation.absoluteTime,
+              );
+            }),
+          );
         } else {
           const title = "💊の時間です";
-          futures.add(Future(() async {
-            await plugin.cancel(notificationID);
-            await plugin.zonedSchedule(
-              notificationID,
-              title,
-              '',
-              reminderDate,
-              const NotificationDetails(
-                android: AndroidNotificationDetails(
-                  androidReminderNotificationChannelID,
-                  "服用通知",
-                  channelShowBadge: true,
-                  setAsGroupSummary: true,
-                  groupKey: androidReminderNotificationGroupKey,
-                  category: AndroidNotificationCategory(androidNotificationCategoryRemindNotification),
+          futures.add(
+            Future(() async {
+              await plugin.cancel(notificationID);
+              await plugin.zonedSchedule(
+                notificationID,
+                title,
+                '',
+                reminderDate,
+                const NotificationDetails(
+                  android: AndroidNotificationDetails(
+                    androidReminderNotificationChannelID,
+                    "服用通知",
+                    channelShowBadge: true,
+                    setAsGroupSummary: true,
+                    groupKey: androidReminderNotificationGroupKey,
+                    category: AndroidNotificationCategory(androidNotificationCategoryRemindNotification),
+                  ),
+                  iOS: DarwinNotificationDetails(
+                    categoryIdentifier: iOSQuickRecordPillCategoryIdentifier,
+                    presentBadge: true,
+                    sound: "becho.caf",
+                    presentSound: true,
+                  ),
                 ),
-                iOS: DarwinNotificationDetails(
-                  categoryIdentifier: iOSQuickRecordPillCategoryIdentifier,
-                  presentBadge: true,
-                  sound: "becho.caf",
-                  presentSound: true,
-                ),
-              ),
-              androidAllowWhileIdle: true,
-              uiLocalNotificationDateInterpretation: UILocalNotificationDateInterpretation.absoluteTime,
-            );
-          }));
+                androidAllowWhileIdle: true,
+                uiLocalNotificationDateInterpretation: UILocalNotificationDateInterpretation.absoluteTime,
+              );
+            }),
+          );
         }
       }
     }
