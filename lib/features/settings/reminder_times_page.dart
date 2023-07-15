@@ -14,6 +14,7 @@ import 'package:pilll/features/error/error_alert.dart';
 import 'package:pilll/features/error/universal_error_page.dart';
 import 'package:pilll/provider/setting.dart';
 import 'package:pilll/utils/formatter/date_time_formatter.dart';
+import 'package:pilll/utils/local_notification.dart';
 import 'package:pilll/utils/toolbar/time_picker.dart';
 import 'package:flutter/material.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
@@ -25,6 +26,8 @@ class ReminderTimesPage extends HookConsumerWidget {
   @override
   Widget build(BuildContext context, WidgetRef ref) {
     final setSetting = ref.watch(setSettingProvider);
+    final registerReminderLocalNotification = ref.watch(registerReminderLocalNotificationProvider);
+    final cancelReminderLocalNotification = ref.watch(cancelReminderLocalNotificationProvider);
 
     return AsyncValueGroup.group2(
       ref.watch(settingProvider),
@@ -33,76 +36,12 @@ class ReminderTimesPage extends HookConsumerWidget {
       data: (data) {
         final setting = data.t1;
         final deviceTimezoneName = data.t2;
-        return Scaffold(
-          backgroundColor: PilllColors.background,
-          appBar: AppBar(
-            leading: IconButton(
-              icon: const Icon(Icons.arrow_back, color: Colors.black),
-              onPressed: () => Navigator.of(context).pop(),
-            ),
-            title: const Text(
-              "通知時間",
-              style: TextStyle(color: TextColor.black),
-            ),
-            actions: [
-              IconButton(
-                onPressed: () {
-                  analytics.logEvent(name: "pressed_tz_setting_action");
-                  showDialog(
-                    context: context,
-                    builder: (_) => TimezoneSettingDialog(
-                      setting: setting,
-                      deviceTimezoneName: deviceTimezoneName,
-                      onDone: (tz) {
-                        ScaffoldMessenger.of(context).showSnackBar(
-                          SnackBar(
-                            duration: const Duration(seconds: 2),
-                            content: Text("$tzに変更しました"),
-                          ),
-                        );
-                      },
-                    ),
-                  );
-                },
-                icon: const Icon(Icons.timer_sharp, color: PilllColors.primary),
-              ),
-            ],
-            backgroundColor: PilllColors.background,
-          ),
-          body: SafeArea(
-            child: ListView(
-              children: [
-                ...setting.reminderTimes
-                    .asMap()
-                    .map(
-                      (offset, reminderTime) => MapEntry(
-                        offset,
-                        Column(
-                          children: [
-                            Padding(
-                              padding: const EdgeInsets.only(left: 15, right: 15),
-                              child: Container(
-                                height: 1,
-                                color: PilllColors.border,
-                              ),
-                            ),
-                            _component(context, setting: setting, reminderTime: reminderTime, setSetting: setSetting, number: offset + 1)
-                          ],
-                        ),
-                      ),
-                    )
-                    .values,
-                Padding(
-                  padding: const EdgeInsets.only(left: 15, right: 15),
-                  child: Container(
-                    height: 1,
-                    color: PilllColors.border,
-                  ),
-                ),
-                _add(context, setting: setting, setSetting: setSetting),
-              ],
-            ),
-          ),
+        return ReminderTimesPageBody(
+          setting: setting,
+          deviceTimezoneName: deviceTimezoneName,
+          setSetting: setSetting,
+          registerReminderLocalNotification: registerReminderLocalNotification,
+          cancelReminderLocalNotification: cancelReminderLocalNotification,
         );
       },
       error: (error, _) => UniversalErrorPage(
@@ -111,6 +50,107 @@ class ReminderTimesPage extends HookConsumerWidget {
         reload: () => ref.refresh(databaseProvider),
       ),
       loading: () => const ScaffoldIndicator(),
+    );
+  }
+}
+
+extension ReminderTimesPageRoute on ReminderTimesPage {
+  static Route<dynamic> route() {
+    return MaterialPageRoute(
+      settings: const RouteSettings(name: "ReminderTimesPage"),
+      builder: (_) => const ReminderTimesPage(),
+    );
+  }
+}
+
+class ReminderTimesPageBody extends StatelessWidget {
+  final Setting setting;
+  final String deviceTimezoneName;
+  final SetSetting setSetting;
+  final RegisterReminderLocalNotification registerReminderLocalNotification;
+  final CancelReminderLocalNotificationProvider cancelReminderLocalNotification;
+
+  const ReminderTimesPageBody({
+    super.key,
+    required this.setting,
+    required this.deviceTimezoneName,
+    required this.setSetting,
+    required this.registerReminderLocalNotification,
+    required this.cancelReminderLocalNotification,
+  });
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      backgroundColor: PilllColors.background,
+      appBar: AppBar(
+        leading: IconButton(
+          icon: const Icon(Icons.arrow_back, color: Colors.black),
+          onPressed: () => Navigator.of(context).pop(),
+        ),
+        title: const Text(
+          "通知時間",
+          style: TextStyle(color: TextColor.black),
+        ),
+        actions: [
+          IconButton(
+            onPressed: () {
+              analytics.logEvent(name: "pressed_tz_setting_action");
+              showDialog(
+                context: context,
+                builder: (_) => TimezoneSettingDialog(
+                  setting: setting,
+                  deviceTimezoneName: deviceTimezoneName,
+                  onDone: (tz) {
+                    ScaffoldMessenger.of(context).showSnackBar(
+                      SnackBar(
+                        duration: const Duration(seconds: 2),
+                        content: Text("$tzに変更しました"),
+                      ),
+                    );
+                  },
+                ),
+              );
+            },
+            icon: const Icon(Icons.timer_sharp, color: PilllColors.primary),
+          ),
+        ],
+        backgroundColor: PilllColors.background,
+      ),
+      body: SafeArea(
+        child: ListView(
+          children: [
+            ...setting.reminderTimes
+                .asMap()
+                .map(
+                  (offset, reminderTime) => MapEntry(
+                    offset,
+                    Column(
+                      children: [
+                        Padding(
+                          padding: const EdgeInsets.only(left: 15, right: 15),
+                          child: Container(
+                            height: 1,
+                            color: PilllColors.border,
+                          ),
+                        ),
+                        _component(context, setting: setting, reminderTime: reminderTime, setSetting: setSetting, number: offset + 1)
+                      ],
+                    ),
+                  ),
+                )
+                .values,
+            Padding(
+              padding: const EdgeInsets.only(left: 15, right: 15),
+              child: Container(
+                height: 1,
+                color: PilllColors.border,
+              ),
+            ),
+            _add(context, setting: setting, setSetting: setSetting),
+          ],
+        ),
+      ),
     );
   }
 
@@ -283,14 +323,7 @@ class ReminderTimesPage extends HookConsumerWidget {
       throw Exception("通知時刻は最低${ReminderTime.minimumCount}件必要です");
     }
     await setSetting(setting.copyWith(reminderTimes: reminderTimes));
-  }
-}
-
-extension ReminderTimesPageRoute on ReminderTimesPage {
-  static Route<dynamic> route() {
-    return MaterialPageRoute(
-      settings: const RouteSettings(name: "ReminderTimesPage"),
-      builder: (_) => const ReminderTimesPage(),
-    );
+    await cancelReminderLocalNotification();
+    await registerReminderLocalNotification();
   }
 }
