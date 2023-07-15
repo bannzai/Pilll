@@ -130,10 +130,10 @@ class RegisterReminderLocalNotification {
   // - トライアル終了後/プレミアム加入後 → これは服用は続けられているので何もしない。有料機能をしばらく使えてもヨシとする
   // 10日間分の通知をスケジュールする
   Future<void> call() async {
-    final pillSheetGroup = ref.watch(latestPillSheetGroupProvider).asData?.valueOrNull;
-    final activePillSheet = ref.watch(activePillSheetProvider).asData?.valueOrNull;
-    final premiumOrTrial = ref.watch(premiumAndTrialProvider).asData?.valueOrNull?.premiumOrTrial;
-    final setting = ref.watch(settingProvider).asData?.valueOrNull;
+    final pillSheetGroup = ref.read(latestPillSheetGroupProvider).asData?.valueOrNull;
+    final activePillSheet = ref.read(activePillSheetProvider).asData?.valueOrNull;
+    final premiumOrTrial = ref.read(premiumAndTrialProvider).asData?.valueOrNull?.premiumOrTrial;
+    final setting = ref.read(settingProvider).asData?.valueOrNull;
     if (pillSheetGroup == null || activePillSheet == null || premiumOrTrial == null || setting == null) {
       return;
     }
