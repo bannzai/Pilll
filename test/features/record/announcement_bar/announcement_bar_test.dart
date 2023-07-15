@@ -117,7 +117,6 @@ void main() {
         SharedPreferences.setMockInitialValues({
           IntKey.totalCountOfActionForTakenPill: totalCountOfActionForTakenPillForLongTimeUser,
           BoolKey.recommendedSignupNotificationIsAlreadyShow: false,
-          BoolKey.priceUpAnnouncementIsAlreadyShow: true,
         });
 
         await tester.pumpWidget(
@@ -175,7 +174,6 @@ void main() {
         SharedPreferences.setMockInitialValues({
           IntKey.totalCountOfActionForTakenPill: totalCountOfActionForTakenPillForLongTimeUser,
           BoolKey.recommendedSignupNotificationIsAlreadyShow: false,
-          BoolKey.priceUpAnnouncementIsAlreadyShow: true,
         });
         await tester.pumpWidget(
           ProviderScope(
@@ -231,7 +229,6 @@ void main() {
         SharedPreferences.setMockInitialValues({
           IntKey.totalCountOfActionForTakenPill: totalCountOfActionForTakenPillForLongTimeUser,
           BoolKey.recommendedSignupNotificationIsAlreadyShow: false,
-          BoolKey.priceUpAnnouncementIsAlreadyShow: true,
         });
         await tester.pumpWidget(
           ProviderScope(
@@ -288,7 +285,6 @@ void main() {
         SharedPreferences.setMockInitialValues({
           IntKey.totalCountOfActionForTakenPill: totalCountOfActionForTakenPillForLongTimeUser,
           BoolKey.recommendedSignupNotificationIsAlreadyShow: false,
-          BoolKey.priceUpAnnouncementIsAlreadyShow: true,
         });
         await tester.pumpWidget(
           ProviderScope(
@@ -344,7 +340,6 @@ void main() {
           SharedPreferences.setMockInitialValues({
             IntKey.totalCountOfActionForTakenPill: totalCountOfActionForTakenPillForLongTimeUser,
             BoolKey.recommendedSignupNotificationIsAlreadyShow: false,
-            BoolKey.priceUpAnnouncementIsAlreadyShow: true,
           });
           await tester.pumpWidget(
             ProviderScope(
@@ -408,7 +403,6 @@ void main() {
           SharedPreferences.setMockInitialValues({
             IntKey.totalCountOfActionForTakenPill: totalCountOfActionForTakenPillForLongTimeUser,
             BoolKey.recommendedSignupNotificationIsAlreadyShow: false,
-            BoolKey.priceUpAnnouncementIsAlreadyShow: true,
           });
           await tester.pumpWidget(
             ProviderScope(
@@ -474,7 +468,6 @@ void main() {
           SharedPreferences.setMockInitialValues({
             IntKey.totalCountOfActionForTakenPill: totalCountOfActionForTakenPillForLongTimeUser,
             BoolKey.recommendedSignupNotificationIsAlreadyShow: false,
-            BoolKey.priceUpAnnouncementIsAlreadyShow: true,
           });
           await tester.pumpWidget(
             ProviderScope(
@@ -540,7 +533,6 @@ void main() {
           SharedPreferences.setMockInitialValues({
             IntKey.totalCountOfActionForTakenPill: totalCountOfActionForTakenPillForLongTimeUser,
             BoolKey.recommendedSignupNotificationIsAlreadyShow: false,
-            BoolKey.priceUpAnnouncementIsAlreadyShow: true,
           });
           await tester.pumpWidget(
             ProviderScope(
@@ -606,7 +598,6 @@ void main() {
           SharedPreferences.setMockInitialValues({
             IntKey.totalCountOfActionForTakenPill: totalCountOfActionForTakenPillForLongTimeUser,
             BoolKey.recommendedSignupNotificationIsAlreadyShow: false,
-            BoolKey.priceUpAnnouncementIsAlreadyShow: true,
           });
           await tester.pumpWidget(
             ProviderScope(
@@ -679,7 +670,6 @@ void main() {
           SharedPreferences.setMockInitialValues({
             IntKey.totalCountOfActionForTakenPill: totalCountOfActionForTakenPillForLongTimeUser,
             BoolKey.recommendedSignupNotificationIsAlreadyShow: false,
-            BoolKey.priceUpAnnouncementIsAlreadyShow: true,
           });
           await tester.pumpWidget(
             ProviderScope(
@@ -747,7 +737,6 @@ void main() {
           SharedPreferences.setMockInitialValues({
             IntKey.totalCountOfActionForTakenPill: totalCountOfActionForTakenPillForLongTimeUser,
             BoolKey.recommendedSignupNotificationIsAlreadyShow: false,
-            BoolKey.priceUpAnnouncementIsAlreadyShow: true,
           });
           await tester.pumpWidget(
             ProviderScope(
@@ -815,7 +804,6 @@ void main() {
           SharedPreferences.setMockInitialValues({
             IntKey.totalCountOfActionForTakenPill: totalCountOfActionForTakenPillForLongTimeUser,
             BoolKey.recommendedSignupNotificationIsAlreadyShow: false,
-            BoolKey.priceUpAnnouncementIsAlreadyShow: true,
           });
           await tester.pumpWidget(
             ProviderScope(
@@ -883,7 +871,6 @@ void main() {
           SharedPreferences.setMockInitialValues({
             IntKey.totalCountOfActionForTakenPill: totalCountOfActionForTakenPillForLongTimeUser,
             BoolKey.recommendedSignupNotificationIsAlreadyShow: false,
-            BoolKey.priceUpAnnouncementIsAlreadyShow: true,
           });
           await tester.pumpWidget(
             ProviderScope(
@@ -951,7 +938,6 @@ void main() {
           SharedPreferences.setMockInitialValues({
             IntKey.totalCountOfActionForTakenPill: totalCountOfActionForTakenPillForLongTimeUser,
             BoolKey.recommendedSignupNotificationIsAlreadyShow: false,
-            BoolKey.priceUpAnnouncementIsAlreadyShow: true,
           });
           await tester.pumpWidget(
             ProviderScope(
@@ -1019,7 +1005,6 @@ void main() {
           SharedPreferences.setMockInitialValues({
             IntKey.totalCountOfActionForTakenPill: totalCountOfActionForTakenPillForLongTimeUser,
             BoolKey.recommendedSignupNotificationIsAlreadyShow: false,
-            BoolKey.priceUpAnnouncementIsAlreadyShow: true,
           });
           await tester.pumpWidget(
             ProviderScope(
@@ -1088,7 +1073,6 @@ void main() {
         SharedPreferences.setMockInitialValues({
           IntKey.totalCountOfActionForTakenPill: totalCountOfActionForTakenPillForLongTimeUser,
           BoolKey.recommendedSignupNotificationIsAlreadyShow: false,
-          BoolKey.priceUpAnnouncementIsAlreadyShow: true,
         });
         await tester.pumpWidget(
           ProviderScope(
@@ -1145,7 +1129,6 @@ void main() {
         SharedPreferences.setMockInitialValues({
           IntKey.totalCountOfActionForTakenPill: totalCountOfActionForTakenPillForLongTimeUser,
           BoolKey.recommendedSignupNotificationIsAlreadyShow: false,
-          BoolKey.priceUpAnnouncementIsAlreadyShow: true,
         });
         await tester.pumpWidget(
           ProviderScope(
@@ -1202,7 +1185,6 @@ void main() {
         SharedPreferences.setMockInitialValues({
           IntKey.totalCountOfActionForTakenPill: totalCountOfActionForTakenPillForLongTimeUser,
           BoolKey.recommendedSignupNotificationIsAlreadyShow: false,
-          BoolKey.priceUpAnnouncementIsAlreadyShow: true,
         });
         await tester.pumpWidget(
           ProviderScope(
