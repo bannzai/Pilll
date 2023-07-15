@@ -31,13 +31,12 @@ void definedChannel() {
         final user = (await database.userReference().get()).data();
         final setting = user?.setting;
         if (pillSheetGroup != null && activePillSheet != null && user != null && setting != null) {
-          final registerReminderLocalNotification = RegisterReminderLocalNotification(
+          await RegisterReminderLocalNotification.run(
             pillSheetGroup: pillSheetGroup,
             activePillSheet: activePillSheet,
             premiumOrTrial: user.isPremium || user.isTrial,
             setting: setting,
           );
-          await registerReminderLocalNotification();
         }
         return;
       case "salvagedOldStartTakenDate":

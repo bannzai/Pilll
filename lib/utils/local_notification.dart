@@ -12,9 +12,7 @@ import 'package:pilll/entity/weekday.dart';
 import 'package:pilll/provider/pill_sheet_group.dart';
 import 'package:pilll/provider/premium_and_trial.codegen.dart';
 import 'package:pilll/provider/setting.dart';
-import 'package:pilll/provider/shared_preference.dart';
 import 'package:pilll/utils/datetime/day.dart';
-import 'package:pilll/utils/shared_preference/keys.dart';
 import 'package:riverpod/riverpod.dart';
 import 'package:timezone/data/latest_all.dart' as tz;
 import 'package:timezone/timezone.dart' as tz;
@@ -142,6 +140,20 @@ class RegisterReminderLocalNotification {
       return;
     }
 
+    await run(
+      pillSheetGroup: pillSheetGroup,
+      activePillSheet: activePillSheet,
+      premiumOrTrial: premiumOrTrial,
+      setting: setting,
+    );
+  }
+
+  static Future<void> run({
+    required PillSheetGroup pillSheetGroup,
+    required PillSheet activePillSheet,
+    required bool premiumOrTrial,
+    required Setting setting,
+  }) async {
     final tzNow = tz.TZDateTime.now(tz.local);
     final List<Future<void>> futures = [];
 
@@ -270,7 +282,7 @@ class RegisterReminderLocalNotification {
   // 100000 = reminderTime.hour
   // 1000 = reminderTime.minute
   // 10 = pillNumberIntoPillSheet
-  int _calcLocalNotificationID({
+  static int _calcLocalNotificationID({
     required int pillSheetGroupIndex,
     required ReminderTime reminderTime,
     required int pillNumberIntoPillSheet,
