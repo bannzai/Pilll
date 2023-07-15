@@ -19,6 +19,8 @@ import 'package:pilll/features/record/record_page.dart';
 import 'package:pilll/features/settings/setting_page.dart';
 import 'package:pilll/components/atoms/color.dart';
 import 'package:pilll/components/atoms/text_color.dart';
+import 'package:pilll/utils/datetime/day.dart';
+import 'package:pilll/utils/local_notification.dart';
 import 'package:pilll/utils/push_notification.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
@@ -45,6 +47,7 @@ class HomePage extends HookConsumerWidget {
       return null;
     }, [user.valueOrNull]);
 
+    final registerReminderLocalNotification = ref.watch(registerReminderLocalNotificationProvider);
     return AsyncValueGroup.group4(
       user,
       ref.watch(premiumAndTrialProvider),
@@ -74,10 +77,16 @@ class HomePageBody extends HookConsumerWidget {
   final PremiumAndTrial premiumAndTrial;
   final bool shouldShowMigrateInfo;
   final SharedPreferences sharedPreferences;
+  final RegisterReminderLocalNotification registerReminderLocalNotification;
 
-  const HomePageBody(
-      {Key? key, required this.user, required this.shouldShowMigrateInfo, required this.premiumAndTrial, required this.sharedPreferences})
-      : super(key: key);
+  const HomePageBody({
+    Key? key,
+    required this.user,
+    required this.shouldShowMigrateInfo,
+    required this.premiumAndTrial,
+    required this.sharedPreferences,
+    required this.registerReminderLocalNotification,
+  }) : super(key: key);
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {
@@ -106,8 +115,18 @@ class HomePageBody extends HookConsumerWidget {
       }
       return !isAlreadyShowPremiumSurvey;
     }();
+    final latestRegisterReminderLocalNotificationMillisecondsSinceEpoch =
+        sharedPreferences.getInt(IntKey.latestRegisterReminderLocalNotificationMillisecondsSinceEpoch);
 
     Future.microtask(() async {
+      if (latestRegisterReminderLocalNotificationMillisecondsSinceEpoch != null) {
+        final latestRegisterReminderLocalNotificationDateTime =
+            DateTime.fromMicrosecondsSinceEpoch(latestRegisterReminderLocalNotificationMillisecondsSinceEpoch);
+        if (now().difference(latestRegisterReminderLocalNotificationDateTime).inDays > RegisterReminderLocalNotification.registerDays) {
+          
+        }
+      }
+
       if (shouldShowMigrateInfo) {
         showDialog(
             context: context,

@@ -12,7 +12,9 @@ import 'package:pilll/entity/weekday.dart';
 import 'package:pilll/provider/pill_sheet_group.dart';
 import 'package:pilll/provider/premium_and_trial.codegen.dart';
 import 'package:pilll/provider/setting.dart';
+import 'package:pilll/provider/shared_preference.dart';
 import 'package:pilll/utils/datetime/day.dart';
+import 'package:pilll/utils/shared_preference/keys.dart';
 import 'package:riverpod/riverpod.dart';
 import 'package:timezone/data/latest_all.dart' as tz;
 import 'package:timezone/timezone.dart' as tz;
@@ -116,6 +118,8 @@ class RegisterReminderLocalNotification {
 
   RegisterReminderLocalNotification(this.ref);
 
+  static const int registerDays = 10;
+
   // UseCase:
   // - ピルシート追加
   // - 服用記録
@@ -134,7 +138,8 @@ class RegisterReminderLocalNotification {
     final activePillSheet = ref.read(activePillSheetProvider).asData?.valueOrNull;
     final premiumOrTrial = ref.read(premiumAndTrialProvider).asData?.valueOrNull?.premiumOrTrial;
     final setting = ref.read(settingProvider).asData?.valueOrNull;
-    if (pillSheetGroup == null || activePillSheet == null || premiumOrTrial == null || setting == null) {
+    final sharedPreferences = ref.read(sharedPreferenceProvider).asData?.valueOrNull;
+    if (pillSheetGroup == null || activePillSheet == null || premiumOrTrial == null || setting == null || sharedPreferences == null) {
       return;
     }
 
@@ -146,7 +151,7 @@ class RegisterReminderLocalNotification {
     for (final reminderTime in setting.reminderTimes) {
       // 新規ピルシートグループの作成後に通知のスケジュールができないため、多めに通知をスケジュールする
       // ユーザーの何かしらのアクションでどこかでスケジュールされるだろう
-      for (final offset in List.generate(10, (index) => index)) {
+      for (final offset in List.generate(registerDays, (index) => index)) {
         final reminderDate = tzNow.add(Duration(days: offset)).add(Duration(hours: reminderTime.hour)).add(Duration(minutes: reminderTime.minute));
         // NOTE: LocalNotification must be scheduled at least 3 minutes after the current time (in iOS, Android not confirm).
         // Delay five minutes just to be sure.
@@ -250,8 +255,14 @@ class RegisterReminderLocalNotification {
     }
 
     await Future.wait(futures);
+    await sharedPreferences.setInt(IntKey.latestRegisterReminderLocalNotificationMillisecondsSinceEpoch, now().millisecondsSinceEpoch);
 
     debugPrint("end scheduleRemiderNotification: ${setting.reminderTimes}");
+  }
+
+  Future<bool> hasPendingNotification() async {
+    final pendingNotifications = await localNotificationService.plugin.pendingNotificationRequests();
+    return pendingNotifications.where((element) => element.id - reminderNotificationIdentifierOffset >= 0).isNotEmpty;
   }
 
   // reminder time id is 10{groupIndex:2}{hour:2}{minute:2}{pillNumberIntoPillSheet:2}
