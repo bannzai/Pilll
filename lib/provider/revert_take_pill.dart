@@ -5,6 +5,7 @@ import 'package:pilll/entity/pill_sheet_group.codegen.dart';
 import 'package:pilll/provider/pill_sheet_group.dart';
 import 'package:pilll/provider/pill_sheet_modified_history.dart';
 import 'package:pilll/utils/datetime/day.dart';
+import 'package:pilll/utils/local_notification.dart';
 import 'package:riverpod/riverpod.dart';
 
 final revertTakePillProvider = Provider(
@@ -26,7 +27,11 @@ class RevertTakePill {
     required this.batchSetPillSheetGroup,
   });
 
-  Future<PillSheetGroup?> call({required PillSheetGroup pillSheetGroup, required int pageIndex, required int pillNumberIntoPillSheet}) async {
+  Future<PillSheetGroup?> call({
+    required PillSheetGroup pillSheetGroup,
+    required int pageIndex,
+    required int pillNumberIntoPillSheet,
+  }) async {
     final activedPillSheet = pillSheetGroup.activedPillSheet;
     if (activedPillSheet == null) {
       throw const FormatException("現在対象となっているピルシートが見つかりませんでした");
@@ -85,7 +90,15 @@ class RevertTakePill {
     );
     batchSetPillSheetModifiedHistory(batch, history);
 
-    await batch.commit();
+    (
+      batch.commit(),
+      localNotificationService.scheduleAllRemiderNotification(
+        pillSheetGroup: pillSheetGroup,
+        activePillSheet: activePillSheet,
+        premiumOrTrial: premiumOrTrial,
+        setting: setting,
+      )
+    ).wait;
 
     return updatedPillSheetGroup;
   }

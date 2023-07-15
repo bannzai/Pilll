@@ -99,7 +99,25 @@ class LocalNotificationService {
 }
 
 // Reminder
-extension ReminderLocalNotificationService on LocalNotificationService {
+// 最新の状態を元に更新すれば良いので、更新処理に必要な状態はプロパティで持つ。このプロパティは通常ref.watchにより常に最新に保たれる
+// また、状態をcallの引数として受け取らないことで通常はSingle Stateであるものに対して間違った値を受け取れないようにする
+// 以下のように行わずに、手続的に必要な箇所でcallを呼ぶ。なぜなら不意にローカル通知の解除や登録が走ってしまうのはアンコントローラブルだから
+// - 各アクションと並行して処理を行わない
+// - アクションの結果を受け取ってローカル通知の登録の更新をしない
+// - 変更を検知してcallを呼ぶ親Widgetを用意して、変更があれば毎回登録しなおす
+class ReminderLocalNotification {
+  final PillSheetGroup pillSheetGroup;
+  final PillSheet activePillSheet;
+  final bool premiumOrTrial;
+  final Setting setting;
+
+  ReminderLocalNotification({
+    required this.pillSheetGroup,
+    required this.activePillSheet,
+    required this.premiumOrTrial,
+    required this.setting,
+  });
+
   // UseCase:
   // - ピルシート追加
   // - 服用記録
@@ -113,12 +131,7 @@ extension ReminderLocalNotificationService on LocalNotificationService {
   // - 久しぶりにアプリを開いたが、通知がスケジュールされていない時
   // - トライアル終了後/プレミアム加入後 → これは服用は続けられているので何もしない。有料機能をしばらく使えてもヨシとする
   // 10日間分の通知をスケジュールする
-  Future<void> scheduleAllRemiderNotification({
-    required PillSheetGroup pillSheetGroup,
-    required PillSheet activePillSheet,
-    required bool premiumOrTrial,
-    required Setting setting,
-  }) async {
+  Future<void> call() async {
     final tzNow = tz.TZDateTime.now(tz.local);
     final List<Future<void>> futures = [];
 
