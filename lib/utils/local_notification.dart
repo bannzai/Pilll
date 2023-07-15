@@ -98,6 +98,26 @@ class LocalNotificationService {
   }
 }
 
+final reminderLocalNotificationProvider = Provider.autoDispose.family((ref, PillSheetGroup pillSheetGroup) async {
+  final premiumAndTrial = ref.watch(premiumAndTrialProvider).asData?.valueOrNull;
+  final setting = ref.watch(settingProvider).asData?.valueOrNull;
+  if (premiumAndTrial == null || setting == null) {
+    return;
+  }
+
+  final activePillSheet = pillSheetGroup.activedPillSheet;
+  if (activePillSheet == null) {
+    return;
+  }
+
+  await localNotificationService.scheduleAllRemiderNotification(
+    pillSheetGroup: pillSheetGroup,
+    activePillSheet: activePillSheet,
+    premiumOrTrial: premiumAndTrial.premiumOrTrial,
+    setting: setting,
+  );
+});
+
 // Reminder
 extension ReminderLocalNotificationService on LocalNotificationService {
   // UseCase:
