@@ -6,18 +6,22 @@ import 'package:pilll/entity/pill_sheet.codegen.dart';
 import 'package:pilll/entity/pill_sheet_group.codegen.dart';
 import 'package:pilll/native/widget.dart';
 import 'package:pilll/provider/revert_take_pill.dart';
+import 'package:pilll/utils/local_notification.dart';
 
 class CancelButton extends HookConsumerWidget {
   final PillSheetGroup pillSheetGroup;
   final PillSheet activePillSheet;
   final bool userIsPremiumOtTrial;
+  final RegisterReminderLocalNotification registerReminderLocalNotification;
 
   const CancelButton({
     Key? key,
     required this.pillSheetGroup,
     required this.activePillSheet,
     required this.userIsPremiumOtTrial,
+    required this.registerReminderLocalNotification,
   }) : super(key: key);
+
   @override
   Widget build(BuildContext context, WidgetRef ref) {
     final revertTakePill = ref.watch(revertTakePillProvider);
@@ -38,6 +42,7 @@ class CancelButton extends HookConsumerWidget {
         }
         final updatedPillSheetGroup = await _cancelTaken(revertTakePill);
         syncActivePillSheetValue(pillSheetGroup: updatedPillSheetGroup);
+        await registerReminderLocalNotification();
       },
     );
   }
