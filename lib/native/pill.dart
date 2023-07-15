@@ -1,5 +1,3 @@
-import 'package:firebase_auth/firebase_auth.dart';
-import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter_app_badger/flutter_app_badger.dart';
 import 'package:pilll/utils/analytics.dart';
 import 'package:pilll/provider/batch.dart';

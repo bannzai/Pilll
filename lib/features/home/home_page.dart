@@ -19,7 +19,6 @@ import 'package:pilll/features/record/record_page.dart';
 import 'package:pilll/features/settings/setting_page.dart';
 import 'package:pilll/components/atoms/color.dart';
 import 'package:pilll/components/atoms/text_color.dart';
-import 'package:pilll/utils/datetime/day.dart';
 import 'package:pilll/utils/local_notification.dart';
 import 'package:pilll/utils/push_notification.dart';
 import 'package:flutter/material.dart';

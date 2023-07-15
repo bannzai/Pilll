@@ -5,7 +5,6 @@ import 'package:pilll/entity/pill_sheet_group.codegen.dart';
 import 'package:pilll/provider/pill_sheet_group.dart';
 import 'package:pilll/provider/pill_sheet_modified_history.dart';
 import 'package:pilll/utils/datetime/day.dart';
-import 'package:pilll/utils/local_notification.dart';
 import 'package:riverpod/riverpod.dart';
 
 final revertTakePillProvider = Provider(

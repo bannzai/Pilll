@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_hooks/flutter_hooks.dart';
-import 'package:pilll/provider/premium_and_trial.codegen.dart';
 
 import 'package:pilll/utils/analytics.dart';
 import 'package:pilll/components/template/setting_pill_sheet_group/setting_pill_sheet_group.dart';
@@ -25,7 +24,6 @@ class AddPillSheetGroupPage extends HookConsumerWidget {
     final addPillSheetGroup = ref.watch(addPillSheetGroupProvider);
     final pillSheetTypes = useState(setting.pillSheetEnumTypes);
     final displayNumberSetting = useState<PillSheetGroupDisplayNumberSetting?>(null);
-    final premiumOrTrial = ref.watch(premiumAndTrialProvider).valueOrNull;
 
     return Scaffold(
       backgroundColor: PilllColors.background,

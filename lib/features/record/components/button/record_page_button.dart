@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
-import 'package:pilll/entity/setting.codegen.dart';
 import 'package:pilll/features/record/components/button/cancel_button.dart';
 import 'package:pilll/features/record/components/button/rest_duration_button.dart';
 import 'package:pilll/features/record/components/button/taken_button.dart';
@@ -23,10 +22,6 @@ class RecordPageButton extends HookConsumerWidget {
   @override
   Widget build(BuildContext context, WidgetRef ref) {
     final registerReminderLocalNotification = ref.watch(registerReminderLocalNotificationProvider);
-
-    if (registerReminderLocalNotification == null) {
-      return const SizedBox.shrink();
-    }
 
     if (currentPillSheet.activeRestDuration != null) {
       return const RestDurationButton();
