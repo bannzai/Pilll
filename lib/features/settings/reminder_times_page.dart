@@ -323,6 +323,7 @@ class ReminderTimesPageBody extends StatelessWidget {
       throw Exception("通知時刻は最低${ReminderTime.minimumCount}件必要です");
     }
     await setSetting(setting.copyWith(reminderTimes: reminderTimes));
+    // 時間が変更されるとregisterReminderLocalNotification の中で行われるcancel処理で使えるIDを見失うので一回全部キャンセルする
     await cancelReminderLocalNotification();
     await registerReminderLocalNotification();
   }
