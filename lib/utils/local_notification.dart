@@ -194,8 +194,8 @@ class RegisterReminderLocalNotification {
 
           futures.add(
             Future(() async {
-              await plugin.cancel(notificationID);
-              await plugin.zonedSchedule(
+              await localNotificationService.plugin.cancel(notificationID);
+              await localNotificationService.plugin.zonedSchedule(
                 notificationID,
                 title,
                 '',
@@ -231,8 +231,8 @@ class RegisterReminderLocalNotification {
           const title = "💊の時間です";
           futures.add(
             Future(() async {
-              await plugin.cancel(notificationID);
-              await plugin.zonedSchedule(
+              await localNotificationService.plugin.cancel(notificationID);
+              await localNotificationService.plugin.zonedSchedule(
                 notificationID,
                 title,
                 '',
