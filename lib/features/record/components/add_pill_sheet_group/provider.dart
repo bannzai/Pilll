@@ -28,6 +28,7 @@ class AddPillSheetGroup {
 
   final BatchSetPillSheetModifiedHistory batchSetPillSheetModifiedHistory;
   final BatchSetSetting batchSetSetting;
+  final ReminderLocalNotification reminderLocalNotification;
 
   AddPillSheetGroup({
     required this.batchFactory,

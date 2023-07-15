@@ -118,8 +118,12 @@ final reminderLocalNotificationProvider = Provider.autoDispose.family((ref, Pill
   );
 });
 
-// Reminder
-extension ReminderLocalNotificationService on LocalNotificationService {
+class ReminderLocalNotification {
+  final 
+    required PillSheetGroup pillSheetGroup,
+    required PillSheet activePillSheet,
+    required bool premiumOrTrial,
+    required Setting setting,
   // UseCase:
   // - ピルシート追加
   // - 服用記録
@@ -133,7 +137,7 @@ extension ReminderLocalNotificationService on LocalNotificationService {
   // - 久しぶりにアプリを開いたが、通知がスケジュールされていない時
   // - トライアル終了後/プレミアム加入後 → これは服用は続けられているので何もしない。有料機能をしばらく使えてもヨシとする
   // 10日間分の通知をスケジュールする
-  Future<void> scheduleAllRemiderNotification({
+  Future<void> call({
     required PillSheetGroup pillSheetGroup,
     required PillSheet activePillSheet,
     required bool premiumOrTrial,
