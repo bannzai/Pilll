@@ -100,22 +100,9 @@ class LocalNotificationService {
 }
 
 // 必要な状態が全て揃ったら(AsyncData)の時のみ値を返す。そうじゃない場合はnullを返す
-final registerReminderLocalNotificationProvider = Provider((ref) {
-  final pillSheetGroup = ref.watch(latestPillSheetGroupProvider).asData?.valueOrNull;
-  final activePillSheet = ref.watch(activePillSheetProvider).asData?.valueOrNull;
-  final premiumAndTrial = ref.watch(premiumAndTrialProvider).asData?.valueOrNull;
-  final setting = ref.watch(settingProvider).asData?.valueOrNull;
-
-  if (pillSheetGroup == null || activePillSheet == null || premiumAndTrial == null || setting == null) {
-    return null;
-  }
-  return RegisterReminderLocalNotification(
-    pillSheetGroup: pillSheetGroup,
-    activePillSheet: activePillSheet,
-    premiumOrTrial: premiumAndTrial.premiumOrTrial,
-    setting: setting,
-  );
-});
+final registerReminderLocalNotificationProvider = Provider(
+  (ref) => RegisterReminderLocalNotification(ref),
+);
 
 // Reminder
 // 最新の状態を元に更新すれば良いので、更新処理に必要な状態はプロパティで持つ。このプロパティは通常ref.watchにより常に最新に保たれる
@@ -125,17 +112,9 @@ final registerReminderLocalNotificationProvider = Provider((ref) {
 // - アクションの結果を受け取ってローカル通知の登録の更新をしない
 // - 変更を検知してcallを呼ぶ親Widgetを用意して、変更があれば毎回登録しなおす
 class RegisterReminderLocalNotification {
-  final PillSheetGroup pillSheetGroup;
-  final PillSheet activePillSheet;
-  final bool premiumOrTrial;
-  final Setting setting;
+  final Ref ref;
 
-  RegisterReminderLocalNotification({
-    required this.pillSheetGroup,
-    required this.activePillSheet,
-    required this.premiumOrTrial,
-    required this.setting,
-  });
+  RegisterReminderLocalNotification(this.ref);
 
   // UseCase:
   // - ピルシート追加
@@ -151,6 +130,14 @@ class RegisterReminderLocalNotification {
   // - トライアル終了後/プレミアム加入後 → これは服用は続けられているので何もしない。有料機能をしばらく使えてもヨシとする
   // 10日間分の通知をスケジュールする
   Future<void> call() async {
+    final pillSheetGroup = ref.watch(latestPillSheetGroupProvider).asData?.valueOrNull;
+    final activePillSheet = ref.watch(activePillSheetProvider).asData?.valueOrNull;
+    final premiumAndTrial = ref.watch(premiumAndTrialProvider).asData?.valueOrNull;
+    final setting = ref.watch(settingProvider).asData?.valueOrNull;
+    if (pillSheetGroup == null || activePillSheet == null || premiumAndTrial == null || setting == null) {
+      return;
+    }
+
     final tzNow = tz.TZDateTime.now(tz.local);
     final List<Future<void>> futures = [];
 
