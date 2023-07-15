@@ -39,7 +39,7 @@ class ToggleReminderNotification extends HookConsumerWidget {
         try {
           await setSetting(setting.copyWith(isOnReminder: value));
           if (value) {
-            await registerReminderLocalNotification.call();
+            await registerReminderLocalNotification();
           } else {
             await cancelReminderLocalNotification();
           }
