@@ -21,6 +21,7 @@ class IntiialSettingPremiumTrialStartPage extends HookConsumerWidget {
   @override
   Widget build(BuildContext context, WidgetRef ref) {
     final store = ref.watch(initialSettingStateNotifierProvider.notifier);
+    final registerReminderLocalNotification = ref.watch(registerReminderLocalNotificationProvider);
     final didEndInitialSettingNotifier = ref.watch(boolSharedPreferencesProvider(BoolKey.didEndInitialSetting).notifier);
 
     return Scaffold(
@@ -135,9 +136,7 @@ class IntiialSettingPremiumTrialStartPage extends HookConsumerWidget {
                   try {
                     final navigator = Navigator.of(context);
                     await store.register();
-                    // store.registerの後にSetting等ができるので同じキャプチャ上では、registerReminderLocalNotificationProvider が変更されない。なのでreadで問い合わせる
-                    // TODO: 動作確認の時にちゃんと確認する
-                    await ref.read(registerReminderLocalNotificationProvider)?.call();
+                    await registerReminderLocalNotification?.call();
                     await AppRouter.endInitialSetting(navigator, didEndInitialSettingNotifier);
                   } catch (error) {
                     showErrorAlert(context, error.toString());
