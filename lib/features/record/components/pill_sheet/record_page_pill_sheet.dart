@@ -24,6 +24,7 @@ import 'package:pilll/features/error/error_alert.dart';
 import 'package:pilll/utils/error_log.dart';
 import 'package:pilll/provider/premium_and_trial.codegen.dart';
 import 'package:pilll/utils/datetime/day.dart';
+import 'package:pilll/utils/local_notification.dart';
 
 class RecordPagePillSheet extends HookConsumerWidget {
   final PillSheetGroup pillSheetGroup;
@@ -47,6 +48,7 @@ class RecordPagePillSheet extends HookConsumerWidget {
         pillSheet.beginingDate.add(Duration(days: summarizedRestDuration(restDurations: pillSheet.restDurations, upperDate: today())));
     final takePill = ref.watch(takePillProvider);
     final revertTakePill = ref.watch(revertTakePillProvider);
+    final registerReminderLocalNotification = ref.watch(registerReminderLocalNotificationProvider);
 
     return PillSheetViewLayout(
       weekdayLines: PillSheetViewWeekdayLine(
@@ -60,6 +62,7 @@ class RecordPagePillSheet extends HookConsumerWidget {
               context,
               takePill: takePill,
               revertTakePill: revertTakePill,
+              registerReminderLocalNotification: registerReminderLocalNotification,
               lineIndex: index,
               pageIndex: pillSheet.groupIndex,
             ),
@@ -73,6 +76,7 @@ class RecordPagePillSheet extends HookConsumerWidget {
     BuildContext context, {
     required TakePill takePill,
     required RevertTakePill revertTakePill,
+    required RegisterReminderLocalNotification registerReminderLocalNotification,
     required int lineIndex,
     required int pageIndex,
   }) {
@@ -125,6 +129,7 @@ class RecordPagePillSheet extends HookConsumerWidget {
 
               if (pillSheet.lastTakenPillNumber >= pillNumberIntoPillSheet) {
                 await revertTakePill(pillSheetGroup: pillSheetGroup, pageIndex: pageIndex, pillNumberIntoPillSheet: pillNumberIntoPillSheet);
+                await registerReminderLocalNotification();
               } else {
                 // NOTE: batch.commit でリモートのDBに書き込む時間がかかるので事前にバッジを0にする
                 FlutterAppBadger.removeBadge();
@@ -133,6 +138,7 @@ class RecordPagePillSheet extends HookConsumerWidget {
 
                 await _takeWithPillNumber(
                   takePill,
+                  registerReminderLocalNotification,
                   pillSheetGroup: pillSheetGroup,
                   pillNumberIntoPillSheet: pillNumberIntoPillSheet,
                   pillSheet: pillSheet,
@@ -149,7 +155,8 @@ class RecordPagePillSheet extends HookConsumerWidget {
   }
 
   Future<PillSheetGroup?> _takeWithPillNumber(
-    TakePill takePill, {
+    TakePill takePill,
+    RegisterReminderLocalNotification registerReminderLocalNotification, {
     required int pillNumberIntoPillSheet,
     required PillSheetGroup pillSheetGroup,
     required PillSheet pillSheet,
@@ -184,6 +191,7 @@ class RecordPagePillSheet extends HookConsumerWidget {
       activedPillSheet: activedPillSheet,
       isQuickRecord: false,
     );
+    await registerReminderLocalNotification();
     if (updatedPillSheetGroup == null) {
       return null;
     }
