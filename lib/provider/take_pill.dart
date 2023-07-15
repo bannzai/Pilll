@@ -99,14 +99,15 @@ class TakePill {
     // 服用記録はBackendの通知等によく使われるので、DBに書き込まれたあとにStreamを通じてUIを更新する
     awaitsPillSheetGroupRemoteDBDataChanged = true;
 
-    await localNotificationService.scheduleAllRemiderNotification(
-      pillSheetGroup: updatedPillSheetGroup,
-      activePillSheet: updatedPillSheetGroup.activedPillSheet ?? updatedPillSheetGroup.pillSheets.first,
-      isTrialOrPremium: true,
-      setting: setting,
-    );
-
-    await batch.commit();
+    await (
+      batch.commit(),
+      localNotificationService.scheduleAllRemiderNotification(
+        pillSheetGroup: updatedPillSheetGroup,
+        activePillSheet: updatedPillSheetGroup.activedPillSheet ?? updatedPillSheetGroup.pillSheets.first,
+        isTrialOrPremium: true,
+        setting: setting,
+      )
+    ).wait;
     return updatedPillSheetGroup;
   }
 }
