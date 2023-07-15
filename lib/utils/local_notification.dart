@@ -182,7 +182,10 @@ class RegisterReminderLocalNotification {
         }
 
         final notificationID = _calcLocalNotificationID(
-            pillSheetGroupIndex: targetPillSheet.groupIndex, reminderTime: reminderTime, pillNumberIntoPillSheet: pillNumberIntoPillSheet);
+          pillSheetGroupIndex: targetPillSheet.groupIndex,
+          reminderTime: reminderTime,
+          pillNumberIntoPillSheet: pillNumberIntoPillSheet,
+        );
         if (premiumOrTrial) {
           final title = () {
             var result = setting.reminderNotificationCustomization.word;
