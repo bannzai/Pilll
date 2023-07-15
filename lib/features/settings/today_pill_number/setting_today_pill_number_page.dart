@@ -12,6 +12,7 @@ import 'package:pilll/entity/setting.codegen.dart';
 import 'package:pilll/provider/change_pill_number.dart';
 import 'package:pilll/utils/formatter/date_time_formatter.dart';
 import 'package:flutter/material.dart';
+import 'package:pilll/utils/local_notification.dart';
 
 class SettingTodayPillNumberPage extends HookConsumerWidget {
   final PillSheetGroup pillSheetGroup;
@@ -28,6 +29,8 @@ class SettingTodayPillNumberPage extends HookConsumerWidget {
     final pillNumberIntoPillSheetState = useState(_pillNumberIntoPillSheet(activedPillSheet: activedPillSheet, pillSheetGroup: pillSheetGroup));
     final pillSheetPageIndexState = useState(activedPillSheet.groupIndex);
     final changePillNumber = ref.watch(changePillNumberProvider);
+    final registerReminderLocalNotification = ref.watch(registerReminderLocalNotificationProvider);
+    final navigator = Navigator.of(context);
 
     return Scaffold(
       backgroundColor: PilllColors.background,
@@ -87,13 +90,14 @@ class SettingTodayPillNumberPage extends HookConsumerWidget {
                       width: 180,
                       child: PrimaryButton(
                         onPressed: () async {
-                          changePillNumber(
+                          await changePillNumber(
                               pillSheetGroup: pillSheetGroup,
                               activedPillSheet: activedPillSheet,
                               pillSheetPageIndex: pillSheetPageIndexState.value,
                               pillNumberIntoPillSheet: pillNumberIntoPillSheetState.value);
+                          await registerReminderLocalNotification?.call();
 
-                          Navigator.of(context).pop();
+                          navigator.pop();
                         },
                         text: "変更する",
                       ),
