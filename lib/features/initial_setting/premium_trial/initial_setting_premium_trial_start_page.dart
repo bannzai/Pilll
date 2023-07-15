@@ -136,7 +136,7 @@ class IntiialSettingPremiumTrialStartPage extends HookConsumerWidget {
                   try {
                     final navigator = Navigator.of(context);
                     await store.register();
-                    await registerReminderLocalNotification?.call();
+                    await registerReminderLocalNotification.call();
                     await AppRouter.endInitialSetting(navigator, didEndInitialSettingNotifier);
                   } catch (error) {
                     showErrorAlert(context, error.toString());

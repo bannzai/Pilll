@@ -95,7 +95,7 @@ class SettingTodayPillNumberPage extends HookConsumerWidget {
                               activedPillSheet: activedPillSheet,
                               pillSheetPageIndex: pillSheetPageIndexState.value,
                               pillNumberIntoPillSheet: pillNumberIntoPillSheetState.value);
-                          await registerReminderLocalNotification?.call();
+                          await registerReminderLocalNotification.call();
 
                           navigator.pop();
                         },
