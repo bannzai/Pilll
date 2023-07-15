@@ -11,6 +11,7 @@ import 'package:pilll/components/atoms/font.dart';
 import 'package:pilll/components/atoms/text_color.dart';
 import 'package:pilll/features/initial_setting/initial_setting_state_notifier.dart';
 import 'package:pilll/features/error/error_alert.dart';
+import 'package:pilll/utils/local_notification.dart';
 import 'package:pilll/utils/router.dart';
 import 'package:pilll/utils/shared_preference/keys.dart';
 
@@ -134,6 +135,9 @@ class IntiialSettingPremiumTrialStartPage extends HookConsumerWidget {
                   try {
                     final navigator = Navigator.of(context);
                     await store.register();
+                    // store.registerの後にSetting等ができるので同じキャプチャ上では、registerReminderLocalNotificationProvider が変更されない。なのでreadで問い合わせる
+                    // TODO: 動作確認の時にちゃんと確認する
+                    await ref.read(registerReminderLocalNotificationProvider)?.call();
                     await AppRouter.endInitialSetting(navigator, didEndInitialSettingNotifier);
                   } catch (error) {
                     showErrorAlert(context, error.toString());
