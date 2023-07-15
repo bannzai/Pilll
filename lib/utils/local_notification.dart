@@ -97,6 +97,11 @@ class LocalNotificationService {
       uiLocalNotificationDateInterpretation: UILocalNotificationDateInterpretation.absoluteTime,
     );
   }
+
+  Future<List<PendingNotificationRequest>> pendingReminderNotifications() async {
+    final pendingNotifications = await plugin.pendingNotificationRequests();
+    return pendingNotifications.where((element) => element.id - reminderNotificationIdentifierOffset >= 0).toList();
+  }
 }
 
 // 必要な状態が全て揃ったら(AsyncData)の時のみ値を返す。そうじゃない場合はnullを返す
@@ -275,11 +280,6 @@ class RegisterReminderLocalNotification {
     debugPrint("end scheduleRemiderNotification: ${setting.reminderTimes}");
   }
 
-  Future<bool> isNotExistsPendingNotification() async {
-    final pendingNotifications = await localNotificationService.plugin.pendingNotificationRequests();
-    return pendingNotifications.where((element) => element.id - reminderNotificationIdentifierOffset >= 0).isEmpty;
-  }
-
   // reminder time id is 10{groupIndex:2}{hour:2}{minute:2}{pillNumberIntoPillSheet:2}
   // for example return value 1002223014 means,  `10` is prefix, gropuIndex: `02` is third pillSheet,`22` is hour, `30` is minute, `14` is pill number into pill sheet
   // 1000000000 = reminderNotificationIdentifierOffset
@@ -296,6 +296,15 @@ class RegisterReminderLocalNotification {
     final hour = reminderTime.hour * 100000;
     final minute = reminderTime.minute * 1000;
     return reminderNotificationIdentifierOffset + groupIndex + hour + minute + pillNumberIntoPillSheet;
+  }
+}
+
+final cancelReminderLocalNotificationProvider = Provider((ref) => CancelReminderLocalNotificationProvider());
+
+class CancelReminderLocalNotificationProvider {
+  Future<void> call() async {
+    final pendingNotifications = await localNotificationService.pendingReminderNotifications();
+    await Future.wait(pendingNotifications.map((p) => localNotificationService.cancelNotification(localNotificationID: p.id)));
   }
 }
 

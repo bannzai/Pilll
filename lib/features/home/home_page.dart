@@ -25,6 +25,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:pilll/utils/shared_preference/keys.dart';
 import 'package:shared_preferences/shared_preferences.dart';
+import 'package:timezone/timezone.dart';
 
 enum HomePageTabType { record, menstruation, calendar, setting }
 
@@ -117,7 +118,7 @@ class HomePageBody extends HookConsumerWidget {
     }();
 
     Future.microtask(() async {
-      if (await registerReminderLocalNotification.isNotExistsPendingNotification()) {
+      if ((await localNotificationService.pendingReminderNotifications()).isNotEmpty) {
         await registerReminderLocalNotification.call();
       }
     });
