@@ -18,6 +18,7 @@ class ToggleReminderNotification extends HookConsumerWidget {
   @override
   Widget build(BuildContext context, WidgetRef ref) {
     final setSetting = ref.watch(setSettingProvider);
+    final registerReminderLocalNotification = ref.watch(registerReminderLocalNotificationProvider);
 
     return SwitchListTile(
       title: const Text("ピルの服用通知",
@@ -35,6 +36,7 @@ class ToggleReminderNotification extends HookConsumerWidget {
         messenger.hideCurrentSnackBar();
         try {
           await setSetting(setting.copyWith(isOnReminder: value));
+          await registerReminderLocalNotification?.call();
           messenger.showSnackBar(
             SnackBar(
               duration: const Duration(seconds: 2),
