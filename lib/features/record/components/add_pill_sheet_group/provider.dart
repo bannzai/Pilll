@@ -96,13 +96,14 @@ class AddPillSheetGroup {
           pillSheetTypes: pillSheetTypes,
         ));
 
-    await localNotificationService.scheduleAllRemiderNotification(
-      pillSheetGroup: updatedPillSheetGroup,
-      activePillSheet: updatedPillSheetGroup.activedPillSheet ?? updatedPillSheetGroup.pillSheets.first,
-      isTrialOrPremium: premiumOrTrial,
-      setting: setting,
-    );
-
-    return batch.commit();
+    await (
+      batch.commit(),
+      localNotificationService.scheduleAllRemiderNotification(
+        pillSheetGroup: updatedPillSheetGroup,
+        activePillSheet: updatedPillSheetGroup.activedPillSheet ?? updatedPillSheetGroup.pillSheets.first,
+        isTrialOrPremium: premiumOrTrial,
+        setting: setting,
+      )
+    ).wait;
   }
 }
