@@ -1,6 +1,7 @@
 import 'package:collection/collection.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/foundation.dart';
+import 'package:pilll/entity/pill_sheet.codegen.dart';
 import 'package:pilll/provider/database.dart';
 import 'package:pilll/entity/pill_sheet_group.codegen.dart';
 import 'package:riverpod/riverpod.dart';
@@ -21,6 +22,10 @@ Future<PillSheetGroup?> latestPillSheetGroup(DatabaseConnection databaseConnecti
       .lastOrNull
       ?.data();
 }
+
+final activePillSheetProvider = Provider((ref) {
+  return ref.watch(latestPillSheetGroupProvider).whenData((value) => value?.activedPillSheet);
+});
 
 final latestPillSheetGroupProvider = StreamProvider((ref) => ref
         .watch(databaseProvider)

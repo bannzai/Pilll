@@ -9,6 +9,7 @@ import 'package:pilll/entity/pill_sheet_group.codegen.dart';
 import 'package:pilll/entity/schedule.codegen.dart';
 import 'package:pilll/entity/setting.codegen.dart';
 import 'package:pilll/entity/weekday.dart';
+import 'package:pilll/provider/pill_sheet_group.dart';
 import 'package:pilll/provider/premium_and_trial.codegen.dart';
 import 'package:pilll/provider/setting.dart';
 import 'package:pilll/utils/datetime/day.dart';
@@ -98,6 +99,24 @@ class LocalNotificationService {
   }
 }
 
+// 必要な状態が全て揃ったら(AsyncData)の時のみ値を返す。そうじゃない場合はnullを返す
+final registerReminderLocalNotificationProvider = Provider((ref) {
+  final pillSheetGroup = ref.watch(latestPillSheetGroupProvider).asData?.valueOrNull;
+  final activePillSheet = ref.watch(activePillSheetProvider).asData?.valueOrNull;
+  final premiumAndTrial = ref.watch(premiumAndTrialProvider).asData?.valueOrNull;
+  final setting = ref.watch(settingProvider).asData?.valueOrNull;
+
+  if (pillSheetGroup == null || activePillSheet == null || premiumAndTrial == null || setting == null) {
+    return null;
+  }
+  return RegisterReminderLocalNotification(
+    pillSheetGroup: pillSheetGroup,
+    activePillSheet: activePillSheet,
+    premiumOrTrial: premiumAndTrial.premiumOrTrial,
+    setting: setting,
+  );
+});
+
 // Reminder
 // 最新の状態を元に更新すれば良いので、更新処理に必要な状態はプロパティで持つ。このプロパティは通常ref.watchにより常に最新に保たれる
 // また、状態をcallの引数として受け取らないことで通常はSingle Stateであるものに対して間違った値を受け取れないようにする
@@ -105,13 +124,13 @@ class LocalNotificationService {
 // - 各アクションと並行して処理を行わない
 // - アクションの結果を受け取ってローカル通知の登録の更新をしない
 // - 変更を検知してcallを呼ぶ親Widgetを用意して、変更があれば毎回登録しなおす
-class ReminderLocalNotification {
+class RegisterReminderLocalNotification {
   final PillSheetGroup pillSheetGroup;
   final PillSheet activePillSheet;
   final bool premiumOrTrial;
   final Setting setting;
 
-  ReminderLocalNotification({
+  RegisterReminderLocalNotification({
     required this.pillSheetGroup,
     required this.activePillSheet,
     required this.premiumOrTrial,
