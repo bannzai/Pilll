@@ -182,7 +182,6 @@ class RecordPagePillSheet extends HookConsumerWidget {
       takenDate: takenDate,
       pillSheetGroup: pillSheetGroup,
       activedPillSheet: activedPillSheet,
-      setting: setting,
       isQuickRecord: false,
     );
     if (updatedPillSheetGroup == null) {
