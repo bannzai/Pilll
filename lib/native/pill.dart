@@ -33,6 +33,10 @@ Future<PillSheetGroup?> quickRecordTakePill() async {
   if (activedPillSheet.todayPillIsAlreadyTaken) {
     return pillSheetGroup;
   }
+  final setting = await database.userReference().get().then((event) => event.data()?.setting);
+  if (setting == null) {
+    return pillSheetGroup;
+  }
 
   final takenDate = now();
   final batchFactory = BatchFactory(database);
@@ -47,6 +51,7 @@ Future<PillSheetGroup?> quickRecordTakePill() async {
     pillSheetGroup: pillSheetGroup,
     activedPillSheet: activedPillSheet,
     isQuickRecord: true,
+    setting: setting,
   );
 
   // NOTE: iOSではAppDelegate.swiftの方で先にバッジのカウントはクリアしている

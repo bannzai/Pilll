@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_app_badger/flutter_app_badger.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
+import 'package:pilll/entity/setting.codegen.dart';
 import 'package:pilll/utils/analytics.dart';
 import 'package:pilll/components/atoms/button.dart';
 import 'package:pilll/features/release_note/release_note.dart';
@@ -18,6 +19,7 @@ class TakenButton extends HookConsumerWidget {
   final PillSheetGroup pillSheetGroup;
   final PillSheet activePillSheet;
   final bool userIsPremiumOtTrial;
+  final Setting setting;
 
   const TakenButton({
     Key? key,
@@ -25,6 +27,7 @@ class TakenButton extends HookConsumerWidget {
     required this.pillSheetGroup,
     required this.activePillSheet,
     required this.userIsPremiumOtTrial,
+    required this.setting,
   }) : super(key: key);
   @override
   Widget build(BuildContext context, WidgetRef ref) {
@@ -48,6 +51,7 @@ class TakenButton extends HookConsumerWidget {
               takenDate: now(),
               pillSheetGroup: pillSheetGroup,
               activedPillSheet: activePillSheet,
+              setting: setting,
               isQuickRecord: false,
             );
             syncActivePillSheetValue(pillSheetGroup: updatedPillSheetGroup);
