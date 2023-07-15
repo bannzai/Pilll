@@ -11,17 +11,7 @@ import 'package:pilll/provider/take_pill.dart';
 import 'package:pilll/entity/pill_sheet_group.codegen.dart';
 import 'package:pilll/utils/datetime/day.dart';
 
-Future<PillSheetGroup?> quickRecordTakePill() async {
-  // 通知からの起動の時に、FirebaseAuth.instanceを参照すると、まだinitializeされてないよ．的なエラーが出る
-  if (Firebase.apps.isEmpty) {
-    await Firebase.initializeApp();
-  }
-  final firebaseUser = FirebaseAuth.instance.currentUser;
-  if (firebaseUser == null) {
-    return null;
-  }
-
-  final database = DatabaseConnection(firebaseUser.uid);
+Future<PillSheetGroup?> quickRecordTakePill(DatabaseConnection database) async {
   final pillSheetGroup = await latestPillSheetGroup(database);
   if (pillSheetGroup == null) {
     return null;
