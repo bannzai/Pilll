@@ -10,6 +10,7 @@ import 'package:pilll/entity/pill_sheet.codegen.dart';
 import 'package:pilll/entity/pill_sheet_group.codegen.dart';
 import 'package:pilll/features/error/error_alert.dart';
 import 'package:pilll/provider/delete_pill_sheet.dart';
+import 'package:pilll/utils/local_notification.dart';
 
 class PillSheetRemoveRow extends HookConsumerWidget {
   final PillSheetGroup latestPillSheetGroup;
@@ -24,6 +25,7 @@ class PillSheetRemoveRow extends HookConsumerWidget {
   @override
   Widget build(BuildContext context, WidgetRef ref) {
     final deletePillSheetGroup = ref.watch(deletePillSheetGroupProvider);
+    final cancelReminderLocalNotification = ref.watch(cancelReminderLocalNotificationProvider);
     return ListTile(
       title: const Text("ピルシートをすべて破棄",
           style: TextStyle(
@@ -86,6 +88,7 @@ class PillSheetRemoveRow extends HookConsumerWidget {
                   onPressed: () async {
                     try {
                       await deletePillSheetGroup(latestPillSheetGroup: latestPillSheetGroup, activedPillSheet: activedPillSheet);
+                      await cancelReminderLocalNotification();
                       navigatorKey.currentState?.pop();
                       ScaffoldMessenger.of(navigatorKey.currentContext!).showSnackBar(
                         const SnackBar(
