@@ -36,7 +36,9 @@ class ToggleReminderNotification extends HookConsumerWidget {
         messenger.hideCurrentSnackBar();
         try {
           await setSetting(setting.copyWith(isOnReminder: value));
-          await registerReminderLocalNotification?.call();
+          if (value) {
+            await registerReminderLocalNotification?.call();
+          }
           messenger.showSnackBar(
             SnackBar(
               duration: const Duration(seconds: 2),
