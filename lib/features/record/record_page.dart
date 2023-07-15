@@ -160,6 +160,7 @@ class RecordPageBody extends HookConsumerWidget {
               pillSheetGroup: pillSheetGroup,
               currentPillSheet: activePillSheet,
               userIsPremiumOtTrial: premiumAndTrial.premiumOrTrial,
+              setting: setting,
             ),
             const SizedBox(height: 40),
           ],

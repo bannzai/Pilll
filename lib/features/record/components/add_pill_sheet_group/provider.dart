@@ -10,6 +10,7 @@ import 'package:pilll/provider/pill_sheet_group.dart';
 import 'package:pilll/provider/pill_sheet_modified_history.dart';
 import 'package:pilll/provider/setting.dart';
 import 'package:pilll/utils/datetime/day.dart';
+import 'package:pilll/utils/local_notification.dart';
 import 'package:riverpod/riverpod.dart';
 
 final addPillSheetGroupProvider = Provider(
@@ -39,6 +40,7 @@ class AddPillSheetGroup {
     required Setting setting,
     required PillSheetGroup? pillSheetGroup,
     required List<PillSheetType> pillSheetTypes,
+    required bool premiumOrTrial,
     required PillSheetGroupDisplayNumberSetting? displayNumberSetting,
   }) async {
     final batch = batchFactory.batch();
@@ -59,26 +61,27 @@ class AddPillSheetGroup {
     }).toList();
 
     final pillSheetIDs = createdPillSheets.map((e) => e.id!).toList();
+    final updatedPillSheetGroup = PillSheetGroup(
+      pillSheetIDs: pillSheetIDs,
+      pillSheets: createdPillSheets,
+      displayNumberSetting: () {
+        if (setting.pillSheetAppearanceMode == PillSheetAppearanceMode.sequential) {
+          if (displayNumberSetting != null) {
+            return displayNumberSetting;
+          }
+          if (pillSheetGroup != null) {
+            return PillSheetGroupDisplayNumberSetting(
+              beginPillNumber: pillSheetGroup.estimatedEndPillNumber + 1,
+            );
+          }
+        }
+        return null;
+      }(),
+      createdAt: now(),
+    );
     final createdPillSheetGroup = batchSetPillSheetGroup(
       batch,
-      PillSheetGroup(
-        pillSheetIDs: pillSheetIDs,
-        pillSheets: createdPillSheets,
-        displayNumberSetting: () {
-          if (setting.pillSheetAppearanceMode == PillSheetAppearanceMode.sequential) {
-            if (displayNumberSetting != null) {
-              return displayNumberSetting;
-            }
-            if (pillSheetGroup != null) {
-              return PillSheetGroupDisplayNumberSetting(
-                beginPillNumber: pillSheetGroup.estimatedEndPillNumber + 1,
-              );
-            }
-          }
-          return null;
-        }(),
-        createdAt: now(),
-      ),
+      updatedPillSheetGroup,
     );
 
     final history = PillSheetModifiedHistoryServiceActionFactory.createCreatedPillSheetAction(
@@ -92,6 +95,13 @@ class AddPillSheetGroup {
         setting.copyWith(
           pillSheetTypes: pillSheetTypes,
         ));
+
+    await localNotificationService.scheduleAllRemiderNotification(
+      pillSheetGroup: updatedPillSheetGroup,
+      activePillSheet: updatedPillSheetGroup.activedPillSheet ?? updatedPillSheetGroup.pillSheets.first,
+      isTrialOrPremium: premiumOrTrial,
+      setting: setting,
+    );
 
     return batch.commit();
   }
