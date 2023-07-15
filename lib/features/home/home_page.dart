@@ -115,18 +115,14 @@ class HomePageBody extends HookConsumerWidget {
       }
       return !isAlreadyShowPremiumSurvey;
     }();
-    final latestRegisterReminderLocalNotificationMillisecondsSinceEpoch =
-        sharedPreferences.getInt(IntKey.latestRegisterReminderLocalNotificationMillisecondsSinceEpoch);
 
     Future.microtask(() async {
-      if (latestRegisterReminderLocalNotificationMillisecondsSinceEpoch != null) {
-        final latestRegisterReminderLocalNotificationDateTime =
-            DateTime.fromMicrosecondsSinceEpoch(latestRegisterReminderLocalNotificationMillisecondsSinceEpoch);
-        if (now().difference(latestRegisterReminderLocalNotificationDateTime).inDays > RegisterReminderLocalNotification.registerDays) {
-          
-        }
+      if (await registerReminderLocalNotification.isNotExistsPendingNotification()) {
+        await registerReminderLocalNotification.call();
       }
+    });
 
+    Future.microtask(() async {
       if (shouldShowMigrateInfo) {
         showDialog(
             context: context,

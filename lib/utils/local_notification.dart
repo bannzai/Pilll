@@ -138,8 +138,7 @@ class RegisterReminderLocalNotification {
     final activePillSheet = ref.read(activePillSheetProvider).asData?.valueOrNull;
     final premiumOrTrial = ref.read(premiumAndTrialProvider).asData?.valueOrNull?.premiumOrTrial;
     final setting = ref.read(settingProvider).asData?.valueOrNull;
-    final sharedPreferences = ref.read(sharedPreferenceProvider).asData?.valueOrNull;
-    if (pillSheetGroup == null || activePillSheet == null || premiumOrTrial == null || setting == null || sharedPreferences == null) {
+    if (pillSheetGroup == null || activePillSheet == null || premiumOrTrial == null || setting == null) {
       return;
     }
 
@@ -255,14 +254,13 @@ class RegisterReminderLocalNotification {
     }
 
     await Future.wait(futures);
-    await sharedPreferences.setInt(IntKey.latestRegisterReminderLocalNotificationMillisecondsSinceEpoch, now().millisecondsSinceEpoch);
 
     debugPrint("end scheduleRemiderNotification: ${setting.reminderTimes}");
   }
 
-  Future<bool> hasPendingNotification() async {
+  Future<bool> isNotExistsPendingNotification() async {
     final pendingNotifications = await localNotificationService.plugin.pendingNotificationRequests();
-    return pendingNotifications.where((element) => element.id - reminderNotificationIdentifierOffset >= 0).isNotEmpty;
+    return pendingNotifications.where((element) => element.id - reminderNotificationIdentifierOffset >= 0).isEmpty;
   }
 
   // reminder time id is 10{groupIndex:2}{hour:2}{minute:2}{pillNumberIntoPillSheet:2}
