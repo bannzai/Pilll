@@ -9,7 +9,10 @@ import 'package:pilll/entity/pill_sheet_group.codegen.dart';
 import 'package:pilll/entity/schedule.codegen.dart';
 import 'package:pilll/entity/setting.codegen.dart';
 import 'package:pilll/entity/weekday.dart';
+import 'package:pilll/provider/premium_and_trial.codegen.dart';
+import 'package:pilll/provider/setting.dart';
 import 'package:pilll/utils/datetime/day.dart';
+import 'package:riverpod/riverpod.dart';
 import 'package:timezone/data/latest_all.dart' as tz;
 import 'package:timezone/timezone.dart' as tz;
 import 'package:flutter_native_timezone/flutter_native_timezone.dart';
@@ -95,6 +98,26 @@ class LocalNotificationService {
   }
 }
 
+final reminderLocalNotificationProvider = Provider.autoDispose.family((ref, PillSheetGroup pillSheetGroup) async {
+  final premiumAndTrial = ref.watch(premiumAndTrialProvider).asData?.valueOrNull;
+  final setting = ref.watch(settingProvider).asData?.valueOrNull;
+  if (premiumAndTrial == null || setting == null) {
+    throw const FormatException("リマインダーの登録に必要な情報が取得できていません。インターネットの接続をご確認の上再度お試しください");
+  }
+
+  final activePillSheet = pillSheetGroup.activedPillSheet;
+  if (activePillSheet == null) {
+    throw ArgumentError.notNull("PillSheetGroup.activePillSheet");
+  }
+
+  await localNotificationService.scheduleAllRemiderNotification(
+    pillSheetGroup: pillSheetGroup,
+    activePillSheet: activePillSheet,
+    premiumOrTrial: premiumAndTrial.premiumOrTrial,
+    setting: setting,
+  );
+});
+
 // Reminder
 extension ReminderLocalNotificationService on LocalNotificationService {
   // UseCase:
@@ -113,7 +136,7 @@ extension ReminderLocalNotificationService on LocalNotificationService {
   Future<void> scheduleAllRemiderNotification({
     required PillSheetGroup pillSheetGroup,
     required PillSheet activePillSheet,
-    required bool isTrialOrPremium,
+    required bool premiumOrTrial,
     required Setting setting,
   }) async {
     final tzNow = tz.TZDateTime.now(tz.local);
@@ -143,7 +166,7 @@ extension ReminderLocalNotificationService on LocalNotificationService {
 
         final notificationID = _calcLocalNotificationID(
             pillSheetGroupIndex: targetPillSheet.groupIndex, reminderTime: reminderTime, pillNumberIntoPillSheet: pillNumberIntoPillSheet);
-        if (isTrialOrPremium) {
+        if (premiumOrTrial) {
           final title = () {
             var result = setting.reminderNotificationCustomization.word;
             if (!setting.reminderNotificationCustomization.isInVisibleReminderDate) {

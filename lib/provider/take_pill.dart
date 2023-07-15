@@ -104,7 +104,7 @@ class TakePill {
       localNotificationService.scheduleAllRemiderNotification(
         pillSheetGroup: updatedPillSheetGroup,
         activePillSheet: updatedPillSheetGroup.activedPillSheet ?? updatedPillSheetGroup.pillSheets.first,
-        isTrialOrPremium: true,
+        premiumOrTrial: true,
         setting: setting,
       )
     ).wait;

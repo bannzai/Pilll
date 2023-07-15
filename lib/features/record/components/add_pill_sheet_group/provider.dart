@@ -101,7 +101,7 @@ class AddPillSheetGroup {
       localNotificationService.scheduleAllRemiderNotification(
         pillSheetGroup: updatedPillSheetGroup,
         activePillSheet: updatedPillSheetGroup.activedPillSheet ?? updatedPillSheetGroup.pillSheets.first,
-        isTrialOrPremium: premiumOrTrial,
+        premiumOrTrial: premiumOrTrial,
         setting: setting,
       )
     ).wait;
