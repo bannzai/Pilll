@@ -102,12 +102,12 @@ final reminderLocalNotificationProvider = Provider.autoDispose.family((ref, Pill
   final premiumAndTrial = ref.watch(premiumAndTrialProvider).asData?.valueOrNull;
   final setting = ref.watch(settingProvider).asData?.valueOrNull;
   if (premiumAndTrial == null || setting == null) {
-    throw const FormatException("リマインダーの登録に必要な情報が取得できていません。インターネットの接続をご確認の上再度お試しください");
+    return;
   }
 
   final activePillSheet = pillSheetGroup.activedPillSheet;
   if (activePillSheet == null) {
-    throw ArgumentError.notNull("PillSheetGroup.activePillSheet");
+    return;
   }
 
   await localNotificationService.scheduleAllRemiderNotification(
