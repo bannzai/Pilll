@@ -141,7 +141,7 @@ class RegisterReminderLocalNotification {
     final tzNow = tz.TZDateTime.now(tz.local);
     final List<Future<void>> futures = [];
 
-    debugPrint("[bannzai] $tzNow, ${tz.local}");
+    debugPrint("[bannzai] tzNow:$tzNow, tz.local:${tz.local}");
 
     for (final reminderTime in setting.reminderTimes) {
       // 新規ピルシートグループの作成後に通知のスケジュールができないため、多めに通知をスケジュールする
