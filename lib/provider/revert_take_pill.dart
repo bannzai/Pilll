@@ -90,15 +90,7 @@ class RevertTakePill {
     );
     batchSetPillSheetModifiedHistory(batch, history);
 
-    (
-      batch.commit(),
-      localNotificationService.scheduleAllRemiderNotification(
-        pillSheetGroup: pillSheetGroup,
-        activePillSheet: activePillSheet,
-        premiumOrTrial: premiumOrTrial,
-        setting: setting,
-      )
-    ).wait;
+    await batch.commit();
 
     return updatedPillSheetGroup;
   }

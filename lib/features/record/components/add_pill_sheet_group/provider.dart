@@ -40,7 +40,6 @@ class AddPillSheetGroup {
     required Setting setting,
     required PillSheetGroup? pillSheetGroup,
     required List<PillSheetType> pillSheetTypes,
-    required bool premiumOrTrial,
     required PillSheetGroupDisplayNumberSetting? displayNumberSetting,
   }) async {
     final batch = batchFactory.batch();
@@ -96,14 +95,6 @@ class AddPillSheetGroup {
           pillSheetTypes: pillSheetTypes,
         ));
 
-    await (
-      batch.commit(),
-      localNotificationService.scheduleAllRemiderNotification(
-        pillSheetGroup: updatedPillSheetGroup,
-        activePillSheet: updatedPillSheetGroup.activedPillSheet ?? updatedPillSheetGroup.pillSheets.first,
-        premiumOrTrial: premiumOrTrial,
-        setting: setting,
-      )
-    ).wait;
+    await batch.commit();
   }
 }

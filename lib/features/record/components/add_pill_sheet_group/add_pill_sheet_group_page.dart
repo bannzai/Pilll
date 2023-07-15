@@ -91,7 +91,6 @@ class AddPillSheetGroupPage extends HookConsumerWidget {
                                 setting: setting,
                                 pillSheetGroup: pillSheetGroup,
                                 pillSheetTypes: pillSheetTypes.value,
-                                premiumOrTrial: premiumOrTrial?.premiumOrTrial ?? false,
                                 displayNumberSetting: displayNumberSetting.value,
                               );
                               navigator.pop();

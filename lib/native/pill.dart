@@ -51,7 +51,6 @@ Future<PillSheetGroup?> quickRecordTakePill() async {
     pillSheetGroup: pillSheetGroup,
     activedPillSheet: activedPillSheet,
     isQuickRecord: true,
-    setting: setting,
   );
 
   // NOTE: iOSではAppDelegate.swiftの方で先にバッジのカウントはクリアしている

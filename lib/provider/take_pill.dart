@@ -36,7 +36,6 @@ class TakePill {
     required DateTime takenDate,
     required PillSheetGroup pillSheetGroup,
     required PillSheet activedPillSheet,
-    required Setting setting,
     required bool isQuickRecord,
   }) async {
     if (activedPillSheet.todayPillIsAlreadyTaken) {
@@ -99,15 +98,8 @@ class TakePill {
     // 服用記録はBackendの通知等によく使われるので、DBに書き込まれたあとにStreamを通じてUIを更新する
     awaitsPillSheetGroupRemoteDBDataChanged = true;
 
-    await (
-      batch.commit(),
-      localNotificationService.scheduleAllRemiderNotification(
-        pillSheetGroup: updatedPillSheetGroup,
-        activePillSheet: updatedPillSheetGroup.activedPillSheet ?? updatedPillSheetGroup.pillSheets.first,
-        premiumOrTrial: true,
-        setting: setting,
-      )
-    ).wait;
+    await batch.commit();
+
     return updatedPillSheetGroup;
   }
 }
