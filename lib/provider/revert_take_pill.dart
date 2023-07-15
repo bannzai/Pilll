@@ -17,7 +17,6 @@ final revertTakePillProvider = Provider(
 
 class RevertTakePill {
   final BatchFactory batchFactory;
-
   final BatchSetPillSheetModifiedHistory batchSetPillSheetModifiedHistory;
   final BatchSetPillSheetGroup batchSetPillSheetGroup;
 
