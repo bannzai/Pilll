@@ -60,6 +60,7 @@ class HomePage extends HookConsumerWidget {
           premiumAndTrial: data.t2,
           shouldShowMigrateInfo: data.t3,
           sharedPreferences: data.t4,
+          registerReminderLocalNotification: registerReminderLocalNotification,
         );
       },
       error: (error, stackTrace) => UniversalErrorPage(

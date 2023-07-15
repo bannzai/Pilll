@@ -208,7 +208,7 @@ class ReminderNotificationCustomizeWordPage extends HookConsumerWidget {
     required String word,
     required Setting setting,
     required SetSetting setSetting,
-    required RegisterReminderLocalNotification? registerReminderLocalNotification,
+    required RegisterReminderLocalNotification registerReminderLocalNotification,
   }) async {
     var reminderNotificationCustomization = setting.reminderNotificationCustomization;
     reminderNotificationCustomization = reminderNotificationCustomization.copyWith(word: word);
@@ -221,7 +221,7 @@ class ReminderNotificationCustomizeWordPage extends HookConsumerWidget {
     required bool isInVisibleReminderDate,
     required Setting setting,
     required SetSetting setSetting,
-    required RegisterReminderLocalNotification? registerReminderLocalNotification,
+    required RegisterReminderLocalNotification registerReminderLocalNotification,
   }) async {
     var reminderNotificationCustomization = setting.reminderNotificationCustomization;
     reminderNotificationCustomization = reminderNotificationCustomization.copyWith(isInVisibleReminderDate: isInVisibleReminderDate);
@@ -234,7 +234,7 @@ class ReminderNotificationCustomizeWordPage extends HookConsumerWidget {
     required bool isInVisiblePillNumber,
     required Setting setting,
     required SetSetting setSetting,
-    required RegisterReminderLocalNotification? registerReminderLocalNotification,
+    required RegisterReminderLocalNotification registerReminderLocalNotification,
   }) async {
     var reminderNotificationCustomization = setting.reminderNotificationCustomization;
     reminderNotificationCustomization = reminderNotificationCustomization.copyWith(isInVisiblePillNumber: isInVisiblePillNumber);
@@ -247,7 +247,7 @@ class ReminderNotificationCustomizeWordPage extends HookConsumerWidget {
     required bool isInVisibleDescription,
     required Setting setting,
     required SetSetting setSetting,
-    required RegisterReminderLocalNotification? registerReminderLocalNotification,
+    required RegisterReminderLocalNotification registerReminderLocalNotification,
   }) async {
     var reminderNotificationCustomization = setting.reminderNotificationCustomization;
     reminderNotificationCustomization = reminderNotificationCustomization.copyWith(isInVisibleDescription: isInVisibleDescription);
