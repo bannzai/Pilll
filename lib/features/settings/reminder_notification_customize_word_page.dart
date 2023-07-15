@@ -18,7 +18,7 @@ class ReminderNotificationCustomizeWordPage extends HookConsumerWidget {
     final setSetting = ref.watch(setSettingProvider);
     final setting = ref.watch(settingProvider).requireValue;
 
-    final textFieldControlelr = useTextEditingController(text: setting.reminderNotificationCustomization.word);
+    final textFieldController = useTextEditingController(text: setting.reminderNotificationCustomization.word);
     final wordState = useState(setting.reminderNotificationCustomization.word);
     final isInVisibleReminderDate = useState(setting.reminderNotificationCustomization.isInVisibleReminderDate);
     final isInVisiblePillNumber = useState(setting.reminderNotificationCustomization.isInVisiblePillNumber);
@@ -86,7 +86,7 @@ class ReminderNotificationCustomizeWordPage extends HookConsumerWidget {
                         showErrorAlert(context, error);
                       }
                     },
-                    controller: textFieldControlelr,
+                    controller: textFieldController,
                     maxLength: 8,
                   ),
                   const SizedBox(height: 20),
