@@ -109,7 +109,7 @@ extension ReminderLocalNotificationService on LocalNotificationService {
   // - リマインダーの通知がOFF->ONになった時
   // - 久しぶりにアプリを開いたが、通知がスケジュールされていない時
   // - トライアル終了後/プレミアム加入後 → これは服用は続けられているので何もしない。有料機能をしばらく使えてもヨシとする
-  // 7日間分の通知をスケジュールする
+  // 10日間分の通知をスケジュールする
   Future<void> scheduleAllRemiderNotification({
     required PillSheetGroup pillSheetGroup,
     required PillSheet activePillSheet,
@@ -119,10 +119,12 @@ extension ReminderLocalNotificationService on LocalNotificationService {
     final tzNow = tz.TZDateTime.now(tz.local);
     final List<Future<void>> futures = [];
 
+    debugPrint("[bannzai] $tzNow, ${tz.local}");
+
     for (final reminderTime in setting.reminderTimes) {
       // 新規ピルシートグループの作成後に通知のスケジュールができないため、多めに通知をスケジュールする
       // ユーザーの何かしらのアクションでどこかでスケジュールされるだろう
-      for (final offset in List.generate(7, (index) => index)) {
+      for (final offset in List.generate(10, (index) => index)) {
         final reminderDate = tzNow.add(Duration(days: offset)).add(Duration(hours: reminderTime.hour)).add(Duration(minutes: reminderTime.minute));
         // NOTE: LocalNotification must be scheduled at least 3 minutes after the current time (in iOS, Android not confirm).
         // Delay five minutes just to be sure.
