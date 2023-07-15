@@ -132,9 +132,9 @@ class RegisterReminderLocalNotification {
   Future<void> call() async {
     final pillSheetGroup = ref.watch(latestPillSheetGroupProvider).asData?.valueOrNull;
     final activePillSheet = ref.watch(activePillSheetProvider).asData?.valueOrNull;
-    final premiumAndTrial = ref.watch(premiumAndTrialProvider).asData?.valueOrNull;
+    final premiumOrTrial = ref.watch(premiumAndTrialProvider).asData?.valueOrNull?.premiumOrTrial;
     final setting = ref.watch(settingProvider).asData?.valueOrNull;
-    if (pillSheetGroup == null || activePillSheet == null || premiumAndTrial == null || setting == null) {
+    if (pillSheetGroup == null || activePillSheet == null || premiumOrTrial == null || setting == null) {
       return;
     }
 
