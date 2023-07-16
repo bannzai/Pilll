@@ -21,10 +21,6 @@ Future<PillSheetGroup?> quickRecordTakePill(DatabaseConnection database) async {
   if (activedPillSheet.todayPillIsAlreadyTaken) {
     return pillSheetGroup;
   }
-  final setting = await database.userReference().get().then((event) => event.data()?.setting);
-  if (setting == null) {
-    return pillSheetGroup;
-  }
 
   final takenDate = now();
   final batchFactory = BatchFactory(database);
