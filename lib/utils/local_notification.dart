@@ -177,13 +177,17 @@ class RegisterReminderLocalNotification {
           continue;
         }
 
-        final originPIllNumberInPillSheet = targetPillSheet.todayPillNumber + offset;
+        var targetPillSheet = activePillSheet;
+        final originPillNumberInPillSheet = targetPillSheet.todayPillNumber + offset;
+        if (originPillNumberInPillSheet > activePillSheet.typeInfo.totalCount) {
+          targetPillSheet = pillSheetGroup.pillSheets[activePillSheet.groupIndex + 1];
+        }
 
         // IDの計算には本来のピル番号を使用する。表示用の番号だと今後も設定によりズレる可能性があるため
         final notificationID = _calcLocalNotificationID(
           pillSheetGroupIndex: targetPillSheet.groupIndex,
           reminderTime: reminderTime,
-          pillNumberIntoPillSheet: originPIllNumberInPillSheet,
+          pillNumberIntoPillSheet: originPillNumberInPillSheet,
         );
 
         if (premiumOrTrial) {
@@ -195,13 +199,9 @@ class RegisterReminderLocalNotification {
             }
 
             if (!setting.reminderNotificationCustomization.isInVisiblePillNumber) {
-              var targetPillSheet = activePillSheet;
-              if (originPIllNumberInPillSheet > activePillSheet.typeInfo.totalCount) {
-                targetPillSheet = pillSheetGroup.pillSheets[activePillSheet.groupIndex + 1];
-              }
               final pillSheetDisplayNumber = pillSheetGroup.pillSheetDisplayNumber(
                 pillSheet: targetPillSheet,
-                originPIllNumberInPillSheet: originPIllNumberInPillSheet,
+                originPIllNumberInPillSheet: originPillNumberInPillSheet,
               );
 
               result += " ";
