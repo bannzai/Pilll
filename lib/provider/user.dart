@@ -302,7 +302,7 @@ class EndInitialSetting {
       UserFirestoreFieldKeys.trialDeadlineDate: now().add(const Duration(days: 30)),
       UserFirestoreFieldKeys.settings: settingForTrial.toJson(),
       UserFirestoreFieldKeys.hasDiscountEntitlement: true,
-      UserFirestoreFieldKeys.useLocalNotification: true,
+      UserFirestoreFieldKeys.useLocalNotificationForReminder: true,
     }, SetOptions(merge: true));
   }
 }
