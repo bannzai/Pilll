@@ -142,6 +142,7 @@ class RegisterReminderLocalNotification {
   // NOTE: 本日分の服用記録がある場合は、本日分の通知はスケジュールしないようになっている
   // 10日間分の通知をスケジュールする
   Future<void> call() async {
+    await Future.microtask(() => null);
     final pillSheetGroup = ref.read(latestPillSheetGroupProvider).asData?.valueOrNull;
     final activePillSheet = ref.read(activePillSheetProvider).asData?.valueOrNull;
     final premiumOrTrial = ref.read(premiumAndTrialProvider).asData?.valueOrNull?.premiumOrTrial;
@@ -178,9 +179,7 @@ class RegisterReminderLocalNotification {
         }
 
         final reminderDate = tzNow.add(Duration(days: offset)).add(Duration(hours: reminderTime.hour)).add(Duration(minutes: reminderTime.minute));
-        // NOTE: LocalNotification must be scheduled at least 3 minutes after the current time (in iOS, Android not confirm).
-        // Delay five minutes just to be sure.
-        if (!reminderDate.add(const Duration(minutes: 5)).isAfter(tzNow)) {
+        if (!reminderDate.isAfter(tzNow)) {
           continue;
         }
 
