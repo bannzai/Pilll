@@ -60,6 +60,7 @@ extension UserFirestoreFieldKeys on String {
   static const hasDiscountEntitlement = "hasDiscountEntitlement";
   static const discountEntitlementDeadlineDate = "discountEntitlementDeadlineDate";
   static const shouldAskCancelReason = "shouldAskCancelReason";
+  static const useLocalNotification = "useLocalNotification";
 }
 
 @freezed

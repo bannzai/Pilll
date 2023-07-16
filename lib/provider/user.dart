@@ -302,11 +302,13 @@ class EndInitialSetting {
       UserFirestoreFieldKeys.trialDeadlineDate: now().add(const Duration(days: 30)),
       UserFirestoreFieldKeys.settings: settingForTrial.toJson(),
       UserFirestoreFieldKeys.hasDiscountEntitlement: true,
+      UserFirestoreFieldKeys.useLocalNotification: true,
     }, SetOptions(merge: true));
   }
 }
 
 final disableShouldAskCancelReasonProvider = Provider((ref) => DisableShouldAskCancelReason(ref.watch(databaseProvider)));
+
 class DisableShouldAskCancelReason {
   final DatabaseConnection databaseConnection;
   DisableShouldAskCancelReason(this.databaseConnection);
