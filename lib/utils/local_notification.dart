@@ -136,6 +136,7 @@ class RegisterReminderLocalNotification {
   // - TODO: 休薬期間の通知のON/OFF
   // - 休薬終了後
   // - 初期設定完了後
+  // - TODO: サインイン
   // - 番号変更後
   // - リマインダーの通知がOFF->ONになった時
   // - 久しぶりにアプリを開いたが、通知がスケジュールされていない時
