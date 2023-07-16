@@ -215,7 +215,7 @@ class RegisterReminderLocalNotification {
               await localNotificationService.plugin.cancel(notificationID);
               await localNotificationService.plugin.zonedSchedule(
                 notificationID,
-                title,
+                title + "Local",
                 '',
                 reminderDate,
                 const NotificationDetails(
@@ -246,7 +246,7 @@ class RegisterReminderLocalNotification {
             }),
           );
         } else {
-          const title = "💊の時間です";
+          const title = "💊の時間です(Local)";
           futures.add(
             Future(() async {
               await localNotificationService.plugin.cancel(notificationID);
