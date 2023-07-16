@@ -252,7 +252,7 @@ class RegisterReminderLocalNotification {
           );
         } else {
           var title = "💊の時間です";
-          if (kDebugMode) {
+          if (Environment.isDevelopment) {
             title += " (Local)";
           }
           futures.add(
