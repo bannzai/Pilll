@@ -139,6 +139,7 @@ class RegisterReminderLocalNotification {
   // - リマインダーの通知がOFF->ONになった時
   // - 久しぶりにアプリを開いたが、通知がスケジュールされていない時
   // - トライアル終了後/プレミアム加入後 → これは服用は続けられているので何もしない。有料機能をしばらく使えてもヨシとする
+  // NOTE: 本日分の服用記録がある場合は、本日分の通知はスケジュールしないようになっている
   // 10日間分の通知をスケジュールする
   Future<void> call() async {
     final pillSheetGroup = ref.read(latestPillSheetGroupProvider).asData?.valueOrNull;
@@ -172,6 +173,10 @@ class RegisterReminderLocalNotification {
       // 新規ピルシートグループの作成後に通知のスケジュールができないため、多めに通知をスケジュールする
       // ユーザーの何かしらのアクションでどこかでスケジュールされるだろう
       for (final offset in List.generate(registerDays, (index) => index)) {
+        if (offset == 0 && activePillSheet.todayPillIsAlreadyTaken) {
+          continue;
+        }
+
         final reminderDate = tzNow.add(Duration(days: offset)).add(Duration(hours: reminderTime.hour)).add(Duration(minutes: reminderTime.minute));
         // NOTE: LocalNotification must be scheduled at least 3 minutes after the current time (in iOS, Android not confirm).
         // Delay five minutes just to be sure.
