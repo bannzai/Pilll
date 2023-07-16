@@ -177,20 +177,15 @@ class RegisterReminderLocalNotification {
           continue;
         }
 
-        var targetPillSheet = activePillSheet;
-        var pillNumberIntoPillSheet = activePillSheet.todayPillNumber + offset;
-        if (pillNumberIntoPillSheet > activePillSheet.typeInfo.totalCount) {
-          targetPillSheet = pillSheetGroup.pillSheets[activePillSheet.groupIndex + 1];
+        final originPIllNumberInPillSheet = targetPillSheet.todayPillNumber + offset;
 
-          const nextPillSheetFirstNumber = 1;
-          pillNumberIntoPillSheet = nextPillSheetFirstNumber + offset;
-        }
-
+        // IDの計算には本来のピル番号を使用する。表示用の番号だと今後も設定によりズレる可能性があるため
         final notificationID = _calcLocalNotificationID(
           pillSheetGroupIndex: targetPillSheet.groupIndex,
           reminderTime: reminderTime,
-          pillNumberIntoPillSheet: pillNumberIntoPillSheet,
+          pillNumberIntoPillSheet: originPIllNumberInPillSheet,
         );
+
         if (premiumOrTrial) {
           final title = () {
             var result = setting.reminderNotificationCustomization.word;
@@ -198,9 +193,19 @@ class RegisterReminderLocalNotification {
               result += " ";
               result += "${reminderDate.month}/${reminderDate.day} (${WeekdayFunctions.weekdayFromDate(reminderDate).weekdayString()})";
             }
+
             if (!setting.reminderNotificationCustomization.isInVisiblePillNumber) {
+              var targetPillSheet = activePillSheet;
+              if (originPIllNumberInPillSheet > activePillSheet.typeInfo.totalCount) {
+                targetPillSheet = pillSheetGroup.pillSheets[activePillSheet.groupIndex + 1];
+              }
+              final pillSheetDisplayNumber = pillSheetGroup.pillSheetDisplayNumber(
+                pillSheet: targetPillSheet,
+                originPIllNumberInPillSheet: originPIllNumberInPillSheet,
+              );
+
               result += " ";
-              result += "$pillNumberIntoPillSheet番";
+              result += "$pillSheetDisplayNumber番";
             }
             return result;
           }();

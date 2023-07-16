@@ -17,23 +17,21 @@ class PillSheetGroup with _$PillSheetGroup {
   const PillSheetGroup._();
   @JsonSerializable(explicitToJson: true)
   const factory PillSheetGroup({
-    @JsonKey(includeIfNull: false, toJson: toNull)
-        String? id,
+    @JsonKey(includeIfNull: false, toJson: toNull) String? id,
     required List<String> pillSheetIDs,
     required List<PillSheet> pillSheets,
     @JsonKey(
       fromJson: NonNullTimestampConverter.timestampToDateTime,
       toJson: NonNullTimestampConverter.dateTimeToTimestamp,
     )
-        required DateTime createdAt,
+    required DateTime createdAt,
     @JsonKey(
       fromJson: TimestampConverter.timestampToDateTime,
       toJson: TimestampConverter.dateTimeToTimestamp,
     )
-        DateTime? deletedAt,
+    DateTime? deletedAt,
     PillSheetGroupDisplayNumberSetting? displayNumberSetting,
   }) = _PillSheetGroup;
-
 
   factory PillSheetGroup.fromJson(Map<String, dynamic> json) => _$PillSheetGroupFromJson(json);
 
@@ -145,6 +143,31 @@ class PillSheetGroup with _$PillSheetGroup {
     }
 
     return estimatedEndPillNumber;
+  }
+
+  int pillSheetDisplayNumber({required PillSheet pillSheet, required int originPIllNumberInPillSheet}) {
+    final pageOffset = summarizedPillCountWithPillSheetTypesToEndIndex(
+        pillSheetTypes: pillSheets.map((e) => e.pillSheetType).toList(), endIndex: pillSheet.groupIndex);
+    var result = pageOffset + originPIllNumberInPillSheet;
+
+    final displayNumberSetting = this.displayNumberSetting;
+    final beginDisplayNumberSetting = displayNumberSetting?.beginPillNumber;
+    final endDisplayNumberSetting = displayNumberSetting?.endPillNumber;
+    if (displayNumberSetting != null) {
+      if (beginDisplayNumberSetting != null && beginDisplayNumberSetting > 0) {
+        result += beginDisplayNumberSetting - 1;
+      }
+
+      if (endDisplayNumberSetting != null && endDisplayNumberSetting > 0) {
+        result = result % endDisplayNumberSetting;
+
+        if (result == 0) {
+          result = endDisplayNumberSetting;
+        }
+      }
+    }
+
+    return result;
   }
 }
 
