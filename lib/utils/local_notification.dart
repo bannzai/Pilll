@@ -165,10 +165,10 @@ class RegisterReminderLocalNotification {
     required bool premiumOrTrial,
     required Setting setting,
   }) async {
-    final tzNow = tz.TZDateTime.now(tz.local);
+    final tzToday = tz.TZDateTime.now(tz.local).date();
     final List<Future<void>> futures = [];
 
-    debugPrint("[bannzai] tzNow:$tzNow, tz.local:${tz.local}");
+    debugPrint("[bannzai] tzNow:$tzToday, tz.local:${tz.local}");
 
     for (final reminderTime in setting.reminderTimes) {
       // 新規ピルシートグループの作成後に通知のスケジュールができないため、多めに通知をスケジュールする
@@ -178,8 +178,8 @@ class RegisterReminderLocalNotification {
           continue;
         }
 
-        final reminderDate = tzNow.add(Duration(days: offset)).add(Duration(hours: reminderTime.hour)).add(Duration(minutes: reminderTime.minute));
-        if (!reminderDate.isAfter(tzNow)) {
+        final reminderDate = tzToday.add(Duration(days: offset)).add(Duration(hours: reminderTime.hour)).add(Duration(minutes: reminderTime.minute));
+        if (!reminderDate.isAfter(tzToday)) {
           continue;
         }
 
