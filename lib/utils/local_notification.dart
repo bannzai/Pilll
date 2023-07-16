@@ -133,6 +133,7 @@ class RegisterReminderLocalNotification {
   // - ピルをタップして服用キャンセル
   // - クイックレコード
   // - 通知の文言を変えた時
+  // - TODO: 休薬期間の通知のON/OFF
   // - 休薬終了後
   // - 初期設定完了後
   // - 番号変更後
