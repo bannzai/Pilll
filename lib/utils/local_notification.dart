@@ -2,6 +2,7 @@ import 'dart:async';
 
 import 'dart:math';
 
+import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_local_notifications/flutter_local_notifications.dart';
 import 'package:pilll/entity/pill_sheet.codegen.dart';
@@ -13,6 +14,7 @@ import 'package:pilll/provider/pill_sheet_group.dart';
 import 'package:pilll/provider/premium_and_trial.codegen.dart';
 import 'package:pilll/provider/setting.dart';
 import 'package:pilll/utils/datetime/day.dart';
+import 'package:pilll/utils/environment.dart';
 import 'package:riverpod/riverpod.dart';
 import 'package:timezone/data/latest_all.dart' as tz;
 import 'package:timezone/timezone.dart' as tz;
@@ -206,6 +208,9 @@ class RegisterReminderLocalNotification {
 
               result += " ";
               result += "$pillSheetDisplayNumber番";
+              if (Environment.isDevelopment) {
+                result += "Local";
+              }
             }
             return result;
           }();
@@ -215,7 +220,7 @@ class RegisterReminderLocalNotification {
               await localNotificationService.plugin.cancel(notificationID);
               await localNotificationService.plugin.zonedSchedule(
                 notificationID,
-                title + "Local",
+                title,
                 '',
                 reminderDate,
                 const NotificationDetails(
@@ -246,7 +251,10 @@ class RegisterReminderLocalNotification {
             }),
           );
         } else {
-          const title = "💊の時間です(Local)";
+          var title = "💊の時間です";
+          if (kDebugMode) {
+            title += " (Local)";
+          }
           futures.add(
             Future(() async {
               await localNotificationService.plugin.cancel(notificationID);
