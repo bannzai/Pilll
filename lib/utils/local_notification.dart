@@ -171,22 +171,25 @@ class RegisterReminderLocalNotification {
     required bool premiumOrTrial,
     required Setting setting,
   }) async {
-    final tzToday = tz.TZDateTime.now(tz.local).date();
+    final tzNow = tz.TZDateTime.now(tz.local);
     final List<Future<void>> futures = [];
 
-    debugPrint("tzNow:$tzToday, tz.local:${tz.local}");
+    debugPrint("tzNow:$tzNow, tz.local:${tz.local}");
 
     for (final reminderTime in setting.reminderTimes) {
       // 新規ピルシートグループの作成後に通知のスケジュールができないため、多めに通知をスケジュールする
       // ユーザーの何かしらのアクションでどこかでスケジュールされるだろう
       for (final offset in List.generate(registerDays, (index) => index)) {
-        // 本日服用済みの分はスキップする
+        // 本日服用済みの場合はスキップする
         if (offset == 0 && activePillSheet.todayPillIsAlreadyTaken) {
           continue;
         }
 
         final reminderDateTime =
-            tzToday.add(Duration(days: offset)).add(Duration(hours: reminderTime.hour)).add(Duration(minutes: reminderTime.minute));
+            tzNow.date().add(Duration(days: offset)).add(Duration(hours: reminderTime.hour)).add(Duration(minutes: reminderTime.minute));
+        if (reminderDateTime.isBefore(tzNow)) {
+          continue;
+        }
         debugPrint("write reminderDate:$reminderDateTime");
 
         var pillSheetGroupIndex = activePillSheet.groupIndex;
