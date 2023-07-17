@@ -197,10 +197,18 @@ class RegisterReminderLocalNotification {
         var originPillNumberInPillSheet = activePillSheet.todayPillNumber + offset;
         var pillSheeType = activePillSheet.pillSheetType;
         if (originPillNumberInPillSheet > activePillSheet.typeInfo.totalCount) {
-          final nextPillSheet = pillSheetGroup.pillSheets[activePillSheet.groupIndex + 1];
-          pillSheetGroupIndex = nextPillSheet.groupIndex;
-          originPillNumberInPillSheet = originPillNumberInPillSheet - activePillSheet.typeInfo.totalCount;
-          pillSheeType = nextPillSheet.pillSheetType;
+          final isLastPillSheet = (pillSheetGroup.pillSheets.length - 1) == activePillSheet.groupIndex;
+          switch ((isLastPillSheet, premiumOrTrial, setting.isAutomaticallyCreatePillSheet)) {
+            case (true, true, true):
+            // TODO: 新しいシート自動作成の場合の先読み追加
+            case (false, _, _):
+              final nextPillSheet = pillSheetGroup.pillSheets[activePillSheet.groupIndex + 1];
+              pillSheetGroupIndex = nextPillSheet.groupIndex;
+              originPillNumberInPillSheet = originPillNumberInPillSheet - activePillSheet.typeInfo.totalCount;
+              pillSheeType = nextPillSheet.pillSheetType;
+            case (_, _, _):
+              continue;
+          }
         }
 
         // 偽薬/休薬期間中の通知がOFFの場合はスキップする
