@@ -12,6 +12,7 @@ import 'package:pilll/features/record/components/add_pill_sheet_group/provider.d
 import 'package:pilll/entity/pill_sheet_group.codegen.dart';
 import 'package:pilll/entity/pill_sheet_type.dart';
 import 'package:pilll/entity/setting.codegen.dart';
+import 'package:pilll/utils/local_notification.dart';
 
 class AddPillSheetGroupPage extends HookConsumerWidget {
   final PillSheetGroup? pillSheetGroup;
@@ -22,6 +23,7 @@ class AddPillSheetGroupPage extends HookConsumerWidget {
   Widget build(BuildContext context, WidgetRef ref) {
     final pillSheetGroup = this.pillSheetGroup;
     final addPillSheetGroup = ref.watch(addPillSheetGroupProvider);
+    final registerReminderLocalNotification = ref.watch(registerReminderLocalNotificationProvider);
     final pillSheetTypes = useState(setting.pillSheetEnumTypes);
     final displayNumberSetting = useState<PillSheetGroupDisplayNumberSetting?>(null);
 
@@ -91,6 +93,7 @@ class AddPillSheetGroupPage extends HookConsumerWidget {
                                 pillSheetTypes: pillSheetTypes.value,
                                 displayNumberSetting: displayNumberSetting.value,
                               );
+                              await registerReminderLocalNotification();
                               navigator.pop();
                             },
                           ),
