@@ -180,12 +180,8 @@ class RegisterReminderLocalNotification {
       // 新規ピルシートグループの作成後に通知のスケジュールができないため、多めに通知をスケジュールする
       // ユーザーの何かしらのアクションでどこかでスケジュールされるだろう
       for (final offset in List.generate(registerDays, (index) => index)) {
+        // 本日服用済みの分はスキップする
         if (offset == 0 && activePillSheet.todayPillIsAlreadyTaken) {
-          continue;
-        }
-
-        final reminderDate = tzToday.add(Duration(days: offset));
-        if (!reminderDate.isAfter(tzToday)) {
           continue;
         }
 
