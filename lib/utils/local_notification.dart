@@ -188,6 +188,7 @@ class RegisterReminderLocalNotification {
         if (!reminderDate.isAfter(tzToday)) {
           continue;
         }
+        debugPrint("reminderDate:$reminderDate");
 
         var targetPillSheet = activePillSheet;
         final originPillNumberInPillSheet = targetPillSheet.todayPillNumber + offset;
@@ -311,7 +312,7 @@ class RegisterReminderLocalNotification {
 
     await Future.wait(futures);
 
-    debugPrint("end scheduleRemiderNotification: ${setting.reminderTimes}");
+    debugPrint("end scheduleRemiderNotification: ${setting.reminderTimes}, futures.length:${futures.length}");
   }
 
   // reminder time id is 10{groupIndex:2}{hour:2}{minute:2}{pillNumberIntoPillSheet:2}
