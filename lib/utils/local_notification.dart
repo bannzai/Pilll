@@ -185,11 +185,11 @@ class RegisterReminderLocalNotification {
         }
 
         final reminderDate = tzToday.add(Duration(days: offset)).add(Duration(hours: reminderTime.hour)).add(Duration(minutes: reminderTime.minute));
-        debugPrint("reminderDate:$reminderDate");
         if (!reminderDate.isAfter(tzToday)) {
           continue;
         }
 
+        debugPrint("write reminderDate:$reminderDate");
         var targetPillSheet = activePillSheet;
         final originPillNumberInPillSheet = targetPillSheet.todayPillNumber + offset;
         if (originPillNumberInPillSheet > activePillSheet.typeInfo.totalCount) {
