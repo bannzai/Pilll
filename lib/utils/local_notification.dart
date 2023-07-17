@@ -164,7 +164,6 @@ class RegisterReminderLocalNotification {
     );
   }
 
-  // TODO: 休薬期間の通知の制御
   // TODO: 新しいシート自動作成の場合の先読み追加
   static Future<void> run({
     required PillSheetGroup pillSheetGroup,
