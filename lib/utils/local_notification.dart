@@ -7,6 +7,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_local_notifications/flutter_local_notifications.dart';
 import 'package:pilll/entity/pill_sheet.codegen.dart';
 import 'package:pilll/entity/pill_sheet_group.codegen.dart';
+import 'package:pilll/entity/pill_sheet_type.dart';
 import 'package:pilll/entity/schedule.codegen.dart';
 import 'package:pilll/entity/setting.codegen.dart';
 import 'package:pilll/entity/weekday.dart';
@@ -195,9 +196,19 @@ class RegisterReminderLocalNotification {
 
         var pillSheetGroupIndex = activePillSheet.groupIndex;
         var originPillNumberInPillSheet = activePillSheet.todayPillNumber + offset;
+        var pillSheeType = activePillSheet.pillSheetType;
         if (originPillNumberInPillSheet > activePillSheet.typeInfo.totalCount) {
-          pillSheetGroupIndex = pillSheetGroup.pillSheets[activePillSheet.groupIndex + 1].groupIndex;
+          final nextPillSheet = pillSheetGroup.pillSheets[activePillSheet.groupIndex + 1];
+          pillSheetGroupIndex = nextPillSheet.groupIndex;
           originPillNumberInPillSheet = originPillNumberInPillSheet - activePillSheet.typeInfo.totalCount;
+          pillSheeType = nextPillSheet.pillSheetType;
+        }
+
+        // 偽薬/休薬期間中の通知がOFFの場合はスキップする
+        if (!setting.isOnNotifyInNotTakenDuration) {
+          if (pillSheeType.dosingPeriod < originPillNumberInPillSheet) {
+            continue;
+          }
         }
 
         // IDの計算には本来のピル番号を使用する。表示用の番号だと今後も設定によりズレる可能性があるため
