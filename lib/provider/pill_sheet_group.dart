@@ -5,9 +5,6 @@ import 'package:pilll/provider/database.dart';
 import 'package:pilll/entity/pill_sheet_group.codegen.dart';
 import 'package:riverpod/riverpod.dart';
 
-// この変数にtrueを入れることでMetadata.hasPendingWritesがfalseの場合=リモートDBに書き込まれた場合にStreamの値を流すように制御できる。
-// Pilllではアプリを開いている時に複数箇所からのDB書き込みが無いので(ごくまれにBackendで書き込みと被る可能性はある)単純なフラグ制御を採用している
-bool awaitsPillSheetGroupRemoteDBDataChanged = false;
 PillSheetGroup? _filter(QuerySnapshot<PillSheetGroup> snapshot) {
   if (snapshot.docs.isEmpty) return null;
   if (!snapshot.docs.last.exists) return null;
@@ -27,24 +24,12 @@ final activePillSheetProvider = Provider((ref) {
 });
 
 final latestPillSheetGroupProvider = StreamProvider((ref) => ref
-        .watch(databaseProvider)
-        .pillSheetGroupsReference()
-        .orderBy(PillSheetGroupFirestoreKeys.createdAt)
-        .limitToLast(1)
-        .snapshots(includeMetadataChanges: true)
-        .skipWhile((snapshot) {
-      if (awaitsPillSheetGroupRemoteDBDataChanged) {
-        if (snapshot.metadata.hasPendingWrites) {
-          debugPrint("[DEBUG] hasPendingWrites: true");
-          return true;
-        } else {
-          debugPrint("[DEBUG] hasPendingWrites: false");
-          // Clear flag and continue to last statement
-          awaitsPillSheetGroupRemoteDBDataChanged = false;
-        }
-      }
-      return false;
-    }).map(((event) => _filter(event))));
+    .watch(databaseProvider)
+    .pillSheetGroupsReference()
+    .orderBy(PillSheetGroupFirestoreKeys.createdAt)
+    .limitToLast(1)
+    .snapshots(includeMetadataChanges: true)
+    .map(((event) => _filter(event))));
 
 final beforePillSheetGroupProvider = FutureProvider<PillSheetGroup?>((ref) async {
   final database = ref.watch(databaseProvider);
