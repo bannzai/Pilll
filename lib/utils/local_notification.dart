@@ -11,6 +11,7 @@ import 'package:pilll/entity/pill_sheet_type.dart';
 import 'package:pilll/entity/schedule.codegen.dart';
 import 'package:pilll/entity/setting.codegen.dart';
 import 'package:pilll/entity/weekday.dart';
+import 'package:pilll/features/record/components/add_pill_sheet_group/provider.dart';
 import 'package:pilll/provider/pill_sheet_group.dart';
 import 'package:pilll/provider/premium_and_trial.codegen.dart';
 import 'package:pilll/provider/setting.dart';
@@ -164,7 +165,6 @@ class RegisterReminderLocalNotification {
     );
   }
 
-  // TODO: 新しいシート自動作成の場合の先読み追加
   static Future<void> run({
     required PillSheetGroup pillSheetGroup,
     required PillSheet activePillSheet,
@@ -194,17 +194,35 @@ class RegisterReminderLocalNotification {
         debugPrint("write reminderDate:$reminderDateTime");
 
         var pillSheetGroupIndex = activePillSheet.groupIndex;
-        var originPillNumberInPillSheet = activePillSheet.todayPillNumber + offset;
+        var estimatedPillNumberInPillSheet = activePillSheet.todayPillNumber + offset;
         var pillSheeType = activePillSheet.pillSheetType;
-        if (originPillNumberInPillSheet > activePillSheet.typeInfo.totalCount) {
+        var pillSheetDisplayNumber = pillSheetGroup.pillSheetDisplayNumber(
+          pillSheetGroupIndex: pillSheetGroupIndex,
+          originPillNumberInPillSheet: estimatedPillNumberInPillSheet,
+        );
+        if (estimatedPillNumberInPillSheet > activePillSheet.typeInfo.totalCount) {
           final isLastPillSheet = (pillSheetGroup.pillSheets.length - 1) == activePillSheet.groupIndex;
           switch ((isLastPillSheet, premiumOrTrial, setting.isAutomaticallyCreatePillSheet)) {
             case (true, true, true):
-            // TODO: 新しいシート自動作成の場合の先読み追加
+              // 新しいシート自動作成の場合の先読み追加
+              final nextPillSheetGroup = buildPillSheetGroup(
+                setting: setting,
+                pillSheetGroup: pillSheetGroup,
+                pillSheetTypes: pillSheetGroup.pillSheets.map((e) => e.pillSheetType).toList(),
+                displayNumberSetting: null,
+              );
+              pillSheetDisplayNumber = pillSheetGroup.pillSheetDisplayNumber(
+                pillSheetGroupIndex: 0,
+                originPillNumberInPillSheet: estimatedPillNumberInPillSheet,
+              );
+              final nextPillSheetGroupFirstPillSheet = nextPillSheetGroup.pillSheets.first;
+              pillSheetGroupIndex = nextPillSheetGroupFirstPillSheet.groupIndex;
+              estimatedPillNumberInPillSheet = estimatedPillNumberInPillSheet - nextPillSheetGroupFirstPillSheet.typeInfo.totalCount;
+              pillSheeType = nextPillSheetGroupFirstPillSheet.pillSheetType;
             case (false, _, _):
               final nextPillSheet = pillSheetGroup.pillSheets[activePillSheet.groupIndex + 1];
               pillSheetGroupIndex = nextPillSheet.groupIndex;
-              originPillNumberInPillSheet = originPillNumberInPillSheet - activePillSheet.typeInfo.totalCount;
+              estimatedPillNumberInPillSheet = estimatedPillNumberInPillSheet - activePillSheet.typeInfo.totalCount;
               pillSheeType = nextPillSheet.pillSheetType;
             case (_, _, _):
               continue;
@@ -213,7 +231,7 @@ class RegisterReminderLocalNotification {
 
         // 偽薬/休薬期間中の通知がOFFの場合はスキップする
         if (!setting.isOnNotifyInNotTakenDuration) {
-          if (pillSheeType.dosingPeriod < originPillNumberInPillSheet) {
+          if (pillSheeType.dosingPeriod < estimatedPillNumberInPillSheet) {
             continue;
           }
         }
@@ -223,7 +241,7 @@ class RegisterReminderLocalNotification {
         final notificationID = _calcLocalNotificationID(
           pillSheetGroupIndex: pillSheetGroupIndex,
           reminderTime: reminderTime,
-          pillNumberIntoPillSheet: originPillNumberInPillSheet,
+          pillNumberIntoPillSheet: estimatedPillNumberInPillSheet,
         );
 
         if (premiumOrTrial) {
@@ -235,11 +253,6 @@ class RegisterReminderLocalNotification {
             }
 
             if (!setting.reminderNotificationCustomization.isInVisiblePillNumber) {
-              final pillSheetDisplayNumber = pillSheetGroup.pillSheetDisplayNumber(
-                pillSheetGroupIndex: pillSheetGroupIndex,
-                originPIllNumberInPillSheet: originPillNumberInPillSheet,
-              );
-
               result += " ";
               result += "$pillSheetDisplayNumber番";
               if (Environment.isDevelopment) {
