@@ -220,6 +220,7 @@ class RegisterReminderLocalNotification {
               estimatedPillNumberInPillSheet = estimatedPillNumberInPillSheet - nextPillSheetGroupFirstPillSheet.typeInfo.totalCount;
               pillSheeType = nextPillSheetGroupFirstPillSheet.pillSheetType;
             case (false, _, _):
+              // 次のピルシートを使用する場合
               final nextPillSheet = pillSheetGroup.pillSheets[activePillSheet.groupIndex + 1];
               pillSheetGroupIndex = nextPillSheet.groupIndex;
               estimatedPillNumberInPillSheet = estimatedPillNumberInPillSheet - activePillSheet.typeInfo.totalCount;
