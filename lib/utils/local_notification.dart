@@ -184,12 +184,15 @@ class RegisterReminderLocalNotification {
           continue;
         }
 
-        final reminderDate = tzToday.add(Duration(days: offset)).add(Duration(hours: reminderTime.hour)).add(Duration(minutes: reminderTime.minute));
+        final reminderDate = tzToday.add(Duration(days: offset));
         if (!reminderDate.isAfter(tzToday)) {
           continue;
         }
 
-        debugPrint("write reminderDate:$reminderDate");
+        final reminderDateTime =
+            tzToday.add(Duration(days: offset)).add(Duration(hours: reminderTime.hour)).add(Duration(minutes: reminderTime.minute));
+        debugPrint("write reminderDate:$reminderDateTime");
+
         var targetPillSheet = activePillSheet;
         final originPillNumberInPillSheet = targetPillSheet.todayPillNumber + offset;
         if (originPillNumberInPillSheet > activePillSheet.typeInfo.totalCount) {
@@ -209,7 +212,7 @@ class RegisterReminderLocalNotification {
             var result = setting.reminderNotificationCustomization.word;
             if (!setting.reminderNotificationCustomization.isInVisibleReminderDate) {
               result += " ";
-              result += "${reminderDate.month}/${reminderDate.day} (${WeekdayFunctions.weekdayFromDate(reminderDate).weekdayString()})";
+              result += "${reminderDateTime.month}/${reminderDateTime.day} (${WeekdayFunctions.weekdayFromDate(reminderDateTime).weekdayString()})";
             }
 
             if (!setting.reminderNotificationCustomization.isInVisiblePillNumber) {
@@ -235,7 +238,7 @@ class RegisterReminderLocalNotification {
                   notificationID,
                   title,
                   '',
-                  reminderDate,
+                  reminderDateTime,
                   const NotificationDetails(
                     android: AndroidNotificationDetails(
                       androidReminderNotificationChannelID,
@@ -280,7 +283,7 @@ class RegisterReminderLocalNotification {
                   notificationID,
                   title,
                   '',
-                  reminderDate,
+                  reminderDateTime,
                   const NotificationDetails(
                     android: AndroidNotificationDetails(
                       androidReminderNotificationChannelID,
