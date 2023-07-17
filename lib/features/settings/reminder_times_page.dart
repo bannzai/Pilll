@@ -27,7 +27,6 @@ class ReminderTimesPage extends HookConsumerWidget {
   Widget build(BuildContext context, WidgetRef ref) {
     final setSetting = ref.watch(setSettingProvider);
     final registerReminderLocalNotification = ref.watch(registerReminderLocalNotificationProvider);
-    final cancelReminderLocalNotification = ref.watch(cancelReminderLocalNotificationProvider);
 
     return AsyncValueGroup.group2(
       ref.watch(settingProvider),
@@ -41,7 +40,6 @@ class ReminderTimesPage extends HookConsumerWidget {
           deviceTimezoneName: deviceTimezoneName,
           setSetting: setSetting,
           registerReminderLocalNotification: registerReminderLocalNotification,
-          cancelReminderLocalNotification: cancelReminderLocalNotification,
         );
       },
       error: (error, _) => UniversalErrorPage(
@@ -68,7 +66,6 @@ class ReminderTimesPageBody extends StatelessWidget {
   final String deviceTimezoneName;
   final SetSetting setSetting;
   final RegisterReminderLocalNotification registerReminderLocalNotification;
-  final CancelReminderLocalNotification cancelReminderLocalNotification;
 
   const ReminderTimesPageBody({
     super.key,
@@ -76,7 +73,6 @@ class ReminderTimesPageBody extends StatelessWidget {
     required this.deviceTimezoneName,
     required this.setSetting,
     required this.registerReminderLocalNotification,
-    required this.cancelReminderLocalNotification,
   });
 
   @override
@@ -323,8 +319,6 @@ class ReminderTimesPageBody extends StatelessWidget {
       throw Exception("通知時刻は最低${ReminderTime.minimumCount}件必要です");
     }
     await setSetting(setting.copyWith(reminderTimes: reminderTimes));
-    // 時間が変更されるとregisterReminderLocalNotification の中で行われるcancel処理で使えるIDを見失うので一回全部キャンセルする
-    await cancelReminderLocalNotification();
     await registerReminderLocalNotification();
   }
 }

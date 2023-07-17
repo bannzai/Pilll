@@ -146,8 +146,10 @@ class RegisterReminderLocalNotification {
   // NOTE: 本日分の服用記録がある場合は、本日分の通知はスケジュールしないようになっている
   // 10日間分の通知をスケジュールする
   Future<void> call() async {
+    final cancelReminderLocalNotification = CancelReminderLocalNotification();
     // エンティティの変更があった場合にref.readで最新の状態を取得するために、Future.microtaskで更新を待ってから処理を始める
-    await Future.microtask(() => null);
+    // hour,minute,番号を基準にIDを決定しているので、時間変更や番号変更時にそれまで登録されていたIDを特定するのが不可能なので全てキャンセルする
+    await (Future.microtask(() => null), cancelReminderLocalNotification()).wait;
 
     final pillSheetGroup = ref.read(latestPillSheetGroupProvider).asData?.valueOrNull;
     final activePillSheet = ref.read(activePillSheetProvider).asData?.valueOrNull;
@@ -265,7 +267,6 @@ class RegisterReminderLocalNotification {
           futures.add(
             Future(() async {
               try {
-                await localNotificationService.plugin.cancel(notificationID);
                 await localNotificationService.plugin.zonedSchedule(
                   notificationID,
                   title,
@@ -310,7 +311,6 @@ class RegisterReminderLocalNotification {
           futures.add(
             Future(() async {
               try {
-                await localNotificationService.plugin.cancel(notificationID);
                 await localNotificationService.plugin.zonedSchedule(
                   notificationID,
                   title,
