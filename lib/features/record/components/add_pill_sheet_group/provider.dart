@@ -110,5 +110,5 @@ PillSheetGroup buildPillSheetGroup({
     createdAt: now(),
   );
 
-  return updatedPillSheetGroup:
+  return updatedPillSheetGroup;
 }
