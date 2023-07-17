@@ -369,9 +369,9 @@ class RegisterReminderLocalNotification {
   }
 }
 
-final cancelReminderLocalNotificationProvider = Provider((ref) => CancelReminderLocalNotificationProvider());
+final cancelReminderLocalNotificationProvider = Provider((ref) => CancelReminderLocalNotification());
 
-class CancelReminderLocalNotificationProvider {
+class CancelReminderLocalNotification {
   Future<void> call() async {
     final pendingNotifications = await localNotificationService.pendingReminderNotifications();
     await Future.wait(pendingNotifications.map((p) => localNotificationService.cancelNotification(localNotificationID: p.id)));

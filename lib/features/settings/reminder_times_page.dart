@@ -68,7 +68,7 @@ class ReminderTimesPageBody extends StatelessWidget {
   final String deviceTimezoneName;
   final SetSetting setSetting;
   final RegisterReminderLocalNotification registerReminderLocalNotification;
-  final CancelReminderLocalNotificationProvider cancelReminderLocalNotification;
+  final CancelReminderLocalNotification cancelReminderLocalNotification;
 
   const ReminderTimesPageBody({
     super.key,
