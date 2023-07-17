@@ -145,9 +145,9 @@ class PillSheetGroup with _$PillSheetGroup {
     return estimatedEndPillNumber;
   }
 
-  int pillSheetDisplayNumber({required PillSheet pillSheet, required int originPIllNumberInPillSheet}) {
+  int pillSheetDisplayNumber({required int pillSheetGroupIndex, required int originPIllNumberInPillSheet}) {
     final pageOffset = summarizedPillCountWithPillSheetTypesToEndIndex(
-        pillSheetTypes: pillSheets.map((e) => e.pillSheetType).toList(), endIndex: pillSheet.groupIndex);
+        pillSheetTypes: pillSheets.map((e) => e.pillSheetType).toList(), endIndex: pillSheetGroupIndex);
     var result = pageOffset + originPIllNumberInPillSheet;
 
     final displayNumberSetting = this.displayNumberSetting;
