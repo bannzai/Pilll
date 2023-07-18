@@ -128,6 +128,7 @@ final registerReminderLocalNotificationProvider = Provider(
 // 利点:
 // * その時点の状態を元に通知のコンテンツを決定する。という方式を取るためLocal Notificationのスケジュールがシンプルに「毎日 9:00に通知」となる。受け取った通知を元にSwift/Kotlinの方で出すコンテンツを分ける(非表示にもできる)
 // * その時点の状態を元に通知のコンテンツを決定する。という方式を取るため、現状の「特定のLocal Notificationに対する変更があった場合にLocal Notificationを更新する」と言ったことを考えなくて良い
+// * その時点の状態を元に通知のコンテンツを決定する。という方式を取るため、テストケースがシンプルになる
 // 難しい点:
 // * Swift/Kotlinのコードが増える。なのでライブリロードも効きづらい
 // * iOSのApp Extension側でFlutterのコードを呼ぶ術はない(たぶん)。現状問題ではないがこういう制限がある
