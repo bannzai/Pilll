@@ -120,6 +120,19 @@ final registerReminderLocalNotificationProvider = Provider(
 // - 各アクションと並行して処理を行わない
 // - アクションの結果を受け取ってローカル通知の登録の更新をしない
 // - 変更を検知してcallを呼ぶ親Widgetを用意して、変更があれば毎回登録しなおす
+// NOTE:
+// 現状はテストケースが増えること以外は問題点では無いのでこの方式で行くが、他の方法としてiOSはNotification Service App Extensionを使用した方法がある(Silence Push Notifications)
+// Doc: https://developer.apple.com/documentation/bundleresources/entitlements/com_apple_developer_usernotifications_filtering#3737535
+// Androidの方では元々Kotlinの方で通知のイベントを受け取り出す内容を分けていたので多分同様のことができる(よく調べてない)
+// iOSのSilence Push NotificationsやAndroidのKotlin側で受け取り出す方法を使う利点と使わない利点をメモする
+// 利点:
+// * その時点の状態を元に通知のコンテンツを決定する。という方式を取るためLocal Notificationのスケジュールがシンプルに「毎日 9:00に通知」となる。受け取った通知を元にSwift/Kotlinの方で出すコンテンツを分ける(非表示にもできる)
+// * その時点の状態を元に通知のコンテンツを決定する。という方式を取るため、現状の「特定のLocal Notificationに対する変更があった場合にLocal Notificationを更新する」と言ったことを考えなくて良い
+// 難しい点:
+// * Swift/Kotlinのコードが増える。なのでライブリロードも効きづらい
+// * iOSのApp Extension側でFlutterのコードを呼ぶ術はない(たぶん)。現状問題ではないがこういう制限がある
+//   * これに関連して、SSoTが崩れる心配がある。Keychainを共有してないのもあり、UserDefaultsで書き込み通知の表示に必要なコンテンツを保存する必要がある
+// * iOSのApp Extensionでは別途申請が必要になる。これ自体も手間だが、dev版アプリの審査も通す必要があるのが(手間が2回発生するのを避けてる。やればいいだけ)
 class RegisterReminderLocalNotification {
   final Ref ref;
 
