@@ -285,6 +285,8 @@ extension AppDelegate {
             default:
                 end()
             }
+        case nil:
+            return
         }
     }
 
