@@ -15,6 +15,7 @@ import 'package:pilll/features/record/components/add_pill_sheet_group/provider.d
 import 'package:pilll/provider/pill_sheet_group.dart';
 import 'package:pilll/provider/premium_and_trial.codegen.dart';
 import 'package:pilll/provider/setting.dart';
+import 'package:pilll/utils/analytics.dart';
 import 'package:pilll/utils/datetime/day.dart';
 import 'package:pilll/utils/environment.dart';
 import 'package:riverpod/riverpod.dart';
@@ -162,10 +163,12 @@ class RegisterReminderLocalNotification {
   // NOTE: 本日分の服用記録がある場合は、本日分の通知はスケジュールしないようになっている
   // 10日間分の通知をスケジュールする
   Future<void> call() async {
+    analytics.logEvent(name: "call_register_reminder_notification");
     final cancelReminderLocalNotification = CancelReminderLocalNotification();
     // エンティティの変更があった場合にref.readで最新の状態を取得するために、Future.microtaskで更新を待ってから処理を始める
     // hour,minute,番号を基準にIDを決定しているので、時間変更や番号変更時にそれまで登録されていたIDを特定するのが不可能なので全てキャンセルする
     await (Future.microtask(() => null), cancelReminderLocalNotification()).wait;
+    analytics.logEvent(name: "cancel_reminder_notification");
 
     final pillSheetGroup = ref.read(latestPillSheetGroupProvider).asData?.valueOrNull;
     final activePillSheet = ref.read(activePillSheetProvider).asData?.valueOrNull;
@@ -189,6 +192,12 @@ class RegisterReminderLocalNotification {
     required bool premiumOrTrial,
     required Setting setting,
   }) async {
+    analytics.logEvent(name: "run_register_reminder_notification", parameters: {
+      "todayPillNumber": activePillSheet.todayPillNumber,
+      "todayPillIsAlreadyTaken": activePillSheet.todayPillIsAlreadyTaken,
+      "lastTakenPillNumber": activePillSheet.lastTakenPillNumber,
+      "reminderTimes": setting.reminderTimes.toString(),
+    });
     final tzNow = tz.TZDateTime.now(tz.local);
     final List<Future<void>> futures = [];
 
