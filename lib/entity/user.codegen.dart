@@ -80,6 +80,7 @@ class User with _$User {
     @Default(false) bool isTrial,
     @Default(false) bool hasDiscountEntitlement,
     @Default(false) bool shouldAskCancelReason,
+    @Default(false) bool useLocalNotificationForReminder,
     @JsonKey(
       fromJson: TimestampConverter.timestampToDateTime,
       toJson: TimestampConverter.dateTimeToTimestamp,
