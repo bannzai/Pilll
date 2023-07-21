@@ -224,7 +224,7 @@ class RegisterReminderLocalNotification {
         var pillSheeType = activePillSheet.pillSheetType;
         var pillSheetDisplayNumber = pillSheetGroup.pillSheetDisplayNumber(
           pillSheetGroupIndex: pillSheetGroupIndex,
-          originPillNumberInPillSheet: estimatedPillNumberInPillSheet,
+          sourcePillNumberInPillSheet: estimatedPillNumberInPillSheet,
         );
 
         // activePillSheetよりも未来のPillSheet
@@ -244,7 +244,7 @@ class RegisterReminderLocalNotification {
               );
               pillSheetDisplayNumber = pillSheetGroup.pillSheetDisplayNumber(
                 pillSheetGroupIndex: 0,
-                originPillNumberInPillSheet: estimatedPillNumberInPillSheet,
+                sourcePillNumberInPillSheet: pillSheetDisplayNumber,
               );
               final nextPillSheetGroupFirstPillSheet = nextPillSheetGroup.pillSheets.first;
               pillSheetGroupIndex = nextPillSheetGroupFirstPillSheet.groupIndex;
