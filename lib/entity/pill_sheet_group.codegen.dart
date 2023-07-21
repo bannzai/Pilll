@@ -4,6 +4,11 @@ import 'package:pilll/entity/pill_sheet.codegen.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';
 import 'package:pilll/entity/pill_sheet_type.dart';
+import 'package:pilll/entity/setting.codegen.dart';
+import 'package:pilll/utils/datetime/date_compare.dart';
+import 'package:pilll/utils/datetime/day.dart';
+import 'package:pilll/utils/emoji/emoji.dart';
+import 'package:pilll/utils/formatter/date_time_formatter.dart';
 
 part 'pill_sheet_group.codegen.g.dart';
 part 'pill_sheet_group.codegen.freezed.dart';
@@ -171,6 +176,63 @@ class PillSheetGroup with _$PillSheetGroup {
   }
 
   List<PillSheetType> get pillSheetTypes => pillSheets.map((e) => e.pillSheetType).toList();
+
+  String displayPillSheetNumber({
+    required bool premiumOrTrial,
+    required PillSheetAppearanceMode pillSheetAppearanceMode,
+    required int pageIndex,
+    required int pillIndexInPillSheet,
+  }) {
+    if (premiumOrTrial && pillSheetAppearanceMode == PillSheetAppearanceMode.date) {
+      return displayPillSheetDate(pageIndex: pageIndex, pillIndexInPillSheet: pillIndexInPillSheet);
+    } else if (pillSheetAppearanceMode == PillSheetAppearanceMode.sequential) {
+      return displaySequentialPillSheetNumber(pageIndex: pageIndex, pillIndexInPillSheet: pillIndexInPillSheet);
+    } else {
+      return displayPillSheetNumberInPillSheet(pillIndexInPillSheet: pillIndexInPillSheet);
+    }
+  }
+
+  String displayPillSheetNumberInPillSheet({
+    required int pillIndexInPillSheet,
+  }) {
+    return "${pillIndexInPillSheet + 1}";
+  }
+
+  String displaySequentialPillSheetNumber({
+    required int pageIndex,
+    required int pillIndexInPillSheet,
+  }) {
+    final offset = summarizedPillCountWithPillSheetTypesToIndex(
+      pillSheetTypes: pillSheetTypes,
+      toIndex: pageIndex,
+    );
+    final pillNumberInPillSheet = pillIndexInPillSheet + 1;
+    var number = offset + pillNumberInPillSheet;
+
+    final displayNumberSetting = this.displayNumberSetting;
+    if (displayNumberSetting != null) {
+      final beginPillNumberOffset = displayNumberSetting.beginPillNumber;
+      if (beginPillNumberOffset != null && beginPillNumberOffset > 0) {
+        number += (beginPillNumberOffset - 1);
+      }
+
+      final endPillNumberOffset = displayNumberSetting.endPillNumber;
+      if (endPillNumberOffset != null && endPillNumberOffset > 0) {
+        number %= endPillNumberOffset;
+        if (number == 0) {
+          number = endPillNumberOffset;
+        }
+      }
+    }
+    return "$number";
+  }
+
+  String displayPillSheetDate({
+    required int pageIndex,
+    required int pillIndexInPillSheet,
+  }) {
+    return DateTimeFormatter.monthAndDay(pillSheets[pageIndex].displayPillTakeDate(pillIndexInPillSheet + 1));
+  }
 }
 
 @freezed
