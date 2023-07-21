@@ -206,7 +206,6 @@ class RecordPagePillSheet extends HookConsumerWidget {
     required PremiumAndTrial premiumAndTrial,
     required Setting setting,
   }) {
-    final isPremiumOrTrial = premiumAndTrial.isPremium || premiumAndTrial.isTrial;
     final containedMenstruationDuration = RecordPagePillSheet.isContainedMenstruationDuration(
       pillNumberIntoPillSheet: pillNumberIntoPillSheet,
       pillSheetGroup: pillSheetGroup,
@@ -217,52 +216,13 @@ class RecordPagePillSheet extends HookConsumerWidget {
       premiumOrTrial: premiumAndTrial.premiumOrTrial,
       pillSheetAppearanceMode: setting.pillSheetAppearanceMode,
       pageIndex: pageIndex,
-      // TODO: pillIndexInPillSheetが普及してきたらそれをそのまま使う
-      pillNumberInPillSheet: pillNumberIntoPillSheet - 1,
+      pillNumberInPillSheet: pillNumberIntoPillSheet,
     );
-    if (isPremiumOrTrial && setting.pillSheetAppearanceMode == PillSheetAppearanceMode.date) {
-      final DateTime date = pillSheet.displayPillTakeDate(pillNumberIntoPillSheet);
 
-      if (containedMenstruationDuration) {
-        return MenstruationPillNumber(date: date);
-      } else {
-        return PlainPillNumber(date: date);
-      }
-    } else if (setting.pillSheetAppearanceMode == PillSheetAppearanceMode.sequential) {
-      final pageOffset = summarizedPillCountWithPillSheetTypesToIndex(
-        pillSheetTypes: pillSheetGroup.pillSheets.map((e) => e.pillSheetType).toList(),
-        toIndex: pageIndex,
-      );
-      if (setting.pillNumberForFromMenstruation == 0 || setting.durationMenstruation == 0) {
-        return SequentialPillNumber(
-          pageOffset: pageOffset,
-          displayNumberSetting: pillSheetGroup.displayNumberSetting,
-          pillNumberIntoPillSheet: pillNumberIntoPillSheet,
-        );
-      }
-
-      if (isPremiumOrTrial) {
-        if (containedMenstruationDuration) {
-          return MenstruationSequentialPillNumber(
-            pageOffset: pageOffset,
-            displayNumberSetting: pillSheetGroup.displayNumberSetting,
-            pillNumberIntoPillSheet: pillNumberIntoPillSheet,
-          );
-        }
-      }
-      return SequentialPillNumber(
-          pageOffset: pageOffset, displayNumberSetting: pillSheetGroup.displayNumberSetting, pillNumberIntoPillSheet: pillNumberIntoPillSheet);
+    if (premiumAndTrial.premiumOrTrial && containedMenstruationDuration) {
+      return MenstruationPillNumber(text: text);
     } else {
-      if (setting.pillNumberForFromMenstruation == 0 || setting.durationMenstruation == 0) {
-        return PlainPillNumber(pillNumberIntoPillSheet: pillNumberIntoPillSheet);
-      }
-
-      if (isPremiumOrTrial) {
-        if (containedMenstruationDuration) {
-          return MenstruationPillNumber(pillNumberIntoPillSheet: pillNumberIntoPillSheet);
-        }
-      }
-      return PlainPillNumber(pillNumberIntoPillSheet: pillNumberIntoPillSheet);
+      return PlainPillNumber(text: text);
     }
   }
 
