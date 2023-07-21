@@ -156,21 +156,21 @@ class PillSheetGroup with _$PillSheetGroup {
     required int pillNumberInPillSheet,
   }) {
     if (premiumOrTrial && pillSheetAppearanceMode == PillSheetAppearanceMode.date) {
-      return displayPillSheetDate(pageIndex: pageIndex, pillNumberInPillSheet: pillNumberInPillSheet);
+      return _displayPillSheetDate(pageIndex: pageIndex, pillNumberInPillSheet: pillNumberInPillSheet);
     } else if (pillSheetAppearanceMode == PillSheetAppearanceMode.sequential) {
-      return displaySequentialPillSheetNumber(pageIndex: pageIndex, pillNumberInPillSheet: pillNumberInPillSheet);
+      return _displaySequentialPillSheetNumber(pageIndex: pageIndex, pillNumberInPillSheet: pillNumberInPillSheet);
     } else {
-      return displayPillSheetNumberInPillSheet(pillNumberInPillSheet: pillNumberInPillSheet);
+      return _displayPillSheetNumberInPillSheet(pillNumberInPillSheet: pillNumberInPillSheet);
     }
   }
 
-  String displayPillSheetNumberInPillSheet({
+  String _displayPillSheetNumberInPillSheet({
     required int pillNumberInPillSheet,
   }) {
     return "$pillNumberInPillSheet";
   }
 
-  String displaySequentialPillSheetNumber({
+  String _displaySequentialPillSheetNumber({
     required int pageIndex,
     required int pillNumberInPillSheet,
   }) {
@@ -198,7 +198,7 @@ class PillSheetGroup with _$PillSheetGroup {
     return "$number";
   }
 
-  String displayPillSheetDate({
+  String _displayPillSheetDate({
     required int pageIndex,
     required int pillNumberInPillSheet,
   }) {
