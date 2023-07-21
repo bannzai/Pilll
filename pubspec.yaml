@@ -27,6 +27,8 @@ platforms:
 dependencies:
   flutter:
     sdk: flutter
+  flutter_localizations:
+    sdk: flutter
   flutter_svg: ^2.0.1
   shared_preferences: ^2.1.0
   intl: ^0.18.0
