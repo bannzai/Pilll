@@ -294,15 +294,17 @@ class RecordPagePillSheet extends HookConsumerWidget {
     }
     final passedCount = summarizedPillCountWithPillSheetTypesToIndex(
         pillSheetTypes: pillSheetGroup.pillSheets.map((e) => e.pillSheetType).toList(), toIndex: pageIndex);
-    final serialiedPillNumber = passedCount + pillNumberIntoPillSheet;
+    final pillNumberInPillSheetGroup = passedCount + pillNumberIntoPillSheet;
 
     final menstruationRangeList = List.generate(pillSheetGroup.pillSheets.length, (index) {
       final begin = setting.pillNumberForFromMenstruation * (index + 1);
       final end = begin + setting.durationMenstruation - 1;
-      return _MenstruationRange(begin, end);
+
+      return (begin, end);
     });
 
-    final isContainedMenstruationDuration = menstruationRangeList.where((element) => element.contains(serialiedPillNumber)).isNotEmpty;
+    final isContainedMenstruationDuration =
+        menstruationRangeList.where((element) => element.$1 <= pillNumberInPillSheetGroup && pillNumberInPillSheetGroup <= element.$2).isNotEmpty;
     return isContainedMenstruationDuration;
   }
 
@@ -345,15 +347,6 @@ PillMarkType pillMarkFor({
     return PillMarkType.normal;
   }
   return PillMarkType.normal;
-}
-
-class _MenstruationRange {
-  final int begin;
-  final int end;
-
-  _MenstruationRange(this.begin, this.end);
-
-  bool contains(int pillNumber) => begin <= pillNumber && pillNumber <= end;
 }
 
 bool shouldPillMarkAnimation({
