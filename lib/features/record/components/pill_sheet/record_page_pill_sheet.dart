@@ -212,7 +212,7 @@ class RecordPagePillSheet extends HookConsumerWidget {
       setting: setting,
       pageIndex: pageIndex,
     );
-    final text = pillSheetGroup.displayPillSheetNumber(
+    final text = pillSheetGroup.displayPillNumber(
       premiumOrTrial: premiumAndTrial.premiumOrTrial,
       pillSheetAppearanceMode: setting.pillSheetAppearanceMode,
       pageIndex: pageIndex,

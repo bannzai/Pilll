@@ -149,7 +149,7 @@ class PillSheetGroup with _$PillSheetGroup {
 
   List<PillSheetType> get pillSheetTypes => pillSheets.map((e) => e.pillSheetType).toList();
 
-  String displayPillSheetNumber({
+  String displayPillNumber({
     required bool premiumOrTrial,
     required PillSheetAppearanceMode pillSheetAppearanceMode,
     required int pageIndex,
@@ -160,11 +160,11 @@ class PillSheetGroup with _$PillSheetGroup {
     } else if (pillSheetAppearanceMode == PillSheetAppearanceMode.sequential) {
       return _displaySequentialPillSheetNumber(pageIndex: pageIndex, pillNumberInPillSheet: pillNumberInPillSheet);
     } else {
-      return _displayPillSheetNumberInPillSheet(pillNumberInPillSheet: pillNumberInPillSheet);
+      return _displayPillNumberInPillSheet(pillNumberInPillSheet: pillNumberInPillSheet);
     }
   }
 
-  String _displayPillSheetNumberInPillSheet({
+  String _displayPillNumberInPillSheet({
     required int pillNumberInPillSheet,
   }) {
     return "$pillNumberInPillSheet";
