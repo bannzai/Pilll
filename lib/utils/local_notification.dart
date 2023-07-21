@@ -219,52 +219,64 @@ class RegisterReminderLocalNotification {
         }
         debugPrint("==== reminderDate:$reminderDateTime ===");
 
+        // 跨いでも1ピルシート分だけなので、今日の日付起点で考えて今処理しているループがactivePillSheetの次かどうかを判別し、処理中の「ピルシート中のピル番号」を計算して使用する
+        final isOverActivePillSheet = activePillSheet.todayPillNumber + offset > activePillSheet.typeInfo.totalCount;
+        final pillNumberInPillSheet = isOverActivePillSheet
+            ? activePillSheet.todayPillNumber + offset - activePillSheet.typeInfo.totalCount
+            : activePillSheet.todayPillNumber + offset;
+
         var pillSheetGroupIndex = activePillSheet.groupIndex;
-        var estimatedPillNumberInPillSheet = activePillSheet.todayPillNumber + offset;
         var pillSheeType = activePillSheet.pillSheetType;
-        var pillSheetDisplayNumber = pillSheetGroup.pillSheetDisplayNumber(
-          pillSheetGroupIndex: pillSheetGroupIndex,
-          sourcePillNumberInPillSheet: estimatedPillNumberInPillSheet,
+        var pillSheetDisplayNumber = pillSheetGroup.displayPillSheetNumber(
+          premiumOrTrial: premiumOrTrial,
+          pillSheetAppearanceMode: setting.pillSheetAppearanceMode,
+          pageIndex: activePillSheet.groupIndex,
+          pillNumberInPillSheet: pillNumberInPillSheet,
         );
 
         // activePillSheetよりも未来のPillSheet
-        if (estimatedPillNumberInPillSheet > activePillSheet.typeInfo.totalCount) {
-          // 次のピルシートの番号を表示する
-          pillSheetDisplayNumber = pillSheetDisplayNumber -
-              summarizedPillCountWithPillSheetTypesToIndex(pillSheetTypes: pillSheetGroup.pillSheetTypes, toIndex: activePillSheet.groupIndex + 1);
-
+        if (pillNumberInPillSheet > activePillSheet.typeInfo.totalCount) {
           final isLastPillSheet = (pillSheetGroup.pillSheets.length - 1) == activePillSheet.groupIndex;
+
           switch ((isLastPillSheet, premiumOrTrial, setting.isAutomaticallyCreatePillSheet)) {
             case (true, true, true):
-              // 新しいシート自動作成の場合の先読み追加
+              // 次のピルシートグループの処理。新しいシート自動作成の場合の先読み追加
               final nextPillSheetGroup = buildPillSheetGroup(
                 setting: setting,
                 pillSheetGroup: pillSheetGroup,
                 pillSheetTypes: pillSheetGroup.pillSheets.map((e) => e.pillSheetType).toList(),
                 displayNumberSetting: null,
               );
-              pillSheetDisplayNumber = pillSheetGroup.pillSheetDisplayNumber(
-                pillSheetGroupIndex: 0,
-                sourcePillNumberInPillSheet: pillSheetDisplayNumber,
+              pillSheetDisplayNumber = nextPillSheetGroup.displayPillSheetNumber(
+                premiumOrTrial: premiumOrTrial,
+                pillSheetAppearanceMode: setting.pillSheetAppearanceMode,
+                pageIndex: 0,
+                pillNumberInPillSheet: pillNumberInPillSheet,
               );
               final nextPillSheetGroupFirstPillSheet = nextPillSheetGroup.pillSheets.first;
               pillSheetGroupIndex = nextPillSheetGroupFirstPillSheet.groupIndex;
-              estimatedPillNumberInPillSheet = estimatedPillNumberInPillSheet - nextPillSheetGroupFirstPillSheet.typeInfo.totalCount;
               pillSheeType = nextPillSheetGroupFirstPillSheet.pillSheetType;
             case (false, _, _):
               // 次のピルシートを使用する場合
               final nextPillSheet = pillSheetGroup.pillSheets[activePillSheet.groupIndex + 1];
               pillSheetGroupIndex = nextPillSheet.groupIndex;
-              estimatedPillNumberInPillSheet = estimatedPillNumberInPillSheet - activePillSheet.typeInfo.totalCount;
               pillSheeType = nextPillSheet.pillSheetType;
+              pillSheetDisplayNumber = pillSheetGroup.displayPillSheetNumber(
+                premiumOrTrial: premiumOrTrial,
+                pillSheetAppearanceMode: setting.pillSheetAppearanceMode,
+                pageIndex: nextPillSheet.groupIndex,
+                pillNumberInPillSheet: pillNumberInPillSheet,
+              );
+
             case (_, _, _):
+              // 次のピルシートグループもピルシートも使用しない場合はループをスキップ
               continue;
           }
         }
 
         // 偽薬/休薬期間中の通知がOFFの場合はスキップする
         if (!setting.isOnNotifyInNotTakenDuration) {
-          if (pillSheeType.dosingPeriod < estimatedPillNumberInPillSheet) {
+          if (pillSheeType.dosingPeriod < pillNumberInPillSheet) {
             continue;
           }
         }
@@ -274,7 +286,7 @@ class RegisterReminderLocalNotification {
         final notificationID = _calcLocalNotificationID(
           pillSheetGroupIndex: pillSheetGroupIndex,
           reminderTime: reminderTime,
-          pillNumberIntoPillSheet: estimatedPillNumberInPillSheet,
+          pillNumberIntoPillSheet: pillNumberInPillSheet,
         );
 
         if (premiumOrTrial) {
@@ -287,10 +299,11 @@ class RegisterReminderLocalNotification {
 
             if (!setting.reminderNotificationCustomization.isInVisiblePillNumber) {
               result += " ";
-              result += "$pillSheetDisplayNumber番";
-              if (Environment.isDevelopment) {
-                result += "Local";
-              }
+              result += pillSheetDisplayNumber;
+            }
+
+            if (Environment.isDevelopment) {
+              result += " Local";
             }
             return result;
           }();
