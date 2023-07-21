@@ -213,17 +213,20 @@ class RecordPagePillSheet extends HookConsumerWidget {
       setting: setting,
       pageIndex: pageIndex,
     );
+    final text = pillSheetGroup.displayPillSheetNumber(
+      premiumOrTrial: premiumAndTrial.premiumOrTrial,
+      pillSheetAppearanceMode: setting.pillSheetAppearanceMode,
+      pageIndex: pageIndex,
+      // TODO: pillIndexInPillSheetが普及してきたらそれをそのまま使う
+      pillNumberInPillSheet: pillNumberIntoPillSheet - 1,
+    );
     if (isPremiumOrTrial && setting.pillSheetAppearanceMode == PillSheetAppearanceMode.date) {
       final DateTime date = pillSheet.displayPillTakeDate(pillNumberIntoPillSheet);
 
-      if (setting.pillNumberForFromMenstruation == 0 || setting.durationMenstruation == 0) {
-        return PlainPillDate(date: date);
-      }
-
       if (containedMenstruationDuration) {
-        return MenstruationPillDate(date: date);
+        return MenstruationPillNumber(date: date);
       } else {
-        return PlainPillDate(date: date);
+        return PlainPillNumber(date: date);
       }
     } else if (setting.pillSheetAppearanceMode == PillSheetAppearanceMode.sequential) {
       final pageOffset = summarizedPillCountWithPillSheetTypesToIndex(
@@ -286,6 +289,10 @@ class RecordPagePillSheet extends HookConsumerWidget {
     required int pageIndex,
     required Setting setting,
   }) {
+    if (setting.pillNumberForFromMenstruation == 0 || setting.durationMenstruation == 0) {
+      return false;
+    }
+
     final pillSheetTotalCount = pillSheetGroup.pillSheets[pageIndex].typeInfo.totalCount;
     if (setting.pillNumberForFromMenstruation < pillSheetTotalCount) {
       final left = setting.pillNumberForFromMenstruation;

@@ -181,32 +181,31 @@ class PillSheetGroup with _$PillSheetGroup {
     required bool premiumOrTrial,
     required PillSheetAppearanceMode pillSheetAppearanceMode,
     required int pageIndex,
-    required int pillIndexInPillSheet,
+    required int pillNumberInPillSheet,
   }) {
     if (premiumOrTrial && pillSheetAppearanceMode == PillSheetAppearanceMode.date) {
-      return displayPillSheetDate(pageIndex: pageIndex, pillIndexInPillSheet: pillIndexInPillSheet);
+      return displayPillSheetDate(pageIndex: pageIndex, pillNumberInPillSheet: pillNumberInPillSheet);
     } else if (pillSheetAppearanceMode == PillSheetAppearanceMode.sequential) {
-      return displaySequentialPillSheetNumber(pageIndex: pageIndex, pillIndexInPillSheet: pillIndexInPillSheet);
+      return displaySequentialPillSheetNumber(pageIndex: pageIndex, pillNumberInPillSheet: pillNumberInPillSheet);
     } else {
-      return displayPillSheetNumberInPillSheet(pillIndexInPillSheet: pillIndexInPillSheet);
+      return displayPillSheetNumberInPillSheet(pillNumberInPillSheet: pillNumberInPillSheet);
     }
   }
 
   String displayPillSheetNumberInPillSheet({
-    required int pillIndexInPillSheet,
+    required int pillNumberInPillSheet,
   }) {
-    return "${pillIndexInPillSheet + 1}";
+    return "$pillNumberInPillSheet";
   }
 
   String displaySequentialPillSheetNumber({
     required int pageIndex,
-    required int pillIndexInPillSheet,
+    required int pillNumberInPillSheet,
   }) {
     final offset = summarizedPillCountWithPillSheetTypesToIndex(
       pillSheetTypes: pillSheetTypes,
       toIndex: pageIndex,
     );
-    final pillNumberInPillSheet = pillIndexInPillSheet + 1;
     var number = offset + pillNumberInPillSheet;
 
     final displayNumberSetting = this.displayNumberSetting;
@@ -229,9 +228,9 @@ class PillSheetGroup with _$PillSheetGroup {
 
   String displayPillSheetDate({
     required int pageIndex,
-    required int pillIndexInPillSheet,
+    required int pillNumberInPillSheet,
   }) {
-    return DateTimeFormatter.monthAndDay(pillSheets[pageIndex].displayPillTakeDate(pillIndexInPillSheet + 1));
+    return DateTimeFormatter.monthAndDay(pillSheets[pageIndex].displayPillTakeDate(pillNumberInPillSheet));
   }
 }
 
