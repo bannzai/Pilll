@@ -1,3 +1,4 @@
+import 'package:intl/date_symbol_data_local.dart';
 import 'package:mockito/mockito.dart';
 import 'package:pilll/entity/firestore_id_generator.dart';
 import 'package:pilll/features/record/components/pill_sheet/components/pill_number.dart';
@@ -17,6 +18,7 @@ void main() {
   setUp(() {
     TestWidgetsFlutterBinding.ensureInitialized();
     SharedPreferences.setMockInitialValues({});
+    initializeDateFormatting('ja_JP');
   });
   group("#RecordPagePillSheet.textOfPillNumber", () {
     group("pillSheetAppearanceMode is number", () {
