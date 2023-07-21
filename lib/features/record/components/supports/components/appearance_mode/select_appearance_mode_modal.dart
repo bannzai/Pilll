@@ -9,6 +9,7 @@ import 'package:pilll/features/premium_introduction/premium_introduction_sheet.d
 import 'package:pilll/entity/setting.codegen.dart';
 import 'package:pilll/provider/premium_and_trial.codegen.dart';
 import 'package:pilll/provider/setting.dart';
+import 'package:pilll/utils/local_notification.dart';
 
 class SelectAppearanceModeModal extends HookConsumerWidget {
   final PremiumAndTrial premiumAndTrial;
@@ -19,6 +20,7 @@ class SelectAppearanceModeModal extends HookConsumerWidget {
   Widget build(BuildContext context, WidgetRef ref) {
     final setting = ref.watch(settingProvider).requireValue;
     final setSetting = ref.watch(setSettingProvider);
+    final registerReminderLocalNotification = ref.watch(registerReminderLocalNotificationProvider);
 
     return Container(
       color: Colors.white,
@@ -44,6 +46,7 @@ class SelectAppearanceModeModal extends HookConsumerWidget {
                   context,
                   setting: setting,
                   setSetting: setSetting,
+                  registerReminderLocalNotification: registerReminderLocalNotification,
                   premiumAndTrial: premiumAndTrial,
                   mode: PillSheetAppearanceMode.date,
                   text: "日付表示",
@@ -53,6 +56,7 @@ class SelectAppearanceModeModal extends HookConsumerWidget {
                   context,
                   setting: setting,
                   setSetting: setSetting,
+                  registerReminderLocalNotification: registerReminderLocalNotification,
                   premiumAndTrial: premiumAndTrial,
                   mode: PillSheetAppearanceMode.number,
                   text: "ピル番号",
@@ -62,6 +66,7 @@ class SelectAppearanceModeModal extends HookConsumerWidget {
                   context,
                   setting: setting,
                   setSetting: setSetting,
+                  registerReminderLocalNotification: registerReminderLocalNotification,
                   premiumAndTrial: premiumAndTrial,
                   mode: PillSheetAppearanceMode.sequential,
                   text: "服用日数",
@@ -78,6 +83,7 @@ class SelectAppearanceModeModal extends HookConsumerWidget {
   Widget _row(
     BuildContext context, {
     required SetSetting setSetting,
+    required RegisterReminderLocalNotification registerReminderLocalNotification,
     required Setting setting,
     required PremiumAndTrial premiumAndTrial,
     required PillSheetAppearanceMode mode,
@@ -93,11 +99,13 @@ class SelectAppearanceModeModal extends HookConsumerWidget {
 
         if (premiumAndTrial.isPremium || premiumAndTrial.isTrial) {
           await setSetting(setting.copyWith(pillSheetAppearanceMode: mode));
+          await registerReminderLocalNotification();
         } else if (isPremiumFunction) {
           showPremiumIntroductionSheet(context);
         } else {
           // User selected non premium function mode
           await setSetting(setting.copyWith(pillSheetAppearanceMode: mode));
+          await registerReminderLocalNotification();
         }
       },
       child: SizedBox(

@@ -106,7 +106,7 @@ class LocalNotificationService {
 
   Future<List<PendingNotificationRequest>> pendingReminderNotifications() async {
     final pendingNotifications = await plugin.pendingNotificationRequests();
-    return pendingNotifications.where((element) => element.id - reminderNotificationIdentifierOffset >= 0).toList();
+    return pendingNotifications.where((element) => element.id - reminderNotificationIdentifierOffset > 0).toList();
   }
 }
 
@@ -159,6 +159,8 @@ class RegisterReminderLocalNotification {
   // - サインイン
   // - 番号変更後
   // - リマインダーの通知がOFF->ONになった時
+  // - 連番モードで服用日数の表示を変更した時
+  // - ピルシートの表示を変更した時
   // - 久しぶりにアプリを開いたが、通知がスケジュールされていない時
   // - トライアル終了後/プレミアム加入後 → これは服用は続けられているので何もしない。有料機能をしばらく使えてもヨシとする
   // NOTE: 本日分の服用記録がある場合は、本日分の通知はスケジュールしないようになっている
@@ -229,6 +231,8 @@ class RegisterReminderLocalNotification {
         final pillNumberInPillSheet = isOverActivePillSheet
             ? activePillSheet.todayPillNumber + offset - activePillSheet.typeInfo.totalCount
             : activePillSheet.todayPillNumber + offset;
+        debugPrint(
+            "activePillSheet.todayPillNumber: ${activePillSheet.todayPillNumber}, offset: $offset, activePillSheet.typeInfo.totalCount: ${activePillSheet.typeInfo.totalCount}, isOverActivePillSheet:$isOverActivePillSheet, pillNumberInPillSheet:$pillNumberInPillSheet");
 
         var pillSheetGroupIndex = activePillSheet.groupIndex;
         var pillSheeType = activePillSheet.pillSheetType;

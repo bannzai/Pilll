@@ -117,7 +117,8 @@ class HomePageBody extends HookConsumerWidget {
     }();
 
     Future.microtask(() async {
-      if ((await localNotificationService.pendingReminderNotifications()).isEmpty) {
+      final pendingReminderNotifications = await localNotificationService.pendingReminderNotifications();
+      if (pendingReminderNotifications.isEmpty) {
         await registerReminderLocalNotification.call();
       }
     });
