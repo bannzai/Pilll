@@ -217,7 +217,7 @@ class RegisterReminderLocalNotification {
         if (reminderDateTime.isBefore(tzNow)) {
           continue;
         }
-        debugPrint("write reminderDate:$reminderDateTime");
+        debugPrint("==== reminderDate:$reminderDateTime ===");
 
         var pillSheetGroupIndex = activePillSheet.groupIndex;
         var estimatedPillNumberInPillSheet = activePillSheet.todayPillNumber + offset;
