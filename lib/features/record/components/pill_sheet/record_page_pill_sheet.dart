@@ -226,9 +226,9 @@ class RecordPagePillSheet extends HookConsumerWidget {
         return PlainPillDate(date: date);
       }
     } else if (setting.pillSheetAppearanceMode == PillSheetAppearanceMode.sequential) {
-      final pageOffset = summarizedPillCountWithPillSheetTypesToEndIndex(
+      final pageOffset = summarizedPillCountWithPillSheetTypesToIndex(
         pillSheetTypes: pillSheetGroup.pillSheets.map((e) => e.pillSheetType).toList(),
-        endIndex: pageIndex,
+        toIndex: pageIndex,
       );
       if (setting.pillNumberForFromMenstruation == 0 || setting.durationMenstruation == 0) {
         return SequentialPillNumber(
@@ -292,8 +292,8 @@ class RecordPagePillSheet extends HookConsumerWidget {
       final right = setting.pillNumberForFromMenstruation + setting.durationMenstruation - 1;
       return left <= pillNumberIntoPillSheet && pillNumberIntoPillSheet <= right;
     }
-    final passedCount = summarizedPillCountWithPillSheetTypesToEndIndex(
-        pillSheetTypes: pillSheetGroup.pillSheets.map((e) => e.pillSheetType).toList(), endIndex: pageIndex);
+    final passedCount = summarizedPillCountWithPillSheetTypesToIndex(
+        pillSheetTypes: pillSheetGroup.pillSheets.map((e) => e.pillSheetType).toList(), toIndex: pageIndex);
     final serialiedPillNumber = passedCount + pillNumberIntoPillSheet;
 
     final menstruationRangeList = List.generate(pillSheetGroup.pillSheets.length, (index) {

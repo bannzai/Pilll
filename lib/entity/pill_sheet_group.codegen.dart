@@ -65,8 +65,8 @@ class PillSheetGroup with _$PillSheetGroup {
       return 0;
     }
 
-    final passedPillCountForPillSheetTypes = summarizedPillCountWithPillSheetTypesToEndIndex(
-        pillSheetTypes: pillSheets.map((e) => e.pillSheetType).toList(), endIndex: activedPillSheet.groupIndex);
+    final passedPillCountForPillSheetTypes = summarizedPillCountWithPillSheetTypesToIndex(
+        pillSheetTypes: pillSheets.map((e) => e.pillSheetType).toList(), toIndex: activedPillSheet.groupIndex);
 
     var sequentialTodayPillNumber = passedPillCountForPillSheetTypes + activedPillSheet.todayPillNumber;
 
@@ -98,8 +98,8 @@ class PillSheetGroup with _$PillSheetGroup {
       return 0;
     }
 
-    final passedPillCountForPillSheetTypes = summarizedPillCountWithPillSheetTypesToEndIndex(
-        pillSheetTypes: pillSheets.map((e) => e.pillSheetType).toList(), endIndex: activedPillSheet.groupIndex);
+    final passedPillCountForPillSheetTypes = summarizedPillCountWithPillSheetTypesToIndex(
+        pillSheetTypes: pillSheets.map((e) => e.pillSheetType).toList(), toIndex: activedPillSheet.groupIndex);
 
     var sequentialLastTakenPillNumber = passedPillCountForPillSheetTypes + activedPillSheet.lastTakenPillNumber;
 
@@ -124,7 +124,7 @@ class PillSheetGroup with _$PillSheetGroup {
 
   int get estimatedEndPillNumber {
     var estimatedEndPillNumber =
-        summarizedPillCountWithPillSheetTypesToEndIndex(pillSheetTypes: pillSheets.map((e) => e.pillSheetType).toList(), endIndex: pillSheets.length);
+        summarizedPillCountWithPillSheetTypesToIndex(pillSheetTypes: pillSheets.map((e) => e.pillSheetType).toList(), toIndex: pillSheets.length);
 
     final displayNumberSetting = this.displayNumberSetting;
     if (displayNumberSetting != null) {
@@ -146,8 +146,8 @@ class PillSheetGroup with _$PillSheetGroup {
   }
 
   int pillSheetDisplayNumber({required int pillSheetGroupIndex, required int sourcePillNumberInPillSheet}) {
-    final pageOffset = summarizedPillCountWithPillSheetTypesToEndIndex(
-        pillSheetTypes: pillSheets.map((e) => e.pillSheetType).toList(), endIndex: pillSheetGroupIndex);
+    final pageOffset =
+        summarizedPillCountWithPillSheetTypesToIndex(pillSheetTypes: pillSheets.map((e) => e.pillSheetType).toList(), toIndex: pillSheetGroupIndex);
     var result = pageOffset + sourcePillNumberInPillSheet;
 
     final displayNumberSetting = this.displayNumberSetting;
@@ -169,6 +169,8 @@ class PillSheetGroup with _$PillSheetGroup {
 
     return result;
   }
+
+  List<PillSheetType> get pillSheetTypes => pillSheets.map((e) => e.pillSheetType).toList();
 }
 
 @freezed

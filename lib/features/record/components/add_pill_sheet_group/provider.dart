@@ -78,7 +78,7 @@ PillSheetGroup buildPillSheetGroup({
   final n = now();
   final createdPillSheets = pillSheetTypes.asMap().keys.map((pageIndex) {
     final pillSheetType = backportPillSheetTypes(pillSheetTypes)[pageIndex];
-    final offset = summarizedPillCountWithPillSheetTypesToEndIndex(pillSheetTypes: pillSheetTypes, endIndex: pageIndex);
+    final offset = summarizedPillCountWithPillSheetTypesToIndex(pillSheetTypes: pillSheetTypes, toIndex: pageIndex);
     return PillSheet(
       id: firestoreIDGenerator(),
       typeInfo: pillSheetType.typeInfo,

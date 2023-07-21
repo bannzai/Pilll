@@ -122,7 +122,7 @@ class SettingTodayPillNumberPage extends HookConsumerWidget {
     required PillSheetGroup pillSheetGroup,
   }) {
     final pillSheetTypes = pillSheetGroup.pillSheets.map((e) => e.pillSheetType).toList();
-    final passedTotalCount = summarizedPillCountWithPillSheetTypesToEndIndex(pillSheetTypes: pillSheetTypes, endIndex: activedPillSheet.groupIndex);
+    final passedTotalCount = summarizedPillCountWithPillSheetTypesToIndex(pillSheetTypes: pillSheetTypes, toIndex: activedPillSheet.groupIndex);
     if (passedTotalCount >= activedPillSheet.todayPillNumber) {
       return activedPillSheet.todayPillNumber;
     }
