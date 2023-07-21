@@ -205,11 +205,11 @@ void main() {
               setting: setting);
 
           if (pillNumberIntoPillSheet < pillNumberForFromMenstruation) {
-            expect(widget, isA<PlainPillDate>(), reason: "pillNumberIntoPillSheet: $pillNumberIntoPillSheet");
+            expect(widget, isA<PlainPillNumber>(), reason: "pillNumberIntoPillSheet: $pillNumberIntoPillSheet");
           } else if (pillNumberIntoPillSheet < pillNumberForFromMenstruation + durationMenstruation) {
-            expect(widget, isA<MenstruationPillDate>(), reason: "pillNumberIntoPillSheet: $pillNumberIntoPillSheet");
+            expect(widget, isA<MenstruationPillNumber>(), reason: "pillNumberIntoPillSheet: $pillNumberIntoPillSheet");
           } else {
-            expect(widget, isA<PlainPillDate>(), reason: "pillNumberIntoPillSheet: $pillNumberIntoPillSheet");
+            expect(widget, isA<PlainPillNumber>(), reason: "pillNumberIntoPillSheet: $pillNumberIntoPillSheet");
           }
         }
       });
@@ -299,11 +299,11 @@ void main() {
               setting: setting);
 
           if (pillNumberIntoPillSheet < pillNumberForFromMenstruation) {
-            expect(widget, isA<PlainPillDate>(), reason: "pillNumberIntoPillSheet: $pillNumberIntoPillSheet");
+            expect(widget, isA<PlainPillNumber>(), reason: "pillNumberIntoPillSheet: $pillNumberIntoPillSheet");
           } else if (pillNumberIntoPillSheet < pillNumberForFromMenstruation + durationMenstruation) {
-            expect(widget, isA<PlainPillDate>(), reason: "pillNumberIntoPillSheet: $pillNumberIntoPillSheet");
+            expect(widget, isA<PlainPillNumber>(), reason: "pillNumberIntoPillSheet: $pillNumberIntoPillSheet");
           } else {
-            expect(widget, isA<PlainPillDate>(), reason: "pillNumberIntoPillSheet: $pillNumberIntoPillSheet");
+            expect(widget, isA<PlainPillNumber>(), reason: "pillNumberIntoPillSheet: $pillNumberIntoPillSheet");
           }
         }
       });
@@ -348,11 +348,11 @@ void main() {
               setting: setting);
 
           if (pillNumberIntoPillSheet < pillNumberForFromMenstruation) {
-            expect(widget, isA<SequentialPillNumber>(), reason: "pillNumberIntoPillSheet: $pillNumberIntoPillSheet");
+            expect(widget, isA<PlainPillNumber>(), reason: "pillNumberIntoPillSheet: $pillNumberIntoPillSheet");
           } else if (pillNumberIntoPillSheet < pillNumberForFromMenstruation + durationMenstruation) {
-            expect(widget, isA<MenstruationSequentialPillNumber>(), reason: "pillNumberIntoPillSheet: $pillNumberIntoPillSheet");
+            expect(widget, isA<MenstruationPillNumber>(), reason: "pillNumberIntoPillSheet: $pillNumberIntoPillSheet");
           } else {
-            expect(widget, isA<SequentialPillNumber>(), reason: "pillNumberIntoPillSheet: $pillNumberIntoPillSheet");
+            expect(widget, isA<PlainPillNumber>(), reason: "pillNumberIntoPillSheet: $pillNumberIntoPillSheet");
           }
         }
       });
@@ -395,11 +395,11 @@ void main() {
               setting: setting);
 
           if (pillNumberIntoPillSheet < pillNumberForFromMenstruation) {
-            expect(widget, isA<SequentialPillNumber>(), reason: "pillNumberIntoPillSheet: $pillNumberIntoPillSheet");
+            expect(widget, isA<PlainPillNumber>(), reason: "pillNumberIntoPillSheet: $pillNumberIntoPillSheet");
           } else if (pillNumberIntoPillSheet < pillNumberForFromMenstruation + durationMenstruation) {
-            expect(widget, isA<SequentialPillNumber>(), reason: "pillNumberIntoPillSheet: $pillNumberIntoPillSheet");
+            expect(widget, isA<PlainPillNumber>(), reason: "pillNumberIntoPillSheet: $pillNumberIntoPillSheet");
           } else {
-            expect(widget, isA<SequentialPillNumber>(), reason: "pillNumberIntoPillSheet: $pillNumberIntoPillSheet");
+            expect(widget, isA<PlainPillNumber>(), reason: "pillNumberIntoPillSheet: $pillNumberIntoPillSheet");
           }
         }
       });
@@ -438,11 +438,11 @@ void main() {
               setting: setting);
 
           if (pillNumberIntoPillSheet < pillNumberForFromMenstruation) {
-            expect(widget, isA<SequentialPillNumber>(), reason: "pillNumberIntoPillSheet: $pillNumberIntoPillSheet");
+            expect(widget, isA<PlainPillNumber>(), reason: "pillNumberIntoPillSheet: $pillNumberIntoPillSheet");
           } else if (pillNumberIntoPillSheet < pillNumberForFromMenstruation + durationMenstruation) {
-            expect(widget, isA<SequentialPillNumber>(), reason: "pillNumberIntoPillSheet: $pillNumberIntoPillSheet");
+            expect(widget, isA<PlainPillNumber>(), reason: "pillNumberIntoPillSheet: $pillNumberIntoPillSheet");
           } else {
-            expect(widget, isA<SequentialPillNumber>(), reason: "pillNumberIntoPillSheet: $pillNumberIntoPillSheet");
+            expect(widget, isA<PlainPillNumber>(), reason: "pillNumberIntoPillSheet: $pillNumberIntoPillSheet");
           }
         }
       });
