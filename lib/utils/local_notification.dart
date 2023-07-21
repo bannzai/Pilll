@@ -53,7 +53,7 @@ class LocalNotificationService {
     await plugin.initialize(
       InitializationSettings(
         android: const AndroidInitializationSettings(
-          "ic_notification.png",
+          "@mipmap/ic_notification",
         ),
         iOS: DarwinInitializationSettings(
           notificationCategories: [
