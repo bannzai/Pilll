@@ -240,7 +240,7 @@ class RegisterReminderLocalNotification {
         );
 
         // activePillSheetよりも未来のPillSheet
-        if (pillNumberInPillSheet > activePillSheet.typeInfo.totalCount) {
+        if (isOverActivePillSheet) {
           final isLastPillSheet = (pillSheetGroup.pillSheets.length - 1) == activePillSheet.groupIndex;
 
           switch ((isLastPillSheet, premiumOrTrial, setting.isAutomaticallyCreatePillSheet)) {
