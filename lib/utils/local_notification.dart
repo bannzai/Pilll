@@ -35,7 +35,6 @@ const androidReminderNotificationGroupKey = "androidReminderNotificationGroupKey
 // General Android Notification Setting
 // Doc: https://developer.android.com/reference/androidx/core/app/NotificationCompat#CATEGORY_REMINDER()
 const androidNotificationCategoryCalendarSchedule = "androidNotificationCategoryCalendarSchedule";
-const androidNotificationCategoryRemindNotification = "androidNotificationCategoryRemindNotification";
 
 // Notification ID offset
 const scheduleNotificationIdentifierOffset = 100000;
@@ -90,7 +89,7 @@ class LocalNotificationService {
           channelShowBadge: true,
           setAsGroupSummary: true,
           groupKey: androidReminderNotificationGroupKey,
-          category: AndroidNotificationCategory("TEST"),
+          category: AndroidNotificationCategory.alarm,
         ),
         iOS: DarwinNotificationDetails(
           categoryIdentifier: iOSQuickRecordPillCategoryIdentifier,
@@ -99,7 +98,6 @@ class LocalNotificationService {
           presentSound: true,
         ),
       ),
-      androidAllowWhileIdle: true,
       uiLocalNotificationDateInterpretation: UILocalNotificationDateInterpretation.absoluteTime,
     );
   }
@@ -337,7 +335,7 @@ class RegisterReminderLocalNotification {
                       channelShowBadge: true,
                       setAsGroupSummary: true,
                       groupKey: androidReminderNotificationGroupKey,
-                      category: AndroidNotificationCategory(androidNotificationCategoryRemindNotification),
+                      category: AndroidNotificationCategory.alarm,
                       actions: [
                         AndroidNotificationAction(
                           androidReminderNotificationActionIdentifier,
@@ -381,7 +379,7 @@ class RegisterReminderLocalNotification {
                       channelShowBadge: true,
                       setAsGroupSummary: true,
                       groupKey: androidReminderNotificationGroupKey,
-                      category: AndroidNotificationCategory(androidNotificationCategoryRemindNotification),
+                      category: AndroidNotificationCategory.alarm,
                     ),
                     iOS: DarwinNotificationDetails(
                       categoryIdentifier: iOSQuickRecordPillCategoryIdentifier,
@@ -390,7 +388,6 @@ class RegisterReminderLocalNotification {
                       presentSound: true,
                     ),
                   ),
-                  androidAllowWhileIdle: true,
                   uiLocalNotificationDateInterpretation: UILocalNotificationDateInterpretation.absoluteTime,
                 );
               } catch (e, st) {
@@ -460,7 +457,7 @@ extension ScheduleLocalNotificationService on LocalNotificationService {
             androidCalendarScheduleNotificationChannelID,
             "カレンダーの予定",
             groupKey: null,
-            category: AndroidNotificationCategory(androidNotificationCategoryCalendarSchedule),
+            category: AndroidNotificationCategory.alarm,
           ),
           iOS: DarwinNotificationDetails(
             sound: "becho.caf",
