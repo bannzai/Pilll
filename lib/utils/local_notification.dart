@@ -288,6 +288,7 @@ class RegisterReminderLocalNotification {
             }
             return result;
           }();
+          debugPrint("title:$title");
 
           futures.add(
             Future(() async {
