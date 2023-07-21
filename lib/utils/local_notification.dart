@@ -226,7 +226,12 @@ class RegisterReminderLocalNotification {
           pillSheetGroupIndex: pillSheetGroupIndex,
           originPillNumberInPillSheet: estimatedPillNumberInPillSheet,
         );
+
+        // activePillSheetよりも未来のPillSheet
         if (estimatedPillNumberInPillSheet > activePillSheet.typeInfo.totalCount) {
+          // 次のピルシートの番号を表示する
+          pillSheetDisplayNumber = pillSheetDisplayNumber - activePillSheet.typeInfo.totalCount;
+
           final isLastPillSheet = (pillSheetGroup.pillSheets.length - 1) == activePillSheet.groupIndex;
           switch ((isLastPillSheet, premiumOrTrial, setting.isAutomaticallyCreatePillSheet)) {
             case (true, true, true):
