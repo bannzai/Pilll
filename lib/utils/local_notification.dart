@@ -417,6 +417,10 @@ class RegisterReminderLocalNotification {
 final cancelReminderLocalNotificationProvider = Provider((ref) => CancelReminderLocalNotification());
 
 class CancelReminderLocalNotification {
+  // Usecase
+  // - ピルシートグループを削除された時
+  // - 通知をOFFにした時
+  // これら以外はRegisterReminderLocalNotificationで登録し直す。なおRegisterReminderLocalNotification の内部でこの関数を読んでいる
   Future<void> call() async {
     final pendingNotifications = await localNotificationService.pendingReminderNotifications();
     await Future.wait(pendingNotifications.map((p) => localNotificationService.cancelNotification(localNotificationID: p.id)));
