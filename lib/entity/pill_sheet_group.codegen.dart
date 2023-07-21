@@ -147,31 +147,6 @@ class PillSheetGroup with _$PillSheetGroup {
     return estimatedEndPillNumber;
   }
 
-  int pillSheetDisplayNumber({required int pillSheetGroupIndex, required int sourcePillNumberInPillSheet}) {
-    final pageOffset =
-        summarizedPillCountWithPillSheetTypesToIndex(pillSheetTypes: pillSheets.map((e) => e.pillSheetType).toList(), toIndex: pillSheetGroupIndex);
-    var result = pageOffset + sourcePillNumberInPillSheet;
-
-    final displayNumberSetting = this.displayNumberSetting;
-    final beginDisplayNumberSetting = displayNumberSetting?.beginPillNumber;
-    final endDisplayNumberSetting = displayNumberSetting?.endPillNumber;
-    if (displayNumberSetting != null) {
-      if (beginDisplayNumberSetting != null && beginDisplayNumberSetting > 0) {
-        result += beginDisplayNumberSetting - 1;
-      }
-
-      if (endDisplayNumberSetting != null && endDisplayNumberSetting > 0) {
-        result = result % endDisplayNumberSetting;
-
-        if (result == 0) {
-          result = endDisplayNumberSetting;
-        }
-      }
-    }
-
-    return result;
-  }
-
   List<PillSheetType> get pillSheetTypes => pillSheets.map((e) => e.pillSheetType).toList();
 
   String displayPillSheetNumber({
