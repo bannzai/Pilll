@@ -1,8 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:pilll/components/atoms/color.dart';
 import 'package:pilll/components/atoms/font.dart';
-import 'package:pilll/entity/pill_sheet_group.codegen.dart';
-import 'package:pilll/utils/formatter/date_time_formatter.dart';
 
 class PlainPillNumber extends StatelessWidget {
   final String text;
