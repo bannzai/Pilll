@@ -32,6 +32,9 @@ class FakePremiumAndTrial extends Mock implements PremiumAndTrial {
   DateTime? get trialDeadlineDate => fakeTrialDeadlineDate;
   @override
   DateTime? get discountEntitlementDeadlineDate => fakeDiscountEntitlementDeadlineDate;
+
+  @override
+  bool get premiumOrTrial => isPremium || isTrial;
 }
 
 class FakeAnalytics extends Fake implements Analytics {

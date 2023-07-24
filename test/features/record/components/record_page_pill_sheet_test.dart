@@ -1,3 +1,4 @@
+import 'package:intl/date_symbol_data_local.dart';
 import 'package:mockito/mockito.dart';
 import 'package:pilll/entity/firestore_id_generator.dart';
 import 'package:pilll/entity/pill.codegen.dart';
@@ -18,6 +19,7 @@ void main() {
   setUp(() {
     TestWidgetsFlutterBinding.ensureInitialized();
     SharedPreferences.setMockInitialValues({});
+    initializeDateFormatting('ja_JP');
   });
   group("#RecordPagePillSheet.textOfPillNumber", () {
     group("pillSheetAppearanceMode is number", () {
@@ -222,11 +224,11 @@ void main() {
               setting: setting);
 
           if (pillNumberIntoPillSheet < pillNumberForFromMenstruation) {
-            expect(widget, isA<PlainPillDate>(), reason: "pillNumberIntoPillSheet: $pillNumberIntoPillSheet");
+            expect(widget, isA<PlainPillNumber>(), reason: "pillNumberIntoPillSheet: $pillNumberIntoPillSheet");
           } else if (pillNumberIntoPillSheet < pillNumberForFromMenstruation + durationMenstruation) {
-            expect(widget, isA<MenstruationPillDate>(), reason: "pillNumberIntoPillSheet: $pillNumberIntoPillSheet");
+            expect(widget, isA<MenstruationPillNumber>(), reason: "pillNumberIntoPillSheet: $pillNumberIntoPillSheet");
           } else {
-            expect(widget, isA<PlainPillDate>(), reason: "pillNumberIntoPillSheet: $pillNumberIntoPillSheet");
+            expect(widget, isA<PlainPillNumber>(), reason: "pillNumberIntoPillSheet: $pillNumberIntoPillSheet");
           }
         }
       });
@@ -322,11 +324,11 @@ void main() {
               setting: setting);
 
           if (pillNumberIntoPillSheet < pillNumberForFromMenstruation) {
-            expect(widget, isA<PlainPillDate>(), reason: "pillNumberIntoPillSheet: $pillNumberIntoPillSheet");
+            expect(widget, isA<PlainPillNumber>(), reason: "pillNumberIntoPillSheet: $pillNumberIntoPillSheet");
           } else if (pillNumberIntoPillSheet < pillNumberForFromMenstruation + durationMenstruation) {
-            expect(widget, isA<PlainPillDate>(), reason: "pillNumberIntoPillSheet: $pillNumberIntoPillSheet");
+            expect(widget, isA<PlainPillNumber>(), reason: "pillNumberIntoPillSheet: $pillNumberIntoPillSheet");
           } else {
-            expect(widget, isA<PlainPillDate>(), reason: "pillNumberIntoPillSheet: $pillNumberIntoPillSheet");
+            expect(widget, isA<PlainPillNumber>(), reason: "pillNumberIntoPillSheet: $pillNumberIntoPillSheet");
           }
         }
       });
@@ -374,11 +376,11 @@ void main() {
               setting: setting);
 
           if (pillNumberIntoPillSheet < pillNumberForFromMenstruation) {
-            expect(widget, isA<SequentialPillNumber>(), reason: "pillNumberIntoPillSheet: $pillNumberIntoPillSheet");
+            expect(widget, isA<PlainPillNumber>(), reason: "pillNumberIntoPillSheet: $pillNumberIntoPillSheet");
           } else if (pillNumberIntoPillSheet < pillNumberForFromMenstruation + durationMenstruation) {
-            expect(widget, isA<MenstruationSequentialPillNumber>(), reason: "pillNumberIntoPillSheet: $pillNumberIntoPillSheet");
+            expect(widget, isA<MenstruationPillNumber>(), reason: "pillNumberIntoPillSheet: $pillNumberIntoPillSheet");
           } else {
-            expect(widget, isA<SequentialPillNumber>(), reason: "pillNumberIntoPillSheet: $pillNumberIntoPillSheet");
+            expect(widget, isA<PlainPillNumber>(), reason: "pillNumberIntoPillSheet: $pillNumberIntoPillSheet");
           }
         }
       });
@@ -424,11 +426,11 @@ void main() {
               setting: setting);
 
           if (pillNumberIntoPillSheet < pillNumberForFromMenstruation) {
-            expect(widget, isA<SequentialPillNumber>(), reason: "pillNumberIntoPillSheet: $pillNumberIntoPillSheet");
+            expect(widget, isA<PlainPillNumber>(), reason: "pillNumberIntoPillSheet: $pillNumberIntoPillSheet");
           } else if (pillNumberIntoPillSheet < pillNumberForFromMenstruation + durationMenstruation) {
-            expect(widget, isA<SequentialPillNumber>(), reason: "pillNumberIntoPillSheet: $pillNumberIntoPillSheet");
+            expect(widget, isA<PlainPillNumber>(), reason: "pillNumberIntoPillSheet: $pillNumberIntoPillSheet");
           } else {
-            expect(widget, isA<SequentialPillNumber>(), reason: "pillNumberIntoPillSheet: $pillNumberIntoPillSheet");
+            expect(widget, isA<PlainPillNumber>(), reason: "pillNumberIntoPillSheet: $pillNumberIntoPillSheet");
           }
         }
       });
@@ -479,11 +481,11 @@ void main() {
               setting: setting);
 
           if (pillNumberIntoPillSheet < pillNumberForFromMenstruation) {
-            expect(widget, isA<SequentialPillNumber>(), reason: "pillNumberIntoPillSheet: $pillNumberIntoPillSheet");
+            expect(widget, isA<PlainPillNumber>(), reason: "pillNumberIntoPillSheet: $pillNumberIntoPillSheet");
           } else if (pillNumberIntoPillSheet < pillNumberForFromMenstruation + durationMenstruation) {
-            expect(widget, isA<SequentialPillNumber>(), reason: "pillNumberIntoPillSheet: $pillNumberIntoPillSheet");
+            expect(widget, isA<PlainPillNumber>(), reason: "pillNumberIntoPillSheet: $pillNumberIntoPillSheet");
           } else {
-            expect(widget, isA<SequentialPillNumber>(), reason: "pillNumberIntoPillSheet: $pillNumberIntoPillSheet");
+            expect(widget, isA<PlainPillNumber>(), reason: "pillNumberIntoPillSheet: $pillNumberIntoPillSheet");
           }
         }
       });

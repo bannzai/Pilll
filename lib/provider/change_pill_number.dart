@@ -38,9 +38,9 @@ class ChangePillNumber {
     final batch = batchFactory.batch();
 
     final pillSheetTypes = pillSheetGroup.pillSheets.map((e) => e.pillSheetType).toList();
-    final nextSerializedPillNumber = summarizedPillCountWithPillSheetTypesToEndIndex(
+    final nextSerializedPillNumber = summarizedPillCountWithPillSheetTypesToIndex(
           pillSheetTypes: pillSheetTypes,
-          endIndex: pillSheetPageIndex,
+          toIndex: pillSheetPageIndex,
         ) +
         pillNumberIntoPillSheet;
     final firstPilSheetBeginDate = today().subtract(Duration(days: nextSerializedPillNumber - 1));
@@ -53,7 +53,7 @@ class ChangePillNumber {
       if (index == 0) {
         beginDate = firstPilSheetBeginDate;
       } else {
-        final passedTotalCount = summarizedPillCountWithPillSheetTypesToEndIndex(pillSheetTypes: pillSheetTypes, endIndex: index);
+        final passedTotalCount = summarizedPillCountWithPillSheetTypesToIndex(pillSheetTypes: pillSheetTypes, toIndex: index);
         beginDate = firstPilSheetBeginDate.add(Duration(days: passedTotalCount));
       }
 

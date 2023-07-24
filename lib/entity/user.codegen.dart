@@ -60,6 +60,7 @@ extension UserFirestoreFieldKeys on String {
   static const hasDiscountEntitlement = "hasDiscountEntitlement";
   static const discountEntitlementDeadlineDate = "discountEntitlementDeadlineDate";
   static const shouldAskCancelReason = "shouldAskCancelReason";
+  static const useLocalNotificationForReminder = "useLocalNotificationForReminder";
 }
 
 @freezed
@@ -79,6 +80,7 @@ class User with _$User {
     @Default(false) bool isTrial,
     @Default(false) bool hasDiscountEntitlement,
     @Default(false) bool shouldAskCancelReason,
+    @Default(false) bool useLocalNotificationForReminder,
     @JsonKey(
       fromJson: TimestampConverter.timestampToDateTime,
       toJson: TimestampConverter.dateTimeToTimestamp,

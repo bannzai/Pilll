@@ -24,6 +24,7 @@ import 'package:pilll/features/error/error_alert.dart';
 import 'package:pilll/utils/error_log.dart';
 import 'package:pilll/provider/premium_and_trial.codegen.dart';
 import 'package:pilll/utils/datetime/day.dart';
+import 'package:pilll/utils/local_notification.dart';
 
 class RecordPagePillSheet extends HookConsumerWidget {
   final PillSheetGroup pillSheetGroup;
@@ -47,6 +48,7 @@ class RecordPagePillSheet extends HookConsumerWidget {
         pillSheet.beginingDate.add(Duration(days: summarizedRestDuration(restDurations: pillSheet.restDurations, upperDate: today())));
     final takePill = ref.watch(takePillProvider);
     final revertTakePill = ref.watch(revertTakePillProvider);
+    final registerReminderLocalNotification = ref.watch(registerReminderLocalNotificationProvider);
 
     return PillSheetViewLayout(
       weekdayLines: PillSheetViewWeekdayLine(
@@ -60,6 +62,7 @@ class RecordPagePillSheet extends HookConsumerWidget {
               context,
               takePill: takePill,
               revertTakePill: revertTakePill,
+              registerReminderLocalNotification: registerReminderLocalNotification,
               lineIndex: index,
               pageIndex: pillSheet.groupIndex,
             ),
@@ -73,6 +76,7 @@ class RecordPagePillSheet extends HookConsumerWidget {
     BuildContext context, {
     required TakePill takePill,
     required RevertTakePill revertTakePill,
+    required RegisterReminderLocalNotification registerReminderLocalNotification,
     required int lineIndex,
     required int pageIndex,
   }) {
@@ -143,6 +147,7 @@ class RecordPagePillSheet extends HookConsumerWidget {
               if (pillSheet.lastCompletedPillNumber >= pillNumberIntoPillSheet) {
                 await revertTakePill(
                     pillSheetGroup: pillSheetGroup, pageIndex: pageIndex, targetRevertPillNumberIntoPillSheet: pillNumberIntoPillSheet);
+                await registerReminderLocalNotification();
               } else {
                 // NOTE: batch.commit でリモートのDBに書き込む時間がかかるので事前にバッジを0にする
                 FlutterAppBadger.removeBadge();
@@ -151,6 +156,7 @@ class RecordPagePillSheet extends HookConsumerWidget {
 
                 await _takeWithPillNumber(
                   takePill,
+                  registerReminderLocalNotification,
                   pillSheetGroup: pillSheetGroup,
                   pillNumberIntoPillSheet: pillNumberIntoPillSheet,
                   pillSheet: pillSheet,
@@ -167,7 +173,8 @@ class RecordPagePillSheet extends HookConsumerWidget {
   }
 
   Future<PillSheetGroup?> _takeWithPillNumber(
-    TakePill takePill, {
+    TakePill takePill,
+    RegisterReminderLocalNotification registerReminderLocalNotification, {
     required int pillNumberIntoPillSheet,
     required PillSheetGroup pillSheetGroup,
     required PillSheet pillSheet,
@@ -202,6 +209,7 @@ class RecordPagePillSheet extends HookConsumerWidget {
       activedPillSheet: activedPillSheet,
       isQuickRecord: false,
     );
+    await registerReminderLocalNotification();
     if (updatedPillSheetGroup == null) {
       return null;
     }
@@ -216,60 +224,23 @@ class RecordPagePillSheet extends HookConsumerWidget {
     required PremiumAndTrial premiumAndTrial,
     required Setting setting,
   }) {
-    final isPremiumOrTrial = premiumAndTrial.isPremium || premiumAndTrial.isTrial;
     final containedMenstruationDuration = RecordPagePillSheet.isContainedMenstruationDuration(
       pillNumberIntoPillSheet: pillNumberIntoPillSheet,
       pillSheetGroup: pillSheetGroup,
       setting: setting,
       pageIndex: pageIndex,
     );
-    if (isPremiumOrTrial && setting.pillSheetAppearanceMode == PillSheetAppearanceMode.date) {
-      final DateTime date = pillSheet.pillTakenDateFromPillNumber(pillNumberIntoPillSheet);
+    final text = pillSheetGroup.displayPillNumber(
+      premiumOrTrial: premiumAndTrial.premiumOrTrial,
+      pillSheetAppearanceMode: setting.pillSheetAppearanceMode,
+      pageIndex: pageIndex,
+      pillNumberInPillSheet: pillNumberIntoPillSheet,
+    );
 
-      if (setting.pillNumberForFromMenstruation == 0 || setting.durationMenstruation == 0) {
-        return PlainPillDate(date: date);
-      }
-
-      if (containedMenstruationDuration) {
-        return MenstruationPillDate(date: date);
-      } else {
-        return PlainPillDate(date: date);
-      }
-    } else if (setting.pillSheetAppearanceMode == PillSheetAppearanceMode.sequential) {
-      final pageOffset = summarizedPillCountWithPillSheetTypesToEndIndex(
-        pillSheetTypes: pillSheetGroup.pillSheets.map((e) => e.pillSheetType).toList(),
-        endIndex: pageIndex,
-      );
-      if (setting.pillNumberForFromMenstruation == 0 || setting.durationMenstruation == 0) {
-        return SequentialPillNumber(
-          pageOffset: pageOffset,
-          displayNumberSetting: pillSheetGroup.displayNumberSetting,
-          pillNumberIntoPillSheet: pillNumberIntoPillSheet,
-        );
-      }
-
-      if (isPremiumOrTrial) {
-        if (containedMenstruationDuration) {
-          return MenstruationSequentialPillNumber(
-            pageOffset: pageOffset,
-            displayNumberSetting: pillSheetGroup.displayNumberSetting,
-            pillNumberIntoPillSheet: pillNumberIntoPillSheet,
-          );
-        }
-      }
-      return SequentialPillNumber(
-          pageOffset: pageOffset, displayNumberSetting: pillSheetGroup.displayNumberSetting, pillNumberIntoPillSheet: pillNumberIntoPillSheet);
+    if (premiumAndTrial.premiumOrTrial && containedMenstruationDuration) {
+      return MenstruationPillNumber(text: text);
     } else {
-      if (setting.pillNumberForFromMenstruation == 0 || setting.durationMenstruation == 0) {
-        return PlainPillNumber(pillNumberIntoPillSheet: pillNumberIntoPillSheet);
-      }
-
-      if (isPremiumOrTrial) {
-        if (containedMenstruationDuration) {
-          return MenstruationPillNumber(pillNumberIntoPillSheet: pillNumberIntoPillSheet);
-        }
-      }
-      return PlainPillNumber(pillNumberIntoPillSheet: pillNumberIntoPillSheet);
+      return PlainPillNumber(text: text);
     }
   }
 
@@ -296,23 +267,29 @@ class RecordPagePillSheet extends HookConsumerWidget {
     required int pageIndex,
     required Setting setting,
   }) {
+    if (setting.pillNumberForFromMenstruation == 0 || setting.durationMenstruation == 0) {
+      return false;
+    }
+
     final pillSheetTotalCount = pillSheetGroup.pillSheets[pageIndex].typeInfo.totalCount;
     if (setting.pillNumberForFromMenstruation < pillSheetTotalCount) {
       final left = setting.pillNumberForFromMenstruation;
       final right = setting.pillNumberForFromMenstruation + setting.durationMenstruation - 1;
       return left <= pillNumberIntoPillSheet && pillNumberIntoPillSheet <= right;
     }
-    final passedCount = summarizedPillCountWithPillSheetTypesToEndIndex(
-        pillSheetTypes: pillSheetGroup.pillSheets.map((e) => e.pillSheetType).toList(), endIndex: pageIndex);
-    final serialiedPillNumber = passedCount + pillNumberIntoPillSheet;
+    final passedCount = summarizedPillCountWithPillSheetTypesToIndex(
+        pillSheetTypes: pillSheetGroup.pillSheets.map((e) => e.pillSheetType).toList(), toIndex: pageIndex);
+    final pillNumberInPillSheetGroup = passedCount + pillNumberIntoPillSheet;
 
     final menstruationRangeList = List.generate(pillSheetGroup.pillSheets.length, (index) {
       final begin = setting.pillNumberForFromMenstruation * (index + 1);
       final end = begin + setting.durationMenstruation - 1;
-      return _MenstruationRange(begin, end);
+
+      return (begin, end);
     });
 
-    final isContainedMenstruationDuration = menstruationRangeList.where((element) => element.contains(serialiedPillNumber)).isNotEmpty;
+    final isContainedMenstruationDuration =
+        menstruationRangeList.where((element) => element.$1 <= pillNumberInPillSheetGroup && pillNumberInPillSheetGroup <= element.$2).isNotEmpty;
     return isContainedMenstruationDuration;
   }
 
@@ -355,15 +332,6 @@ PillMarkType pillMarkFor({
     return PillMarkType.normal;
   }
   return PillMarkType.normal;
-}
-
-class _MenstruationRange {
-  final int begin;
-  final int end;
-
-  _MenstruationRange(this.begin, this.end);
-
-  bool contains(int pillNumber) => begin <= pillNumber && pillNumber <= end;
 }
 
 bool shouldPillMarkAnimation({

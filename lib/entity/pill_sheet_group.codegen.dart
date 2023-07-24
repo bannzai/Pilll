@@ -4,6 +4,8 @@ import 'package:pilll/entity/pill_sheet.codegen.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';
 import 'package:pilll/entity/pill_sheet_type.dart';
+import 'package:pilll/entity/setting.codegen.dart';
+import 'package:pilll/utils/formatter/date_time_formatter.dart';
 
 part 'pill_sheet_group.codegen.g.dart';
 part 'pill_sheet_group.codegen.freezed.dart';
@@ -65,8 +67,8 @@ class PillSheetGroup with _$PillSheetGroup {
       return 0;
     }
 
-    final passedPillCountForPillSheetTypes = summarizedPillCountWithPillSheetTypesToEndIndex(
-        pillSheetTypes: pillSheets.map((e) => e.pillSheetType).toList(), endIndex: activedPillSheet.groupIndex);
+    final passedPillCountForPillSheetTypes = summarizedPillCountWithPillSheetTypesToIndex(
+        pillSheetTypes: pillSheets.map((e) => e.pillSheetType).toList(), toIndex: activedPillSheet.groupIndex);
 
     var sequentialTodayPillNumber = passedPillCountForPillSheetTypes + activedPillSheet.todayPillNumber;
 
@@ -98,8 +100,8 @@ class PillSheetGroup with _$PillSheetGroup {
       return 0;
     }
 
-    final passedPillCountForPillSheetTypes = summarizedPillCountWithPillSheetTypesToEndIndex(
-        pillSheetTypes: pillSheets.map((e) => e.pillSheetType).toList(), endIndex: activedPillSheet.groupIndex);
+    final passedPillCountForPillSheetTypes = summarizedPillCountWithPillSheetTypesToIndex(
+        pillSheetTypes: pillSheets.map((e) => e.pillSheetType).toList(), toIndex: activedPillSheet.groupIndex);
 
     var sequentialLastTakenPillNumber = passedPillCountForPillSheetTypes + activedPillSheet.lastCompletedPillNumber;
 
@@ -124,7 +126,7 @@ class PillSheetGroup with _$PillSheetGroup {
 
   int get estimatedEndPillNumber {
     var estimatedEndPillNumber =
-        summarizedPillCountWithPillSheetTypesToEndIndex(pillSheetTypes: pillSheets.map((e) => e.pillSheetType).toList(), endIndex: pillSheets.length);
+        summarizedPillCountWithPillSheetTypesToIndex(pillSheetTypes: pillSheets.map((e) => e.pillSheetType).toList(), toIndex: pillSheets.length);
 
     final displayNumberSetting = this.displayNumberSetting;
     if (displayNumberSetting != null) {
@@ -143,6 +145,64 @@ class PillSheetGroup with _$PillSheetGroup {
     }
 
     return estimatedEndPillNumber;
+  }
+
+  List<PillSheetType> get pillSheetTypes => pillSheets.map((e) => e.pillSheetType).toList();
+
+  String displayPillNumber({
+    required bool premiumOrTrial,
+    required PillSheetAppearanceMode pillSheetAppearanceMode,
+    required int pageIndex,
+    required int pillNumberInPillSheet,
+  }) {
+    if (premiumOrTrial && pillSheetAppearanceMode == PillSheetAppearanceMode.date) {
+      return _displayPillSheetDate(pageIndex: pageIndex, pillNumberInPillSheet: pillNumberInPillSheet);
+    } else if (pillSheetAppearanceMode == PillSheetAppearanceMode.sequential) {
+      return _displaySequentialPillSheetNumber(pageIndex: pageIndex, pillNumberInPillSheet: pillNumberInPillSheet);
+    } else {
+      return _displayPillNumberInPillSheet(pillNumberInPillSheet: pillNumberInPillSheet);
+    }
+  }
+
+  String _displayPillNumberInPillSheet({
+    required int pillNumberInPillSheet,
+  }) {
+    return "$pillNumberInPillSheet";
+  }
+
+  String _displaySequentialPillSheetNumber({
+    required int pageIndex,
+    required int pillNumberInPillSheet,
+  }) {
+    final offset = summarizedPillCountWithPillSheetTypesToIndex(
+      pillSheetTypes: pillSheetTypes,
+      toIndex: pageIndex,
+    );
+    var number = offset + pillNumberInPillSheet;
+
+    final displayNumberSetting = this.displayNumberSetting;
+    if (displayNumberSetting != null) {
+      final beginPillNumberOffset = displayNumberSetting.beginPillNumber;
+      if (beginPillNumberOffset != null && beginPillNumberOffset > 0) {
+        number += (beginPillNumberOffset - 1);
+      }
+
+      final endPillNumberOffset = displayNumberSetting.endPillNumber;
+      if (endPillNumberOffset != null && endPillNumberOffset > 0) {
+        number %= endPillNumberOffset;
+        if (number == 0) {
+          number = endPillNumberOffset;
+        }
+      }
+    }
+    return "$number";
+  }
+
+  String _displayPillSheetDate({
+    required int pageIndex,
+    required int pillNumberInPillSheet,
+  }) {
+    return DateTimeFormatter.monthAndDay(pillSheets[pageIndex].pillTakenDateFromPillNumber(pillNumberInPillSheet));
   }
 }
 
