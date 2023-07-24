@@ -70,14 +70,12 @@ void main() {
             pillTakenCount: 1),
       );
     });
-    group("simple", () {
-      test("take pill", () {
-        final takenDate = activePillSheetBeginDate;
-        final updatedActivePillSheet = activedPillSheet.takenPillSheet(takenDate);
-        final expected = activedPillSheet.takenPillSheet(takenDate);
-        expect(updatedActivePillSheet.pills, expected.pills);
-        expect(updatedActivePillSheet, expected);
-      });
+    test("take pill", () {
+      final takenDate = activePillSheetBeginDate;
+      final updatedActivePillSheet = activedPillSheet.takenPillSheet(takenDate);
+      final expected = activedPillSheet.takenPillSheet(takenDate);
+      expect(updatedActivePillSheet.pills, expected.pills);
+      expect(updatedActivePillSheet, expected);
     });
   });
 
