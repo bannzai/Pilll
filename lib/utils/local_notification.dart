@@ -199,8 +199,8 @@ class RegisterReminderLocalNotification {
   }) async {
     analytics.logEvent(name: "run_register_reminder_notification", parameters: {
       "todayPillNumber": activePillSheet.todayPillNumber,
-      "todayPillIsAlreadyTaken": activePillSheet.todayPillIsAlreadyTaken,
-      "lastTakenPillNumber": activePillSheet.lastTakenPillNumber,
+      "todayPillsAreAlreadyTaken": activePillSheet.todayPillsAreAlreadyTaken,
+      "lastCompletedPillNumber": activePillSheet.lastCompletedPillNumber,
       "reminderTimes": setting.reminderTimes.toString(),
     });
     final tzNow = tz.TZDateTime.now(tz.local);
@@ -213,7 +213,7 @@ class RegisterReminderLocalNotification {
       // ユーザーの何かしらのアクションでどこかでスケジュールされるだろう
       for (final offset in List.generate(registerDays, (index) => index)) {
         // 本日服用済みの場合はスキップする
-        if (offset == 0 && activePillSheet.todayPillIsAlreadyTaken) {
+        if (offset == 0 && activePillSheet.todayPillsAreAlreadyTaken) {
           continue;
         }
 
@@ -253,6 +253,8 @@ class RegisterReminderLocalNotification {
                 pillSheetGroup: pillSheetGroup,
                 pillSheetTypes: pillSheetGroup.pillSheets.map((e) => e.pillSheetType).toList(),
                 displayNumberSetting: null,
+                // 二度飲みかどうかは、考慮しなくて良いのでfalse
+                takesTwicePerDay: false,
               );
               pillSheetDisplayNumber = nextPillSheetGroup.displayPillNumber(
                 premiumOrTrial: premiumOrTrial,
