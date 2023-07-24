@@ -95,6 +95,7 @@ class TakePill {
 
     // 服用記録はBackendの通知等によく使われるので、DBに書き込まれたあとにStreamを通じてUIを更新する
     awaitsPillSheetGroupRemoteDBDataChanged = true;
+
     await batch.commit();
 
     return updatedPillSheetGroup;

@@ -7,6 +7,7 @@ import 'package:pilll/entity/pill_sheet.codegen.dart';
 import 'package:pilll/entity/pill_sheet_type.dart';
 import 'package:pilll/entity/setting.codegen.dart';
 import 'package:pilll/provider/setting.dart';
+import 'package:pilll/utils/local_notification.dart';
 
 class NotificationInRestDuration extends HookConsumerWidget {
   final PillSheet pillSheet;
@@ -21,6 +22,8 @@ class NotificationInRestDuration extends HookConsumerWidget {
   @override
   Widget build(BuildContext context, WidgetRef ref) {
     final setSetting = ref.watch(setSettingProvider);
+    final registerReminderLocalNotification = ref.watch(registerReminderLocalNotificationProvider);
+
     return SwitchListTile(
       title: Text("${pillSheet.pillSheetType.notTakenWord}期間の通知",
           style: const TextStyle(
@@ -42,6 +45,7 @@ class NotificationInRestDuration extends HookConsumerWidget {
         final messenger = ScaffoldMessenger.of(context);
         messenger.hideCurrentSnackBar();
         await setSetting(setting.copyWith(isOnNotifyInNotTakenDuration: value));
+        await registerReminderLocalNotification();
         messenger.showSnackBar(
           SnackBar(
             duration: const Duration(seconds: 2),

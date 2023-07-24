@@ -22,7 +22,7 @@ class SettingMenstruationPage extends HookConsumerWidget {
         pillSheetTypes: setting.pillSheetEnumTypes,
         appearanceMode: PillSheetAppearanceMode.sequential,
         selectedPillNumber: (pageIndex) {
-          final passedTotalCount = summarizedPillCountWithPillSheetTypesToEndIndex(pillSheetTypes: setting.pillSheetEnumTypes, endIndex: pageIndex);
+          final passedTotalCount = summarizedPillCountWithPillSheetTypesToIndex(pillSheetTypes: setting.pillSheetEnumTypes, toIndex: pageIndex);
           if (passedTotalCount >= setting.pillNumberForFromMenstruation) {
             return setting.pillNumberForFromMenstruation;
           }
@@ -37,7 +37,7 @@ class SettingMenstruationPage extends HookConsumerWidget {
             "number": fromMenstruation,
             "page": pageIndex,
           });
-          final offset = summarizedPillCountWithPillSheetTypesToEndIndex(pillSheetTypes: setting.pillSheetEnumTypes, endIndex: pageIndex);
+          final offset = summarizedPillCountWithPillSheetTypesToIndex(pillSheetTypes: setting.pillSheetEnumTypes, toIndex: pageIndex);
           final updated = setting.copyWith(pillNumberForFromMenstruation: fromMenstruation + offset);
           await setSetting(updated);
         },

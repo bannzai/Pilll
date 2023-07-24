@@ -17,7 +17,6 @@ final revertTakePillProvider = Provider(
 
 class RevertTakePill {
   final BatchFactory batchFactory;
-
   final BatchSetPillSheetModifiedHistory batchSetPillSheetModifiedHistory;
   final BatchSetPillSheetGroup batchSetPillSheetGroup;
 
@@ -27,7 +26,11 @@ class RevertTakePill {
     required this.batchSetPillSheetGroup,
   });
 
-  Future<PillSheetGroup?> call({required PillSheetGroup pillSheetGroup, required int pageIndex, required int pillNumberIntoPillSheet}) async {
+  Future<PillSheetGroup?> call({
+    required PillSheetGroup pillSheetGroup,
+    required int pageIndex,
+    required int pillNumberIntoPillSheet,
+  }) async {
     final activedPillSheet = pillSheetGroup.activedPillSheet;
     if (activedPillSheet == null) {
       throw const FormatException("現在対象となっているピルシートが見つかりませんでした");

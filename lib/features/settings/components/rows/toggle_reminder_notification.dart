@@ -6,11 +6,12 @@ import 'package:pilll/components/atoms/font.dart';
 import 'package:pilll/entity/setting.codegen.dart';
 import 'package:pilll/features/error/error_alert.dart';
 import 'package:pilll/provider/setting.dart';
+import 'package:pilll/utils/local_notification.dart';
 
-class TakingPillNotification extends HookConsumerWidget {
+class ToggleReminderNotification extends HookConsumerWidget {
   final Setting setting;
 
-  const TakingPillNotification({
+  const ToggleReminderNotification({
     Key? key,
     required this.setting,
   }) : super(key: key);
@@ -18,6 +19,8 @@ class TakingPillNotification extends HookConsumerWidget {
   @override
   Widget build(BuildContext context, WidgetRef ref) {
     final setSetting = ref.watch(setSettingProvider);
+    final registerReminderLocalNotification = ref.watch(registerReminderLocalNotificationProvider);
+    final cancelReminderLocalNotification = ref.watch(cancelReminderLocalNotificationProvider);
 
     return SwitchListTile(
       title: const Text("ピルの服用通知",
@@ -35,6 +38,11 @@ class TakingPillNotification extends HookConsumerWidget {
         messenger.hideCurrentSnackBar();
         try {
           await setSetting(setting.copyWith(isOnReminder: value));
+          if (value) {
+            await registerReminderLocalNotification();
+          } else {
+            await cancelReminderLocalNotification();
+          }
           messenger.showSnackBar(
             SnackBar(
               duration: const Duration(seconds: 2),

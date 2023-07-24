@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:pilll/entity/weekday.dart';
+import 'package:timezone/timezone.dart';
 
 class TodayService {
   DateTime now() => DateTime.now();
@@ -34,6 +35,12 @@ DateTime endDayOfWeekday(DateTime day) {
 extension Date on DateTime {
   DateTime date() {
     return DateTime(year, month, day);
+  }
+}
+
+extension TZDate on TZDateTime {
+  TZDateTime date() {
+    return TZDateTime(location, year, month, day);
   }
 }
 

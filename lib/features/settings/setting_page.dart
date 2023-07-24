@@ -18,7 +18,7 @@ import 'package:pilll/features/settings/components/rows/notification_time.dart';
 import 'package:pilll/features/settings/components/rows/pill_sheet_remove.dart';
 import 'package:pilll/features/settings/components/rows/premium_introduction.dart';
 import 'package:pilll/features/settings/components/rows/quick_record.dart';
-import 'package:pilll/features/settings/components/rows/taking_pill_notification.dart';
+import 'package:pilll/features/settings/components/rows/toggle_reminder_notification.dart';
 import 'package:pilll/features/settings/components/rows/today_pill_number.dart';
 import 'package:pilll/features/settings/components/rows/update_from_132.dart';
 import 'package:pilll/features/settings/components/setting_section_title.dart';
@@ -173,7 +173,7 @@ class SettingPageBody extends StatelessWidget {
                   return SettingSectionTitle(
                     text: "通知",
                     children: [
-                      TakingPillNotification(setting: setting),
+                      ToggleReminderNotification(setting: setting),
                       _separator(),
                       NotificationTimeRow(setting: setting),
                       _separator(),

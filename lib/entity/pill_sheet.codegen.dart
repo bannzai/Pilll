@@ -38,17 +38,17 @@ class RestDuration with _$RestDuration {
       fromJson: NonNullTimestampConverter.timestampToDateTime,
       toJson: NonNullTimestampConverter.dateTimeToTimestamp,
     )
-        required DateTime beginDate,
+    required DateTime beginDate,
     @JsonKey(
       fromJson: TimestampConverter.timestampToDateTime,
       toJson: TimestampConverter.dateTimeToTimestamp,
     )
-        DateTime? endDate,
+    DateTime? endDate,
     @JsonKey(
       fromJson: NonNullTimestampConverter.timestampToDateTime,
       toJson: NonNullTimestampConverter.dateTimeToTimestamp,
     )
-        required DateTime createdDate,
+    required DateTime createdDate,
   }) = _RestDuration;
 
   factory RestDuration.fromJson(Map<String, dynamic> json) => _$RestDurationFromJson(json);
@@ -63,34 +63,30 @@ class PillSheet with _$PillSheet {
   const PillSheet._();
   @JsonSerializable(explicitToJson: true)
   const factory PillSheet({
-    @JsonKey(includeIfNull: false)
-        required String? id,
-    @JsonKey()
-        required PillSheetTypeInfo typeInfo,
+    @JsonKey(includeIfNull: false) required String? id,
+    @JsonKey() required PillSheetTypeInfo typeInfo,
     @JsonKey(
       fromJson: NonNullTimestampConverter.timestampToDateTime,
       toJson: NonNullTimestampConverter.dateTimeToTimestamp,
     )
-        required DateTime beginingDate,
+    required DateTime beginingDate,
     @JsonKey(
       fromJson: TimestampConverter.timestampToDateTime,
       toJson: TimestampConverter.dateTimeToTimestamp,
     )
-        DateTime? lastTakenDate,
+    DateTime? lastTakenDate,
     @JsonKey(
       fromJson: TimestampConverter.timestampToDateTime,
       toJson: TimestampConverter.dateTimeToTimestamp,
     )
-        required DateTime? createdAt,
+    required DateTime? createdAt,
     @JsonKey(
       fromJson: TimestampConverter.timestampToDateTime,
       toJson: TimestampConverter.dateTimeToTimestamp,
     )
-        DateTime? deletedAt,
-    @Default(0)
-        int groupIndex,
-    @Default([])
-        List<RestDuration> restDurations,
+    DateTime? deletedAt,
+    @Default(0) int groupIndex,
+    @Default([]) List<RestDuration> restDurations,
   }) = _PillSheet;
   factory PillSheet.create(PillSheetType type) => PillSheet(
         id: firestoreIDGenerator(),

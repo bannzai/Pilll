@@ -7,7 +7,6 @@ import 'package:pilll/entity/menstruation.codegen.dart';
 import 'package:pilll/entity/setting.codegen.dart';
 import 'package:pilll/native/health_care.dart';
 import 'package:pilll/utils/datetime/day.dart';
-import 'package:pilll/utils/error_log.dart';
 import 'package:riverpod/riverpod.dart';
 
 final allMenstruationProvider = StreamProvider<List<Menstruation>>((ref) => ref

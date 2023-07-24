@@ -265,9 +265,7 @@ extension AppDelegate {
             }
         }
 
-        switch extractCategory(userInfo: response.notification.request.content.userInfo) {
-        case nil:
-            return
+        switch extractCategory(userInfo: response.notification.request.content.userInfo) ?? Category(rawValue: response.notification.request.content.categoryIdentifier) {
         case .pillReminder:
             switch response.actionIdentifier {
             case "RECORD_PILL":
@@ -287,6 +285,8 @@ extension AppDelegate {
             default:
                 end()
             }
+        case nil:
+            return
         }
     }
 

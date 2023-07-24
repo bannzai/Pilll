@@ -10,6 +10,7 @@ import 'package:pilll/entity/pill_sheet.codegen.dart';
 import 'package:pilll/entity/pill_sheet_group.codegen.dart';
 
 import 'package:pilll/provider/pill_sheet_group.dart';
+import 'package:pilll/utils/local_notification.dart';
 
 class EndManualRestDurationButton extends HookConsumerWidget {
   final RestDuration restDuration;
@@ -28,6 +29,7 @@ class EndManualRestDurationButton extends HookConsumerWidget {
   @override
   Widget build(BuildContext context, WidgetRef ref) {
     final endRestDuration = ref.watch(endRestDurationProvider);
+    final registerReminderLocalNotification = ref.watch(registerReminderLocalNotificationProvider);
     return SmallAppOutlinedButton(
       text: "服用再開",
       onPressed: () async {
@@ -40,6 +42,7 @@ class EndManualRestDurationButton extends HookConsumerWidget {
           activePillSheet: activedPillSheet,
           pillSheetGroup: pillSheetGroup,
         );
+        await registerReminderLocalNotification.call();
 
         didEndRestDuration();
       },

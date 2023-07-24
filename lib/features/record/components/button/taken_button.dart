@@ -12,12 +12,14 @@ import 'package:pilll/utils/error_log.dart';
 import 'package:pilll/native/widget.dart';
 import 'package:pilll/provider/take_pill.dart';
 import 'package:pilll/utils/datetime/day.dart';
+import 'package:pilll/utils/local_notification.dart';
 
 class TakenButton extends HookConsumerWidget {
   final BuildContext parentContext;
   final PillSheetGroup pillSheetGroup;
   final PillSheet activePillSheet;
   final bool userIsPremiumOtTrial;
+  final RegisterReminderLocalNotification registerReminderLocalNotification;
 
   const TakenButton({
     Key? key,
@@ -25,6 +27,7 @@ class TakenButton extends HookConsumerWidget {
     required this.pillSheetGroup,
     required this.activePillSheet,
     required this.userIsPremiumOtTrial,
+    required this.registerReminderLocalNotification,
   }) : super(key: key);
   @override
   Widget build(BuildContext context, WidgetRef ref) {
@@ -51,6 +54,7 @@ class TakenButton extends HookConsumerWidget {
               isQuickRecord: false,
             );
             syncActivePillSheetValue(pillSheetGroup: updatedPillSheetGroup);
+            await registerReminderLocalNotification();
           } catch (exception, stack) {
             errorLogger.recordError(exception, stack);
             showErrorAlert(context, exception);

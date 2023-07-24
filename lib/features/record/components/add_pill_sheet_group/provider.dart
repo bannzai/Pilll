@@ -42,47 +42,19 @@ class AddPillSheetGroup {
     required PillSheetGroupDisplayNumberSetting? displayNumberSetting,
   }) async {
     final batch = batchFactory.batch();
-
-    final n = now();
-    final createdPillSheets = pillSheetTypes.asMap().keys.map((pageIndex) {
-      final pillSheetType = backportPillSheetTypes(pillSheetTypes)[pageIndex];
-      final offset = summarizedPillCountWithPillSheetTypesToEndIndex(pillSheetTypes: pillSheetTypes, endIndex: pageIndex);
-      return PillSheet(
-        id: firestoreIDGenerator(),
-        typeInfo: pillSheetType.typeInfo,
-        beginingDate: n.add(
-          Duration(days: offset),
-        ),
-        groupIndex: pageIndex,
-        createdAt: now(),
-      );
-    }).toList();
-
-    final pillSheetIDs = createdPillSheets.map((e) => e.id!).toList();
+    final updatedPillSheetGroup = buildPillSheetGroup(
+      setting: setting,
+      pillSheetGroup: pillSheetGroup,
+      pillSheetTypes: pillSheetTypes,
+      displayNumberSetting: displayNumberSetting,
+    );
     final createdPillSheetGroup = batchSetPillSheetGroup(
       batch,
-      PillSheetGroup(
-        pillSheetIDs: pillSheetIDs,
-        pillSheets: createdPillSheets,
-        displayNumberSetting: () {
-          if (setting.pillSheetAppearanceMode == PillSheetAppearanceMode.sequential) {
-            if (displayNumberSetting != null) {
-              return displayNumberSetting;
-            }
-            if (pillSheetGroup != null) {
-              return PillSheetGroupDisplayNumberSetting(
-                beginPillNumber: pillSheetGroup.estimatedEndPillNumber + 1,
-              );
-            }
-          }
-          return null;
-        }(),
-        createdAt: now(),
-      ),
+      updatedPillSheetGroup,
     );
 
     final history = PillSheetModifiedHistoryServiceActionFactory.createCreatedPillSheetAction(
-      pillSheetIDs: pillSheetIDs,
+      pillSheetIDs: updatedPillSheetGroup.pillSheetIDs,
       pillSheetGroupID: createdPillSheetGroup.id,
     );
     batchSetPillSheetModifiedHistory(batch, history);
@@ -93,6 +65,50 @@ class AddPillSheetGroup {
           pillSheetTypes: pillSheetTypes,
         ));
 
-    return batch.commit();
+    await batch.commit();
   }
+}
+
+PillSheetGroup buildPillSheetGroup({
+  required Setting setting,
+  required PillSheetGroup? pillSheetGroup,
+  required List<PillSheetType> pillSheetTypes,
+  required PillSheetGroupDisplayNumberSetting? displayNumberSetting,
+}) {
+  final n = now();
+  final createdPillSheets = pillSheetTypes.asMap().keys.map((pageIndex) {
+    final pillSheetType = backportPillSheetTypes(pillSheetTypes)[pageIndex];
+    final offset = summarizedPillCountWithPillSheetTypesToIndex(pillSheetTypes: pillSheetTypes, toIndex: pageIndex);
+    return PillSheet(
+      id: firestoreIDGenerator(),
+      typeInfo: pillSheetType.typeInfo,
+      beginingDate: n.add(
+        Duration(days: offset),
+      ),
+      groupIndex: pageIndex,
+      createdAt: now(),
+    );
+  }).toList();
+
+  final pillSheetIDs = createdPillSheets.map((e) => e.id!).toList();
+  final updatedPillSheetGroup = PillSheetGroup(
+    pillSheetIDs: pillSheetIDs,
+    pillSheets: createdPillSheets,
+    displayNumberSetting: () {
+      if (setting.pillSheetAppearanceMode == PillSheetAppearanceMode.sequential) {
+        if (displayNumberSetting != null) {
+          return displayNumberSetting;
+        }
+        if (pillSheetGroup != null) {
+          return PillSheetGroupDisplayNumberSetting(
+            beginPillNumber: pillSheetGroup.estimatedEndPillNumber + 1,
+          );
+        }
+      }
+      return null;
+    }(),
+    createdAt: now(),
+  );
+
+  return updatedPillSheetGroup;
 }

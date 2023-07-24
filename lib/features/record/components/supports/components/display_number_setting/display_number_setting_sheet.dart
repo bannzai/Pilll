@@ -14,6 +14,7 @@ import 'package:pilll/entity/pill_sheet_group.codegen.dart';
 import 'package:pilll/provider/pill_sheet_group.dart';
 import 'package:pilll/provider/pill_sheet_modified_history.dart';
 import 'package:pilll/utils/formatter/text_input_formatter.dart';
+import 'package:pilll/utils/local_notification.dart';
 
 class DisplayNumberSettingSheet extends HookConsumerWidget {
   final PillSheetGroup pillSheetGroup;
@@ -36,6 +37,7 @@ class DisplayNumberSettingSheet extends HookConsumerWidget {
     final batchFactory = ref.watch(batchFactoryProvider);
     final batchSetPillSheetGroup = ref.watch(batchSetPillSheetGroupProvider);
     final batchSetPillSheetModifiedHistory = ref.watch(batchSetPillSheetModifiedHistoryProvider);
+    final registerReminderLocalNotification = ref.watch(registerReminderLocalNotificationProvider);
 
     return DraggableScrollableSheet(
       initialChildSize: height,
@@ -78,6 +80,7 @@ class DisplayNumberSettingSheet extends HookConsumerWidget {
                       begin: begin,
                       end: end,
                     );
+                    await registerReminderLocalNotification();
                     navigator.pop();
                   },
                 )

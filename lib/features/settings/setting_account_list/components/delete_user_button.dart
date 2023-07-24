@@ -13,6 +13,7 @@ import 'package:pilll/components/atoms/text_color.dart';
 import 'package:pilll/components/page/discard_dialog.dart';
 import 'package:pilll/features/error/error_alert.dart';
 import 'package:pilll/utils/error_log.dart';
+import 'package:pilll/utils/local_notification.dart';
 import 'package:pilll/utils/shared_preference/keys.dart';
 
 class DeleteUserButton extends HookConsumerWidget {
@@ -23,6 +24,7 @@ class DeleteUserButton extends HookConsumerWidget {
     final isAppleLinked = ref.watch(isAppleLinkedProvider);
     final isGoogleLinked = ref.watch(isGoogleLinkedProvider);
     final didEndInitialSettingNotifier = ref.watch(boolSharedPreferencesProvider(BoolKey.didEndInitialSetting).notifier);
+    final cancelReminderLocalNotification = ref.watch(cancelReminderLocalNotificationProvider);
     return Container(
       padding: const EdgeInsets.only(top: 54),
       child: AlertButton(
@@ -43,12 +45,15 @@ class DeleteUserButton extends HookConsumerWidget {
                 text: "退会する",
                 onPressed: () async {
                   analytics.logEvent(name: "pressed_delete_user_button");
-                  await _delete(
-                    context,
-                    isAppleLinked: isAppleLinked,
-                    isGoogleLinked: isGoogleLinked,
-                    didEndInitialSettingNotifier: didEndInitialSettingNotifier,
-                  );
+                  await (
+                    _delete(
+                      context,
+                      isAppleLinked: isAppleLinked,
+                      isGoogleLinked: isGoogleLinked,
+                      didEndInitialSettingNotifier: didEndInitialSettingNotifier,
+                    ),
+                    cancelReminderLocalNotification()
+                  ).wait;
                 },
               ),
             ],
