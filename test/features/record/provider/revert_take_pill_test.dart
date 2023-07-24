@@ -7,9 +7,7 @@ import 'package:flutter_test/flutter_test.dart';
 import 'package:mockito/mockito.dart';
 import 'package:pilll/entity/setting.codegen.dart';
 import 'package:pilll/provider/revert_take_pill.dart';
-import 'package:pilll/provider/take_pill.dart';
 import 'package:pilll/utils/datetime/day.dart';
-import 'package:pilll/utils/emoji/emoji.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
 import '../../../helper/mock.mocks.dart';
