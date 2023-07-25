@@ -81,6 +81,8 @@ class PillSheetModifiedHistory with _$PillSheetModifiedHistory {
     // ============ END: Added since v2 ============
 
     // The below properties are deprecated and added since v1.
+    // This is deprecated property. TODO: delete after 2024/01/01
+    // Instead of calculating from beforePillSheetGroup and afterPillSheetGroup
     required PillSheetModifiedHistoryValue value,
     // This is deprecated property. TODO: delete after 2024/01/01
     // Instead of beforePillSheetID and afterPillSheetID
