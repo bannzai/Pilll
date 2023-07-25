@@ -6,27 +6,32 @@ import 'package:pilll/features/calendar/components/pill_sheet_modified_history/c
 import 'package:pilll/features/calendar/components/pill_sheet_modified_history/components/core/row_layout.dart';
 import 'package:pilll/entity/pill_sheet_modified_history_value.codegen.dart';
 
-class PillSheetModifiedHistoryAutomaticallyRecordedLastTakenDateAction
-    extends StatelessWidget {
+class PillSheetModifiedHistoryAutomaticallyRecordedLastTakenDateAction extends StatelessWidget {
   final DateTime estimatedEventCausingDate;
-  final AutomaticallyRecordedLastTakenDateValue? value;
+  final int? beforeLastTakenPillNumber;
+  final int? afterLastTakenPillNumber;
 
   const PillSheetModifiedHistoryAutomaticallyRecordedLastTakenDateAction({
     Key? key,
     required this.estimatedEventCausingDate,
-    required this.value,
+    required this.beforeLastTakenPillNumber,
+    required this.afterLastTakenPillNumber,
   }) : super(key: key);
   @override
   Widget build(BuildContext context) {
-    final value = this.value;
-    if (value == null) {
+    final beforeLastTakenPillNumber = this.beforeLastTakenPillNumber;
+    final afterLastTakenPillNumber = this.afterLastTakenPillNumber;
+    if (beforeLastTakenPillNumber == null || afterLastTakenPillNumber == null) {
       return Container();
     }
+
     return RowLayout(
       day: Day(estimatedEventCausingDate: estimatedEventCausingDate),
       effectiveNumbersOrHyphen: EffectivePillNumber(
-          effectivePillNumber:
-              PillSheetModifiedHistoryDateEffectivePillNumber.autoTaken(value)),
+          effectivePillNumber: PillSheetModifiedHistoryDateEffectivePillNumber.autoTaken(
+        beforeLastTakenPillNumber: beforeLastTakenPillNumber,
+        afterLastTakenPillNumber: afterLastTakenPillNumber,
+      )),
       detail: const Text(
         "-",
         style: TextStyle(

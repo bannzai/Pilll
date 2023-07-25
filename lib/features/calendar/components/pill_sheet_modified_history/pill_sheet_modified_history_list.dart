@@ -78,11 +78,12 @@ class PillSheetModifiedHistoryList extends StatelessWidget {
               body = switch (history.enumActionType) {
                 PillSheetModifiedActionType.createdPillSheet => PillSheetModifiedHistoryCreatePillSheetAction(
                     estimatedEventCausingDate: history.estimatedEventCausingDate,
-                    value: history.value.createdPillSheet,
+                    pillSheetIDs: history.afterPillSheetGroup?.pillSheetIDs ?? [],
                   ),
                 PillSheetModifiedActionType.automaticallyRecordedLastTakenDate => PillSheetModifiedHistoryAutomaticallyRecordedLastTakenDateAction(
                     estimatedEventCausingDate: history.estimatedEventCausingDate,
-                    value: history.value.automaticallyRecordedLastTakenDate,
+                    beforeLastTakenPillNumber: history.beforePillSheet?.lastTakenPillNumber,
+                    afterLastTakenPillNumber: history.afterPillSheet?.lastTakenPillNumber,
                   ),
                 PillSheetModifiedActionType.deletedPillSheet => PillSheetModifiedHistoryDeletedPillSheetAction(
                     estimatedEventCausingDate: history.estimatedEventCausingDate,

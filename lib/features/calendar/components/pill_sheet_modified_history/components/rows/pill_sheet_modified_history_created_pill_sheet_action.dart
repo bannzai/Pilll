@@ -8,22 +8,20 @@ import 'package:pilll/entity/pill_sheet_modified_history_value.codegen.dart';
 
 class PillSheetModifiedHistoryCreatePillSheetAction extends StatelessWidget {
   final DateTime estimatedEventCausingDate;
-  final CreatedPillSheetValue? value;
+  final List<String> pillSheetIDs;
 
   const PillSheetModifiedHistoryCreatePillSheetAction({
     Key? key,
     required this.estimatedEventCausingDate,
-    required this.value,
+    required this.pillSheetIDs,
   }) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
     return RowLayout(
       day: Day(estimatedEventCausingDate: estimatedEventCausingDate),
-      effectiveNumbersOrHyphen: EffectivePillNumber(
-          effectivePillNumber:
-              PillSheetModifiedHistoryDateEffectivePillNumber.pillSheetCount(
-                  value?.pillSheetIDs ?? [])),
+      effectiveNumbersOrHyphen:
+          EffectivePillNumber(effectivePillNumber: PillSheetModifiedHistoryDateEffectivePillNumber.pillSheetCount(pillSheetIDs)),
       detail: const Text(
         "ピルシート追加",
         style: TextStyle(
