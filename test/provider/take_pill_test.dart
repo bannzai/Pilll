@@ -1,3 +1,5 @@
+import 'dart:math';
+
 import 'package:flutter_test/flutter_test.dart';
 import 'package:mockito/mockito.dart';
 import 'package:pilll/entity/pill.codegen.dart';
@@ -7,6 +9,7 @@ import 'package:pilll/entity/pill_sheet.codegen.dart';
 import 'package:pilll/entity/pill_sheet_group.codegen.dart';
 import 'package:pilll/entity/pill_sheet_type.dart';
 import 'package:pilll/utils/datetime/day.dart';
+import 'package:pilll/utils/emoji/emoji.dart';
 
 import '../helper/mock.mocks.dart';
 
@@ -82,7 +85,15 @@ void main() {
       test("take pill", () {
         final takenDate = activePillSheetBeginDate;
         final updatedActivePillSheet = activedPillSheet.takenPillSheet(takenDate);
-        final expected = activedPillSheet.takenPillSheet(takenDate);
+        final expected = activedPillSheet.copyWith(
+            lastTakenDate: takenDate,
+            pills: [...activedPillSheet.pills]..replaceRange(max(0, activedPillSheet.lastCompletedPillNumber - 1), 1, [
+                Pill(
+                    index: 0,
+                    createdDateTime: now(),
+                    updatedDateTime: now(),
+                    pillTakens: [PillTaken(takenDateTime: takenDate, createdDateTime: now(), updatedDateTime: now(), isAutomaticallyRecorded: false)])
+              ]));
         expect(updatedActivePillSheet.pills, expected.pills);
         expect(updatedActivePillSheet, expected);
       });
