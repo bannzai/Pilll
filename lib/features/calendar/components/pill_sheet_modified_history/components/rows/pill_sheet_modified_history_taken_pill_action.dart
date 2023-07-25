@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
-import 'package:pilll/entity/pill_sheet_group.codegen.dart';
 import 'package:pilll/utils/analytics.dart';
 import 'package:pilll/features/calendar/components/pill_sheet_modified_history/components/core/day.dart';
 import 'package:pilll/features/calendar/components/pill_sheet_modified_history/components/core/effective_pill_number.dart';
@@ -96,39 +95,6 @@ class PillSheetModifiedHistoryTakenPillAction extends HookConsumerWidget {
         ),
       ),
     );
-  }
-}
-
-class PillSheetModifiedHistoryTakenPillActionV2 extends HookConsumerWidget {
-  final PremiumAndTrial premiumAndTrial;
-  final DateTime estimatedEventCausingDate;
-  final PillSheetModifiedHistory history;
-  final TakenPillValue? value;
-  final PillSheetGroup? beforePillSheetGroup;
-  final PillSheetGroup? afterPillSheetGroup;
-
-  const PillSheetModifiedHistoryTakenPillActionV2({
-    Key? key,
-    required this.premiumAndTrial,
-    required this.estimatedEventCausingDate,
-    required this.history,
-    required this.value,
-    required this.beforePillSheetGroup,
-    required this.afterPillSheetGroup,
-  }) : super(key: key);
-
-  @override
-  Widget build(BuildContext context, WidgetRef ref) {
-    final beforePillSheet = beforePillSheetGroup?.activePillSheetWhen(estimatedEventCausingDate);
-    final afterPillSheet = afterPillSheetGroup?.activePillSheetWhen(estimatedEventCausingDate);
-
-    return PillSheetModifiedHistoryTakenPillAction(
-        premiumAndTrial: premiumAndTrial,
-        estimatedEventCausingDate: estimatedEventCausingDate,
-        history: history,
-        value: value,
-        beforePillSheet: beforePillSheet,
-        afterPillSheet: afterPillSheet);
   }
 }
 
