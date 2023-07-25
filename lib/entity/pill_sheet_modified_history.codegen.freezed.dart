@@ -21,6 +21,8 @@ PillSheetModifiedHistory _$PillSheetModifiedHistoryFromJson(
 
 /// @nodoc
 mixin _$PillSheetModifiedHistory {
+// Since 2023-08-01
+  dynamic get version => throw _privateConstructorUsedError;
   @JsonKey(includeIfNull: false, toJson: toNull)
   String? get id => throw _privateConstructorUsedError;
   String get actionType => throw _privateConstructorUsedError;
@@ -70,7 +72,8 @@ abstract class $PillSheetModifiedHistoryCopyWith<$Res> {
       _$PillSheetModifiedHistoryCopyWithImpl<$Res, PillSheetModifiedHistory>;
   @useResult
   $Res call(
-      {@JsonKey(includeIfNull: false, toJson: toNull)
+      {dynamic version,
+      @JsonKey(includeIfNull: false, toJson: toNull)
           String? id,
       String actionType,
       PillSheetModifiedHistoryValue value,
@@ -110,6 +113,7 @@ class _$PillSheetModifiedHistoryCopyWithImpl<$Res,
   @pragma('vm:prefer-inline')
   @override
   $Res call({
+    Object? version = freezed,
     Object? id = freezed,
     Object? actionType = null,
     Object? value = null,
@@ -126,6 +130,10 @@ class _$PillSheetModifiedHistoryCopyWithImpl<$Res,
     Object? timeToLive = freezed,
   }) {
     return _then(_value.copyWith(
+      version: freezed == version
+          ? _value.version
+          : version // ignore: cast_nullable_to_non_nullable
+              as dynamic,
       id: freezed == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
@@ -252,7 +260,8 @@ abstract class _$$_PillSheetModifiedHistoryCopyWith<$Res>
   @override
   @useResult
   $Res call(
-      {@JsonKey(includeIfNull: false, toJson: toNull)
+      {dynamic version,
+      @JsonKey(includeIfNull: false, toJson: toNull)
           String? id,
       String actionType,
       PillSheetModifiedHistoryValue value,
@@ -295,6 +304,7 @@ class __$$_PillSheetModifiedHistoryCopyWithImpl<$Res>
   @pragma('vm:prefer-inline')
   @override
   $Res call({
+    Object? version = freezed,
     Object? id = freezed,
     Object? actionType = null,
     Object? value = null,
@@ -311,6 +321,7 @@ class __$$_PillSheetModifiedHistoryCopyWithImpl<$Res>
     Object? timeToLive = freezed,
   }) {
     return _then(_$_PillSheetModifiedHistory(
+      version: freezed == version ? _value.version! : version,
       id: freezed == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
@@ -376,7 +387,8 @@ class __$$_PillSheetModifiedHistoryCopyWithImpl<$Res>
 @JsonSerializable(explicitToJson: true)
 class _$_PillSheetModifiedHistory extends _PillSheetModifiedHistory {
   const _$_PillSheetModifiedHistory(
-      {@JsonKey(includeIfNull: false, toJson: toNull)
+      {this.version = "v2",
+      @JsonKey(includeIfNull: false, toJson: toNull)
           required this.id,
       required this.actionType,
       required this.value,
@@ -399,6 +411,10 @@ class _$_PillSheetModifiedHistory extends _PillSheetModifiedHistory {
   factory _$_PillSheetModifiedHistory.fromJson(Map<String, dynamic> json) =>
       _$$_PillSheetModifiedHistoryFromJson(json);
 
+// Since 2023-08-01
+  @override
+  @JsonKey()
+  final dynamic version;
   @override
   @JsonKey(includeIfNull: false, toJson: toNull)
   final String? id;
@@ -450,7 +466,7 @@ class _$_PillSheetModifiedHistory extends _PillSheetModifiedHistory {
 
   @override
   String toString() {
-    return 'PillSheetModifiedHistory(id: $id, actionType: $actionType, value: $value, pillSheetID: $pillSheetID, pillSheetGroupID: $pillSheetGroupID, beforePillSheetID: $beforePillSheetID, afterPillSheetID: $afterPillSheetID, before: $before, after: $after, beforePillSheetGroup: $beforePillSheetGroup, afterPillSheetGroup: $afterPillSheetGroup, estimatedEventCausingDate: $estimatedEventCausingDate, createdAt: $createdAt, timeToLive: $timeToLive)';
+    return 'PillSheetModifiedHistory(version: $version, id: $id, actionType: $actionType, value: $value, pillSheetID: $pillSheetID, pillSheetGroupID: $pillSheetGroupID, beforePillSheetID: $beforePillSheetID, afterPillSheetID: $afterPillSheetID, before: $before, after: $after, beforePillSheetGroup: $beforePillSheetGroup, afterPillSheetGroup: $afterPillSheetGroup, estimatedEventCausingDate: $estimatedEventCausingDate, createdAt: $createdAt, timeToLive: $timeToLive)';
   }
 
   @override
@@ -458,6 +474,7 @@ class _$_PillSheetModifiedHistory extends _PillSheetModifiedHistory {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$_PillSheetModifiedHistory &&
+            const DeepCollectionEquality().equals(other.version, version) &&
             (identical(other.id, id) || other.id == id) &&
             (identical(other.actionType, actionType) ||
                 other.actionType == actionType) &&
@@ -489,6 +506,7 @@ class _$_PillSheetModifiedHistory extends _PillSheetModifiedHistory {
   @override
   int get hashCode => Object.hash(
       runtimeType,
+      const DeepCollectionEquality().hash(version),
       id,
       actionType,
       value,
@@ -521,7 +539,8 @@ class _$_PillSheetModifiedHistory extends _PillSheetModifiedHistory {
 
 abstract class _PillSheetModifiedHistory extends PillSheetModifiedHistory {
   const factory _PillSheetModifiedHistory(
-      {@JsonKey(includeIfNull: false, toJson: toNull)
+      {final dynamic version,
+      @JsonKey(includeIfNull: false, toJson: toNull)
           required final String? id,
       required final String actionType,
       required final PillSheetModifiedHistoryValue value,
@@ -544,6 +563,8 @@ abstract class _PillSheetModifiedHistory extends PillSheetModifiedHistory {
   factory _PillSheetModifiedHistory.fromJson(Map<String, dynamic> json) =
       _$_PillSheetModifiedHistory.fromJson;
 
+  @override // Since 2023-08-01
+  dynamic get version;
   @override
   @JsonKey(includeIfNull: false, toJson: toNull)
   String? get id;

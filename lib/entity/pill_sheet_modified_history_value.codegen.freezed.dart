@@ -21,7 +21,6 @@ PillSheetModifiedHistoryValue _$PillSheetModifiedHistoryValueFromJson(
 
 /// @nodoc
 mixin _$PillSheetModifiedHistoryValue {
-  dynamic get version => throw _privateConstructorUsedError;
   CreatedPillSheetValue? get createdPillSheet =>
       throw _privateConstructorUsedError;
   AutomaticallyRecordedLastTakenDateValue?
@@ -59,8 +58,7 @@ abstract class $PillSheetModifiedHistoryValueCopyWith<$Res> {
           PillSheetModifiedHistoryValue>;
   @useResult
   $Res call(
-      {dynamic version,
-      CreatedPillSheetValue? createdPillSheet,
+      {CreatedPillSheetValue? createdPillSheet,
       AutomaticallyRecordedLastTakenDateValue?
           automaticallyRecordedLastTakenDate,
       DeletedPillSheetValue? deletedPillSheet,
@@ -101,7 +99,6 @@ class _$PillSheetModifiedHistoryValueCopyWithImpl<$Res,
   @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? version = freezed,
     Object? createdPillSheet = freezed,
     Object? automaticallyRecordedLastTakenDate = freezed,
     Object? deletedPillSheet = freezed,
@@ -115,10 +112,6 @@ class _$PillSheetModifiedHistoryValueCopyWithImpl<$Res,
     Object? changedEndDisplayNumber = freezed,
   }) {
     return _then(_value.copyWith(
-      version: freezed == version
-          ? _value.version
-          : version // ignore: cast_nullable_to_non_nullable
-              as dynamic,
       createdPillSheet: freezed == createdPillSheet
           ? _value.createdPillSheet
           : createdPillSheet // ignore: cast_nullable_to_non_nullable
@@ -321,8 +314,7 @@ abstract class _$$_PillSheetModifiedHistoryValueCopyWith<$Res>
   @override
   @useResult
   $Res call(
-      {dynamic version,
-      CreatedPillSheetValue? createdPillSheet,
+      {CreatedPillSheetValue? createdPillSheet,
       AutomaticallyRecordedLastTakenDateValue?
           automaticallyRecordedLastTakenDate,
       DeletedPillSheetValue? deletedPillSheet,
@@ -373,7 +365,6 @@ class __$$_PillSheetModifiedHistoryValueCopyWithImpl<$Res>
   @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? version = freezed,
     Object? createdPillSheet = freezed,
     Object? automaticallyRecordedLastTakenDate = freezed,
     Object? deletedPillSheet = freezed,
@@ -387,7 +378,6 @@ class __$$_PillSheetModifiedHistoryValueCopyWithImpl<$Res>
     Object? changedEndDisplayNumber = freezed,
   }) {
     return _then(_$_PillSheetModifiedHistoryValue(
-      version: freezed == version ? _value.version! : version,
       createdPillSheet: freezed == createdPillSheet
           ? _value.createdPillSheet
           : createdPillSheet // ignore: cast_nullable_to_non_nullable
@@ -442,8 +432,7 @@ class __$$_PillSheetModifiedHistoryValueCopyWithImpl<$Res>
 @JsonSerializable(explicitToJson: true)
 class _$_PillSheetModifiedHistoryValue extends _PillSheetModifiedHistoryValue {
   const _$_PillSheetModifiedHistoryValue(
-      {this.version = "v2",
-      this.createdPillSheet = null,
+      {this.createdPillSheet = null,
       this.automaticallyRecordedLastTakenDate = null,
       this.deletedPillSheet = null,
       this.takenPill = null,
@@ -460,9 +449,6 @@ class _$_PillSheetModifiedHistoryValue extends _PillSheetModifiedHistoryValue {
           Map<String, dynamic> json) =>
       _$$_PillSheetModifiedHistoryValueFromJson(json);
 
-  @override
-  @JsonKey()
-  final dynamic version;
   @override
   @JsonKey()
   final CreatedPillSheetValue? createdPillSheet;
@@ -500,7 +486,7 @@ class _$_PillSheetModifiedHistoryValue extends _PillSheetModifiedHistoryValue {
 
   @override
   String toString() {
-    return 'PillSheetModifiedHistoryValue(version: $version, createdPillSheet: $createdPillSheet, automaticallyRecordedLastTakenDate: $automaticallyRecordedLastTakenDate, deletedPillSheet: $deletedPillSheet, takenPill: $takenPill, revertTakenPill: $revertTakenPill, changedPillNumber: $changedPillNumber, endedPillSheet: $endedPillSheet, beganRestDurationValue: $beganRestDurationValue, endedRestDurationValue: $endedRestDurationValue, changedBeginDisplayNumber: $changedBeginDisplayNumber, changedEndDisplayNumber: $changedEndDisplayNumber)';
+    return 'PillSheetModifiedHistoryValue(createdPillSheet: $createdPillSheet, automaticallyRecordedLastTakenDate: $automaticallyRecordedLastTakenDate, deletedPillSheet: $deletedPillSheet, takenPill: $takenPill, revertTakenPill: $revertTakenPill, changedPillNumber: $changedPillNumber, endedPillSheet: $endedPillSheet, beganRestDurationValue: $beganRestDurationValue, endedRestDurationValue: $endedRestDurationValue, changedBeginDisplayNumber: $changedBeginDisplayNumber, changedEndDisplayNumber: $changedEndDisplayNumber)';
   }
 
   @override
@@ -508,7 +494,6 @@ class _$_PillSheetModifiedHistoryValue extends _PillSheetModifiedHistoryValue {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$_PillSheetModifiedHistoryValue &&
-            const DeepCollectionEquality().equals(other.version, version) &&
             (identical(other.createdPillSheet, createdPillSheet) ||
                 other.createdPillSheet == createdPillSheet) &&
             (identical(other.automaticallyRecordedLastTakenDate,
@@ -541,7 +526,6 @@ class _$_PillSheetModifiedHistoryValue extends _PillSheetModifiedHistoryValue {
   @override
   int get hashCode => Object.hash(
       runtimeType,
-      const DeepCollectionEquality().hash(version),
       createdPillSheet,
       automaticallyRecordedLastTakenDate,
       deletedPillSheet,
@@ -572,8 +556,7 @@ class _$_PillSheetModifiedHistoryValue extends _PillSheetModifiedHistoryValue {
 abstract class _PillSheetModifiedHistoryValue
     extends PillSheetModifiedHistoryValue {
   const factory _PillSheetModifiedHistoryValue(
-          {final dynamic version,
-          final CreatedPillSheetValue? createdPillSheet,
+          {final CreatedPillSheetValue? createdPillSheet,
           final AutomaticallyRecordedLastTakenDateValue?
               automaticallyRecordedLastTakenDate,
           final DeletedPillSheetValue? deletedPillSheet,
@@ -591,8 +574,6 @@ abstract class _PillSheetModifiedHistoryValue
   factory _PillSheetModifiedHistoryValue.fromJson(Map<String, dynamic> json) =
       _$_PillSheetModifiedHistoryValue.fromJson;
 
-  @override
-  dynamic get version;
   @override
   CreatedPillSheetValue? get createdPillSheet;
   @override

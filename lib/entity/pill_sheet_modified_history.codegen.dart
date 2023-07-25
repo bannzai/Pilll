@@ -50,6 +50,8 @@ extension PillSheetModifiedActionTypeFunctions on PillSheetModifiedActionType {
 class PillSheetModifiedHistory with _$PillSheetModifiedHistory {
   @JsonSerializable(explicitToJson: true)
   const factory PillSheetModifiedHistory({
+    // Since 2023-08-01
+    @Default("v2") version,
     @JsonKey(includeIfNull: false, toJson: toNull) required String? id,
     required String actionType,
     required PillSheetModifiedHistoryValue value,

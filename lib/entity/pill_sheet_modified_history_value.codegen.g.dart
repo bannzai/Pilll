@@ -9,7 +9,6 @@ part of 'pill_sheet_modified_history_value.codegen.dart';
 _$_PillSheetModifiedHistoryValue _$$_PillSheetModifiedHistoryValueFromJson(
         Map<String, dynamic> json) =>
     _$_PillSheetModifiedHistoryValue(
-      version: json['version'] ?? "v2",
       createdPillSheet: json['createdPillSheet'] == null
           ? null
           : CreatedPillSheetValue.fromJson(
@@ -60,7 +59,6 @@ _$_PillSheetModifiedHistoryValue _$$_PillSheetModifiedHistoryValueFromJson(
 Map<String, dynamic> _$$_PillSheetModifiedHistoryValueToJson(
         _$_PillSheetModifiedHistoryValue instance) =>
     <String, dynamic>{
-      'version': instance.version,
       'createdPillSheet': instance.createdPillSheet?.toJson(),
       'automaticallyRecordedLastTakenDate':
           instance.automaticallyRecordedLastTakenDate?.toJson(),
