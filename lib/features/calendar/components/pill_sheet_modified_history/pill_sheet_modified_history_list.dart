@@ -98,7 +98,8 @@ class PillSheetModifiedHistoryList extends StatelessWidget {
                   ),
                 PillSheetModifiedActionType.revertTakenPill => PillSheetModifiedHistoryRevertTakenPillAction(
                     estimatedEventCausingDate: history.estimatedEventCausingDate,
-                    value: history.value.revertTakenPill,
+                    beforeLastTakenPillNumber: history.beforePillSheet?.lastTakenPillNumber,
+                    afterLastTakenPillNumber: history.afterPillSheet?.lastTakenPillNumber,
                   ),
                 PillSheetModifiedActionType.changedPillNumber => PillSheetModifiedHistoryChangedPillNumberAction(
                     estimatedEventCausingDate: history.estimatedEventCausingDate,
@@ -150,7 +151,8 @@ class PillSheetModifiedHistoryList extends StatelessWidget {
                   ),
                 PillSheetModifiedActionType.revertTakenPill => PillSheetModifiedHistoryRevertTakenPillAction(
                     estimatedEventCausingDate: history.estimatedEventCausingDate,
-                    value: history.value.revertTakenPill,
+                    beforeLastTakenPillNumber: history.value.revertTakenPill?.beforeLastTakenPillNumber,
+                    afterLastTakenPillNumber: history.value.revertTakenPill?.afterLastTakenPillNumber,
                   ),
                 PillSheetModifiedActionType.changedPillNumber => PillSheetModifiedHistoryChangedPillNumberAction(
                     estimatedEventCausingDate: history.estimatedEventCausingDate,
