@@ -10,9 +10,6 @@ _$_PillSheetModifiedHistoryValue _$$_PillSheetModifiedHistoryValueFromJson(
         Map<String, dynamic> json) =>
     _$_PillSheetModifiedHistoryValue(
       version: json['version'] ?? "v2",
-      beginTrialDate: json['beginTrialDate'] == null
-          ? null
-          : DateTime.parse(json['beginTrialDate'] as String),
       createdPillSheet: json['createdPillSheet'] == null
           ? null
           : CreatedPillSheetValue.fromJson(
@@ -64,7 +61,6 @@ Map<String, dynamic> _$$_PillSheetModifiedHistoryValueToJson(
         _$_PillSheetModifiedHistoryValue instance) =>
     <String, dynamic>{
       'version': instance.version,
-      'beginTrialDate': instance.beginTrialDate?.toIso8601String(),
       'createdPillSheet': instance.createdPillSheet?.toJson(),
       'automaticallyRecordedLastTakenDate':
           instance.automaticallyRecordedLastTakenDate?.toJson(),

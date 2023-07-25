@@ -13,7 +13,6 @@ class PillSheetModifiedHistoryValue with _$PillSheetModifiedHistoryValue {
   @JsonSerializable(explicitToJson: true)
   const factory PillSheetModifiedHistoryValue({
     @Default("v2") version,
-    DateTime? beginTrialDate,
     @Default(null) CreatedPillSheetValue? createdPillSheet,
     @Default(null) AutomaticallyRecordedLastTakenDateValue? automaticallyRecordedLastTakenDate,
     @Default(null) DeletedPillSheetValue? deletedPillSheet,
