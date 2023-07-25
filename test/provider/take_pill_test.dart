@@ -30,8 +30,6 @@ void main() {
   });
 
   void prepare({required DateTime activePillSheetBeginDate, required DateTime? activePillSheetLastTakenDate}) {
-    activePillSheetBeginDate = today();
-    activePillSheetLastTakenDate = null;
     previousPillSheet = PillSheet(
       id: "previous_pill_sheet_id",
       groupIndex: 0,
@@ -101,6 +99,54 @@ void main() {
         );
         // 事前条件
         expect(activePillSheet.lastCompletedPillNumber, 0);
+        // テスト内容
+        expect(updatedActivePillSheet.pills, expected.pills);
+        expect(updatedActivePillSheet, expected);
+        expect(updatedActivePillSheet.todayPillsAreAlreadyTaken, true);
+        expect(updatedActivePillSheet.anyTodayPillsAreAlreadyTaken, true);
+      });
+      test("未服用のピルが複数個ある", () {
+        prepare(activePillSheetBeginDate: today().subtract(const Duration(days: 2)), activePillSheetLastTakenDate: null);
+
+        final lastTakenPillIndex = max(0, activePillSheet.lastCompletedPillNumber - 1);
+        final takenDate = today();
+        final updatedActivePillSheet = activePillSheet.takenPillSheet(takenDate);
+        final expected = activePillSheet.copyWith(
+          lastTakenDate: takenDate,
+          pills: [...activePillSheet.pills]..replaceRange(
+              lastTakenPillIndex,
+              3,
+              [
+                Pill(
+                  index: 0,
+                  createdDateTime: now(),
+                  updatedDateTime: now(),
+                  pillTakens: [
+                    PillTaken(takenDateTime: takenDate, createdDateTime: now(), updatedDateTime: now(), isAutomaticallyRecorded: false),
+                  ],
+                ),
+                Pill(
+                  index: 1,
+                  createdDateTime: now(),
+                  updatedDateTime: now(),
+                  pillTakens: [
+                    PillTaken(takenDateTime: takenDate, createdDateTime: now(), updatedDateTime: now(), isAutomaticallyRecorded: false),
+                  ],
+                ),
+                Pill(
+                  index: 2,
+                  createdDateTime: now(),
+                  updatedDateTime: now(),
+                  pillTakens: [
+                    PillTaken(takenDateTime: takenDate, createdDateTime: now(), updatedDateTime: now(), isAutomaticallyRecorded: false),
+                  ],
+                ),
+              ],
+            ),
+        );
+        // 事前条件
+        expect(activePillSheet.lastCompletedPillNumber, 0);
+        expect(activePillSheet.todayPillNumber, 3);
         // テスト内容
         expect(updatedActivePillSheet.pills, expected.pills);
         expect(updatedActivePillSheet, expected);
