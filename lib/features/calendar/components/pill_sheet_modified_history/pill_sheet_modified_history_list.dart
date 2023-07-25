@@ -76,9 +76,9 @@ class PillSheetModifiedHistoryList extends StatelessWidget {
             if (history.version == "v2") {
               // TODO:
               body = switch (history.enumActionType) {
-                PillSheetModifiedActionType.createdPillSheet => PillSheetModifiedHistoryCreatePillSheetActionV2(
+                PillSheetModifiedActionType.createdPillSheet => PillSheetModifiedHistoryCreatePillSheetAction(
                     estimatedEventCausingDate: history.estimatedEventCausingDate,
-                    afterPillSheetGroup: history.afterPillSheetGroup,
+                    value: history.value.createdPillSheet,
                   ),
                 PillSheetModifiedActionType.automaticallyRecordedLastTakenDate => PillSheetModifiedHistoryAutomaticallyRecordedLastTakenDateActionV2(
                     estimatedEventCausingDate: history.estimatedEventCausingDate,
