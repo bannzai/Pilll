@@ -128,13 +128,13 @@ class PillSheet with _$PillSheet {
   // Because if lastCompletedPillNumber is nullable, ! = null, making it difficult to compare.
   // lastTakenNumber is often compare todayPillNumber
   int get lastCompletedPillNumber {
-    final lastTakenDate = this.lastTakenDate;
-    if (lastTakenDate == null) {
-      return 0;
-    }
-
     // TODO: [PillSheet.Pill] そのうち消す。古いPillSheetのPillsは[]になっている
     if (pills.isEmpty) {
+      final lastTakenDate = this.lastTakenDate;
+      if (lastTakenDate == null) {
+        return 0;
+      }
+
       return pillSheetPillNumber(pillSheet: this, targetDate: lastTakenDate);
     }
 
