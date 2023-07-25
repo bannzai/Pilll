@@ -46,11 +46,11 @@ class PillSheetModifiedHistoryList extends StatelessWidget {
       shrinkWrap: true,
       physics: scrollPhysics,
       scrollDirection: Axis.vertical,
-      children: _summarizedForEachMonth.map((model) => _monthlyHeaderAndRelationaHistories(model)).expand((element) => element).toList(),
+      children: _summarizedForEachMonth.map((model) => _monthlyHeaderAndRelativedHistories(model)).expand((element) => element).toList(),
     );
   }
 
-  List<Widget> _monthlyHeaderAndRelationaHistories(PillSheetModifiedHistoryListModel model) {
+  List<Widget> _monthlyHeaderAndRelativedHistories(PillSheetModifiedHistoryListModel model) {
     var dirtyIndex = 0;
 
     return [
