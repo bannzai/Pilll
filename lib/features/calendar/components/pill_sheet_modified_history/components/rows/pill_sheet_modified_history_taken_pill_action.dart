@@ -112,7 +112,6 @@ class PillSheetModifiedHistoryTakenPillActionV2 extends HookConsumerWidget {
     required this.premiumAndTrial,
     required this.estimatedEventCausingDate,
     required this.history,
-    // TODO: Remove
     required this.value,
     required this.beforePillSheetGroup,
     required this.afterPillSheetGroup,
