@@ -186,6 +186,58 @@ void main() {
         expect(updatedActivePillSheet.todayPillsAreAlreadyTaken, false);
         expect(updatedActivePillSheet.anyTodayPillsAreAlreadyTaken, true);
       });
+      test("未服用のピルが複数個ある", () {
+        prepare(activePillSheetBeginDate: today().subtract(const Duration(days: 2)), activePillSheetLastTakenDate: null);
+        activePillSheet = activePillSheet.copyWith(pillTakenCount: 2);
+
+        final lastTakenPillIndex = max(0, activePillSheet.lastCompletedPillNumber - 1);
+        final takenDate = today();
+        final updatedActivePillSheet = activePillSheet.takenPillSheet(takenDate);
+        final expected = activePillSheet.copyWith(
+          lastTakenDate: takenDate,
+          pills: [...activePillSheet.pills]..replaceRange(
+              lastTakenPillIndex,
+              3,
+              [
+                Pill(
+                  index: 0,
+                  createdDateTime: now(),
+                  updatedDateTime: now(),
+                  pillTakens: [
+                    PillTaken(takenDateTime: takenDate, createdDateTime: now(), updatedDateTime: now(), isAutomaticallyRecorded: false),
+                    PillTaken(takenDateTime: takenDate, createdDateTime: now(), updatedDateTime: now(), isAutomaticallyRecorded: false),
+                  ],
+                ),
+                Pill(
+                  index: 1,
+                  createdDateTime: now(),
+                  updatedDateTime: now(),
+                  pillTakens: [
+                    PillTaken(takenDateTime: takenDate, createdDateTime: now(), updatedDateTime: now(), isAutomaticallyRecorded: false),
+                    PillTaken(takenDateTime: takenDate, createdDateTime: now(), updatedDateTime: now(), isAutomaticallyRecorded: false),
+                  ],
+                ),
+                // 今日服用済みのピルの場合はpillTakensが1つだけ増える
+                Pill(
+                  index: 2,
+                  createdDateTime: now(),
+                  updatedDateTime: now(),
+                  pillTakens: [
+                    PillTaken(takenDateTime: takenDate, createdDateTime: now(), updatedDateTime: now(), isAutomaticallyRecorded: false),
+                  ],
+                ),
+              ],
+            ),
+        );
+        // 事前条件
+        expect(activePillSheet.lastCompletedPillNumber, 0);
+        expect(activePillSheet.todayPillNumber, 3);
+        // テスト内容
+        expect(updatedActivePillSheet.pills, expected.pills);
+        expect(updatedActivePillSheet, expected);
+        expect(updatedActivePillSheet.todayPillsAreAlreadyTaken, true);
+        expect(updatedActivePillSheet.anyTodayPillsAreAlreadyTaken, true);
+      });
 
       test("1度服用済みから2度目の服用", () {
         final takenDate = activePillSheetBeginDate;
