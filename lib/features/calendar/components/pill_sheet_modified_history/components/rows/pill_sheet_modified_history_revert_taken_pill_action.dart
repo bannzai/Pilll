@@ -24,8 +24,10 @@ class PillSheetModifiedHistoryRevertTakenPillAction extends StatelessWidget {
     return RowLayout(
       day: Day(estimatedEventCausingDate: estimatedEventCausingDate),
       effectiveNumbersOrHyphen: EffectivePillNumber(
-          effectivePillNumber:
-              PillSheetModifiedHistoryDateEffectivePillNumber.revert(value)),
+          effectivePillNumber: PillSheetModifiedHistoryDateEffectivePillNumber.revert(
+        beforeLastTakenPillNumber: value.beforeLastTakenPillNumber,
+        afterLastTakenPillNumber: value.afterLastTakenPillNumber,
+      )),
       detail: const Text(
         "服用取り消し",
         style: TextStyle(

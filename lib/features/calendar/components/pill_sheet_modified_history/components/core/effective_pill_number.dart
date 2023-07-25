@@ -44,13 +44,11 @@ abstract class PillSheetModifiedHistoryDateEffectivePillNumber {
     return "${before + 1}-$after番";
   }
 
-  static String revert(RevertTakenPillValue value) {
-    final before = value.beforeLastTakenPillNumber;
-    final after = value.afterLastTakenPillNumber;
-    if (before == (after + 1)) {
-      return "$before番";
+  static String revert({required int beforeLastTakenPillNumber, required int afterLastTakenPillNumber}) {
+    if (beforeLastTakenPillNumber == (afterLastTakenPillNumber + 1)) {
+      return "$beforeLastTakenPillNumber番";
     }
-    return "$before-${after + 1}番";
+    return "$beforeLastTakenPillNumber-${afterLastTakenPillNumber + 1}番";
   }
 
   static String changed(ChangedPillNumberValue value) => "${value.beforeTodayPillNumber}→${value.afterTodayPillNumber}番";
