@@ -21,13 +21,13 @@ void main() {
 
   setUp(() {
     TestWidgetsFlutterBinding.ensureInitialized();
-  });
 
-  void prepare({required DateTime activePillSheetBeginDate, required DateTime? activePillSheetLastTakenDate}) {
     final mockTodayRepository = MockTodayService();
     todayRepository = mockTodayRepository;
     when(mockTodayRepository.now()).thenReturn(mockNow);
+  });
 
+  void prepare({required DateTime activePillSheetBeginDate, required DateTime? activePillSheetLastTakenDate}) {
     activePillSheetBeginDate = today();
     activePillSheetLastTakenDate = null;
     previousPillSheet = PillSheet(
@@ -78,12 +78,23 @@ void main() {
     setUp(() {
       prepare(activePillSheetBeginDate: activePillSheetBeginDate, activePillSheetLastTakenDate: null);
     });
-    test("take pill", () {
-      final takenDate = activePillSheetBeginDate;
-      final updatedActivePillSheet = activedPillSheet.takenPillSheet(takenDate);
-      final expected = activedPillSheet.takenPillSheet(takenDate);
-      expect(updatedActivePillSheet.pills, expected.pills);
-      expect(updatedActivePillSheet, expected);
+    group("pillTakenCount = 1", () {
+      test("take pill", () {
+        final takenDate = activePillSheetBeginDate;
+        final updatedActivePillSheet = activedPillSheet.takenPillSheet(takenDate);
+        final expected = activedPillSheet.takenPillSheet(takenDate);
+        expect(updatedActivePillSheet.pills, expected.pills);
+        expect(updatedActivePillSheet, expected);
+      });
+    });
+    group("pillTakenCount = 2", () {
+      test("take pill", () {
+        final takenDate = activePillSheetBeginDate;
+        final updatedActivePillSheet = activedPillSheet.takenPillSheet(takenDate);
+        final expected = activedPillSheet.takenPillSheet(takenDate);
+        expect(updatedActivePillSheet.pills, expected.pills);
+        expect(updatedActivePillSheet, expected);
+      });
     });
   });
 
