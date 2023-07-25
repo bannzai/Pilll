@@ -88,7 +88,7 @@ class PillSheetModifiedHistoryList extends StatelessWidget {
                     estimatedEventCausingDate: history.estimatedEventCausingDate,
                     value: history.value.deletedPillSheet,
                   ),
-                PillSheetModifiedActionType.takenPill => PillSheetModifiedHistoryTakenPillActionV2(
+                PillSheetModifiedActionType.takenPill => PillSheetModifiedHistoryTakenPillAction(
                     premiumAndTrial: premiumAndTrial,
                     estimatedEventCausingDate: history.estimatedEventCausingDate,
                     history: history,
