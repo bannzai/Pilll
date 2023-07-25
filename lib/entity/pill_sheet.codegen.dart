@@ -117,7 +117,7 @@ class PillSheet with _$PillSheet {
   PillSheetType get pillSheetType => PillSheetTypeFunctions.fromRawPath(typeInfo.pillSheetTypeReferencePath);
 
   int get todayPillNumber {
-    return pillNumberFor(pillSheet: this, targetDate: today());
+    return pillNumberFor(targetDate: today());
   }
 
   int get todayPillIndex {
@@ -135,7 +135,7 @@ class PillSheet with _$PillSheet {
         return 0;
       }
 
-      return pillNumberFor(pillSheet: this, targetDate: lastTakenDate);
+      return pillNumberFor(targetDate: lastTakenDate);
     }
 
     // lastTakenDate is not nullのチェックをしていてこの変数がnullのはずは無いが、将来的にlastTakenDateは消える可能性はあるのでこのロジックは真っ当なチェックになる
@@ -146,7 +146,7 @@ class PillSheet with _$PillSheet {
 
     // lastCompletedPillTakenDateを用意している箇所でlastWhereOrNullの中で空配列じゃ無いことはチェックをしているのでlastでアクセス
     final lastPillTakenDate = lastCompletedPill.pillTakens.last.takenDateTime;
-    return pillNumberFor(pillSheet: this, targetDate: lastPillTakenDate);
+    return pillNumberFor(targetDate: lastPillTakenDate);
   }
 
   // lastTakenPillNumber は最後に服了したピルの番号を返す。lastcompletedPillNumberとは違い完了はしてな区ても良い
@@ -160,7 +160,7 @@ class PillSheet with _$PillSheet {
         return 0;
       }
 
-      return pillNumberFor(pillSheet: this, targetDate: lastTakenDate);
+      return pillNumberFor(targetDate: lastTakenDate);
     }
 
     // lastTakenDate is not nullのチェックをしていてこの変数がnullのはずは無いが、将来的にlastTakenDateは消える可能性はあるのでこのロジックは真っ当なチェックになる
@@ -171,7 +171,7 @@ class PillSheet with _$PillSheet {
 
     // lastCompletedPillTakenDateを用意している箇所でlastWhereOrNullの中で空配列じゃ無いことはチェックをしているのでlastでアクセス
     final lastPillTakenDate = lastCompletedPill.pillTakens.last.takenDateTime;
-    return pillNumberFor(pillSheet: this, targetDate: lastPillTakenDate);
+    return pillNumberFor(targetDate: lastPillTakenDate);
   }
 
   bool get todayPillsAreAlreadyTaken {
