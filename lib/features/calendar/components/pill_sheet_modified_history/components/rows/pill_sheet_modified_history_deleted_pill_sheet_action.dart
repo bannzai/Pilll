@@ -8,22 +8,20 @@ import 'package:pilll/entity/pill_sheet_modified_history_value.codegen.dart';
 
 class PillSheetModifiedHistoryDeletedPillSheetAction extends StatelessWidget {
   final DateTime estimatedEventCausingDate;
-  final DeletedPillSheetValue? value;
+  final List<String>? pillSheetIDs;
 
   const PillSheetModifiedHistoryDeletedPillSheetAction({
     Key? key,
     required this.estimatedEventCausingDate,
-    required this.value,
+    required this.pillSheetIDs,
   }) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
     return RowLayout(
       day: Day(estimatedEventCausingDate: estimatedEventCausingDate),
-      effectiveNumbersOrHyphen: EffectivePillNumber(
-          effectivePillNumber:
-              PillSheetModifiedHistoryDateEffectivePillNumber.pillSheetCount(
-                  value?.pillSheetIDs ?? [])),
+      effectiveNumbersOrHyphen:
+          EffectivePillNumber(effectivePillNumber: PillSheetModifiedHistoryDateEffectivePillNumber.pillSheetCount(pillSheetIDs ?? [])),
       detail: const Text(
         "ピルシート破棄",
         style: TextStyle(

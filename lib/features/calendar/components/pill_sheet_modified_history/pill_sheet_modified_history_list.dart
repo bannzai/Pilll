@@ -86,9 +86,7 @@ class PillSheetModifiedHistoryList extends StatelessWidget {
                     afterLastTakenPillNumber: history.afterPillSheet?.lastTakenPillNumber,
                   ),
                 PillSheetModifiedActionType.deletedPillSheet => PillSheetModifiedHistoryDeletedPillSheetAction(
-                    estimatedEventCausingDate: history.estimatedEventCausingDate,
-                    value: history.value.deletedPillSheet,
-                  ),
+                    estimatedEventCausingDate: history.estimatedEventCausingDate, pillSheetIDs: history.afterPillSheetGroup?.pillSheetIDs),
                 PillSheetModifiedActionType.takenPill => PillSheetModifiedHistoryTakenPillAction(
                     premiumAndTrial: premiumAndTrial,
                     estimatedEventCausingDate: history.estimatedEventCausingDate,
@@ -141,7 +139,7 @@ class PillSheetModifiedHistoryList extends StatelessWidget {
                   ),
                 PillSheetModifiedActionType.deletedPillSheet => PillSheetModifiedHistoryDeletedPillSheetAction(
                     estimatedEventCausingDate: history.estimatedEventCausingDate,
-                    value: history.value.deletedPillSheet,
+                    pillSheetIDs: history.value.deletedPillSheet?.pillSheetIDs,
                   ),
                 PillSheetModifiedActionType.takenPill => PillSheetModifiedHistoryTakenPillAction(
                     premiumAndTrial: premiumAndTrial,
