@@ -81,7 +81,7 @@ class PillSheetModifiedHistory with _$PillSheetModifiedHistory {
     DateTime? timeToLive,
     // ============ END: Added since v2 ============
 
-    // For v1 deprecated properties.
+    // The below properties are deprecated and added since v1.
     // This is deprecated property. TODO: delete after 2024/01/01
     // Instead of beforePillSheetID and afterPillSheetID
     required String? pillSheetID,
