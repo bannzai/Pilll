@@ -21,6 +21,7 @@ PillSheetModifiedHistoryValue _$PillSheetModifiedHistoryValueFromJson(
 
 /// @nodoc
 mixin _$PillSheetModifiedHistoryValue {
+  dynamic get version => throw _privateConstructorUsedError;
   DateTime? get beginTrialDate => throw _privateConstructorUsedError;
   CreatedPillSheetValue? get createdPillSheet =>
       throw _privateConstructorUsedError;
@@ -59,7 +60,8 @@ abstract class $PillSheetModifiedHistoryValueCopyWith<$Res> {
           PillSheetModifiedHistoryValue>;
   @useResult
   $Res call(
-      {DateTime? beginTrialDate,
+      {dynamic version,
+      DateTime? beginTrialDate,
       CreatedPillSheetValue? createdPillSheet,
       AutomaticallyRecordedLastTakenDateValue?
           automaticallyRecordedLastTakenDate,
@@ -101,6 +103,7 @@ class _$PillSheetModifiedHistoryValueCopyWithImpl<$Res,
   @pragma('vm:prefer-inline')
   @override
   $Res call({
+    Object? version = freezed,
     Object? beginTrialDate = freezed,
     Object? createdPillSheet = freezed,
     Object? automaticallyRecordedLastTakenDate = freezed,
@@ -115,6 +118,10 @@ class _$PillSheetModifiedHistoryValueCopyWithImpl<$Res,
     Object? changedEndDisplayNumber = freezed,
   }) {
     return _then(_value.copyWith(
+      version: freezed == version
+          ? _value.version
+          : version // ignore: cast_nullable_to_non_nullable
+              as dynamic,
       beginTrialDate: freezed == beginTrialDate
           ? _value.beginTrialDate
           : beginTrialDate // ignore: cast_nullable_to_non_nullable
@@ -321,7 +328,8 @@ abstract class _$$_PillSheetModifiedHistoryValueCopyWith<$Res>
   @override
   @useResult
   $Res call(
-      {DateTime? beginTrialDate,
+      {dynamic version,
+      DateTime? beginTrialDate,
       CreatedPillSheetValue? createdPillSheet,
       AutomaticallyRecordedLastTakenDateValue?
           automaticallyRecordedLastTakenDate,
@@ -373,6 +381,7 @@ class __$$_PillSheetModifiedHistoryValueCopyWithImpl<$Res>
   @pragma('vm:prefer-inline')
   @override
   $Res call({
+    Object? version = freezed,
     Object? beginTrialDate = freezed,
     Object? createdPillSheet = freezed,
     Object? automaticallyRecordedLastTakenDate = freezed,
@@ -387,6 +396,7 @@ class __$$_PillSheetModifiedHistoryValueCopyWithImpl<$Res>
     Object? changedEndDisplayNumber = freezed,
   }) {
     return _then(_$_PillSheetModifiedHistoryValue(
+      version: freezed == version ? _value.version! : version,
       beginTrialDate: freezed == beginTrialDate
           ? _value.beginTrialDate
           : beginTrialDate // ignore: cast_nullable_to_non_nullable
@@ -445,7 +455,8 @@ class __$$_PillSheetModifiedHistoryValueCopyWithImpl<$Res>
 @JsonSerializable(explicitToJson: true)
 class _$_PillSheetModifiedHistoryValue extends _PillSheetModifiedHistoryValue {
   const _$_PillSheetModifiedHistoryValue(
-      {this.beginTrialDate,
+      {this.version = "v2",
+      this.beginTrialDate,
       this.createdPillSheet = null,
       this.automaticallyRecordedLastTakenDate = null,
       this.deletedPillSheet = null,
@@ -463,6 +474,9 @@ class _$_PillSheetModifiedHistoryValue extends _PillSheetModifiedHistoryValue {
           Map<String, dynamic> json) =>
       _$$_PillSheetModifiedHistoryValueFromJson(json);
 
+  @override
+  @JsonKey()
+  final dynamic version;
   @override
   final DateTime? beginTrialDate;
   @override
@@ -502,7 +516,7 @@ class _$_PillSheetModifiedHistoryValue extends _PillSheetModifiedHistoryValue {
 
   @override
   String toString() {
-    return 'PillSheetModifiedHistoryValue(beginTrialDate: $beginTrialDate, createdPillSheet: $createdPillSheet, automaticallyRecordedLastTakenDate: $automaticallyRecordedLastTakenDate, deletedPillSheet: $deletedPillSheet, takenPill: $takenPill, revertTakenPill: $revertTakenPill, changedPillNumber: $changedPillNumber, endedPillSheet: $endedPillSheet, beganRestDurationValue: $beganRestDurationValue, endedRestDurationValue: $endedRestDurationValue, changedBeginDisplayNumber: $changedBeginDisplayNumber, changedEndDisplayNumber: $changedEndDisplayNumber)';
+    return 'PillSheetModifiedHistoryValue(version: $version, beginTrialDate: $beginTrialDate, createdPillSheet: $createdPillSheet, automaticallyRecordedLastTakenDate: $automaticallyRecordedLastTakenDate, deletedPillSheet: $deletedPillSheet, takenPill: $takenPill, revertTakenPill: $revertTakenPill, changedPillNumber: $changedPillNumber, endedPillSheet: $endedPillSheet, beganRestDurationValue: $beganRestDurationValue, endedRestDurationValue: $endedRestDurationValue, changedBeginDisplayNumber: $changedBeginDisplayNumber, changedEndDisplayNumber: $changedEndDisplayNumber)';
   }
 
   @override
@@ -510,6 +524,7 @@ class _$_PillSheetModifiedHistoryValue extends _PillSheetModifiedHistoryValue {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$_PillSheetModifiedHistoryValue &&
+            const DeepCollectionEquality().equals(other.version, version) &&
             (identical(other.beginTrialDate, beginTrialDate) ||
                 other.beginTrialDate == beginTrialDate) &&
             (identical(other.createdPillSheet, createdPillSheet) ||
@@ -544,6 +559,7 @@ class _$_PillSheetModifiedHistoryValue extends _PillSheetModifiedHistoryValue {
   @override
   int get hashCode => Object.hash(
       runtimeType,
+      const DeepCollectionEquality().hash(version),
       beginTrialDate,
       createdPillSheet,
       automaticallyRecordedLastTakenDate,
@@ -575,7 +591,8 @@ class _$_PillSheetModifiedHistoryValue extends _PillSheetModifiedHistoryValue {
 abstract class _PillSheetModifiedHistoryValue
     extends PillSheetModifiedHistoryValue {
   const factory _PillSheetModifiedHistoryValue(
-          {final DateTime? beginTrialDate,
+          {final dynamic version,
+          final DateTime? beginTrialDate,
           final CreatedPillSheetValue? createdPillSheet,
           final AutomaticallyRecordedLastTakenDateValue?
               automaticallyRecordedLastTakenDate,
@@ -594,6 +611,8 @@ abstract class _PillSheetModifiedHistoryValue
   factory _PillSheetModifiedHistoryValue.fromJson(Map<String, dynamic> json) =
       _$_PillSheetModifiedHistoryValue.fromJson;
 
+  @override
+  dynamic get version;
   @override
   DateTime? get beginTrialDate;
   @override
