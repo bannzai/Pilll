@@ -33,11 +33,11 @@ class RevertTakePill {
     required int pageIndex,
     required int targetRevertPillNumberIntoPillSheet,
   }) async {
-    final activedPillSheet = pillSheetGroup.activedPillSheet;
-    if (activedPillSheet == null) {
+    final activePillSheet = pillSheetGroup.activePillSheet;
+    if (activePillSheet == null) {
       throw const FormatException("現在対象となっているピルシートが見つかりませんでした");
     }
-    if (activedPillSheet.activeRestDuration != null) {
+    if (activePillSheet.activeRestDuration != null) {
       throw const FormatException("ピルの服用の取り消し操作は休薬期間中は実行できません");
     }
 
@@ -53,7 +53,7 @@ class RevertTakePill {
         return pillSheet;
       }
 
-      if (pillSheet.groupIndex > activedPillSheet.groupIndex) {
+      if (pillSheet.groupIndex > activePillSheet.groupIndex) {
         return pillSheet;
       }
       if (pillSheet.groupIndex < pageIndex) {

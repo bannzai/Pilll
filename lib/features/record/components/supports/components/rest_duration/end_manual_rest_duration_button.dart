@@ -14,14 +14,14 @@ import 'package:pilll/utils/local_notification.dart';
 
 class EndManualRestDurationButton extends HookConsumerWidget {
   final RestDuration restDuration;
-  final PillSheet activedPillSheet;
+  final PillSheet activePillSheet;
   final PillSheetGroup pillSheetGroup;
   final VoidCallback didEndRestDuration;
 
   const EndManualRestDurationButton({
     Key? key,
     required this.restDuration,
-    required this.activedPillSheet,
+    required this.activePillSheet,
     required this.pillSheetGroup,
     required this.didEndRestDuration,
   }) : super(key: key);
@@ -39,7 +39,7 @@ class EndManualRestDurationButton extends HookConsumerWidget {
 
         await endRestDuration(
           restDuration: restDuration,
-          activePillSheet: activedPillSheet,
+          activePillSheet: activePillSheet,
           pillSheetGroup: pillSheetGroup,
         );
         await registerReminderLocalNotification.call();

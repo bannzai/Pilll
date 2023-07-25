@@ -79,7 +79,7 @@ void main() {
 
       await changePillNumber(
         pillSheetGroup: pillSheetGroup,
-        activedPillSheet: pillSheetGroup.activedPillSheet!,
+        activePillSheet: pillSheetGroup.activePillSheet!,
         pillSheetPageIndex: 0,
         pillNumberIntoPillSheet: 2,
       );
@@ -147,7 +147,7 @@ void main() {
 
       await changePillNumber(
         pillSheetGroup: pillSheetGroup,
-        activedPillSheet: pillSheetGroup.activedPillSheet!,
+        activePillSheet: pillSheetGroup.activePillSheet!,
         pillSheetPageIndex: 0,
         pillNumberIntoPillSheet: 2,
       );
@@ -249,7 +249,7 @@ void main() {
 
       await changePillNumber(
         pillSheetGroup: pillSheetGroup,
-        activedPillSheet: pillSheetGroup.activedPillSheet!,
+        activePillSheet: pillSheetGroup.activePillSheet!,
         pillSheetPageIndex: 0,
         pillNumberIntoPillSheet: 28,
       );
@@ -351,7 +351,7 @@ void main() {
 
       await changePillNumber(
         pillSheetGroup: pillSheetGroup,
-        activedPillSheet: pillSheetGroup.activedPillSheet!,
+        activePillSheet: pillSheetGroup.activePillSheet!,
         pillSheetPageIndex: 0,
         pillNumberIntoPillSheet: 28,
       );
@@ -451,7 +451,7 @@ void main() {
 
       await changePillNumber(
         pillSheetGroup: pillSheetGroup,
-        activedPillSheet: pillSheetGroup.activedPillSheet!,
+        activePillSheet: pillSheetGroup.activePillSheet!,
         pillSheetPageIndex: 2,
         pillNumberIntoPillSheet: 1,
       );
@@ -558,7 +558,7 @@ void main() {
       expect(middle.todayPillNumber, 1);
       await changePillNumber(
         pillSheetGroup: pillSheetGroup,
-        activedPillSheet: pillSheetGroup.activedPillSheet!,
+        activePillSheet: pillSheetGroup.activePillSheet!,
         pillSheetPageIndex: 0,
         pillNumberIntoPillSheet: 28,
       );

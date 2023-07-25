@@ -56,14 +56,14 @@ Future<String> debugInfo(String separator) async {
   final version = package?.version;
   final platform = Platform.isIOS ? "iOS" : "Android";
 
-  final activedPillSheet = pillSheetGroup?.activedPillSheet;
+  final activePillSheet = pillSheetGroup?.activePillSheet;
   final Map<String, dynamic> activedPillSheetDebugInfo = <String, dynamic>{};
-  if (activedPillSheet != null) {
-    activedPillSheetDebugInfo["id"] = activedPillSheet.id;
-    activedPillSheetDebugInfo["beginingDate"] = activedPillSheet.beginingDate.toIso8601String();
-    activedPillSheetDebugInfo["lastTakenDate"] = activedPillSheet.lastTakenDate?.toIso8601String();
-    activedPillSheetDebugInfo["createdAt"] = activedPillSheet.createdAt?.toIso8601String();
-    activedPillSheetDebugInfo["deletedAt"] = activedPillSheet.deletedAt?.toIso8601String();
+  if (activePillSheet != null) {
+    activedPillSheetDebugInfo["id"] = activePillSheet.id;
+    activedPillSheetDebugInfo["beginingDate"] = activePillSheet.beginingDate.toIso8601String();
+    activedPillSheetDebugInfo["lastTakenDate"] = activePillSheet.lastTakenDate?.toIso8601String();
+    activedPillSheetDebugInfo["createdAt"] = activePillSheet.createdAt?.toIso8601String();
+    activedPillSheetDebugInfo["deletedAt"] = activePillSheet.deletedAt?.toIso8601String();
   }
 
   final contents = [
@@ -73,7 +73,7 @@ Future<String> debugInfo(String separator) async {
     "isPremium: ${user?.isPremium}",
     "isTrial: ${user?.isTrial}",
     "pillSheetGroupID: ${pillSheetGroup?.id}",
-    "activedPillSheet: ${activedPillSheetDebugInfo.toString()}",
+    "activePillSheet: ${activedPillSheetDebugInfo.toString()}",
     "reminderTimes: ${setting?.reminderTimes}",
   ];
   return contents.join(separator);

@@ -183,14 +183,14 @@ class RecordPagePillSheet extends HookConsumerWidget {
     if (pillNumberIntoPillSheet <= pillSheet.lastCompletedPillNumber) {
       return null;
     }
-    final activedPillSheet = pillSheetGroup.activedPillSheet;
-    if (activedPillSheet == null) {
+    final activePillSheet = pillSheetGroup.activePillSheet;
+    if (activePillSheet == null) {
       return null;
     }
-    if (activedPillSheet.activeRestDuration != null) {
+    if (activePillSheet.activeRestDuration != null) {
       return null;
     }
-    if (activedPillSheet.groupIndex < pillSheet.groupIndex) {
+    if (activePillSheet.groupIndex < pillSheet.groupIndex) {
       return null;
     }
     var diff = min(pillSheet.todayPillNumber, pillSheet.typeInfo.totalCount) - pillNumberIntoPillSheet;
@@ -198,7 +198,7 @@ class RecordPagePillSheet extends HookConsumerWidget {
       // User tapped future pill number
       return null;
     }
-    if (activedPillSheet.todayPillsAreAlreadyTaken) {
+    if (activePillSheet.todayPillsAreAlreadyTaken) {
       return null;
     }
 
@@ -207,7 +207,7 @@ class RecordPagePillSheet extends HookConsumerWidget {
     final updatedPillSheetGroup = await takePill(
       takenDate: takenDate,
       pillSheetGroup: pillSheetGroup,
-      activedPillSheet: activedPillSheet,
+      activePillSheet: activePillSheet,
       isQuickRecord: false,
     );
     await registerReminderLocalNotification();
@@ -297,14 +297,14 @@ class RecordPagePillSheet extends HookConsumerWidget {
   bool _isDone({
     required int pillNumberIntoPillSheet,
   }) {
-    final activedPillSheet = pillSheetGroup.activedPillSheet;
-    if (activedPillSheet == null) {
+    final activePillSheet = pillSheetGroup.activePillSheet;
+    if (activePillSheet == null) {
       throw const FormatException("pill sheet not found");
     }
-    if (activedPillSheet.groupIndex < pillSheet.groupIndex) {
+    if (activePillSheet.groupIndex < pillSheet.groupIndex) {
       return false;
     }
-    if (activedPillSheet.id != pillSheet.id) {
+    if (activePillSheet.id != pillSheet.id) {
       if (pillSheet.isBegan) {
         if (pillNumberIntoPillSheet > pillSheet.lastCompletedPillNumber) {
           return false;
@@ -313,7 +313,7 @@ class RecordPagePillSheet extends HookConsumerWidget {
       return true;
     }
 
-    return pillNumberIntoPillSheet <= activedPillSheet.lastCompletedPillNumber;
+    return pillNumberIntoPillSheet <= activePillSheet.lastCompletedPillNumber;
   }
 }
 
@@ -340,17 +340,17 @@ bool shouldPillMarkAnimation({
   required PillSheet pillSheet,
   required PillSheetGroup pillSheetGroup,
 }) {
-  if (pillSheetGroup.activedPillSheet?.activeRestDuration != null) {
+  if (pillSheetGroup.activePillSheet?.activeRestDuration != null) {
     return false;
   }
-  final activedPillSheet = pillSheetGroup.activedPillSheet;
-  if (activedPillSheet == null) {
+  final activePillSheet = pillSheetGroup.activePillSheet;
+  if (activePillSheet == null) {
     throw const FormatException("pill sheet not found");
   }
-  if (activedPillSheet.groupIndex < pillSheet.groupIndex) {
+  if (activePillSheet.groupIndex < pillSheet.groupIndex) {
     return false;
   }
-  if (activedPillSheet.id != pillSheet.id) {
+  if (activePillSheet.id != pillSheet.id) {
     if (pillSheet.isBegan) {
       if (pillNumberIntoPillSheet > pillSheet.lastCompletedPillNumber) {
         return true;
@@ -359,5 +359,5 @@ bool shouldPillMarkAnimation({
     return false;
   }
 
-  return pillNumberIntoPillSheet > activedPillSheet.lastCompletedPillNumber && pillNumberIntoPillSheet <= activedPillSheet.todayPillNumber;
+  return pillNumberIntoPillSheet > activePillSheet.lastCompletedPillNumber && pillNumberIntoPillSheet <= activePillSheet.todayPillNumber;
 }

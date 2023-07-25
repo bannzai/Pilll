@@ -68,7 +68,7 @@ void main() {
         ];
         final pillSheetGroup = PillSheetGroup(pillSheetIDs: pillSheets.map((e) => e.id!).toList(), pillSheets: pillSheets, createdAt: now());
         // Reason for subtract seconds: 1, pass condition of if (restDurations.last.beginDate.isBefore(now()))
-        final activePillSheet = pillSheetGroup.activedPillSheet!.copyWith(
+        final activePillSheet = pillSheetGroup.activePillSheet!.copyWith(
           restDurations: [
             RestDuration(
               beginDate: now().subtract(const Duration(seconds: 1)),
@@ -79,7 +79,7 @@ void main() {
         );
         pillSheets.replaceRange(0, 1, [activePillSheet]);
         expect(activePillSheet.activeRestDuration, isNotNull);
-        expect(pillSheetGroup.activedPillSheet, activePillSheet);
+        expect(pillSheetGroup.activePillSheet, activePillSheet);
 
         await tester.pumpWidget(
           ProviderScope(
@@ -142,7 +142,7 @@ void main() {
           )
         ];
         final pillSheetGroup = PillSheetGroup(pillSheetIDs: pillSheets.map((e) => e.id!).toList(), pillSheets: pillSheets, createdAt: now());
-        final activePillSheet = pillSheetGroup.activedPillSheet!.copyWith(
+        final activePillSheet = pillSheetGroup.activePillSheet!.copyWith(
           restDurations: [
             RestDuration(
               beginDate: now().subtract(const Duration(days: 1)),
@@ -153,14 +153,14 @@ void main() {
           lastTakenDate: now(),
           pills: Pill.testGenerateAndIterateTo(
               pillSheetType: PillSheetType.pillsheet_28_0,
-              fromDate: pillSheetGroup.activedPillSheet!.beginingDate,
+              fromDate: pillSheetGroup.activePillSheet!.beginingDate,
               lastTakenDate: now(),
               pillTakenCount: 1),
         );
         pillSheets.replaceRange(0, 1, [activePillSheet]);
         expect(activePillSheet.activeRestDuration, isNull);
         expect(activePillSheet.todayPillsAreAlreadyTaken, true);
-        expect(pillSheetGroup.activedPillSheet, activePillSheet);
+        expect(pillSheetGroup.activePillSheet, activePillSheet);
 
         await tester.pumpWidget(
           ProviderScope(
@@ -225,7 +225,7 @@ void main() {
         final pillSheetGroup = PillSheetGroup(pillSheetIDs: pillSheets.map((e) => e.id!).toList(), pillSheets: pillSheets, createdAt: now());
 
         // Reason for subtract seconds: 1, pass condition of if (restDurations.last.endDate.isBefore(now()))
-        final activePillSheet = pillSheetGroup.activedPillSheet!.copyWith(
+        final activePillSheet = pillSheetGroup.activePillSheet!.copyWith(
           restDurations: [
             RestDuration(
                 beginDate: now().subtract(const Duration(days: 1)),
@@ -237,7 +237,7 @@ void main() {
         pillSheets.replaceRange(0, 1, [activePillSheet]);
         expect(activePillSheet.activeRestDuration, isNull);
         expect(activePillSheet.todayPillsAreAlreadyTaken, false);
-        expect(pillSheetGroup.activedPillSheet, activePillSheet);
+        expect(pillSheetGroup.activePillSheet, activePillSheet);
 
         await tester.pumpWidget(
           ProviderScope(

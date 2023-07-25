@@ -31,7 +31,7 @@ class ChangePillNumber {
 
   Future<void> call({
     required PillSheetGroup pillSheetGroup,
-    required PillSheet activedPillSheet,
+    required PillSheet activePillSheet,
     required int pillSheetPageIndex,
     required int pillNumberIntoPillSheet,
   }) async {
@@ -74,7 +74,7 @@ class ChangePillNumber {
     final updatedPillSheetGroup = pillSheetGroup.copyWith(pillSheets: updatedPillSheets);
     final history = PillSheetModifiedHistoryServiceActionFactory.createChangedPillNumberAction(
       pillSheetGroupID: pillSheetGroup.id,
-      before: activedPillSheet,
+      before: activePillSheet,
       after: updatedPillSheets[pillSheetPageIndex],
       beforePillSheetGroup: pillSheetGroup,
       afterPillSheetGroup: updatedPillSheetGroup,

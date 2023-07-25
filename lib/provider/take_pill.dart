@@ -34,15 +34,15 @@ class TakePill {
   Future<PillSheetGroup?> call({
     required DateTime takenDate,
     required PillSheetGroup pillSheetGroup,
-    required PillSheet activedPillSheet,
+    required PillSheet activePillSheet,
     required bool isQuickRecord,
   }) async {
-    if (activedPillSheet.todayPillsAreAlreadyTaken) {
+    if (activePillSheet.todayPillsAreAlreadyTaken) {
       return null;
     }
 
     final updatedPillSheets = pillSheetGroup.pillSheets.map((pillSheet) {
-      if (pillSheet.groupIndex > activedPillSheet.groupIndex) {
+      if (pillSheet.groupIndex > activePillSheet.groupIndex) {
         return pillSheet;
       }
       if (pillSheet.isEnded) {
