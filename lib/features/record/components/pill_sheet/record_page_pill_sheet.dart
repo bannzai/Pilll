@@ -101,11 +101,12 @@ class RecordPagePillSheet extends HookConsumerWidget {
         if (pillSheet.todayPillIndex < pillIndexIntoPillSheet) {
           return null;
         }
-        if (pillSheet.pillTakenCount > 1) {
-          return pillSheet.pillTakenCount - pillSheet.pills[pillIndexIntoPillSheet].pillTakens.length;
-        } else {
+        if (pillSheet.pillTakenCount <= 1) {
           return null;
         }
+
+        final diff = pillSheet.pillTakenCount - pillSheet.pills[pillIndexIntoPillSheet].pillTakens.length;
+        return diff == 0 ? null : diff;
       }();
       return SizedBox(
         width: PillSheetViewLayout.componentWidth,
