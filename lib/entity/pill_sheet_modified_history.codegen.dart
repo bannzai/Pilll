@@ -56,7 +56,6 @@ class PillSheetModifiedHistory with _$PillSheetModifiedHistory {
     // ============ BEGIN: Added since v1 ============
     @JsonKey(includeIfNull: false, toJson: toNull) required String? id,
     required String actionType,
-    required PillSheetModifiedHistoryValue value,
     @JsonKey(
       fromJson: NonNullTimestampConverter.timestampToDateTime,
       toJson: NonNullTimestampConverter.dateTimeToTimestamp,
@@ -82,6 +81,7 @@ class PillSheetModifiedHistory with _$PillSheetModifiedHistory {
     // ============ END: Added since v2 ============
 
     // The below properties are deprecated and added since v1.
+    required PillSheetModifiedHistoryValue value,
     // This is deprecated property. TODO: delete after 2024/01/01
     // Instead of beforePillSheetID and afterPillSheetID
     required String? pillSheetID,
