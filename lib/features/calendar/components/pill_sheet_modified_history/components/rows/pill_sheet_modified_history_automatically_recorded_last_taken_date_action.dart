@@ -6,7 +6,8 @@ import 'package:pilll/features/calendar/components/pill_sheet_modified_history/c
 import 'package:pilll/features/calendar/components/pill_sheet_modified_history/components/core/row_layout.dart';
 import 'package:pilll/entity/pill_sheet_modified_history_value.codegen.dart';
 
-class PillSheetModifiedHistoryAutomaticallyRecordedLastTakenDateAction extends StatelessWidget {
+class PillSheetModifiedHistoryAutomaticallyRecordedLastTakenDateAction
+    extends StatelessWidget {
   final DateTime estimatedEventCausingDate;
   final AutomaticallyRecordedLastTakenDateValue? value;
 
@@ -21,57 +22,11 @@ class PillSheetModifiedHistoryAutomaticallyRecordedLastTakenDateAction extends S
     if (value == null) {
       return Container();
     }
-    return _PillSheetModifiedHistoryAutomaticallyRecordedLastTakenDateAction(
-      estimatedEventCausingDate: estimatedEventCausingDate,
-      effectiveNumbersOrHyphen: EffectivePillNumber(
-        effectivePillNumber: PillSheetModifiedHistoryDateEffectivePillNumber.autoTaken(
-          beforeLastTakenPillNumber: value.beforeLastTakenPillNumber,
-          afterLastTakenPillNumber: value.afterLastTakenPillNumber,
-        ),
-      ),
-    );
-  }
-}
-
-class PillSheetModifiedHistoryAutomaticallyRecordedLastTakenDateActionV2 extends StatelessWidget {
-  final DateTime estimatedEventCausingDate;
-  final int beforeLastTakenPillNumber;
-  final int afterLastTakenPillNumber;
-
-  const PillSheetModifiedHistoryAutomaticallyRecordedLastTakenDateActionV2({
-    Key? key,
-    required this.estimatedEventCausingDate,
-    required this.beforeLastTakenPillNumber,
-    required this.afterLastTakenPillNumber,
-  }) : super(key: key);
-  @override
-  Widget build(BuildContext context) {
-    return _PillSheetModifiedHistoryAutomaticallyRecordedLastTakenDateAction(
-      estimatedEventCausingDate: estimatedEventCausingDate,
-      effectiveNumbersOrHyphen: EffectivePillNumber(
-        effectivePillNumber: PillSheetModifiedHistoryDateEffectivePillNumber.autoTaken(
-          beforeLastTakenPillNumber: beforeLastTakenPillNumber,
-          afterLastTakenPillNumber: afterLastTakenPillNumber,
-        ),
-      ),
-    );
-  }
-}
-
-class _PillSheetModifiedHistoryAutomaticallyRecordedLastTakenDateAction extends StatelessWidget {
-  const _PillSheetModifiedHistoryAutomaticallyRecordedLastTakenDateAction({
-    required this.estimatedEventCausingDate,
-    required this.effectiveNumbersOrHyphen,
-  });
-
-  final DateTime estimatedEventCausingDate;
-  final Widget effectiveNumbersOrHyphen;
-
-  @override
-  Widget build(BuildContext context) {
     return RowLayout(
       day: Day(estimatedEventCausingDate: estimatedEventCausingDate),
-      effectiveNumbersOrHyphen: effectiveNumbersOrHyphen,
+      effectiveNumbersOrHyphen: EffectivePillNumber(
+          effectivePillNumber:
+              PillSheetModifiedHistoryDateEffectivePillNumber.autoTaken(value)),
       detail: const Text(
         "-",
         style: TextStyle(
