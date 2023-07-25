@@ -144,9 +144,7 @@ class PillSheet with _$PillSheet {
       return 0;
     }
 
-    // lastCompletedPillTakenDateを用意している箇所でlastWhereOrNullの中で空配列じゃ無いことはチェックをしているのでlastでアクセス
-    final lastPillTakenDate = lastCompletedPill.pillTakens.last.takenDateTime;
-    return pillNumberFor(targetDate: lastPillTakenDate);
+    return lastCompletedPill.index + 1;
   }
 
   // lastTakenPillNumber は最後に服了したピルの番号を返す。lastcompletedPillNumberとは違い完了はしてな区ても良い
@@ -169,9 +167,7 @@ class PillSheet with _$PillSheet {
       return 0;
     }
 
-    // lastCompletedPillTakenDateを用意している箇所でlastWhereOrNullの中で空配列じゃ無いことはチェックをしているのでlastでアクセス
-    final lastPillTakenDate = lastCompletedPill.pillTakens.last.takenDateTime;
-    return pillNumberFor(targetDate: lastPillTakenDate);
+    return lastCompletedPill.index + 1;
   }
 
   bool get todayPillsAreAlreadyTaken {

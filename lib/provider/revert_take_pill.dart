@@ -1,3 +1,4 @@
+import 'package:flutter/cupertino.dart';
 import 'package:pilll/entity/pill_sheet.codegen.dart';
 import 'package:pilll/entity/pill_sheet_modified_history.codegen.dart';
 import 'package:pilll/provider/batch.dart';
@@ -43,6 +44,7 @@ class RevertTakePill {
 
     final targetPillSheet = pillSheetGroup.pillSheets[pageIndex];
     final revertDate = targetPillSheet.pillTakenDateFromPillNumber(targetRevertPillNumberIntoPillSheet).subtract(const Duration(days: 1)).date();
+    debugPrint("revertDate: $revertDate");
 
     final updatedPillSheets = pillSheetGroup.pillSheets.map((pillSheet) {
       final lastTakenDate = pillSheet.lastTakenDate;
@@ -109,11 +111,13 @@ extension RevertedPillSheet on PillSheet {
         // このpillの日付(begin + pill.index)が対象の日付よりも前の場合は何もしない
         final dateOfPill = beginingDate.date().add(Duration(days: pill.index));
         if (dateOfPill.isBefore(toDate) || isSameDay(dateOfPill, toDate)) {
+          debugPrint("early retrun pill: ${pill.index}");
           return pill;
         }
 
         // NOTE: !(isSameDay(date.date() ,today()) && pill.index == todayPillIndex)
         // OR pill.index != todayPillIndex。これらの場合は全ての服用記録を消す
+        debugPrint("clear pill: ${pill.index}");
         return pill.copyWith(pillTakens: []);
       }).toList(),
     );
