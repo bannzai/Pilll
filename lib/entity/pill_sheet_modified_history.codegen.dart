@@ -163,9 +163,9 @@ abstract class PillSheetModifiedHistoryServiceActionFactory {
       value: PillSheetModifiedHistoryValue(
         takenPill: TakenPillValue(
           afterLastTakenDate: afterLastTakenDate,
-          afterLastTakenPillNumber: after.lastCompletedPillNumber,
+          afterLastTakenPillNumber: after.lastTakenPillNumber,
           beforeLastTakenDate: before.lastTakenDate,
-          beforeLastTakenPillNumber: before.lastCompletedPillNumber,
+          beforeLastTakenPillNumber: before.lastTakenPillNumber,
           isQuickRecord: isQuickRecord,
         ),
       ),
@@ -204,9 +204,9 @@ abstract class PillSheetModifiedHistoryServiceActionFactory {
       value: PillSheetModifiedHistoryValue(
         revertTakenPill: RevertTakenPillValue(
           afterLastTakenDate: afterLastTakenDate,
-          afterLastTakenPillNumber: after.lastCompletedPillNumber,
+          afterLastTakenPillNumber: after.lastTakenPillNumber,
           beforeLastTakenDate: beforeLastTakenDate,
-          beforeLastTakenPillNumber: before.lastCompletedPillNumber,
+          beforeLastTakenPillNumber: before.lastTakenPillNumber,
         ),
       ),
       after: after,
