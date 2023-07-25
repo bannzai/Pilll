@@ -75,7 +75,6 @@ class PillSheetModifiedHistoryList extends StatelessWidget {
             dirtyIndex += 1;
             final Widget body;
             if (history.version == "v2") {
-              // TODO: Use sealed class
               body = switch (history.enumActionType) {
                 PillSheetModifiedActionType.createdPillSheet => PillSheetModifiedHistoryCreatePillSheetAction(
                     estimatedEventCausingDate: history.estimatedEventCausingDate,
