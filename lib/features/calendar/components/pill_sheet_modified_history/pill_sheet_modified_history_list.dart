@@ -60,16 +60,12 @@ class PillSheetModifiedHistoryList extends StatelessWidget {
       ),
       const SizedBox(height: 16),
       ...model.pillSheetModifiedHistories
+          .where((history) => history.enumActionType != null)
           .map((history) {
-            final actionType = history.enumActionType;
-            if (actionType == null) {
-              return Container();
-            }
-
             var isNecessaryDots = false;
             if (dirtyIndex != 0) {
               final previousHistory = model.pillSheetModifiedHistories[dirtyIndex - 1];
-              final diff = daysBetween(previousHistory.estimatedEventCausingDate, history.estimatedEventCausingDate)
+              final diff = daysBetween(previousHistory.estimatedEventCausingDate, history.estimatedEventCausingDate);
               if (diff > 1) {
                 isNecessaryDots = true;
               }
@@ -78,7 +74,9 @@ class PillSheetModifiedHistoryList extends StatelessWidget {
             dirtyIndex += 1;
             // ignore: prefer_function_declarations_over_variables
             final body = () {
-              switch (actionType) {
+              switch (history.enumActionType) {
+                case null:
+                  return Container();
                 case PillSheetModifiedActionType.createdPillSheet:
                   return PillSheetModifiedHistoryCreatePillSheetAction(
                     estimatedEventCausingDate: history.estimatedEventCausingDate,
