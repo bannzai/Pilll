@@ -66,10 +66,6 @@ class PillSheetModifiedHistory with _$PillSheetModifiedHistory {
       toJson: NonNullTimestampConverter.dateTimeToTimestamp,
     )
     required DateTime createdAt,
-    @JsonKey(
-      fromJson: TimestampConverter.timestampToDateTime,
-      toJson: TimestampConverter.dateTimeToTimestamp,
-    )
     // ============ END: Added since v1 ============
 
     // ============ BEGIN: Added since v2 ============
@@ -77,6 +73,10 @@ class PillSheetModifiedHistory with _$PillSheetModifiedHistory {
     // Because, actions for createdPillSheet and deletedPillSheet are not exists target single pill sheet
     required PillSheetGroup? beforePillSheetGroup,
     required PillSheetGroup? afterPillSheetGroup,
+    @JsonKey(
+      fromJson: TimestampConverter.timestampToDateTime,
+      toJson: TimestampConverter.dateTimeToTimestamp,
+    )
     DateTime? timeToLive,
     // ============ END: Added since v2 ============
 

@@ -153,7 +153,7 @@ class RevertTakenPillValue with _$RevertTakenPillValue {
   @JsonSerializable(explicitToJson: true)
   const factory RevertTakenPillValue({
     // The below properties are deprecated and added since v1.
-    // This is deprecated property. TODO: delete after 2024-03-01
+   // This is deprecated property. TODO: delete after 2024-03-01
     @JsonKey(
       fromJson: TimestampConverter.timestampToDateTime,
       toJson: TimestampConverter.dateTimeToTimestamp,
