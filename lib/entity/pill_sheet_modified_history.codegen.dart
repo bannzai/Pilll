@@ -136,7 +136,7 @@ abstract class PillSheetModifiedHistoryServiceActionFactory {
       after: after,
       estimatedEventCausingDate: now(),
       createdAt: now(),
-      timeToLive: now().add(const Duration(days: 365)),
+      timeToLive: now().add(const Duration(days: 180)),
     );
   }
 
