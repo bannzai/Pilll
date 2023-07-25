@@ -1,5 +1,6 @@
 import 'dart:math';
 
+import 'package:flutter/material.dart';
 import 'package:flutter_test/flutter_test.dart';
 import 'package:mockito/mockito.dart';
 import 'package:pilll/entity/pill.codegen.dart';
@@ -76,13 +77,13 @@ void main() {
   }
 
   group("#pillSheet.takenPillSheet", () {
-    final activePillSheetBeginDate = today();
+    final activePillSheetBeginDate = mockNow.date();
 
     setUp(() {
       prepare(activePillSheetBeginDate: activePillSheetBeginDate, activePillSheetLastTakenDate: null);
     });
     group("pillTakenCount = 1", () {
-      test("take pill", () {
+      test("未服用から服用", () {
         final lastTakenPillIndex = max(0, activedPillSheet.lastCompletedPillNumber - 1);
         final takenDate = activePillSheetBeginDate;
         final updatedActivePillSheet = activedPillSheet.takenPillSheet(takenDate);
@@ -100,12 +101,17 @@ void main() {
               ],
             ),
         );
+        // 事前条件
+        expect(activedPillSheet.lastCompletedPillNumber, 0);
+        // テスト内容
         expect(updatedActivePillSheet.pills, expected.pills);
         expect(updatedActivePillSheet, expected);
+        expect(updatedActivePillSheet.todayPillsAreAlreadyTaken, true);
+        expect(updatedActivePillSheet.anyTodayPillsAreAlreadyTaken, true);
       });
     });
     group("pillTakenCount = 2", () {
-      test("take pill", () {
+      test("未服用から服用", () {
         activedPillSheet = activedPillSheet.copyWith(pillTakenCount: 2);
         final lastTakenPillIndex = max(0, activedPillSheet.lastCompletedPillNumber - 1);
 
@@ -128,14 +134,67 @@ void main() {
               ],
             ),
         );
+        // 事前条件
+        expect(activedPillSheet.lastCompletedPillNumber, 0);
+        // テスト内容
         expect(updatedActivePillSheet.pills, expected.pills);
         expect(updatedActivePillSheet, expected);
+        expect(updatedActivePillSheet.todayPillsAreAlreadyTaken, false);
+        expect(updatedActivePillSheet.anyTodayPillsAreAlreadyTaken, true);
+      });
+
+      test("1度服用済みから2度目の服用", () {
+        final takenDate = activePillSheetBeginDate;
+        final lastTakenPillIndex = max(0, activedPillSheet.lastCompletedPillNumber - 1);
+        // 1度服用済みにする
+        activedPillSheet = activedPillSheet.copyWith(
+          pillTakenCount: 2,
+          lastTakenDate: takenDate,
+          pills: [...activedPillSheet.pills]..replaceRange(
+              lastTakenPillIndex,
+              1,
+              [
+                Pill(
+                    index: lastTakenPillIndex,
+                    createdDateTime: now(),
+                    updatedDateTime: now(),
+                    pillTakens: [PillTaken(takenDateTime: takenDate, createdDateTime: now(), updatedDateTime: now(), isAutomaticallyRecorded: false)])
+              ],
+            ),
+        );
+
+        final updatedActivePillSheet = activedPillSheet.takenPillSheet(takenDate);
+        final expected = activedPillSheet.copyWith(
+          lastTakenDate: takenDate,
+          pills: [...activedPillSheet.pills]..replaceRange(
+              lastTakenPillIndex,
+              1,
+              [
+                Pill(
+                  index: lastTakenPillIndex,
+                  createdDateTime: now(),
+                  updatedDateTime: now(),
+                  pillTakens: [
+                    PillTaken(takenDateTime: takenDate, createdDateTime: now(), updatedDateTime: now(), isAutomaticallyRecorded: false),
+                    PillTaken(takenDateTime: takenDate, createdDateTime: now(), updatedDateTime: now(), isAutomaticallyRecorded: false),
+                  ],
+                )
+              ],
+            ),
+        );
+        // 事前条件
+        expect(activedPillSheet.lastCompletedPillNumber, 0);
+        // テスト内容
+        expect(updatedActivePillSheet.pills, expected.pills);
+        expect(updatedActivePillSheet, expected);
+        expect(updatedActivePillSheet.todayPillsAreAlreadyTaken, true);
+        expect(updatedActivePillSheet.anyTodayPillsAreAlreadyTaken, true);
       });
     });
   });
 
   group("#TakePill", () {
-    final activePillSheetBeginDate = today();
+    final activePillSheetBeginDate = mockNow.date();
 
     setUp(() {
       prepare(activePillSheetBeginDate: activePillSheetBeginDate, activePillSheetLastTakenDate: null);

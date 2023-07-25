@@ -139,13 +139,13 @@ class PillSheet with _$PillSheet {
     }
 
     // lastTakenDate is not nullのチェックをしていてこの変数がnullのはずは無いが、将来的にlastTakenDateは消える可能性はあるのでこのロジックは真っ当なチェックになる
-    final lastCompletedPillTakenDate = pills.lastWhereOrNull((element) => element.pillTakens.length == pillTakenCount);
-    if (lastCompletedPillTakenDate == null) {
+    final lastCompletedPill = pills.lastWhereOrNull((element) => element.pillTakens.length == pillTakenCount);
+    if (lastCompletedPill == null) {
       return 0;
     }
 
     // lastCompletedPillTakenDateを用意している箇所でlastWhereOrNullの中で空配列じゃ無いことはチェックをしているのでlastでアクセス
-    final lastPillTakenDate = lastCompletedPillTakenDate.pillTakens.last.takenDateTime;
+    final lastPillTakenDate = lastCompletedPill.pillTakens.last.takenDateTime;
     return pillSheetPillNumber(pillSheet: this, targetDate: lastPillTakenDate);
   }
 
