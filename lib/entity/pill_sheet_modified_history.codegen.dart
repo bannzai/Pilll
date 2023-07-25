@@ -55,20 +55,6 @@ class PillSheetModifiedHistory with _$PillSheetModifiedHistory {
     @JsonKey(includeIfNull: false, toJson: toNull) required String? id,
     required String actionType,
     required PillSheetModifiedHistoryValue value,
-    // This is deprecated property. TODO: delete after 2024/01/01
-    // Instead of beforePillSheetID and afterPillSheetID
-    required String? pillSheetID,
-    // This is deprecated property. TODO: delete after 2024/01/01
-    // There are new properties for pill_sheet grouping. So it's all optional
-    required String? pillSheetGroupID,
-    required String? beforePillSheetID,
-    required String? afterPillSheetID,
-    // This is deprecated property. TODO: delete after 2024/01/01
-    // Instead of beforePillSheetGroup and afterPillSheetGroup
-    // before and after is nullable
-    // Because, actions for createdPillSheet and deletedPillSheet are not exists target single pill sheet
-    required PillSheet? before,
-    required PillSheet? after,
     // beforePillSheetGroup and afterPillSheetGroup is nullable
     // Because, actions for createdPillSheet and deletedPillSheet are not exists target single pill sheet
     required PillSheetGroup? beforePillSheetGroup,
@@ -88,6 +74,22 @@ class PillSheetModifiedHistory with _$PillSheetModifiedHistory {
       toJson: TimestampConverter.dateTimeToTimestamp,
     )
     DateTime? timeToLive,
+
+    // For v1 deprecated properties.
+    // This is deprecated property. TODO: delete after 2024/01/01
+    // Instead of beforePillSheetID and afterPillSheetID
+    required String? pillSheetID,
+    // This is deprecated property. TODO: delete after 2024/01/01
+    // There are new properties for pill_sheet grouping. So it's all optional
+    required String? pillSheetGroupID,
+    required String? beforePillSheetID,
+    required String? afterPillSheetID,
+    // This is deprecated property. TODO: delete after 2024/01/01
+    // Instead of beforePillSheetGroup and afterPillSheetGroup
+    // before and after is nullable
+    // Because, actions for createdPillSheet and deletedPillSheet are not exists target single pill sheet
+    required PillSheet? before,
+    required PillSheet? after,
   }) = _PillSheetModifiedHistory;
   const PillSheetModifiedHistory._();
 
