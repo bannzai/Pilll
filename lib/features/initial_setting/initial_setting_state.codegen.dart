@@ -14,7 +14,7 @@ part 'initial_setting_state.codegen.freezed.dart';
 class InitialSettingTodayPillNumber with _$InitialSettingTodayPillNumber {
   const factory InitialSettingTodayPillNumber({
     @Default(0) int pageIndex,
-    @Default(0) int pillNumberIntoPillSheet,
+    @Default(0) int pillNumberInPillSheet,
   }) = _InitialSettingTodayPillNumber;
 }
 
@@ -115,7 +115,7 @@ class InitialSettingState with _$InitialSettingState {
         passedTotalCount = passedTotalCountElement.reduce((value, element) => value + element);
       }
 
-      return today().subtract(Duration(days: passedTotalCount + (todayPillNumber.pillNumberIntoPillSheet - 1)));
+      return today().subtract(Duration(days: passedTotalCount + (todayPillNumber.pillNumberInPillSheet - 1)));
     } else {
       // Right Side from todayPillNumber.pageIndex
       final beforePillSheetBeginingDate = _beginingDate(
@@ -133,7 +133,7 @@ class InitialSettingState with _$InitialSettingState {
     required InitialSettingTodayPillNumber todayPillNumber,
     required List<PillSheetType> pillSheetTypes,
   }) {
-    if (pageIndex == 0 && todayPillNumber.pageIndex == 0 && todayPillNumber.pillNumberIntoPillSheet == 1) {
+    if (pageIndex == 0 && todayPillNumber.pageIndex == 0 && todayPillNumber.pillNumberInPillSheet == 1) {
       return null;
     }
     final pillSheetType = pillSheetTypes[pageIndex];
@@ -153,7 +153,7 @@ class InitialSettingState with _$InitialSettingState {
         pageIndex: pageIndex,
         todayPillNumber: todayPillNumber,
         pillSheetTypes: pillSheetTypes,
-      ).add(Duration(days: todayPillNumber.pillNumberIntoPillSheet - 2));
+      ).add(Duration(days: todayPillNumber.pillNumberInPillSheet - 2));
     }
   }
 
@@ -167,6 +167,6 @@ class InitialSettingState with _$InitialSettingState {
     if (todayPillNumber?.pageIndex != pageIndex) {
       return null;
     }
-    return todayPillNumber?.pillNumberIntoPillSheet;
+    return todayPillNumber?.pillNumberInPillSheet;
   }
 }

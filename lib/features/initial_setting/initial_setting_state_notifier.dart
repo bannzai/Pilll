@@ -91,12 +91,12 @@ class InitialSettingStateNotifier extends StateNotifier<InitialSettingState> {
 
   void setTodayPillNumber({
     required int pageIndex,
-    required int pillNumberIntoPillSheet,
+    required int pillNumberInPillSheet,
   }) {
     state = state.copyWith(
       todayPillNumber: InitialSettingTodayPillNumber(
         pageIndex: pageIndex,
-        pillNumberIntoPillSheet: pillNumberIntoPillSheet,
+        pillNumberInPillSheet: pillNumberInPillSheet,
       ),
     );
   }

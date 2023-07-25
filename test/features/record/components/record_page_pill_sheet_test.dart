@@ -55,22 +55,22 @@ void main() {
         );
         final pillSheetGroup = PillSheetGroup(pillSheetIDs: ["pill_sheet_id"], pillSheets: [pillSheet], createdAt: today());
         for (int i = 0; i < 28; i++) {
-          final pillNumberIntoPillSheet = i + 1;
+          final pillNumberInPillSheet = i + 1;
           final widget = RecordPagePillSheet.textOfPillNumber(
             pillSheetGroup: pillSheetGroup,
             pillSheet: pillSheet,
-            pillNumberIntoPillSheet: pillNumberIntoPillSheet,
+            pillNumberInPillSheet: pillNumberInPillSheet,
             pageIndex: 0,
             setting: setting,
             premiumAndTrial: FakePremiumAndTrial(fakeIsPremium: true, fakeIsTrial: true),
           );
 
-          if (pillNumberIntoPillSheet < pillNumberForFromMenstruation) {
-            expect(widget, isA<PlainPillNumber>(), reason: "pillNumberIntoPillSheet: $pillNumberIntoPillSheet");
-          } else if (pillNumberIntoPillSheet < pillNumberForFromMenstruation + durationMenstruation) {
-            expect(widget, isA<MenstruationPillNumber>(), reason: "pillNumberIntoPillSheet: $pillNumberIntoPillSheet");
+          if (pillNumberInPillSheet < pillNumberForFromMenstruation) {
+            expect(widget, isA<PlainPillNumber>(), reason: "pillNumberInPillSheet: $pillNumberInPillSheet");
+          } else if (pillNumberInPillSheet < pillNumberForFromMenstruation + durationMenstruation) {
+            expect(widget, isA<MenstruationPillNumber>(), reason: "pillNumberInPillSheet: $pillNumberInPillSheet");
           } else {
-            expect(widget, isA<PlainPillNumber>(), reason: "pillNumberIntoPillSheet: $pillNumberIntoPillSheet");
+            expect(widget, isA<PlainPillNumber>(), reason: "pillNumberInPillSheet: $pillNumberInPillSheet");
           }
         }
       });
@@ -111,21 +111,21 @@ void main() {
         );
 
         for (int i = 0; i < 28; i++) {
-          final pillNumberIntoPillSheet = i + 1;
+          final pillNumberInPillSheet = i + 1;
           final widget = RecordPagePillSheet.textOfPillNumber(
               premiumAndTrial: FakePremiumAndTrial(fakeIsPremium: false, fakeIsTrial: false),
               pillSheetGroup: pillSheetGroup,
               pillSheet: pillSheet,
-              pillNumberIntoPillSheet: pillNumberIntoPillSheet,
+              pillNumberInPillSheet: pillNumberInPillSheet,
               pageIndex: 0,
               setting: setting);
 
-          if (pillNumberIntoPillSheet < pillNumberForFromMenstruation) {
-            expect(widget, isA<PlainPillNumber>(), reason: "pillNumberIntoPillSheet: $pillNumberIntoPillSheet");
-          } else if (pillNumberIntoPillSheet < pillNumberForFromMenstruation + durationMenstruation) {
-            expect(widget, isA<PlainPillNumber>(), reason: "pillNumberIntoPillSheet: $pillNumberIntoPillSheet");
+          if (pillNumberInPillSheet < pillNumberForFromMenstruation) {
+            expect(widget, isA<PlainPillNumber>(), reason: "pillNumberInPillSheet: $pillNumberInPillSheet");
+          } else if (pillNumberInPillSheet < pillNumberForFromMenstruation + durationMenstruation) {
+            expect(widget, isA<PlainPillNumber>(), reason: "pillNumberInPillSheet: $pillNumberInPillSheet");
           } else {
-            expect(widget, isA<PlainPillNumber>(), reason: "pillNumberIntoPillSheet: $pillNumberIntoPillSheet");
+            expect(widget, isA<PlainPillNumber>(), reason: "pillNumberInPillSheet: $pillNumberInPillSheet");
           }
         }
       });
@@ -161,21 +161,21 @@ void main() {
         final pillSheetGroup = PillSheetGroup(pillSheetIDs: ["pill_sheet_id"], pillSheets: [pillSheet], createdAt: today());
 
         for (int i = 0; i < 28; i++) {
-          final pillNumberIntoPillSheet = i + 1;
+          final pillNumberInPillSheet = i + 1;
           final widget = RecordPagePillSheet.textOfPillNumber(
               premiumAndTrial: FakePremiumAndTrial(fakeIsPremium: true, fakeIsTrial: true),
               pillSheetGroup: pillSheetGroup,
               pillSheet: pillSheet,
-              pillNumberIntoPillSheet: pillNumberIntoPillSheet,
+              pillNumberInPillSheet: pillNumberInPillSheet,
               pageIndex: 0,
               setting: setting);
 
-          if (pillNumberIntoPillSheet < pillNumberForFromMenstruation) {
-            expect(widget, isA<PlainPillNumber>(), reason: "pillNumberIntoPillSheet: $pillNumberIntoPillSheet");
-          } else if (pillNumberIntoPillSheet < pillNumberForFromMenstruation + durationMenstruation) {
-            expect(widget, isA<PlainPillNumber>(), reason: "pillNumberIntoPillSheet: $pillNumberIntoPillSheet");
+          if (pillNumberInPillSheet < pillNumberForFromMenstruation) {
+            expect(widget, isA<PlainPillNumber>(), reason: "pillNumberInPillSheet: $pillNumberInPillSheet");
+          } else if (pillNumberInPillSheet < pillNumberForFromMenstruation + durationMenstruation) {
+            expect(widget, isA<PlainPillNumber>(), reason: "pillNumberInPillSheet: $pillNumberInPillSheet");
           } else {
-            expect(widget, isA<PlainPillNumber>(), reason: "pillNumberIntoPillSheet: $pillNumberIntoPillSheet");
+            expect(widget, isA<PlainPillNumber>(), reason: "pillNumberInPillSheet: $pillNumberInPillSheet");
           }
         }
       });
@@ -214,21 +214,21 @@ void main() {
         final pillSheetGroup = PillSheetGroup(pillSheetIDs: ["pill_sheet_id"], pillSheets: [pillSheet], createdAt: today());
 
         for (int i = 0; i < 28; i++) {
-          final pillNumberIntoPillSheet = i + 1;
+          final pillNumberInPillSheet = i + 1;
           final widget = RecordPagePillSheet.textOfPillNumber(
               premiumAndTrial: FakePremiumAndTrial(fakeIsPremium: true, fakeIsTrial: true),
               pillSheetGroup: pillSheetGroup,
               pillSheet: pillSheet,
-              pillNumberIntoPillSheet: pillNumberIntoPillSheet,
+              pillNumberInPillSheet: pillNumberInPillSheet,
               pageIndex: 0,
               setting: setting);
 
-          if (pillNumberIntoPillSheet < pillNumberForFromMenstruation) {
-            expect(widget, isA<PlainPillNumber>(), reason: "pillNumberIntoPillSheet: $pillNumberIntoPillSheet");
-          } else if (pillNumberIntoPillSheet < pillNumberForFromMenstruation + durationMenstruation) {
-            expect(widget, isA<MenstruationPillNumber>(), reason: "pillNumberIntoPillSheet: $pillNumberIntoPillSheet");
+          if (pillNumberInPillSheet < pillNumberForFromMenstruation) {
+            expect(widget, isA<PlainPillNumber>(), reason: "pillNumberInPillSheet: $pillNumberInPillSheet");
+          } else if (pillNumberInPillSheet < pillNumberForFromMenstruation + durationMenstruation) {
+            expect(widget, isA<MenstruationPillNumber>(), reason: "pillNumberInPillSheet: $pillNumberInPillSheet");
           } else {
-            expect(widget, isA<PlainPillNumber>(), reason: "pillNumberIntoPillSheet: $pillNumberIntoPillSheet");
+            expect(widget, isA<PlainPillNumber>(), reason: "pillNumberInPillSheet: $pillNumberInPillSheet");
           }
         }
       });
@@ -264,21 +264,21 @@ void main() {
         final pillSheetGroup = PillSheetGroup(pillSheetIDs: ["pill_sheet_id"], pillSheets: [pillSheet], createdAt: today());
 
         for (int i = 0; i < 28; i++) {
-          final pillNumberIntoPillSheet = i + 1;
+          final pillNumberInPillSheet = i + 1;
           final widget = RecordPagePillSheet.textOfPillNumber(
               premiumAndTrial: FakePremiumAndTrial(fakeIsPremium: false, fakeIsTrial: false),
               pillSheetGroup: pillSheetGroup,
               pillSheet: pillSheet,
-              pillNumberIntoPillSheet: pillNumberIntoPillSheet,
+              pillNumberInPillSheet: pillNumberInPillSheet,
               pageIndex: 0,
               setting: setting);
 
-          if (pillNumberIntoPillSheet < pillNumberForFromMenstruation) {
-            expect(widget, isA<PlainPillNumber>(), reason: "pillNumberIntoPillSheet: $pillNumberIntoPillSheet");
-          } else if (pillNumberIntoPillSheet < pillNumberForFromMenstruation + durationMenstruation) {
-            expect(widget, isA<PlainPillNumber>(), reason: "pillNumberIntoPillSheet: $pillNumberIntoPillSheet");
+          if (pillNumberInPillSheet < pillNumberForFromMenstruation) {
+            expect(widget, isA<PlainPillNumber>(), reason: "pillNumberInPillSheet: $pillNumberInPillSheet");
+          } else if (pillNumberInPillSheet < pillNumberForFromMenstruation + durationMenstruation) {
+            expect(widget, isA<PlainPillNumber>(), reason: "pillNumberInPillSheet: $pillNumberInPillSheet");
           } else {
-            expect(widget, isA<PlainPillNumber>(), reason: "pillNumberIntoPillSheet: $pillNumberIntoPillSheet");
+            expect(widget, isA<PlainPillNumber>(), reason: "pillNumberInPillSheet: $pillNumberInPillSheet");
           }
         }
       });
@@ -314,21 +314,21 @@ void main() {
         final pillSheetGroup = PillSheetGroup(pillSheetIDs: ["pill_sheet_id"], pillSheets: [pillSheet], createdAt: today());
 
         for (int i = 0; i < 28; i++) {
-          final pillNumberIntoPillSheet = i + 1;
+          final pillNumberInPillSheet = i + 1;
           final widget = RecordPagePillSheet.textOfPillNumber(
               premiumAndTrial: FakePremiumAndTrial(fakeIsPremium: true, fakeIsTrial: true),
               pillSheetGroup: pillSheetGroup,
               pillSheet: pillSheet,
-              pillNumberIntoPillSheet: pillNumberIntoPillSheet,
+              pillNumberInPillSheet: pillNumberInPillSheet,
               pageIndex: 0,
               setting: setting);
 
-          if (pillNumberIntoPillSheet < pillNumberForFromMenstruation) {
-            expect(widget, isA<PlainPillNumber>(), reason: "pillNumberIntoPillSheet: $pillNumberIntoPillSheet");
-          } else if (pillNumberIntoPillSheet < pillNumberForFromMenstruation + durationMenstruation) {
-            expect(widget, isA<PlainPillNumber>(), reason: "pillNumberIntoPillSheet: $pillNumberIntoPillSheet");
+          if (pillNumberInPillSheet < pillNumberForFromMenstruation) {
+            expect(widget, isA<PlainPillNumber>(), reason: "pillNumberInPillSheet: $pillNumberInPillSheet");
+          } else if (pillNumberInPillSheet < pillNumberForFromMenstruation + durationMenstruation) {
+            expect(widget, isA<PlainPillNumber>(), reason: "pillNumberInPillSheet: $pillNumberInPillSheet");
           } else {
-            expect(widget, isA<PlainPillNumber>(), reason: "pillNumberIntoPillSheet: $pillNumberIntoPillSheet");
+            expect(widget, isA<PlainPillNumber>(), reason: "pillNumberInPillSheet: $pillNumberInPillSheet");
           }
         }
       });
@@ -366,21 +366,21 @@ void main() {
         );
         final pillSheetGroup = PillSheetGroup(pillSheetIDs: ["pill_sheet_id"], pillSheets: [pillSheet], createdAt: today());
         for (int i = 0; i < 28; i++) {
-          final pillNumberIntoPillSheet = i + 1;
+          final pillNumberInPillSheet = i + 1;
           final widget = RecordPagePillSheet.textOfPillNumber(
               premiumAndTrial: FakePremiumAndTrial(fakeIsPremium: true, fakeIsTrial: true),
               pillSheetGroup: pillSheetGroup,
               pillSheet: pillSheet,
-              pillNumberIntoPillSheet: pillNumberIntoPillSheet,
+              pillNumberInPillSheet: pillNumberInPillSheet,
               pageIndex: 0,
               setting: setting);
 
-          if (pillNumberIntoPillSheet < pillNumberForFromMenstruation) {
-            expect(widget, isA<PlainPillNumber>(), reason: "pillNumberIntoPillSheet: $pillNumberIntoPillSheet");
-          } else if (pillNumberIntoPillSheet < pillNumberForFromMenstruation + durationMenstruation) {
-            expect(widget, isA<MenstruationPillNumber>(), reason: "pillNumberIntoPillSheet: $pillNumberIntoPillSheet");
+          if (pillNumberInPillSheet < pillNumberForFromMenstruation) {
+            expect(widget, isA<PlainPillNumber>(), reason: "pillNumberInPillSheet: $pillNumberInPillSheet");
+          } else if (pillNumberInPillSheet < pillNumberForFromMenstruation + durationMenstruation) {
+            expect(widget, isA<MenstruationPillNumber>(), reason: "pillNumberInPillSheet: $pillNumberInPillSheet");
           } else {
-            expect(widget, isA<PlainPillNumber>(), reason: "pillNumberIntoPillSheet: $pillNumberIntoPillSheet");
+            expect(widget, isA<PlainPillNumber>(), reason: "pillNumberInPillSheet: $pillNumberInPillSheet");
           }
         }
       });
@@ -416,21 +416,21 @@ void main() {
         final pillSheetGroup = PillSheetGroup(pillSheetIDs: ["pill_sheet_id"], pillSheets: [pillSheet], createdAt: today());
 
         for (int i = 0; i < 28; i++) {
-          final pillNumberIntoPillSheet = i + 1;
+          final pillNumberInPillSheet = i + 1;
           final widget = RecordPagePillSheet.textOfPillNumber(
               premiumAndTrial: FakePremiumAndTrial(fakeIsPremium: false, fakeIsTrial: false),
               pillSheetGroup: pillSheetGroup,
               pillSheet: pillSheet,
-              pillNumberIntoPillSheet: pillNumberIntoPillSheet,
+              pillNumberInPillSheet: pillNumberInPillSheet,
               pageIndex: 0,
               setting: setting);
 
-          if (pillNumberIntoPillSheet < pillNumberForFromMenstruation) {
-            expect(widget, isA<PlainPillNumber>(), reason: "pillNumberIntoPillSheet: $pillNumberIntoPillSheet");
-          } else if (pillNumberIntoPillSheet < pillNumberForFromMenstruation + durationMenstruation) {
-            expect(widget, isA<PlainPillNumber>(), reason: "pillNumberIntoPillSheet: $pillNumberIntoPillSheet");
+          if (pillNumberInPillSheet < pillNumberForFromMenstruation) {
+            expect(widget, isA<PlainPillNumber>(), reason: "pillNumberInPillSheet: $pillNumberInPillSheet");
+          } else if (pillNumberInPillSheet < pillNumberForFromMenstruation + durationMenstruation) {
+            expect(widget, isA<PlainPillNumber>(), reason: "pillNumberInPillSheet: $pillNumberInPillSheet");
           } else {
-            expect(widget, isA<PlainPillNumber>(), reason: "pillNumberIntoPillSheet: $pillNumberIntoPillSheet");
+            expect(widget, isA<PlainPillNumber>(), reason: "pillNumberInPillSheet: $pillNumberInPillSheet");
           }
         }
       });
@@ -471,21 +471,21 @@ void main() {
         );
 
         for (int i = 0; i < 28; i++) {
-          final pillNumberIntoPillSheet = i + 1;
+          final pillNumberInPillSheet = i + 1;
           final widget = RecordPagePillSheet.textOfPillNumber(
               premiumAndTrial: FakePremiumAndTrial(fakeIsPremium: true, fakeIsTrial: true),
               pillSheetGroup: pillSheetGroup,
               pillSheet: pillSheet,
-              pillNumberIntoPillSheet: pillNumberIntoPillSheet,
+              pillNumberInPillSheet: pillNumberInPillSheet,
               pageIndex: 0,
               setting: setting);
 
-          if (pillNumberIntoPillSheet < pillNumberForFromMenstruation) {
-            expect(widget, isA<PlainPillNumber>(), reason: "pillNumberIntoPillSheet: $pillNumberIntoPillSheet");
-          } else if (pillNumberIntoPillSheet < pillNumberForFromMenstruation + durationMenstruation) {
-            expect(widget, isA<PlainPillNumber>(), reason: "pillNumberIntoPillSheet: $pillNumberIntoPillSheet");
+          if (pillNumberInPillSheet < pillNumberForFromMenstruation) {
+            expect(widget, isA<PlainPillNumber>(), reason: "pillNumberInPillSheet: $pillNumberInPillSheet");
+          } else if (pillNumberInPillSheet < pillNumberForFromMenstruation + durationMenstruation) {
+            expect(widget, isA<PlainPillNumber>(), reason: "pillNumberInPillSheet: $pillNumberInPillSheet");
           } else {
-            expect(widget, isA<PlainPillNumber>(), reason: "pillNumberIntoPillSheet: $pillNumberIntoPillSheet");
+            expect(widget, isA<PlainPillNumber>(), reason: "pillNumberInPillSheet: $pillNumberInPillSheet");
           }
         }
       });
@@ -819,9 +819,9 @@ void main() {
       for (int i = 1; i <= 28; i++) {
         expect(
             RecordPagePillSheet.isContainedMenstruationDuration(
-                pillNumberIntoPillSheet: i, pillSheetGroup: pillSheetGroup, pageIndex: pageIndex, setting: setting),
+                pillNumberInPillSheet: i, pillSheetGroup: pillSheetGroup, pageIndex: pageIndex, setting: setting),
             22 <= i && i <= 24,
-            reason: "print debug informations pillNumberIntoPillSheet is $i");
+            reason: "print debug informations pillNumberInPillSheet is $i");
       }
     });
     test("group has three pill sheet and scheduled menstruation begin No.2 pillSheet", () async {
@@ -868,16 +868,16 @@ void main() {
       final pillSheetTypes = [PillSheetType.pillsheet_28_0, PillSheetType.pillsheet_28_0, PillSheetType.pillsheet_28_0];
 
       for (int pageIndex = 0; pageIndex < pillSheetTypes.length; pageIndex++) {
-        for (int pillNumberIntoPillSheet = 1; pillNumberIntoPillSheet <= pillSheetTypes[pageIndex].totalCount; pillNumberIntoPillSheet++) {
+        for (int pillNumberInPillSheet = 1; pillNumberInPillSheet <= pillSheetTypes[pageIndex].totalCount; pillNumberInPillSheet++) {
           expect(
               RecordPagePillSheet.isContainedMenstruationDuration(
-                pillNumberIntoPillSheet: pillNumberIntoPillSheet,
+                pillNumberInPillSheet: pillNumberInPillSheet,
                 pillSheetGroup: pillSheetGroup,
                 pageIndex: pageIndex,
                 setting: setting,
               ),
-              (pageIndex == 1 && 18 <= pillNumberIntoPillSheet && pillNumberIntoPillSheet <= 20),
-              reason: "print debug informations pillNumberIntoPillSheet is $pillNumberIntoPillSheet, pageIndex: $pageIndex");
+              (pageIndex == 1 && 18 <= pillNumberInPillSheet && pillNumberInPillSheet <= 20),
+              reason: "print debug informations pillNumberInPillSheet is $pillNumberInPillSheet, pageIndex: $pageIndex");
         }
       }
     });
@@ -925,16 +925,16 @@ void main() {
       final pillSheetTypes = [PillSheetType.pillsheet_28_0, PillSheetType.pillsheet_28_0, PillSheetType.pillsheet_28_0];
 
       for (int pageIndex = 0; pageIndex < pillSheetTypes.length; pageIndex++) {
-        for (int pillNumberIntoPillSheet = 1; pillNumberIntoPillSheet <= pillSheetTypes[pageIndex].totalCount; pillNumberIntoPillSheet++) {
+        for (int pillNumberInPillSheet = 1; pillNumberInPillSheet <= pillSheetTypes[pageIndex].totalCount; pillNumberInPillSheet++) {
           expect(
               RecordPagePillSheet.isContainedMenstruationDuration(
-                pillNumberIntoPillSheet: pillNumberIntoPillSheet,
+                pillNumberInPillSheet: pillNumberInPillSheet,
                 pillSheetGroup: pillSheetGroup,
                 pageIndex: pageIndex,
                 setting: setting,
               ),
-              22 <= pillNumberIntoPillSheet && pillNumberIntoPillSheet <= 24,
-              reason: "print debug informations pillNumberIntoPillSheet is $pillNumberIntoPillSheet, pageIndex: $pageIndex");
+              22 <= pillNumberInPillSheet && pillNumberInPillSheet <= 24,
+              reason: "print debug informations pillNumberInPillSheet is $pillNumberInPillSheet, pageIndex: $pageIndex");
         }
       }
     });
@@ -1014,19 +1014,19 @@ void main() {
       ];
 
       for (int pageIndex = 0; pageIndex < pillSheetTypes.length; pageIndex++) {
-        for (int pillNumberIntoPillSheet = 1; pillNumberIntoPillSheet <= pillSheetTypes[pageIndex].totalCount; pillNumberIntoPillSheet++) {
-          final firstMatched = pageIndex == 1 && 18 <= pillNumberIntoPillSheet && pillNumberIntoPillSheet <= 20;
-          final secondMatched = pageIndex == 3 && 8 <= pillNumberIntoPillSheet && pillNumberIntoPillSheet <= 10;
-          final thirdPatched = pageIndex == 4 && 26 <= pillNumberIntoPillSheet && pillNumberIntoPillSheet <= 28;
+        for (int pillNumberInPillSheet = 1; pillNumberInPillSheet <= pillSheetTypes[pageIndex].totalCount; pillNumberInPillSheet++) {
+          final firstMatched = pageIndex == 1 && 18 <= pillNumberInPillSheet && pillNumberInPillSheet <= 20;
+          final secondMatched = pageIndex == 3 && 8 <= pillNumberInPillSheet && pillNumberInPillSheet <= 10;
+          final thirdPatched = pageIndex == 4 && 26 <= pillNumberInPillSheet && pillNumberInPillSheet <= 28;
           expect(
               RecordPagePillSheet.isContainedMenstruationDuration(
-                pillNumberIntoPillSheet: pillNumberIntoPillSheet,
+                pillNumberInPillSheet: pillNumberInPillSheet,
                 pillSheetGroup: pillSheetGroup,
                 pageIndex: pageIndex,
                 setting: setting,
               ),
               firstMatched || secondMatched || thirdPatched,
-              reason: "print debug informations pillNumberIntoPillSheet is $pillNumberIntoPillSheet, pageIndex: $pageIndex");
+              reason: "print debug informations pillNumberInPillSheet is $pillNumberInPillSheet, pageIndex: $pageIndex");
         }
       }
     });
@@ -1105,16 +1105,16 @@ void main() {
       ];
 
       for (int pageIndex = 0; pageIndex < pillSheetTypes.length; pageIndex++) {
-        for (int pillNumberIntoPillSheet = 1; pillNumberIntoPillSheet <= pillSheetTypes[pageIndex].totalCount; pillNumberIntoPillSheet++) {
+        for (int pillNumberInPillSheet = 1; pillNumberInPillSheet <= pillSheetTypes[pageIndex].totalCount; pillNumberInPillSheet++) {
           expect(
               RecordPagePillSheet.isContainedMenstruationDuration(
-                pillNumberIntoPillSheet: pillNumberIntoPillSheet,
+                pillNumberInPillSheet: pillNumberInPillSheet,
                 pillSheetGroup: pillSheetGroup,
                 pageIndex: pageIndex,
                 setting: setting,
               ),
-              pageIndex == 4 && 8 <= pillNumberIntoPillSheet && pillNumberIntoPillSheet <= 10,
-              reason: "print debug informations pillNumberIntoPillSheet is $pillNumberIntoPillSheet, pageIndex: $pageIndex");
+              pageIndex == 4 && 8 <= pillNumberInPillSheet && pillNumberInPillSheet <= 10,
+              reason: "print debug informations pillNumberInPillSheet is $pillNumberInPillSheet, pageIndex: $pageIndex");
         }
       }
     });

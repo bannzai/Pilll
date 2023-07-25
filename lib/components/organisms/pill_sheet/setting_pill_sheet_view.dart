@@ -15,7 +15,7 @@ class SettingPillSheetView extends StatelessWidget {
   final PillSheetAppearanceMode appearanceMode;
   final List<PillSheetType> pillSheetTypes;
   final int? selectedPillNumberIntoPillSheet;
-  final Function(int pageIndex, int pillNumberIntoPillSheet) markSelected;
+  final Function(int pageIndex, int pillNumberInPillSheet) markSelected;
 
   PillSheetType get pillSheetType => pillSheetTypes[pageIndex];
 
@@ -56,7 +56,7 @@ class SettingPillSheetView extends StatelessWidget {
         return Container(width: PillSheetViewLayout.componentWidth);
       }
 
-      final pillNumberIntoPillSheet = PillMarkWithNumberLayoutHelper.calcPillNumberIntoPillSheet(index, lineIndex);
+      final pillNumberInPillSheet = PillMarkWithNumberLayoutHelper.calcPillNumberIntoPillSheet(index, lineIndex);
       final offset = summarizedPillCountWithPillSheetTypesToIndex(pillSheetTypes: pillSheetTypes, toIndex: pageIndex);
 
       return SizedBox(
@@ -65,9 +65,9 @@ class SettingPillSheetView extends StatelessWidget {
           textOfPillNumber: Text(
             () {
               if (appearanceMode == PillSheetAppearanceMode.sequential) {
-                return "${offset + pillNumberIntoPillSheet}";
+                return "${offset + pillNumberInPillSheet}";
               } else {
-                return "$pillNumberIntoPillSheet";
+                return "$pillNumberInPillSheet";
               }
             }(),
             style: const TextStyle(color: PilllColors.weekday),
@@ -77,16 +77,16 @@ class SettingPillSheetView extends StatelessWidget {
             showsRippleAnimation: false,
             showsCheckmark: false,
             pillMarkType: _pillMarkTypeFor(
-              pillNumberIntoPillSheet: pillNumberIntoPillSheet,
+              pillNumberInPillSheet: pillNumberInPillSheet,
             ),
             remainingPillTakenCount: null,
           ),
           onTap: () {
             analytics.logEvent(name: "setting_pill_mark_tapped", parameters: {
-              "number": pillNumberIntoPillSheet,
+              "number": pillNumberInPillSheet,
               "page": pageIndex,
             });
-            markSelected(pageIndex, pillNumberIntoPillSheet);
+            markSelected(pageIndex, pillNumberInPillSheet);
           },
         ),
       );
@@ -94,13 +94,13 @@ class SettingPillSheetView extends StatelessWidget {
   }
 
   PillMarkType _pillMarkTypeFor({
-    required int pillNumberIntoPillSheet,
+    required int pillNumberInPillSheet,
   }) {
-    if (selectedPillNumberIntoPillSheet == pillNumberIntoPillSheet) {
+    if (selectedPillNumberIntoPillSheet == pillNumberInPillSheet) {
       return PillMarkType.selected;
     }
 
-    if (pillSheetType.dosingPeriod < pillNumberIntoPillSheet) {
+    if (pillSheetType.dosingPeriod < pillNumberInPillSheet) {
       return (pillSheetType == PillSheetType.pillsheet_21 || pillSheetType == PillSheetType.pillsheet_24_rest_4)
           ? PillMarkType.rest
           : PillMarkType.fake;

@@ -12,7 +12,7 @@ class SettingTodayPillNumberPillSheetList extends HookConsumerWidget {
   final List<PillSheetType> pillSheetTypes;
   final PillSheetAppearanceMode appearanceMode;
   final int? Function(int pageIndex) selectedTodayPillNumberIntoPillSheet;
-  final Function(int pageIndex, int pillNumberIntoPillSheet) markSelected;
+  final Function(int pageIndex, int pillNumberInPillSheet) markSelected;
 
   const SettingTodayPillNumberPillSheetList({
     Key? key,
@@ -23,16 +23,13 @@ class SettingTodayPillNumberPillSheetList extends HookConsumerWidget {
   }) : super(key: key);
   @override
   Widget build(BuildContext context, WidgetRef ref) {
-    final pageController = usePageController(
-        viewportFraction: (PillSheetViewLayout.width + 20) /
-            MediaQuery.of(context).size.width);
+    final pageController = usePageController(viewportFraction: (PillSheetViewLayout.width + 20) / MediaQuery.of(context).size.width);
 
     return Column(
       children: [
         SizedBox(
           height: PillSheetViewLayout.calcHeight(
-            PillSheetViewLayout.mostLargePillSheetType(pillSheetTypes)
-                .numberOfLineInPillSheet,
+            PillSheetViewLayout.mostLargePillSheetType(pillSheetTypes).numberOfLineInPillSheet,
             true,
           ),
           child: PageView(
@@ -49,15 +46,12 @@ class SettingTodayPillNumberPillSheetList extends HookConsumerWidget {
                       pageIndex: pageIndex,
                       appearanceMode: appearanceMode,
                       pillSheetTypes: pillSheetTypes,
-                      selectedPillNumberIntoPillSheet:
-                          selectedTodayPillNumberIntoPillSheet(pageIndex),
+                      selectedPillNumberIntoPillSheet: selectedTodayPillNumberIntoPillSheet(pageIndex),
                       markSelected: (pageIndex, number) {
-                        analytics.logEvent(
-                            name: "selected_today_number_setting",
-                            parameters: {
-                              "pill_number": number,
-                              "page": pageIndex,
-                            });
+                        analytics.logEvent(name: "selected_today_number_setting", parameters: {
+                          "pill_number": number,
+                          "page": pageIndex,
+                        });
                         markSelected(pageIndex, number);
                       },
                     ),
