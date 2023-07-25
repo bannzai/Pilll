@@ -12,6 +12,7 @@ class PillSheetModifiedHistoryValue with _$PillSheetModifiedHistoryValue {
   const PillSheetModifiedHistoryValue._();
   @JsonSerializable(explicitToJson: true)
   const factory PillSheetModifiedHistoryValue({
+    @Default("v2") version,
     DateTime? beginTrialDate,
     @Default(null) CreatedPillSheetValue? createdPillSheet,
     @Default(null) AutomaticallyRecordedLastTakenDateValue? automaticallyRecordedLastTakenDate,
@@ -38,9 +39,8 @@ class CreatedPillSheetValue with _$CreatedPillSheetValue {
       fromJson: NonNullTimestampConverter.timestampToDateTime,
       toJson: NonNullTimestampConverter.dateTimeToTimestamp,
     )
-        required DateTime pillSheetCreatedAt,
-    @Default([])
-        List<String> pillSheetIDs,
+    required DateTime pillSheetCreatedAt,
+    @Default([]) List<String> pillSheetIDs,
   }) = _CreatedPillSheetValue;
 
   factory CreatedPillSheetValue.fromJson(Map<String, dynamic> json) => _$CreatedPillSheetValueFromJson(json);
@@ -55,12 +55,12 @@ class AutomaticallyRecordedLastTakenDateValue with _$AutomaticallyRecordedLastTa
       fromJson: TimestampConverter.timestampToDateTime,
       toJson: TimestampConverter.dateTimeToTimestamp,
     )
-        DateTime? beforeLastTakenDate,
+    DateTime? beforeLastTakenDate,
     @JsonKey(
       fromJson: NonNullTimestampConverter.timestampToDateTime,
       toJson: NonNullTimestampConverter.dateTimeToTimestamp,
     )
-        required DateTime afterLastTakenDate,
+    required DateTime afterLastTakenDate,
     required int beforeLastTakenPillNumber,
     required int afterLastTakenPillNumber,
   }) = _AutomaticallyRecordedLastTakenDateValue;
@@ -77,9 +77,8 @@ class DeletedPillSheetValue with _$DeletedPillSheetValue {
       fromJson: NonNullTimestampConverter.timestampToDateTime,
       toJson: NonNullTimestampConverter.dateTimeToTimestamp,
     )
-        required DateTime pillSheetDeletedAt,
-    @Default([])
-        List<String> pillSheetIDs,
+    required DateTime pillSheetDeletedAt,
+    @Default([]) List<String> pillSheetIDs,
   }) = _DeletedPillSheetValue;
 
   factory DeletedPillSheetValue.fromJson(Map<String, dynamic> json) => _$DeletedPillSheetValueFromJson(json);
@@ -94,12 +93,12 @@ class TakenPillValue with _$TakenPillValue {
       fromJson: TimestampConverter.timestampToDateTime,
       toJson: TimestampConverter.dateTimeToTimestamp,
     )
-        DateTime? beforeLastTakenDate,
+    DateTime? beforeLastTakenDate,
     @JsonKey(
       fromJson: NonNullTimestampConverter.timestampToDateTime,
       toJson: NonNullTimestampConverter.dateTimeToTimestamp,
     )
-        required DateTime afterLastTakenDate,
+    required DateTime afterLastTakenDate,
     required int beforeLastTakenPillNumber,
     required int afterLastTakenPillNumber,
     // null => 途中から追加したプロパティなので、どちらか不明
@@ -118,18 +117,18 @@ class TakenPillEditedValue with _$TakenPillEditedValue {
       fromJson: NonNullTimestampConverter.timestampToDateTime,
       toJson: NonNullTimestampConverter.dateTimeToTimestamp,
     )
-        required DateTime createdDate,
+    required DateTime createdDate,
     @JsonKey(
       fromJson: NonNullTimestampConverter.timestampToDateTime,
       toJson: NonNullTimestampConverter.dateTimeToTimestamp,
     )
-        required DateTime actualTakenDate,
+    required DateTime actualTakenDate,
     //
     @JsonKey(
       fromJson: NonNullTimestampConverter.timestampToDateTime,
       toJson: NonNullTimestampConverter.dateTimeToTimestamp,
     )
-        required DateTime historyRecordedDate,
+    required DateTime historyRecordedDate,
   }) = _TakenPillEditedValue;
   const TakenPillEditedValue._();
 
@@ -145,12 +144,12 @@ class RevertTakenPillValue with _$RevertTakenPillValue {
       fromJson: TimestampConverter.timestampToDateTime,
       toJson: TimestampConverter.dateTimeToTimestamp,
     )
-        DateTime? beforeLastTakenDate,
+    DateTime? beforeLastTakenDate,
     @JsonKey(
       fromJson: NonNullTimestampConverter.timestampToDateTime,
       toJson: NonNullTimestampConverter.dateTimeToTimestamp,
     )
-        required DateTime afterLastTakenDate,
+    required DateTime afterLastTakenDate,
     required int beforeLastTakenPillNumber,
     required int afterLastTakenPillNumber,
   }) = _RevertTakenPillValue;
@@ -167,18 +166,16 @@ class ChangedPillNumberValue with _$ChangedPillNumberValue {
       fromJson: NonNullTimestampConverter.timestampToDateTime,
       toJson: NonNullTimestampConverter.dateTimeToTimestamp,
     )
-        required DateTime beforeBeginingDate,
+    required DateTime beforeBeginingDate,
     @JsonKey(
       fromJson: NonNullTimestampConverter.timestampToDateTime,
       toJson: NonNullTimestampConverter.dateTimeToTimestamp,
     )
-        required DateTime afterBeginingDate,
+    required DateTime afterBeginingDate,
     required int beforeTodayPillNumber,
     required int afterTodayPillNumber,
-    @Default(1)
-        int beforeGroupIndex,
-    @Default(1)
-        int afterGroupIndex,
+    @Default(1) int beforeGroupIndex,
+    @Default(1) int afterGroupIndex,
   }) = _ChangedPillNumberValue;
 
   factory ChangedPillNumberValue.fromJson(Map<String, dynamic> json) => _$ChangedPillNumberValueFromJson(json);
@@ -193,12 +190,12 @@ class EndedPillSheetValue with _$EndedPillSheetValue {
       fromJson: NonNullTimestampConverter.timestampToDateTime,
       toJson: NonNullTimestampConverter.dateTimeToTimestamp,
     )
-        required DateTime endRecordDate,
+    required DateTime endRecordDate,
     @JsonKey(
       fromJson: NonNullTimestampConverter.timestampToDateTime,
       toJson: NonNullTimestampConverter.dateTimeToTimestamp,
     )
-        required DateTime lastTakenDate,
+    required DateTime lastTakenDate,
   }) = _EndedPillSheetValue;
 
   factory EndedPillSheetValue.fromJson(Map<String, dynamic> json) => _$EndedPillSheetValueFromJson(json);
