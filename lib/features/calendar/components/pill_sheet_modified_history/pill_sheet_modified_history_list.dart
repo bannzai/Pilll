@@ -15,6 +15,7 @@ import 'package:pilll/features/calendar/components/pill_sheet_modified_history/c
 import 'package:pilll/entity/pill_sheet_modified_history.codegen.dart';
 import 'package:pilll/provider/premium_and_trial.codegen.dart';
 import 'package:pilll/utils/datetime/date_compare.dart';
+import 'package:pilll/utils/datetime/day.dart';
 
 class PillSheetModifiedHistoryListModel {
   final DateTime dateTimeOfMonth;
@@ -68,7 +69,7 @@ class PillSheetModifiedHistoryList extends StatelessWidget {
             var isNecessaryDots = false;
             if (dirtyIndex != 0) {
               final previousHistory = model.pillSheetModifiedHistories[dirtyIndex - 1];
-              final diff = previousHistory.estimatedEventCausingDate.day - history.estimatedEventCausingDate.day;
+              final diff = daysBetween(previousHistory.estimatedEventCausingDate, history.estimatedEventCausingDate)
               if (diff > 1) {
                 isNecessaryDots = true;
               }
