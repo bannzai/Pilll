@@ -124,9 +124,9 @@ class PillSheet with _$PillSheet {
     return todayPillNumber - 1;
   }
 
-  // NOTE: if pill sheet is not yet taken, lastTakenNumber return 0;
-  // Because if lastCompletedPillNumber is nullable, ! = null, making it difficult to compare.
-  // lastTakenNumber is often compare todayPillNumber
+  // lastCompletedPillNumber は最後に服用完了したピルの番号を返す。lastTakenPillNumberとの違いは服用を完了しているかどうか
+  // あえてnon nullにしている。なぜならよく比較するのでnullableだと不便だから
+  // まだpillを飲んでない場合は `0` が変える。飲んでいる場合は 1以上の値が入る
   int get lastCompletedPillNumber {
     // TODO: [PillSheet.Pill] そのうち消す。古いPillSheetのPillsは[]になっている
     if (pills.isEmpty) {
@@ -140,6 +140,31 @@ class PillSheet with _$PillSheet {
 
     // lastTakenDate is not nullのチェックをしていてこの変数がnullのはずは無いが、将来的にlastTakenDateは消える可能性はあるのでこのロジックは真っ当なチェックになる
     final lastCompletedPill = pills.lastWhereOrNull((element) => element.pillTakens.length == pillTakenCount);
+    if (lastCompletedPill == null) {
+      return 0;
+    }
+
+    // lastCompletedPillTakenDateを用意している箇所でlastWhereOrNullの中で空配列じゃ無いことはチェックをしているのでlastでアクセス
+    final lastPillTakenDate = lastCompletedPill.pillTakens.last.takenDateTime;
+    return pillSheetPillNumber(pillSheet: this, targetDate: lastPillTakenDate);
+  }
+
+  // lastTakenPillNumber は最後に服了したピルの番号を返す。lastcompletedPillNumberとは違い完了はしてな区ても良い
+  // あえてnon nullにしている。なぜならよく比較するのでnullableだと不便だから
+  // まだpillを飲んでない場合は `0` が変える。飲んでいる場合は 1以上の値が入る
+  int get lastTakenPillNumber {
+    // TODO: [PillSheet.Pill] そのうち消す。古いPillSheetのPillsは[]になっている
+    if (pills.isEmpty) {
+      final lastTakenDate = this.lastTakenDate;
+      if (lastTakenDate == null) {
+        return 0;
+      }
+
+      return pillSheetPillNumber(pillSheet: this, targetDate: lastTakenDate);
+    }
+
+    // lastTakenDate is not nullのチェックをしていてこの変数がnullのはずは無いが、将来的にlastTakenDateは消える可能性はあるのでこのロジックは真っ当なチェックになる
+    final lastCompletedPill = pills.lastWhereOrNull((element) => element.pillTakens.length > 0);
     if (lastCompletedPill == null) {
       return 0;
     }
