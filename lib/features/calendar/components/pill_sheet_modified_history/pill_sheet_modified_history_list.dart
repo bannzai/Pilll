@@ -74,7 +74,7 @@ class PillSheetModifiedHistoryList extends StatelessWidget {
             dirtyIndex += 1;
             final Widget body;
             if (history.version == "v2") {
-              // TODO:
+              // TODO: Use sealed class
               body = switch (history.enumActionType) {
                 PillSheetModifiedActionType.createdPillSheet => PillSheetModifiedHistoryCreatePillSheetAction(
                     estimatedEventCausingDate: history.estimatedEventCausingDate,
@@ -93,8 +93,8 @@ class PillSheetModifiedHistoryList extends StatelessWidget {
                     estimatedEventCausingDate: history.estimatedEventCausingDate,
                     history: history,
                     value: history.value.takenPill,
-                    beforePillSheetGroup: history.beforePillSheetGroup,
-                    afterPillSheetGroup: history.afterPillSheetGroup,
+                    beforePillSheet: history.beforePillSheet,
+                    afterPillSheet: history.afterPillSheet,
                   ),
                 PillSheetModifiedActionType.revertTakenPill => PillSheetModifiedHistoryRevertTakenPillAction(
                     estimatedEventCausingDate: history.estimatedEventCausingDate,
