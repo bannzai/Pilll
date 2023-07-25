@@ -21,10 +21,12 @@ void main() {
   late PillSheet nextPillSheet;
   late PillSheetGroup pillSheetGroup;
 
+  setUp(() {
+    TestWidgetsFlutterBinding.ensureInitialized();
+  });
+
   group("#pillSheet.takenPillSheet", () {
     setUp(() {
-      TestWidgetsFlutterBinding.ensureInitialized();
-
       final mockTodayRepository = MockTodayService();
       todayRepository = mockTodayRepository;
       when(mockTodayRepository.now()).thenReturn(mockNow);
