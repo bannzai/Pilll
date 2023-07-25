@@ -72,7 +72,6 @@ class PillSheetModifiedHistoryList extends StatelessWidget {
             }
 
             dirtyIndex += 1;
-            // ignore: prefer_function_declarations_over_variables
             final body = switch (history.enumActionType) {
               PillSheetModifiedActionType.createdPillSheet => PillSheetModifiedHistoryCreatePillSheetAction(
                   estimatedEventCausingDate: history.estimatedEventCausingDate,
