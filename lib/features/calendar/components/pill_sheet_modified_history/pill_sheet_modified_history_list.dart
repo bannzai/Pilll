@@ -137,10 +137,10 @@ class PillSheetModifiedHistoryList extends StatelessWidget {
                   ],
                 ),
                 const SizedBox(height: 16),
-                body(),
+                body,
               ]);
             } else {
-              return body();
+              return body;
             }
           })
           .map((e) => Column(children: [e, const SizedBox(height: 16)]))
