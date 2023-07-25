@@ -83,26 +83,51 @@ void main() {
     });
     group("pillTakenCount = 1", () {
       test("take pill", () {
+        final lastTakenPillIndex = max(0, activedPillSheet.lastCompletedPillNumber - 1);
         final takenDate = activePillSheetBeginDate;
         final updatedActivePillSheet = activedPillSheet.takenPillSheet(takenDate);
         final expected = activedPillSheet.copyWith(
-            lastTakenDate: takenDate,
-            pills: [...activedPillSheet.pills]..replaceRange(max(0, activedPillSheet.lastCompletedPillNumber - 1), 1, [
+          lastTakenDate: takenDate,
+          pills: [...activedPillSheet.pills]..replaceRange(
+              lastTakenPillIndex,
+              1,
+              [
                 Pill(
-                    index: 0,
+                    index: lastTakenPillIndex,
                     createdDateTime: now(),
                     updatedDateTime: now(),
                     pillTakens: [PillTaken(takenDateTime: takenDate, createdDateTime: now(), updatedDateTime: now(), isAutomaticallyRecorded: false)])
-              ]));
+              ],
+            ),
+        );
         expect(updatedActivePillSheet.pills, expected.pills);
         expect(updatedActivePillSheet, expected);
       });
     });
     group("pillTakenCount = 2", () {
       test("take pill", () {
+        activedPillSheet = activedPillSheet.copyWith(pillTakenCount: 2);
+        final lastTakenPillIndex = max(0, activedPillSheet.lastCompletedPillNumber - 1);
+
         final takenDate = activePillSheetBeginDate;
         final updatedActivePillSheet = activedPillSheet.takenPillSheet(takenDate);
-        final expected = activedPillSheet.takenPillSheet(takenDate);
+        final expected = activedPillSheet.copyWith(
+          lastTakenDate: takenDate,
+          pills: [...activedPillSheet.pills]..replaceRange(
+              lastTakenPillIndex,
+              1,
+              [
+                Pill(
+                  index: lastTakenPillIndex,
+                  createdDateTime: now(),
+                  updatedDateTime: now(),
+                  pillTakens: [
+                    PillTaken(takenDateTime: takenDate, createdDateTime: now(), updatedDateTime: now(), isAutomaticallyRecorded: false),
+                  ],
+                )
+              ],
+            ),
+        );
         expect(updatedActivePillSheet.pills, expected.pills);
         expect(updatedActivePillSheet, expected);
       });
