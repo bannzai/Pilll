@@ -87,6 +87,12 @@ class TakenPillValue with _$TakenPillValue {
   const TakenPillValue._();
   @JsonSerializable(explicitToJson: true)
   const factory TakenPillValue({
+    // null => 途中から追加したプロパティなので、どちらか不明
+    bool? isQuickRecord,
+    TakenPillEditedValue? edited,
+
+    // The below properties are deprecated and added since v1.
+    // This is deprecated property. TODO: delete after 2024-03-01
     @JsonKey(
       fromJson: TimestampConverter.timestampToDateTime,
       toJson: TimestampConverter.dateTimeToTimestamp,
@@ -99,9 +105,6 @@ class TakenPillValue with _$TakenPillValue {
     required DateTime afterLastTakenDate,
     required int beforeLastTakenPillNumber,
     required int afterLastTakenPillNumber,
-    // null => 途中から追加したプロパティなので、どちらか不明
-    bool? isQuickRecord,
-    TakenPillEditedValue? edited,
   }) = _TakenPillValue;
 
   factory TakenPillValue.fromJson(Map<String, dynamic> json) => _$TakenPillValueFromJson(json);
