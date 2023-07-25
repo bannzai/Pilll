@@ -50,15 +50,13 @@ extension PillSheetModifiedActionTypeFunctions on PillSheetModifiedActionType {
 class PillSheetModifiedHistory with _$PillSheetModifiedHistory {
   @JsonSerializable(explicitToJson: true)
   const factory PillSheetModifiedHistory({
-    // Since 2023-08-01
+    // Added since 2023-08-01
     @Default("v2") version,
+
+    // ============ BEGIN: Added since v1 ============
     @JsonKey(includeIfNull: false, toJson: toNull) required String? id,
     required String actionType,
     required PillSheetModifiedHistoryValue value,
-    // beforePillSheetGroup and afterPillSheetGroup is nullable
-    // Because, actions for createdPillSheet and deletedPillSheet are not exists target single pill sheet
-    required PillSheetGroup? beforePillSheetGroup,
-    required PillSheetGroup? afterPillSheetGroup,
     @JsonKey(
       fromJson: NonNullTimestampConverter.timestampToDateTime,
       toJson: NonNullTimestampConverter.dateTimeToTimestamp,
@@ -73,7 +71,15 @@ class PillSheetModifiedHistory with _$PillSheetModifiedHistory {
       fromJson: TimestampConverter.timestampToDateTime,
       toJson: TimestampConverter.dateTimeToTimestamp,
     )
+    // ============ END: Added since v1 ============
+
+    // ============ BEGIN: Added since v2 ============
+    // beforePillSheetGroup and afterPillSheetGroup is nullable
+    // Because, actions for createdPillSheet and deletedPillSheet are not exists target single pill sheet
+    required PillSheetGroup? beforePillSheetGroup,
+    required PillSheetGroup? afterPillSheetGroup,
     DateTime? timeToLive,
+    // ============ END: Added since v2 ============
 
     // For v1 deprecated properties.
     // This is deprecated property. TODO: delete after 2024/01/01
