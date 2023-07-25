@@ -165,12 +165,13 @@ class PillSheet with _$PillSheet {
   bool get isBegan => beginingDate.date().toUtc().millisecondsSinceEpoch < now().toUtc().millisecondsSinceEpoch;
   bool get inNotTakenDuration => todayPillNumber > typeInfo.dosingPeriod;
   bool get pillSheetHasRestOrFakeDuration => !pillSheetType.isNotExistsNotTakenDuration;
-  bool get isActive {
-    final n = now();
+  bool get isActive => isActiveFor(now());
+
+  bool isActiveFor(DateTime date) {
     final begin = beginingDate.date();
     final totalCount = typeInfo.totalCount;
     final end = begin.add(Duration(days: totalCount + summarizedRestDuration(restDurations: restDurations, upperDate: today()) - 1));
-    return DateRange(begin, end).inRange(n);
+    return DateRange(begin, end).inRange(date);
   }
 
   DateTime get estimatedEndTakenDate => beginingDate
