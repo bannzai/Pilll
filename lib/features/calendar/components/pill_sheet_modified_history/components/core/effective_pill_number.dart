@@ -55,11 +55,9 @@ abstract class PillSheetModifiedHistoryDateEffectivePillNumber {
     return "$before-${after + 1}番";
   }
 
-  static String changed(ChangedPillNumberValue value) =>
-      "${value.beforeTodayPillNumber}→${value.afterTodayPillNumber}番";
+  static String changed(ChangedPillNumberValue value) => "${value.beforeTodayPillNumber}→${value.afterTodayPillNumber}番";
 
-  static String changedBeginDisplayNumberSetting(
-      ChangedBeginDisplayNumberValue value) {
+  static String changedBeginDisplayNumberSetting(ChangedBeginDisplayNumberValue value) {
     final before = value.beforeDisplayNumberSetting;
     if (before == null || before.beginPillNumber == null) {
       return "1→${value.afterDisplayNumberSetting.beginPillNumber}番";
@@ -67,8 +65,7 @@ abstract class PillSheetModifiedHistoryDateEffectivePillNumber {
     return "${before.beginPillNumber}→${value.afterDisplayNumberSetting.beginPillNumber}番";
   }
 
-  static String changedEndDisplayNumberSetting(
-      ChangedEndDisplayNumberValue value) {
+  static String changedEndDisplayNumberSetting(ChangedEndDisplayNumberValue value) {
     final before = value.beforeDisplayNumberSetting;
     if (before == null || before.endPillNumber == null) {
       return "1→${value.afterDisplayNumberSetting.endPillNumber}番";
@@ -76,6 +73,5 @@ abstract class PillSheetModifiedHistoryDateEffectivePillNumber {
     return "${before.endPillNumber}→${value.afterDisplayNumberSetting.endPillNumber}番";
   }
 
-  static String pillSheetCount(List<String> pillSheetIDs) =>
-      pillSheetIDs.isNotEmpty ? "${pillSheetIDs.length}枚" : hyphen();
+  static String pillSheetCount(List<String> pillSheetIDs) => pillSheetIDs.isNotEmpty ? "${pillSheetIDs.length}枚" : hyphen();
 }
