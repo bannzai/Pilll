@@ -104,6 +104,9 @@ class PillSheetModifiedHistory with _$PillSheetModifiedHistory {
   factory PillSheetModifiedHistory.fromJson(Map<String, dynamic> json) => _$PillSheetModifiedHistoryFromJson(json);
 
   PillSheetModifiedActionType? get enumActionType => PillSheetModifiedActionType.values.firstWhereOrNull((element) => element.name == actionType);
+
+  PillSheet? get beforePillSheet => beforePillSheetGroup?.activePillSheetWhen(estimatedEventCausingDate);
+  PillSheet? get afterPillSheet => afterPillSheetGroup?.activePillSheetWhen(estimatedEventCausingDate);
 }
 
 // Factories
