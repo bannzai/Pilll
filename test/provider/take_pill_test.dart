@@ -10,6 +10,8 @@ import 'package:pilll/utils/datetime/day.dart';
 
 import '../helper/mock.mocks.dart';
 
+class _FakePillSheet extends Fake implements PillSheet {}
+
 void main() {
   final mockNow = DateTime.parse("2022-07-24T19:02:00");
   late DateTime activePillSheetBeginDate;
@@ -139,6 +141,8 @@ void main() {
           pillSheets: [activedPillSheet],
           createdAt: mockNow,
         );
+        previousPillSheet = _FakePillSheet();
+        nextPillSheet = _FakePillSheet();
       });
 
       test("take pill", () async {
