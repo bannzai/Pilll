@@ -8,24 +8,29 @@ import 'package:pilll/entity/pill_sheet_modified_history_value.codegen.dart';
 
 class PillSheetModifiedHistoryChangedPillNumberAction extends StatelessWidget {
   final DateTime estimatedEventCausingDate;
-  final ChangedPillNumberValue? value;
+  final int? beforeTodayPillNumber;
+  final int? afterTodayPillNumber;
 
   const PillSheetModifiedHistoryChangedPillNumberAction({
     Key? key,
     required this.estimatedEventCausingDate,
-    required this.value,
+    required this.beforeTodayPillNumber,
+    required this.afterTodayPillNumber,
   }) : super(key: key);
   @override
   Widget build(BuildContext context) {
-    final value = this.value;
-    if (value == null) {
+    final beforeTodayPillNumber = this.beforeTodayPillNumber;
+    final afterTodayPillNumber = this.afterTodayPillNumber;
+    if (beforeTodayPillNumber == null || afterTodayPillNumber == null) {
       return Container();
     }
     return RowLayout(
       day: Day(estimatedEventCausingDate: estimatedEventCausingDate),
       effectiveNumbersOrHyphen: EffectivePillNumber(
-          effectivePillNumber:
-              PillSheetModifiedHistoryDateEffectivePillNumber.changed(value)),
+          effectivePillNumber: PillSheetModifiedHistoryDateEffectivePillNumber.changed(
+        beforeTodayPillNumber: beforeTodayPillNumber,
+        afterTodayPillNumber: afterTodayPillNumber,
+      )),
       detail: const Text(
         "ピル番号変更",
         style: TextStyle(
