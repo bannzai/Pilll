@@ -14,8 +14,6 @@ class _FakePillSheet extends Fake implements PillSheet {}
 
 void main() {
   final mockNow = DateTime.parse("2022-07-24T19:02:00");
-  late DateTime activePillSheetBeginDate;
-  late DateTime? activePillSheetLastTakenDate;
   late PillSheet previousPillSheet;
   late PillSheet activedPillSheet;
   late PillSheet nextPillSheet;
@@ -25,54 +23,60 @@ void main() {
     TestWidgetsFlutterBinding.ensureInitialized();
   });
 
-  group("#pillSheet.takenPillSheet", () {
-    setUp(() {
-      final mockTodayRepository = MockTodayService();
-      todayRepository = mockTodayRepository;
-      when(mockTodayRepository.now()).thenReturn(mockNow);
+  void prepare({required DateTime activePillSheetBeginDate, required DateTime? activePillSheetLastTakenDate}) {
+    final mockTodayRepository = MockTodayService();
+    todayRepository = mockTodayRepository;
+    when(mockTodayRepository.now()).thenReturn(mockNow);
 
-      activePillSheetBeginDate = today();
-      activePillSheetLastTakenDate = null;
-      previousPillSheet = PillSheet(
-        id: "previous_pill_sheet_id",
-        groupIndex: 0,
-        typeInfo: PillSheetType.pillsheet_28_7.typeInfo,
-        beginingDate: activePillSheetBeginDate.subtract(const Duration(days: 28)),
+    activePillSheetBeginDate = today();
+    activePillSheetLastTakenDate = null;
+    previousPillSheet = PillSheet(
+      id: "previous_pill_sheet_id",
+      groupIndex: 0,
+      typeInfo: PillSheetType.pillsheet_28_7.typeInfo,
+      beginingDate: activePillSheetBeginDate.subtract(const Duration(days: 28)),
+      lastTakenDate: activePillSheetBeginDate.subtract(const Duration(days: 1)),
+      createdAt: now(),
+      pills: Pill.generateAndFillTo(
+        pillSheetType: PillSheetType.pillsheet_28_7,
+        fromDate: activePillSheetBeginDate.subtract(const Duration(days: 28)),
         lastTakenDate: activePillSheetBeginDate.subtract(const Duration(days: 1)),
-        createdAt: now(),
-        pills: Pill.generateAndFillTo(
+        pillTakenCount: 1,
+      ),
+    );
+    activedPillSheet = PillSheet(
+      id: "active_pill_sheet_id",
+      groupIndex: 1,
+      typeInfo: PillSheetType.pillsheet_28_7.typeInfo,
+      beginingDate: activePillSheetBeginDate,
+      lastTakenDate: activePillSheetLastTakenDate,
+      createdAt: now(),
+      pills: Pill.generateAndFillTo(
           pillSheetType: PillSheetType.pillsheet_28_7,
-          fromDate: activePillSheetBeginDate.subtract(const Duration(days: 28)),
-          lastTakenDate: activePillSheetBeginDate.subtract(const Duration(days: 1)),
-          pillTakenCount: 1,
-        ),
-      );
-      activedPillSheet = PillSheet(
-        id: "active_pill_sheet_id",
-        groupIndex: 1,
-        typeInfo: PillSheetType.pillsheet_28_7.typeInfo,
-        beginingDate: activePillSheetBeginDate,
-        lastTakenDate: activePillSheetLastTakenDate,
-        createdAt: now(),
-        pills: Pill.generateAndFillTo(
-            pillSheetType: PillSheetType.pillsheet_28_7,
-            fromDate: activePillSheetBeginDate,
-            lastTakenDate: activePillSheetLastTakenDate,
-            pillTakenCount: 1),
-      );
-      nextPillSheet = PillSheet(
-        id: "next_pill_sheet_id",
-        groupIndex: 2,
-        typeInfo: PillSheetType.pillsheet_28_7.typeInfo,
-        beginingDate: activePillSheetBeginDate.add(const Duration(days: 28)),
-        lastTakenDate: null,
-        createdAt: now(),
-        pills: Pill.generateAndFillTo(
-            pillSheetType: PillSheetType.pillsheet_28_7,
-            fromDate: activePillSheetBeginDate.add(const Duration(days: 28)),
-            lastTakenDate: null,
-            pillTakenCount: 1),
-      );
+          fromDate: activePillSheetBeginDate,
+          lastTakenDate: activePillSheetLastTakenDate,
+          pillTakenCount: 1),
+    );
+    nextPillSheet = PillSheet(
+      id: "next_pill_sheet_id",
+      groupIndex: 2,
+      typeInfo: PillSheetType.pillsheet_28_7.typeInfo,
+      beginingDate: activePillSheetBeginDate.add(const Duration(days: 28)),
+      lastTakenDate: null,
+      createdAt: now(),
+      pills: Pill.generateAndFillTo(
+          pillSheetType: PillSheetType.pillsheet_28_7,
+          fromDate: activePillSheetBeginDate.add(const Duration(days: 28)),
+          lastTakenDate: null,
+          pillTakenCount: 1),
+    );
+  }
+
+  group("#pillSheet.takenPillSheet", () {
+    final activePillSheetBeginDate = today();
+
+    setUp(() {
+      prepare(activePillSheetBeginDate: activePillSheetBeginDate, activePillSheetLastTakenDate: null);
     });
     test("take pill", () {
       final takenDate = activePillSheetBeginDate;
@@ -84,55 +88,10 @@ void main() {
   });
 
   group("#TakePill", () {
+    final activePillSheetBeginDate = today();
+
     setUp(() {
-      TestWidgetsFlutterBinding.ensureInitialized();
-
-      final mockTodayRepository = MockTodayService();
-      todayRepository = mockTodayRepository;
-      when(mockTodayRepository.now()).thenReturn(mockNow);
-
-      activePillSheetBeginDate = today();
-      activePillSheetLastTakenDate = null;
-      previousPillSheet = PillSheet(
-        id: "previous_pill_sheet_id",
-        groupIndex: 0,
-        typeInfo: PillSheetType.pillsheet_28_7.typeInfo,
-        beginingDate: activePillSheetBeginDate.subtract(const Duration(days: 28)),
-        lastTakenDate: activePillSheetBeginDate.subtract(const Duration(days: 1)),
-        createdAt: now(),
-        pills: Pill.generateAndFillTo(
-          pillSheetType: PillSheetType.pillsheet_28_7,
-          fromDate: activePillSheetBeginDate.subtract(const Duration(days: 28)),
-          lastTakenDate: activePillSheetBeginDate.subtract(const Duration(days: 1)),
-          pillTakenCount: 1,
-        ),
-      );
-      activedPillSheet = PillSheet(
-        id: "active_pill_sheet_id",
-        groupIndex: 1,
-        typeInfo: PillSheetType.pillsheet_28_7.typeInfo,
-        beginingDate: activePillSheetBeginDate,
-        lastTakenDate: activePillSheetLastTakenDate,
-        createdAt: now(),
-        pills: Pill.generateAndFillTo(
-            pillSheetType: PillSheetType.pillsheet_28_7,
-            fromDate: activePillSheetBeginDate,
-            lastTakenDate: activePillSheetLastTakenDate,
-            pillTakenCount: 1),
-      );
-      nextPillSheet = PillSheet(
-        id: "next_pill_sheet_id",
-        groupIndex: 2,
-        typeInfo: PillSheetType.pillsheet_28_7.typeInfo,
-        beginingDate: activePillSheetBeginDate.add(const Duration(days: 28)),
-        lastTakenDate: null,
-        createdAt: now(),
-        pills: Pill.generateAndFillTo(
-            pillSheetType: PillSheetType.pillsheet_28_7,
-            fromDate: activePillSheetBeginDate.add(const Duration(days: 28)),
-            lastTakenDate: null,
-            pillTakenCount: 1),
-      );
+      prepare(activePillSheetBeginDate: activePillSheetBeginDate, activePillSheetLastTakenDate: null);
     });
     group("one pill sheet", () {
       setUp(() {
