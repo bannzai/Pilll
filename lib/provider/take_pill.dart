@@ -1,3 +1,5 @@
+import 'dart:math';
+
 import 'package:firebase_core/firebase_core.dart';
 import 'package:pilll/entity/pill.codegen.dart';
 import 'package:pilll/entity/pill_sheet_modified_history.codegen.dart';
@@ -120,7 +122,7 @@ extension TakenPillSheet on PillSheet {
 
         if (pill.index != todayPillIndex) {
           // NOTE: 今日以外のピルは、今日のピルを飲んだ時点で、今日のピルの服用記録を追加する
-          for (var i = pill.pillTakens.length - 1; i < pillTakenCount; i++) {
+          for (var i = max(0, pill.pillTakens.length - 1); i < pillTakenCount; i++) {
             pillTakenDoneList.add(PillTaken(
               takenDateTime: date,
               createdDateTime: now(),
