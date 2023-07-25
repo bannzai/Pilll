@@ -87,9 +87,11 @@ class TakenPillValue with _$TakenPillValue {
   const TakenPillValue._();
   @JsonSerializable(explicitToJson: true)
   const factory TakenPillValue({
+    // ============ BEGIN: Added since v1 ============
     // null => 途中から追加したプロパティなので、どちらか不明
     bool? isQuickRecord,
     TakenPillEditedValue? edited,
+    // ============ END: Added since v1 ============
 
     // The below properties are deprecated and added since v1.
     // This is deprecated property. TODO: delete after 2024-03-01
@@ -114,22 +116,23 @@ class TakenPillValue with _$TakenPillValue {
 class TakenPillEditedValue with _$TakenPillEditedValue {
   @JsonSerializable(explicitToJson: true)
   const factory TakenPillEditedValue({
-    @JsonKey(
-      fromJson: NonNullTimestampConverter.timestampToDateTime,
-      toJson: NonNullTimestampConverter.dateTimeToTimestamp,
-    )
-    required DateTime createdDate,
+    // 実際の服用時刻。ユーザーが編集した後の服用時刻
     @JsonKey(
       fromJson: NonNullTimestampConverter.timestampToDateTime,
       toJson: NonNullTimestampConverter.dateTimeToTimestamp,
     )
     required DateTime actualTakenDate,
-    //
+    // 元々の履歴がDBに書き込まれた時刻。通常はユーザーが編集する前の服用時刻
     @JsonKey(
       fromJson: NonNullTimestampConverter.timestampToDateTime,
       toJson: NonNullTimestampConverter.dateTimeToTimestamp,
     )
     required DateTime historyRecordedDate,
+    @JsonKey(
+      fromJson: NonNullTimestampConverter.timestampToDateTime,
+      toJson: NonNullTimestampConverter.dateTimeToTimestamp,
+    )
+    required DateTime createdDate,
   }) = _TakenPillEditedValue;
   const TakenPillEditedValue._();
 
