@@ -144,7 +144,8 @@ class PillSheet with _$PillSheet {
       return 0;
     }
 
-    return lastCompletedPill.index + 1;
+    final estimatedLastTakenDate = beginingDate.add(Duration(days: lastCompletedPill.index)).date();
+    return pillNumberFor(targetDate: estimatedLastTakenDate);
   }
 
   // lastTakenPillNumber は最後に服了したピルの番号を返す。lastcompletedPillNumberとは違い完了はしなくても良い
