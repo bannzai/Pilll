@@ -996,6 +996,55 @@ void main() {
           expect(model.lastCompletedPillNumber, 19);
         });
       });
+
+      test("今日のピルを1度だけ服用済みの場合", () {
+        final mockTodayRepository = MockTodayService();
+        todayRepository = mockTodayRepository;
+        when(mockTodayRepository.now()).thenReturn(DateTime.parse("2020-09-22"));
+
+        const sheetType = PillSheetType.pillsheet_21;
+        var model = PillSheet(
+          id: firestoreIDGenerator(),
+          beginingDate: DateTime.parse("2020-09-01"),
+          // pillsとは違い、一度服用済みなのでpillSheet.lastTakenDateは今日の日付になる
+          lastTakenDate: DateTime.parse("2020-09-22"),
+          createdAt: now(),
+          restDurations: [],
+          typeInfo: PillSheetTypeInfo(
+            dosingPeriod: sheetType.dosingPeriod,
+            name: sheetType.fullName,
+            totalCount: sheetType.totalCount,
+            pillSheetTypeReferencePath: sheetType.rawPath,
+          ),
+          pillTakenCount: pillTakenCount,
+          pills: Pill.testGenerateAndIterateTo(
+            pillSheetType: sheetType,
+            fromDate: DateTime.parse("2020-09-01"),
+            // 昨日まではすべて服用済みにする
+            lastTakenDate: DateTime.parse("2020-09-21"),
+            pillTakenCount: pillTakenCount,
+          ),
+        );
+
+        expect(model.pills[21].pillTakens.length, 0);
+        final pills = [...model.pills]..replaceRange(
+            21,
+            21,
+            [
+              Pill(
+                index: 21,
+                createdDateTime: now(),
+                updatedDateTime: now(),
+                pillTakens: [
+                  PillTaken(recordedTakenDateTime: DateTime.parse("2020-09-22"), createdDateTime: now(), updatedDateTime: now()),
+                ],
+              )
+            ],
+          );
+        model = model.copyWith(pills: pills);
+        expect(model.pills[21].pillTakens.length, 1);
+        expect(model.lastCompletedPillNumber, 21);
+      });
     });
   });
   group("#lastTakenPillNumber", () {
