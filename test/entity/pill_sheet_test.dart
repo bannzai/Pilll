@@ -719,7 +719,7 @@ void main() {
     });
   });
   group("#lastTakenPillNumber", () {
-    test("it is not taken yet", () {
+    test("未服用の場合は0になる", () {
       final mockTodayRepository = MockTodayService();
       todayRepository = mockTodayRepository;
       when(mockTodayRepository.now()).thenReturn(DateTime.parse("2020-09-19"));
@@ -741,7 +741,7 @@ void main() {
       );
       expect(model.lastTakenPillNumber, 0);
     });
-    test("it is taken", () {
+    test("6日目だが4番まで服用済み", () {
       final mockTodayRepository = MockTodayService();
       todayRepository = mockTodayRepository;
       when(mockTodayRepository.now()).thenReturn(DateTime.parse("2020-09-19"));
@@ -763,7 +763,7 @@ void main() {
       );
       expect(model.lastTakenPillNumber, 4);
     });
-    test("it is boundary test", () {
+    test("境界値テスト。28番を服用", () {
       final mockTodayRepository = MockTodayService();
       todayRepository = mockTodayRepository;
       when(mockTodayRepository.now()).thenReturn(DateTime.parse("2020-09-28"));
@@ -785,7 +785,7 @@ void main() {
       );
       expect(model.lastTakenPillNumber, 28);
     });
-    group("pillsheet has rest durations", () {
+    group("服用お休み期間がある場合。服用お休みが終了してない場合", () {
       test("rest duration is not ended", () {
         final mockTodayRepository = MockTodayService();
         todayRepository = mockTodayRepository;
@@ -814,7 +814,7 @@ void main() {
         );
         expect(model.lastTakenPillNumber, 22);
       });
-      test("rest duration is ended", () {
+      group("服用お休み期間がある場合。服用お休みが終了している場合", () {
         final mockTodayRepository = MockTodayService();
         todayRepository = mockTodayRepository;
         when(mockTodayRepository.now()).thenReturn(DateTime.parse("2020-09-28"));
@@ -843,7 +843,7 @@ void main() {
         );
         expect(model.lastTakenPillNumber, 25);
       });
-      test("rest duration is ended and not yet taken pill", () {
+      test("服用お休みが終了しているが、まだピルを服用していない場合", () {
         final mockTodayRepository = MockTodayService();
         todayRepository = mockTodayRepository;
         when(mockTodayRepository.now()).thenReturn(DateTime.parse("2020-09-28"));
@@ -873,8 +873,8 @@ void main() {
         expect(model.lastTakenPillNumber, 0);
       });
 
-      group("pillsheet has plural rest durations", () {
-        test("last rest duration is not ended", () {
+      group("服用お休みを同じピルシートで複数している場合", () {
+        test("最後の服用お休みが終了していない場合", () {
           final mockTodayRepository = MockTodayService();
           todayRepository = mockTodayRepository;
           when(mockTodayRepository.now()).thenReturn(DateTime.parse("2020-09-28"));
@@ -907,7 +907,7 @@ void main() {
           );
           expect(model.lastTakenPillNumber, 19);
         });
-        test("last rest duration is ended", () {
+        test("最後の服用お休みが終了している場合", () {
           final mockTodayRepository = MockTodayService();
           todayRepository = mockTodayRepository;
           when(mockTodayRepository.now()).thenReturn(DateTime.parse("2020-09-28"));
