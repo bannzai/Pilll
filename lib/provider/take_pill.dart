@@ -35,6 +35,8 @@ class TakePill {
   });
 
   // pageIndexAndPillIndexまでtakenDateで服用済み記録をする
+  // pageIndexAndPillIndexがnullの場合はactivePillSheetのtodayPillIndexまで服用済みにする
+  // pageIndexAndPillIndexは、1つ前のピルシートのピルを個別にタップした時などに必要になる。それ以外はnullでも良い
   Future<PillSheetGroup?> call({
     required (int, int)? pageIndexAndPillIndex,
     required DateTime takenDate,
@@ -49,7 +51,12 @@ class TakePill {
     }
 
     final updatedPillSheets = pillSheetGroup.pillSheets.map((pillSheet) {
+      // activePillSheetが服用可能な最後のピルシートなので、それよりも後ろのピルシートの場合はreturn
       if (pillSheet.groupIndex > activePillSheet.groupIndex) {
+        return pillSheet;
+      }
+      // pageIndex後ろのピルシートの場合はreturn
+      if (pillSheet.groupIndex > pageIndex) {
         return pillSheet;
       }
       if (pillSheet.isEnded) {
@@ -126,10 +133,6 @@ extension TakenPillSheet on PillSheet {
     required int pageIndex,
     required int pillIndex,
   }) {
-    if (pageIndex != groupIndex) {
-      return this;
-    }
-
     return copyWith(
       lastTakenDate: takenDate,
       pills: pills.map((pill) {
