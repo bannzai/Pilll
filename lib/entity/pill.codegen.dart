@@ -20,12 +20,12 @@ class PillFirestoreKey {
 class PillTaken with _$PillTaken {
   @JsonSerializable(explicitToJson: true)
   const factory PillTaken({
-    // 同時服用を行った場合は対象となるPillTakenのtakenDateTimeは同一にする
+    // 同時服用を行った場合は対象となるPillTakenのrecordedTakenDateTimeは同一にする
     @JsonKey(
       fromJson: NonNullTimestampConverter.timestampToDateTime,
       toJson: NonNullTimestampConverter.dateTimeToTimestamp,
     )
-    required DateTime takenDateTime,
+    required DateTime recordedTakenDateTime,
     @JsonKey(
       fromJson: NonNullTimestampConverter.timestampToDateTime,
       toJson: NonNullTimestampConverter.dateTimeToTimestamp,
@@ -80,7 +80,7 @@ class Pill with _$Pill {
                 pillTakenCount,
                 (i) {
                   // ピルは複数飲む場合もあるので、dateでtakenDateTimeを更新するのではなく、引数でもらったlastTakenDateを使って値を埋める
-                  return PillTaken(takenDateTime: lastTakenDate, createdDateTime: now(), updatedDateTime: now());
+                  return PillTaken(recordedTakenDateTime: lastTakenDate, createdDateTime: now(), updatedDateTime: now());
                 },
               )
             : [],
@@ -106,7 +106,7 @@ class Pill with _$Pill {
                 pillTakenCount,
                 (i) {
                   // generateAndFillToとの違いはここになる。lastTakenDateではなく、そのピルが通常服用する予定だった服用日がtakenDateTimeにセットされる
-                  return PillTaken(takenDateTime: date, createdDateTime: now(), updatedDateTime: now());
+                  return PillTaken(recordedTakenDateTime: date, createdDateTime: now(), updatedDateTime: now());
                 },
               )
             : [],

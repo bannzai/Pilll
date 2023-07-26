@@ -131,7 +131,7 @@ extension TakenPillSheet on PillSheet {
           // NOTE: 今日以外のピルは、今日のピルを飲んだ時点で、今日のピルの服用記録を追加する
           for (var i = max(0, pill.pillTakens.length - 1); i < pillTakenCount; i++) {
             pillTakenDoneList.add(PillTaken(
-              takenDateTime: takenDate,
+              recordedTakenDateTime: takenDate,
               createdDateTime: now(),
               updatedDateTime: now(),
             ));
@@ -140,7 +140,7 @@ extension TakenPillSheet on PillSheet {
           // pill == todayPillIndex
           // NOTE: 今日のピルは、今日のピルを飲んだ時点で、今日のピルの服用記録を追加する
           pillTakenDoneList.add(PillTaken(
-            takenDateTime: takenDate,
+            recordedTakenDateTime: takenDate,
             createdDateTime: now(),
             updatedDateTime: now(),
           ));

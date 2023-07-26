@@ -20,11 +20,11 @@ PillTaken _$PillTakenFromJson(Map<String, dynamic> json) {
 
 /// @nodoc
 mixin _$PillTaken {
-// 同時服用を行った場合は対象となるPillTakenのtakenDateTimeは同一にする
+// 同時服用を行った場合は対象となるPillTakenのrecordedTakenDateTimeは同一にする
   @JsonKey(
       fromJson: NonNullTimestampConverter.timestampToDateTime,
       toJson: NonNullTimestampConverter.dateTimeToTimestamp)
-  DateTime get takenDateTime => throw _privateConstructorUsedError;
+  DateTime get recordedTakenDateTime => throw _privateConstructorUsedError;
   @JsonKey(
       fromJson: NonNullTimestampConverter.timestampToDateTime,
       toJson: NonNullTimestampConverter.dateTimeToTimestamp)
@@ -49,7 +49,7 @@ abstract class $PillTakenCopyWith<$Res> {
   @useResult
   $Res call(
       {@JsonKey(fromJson: NonNullTimestampConverter.timestampToDateTime, toJson: NonNullTimestampConverter.dateTimeToTimestamp)
-          DateTime takenDateTime,
+          DateTime recordedTakenDateTime,
       @JsonKey(fromJson: NonNullTimestampConverter.timestampToDateTime, toJson: NonNullTimestampConverter.dateTimeToTimestamp)
           DateTime createdDateTime,
       @JsonKey(fromJson: NonNullTimestampConverter.timestampToDateTime, toJson: NonNullTimestampConverter.dateTimeToTimestamp)
@@ -70,15 +70,15 @@ class _$PillTakenCopyWithImpl<$Res, $Val extends PillTaken>
   @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? takenDateTime = null,
+    Object? recordedTakenDateTime = null,
     Object? createdDateTime = null,
     Object? updatedDateTime = null,
     Object? isAutomaticallyRecorded = null,
   }) {
     return _then(_value.copyWith(
-      takenDateTime: null == takenDateTime
-          ? _value.takenDateTime
-          : takenDateTime // ignore: cast_nullable_to_non_nullable
+      recordedTakenDateTime: null == recordedTakenDateTime
+          ? _value.recordedTakenDateTime
+          : recordedTakenDateTime // ignore: cast_nullable_to_non_nullable
               as DateTime,
       createdDateTime: null == createdDateTime
           ? _value.createdDateTime
@@ -105,7 +105,7 @@ abstract class _$$_PillTakenCopyWith<$Res> implements $PillTakenCopyWith<$Res> {
   @useResult
   $Res call(
       {@JsonKey(fromJson: NonNullTimestampConverter.timestampToDateTime, toJson: NonNullTimestampConverter.dateTimeToTimestamp)
-          DateTime takenDateTime,
+          DateTime recordedTakenDateTime,
       @JsonKey(fromJson: NonNullTimestampConverter.timestampToDateTime, toJson: NonNullTimestampConverter.dateTimeToTimestamp)
           DateTime createdDateTime,
       @JsonKey(fromJson: NonNullTimestampConverter.timestampToDateTime, toJson: NonNullTimestampConverter.dateTimeToTimestamp)
@@ -124,15 +124,15 @@ class __$$_PillTakenCopyWithImpl<$Res>
   @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? takenDateTime = null,
+    Object? recordedTakenDateTime = null,
     Object? createdDateTime = null,
     Object? updatedDateTime = null,
     Object? isAutomaticallyRecorded = null,
   }) {
     return _then(_$_PillTaken(
-      takenDateTime: null == takenDateTime
-          ? _value.takenDateTime
-          : takenDateTime // ignore: cast_nullable_to_non_nullable
+      recordedTakenDateTime: null == recordedTakenDateTime
+          ? _value.recordedTakenDateTime
+          : recordedTakenDateTime // ignore: cast_nullable_to_non_nullable
               as DateTime,
       createdDateTime: null == createdDateTime
           ? _value.createdDateTime
@@ -156,7 +156,7 @@ class __$$_PillTakenCopyWithImpl<$Res>
 class _$_PillTaken implements _PillTaken {
   const _$_PillTaken(
       {@JsonKey(fromJson: NonNullTimestampConverter.timestampToDateTime, toJson: NonNullTimestampConverter.dateTimeToTimestamp)
-          required this.takenDateTime,
+          required this.recordedTakenDateTime,
       @JsonKey(fromJson: NonNullTimestampConverter.timestampToDateTime, toJson: NonNullTimestampConverter.dateTimeToTimestamp)
           required this.createdDateTime,
       @JsonKey(fromJson: NonNullTimestampConverter.timestampToDateTime, toJson: NonNullTimestampConverter.dateTimeToTimestamp)
@@ -166,12 +166,12 @@ class _$_PillTaken implements _PillTaken {
   factory _$_PillTaken.fromJson(Map<String, dynamic> json) =>
       _$$_PillTakenFromJson(json);
 
-// 同時服用を行った場合は対象となるPillTakenのtakenDateTimeは同一にする
+// 同時服用を行った場合は対象となるPillTakenのrecordedTakenDateTimeは同一にする
   @override
   @JsonKey(
       fromJson: NonNullTimestampConverter.timestampToDateTime,
       toJson: NonNullTimestampConverter.dateTimeToTimestamp)
-  final DateTime takenDateTime;
+  final DateTime recordedTakenDateTime;
   @override
   @JsonKey(
       fromJson: NonNullTimestampConverter.timestampToDateTime,
@@ -189,7 +189,7 @@ class _$_PillTaken implements _PillTaken {
 
   @override
   String toString() {
-    return 'PillTaken(takenDateTime: $takenDateTime, createdDateTime: $createdDateTime, updatedDateTime: $updatedDateTime, isAutomaticallyRecorded: $isAutomaticallyRecorded)';
+    return 'PillTaken(recordedTakenDateTime: $recordedTakenDateTime, createdDateTime: $createdDateTime, updatedDateTime: $updatedDateTime, isAutomaticallyRecorded: $isAutomaticallyRecorded)';
   }
 
   @override
@@ -197,8 +197,8 @@ class _$_PillTaken implements _PillTaken {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$_PillTaken &&
-            (identical(other.takenDateTime, takenDateTime) ||
-                other.takenDateTime == takenDateTime) &&
+            (identical(other.recordedTakenDateTime, recordedTakenDateTime) ||
+                other.recordedTakenDateTime == recordedTakenDateTime) &&
             (identical(other.createdDateTime, createdDateTime) ||
                 other.createdDateTime == createdDateTime) &&
             (identical(other.updatedDateTime, updatedDateTime) ||
@@ -210,8 +210,8 @@ class _$_PillTaken implements _PillTaken {
 
   @JsonKey(ignore: true)
   @override
-  int get hashCode => Object.hash(runtimeType, takenDateTime, createdDateTime,
-      updatedDateTime, isAutomaticallyRecorded);
+  int get hashCode => Object.hash(runtimeType, recordedTakenDateTime,
+      createdDateTime, updatedDateTime, isAutomaticallyRecorded);
 
   @JsonKey(ignore: true)
   @override
@@ -230,7 +230,7 @@ class _$_PillTaken implements _PillTaken {
 abstract class _PillTaken implements PillTaken {
   const factory _PillTaken(
       {@JsonKey(fromJson: NonNullTimestampConverter.timestampToDateTime, toJson: NonNullTimestampConverter.dateTimeToTimestamp)
-          required final DateTime takenDateTime,
+          required final DateTime recordedTakenDateTime,
       @JsonKey(fromJson: NonNullTimestampConverter.timestampToDateTime, toJson: NonNullTimestampConverter.dateTimeToTimestamp)
           required final DateTime createdDateTime,
       @JsonKey(fromJson: NonNullTimestampConverter.timestampToDateTime, toJson: NonNullTimestampConverter.dateTimeToTimestamp)
@@ -240,11 +240,11 @@ abstract class _PillTaken implements PillTaken {
   factory _PillTaken.fromJson(Map<String, dynamic> json) =
       _$_PillTaken.fromJson;
 
-  @override // 同時服用を行った場合は対象となるPillTakenのtakenDateTimeは同一にする
+  @override // 同時服用を行った場合は対象となるPillTakenのrecordedTakenDateTimeは同一にする
   @JsonKey(
       fromJson: NonNullTimestampConverter.timestampToDateTime,
       toJson: NonNullTimestampConverter.dateTimeToTimestamp)
-  DateTime get takenDateTime;
+  DateTime get recordedTakenDateTime;
   @override
   @JsonKey(
       fromJson: NonNullTimestampConverter.timestampToDateTime,

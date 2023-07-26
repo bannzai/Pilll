@@ -89,11 +89,9 @@ void main() {
               lastTakenPillIndex,
               1,
               [
-                Pill(
-                    index: lastTakenPillIndex,
-                    createdDateTime: now(),
-                    updatedDateTime: now(),
-                    pillTakens: [PillTaken(takenDateTime: takenDate, createdDateTime: now(), updatedDateTime: now(), isAutomaticallyRecorded: false)])
+                Pill(index: lastTakenPillIndex, createdDateTime: now(), updatedDateTime: now(), pillTakens: [
+                  PillTaken(recordedTakenDateTime: takenDate, createdDateTime: now(), updatedDateTime: now(), isAutomaticallyRecorded: false)
+                ])
               ],
             ),
         );
@@ -122,7 +120,7 @@ void main() {
                   createdDateTime: now(),
                   updatedDateTime: now(),
                   pillTakens: [
-                    PillTaken(takenDateTime: takenDate, createdDateTime: now(), updatedDateTime: now(), isAutomaticallyRecorded: false),
+                    PillTaken(recordedTakenDateTime: takenDate, createdDateTime: now(), updatedDateTime: now(), isAutomaticallyRecorded: false),
                   ],
                 ),
                 Pill(
@@ -130,7 +128,7 @@ void main() {
                   createdDateTime: now(),
                   updatedDateTime: now(),
                   pillTakens: [
-                    PillTaken(takenDateTime: takenDate, createdDateTime: now(), updatedDateTime: now(), isAutomaticallyRecorded: false),
+                    PillTaken(recordedTakenDateTime: takenDate, createdDateTime: now(), updatedDateTime: now(), isAutomaticallyRecorded: false),
                   ],
                 ),
                 Pill(
@@ -138,7 +136,7 @@ void main() {
                   createdDateTime: now(),
                   updatedDateTime: now(),
                   pillTakens: [
-                    PillTaken(takenDateTime: takenDate, createdDateTime: now(), updatedDateTime: now(), isAutomaticallyRecorded: false),
+                    PillTaken(recordedTakenDateTime: takenDate, createdDateTime: now(), updatedDateTime: now(), isAutomaticallyRecorded: false),
                   ],
                 ),
               ],
@@ -172,7 +170,7 @@ void main() {
                   createdDateTime: now(),
                   updatedDateTime: now(),
                   pillTakens: [
-                    PillTaken(takenDateTime: takenDate, createdDateTime: now(), updatedDateTime: now(), isAutomaticallyRecorded: false),
+                    PillTaken(recordedTakenDateTime: takenDate, createdDateTime: now(), updatedDateTime: now(), isAutomaticallyRecorded: false),
                   ],
                 )
               ],
@@ -204,8 +202,8 @@ void main() {
                   createdDateTime: now(),
                   updatedDateTime: now(),
                   pillTakens: [
-                    PillTaken(takenDateTime: takenDate, createdDateTime: now(), updatedDateTime: now(), isAutomaticallyRecorded: false),
-                    PillTaken(takenDateTime: takenDate, createdDateTime: now(), updatedDateTime: now(), isAutomaticallyRecorded: false),
+                    PillTaken(recordedTakenDateTime: takenDate, createdDateTime: now(), updatedDateTime: now(), isAutomaticallyRecorded: false),
+                    PillTaken(recordedTakenDateTime: takenDate, createdDateTime: now(), updatedDateTime: now(), isAutomaticallyRecorded: false),
                   ],
                 ),
                 Pill(
@@ -213,8 +211,8 @@ void main() {
                   createdDateTime: now(),
                   updatedDateTime: now(),
                   pillTakens: [
-                    PillTaken(takenDateTime: takenDate, createdDateTime: now(), updatedDateTime: now(), isAutomaticallyRecorded: false),
-                    PillTaken(takenDateTime: takenDate, createdDateTime: now(), updatedDateTime: now(), isAutomaticallyRecorded: false),
+                    PillTaken(recordedTakenDateTime: takenDate, createdDateTime: now(), updatedDateTime: now(), isAutomaticallyRecorded: false),
+                    PillTaken(recordedTakenDateTime: takenDate, createdDateTime: now(), updatedDateTime: now(), isAutomaticallyRecorded: false),
                   ],
                 ),
                 // 今日服用済みのピルの場合はpillTakensが1つだけ増える
@@ -223,7 +221,7 @@ void main() {
                   createdDateTime: now(),
                   updatedDateTime: now(),
                   pillTakens: [
-                    PillTaken(takenDateTime: takenDate, createdDateTime: now(), updatedDateTime: now(), isAutomaticallyRecorded: false),
+                    PillTaken(recordedTakenDateTime: takenDate, createdDateTime: now(), updatedDateTime: now(), isAutomaticallyRecorded: false),
                   ],
                 ),
               ],
@@ -250,11 +248,9 @@ void main() {
               lastTakenPillIndex,
               1,
               [
-                Pill(
-                    index: lastTakenPillIndex,
-                    createdDateTime: now(),
-                    updatedDateTime: now(),
-                    pillTakens: [PillTaken(takenDateTime: takenDate, createdDateTime: now(), updatedDateTime: now(), isAutomaticallyRecorded: false)])
+                Pill(index: lastTakenPillIndex, createdDateTime: now(), updatedDateTime: now(), pillTakens: [
+                  PillTaken(recordedTakenDateTime: takenDate, createdDateTime: now(), updatedDateTime: now(), isAutomaticallyRecorded: false)
+                ])
               ],
             ),
         );
@@ -271,8 +267,8 @@ void main() {
                   createdDateTime: now(),
                   updatedDateTime: now(),
                   pillTakens: [
-                    PillTaken(takenDateTime: takenDate, createdDateTime: now(), updatedDateTime: now(), isAutomaticallyRecorded: false),
-                    PillTaken(takenDateTime: takenDate, createdDateTime: now(), updatedDateTime: now(), isAutomaticallyRecorded: false),
+                    PillTaken(recordedTakenDateTime: takenDate, createdDateTime: now(), updatedDateTime: now(), isAutomaticallyRecorded: false),
+                    PillTaken(recordedTakenDateTime: takenDate, createdDateTime: now(), updatedDateTime: now(), isAutomaticallyRecorded: false),
                   ],
                 )
               ],

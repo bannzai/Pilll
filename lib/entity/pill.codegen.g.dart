@@ -7,8 +7,8 @@ part of 'pill.codegen.dart';
 // **************************************************************************
 
 _$_PillTaken _$$_PillTakenFromJson(Map<String, dynamic> json) => _$_PillTaken(
-      takenDateTime: NonNullTimestampConverter.timestampToDateTime(
-          json['takenDateTime'] as Timestamp),
+      recordedTakenDateTime: NonNullTimestampConverter.timestampToDateTime(
+          json['recordedTakenDateTime'] as Timestamp),
       createdDateTime: NonNullTimestampConverter.timestampToDateTime(
           json['createdDateTime'] as Timestamp),
       updatedDateTime: NonNullTimestampConverter.timestampToDateTime(
@@ -19,8 +19,8 @@ _$_PillTaken _$$_PillTakenFromJson(Map<String, dynamic> json) => _$_PillTaken(
 
 Map<String, dynamic> _$$_PillTakenToJson(_$_PillTaken instance) =>
     <String, dynamic>{
-      'takenDateTime':
-          NonNullTimestampConverter.dateTimeToTimestamp(instance.takenDateTime),
+      'recordedTakenDateTime': NonNullTimestampConverter.dateTimeToTimestamp(
+          instance.recordedTakenDateTime),
       'createdDateTime': NonNullTimestampConverter.dateTimeToTimestamp(
           instance.createdDateTime),
       'updatedDateTime': NonNullTimestampConverter.dateTimeToTimestamp(
