@@ -791,16 +791,18 @@ void main() {
         expect(result, updatedPillSheetGroup);
       });
 
-      test("Real case 1. Timesensitive pattern(takenDate(19:02:00) < beginingDate(19:02:21)) and with rest durations", () async {
-        previousPillSheet =
-            previousPillSheet.copyWith(beginingDate: DateTime.parse("2022-06-22T19:02:21")).takenPillSheet(DateTime.parse("2022-07-23T19:00:04"));
-        previousPillSheet = previousPillSheet.copyWith(restDurations: [
-          RestDuration(
+      test("Real case 1. Timesensitive pattern(takenDate(19:02:00) < beginingDate(19:02:21)) and with rest duration", () async {
+        previousPillSheet = previousPillSheet.copyWith(beginingDate: DateTime.parse("2022-06-22T19:02:21")).copyWith(
+          restDurations: [
+            RestDuration(
               beginDate: DateTime.parse("2022-07-14T18:25:41"),
               createdDate: DateTime.parse("2022-07-14T18:25:41"),
-              endDate: DateTime.parse("2022-07-18T18:10:01"))
-        ]);
-        activePillSheet = activePillSheet.copyWith(beginingDate: DateTime.parse("2022-07-24T19:02:21"), lastTakenDate: null);
+              endDate: DateTime.parse("2022-07-18T18:10:01"),
+            )
+          ],
+        ).takenPillSheet(DateTime.parse("2022-07-23T19:00:04"));
+
+        activePillSheet = activePillSheet.copyWith(beginingDate: DateTime.parse("2022-07-24T19:02:21"));
         pillSheetGroup = PillSheetGroup(
           id: "group_id",
           pillSheetIDs: [previousPillSheet.id!, activePillSheet.id!, nextPillSheet.id!],
@@ -808,7 +810,6 @@ void main() {
           createdAt: mockNow,
         );
 
-        final takenDate = mockNow.add(const Duration(seconds: 1));
         pillSheetGroup = PillSheetGroup(
           id: "group_id",
           pillSheetIDs: [previousPillSheet.id!, activePillSheet.id!, nextPillSheet.id!],
@@ -820,6 +821,7 @@ void main() {
         final batch = MockWriteBatch();
         when(batchFactory.batch()).thenReturn(batch);
 
+        final takenDate = DateTime.parse("2022-07-24T19:02:00");
         final updatedActivePillSheet = activePillSheet.takenPillSheet(takenDate);
 
         final batchSetPillSheetGroup = MockBatchSetPillSheetGroup();

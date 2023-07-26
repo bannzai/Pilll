@@ -117,6 +117,7 @@ extension TakenPillSheet on PillSheet {
     DateTime takenDate,
   ) {
     // 一番最後の記録対象のピル。takenDateが今日の日付(クイックレコードや「飲んだ」を押した時)の場合は、takenDateは今日の日付にな流。その場合はtodayPillIndexと等価の値になる
+    // max(estimatedLastTakenPillIndex, finalTakenPillIndex)としないのは、したのpill.index > finalTakenPillIndexで早期リターンされるので書いていない。estimatedLastTakenPillIndex を新しく用意するほどでも無いと思ったので
     final finalTakenPillIndex = pillNumberFor(targetDate: takenDate) - 1;
 
     return copyWith(
