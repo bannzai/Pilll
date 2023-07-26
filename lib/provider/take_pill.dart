@@ -6,7 +6,6 @@ import 'package:pilll/entity/pill_sheet_modified_history.codegen.dart';
 import 'package:pilll/provider/batch.dart';
 import 'package:pilll/entity/pill_sheet.codegen.dart';
 import 'package:pilll/entity/pill_sheet_group.codegen.dart';
-import 'package:pilll/utils/emoji/emoji.dart';
 import 'package:pilll/utils/error_log.dart';
 
 import 'package:pilll/provider/pill_sheet_group.dart';
@@ -34,18 +33,12 @@ class TakePill {
     required this.batchSetPillSheetGroup,
   });
 
-  // pageIndexAndPillIndexまでtakenDateで服用済み記録をする
-  // pageIndexAndPillIndexがnullの場合はactivePillSheetのtodayPillIndexまで服用済みにする
-  // pageIndexAndPillIndexは、1つ前のピルシートのピルを個別にタップした時などに必要になる。それ以外はnullでも良い
   Future<PillSheetGroup?> call({
-    required (int, int)? pageIndexAndPillIndex,
     required DateTime takenDate,
     required PillSheetGroup pillSheetGroup,
     required PillSheet activePillSheet,
     required bool isQuickRecord,
   }) async {
-    final (pageIndex, pillIndex) = pageIndexAndPillIndex ?? (activePillSheet.groupIndex, activePillSheet.todayPillIndex);
-
     if (activePillSheet.todayPillsAreAlreadyTaken) {
       return null;
     }
@@ -55,10 +48,6 @@ class TakePill {
       if (pillSheet.groupIndex > activePillSheet.groupIndex) {
         return pillSheet;
       }
-      // pageIndex後ろのピルシートの場合はreturn
-      if (pillSheet.groupIndex > pageIndex) {
-        return pillSheet;
-      }
       if (pillSheet.isEnded) {
         return pillSheet;
       }
@@ -66,9 +55,7 @@ class TakePill {
       // takenDateよりも予測するピルシートの最終服用日よりも小さい場合は、そのピルシートの最終日で予測する最終服用日を記録する
       if (takenDate.isAfter(pillSheet.estimatedEndTakenDate)) {
         return pillSheet.takenPillSheet(
-          takenDate: pillSheet.estimatedEndTakenDate,
-          pageIndex: pageIndex,
-          pillIndex: pillIndex,
+          pillSheet.estimatedEndTakenDate,
         );
       }
 
@@ -79,9 +66,7 @@ class TakePill {
       }
 
       return pillSheet.takenPillSheet(
-        takenDate: takenDate,
-        pageIndex: pageIndex,
-        pillIndex: pillIndex,
+        takenDate,
       );
     }).toList();
 
@@ -128,18 +113,13 @@ class TakePill {
 }
 
 extension TakenPillSheet on PillSheet {
-  PillSheet takenPillSheet({
-    required DateTime takenDate,
-    required int pageIndex,
-    required int pillIndex,
-  }) {
+  PillSheet takenPillSheet(
+    DateTime takenDate,
+  ) {
     return copyWith(
       lastTakenDate: takenDate,
       pills: pills.map((pill) {
         if (pill.index > todayPillIndex) {
-          return pill;
-        }
-        if (pill.index > pageIndex) {
           return pill;
         }
         if (pill.pillTakens.length == pillTakenCount) {

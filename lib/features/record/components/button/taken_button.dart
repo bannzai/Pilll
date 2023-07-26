@@ -48,7 +48,6 @@ class TakenButton extends HookConsumerWidget {
             requestInAppReview();
             showReleaseNotePreDialog(context);
             final updatedPillSheetGroup = await takePill(
-              pageIndexAndPillIndex: null,
               takenDate: now(),
               pillSheetGroup: pillSheetGroup,
               activePillSheet: activePillSheet,
