@@ -792,7 +792,10 @@ void main() {
       });
 
       test("Real case 1. Timesensitive pattern(takenDate(19:02:00) < beginingDate(19:02:21)) and with rest duration", () async {
-        previousPillSheet = previousPillSheet.copyWith(beginingDate: DateTime.parse("2022-06-22T19:02:21")).copyWith(
+        previousPillSheet = previousPillSheet.copyWith(
+          beginingDate: DateTime.parse(
+            "2022-06-22T19:02:21",
+          ),
           restDurations: [
             RestDuration(
               beginDate: DateTime.parse("2022-07-14T18:25:41"),
@@ -800,6 +803,8 @@ void main() {
               endDate: DateTime.parse("2022-07-18T18:10:01"),
             )
           ],
+          // takenPillSheetでセットし直したいので一度空配列にする
+          pills: [],
         ).takenPillSheet(DateTime.parse("2022-07-23T19:00:04"));
 
         activePillSheet = activePillSheet.copyWith(beginingDate: DateTime.parse("2022-07-24T19:02:21"));
