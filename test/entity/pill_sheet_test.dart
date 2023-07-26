@@ -844,7 +844,7 @@ void main() {
         );
         expect(model.lastTakenPillNumber, 22);
       });
-      group("服用お休み期間がある場合。服用お休みが終了している場合", () {
+      test("服用お休み期間がある場合。服用お休みが終了している場合", () {
         final mockTodayRepository = MockTodayService();
         todayRepository = mockTodayRepository;
         when(mockTodayRepository.now()).thenReturn(DateTime.parse("2020-09-28"));
