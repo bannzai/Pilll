@@ -162,12 +162,12 @@ class PillSheet with _$PillSheet {
     }
 
     // lastTakenDate is not nullのチェックをしていてこの変数がnullのはずは無いが、将来的にlastTakenDateは消える可能性はあるのでこのロジックは真っ当なチェックになる
-    final lastCompletedPill = pills.lastWhereOrNull((element) => element.pillTakens.length > 0);
-    if (lastCompletedPill == null) {
+    final lastTakenPill = pills.lastWhereOrNull((element) => element.pillTakens.length > 0);
+    if (lastTakenPill == null) {
       return 0;
     }
 
-    return lastCompletedPill.index + 1;
+    return lastTakenPill.index + 1;
   }
 
   bool get todayPillsAreAlreadyTaken {
