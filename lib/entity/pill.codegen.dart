@@ -80,7 +80,11 @@ class Pill with _$Pill {
                 pillTakenCount,
                 (i) {
                   // ピルは複数飲む場合もあるので、dateでtakenDateTimeを更新するのではなく、引数でもらったlastTakenDateを使って値を埋める
-                  return PillTaken(recordedTakenDateTime: lastTakenDate, createdDateTime: now(), updatedDateTime: now());
+                  return PillTaken(
+                    recordedTakenDateTime: lastTakenDate,
+                    createdDateTime: now(),
+                    updatedDateTime: now(),
+                  );
                 },
               )
             : [],
@@ -106,7 +110,11 @@ class Pill with _$Pill {
                 pillTakenCount,
                 (i) {
                   // generateAndFillToとの違いはここになる。lastTakenDateではなく、そのピルが通常服用する予定だった服用日がtakenDateTimeにセットされる
-                  return PillTaken(recordedTakenDateTime: date, createdDateTime: now(), updatedDateTime: now());
+                  return PillTaken(
+                    recordedTakenDateTime: date,
+                    createdDateTime: now(),
+                    updatedDateTime: now(),
+                  );
                 },
               )
             : [],
