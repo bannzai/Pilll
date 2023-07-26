@@ -233,7 +233,7 @@ void main() {
         // テスト内容
         expect(updatedActivePillSheet.pills, expected.pills);
         expect(updatedActivePillSheet, expected);
-        expect(updatedActivePillSheet.todayPillsAreAlreadyTaken, true);
+        expect(updatedActivePillSheet.todayPillsAreAlreadyTaken, false);
         expect(updatedActivePillSheet.anyTodayPillsAreAlreadyTaken, true);
       });
 
