@@ -117,11 +117,12 @@ class PillSheet with _$PillSheet {
   PillSheetType get pillSheetType => PillSheetTypeFunctions.fromRawPath(typeInfo.pillSheetTypeReferencePath);
 
   int get todayPillNumber {
-    return pillNumberFor(targetDate: today());
+    return todayPillIndex + 1;
   }
 
   int get todayPillIndex {
-    return todayPillNumber - 1;
+    final diff = daysBetween(beginingDate, today());
+    return diff;
   }
 
   // lastCompletedPillNumber は最後に服用完了したピルの番号を返す。lastTakenPillNumberとの違いは服用を完了しているかどうか
