@@ -9,14 +9,14 @@ import 'package:pilll/provider/change_pill_number.dart';
 import 'package:pilll/utils/datetime/day.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
-import '../../../../helper/mock.mocks.dart';
+import '../helper/mock.mocks.dart';
 
 void main() {
   setUp(() {
     TestWidgetsFlutterBinding.ensureInitialized();
     SharedPreferences.setMockInitialValues({});
   });
-  group("#modifiyTodayPillNumber", () {
+  group("#changePillNumber", () {
     test("group has only one pill sheet and it is not yet taken", () async {
       var mockTodayRepository = MockTodayService();
       final mockToday = DateTime.parse("2020-09-19");
