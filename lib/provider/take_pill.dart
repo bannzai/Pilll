@@ -116,19 +116,26 @@ extension TakenPillSheet on PillSheet {
   PillSheet takenPillSheet(
     DateTime takenDate,
   ) {
+    // 一番最後の記録対象のピル。takenDateが今日の日付(クイックレコードや「飲んだ」を押した時)の場合は、takenDateは今日の日付にな流。その場合はtodayPillIndexと等価の値になる
+    final finalTakenPillIndex = pillNumberFor(targetDate: takenDate) - 1;
+
     return copyWith(
       lastTakenDate: takenDate,
       pills: pills.map((pill) {
-        if (pill.index > todayPillIndex) {
+        // takenDateから算出した記録されるピルのindexよりも大きい場合は何もしない
+        // ユーザーがピルをタップした時等にtakenDateは今日以外の日付が入ってくる
+        // pill.index > todayPillIndexの役割も理論的には備えているので、この条件文だけで良い
+        if (pill.index > finalTakenPillIndex) {
           return pill;
         }
         if (pill.pillTakens.length == pillTakenCount) {
           return pill;
         }
+
         final pillTakenDoneList = [...pill.pillTakens];
 
-        if (pill.index != todayPillIndex) {
-          // NOTE: 今日以外のピルは、今日のピルを飲んだ時点で、今日のピルの服用記録を追加する
+        if (pill.index != finalTakenPillIndex) {
+          // NOTE: 一番最後の記録対象のピル以外は、ピルの服用記録をpillTakenCountに達するまで追加する
           for (var i = max(0, pill.pillTakens.length - 1); i < pillTakenCount; i++) {
             pillTakenDoneList.add(PillTaken(
               recordedTakenDateTime: takenDate,
@@ -137,8 +144,9 @@ extension TakenPillSheet on PillSheet {
             ));
           }
         } else {
-          // pill == todayPillIndex
-          // NOTE: 今日のピルは、今日のピルを飲んだ時点で、今日のピルの服用記録を追加する
+          // pill == estimatedTakenPillIndex
+          // NOTE: 一番最後の記録対象のピルは、ピルの服用記録を追加する。
+          // 2回服用の場合で未服用の場合は残りの服用回数は1回になる。1回服用済みの場合は2回になる
           pillTakenDoneList.add(PillTaken(
             recordedTakenDateTime: takenDate,
             createdDateTime: now(),
