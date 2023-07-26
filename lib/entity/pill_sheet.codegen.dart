@@ -117,12 +117,11 @@ class PillSheet with _$PillSheet {
   PillSheetType get pillSheetType => PillSheetTypeFunctions.fromRawPath(typeInfo.pillSheetTypeReferencePath);
 
   int get todayPillNumber {
-    return todayPillIndex + 1;
+    return pillNumberFor(targetDate: today());
   }
 
   int get todayPillIndex {
-    final diff = daysBetween(beginingDate, today());
-    return diff;
+    return todayPillNumber - 1;
   }
 
   // lastCompletedPillNumber は最後に服用完了したピルの番号を返す。lastTakenPillNumberとの違いは服用を完了しているかどうか
@@ -148,27 +147,16 @@ class PillSheet with _$PillSheet {
     return lastCompletedPill.index + 1;
   }
 
-  // lastTakenPillNumber は最後に服了したピルの番号を返す。lastcompletedPillNumberとは違い完了はしてな区ても良い
+  // lastTakenPillNumber は最後に服了したピルの番号を返す。lastcompletedPillNumberとは違い完了はしなくても良い
   // あえてnon nullにしている。なぜならよく比較するのでnullableだと不便だから
   // まだpillを飲んでない場合は `0` が変える。飲んでいる場合は 1以上の値が入る
   int get lastTakenPillNumber {
-    // TODO: [PillSheet.Pill] そのうち消す。古いPillSheetのPillsは[]になっている
-    if (pills.isEmpty) {
-      final lastTakenDate = this.lastTakenDate;
-      if (lastTakenDate == null) {
-        return 0;
-      }
-
-      return pillNumberFor(targetDate: lastTakenDate);
-    }
-
-    // lastTakenDate is not nullのチェックをしていてこの変数がnullのはずは無いが、将来的にlastTakenDateは消える可能性はあるのでこのロジックは真っ当なチェックになる
-    final lastTakenPill = pills.lastWhereOrNull((element) => element.pillTakens.length > 0);
-    if (lastTakenPill == null) {
+    final lastTakenDate = this.lastTakenDate;
+    if (lastTakenDate == null) {
       return 0;
     }
 
-    return lastTakenPill.index + 1;
+    return pillNumberFor(targetDate: lastTakenDate);
   }
 
   bool get todayPillsAreAlreadyTaken {
