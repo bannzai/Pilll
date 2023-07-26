@@ -6,6 +6,7 @@ import 'package:pilll/entity/pill_sheet_modified_history.codegen.dart';
 import 'package:pilll/provider/batch.dart';
 import 'package:pilll/entity/pill_sheet.codegen.dart';
 import 'package:pilll/entity/pill_sheet_group.codegen.dart';
+import 'package:pilll/utils/emoji/emoji.dart';
 import 'package:pilll/utils/error_log.dart';
 
 import 'package:pilll/provider/pill_sheet_group.dart';
@@ -33,12 +34,16 @@ class TakePill {
     required this.batchSetPillSheetGroup,
   });
 
+  // pageIndexAndPillIndexまでtakenDateで服用済み記録をする
   Future<PillSheetGroup?> call({
+    required (int, int)? pageIndexAndPillIndex,
     required DateTime takenDate,
     required PillSheetGroup pillSheetGroup,
     required PillSheet activePillSheet,
     required bool isQuickRecord,
   }) async {
+    final (pageIndex, pillIndex) = pageIndexAndPillIndex ?? (activePillSheet.groupIndex, activePillSheet.todayPillIndex);
+
     if (activePillSheet.todayPillsAreAlreadyTaken) {
       return null;
     }
@@ -53,7 +58,11 @@ class TakePill {
 
       // takenDateよりも予測するピルシートの最終服用日よりも小さい場合は、そのピルシートの最終日で予測する最終服用日を記録する
       if (takenDate.isAfter(pillSheet.estimatedEndTakenDate)) {
-        return pillSheet.takenPillSheet(pillSheet.estimatedEndTakenDate);
+        return pillSheet.takenPillSheet(
+          takenDate: pillSheet.estimatedEndTakenDate,
+          pageIndex: pageIndex,
+          pillIndex: pillIndex,
+        );
       }
 
       // takenDateがピルシートの開始日に満たない場合は、記録の対象になっていないので早期リターン
@@ -62,7 +71,11 @@ class TakePill {
         return pillSheet;
       }
 
-      return pillSheet.takenPillSheet(takenDate);
+      return pillSheet.takenPillSheet(
+        takenDate: takenDate,
+        pageIndex: pageIndex,
+        pillIndex: pillIndex,
+      );
     }).toList();
 
     final updatedPillSheetGroup = pillSheetGroup.copyWith(pillSheets: updatedPillSheets);
@@ -108,11 +121,22 @@ class TakePill {
 }
 
 extension TakenPillSheet on PillSheet {
-  PillSheet takenPillSheet(DateTime date) {
+  PillSheet takenPillSheet({
+    required DateTime takenDate,
+    required int pageIndex,
+    required int pillIndex,
+  }) {
+    if (pageIndex != groupIndex) {
+      return this;
+    }
+
     return copyWith(
-      lastTakenDate: date,
+      lastTakenDate: takenDate,
       pills: pills.map((pill) {
         if (pill.index > todayPillIndex) {
+          return pill;
+        }
+        if (pill.index > pageIndex) {
           return pill;
         }
         if (pill.pillTakens.length == pillTakenCount) {
@@ -124,7 +148,7 @@ extension TakenPillSheet on PillSheet {
           // NOTE: 今日以外のピルは、今日のピルを飲んだ時点で、今日のピルの服用記録を追加する
           for (var i = max(0, pill.pillTakens.length - 1); i < pillTakenCount; i++) {
             pillTakenDoneList.add(PillTaken(
-              takenDateTime: date,
+              takenDateTime: takenDate,
               createdDateTime: now(),
               updatedDateTime: now(),
             ));
@@ -133,7 +157,7 @@ extension TakenPillSheet on PillSheet {
           // pill == todayPillIndex
           // NOTE: 今日のピルは、今日のピルを飲んだ時点で、今日のピルの服用記録を追加する
           pillTakenDoneList.add(PillTaken(
-            takenDateTime: date,
+            takenDateTime: takenDate,
             createdDateTime: now(),
             updatedDateTime: now(),
           ));
