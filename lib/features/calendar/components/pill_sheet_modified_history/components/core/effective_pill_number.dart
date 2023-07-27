@@ -31,7 +31,12 @@ abstract class PillSheetModifiedHistoryDateEffectivePillNumber {
   static String taken({required int beforeLastTakenPillNumber, required int afterLastTakenPillNumber}) {
     // beforePillSheetの最後に飲んだ番号+1から服用記録が始まる
     final left = beforeLastTakenPillNumber + 1;
+    // 1度飲みの時に本日分を服用した場合は1錠分の服用履歴を表示する
     if (left == afterLastTakenPillNumber) {
+      return "$afterLastTakenPillNumber番";
+    }
+    // 2度飲みの時に1度目の服用の時にこの条件に合致する
+    if (left > afterLastTakenPillNumber) {
       return "$afterLastTakenPillNumber番";
     }
     return "$left-$afterLastTakenPillNumber番";
