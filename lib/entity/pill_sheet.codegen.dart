@@ -238,8 +238,12 @@ class PillSheet with _$PillSheet {
   }
 
   List<Pill> replacedPills({required List<Pill> pills}) {
+    // TODO: [PillSheet.Pill] そのうち消す。古いPillSheetのPillsは[]になっている
+    if (this.pills.isEmpty) {
+      return [];
+    }
     if (pills.isEmpty) {
-      return pills;
+      return this.pills;
     }
     return [...this.pills]..replaceRange(pills.first.index, pills.last.index + 1, pills);
   }
