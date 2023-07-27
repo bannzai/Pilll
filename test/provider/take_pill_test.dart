@@ -85,15 +85,18 @@ void main() {
         final updatedActivePillSheet = activePillSheet.takenPillSheet(takenDate);
         final expected = activePillSheet.copyWith(
           lastTakenDate: takenDate,
-          pills: [...activePillSheet.pills]..replaceRange(
-              lastTakenPillIndex,
-              1,
-              [
-                Pill(index: lastTakenPillIndex, createdDateTime: now(), updatedDateTime: now(), pillTakens: [
+          pills: activePillSheet.replacedPills(
+            pills: [
+              Pill(
+                index: lastTakenPillIndex,
+                createdDateTime: now(),
+                updatedDateTime: now(),
+                pillTakens: [
                   PillTaken(recordedTakenDateTime: takenDate, createdDateTime: now(), updatedDateTime: now(), isAutomaticallyRecorded: false)
-                ])
-              ],
-            ),
+                ],
+              ),
+            ],
+          ),
         );
         // 事前条件
         expect(activePillSheet.lastCompletedPillNumber, 0);
@@ -106,41 +109,38 @@ void main() {
       test("未服用のピルが複数個ある", () {
         prepare(activePillSheetBeginDate: today().subtract(const Duration(days: 2)), activePillSheetLastTakenDate: null);
 
-        final lastTakenPillIndex = max(0, activePillSheet.lastCompletedPillNumber - 1);
         final takenDate = today();
         final updatedActivePillSheet = activePillSheet.takenPillSheet(takenDate);
         final expected = activePillSheet.copyWith(
           lastTakenDate: takenDate,
-          pills: [...activePillSheet.pills]..replaceRange(
-              lastTakenPillIndex,
-              3,
-              [
-                Pill(
-                  index: 0,
-                  createdDateTime: now(),
-                  updatedDateTime: now(),
-                  pillTakens: [
-                    PillTaken(recordedTakenDateTime: takenDate, createdDateTime: now(), updatedDateTime: now(), isAutomaticallyRecorded: false),
-                  ],
-                ),
-                Pill(
-                  index: 1,
-                  createdDateTime: now(),
-                  updatedDateTime: now(),
-                  pillTakens: [
-                    PillTaken(recordedTakenDateTime: takenDate, createdDateTime: now(), updatedDateTime: now(), isAutomaticallyRecorded: false),
-                  ],
-                ),
-                Pill(
-                  index: 2,
-                  createdDateTime: now(),
-                  updatedDateTime: now(),
-                  pillTakens: [
-                    PillTaken(recordedTakenDateTime: takenDate, createdDateTime: now(), updatedDateTime: now(), isAutomaticallyRecorded: false),
-                  ],
-                ),
-              ],
-            ),
+          pills: activePillSheet.replacedPills(
+            pills: [
+              Pill(
+                index: 0,
+                createdDateTime: now(),
+                updatedDateTime: now(),
+                pillTakens: [
+                  PillTaken(recordedTakenDateTime: takenDate, createdDateTime: now(), updatedDateTime: now(), isAutomaticallyRecorded: false),
+                ],
+              ),
+              Pill(
+                index: 1,
+                createdDateTime: now(),
+                updatedDateTime: now(),
+                pillTakens: [
+                  PillTaken(recordedTakenDateTime: takenDate, createdDateTime: now(), updatedDateTime: now(), isAutomaticallyRecorded: false),
+                ],
+              ),
+              Pill(
+                index: 2,
+                createdDateTime: now(),
+                updatedDateTime: now(),
+                pillTakens: [
+                  PillTaken(recordedTakenDateTime: takenDate, createdDateTime: now(), updatedDateTime: now(), isAutomaticallyRecorded: false),
+                ],
+              ),
+            ],
+          ),
         );
         // 事前条件
         expect(activePillSheet.lastCompletedPillNumber, 0);
@@ -161,20 +161,18 @@ void main() {
         final updatedActivePillSheet = activePillSheet.takenPillSheet(takenDate);
         final expected = activePillSheet.copyWith(
           lastTakenDate: takenDate,
-          pills: [...activePillSheet.pills]..replaceRange(
-              lastTakenPillIndex,
-              1,
-              [
-                Pill(
-                  index: lastTakenPillIndex,
-                  createdDateTime: now(),
-                  updatedDateTime: now(),
-                  pillTakens: [
-                    PillTaken(recordedTakenDateTime: takenDate, createdDateTime: now(), updatedDateTime: now(), isAutomaticallyRecorded: false),
-                  ],
-                )
-              ],
-            ),
+          pills: activePillSheet.replacedPills(
+            pills: [
+              Pill(
+                index: lastTakenPillIndex,
+                createdDateTime: now(),
+                updatedDateTime: now(),
+                pillTakens: [
+                  PillTaken(recordedTakenDateTime: takenDate, createdDateTime: now(), updatedDateTime: now(), isAutomaticallyRecorded: false),
+                ],
+              )
+            ],
+          ),
         );
         // 事前条件
         expect(activePillSheet.lastCompletedPillNumber, 0);
@@ -188,44 +186,41 @@ void main() {
         prepare(activePillSheetBeginDate: today().subtract(const Duration(days: 2)), activePillSheetLastTakenDate: null);
         activePillSheet = activePillSheet.copyWith(pillTakenCount: 2);
 
-        final lastTakenPillIndex = max(0, activePillSheet.lastCompletedPillNumber - 1);
         final takenDate = today();
         final updatedActivePillSheet = activePillSheet.takenPillSheet(takenDate);
         final expected = activePillSheet.copyWith(
           lastTakenDate: takenDate,
-          pills: [...activePillSheet.pills]..replaceRange(
-              lastTakenPillIndex,
-              3,
-              [
-                Pill(
-                  index: 0,
-                  createdDateTime: now(),
-                  updatedDateTime: now(),
-                  pillTakens: [
-                    PillTaken(recordedTakenDateTime: takenDate, createdDateTime: now(), updatedDateTime: now(), isAutomaticallyRecorded: false),
-                    PillTaken(recordedTakenDateTime: takenDate, createdDateTime: now(), updatedDateTime: now(), isAutomaticallyRecorded: false),
-                  ],
-                ),
-                Pill(
-                  index: 1,
-                  createdDateTime: now(),
-                  updatedDateTime: now(),
-                  pillTakens: [
-                    PillTaken(recordedTakenDateTime: takenDate, createdDateTime: now(), updatedDateTime: now(), isAutomaticallyRecorded: false),
-                    PillTaken(recordedTakenDateTime: takenDate, createdDateTime: now(), updatedDateTime: now(), isAutomaticallyRecorded: false),
-                  ],
-                ),
-                // 今日服用済みのピルの場合はpillTakensが1つだけ増える
-                Pill(
-                  index: 2,
-                  createdDateTime: now(),
-                  updatedDateTime: now(),
-                  pillTakens: [
-                    PillTaken(recordedTakenDateTime: takenDate, createdDateTime: now(), updatedDateTime: now(), isAutomaticallyRecorded: false),
-                  ],
-                ),
-              ],
-            ),
+          pills: activePillSheet.replacedPills(
+            pills: [
+              Pill(
+                index: 0,
+                createdDateTime: now(),
+                updatedDateTime: now(),
+                pillTakens: [
+                  PillTaken(recordedTakenDateTime: takenDate, createdDateTime: now(), updatedDateTime: now(), isAutomaticallyRecorded: false),
+                  PillTaken(recordedTakenDateTime: takenDate, createdDateTime: now(), updatedDateTime: now(), isAutomaticallyRecorded: false),
+                ],
+              ),
+              Pill(
+                index: 1,
+                createdDateTime: now(),
+                updatedDateTime: now(),
+                pillTakens: [
+                  PillTaken(recordedTakenDateTime: takenDate, createdDateTime: now(), updatedDateTime: now(), isAutomaticallyRecorded: false),
+                  PillTaken(recordedTakenDateTime: takenDate, createdDateTime: now(), updatedDateTime: now(), isAutomaticallyRecorded: false),
+                ],
+              ),
+              // 今日服用済みのピルの場合はpillTakensが1つだけ増える
+              Pill(
+                index: 2,
+                createdDateTime: now(),
+                updatedDateTime: now(),
+                pillTakens: [
+                  PillTaken(recordedTakenDateTime: takenDate, createdDateTime: now(), updatedDateTime: now(), isAutomaticallyRecorded: false),
+                ],
+              ),
+            ],
+          ),
         );
         // 事前条件
         expect(activePillSheet.lastCompletedPillNumber, 0);
@@ -244,35 +239,31 @@ void main() {
         activePillSheet = activePillSheet.copyWith(
           pillTakenCount: 2,
           lastTakenDate: takenDate,
-          pills: [...activePillSheet.pills]..replaceRange(
-              lastTakenPillIndex,
-              1,
-              [
-                Pill(index: lastTakenPillIndex, createdDateTime: now(), updatedDateTime: now(), pillTakens: [
-                  PillTaken(recordedTakenDateTime: takenDate, createdDateTime: now(), updatedDateTime: now(), isAutomaticallyRecorded: false)
-                ])
-              ],
-            ),
+          pills: activePillSheet.replacedPills(
+            pills: [
+              Pill(index: lastTakenPillIndex, createdDateTime: now(), updatedDateTime: now(), pillTakens: [
+                PillTaken(recordedTakenDateTime: takenDate, createdDateTime: now(), updatedDateTime: now(), isAutomaticallyRecorded: false)
+              ])
+            ],
+          ),
         );
 
         final updatedActivePillSheet = activePillSheet.takenPillSheet(takenDate);
         final expected = activePillSheet.copyWith(
           lastTakenDate: takenDate,
-          pills: [...activePillSheet.pills]..replaceRange(
-              lastTakenPillIndex,
-              1,
-              [
-                Pill(
-                  index: lastTakenPillIndex,
-                  createdDateTime: now(),
-                  updatedDateTime: now(),
-                  pillTakens: [
-                    PillTaken(recordedTakenDateTime: takenDate, createdDateTime: now(), updatedDateTime: now(), isAutomaticallyRecorded: false),
-                    PillTaken(recordedTakenDateTime: takenDate, createdDateTime: now(), updatedDateTime: now(), isAutomaticallyRecorded: false),
-                  ],
-                )
-              ],
-            ),
+          pills: activePillSheet.replacedPills(
+            pills: [
+              Pill(
+                index: lastTakenPillIndex,
+                createdDateTime: now(),
+                updatedDateTime: now(),
+                pillTakens: [
+                  PillTaken(recordedTakenDateTime: takenDate, createdDateTime: now(), updatedDateTime: now(), isAutomaticallyRecorded: false),
+                  PillTaken(recordedTakenDateTime: takenDate, createdDateTime: now(), updatedDateTime: now(), isAutomaticallyRecorded: false),
+                ],
+              )
+            ],
+          ),
         );
         // 事前条件
         expect(activePillSheet.lastCompletedPillNumber, 0);

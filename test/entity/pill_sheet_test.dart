@@ -1027,20 +1027,18 @@ void main() {
         );
 
         expect(model.pills[21].pillTakens.length, 0);
-        final pills = [...model.pills]..replaceRange(
-            21,
-            21,
-            [
-              Pill(
-                index: 21,
-                createdDateTime: now(),
-                updatedDateTime: now(),
-                pillTakens: [
-                  PillTaken(recordedTakenDateTime: DateTime.parse("2020-09-22"), createdDateTime: now(), updatedDateTime: now()),
-                ],
-              )
-            ],
-          );
+        final pills = model.replacedPills(
+          pills: [
+            Pill(
+              index: 21,
+              createdDateTime: now(),
+              updatedDateTime: now(),
+              pillTakens: [
+                PillTaken(recordedTakenDateTime: DateTime.parse("2020-09-22"), createdDateTime: now(), updatedDateTime: now()),
+              ],
+            ),
+          ],
+        );
         model = model.copyWith(pills: pills);
         expect(model.pills[21].pillTakens.length, 1);
         expect(model.lastCompletedPillNumber, 21);
@@ -1580,20 +1578,18 @@ void main() {
         );
 
         expect(model.pills[21].pillTakens.length, 0);
-        final pills = [...model.pills]..replaceRange(
-            21,
-            21,
-            [
-              Pill(
-                index: 21,
-                createdDateTime: now(),
-                updatedDateTime: now(),
-                pillTakens: [
-                  PillTaken(recordedTakenDateTime: DateTime.parse("2020-09-22"), createdDateTime: now(), updatedDateTime: now()),
-                ],
-              )
-            ],
-          );
+        final pills = model.replacedPills(
+          pills: [
+            Pill(
+              index: 21,
+              createdDateTime: now(),
+              updatedDateTime: now(),
+              pillTakens: [
+                PillTaken(recordedTakenDateTime: DateTime.parse("2020-09-22"), createdDateTime: now(), updatedDateTime: now()),
+              ],
+            ),
+          ],
+        );
         model = model.copyWith(pills: pills);
         expect(model.pills[21].pillTakens.length, 1);
         expect(model.lastTakenPillNumber, 22);
