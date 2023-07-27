@@ -241,10 +241,7 @@ class PillSheet with _$PillSheet {
     if (pills.isEmpty) {
       return pills;
     }
-    if (pills.length == 1) {
-      return [...this.pills]..replaceRange(pills.first.index, pills.last.index + 1, pills);
-    }
-    return [...this.pills]..replaceRange(pills.first.index, pills.last.index, pills);
+    return [...this.pills]..replaceRange(pills.first.index, pills.last.index + 1, pills);
   }
 }
 
