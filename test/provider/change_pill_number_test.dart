@@ -38,11 +38,13 @@ void main() {
             Pill.testGenerateAndIterateTo(pillSheetType: PillSheetType.pillsheet_28_0, fromDate: mockToday, lastTakenDate: null, pillTakenCount: 1),
       );
       final updatedPillSheet = pillSheet.copyWith(
-        beginingDate: mockToday.subtract(
-          const Duration(days: 1),
-        ),
-        lastTakenDate: mockToday.subtract(
-          const Duration(days: 1),
+        beginingDate: mockToday.subtract(const Duration(days: 1)),
+        lastTakenDate: mockToday.subtract(const Duration(days: 1)),
+        pills: Pill.generateAndFillTo(
+          pillSheetType: PillSheetType.pillsheet_28_0,
+          fromDate: mockToday.subtract(const Duration(days: 1)),
+          lastTakenDate: mockToday.subtract(const Duration(days: 1)),
+          pillTakenCount: 1,
         ),
       );
 
@@ -113,7 +115,9 @@ void main() {
         ),
         pills: Pill.testGenerateAndIterateTo(
           pillSheetType: PillSheetType.pillsheet_28_0,
-          fromDate: mockToday,
+          fromDate: mockToday.subtract(
+            const Duration(days: 1),
+          ),
           lastTakenDate: mockToday.subtract(
             const Duration(days: 1),
           ),
