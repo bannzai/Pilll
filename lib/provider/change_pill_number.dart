@@ -74,7 +74,7 @@ class ChangePillNumber {
         restDurations: [],
         pills: Pill.generateAndFillTo(
           pillSheetType: pillSheet.pillSheetType,
-          fromDate: pillSheet.beginingDate,
+          fromDate: beginDate,
           lastTakenDate: lastTakenDate,
           pillTakenCount: pillSheet.pillTakenCount,
         ),
