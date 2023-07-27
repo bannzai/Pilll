@@ -328,13 +328,32 @@ void main() {
       final updatedLeft = left.copyWith(
         beginingDate: DateTime.parse("2022-04-04"),
         lastTakenDate: DateTime.parse("2022-04-30"), // todayPillNumber - 1
+        pills: Pill.generateAndFillTo(
+          pillSheetType: PillSheetType.pillsheet_28_0,
+          fromDate: DateTime.parse("2022-04-04"),
+          lastTakenDate: DateTime.parse("2022-04-30"),
+          pillTakenCount: 1,
+        ),
       );
       final updatedMiddle = middle.copyWith(
         beginingDate: DateTime.parse("2022-05-02"),
         lastTakenDate: null,
+        pills: Pill.generateAndFillTo(
+          pillSheetType: PillSheetType.pillsheet_28_0,
+          fromDate: DateTime.parse("2022-05-02"),
+          lastTakenDate: null,
+          pillTakenCount: 1,
+        ),
       );
       final updatedRight = right.copyWith(
         beginingDate: DateTime.parse("2022-05-30"),
+        lastTakenDate: null,
+        pills: Pill.generateAndFillTo(
+          pillSheetType: PillSheetType.pillsheet_28_0,
+          fromDate: DateTime.parse("2022-05-30"),
+          lastTakenDate: right.lastTakenDate,
+          pillTakenCount: 1,
+        ),
       );
 
       final pillSheetGroup = PillSheetGroup(
