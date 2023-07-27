@@ -90,7 +90,6 @@ void main() {
       final mockToday = DateTime.parse("2020-09-19");
       todayRepository = mockTodayRepository;
       when(mockTodayRepository.now()).thenReturn(mockToday);
-      when(mockTodayRepository.now()).thenReturn(mockToday);
 
       final batchFactory = MockBatchFactory();
       final batch = MockWriteBatch();
@@ -111,6 +110,14 @@ void main() {
         ),
         lastTakenDate: mockToday.subtract(
           const Duration(days: 1),
+        ),
+        pills: Pill.testGenerateAndIterateTo(
+          pillSheetType: PillSheetType.pillsheet_28_0,
+          fromDate: mockToday,
+          lastTakenDate: mockToday.subtract(
+            const Duration(days: 1),
+          ),
+          pillTakenCount: 1,
         ),
       );
 
