@@ -233,9 +233,7 @@ class PillSheet with _$PillSheet {
     return pillTakenDate;
   }
 
-  int pillNumberFor({
-    required DateTime targetDate,
-  }) {
+  int pillNumberFor({required DateTime targetDate}) {
     return daysBetween(beginingDate.date(), targetDate) - summarizedRestDuration(restDurations: restDurations, upperDate: targetDate) + 1;
   }
 }
