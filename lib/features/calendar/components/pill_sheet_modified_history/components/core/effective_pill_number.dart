@@ -29,17 +29,21 @@ class EffectivePillNumber extends StatelessWidget {
 abstract class PillSheetModifiedHistoryDateEffectivePillNumber {
   static String hyphen() => "-";
   static String taken({required int beforeLastTakenPillNumber, required int afterLastTakenPillNumber}) {
-    if (beforeLastTakenPillNumber == (afterLastTakenPillNumber - 1)) {
+    // beforePillSheetの最後に飲んだ番号+1から服用記録が始まる
+    final left = beforeLastTakenPillNumber + 1;
+    if (left == afterLastTakenPillNumber) {
       return "$afterLastTakenPillNumber番";
     }
-    return "${beforeLastTakenPillNumber + 1}-$afterLastTakenPillNumber番";
+    return "$left-$afterLastTakenPillNumber番";
   }
 
   static String autoTaken({required int beforeLastTakenPillNumber, required int afterLastTakenPillNumber}) {
-    if ((beforeLastTakenPillNumber + 1) == afterLastTakenPillNumber) {
+    // beforePillSheetの最後に飲んだ番号+1から服用記録が始まる
+    final left = beforeLastTakenPillNumber + 1;
+    if (left == afterLastTakenPillNumber) {
       return "$afterLastTakenPillNumber番";
     }
-    return "${beforeLastTakenPillNumber + 1}-$afterLastTakenPillNumber番";
+    return "$left-$afterLastTakenPillNumber番";
   }
 
   static String revert({required int beforeLastTakenPillNumber, required int afterLastTakenPillNumber}) {
