@@ -574,12 +574,30 @@ void main() {
         beginingDate: DateTime.parse("2022-04-05"),
         lastTakenDate: DateTime.parse("2022-05-01"), // todayPillNumber - 1
         restDurations: [],
+        pills: Pill.generateAndFillTo(
+          pillSheetType: PillSheetType.pillsheet_28_0,
+          fromDate: DateTime.parse("2022-04-05"),
+          lastTakenDate: DateTime.parse("2022-05-01"),
+          pillTakenCount: 1,
+        ),
       );
       final updatedMiddle = middle.copyWith(
         beginingDate: DateTime.parse("2022-05-03"),
+        pills: Pill.generateAndFillTo(
+          pillSheetType: PillSheetType.pillsheet_28_0,
+          fromDate: DateTime.parse("2022-05-03"),
+          lastTakenDate: middle.lastTakenDate,
+          pillTakenCount: 1,
+        ),
       );
       final updatedRight = right.copyWith(
         beginingDate: DateTime.parse("2022-05-31"),
+        pills: Pill.generateAndFillTo(
+          pillSheetType: PillSheetType.pillsheet_28_0,
+          fromDate: DateTime.parse("2022-05-31"),
+          lastTakenDate: right.lastTakenDate,
+          pillTakenCount: 1,
+        ),
       );
 
       final pillSheetGroup = PillSheetGroup(
