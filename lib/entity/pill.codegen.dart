@@ -8,14 +8,6 @@ import 'package:pilll/utils/datetime/day.dart';
 part 'pill.codegen.g.dart';
 part 'pill.codegen.freezed.dart';
 
-class PillFirestoreKey {
-  static const String typeInfo = "typeInfo";
-  static const String createdAt = "createdAt";
-  static const String deletedAt = "deletedAt";
-  static const String lastPillTakenDate = "lastPillTakenDate";
-  static const String beginingDate = "beginingDate";
-}
-
 @freezed
 class PillTaken with _$PillTaken {
   @JsonSerializable(explicitToJson: true)
