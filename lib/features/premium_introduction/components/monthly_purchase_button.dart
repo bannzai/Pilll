@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:pilll/components/atoms/color.dart';
 import 'package:pilll/components/atoms/font.dart';
 import 'package:pilll/components/atoms/text_color.dart';
+import 'package:pilll/features/premium_introduction/util/currency.dart';
 import 'package:purchases_flutter/purchases_flutter.dart';
 
 class MonthlyPurchaseButton extends StatelessWidget {
@@ -42,13 +43,28 @@ class MonthlyPurchaseButton extends StatelessWidget {
                 fontWeight: FontWeight.w700,
               ),
             ),
-            Text(
-              "${monthlyPackage.storeProduct.priceString}/月",
-              style: const TextStyle(
-                color: TextColor.main,
-                fontFamily: FontFamily.japanese,
-                fontSize: 16,
-                fontWeight: FontWeight.w600,
+            RichText(
+              text: TextSpan(
+                children: [
+                  TextSpan(
+                    text: currencySymbol(context),
+                    style: const TextStyle(
+                      color: TextColor.main,
+                      fontFamily: FontFamily.japanese,
+                      fontSize: 12,
+                      fontWeight: FontWeight.w600,
+                    ),
+                  ),
+                  TextSpan(
+                    text: "${removeZero(monthlyPackage.storeProduct.price)}/月",
+                    style: const TextStyle(
+                      color: TextColor.main,
+                      fontFamily: FontFamily.japanese,
+                      fontSize: 16,
+                      fontWeight: FontWeight.w600,
+                    ),
+                  ),
+                ],
               ),
             ),
           ],
