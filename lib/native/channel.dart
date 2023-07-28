@@ -27,7 +27,7 @@ void definedChannel() {
         final pillSheetGroup = await quickRecordTakePill(database);
         syncActivePillSheetValue(pillSheetGroup: pillSheetGroup);
 
-        final activePillSheet = pillSheetGroup?.activePillSheet;
+        final activePillSheet = pillSheetGroup?.activedPillSheet;
         final user = (await database.userReference().get()).data();
         final setting = user?.setting;
         if (pillSheetGroup != null && activePillSheet != null && user != null && setting != null) {

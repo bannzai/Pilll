@@ -16,14 +16,12 @@ class PillMark extends StatefulWidget {
   final PillMarkType pillMarkType;
   final bool showsCheckmark;
   final bool showsRippleAnimation;
-  final int? remainingPillTakenCount;
 
   const PillMark({
     Key? key,
     required this.pillMarkType,
     required this.showsCheckmark,
     required this.showsRippleAnimation,
-    required this.remainingPillTakenCount,
   }) : super(key: key);
 
   @override
@@ -56,22 +54,14 @@ class PillMarkState extends State<PillMark> with TickerProviderStateMixin {
 
   @override
   Widget build(BuildContext context) {
-    final remainingPillTakenCount = widget.remainingPillTakenCount;
     return Stack(
       clipBehavior: Clip.none,
       children: [
         Stack(
           alignment: Alignment.center,
           children: [
-            switch (widget.pillMarkType) {
-              PillMarkType.normal => const NormalPillMark(),
-              PillMarkType.rest => const RestPillMark(),
-              PillMarkType.fake => const FakePillMark(),
-              PillMarkType.selected => const SelectedPillMark(),
-              PillMarkType.done => const LightGrayPillMark(),
-            },
+            _mark(widget.pillMarkType),
             if (widget.showsCheckmark) const Align(alignment: Alignment.center, child: PillMarkDoneMark()),
-            if (remainingPillTakenCount != null) Text("$remainingPillTakenCount", style: const TextStyle(color: PilllColors.white, fontSize: 10)),
           ],
         ),
         if (widget.showsRippleAnimation)
@@ -90,5 +80,20 @@ class PillMarkState extends State<PillMark> with TickerProviderStateMixin {
           ),
       ],
     );
+  }
+
+  Widget _mark(PillMarkType type) {
+    switch (type) {
+      case PillMarkType.normal:
+        return const NormalPillMark();
+      case PillMarkType.rest:
+        return const RestPillMark();
+      case PillMarkType.fake:
+        return const FakePillMark();
+      case PillMarkType.selected:
+        return const SelectedPillMark();
+      case PillMarkType.done:
+        return const LightGrayPillMark();
+    }
   }
 }

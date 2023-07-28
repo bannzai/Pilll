@@ -52,7 +52,7 @@ class SelectTodayPillNumberPillSheetList extends HookConsumerWidget {
                         });
                         store.setTodayPillNumber(
                           pageIndex: pageIndex,
-                          pillNumberInPillSheet: number,
+                          pillNumberIntoPillSheet: number,
                         );
                       },
                     ),

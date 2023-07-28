@@ -14,12 +14,12 @@ import 'package:pilll/utils/local_notification.dart';
 
 class PillSheetRemoveRow extends HookConsumerWidget {
   final PillSheetGroup latestPillSheetGroup;
-  final PillSheet activePillSheet;
+  final PillSheet activedPillSheet;
 
   const PillSheetRemoveRow({
     Key? key,
     required this.latestPillSheetGroup,
-    required this.activePillSheet,
+    required this.activedPillSheet,
   }) : super(key: key);
 
   @override
@@ -87,7 +87,7 @@ class PillSheetRemoveRow extends HookConsumerWidget {
                   text: "破棄する",
                   onPressed: () async {
                     try {
-                      await deletePillSheetGroup(latestPillSheetGroup: latestPillSheetGroup, activePillSheet: activePillSheet);
+                      await deletePillSheetGroup(latestPillSheetGroup: latestPillSheetGroup, activedPillSheet: activedPillSheet);
                       await cancelReminderLocalNotification();
                       navigatorKey.currentState?.pop();
                       ScaffoldMessenger.of(navigatorKey.currentContext!).showSnackBar(

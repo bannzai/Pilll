@@ -1,7 +1,6 @@
 import 'package:flutter_native_timezone/flutter_native_timezone.dart';
 import 'package:pilll/entity/firestore_id_generator.dart';
 import 'package:pilll/entity/link_account_type.dart';
-import 'package:pilll/entity/pill.codegen.dart';
 import 'package:pilll/utils/datetime/day.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';
 import 'package:pilll/entity/pill_sheet.codegen.dart';
@@ -14,7 +13,7 @@ part 'initial_setting_state.codegen.freezed.dart';
 class InitialSettingTodayPillNumber with _$InitialSettingTodayPillNumber {
   const factory InitialSettingTodayPillNumber({
     @Default(0) int pageIndex,
-    @Default(0) int pillNumberInPillSheet,
+    @Default(0) int pillNumberIntoPillSheet,
   }) = _InitialSettingTodayPillNumber;
 }
 
@@ -29,7 +28,6 @@ class InitialSettingState with _$InitialSettingState {
     @Default(false) bool isLoading,
     @Default(false) bool userIsNotAnonymous,
     @Default(false) bool settingIsExist,
-    @Default(false) bool pillSheetTakesTwicePerDay,
     LinkAccountType? accountType,
   }) = _InitialSettingState;
 
@@ -66,35 +64,23 @@ class InitialSettingState with _$InitialSettingState {
   static PillSheet buildPillSheet({
     required int pageIndex,
     required InitialSettingTodayPillNumber todayPillNumber,
-    required bool takesTwicePerDay,
     required List<PillSheetType> pillSheetTypes,
   }) {
     final pillSheetType = pillSheetTypes[pageIndex];
-    final beginDate = _beginingDate(
-      pageIndex: pageIndex,
-      todayPillNumber: todayPillNumber,
-      pillSheetTypes: pillSheetTypes,
-    );
-    final lastTakenDate = _lastTakenDate(
-      pageIndex: pageIndex,
-      todayPillNumber: todayPillNumber,
-      pillSheetTypes: pillSheetTypes,
-    );
-    final pillTakenCount = takesTwicePerDay ? 2 : 1;
-
     return PillSheet(
       id: firestoreIDGenerator(),
       groupIndex: pageIndex,
-      beginingDate: beginDate,
-      lastTakenDate: lastTakenDate,
-      typeInfo: pillSheetType.typeInfo,
-      pills: Pill.generateAndFillTo(
-        pillSheetType: pillSheetType,
-        fromDate: beginDate,
-        lastTakenDate: lastTakenDate,
-        pillTakenCount: pillTakenCount,
+      beginingDate: _beginingDate(
+        pageIndex: pageIndex,
+        todayPillNumber: todayPillNumber,
+        pillSheetTypes: pillSheetTypes,
       ),
-      pillTakenCount: pillTakenCount,
+      lastTakenDate: _lastTakenDate(
+        pageIndex: pageIndex,
+        todayPillNumber: todayPillNumber,
+        pillSheetTypes: pillSheetTypes,
+      ),
+      typeInfo: pillSheetType.typeInfo,
       createdAt: now(),
     );
   }
@@ -115,7 +101,7 @@ class InitialSettingState with _$InitialSettingState {
         passedTotalCount = passedTotalCountElement.reduce((value, element) => value + element);
       }
 
-      return today().subtract(Duration(days: passedTotalCount + (todayPillNumber.pillNumberInPillSheet - 1)));
+      return today().subtract(Duration(days: passedTotalCount + (todayPillNumber.pillNumberIntoPillSheet - 1)));
     } else {
       // Right Side from todayPillNumber.pageIndex
       final beforePillSheetBeginingDate = _beginingDate(
@@ -133,7 +119,7 @@ class InitialSettingState with _$InitialSettingState {
     required InitialSettingTodayPillNumber todayPillNumber,
     required List<PillSheetType> pillSheetTypes,
   }) {
-    if (pageIndex == 0 && todayPillNumber.pageIndex == 0 && todayPillNumber.pillNumberInPillSheet == 1) {
+    if (pageIndex == 0 && todayPillNumber.pageIndex == 0 && todayPillNumber.pillNumberIntoPillSheet == 1) {
       return null;
     }
     final pillSheetType = pillSheetTypes[pageIndex];
@@ -153,7 +139,7 @@ class InitialSettingState with _$InitialSettingState {
         pageIndex: pageIndex,
         todayPillNumber: todayPillNumber,
         pillSheetTypes: pillSheetTypes,
-      ).add(Duration(days: todayPillNumber.pillNumberInPillSheet - 2));
+      ).add(Duration(days: todayPillNumber.pillNumberIntoPillSheet - 2));
     }
   }
 
@@ -167,6 +153,6 @@ class InitialSettingState with _$InitialSettingState {
     if (todayPillNumber?.pageIndex != pageIndex) {
       return null;
     }
-    return todayPillNumber?.pillNumberInPillSheet;
+    return todayPillNumber?.pillNumberIntoPillSheet;
   }
 }

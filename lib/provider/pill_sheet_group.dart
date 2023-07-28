@@ -23,7 +23,7 @@ Future<PillSheetGroup?> latestPillSheetGroup(DatabaseConnection databaseConnecti
 }
 
 final activePillSheetProvider = Provider((ref) {
-  return ref.watch(latestPillSheetGroupProvider).whenData((value) => value?.activePillSheet);
+  return ref.watch(latestPillSheetGroupProvider).whenData((value) => value?.activedPillSheet);
 });
 
 final latestPillSheetGroupProvider = StreamProvider((ref) => ref
