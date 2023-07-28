@@ -3,6 +3,7 @@ import 'package:hooks_riverpod/hooks_riverpod.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:pilll/components/atoms/font.dart';
 import 'package:pilll/components/atoms/text_color.dart';
+import 'package:pilll/features/premium_introduction/util/currency.dart';
 import 'package:pilll/features/premium_introduction/util/discount_deadline.dart';
 import 'package:purchases_flutter/object_wrappers.dart';
 
@@ -79,14 +80,29 @@ class PremiumIntroductionDiscountRow extends HookConsumerWidget {
               const SizedBox(height: 4),
               Stack(
                 children: [
-                  Text(
-                    monthlyPremiumPackage.storeProduct.priceString,
+                  RichText(
                     textAlign: TextAlign.center,
-                    style: const TextStyle(
-                      fontWeight: FontWeight.w700,
-                      fontSize: 28,
-                      fontFamily: FontFamily.japanese,
-                      color: TextColor.main,
+                    text: TextSpan(
+                      children: [
+                        TextSpan(
+                          text: currencySymbol(context),
+                          style: const TextStyle(
+                            fontWeight: FontWeight.w700,
+                            fontSize: 20,
+                            fontFamily: FontFamily.japanese,
+                            color: TextColor.main,
+                          ),
+                        ),
+                        TextSpan(
+                          text: removeZero(monthlyPremiumPackage.storeProduct.price),
+                          style: const TextStyle(
+                            fontWeight: FontWeight.w700,
+                            fontSize: 28,
+                            fontFamily: FontFamily.japanese,
+                            color: TextColor.main,
+                          ),
+                        ),
+                      ],
                     ),
                   ),
                   Positioned(
