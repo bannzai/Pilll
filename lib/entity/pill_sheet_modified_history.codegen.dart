@@ -51,7 +51,7 @@ class PillSheetModifiedHistory with _$PillSheetModifiedHistory {
   @JsonSerializable(explicitToJson: true)
   const factory PillSheetModifiedHistory({
     // Added since 2023-08-01
-    @Default("v2") version,
+    @Default("v1") version,
 
     // ============ BEGIN: Added since v1 ============
     @JsonKey(includeIfNull: false, toJson: toNull) required String? id,
@@ -127,6 +127,7 @@ abstract class PillSheetModifiedHistoryServiceActionFactory {
   }) {
     return PillSheetModifiedHistory(
       id: null,
+      version: "v2",
       actionType: actionType.name,
       value: value,
       pillSheetID: null,
