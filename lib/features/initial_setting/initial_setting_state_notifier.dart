@@ -71,6 +71,10 @@ class InitialSettingStateNotifier extends StateNotifier<InitialSettingState> {
     state = state.copyWith(pillSheetTypes: copied);
   }
 
+  void setPillSheetTakesTwicePerDay(bool takesTwicePerDay) {
+    state = state.copyWith(pillSheetTakesTwicePerDay: takesTwicePerDay);
+  }
+
   void setReminderTime({
     required int index,
     required int hour,
@@ -87,12 +91,12 @@ class InitialSettingStateNotifier extends StateNotifier<InitialSettingState> {
 
   void setTodayPillNumber({
     required int pageIndex,
-    required int pillNumberIntoPillSheet,
+    required int pillNumberInPillSheet,
   }) {
     state = state.copyWith(
       todayPillNumber: InitialSettingTodayPillNumber(
         pageIndex: pageIndex,
-        pillNumberIntoPillSheet: pillNumberIntoPillSheet,
+        pillNumberInPillSheet: pillNumberInPillSheet,
       ),
     );
   }
@@ -115,6 +119,7 @@ class InitialSettingStateNotifier extends StateNotifier<InitialSettingState> {
           pageIndex: pageIndex,
           todayPillNumber: todayPillNumber,
           pillSheetTypes: state.pillSheetTypes,
+          takesTwicePerDay: state.pillSheetTakesTwicePerDay,
         );
       }).toList();
 
@@ -131,6 +136,8 @@ class InitialSettingStateNotifier extends StateNotifier<InitialSettingState> {
       final history = PillSheetModifiedHistoryServiceActionFactory.createCreatedPillSheetAction(
         pillSheetIDs: pillSheetIDs,
         pillSheetGroupID: createdPillSheetGroup.id,
+        beforePillSheetGroup: null,
+        createdNewPillSheetGroup: createdPillSheetGroup,
       );
       batchSetPillSheetModifiedHistory(batch, history);
     }

@@ -25,7 +25,7 @@ class RecordPageButton extends HookConsumerWidget {
 
     if (currentPillSheet.activeRestDuration != null) {
       return const RestDurationButton();
-    } else if (currentPillSheet.todayPillIsAlreadyTaken) {
+    } else if (currentPillSheet.todayPillsAreAlreadyTaken) {
       return CancelButton(
         pillSheetGroup: pillSheetGroup,
         activePillSheet: currentPillSheet,

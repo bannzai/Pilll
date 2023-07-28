@@ -1,4 +1,6 @@
+import 'package:collection/collection.dart';
 import 'package:pilll/entity/firestore_id_generator.dart';
+import 'package:pilll/entity/pill.codegen.dart';
 import 'package:pilll/utils/datetime/date_range.dart';
 import 'package:pilll/entity/firestore_timestamp_converter.dart';
 import 'package:pilll/entity/pill_sheet_type.dart';
@@ -74,7 +76,7 @@ class PillSheet with _$PillSheet {
       fromJson: TimestampConverter.timestampToDateTime,
       toJson: TimestampConverter.dateTimeToTimestamp,
     )
-    DateTime? lastTakenDate,
+    required DateTime? lastTakenDate,
     @JsonKey(
       fromJson: TimestampConverter.timestampToDateTime,
       toJson: TimestampConverter.dateTimeToTimestamp,
@@ -87,13 +89,27 @@ class PillSheet with _$PillSheet {
     DateTime? deletedAt,
     @Default(0) int groupIndex,
     @Default([]) List<RestDuration> restDurations,
+    @Default(1) pillTakenCount,
+    // TODO: [PillSheet.Pill] from: 2023-06-14 ある程度時間が経ったらrequiredにする。1年くらい。下位互換のためにpillsが無い場合を考慮する
+    @Default([]) List<Pill> pills,
   }) = _PillSheet;
-  factory PillSheet.create(PillSheetType type) => PillSheet(
+
+  // NOTE: visibleForTestingを消すならpillTakenCountもrequiredにする
+  @visibleForTesting
+  factory PillSheet.create(
+    PillSheetType type, {
+    required DateTime beginDate,
+    required DateTime? lastTakenDate,
+    int? pillTakenCount,
+  }) =>
+      PillSheet(
         id: firestoreIDGenerator(),
         typeInfo: type.typeInfo,
-        beginingDate: today(),
-        lastTakenDate: null,
+        beginingDate: beginDate,
+        lastTakenDate: lastTakenDate,
         createdAt: now(),
+        pillTakenCount: pillTakenCount ?? 1,
+        pills: Pill.generateAndFillTo(pillSheetType: type, fromDate: beginDate, lastTakenDate: lastTakenDate, pillTakenCount: pillTakenCount ?? 1),
       );
 
   factory PillSheet.fromJson(Map<String, dynamic> json) => _$PillSheetFromJson(json);
@@ -101,39 +117,72 @@ class PillSheet with _$PillSheet {
   PillSheetType get pillSheetType => PillSheetTypeFunctions.fromRawPath(typeInfo.pillSheetTypeReferencePath);
 
   int get todayPillNumber {
-    return pillSheetPillNumber(pillSheet: this, targetDate: today());
+    return pillNumberFor(targetDate: today());
   }
 
-  // NOTE: if pill sheet is not yet taken, lastTakenNumber return 0;
-  // Because if lastTakenPillNumber is nullable, ! = null, making it difficult to compare.
-  // lastTakenNumber is often compare todayPillNumber
+  int get todayPillIndex {
+    return todayPillNumber - 1;
+  }
+
+  // lastCompletedPillNumber は最後に服用完了したピルの番号を返す。lastTakenPillNumberとの違いは服用を完了しているかどうか
+  // あえてnon nullにしている。なぜならよく比較するのでnullableだと不便だから
+  // まだpillを飲んでない場合は `0` が変える。飲んでいる場合は 1以上の値が入る
+  int get lastCompletedPillNumber {
+    // TODO: [PillSheet.Pill] そのうち消す。古いPillSheetのPillsは[]になっている
+    if (pills.isEmpty) {
+      final lastTakenDate = this.lastTakenDate;
+      if (lastTakenDate == null) {
+        return 0;
+      }
+
+      return pillNumberFor(targetDate: lastTakenDate);
+    }
+
+    // lastTakenDate is not nullのチェックをしていてこの変数がnullのはずは無いが、将来的にlastTakenDateは消える可能性はあるのでこのロジックは真っ当なチェックになる
+    final lastCompletedPill = pills.lastWhereOrNull((element) => element.pillTakens.length == pillTakenCount);
+    if (lastCompletedPill == null) {
+      return 0;
+    }
+
+    final estimatedLastTakenDate = beginingDate.add(Duration(days: lastCompletedPill.index)).date();
+    return pillNumberFor(targetDate: estimatedLastTakenDate);
+  }
+
+  // lastTakenPillNumber は最後に服了したピルの番号を返す。lastcompletedPillNumberとは違い完了はしなくても良い
+  // あえてnon nullにしている。なぜならよく比較するのでnullableだと不便だから
+  // まだpillを飲んでない場合は `0` が変える。飲んでいる場合は 1以上の値が入る
   int get lastTakenPillNumber {
     final lastTakenDate = this.lastTakenDate;
     if (lastTakenDate == null) {
       return 0;
     }
 
-    return pillSheetPillNumber(pillSheet: this, targetDate: lastTakenDate);
+    return pillNumberFor(targetDate: lastTakenDate);
   }
 
-  bool get todayPillIsAlreadyTaken {
-    final lastTakenDate = this.lastTakenDate;
-    if (lastTakenDate == null) {
-      return false;
+  bool get todayPillsAreAlreadyTaken {
+    return lastCompletedPillNumber == todayPillNumber;
+  }
+
+  bool get anyTodayPillsAreAlreadyTaken {
+    // TODO: [PillSheet.Pill] そのうち消す。古いPillSheetのPillsは[]になっている
+    if (pills.isEmpty) {
+      return lastCompletedPillNumber == todayPillNumber;
     }
-    return lastTakenDate.isAfter(today()) || isSameDay(lastTakenDate, today());
+    return pills[todayPillIndex].pillTakens.isNotEmpty;
   }
 
-  bool get isEnded => typeInfo.totalCount == lastTakenPillNumber;
+  bool get isEnded => typeInfo.totalCount == lastCompletedPillNumber;
   bool get isBegan => beginingDate.date().toUtc().millisecondsSinceEpoch < now().toUtc().millisecondsSinceEpoch;
   bool get inNotTakenDuration => todayPillNumber > typeInfo.dosingPeriod;
   bool get pillSheetHasRestOrFakeDuration => !pillSheetType.isNotExistsNotTakenDuration;
-  bool get isActive {
-    final n = now();
+  bool get isActive => isActiveFor(now());
+
+  bool isActiveFor(DateTime date) {
     final begin = beginingDate.date();
     final totalCount = typeInfo.totalCount;
     final end = begin.add(Duration(days: totalCount + summarizedRestDuration(restDurations: restDurations, upperDate: today()) - 1));
-    return DateRange(begin, end).inRange(n);
+    return DateRange(begin, end).inRange(date);
   }
 
   DateTime get estimatedEndTakenDate => beginingDate
@@ -155,13 +204,14 @@ class PillSheet with _$PillSheet {
     }
   }
 
-  DateTime displayPillTakeDate(int pillNumberIntoPillSheet) {
-    final originDate = beginingDate.add(Duration(days: pillNumberIntoPillSheet - 1)).date();
+  // pillTakenDateFromPillNumber は元々の番号から、休薬期間を考慮した番号に変換する
+  DateTime pillTakenDateFromPillNumber(int pillNumberInPillSheet) {
+    final originDate = beginingDate.add(Duration(days: pillNumberInPillSheet - 1)).date();
     if (restDurations.isEmpty) {
       return originDate;
     }
 
-    var displayedDate = originDate;
+    var pillTakenDate = originDate;
     for (final restDuration in restDurations) {
       final restDurationBeginDate = restDuration.beginDate.date();
       final restDurationEndDate = restDuration.endDate?.date();
@@ -169,23 +219,38 @@ class PillSheet with _$PillSheet {
       if (restDurationEndDate != null && isSameDay(restDurationBeginDate, restDurationEndDate)) {
         continue;
       }
-      if (displayedDate.isBefore(restDurationBeginDate)) {
+      if (pillTakenDate.isBefore(restDurationBeginDate)) {
         continue;
       }
 
       if (restDurationEndDate != null) {
-        displayedDate = displayedDate.add(Duration(days: daysBetween(restDurationBeginDate, restDurationEndDate)));
+        pillTakenDate = pillTakenDate.add(Duration(days: daysBetween(restDurationBeginDate, restDurationEndDate)));
       } else {
-        displayedDate = displayedDate.add(Duration(days: daysBetween(restDurationBeginDate, today())));
+        pillTakenDate = pillTakenDate.add(Duration(days: daysBetween(restDurationBeginDate, today())));
       }
     }
 
-    return displayedDate;
+    return pillTakenDate;
+  }
+
+  int pillNumberFor({required DateTime targetDate}) {
+    return daysBetween(beginingDate.date(), targetDate) - summarizedRestDuration(restDurations: restDurations, upperDate: targetDate) + 1;
+  }
+
+  List<Pill> replacedPills({required List<Pill> pills}) {
+    // TODO: [PillSheet.Pill] そのうち消す。古いPillSheetのPillsは[]になっている
+    if (this.pills.isEmpty) {
+      return [];
+    }
+    if (pills.isEmpty) {
+      return this.pills;
+    }
+    return [...this.pills]..replaceRange(pills.first.index, pills.last.index + 1, pills);
   }
 }
 
 // upperDate までの休薬期間を集計する
-// upperDate にはlastTakenDate(lastTakenPillNumberを集計したい時)やtoday(todayPillNumberを集計したい時）が入る想定
+// upperDate にはlastTakenDate(lastCompletedPillNumberを集計したい時)やtoday(todayPillNumberを集計したい時）が入る想定
 int summarizedRestDuration({
   required List<RestDuration> restDurations,
   required DateTime upperDate,
@@ -206,13 +271,4 @@ int summarizedRestDuration({
 
     return daysBetween(e.beginDate, endDate);
   }).reduce((value, element) => value + element);
-}
-
-int pillSheetPillNumber({
-  required PillSheet pillSheet,
-  required DateTime targetDate,
-}) {
-  return daysBetween(pillSheet.beginingDate.date(), targetDate) -
-      summarizedRestDuration(restDurations: pillSheet.restDurations, upperDate: targetDate) +
-      1;
 }

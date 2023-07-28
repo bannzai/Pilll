@@ -98,7 +98,7 @@ class SettingPageBody extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final pillSheetGroup = latestPillSheetGroup;
-    final activedPillSheet = pillSheetGroup?.activedPillSheet;
+    final activePillSheet = pillSheetGroup?.activePillSheet;
     return Scaffold(
       backgroundColor: PilllColors.background,
       appBar: AppBar(
@@ -147,16 +147,16 @@ class SettingPageBody extends StatelessWidget {
                   return SettingSectionTitle(
                     text: "ピルシート",
                     children: [
-                      if (activedPillSheet != null && pillSheetGroup != null && !pillSheetGroup.isDeactived) ...[
+                      if (activePillSheet != null && pillSheetGroup != null && !pillSheetGroup.isDeactived) ...[
                         TodayPllNumberRow(
                           setting: setting,
                           pillSheetGroup: pillSheetGroup,
-                          activedPillSheet: activedPillSheet,
+                          activePillSheet: activePillSheet,
                         ),
                         _separator(),
                         PillSheetRemoveRow(
                           latestPillSheetGroup: pillSheetGroup,
-                          activedPillSheet: activedPillSheet,
+                          activePillSheet: activePillSheet,
                         ),
                         _separator(),
                       ],
@@ -177,8 +177,8 @@ class SettingPageBody extends StatelessWidget {
                       _separator(),
                       NotificationTimeRow(setting: setting),
                       _separator(),
-                      if (activedPillSheet != null && activedPillSheet.pillSheetHasRestOrFakeDuration) ...[
-                        NotificationInRestDuration(setting: setting, pillSheet: activedPillSheet),
+                      if (activePillSheet != null && activePillSheet.pillSheetHasRestOrFakeDuration) ...[
+                        NotificationInRestDuration(setting: setting, pillSheet: activePillSheet),
                         _separator(),
                       ],
                       if (!premiumAndTrial.isPremium) ...[

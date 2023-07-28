@@ -26,6 +26,7 @@ class AddPillSheetGroupPage extends HookConsumerWidget {
     final registerReminderLocalNotification = ref.watch(registerReminderLocalNotificationProvider);
     final pillSheetTypes = useState(setting.pillSheetEnumTypes);
     final displayNumberSetting = useState<PillSheetGroupDisplayNumberSetting?>(null);
+    final pillSheetTakesTwicePerDay = useState(false);
 
     return Scaffold(
       backgroundColor: PilllColors.background,
@@ -72,6 +73,7 @@ class AddPillSheetGroupPage extends HookConsumerWidget {
                     child: Column(
                       mainAxisSize: MainAxisSize.min,
                       children: [
+                        SettingPillSheetTakesTwicePerDayToggle(pillSheetTakesTwicePerDay),
                         if (pillSheetGroup != null)
                           DisplayNumberSetting(
                               pillSheetAppearanceMode: setting.pillSheetAppearanceMode,
@@ -91,6 +93,7 @@ class AddPillSheetGroupPage extends HookConsumerWidget {
                                 setting: setting,
                                 pillSheetGroup: pillSheetGroup,
                                 pillSheetTypes: pillSheetTypes.value,
+                                takesTwicePerDay: pillSheetTakesTwicePerDay.value,
                                 displayNumberSetting: displayNumberSetting.value,
                               );
                               await registerReminderLocalNotification();

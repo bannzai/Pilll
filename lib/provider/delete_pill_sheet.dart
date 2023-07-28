@@ -24,14 +24,16 @@ class DeletePillSheetGroup {
 
   Future<void> call({
     required PillSheetGroup latestPillSheetGroup,
-    required PillSheet activedPillSheet,
+    required PillSheet activePillSheet,
   }) async {
     final batch = batchFactory.batch();
-    final updatedPillSheet = activedPillSheet.copyWith(deletedAt: DateTime.now());
+    final updatedPillSheet = activePillSheet.copyWith(deletedAt: DateTime.now());
     final updatedPillSheetGroup = latestPillSheetGroup.replaced(updatedPillSheet).copyWith(deletedAt: DateTime.now());
     final history = PillSheetModifiedHistoryServiceActionFactory.createDeletedPillSheetAction(
       pillSheetGroupID: latestPillSheetGroup.id,
       pillSheetIDs: latestPillSheetGroup.pillSheetIDs,
+      beforePillSheetGroup: latestPillSheetGroup,
+      updatedPillSheetGroup: updatedPillSheetGroup,
     );
     batchSetPillSheetModifiedHistory(batch, history);
     batchSetPillSheetGroup(batch, updatedPillSheetGroup);
