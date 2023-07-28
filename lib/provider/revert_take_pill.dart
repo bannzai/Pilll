@@ -64,13 +64,11 @@ class RevertTakePill {
 
       if (revertDate.isBefore(pillSheet.beginingDate)) {
         // reset pill sheet when back to one before pill sheet
-        return pillSheet.revertedPillSheet(pillSheet.beginingDate.subtract(const Duration(days: 1)).date()).copyWith(restDurations: []);
+        return pillSheet.copyWith(lastTakenDate: pillSheet.beginingDate.subtract(const Duration(days: 1)).date(), restDurations: []);
       } else {
         // Revert対象の日付よりも後ろにある休薬期間のデータは消す
         final remainingResetDurations = pillSheet.restDurations.where((restDuration) => restDuration.beginDate.date().isBefore(revertDate)).toList();
-        return pillSheet.revertedPillSheet(revertDate).copyWith(
-              restDurations: remainingResetDurations,
-            );
+        return pillSheet.copyWith(lastTakenDate: revertDate, restDurations: remainingResetDurations);
       }
     }).toList();
 
@@ -100,26 +98,5 @@ class RevertTakePill {
     await batch.commit();
 
     return updatedPillSheetGroup;
-  }
-}
-
-extension RevertedPillSheet on PillSheet {
-  PillSheet revertedPillSheet(DateTime toDate) {
-    return copyWith(
-      lastTakenDate: toDate,
-      pills: pills.map((pill) {
-        // このpillの日付(begin + pill.index)が対象の日付よりも前の場合は何もしない
-        final dateOfPill = beginingDate.date().add(Duration(days: pill.index));
-        if (dateOfPill.isBefore(toDate) || isSameDay(dateOfPill, toDate)) {
-          debugPrint("early retrun pill: ${pill.index}");
-          return pill;
-        }
-
-        // NOTE: !(isSameDay(date.date() ,today()) && pill.index == todayPillIndex)
-        // OR pill.index != todayPillIndex。これらの場合は全ての服用記録を消す
-        debugPrint("clear pill: ${pill.index}");
-        return pill.copyWith(pillTakens: []);
-      }).toList(),
-    );
   }
 }
