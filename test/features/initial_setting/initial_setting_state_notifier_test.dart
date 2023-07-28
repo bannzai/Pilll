@@ -1,6 +1,5 @@
 import 'package:flutter/services.dart';
 import 'package:pilll/entity/firestore_id_generator.dart';
-import 'package:pilll/entity/pill.codegen.dart';
 import 'package:pilll/entity/pill_sheet_modified_history.codegen.dart';
 import 'package:pilll/provider/batch.dart';
 import 'package:pilll/features/initial_setting/initial_setting_state_notifier.dart';

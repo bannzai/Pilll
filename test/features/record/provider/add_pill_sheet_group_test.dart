@@ -1,5 +1,4 @@
 import 'package:pilll/entity/firestore_id_generator.dart';
-import 'package:pilll/entity/pill.codegen.dart';
 import 'package:pilll/features/record/components/add_pill_sheet_group/provider.dart';
 import 'package:pilll/entity/pill_sheet.codegen.dart';
 import 'package:pilll/entity/pill_sheet_group.codegen.dart';
@@ -96,7 +95,6 @@ void main() {
         pillSheetGroup: null,
         pillSheetTypes: [PillSheetType.pillsheet_28_0],
         displayNumberSetting: null,
-        takesTwicePerDay: false,
       );
     });
     test("group has two pill sheet", () async {
@@ -185,7 +183,6 @@ void main() {
         pillSheetGroup: null,
         pillSheetTypes: [PillSheetType.pillsheet_28_0, PillSheetType.pillsheet_21],
         displayNumberSetting: null,
-        takesTwicePerDay: false,
       );
     });
   });

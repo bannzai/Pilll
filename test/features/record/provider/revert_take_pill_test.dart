@@ -1,4 +1,3 @@
-import 'package:pilll/entity/pill.codegen.dart';
 import 'package:pilll/entity/pill_sheet.codegen.dart';
 import 'package:pilll/entity/pill_sheet_group.codegen.dart';
 import 'package:pilll/entity/pill_sheet_modified_history.codegen.dart';
@@ -127,7 +126,7 @@ void main() {
           id: "group_id",
           pillSheetIDs: ["sheet_id"],
           pillSheets: [
-            pillSheet.copyWith(lastTakenDate: yesterday, pillTakenCount: 1),
+            pillSheet.copyWith(lastTakenDate: yesterday),
           ],
           createdAt: now(),
         );
