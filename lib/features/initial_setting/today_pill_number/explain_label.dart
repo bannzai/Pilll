@@ -37,7 +37,7 @@ class ExplainPillNumber extends HookConsumerWidget {
                   fontSize: 12,
                   color: TextColor.main,
                 )),
-            Text("${todayPillNumber.pillNumberInPillSheet}",
+            Text("${todayPillNumber.pillNumberIntoPillSheet}",
                 style: const TextStyle(
                   fontFamily: FontFamily.japanese,
                   fontWeight: FontWeight.w500,

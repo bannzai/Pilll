@@ -11,21 +11,21 @@ import 'package:pilll/provider/premium_and_trial.codegen.dart';
 
 class RecordPagePillSheetSupportActions extends StatelessWidget {
   final PillSheetGroup pillSheetGroup;
-  final PillSheet activePillSheet;
+  final PillSheet activedPillSheet;
   final Setting setting;
   final PremiumAndTrial premiumAndTrial;
 
   const RecordPagePillSheetSupportActions({
     Key? key,
     required this.pillSheetGroup,
-    required this.activePillSheet,
+    required this.activedPillSheet,
     required this.setting,
     required this.premiumAndTrial,
   }) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
-    final RestDuration? restDuration = activePillSheet.activeRestDuration;
+    final RestDuration? restDuration = activedPillSheet.activeRestDuration;
 
     return SizedBox(
       width: PillSheetViewLayout.width,
@@ -45,7 +45,7 @@ class RecordPagePillSheetSupportActions extends StatelessWidget {
           if (restDuration != null) ...[
             EndManualRestDurationButton(
               restDuration: restDuration,
-              activePillSheet: activePillSheet,
+              activedPillSheet: activedPillSheet,
               pillSheetGroup: pillSheetGroup,
               didEndRestDuration: () {
                 if (pillSheetGroup.sequentialLastTakenPillNumber > 0 && setting.pillSheetAppearanceMode == PillSheetAppearanceMode.sequential) {
@@ -68,7 +68,7 @@ class RecordPagePillSheetSupportActions extends StatelessWidget {
           ] else ...[
             BeginManualRestDurationButton(
               appearanceMode: setting.pillSheetAppearanceMode,
-              activePillSheet: activePillSheet,
+              activedPillSheet: activedPillSheet,
               pillSheetGroup: pillSheetGroup,
               didBeginRestDuration: () {
                 ScaffoldMessenger.of(context).showSnackBar(

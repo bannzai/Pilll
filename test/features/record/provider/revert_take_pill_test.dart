@@ -1,4 +1,3 @@
-import 'package:pilll/entity/pill.codegen.dart';
 import 'package:pilll/entity/pill_sheet.codegen.dart';
 import 'package:pilll/entity/pill_sheet_group.codegen.dart';
 import 'package:pilll/entity/pill_sheet_modified_history.codegen.dart';
@@ -16,208 +15,6 @@ void main() {
   setUp(() {
     TestWidgetsFlutterBinding.ensureInitialized();
     SharedPreferences.setMockInitialValues({});
-  });
-  group("revertedPillSheet", () {
-    group("pill sheet pill taken count is 1(default)", () {
-      test("Revert before begin date", () async {
-        var mockTodayRepository = MockTodayService();
-        final mockToday = DateTime.parse("2022-01-17");
-        todayRepository = mockTodayRepository;
-        when(mockTodayRepository.now()).thenReturn(mockToday);
-        when(mockTodayRepository.now()).thenReturn(mockToday);
-        final yesterday = DateTime.parse("2022-01-16");
-
-        final pillSheet = PillSheet(
-          id: "sheet_id",
-          typeInfo: PillSheetType.pillsheet_28_0.typeInfo,
-          beginingDate: yesterday,
-          groupIndex: 0,
-          lastTakenDate: today(),
-          createdAt: now(),
-          pillTakenCount: 1,
-          pills: Pill.testGenerateAndIterateTo(
-              pillSheetType: PillSheetType.pillsheet_28_0, fromDate: yesterday, lastTakenDate: today(), pillTakenCount: 1),
-        );
-        final revertDate = yesterday.subtract(const Duration(days: 1));
-        final reverted = pillSheet.revertedPillSheet(revertDate);
-        final expected = PillSheet(
-          id: "sheet_id",
-          typeInfo: PillSheetType.pillsheet_28_0.typeInfo,
-          beginingDate: yesterday,
-          groupIndex: 0,
-          lastTakenDate: revertDate, // change
-          createdAt: now(),
-          pills: Pill.testGenerateAndIterateTo(
-            pillSheetType: PillSheetType.pillsheet_28_0,
-            fromDate: yesterday,
-            lastTakenDate: revertDate, // change
-            pillTakenCount: 1,
-          ), // Change
-          pillTakenCount: 1,
-        );
-        expect(reverted.pills, expected.pills);
-        expect(reverted.lastTakenDate, expected.lastTakenDate);
-        expect(reverted.lastCompletedPillNumber, expected.lastCompletedPillNumber);
-        expect(reverted.todayPillNumber, expected.todayPillNumber);
-        expect(reverted.todayPillsAreAlreadyTaken, expected.todayPillsAreAlreadyTaken);
-        expect(reverted, expected);
-      });
-      test("Revert to yesterday", () async {
-        var mockTodayRepository = MockTodayService();
-        final mockToday = DateTime.parse("2022-01-17");
-        todayRepository = mockTodayRepository;
-        when(mockTodayRepository.now()).thenReturn(mockToday);
-        when(mockTodayRepository.now()).thenReturn(mockToday);
-        final yesterday = DateTime.parse("2022-01-16");
-
-        final pillSheet = PillSheet(
-          id: "sheet_id",
-          typeInfo: PillSheetType.pillsheet_28_0.typeInfo,
-          beginingDate: DateTime.parse("2022-01-06"),
-          groupIndex: 0,
-          lastTakenDate: today(),
-          createdAt: now(),
-          pills: Pill.testGenerateAndIterateTo(
-              pillSheetType: PillSheetType.pillsheet_28_0, fromDate: DateTime.parse("2022-01-06"), lastTakenDate: today(), pillTakenCount: 1),
-          restDurations: [
-            RestDuration(
-              beginDate: mockToday.subtract(const Duration(days: 8)),
-              createdDate: mockToday.subtract(const Duration(days: 8)),
-              endDate: mockToday.subtract(const Duration(days: 7)),
-            ),
-          ],
-        );
-        final revertDate = yesterday;
-        final reverted = pillSheet.revertedPillSheet(revertDate);
-        final expected = PillSheet(
-          id: "sheet_id",
-          typeInfo: PillSheetType.pillsheet_28_0.typeInfo,
-          beginingDate: DateTime.parse("2022-01-06"),
-          groupIndex: 0,
-          lastTakenDate: revertDate, // change
-          createdAt: now(),
-          pills: Pill.testGenerateAndIterateTo(
-            pillSheetType: PillSheetType.pillsheet_28_0,
-            fromDate: DateTime.parse("2022-01-06"),
-            lastTakenDate: revertDate,
-            pillTakenCount: 1,
-          ), // Change
-          restDurations: [
-            RestDuration(
-              beginDate: mockToday.subtract(const Duration(days: 8)),
-              createdDate: mockToday.subtract(const Duration(days: 8)),
-              endDate: mockToday.subtract(const Duration(days: 7)),
-            ),
-          ],
-        );
-        expect(reverted.pills, expected.pills);
-        expect(reverted.lastTakenDate, expected.lastTakenDate);
-        expect(reverted.lastCompletedPillNumber, expected.lastCompletedPillNumber);
-        expect(reverted.todayPillNumber, expected.todayPillNumber);
-        expect(reverted.todayPillsAreAlreadyTaken, expected.todayPillsAreAlreadyTaken);
-        expect(reverted, expected);
-      });
-    });
-    group("pillTakenCount = 2", () {
-      test("Revert before begin date", () async {
-        var mockTodayRepository = MockTodayService();
-        final mockToday = DateTime.parse("2022-01-17");
-        todayRepository = mockTodayRepository;
-        when(mockTodayRepository.now()).thenReturn(mockToday);
-        when(mockTodayRepository.now()).thenReturn(mockToday);
-        final yesterday = DateTime.parse("2022-01-16");
-
-        final pillSheet = PillSheet(
-          id: "sheet_id",
-          typeInfo: PillSheetType.pillsheet_28_0.typeInfo,
-          beginingDate: yesterday,
-          groupIndex: 0,
-          lastTakenDate: today(),
-          createdAt: now(),
-          pillTakenCount: 2,
-          pills: Pill.testGenerateAndIterateTo(
-              pillSheetType: PillSheetType.pillsheet_28_0, fromDate: yesterday, lastTakenDate: today(), pillTakenCount: 2),
-        );
-        final revertDate = yesterday.subtract(const Duration(days: 1));
-        final reverted = pillSheet.revertedPillSheet(revertDate);
-        final expected = PillSheet(
-          id: "sheet_id",
-          typeInfo: PillSheetType.pillsheet_28_0.typeInfo,
-          beginingDate: yesterday,
-          groupIndex: 0,
-          lastTakenDate: revertDate, // change
-          createdAt: now(),
-          pills: Pill.testGenerateAndIterateTo(
-            pillSheetType: PillSheetType.pillsheet_28_0,
-            fromDate: yesterday,
-            lastTakenDate: revertDate, // change
-            pillTakenCount: 2,
-          ), // Change
-          pillTakenCount: 2,
-        );
-        expect(reverted.pills, expected.pills);
-        expect(reverted.lastTakenDate, expected.lastTakenDate);
-        expect(reverted.lastCompletedPillNumber, expected.lastCompletedPillNumber);
-        expect(reverted.todayPillNumber, expected.todayPillNumber);
-        expect(reverted.todayPillsAreAlreadyTaken, expected.todayPillsAreAlreadyTaken);
-        expect(reverted, expected);
-      });
-      test("Revert to yesterday", () async {
-        var mockTodayRepository = MockTodayService();
-        final mockToday = DateTime.parse("2022-01-17");
-        todayRepository = mockTodayRepository;
-        when(mockTodayRepository.now()).thenReturn(mockToday);
-        when(mockTodayRepository.now()).thenReturn(mockToday);
-        final yesterday = DateTime.parse("2022-01-16");
-
-        final pillSheet = PillSheet(
-          id: "sheet_id",
-          typeInfo: PillSheetType.pillsheet_28_0.typeInfo,
-          beginingDate: DateTime.parse("2022-01-06"),
-          groupIndex: 0,
-          lastTakenDate: today(),
-          createdAt: now(),
-          pills: Pill.testGenerateAndIterateTo(
-              pillSheetType: PillSheetType.pillsheet_28_0, fromDate: DateTime.parse("2022-01-06"), lastTakenDate: today(), pillTakenCount: 2),
-          restDurations: [
-            RestDuration(
-              beginDate: mockToday.subtract(const Duration(days: 8)),
-              createdDate: mockToday.subtract(const Duration(days: 8)),
-              endDate: mockToday.subtract(const Duration(days: 7)),
-            ),
-          ],
-        );
-        final revertDate = yesterday;
-        final reverted = pillSheet.revertedPillSheet(revertDate);
-        final expected = PillSheet(
-          id: "sheet_id",
-          typeInfo: PillSheetType.pillsheet_28_0.typeInfo,
-          beginingDate: DateTime.parse("2022-01-06"),
-          groupIndex: 0,
-          lastTakenDate: revertDate, // change
-          createdAt: now(),
-          pills: Pill.testGenerateAndIterateTo(
-            pillSheetType: PillSheetType.pillsheet_28_0,
-            fromDate: DateTime.parse("2022-01-06"),
-            lastTakenDate: revertDate,
-            pillTakenCount: 2,
-          ), // Change
-          restDurations: [
-            RestDuration(
-              beginDate: mockToday.subtract(const Duration(days: 8)),
-              createdDate: mockToday.subtract(const Duration(days: 8)),
-              endDate: mockToday.subtract(const Duration(days: 7)),
-            ),
-          ],
-        );
-        expect(reverted.pills, expected.pills);
-        expect(reverted.lastTakenDate, expected.lastTakenDate);
-        expect(reverted.lastCompletedPillNumber, expected.lastCompletedPillNumber);
-        expect(reverted.todayPillNumber, expected.todayPillNumber);
-        expect(reverted.todayPillsAreAlreadyTaken, expected.todayPillsAreAlreadyTaken);
-        expect(reverted, expected);
-      });
-    });
   });
 
   group("#revertTaken", () {
@@ -241,8 +38,6 @@ void main() {
           groupIndex: 0,
           lastTakenDate: today(),
           createdAt: now(),
-          pills: Pill.testGenerateAndIterateTo(
-              pillSheetType: PillSheetType.pillsheet_28_0, fromDate: yesterday, lastTakenDate: today(), pillTakenCount: 1),
         );
 
         final pillSheetGroup = PillSheetGroup(
@@ -257,17 +52,7 @@ void main() {
           id: "group_id",
           pillSheetIDs: ["sheet_id"],
           pillSheets: [
-            pillSheet.copyWith(
-              lastTakenDate: yesterday.subtract(const Duration(days: 1)),
-              pills: Pill.testGenerateAndIterateTo(
-                pillSheetType: PillSheetType.pillsheet_28_0,
-                fromDate: pillSheet.beginingDate,
-                lastTakenDate: yesterday.subtract(
-                  const Duration(days: 1),
-                ),
-                pillTakenCount: 1,
-              ),
-            ),
+            pillSheet.copyWith(lastTakenDate: yesterday.subtract(const Duration(days: 1))),
           ],
           createdAt: now(),
         );
@@ -280,8 +65,6 @@ void main() {
           after: pillSheet.copyWith(
             lastTakenDate: yesterday.subtract(const Duration(days: 1)),
           ),
-          beforePillSheetGroup: pillSheetGroup,
-          afterPillSheetGroup: updatedPillSheetGroup,
         );
         final batchSetPillSheetModifiedHistory = MockBatchSetPillSheetModifiedHistory();
         when(batchSetPillSheetModifiedHistory(batch, history)).thenReturn(null);
@@ -304,7 +87,7 @@ void main() {
             batchSetPillSheetModifiedHistory: batchSetPillSheetModifiedHistory,
             batchSetPillSheetGroup: batchSetPillSheetGroup);
 
-        await revertTakePill.call(pillSheetGroup: pillSheetGroup, pageIndex: 0, targetRevertPillNumberIntoPillSheet: 1);
+        await revertTakePill.call(pillSheetGroup: pillSheetGroup, pageIndex: 0, pillNumberIntoPillSheet: 1);
       });
 
       test("Revert today pill", () async {
@@ -325,8 +108,6 @@ void main() {
           groupIndex: 0,
           lastTakenDate: today(),
           createdAt: now(),
-          pills: Pill.testGenerateAndIterateTo(
-              pillSheetType: PillSheetType.pillsheet_28_0, fromDate: yesterday, lastTakenDate: today(), pillTakenCount: 1),
         );
 
         final pillSheetGroup = PillSheetGroup(
@@ -341,11 +122,7 @@ void main() {
           id: "group_id",
           pillSheetIDs: ["sheet_id"],
           pillSheets: [
-            pillSheet.copyWith(
-                lastTakenDate: yesterday,
-                pills: Pill.testGenerateAndIterateTo(
-                    pillSheetType: pillSheet.pillSheetType, fromDate: pillSheet.beginingDate, lastTakenDate: yesterday, pillTakenCount: 1),
-                pillTakenCount: 1),
+            pillSheet.copyWith(lastTakenDate: yesterday),
           ],
           createdAt: now(),
         );
@@ -358,8 +135,6 @@ void main() {
           after: pillSheet.copyWith(
             lastTakenDate: yesterday,
           ),
-          beforePillSheetGroup: pillSheetGroup,
-          afterPillSheetGroup: updatedPillSheetGroup,
         );
         final batchSetPillSheetModifiedHistory = MockBatchSetPillSheetModifiedHistory();
         when(batchSetPillSheetModifiedHistory(batch, history)).thenReturn(null);
@@ -382,7 +157,7 @@ void main() {
             batchSetPillSheetModifiedHistory: batchSetPillSheetModifiedHistory,
             batchSetPillSheetGroup: batchSetPillSheetGroup);
 
-        await revertTakePill.call(pillSheetGroup: pillSheetGroup, pageIndex: 0, targetRevertPillNumberIntoPillSheet: 2);
+        await revertTakePill.call(pillSheetGroup: pillSheetGroup, pageIndex: 0, pillNumberIntoPillSheet: 2);
       });
 
       test("revert with rest durations and removed rest duration", () async {
@@ -404,8 +179,6 @@ void main() {
           groupIndex: 0,
           lastTakenDate: today(),
           createdAt: now(),
-          pills: Pill.testGenerateAndIterateTo(
-              pillSheetType: PillSheetType.pillsheet_28_0, fromDate: beginDate, lastTakenDate: today(), pillTakenCount: 1),
           restDurations: [
             RestDuration(
               beginDate: mockToday.subtract(const Duration(days: 2)),
@@ -427,15 +200,7 @@ void main() {
           id: "group_id",
           pillSheetIDs: ["sheet_id"],
           pillSheets: [
-            pillSheet.copyWith(
-              lastTakenDate: beginDate.subtract(const Duration(days: 1)),
-              pills: Pill.testGenerateAndIterateTo(
-                  pillSheetType: PillSheetType.pillsheet_28_0,
-                  fromDate: pillSheet.beginingDate,
-                  lastTakenDate: beginDate.subtract(const Duration(days: 1)),
-                  pillTakenCount: 1),
-              restDurations: [],
-            ),
+            pillSheet.copyWith(lastTakenDate: beginDate.subtract(const Duration(days: 1)), restDurations: []),
           ],
           createdAt: now(),
         );
@@ -449,8 +214,6 @@ void main() {
             lastTakenDate: beginDate.subtract(const Duration(days: 1)),
             restDurations: [],
           ),
-          beforePillSheetGroup: pillSheetGroup,
-          afterPillSheetGroup: updatedPillSheetGroup,
         );
         final batchSetPillSheetModifiedHistory = MockBatchSetPillSheetModifiedHistory();
         when(batchSetPillSheetModifiedHistory(batch, history)).thenReturn(null);
@@ -473,7 +236,7 @@ void main() {
             batchSetPillSheetModifiedHistory: batchSetPillSheetModifiedHistory,
             batchSetPillSheetGroup: batchSetPillSheetGroup);
 
-        await revertTakePill.call(pillSheetGroup: pillSheetGroup, pageIndex: 0, targetRevertPillNumberIntoPillSheet: 1);
+        await revertTakePill.call(pillSheetGroup: pillSheetGroup, pageIndex: 0, pillNumberIntoPillSheet: 1);
       });
 
       test("revert with rest durations but no removed rest duration", () async {
@@ -496,8 +259,6 @@ void main() {
           groupIndex: 0,
           lastTakenDate: today(),
           createdAt: now(),
-          pills: Pill.testGenerateAndIterateTo(
-              pillSheetType: PillSheetType.pillsheet_28_0, fromDate: beginDate, lastTakenDate: today(), pillTakenCount: 1),
           restDurations: [
             RestDuration(
               beginDate: mockToday.subtract(const Duration(days: 8)),
@@ -519,15 +280,7 @@ void main() {
           id: "group_id",
           pillSheetIDs: ["sheet_id"],
           pillSheets: [
-            pillSheet.copyWith(
-              lastTakenDate: yesterday,
-              pills: Pill.testGenerateAndIterateTo(
-                pillSheetType: PillSheetType.pillsheet_28_0,
-                fromDate: pillSheet.beginingDate,
-                lastTakenDate: yesterday,
-                pillTakenCount: 1,
-              ),
-            ),
+            pillSheet.copyWith(lastTakenDate: yesterday),
           ],
           createdAt: now(),
         );
@@ -538,8 +291,6 @@ void main() {
           pillSheetGroupID: "group_id",
           before: pillSheet,
           after: pillSheet.copyWith(lastTakenDate: yesterday),
-          beforePillSheetGroup: pillSheetGroup,
-          afterPillSheetGroup: updatedPillSheetGroup,
         );
         final batchSetPillSheetModifiedHistory = MockBatchSetPillSheetModifiedHistory();
         when(batchSetPillSheetModifiedHistory(batch, history)).thenReturn(null);
@@ -562,7 +313,7 @@ void main() {
             batchSetPillSheetModifiedHistory: batchSetPillSheetModifiedHistory,
             batchSetPillSheetGroup: batchSetPillSheetGroup);
 
-        await revertTakePill.call(pillSheetGroup: pillSheetGroup, pageIndex: 0, targetRevertPillNumberIntoPillSheet: 11);
+        await revertTakePill.call(pillSheetGroup: pillSheetGroup, pageIndex: 0, pillNumberIntoPillSheet: 11);
       });
     });
 
@@ -586,12 +337,6 @@ void main() {
           groupIndex: 0,
           lastTakenDate: mockToday.subtract(const Duration(days: 2)),
           createdAt: now(),
-          pills: Pill.testGenerateAndIterateTo(
-            pillSheetType: PillSheetType.pillsheet_28_0,
-            fromDate: mockToday.subtract(const Duration(days: 29)),
-            lastTakenDate: mockToday.subtract(const Duration(days: 2)),
-            pillTakenCount: 1,
-          ),
         );
 
         // actived pill sheet
@@ -602,8 +347,6 @@ void main() {
           lastTakenDate: mockToday,
           groupIndex: 1,
           createdAt: now(),
-          pills: Pill.testGenerateAndIterateTo(
-              pillSheetType: PillSheetType.pillsheet_21, fromDate: yesterday, lastTakenDate: mockToday, pillTakenCount: 1),
         );
 
         final pillSheetGroup = PillSheetGroup(
@@ -617,15 +360,7 @@ void main() {
           pillSheetIDs: ["1", "2"],
           pillSheets: [
             pillSheet,
-            pillSheet2.copyWith(
-              lastTakenDate: yesterday,
-              pills: Pill.testGenerateAndIterateTo(
-                pillSheetType: pillSheet2.pillSheetType,
-                fromDate: pillSheet2.beginingDate,
-                lastTakenDate: yesterday,
-                pillTakenCount: 1,
-              ),
-            ),
+            pillSheet2.copyWith(lastTakenDate: yesterday),
           ],
           createdAt: now(),
         );
@@ -638,8 +373,6 @@ void main() {
           after: pillSheet2.copyWith(
             lastTakenDate: yesterday,
           ),
-          beforePillSheetGroup: pillSheetGroup,
-          afterPillSheetGroup: updatedPillSheetGroup,
         );
         final batchSetPillSheetModifiedHistory = MockBatchSetPillSheetModifiedHistory();
         when(batchSetPillSheetModifiedHistory(batch, history)).thenReturn(null);
@@ -663,7 +396,7 @@ void main() {
             batchSetPillSheetModifiedHistory: batchSetPillSheetModifiedHistory,
             batchSetPillSheetGroup: batchSetPillSheetGroup);
 
-        await revertTakePill.call(pillSheetGroup: pillSheetGroup, pageIndex: 1, targetRevertPillNumberIntoPillSheet: 2);
+        await revertTakePill.call(pillSheetGroup: pillSheetGroup, pageIndex: 1, pillNumberIntoPillSheet: 2);
       });
 
       test("call revert from actived pill sheet to before pill sheet", () async {
@@ -685,12 +418,6 @@ void main() {
           groupIndex: 0,
           lastTakenDate: mockToday.subtract(const Duration(days: 2)),
           createdAt: now(),
-          pills: Pill.testGenerateAndIterateTo(
-            pillSheetType: PillSheetType.pillsheet_28_0,
-            fromDate: mockToday.subtract(const Duration(days: 29)),
-            lastTakenDate: mockToday.subtract(const Duration(days: 2)),
-            pillTakenCount: 1,
-          ),
         );
 
         // actived pill sheet
@@ -701,8 +428,6 @@ void main() {
           lastTakenDate: mockToday,
           groupIndex: 1,
           createdAt: now(),
-          pills: Pill.testGenerateAndIterateTo(
-              pillSheetType: PillSheetType.pillsheet_21, fromDate: yesterday, lastTakenDate: mockToday, pillTakenCount: 1),
         );
 
         final pillSheetGroup = PillSheetGroup(
@@ -715,24 +440,8 @@ void main() {
           id: "group_id",
           pillSheetIDs: ["1", "2"],
           pillSheets: [
-            pillSheet.copyWith(
-              lastTakenDate: mockToday.subtract(const Duration(days: 4)),
-              pills: Pill.testGenerateAndIterateTo(
-                pillSheetType: pillSheet.pillSheetType,
-                fromDate: pillSheet.beginingDate,
-                lastTakenDate: mockToday.subtract(const Duration(days: 4)),
-                pillTakenCount: 1,
-              ),
-            ),
-            pillSheet2.copyWith(
-              lastTakenDate: pillSheet2.beginingDate.subtract(const Duration(days: 1)),
-              pills: Pill.testGenerateAndIterateTo(
-                pillSheetType: pillSheet2.pillSheetType,
-                fromDate: pillSheet2.beginingDate,
-                lastTakenDate: pillSheet2.beginingDate.subtract(const Duration(days: 1)),
-                pillTakenCount: 1,
-              ),
-            ),
+            pillSheet.copyWith(lastTakenDate: mockToday.subtract(const Duration(days: 4))),
+            pillSheet2.copyWith(lastTakenDate: pillSheet2.beginingDate.subtract(const Duration(days: 1))),
           ],
           createdAt: now(),
         );
@@ -740,12 +449,7 @@ void main() {
         when(batchSetPillSheetGroup(batch, updatedPillSheetGroup)).thenReturn(updatedPillSheetGroup);
 
         final history = PillSheetModifiedHistoryServiceActionFactory.createRevertTakenPillAction(
-          pillSheetGroupID: "group_id",
-          before: pillSheet2,
-          after: pillSheet.copyWith(lastTakenDate: mockToday.subtract(const Duration(days: 4))),
-          beforePillSheetGroup: pillSheetGroup,
-          afterPillSheetGroup: updatedPillSheetGroup,
-        );
+            pillSheetGroupID: "group_id", before: pillSheet2, after: pillSheet.copyWith(lastTakenDate: mockToday.subtract(const Duration(days: 4))));
         final batchSetPillSheetModifiedHistory = MockBatchSetPillSheetModifiedHistory();
         when(batchSetPillSheetModifiedHistory(batch, history)).thenReturn(null);
 
@@ -768,7 +472,7 @@ void main() {
             batchSetPillSheetModifiedHistory: batchSetPillSheetModifiedHistory,
             batchSetPillSheetGroup: batchSetPillSheetGroup);
 
-        await revertTakePill.call(pillSheetGroup: pillSheetGroup, pageIndex: 0, targetRevertPillNumberIntoPillSheet: 27);
+        await revertTakePill.call(pillSheetGroup: pillSheetGroup, pageIndex: 0, pillNumberIntoPillSheet: 27);
       });
       test("call revert with rest duration", () async {
         var mockTodayRepository = MockTodayService();
@@ -789,12 +493,6 @@ void main() {
           groupIndex: 0,
           lastTakenDate: mockToday.subtract(const Duration(days: 2)),
           createdAt: now(),
-          pills: Pill.testGenerateAndIterateTo(
-            pillSheetType: PillSheetType.pillsheet_28_0,
-            fromDate: mockToday.subtract(const Duration(days: 29)),
-            lastTakenDate: mockToday.subtract(const Duration(days: 2)),
-            pillTakenCount: 1,
-          ),
         );
 
         // actived pill sheet
@@ -808,8 +506,6 @@ void main() {
             RestDuration(beginDate: yesterday, createdDate: yesterday, endDate: today()),
           ],
           createdAt: now(),
-          pills: Pill.testGenerateAndIterateTo(
-              pillSheetType: PillSheetType.pillsheet_21, fromDate: yesterday, lastTakenDate: mockToday, pillTakenCount: 1),
         );
 
         final pillSheetGroup = PillSheetGroup(
@@ -822,25 +518,8 @@ void main() {
           id: "group_id",
           pillSheetIDs: ["1", "2"],
           pillSheets: [
-            pillSheet.copyWith(
-              lastTakenDate: mockToday.subtract(const Duration(days: 4)),
-              pills: Pill.testGenerateAndIterateTo(
-                pillSheetType: pillSheet.pillSheetType,
-                fromDate: pillSheet.beginingDate,
-                lastTakenDate: mockToday.subtract(const Duration(days: 4)),
-                pillTakenCount: 1,
-              ),
-            ),
-            pillSheet2.copyWith(
-              lastTakenDate: pillSheet2.beginingDate.subtract(const Duration(days: 1)),
-              pills: Pill.testGenerateAndIterateTo(
-                pillSheetType: pillSheet2.pillSheetType,
-                fromDate: pillSheet2.beginingDate,
-                lastTakenDate: pillSheet2.beginingDate.subtract(const Duration(days: 1)),
-                pillTakenCount: 1,
-              ),
-              restDurations: [],
-            )
+            pillSheet.copyWith(lastTakenDate: mockToday.subtract(const Duration(days: 4))),
+            pillSheet2.copyWith(lastTakenDate: pillSheet2.beginingDate.subtract(const Duration(days: 1)), restDurations: []),
           ],
           createdAt: now(),
         );
@@ -848,12 +527,9 @@ void main() {
         when(batchSetPillSheetGroup(batch, updatedPillSheetGroup)).thenReturn(updatedPillSheetGroup);
 
         final history = PillSheetModifiedHistoryServiceActionFactory.createRevertTakenPillAction(
-          pillSheetGroupID: "group_id",
-          before: pillSheet2,
-          after: pillSheet.copyWith(lastTakenDate: mockToday.subtract(const Duration(days: 4)), restDurations: []),
-          beforePillSheetGroup: pillSheetGroup,
-          afterPillSheetGroup: updatedPillSheetGroup,
-        );
+            pillSheetGroupID: "group_id",
+            before: pillSheet2,
+            after: pillSheet.copyWith(lastTakenDate: mockToday.subtract(const Duration(days: 4)), restDurations: []));
         final batchSetPillSheetModifiedHistory = MockBatchSetPillSheetModifiedHistory();
         when(batchSetPillSheetModifiedHistory(batch, history)).thenReturn(null);
 
@@ -876,7 +552,7 @@ void main() {
             batchSetPillSheetModifiedHistory: batchSetPillSheetModifiedHistory,
             batchSetPillSheetGroup: batchSetPillSheetGroup);
 
-        await revertTakePill.call(pillSheetGroup: pillSheetGroup, pageIndex: 0, targetRevertPillNumberIntoPillSheet: 27);
+        await revertTakePill.call(pillSheetGroup: pillSheetGroup, pageIndex: 0, pillNumberIntoPillSheet: 27);
       });
     });
   });

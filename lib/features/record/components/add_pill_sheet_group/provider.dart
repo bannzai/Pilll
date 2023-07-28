@@ -1,5 +1,4 @@
 import 'package:pilll/entity/firestore_id_generator.dart';
-import 'package:pilll/entity/pill.codegen.dart';
 import 'package:pilll/entity/pill_sheet_modified_history.codegen.dart';
 import 'package:pilll/provider/batch.dart';
 import 'package:pilll/entity/pill_sheet.codegen.dart';
@@ -40,7 +39,6 @@ class AddPillSheetGroup {
     required Setting setting,
     required PillSheetGroup? pillSheetGroup,
     required List<PillSheetType> pillSheetTypes,
-    required bool takesTwicePerDay,
     required PillSheetGroupDisplayNumberSetting? displayNumberSetting,
   }) async {
     final batch = batchFactory.batch();
@@ -49,7 +47,6 @@ class AddPillSheetGroup {
       pillSheetGroup: pillSheetGroup,
       pillSheetTypes: pillSheetTypes,
       displayNumberSetting: displayNumberSetting,
-      takesTwicePerDay: takesTwicePerDay,
     );
     final createdPillSheetGroup = batchSetPillSheetGroup(
       batch,
@@ -57,8 +54,6 @@ class AddPillSheetGroup {
     );
 
     final history = PillSheetModifiedHistoryServiceActionFactory.createCreatedPillSheetAction(
-      beforePillSheetGroup: pillSheetGroup,
-      createdNewPillSheetGroup: createdPillSheetGroup,
       pillSheetIDs: updatedPillSheetGroup.pillSheetIDs,
       pillSheetGroupID: createdPillSheetGroup.id,
     );
@@ -79,7 +74,6 @@ PillSheetGroup buildPillSheetGroup({
   required PillSheetGroup? pillSheetGroup,
   required List<PillSheetType> pillSheetTypes,
   required PillSheetGroupDisplayNumberSetting? displayNumberSetting,
-  required bool takesTwicePerDay,
 }) {
   final n = now();
   final createdPillSheets = pillSheetTypes.asMap().keys.map((pageIndex) {
@@ -91,17 +85,7 @@ PillSheetGroup buildPillSheetGroup({
       beginingDate: n.add(
         Duration(days: offset),
       ),
-      lastTakenDate: null,
       groupIndex: pageIndex,
-      pills: Pill.generateAndFillTo(
-        pillSheetType: pillSheetType,
-        fromDate: n.add(
-          Duration(days: offset),
-        ),
-        lastTakenDate: null,
-        pillTakenCount: 1,
-      ),
-      pillTakenCount: takesTwicePerDay ? 2 : 1,
       createdAt: now(),
     );
   }).toList();

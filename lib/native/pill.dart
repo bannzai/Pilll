@@ -14,11 +14,11 @@ Future<PillSheetGroup?> quickRecordTakePill(DatabaseConnection database) async {
   if (pillSheetGroup == null) {
     return null;
   }
-  final activePillSheet = pillSheetGroup.activePillSheet;
-  if (activePillSheet == null) {
+  final activedPillSheet = pillSheetGroup.activedPillSheet;
+  if (activedPillSheet == null) {
     return pillSheetGroup;
   }
-  if (activePillSheet.todayPillsAreAlreadyTaken) {
+  if (activedPillSheet.todayPillIsAlreadyTaken) {
     return pillSheetGroup;
   }
 
@@ -33,7 +33,7 @@ Future<PillSheetGroup?> quickRecordTakePill(DatabaseConnection database) async {
   final updatedPillSheetGroup = await takePill(
     takenDate: takenDate,
     pillSheetGroup: pillSheetGroup,
-    activePillSheet: activePillSheet,
+    activedPillSheet: activedPillSheet,
     isQuickRecord: true,
   );
 

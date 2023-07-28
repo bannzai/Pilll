@@ -75,14 +75,14 @@ class RecordPageRestDurationDialog extends StatelessWidget {
 void showRecordPageRestDurationDialog(
   BuildContext context, {
   required PillSheetAppearanceMode appearanceMode,
-  required PillSheet activePillSheet,
+  required PillSheet activedPillSheet,
   required PillSheetGroup pillSheetGroup,
   required VoidCallback onDone,
 }) {
   showDialog(
     context: context,
     builder: (context) => RecordPageRestDurationDialog(
-      title: RecordPageRestDurationDialogTitle(appearanceMode: appearanceMode, activePillSheet: activePillSheet, pillSheetGroup: pillSheetGroup),
+      title: RecordPageRestDurationDialogTitle(appearanceMode: appearanceMode, activedPillSheet: activedPillSheet, pillSheetGroup: pillSheetGroup),
       appearanceMode: appearanceMode,
       onDone: onDone,
     ),
@@ -91,13 +91,13 @@ void showRecordPageRestDurationDialog(
 
 class RecordPageRestDurationDialogTitle extends StatelessWidget {
   final PillSheetAppearanceMode appearanceMode;
-  final PillSheet activePillSheet;
+  final PillSheet activedPillSheet;
   final PillSheetGroup pillSheetGroup;
 
   const RecordPageRestDurationDialogTitle({
     Key? key,
     required this.appearanceMode,
-    required this.activePillSheet,
+    required this.activedPillSheet,
     required this.pillSheetGroup,
   }) : super(key: key);
 
@@ -115,9 +115,9 @@ class RecordPageRestDurationDialogTitle extends StatelessWidget {
   String get _number {
     switch (appearanceMode) {
       case PillSheetAppearanceMode.number:
-        return "${activePillSheet.lastCompletedPillNumber + 1}番";
+        return "${activedPillSheet.lastTakenPillNumber + 1}番";
       case PillSheetAppearanceMode.date:
-        final date = activePillSheet.pillTakenDateFromPillNumber(activePillSheet.lastCompletedPillNumber + 1);
+        final date = activedPillSheet.displayPillTakeDate(activedPillSheet.lastTakenPillNumber + 1);
         final dateString = DateTimeFormatter.monthAndDay(date);
         return dateString;
       case PillSheetAppearanceMode.sequential:

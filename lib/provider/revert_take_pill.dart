@@ -1,12 +1,9 @@
-import 'package:flutter/cupertino.dart';
-import 'package:pilll/entity/pill_sheet.codegen.dart';
 import 'package:pilll/entity/pill_sheet_modified_history.codegen.dart';
 import 'package:pilll/provider/batch.dart';
 import 'package:pilll/entity/pill_sheet_group.codegen.dart';
 
 import 'package:pilll/provider/pill_sheet_group.dart';
 import 'package:pilll/provider/pill_sheet_modified_history.dart';
-import 'package:pilll/utils/datetime/date_compare.dart';
 import 'package:pilll/utils/datetime/day.dart';
 import 'package:riverpod/riverpod.dart';
 
@@ -32,45 +29,42 @@ class RevertTakePill {
   Future<PillSheetGroup?> call({
     required PillSheetGroup pillSheetGroup,
     required int pageIndex,
-    required int targetRevertPillNumberIntoPillSheet,
+    required int pillNumberIntoPillSheet,
   }) async {
-    final activePillSheet = pillSheetGroup.activePillSheet;
-    if (activePillSheet == null) {
+    final activedPillSheet = pillSheetGroup.activedPillSheet;
+    if (activedPillSheet == null) {
       throw const FormatException("現在対象となっているピルシートが見つかりませんでした");
     }
-    if (activePillSheet.activeRestDuration != null) {
+    if (activedPillSheet.activeRestDuration != null) {
       throw const FormatException("ピルの服用の取り消し操作は休薬期間中は実行できません");
     }
 
     final targetPillSheet = pillSheetGroup.pillSheets[pageIndex];
-    final revertDate = targetPillSheet.pillTakenDateFromPillNumber(targetRevertPillNumberIntoPillSheet).subtract(const Duration(days: 1)).date();
-    debugPrint("revertDate: $revertDate");
+    final takenDate = targetPillSheet.displayPillTakeDate(pillNumberIntoPillSheet).subtract(const Duration(days: 1)).date();
 
     final updatedPillSheets = pillSheetGroup.pillSheets.map((pillSheet) {
       final lastTakenDate = pillSheet.lastTakenDate;
       if (lastTakenDate == null) {
         return pillSheet;
       }
-      if (revertDate.isAfter(lastTakenDate)) {
+      if (takenDate.isAfter(lastTakenDate)) {
         return pillSheet;
       }
 
-      if (pillSheet.groupIndex > activePillSheet.groupIndex) {
+      if (pillSheet.groupIndex > activedPillSheet.groupIndex) {
         return pillSheet;
       }
       if (pillSheet.groupIndex < pageIndex) {
         return pillSheet;
       }
 
-      if (revertDate.isBefore(pillSheet.beginingDate)) {
+      if (takenDate.isBefore(pillSheet.beginingDate)) {
         // reset pill sheet when back to one before pill sheet
-        return pillSheet.revertedPillSheet(pillSheet.beginingDate.subtract(const Duration(days: 1)).date()).copyWith(restDurations: []);
+        return pillSheet.copyWith(lastTakenDate: pillSheet.beginingDate.subtract(const Duration(days: 1)).date(), restDurations: []);
       } else {
         // Revert対象の日付よりも後ろにある休薬期間のデータは消す
-        final remainingResetDurations = pillSheet.restDurations.where((restDuration) => restDuration.beginDate.date().isBefore(revertDate)).toList();
-        return pillSheet.revertedPillSheet(revertDate).copyWith(
-              restDurations: remainingResetDurations,
-            );
+        final remainingResetDurations = pillSheet.restDurations.where((restDuration) => restDuration.beginDate.date().isBefore(takenDate)).toList();
+        return pillSheet.copyWith(lastTakenDate: takenDate, restDurations: remainingResetDurations);
       }
     }).toList();
 
@@ -92,34 +86,11 @@ class RevertTakePill {
       pillSheetGroupID: pillSheetGroup.id,
       before: before,
       after: after,
-      beforePillSheetGroup: pillSheetGroup,
-      afterPillSheetGroup: updatedPillSheetGroup,
     );
     batchSetPillSheetModifiedHistory(batch, history);
 
     await batch.commit();
 
     return updatedPillSheetGroup;
-  }
-}
-
-extension RevertedPillSheet on PillSheet {
-  PillSheet revertedPillSheet(DateTime toDate) {
-    return copyWith(
-      lastTakenDate: toDate,
-      pills: pills.map((pill) {
-        // このpillの日付(begin + pill.index)が対象の日付よりも前の場合は何もしない
-        final dateOfPill = beginingDate.date().add(Duration(days: pill.index));
-        if (dateOfPill.isBefore(toDate) || isSameDay(dateOfPill, toDate)) {
-          debugPrint("early retrun pill: ${pill.index}");
-          return pill;
-        }
-
-        // NOTE: !(isSameDay(date.date() ,today()) && pill.index == todayPillIndex)
-        // OR pill.index != todayPillIndex。これらの場合は全ての服用記録を消す
-        debugPrint("clear pill: ${pill.index}");
-        return pill.copyWith(pillTakens: []);
-      }).toList(),
-    );
   }
 }
