@@ -1,4 +1,5 @@
 import 'package:pilll/entity/firestore_id_generator.dart';
+import 'package:pilll/entity/pill.codegen.dart';
 import 'package:pilll/entity/pill_sheet.codegen.dart';
 import 'package:pilll/entity/pill_sheet_type.dart';
 import 'package:pilll/utils/datetime/day.dart';
@@ -31,6 +32,8 @@ void main() {
           totalCount: sheetType.totalCount,
           pillSheetTypeReferencePath: sheetType.rawPath,
         ),
+        pills: Pill.testGenerateAndIterateTo(
+            pillSheetType: sheetType, fromDate: DateTime.parse("2020-09-14"), lastTakenDate: DateTime.parse("2020-09-18"), pillTakenCount: 1),
       );
       expect(model.todayPillNumber, 6);
     });
@@ -51,6 +54,8 @@ void main() {
           totalCount: sheetType.totalCount,
           pillSheetTypeReferencePath: sheetType.rawPath,
         ),
+        pills: Pill.testGenerateAndIterateTo(
+            pillSheetType: sheetType, fromDate: DateTime.parse("2020-09-01"), lastTakenDate: DateTime.parse("2020-09-28"), pillTakenCount: 1),
       );
       expect(model.todayPillNumber, 28);
     });
@@ -78,6 +83,8 @@ void main() {
             totalCount: sheetType.totalCount,
             pillSheetTypeReferencePath: sheetType.rawPath,
           ),
+          pills: Pill.testGenerateAndIterateTo(
+              pillSheetType: sheetType, fromDate: DateTime.parse("2020-09-01"), lastTakenDate: DateTime.parse("2020-09-28"), pillTakenCount: 1),
         );
         expect(model.todayPillNumber, 22);
       });
@@ -106,6 +113,8 @@ void main() {
             totalCount: sheetType.totalCount,
             pillSheetTypeReferencePath: sheetType.rawPath,
           ),
+          pills: Pill.testGenerateAndIterateTo(
+              pillSheetType: sheetType, fromDate: DateTime.parse("2020-09-01"), lastTakenDate: DateTime.parse("2020-09-28"), pillTakenCount: 1),
         );
         expect(model.todayPillNumber, 25);
       });
@@ -138,6 +147,8 @@ void main() {
               totalCount: sheetType.totalCount,
               pillSheetTypeReferencePath: sheetType.rawPath,
             ),
+            pills: Pill.testGenerateAndIterateTo(
+                pillSheetType: sheetType, fromDate: DateTime.parse("2020-09-01"), lastTakenDate: DateTime.parse("2020-09-28"), pillTakenCount: 1),
           );
           expect(model.todayPillNumber, 19);
         });
@@ -170,6 +181,8 @@ void main() {
               totalCount: sheetType.totalCount,
               pillSheetTypeReferencePath: sheetType.rawPath,
             ),
+            pills: Pill.testGenerateAndIterateTo(
+                pillSheetType: sheetType, fromDate: DateTime.parse("2020-09-01"), lastTakenDate: DateTime.parse("2020-09-28"), pillTakenCount: 1),
           );
           expect(model.todayPillNumber, 22);
         });
@@ -194,6 +207,8 @@ void main() {
           totalCount: sheetType.totalCount,
           pillSheetTypeReferencePath: sheetType.rawPath,
         ),
+        pills:
+            Pill.testGenerateAndIterateTo(pillSheetType: sheetType, fromDate: DateTime.parse("2020-09-14"), lastTakenDate: null, pillTakenCount: 1),
       );
       expect(model.isActive, true);
     });
@@ -214,6 +229,8 @@ void main() {
           totalCount: sheetType.totalCount,
           pillSheetTypeReferencePath: sheetType.rawPath,
         ),
+        pills:
+            Pill.testGenerateAndIterateTo(pillSheetType: sheetType, fromDate: DateTime.parse("2020-09-01"), lastTakenDate: null, pillTakenCount: 1),
       );
       expect(model.isActive, true);
     });
@@ -234,6 +251,8 @@ void main() {
           totalCount: sheetType.totalCount,
           pillSheetTypeReferencePath: sheetType.rawPath,
         ),
+        pills:
+            Pill.testGenerateAndIterateTo(pillSheetType: sheetType, fromDate: DateTime.parse("2020-09-01"), lastTakenDate: null, pillTakenCount: 1),
       );
       expect(model.isActive, false);
     });
@@ -254,6 +273,8 @@ void main() {
           totalCount: sheetType.totalCount,
           pillSheetTypeReferencePath: sheetType.rawPath,
         ),
+        pills:
+            Pill.testGenerateAndIterateTo(pillSheetType: sheetType, fromDate: DateTime.parse("2020-09-01"), lastTakenDate: null, pillTakenCount: 1),
       );
       expect(model.isActive, true);
     });
@@ -277,6 +298,8 @@ void main() {
         restDurations: [
           RestDuration(beginDate: DateTime.parse("2020-09-20"), createdDate: DateTime.parse("2020-09-20"), endDate: null),
         ],
+        pills:
+            Pill.testGenerateAndIterateTo(pillSheetType: sheetType, fromDate: DateTime.parse("2020-09-01"), lastTakenDate: null, pillTakenCount: 1),
       );
       expect(model.isActive, true);
     });
@@ -300,6 +323,8 @@ void main() {
         restDurations: [
           RestDuration(beginDate: DateTime.parse("2020-09-20"), createdDate: DateTime.parse("2020-09-20"), endDate: DateTime.parse("2020-09-22")),
         ],
+        pills:
+            Pill.testGenerateAndIterateTo(pillSheetType: sheetType, fromDate: DateTime.parse("2020-09-01"), lastTakenDate: null, pillTakenCount: 1),
       );
       expect(model.isActive, true);
     });
@@ -320,6 +345,8 @@ void main() {
           totalCount: sheetType.totalCount,
           pillSheetTypeReferencePath: sheetType.rawPath,
         ),
+        pills:
+            Pill.testGenerateAndIterateTo(pillSheetType: sheetType, fromDate: DateTime.parse("2020-09-01"), lastTakenDate: null, pillTakenCount: 1),
       );
       expect(model.isActive, false);
     });
@@ -340,6 +367,8 @@ void main() {
           totalCount: sheetType.totalCount,
           pillSheetTypeReferencePath: sheetType.rawPath,
         ),
+        pills:
+            Pill.testGenerateAndIterateTo(pillSheetType: sheetType, fromDate: DateTime.parse("2020-09-01"), lastTakenDate: null, pillTakenCount: 1),
       );
       expect(model.isActive, false);
     });
@@ -367,6 +396,8 @@ void main() {
             endDate: DateTime.parse("2020-09-21"),
           ),
         ],
+        pills:
+            Pill.testGenerateAndIterateTo(pillSheetType: sheetType, fromDate: DateTime.parse("2020-09-01"), lastTakenDate: null, pillTakenCount: 1),
       );
       expect(model.isActive, false);
     });
@@ -389,6 +420,8 @@ void main() {
           totalCount: sheetType.totalCount,
           pillSheetTypeReferencePath: sheetType.rawPath,
         ),
+        pills:
+            Pill.testGenerateAndIterateTo(pillSheetType: sheetType, fromDate: DateTime.parse("2020-09-14"), lastTakenDate: null, pillTakenCount: 1),
       );
       expect(model.isBegan, true);
     });
@@ -409,6 +442,8 @@ void main() {
           totalCount: sheetType.totalCount,
           pillSheetTypeReferencePath: sheetType.rawPath,
         ),
+        pills:
+            Pill.testGenerateAndIterateTo(pillSheetType: sheetType, fromDate: DateTime.parse("2020-09-01"), lastTakenDate: null, pillTakenCount: 1),
       );
       expect(model.isBegan, true);
     });
@@ -429,6 +464,8 @@ void main() {
           totalCount: sheetType.totalCount,
           pillSheetTypeReferencePath: sheetType.rawPath,
         ),
+        pills:
+            Pill.testGenerateAndIterateTo(pillSheetType: sheetType, fromDate: DateTime.parse("2020-09-01"), lastTakenDate: null, pillTakenCount: 1),
       );
       expect(model.isBegan, true);
     });
@@ -449,6 +486,8 @@ void main() {
           totalCount: sheetType.totalCount,
           pillSheetTypeReferencePath: sheetType.rawPath,
         ),
+        pills:
+            Pill.testGenerateAndIterateTo(pillSheetType: sheetType, fromDate: DateTime.parse("2020-09-01"), lastTakenDate: null, pillTakenCount: 1),
       );
       expect(model.isBegan, false);
     });
@@ -474,6 +513,8 @@ void main() {
             pillSheetTypeReferencePath: sheetType.rawPath,
           ),
           pillTakenCount: pillTakenCount,
+          pills: Pill.testGenerateAndIterateTo(
+              pillSheetType: sheetType, fromDate: DateTime.parse("2020-09-14"), lastTakenDate: null, pillTakenCount: pillTakenCount),
         );
         expect(model.lastTakenPillNumber, 0);
       });
