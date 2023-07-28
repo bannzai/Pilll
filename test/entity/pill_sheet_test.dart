@@ -737,8 +737,6 @@ void main() {
             totalCount: sheetType.totalCount,
             pillSheetTypeReferencePath: sheetType.rawPath,
           ),
-          pills:
-              Pill.testGenerateAndIterateTo(pillSheetType: sheetType, fromDate: DateTime.parse("2022-05-01"), lastTakenDate: null, pillTakenCount: 1),
         );
         expect(pillSheet.estimatedEndTakenDate, DateTime.parse("2022-05-31").subtract(const Duration(seconds: 1)));
       });
