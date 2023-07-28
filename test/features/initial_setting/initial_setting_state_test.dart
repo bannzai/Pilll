@@ -1,5 +1,6 @@
 import 'package:flutter/services.dart';
 import 'package:pilll/entity/firestore_id_generator.dart';
+import 'package:pilll/entity/pill.codegen.dart';
 import 'package:pilll/features/initial_setting/initial_setting_state.codegen.dart';
 import 'package:pilll/entity/pill_sheet.codegen.dart';
 import 'package:pilll/entity/pill_sheet_type.dart';
@@ -38,15 +39,23 @@ void main() {
 
       final pillSheet = InitialSettingState.buildPillSheet(
         pageIndex: 0,
-        todayPillNumber: const InitialSettingTodayPillNumber(pageIndex: 0, pillNumberIntoPillSheet: 1),
+        todayPillNumber: const InitialSettingTodayPillNumber(pageIndex: 0, pillNumberInPillSheet: 1),
         pillSheetTypes: [PillSheetType.pillsheet_21],
+        takesTwicePerDay: false,
       );
 
       final expected = PillSheet(
         id: firestoreIDGenerator(),
         typeInfo: PillSheetType.pillsheet_21.typeInfo,
         beginingDate: DateTime.parse("2020-11-23"),
+        lastTakenDate: null,
         createdAt: now(),
+        pills: Pill.generateAndFillTo(
+          pillSheetType: PillSheetType.pillsheet_21,
+          fromDate: DateTime.parse("2020-11-23"),
+          lastTakenDate: null,
+          pillTakenCount: 1,
+        ),
       );
 
       expect(expected, pillSheet);
@@ -63,11 +72,12 @@ void main() {
 
       final pillSheet = InitialSettingState.buildPillSheet(
         pageIndex: 1,
-        todayPillNumber: const InitialSettingTodayPillNumber(pageIndex: 0, pillNumberIntoPillSheet: 1),
+        todayPillNumber: const InitialSettingTodayPillNumber(pageIndex: 0, pillNumberInPillSheet: 1),
         pillSheetTypes: [
           PillSheetType.pillsheet_21,
           PillSheetType.pillsheet_24_0,
         ],
+        takesTwicePerDay: false,
       );
 
       final expected = PillSheet(
@@ -77,6 +87,12 @@ void main() {
         beginingDate: DateTime.parse("2020-12-21"),
         lastTakenDate: null,
         createdAt: now(),
+        pills: Pill.generateAndFillTo(
+          pillSheetType: PillSheetType.pillsheet_24_0,
+          fromDate: DateTime.parse("2020-12-21"),
+          lastTakenDate: null,
+          pillTakenCount: 1,
+        ),
       );
 
       expect(expected, pillSheet);
@@ -94,11 +110,12 @@ void main() {
 
       final pillSheet = InitialSettingState.buildPillSheet(
         pageIndex: 0,
-        todayPillNumber: const InitialSettingTodayPillNumber(pageIndex: 1, pillNumberIntoPillSheet: 1),
+        todayPillNumber: const InitialSettingTodayPillNumber(pageIndex: 1, pillNumberInPillSheet: 1),
         pillSheetTypes: [
           PillSheetType.pillsheet_21,
           PillSheetType.pillsheet_24_0,
         ],
+        takesTwicePerDay: false,
       );
 
       final expected = PillSheet(
@@ -108,6 +125,12 @@ void main() {
         beginingDate: DateTime.parse("2020-10-26"),
         lastTakenDate: DateTime.parse("2020-11-22"),
         createdAt: now(),
+        pills: Pill.generateAndFillTo(
+          pillSheetType: PillSheetType.pillsheet_21,
+          fromDate: DateTime.parse("2020-10-26"),
+          lastTakenDate: DateTime.parse("2020-11-22"),
+          pillTakenCount: 1,
+        ),
       );
 
       expect(expected, pillSheet);

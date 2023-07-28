@@ -17,7 +17,7 @@ final _privateConstructorUsedError = UnsupportedError(
 /// @nodoc
 mixin _$InitialSettingTodayPillNumber {
   int get pageIndex => throw _privateConstructorUsedError;
-  int get pillNumberIntoPillSheet => throw _privateConstructorUsedError;
+  int get pillNumberInPillSheet => throw _privateConstructorUsedError;
 
   @JsonKey(ignore: true)
   $InitialSettingTodayPillNumberCopyWith<InitialSettingTodayPillNumber>
@@ -32,7 +32,7 @@ abstract class $InitialSettingTodayPillNumberCopyWith<$Res> {
       _$InitialSettingTodayPillNumberCopyWithImpl<$Res,
           InitialSettingTodayPillNumber>;
   @useResult
-  $Res call({int pageIndex, int pillNumberIntoPillSheet});
+  $Res call({int pageIndex, int pillNumberInPillSheet});
 }
 
 /// @nodoc
@@ -50,16 +50,16 @@ class _$InitialSettingTodayPillNumberCopyWithImpl<$Res,
   @override
   $Res call({
     Object? pageIndex = null,
-    Object? pillNumberIntoPillSheet = null,
+    Object? pillNumberInPillSheet = null,
   }) {
     return _then(_value.copyWith(
       pageIndex: null == pageIndex
           ? _value.pageIndex
           : pageIndex // ignore: cast_nullable_to_non_nullable
               as int,
-      pillNumberIntoPillSheet: null == pillNumberIntoPillSheet
-          ? _value.pillNumberIntoPillSheet
-          : pillNumberIntoPillSheet // ignore: cast_nullable_to_non_nullable
+      pillNumberInPillSheet: null == pillNumberInPillSheet
+          ? _value.pillNumberInPillSheet
+          : pillNumberInPillSheet // ignore: cast_nullable_to_non_nullable
               as int,
     ) as $Val);
   }
@@ -74,7 +74,7 @@ abstract class _$$_InitialSettingTodayPillNumberCopyWith<$Res>
       __$$_InitialSettingTodayPillNumberCopyWithImpl<$Res>;
   @override
   @useResult
-  $Res call({int pageIndex, int pillNumberIntoPillSheet});
+  $Res call({int pageIndex, int pillNumberInPillSheet});
 }
 
 /// @nodoc
@@ -91,16 +91,16 @@ class __$$_InitialSettingTodayPillNumberCopyWithImpl<$Res>
   @override
   $Res call({
     Object? pageIndex = null,
-    Object? pillNumberIntoPillSheet = null,
+    Object? pillNumberInPillSheet = null,
   }) {
     return _then(_$_InitialSettingTodayPillNumber(
       pageIndex: null == pageIndex
           ? _value.pageIndex
           : pageIndex // ignore: cast_nullable_to_non_nullable
               as int,
-      pillNumberIntoPillSheet: null == pillNumberIntoPillSheet
-          ? _value.pillNumberIntoPillSheet
-          : pillNumberIntoPillSheet // ignore: cast_nullable_to_non_nullable
+      pillNumberInPillSheet: null == pillNumberInPillSheet
+          ? _value.pillNumberInPillSheet
+          : pillNumberInPillSheet // ignore: cast_nullable_to_non_nullable
               as int,
     ));
   }
@@ -111,18 +111,18 @@ class __$$_InitialSettingTodayPillNumberCopyWithImpl<$Res>
 class _$_InitialSettingTodayPillNumber
     implements _InitialSettingTodayPillNumber {
   const _$_InitialSettingTodayPillNumber(
-      {this.pageIndex = 0, this.pillNumberIntoPillSheet = 0});
+      {this.pageIndex = 0, this.pillNumberInPillSheet = 0});
 
   @override
   @JsonKey()
   final int pageIndex;
   @override
   @JsonKey()
-  final int pillNumberIntoPillSheet;
+  final int pillNumberInPillSheet;
 
   @override
   String toString() {
-    return 'InitialSettingTodayPillNumber(pageIndex: $pageIndex, pillNumberIntoPillSheet: $pillNumberIntoPillSheet)';
+    return 'InitialSettingTodayPillNumber(pageIndex: $pageIndex, pillNumberInPillSheet: $pillNumberInPillSheet)';
   }
 
   @override
@@ -132,14 +132,13 @@ class _$_InitialSettingTodayPillNumber
             other is _$_InitialSettingTodayPillNumber &&
             (identical(other.pageIndex, pageIndex) ||
                 other.pageIndex == pageIndex) &&
-            (identical(
-                    other.pillNumberIntoPillSheet, pillNumberIntoPillSheet) ||
-                other.pillNumberIntoPillSheet == pillNumberIntoPillSheet));
+            (identical(other.pillNumberInPillSheet, pillNumberInPillSheet) ||
+                other.pillNumberInPillSheet == pillNumberInPillSheet));
   }
 
   @override
   int get hashCode =>
-      Object.hash(runtimeType, pageIndex, pillNumberIntoPillSheet);
+      Object.hash(runtimeType, pageIndex, pillNumberInPillSheet);
 
   @JsonKey(ignore: true)
   @override
@@ -153,12 +152,12 @@ abstract class _InitialSettingTodayPillNumber
     implements InitialSettingTodayPillNumber {
   const factory _InitialSettingTodayPillNumber(
       {final int pageIndex,
-      final int pillNumberIntoPillSheet}) = _$_InitialSettingTodayPillNumber;
+      final int pillNumberInPillSheet}) = _$_InitialSettingTodayPillNumber;
 
   @override
   int get pageIndex;
   @override
-  int get pillNumberIntoPillSheet;
+  int get pillNumberInPillSheet;
   @override
   @JsonKey(ignore: true)
   _$$_InitialSettingTodayPillNumberCopyWith<_$_InitialSettingTodayPillNumber>
@@ -175,6 +174,7 @@ mixin _$InitialSettingState {
   bool get isLoading => throw _privateConstructorUsedError;
   bool get userIsNotAnonymous => throw _privateConstructorUsedError;
   bool get settingIsExist => throw _privateConstructorUsedError;
+  bool get pillSheetTakesTwicePerDay => throw _privateConstructorUsedError;
   LinkAccountType? get accountType => throw _privateConstructorUsedError;
 
   @JsonKey(ignore: true)
@@ -196,6 +196,7 @@ abstract class $InitialSettingStateCopyWith<$Res> {
       bool isLoading,
       bool userIsNotAnonymous,
       bool settingIsExist,
+      bool pillSheetTakesTwicePerDay,
       LinkAccountType? accountType});
 
   $InitialSettingTodayPillNumberCopyWith<$Res>? get todayPillNumber;
@@ -221,6 +222,7 @@ class _$InitialSettingStateCopyWithImpl<$Res, $Val extends InitialSettingState>
     Object? isLoading = null,
     Object? userIsNotAnonymous = null,
     Object? settingIsExist = null,
+    Object? pillSheetTakesTwicePerDay = null,
     Object? accountType = freezed,
   }) {
     return _then(_value.copyWith(
@@ -251,6 +253,10 @@ class _$InitialSettingStateCopyWithImpl<$Res, $Val extends InitialSettingState>
       settingIsExist: null == settingIsExist
           ? _value.settingIsExist
           : settingIsExist // ignore: cast_nullable_to_non_nullable
+              as bool,
+      pillSheetTakesTwicePerDay: null == pillSheetTakesTwicePerDay
+          ? _value.pillSheetTakesTwicePerDay
+          : pillSheetTakesTwicePerDay // ignore: cast_nullable_to_non_nullable
               as bool,
       accountType: freezed == accountType
           ? _value.accountType
@@ -289,6 +295,7 @@ abstract class _$$_InitialSettingStateCopyWith<$Res>
       bool isLoading,
       bool userIsNotAnonymous,
       bool settingIsExist,
+      bool pillSheetTakesTwicePerDay,
       LinkAccountType? accountType});
 
   @override
@@ -313,6 +320,7 @@ class __$$_InitialSettingStateCopyWithImpl<$Res>
     Object? isLoading = null,
     Object? userIsNotAnonymous = null,
     Object? settingIsExist = null,
+    Object? pillSheetTakesTwicePerDay = null,
     Object? accountType = freezed,
   }) {
     return _then(_$_InitialSettingState(
@@ -344,6 +352,10 @@ class __$$_InitialSettingStateCopyWithImpl<$Res>
           ? _value.settingIsExist
           : settingIsExist // ignore: cast_nullable_to_non_nullable
               as bool,
+      pillSheetTakesTwicePerDay: null == pillSheetTakesTwicePerDay
+          ? _value.pillSheetTakesTwicePerDay
+          : pillSheetTakesTwicePerDay // ignore: cast_nullable_to_non_nullable
+              as bool,
       accountType: freezed == accountType
           ? _value.accountType
           : accountType // ignore: cast_nullable_to_non_nullable
@@ -363,6 +375,7 @@ class _$_InitialSettingState extends _InitialSettingState {
       this.isLoading = false,
       this.userIsNotAnonymous = false,
       this.settingIsExist = false,
+      this.pillSheetTakesTwicePerDay = false,
       this.accountType})
       : _pillSheetTypes = pillSheetTypes,
         _reminderTimes = reminderTimes,
@@ -400,11 +413,14 @@ class _$_InitialSettingState extends _InitialSettingState {
   @JsonKey()
   final bool settingIsExist;
   @override
+  @JsonKey()
+  final bool pillSheetTakesTwicePerDay;
+  @override
   final LinkAccountType? accountType;
 
   @override
   String toString() {
-    return 'InitialSettingState(pillSheetTypes: $pillSheetTypes, todayPillNumber: $todayPillNumber, reminderTimes: $reminderTimes, isOnReminder: $isOnReminder, isLoading: $isLoading, userIsNotAnonymous: $userIsNotAnonymous, settingIsExist: $settingIsExist, accountType: $accountType)';
+    return 'InitialSettingState(pillSheetTypes: $pillSheetTypes, todayPillNumber: $todayPillNumber, reminderTimes: $reminderTimes, isOnReminder: $isOnReminder, isLoading: $isLoading, userIsNotAnonymous: $userIsNotAnonymous, settingIsExist: $settingIsExist, pillSheetTakesTwicePerDay: $pillSheetTakesTwicePerDay, accountType: $accountType)';
   }
 
   @override
@@ -426,6 +442,9 @@ class _$_InitialSettingState extends _InitialSettingState {
                 other.userIsNotAnonymous == userIsNotAnonymous) &&
             (identical(other.settingIsExist, settingIsExist) ||
                 other.settingIsExist == settingIsExist) &&
+            (identical(other.pillSheetTakesTwicePerDay,
+                    pillSheetTakesTwicePerDay) ||
+                other.pillSheetTakesTwicePerDay == pillSheetTakesTwicePerDay) &&
             (identical(other.accountType, accountType) ||
                 other.accountType == accountType));
   }
@@ -440,6 +459,7 @@ class _$_InitialSettingState extends _InitialSettingState {
       isLoading,
       userIsNotAnonymous,
       settingIsExist,
+      pillSheetTakesTwicePerDay,
       accountType);
 
   @JsonKey(ignore: true)
@@ -459,6 +479,7 @@ abstract class _InitialSettingState extends InitialSettingState {
       final bool isLoading,
       final bool userIsNotAnonymous,
       final bool settingIsExist,
+      final bool pillSheetTakesTwicePerDay,
       final LinkAccountType? accountType}) = _$_InitialSettingState;
   const _InitialSettingState._() : super._();
 
@@ -476,6 +497,8 @@ abstract class _InitialSettingState extends InitialSettingState {
   bool get userIsNotAnonymous;
   @override
   bool get settingIsExist;
+  @override
+  bool get pillSheetTakesTwicePerDay;
   @override
   LinkAccountType? get accountType;
   @override

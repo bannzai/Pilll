@@ -1,4 +1,5 @@
 import 'package:pilll/entity/firestore_id_generator.dart';
+import 'package:pilll/entity/pill.codegen.dart';
 import 'package:pilll/utils/analytics.dart';
 import 'package:pilll/provider/database.dart';
 import 'package:pilll/features/record/components/button/cancel_button.dart';
@@ -36,6 +37,8 @@ void main() {
         beginingDate: yesterday,
         lastTakenDate: yesterday,
         createdAt: now(),
+        pills: Pill.testGenerateAndIterateTo(
+            pillSheetType: PillSheetType.pillsheet_21, fromDate: yesterday, lastTakenDate: yesterday, pillTakenCount: 1),
       );
 
       await tester.pumpWidget(
@@ -63,8 +66,10 @@ void main() {
       beginingDate: today(),
       lastTakenDate: today(),
       createdAt: now(),
+      pills: Pill.testGenerateAndIterateTo(pillSheetType: PillSheetType.pillsheet_21, fromDate: today(), lastTakenDate: today(), pillTakenCount: 1),
     );
 
+    expect(true, pillSheet.todayPillsAreAlreadyTaken);
     await tester.pumpWidget(
       ProviderScope(
         overrides: [

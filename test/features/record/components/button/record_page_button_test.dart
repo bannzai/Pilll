@@ -1,3 +1,4 @@
+import 'package:pilll/entity/pill.codegen.dart';
 import 'package:pilll/entity/pill_sheet.codegen.dart';
 import 'package:pilll/entity/pill_sheet_group.codegen.dart';
 import 'package:pilll/entity/pill_sheet_type.dart';
@@ -35,24 +36,39 @@ void main() {
             id: "pill_sheet_id_1",
             typeInfo: PillSheetType.pillsheet_28_0.typeInfo,
             beginingDate: firstPillSheetBeginDate,
+            lastTakenDate: null,
             createdAt: now(),
+            pills: Pill.testGenerateAndIterateTo(
+                pillSheetType: PillSheetType.pillsheet_28_0, fromDate: firstPillSheetBeginDate, lastTakenDate: null, pillTakenCount: 1),
           ),
           PillSheet(
             id: "pill_sheet_id_2",
             typeInfo: PillSheetType.pillsheet_28_0.typeInfo,
             beginingDate: firstPillSheetBeginDate.add(const Duration(days: 28)),
+            lastTakenDate: null,
             createdAt: now(),
+            pills: Pill.testGenerateAndIterateTo(
+                pillSheetType: PillSheetType.pillsheet_28_0,
+                fromDate: firstPillSheetBeginDate.add(const Duration(days: 28)),
+                lastTakenDate: null,
+                pillTakenCount: 1),
           ),
           PillSheet(
             id: "pill_sheet_id_3",
             typeInfo: PillSheetType.pillsheet_28_0.typeInfo,
             beginingDate: firstPillSheetBeginDate.add(const Duration(days: 56)),
+            lastTakenDate: null,
             createdAt: now(),
+            pills: Pill.testGenerateAndIterateTo(
+                pillSheetType: PillSheetType.pillsheet_28_0,
+                fromDate: firstPillSheetBeginDate.add(const Duration(days: 56)),
+                lastTakenDate: null,
+                pillTakenCount: 1),
           )
         ];
         final pillSheetGroup = PillSheetGroup(pillSheetIDs: pillSheets.map((e) => e.id!).toList(), pillSheets: pillSheets, createdAt: now());
         // Reason for subtract seconds: 1, pass condition of if (restDurations.last.beginDate.isBefore(now()))
-        final activePillSheet = pillSheetGroup.activedPillSheet!.copyWith(
+        final activePillSheet = pillSheetGroup.activePillSheet!.copyWith(
           restDurations: [
             RestDuration(
               beginDate: now().subtract(const Duration(seconds: 1)),
@@ -63,7 +79,7 @@ void main() {
         );
         pillSheets.replaceRange(0, 1, [activePillSheet]);
         expect(activePillSheet.activeRestDuration, isNotNull);
-        expect(pillSheetGroup.activedPillSheet, activePillSheet);
+        expect(pillSheetGroup.activePillSheet, activePillSheet);
 
         await tester.pumpWidget(
           ProviderScope(
@@ -88,30 +104,45 @@ void main() {
       });
     });
     group('#CancelButton', () {
-      testWidgets('activePillSheet.todayPillIsAlreadyTaken', (WidgetTester tester) async {
+      testWidgets('activePillSheet.todayPillsAreAlreadyTaken', (WidgetTester tester) async {
         final firstPillSheetBeginDate = now().subtract(const Duration(days: 10));
         var pillSheets = [
           PillSheet(
             id: "pill_sheet_id_1",
             typeInfo: PillSheetType.pillsheet_28_0.typeInfo,
             beginingDate: firstPillSheetBeginDate,
+            lastTakenDate: null,
             createdAt: now(),
+            pills: Pill.testGenerateAndIterateTo(
+                pillSheetType: PillSheetType.pillsheet_28_0, fromDate: firstPillSheetBeginDate, lastTakenDate: null, pillTakenCount: 1),
           ),
           PillSheet(
             id: "pill_sheet_id_2",
             typeInfo: PillSheetType.pillsheet_28_0.typeInfo,
             beginingDate: firstPillSheetBeginDate.add(const Duration(days: 28)),
+            lastTakenDate: null,
             createdAt: now(),
+            pills: Pill.testGenerateAndIterateTo(
+                pillSheetType: PillSheetType.pillsheet_28_0,
+                fromDate: firstPillSheetBeginDate.add(const Duration(days: 28)),
+                lastTakenDate: null,
+                pillTakenCount: 1),
           ),
           PillSheet(
             id: "pill_sheet_id_3",
             typeInfo: PillSheetType.pillsheet_28_0.typeInfo,
             beginingDate: firstPillSheetBeginDate.add(const Duration(days: 56)),
+            lastTakenDate: null,
             createdAt: now(),
+            pills: Pill.testGenerateAndIterateTo(
+                pillSheetType: PillSheetType.pillsheet_28_0,
+                fromDate: firstPillSheetBeginDate.add(const Duration(days: 56)),
+                lastTakenDate: null,
+                pillTakenCount: 1),
           )
         ];
         final pillSheetGroup = PillSheetGroup(pillSheetIDs: pillSheets.map((e) => e.id!).toList(), pillSheets: pillSheets, createdAt: now());
-        final activePillSheet = pillSheetGroup.activedPillSheet!.copyWith(
+        final activePillSheet = pillSheetGroup.activePillSheet!.copyWith(
           restDurations: [
             RestDuration(
               beginDate: now().subtract(const Duration(days: 1)),
@@ -120,11 +151,16 @@ void main() {
             ),
           ],
           lastTakenDate: now(),
+          pills: Pill.testGenerateAndIterateTo(
+              pillSheetType: PillSheetType.pillsheet_28_0,
+              fromDate: pillSheetGroup.activePillSheet!.beginingDate,
+              lastTakenDate: now(),
+              pillTakenCount: 1),
         );
         pillSheets.replaceRange(0, 1, [activePillSheet]);
         expect(activePillSheet.activeRestDuration, isNull);
-        expect(activePillSheet.todayPillIsAlreadyTaken, true);
-        expect(pillSheetGroup.activedPillSheet, activePillSheet);
+        expect(activePillSheet.todayPillsAreAlreadyTaken, true);
+        expect(pillSheetGroup.activePillSheet, activePillSheet);
 
         await tester.pumpWidget(
           ProviderScope(
@@ -156,25 +192,40 @@ void main() {
             id: "pill_sheet_id_1",
             typeInfo: PillSheetType.pillsheet_28_0.typeInfo,
             beginingDate: firstPillSheetBeginDate,
+            lastTakenDate: null,
             createdAt: now(),
+            pills: Pill.testGenerateAndIterateTo(
+                pillSheetType: PillSheetType.pillsheet_28_0, fromDate: firstPillSheetBeginDate, lastTakenDate: null, pillTakenCount: 1),
           ),
           PillSheet(
             id: "pill_sheet_id_2",
             typeInfo: PillSheetType.pillsheet_28_0.typeInfo,
             beginingDate: firstPillSheetBeginDate.add(const Duration(days: 28)),
+            lastTakenDate: null,
             createdAt: now(),
+            pills: Pill.testGenerateAndIterateTo(
+                pillSheetType: PillSheetType.pillsheet_28_0,
+                fromDate: firstPillSheetBeginDate.add(const Duration(days: 28)),
+                lastTakenDate: null,
+                pillTakenCount: 1),
           ),
           PillSheet(
             id: "pill_sheet_id_3",
             typeInfo: PillSheetType.pillsheet_28_0.typeInfo,
             beginingDate: firstPillSheetBeginDate.add(const Duration(days: 56)),
+            lastTakenDate: null,
             createdAt: now(),
+            pills: Pill.testGenerateAndIterateTo(
+                pillSheetType: PillSheetType.pillsheet_28_0,
+                fromDate: firstPillSheetBeginDate.add(const Duration(days: 56)),
+                lastTakenDate: null,
+                pillTakenCount: 1),
           )
         ];
         final pillSheetGroup = PillSheetGroup(pillSheetIDs: pillSheets.map((e) => e.id!).toList(), pillSheets: pillSheets, createdAt: now());
 
         // Reason for subtract seconds: 1, pass condition of if (restDurations.last.endDate.isBefore(now()))
-        final activePillSheet = pillSheetGroup.activedPillSheet!.copyWith(
+        final activePillSheet = pillSheetGroup.activePillSheet!.copyWith(
           restDurations: [
             RestDuration(
                 beginDate: now().subtract(const Duration(days: 1)),
@@ -185,8 +236,8 @@ void main() {
         );
         pillSheets.replaceRange(0, 1, [activePillSheet]);
         expect(activePillSheet.activeRestDuration, isNull);
-        expect(activePillSheet.todayPillIsAlreadyTaken, false);
-        expect(pillSheetGroup.activedPillSheet, activePillSheet);
+        expect(activePillSheet.todayPillsAreAlreadyTaken, false);
+        expect(pillSheetGroup.activePillSheet, activePillSheet);
 
         await tester.pumpWidget(
           ProviderScope(
