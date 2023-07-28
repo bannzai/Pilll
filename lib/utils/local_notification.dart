@@ -200,7 +200,7 @@ class RegisterReminderLocalNotification {
     analytics.logEvent(name: "run_register_reminder_notification", parameters: {
       "todayPillNumber": activePillSheet.todayPillNumber,
       "todayPillIsAlreadyTaken": activePillSheet.todayPillIsAlreadyTaken,
-      "lastCompletedPillNumber": activePillSheet.lastCompletedPillNumber,
+      "lastTakenPillNumber": activePillSheet.lastTakenPillNumber,
       "reminderTimes": setting.reminderTimes.toString(),
     });
     final tzNow = tz.TZDateTime.now(tz.local);

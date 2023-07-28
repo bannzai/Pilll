@@ -34,7 +34,7 @@ void main() {
       final pillSheetGroup = PillSheetGroup(pillSheetIDs: ["1"], pillSheets: [pillSheetEntity], createdAt: now());
 
       await waitForResetStoreState();
-      expect(pillSheetGroup.pillSheets.first.todayPillNumber, pillSheetGroup.pillSheets.first.lastCompletedPillNumber);
+      expect(pillSheetGroup.pillSheets.first.todayPillNumber, pillSheetGroup.pillSheets.first.lastTakenPillNumber);
       expect(pillSheetGroup.pillSheets.first.todayPillIsAlreadyTaken, isTrue);
       expect(pillMarkFor(pillNumberInPillSheet: 1, pillSheet: pillSheetEntity), PillMarkType.done);
       expect(pillMarkFor(pillNumberInPillSheet: 2, pillSheet: pillSheetEntity), PillMarkType.done);

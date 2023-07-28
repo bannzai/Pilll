@@ -492,7 +492,7 @@ void main() {
       expect(model.isBegan, false);
     });
   });
-  group("#lastCompletedPillNumber", () {
+  group("#lastTakenPillNumber", () {
     group("pillTakenCount = 1", () {
       const pillTakenCount = 1;
       test("未服用の場合は0になる", () {
@@ -516,7 +516,7 @@ void main() {
           pills: Pill.testGenerateAndIterateTo(
               pillSheetType: sheetType, fromDate: DateTime.parse("2020-09-14"), lastTakenDate: null, pillTakenCount: pillTakenCount),
         );
-        expect(model.lastCompletedPillNumber, 0);
+        expect(model.lastTakenPillNumber, 0);
       });
       test("6日目だが4番まで服用済み", () {
         final mockTodayRepository = MockTodayService();
@@ -542,7 +542,7 @@ void main() {
               lastTakenDate: DateTime.parse("2020-09-17"),
               pillTakenCount: pillTakenCount),
         );
-        expect(model.lastCompletedPillNumber, 4);
+        expect(model.lastTakenPillNumber, 4);
       });
       test("境界値テスト。28番を服用", () {
         final mockTodayRepository = MockTodayService();
@@ -568,7 +568,7 @@ void main() {
               lastTakenDate: DateTime.parse("2020-09-28"),
               pillTakenCount: pillTakenCount),
         );
-        expect(model.lastCompletedPillNumber, 28);
+        expect(model.lastTakenPillNumber, 28);
       });
       test("服用お休み期間がある場合。服用お休みが終了してない場合", () {
         final mockTodayRepository = MockTodayService();
@@ -600,7 +600,7 @@ void main() {
               lastTakenDate: DateTime.parse("2020-09-22"),
               pillTakenCount: pillTakenCount),
         );
-        expect(model.lastCompletedPillNumber, 22);
+        expect(model.lastTakenPillNumber, 22);
       });
       test("服用お休み期間がある場合。服用お休みが終了している場合", () {
         final mockTodayRepository = MockTodayService();
@@ -633,7 +633,7 @@ void main() {
               lastTakenDate: DateTime.parse("2020-09-27"),
               pillTakenCount: pillTakenCount),
         );
-        expect(model.lastCompletedPillNumber, 25);
+        expect(model.lastTakenPillNumber, 25);
       });
       test("服用お休みが終了しているが、まだピルを服用していない場合", () {
         final mockTodayRepository = MockTodayService();
@@ -663,7 +663,7 @@ void main() {
           pills: Pill.testGenerateAndIterateTo(
               pillSheetType: sheetType, fromDate: DateTime.parse("2020-09-01"), lastTakenDate: null, pillTakenCount: pillTakenCount),
         );
-        expect(model.lastCompletedPillNumber, 0);
+        expect(model.lastTakenPillNumber, 0);
       });
 
       group("服用お休みを同じピルシートで複数している場合", () {
@@ -702,7 +702,7 @@ void main() {
                 lastTakenDate: DateTime.parse("2020-09-22"),
                 pillTakenCount: pillTakenCount),
           );
-          expect(model.lastCompletedPillNumber, 19);
+          expect(model.lastTakenPillNumber, 19);
         });
         test("最後の服用お休みが終了している場合", () {
           final mockTodayRepository = MockTodayService();
@@ -741,7 +741,7 @@ void main() {
               pillTakenCount: pillTakenCount,
             ),
           );
-          expect(model.lastCompletedPillNumber, 19);
+          expect(model.lastTakenPillNumber, 19);
         });
       });
     });
@@ -768,7 +768,7 @@ void main() {
           pills: Pill.testGenerateAndIterateTo(
               pillSheetType: sheetType, fromDate: DateTime.parse("2020-09-14"), lastTakenDate: null, pillTakenCount: pillTakenCount),
         );
-        expect(model.lastCompletedPillNumber, 0);
+        expect(model.lastTakenPillNumber, 0);
       });
       test("6日目だが4番まで服用済み", () {
         final mockTodayRepository = MockTodayService();
@@ -794,7 +794,7 @@ void main() {
               lastTakenDate: DateTime.parse("2020-09-17"),
               pillTakenCount: pillTakenCount),
         );
-        expect(model.lastCompletedPillNumber, 4);
+        expect(model.lastTakenPillNumber, 4);
       });
       test("境界値テスト。28番を服用", () {
         final mockTodayRepository = MockTodayService();
@@ -820,7 +820,7 @@ void main() {
               lastTakenDate: DateTime.parse("2020-09-28"),
               pillTakenCount: pillTakenCount),
         );
-        expect(model.lastCompletedPillNumber, 28);
+        expect(model.lastTakenPillNumber, 28);
       });
       test("服用お休み期間がある場合。服用お休みが終了してない場合", () {
         final mockTodayRepository = MockTodayService();
@@ -852,7 +852,7 @@ void main() {
               lastTakenDate: DateTime.parse("2020-09-22"),
               pillTakenCount: pillTakenCount),
         );
-        expect(model.lastCompletedPillNumber, 22);
+        expect(model.lastTakenPillNumber, 22);
       });
       test("服用お休み期間がある場合。服用お休みが終了している場合", () {
         final mockTodayRepository = MockTodayService();
@@ -885,7 +885,7 @@ void main() {
               lastTakenDate: DateTime.parse("2020-09-27"),
               pillTakenCount: pillTakenCount),
         );
-        expect(model.lastCompletedPillNumber, 25);
+        expect(model.lastTakenPillNumber, 25);
       });
       test("服用お休みが終了しているが、まだピルを服用していない場合", () {
         final mockTodayRepository = MockTodayService();
@@ -915,7 +915,7 @@ void main() {
           pills: Pill.testGenerateAndIterateTo(
               pillSheetType: sheetType, fromDate: DateTime.parse("2020-09-01"), lastTakenDate: null, pillTakenCount: pillTakenCount),
         );
-        expect(model.lastCompletedPillNumber, 0);
+        expect(model.lastTakenPillNumber, 0);
       });
 
       group("服用お休みを同じピルシートで複数している場合", () {
@@ -954,7 +954,7 @@ void main() {
                 lastTakenDate: DateTime.parse("2020-09-22"),
                 pillTakenCount: pillTakenCount),
           );
-          expect(model.lastCompletedPillNumber, 19);
+          expect(model.lastTakenPillNumber, 19);
         });
         test("最後の服用お休みが終了している場合", () {
           final mockTodayRepository = MockTodayService();
@@ -993,7 +993,7 @@ void main() {
               pillTakenCount: pillTakenCount,
             ),
           );
-          expect(model.lastCompletedPillNumber, 19);
+          expect(model.lastTakenPillNumber, 19);
         });
       });
 
@@ -1041,7 +1041,7 @@ void main() {
         );
         model = model.copyWith(pills: pills);
         expect(model.pills[21].pillTakens.length, 1);
-        expect(model.lastCompletedPillNumber, 21);
+        expect(model.lastTakenPillNumber, 21);
       });
     });
   });

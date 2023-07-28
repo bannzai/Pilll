@@ -80,7 +80,7 @@ void main() {
     });
     group("pillTakenCount = 1", () {
       test("未服用から服用", () {
-        final lastTakenPillIndex = max(0, activePillSheet.lastCompletedPillNumber - 1);
+        final lastTakenPillIndex = max(0, activePillSheet.lastTakenPillNumber - 1);
         final takenDate = activePillSheetBeginDate;
         final updatedActivePillSheet = activePillSheet.takenPillSheet(takenDate);
         final expected = activePillSheet.copyWith(
@@ -99,7 +99,7 @@ void main() {
           ),
         );
         // 事前条件
-        expect(activePillSheet.lastCompletedPillNumber, 0);
+        expect(activePillSheet.lastTakenPillNumber, 0);
         // テスト内容
         expect(updatedActivePillSheet.pills, expected.pills);
         expect(updatedActivePillSheet, expected);
@@ -143,7 +143,7 @@ void main() {
           ),
         );
         // 事前条件
-        expect(activePillSheet.lastCompletedPillNumber, 0);
+        expect(activePillSheet.lastTakenPillNumber, 0);
         expect(activePillSheet.todayPillNumber, 3);
         // テスト内容
         expect(updatedActivePillSheet.pills, expected.pills);
@@ -155,7 +155,7 @@ void main() {
     group("pillTakenCount = 2", () {
       test("未服用から服用", () {
         activePillSheet = activePillSheet.copyWith(pillTakenCount: 2);
-        final lastTakenPillIndex = max(0, activePillSheet.lastCompletedPillNumber - 1);
+        final lastTakenPillIndex = max(0, activePillSheet.lastTakenPillNumber - 1);
 
         final takenDate = activePillSheetBeginDate;
         final updatedActivePillSheet = activePillSheet.takenPillSheet(takenDate);
@@ -175,7 +175,7 @@ void main() {
           ),
         );
         // 事前条件
-        expect(activePillSheet.lastCompletedPillNumber, 0);
+        expect(activePillSheet.lastTakenPillNumber, 0);
         // テスト内容
         expect(updatedActivePillSheet.pills, expected.pills);
         expect(updatedActivePillSheet, expected);
@@ -223,7 +223,7 @@ void main() {
           ),
         );
         // 事前条件
-        expect(activePillSheet.lastCompletedPillNumber, 0);
+        expect(activePillSheet.lastTakenPillNumber, 0);
         expect(activePillSheet.todayPillNumber, 3);
         // テスト内容
         expect(updatedActivePillSheet.pills, expected.pills);
@@ -234,7 +234,7 @@ void main() {
 
       test("1度服用済みから2度目の服用", () {
         final takenDate = activePillSheetBeginDate;
-        final lastTakenPillIndex = max(0, activePillSheet.lastCompletedPillNumber - 1);
+        final lastTakenPillIndex = max(0, activePillSheet.lastTakenPillNumber - 1);
         // 1度服用済みにする
         activePillSheet = activePillSheet.copyWith(
           pillTakenCount: 2,
@@ -266,7 +266,7 @@ void main() {
           ),
         );
         // 事前条件
-        expect(activePillSheet.lastCompletedPillNumber, 0);
+        expect(activePillSheet.lastTakenPillNumber, 0);
         // テスト内容
         expect(updatedActivePillSheet.pills, expected.pills);
         expect(updatedActivePillSheet, expected);

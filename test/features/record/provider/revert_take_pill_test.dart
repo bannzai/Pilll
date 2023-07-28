@@ -57,7 +57,7 @@ void main() {
         );
         expect(reverted.pills, expected.pills);
         expect(reverted.lastTakenDate, expected.lastTakenDate);
-        expect(reverted.lastCompletedPillNumber, expected.lastCompletedPillNumber);
+        expect(reverted.lastTakenPillNumber, expected.lastTakenPillNumber);
         expect(reverted.todayPillNumber, expected.todayPillNumber);
         expect(reverted.todayPillIsAlreadyTaken, expected.todayPillIsAlreadyTaken);
         expect(reverted, expected);
@@ -112,7 +112,7 @@ void main() {
         );
         expect(reverted.pills, expected.pills);
         expect(reverted.lastTakenDate, expected.lastTakenDate);
-        expect(reverted.lastCompletedPillNumber, expected.lastCompletedPillNumber);
+        expect(reverted.lastTakenPillNumber, expected.lastTakenPillNumber);
         expect(reverted.todayPillNumber, expected.todayPillNumber);
         expect(reverted.todayPillIsAlreadyTaken, expected.todayPillIsAlreadyTaken);
         expect(reverted, expected);
@@ -157,7 +157,7 @@ void main() {
         );
         expect(reverted.pills, expected.pills);
         expect(reverted.lastTakenDate, expected.lastTakenDate);
-        expect(reverted.lastCompletedPillNumber, expected.lastCompletedPillNumber);
+        expect(reverted.lastTakenPillNumber, expected.lastTakenPillNumber);
         expect(reverted.todayPillNumber, expected.todayPillNumber);
         expect(reverted.todayPillIsAlreadyTaken, expected.todayPillIsAlreadyTaken);
         expect(reverted, expected);
@@ -212,7 +212,7 @@ void main() {
         );
         expect(reverted.pills, expected.pills);
         expect(reverted.lastTakenDate, expected.lastTakenDate);
-        expect(reverted.lastCompletedPillNumber, expected.lastCompletedPillNumber);
+        expect(reverted.lastTakenPillNumber, expected.lastTakenPillNumber);
         expect(reverted.todayPillNumber, expected.todayPillNumber);
         expect(reverted.todayPillIsAlreadyTaken, expected.todayPillIsAlreadyTaken);
         expect(reverted, expected);
