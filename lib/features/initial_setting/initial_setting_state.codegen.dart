@@ -1,7 +1,6 @@
 import 'package:flutter_native_timezone/flutter_native_timezone.dart';
 import 'package:pilll/entity/firestore_id_generator.dart';
 import 'package:pilll/entity/link_account_type.dart';
-import 'package:pilll/entity/pill.codegen.dart';
 import 'package:pilll/utils/datetime/day.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';
 import 'package:pilll/entity/pill_sheet.codegen.dart';
@@ -66,7 +65,6 @@ class InitialSettingState with _$InitialSettingState {
   static PillSheet buildPillSheet({
     required int pageIndex,
     required InitialSettingTodayPillNumber todayPillNumber,
-    required bool takesTwicePerDay,
     required List<PillSheetType> pillSheetTypes,
   }) {
     final pillSheetType = pillSheetTypes[pageIndex];
@@ -80,7 +78,6 @@ class InitialSettingState with _$InitialSettingState {
       todayPillNumber: todayPillNumber,
       pillSheetTypes: pillSheetTypes,
     );
-    final pillTakenCount = takesTwicePerDay ? 2 : 1;
 
     return PillSheet(
       id: firestoreIDGenerator(),
@@ -88,13 +85,6 @@ class InitialSettingState with _$InitialSettingState {
       beginingDate: beginDate,
       lastTakenDate: lastTakenDate,
       typeInfo: pillSheetType.typeInfo,
-      pills: Pill.generateAndFillTo(
-        pillSheetType: pillSheetType,
-        fromDate: beginDate,
-        lastTakenDate: lastTakenDate,
-        pillTakenCount: pillTakenCount,
-      ),
-      pillTakenCount: pillTakenCount,
       createdAt: now(),
     );
   }

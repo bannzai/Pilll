@@ -119,7 +119,6 @@ class InitialSettingStateNotifier extends StateNotifier<InitialSettingState> {
           pageIndex: pageIndex,
           todayPillNumber: todayPillNumber,
           pillSheetTypes: state.pillSheetTypes,
-          takesTwicePerDay: state.pillSheetTakesTwicePerDay,
         );
       }).toList();
 
