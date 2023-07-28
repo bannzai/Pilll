@@ -1,7 +1,6 @@
 import 'dart:math';
 
 import 'package:firebase_core/firebase_core.dart';
-import 'package:pilll/entity/pill.codegen.dart';
 import 'package:pilll/entity/pill_sheet_modified_history.codegen.dart';
 import 'package:pilll/provider/batch.dart';
 import 'package:pilll/entity/pill_sheet.codegen.dart';
@@ -54,9 +53,7 @@ class TakePill {
 
       // takenDateよりも予測するピルシートの最終服用日よりも小さい場合は、そのピルシートの最終日で予測する最終服用日を記録する
       if (takenDate.isAfter(pillSheet.estimatedEndTakenDate)) {
-        return pillSheet.takenPillSheet(
-          pillSheet.estimatedEndTakenDate,
-        );
+        return pillSheet.copyWith(lastTakenDate: pillSheet.estimatedEndTakenDate);
       }
 
       // takenDateがピルシートの開始日に満たない場合は、記録の対象になっていないので早期リターン
@@ -65,9 +62,7 @@ class TakePill {
         return pillSheet;
       }
 
-      return pillSheet.takenPillSheet(
-        takenDate,
-      );
+      return pillSheet.copyWith(lastTakenDate: takenDate);
     }).toList();
 
     final updatedPillSheetGroup = pillSheetGroup.copyWith(pillSheets: updatedPillSheets);
@@ -109,53 +104,5 @@ class TakePill {
     await batch.commit();
 
     return updatedPillSheetGroup;
-  }
-}
-
-extension TakenPillSheet on PillSheet {
-  PillSheet takenPillSheet(
-    DateTime takenDate,
-  ) {
-    // 一番最後の記録対象のピル。takenDateが今日の日付(クイックレコードや「飲んだ」を押した時)の場合は、takenDateは今日の日付にな流。その場合はtodayPillIndexと等価の値になる
-    // max(estimatedLastTakenPillIndex, finalTakenPillIndex)としないのは、したのpill.index > finalTakenPillIndexで早期リターンされるので書いていない。estimatedLastTakenPillIndex を新しく用意するほどでも無いと思ったので
-    final finalTakenPillIndex = pillNumberFor(targetDate: takenDate) - 1;
-
-    return copyWith(
-      lastTakenDate: takenDate,
-      pills: pills.map((pill) {
-        // takenDateから算出した記録されるピルのindexよりも大きい場合は何もしない
-        // ユーザーがピルをタップした時等にtakenDateは今日以外の日付が入ってくる
-        // pill.index > todayPillIndexの役割も理論的には備えているので、この条件文だけで良い
-        if (pill.index > finalTakenPillIndex) {
-          return pill;
-        }
-        if (pill.pillTakens.length == pillTakenCount) {
-          return pill;
-        }
-
-        final pillTakenDoneList = [...pill.pillTakens];
-
-        if (pill.index != finalTakenPillIndex) {
-          // NOTE: 一番最後の記録対象のピル以外は、ピルの服用記録をpillTakenCountに達するまで追加する
-          for (var i = max(0, pill.pillTakens.length - 1); i < pillTakenCount; i++) {
-            pillTakenDoneList.add(PillTaken(
-              recordedTakenDateTime: takenDate,
-              createdDateTime: now(),
-              updatedDateTime: now(),
-            ));
-          }
-        } else {
-          // pill == estimatedTakenPillIndex
-          // NOTE: 一番最後の記録対象のピルは、ピルの服用記録を追加する。
-          // 2回服用の場合で未服用の場合は残りの服用回数は1回になる。1回服用済みの場合は2回になる
-          pillTakenDoneList.add(PillTaken(
-            recordedTakenDateTime: takenDate,
-            createdDateTime: now(),
-            updatedDateTime: now(),
-          ));
-        }
-        return pill.copyWith(pillTakens: pillTakenDoneList);
-      }).toList(),
-    );
   }
 }
