@@ -1,6 +1,3 @@
-import 'package:hooks_riverpod/hooks_riverpod.dart';
-import 'package:pilll/components/atoms/font.dart';
-import 'package:pilll/components/atoms/text_color.dart';
 import 'package:pilll/components/template/setting_pill_sheet_group/pill_sheet_type_add_button.dart';
 import 'package:flutter/material.dart';
 import 'package:pilll/components/template/setting_pill_sheet_group/setting_pill_sheet_group_pill_sheet_type_select_row.dart';
