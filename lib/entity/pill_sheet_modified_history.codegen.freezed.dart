@@ -394,7 +394,7 @@ class __$$_PillSheetModifiedHistoryCopyWithImpl<$Res>
 @JsonSerializable(explicitToJson: true)
 class _$_PillSheetModifiedHistory extends _PillSheetModifiedHistory {
   const _$_PillSheetModifiedHistory(
-      {this.version = "v2",
+      {this.version = "v1",
       @JsonKey(includeIfNull: false, toJson: toNull)
           required this.id,
       required this.actionType,

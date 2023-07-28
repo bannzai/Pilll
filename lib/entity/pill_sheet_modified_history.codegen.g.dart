@@ -9,7 +9,7 @@ part of 'pill_sheet_modified_history.codegen.dart';
 _$_PillSheetModifiedHistory _$$_PillSheetModifiedHistoryFromJson(
         Map<String, dynamic> json) =>
     _$_PillSheetModifiedHistory(
-      version: json['version'] ?? "v2",
+      version: json['version'] ?? "v1",
       id: json['id'] as String?,
       actionType: json['actionType'] as String,
       estimatedEventCausingDate: NonNullTimestampConverter.timestampToDateTime(
