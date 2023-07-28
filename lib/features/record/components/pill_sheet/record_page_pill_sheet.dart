@@ -92,22 +92,6 @@ class RecordPagePillSheet extends HookConsumerWidget {
       }
 
       final pillNumberInPillSheet = PillMarkWithNumberLayoutHelper.calcPillNumberIntoPillSheet(columnIndex, lineIndex);
-      final remainingPillTakenCount = () {
-        if (pillSheet.todayPillIsAlreadyTaken) {
-          return null;
-        }
-
-        final pillIndexIntoPillSheet = pillNumberInPillSheet - 1;
-        if (pillSheet.todayPillIndex < pillIndexIntoPillSheet) {
-          return null;
-        }
-        if (pillSheet.pillTakenCount <= 1) {
-          return null;
-        }
-
-        final diff = pillSheet.pillTakenCount - pillSheet.pills[pillIndexIntoPillSheet].pillTakens.length;
-        return diff == 0 ? null : diff;
-      }();
       return SizedBox(
         width: PillSheetViewLayout.componentWidth,
         child: PillMarkWithNumberLayout(
@@ -132,7 +116,6 @@ class RecordPagePillSheet extends HookConsumerWidget {
               pillNumberInPillSheet: pillNumberInPillSheet,
               pillSheet: pillSheet,
             ),
-            remainingPillTakenCount: remainingPillTakenCount,
           ),
           onTap: () async {
             try {
