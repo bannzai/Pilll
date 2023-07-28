@@ -247,8 +247,6 @@ void main() {
             totalCount: sheetType.totalCount,
             pillSheetTypeReferencePath: sheetType.rawPath,
           ),
-          pills:
-              Pill.testGenerateAndIterateTo(pillSheetType: sheetType, fromDate: DateTime.parse("2022-03-29"), lastTakenDate: null, pillTakenCount: 1),
         );
         // created at and id are anything value
         final pillSheetGroup = PillSheetGroup(
@@ -289,8 +287,6 @@ void main() {
             totalCount: sheetType.totalCount,
             pillSheetTypeReferencePath: sheetType.rawPath,
           ),
-          pills:
-              Pill.testGenerateAndIterateTo(pillSheetType: sheetType, fromDate: DateTime.parse("2022-03-29"), lastTakenDate: null, pillTakenCount: 1),
         );
         // created at and id are anything value
         final pillSheetGroup = PillSheetGroup(
@@ -332,8 +328,6 @@ void main() {
             totalCount: sheetType.totalCount,
             pillSheetTypeReferencePath: sheetType.rawPath,
           ),
-          pills:
-              Pill.testGenerateAndIterateTo(pillSheetType: sheetType, fromDate: DateTime.parse("2022-03-29"), lastTakenDate: null, pillTakenCount: 1),
         );
         // created at and id are anything value
         final pillSheetGroup = PillSheetGroup(
@@ -375,8 +369,6 @@ void main() {
             totalCount: sheetType.totalCount,
             pillSheetTypeReferencePath: sheetType.rawPath,
           ),
-          pills:
-              Pill.testGenerateAndIterateTo(pillSheetType: sheetType, fromDate: DateTime.parse("2022-03-29"), lastTakenDate: null, pillTakenCount: 1),
         );
         // created at and id are anything value
         final pillSheetGroup = PillSheetGroup(
@@ -409,8 +401,6 @@ void main() {
             pillSheetTypeReferencePath: sheetType.rawPath,
           ),
           createdAt: now(),
-          pills:
-              Pill.testGenerateAndIterateTo(pillSheetType: sheetType, fromDate: DateTime.parse("2020-09-14"), lastTakenDate: null, pillTakenCount: 1),
         );
         // created at and id are anything value
         final pillSheetGroup = PillSheetGroup(
