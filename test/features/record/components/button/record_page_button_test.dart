@@ -104,7 +104,7 @@ void main() {
       });
     });
     group('#CancelButton', () {
-      testWidgets('activePillSheet.todayPillsAreAlreadyTaken', (WidgetTester tester) async {
+      testWidgets('activePillSheet.todayPillIsAlreadyTaken', (WidgetTester tester) async {
         final firstPillSheetBeginDate = now().subtract(const Duration(days: 10));
         var pillSheets = [
           PillSheet(
@@ -159,7 +159,7 @@ void main() {
         );
         pillSheets.replaceRange(0, 1, [activePillSheet]);
         expect(activePillSheet.activeRestDuration, isNull);
-        expect(activePillSheet.todayPillsAreAlreadyTaken, true);
+        expect(activePillSheet.todayPillIsAlreadyTaken, true);
         expect(pillSheetGroup.activePillSheet, activePillSheet);
 
         await tester.pumpWidget(
@@ -236,7 +236,7 @@ void main() {
         );
         pillSheets.replaceRange(0, 1, [activePillSheet]);
         expect(activePillSheet.activeRestDuration, isNull);
-        expect(activePillSheet.todayPillsAreAlreadyTaken, false);
+        expect(activePillSheet.todayPillIsAlreadyTaken, false);
         expect(pillSheetGroup.activePillSheet, activePillSheet);
 
         await tester.pumpWidget(

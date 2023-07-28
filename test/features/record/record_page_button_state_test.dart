@@ -69,7 +69,7 @@ void main() {
       pills: Pill.testGenerateAndIterateTo(pillSheetType: PillSheetType.pillsheet_21, fromDate: today(), lastTakenDate: today(), pillTakenCount: 1),
     );
 
-    expect(true, pillSheet.todayPillsAreAlreadyTaken);
+    expect(true, pillSheet.todayPillIsAlreadyTaken);
     await tester.pumpWidget(
       ProviderScope(
         overrides: [

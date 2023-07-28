@@ -103,7 +103,7 @@ void main() {
         // テスト内容
         expect(updatedActivePillSheet.pills, expected.pills);
         expect(updatedActivePillSheet, expected);
-        expect(updatedActivePillSheet.todayPillsAreAlreadyTaken, true);
+        expect(updatedActivePillSheet.todayPillIsAlreadyTaken, true);
         expect(updatedActivePillSheet.anyTodayPillsAreAlreadyTaken, true);
       });
       test("未服用のピルが複数個ある", () {
@@ -148,7 +148,7 @@ void main() {
         // テスト内容
         expect(updatedActivePillSheet.pills, expected.pills);
         expect(updatedActivePillSheet, expected);
-        expect(updatedActivePillSheet.todayPillsAreAlreadyTaken, true);
+        expect(updatedActivePillSheet.todayPillIsAlreadyTaken, true);
         expect(updatedActivePillSheet.anyTodayPillsAreAlreadyTaken, true);
       });
     });
@@ -179,7 +179,7 @@ void main() {
         // テスト内容
         expect(updatedActivePillSheet.pills, expected.pills);
         expect(updatedActivePillSheet, expected);
-        expect(updatedActivePillSheet.todayPillsAreAlreadyTaken, false);
+        expect(updatedActivePillSheet.todayPillIsAlreadyTaken, false);
         expect(updatedActivePillSheet.anyTodayPillsAreAlreadyTaken, true);
       });
       test("未服用のピルが複数個ある", () {
@@ -228,7 +228,7 @@ void main() {
         // テスト内容
         expect(updatedActivePillSheet.pills, expected.pills);
         expect(updatedActivePillSheet, expected);
-        expect(updatedActivePillSheet.todayPillsAreAlreadyTaken, false);
+        expect(updatedActivePillSheet.todayPillIsAlreadyTaken, false);
         expect(updatedActivePillSheet.anyTodayPillsAreAlreadyTaken, true);
       });
 
@@ -270,7 +270,7 @@ void main() {
         // テスト内容
         expect(updatedActivePillSheet.pills, expected.pills);
         expect(updatedActivePillSheet, expected);
-        expect(updatedActivePillSheet.todayPillsAreAlreadyTaken, true);
+        expect(updatedActivePillSheet.todayPillIsAlreadyTaken, true);
         expect(updatedActivePillSheet.anyTodayPillsAreAlreadyTaken, true);
       });
     });
@@ -339,7 +339,7 @@ void main() {
           expect(result, updatedPillSheetGroup);
         });
 
-        test("activePillSheet.todayPillsAreAlreadyTaken", () async {
+        test("activePillSheet.todayPillIsAlreadyTaken", () async {
           final takenDate = mockNow.add(const Duration(seconds: 1));
           activePillSheet = activePillSheet.takenPillSheet(takenDate);
 
@@ -413,7 +413,7 @@ void main() {
         expect(result, updatedPillSheetGroup);
       });
 
-      test("activePillSheet.todayPillsAreAlreadyTaken", () async {
+      test("activePillSheet.todayPillIsAlreadyTaken", () async {
         final takenDate = mockNow.add(const Duration(seconds: 1));
         activePillSheet = activePillSheet.takenPillSheet(takenDate);
         pillSheetGroup = PillSheetGroup(

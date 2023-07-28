@@ -35,7 +35,7 @@ void main() {
 
       await waitForResetStoreState();
       expect(pillSheetGroup.pillSheets.first.todayPillNumber, pillSheetGroup.pillSheets.first.lastCompletedPillNumber);
-      expect(pillSheetGroup.pillSheets.first.todayPillsAreAlreadyTaken, isTrue);
+      expect(pillSheetGroup.pillSheets.first.todayPillIsAlreadyTaken, isTrue);
       expect(pillMarkFor(pillNumberInPillSheet: 1, pillSheet: pillSheetEntity), PillMarkType.done);
       expect(pillMarkFor(pillNumberInPillSheet: 2, pillSheet: pillSheetEntity), PillMarkType.done);
       expect(pillMarkFor(pillNumberInPillSheet: 3, pillSheet: pillSheetEntity), PillMarkType.done);
@@ -56,7 +56,7 @@ void main() {
       final pillSheetGroup = PillSheetGroup(pillSheetIDs: ["1"], pillSheets: [pillSheetEntity], createdAt: now());
 
       await waitForResetStoreState();
-      expect(pillSheetGroup.pillSheets.first.todayPillsAreAlreadyTaken, isFalse);
+      expect(pillSheetGroup.pillSheets.first.todayPillIsAlreadyTaken, isFalse);
       expect(pillMarkFor(pillNumberInPillSheet: 1, pillSheet: pillSheetEntity), PillMarkType.done);
       expect(pillMarkFor(pillNumberInPillSheet: 2, pillSheet: pillSheetEntity), PillMarkType.done);
       expect(pillMarkFor(pillNumberInPillSheet: 3, pillSheet: pillSheetEntity), PillMarkType.normal);
@@ -78,7 +78,7 @@ void main() {
       );
       final pillSheetGroup = PillSheetGroup(pillSheetIDs: ["1"], pillSheets: [pillSheetEntity], createdAt: now());
       await waitForResetStoreState();
-      expect(pillSheetGroup.pillSheets.first.todayPillsAreAlreadyTaken, isTrue);
+      expect(pillSheetGroup.pillSheets.first.todayPillIsAlreadyTaken, isTrue);
       for (int i = 1; i <= pillSheetEntity.pillSheetType.totalCount; i++) {
         expect(
             shouldPillMarkAnimation(
@@ -104,7 +104,7 @@ void main() {
       final pillSheetGroup = PillSheetGroup(pillSheetIDs: ["1"], pillSheets: [pillSheetEntity], createdAt: now());
 
       await waitForResetStoreState();
-      expect(pillSheetGroup.pillSheets.first.todayPillsAreAlreadyTaken, isFalse);
+      expect(pillSheetGroup.pillSheets.first.todayPillIsAlreadyTaken, isFalse);
       expect(
           shouldPillMarkAnimation(
             pillNumberInPillSheet: 3,

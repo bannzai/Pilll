@@ -129,7 +129,7 @@ class PillSheet with _$PillSheet {
     return pillNumberFor(targetDate: lastTakenDate);
   }
 
-  bool get todayPillsAreAlreadyTaken {
+  bool get todayPillIsAlreadyTaken {
     return lastTakenPillNumber == todayPillNumber;
   }
 

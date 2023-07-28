@@ -59,7 +59,7 @@ void main() {
         expect(reverted.lastTakenDate, expected.lastTakenDate);
         expect(reverted.lastCompletedPillNumber, expected.lastCompletedPillNumber);
         expect(reverted.todayPillNumber, expected.todayPillNumber);
-        expect(reverted.todayPillsAreAlreadyTaken, expected.todayPillsAreAlreadyTaken);
+        expect(reverted.todayPillIsAlreadyTaken, expected.todayPillIsAlreadyTaken);
         expect(reverted, expected);
       });
       test("Revert to yesterday", () async {
@@ -114,7 +114,7 @@ void main() {
         expect(reverted.lastTakenDate, expected.lastTakenDate);
         expect(reverted.lastCompletedPillNumber, expected.lastCompletedPillNumber);
         expect(reverted.todayPillNumber, expected.todayPillNumber);
-        expect(reverted.todayPillsAreAlreadyTaken, expected.todayPillsAreAlreadyTaken);
+        expect(reverted.todayPillIsAlreadyTaken, expected.todayPillIsAlreadyTaken);
         expect(reverted, expected);
       });
     });
@@ -159,7 +159,7 @@ void main() {
         expect(reverted.lastTakenDate, expected.lastTakenDate);
         expect(reverted.lastCompletedPillNumber, expected.lastCompletedPillNumber);
         expect(reverted.todayPillNumber, expected.todayPillNumber);
-        expect(reverted.todayPillsAreAlreadyTaken, expected.todayPillsAreAlreadyTaken);
+        expect(reverted.todayPillIsAlreadyTaken, expected.todayPillIsAlreadyTaken);
         expect(reverted, expected);
       });
       test("Revert to yesterday", () async {
@@ -214,7 +214,7 @@ void main() {
         expect(reverted.lastTakenDate, expected.lastTakenDate);
         expect(reverted.lastCompletedPillNumber, expected.lastCompletedPillNumber);
         expect(reverted.todayPillNumber, expected.todayPillNumber);
-        expect(reverted.todayPillsAreAlreadyTaken, expected.todayPillsAreAlreadyTaken);
+        expect(reverted.todayPillIsAlreadyTaken, expected.todayPillIsAlreadyTaken);
         expect(reverted, expected);
       });
     });

@@ -199,7 +199,7 @@ class RegisterReminderLocalNotification {
   }) async {
     analytics.logEvent(name: "run_register_reminder_notification", parameters: {
       "todayPillNumber": activePillSheet.todayPillNumber,
-      "todayPillsAreAlreadyTaken": activePillSheet.todayPillsAreAlreadyTaken,
+      "todayPillIsAlreadyTaken": activePillSheet.todayPillIsAlreadyTaken,
       "lastCompletedPillNumber": activePillSheet.lastCompletedPillNumber,
       "reminderTimes": setting.reminderTimes.toString(),
     });
@@ -213,7 +213,7 @@ class RegisterReminderLocalNotification {
       // ユーザーの何かしらのアクションでどこかでスケジュールされるだろう
       for (final offset in List.generate(registerDays, (index) => index)) {
         // 本日服用済みの場合はスキップする
-        if (offset == 0 && activePillSheet.todayPillsAreAlreadyTaken) {
+        if (offset == 0 && activePillSheet.todayPillIsAlreadyTaken) {
           continue;
         }
 

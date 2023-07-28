@@ -39,7 +39,7 @@ class TakePill {
     required PillSheet activePillSheet,
     required bool isQuickRecord,
   }) async {
-    if (activePillSheet.todayPillsAreAlreadyTaken) {
+    if (activePillSheet.todayPillIsAlreadyTaken) {
       return null;
     }
 

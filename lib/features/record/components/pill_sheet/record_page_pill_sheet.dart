@@ -93,7 +93,7 @@ class RecordPagePillSheet extends HookConsumerWidget {
 
       final pillNumberInPillSheet = PillMarkWithNumberLayoutHelper.calcPillNumberIntoPillSheet(columnIndex, lineIndex);
       final remainingPillTakenCount = () {
-        if (pillSheet.todayPillsAreAlreadyTaken) {
+        if (pillSheet.todayPillIsAlreadyTaken) {
           return null;
         }
 
@@ -198,7 +198,7 @@ class RecordPagePillSheet extends HookConsumerWidget {
       // User tapped future pill number
       return null;
     }
-    if (activePillSheet.todayPillsAreAlreadyTaken) {
+    if (activePillSheet.todayPillIsAlreadyTaken) {
       return null;
     }
 
