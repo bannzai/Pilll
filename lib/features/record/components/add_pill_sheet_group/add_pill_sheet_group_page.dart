@@ -72,7 +72,6 @@ class AddPillSheetGroupPage extends HookConsumerWidget {
                     child: Column(
                       mainAxisSize: MainAxisSize.min,
                       children: [
-                        SettingPillSheetTakesTwicePerDayToggle(pillSheetTakesTwicePerDay),
                         if (pillSheetGroup != null)
                           DisplayNumberSetting(
                               pillSheetAppearanceMode: setting.pillSheetAppearanceMode,

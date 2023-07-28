@@ -45,18 +45,3 @@ class SettingPillSheetGroup extends StatelessWidget {
     );
   }
 }
-
-class SettingPillSheetTakesTwicePerDayToggle extends HookConsumerWidget {
-  final ValueNotifier<bool> value;
-
-  const SettingPillSheetTakesTwicePerDayToggle(this.value, {Key? key}) : super(key: key);
-
-  @override
-  Widget build(BuildContext context, WidgetRef ref) {
-    return Row(children: [
-      const Text("1日に2回服用する", style: TextStyle(color: TextColor.main, fontFamily: FontFamily.japanese, fontSize: 14, fontWeight: FontWeight.w500)),
-      const Spacer(),
-      Switch(value: value.value, onChanged: (value) => this.value.value = value),
-    ]);
-  }
-}

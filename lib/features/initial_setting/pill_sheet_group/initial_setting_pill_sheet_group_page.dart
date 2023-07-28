@@ -126,7 +126,6 @@ class InitialSettingPillSheetGroupPage extends HookConsumerWidget {
                     child: Column(
                       mainAxisSize: MainAxisSize.min,
                       children: [
-                        SettingPillSheetTakesTwicePerDayToggle(pillSheetTakesTwicePerDay),
                         if (state.pillSheetTypes.isNotEmpty)
                           SizedBox(
                             width: 180,
