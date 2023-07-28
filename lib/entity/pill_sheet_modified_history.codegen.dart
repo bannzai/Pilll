@@ -205,9 +205,9 @@ abstract class PillSheetModifiedHistoryServiceActionFactory {
       value: PillSheetModifiedHistoryValue(
         revertTakenPill: RevertTakenPillValue(
           afterLastTakenDate: afterLastTakenDate,
-          afterLastTakenPillNumber: after.lastCompletedPillNumber,
+          afterLastTakenPillNumber: after.lastTakenPillNumber,
           beforeLastTakenDate: beforeLastTakenDate,
-          beforeLastTakenPillNumber: before.lastCompletedPillNumber,
+          beforeLastTakenPillNumber: before.lastTakenPillNumber,
         ),
       ),
       after: after,

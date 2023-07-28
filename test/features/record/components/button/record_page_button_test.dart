@@ -1,4 +1,3 @@
-import 'package:pilll/entity/pill.codegen.dart';
 import 'package:pilll/entity/pill_sheet.codegen.dart';
 import 'package:pilll/entity/pill_sheet_group.codegen.dart';
 import 'package:pilll/entity/pill_sheet_type.dart';
@@ -38,8 +37,6 @@ void main() {
             beginingDate: firstPillSheetBeginDate,
             lastTakenDate: null,
             createdAt: now(),
-            pills: Pill.testGenerateAndIterateTo(
-                pillSheetType: PillSheetType.pillsheet_28_0, fromDate: firstPillSheetBeginDate, lastTakenDate: null, pillTakenCount: 1),
           ),
           PillSheet(
             id: "pill_sheet_id_2",
@@ -47,11 +44,6 @@ void main() {
             beginingDate: firstPillSheetBeginDate.add(const Duration(days: 28)),
             lastTakenDate: null,
             createdAt: now(),
-            pills: Pill.testGenerateAndIterateTo(
-                pillSheetType: PillSheetType.pillsheet_28_0,
-                fromDate: firstPillSheetBeginDate.add(const Duration(days: 28)),
-                lastTakenDate: null,
-                pillTakenCount: 1),
           ),
           PillSheet(
             id: "pill_sheet_id_3",
@@ -59,11 +51,6 @@ void main() {
             beginingDate: firstPillSheetBeginDate.add(const Duration(days: 56)),
             lastTakenDate: null,
             createdAt: now(),
-            pills: Pill.testGenerateAndIterateTo(
-                pillSheetType: PillSheetType.pillsheet_28_0,
-                fromDate: firstPillSheetBeginDate.add(const Duration(days: 56)),
-                lastTakenDate: null,
-                pillTakenCount: 1),
           )
         ];
         final pillSheetGroup = PillSheetGroup(pillSheetIDs: pillSheets.map((e) => e.id!).toList(), pillSheets: pillSheets, createdAt: now());
@@ -104,7 +91,7 @@ void main() {
       });
     });
     group('#CancelButton', () {
-      testWidgets('activePillSheet.todayPillsAreAlreadyTaken', (WidgetTester tester) async {
+      testWidgets('activePillSheet.todayPillIsAlreadyTaken', (WidgetTester tester) async {
         final firstPillSheetBeginDate = now().subtract(const Duration(days: 10));
         var pillSheets = [
           PillSheet(
@@ -113,8 +100,6 @@ void main() {
             beginingDate: firstPillSheetBeginDate,
             lastTakenDate: null,
             createdAt: now(),
-            pills: Pill.testGenerateAndIterateTo(
-                pillSheetType: PillSheetType.pillsheet_28_0, fromDate: firstPillSheetBeginDate, lastTakenDate: null, pillTakenCount: 1),
           ),
           PillSheet(
             id: "pill_sheet_id_2",
@@ -122,11 +107,6 @@ void main() {
             beginingDate: firstPillSheetBeginDate.add(const Duration(days: 28)),
             lastTakenDate: null,
             createdAt: now(),
-            pills: Pill.testGenerateAndIterateTo(
-                pillSheetType: PillSheetType.pillsheet_28_0,
-                fromDate: firstPillSheetBeginDate.add(const Duration(days: 28)),
-                lastTakenDate: null,
-                pillTakenCount: 1),
           ),
           PillSheet(
             id: "pill_sheet_id_3",
@@ -134,11 +114,6 @@ void main() {
             beginingDate: firstPillSheetBeginDate.add(const Duration(days: 56)),
             lastTakenDate: null,
             createdAt: now(),
-            pills: Pill.testGenerateAndIterateTo(
-                pillSheetType: PillSheetType.pillsheet_28_0,
-                fromDate: firstPillSheetBeginDate.add(const Duration(days: 56)),
-                lastTakenDate: null,
-                pillTakenCount: 1),
           )
         ];
         final pillSheetGroup = PillSheetGroup(pillSheetIDs: pillSheets.map((e) => e.id!).toList(), pillSheets: pillSheets, createdAt: now());
@@ -151,15 +126,10 @@ void main() {
             ),
           ],
           lastTakenDate: now(),
-          pills: Pill.testGenerateAndIterateTo(
-              pillSheetType: PillSheetType.pillsheet_28_0,
-              fromDate: pillSheetGroup.activePillSheet!.beginingDate,
-              lastTakenDate: now(),
-              pillTakenCount: 1),
         );
         pillSheets.replaceRange(0, 1, [activePillSheet]);
         expect(activePillSheet.activeRestDuration, isNull);
-        expect(activePillSheet.todayPillsAreAlreadyTaken, true);
+        expect(activePillSheet.todayPillIsAlreadyTaken, true);
         expect(pillSheetGroup.activePillSheet, activePillSheet);
 
         await tester.pumpWidget(
@@ -194,8 +164,6 @@ void main() {
             beginingDate: firstPillSheetBeginDate,
             lastTakenDate: null,
             createdAt: now(),
-            pills: Pill.testGenerateAndIterateTo(
-                pillSheetType: PillSheetType.pillsheet_28_0, fromDate: firstPillSheetBeginDate, lastTakenDate: null, pillTakenCount: 1),
           ),
           PillSheet(
             id: "pill_sheet_id_2",
@@ -203,11 +171,6 @@ void main() {
             beginingDate: firstPillSheetBeginDate.add(const Duration(days: 28)),
             lastTakenDate: null,
             createdAt: now(),
-            pills: Pill.testGenerateAndIterateTo(
-                pillSheetType: PillSheetType.pillsheet_28_0,
-                fromDate: firstPillSheetBeginDate.add(const Duration(days: 28)),
-                lastTakenDate: null,
-                pillTakenCount: 1),
           ),
           PillSheet(
             id: "pill_sheet_id_3",
@@ -215,11 +178,6 @@ void main() {
             beginingDate: firstPillSheetBeginDate.add(const Duration(days: 56)),
             lastTakenDate: null,
             createdAt: now(),
-            pills: Pill.testGenerateAndIterateTo(
-                pillSheetType: PillSheetType.pillsheet_28_0,
-                fromDate: firstPillSheetBeginDate.add(const Duration(days: 56)),
-                lastTakenDate: null,
-                pillTakenCount: 1),
           )
         ];
         final pillSheetGroup = PillSheetGroup(pillSheetIDs: pillSheets.map((e) => e.id!).toList(), pillSheets: pillSheets, createdAt: now());
@@ -236,7 +194,7 @@ void main() {
         );
         pillSheets.replaceRange(0, 1, [activePillSheet]);
         expect(activePillSheet.activeRestDuration, isNull);
-        expect(activePillSheet.todayPillsAreAlreadyTaken, false);
+        expect(activePillSheet.todayPillIsAlreadyTaken, false);
         expect(pillSheetGroup.activePillSheet, activePillSheet);
 
         await tester.pumpWidget(

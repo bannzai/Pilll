@@ -106,7 +106,7 @@ class PillSheetGroup with _$PillSheetGroup {
     final passedPillCountForPillSheetTypes = summarizedPillCountWithPillSheetTypesToIndex(
         pillSheetTypes: pillSheets.map((e) => e.pillSheetType).toList(), toIndex: activePillSheet.groupIndex);
 
-    var sequentialLastTakenPillNumber = passedPillCountForPillSheetTypes + activePillSheet.lastCompletedPillNumber;
+    var sequentialLastTakenPillNumber = passedPillCountForPillSheetTypes + activePillSheet.lastTakenPillNumber;
 
     final displayNumberSetting = this.displayNumberSetting;
     if (displayNumberSetting != null) {

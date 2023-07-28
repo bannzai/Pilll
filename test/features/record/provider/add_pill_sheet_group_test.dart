@@ -1,5 +1,4 @@
 import 'package:pilll/entity/firestore_id_generator.dart';
-import 'package:pilll/entity/pill.codegen.dart';
 import 'package:pilll/features/record/components/add_pill_sheet_group/provider.dart';
 import 'package:pilll/entity/pill_sheet.codegen.dart';
 import 'package:pilll/entity/pill_sheet_group.codegen.dart';
@@ -41,8 +40,6 @@ void main() {
         groupIndex: 0,
         lastTakenDate: null,
         createdAt: now(),
-        pills:
-            Pill.testGenerateAndIterateTo(pillSheetType: PillSheetType.pillsheet_28_0, fromDate: mockToday, lastTakenDate: null, pillTakenCount: 1),
       );
 
       final pillSheetGroup = PillSheetGroup(
@@ -98,7 +95,6 @@ void main() {
         pillSheetGroup: null,
         pillSheetTypes: [PillSheetType.pillsheet_28_0],
         displayNumberSetting: null,
-        takesTwicePerDay: false,
       );
     });
     test("group has two pill sheet", () async {
@@ -124,8 +120,6 @@ void main() {
         groupIndex: 0,
         lastTakenDate: null,
         createdAt: now(),
-        pills:
-            Pill.testGenerateAndIterateTo(pillSheetType: PillSheetType.pillsheet_28_0, fromDate: mockToday, lastTakenDate: null, pillTakenCount: 1),
       );
       final pillSheet2 = PillSheet(
         id: "sheet_id2",
@@ -134,8 +128,6 @@ void main() {
         lastTakenDate: null,
         groupIndex: 1,
         createdAt: now(),
-        pills: Pill.testGenerateAndIterateTo(
-            pillSheetType: PillSheetType.pillsheet_21, fromDate: mockToday.add(const Duration(days: 28)), lastTakenDate: null, pillTakenCount: 1),
       );
 
       final pillSheetGroup = PillSheetGroup(
@@ -191,7 +183,6 @@ void main() {
         pillSheetGroup: null,
         pillSheetTypes: [PillSheetType.pillsheet_28_0, PillSheetType.pillsheet_21],
         displayNumberSetting: null,
-        takesTwicePerDay: false,
       );
     });
   });

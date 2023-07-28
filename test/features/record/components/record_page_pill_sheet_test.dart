@@ -1,7 +1,6 @@
 import 'package:intl/date_symbol_data_local.dart';
 import 'package:mockito/mockito.dart';
 import 'package:pilll/entity/firestore_id_generator.dart';
-import 'package:pilll/entity/pill.codegen.dart';
 import 'package:pilll/features/record/components/pill_sheet/components/pill_number.dart';
 import 'package:pilll/features/record/components/pill_sheet/record_page_pill_sheet.dart';
 import 'package:pilll/entity/pill_sheet.codegen.dart';
@@ -50,8 +49,6 @@ void main() {
           beginingDate: mockToday,
           lastTakenDate: null,
           createdAt: now(),
-          pills:
-              Pill.testGenerateAndIterateTo(pillSheetType: PillSheetType.pillsheet_21, fromDate: mockToday, lastTakenDate: null, pillTakenCount: 1),
         );
         final pillSheetGroup = PillSheetGroup(pillSheetIDs: ["pill_sheet_id"], pillSheets: [pillSheet], createdAt: today());
         for (int i = 0; i < 28; i++) {
@@ -101,8 +98,6 @@ void main() {
           beginingDate: mockToday,
           lastTakenDate: null,
           createdAt: now(),
-          pills:
-              Pill.testGenerateAndIterateTo(pillSheetType: PillSheetType.pillsheet_21, fromDate: mockToday, lastTakenDate: null, pillTakenCount: 1),
         );
         final pillSheetGroup = PillSheetGroup(
           pillSheetIDs: ["pill_sheet_id"],
@@ -155,8 +150,6 @@ void main() {
           beginingDate: mockToday,
           lastTakenDate: null,
           createdAt: now(),
-          pills:
-              Pill.testGenerateAndIterateTo(pillSheetType: PillSheetType.pillsheet_21, fromDate: mockToday, lastTakenDate: null, pillTakenCount: 1),
         );
         final pillSheetGroup = PillSheetGroup(pillSheetIDs: ["pill_sheet_id"], pillSheets: [pillSheet], createdAt: today());
 
@@ -208,8 +201,6 @@ void main() {
           beginingDate: mockToday,
           lastTakenDate: null,
           createdAt: now(),
-          pills:
-              Pill.testGenerateAndIterateTo(pillSheetType: PillSheetType.pillsheet_21, fromDate: mockToday, lastTakenDate: null, pillTakenCount: 1),
         );
         final pillSheetGroup = PillSheetGroup(pillSheetIDs: ["pill_sheet_id"], pillSheets: [pillSheet], createdAt: today());
 
@@ -258,8 +249,6 @@ void main() {
           beginingDate: mockToday,
           lastTakenDate: null,
           createdAt: now(),
-          pills:
-              Pill.testGenerateAndIterateTo(pillSheetType: PillSheetType.pillsheet_21, fromDate: mockToday, lastTakenDate: null, pillTakenCount: 1),
         );
         final pillSheetGroup = PillSheetGroup(pillSheetIDs: ["pill_sheet_id"], pillSheets: [pillSheet], createdAt: today());
 
@@ -308,8 +297,6 @@ void main() {
           beginingDate: mockToday,
           lastTakenDate: null,
           createdAt: now(),
-          pills:
-              Pill.testGenerateAndIterateTo(pillSheetType: PillSheetType.pillsheet_21, fromDate: mockToday, lastTakenDate: null, pillTakenCount: 1),
         );
         final pillSheetGroup = PillSheetGroup(pillSheetIDs: ["pill_sheet_id"], pillSheets: [pillSheet], createdAt: today());
 
@@ -361,8 +348,6 @@ void main() {
           beginingDate: mockToday,
           lastTakenDate: null,
           createdAt: now(),
-          pills:
-              Pill.testGenerateAndIterateTo(pillSheetType: PillSheetType.pillsheet_21, fromDate: mockToday, lastTakenDate: null, pillTakenCount: 1),
         );
         final pillSheetGroup = PillSheetGroup(pillSheetIDs: ["pill_sheet_id"], pillSheets: [pillSheet], createdAt: today());
         for (int i = 0; i < 28; i++) {
@@ -410,8 +395,6 @@ void main() {
           beginingDate: mockToday,
           lastTakenDate: null,
           createdAt: now(),
-          pills:
-              Pill.testGenerateAndIterateTo(pillSheetType: PillSheetType.pillsheet_21, fromDate: mockToday, lastTakenDate: null, pillTakenCount: 1),
         );
         final pillSheetGroup = PillSheetGroup(pillSheetIDs: ["pill_sheet_id"], pillSheets: [pillSheet], createdAt: today());
 
@@ -460,8 +443,6 @@ void main() {
           beginingDate: mockToday,
           lastTakenDate: null,
           createdAt: now(),
-          pills:
-              Pill.testGenerateAndIterateTo(pillSheetType: PillSheetType.pillsheet_21, fromDate: mockToday, lastTakenDate: null, pillTakenCount: 1),
         );
 
         final pillSheetGroup = PillSheetGroup(
@@ -508,8 +489,6 @@ void main() {
         beginingDate: DateTime.parse("2020-09-01"),
         lastTakenDate: null,
         createdAt: now(),
-        pills: Pill.testGenerateAndIterateTo(
-            pillSheetType: PillSheetType.pillsheet_21_0, fromDate: DateTime.parse("2020-09-01"), lastTakenDate: null, pillTakenCount: 1),
       );
 
       expect(pillSheet.pillTakenDateFromPillNumber(1), DateTime.parse("2020-09-01"));
@@ -542,11 +521,6 @@ void main() {
             beginingDate: DateTime.parse("2020-09-01"),
             lastTakenDate: DateTime.parse("2020-09-10"),
             createdAt: now(),
-            pills: Pill.testGenerateAndIterateTo(
-                pillSheetType: PillSheetType.pillsheet_21_0,
-                fromDate: DateTime.parse("2020-09-01"),
-                lastTakenDate: DateTime.parse("2020-09-10"),
-                pillTakenCount: 1),
             restDurations: [
               RestDuration(
                 beginDate: DateTime.parse("2020-09-11"),
@@ -583,11 +557,6 @@ void main() {
             beginingDate: DateTime.parse("2020-09-01"),
             lastTakenDate: DateTime.parse("2020-09-10"),
             createdAt: now(),
-            pills: Pill.testGenerateAndIterateTo(
-                pillSheetType: PillSheetType.pillsheet_21_0,
-                fromDate: DateTime.parse("2020-09-01"),
-                lastTakenDate: DateTime.parse("2020-09-10"),
-                pillTakenCount: 1),
             restDurations: [
               RestDuration(
                 beginDate: DateTime.parse("2020-09-11"),
@@ -626,11 +595,6 @@ void main() {
             beginingDate: DateTime.parse("2020-09-01"),
             lastTakenDate: DateTime.parse("2020-09-10"),
             createdAt: now(),
-            pills: Pill.testGenerateAndIterateTo(
-                pillSheetType: PillSheetType.pillsheet_21_0,
-                fromDate: DateTime.parse("2020-09-01"),
-                lastTakenDate: DateTime.parse("2020-09-10"),
-                pillTakenCount: 1),
             restDurations: [
               RestDuration(
                 beginDate: DateTime.parse("2020-09-11"),
@@ -669,11 +633,6 @@ void main() {
             beginingDate: DateTime.parse("2020-09-01"),
             lastTakenDate: DateTime.parse("2020-09-10"),
             createdAt: now(),
-            pills: Pill.testGenerateAndIterateTo(
-                pillSheetType: PillSheetType.pillsheet_21_0,
-                fromDate: DateTime.parse("2020-09-01"),
-                lastTakenDate: DateTime.parse("2020-09-10"),
-                pillTakenCount: 1),
             restDurations: [
               RestDuration(
                 beginDate: DateTime.parse("2020-09-11"),
@@ -715,11 +674,6 @@ void main() {
             beginingDate: DateTime.parse("2021-12-17"),
             lastTakenDate: DateTime.parse("2022-01-19"),
             createdAt: now(),
-            pills: Pill.testGenerateAndIterateTo(
-                pillSheetType: PillSheetType.pillsheet_28_4,
-                fromDate: DateTime.parse("2021-12-17"),
-                lastTakenDate: DateTime.parse("2022-01-19"),
-                pillTakenCount: 1),
             restDurations: [
               RestDuration(
                 beginDate: DateTime.parse("2022-01-10"),
@@ -761,8 +715,6 @@ void main() {
         beginingDate: DateTime.parse("2023-01-10"),
         lastTakenDate: null,
         createdAt: now(),
-        pills: Pill.testGenerateAndIterateTo(
-            pillSheetType: PillSheetType.pillsheet_28_4, fromDate: DateTime.parse("2023-01-10"), lastTakenDate: null, pillTakenCount: 1),
         restDurations: [
           RestDuration(
             beginDate: DateTime.parse("2023-01-17"),
@@ -800,7 +752,6 @@ void main() {
         lastTakenDate: null,
         groupIndex: 0,
         createdAt: now(),
-        pills: Pill.testGenerateAndIterateTo(pillSheetType: PillSheetType.pillsheet_28_0, fromDate: anyDate, lastTakenDate: null, pillTakenCount: 1),
       );
       final pillSheetGroup = PillSheetGroup(
         pillSheetIDs: ["1"],
@@ -833,7 +784,6 @@ void main() {
         lastTakenDate: null,
         groupIndex: 0,
         createdAt: now(),
-        pills: Pill.testGenerateAndIterateTo(pillSheetType: PillSheetType.pillsheet_28_0, fromDate: anyDate, lastTakenDate: null, pillTakenCount: 1),
       );
       final two = PillSheet(
         id: firestoreIDGenerator(),
@@ -842,7 +792,6 @@ void main() {
         lastTakenDate: null,
         groupIndex: 1,
         createdAt: now(),
-        pills: Pill.testGenerateAndIterateTo(pillSheetType: PillSheetType.pillsheet_28_0, fromDate: anyDate, lastTakenDate: null, pillTakenCount: 1),
       );
       final three = PillSheet(
         id: firestoreIDGenerator(),
@@ -851,7 +800,6 @@ void main() {
         lastTakenDate: null,
         groupIndex: 2,
         createdAt: now(),
-        pills: Pill.testGenerateAndIterateTo(pillSheetType: PillSheetType.pillsheet_28_0, fromDate: anyDate, lastTakenDate: null, pillTakenCount: 1),
       );
       final pillSheetGroup = PillSheetGroup(
         pillSheetIDs: ["1", "2", "3"],
@@ -890,7 +838,6 @@ void main() {
         lastTakenDate: null,
         groupIndex: 0,
         createdAt: now(),
-        pills: Pill.testGenerateAndIterateTo(pillSheetType: PillSheetType.pillsheet_28_0, fromDate: anyDate, lastTakenDate: null, pillTakenCount: 1),
       );
       final two = PillSheet(
         id: firestoreIDGenerator(),
@@ -899,7 +846,6 @@ void main() {
         lastTakenDate: null,
         groupIndex: 1,
         createdAt: now(),
-        pills: Pill.testGenerateAndIterateTo(pillSheetType: PillSheetType.pillsheet_28_0, fromDate: anyDate, lastTakenDate: null, pillTakenCount: 1),
       );
       final three = PillSheet(
         id: firestoreIDGenerator(),
@@ -908,7 +854,6 @@ void main() {
         lastTakenDate: null,
         groupIndex: 2,
         createdAt: now(),
-        pills: Pill.testGenerateAndIterateTo(pillSheetType: PillSheetType.pillsheet_28_0, fromDate: anyDate, lastTakenDate: null, pillTakenCount: 1),
       );
       final pillSheetGroup = PillSheetGroup(
         pillSheetIDs: ["1", "2", "3"],
@@ -948,7 +893,6 @@ void main() {
         lastTakenDate: null,
         groupIndex: 0,
         createdAt: now(),
-        pills: Pill.testGenerateAndIterateTo(pillSheetType: PillSheetType.pillsheet_28_0, fromDate: anyDate, lastTakenDate: null, pillTakenCount: 1),
       );
       final two = PillSheet(
         id: firestoreIDGenerator(),
@@ -957,7 +901,6 @@ void main() {
         lastTakenDate: null,
         groupIndex: 1,
         createdAt: now(),
-        pills: Pill.testGenerateAndIterateTo(pillSheetType: PillSheetType.pillsheet_28_0, fromDate: anyDate, lastTakenDate: null, pillTakenCount: 1),
       );
       final three = PillSheet(
         id: firestoreIDGenerator(),
@@ -966,7 +909,6 @@ void main() {
         lastTakenDate: null,
         groupIndex: 2,
         createdAt: now(),
-        pills: Pill.testGenerateAndIterateTo(pillSheetType: PillSheetType.pillsheet_28_0, fromDate: anyDate, lastTakenDate: null, pillTakenCount: 1),
       );
       final four = PillSheet(
         id: firestoreIDGenerator(),
@@ -975,7 +917,6 @@ void main() {
         lastTakenDate: null,
         groupIndex: 3,
         createdAt: now(),
-        pills: Pill.testGenerateAndIterateTo(pillSheetType: PillSheetType.pillsheet_28_0, fromDate: anyDate, lastTakenDate: null, pillTakenCount: 1),
       );
       final five = PillSheet(
         id: firestoreIDGenerator(),
@@ -984,7 +925,6 @@ void main() {
         lastTakenDate: null,
         groupIndex: 4,
         createdAt: now(),
-        pills: Pill.testGenerateAndIterateTo(pillSheetType: PillSheetType.pillsheet_28_0, fromDate: anyDate, lastTakenDate: null, pillTakenCount: 1),
       );
       final pillSheetGroup = PillSheetGroup(
         pillSheetIDs: ["1", "2", "3", "4", "5"],
@@ -1039,7 +979,6 @@ void main() {
         lastTakenDate: null,
         groupIndex: 0,
         createdAt: now(),
-        pills: Pill.testGenerateAndIterateTo(pillSheetType: PillSheetType.pillsheet_28_0, fromDate: anyDate, lastTakenDate: null, pillTakenCount: 1),
       );
       final two = PillSheet(
         id: firestoreIDGenerator(),
@@ -1048,7 +987,6 @@ void main() {
         lastTakenDate: null,
         groupIndex: 1,
         createdAt: now(),
-        pills: Pill.testGenerateAndIterateTo(pillSheetType: PillSheetType.pillsheet_28_0, fromDate: anyDate, lastTakenDate: null, pillTakenCount: 1),
       );
       final three = PillSheet(
         id: firestoreIDGenerator(),
@@ -1057,7 +995,6 @@ void main() {
         lastTakenDate: null,
         groupIndex: 2,
         createdAt: now(),
-        pills: Pill.testGenerateAndIterateTo(pillSheetType: PillSheetType.pillsheet_28_0, fromDate: anyDate, lastTakenDate: null, pillTakenCount: 1),
       );
       final four = PillSheet(
         id: firestoreIDGenerator(),
@@ -1066,7 +1003,6 @@ void main() {
         lastTakenDate: null,
         groupIndex: 3,
         createdAt: now(),
-        pills: Pill.testGenerateAndIterateTo(pillSheetType: PillSheetType.pillsheet_28_0, fromDate: anyDate, lastTakenDate: null, pillTakenCount: 1),
       );
       final five = PillSheet(
         id: firestoreIDGenerator(),
@@ -1075,7 +1011,6 @@ void main() {
         lastTakenDate: null,
         groupIndex: 4,
         createdAt: now(),
-        pills: Pill.testGenerateAndIterateTo(pillSheetType: PillSheetType.pillsheet_28_0, fromDate: anyDate, lastTakenDate: null, pillTakenCount: 1),
       );
       final pillSheetGroup = PillSheetGroup(
         pillSheetIDs: ["1", "2", "3", "4", "5"],

@@ -1,5 +1,4 @@
 import 'package:hooks_riverpod/hooks_riverpod.dart';
-import 'package:pilll/entity/pill.codegen.dart';
 import 'package:pilll/entity/pill_sheet_modified_history.codegen.dart';
 import 'package:pilll/provider/batch.dart';
 import 'package:pilll/entity/pill_sheet.codegen.dart';
@@ -72,12 +71,6 @@ class ChangePillNumber {
         beginingDate: beginDate,
         lastTakenDate: lastTakenDate,
         restDurations: [],
-        pills: Pill.generateAndFillTo(
-          pillSheetType: pillSheet.pillSheetType,
-          fromDate: beginDate,
-          lastTakenDate: lastTakenDate,
-          pillTakenCount: pillSheet.pillTakenCount,
-        ),
       );
       updatedPillSheets.add(updatedPillSheet);
     });
