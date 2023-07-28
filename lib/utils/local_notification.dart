@@ -253,8 +253,6 @@ class RegisterReminderLocalNotification {
                 pillSheetGroup: pillSheetGroup,
                 pillSheetTypes: pillSheetGroup.pillSheets.map((e) => e.pillSheetType).toList(),
                 displayNumberSetting: null,
-                // 二度飲みかどうかは、考慮しなくて良いのでfalse
-                takesTwicePerDay: false,
               );
               pillSheetDisplayNumber = nextPillSheetGroup.displayPillNumber(
                 premiumOrTrial: premiumOrTrial,

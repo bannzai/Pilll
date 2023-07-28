@@ -1,5 +1,4 @@
 import 'package:pilll/entity/firestore_id_generator.dart';
-import 'package:pilll/entity/pill.codegen.dart';
 import 'package:pilll/entity/pill_sheet.codegen.dart';
 import 'package:pilll/entity/pill_sheet_group.codegen.dart';
 import 'package:pilll/entity/pill_sheet_type.dart';
@@ -35,8 +34,6 @@ void main() {
             totalCount: sheetType.totalCount,
             pillSheetTypeReferencePath: sheetType.rawPath,
           ),
-          pills: Pill.testGenerateAndIterateTo(
-              pillSheetType: sheetType, fromDate: DateTime.parse("2020-09-14"), lastTakenDate: DateTime.parse("2020-09-18"), pillTakenCount: 1),
         );
         // created at and id are anything value
         final pillSheetGroup = PillSheetGroup(
