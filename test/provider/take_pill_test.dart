@@ -104,7 +104,7 @@ void main() {
         expect(updatedActivePillSheet.pills, expected.pills);
         expect(updatedActivePillSheet, expected);
         expect(updatedActivePillSheet.todayPillIsAlreadyTaken, true);
-        expect(updatedActivePillSheet.anyTodayPillsAreAlreadyTaken, true);
+        expect(updatedActivePillSheet.todayPillIsAlreadyTaken, true);
       });
       test("未服用のピルが複数個ある", () {
         prepare(activePillSheetBeginDate: today().subtract(const Duration(days: 2)), activePillSheetLastTakenDate: null);
@@ -149,7 +149,7 @@ void main() {
         expect(updatedActivePillSheet.pills, expected.pills);
         expect(updatedActivePillSheet, expected);
         expect(updatedActivePillSheet.todayPillIsAlreadyTaken, true);
-        expect(updatedActivePillSheet.anyTodayPillsAreAlreadyTaken, true);
+        expect(updatedActivePillSheet.todayPillIsAlreadyTaken, true);
       });
     });
     group("pillTakenCount = 2", () {
@@ -180,7 +180,7 @@ void main() {
         expect(updatedActivePillSheet.pills, expected.pills);
         expect(updatedActivePillSheet, expected);
         expect(updatedActivePillSheet.todayPillIsAlreadyTaken, false);
-        expect(updatedActivePillSheet.anyTodayPillsAreAlreadyTaken, true);
+        expect(updatedActivePillSheet.todayPillIsAlreadyTaken, true);
       });
       test("未服用のピルが複数個ある", () {
         prepare(activePillSheetBeginDate: today().subtract(const Duration(days: 2)), activePillSheetLastTakenDate: null);
@@ -229,7 +229,7 @@ void main() {
         expect(updatedActivePillSheet.pills, expected.pills);
         expect(updatedActivePillSheet, expected);
         expect(updatedActivePillSheet.todayPillIsAlreadyTaken, false);
-        expect(updatedActivePillSheet.anyTodayPillsAreAlreadyTaken, true);
+        expect(updatedActivePillSheet.todayPillIsAlreadyTaken, true);
       });
 
       test("1度服用済みから2度目の服用", () {
@@ -271,7 +271,7 @@ void main() {
         expect(updatedActivePillSheet.pills, expected.pills);
         expect(updatedActivePillSheet, expected);
         expect(updatedActivePillSheet.todayPillIsAlreadyTaken, true);
-        expect(updatedActivePillSheet.anyTodayPillsAreAlreadyTaken, true);
+        expect(updatedActivePillSheet.todayPillIsAlreadyTaken, true);
       });
     });
   });

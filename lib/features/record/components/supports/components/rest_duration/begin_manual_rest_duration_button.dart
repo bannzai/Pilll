@@ -33,7 +33,7 @@ class BeginManualRestDurationButton extends HookConsumerWidget {
       onPressed: () async {
         analytics.logEvent(name: "begin_manual_rest_duration_pressed", parameters: {"pill_sheet_id": activePillSheet.id});
 
-        if (activePillSheet.anyTodayPillsAreAlreadyTaken) {
+        if (activePillSheet.todayPillIsAlreadyTaken) {
           showInvalidAlreadyTakenPillDialog(context);
         } else {
           showRecordPageRestDurationDialog(
