@@ -41,10 +41,6 @@ class InitialSettingPillSheetGroupPage extends HookConsumerWidget {
     final isGoogleLinked = ref.watch(isGoogleLinkedProvider);
     final didEndInitialSettingNotifier = ref.watch(boolSharedPreferencesProvider(BoolKey.didEndInitialSetting).notifier);
     final userIsNotAnonymous = ref.watch(userIsNotAnonymousProvider);
-    final pillSheetTakesTwicePerDay = useState(state.pillSheetTakesTwicePerDay);
-    pillSheetTakesTwicePerDay.addListener(() {
-      store.setPillSheetTakesTwicePerDay(pillSheetTakesTwicePerDay.value);
-    });
 
     // For linked user
     useEffect(() {

@@ -71,10 +71,6 @@ class InitialSettingStateNotifier extends StateNotifier<InitialSettingState> {
     state = state.copyWith(pillSheetTypes: copied);
   }
 
-  void setPillSheetTakesTwicePerDay(bool takesTwicePerDay) {
-    state = state.copyWith(pillSheetTakesTwicePerDay: takesTwicePerDay);
-  }
-
   void setReminderTime({
     required int index,
     required int hour,

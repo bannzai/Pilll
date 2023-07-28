@@ -28,7 +28,6 @@ class InitialSettingState with _$InitialSettingState {
     @Default(false) bool isLoading,
     @Default(false) bool userIsNotAnonymous,
     @Default(false) bool settingIsExist,
-    @Default(false) bool pillSheetTakesTwicePerDay,
     LinkAccountType? accountType,
   }) = _InitialSettingState;
 
