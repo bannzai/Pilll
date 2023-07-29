@@ -111,6 +111,8 @@ class PillSheetModifiedHistory with _$PillSheetModifiedHistory {
 
 // Factories
 abstract class PillSheetModifiedHistoryServiceActionFactory {
+  static const limitDays = 180;
+
   static PillSheetModifiedHistory _create({
     // Deprecated fields begin
     required PillSheet? before,
@@ -140,7 +142,7 @@ abstract class PillSheetModifiedHistoryServiceActionFactory {
       after: after,
       estimatedEventCausingDate: now(),
       createdAt: now(),
-      timeToLive: now().add(const Duration(days: 180)),
+      timeToLive: now().add(const Duration(days: limitDays)),
     );
   }
 
