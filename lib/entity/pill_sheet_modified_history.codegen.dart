@@ -114,13 +114,14 @@ abstract class PillSheetModifiedHistoryServiceActionFactory {
   static const limitDays = 180;
 
   static PillSheetModifiedHistory _create({
-    // Deprecated fields begin
+    // ============ BEGIN: Added since v1 ============
+    // TODO: delete after 2024-03-01
     required PillSheet? before,
     required PillSheet? after,
     required String? pillSheetGroupID,
     required String? beforePillSheetID,
     required String? afterPillSheetID,
-    // Deprecated fields end
+    // ============ END: Added since v1 ============
 
     required PillSheetGroup? beforePillSheetGroup,
     required PillSheetGroup? afterPillSheetGroup,
