@@ -363,9 +363,9 @@ void main() {
           isQuickRecord: false,
         );
 
-        verify(batchSetPillSheetModifiedHistory(batch, history));
-        verify(batchSetPillSheetGroup(batch, updatedPillSheetGroup));
-        expect(result, isNotNull);
+        verifyNever(batchSetPillSheetModifiedHistory(batch, history));
+        verifyNever(batchSetPillSheetGroup(batch, updatedPillSheetGroup));
+        expect(result, isNull);
       });
       test("when previous pill sheet is not taken all.", () async {
         final takenDate = mockNow.add(const Duration(seconds: 1));
