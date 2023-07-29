@@ -125,8 +125,14 @@ class PillSheet with _$PillSheet {
     return pillNumberFor(targetDate: lastTakenDate);
   }
 
+  // 今日のピルをすでに飲んでいるかを確認する
+  // 番号で比較しない(lastTakenPillNumber == todayPillNumber)理由は、各プロパティが上限値を超えないことを保証してないため。たとえばtodayPillNumberが30になることもありえる
   bool get todayPillIsAlreadyTaken {
-    return lastTakenPillNumber == todayPillNumber;
+    final lastTakenDate = this.lastTakenDate;
+    if (lastTakenDate == null) {
+      return false;
+    }
+    return lastTakenDate.isAfter(today()) || isSameDay(lastTakenDate, today());
   }
 
   bool get isEnded => typeInfo.totalCount == lastTakenPillNumber;
