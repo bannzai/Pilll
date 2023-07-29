@@ -113,10 +113,6 @@ class PillSheet with _$PillSheet {
     return pillNumberFor(targetDate: today());
   }
 
-  int get todayPillIndex {
-    return todayPillNumber - 1;
-  }
-
   // lastTakenPillNumber は最後に服了したピルの番号を返す
   // あえてnon nullにしている。なぜならよく比較するのでnullableだと不便だから
   // まだpillを飲んでない場合は `0` が変える。飲んでいる場合は 1以上の値が入る
