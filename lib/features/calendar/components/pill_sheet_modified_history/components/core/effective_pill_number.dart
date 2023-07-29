@@ -35,10 +35,6 @@ abstract class PillSheetModifiedHistoryDateEffectivePillNumber {
     if (left == afterLastTakenPillNumber) {
       return "$afterLastTakenPillNumber番";
     }
-    // 2度飲みの時に1度目の服用の時にこの条件に合致する
-    if (left > afterLastTakenPillNumber) {
-      return "$afterLastTakenPillNumber番";
-    }
     return "$left-$afterLastTakenPillNumber番";
   }
 
