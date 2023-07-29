@@ -280,7 +280,7 @@ void main() {
         final batch = MockWriteBatch();
         when(batchFactory.batch()).thenReturn(batch);
 
-        final updatedActivePillSheet = activePillSheet.copyWith(lastTakenDate: takenDate);
+        final updatedActivePillSheet = activePillSheet.copyWith(lastTakenDate: activePillSheet.estimatedEndTakenDate);
 
         final batchSetPillSheetGroup = MockBatchSetPillSheetGroup();
         final updatedPillSheetGroup = pillSheetGroup.copyWith(pillSheets: [previousPillSheet, updatedActivePillSheet, nextPillSheet]);
@@ -334,7 +334,7 @@ void main() {
         final batch = MockWriteBatch();
         when(batchFactory.batch()).thenReturn(batch);
 
-        final updatedActivePillSheet = activePillSheet.copyWith(lastTakenDate: takenDate);
+        final updatedActivePillSheet = activePillSheet.copyWith(lastTakenDate: activePillSheet.estimatedEndTakenDate);
 
         final batchSetPillSheetGroup = MockBatchSetPillSheetGroup();
         final updatedPillSheetGroup = pillSheetGroup.copyWith(pillSheets: [previousPillSheet, updatedActivePillSheet, nextPillSheet]);
