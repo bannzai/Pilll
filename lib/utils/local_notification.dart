@@ -309,7 +309,7 @@ class RegisterReminderLocalNotification {
               result += pillSheetDisplayNumber;
               result += switch (setting.pillSheetAppearanceMode) {
                 PillSheetAppearanceMode.number || PillSheetAppearanceMode.sequential => "番",
-                PillSheetAppearanceMode.date => "日目",
+                PillSheetAppearanceMode.date => "番",
               };
             }
 
