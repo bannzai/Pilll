@@ -307,10 +307,7 @@ class RegisterReminderLocalNotification {
             if (!setting.reminderNotificationCustomization.isInVisiblePillNumber) {
               result += " ";
               result += pillSheetDisplayNumber;
-              result += switch (setting.pillSheetAppearanceMode) {
-                PillSheetAppearanceMode.number || PillSheetAppearanceMode.sequential => "番",
-                PillSheetAppearanceMode.date => "番",
-              };
+              result += "番";
             }
 
             if (Environment.isDevelopment) {
