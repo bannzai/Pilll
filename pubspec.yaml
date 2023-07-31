@@ -45,7 +45,7 @@ dependencies:
   freezed_annotation: ^2.2.0
   riverpod: ^2.0.0
   hooks_riverpod: ^2.0.0
-  flutter_hooks: ^0.18.5
+  flutter_hooks: ^0.20.0
   firebase_crashlytics: ^3.0.12
   dotted_border: ^2.0.0-nullsafety.0
   in_app_review: ^2.0.1
