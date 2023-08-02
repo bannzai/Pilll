@@ -3,7 +3,6 @@ import 'package:hooks_riverpod/hooks_riverpod.dart';
 import 'package:pilll/components/atoms/font.dart';
 import 'package:pilll/utils/analytics.dart';
 import 'package:url_launcher/url_launcher.dart';
-import 'package:url_launcher/url_launcher_string.dart';
 
 class AboutChurn extends HookConsumerWidget {
   @override
