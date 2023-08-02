@@ -32,29 +32,29 @@ class RestDurationAnnouncementBar extends StatelessWidget {
   }
 
   static String? retrieveRestDurationNotification({required PillSheetGroup? latestPillSheetGroup}) {
-    final activedPillSheet = latestPillSheetGroup?.activedPillSheet;
-    if (activedPillSheet == null) {
+    final activePillSheet = latestPillSheetGroup?.activePillSheet;
+    if (activePillSheet == null) {
       return null;
     }
-    if (activedPillSheet.deletedAt != null) {
+    if (activePillSheet.deletedAt != null) {
       return null;
     }
-    final restDuration = activedPillSheet.activeRestDuration;
+    final restDuration = activePillSheet.activeRestDuration;
     if (restDuration != null) {
       final day = daysBetween(restDuration.beginDate.date(), today()) + 1;
       return "🌙 服用お休み $day日目";
     }
 
-    if (activedPillSheet.typeInfo.dosingPeriod < activedPillSheet.todayPillNumber) {
-      final day = activedPillSheet.todayPillNumber - activedPillSheet.typeInfo.dosingPeriod;
-      return "${activedPillSheet.pillSheetType.notTakenWord}$day日目";
+    if (activePillSheet.typeInfo.dosingPeriod < activePillSheet.todayPillNumber) {
+      final day = activePillSheet.todayPillNumber - activePillSheet.typeInfo.dosingPeriod;
+      return "${activePillSheet.pillSheetType.notTakenWord}$day日目";
     }
 
     const threshold = 4;
-    if (activedPillSheet.pillSheetType.notTakenWord.isNotEmpty) {
-      if (activedPillSheet.typeInfo.dosingPeriod - threshold + 1 < activedPillSheet.todayPillNumber) {
-        final diff = activedPillSheet.typeInfo.dosingPeriod - activedPillSheet.todayPillNumber;
-        return "あと${diff + 1}日で${activedPillSheet.pillSheetType.notTakenWord}期間です";
+    if (activePillSheet.pillSheetType.notTakenWord.isNotEmpty) {
+      if (activePillSheet.typeInfo.dosingPeriod - threshold + 1 < activePillSheet.todayPillNumber) {
+        final diff = activePillSheet.typeInfo.dosingPeriod - activePillSheet.todayPillNumber;
+        return "あと${diff + 1}日で${activePillSheet.pillSheetType.notTakenWord}期間です";
       }
     }
     return null;

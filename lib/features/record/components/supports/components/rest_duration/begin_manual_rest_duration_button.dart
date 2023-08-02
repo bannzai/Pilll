@@ -12,14 +12,14 @@ import 'package:pilll/entity/setting.codegen.dart';
 
 class BeginManualRestDurationButton extends HookConsumerWidget {
   final PillSheetAppearanceMode appearanceMode;
-  final PillSheet activedPillSheet;
+  final PillSheet activePillSheet;
   final PillSheetGroup pillSheetGroup;
   final VoidCallback didBeginRestDuration;
 
   const BeginManualRestDurationButton({
     Key? key,
     required this.appearanceMode,
-    required this.activedPillSheet,
+    required this.activePillSheet,
     required this.pillSheetGroup,
     required this.didBeginRestDuration,
   }) : super(key: key);
@@ -31,22 +31,22 @@ class BeginManualRestDurationButton extends HookConsumerWidget {
     return SmallAppOutlinedButton(
       text: "服用お休み",
       onPressed: () async {
-        analytics.logEvent(name: "begin_manual_rest_duration_pressed", parameters: {"pill_sheet_id": activedPillSheet.id});
+        analytics.logEvent(name: "begin_manual_rest_duration_pressed", parameters: {"pill_sheet_id": activePillSheet.id});
 
-        if (activedPillSheet.todayPillIsAlreadyTaken) {
+        if (activePillSheet.todayPillIsAlreadyTaken) {
           showInvalidAlreadyTakenPillDialog(context);
         } else {
           showRecordPageRestDurationDialog(
             context,
             appearanceMode: appearanceMode,
             pillSheetGroup: pillSheetGroup,
-            activedPillSheet: activedPillSheet,
+            activePillSheet: activePillSheet,
             onDone: () async {
               analytics.logEvent(name: "done_rest_duration");
               // NOTE: batch.commit でリモートのDBに書き込む時間がかかるので事前にバッジを0にする
               FlutterAppBadger.removeBadge();
               await beginRestDuration(
-                activePillSheet: activedPillSheet,
+                activePillSheet: activePillSheet,
                 pillSheetGroup: pillSheetGroup,
               );
               didBeginRestDuration();

@@ -16,18 +16,18 @@ import 'package:pilll/utils/local_notification.dart';
 
 class SettingTodayPillNumberPage extends HookConsumerWidget {
   final PillSheetGroup pillSheetGroup;
-  final PillSheet activedPillSheet;
+  final PillSheet activePillSheet;
 
   const SettingTodayPillNumberPage({
     Key? key,
     required this.pillSheetGroup,
-    required this.activedPillSheet,
+    required this.activePillSheet,
   }) : super(key: key);
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {
-    final pillNumberIntoPillSheetState = useState(_pillNumberIntoPillSheet(activedPillSheet: activedPillSheet, pillSheetGroup: pillSheetGroup));
-    final pillSheetPageIndexState = useState(activedPillSheet.groupIndex);
+    final pillNumberInPillSheetState = useState(_pillNumberInPillSheet(activePillSheet: activePillSheet, pillSheetGroup: pillSheetGroup));
+    final pillSheetPageIndexState = useState(activePillSheet.groupIndex);
     final changePillNumber = ref.watch(changePillNumberProvider);
     final registerReminderLocalNotification = ref.watch(registerReminderLocalNotificationProvider);
     final navigator = Navigator.of(context);
@@ -71,11 +71,11 @@ class SettingTodayPillNumberPage extends HookConsumerWidget {
                           if (pillSheetPageIndexState.value != pageIndex) {
                             return null;
                           }
-                          return pillNumberIntoPillSheetState.value;
+                          return pillNumberInPillSheetState.value;
                         },
-                        markSelected: (pillSheetPageIndex, pillNumberIntoPillSheet) {
+                        markSelected: (pillSheetPageIndex, pillNumberInPillSheet) {
                           pillSheetPageIndexState.value = pillSheetPageIndex;
-                          pillNumberIntoPillSheetState.value = pillNumberIntoPillSheet;
+                          pillNumberInPillSheetState.value = pillNumberInPillSheet;
                         }),
                   ),
                   const SizedBox(height: 20),
@@ -92,9 +92,9 @@ class SettingTodayPillNumberPage extends HookConsumerWidget {
                         onPressed: () async {
                           await changePillNumber(
                               pillSheetGroup: pillSheetGroup,
-                              activedPillSheet: activedPillSheet,
+                              activePillSheet: activePillSheet,
                               pillSheetPageIndex: pillSheetPageIndexState.value,
-                              pillNumberIntoPillSheet: pillNumberIntoPillSheetState.value);
+                              pillNumberInPillSheet: pillNumberInPillSheetState.value);
                           await registerReminderLocalNotification();
 
                           navigator.pop();
@@ -117,29 +117,29 @@ class SettingTodayPillNumberPage extends HookConsumerWidget {
     return "${DateTimeFormatter.slashYearAndMonthAndDay(DateTime.now())}(${DateTimeFormatter.weekday(DateTime.now())})";
   }
 
-  int _pillNumberIntoPillSheet({
-    required PillSheet activedPillSheet,
+  int _pillNumberInPillSheet({
+    required PillSheet activePillSheet,
     required PillSheetGroup pillSheetGroup,
   }) {
     final pillSheetTypes = pillSheetGroup.pillSheets.map((e) => e.pillSheetType).toList();
-    final passedTotalCount = summarizedPillCountWithPillSheetTypesToIndex(pillSheetTypes: pillSheetTypes, toIndex: activedPillSheet.groupIndex);
-    if (passedTotalCount >= activedPillSheet.todayPillNumber) {
-      return activedPillSheet.todayPillNumber;
+    final passedTotalCount = summarizedPillCountWithPillSheetTypesToIndex(pillSheetTypes: pillSheetTypes, toIndex: activePillSheet.groupIndex);
+    if (passedTotalCount >= activePillSheet.todayPillNumber) {
+      return activePillSheet.todayPillNumber;
     }
-    return activedPillSheet.todayPillNumber - passedTotalCount;
+    return activePillSheet.todayPillNumber - passedTotalCount;
   }
 }
 
 extension SettingTodayPillNumberPageRoute on SettingTodayPillNumberPage {
   static Route<dynamic> route({
     required PillSheetGroup pillSheetGroup,
-    required PillSheet activedPillSheet,
+    required PillSheet activePillSheet,
   }) {
     return MaterialPageRoute(
       settings: const RouteSettings(name: "SettingTodayPillNumberPage"),
       builder: (_) => SettingTodayPillNumberPage(
         pillSheetGroup: pillSheetGroup,
-        activedPillSheet: activedPillSheet,
+        activePillSheet: activePillSheet,
       ),
     );
   }

@@ -33,13 +33,6 @@ class CancelButton extends HookConsumerWidget {
           "today_pill_number": activePillSheet.todayPillNumber,
         });
 
-        if (!activePillSheet.todayPillIsAlreadyTaken) {
-          return;
-        }
-        final lastTakenDate = activePillSheet.lastTakenDate;
-        if (lastTakenDate == null) {
-          return;
-        }
         final updatedPillSheetGroup = await _cancelTaken(revertTakePill);
         syncActivePillSheetValue(pillSheetGroup: updatedPillSheetGroup);
         await registerReminderLocalNotification();
@@ -48,15 +41,15 @@ class CancelButton extends HookConsumerWidget {
   }
 
   Future<PillSheetGroup?> _cancelTaken(RevertTakePill revertTakePill) async {
-    // キャンセルの場合は今日の服用のundo機能なので、服用済みじゃない場合はreturnする
-    if (!activePillSheet.todayPillIsAlreadyTaken || activePillSheet.lastTakenDate == null) {
+    // 「飲んでない」ボタンを押したときは本日分の服用のundo機能になる。なので、すべて服用済みじゃない場合はreturnする
+    if (!activePillSheet.todayPillIsAlreadyTaken) {
       return null;
     }
 
     return await revertTakePill(
       pillSheetGroup: pillSheetGroup,
       pageIndex: activePillSheet.groupIndex,
-      pillNumberIntoPillSheet: activePillSheet.lastTakenPillNumber,
+      targetRevertPillNumberIntoPillSheet: activePillSheet.lastTakenPillNumber,
     );
   }
 }

@@ -8,8 +8,8 @@ Future<void> syncActivePillSheetValue({
   required PillSheetGroup? pillSheetGroup,
 }) async {
   final map = {
-    "pillSheetLastTakenDate": pillSheetGroup?.activedPillSheet?.lastTakenDate?.millisecondsSinceEpoch,
-    "pillSheetTodayPillNumber": pillSheetGroup?.activedPillSheet?.todayPillNumber,
+    "pillSheetLastTakenDate": pillSheetGroup?.activePillSheet?.lastTakenDate?.millisecondsSinceEpoch,
+    "pillSheetTodayPillNumber": pillSheetGroup?.activePillSheet?.todayPillNumber,
     "pillSheetGroupTodayPillNumber": pillSheetGroup?.sequentialTodayPillNumber,
     "pillSheetEndDisplayPillNumber": pillSheetGroup?.displayNumberSetting?.endPillNumber,
     "pillSheetValueLastUpdateDateTime": DateTime.now().millisecondsSinceEpoch,
