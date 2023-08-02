@@ -41,6 +41,8 @@ import 'package:hooks_riverpod/hooks_riverpod.dart';
 import 'package:pilll/utils/shared_preference/keys.dart';
 import 'package:url_launcher/url_launcher.dart';
 
+import 'components/rows/about_churn.dart';
+
 enum SettingSection { account, premium, pill, notification, menstruation, other }
 
 class SettingPage extends HookConsumerWidget {
@@ -136,6 +138,9 @@ class SettingPageBody extends StatelessWidget {
                         },
                       ),
                       _separator(),
+                    ],
+                    if (premiumAndTrial.isPremium) ...[
+                      AboutChurn(),
                     ],
                     PremiumIntroductionRow(
                       isPremium: premiumAndTrial.isPremium,
