@@ -139,7 +139,8 @@ class SettingPageBody extends StatelessWidget {
                       ),
                       _separator(),
                     ],
-                    if (premiumAndTrial.isPremium) ...[
+                    // TODO: Remove (Environment.isDevelopment)
+                    if (premiumAndTrial.isPremium || (Environment.isDevelopment)) ...[
                       AboutChurn(),
                     ],
                     PremiumIntroductionRow(
