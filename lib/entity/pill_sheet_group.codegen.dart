@@ -152,6 +152,20 @@ class PillSheetGroup with _$PillSheetGroup {
 
   List<PillSheetType> get pillSheetTypes => pillSheets.map((e) => e.pillSheetType).toList();
 
+  // 日付以外を返す
+  String displayPillNumberOnlyNumber({
+    required PillSheetAppearanceMode pillSheetAppearanceMode,
+    required int pageIndex,
+    required int pillNumberInPillSheet,
+  }) {
+    switch (pillSheetAppearanceMode) {
+      case PillSheetAppearanceMode.sequential:
+        return _displaySequentialPillSheetNumber(pageIndex: pageIndex, pillNumberInPillSheet: pillNumberInPillSheet);
+      default:
+        return _displayPillNumberInPillSheet(pillNumberInPillSheet: pillNumberInPillSheet);
+    }
+  }
+
   String displayPillNumber({
     required bool premiumOrTrial,
     required PillSheetAppearanceMode pillSheetAppearanceMode,
