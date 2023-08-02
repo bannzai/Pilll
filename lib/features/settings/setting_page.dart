@@ -123,33 +123,36 @@ class SettingPageBody extends StatelessWidget {
                     ],
                   );
                 case SettingSection.premium:
-                  return SettingSectionTitle(text: "Pilllプレミアム", children: [
-                    if (premiumAndTrial.isTrial) ...[
-                      ListTile(
-                        title: const Text("機能無制限の期間について",
-                            style: TextStyle(
-                              fontFamily: FontFamily.roboto,
-                              fontWeight: FontWeight.w300,
-                              fontSize: 16,
-                            )),
-                        onTap: () {
-                          analytics.logEvent(name: "did_select_about_trial", parameters: {});
-                          launchUrl(Uri.parse("https://pilll.wraptas.site/3abd690f501549c48f813fd310b5f242"), mode: LaunchMode.inAppWebView);
-                        },
+                  return SettingSectionTitle(
+                    text: "Pilllプレミアム",
+                    children: [
+                      if (premiumAndTrial.isTrial) ...[
+                        ListTile(
+                          title: const Text("機能無制限の期間について",
+                              style: TextStyle(
+                                fontFamily: FontFamily.roboto,
+                                fontWeight: FontWeight.w300,
+                                fontSize: 16,
+                              )),
+                          onTap: () {
+                            analytics.logEvent(name: "did_select_about_trial", parameters: {});
+                            launchUrl(Uri.parse("https://pilll.wraptas.site/3abd690f501549c48f813fd310b5f242"), mode: LaunchMode.inAppWebView);
+                          },
+                        ),
+                        _separator(),
+                      ],
+                      PremiumIntroductionRow(
+                        isPremium: premiumAndTrial.isPremium,
+                        trialDeadlineDate: premiumAndTrial.trialDeadlineDate,
                       ),
                       _separator(),
+                      // TODO: Remove (Environment.isDevelopment)
+                      if (premiumAndTrial.isPremium || (Environment.isDevelopment)) ...[
+                        AboutChurn(),
+                        _separator(),
+                      ],
                     ],
-                    // TODO: Remove (Environment.isDevelopment)
-                    if (premiumAndTrial.isPremium || (Environment.isDevelopment)) ...[
-                      AboutChurn(),
-                      _separator(),
-                    ],
-                    PremiumIntroductionRow(
-                      isPremium: premiumAndTrial.isPremium,
-                      trialDeadlineDate: premiumAndTrial.trialDeadlineDate,
-                    ),
-                    _separator(),
-                  ]);
+                  );
                 case SettingSection.pill:
                   return SettingSectionTitle(
                     text: "ピルシート",
