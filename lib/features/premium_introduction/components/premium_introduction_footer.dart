@@ -72,7 +72,15 @@ class PremiumIntroductionFotter extends StatelessWidget {
                     text: "・プレミアム契約期間の終了日の24時間以上前に解約しない限り契約期間が自動更新されます\n",
                   ),
                   TextSpan(
-                    text: "・購入後、自動更新の解約は$storeNameアプリのアカウント設定で行えます。(アプリ内から自動更新の解約は行なえません)",
+                    text: "・購入後、自動更新の解約は$storeNameアプリのアカウント設定で行えます。(アプリ内から自動更新の解約は行なえません)。",
+                  ),
+                  TextSpan(
+                    text: "詳細はこちら",
+                    style: const TextStyle(decoration: TextDecoration.underline),
+                    recognizer: TapGestureRecognizer()
+                      ..onTap = () {
+                        launchUrl(Uri.parse("https://pilll.wraptas.site/b10fd76f1d2246d286ad5cff03f22940"), mode: LaunchMode.inAppWebView);
+                      },
                   ),
                 ],
               ),
