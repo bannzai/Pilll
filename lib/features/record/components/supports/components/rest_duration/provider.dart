@@ -42,7 +42,7 @@ class BeginRestDuration {
       restDurations: [...activePillSheet.restDurations, restDuration],
     );
     final updatedPillSheetGroup = pillSheetGroup.replaced(updatedPillSheet);
-
+    
     batchSetPillSheetGroup(batch, updatedPillSheetGroup);
     batchSetPillSheetModifiedHistory(
       batch,
@@ -51,8 +51,6 @@ class BeginRestDuration {
         before: activePillSheet,
         after: updatedPillSheet,
         restDuration: restDuration,
-        beforePillSheetGroup: pillSheetGroup,
-        afterPillSheetGroup: updatedPillSheetGroup,
       ),
     );
 
@@ -108,9 +106,8 @@ class EndRestDuration {
         updatedPillSheets.add(pillSheet);
       }
     }
-
-    final updatedPillSheetGroup = pillSheetGroup.copyWith(pillSheets: updatedPillSheets);
-    batchSetPillSheetGroup(batch, updatedPillSheetGroup);
+    
+    batchSetPillSheetGroup(batch, pillSheetGroup.copyWith(pillSheets: updatedPillSheets));
     batchSetPillSheetModifiedHistory(
       batch,
       PillSheetModifiedHistoryServiceActionFactory.createEndedRestDurationAction(
@@ -118,8 +115,6 @@ class EndRestDuration {
         before: activePillSheet,
         after: updatedPillSheet,
         restDuration: updatedRestDuration,
-        beforePillSheetGroup: pillSheetGroup,
-        afterPillSheetGroup: updatedPillSheetGroup,
       ),
     );
     await batch.commit();

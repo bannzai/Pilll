@@ -87,12 +87,12 @@ class InitialSettingStateNotifier extends StateNotifier<InitialSettingState> {
 
   void setTodayPillNumber({
     required int pageIndex,
-    required int pillNumberInPillSheet,
+    required int pillNumberIntoPillSheet,
   }) {
     state = state.copyWith(
       todayPillNumber: InitialSettingTodayPillNumber(
         pageIndex: pageIndex,
-        pillNumberInPillSheet: pillNumberInPillSheet,
+        pillNumberIntoPillSheet: pillNumberIntoPillSheet,
       ),
     );
   }
@@ -131,8 +131,6 @@ class InitialSettingStateNotifier extends StateNotifier<InitialSettingState> {
       final history = PillSheetModifiedHistoryServiceActionFactory.createCreatedPillSheetAction(
         pillSheetIDs: pillSheetIDs,
         pillSheetGroupID: createdPillSheetGroup.id,
-        beforePillSheetGroup: null,
-        createdNewPillSheetGroup: createdPillSheetGroup,
       );
       batchSetPillSheetModifiedHistory(batch, history);
     }

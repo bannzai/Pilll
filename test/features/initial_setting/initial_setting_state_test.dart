@@ -38,7 +38,7 @@ void main() {
 
       final pillSheet = InitialSettingState.buildPillSheet(
         pageIndex: 0,
-        todayPillNumber: const InitialSettingTodayPillNumber(pageIndex: 0, pillNumberInPillSheet: 1),
+        todayPillNumber: const InitialSettingTodayPillNumber(pageIndex: 0, pillNumberIntoPillSheet: 1),
         pillSheetTypes: [PillSheetType.pillsheet_21],
       );
 
@@ -46,7 +46,6 @@ void main() {
         id: firestoreIDGenerator(),
         typeInfo: PillSheetType.pillsheet_21.typeInfo,
         beginingDate: DateTime.parse("2020-11-23"),
-        lastTakenDate: null,
         createdAt: now(),
       );
 
@@ -64,7 +63,7 @@ void main() {
 
       final pillSheet = InitialSettingState.buildPillSheet(
         pageIndex: 1,
-        todayPillNumber: const InitialSettingTodayPillNumber(pageIndex: 0, pillNumberInPillSheet: 1),
+        todayPillNumber: const InitialSettingTodayPillNumber(pageIndex: 0, pillNumberIntoPillSheet: 1),
         pillSheetTypes: [
           PillSheetType.pillsheet_21,
           PillSheetType.pillsheet_24_0,
@@ -95,7 +94,7 @@ void main() {
 
       final pillSheet = InitialSettingState.buildPillSheet(
         pageIndex: 0,
-        todayPillNumber: const InitialSettingTodayPillNumber(pageIndex: 1, pillNumberInPillSheet: 1),
+        todayPillNumber: const InitialSettingTodayPillNumber(pageIndex: 1, pillNumberIntoPillSheet: 1),
         pillSheetTypes: [
           PillSheetType.pillsheet_21,
           PillSheetType.pillsheet_24_0,
