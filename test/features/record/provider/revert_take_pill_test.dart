@@ -52,9 +52,7 @@ void main() {
           id: "group_id",
           pillSheetIDs: ["sheet_id"],
           pillSheets: [
-            pillSheet.copyWith(
-              lastTakenDate: yesterday.subtract(const Duration(days: 1)),
-            ),
+            pillSheet.copyWith(lastTakenDate: yesterday.subtract(const Duration(days: 1))),
           ],
           createdAt: now(),
         );
@@ -67,8 +65,6 @@ void main() {
           after: pillSheet.copyWith(
             lastTakenDate: yesterday.subtract(const Duration(days: 1)),
           ),
-          beforePillSheetGroup: pillSheetGroup,
-          afterPillSheetGroup: updatedPillSheetGroup,
         );
         final batchSetPillSheetModifiedHistory = MockBatchSetPillSheetModifiedHistory();
         when(batchSetPillSheetModifiedHistory(batch, history)).thenReturn(null);
@@ -91,7 +87,7 @@ void main() {
             batchSetPillSheetModifiedHistory: batchSetPillSheetModifiedHistory,
             batchSetPillSheetGroup: batchSetPillSheetGroup);
 
-        await revertTakePill.call(pillSheetGroup: pillSheetGroup, pageIndex: 0, targetRevertPillNumberIntoPillSheet: 1);
+        await revertTakePill.call(pillSheetGroup: pillSheetGroup, pageIndex: 0, pillNumberIntoPillSheet: 1);
       });
 
       test("Revert today pill", () async {
@@ -139,8 +135,6 @@ void main() {
           after: pillSheet.copyWith(
             lastTakenDate: yesterday,
           ),
-          beforePillSheetGroup: pillSheetGroup,
-          afterPillSheetGroup: updatedPillSheetGroup,
         );
         final batchSetPillSheetModifiedHistory = MockBatchSetPillSheetModifiedHistory();
         when(batchSetPillSheetModifiedHistory(batch, history)).thenReturn(null);
@@ -163,7 +157,7 @@ void main() {
             batchSetPillSheetModifiedHistory: batchSetPillSheetModifiedHistory,
             batchSetPillSheetGroup: batchSetPillSheetGroup);
 
-        await revertTakePill.call(pillSheetGroup: pillSheetGroup, pageIndex: 0, targetRevertPillNumberIntoPillSheet: 2);
+        await revertTakePill.call(pillSheetGroup: pillSheetGroup, pageIndex: 0, pillNumberIntoPillSheet: 2);
       });
 
       test("revert with rest durations and removed rest duration", () async {
@@ -206,10 +200,7 @@ void main() {
           id: "group_id",
           pillSheetIDs: ["sheet_id"],
           pillSheets: [
-            pillSheet.copyWith(
-              lastTakenDate: beginDate.subtract(const Duration(days: 1)),
-              restDurations: [],
-            ),
+            pillSheet.copyWith(lastTakenDate: beginDate.subtract(const Duration(days: 1)), restDurations: []),
           ],
           createdAt: now(),
         );
@@ -223,8 +214,6 @@ void main() {
             lastTakenDate: beginDate.subtract(const Duration(days: 1)),
             restDurations: [],
           ),
-          beforePillSheetGroup: pillSheetGroup,
-          afterPillSheetGroup: updatedPillSheetGroup,
         );
         final batchSetPillSheetModifiedHistory = MockBatchSetPillSheetModifiedHistory();
         when(batchSetPillSheetModifiedHistory(batch, history)).thenReturn(null);
@@ -247,7 +236,7 @@ void main() {
             batchSetPillSheetModifiedHistory: batchSetPillSheetModifiedHistory,
             batchSetPillSheetGroup: batchSetPillSheetGroup);
 
-        await revertTakePill.call(pillSheetGroup: pillSheetGroup, pageIndex: 0, targetRevertPillNumberIntoPillSheet: 1);
+        await revertTakePill.call(pillSheetGroup: pillSheetGroup, pageIndex: 0, pillNumberIntoPillSheet: 1);
       });
 
       test("revert with rest durations but no removed rest duration", () async {
@@ -291,9 +280,7 @@ void main() {
           id: "group_id",
           pillSheetIDs: ["sheet_id"],
           pillSheets: [
-            pillSheet.copyWith(
-              lastTakenDate: yesterday,
-            ),
+            pillSheet.copyWith(lastTakenDate: yesterday),
           ],
           createdAt: now(),
         );
@@ -304,8 +291,6 @@ void main() {
           pillSheetGroupID: "group_id",
           before: pillSheet,
           after: pillSheet.copyWith(lastTakenDate: yesterday),
-          beforePillSheetGroup: pillSheetGroup,
-          afterPillSheetGroup: updatedPillSheetGroup,
         );
         final batchSetPillSheetModifiedHistory = MockBatchSetPillSheetModifiedHistory();
         when(batchSetPillSheetModifiedHistory(batch, history)).thenReturn(null);
@@ -328,7 +313,7 @@ void main() {
             batchSetPillSheetModifiedHistory: batchSetPillSheetModifiedHistory,
             batchSetPillSheetGroup: batchSetPillSheetGroup);
 
-        await revertTakePill.call(pillSheetGroup: pillSheetGroup, pageIndex: 0, targetRevertPillNumberIntoPillSheet: 11);
+        await revertTakePill.call(pillSheetGroup: pillSheetGroup, pageIndex: 0, pillNumberIntoPillSheet: 11);
       });
     });
 
@@ -375,9 +360,7 @@ void main() {
           pillSheetIDs: ["1", "2"],
           pillSheets: [
             pillSheet,
-            pillSheet2.copyWith(
-              lastTakenDate: yesterday,
-            ),
+            pillSheet2.copyWith(lastTakenDate: yesterday),
           ],
           createdAt: now(),
         );
@@ -390,8 +373,6 @@ void main() {
           after: pillSheet2.copyWith(
             lastTakenDate: yesterday,
           ),
-          beforePillSheetGroup: pillSheetGroup,
-          afterPillSheetGroup: updatedPillSheetGroup,
         );
         final batchSetPillSheetModifiedHistory = MockBatchSetPillSheetModifiedHistory();
         when(batchSetPillSheetModifiedHistory(batch, history)).thenReturn(null);
@@ -415,7 +396,7 @@ void main() {
             batchSetPillSheetModifiedHistory: batchSetPillSheetModifiedHistory,
             batchSetPillSheetGroup: batchSetPillSheetGroup);
 
-        await revertTakePill.call(pillSheetGroup: pillSheetGroup, pageIndex: 1, targetRevertPillNumberIntoPillSheet: 2);
+        await revertTakePill.call(pillSheetGroup: pillSheetGroup, pageIndex: 1, pillNumberIntoPillSheet: 2);
       });
 
       test("call revert from actived pill sheet to before pill sheet", () async {
@@ -459,12 +440,8 @@ void main() {
           id: "group_id",
           pillSheetIDs: ["1", "2"],
           pillSheets: [
-            pillSheet.copyWith(
-              lastTakenDate: mockToday.subtract(const Duration(days: 4)),
-            ),
-            pillSheet2.copyWith(
-              lastTakenDate: pillSheet2.beginingDate.subtract(const Duration(days: 1)),
-            ),
+            pillSheet.copyWith(lastTakenDate: mockToday.subtract(const Duration(days: 4))),
+            pillSheet2.copyWith(lastTakenDate: pillSheet2.beginingDate.subtract(const Duration(days: 1))),
           ],
           createdAt: now(),
         );
@@ -472,12 +449,7 @@ void main() {
         when(batchSetPillSheetGroup(batch, updatedPillSheetGroup)).thenReturn(updatedPillSheetGroup);
 
         final history = PillSheetModifiedHistoryServiceActionFactory.createRevertTakenPillAction(
-          pillSheetGroupID: "group_id",
-          before: pillSheet2,
-          after: pillSheet.copyWith(lastTakenDate: mockToday.subtract(const Duration(days: 4))),
-          beforePillSheetGroup: pillSheetGroup,
-          afterPillSheetGroup: updatedPillSheetGroup,
-        );
+            pillSheetGroupID: "group_id", before: pillSheet2, after: pillSheet.copyWith(lastTakenDate: mockToday.subtract(const Duration(days: 4))));
         final batchSetPillSheetModifiedHistory = MockBatchSetPillSheetModifiedHistory();
         when(batchSetPillSheetModifiedHistory(batch, history)).thenReturn(null);
 
@@ -500,7 +472,7 @@ void main() {
             batchSetPillSheetModifiedHistory: batchSetPillSheetModifiedHistory,
             batchSetPillSheetGroup: batchSetPillSheetGroup);
 
-        await revertTakePill.call(pillSheetGroup: pillSheetGroup, pageIndex: 0, targetRevertPillNumberIntoPillSheet: 27);
+        await revertTakePill.call(pillSheetGroup: pillSheetGroup, pageIndex: 0, pillNumberIntoPillSheet: 27);
       });
       test("call revert with rest duration", () async {
         var mockTodayRepository = MockTodayService();
@@ -546,13 +518,8 @@ void main() {
           id: "group_id",
           pillSheetIDs: ["1", "2"],
           pillSheets: [
-            pillSheet.copyWith(
-              lastTakenDate: mockToday.subtract(const Duration(days: 4)),
-            ),
-            pillSheet2.copyWith(
-              lastTakenDate: pillSheet2.beginingDate.subtract(const Duration(days: 1)),
-              restDurations: [],
-            )
+            pillSheet.copyWith(lastTakenDate: mockToday.subtract(const Duration(days: 4))),
+            pillSheet2.copyWith(lastTakenDate: pillSheet2.beginingDate.subtract(const Duration(days: 1)), restDurations: []),
           ],
           createdAt: now(),
         );
@@ -560,12 +527,9 @@ void main() {
         when(batchSetPillSheetGroup(batch, updatedPillSheetGroup)).thenReturn(updatedPillSheetGroup);
 
         final history = PillSheetModifiedHistoryServiceActionFactory.createRevertTakenPillAction(
-          pillSheetGroupID: "group_id",
-          before: pillSheet2,
-          after: pillSheet.copyWith(lastTakenDate: mockToday.subtract(const Duration(days: 4)), restDurations: []),
-          beforePillSheetGroup: pillSheetGroup,
-          afterPillSheetGroup: updatedPillSheetGroup,
-        );
+            pillSheetGroupID: "group_id",
+            before: pillSheet2,
+            after: pillSheet.copyWith(lastTakenDate: mockToday.subtract(const Duration(days: 4)), restDurations: []));
         final batchSetPillSheetModifiedHistory = MockBatchSetPillSheetModifiedHistory();
         when(batchSetPillSheetModifiedHistory(batch, history)).thenReturn(null);
 
@@ -588,7 +552,7 @@ void main() {
             batchSetPillSheetModifiedHistory: batchSetPillSheetModifiedHistory,
             batchSetPillSheetGroup: batchSetPillSheetGroup);
 
-        await revertTakePill.call(pillSheetGroup: pillSheetGroup, pageIndex: 0, targetRevertPillNumberIntoPillSheet: 27);
+        await revertTakePill.call(pillSheetGroup: pillSheetGroup, pageIndex: 0, pillNumberIntoPillSheet: 27);
       });
     });
   });

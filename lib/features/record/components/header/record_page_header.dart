@@ -30,7 +30,7 @@ class RecordPageInformationHeader extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final pillSheetGroup = this.pillSheetGroup;
-    final activePillSheet = pillSheetGroup?.activePillSheet;
+    final activedPillSheet = pillSheetGroup?.activedPillSheet;
     final setting = this.setting;
 
     return SizedBox(
@@ -56,11 +56,11 @@ class RecordPageInformationHeader extends StatelessWidget {
                   setting: setting,
                   onPressed: () {
                     analytics.logEvent(name: "tapped_record_information_header");
-                    if (activePillSheet != null && pillSheetGroup != null && !pillSheetGroup.isDeactived) {
+                    if (activedPillSheet != null && pillSheetGroup != null && !pillSheetGroup.isDeactived) {
                       Navigator.of(context).push(
                         SettingTodayPillNumberPageRoute.route(
                           pillSheetGroup: pillSheetGroup,
-                          activePillSheet: activePillSheet,
+                          activedPillSheet: activedPillSheet,
                         ),
                       );
                     }

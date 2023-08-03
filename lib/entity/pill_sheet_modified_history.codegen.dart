@@ -50,87 +50,52 @@ extension PillSheetModifiedActionTypeFunctions on PillSheetModifiedActionType {
 class PillSheetModifiedHistory with _$PillSheetModifiedHistory {
   @JsonSerializable(explicitToJson: true)
   const factory PillSheetModifiedHistory({
-    // Added since 2023-08-01
-    @Default("v1") version,
-
-    // ============ BEGIN: Added since v1 ============
-    @JsonKey(includeIfNull: false, toJson: toNull) required String? id,
+    @JsonKey(includeIfNull: false, toJson: toNull)
+        required String? id,
     required String actionType,
-    @JsonKey(
-      fromJson: NonNullTimestampConverter.timestampToDateTime,
-      toJson: NonNullTimestampConverter.dateTimeToTimestamp,
-    )
-    required DateTime estimatedEventCausingDate,
-    @JsonKey(
-      fromJson: NonNullTimestampConverter.timestampToDateTime,
-      toJson: NonNullTimestampConverter.dateTimeToTimestamp,
-    )
-    required DateTime createdAt,
-    // ============ END: Added since v1 ============
-
-    // ============ BEGIN: Added since v2 ============
-    // beforePillSheetGroup and afterPillSheetGroup is nullable
-    // Because, actions for createdPillSheet and deletedPillSheet are not exists target single pill sheet
-    required PillSheetGroup? beforePillSheetGroup,
-    required PillSheetGroup? afterPillSheetGroup,
-    @JsonKey(
-      fromJson: TimestampConverter.timestampToDateTime,
-      toJson: TimestampConverter.dateTimeToTimestamp,
-    )
-    DateTime? timeToLive,
-    // ============ END: Added since v2 ============
-
-    // The below properties are deprecated and added since v1.
-    // This is deprecated property. TODO: delete after 2024-03-01
-    // Instead of calculating from beforePillSheetGroup and afterPillSheetGroup
     required PillSheetModifiedHistoryValue value,
-    // This is deprecated property. TODO: delete after 2024-03-01
+    // This is deprecated property.
     // Instead of beforePillSheetID and afterPillSheetID
     required String? pillSheetID,
-    // This is deprecated property. TODO: delete after 2024-03-01
     // There are new properties for pill_sheet grouping. So it's all optional
     required String? pillSheetGroupID,
     required String? beforePillSheetID,
     required String? afterPillSheetID,
-    // This is deprecated property. TODO: delete after 2024-03-01
-    // Instead of beforePillSheetGroup and afterPillSheetGroup
     // before and after is nullable
     // Because, actions for createdPillSheet and deletedPillSheet are not exists target single pill sheet
     required PillSheet? before,
     required PillSheet? after,
+    @JsonKey(
+      fromJson: NonNullTimestampConverter.timestampToDateTime,
+      toJson: NonNullTimestampConverter.dateTimeToTimestamp,
+    )
+        required DateTime estimatedEventCausingDate,
+    @JsonKey(
+      fromJson: NonNullTimestampConverter.timestampToDateTime,
+      toJson: NonNullTimestampConverter.dateTimeToTimestamp,
+    )
+        required DateTime createdAt,
   }) = _PillSheetModifiedHistory;
   const PillSheetModifiedHistory._();
 
   factory PillSheetModifiedHistory.fromJson(Map<String, dynamic> json) => _$PillSheetModifiedHistoryFromJson(json);
 
   PillSheetModifiedActionType? get enumActionType => PillSheetModifiedActionType.values.firstWhereOrNull((element) => element.name == actionType);
-
-  PillSheet? get beforePillSheet => beforePillSheetGroup?.activePillSheetWhen(estimatedEventCausingDate);
-  PillSheet? get afterPillSheet => afterPillSheetGroup?.activePillSheetWhen(estimatedEventCausingDate);
 }
 
 // Factories
 abstract class PillSheetModifiedHistoryServiceActionFactory {
-  static const limitDays = 180;
-
   static PillSheetModifiedHistory _create({
-    // ============ BEGIN: Added since v1 ============
-    // TODO: delete after 2024-03-01
     required PillSheet? before,
     required PillSheet? after,
     required String? pillSheetGroupID,
     required String? beforePillSheetID,
     required String? afterPillSheetID,
-    // ============ END: Added since v1 ============
-
-    required PillSheetGroup? beforePillSheetGroup,
-    required PillSheetGroup? afterPillSheetGroup,
     required PillSheetModifiedActionType actionType,
     required PillSheetModifiedHistoryValue value,
   }) {
     return PillSheetModifiedHistory(
       id: null,
-      version: "v2",
       actionType: actionType.name,
       value: value,
       pillSheetID: null,
@@ -138,12 +103,9 @@ abstract class PillSheetModifiedHistoryServiceActionFactory {
       afterPillSheetID: afterPillSheetID,
       beforePillSheetID: beforePillSheetID,
       before: before,
-      beforePillSheetGroup: beforePillSheetGroup,
-      afterPillSheetGroup: afterPillSheetGroup,
       after: after,
       estimatedEventCausingDate: now(),
       createdAt: now(),
-      timeToLive: now().add(const Duration(days: limitDays)),
     );
   }
 
@@ -151,8 +113,6 @@ abstract class PillSheetModifiedHistoryServiceActionFactory {
     required String? pillSheetGroupID,
     required PillSheet before,
     required PillSheet after,
-    required PillSheetGroup beforePillSheetGroup,
-    required PillSheetGroup afterPillSheetGroup,
     required bool isQuickRecord,
   }) {
     assert(pillSheetGroupID != null);
@@ -178,8 +138,6 @@ abstract class PillSheetModifiedHistoryServiceActionFactory {
       afterPillSheetID: afterID,
       pillSheetGroupID: pillSheetGroupID,
       before: before,
-      beforePillSheetGroup: beforePillSheetGroup,
-      afterPillSheetGroup: afterPillSheetGroup,
     );
   }
 
@@ -187,8 +145,6 @@ abstract class PillSheetModifiedHistoryServiceActionFactory {
     required String? pillSheetGroupID,
     required PillSheet before,
     required PillSheet after,
-    required PillSheetGroup beforePillSheetGroup,
-    required PillSheetGroup afterPillSheetGroup,
   }) {
     assert(pillSheetGroupID != null);
 
@@ -218,16 +174,12 @@ abstract class PillSheetModifiedHistoryServiceActionFactory {
       beforePillSheetID: beforeID,
       afterPillSheetID: afterID,
       before: before,
-      beforePillSheetGroup: beforePillSheetGroup,
-      afterPillSheetGroup: afterPillSheetGroup,
     );
   }
 
   static PillSheetModifiedHistory createCreatedPillSheetAction({
     required String? pillSheetGroupID,
     required List<String> pillSheetIDs,
-    required PillSheetGroup? beforePillSheetGroup,
-    required PillSheetGroup createdNewPillSheetGroup,
   }) {
     assert(pillSheetGroupID != null);
 
@@ -244,8 +196,6 @@ abstract class PillSheetModifiedHistoryServiceActionFactory {
       beforePillSheetID: null,
       after: null,
       afterPillSheetID: null,
-      beforePillSheetGroup: beforePillSheetGroup,
-      afterPillSheetGroup: createdNewPillSheetGroup,
     );
   }
 
@@ -253,8 +203,6 @@ abstract class PillSheetModifiedHistoryServiceActionFactory {
     required String? pillSheetGroupID,
     required PillSheet before,
     required PillSheet after,
-    required PillSheetGroup beforePillSheetGroup,
-    required PillSheetGroup afterPillSheetGroup,
   }) {
     assert(pillSheetGroupID != null);
 
@@ -280,14 +228,10 @@ abstract class PillSheetModifiedHistoryServiceActionFactory {
       beforePillSheetID: before.id,
       afterPillSheetID: afterID,
       before: before,
-      beforePillSheetGroup: beforePillSheetGroup,
-      afterPillSheetGroup: afterPillSheetGroup,
     );
   }
 
   static PillSheetModifiedHistory createDeletedPillSheetAction({
-    required PillSheetGroup beforePillSheetGroup,
-    required PillSheetGroup updatedPillSheetGroup,
     required String? pillSheetGroupID,
     required List<String> pillSheetIDs,
   }) {
@@ -306,8 +250,6 @@ abstract class PillSheetModifiedHistoryServiceActionFactory {
       afterPillSheetID: null,
       before: null,
       after: null,
-      beforePillSheetGroup: beforePillSheetGroup,
-      afterPillSheetGroup: updatedPillSheetGroup,
     );
   }
 
@@ -316,8 +258,6 @@ abstract class PillSheetModifiedHistoryServiceActionFactory {
     required PillSheet before,
     required PillSheet after,
     required RestDuration restDuration,
-    required PillSheetGroup beforePillSheetGroup,
-    required PillSheetGroup afterPillSheetGroup,
   }) {
     assert(pillSheetGroupID != null);
 
@@ -333,8 +273,6 @@ abstract class PillSheetModifiedHistoryServiceActionFactory {
       afterPillSheetID: after.id,
       before: before,
       after: after,
-      beforePillSheetGroup: beforePillSheetGroup,
-      afterPillSheetGroup: afterPillSheetGroup,
     );
   }
 
@@ -343,8 +281,6 @@ abstract class PillSheetModifiedHistoryServiceActionFactory {
     required PillSheet before,
     required PillSheet after,
     required RestDuration restDuration,
-    required PillSheetGroup beforePillSheetGroup,
-    required PillSheetGroup afterPillSheetGroup,
   }) {
     assert(pillSheetGroupID != null);
 
@@ -360,8 +296,6 @@ abstract class PillSheetModifiedHistoryServiceActionFactory {
       afterPillSheetID: after.id,
       before: before,
       after: after,
-      beforePillSheetGroup: beforePillSheetGroup,
-      afterPillSheetGroup: afterPillSheetGroup,
     );
   }
 
@@ -369,8 +303,6 @@ abstract class PillSheetModifiedHistoryServiceActionFactory {
     required String? pillSheetGroupID,
     required PillSheetGroupDisplayNumberSetting? beforeDisplayNumberSetting,
     required PillSheetGroupDisplayNumberSetting afterDisplayNumberSetting,
-    required PillSheetGroup beforePillSheetGroup,
-    required PillSheetGroup afterPillSheetGroup,
   }) {
     return _create(
       actionType: PillSheetModifiedActionType.changedBeginDisplayNumber,
@@ -385,8 +317,6 @@ abstract class PillSheetModifiedHistoryServiceActionFactory {
       afterPillSheetID: null,
       before: null,
       after: null,
-      beforePillSheetGroup: beforePillSheetGroup,
-      afterPillSheetGroup: afterPillSheetGroup,
     );
   }
 
@@ -394,8 +324,6 @@ abstract class PillSheetModifiedHistoryServiceActionFactory {
     required String? pillSheetGroupID,
     required PillSheetGroupDisplayNumberSetting? beforeDisplayNumberSetting,
     required PillSheetGroupDisplayNumberSetting afterDisplayNumberSetting,
-    required PillSheetGroup beforePillSheetGroup,
-    required PillSheetGroup afterPillSheetGroup,
   }) {
     return _create(
       actionType: PillSheetModifiedActionType.changedEndDisplayNumber,
@@ -410,8 +338,6 @@ abstract class PillSheetModifiedHistoryServiceActionFactory {
       afterPillSheetID: null,
       before: null,
       after: null,
-      beforePillSheetGroup: beforePillSheetGroup,
-      afterPillSheetGroup: afterPillSheetGroup,
     );
   }
 }

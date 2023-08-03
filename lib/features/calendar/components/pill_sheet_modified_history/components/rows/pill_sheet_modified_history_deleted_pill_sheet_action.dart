@@ -4,23 +4,26 @@ import 'package:pilll/components/atoms/text_color.dart';
 import 'package:pilll/features/calendar/components/pill_sheet_modified_history/components/core/day.dart';
 import 'package:pilll/features/calendar/components/pill_sheet_modified_history/components/core/effective_pill_number.dart';
 import 'package:pilll/features/calendar/components/pill_sheet_modified_history/components/core/row_layout.dart';
+import 'package:pilll/entity/pill_sheet_modified_history_value.codegen.dart';
 
 class PillSheetModifiedHistoryDeletedPillSheetAction extends StatelessWidget {
   final DateTime estimatedEventCausingDate;
-  final List<String>? pillSheetIDs;
+  final DeletedPillSheetValue? value;
 
   const PillSheetModifiedHistoryDeletedPillSheetAction({
     Key? key,
     required this.estimatedEventCausingDate,
-    required this.pillSheetIDs,
+    required this.value,
   }) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
     return RowLayout(
       day: Day(estimatedEventCausingDate: estimatedEventCausingDate),
-      effectiveNumbersOrHyphen:
-          EffectivePillNumber(effectivePillNumber: PillSheetModifiedHistoryDateEffectivePillNumber.pillSheetCount(pillSheetIDs ?? [])),
+      effectiveNumbersOrHyphen: EffectivePillNumber(
+          effectivePillNumber:
+              PillSheetModifiedHistoryDateEffectivePillNumber.pillSheetCount(
+                  value?.pillSheetIDs ?? [])),
       detail: const Text(
         "ピルシート破棄",
         style: TextStyle(

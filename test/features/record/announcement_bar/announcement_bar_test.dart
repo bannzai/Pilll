@@ -51,10 +51,10 @@ void main() {
         when(mockTodayRepository.now()).thenReturn(mockToday);
         todayRepository = mockTodayRepository;
 
-        var pillSheet = PillSheet.create(
-          PillSheetType.pillsheet_21,
+        var pillSheet = PillSheet.create(PillSheetType.pillsheet_21);
+        pillSheet = pillSheet.copyWith(
           lastTakenDate: mockToday,
-          beginDate: mockToday.subtract(
+          beginingDate: mockToday.subtract(
 // NOTE: Into rest duration and notification duration
             const Duration(days: 25),
           ),
@@ -105,10 +105,10 @@ void main() {
         when(mockTodayRepository.now()).thenReturn(mockToday);
         todayRepository = mockTodayRepository;
 
-        var pillSheet = PillSheet.create(
-          PillSheetType.pillsheet_21,
+        var pillSheet = PillSheet.create(PillSheetType.pillsheet_21);
+        pillSheet = pillSheet.copyWith(
           lastTakenDate: mockToday,
-          beginDate: mockToday.subtract(
+          beginingDate: mockToday.subtract(
 // NOTE: Into rest duration and notification duration
             const Duration(days: 25),
           ),
@@ -161,10 +161,10 @@ void main() {
         when(mockTodayRepository.now()).thenReturn(mockToday);
         todayRepository = mockTodayRepository;
 
-        var pillSheet = PillSheet.create(
-          PillSheetType.pillsheet_21,
+        var pillSheet = PillSheet.create(PillSheetType.pillsheet_21);
+        pillSheet = pillSheet.copyWith(
           lastTakenDate: mockToday,
-          beginDate: mockToday.subtract(
+          beginingDate: mockToday.subtract(
 // NOTE: Not into rest duration and notification duration
             const Duration(days: 10),
           ),
@@ -217,10 +217,10 @@ void main() {
         when(mockTodayRepository.now()).thenReturn(n);
         todayRepository = mockTodayRepository;
 
-        var pillSheet = PillSheet.create(
-          PillSheetType.pillsheet_21,
+        var pillSheet = PillSheet.create(PillSheetType.pillsheet_21);
+        pillSheet = pillSheet.copyWith(
           lastTakenDate: mockToday,
-          beginDate: mockToday.subtract(
+          beginingDate: mockToday.subtract(
 // NOTE: Not into rest duration and notification duration
             const Duration(days: 10),
           ),
@@ -272,10 +272,10 @@ void main() {
         when(mockTodayRepository.now()).thenReturn(n);
         todayRepository = mockTodayRepository;
 
-        var pillSheet = PillSheet.create(
-          PillSheetType.pillsheet_21,
+        var pillSheet = PillSheet.create(PillSheetType.pillsheet_21);
+        pillSheet = pillSheet.copyWith(
           lastTakenDate: mockToday.subtract(const Duration(days: 1)),
-          beginDate: mockToday.subtract(
+          beginingDate: mockToday.subtract(
 // NOTE: To deactive pill sheet
             const Duration(days: 30),
           ),
@@ -328,10 +328,10 @@ void main() {
           when(mockTodayRepository.now()).thenReturn(mockToday);
           todayRepository = mockTodayRepository;
 
-          var pillSheet = PillSheet.create(
-            PillSheetType.pillsheet_21,
+          var pillSheet = PillSheet.create(PillSheetType.pillsheet_21);
+          pillSheet = pillSheet.copyWith(
             lastTakenDate: mockToday.subtract(const Duration(days: 1)),
-            beginDate: mockToday.subtract(
+            beginingDate: mockToday.subtract(
               const Duration(days: 25),
             ),
           );
@@ -391,10 +391,10 @@ void main() {
           when(mockTodayRepository.now()).thenReturn(mockToday);
           todayRepository = mockTodayRepository;
 
-          var pillSheet = PillSheet.create(
-            PillSheetType.pillsheet_21,
+          var pillSheet = PillSheet.create(PillSheetType.pillsheet_21);
+          pillSheet = pillSheet.copyWith(
             lastTakenDate: mockToday.subtract(const Duration(days: 1)),
-            beginDate: mockToday.subtract(
+            beginingDate: mockToday.subtract(
               const Duration(days: 25),
             ),
           );
@@ -456,10 +456,10 @@ void main() {
           when(mockTodayRepository.now()).thenReturn(mockToday);
           todayRepository = mockTodayRepository;
 
-          var pillSheet = PillSheet.create(
-            PillSheetType.pillsheet_21,
+          var pillSheet = PillSheet.create(PillSheetType.pillsheet_21);
+          pillSheet = pillSheet.copyWith(
             lastTakenDate: mockToday.subtract(const Duration(days: 1)),
-            beginDate: mockToday.subtract(
+            beginingDate: mockToday.subtract(
               const Duration(days: 25),
             ),
           );
@@ -521,10 +521,10 @@ void main() {
           when(mockTodayRepository.now()).thenReturn(mockToday);
           todayRepository = mockTodayRepository;
 
-          var pillSheet = PillSheet.create(
-            PillSheetType.pillsheet_21,
+          var pillSheet = PillSheet.create(PillSheetType.pillsheet_21);
+          pillSheet = pillSheet.copyWith(
             lastTakenDate: mockToday.subtract(const Duration(days: 1)),
-            beginDate: mockToday.subtract(
+            beginingDate: mockToday.subtract(
               const Duration(days: 25),
             ),
           );
@@ -586,10 +586,10 @@ void main() {
           when(mockTodayRepository.now()).thenReturn(mockToday);
           todayRepository = mockTodayRepository;
 
-          var pillSheet = PillSheet.create(
-            PillSheetType.pillsheet_21,
+          var pillSheet = PillSheet.create(PillSheetType.pillsheet_21);
+          pillSheet = pillSheet.copyWith(
             lastTakenDate: mockToday.subtract(const Duration(days: 1)),
-            beginDate: mockToday.subtract(
+            beginingDate: mockToday.subtract(
               const Duration(days: 25),
             ),
           );
@@ -657,10 +657,10 @@ void main() {
           when(mockTodayRepository.now()).thenReturn(mockToday);
           todayRepository = mockTodayRepository;
 
-          var pillSheet = PillSheet.create(
-            PillSheetType.pillsheet_21,
+          var pillSheet = PillSheet.create(PillSheetType.pillsheet_21);
+          pillSheet = pillSheet.copyWith(
             lastTakenDate: mockToday,
-            beginDate: mockToday.subtract(
+            beginingDate: mockToday.subtract(
               // NOTE: Not into rest duration and notification duration
               const Duration(days: 10),
             ),
@@ -724,10 +724,10 @@ void main() {
           when(mockTodayRepository.now()).thenReturn(mockToday);
           todayRepository = mockTodayRepository;
 
-          var pillSheet = PillSheet.create(
-            PillSheetType.pillsheet_21,
+          var pillSheet = PillSheet.create(PillSheetType.pillsheet_21);
+          pillSheet = pillSheet.copyWith(
             lastTakenDate: mockToday,
-            beginDate: mockToday.subtract(
+            beginingDate: mockToday.subtract(
               // NOTE: Not into rest duration and notification duration
               const Duration(days: 10),
             ),
@@ -791,10 +791,10 @@ void main() {
           when(mockTodayRepository.now()).thenReturn(mockToday);
           todayRepository = mockTodayRepository;
 
-          var pillSheet = PillSheet.create(
-            PillSheetType.pillsheet_21,
+          var pillSheet = PillSheet.create(PillSheetType.pillsheet_21);
+          pillSheet = pillSheet.copyWith(
             lastTakenDate: mockToday,
-            beginDate: mockToday.subtract(
+            beginingDate: mockToday.subtract(
               // NOTE: Not into rest duration and notification duration
               const Duration(days: 10),
             ),
@@ -858,10 +858,10 @@ void main() {
           when(mockTodayRepository.now()).thenReturn(mockToday);
           todayRepository = mockTodayRepository;
 
-          var pillSheet = PillSheet.create(
-            PillSheetType.pillsheet_21,
+          var pillSheet = PillSheet.create(PillSheetType.pillsheet_21);
+          pillSheet = pillSheet.copyWith(
             lastTakenDate: mockToday,
-            beginDate: mockToday.subtract(
+            beginingDate: mockToday.subtract(
               // NOTE: Not into rest duration and notification duration
               const Duration(days: 10),
             ),
@@ -925,10 +925,10 @@ void main() {
           when(mockTodayRepository.now()).thenReturn(mockToday);
           todayRepository = mockTodayRepository;
 
-          var pillSheet = PillSheet.create(
-            PillSheetType.pillsheet_21,
+          var pillSheet = PillSheet.create(PillSheetType.pillsheet_21);
+          pillSheet = pillSheet.copyWith(
             lastTakenDate: mockToday,
-            beginDate: mockToday.subtract(
+            beginingDate: mockToday.subtract(
               // NOTE: Not into rest duration and notification duration
               const Duration(days: 10),
             ),
@@ -992,10 +992,10 @@ void main() {
           when(mockTodayRepository.now()).thenReturn(mockToday);
           todayRepository = mockTodayRepository;
 
-          var pillSheet = PillSheet.create(
-            PillSheetType.pillsheet_21,
+          var pillSheet = PillSheet.create(PillSheetType.pillsheet_21);
+          pillSheet = pillSheet.copyWith(
             lastTakenDate: mockToday,
-            beginDate: mockToday.subtract(
+            beginingDate: mockToday.subtract(
               // NOTE: Not into rest duration and notification duration
               const Duration(days: 10),
             ),
@@ -1060,10 +1060,10 @@ void main() {
         when(mockTodayRepository.now()).thenReturn(mockToday);
         todayRepository = mockTodayRepository;
 
-        var pillSheet = PillSheet.create(
-          PillSheetType.pillsheet_21,
+        var pillSheet = PillSheet.create(PillSheetType.pillsheet_21);
+        pillSheet = pillSheet.copyWith(
           lastTakenDate: mockToday,
-          beginDate: mockToday.subtract(
+          beginingDate: mockToday.subtract(
 // NOTE: Not into rest duration and notification duration
             const Duration(days: 10),
           ),
@@ -1116,10 +1116,10 @@ void main() {
         when(mockTodayRepository.now()).thenReturn(mockToday);
         todayRepository = mockTodayRepository;
 
-        var pillSheet = PillSheet.create(
-          PillSheetType.pillsheet_21,
+        var pillSheet = PillSheet.create(PillSheetType.pillsheet_21);
+        pillSheet = pillSheet.copyWith(
           lastTakenDate: mockToday,
-          beginDate: mockToday.subtract(
+          beginingDate: mockToday.subtract(
 // NOTE: Into rest duration and notification duration
             const Duration(days: 25),
           ),
@@ -1172,10 +1172,10 @@ void main() {
         when(mockTodayRepository.now()).thenReturn(n);
         todayRepository = mockTodayRepository;
 
-        var pillSheet = PillSheet.create(
-          PillSheetType.pillsheet_21,
+        var pillSheet = PillSheet.create(PillSheetType.pillsheet_21);
+        pillSheet = pillSheet.copyWith(
           lastTakenDate: mockToday.subtract(const Duration(days: 1)),
-          beginDate: mockToday.subtract(
+          beginingDate: mockToday.subtract(
 // NOTE: To deactive pill sheet
             const Duration(days: 30),
           ),

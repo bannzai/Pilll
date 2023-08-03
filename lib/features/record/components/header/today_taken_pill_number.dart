@@ -52,7 +52,7 @@ class TodayTakenPillNumber extends StatelessWidget {
       ),
       onTap: () {
         analytics.logEvent(name: "tapped_record_page_today_pill");
-        if (pillSheetGroup?.activePillSheet == null) {
+        if (pillSheetGroup?.activedPillSheet == null) {
           return;
         }
         onPressed();
@@ -62,8 +62,8 @@ class TodayTakenPillNumber extends StatelessWidget {
 
   Widget _content() {
     final pillSheetGroup = this.pillSheetGroup;
-    final activePillSheet = this.pillSheetGroup?.activePillSheet;
-    if (pillSheetGroup == null || activePillSheet == null || pillSheetGroup.isDeactived || activePillSheet.activeRestDuration != null) {
+    final activedPillSheet = this.pillSheetGroup?.activedPillSheet;
+    if (pillSheetGroup == null || activedPillSheet == null || pillSheetGroup.isDeactived || activedPillSheet.activeRestDuration != null) {
       return const Padding(
           padding: EdgeInsets.only(top: 8),
           child: Text("-",
@@ -74,9 +74,9 @@ class TodayTakenPillNumber extends StatelessWidget {
                 color: TextColor.noshime,
               )));
     }
-    if (activePillSheet.inNotTakenDuration) {
+    if (activedPillSheet.inNotTakenDuration) {
       return Text(
-        "${activePillSheet.pillSheetType.notTakenWord}${activePillSheet.todayPillNumber - activePillSheet.typeInfo.dosingPeriod}日目",
+        "${activedPillSheet.pillSheetType.notTakenWord}${activedPillSheet.todayPillNumber - activedPillSheet.typeInfo.dosingPeriod}日目",
         style: const TextStyle(
           fontFamily: FontFamily.japanese,
           fontWeight: FontWeight.w600,
@@ -91,7 +91,7 @@ class TodayTakenPillNumber extends StatelessWidget {
       textBaseline: TextBaseline.ideographic,
       children: <Widget>[
         if (_appearanceMode == PillSheetAppearanceMode.number) ...[
-          Text("${activePillSheet.todayPillNumber}",
+          Text("${activedPillSheet.todayPillNumber}",
               style: const TextStyle(
                 fontFamily: FontFamily.number,
                 fontWeight: FontWeight.w500,
@@ -107,7 +107,7 @@ class TodayTakenPillNumber extends StatelessWidget {
               )),
         ],
         if (_appearanceMode == PillSheetAppearanceMode.date) ...[
-          Text("${activePillSheet.todayPillNumber}",
+          Text("${activedPillSheet.todayPillNumber}",
               style: const TextStyle(
                 fontFamily: FontFamily.number,
                 fontWeight: FontWeight.w500,

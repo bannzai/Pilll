@@ -31,9 +31,9 @@ class ChangePillNumber {
 
   Future<void> call({
     required PillSheetGroup pillSheetGroup,
-    required PillSheet activePillSheet,
+    required PillSheet activedPillSheet,
     required int pillSheetPageIndex,
-    required int pillNumberInPillSheet,
+    required int pillNumberIntoPillSheet,
   }) async {
     final batch = batchFactory.batch();
 
@@ -42,7 +42,7 @@ class ChangePillNumber {
           pillSheetTypes: pillSheetTypes,
           toIndex: pillSheetPageIndex,
         ) +
-        pillNumberInPillSheet;
+        pillNumberIntoPillSheet;
     final firstPilSheetBeginDate = today().subtract(Duration(days: nextSerializedPillNumber - 1));
 
     final List<PillSheet> updatedPillSheets = [];
@@ -59,7 +59,7 @@ class ChangePillNumber {
 
       final DateTime? lastTakenDate;
       if (pillSheetPageIndex == index) {
-        lastTakenDate = beginDate.add(Duration(days: pillNumberInPillSheet - 2));
+        lastTakenDate = beginDate.add(Duration(days: pillNumberIntoPillSheet - 2));
       } else if (pillSheetPageIndex > index) {
         lastTakenDate = beginDate.add(Duration(days: pillSheet.pillSheetType.totalCount - 1));
       } else {
@@ -67,27 +67,17 @@ class ChangePillNumber {
         lastTakenDate = null;
       }
 
-      final updatedPillSheet = pillSheet.copyWith(
-        beginingDate: beginDate,
-        lastTakenDate: lastTakenDate,
-        restDurations: [],
-      );
+      final updatedPillSheet = pillSheet.copyWith(beginingDate: beginDate, lastTakenDate: lastTakenDate, restDurations: []);
       updatedPillSheets.add(updatedPillSheet);
     });
 
-    final updatedPillSheetGroup = pillSheetGroup.copyWith(pillSheets: updatedPillSheets);
     final history = PillSheetModifiedHistoryServiceActionFactory.createChangedPillNumberAction(
       pillSheetGroupID: pillSheetGroup.id,
-      before: activePillSheet,
+      before: activedPillSheet,
       after: updatedPillSheets[pillSheetPageIndex],
-      beforePillSheetGroup: pillSheetGroup,
-      afterPillSheetGroup: updatedPillSheetGroup,
     );
     batchSetPillSheetModifiedHistory(batch, history);
-    batchSetPillSheetGroup(
-      batch,
-      updatedPillSheetGroup,
-    );
+    batchSetPillSheetGroup(batch, pillSheetGroup.copyWith(pillSheets: updatedPillSheets));
 
     await batch.commit();
   }

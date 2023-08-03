@@ -2,18 +2,12 @@ import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
 import 'package:pilll/provider/database.dart';
 import 'package:pilll/entity/pill_sheet_modified_history.codegen.dart';
-import 'package:pilll/utils/datetime/day.dart';
 
 final pillSheetModifiedHistoriesProvider = StreamProvider.family.autoDispose((ref, DateTime? afterCursor) {
   if (afterCursor != null) {
     return ref
         .watch(databaseProvider)
         .pillSheetModifiedHistoriesReference()
-        .where(
-          PillSheetModifiedHistoryFirestoreKeys.estimatedEventCausingDate,
-          isLessThanOrEqualTo: today().add(const Duration(days: 1)),
-          isGreaterThanOrEqualTo: today().subtract(const Duration(days: PillSheetModifiedHistoryServiceActionFactory.limitDays)),
-        )
         .orderBy(PillSheetModifiedHistoryFirestoreKeys.estimatedEventCausingDate, descending: true)
         .startAfter([afterCursor])
         .limit(20)
@@ -24,11 +18,6 @@ final pillSheetModifiedHistoriesProvider = StreamProvider.family.autoDispose((re
     return ref
         .watch(databaseProvider)
         .pillSheetModifiedHistoriesReference()
-        .where(
-          PillSheetModifiedHistoryFirestoreKeys.estimatedEventCausingDate,
-          isLessThanOrEqualTo: today().add(const Duration(days: 1)),
-          isGreaterThanOrEqualTo: today().subtract(const Duration(days: PillSheetModifiedHistoryServiceActionFactory.limitDays)),
-        )
         .orderBy(PillSheetModifiedHistoryFirestoreKeys.estimatedEventCausingDate, descending: true)
         .limit(20)
         .snapshots()
@@ -40,11 +29,6 @@ final pillSheetModifiedHistoriesWithLimitProvider = StreamProvider.family((ref, 
   return ref
       .watch(databaseProvider)
       .pillSheetModifiedHistoriesReference()
-      .where(
-        PillSheetModifiedHistoryFirestoreKeys.estimatedEventCausingDate,
-        isLessThanOrEqualTo: today().add(const Duration(days: 1)),
-        isGreaterThanOrEqualTo: today().subtract(const Duration(days: PillSheetModifiedHistoryServiceActionFactory.limitDays)),
-      )
       .orderBy(PillSheetModifiedHistoryFirestoreKeys.estimatedEventCausingDate, descending: true)
       .limit(limit)
       .snapshots()

@@ -1147,7 +1147,7 @@ class MockRevertTakePill extends _i1.Mock implements _i27.RevertTakePill {
   _i9.Future<_i7.PillSheetGroup?> call({
     required _i7.PillSheetGroup? pillSheetGroup,
     required int? pageIndex,
-    required int? targetRevertPillNumberIntoPillSheet,
+    required int? pillNumberIntoPillSheet,
   }) =>
       (super.noSuchMethod(
         Invocation.method(
@@ -1156,8 +1156,7 @@ class MockRevertTakePill extends _i1.Mock implements _i27.RevertTakePill {
           {
             #pillSheetGroup: pillSheetGroup,
             #pageIndex: pageIndex,
-            #targetRevertPillNumberIntoPillSheet:
-                targetRevertPillNumberIntoPillSheet,
+            #pillNumberIntoPillSheet: pillNumberIntoPillSheet,
           },
         ),
         returnValue: _i9.Future<_i7.PillSheetGroup?>.value(),
@@ -1201,7 +1200,7 @@ class MockTakePill extends _i1.Mock implements _i28.TakePill {
   _i9.Future<_i7.PillSheetGroup?> call({
     required DateTime? takenDate,
     required _i7.PillSheetGroup? pillSheetGroup,
-    required _i29.PillSheet? activePillSheet,
+    required _i29.PillSheet? activedPillSheet,
     required bool? isQuickRecord,
   }) =>
       (super.noSuchMethod(
@@ -1211,7 +1210,7 @@ class MockTakePill extends _i1.Mock implements _i28.TakePill {
           {
             #takenDate: takenDate,
             #pillSheetGroup: pillSheetGroup,
-            #activePillSheet: activePillSheet,
+            #activedPillSheet: activedPillSheet,
             #isQuickRecord: isQuickRecord,
           },
         ),

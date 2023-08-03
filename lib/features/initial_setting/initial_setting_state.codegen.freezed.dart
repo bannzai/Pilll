@@ -17,7 +17,7 @@ final _privateConstructorUsedError = UnsupportedError(
 /// @nodoc
 mixin _$InitialSettingTodayPillNumber {
   int get pageIndex => throw _privateConstructorUsedError;
-  int get pillNumberInPillSheet => throw _privateConstructorUsedError;
+  int get pillNumberIntoPillSheet => throw _privateConstructorUsedError;
 
   @JsonKey(ignore: true)
   $InitialSettingTodayPillNumberCopyWith<InitialSettingTodayPillNumber>
@@ -32,7 +32,7 @@ abstract class $InitialSettingTodayPillNumberCopyWith<$Res> {
       _$InitialSettingTodayPillNumberCopyWithImpl<$Res,
           InitialSettingTodayPillNumber>;
   @useResult
-  $Res call({int pageIndex, int pillNumberInPillSheet});
+  $Res call({int pageIndex, int pillNumberIntoPillSheet});
 }
 
 /// @nodoc
@@ -50,16 +50,16 @@ class _$InitialSettingTodayPillNumberCopyWithImpl<$Res,
   @override
   $Res call({
     Object? pageIndex = null,
-    Object? pillNumberInPillSheet = null,
+    Object? pillNumberIntoPillSheet = null,
   }) {
     return _then(_value.copyWith(
       pageIndex: null == pageIndex
           ? _value.pageIndex
           : pageIndex // ignore: cast_nullable_to_non_nullable
               as int,
-      pillNumberInPillSheet: null == pillNumberInPillSheet
-          ? _value.pillNumberInPillSheet
-          : pillNumberInPillSheet // ignore: cast_nullable_to_non_nullable
+      pillNumberIntoPillSheet: null == pillNumberIntoPillSheet
+          ? _value.pillNumberIntoPillSheet
+          : pillNumberIntoPillSheet // ignore: cast_nullable_to_non_nullable
               as int,
     ) as $Val);
   }
@@ -74,7 +74,7 @@ abstract class _$$_InitialSettingTodayPillNumberCopyWith<$Res>
       __$$_InitialSettingTodayPillNumberCopyWithImpl<$Res>;
   @override
   @useResult
-  $Res call({int pageIndex, int pillNumberInPillSheet});
+  $Res call({int pageIndex, int pillNumberIntoPillSheet});
 }
 
 /// @nodoc
@@ -91,16 +91,16 @@ class __$$_InitialSettingTodayPillNumberCopyWithImpl<$Res>
   @override
   $Res call({
     Object? pageIndex = null,
-    Object? pillNumberInPillSheet = null,
+    Object? pillNumberIntoPillSheet = null,
   }) {
     return _then(_$_InitialSettingTodayPillNumber(
       pageIndex: null == pageIndex
           ? _value.pageIndex
           : pageIndex // ignore: cast_nullable_to_non_nullable
               as int,
-      pillNumberInPillSheet: null == pillNumberInPillSheet
-          ? _value.pillNumberInPillSheet
-          : pillNumberInPillSheet // ignore: cast_nullable_to_non_nullable
+      pillNumberIntoPillSheet: null == pillNumberIntoPillSheet
+          ? _value.pillNumberIntoPillSheet
+          : pillNumberIntoPillSheet // ignore: cast_nullable_to_non_nullable
               as int,
     ));
   }
@@ -111,18 +111,18 @@ class __$$_InitialSettingTodayPillNumberCopyWithImpl<$Res>
 class _$_InitialSettingTodayPillNumber
     implements _InitialSettingTodayPillNumber {
   const _$_InitialSettingTodayPillNumber(
-      {this.pageIndex = 0, this.pillNumberInPillSheet = 0});
+      {this.pageIndex = 0, this.pillNumberIntoPillSheet = 0});
 
   @override
   @JsonKey()
   final int pageIndex;
   @override
   @JsonKey()
-  final int pillNumberInPillSheet;
+  final int pillNumberIntoPillSheet;
 
   @override
   String toString() {
-    return 'InitialSettingTodayPillNumber(pageIndex: $pageIndex, pillNumberInPillSheet: $pillNumberInPillSheet)';
+    return 'InitialSettingTodayPillNumber(pageIndex: $pageIndex, pillNumberIntoPillSheet: $pillNumberIntoPillSheet)';
   }
 
   @override
@@ -132,13 +132,14 @@ class _$_InitialSettingTodayPillNumber
             other is _$_InitialSettingTodayPillNumber &&
             (identical(other.pageIndex, pageIndex) ||
                 other.pageIndex == pageIndex) &&
-            (identical(other.pillNumberInPillSheet, pillNumberInPillSheet) ||
-                other.pillNumberInPillSheet == pillNumberInPillSheet));
+            (identical(
+                    other.pillNumberIntoPillSheet, pillNumberIntoPillSheet) ||
+                other.pillNumberIntoPillSheet == pillNumberIntoPillSheet));
   }
 
   @override
   int get hashCode =>
-      Object.hash(runtimeType, pageIndex, pillNumberInPillSheet);
+      Object.hash(runtimeType, pageIndex, pillNumberIntoPillSheet);
 
   @JsonKey(ignore: true)
   @override
@@ -152,12 +153,12 @@ abstract class _InitialSettingTodayPillNumber
     implements InitialSettingTodayPillNumber {
   const factory _InitialSettingTodayPillNumber(
       {final int pageIndex,
-      final int pillNumberInPillSheet}) = _$_InitialSettingTodayPillNumber;
+      final int pillNumberIntoPillSheet}) = _$_InitialSettingTodayPillNumber;
 
   @override
   int get pageIndex;
   @override
-  int get pillNumberInPillSheet;
+  int get pillNumberIntoPillSheet;
   @override
   @JsonKey(ignore: true)
   _$$_InitialSettingTodayPillNumberCopyWith<_$_InitialSettingTodayPillNumber>

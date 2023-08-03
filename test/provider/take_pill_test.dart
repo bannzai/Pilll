@@ -9,169 +9,78 @@ import 'package:pilll/utils/datetime/day.dart';
 
 import '../helper/mock.mocks.dart';
 
-class _FakePillSheet extends Fake implements PillSheet {}
-
 void main() {
-  final mockNow = DateTime.parse("2022-07-24T19:02:00");
+  final mockToday = DateTime.parse("2022-07-24T19:02:00");
+  late DateTime activePillSheetBeginDate;
+  late DateTime? activePillSheetLastTakenDate;
   late PillSheet previousPillSheet;
-  late PillSheet activePillSheet;
+  late PillSheet activedPillSheet;
   late PillSheet nextPillSheet;
   late PillSheetGroup pillSheetGroup;
 
-  setUp(() {
-    TestWidgetsFlutterBinding.ensureInitialized();
-
-    final mockTodayRepository = MockTodayService();
-    todayRepository = mockTodayRepository;
-    when(mockTodayRepository.now()).thenReturn(mockNow);
-  });
-
-  void prepare({required DateTime activePillSheetBeginDate, required DateTime? activePillSheetLastTakenDate}) {
-    previousPillSheet = PillSheet(
-      id: "previous_pill_sheet_id",
-      groupIndex: 0,
-      typeInfo: PillSheetType.pillsheet_28_7.typeInfo,
-      beginingDate: activePillSheetBeginDate.subtract(const Duration(days: 28)),
-      lastTakenDate: activePillSheetBeginDate.subtract(const Duration(days: 1)),
-      createdAt: now(),
-    );
-    activePillSheet = PillSheet(
-      id: "active_pill_sheet_id",
-      groupIndex: 1,
-      typeInfo: PillSheetType.pillsheet_28_7.typeInfo,
-      beginingDate: activePillSheetBeginDate,
-      lastTakenDate: activePillSheetLastTakenDate,
-      createdAt: now(),
-    );
-    nextPillSheet = PillSheet(
-      id: "next_pill_sheet_id",
-      groupIndex: 2,
-      typeInfo: PillSheetType.pillsheet_28_7.typeInfo,
-      beginingDate: activePillSheetBeginDate.add(const Duration(days: 28)),
-      lastTakenDate: null,
-      createdAt: now(),
-    );
-  }
-
   group("#TakePill", () {
-    final activePillSheetBeginDate = mockNow.date();
-
     setUp(() {
-      prepare(activePillSheetBeginDate: activePillSheetBeginDate, activePillSheetLastTakenDate: null);
+      TestWidgetsFlutterBinding.ensureInitialized();
+
+      final mockTodayRepository = MockTodayService();
+      todayRepository = mockTodayRepository;
+      when(mockTodayRepository.now()).thenReturn(mockToday);
+
+      activePillSheetBeginDate = today();
+      activePillSheetLastTakenDate = null;
+      previousPillSheet = PillSheet(
+        id: "previous_pill_sheet_id",
+        groupIndex: 0,
+        typeInfo: PillSheetType.pillsheet_28_7.typeInfo,
+        beginingDate: activePillSheetBeginDate.subtract(const Duration(days: 28)),
+        lastTakenDate: activePillSheetBeginDate.subtract(const Duration(days: 1)),
+        createdAt: now(),
+      );
+      activedPillSheet = PillSheet(
+        id: "active_pill_sheet_id",
+        groupIndex: 1,
+        typeInfo: PillSheetType.pillsheet_28_7.typeInfo,
+        beginingDate: activePillSheetBeginDate,
+        lastTakenDate: activePillSheetLastTakenDate,
+        createdAt: now(),
+      );
+      nextPillSheet = PillSheet(
+        id: "next_pill_sheet_id",
+        groupIndex: 2,
+        typeInfo: PillSheetType.pillsheet_28_7.typeInfo,
+        beginingDate: activePillSheetBeginDate.add(const Duration(days: 28)),
+        lastTakenDate: null,
+        createdAt: now(),
+      );
     });
-
-    group("pillTakenCount = 1", () {
-      group("one pill sheet", () {
-        setUp(() {
-          activePillSheet = activePillSheet.copyWith(groupIndex: 0);
-          pillSheetGroup = PillSheetGroup(
-            id: "group_id",
-            pillSheetIDs: [activePillSheet.id!],
-            pillSheets: [activePillSheet],
-            createdAt: mockNow,
-          );
-          previousPillSheet = _FakePillSheet();
-          nextPillSheet = _FakePillSheet();
-        });
-
-        test("take pill", () async {
-          final takenDate = mockNow.add(const Duration(seconds: 1));
-
-          final batchFactory = MockBatchFactory();
-          final batch = MockWriteBatch();
-          when(batchFactory.batch()).thenReturn(batch);
-
-          final updatedActivePillSheet = activePillSheet.copyWith(lastTakenDate: takenDate);
-
-          final batchSetPillSheetGroup = MockBatchSetPillSheetGroup();
-          final updatedPillSheetGroup = pillSheetGroup.copyWith(pillSheets: [updatedActivePillSheet]);
-          when(batchSetPillSheetGroup(batch, updatedPillSheetGroup)).thenReturn(updatedPillSheetGroup);
-
-          final batchSetPillSheetModifiedHistory = MockBatchSetPillSheetModifiedHistory();
-          final history = PillSheetModifiedHistoryServiceActionFactory.createTakenPillAction(
-            pillSheetGroupID: pillSheetGroup.id,
-            isQuickRecord: false,
-            before: activePillSheet,
-            after: updatedActivePillSheet,
-            beforePillSheetGroup: pillSheetGroup,
-            afterPillSheetGroup: updatedPillSheetGroup,
-          );
-          when(batchSetPillSheetModifiedHistory(batch, history)).thenReturn(null);
-
-          final takePill = TakePill(
-            batchFactory: batchFactory,
-            batchSetPillSheetModifiedHistory: batchSetPillSheetModifiedHistory,
-            batchSetPillSheetGroup: batchSetPillSheetGroup,
-          );
-          final result = await takePill(
-            takenDate: takenDate,
-            activePillSheet: activePillSheet,
-            pillSheetGroup: pillSheetGroup,
-            isQuickRecord: false,
-          );
-
-          verify(batchSetPillSheetModifiedHistory(batch, history)).called(1);
-          verify(batchSetPillSheetGroup(batch, updatedPillSheetGroup)).called(1);
-
-          expect(result, updatedPillSheetGroup);
-        });
-
-        test("activePillSheet.todayPillIsAlreadyTaken", () async {
-          final takenDate = mockNow.add(const Duration(seconds: 1));
-          activePillSheet = activePillSheet.copyWith(lastTakenDate: takenDate);
-
-          final batchFactory = MockBatchFactory();
-
-          final batchSetPillSheetModifiedHistory = MockBatchSetPillSheetModifiedHistory();
-          final batchSetPillSheetGroup = MockBatchSetPillSheetGroup();
-
-          final takePill = TakePill(
-            batchFactory: batchFactory,
-            batchSetPillSheetModifiedHistory: batchSetPillSheetModifiedHistory,
-            batchSetPillSheetGroup: batchSetPillSheetGroup,
-          );
-          final result = await takePill(
-            takenDate: takenDate,
-            activePillSheet: activePillSheet,
-            pillSheetGroup: pillSheetGroup,
-            isQuickRecord: false,
-          );
-
-          expect(result, null);
-        });
-      });
-    });
-
-    group("three pill sheet", () {
-      test("take pill", () async {
-        final takenDate = mockNow.add(const Duration(seconds: 1));
+    group("one pill sheet", () {
+      setUp(() {
+        activedPillSheet = activedPillSheet.copyWith(groupIndex: 0);
         pillSheetGroup = PillSheetGroup(
           id: "group_id",
-          pillSheetIDs: [previousPillSheet.id!, activePillSheet.id!, nextPillSheet.id!],
-          pillSheets: [previousPillSheet, activePillSheet, nextPillSheet],
-          createdAt: mockNow,
+          pillSheetIDs: [activedPillSheet.id!],
+          pillSheets: [activedPillSheet],
+          createdAt: mockToday,
         );
+      });
+
+      test("take pill", () async {
+        final takenDate = mockToday.add(const Duration(seconds: 1));
 
         final batchFactory = MockBatchFactory();
         final batch = MockWriteBatch();
         when(batchFactory.batch()).thenReturn(batch);
 
-        final updatedActivePillSheet = activePillSheet.copyWith(lastTakenDate: takenDate);
-
-        final batchSetPillSheetGroup = MockBatchSetPillSheetGroup();
-        final updatedPillSheetGroup = pillSheetGroup.copyWith(pillSheets: [previousPillSheet, updatedActivePillSheet, nextPillSheet]);
-        when(batchSetPillSheetGroup(batch, updatedPillSheetGroup)).thenReturn(updatedPillSheetGroup);
+        final updatedActivePillSheet = activedPillSheet.copyWith(lastTakenDate: takenDate);
 
         final batchSetPillSheetModifiedHistory = MockBatchSetPillSheetModifiedHistory();
         final history = PillSheetModifiedHistoryServiceActionFactory.createTakenPillAction(
-          pillSheetGroupID: pillSheetGroup.id,
-          isQuickRecord: false,
-          before: activePillSheet,
-          after: updatedActivePillSheet,
-          beforePillSheetGroup: pillSheetGroup,
-          afterPillSheetGroup: updatedPillSheetGroup,
-        );
+            pillSheetGroupID: pillSheetGroup.id, isQuickRecord: false, before: activedPillSheet, after: updatedActivePillSheet);
         when(batchSetPillSheetModifiedHistory(batch, history)).thenReturn(null);
+
+        final batchSetPillSheetGroup = MockBatchSetPillSheetGroup();
+        final updatedPillSheetGroup = pillSheetGroup.copyWith(pillSheets: [updatedActivePillSheet]);
+        when(batchSetPillSheetGroup(batch, updatedPillSheetGroup)).thenReturn(updatedPillSheetGroup);
 
         final takePill = TakePill(
           batchFactory: batchFactory,
@@ -180,7 +89,75 @@ void main() {
         );
         final result = await takePill(
           takenDate: takenDate,
-          activePillSheet: activePillSheet,
+          activedPillSheet: activedPillSheet,
+          pillSheetGroup: pillSheetGroup,
+          isQuickRecord: false,
+        );
+
+        verify(batchSetPillSheetModifiedHistory(batch, history)).called(1);
+        verify(batchSetPillSheetGroup(batch, updatedPillSheetGroup)).called(1);
+
+        expect(result, updatedPillSheetGroup);
+      });
+
+      test("activedPillSheet.todayPillIsAlreadyTaken", () async {
+        final takenDate = mockToday.add(const Duration(seconds: 1));
+        activedPillSheet = activedPillSheet.copyWith(lastTakenDate: takenDate);
+
+        final batchFactory = MockBatchFactory();
+
+        final batchSetPillSheetModifiedHistory = MockBatchSetPillSheetModifiedHistory();
+        final batchSetPillSheetGroup = MockBatchSetPillSheetGroup();
+
+        final takePill = TakePill(
+          batchFactory: batchFactory,
+          batchSetPillSheetModifiedHistory: batchSetPillSheetModifiedHistory,
+          batchSetPillSheetGroup: batchSetPillSheetGroup,
+        );
+        final result = await takePill(
+          takenDate: takenDate,
+          activedPillSheet: activedPillSheet,
+          pillSheetGroup: pillSheetGroup,
+          isQuickRecord: false,
+        );
+
+        expect(result, null);
+      });
+    });
+
+    group("three pill sheet", () {
+      test("take pill", () async {
+        final takenDate = mockToday.add(const Duration(seconds: 1));
+        pillSheetGroup = PillSheetGroup(
+          id: "group_id",
+          pillSheetIDs: [previousPillSheet.id!, activedPillSheet.id!, nextPillSheet.id!],
+          pillSheets: [previousPillSheet, activedPillSheet, nextPillSheet],
+          createdAt: mockToday,
+        );
+
+        final batchFactory = MockBatchFactory();
+        final batch = MockWriteBatch();
+        when(batchFactory.batch()).thenReturn(batch);
+
+        final updatedActivePillSheet = activedPillSheet.copyWith(lastTakenDate: takenDate);
+
+        final batchSetPillSheetModifiedHistory = MockBatchSetPillSheetModifiedHistory();
+        final history = PillSheetModifiedHistoryServiceActionFactory.createTakenPillAction(
+            pillSheetGroupID: pillSheetGroup.id, isQuickRecord: false, before: activedPillSheet, after: updatedActivePillSheet);
+        when(batchSetPillSheetModifiedHistory(batch, history)).thenReturn(null);
+
+        final batchSetPillSheetGroup = MockBatchSetPillSheetGroup();
+        final updatedPillSheetGroup = pillSheetGroup.copyWith(pillSheets: [previousPillSheet, updatedActivePillSheet, nextPillSheet]);
+        when(batchSetPillSheetGroup(batch, updatedPillSheetGroup)).thenReturn(updatedPillSheetGroup);
+
+        final takePill = TakePill(
+          batchFactory: batchFactory,
+          batchSetPillSheetModifiedHistory: batchSetPillSheetModifiedHistory,
+          batchSetPillSheetGroup: batchSetPillSheetGroup,
+        );
+        final result = await takePill(
+          takenDate: takenDate,
+          activedPillSheet: activedPillSheet,
           pillSheetGroup: pillSheetGroup,
           isQuickRecord: false,
         );
@@ -190,14 +167,14 @@ void main() {
         expect(result, updatedPillSheetGroup);
       });
 
-      test("activePillSheet.todayPillIsAlreadyTaken", () async {
-        final takenDate = mockNow.add(const Duration(seconds: 1));
-        activePillSheet = activePillSheet.copyWith(lastTakenDate: takenDate);
+      test("activedPillSheet.todayPillIsAlreadyTaken", () async {
+        final takenDate = mockToday.add(const Duration(seconds: 1));
+        activedPillSheet = activedPillSheet.copyWith(lastTakenDate: takenDate);
         pillSheetGroup = PillSheetGroup(
           id: "group_id",
-          pillSheetIDs: [previousPillSheet.id!, activePillSheet.id!, nextPillSheet.id!],
-          pillSheets: [previousPillSheet, activePillSheet, nextPillSheet],
-          createdAt: mockNow,
+          pillSheetIDs: [previousPillSheet.id!, activedPillSheet.id!, nextPillSheet.id!],
+          pillSheets: [previousPillSheet, activedPillSheet, nextPillSheet],
+          createdAt: mockToday,
         );
 
         final batchFactory = MockBatchFactory();
@@ -212,7 +189,7 @@ void main() {
         );
         final result = await takePill(
           takenDate: takenDate,
-          activePillSheet: activePillSheet,
+          activedPillSheet: activedPillSheet,
           pillSheetGroup: pillSheetGroup,
           isQuickRecord: false,
         );
@@ -221,34 +198,28 @@ void main() {
       });
 
       test("bounday test. taken activePillSheet.estimatedEndTakenDate", () async {
-        final takenDate = activePillSheet.estimatedEndTakenDate;
+        final takenDate = activedPillSheet.estimatedEndTakenDate;
         pillSheetGroup = PillSheetGroup(
           id: "group_id",
-          pillSheetIDs: [previousPillSheet.id!, activePillSheet.id!, nextPillSheet.id!],
-          pillSheets: [previousPillSheet, activePillSheet, nextPillSheet],
-          createdAt: mockNow,
+          pillSheetIDs: [previousPillSheet.id!, activedPillSheet.id!, nextPillSheet.id!],
+          pillSheets: [previousPillSheet, activedPillSheet, nextPillSheet],
+          createdAt: mockToday,
         );
 
         final batchFactory = MockBatchFactory();
         final batch = MockWriteBatch();
         when(batchFactory.batch()).thenReturn(batch);
 
-        final updatedActivePillSheet = activePillSheet.copyWith(lastTakenDate: takenDate);
+        final updatedActivePillSheet = activedPillSheet.copyWith(lastTakenDate: takenDate);
+
+        final batchSetPillSheetModifiedHistory = MockBatchSetPillSheetModifiedHistory();
+        final history = PillSheetModifiedHistoryServiceActionFactory.createTakenPillAction(
+            pillSheetGroupID: pillSheetGroup.id, isQuickRecord: false, before: activedPillSheet, after: updatedActivePillSheet);
+        when(batchSetPillSheetModifiedHistory(batch, history)).thenReturn(null);
 
         final batchSetPillSheetGroup = MockBatchSetPillSheetGroup();
         final updatedPillSheetGroup = pillSheetGroup.copyWith(pillSheets: [previousPillSheet, updatedActivePillSheet, nextPillSheet]);
         when(batchSetPillSheetGroup(batch, updatedPillSheetGroup)).thenReturn(updatedPillSheetGroup);
-
-        final batchSetPillSheetModifiedHistory = MockBatchSetPillSheetModifiedHistory();
-        final history = PillSheetModifiedHistoryServiceActionFactory.createTakenPillAction(
-          pillSheetGroupID: pillSheetGroup.id,
-          isQuickRecord: false,
-          before: activePillSheet,
-          after: updatedActivePillSheet,
-          beforePillSheetGroup: pillSheetGroup,
-          afterPillSheetGroup: updatedPillSheetGroup,
-        );
-        when(batchSetPillSheetModifiedHistory(batch, history)).thenReturn(null);
 
         final takePill = TakePill(
           batchFactory: batchFactory,
@@ -257,7 +228,7 @@ void main() {
         );
         final result = await takePill(
           takenDate: takenDate,
-          activePillSheet: activePillSheet,
+          activedPillSheet: activedPillSheet,
           pillSheetGroup: pillSheetGroup,
           isQuickRecord: false,
         );
@@ -268,34 +239,28 @@ void main() {
         expect(result, updatedPillSheetGroup);
       });
       test("bounday test. taken activePillSheet.estimatedEndTakenDate + 1.second. it is over active pill sheet range pattern", () async {
-        final takenDate = activePillSheet.estimatedEndTakenDate.add(const Duration(seconds: 1));
+        final takenDate = activedPillSheet.estimatedEndTakenDate.add(const Duration(seconds: 1));
         pillSheetGroup = PillSheetGroup(
           id: "group_id",
-          pillSheetIDs: [previousPillSheet.id!, activePillSheet.id!, nextPillSheet.id!],
-          pillSheets: [previousPillSheet, activePillSheet, nextPillSheet],
-          createdAt: mockNow,
+          pillSheetIDs: [previousPillSheet.id!, activedPillSheet.id!, nextPillSheet.id!],
+          pillSheets: [previousPillSheet, activedPillSheet, nextPillSheet],
+          createdAt: mockToday,
         );
 
         final batchFactory = MockBatchFactory();
         final batch = MockWriteBatch();
         when(batchFactory.batch()).thenReturn(batch);
 
-        final updatedActivePillSheet = activePillSheet.copyWith(lastTakenDate: activePillSheet.estimatedEndTakenDate);
+        final updatedActivePillSheet = activedPillSheet.copyWith(lastTakenDate: activedPillSheet.estimatedEndTakenDate);
+
+        final batchSetPillSheetModifiedHistory = MockBatchSetPillSheetModifiedHistory();
+        final history = PillSheetModifiedHistoryServiceActionFactory.createTakenPillAction(
+            pillSheetGroupID: pillSheetGroup.id, isQuickRecord: false, before: activedPillSheet, after: updatedActivePillSheet);
+        when(batchSetPillSheetModifiedHistory(batch, history)).thenReturn(null);
 
         final batchSetPillSheetGroup = MockBatchSetPillSheetGroup();
         final updatedPillSheetGroup = pillSheetGroup.copyWith(pillSheets: [previousPillSheet, updatedActivePillSheet, nextPillSheet]);
         when(batchSetPillSheetGroup(batch, updatedPillSheetGroup)).thenReturn(updatedPillSheetGroup);
-
-        final batchSetPillSheetModifiedHistory = MockBatchSetPillSheetModifiedHistory();
-        final history = PillSheetModifiedHistoryServiceActionFactory.createTakenPillAction(
-          pillSheetGroupID: pillSheetGroup.id,
-          isQuickRecord: false,
-          before: activePillSheet,
-          after: updatedActivePillSheet,
-          beforePillSheetGroup: pillSheetGroup,
-          afterPillSheetGroup: updatedPillSheetGroup,
-        );
-        when(batchSetPillSheetModifiedHistory(batch, history)).thenReturn(null);
 
         final takePill = TakePill(
           batchFactory: batchFactory,
@@ -304,7 +269,7 @@ void main() {
         );
         final result = await takePill(
           takenDate: takenDate,
-          activePillSheet: activePillSheet,
+          activedPillSheet: activedPillSheet,
           pillSheetGroup: pillSheetGroup,
           isQuickRecord: false,
         );
@@ -318,38 +283,29 @@ void main() {
       test(
           "bounday test. activePillSheet.lastTakenDate != null and taken activePillSheet.estimatedEndTakenDate + 1.second. it is over active pill sheet range pattern. ",
           () async {
-        final takenDate = activePillSheet.estimatedEndTakenDate.add(const Duration(seconds: 1));
-        final lastTakenDate = activePillSheet.estimatedEndTakenDate.subtract(const Duration(days: 10));
-        activePillSheet = activePillSheet.copyWith(
-          lastTakenDate: lastTakenDate,
-        );
+        final takenDate = activedPillSheet.estimatedEndTakenDate.add(const Duration(seconds: 1));
+        activedPillSheet = activedPillSheet.copyWith(lastTakenDate: activedPillSheet.estimatedEndTakenDate.subtract(const Duration(days: 10)));
         pillSheetGroup = PillSheetGroup(
           id: "group_id",
-          pillSheetIDs: [previousPillSheet.id!, activePillSheet.id!, nextPillSheet.id!],
-          pillSheets: [previousPillSheet, activePillSheet, nextPillSheet],
-          createdAt: mockNow,
+          pillSheetIDs: [previousPillSheet.id!, activedPillSheet.id!, nextPillSheet.id!],
+          pillSheets: [previousPillSheet, activedPillSheet, nextPillSheet],
+          createdAt: mockToday,
         );
 
         final batchFactory = MockBatchFactory();
         final batch = MockWriteBatch();
         when(batchFactory.batch()).thenReturn(batch);
 
-        final updatedActivePillSheet = activePillSheet.copyWith(lastTakenDate: activePillSheet.estimatedEndTakenDate);
+        final updatedActivePillSheet = activedPillSheet.copyWith(lastTakenDate: activedPillSheet.estimatedEndTakenDate);
+
+        final batchSetPillSheetModifiedHistory = MockBatchSetPillSheetModifiedHistory();
+        final history = PillSheetModifiedHistoryServiceActionFactory.createTakenPillAction(
+            pillSheetGroupID: pillSheetGroup.id, isQuickRecord: false, before: activedPillSheet, after: updatedActivePillSheet);
+        when(batchSetPillSheetModifiedHistory(batch, history)).thenReturn(null);
 
         final batchSetPillSheetGroup = MockBatchSetPillSheetGroup();
         final updatedPillSheetGroup = pillSheetGroup.copyWith(pillSheets: [previousPillSheet, updatedActivePillSheet, nextPillSheet]);
         when(batchSetPillSheetGroup(batch, updatedPillSheetGroup)).thenReturn(updatedPillSheetGroup);
-
-        final batchSetPillSheetModifiedHistory = MockBatchSetPillSheetModifiedHistory();
-        final history = PillSheetModifiedHistoryServiceActionFactory.createTakenPillAction(
-          pillSheetGroupID: pillSheetGroup.id,
-          isQuickRecord: false,
-          before: activePillSheet,
-          after: updatedActivePillSheet,
-          beforePillSheetGroup: pillSheetGroup,
-          afterPillSheetGroup: updatedPillSheetGroup,
-        );
-        when(batchSetPillSheetModifiedHistory(batch, history)).thenReturn(null);
 
         final takePill = TakePill(
           batchFactory: batchFactory,
@@ -358,7 +314,7 @@ void main() {
         );
         final result = await takePill(
           takenDate: takenDate,
-          activePillSheet: activePillSheet,
+          activedPillSheet: activedPillSheet,
           pillSheetGroup: pillSheetGroup,
           isQuickRecord: false,
         );
@@ -368,16 +324,13 @@ void main() {
         expect(result, isNull);
       });
       test("when previous pill sheet is not taken all.", () async {
-        final takenDate = mockNow.add(const Duration(seconds: 1));
-        final lastTakenDate = previousPillSheet.lastTakenDate!.subtract(const Duration(days: 1));
-        previousPillSheet = previousPillSheet.copyWith(
-          lastTakenDate: lastTakenDate,
-        );
+        final takenDate = mockToday.add(const Duration(seconds: 1));
+        previousPillSheet = previousPillSheet.copyWith(lastTakenDate: previousPillSheet.lastTakenDate!.subtract(const Duration(days: 1)));
         pillSheetGroup = PillSheetGroup(
           id: "group_id",
-          pillSheetIDs: [previousPillSheet.id!, activePillSheet.id!, nextPillSheet.id!],
-          pillSheets: [previousPillSheet, activePillSheet, nextPillSheet],
-          createdAt: mockNow,
+          pillSheetIDs: [previousPillSheet.id!, activedPillSheet.id!, nextPillSheet.id!],
+          pillSheets: [previousPillSheet, activedPillSheet, nextPillSheet],
+          createdAt: mockToday,
         );
 
         final batchFactory = MockBatchFactory();
@@ -385,22 +338,16 @@ void main() {
         when(batchFactory.batch()).thenReturn(batch);
 
         final updatedPreviousPillSheet = previousPillSheet.copyWith(lastTakenDate: previousPillSheet.estimatedEndTakenDate);
-        final updatedActivePillSheet = activePillSheet.copyWith(lastTakenDate: takenDate);
+        final updatedActivePillSheet = activedPillSheet.copyWith(lastTakenDate: takenDate);
+
+        final batchSetPillSheetModifiedHistory = MockBatchSetPillSheetModifiedHistory();
+        final history = PillSheetModifiedHistoryServiceActionFactory.createTakenPillAction(
+            pillSheetGroupID: pillSheetGroup.id, isQuickRecord: false, before: previousPillSheet, after: updatedActivePillSheet);
+        when(batchSetPillSheetModifiedHistory(batch, history)).thenReturn(null);
 
         final batchSetPillSheetGroup = MockBatchSetPillSheetGroup();
         final updatedPillSheetGroup = pillSheetGroup.copyWith(pillSheets: [updatedPreviousPillSheet, updatedActivePillSheet, nextPillSheet]);
         when(batchSetPillSheetGroup(batch, updatedPillSheetGroup)).thenReturn(updatedPillSheetGroup);
-
-        final batchSetPillSheetModifiedHistory = MockBatchSetPillSheetModifiedHistory();
-        final history = PillSheetModifiedHistoryServiceActionFactory.createTakenPillAction(
-          pillSheetGroupID: pillSheetGroup.id,
-          isQuickRecord: false,
-          before: previousPillSheet,
-          after: updatedActivePillSheet,
-          beforePillSheetGroup: pillSheetGroup,
-          afterPillSheetGroup: updatedPillSheetGroup,
-        );
-        when(batchSetPillSheetModifiedHistory(batch, history)).thenReturn(null);
 
         final takePill = TakePill(
           batchFactory: batchFactory,
@@ -409,7 +356,7 @@ void main() {
         );
         final result = await takePill(
           takenDate: takenDate,
-          activePillSheet: activePillSheet,
+          activedPillSheet: activedPillSheet,
           pillSheetGroup: pillSheetGroup,
           isQuickRecord: false,
         );
@@ -419,15 +366,12 @@ void main() {
         expect(result, updatedPillSheetGroup);
       });
       test("when previous pill sheet is not taken all. and takenDate is previous pill sheet estimate last taken date", () async {
-        final lastTakenDate = previousPillSheet.lastTakenDate!.subtract(const Duration(days: 1));
-        previousPillSheet = previousPillSheet.copyWith(
-          lastTakenDate: lastTakenDate,
-        );
+        previousPillSheet = previousPillSheet.copyWith(lastTakenDate: previousPillSheet.lastTakenDate!.subtract(const Duration(days: 1)));
         pillSheetGroup = PillSheetGroup(
           id: "group_id",
-          pillSheetIDs: [previousPillSheet.id!, activePillSheet.id!, nextPillSheet.id!],
-          pillSheets: [previousPillSheet, activePillSheet, nextPillSheet],
-          createdAt: mockNow,
+          pillSheetIDs: [previousPillSheet.id!, activedPillSheet.id!, nextPillSheet.id!],
+          pillSheets: [previousPillSheet, activedPillSheet, nextPillSheet],
+          createdAt: mockToday,
         );
         final takenDate = previousPillSheet.estimatedEndTakenDate;
 
@@ -437,20 +381,14 @@ void main() {
 
         final updatedPreviousPillSheet = previousPillSheet.copyWith(lastTakenDate: previousPillSheet.estimatedEndTakenDate);
 
-        final batchSetPillSheetGroup = MockBatchSetPillSheetGroup();
-        final updatedPillSheetGroup = pillSheetGroup.copyWith(pillSheets: [updatedPreviousPillSheet, activePillSheet, nextPillSheet]);
-        when(batchSetPillSheetGroup(batch, updatedPillSheetGroup)).thenReturn(updatedPillSheetGroup);
-
         final batchSetPillSheetModifiedHistory = MockBatchSetPillSheetModifiedHistory();
         final history = PillSheetModifiedHistoryServiceActionFactory.createTakenPillAction(
-          pillSheetGroupID: pillSheetGroup.id,
-          isQuickRecord: false,
-          before: previousPillSheet,
-          after: updatedPreviousPillSheet,
-          beforePillSheetGroup: pillSheetGroup,
-          afterPillSheetGroup: updatedPillSheetGroup,
-        );
+            pillSheetGroupID: pillSheetGroup.id, isQuickRecord: false, before: previousPillSheet, after: updatedPreviousPillSheet);
         when(batchSetPillSheetModifiedHistory(batch, history)).thenReturn(null);
+
+        final batchSetPillSheetGroup = MockBatchSetPillSheetGroup();
+        final updatedPillSheetGroup = pillSheetGroup.copyWith(pillSheets: [updatedPreviousPillSheet, activedPillSheet, nextPillSheet]);
+        when(batchSetPillSheetGroup(batch, updatedPillSheetGroup)).thenReturn(updatedPillSheetGroup);
 
         final takePill = TakePill(
           batchFactory: batchFactory,
@@ -459,7 +397,7 @@ void main() {
         );
         final result = await takePill(
           takenDate: takenDate,
-          activePillSheet: activePillSheet,
+          activedPillSheet: activedPillSheet,
           pillSheetGroup: pillSheetGroup,
           isQuickRecord: false,
         );
@@ -473,20 +411,13 @@ void main() {
       test(
           "when previous pill sheet is not taken all. And active pill sheet lastTakenDate equal beginDate minus 1 that means reverted taken first pill. And record previous pill sheet last taken date",
           () async {
-        final previousPillSheetLastTakenDate = previousPillSheet.lastTakenDate!.subtract(const Duration(days: 1));
-        previousPillSheet = previousPillSheet.copyWith(
-          lastTakenDate: previousPillSheetLastTakenDate,
-        );
-        final activePillSheetLastTakenDate = activePillSheet.beginingDate.subtract(const Duration(days: 1));
-        activePillSheet = activePillSheet.copyWith(
-          lastTakenDate: activePillSheetLastTakenDate,
-        );
-
+        previousPillSheet = previousPillSheet.copyWith(lastTakenDate: previousPillSheet.lastTakenDate!.subtract(const Duration(days: 1)));
+        activedPillSheet = activedPillSheet.copyWith(lastTakenDate: activedPillSheet.beginingDate.subtract(const Duration(days: 1)));
         pillSheetGroup = PillSheetGroup(
           id: "group_id",
-          pillSheetIDs: [previousPillSheet.id!, activePillSheet.id!, nextPillSheet.id!],
-          pillSheets: [previousPillSheet, activePillSheet, nextPillSheet],
-          createdAt: mockNow,
+          pillSheetIDs: [previousPillSheet.id!, activedPillSheet.id!, nextPillSheet.id!],
+          pillSheets: [previousPillSheet, activedPillSheet, nextPillSheet],
+          createdAt: mockToday,
         );
         final takenDate = previousPillSheet.estimatedEndTakenDate.subtract(const Duration(seconds: 1));
 
@@ -496,20 +427,14 @@ void main() {
 
         final updatedPreviousPillSheet = previousPillSheet.copyWith(lastTakenDate: takenDate);
 
-        final batchSetPillSheetGroup = MockBatchSetPillSheetGroup();
-        final updatedPillSheetGroup = pillSheetGroup.copyWith(pillSheets: [updatedPreviousPillSheet, activePillSheet, nextPillSheet]);
-        when(batchSetPillSheetGroup(batch, updatedPillSheetGroup)).thenReturn(updatedPillSheetGroup);
-
         final batchSetPillSheetModifiedHistory = MockBatchSetPillSheetModifiedHistory();
         final history = PillSheetModifiedHistoryServiceActionFactory.createTakenPillAction(
-          pillSheetGroupID: pillSheetGroup.id,
-          isQuickRecord: false,
-          before: previousPillSheet,
-          after: updatedPreviousPillSheet,
-          beforePillSheetGroup: pillSheetGroup,
-          afterPillSheetGroup: updatedPillSheetGroup,
-        );
+            pillSheetGroupID: pillSheetGroup.id, isQuickRecord: false, before: previousPillSheet, after: updatedPreviousPillSheet);
         when(batchSetPillSheetModifiedHistory(batch, history)).thenReturn(null);
+
+        final batchSetPillSheetGroup = MockBatchSetPillSheetGroup();
+        final updatedPillSheetGroup = pillSheetGroup.copyWith(pillSheets: [updatedPreviousPillSheet, activedPillSheet, nextPillSheet]);
+        when(batchSetPillSheetGroup(batch, updatedPillSheetGroup)).thenReturn(updatedPillSheetGroup);
 
         final takePill = TakePill(
           batchFactory: batchFactory,
@@ -518,7 +443,7 @@ void main() {
         );
         final result = await takePill(
           takenDate: takenDate,
-          activePillSheet: activePillSheet,
+          activedPillSheet: activedPillSheet,
           pillSheetGroup: pillSheetGroup,
           isQuickRecord: false,
         );
@@ -529,57 +454,45 @@ void main() {
         expect(result, updatedPillSheetGroup);
       });
 
-      test("Real case 1. Timesensitive pattern(takenDate(19:02:00) < beginingDate(19:02:21)) and with rest duration", () async {
-        previousPillSheet = previousPillSheet.copyWith(
-          beginingDate: DateTime.parse(
-            "2022-06-22T19:02:21",
-          ),
-          lastTakenDate: DateTime.parse("2022-07-23T19:00:04"),
-          restDurations: [
-            RestDuration(
+      test("Real case 1. Timesensitive pattern(takenDate(19:02:00) < beginingDate(19:02:21)) and with rest durations", () async {
+        previousPillSheet =
+            previousPillSheet.copyWith(beginingDate: DateTime.parse("2022-06-22T19:02:21"), lastTakenDate: DateTime.parse("2022-07-23T19:00:04"));
+        previousPillSheet = previousPillSheet.copyWith(restDurations: [
+          RestDuration(
               beginDate: DateTime.parse("2022-07-14T18:25:41"),
               createdDate: DateTime.parse("2022-07-14T18:25:41"),
-              endDate: DateTime.parse("2022-07-18T18:10:01"),
-            )
-          ],
-        );
-
-        activePillSheet = activePillSheet.copyWith(beginingDate: DateTime.parse("2022-07-24T19:02:21"));
+              endDate: DateTime.parse("2022-07-18T18:10:01"))
+        ]);
+        activedPillSheet = activedPillSheet.copyWith(beginingDate: DateTime.parse("2022-07-24T19:02:21"), lastTakenDate: null);
         pillSheetGroup = PillSheetGroup(
           id: "group_id",
-          pillSheetIDs: [previousPillSheet.id!, activePillSheet.id!, nextPillSheet.id!],
-          pillSheets: [previousPillSheet, activePillSheet, nextPillSheet],
-          createdAt: mockNow,
+          pillSheetIDs: [previousPillSheet.id!, activedPillSheet.id!, nextPillSheet.id!],
+          pillSheets: [previousPillSheet, activedPillSheet, nextPillSheet],
+          createdAt: mockToday,
         );
 
+        final takenDate = mockToday.add(const Duration(seconds: 1));
         pillSheetGroup = PillSheetGroup(
           id: "group_id",
-          pillSheetIDs: [previousPillSheet.id!, activePillSheet.id!, nextPillSheet.id!],
-          pillSheets: [previousPillSheet, activePillSheet, nextPillSheet],
-          createdAt: mockNow,
+          pillSheetIDs: [previousPillSheet.id!, activedPillSheet.id!, nextPillSheet.id!],
+          pillSheets: [previousPillSheet, activedPillSheet, nextPillSheet],
+          createdAt: mockToday,
         );
 
         final batchFactory = MockBatchFactory();
         final batch = MockWriteBatch();
         when(batchFactory.batch()).thenReturn(batch);
 
-        final takenDate = DateTime.parse("2022-07-24T19:02:00");
-        final updatedActivePillSheet = activePillSheet.copyWith(lastTakenDate: takenDate);
+        final updatedActivePillSheet = activedPillSheet.copyWith(lastTakenDate: takenDate);
+
+        final batchSetPillSheetModifiedHistory = MockBatchSetPillSheetModifiedHistory();
+        final history = PillSheetModifiedHistoryServiceActionFactory.createTakenPillAction(
+            pillSheetGroupID: pillSheetGroup.id, isQuickRecord: false, before: activedPillSheet, after: updatedActivePillSheet);
+        when(batchSetPillSheetModifiedHistory(batch, history)).thenReturn(null);
 
         final batchSetPillSheetGroup = MockBatchSetPillSheetGroup();
         final updatedPillSheetGroup = pillSheetGroup.copyWith(pillSheets: [previousPillSheet, updatedActivePillSheet, nextPillSheet]);
         when(batchSetPillSheetGroup(batch, updatedPillSheetGroup)).thenReturn(updatedPillSheetGroup);
-
-        final batchSetPillSheetModifiedHistory = MockBatchSetPillSheetModifiedHistory();
-        final history = PillSheetModifiedHistoryServiceActionFactory.createTakenPillAction(
-          pillSheetGroupID: pillSheetGroup.id,
-          isQuickRecord: false,
-          before: activePillSheet,
-          after: updatedActivePillSheet,
-          beforePillSheetGroup: pillSheetGroup,
-          afterPillSheetGroup: updatedPillSheetGroup,
-        );
-        when(batchSetPillSheetModifiedHistory(batch, history)).thenReturn(null);
 
         final takePill = TakePill(
           batchFactory: batchFactory,
@@ -588,7 +501,7 @@ void main() {
         );
         final result = await takePill(
           takenDate: takenDate,
-          activePillSheet: activePillSheet,
+          activedPillSheet: activedPillSheet,
           pillSheetGroup: pillSheetGroup,
           isQuickRecord: false,
         );
@@ -603,12 +516,11 @@ void main() {
         todayRepository = mockTodayRepository;
         when(mockTodayRepository.now()).thenReturn(mockToday);
 
-        previousPillSheet = previousPillSheet
-            .copyWith(beginingDate: DateTime.parse("2022-06-23T00:00:00"))
-            .copyWith(lastTakenDate: DateTime.parse("2022-07-20T00:00:00"));
-        activePillSheet =
-            activePillSheet.copyWith(beginingDate: DateTime.parse("2022-07-21T00:00:00")).copyWith(lastTakenDate: DateTime.parse("2022-08-11"));
-        activePillSheet = activePillSheet.copyWith(restDurations: [
+        previousPillSheet =
+            previousPillSheet.copyWith(beginingDate: DateTime.parse("2022-06-23T00:00:00"), lastTakenDate: DateTime.parse("2022-07-20T00:00:00"));
+        activedPillSheet =
+            activedPillSheet.copyWith(beginingDate: DateTime.parse("2022-07-21T00:00:00"), lastTakenDate: DateTime.parse("2022-08-11"));
+        activedPillSheet = activedPillSheet.copyWith(restDurations: [
           RestDuration(
               beginDate: DateTime.parse("2022-08-04T08:19:04"),
               createdDate: DateTime.parse("2022-08-04T08:19:04"),
@@ -632,16 +544,16 @@ void main() {
         );
         pillSheetGroup = PillSheetGroup(
           id: "group_id",
-          pillSheetIDs: [previousPillSheet.id!, activePillSheet.id!, nextPillSheet.id!],
-          pillSheets: [previousPillSheet, activePillSheet, nextPillSheet],
+          pillSheetIDs: [previousPillSheet.id!, activedPillSheet.id!, nextPillSheet.id!],
+          pillSheets: [previousPillSheet, activedPillSheet, nextPillSheet],
           createdAt: mockToday,
         );
 
         final takenDate = mockToday.add(const Duration(seconds: 1));
         pillSheetGroup = PillSheetGroup(
           id: "group_id",
-          pillSheetIDs: [previousPillSheet.id!, activePillSheet.id!, nextPillSheet.id!],
-          pillSheets: [previousPillSheet, activePillSheet, nextPillSheet],
+          pillSheetIDs: [previousPillSheet.id!, activedPillSheet.id!, nextPillSheet.id!],
+          pillSheets: [previousPillSheet, activedPillSheet, nextPillSheet],
           createdAt: mockToday,
         );
 
@@ -649,22 +561,15 @@ void main() {
         final batch = MockWriteBatch();
         when(batchFactory.batch()).thenReturn(batch);
 
-        final updatedActivePillSheet = activePillSheet.copyWith(lastTakenDate: takenDate);
-
-        final updatedPillSheetGroup = pillSheetGroup.copyWith(pillSheets: [updatedActivePillSheet]);
-        final batchSetPillSheetGroup = MockBatchSetPillSheetGroup();
-        when(batchSetPillSheetGroup(batch, updatedPillSheetGroup)).thenReturn(pillSheetGroup);
+        final updatedActivePillSheet = activedPillSheet.copyWith(lastTakenDate: takenDate);
 
         final batchSetPillSheetModifiedHistory = MockBatchSetPillSheetModifiedHistory();
         final history = PillSheetModifiedHistoryServiceActionFactory.createTakenPillAction(
-          pillSheetGroupID: pillSheetGroup.id,
-          isQuickRecord: false,
-          before: activePillSheet,
-          after: updatedActivePillSheet,
-          beforePillSheetGroup: pillSheetGroup,
-          afterPillSheetGroup: updatedPillSheetGroup,
-        );
+            pillSheetGroupID: pillSheetGroup.id, isQuickRecord: false, before: activedPillSheet, after: updatedActivePillSheet);
         when(batchSetPillSheetModifiedHistory(batch, history)).thenReturn(null);
+
+        final batchSetPillSheetGroup = MockBatchSetPillSheetGroup();
+        when(batchSetPillSheetGroup(batch, pillSheetGroup)).thenReturn(pillSheetGroup);
 
         final takePill = TakePill(
           batchFactory: batchFactory,
@@ -673,7 +578,7 @@ void main() {
         );
         final result = await takePill(
           takenDate: takenDate,
-          activePillSheet: activePillSheet,
+          activedPillSheet: activedPillSheet,
           pillSheetGroup: pillSheetGroup,
           isQuickRecord: false,
         );

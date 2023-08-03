@@ -60,13 +60,7 @@ class PillMarkState extends State<PillMark> with TickerProviderStateMixin {
         Stack(
           alignment: Alignment.center,
           children: [
-            switch (widget.pillMarkType) {
-              PillMarkType.normal => const NormalPillMark(),
-              PillMarkType.rest => const RestPillMark(),
-              PillMarkType.fake => const FakePillMark(),
-              PillMarkType.selected => const SelectedPillMark(),
-              PillMarkType.done => const LightGrayPillMark(),
-            },
+            _mark(widget.pillMarkType),
             if (widget.showsCheckmark) const Align(alignment: Alignment.center, child: PillMarkDoneMark()),
           ],
         ),
@@ -86,5 +80,20 @@ class PillMarkState extends State<PillMark> with TickerProviderStateMixin {
           ),
       ],
     );
+  }
+
+  Widget _mark(PillMarkType type) {
+    switch (type) {
+      case PillMarkType.normal:
+        return const NormalPillMark();
+      case PillMarkType.rest:
+        return const RestPillMark();
+      case PillMarkType.fake:
+        return const FakePillMark();
+      case PillMarkType.selected:
+        return const SelectedPillMark();
+      case PillMarkType.done:
+        return const LightGrayPillMark();
+    }
   }
 }

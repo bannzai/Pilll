@@ -21,6 +21,7 @@ PillSheetModifiedHistoryValue _$PillSheetModifiedHistoryValueFromJson(
 
 /// @nodoc
 mixin _$PillSheetModifiedHistoryValue {
+  DateTime? get beginTrialDate => throw _privateConstructorUsedError;
   CreatedPillSheetValue? get createdPillSheet =>
       throw _privateConstructorUsedError;
   AutomaticallyRecordedLastTakenDateValue?
@@ -58,7 +59,8 @@ abstract class $PillSheetModifiedHistoryValueCopyWith<$Res> {
           PillSheetModifiedHistoryValue>;
   @useResult
   $Res call(
-      {CreatedPillSheetValue? createdPillSheet,
+      {DateTime? beginTrialDate,
+      CreatedPillSheetValue? createdPillSheet,
       AutomaticallyRecordedLastTakenDateValue?
           automaticallyRecordedLastTakenDate,
       DeletedPillSheetValue? deletedPillSheet,
@@ -99,6 +101,7 @@ class _$PillSheetModifiedHistoryValueCopyWithImpl<$Res,
   @pragma('vm:prefer-inline')
   @override
   $Res call({
+    Object? beginTrialDate = freezed,
     Object? createdPillSheet = freezed,
     Object? automaticallyRecordedLastTakenDate = freezed,
     Object? deletedPillSheet = freezed,
@@ -112,6 +115,10 @@ class _$PillSheetModifiedHistoryValueCopyWithImpl<$Res,
     Object? changedEndDisplayNumber = freezed,
   }) {
     return _then(_value.copyWith(
+      beginTrialDate: freezed == beginTrialDate
+          ? _value.beginTrialDate
+          : beginTrialDate // ignore: cast_nullable_to_non_nullable
+              as DateTime?,
       createdPillSheet: freezed == createdPillSheet
           ? _value.createdPillSheet
           : createdPillSheet // ignore: cast_nullable_to_non_nullable
@@ -314,7 +321,8 @@ abstract class _$$_PillSheetModifiedHistoryValueCopyWith<$Res>
   @override
   @useResult
   $Res call(
-      {CreatedPillSheetValue? createdPillSheet,
+      {DateTime? beginTrialDate,
+      CreatedPillSheetValue? createdPillSheet,
       AutomaticallyRecordedLastTakenDateValue?
           automaticallyRecordedLastTakenDate,
       DeletedPillSheetValue? deletedPillSheet,
@@ -365,6 +373,7 @@ class __$$_PillSheetModifiedHistoryValueCopyWithImpl<$Res>
   @pragma('vm:prefer-inline')
   @override
   $Res call({
+    Object? beginTrialDate = freezed,
     Object? createdPillSheet = freezed,
     Object? automaticallyRecordedLastTakenDate = freezed,
     Object? deletedPillSheet = freezed,
@@ -378,6 +387,10 @@ class __$$_PillSheetModifiedHistoryValueCopyWithImpl<$Res>
     Object? changedEndDisplayNumber = freezed,
   }) {
     return _then(_$_PillSheetModifiedHistoryValue(
+      beginTrialDate: freezed == beginTrialDate
+          ? _value.beginTrialDate
+          : beginTrialDate // ignore: cast_nullable_to_non_nullable
+              as DateTime?,
       createdPillSheet: freezed == createdPillSheet
           ? _value.createdPillSheet
           : createdPillSheet // ignore: cast_nullable_to_non_nullable
@@ -432,7 +445,8 @@ class __$$_PillSheetModifiedHistoryValueCopyWithImpl<$Res>
 @JsonSerializable(explicitToJson: true)
 class _$_PillSheetModifiedHistoryValue extends _PillSheetModifiedHistoryValue {
   const _$_PillSheetModifiedHistoryValue(
-      {this.createdPillSheet = null,
+      {this.beginTrialDate,
+      this.createdPillSheet = null,
       this.automaticallyRecordedLastTakenDate = null,
       this.deletedPillSheet = null,
       this.takenPill = null,
@@ -449,6 +463,8 @@ class _$_PillSheetModifiedHistoryValue extends _PillSheetModifiedHistoryValue {
           Map<String, dynamic> json) =>
       _$$_PillSheetModifiedHistoryValueFromJson(json);
 
+  @override
+  final DateTime? beginTrialDate;
   @override
   @JsonKey()
   final CreatedPillSheetValue? createdPillSheet;
@@ -486,7 +502,7 @@ class _$_PillSheetModifiedHistoryValue extends _PillSheetModifiedHistoryValue {
 
   @override
   String toString() {
-    return 'PillSheetModifiedHistoryValue(createdPillSheet: $createdPillSheet, automaticallyRecordedLastTakenDate: $automaticallyRecordedLastTakenDate, deletedPillSheet: $deletedPillSheet, takenPill: $takenPill, revertTakenPill: $revertTakenPill, changedPillNumber: $changedPillNumber, endedPillSheet: $endedPillSheet, beganRestDurationValue: $beganRestDurationValue, endedRestDurationValue: $endedRestDurationValue, changedBeginDisplayNumber: $changedBeginDisplayNumber, changedEndDisplayNumber: $changedEndDisplayNumber)';
+    return 'PillSheetModifiedHistoryValue(beginTrialDate: $beginTrialDate, createdPillSheet: $createdPillSheet, automaticallyRecordedLastTakenDate: $automaticallyRecordedLastTakenDate, deletedPillSheet: $deletedPillSheet, takenPill: $takenPill, revertTakenPill: $revertTakenPill, changedPillNumber: $changedPillNumber, endedPillSheet: $endedPillSheet, beganRestDurationValue: $beganRestDurationValue, endedRestDurationValue: $endedRestDurationValue, changedBeginDisplayNumber: $changedBeginDisplayNumber, changedEndDisplayNumber: $changedEndDisplayNumber)';
   }
 
   @override
@@ -494,6 +510,8 @@ class _$_PillSheetModifiedHistoryValue extends _PillSheetModifiedHistoryValue {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$_PillSheetModifiedHistoryValue &&
+            (identical(other.beginTrialDate, beginTrialDate) ||
+                other.beginTrialDate == beginTrialDate) &&
             (identical(other.createdPillSheet, createdPillSheet) ||
                 other.createdPillSheet == createdPillSheet) &&
             (identical(other.automaticallyRecordedLastTakenDate,
@@ -526,6 +544,7 @@ class _$_PillSheetModifiedHistoryValue extends _PillSheetModifiedHistoryValue {
   @override
   int get hashCode => Object.hash(
       runtimeType,
+      beginTrialDate,
       createdPillSheet,
       automaticallyRecordedLastTakenDate,
       deletedPillSheet,
@@ -556,7 +575,8 @@ class _$_PillSheetModifiedHistoryValue extends _PillSheetModifiedHistoryValue {
 abstract class _PillSheetModifiedHistoryValue
     extends PillSheetModifiedHistoryValue {
   const factory _PillSheetModifiedHistoryValue(
-          {final CreatedPillSheetValue? createdPillSheet,
+          {final DateTime? beginTrialDate,
+          final CreatedPillSheetValue? createdPillSheet,
           final AutomaticallyRecordedLastTakenDateValue?
               automaticallyRecordedLastTakenDate,
           final DeletedPillSheetValue? deletedPillSheet,
@@ -574,6 +594,8 @@ abstract class _PillSheetModifiedHistoryValue
   factory _PillSheetModifiedHistoryValue.fromJson(Map<String, dynamic> json) =
       _$_PillSheetModifiedHistoryValue.fromJson;
 
+  @override
+  DateTime? get beginTrialDate;
   @override
   CreatedPillSheetValue? get createdPillSheet;
   @override
@@ -610,8 +632,6 @@ CreatedPillSheetValue _$CreatedPillSheetValueFromJson(
 
 /// @nodoc
 mixin _$CreatedPillSheetValue {
-// The below properties are deprecated and added since v1.
-// This is deprecated property. TODO: delete after 2024-03-01
   @JsonKey(
       fromJson: NonNullTimestampConverter.timestampToDateTime,
       toJson: NonNullTimestampConverter.dateTimeToTimestamp)
@@ -721,8 +741,6 @@ class _$_CreatedPillSheetValue extends _CreatedPillSheetValue {
   factory _$_CreatedPillSheetValue.fromJson(Map<String, dynamic> json) =>
       _$$_CreatedPillSheetValueFromJson(json);
 
-// The below properties are deprecated and added since v1.
-// This is deprecated property. TODO: delete after 2024-03-01
   @override
   @JsonKey(
       fromJson: NonNullTimestampConverter.timestampToDateTime,
@@ -783,8 +801,7 @@ abstract class _CreatedPillSheetValue extends CreatedPillSheetValue {
   factory _CreatedPillSheetValue.fromJson(Map<String, dynamic> json) =
       _$_CreatedPillSheetValue.fromJson;
 
-  @override // The below properties are deprecated and added since v1.
-// This is deprecated property. TODO: delete after 2024-03-01
+  @override
   @JsonKey(
       fromJson: NonNullTimestampConverter.timestampToDateTime,
       toJson: NonNullTimestampConverter.dateTimeToTimestamp)
@@ -805,8 +822,6 @@ AutomaticallyRecordedLastTakenDateValue
 
 /// @nodoc
 mixin _$AutomaticallyRecordedLastTakenDateValue {
-// The below properties are deprecated and added since v1.
-// This is deprecated property. TODO: delete after 2024-03-01
   @JsonKey(
       fromJson: TimestampConverter.timestampToDateTime,
       toJson: TimestampConverter.dateTimeToTimestamp)
@@ -958,8 +973,6 @@ class _$_AutomaticallyRecordedLastTakenDateValue
           Map<String, dynamic> json) =>
       _$$_AutomaticallyRecordedLastTakenDateValueFromJson(json);
 
-// The below properties are deprecated and added since v1.
-// This is deprecated property. TODO: delete after 2024-03-01
   @override
   @JsonKey(
       fromJson: TimestampConverter.timestampToDateTime,
@@ -1033,8 +1046,7 @@ abstract class _AutomaticallyRecordedLastTakenDateValue
           Map<String, dynamic> json) =
       _$_AutomaticallyRecordedLastTakenDateValue.fromJson;
 
-  @override // The below properties are deprecated and added since v1.
-// This is deprecated property. TODO: delete after 2024-03-01
+  @override
   @JsonKey(
       fromJson: TimestampConverter.timestampToDateTime,
       toJson: TimestampConverter.dateTimeToTimestamp)
@@ -1062,8 +1074,6 @@ DeletedPillSheetValue _$DeletedPillSheetValueFromJson(
 
 /// @nodoc
 mixin _$DeletedPillSheetValue {
-// The below properties are deprecated and added since v1.
-// This is deprecated property. TODO: delete after 2024-03-01
   @JsonKey(
       fromJson: NonNullTimestampConverter.timestampToDateTime,
       toJson: NonNullTimestampConverter.dateTimeToTimestamp)
@@ -1173,8 +1183,6 @@ class _$_DeletedPillSheetValue extends _DeletedPillSheetValue {
   factory _$_DeletedPillSheetValue.fromJson(Map<String, dynamic> json) =>
       _$$_DeletedPillSheetValueFromJson(json);
 
-// The below properties are deprecated and added since v1.
-// This is deprecated property. TODO: delete after 2024-03-01
   @override
   @JsonKey(
       fromJson: NonNullTimestampConverter.timestampToDateTime,
@@ -1235,8 +1243,7 @@ abstract class _DeletedPillSheetValue extends DeletedPillSheetValue {
   factory _DeletedPillSheetValue.fromJson(Map<String, dynamic> json) =
       _$_DeletedPillSheetValue.fromJson;
 
-  @override // The below properties are deprecated and added since v1.
-// This is deprecated property. TODO: delete after 2024-03-01
+  @override
   @JsonKey(
       fromJson: NonNullTimestampConverter.timestampToDateTime,
       toJson: NonNullTimestampConverter.dateTimeToTimestamp)
@@ -1255,13 +1262,6 @@ TakenPillValue _$TakenPillValueFromJson(Map<String, dynamic> json) {
 
 /// @nodoc
 mixin _$TakenPillValue {
-// ============ BEGIN: Added since v1 ============
-// null => 途中から追加したプロパティなので、どちらか不明
-  bool? get isQuickRecord => throw _privateConstructorUsedError;
-  TakenPillEditedValue? get edited =>
-      throw _privateConstructorUsedError; // ============ END: Added since v1 ============
-// The below properties are deprecated and added since v1.
-// This is deprecated property. TODO: delete after 2024-03-01
   @JsonKey(
       fromJson: TimestampConverter.timestampToDateTime,
       toJson: TimestampConverter.dateTimeToTimestamp)
@@ -1271,7 +1271,10 @@ mixin _$TakenPillValue {
       toJson: NonNullTimestampConverter.dateTimeToTimestamp)
   DateTime get afterLastTakenDate => throw _privateConstructorUsedError;
   int get beforeLastTakenPillNumber => throw _privateConstructorUsedError;
-  int get afterLastTakenPillNumber => throw _privateConstructorUsedError;
+  int get afterLastTakenPillNumber =>
+      throw _privateConstructorUsedError; // null => 途中から追加したプロパティなので、どちらか不明
+  bool? get isQuickRecord => throw _privateConstructorUsedError;
+  TakenPillEditedValue? get edited => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
@@ -1286,14 +1289,14 @@ abstract class $TakenPillValueCopyWith<$Res> {
       _$TakenPillValueCopyWithImpl<$Res, TakenPillValue>;
   @useResult
   $Res call(
-      {bool? isQuickRecord,
-      TakenPillEditedValue? edited,
-      @JsonKey(fromJson: TimestampConverter.timestampToDateTime, toJson: TimestampConverter.dateTimeToTimestamp)
+      {@JsonKey(fromJson: TimestampConverter.timestampToDateTime, toJson: TimestampConverter.dateTimeToTimestamp)
           DateTime? beforeLastTakenDate,
       @JsonKey(fromJson: NonNullTimestampConverter.timestampToDateTime, toJson: NonNullTimestampConverter.dateTimeToTimestamp)
           DateTime afterLastTakenDate,
       int beforeLastTakenPillNumber,
-      int afterLastTakenPillNumber});
+      int afterLastTakenPillNumber,
+      bool? isQuickRecord,
+      TakenPillEditedValue? edited});
 
   $TakenPillEditedValueCopyWith<$Res>? get edited;
 }
@@ -1311,22 +1314,14 @@ class _$TakenPillValueCopyWithImpl<$Res, $Val extends TakenPillValue>
   @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? isQuickRecord = freezed,
-    Object? edited = freezed,
     Object? beforeLastTakenDate = freezed,
     Object? afterLastTakenDate = null,
     Object? beforeLastTakenPillNumber = null,
     Object? afterLastTakenPillNumber = null,
+    Object? isQuickRecord = freezed,
+    Object? edited = freezed,
   }) {
     return _then(_value.copyWith(
-      isQuickRecord: freezed == isQuickRecord
-          ? _value.isQuickRecord
-          : isQuickRecord // ignore: cast_nullable_to_non_nullable
-              as bool?,
-      edited: freezed == edited
-          ? _value.edited
-          : edited // ignore: cast_nullable_to_non_nullable
-              as TakenPillEditedValue?,
       beforeLastTakenDate: freezed == beforeLastTakenDate
           ? _value.beforeLastTakenDate
           : beforeLastTakenDate // ignore: cast_nullable_to_non_nullable
@@ -1343,6 +1338,14 @@ class _$TakenPillValueCopyWithImpl<$Res, $Val extends TakenPillValue>
           ? _value.afterLastTakenPillNumber
           : afterLastTakenPillNumber // ignore: cast_nullable_to_non_nullable
               as int,
+      isQuickRecord: freezed == isQuickRecord
+          ? _value.isQuickRecord
+          : isQuickRecord // ignore: cast_nullable_to_non_nullable
+              as bool?,
+      edited: freezed == edited
+          ? _value.edited
+          : edited // ignore: cast_nullable_to_non_nullable
+              as TakenPillEditedValue?,
     ) as $Val);
   }
 
@@ -1368,14 +1371,14 @@ abstract class _$$_TakenPillValueCopyWith<$Res>
   @override
   @useResult
   $Res call(
-      {bool? isQuickRecord,
-      TakenPillEditedValue? edited,
-      @JsonKey(fromJson: TimestampConverter.timestampToDateTime, toJson: TimestampConverter.dateTimeToTimestamp)
+      {@JsonKey(fromJson: TimestampConverter.timestampToDateTime, toJson: TimestampConverter.dateTimeToTimestamp)
           DateTime? beforeLastTakenDate,
       @JsonKey(fromJson: NonNullTimestampConverter.timestampToDateTime, toJson: NonNullTimestampConverter.dateTimeToTimestamp)
           DateTime afterLastTakenDate,
       int beforeLastTakenPillNumber,
-      int afterLastTakenPillNumber});
+      int afterLastTakenPillNumber,
+      bool? isQuickRecord,
+      TakenPillEditedValue? edited});
 
   @override
   $TakenPillEditedValueCopyWith<$Res>? get edited;
@@ -1392,22 +1395,14 @@ class __$$_TakenPillValueCopyWithImpl<$Res>
   @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? isQuickRecord = freezed,
-    Object? edited = freezed,
     Object? beforeLastTakenDate = freezed,
     Object? afterLastTakenDate = null,
     Object? beforeLastTakenPillNumber = null,
     Object? afterLastTakenPillNumber = null,
+    Object? isQuickRecord = freezed,
+    Object? edited = freezed,
   }) {
     return _then(_$_TakenPillValue(
-      isQuickRecord: freezed == isQuickRecord
-          ? _value.isQuickRecord
-          : isQuickRecord // ignore: cast_nullable_to_non_nullable
-              as bool?,
-      edited: freezed == edited
-          ? _value.edited
-          : edited // ignore: cast_nullable_to_non_nullable
-              as TakenPillEditedValue?,
       beforeLastTakenDate: freezed == beforeLastTakenDate
           ? _value.beforeLastTakenDate
           : beforeLastTakenDate // ignore: cast_nullable_to_non_nullable
@@ -1424,6 +1419,14 @@ class __$$_TakenPillValueCopyWithImpl<$Res>
           ? _value.afterLastTakenPillNumber
           : afterLastTakenPillNumber // ignore: cast_nullable_to_non_nullable
               as int,
+      isQuickRecord: freezed == isQuickRecord
+          ? _value.isQuickRecord
+          : isQuickRecord // ignore: cast_nullable_to_non_nullable
+              as bool?,
+      edited: freezed == edited
+          ? _value.edited
+          : edited // ignore: cast_nullable_to_non_nullable
+              as TakenPillEditedValue?,
     ));
   }
 }
@@ -1433,28 +1436,19 @@ class __$$_TakenPillValueCopyWithImpl<$Res>
 @JsonSerializable(explicitToJson: true)
 class _$_TakenPillValue extends _TakenPillValue {
   const _$_TakenPillValue(
-      {this.isQuickRecord,
-      this.edited,
-      @JsonKey(fromJson: TimestampConverter.timestampToDateTime, toJson: TimestampConverter.dateTimeToTimestamp)
+      {@JsonKey(fromJson: TimestampConverter.timestampToDateTime, toJson: TimestampConverter.dateTimeToTimestamp)
           this.beforeLastTakenDate,
       @JsonKey(fromJson: NonNullTimestampConverter.timestampToDateTime, toJson: NonNullTimestampConverter.dateTimeToTimestamp)
           required this.afterLastTakenDate,
       required this.beforeLastTakenPillNumber,
-      required this.afterLastTakenPillNumber})
+      required this.afterLastTakenPillNumber,
+      this.isQuickRecord,
+      this.edited})
       : super._();
 
   factory _$_TakenPillValue.fromJson(Map<String, dynamic> json) =>
       _$$_TakenPillValueFromJson(json);
 
-// ============ BEGIN: Added since v1 ============
-// null => 途中から追加したプロパティなので、どちらか不明
-  @override
-  final bool? isQuickRecord;
-  @override
-  final TakenPillEditedValue? edited;
-// ============ END: Added since v1 ============
-// The below properties are deprecated and added since v1.
-// This is deprecated property. TODO: delete after 2024-03-01
   @override
   @JsonKey(
       fromJson: TimestampConverter.timestampToDateTime,
@@ -1469,10 +1463,15 @@ class _$_TakenPillValue extends _TakenPillValue {
   final int beforeLastTakenPillNumber;
   @override
   final int afterLastTakenPillNumber;
+// null => 途中から追加したプロパティなので、どちらか不明
+  @override
+  final bool? isQuickRecord;
+  @override
+  final TakenPillEditedValue? edited;
 
   @override
   String toString() {
-    return 'TakenPillValue(isQuickRecord: $isQuickRecord, edited: $edited, beforeLastTakenDate: $beforeLastTakenDate, afterLastTakenDate: $afterLastTakenDate, beforeLastTakenPillNumber: $beforeLastTakenPillNumber, afterLastTakenPillNumber: $afterLastTakenPillNumber)';
+    return 'TakenPillValue(beforeLastTakenDate: $beforeLastTakenDate, afterLastTakenDate: $afterLastTakenDate, beforeLastTakenPillNumber: $beforeLastTakenPillNumber, afterLastTakenPillNumber: $afterLastTakenPillNumber, isQuickRecord: $isQuickRecord, edited: $edited)';
   }
 
   @override
@@ -1480,9 +1479,6 @@ class _$_TakenPillValue extends _TakenPillValue {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$_TakenPillValue &&
-            (identical(other.isQuickRecord, isQuickRecord) ||
-                other.isQuickRecord == isQuickRecord) &&
-            (identical(other.edited, edited) || other.edited == edited) &&
             (identical(other.beforeLastTakenDate, beforeLastTakenDate) ||
                 other.beforeLastTakenDate == beforeLastTakenDate) &&
             (identical(other.afterLastTakenDate, afterLastTakenDate) ||
@@ -1492,19 +1488,22 @@ class _$_TakenPillValue extends _TakenPillValue {
                 other.beforeLastTakenPillNumber == beforeLastTakenPillNumber) &&
             (identical(
                     other.afterLastTakenPillNumber, afterLastTakenPillNumber) ||
-                other.afterLastTakenPillNumber == afterLastTakenPillNumber));
+                other.afterLastTakenPillNumber == afterLastTakenPillNumber) &&
+            (identical(other.isQuickRecord, isQuickRecord) ||
+                other.isQuickRecord == isQuickRecord) &&
+            (identical(other.edited, edited) || other.edited == edited));
   }
 
   @JsonKey(ignore: true)
   @override
   int get hashCode => Object.hash(
       runtimeType,
-      isQuickRecord,
-      edited,
       beforeLastTakenDate,
       afterLastTakenDate,
       beforeLastTakenPillNumber,
-      afterLastTakenPillNumber);
+      afterLastTakenPillNumber,
+      isQuickRecord,
+      edited);
 
   @JsonKey(ignore: true)
   @override
@@ -1522,27 +1521,20 @@ class _$_TakenPillValue extends _TakenPillValue {
 
 abstract class _TakenPillValue extends TakenPillValue {
   const factory _TakenPillValue(
-      {final bool? isQuickRecord,
-      final TakenPillEditedValue? edited,
-      @JsonKey(fromJson: TimestampConverter.timestampToDateTime, toJson: TimestampConverter.dateTimeToTimestamp)
+      {@JsonKey(fromJson: TimestampConverter.timestampToDateTime, toJson: TimestampConverter.dateTimeToTimestamp)
           final DateTime? beforeLastTakenDate,
       @JsonKey(fromJson: NonNullTimestampConverter.timestampToDateTime, toJson: NonNullTimestampConverter.dateTimeToTimestamp)
           required final DateTime afterLastTakenDate,
       required final int beforeLastTakenPillNumber,
-      required final int afterLastTakenPillNumber}) = _$_TakenPillValue;
+      required final int afterLastTakenPillNumber,
+      final bool? isQuickRecord,
+      final TakenPillEditedValue? edited}) = _$_TakenPillValue;
   const _TakenPillValue._() : super._();
 
   factory _TakenPillValue.fromJson(Map<String, dynamic> json) =
       _$_TakenPillValue.fromJson;
 
-  @override // ============ BEGIN: Added since v1 ============
-// null => 途中から追加したプロパティなので、どちらか不明
-  bool? get isQuickRecord;
   @override
-  TakenPillEditedValue? get edited;
-  @override // ============ END: Added since v1 ============
-// The below properties are deprecated and added since v1.
-// This is deprecated property. TODO: delete after 2024-03-01
   @JsonKey(
       fromJson: TimestampConverter.timestampToDateTime,
       toJson: TimestampConverter.dateTimeToTimestamp)
@@ -1556,6 +1548,10 @@ abstract class _TakenPillValue extends TakenPillValue {
   int get beforeLastTakenPillNumber;
   @override
   int get afterLastTakenPillNumber;
+  @override // null => 途中から追加したプロパティなので、どちらか不明
+  bool? get isQuickRecord;
+  @override
+  TakenPillEditedValue? get edited;
   @override
   @JsonKey(ignore: true)
   _$$_TakenPillValueCopyWith<_$_TakenPillValue> get copyWith =>
@@ -1568,21 +1564,18 @@ TakenPillEditedValue _$TakenPillEditedValueFromJson(Map<String, dynamic> json) {
 
 /// @nodoc
 mixin _$TakenPillEditedValue {
-// ============ BEGIN: Added since v1 ============
-// 実際の服用時刻。ユーザーが編集した後の服用時刻
-  @JsonKey(
-      fromJson: NonNullTimestampConverter.timestampToDateTime,
-      toJson: NonNullTimestampConverter.dateTimeToTimestamp)
-  DateTime get actualTakenDate =>
-      throw _privateConstructorUsedError; // 元々の履歴がDBに書き込まれた時刻。通常はユーザーが編集する前の服用時刻
-  @JsonKey(
-      fromJson: NonNullTimestampConverter.timestampToDateTime,
-      toJson: NonNullTimestampConverter.dateTimeToTimestamp)
-  DateTime get historyRecordedDate => throw _privateConstructorUsedError;
   @JsonKey(
       fromJson: NonNullTimestampConverter.timestampToDateTime,
       toJson: NonNullTimestampConverter.dateTimeToTimestamp)
   DateTime get createdDate => throw _privateConstructorUsedError;
+  @JsonKey(
+      fromJson: NonNullTimestampConverter.timestampToDateTime,
+      toJson: NonNullTimestampConverter.dateTimeToTimestamp)
+  DateTime get actualTakenDate => throw _privateConstructorUsedError; //
+  @JsonKey(
+      fromJson: NonNullTimestampConverter.timestampToDateTime,
+      toJson: NonNullTimestampConverter.dateTimeToTimestamp)
+  DateTime get historyRecordedDate => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
@@ -1598,11 +1591,11 @@ abstract class $TakenPillEditedValueCopyWith<$Res> {
   @useResult
   $Res call(
       {@JsonKey(fromJson: NonNullTimestampConverter.timestampToDateTime, toJson: NonNullTimestampConverter.dateTimeToTimestamp)
+          DateTime createdDate,
+      @JsonKey(fromJson: NonNullTimestampConverter.timestampToDateTime, toJson: NonNullTimestampConverter.dateTimeToTimestamp)
           DateTime actualTakenDate,
       @JsonKey(fromJson: NonNullTimestampConverter.timestampToDateTime, toJson: NonNullTimestampConverter.dateTimeToTimestamp)
-          DateTime historyRecordedDate,
-      @JsonKey(fromJson: NonNullTimestampConverter.timestampToDateTime, toJson: NonNullTimestampConverter.dateTimeToTimestamp)
-          DateTime createdDate});
+          DateTime historyRecordedDate});
 }
 
 /// @nodoc
@@ -1619,11 +1612,15 @@ class _$TakenPillEditedValueCopyWithImpl<$Res,
   @pragma('vm:prefer-inline')
   @override
   $Res call({
+    Object? createdDate = null,
     Object? actualTakenDate = null,
     Object? historyRecordedDate = null,
-    Object? createdDate = null,
   }) {
     return _then(_value.copyWith(
+      createdDate: null == createdDate
+          ? _value.createdDate
+          : createdDate // ignore: cast_nullable_to_non_nullable
+              as DateTime,
       actualTakenDate: null == actualTakenDate
           ? _value.actualTakenDate
           : actualTakenDate // ignore: cast_nullable_to_non_nullable
@@ -1631,10 +1628,6 @@ class _$TakenPillEditedValueCopyWithImpl<$Res,
       historyRecordedDate: null == historyRecordedDate
           ? _value.historyRecordedDate
           : historyRecordedDate // ignore: cast_nullable_to_non_nullable
-              as DateTime,
-      createdDate: null == createdDate
-          ? _value.createdDate
-          : createdDate // ignore: cast_nullable_to_non_nullable
               as DateTime,
     ) as $Val);
   }
@@ -1650,11 +1643,11 @@ abstract class _$$_TakenPillEditedValueCopyWith<$Res>
   @useResult
   $Res call(
       {@JsonKey(fromJson: NonNullTimestampConverter.timestampToDateTime, toJson: NonNullTimestampConverter.dateTimeToTimestamp)
+          DateTime createdDate,
+      @JsonKey(fromJson: NonNullTimestampConverter.timestampToDateTime, toJson: NonNullTimestampConverter.dateTimeToTimestamp)
           DateTime actualTakenDate,
       @JsonKey(fromJson: NonNullTimestampConverter.timestampToDateTime, toJson: NonNullTimestampConverter.dateTimeToTimestamp)
-          DateTime historyRecordedDate,
-      @JsonKey(fromJson: NonNullTimestampConverter.timestampToDateTime, toJson: NonNullTimestampConverter.dateTimeToTimestamp)
-          DateTime createdDate});
+          DateTime historyRecordedDate});
 }
 
 /// @nodoc
@@ -1668,11 +1661,15 @@ class __$$_TakenPillEditedValueCopyWithImpl<$Res>
   @pragma('vm:prefer-inline')
   @override
   $Res call({
+    Object? createdDate = null,
     Object? actualTakenDate = null,
     Object? historyRecordedDate = null,
-    Object? createdDate = null,
   }) {
     return _then(_$_TakenPillEditedValue(
+      createdDate: null == createdDate
+          ? _value.createdDate
+          : createdDate // ignore: cast_nullable_to_non_nullable
+              as DateTime,
       actualTakenDate: null == actualTakenDate
           ? _value.actualTakenDate
           : actualTakenDate // ignore: cast_nullable_to_non_nullable
@@ -1680,10 +1677,6 @@ class __$$_TakenPillEditedValueCopyWithImpl<$Res>
       historyRecordedDate: null == historyRecordedDate
           ? _value.historyRecordedDate
           : historyRecordedDate // ignore: cast_nullable_to_non_nullable
-              as DateTime,
-      createdDate: null == createdDate
-          ? _value.createdDate
-          : createdDate // ignore: cast_nullable_to_non_nullable
               as DateTime,
     ));
   }
@@ -1695,38 +1688,36 @@ class __$$_TakenPillEditedValueCopyWithImpl<$Res>
 class _$_TakenPillEditedValue extends _TakenPillEditedValue {
   const _$_TakenPillEditedValue(
       {@JsonKey(fromJson: NonNullTimestampConverter.timestampToDateTime, toJson: NonNullTimestampConverter.dateTimeToTimestamp)
+          required this.createdDate,
+      @JsonKey(fromJson: NonNullTimestampConverter.timestampToDateTime, toJson: NonNullTimestampConverter.dateTimeToTimestamp)
           required this.actualTakenDate,
       @JsonKey(fromJson: NonNullTimestampConverter.timestampToDateTime, toJson: NonNullTimestampConverter.dateTimeToTimestamp)
-          required this.historyRecordedDate,
-      @JsonKey(fromJson: NonNullTimestampConverter.timestampToDateTime, toJson: NonNullTimestampConverter.dateTimeToTimestamp)
-          required this.createdDate})
+          required this.historyRecordedDate})
       : super._();
 
   factory _$_TakenPillEditedValue.fromJson(Map<String, dynamic> json) =>
       _$$_TakenPillEditedValueFromJson(json);
 
-// ============ BEGIN: Added since v1 ============
-// 実際の服用時刻。ユーザーが編集した後の服用時刻
-  @override
-  @JsonKey(
-      fromJson: NonNullTimestampConverter.timestampToDateTime,
-      toJson: NonNullTimestampConverter.dateTimeToTimestamp)
-  final DateTime actualTakenDate;
-// 元々の履歴がDBに書き込まれた時刻。通常はユーザーが編集する前の服用時刻
-  @override
-  @JsonKey(
-      fromJson: NonNullTimestampConverter.timestampToDateTime,
-      toJson: NonNullTimestampConverter.dateTimeToTimestamp)
-  final DateTime historyRecordedDate;
   @override
   @JsonKey(
       fromJson: NonNullTimestampConverter.timestampToDateTime,
       toJson: NonNullTimestampConverter.dateTimeToTimestamp)
   final DateTime createdDate;
+  @override
+  @JsonKey(
+      fromJson: NonNullTimestampConverter.timestampToDateTime,
+      toJson: NonNullTimestampConverter.dateTimeToTimestamp)
+  final DateTime actualTakenDate;
+//
+  @override
+  @JsonKey(
+      fromJson: NonNullTimestampConverter.timestampToDateTime,
+      toJson: NonNullTimestampConverter.dateTimeToTimestamp)
+  final DateTime historyRecordedDate;
 
   @override
   String toString() {
-    return 'TakenPillEditedValue(actualTakenDate: $actualTakenDate, historyRecordedDate: $historyRecordedDate, createdDate: $createdDate)';
+    return 'TakenPillEditedValue(createdDate: $createdDate, actualTakenDate: $actualTakenDate, historyRecordedDate: $historyRecordedDate)';
   }
 
   @override
@@ -1734,18 +1725,18 @@ class _$_TakenPillEditedValue extends _TakenPillEditedValue {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$_TakenPillEditedValue &&
+            (identical(other.createdDate, createdDate) ||
+                other.createdDate == createdDate) &&
             (identical(other.actualTakenDate, actualTakenDate) ||
                 other.actualTakenDate == actualTakenDate) &&
             (identical(other.historyRecordedDate, historyRecordedDate) ||
-                other.historyRecordedDate == historyRecordedDate) &&
-            (identical(other.createdDate, createdDate) ||
-                other.createdDate == createdDate));
+                other.historyRecordedDate == historyRecordedDate));
   }
 
   @JsonKey(ignore: true)
   @override
   int get hashCode => Object.hash(
-      runtimeType, actualTakenDate, historyRecordedDate, createdDate);
+      runtimeType, createdDate, actualTakenDate, historyRecordedDate);
 
   @JsonKey(ignore: true)
   @override
@@ -1765,32 +1756,31 @@ class _$_TakenPillEditedValue extends _TakenPillEditedValue {
 abstract class _TakenPillEditedValue extends TakenPillEditedValue {
   const factory _TakenPillEditedValue(
       {@JsonKey(fromJson: NonNullTimestampConverter.timestampToDateTime, toJson: NonNullTimestampConverter.dateTimeToTimestamp)
+          required final DateTime createdDate,
+      @JsonKey(fromJson: NonNullTimestampConverter.timestampToDateTime, toJson: NonNullTimestampConverter.dateTimeToTimestamp)
           required final DateTime actualTakenDate,
       @JsonKey(fromJson: NonNullTimestampConverter.timestampToDateTime, toJson: NonNullTimestampConverter.dateTimeToTimestamp)
-          required final DateTime historyRecordedDate,
-      @JsonKey(fromJson: NonNullTimestampConverter.timestampToDateTime, toJson: NonNullTimestampConverter.dateTimeToTimestamp)
-          required final DateTime createdDate}) = _$_TakenPillEditedValue;
+          required final DateTime historyRecordedDate}) = _$_TakenPillEditedValue;
   const _TakenPillEditedValue._() : super._();
 
   factory _TakenPillEditedValue.fromJson(Map<String, dynamic> json) =
       _$_TakenPillEditedValue.fromJson;
 
-  @override // ============ BEGIN: Added since v1 ============
-// 実際の服用時刻。ユーザーが編集した後の服用時刻
-  @JsonKey(
-      fromJson: NonNullTimestampConverter.timestampToDateTime,
-      toJson: NonNullTimestampConverter.dateTimeToTimestamp)
-  DateTime get actualTakenDate;
-  @override // 元々の履歴がDBに書き込まれた時刻。通常はユーザーが編集する前の服用時刻
-  @JsonKey(
-      fromJson: NonNullTimestampConverter.timestampToDateTime,
-      toJson: NonNullTimestampConverter.dateTimeToTimestamp)
-  DateTime get historyRecordedDate;
   @override
   @JsonKey(
       fromJson: NonNullTimestampConverter.timestampToDateTime,
       toJson: NonNullTimestampConverter.dateTimeToTimestamp)
   DateTime get createdDate;
+  @override
+  @JsonKey(
+      fromJson: NonNullTimestampConverter.timestampToDateTime,
+      toJson: NonNullTimestampConverter.dateTimeToTimestamp)
+  DateTime get actualTakenDate;
+  @override //
+  @JsonKey(
+      fromJson: NonNullTimestampConverter.timestampToDateTime,
+      toJson: NonNullTimestampConverter.dateTimeToTimestamp)
+  DateTime get historyRecordedDate;
   @override
   @JsonKey(ignore: true)
   _$$_TakenPillEditedValueCopyWith<_$_TakenPillEditedValue> get copyWith =>
@@ -1803,8 +1793,6 @@ RevertTakenPillValue _$RevertTakenPillValueFromJson(Map<String, dynamic> json) {
 
 /// @nodoc
 mixin _$RevertTakenPillValue {
-// The below properties are deprecated and added since v1.
-// This is deprecated property. TODO: delete after 2024-03-01
   @JsonKey(
       fromJson: TimestampConverter.timestampToDateTime,
       toJson: TimestampConverter.dateTimeToTimestamp)
@@ -1947,8 +1935,6 @@ class _$_RevertTakenPillValue extends _RevertTakenPillValue {
   factory _$_RevertTakenPillValue.fromJson(Map<String, dynamic> json) =>
       _$$_RevertTakenPillValueFromJson(json);
 
-// The below properties are deprecated and added since v1.
-// This is deprecated property. TODO: delete after 2024-03-01
   @override
   @JsonKey(
       fromJson: TimestampConverter.timestampToDateTime,
@@ -2019,8 +2005,7 @@ abstract class _RevertTakenPillValue extends RevertTakenPillValue {
   factory _RevertTakenPillValue.fromJson(Map<String, dynamic> json) =
       _$_RevertTakenPillValue.fromJson;
 
-  @override // The below properties are deprecated and added since v1.
-// This is deprecated property. TODO: delete after 2024-03-01
+  @override
   @JsonKey(
       fromJson: TimestampConverter.timestampToDateTime,
       toJson: TimestampConverter.dateTimeToTimestamp)
@@ -2047,8 +2032,6 @@ ChangedPillNumberValue _$ChangedPillNumberValueFromJson(
 
 /// @nodoc
 mixin _$ChangedPillNumberValue {
-// The below properties are deprecated and added since v1.
-// This is deprecated property. TODO: delete after 2024-03-01
   @JsonKey(
       fromJson: NonNullTimestampConverter.timestampToDateTime,
       toJson: NonNullTimestampConverter.dateTimeToTimestamp)
@@ -2220,8 +2203,6 @@ class _$_ChangedPillNumberValue extends _ChangedPillNumberValue {
   factory _$_ChangedPillNumberValue.fromJson(Map<String, dynamic> json) =>
       _$$_ChangedPillNumberValueFromJson(json);
 
-// The below properties are deprecated and added since v1.
-// This is deprecated property. TODO: delete after 2024-03-01
   @override
   @JsonKey(
       fromJson: NonNullTimestampConverter.timestampToDateTime,
@@ -2308,8 +2289,7 @@ abstract class _ChangedPillNumberValue extends ChangedPillNumberValue {
   factory _ChangedPillNumberValue.fromJson(Map<String, dynamic> json) =
       _$_ChangedPillNumberValue.fromJson;
 
-  @override // The below properties are deprecated and added since v1.
-// This is deprecated property. TODO: delete after 2024-03-01
+  @override
   @JsonKey(
       fromJson: NonNullTimestampConverter.timestampToDateTime,
       toJson: NonNullTimestampConverter.dateTimeToTimestamp)
@@ -2339,12 +2319,10 @@ EndedPillSheetValue _$EndedPillSheetValueFromJson(Map<String, dynamic> json) {
 
 /// @nodoc
 mixin _$EndedPillSheetValue {
-// 終了した日付。サーバーで書き込まれる
   @JsonKey(
       fromJson: NonNullTimestampConverter.timestampToDateTime,
       toJson: NonNullTimestampConverter.dateTimeToTimestamp)
-  DateTime get endRecordDate =>
-      throw _privateConstructorUsedError; // 終了した時点での最終服用日
+  DateTime get endRecordDate => throw _privateConstructorUsedError;
   @JsonKey(
       fromJson: NonNullTimestampConverter.timestampToDateTime,
       toJson: NonNullTimestampConverter.dateTimeToTimestamp)
@@ -2454,13 +2432,11 @@ class _$_EndedPillSheetValue extends _EndedPillSheetValue {
   factory _$_EndedPillSheetValue.fromJson(Map<String, dynamic> json) =>
       _$$_EndedPillSheetValueFromJson(json);
 
-// 終了した日付。サーバーで書き込まれる
   @override
   @JsonKey(
       fromJson: NonNullTimestampConverter.timestampToDateTime,
       toJson: NonNullTimestampConverter.dateTimeToTimestamp)
   final DateTime endRecordDate;
-// 終了した時点での最終服用日
   @override
   @JsonKey(
       fromJson: NonNullTimestampConverter.timestampToDateTime,
@@ -2513,12 +2489,12 @@ abstract class _EndedPillSheetValue extends EndedPillSheetValue {
   factory _EndedPillSheetValue.fromJson(Map<String, dynamic> json) =
       _$_EndedPillSheetValue.fromJson;
 
-  @override // 終了した日付。サーバーで書き込まれる
+  @override
   @JsonKey(
       fromJson: NonNullTimestampConverter.timestampToDateTime,
       toJson: NonNullTimestampConverter.dateTimeToTimestamp)
   DateTime get endRecordDate;
-  @override // 終了した時点での最終服用日
+  @override
   @JsonKey(
       fromJson: NonNullTimestampConverter.timestampToDateTime,
       toJson: NonNullTimestampConverter.dateTimeToTimestamp)
@@ -2536,8 +2512,6 @@ BeganRestDurationValue _$BeganRestDurationValueFromJson(
 
 /// @nodoc
 mixin _$BeganRestDurationValue {
-// ============ BEGIN: Added since v1 ============
-// どの服用お休み期間か特定するのが大変なので記録したものを使用する
   RestDuration get restDuration => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
@@ -2636,8 +2610,6 @@ class _$_BeganRestDurationValue extends _BeganRestDurationValue {
   factory _$_BeganRestDurationValue.fromJson(Map<String, dynamic> json) =>
       _$$_BeganRestDurationValueFromJson(json);
 
-// ============ BEGIN: Added since v1 ============
-// どの服用お休み期間か特定するのが大変なので記録したものを使用する
   @override
   final RestDuration restDuration;
 
@@ -2682,8 +2654,7 @@ abstract class _BeganRestDurationValue extends BeganRestDurationValue {
   factory _BeganRestDurationValue.fromJson(Map<String, dynamic> json) =
       _$_BeganRestDurationValue.fromJson;
 
-  @override // ============ BEGIN: Added since v1 ============
-// どの服用お休み期間か特定するのが大変なので記録したものを使用する
+  @override
   RestDuration get restDuration;
   @override
   @JsonKey(ignore: true)
@@ -2698,8 +2669,6 @@ EndedRestDurationValue _$EndedRestDurationValueFromJson(
 
 /// @nodoc
 mixin _$EndedRestDurationValue {
-// ============ BEGIN: Added since v1 ============
-// どの服用お休み期間か特定するのが大変なので記録したものを使用する
   RestDuration get restDuration => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
@@ -2798,8 +2767,6 @@ class _$_EndedRestDurationValue extends _EndedRestDurationValue {
   factory _$_EndedRestDurationValue.fromJson(Map<String, dynamic> json) =>
       _$$_EndedRestDurationValueFromJson(json);
 
-// ============ BEGIN: Added since v1 ============
-// どの服用お休み期間か特定するのが大変なので記録したものを使用する
   @override
   final RestDuration restDuration;
 
@@ -2844,8 +2811,7 @@ abstract class _EndedRestDurationValue extends EndedRestDurationValue {
   factory _EndedRestDurationValue.fromJson(Map<String, dynamic> json) =
       _$_EndedRestDurationValue.fromJson;
 
-  @override // ============ BEGIN: Added since v1 ============
-// どの服用お休み期間か特定するのが大変なので記録したものを使用する
+  @override
   RestDuration get restDuration;
   @override
   @JsonKey(ignore: true)
@@ -2860,9 +2826,6 @@ ChangedBeginDisplayNumberValue _$ChangedBeginDisplayNumberValueFromJson(
 
 /// @nodoc
 mixin _$ChangedBeginDisplayNumberValue {
-// The below properties are deprecated and added since v1.
-// This is deprecated property. TODO: delete after 2024-03-01
-// 番号を変更した事が無い場合もあるのでnullable
   PillSheetGroupDisplayNumberSetting? get beforeDisplayNumberSetting =>
       throw _privateConstructorUsedError;
   PillSheetGroupDisplayNumberSetting get afterDisplayNumberSetting =>
@@ -3010,9 +2973,6 @@ class _$_ChangedBeginDisplayNumberValue
           Map<String, dynamic> json) =>
       _$$_ChangedBeginDisplayNumberValueFromJson(json);
 
-// The below properties are deprecated and added since v1.
-// This is deprecated property. TODO: delete after 2024-03-01
-// 番号を変更した事が無い場合もあるのでnullable
   @override
   final PillSheetGroupDisplayNumberSetting? beforeDisplayNumberSetting;
   @override
@@ -3069,9 +3029,7 @@ abstract class _ChangedBeginDisplayNumberValue
   factory _ChangedBeginDisplayNumberValue.fromJson(Map<String, dynamic> json) =
       _$_ChangedBeginDisplayNumberValue.fromJson;
 
-  @override // The below properties are deprecated and added since v1.
-// This is deprecated property. TODO: delete after 2024-03-01
-// 番号を変更した事が無い場合もあるのでnullable
+  @override
   PillSheetGroupDisplayNumberSetting? get beforeDisplayNumberSetting;
   @override
   PillSheetGroupDisplayNumberSetting get afterDisplayNumberSetting;
@@ -3088,9 +3046,6 @@ ChangedEndDisplayNumberValue _$ChangedEndDisplayNumberValueFromJson(
 
 /// @nodoc
 mixin _$ChangedEndDisplayNumberValue {
-// The below properties are deprecated and added since v1.
-// This is deprecated property. TODO: delete after 2024-03-01
-// 番号を変更した事が無い場合もあるのでnullable
   PillSheetGroupDisplayNumberSetting? get beforeDisplayNumberSetting =>
       throw _privateConstructorUsedError;
   PillSheetGroupDisplayNumberSetting get afterDisplayNumberSetting =>
@@ -3236,9 +3191,6 @@ class _$_ChangedEndDisplayNumberValue extends _ChangedEndDisplayNumberValue {
   factory _$_ChangedEndDisplayNumberValue.fromJson(Map<String, dynamic> json) =>
       _$$_ChangedEndDisplayNumberValueFromJson(json);
 
-// The below properties are deprecated and added since v1.
-// This is deprecated property. TODO: delete after 2024-03-01
-// 番号を変更した事が無い場合もあるのでnullable
   @override
   final PillSheetGroupDisplayNumberSetting? beforeDisplayNumberSetting;
   @override
@@ -3295,9 +3247,7 @@ abstract class _ChangedEndDisplayNumberValue
   factory _ChangedEndDisplayNumberValue.fromJson(Map<String, dynamic> json) =
       _$_ChangedEndDisplayNumberValue.fromJson;
 
-  @override // The below properties are deprecated and added since v1.
-// This is deprecated property. TODO: delete after 2024-03-01
-// 番号を変更した事が無い場合もあるのでnullable
+  @override
   PillSheetGroupDisplayNumberSetting? get beforeDisplayNumberSetting;
   @override
   PillSheetGroupDisplayNumberSetting get afterDisplayNumberSetting;
