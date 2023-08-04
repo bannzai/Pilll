@@ -5,6 +5,8 @@ import 'package:pilll/utils/analytics.dart';
 import 'package:url_launcher/url_launcher.dart';
 
 class AboutChurn extends HookConsumerWidget {
+  const AboutChurn({super.key});
+
   @override
   Widget build(BuildContext context, WidgetRef ref) {
     return ListTile(
