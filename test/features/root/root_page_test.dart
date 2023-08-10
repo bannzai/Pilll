@@ -57,7 +57,10 @@ void main() {
     Environment.isTest = true;
     analytics = FakeAnalytics();
     errorLogger = FakeErrorLogger();
-    WidgetsBinding.instance.renderView.configuration = TestViewConfiguration(size: const Size(375.0, 667.0));
+    WidgetsBinding.instance.renderView.configuration = TestViewConfiguration.fromView(
+      view: WidgetsBinding.instance.platformDispatcher.views.single,
+      size: const Size(375.0, 667.0),
+    );
   });
 
   group('#RootPage', () {

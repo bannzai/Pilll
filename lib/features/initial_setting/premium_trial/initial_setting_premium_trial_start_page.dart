@@ -46,8 +46,8 @@ class IntiialSettingPremiumTrialStartPage extends HookConsumerWidget {
                   child: Column(
                     children: [
                       const SizedBox(height: 1),
-                      Column(
-                        children: const [
+                      const Column(
+                        children: [
                           Text(
                             "\\ 通知から服用記録ができます /",
                             style: TextStyle(

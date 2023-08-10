@@ -32,12 +32,11 @@ extension SupportedDeviceTypeExtension on SupportedDeviceType {
     return 0.8;
   }
 
-  Size get physicalSize =>
-      Size(size.width * devicePixelRatio, size.height * devicePixelRatio);
+  Size get physicalSize => Size(size.width * devicePixelRatio, size.height * devicePixelRatio);
 
-  void binding(TestWindow window) {
-    window.devicePixelRatioTestValue = devicePixelRatio;
-    window.platformDispatcher.textScaleFactorTestValue = textScaleFactor;
-    window.physicalSizeTestValue = physicalSize;
+  void binding(TestFlutterView view) {
+    view.devicePixelRatio = devicePixelRatio;
+    view.platformDispatcher.textScaleFactorTestValue = textScaleFactor;
+    view.physicalSize = physicalSize;
   }
 }

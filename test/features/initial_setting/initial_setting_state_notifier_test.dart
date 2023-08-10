@@ -27,13 +27,13 @@ void main() {
     TestWidgetsFlutterBinding.ensureInitialized();
     SharedPreferences.setMockInitialValues({});
 
-    timezoneChannel.setMockMethodCallHandler((MethodCall methodCall) async {
+    TestDefaultBinaryMessengerBinding.instance.defaultBinaryMessenger.setMockMethodCallHandler(timezoneChannel, (MethodCall methodCall) async {
       return 'Asia/Tokyo';
     });
   });
 
   tearDown(() {
-    timezoneChannel.setMockMethodCallHandler(null);
+    TestDefaultBinaryMessengerBinding.instance.defaultBinaryMessenger.setMockMethodCallHandler(timezoneChannel, null);
   });
   group("#selectedFirstPillSheetType", () {
     test("when first selected", () {

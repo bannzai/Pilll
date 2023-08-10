@@ -31,9 +31,9 @@ class PillSheetGroupSelectPillSheetTypePage extends StatelessWidget {
             controller: scrollController,
             children: [
               const SizedBox(height: 25),
-              Row(
+              const Row(
                 mainAxisAlignment: MainAxisAlignment.start,
-                children: const [
+                children: [
                   SizedBox(width: 16),
                   Text(
                     "ピルの種類を選択",
