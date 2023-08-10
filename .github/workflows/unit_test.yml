@@ -7,6 +7,8 @@ name: Test
 on:
   push:
     branches: [ main, feature/* ]
+  # pull_request_targetsにはしない。Public repoだからforkされるとsecretが読み込まれる
+  # NOTE: Dependabotでbuild-ios-debug,build-android-debugで毎回失敗するが仕方ないものとする。他のCIが通っていればOK
   pull_request:
     branches: [ main, feature/* ]
 
