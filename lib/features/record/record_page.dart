@@ -107,7 +107,6 @@ class RecordPage extends HookConsumerWidget {
   }
 }
 
-// TODO: pillSheetGroup.activedPillSheet.restDurations を更新したときに画面が変更されるかを確認する。（timestampを使っていた部分のテスト）
 class RecordPageBody extends HookConsumerWidget {
   final PillSheetGroup? pillSheetGroup;
   final Setting setting;
