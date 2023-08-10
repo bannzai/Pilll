@@ -57,11 +57,11 @@ class ReleaseNote extends StatelessWidget {
                     ),
                   ],
                 ),
-                Padding(
-                  padding: const EdgeInsets.only(top: 25, left: 25, right: 25),
+                const Padding(
+                  padding: EdgeInsets.only(top: 25, left: 25, right: 25),
                   child: Column(
                     crossAxisAlignment: CrossAxisAlignment.start,
-                    children: const [
+                    children: [
                       Text(
                         '''
 ホームウィジェットを追加できるようになりました。本日服用するピルの番号が一目でわかるようになっています

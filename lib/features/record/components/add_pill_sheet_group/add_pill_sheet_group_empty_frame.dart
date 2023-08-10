@@ -32,10 +32,10 @@ class AddPillSheetGroupEmptyFrame extends StatelessWidget {
                 "images/empty_frame.svg",
               ),
             ),
-            Center(
+            const Center(
                 child: Row(
               mainAxisAlignment: MainAxisAlignment.center,
-              children: const <Widget>[
+              children: <Widget>[
                 Icon(Icons.add, color: TextColor.noshime),
                 Text("ピルシートを追加",
                     style: TextStyle(

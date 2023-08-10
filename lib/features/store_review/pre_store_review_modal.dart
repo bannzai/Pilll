@@ -143,10 +143,10 @@ class _ThanksDialog extends StatelessWidget {
         Icons.thumb_up,
         color: PilllColors.primary,
       ),
-      content: Column(
+      content: const Column(
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
         mainAxisSize: MainAxisSize.min,
-        children: const [
+        children: [
           Text("ご協力ありがとうございます",
               style: TextStyle(
                 fontFamily: FontFamily.japanese,
@@ -221,9 +221,9 @@ class _CompleteDialog extends StatelessWidget {
         ),
         textAlign: TextAlign.center,
       ),
-      content: Column(
+      content: const Column(
         mainAxisSize: MainAxisSize.min,
-        children: const [
+        children: [
           Text(
             "いただいた意見は今後の改善へと活用させていただきます。",
             style: TextStyle(

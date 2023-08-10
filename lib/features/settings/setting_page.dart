@@ -148,7 +148,7 @@ class SettingPageBody extends StatelessWidget {
                       _separator(),
                       // TODO: Remove (Environment.isDevelopment)
                       if (premiumAndTrial.isPremium || (Environment.isDevelopment)) ...[
-                        AboutChurn(),
+                        const AboutChurn(),
                         _separator(),
                       ],
                     ],
