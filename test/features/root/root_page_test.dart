@@ -161,7 +161,7 @@ void main() {
         find.byWidgetPredicate((widget) => widget is _FakeWidget),
         findsNothing,
       );
-// FIXME: Cann't check of did showDialog Widget
+// NOTE: Cann't check of did showDialog Widget
 //      expect(
 //        find.byWidgetPredicate((widget) => widget is OKDialog),
 //        findsOneWidget,
