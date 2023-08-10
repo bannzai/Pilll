@@ -36,7 +36,6 @@ class BeginMenstruation {
   }
 }
 
-// TODO: HealthKit系の処理がおかしい気がしたので下のコードから変えているのでテスト
 final setMenstruationProvider = Provider((ref) => SetMenstruation(ref.watch(databaseProvider)));
 
 class SetMenstruation {
