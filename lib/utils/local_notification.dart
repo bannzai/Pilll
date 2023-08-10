@@ -344,7 +344,7 @@ class RegisterReminderLocalNotification {
                       presentSound: true,
                     ),
                   ),
-                  androidAllowWhileIdle: true,
+                  androidScheduleMode: AndroidScheduleMode.exactAllowWhileIdle,
                   uiLocalNotificationDateInterpretation: UILocalNotificationDateInterpretation.absoluteTime,
                 );
               } catch (e, st) {
@@ -457,7 +457,7 @@ extension ScheduleLocalNotificationService on LocalNotificationService {
             sound: "becho.caf",
           ),
         ),
-        androidAllowWhileIdle: true,
+        androidScheduleMode: AndroidScheduleMode.exactAllowWhileIdle,
         uiLocalNotificationDateInterpretation: UILocalNotificationDateInterpretation.absoluteTime,
       );
     }
