@@ -146,8 +146,7 @@ class SettingPageBody extends StatelessWidget {
                         trialDeadlineDate: premiumAndTrial.trialDeadlineDate,
                       ),
                       _separator(),
-                      // TODO: Remove (Environment.isDevelopment)
-                      if (premiumAndTrial.isPremium || (Environment.isDevelopment)) ...[
+                      if (premiumAndTrial.isPremium) ...[
                         const AboutChurn(),
                         _separator(),
                       ],
