@@ -38,7 +38,10 @@ void main() {
     initializeDateFormatting('ja_JP');
     Environment.isTest = true;
     analytics = MockAnalytics();
-    WidgetsBinding.instance.renderView.configuration = TestViewConfiguration(size: const Size(375.0, 667.0));
+    WidgetsBinding.instance.renderView.configuration = TestViewConfiguration.fromView(
+      view: WidgetsBinding.instance.platformDispatcher.views.single,
+      size: const Size(375.0, 667.0),
+    );
   });
 
   group('notification bar appearance content type', () {
