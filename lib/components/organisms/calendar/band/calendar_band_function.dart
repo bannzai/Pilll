@@ -77,10 +77,12 @@ List<DateRange> nextPillSheetDateRanges(PillSheetGroup pillSheetGroup, [int maxP
   }
   assert(maxPageCount > 0);
 
+  final totalPillCount = pillSheetGroup.pillSheets.map((e) => e.pillSheetType.totalCount).reduce((value, element) => value + element);
   var dateRanges = <DateRange>[];
   for (int i = 0; i < maxPageCount; i++) {
+    final offset = totalPillCount * i;
     for (var pillSheet in pillSheetGroup.pillSheets) {
-      final begin = pillSheet.estimatedEndTakenDate.add(const Duration(days: 1));
+      final begin = pillSheet.estimatedEndTakenDate.add(Duration(days: 1 + offset));
       final end = begin.add(Duration(days: Weekday.values.length - 1));
       dateRanges.add(DateRange(begin, end));
     }
