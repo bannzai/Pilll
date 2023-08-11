@@ -1,5 +1,3 @@
-import 'dart:math';
-
 import 'package:pilll/components/organisms/calendar/band/calendar_band_model.dart';
 import 'package:pilll/utils/datetime/date_range.dart';
 import 'package:pilll/entity/menstruation.codegen.dart';
@@ -73,26 +71,21 @@ List<DateRange> scheduledOrInTheMiddleMenstruationDateRanges(
   return dateRanges;
 }
 
-List<DateRange> nextPillSheetDateRanges(
-  PillSheetGroup pillSheetGroup,
-  int maxPageCount,
-) {
+List<DateRange> nextPillSheetDateRanges(PillSheetGroup pillSheetGroup, [int maxPageCount = 15]) {
   if (pillSheetGroup.pillSheets.isEmpty) {
     return [];
   }
   assert(maxPageCount > 0);
 
-  // 大体の数を計算
-  final totalPillCount = pillSheetGroup.pillSheets.map((e) => e.pillSheetType.totalCount).reduce((value, element) => value + element);
-  final count = max(maxPageCount, pillSheetGroup.pillSheets.length) / pillSheetGroup.pillSheets.length;
-  return List.generate(count.toInt(), (groupPageIndex) {
-    return pillSheetGroup.pillSheets.map((pillSheet) {
-      final offset = groupPageIndex * totalPillCount;
+  var dateRanges = <DateRange>[];
+  for (int i = 0; i < maxPageCount; i++) {
+    for (var pillSheet in pillSheetGroup.pillSheets) {
       final begin = pillSheet.estimatedEndTakenDate.add(const Duration(days: 1));
       final end = begin.add(Duration(days: Weekday.values.length - 1));
-      return DateRange(begin.add(Duration(days: offset)), end.add(Duration(days: offset)));
-    });
-  }).expand((element) => element).toList();
+      dateRanges.add(DateRange(begin, end));
+    }
+  }
+  return dateRanges;
 }
 
 int bandLength(DateRange range, CalendarBandModel bandModel, bool isLineBreaked) {
