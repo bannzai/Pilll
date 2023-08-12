@@ -219,13 +219,6 @@ class PillSheetGroup with _$PillSheetGroup {
   }) {
     return DateTimeFormatter.monthAndDay(pillSheets[pageIndex].displayPillTakeDate(pillNumberInPillSheet));
   }
-
-  int summarizedPillSheetsRestDuration() {
-    return pillSheets
-        .map((e) => e.restDurations)
-        .map((e) => summarizedRestDuration(restDurations: e, upperDate: today()))
-        .fold(0, (previousValue, element) => previousValue + element);
-  }
 }
 
 @freezed
