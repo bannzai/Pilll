@@ -528,6 +528,8 @@ void main() {
             pillSheets: [pillSheet, pillSheet2],
             createdAt: now(),
           );
+
+          // pillSheetGroup.pillSheets.length * 2個のDateRangeが返ってくる
           expect(
             nextPillSheetDateRanges(pillSheetGroup, 2),
             [
@@ -538,6 +540,14 @@ void main() {
               DateRange(
                 DateTime.parse("2020-10-20"),
                 DateTime.parse("2020-10-26"),
+              ),
+              DateRange(
+                DateTime.parse("2020-11-17"),
+                DateTime.parse("2020-11-23"),
+              ),
+              DateRange(
+                DateTime.parse("2020-12-08"),
+                DateTime.parse("2020-12-14"),
               ),
             ],
           );
