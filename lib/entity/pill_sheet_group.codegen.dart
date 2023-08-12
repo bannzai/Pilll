@@ -5,6 +5,7 @@ import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';
 import 'package:pilll/entity/pill_sheet_type.dart';
 import 'package:pilll/entity/setting.codegen.dart';
+import 'package:pilll/utils/datetime/day.dart';
 import 'package:pilll/utils/formatter/date_time_formatter.dart';
 
 part 'pill_sheet_group.codegen.g.dart';
@@ -217,6 +218,13 @@ class PillSheetGroup with _$PillSheetGroup {
     required int pillNumberInPillSheet,
   }) {
     return DateTimeFormatter.monthAndDay(pillSheets[pageIndex].displayPillTakeDate(pillNumberInPillSheet));
+  }
+
+  int summarizedPillSheetsRestDuration() {
+    return pillSheets
+        .map((e) => e.restDurations)
+        .map((e) => summarizedRestDuration(restDurations: e, upperDate: today()))
+        .fold(0, (previousValue, element) => previousValue + element);
   }
 }
 
