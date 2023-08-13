@@ -7,7 +7,7 @@ part of 'typed_shared_preferences.dart';
 // **************************************************************************
 
 String _$boolSharedPreferencesHash() =>
-    r'ccad60dbd5ace6ca5aafeef66063aa8411476d64';
+    r'cbf72d9d073e5d507a77ee5300db2cac385ae8d5';
 
 /// Copied from Dart SDK
 class _SystemHash {
@@ -31,7 +31,7 @@ class _SystemHash {
 }
 
 abstract class _$BoolSharedPreferences
-    extends BuildlessAutoDisposeNotifier<SharedPreferencesState<bool?>> {
+    extends BuildlessNotifier<SharedPreferencesState<bool?>> {
   late final String key;
 
   SharedPreferencesState<bool?> build(
@@ -83,7 +83,7 @@ class BoolSharedPreferencesFamily
 }
 
 /// See also [BoolSharedPreferences].
-class BoolSharedPreferencesProvider extends AutoDisposeNotifierProviderImpl<
+class BoolSharedPreferencesProvider extends NotifierProviderImpl<
     BoolSharedPreferences, SharedPreferencesState<bool?>> {
   /// See also [BoolSharedPreferences].
   BoolSharedPreferencesProvider(
@@ -127,10 +127,10 @@ class BoolSharedPreferencesProvider extends AutoDisposeNotifierProviderImpl<
 }
 
 String _$intSharedPreferencesHash() =>
-    r'3bfeb89cf1754ffe8a7d99020d529839b538f6ea';
+    r'8af073e0874526df7d013905880a8031a65bb5e8';
 
 abstract class _$IntSharedPreferences
-    extends BuildlessAutoDisposeNotifier<SharedPreferencesState<int?>> {
+    extends BuildlessNotifier<SharedPreferencesState<int?>> {
   late final String key;
 
   SharedPreferencesState<int?> build(
@@ -181,7 +181,7 @@ class IntSharedPreferencesFamily extends Family<SharedPreferencesState<int?>> {
 }
 
 /// See also [IntSharedPreferences].
-class IntSharedPreferencesProvider extends AutoDisposeNotifierProviderImpl<
+class IntSharedPreferencesProvider extends NotifierProviderImpl<
     IntSharedPreferences, SharedPreferencesState<int?>> {
   /// See also [IntSharedPreferences].
   IntSharedPreferencesProvider(
@@ -225,10 +225,10 @@ class IntSharedPreferencesProvider extends AutoDisposeNotifierProviderImpl<
 }
 
 String _$stringSharedPreferencesHash() =>
-    r'64324e1c569548b239a77a46841a381efd872a98';
+    r'd5f679c4108010a0e08a8a1dca63337a6d753fde';
 
 abstract class _$StringSharedPreferences
-    extends BuildlessAutoDisposeNotifier<SharedPreferencesState<String?>> {
+    extends BuildlessNotifier<SharedPreferencesState<String?>> {
   late final String key;
 
   SharedPreferencesState<String?> build(
@@ -280,7 +280,7 @@ class StringSharedPreferencesFamily
 }
 
 /// See also [StringSharedPreferences].
-class StringSharedPreferencesProvider extends AutoDisposeNotifierProviderImpl<
+class StringSharedPreferencesProvider extends NotifierProviderImpl<
     StringSharedPreferences, SharedPreferencesState<String?>> {
   /// See also [StringSharedPreferences].
   StringSharedPreferencesProvider(
