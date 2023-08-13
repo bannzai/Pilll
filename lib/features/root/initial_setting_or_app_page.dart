@@ -14,7 +14,7 @@ import 'package:pilll/utils/shared_preference/keys.dart';
 import 'package:flutter/material.dart';
 
 // FIXME: test 時にboolSharedPreferencesProviderをそのまま使うとフリーズする
-final didEndInitialSettingProvider = Provider((ref) => ref.watch(boolSharedPreferencesProvider(BoolKey.didEndInitialSetting)));
+final didEndInitialSettingProvider = Provider.autoDispose((ref) => ref.watch(boolSharedPreferencesProvider(BoolKey.didEndInitialSetting)));
 
 enum InitialSettingOrAppPageScreenType { loading, initialSetting, app }
 
