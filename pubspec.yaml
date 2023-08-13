@@ -46,7 +46,7 @@ dependencies:
   riverpod: ^2.0.0
   hooks_riverpod: ^2.0.0
   riverpod_annotation:
-  flutter_hooks: ^0.18.5
+  flutter_hooks: ^0.20.0
   firebase_crashlytics: ^3.0.12
   dotted_border: ^2.0.0-nullsafety.0
   in_app_review: ^2.0.1
@@ -61,9 +61,9 @@ dependencies:
     # Use https://github.com/pichillilorenzo/flutter_inappwebview/pull/1238
   flutter_inappwebview: ^5.7.2+3
   flutter_app_badger: ^1.2.0
-  sign_in_with_apple: ^4.3.0
-  google_sign_in: ^5.4.1
-  purchases_flutter: ^4.4.0
+  sign_in_with_apple: ^5.0.0
+  google_sign_in: ^6.1.4
+  purchases_flutter: ^5.6.0
   firebase_performance: ^0.9.0+11
   flutter_native_timezone: ^2.0.0
   flutter_local_notifications: ^15.1.0+1
