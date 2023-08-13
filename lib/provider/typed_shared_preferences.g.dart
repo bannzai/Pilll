@@ -125,5 +125,202 @@ class BoolSharedPreferencesProvider extends AutoDisposeNotifierProviderImpl<
     );
   }
 }
+
+String _$intSharedPreferencesHash() =>
+    r'3bfeb89cf1754ffe8a7d99020d529839b538f6ea';
+
+abstract class _$IntSharedPreferences
+    extends BuildlessAutoDisposeNotifier<SharedPreferencesState<int?>> {
+  late final String key;
+
+  SharedPreferencesState<int?> build(
+    String key,
+  );
+}
+
+/// See also [IntSharedPreferences].
+@ProviderFor(IntSharedPreferences)
+const intSharedPreferencesProvider = IntSharedPreferencesFamily();
+
+/// See also [IntSharedPreferences].
+class IntSharedPreferencesFamily extends Family<SharedPreferencesState<int?>> {
+  /// See also [IntSharedPreferences].
+  const IntSharedPreferencesFamily();
+
+  /// See also [IntSharedPreferences].
+  IntSharedPreferencesProvider call(
+    String key,
+  ) {
+    return IntSharedPreferencesProvider(
+      key,
+    );
+  }
+
+  @override
+  IntSharedPreferencesProvider getProviderOverride(
+    covariant IntSharedPreferencesProvider provider,
+  ) {
+    return call(
+      provider.key,
+    );
+  }
+
+  static const Iterable<ProviderOrFamily>? _dependencies = null;
+
+  @override
+  Iterable<ProviderOrFamily>? get dependencies => _dependencies;
+
+  static const Iterable<ProviderOrFamily>? _allTransitiveDependencies = null;
+
+  @override
+  Iterable<ProviderOrFamily>? get allTransitiveDependencies =>
+      _allTransitiveDependencies;
+
+  @override
+  String? get name => r'intSharedPreferencesProvider';
+}
+
+/// See also [IntSharedPreferences].
+class IntSharedPreferencesProvider extends AutoDisposeNotifierProviderImpl<
+    IntSharedPreferences, SharedPreferencesState<int?>> {
+  /// See also [IntSharedPreferences].
+  IntSharedPreferencesProvider(
+    this.key,
+  ) : super.internal(
+          () => IntSharedPreferences()..key = key,
+          from: intSharedPreferencesProvider,
+          name: r'intSharedPreferencesProvider',
+          debugGetCreateSourceHash:
+              const bool.fromEnvironment('dart.vm.product')
+                  ? null
+                  : _$intSharedPreferencesHash,
+          dependencies: IntSharedPreferencesFamily._dependencies,
+          allTransitiveDependencies:
+              IntSharedPreferencesFamily._allTransitiveDependencies,
+        );
+
+  final String key;
+
+  @override
+  bool operator ==(Object other) {
+    return other is IntSharedPreferencesProvider && other.key == key;
+  }
+
+  @override
+  int get hashCode {
+    var hash = _SystemHash.combine(0, runtimeType.hashCode);
+    hash = _SystemHash.combine(hash, key.hashCode);
+
+    return _SystemHash.finish(hash);
+  }
+
+  @override
+  SharedPreferencesState<int?> runNotifierBuild(
+    covariant IntSharedPreferences notifier,
+  ) {
+    return notifier.build(
+      key,
+    );
+  }
+}
+
+String _$stringSharedPreferencesHash() =>
+    r'64324e1c569548b239a77a46841a381efd872a98';
+
+abstract class _$StringSharedPreferences
+    extends BuildlessAutoDisposeNotifier<SharedPreferencesState<String?>> {
+  late final String key;
+
+  SharedPreferencesState<String?> build(
+    String key,
+  );
+}
+
+/// See also [StringSharedPreferences].
+@ProviderFor(StringSharedPreferences)
+const stringSharedPreferencesProvider = StringSharedPreferencesFamily();
+
+/// See also [StringSharedPreferences].
+class StringSharedPreferencesFamily
+    extends Family<SharedPreferencesState<String?>> {
+  /// See also [StringSharedPreferences].
+  const StringSharedPreferencesFamily();
+
+  /// See also [StringSharedPreferences].
+  StringSharedPreferencesProvider call(
+    String key,
+  ) {
+    return StringSharedPreferencesProvider(
+      key,
+    );
+  }
+
+  @override
+  StringSharedPreferencesProvider getProviderOverride(
+    covariant StringSharedPreferencesProvider provider,
+  ) {
+    return call(
+      provider.key,
+    );
+  }
+
+  static const Iterable<ProviderOrFamily>? _dependencies = null;
+
+  @override
+  Iterable<ProviderOrFamily>? get dependencies => _dependencies;
+
+  static const Iterable<ProviderOrFamily>? _allTransitiveDependencies = null;
+
+  @override
+  Iterable<ProviderOrFamily>? get allTransitiveDependencies =>
+      _allTransitiveDependencies;
+
+  @override
+  String? get name => r'stringSharedPreferencesProvider';
+}
+
+/// See also [StringSharedPreferences].
+class StringSharedPreferencesProvider extends AutoDisposeNotifierProviderImpl<
+    StringSharedPreferences, SharedPreferencesState<String?>> {
+  /// See also [StringSharedPreferences].
+  StringSharedPreferencesProvider(
+    this.key,
+  ) : super.internal(
+          () => StringSharedPreferences()..key = key,
+          from: stringSharedPreferencesProvider,
+          name: r'stringSharedPreferencesProvider',
+          debugGetCreateSourceHash:
+              const bool.fromEnvironment('dart.vm.product')
+                  ? null
+                  : _$stringSharedPreferencesHash,
+          dependencies: StringSharedPreferencesFamily._dependencies,
+          allTransitiveDependencies:
+              StringSharedPreferencesFamily._allTransitiveDependencies,
+        );
+
+  final String key;
+
+  @override
+  bool operator ==(Object other) {
+    return other is StringSharedPreferencesProvider && other.key == key;
+  }
+
+  @override
+  int get hashCode {
+    var hash = _SystemHash.combine(0, runtimeType.hashCode);
+    hash = _SystemHash.combine(hash, key.hashCode);
+
+    return _SystemHash.finish(hash);
+  }
+
+  @override
+  SharedPreferencesState<String?> runNotifierBuild(
+    covariant StringSharedPreferences notifier,
+  ) {
+    return notifier.build(
+      key,
+    );
+  }
+}
 // ignore_for_file: type=lint
 // ignore_for_file: subtype_of_sealed_class, invalid_use_of_internal_member

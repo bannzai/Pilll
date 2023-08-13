@@ -23,33 +23,24 @@ class BoolSharedPreferences extends _$BoolSharedPreferences {
   }
 }
 
-// @riverpod
-// class IntSharedPreferences extends _$IntSharedPreferences {
-//   final String key;
-// 
-//   IntSharedPreferences(this.key);
-// 
-//   @override
-//   int? build() => ref.read(sharedPreferencesProvider).getInt(key);
-// 
-//   Future<void> set(int value) async {
-//     await ref.read(sharedPreferencesProvider).setInt(key, value);
-//     state = value;
-//   }
-// }
-// 
-// @riverpod
-// class StringSharedPreferences extends _$StringSharedPreferences {
-//   final String key;
-// 
-//   StringSharedPreferences(this.key);
-// 
-//   @override
-//   String? build() => ref.read(sharedPreferencesProvider).getString(key);
-// 
-//   Future<void> set(String value) async {
-//     await ref.read(sharedPreferencesProvider).setString(key, value);
-//     state = value;
-//   }
-// }
-// 
+@riverpod
+class IntSharedPreferences extends _$IntSharedPreferences {
+  @override
+  SharedPreferencesState<int?> build(String key) => SharedPreferencesState(key, ref.read(sharedPreferencesProvider).getInt(key));
+
+  Future<void> set(int value) async {
+    await ref.read(sharedPreferencesProvider).setInt(state.key, value);
+    state = SharedPreferencesState(key, value);
+  }
+}
+
+@riverpod
+class StringSharedPreferences extends _$StringSharedPreferences {
+  @override
+  SharedPreferencesState<String?> build(String key) => SharedPreferencesState(key, ref.read(sharedPreferencesProvider).getString(key));
+
+  Future<void> set(String value) async {
+    await ref.read(sharedPreferencesProvider).setString(state.key, value);
+    state = SharedPreferencesState(key, value);
+  }
+}
