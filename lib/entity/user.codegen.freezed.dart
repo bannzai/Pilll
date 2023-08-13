@@ -200,8 +200,7 @@ abstract class $UserCopyWith<$Res> {
   @useResult
   $Res call(
       {String? id,
-      @JsonKey(name: "settings")
-          Setting? setting,
+      @JsonKey(name: "settings") Setting? setting,
       bool migratedFlutter,
       String? userIDWhenCreateUser,
       String? anonymousUserID,
@@ -213,12 +212,18 @@ abstract class $UserCopyWith<$Res> {
       bool hasDiscountEntitlement,
       bool shouldAskCancelReason,
       bool useLocalNotificationForReminder,
-      @JsonKey(fromJson: TimestampConverter.timestampToDateTime, toJson: TimestampConverter.dateTimeToTimestamp)
-          DateTime? beginTrialDate,
-      @JsonKey(fromJson: TimestampConverter.timestampToDateTime, toJson: TimestampConverter.dateTimeToTimestamp)
-          DateTime? trialDeadlineDate,
-      @JsonKey(fromJson: TimestampConverter.timestampToDateTime, toJson: TimestampConverter.dateTimeToTimestamp)
-          DateTime? discountEntitlementDeadlineDate});
+      @JsonKey(
+          fromJson: TimestampConverter.timestampToDateTime,
+          toJson: TimestampConverter.dateTimeToTimestamp)
+      DateTime? beginTrialDate,
+      @JsonKey(
+          fromJson: TimestampConverter.timestampToDateTime,
+          toJson: TimestampConverter.dateTimeToTimestamp)
+      DateTime? trialDeadlineDate,
+      @JsonKey(
+          fromJson: TimestampConverter.timestampToDateTime,
+          toJson: TimestampConverter.dateTimeToTimestamp)
+      DateTime? discountEntitlementDeadlineDate});
 
   $SettingCopyWith<$Res>? get setting;
 }
@@ -343,8 +348,7 @@ abstract class _$$_UserCopyWith<$Res> implements $UserCopyWith<$Res> {
   @useResult
   $Res call(
       {String? id,
-      @JsonKey(name: "settings")
-          Setting? setting,
+      @JsonKey(name: "settings") Setting? setting,
       bool migratedFlutter,
       String? userIDWhenCreateUser,
       String? anonymousUserID,
@@ -356,12 +360,18 @@ abstract class _$$_UserCopyWith<$Res> implements $UserCopyWith<$Res> {
       bool hasDiscountEntitlement,
       bool shouldAskCancelReason,
       bool useLocalNotificationForReminder,
-      @JsonKey(fromJson: TimestampConverter.timestampToDateTime, toJson: TimestampConverter.dateTimeToTimestamp)
-          DateTime? beginTrialDate,
-      @JsonKey(fromJson: TimestampConverter.timestampToDateTime, toJson: TimestampConverter.dateTimeToTimestamp)
-          DateTime? trialDeadlineDate,
-      @JsonKey(fromJson: TimestampConverter.timestampToDateTime, toJson: TimestampConverter.dateTimeToTimestamp)
-          DateTime? discountEntitlementDeadlineDate});
+      @JsonKey(
+          fromJson: TimestampConverter.timestampToDateTime,
+          toJson: TimestampConverter.dateTimeToTimestamp)
+      DateTime? beginTrialDate,
+      @JsonKey(
+          fromJson: TimestampConverter.timestampToDateTime,
+          toJson: TimestampConverter.dateTimeToTimestamp)
+      DateTime? trialDeadlineDate,
+      @JsonKey(
+          fromJson: TimestampConverter.timestampToDateTime,
+          toJson: TimestampConverter.dateTimeToTimestamp)
+      DateTime? discountEntitlementDeadlineDate});
 
   @override
   $SettingCopyWith<$Res>? get setting;
@@ -469,8 +479,7 @@ class __$$_UserCopyWithImpl<$Res> extends _$UserCopyWithImpl<$Res, _$_User>
 class _$_User extends _User {
   const _$_User(
       {this.id,
-      @JsonKey(name: "settings")
-          this.setting,
+      @JsonKey(name: "settings") this.setting,
       this.migratedFlutter = false,
       this.userIDWhenCreateUser,
       this.anonymousUserID,
@@ -482,12 +491,18 @@ class _$_User extends _User {
       this.hasDiscountEntitlement = false,
       this.shouldAskCancelReason = false,
       this.useLocalNotificationForReminder = false,
-      @JsonKey(fromJson: TimestampConverter.timestampToDateTime, toJson: TimestampConverter.dateTimeToTimestamp)
-          this.beginTrialDate,
-      @JsonKey(fromJson: TimestampConverter.timestampToDateTime, toJson: TimestampConverter.dateTimeToTimestamp)
-          this.trialDeadlineDate,
-      @JsonKey(fromJson: TimestampConverter.timestampToDateTime, toJson: TimestampConverter.dateTimeToTimestamp)
-          this.discountEntitlementDeadlineDate})
+      @JsonKey(
+          fromJson: TimestampConverter.timestampToDateTime,
+          toJson: TimestampConverter.dateTimeToTimestamp)
+      this.beginTrialDate,
+      @JsonKey(
+          fromJson: TimestampConverter.timestampToDateTime,
+          toJson: TimestampConverter.dateTimeToTimestamp)
+      this.trialDeadlineDate,
+      @JsonKey(
+          fromJson: TimestampConverter.timestampToDateTime,
+          toJson: TimestampConverter.dateTimeToTimestamp)
+      this.discountEntitlementDeadlineDate})
       : _userDocumentIDSets = userDocumentIDSets,
         _anonymousUserIDSets = anonymousUserIDSets,
         _firebaseCurrentUserIDSets = firebaseCurrentUserIDSets,
@@ -651,8 +666,7 @@ class _$_User extends _User {
 abstract class _User extends User {
   const factory _User(
       {final String? id,
-      @JsonKey(name: "settings")
-          final Setting? setting,
+      @JsonKey(name: "settings") final Setting? setting,
       final bool migratedFlutter,
       final String? userIDWhenCreateUser,
       final String? anonymousUserID,
@@ -664,12 +678,18 @@ abstract class _User extends User {
       final bool hasDiscountEntitlement,
       final bool shouldAskCancelReason,
       final bool useLocalNotificationForReminder,
-      @JsonKey(fromJson: TimestampConverter.timestampToDateTime, toJson: TimestampConverter.dateTimeToTimestamp)
-          final DateTime? beginTrialDate,
-      @JsonKey(fromJson: TimestampConverter.timestampToDateTime, toJson: TimestampConverter.dateTimeToTimestamp)
-          final DateTime? trialDeadlineDate,
-      @JsonKey(fromJson: TimestampConverter.timestampToDateTime, toJson: TimestampConverter.dateTimeToTimestamp)
-          final DateTime? discountEntitlementDeadlineDate}) = _$_User;
+      @JsonKey(
+          fromJson: TimestampConverter.timestampToDateTime,
+          toJson: TimestampConverter.dateTimeToTimestamp)
+      final DateTime? beginTrialDate,
+      @JsonKey(
+          fromJson: TimestampConverter.timestampToDateTime,
+          toJson: TimestampConverter.dateTimeToTimestamp)
+      final DateTime? trialDeadlineDate,
+      @JsonKey(
+          fromJson: TimestampConverter.timestampToDateTime,
+          toJson: TimestampConverter.dateTimeToTimestamp)
+      final DateTime? discountEntitlementDeadlineDate}) = _$_User;
   const _User._() : super._();
 
   factory _User.fromJson(Map<String, dynamic> json) = _$_User.fromJson;

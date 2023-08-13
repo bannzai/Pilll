@@ -48,14 +48,17 @@ abstract class $PillSheetGroupCopyWith<$Res> {
       _$PillSheetGroupCopyWithImpl<$Res, PillSheetGroup>;
   @useResult
   $Res call(
-      {@JsonKey(includeIfNull: false, toJson: toNull)
-          String? id,
+      {@JsonKey(includeIfNull: false, toJson: toNull) String? id,
       List<String> pillSheetIDs,
       List<PillSheet> pillSheets,
-      @JsonKey(fromJson: NonNullTimestampConverter.timestampToDateTime, toJson: NonNullTimestampConverter.dateTimeToTimestamp)
-          DateTime createdAt,
-      @JsonKey(fromJson: TimestampConverter.timestampToDateTime, toJson: TimestampConverter.dateTimeToTimestamp)
-          DateTime? deletedAt,
+      @JsonKey(
+          fromJson: NonNullTimestampConverter.timestampToDateTime,
+          toJson: NonNullTimestampConverter.dateTimeToTimestamp)
+      DateTime createdAt,
+      @JsonKey(
+          fromJson: TimestampConverter.timestampToDateTime,
+          toJson: TimestampConverter.dateTimeToTimestamp)
+      DateTime? deletedAt,
       PillSheetGroupDisplayNumberSetting? displayNumberSetting});
 
   $PillSheetGroupDisplayNumberSettingCopyWith<$Res>? get displayNumberSetting;
@@ -132,14 +135,17 @@ abstract class _$$_PillSheetGroupCopyWith<$Res>
   @override
   @useResult
   $Res call(
-      {@JsonKey(includeIfNull: false, toJson: toNull)
-          String? id,
+      {@JsonKey(includeIfNull: false, toJson: toNull) String? id,
       List<String> pillSheetIDs,
       List<PillSheet> pillSheets,
-      @JsonKey(fromJson: NonNullTimestampConverter.timestampToDateTime, toJson: NonNullTimestampConverter.dateTimeToTimestamp)
-          DateTime createdAt,
-      @JsonKey(fromJson: TimestampConverter.timestampToDateTime, toJson: TimestampConverter.dateTimeToTimestamp)
-          DateTime? deletedAt,
+      @JsonKey(
+          fromJson: NonNullTimestampConverter.timestampToDateTime,
+          toJson: NonNullTimestampConverter.dateTimeToTimestamp)
+      DateTime createdAt,
+      @JsonKey(
+          fromJson: TimestampConverter.timestampToDateTime,
+          toJson: TimestampConverter.dateTimeToTimestamp)
+      DateTime? deletedAt,
       PillSheetGroupDisplayNumberSetting? displayNumberSetting});
 
   @override
@@ -198,14 +204,17 @@ class __$$_PillSheetGroupCopyWithImpl<$Res>
 @JsonSerializable(explicitToJson: true)
 class _$_PillSheetGroup extends _PillSheetGroup {
   const _$_PillSheetGroup(
-      {@JsonKey(includeIfNull: false, toJson: toNull)
-          this.id,
+      {@JsonKey(includeIfNull: false, toJson: toNull) this.id,
       required final List<String> pillSheetIDs,
       required final List<PillSheet> pillSheets,
-      @JsonKey(fromJson: NonNullTimestampConverter.timestampToDateTime, toJson: NonNullTimestampConverter.dateTimeToTimestamp)
-          required this.createdAt,
-      @JsonKey(fromJson: TimestampConverter.timestampToDateTime, toJson: TimestampConverter.dateTimeToTimestamp)
-          this.deletedAt,
+      @JsonKey(
+          fromJson: NonNullTimestampConverter.timestampToDateTime,
+          toJson: NonNullTimestampConverter.dateTimeToTimestamp)
+      required this.createdAt,
+      @JsonKey(
+          fromJson: TimestampConverter.timestampToDateTime,
+          toJson: TimestampConverter.dateTimeToTimestamp)
+      this.deletedAt,
       this.displayNumberSetting})
       : _pillSheetIDs = pillSheetIDs,
         _pillSheets = pillSheets,
@@ -296,15 +305,19 @@ class _$_PillSheetGroup extends _PillSheetGroup {
 
 abstract class _PillSheetGroup extends PillSheetGroup {
   const factory _PillSheetGroup(
-      {@JsonKey(includeIfNull: false, toJson: toNull)
-          final String? id,
-      required final List<String> pillSheetIDs,
-      required final List<PillSheet> pillSheets,
-      @JsonKey(fromJson: NonNullTimestampConverter.timestampToDateTime, toJson: NonNullTimestampConverter.dateTimeToTimestamp)
+          {@JsonKey(includeIfNull: false, toJson: toNull) final String? id,
+          required final List<String> pillSheetIDs,
+          required final List<PillSheet> pillSheets,
+          @JsonKey(
+              fromJson: NonNullTimestampConverter.timestampToDateTime,
+              toJson: NonNullTimestampConverter.dateTimeToTimestamp)
           required final DateTime createdAt,
-      @JsonKey(fromJson: TimestampConverter.timestampToDateTime, toJson: TimestampConverter.dateTimeToTimestamp)
+          @JsonKey(
+              fromJson: TimestampConverter.timestampToDateTime,
+              toJson: TimestampConverter.dateTimeToTimestamp)
           final DateTime? deletedAt,
-      final PillSheetGroupDisplayNumberSetting? displayNumberSetting}) = _$_PillSheetGroup;
+          final PillSheetGroupDisplayNumberSetting? displayNumberSetting}) =
+      _$_PillSheetGroup;
   const _PillSheetGroup._() : super._();
 
   factory _PillSheetGroup.fromJson(Map<String, dynamic> json) =
