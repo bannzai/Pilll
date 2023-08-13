@@ -12,7 +12,7 @@ class SharedPreferencesState<T> {
   const SharedPreferencesState(this.key, this.value);
 }
 
-@Riverpod(keepAlive: true)
+@Riverpod(keepAlive: true, dependencies: [sharedPreferences])
 class BoolSharedPreferences extends _$BoolSharedPreferences {
   @override
   SharedPreferencesState<bool?> build(String key) => SharedPreferencesState(key, ref.read(sharedPreferencesProvider).getBool(key));
@@ -23,7 +23,7 @@ class BoolSharedPreferences extends _$BoolSharedPreferences {
   }
 }
 
-@Riverpod(keepAlive: true)
+@Riverpod(keepAlive: true, dependencies: [sharedPreferences])
 class IntSharedPreferences extends _$IntSharedPreferences {
   @override
   SharedPreferencesState<int?> build(String key) => SharedPreferencesState(key, ref.read(sharedPreferencesProvider).getInt(key));
@@ -34,7 +34,7 @@ class IntSharedPreferences extends _$IntSharedPreferences {
   }
 }
 
-@Riverpod(keepAlive: true)
+@Riverpod(keepAlive: true, dependencies: [sharedPreferences])
 class StringSharedPreferences extends _$StringSharedPreferences {
   @override
   SharedPreferencesState<String?> build(String key) => SharedPreferencesState(key, ref.read(sharedPreferencesProvider).getString(key));

@@ -7,7 +7,7 @@ part of 'typed_shared_preferences.dart';
 // **************************************************************************
 
 String _$boolSharedPreferencesHash() =>
-    r'cbf72d9d073e5d507a77ee5300db2cac385ae8d5';
+    r'74722005ae3dc56ee882744e65c2518f169318a9';
 
 /// Copied from Dart SDK
 class _SystemHash {
@@ -67,12 +67,18 @@ class BoolSharedPreferencesFamily
     );
   }
 
-  static const Iterable<ProviderOrFamily>? _dependencies = null;
+  static final Iterable<ProviderOrFamily> _dependencies = <ProviderOrFamily>[
+    sharedPreferencesProvider
+  ];
 
   @override
   Iterable<ProviderOrFamily>? get dependencies => _dependencies;
 
-  static const Iterable<ProviderOrFamily>? _allTransitiveDependencies = null;
+  static final Iterable<ProviderOrFamily> _allTransitiveDependencies =
+      <ProviderOrFamily>{
+    sharedPreferencesProvider,
+    ...?sharedPreferencesProvider.allTransitiveDependencies
+  };
 
   @override
   Iterable<ProviderOrFamily>? get allTransitiveDependencies =>
@@ -127,7 +133,7 @@ class BoolSharedPreferencesProvider extends NotifierProviderImpl<
 }
 
 String _$intSharedPreferencesHash() =>
-    r'8af073e0874526df7d013905880a8031a65bb5e8';
+    r'ae66140077df3922444c17579c2b5483ed6c21b8';
 
 abstract class _$IntSharedPreferences
     extends BuildlessNotifier<SharedPreferencesState<int?>> {
@@ -165,12 +171,18 @@ class IntSharedPreferencesFamily extends Family<SharedPreferencesState<int?>> {
     );
   }
 
-  static const Iterable<ProviderOrFamily>? _dependencies = null;
+  static final Iterable<ProviderOrFamily> _dependencies = <ProviderOrFamily>[
+    sharedPreferencesProvider
+  ];
 
   @override
   Iterable<ProviderOrFamily>? get dependencies => _dependencies;
 
-  static const Iterable<ProviderOrFamily>? _allTransitiveDependencies = null;
+  static final Iterable<ProviderOrFamily> _allTransitiveDependencies =
+      <ProviderOrFamily>{
+    sharedPreferencesProvider,
+    ...?sharedPreferencesProvider.allTransitiveDependencies
+  };
 
   @override
   Iterable<ProviderOrFamily>? get allTransitiveDependencies =>
@@ -225,7 +237,7 @@ class IntSharedPreferencesProvider extends NotifierProviderImpl<
 }
 
 String _$stringSharedPreferencesHash() =>
-    r'd5f679c4108010a0e08a8a1dca63337a6d753fde';
+    r'3dbe38b126b12544017f8538c33ea459704cf110';
 
 abstract class _$StringSharedPreferences
     extends BuildlessNotifier<SharedPreferencesState<String?>> {
@@ -264,12 +276,18 @@ class StringSharedPreferencesFamily
     );
   }
 
-  static const Iterable<ProviderOrFamily>? _dependencies = null;
+  static final Iterable<ProviderOrFamily> _dependencies = <ProviderOrFamily>[
+    sharedPreferencesProvider
+  ];
 
   @override
   Iterable<ProviderOrFamily>? get dependencies => _dependencies;
 
-  static const Iterable<ProviderOrFamily>? _allTransitiveDependencies = null;
+  static final Iterable<ProviderOrFamily> _allTransitiveDependencies =
+      <ProviderOrFamily>{
+    sharedPreferencesProvider,
+    ...?sharedPreferencesProvider.allTransitiveDependencies
+  };
 
   @override
   Iterable<ProviderOrFamily>? get allTransitiveDependencies =>
