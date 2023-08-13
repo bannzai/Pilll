@@ -47,7 +47,7 @@ Future<void> entrypoint() async {
       overrides: [
         sharedPreferencesProvider.overrideWith((ref) => sharedPreferences),
       ],
-      child: App(),
+      child: const App(),
     ));
   }, (error, stack) => FirebaseCrashlytics.instance.recordError(error, stack));
 }

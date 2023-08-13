@@ -18,7 +18,7 @@ class BoolSharedPreferences extends FamilyAsyncNotifier<bool?, String> {
   @override
   FutureOr<bool?> build(String arg) async {
     key = arg;
-    sharedPreferences = await ref.watch(sharedPreferenceFutureProvider.future);
+    sharedPreferences = await ref.watch(sharedPreferencesProvider);
     return sharedPreferences.getBool(key);
   }
 }
@@ -38,7 +38,7 @@ class IntSharedPreferences extends FamilyAsyncNotifier<int?, String> {
   @override
   FutureOr<int?> build(String arg) async {
     key = arg;
-    sharedPreferences = await ref.watch(sharedPreferenceFutureProvider.future);
+    sharedPreferences = await ref.watch(sharedPreferencesProvider);
     return sharedPreferences.getInt(key);
   }
 }
@@ -60,7 +60,7 @@ class StringSharedPreferences extends FamilyAsyncNotifier<String?, String> {
   @override
   FutureOr<String?> build(String arg) async {
     key = arg;
-    sharedPreferences = await ref.watch(sharedPreferenceFutureProvider.future);
+    sharedPreferences = await ref.watch(sharedPreferencesProvider);
     return sharedPreferences.getString(key);
   }
 }

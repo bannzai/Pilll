@@ -150,7 +150,7 @@ class MigrateInfo extends HookConsumerWidget {
                       child: PrimaryButton(
                           onPressed: () async {
                             sharedPreferences.set(true);
-                            ref.invalidate(sharedPreferenceFutureProvider);
+                            ref.invalidate(sharedPreferencesProvider);
                             Navigator.of(context).pop();
                           },
                           text: "閉じる")),

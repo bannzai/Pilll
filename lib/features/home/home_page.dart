@@ -47,18 +47,18 @@ class HomePage extends HookConsumerWidget {
     }, [user.valueOrNull]);
 
     final registerReminderLocalNotification = ref.watch(registerReminderLocalNotificationProvider);
-    return AsyncValueGroup.group4(
+    final sharedPreferences = ref.watch(sharedPreferencesProvider);
+    return AsyncValueGroup.group3(
       user,
       ref.watch(premiumAndTrialProvider),
       ref.watch(shouldShowMigrationInformationProvider),
-      ref.watch(sharedPreferenceFutureProvider),
     ).when(
       data: (data) {
         return HomePageBody(
           user: data.t1,
           premiumAndTrial: data.t2,
           shouldShowMigrateInfo: data.t3,
-          sharedPreferences: data.t4,
+          sharedPreferences: sharedPreferences,
           registerReminderLocalNotification: registerReminderLocalNotification,
         );
       },

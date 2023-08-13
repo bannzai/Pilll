@@ -52,15 +52,14 @@ class SettingPage extends HookConsumerWidget {
   Widget build(BuildContext context, WidgetRef ref) {
     useAutomaticKeepAlive(wantKeepAlive: true);
 
-    return AsyncValueGroup.group5(
+    final sharedPreferences = ref.watch(sharedPreferencesProvider);
+    return AsyncValueGroup.group4(
       ref.watch(settingProvider),
       ref.watch(latestPillSheetGroupProvider),
       ref.watch(premiumAndTrialProvider),
       ref.watch(isHealthDataAvailableProvider),
-      ref.watch(sharedPreferenceFutureProvider),
     ).when(
       data: (data) {
-        final sharedPreferences = data.t5;
         final userIsMigratedFrom132 =
             sharedPreferences.containsKey(StringKey.salvagedOldStartTakenDate) && sharedPreferences.containsKey(StringKey.salvagedOldLastTakenDate);
         return SettingPageBody(
