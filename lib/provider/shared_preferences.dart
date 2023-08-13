@@ -1,10 +1,15 @@
 import 'package:pilll/provider/typed_shared_preferences.dart';
 import 'package:pilll/utils/shared_preference/keys.dart';
-import 'package:riverpod/riverpod.dart';
+import 'package:riverpod_annotation/riverpod_annotation.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
-// overrideする前提なので.autoDisposeはつけない。またこれに依存したProviderもkeepAlive: trueにする必要がある
-final sharedPreferencesProvider = Provider<SharedPreferences>((ref) => throw UnimplementedError("sharedPreferencesProvider is not implemented"));
+part 'shared_preferences.g.dart';
+
+// overrideする前提なので.autoDisposeはつけない=(keeyAlive: trueにする)。またこれに依存したProviderもkeepAlive: trueにする必要がある
+@Riverpod(keepAlive: true)
+SharedPreferences sharedPreferences(SharedPreferencesRef ref) {
+  throw UnimplementedError("sharedPreferencesProvider is not implemented");
+}
 
 final shouldShowMigrationInformationProvider = FutureProvider.autoDispose((ref) {
   final sharedPreferences = ref.watch(sharedPreferencesProvider);
