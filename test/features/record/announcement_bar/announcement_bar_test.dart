@@ -68,6 +68,7 @@ void main() {
           BoolKey.recommendedSignupNotificationIsAlreadyShow: false,
           IntKey.totalCountOfActionForTakenPill: totalCountOfActionForTakenPillForLongTimeUser,
         });
+        final sharedPreferences = await SharedPreferences.getInstance();
         await tester.pumpWidget(
           ProviderScope(
             overrides: [
@@ -88,6 +89,7 @@ void main() {
               isJaLocaleProvider.overrideWithValue(true),
               isOverDiscountDeadlineProvider.overrideWithProvider((param) => Provider.autoDispose((_) => false)),
               durationToDiscountPriceDeadline.overrideWithProvider((param) => Provider.autoDispose((_) => const Duration(seconds: 1000))),
+              sharedPreferencesProvider.overrideWith((ref) => sharedPreferences),
             ],
             child: const MaterialApp(
               home: Material(child: AnnouncementBar()),
@@ -118,11 +120,12 @@ void main() {
           ),
         );
         final pillSheetGroup = PillSheetGroup(pillSheetIDs: ["1"], pillSheets: [pillSheet], createdAt: now());
+
         SharedPreferences.setMockInitialValues({
           IntKey.totalCountOfActionForTakenPill: totalCountOfActionForTakenPillForLongTimeUser,
           BoolKey.recommendedSignupNotificationIsAlreadyShow: false,
         });
-
+        final sharedPreferences = await SharedPreferences.getInstance();
         await tester.pumpWidget(
           ProviderScope(
             overrides: [
@@ -143,6 +146,7 @@ void main() {
               isJaLocaleProvider.overrideWithValue(true),
               isOverDiscountDeadlineProvider.overrideWithProvider((param) => Provider.autoDispose((_) => false)),
               durationToDiscountPriceDeadline.overrideWithProvider((param) => Provider.autoDispose((_) => const Duration(seconds: 1000))),
+              sharedPreferencesProvider.overrideWith((ref) => sharedPreferences),
             ],
             child: const MaterialApp(
               home: Material(child: AnnouncementBar()),
@@ -232,10 +236,12 @@ void main() {
           ),
         );
         final pillSheetGroup = PillSheetGroup(pillSheetIDs: ["1"], pillSheets: [pillSheet], createdAt: now());
+
         SharedPreferences.setMockInitialValues({
           IntKey.totalCountOfActionForTakenPill: totalCountOfActionForTakenPillForLongTimeUser,
           BoolKey.recommendedSignupNotificationIsAlreadyShow: false,
         });
+        final sharedPreferences = await SharedPreferences.getInstance();
         await tester.pumpWidget(
           ProviderScope(
             overrides: [
@@ -256,6 +262,7 @@ void main() {
               isJaLocaleProvider.overrideWithValue(true),
               isOverDiscountDeadlineProvider.overrideWithProvider((param) => Provider.autoDispose((_) => false)),
               durationToDiscountPriceDeadline.overrideWithProvider((param) => Provider.autoDispose((_) => const Duration(seconds: 1000))),
+              sharedPreferencesProvider.overrideWith((ref) => sharedPreferences),
             ],
             child: const MaterialApp(
               home: Material(child: AnnouncementBar()),
@@ -292,6 +299,7 @@ void main() {
           IntKey.totalCountOfActionForTakenPill: totalCountOfActionForTakenPillForLongTimeUser,
           BoolKey.recommendedSignupNotificationIsAlreadyShow: false,
         });
+        final sharedPreferences = await SharedPreferences.getInstance();
         await tester.pumpWidget(
           ProviderScope(
             overrides: [
@@ -312,6 +320,7 @@ void main() {
               isJaLocaleProvider.overrideWithValue(true),
               isOverDiscountDeadlineProvider.overrideWithProvider((param) => Provider.autoDispose((_) => false)),
               durationToDiscountPriceDeadline.overrideWithProvider((param) => Provider.autoDispose((_) => const Duration(seconds: 1000))),
+              sharedPreferencesProvider.overrideWith((ref) => sharedPreferences),
             ],
             child: const MaterialApp(
               home: Material(child: AnnouncementBar()),
@@ -347,6 +356,7 @@ void main() {
             IntKey.totalCountOfActionForTakenPill: totalCountOfActionForTakenPillForLongTimeUser,
             BoolKey.recommendedSignupNotificationIsAlreadyShow: false,
           });
+          final sharedPreferences = await SharedPreferences.getInstance();
           await tester.pumpWidget(
             ProviderScope(
               overrides: [
@@ -377,6 +387,7 @@ void main() {
                     imageURL: null,
                   )),
                 ),
+                sharedPreferencesProvider.overrideWith((ref) => sharedPreferences),
               ],
               child: const MaterialApp(
                 home: Material(child: AnnouncementBar()),
@@ -410,6 +421,7 @@ void main() {
             IntKey.totalCountOfActionForTakenPill: totalCountOfActionForTakenPillForLongTimeUser,
             BoolKey.recommendedSignupNotificationIsAlreadyShow: false,
           });
+          final sharedPreferences = await SharedPreferences.getInstance();
           await tester.pumpWidget(
             ProviderScope(
               overrides: [
@@ -442,6 +454,7 @@ void main() {
                     ),
                   ),
                 ),
+                sharedPreferencesProvider.overrideWith((ref) => sharedPreferences),
               ],
               child: const MaterialApp(
                 home: Material(child: AnnouncementBar()),
@@ -475,6 +488,7 @@ void main() {
             IntKey.totalCountOfActionForTakenPill: totalCountOfActionForTakenPillForLongTimeUser,
             BoolKey.recommendedSignupNotificationIsAlreadyShow: false,
           });
+          final sharedPreferences = await SharedPreferences.getInstance();
           await tester.pumpWidget(
             ProviderScope(
               overrides: [
@@ -507,6 +521,7 @@ void main() {
                     ),
                   ),
                 ),
+                sharedPreferencesProvider.overrideWith((ref) => sharedPreferences),
               ],
               child: const MaterialApp(
                 home: Material(child: AnnouncementBar()),
@@ -540,6 +555,7 @@ void main() {
             IntKey.totalCountOfActionForTakenPill: totalCountOfActionForTakenPillForLongTimeUser,
             BoolKey.recommendedSignupNotificationIsAlreadyShow: false,
           });
+          final sharedPreferences = await SharedPreferences.getInstance();
           await tester.pumpWidget(
             ProviderScope(
               overrides: [
@@ -571,7 +587,8 @@ void main() {
                       imageURL: null,
                     ),
                   ),
-                )
+                ),
+                sharedPreferencesProvider.overrideWith((ref) => sharedPreferences),
               ],
               child: const MaterialApp(
                 home: Material(child: AnnouncementBar()),
@@ -605,6 +622,7 @@ void main() {
             IntKey.totalCountOfActionForTakenPill: totalCountOfActionForTakenPillForLongTimeUser,
             BoolKey.recommendedSignupNotificationIsAlreadyShow: false,
           });
+          final sharedPreferences = await SharedPreferences.getInstance();
           await tester.pumpWidget(
             ProviderScope(
               overrides: [
@@ -636,7 +654,8 @@ void main() {
                       imageURL: null,
                     ),
                   ),
-                )
+                ),
+                sharedPreferencesProvider.overrideWith((ref) => sharedPreferences),
               ],
               child: const MaterialApp(
                 home: Material(child: AnnouncementBar()),
@@ -677,6 +696,7 @@ void main() {
             IntKey.totalCountOfActionForTakenPill: totalCountOfActionForTakenPillForLongTimeUser,
             BoolKey.recommendedSignupNotificationIsAlreadyShow: false,
           });
+          final sharedPreferences = await SharedPreferences.getInstance();
           await tester.pumpWidget(
             ProviderScope(
               overrides: [
@@ -708,7 +728,8 @@ void main() {
                       imageURL: null,
                     ),
                   ),
-                )
+                ),
+                sharedPreferencesProvider.overrideWith((ref) => sharedPreferences),
               ],
               child: const MaterialApp(
                 home: Material(child: AnnouncementBar()),
@@ -744,6 +765,7 @@ void main() {
             IntKey.totalCountOfActionForTakenPill: totalCountOfActionForTakenPillForLongTimeUser,
             BoolKey.recommendedSignupNotificationIsAlreadyShow: false,
           });
+          final sharedPreferences = await SharedPreferences.getInstance();
           await tester.pumpWidget(
             ProviderScope(
               overrides: [
@@ -775,7 +797,8 @@ void main() {
                       imageURL: null,
                     ),
                   ),
-                )
+                ),
+                sharedPreferencesProvider.overrideWith((ref) => sharedPreferences),
               ],
               child: const MaterialApp(
                 home: Material(child: AnnouncementBar()),
@@ -811,6 +834,7 @@ void main() {
             IntKey.totalCountOfActionForTakenPill: totalCountOfActionForTakenPillForLongTimeUser,
             BoolKey.recommendedSignupNotificationIsAlreadyShow: false,
           });
+          final sharedPreferences = await SharedPreferences.getInstance();
           await tester.pumpWidget(
             ProviderScope(
               overrides: [
@@ -842,7 +866,8 @@ void main() {
                       imageURL: null,
                     ),
                   ),
-                )
+                ),
+                sharedPreferencesProvider.overrideWith((ref) => sharedPreferences),
               ],
               child: const MaterialApp(
                 home: Material(child: AnnouncementBar()),
@@ -878,6 +903,7 @@ void main() {
             IntKey.totalCountOfActionForTakenPill: totalCountOfActionForTakenPillForLongTimeUser,
             BoolKey.recommendedSignupNotificationIsAlreadyShow: false,
           });
+          final sharedPreferences = await SharedPreferences.getInstance();
           await tester.pumpWidget(
             ProviderScope(
               overrides: [
@@ -909,7 +935,8 @@ void main() {
                       imageURL: null,
                     ),
                   ),
-                )
+                ),
+                sharedPreferencesProvider.overrideWith((ref) => sharedPreferences),
               ],
               child: const MaterialApp(
                 home: Material(child: AnnouncementBar()),
@@ -945,6 +972,7 @@ void main() {
             IntKey.totalCountOfActionForTakenPill: totalCountOfActionForTakenPillForLongTimeUser,
             BoolKey.recommendedSignupNotificationIsAlreadyShow: false,
           });
+          final sharedPreferences = await SharedPreferences.getInstance();
           await tester.pumpWidget(
             ProviderScope(
               overrides: [
@@ -976,7 +1004,8 @@ void main() {
                       imageURL: null,
                     ),
                   ),
-                )
+                ),
+                sharedPreferencesProvider.overrideWith((ref) => sharedPreferences),
               ],
               child: const MaterialApp(
                 home: Material(child: AnnouncementBar()),
@@ -1012,6 +1041,7 @@ void main() {
             IntKey.totalCountOfActionForTakenPill: totalCountOfActionForTakenPillForLongTimeUser,
             BoolKey.recommendedSignupNotificationIsAlreadyShow: false,
           });
+          final sharedPreferences = await SharedPreferences.getInstance();
           await tester.pumpWidget(
             ProviderScope(
               overrides: [
@@ -1043,7 +1073,8 @@ void main() {
                       imageURL: null,
                     ),
                   ),
-                )
+                ),
+                sharedPreferencesProvider.overrideWith((ref) => sharedPreferences),
               ],
               child: const MaterialApp(
                 home: Material(child: AnnouncementBar()),
@@ -1080,6 +1111,7 @@ void main() {
           IntKey.totalCountOfActionForTakenPill: totalCountOfActionForTakenPillForLongTimeUser,
           BoolKey.recommendedSignupNotificationIsAlreadyShow: false,
         });
+        final sharedPreferences = await SharedPreferences.getInstance();
         await tester.pumpWidget(
           ProviderScope(
             overrides: [
@@ -1100,6 +1132,7 @@ void main() {
               isJaLocaleProvider.overrideWithValue(true),
               isOverDiscountDeadlineProvider.overrideWithProvider((param) => Provider.autoDispose((_) => false)),
               durationToDiscountPriceDeadline.overrideWithProvider((param) => Provider.autoDispose((_) => const Duration(seconds: 1000))),
+              sharedPreferencesProvider.overrideWith((ref) => sharedPreferences),
             ],
             child: const MaterialApp(
               home: Material(child: AnnouncementBar()),
@@ -1136,6 +1169,7 @@ void main() {
           IntKey.totalCountOfActionForTakenPill: totalCountOfActionForTakenPillForLongTimeUser,
           BoolKey.recommendedSignupNotificationIsAlreadyShow: false,
         });
+        final sharedPreferences = await SharedPreferences.getInstance();
         await tester.pumpWidget(
           ProviderScope(
             overrides: [
@@ -1156,6 +1190,7 @@ void main() {
               isJaLocaleProvider.overrideWithValue(true),
               isOverDiscountDeadlineProvider.overrideWithProvider((param) => Provider.autoDispose((_) => false)),
               durationToDiscountPriceDeadline.overrideWithProvider((param) => Provider.autoDispose((_) => const Duration(seconds: 1000))),
+              sharedPreferencesProvider.overrideWith((ref) => sharedPreferences),
             ],
             child: const MaterialApp(
               home: Material(child: AnnouncementBar()),
@@ -1192,6 +1227,7 @@ void main() {
           IntKey.totalCountOfActionForTakenPill: totalCountOfActionForTakenPillForLongTimeUser,
           BoolKey.recommendedSignupNotificationIsAlreadyShow: false,
         });
+        final sharedPreferences = await SharedPreferences.getInstance();
         await tester.pumpWidget(
           ProviderScope(
             overrides: [
@@ -1212,6 +1248,7 @@ void main() {
               isJaLocaleProvider.overrideWithValue(true),
               isOverDiscountDeadlineProvider.overrideWithProvider((param) => Provider.autoDispose((_) => false)),
               durationToDiscountPriceDeadline.overrideWithProvider((param) => Provider.autoDispose((_) => const Duration(seconds: 1000))),
+              sharedPreferencesProvider.overrideWith((ref) => sharedPreferences),
             ],
             child: const MaterialApp(
               home: Material(child: AnnouncementBar()),
