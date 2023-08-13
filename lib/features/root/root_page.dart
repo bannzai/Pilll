@@ -24,13 +24,8 @@ class RootPage extends HookConsumerWidget {
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {
-    final signInFirebaseUser = ref.watch(firebaseSignInProvider.future);
     final checkForceUpdate = ref.watch(checkForceUpdateProvider);
-    final setUserID = ref.watch(setUserIDProvider);
-
-    final userID = useState<String?>(null);
     final shouldForceUpdate = useState(false);
-    final error = useState<LaunchException?>(null);
 
     // Setup for application
     useEffect(() {
@@ -48,7 +43,7 @@ class RootPage extends HookConsumerWidget {
       void f() async {
         try {
           // 計測してみたらこの処理が結構長かった。通常の起動時間に影響があるので、この処理を非同期にする。
-          // 多少データが変更される可能性があるが、それは飲み込むことにする。ほとんど問題はないはず
+          // 多少データが変更される可能性があるが、それは許容する。ほとんど問題はないはず
           if (await checkForceUpdate()) {
             shouldForceUpdate.value = true;
           }
@@ -60,32 +55,6 @@ class RootPage extends HookConsumerWidget {
       f();
       return null;
     }, []);
-
-    // SignIn once
-    useEffect(() {
-      void f() async {
-        // SignIn first. Keep in mind that this method is called first.
-        try {
-          final firebaseUser = await signInFirebaseUser;
-          userID.value = firebaseUser.uid;
-        } catch (e, st) {
-          errorLogger.recordError(e, st);
-          error.value = LaunchException("認証時にエラーが発生しました\n${ErrorMessages.connection}\n詳細:", e);
-        }
-      }
-
-      f();
-      return null;
-    }, []);
-
-    useEffect(() {
-      final userIDValue = userID.value;
-      if (userIDValue != null) {
-        setUserID(userID: userIDValue);
-      }
-
-      return null;
-    }, [userID.value]);
 
     // For force update
     if (shouldForceUpdate.value) {
@@ -101,21 +70,16 @@ class RootPage extends HookConsumerWidget {
       return const ScaffoldIndicator();
     }
 
-    // Main stream
-    return UniversalErrorPage(
-      error: error.value,
-      reload: () {
-        error.value = null;
-        ref.invalidate(refreshAppProvider);
-      },
-      child: () {
-        final userIDValue = userID.value;
-        if (userIDValue == null) {
-          return const ScaffoldIndicator();
-        } else {
-          return builder(context, userIDValue);
-        }
-      }(),
-    );
+    return ref.watch(firebaseSignInProvider).when(
+          data: (user) => builder(context, user.uid),
+          error: (e, st) => UniversalErrorPage(
+            error: e,
+            reload: () {
+              ref.invalidate(firebaseSignInProvider);
+            },
+            child: null,
+          ),
+          loading: () => const ScaffoldIndicator(),
+        );
   }
 }
