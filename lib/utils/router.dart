@@ -1,4 +1,4 @@
-import 'package:pilll/provider/shared_preferences.dart';
+import 'package:pilll/provider/typed_shared_preferences.dart';
 import 'package:pilll/utils/analytics.dart';
 import 'package:flutter/material.dart';
 

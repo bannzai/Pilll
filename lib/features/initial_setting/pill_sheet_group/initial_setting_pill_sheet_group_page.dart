@@ -1,7 +1,7 @@
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter_hooks/flutter_hooks.dart';
 import 'package:flutter_svg/flutter_svg.dart';
-import 'package:pilll/provider/shared_preferences.dart';
+import 'package:pilll/provider/typed_shared_preferences.dart';
 import 'package:pilll/provider/user.dart';
 import 'package:pilll/utils/analytics.dart';
 import 'package:pilll/utils/auth/apple.dart';
