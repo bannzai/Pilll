@@ -26,12 +26,12 @@ class InitialSettingOrAppPage extends HookConsumerWidget {
   @override
   Widget build(BuildContext context, WidgetRef ref) {
     final markAsMigratedToFlutter = ref.watch(markAsMigratedToFlutterProvider);
-    final didEndInitialSettingAsyncValue = ref.watch(didEndInitialSettingProvider);
+    final didEndInitialSetting = ref.watch(didEndInitialSettingProvider);
     // UserSetupPageでUserはできているのでfetchが終わり次第値は必ず入る。ここでwatchしないとInitialSetting -> Appへの遷移が成立しない
     final user = ref.watch(userProvider).valueOrNull;
 
     final error = useState<LaunchException?>(null);
-    final screenType = retrieveScreenType(user: user, didEndInitialSettingAsyncValue: didEndInitialSettingAsyncValue);
+    final screenType = retrieveScreenType(user: user, didEndInitialSetting: didEndInitialSetting.value);
 
     useEffect(() {
       if (user != null) {
@@ -65,12 +65,9 @@ class InitialSettingOrAppPage extends HookConsumerWidget {
 
 InitialSettingOrAppPageScreenType retrieveScreenType({
   required User? user,
-  required AsyncValue<bool?> didEndInitialSettingAsyncValue,
+  required bool? didEndInitialSetting,
 }) {
   if (user == null) {
-    return InitialSettingOrAppPageScreenType.loading;
-  }
-  if (didEndInitialSettingAsyncValue is! AsyncData) {
     return InitialSettingOrAppPageScreenType.loading;
   }
   if (!user.migratedFlutter) {
@@ -79,7 +76,6 @@ InitialSettingOrAppPageScreenType retrieveScreenType({
     return InitialSettingOrAppPageScreenType.initialSetting;
   }
 
-  final didEndInitialSetting = didEndInitialSettingAsyncValue.value;
   if (didEndInitialSetting == null) {
     analytics.logEvent(name: "did_end_i_s_is_null");
     return InitialSettingOrAppPageScreenType.initialSetting;
