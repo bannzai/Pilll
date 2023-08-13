@@ -33,7 +33,7 @@ import 'package:pilll/provider/pill_sheet_group.dart';
 import 'package:pilll/provider/premium_and_trial.codegen.dart';
 import 'package:pilll/provider/root.dart';
 import 'package:pilll/provider/setting.dart';
-import 'package:pilll/provider/shared_preference.dart';
+import 'package:pilll/provider/shared_preferences.dart';
 import 'package:pilll/utils/environment.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';

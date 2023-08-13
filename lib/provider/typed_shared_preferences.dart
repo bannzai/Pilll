@@ -1,5 +1,5 @@
 import 'dart:async';
-import 'package:pilll/provider/shared_preference.dart';
+import 'package:pilll/provider/shared_preferences.dart';
 import 'package:riverpod/riverpod.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
