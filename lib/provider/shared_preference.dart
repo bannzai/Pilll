@@ -4,7 +4,6 @@ import 'package:riverpod/riverpod.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
 final sharedPreferencesProvider = Provider<SharedPreferences>((ref) => throw UnimplementedError("sharedPreferencesProvider is not implemented"));
-final sharedPreferenceFutureProvider = FutureProvider((ref) => SharedPreferences.getInstance());
 
 final shouldShowMigrationInformationProvider = FutureProvider((ref) async {
   final sharedPreferences = await ref.watch(sharedPreferenceFutureProvider.future);
