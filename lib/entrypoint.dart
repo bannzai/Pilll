@@ -39,11 +39,14 @@ Future<void> entrypoint() async {
     }
 
     // ignore: prefer_typing_uninitialized_variables
-    final _, sharedPreferences = (LocalNotificationService.setupTimeZone(), SharedPreferences.getInstance()).wait;
+    final (_, sharedPreferences) = await (LocalNotificationService.setupTimeZone(), SharedPreferences.getInstance()).wait;
 
     // MEMO: FirebaseCrashlytics#recordFlutterError called dumpErrorToConsole in function.
     FlutterError.onError = FirebaseCrashlytics.instance.recordFlutterError;
-    runApp(const ProviderScope(
+    runApp(ProviderScope(
+      overrides: [
+        sharedPreferencesProvider.overrideWith((ref) => sharedPreferences),
+      ],
       child: App(),
     ));
   }, (error, stack) => FirebaseCrashlytics.instance.recordError(error, stack));
