@@ -3,16 +3,19 @@ import 'package:pilll/provider/shared_preferences.dart';
 import 'package:riverpod/riverpod.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
-final boolSharedPreferencesProvider = AsyncNotifierProvider.family<BoolSharedPreferences, bool?, String>(() => BoolSharedPreferences());
+final boolSharedPreferencesProvider = StateNotifierProvider.family<BoolSharedPreferences, bool?, String>(
+    (ref, key) => BoolSharedPreferences(key, ref.watch(sharedPreferencesProvider)));
 
-class BoolSharedPreferences extends FamilyAsyncNotifier<bool?, String> {
-  late String key;
-  late SharedPreferences sharedPreferences;
+class BoolSharedPreferences extends StateNotifier<bool?> {
+  final String key;
+  final SharedPreferences sharedPreferences;
+
+  BoolSharedPreferences(this.key, this.sharedPreferences) : super(false);
 
   Future<void> set(bool value) async {
     await sharedPreferences.setBool(key, value);
     // NOTE: Allow recreate AsyncNotifier everytime. Not call update((_) => value), Keep SSoT with fetching data via shared_preferences
-    ref.invalidateSelf();
+    invalidate
   }
 
   @override
