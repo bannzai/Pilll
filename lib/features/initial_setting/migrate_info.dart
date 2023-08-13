@@ -5,7 +5,7 @@ import 'package:pilll/components/atoms/font.dart';
 import 'package:pilll/components/atoms/text_color.dart';
 import 'package:flutter/material.dart';
 import 'package:pilll/provider/shared_preferences.dart';
-import 'package:pilll/provider/typed_shared_preferences.dart';
+import 'package:pilll/provider/old_typed_shared_preferences.dart';
 import 'package:pilll/utils/shared_preference/keys.dart';
 
 class MigrateInfo extends HookConsumerWidget {

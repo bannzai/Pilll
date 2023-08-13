@@ -1,7 +1,7 @@
 import 'package:flutter_hooks/flutter_hooks.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
 import 'package:pilll/features/root/launch_exception.dart';
-import 'package:pilll/provider/typed_shared_preferences.dart';
+import 'package:pilll/provider/old_typed_shared_preferences.dart';
 import 'package:pilll/utils/analytics.dart';
 import 'package:pilll/features/initial_setting/pill_sheet_group/initial_setting_pill_sheet_group_page.dart';
 import 'package:pilll/entity/user.codegen.dart';
