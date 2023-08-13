@@ -56,7 +56,7 @@ class PreStoreReviewModal extends HookConsumerWidget {
                   switch (selectionValue) {
                     case PreStoreReviewModalSelection.good:
                       analytics.logEvent(name: "submit_pre_store_review_modal_good");
-                      ref.read(sharedPreferenceProvider).asData?.value.setBool(BoolKey.isPreStoreReviewGoodAnswer, true);
+                      ref.read(sharedPreferenceFutureProvider).asData?.value.setBool(BoolKey.isPreStoreReviewGoodAnswer, true);
                       break;
                     case PreStoreReviewModalSelection.bad:
                       analytics.logEvent(name: "submit_pre_store_review_modal_bad");

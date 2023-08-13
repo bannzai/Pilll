@@ -51,7 +51,7 @@ class HomePage extends HookConsumerWidget {
       user,
       ref.watch(premiumAndTrialProvider),
       ref.watch(shouldShowMigrationInformationProvider),
-      ref.watch(sharedPreferenceProvider),
+      ref.watch(sharedPreferenceFutureProvider),
     ).when(
       data: (data) {
         return HomePageBody(

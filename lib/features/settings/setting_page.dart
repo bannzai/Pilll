@@ -57,7 +57,7 @@ class SettingPage extends HookConsumerWidget {
       ref.watch(latestPillSheetGroupProvider),
       ref.watch(premiumAndTrialProvider),
       ref.watch(isHealthDataAvailableProvider),
-      ref.watch(sharedPreferenceProvider),
+      ref.watch(sharedPreferenceFutureProvider),
     ).when(
       data: (data) {
         final sharedPreferences = data.t5;

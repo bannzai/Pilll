@@ -3,10 +3,10 @@ import 'package:pilll/utils/shared_preference/keys.dart';
 import 'package:riverpod/riverpod.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
-final sharedPreferenceProvider = FutureProvider((ref) => SharedPreferences.getInstance());
+final sharedPreferenceFutureProvider = FutureProvider((ref) => SharedPreferences.getInstance());
 
 final shouldShowMigrationInformationProvider = FutureProvider((ref) async {
-  final sharedPreferences = await ref.watch(sharedPreferenceProvider.future);
+  final sharedPreferences = await ref.watch(sharedPreferenceFutureProvider.future);
   final migrateFrom132IsShown = ref.watch(boolSharedPreferencesProvider(BoolKey.migrateFrom132IsShown));
   if (migrateFrom132IsShown.valueOrNull ?? false) {
     return false;
