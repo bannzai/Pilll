@@ -7,55 +7,123 @@ part of 'typed_shared_preferences.dart';
 // **************************************************************************
 
 String _$boolSharedPreferencesHash() =>
-    r'3f14410227a78c2ac734268cde68561d7da49d3c';
+    r'ccad60dbd5ace6ca5aafeef66063aa8411476d64';
+
+/// Copied from Dart SDK
+class _SystemHash {
+  _SystemHash._();
+
+  static int combine(int hash, int value) {
+    // ignore: parameter_assignments
+    hash = 0x1fffffff & (hash + value);
+    // ignore: parameter_assignments
+    hash = 0x1fffffff & (hash + ((0x0007ffff & hash) << 10));
+    return hash ^ (hash >> 6);
+  }
+
+  static int finish(int hash) {
+    // ignore: parameter_assignments
+    hash = 0x1fffffff & (hash + ((0x03ffffff & hash) << 3));
+    // ignore: parameter_assignments
+    hash = hash ^ (hash >> 11);
+    return 0x1fffffff & (hash + ((0x00003fff & hash) << 15));
+  }
+}
+
+abstract class _$BoolSharedPreferences
+    extends BuildlessAutoDisposeNotifier<SharedPreferencesState<bool?>> {
+  late final String key;
+
+  SharedPreferencesState<bool?> build(
+    String key,
+  );
+}
 
 /// See also [BoolSharedPreferences].
 @ProviderFor(BoolSharedPreferences)
-final boolSharedPreferencesProvider =
-    AutoDisposeNotifierProvider<BoolSharedPreferences, bool?>.internal(
-  BoolSharedPreferences.new,
-  name: r'boolSharedPreferencesProvider',
-  debugGetCreateSourceHash: const bool.fromEnvironment('dart.vm.product')
-      ? null
-      : _$boolSharedPreferencesHash,
-  dependencies: null,
-  allTransitiveDependencies: null,
-);
+const boolSharedPreferencesProvider = BoolSharedPreferencesFamily();
 
-typedef _$BoolSharedPreferences = AutoDisposeNotifier<bool?>;
-String _$intSharedPreferencesHash() =>
-    r'05cb15cc322d82c0db37425324278ac1c3d7bce0';
+/// See also [BoolSharedPreferences].
+class BoolSharedPreferencesFamily
+    extends Family<SharedPreferencesState<bool?>> {
+  /// See also [BoolSharedPreferences].
+  const BoolSharedPreferencesFamily();
 
-/// See also [IntSharedPreferences].
-@ProviderFor(IntSharedPreferences)
-final intSharedPreferencesProvider =
-    AutoDisposeNotifierProvider<IntSharedPreferences, bool?>.internal(
-  IntSharedPreferences.new,
-  name: r'intSharedPreferencesProvider',
-  debugGetCreateSourceHash: const bool.fromEnvironment('dart.vm.product')
-      ? null
-      : _$intSharedPreferencesHash,
-  dependencies: null,
-  allTransitiveDependencies: null,
-);
+  /// See also [BoolSharedPreferences].
+  BoolSharedPreferencesProvider call(
+    String key,
+  ) {
+    return BoolSharedPreferencesProvider(
+      key,
+    );
+  }
 
-typedef _$IntSharedPreferences = AutoDisposeNotifier<bool?>;
-String _$stringSharedPreferencesHash() =>
-    r'c7df2f244bbad94073ff8e90e8bc67186696de07';
+  @override
+  BoolSharedPreferencesProvider getProviderOverride(
+    covariant BoolSharedPreferencesProvider provider,
+  ) {
+    return call(
+      provider.key,
+    );
+  }
 
-/// See also [StringSharedPreferences].
-@ProviderFor(StringSharedPreferences)
-final stringSharedPreferencesProvider =
-    AutoDisposeNotifierProvider<StringSharedPreferences, bool?>.internal(
-  StringSharedPreferences.new,
-  name: r'stringSharedPreferencesProvider',
-  debugGetCreateSourceHash: const bool.fromEnvironment('dart.vm.product')
-      ? null
-      : _$stringSharedPreferencesHash,
-  dependencies: null,
-  allTransitiveDependencies: null,
-);
+  static const Iterable<ProviderOrFamily>? _dependencies = null;
 
-typedef _$StringSharedPreferences = AutoDisposeNotifier<bool?>;
+  @override
+  Iterable<ProviderOrFamily>? get dependencies => _dependencies;
+
+  static const Iterable<ProviderOrFamily>? _allTransitiveDependencies = null;
+
+  @override
+  Iterable<ProviderOrFamily>? get allTransitiveDependencies =>
+      _allTransitiveDependencies;
+
+  @override
+  String? get name => r'boolSharedPreferencesProvider';
+}
+
+/// See also [BoolSharedPreferences].
+class BoolSharedPreferencesProvider extends AutoDisposeNotifierProviderImpl<
+    BoolSharedPreferences, SharedPreferencesState<bool?>> {
+  /// See also [BoolSharedPreferences].
+  BoolSharedPreferencesProvider(
+    this.key,
+  ) : super.internal(
+          () => BoolSharedPreferences()..key = key,
+          from: boolSharedPreferencesProvider,
+          name: r'boolSharedPreferencesProvider',
+          debugGetCreateSourceHash:
+              const bool.fromEnvironment('dart.vm.product')
+                  ? null
+                  : _$boolSharedPreferencesHash,
+          dependencies: BoolSharedPreferencesFamily._dependencies,
+          allTransitiveDependencies:
+              BoolSharedPreferencesFamily._allTransitiveDependencies,
+        );
+
+  final String key;
+
+  @override
+  bool operator ==(Object other) {
+    return other is BoolSharedPreferencesProvider && other.key == key;
+  }
+
+  @override
+  int get hashCode {
+    var hash = _SystemHash.combine(0, runtimeType.hashCode);
+    hash = _SystemHash.combine(hash, key.hashCode);
+
+    return _SystemHash.finish(hash);
+  }
+
+  @override
+  SharedPreferencesState<bool?> runNotifierBuild(
+    covariant BoolSharedPreferences notifier,
+  ) {
+    return notifier.build(
+      key,
+    );
+  }
+}
 // ignore_for_file: type=lint
 // ignore_for_file: subtype_of_sealed_class, invalid_use_of_internal_member
