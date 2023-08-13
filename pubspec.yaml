@@ -45,7 +45,6 @@ dependencies:
   freezed_annotation: ^2.2.0
   riverpod: ^2.0.0
   hooks_riverpod: ^2.0.0
-  riverpod_annotation:
   flutter_hooks: ^0.18.5
   firebase_crashlytics: ^3.0.12
   dotted_border: ^2.0.0-nullsafety.0
@@ -87,7 +86,6 @@ dev_dependencies:
   freezed: ^2.2.0
   custom_lint:
   riverpod_lint:
-  riverpod_generator:
 
 # For information on the generic Dart part of this file, see the
 # following page: https://dart.dev/tools/pub/pubspec
