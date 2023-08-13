@@ -13,7 +13,7 @@ import 'package:pilll/provider/user.dart';
 import 'package:pilll/utils/shared_preference/keys.dart';
 import 'package:flutter/material.dart';
 
-// FIXME: test 時にboolSharedPreferencesProviderをそのまま使うとフリーズする
+// FIXME: test 時にboolSharedPreferencesProviderをそのまま使うとフリーズする。 => riverpod_generatorで書き換えたりしたのでもうしない可能性はある
 final didEndInitialSettingProvider = Provider.autoDispose((ref) => ref.watch(boolSharedPreferencesProvider(BoolKey.didEndInitialSetting)));
 
 enum InitialSettingOrAppPageScreenType { loading, initialSetting, app }
