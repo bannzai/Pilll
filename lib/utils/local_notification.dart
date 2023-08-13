@@ -307,7 +307,9 @@ class RegisterReminderLocalNotification {
               result += "番";
             }
 
-            result += " Local";
+            if (Environment.isDevelopment) {
+              result += " Local";
+            }
             return result;
           }();
           debugPrint("title:$title");
@@ -353,7 +355,9 @@ class RegisterReminderLocalNotification {
           );
         } else {
           var title = "💊の時間です";
-          title += " (Local)";
+          if (Environment.isDevelopment) {
+            title += " (Local)";
+          }
           futures.add(
             Future(() async {
               try {
