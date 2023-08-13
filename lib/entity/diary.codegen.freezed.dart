@@ -46,10 +46,14 @@ abstract class $DiaryCopyWith<$Res> {
       _$DiaryCopyWithImpl<$Res, Diary>;
   @useResult
   $Res call(
-      {@JsonKey(fromJson: NonNullTimestampConverter.timestampToDateTime, toJson: NonNullTimestampConverter.dateTimeToTimestamp)
-          DateTime date,
-      @JsonKey(fromJson: TimestampConverter.timestampToDateTime, toJson: TimestampConverter.dateTimeToTimestamp)
-          DateTime? createdAt,
+      {@JsonKey(
+          fromJson: NonNullTimestampConverter.timestampToDateTime,
+          toJson: NonNullTimestampConverter.dateTimeToTimestamp)
+      DateTime date,
+      @JsonKey(
+          fromJson: TimestampConverter.timestampToDateTime,
+          toJson: TimestampConverter.dateTimeToTimestamp)
+      DateTime? createdAt,
       PhysicalConditionStatus? physicalConditionStatus,
       List<String> physicalConditions,
       bool hasSex,
@@ -112,10 +116,14 @@ abstract class _$$_DiaryCopyWith<$Res> implements $DiaryCopyWith<$Res> {
   @override
   @useResult
   $Res call(
-      {@JsonKey(fromJson: NonNullTimestampConverter.timestampToDateTime, toJson: NonNullTimestampConverter.dateTimeToTimestamp)
-          DateTime date,
-      @JsonKey(fromJson: TimestampConverter.timestampToDateTime, toJson: TimestampConverter.dateTimeToTimestamp)
-          DateTime? createdAt,
+      {@JsonKey(
+          fromJson: NonNullTimestampConverter.timestampToDateTime,
+          toJson: NonNullTimestampConverter.dateTimeToTimestamp)
+      DateTime date,
+      @JsonKey(
+          fromJson: TimestampConverter.timestampToDateTime,
+          toJson: TimestampConverter.dateTimeToTimestamp)
+      DateTime? createdAt,
       PhysicalConditionStatus? physicalConditionStatus,
       List<String> physicalConditions,
       bool hasSex,
@@ -172,10 +180,14 @@ class __$$_DiaryCopyWithImpl<$Res> extends _$DiaryCopyWithImpl<$Res, _$_Diary>
 @JsonSerializable(explicitToJson: true)
 class _$_Diary extends _Diary {
   const _$_Diary(
-      {@JsonKey(fromJson: NonNullTimestampConverter.timestampToDateTime, toJson: NonNullTimestampConverter.dateTimeToTimestamp)
-          required this.date,
-      @JsonKey(fromJson: TimestampConverter.timestampToDateTime, toJson: TimestampConverter.dateTimeToTimestamp)
-          required this.createdAt,
+      {@JsonKey(
+          fromJson: NonNullTimestampConverter.timestampToDateTime,
+          toJson: NonNullTimestampConverter.dateTimeToTimestamp)
+      required this.date,
+      @JsonKey(
+          fromJson: TimestampConverter.timestampToDateTime,
+          toJson: TimestampConverter.dateTimeToTimestamp)
+      required this.createdAt,
       this.physicalConditionStatus,
       required final List<String> physicalConditions,
       required this.hasSex,
@@ -262,10 +274,14 @@ class _$_Diary extends _Diary {
 
 abstract class _Diary extends Diary {
   const factory _Diary(
-      {@JsonKey(fromJson: NonNullTimestampConverter.timestampToDateTime, toJson: NonNullTimestampConverter.dateTimeToTimestamp)
-          required final DateTime date,
-      @JsonKey(fromJson: TimestampConverter.timestampToDateTime, toJson: TimestampConverter.dateTimeToTimestamp)
-          required final DateTime? createdAt,
+      {@JsonKey(
+          fromJson: NonNullTimestampConverter.timestampToDateTime,
+          toJson: NonNullTimestampConverter.dateTimeToTimestamp)
+      required final DateTime date,
+      @JsonKey(
+          fromJson: TimestampConverter.timestampToDateTime,
+          toJson: TimestampConverter.dateTimeToTimestamp)
+      required final DateTime? createdAt,
       final PhysicalConditionStatus? physicalConditionStatus,
       required final List<String> physicalConditions,
       required final bool hasSex,
