@@ -17,3 +17,33 @@ class BoolSharedPreferences extends _$BoolSharedPreferences {
     ref.invalidateSelf();
   }
 }
+
+@riverpod
+class IntSharedPreferences extends _$IntSharedPreferences {
+  final String key;
+
+  IntSharedPreferences(this.key);
+
+  @override
+  bool? build() => ref.read(sharedPreferencesProvider).getInt(key);
+
+  Future<void> set(bool value) async {
+    await ref.read(sharedPreferencesProvider).setInt(key, value);
+    ref.invalidateSelf();
+  }
+}
+
+@riverpod
+class StringSharedPreferences extends _$StringSharedPreferences {
+  final String key;
+
+  StringSharedPreferences(this.key);
+
+  @override
+  bool? build() => ref.read(sharedPreferencesProvider).getString(key);
+
+  Future<void> set(bool value) async {
+    await ref.read(sharedPreferencesProvider).setString(key, value);
+    ref.invalidateSelf();
+  }
+}
