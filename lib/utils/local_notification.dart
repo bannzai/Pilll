@@ -165,11 +165,6 @@ class RegisterReminderLocalNotification {
   // 10日間分の通知をスケジュールする
   Future<void> call() async {
     analytics.logEvent(name: "call_register_reminder_notification");
-    final cancelReminderLocalNotification = CancelReminderLocalNotification();
-    // エンティティの変更があった場合にref.readで最新の状態を取得するために、Future.microtaskで更新を待ってから処理を始める
-    // hour,minute,番号を基準にIDを決定しているので、時間変更や番号変更時にそれまで登録されていたIDを特定するのが不可能なので全てキャンセルする
-    await (Future.microtask(() => null), cancelReminderLocalNotification()).wait;
-    analytics.logEvent(name: "cancel_reminder_notification");
 
     final pillSheetGroup = ref.read(latestPillSheetGroupProvider).asData?.valueOrNull;
     final activePillSheet = ref.read(activePillSheetProvider).asData?.valueOrNull;
@@ -203,6 +198,13 @@ class RegisterReminderLocalNotification {
       "lastTakenPillNumber": activePillSheet.lastTakenPillNumber,
       "reminderTimes": setting.reminderTimes.toString(),
     });
+
+    final cancelReminderLocalNotification = CancelReminderLocalNotification();
+    // エンティティの変更があった場合にref.readで最新の状態を取得するために、Future.microtaskで更新を待ってから処理を始める
+    // hour,minute,番号を基準にIDを決定しているので、時間変更や番号変更時にそれまで登録されていたIDを特定するのが不可能なので全てキャンセルする
+    await (Future.microtask(() => null), cancelReminderLocalNotification()).wait;
+    analytics.logEvent(name: "cancel_reminder_notification");
+
     final tzNow = tz.TZDateTime.now(tz.local);
     final List<Future<void>> futures = [];
 
