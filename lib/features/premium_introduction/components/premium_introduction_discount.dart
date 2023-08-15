@@ -1,3 +1,5 @@
+import 'dart:io';
+
 import 'package:flutter/material.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
 import 'package:flutter_svg/svg.dart';
@@ -19,6 +21,9 @@ class PremiumIntroductionDiscountRow extends HookConsumerWidget {
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {
+    // TODO: Androidで審査落とされたので一時的にifを入れる。2023-10に外す。フォントサイズを調整するかも
+    if (Platform.isIOS) return Container();
+
     final discountEntitlementDeadlineDate = this.discountEntitlementDeadlineDate;
     final Duration? diff;
     final String? countdown;

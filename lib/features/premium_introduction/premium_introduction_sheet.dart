@@ -1,5 +1,3 @@
-import 'dart:io';
-
 import 'package:async_value_group/async_value_group.dart';
 import 'package:flutter_hooks/flutter_hooks.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
@@ -101,12 +99,10 @@ class PremiumIntroductionSheetBody extends HookConsumerWidget {
                     if (!premiumAndTrial.isPremium) ...[
                       if (premiumAndTrial.hasDiscountEntitlement)
                         if (monthlyPremiumPackage != null)
-                          // TODO: Androidで審査落とされたので一時的にifを入れる。2023-10に外す。フォントサイズを調整するかも
-                          if (Platform.isIOS)
-                            PremiumIntroductionDiscountRow(
-                              monthlyPremiumPackage: monthlyPremiumPackage,
-                              discountEntitlementDeadlineDate: premiumAndTrial.discountEntitlementDeadlineDate,
-                            ),
+                          PremiumIntroductionDiscountRow(
+                            monthlyPremiumPackage: monthlyPremiumPackage,
+                            discountEntitlementDeadlineDate: premiumAndTrial.discountEntitlementDeadlineDate,
+                          ),
                       const SizedBox(height: 12),
                       PurchaseButtons(
                         offeringType: offeringType,
