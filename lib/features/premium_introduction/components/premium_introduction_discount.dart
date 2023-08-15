@@ -22,7 +22,7 @@ class PremiumIntroductionDiscountRow extends HookConsumerWidget {
   @override
   Widget build(BuildContext context, WidgetRef ref) {
     // TODO: Androidで審査落とされたので一時的にifを入れる。2023-10に外す。フォントサイズを調整するかも
-    if (Platform.isIOS) return Container();
+    if (Platform.isAndroid) return Container();
 
     final discountEntitlementDeadlineDate = this.discountEntitlementDeadlineDate;
     final Duration? diff;
