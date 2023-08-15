@@ -2,6 +2,7 @@ import 'package:flutter_hooks/flutter_hooks.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
 import 'package:pilll/features/root/initial_setting_or_app_page.dart';
 import 'package:pilll/features/root/launch_exception.dart';
+import 'package:pilll/provider/set_user_id.dart';
 import 'package:pilll/utils/analytics.dart';
 import 'package:pilll/entity/user.codegen.dart';
 import 'package:pilll/provider/root.dart';
@@ -19,6 +20,7 @@ class UserSetupPage extends HookConsumerWidget {
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {
+    final setUserID = ref.watch(setUserIDProvider);
     final fetchOrCreateUser = ref.watch(fetchOrCreateUserProvider);
     final saveUserLaunchInfo = ref.watch(saveUserLaunchInfoProvider);
 
@@ -33,6 +35,9 @@ class UserSetupPage extends HookConsumerWidget {
           // Decide screen type. Keep in mind that this method is called when user is logged in.
           final appUserValue = appUser.value;
           if (appUserValue == null) {
+            // Register userID for each analytics libraries.
+            setUserID(userID: userID);
+
             // Retrieve user from app DB.
             final user = await fetchOrCreateUser(userID);
             appUser.value = user;

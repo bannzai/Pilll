@@ -10,7 +10,7 @@ import 'package:pilll/features/premium_function_survey/premium_function_survey_p
 import 'package:pilll/features/settings/components/churn/churn_survey_complete_dialog.dart';
 import 'package:pilll/features/store_review/pre_store_review_modal.dart';
 import 'package:pilll/provider/premium_and_trial.codegen.dart';
-import 'package:pilll/provider/shared_preference.dart';
+import 'package:pilll/provider/shared_preferences.dart';
 import 'package:pilll/utils/analytics.dart';
 import 'package:pilll/provider/user.dart';
 import 'package:pilll/features/calendar/calendar_page.dart';
@@ -47,18 +47,18 @@ class HomePage extends HookConsumerWidget {
     }, [user.valueOrNull]);
 
     final registerReminderLocalNotification = ref.watch(registerReminderLocalNotificationProvider);
-    return AsyncValueGroup.group4(
+    final sharedPreferences = ref.watch(sharedPreferencesProvider);
+    return AsyncValueGroup.group3(
       user,
       ref.watch(premiumAndTrialProvider),
       ref.watch(shouldShowMigrationInformationProvider),
-      ref.watch(sharedPreferenceProvider),
     ).when(
       data: (data) {
         return HomePageBody(
           user: data.t1,
           premiumAndTrial: data.t2,
           shouldShowMigrateInfo: data.t3,
-          sharedPreferences: data.t4,
+          sharedPreferences: sharedPreferences,
           registerReminderLocalNotification: registerReminderLocalNotification,
         );
       },

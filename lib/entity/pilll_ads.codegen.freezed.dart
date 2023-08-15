@@ -45,10 +45,14 @@ abstract class $PilllAdsCopyWith<$Res> {
       _$PilllAdsCopyWithImpl<$Res, PilllAds>;
   @useResult
   $Res call(
-      {@JsonKey(fromJson: NonNullTimestampConverter.timestampToDateTime, toJson: NonNullTimestampConverter.dateTimeToTimestamp)
-          DateTime startDateTime,
-      @JsonKey(fromJson: NonNullTimestampConverter.timestampToDateTime, toJson: NonNullTimestampConverter.dateTimeToTimestamp)
-          DateTime endDateTime,
+      {@JsonKey(
+          fromJson: NonNullTimestampConverter.timestampToDateTime,
+          toJson: NonNullTimestampConverter.dateTimeToTimestamp)
+      DateTime startDateTime,
+      @JsonKey(
+          fromJson: NonNullTimestampConverter.timestampToDateTime,
+          toJson: NonNullTimestampConverter.dateTimeToTimestamp)
+      DateTime endDateTime,
       String description,
       String? imageURL,
       String destinationURL,
@@ -112,10 +116,14 @@ abstract class _$$_PilllAdsCopyWith<$Res> implements $PilllAdsCopyWith<$Res> {
   @override
   @useResult
   $Res call(
-      {@JsonKey(fromJson: NonNullTimestampConverter.timestampToDateTime, toJson: NonNullTimestampConverter.dateTimeToTimestamp)
-          DateTime startDateTime,
-      @JsonKey(fromJson: NonNullTimestampConverter.timestampToDateTime, toJson: NonNullTimestampConverter.dateTimeToTimestamp)
-          DateTime endDateTime,
+      {@JsonKey(
+          fromJson: NonNullTimestampConverter.timestampToDateTime,
+          toJson: NonNullTimestampConverter.dateTimeToTimestamp)
+      DateTime startDateTime,
+      @JsonKey(
+          fromJson: NonNullTimestampConverter.timestampToDateTime,
+          toJson: NonNullTimestampConverter.dateTimeToTimestamp)
+      DateTime endDateTime,
       String description,
       String? imageURL,
       String destinationURL,
@@ -174,10 +182,14 @@ class __$$_PilllAdsCopyWithImpl<$Res>
 @JsonSerializable(explicitToJson: true)
 class _$_PilllAds extends _PilllAds {
   _$_PilllAds(
-      {@JsonKey(fromJson: NonNullTimestampConverter.timestampToDateTime, toJson: NonNullTimestampConverter.dateTimeToTimestamp)
-          required this.startDateTime,
-      @JsonKey(fromJson: NonNullTimestampConverter.timestampToDateTime, toJson: NonNullTimestampConverter.dateTimeToTimestamp)
-          required this.endDateTime,
+      {@JsonKey(
+          fromJson: NonNullTimestampConverter.timestampToDateTime,
+          toJson: NonNullTimestampConverter.dateTimeToTimestamp)
+      required this.startDateTime,
+      @JsonKey(
+          fromJson: NonNullTimestampConverter.timestampToDateTime,
+          toJson: NonNullTimestampConverter.dateTimeToTimestamp)
+      required this.endDateTime,
       required this.description,
       required this.imageURL,
       required this.destinationURL,
@@ -251,10 +263,14 @@ class _$_PilllAds extends _PilllAds {
 
 abstract class _PilllAds extends PilllAds {
   factory _PilllAds(
-      {@JsonKey(fromJson: NonNullTimestampConverter.timestampToDateTime, toJson: NonNullTimestampConverter.dateTimeToTimestamp)
-          required final DateTime startDateTime,
-      @JsonKey(fromJson: NonNullTimestampConverter.timestampToDateTime, toJson: NonNullTimestampConverter.dateTimeToTimestamp)
-          required final DateTime endDateTime,
+      {@JsonKey(
+          fromJson: NonNullTimestampConverter.timestampToDateTime,
+          toJson: NonNullTimestampConverter.dateTimeToTimestamp)
+      required final DateTime startDateTime,
+      @JsonKey(
+          fromJson: NonNullTimestampConverter.timestampToDateTime,
+          toJson: NonNullTimestampConverter.dateTimeToTimestamp)
+      required final DateTime endDateTime,
       required final String description,
       required final String? imageURL,
       required final String destinationURL,

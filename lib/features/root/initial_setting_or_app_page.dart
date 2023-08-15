@@ -1,7 +1,7 @@
 import 'package:flutter_hooks/flutter_hooks.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
 import 'package:pilll/features/root/launch_exception.dart';
-import 'package:pilll/provider/shared_preferences.dart';
+import 'package:pilll/provider/typed_shared_preferences.dart';
 import 'package:pilll/utils/analytics.dart';
 import 'package:pilll/features/initial_setting/pill_sheet_group/initial_setting_pill_sheet_group_page.dart';
 import 'package:pilll/entity/user.codegen.dart';
@@ -13,8 +13,8 @@ import 'package:pilll/provider/user.dart';
 import 'package:pilll/utils/shared_preference/keys.dart';
 import 'package:flutter/material.dart';
 
-// FIXME: test 時にboolSharedPreferencesProviderをそのまま使うとフリーズする
-final didEndInitialSettingProvider = Provider((ref) => ref.watch(boolSharedPreferencesProvider(BoolKey.didEndInitialSetting)));
+// FIXME: test 時にboolSharedPreferencesProviderをそのまま使うとフリーズする。 => riverpod_generatorで書き換えたりしたのでもうしない可能性はある
+final didEndInitialSettingProvider = Provider.autoDispose((ref) => ref.watch(boolSharedPreferencesProvider(BoolKey.didEndInitialSetting)));
 
 enum InitialSettingOrAppPageScreenType { loading, initialSetting, app }
 
@@ -26,12 +26,12 @@ class InitialSettingOrAppPage extends HookConsumerWidget {
   @override
   Widget build(BuildContext context, WidgetRef ref) {
     final markAsMigratedToFlutter = ref.watch(markAsMigratedToFlutterProvider);
-    final didEndInitialSettingAsyncValue = ref.watch(didEndInitialSettingProvider);
+    final didEndInitialSetting = ref.watch(didEndInitialSettingProvider);
     // UserSetupPageでUserはできているのでfetchが終わり次第値は必ず入る。ここでwatchしないとInitialSetting -> Appへの遷移が成立しない
     final user = ref.watch(userProvider).valueOrNull;
 
     final error = useState<LaunchException?>(null);
-    final screenType = retrieveScreenType(user: user, didEndInitialSettingAsyncValue: didEndInitialSettingAsyncValue);
+    final screenType = retrieveScreenType(user: user, didEndInitialSetting: didEndInitialSetting.value);
 
     useEffect(() {
       if (user != null) {
@@ -65,12 +65,9 @@ class InitialSettingOrAppPage extends HookConsumerWidget {
 
 InitialSettingOrAppPageScreenType retrieveScreenType({
   required User? user,
-  required AsyncValue<bool?> didEndInitialSettingAsyncValue,
+  required bool? didEndInitialSetting,
 }) {
   if (user == null) {
-    return InitialSettingOrAppPageScreenType.loading;
-  }
-  if (didEndInitialSettingAsyncValue is! AsyncData) {
     return InitialSettingOrAppPageScreenType.loading;
   }
   if (!user.migratedFlutter) {
@@ -79,7 +76,6 @@ InitialSettingOrAppPageScreenType retrieveScreenType({
     return InitialSettingOrAppPageScreenType.initialSetting;
   }
 
-  final didEndInitialSetting = didEndInitialSettingAsyncValue.value;
   if (didEndInitialSetting == null) {
     analytics.logEvent(name: "did_end_i_s_is_null");
     return InitialSettingOrAppPageScreenType.initialSetting;

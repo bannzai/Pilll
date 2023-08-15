@@ -33,7 +33,7 @@ import 'package:pilll/provider/pill_sheet_group.dart';
 import 'package:pilll/provider/premium_and_trial.codegen.dart';
 import 'package:pilll/provider/root.dart';
 import 'package:pilll/provider/setting.dart';
-import 'package:pilll/provider/shared_preference.dart';
+import 'package:pilll/provider/shared_preferences.dart';
 import 'package:pilll/utils/environment.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
@@ -52,15 +52,14 @@ class SettingPage extends HookConsumerWidget {
   Widget build(BuildContext context, WidgetRef ref) {
     useAutomaticKeepAlive(wantKeepAlive: true);
 
-    return AsyncValueGroup.group5(
+    final sharedPreferences = ref.watch(sharedPreferencesProvider);
+    return AsyncValueGroup.group4(
       ref.watch(settingProvider),
       ref.watch(latestPillSheetGroupProvider),
       ref.watch(premiumAndTrialProvider),
       ref.watch(isHealthDataAvailableProvider),
-      ref.watch(sharedPreferenceProvider),
     ).when(
       data: (data) {
-        final sharedPreferences = data.t5;
         final userIsMigratedFrom132 =
             sharedPreferences.containsKey(StringKey.salvagedOldStartTakenDate) && sharedPreferences.containsKey(StringKey.salvagedOldLastTakenDate);
         return SettingPageBody(

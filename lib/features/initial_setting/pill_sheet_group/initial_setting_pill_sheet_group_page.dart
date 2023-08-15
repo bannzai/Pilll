@@ -1,7 +1,7 @@
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter_hooks/flutter_hooks.dart';
 import 'package:flutter_svg/flutter_svg.dart';
-import 'package:pilll/provider/shared_preferences.dart';
+import 'package:pilll/provider/typed_shared_preferences.dart';
 import 'package:pilll/provider/user.dart';
 import 'package:pilll/utils/analytics.dart';
 import 'package:pilll/utils/auth/apple.dart';
@@ -36,7 +36,7 @@ class InitialSettingPillSheetGroupPage extends HookConsumerWidget {
   Widget build(BuildContext context, WidgetRef ref) {
     final store = ref.watch(initialSettingStateNotifierProvider.notifier);
     final state = ref.watch(initialSettingStateNotifierProvider);
-    final userStream = ref.watch(userProvider.stream);
+    final user = ref.watch(userProvider);
     final isAppleLinked = ref.watch(isAppleLinkedProvider);
     final isGoogleLinked = ref.watch(isGoogleLinkedProvider);
     final didEndInitialSettingNotifier = ref.watch(boolSharedPreferencesProvider(BoolKey.didEndInitialSetting).notifier);
@@ -74,14 +74,15 @@ class InitialSettingPillSheetGroupPage extends HookConsumerWidget {
     // Skip initial setting when user already set setting.
     final navigator = Navigator.of(context);
     useEffect(() {
-      final subscription = userStream.listen((user) async {
-        if (user.setting != null) {
+      void f() async {
+        if (user.asData?.value.setting != null) {
           await AppRouter.endInitialSetting(navigator, didEndInitialSettingNotifier);
         }
-      });
+      }
 
-      return subscription.cancel;
-    }, []);
+      f();
+      return null;
+    }, [user]);
 
     return HUD(
       shown: state.isLoading,

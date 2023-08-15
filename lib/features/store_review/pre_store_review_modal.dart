@@ -7,7 +7,7 @@ import 'package:pilll/components/atoms/color.dart';
 import 'package:pilll/components/atoms/font.dart';
 import 'package:pilll/components/atoms/text_color.dart';
 import 'package:pilll/components/page/web_view.dart';
-import 'package:pilll/provider/shared_preference.dart';
+import 'package:pilll/provider/shared_preferences.dart';
 import 'package:pilll/utils/analytics.dart';
 import 'package:pilll/utils/shared_preference/keys.dart';
 
@@ -56,7 +56,7 @@ class PreStoreReviewModal extends HookConsumerWidget {
                   switch (selectionValue) {
                     case PreStoreReviewModalSelection.good:
                       analytics.logEvent(name: "submit_pre_store_review_modal_good");
-                      ref.read(sharedPreferenceProvider).asData?.value.setBool(BoolKey.isPreStoreReviewGoodAnswer, true);
+                      ref.read(sharedPreferencesProvider).setBool(BoolKey.isPreStoreReviewGoodAnswer, true);
                       break;
                     case PreStoreReviewModalSelection.bad:
                       analytics.logEvent(name: "submit_pre_store_review_modal_bad");

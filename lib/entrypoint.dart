@@ -6,6 +6,7 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/foundation.dart';
 import 'package:flutter/services.dart';
 import 'package:pilll/features/root/user_setup_page.dart';
+import 'package:pilll/provider/shared_preferences.dart';
 import 'package:pilll/utils/analytics.dart';
 import 'package:pilll/components/atoms/color.dart';
 import 'package:pilll/components/atoms/font.dart';
@@ -20,6 +21,7 @@ import 'package:firebase_crashlytics/firebase_crashlytics.dart';
 import 'package:flutter/material.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
 import 'package:flutter_gen/gen_l10n/app_localizations.dart';
+import 'package:shared_preferences/shared_preferences.dart';
 
 Future<void> entrypoint() async {
   runZonedGuarded(() async {
@@ -35,11 +37,18 @@ Future<void> entrypoint() async {
     if (Environment.isLocal) {
       connectToEmulator();
     }
-    await LocalNotificationService.setupTimeZone();
+
+    // ignore: prefer_typing_uninitialized_variables
+    final (_, sharedPreferences) = await (LocalNotificationService.setupTimeZone(), SharedPreferences.getInstance()).wait;
 
     // MEMO: FirebaseCrashlytics#recordFlutterError called dumpErrorToConsole in function.
     FlutterError.onError = FirebaseCrashlytics.instance.recordFlutterError;
-    runApp(const ProviderScope(child: App()));
+    runApp(ProviderScope(
+      overrides: [
+        sharedPreferencesProvider.overrideWith((ref) => sharedPreferences),
+      ],
+      child: const App(),
+    ));
   }, (error, stack) => FirebaseCrashlytics.instance.recordError(error, stack));
 }
 
