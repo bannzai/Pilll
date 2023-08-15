@@ -101,6 +101,7 @@ class PremiumIntroductionSheetBody extends HookConsumerWidget {
                     if (!premiumAndTrial.isPremium) ...[
                       if (premiumAndTrial.hasDiscountEntitlement)
                         if (monthlyPremiumPackage != null)
+                          // TODO: Androidで審査落とされたので一時的にifを入れる。2023-10に外す。フォントサイズを調整するかも
                           if (Platform.isIOS)
                             PremiumIntroductionDiscountRow(
                               monthlyPremiumPackage: monthlyPremiumPackage,
