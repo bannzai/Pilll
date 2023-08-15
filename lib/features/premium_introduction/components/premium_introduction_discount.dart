@@ -1,3 +1,5 @@
+import 'dart:io';
+
 import 'package:flutter/material.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
 import 'package:flutter_svg/svg.dart';
@@ -86,18 +88,18 @@ class PremiumIntroductionDiscountRow extends HookConsumerWidget {
                       children: [
                         TextSpan(
                           text: currencySymbol(context),
-                          style: const TextStyle(
+                          style: TextStyle(
                             fontWeight: FontWeight.w700,
-                            fontSize: 20,
+                            fontSize: Platform.isAndroid ? 14 : 20,
                             fontFamily: FontFamily.japanese,
                             color: TextColor.main,
                           ),
                         ),
                         TextSpan(
                           text: removeZero(monthlyPremiumPackage.storeProduct.price),
-                          style: const TextStyle(
+                          style: TextStyle(
                             fontWeight: FontWeight.w700,
-                            fontSize: 28,
+                            fontSize: Platform.isAndroid ? 20 : 28,
                             fontFamily: FontFamily.japanese,
                             color: TextColor.main,
                           ),
