@@ -8,6 +8,7 @@ import 'package:pilll/entity/weekday.dart';
 import 'package:pilll/utils/datetime/date_compare.dart';
 import 'package:pilll/utils/datetime/day.dart';
 
+// 予定されている生理日 or 記録されている生理日の日付の配列を返す
 List<DateRange> scheduledOrInTheMiddleMenstruationDateRanges(PillSheetGroup? pillSheetGroup, Setting? setting, List<Menstruation> menstruations,
     [int maxPageCount = 15]) {
   if (pillSheetGroup == null || setting == null) {
@@ -21,49 +22,24 @@ List<DateRange> scheduledOrInTheMiddleMenstruationDateRanges(PillSheetGroup? pil
   }
   assert(maxPageCount > 0);
 
-  final totalPillCount = pillSheetGroup.pillSheets.map((e) => e.pillSheetType.totalCount).reduce((value, element) => value + element);
-  final List<DateRange> dateRanges = [];
-  // 大体の数を計算
-  for (int i = 0; i < maxPageCount; i++) {
-    final offset = totalPillCount * i;
+  final menstruationDateRanges = menstruations.map((e) => e.dateRange);
+  final scheduledMenstruationDateRanges = pillSheetGroup.menstruationDateRanges(setting: setting).where((scheduledMenstruationRange) {
+    // すでに記録されている生理については除外したものを予定されている生理とする
+    return menstruationDateRanges
+        .where((menstruationDateRange) =>
+            menstruationDateRange.inRange(scheduledMenstruationRange.begin) || menstruationDateRange.inRange(scheduledMenstruationRange.end))
+        .isEmpty;
+  }).toList();
+  final baseDateRanges = scheduledMenstruationDateRanges..addAll(menstruationDateRanges);
 
-    for (int pageIndex = 0; pageIndex < pillSheetGroup.pillSheets.length; pageIndex++) {
-      final pillSheet = pillSheetGroup.pillSheets[pageIndex];
-      final passedCount = summarizedPillCountWithPillSheetTypesToIndex(pillSheetTypes: pillSheetGroup.pillSheetTypes, toIndex: pageIndex);
-      final serializedTotalPillNumber = passedCount + pillSheet.typeInfo.totalCount;
-      if (serializedTotalPillNumber < setting.pillNumberForFromMenstruation) {
-        continue;
-      }
-
-      final int menstruationNumber;
-      if (passedCount == 0) {
-        menstruationNumber = setting.pillNumberForFromMenstruation;
-      } else {
-        menstruationNumber = setting.pillNumberForFromMenstruation % passedCount;
-      }
-
-      if (menstruationNumber > pillSheet.pillSheetType.totalCount) {
-        continue;
-      }
-
-      final begin = pillSheet.beginingDate.add(Duration(days: (menstruationNumber - 1) + offset));
-      final end = begin.add(Duration(days: (setting.durationMenstruation - 1)));
-      final isRealMenstruationDurationContained =
-          menstruations.where((element) => element.dateRange.inRange(begin) || element.dateRange.inRange(end)).isNotEmpty;
-      if (isRealMenstruationDurationContained) {
-        continue;
-      }
-      final isAlreadyContained = dateRanges.where((element) => isSameDay(element.begin, begin) || isSameDay(element.end, end)).isNotEmpty;
-      if (isAlreadyContained) {
-        continue;
-      }
-
-      dateRanges.add(DateRange(begin, end));
-      if (dateRanges.length >= maxPageCount) {
-        return dateRanges;
-      }
-    }
+  final List<DateRange> dateRanges = baseDateRanges;
+  final pillSheetGroupTotalPillCount = pillSheetGroup.pillSheetTypes.fold(0, (p, e) => p + e.typeInfo.totalCount);
+  for (var i = 1; i <= maxPageCount; i++) {
+    final offset = pillSheetGroupTotalPillCount * i;
+    final dateRangesWithOffset = dateRanges.map((e) => DateRange(e.begin.add(Duration(days: offset)), e.end.add(Duration(days: offset))));
+    dateRanges.addAll(dateRangesWithOffset);
   }
+
   return dateRanges;
 }
 
