@@ -209,61 +209,6 @@ class RecordPagePillSheet extends HookConsumerWidget {
     return updatedPillSheetGroup;
   }
 
-  static Widget textOfPillNumber({
-    required int pillNumberInPillSheet,
-    required int pageIndex,
-    required PillSheetGroup pillSheetGroup,
-    required PillSheet pillSheet,
-    required PremiumAndTrial premiumAndTrial,
-    required Setting setting,
-  }) {
-    final containedMenstruationDuration = RecordPagePillSheet.isContainedMenstruationDuration(
-      pillNumberInPillSheet: pillNumberInPillSheet,
-      pillSheetGroup: pillSheetGroup,
-      setting: setting,
-      pageIndex: pageIndex,
-    );
-    final text = pillSheetGroup.displayPillNumber(
-      premiumOrTrial: premiumAndTrial.premiumOrTrial,
-      pillSheetAppearanceMode: setting.pillSheetAppearanceMode,
-      pageIndex: pageIndex,
-      pillNumberInPillSheet: pillNumberInPillSheet,
-    );
-
-    if (premiumAndTrial.premiumOrTrial && containedMenstruationDuration) {
-      return MenstruationPillNumber(text: text);
-    } else {
-      return PlainPillNumber(text: text);
-    }
-  }
-
-  /*
-    pillNumberInPillSheet の値によって二つの動きをする
-    setting.pillNumberForFromMenstruation < pillSheet.typeInfo.totalCount の場合は単純にこの式の結果を用いる
-    setting.pillNumberForFromMenstruation > pillSheet.typeInfo.totalCount の場合はページ数も考慮して
-      pillSheet.begin < pillNumberForFromMenstruation < pillSheet.typeInfo.totalCount の場合の結果を用いる
-
-    - 想定される使い方は各ピルシートごとに同じ生理の期間開始を設定したい(1つ目の仕様)
-    - ヤーズフレックスのようにどこか1枚だけ生理の開始期間を設定したい(2つ目の仕様)
-
-    なので後者の計算式で下のようになっても許容をすることにする
-
-    28錠タイプが4枚ある場合で46番ごとに生理期間がくる設定をしていると生理期間の始まりが
-      1枚目: なし
-      2枚目: 18番から
-      3枚目: なし
-      4枚目: 8番から
-  */
-  static bool isContainedMenstruationDuration({
-    required int pillNumberInPillSheet,
-    required PillSheetGroup pillSheetGroup,
-    required int pageIndex,
-    required Setting setting,
-  }) {
-    final targetDate = pillSheetGroup.pillSheets[pageIndex].displayPillTakeDate(pillNumberInPillSheet);
-    return pillSheetGroup.menstruationDateRanges(setting: setting).where((element) => element.inRange(targetDate)).isNotEmpty;
-  }
-
   bool _isDone({
     required int pillNumberInPillSheet,
   }) {
