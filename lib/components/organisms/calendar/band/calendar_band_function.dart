@@ -8,12 +8,8 @@ import 'package:pilll/entity/weekday.dart';
 import 'package:pilll/utils/datetime/date_compare.dart';
 import 'package:pilll/utils/datetime/day.dart';
 
-List<DateRange> scheduledOrInTheMiddleMenstruationDateRanges(
-  PillSheetGroup? pillSheetGroup,
-  Setting? setting,
-  List<Menstruation> menstruations,
-  int maxPageCount,
-) {
+List<DateRange> scheduledOrInTheMiddleMenstruationDateRanges(PillSheetGroup? pillSheetGroup, Setting? setting, List<Menstruation> menstruations,
+    [int maxPageCount = 15]) {
   if (pillSheetGroup == null || setting == null) {
     return [];
   }
