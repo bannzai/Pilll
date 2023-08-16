@@ -747,32 +747,32 @@ void main() {
       }
     });
     test("group has three pill sheet and scheduled menstruation begin No.2 pillSheet", () async {
-      final anyDate = DateTime.parse("2020-09-19");
+      final beginDate = DateTime.parse("2020-09-19");
       final one = PillSheet(
         id: firestoreIDGenerator(),
         typeInfo: PillSheetType.pillsheet_28_0.typeInfo,
-        beginingDate: anyDate,
+        beginingDate: beginDate,
         groupIndex: 0,
         createdAt: now(),
       );
       final two = PillSheet(
         id: firestoreIDGenerator(),
         typeInfo: PillSheetType.pillsheet_28_0.typeInfo,
-        beginingDate: anyDate,
+        beginingDate: beginDate.add(const Duration(days: 28)),
         groupIndex: 1,
         createdAt: now(),
       );
       final three = PillSheet(
         id: firestoreIDGenerator(),
         typeInfo: PillSheetType.pillsheet_28_0.typeInfo,
-        beginingDate: anyDate,
+        beginingDate: beginDate.add(const Duration(days: 28)).add(const Duration(days: 28)),
         groupIndex: 2,
         createdAt: now(),
       );
       final pillSheetGroup = PillSheetGroup(
         pillSheetIDs: ["1", "2", "3"],
         pillSheets: [one, two, three],
-        createdAt: anyDate,
+        createdAt: beginDate,
       );
       const setting = Setting(
         pillSheetTypes: [PillSheetType.pillsheet_28_0, PillSheetType.pillsheet_28_0, PillSheetType.pillsheet_28_0],
