@@ -242,16 +242,30 @@ class PillSheetGroup with _$PillSheetGroup {
       return [];
     }
 
+    // 28番ごとなら28,56,84番目開始の番号とマッチさせるために各始まりの番号を配列にする
+    final summarizedPillCount = pillSheets.fold<int>(
+      0,
+      (previousValue, element) => previousValue + element.typeInfo.totalCount,
+    );
+    // ピルシートグループの中に何度pillNumberForFromMenstruation が出てくるか算出
+    final numberOfMenstruationSettingInPillSheetGroup = summarizedPillCount / setting.pillNumberForFromMenstruation;
+    List<int> fromMenstruations = [];
+    for (var i = 0; i < numberOfMenstruationSettingInPillSheetGroup; i++) {
+      fromMenstruations.add(setting.pillNumberForFromMenstruation + (setting.pillNumberForFromMenstruation * i));
+    }
+
     final menstruationDateRanges = <DateRange>[];
     for (final pillSheet in pillSheets) {
-      // b. ヤーズフレックスのようにどこか1枚だけ生理の開始期間を設定したい(2.の仕様)
       final offset = summarizedPillCountWithPillSheetTypesToIndex(pillSheetTypes: pillSheetTypes, toIndex: pillSheet.groupIndex);
       final begin = offset + 1;
       final end = begin + (pillSheet.typeInfo.totalCount - 1);
-      if (begin <= setting.pillNumberForFromMenstruation && setting.pillNumberForFromMenstruation <= end) {
-        final left = pillSheet.displayPillTakeDate(setting.pillNumberForFromMenstruation - offset);
-        final right = left.add(Duration(days: setting.durationMenstruation - 1));
-        menstruationDateRanges.add(DateRange(left, right));
+
+      for (final fromMenstruation in fromMenstruations) {
+        if (begin <= fromMenstruation && fromMenstruation <= end) {
+          final left = pillSheet.displayPillTakeDate(fromMenstruation - offset);
+          final right = left.add(Duration(days: setting.durationMenstruation - 1));
+          menstruationDateRanges.add(DateRange(left, right));
+        }
       }
     }
 
