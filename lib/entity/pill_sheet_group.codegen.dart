@@ -228,8 +228,12 @@ class PillSheetGroup with _$PillSheetGroup {
     a. 想定される使い方は各ピルシートごとに同じ生理の期間開始を設定したい(1.の仕様)
     b. ヤーズフレックスのようにどこか1枚だけ生理の開始期間を設定したい(2.の仕様)
 
-    なので後者の計算式で下のようになっても許容をすることにする
+    a は28錠タイプのピルシートが3枚設定されている場合に設定では22番に生理期間が始まると設定した場合
+      1枚目: 22番から
+      2枚目: 22番から
+      3枚目: 22番から
 
+    bは後者の計算式で下のようになっても許容をすることにする
     28錠タイプが4枚ある場合で46番ごとに生理期間がくる設定をしていると生理期間の始まりが
       1枚目: なし
       2枚目: 18番から
@@ -256,15 +260,21 @@ class PillSheetGroup with _$PillSheetGroup {
 
     final menstruationDateRanges = <DateRange>[];
     for (final pillSheet in pillSheets) {
-      final offset = summarizedPillCountWithPillSheetTypesToIndex(pillSheetTypes: pillSheetTypes, toIndex: pillSheet.groupIndex);
-      final begin = offset + 1;
-      final end = begin + (pillSheet.typeInfo.totalCount - 1);
+      if (setting.pillNumberForFromMenstruation < pillSheet.typeInfo.totalCount) {
+        final left = pillSheet.displayPillTakeDate(setting.pillNumberForFromMenstruation);
+        final right = left.add(Duration(days: setting.durationMenstruation - 1));
+        menstruationDateRanges.add(DateRange(left, right));
+      } else {
+        final offset = summarizedPillCountWithPillSheetTypesToIndex(pillSheetTypes: pillSheetTypes, toIndex: pillSheet.groupIndex);
+        final begin = offset + 1;
+        final end = begin + (pillSheet.typeInfo.totalCount - 1);
 
-      for (final fromMenstruation in fromMenstruations) {
-        if (begin <= fromMenstruation && fromMenstruation <= end) {
-          final left = pillSheet.displayPillTakeDate(fromMenstruation - offset);
-          final right = left.add(Duration(days: setting.durationMenstruation - 1));
-          menstruationDateRanges.add(DateRange(left, right));
+        for (final fromMenstruation in fromMenstruations) {
+          if (begin <= fromMenstruation && fromMenstruation <= end) {
+            final left = pillSheet.displayPillTakeDate(fromMenstruation - offset);
+            final right = left.add(Duration(days: setting.durationMenstruation - 1));
+            menstruationDateRanges.add(DateRange(left, right));
+          }
         }
       }
     }
