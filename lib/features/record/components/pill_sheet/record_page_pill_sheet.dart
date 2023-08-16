@@ -86,6 +86,8 @@ class RecordPagePillSheet extends HookConsumerWidget {
       int diff = pillSheet.pillSheetType.totalCount - lineIndex * Weekday.values.length;
       countOfPillMarksInLine = diff;
     }
+    final menstruationDateRanges = pillSheetGroup.menstruationDateRanges(setting: setting);
+
     return List.generate(Weekday.values.length, (columnIndex) {
       if (columnIndex >= countOfPillMarksInLine) {
         return Container(width: PillSheetViewLayout.componentWidth);
@@ -94,14 +96,23 @@ class RecordPagePillSheet extends HookConsumerWidget {
       return SizedBox(
         width: PillSheetViewLayout.componentWidth,
         child: PillMarkWithNumberLayout(
-          textOfPillNumber: textOfPillNumber(
-            premiumAndTrial: premiumAndTrial,
-            pillSheetGroup: pillSheetGroup,
-            pillSheet: pillSheet,
-            setting: setting,
-            pillNumberInPillSheet: pillNumberInPillSheet,
-            pageIndex: pageIndex,
-          ),
+          textOfPillNumber: () {
+            final containedMenstruationDuration =
+                menstruationDateRanges.where((e) => e.inRange(pillSheet.displayPillTakeDate(pillNumberInPillSheet))).isNotEmpty;
+
+            final text = pillSheetGroup.displayPillNumber(
+              premiumOrTrial: premiumAndTrial.premiumOrTrial,
+              pillSheetAppearanceMode: setting.pillSheetAppearanceMode,
+              pageIndex: pageIndex,
+              pillNumberInPillSheet: pillNumberInPillSheet,
+            );
+
+            if (premiumAndTrial.premiumOrTrial && containedMenstruationDuration) {
+              return MenstruationPillNumber(text: text);
+            } else {
+              return PlainPillNumber(text: text);
+            }
+          }(),
           pillMark: PillMark(
             showsRippleAnimation: shouldPillMarkAnimation(
               pillNumberInPillSheet: pillNumberInPillSheet,
