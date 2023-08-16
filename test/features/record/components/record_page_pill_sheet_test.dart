@@ -716,18 +716,18 @@ void main() {
   });
   group("#RecordPagePillSheet.isContainedMenstruationDuration", () {
     test("group has only one pill sheet", () async {
-      final anyDate = DateTime.parse("2020-09-19");
+      final beginDate = DateTime.parse("2020-09-19");
       final pillSheet = PillSheet(
         id: firestoreIDGenerator(),
         typeInfo: PillSheetType.pillsheet_28_0.typeInfo,
-        beginingDate: anyDate,
+        beginingDate: beginDate,
         groupIndex: 0,
         createdAt: now(),
       );
       final pillSheetGroup = PillSheetGroup(
         pillSheetIDs: ["1"],
         pillSheets: [pillSheet],
-        createdAt: anyDate,
+        createdAt: beginDate,
       );
       const setting = Setting(
         pillSheetTypes: [PillSheetType.pillsheet_28_0],
@@ -798,32 +798,32 @@ void main() {
       }
     });
     test("group has three pill sheet and scheduled menstruation have all sheets", () async {
-      final anyDate = DateTime.parse("2020-09-19");
+      final beginDate = DateTime.parse("2020-09-19");
       final one = PillSheet(
         id: firestoreIDGenerator(),
         typeInfo: PillSheetType.pillsheet_28_0.typeInfo,
-        beginingDate: anyDate,
+        beginingDate: beginDate,
         groupIndex: 0,
         createdAt: now(),
       );
       final two = PillSheet(
         id: firestoreIDGenerator(),
         typeInfo: PillSheetType.pillsheet_28_0.typeInfo,
-        beginingDate: anyDate,
+        beginingDate: beginDate.add(const Duration(days: 28)),
         groupIndex: 1,
         createdAt: now(),
       );
       final three = PillSheet(
         id: firestoreIDGenerator(),
         typeInfo: PillSheetType.pillsheet_28_0.typeInfo,
-        beginingDate: anyDate,
+        beginingDate: beginDate.add(const Duration(days: 28 * 2)),
         groupIndex: 2,
         createdAt: now(),
       );
       final pillSheetGroup = PillSheetGroup(
         pillSheetIDs: ["1", "2", "3"],
         pillSheets: [one, two, three],
-        createdAt: anyDate,
+        createdAt: beginDate,
       );
       const setting = Setting(
         pillSheetTypes: [PillSheetType.pillsheet_28_0, PillSheetType.pillsheet_28_0, PillSheetType.pillsheet_28_0],
@@ -931,46 +931,46 @@ void main() {
       }
     });
     test("for ヤーズフレックス", () async {
-      final anyDate = DateTime.parse("2020-09-19");
+      final beginDate = DateTime.parse("2020-09-19");
       final one = PillSheet(
         id: firestoreIDGenerator(),
         typeInfo: PillSheetType.pillsheet_28_0.typeInfo,
-        beginingDate: anyDate,
+        beginingDate: beginDate,
         groupIndex: 0,
         createdAt: now(),
       );
       final two = PillSheet(
         id: firestoreIDGenerator(),
         typeInfo: PillSheetType.pillsheet_28_0.typeInfo,
-        beginingDate: anyDate,
+        beginingDate: beginDate.add(const Duration(days: 28)),
         groupIndex: 1,
         createdAt: now(),
       );
       final three = PillSheet(
         id: firestoreIDGenerator(),
         typeInfo: PillSheetType.pillsheet_28_0.typeInfo,
-        beginingDate: anyDate,
+        beginingDate: beginDate.add(const Duration(days: 28 * 2)),
         groupIndex: 2,
         createdAt: now(),
       );
       final four = PillSheet(
         id: firestoreIDGenerator(),
         typeInfo: PillSheetType.pillsheet_28_0.typeInfo,
-        beginingDate: anyDate,
+        beginingDate: beginDate.add(const Duration(days: 28 * 3)),
         groupIndex: 3,
         createdAt: now(),
       );
       final five = PillSheet(
         id: firestoreIDGenerator(),
         typeInfo: PillSheetType.pillsheet_28_0.typeInfo,
-        beginingDate: anyDate,
+        beginingDate: beginDate.add(const Duration(days: 28 * 4)),
         groupIndex: 4,
         createdAt: now(),
       );
       final pillSheetGroup = PillSheetGroup(
         pillSheetIDs: ["1", "2", "3", "4", "5"],
         pillSheets: [one, two, three, four, five],
-        createdAt: anyDate,
+        createdAt: beginDate,
       );
       const setting = Setting(
         pillSheetTypes: [
