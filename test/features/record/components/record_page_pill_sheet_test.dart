@@ -850,46 +850,46 @@ void main() {
     });
     // 仕様的にはこの内容になるけど、ユーザーの入力としては想定されていない。なので仕様がおかしいとなったらこのテストは守らなくて良い
     test("group has five pill sheet and scheduled menstruation begin No.2 pillSheet", () async {
-      final anyDate = DateTime.parse("2020-09-19");
+      final beginDate = DateTime.parse("2020-09-19");
       final one = PillSheet(
         id: firestoreIDGenerator(),
         typeInfo: PillSheetType.pillsheet_28_0.typeInfo,
-        beginingDate: anyDate,
+        beginingDate: beginDate,
         groupIndex: 0,
         createdAt: now(),
       );
       final two = PillSheet(
         id: firestoreIDGenerator(),
         typeInfo: PillSheetType.pillsheet_28_0.typeInfo,
-        beginingDate: anyDate,
+        beginingDate: beginDate.add(const Duration(days: 28)),
         groupIndex: 1,
         createdAt: now(),
       );
       final three = PillSheet(
         id: firestoreIDGenerator(),
         typeInfo: PillSheetType.pillsheet_28_0.typeInfo,
-        beginingDate: anyDate,
+        beginingDate: beginDate.add(const Duration(days: 28 * 2)),
         groupIndex: 2,
         createdAt: now(),
       );
       final four = PillSheet(
         id: firestoreIDGenerator(),
         typeInfo: PillSheetType.pillsheet_28_0.typeInfo,
-        beginingDate: anyDate,
+        beginingDate: beginDate.add(const Duration(days: 28 * 3)),
         groupIndex: 3,
         createdAt: now(),
       );
       final five = PillSheet(
         id: firestoreIDGenerator(),
         typeInfo: PillSheetType.pillsheet_28_0.typeInfo,
-        beginingDate: anyDate,
+        beginingDate: beginDate.add(const Duration(days: 28 * 4)),
         groupIndex: 4,
         createdAt: now(),
       );
       final pillSheetGroup = PillSheetGroup(
         pillSheetIDs: ["1", "2", "3", "4", "5"],
         pillSheets: [one, two, three, four, five],
-        createdAt: anyDate,
+        createdAt: beginDate,
       );
       const setting = Setting(
         pillSheetTypes: [
