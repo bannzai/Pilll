@@ -21,7 +21,6 @@ import 'package:pilll/entity/pill_sheet_type.dart';
 import 'package:pilll/entity/setting.codegen.dart';
 import 'package:pilll/entity/weekday.dart';
 import 'package:pilll/features/error/error_alert.dart';
-import 'package:pilll/utils/datetime/date_range.dart';
 import 'package:pilll/utils/error_log.dart';
 import 'package:pilll/provider/premium_and_trial.codegen.dart';
 import 'package:pilll/utils/datetime/day.dart';
@@ -87,8 +86,6 @@ class RecordPagePillSheet extends HookConsumerWidget {
       int diff = pillSheet.pillSheetType.totalCount - lineIndex * Weekday.values.length;
       countOfPillMarksInLine = diff;
     }
-    final menstruationDateRanges = pillSheetGroup.menstruationDateRanges(setting: setting);
-
     return List.generate(Weekday.values.length, (columnIndex) {
       if (columnIndex >= countOfPillMarksInLine) {
         return Container(width: PillSheetViewLayout.componentWidth);
@@ -97,21 +94,14 @@ class RecordPagePillSheet extends HookConsumerWidget {
       return SizedBox(
         width: PillSheetViewLayout.componentWidth,
         child: PillMarkWithNumberLayout(
-          textOfPillNumber: () {
-            final text = pillSheetGroup.displayPillNumber(
-              premiumOrTrial: premiumAndTrial.premiumOrTrial,
-              pillSheetAppearanceMode: setting.pillSheetAppearanceMode,
-              pageIndex: pageIndex,
-              pillNumberInPillSheet: pillNumberInPillSheet,
-            );
-
-            if (premiumAndTrial.premiumOrTrial &&
-                menstruationDateRanges.where((e) => e.inRange(pillSheet.displayPillTakeDate(pillNumberInPillSheet))).isNotEmpty) {
-              return MenstruationPillNumber(text: text);
-            } else {
-              return PlainPillNumber(text: text);
-            }
-          }(),
+          textOfPillNumber: textOfPillNumber(
+            premiumAndTrial: premiumAndTrial,
+            pillSheetGroup: pillSheetGroup,
+            pillSheet: pillSheet,
+            setting: setting,
+            pillNumberInPillSheet: pillNumberInPillSheet,
+            pageIndex: pageIndex,
+          ),
           pillMark: PillMark(
             showsRippleAnimation: shouldPillMarkAnimation(
               pillNumberInPillSheet: pillNumberInPillSheet,
@@ -206,6 +196,83 @@ class RecordPagePillSheet extends HookConsumerWidget {
       return null;
     }
     return updatedPillSheetGroup;
+  }
+
+  static Widget textOfPillNumber({
+    required int pillNumberInPillSheet,
+    required int pageIndex,
+    required PillSheetGroup pillSheetGroup,
+    required PillSheet pillSheet,
+    required PremiumAndTrial premiumAndTrial,
+    required Setting setting,
+  }) {
+    final containedMenstruationDuration = RecordPagePillSheet.isContainedMenstruationDuration(
+      pillNumberInPillSheet: pillNumberInPillSheet,
+      pillSheetGroup: pillSheetGroup,
+      setting: setting,
+      pageIndex: pageIndex,
+    );
+    final text = pillSheetGroup.displayPillNumber(
+      premiumOrTrial: premiumAndTrial.premiumOrTrial,
+      pillSheetAppearanceMode: setting.pillSheetAppearanceMode,
+      pageIndex: pageIndex,
+      pillNumberInPillSheet: pillNumberInPillSheet,
+    );
+
+    if (premiumAndTrial.premiumOrTrial && containedMenstruationDuration) {
+      return MenstruationPillNumber(text: text);
+    } else {
+      return PlainPillNumber(text: text);
+    }
+  }
+
+  /*
+    pillNumberInPillSheet の値によって二つの動きをする
+    setting.pillNumberForFromMenstruation < pillSheet.typeInfo.totalCount の場合は単純にこの式の結果を用いる
+    setting.pillNumberForFromMenstruation > pillSheet.typeInfo.totalCount の場合はページ数も考慮して
+      pillSheet.begin < pillNumberForFromMenstruation < pillSheet.typeInfo.totalCount の場合の結果を用いる
+
+    - 想定される使い方は各ピルシートごとに同じ生理の期間開始を設定したい(1つ目の仕様)
+    - ヤーズフレックスのようにどこか1枚だけ生理の開始期間を設定したい(2つ目の仕様)
+
+    なので後者の計算式で下のようになっても許容をすることにする
+
+    28錠タイプが4枚ある場合で46番ごとに生理期間がくる設定をしていると生理期間の始まりが
+      1枚目: なし
+      2枚目: 18番から
+      3枚目: なし
+      4枚目: 8番から
+  */
+  static bool isContainedMenstruationDuration({
+    required int pillNumberInPillSheet,
+    required PillSheetGroup pillSheetGroup,
+    required int pageIndex,
+    required Setting setting,
+  }) {
+    if (setting.pillNumberForFromMenstruation == 0 || setting.durationMenstruation == 0) {
+      return false;
+    }
+
+    final pillSheetTotalCount = pillSheetGroup.pillSheets[pageIndex].typeInfo.totalCount;
+    if (setting.pillNumberForFromMenstruation < pillSheetTotalCount) {
+      final left = setting.pillNumberForFromMenstruation;
+      final right = setting.pillNumberForFromMenstruation + setting.durationMenstruation - 1;
+      return left <= pillNumberInPillSheet && pillNumberInPillSheet <= right;
+    }
+    final passedCount = summarizedPillCountWithPillSheetTypesToIndex(
+        pillSheetTypes: pillSheetGroup.pillSheets.map((e) => e.pillSheetType).toList(), toIndex: pageIndex);
+    final pillNumberInPillSheetGroup = passedCount + pillNumberInPillSheet;
+
+    final menstruationRangeList = List.generate(pillSheetGroup.pillSheets.length, (index) {
+      final begin = setting.pillNumberForFromMenstruation * (index + 1);
+      final end = begin + setting.durationMenstruation - 1;
+
+      return (begin, end);
+    });
+
+    final isContainedMenstruationDuration =
+        menstruationRangeList.where((element) => element.$1 <= pillNumberInPillSheetGroup && pillNumberInPillSheetGroup <= element.$2).isNotEmpty;
+    return isContainedMenstruationDuration;
   }
 
   bool _isDone({
