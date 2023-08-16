@@ -20,7 +20,7 @@ void main() {
     SharedPreferences.setMockInitialValues({});
     initializeDateFormatting('ja_JP');
   });
-  group("#RecordPagePillSheet.textOfPillNumber", () {
+  group("#PillNumber", () {
     group("pillSheetAppearanceMode is number", () {
       const pillSheetAppearanceMode = PillSheetAppearanceMode.number;
       test("it is isPremium or isTrial", () {
@@ -52,7 +52,7 @@ void main() {
         final pillSheetGroup = PillSheetGroup(pillSheetIDs: ["pill_sheet_id"], pillSheets: [pillSheet], createdAt: today());
         for (int i = 0; i < 28; i++) {
           final pillNumberInPillSheet = i + 1;
-          final widget = RecordPagePillSheet.textOfPillNumber(
+          final widget = PillNumber(
             pillSheetGroup: pillSheetGroup,
             pillSheet: pillSheet,
             pillNumberInPillSheet: pillNumberInPillSheet,
@@ -101,7 +101,7 @@ void main() {
 
         for (int i = 0; i < 28; i++) {
           final pillNumberInPillSheet = i + 1;
-          final widget = RecordPagePillSheet.textOfPillNumber(
+          final widget = PillNumber(
               premiumAndTrial: FakePremiumAndTrial(fakeIsPremium: false, fakeIsTrial: false),
               pillSheetGroup: pillSheetGroup,
               pillSheet: pillSheet,
@@ -148,7 +148,7 @@ void main() {
 
         for (int i = 0; i < 28; i++) {
           final pillNumberInPillSheet = i + 1;
-          final widget = RecordPagePillSheet.textOfPillNumber(
+          final widget = PillNumber(
               premiumAndTrial: FakePremiumAndTrial(fakeIsPremium: true, fakeIsTrial: true),
               pillSheetGroup: pillSheetGroup,
               pillSheet: pillSheet,
@@ -198,7 +198,7 @@ void main() {
 
         for (int i = 0; i < 28; i++) {
           final pillNumberInPillSheet = i + 1;
-          final widget = RecordPagePillSheet.textOfPillNumber(
+          final widget = PillNumber(
               premiumAndTrial: FakePremiumAndTrial(fakeIsPremium: true, fakeIsTrial: true),
               pillSheetGroup: pillSheetGroup,
               pillSheet: pillSheet,
@@ -245,7 +245,7 @@ void main() {
 
         for (int i = 0; i < 28; i++) {
           final pillNumberInPillSheet = i + 1;
-          final widget = RecordPagePillSheet.textOfPillNumber(
+          final widget = PillNumber(
               premiumAndTrial: FakePremiumAndTrial(fakeIsPremium: false, fakeIsTrial: false),
               pillSheetGroup: pillSheetGroup,
               pillSheet: pillSheet,
@@ -292,7 +292,7 @@ void main() {
 
         for (int i = 0; i < 28; i++) {
           final pillNumberInPillSheet = i + 1;
-          final widget = RecordPagePillSheet.textOfPillNumber(
+          final widget = PillNumber(
               premiumAndTrial: FakePremiumAndTrial(fakeIsPremium: true, fakeIsTrial: true),
               pillSheetGroup: pillSheetGroup,
               pillSheet: pillSheet,
@@ -341,7 +341,7 @@ void main() {
         final pillSheetGroup = PillSheetGroup(pillSheetIDs: ["pill_sheet_id"], pillSheets: [pillSheet], createdAt: today());
         for (int i = 0; i < 28; i++) {
           final pillNumberInPillSheet = i + 1;
-          final widget = RecordPagePillSheet.textOfPillNumber(
+          final widget = PillNumber(
               premiumAndTrial: FakePremiumAndTrial(fakeIsPremium: true, fakeIsTrial: true),
               pillSheetGroup: pillSheetGroup,
               pillSheet: pillSheet,
@@ -388,7 +388,7 @@ void main() {
 
         for (int i = 0; i < 28; i++) {
           final pillNumberInPillSheet = i + 1;
-          final widget = RecordPagePillSheet.textOfPillNumber(
+          final widget = PillNumber(
               premiumAndTrial: FakePremiumAndTrial(fakeIsPremium: false, fakeIsTrial: false),
               pillSheetGroup: pillSheetGroup,
               pillSheet: pillSheet,
@@ -431,7 +431,7 @@ void main() {
 
         for (int i = 0; i < 28; i++) {
           final pillNumberInPillSheet = i + 1;
-          final widget = RecordPagePillSheet.textOfPillNumber(
+          final widget = PillNumber(
               premiumAndTrial: FakePremiumAndTrial(fakeIsPremium: true, fakeIsTrial: true),
               pillSheetGroup: pillSheetGroup,
               pillSheet: pillSheet,
