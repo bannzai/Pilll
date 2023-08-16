@@ -253,7 +253,7 @@ class PillSheetGroup with _$PillSheetGroup {
         // b. ヤーズフレックスのようにどこか1枚だけ生理の開始期間を設定したい(2.の仕様)
         final passedPillCount = summarizedPillCountWithPillSheetTypesToIndex(pillSheetTypes: pillSheetTypes, toIndex: pillSheet.groupIndex);
         final begin = passedPillCount + 1;
-        final end = begin + pillSheet.todayPillNumber;
+        final end = begin + (pillSheet.todayPillNumber - 1);
         if (begin <= setting.pillNumberForFromMenstruation && setting.pillNumberForFromMenstruation <= end) {
           final left = pillSheet.displayPillTakeDate(setting.pillNumberForFromMenstruation);
           final right = left.add(Duration(days: setting.durationMenstruation - 1));
