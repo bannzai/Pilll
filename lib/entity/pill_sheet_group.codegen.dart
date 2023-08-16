@@ -244,7 +244,7 @@ class PillSheetGroup with _$PillSheetGroup {
 
     final menstruationDateRanges = <DateRange>[];
     for (final pillSheet in pillSheets) {
-      if (setting.pillNumberForFromMenstruation < pillSheet.typeInfo.totalCount) {
+      if (setting.pillNumberForFromMenstruation <= pillSheet.typeInfo.totalCount) {
         // a. 想定される使い方は各ピルシートごとに同じ生理の期間開始を設定したい(1.の仕様)
         final left = pillSheet.displayPillTakeDate(setting.pillNumberForFromMenstruation);
         final right = left.add(Duration(days: setting.durationMenstruation - 1));
