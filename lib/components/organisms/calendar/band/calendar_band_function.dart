@@ -8,10 +8,10 @@ import 'package:pilll/entity/weekday.dart';
 import 'package:pilll/utils/datetime/day.dart';
 
 // 予定されている生理日 or 記録されている生理日の日付の配列を返す
-// maxPageCountは主にユニットテストの時に嬉しい引数になっているがプロダクションコードでもそのまま使用している
+// maxDateRangeCountは主にユニットテストの時に嬉しい引数になっているがプロダクションコードでもそのまま使用している
 // ユースケースとして大体の未来のものを返せれば良いので厳密な計算結果が欲しいわけではないので動作確認とユニットテストをしやすい方式をとっている
 List<DateRange> scheduledOrInTheMiddleMenstruationDateRanges(PillSheetGroup? pillSheetGroup, Setting? setting, List<Menstruation> menstruations,
-    [int maxPageCount = 15]) {
+    [int maxDateRangeCount = 15]) {
   if (pillSheetGroup == null || setting == null) {
     return [];
   }
@@ -21,7 +21,7 @@ List<DateRange> scheduledOrInTheMiddleMenstruationDateRanges(PillSheetGroup? pil
   if (setting.pillNumberForFromMenstruation == 0) {
     return [];
   }
-  assert(maxPageCount > 0);
+  assert(maxDateRangeCount > 0);
 
   final menstruationDateRanges = menstruations.map((e) => e.dateRange);
   final scheduledMenstruationDateRanges = pillSheetGroup.menstruationDateRanges(setting: setting).where((scheduledMenstruationRange) {
@@ -35,30 +35,30 @@ List<DateRange> scheduledOrInTheMiddleMenstruationDateRanges(PillSheetGroup? pil
 
   List<DateRange> dateRanges = baseDateRanges;
   final pillSheetGroupTotalPillCount = pillSheetGroup.pillSheetTypes.fold(0, (p, e) => p + e.typeInfo.totalCount);
-  for (var i = 1; i <= maxPageCount; i++) {
+  for (var i = 1; i <= maxDateRangeCount; i++) {
     final offset = pillSheetGroupTotalPillCount * i;
     final dateRangesWithOffset =
         baseDateRanges.map((e) => DateRange(e.begin.add(Duration(days: offset)), e.end.add(Duration(days: offset)))).toList();
     dateRanges = dateRanges..addAll(dateRangesWithOffset);
   }
 
-  if (dateRanges.length > maxPageCount) {
-    // maxPageCount分だけ返す。主にテストの時に結果を予想しやすいのでこの形をとっている
-    return dateRanges.sublist(0, maxPageCount);
+  if (dateRanges.length > maxDateRangeCount) {
+    // maxDateRangeCount分だけ返す。主にテストの時に結果を予想しやすいのでこの形をとっている
+    return dateRanges.sublist(0, maxDateRangeCount);
   } else {
     return dateRanges;
   }
 }
 
-List<DateRange> nextPillSheetDateRanges(PillSheetGroup pillSheetGroup, [int maxPageCount = 15]) {
+List<DateRange> nextPillSheetDateRanges(PillSheetGroup pillSheetGroup, [int maxDateRangeCount = 15]) {
   if (pillSheetGroup.pillSheets.isEmpty) {
     return [];
   }
-  assert(maxPageCount > 0);
+  assert(maxDateRangeCount > 0);
 
   final totalPillCount = pillSheetGroup.pillSheets.map((e) => e.pillSheetType.totalCount).reduce((value, element) => value + element);
   var dateRanges = <DateRange>[];
-  for (int i = 0; i < maxPageCount; i++) {
+  for (int i = 0; i < maxDateRangeCount; i++) {
     final offset = totalPillCount * i;
     for (var pillSheet in pillSheetGroup.pillSheets) {
       final begin = pillSheet.estimatedEndTakenDate.add(Duration(days: 1 + offset));
