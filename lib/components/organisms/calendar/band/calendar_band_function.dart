@@ -5,10 +5,11 @@ import 'package:pilll/entity/pill_sheet_group.codegen.dart';
 import 'package:pilll/entity/pill_sheet_type.dart';
 import 'package:pilll/entity/setting.codegen.dart';
 import 'package:pilll/entity/weekday.dart';
-import 'package:pilll/utils/datetime/date_compare.dart';
 import 'package:pilll/utils/datetime/day.dart';
 
 // 予定されている生理日 or 記録されている生理日の日付の配列を返す
+// maxPageCountは主にユニットテストの時に嬉しい引数になっているがプロダクションコードでもそのまま使用している
+// ユースケースとして大体の未来のものを返せれば良いので厳密な計算結果が欲しいわけではないので動作確認とユニットテストをしやすい方式をとっている
 List<DateRange> scheduledOrInTheMiddleMenstruationDateRanges(PillSheetGroup? pillSheetGroup, Setting? setting, List<Menstruation> menstruations,
     [int maxPageCount = 15]) {
   if (pillSheetGroup == null || setting == null) {
@@ -41,7 +42,12 @@ List<DateRange> scheduledOrInTheMiddleMenstruationDateRanges(PillSheetGroup? pil
     dateRanges = dateRanges..addAll(dateRangesWithOffset);
   }
 
-  return dateRanges;
+  if (dateRanges.length > maxPageCount) {
+    // maxPageCount分だけ返す。主にテストの時に結果を予想しやすいのでこの形をとっている
+    return dateRanges.sublist(0, maxPageCount);
+  } else {
+    return dateRanges;
+  }
 }
 
 List<DateRange> nextPillSheetDateRanges(PillSheetGroup pillSheetGroup, [int maxPageCount = 15]) {
