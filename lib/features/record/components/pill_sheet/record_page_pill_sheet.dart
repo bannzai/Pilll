@@ -249,30 +249,8 @@ class RecordPagePillSheet extends HookConsumerWidget {
     required int pageIndex,
     required Setting setting,
   }) {
-    if (setting.pillNumberForFromMenstruation == 0 || setting.durationMenstruation == 0) {
-      return false;
-    }
-
-    final pillSheetTotalCount = pillSheetGroup.pillSheets[pageIndex].typeInfo.totalCount;
-    if (setting.pillNumberForFromMenstruation < pillSheetTotalCount) {
-      final left = setting.pillNumberForFromMenstruation;
-      final right = setting.pillNumberForFromMenstruation + setting.durationMenstruation - 1;
-      return left <= pillNumberInPillSheet && pillNumberInPillSheet <= right;
-    }
-    final passedCount = summarizedPillCountWithPillSheetTypesToIndex(
-        pillSheetTypes: pillSheetGroup.pillSheets.map((e) => e.pillSheetType).toList(), toIndex: pageIndex);
-    final pillNumberInPillSheetGroup = passedCount + pillNumberInPillSheet;
-
-    final menstruationRangeList = List.generate(pillSheetGroup.pillSheets.length, (index) {
-      final begin = setting.pillNumberForFromMenstruation * (index + 1);
-      final end = begin + setting.durationMenstruation - 1;
-
-      return (begin, end);
-    });
-
-    final isContainedMenstruationDuration =
-        menstruationRangeList.where((element) => element.$1 <= pillNumberInPillSheetGroup && pillNumberInPillSheetGroup <= element.$2).isNotEmpty;
-    return isContainedMenstruationDuration;
+    final targetDate = pillSheetGroup.pillSheets[pageIndex].displayPillTakeDate(pillNumberInPillSheet);
+    return pillSheetGroup.menstruationDateRanges(setting: setting).where((element) => element.inRange(targetDate)).isNotEmpty;
   }
 
   bool _isDone({
