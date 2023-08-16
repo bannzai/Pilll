@@ -66,7 +66,13 @@ List<DateRange> nextPillSheetDateRanges(PillSheetGroup pillSheetGroup, [int maxD
       dateRanges.add(DateRange(begin, end));
     }
   }
-  return dateRanges;
+
+  if (dateRanges.length > maxDateRangeCount) {
+    // maxDateRangeCount分だけ返す。主にテストの時に結果を予想しやすいのでこの形をとっている
+    return dateRanges.sublist(0, maxDateRangeCount);
+  } else {
+    return dateRanges;
+  }
 }
 
 int bandLength(DateRange range, CalendarBandModel bandModel, bool isLineBreaked) {
