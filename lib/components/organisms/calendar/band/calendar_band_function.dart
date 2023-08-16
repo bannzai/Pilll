@@ -32,12 +32,13 @@ List<DateRange> scheduledOrInTheMiddleMenstruationDateRanges(PillSheetGroup? pil
   }).toList();
   final baseDateRanges = scheduledMenstruationDateRanges..addAll(menstruationDateRanges);
 
-  final List<DateRange> dateRanges = baseDateRanges;
+  List<DateRange> dateRanges = baseDateRanges;
   final pillSheetGroupTotalPillCount = pillSheetGroup.pillSheetTypes.fold(0, (p, e) => p + e.typeInfo.totalCount);
   for (var i = 1; i <= maxPageCount; i++) {
     final offset = pillSheetGroupTotalPillCount * i;
-    final dateRangesWithOffset = dateRanges.map((e) => DateRange(e.begin.add(Duration(days: offset)), e.end.add(Duration(days: offset))));
-    dateRanges.addAll(dateRangesWithOffset);
+    final dateRangesWithOffset =
+        baseDateRanges.map((e) => DateRange(e.begin.add(Duration(days: offset)), e.end.add(Duration(days: offset)))).toList();
+    dateRanges = dateRanges..addAll(dateRangesWithOffset);
   }
 
   return dateRanges;
