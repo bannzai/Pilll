@@ -90,7 +90,7 @@ class RecordPagePillSheet extends HookConsumerWidget {
       if (columnIndex >= countOfPillMarksInLine) {
         return Container(width: PillSheetViewLayout.componentWidth);
       }
-      final pillNumberIntoPillSheet = PillMarkWithNumberLayoutHelper.calcPillNumberIntoPillSheet(columnIndex, lineIndex);
+      final pillNumberInPillSheet = PillMarkWithNumberLayoutHelper.calcPillNumberIntoPillSheet(columnIndex, lineIndex);
       return SizedBox(
         width: PillSheetViewLayout.componentWidth,
         child: PillMarkWithNumberLayout(
@@ -99,20 +99,20 @@ class RecordPagePillSheet extends HookConsumerWidget {
             pillSheetGroup: pillSheetGroup,
             pillSheet: pillSheet,
             setting: setting,
-            pillNumberIntoPillSheet: pillNumberIntoPillSheet,
+            pillNumberInPillSheet: pillNumberInPillSheet,
             pageIndex: pageIndex,
           ),
           pillMark: PillMark(
             showsRippleAnimation: shouldPillMarkAnimation(
-              pillNumberIntoPillSheet: pillNumberIntoPillSheet,
+              pillNumberInPillSheet: pillNumberInPillSheet,
               pillSheet: pillSheet,
               pillSheetGroup: pillSheetGroup,
             ),
             showsCheckmark: _isDone(
-              pillNumberIntoPillSheet: pillNumberIntoPillSheet,
+              pillNumberInPillSheet: pillNumberInPillSheet,
             ),
             pillMarkType: pillMarkFor(
-              pillNumberIntoPillSheet: pillNumberIntoPillSheet,
+              pillNumberInPillSheet: pillNumberInPillSheet,
               pillSheet: pillSheet,
             ),
           ),
@@ -123,12 +123,12 @@ class RecordPagePillSheet extends HookConsumerWidget {
                 "today_pill_number": pillSheet.todayPillNumber,
               });
 
-              if (pillSheet.todayPillNumber < pillNumberIntoPillSheet) {
+              if (pillSheet.todayPillNumber < pillNumberInPillSheet) {
                 return;
               }
 
-              if (pillSheet.lastTakenPillNumber >= pillNumberIntoPillSheet) {
-                await revertTakePill(pillSheetGroup: pillSheetGroup, pageIndex: pageIndex, pillNumberIntoPillSheet: pillNumberIntoPillSheet);
+              if (pillSheet.lastTakenPillNumber >= pillNumberInPillSheet) {
+                await revertTakePill(pillSheetGroup: pillSheetGroup, pageIndex: pageIndex, pillNumberInPillSheet: pillNumberInPillSheet);
                 await registerReminderLocalNotification();
               } else {
                 // NOTE: batch.commit でリモートのDBに書き込む時間がかかるので事前にバッジを0にする
@@ -140,7 +140,7 @@ class RecordPagePillSheet extends HookConsumerWidget {
                   takePill,
                   registerReminderLocalNotification,
                   pillSheetGroup: pillSheetGroup,
-                  pillNumberIntoPillSheet: pillNumberIntoPillSheet,
+                  pillNumberInPillSheet: pillNumberInPillSheet,
                   pillSheet: pillSheet,
                 );
               }
@@ -157,11 +157,11 @@ class RecordPagePillSheet extends HookConsumerWidget {
   Future<PillSheetGroup?> _takeWithPillNumber(
     TakePill takePill,
     RegisterReminderLocalNotification registerReminderLocalNotification, {
-    required int pillNumberIntoPillSheet,
+    required int pillNumberInPillSheet,
     required PillSheetGroup pillSheetGroup,
     required PillSheet pillSheet,
   }) async {
-    if (pillNumberIntoPillSheet <= pillSheet.lastTakenPillNumber) {
+    if (pillNumberInPillSheet <= pillSheet.lastTakenPillNumber) {
       return null;
     }
     final activedPillSheet = pillSheetGroup.activedPillSheet;
@@ -174,7 +174,7 @@ class RecordPagePillSheet extends HookConsumerWidget {
     if (activedPillSheet.groupIndex < pillSheet.groupIndex) {
       return null;
     }
-    var diff = min(pillSheet.todayPillNumber, pillSheet.typeInfo.totalCount) - pillNumberIntoPillSheet;
+    var diff = min(pillSheet.todayPillNumber, pillSheet.typeInfo.totalCount) - pillNumberInPillSheet;
     if (diff < 0) {
       // User tapped future pill number
       return null;
@@ -183,7 +183,7 @@ class RecordPagePillSheet extends HookConsumerWidget {
       return null;
     }
 
-    final takenDate = pillSheet.displayPillTakeDate(pillNumberIntoPillSheet);
+    final takenDate = pillSheet.displayPillTakeDate(pillNumberInPillSheet);
 
     final updatedPillSheetGroup = await takePill(
       takenDate: takenDate,
@@ -199,7 +199,7 @@ class RecordPagePillSheet extends HookConsumerWidget {
   }
 
   static Widget textOfPillNumber({
-    required int pillNumberIntoPillSheet,
+    required int pillNumberInPillSheet,
     required int pageIndex,
     required PillSheetGroup pillSheetGroup,
     required PillSheet pillSheet,
@@ -207,7 +207,7 @@ class RecordPagePillSheet extends HookConsumerWidget {
     required Setting setting,
   }) {
     final containedMenstruationDuration = RecordPagePillSheet.isContainedMenstruationDuration(
-      pillNumberIntoPillSheet: pillNumberIntoPillSheet,
+      pillNumberInPillSheet: pillNumberInPillSheet,
       pillSheetGroup: pillSheetGroup,
       setting: setting,
       pageIndex: pageIndex,
@@ -216,7 +216,7 @@ class RecordPagePillSheet extends HookConsumerWidget {
       premiumOrTrial: premiumAndTrial.premiumOrTrial,
       pillSheetAppearanceMode: setting.pillSheetAppearanceMode,
       pageIndex: pageIndex,
-      pillNumberInPillSheet: pillNumberIntoPillSheet,
+      pillNumberInPillSheet: pillNumberInPillSheet,
     );
 
     if (premiumAndTrial.premiumOrTrial && containedMenstruationDuration) {
@@ -227,7 +227,7 @@ class RecordPagePillSheet extends HookConsumerWidget {
   }
 
   /*
-    pillNumberIntoPillSheet の値によって二つの動きをする
+    pillNumberInPillSheet の値によって二つの動きをする
     setting.pillNumberForFromMenstruation < pillSheet.typeInfo.totalCount の場合は単純にこの式の結果を用いる
     setting.pillNumberForFromMenstruation > pillSheet.typeInfo.totalCount の場合はページ数も考慮して
       pillSheet.begin < pillNumberForFromMenstruation < pillSheet.typeInfo.totalCount の場合の結果を用いる
@@ -244,7 +244,7 @@ class RecordPagePillSheet extends HookConsumerWidget {
       4枚目: 8番から
   */
   static bool isContainedMenstruationDuration({
-    required int pillNumberIntoPillSheet,
+    required int pillNumberInPillSheet,
     required PillSheetGroup pillSheetGroup,
     required int pageIndex,
     required Setting setting,
@@ -257,11 +257,11 @@ class RecordPagePillSheet extends HookConsumerWidget {
     if (setting.pillNumberForFromMenstruation < pillSheetTotalCount) {
       final left = setting.pillNumberForFromMenstruation;
       final right = setting.pillNumberForFromMenstruation + setting.durationMenstruation - 1;
-      return left <= pillNumberIntoPillSheet && pillNumberIntoPillSheet <= right;
+      return left <= pillNumberInPillSheet && pillNumberInPillSheet <= right;
     }
     final passedCount = summarizedPillCountWithPillSheetTypesToIndex(
         pillSheetTypes: pillSheetGroup.pillSheets.map((e) => e.pillSheetType).toList(), toIndex: pageIndex);
-    final pillNumberInPillSheetGroup = passedCount + pillNumberIntoPillSheet;
+    final pillNumberInPillSheetGroup = passedCount + pillNumberInPillSheet;
 
     final menstruationRangeList = List.generate(pillSheetGroup.pillSheets.length, (index) {
       final begin = setting.pillNumberForFromMenstruation * (index + 1);
@@ -276,7 +276,7 @@ class RecordPagePillSheet extends HookConsumerWidget {
   }
 
   bool _isDone({
-    required int pillNumberIntoPillSheet,
+    required int pillNumberInPillSheet,
   }) {
     final activedPillSheet = pillSheetGroup.activedPillSheet;
     if (activedPillSheet == null) {
@@ -287,37 +287,37 @@ class RecordPagePillSheet extends HookConsumerWidget {
     }
     if (activedPillSheet.id != pillSheet.id) {
       if (pillSheet.isBegan) {
-        if (pillNumberIntoPillSheet > pillSheet.lastTakenPillNumber) {
+        if (pillNumberInPillSheet > pillSheet.lastTakenPillNumber) {
           return false;
         }
       }
       return true;
     }
 
-    return pillNumberIntoPillSheet <= activedPillSheet.lastTakenPillNumber;
+    return pillNumberInPillSheet <= activedPillSheet.lastTakenPillNumber;
   }
 }
 
 PillMarkType pillMarkFor({
-  required int pillNumberIntoPillSheet,
+  required int pillNumberInPillSheet,
   required PillSheet pillSheet,
 }) {
-  if (pillNumberIntoPillSheet > pillSheet.typeInfo.dosingPeriod) {
+  if (pillNumberInPillSheet > pillSheet.typeInfo.dosingPeriod) {
     return (pillSheet.pillSheetType == PillSheetType.pillsheet_21 || pillSheet.pillSheetType == PillSheetType.pillsheet_24_rest_4)
         ? PillMarkType.rest
         : PillMarkType.fake;
   }
-  if (pillNumberIntoPillSheet <= pillSheet.lastTakenPillNumber) {
+  if (pillNumberInPillSheet <= pillSheet.lastTakenPillNumber) {
     return PillMarkType.done;
   }
-  if (pillNumberIntoPillSheet < pillSheet.todayPillNumber) {
+  if (pillNumberInPillSheet < pillSheet.todayPillNumber) {
     return PillMarkType.normal;
   }
   return PillMarkType.normal;
 }
 
 bool shouldPillMarkAnimation({
-  required int pillNumberIntoPillSheet,
+  required int pillNumberInPillSheet,
   required PillSheet pillSheet,
   required PillSheetGroup pillSheetGroup,
 }) {
@@ -333,12 +333,12 @@ bool shouldPillMarkAnimation({
   }
   if (activedPillSheet.id != pillSheet.id) {
     if (pillSheet.isBegan) {
-      if (pillNumberIntoPillSheet > pillSheet.lastTakenPillNumber) {
+      if (pillNumberInPillSheet > pillSheet.lastTakenPillNumber) {
         return true;
       }
     }
     return false;
   }
 
-  return pillNumberIntoPillSheet > activedPillSheet.lastTakenPillNumber && pillNumberIntoPillSheet <= activedPillSheet.todayPillNumber;
+  return pillNumberInPillSheet > activedPillSheet.lastTakenPillNumber && pillNumberInPillSheet <= activedPillSheet.todayPillNumber;
 }

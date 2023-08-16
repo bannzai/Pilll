@@ -76,7 +76,7 @@ void main() {
         pillSheetGroup: pillSheetGroup,
         activedPillSheet: pillSheetGroup.activedPillSheet!,
         pillSheetPageIndex: 0,
-        pillNumberIntoPillSheet: 2,
+        pillNumberInPillSheet: 2,
       );
     });
 
@@ -140,7 +140,7 @@ void main() {
         pillSheetGroup: pillSheetGroup,
         activedPillSheet: pillSheetGroup.activedPillSheet!,
         pillSheetPageIndex: 0,
-        pillNumberIntoPillSheet: 2,
+        pillNumberInPillSheet: 2,
       );
     });
 
@@ -228,7 +228,7 @@ void main() {
         pillSheetGroup: pillSheetGroup,
         activedPillSheet: pillSheetGroup.activedPillSheet!,
         pillSheetPageIndex: 0,
-        pillNumberIntoPillSheet: 28,
+        pillNumberInPillSheet: 28,
       );
     });
     test("group has three pill sheet and it is changed direction middle to left and cheking clear lastTakenDate", () async {
@@ -316,7 +316,7 @@ void main() {
         pillSheetGroup: pillSheetGroup,
         activedPillSheet: pillSheetGroup.activedPillSheet!,
         pillSheetPageIndex: 0,
-        pillNumberIntoPillSheet: 28,
+        pillNumberInPillSheet: 28,
       );
     });
     test("group has three pill sheet and it is changed direction middle to right", () async {
@@ -405,7 +405,7 @@ void main() {
         pillSheetGroup: pillSheetGroup,
         activedPillSheet: pillSheetGroup.activedPillSheet!,
         pillSheetPageIndex: 2,
-        pillNumberIntoPillSheet: 1,
+        pillNumberInPillSheet: 1,
       );
     });
   });
@@ -501,7 +501,7 @@ void main() {
         pillSheetGroup: pillSheetGroup,
         activedPillSheet: pillSheetGroup.activedPillSheet!,
         pillSheetPageIndex: 0,
-        pillNumberIntoPillSheet: 28,
+        pillNumberInPillSheet: 28,
       );
     });
   });

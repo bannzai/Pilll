@@ -29,7 +29,7 @@ class RevertTakePill {
   Future<PillSheetGroup?> call({
     required PillSheetGroup pillSheetGroup,
     required int pageIndex,
-    required int pillNumberIntoPillSheet,
+    required int pillNumberInPillSheet,
   }) async {
     final activedPillSheet = pillSheetGroup.activedPillSheet;
     if (activedPillSheet == null) {
@@ -40,7 +40,7 @@ class RevertTakePill {
     }
 
     final targetPillSheet = pillSheetGroup.pillSheets[pageIndex];
-    final takenDate = targetPillSheet.displayPillTakeDate(pillNumberIntoPillSheet).subtract(const Duration(days: 1)).date();
+    final takenDate = targetPillSheet.displayPillTakeDate(pillNumberInPillSheet).subtract(const Duration(days: 1)).date();
 
     final updatedPillSheets = pillSheetGroup.pillSheets.map((pillSheet) {
       final lastTakenDate = pillSheet.lastTakenDate;

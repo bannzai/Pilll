@@ -303,7 +303,7 @@ void main() {
       store.selectedFirstPillSheetType(PillSheetType.pillsheet_21);
       store.removePillSheetType(1);
       store.removePillSheetType(1);
-      store.setTodayPillNumber(pageIndex: 0, pillNumberIntoPillSheet: 1);
+      store.setTodayPillNumber(pageIndex: 0, pillNumberInPillSheet: 1);
       store.setReminderTime(index: 0, hour: 21, minute: 20);
 
       await store.register();
@@ -387,7 +387,7 @@ void main() {
       store.addPillSheetType(PillSheetType.pillsheet_21);
       store.removePillSheetType(1);
       store.removePillSheetType(1);
-      store.setTodayPillNumber(pageIndex: 1, pillNumberIntoPillSheet: 1);
+      store.setTodayPillNumber(pageIndex: 1, pillNumberInPillSheet: 1);
       store.setReminderTime(index: 0, hour: 21, minute: 20);
 
       await store.register();
@@ -454,7 +454,7 @@ void main() {
       store.selectedFirstPillSheetType(PillSheetType.pillsheet_24_rest_4);
       store.removePillSheetType(1);
       store.removePillSheetType(1);
-      store.setTodayPillNumber(pageIndex: 0, pillNumberIntoPillSheet: 1);
+      store.setTodayPillNumber(pageIndex: 0, pillNumberInPillSheet: 1);
       store.setReminderTime(index: 0, hour: 21, minute: 20);
 
       await store.register();
