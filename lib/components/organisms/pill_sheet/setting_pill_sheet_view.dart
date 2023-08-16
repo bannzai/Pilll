@@ -62,7 +62,7 @@ class SettingPillSheetView extends StatelessWidget {
       return SizedBox(
         width: PillSheetViewLayout.componentWidth,
         child: PillMarkWithNumberLayout(
-          textOfPillNumber: Text(
+          pillNumber: Text(
             () {
               if (appearanceMode == PillSheetAppearanceMode.sequential) {
                 return "${offset + pillNumberInPillSheet}";

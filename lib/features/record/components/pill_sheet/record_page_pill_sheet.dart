@@ -96,7 +96,7 @@ class RecordPagePillSheet extends HookConsumerWidget {
       return SizedBox(
         width: PillSheetViewLayout.componentWidth,
         child: PillMarkWithNumberLayout(
-          textOfPillNumber: () {
+          pillNumber: () {
             final containedMenstruationDuration =
                 menstruationDateRanges.where((e) => e.inRange(pillSheet.displayPillTakeDate(pillNumberInPillSheet))).isNotEmpty;
 
