@@ -86,7 +86,6 @@ class RecordPagePillSheet extends HookConsumerWidget {
       int diff = pillSheet.pillSheetType.totalCount - lineIndex * Weekday.values.length;
       countOfPillMarksInLine = diff;
     }
-    final menstruationDateRanges = pillSheetGroup.menstruationDateRanges(setting: setting);
 
     return List.generate(Weekday.values.length, (columnIndex) {
       if (columnIndex >= countOfPillMarksInLine) {
@@ -96,23 +95,14 @@ class RecordPagePillSheet extends HookConsumerWidget {
       return SizedBox(
         width: PillSheetViewLayout.componentWidth,
         child: PillMarkWithNumberLayout(
-          pillNumber: () {
-            final containedMenstruationDuration =
-                menstruationDateRanges.where((e) => e.inRange(pillSheet.displayPillTakeDate(pillNumberInPillSheet))).isNotEmpty;
-
-            final text = pillSheetGroup.displayPillNumber(
-              premiumOrTrial: premiumAndTrial.premiumOrTrial,
-              pillSheetAppearanceMode: setting.pillSheetAppearanceMode,
-              pageIndex: pageIndex,
-              pillNumberInPillSheet: pillNumberInPillSheet,
-            );
-
-            if (premiumAndTrial.premiumOrTrial && containedMenstruationDuration) {
-              return MenstruationPillNumber(text: text);
-            } else {
-              return PlainPillNumber(text: text);
-            }
-          }(),
+          pillNumber: PillNumber(
+            pillSheetGroup: pillSheetGroup,
+            pillSheet: pillSheet,
+            setting: setting,
+            premiumAndTrial: premiumAndTrial,
+            pageIndex: pageIndex,
+            pillNumberInPillSheet: pillNumberInPillSheet,
+          ),
           pillMark: PillMark(
             showsRippleAnimation: shouldPillMarkAnimation(
               pillNumberInPillSheet: pillNumberInPillSheet,
@@ -275,4 +265,43 @@ bool shouldPillMarkAnimation({
   }
 
   return pillNumberInPillSheet > activedPillSheet.lastTakenPillNumber && pillNumberInPillSheet <= activedPillSheet.todayPillNumber;
+}
+
+class PillNumber extends StatelessWidget {
+  final PillSheetGroup pillSheetGroup;
+  final PillSheet pillSheet;
+  final Setting setting;
+  final PremiumAndTrial premiumAndTrial;
+  final int pageIndex;
+  final int pillNumberInPillSheet;
+
+  const PillNumber(
+      {super.key,
+      required this.pillSheetGroup,
+      required this.pillSheet,
+      required this.setting,
+      required this.premiumAndTrial,
+      required this.pageIndex,
+      required this.pillNumberInPillSheet});
+
+  @override
+  Widget build(BuildContext context) {
+    final menstruationDateRanges = pillSheetGroup.menstruationDateRanges(setting: setting);
+
+    final containedMenstruationDuration =
+        menstruationDateRanges.where((e) => e.inRange(pillSheet.displayPillTakeDate(pillNumberInPillSheet))).isNotEmpty;
+
+    final text = pillSheetGroup.displayPillNumber(
+      premiumOrTrial: premiumAndTrial.premiumOrTrial,
+      pillSheetAppearanceMode: setting.pillSheetAppearanceMode,
+      pageIndex: pageIndex,
+      pillNumberInPillSheet: pillNumberInPillSheet,
+    );
+
+    if (premiumAndTrial.premiumOrTrial && containedMenstruationDuration) {
+      return MenstruationPillNumber(text: text);
+    } else {
+      return PlainPillNumber(text: text);
+    }
+  }
 }
