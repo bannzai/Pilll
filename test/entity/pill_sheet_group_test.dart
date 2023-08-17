@@ -1231,7 +1231,7 @@ void main() {
         );
         expect(pillSheetGroup.menstruationDateRanges(setting: setting), [
           DateRange(DateTime.parse("2020-09-29"), DateTime.parse("2020-10-01")),
-          DateRange(DateTime.parse("2020-10-27"), DateTime.parse("2020-10-29")),
+          DateRange(DateTime.parse("2020-10-28"), DateTime.parse("2020-10-30")),
         ]);
       });
       test("setting values two appears in the range of pill sheet", () {
@@ -1292,7 +1292,11 @@ void main() {
           isOnReminder: false,
           timezoneDatabaseName: "Asia/Tokyo",
         );
-        expect(pillSheetGroup.menstruationDateRanges(setting: setting), [DateRange(DateTime.parse("2020-09-10"), DateTime.parse("2020-09-12"))]);
+        expect(pillSheetGroup.menstruationDateRanges(setting: setting), [
+          DateRange(DateTime.parse("2020-09-10"), DateTime.parse("2020-09-12")),
+          DateRange(DateTime.parse("2020-10-08"), DateTime.parse("2020-10-10")),
+          DateRange(DateTime.parse("2020-11-05"), DateTime.parse("2020-11-07")),
+        ]);
       });
     });
   });
