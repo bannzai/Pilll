@@ -1049,7 +1049,31 @@ void main() {
         final pillSheet = PillSheet(
           id: firestoreIDGenerator(),
           beginingDate: DateTime.parse("2020-09-01"),
-          lastTakenDate: DateTime.parse("2020-09-01"),
+          lastTakenDate: null,
+          createdAt: now(),
+          typeInfo: PillSheetTypeInfo(
+            dosingPeriod: sheetType.dosingPeriod,
+            name: sheetType.fullName,
+            totalCount: sheetType.totalCount,
+            pillSheetTypeReferencePath: sheetType.rawPath,
+          ),
+        );
+        final pillSheet2 = PillSheet(
+          id: firestoreIDGenerator(),
+          beginingDate: DateTime.parse("2020-09-01").add(const Duration(days: 28)),
+          lastTakenDate: null,
+          createdAt: now(),
+          typeInfo: PillSheetTypeInfo(
+            dosingPeriod: sheetType.dosingPeriod,
+            name: sheetType.fullName,
+            totalCount: sheetType.totalCount,
+            pillSheetTypeReferencePath: sheetType.rawPath,
+          ),
+        );
+        final pillSheet3 = PillSheet(
+          id: firestoreIDGenerator(),
+          beginingDate: DateTime.parse("2020-09-01").add(const Duration(days: 28 * 2)),
+          lastTakenDate: null,
           createdAt: now(),
           typeInfo: PillSheetTypeInfo(
             dosingPeriod: sheetType.dosingPeriod,
@@ -1060,10 +1084,11 @@ void main() {
         );
         // created at and id are anything value
         final pillSheetGroup = PillSheetGroup(
-          pillSheetIDs: ["sheet_id"],
-          pillSheets: [pillSheet],
+          pillSheetIDs: ["1", "2", "3"],
+          pillSheets: [pillSheet, pillSheet2, pillSheet3],
           createdAt: now(),
         );
+
         const setting = Setting(
           pillNumberForFromMenstruation: 24,
           durationMenstruation: 3,
@@ -1081,7 +1106,31 @@ void main() {
         final pillSheet = PillSheet(
           id: firestoreIDGenerator(),
           beginingDate: DateTime.parse("2020-09-01"),
-          lastTakenDate: DateTime.parse("2020-09-01"),
+          lastTakenDate: null,
+          createdAt: now(),
+          typeInfo: PillSheetTypeInfo(
+            dosingPeriod: sheetType.dosingPeriod,
+            name: sheetType.fullName,
+            totalCount: sheetType.totalCount,
+            pillSheetTypeReferencePath: sheetType.rawPath,
+          ),
+        );
+        final pillSheet2 = PillSheet(
+          id: firestoreIDGenerator(),
+          beginingDate: DateTime.parse("2020-09-01").add(const Duration(days: 28)),
+          lastTakenDate: null,
+          createdAt: now(),
+          typeInfo: PillSheetTypeInfo(
+            dosingPeriod: sheetType.dosingPeriod,
+            name: sheetType.fullName,
+            totalCount: sheetType.totalCount,
+            pillSheetTypeReferencePath: sheetType.rawPath,
+          ),
+        );
+        final pillSheet3 = PillSheet(
+          id: firestoreIDGenerator(),
+          beginingDate: DateTime.parse("2020-09-01").add(const Duration(days: 28 * 2)),
+          lastTakenDate: null,
           createdAt: now(),
           typeInfo: PillSheetTypeInfo(
             dosingPeriod: sheetType.dosingPeriod,
@@ -1092,10 +1141,11 @@ void main() {
         );
         // created at and id are anything value
         final pillSheetGroup = PillSheetGroup(
-          pillSheetIDs: ["sheet_id"],
-          pillSheets: [pillSheet],
+          pillSheetIDs: ["1", "2", "3"],
+          pillSheets: [pillSheet, pillSheet2, pillSheet3],
           createdAt: now(),
         );
+
         const setting = Setting(
           pillNumberForFromMenstruation: 29,
           durationMenstruation: 3,
@@ -1113,7 +1163,31 @@ void main() {
         final pillSheet = PillSheet(
           id: firestoreIDGenerator(),
           beginingDate: DateTime.parse("2020-09-01"),
-          lastTakenDate: DateTime.parse("2020-09-01"),
+          lastTakenDate: null,
+          createdAt: now(),
+          typeInfo: PillSheetTypeInfo(
+            dosingPeriod: sheetType.dosingPeriod,
+            name: sheetType.fullName,
+            totalCount: sheetType.totalCount,
+            pillSheetTypeReferencePath: sheetType.rawPath,
+          ),
+        );
+        final pillSheet2 = PillSheet(
+          id: firestoreIDGenerator(),
+          beginingDate: DateTime.parse("2020-09-01").add(const Duration(days: 28)),
+          lastTakenDate: null,
+          createdAt: now(),
+          typeInfo: PillSheetTypeInfo(
+            dosingPeriod: sheetType.dosingPeriod,
+            name: sheetType.fullName,
+            totalCount: sheetType.totalCount,
+            pillSheetTypeReferencePath: sheetType.rawPath,
+          ),
+        );
+        final pillSheet3 = PillSheet(
+          id: firestoreIDGenerator(),
+          beginingDate: DateTime.parse("2020-09-01").add(const Duration(days: 28 * 2)),
+          lastTakenDate: null,
           createdAt: now(),
           typeInfo: PillSheetTypeInfo(
             dosingPeriod: sheetType.dosingPeriod,
@@ -1124,10 +1198,11 @@ void main() {
         );
         // created at and id are anything value
         final pillSheetGroup = PillSheetGroup(
-          pillSheetIDs: ["sheet_id"],
-          pillSheets: [pillSheet],
+          pillSheetIDs: ["1", "2", "3"],
+          pillSheets: [pillSheet, pillSheet2, pillSheet3],
           createdAt: now(),
         );
+
         const setting = Setting(
           pillNumberForFromMenstruation: 10,
           durationMenstruation: 3,
