@@ -1095,7 +1095,11 @@ void main() {
           isOnReminder: false,
           timezoneDatabaseName: "Asia/Tokyo",
         );
-        expect(pillSheetGroup.menstruationDateRanges(setting: setting), [DateRange(DateTime.parse("2020-09-24"), DateTime.parse("2020-09-26"))]);
+        expect(pillSheetGroup.menstruationDateRanges(setting: setting), [
+          DateRange(DateTime.parse("2020-09-24"), DateTime.parse("2020-09-26")),
+          DateRange(DateTime.parse("2020-10-22"), DateTime.parse("2020-10-24")),
+          DateRange(DateTime.parse("2020-11-19"), DateTime.parse("2020-11-21")),
+        ]);
       });
       test("setting values out the range of pill sheet", () {
         final mockTodayRepository = MockTodayService();
