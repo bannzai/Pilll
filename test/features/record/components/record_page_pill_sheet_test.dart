@@ -13,6 +13,7 @@ import 'package:shared_preferences/shared_preferences.dart';
 
 import '../../../helper/fake.dart';
 import '../../../helper/mock.mocks.dart';
+import '../../../helper/supported_device.dart';
 
 void main() {
   setUp(() {
@@ -23,7 +24,9 @@ void main() {
   group("#PillNumber", () {
     group("pillSheetAppearanceMode is number", () {
       const pillSheetAppearanceMode = PillSheetAppearanceMode.number;
-      test("it is isPremium or isTrial", () {
+      testWidgets("it is isPremium or isTrial", (WidgetTester tester) async {
+        SupportedDeviceType.iPhone5SE2nd.binding(tester.view);
+
         final originalTodayRepository = todayRepository;
         final mockTodayRepository = MockTodayService();
         final mockToday = DateTime.parse("2020-09-01");
@@ -60,6 +63,7 @@ void main() {
             setting: setting,
             premiumAndTrial: FakePremiumAndTrial(fakeIsPremium: true, fakeIsTrial: true),
           );
+          await tester.pumpWidget(widget);
 
           if (pillNumberInPillSheet < pillNumberForFromMenstruation) {
             expect(widget, isA<PlainPillNumber>(), reason: "pillNumberInPillSheet: $pillNumberInPillSheet");
@@ -70,7 +74,9 @@ void main() {
           }
         }
       });
-      test("it is not isPremium and isTrial", () {
+      testWidgets("it is not isPremium and isTrial", (WidgetTester tester) async {
+        SupportedDeviceType.iPhone5SE2nd.binding(tester.view);
+
         final originalTodayRepository = todayRepository;
         final mockTodayRepository = MockTodayService();
         final mockToday = DateTime.parse("2020-09-01");
@@ -108,6 +114,7 @@ void main() {
               pillNumberInPillSheet: pillNumberInPillSheet,
               pageIndex: 0,
               setting: setting);
+          await tester.pumpWidget(widget);
 
           if (pillNumberInPillSheet < pillNumberForFromMenstruation) {
             expect(widget, isA<PlainPillNumber>(), reason: "pillNumberInPillSheet: $pillNumberInPillSheet");
@@ -118,7 +125,9 @@ void main() {
           }
         }
       });
-      test("setting.pillNumberForFromMenstruation == 0 || setting.durationMenstruation == 0", () {
+      testWidgets("setting.pillNumberForFromMenstruation == 0 || setting.durationMenstruation == 0", (WidgetTester tester) async {
+        SupportedDeviceType.iPhone5SE2nd.binding(tester.view);
+
         final originalTodayRepository = todayRepository;
         final mockTodayRepository = MockTodayService();
         final mockToday = DateTime.parse("2020-09-01");
@@ -155,6 +164,7 @@ void main() {
               pillNumberInPillSheet: pillNumberInPillSheet,
               pageIndex: 0,
               setting: setting);
+          await tester.pumpWidget(widget);
 
           if (pillNumberInPillSheet < pillNumberForFromMenstruation) {
             expect(widget, isA<PlainPillNumber>(), reason: "pillNumberInPillSheet: $pillNumberInPillSheet");
@@ -168,7 +178,9 @@ void main() {
     });
     group("pillSheetAppearanceMode is date", () {
       const pillSheetAppearanceMode = PillSheetAppearanceMode.date;
-      test("it is isPremium or isTrial", () {
+      testWidgets("it is isPremium or isTrial", (WidgetTester tester) async {
+        SupportedDeviceType.iPhone5SE2nd.binding(tester.view);
+
         final originalTodayRepository = todayRepository;
         final mockTodayRepository = MockTodayService();
         final mockToday = DateTime.parse("2020-09-01");
@@ -205,6 +217,7 @@ void main() {
               pillNumberInPillSheet: pillNumberInPillSheet,
               pageIndex: 0,
               setting: setting);
+          await tester.pumpWidget(widget);
 
           if (pillNumberInPillSheet < pillNumberForFromMenstruation) {
             expect(widget, isA<PlainPillNumber>(), reason: "pillNumberInPillSheet: $pillNumberInPillSheet");
@@ -215,7 +228,9 @@ void main() {
           }
         }
       });
-      test("it is not isPremium and isTrial. it is means expired trial or premium user", () {
+      testWidgets("it is not isPremium and isTrial. it is means expired trial or premium user", (WidgetTester tester) async {
+        SupportedDeviceType.iPhone5SE2nd.binding(tester.view);
+
         final originalTodayRepository = todayRepository;
         final mockTodayRepository = MockTodayService();
         final mockToday = DateTime.parse("2020-09-01");
@@ -252,6 +267,7 @@ void main() {
               pillNumberInPillSheet: pillNumberInPillSheet,
               pageIndex: 0,
               setting: setting);
+          await tester.pumpWidget(widget);
 
           if (pillNumberInPillSheet < pillNumberForFromMenstruation) {
             expect(widget, isA<PlainPillNumber>(), reason: "pillNumberInPillSheet: $pillNumberInPillSheet");
@@ -262,7 +278,10 @@ void main() {
           }
         }
       });
-      test("isPremium == true && (setting.pillNumberForFromMenstruation == 0 || setting.durationMenstruation == 0)", () {
+      testWidgets("isPremium == true && (setting.pillNumberForFromMenstruation == 0 || setting.durationMenstruation == 0)",
+          (WidgetTester tester) async {
+        SupportedDeviceType.iPhone5SE2nd.binding(tester.view);
+
         final originalTodayRepository = todayRepository;
         final mockTodayRepository = MockTodayService();
         final mockToday = DateTime.parse("2020-09-01");
@@ -299,6 +318,7 @@ void main() {
               pillNumberInPillSheet: pillNumberInPillSheet,
               pageIndex: 0,
               setting: setting);
+          await tester.pumpWidget(widget);
 
           if (pillNumberInPillSheet < pillNumberForFromMenstruation) {
             expect(widget, isA<PlainPillNumber>(), reason: "pillNumberInPillSheet: $pillNumberInPillSheet");
@@ -312,7 +332,9 @@ void main() {
     });
     group("pillSheetAppearanceMode is sequential", () {
       const pillSheetAppearanceMode = PillSheetAppearanceMode.sequential;
-      test("it is isPremium or isTrial", () {
+      testWidgets("it is isPremium or isTrial", (WidgetTester tester) async {
+        SupportedDeviceType.iPhone5SE2nd.binding(tester.view);
+
         final originalTodayRepository = todayRepository;
         final mockTodayRepository = MockTodayService();
         final mockToday = DateTime.parse("2020-09-01");
@@ -348,6 +370,7 @@ void main() {
               pillNumberInPillSheet: pillNumberInPillSheet,
               pageIndex: 0,
               setting: setting);
+          await tester.pumpWidget(widget);
 
           if (pillNumberInPillSheet < pillNumberForFromMenstruation) {
             expect(widget, isA<PlainPillNumber>(), reason: "pillNumberInPillSheet: $pillNumberInPillSheet");
@@ -358,7 +381,9 @@ void main() {
           }
         }
       });
-      test("it is not isPremium and isTrial", () {
+      testWidgets("it is not isPremium and isTrial", (WidgetTester tester) async {
+        SupportedDeviceType.iPhone5SE2nd.binding(tester.view);
+
         final originalTodayRepository = todayRepository;
         final mockTodayRepository = MockTodayService();
         final mockToday = DateTime.parse("2020-09-01");
@@ -395,6 +420,7 @@ void main() {
               pillNumberInPillSheet: pillNumberInPillSheet,
               pageIndex: 0,
               setting: setting);
+          await tester.pumpWidget(widget);
 
           if (pillNumberInPillSheet < pillNumberForFromMenstruation) {
             expect(widget, isA<PlainPillNumber>(), reason: "pillNumberInPillSheet: $pillNumberInPillSheet");
@@ -405,7 +431,9 @@ void main() {
           }
         }
       });
-      test("setting.pillNumberForFromMenstruation == 0 || setting.durationMenstruation == 0", () {
+      testWidgets("setting.pillNumberForFromMenstruation == 0 || setting.durationMenstruation == 0", (WidgetTester tester) async {
+        SupportedDeviceType.iPhone5SE2nd.binding(tester.view);
+
         final originalTodayRepository = todayRepository;
         final mockTodayRepository = MockTodayService();
         final mockToday = DateTime.parse("2020-09-01");
@@ -438,6 +466,7 @@ void main() {
               pillNumberInPillSheet: pillNumberInPillSheet,
               pageIndex: 0,
               setting: setting);
+          await tester.pumpWidget(widget);
 
           if (pillNumberInPillSheet < pillNumberForFromMenstruation) {
             expect(widget, isA<PlainPillNumber>(), reason: "pillNumberInPillSheet: $pillNumberInPillSheet");
