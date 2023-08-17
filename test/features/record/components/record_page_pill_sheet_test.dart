@@ -1,3 +1,4 @@
+import 'package:flutter/material.dart';
 import 'package:intl/date_symbol_data_local.dart';
 import 'package:mockito/mockito.dart';
 import 'package:pilll/entity/firestore_id_generator.dart';
@@ -65,7 +66,7 @@ void main() {
             setting: setting,
             premiumAndTrial: FakePremiumAndTrial(fakeIsPremium: true, fakeIsTrial: true),
           );
-          await tester.pumpWidget(widget);
+          await tester.pumpWidget(MaterialApp(home: widget));
 
           if (pillNumberInPillSheet < pillNumberForFromMenstruation) {
             expect(find.byWidgetPredicate((widget) => widget is PlainPillNumber), findsWidgets,
@@ -119,7 +120,7 @@ void main() {
               pillNumberInPillSheet: pillNumberInPillSheet,
               pageIndex: 0,
               setting: setting);
-          await tester.pumpWidget(widget);
+          await tester.pumpWidget(MaterialApp(home: widget));
 
           if (pillNumberInPillSheet < pillNumberForFromMenstruation) {
             expect(find.byWidgetPredicate((widget) => widget is PlainPillNumber), findsWidgets,
@@ -172,7 +173,7 @@ void main() {
               pillNumberInPillSheet: pillNumberInPillSheet,
               pageIndex: 0,
               setting: setting);
-          await tester.pumpWidget(widget);
+          await tester.pumpWidget(MaterialApp(home: widget));
 
           if (pillNumberInPillSheet < pillNumberForFromMenstruation) {
             expect(find.byWidgetPredicate((widget) => widget is PlainPillNumber), findsWidgets,
@@ -228,7 +229,7 @@ void main() {
               pillNumberInPillSheet: pillNumberInPillSheet,
               pageIndex: 0,
               setting: setting);
-          await tester.pumpWidget(widget);
+          await tester.pumpWidget(MaterialApp(home: widget));
 
           if (pillNumberInPillSheet < pillNumberForFromMenstruation) {
             expect(find.byWidgetPredicate((widget) => widget is PlainPillNumber), findsWidgets,
@@ -281,7 +282,7 @@ void main() {
               pillNumberInPillSheet: pillNumberInPillSheet,
               pageIndex: 0,
               setting: setting);
-          await tester.pumpWidget(widget);
+          await tester.pumpWidget(MaterialApp(home: widget));
 
           if (pillNumberInPillSheet < pillNumberForFromMenstruation) {
             expect(find.byWidgetPredicate((widget) => widget is PlainPillNumber), findsWidgets,
@@ -335,7 +336,7 @@ void main() {
               pillNumberInPillSheet: pillNumberInPillSheet,
               pageIndex: 0,
               setting: setting);
-          await tester.pumpWidget(widget);
+          await tester.pumpWidget(MaterialApp(home: widget));
 
           if (pillNumberInPillSheet < pillNumberForFromMenstruation) {
             expect(find.byWidgetPredicate((widget) => widget is PlainPillNumber), findsWidgets,
@@ -390,7 +391,7 @@ void main() {
               pillNumberInPillSheet: pillNumberInPillSheet,
               pageIndex: 0,
               setting: setting);
-          await tester.pumpWidget(widget);
+          await tester.pumpWidget(MaterialApp(home: widget));
 
           if (pillNumberInPillSheet < pillNumberForFromMenstruation) {
             expect(find.byWidgetPredicate((widget) => widget is PlainPillNumber), findsWidgets,
@@ -443,7 +444,7 @@ void main() {
               pillNumberInPillSheet: pillNumberInPillSheet,
               pageIndex: 0,
               setting: setting);
-          await tester.pumpWidget(widget);
+          await tester.pumpWidget(MaterialApp(home: widget));
 
           if (pillNumberInPillSheet < pillNumberForFromMenstruation) {
             expect(find.byWidgetPredicate((widget) => widget is PlainPillNumber), findsWidgets,
@@ -492,7 +493,7 @@ void main() {
               pillNumberInPillSheet: pillNumberInPillSheet,
               pageIndex: 0,
               setting: setting);
-          await tester.pumpWidget(widget);
+          await tester.pumpWidget(MaterialApp(home: widget));
 
           if (pillNumberInPillSheet < pillNumberForFromMenstruation) {
             expect(find.byWidgetPredicate((widget) => widget is PlainPillNumber), findsWidgets,
