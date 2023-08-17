@@ -9,6 +9,7 @@ import 'package:pilll/entity/pill_sheet_type.dart';
 import 'package:flutter_test/flutter_test.dart';
 import 'package:pilll/entity/setting.codegen.dart';
 import 'package:pilll/utils/datetime/day.dart';
+import 'package:pilll/utils/environment.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
 import '../../../helper/fake.dart';
@@ -20,6 +21,7 @@ void main() {
     TestWidgetsFlutterBinding.ensureInitialized();
     SharedPreferences.setMockInitialValues({});
     initializeDateFormatting('ja_JP');
+    Environment.isTest = true;
   });
   group("#PillNumber", () {
     group("pillSheetAppearanceMode is number", () {
