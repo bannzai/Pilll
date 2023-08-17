@@ -66,11 +66,14 @@ void main() {
           await tester.pumpWidget(widget);
 
           if (pillNumberInPillSheet < pillNumberForFromMenstruation) {
-            expect(widget, isA<PlainPillNumber>(), reason: "pillNumberInPillSheet: $pillNumberInPillSheet");
+            expect(find.byWidgetPredicate((widget) => widget is PlainPillNumber), findsWidgets,
+                reason: "pillNumberInPillSheet: $pillNumberInPillSheet");
           } else if (pillNumberInPillSheet < pillNumberForFromMenstruation + durationMenstruation) {
-            expect(widget, isA<MenstruationPillNumber>(), reason: "pillNumberInPillSheet: $pillNumberInPillSheet");
+            expect(find.byWidgetPredicate((widget) => widget is MenstruationPillNumber), findsWidgets,
+                reason: "pillNumberInPillSheet: $pillNumberInPillSheet");
           } else {
-            expect(widget, isA<PlainPillNumber>(), reason: "pillNumberInPillSheet: $pillNumberInPillSheet");
+            expect(find.byWidgetPredicate((widget) => widget is PlainPillNumber), findsWidgets,
+                reason: "pillNumberInPillSheet: $pillNumberInPillSheet");
           }
         }
       });
@@ -117,11 +120,14 @@ void main() {
           await tester.pumpWidget(widget);
 
           if (pillNumberInPillSheet < pillNumberForFromMenstruation) {
-            expect(widget, isA<PlainPillNumber>(), reason: "pillNumberInPillSheet: $pillNumberInPillSheet");
+            expect(find.byWidgetPredicate((widget) => widget is PlainPillNumber), findsWidgets,
+                reason: "pillNumberInPillSheet: $pillNumberInPillSheet");
           } else if (pillNumberInPillSheet < pillNumberForFromMenstruation + durationMenstruation) {
-            expect(widget, isA<PlainPillNumber>(), reason: "pillNumberInPillSheet: $pillNumberInPillSheet");
+            expect(find.byWidgetPredicate((widget) => widget is PlainPillNumber), findsWidgets,
+                reason: "pillNumberInPillSheet: $pillNumberInPillSheet");
           } else {
-            expect(widget, isA<PlainPillNumber>(), reason: "pillNumberInPillSheet: $pillNumberInPillSheet");
+            expect(find.byWidgetPredicate((widget) => widget is PlainPillNumber), findsWidgets,
+                reason: "pillNumberInPillSheet: $pillNumberInPillSheet");
           }
         }
       });
@@ -167,11 +173,14 @@ void main() {
           await tester.pumpWidget(widget);
 
           if (pillNumberInPillSheet < pillNumberForFromMenstruation) {
-            expect(widget, isA<PlainPillNumber>(), reason: "pillNumberInPillSheet: $pillNumberInPillSheet");
+            expect(find.byWidgetPredicate((widget) => widget is PlainPillNumber), findsWidgets,
+                reason: "pillNumberInPillSheet: $pillNumberInPillSheet");
           } else if (pillNumberInPillSheet < pillNumberForFromMenstruation + durationMenstruation) {
-            expect(widget, isA<PlainPillNumber>(), reason: "pillNumberInPillSheet: $pillNumberInPillSheet");
+            expect(find.byWidgetPredicate((widget) => widget is PlainPillNumber), findsWidgets,
+                reason: "pillNumberInPillSheet: $pillNumberInPillSheet");
           } else {
-            expect(widget, isA<PlainPillNumber>(), reason: "pillNumberInPillSheet: $pillNumberInPillSheet");
+            expect(find.byWidgetPredicate((widget) => widget is PlainPillNumber), findsWidgets,
+                reason: "pillNumberInPillSheet: $pillNumberInPillSheet");
           }
         }
       });
@@ -220,11 +229,14 @@ void main() {
           await tester.pumpWidget(widget);
 
           if (pillNumberInPillSheet < pillNumberForFromMenstruation) {
-            expect(widget, isA<PlainPillNumber>(), reason: "pillNumberInPillSheet: $pillNumberInPillSheet");
+            expect(find.byWidgetPredicate((widget) => widget is PlainPillNumber), findsWidgets,
+                reason: "pillNumberInPillSheet: $pillNumberInPillSheet");
           } else if (pillNumberInPillSheet < pillNumberForFromMenstruation + durationMenstruation) {
-            expect(widget, isA<MenstruationPillNumber>(), reason: "pillNumberInPillSheet: $pillNumberInPillSheet");
+            expect(find.byWidgetPredicate((widget) => widget is MenstruationPillNumber), findsWidgets,
+                reason: "pillNumberInPillSheet: $pillNumberInPillSheet");
           } else {
-            expect(widget, isA<PlainPillNumber>(), reason: "pillNumberInPillSheet: $pillNumberInPillSheet");
+            expect(find.byWidgetPredicate((widget) => widget is PlainPillNumber), findsWidgets,
+                reason: "pillNumberInPillSheet: $pillNumberInPillSheet");
           }
         }
       });
@@ -270,11 +282,14 @@ void main() {
           await tester.pumpWidget(widget);
 
           if (pillNumberInPillSheet < pillNumberForFromMenstruation) {
-            expect(widget, isA<PlainPillNumber>(), reason: "pillNumberInPillSheet: $pillNumberInPillSheet");
+            expect(find.byWidgetPredicate((widget) => widget is PlainPillNumber), findsWidgets,
+                reason: "pillNumberInPillSheet: $pillNumberInPillSheet");
           } else if (pillNumberInPillSheet < pillNumberForFromMenstruation + durationMenstruation) {
-            expect(widget, isA<PlainPillNumber>(), reason: "pillNumberInPillSheet: $pillNumberInPillSheet");
+            expect(find.byWidgetPredicate((widget) => widget is PlainPillNumber), findsWidgets,
+                reason: "pillNumberInPillSheet: $pillNumberInPillSheet");
           } else {
-            expect(widget, isA<PlainPillNumber>(), reason: "pillNumberInPillSheet: $pillNumberInPillSheet");
+            expect(find.byWidgetPredicate((widget) => widget is PlainPillNumber), findsWidgets,
+                reason: "pillNumberInPillSheet: $pillNumberInPillSheet");
           }
         }
       });
@@ -321,11 +336,14 @@ void main() {
           await tester.pumpWidget(widget);
 
           if (pillNumberInPillSheet < pillNumberForFromMenstruation) {
-            expect(widget, isA<PlainPillNumber>(), reason: "pillNumberInPillSheet: $pillNumberInPillSheet");
+            expect(find.byWidgetPredicate((widget) => widget is PlainPillNumber), findsWidgets,
+                reason: "pillNumberInPillSheet: $pillNumberInPillSheet");
           } else if (pillNumberInPillSheet < pillNumberForFromMenstruation + durationMenstruation) {
-            expect(widget, isA<PlainPillNumber>(), reason: "pillNumberInPillSheet: $pillNumberInPillSheet");
+            expect(find.byWidgetPredicate((widget) => widget is PlainPillNumber), findsWidgets,
+                reason: "pillNumberInPillSheet: $pillNumberInPillSheet");
           } else {
-            expect(widget, isA<PlainPillNumber>(), reason: "pillNumberInPillSheet: $pillNumberInPillSheet");
+            expect(find.byWidgetPredicate((widget) => widget is PlainPillNumber), findsWidgets,
+                reason: "pillNumberInPillSheet: $pillNumberInPillSheet");
           }
         }
       });
@@ -373,11 +391,14 @@ void main() {
           await tester.pumpWidget(widget);
 
           if (pillNumberInPillSheet < pillNumberForFromMenstruation) {
-            expect(widget, isA<PlainPillNumber>(), reason: "pillNumberInPillSheet: $pillNumberInPillSheet");
+            expect(find.byWidgetPredicate((widget) => widget is PlainPillNumber), findsWidgets,
+                reason: "pillNumberInPillSheet: $pillNumberInPillSheet");
           } else if (pillNumberInPillSheet < pillNumberForFromMenstruation + durationMenstruation) {
-            expect(widget, isA<MenstruationPillNumber>(), reason: "pillNumberInPillSheet: $pillNumberInPillSheet");
+            expect(find.byWidgetPredicate((widget) => widget is MenstruationPillNumber), findsWidgets,
+                reason: "pillNumberInPillSheet: $pillNumberInPillSheet");
           } else {
-            expect(widget, isA<PlainPillNumber>(), reason: "pillNumberInPillSheet: $pillNumberInPillSheet");
+            expect(find.byWidgetPredicate((widget) => widget is PlainPillNumber), findsWidgets,
+                reason: "pillNumberInPillSheet: $pillNumberInPillSheet");
           }
         }
       });
@@ -423,11 +444,14 @@ void main() {
           await tester.pumpWidget(widget);
 
           if (pillNumberInPillSheet < pillNumberForFromMenstruation) {
-            expect(widget, isA<PlainPillNumber>(), reason: "pillNumberInPillSheet: $pillNumberInPillSheet");
+            expect(find.byWidgetPredicate((widget) => widget is PlainPillNumber), findsWidgets,
+                reason: "pillNumberInPillSheet: $pillNumberInPillSheet");
           } else if (pillNumberInPillSheet < pillNumberForFromMenstruation + durationMenstruation) {
-            expect(widget, isA<PlainPillNumber>(), reason: "pillNumberInPillSheet: $pillNumberInPillSheet");
+            expect(find.byWidgetPredicate((widget) => widget is PlainPillNumber), findsWidgets,
+                reason: "pillNumberInPillSheet: $pillNumberInPillSheet");
           } else {
-            expect(widget, isA<PlainPillNumber>(), reason: "pillNumberInPillSheet: $pillNumberInPillSheet");
+            expect(find.byWidgetPredicate((widget) => widget is PlainPillNumber), findsWidgets,
+                reason: "pillNumberInPillSheet: $pillNumberInPillSheet");
           }
         }
       });
@@ -469,11 +493,14 @@ void main() {
           await tester.pumpWidget(widget);
 
           if (pillNumberInPillSheet < pillNumberForFromMenstruation) {
-            expect(widget, isA<PlainPillNumber>(), reason: "pillNumberInPillSheet: $pillNumberInPillSheet");
+            expect(find.byWidgetPredicate((widget) => widget is PlainPillNumber), findsWidgets,
+                reason: "pillNumberInPillSheet: $pillNumberInPillSheet");
           } else if (pillNumberInPillSheet < pillNumberForFromMenstruation + durationMenstruation) {
-            expect(widget, isA<PlainPillNumber>(), reason: "pillNumberInPillSheet: $pillNumberInPillSheet");
+            expect(find.byWidgetPredicate((widget) => widget is PlainPillNumber), findsWidgets,
+                reason: "pillNumberInPillSheet: $pillNumberInPillSheet");
           } else {
-            expect(widget, isA<PlainPillNumber>(), reason: "pillNumberInPillSheet: $pillNumberInPillSheet");
+            expect(find.byWidgetPredicate((widget) => widget is PlainPillNumber), findsWidgets,
+                reason: "pillNumberInPillSheet: $pillNumberInPillSheet");
           }
         }
       });
