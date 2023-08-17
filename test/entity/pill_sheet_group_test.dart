@@ -1111,7 +1111,78 @@ void main() {
           DateRange(DateTime.parse("2020-11-19"), DateTime.parse("2020-11-21")),
         ]);
       });
-      test("setting values in the range of pill sheet and with rest durations", () {
+      test("setting values in the range of pill sheet and with not ended rest durations", () {
+        const pastDaysFromBeginRestDuration = 2;
+        final mockTodayRepository = MockTodayService();
+        todayRepository = mockTodayRepository;
+        when(mockTodayRepository.now()).thenReturn(DateTime.parse("2020-09-10").add(const Duration(days: 2)));
+
+        const sheetType = PillSheetType.pillsheet_21;
+        final pillSheet = PillSheet(
+            id: firestoreIDGenerator(),
+            groupIndex: 0,
+            beginingDate: DateTime.parse("2020-09-01"),
+            lastTakenDate: null,
+            createdAt: now(),
+            typeInfo: PillSheetTypeInfo(
+              dosingPeriod: sheetType.dosingPeriod,
+              name: sheetType.fullName,
+              totalCount: sheetType.totalCount,
+              pillSheetTypeReferencePath: sheetType.rawPath,
+            ),
+            restDurations: [
+              RestDuration(
+                beginDate: DateTime.parse("2020-09-10"),
+                createdDate: DateTime.parse("2020-09-10"),
+                endDate: null,
+              ),
+            ]);
+        final pillSheet2 = PillSheet(
+          id: firestoreIDGenerator(),
+          groupIndex: 1,
+          beginingDate: DateTime.parse("2020-09-01").add(const Duration(days: 28 + pastDaysFromBeginRestDuration)),
+          lastTakenDate: null,
+          createdAt: now(),
+          typeInfo: PillSheetTypeInfo(
+            dosingPeriod: sheetType.dosingPeriod,
+            name: sheetType.fullName,
+            totalCount: sheetType.totalCount,
+            pillSheetTypeReferencePath: sheetType.rawPath,
+          ),
+        );
+        final pillSheet3 = PillSheet(
+          id: firestoreIDGenerator(),
+          groupIndex: 2,
+          beginingDate: DateTime.parse("2020-09-01").add(const Duration(days: 28 * 2 + pastDaysFromBeginRestDuration)),
+          lastTakenDate: null,
+          createdAt: now(),
+          typeInfo: PillSheetTypeInfo(
+            dosingPeriod: sheetType.dosingPeriod,
+            name: sheetType.fullName,
+            totalCount: sheetType.totalCount,
+            pillSheetTypeReferencePath: sheetType.rawPath,
+          ),
+        );
+        // created at and id are anything value
+        final pillSheetGroup = PillSheetGroup(
+          pillSheetIDs: ["1", "2", "3"],
+          pillSheets: [pillSheet, pillSheet2, pillSheet3],
+          createdAt: now(),
+        );
+
+        const setting = Setting(
+          pillNumberForFromMenstruation: 24,
+          durationMenstruation: 3,
+          isOnReminder: false,
+          timezoneDatabaseName: "Asia/Tokyo",
+        );
+        expect(pillSheetGroup.menstruationDateRanges(setting: setting), [
+          DateRange(DateTime.parse("2020-09-26"), DateTime.parse("2020-09-28")),
+          DateRange(DateTime.parse("2020-10-24"), DateTime.parse("2020-10-26")),
+          DateRange(DateTime.parse("2020-11-21"), DateTime.parse("2020-11-23")),
+        ]);
+      });
+      test("setting values in the range of pill sheet and with ended rest durations", () {
         final mockTodayRepository = MockTodayService();
         todayRepository = mockTodayRepository;
         when(mockTodayRepository.now()).thenReturn(DateTime.parse("2020-09-20"));
@@ -1134,7 +1205,7 @@ void main() {
               RestDuration(
                 beginDate: DateTime.parse("2020-09-10"),
                 createdDate: DateTime.parse("2020-09-10"),
-                endDate: DateTime.parse("2020-09-10").add(const Duration(days: 2)),
+                endDate: DateTime.parse("2020-09-10").add(const Duration(days: restDurationDays)),
               ),
             ]);
         final pillSheet2 = PillSheet(
