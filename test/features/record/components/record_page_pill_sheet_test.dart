@@ -1,3 +1,4 @@
+import 'package:flutter/material.dart';
 import 'package:intl/date_symbol_data_local.dart';
 import 'package:mockito/mockito.dart';
 import 'package:pilll/entity/firestore_id_generator.dart';
@@ -9,21 +10,26 @@ import 'package:pilll/entity/pill_sheet_type.dart';
 import 'package:flutter_test/flutter_test.dart';
 import 'package:pilll/entity/setting.codegen.dart';
 import 'package:pilll/utils/datetime/day.dart';
+import 'package:pilll/utils/environment.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
 import '../../../helper/fake.dart';
 import '../../../helper/mock.mocks.dart';
+import '../../../helper/supported_device.dart';
 
 void main() {
   setUp(() {
     TestWidgetsFlutterBinding.ensureInitialized();
     SharedPreferences.setMockInitialValues({});
     initializeDateFormatting('ja_JP');
+    Environment.isTest = true;
   });
-  group("#RecordPagePillSheet.textOfPillNumber", () {
+  group("#PillNumber", () {
     group("pillSheetAppearanceMode is number", () {
       const pillSheetAppearanceMode = PillSheetAppearanceMode.number;
-      test("it is isPremium or isTrial", () {
+      testWidgets("it is isPremium or isTrial", (WidgetTester tester) async {
+        SupportedDeviceType.iPhone5SE2nd.binding(tester.view);
+
         final originalTodayRepository = todayRepository;
         final mockTodayRepository = MockTodayService();
         final mockToday = DateTime.parse("2020-09-01");
@@ -51,26 +57,32 @@ void main() {
         );
         final pillSheetGroup = PillSheetGroup(pillSheetIDs: ["pill_sheet_id"], pillSheets: [pillSheet], createdAt: today());
         for (int i = 0; i < 28; i++) {
-          final pillNumberIntoPillSheet = i + 1;
-          final widget = RecordPagePillSheet.textOfPillNumber(
+          final pillNumberInPillSheet = i + 1;
+          final widget = PillNumber(
             pillSheetGroup: pillSheetGroup,
             pillSheet: pillSheet,
-            pillNumberIntoPillSheet: pillNumberIntoPillSheet,
+            pillNumberInPillSheet: pillNumberInPillSheet,
             pageIndex: 0,
             setting: setting,
             premiumAndTrial: FakePremiumAndTrial(fakeIsPremium: true, fakeIsTrial: true),
           );
+          await tester.pumpWidget(MaterialApp(home: widget));
 
-          if (pillNumberIntoPillSheet < pillNumberForFromMenstruation) {
-            expect(widget, isA<PlainPillNumber>(), reason: "pillNumberIntoPillSheet: $pillNumberIntoPillSheet");
-          } else if (pillNumberIntoPillSheet < pillNumberForFromMenstruation + durationMenstruation) {
-            expect(widget, isA<MenstruationPillNumber>(), reason: "pillNumberIntoPillSheet: $pillNumberIntoPillSheet");
+          if (pillNumberInPillSheet < pillNumberForFromMenstruation) {
+            expect(find.byWidgetPredicate((widget) => widget is PlainPillNumber), findsWidgets,
+                reason: "pillNumberInPillSheet: $pillNumberInPillSheet");
+          } else if (pillNumberInPillSheet < pillNumberForFromMenstruation + durationMenstruation) {
+            expect(find.byWidgetPredicate((widget) => widget is MenstruationPillNumber), findsWidgets,
+                reason: "pillNumberInPillSheet: $pillNumberInPillSheet");
           } else {
-            expect(widget, isA<PlainPillNumber>(), reason: "pillNumberIntoPillSheet: $pillNumberIntoPillSheet");
+            expect(find.byWidgetPredicate((widget) => widget is PlainPillNumber), findsWidgets,
+                reason: "pillNumberInPillSheet: $pillNumberInPillSheet");
           }
         }
       });
-      test("it is not isPremium and isTrial", () {
+      testWidgets("it is not isPremium and isTrial", (WidgetTester tester) async {
+        SupportedDeviceType.iPhone5SE2nd.binding(tester.view);
+
         final originalTodayRepository = todayRepository;
         final mockTodayRepository = MockTodayService();
         final mockToday = DateTime.parse("2020-09-01");
@@ -100,25 +112,31 @@ void main() {
         final pillSheetGroup = PillSheetGroup(pillSheetIDs: ["pill_sheet_id"], pillSheets: [pillSheet], createdAt: today());
 
         for (int i = 0; i < 28; i++) {
-          final pillNumberIntoPillSheet = i + 1;
-          final widget = RecordPagePillSheet.textOfPillNumber(
+          final pillNumberInPillSheet = i + 1;
+          final widget = PillNumber(
               premiumAndTrial: FakePremiumAndTrial(fakeIsPremium: false, fakeIsTrial: false),
               pillSheetGroup: pillSheetGroup,
               pillSheet: pillSheet,
-              pillNumberIntoPillSheet: pillNumberIntoPillSheet,
+              pillNumberInPillSheet: pillNumberInPillSheet,
               pageIndex: 0,
               setting: setting);
+          await tester.pumpWidget(MaterialApp(home: widget));
 
-          if (pillNumberIntoPillSheet < pillNumberForFromMenstruation) {
-            expect(widget, isA<PlainPillNumber>(), reason: "pillNumberIntoPillSheet: $pillNumberIntoPillSheet");
-          } else if (pillNumberIntoPillSheet < pillNumberForFromMenstruation + durationMenstruation) {
-            expect(widget, isA<PlainPillNumber>(), reason: "pillNumberIntoPillSheet: $pillNumberIntoPillSheet");
+          if (pillNumberInPillSheet < pillNumberForFromMenstruation) {
+            expect(find.byWidgetPredicate((widget) => widget is PlainPillNumber), findsWidgets,
+                reason: "pillNumberInPillSheet: $pillNumberInPillSheet");
+          } else if (pillNumberInPillSheet < pillNumberForFromMenstruation + durationMenstruation) {
+            expect(find.byWidgetPredicate((widget) => widget is PlainPillNumber), findsWidgets,
+                reason: "pillNumberInPillSheet: $pillNumberInPillSheet");
           } else {
-            expect(widget, isA<PlainPillNumber>(), reason: "pillNumberIntoPillSheet: $pillNumberIntoPillSheet");
+            expect(find.byWidgetPredicate((widget) => widget is PlainPillNumber), findsWidgets,
+                reason: "pillNumberInPillSheet: $pillNumberInPillSheet");
           }
         }
       });
-      test("setting.pillNumberForFromMenstruation == 0 || setting.durationMenstruation == 0", () {
+      testWidgets("setting.pillNumberForFromMenstruation == 0 || setting.durationMenstruation == 0", (WidgetTester tester) async {
+        SupportedDeviceType.iPhone5SE2nd.binding(tester.view);
+
         final originalTodayRepository = todayRepository;
         final mockTodayRepository = MockTodayService();
         final mockToday = DateTime.parse("2020-09-01");
@@ -147,28 +165,34 @@ void main() {
         final pillSheetGroup = PillSheetGroup(pillSheetIDs: ["pill_sheet_id"], pillSheets: [pillSheet], createdAt: today());
 
         for (int i = 0; i < 28; i++) {
-          final pillNumberIntoPillSheet = i + 1;
-          final widget = RecordPagePillSheet.textOfPillNumber(
+          final pillNumberInPillSheet = i + 1;
+          final widget = PillNumber(
               premiumAndTrial: FakePremiumAndTrial(fakeIsPremium: true, fakeIsTrial: true),
               pillSheetGroup: pillSheetGroup,
               pillSheet: pillSheet,
-              pillNumberIntoPillSheet: pillNumberIntoPillSheet,
+              pillNumberInPillSheet: pillNumberInPillSheet,
               pageIndex: 0,
               setting: setting);
+          await tester.pumpWidget(MaterialApp(home: widget));
 
-          if (pillNumberIntoPillSheet < pillNumberForFromMenstruation) {
-            expect(widget, isA<PlainPillNumber>(), reason: "pillNumberIntoPillSheet: $pillNumberIntoPillSheet");
-          } else if (pillNumberIntoPillSheet < pillNumberForFromMenstruation + durationMenstruation) {
-            expect(widget, isA<PlainPillNumber>(), reason: "pillNumberIntoPillSheet: $pillNumberIntoPillSheet");
+          if (pillNumberInPillSheet < pillNumberForFromMenstruation) {
+            expect(find.byWidgetPredicate((widget) => widget is PlainPillNumber), findsWidgets,
+                reason: "pillNumberInPillSheet: $pillNumberInPillSheet");
+          } else if (pillNumberInPillSheet < pillNumberForFromMenstruation + durationMenstruation) {
+            expect(find.byWidgetPredicate((widget) => widget is PlainPillNumber), findsWidgets,
+                reason: "pillNumberInPillSheet: $pillNumberInPillSheet");
           } else {
-            expect(widget, isA<PlainPillNumber>(), reason: "pillNumberIntoPillSheet: $pillNumberIntoPillSheet");
+            expect(find.byWidgetPredicate((widget) => widget is PlainPillNumber), findsWidgets,
+                reason: "pillNumberInPillSheet: $pillNumberInPillSheet");
           }
         }
       });
     });
     group("pillSheetAppearanceMode is date", () {
       const pillSheetAppearanceMode = PillSheetAppearanceMode.date;
-      test("it is isPremium or isTrial", () {
+      testWidgets("it is isPremium or isTrial", (WidgetTester tester) async {
+        SupportedDeviceType.iPhone5SE2nd.binding(tester.view);
+
         final originalTodayRepository = todayRepository;
         final mockTodayRepository = MockTodayService();
         final mockToday = DateTime.parse("2020-09-01");
@@ -197,25 +221,31 @@ void main() {
         final pillSheetGroup = PillSheetGroup(pillSheetIDs: ["pill_sheet_id"], pillSheets: [pillSheet], createdAt: today());
 
         for (int i = 0; i < 28; i++) {
-          final pillNumberIntoPillSheet = i + 1;
-          final widget = RecordPagePillSheet.textOfPillNumber(
+          final pillNumberInPillSheet = i + 1;
+          final widget = PillNumber(
               premiumAndTrial: FakePremiumAndTrial(fakeIsPremium: true, fakeIsTrial: true),
               pillSheetGroup: pillSheetGroup,
               pillSheet: pillSheet,
-              pillNumberIntoPillSheet: pillNumberIntoPillSheet,
+              pillNumberInPillSheet: pillNumberInPillSheet,
               pageIndex: 0,
               setting: setting);
+          await tester.pumpWidget(MaterialApp(home: widget));
 
-          if (pillNumberIntoPillSheet < pillNumberForFromMenstruation) {
-            expect(widget, isA<PlainPillNumber>(), reason: "pillNumberIntoPillSheet: $pillNumberIntoPillSheet");
-          } else if (pillNumberIntoPillSheet < pillNumberForFromMenstruation + durationMenstruation) {
-            expect(widget, isA<MenstruationPillNumber>(), reason: "pillNumberIntoPillSheet: $pillNumberIntoPillSheet");
+          if (pillNumberInPillSheet < pillNumberForFromMenstruation) {
+            expect(find.byWidgetPredicate((widget) => widget is PlainPillNumber), findsWidgets,
+                reason: "pillNumberInPillSheet: $pillNumberInPillSheet");
+          } else if (pillNumberInPillSheet < pillNumberForFromMenstruation + durationMenstruation) {
+            expect(find.byWidgetPredicate((widget) => widget is MenstruationPillNumber), findsWidgets,
+                reason: "pillNumberInPillSheet: $pillNumberInPillSheet");
           } else {
-            expect(widget, isA<PlainPillNumber>(), reason: "pillNumberIntoPillSheet: $pillNumberIntoPillSheet");
+            expect(find.byWidgetPredicate((widget) => widget is PlainPillNumber), findsWidgets,
+                reason: "pillNumberInPillSheet: $pillNumberInPillSheet");
           }
         }
       });
-      test("it is not isPremium and isTrial. it is means expired trial or premium user", () {
+      testWidgets("it is not isPremium and isTrial. it is means expired trial or premium user", (WidgetTester tester) async {
+        SupportedDeviceType.iPhone5SE2nd.binding(tester.view);
+
         final originalTodayRepository = todayRepository;
         final mockTodayRepository = MockTodayService();
         final mockToday = DateTime.parse("2020-09-01");
@@ -244,25 +274,32 @@ void main() {
         final pillSheetGroup = PillSheetGroup(pillSheetIDs: ["pill_sheet_id"], pillSheets: [pillSheet], createdAt: today());
 
         for (int i = 0; i < 28; i++) {
-          final pillNumberIntoPillSheet = i + 1;
-          final widget = RecordPagePillSheet.textOfPillNumber(
+          final pillNumberInPillSheet = i + 1;
+          final widget = PillNumber(
               premiumAndTrial: FakePremiumAndTrial(fakeIsPremium: false, fakeIsTrial: false),
               pillSheetGroup: pillSheetGroup,
               pillSheet: pillSheet,
-              pillNumberIntoPillSheet: pillNumberIntoPillSheet,
+              pillNumberInPillSheet: pillNumberInPillSheet,
               pageIndex: 0,
               setting: setting);
+          await tester.pumpWidget(MaterialApp(home: widget));
 
-          if (pillNumberIntoPillSheet < pillNumberForFromMenstruation) {
-            expect(widget, isA<PlainPillNumber>(), reason: "pillNumberIntoPillSheet: $pillNumberIntoPillSheet");
-          } else if (pillNumberIntoPillSheet < pillNumberForFromMenstruation + durationMenstruation) {
-            expect(widget, isA<PlainPillNumber>(), reason: "pillNumberIntoPillSheet: $pillNumberIntoPillSheet");
+          if (pillNumberInPillSheet < pillNumberForFromMenstruation) {
+            expect(find.byWidgetPredicate((widget) => widget is PlainPillNumber), findsWidgets,
+                reason: "pillNumberInPillSheet: $pillNumberInPillSheet");
+          } else if (pillNumberInPillSheet < pillNumberForFromMenstruation + durationMenstruation) {
+            expect(find.byWidgetPredicate((widget) => widget is PlainPillNumber), findsWidgets,
+                reason: "pillNumberInPillSheet: $pillNumberInPillSheet");
           } else {
-            expect(widget, isA<PlainPillNumber>(), reason: "pillNumberIntoPillSheet: $pillNumberIntoPillSheet");
+            expect(find.byWidgetPredicate((widget) => widget is PlainPillNumber), findsWidgets,
+                reason: "pillNumberInPillSheet: $pillNumberInPillSheet");
           }
         }
       });
-      test("isPremium == true && (setting.pillNumberForFromMenstruation == 0 || setting.durationMenstruation == 0)", () {
+      testWidgets("isPremium == true && (setting.pillNumberForFromMenstruation == 0 || setting.durationMenstruation == 0)",
+          (WidgetTester tester) async {
+        SupportedDeviceType.iPhone5SE2nd.binding(tester.view);
+
         final originalTodayRepository = todayRepository;
         final mockTodayRepository = MockTodayService();
         final mockToday = DateTime.parse("2020-09-01");
@@ -291,28 +328,34 @@ void main() {
         final pillSheetGroup = PillSheetGroup(pillSheetIDs: ["pill_sheet_id"], pillSheets: [pillSheet], createdAt: today());
 
         for (int i = 0; i < 28; i++) {
-          final pillNumberIntoPillSheet = i + 1;
-          final widget = RecordPagePillSheet.textOfPillNumber(
+          final pillNumberInPillSheet = i + 1;
+          final widget = PillNumber(
               premiumAndTrial: FakePremiumAndTrial(fakeIsPremium: true, fakeIsTrial: true),
               pillSheetGroup: pillSheetGroup,
               pillSheet: pillSheet,
-              pillNumberIntoPillSheet: pillNumberIntoPillSheet,
+              pillNumberInPillSheet: pillNumberInPillSheet,
               pageIndex: 0,
               setting: setting);
+          await tester.pumpWidget(MaterialApp(home: widget));
 
-          if (pillNumberIntoPillSheet < pillNumberForFromMenstruation) {
-            expect(widget, isA<PlainPillNumber>(), reason: "pillNumberIntoPillSheet: $pillNumberIntoPillSheet");
-          } else if (pillNumberIntoPillSheet < pillNumberForFromMenstruation + durationMenstruation) {
-            expect(widget, isA<PlainPillNumber>(), reason: "pillNumberIntoPillSheet: $pillNumberIntoPillSheet");
+          if (pillNumberInPillSheet < pillNumberForFromMenstruation) {
+            expect(find.byWidgetPredicate((widget) => widget is PlainPillNumber), findsWidgets,
+                reason: "pillNumberInPillSheet: $pillNumberInPillSheet");
+          } else if (pillNumberInPillSheet < pillNumberForFromMenstruation + durationMenstruation) {
+            expect(find.byWidgetPredicate((widget) => widget is PlainPillNumber), findsWidgets,
+                reason: "pillNumberInPillSheet: $pillNumberInPillSheet");
           } else {
-            expect(widget, isA<PlainPillNumber>(), reason: "pillNumberIntoPillSheet: $pillNumberIntoPillSheet");
+            expect(find.byWidgetPredicate((widget) => widget is PlainPillNumber), findsWidgets,
+                reason: "pillNumberInPillSheet: $pillNumberInPillSheet");
           }
         }
       });
     });
     group("pillSheetAppearanceMode is sequential", () {
       const pillSheetAppearanceMode = PillSheetAppearanceMode.sequential;
-      test("it is isPremium or isTrial", () {
+      testWidgets("it is isPremium or isTrial", (WidgetTester tester) async {
+        SupportedDeviceType.iPhone5SE2nd.binding(tester.view);
+
         final originalTodayRepository = todayRepository;
         final mockTodayRepository = MockTodayService();
         final mockToday = DateTime.parse("2020-09-01");
@@ -340,25 +383,31 @@ void main() {
         );
         final pillSheetGroup = PillSheetGroup(pillSheetIDs: ["pill_sheet_id"], pillSheets: [pillSheet], createdAt: today());
         for (int i = 0; i < 28; i++) {
-          final pillNumberIntoPillSheet = i + 1;
-          final widget = RecordPagePillSheet.textOfPillNumber(
+          final pillNumberInPillSheet = i + 1;
+          final widget = PillNumber(
               premiumAndTrial: FakePremiumAndTrial(fakeIsPremium: true, fakeIsTrial: true),
               pillSheetGroup: pillSheetGroup,
               pillSheet: pillSheet,
-              pillNumberIntoPillSheet: pillNumberIntoPillSheet,
+              pillNumberInPillSheet: pillNumberInPillSheet,
               pageIndex: 0,
               setting: setting);
+          await tester.pumpWidget(MaterialApp(home: widget));
 
-          if (pillNumberIntoPillSheet < pillNumberForFromMenstruation) {
-            expect(widget, isA<PlainPillNumber>(), reason: "pillNumberIntoPillSheet: $pillNumberIntoPillSheet");
-          } else if (pillNumberIntoPillSheet < pillNumberForFromMenstruation + durationMenstruation) {
-            expect(widget, isA<MenstruationPillNumber>(), reason: "pillNumberIntoPillSheet: $pillNumberIntoPillSheet");
+          if (pillNumberInPillSheet < pillNumberForFromMenstruation) {
+            expect(find.byWidgetPredicate((widget) => widget is PlainPillNumber), findsWidgets,
+                reason: "pillNumberInPillSheet: $pillNumberInPillSheet");
+          } else if (pillNumberInPillSheet < pillNumberForFromMenstruation + durationMenstruation) {
+            expect(find.byWidgetPredicate((widget) => widget is MenstruationPillNumber), findsWidgets,
+                reason: "pillNumberInPillSheet: $pillNumberInPillSheet");
           } else {
-            expect(widget, isA<PlainPillNumber>(), reason: "pillNumberIntoPillSheet: $pillNumberIntoPillSheet");
+            expect(find.byWidgetPredicate((widget) => widget is PlainPillNumber), findsWidgets,
+                reason: "pillNumberInPillSheet: $pillNumberInPillSheet");
           }
         }
       });
-      test("it is not isPremium and isTrial", () {
+      testWidgets("it is not isPremium and isTrial", (WidgetTester tester) async {
+        SupportedDeviceType.iPhone5SE2nd.binding(tester.view);
+
         final originalTodayRepository = todayRepository;
         final mockTodayRepository = MockTodayService();
         final mockToday = DateTime.parse("2020-09-01");
@@ -387,25 +436,31 @@ void main() {
         final pillSheetGroup = PillSheetGroup(pillSheetIDs: ["pill_sheet_id"], pillSheets: [pillSheet], createdAt: today());
 
         for (int i = 0; i < 28; i++) {
-          final pillNumberIntoPillSheet = i + 1;
-          final widget = RecordPagePillSheet.textOfPillNumber(
+          final pillNumberInPillSheet = i + 1;
+          final widget = PillNumber(
               premiumAndTrial: FakePremiumAndTrial(fakeIsPremium: false, fakeIsTrial: false),
               pillSheetGroup: pillSheetGroup,
               pillSheet: pillSheet,
-              pillNumberIntoPillSheet: pillNumberIntoPillSheet,
+              pillNumberInPillSheet: pillNumberInPillSheet,
               pageIndex: 0,
               setting: setting);
+          await tester.pumpWidget(MaterialApp(home: widget));
 
-          if (pillNumberIntoPillSheet < pillNumberForFromMenstruation) {
-            expect(widget, isA<PlainPillNumber>(), reason: "pillNumberIntoPillSheet: $pillNumberIntoPillSheet");
-          } else if (pillNumberIntoPillSheet < pillNumberForFromMenstruation + durationMenstruation) {
-            expect(widget, isA<PlainPillNumber>(), reason: "pillNumberIntoPillSheet: $pillNumberIntoPillSheet");
+          if (pillNumberInPillSheet < pillNumberForFromMenstruation) {
+            expect(find.byWidgetPredicate((widget) => widget is PlainPillNumber), findsWidgets,
+                reason: "pillNumberInPillSheet: $pillNumberInPillSheet");
+          } else if (pillNumberInPillSheet < pillNumberForFromMenstruation + durationMenstruation) {
+            expect(find.byWidgetPredicate((widget) => widget is PlainPillNumber), findsWidgets,
+                reason: "pillNumberInPillSheet: $pillNumberInPillSheet");
           } else {
-            expect(widget, isA<PlainPillNumber>(), reason: "pillNumberIntoPillSheet: $pillNumberIntoPillSheet");
+            expect(find.byWidgetPredicate((widget) => widget is PlainPillNumber), findsWidgets,
+                reason: "pillNumberInPillSheet: $pillNumberInPillSheet");
           }
         }
       });
-      test("setting.pillNumberForFromMenstruation == 0 || setting.durationMenstruation == 0", () {
+      testWidgets("setting.pillNumberForFromMenstruation == 0 || setting.durationMenstruation == 0", (WidgetTester tester) async {
+        SupportedDeviceType.iPhone5SE2nd.binding(tester.view);
+
         final originalTodayRepository = todayRepository;
         final mockTodayRepository = MockTodayService();
         final mockToday = DateTime.parse("2020-09-01");
@@ -430,21 +485,25 @@ void main() {
         final pillSheetGroup = PillSheetGroup(pillSheetIDs: ["pill_sheet_id"], pillSheets: [pillSheet], createdAt: today());
 
         for (int i = 0; i < 28; i++) {
-          final pillNumberIntoPillSheet = i + 1;
-          final widget = RecordPagePillSheet.textOfPillNumber(
+          final pillNumberInPillSheet = i + 1;
+          final widget = PillNumber(
               premiumAndTrial: FakePremiumAndTrial(fakeIsPremium: true, fakeIsTrial: true),
               pillSheetGroup: pillSheetGroup,
               pillSheet: pillSheet,
-              pillNumberIntoPillSheet: pillNumberIntoPillSheet,
+              pillNumberInPillSheet: pillNumberInPillSheet,
               pageIndex: 0,
               setting: setting);
+          await tester.pumpWidget(MaterialApp(home: widget));
 
-          if (pillNumberIntoPillSheet < pillNumberForFromMenstruation) {
-            expect(widget, isA<PlainPillNumber>(), reason: "pillNumberIntoPillSheet: $pillNumberIntoPillSheet");
-          } else if (pillNumberIntoPillSheet < pillNumberForFromMenstruation + durationMenstruation) {
-            expect(widget, isA<PlainPillNumber>(), reason: "pillNumberIntoPillSheet: $pillNumberIntoPillSheet");
+          if (pillNumberInPillSheet < pillNumberForFromMenstruation) {
+            expect(find.byWidgetPredicate((widget) => widget is PlainPillNumber), findsWidgets,
+                reason: "pillNumberInPillSheet: $pillNumberInPillSheet");
+          } else if (pillNumberInPillSheet < pillNumberForFromMenstruation + durationMenstruation) {
+            expect(find.byWidgetPredicate((widget) => widget is PlainPillNumber), findsWidgets,
+                reason: "pillNumberInPillSheet: $pillNumberInPillSheet");
           } else {
-            expect(widget, isA<PlainPillNumber>(), reason: "pillNumberIntoPillSheet: $pillNumberIntoPillSheet");
+            expect(find.byWidgetPredicate((widget) => widget is PlainPillNumber), findsWidgets,
+                reason: "pillNumberInPillSheet: $pillNumberInPillSheet");
           }
         }
       });
@@ -712,301 +771,6 @@ void main() {
 
       expect(pillSheet.displayPillTakeDate(19), DateTime.parse("2023-02-10"));
       expect(pillSheet.displayPillTakeDate(20), DateTime.parse("2023-02-11"));
-    });
-  });
-  group("#RecordPagePillSheet.isContainedMenstruationDuration", () {
-    test("group has only one pill sheet", () async {
-      final anyDate = DateTime.parse("2020-09-19");
-      final pillSheet = PillSheet(
-        id: firestoreIDGenerator(),
-        typeInfo: PillSheetType.pillsheet_28_0.typeInfo,
-        beginingDate: anyDate,
-        groupIndex: 0,
-        createdAt: now(),
-      );
-      final pillSheetGroup = PillSheetGroup(
-        pillSheetIDs: ["1"],
-        pillSheets: [pillSheet],
-        createdAt: anyDate,
-      );
-      const setting = Setting(
-        pillSheetTypes: [PillSheetType.pillsheet_28_0],
-        pillNumberForFromMenstruation: 22,
-        durationMenstruation: 3,
-        isOnReminder: true,
-        timezoneDatabaseName: null,
-      );
-      const pageIndex = 0;
-
-      for (int i = 1; i <= 28; i++) {
-        expect(
-            RecordPagePillSheet.isContainedMenstruationDuration(
-                pillNumberIntoPillSheet: i, pillSheetGroup: pillSheetGroup, pageIndex: pageIndex, setting: setting),
-            22 <= i && i <= 24,
-            reason: "print debug informations pillNumberIntoPillSheet is $i");
-      }
-    });
-    test("group has three pill sheet and scheduled menstruation begin No.2 pillSheet", () async {
-      final anyDate = DateTime.parse("2020-09-19");
-      final one = PillSheet(
-        id: firestoreIDGenerator(),
-        typeInfo: PillSheetType.pillsheet_28_0.typeInfo,
-        beginingDate: anyDate,
-        groupIndex: 0,
-        createdAt: now(),
-      );
-      final two = PillSheet(
-        id: firestoreIDGenerator(),
-        typeInfo: PillSheetType.pillsheet_28_0.typeInfo,
-        beginingDate: anyDate,
-        groupIndex: 1,
-        createdAt: now(),
-      );
-      final three = PillSheet(
-        id: firestoreIDGenerator(),
-        typeInfo: PillSheetType.pillsheet_28_0.typeInfo,
-        beginingDate: anyDate,
-        groupIndex: 2,
-        createdAt: now(),
-      );
-      final pillSheetGroup = PillSheetGroup(
-        pillSheetIDs: ["1", "2", "3"],
-        pillSheets: [one, two, three],
-        createdAt: anyDate,
-      );
-      const setting = Setting(
-        pillSheetTypes: [PillSheetType.pillsheet_28_0, PillSheetType.pillsheet_28_0, PillSheetType.pillsheet_28_0],
-        pillNumberForFromMenstruation: 46,
-        durationMenstruation: 3,
-        isOnReminder: true,
-        timezoneDatabaseName: null,
-      );
-      final pillSheetTypes = [PillSheetType.pillsheet_28_0, PillSheetType.pillsheet_28_0, PillSheetType.pillsheet_28_0];
-
-      for (int pageIndex = 0; pageIndex < pillSheetTypes.length; pageIndex++) {
-        for (int pillNumberIntoPillSheet = 1; pillNumberIntoPillSheet <= pillSheetTypes[pageIndex].totalCount; pillNumberIntoPillSheet++) {
-          expect(
-              RecordPagePillSheet.isContainedMenstruationDuration(
-                pillNumberIntoPillSheet: pillNumberIntoPillSheet,
-                pillSheetGroup: pillSheetGroup,
-                pageIndex: pageIndex,
-                setting: setting,
-              ),
-              (pageIndex == 1 && 18 <= pillNumberIntoPillSheet && pillNumberIntoPillSheet <= 20),
-              reason: "print debug informations pillNumberIntoPillSheet is $pillNumberIntoPillSheet, pageIndex: $pageIndex");
-        }
-      }
-    });
-    test("group has three pill sheet and scheduled menstruation have all sheets", () async {
-      final anyDate = DateTime.parse("2020-09-19");
-      final one = PillSheet(
-        id: firestoreIDGenerator(),
-        typeInfo: PillSheetType.pillsheet_28_0.typeInfo,
-        beginingDate: anyDate,
-        groupIndex: 0,
-        createdAt: now(),
-      );
-      final two = PillSheet(
-        id: firestoreIDGenerator(),
-        typeInfo: PillSheetType.pillsheet_28_0.typeInfo,
-        beginingDate: anyDate,
-        groupIndex: 1,
-        createdAt: now(),
-      );
-      final three = PillSheet(
-        id: firestoreIDGenerator(),
-        typeInfo: PillSheetType.pillsheet_28_0.typeInfo,
-        beginingDate: anyDate,
-        groupIndex: 2,
-        createdAt: now(),
-      );
-      final pillSheetGroup = PillSheetGroup(
-        pillSheetIDs: ["1", "2", "3"],
-        pillSheets: [one, two, three],
-        createdAt: anyDate,
-      );
-      const setting = Setting(
-        pillSheetTypes: [PillSheetType.pillsheet_28_0, PillSheetType.pillsheet_28_0, PillSheetType.pillsheet_28_0],
-        pillNumberForFromMenstruation: 22,
-        durationMenstruation: 3,
-        isOnReminder: true,
-        timezoneDatabaseName: null,
-      );
-      final pillSheetTypes = [PillSheetType.pillsheet_28_0, PillSheetType.pillsheet_28_0, PillSheetType.pillsheet_28_0];
-
-      for (int pageIndex = 0; pageIndex < pillSheetTypes.length; pageIndex++) {
-        for (int pillNumberIntoPillSheet = 1; pillNumberIntoPillSheet <= pillSheetTypes[pageIndex].totalCount; pillNumberIntoPillSheet++) {
-          expect(
-              RecordPagePillSheet.isContainedMenstruationDuration(
-                pillNumberIntoPillSheet: pillNumberIntoPillSheet,
-                pillSheetGroup: pillSheetGroup,
-                pageIndex: pageIndex,
-                setting: setting,
-              ),
-              22 <= pillNumberIntoPillSheet && pillNumberIntoPillSheet <= 24,
-              reason: "print debug informations pillNumberIntoPillSheet is $pillNumberIntoPillSheet, pageIndex: $pageIndex");
-        }
-      }
-    });
-    // 仕様的にはこの内容になるけど、ユーザーの入力としては想定されていない。なので仕様がおかしいとなったらこのテストは守らなくて良い
-    test("group has five pill sheet and scheduled menstruation begin No.2 pillSheet", () async {
-      final anyDate = DateTime.parse("2020-09-19");
-      final one = PillSheet(
-        id: firestoreIDGenerator(),
-        typeInfo: PillSheetType.pillsheet_28_0.typeInfo,
-        beginingDate: anyDate,
-        groupIndex: 0,
-        createdAt: now(),
-      );
-      final two = PillSheet(
-        id: firestoreIDGenerator(),
-        typeInfo: PillSheetType.pillsheet_28_0.typeInfo,
-        beginingDate: anyDate,
-        groupIndex: 1,
-        createdAt: now(),
-      );
-      final three = PillSheet(
-        id: firestoreIDGenerator(),
-        typeInfo: PillSheetType.pillsheet_28_0.typeInfo,
-        beginingDate: anyDate,
-        groupIndex: 2,
-        createdAt: now(),
-      );
-      final four = PillSheet(
-        id: firestoreIDGenerator(),
-        typeInfo: PillSheetType.pillsheet_28_0.typeInfo,
-        beginingDate: anyDate,
-        groupIndex: 3,
-        createdAt: now(),
-      );
-      final five = PillSheet(
-        id: firestoreIDGenerator(),
-        typeInfo: PillSheetType.pillsheet_28_0.typeInfo,
-        beginingDate: anyDate,
-        groupIndex: 4,
-        createdAt: now(),
-      );
-      final pillSheetGroup = PillSheetGroup(
-        pillSheetIDs: ["1", "2", "3", "4", "5"],
-        pillSheets: [one, two, three, four, five],
-        createdAt: anyDate,
-      );
-      const setting = Setting(
-        pillSheetTypes: [
-          PillSheetType.pillsheet_28_0,
-          PillSheetType.pillsheet_28_0,
-          PillSheetType.pillsheet_28_0,
-          PillSheetType.pillsheet_28_0,
-          PillSheetType.pillsheet_28_0
-        ],
-        pillNumberForFromMenstruation: 46,
-        durationMenstruation: 3,
-        isOnReminder: true,
-        timezoneDatabaseName: null,
-      );
-
-      final pillSheetTypes = [
-        PillSheetType.pillsheet_28_0,
-        PillSheetType.pillsheet_28_0,
-        PillSheetType.pillsheet_28_0,
-        PillSheetType.pillsheet_28_0,
-        PillSheetType.pillsheet_28_0,
-      ];
-
-      for (int pageIndex = 0; pageIndex < pillSheetTypes.length; pageIndex++) {
-        for (int pillNumberIntoPillSheet = 1; pillNumberIntoPillSheet <= pillSheetTypes[pageIndex].totalCount; pillNumberIntoPillSheet++) {
-          final firstMatched = pageIndex == 1 && 18 <= pillNumberIntoPillSheet && pillNumberIntoPillSheet <= 20;
-          final secondMatched = pageIndex == 3 && 8 <= pillNumberIntoPillSheet && pillNumberIntoPillSheet <= 10;
-          final thirdPatched = pageIndex == 4 && 26 <= pillNumberIntoPillSheet && pillNumberIntoPillSheet <= 28;
-          expect(
-              RecordPagePillSheet.isContainedMenstruationDuration(
-                pillNumberIntoPillSheet: pillNumberIntoPillSheet,
-                pillSheetGroup: pillSheetGroup,
-                pageIndex: pageIndex,
-                setting: setting,
-              ),
-              firstMatched || secondMatched || thirdPatched,
-              reason: "print debug informations pillNumberIntoPillSheet is $pillNumberIntoPillSheet, pageIndex: $pageIndex");
-        }
-      }
-    });
-    test("for ヤーズフレックス", () async {
-      final anyDate = DateTime.parse("2020-09-19");
-      final one = PillSheet(
-        id: firestoreIDGenerator(),
-        typeInfo: PillSheetType.pillsheet_28_0.typeInfo,
-        beginingDate: anyDate,
-        groupIndex: 0,
-        createdAt: now(),
-      );
-      final two = PillSheet(
-        id: firestoreIDGenerator(),
-        typeInfo: PillSheetType.pillsheet_28_0.typeInfo,
-        beginingDate: anyDate,
-        groupIndex: 1,
-        createdAt: now(),
-      );
-      final three = PillSheet(
-        id: firestoreIDGenerator(),
-        typeInfo: PillSheetType.pillsheet_28_0.typeInfo,
-        beginingDate: anyDate,
-        groupIndex: 2,
-        createdAt: now(),
-      );
-      final four = PillSheet(
-        id: firestoreIDGenerator(),
-        typeInfo: PillSheetType.pillsheet_28_0.typeInfo,
-        beginingDate: anyDate,
-        groupIndex: 3,
-        createdAt: now(),
-      );
-      final five = PillSheet(
-        id: firestoreIDGenerator(),
-        typeInfo: PillSheetType.pillsheet_28_0.typeInfo,
-        beginingDate: anyDate,
-        groupIndex: 4,
-        createdAt: now(),
-      );
-      final pillSheetGroup = PillSheetGroup(
-        pillSheetIDs: ["1", "2", "3", "4", "5"],
-        pillSheets: [one, two, three, four, five],
-        createdAt: anyDate,
-      );
-      const setting = Setting(
-        pillSheetTypes: [
-          PillSheetType.pillsheet_28_0,
-          PillSheetType.pillsheet_28_0,
-          PillSheetType.pillsheet_28_0,
-          PillSheetType.pillsheet_28_0,
-          PillSheetType.pillsheet_28_0
-        ],
-        pillNumberForFromMenstruation: 120,
-        durationMenstruation: 3,
-        isOnReminder: true,
-        timezoneDatabaseName: null,
-      );
-
-      final pillSheetTypes = [
-        PillSheetType.pillsheet_28_0,
-        PillSheetType.pillsheet_28_0,
-        PillSheetType.pillsheet_28_0,
-        PillSheetType.pillsheet_28_0,
-        PillSheetType.pillsheet_28_0,
-      ];
-
-      for (int pageIndex = 0; pageIndex < pillSheetTypes.length; pageIndex++) {
-        for (int pillNumberIntoPillSheet = 1; pillNumberIntoPillSheet <= pillSheetTypes[pageIndex].totalCount; pillNumberIntoPillSheet++) {
-          expect(
-              RecordPagePillSheet.isContainedMenstruationDuration(
-                pillNumberIntoPillSheet: pillNumberIntoPillSheet,
-                pillSheetGroup: pillSheetGroup,
-                pageIndex: pageIndex,
-                setting: setting,
-              ),
-              pageIndex == 4 && 8 <= pillNumberIntoPillSheet && pillNumberIntoPillSheet <= 10,
-              reason: "print debug informations pillNumberIntoPillSheet is $pillNumberIntoPillSheet, pageIndex: $pageIndex");
-        }
-      }
     });
   });
 }

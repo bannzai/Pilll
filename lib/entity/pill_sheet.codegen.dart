@@ -155,8 +155,10 @@ class PillSheet with _$PillSheet {
     }
   }
 
-  DateTime displayPillTakeDate(int pillNumberIntoPillSheet) {
-    final originDate = beginingDate.add(Duration(days: pillNumberIntoPillSheet - 1)).date();
+  // PillSheetのbeginDateは服用お休み中にbackendで毎日1日ずれるようになっているので、
+  // ここで計算に考慮するのはこのPillSheetのrestDurationのみで良い
+  DateTime displayPillTakeDate(int pillNumberInPillSheet) {
+    final originDate = beginingDate.add(Duration(days: pillNumberInPillSheet - 1)).date();
     if (restDurations.isEmpty) {
       return originDate;
     }

@@ -33,7 +33,7 @@ class ChangePillNumber {
     required PillSheetGroup pillSheetGroup,
     required PillSheet activedPillSheet,
     required int pillSheetPageIndex,
-    required int pillNumberIntoPillSheet,
+    required int pillNumberInPillSheet,
   }) async {
     final batch = batchFactory.batch();
 
@@ -42,7 +42,7 @@ class ChangePillNumber {
           pillSheetTypes: pillSheetTypes,
           toIndex: pillSheetPageIndex,
         ) +
-        pillNumberIntoPillSheet;
+        pillNumberInPillSheet;
     final firstPilSheetBeginDate = today().subtract(Duration(days: nextSerializedPillNumber - 1));
 
     final List<PillSheet> updatedPillSheets = [];
@@ -59,7 +59,7 @@ class ChangePillNumber {
 
       final DateTime? lastTakenDate;
       if (pillSheetPageIndex == index) {
-        lastTakenDate = beginDate.add(Duration(days: pillNumberIntoPillSheet - 2));
+        lastTakenDate = beginDate.add(Duration(days: pillNumberInPillSheet - 2));
       } else if (pillSheetPageIndex > index) {
         lastTakenDate = beginDate.add(Duration(days: pillSheet.pillSheetType.totalCount - 1));
       } else {

@@ -26,7 +26,7 @@ class SettingTodayPillNumberPage extends HookConsumerWidget {
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {
-    final pillNumberIntoPillSheetState = useState(_pillNumberIntoPillSheet(activedPillSheet: activedPillSheet, pillSheetGroup: pillSheetGroup));
+    final pillNumberInPillSheetState = useState(_pillNumberInPillSheet(activedPillSheet: activedPillSheet, pillSheetGroup: pillSheetGroup));
     final pillSheetPageIndexState = useState(activedPillSheet.groupIndex);
     final changePillNumber = ref.watch(changePillNumberProvider);
     final registerReminderLocalNotification = ref.watch(registerReminderLocalNotificationProvider);
@@ -71,11 +71,11 @@ class SettingTodayPillNumberPage extends HookConsumerWidget {
                           if (pillSheetPageIndexState.value != pageIndex) {
                             return null;
                           }
-                          return pillNumberIntoPillSheetState.value;
+                          return pillNumberInPillSheetState.value;
                         },
-                        markSelected: (pillSheetPageIndex, pillNumberIntoPillSheet) {
+                        markSelected: (pillSheetPageIndex, pillNumberInPillSheet) {
                           pillSheetPageIndexState.value = pillSheetPageIndex;
-                          pillNumberIntoPillSheetState.value = pillNumberIntoPillSheet;
+                          pillNumberInPillSheetState.value = pillNumberInPillSheet;
                         }),
                   ),
                   const SizedBox(height: 20),
@@ -94,7 +94,7 @@ class SettingTodayPillNumberPage extends HookConsumerWidget {
                               pillSheetGroup: pillSheetGroup,
                               activedPillSheet: activedPillSheet,
                               pillSheetPageIndex: pillSheetPageIndexState.value,
-                              pillNumberIntoPillSheet: pillNumberIntoPillSheetState.value);
+                              pillNumberInPillSheet: pillNumberInPillSheetState.value);
                           await registerReminderLocalNotification();
 
                           navigator.pop();
@@ -117,7 +117,7 @@ class SettingTodayPillNumberPage extends HookConsumerWidget {
     return "${DateTimeFormatter.slashYearAndMonthAndDay(DateTime.now())}(${DateTimeFormatter.weekday(DateTime.now())})";
   }
 
-  int _pillNumberIntoPillSheet({
+  int _pillNumberInPillSheet({
     required PillSheet activedPillSheet,
     required PillSheetGroup pillSheetGroup,
   }) {

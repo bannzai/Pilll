@@ -87,7 +87,7 @@ void main() {
             batchSetPillSheetModifiedHistory: batchSetPillSheetModifiedHistory,
             batchSetPillSheetGroup: batchSetPillSheetGroup);
 
-        await revertTakePill.call(pillSheetGroup: pillSheetGroup, pageIndex: 0, pillNumberIntoPillSheet: 1);
+        await revertTakePill.call(pillSheetGroup: pillSheetGroup, pageIndex: 0, pillNumberInPillSheet: 1);
       });
 
       test("Revert today pill", () async {
@@ -157,7 +157,7 @@ void main() {
             batchSetPillSheetModifiedHistory: batchSetPillSheetModifiedHistory,
             batchSetPillSheetGroup: batchSetPillSheetGroup);
 
-        await revertTakePill.call(pillSheetGroup: pillSheetGroup, pageIndex: 0, pillNumberIntoPillSheet: 2);
+        await revertTakePill.call(pillSheetGroup: pillSheetGroup, pageIndex: 0, pillNumberInPillSheet: 2);
       });
 
       test("revert with rest durations and removed rest duration", () async {
@@ -236,7 +236,7 @@ void main() {
             batchSetPillSheetModifiedHistory: batchSetPillSheetModifiedHistory,
             batchSetPillSheetGroup: batchSetPillSheetGroup);
 
-        await revertTakePill.call(pillSheetGroup: pillSheetGroup, pageIndex: 0, pillNumberIntoPillSheet: 1);
+        await revertTakePill.call(pillSheetGroup: pillSheetGroup, pageIndex: 0, pillNumberInPillSheet: 1);
       });
 
       test("revert with rest durations but no removed rest duration", () async {
@@ -313,7 +313,7 @@ void main() {
             batchSetPillSheetModifiedHistory: batchSetPillSheetModifiedHistory,
             batchSetPillSheetGroup: batchSetPillSheetGroup);
 
-        await revertTakePill.call(pillSheetGroup: pillSheetGroup, pageIndex: 0, pillNumberIntoPillSheet: 11);
+        await revertTakePill.call(pillSheetGroup: pillSheetGroup, pageIndex: 0, pillNumberInPillSheet: 11);
       });
     });
 
@@ -396,7 +396,7 @@ void main() {
             batchSetPillSheetModifiedHistory: batchSetPillSheetModifiedHistory,
             batchSetPillSheetGroup: batchSetPillSheetGroup);
 
-        await revertTakePill.call(pillSheetGroup: pillSheetGroup, pageIndex: 1, pillNumberIntoPillSheet: 2);
+        await revertTakePill.call(pillSheetGroup: pillSheetGroup, pageIndex: 1, pillNumberInPillSheet: 2);
       });
 
       test("call revert from actived pill sheet to before pill sheet", () async {
@@ -472,7 +472,7 @@ void main() {
             batchSetPillSheetModifiedHistory: batchSetPillSheetModifiedHistory,
             batchSetPillSheetGroup: batchSetPillSheetGroup);
 
-        await revertTakePill.call(pillSheetGroup: pillSheetGroup, pageIndex: 0, pillNumberIntoPillSheet: 27);
+        await revertTakePill.call(pillSheetGroup: pillSheetGroup, pageIndex: 0, pillNumberInPillSheet: 27);
       });
       test("call revert with rest duration", () async {
         var mockTodayRepository = MockTodayService();
@@ -552,7 +552,7 @@ void main() {
             batchSetPillSheetModifiedHistory: batchSetPillSheetModifiedHistory,
             batchSetPillSheetGroup: batchSetPillSheetGroup);
 
-        await revertTakePill.call(pillSheetGroup: pillSheetGroup, pageIndex: 0, pillNumberIntoPillSheet: 27);
+        await revertTakePill.call(pillSheetGroup: pillSheetGroup, pageIndex: 0, pillNumberInPillSheet: 27);
       });
     });
   });

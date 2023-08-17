@@ -1158,7 +1158,7 @@ class MockRevertTakePill extends _i1.Mock implements _i28.RevertTakePill {
   _i9.Future<_i7.PillSheetGroup?> call({
     required _i7.PillSheetGroup? pillSheetGroup,
     required int? pageIndex,
-    required int? pillNumberIntoPillSheet,
+    required int? pillNumberInPillSheet,
   }) =>
       (super.noSuchMethod(
         Invocation.method(
@@ -1167,7 +1167,7 @@ class MockRevertTakePill extends _i1.Mock implements _i28.RevertTakePill {
           {
             #pillSheetGroup: pillSheetGroup,
             #pageIndex: pageIndex,
-            #pillNumberIntoPillSheet: pillNumberIntoPillSheet,
+            #pillNumberInPillSheet: pillNumberInPillSheet,
           },
         ),
         returnValue: _i9.Future<_i7.PillSheetGroup?>.value(),
