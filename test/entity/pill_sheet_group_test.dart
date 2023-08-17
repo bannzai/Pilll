@@ -1101,7 +1101,64 @@ void main() {
           DateRange(DateTime.parse("2020-11-19"), DateTime.parse("2020-11-21")),
         ]);
       });
-      test("setting values out the range of pill sheet", () {
+      test("setting values out the range of pill sheet group", () {
+        final mockTodayRepository = MockTodayService();
+        todayRepository = mockTodayRepository;
+        when(mockTodayRepository.now()).thenReturn(DateTime.parse("2020-09-01"));
+
+        const sheetType = PillSheetType.pillsheet_21;
+        final pillSheet = PillSheet(
+          id: firestoreIDGenerator(),
+          beginingDate: DateTime.parse("2020-09-01"),
+          lastTakenDate: null,
+          createdAt: now(),
+          typeInfo: PillSheetTypeInfo(
+            dosingPeriod: sheetType.dosingPeriod,
+            name: sheetType.fullName,
+            totalCount: sheetType.totalCount,
+            pillSheetTypeReferencePath: sheetType.rawPath,
+          ),
+        );
+        final pillSheet2 = PillSheet(
+          id: firestoreIDGenerator(),
+          beginingDate: DateTime.parse("2020-09-01").add(const Duration(days: 28)),
+          lastTakenDate: null,
+          createdAt: now(),
+          typeInfo: PillSheetTypeInfo(
+            dosingPeriod: sheetType.dosingPeriod,
+            name: sheetType.fullName,
+            totalCount: sheetType.totalCount,
+            pillSheetTypeReferencePath: sheetType.rawPath,
+          ),
+        );
+        final pillSheet3 = PillSheet(
+          id: firestoreIDGenerator(),
+          beginingDate: DateTime.parse("2020-09-01").add(const Duration(days: 28 * 2)),
+          lastTakenDate: null,
+          createdAt: now(),
+          typeInfo: PillSheetTypeInfo(
+            dosingPeriod: sheetType.dosingPeriod,
+            name: sheetType.fullName,
+            totalCount: sheetType.totalCount,
+            pillSheetTypeReferencePath: sheetType.rawPath,
+          ),
+        );
+        // created at and id are anything value
+        final pillSheetGroup = PillSheetGroup(
+          pillSheetIDs: ["1", "2", "3"],
+          pillSheets: [pillSheet, pillSheet2, pillSheet3],
+          createdAt: now(),
+        );
+
+        const setting = Setting(
+          pillNumberForFromMenstruation: 100,
+          durationMenstruation: 3,
+          isOnReminder: false,
+          timezoneDatabaseName: "Asia/Tokyo",
+        );
+        expect(pillSheetGroup.menstruationDateRanges(setting: setting), []);
+      });
+      test("setting values out of the range for each pill sheet", () {
         final mockTodayRepository = MockTodayService();
         todayRepository = mockTodayRepository;
         when(mockTodayRepository.now()).thenReturn(DateTime.parse("2020-09-01"));
