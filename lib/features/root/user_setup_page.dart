@@ -35,12 +35,12 @@ class UserSetupPage extends HookConsumerWidget {
           // Decide screen type. Keep in mind that this method is called when user is logged in.
           final appUserValue = appUser.value;
           if (appUserValue == null) {
-            // Register userID for each analytics libraries.
-            setUserID(userID: userID);
-
             // Retrieve user from app DB.
             final user = await fetchOrCreateUser(userID);
             appUser.value = user;
+
+            // Register userID for each analytics libraries.
+            setUserID(userID: userID);
           }
         } catch (e, st) {
           errorLogger.recordError(e, st);
