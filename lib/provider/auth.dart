@@ -52,6 +52,6 @@ Map<String, dynamic> _logginParameters(User? currentUser) {
     "uid": currentUser.uid,
     "isAnonymous": currentUser.isAnonymous,
     "hasGoogleProviderData": currentUser.providerData.where((element) => element.providerId == googleProviderID).isNotEmpty,
-    "hasAppleProviderData": currentUser.providerData.where((element) => element.providerId == appleProviderID).isNotEmpty,
+    "hasAppleProviderData": currentUser.providerData.where((element) => element.providerId == AppleAuthProvider.PROVIDER_ID).isNotEmpty,
   };
 }
