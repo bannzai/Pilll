@@ -6,13 +6,9 @@ import 'package:pilll/provider/auth.dart';
 enum SignInWithAppleState { determined, cancel }
 
 Future<LinkValueContainer?> linkWithApple(User user) async {
-  try {
-    final provider = AppleAuthProvider()..addScope('email');
-    final linkedCredential = await user.linkWithProvider(provider);
-    return Future.value(LinkValueContainer(linkedCredential, linkedCredential.user?.email));
-  } on FirebaseAuthException catch (e) {
-    rethrow;
-  }
+  final provider = AppleAuthProvider()..addScope('email');
+  final linkedCredential = await user.linkWithProvider(provider);
+  return Future.value(LinkValueContainer(linkedCredential, linkedCredential.user?.email));
 }
 
 Future<UserCredential?> signInWithApple() async {
