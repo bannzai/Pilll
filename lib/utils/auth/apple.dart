@@ -6,18 +6,36 @@ import 'package:pilll/provider/auth.dart';
 enum SignInWithAppleState { determined, cancel }
 
 Future<LinkValueContainer?> linkWithApple(User user) async {
-  final provider = AppleAuthProvider().addScope('email');
-  final linkedCredential = await user.linkWithProvider(provider);
-  return Future.value(LinkValueContainer(linkedCredential, linkedCredential.user?.email));
+  try {
+    final provider = AppleAuthProvider().addScope('email');
+    final linkedCredential = await user.linkWithProvider(provider);
+    return Future.value(LinkValueContainer(linkedCredential, linkedCredential.user?.email));
+  } on FirebaseAuthException catch (e) {
+    // canceled という code で返ってくるが、コードを読んでると該当するエラーが多かったので実際にdumpしてみたメッセージでマッチしている
+    // Googleのcodeとは違うので注意
+    if (e.toString().contains('The user canceled the authorization attempt')) {
+      return Future.value(null);
+    }
+    rethrow;
+  }
 }
 
 Future<UserCredential?> signInWithApple() async {
-  final user = FirebaseAuth.instance.currentUser;
-  if (user == null) {
-    throw const FormatException("Anonymous User not found");
+  try {
+    final user = FirebaseAuth.instance.currentUser;
+    if (user == null) {
+      throw const FormatException("Anonymous User not found");
+    }
+    final provider = AppleAuthProvider().addScope('email');
+    return await FirebaseAuth.instance.signInWithProvider(provider);
+  } on FirebaseAuthException catch (e) {
+    // canceled という code で返ってくるが、コードを読んでると該当するエラーが多かったので実際にdumpしてみたメッセージでマッチしている
+    // Googleのcodeとは違うので注意
+    if (e.toString().contains('The user canceled the authorization attempt')) {
+      return Future.value(null);
+    }
+    rethrow;
   }
-  final provider = AppleAuthProvider().addScope('email');
-  return await FirebaseAuth.instance.signInWithProvider(provider);
 }
 
 final isAppleLinkedProvider = Provider((ref) {
@@ -34,6 +52,15 @@ bool isLinkedAppleFor(User user) {
 }
 
 Future<void> appleReauthentification() async {
-  final provider = AppleAuthProvider();
-  await FirebaseAuth.instance.currentUser?.reauthenticateWithProvider(provider);
+  try {
+    final provider = AppleAuthProvider();
+    await FirebaseAuth.instance.currentUser?.reauthenticateWithProvider(provider);
+  } on FirebaseAuthException catch (e) {
+    // canceled という code で返ってくるが、コードを読んでると該当するエラーが多かったので実際にdumpしてみたメッセージでマッチしている
+    // Googleのcodeとは違うので注意
+    if (e.toString().contains('The user canceled the authorization attempt')) {
+      return Future.value();
+    }
+    rethrow;
+  }
 }

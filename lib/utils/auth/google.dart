@@ -1,5 +1,4 @@
 import 'package:firebase_auth/firebase_auth.dart';
-import 'package:flutter/cupertino.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
 import 'package:pilll/utils/auth/link_value_container.dart';
 import 'package:pilll/provider/auth.dart';
@@ -15,6 +14,7 @@ Future<LinkValueContainer?> linkWithGoogle(User user) async {
     return Future.value(LinkValueContainer(linkedCredential, linkedCredential.user?.email));
   } on FirebaseAuthException catch (e) {
     // sign-in-failed という code で返ってくるが、コードを読んでると該当するエラーが多かったので実際にdumpしてみたメッセージでマッチしている
+    // Appleのcodeとは違うので注意
     if (e.toString().contains('The interaction was cancelled by the user')) {
       return Future.value(null);
     }
@@ -24,10 +24,15 @@ Future<LinkValueContainer?> linkWithGoogle(User user) async {
 
 Future<UserCredential?> signInWithGoogle() async {
   try {
+    final user = FirebaseAuth.instance.currentUser;
+    if (user == null) {
+      throw const FormatException("Anonymous User not found");
+    }
     final provider = GoogleAuthProvider().addScope('email');
     return await FirebaseAuth.instance.signInWithProvider(provider);
   } on FirebaseAuthException catch (e) {
     // sign-in-failed という code で返ってくるが、コードを読んでると該当するエラーが多かったので実際にdumpしてみたメッセージでマッチしている
+    // Appleのcodeとは違うので注意
     if (e.toString().contains('The interaction was cancelled by the user')) {
       return Future.value(null);
     }
@@ -54,6 +59,7 @@ Future<void> googleReauthentification() async {
     await FirebaseAuth.instance.currentUser?.reauthenticateWithProvider(provider);
   } on FirebaseAuthException catch (e) {
     // sign-in-failed という code で返ってくるが、コードを読んでると該当するエラーが多かったので実際にdumpしてみたメッセージでマッチしている
+    // Appleのcodeとは違うので注意
     if (e.toString().contains('The interaction was cancelled by the user')) {
       return;
     }
