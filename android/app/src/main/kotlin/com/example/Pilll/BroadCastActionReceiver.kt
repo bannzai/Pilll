@@ -5,7 +5,6 @@ import android.content.Context
 import android.content.Intent
 import android.util.Log
 import androidx.core.app.NotificationManagerCompat
-import com.aboutyou.dart_packages.sign_in_with_apple.TAG
 import io.flutter.plugin.common.MethodChannel
 
 
@@ -28,17 +27,14 @@ public class BroadCastActionReceiver: BroadcastReceiver() {
 
     private class RecordPillResult(private val pendingResult: PendingResult): MethodChannel.Result {
         override fun success(result: Any?) {
-            Log.d(TAG, "successfully record pill $result")
             pendingResult.finish();
         }
 
         override fun error(errorCode: String, errorMessage: String?, errorDetails: Any?) {
-            Log.d(TAG, "errorCode: $errorCode, errorMessage: $errorMessage, errorDetails: $errorDetails")
             pendingResult.finish();
         }
 
         override fun notImplemented() {
-            Log.d(TAG, "unexpected not implement method about record pill")
             pendingResult.finish();
         }
 
