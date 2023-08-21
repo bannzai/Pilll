@@ -87,13 +87,12 @@ class SettingAccountCooperationListPage extends HookConsumerWidget {
                             try {
                               final messenger = ScaffoldMessenger.of(context);
                               final navigator = Navigator.of(context);
-                              final isSuccess = await appleReauthentification();
-                              analytics.logEvent(name: 'a_c_l_apple_long_press_result', parameters: {"success": isSuccess});
+                              analytics.logEvent(name: 'a_c_l_apple_long_press_result');
 
                               messenger.showSnackBar(
-                                SnackBar(
+                                const SnackBar(
                                   duration: const Duration(seconds: 2),
-                                  content: Text(isSuccess ? "認証情報を更新しました" : "認証情報を更新に失敗しました"),
+                                  content: Text("認証情報を更新しました"),
                                 ),
                               );
                               navigator.pop();
@@ -140,13 +139,12 @@ class SettingAccountCooperationListPage extends HookConsumerWidget {
                             try {
                               final messenger = ScaffoldMessenger.of(context);
                               final navigator = Navigator.of(context);
-                              final isSuccess = await googleReauthentification();
-                              analytics.logEvent(name: 'a_c_l_google_long_press_result', parameters: {"success": isSuccess});
+                              analytics.logEvent(name: 'a_c_l_google_long_press_result');
 
                               messenger.showSnackBar(
-                                SnackBar(
+                                const SnackBar(
                                   duration: const Duration(seconds: 2),
-                                  content: Text(isSuccess ? "認証情報を更新しました" : "認証情報を更新に失敗しました"),
+                                  content: Text("認証情報を更新しました"),
                                 ),
                               );
                               navigator.pop();

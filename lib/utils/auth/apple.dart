@@ -33,8 +33,7 @@ bool isLinkedAppleFor(User user) {
   return user.providerData.where((element) => element.providerId == AppleAuthProvider.PROVIDER_ID).isNotEmpty;
 }
 
-Future<bool> appleReauthentification() async {
+Future<void> appleReauthentification() async {
   final provider = AppleAuthProvider();
   await FirebaseAuth.instance.currentUser?.reauthenticateWithProvider(provider);
-  return true;
 }
