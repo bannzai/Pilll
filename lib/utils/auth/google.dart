@@ -13,15 +13,26 @@ Future<LinkValueContainer?> linkWithGoogle(User user) async {
     final provider = GoogleAuthProvider().addScope('email');
     final linkedCredential = await user.linkWithProvider(provider);
     return Future.value(LinkValueContainer(linkedCredential, linkedCredential.user?.email));
-  } catch (e) {
-    debugPrint(e.toString());
+  } on FirebaseAuthException catch (e) {
+    // sign-in-failed という code で返ってくるが、コードを読んでると該当するエラーが多かったので実際にdumpしてみたメッセージでマッチしている
+    if (e.toString().contains('The interaction was cancelled by the user')) {
+      return Future.value(null);
+    }
     rethrow;
   }
 }
 
 Future<UserCredential?> signInWithGoogle() async {
-  final provider = GoogleAuthProvider().addScope('email');
-  return await FirebaseAuth.instance.signInWithProvider(provider);
+  try {
+    final provider = GoogleAuthProvider().addScope('email');
+    return await FirebaseAuth.instance.signInWithProvider(provider);
+  } on FirebaseAuthException catch (e) {
+    // sign-in-failed という code で返ってくるが、コードを読んでると該当するエラーが多かったので実際にdumpしてみたメッセージでマッチしている
+    if (e.toString().contains('The interaction was cancelled by the user')) {
+      return Future.value(null);
+    }
+    rethrow;
+  }
 }
 
 final isGoogleLinkedProvider = Provider((ref) {
@@ -38,6 +49,14 @@ bool isLinkedGoogleFor(User user) {
 }
 
 Future<void> googleReauthentification() async {
-  final provider = GoogleAuthProvider();
-  await FirebaseAuth.instance.currentUser?.reauthenticateWithProvider(provider);
+  try {
+    final provider = GoogleAuthProvider();
+    await FirebaseAuth.instance.currentUser?.reauthenticateWithProvider(provider);
+  } on FirebaseAuthException catch (e) {
+    // sign-in-failed という code で返ってくるが、コードを読んでると該当するエラーが多かったので実際にdumpしてみたメッセージでマッチしている
+    if (e.toString().contains('The interaction was cancelled by the user')) {
+      return;
+    }
+    rethrow;
+  }
 }
