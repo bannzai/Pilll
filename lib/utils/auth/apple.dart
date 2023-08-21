@@ -9,9 +9,8 @@ Future<UserCredential?> linkWithApple(User user) async {
     final provider = AppleAuthProvider();
     return await user.linkWithProvider(provider);
   } on FirebaseAuthException catch (e) {
-    // canceled という code で返ってくるが、コードを読んでると該当するエラーが多かったので実際にdumpしてみたメッセージでマッチしている
     // Googleのcodeとは違うので注意
-    if (e.toString().contains('The user canceled the authorization attempt')) {
+    if (e.code == "canceled") {
       return Future.value(null);
     }
     rethrow;
@@ -27,9 +26,8 @@ Future<UserCredential?> signInWithApple() async {
     final provider = AppleAuthProvider().addScope('email');
     return await FirebaseAuth.instance.signInWithProvider(provider);
   } on FirebaseAuthException catch (e) {
-    // canceled という code で返ってくるが、コードを読んでると該当するエラーが多かったので実際にdumpしてみたメッセージでマッチしている
     // Googleのcodeとは違うので注意
-    if (e.toString().contains('The user canceled the authorization attempt')) {
+    if (e.code == "canceled") {
       return Future.value(null);
     }
     rethrow;
@@ -54,9 +52,8 @@ Future<void> appleReauthentification() async {
     final provider = AppleAuthProvider();
     await FirebaseAuth.instance.currentUser?.reauthenticateWithProvider(provider);
   } on FirebaseAuthException catch (e) {
-    // canceled という code で返ってくるが、コードを読んでると該当するエラーが多かったので実際にdumpしてみたメッセージでマッチしている
     // Googleのcodeとは違うので注意
-    if (e.toString().contains('The user canceled the authorization attempt')) {
+    if (e.code == "canceled") {
       return Future.value();
     }
     rethrow;
