@@ -7,7 +7,7 @@ enum SignInWithAppleState { determined, cancel }
 
 Future<LinkValueContainer?> linkWithApple(User user) async {
   try {
-    final provider = AppleAuthProvider().addScope('email');
+    final provider = AppleAuthProvider();
     final linkedCredential = await user.linkWithProvider(provider);
     return Future.value(LinkValueContainer(linkedCredential, linkedCredential.user?.email));
   } on FirebaseAuthException catch (e) {

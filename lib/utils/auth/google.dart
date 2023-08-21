@@ -9,7 +9,7 @@ enum SignInWithGoogleState { determined, cancel }
 
 Future<LinkValueContainer?> linkWithGoogle(User user) async {
   try {
-    final provider = GoogleAuthProvider().addScope('email');
+    final provider = GoogleAuthProvider();
     final linkedCredential = await user.linkWithProvider(provider);
     return Future.value(LinkValueContainer(linkedCredential, linkedCredential.user?.email));
   } on FirebaseAuthException catch (e) {
