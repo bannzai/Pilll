@@ -6,7 +6,7 @@ import 'package:pilll/provider/auth.dart';
 enum SignInWithAppleState { determined, cancel }
 
 Future<LinkValueContainer?> linkWithApple(User user) async {
-  final provider = AppleAuthProvider()..addScope('email');
+  final provider = AppleAuthProvider().addScope('email');
   final linkedCredential = await user.linkWithProvider(provider);
   return Future.value(LinkValueContainer(linkedCredential, linkedCredential.user?.email));
 }
@@ -16,7 +16,7 @@ Future<UserCredential?> signInWithApple() async {
   if (user == null) {
     throw const FormatException("Anonymous User not found");
   }
-  final provider = AppleAuthProvider()..addScope('email');
+  final provider = AppleAuthProvider().addScope('email');
   return await FirebaseAuth.instance.signInWithProvider(provider);
 }
 
