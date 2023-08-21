@@ -1,17 +1,15 @@
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
-import 'package:pilll/utils/auth/link_value_container.dart';
 import 'package:pilll/provider/auth.dart';
 
 const googleProviderID = 'google.com';
 
 enum SignInWithGoogleState { determined, cancel }
 
-Future<LinkValueContainer?> linkWithGoogle(User user) async {
+Future<UserCredential?> linkWithGoogle(User user) async {
   try {
     final provider = GoogleAuthProvider();
-    final linkedCredential = await user.linkWithProvider(provider);
-    return Future.value(LinkValueContainer(linkedCredential, linkedCredential.user?.email));
+    return await user.linkWithProvider(provider);
   } on FirebaseAuthException catch (e) {
     // sign-in-failed という code で返ってくるが、コードを読んでると該当するエラーが多かったので実際にdumpしてみたメッセージでマッチしている
     // Appleのcodeとは違うので注意

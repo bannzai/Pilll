@@ -1,15 +1,13 @@
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
-import 'package:pilll/utils/auth/link_value_container.dart';
 import 'package:pilll/provider/auth.dart';
 
 enum SignInWithAppleState { determined, cancel }
 
-Future<LinkValueContainer?> linkWithApple(User user) async {
+Future<UserCredential?> linkWithApple(User user) async {
   try {
     final provider = AppleAuthProvider();
-    final linkedCredential = await user.linkWithProvider(provider);
-    return Future.value(LinkValueContainer(linkedCredential, linkedCredential.user?.email));
+    return await user.linkWithProvider(provider);
   } on FirebaseAuthException catch (e) {
     // canceled という code で返ってくるが、コードを読んでると該当するエラーが多かったので実際にdumpしてみたメッセージでマッチしている
     // Googleのcodeとは違うので注意
