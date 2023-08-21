@@ -44,7 +44,6 @@ import 'package:pilll/utils/error_log.dart';
   SetUserID,
   FetchOrCreateUser,
   SaveUserLaunchInfo,
-  MarkAsMigratedToFlutter,
   ErrorLogger,
   FirestoreIDGenerator,
 ])

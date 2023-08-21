@@ -25,7 +25,6 @@ class InitialSettingOrAppPage extends HookConsumerWidget {
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {
-    final markAsMigratedToFlutter = ref.watch(markAsMigratedToFlutterProvider);
     final didEndInitialSetting = ref.watch(didEndInitialSettingProvider);
     // UserSetupPageでUserはできているのでfetchが終わり次第値は必ず入る。ここでwatchしないとInitialSetting -> Appへの遷移が成立しない
     final user = ref.watch(userProvider).valueOrNull;
@@ -35,10 +34,7 @@ class InitialSettingOrAppPage extends HookConsumerWidget {
 
     useEffect(() {
       if (user != null) {
-        if (!user.migratedFlutter) {
-          markAsMigratedToFlutter();
-          analytics.logEvent(name: "user_is_not_migrated_flutter", parameters: {"uid": user.id});
-        } else if (user.setting == null) {
+        if (user.setting == null) {
           analytics.logEvent(name: "uset_setting_is_null", parameters: {"uid": user.id});
         }
       }
@@ -70,9 +66,7 @@ InitialSettingOrAppPageScreenType retrieveScreenType({
   if (user == null) {
     return InitialSettingOrAppPageScreenType.loading;
   }
-  if (!user.migratedFlutter) {
-    return InitialSettingOrAppPageScreenType.initialSetting;
-  } else if (user.setting == null) {
+  if (user.setting == null) {
     return InitialSettingOrAppPageScreenType.initialSetting;
   }
 

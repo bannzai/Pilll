@@ -87,9 +87,7 @@ InitialSettingOrAppPageScreenType retrieveScreenType({
   if (user == null || didEndInitialSettingAsyncValue is! AsyncData) {
     return InitialSettingOrAppPageScreenType.loading;
   }
-  if (!user.migratedFlutter) {
-    return InitialSettingOrAppPageScreenType.initialSetting;
-  } else if (user.setting == null) {
+  if (user.setting == null) {
     return InitialSettingOrAppPageScreenType.initialSetting;
   }
 

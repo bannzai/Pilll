@@ -37,14 +37,10 @@ class _FakeWidget extends StatelessWidget {
 }
 
 class _FakeUser extends Fake implements User {
-  final bool fakeMigratedFlutter;
   final Setting? fakeSetting;
 
   // ignore: avoid_init_to_null
-  _FakeUser([this.fakeMigratedFlutter = false, this.fakeSetting = null]);
-
-  @override
-  bool get migratedFlutter => fakeMigratedFlutter;
+  _FakeUser([this.fakeSetting = null]);
 
   @override
   Setting? get setting => fakeSetting;
@@ -82,9 +78,6 @@ void main() {
       final saveUserLaunchInfo = MockSaveUserLaunchInfo();
       when(saveUserLaunchInfo(fakeUser)).thenReturn(null);
 
-      final markAsMigratedToFlutter = MockMarkAsMigratedToFlutter();
-      when(markAsMigratedToFlutter()).thenAnswer((realInvocation) => Future.value());
-
       SharedPreferences.setMockInitialValues({});
 
       await tester.pumpWidget(
@@ -95,7 +88,6 @@ void main() {
             databaseProvider.overrideWith((ref) => MockDatabaseConnection()),
             fetchOrCreateUserProvider.overrideWith((_) => fetchOrCreateUser),
             saveUserLaunchInfoProvider.overrideWith((ref) => saveUserLaunchInfo),
-            markAsMigratedToFlutterProvider.overrideWith((ref) => markAsMigratedToFlutter),
             firebaseSignInProvider.overrideWith((ref) => Future.value(fakeFirebaseUser)),
             didEndInitialSettingProvider.overrideWithValue(const SharedPreferencesState(BoolKey.didEndInitialSetting, null)),
           ],
@@ -129,9 +121,6 @@ void main() {
       final saveUserLaunchInfo = MockSaveUserLaunchInfo();
       when(saveUserLaunchInfo(fakeUser)).thenReturn(null);
 
-      final markAsMigratedToFlutter = MockMarkAsMigratedToFlutter();
-      when(markAsMigratedToFlutter()).thenAnswer((realInvocation) => Future.value());
-
       SharedPreferences.setMockInitialValues({});
 
       await tester.pumpWidget(
@@ -142,7 +131,6 @@ void main() {
             databaseProvider.overrideWith((ref) => MockDatabaseConnection()),
             fetchOrCreateUserProvider.overrideWith((_) => fetchOrCreateUser),
             saveUserLaunchInfoProvider.overrideWith((ref) => saveUserLaunchInfo),
-            markAsMigratedToFlutterProvider.overrideWith((ref) => markAsMigratedToFlutter),
             firebaseSignInProvider.overrideWith((ref) => Future.value(fakeFirebaseUser)),
             didEndInitialSettingProvider.overrideWithValue(const SharedPreferencesState(BoolKey.didEndInitialSetting, null)),
           ],
@@ -173,27 +161,22 @@ void main() {
 
   group('#retrieveScreenType', () {
     testWidgets('didEndInitialSetting is not exist', (WidgetTester tester) async {
-      final fakeUser = _FakeUser(true, _FakeSetting());
+      final fakeUser = _FakeUser(_FakeSetting());
       final screenType = retrieveScreenType(user: fakeUser, didEndInitialSetting: null);
       expect(screenType, InitialSettingOrAppPageScreenType.initialSetting);
     });
     testWidgets('tidEndInitialSetting is false', (WidgetTester tester) async {
-      final fakeUser = _FakeUser(true, _FakeSetting());
+      final fakeUser = _FakeUser(_FakeSetting());
       final screenType = retrieveScreenType(user: fakeUser, didEndInitialSetting: false);
       expect(screenType, InitialSettingOrAppPageScreenType.initialSetting);
     });
     testWidgets('didEndInitialSetting is true', (WidgetTester tester) async {
-      final fakeUser = _FakeUser(true, _FakeSetting());
+      final fakeUser = _FakeUser(_FakeSetting());
       final screenType = retrieveScreenType(user: fakeUser, didEndInitialSetting: true);
       expect(screenType, InitialSettingOrAppPageScreenType.app);
     });
-    testWidgets('didEndInitialSetting is true and user.migratedFlutter is false', (WidgetTester tester) async {
-      final fakeUser = _FakeUser(false, _FakeSetting());
-      final screenType = retrieveScreenType(user: fakeUser, didEndInitialSetting: true);
-      expect(screenType, InitialSettingOrAppPageScreenType.initialSetting);
-    });
     testWidgets('didEndInitialSetting is true and user.migratedFlutter is true but setting is null', (WidgetTester tester) async {
-      final fakeUser = _FakeUser(true, null);
+      final fakeUser = _FakeUser(null);
       final screenType = retrieveScreenType(user: fakeUser, didEndInitialSetting: true);
       expect(screenType, InitialSettingOrAppPageScreenType.initialSetting);
     });
