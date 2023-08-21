@@ -91,7 +91,7 @@ class SettingAccountCooperationListPage extends HookConsumerWidget {
 
                               messenger.showSnackBar(
                                 const SnackBar(
-                                  duration: const Duration(seconds: 2),
+                                  duration: Duration(seconds: 2),
                                   content: Text("認証情報を更新しました"),
                                 ),
                               );
@@ -143,7 +143,7 @@ class SettingAccountCooperationListPage extends HookConsumerWidget {
 
                               messenger.showSnackBar(
                                 const SnackBar(
-                                  duration: const Duration(seconds: 2),
+                                  duration: Duration(seconds: 2),
                                   content: Text("認証情報を更新しました"),
                                 ),
                               );
