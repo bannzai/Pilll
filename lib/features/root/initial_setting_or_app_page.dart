@@ -25,7 +25,6 @@ class InitialSettingOrAppPage extends HookConsumerWidget {
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {
-    final markAsMigratedToFlutter = ref.watch(markAsMigratedToFlutterProvider);
     final didEndInitialSetting = ref.watch(didEndInitialSettingProvider);
     // UserSetupPageでUserはできているのでfetchが終わり次第値は必ず入る。ここでwatchしないとInitialSetting -> Appへの遷移が成立しない
     final user = ref.watch(userProvider).valueOrNull;
