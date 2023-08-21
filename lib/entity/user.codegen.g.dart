@@ -21,7 +21,6 @@ _$_User _$$_UserFromJson(Map<String, dynamic> json) => _$_User(
       setting: json['settings'] == null
           ? null
           : Setting.fromJson(json['settings'] as Map<String, dynamic>),
-      migratedFlutter: json['migratedFlutter'] as bool? ?? false,
       userIDWhenCreateUser: json['userIDWhenCreateUser'] as String?,
       anonymousUserID: json['anonymousUserID'] as String?,
       userDocumentIDSets: (json['userDocumentIDSets'] as List<dynamic>?)
@@ -54,7 +53,6 @@ _$_User _$$_UserFromJson(Map<String, dynamic> json) => _$_User(
 Map<String, dynamic> _$$_UserToJson(_$_User instance) => <String, dynamic>{
       'id': instance.id,
       'settings': instance.setting?.toJson(),
-      'migratedFlutter': instance.migratedFlutter,
       'userIDWhenCreateUser': instance.userIDWhenCreateUser,
       'anonymousUserID': instance.anonymousUserID,
       'userDocumentIDSets': instance.userDocumentIDSets,

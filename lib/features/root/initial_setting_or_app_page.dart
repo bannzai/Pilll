@@ -35,10 +35,7 @@ class InitialSettingOrAppPage extends HookConsumerWidget {
 
     useEffect(() {
       if (user != null) {
-        if (!user.migratedFlutter) {
-          markAsMigratedToFlutter();
-          analytics.logEvent(name: "user_is_not_migrated_flutter", parameters: {"uid": user.id});
-        } else if (user.setting == null) {
+        if (user.setting == null) {
           analytics.logEvent(name: "uset_setting_is_null", parameters: {"uid": user.id});
         }
       }
@@ -70,9 +67,7 @@ InitialSettingOrAppPageScreenType retrieveScreenType({
   if (user == null) {
     return InitialSettingOrAppPageScreenType.loading;
   }
-  if (!user.migratedFlutter) {
-    return InitialSettingOrAppPageScreenType.initialSetting;
-  } else if (user.setting == null) {
+  if (user.setting == null) {
     return InitialSettingOrAppPageScreenType.initialSetting;
   }
 

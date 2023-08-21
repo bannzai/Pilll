@@ -37,14 +37,10 @@ class _FakeWidget extends StatelessWidget {
 }
 
 class _FakeUser extends Fake implements User {
-  final bool fakeMigratedFlutter;
   final Setting? fakeSetting;
 
   // ignore: avoid_init_to_null
-  _FakeUser([this.fakeMigratedFlutter = false, this.fakeSetting = null]);
-
-  @override
-  bool get migratedFlutter => fakeMigratedFlutter;
+  _FakeUser([this.fakeSetting = null]);
 
   @override
   Setting? get setting => fakeSetting;
@@ -186,11 +182,6 @@ void main() {
       final fakeUser = _FakeUser(true, _FakeSetting());
       final screenType = retrieveScreenType(user: fakeUser, didEndInitialSetting: true);
       expect(screenType, InitialSettingOrAppPageScreenType.app);
-    });
-    testWidgets('didEndInitialSetting is true and user.migratedFlutter is false', (WidgetTester tester) async {
-      final fakeUser = _FakeUser(false, _FakeSetting());
-      final screenType = retrieveScreenType(user: fakeUser, didEndInitialSetting: true);
-      expect(screenType, InitialSettingOrAppPageScreenType.initialSetting);
     });
     testWidgets('didEndInitialSetting is true and user.migratedFlutter is true but setting is null', (WidgetTester tester) async {
       final fakeUser = _FakeUser(true, null);

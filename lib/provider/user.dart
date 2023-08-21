@@ -259,29 +259,6 @@ class SaveUserLaunchInfo {
   }
 }
 
-final markAsMigratedToFlutterProvider = Provider((ref) => MarkAsMigratedToFlutter(ref.watch(databaseProvider)));
-
-class MarkAsMigratedToFlutter {
-  final DatabaseConnection databaseConnection;
-  MarkAsMigratedToFlutter(this.databaseConnection);
-
-  Future<void> call() async {
-    await _deleteSettings();
-    await _setFlutterMigrationFlag();
-  }
-
-  Future<void> _deleteSettings() {
-    return databaseConnection.userReference().update({UserFirestoreFieldKeys.settings: FieldValue.delete()});
-  }
-
-  Future<void> _setFlutterMigrationFlag() {
-    return databaseConnection.userRawReference().set(
-      {UserFirestoreFieldKeys.migratedFlutter: true},
-      SetOptions(merge: true),
-    );
-  }
-}
-
 final endInitialSettingProvider = Provider((ref) => EndInitialSetting(ref.watch(databaseProvider)));
 
 class EndInitialSetting {

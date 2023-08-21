@@ -1326,34 +1326,6 @@ class MockSaveUserLaunchInfo extends _i1.Mock
       );
 }
 
-/// A class which mocks [MarkAsMigratedToFlutter].
-///
-/// See the documentation for Mockito's code generation for more information.
-class MockMarkAsMigratedToFlutter extends _i1.Mock
-    implements _i26.MarkAsMigratedToFlutter {
-  MockMarkAsMigratedToFlutter() {
-    _i1.throwOnMissingStub(this);
-  }
-
-  @override
-  _i2.DatabaseConnection get databaseConnection => (super.noSuchMethod(
-        Invocation.getter(#databaseConnection),
-        returnValue: _FakeDatabaseConnection_1(
-          this,
-          Invocation.getter(#databaseConnection),
-        ),
-      ) as _i2.DatabaseConnection);
-  @override
-  _i9.Future<void> call() => (super.noSuchMethod(
-        Invocation.method(
-          #call,
-          [],
-        ),
-        returnValue: _i9.Future<void>.value(),
-        returnValueForMissingStub: _i9.Future<void>.value(),
-      ) as _i9.Future<void>);
-}
-
 /// A class which mocks [ErrorLogger].
 ///
 /// See the documentation for Mockito's code generation for more information.
