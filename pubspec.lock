@@ -881,18 +881,18 @@ packages:
     dependency: "direct main"
     description:
       name: riverpod_annotation
-      sha256: cedd6a54b6f5764ffd5c05df57b6676bfc8c01978e14ee60a2c16891038820fe
+      sha256: "8b3f7a54ddd5d53d6ea04bfb4ff77ee1b0816a1b563c0d9d43e73ce94bf2016d"
       url: "https://pub.dev"
     source: hosted
-    version: "2.1.1"
+    version: "2.1.2"
   riverpod_generator:
     dependency: "direct dev"
     description:
       name: riverpod_generator
-      sha256: "691180275664a5420c87d72c1ed26ef8404d32b823807540172bfd1660425376"
+      sha256: f668015d7b719c413c6001d4790689ea4a7bf76d5109118a1a98d5c23b20160d
       url: "https://pub.dev"
     source: hosted
-    version: "2.2.4"
+    version: "2.2.6"
   riverpod_lint:
     dependency: "direct dev"
     description:
