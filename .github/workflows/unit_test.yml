@@ -29,7 +29,7 @@ jobs:
         DART_DEFINE_FROM_FILE_DEV: ${{ secrets.DART_DEFINE_FROM_FILE_DEV }}
     - uses: subosito/flutter-action@v2
       with:
-        flutter-version: '3.10.6'
+        flutter-version: '3.13.0'
     - run: flutter pub get
     - name: Run iOS
       run: flutter build ios --debug --no-codesign --target lib/main.dev.dart --dart-define-from-file=environment/dev.json
@@ -49,7 +49,7 @@ jobs:
         DART_DEFINE_FROM_FILE_DEV: ${{ secrets.DART_DEFINE_FROM_FILE_DEV }}
     - uses: subosito/flutter-action@v2
       with:
-        flutter-version: '3.10.6'
+        flutter-version: '3.13.0'
     - run: flutter pub get
     - run: flutter build apk --debug --target lib/main.dev.dart --dart-define-from-file=environment/dev.json
   test:
@@ -62,7 +62,7 @@ jobs:
         java-version: '12.x'
     - uses: subosito/flutter-action@v2
       with:
-        flutter-version: '3.10.6'
+        flutter-version: '3.13.0'
     - run: make secret
     - run: flutter pub get
     - run: flutter test 
@@ -76,7 +76,7 @@ jobs:
         java-version: '12.x'
     - uses: subosito/flutter-action@v2
       with:
-        flutter-version: '3.10.6'
+        flutter-version: '3.13.0'
     - run: make secret
     - run: flutter pub get
     - run: flutter pub run build_runner build --delete-conflicting-outputs
