@@ -120,7 +120,7 @@ class PremiumFunctionSurveyPage extends HookConsumerWidget {
                           await sendPremiumFunctionSurvey(selectedElements.value, message.value);
                           navigator.pop();
                         } catch (error) {
-                          showErrorAlert(context, error);
+                          if (context.mounted) showErrorAlert(context, error);
                         }
                       },
                       text: "この内容で送る",

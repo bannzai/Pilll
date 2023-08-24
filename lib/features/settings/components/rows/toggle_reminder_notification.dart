@@ -52,7 +52,7 @@ class ToggleReminderNotification extends HookConsumerWidget {
             ),
           );
         } catch (error) {
-          showErrorAlert(context, error);
+          if (context.mounted) showErrorAlert(context, error);
         }
       },
       value: setting.isOnReminder,

@@ -66,7 +66,7 @@ class MenstruationEditPageHeader extends HookConsumerWidget {
                         try {
                           await deleteMenstruation(initialMenstruation);
                         } catch (e) {
-                          showErrorAlert(context, e);
+                          if (context.mounted) showErrorAlert(context, e);
                         }
                         onDeleted();
                         analytics.logEvent(name: "pressed_delete_menstruation");
@@ -84,14 +84,14 @@ class MenstruationEditPageHeader extends HookConsumerWidget {
                 try {
                   onSaved(await setMenstruation(menstruation));
                 } catch (e) {
-                  showErrorAlert(context, e);
+                  if (context.mounted) showErrorAlert(context, e);
                 }
               } else {
                 final menstruation = initialMenstruation.copyWith(beginDate: editingDateRangeValue.begin, endDate: editingDateRangeValue.end);
                 try {
                   onSaved(await setMenstruation(menstruation));
                 } catch (e) {
-                  showErrorAlert(context, e);
+                  if (context.mounted) showErrorAlert(context, e);
                 }
               }
             }

@@ -104,7 +104,7 @@ class PremiumIntroductionFotter extends StatelessWidget {
                   );
                 }
               } catch (error) {
-                showErrorAlert(context, error);
+                if (context.mounted) showErrorAlert(context, error);
               } finally {
                 isLoading.value = false;
               }

@@ -139,7 +139,7 @@ class IntiialSettingPremiumTrialStartPage extends HookConsumerWidget {
                     await registerReminderLocalNotification.call();
                     await AppRouter.endInitialSetting(navigator, didEndInitialSettingNotifier);
                   } catch (error) {
-                    showErrorAlert(context, error.toString());
+                    if (context.mounted) showErrorAlert(context, error.toString());
                   }
                 },
               ),

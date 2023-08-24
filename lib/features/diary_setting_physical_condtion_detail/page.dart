@@ -74,7 +74,7 @@ class DiarySettingPhysicalConditionDetailPage extends HookConsumerWidget {
                       await addDiarySetting(diarySetting: diarySetting, physicalConditionDetail: physicalConditionDetail);
                       textFieldController.text = "";
                     } catch (error) {
-                      showErrorAlert(context, error);
+                      if (context.mounted) showErrorAlert(context, error);
                     }
                   },
                   maxLength: 8,

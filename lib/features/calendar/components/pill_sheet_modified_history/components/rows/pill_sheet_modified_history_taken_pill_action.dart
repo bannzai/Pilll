@@ -76,7 +76,7 @@ class PillSheetModifiedHistoryTakenPillAction extends HookConsumerWidget {
                     );
                     navigator.pop();
                   } catch (error) {
-                    showErrorAlert(context, '更新に失敗しました。通信環境をお確かめの上、再度変更してください');
+                    if (context.mounted) showErrorAlert(context, '更新に失敗しました。通信環境をお確かめの上、再度変更してください');
                   }
                 },
               );

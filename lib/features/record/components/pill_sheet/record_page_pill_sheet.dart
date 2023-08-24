@@ -147,7 +147,7 @@ class RecordPagePillSheet extends HookConsumerWidget {
               }
             } catch (exception, stack) {
               errorLogger.recordError(exception, stack);
-              showErrorAlert(context, exception);
+              if (context.mounted) showErrorAlert(context, exception);
             }
           },
         ),
