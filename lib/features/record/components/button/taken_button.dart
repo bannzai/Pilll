@@ -57,7 +57,7 @@ class TakenButton extends HookConsumerWidget {
             await registerReminderLocalNotification();
           } catch (exception, stack) {
             errorLogger.recordError(exception, stack);
-            showErrorAlert(context, exception);
+            if (context.mounted) showErrorAlert(context, exception);
           }
         },
       ),
