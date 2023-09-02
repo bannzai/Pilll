@@ -857,10 +857,10 @@ packages:
     dependency: "direct main"
     description:
       name: purchases_flutter
-      sha256: ccdc00fa84cee2ab0aa1a17a34b9b08e4eaac22b37628c0690e63098bbe7d95d
+      sha256: "0fe19d930b36a64ef082358501db854d6c77c06987c08a2620e2dd29d72e1ea6"
       url: "https://pub.dev"
     source: hosted
-    version: "5.6.0"
+    version: "5.6.4"
   riverpod:
     dependency: "direct main"
     description:
