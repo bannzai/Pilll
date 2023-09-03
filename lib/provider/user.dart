@@ -1,5 +1,6 @@
 import 'dart:async';
 import 'dart:io';
+import 'dart:js_interop';
 
 import 'package:firebase_auth/firebase_auth.dart' as firebase_auth;
 import 'package:flutter/foundation.dart';
@@ -279,6 +280,18 @@ class EndInitialSetting {
       UserFirestoreFieldKeys.hasDiscountEntitlement: true,
       UserFirestoreFieldKeys.useLocalNotificationForReminder: true,
     }, SetOptions(merge: true));
+  }
+}
+
+final updateUseLocalNotificationProvider = Provider((ref) => UpdateUseLocalNotification(databaseConnection: ref.watch(databaseProvider)));
+
+class UpdateUseLocalNotification {
+  final DatabaseConnection databaseConnection;
+  UpdateUseLocalNotification({required this.databaseConnection});
+
+  Future<void> call(User user, bool value) async {
+    final updated = user.copyWith(useLocalNotificationForReminder: value);
+    await databaseConnection.userReference().update(updated.toJson());
   }
 }
 
