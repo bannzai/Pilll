@@ -283,6 +283,7 @@ class EndInitialSetting {
   }
 }
 
+// TODO: [UseLocalNotification-Beta] 2023-11 不要になったら削除
 final updateUseLocalNotificationProvider = Provider((ref) => UpdateUseLocalNotification(databaseConnection: ref.watch(databaseProvider)));
 
 class UpdateUseLocalNotification {

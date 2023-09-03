@@ -8,6 +8,7 @@ import 'package:pilll/components/atoms/font.dart';
 import 'package:pilll/features/error/error_alert.dart';
 import 'package:pilll/utils/local_notification.dart';
 
+// TODO: [UseLocalNotification-Beta] 2023-11 移行期間が終わったら削除
 class ToggleLocalNotification extends HookConsumerWidget {
   final User user;
 
