@@ -6,7 +6,6 @@ import 'package:pilll/utils/analytics.dart';
 import 'package:pilll/components/atoms/color.dart';
 import 'package:pilll/components/atoms/font.dart';
 import 'package:pilll/features/error/error_alert.dart';
-import 'package:pilll/provider/setting.dart';
 import 'package:pilll/utils/local_notification.dart';
 
 class ToggleLocalNotification extends HookConsumerWidget {
