@@ -1,6 +1,5 @@
 import 'dart:async';
 import 'dart:io';
-import 'dart:js_interop';
 
 import 'package:firebase_auth/firebase_auth.dart' as firebase_auth;
 import 'package:flutter/foundation.dart';
