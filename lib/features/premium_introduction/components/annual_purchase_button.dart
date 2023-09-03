@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:pilll/components/atoms/color.dart';
 import 'package:pilll/components/atoms/font.dart';
 import 'package:pilll/components/atoms/text_color.dart';
-import 'package:pilll/features/premium_introduction/util/currency.dart';
 import 'package:pilll/provider/purchase.dart';
 import 'package:purchases_flutter/purchases_flutter.dart';
 
@@ -20,7 +19,8 @@ class AnnualPurchaseButton extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final monthlyPrice = annualPackage.storeProduct.price / 12;
-    final monthlyPriceString = removeZero(monthlyPrice);
+    Locale locale = Localizations.localeOf(context);
+    final monthlyPriceString = NumberFormat.simpleCurrency(locale: locale.toString(), decimalDigits: 0).format(monthlyPrice);
 
     return GestureDetector(
       onTap: () {
@@ -52,70 +52,22 @@ class AnnualPurchaseButton extends StatelessWidget {
                     fontWeight: FontWeight.w700,
                   ),
                 ),
-                RichText(
-                  text: TextSpan(
-                    children: [
-                      TextSpan(
-                        text: currencySymbol(context),
-                        style: const TextStyle(
-                          color: TextColor.main,
-                          fontFamily: FontFamily.japanese,
-                          fontSize: 12,
-                          fontWeight: FontWeight.w600,
-                        ),
-                      ),
-                      TextSpan(
-                        text: "${removeZero(annualPackage.storeProduct.price)}/年",
-                        style: const TextStyle(
-                          color: TextColor.main,
-                          fontFamily: FontFamily.japanese,
-                          fontSize: 16,
-                          fontWeight: FontWeight.w600,
-                        ),
-                      ),
-                    ],
+                Text(
+                  "${annualPackage.storeProduct.priceString}/年",
+                  style: const TextStyle(
+                    color: TextColor.main,
+                    fontFamily: FontFamily.japanese,
+                    fontSize: 16,
+                    fontWeight: FontWeight.w600,
                   ),
                 ),
-                RichText(
-                  text: TextSpan(
-                    children: [
-                      const TextSpan(
-                        text: "（",
-                        style: TextStyle(
-                          color: TextColor.main,
-                          fontFamily: FontFamily.japanese,
-                          fontSize: 14,
-                          fontWeight: FontWeight.w600,
-                        ),
-                      ),
-                      TextSpan(
-                        text: currencySymbol(context),
-                        style: const TextStyle(
-                          color: TextColor.main,
-                          fontFamily: FontFamily.japanese,
-                          fontSize: 10,
-                          fontWeight: FontWeight.w600,
-                        ),
-                      ),
-                      TextSpan(
-                        text: "$monthlyPriceString/月",
-                        style: const TextStyle(
-                          color: TextColor.main,
-                          fontFamily: FontFamily.japanese,
-                          fontSize: 14,
-                          fontWeight: FontWeight.w600,
-                        ),
-                      ),
-                      const TextSpan(
-                        text: "）",
-                        style: TextStyle(
-                          color: TextColor.main,
-                          fontFamily: FontFamily.japanese,
-                          fontSize: 14,
-                          fontWeight: FontWeight.w600,
-                        ),
-                      ),
-                    ],
+                Text(
+                  "（$monthlyPriceString/月）",
+                  style: const TextStyle(
+                    color: TextColor.main,
+                    fontFamily: FontFamily.japanese,
+                    fontSize: 14,
+                    fontWeight: FontWeight.w600,
                   ),
                 ),
               ],
