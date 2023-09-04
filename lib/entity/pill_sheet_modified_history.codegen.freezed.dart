@@ -45,7 +45,7 @@ mixin _$PillSheetModifiedHistory {
   @JsonKey(
       fromJson: TimestampConverter.timestampToDateTime,
       toJson: TimestampConverter.dateTimeToTimestamp)
-  DateTime? get timeToLive =>
+  DateTime? get ttlExpiresDateTime =>
       throw _privateConstructorUsedError; // ============ END: Added since v2 ============
 // The below properties are deprecated and added since v1.
 // This is deprecated property. TODO: [PillSheetModifiedHistory-V2] delete after 2024-04-01
@@ -95,7 +95,7 @@ abstract class $PillSheetModifiedHistoryCopyWith<$Res> {
       @JsonKey(
           fromJson: TimestampConverter.timestampToDateTime,
           toJson: TimestampConverter.dateTimeToTimestamp)
-      DateTime? timeToLive,
+      DateTime? ttlExpiresDateTime,
       PillSheetModifiedHistoryValue value,
       String? pillSheetID,
       String? pillSheetGroupID,
@@ -132,7 +132,7 @@ class _$PillSheetModifiedHistoryCopyWithImpl<$Res,
     Object? createdAt = null,
     Object? beforePillSheetGroup = freezed,
     Object? afterPillSheetGroup = freezed,
-    Object? timeToLive = freezed,
+    Object? ttlExpiresDateTime = freezed,
     Object? value = null,
     Object? pillSheetID = freezed,
     Object? pillSheetGroupID = freezed,
@@ -170,9 +170,9 @@ class _$PillSheetModifiedHistoryCopyWithImpl<$Res,
           ? _value.afterPillSheetGroup
           : afterPillSheetGroup // ignore: cast_nullable_to_non_nullable
               as PillSheetGroup?,
-      timeToLive: freezed == timeToLive
-          ? _value.timeToLive
-          : timeToLive // ignore: cast_nullable_to_non_nullable
+      ttlExpiresDateTime: freezed == ttlExpiresDateTime
+          ? _value.ttlExpiresDateTime
+          : ttlExpiresDateTime // ignore: cast_nullable_to_non_nullable
               as DateTime?,
       value: null == value
           ? _value.value
@@ -288,7 +288,7 @@ abstract class _$$_PillSheetModifiedHistoryCopyWith<$Res>
       @JsonKey(
           fromJson: TimestampConverter.timestampToDateTime,
           toJson: TimestampConverter.dateTimeToTimestamp)
-      DateTime? timeToLive,
+      DateTime? ttlExpiresDateTime,
       PillSheetModifiedHistoryValue value,
       String? pillSheetID,
       String? pillSheetGroupID,
@@ -328,7 +328,7 @@ class __$$_PillSheetModifiedHistoryCopyWithImpl<$Res>
     Object? createdAt = null,
     Object? beforePillSheetGroup = freezed,
     Object? afterPillSheetGroup = freezed,
-    Object? timeToLive = freezed,
+    Object? ttlExpiresDateTime = freezed,
     Object? value = null,
     Object? pillSheetID = freezed,
     Object? pillSheetGroupID = freezed,
@@ -363,9 +363,9 @@ class __$$_PillSheetModifiedHistoryCopyWithImpl<$Res>
           ? _value.afterPillSheetGroup
           : afterPillSheetGroup // ignore: cast_nullable_to_non_nullable
               as PillSheetGroup?,
-      timeToLive: freezed == timeToLive
-          ? _value.timeToLive
-          : timeToLive // ignore: cast_nullable_to_non_nullable
+      ttlExpiresDateTime: freezed == ttlExpiresDateTime
+          ? _value.ttlExpiresDateTime
+          : ttlExpiresDateTime // ignore: cast_nullable_to_non_nullable
               as DateTime?,
       value: null == value
           ? _value.value
@@ -420,7 +420,7 @@ class _$_PillSheetModifiedHistory extends _PillSheetModifiedHistory {
       @JsonKey(
           fromJson: TimestampConverter.timestampToDateTime,
           toJson: TimestampConverter.dateTimeToTimestamp)
-      this.timeToLive,
+      this.ttlExpiresDateTime,
       required this.value,
       required this.pillSheetID,
       required this.pillSheetGroupID,
@@ -465,7 +465,7 @@ class _$_PillSheetModifiedHistory extends _PillSheetModifiedHistory {
   @JsonKey(
       fromJson: TimestampConverter.timestampToDateTime,
       toJson: TimestampConverter.dateTimeToTimestamp)
-  final DateTime? timeToLive;
+  final DateTime? ttlExpiresDateTime;
 // ============ END: Added since v2 ============
 // The below properties are deprecated and added since v1.
 // This is deprecated property. TODO: [PillSheetModifiedHistory-V2] delete after 2024-04-01
@@ -495,7 +495,7 @@ class _$_PillSheetModifiedHistory extends _PillSheetModifiedHistory {
 
   @override
   String toString() {
-    return 'PillSheetModifiedHistory(version: $version, id: $id, actionType: $actionType, estimatedEventCausingDate: $estimatedEventCausingDate, createdAt: $createdAt, beforePillSheetGroup: $beforePillSheetGroup, afterPillSheetGroup: $afterPillSheetGroup, timeToLive: $timeToLive, value: $value, pillSheetID: $pillSheetID, pillSheetGroupID: $pillSheetGroupID, beforePillSheetID: $beforePillSheetID, afterPillSheetID: $afterPillSheetID, before: $before, after: $after)';
+    return 'PillSheetModifiedHistory(version: $version, id: $id, actionType: $actionType, estimatedEventCausingDate: $estimatedEventCausingDate, createdAt: $createdAt, beforePillSheetGroup: $beforePillSheetGroup, afterPillSheetGroup: $afterPillSheetGroup, ttlExpiresDateTime: $ttlExpiresDateTime, value: $value, pillSheetID: $pillSheetID, pillSheetGroupID: $pillSheetGroupID, beforePillSheetID: $beforePillSheetID, afterPillSheetID: $afterPillSheetID, before: $before, after: $after)';
   }
 
   @override
@@ -516,8 +516,8 @@ class _$_PillSheetModifiedHistory extends _PillSheetModifiedHistory {
                 other.beforePillSheetGroup == beforePillSheetGroup) &&
             (identical(other.afterPillSheetGroup, afterPillSheetGroup) ||
                 other.afterPillSheetGroup == afterPillSheetGroup) &&
-            (identical(other.timeToLive, timeToLive) ||
-                other.timeToLive == timeToLive) &&
+            (identical(other.ttlExpiresDateTime, ttlExpiresDateTime) ||
+                other.ttlExpiresDateTime == ttlExpiresDateTime) &&
             (identical(other.value, value) || other.value == value) &&
             (identical(other.pillSheetID, pillSheetID) ||
                 other.pillSheetID == pillSheetID) &&
@@ -542,7 +542,7 @@ class _$_PillSheetModifiedHistory extends _PillSheetModifiedHistory {
       createdAt,
       beforePillSheetGroup,
       afterPillSheetGroup,
-      timeToLive,
+      ttlExpiresDateTime,
       value,
       pillSheetID,
       pillSheetGroupID,
@@ -584,7 +584,7 @@ abstract class _PillSheetModifiedHistory extends PillSheetModifiedHistory {
       @JsonKey(
           fromJson: TimestampConverter.timestampToDateTime,
           toJson: TimestampConverter.dateTimeToTimestamp)
-      final DateTime? timeToLive,
+      final DateTime? ttlExpiresDateTime,
       required final PillSheetModifiedHistoryValue value,
       required final String? pillSheetID,
       required final String? pillSheetGroupID,
@@ -625,7 +625,7 @@ abstract class _PillSheetModifiedHistory extends PillSheetModifiedHistory {
   @JsonKey(
       fromJson: TimestampConverter.timestampToDateTime,
       toJson: TimestampConverter.dateTimeToTimestamp)
-  DateTime? get timeToLive;
+  DateTime? get ttlExpiresDateTime;
   @override // ============ END: Added since v2 ============
 // The below properties are deprecated and added since v1.
 // This is deprecated property. TODO: [PillSheetModifiedHistory-V2] delete after 2024-04-01
