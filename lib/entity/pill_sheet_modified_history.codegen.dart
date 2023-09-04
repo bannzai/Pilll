@@ -77,7 +77,7 @@ class PillSheetModifiedHistory with _$PillSheetModifiedHistory {
       fromJson: TimestampConverter.timestampToDateTime,
       toJson: TimestampConverter.dateTimeToTimestamp,
     )
-    DateTime? timeToLive,
+    DateTime? ttlExpiresDateTime,
     // ============ END: Added since v2 ============
 
     // The below properties are deprecated and added since v1.
@@ -143,7 +143,7 @@ abstract class PillSheetModifiedHistoryServiceActionFactory {
       after: after,
       estimatedEventCausingDate: now(),
       createdAt: now(),
-      timeToLive: now().add(const Duration(days: limitDays)),
+      ttlExpiresDateTime: now().add(const Duration(days: limitDays)),
     );
   }
 
