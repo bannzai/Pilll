@@ -50,7 +50,7 @@ class ToggleLocalNotification extends HookConsumerWidget {
             SnackBar(
               duration: const Duration(seconds: 2),
               content: Text(
-                "服用通知βを利用するを ${value ? "ON" : "OFF"}にしました",
+                "服用通知βを使用するを ${value ? "ON" : "OFF"}にしました",
               ),
             ),
           );
