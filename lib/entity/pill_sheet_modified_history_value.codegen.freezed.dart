@@ -611,7 +611,7 @@ CreatedPillSheetValue _$CreatedPillSheetValueFromJson(
 /// @nodoc
 mixin _$CreatedPillSheetValue {
 // The below properties are deprecated and added since v1.
-// This is deprecated property. TODO: delete after 2024-03-01
+// This is deprecated property. TODO: [PillSheetModifiedHistory-V2] delete after 2024-04-01
   @JsonKey(
       fromJson: NonNullTimestampConverter.timestampToDateTime,
       toJson: NonNullTimestampConverter.dateTimeToTimestamp)
@@ -728,7 +728,7 @@ class _$_CreatedPillSheetValue extends _CreatedPillSheetValue {
       _$$_CreatedPillSheetValueFromJson(json);
 
 // The below properties are deprecated and added since v1.
-// This is deprecated property. TODO: delete after 2024-03-01
+// This is deprecated property. TODO: [PillSheetModifiedHistory-V2] delete after 2024-04-01
   @override
   @JsonKey(
       fromJson: NonNullTimestampConverter.timestampToDateTime,
@@ -792,7 +792,7 @@ abstract class _CreatedPillSheetValue extends CreatedPillSheetValue {
       _$_CreatedPillSheetValue.fromJson;
 
   @override // The below properties are deprecated and added since v1.
-// This is deprecated property. TODO: delete after 2024-03-01
+// This is deprecated property. TODO: [PillSheetModifiedHistory-V2] delete after 2024-04-01
   @JsonKey(
       fromJson: NonNullTimestampConverter.timestampToDateTime,
       toJson: NonNullTimestampConverter.dateTimeToTimestamp)
@@ -814,7 +814,7 @@ AutomaticallyRecordedLastTakenDateValue
 /// @nodoc
 mixin _$AutomaticallyRecordedLastTakenDateValue {
 // The below properties are deprecated and added since v1.
-// This is deprecated property. TODO: delete after 2024-03-01
+// This is deprecated property. TODO: [PillSheetModifiedHistory-V2] delete after 2024-04-01
   @JsonKey(
       fromJson: TimestampConverter.timestampToDateTime,
       toJson: TimestampConverter.dateTimeToTimestamp)
@@ -979,7 +979,7 @@ class _$_AutomaticallyRecordedLastTakenDateValue
       _$$_AutomaticallyRecordedLastTakenDateValueFromJson(json);
 
 // The below properties are deprecated and added since v1.
-// This is deprecated property. TODO: delete after 2024-03-01
+// This is deprecated property. TODO: [PillSheetModifiedHistory-V2] delete after 2024-04-01
   @override
   @JsonKey(
       fromJson: TimestampConverter.timestampToDateTime,
@@ -1059,7 +1059,7 @@ abstract class _AutomaticallyRecordedLastTakenDateValue
       _$_AutomaticallyRecordedLastTakenDateValue.fromJson;
 
   @override // The below properties are deprecated and added since v1.
-// This is deprecated property. TODO: delete after 2024-03-01
+// This is deprecated property. TODO: [PillSheetModifiedHistory-V2] delete after 2024-04-01
   @JsonKey(
       fromJson: TimestampConverter.timestampToDateTime,
       toJson: TimestampConverter.dateTimeToTimestamp)
@@ -1088,7 +1088,7 @@ DeletedPillSheetValue _$DeletedPillSheetValueFromJson(
 /// @nodoc
 mixin _$DeletedPillSheetValue {
 // The below properties are deprecated and added since v1.
-// This is deprecated property. TODO: delete after 2024-03-01
+// This is deprecated property. TODO: [PillSheetModifiedHistory-V2] delete after 2024-04-01
   @JsonKey(
       fromJson: NonNullTimestampConverter.timestampToDateTime,
       toJson: NonNullTimestampConverter.dateTimeToTimestamp)
@@ -1205,7 +1205,7 @@ class _$_DeletedPillSheetValue extends _DeletedPillSheetValue {
       _$$_DeletedPillSheetValueFromJson(json);
 
 // The below properties are deprecated and added since v1.
-// This is deprecated property. TODO: delete after 2024-03-01
+// This is deprecated property. TODO: [PillSheetModifiedHistory-V2] delete after 2024-04-01
   @override
   @JsonKey(
       fromJson: NonNullTimestampConverter.timestampToDateTime,
@@ -1269,7 +1269,7 @@ abstract class _DeletedPillSheetValue extends DeletedPillSheetValue {
       _$_DeletedPillSheetValue.fromJson;
 
   @override // The below properties are deprecated and added since v1.
-// This is deprecated property. TODO: delete after 2024-03-01
+// This is deprecated property. TODO: [PillSheetModifiedHistory-V2] delete after 2024-04-01
   @JsonKey(
       fromJson: NonNullTimestampConverter.timestampToDateTime,
       toJson: NonNullTimestampConverter.dateTimeToTimestamp)
@@ -1294,7 +1294,7 @@ mixin _$TakenPillValue {
   TakenPillEditedValue? get edited =>
       throw _privateConstructorUsedError; // ============ END: Added since v1 ============
 // The below properties are deprecated and added since v1.
-// This is deprecated property. TODO: delete after 2024-03-01
+// This is deprecated property. TODO: [PillSheetModifiedHistory-V2] delete after 2024-04-01
   @JsonKey(
       fromJson: TimestampConverter.timestampToDateTime,
       toJson: TimestampConverter.dateTimeToTimestamp)
@@ -1499,7 +1499,7 @@ class _$_TakenPillValue extends _TakenPillValue {
   final TakenPillEditedValue? edited;
 // ============ END: Added since v1 ============
 // The below properties are deprecated and added since v1.
-// This is deprecated property. TODO: delete after 2024-03-01
+// This is deprecated property. TODO: [PillSheetModifiedHistory-V2] delete after 2024-04-01
   @override
   @JsonKey(
       fromJson: TimestampConverter.timestampToDateTime,
@@ -1591,7 +1591,7 @@ abstract class _TakenPillValue extends TakenPillValue {
   TakenPillEditedValue? get edited;
   @override // ============ END: Added since v1 ============
 // The below properties are deprecated and added since v1.
-// This is deprecated property. TODO: delete after 2024-03-01
+// This is deprecated property. TODO: [PillSheetModifiedHistory-V2] delete after 2024-04-01
   @JsonKey(
       fromJson: TimestampConverter.timestampToDateTime,
       toJson: TimestampConverter.dateTimeToTimestamp)
@@ -1877,7 +1877,7 @@ RevertTakenPillValue _$RevertTakenPillValueFromJson(Map<String, dynamic> json) {
 /// @nodoc
 mixin _$RevertTakenPillValue {
 // The below properties are deprecated and added since v1.
-// This is deprecated property. TODO: delete after 2024-03-01
+// This is deprecated property. TODO: [PillSheetModifiedHistory-V2] delete after 2024-04-01
   @JsonKey(
       fromJson: TimestampConverter.timestampToDateTime,
       toJson: TimestampConverter.dateTimeToTimestamp)
@@ -2033,7 +2033,7 @@ class _$_RevertTakenPillValue extends _RevertTakenPillValue {
       _$$_RevertTakenPillValueFromJson(json);
 
 // The below properties are deprecated and added since v1.
-// This is deprecated property. TODO: delete after 2024-03-01
+// This is deprecated property. TODO: [PillSheetModifiedHistory-V2] delete after 2024-04-01
   @override
   @JsonKey(
       fromJson: TimestampConverter.timestampToDateTime,
@@ -2109,7 +2109,7 @@ abstract class _RevertTakenPillValue extends RevertTakenPillValue {
       _$_RevertTakenPillValue.fromJson;
 
   @override // The below properties are deprecated and added since v1.
-// This is deprecated property. TODO: delete after 2024-03-01
+// This is deprecated property. TODO: [PillSheetModifiedHistory-V2] delete after 2024-04-01
   @JsonKey(
       fromJson: TimestampConverter.timestampToDateTime,
       toJson: TimestampConverter.dateTimeToTimestamp)
@@ -2137,7 +2137,7 @@ ChangedPillNumberValue _$ChangedPillNumberValueFromJson(
 /// @nodoc
 mixin _$ChangedPillNumberValue {
 // The below properties are deprecated and added since v1.
-// This is deprecated property. TODO: delete after 2024-03-01
+// This is deprecated property. TODO: [PillSheetModifiedHistory-V2] delete after 2024-04-01
   @JsonKey(
       fromJson: NonNullTimestampConverter.timestampToDateTime,
       toJson: NonNullTimestampConverter.dateTimeToTimestamp)
@@ -2322,7 +2322,7 @@ class _$_ChangedPillNumberValue extends _ChangedPillNumberValue {
       _$$_ChangedPillNumberValueFromJson(json);
 
 // The below properties are deprecated and added since v1.
-// This is deprecated property. TODO: delete after 2024-03-01
+// This is deprecated property. TODO: [PillSheetModifiedHistory-V2] delete after 2024-04-01
   @override
   @JsonKey(
       fromJson: NonNullTimestampConverter.timestampToDateTime,
@@ -2414,7 +2414,7 @@ abstract class _ChangedPillNumberValue extends ChangedPillNumberValue {
       _$_ChangedPillNumberValue.fromJson;
 
   @override // The below properties are deprecated and added since v1.
-// This is deprecated property. TODO: delete after 2024-03-01
+// This is deprecated property. TODO: [PillSheetModifiedHistory-V2] delete after 2024-04-01
   @JsonKey(
       fromJson: NonNullTimestampConverter.timestampToDateTime,
       toJson: NonNullTimestampConverter.dateTimeToTimestamp)
@@ -2982,7 +2982,7 @@ ChangedBeginDisplayNumberValue _$ChangedBeginDisplayNumberValueFromJson(
 /// @nodoc
 mixin _$ChangedBeginDisplayNumberValue {
 // The below properties are deprecated and added since v1.
-// This is deprecated property. TODO: delete after 2024-03-01
+// This is deprecated property. TODO: [PillSheetModifiedHistory-V2] delete after 2024-04-01
 // 番号を変更した事が無い場合もあるのでnullable
   PillSheetGroupDisplayNumberSetting? get beforeDisplayNumberSetting =>
       throw _privateConstructorUsedError;
@@ -3132,7 +3132,7 @@ class _$_ChangedBeginDisplayNumberValue
       _$$_ChangedBeginDisplayNumberValueFromJson(json);
 
 // The below properties are deprecated and added since v1.
-// This is deprecated property. TODO: delete after 2024-03-01
+// This is deprecated property. TODO: [PillSheetModifiedHistory-V2] delete after 2024-04-01
 // 番号を変更した事が無い場合もあるのでnullable
   @override
   final PillSheetGroupDisplayNumberSetting? beforeDisplayNumberSetting;
@@ -3191,7 +3191,7 @@ abstract class _ChangedBeginDisplayNumberValue
       _$_ChangedBeginDisplayNumberValue.fromJson;
 
   @override // The below properties are deprecated and added since v1.
-// This is deprecated property. TODO: delete after 2024-03-01
+// This is deprecated property. TODO: [PillSheetModifiedHistory-V2] delete after 2024-04-01
 // 番号を変更した事が無い場合もあるのでnullable
   PillSheetGroupDisplayNumberSetting? get beforeDisplayNumberSetting;
   @override
@@ -3210,7 +3210,7 @@ ChangedEndDisplayNumberValue _$ChangedEndDisplayNumberValueFromJson(
 /// @nodoc
 mixin _$ChangedEndDisplayNumberValue {
 // The below properties are deprecated and added since v1.
-// This is deprecated property. TODO: delete after 2024-03-01
+// This is deprecated property. TODO: [PillSheetModifiedHistory-V2] delete after 2024-04-01
 // 番号を変更した事が無い場合もあるのでnullable
   PillSheetGroupDisplayNumberSetting? get beforeDisplayNumberSetting =>
       throw _privateConstructorUsedError;
@@ -3358,7 +3358,7 @@ class _$_ChangedEndDisplayNumberValue extends _ChangedEndDisplayNumberValue {
       _$$_ChangedEndDisplayNumberValueFromJson(json);
 
 // The below properties are deprecated and added since v1.
-// This is deprecated property. TODO: delete after 2024-03-01
+// This is deprecated property. TODO: [PillSheetModifiedHistory-V2] delete after 2024-04-01
 // 番号を変更した事が無い場合もあるのでnullable
   @override
   final PillSheetGroupDisplayNumberSetting? beforeDisplayNumberSetting;
@@ -3417,7 +3417,7 @@ abstract class _ChangedEndDisplayNumberValue
       _$_ChangedEndDisplayNumberValue.fromJson;
 
   @override // The below properties are deprecated and added since v1.
-// This is deprecated property. TODO: delete after 2024-03-01
+// This is deprecated property. TODO: [PillSheetModifiedHistory-V2] delete after 2024-04-01
 // 番号を変更した事が無い場合もあるのでnullable
   PillSheetGroupDisplayNumberSetting? get beforeDisplayNumberSetting;
   @override
