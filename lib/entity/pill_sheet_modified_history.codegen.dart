@@ -50,7 +50,8 @@ extension PillSheetModifiedActionTypeFunctions on PillSheetModifiedActionType {
 class PillSheetModifiedHistory with _$PillSheetModifiedHistory {
   @JsonSerializable(explicitToJson: true)
   const factory PillSheetModifiedHistory({
-    @JsonKey(includeIfNull: false, toJson: toNull) required String? id,
+    @JsonKey(includeIfNull: false, toJson: toNull)
+        required String? id,
     required String actionType,
     required PillSheetModifiedHistoryValue value,
     // This is deprecated property.
@@ -68,12 +69,12 @@ class PillSheetModifiedHistory with _$PillSheetModifiedHistory {
       fromJson: NonNullTimestampConverter.timestampToDateTime,
       toJson: NonNullTimestampConverter.dateTimeToTimestamp,
     )
-    required DateTime estimatedEventCausingDate,
+        required DateTime estimatedEventCausingDate,
     @JsonKey(
       fromJson: NonNullTimestampConverter.timestampToDateTime,
       toJson: NonNullTimestampConverter.dateTimeToTimestamp,
     )
-    required DateTime createdAt,
+        required DateTime createdAt,
   }) = _PillSheetModifiedHistory;
   const PillSheetModifiedHistory._();
 
@@ -84,8 +85,6 @@ class PillSheetModifiedHistory with _$PillSheetModifiedHistory {
 
 // Factories
 abstract class PillSheetModifiedHistoryServiceActionFactory {
-  static const limitDays = 180;
-
   static PillSheetModifiedHistory _create({
     required PillSheet? before,
     required PillSheet? after,
