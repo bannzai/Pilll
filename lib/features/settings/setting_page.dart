@@ -2,6 +2,8 @@ import 'dart:io';
 
 import 'package:async_value_group/async_value_group.dart';
 import 'package:flutter_hooks/flutter_hooks.dart';
+import 'package:pilll/entity/user.codegen.dart';
+import 'package:pilll/provider/user.dart';
 import 'package:pilll/utils/analytics.dart';
 import 'package:pilll/components/atoms/button.dart';
 import 'package:pilll/components/atoms/font.dart';
@@ -42,6 +44,7 @@ import 'package:pilll/utils/shared_preference/keys.dart';
 import 'package:url_launcher/url_launcher.dart';
 
 import 'components/rows/about_churn.dart';
+import 'components/rows/toggle_local_notification.dart';
 
 enum SettingSection { account, premium, pill, notification, menstruation, other }
 
@@ -53,7 +56,8 @@ class SettingPage extends HookConsumerWidget {
     useAutomaticKeepAlive(wantKeepAlive: true);
 
     final sharedPreferences = ref.watch(sharedPreferencesProvider);
-    return AsyncValueGroup.group4(
+    return AsyncValueGroup.group5(
+      ref.watch(userProvider),
       ref.watch(settingProvider),
       ref.watch(latestPillSheetGroupProvider),
       ref.watch(premiumAndTrialProvider),
@@ -63,10 +67,11 @@ class SettingPage extends HookConsumerWidget {
         final userIsMigratedFrom132 =
             sharedPreferences.containsKey(StringKey.salvagedOldStartTakenDate) && sharedPreferences.containsKey(StringKey.salvagedOldLastTakenDate);
         return SettingPageBody(
-          setting: data.t1,
-          latestPillSheetGroup: data.t2,
-          premiumAndTrial: data.t3,
-          isHealthDataAvailable: data.t4,
+          user: data.t1,
+          setting: data.t2,
+          latestPillSheetGroup: data.t3,
+          premiumAndTrial: data.t4,
+          isHealthDataAvailable: data.t5,
           userIsUpdatedFrom132: userIsMigratedFrom132,
         );
       },
@@ -81,6 +86,8 @@ class SettingPage extends HookConsumerWidget {
 }
 
 class SettingPageBody extends StatelessWidget {
+  // TODO: [UseLocalNotification-Beta] 2023-11 不要になったらUserを削除
+  final User user;
   final Setting setting;
   final PillSheetGroup? latestPillSheetGroup;
   final PremiumAndTrial premiumAndTrial;
@@ -89,6 +96,7 @@ class SettingPageBody extends StatelessWidget {
 
   const SettingPageBody({
     Key? key,
+    required this.user,
     required this.setting,
     required this.latestPillSheetGroup,
     required this.premiumAndTrial,
@@ -181,6 +189,8 @@ class SettingPageBody extends StatelessWidget {
                   return SettingSectionTitle(
                     text: "通知",
                     children: [
+                      ToggleLocalNotification(user: user),
+                      _separator(),
                       ToggleReminderNotification(setting: setting),
                       _separator(),
                       NotificationTimeRow(setting: setting),

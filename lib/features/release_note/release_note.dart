@@ -1,5 +1,3 @@
-import 'dart:io';
-
 import 'package:flutter_inappwebview/flutter_inappwebview.dart';
 import 'package:pilll/utils/analytics.dart';
 import 'package:pilll/components/atoms/button.dart';
@@ -44,7 +42,7 @@ class ReleaseNote extends StatelessWidget {
                       child: Container(
                         padding: const EdgeInsets.only(top: 40, left: 40, right: 40),
                         child: const Text(
-                          "ホームウィジェットが追加できるようになりました",
+                          "服用通知機能が進化しました",
                           style: TextStyle(
                             fontFamily: FontFamily.japanese,
                             fontWeight: FontWeight.w600,
@@ -64,7 +62,7 @@ class ReleaseNote extends StatelessWidget {
                     children: [
                       Text(
                         '''
-ホームウィジェットを追加できるようになりました。本日服用するピルの番号が一目でわかるようになっています
+この改善により服用通知の遅延が無くなります。大きな変更のためベータ機能として提供しております。設定タブの「服用通知βを使用する」から有効にできます。詳細はリンクをご覧ください
                         ''',
                         style: TextStyle(
                           fontFamily: FontFamily.japanese,
@@ -97,30 +95,26 @@ class ReleaseNote extends StatelessWidget {
 }
 
 void showReleaseNotePreDialog(BuildContext context) async {
-  final String key;
-  if (Platform.isAndroid) {
-    key = ReleaseNoteKey.version3_16_0;
-  } else {
-    key = ReleaseNoteKey.version3_15_0;
-  }
+  const String key = ReleaseNoteKey.version3_18_0;
   final storage = await SharedPreferences.getInstance();
   if (storage.getBool(key) ?? false) {
     return;
   }
   await storage.setBool(key, true);
 
-  // ignore: use_build_context_synchronously
-  showDialog(
-      context: context,
-      builder: (context) {
-        return const ReleaseNote();
-      });
+  if (context.mounted) {
+    showDialog(
+        context: context,
+        builder: (context) {
+          return const ReleaseNote();
+        });
+  }
 }
 
 void openReleaseNote() async {
   final ChromeSafariBrowser browser = ChromeSafariBrowser();
   await browser.open(
-      url: Uri.parse("https://pilll.wraptas.site/80cadcaca73b41f4974a568b6e753a2b"),
+      url: Uri.parse("https://pilll.wraptas.site/5882a8acbe874a0b90fa2421a2f9f3d8"),
       options: ChromeSafariBrowserClassOptions(
           android: AndroidChromeCustomTabsOptions(shareState: CustomTabsShareState.SHARE_STATE_OFF),
           ios: IOSSafariOptions(barCollapsingEnabled: true, presentationStyle: IOSUIModalPresentationStyle.PAGE_SHEET)));

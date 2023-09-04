@@ -282,6 +282,19 @@ class EndInitialSetting {
   }
 }
 
+// TODO: [UseLocalNotification-Beta] 2023-11 不要になったら削除
+final updateUseLocalNotificationProvider = Provider((ref) => UpdateUseLocalNotification(databaseConnection: ref.watch(databaseProvider)));
+
+class UpdateUseLocalNotification {
+  final DatabaseConnection databaseConnection;
+  UpdateUseLocalNotification({required this.databaseConnection});
+
+  Future<void> call(User user, bool value) async {
+    final updated = user.copyWith(useLocalNotificationForReminder: value);
+    await databaseConnection.userReference().update(updated.toJson());
+  }
+}
+
 final disableShouldAskCancelReasonProvider = Provider((ref) => DisableShouldAskCancelReason(ref.watch(databaseProvider)));
 
 class DisableShouldAskCancelReason {
