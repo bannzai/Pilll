@@ -5,6 +5,7 @@ import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';
 import 'package:pilll/entity/pill_sheet_type.dart';
 import 'package:pilll/entity/setting.codegen.dart';
+import 'package:pilll/utils/datetime/day.dart';
 import 'package:pilll/utils/formatter/date_time_formatter.dart';
 
 part 'pill_sheet_group.codegen.g.dart';
@@ -37,8 +38,10 @@ class PillSheetGroup with _$PillSheetGroup {
 
   factory PillSheetGroup.fromJson(Map<String, dynamic> json) => _$PillSheetGroupFromJson(json);
 
-  PillSheet? get activedPillSheet {
-    final filtered = pillSheets.where((element) => element.isActive);
+  PillSheet? get activePillSheet => activePillSheetWhen(now());
+
+  PillSheet? activePillSheetWhen(DateTime date) {
+    final filtered = pillSheets.where((element) => element.isActiveFor(date));
     return filtered.isEmpty ? null : filtered.first;
   }
 
@@ -56,21 +59,21 @@ class PillSheetGroup with _$PillSheetGroup {
   }
 
   bool get _isDeleted => deletedAt != null;
-  bool get isDeactived => activedPillSheet == null || _isDeleted;
+  bool get isDeactived => activePillSheet == null || _isDeleted;
 
   int get sequentialTodayPillNumber {
     if (pillSheets.isEmpty) {
       return 0;
     }
-    final activedPillSheet = this.activedPillSheet;
-    if (activedPillSheet == null) {
+    final activePillSheet = this.activePillSheet;
+    if (activePillSheet == null) {
       return 0;
     }
 
     final passedPillCountForPillSheetTypes = summarizedPillCountWithPillSheetTypesToIndex(
-        pillSheetTypes: pillSheets.map((e) => e.pillSheetType).toList(), toIndex: activedPillSheet.groupIndex);
+        pillSheetTypes: pillSheets.map((e) => e.pillSheetType).toList(), toIndex: activePillSheet.groupIndex);
 
-    var sequentialTodayPillNumber = passedPillCountForPillSheetTypes + activedPillSheet.todayPillNumber;
+    var sequentialTodayPillNumber = passedPillCountForPillSheetTypes + activePillSheet.todayPillNumber;
 
     final displayNumberSetting = this.displayNumberSetting;
     if (displayNumberSetting != null) {
@@ -95,15 +98,15 @@ class PillSheetGroup with _$PillSheetGroup {
     if (pillSheets.isEmpty) {
       return 0;
     }
-    final activedPillSheet = this.activedPillSheet;
-    if (activedPillSheet == null) {
+    final activePillSheet = this.activePillSheet;
+    if (activePillSheet == null) {
       return 0;
     }
 
     final passedPillCountForPillSheetTypes = summarizedPillCountWithPillSheetTypesToIndex(
-        pillSheetTypes: pillSheets.map((e) => e.pillSheetType).toList(), toIndex: activedPillSheet.groupIndex);
+        pillSheetTypes: pillSheets.map((e) => e.pillSheetType).toList(), toIndex: activePillSheet.groupIndex);
 
-    var sequentialLastTakenPillNumber = passedPillCountForPillSheetTypes + activedPillSheet.lastTakenPillNumber;
+    var sequentialLastTakenPillNumber = passedPillCountForPillSheetTypes + activePillSheet.lastTakenPillNumber;
 
     final displayNumberSetting = this.displayNumberSetting;
     if (displayNumberSetting != null) {
@@ -216,7 +219,7 @@ class PillSheetGroup with _$PillSheetGroup {
     required int pageIndex,
     required int pillNumberInPillSheet,
   }) {
-    return DateTimeFormatter.monthAndDay(pillSheets[pageIndex].displayPillTakeDate(pillNumberInPillSheet));
+    return DateTimeFormatter.monthAndDay(pillSheets[pageIndex].pillTakenDateFromPillNumber(pillNumberInPillSheet));
   }
 }
 

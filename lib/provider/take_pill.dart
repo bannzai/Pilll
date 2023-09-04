@@ -1,3 +1,4 @@
+
 import 'package:firebase_core/firebase_core.dart';
 import 'package:pilll/entity/pill_sheet_modified_history.codegen.dart';
 import 'package:pilll/provider/batch.dart';
@@ -33,15 +34,16 @@ class TakePill {
   Future<PillSheetGroup?> call({
     required DateTime takenDate,
     required PillSheetGroup pillSheetGroup,
-    required PillSheet activedPillSheet,
+    required PillSheet activePillSheet,
     required bool isQuickRecord,
   }) async {
-    if (activedPillSheet.todayPillIsAlreadyTaken) {
+    if (activePillSheet.todayPillIsAlreadyTaken) {
       return null;
     }
 
     final updatedPillSheets = pillSheetGroup.pillSheets.map((pillSheet) {
-      if (pillSheet.groupIndex > activedPillSheet.groupIndex) {
+      // activePillSheetが服用可能な最後のピルシートなので、それよりも後ろのピルシートの場合はreturn
+      if (pillSheet.groupIndex > activePillSheet.groupIndex) {
         return pillSheet;
       }
       if (pillSheet.isEnded) {
@@ -73,7 +75,7 @@ class TakePill {
     }).toList();
 
     if (updatedIndexses.isEmpty) {
-      // NOTE: avoid error for unit test
+      // NOTE: prevent error for unit test
       if (Firebase.apps.isNotEmpty) {
         errorLogger.recordError(const FormatException("unexpected updatedIndexes is empty"), StackTrace.current);
       }
@@ -90,6 +92,8 @@ class TakePill {
       before: before,
       after: after,
       isQuickRecord: isQuickRecord,
+      beforePillSheetGroup: pillSheetGroup,
+      afterPillSheetGroup: updatedPillSheetGroup,
     );
     batchSetPillSheetModifiedHistory(batch, history);
 

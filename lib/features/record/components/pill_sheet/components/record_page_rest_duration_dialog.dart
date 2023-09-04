@@ -75,14 +75,14 @@ class RecordPageRestDurationDialog extends StatelessWidget {
 void showRecordPageRestDurationDialog(
   BuildContext context, {
   required PillSheetAppearanceMode appearanceMode,
-  required PillSheet activedPillSheet,
+  required PillSheet activePillSheet,
   required PillSheetGroup pillSheetGroup,
   required VoidCallback onDone,
 }) {
   showDialog(
     context: context,
     builder: (context) => RecordPageRestDurationDialog(
-      title: RecordPageRestDurationDialogTitle(appearanceMode: appearanceMode, activedPillSheet: activedPillSheet, pillSheetGroup: pillSheetGroup),
+      title: RecordPageRestDurationDialogTitle(appearanceMode: appearanceMode, activePillSheet: activePillSheet, pillSheetGroup: pillSheetGroup),
       appearanceMode: appearanceMode,
       onDone: onDone,
     ),
@@ -91,13 +91,13 @@ void showRecordPageRestDurationDialog(
 
 class RecordPageRestDurationDialogTitle extends StatelessWidget {
   final PillSheetAppearanceMode appearanceMode;
-  final PillSheet activedPillSheet;
+  final PillSheet activePillSheet;
   final PillSheetGroup pillSheetGroup;
 
   const RecordPageRestDurationDialogTitle({
     Key? key,
     required this.appearanceMode,
-    required this.activedPillSheet,
+    required this.activePillSheet,
     required this.pillSheetGroup,
   }) : super(key: key);
 
@@ -115,9 +115,9 @@ class RecordPageRestDurationDialogTitle extends StatelessWidget {
   String get _number {
     switch (appearanceMode) {
       case PillSheetAppearanceMode.number:
-        return "${activedPillSheet.lastTakenPillNumber + 1}番";
+        return "${activePillSheet.lastTakenPillNumber + 1}番";
       case PillSheetAppearanceMode.date:
-        final date = activedPillSheet.displayPillTakeDate(activedPillSheet.lastTakenPillNumber + 1);
+        final date = activePillSheet.pillTakenDateFromPillNumber(activePillSheet.lastTakenPillNumber + 1);
         final dateString = DateTimeFormatter.monthAndDay(date);
         return dateString;
       case PillSheetAppearanceMode.sequential:

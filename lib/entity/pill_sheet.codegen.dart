@@ -74,7 +74,7 @@ class PillSheet with _$PillSheet {
       fromJson: TimestampConverter.timestampToDateTime,
       toJson: TimestampConverter.dateTimeToTimestamp,
     )
-    DateTime? lastTakenDate,
+    required DateTime? lastTakenDate,
     @JsonKey(
       fromJson: TimestampConverter.timestampToDateTime,
       toJson: TimestampConverter.dateTimeToTimestamp,
@@ -88,11 +88,20 @@ class PillSheet with _$PillSheet {
     @Default(0) int groupIndex,
     @Default([]) List<RestDuration> restDurations,
   }) = _PillSheet;
-  factory PillSheet.create(PillSheetType type) => PillSheet(
+
+  // NOTE: visibleForTestingを消すならpillTakenCountもrequiredにする
+  @visibleForTesting
+  factory PillSheet.create(
+    PillSheetType type, {
+    required DateTime beginDate,
+    required DateTime? lastTakenDate,
+    int? pillTakenCount,
+  }) =>
+      PillSheet(
         id: firestoreIDGenerator(),
         typeInfo: type.typeInfo,
-        beginingDate: today(),
-        lastTakenDate: null,
+        beginingDate: beginDate,
+        lastTakenDate: lastTakenDate,
         createdAt: now(),
       );
 
@@ -101,21 +110,23 @@ class PillSheet with _$PillSheet {
   PillSheetType get pillSheetType => PillSheetTypeFunctions.fromRawPath(typeInfo.pillSheetTypeReferencePath);
 
   int get todayPillNumber {
-    return pillSheetPillNumber(pillSheet: this, targetDate: today());
+    return pillNumberFor(targetDate: today());
   }
 
-  // NOTE: if pill sheet is not yet taken, lastTakenNumber return 0;
-  // Because if lastTakenPillNumber is nullable, ! = null, making it difficult to compare.
-  // lastTakenNumber is often compare todayPillNumber
+  // lastTakenPillNumber は最後に服了したピルの番号を返す
+  // あえてnon nullにしている。なぜならよく比較するのでnullableだと不便だから
+  // まだpillを飲んでない場合は `0` が変える。飲んでいる場合は 1以上の値が入る
   int get lastTakenPillNumber {
     final lastTakenDate = this.lastTakenDate;
     if (lastTakenDate == null) {
       return 0;
     }
 
-    return pillSheetPillNumber(pillSheet: this, targetDate: lastTakenDate);
+    return pillNumberFor(targetDate: lastTakenDate);
   }
 
+  // 今日のピルをすでに飲んでいるかを確認する
+  // 番号で比較しない(lastTakenPillNumber == todayPillNumber)理由は、各プロパティが上限値を超えないことを保証してないため。たとえばtodayPillNumberが30になることもありえる
   bool get todayPillIsAlreadyTaken {
     final lastTakenDate = this.lastTakenDate;
     if (lastTakenDate == null) {
@@ -128,12 +139,13 @@ class PillSheet with _$PillSheet {
   bool get isBegan => beginingDate.date().toUtc().millisecondsSinceEpoch < now().toUtc().millisecondsSinceEpoch;
   bool get inNotTakenDuration => todayPillNumber > typeInfo.dosingPeriod;
   bool get pillSheetHasRestOrFakeDuration => !pillSheetType.isNotExistsNotTakenDuration;
-  bool get isActive {
-    final n = now();
+  bool get isActive => isActiveFor(now());
+
+  bool isActiveFor(DateTime date) {
     final begin = beginingDate.date();
     final totalCount = typeInfo.totalCount;
     final end = begin.add(Duration(days: totalCount + summarizedRestDuration(restDurations: restDurations, upperDate: today()) - 1));
-    return DateRange(begin, end).inRange(n);
+    return DateRange(begin, end).inRange(date);
   }
 
   DateTime get estimatedEndTakenDate => beginingDate
@@ -155,13 +167,14 @@ class PillSheet with _$PillSheet {
     }
   }
 
-  DateTime displayPillTakeDate(int pillNumberIntoPillSheet) {
-    final originDate = beginingDate.add(Duration(days: pillNumberIntoPillSheet - 1)).date();
+  // pillTakenDateFromPillNumber は元々の番号から、休薬期間を考慮した番号に変換する
+  DateTime pillTakenDateFromPillNumber(int pillNumberInPillSheet) {
+    final originDate = beginingDate.add(Duration(days: pillNumberInPillSheet - 1)).date();
     if (restDurations.isEmpty) {
       return originDate;
     }
 
-    var displayedDate = originDate;
+    var pillTakenDate = originDate;
     for (final restDuration in restDurations) {
       final restDurationBeginDate = restDuration.beginDate.date();
       final restDurationEndDate = restDuration.endDate?.date();
@@ -169,18 +182,22 @@ class PillSheet with _$PillSheet {
       if (restDurationEndDate != null && isSameDay(restDurationBeginDate, restDurationEndDate)) {
         continue;
       }
-      if (displayedDate.isBefore(restDurationBeginDate)) {
+      if (pillTakenDate.isBefore(restDurationBeginDate)) {
         continue;
       }
 
       if (restDurationEndDate != null) {
-        displayedDate = displayedDate.add(Duration(days: daysBetween(restDurationBeginDate, restDurationEndDate)));
+        pillTakenDate = pillTakenDate.add(Duration(days: daysBetween(restDurationBeginDate, restDurationEndDate)));
       } else {
-        displayedDate = displayedDate.add(Duration(days: daysBetween(restDurationBeginDate, today())));
+        pillTakenDate = pillTakenDate.add(Duration(days: daysBetween(restDurationBeginDate, today())));
       }
     }
 
-    return displayedDate;
+    return pillTakenDate;
+  }
+
+  int pillNumberFor({required DateTime targetDate}) {
+    return daysBetween(beginingDate.date(), targetDate) - summarizedRestDuration(restDurations: restDurations, upperDate: targetDate) + 1;
   }
 }
 
@@ -206,13 +223,4 @@ int summarizedRestDuration({
 
     return daysBetween(e.beginDate, endDate);
   }).reduce((value, element) => value + element);
-}
-
-int pillSheetPillNumber({
-  required PillSheet pillSheet,
-  required DateTime targetDate,
-}) {
-  return daysBetween(pillSheet.beginingDate.date(), targetDate) -
-      summarizedRestDuration(restDurations: pillSheet.restDurations, upperDate: targetDate) +
-      1;
 }

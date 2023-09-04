@@ -26,19 +26,20 @@ void main() {
       when(mockTodayRepository.now()).thenReturn(mockToday);
       when(mockTodayRepository.now()).thenReturn(mockToday);
 
-      final pillSheetEntity = PillSheet.create(PillSheetType.pillsheet_21).copyWith(
-        beginingDate: DateTime.parse("2020-11-21"),
+      final pillSheetEntity = PillSheet.create(
+        PillSheetType.pillsheet_21,
+        beginDate: DateTime.parse("2020-11-21"),
         lastTakenDate: DateTime.parse("2020-11-23"),
-        createdAt: DateTime.parse("2020-11-21"),
       );
       final pillSheetGroup = PillSheetGroup(pillSheetIDs: ["1"], pillSheets: [pillSheetEntity], createdAt: now());
 
       await waitForResetStoreState();
+      expect(pillSheetGroup.pillSheets.first.todayPillNumber, pillSheetGroup.pillSheets.first.lastTakenPillNumber);
       expect(pillSheetGroup.pillSheets.first.todayPillIsAlreadyTaken, isTrue);
-      expect(pillMarkFor(pillNumberIntoPillSheet: 1, pillSheet: pillSheetEntity), PillMarkType.done);
-      expect(pillMarkFor(pillNumberIntoPillSheet: 2, pillSheet: pillSheetEntity), PillMarkType.done);
-      expect(pillMarkFor(pillNumberIntoPillSheet: 3, pillSheet: pillSheetEntity), PillMarkType.done);
-      expect(pillMarkFor(pillNumberIntoPillSheet: 4, pillSheet: pillSheetEntity), PillMarkType.normal);
+      expect(pillMarkFor(pillNumberInPillSheet: 1, pillSheet: pillSheetEntity), PillMarkType.done);
+      expect(pillMarkFor(pillNumberInPillSheet: 2, pillSheet: pillSheetEntity), PillMarkType.done);
+      expect(pillMarkFor(pillNumberInPillSheet: 3, pillSheet: pillSheetEntity), PillMarkType.done);
+      expect(pillMarkFor(pillNumberInPillSheet: 4, pillSheet: pillSheetEntity), PillMarkType.normal);
     });
     test("it is not taken all", () async {
       final mockTodayRepository = MockTodayService();
@@ -47,19 +48,19 @@ void main() {
       when(mockTodayRepository.now()).thenReturn(mockToday);
       when(mockTodayRepository.now()).thenReturn(mockToday);
 
-      final pillSheetEntity = PillSheet.create(PillSheetType.pillsheet_21).copyWith(
-        beginingDate: DateTime.parse("2020-11-21"),
+      final pillSheetEntity = PillSheet.create(
+        PillSheetType.pillsheet_21,
+        beginDate: DateTime.parse("2020-11-21"),
         lastTakenDate: DateTime.parse("2020-11-22"),
-        createdAt: DateTime.parse("2020-11-21"),
       );
       final pillSheetGroup = PillSheetGroup(pillSheetIDs: ["1"], pillSheets: [pillSheetEntity], createdAt: now());
 
       await waitForResetStoreState();
       expect(pillSheetGroup.pillSheets.first.todayPillIsAlreadyTaken, isFalse);
-      expect(pillMarkFor(pillNumberIntoPillSheet: 1, pillSheet: pillSheetEntity), PillMarkType.done);
-      expect(pillMarkFor(pillNumberIntoPillSheet: 2, pillSheet: pillSheetEntity), PillMarkType.done);
-      expect(pillMarkFor(pillNumberIntoPillSheet: 3, pillSheet: pillSheetEntity), PillMarkType.normal);
-      expect(pillMarkFor(pillNumberIntoPillSheet: 4, pillSheet: pillSheetEntity), PillMarkType.normal);
+      expect(pillMarkFor(pillNumberInPillSheet: 1, pillSheet: pillSheetEntity), PillMarkType.done);
+      expect(pillMarkFor(pillNumberInPillSheet: 2, pillSheet: pillSheetEntity), PillMarkType.done);
+      expect(pillMarkFor(pillNumberInPillSheet: 3, pillSheet: pillSheetEntity), PillMarkType.normal);
+      expect(pillMarkFor(pillNumberInPillSheet: 4, pillSheet: pillSheetEntity), PillMarkType.normal);
     });
   });
   group("#shouldPillMarkAnimation", () {
@@ -70,10 +71,10 @@ void main() {
       when(mockTodayRepository.now()).thenReturn(mockToday);
       when(mockTodayRepository.now()).thenReturn(mockToday);
 
-      final pillSheetEntity = PillSheet.create(PillSheetType.pillsheet_21).copyWith(
-        beginingDate: DateTime.parse("2020-11-21"),
+      final pillSheetEntity = PillSheet.create(
+        PillSheetType.pillsheet_21,
+        beginDate: DateTime.parse("2020-11-21"),
         lastTakenDate: DateTime.parse("2020-11-23"),
-        createdAt: DateTime.parse("2020-11-21"),
       );
       final pillSheetGroup = PillSheetGroup(pillSheetIDs: ["1"], pillSheets: [pillSheetEntity], createdAt: now());
       await waitForResetStoreState();
@@ -81,7 +82,7 @@ void main() {
       for (int i = 1; i <= pillSheetEntity.pillSheetType.totalCount; i++) {
         expect(
             shouldPillMarkAnimation(
-              pillNumberIntoPillSheet: i,
+              pillNumberInPillSheet: i,
               pillSheet: pillSheetEntity,
               pillSheetGroup: pillSheetGroup,
             ),
@@ -95,10 +96,10 @@ void main() {
       when(mockTodayRepository.now()).thenReturn(mockToday);
       when(mockTodayRepository.now()).thenReturn(mockToday);
 
-      final pillSheetEntity = PillSheet.create(PillSheetType.pillsheet_21).copyWith(
-        beginingDate: DateTime.parse("2020-11-21"),
+      final pillSheetEntity = PillSheet.create(
+        PillSheetType.pillsheet_21,
+        beginDate: DateTime.parse("2020-11-21"),
         lastTakenDate: DateTime.parse("2020-11-22"),
-        createdAt: DateTime.parse("2020-11-21"),
       );
       final pillSheetGroup = PillSheetGroup(pillSheetIDs: ["1"], pillSheets: [pillSheetEntity], createdAt: now());
 
@@ -106,7 +107,7 @@ void main() {
       expect(pillSheetGroup.pillSheets.first.todayPillIsAlreadyTaken, isFalse);
       expect(
           shouldPillMarkAnimation(
-            pillNumberIntoPillSheet: 3,
+            pillNumberInPillSheet: 3,
             pillSheet: pillSheetEntity,
             pillSheetGroup: pillSheetGroup,
           ),
