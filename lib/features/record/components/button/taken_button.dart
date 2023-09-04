@@ -50,7 +50,7 @@ class TakenButton extends HookConsumerWidget {
             final updatedPillSheetGroup = await takePill(
               takenDate: now(),
               pillSheetGroup: pillSheetGroup,
-              activedPillSheet: activePillSheet,
+              activePillSheet: activePillSheet,
               isQuickRecord: false,
             );
             syncActivePillSheetValue(pillSheetGroup: updatedPillSheetGroup);

@@ -68,6 +68,7 @@ void main() {
       createdAt: now(),
     );
 
+    expect(true, pillSheet.todayPillIsAlreadyTaken);
     await tester.pumpWidget(
       ProviderScope(
         overrides: [

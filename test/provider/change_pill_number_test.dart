@@ -8,14 +8,14 @@ import 'package:pilll/provider/change_pill_number.dart';
 import 'package:pilll/utils/datetime/day.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
-import '../../../../helper/mock.mocks.dart';
+import '../helper/mock.mocks.dart';
 
 void main() {
   setUp(() {
     TestWidgetsFlutterBinding.ensureInitialized();
     SharedPreferences.setMockInitialValues({});
   });
-  group("#modifiyTodayPillNumber", () {
+  group("#changePillNumber", () {
     test("group has only one pill sheet and it is not yet taken", () async {
       var mockTodayRepository = MockTodayService();
       final mockToday = DateTime.parse("2020-09-19");
@@ -35,12 +35,8 @@ void main() {
         createdAt: now(),
       );
       final updatedPillSheet = pillSheet.copyWith(
-        beginingDate: mockToday.subtract(
-          const Duration(days: 1),
-        ),
-        lastTakenDate: mockToday.subtract(
-          const Duration(days: 1),
-        ),
+        beginingDate: mockToday.subtract(const Duration(days: 1)),
+        lastTakenDate: mockToday.subtract(const Duration(days: 1)),
       );
 
       final pillSheetGroup = PillSheetGroup(
@@ -59,6 +55,8 @@ void main() {
         pillSheetGroupID: "group_id",
         before: pillSheet,
         after: updatedPillSheet,
+        beforePillSheetGroup: pillSheetGroup,
+        afterPillSheetGroup: updatedPillSheetGroup,
       );
 
       final batchSetPillSheetModifiedHistory = MockBatchSetPillSheetModifiedHistory();
@@ -74,7 +72,7 @@ void main() {
 
       await changePillNumber(
         pillSheetGroup: pillSheetGroup,
-        activedPillSheet: pillSheetGroup.activedPillSheet!,
+        activePillSheet: pillSheetGroup.activePillSheet!,
         pillSheetPageIndex: 0,
         pillNumberInPillSheet: 2,
       );
@@ -84,7 +82,6 @@ void main() {
       var mockTodayRepository = MockTodayService();
       final mockToday = DateTime.parse("2020-09-19");
       todayRepository = mockTodayRepository;
-      when(mockTodayRepository.now()).thenReturn(mockToday);
       when(mockTodayRepository.now()).thenReturn(mockToday);
 
       final batchFactory = MockBatchFactory();
@@ -123,6 +120,8 @@ void main() {
         pillSheetGroupID: "group_id",
         before: pillSheet,
         after: updatedPillSheet,
+        beforePillSheetGroup: pillSheetGroup,
+        afterPillSheetGroup: updatedPillSheetGroup,
       );
 
       final batchSetPillSheetModifiedHistory = MockBatchSetPillSheetModifiedHistory();
@@ -138,7 +137,7 @@ void main() {
 
       await changePillNumber(
         pillSheetGroup: pillSheetGroup,
-        activedPillSheet: pillSheetGroup.activedPillSheet!,
+        activePillSheet: pillSheetGroup.activePillSheet!,
         pillSheetPageIndex: 0,
         pillNumberInPillSheet: 2,
       );
@@ -211,6 +210,8 @@ void main() {
         pillSheetGroupID: "group_id",
         before: middle,
         after: updatedLeft,
+        beforePillSheetGroup: pillSheetGroup,
+        afterPillSheetGroup: updatedPillSheetGroup,
       );
 
       final batchSetPillSheetModifiedHistory = MockBatchSetPillSheetModifiedHistory();
@@ -226,7 +227,7 @@ void main() {
 
       await changePillNumber(
         pillSheetGroup: pillSheetGroup,
-        activedPillSheet: pillSheetGroup.activedPillSheet!,
+        activePillSheet: pillSheetGroup.activePillSheet!,
         pillSheetPageIndex: 0,
         pillNumberInPillSheet: 28,
       );
@@ -275,6 +276,7 @@ void main() {
       );
       final updatedRight = right.copyWith(
         beginingDate: DateTime.parse("2022-05-30"),
+        lastTakenDate: null,
       );
 
       final pillSheetGroup = PillSheetGroup(
@@ -299,6 +301,8 @@ void main() {
         pillSheetGroupID: "group_id",
         before: middle,
         after: updatedLeft,
+        beforePillSheetGroup: pillSheetGroup,
+        afterPillSheetGroup: updatedPillSheetGroup,
       );
 
       final batchSetPillSheetModifiedHistory = MockBatchSetPillSheetModifiedHistory();
@@ -314,7 +318,7 @@ void main() {
 
       await changePillNumber(
         pillSheetGroup: pillSheetGroup,
-        activedPillSheet: pillSheetGroup.activedPillSheet!,
+        activePillSheet: pillSheetGroup.activePillSheet!,
         pillSheetPageIndex: 0,
         pillNumberInPillSheet: 28,
       );
@@ -388,6 +392,8 @@ void main() {
         pillSheetGroupID: "group_id",
         before: middle,
         after: updatedRight,
+        beforePillSheetGroup: pillSheetGroup,
+        afterPillSheetGroup: updatedPillSheetGroup,
       );
 
       final batchSetPillSheetModifiedHistory = MockBatchSetPillSheetModifiedHistory();
@@ -403,7 +409,7 @@ void main() {
 
       await changePillNumber(
         pillSheetGroup: pillSheetGroup,
-        activedPillSheet: pillSheetGroup.activedPillSheet!,
+        activePillSheet: pillSheetGroup.activePillSheet!,
         pillSheetPageIndex: 2,
         pillNumberInPillSheet: 1,
       );
@@ -485,6 +491,8 @@ void main() {
         pillSheetGroupID: "group_id",
         before: middle,
         after: updatedLeft,
+        beforePillSheetGroup: pillSheetGroup,
+        afterPillSheetGroup: updatedPillSheetGroup,
       );
 
       final batchSetPillSheetModifiedHistory = MockBatchSetPillSheetModifiedHistory();
@@ -499,7 +507,7 @@ void main() {
       expect(middle.todayPillNumber, 1);
       await changePillNumber(
         pillSheetGroup: pillSheetGroup,
-        activedPillSheet: pillSheetGroup.activedPillSheet!,
+        activePillSheet: pillSheetGroup.activePillSheet!,
         pillSheetPageIndex: 0,
         pillNumberInPillSheet: 28,
       );

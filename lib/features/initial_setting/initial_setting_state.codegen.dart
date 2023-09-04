@@ -67,19 +67,22 @@ class InitialSettingState with _$InitialSettingState {
     required List<PillSheetType> pillSheetTypes,
   }) {
     final pillSheetType = pillSheetTypes[pageIndex];
+    final beginDate = _beginingDate(
+      pageIndex: pageIndex,
+      todayPillNumber: todayPillNumber,
+      pillSheetTypes: pillSheetTypes,
+    );
+    final lastTakenDate = _lastTakenDate(
+      pageIndex: pageIndex,
+      todayPillNumber: todayPillNumber,
+      pillSheetTypes: pillSheetTypes,
+    );
+
     return PillSheet(
       id: firestoreIDGenerator(),
       groupIndex: pageIndex,
-      beginingDate: _beginingDate(
-        pageIndex: pageIndex,
-        todayPillNumber: todayPillNumber,
-        pillSheetTypes: pillSheetTypes,
-      ),
-      lastTakenDate: _lastTakenDate(
-        pageIndex: pageIndex,
-        todayPillNumber: todayPillNumber,
-        pillSheetTypes: pillSheetTypes,
-      ),
+      beginingDate: beginDate,
+      lastTakenDate: lastTakenDate,
       typeInfo: pillSheetType.typeInfo,
       createdAt: now(),
     );

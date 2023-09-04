@@ -124,7 +124,7 @@ class RecordPageBody extends HookConsumerWidget {
   @override
   Widget build(BuildContext context, WidgetRef ref) {
     final pillSheetGroup = this.pillSheetGroup;
-    final activePillSheet = pillSheetGroup?.activedPillSheet;
+    final activePillSheet = pillSheetGroup?.activePillSheet;
 
     return Scaffold(
       backgroundColor: PilllColors.background,
@@ -169,8 +169,8 @@ class RecordPageBody extends HookConsumerWidget {
 
   Widget _content(BuildContext context) {
     final pillSheetGroup = this.pillSheetGroup;
-    final activedPillSheet = pillSheetGroup?.activedPillSheet;
-    if (activedPillSheet == null || pillSheetGroup == null || pillSheetGroup.isDeactived) {
+    final activePillSheet = pillSheetGroup?.activePillSheet;
+    if (activePillSheet == null || pillSheetGroup == null || pillSheetGroup.isDeactived) {
       return AddPillSheetGroupEmptyFrame(
         context: context,
         pillSheetGroup: pillSheetGroup,
@@ -182,14 +182,14 @@ class RecordPageBody extends HookConsumerWidget {
         children: [
           RecordPagePillSheetSupportActions(
             pillSheetGroup: pillSheetGroup,
-            activedPillSheet: activedPillSheet,
+            activePillSheet: activePillSheet,
             setting: setting,
             premiumAndTrial: premiumAndTrial,
           ),
           const SizedBox(height: 16),
           RecordPagePillSheetList(
             pillSheetGroup: pillSheetGroup,
-            activePillSheet: activedPillSheet,
+            activePillSheet: activePillSheet,
             setting: setting,
             premiumAndTrial: premiumAndTrial,
           ),

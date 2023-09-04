@@ -86,7 +86,11 @@ class PillSheetModifiedHistoryTakenPillAction extends HookConsumerWidget {
       },
       child: RowLayout(
         day: Day(estimatedEventCausingDate: estimatedEventCausingDate),
-        effectiveNumbersOrHyphen: EffectivePillNumber(effectivePillNumber: PillSheetModifiedHistoryDateEffectivePillNumber.taken(value)),
+        effectiveNumbersOrHyphen: EffectivePillNumber(
+            effectivePillNumber: PillSheetModifiedHistoryDateEffectivePillNumber.taken(
+          beforeLastTakenPillNumber: beforePillSheet.lastTakenPillNumber,
+          afterLastTakenPillNumber: afterPillSheet.lastTakenPillNumber,
+        )),
         detail: Time(time: time),
         takenPillActionOList: TakenPillActionOList(
           value: value,
