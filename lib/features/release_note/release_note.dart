@@ -109,12 +109,13 @@ void showReleaseNotePreDialog(BuildContext context) async {
   }
   await storage.setBool(key, true);
 
-  // ignore: use_build_context_synchronously
-  showDialog(
-      context: context,
-      builder: (context) {
-        return const ReleaseNote();
-      });
+  if (context.mounted) {
+    showDialog(
+        context: context,
+        builder: (context) {
+          return const ReleaseNote();
+        });
+  }
 }
 
 void openReleaseNote() async {
