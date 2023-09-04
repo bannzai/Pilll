@@ -117,7 +117,7 @@ class RecordPageRestDurationDialogTitle extends StatelessWidget {
       case PillSheetAppearanceMode.number:
         return "${activePillSheet.lastTakenPillNumber + 1}番";
       case PillSheetAppearanceMode.date:
-        final date = activePillSheet.pillTakenDateFromPillNumber(activePillSheet.lastTakenPillNumber + 1);
+        final date = activePillSheet.displayPillTakeDate(activePillSheet.lastTakenPillNumber + 1);
         final dateString = DateTimeFormatter.monthAndDay(date);
         return dateString;
       case PillSheetAppearanceMode.sequential:

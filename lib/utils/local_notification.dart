@@ -154,7 +154,7 @@ class RegisterReminderLocalNotification {
   // - 休薬期間の通知のON/OFF
   // - 休薬終了後
   // - 初期設定完了後
-  // - FIXME: サインイン → HomePageで通知を登録しなおしているが、必要なエンティティの読み込みよりも先に行われる時がある。だが、ニッチなケースなので一回無視。何かアクションが起きたら登録しなおされるし
+  // - NOTE: サインイン → HomePageで通知を登録しなおしているが、必要なエンティティの読み込みよりも先に行われる時がある。だが、ニッチなケースなので一回無視。何かアクションが起きたら登録しなおされるし
   // - 番号変更後
   // - リマインダーの通知がOFF->ONになった時
   // - 連番モードで服用日数の表示を変更した時
@@ -344,7 +344,7 @@ class RegisterReminderLocalNotification {
                       presentSound: true,
                     ),
                   ),
-                  androidAllowWhileIdle: true,
+                  androidScheduleMode: AndroidScheduleMode.exactAllowWhileIdle,
                   uiLocalNotificationDateInterpretation: UILocalNotificationDateInterpretation.absoluteTime,
                 );
               } catch (e, st) {
@@ -457,7 +457,7 @@ extension ScheduleLocalNotificationService on LocalNotificationService {
             sound: "becho.caf",
           ),
         ),
-        androidAllowWhileIdle: true,
+        androidScheduleMode: AndroidScheduleMode.exactAllowWhileIdle,
         uiLocalNotificationDateInterpretation: UILocalNotificationDateInterpretation.absoluteTime,
       );
     }

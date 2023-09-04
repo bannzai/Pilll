@@ -17,8 +17,8 @@ class QuickRecordRow extends StatelessWidget {
   Widget build(BuildContext context) {
     return ListTile(
       minVerticalPadding: 9,
-      title: Row(
-        children: const [
+      title: const Row(
+        children: [
           Text("クイックレコード",
               style: TextStyle(
                 fontFamily: FontFamily.roboto,

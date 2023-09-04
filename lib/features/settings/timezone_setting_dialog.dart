@@ -77,7 +77,7 @@ class TimezoneSettingDialog extends HookConsumerWidget {
               await setSetting(setting.copyWith(timezoneDatabaseName: deviceTimezoneName));
               onDone(deviceTimezoneName);
             } catch (error) {
-              showErrorAlert(context, error);
+              if (context.mounted) showErrorAlert(context, error);
             }
             navigator.pop();
           },

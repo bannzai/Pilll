@@ -113,7 +113,7 @@ class SignInSheet extends HookConsumerWidget {
               return;
           }
         } catch (error) {
-          showErrorAlert(context, error);
+          if (context.mounted) showErrorAlert(context, error);
         } finally {
           isLoading.value = false;
         }
@@ -176,7 +176,7 @@ class SignInSheet extends HookConsumerWidget {
               return;
           }
         } catch (error) {
-          showErrorAlert(context, error);
+          if (context.mounted) showErrorAlert(context, error);
         } finally {
           isLoading.value = false;
         }

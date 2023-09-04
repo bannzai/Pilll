@@ -18,9 +18,8 @@ void main() {
     Environment.isTest = true;
   });
   group("for check appearance pill mark types", () {
-    testWidgets('pill sheet types has rest duration',
-        (WidgetTester tester) async {
-      SupportedDeviceType.iPhone5SE2nd.binding(tester.binding.window);
+    testWidgets('pill sheet types has rest duration', (WidgetTester tester) async {
+      SupportedDeviceType.iPhone5SE2nd.binding(tester.view);
 
       const pillSheetType = PillSheetType.pillsheet_21;
       final widget = SettingPillSheetView(
@@ -39,15 +38,12 @@ void main() {
       );
       await tester.pumpAndSettle(const Duration(milliseconds: 500));
 
-      expect(find.byWidgetPredicate((widget) => widget is NormalPillMark),
-          findsNWidgets(21));
-      expect(find.byWidgetPredicate((widget) => widget is RestPillMark),
-          findsNWidgets(7));
+      expect(find.byWidgetPredicate((widget) => widget is NormalPillMark), findsNWidgets(21));
+      expect(find.byWidgetPredicate((widget) => widget is RestPillMark), findsNWidgets(7));
     });
 
-    testWidgets('pill sheet types has fake duration',
-        (WidgetTester tester) async {
-      SupportedDeviceType.iPhone5SE2nd.binding(tester.binding.window);
+    testWidgets('pill sheet types has fake duration', (WidgetTester tester) async {
+      SupportedDeviceType.iPhone5SE2nd.binding(tester.view);
 
       const pillSheetType = PillSheetType.pillsheet_28_4;
       final widget = SettingPillSheetView(
@@ -66,15 +62,12 @@ void main() {
       );
       await tester.pumpAndSettle(const Duration(milliseconds: 500));
 
-      expect(find.byWidgetPredicate((widget) => widget is NormalPillMark),
-          findsNWidgets(24));
-      expect(find.byWidgetPredicate((widget) => widget is FakePillMark),
-          findsNWidgets(4));
+      expect(find.byWidgetPredicate((widget) => widget is NormalPillMark), findsNWidgets(24));
+      expect(find.byWidgetPredicate((widget) => widget is FakePillMark), findsNWidgets(4));
     });
 
-    testWidgets('pill sheet types only normal type',
-        (WidgetTester tester) async {
-      SupportedDeviceType.iPhone5SE2nd.binding(tester.binding.window);
+    testWidgets('pill sheet types only normal type', (WidgetTester tester) async {
+      SupportedDeviceType.iPhone5SE2nd.binding(tester.view);
 
       const pillSheetType = PillSheetType.pillsheet_28_0;
       final widget = SettingPillSheetView(
@@ -93,14 +86,12 @@ void main() {
       );
       await tester.pumpAndSettle(const Duration(milliseconds: 500));
 
-      expect(find.byWidgetPredicate((widget) => widget is NormalPillMark),
-          findsNWidgets(27));
-      expect(find.byWidgetPredicate((widget) => widget is SelectedPillMark),
-          findsNWidgets(1));
+      expect(find.byWidgetPredicate((widget) => widget is NormalPillMark), findsNWidgets(27));
+      expect(find.byWidgetPredicate((widget) => widget is SelectedPillMark), findsNWidgets(1));
     });
 
     testWidgets('exists selected pill number', (WidgetTester tester) async {
-      SupportedDeviceType.iPhone5SE2nd.binding(tester.binding.window);
+      SupportedDeviceType.iPhone5SE2nd.binding(tester.view);
 
       const pillSheetType = PillSheetType.pillsheet_28_0;
       final widget = SettingPillSheetView(
@@ -119,8 +110,7 @@ void main() {
       );
       await tester.pumpAndSettle(const Duration(milliseconds: 500));
 
-      expect(find.byWidgetPredicate((widget) => widget is NormalPillMark),
-          findsNWidgets(28));
+      expect(find.byWidgetPredicate((widget) => widget is NormalPillMark), findsNWidgets(28));
     });
   });
 }

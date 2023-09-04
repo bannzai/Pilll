@@ -69,7 +69,7 @@ class PurchaseButtons extends HookConsumerWidget {
       }
     } catch (error) {
       debugPrint("caused purchase error for $error");
-      showErrorAlert(context, error);
+      if (context.mounted) showErrorAlert(context, error);
     } finally {
       isLoading.value = false;
     }

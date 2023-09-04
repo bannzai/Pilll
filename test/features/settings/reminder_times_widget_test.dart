@@ -22,7 +22,7 @@ void main() {
   });
   group("appearance widgets dependend on reminderTimes", () {
     testWidgets('when setting has one reminder times. one reminder times mean requires minimum count', (WidgetTester tester) async {
-      SupportedDeviceType.iPhone5SE2nd.binding(tester.binding.window);
+      SupportedDeviceType.iPhone5SE2nd.binding(tester.view);
 
       const setting = Setting(
         pillNumberForFromMenstruation: 22,
@@ -51,7 +51,7 @@ void main() {
       expect(find.byWidgetPredicate((widget) => widget is Dismissible), findsNothing);
     });
     testWidgets('when setting has maximum count reminder times︎', (WidgetTester tester) async {
-      SupportedDeviceType.iPhone5SE2nd.binding(tester.binding.window);
+      SupportedDeviceType.iPhone5SE2nd.binding(tester.view);
 
       const setting = Setting(
         pillNumberForFromMenstruation: 22,

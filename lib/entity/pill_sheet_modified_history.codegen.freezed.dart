@@ -80,17 +80,22 @@ abstract class $PillSheetModifiedHistoryCopyWith<$Res> {
   @useResult
   $Res call(
       {dynamic version,
-      @JsonKey(includeIfNull: false, toJson: toNull)
-          String? id,
+      @JsonKey(includeIfNull: false, toJson: toNull) String? id,
       String actionType,
-      @JsonKey(fromJson: NonNullTimestampConverter.timestampToDateTime, toJson: NonNullTimestampConverter.dateTimeToTimestamp)
-          DateTime estimatedEventCausingDate,
-      @JsonKey(fromJson: NonNullTimestampConverter.timestampToDateTime, toJson: NonNullTimestampConverter.dateTimeToTimestamp)
-          DateTime createdAt,
+      @JsonKey(
+          fromJson: NonNullTimestampConverter.timestampToDateTime,
+          toJson: NonNullTimestampConverter.dateTimeToTimestamp)
+      DateTime estimatedEventCausingDate,
+      @JsonKey(
+          fromJson: NonNullTimestampConverter.timestampToDateTime,
+          toJson: NonNullTimestampConverter.dateTimeToTimestamp)
+      DateTime createdAt,
       PillSheetGroup? beforePillSheetGroup,
       PillSheetGroup? afterPillSheetGroup,
-      @JsonKey(fromJson: TimestampConverter.timestampToDateTime, toJson: TimestampConverter.dateTimeToTimestamp)
-          DateTime? timeToLive,
+      @JsonKey(
+          fromJson: TimestampConverter.timestampToDateTime,
+          toJson: TimestampConverter.dateTimeToTimestamp)
+      DateTime? timeToLive,
       PillSheetModifiedHistoryValue value,
       String? pillSheetID,
       String? pillSheetGroupID,
@@ -268,17 +273,22 @@ abstract class _$$_PillSheetModifiedHistoryCopyWith<$Res>
   @useResult
   $Res call(
       {dynamic version,
-      @JsonKey(includeIfNull: false, toJson: toNull)
-          String? id,
+      @JsonKey(includeIfNull: false, toJson: toNull) String? id,
       String actionType,
-      @JsonKey(fromJson: NonNullTimestampConverter.timestampToDateTime, toJson: NonNullTimestampConverter.dateTimeToTimestamp)
-          DateTime estimatedEventCausingDate,
-      @JsonKey(fromJson: NonNullTimestampConverter.timestampToDateTime, toJson: NonNullTimestampConverter.dateTimeToTimestamp)
-          DateTime createdAt,
+      @JsonKey(
+          fromJson: NonNullTimestampConverter.timestampToDateTime,
+          toJson: NonNullTimestampConverter.dateTimeToTimestamp)
+      DateTime estimatedEventCausingDate,
+      @JsonKey(
+          fromJson: NonNullTimestampConverter.timestampToDateTime,
+          toJson: NonNullTimestampConverter.dateTimeToTimestamp)
+      DateTime createdAt,
       PillSheetGroup? beforePillSheetGroup,
       PillSheetGroup? afterPillSheetGroup,
-      @JsonKey(fromJson: TimestampConverter.timestampToDateTime, toJson: TimestampConverter.dateTimeToTimestamp)
-          DateTime? timeToLive,
+      @JsonKey(
+          fromJson: TimestampConverter.timestampToDateTime,
+          toJson: TimestampConverter.dateTimeToTimestamp)
+      DateTime? timeToLive,
       PillSheetModifiedHistoryValue value,
       String? pillSheetID,
       String? pillSheetGroupID,
@@ -395,17 +405,22 @@ class __$$_PillSheetModifiedHistoryCopyWithImpl<$Res>
 class _$_PillSheetModifiedHistory extends _PillSheetModifiedHistory {
   const _$_PillSheetModifiedHistory(
       {this.version = "v1",
-      @JsonKey(includeIfNull: false, toJson: toNull)
-          required this.id,
+      @JsonKey(includeIfNull: false, toJson: toNull) required this.id,
       required this.actionType,
-      @JsonKey(fromJson: NonNullTimestampConverter.timestampToDateTime, toJson: NonNullTimestampConverter.dateTimeToTimestamp)
-          required this.estimatedEventCausingDate,
-      @JsonKey(fromJson: NonNullTimestampConverter.timestampToDateTime, toJson: NonNullTimestampConverter.dateTimeToTimestamp)
-          required this.createdAt,
+      @JsonKey(
+          fromJson: NonNullTimestampConverter.timestampToDateTime,
+          toJson: NonNullTimestampConverter.dateTimeToTimestamp)
+      required this.estimatedEventCausingDate,
+      @JsonKey(
+          fromJson: NonNullTimestampConverter.timestampToDateTime,
+          toJson: NonNullTimestampConverter.dateTimeToTimestamp)
+      required this.createdAt,
       required this.beforePillSheetGroup,
       required this.afterPillSheetGroup,
-      @JsonKey(fromJson: TimestampConverter.timestampToDateTime, toJson: TimestampConverter.dateTimeToTimestamp)
-          this.timeToLive,
+      @JsonKey(
+          fromJson: TimestampConverter.timestampToDateTime,
+          toJson: TimestampConverter.dateTimeToTimestamp)
+      this.timeToLive,
       required this.value,
       required this.pillSheetID,
       required this.pillSheetGroupID,
@@ -554,17 +569,22 @@ class _$_PillSheetModifiedHistory extends _PillSheetModifiedHistory {
 abstract class _PillSheetModifiedHistory extends PillSheetModifiedHistory {
   const factory _PillSheetModifiedHistory(
       {final dynamic version,
-      @JsonKey(includeIfNull: false, toJson: toNull)
-          required final String? id,
+      @JsonKey(includeIfNull: false, toJson: toNull) required final String? id,
       required final String actionType,
-      @JsonKey(fromJson: NonNullTimestampConverter.timestampToDateTime, toJson: NonNullTimestampConverter.dateTimeToTimestamp)
-          required final DateTime estimatedEventCausingDate,
-      @JsonKey(fromJson: NonNullTimestampConverter.timestampToDateTime, toJson: NonNullTimestampConverter.dateTimeToTimestamp)
-          required final DateTime createdAt,
+      @JsonKey(
+          fromJson: NonNullTimestampConverter.timestampToDateTime,
+          toJson: NonNullTimestampConverter.dateTimeToTimestamp)
+      required final DateTime estimatedEventCausingDate,
+      @JsonKey(
+          fromJson: NonNullTimestampConverter.timestampToDateTime,
+          toJson: NonNullTimestampConverter.dateTimeToTimestamp)
+      required final DateTime createdAt,
       required final PillSheetGroup? beforePillSheetGroup,
       required final PillSheetGroup? afterPillSheetGroup,
-      @JsonKey(fromJson: TimestampConverter.timestampToDateTime, toJson: TimestampConverter.dateTimeToTimestamp)
-          final DateTime? timeToLive,
+      @JsonKey(
+          fromJson: TimestampConverter.timestampToDateTime,
+          toJson: TimestampConverter.dateTimeToTimestamp)
+      final DateTime? timeToLive,
       required final PillSheetModifiedHistoryValue value,
       required final String? pillSheetID,
       required final String? pillSheetGroupID,

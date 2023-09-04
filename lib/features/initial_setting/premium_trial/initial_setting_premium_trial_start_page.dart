@@ -3,7 +3,7 @@ import 'dart:io';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
-import 'package:pilll/provider/shared_preferences.dart';
+import 'package:pilll/provider/typed_shared_preferences.dart';
 import 'package:pilll/utils/analytics.dart';
 import 'package:pilll/components/atoms/button.dart';
 import 'package:pilll/components/atoms/color.dart';
@@ -46,8 +46,8 @@ class IntiialSettingPremiumTrialStartPage extends HookConsumerWidget {
                   child: Column(
                     children: [
                       const SizedBox(height: 1),
-                      Column(
-                        children: const [
+                      const Column(
+                        children: [
                           Text(
                             "\\ 通知から服用記録ができます /",
                             style: TextStyle(
@@ -139,7 +139,7 @@ class IntiialSettingPremiumTrialStartPage extends HookConsumerWidget {
                     await registerReminderLocalNotification.call();
                     await AppRouter.endInitialSetting(navigator, didEndInitialSettingNotifier);
                   } catch (error) {
-                    showErrorAlert(context, error.toString());
+                    if (context.mounted) showErrorAlert(context, error.toString());
                   }
                 },
               ),

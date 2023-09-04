@@ -631,8 +631,10 @@ abstract class $CreatedPillSheetValueCopyWith<$Res> {
       _$CreatedPillSheetValueCopyWithImpl<$Res, CreatedPillSheetValue>;
   @useResult
   $Res call(
-      {@JsonKey(fromJson: NonNullTimestampConverter.timestampToDateTime, toJson: NonNullTimestampConverter.dateTimeToTimestamp)
-          DateTime pillSheetCreatedAt,
+      {@JsonKey(
+          fromJson: NonNullTimestampConverter.timestampToDateTime,
+          toJson: NonNullTimestampConverter.dateTimeToTimestamp)
+      DateTime pillSheetCreatedAt,
       List<String> pillSheetIDs});
 }
 
@@ -675,8 +677,10 @@ abstract class _$$_CreatedPillSheetValueCopyWith<$Res>
   @override
   @useResult
   $Res call(
-      {@JsonKey(fromJson: NonNullTimestampConverter.timestampToDateTime, toJson: NonNullTimestampConverter.dateTimeToTimestamp)
-          DateTime pillSheetCreatedAt,
+      {@JsonKey(
+          fromJson: NonNullTimestampConverter.timestampToDateTime,
+          toJson: NonNullTimestampConverter.dateTimeToTimestamp)
+      DateTime pillSheetCreatedAt,
       List<String> pillSheetIDs});
 }
 
@@ -712,8 +716,10 @@ class __$$_CreatedPillSheetValueCopyWithImpl<$Res>
 @JsonSerializable(explicitToJson: true)
 class _$_CreatedPillSheetValue extends _CreatedPillSheetValue {
   const _$_CreatedPillSheetValue(
-      {@JsonKey(fromJson: NonNullTimestampConverter.timestampToDateTime, toJson: NonNullTimestampConverter.dateTimeToTimestamp)
-          required this.pillSheetCreatedAt,
+      {@JsonKey(
+          fromJson: NonNullTimestampConverter.timestampToDateTime,
+          toJson: NonNullTimestampConverter.dateTimeToTimestamp)
+      required this.pillSheetCreatedAt,
       final List<String> pillSheetIDs = const []})
       : _pillSheetIDs = pillSheetIDs,
         super._();
@@ -775,8 +781,10 @@ class _$_CreatedPillSheetValue extends _CreatedPillSheetValue {
 
 abstract class _CreatedPillSheetValue extends CreatedPillSheetValue {
   const factory _CreatedPillSheetValue(
-      {@JsonKey(fromJson: NonNullTimestampConverter.timestampToDateTime, toJson: NonNullTimestampConverter.dateTimeToTimestamp)
-          required final DateTime pillSheetCreatedAt,
+      {@JsonKey(
+          fromJson: NonNullTimestampConverter.timestampToDateTime,
+          toJson: NonNullTimestampConverter.dateTimeToTimestamp)
+      required final DateTime pillSheetCreatedAt,
       final List<String> pillSheetIDs}) = _$_CreatedPillSheetValue;
   const _CreatedPillSheetValue._() : super._();
 
@@ -834,10 +842,14 @@ abstract class $AutomaticallyRecordedLastTakenDateValueCopyWith<$Res> {
           AutomaticallyRecordedLastTakenDateValue>;
   @useResult
   $Res call(
-      {@JsonKey(fromJson: TimestampConverter.timestampToDateTime, toJson: TimestampConverter.dateTimeToTimestamp)
-          DateTime? beforeLastTakenDate,
-      @JsonKey(fromJson: NonNullTimestampConverter.timestampToDateTime, toJson: NonNullTimestampConverter.dateTimeToTimestamp)
-          DateTime afterLastTakenDate,
+      {@JsonKey(
+          fromJson: TimestampConverter.timestampToDateTime,
+          toJson: TimestampConverter.dateTimeToTimestamp)
+      DateTime? beforeLastTakenDate,
+      @JsonKey(
+          fromJson: NonNullTimestampConverter.timestampToDateTime,
+          toJson: NonNullTimestampConverter.dateTimeToTimestamp)
+      DateTime afterLastTakenDate,
       int beforeLastTakenPillNumber,
       int afterLastTakenPillNumber});
 }
@@ -893,10 +905,14 @@ abstract class _$$_AutomaticallyRecordedLastTakenDateValueCopyWith<$Res>
   @override
   @useResult
   $Res call(
-      {@JsonKey(fromJson: TimestampConverter.timestampToDateTime, toJson: TimestampConverter.dateTimeToTimestamp)
-          DateTime? beforeLastTakenDate,
-      @JsonKey(fromJson: NonNullTimestampConverter.timestampToDateTime, toJson: NonNullTimestampConverter.dateTimeToTimestamp)
-          DateTime afterLastTakenDate,
+      {@JsonKey(
+          fromJson: TimestampConverter.timestampToDateTime,
+          toJson: TimestampConverter.dateTimeToTimestamp)
+      DateTime? beforeLastTakenDate,
+      @JsonKey(
+          fromJson: NonNullTimestampConverter.timestampToDateTime,
+          toJson: NonNullTimestampConverter.dateTimeToTimestamp)
+      DateTime afterLastTakenDate,
       int beforeLastTakenPillNumber,
       int afterLastTakenPillNumber});
 }
@@ -946,10 +962,14 @@ class __$$_AutomaticallyRecordedLastTakenDateValueCopyWithImpl<$Res>
 class _$_AutomaticallyRecordedLastTakenDateValue
     extends _AutomaticallyRecordedLastTakenDateValue {
   const _$_AutomaticallyRecordedLastTakenDateValue(
-      {@JsonKey(fromJson: TimestampConverter.timestampToDateTime, toJson: TimestampConverter.dateTimeToTimestamp)
-          this.beforeLastTakenDate,
-      @JsonKey(fromJson: NonNullTimestampConverter.timestampToDateTime, toJson: NonNullTimestampConverter.dateTimeToTimestamp)
-          required this.afterLastTakenDate,
+      {@JsonKey(
+          fromJson: TimestampConverter.timestampToDateTime,
+          toJson: TimestampConverter.dateTimeToTimestamp)
+      this.beforeLastTakenDate,
+      @JsonKey(
+          fromJson: NonNullTimestampConverter.timestampToDateTime,
+          toJson: NonNullTimestampConverter.dateTimeToTimestamp)
+      required this.afterLastTakenDate,
       required this.beforeLastTakenPillNumber,
       required this.afterLastTakenPillNumber})
       : super._();
@@ -1021,12 +1041,17 @@ class _$_AutomaticallyRecordedLastTakenDateValue
 abstract class _AutomaticallyRecordedLastTakenDateValue
     extends AutomaticallyRecordedLastTakenDateValue {
   const factory _AutomaticallyRecordedLastTakenDateValue(
-      {@JsonKey(fromJson: TimestampConverter.timestampToDateTime, toJson: TimestampConverter.dateTimeToTimestamp)
+          {@JsonKey(
+              fromJson: TimestampConverter.timestampToDateTime,
+              toJson: TimestampConverter.dateTimeToTimestamp)
           final DateTime? beforeLastTakenDate,
-      @JsonKey(fromJson: NonNullTimestampConverter.timestampToDateTime, toJson: NonNullTimestampConverter.dateTimeToTimestamp)
+          @JsonKey(
+              fromJson: NonNullTimestampConverter.timestampToDateTime,
+              toJson: NonNullTimestampConverter.dateTimeToTimestamp)
           required final DateTime afterLastTakenDate,
-      required final int beforeLastTakenPillNumber,
-      required final int afterLastTakenPillNumber}) = _$_AutomaticallyRecordedLastTakenDateValue;
+          required final int beforeLastTakenPillNumber,
+          required final int afterLastTakenPillNumber}) =
+      _$_AutomaticallyRecordedLastTakenDateValue;
   const _AutomaticallyRecordedLastTakenDateValue._() : super._();
 
   factory _AutomaticallyRecordedLastTakenDateValue.fromJson(
@@ -1083,8 +1108,10 @@ abstract class $DeletedPillSheetValueCopyWith<$Res> {
       _$DeletedPillSheetValueCopyWithImpl<$Res, DeletedPillSheetValue>;
   @useResult
   $Res call(
-      {@JsonKey(fromJson: NonNullTimestampConverter.timestampToDateTime, toJson: NonNullTimestampConverter.dateTimeToTimestamp)
-          DateTime pillSheetDeletedAt,
+      {@JsonKey(
+          fromJson: NonNullTimestampConverter.timestampToDateTime,
+          toJson: NonNullTimestampConverter.dateTimeToTimestamp)
+      DateTime pillSheetDeletedAt,
       List<String> pillSheetIDs});
 }
 
@@ -1127,8 +1154,10 @@ abstract class _$$_DeletedPillSheetValueCopyWith<$Res>
   @override
   @useResult
   $Res call(
-      {@JsonKey(fromJson: NonNullTimestampConverter.timestampToDateTime, toJson: NonNullTimestampConverter.dateTimeToTimestamp)
-          DateTime pillSheetDeletedAt,
+      {@JsonKey(
+          fromJson: NonNullTimestampConverter.timestampToDateTime,
+          toJson: NonNullTimestampConverter.dateTimeToTimestamp)
+      DateTime pillSheetDeletedAt,
       List<String> pillSheetIDs});
 }
 
@@ -1164,8 +1193,10 @@ class __$$_DeletedPillSheetValueCopyWithImpl<$Res>
 @JsonSerializable(explicitToJson: true)
 class _$_DeletedPillSheetValue extends _DeletedPillSheetValue {
   const _$_DeletedPillSheetValue(
-      {@JsonKey(fromJson: NonNullTimestampConverter.timestampToDateTime, toJson: NonNullTimestampConverter.dateTimeToTimestamp)
-          required this.pillSheetDeletedAt,
+      {@JsonKey(
+          fromJson: NonNullTimestampConverter.timestampToDateTime,
+          toJson: NonNullTimestampConverter.dateTimeToTimestamp)
+      required this.pillSheetDeletedAt,
       final List<String> pillSheetIDs = const []})
       : _pillSheetIDs = pillSheetIDs,
         super._();
@@ -1227,8 +1258,10 @@ class _$_DeletedPillSheetValue extends _DeletedPillSheetValue {
 
 abstract class _DeletedPillSheetValue extends DeletedPillSheetValue {
   const factory _DeletedPillSheetValue(
-      {@JsonKey(fromJson: NonNullTimestampConverter.timestampToDateTime, toJson: NonNullTimestampConverter.dateTimeToTimestamp)
-          required final DateTime pillSheetDeletedAt,
+      {@JsonKey(
+          fromJson: NonNullTimestampConverter.timestampToDateTime,
+          toJson: NonNullTimestampConverter.dateTimeToTimestamp)
+      required final DateTime pillSheetDeletedAt,
       final List<String> pillSheetIDs}) = _$_DeletedPillSheetValue;
   const _DeletedPillSheetValue._() : super._();
 
@@ -1288,10 +1321,14 @@ abstract class $TakenPillValueCopyWith<$Res> {
   $Res call(
       {bool? isQuickRecord,
       TakenPillEditedValue? edited,
-      @JsonKey(fromJson: TimestampConverter.timestampToDateTime, toJson: TimestampConverter.dateTimeToTimestamp)
-          DateTime? beforeLastTakenDate,
-      @JsonKey(fromJson: NonNullTimestampConverter.timestampToDateTime, toJson: NonNullTimestampConverter.dateTimeToTimestamp)
-          DateTime afterLastTakenDate,
+      @JsonKey(
+          fromJson: TimestampConverter.timestampToDateTime,
+          toJson: TimestampConverter.dateTimeToTimestamp)
+      DateTime? beforeLastTakenDate,
+      @JsonKey(
+          fromJson: NonNullTimestampConverter.timestampToDateTime,
+          toJson: NonNullTimestampConverter.dateTimeToTimestamp)
+      DateTime afterLastTakenDate,
       int beforeLastTakenPillNumber,
       int afterLastTakenPillNumber});
 
@@ -1370,10 +1407,14 @@ abstract class _$$_TakenPillValueCopyWith<$Res>
   $Res call(
       {bool? isQuickRecord,
       TakenPillEditedValue? edited,
-      @JsonKey(fromJson: TimestampConverter.timestampToDateTime, toJson: TimestampConverter.dateTimeToTimestamp)
-          DateTime? beforeLastTakenDate,
-      @JsonKey(fromJson: NonNullTimestampConverter.timestampToDateTime, toJson: NonNullTimestampConverter.dateTimeToTimestamp)
-          DateTime afterLastTakenDate,
+      @JsonKey(
+          fromJson: TimestampConverter.timestampToDateTime,
+          toJson: TimestampConverter.dateTimeToTimestamp)
+      DateTime? beforeLastTakenDate,
+      @JsonKey(
+          fromJson: NonNullTimestampConverter.timestampToDateTime,
+          toJson: NonNullTimestampConverter.dateTimeToTimestamp)
+      DateTime afterLastTakenDate,
       int beforeLastTakenPillNumber,
       int afterLastTakenPillNumber});
 
@@ -1435,10 +1476,14 @@ class _$_TakenPillValue extends _TakenPillValue {
   const _$_TakenPillValue(
       {this.isQuickRecord,
       this.edited,
-      @JsonKey(fromJson: TimestampConverter.timestampToDateTime, toJson: TimestampConverter.dateTimeToTimestamp)
-          this.beforeLastTakenDate,
-      @JsonKey(fromJson: NonNullTimestampConverter.timestampToDateTime, toJson: NonNullTimestampConverter.dateTimeToTimestamp)
-          required this.afterLastTakenDate,
+      @JsonKey(
+          fromJson: TimestampConverter.timestampToDateTime,
+          toJson: TimestampConverter.dateTimeToTimestamp)
+      this.beforeLastTakenDate,
+      @JsonKey(
+          fromJson: NonNullTimestampConverter.timestampToDateTime,
+          toJson: NonNullTimestampConverter.dateTimeToTimestamp)
+      required this.afterLastTakenDate,
       required this.beforeLastTakenPillNumber,
       required this.afterLastTakenPillNumber})
       : super._();
@@ -1524,10 +1569,14 @@ abstract class _TakenPillValue extends TakenPillValue {
   const factory _TakenPillValue(
       {final bool? isQuickRecord,
       final TakenPillEditedValue? edited,
-      @JsonKey(fromJson: TimestampConverter.timestampToDateTime, toJson: TimestampConverter.dateTimeToTimestamp)
-          final DateTime? beforeLastTakenDate,
-      @JsonKey(fromJson: NonNullTimestampConverter.timestampToDateTime, toJson: NonNullTimestampConverter.dateTimeToTimestamp)
-          required final DateTime afterLastTakenDate,
+      @JsonKey(
+          fromJson: TimestampConverter.timestampToDateTime,
+          toJson: TimestampConverter.dateTimeToTimestamp)
+      final DateTime? beforeLastTakenDate,
+      @JsonKey(
+          fromJson: NonNullTimestampConverter.timestampToDateTime,
+          toJson: NonNullTimestampConverter.dateTimeToTimestamp)
+      required final DateTime afterLastTakenDate,
       required final int beforeLastTakenPillNumber,
       required final int afterLastTakenPillNumber}) = _$_TakenPillValue;
   const _TakenPillValue._() : super._();
@@ -1597,12 +1646,18 @@ abstract class $TakenPillEditedValueCopyWith<$Res> {
       _$TakenPillEditedValueCopyWithImpl<$Res, TakenPillEditedValue>;
   @useResult
   $Res call(
-      {@JsonKey(fromJson: NonNullTimestampConverter.timestampToDateTime, toJson: NonNullTimestampConverter.dateTimeToTimestamp)
-          DateTime actualTakenDate,
-      @JsonKey(fromJson: NonNullTimestampConverter.timestampToDateTime, toJson: NonNullTimestampConverter.dateTimeToTimestamp)
-          DateTime historyRecordedDate,
-      @JsonKey(fromJson: NonNullTimestampConverter.timestampToDateTime, toJson: NonNullTimestampConverter.dateTimeToTimestamp)
-          DateTime createdDate});
+      {@JsonKey(
+          fromJson: NonNullTimestampConverter.timestampToDateTime,
+          toJson: NonNullTimestampConverter.dateTimeToTimestamp)
+      DateTime actualTakenDate,
+      @JsonKey(
+          fromJson: NonNullTimestampConverter.timestampToDateTime,
+          toJson: NonNullTimestampConverter.dateTimeToTimestamp)
+      DateTime historyRecordedDate,
+      @JsonKey(
+          fromJson: NonNullTimestampConverter.timestampToDateTime,
+          toJson: NonNullTimestampConverter.dateTimeToTimestamp)
+      DateTime createdDate});
 }
 
 /// @nodoc
@@ -1649,12 +1704,18 @@ abstract class _$$_TakenPillEditedValueCopyWith<$Res>
   @override
   @useResult
   $Res call(
-      {@JsonKey(fromJson: NonNullTimestampConverter.timestampToDateTime, toJson: NonNullTimestampConverter.dateTimeToTimestamp)
-          DateTime actualTakenDate,
-      @JsonKey(fromJson: NonNullTimestampConverter.timestampToDateTime, toJson: NonNullTimestampConverter.dateTimeToTimestamp)
-          DateTime historyRecordedDate,
-      @JsonKey(fromJson: NonNullTimestampConverter.timestampToDateTime, toJson: NonNullTimestampConverter.dateTimeToTimestamp)
-          DateTime createdDate});
+      {@JsonKey(
+          fromJson: NonNullTimestampConverter.timestampToDateTime,
+          toJson: NonNullTimestampConverter.dateTimeToTimestamp)
+      DateTime actualTakenDate,
+      @JsonKey(
+          fromJson: NonNullTimestampConverter.timestampToDateTime,
+          toJson: NonNullTimestampConverter.dateTimeToTimestamp)
+      DateTime historyRecordedDate,
+      @JsonKey(
+          fromJson: NonNullTimestampConverter.timestampToDateTime,
+          toJson: NonNullTimestampConverter.dateTimeToTimestamp)
+      DateTime createdDate});
 }
 
 /// @nodoc
@@ -1694,12 +1755,18 @@ class __$$_TakenPillEditedValueCopyWithImpl<$Res>
 @JsonSerializable(explicitToJson: true)
 class _$_TakenPillEditedValue extends _TakenPillEditedValue {
   const _$_TakenPillEditedValue(
-      {@JsonKey(fromJson: NonNullTimestampConverter.timestampToDateTime, toJson: NonNullTimestampConverter.dateTimeToTimestamp)
-          required this.actualTakenDate,
-      @JsonKey(fromJson: NonNullTimestampConverter.timestampToDateTime, toJson: NonNullTimestampConverter.dateTimeToTimestamp)
-          required this.historyRecordedDate,
-      @JsonKey(fromJson: NonNullTimestampConverter.timestampToDateTime, toJson: NonNullTimestampConverter.dateTimeToTimestamp)
-          required this.createdDate})
+      {@JsonKey(
+          fromJson: NonNullTimestampConverter.timestampToDateTime,
+          toJson: NonNullTimestampConverter.dateTimeToTimestamp)
+      required this.actualTakenDate,
+      @JsonKey(
+          fromJson: NonNullTimestampConverter.timestampToDateTime,
+          toJson: NonNullTimestampConverter.dateTimeToTimestamp)
+      required this.historyRecordedDate,
+      @JsonKey(
+          fromJson: NonNullTimestampConverter.timestampToDateTime,
+          toJson: NonNullTimestampConverter.dateTimeToTimestamp)
+      required this.createdDate})
       : super._();
 
   factory _$_TakenPillEditedValue.fromJson(Map<String, dynamic> json) =>
@@ -1764,12 +1831,18 @@ class _$_TakenPillEditedValue extends _TakenPillEditedValue {
 
 abstract class _TakenPillEditedValue extends TakenPillEditedValue {
   const factory _TakenPillEditedValue(
-      {@JsonKey(fromJson: NonNullTimestampConverter.timestampToDateTime, toJson: NonNullTimestampConverter.dateTimeToTimestamp)
-          required final DateTime actualTakenDate,
-      @JsonKey(fromJson: NonNullTimestampConverter.timestampToDateTime, toJson: NonNullTimestampConverter.dateTimeToTimestamp)
-          required final DateTime historyRecordedDate,
-      @JsonKey(fromJson: NonNullTimestampConverter.timestampToDateTime, toJson: NonNullTimestampConverter.dateTimeToTimestamp)
-          required final DateTime createdDate}) = _$_TakenPillEditedValue;
+      {@JsonKey(
+          fromJson: NonNullTimestampConverter.timestampToDateTime,
+          toJson: NonNullTimestampConverter.dateTimeToTimestamp)
+      required final DateTime actualTakenDate,
+      @JsonKey(
+          fromJson: NonNullTimestampConverter.timestampToDateTime,
+          toJson: NonNullTimestampConverter.dateTimeToTimestamp)
+      required final DateTime historyRecordedDate,
+      @JsonKey(
+          fromJson: NonNullTimestampConverter.timestampToDateTime,
+          toJson: NonNullTimestampConverter.dateTimeToTimestamp)
+      required final DateTime createdDate}) = _$_TakenPillEditedValue;
   const _TakenPillEditedValue._() : super._();
 
   factory _TakenPillEditedValue.fromJson(Map<String, dynamic> json) =
@@ -1829,10 +1902,14 @@ abstract class $RevertTakenPillValueCopyWith<$Res> {
       _$RevertTakenPillValueCopyWithImpl<$Res, RevertTakenPillValue>;
   @useResult
   $Res call(
-      {@JsonKey(fromJson: TimestampConverter.timestampToDateTime, toJson: TimestampConverter.dateTimeToTimestamp)
-          DateTime? beforeLastTakenDate,
-      @JsonKey(fromJson: NonNullTimestampConverter.timestampToDateTime, toJson: NonNullTimestampConverter.dateTimeToTimestamp)
-          DateTime afterLastTakenDate,
+      {@JsonKey(
+          fromJson: TimestampConverter.timestampToDateTime,
+          toJson: TimestampConverter.dateTimeToTimestamp)
+      DateTime? beforeLastTakenDate,
+      @JsonKey(
+          fromJson: NonNullTimestampConverter.timestampToDateTime,
+          toJson: NonNullTimestampConverter.dateTimeToTimestamp)
+      DateTime afterLastTakenDate,
       int beforeLastTakenPillNumber,
       int afterLastTakenPillNumber});
 }
@@ -1886,10 +1963,14 @@ abstract class _$$_RevertTakenPillValueCopyWith<$Res>
   @override
   @useResult
   $Res call(
-      {@JsonKey(fromJson: TimestampConverter.timestampToDateTime, toJson: TimestampConverter.dateTimeToTimestamp)
-          DateTime? beforeLastTakenDate,
-      @JsonKey(fromJson: NonNullTimestampConverter.timestampToDateTime, toJson: NonNullTimestampConverter.dateTimeToTimestamp)
-          DateTime afterLastTakenDate,
+      {@JsonKey(
+          fromJson: TimestampConverter.timestampToDateTime,
+          toJson: TimestampConverter.dateTimeToTimestamp)
+      DateTime? beforeLastTakenDate,
+      @JsonKey(
+          fromJson: NonNullTimestampConverter.timestampToDateTime,
+          toJson: NonNullTimestampConverter.dateTimeToTimestamp)
+      DateTime afterLastTakenDate,
       int beforeLastTakenPillNumber,
       int afterLastTakenPillNumber});
 }
@@ -1936,10 +2017,14 @@ class __$$_RevertTakenPillValueCopyWithImpl<$Res>
 @JsonSerializable(explicitToJson: true)
 class _$_RevertTakenPillValue extends _RevertTakenPillValue {
   const _$_RevertTakenPillValue(
-      {@JsonKey(fromJson: TimestampConverter.timestampToDateTime, toJson: TimestampConverter.dateTimeToTimestamp)
-          this.beforeLastTakenDate,
-      @JsonKey(fromJson: NonNullTimestampConverter.timestampToDateTime, toJson: NonNullTimestampConverter.dateTimeToTimestamp)
-          required this.afterLastTakenDate,
+      {@JsonKey(
+          fromJson: TimestampConverter.timestampToDateTime,
+          toJson: TimestampConverter.dateTimeToTimestamp)
+      this.beforeLastTakenDate,
+      @JsonKey(
+          fromJson: NonNullTimestampConverter.timestampToDateTime,
+          toJson: NonNullTimestampConverter.dateTimeToTimestamp)
+      required this.afterLastTakenDate,
       required this.beforeLastTakenPillNumber,
       required this.afterLastTakenPillNumber})
       : super._();
@@ -2008,10 +2093,14 @@ class _$_RevertTakenPillValue extends _RevertTakenPillValue {
 
 abstract class _RevertTakenPillValue extends RevertTakenPillValue {
   const factory _RevertTakenPillValue(
-      {@JsonKey(fromJson: TimestampConverter.timestampToDateTime, toJson: TimestampConverter.dateTimeToTimestamp)
-          final DateTime? beforeLastTakenDate,
-      @JsonKey(fromJson: NonNullTimestampConverter.timestampToDateTime, toJson: NonNullTimestampConverter.dateTimeToTimestamp)
-          required final DateTime afterLastTakenDate,
+      {@JsonKey(
+          fromJson: TimestampConverter.timestampToDateTime,
+          toJson: TimestampConverter.dateTimeToTimestamp)
+      final DateTime? beforeLastTakenDate,
+      @JsonKey(
+          fromJson: NonNullTimestampConverter.timestampToDateTime,
+          toJson: NonNullTimestampConverter.dateTimeToTimestamp)
+      required final DateTime afterLastTakenDate,
       required final int beforeLastTakenPillNumber,
       required final int afterLastTakenPillNumber}) = _$_RevertTakenPillValue;
   const _RevertTakenPillValue._() : super._();
@@ -2075,10 +2164,14 @@ abstract class $ChangedPillNumberValueCopyWith<$Res> {
       _$ChangedPillNumberValueCopyWithImpl<$Res, ChangedPillNumberValue>;
   @useResult
   $Res call(
-      {@JsonKey(fromJson: NonNullTimestampConverter.timestampToDateTime, toJson: NonNullTimestampConverter.dateTimeToTimestamp)
-          DateTime beforeBeginingDate,
-      @JsonKey(fromJson: NonNullTimestampConverter.timestampToDateTime, toJson: NonNullTimestampConverter.dateTimeToTimestamp)
-          DateTime afterBeginingDate,
+      {@JsonKey(
+          fromJson: NonNullTimestampConverter.timestampToDateTime,
+          toJson: NonNullTimestampConverter.dateTimeToTimestamp)
+      DateTime beforeBeginingDate,
+      @JsonKey(
+          fromJson: NonNullTimestampConverter.timestampToDateTime,
+          toJson: NonNullTimestampConverter.dateTimeToTimestamp)
+      DateTime afterBeginingDate,
       int beforeTodayPillNumber,
       int afterTodayPillNumber,
       int beforeGroupIndex,
@@ -2144,10 +2237,14 @@ abstract class _$$_ChangedPillNumberValueCopyWith<$Res>
   @override
   @useResult
   $Res call(
-      {@JsonKey(fromJson: NonNullTimestampConverter.timestampToDateTime, toJson: NonNullTimestampConverter.dateTimeToTimestamp)
-          DateTime beforeBeginingDate,
-      @JsonKey(fromJson: NonNullTimestampConverter.timestampToDateTime, toJson: NonNullTimestampConverter.dateTimeToTimestamp)
-          DateTime afterBeginingDate,
+      {@JsonKey(
+          fromJson: NonNullTimestampConverter.timestampToDateTime,
+          toJson: NonNullTimestampConverter.dateTimeToTimestamp)
+      DateTime beforeBeginingDate,
+      @JsonKey(
+          fromJson: NonNullTimestampConverter.timestampToDateTime,
+          toJson: NonNullTimestampConverter.dateTimeToTimestamp)
+      DateTime afterBeginingDate,
       int beforeTodayPillNumber,
       int afterTodayPillNumber,
       int beforeGroupIndex,
@@ -2207,10 +2304,14 @@ class __$$_ChangedPillNumberValueCopyWithImpl<$Res>
 @JsonSerializable(explicitToJson: true)
 class _$_ChangedPillNumberValue extends _ChangedPillNumberValue {
   const _$_ChangedPillNumberValue(
-      {@JsonKey(fromJson: NonNullTimestampConverter.timestampToDateTime, toJson: NonNullTimestampConverter.dateTimeToTimestamp)
-          required this.beforeBeginingDate,
-      @JsonKey(fromJson: NonNullTimestampConverter.timestampToDateTime, toJson: NonNullTimestampConverter.dateTimeToTimestamp)
-          required this.afterBeginingDate,
+      {@JsonKey(
+          fromJson: NonNullTimestampConverter.timestampToDateTime,
+          toJson: NonNullTimestampConverter.dateTimeToTimestamp)
+      required this.beforeBeginingDate,
+      @JsonKey(
+          fromJson: NonNullTimestampConverter.timestampToDateTime,
+          toJson: NonNullTimestampConverter.dateTimeToTimestamp)
+      required this.afterBeginingDate,
       required this.beforeTodayPillNumber,
       required this.afterTodayPillNumber,
       this.beforeGroupIndex = 1,
@@ -2295,10 +2396,14 @@ class _$_ChangedPillNumberValue extends _ChangedPillNumberValue {
 
 abstract class _ChangedPillNumberValue extends ChangedPillNumberValue {
   const factory _ChangedPillNumberValue(
-      {@JsonKey(fromJson: NonNullTimestampConverter.timestampToDateTime, toJson: NonNullTimestampConverter.dateTimeToTimestamp)
-          required final DateTime beforeBeginingDate,
-      @JsonKey(fromJson: NonNullTimestampConverter.timestampToDateTime, toJson: NonNullTimestampConverter.dateTimeToTimestamp)
-          required final DateTime afterBeginingDate,
+      {@JsonKey(
+          fromJson: NonNullTimestampConverter.timestampToDateTime,
+          toJson: NonNullTimestampConverter.dateTimeToTimestamp)
+      required final DateTime beforeBeginingDate,
+      @JsonKey(
+          fromJson: NonNullTimestampConverter.timestampToDateTime,
+          toJson: NonNullTimestampConverter.dateTimeToTimestamp)
+      required final DateTime afterBeginingDate,
       required final int beforeTodayPillNumber,
       required final int afterTodayPillNumber,
       final int beforeGroupIndex,
@@ -2363,10 +2468,14 @@ abstract class $EndedPillSheetValueCopyWith<$Res> {
       _$EndedPillSheetValueCopyWithImpl<$Res, EndedPillSheetValue>;
   @useResult
   $Res call(
-      {@JsonKey(fromJson: NonNullTimestampConverter.timestampToDateTime, toJson: NonNullTimestampConverter.dateTimeToTimestamp)
-          DateTime endRecordDate,
-      @JsonKey(fromJson: NonNullTimestampConverter.timestampToDateTime, toJson: NonNullTimestampConverter.dateTimeToTimestamp)
-          DateTime lastTakenDate});
+      {@JsonKey(
+          fromJson: NonNullTimestampConverter.timestampToDateTime,
+          toJson: NonNullTimestampConverter.dateTimeToTimestamp)
+      DateTime endRecordDate,
+      @JsonKey(
+          fromJson: NonNullTimestampConverter.timestampToDateTime,
+          toJson: NonNullTimestampConverter.dateTimeToTimestamp)
+      DateTime lastTakenDate});
 }
 
 /// @nodoc
@@ -2407,10 +2516,14 @@ abstract class _$$_EndedPillSheetValueCopyWith<$Res>
   @override
   @useResult
   $Res call(
-      {@JsonKey(fromJson: NonNullTimestampConverter.timestampToDateTime, toJson: NonNullTimestampConverter.dateTimeToTimestamp)
-          DateTime endRecordDate,
-      @JsonKey(fromJson: NonNullTimestampConverter.timestampToDateTime, toJson: NonNullTimestampConverter.dateTimeToTimestamp)
-          DateTime lastTakenDate});
+      {@JsonKey(
+          fromJson: NonNullTimestampConverter.timestampToDateTime,
+          toJson: NonNullTimestampConverter.dateTimeToTimestamp)
+      DateTime endRecordDate,
+      @JsonKey(
+          fromJson: NonNullTimestampConverter.timestampToDateTime,
+          toJson: NonNullTimestampConverter.dateTimeToTimestamp)
+      DateTime lastTakenDate});
 }
 
 /// @nodoc
@@ -2445,10 +2558,14 @@ class __$$_EndedPillSheetValueCopyWithImpl<$Res>
 @JsonSerializable(explicitToJson: true)
 class _$_EndedPillSheetValue extends _EndedPillSheetValue {
   const _$_EndedPillSheetValue(
-      {@JsonKey(fromJson: NonNullTimestampConverter.timestampToDateTime, toJson: NonNullTimestampConverter.dateTimeToTimestamp)
-          required this.endRecordDate,
-      @JsonKey(fromJson: NonNullTimestampConverter.timestampToDateTime, toJson: NonNullTimestampConverter.dateTimeToTimestamp)
-          required this.lastTakenDate})
+      {@JsonKey(
+          fromJson: NonNullTimestampConverter.timestampToDateTime,
+          toJson: NonNullTimestampConverter.dateTimeToTimestamp)
+      required this.endRecordDate,
+      @JsonKey(
+          fromJson: NonNullTimestampConverter.timestampToDateTime,
+          toJson: NonNullTimestampConverter.dateTimeToTimestamp)
+      required this.lastTakenDate})
       : super._();
 
   factory _$_EndedPillSheetValue.fromJson(Map<String, dynamic> json) =>
@@ -2504,10 +2621,14 @@ class _$_EndedPillSheetValue extends _EndedPillSheetValue {
 
 abstract class _EndedPillSheetValue extends EndedPillSheetValue {
   const factory _EndedPillSheetValue(
-      {@JsonKey(fromJson: NonNullTimestampConverter.timestampToDateTime, toJson: NonNullTimestampConverter.dateTimeToTimestamp)
-          required final DateTime endRecordDate,
-      @JsonKey(fromJson: NonNullTimestampConverter.timestampToDateTime, toJson: NonNullTimestampConverter.dateTimeToTimestamp)
-          required final DateTime lastTakenDate}) = _$_EndedPillSheetValue;
+      {@JsonKey(
+          fromJson: NonNullTimestampConverter.timestampToDateTime,
+          toJson: NonNullTimestampConverter.dateTimeToTimestamp)
+      required final DateTime endRecordDate,
+      @JsonKey(
+          fromJson: NonNullTimestampConverter.timestampToDateTime,
+          toJson: NonNullTimestampConverter.dateTimeToTimestamp)
+      required final DateTime lastTakenDate}) = _$_EndedPillSheetValue;
   const _EndedPillSheetValue._() : super._();
 
   factory _EndedPillSheetValue.fromJson(Map<String, dynamic> json) =

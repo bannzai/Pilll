@@ -29,6 +29,8 @@ linter:
 # Additional information about this file can be found at
 # https://dart.dev/guides/language/analysis-options
 analyzer:
+  plugins:
+    - custom_lint
   errors:
     missing_required_param: error
     missing_return: error

@@ -51,24 +51,23 @@ class MenstruationRecordButton extends HookConsumerWidget {
                     navigator.pop();
                     return;
                   } catch (error) {
-                    showErrorAlert(context, error);
+                    if (context.mounted) showErrorAlert(context, error);
                   }
                   return;
                 case MenstruationSelectModifyType.yesterday:
                   analytics.logEvent(name: "tapped_menstruation_record_yesterday");
-                  final navigator = Navigator.of(context);
                   try {
                     final created = await beginMenstruation(yesterday(), setting: setting);
                     onRecord(created);
-                    navigator.pop();
+                    if (context.mounted) Navigator.of(context).pop();
                   } catch (error) {
-                    showErrorAlert(context, error);
+                    if (context.mounted) showErrorAlert(context, error);
                   }
                   return;
                 case MenstruationSelectModifyType.begin:
                   analytics.logEvent(name: "tapped_menstruation_record_begin");
-                  Navigator.of(context).pop();
-                  return showMenstruationEditPage(context, initialMenstruation: null);
+                  if (context.mounted) Navigator.of(context).pop();
+                  if (context.mounted) return showMenstruationEditPage(context, initialMenstruation: null);
               }
             }),
           );

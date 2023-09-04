@@ -174,7 +174,7 @@ class _SchedulePostPage extends HookConsumerWidget {
                                       );
                                   navigator.pop();
                                 } catch (error) {
-                                  showErrorAlert(context, error);
+                                  if (context.mounted) showErrorAlert(context, error);
                                 }
                               },
                       ),
@@ -208,7 +208,7 @@ class _SchedulePostPage extends HookConsumerWidget {
                                       await ref.read(databaseProvider).schedulesReference().doc(scheduleID).delete();
                                       navigator.popUntil((route) => route.isFirst);
                                     } catch (error) {
-                                      showErrorAlert(context, error);
+                                      if (context.mounted) showErrorAlert(context, error);
                                     }
                                   },
                                 ),

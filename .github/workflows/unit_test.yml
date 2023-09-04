@@ -7,6 +7,8 @@ name: Test
 on:
   push:
     branches: [ main, feature/* ]
+  # pull_request_targetsにはしない。Public repoだからforkされるとsecretが読み込まれる
+  # NOTE: Dependabotでbuild-ios-debug,build-android-debugでの失敗を避けるために https://docs.github.com/ja/code-security/dependabot/working-with-dependabot/automating-dependabot-with-github-actions#accessing-secrets を参考に必要なdependabot用のsecretが設定されている。なお、prodファイルでもテストに不要のためすべてdevの値が代わりに使用されている
   pull_request:
     branches: [ main, feature/* ]
 
@@ -27,7 +29,7 @@ jobs:
         DART_DEFINE_FROM_FILE_DEV: ${{ secrets.DART_DEFINE_FROM_FILE_DEV }}
     - uses: subosito/flutter-action@v2
       with:
-        flutter-version: '3.10.6'
+        flutter-version: '3.13.0'
     - run: flutter pub get
     - name: Run iOS
       run: flutter build ios --debug --no-codesign --target lib/main.dev.dart --dart-define-from-file=environment/dev.json
@@ -47,7 +49,7 @@ jobs:
         DART_DEFINE_FROM_FILE_DEV: ${{ secrets.DART_DEFINE_FROM_FILE_DEV }}
     - uses: subosito/flutter-action@v2
       with:
-        flutter-version: '3.10.6'
+        flutter-version: '3.13.0'
     - run: flutter pub get
     - run: flutter build apk --debug --target lib/main.dev.dart --dart-define-from-file=environment/dev.json
   test:
@@ -60,7 +62,7 @@ jobs:
         java-version: '12.x'
     - uses: subosito/flutter-action@v2
       with:
-        flutter-version: '3.10.6'
+        flutter-version: '3.13.0'
     - run: make secret
     - run: flutter pub get
     - run: flutter test 
@@ -74,7 +76,7 @@ jobs:
         java-version: '12.x'
     - uses: subosito/flutter-action@v2
       with:
-        flutter-version: '3.10.6'
+        flutter-version: '3.13.0'
     - run: make secret
     - run: flutter pub get
     - run: flutter pub run build_runner build --delete-conflicting-outputs

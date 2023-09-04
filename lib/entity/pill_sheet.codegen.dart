@@ -167,8 +167,9 @@ class PillSheet with _$PillSheet {
     }
   }
 
-  // pillTakenDateFromPillNumber は元々の番号から、休薬期間を考慮した番号に変換する
-  DateTime pillTakenDateFromPillNumber(int pillNumberInPillSheet) {
+  // PillSheetのbeginDateは服用お休み中にbackendで毎日1日ずれるようになっているので、
+  // ここで計算に考慮するのはこのPillSheetのrestDurationのみで良い
+  DateTime displayPillTakeDate(int pillNumberInPillSheet) {
     final originDate = beginingDate.add(Duration(days: pillNumberInPillSheet - 1)).date();
     if (restDurations.isEmpty) {
       return originDate;

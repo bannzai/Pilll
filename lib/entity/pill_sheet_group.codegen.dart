@@ -6,6 +6,7 @@ import 'package:freezed_annotation/freezed_annotation.dart';
 import 'package:pilll/entity/pill_sheet_type.dart';
 import 'package:pilll/entity/setting.codegen.dart';
 import 'package:pilll/utils/datetime/day.dart';
+import 'package:pilll/utils/datetime/date_range.dart';
 import 'package:pilll/utils/formatter/date_time_formatter.dart';
 
 part 'pill_sheet_group.codegen.g.dart';
@@ -219,7 +220,69 @@ class PillSheetGroup with _$PillSheetGroup {
     required int pageIndex,
     required int pillNumberInPillSheet,
   }) {
-    return DateTimeFormatter.monthAndDay(pillSheets[pageIndex].pillTakenDateFromPillNumber(pillNumberInPillSheet));
+    return DateTimeFormatter.monthAndDay(pillSheets[pageIndex].displayPillTakeDate(pillNumberInPillSheet));
+  }
+
+  /*
+    1. setting.pillNumberForFromMenstruation < pillSheet.typeInfo.totalCount の場合は単純にこの式の結果を用いる
+    2. setting.pillNumberForFromMenstruation > pillSheet.typeInfo.totalCount の場合はページ数も考慮して
+      pillSheet.begin < pillNumberForFromMenstruation < pillSheet.typeInfo.totalCount の場合の結果を用いる
+
+    a. 想定される使い方は各ピルシートごとに同じ生理の期間開始を設定したい(1.の仕様)
+    b. ヤーズフレックスのようにどこか1枚だけ生理の開始期間を設定したい(2.の仕様)
+
+    a は28錠タイプのピルシートが3枚設定されている場合に設定では22番に生理期間が始まると設定した場合
+      1枚目: 22番から
+      2枚目: 22番から
+      3枚目: 22番から
+
+    bは後者の計算式で下のようになっても許容をすることにする
+    28錠タイプが4枚ある場合で46番ごとに生理期間がくる設定をしていると生理期間の始まりが
+      1枚目: なし
+      2枚目: 18番から
+      3枚目: なし
+      4枚目: 8番から
+  */
+  List<DateRange> menstruationDateRanges({required Setting setting}) {
+    // 0が設定できる。その場合は生理設定をあえて無視したいと考えて0を返す
+    if (setting.pillNumberForFromMenstruation == 0 || setting.durationMenstruation == 0) {
+      return [];
+    }
+
+    // 28番ごとなら28,56,84番目開始の番号とマッチさせるために各始まりの番号を配列にする
+    final summarizedPillCount = pillSheets.fold<int>(
+      0,
+      (previousValue, element) => previousValue + element.typeInfo.totalCount,
+    );
+    // ピルシートグループの中に何度pillNumberForFromMenstruation が出てくるか算出
+    final numberOfMenstruationSettingInPillSheetGroup = summarizedPillCount / setting.pillNumberForFromMenstruation;
+    List<int> fromMenstruations = [];
+    for (var i = 0; i < numberOfMenstruationSettingInPillSheetGroup; i++) {
+      fromMenstruations.add(setting.pillNumberForFromMenstruation + (setting.pillNumberForFromMenstruation * i));
+    }
+
+    final menstruationDateRanges = <DateRange>[];
+    for (final pillSheet in pillSheets) {
+      if (setting.pillNumberForFromMenstruation < pillSheet.typeInfo.totalCount) {
+        final left = pillSheet.displayPillTakeDate(setting.pillNumberForFromMenstruation);
+        final right = left.add(Duration(days: setting.durationMenstruation - 1));
+        menstruationDateRanges.add(DateRange(left, right));
+      } else {
+        final offset = summarizedPillCountWithPillSheetTypesToIndex(pillSheetTypes: pillSheetTypes, toIndex: pillSheet.groupIndex);
+        final begin = offset + 1;
+        final end = begin + (pillSheet.typeInfo.totalCount - 1);
+
+        for (final fromMenstruation in fromMenstruations) {
+          if (begin <= fromMenstruation && fromMenstruation <= end) {
+            final left = pillSheet.displayPillTakeDate(fromMenstruation - offset);
+            final right = left.add(Duration(days: setting.durationMenstruation - 1));
+            menstruationDateRanges.add(DateRange(left, right));
+          }
+        }
+      }
+    }
+
+    return menstruationDateRanges;
   }
 }
 

@@ -32,7 +32,6 @@ final calendarScheduledMenstruationBandListProvider = Provider<AsyncValue<List<C
       t.t1,
       t.t2,
       t.t3,
-      15,
     ).map((dateRange) => CalendarScheduledMenstruationBandModel(dateRange.begin, dateRange.end)).toList(),
   );
 });

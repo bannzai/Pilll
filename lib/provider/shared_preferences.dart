@@ -1,66 +1,27 @@
-import 'dart:async';
-import 'package:pilll/provider/shared_preference.dart';
-import 'package:riverpod/riverpod.dart';
+import 'package:pilll/provider/typed_shared_preferences.dart';
+import 'package:pilll/utils/shared_preference/keys.dart';
+import 'package:riverpod_annotation/riverpod_annotation.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
-final boolSharedPreferencesProvider = AsyncNotifierProvider.family<BoolSharedPreferences, bool?, String>(() => BoolSharedPreferences());
+part 'shared_preferences.g.dart';
 
-class BoolSharedPreferences extends FamilyAsyncNotifier<bool?, String> {
-  late String key;
-  late SharedPreferences sharedPreferences;
-
-  Future<void> set(bool value) async {
-    await sharedPreferences.setBool(key, value);
-    // NOTE: Allow recreate AsyncNotifier everytime. Not call update((_) => value), Keep SSoT with fetching data via shared_preferences
-    ref.invalidateSelf();
-  }
-
-  @override
-  FutureOr<bool?> build(String arg) async {
-    key = arg;
-    sharedPreferences = await ref.watch(sharedPreferenceProvider.future);
-    return sharedPreferences.getBool(key);
-  }
+// overrideする前提なので.autoDisposeはつけない=(keeyAlive: trueにする)。またこれに依存したProviderもkeepAlive: trueにする必要がある
+@Riverpod(keepAlive: true, dependencies: [])
+SharedPreferences sharedPreferences(SharedPreferencesRef ref) {
+  throw UnimplementedError("sharedPreferencesProvider is not implemented");
 }
 
-final intSharedPreferencesProvider = AsyncNotifierProvider.family<IntSharedPreferences, int?, String>(() => IntSharedPreferences());
-
-class IntSharedPreferences extends FamilyAsyncNotifier<int?, String> {
-  late String key;
-  late SharedPreferences sharedPreferences;
-
-  Future<void> set(int value) async {
-    await sharedPreferences.setInt(key, value);
-    // NOTE: Allow recreate AsyncNotifier everytime. Not call update((_) => value), Keep SSoT with fetching data via shared_preferences
-    ref.invalidateSelf();
+final shouldShowMigrationInformationProvider = FutureProvider.autoDispose((ref) {
+  final sharedPreferences = ref.watch(sharedPreferencesProvider);
+  final migrateFrom132IsShown = ref.watch(boolSharedPreferencesProvider(BoolKey.migrateFrom132IsShown));
+  if (migrateFrom132IsShown.value ?? false) {
+    return false;
   }
-
-  @override
-  FutureOr<int?> build(String arg) async {
-    key = arg;
-    sharedPreferences = await ref.watch(sharedPreferenceProvider.future);
-    return sharedPreferences.getInt(key);
+  if (!sharedPreferences.containsKey(StringKey.salvagedOldStartTakenDate)) {
+    return false;
   }
-}
-
-final stringSharedPreferencesProvider = AsyncNotifierProvider.family<StringSharedPreferences, String?, String>(() => StringSharedPreferences());
-
-class StringSharedPreferences extends FamilyAsyncNotifier<String?, String> {
-  late String key;
-  late SharedPreferences sharedPreferences;
-
-  Future<void> set(String value) async {
-    await sharedPreferences.setString(key, value);
-    // NOTE: Allow recreate AsyncNotifier everytime. Not call update((_) => value), Keep SSoT with fetching data via shared_preferences
-    ref.invalidateSelf();
+  if (!sharedPreferences.containsKey(StringKey.salvagedOldLastTakenDate)) {
+    return false;
   }
-
-  bool containsKey() => sharedPreferences.containsKey(key);
-
-  @override
-  FutureOr<String?> build(String arg) async {
-    key = arg;
-    sharedPreferences = await ref.watch(sharedPreferenceProvider.future);
-    return sharedPreferences.getString(key);
-  }
-}
+  return true;
+});

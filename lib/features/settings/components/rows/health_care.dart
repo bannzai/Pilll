@@ -17,8 +17,8 @@ class HealthCareRow extends StatelessWidget {
   Widget build(BuildContext context) {
     return ListTile(
       minVerticalPadding: 9,
-      title: Row(
-        children: const [
+      title: const Row(
+        children: [
           Text("ヘルスケア連携",
               style: TextStyle(
                 fontFamily: FontFamily.roboto,
@@ -42,7 +42,7 @@ class HealthCareRow extends StatelessWidget {
             }
           }
         } catch (error) {
-          showErrorAlert(context, error);
+          if (context.mounted) showErrorAlert(context, error);
         }
       },
     );

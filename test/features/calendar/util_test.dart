@@ -528,6 +528,8 @@ void main() {
             pillSheets: [pillSheet, pillSheet2],
             createdAt: now(),
           );
+
+          // pillSheetGroup.pillSheets.length * 2個のDateRangeが返ってくる
           expect(
             nextPillSheetDateRanges(pillSheetGroup, 2),
             [
@@ -725,6 +727,63 @@ void main() {
         },
       );
     });
+
+    test(
+      "with ended rest duration",
+      () {
+        /*
+        A = Current Pill Sheett Start
+        B = Next Pill Sheet Start
+        C = End of Next Pill Sheet Band
+  30   31   1   2   3   4   5  
+            A==>
+   6    7   8   9  10  11  12  
+
+  13   14  15  16  17  18  19  
+
+  20   21  22  23  24  25  26  
+       
+  27   28  29  30   1   2   3
+           B==>
+   4    5   6   7   8   9  10
+        C  
+    */
+
+        final originalTodayRepository = todayRepository;
+        final mockTodayRepository = MockTodayService();
+        todayRepository = mockTodayRepository;
+        when(mockTodayRepository.now()).thenReturn(DateTime.parse("2020-09-20"));
+        addTearDown(() {
+          todayRepository = originalTodayRepository;
+        });
+
+        var pillSheetType = PillSheetType.pillsheet_28_7;
+        var beginingDate = DateTime.parse("2020-09-01");
+        var pillSheet = PillSheet(
+            id: firestoreIDGenerator(),
+            typeInfo: pillSheetType.typeInfo,
+            beginingDate: beginingDate,
+            lastTakenDate: null,
+            createdAt: now(),
+            restDurations: [
+              RestDuration(
+                beginDate: DateTime.parse("2020-09-08"),
+                endDate: DateTime.parse("2020-09-10"),
+                createdDate: DateTime.parse("2020-09-08"),
+              ),
+            ]);
+        final pillSheetGroup = PillSheetGroup(pillSheetIDs: ["1"], pillSheets: [pillSheet], createdAt: now());
+        expect(
+          nextPillSheetDateRanges(pillSheetGroup, 1),
+          [
+            DateRange(
+              DateTime.parse("2020-10-01"),
+              DateTime.parse("2020-10-07"),
+            ),
+          ],
+        );
+      },
+    );
   });
   group("#bandLength", () {
     test(

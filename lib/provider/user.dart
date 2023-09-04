@@ -124,13 +124,12 @@ class LinkApple {
   final DatabaseConnection databaseConnection;
   LinkApple(this.databaseConnection);
 
-  Future<void> call(String? email) async {
+  Future<void> call() async {
     await databaseConnection.userRawReference().set({
       UserFirestoreFieldKeys.isAnonymous: false,
     }, SetOptions(merge: true));
 
     await databaseConnection.userPrivateRawReference().set({
-      if (email != null) UserPrivateFirestoreFieldKeys.appleEmail: email,
       UserPrivateFirestoreFieldKeys.isLinkedApple: true,
     }, SetOptions(merge: true));
   }
@@ -142,13 +141,12 @@ class LinkGoogle {
   final DatabaseConnection databaseConnection;
   LinkGoogle(this.databaseConnection);
 
-  Future<void> call(String? email) async {
+  Future<void> call() async {
     await databaseConnection.userRawReference().set({
       UserFirestoreFieldKeys.isAnonymous: false,
     }, SetOptions(merge: true));
 
     await databaseConnection.userPrivateRawReference().set({
-      if (email != null) UserPrivateFirestoreFieldKeys.googleEmail: email,
       UserPrivateFirestoreFieldKeys.isLinkedGoogle: true,
     }, SetOptions(merge: true));
   }
@@ -258,29 +256,6 @@ class SaveUserLaunchInfo {
     return databaseConnection.userRawReference().set({
       UserFirestoreFieldKeys.hasDiscountEntitlement: hasDiscountEntitlement,
     }, SetOptions(merge: true));
-  }
-}
-
-final markAsMigratedToFlutterProvider = Provider((ref) => MarkAsMigratedToFlutter(ref.watch(databaseProvider)));
-
-class MarkAsMigratedToFlutter {
-  final DatabaseConnection databaseConnection;
-  MarkAsMigratedToFlutter(this.databaseConnection);
-
-  Future<void> call() async {
-    await _deleteSettings();
-    await _setFlutterMigrationFlag();
-  }
-
-  Future<void> _deleteSettings() {
-    return databaseConnection.userReference().update({UserFirestoreFieldKeys.settings: FieldValue.delete()});
-  }
-
-  Future<void> _setFlutterMigrationFlag() {
-    return databaseConnection.userRawReference().set(
-      {UserFirestoreFieldKeys.migratedFlutter: true},
-      SetOptions(merge: true),
-    );
   }
 }
 

@@ -27,16 +27,23 @@ void definedChannel() {
         final pillSheetGroup = await quickRecordTakePill(database);
         syncActivePillSheetValue(pillSheetGroup: pillSheetGroup);
 
+        final cancelReminderLocalNotification = CancelReminderLocalNotification();
+        // エンティティの変更があった場合にdatabaseの読み込みで最新の状態を取得するために、Future.microtaskで更新を待ってから処理を始める
+        // hour,minute,番号を基準にIDを決定しているので、時間変更や番号変更時にそれまで登録されていたIDを特定するのが不可能なので全てキャンセルする
+        await (Future.microtask(() => null), cancelReminderLocalNotification()).wait;
+
         final activePillSheet = pillSheetGroup?.activePillSheet;
         final user = (await database.userReference().get()).data();
         final setting = user?.setting;
         if (pillSheetGroup != null && activePillSheet != null && user != null && setting != null) {
-          await RegisterReminderLocalNotification.run(
-            pillSheetGroup: pillSheetGroup,
-            activePillSheet: activePillSheet,
-            premiumOrTrial: user.isPremium || user.isTrial,
-            setting: setting,
-          );
+          if (user.useLocalNotificationForReminder) {
+            await RegisterReminderLocalNotification.run(
+              pillSheetGroup: pillSheetGroup,
+              activePillSheet: activePillSheet,
+              premiumOrTrial: user.isPremium || user.isTrial,
+              setting: setting,
+            );
+          }
         }
         return;
       case "salvagedOldStartTakenDate":

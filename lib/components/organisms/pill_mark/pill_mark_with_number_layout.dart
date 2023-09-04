@@ -2,14 +2,14 @@ import 'package:pilll/components/organisms/pill_mark/pill_mark.dart';
 import 'package:flutter/material.dart';
 
 class PillMarkWithNumberLayout extends StatelessWidget {
-  final Widget textOfPillNumber;
+  final Widget pillNumber;
   final PillMark pillMark;
   final VoidCallback onTap;
 
   const PillMarkWithNumberLayout({
     Key? key,
     required this.pillMark,
-    required this.textOfPillNumber,
+    required this.pillNumber,
     required this.onTap,
   }) : super(key: key);
 
@@ -19,7 +19,7 @@ class PillMarkWithNumberLayout extends StatelessWidget {
       onTap: () => onTap(),
       child: Column(
         children: <Widget>[
-          textOfPillNumber,
+          pillNumber,
           pillMark,
         ],
       ),

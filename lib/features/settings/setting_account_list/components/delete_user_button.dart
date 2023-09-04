@@ -3,7 +3,7 @@ import 'dart:io';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
-import 'package:pilll/provider/shared_preferences.dart';
+import 'package:pilll/provider/typed_shared_preferences.dart';
 import 'package:pilll/utils/analytics.dart';
 import 'package:pilll/utils/auth/apple.dart';
 import 'package:pilll/utils/auth/google.dart';
@@ -80,6 +80,7 @@ class DeleteUserButton extends HookConsumerWidget {
       );
     } on FirebaseAuthException catch (error, stackTrace) {
       if (error.code == "requires-recent-login") {
+        if (!context.mounted) return;
         showDiscardDialog(
           context,
           title: "再ログインしてください",
@@ -113,10 +114,10 @@ class DeleteUserButton extends HookConsumerWidget {
         );
       } else {
         errorLogger.recordError(error, stackTrace);
-        showErrorAlert(context, error);
+        if (context.mounted) showErrorAlert(context, error);
       }
     } catch (error) {
-      showErrorAlert(context, error);
+      if (context.mounted) showErrorAlert(context, error);
     }
   }
 }

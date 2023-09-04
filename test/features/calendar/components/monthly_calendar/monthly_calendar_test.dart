@@ -15,7 +15,10 @@ void main() {
   setUp(() {
     TestWidgetsFlutterBinding.ensureInitialized();
     SharedPreferences.setMockInitialValues({});
-    WidgetsBinding.instance.renderView.configuration = TestViewConfiguration(size: const Size(375.0, 667.0));
+    WidgetsBinding.instance.renderView.configuration = TestViewConfiguration.fromView(
+      view: WidgetsBinding.instance.platformDispatcher.views.single,
+      size: const Size(375.0, 667.0),
+    );
   });
   group("Appearance Next Sheet Label", () {
     testWidgets('when showing 新しいシート開始 ▶︎', (WidgetTester tester) async {

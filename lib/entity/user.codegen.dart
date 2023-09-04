@@ -49,7 +49,6 @@ extension UserFirestoreFieldKeys on String {
   static const userIDWhenCreateUser = "userIDWhenCreateUser";
   static const anonymousUserID = "anonymousUserID";
   static const settings = "settings";
-  static const migratedFlutter = "migratedFlutter";
   static const packageInfo = "packageInfo";
   static const isAnonymous = "isAnonymous";
   static const isPremium = "isPremium";
@@ -70,7 +69,6 @@ class User with _$User {
   const factory User({
     String? id,
     @JsonKey(name: "settings") Setting? setting,
-    @Default(false) bool migratedFlutter,
     String? userIDWhenCreateUser,
     String? anonymousUserID,
     @Default([]) List<String> userDocumentIDSets,

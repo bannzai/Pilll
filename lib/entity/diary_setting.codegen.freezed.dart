@@ -40,8 +40,10 @@ abstract class $DiarySettingCopyWith<$Res> {
   @useResult
   $Res call(
       {List<String> physicalConditions,
-      @JsonKey(fromJson: NonNullTimestampConverter.timestampToDateTime, toJson: NonNullTimestampConverter.dateTimeToTimestamp)
-          DateTime createdAt});
+      @JsonKey(
+          fromJson: NonNullTimestampConverter.timestampToDateTime,
+          toJson: NonNullTimestampConverter.dateTimeToTimestamp)
+      DateTime createdAt});
 }
 
 /// @nodoc
@@ -83,8 +85,10 @@ abstract class _$$_DiarySettingCopyWith<$Res>
   @useResult
   $Res call(
       {List<String> physicalConditions,
-      @JsonKey(fromJson: NonNullTimestampConverter.timestampToDateTime, toJson: NonNullTimestampConverter.dateTimeToTimestamp)
-          DateTime createdAt});
+      @JsonKey(
+          fromJson: NonNullTimestampConverter.timestampToDateTime,
+          toJson: NonNullTimestampConverter.dateTimeToTimestamp)
+      DateTime createdAt});
 }
 
 /// @nodoc
@@ -120,8 +124,10 @@ class __$$_DiarySettingCopyWithImpl<$Res>
 class _$_DiarySetting extends _DiarySetting with DiagnosticableTreeMixin {
   const _$_DiarySetting(
       {final List<String> physicalConditions = defaultPhysicalConditions,
-      @JsonKey(fromJson: NonNullTimestampConverter.timestampToDateTime, toJson: NonNullTimestampConverter.dateTimeToTimestamp)
-          required this.createdAt})
+      @JsonKey(
+          fromJson: NonNullTimestampConverter.timestampToDateTime,
+          toJson: NonNullTimestampConverter.dateTimeToTimestamp)
+      required this.createdAt})
       : _physicalConditions = physicalConditions,
         super._();
 
@@ -191,8 +197,10 @@ class _$_DiarySetting extends _DiarySetting with DiagnosticableTreeMixin {
 abstract class _DiarySetting extends DiarySetting {
   const factory _DiarySetting(
       {final List<String> physicalConditions,
-      @JsonKey(fromJson: NonNullTimestampConverter.timestampToDateTime, toJson: NonNullTimestampConverter.dateTimeToTimestamp)
-          required final DateTime createdAt}) = _$_DiarySetting;
+      @JsonKey(
+          fromJson: NonNullTimestampConverter.timestampToDateTime,
+          toJson: NonNullTimestampConverter.dateTimeToTimestamp)
+      required final DateTime createdAt}) = _$_DiarySetting;
   const _DiarySetting._() : super._();
 
   factory _DiarySetting.fromJson(Map<String, dynamic> json) =

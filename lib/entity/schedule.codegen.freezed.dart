@@ -46,14 +46,17 @@ abstract class $ScheduleCopyWith<$Res> {
       _$ScheduleCopyWithImpl<$Res, Schedule>;
   @useResult
   $Res call(
-      {@JsonKey(includeIfNull: false, toJson: toNull)
-          String? id,
+      {@JsonKey(includeIfNull: false, toJson: toNull) String? id,
       String title,
-      @JsonKey(fromJson: NonNullTimestampConverter.timestampToDateTime, toJson: NonNullTimestampConverter.dateTimeToTimestamp)
-          DateTime date,
+      @JsonKey(
+          fromJson: NonNullTimestampConverter.timestampToDateTime,
+          toJson: NonNullTimestampConverter.dateTimeToTimestamp)
+      DateTime date,
       LocalNotification? localNotification,
-      @JsonKey(fromJson: NonNullTimestampConverter.timestampToDateTime, toJson: NonNullTimestampConverter.dateTimeToTimestamp)
-          DateTime createdDateTime});
+      @JsonKey(
+          fromJson: NonNullTimestampConverter.timestampToDateTime,
+          toJson: NonNullTimestampConverter.dateTimeToTimestamp)
+      DateTime createdDateTime});
 
   $LocalNotificationCopyWith<$Res>? get localNotification;
 }
@@ -122,14 +125,17 @@ abstract class _$$_ScheduleCopyWith<$Res> implements $ScheduleCopyWith<$Res> {
   @override
   @useResult
   $Res call(
-      {@JsonKey(includeIfNull: false, toJson: toNull)
-          String? id,
+      {@JsonKey(includeIfNull: false, toJson: toNull) String? id,
       String title,
-      @JsonKey(fromJson: NonNullTimestampConverter.timestampToDateTime, toJson: NonNullTimestampConverter.dateTimeToTimestamp)
-          DateTime date,
+      @JsonKey(
+          fromJson: NonNullTimestampConverter.timestampToDateTime,
+          toJson: NonNullTimestampConverter.dateTimeToTimestamp)
+      DateTime date,
       LocalNotification? localNotification,
-      @JsonKey(fromJson: NonNullTimestampConverter.timestampToDateTime, toJson: NonNullTimestampConverter.dateTimeToTimestamp)
-          DateTime createdDateTime});
+      @JsonKey(
+          fromJson: NonNullTimestampConverter.timestampToDateTime,
+          toJson: NonNullTimestampConverter.dateTimeToTimestamp)
+      DateTime createdDateTime});
 
   @override
   $LocalNotificationCopyWith<$Res>? get localNotification;
@@ -182,14 +188,17 @@ class __$$_ScheduleCopyWithImpl<$Res>
 @JsonSerializable(explicitToJson: true)
 class _$_Schedule extends _Schedule {
   const _$_Schedule(
-      {@JsonKey(includeIfNull: false, toJson: toNull)
-          this.id,
+      {@JsonKey(includeIfNull: false, toJson: toNull) this.id,
       required this.title,
-      @JsonKey(fromJson: NonNullTimestampConverter.timestampToDateTime, toJson: NonNullTimestampConverter.dateTimeToTimestamp)
-          required this.date,
+      @JsonKey(
+          fromJson: NonNullTimestampConverter.timestampToDateTime,
+          toJson: NonNullTimestampConverter.dateTimeToTimestamp)
+      required this.date,
       this.localNotification,
-      @JsonKey(fromJson: NonNullTimestampConverter.timestampToDateTime, toJson: NonNullTimestampConverter.dateTimeToTimestamp)
-          required this.createdDateTime})
+      @JsonKey(
+          fromJson: NonNullTimestampConverter.timestampToDateTime,
+          toJson: NonNullTimestampConverter.dateTimeToTimestamp)
+      required this.createdDateTime})
       : super._();
 
   factory _$_Schedule.fromJson(Map<String, dynamic> json) =>
@@ -253,14 +262,17 @@ class _$_Schedule extends _Schedule {
 
 abstract class _Schedule extends Schedule {
   const factory _Schedule(
-      {@JsonKey(includeIfNull: false, toJson: toNull)
-          final String? id,
+      {@JsonKey(includeIfNull: false, toJson: toNull) final String? id,
       required final String title,
-      @JsonKey(fromJson: NonNullTimestampConverter.timestampToDateTime, toJson: NonNullTimestampConverter.dateTimeToTimestamp)
-          required final DateTime date,
+      @JsonKey(
+          fromJson: NonNullTimestampConverter.timestampToDateTime,
+          toJson: NonNullTimestampConverter.dateTimeToTimestamp)
+      required final DateTime date,
       final LocalNotification? localNotification,
-      @JsonKey(fromJson: NonNullTimestampConverter.timestampToDateTime, toJson: NonNullTimestampConverter.dateTimeToTimestamp)
-          required final DateTime createdDateTime}) = _$_Schedule;
+      @JsonKey(
+          fromJson: NonNullTimestampConverter.timestampToDateTime,
+          toJson: NonNullTimestampConverter.dateTimeToTimestamp)
+      required final DateTime createdDateTime}) = _$_Schedule;
   const _Schedule._() : super._();
 
   factory _Schedule.fromJson(Map<String, dynamic> json) = _$_Schedule.fromJson;
@@ -314,8 +326,10 @@ abstract class $LocalNotificationCopyWith<$Res> {
   @useResult
   $Res call(
       {int localNotificationID,
-      @JsonKey(fromJson: NonNullTimestampConverter.timestampToDateTime, toJson: NonNullTimestampConverter.dateTimeToTimestamp)
-          DateTime remindDateTime});
+      @JsonKey(
+          fromJson: NonNullTimestampConverter.timestampToDateTime,
+          toJson: NonNullTimestampConverter.dateTimeToTimestamp)
+      DateTime remindDateTime});
 }
 
 /// @nodoc
@@ -357,8 +371,10 @@ abstract class _$$_LocalNotificationCopyWith<$Res>
   @useResult
   $Res call(
       {int localNotificationID,
-      @JsonKey(fromJson: NonNullTimestampConverter.timestampToDateTime, toJson: NonNullTimestampConverter.dateTimeToTimestamp)
-          DateTime remindDateTime});
+      @JsonKey(
+          fromJson: NonNullTimestampConverter.timestampToDateTime,
+          toJson: NonNullTimestampConverter.dateTimeToTimestamp)
+      DateTime remindDateTime});
 }
 
 /// @nodoc
@@ -394,8 +410,10 @@ class __$$_LocalNotificationCopyWithImpl<$Res>
 class _$_LocalNotification extends _LocalNotification {
   const _$_LocalNotification(
       {required this.localNotificationID,
-      @JsonKey(fromJson: NonNullTimestampConverter.timestampToDateTime, toJson: NonNullTimestampConverter.dateTimeToTimestamp)
-          required this.remindDateTime})
+      @JsonKey(
+          fromJson: NonNullTimestampConverter.timestampToDateTime,
+          toJson: NonNullTimestampConverter.dateTimeToTimestamp)
+      required this.remindDateTime})
       : super._();
 
   factory _$_LocalNotification.fromJson(Map<String, dynamic> json) =>
@@ -448,8 +466,10 @@ class _$_LocalNotification extends _LocalNotification {
 abstract class _LocalNotification extends LocalNotification {
   const factory _LocalNotification(
       {required final int localNotificationID,
-      @JsonKey(fromJson: NonNullTimestampConverter.timestampToDateTime, toJson: NonNullTimestampConverter.dateTimeToTimestamp)
-          required final DateTime remindDateTime}) = _$_LocalNotification;
+      @JsonKey(
+          fromJson: NonNullTimestampConverter.timestampToDateTime,
+          toJson: NonNullTimestampConverter.dateTimeToTimestamp)
+      required final DateTime remindDateTime}) = _$_LocalNotification;
   const _LocalNotification._() : super._();
 
   factory _LocalNotification.fromJson(Map<String, dynamic> json) =

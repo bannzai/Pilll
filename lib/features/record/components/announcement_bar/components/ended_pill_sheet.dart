@@ -37,9 +37,9 @@ class EndedPillSheet extends StatelessWidget {
       child: Container(
         padding: const EdgeInsets.symmetric(vertical: 8, horizontal: 8),
         color: PilllColors.primary,
-        child: Center(
+        child: const Center(
           child: Column(
-            children: const [
+            children: [
               Text("ピルシートが終了しました",
                   style: TextStyle(
                     fontFamily: FontFamily.japanese,

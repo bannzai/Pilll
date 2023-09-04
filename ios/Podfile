@@ -3,7 +3,7 @@ platform :ios, '13.0'
 # Reference: https://github.com/invertase/firestore-ios-sdk-frameworks/issues/46#issuecomment-1002071920
 # Source Code: https://github.com/FirebaseExtended/flutterfire/blob/efdcc16aa2f3d45a3835f0eb73801ba88e808e07/packages/firebase_core/firebase_core/ios/firebase_core.podspec#L6-L8
 # It should be with https://github.com/invertase/firestore-ios-sdk-frameworks.git :tag
-$FirebaseSDKVersion='10.1.0'
+$FirebaseSDKVersion='10.13.0'
 
 # CocoaPods analytics sends network stats synchronously affecting flutter build latency.
 ENV['COCOAPODS_DISABLE_STATS'] = 'true'
