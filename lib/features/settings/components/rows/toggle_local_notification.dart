@@ -24,7 +24,7 @@ class ToggleLocalNotification extends HookConsumerWidget {
     final cancelReminderLocalNotification = ref.watch(cancelReminderLocalNotificationProvider);
 
     return SwitchListTile(
-      title: const Text("服薬通知βを使用する",
+      title: const Text("服用通知βを使用する",
           style: TextStyle(
             fontFamily: FontFamily.roboto,
             fontWeight: FontWeight.w300,
@@ -50,7 +50,7 @@ class ToggleLocalNotification extends HookConsumerWidget {
             SnackBar(
               duration: const Duration(seconds: 2),
               content: Text(
-                "服薬通知βを利用するを ${value ? "ON" : "OFF"}にしました",
+                "服用通知βを利用するを ${value ? "ON" : "OFF"}にしました",
               ),
             ),
           );
