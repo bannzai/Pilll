@@ -81,18 +81,18 @@ class PillSheetModifiedHistory with _$PillSheetModifiedHistory {
     // ============ END: Added since v2 ============
 
     // The below properties are deprecated and added since v1.
-    // This is deprecated property. TODO: delete after 2024-03-01
+    // This is deprecated property. TODO: [PillSheetModifiedHistory-V2] delete after 2024-04-01
     // Instead of calculating from beforePillSheetGroup and afterPillSheetGroup
     required PillSheetModifiedHistoryValue value,
-    // This is deprecated property. TODO: delete after 2024-03-01
+    // This is deprecated property. TODO: [PillSheetModifiedHistory-V2] delete after 2024-04-01
     // Instead of beforePillSheetID and afterPillSheetID
     required String? pillSheetID,
-    // This is deprecated property. TODO: delete after 2024-03-01
+    // This is deprecated property. TODO: [PillSheetModifiedHistory-V2] delete after 2024-04-01
     // There are new properties for pill_sheet grouping. So it's all optional
     required String? pillSheetGroupID,
     required String? beforePillSheetID,
     required String? afterPillSheetID,
-    // This is deprecated property. TODO: delete after 2024-03-01
+    // This is deprecated property. TODO: [PillSheetModifiedHistory-V2] delete after 2024-04-01
     // Instead of beforePillSheetGroup and afterPillSheetGroup
     // before and after is nullable
     // Because, actions for createdPillSheet and deletedPillSheet are not exists target single pill sheet
@@ -115,7 +115,7 @@ abstract class PillSheetModifiedHistoryServiceActionFactory {
 
   static PillSheetModifiedHistory _create({
     // ============ BEGIN: Added since v1 ============
-    // TODO: delete after 2024-03-01
+    // TODO: [PillSheetModifiedHistory-V2] delete after 2024-04-01
     required PillSheet? before,
     required PillSheet? after,
     required String? pillSheetGroupID,

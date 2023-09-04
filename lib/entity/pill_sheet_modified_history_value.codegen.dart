@@ -34,7 +34,7 @@ class CreatedPillSheetValue with _$CreatedPillSheetValue {
   @JsonSerializable(explicitToJson: true)
   const factory CreatedPillSheetValue({
     // The below properties are deprecated and added since v1.
-    // This is deprecated property. TODO: delete after 2024-03-01
+    // This is deprecated property. TODO: [PillSheetModifiedHistory-V2] delete after 2024-04-01
     @JsonKey(
       fromJson: NonNullTimestampConverter.timestampToDateTime,
       toJson: NonNullTimestampConverter.dateTimeToTimestamp,
@@ -52,7 +52,7 @@ class AutomaticallyRecordedLastTakenDateValue with _$AutomaticallyRecordedLastTa
   @JsonSerializable(explicitToJson: true)
   const factory AutomaticallyRecordedLastTakenDateValue({
     // The below properties are deprecated and added since v1.
-    // This is deprecated property. TODO: delete after 2024-03-01
+    // This is deprecated property. TODO: [PillSheetModifiedHistory-V2] delete after 2024-04-01
     @JsonKey(
       fromJson: TimestampConverter.timestampToDateTime,
       toJson: TimestampConverter.dateTimeToTimestamp,
@@ -76,7 +76,7 @@ class DeletedPillSheetValue with _$DeletedPillSheetValue {
   @JsonSerializable(explicitToJson: true)
   const factory DeletedPillSheetValue({
     // The below properties are deprecated and added since v1.
-    // This is deprecated property. TODO: delete after 2024-03-01
+    // This is deprecated property. TODO: [PillSheetModifiedHistory-V2] delete after 2024-04-01
     @JsonKey(
       fromJson: NonNullTimestampConverter.timestampToDateTime,
       toJson: NonNullTimestampConverter.dateTimeToTimestamp,
@@ -100,7 +100,7 @@ class TakenPillValue with _$TakenPillValue {
     // ============ END: Added since v1 ============
 
     // The below properties are deprecated and added since v1.
-    // This is deprecated property. TODO: delete after 2024-03-01
+    // This is deprecated property. TODO: [PillSheetModifiedHistory-V2] delete after 2024-04-01
     @JsonKey(
       fromJson: TimestampConverter.timestampToDateTime,
       toJson: TimestampConverter.dateTimeToTimestamp,
@@ -153,7 +153,7 @@ class RevertTakenPillValue with _$RevertTakenPillValue {
   @JsonSerializable(explicitToJson: true)
   const factory RevertTakenPillValue({
     // The below properties are deprecated and added since v1.
-   // This is deprecated property. TODO: delete after 2024-03-01
+    // This is deprecated property. TODO: [PillSheetModifiedHistory-V2] delete after 2024-04-01
     @JsonKey(
       fromJson: TimestampConverter.timestampToDateTime,
       toJson: TimestampConverter.dateTimeToTimestamp,
@@ -177,7 +177,7 @@ class ChangedPillNumberValue with _$ChangedPillNumberValue {
   @JsonSerializable(explicitToJson: true)
   const factory ChangedPillNumberValue({
     // The below properties are deprecated and added since v1.
-    // This is deprecated property. TODO: delete after 2024-03-01
+    // This is deprecated property. TODO: [PillSheetModifiedHistory-V2] delete after 2024-04-01
     @JsonKey(
       fromJson: NonNullTimestampConverter.timestampToDateTime,
       toJson: NonNullTimestampConverter.dateTimeToTimestamp,
@@ -253,7 +253,7 @@ class ChangedBeginDisplayNumberValue with _$ChangedBeginDisplayNumberValue {
   @JsonSerializable(explicitToJson: true)
   const factory ChangedBeginDisplayNumberValue({
     // The below properties are deprecated and added since v1.
-    // This is deprecated property. TODO: delete after 2024-03-01
+    // This is deprecated property. TODO: [PillSheetModifiedHistory-V2] delete after 2024-04-01
     // 番号を変更した事が無い場合もあるのでnullable
     required PillSheetGroupDisplayNumberSetting? beforeDisplayNumberSetting,
     required PillSheetGroupDisplayNumberSetting afterDisplayNumberSetting,
@@ -268,7 +268,7 @@ class ChangedEndDisplayNumberValue with _$ChangedEndDisplayNumberValue {
   @JsonSerializable(explicitToJson: true)
   const factory ChangedEndDisplayNumberValue({
     // The below properties are deprecated and added since v1.
-    // This is deprecated property. TODO: delete after 2024-03-01
+    // This is deprecated property. TODO: [PillSheetModifiedHistory-V2] delete after 2024-04-01
     // 番号を変更した事が無い場合もあるのでnullable
     required PillSheetGroupDisplayNumberSetting? beforeDisplayNumberSetting,
     required PillSheetGroupDisplayNumberSetting afterDisplayNumberSetting,
