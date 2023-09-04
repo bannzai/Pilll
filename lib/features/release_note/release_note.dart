@@ -42,7 +42,7 @@ class ReleaseNote extends StatelessWidget {
                       child: Container(
                         padding: const EdgeInsets.only(top: 40, left: 40, right: 40),
                         child: const Text(
-                          "ホームウィジェットが追加できるようになりました",
+                          "服用通知機能が進化しました",
                           style: TextStyle(
                             fontFamily: FontFamily.japanese,
                             fontWeight: FontWeight.w600,
@@ -62,7 +62,7 @@ class ReleaseNote extends StatelessWidget {
                     children: [
                       Text(
                         '''
-ホームウィジェットを追加できるようになりました。本日服用するピルの番号が一目でわかるようになっています
+この改善により服用通知の遅延が無くなります。大きな変更のためベータ機能として提供しております。設定タブの「服用通知βを使用する」から有効にできます。詳細はリンクをご覧ください
                         ''',
                         style: TextStyle(
                           fontFamily: FontFamily.japanese,
