@@ -97,12 +97,7 @@ class ReleaseNote extends StatelessWidget {
 }
 
 void showReleaseNotePreDialog(BuildContext context) async {
-  final String key;
-  if (Platform.isAndroid) {
-    key = ReleaseNoteKey.version3_16_0;
-  } else {
-    key = ReleaseNoteKey.version3_15_0;
-  }
+  const String key = ReleaseNoteKey.version3_18_0;
   final storage = await SharedPreferences.getInstance();
   if (storage.getBool(key) ?? false) {
     return;
