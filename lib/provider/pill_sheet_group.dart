@@ -27,12 +27,24 @@ final activePillSheetProvider = Provider((ref) {
 });
 
 final latestPillSheetGroupProvider = StreamProvider((ref) => ref
-    .watch(databaseProvider)
-    .pillSheetGroupsReference()
-    .orderBy(PillSheetGroupFirestoreKeys.createdAt)
-    .limitToLast(1)
-    .snapshots(includeMetadataChanges: true)
-    .map(((event) => _filter(event))));
+        .watch(databaseProvider)
+        .pillSheetGroupsReference()
+        .orderBy(PillSheetGroupFirestoreKeys.createdAt)
+        .limitToLast(1)
+        .snapshots(includeMetadataChanges: true)
+        .skipWhile((snapshot) {
+      if (awaitsPillSheetGroupRemoteDBDataChanged) {
+        if (snapshot.metadata.hasPendingWrites) {
+          debugPrint("[DEBUG] hasPendingWrites: true");
+          return true;
+        } else {
+          debugPrint("[DEBUG] hasPendingWrites: false");
+          // Clear flag and continue to last statement
+          awaitsPillSheetGroupRemoteDBDataChanged = false;
+        }
+      }
+      return false;
+    }).map(((event) => _filter(event))));
 
 final beforePillSheetGroupProvider = FutureProvider<PillSheetGroup?>((ref) async {
   final database = ref.watch(databaseProvider);
