@@ -31,7 +31,7 @@ class ChangePillNumber {
 
   Future<void> call({
     required PillSheetGroup pillSheetGroup,
-    required PillSheet activedPillSheet,
+    required PillSheet activePillSheet,
     required int pillSheetPageIndex,
     required int pillNumberInPillSheet,
   }) async {
@@ -67,17 +67,27 @@ class ChangePillNumber {
         lastTakenDate = null;
       }
 
-      final updatedPillSheet = pillSheet.copyWith(beginingDate: beginDate, lastTakenDate: lastTakenDate, restDurations: []);
+      final updatedPillSheet = pillSheet.copyWith(
+        beginingDate: beginDate,
+        lastTakenDate: lastTakenDate,
+        restDurations: [],
+      );
       updatedPillSheets.add(updatedPillSheet);
     });
 
+    final updatedPillSheetGroup = pillSheetGroup.copyWith(pillSheets: updatedPillSheets);
     final history = PillSheetModifiedHistoryServiceActionFactory.createChangedPillNumberAction(
       pillSheetGroupID: pillSheetGroup.id,
-      before: activedPillSheet,
+      before: activePillSheet,
       after: updatedPillSheets[pillSheetPageIndex],
+      beforePillSheetGroup: pillSheetGroup,
+      afterPillSheetGroup: updatedPillSheetGroup,
     );
     batchSetPillSheetModifiedHistory(batch, history);
-    batchSetPillSheetGroup(batch, pillSheetGroup.copyWith(pillSheets: updatedPillSheets));
+    batchSetPillSheetGroup(
+      batch,
+      updatedPillSheetGroup,
+    );
 
     await batch.commit();
   }

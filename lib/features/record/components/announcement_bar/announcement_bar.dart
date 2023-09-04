@@ -107,7 +107,7 @@ class AnnouncementBar extends HookConsumerWidget {
           }
         }
 
-        if (latestPillSheetGroup != null && latestPillSheetGroup.activedPillSheet == null) {
+        if (latestPillSheetGroup != null && latestPillSheetGroup.activePillSheet == null) {
           // ピルシートグループが存在していてactivedPillSheetが無い場合はピルシート終了が何かしらの理由がなくなったと見なし終了表示にする
           return EndedPillSheet(
             isPremium: premiumAndTrial.isPremium,
@@ -140,7 +140,7 @@ class AnnouncementBar extends HookConsumerWidget {
         return RestDurationAnnouncementBar(restDurationNotification: restDurationNotification);
       }
 
-      if (latestPillSheetGroup != null && latestPillSheetGroup.activedPillSheet == null) {
+      if (latestPillSheetGroup != null && latestPillSheetGroup.activePillSheet == null) {
         // ピルシートグループが存在していてactivedPillSheetが無い場合はピルシート終了が何かしらの理由がなくなったと見なし終了表示にする
         return EndedPillSheet(
           isPremium: premiumAndTrial.isPremium,

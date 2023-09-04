@@ -46,6 +46,7 @@ void main() {
         id: firestoreIDGenerator(),
         typeInfo: PillSheetType.pillsheet_21.typeInfo,
         beginingDate: DateTime.parse("2020-11-23"),
+        lastTakenDate: null,
         createdAt: now(),
       );
 

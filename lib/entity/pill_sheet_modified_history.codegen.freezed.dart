@@ -21,21 +21,12 @@ PillSheetModifiedHistory _$PillSheetModifiedHistoryFromJson(
 
 /// @nodoc
 mixin _$PillSheetModifiedHistory {
+// Added since 2023-08-01
+  dynamic get version =>
+      throw _privateConstructorUsedError; // ============ BEGIN: Added since v1 ============
   @JsonKey(includeIfNull: false, toJson: toNull)
   String? get id => throw _privateConstructorUsedError;
   String get actionType => throw _privateConstructorUsedError;
-  PillSheetModifiedHistoryValue get value =>
-      throw _privateConstructorUsedError; // This is deprecated property.
-// Instead of beforePillSheetID and afterPillSheetID
-  String? get pillSheetID =>
-      throw _privateConstructorUsedError; // There are new properties for pill_sheet grouping. So it's all optional
-  String? get pillSheetGroupID => throw _privateConstructorUsedError;
-  String? get beforePillSheetID => throw _privateConstructorUsedError;
-  String? get afterPillSheetID =>
-      throw _privateConstructorUsedError; // before and after is nullable
-// Because, actions for createdPillSheet and deletedPillSheet are not exists target single pill sheet
-  PillSheet? get before => throw _privateConstructorUsedError;
-  PillSheet? get after => throw _privateConstructorUsedError;
   @JsonKey(
       fromJson: NonNullTimestampConverter.timestampToDateTime,
       toJson: NonNullTimestampConverter.dateTimeToTimestamp)
@@ -43,7 +34,37 @@ mixin _$PillSheetModifiedHistory {
   @JsonKey(
       fromJson: NonNullTimestampConverter.timestampToDateTime,
       toJson: NonNullTimestampConverter.dateTimeToTimestamp)
-  DateTime get createdAt => throw _privateConstructorUsedError;
+  DateTime get createdAt =>
+      throw _privateConstructorUsedError; // ============ END: Added since v1 ============
+// ============ BEGIN: Added since v2 ============
+// beforePillSheetGroup and afterPillSheetGroup is nullable
+// Because, actions for createdPillSheet and deletedPillSheet are not exists target single pill sheet
+  PillSheetGroup? get beforePillSheetGroup =>
+      throw _privateConstructorUsedError;
+  PillSheetGroup? get afterPillSheetGroup => throw _privateConstructorUsedError;
+  @JsonKey(
+      fromJson: TimestampConverter.timestampToDateTime,
+      toJson: TimestampConverter.dateTimeToTimestamp)
+  DateTime? get ttlExpiresDateTime =>
+      throw _privateConstructorUsedError; // ============ END: Added since v2 ============
+// The below properties are deprecated and added since v1.
+// This is deprecated property. TODO: [PillSheetModifiedHistory-V2] delete after 2024-04-01
+// Instead of calculating from beforePillSheetGroup and afterPillSheetGroup
+  PillSheetModifiedHistoryValue get value =>
+      throw _privateConstructorUsedError; // This is deprecated property. TODO: [PillSheetModifiedHistory-V2] delete after 2024-04-01
+// Instead of beforePillSheetID and afterPillSheetID
+  String? get pillSheetID =>
+      throw _privateConstructorUsedError; // This is deprecated property. TODO: [PillSheetModifiedHistory-V2] delete after 2024-04-01
+// There are new properties for pill_sheet grouping. So it's all optional
+  String? get pillSheetGroupID => throw _privateConstructorUsedError;
+  String? get beforePillSheetID => throw _privateConstructorUsedError;
+  String? get afterPillSheetID =>
+      throw _privateConstructorUsedError; // This is deprecated property. TODO: [PillSheetModifiedHistory-V2] delete after 2024-04-01
+// Instead of beforePillSheetGroup and afterPillSheetGroup
+// before and after is nullable
+// Because, actions for createdPillSheet and deletedPillSheet are not exists target single pill sheet
+  PillSheet? get before => throw _privateConstructorUsedError;
+  PillSheet? get after => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
@@ -58,15 +79,9 @@ abstract class $PillSheetModifiedHistoryCopyWith<$Res> {
       _$PillSheetModifiedHistoryCopyWithImpl<$Res, PillSheetModifiedHistory>;
   @useResult
   $Res call(
-      {@JsonKey(includeIfNull: false, toJson: toNull) String? id,
+      {dynamic version,
+      @JsonKey(includeIfNull: false, toJson: toNull) String? id,
       String actionType,
-      PillSheetModifiedHistoryValue value,
-      String? pillSheetID,
-      String? pillSheetGroupID,
-      String? beforePillSheetID,
-      String? afterPillSheetID,
-      PillSheet? before,
-      PillSheet? after,
       @JsonKey(
           fromJson: NonNullTimestampConverter.timestampToDateTime,
           toJson: NonNullTimestampConverter.dateTimeToTimestamp)
@@ -74,8 +89,23 @@ abstract class $PillSheetModifiedHistoryCopyWith<$Res> {
       @JsonKey(
           fromJson: NonNullTimestampConverter.timestampToDateTime,
           toJson: NonNullTimestampConverter.dateTimeToTimestamp)
-      DateTime createdAt});
+      DateTime createdAt,
+      PillSheetGroup? beforePillSheetGroup,
+      PillSheetGroup? afterPillSheetGroup,
+      @JsonKey(
+          fromJson: TimestampConverter.timestampToDateTime,
+          toJson: TimestampConverter.dateTimeToTimestamp)
+      DateTime? ttlExpiresDateTime,
+      PillSheetModifiedHistoryValue value,
+      String? pillSheetID,
+      String? pillSheetGroupID,
+      String? beforePillSheetID,
+      String? afterPillSheetID,
+      PillSheet? before,
+      PillSheet? after});
 
+  $PillSheetGroupCopyWith<$Res>? get beforePillSheetGroup;
+  $PillSheetGroupCopyWith<$Res>? get afterPillSheetGroup;
   $PillSheetModifiedHistoryValueCopyWith<$Res> get value;
   $PillSheetCopyWith<$Res>? get before;
   $PillSheetCopyWith<$Res>? get after;
@@ -95,8 +125,14 @@ class _$PillSheetModifiedHistoryCopyWithImpl<$Res,
   @pragma('vm:prefer-inline')
   @override
   $Res call({
+    Object? version = freezed,
     Object? id = freezed,
     Object? actionType = null,
+    Object? estimatedEventCausingDate = null,
+    Object? createdAt = null,
+    Object? beforePillSheetGroup = freezed,
+    Object? afterPillSheetGroup = freezed,
+    Object? ttlExpiresDateTime = freezed,
     Object? value = null,
     Object? pillSheetID = freezed,
     Object? pillSheetGroupID = freezed,
@@ -104,10 +140,12 @@ class _$PillSheetModifiedHistoryCopyWithImpl<$Res,
     Object? afterPillSheetID = freezed,
     Object? before = freezed,
     Object? after = freezed,
-    Object? estimatedEventCausingDate = null,
-    Object? createdAt = null,
   }) {
     return _then(_value.copyWith(
+      version: freezed == version
+          ? _value.version
+          : version // ignore: cast_nullable_to_non_nullable
+              as dynamic,
       id: freezed == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
@@ -116,6 +154,26 @@ class _$PillSheetModifiedHistoryCopyWithImpl<$Res,
           ? _value.actionType
           : actionType // ignore: cast_nullable_to_non_nullable
               as String,
+      estimatedEventCausingDate: null == estimatedEventCausingDate
+          ? _value.estimatedEventCausingDate
+          : estimatedEventCausingDate // ignore: cast_nullable_to_non_nullable
+              as DateTime,
+      createdAt: null == createdAt
+          ? _value.createdAt
+          : createdAt // ignore: cast_nullable_to_non_nullable
+              as DateTime,
+      beforePillSheetGroup: freezed == beforePillSheetGroup
+          ? _value.beforePillSheetGroup
+          : beforePillSheetGroup // ignore: cast_nullable_to_non_nullable
+              as PillSheetGroup?,
+      afterPillSheetGroup: freezed == afterPillSheetGroup
+          ? _value.afterPillSheetGroup
+          : afterPillSheetGroup // ignore: cast_nullable_to_non_nullable
+              as PillSheetGroup?,
+      ttlExpiresDateTime: freezed == ttlExpiresDateTime
+          ? _value.ttlExpiresDateTime
+          : ttlExpiresDateTime // ignore: cast_nullable_to_non_nullable
+              as DateTime?,
       value: null == value
           ? _value.value
           : value // ignore: cast_nullable_to_non_nullable
@@ -144,15 +202,31 @@ class _$PillSheetModifiedHistoryCopyWithImpl<$Res,
           ? _value.after
           : after // ignore: cast_nullable_to_non_nullable
               as PillSheet?,
-      estimatedEventCausingDate: null == estimatedEventCausingDate
-          ? _value.estimatedEventCausingDate
-          : estimatedEventCausingDate // ignore: cast_nullable_to_non_nullable
-              as DateTime,
-      createdAt: null == createdAt
-          ? _value.createdAt
-          : createdAt // ignore: cast_nullable_to_non_nullable
-              as DateTime,
     ) as $Val);
+  }
+
+  @override
+  @pragma('vm:prefer-inline')
+  $PillSheetGroupCopyWith<$Res>? get beforePillSheetGroup {
+    if (_value.beforePillSheetGroup == null) {
+      return null;
+    }
+
+    return $PillSheetGroupCopyWith<$Res>(_value.beforePillSheetGroup!, (value) {
+      return _then(_value.copyWith(beforePillSheetGroup: value) as $Val);
+    });
+  }
+
+  @override
+  @pragma('vm:prefer-inline')
+  $PillSheetGroupCopyWith<$Res>? get afterPillSheetGroup {
+    if (_value.afterPillSheetGroup == null) {
+      return null;
+    }
+
+    return $PillSheetGroupCopyWith<$Res>(_value.afterPillSheetGroup!, (value) {
+      return _then(_value.copyWith(afterPillSheetGroup: value) as $Val);
+    });
   }
 
   @override
@@ -198,15 +272,9 @@ abstract class _$$_PillSheetModifiedHistoryCopyWith<$Res>
   @override
   @useResult
   $Res call(
-      {@JsonKey(includeIfNull: false, toJson: toNull) String? id,
+      {dynamic version,
+      @JsonKey(includeIfNull: false, toJson: toNull) String? id,
       String actionType,
-      PillSheetModifiedHistoryValue value,
-      String? pillSheetID,
-      String? pillSheetGroupID,
-      String? beforePillSheetID,
-      String? afterPillSheetID,
-      PillSheet? before,
-      PillSheet? after,
       @JsonKey(
           fromJson: NonNullTimestampConverter.timestampToDateTime,
           toJson: NonNullTimestampConverter.dateTimeToTimestamp)
@@ -214,8 +282,25 @@ abstract class _$$_PillSheetModifiedHistoryCopyWith<$Res>
       @JsonKey(
           fromJson: NonNullTimestampConverter.timestampToDateTime,
           toJson: NonNullTimestampConverter.dateTimeToTimestamp)
-      DateTime createdAt});
+      DateTime createdAt,
+      PillSheetGroup? beforePillSheetGroup,
+      PillSheetGroup? afterPillSheetGroup,
+      @JsonKey(
+          fromJson: TimestampConverter.timestampToDateTime,
+          toJson: TimestampConverter.dateTimeToTimestamp)
+      DateTime? ttlExpiresDateTime,
+      PillSheetModifiedHistoryValue value,
+      String? pillSheetID,
+      String? pillSheetGroupID,
+      String? beforePillSheetID,
+      String? afterPillSheetID,
+      PillSheet? before,
+      PillSheet? after});
 
+  @override
+  $PillSheetGroupCopyWith<$Res>? get beforePillSheetGroup;
+  @override
+  $PillSheetGroupCopyWith<$Res>? get afterPillSheetGroup;
   @override
   $PillSheetModifiedHistoryValueCopyWith<$Res> get value;
   @override
@@ -236,8 +321,14 @@ class __$$_PillSheetModifiedHistoryCopyWithImpl<$Res>
   @pragma('vm:prefer-inline')
   @override
   $Res call({
+    Object? version = freezed,
     Object? id = freezed,
     Object? actionType = null,
+    Object? estimatedEventCausingDate = null,
+    Object? createdAt = null,
+    Object? beforePillSheetGroup = freezed,
+    Object? afterPillSheetGroup = freezed,
+    Object? ttlExpiresDateTime = freezed,
     Object? value = null,
     Object? pillSheetID = freezed,
     Object? pillSheetGroupID = freezed,
@@ -245,10 +336,9 @@ class __$$_PillSheetModifiedHistoryCopyWithImpl<$Res>
     Object? afterPillSheetID = freezed,
     Object? before = freezed,
     Object? after = freezed,
-    Object? estimatedEventCausingDate = null,
-    Object? createdAt = null,
   }) {
     return _then(_$_PillSheetModifiedHistory(
+      version: freezed == version ? _value.version! : version,
       id: freezed == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
@@ -257,6 +347,26 @@ class __$$_PillSheetModifiedHistoryCopyWithImpl<$Res>
           ? _value.actionType
           : actionType // ignore: cast_nullable_to_non_nullable
               as String,
+      estimatedEventCausingDate: null == estimatedEventCausingDate
+          ? _value.estimatedEventCausingDate
+          : estimatedEventCausingDate // ignore: cast_nullable_to_non_nullable
+              as DateTime,
+      createdAt: null == createdAt
+          ? _value.createdAt
+          : createdAt // ignore: cast_nullable_to_non_nullable
+              as DateTime,
+      beforePillSheetGroup: freezed == beforePillSheetGroup
+          ? _value.beforePillSheetGroup
+          : beforePillSheetGroup // ignore: cast_nullable_to_non_nullable
+              as PillSheetGroup?,
+      afterPillSheetGroup: freezed == afterPillSheetGroup
+          ? _value.afterPillSheetGroup
+          : afterPillSheetGroup // ignore: cast_nullable_to_non_nullable
+              as PillSheetGroup?,
+      ttlExpiresDateTime: freezed == ttlExpiresDateTime
+          ? _value.ttlExpiresDateTime
+          : ttlExpiresDateTime // ignore: cast_nullable_to_non_nullable
+              as DateTime?,
       value: null == value
           ? _value.value
           : value // ignore: cast_nullable_to_non_nullable
@@ -285,14 +395,6 @@ class __$$_PillSheetModifiedHistoryCopyWithImpl<$Res>
           ? _value.after
           : after // ignore: cast_nullable_to_non_nullable
               as PillSheet?,
-      estimatedEventCausingDate: null == estimatedEventCausingDate
-          ? _value.estimatedEventCausingDate
-          : estimatedEventCausingDate // ignore: cast_nullable_to_non_nullable
-              as DateTime,
-      createdAt: null == createdAt
-          ? _value.createdAt
-          : createdAt // ignore: cast_nullable_to_non_nullable
-              as DateTime,
     ));
   }
 }
@@ -302,15 +404,9 @@ class __$$_PillSheetModifiedHistoryCopyWithImpl<$Res>
 @JsonSerializable(explicitToJson: true)
 class _$_PillSheetModifiedHistory extends _PillSheetModifiedHistory {
   const _$_PillSheetModifiedHistory(
-      {@JsonKey(includeIfNull: false, toJson: toNull) required this.id,
+      {this.version = "v1",
+      @JsonKey(includeIfNull: false, toJson: toNull) required this.id,
       required this.actionType,
-      required this.value,
-      required this.pillSheetID,
-      required this.pillSheetGroupID,
-      required this.beforePillSheetID,
-      required this.afterPillSheetID,
-      required this.before,
-      required this.after,
       @JsonKey(
           fromJson: NonNullTimestampConverter.timestampToDateTime,
           toJson: NonNullTimestampConverter.dateTimeToTimestamp)
@@ -318,36 +414,35 @@ class _$_PillSheetModifiedHistory extends _PillSheetModifiedHistory {
       @JsonKey(
           fromJson: NonNullTimestampConverter.timestampToDateTime,
           toJson: NonNullTimestampConverter.dateTimeToTimestamp)
-      required this.createdAt})
+      required this.createdAt,
+      required this.beforePillSheetGroup,
+      required this.afterPillSheetGroup,
+      @JsonKey(
+          fromJson: TimestampConverter.timestampToDateTime,
+          toJson: TimestampConverter.dateTimeToTimestamp)
+      this.ttlExpiresDateTime,
+      required this.value,
+      required this.pillSheetID,
+      required this.pillSheetGroupID,
+      required this.beforePillSheetID,
+      required this.afterPillSheetID,
+      required this.before,
+      required this.after})
       : super._();
 
   factory _$_PillSheetModifiedHistory.fromJson(Map<String, dynamic> json) =>
       _$$_PillSheetModifiedHistoryFromJson(json);
 
+// Added since 2023-08-01
+  @override
+  @JsonKey()
+  final dynamic version;
+// ============ BEGIN: Added since v1 ============
   @override
   @JsonKey(includeIfNull: false, toJson: toNull)
   final String? id;
   @override
   final String actionType;
-  @override
-  final PillSheetModifiedHistoryValue value;
-// This is deprecated property.
-// Instead of beforePillSheetID and afterPillSheetID
-  @override
-  final String? pillSheetID;
-// There are new properties for pill_sheet grouping. So it's all optional
-  @override
-  final String? pillSheetGroupID;
-  @override
-  final String? beforePillSheetID;
-  @override
-  final String? afterPillSheetID;
-// before and after is nullable
-// Because, actions for createdPillSheet and deletedPillSheet are not exists target single pill sheet
-  @override
-  final PillSheet? before;
-  @override
-  final PillSheet? after;
   @override
   @JsonKey(
       fromJson: NonNullTimestampConverter.timestampToDateTime,
@@ -358,10 +453,49 @@ class _$_PillSheetModifiedHistory extends _PillSheetModifiedHistory {
       fromJson: NonNullTimestampConverter.timestampToDateTime,
       toJson: NonNullTimestampConverter.dateTimeToTimestamp)
   final DateTime createdAt;
+// ============ END: Added since v1 ============
+// ============ BEGIN: Added since v2 ============
+// beforePillSheetGroup and afterPillSheetGroup is nullable
+// Because, actions for createdPillSheet and deletedPillSheet are not exists target single pill sheet
+  @override
+  final PillSheetGroup? beforePillSheetGroup;
+  @override
+  final PillSheetGroup? afterPillSheetGroup;
+  @override
+  @JsonKey(
+      fromJson: TimestampConverter.timestampToDateTime,
+      toJson: TimestampConverter.dateTimeToTimestamp)
+  final DateTime? ttlExpiresDateTime;
+// ============ END: Added since v2 ============
+// The below properties are deprecated and added since v1.
+// This is deprecated property. TODO: [PillSheetModifiedHistory-V2] delete after 2024-04-01
+// Instead of calculating from beforePillSheetGroup and afterPillSheetGroup
+  @override
+  final PillSheetModifiedHistoryValue value;
+// This is deprecated property. TODO: [PillSheetModifiedHistory-V2] delete after 2024-04-01
+// Instead of beforePillSheetID and afterPillSheetID
+  @override
+  final String? pillSheetID;
+// This is deprecated property. TODO: [PillSheetModifiedHistory-V2] delete after 2024-04-01
+// There are new properties for pill_sheet grouping. So it's all optional
+  @override
+  final String? pillSheetGroupID;
+  @override
+  final String? beforePillSheetID;
+  @override
+  final String? afterPillSheetID;
+// This is deprecated property. TODO: [PillSheetModifiedHistory-V2] delete after 2024-04-01
+// Instead of beforePillSheetGroup and afterPillSheetGroup
+// before and after is nullable
+// Because, actions for createdPillSheet and deletedPillSheet are not exists target single pill sheet
+  @override
+  final PillSheet? before;
+  @override
+  final PillSheet? after;
 
   @override
   String toString() {
-    return 'PillSheetModifiedHistory(id: $id, actionType: $actionType, value: $value, pillSheetID: $pillSheetID, pillSheetGroupID: $pillSheetGroupID, beforePillSheetID: $beforePillSheetID, afterPillSheetID: $afterPillSheetID, before: $before, after: $after, estimatedEventCausingDate: $estimatedEventCausingDate, createdAt: $createdAt)';
+    return 'PillSheetModifiedHistory(version: $version, id: $id, actionType: $actionType, estimatedEventCausingDate: $estimatedEventCausingDate, createdAt: $createdAt, beforePillSheetGroup: $beforePillSheetGroup, afterPillSheetGroup: $afterPillSheetGroup, ttlExpiresDateTime: $ttlExpiresDateTime, value: $value, pillSheetID: $pillSheetID, pillSheetGroupID: $pillSheetGroupID, beforePillSheetID: $beforePillSheetID, afterPillSheetID: $afterPillSheetID, before: $before, after: $after)';
   }
 
   @override
@@ -369,9 +503,21 @@ class _$_PillSheetModifiedHistory extends _PillSheetModifiedHistory {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$_PillSheetModifiedHistory &&
+            const DeepCollectionEquality().equals(other.version, version) &&
             (identical(other.id, id) || other.id == id) &&
             (identical(other.actionType, actionType) ||
                 other.actionType == actionType) &&
+            (identical(other.estimatedEventCausingDate,
+                    estimatedEventCausingDate) ||
+                other.estimatedEventCausingDate == estimatedEventCausingDate) &&
+            (identical(other.createdAt, createdAt) ||
+                other.createdAt == createdAt) &&
+            (identical(other.beforePillSheetGroup, beforePillSheetGroup) ||
+                other.beforePillSheetGroup == beforePillSheetGroup) &&
+            (identical(other.afterPillSheetGroup, afterPillSheetGroup) ||
+                other.afterPillSheetGroup == afterPillSheetGroup) &&
+            (identical(other.ttlExpiresDateTime, ttlExpiresDateTime) ||
+                other.ttlExpiresDateTime == ttlExpiresDateTime) &&
             (identical(other.value, value) || other.value == value) &&
             (identical(other.pillSheetID, pillSheetID) ||
                 other.pillSheetID == pillSheetID) &&
@@ -382,29 +528,28 @@ class _$_PillSheetModifiedHistory extends _PillSheetModifiedHistory {
             (identical(other.afterPillSheetID, afterPillSheetID) ||
                 other.afterPillSheetID == afterPillSheetID) &&
             (identical(other.before, before) || other.before == before) &&
-            (identical(other.after, after) || other.after == after) &&
-            (identical(other.estimatedEventCausingDate,
-                    estimatedEventCausingDate) ||
-                other.estimatedEventCausingDate == estimatedEventCausingDate) &&
-            (identical(other.createdAt, createdAt) ||
-                other.createdAt == createdAt));
+            (identical(other.after, after) || other.after == after));
   }
 
   @JsonKey(ignore: true)
   @override
   int get hashCode => Object.hash(
       runtimeType,
+      const DeepCollectionEquality().hash(version),
       id,
       actionType,
+      estimatedEventCausingDate,
+      createdAt,
+      beforePillSheetGroup,
+      afterPillSheetGroup,
+      ttlExpiresDateTime,
       value,
       pillSheetID,
       pillSheetGroupID,
       beforePillSheetID,
       afterPillSheetID,
       before,
-      after,
-      estimatedEventCausingDate,
-      createdAt);
+      after);
 
   @JsonKey(ignore: true)
   @override
@@ -423,15 +568,9 @@ class _$_PillSheetModifiedHistory extends _PillSheetModifiedHistory {
 
 abstract class _PillSheetModifiedHistory extends PillSheetModifiedHistory {
   const factory _PillSheetModifiedHistory(
-      {@JsonKey(includeIfNull: false, toJson: toNull) required final String? id,
+      {final dynamic version,
+      @JsonKey(includeIfNull: false, toJson: toNull) required final String? id,
       required final String actionType,
-      required final PillSheetModifiedHistoryValue value,
-      required final String? pillSheetID,
-      required final String? pillSheetGroupID,
-      required final String? beforePillSheetID,
-      required final String? afterPillSheetID,
-      required final PillSheet? before,
-      required final PillSheet? after,
       @JsonKey(
           fromJson: NonNullTimestampConverter.timestampToDateTime,
           toJson: NonNullTimestampConverter.dateTimeToTimestamp)
@@ -439,33 +578,32 @@ abstract class _PillSheetModifiedHistory extends PillSheetModifiedHistory {
       @JsonKey(
           fromJson: NonNullTimestampConverter.timestampToDateTime,
           toJson: NonNullTimestampConverter.dateTimeToTimestamp)
-      required final DateTime createdAt}) = _$_PillSheetModifiedHistory;
+      required final DateTime createdAt,
+      required final PillSheetGroup? beforePillSheetGroup,
+      required final PillSheetGroup? afterPillSheetGroup,
+      @JsonKey(
+          fromJson: TimestampConverter.timestampToDateTime,
+          toJson: TimestampConverter.dateTimeToTimestamp)
+      final DateTime? ttlExpiresDateTime,
+      required final PillSheetModifiedHistoryValue value,
+      required final String? pillSheetID,
+      required final String? pillSheetGroupID,
+      required final String? beforePillSheetID,
+      required final String? afterPillSheetID,
+      required final PillSheet? before,
+      required final PillSheet? after}) = _$_PillSheetModifiedHistory;
   const _PillSheetModifiedHistory._() : super._();
 
   factory _PillSheetModifiedHistory.fromJson(Map<String, dynamic> json) =
       _$_PillSheetModifiedHistory.fromJson;
 
-  @override
+  @override // Added since 2023-08-01
+  dynamic get version;
+  @override // ============ BEGIN: Added since v1 ============
   @JsonKey(includeIfNull: false, toJson: toNull)
   String? get id;
   @override
   String get actionType;
-  @override
-  PillSheetModifiedHistoryValue get value;
-  @override // This is deprecated property.
-// Instead of beforePillSheetID and afterPillSheetID
-  String? get pillSheetID;
-  @override // There are new properties for pill_sheet grouping. So it's all optional
-  String? get pillSheetGroupID;
-  @override
-  String? get beforePillSheetID;
-  @override
-  String? get afterPillSheetID;
-  @override // before and after is nullable
-// Because, actions for createdPillSheet and deletedPillSheet are not exists target single pill sheet
-  PillSheet? get before;
-  @override
-  PillSheet? get after;
   @override
   @JsonKey(
       fromJson: NonNullTimestampConverter.timestampToDateTime,
@@ -476,6 +614,40 @@ abstract class _PillSheetModifiedHistory extends PillSheetModifiedHistory {
       fromJson: NonNullTimestampConverter.timestampToDateTime,
       toJson: NonNullTimestampConverter.dateTimeToTimestamp)
   DateTime get createdAt;
+  @override // ============ END: Added since v1 ============
+// ============ BEGIN: Added since v2 ============
+// beforePillSheetGroup and afterPillSheetGroup is nullable
+// Because, actions for createdPillSheet and deletedPillSheet are not exists target single pill sheet
+  PillSheetGroup? get beforePillSheetGroup;
+  @override
+  PillSheetGroup? get afterPillSheetGroup;
+  @override
+  @JsonKey(
+      fromJson: TimestampConverter.timestampToDateTime,
+      toJson: TimestampConverter.dateTimeToTimestamp)
+  DateTime? get ttlExpiresDateTime;
+  @override // ============ END: Added since v2 ============
+// The below properties are deprecated and added since v1.
+// This is deprecated property. TODO: [PillSheetModifiedHistory-V2] delete after 2024-04-01
+// Instead of calculating from beforePillSheetGroup and afterPillSheetGroup
+  PillSheetModifiedHistoryValue get value;
+  @override // This is deprecated property. TODO: [PillSheetModifiedHistory-V2] delete after 2024-04-01
+// Instead of beforePillSheetID and afterPillSheetID
+  String? get pillSheetID;
+  @override // This is deprecated property. TODO: [PillSheetModifiedHistory-V2] delete after 2024-04-01
+// There are new properties for pill_sheet grouping. So it's all optional
+  String? get pillSheetGroupID;
+  @override
+  String? get beforePillSheetID;
+  @override
+  String? get afterPillSheetID;
+  @override // This is deprecated property. TODO: [PillSheetModifiedHistory-V2] delete after 2024-04-01
+// Instead of beforePillSheetGroup and afterPillSheetGroup
+// before and after is nullable
+// Because, actions for createdPillSheet and deletedPillSheet are not exists target single pill sheet
+  PillSheet? get before;
+  @override
+  PillSheet? get after;
   @override
   @JsonKey(ignore: true)
   _$$_PillSheetModifiedHistoryCopyWith<_$_PillSheetModifiedHistory>

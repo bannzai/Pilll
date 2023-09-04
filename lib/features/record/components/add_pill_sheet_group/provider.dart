@@ -54,6 +54,8 @@ class AddPillSheetGroup {
     );
 
     final history = PillSheetModifiedHistoryServiceActionFactory.createCreatedPillSheetAction(
+      beforePillSheetGroup: pillSheetGroup,
+      createdNewPillSheetGroup: createdPillSheetGroup,
       pillSheetIDs: updatedPillSheetGroup.pillSheetIDs,
       pillSheetGroupID: createdPillSheetGroup.id,
     );
@@ -85,6 +87,7 @@ PillSheetGroup buildPillSheetGroup({
       beginingDate: n.add(
         Duration(days: offset),
       ),
+      lastTakenDate: null,
       groupIndex: pageIndex,
       createdAt: now(),
     );

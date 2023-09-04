@@ -266,6 +266,7 @@ void main() {
         id: "sheet_id",
         typeInfo: PillSheetType.pillsheet_21.typeInfo,
         beginingDate: mockToday,
+        lastTakenDate: null,
         createdAt: now(),
       );
 
@@ -273,8 +274,12 @@ void main() {
       final batchSetPillSheetGroup = MockBatchSetPillSheetGroup();
       when(batchSetPillSheetGroup(batch, pillSheetGroup)).thenReturn(pillSheetGroup.copyWith(id: "group_id"));
 
-      final history =
-          PillSheetModifiedHistoryServiceActionFactory.createCreatedPillSheetAction(pillSheetGroupID: "group_id", pillSheetIDs: ["sheet_id"]);
+      final history = PillSheetModifiedHistoryServiceActionFactory.createCreatedPillSheetAction(
+        pillSheetGroupID: "group_id",
+        pillSheetIDs: ["sheet_id"],
+        beforePillSheetGroup: null,
+        createdNewPillSheetGroup: pillSheetGroup.copyWith(id: "group_id"),
+      );
       final batchSetPillSheetModifiedHistory = MockBatchSetPillSheetModifiedHistory();
       when(batchSetPillSheetModifiedHistory(batch, history)).thenReturn(null);
 
@@ -356,7 +361,11 @@ void main() {
       when(batchSetPillSheetGroup(batch, pillSheetGroup)).thenReturn(pillSheetGroup.copyWith(id: "group_id"));
 
       final history = PillSheetModifiedHistoryServiceActionFactory.createCreatedPillSheetAction(
-          pillSheetGroupID: "group_id", pillSheetIDs: ["sheet_id", "sheet_id2"]);
+        pillSheetGroupID: "group_id",
+        pillSheetIDs: ["sheet_id", "sheet_id2"],
+        beforePillSheetGroup: null,
+        createdNewPillSheetGroup: pillSheetGroup.copyWith(id: "group_id"),
+      );
       final batchSetPillSheetModifiedHistory = MockBatchSetPillSheetModifiedHistory();
       when(batchSetPillSheetModifiedHistory(batch, history)).thenReturn(null);
 
@@ -425,6 +434,7 @@ void main() {
         id: "sheet_id",
         typeInfo: PillSheetType.pillsheet_24_rest_4.typeInfo,
         beginingDate: mockToday,
+        lastTakenDate: null,
         createdAt: now(),
       );
 
@@ -432,8 +442,12 @@ void main() {
       final batchSetPillSheetGroup = MockBatchSetPillSheetGroup();
       when(batchSetPillSheetGroup(batch, pillSheetGroup)).thenReturn(pillSheetGroup.copyWith(id: "group_id"));
 
-      final history =
-          PillSheetModifiedHistoryServiceActionFactory.createCreatedPillSheetAction(pillSheetGroupID: "group_id", pillSheetIDs: ["sheet_id"]);
+      final history = PillSheetModifiedHistoryServiceActionFactory.createCreatedPillSheetAction(
+        pillSheetGroupID: "group_id",
+        pillSheetIDs: ["sheet_id"],
+        beforePillSheetGroup: null,
+        createdNewPillSheetGroup: pillSheetGroup.copyWith(id: "group_id"),
+      );
       final batchSetPillSheetModifiedHistory = MockBatchSetPillSheetModifiedHistory();
       when(batchSetPillSheetModifiedHistory(batch, history)).thenReturn(null);
 

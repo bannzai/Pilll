@@ -9,9 +9,6 @@ part of 'pill_sheet_modified_history_value.codegen.dart';
 _$_PillSheetModifiedHistoryValue _$$_PillSheetModifiedHistoryValueFromJson(
         Map<String, dynamic> json) =>
     _$_PillSheetModifiedHistoryValue(
-      beginTrialDate: json['beginTrialDate'] == null
-          ? null
-          : DateTime.parse(json['beginTrialDate'] as String),
       createdPillSheet: json['createdPillSheet'] == null
           ? null
           : CreatedPillSheetValue.fromJson(
@@ -62,7 +59,6 @@ _$_PillSheetModifiedHistoryValue _$$_PillSheetModifiedHistoryValueFromJson(
 Map<String, dynamic> _$$_PillSheetModifiedHistoryValueToJson(
         _$_PillSheetModifiedHistoryValue instance) =>
     <String, dynamic>{
-      'beginTrialDate': instance.beginTrialDate?.toIso8601String(),
       'createdPillSheet': instance.createdPillSheet?.toJson(),
       'automaticallyRecordedLastTakenDate':
           instance.automaticallyRecordedLastTakenDate?.toJson(),
@@ -140,51 +136,51 @@ Map<String, dynamic> _$$_DeletedPillSheetValueToJson(
 
 _$_TakenPillValue _$$_TakenPillValueFromJson(Map<String, dynamic> json) =>
     _$_TakenPillValue(
+      isQuickRecord: json['isQuickRecord'] as bool?,
+      edited: json['edited'] == null
+          ? null
+          : TakenPillEditedValue.fromJson(
+              json['edited'] as Map<String, dynamic>),
       beforeLastTakenDate: TimestampConverter.timestampToDateTime(
           json['beforeLastTakenDate'] as Timestamp?),
       afterLastTakenDate: NonNullTimestampConverter.timestampToDateTime(
           json['afterLastTakenDate'] as Timestamp),
       beforeLastTakenPillNumber: json['beforeLastTakenPillNumber'] as int,
       afterLastTakenPillNumber: json['afterLastTakenPillNumber'] as int,
-      isQuickRecord: json['isQuickRecord'] as bool?,
-      edited: json['edited'] == null
-          ? null
-          : TakenPillEditedValue.fromJson(
-              json['edited'] as Map<String, dynamic>),
     );
 
 Map<String, dynamic> _$$_TakenPillValueToJson(_$_TakenPillValue instance) =>
     <String, dynamic>{
+      'isQuickRecord': instance.isQuickRecord,
+      'edited': instance.edited?.toJson(),
       'beforeLastTakenDate':
           TimestampConverter.dateTimeToTimestamp(instance.beforeLastTakenDate),
       'afterLastTakenDate': NonNullTimestampConverter.dateTimeToTimestamp(
           instance.afterLastTakenDate),
       'beforeLastTakenPillNumber': instance.beforeLastTakenPillNumber,
       'afterLastTakenPillNumber': instance.afterLastTakenPillNumber,
-      'isQuickRecord': instance.isQuickRecord,
-      'edited': instance.edited?.toJson(),
     };
 
 _$_TakenPillEditedValue _$$_TakenPillEditedValueFromJson(
         Map<String, dynamic> json) =>
     _$_TakenPillEditedValue(
-      createdDate: NonNullTimestampConverter.timestampToDateTime(
-          json['createdDate'] as Timestamp),
       actualTakenDate: NonNullTimestampConverter.timestampToDateTime(
           json['actualTakenDate'] as Timestamp),
       historyRecordedDate: NonNullTimestampConverter.timestampToDateTime(
           json['historyRecordedDate'] as Timestamp),
+      createdDate: NonNullTimestampConverter.timestampToDateTime(
+          json['createdDate'] as Timestamp),
     );
 
 Map<String, dynamic> _$$_TakenPillEditedValueToJson(
         _$_TakenPillEditedValue instance) =>
     <String, dynamic>{
-      'createdDate':
-          NonNullTimestampConverter.dateTimeToTimestamp(instance.createdDate),
       'actualTakenDate': NonNullTimestampConverter.dateTimeToTimestamp(
           instance.actualTakenDate),
       'historyRecordedDate': NonNullTimestampConverter.dateTimeToTimestamp(
           instance.historyRecordedDate),
+      'createdDate':
+          NonNullTimestampConverter.dateTimeToTimestamp(instance.createdDate),
     };
 
 _$_RevertTakenPillValue _$$_RevertTakenPillValueFromJson(

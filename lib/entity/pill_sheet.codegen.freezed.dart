@@ -704,7 +704,7 @@ class _$_PillSheet extends _PillSheet {
       @JsonKey(
           fromJson: TimestampConverter.timestampToDateTime,
           toJson: TimestampConverter.dateTimeToTimestamp)
-      this.lastTakenDate,
+      required this.lastTakenDate,
       @JsonKey(
           fromJson: TimestampConverter.timestampToDateTime,
           toJson: TimestampConverter.dateTimeToTimestamp)
@@ -824,7 +824,7 @@ abstract class _PillSheet extends PillSheet {
       @JsonKey(
           fromJson: TimestampConverter.timestampToDateTime,
           toJson: TimestampConverter.dateTimeToTimestamp)
-      final DateTime? lastTakenDate,
+      required final DateTime? lastTakenDate,
       @JsonKey(
           fromJson: TimestampConverter.timestampToDateTime,
           toJson: TimestampConverter.dateTimeToTimestamp)

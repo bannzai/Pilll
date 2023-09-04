@@ -32,7 +32,7 @@ void definedChannel() {
         // hour,minute,番号を基準にIDを決定しているので、時間変更や番号変更時にそれまで登録されていたIDを特定するのが不可能なので全てキャンセルする
         await (Future.microtask(() => null), cancelReminderLocalNotification()).wait;
 
-        final activePillSheet = pillSheetGroup?.activedPillSheet;
+        final activePillSheet = pillSheetGroup?.activePillSheet;
         final user = (await database.userReference().get()).data();
         final setting = user?.setting;
         if (pillSheetGroup != null && activePillSheet != null && user != null && setting != null) {
