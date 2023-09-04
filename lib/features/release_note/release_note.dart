@@ -116,7 +116,7 @@ void showReleaseNotePreDialog(BuildContext context) async {
 void openReleaseNote() async {
   final ChromeSafariBrowser browser = ChromeSafariBrowser();
   await browser.open(
-      url: Uri.parse("https://pilll.wraptas.site/80cadcaca73b41f4974a568b6e753a2b"),
+      url: Uri.parse("https://pilll.notion.site/3-18-0-5882a8acbe874a0b90fa2421a2f9f3d8"),
       options: ChromeSafariBrowserClassOptions(
           android: AndroidChromeCustomTabsOptions(shareState: CustomTabsShareState.SHARE_STATE_OFF),
           ios: IOSSafariOptions(barCollapsingEnabled: true, presentationStyle: IOSUIModalPresentationStyle.PAGE_SHEET)));
