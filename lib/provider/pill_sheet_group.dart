@@ -7,6 +7,7 @@ import 'package:riverpod/riverpod.dart';
 
 // この変数にtrueを入れることでMetadata.hasPendingWritesがfalseの場合=リモートDBに書き込まれた場合にStreamの値を流すように制御できる。
 // Pilllではアプリを開いている時に複数箇所からのDB書き込みが無いので(ごくまれにBackendで書き込みと被る可能性はある)単純なフラグ制御を採用している
+// TODO: [UseLocalNotification-Beta] 2023-11 服用通知での問題は解決するし一回消す
 bool awaitsPillSheetGroupRemoteDBDataChanged = false;
 PillSheetGroup? _filter(QuerySnapshot<PillSheetGroup> snapshot) {
   if (snapshot.docs.isEmpty) return null;
