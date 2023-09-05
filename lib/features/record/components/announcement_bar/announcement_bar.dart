@@ -75,6 +75,15 @@ class AnnouncementBar extends HookConsumerWidget {
         }
       }
 
+      if (latestPillSheetGroup != null && latestPillSheetGroup.activePillSheet == null) {
+        // ピルシートグループが存在していてactivedPillSheetが無い場合はピルシート終了が何かしらの理由がなくなったと見なし終了表示にする
+        return EndedPillSheet(
+          isPremium: premiumAndTrial.isPremium,
+          isTrial: premiumAndTrial.isTrial,
+          trialDeadlineDate: premiumAndTrial.trialDeadlineDate,
+        );
+      }
+
       if (premiumAndTrial.isTrial) {
         final premiumTrialLimit = PremiumTrialLimitAnnouncementBar.retrievePremiumTrialLimit(premiumAndTrial);
         if (premiumTrialLimit != null) {
@@ -105,15 +114,6 @@ class AnnouncementBar extends HookConsumerWidget {
               );
             }
           }
-        }
-
-        if (latestPillSheetGroup != null && latestPillSheetGroup.activePillSheet == null) {
-          // ピルシートグループが存在していてactivedPillSheetが無い場合はピルシート終了が何かしらの理由がなくなったと見なし終了表示にする
-          return EndedPillSheet(
-            isPremium: premiumAndTrial.isPremium,
-            isTrial: premiumAndTrial.isTrial,
-            trialDeadlineDate: premiumAndTrial.trialDeadlineDate,
-          );
         }
       } else {
         if (!isAdsDisabled && pilllAds != null) {
