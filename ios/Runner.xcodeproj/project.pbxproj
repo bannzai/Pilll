@@ -323,6 +323,7 @@
 			buildPhases = (
 				D0248FA5F76CFF05569BD228 /* [CP] Check Pods Manifest.lock */,
 				BA158DA124E4413900164799 /* Replace GoogleService-Info.plist */,
+				2006A7D428B0BB680066E4DD /* Embed App Extensions */,
 				9740EEB61CF901F6004384FC /* Run Script */,
 				97C146EA1CF9000F007C117D /* Sources */,
 				97C146EB1CF9000F007C117D /* Frameworks */,
@@ -331,7 +332,6 @@
 				3B06AD1E1E4923F5004D2608 /* Thin Binary */,
 				27A4C8F613EDD0A9CCECDDC7 /* [CP] Embed Pods Frameworks */,
 				B3CAD8EA6F3D8D8D194CEF5F /* [CP] Copy Pods Resources */,
-				2006A7D428B0BB680066E4DD /* Embed App Extensions */,
 			);
 			buildRules = (
 			);
