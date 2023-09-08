@@ -17,7 +17,6 @@
 		20BF93A428B122F8007A36C9 /* WidgetKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2006A7C428B0BB670066E4DD /* WidgetKit.framework */; };
 		20BF942028B22626007A36C9 /* Const.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2006A7E028B0CDC00066E4DD /* Const.swift */; };
 		20C768EC27D2B4E700BA525C /* Profile.xcconfig in Resources */ = {isa = PBXBuildFile; fileRef = 20C768EA27D2B4E700BA525C /* Profile.xcconfig */; };
-		20D5A5872AA8298E00F782AB /* Intent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20D5A5852AA825EC00F782AB /* Intent.swift */; };
 		20DBB04427A88BAE0069A9A2 /* HealthKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 20DBB04327A88BAE0069A9A2 /* HealthKit.framework */; };
 		20DBB04627A88D1D0069A9A2 /* HealthKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20DBB04527A88D1D0069A9A2 /* HealthKit.swift */; };
 		20E4647328C3319600329A5E /* Global.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20E4646E28C3315100329A5E /* Global.swift */; };
@@ -93,7 +92,6 @@
 		207DA16B28B1148800CD6C34 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		207DA16D28B1148800CD6C34 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		20C768EA27D2B4E700BA525C /* Profile.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; name = Profile.xcconfig; path = Flutter/Profile.xcconfig; sourceTree = "<group>"; };
-		20D5A5852AA825EC00F782AB /* Intent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Intent.swift; sourceTree = "<group>"; };
 		20DBB04327A88BAE0069A9A2 /* HealthKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = HealthKit.framework; path = System/Library/Frameworks/HealthKit.framework; sourceTree = SDKROOT; };
 		20DBB04527A88D1D0069A9A2 /* HealthKit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HealthKit.swift; sourceTree = "<group>"; };
 		20E4646C28C3312F00329A5E /* Entry.swift */ = {isa = PBXFileReference; indentWidth = 2; lastKnownFileType = sourcecode.swift; path = Entry.swift; sourceTree = "<group>"; tabWidth = 2; };
@@ -182,7 +180,6 @@
 				20E4646C28C3312F00329A5E /* Entry.swift */,
 				207DA16B28B1148800CD6C34 /* Assets.xcassets */,
 				207DA16D28B1148800CD6C34 /* Info.plist */,
-				20D5A5852AA825EC00F782AB /* Intent.swift */,
 			);
 			indentWidth = 2;
 			path = Widget;
@@ -323,7 +320,6 @@
 			buildPhases = (
 				D0248FA5F76CFF05569BD228 /* [CP] Check Pods Manifest.lock */,
 				BA158DA124E4413900164799 /* Replace GoogleService-Info.plist */,
-				2006A7D428B0BB680066E4DD /* Embed App Extensions */,
 				9740EEB61CF901F6004384FC /* Run Script */,
 				97C146EA1CF9000F007C117D /* Sources */,
 				97C146EB1CF9000F007C117D /* Frameworks */,
@@ -332,6 +328,7 @@
 				3B06AD1E1E4923F5004D2608 /* Thin Binary */,
 				27A4C8F613EDD0A9CCECDDC7 /* [CP] Embed Pods Frameworks */,
 				B3CAD8EA6F3D8D8D194CEF5F /* [CP] Copy Pods Resources */,
+				2006A7D428B0BB680066E4DD /* Embed App Extensions */,
 			);
 			buildRules = (
 			);
@@ -542,7 +539,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				20E4647528C3319600329A5E /* Entry.swift in Sources */,
-				20D5A5872AA8298E00F782AB /* Intent.swift in Sources */,
 				20E4648428C33DC400329A5E /* Status.swift in Sources */,
 				20E4647E28C3334200329A5E /* SmallWidget.swift in Sources */,
 				20E4647828C3320C00329A5E /* Style.swift in Sources */,
@@ -612,7 +608,7 @@
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = TQPN82UBBY;
+				DEVELOPMENT_TEAM = "";
 				ENABLE_BITCODE = NO;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				GENERATE_INFOPLIST_FILE = YES;
@@ -1068,7 +1064,7 @@
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = "$(FLUTTER_BUILD_NUMBER)";
-				DEVELOPMENT_TEAM = TQPN82UBBY;
+				DEVELOPMENT_TEAM = "";
 				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
