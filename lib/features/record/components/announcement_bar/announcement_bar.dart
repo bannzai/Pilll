@@ -80,7 +80,6 @@ class AnnouncementBar extends HookConsumerWidget {
         return EndedPillSheet(
           isPremium: premiumAndTrial.isPremium,
           isTrial: premiumAndTrial.isTrial,
-          trialDeadlineDate: premiumAndTrial.trialDeadlineDate,
         );
       }
 
@@ -145,7 +144,6 @@ class AnnouncementBar extends HookConsumerWidget {
         return EndedPillSheet(
           isPremium: premiumAndTrial.isPremium,
           isTrial: premiumAndTrial.isTrial,
-          trialDeadlineDate: premiumAndTrial.trialDeadlineDate,
         );
       }
     }
