@@ -9,13 +9,11 @@ import 'package:pilll/features/premium_introduction/premium_introduction_sheet.d
 class EndedPillSheet extends StatelessWidget {
   final bool isTrial;
   final bool isPremium;
-  final DateTime? trialDeadlineDate;
 
   const EndedPillSheet({
     Key? key,
     required this.isTrial,
     required this.isPremium,
-    required this.trialDeadlineDate,
   }) : super(key: key);
 
   @override
@@ -25,7 +23,6 @@ class EndedPillSheet extends StatelessWidget {
         analytics.logEvent(name: "pill_ended_sheet_tap", parameters: {
           "isTrial": isTrial,
           "isPremium": isPremium,
-          "trialDeadlineDate": trialDeadlineDate,
         });
 
         if (isPremium || isTrial) {
