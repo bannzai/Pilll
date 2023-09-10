@@ -1,6 +1,7 @@
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
+import 'package:pilll/provider/package_info.dart';
 import 'package:pilll/utils/analytics.dart';
 import 'package:pilll/provider/pill_sheet_group.dart';
 import 'package:pilll/provider/pilll_ads.dart';
@@ -20,6 +21,7 @@ import 'package:pilll/provider/typed_shared_preferences.dart';
 import 'package:pilll/provider/auth.dart';
 import 'package:pilll/utils/datetime/day.dart';
 import 'package:pilll/utils/shared_preference/keys.dart';
+import 'package:pilll/utils/version/version.dart';
 
 class AnnouncementBar extends HookConsumerWidget {
   const AnnouncementBar({Key? key}) : super(key: key);
@@ -47,13 +49,17 @@ class AnnouncementBar extends HookConsumerWidget {
     final isOverDiscountDeadline = ref.watch(isOverDiscountDeadlineProvider(discountEntitlementDeadlineDate));
     final isJaLocale = ref.watch(isJaLocaleProvider);
     final pilllAds = ref.watch(pilllAdsProvider).asData?.value;
+    final packageVersion = ref.watch(packageVersionProvider).asData?.value;
     final isAdsDisabled = () {
       if (!kDebugMode) {
         if (!isJaLocale) {
           return true;
         }
       }
-      if (pilllAds == null) {
+      if (pilllAds == null || packageVersion == null) {
+        return true;
+      }
+      if (Version.parse(pilllAds.version).isLessThan(packageVersion)) {
         return true;
       }
       return now().isBefore(pilllAds.startDateTime) || now().isAfter(pilllAds.endDateTime);
