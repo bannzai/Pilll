@@ -33,6 +33,7 @@ import 'package:mockito/mockito.dart';
 import 'package:intl/date_symbol_data_local.dart';
 import 'package:pilll/utils/shared_preference/keys.dart';
 import 'package:pilll/utils/version/version.dart';
+import 'package:run_with_network_images/run_with_network_images.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
 import '../../../helper/mock.mocks.dart';
@@ -757,55 +758,57 @@ void main() {
             BoolKey.recommendedSignupNotificationIsAlreadyShow: false,
           });
           final sharedPreferences = await SharedPreferences.getInstance();
-          await tester.pumpWidget(
-            ProviderScope(
-              overrides: [
-                latestPillSheetGroupProvider.overrideWith((ref) => Stream.value(pillSheetGroup)),
-                premiumAndTrialProvider.overrideWithValue(
-                  AsyncData(
-                    PremiumAndTrial(
-                      isPremium: false,
-                      isTrial: false,
-                      hasDiscountEntitlement: true,
-                      trialDeadlineDate: null,
-                      beginTrialDate: null,
-                      discountEntitlementDeadlineDate: null,
+          await runWithNetworkImages(() async {
+            await tester.pumpWidget(
+              ProviderScope(
+                overrides: [
+                  latestPillSheetGroupProvider.overrideWith((ref) => Stream.value(pillSheetGroup)),
+                  premiumAndTrialProvider.overrideWithValue(
+                    AsyncData(
+                      PremiumAndTrial(
+                        isPremium: false,
+                        isTrial: false,
+                        hasDiscountEntitlement: true,
+                        trialDeadlineDate: null,
+                        beginTrialDate: null,
+                        discountEntitlementDeadlineDate: null,
+                      ),
                     ),
                   ),
-                ),
-                isLinkedProvider.overrideWithValue(false),
-                isJaLocaleProvider.overrideWithValue(true),
-                isOverDiscountDeadlineProvider.overrideWithProvider((param) => Provider.autoDispose((_) => false)),
-                durationToDiscountPriceDeadline.overrideWithProvider((param) => Provider.autoDispose((_) => const Duration(seconds: 1000))),
-                packageVersionProvider.overrideWith((ref) => Version(major: 1, minor: 0, patch: 0)),
-                affiliateProvider.overrideWith(
-                  (ref) => Stream.value(
-                    Affiliate(
-                      contents: [
-                        AffiliateContent(imageURL: 'https://github.com/bannzai', destinationURL: 'https://github.com/bannzai'),
-                      ],
-                      // 広告を表示する場合はパッケージバージョンよりもAffiliateのバージョンが高い場合は表示される
-                      version: "999.999.999",
+                  isLinkedProvider.overrideWithValue(false),
+                  isJaLocaleProvider.overrideWithValue(true),
+                  isOverDiscountDeadlineProvider.overrideWithProvider((param) => Provider.autoDispose((_) => false)),
+                  durationToDiscountPriceDeadline.overrideWithProvider((param) => Provider.autoDispose((_) => const Duration(seconds: 1000))),
+                  packageVersionProvider.overrideWith((ref) => Version(major: 1, minor: 0, patch: 0)),
+                  affiliateProvider.overrideWith(
+                    (ref) => Stream.value(
+                      Affiliate(
+                        contents: [
+                          AffiliateContent(imageURL: 'https://github.com/bannzai', destinationURL: 'https://github.com/bannzai'),
+                        ],
+                        // 広告を表示する場合はパッケージバージョンよりもAffiliateのバージョンが高い場合は表示される
+                        version: "999.999.999",
+                      ),
                     ),
                   ),
+                  // PilllAdsの方が優先度は高いのでnullを流してテスト
+                  pilllAdsProvider.overrideWith(
+                    (ref) => Stream.value(null),
+                  ),
+                  sharedPreferencesProvider.overrideWith((ref) => sharedPreferences),
+                ],
+                child: const MaterialApp(
+                  home: Material(child: AnnouncementBar()),
                 ),
-                // PilllAdsの方が優先度は高いのでnullを流してテスト
-                pilllAdsProvider.overrideWith(
-                  (ref) => Stream.value(null),
-                ),
-                sharedPreferencesProvider.overrideWith((ref) => sharedPreferences),
-              ],
-              child: const MaterialApp(
-                home: Material(child: AnnouncementBar()),
               ),
-            ),
-          );
-          await tester.pump();
+            );
+            await tester.pump();
 
-          expect(
-            find.byWidgetPredicate((widget) => widget is PilllAdsAnnouncementBar),
-            findsOneWidget,
-          );
+            expect(
+              find.byWidgetPredicate((widget) => widget is AffiliateAnnouncementBar),
+              findsOneWidget,
+            );
+          });
         });
         testWidgets('today is 2022-08-11', (WidgetTester tester) async {
           final mockTodayRepository = MockTodayService();
