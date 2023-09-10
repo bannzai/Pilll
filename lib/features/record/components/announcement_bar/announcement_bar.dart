@@ -1,6 +1,7 @@
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
+import 'package:pilll/provider/affiliate.dart';
 import 'package:pilll/provider/package_info.dart';
 import 'package:pilll/utils/analytics.dart';
 import 'package:pilll/provider/pill_sheet_group.dart';
@@ -50,6 +51,23 @@ class AnnouncementBar extends HookConsumerWidget {
     final isJaLocale = ref.watch(isJaLocaleProvider);
     final packageVersion = ref.watch(packageVersionProvider).asData?.value;
 
+    final affiliate = ref.watch(affiliateProvider).asData?.value;
+    final affiliateIsDisabled = () {
+      if (!kDebugMode) {
+        if (!isJaLocale) {
+          return true;
+        }
+      }
+      if (affiliate == null || packageVersion == null) {
+        return true;
+      }
+      if (Version.parse(affiliate.version).isLessThan(packageVersion)) {
+        return true;
+      }
+      return false;
+    }();
+
+    // PilllAds
     final pilllAds = ref.watch(pilllAdsProvider).asData?.value;
     final pilllAdsIsDisabled = () {
       if (!kDebugMode) {
