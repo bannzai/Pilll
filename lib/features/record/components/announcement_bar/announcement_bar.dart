@@ -143,6 +143,9 @@ class AnnouncementBar extends HookConsumerWidget {
         if (!pilllAdsIsDisabled && pilllAds != null) {
           return PilllAdsAnnouncementBar(pilllAds: pilllAds, onClose: () => showPremiumIntroductionSheet(context));
         }
+        if (!affiliateIsDisabled && affiliate != null) {
+          // TODO:
+        }
       }
     } else {
       final shownRecommendSignupNotificationForPremium = () {
