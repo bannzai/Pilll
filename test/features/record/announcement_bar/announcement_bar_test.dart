@@ -3,6 +3,7 @@ import 'dart:async';
 import 'package:pilll/entity/affiliate.codegen.dart';
 import 'package:pilll/features/record/components/announcement_bar/components/affiliate.dart';
 import 'package:pilll/provider/affiliate.dart';
+import 'package:pilll/provider/package_info.dart';
 import 'package:pilll/provider/shared_preferences.dart';
 import 'package:pilll/utils/analytics.dart';
 import 'package:pilll/provider/pill_sheet_group.dart';
@@ -31,6 +32,7 @@ import 'package:hooks_riverpod/hooks_riverpod.dart';
 import 'package:mockito/mockito.dart';
 import 'package:intl/date_symbol_data_local.dart';
 import 'package:pilll/utils/shared_preference/keys.dart';
+import 'package:pilll/utils/version/version.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
 import '../../../helper/mock.mocks.dart';
@@ -675,7 +677,7 @@ void main() {
       });
 
       group("#AffiliateAnnouncementBar", () {
-        testWidgets('version is 0.0.0', (WidgetTester tester) async {
+        testWidgets('affiliate version < package version', (WidgetTester tester) async {
           var pillSheet = PillSheet.create(
             PillSheetType.pillsheet_21,
             lastTakenDate: today().subtract(const Duration(days: 1)),
@@ -710,13 +712,14 @@ void main() {
                 isJaLocaleProvider.overrideWithValue(true),
                 isOverDiscountDeadlineProvider.overrideWithProvider((param) => Provider.autoDispose((_) => false)),
                 durationToDiscountPriceDeadline.overrideWithProvider((param) => Provider.autoDispose((_) => const Duration(seconds: 1000))),
+                packageVersionProvider.overrideWith((ref) => Version(major: 1, minor: 0, patch: 0)),
                 affiliateProvider.overrideWith(
                   (ref) => Stream.value(
                     Affiliate(
                       contents: [
                         AffiliateContent(imageURL: 'https://github.com/bannzai', destinationURL: 'https://github.com/bannzai'),
                       ],
-                      // 広告を表示する場合はパッケージバージョンよりもAffiliateのバージョンが小さい場合に表示される
+                      // 広告を表示する場合はパッケージバージョンよりもAffiliateのバージョンが小さい場合は表示されない
                       version: "0.0.0",
                     ),
                   ),
@@ -739,17 +742,11 @@ void main() {
             findsNothing,
           );
         });
-        testWidgets('today is 2022-08-10', (WidgetTester tester) async {
-          final mockTodayRepository = MockTodayService();
-          final mockToday = DateTime(2022, 08, 10);
-
-          when(mockTodayRepository.now()).thenReturn(mockToday);
-          todayRepository = mockTodayRepository;
-
+        testWidgets('affiliate version > package version', (WidgetTester tester) async {
           var pillSheet = PillSheet.create(
             PillSheetType.pillsheet_21,
-            lastTakenDate: mockToday.subtract(const Duration(days: 1)),
-            beginDate: mockToday.subtract(
+            lastTakenDate: today().subtract(const Duration(days: 1)),
+            beginDate: today().subtract(
               const Duration(days: 25),
             ),
           );
@@ -780,17 +777,21 @@ void main() {
                 isJaLocaleProvider.overrideWithValue(true),
                 isOverDiscountDeadlineProvider.overrideWithProvider((param) => Provider.autoDispose((_) => false)),
                 durationToDiscountPriceDeadline.overrideWithProvider((param) => Provider.autoDispose((_) => const Duration(seconds: 1000))),
-                pilllAdsProvider.overrideWith(
+                packageVersionProvider.overrideWith((ref) => Version(major: 1, minor: 0, patch: 0)),
+                affiliateProvider.overrideWith(
                   (ref) => Stream.value(
-                    PilllAds(
-                      description: 'これは広告用のテキスト',
-                      destinationURL: 'https://github.com/bannzai',
-                      endDateTime: DateTime(2022, 8, 23, 23, 59, 59),
-                      startDateTime: DateTime(2022, 8, 10, 0, 0, 0),
-                      hexColor: '#111111',
-                      imageURL: null,
+                    Affiliate(
+                      contents: [
+                        AffiliateContent(imageURL: 'https://github.com/bannzai', destinationURL: 'https://github.com/bannzai'),
+                      ],
+                      // 広告を表示する場合はパッケージバージョンよりもAffiliateのバージョンが高い場合は表示される
+                      version: "999.999.999",
                     ),
                   ),
+                ),
+                // PilllAdsの方が優先度は高いのでnullを流してテスト
+                pilllAdsProvider.overrideWith(
+                  (ref) => Stream.value(null),
                 ),
                 sharedPreferencesProvider.overrideWith((ref) => sharedPreferences),
               ],
