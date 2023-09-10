@@ -48,9 +48,10 @@ class AnnouncementBar extends HookConsumerWidget {
     final discountEntitlementDeadlineDate = premiumAndTrial.discountEntitlementDeadlineDate;
     final isOverDiscountDeadline = ref.watch(isOverDiscountDeadlineProvider(discountEntitlementDeadlineDate));
     final isJaLocale = ref.watch(isJaLocaleProvider);
-    final pilllAds = ref.watch(pilllAdsProvider).asData?.value;
     final packageVersion = ref.watch(packageVersionProvider).asData?.value;
-    final isAdsDisabled = () {
+
+    final pilllAds = ref.watch(pilllAdsProvider).asData?.value;
+    final pilllAdsIsDisabled = () {
       if (!kDebugMode) {
         if (!isJaLocale) {
           return true;
@@ -121,7 +122,7 @@ class AnnouncementBar extends HookConsumerWidget {
           }
         }
       } else {
-        if (!isAdsDisabled && pilllAds != null) {
+        if (!pilllAdsIsDisabled && pilllAds != null) {
           return PilllAdsAnnouncementBar(pilllAds: pilllAds, onClose: () => showPremiumIntroductionSheet(context));
         }
       }
