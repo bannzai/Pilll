@@ -2,6 +2,7 @@
 
 import 'package:firebase_auth/firebase_auth.dart' as firebase;
 import 'package:flutter/foundation.dart';
+import 'package:pilll/entity/affiliate.codegen.dart';
 import 'package:pilll/entity/diary.codegen.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
@@ -33,6 +34,7 @@ abstract class _CollectionPath {
   static String schedule({required String userID, required String scheduleID}) => "$users/$userID/schedules/$scheduleID";
   static String schedules({required String userID}) => "$users/$userID/schedules";
   static String pilllAds() => "globals/pilll_ads";
+  static String affiliates() => "globals/affiliates";
 }
 
 class DatabaseConnection {
@@ -129,6 +131,12 @@ class DatabaseConnection {
 
   DocumentReference<PilllAds?> pilllAds() => FirebaseFirestore.instance.doc(_CollectionPath.pilllAds()).withConverter(
         fromFirestore: (snapshot, options) => snapshot.data() == null ? null : PilllAds.fromJson(snapshot.data()!),
+        toFirestore: (_, __) => throw UnimplementedError(),
+      );
+
+  // 一気に消すことも想定されるのでNullableでいく
+  DocumentReference<Affiliate?> affiliates() => FirebaseFirestore.instance.doc(_CollectionPath.affiliates()).withConverter(
+        fromFirestore: (snapshot, options) => snapshot.data() == null ? null : Affiliate.fromJson(snapshot.data()!),
         toFirestore: (_, __) => throw UnimplementedError(),
       );
 
