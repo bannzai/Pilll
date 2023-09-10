@@ -10,7 +10,7 @@ _$_Affiliate _$$_AffiliateFromJson(Map<String, dynamic> json) => _$_Affiliate(
       contents: (json['contents'] as List<dynamic>)
           .map((e) => AffiliateContent.fromJson(e as Map<String, dynamic>))
           .toList(),
-      version: json['version'] as String? ?? "999.999.999",
+      version: json['version'] as String? ?? "0.0.0",
     );
 
 Map<String, dynamic> _$$_AffiliateToJson(_$_Affiliate instance) =>
@@ -24,7 +24,6 @@ _$_AffiliateContent _$$_AffiliateContentFromJson(Map<String, dynamic> json) =>
       imageURL: json['imageURL'] as String,
       destinationURL: json['destinationURL'] as String,
       isHidden: json['isHidden'] as bool? ?? false,
-      version: json['version'] as String? ?? "999.999.999",
     );
 
 Map<String, dynamic> _$$_AffiliateContentToJson(_$_AffiliateContent instance) =>
@@ -32,5 +31,4 @@ Map<String, dynamic> _$$_AffiliateContentToJson(_$_AffiliateContent instance) =>
       'imageURL': instance.imageURL,
       'destinationURL': instance.destinationURL,
       'isHidden': instance.isHidden,
-      'version': instance.version,
     };

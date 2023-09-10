@@ -21,7 +21,8 @@ Affiliate _$AffiliateFromJson(Map<String, dynamic> json) {
 /// @nodoc
 mixin _$Affiliate {
   List<AffiliateContent> get contents =>
-      throw _privateConstructorUsedError; // このフィールドの値より高い場合には、広告を表示しないので超すことは無い値をデフォルト値としている
+      throw _privateConstructorUsedError; // このフィールドの値よりパッケージバージョンが高い場合には、広告を表示する。
+// なので最も低いバージョンをデフォルト値としている
   String get version => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
@@ -109,8 +110,7 @@ class __$$_AffiliateCopyWithImpl<$Res>
 @JsonSerializable(explicitToJson: true)
 class _$_Affiliate extends _Affiliate {
   _$_Affiliate(
-      {required final List<AffiliateContent> contents,
-      this.version = "999.999.999"})
+      {required final List<AffiliateContent> contents, this.version = "0.0.0"})
       : _contents = contents,
         super._();
 
@@ -125,7 +125,8 @@ class _$_Affiliate extends _Affiliate {
     return EqualUnmodifiableListView(_contents);
   }
 
-// このフィールドの値より高い場合には、広告を表示しないので超すことは無い値をデフォルト値としている
+// このフィールドの値よりパッケージバージョンが高い場合には、広告を表示する。
+// なので最も低いバージョンをデフォルト値としている
   @override
   @JsonKey()
   final String version;
@@ -174,7 +175,8 @@ abstract class _Affiliate extends Affiliate {
 
   @override
   List<AffiliateContent> get contents;
-  @override // このフィールドの値より高い場合には、広告を表示しないので超すことは無い値をデフォルト値としている
+  @override // このフィールドの値よりパッケージバージョンが高い場合には、広告を表示する。
+// なので最も低いバージョンをデフォルト値としている
   String get version;
   @override
   @JsonKey(ignore: true)
@@ -190,9 +192,7 @@ AffiliateContent _$AffiliateContentFromJson(Map<String, dynamic> json) {
 mixin _$AffiliateContent {
   String get imageURL => throw _privateConstructorUsedError;
   String get destinationURL => throw _privateConstructorUsedError;
-  bool get isHidden =>
-      throw _privateConstructorUsedError; // このフィールドの値より高い場合には、広告を表示しないので超すことは無い値をデフォルト値としている
-  String get version => throw _privateConstructorUsedError;
+  bool get isHidden => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
@@ -206,8 +206,7 @@ abstract class $AffiliateContentCopyWith<$Res> {
           AffiliateContent value, $Res Function(AffiliateContent) then) =
       _$AffiliateContentCopyWithImpl<$Res, AffiliateContent>;
   @useResult
-  $Res call(
-      {String imageURL, String destinationURL, bool isHidden, String version});
+  $Res call({String imageURL, String destinationURL, bool isHidden});
 }
 
 /// @nodoc
@@ -226,7 +225,6 @@ class _$AffiliateContentCopyWithImpl<$Res, $Val extends AffiliateContent>
     Object? imageURL = null,
     Object? destinationURL = null,
     Object? isHidden = null,
-    Object? version = null,
   }) {
     return _then(_value.copyWith(
       imageURL: null == imageURL
@@ -241,10 +239,6 @@ class _$AffiliateContentCopyWithImpl<$Res, $Val extends AffiliateContent>
           ? _value.isHidden
           : isHidden // ignore: cast_nullable_to_non_nullable
               as bool,
-      version: null == version
-          ? _value.version
-          : version // ignore: cast_nullable_to_non_nullable
-              as String,
     ) as $Val);
   }
 }
@@ -257,8 +251,7 @@ abstract class _$$_AffiliateContentCopyWith<$Res>
       __$$_AffiliateContentCopyWithImpl<$Res>;
   @override
   @useResult
-  $Res call(
-      {String imageURL, String destinationURL, bool isHidden, String version});
+  $Res call({String imageURL, String destinationURL, bool isHidden});
 }
 
 /// @nodoc
@@ -275,7 +268,6 @@ class __$$_AffiliateContentCopyWithImpl<$Res>
     Object? imageURL = null,
     Object? destinationURL = null,
     Object? isHidden = null,
-    Object? version = null,
   }) {
     return _then(_$_AffiliateContent(
       imageURL: null == imageURL
@@ -290,10 +282,6 @@ class __$$_AffiliateContentCopyWithImpl<$Res>
           ? _value.isHidden
           : isHidden // ignore: cast_nullable_to_non_nullable
               as bool,
-      version: null == version
-          ? _value.version
-          : version // ignore: cast_nullable_to_non_nullable
-              as String,
     ));
   }
 }
@@ -305,8 +293,7 @@ class _$_AffiliateContent extends _AffiliateContent {
   _$_AffiliateContent(
       {required this.imageURL,
       required this.destinationURL,
-      this.isHidden = false,
-      this.version = "999.999.999"})
+      this.isHidden = false})
       : super._();
 
   factory _$_AffiliateContent.fromJson(Map<String, dynamic> json) =>
@@ -319,14 +306,10 @@ class _$_AffiliateContent extends _AffiliateContent {
   @override
   @JsonKey()
   final bool isHidden;
-// このフィールドの値より高い場合には、広告を表示しないので超すことは無い値をデフォルト値としている
-  @override
-  @JsonKey()
-  final String version;
 
   @override
   String toString() {
-    return 'AffiliateContent(imageURL: $imageURL, destinationURL: $destinationURL, isHidden: $isHidden, version: $version)';
+    return 'AffiliateContent(imageURL: $imageURL, destinationURL: $destinationURL, isHidden: $isHidden)';
   }
 
   @override
@@ -339,14 +322,13 @@ class _$_AffiliateContent extends _AffiliateContent {
             (identical(other.destinationURL, destinationURL) ||
                 other.destinationURL == destinationURL) &&
             (identical(other.isHidden, isHidden) ||
-                other.isHidden == isHidden) &&
-            (identical(other.version, version) || other.version == version));
+                other.isHidden == isHidden));
   }
 
   @JsonKey(ignore: true)
   @override
   int get hashCode =>
-      Object.hash(runtimeType, imageURL, destinationURL, isHidden, version);
+      Object.hash(runtimeType, imageURL, destinationURL, isHidden);
 
   @JsonKey(ignore: true)
   @override
@@ -366,8 +348,7 @@ abstract class _AffiliateContent extends AffiliateContent {
   factory _AffiliateContent(
       {required final String imageURL,
       required final String destinationURL,
-      final bool isHidden,
-      final String version}) = _$_AffiliateContent;
+      final bool isHidden}) = _$_AffiliateContent;
   _AffiliateContent._() : super._();
 
   factory _AffiliateContent.fromJson(Map<String, dynamic> json) =
@@ -379,8 +360,6 @@ abstract class _AffiliateContent extends AffiliateContent {
   String get destinationURL;
   @override
   bool get isHidden;
-  @override // このフィールドの値より高い場合には、広告を表示しないので超すことは無い値をデフォルト値としている
-  String get version;
   @override
   @JsonKey(ignore: true)
   _$$_AffiliateContentCopyWith<_$_AffiliateContent> get copyWith =>

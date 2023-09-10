@@ -32,7 +32,8 @@ mixin _$PilllAds {
   String? get imageURL => throw _privateConstructorUsedError;
   String get destinationURL => throw _privateConstructorUsedError;
   String get hexColor =>
-      throw _privateConstructorUsedError; // このフィールドの値より高い場合には、広告を表示しないので超すことは無い値をデフォルト値としている
+      throw _privateConstructorUsedError; // このフィールドの値よりパッケージバージョンが高い場合には、広告を表示する。
+// なので最も低いバージョンをデフォルト値としている
   String get version => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
@@ -208,7 +209,7 @@ class _$_PilllAds extends _PilllAds {
       required this.imageURL,
       required this.destinationURL,
       required this.hexColor,
-      this.version = "999.999.999"})
+      this.version = "0.0.0"})
       : super._();
 
   factory _$_PilllAds.fromJson(Map<String, dynamic> json) =>
@@ -232,7 +233,8 @@ class _$_PilllAds extends _PilllAds {
   final String destinationURL;
   @override
   final String hexColor;
-// このフィールドの値より高い場合には、広告を表示しないので超すことは無い値をデフォルト値としている
+// このフィールドの値よりパッケージバージョンが高い場合には、広告を表示する。
+// なので最も低いバージョンをデフォルト値としている
   @override
   @JsonKey()
   final String version;
@@ -318,7 +320,8 @@ abstract class _PilllAds extends PilllAds {
   String get destinationURL;
   @override
   String get hexColor;
-  @override // このフィールドの値より高い場合には、広告を表示しないので超すことは無い値をデフォルト値としている
+  @override // このフィールドの値よりパッケージバージョンが高い場合には、広告を表示する。
+// なので最も低いバージョンをデフォルト値としている
   String get version;
   @override
   @JsonKey(ignore: true)

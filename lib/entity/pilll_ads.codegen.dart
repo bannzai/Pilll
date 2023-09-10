@@ -23,8 +23,9 @@ class PilllAds with _$PilllAds {
     required String? imageURL,
     required String destinationURL,
     required String hexColor,
-    // このフィールドの値より高い場合には、広告を表示しないので超すことは無い値をデフォルト値としている
-    @Default("999.999.999") String version,
+    // このフィールドの値よりパッケージバージョンが高い場合には、広告を表示する。
+    // なので最も低いバージョンをデフォルト値としている
+    @Default("0.0.0") String version,
   }) = _PilllAds;
   PilllAds._();
 

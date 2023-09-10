@@ -9,8 +9,9 @@ class Affiliate with _$Affiliate {
   factory Affiliate({
     required List<AffiliateContent> contents,
 
-    // このフィールドの値より高い場合には、広告を表示しないので超すことは無い値をデフォルト値としている
-    @Default("999.999.999") String version,
+    // このフィールドの値よりパッケージバージョンが高い場合には、広告を表示する。
+    // なので最も低いバージョンをデフォルト値としている
+    @Default("0.0.0") String version,
   }) = _Affiliate;
   Affiliate._();
 
@@ -24,8 +25,6 @@ class AffiliateContent with _$AffiliateContent {
     required String imageURL,
     required String destinationURL,
     @Default(false) bool isHidden,
-    // このフィールドの値より高い場合には、広告を表示しないので超すことは無い値をデフォルト値としている
-    @Default("999.999.999") String version,
   }) = _AffiliateContent;
   AffiliateContent._();
 
