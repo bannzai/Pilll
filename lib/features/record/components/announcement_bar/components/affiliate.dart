@@ -23,7 +23,7 @@ class AffiliateAnnouncementBar extends HookConsumerWidget {
   @override
   Widget build(BuildContext context, WidgetRef ref) {
     final index = ref.watch(affiliateIndexProvider);
-    if (affiliate.contents.isEmpty) {
+    if (affiliate.contents.isEmpty || affiliate.contents.length <= index) {
       return Container();
     }
 
