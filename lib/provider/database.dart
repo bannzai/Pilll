@@ -34,7 +34,7 @@ abstract class _CollectionPath {
   static String schedule({required String userID, required String scheduleID}) => "$users/$userID/schedules/$scheduleID";
   static String schedules({required String userID}) => "$users/$userID/schedules";
   static String pilllAds() => "globals/pilll_ads";
-  static String affiliates() => "globals/affiliates";
+  static String affiliate() => "globals/affiliates";
 }
 
 class DatabaseConnection {
@@ -135,7 +135,7 @@ class DatabaseConnection {
       );
 
   // 一気に消すことも想定されるのでNullableでいく
-  DocumentReference<Affiliate?> affiliates() => FirebaseFirestore.instance.doc(_CollectionPath.affiliates()).withConverter(
+  DocumentReference<Affiliate?> affiliate() => FirebaseFirestore.instance.doc(_CollectionPath.affiliate()).withConverter(
         fromFirestore: (snapshot, options) => snapshot.data() == null ? null : Affiliate.fromJson(snapshot.data()!),
         toFirestore: (_, __) => throw UnimplementedError(),
       );
