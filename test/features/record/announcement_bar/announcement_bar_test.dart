@@ -675,17 +675,11 @@ void main() {
       });
 
       group("#AffiliateAnnouncementBar", () {
-        testWidgets('today is before 2022-08-10', (WidgetTester tester) async {
-          final mockTodayRepository = MockTodayService();
-          final mockToday = DateTime(2022, 08, 10).subtract(const Duration(seconds: 1));
-
-          when(mockTodayRepository.now()).thenReturn(mockToday);
-          todayRepository = mockTodayRepository;
-
+        testWidgets('version is 0.0.0', (WidgetTester tester) async {
           var pillSheet = PillSheet.create(
             PillSheetType.pillsheet_21,
-            lastTakenDate: mockToday.subtract(const Duration(days: 1)),
-            beginDate: mockToday.subtract(
+            lastTakenDate: today().subtract(const Duration(days: 1)),
+            beginDate: today().subtract(
               const Duration(days: 25),
             ),
           );
@@ -722,6 +716,7 @@ void main() {
                       contents: [
                         AffiliateContent(imageURL: 'https://github.com/bannzai', destinationURL: 'https://github.com/bannzai'),
                       ],
+                      // 広告を表示する場合はパッケージバージョンよりもAffiliateのバージョンが小さい場合に表示される
                       version: "0.0.0",
                     ),
                   ),
