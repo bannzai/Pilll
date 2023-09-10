@@ -383,6 +383,7 @@ void main() {
                 isJaLocaleProvider.overrideWithValue(true),
                 isOverDiscountDeadlineProvider.overrideWithProvider((param) => Provider.autoDispose((_) => false)),
                 durationToDiscountPriceDeadline.overrideWithProvider((param) => Provider.autoDispose((_) => const Duration(seconds: 1000))),
+                packageVersionProvider.overrideWith((ref) => Version(major: 1, minor: 0, patch: 0)),
                 pilllAdsProvider.overrideWith(
                   (ref) => Stream.value(PilllAds(
                     description: 'これは広告用のテキスト',
@@ -391,6 +392,8 @@ void main() {
                     startDateTime: DateTime(2022, 8, 10, 0, 0, 0),
                     hexColor: '#111111',
                     imageURL: null,
+                    // 広告を表示する場合はパッケージバージョンよりもAffiliateのバージョンが高い場合は表示される
+                    version: "999.999.999",
                   )),
                 ),
                 sharedPreferencesProvider.overrideWith((ref) => sharedPreferences),
@@ -448,6 +451,7 @@ void main() {
                 isJaLocaleProvider.overrideWithValue(true),
                 isOverDiscountDeadlineProvider.overrideWithProvider((param) => Provider.autoDispose((_) => false)),
                 durationToDiscountPriceDeadline.overrideWithProvider((param) => Provider.autoDispose((_) => const Duration(seconds: 1000))),
+                packageVersionProvider.overrideWith((ref) => Version(major: 1, minor: 0, patch: 0)),
                 pilllAdsProvider.overrideWith(
                   (ref) => Stream.value(
                     PilllAds(
@@ -457,6 +461,8 @@ void main() {
                       startDateTime: DateTime(2022, 8, 10, 0, 0, 0),
                       hexColor: '#111111',
                       imageURL: null,
+                      // 広告を表示する場合はパッケージバージョンよりもAffiliateのバージョンが高い場合は表示される
+                      version: "999.999.999",
                     ),
                   ),
                 ),
@@ -515,6 +521,7 @@ void main() {
                 isJaLocaleProvider.overrideWithValue(true),
                 isOverDiscountDeadlineProvider.overrideWithProvider((param) => Provider.autoDispose((_) => false)),
                 durationToDiscountPriceDeadline.overrideWithProvider((param) => Provider.autoDispose((_) => const Duration(seconds: 1000))),
+                packageVersionProvider.overrideWith((ref) => Version(major: 1, minor: 0, patch: 0)),
                 pilllAdsProvider.overrideWith(
                   (ref) => Stream.value(
                     PilllAds(
@@ -524,6 +531,8 @@ void main() {
                       startDateTime: DateTime(2022, 8, 10, 0, 0, 0),
                       hexColor: '#111111',
                       imageURL: null,
+                      // 広告を表示する場合はパッケージバージョンよりもAffiliateのバージョンが高い場合は表示される
+                      version: "999.999.999",
                     ),
                   ),
                 ),
@@ -582,6 +591,7 @@ void main() {
                 isJaLocaleProvider.overrideWithValue(true),
                 isOverDiscountDeadlineProvider.overrideWithProvider((param) => Provider.autoDispose((_) => false)),
                 durationToDiscountPriceDeadline.overrideWithProvider((param) => Provider.autoDispose((_) => const Duration(seconds: 1000))),
+                packageVersionProvider.overrideWith((ref) => Version(major: 1, minor: 0, patch: 0)),
                 pilllAdsProvider.overrideWith(
                   (ref) => Stream.value(
                     PilllAds(
@@ -591,6 +601,8 @@ void main() {
                       startDateTime: DateTime(2022, 8, 10, 0, 0, 0),
                       hexColor: '#111111',
                       imageURL: null,
+                      // 広告を表示する場合はパッケージバージョンよりもAffiliateのバージョンが高い場合は表示される
+                      version: "999.999.999",
                     ),
                   ),
                 ),
@@ -649,6 +661,7 @@ void main() {
                 isJaLocaleProvider.overrideWithValue(true),
                 isOverDiscountDeadlineProvider.overrideWithProvider((param) => Provider.autoDispose((_) => false)),
                 durationToDiscountPriceDeadline.overrideWithProvider((param) => Provider.autoDispose((_) => const Duration(seconds: 1000))),
+                packageVersionProvider.overrideWith((ref) => Version(major: 1, minor: 0, patch: 0)),
                 pilllAdsProvider.overrideWith(
                   (ref) => Stream.value(
                     PilllAds(
@@ -658,6 +671,8 @@ void main() {
                       startDateTime: DateTime(2022, 8, 10, 0, 0, 0),
                       hexColor: '#111111',
                       imageURL: null,
+                      // 広告を表示する場合はパッケージバージョンよりもAffiliateのバージョンが高い場合は表示される
+                      version: "999.999.999",
                     ),
                   ),
                 ),
@@ -876,6 +891,7 @@ void main() {
                         startDateTime: DateTime(2022, 8, 10, 0, 0, 0),
                         hexColor: '#111111',
                         imageURL: null,
+                        // 広告を表示する場合はパッケージバージョンよりもAffiliateのバージョンが高い場合は表示される
                         version: "999.999.999",
                       ),
                     ),
@@ -943,6 +959,7 @@ void main() {
                 isJaLocaleProvider.overrideWithValue(true),
                 isOverDiscountDeadlineProvider.overrideWithProvider((param) => Provider.autoDispose((_) => false)),
                 durationToDiscountPriceDeadline.overrideWithProvider((param) => Provider.autoDispose((_) => const Duration(seconds: 1000))),
+                packageVersionProvider.overrideWith((ref) => Version(major: 1, minor: 0, patch: 0)),
                 pilllAdsProvider.overrideWith(
                   (ref) => Stream.value(
                     PilllAds(
@@ -952,6 +969,8 @@ void main() {
                       startDateTime: DateTime(2022, 8, 10, 0, 0, 0),
                       hexColor: '#111111',
                       imageURL: null,
+                      // 広告を表示する場合はパッケージバージョンよりもAffiliateのバージョンが高い場合は表示される
+                      version: "999.999.999",
                     ),
                   ),
                 ),
@@ -1012,6 +1031,7 @@ void main() {
                 isJaLocaleProvider.overrideWithValue(true),
                 isOverDiscountDeadlineProvider.overrideWithProvider((param) => Provider.autoDispose((_) => false)),
                 durationToDiscountPriceDeadline.overrideWithProvider((param) => Provider.autoDispose((_) => const Duration(seconds: 1000))),
+                packageVersionProvider.overrideWith((ref) => Version(major: 1, minor: 0, patch: 0)),
                 pilllAdsProvider.overrideWith(
                   (ref) => Stream.value(
                     PilllAds(
@@ -1021,6 +1041,8 @@ void main() {
                       startDateTime: DateTime(2022, 8, 10, 0, 0, 0),
                       hexColor: '#111111',
                       imageURL: null,
+                      // 広告を表示する場合はパッケージバージョンよりもAffiliateのバージョンが高い場合は表示される
+                      version: "999.999.999",
                     ),
                   ),
                 ),
@@ -1081,6 +1103,7 @@ void main() {
                 isJaLocaleProvider.overrideWithValue(true),
                 isOverDiscountDeadlineProvider.overrideWithProvider((param) => Provider.autoDispose((_) => false)),
                 durationToDiscountPriceDeadline.overrideWithProvider((param) => Provider.autoDispose((_) => const Duration(seconds: 1000))),
+                packageVersionProvider.overrideWith((ref) => Version(major: 1, minor: 0, patch: 0)),
                 pilllAdsProvider.overrideWith(
                   (ref) => Stream.value(
                     PilllAds(
@@ -1090,6 +1113,8 @@ void main() {
                       startDateTime: DateTime(2022, 8, 10, 0, 0, 0),
                       hexColor: '#111111',
                       imageURL: null,
+                      // 広告を表示する場合はパッケージバージョンよりもAffiliateのバージョンが高い場合は表示される
+                      version: "999.999.999",
                     ),
                   ),
                 ),
@@ -1150,6 +1175,7 @@ void main() {
                 isJaLocaleProvider.overrideWithValue(true),
                 isOverDiscountDeadlineProvider.overrideWithProvider((param) => Provider.autoDispose((_) => false)),
                 durationToDiscountPriceDeadline.overrideWithProvider((param) => Provider.autoDispose((_) => const Duration(seconds: 1000))),
+                packageVersionProvider.overrideWith((ref) => Version(major: 1, minor: 0, patch: 0)),
                 pilllAdsProvider.overrideWith(
                   (ref) => Stream.value(
                     PilllAds(
@@ -1159,6 +1185,8 @@ void main() {
                       startDateTime: DateTime(2022, 8, 10, 0, 0, 0),
                       hexColor: '#111111',
                       imageURL: null,
+                      // 広告を表示する場合はパッケージバージョンよりもAffiliateのバージョンが高い場合は表示される
+                      version: "999.999.999",
                     ),
                   ),
                 ),
@@ -1219,6 +1247,7 @@ void main() {
                 isJaLocaleProvider.overrideWithValue(true),
                 isOverDiscountDeadlineProvider.overrideWithProvider((param) => Provider.autoDispose((_) => false)),
                 durationToDiscountPriceDeadline.overrideWithProvider((param) => Provider.autoDispose((_) => const Duration(seconds: 1000))),
+                packageVersionProvider.overrideWith((ref) => Version(major: 1, minor: 0, patch: 0)),
                 pilllAdsProvider.overrideWith(
                   (ref) => Stream.value(
                     PilllAds(
@@ -1228,6 +1257,8 @@ void main() {
                       startDateTime: DateTime(2022, 8, 10, 0, 0, 0),
                       hexColor: '#111111',
                       imageURL: null,
+                      // 広告を表示する場合はパッケージバージョンよりもAffiliateのバージョンが高い場合は表示される
+                      version: "999.999.999",
                     ),
                   ),
                 ),
@@ -1288,6 +1319,7 @@ void main() {
                 isJaLocaleProvider.overrideWithValue(true),
                 isOverDiscountDeadlineProvider.overrideWithProvider((param) => Provider.autoDispose((_) => false)),
                 durationToDiscountPriceDeadline.overrideWithProvider((param) => Provider.autoDispose((_) => const Duration(seconds: 1000))),
+                packageVersionProvider.overrideWith((ref) => Version(major: 1, minor: 0, patch: 0)),
                 pilllAdsProvider.overrideWith(
                   (ref) => Stream.value(
                     PilllAds(
@@ -1297,6 +1329,8 @@ void main() {
                       startDateTime: DateTime(2022, 8, 10, 0, 0, 0),
                       hexColor: '#111111',
                       imageURL: null,
+                      // 広告を表示する場合はパッケージバージョンよりもAffiliateのバージョンが高い場合は表示される
+                      version: "999.999.999",
                     ),
                   ),
                 ),
