@@ -693,55 +693,57 @@ void main() {
             BoolKey.recommendedSignupNotificationIsAlreadyShow: false,
           });
           final sharedPreferences = await SharedPreferences.getInstance();
-          await tester.pumpWidget(
-            ProviderScope(
-              overrides: [
-                latestPillSheetGroupProvider.overrideWith((ref) => Stream.value(pillSheetGroup)),
-                premiumAndTrialProvider.overrideWithValue(
-                  AsyncData(
-                    PremiumAndTrial(
-                      isPremium: false,
-                      isTrial: false,
-                      hasDiscountEntitlement: true,
-                      trialDeadlineDate: null,
-                      beginTrialDate: null,
-                      discountEntitlementDeadlineDate: null,
+          await runWithNetworkImages(() async {
+            await tester.pumpWidget(
+              ProviderScope(
+                overrides: [
+                  latestPillSheetGroupProvider.overrideWith((ref) => Stream.value(pillSheetGroup)),
+                  premiumAndTrialProvider.overrideWithValue(
+                    AsyncData(
+                      PremiumAndTrial(
+                        isPremium: false,
+                        isTrial: false,
+                        hasDiscountEntitlement: true,
+                        trialDeadlineDate: null,
+                        beginTrialDate: null,
+                        discountEntitlementDeadlineDate: null,
+                      ),
                     ),
                   ),
-                ),
-                isLinkedProvider.overrideWithValue(false),
-                isJaLocaleProvider.overrideWithValue(true),
-                isOverDiscountDeadlineProvider.overrideWithProvider((param) => Provider.autoDispose((_) => false)),
-                durationToDiscountPriceDeadline.overrideWithProvider((param) => Provider.autoDispose((_) => const Duration(seconds: 1000))),
-                packageVersionProvider.overrideWith((ref) => Version(major: 1, minor: 0, patch: 0)),
-                affiliateProvider.overrideWith(
-                  (ref) => Stream.value(
-                    Affiliate(
-                      contents: [
-                        AffiliateContent(imageURL: 'https://github.com/bannzai', destinationURL: 'https://github.com/bannzai'),
-                      ],
-                      // 広告を表示する場合はパッケージバージョンよりもAffiliateのバージョンが小さい場合は表示されない
-                      version: "0.0.0",
+                  isLinkedProvider.overrideWithValue(false),
+                  isJaLocaleProvider.overrideWithValue(true),
+                  isOverDiscountDeadlineProvider.overrideWithProvider((param) => Provider.autoDispose((_) => false)),
+                  durationToDiscountPriceDeadline.overrideWithProvider((param) => Provider.autoDispose((_) => const Duration(seconds: 1000))),
+                  packageVersionProvider.overrideWith((ref) => Version(major: 1, minor: 0, patch: 0)),
+                  affiliateProvider.overrideWith(
+                    (ref) => Stream.value(
+                      Affiliate(
+                        contents: [
+                          AffiliateContent(imageURL: 'https://github.com/bannzai', destinationURL: 'https://github.com/bannzai'),
+                        ],
+                        // 広告を表示する場合はパッケージバージョンよりもAffiliateのバージョンが小さい場合は表示されない
+                        version: "0.0.0",
+                      ),
                     ),
                   ),
+                  // PilllAdsの方が優先度は高いのでnullを流してテスト
+                  pilllAdsProvider.overrideWith(
+                    (ref) => Stream.value(null),
+                  ),
+                  sharedPreferencesProvider.overrideWith((ref) => sharedPreferences),
+                ],
+                child: const MaterialApp(
+                  home: Material(child: AnnouncementBar()),
                 ),
-                // PilllAdsの方が優先度は高いのでnullを流してテスト
-                pilllAdsProvider.overrideWith(
-                  (ref) => Stream.value(null),
-                ),
-                sharedPreferencesProvider.overrideWith((ref) => sharedPreferences),
-              ],
-              child: const MaterialApp(
-                home: Material(child: AnnouncementBar()),
               ),
-            ),
-          );
-          await tester.pumpAndSettle(const Duration(milliseconds: 400));
+            );
+            await tester.pumpAndSettle(const Duration(milliseconds: 400));
 
-          expect(
-            find.byWidgetPredicate((widget) => widget is AffiliateAnnouncementBar),
-            findsNothing,
-          );
+            expect(
+              find.byWidgetPredicate((widget) => widget is AffiliateAnnouncementBar),
+              findsNothing,
+            );
+          });
         });
         testWidgets('affiliate version > package version', (WidgetTester tester) async {
           var pillSheet = PillSheet.create(
