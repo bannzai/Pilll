@@ -52,6 +52,7 @@ class AnnouncementBar extends HookConsumerWidget {
     final isJaLocale = ref.watch(isJaLocaleProvider);
     final packageVersion = ref.watch(packageVersionProvider).asData?.value;
 
+    // Affiliate
     final affiliate = ref.watch(affiliateProvider).asData?.value;
     final affiliateIsDisabled = () {
       if (!kDebugMode) {
