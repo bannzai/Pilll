@@ -192,7 +192,6 @@ AffiliateContent _$AffiliateContentFromJson(Map<String, dynamic> json) {
 mixin _$AffiliateContent {
   String get imageURL => throw _privateConstructorUsedError;
   String get destinationURL => throw _privateConstructorUsedError;
-  bool get isHidden => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
@@ -206,7 +205,7 @@ abstract class $AffiliateContentCopyWith<$Res> {
           AffiliateContent value, $Res Function(AffiliateContent) then) =
       _$AffiliateContentCopyWithImpl<$Res, AffiliateContent>;
   @useResult
-  $Res call({String imageURL, String destinationURL, bool isHidden});
+  $Res call({String imageURL, String destinationURL});
 }
 
 /// @nodoc
@@ -224,7 +223,6 @@ class _$AffiliateContentCopyWithImpl<$Res, $Val extends AffiliateContent>
   $Res call({
     Object? imageURL = null,
     Object? destinationURL = null,
-    Object? isHidden = null,
   }) {
     return _then(_value.copyWith(
       imageURL: null == imageURL
@@ -235,10 +233,6 @@ class _$AffiliateContentCopyWithImpl<$Res, $Val extends AffiliateContent>
           ? _value.destinationURL
           : destinationURL // ignore: cast_nullable_to_non_nullable
               as String,
-      isHidden: null == isHidden
-          ? _value.isHidden
-          : isHidden // ignore: cast_nullable_to_non_nullable
-              as bool,
     ) as $Val);
   }
 }
@@ -251,7 +245,7 @@ abstract class _$$_AffiliateContentCopyWith<$Res>
       __$$_AffiliateContentCopyWithImpl<$Res>;
   @override
   @useResult
-  $Res call({String imageURL, String destinationURL, bool isHidden});
+  $Res call({String imageURL, String destinationURL});
 }
 
 /// @nodoc
@@ -267,7 +261,6 @@ class __$$_AffiliateContentCopyWithImpl<$Res>
   $Res call({
     Object? imageURL = null,
     Object? destinationURL = null,
-    Object? isHidden = null,
   }) {
     return _then(_$_AffiliateContent(
       imageURL: null == imageURL
@@ -278,10 +271,6 @@ class __$$_AffiliateContentCopyWithImpl<$Res>
           ? _value.destinationURL
           : destinationURL // ignore: cast_nullable_to_non_nullable
               as String,
-      isHidden: null == isHidden
-          ? _value.isHidden
-          : isHidden // ignore: cast_nullable_to_non_nullable
-              as bool,
     ));
   }
 }
@@ -290,10 +279,7 @@ class __$$_AffiliateContentCopyWithImpl<$Res>
 
 @JsonSerializable(explicitToJson: true)
 class _$_AffiliateContent extends _AffiliateContent {
-  _$_AffiliateContent(
-      {required this.imageURL,
-      required this.destinationURL,
-      this.isHidden = false})
+  _$_AffiliateContent({required this.imageURL, required this.destinationURL})
       : super._();
 
   factory _$_AffiliateContent.fromJson(Map<String, dynamic> json) =>
@@ -303,13 +289,10 @@ class _$_AffiliateContent extends _AffiliateContent {
   final String imageURL;
   @override
   final String destinationURL;
-  @override
-  @JsonKey()
-  final bool isHidden;
 
   @override
   String toString() {
-    return 'AffiliateContent(imageURL: $imageURL, destinationURL: $destinationURL, isHidden: $isHidden)';
+    return 'AffiliateContent(imageURL: $imageURL, destinationURL: $destinationURL)';
   }
 
   @override
@@ -320,15 +303,12 @@ class _$_AffiliateContent extends _AffiliateContent {
             (identical(other.imageURL, imageURL) ||
                 other.imageURL == imageURL) &&
             (identical(other.destinationURL, destinationURL) ||
-                other.destinationURL == destinationURL) &&
-            (identical(other.isHidden, isHidden) ||
-                other.isHidden == isHidden));
+                other.destinationURL == destinationURL));
   }
 
   @JsonKey(ignore: true)
   @override
-  int get hashCode =>
-      Object.hash(runtimeType, imageURL, destinationURL, isHidden);
+  int get hashCode => Object.hash(runtimeType, imageURL, destinationURL);
 
   @JsonKey(ignore: true)
   @override
@@ -347,8 +327,7 @@ class _$_AffiliateContent extends _AffiliateContent {
 abstract class _AffiliateContent extends AffiliateContent {
   factory _AffiliateContent(
       {required final String imageURL,
-      required final String destinationURL,
-      final bool isHidden}) = _$_AffiliateContent;
+      required final String destinationURL}) = _$_AffiliateContent;
   _AffiliateContent._() : super._();
 
   factory _AffiliateContent.fromJson(Map<String, dynamic> json) =
@@ -358,8 +337,6 @@ abstract class _AffiliateContent extends AffiliateContent {
   String get imageURL;
   @override
   String get destinationURL;
-  @override
-  bool get isHidden;
   @override
   @JsonKey(ignore: true)
   _$$_AffiliateContentCopyWith<_$_AffiliateContent> get copyWith =>

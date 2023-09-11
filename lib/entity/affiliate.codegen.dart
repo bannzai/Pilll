@@ -24,7 +24,6 @@ class AffiliateContent with _$AffiliateContent {
   factory AffiliateContent({
     required String imageURL,
     required String destinationURL,
-    @Default(false) bool isHidden,
   }) = _AffiliateContent;
   AffiliateContent._();
 

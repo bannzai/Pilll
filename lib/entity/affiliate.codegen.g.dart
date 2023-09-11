@@ -23,12 +23,10 @@ _$_AffiliateContent _$$_AffiliateContentFromJson(Map<String, dynamic> json) =>
     _$_AffiliateContent(
       imageURL: json['imageURL'] as String,
       destinationURL: json['destinationURL'] as String,
-      isHidden: json['isHidden'] as bool? ?? false,
     );
 
 Map<String, dynamic> _$$_AffiliateContentToJson(_$_AffiliateContent instance) =>
     <String, dynamic>{
       'imageURL': instance.imageURL,
       'destinationURL': instance.destinationURL,
-      'isHidden': instance.isHidden,
     };
