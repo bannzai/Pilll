@@ -109,7 +109,7 @@ class __$$_AffiliateCopyWithImpl<$Res>
 
 @JsonSerializable(explicitToJson: true)
 class _$_Affiliate extends _Affiliate {
-  _$_Affiliate(
+  const _$_Affiliate(
       {required final List<AffiliateContent> contents, this.version = "0.0.0"})
       : _contents = contents,
         super._();
@@ -165,10 +165,10 @@ class _$_Affiliate extends _Affiliate {
 }
 
 abstract class _Affiliate extends Affiliate {
-  factory _Affiliate(
+  const factory _Affiliate(
       {required final List<AffiliateContent> contents,
       final String version}) = _$_Affiliate;
-  _Affiliate._() : super._();
+  const _Affiliate._() : super._();
 
   factory _Affiliate.fromJson(Map<String, dynamic> json) =
       _$_Affiliate.fromJson;
@@ -279,7 +279,8 @@ class __$$_AffiliateContentCopyWithImpl<$Res>
 
 @JsonSerializable(explicitToJson: true)
 class _$_AffiliateContent extends _AffiliateContent {
-  _$_AffiliateContent({required this.imageURL, required this.destinationURL})
+  const _$_AffiliateContent(
+      {required this.imageURL, required this.destinationURL})
       : super._();
 
   factory _$_AffiliateContent.fromJson(Map<String, dynamic> json) =>
@@ -325,10 +326,10 @@ class _$_AffiliateContent extends _AffiliateContent {
 }
 
 abstract class _AffiliateContent extends AffiliateContent {
-  factory _AffiliateContent(
+  const factory _AffiliateContent(
       {required final String imageURL,
       required final String destinationURL}) = _$_AffiliateContent;
-  _AffiliateContent._() : super._();
+  const _AffiliateContent._() : super._();
 
   factory _AffiliateContent.fromJson(Map<String, dynamic> json) =
       _$_AffiliateContent.fromJson;

@@ -1007,7 +1007,7 @@ void main() {
                   packageVersionProvider.overrideWith((ref) => Version(major: 1, minor: 0, patch: 0)),
                   affiliateProvider.overrideWith(
                     (ref) => Stream.value(
-                      Affiliate(
+                      const Affiliate(
                         contents: [
                           AffiliateContent(imageURL: 'https://github.com/bannzai', destinationURL: 'https://github.com/bannzai'),
                         ],
@@ -1074,7 +1074,7 @@ void main() {
                   packageVersionProvider.overrideWith((ref) => Version(major: 1, minor: 0, patch: 0)),
                   affiliateProvider.overrideWith(
                     (ref) => Stream.value(
-                      Affiliate(
+                      const Affiliate(
                         contents: [
                           AffiliateContent(imageURL: 'https://github.com/bannzai', destinationURL: 'https://github.com/bannzai'),
                         ],
@@ -1147,7 +1147,7 @@ void main() {
                   packageVersionProvider.overrideWith((ref) => Version(major: 1, minor: 0, patch: 0)),
                   affiliateProvider.overrideWith(
                     (ref) => Stream.value(
-                      Affiliate(
+                      const Affiliate(
                         contents: [
                           AffiliateContent(imageURL: 'https://github.com/bannzai', destinationURL: 'https://github.com/bannzai'),
                         ],

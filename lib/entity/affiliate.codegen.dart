@@ -6,14 +6,14 @@ part 'affiliate.codegen.g.dart';
 @freezed
 class Affiliate with _$Affiliate {
   @JsonSerializable(explicitToJson: true)
-  factory Affiliate({
+  const factory Affiliate({
     required List<AffiliateContent> contents,
 
     // このフィールドの値よりパッケージバージョンが高い場合には、広告を表示する。
     // なので最も低いバージョンをデフォルト値としている
     @Default("0.0.0") String version,
   }) = _Affiliate;
-  Affiliate._();
+  const Affiliate._();
 
   factory Affiliate.fromJson(Map<String, dynamic> json) => _$AffiliateFromJson(json);
 }
@@ -21,11 +21,11 @@ class Affiliate with _$Affiliate {
 @freezed
 class AffiliateContent with _$AffiliateContent {
   @JsonSerializable(explicitToJson: true)
-  factory AffiliateContent({
+  const factory AffiliateContent({
     required String imageURL,
     required String destinationURL,
   }) = _AffiliateContent;
-  AffiliateContent._();
+  const AffiliateContent._();
 
   factory AffiliateContent.fromJson(Map<String, dynamic> json) => _$AffiliateContentFromJson(json);
 }
