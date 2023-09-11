@@ -6,9 +6,8 @@ import 'package:pilll/provider/affiliate.dart';
 import 'package:pilll/utils/analytics.dart';
 import 'package:url_launcher/url_launcher.dart';
 
-final shownContentsProvider = Provider((ref) => ref.watch(affiliateProvider).asData?.value?.contents.where((e) => !e.isHidden).toList() ?? []);
 final affiliateIndexProvider = Provider((ref) {
-  final contents = ref.watch(shownContentsProvider);
+  final contents = ref.watch(affiliateProvider).asData?.value?.contents ?? [];
   return ([...contents.indexed].toList()..shuffle()).firstOrNull?.$1 ?? 0;
 });
 
@@ -23,12 +22,13 @@ class AffiliateAnnouncementBar extends HookConsumerWidget {
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {
-    final contents = ref.watch(shownContentsProvider);
     final index = ref.watch(affiliateIndexProvider);
-    if (contents.isEmpty || contents.length <= index) {
+    if (affiliate.contents.isEmpty || affiliate.contents.length <= index) {
       return Container();
     }
-    return AffiliateImageAnnouncementBar(content: contents[index], affiliate: affiliate, onClose: onClose);
+
+    final content = affiliate.contents[index];
+    return AffiliateImageAnnouncementBar(content: content, affiliate: affiliate, onClose: onClose);
   }
 }
 
