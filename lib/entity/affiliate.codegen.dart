@@ -22,6 +22,7 @@ class Affiliate with _$Affiliate {
 class AffiliateContent with _$AffiliateContent {
   @JsonSerializable(explicitToJson: true)
   const factory AffiliateContent({
+    String? backgroundColorHex,
     required String imageURL,
     required String destinationURL,
   }) = _AffiliateContent;

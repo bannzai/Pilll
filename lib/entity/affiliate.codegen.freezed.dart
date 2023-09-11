@@ -190,6 +190,7 @@ AffiliateContent _$AffiliateContentFromJson(Map<String, dynamic> json) {
 
 /// @nodoc
 mixin _$AffiliateContent {
+  String? get backgroundColorHex => throw _privateConstructorUsedError;
   String get imageURL => throw _privateConstructorUsedError;
   String get destinationURL => throw _privateConstructorUsedError;
 
@@ -205,7 +206,8 @@ abstract class $AffiliateContentCopyWith<$Res> {
           AffiliateContent value, $Res Function(AffiliateContent) then) =
       _$AffiliateContentCopyWithImpl<$Res, AffiliateContent>;
   @useResult
-  $Res call({String imageURL, String destinationURL});
+  $Res call(
+      {String? backgroundColorHex, String imageURL, String destinationURL});
 }
 
 /// @nodoc
@@ -221,10 +223,15 @@ class _$AffiliateContentCopyWithImpl<$Res, $Val extends AffiliateContent>
   @pragma('vm:prefer-inline')
   @override
   $Res call({
+    Object? backgroundColorHex = freezed,
     Object? imageURL = null,
     Object? destinationURL = null,
   }) {
     return _then(_value.copyWith(
+      backgroundColorHex: freezed == backgroundColorHex
+          ? _value.backgroundColorHex
+          : backgroundColorHex // ignore: cast_nullable_to_non_nullable
+              as String?,
       imageURL: null == imageURL
           ? _value.imageURL
           : imageURL // ignore: cast_nullable_to_non_nullable
@@ -245,7 +252,8 @@ abstract class _$$_AffiliateContentCopyWith<$Res>
       __$$_AffiliateContentCopyWithImpl<$Res>;
   @override
   @useResult
-  $Res call({String imageURL, String destinationURL});
+  $Res call(
+      {String? backgroundColorHex, String imageURL, String destinationURL});
 }
 
 /// @nodoc
@@ -259,10 +267,15 @@ class __$$_AffiliateContentCopyWithImpl<$Res>
   @pragma('vm:prefer-inline')
   @override
   $Res call({
+    Object? backgroundColorHex = freezed,
     Object? imageURL = null,
     Object? destinationURL = null,
   }) {
     return _then(_$_AffiliateContent(
+      backgroundColorHex: freezed == backgroundColorHex
+          ? _value.backgroundColorHex
+          : backgroundColorHex // ignore: cast_nullable_to_non_nullable
+              as String?,
       imageURL: null == imageURL
           ? _value.imageURL
           : imageURL // ignore: cast_nullable_to_non_nullable
@@ -280,12 +293,16 @@ class __$$_AffiliateContentCopyWithImpl<$Res>
 @JsonSerializable(explicitToJson: true)
 class _$_AffiliateContent extends _AffiliateContent {
   const _$_AffiliateContent(
-      {required this.imageURL, required this.destinationURL})
+      {this.backgroundColorHex,
+      required this.imageURL,
+      required this.destinationURL})
       : super._();
 
   factory _$_AffiliateContent.fromJson(Map<String, dynamic> json) =>
       _$$_AffiliateContentFromJson(json);
 
+  @override
+  final String? backgroundColorHex;
   @override
   final String imageURL;
   @override
@@ -293,7 +310,7 @@ class _$_AffiliateContent extends _AffiliateContent {
 
   @override
   String toString() {
-    return 'AffiliateContent(imageURL: $imageURL, destinationURL: $destinationURL)';
+    return 'AffiliateContent(backgroundColorHex: $backgroundColorHex, imageURL: $imageURL, destinationURL: $destinationURL)';
   }
 
   @override
@@ -301,6 +318,8 @@ class _$_AffiliateContent extends _AffiliateContent {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$_AffiliateContent &&
+            (identical(other.backgroundColorHex, backgroundColorHex) ||
+                other.backgroundColorHex == backgroundColorHex) &&
             (identical(other.imageURL, imageURL) ||
                 other.imageURL == imageURL) &&
             (identical(other.destinationURL, destinationURL) ||
@@ -309,7 +328,8 @@ class _$_AffiliateContent extends _AffiliateContent {
 
   @JsonKey(ignore: true)
   @override
-  int get hashCode => Object.hash(runtimeType, imageURL, destinationURL);
+  int get hashCode =>
+      Object.hash(runtimeType, backgroundColorHex, imageURL, destinationURL);
 
   @JsonKey(ignore: true)
   @override
@@ -327,13 +347,16 @@ class _$_AffiliateContent extends _AffiliateContent {
 
 abstract class _AffiliateContent extends AffiliateContent {
   const factory _AffiliateContent(
-      {required final String imageURL,
+      {final String? backgroundColorHex,
+      required final String imageURL,
       required final String destinationURL}) = _$_AffiliateContent;
   const _AffiliateContent._() : super._();
 
   factory _AffiliateContent.fromJson(Map<String, dynamic> json) =
       _$_AffiliateContent.fromJson;
 
+  @override
+  String? get backgroundColorHex;
   @override
   String get imageURL;
   @override

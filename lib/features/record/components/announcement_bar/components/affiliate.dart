@@ -4,6 +4,7 @@ import 'package:flutter_svg/flutter_svg.dart';
 import 'package:pilll/entity/affiliate.codegen.dart';
 import 'package:pilll/provider/affiliate.dart';
 import 'package:pilll/utils/analytics.dart';
+import 'package:pilll/utils/color.dart';
 import 'package:url_launcher/url_launcher.dart';
 
 final affiliateIndexProvider = Provider((ref) {
@@ -49,7 +50,7 @@ class AffiliateImageAnnouncementBar extends StatelessWidget {
     final onClose = this.onClose;
 
     return Container(
-      color: Colors.transparent,
+      color: content.backgroundColorHex == null ? Colors.transparent : HexColor.fromHex(content.backgroundColorHex!),
       padding: const EdgeInsets.symmetric(horizontal: 8),
       child: GestureDetector(
         onTap: () {
