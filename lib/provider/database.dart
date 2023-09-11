@@ -34,7 +34,7 @@ abstract class _CollectionPath {
   static String schedule({required String userID, required String scheduleID}) => "$users/$userID/schedules/$scheduleID";
   static String schedules({required String userID}) => "$users/$userID/schedules";
   static String pilllAds() => "globals/pilll_ads";
-  static String affiliate() => "globals/affiliates";
+  static String affiliate() => "globals/affiliate";
 }
 
 class DatabaseConnection {
