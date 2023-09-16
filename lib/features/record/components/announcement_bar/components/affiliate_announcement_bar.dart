@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
-import 'package:pilll/components/page/web_view.dart';
 import 'package:pilll/entity/affiliate.codegen.dart';
+import 'package:pilll/features/record/components/announcement_bar/components/html_webview.dart';
 import 'package:pilll/provider/affiliate.dart';
 import 'package:pilll/utils/analytics.dart';
 import 'package:pilll/utils/color.dart';
@@ -59,7 +59,9 @@ class AffiliateImageAnnouncementBar extends StatelessWidget {
               analytics.logEvent(name: "affiliate_image_tapped");
             },
             child: SizedBox(
-              child: AppWebView(url: content.webViewURL),
+              child: HTMLWebView(
+                html: content.html,
+              ),
             ),
           ),
           IconButton(
