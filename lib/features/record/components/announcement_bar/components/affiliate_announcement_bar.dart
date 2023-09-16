@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_svg/flutter_svg.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
+import 'package:pilll/components/atoms/color.dart';
 import 'package:pilll/entity/affiliate.codegen.dart';
 import 'package:pilll/features/record/components/announcement_bar/components/html_webview.dart';
 import 'package:pilll/provider/affiliate.dart';
@@ -49,32 +51,54 @@ class AffiliateImageAnnouncementBar extends StatelessWidget {
     final onClose = this.onClose;
 
     return Container(
-      color: content.backgroundColorHex == null ? Colors.transparent : HexColor.fromHex(content.backgroundColorHex!),
-      padding: const EdgeInsets.symmetric(horizontal: 8),
+      color: HexColor.fromHex(content.backgroundColorHex),
       child: Stack(
-        alignment: Alignment.centerLeft,
         children: [
           GestureDetector(
             onTap: () {
               analytics.logEvent(name: "affiliate_image_tapped");
             },
-            child: SizedBox(
+            child: Container(
+              width: MediaQuery.of(context).size.width,
+              height: content.height.toDouble(),
+              decoration: BoxDecoration(
+                border: Border.all(
+                  width: 1,
+                  color: PilllColors.border,
+                ),
+              ),
               child: HTMLWebView(
                 html: content.html,
               ),
             ),
           ),
-          IconButton(
-            alignment: Alignment.centerLeft,
-            icon: const Icon(
-              Icons.close,
-              color: Colors.white,
-              size: 24,
+          Padding(
+            padding: const EdgeInsets.symmetric(horizontal: 8),
+            child: Row(
+              crossAxisAlignment: CrossAxisAlignment.center,
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                IconButton(
+                  alignment: Alignment.centerLeft,
+                  icon: Icon(
+                    Icons.close,
+                    color: HexColor.fromHex(content.closeButtonColorHex),
+                    size: 24,
+                  ),
+                  onPressed: () {
+                    analytics.logEvent(name: "affiliate_image_is_closed");
+                    onClose();
+                  },
+                ),
+                const Spacer(),
+                SvgPicture.asset(
+                  "images/arrow_right.svg",
+                  colorFilter: ColorFilter.mode(HexColor.fromHex(content.arrowButtonColorHex), BlendMode.srcIn),
+                  height: 20,
+                  width: 20,
+                ),
+              ],
             ),
-            onPressed: () {
-              analytics.logEvent(name: "affiliate_image_is_closed");
-              onClose();
-            },
           ),
         ],
       ),
