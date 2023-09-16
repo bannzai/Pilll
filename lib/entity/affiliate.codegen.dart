@@ -24,8 +24,6 @@ class AffiliateContent with _$AffiliateContent {
   const factory AffiliateContent({
     String? backgroundColorHex,
     required String webViewURL,
-    required int width,
-    required int height,
   }) = _AffiliateContent;
   const AffiliateContent._();
 
