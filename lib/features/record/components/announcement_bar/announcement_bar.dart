@@ -1,7 +1,7 @@
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
-import 'package:pilll/features/record/components/announcement_bar/components/affiliate.dart';
+import 'package:pilll/features/record/components/announcement_bar/components/affiliate_announcement_bar.dart';
 import 'package:pilll/provider/affiliate.dart';
 import 'package:pilll/provider/package_info.dart';
 import 'package:pilll/utils/analytics.dart';

@@ -1,7 +1,7 @@
 import 'dart:async';
 
 import 'package:pilll/entity/affiliate.codegen.dart';
-import 'package:pilll/features/record/components/announcement_bar/components/affiliate.dart';
+import 'package:pilll/features/record/components/announcement_bar/components/affiliate_announcement_bar.dart';
 import 'package:pilll/provider/affiliate.dart';
 import 'package:pilll/provider/package_info.dart';
 import 'package:pilll/provider/shared_preferences.dart';
