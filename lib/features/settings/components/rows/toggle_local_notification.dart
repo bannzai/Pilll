@@ -32,9 +32,15 @@ class ToggleLocalNotification extends HookConsumerWidget {
           )),
       activeColor: PilllColors.secondary,
       onChanged: (bool value) async {
-        analytics.logEvent(
-          name: "toggle_local_notification",
-        );
+        if (value) {
+          analytics.logEvent(
+            name: "on_toggle_local_notification",
+          );
+        } else {
+          analytics.logEvent(
+            name: "off_toggle_local_notification",
+          );
+        }
         final messenger = ScaffoldMessenger.of(context);
         messenger.hideCurrentSnackBar();
         try {
