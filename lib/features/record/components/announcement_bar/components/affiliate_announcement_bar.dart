@@ -90,6 +90,7 @@ class AffiliateImageAnnouncementBar extends StatelessWidget {
             Image.network(
               content.imageURL,
               height: 50,
+              fit: BoxFit.fitWidth,
             ),
           ],
         ),
