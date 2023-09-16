@@ -190,8 +190,11 @@ AffiliateContent _$AffiliateContentFromJson(Map<String, dynamic> json) {
 
 /// @nodoc
 mixin _$AffiliateContent {
-  String? get backgroundColorHex => throw _privateConstructorUsedError;
+  String get backgroundColorHex => throw _privateConstructorUsedError;
+  String get closeButtonColorHex => throw _privateConstructorUsedError;
+  String get arrowButtonColorHex => throw _privateConstructorUsedError;
   String get html => throw _privateConstructorUsedError;
+  int get height => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
@@ -205,7 +208,12 @@ abstract class $AffiliateContentCopyWith<$Res> {
           AffiliateContent value, $Res Function(AffiliateContent) then) =
       _$AffiliateContentCopyWithImpl<$Res, AffiliateContent>;
   @useResult
-  $Res call({String? backgroundColorHex, String html});
+  $Res call(
+      {String backgroundColorHex,
+      String closeButtonColorHex,
+      String arrowButtonColorHex,
+      String html,
+      int height});
 }
 
 /// @nodoc
@@ -221,18 +229,33 @@ class _$AffiliateContentCopyWithImpl<$Res, $Val extends AffiliateContent>
   @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? backgroundColorHex = freezed,
+    Object? backgroundColorHex = null,
+    Object? closeButtonColorHex = null,
+    Object? arrowButtonColorHex = null,
     Object? html = null,
+    Object? height = null,
   }) {
     return _then(_value.copyWith(
-      backgroundColorHex: freezed == backgroundColorHex
+      backgroundColorHex: null == backgroundColorHex
           ? _value.backgroundColorHex
           : backgroundColorHex // ignore: cast_nullable_to_non_nullable
-              as String?,
+              as String,
+      closeButtonColorHex: null == closeButtonColorHex
+          ? _value.closeButtonColorHex
+          : closeButtonColorHex // ignore: cast_nullable_to_non_nullable
+              as String,
+      arrowButtonColorHex: null == arrowButtonColorHex
+          ? _value.arrowButtonColorHex
+          : arrowButtonColorHex // ignore: cast_nullable_to_non_nullable
+              as String,
       html: null == html
           ? _value.html
           : html // ignore: cast_nullable_to_non_nullable
               as String,
+      height: null == height
+          ? _value.height
+          : height // ignore: cast_nullable_to_non_nullable
+              as int,
     ) as $Val);
   }
 }
@@ -245,7 +268,12 @@ abstract class _$$_AffiliateContentCopyWith<$Res>
       __$$_AffiliateContentCopyWithImpl<$Res>;
   @override
   @useResult
-  $Res call({String? backgroundColorHex, String html});
+  $Res call(
+      {String backgroundColorHex,
+      String closeButtonColorHex,
+      String arrowButtonColorHex,
+      String html,
+      int height});
 }
 
 /// @nodoc
@@ -259,18 +287,33 @@ class __$$_AffiliateContentCopyWithImpl<$Res>
   @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? backgroundColorHex = freezed,
+    Object? backgroundColorHex = null,
+    Object? closeButtonColorHex = null,
+    Object? arrowButtonColorHex = null,
     Object? html = null,
+    Object? height = null,
   }) {
     return _then(_$_AffiliateContent(
-      backgroundColorHex: freezed == backgroundColorHex
+      backgroundColorHex: null == backgroundColorHex
           ? _value.backgroundColorHex
           : backgroundColorHex // ignore: cast_nullable_to_non_nullable
-              as String?,
+              as String,
+      closeButtonColorHex: null == closeButtonColorHex
+          ? _value.closeButtonColorHex
+          : closeButtonColorHex // ignore: cast_nullable_to_non_nullable
+              as String,
+      arrowButtonColorHex: null == arrowButtonColorHex
+          ? _value.arrowButtonColorHex
+          : arrowButtonColorHex // ignore: cast_nullable_to_non_nullable
+              as String,
       html: null == html
           ? _value.html
           : html // ignore: cast_nullable_to_non_nullable
               as String,
+      height: null == height
+          ? _value.height
+          : height // ignore: cast_nullable_to_non_nullable
+              as int,
     ));
   }
 }
@@ -279,20 +322,31 @@ class __$$_AffiliateContentCopyWithImpl<$Res>
 
 @JsonSerializable(explicitToJson: true)
 class _$_AffiliateContent extends _AffiliateContent {
-  const _$_AffiliateContent({this.backgroundColorHex, required this.html})
+  const _$_AffiliateContent(
+      {required this.backgroundColorHex,
+      required this.closeButtonColorHex,
+      required this.arrowButtonColorHex,
+      required this.html,
+      required this.height})
       : super._();
 
   factory _$_AffiliateContent.fromJson(Map<String, dynamic> json) =>
       _$$_AffiliateContentFromJson(json);
 
   @override
-  final String? backgroundColorHex;
+  final String backgroundColorHex;
+  @override
+  final String closeButtonColorHex;
+  @override
+  final String arrowButtonColorHex;
   @override
   final String html;
+  @override
+  final int height;
 
   @override
   String toString() {
-    return 'AffiliateContent(backgroundColorHex: $backgroundColorHex, html: $html)';
+    return 'AffiliateContent(backgroundColorHex: $backgroundColorHex, closeButtonColorHex: $closeButtonColorHex, arrowButtonColorHex: $arrowButtonColorHex, html: $html, height: $height)';
   }
 
   @override
@@ -302,12 +356,18 @@ class _$_AffiliateContent extends _AffiliateContent {
             other is _$_AffiliateContent &&
             (identical(other.backgroundColorHex, backgroundColorHex) ||
                 other.backgroundColorHex == backgroundColorHex) &&
-            (identical(other.html, html) || other.html == html));
+            (identical(other.closeButtonColorHex, closeButtonColorHex) ||
+                other.closeButtonColorHex == closeButtonColorHex) &&
+            (identical(other.arrowButtonColorHex, arrowButtonColorHex) ||
+                other.arrowButtonColorHex == arrowButtonColorHex) &&
+            (identical(other.html, html) || other.html == html) &&
+            (identical(other.height, height) || other.height == height));
   }
 
   @JsonKey(ignore: true)
   @override
-  int get hashCode => Object.hash(runtimeType, backgroundColorHex, html);
+  int get hashCode => Object.hash(runtimeType, backgroundColorHex,
+      closeButtonColorHex, arrowButtonColorHex, html, height);
 
   @JsonKey(ignore: true)
   @override
@@ -325,17 +385,26 @@ class _$_AffiliateContent extends _AffiliateContent {
 
 abstract class _AffiliateContent extends AffiliateContent {
   const factory _AffiliateContent(
-      {final String? backgroundColorHex,
-      required final String html}) = _$_AffiliateContent;
+      {required final String backgroundColorHex,
+      required final String closeButtonColorHex,
+      required final String arrowButtonColorHex,
+      required final String html,
+      required final int height}) = _$_AffiliateContent;
   const _AffiliateContent._() : super._();
 
   factory _AffiliateContent.fromJson(Map<String, dynamic> json) =
       _$_AffiliateContent.fromJson;
 
   @override
-  String? get backgroundColorHex;
+  String get backgroundColorHex;
+  @override
+  String get closeButtonColorHex;
+  @override
+  String get arrowButtonColorHex;
   @override
   String get html;
+  @override
+  int get height;
   @override
   @JsonKey(ignore: true)
   _$$_AffiliateContentCopyWith<_$_AffiliateContent> get copyWith =>

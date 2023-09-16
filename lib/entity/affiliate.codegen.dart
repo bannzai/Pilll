@@ -22,8 +22,11 @@ class Affiliate with _$Affiliate {
 class AffiliateContent with _$AffiliateContent {
   @JsonSerializable(explicitToJson: true)
   const factory AffiliateContent({
-    String? backgroundColorHex,
+    required String backgroundColorHex,
+    required String closeButtonColorHex,
+    required String arrowButtonColorHex,
     required String html,
+    required int height,
   }) = _AffiliateContent;
   const AffiliateContent._();
 
