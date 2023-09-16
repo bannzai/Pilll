@@ -22,11 +22,11 @@ Map<String, dynamic> _$$_AffiliateToJson(_$_Affiliate instance) =>
 _$_AffiliateContent _$$_AffiliateContentFromJson(Map<String, dynamic> json) =>
     _$_AffiliateContent(
       backgroundColorHex: json['backgroundColorHex'] as String?,
-      webViewURL: json['webViewURL'] as String,
+      html: json['html'] as String,
     );
 
 Map<String, dynamic> _$$_AffiliateContentToJson(_$_AffiliateContent instance) =>
     <String, dynamic>{
       'backgroundColorHex': instance.backgroundColorHex,
-      'webViewURL': instance.webViewURL,
+      'html': instance.html,
     };

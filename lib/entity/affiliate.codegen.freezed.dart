@@ -191,7 +191,7 @@ AffiliateContent _$AffiliateContentFromJson(Map<String, dynamic> json) {
 /// @nodoc
 mixin _$AffiliateContent {
   String? get backgroundColorHex => throw _privateConstructorUsedError;
-  String get webViewURL => throw _privateConstructorUsedError;
+  String get html => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
@@ -205,7 +205,7 @@ abstract class $AffiliateContentCopyWith<$Res> {
           AffiliateContent value, $Res Function(AffiliateContent) then) =
       _$AffiliateContentCopyWithImpl<$Res, AffiliateContent>;
   @useResult
-  $Res call({String? backgroundColorHex, String webViewURL});
+  $Res call({String? backgroundColorHex, String html});
 }
 
 /// @nodoc
@@ -222,16 +222,16 @@ class _$AffiliateContentCopyWithImpl<$Res, $Val extends AffiliateContent>
   @override
   $Res call({
     Object? backgroundColorHex = freezed,
-    Object? webViewURL = null,
+    Object? html = null,
   }) {
     return _then(_value.copyWith(
       backgroundColorHex: freezed == backgroundColorHex
           ? _value.backgroundColorHex
           : backgroundColorHex // ignore: cast_nullable_to_non_nullable
               as String?,
-      webViewURL: null == webViewURL
-          ? _value.webViewURL
-          : webViewURL // ignore: cast_nullable_to_non_nullable
+      html: null == html
+          ? _value.html
+          : html // ignore: cast_nullable_to_non_nullable
               as String,
     ) as $Val);
   }
@@ -245,7 +245,7 @@ abstract class _$$_AffiliateContentCopyWith<$Res>
       __$$_AffiliateContentCopyWithImpl<$Res>;
   @override
   @useResult
-  $Res call({String? backgroundColorHex, String webViewURL});
+  $Res call({String? backgroundColorHex, String html});
 }
 
 /// @nodoc
@@ -260,16 +260,16 @@ class __$$_AffiliateContentCopyWithImpl<$Res>
   @override
   $Res call({
     Object? backgroundColorHex = freezed,
-    Object? webViewURL = null,
+    Object? html = null,
   }) {
     return _then(_$_AffiliateContent(
       backgroundColorHex: freezed == backgroundColorHex
           ? _value.backgroundColorHex
           : backgroundColorHex // ignore: cast_nullable_to_non_nullable
               as String?,
-      webViewURL: null == webViewURL
-          ? _value.webViewURL
-          : webViewURL // ignore: cast_nullable_to_non_nullable
+      html: null == html
+          ? _value.html
+          : html // ignore: cast_nullable_to_non_nullable
               as String,
     ));
   }
@@ -279,7 +279,7 @@ class __$$_AffiliateContentCopyWithImpl<$Res>
 
 @JsonSerializable(explicitToJson: true)
 class _$_AffiliateContent extends _AffiliateContent {
-  const _$_AffiliateContent({this.backgroundColorHex, required this.webViewURL})
+  const _$_AffiliateContent({this.backgroundColorHex, required this.html})
       : super._();
 
   factory _$_AffiliateContent.fromJson(Map<String, dynamic> json) =>
@@ -288,11 +288,11 @@ class _$_AffiliateContent extends _AffiliateContent {
   @override
   final String? backgroundColorHex;
   @override
-  final String webViewURL;
+  final String html;
 
   @override
   String toString() {
-    return 'AffiliateContent(backgroundColorHex: $backgroundColorHex, webViewURL: $webViewURL)';
+    return 'AffiliateContent(backgroundColorHex: $backgroundColorHex, html: $html)';
   }
 
   @override
@@ -302,13 +302,12 @@ class _$_AffiliateContent extends _AffiliateContent {
             other is _$_AffiliateContent &&
             (identical(other.backgroundColorHex, backgroundColorHex) ||
                 other.backgroundColorHex == backgroundColorHex) &&
-            (identical(other.webViewURL, webViewURL) ||
-                other.webViewURL == webViewURL));
+            (identical(other.html, html) || other.html == html));
   }
 
   @JsonKey(ignore: true)
   @override
-  int get hashCode => Object.hash(runtimeType, backgroundColorHex, webViewURL);
+  int get hashCode => Object.hash(runtimeType, backgroundColorHex, html);
 
   @JsonKey(ignore: true)
   @override
@@ -327,7 +326,7 @@ class _$_AffiliateContent extends _AffiliateContent {
 abstract class _AffiliateContent extends AffiliateContent {
   const factory _AffiliateContent(
       {final String? backgroundColorHex,
-      required final String webViewURL}) = _$_AffiliateContent;
+      required final String html}) = _$_AffiliateContent;
   const _AffiliateContent._() : super._();
 
   factory _AffiliateContent.fromJson(Map<String, dynamic> json) =
@@ -336,7 +335,7 @@ abstract class _AffiliateContent extends AffiliateContent {
   @override
   String? get backgroundColorHex;
   @override
-  String get webViewURL;
+  String get html;
   @override
   @JsonKey(ignore: true)
   _$$_AffiliateContentCopyWith<_$_AffiliateContent> get copyWith =>
