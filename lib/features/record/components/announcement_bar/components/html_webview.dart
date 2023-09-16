@@ -21,7 +21,7 @@ class _HTMLWebViewState extends State<HTMLWebView> {
     super.initState();
     webViewController = WebViewController()
       ..setJavaScriptMode(JavaScriptMode.unrestricted)
-      ..loadHtmlString(widget.html);
+      ..loadHtmlString(html);
   }
 
   @override
@@ -29,5 +29,13 @@ class _HTMLWebViewState extends State<HTMLWebView> {
     return WebViewWidget(
       controller: webViewController,
     );
+  }
+
+  String get html {
+    return '''
+<div style="width:100%;display:flex;justify-content:center;">
+  ${widget.html}
+</div>
+''';
   }
 }
