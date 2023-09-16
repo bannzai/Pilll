@@ -1,11 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
-import 'package:flutter_svg/flutter_svg.dart';
+import 'package:pilll/components/page/web_view.dart';
 import 'package:pilll/entity/affiliate.codegen.dart';
 import 'package:pilll/provider/affiliate.dart';
 import 'package:pilll/utils/analytics.dart';
 import 'package:pilll/utils/color.dart';
-import 'package:url_launcher/url_launcher.dart';
 
 final affiliateIndexProvider = Provider((ref) {
   final contents = ref.watch(affiliateProvider).asData?.value?.contents ?? [];
@@ -52,48 +51,30 @@ class AffiliateImageAnnouncementBar extends StatelessWidget {
     return Container(
       color: content.backgroundColorHex == null ? Colors.transparent : HexColor.fromHex(content.backgroundColorHex!),
       padding: const EdgeInsets.symmetric(horizontal: 8),
-      child: GestureDetector(
-        onTap: () {
-          analytics.logEvent(name: "affiliate_image_tapped");
-          launchUrl(Uri.parse(content.destinationURL));
-        },
-        child: Stack(
-          alignment: Alignment.center,
-          children: [
-            Row(
-              crossAxisAlignment: CrossAxisAlignment.center,
-              mainAxisAlignment: MainAxisAlignment.center,
-              children: [
-                IconButton(
-                  alignment: Alignment.centerLeft,
-                  icon: const Icon(
-                    Icons.close,
-                    color: Colors.white,
-                    size: 24,
-                  ),
-                  onPressed: () {
-                    analytics.logEvent(name: "affiliate_image_is_closed");
-                    onClose();
-                  },
-                  iconSize: 24,
-                  padding: EdgeInsets.zero,
-                ),
-                const Spacer(),
-                SvgPicture.asset(
-                  "images/arrow_right.svg",
-                  colorFilter: const ColorFilter.mode(Colors.white, BlendMode.srcIn),
-                  height: 20,
-                  width: 20,
-                ),
-              ],
+      child: Stack(
+        alignment: Alignment.centerLeft,
+        children: [
+          GestureDetector(
+            onTap: () {
+              analytics.logEvent(name: "affiliate_image_tapped");
+            },
+            child: SizedBox(
+              child: AppWebView(url: content.webViewURL),
             ),
-            Image.network(
-              content.imageURL,
-              height: 50,
-              fit: BoxFit.fitWidth,
+          ),
+          IconButton(
+            alignment: Alignment.centerLeft,
+            icon: const Icon(
+              Icons.close,
+              color: Colors.white,
+              size: 24,
             ),
-          ],
-        ),
+            onPressed: () {
+              analytics.logEvent(name: "affiliate_image_is_closed");
+              onClose();
+            },
+          ),
+        ],
       ),
     );
   }
