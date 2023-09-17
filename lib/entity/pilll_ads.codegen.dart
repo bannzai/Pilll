@@ -13,16 +13,19 @@ class PilllAds with _$PilllAds {
       fromJson: NonNullTimestampConverter.timestampToDateTime,
       toJson: NonNullTimestampConverter.dateTimeToTimestamp,
     )
-        required DateTime startDateTime,
+    required DateTime startDateTime,
     @JsonKey(
       fromJson: NonNullTimestampConverter.timestampToDateTime,
       toJson: NonNullTimestampConverter.dateTimeToTimestamp,
     )
-        required DateTime endDateTime,
+    required DateTime endDateTime,
     required String description,
     required String? imageURL,
     required String destinationURL,
     required String hexColor,
+    // このフィールドの値よりパッケージバージョンが高い場合には、広告を表示する。
+    // なので最も低いバージョンをデフォルト値としている
+    @Default("0.0.0") String version,
   }) = _PilllAds;
   PilllAds._();
 

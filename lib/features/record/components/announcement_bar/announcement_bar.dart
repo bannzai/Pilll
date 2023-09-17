@@ -1,6 +1,9 @@
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
+import 'package:pilll/features/record/components/announcement_bar/components/affiliate_announcement_bar.dart';
+import 'package:pilll/provider/affiliate.dart';
+import 'package:pilll/provider/package_info.dart';
 import 'package:pilll/utils/analytics.dart';
 import 'package:pilll/provider/pill_sheet_group.dart';
 import 'package:pilll/provider/pilll_ads.dart';
@@ -20,6 +23,7 @@ import 'package:pilll/provider/typed_shared_preferences.dart';
 import 'package:pilll/provider/auth.dart';
 import 'package:pilll/utils/datetime/day.dart';
 import 'package:pilll/utils/shared_preference/keys.dart';
+import 'package:pilll/utils/version/version.dart';
 
 class AnnouncementBar extends HookConsumerWidget {
   const AnnouncementBar({Key? key}) : super(key: key);
@@ -46,14 +50,37 @@ class AnnouncementBar extends HookConsumerWidget {
     final discountEntitlementDeadlineDate = premiumAndTrial.discountEntitlementDeadlineDate;
     final isOverDiscountDeadline = ref.watch(isOverDiscountDeadlineProvider(discountEntitlementDeadlineDate));
     final isJaLocale = ref.watch(isJaLocaleProvider);
-    final pilllAds = ref.watch(pilllAdsProvider).asData?.value;
-    final isAdsDisabled = () {
+    final packageVersion = ref.watch(packageVersionProvider).asData?.value;
+
+    // Affiliate
+    final affiliate = ref.watch(affiliateProvider).asData?.value;
+    final affiliateIsDisabled = () {
       if (!kDebugMode) {
         if (!isJaLocale) {
           return true;
         }
       }
-      if (pilllAds == null) {
+      if (affiliate == null || packageVersion == null) {
+        return true;
+      }
+      if (Version.parse(affiliate.version).isLessThan(packageVersion)) {
+        return true;
+      }
+      return false;
+    }();
+
+    // PilllAds
+    final pilllAds = ref.watch(pilllAdsProvider).asData?.value;
+    final pilllAdsIsDisabled = () {
+      if (!kDebugMode) {
+        if (!isJaLocale) {
+          return true;
+        }
+      }
+      if (pilllAds == null || packageVersion == null) {
+        return true;
+      }
+      if (Version.parse(pilllAds.version).isLessThan(packageVersion)) {
         return true;
       }
       return now().isBefore(pilllAds.startDateTime) || now().isAfter(pilllAds.endDateTime);
@@ -115,8 +142,11 @@ class AnnouncementBar extends HookConsumerWidget {
           }
         }
       } else {
-        if (!isAdsDisabled && pilllAds != null) {
+        if (!pilllAdsIsDisabled && pilllAds != null) {
           return PilllAdsAnnouncementBar(pilllAds: pilllAds, onClose: () => showPremiumIntroductionSheet(context));
+        }
+        if (!affiliateIsDisabled && affiliate != null) {
+          return AffiliateAnnouncementBar(affiliate: affiliate, onClose: () => showPremiumIntroductionSheet(context));
         }
       }
     } else {

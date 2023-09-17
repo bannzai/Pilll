@@ -159,7 +159,6 @@ class RegisterRemotePushNotificationToken {
   RegisterRemotePushNotificationToken(this.databaseConnection);
 
   Future<void> call(String? token) {
-    debugPrint("token: $token");
     return databaseConnection.userPrivateRawReference().set(
       {UserPrivateFirestoreFieldKeys.fcmToken: token},
       SetOptions(merge: true),

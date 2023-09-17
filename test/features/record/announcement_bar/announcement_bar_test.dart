@@ -1,5 +1,9 @@
 import 'dart:async';
 
+import 'package:pilll/entity/affiliate.codegen.dart';
+import 'package:pilll/features/record/components/announcement_bar/components/affiliate_announcement_bar.dart';
+import 'package:pilll/provider/affiliate.dart';
+import 'package:pilll/provider/package_info.dart';
 import 'package:pilll/provider/shared_preferences.dart';
 import 'package:pilll/utils/analytics.dart';
 import 'package:pilll/provider/pill_sheet_group.dart';
@@ -28,6 +32,8 @@ import 'package:hooks_riverpod/hooks_riverpod.dart';
 import 'package:mockito/mockito.dart';
 import 'package:intl/date_symbol_data_local.dart';
 import 'package:pilll/utils/shared_preference/keys.dart';
+import 'package:pilll/utils/version/version.dart';
+import 'package:run_with_network_images/run_with_network_images.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
 import '../../../helper/mock.mocks.dart';
@@ -377,6 +383,7 @@ void main() {
                 isJaLocaleProvider.overrideWithValue(true),
                 isOverDiscountDeadlineProvider.overrideWithProvider((param) => Provider.autoDispose((_) => false)),
                 durationToDiscountPriceDeadline.overrideWithProvider((param) => Provider.autoDispose((_) => const Duration(seconds: 1000))),
+                packageVersionProvider.overrideWith((ref) => Version(major: 1, minor: 0, patch: 0)),
                 pilllAdsProvider.overrideWith(
                   (ref) => Stream.value(PilllAds(
                     description: 'これは広告用のテキスト',
@@ -385,6 +392,8 @@ void main() {
                     startDateTime: DateTime(2022, 8, 10, 0, 0, 0),
                     hexColor: '#111111',
                     imageURL: null,
+                    // 広告を表示する場合はパッケージバージョンよりもAffiliateのバージョンが高い場合は表示される
+                    version: "9999.9999.9999",
                   )),
                 ),
                 sharedPreferencesProvider.overrideWith((ref) => sharedPreferences),
@@ -442,6 +451,7 @@ void main() {
                 isJaLocaleProvider.overrideWithValue(true),
                 isOverDiscountDeadlineProvider.overrideWithProvider((param) => Provider.autoDispose((_) => false)),
                 durationToDiscountPriceDeadline.overrideWithProvider((param) => Provider.autoDispose((_) => const Duration(seconds: 1000))),
+                packageVersionProvider.overrideWith((ref) => Version(major: 1, minor: 0, patch: 0)),
                 pilllAdsProvider.overrideWith(
                   (ref) => Stream.value(
                     PilllAds(
@@ -451,6 +461,283 @@ void main() {
                       startDateTime: DateTime(2022, 8, 10, 0, 0, 0),
                       hexColor: '#111111',
                       imageURL: null,
+                      // 広告を表示する場合はパッケージバージョンよりもAffiliateのバージョンが高い場合は表示される
+                      version: "9999.9999.9999",
+                    ),
+                  ),
+                ),
+                sharedPreferencesProvider.overrideWith((ref) => sharedPreferences),
+              ],
+              child: const MaterialApp(
+                home: Material(child: AnnouncementBar()),
+              ),
+            ),
+          );
+          await tester.pump();
+
+          expect(
+            find.byWidgetPredicate((widget) => widget is PilllAdsAnnouncementBar),
+            findsOneWidget,
+          );
+        });
+        testWidgets('version is nothing', (WidgetTester tester) async {
+          final mockTodayRepository = MockTodayService();
+          final mockToday = DateTime(2022, 08, 10);
+
+          when(mockTodayRepository.now()).thenReturn(mockToday);
+          todayRepository = mockTodayRepository;
+
+          var pillSheet = PillSheet.create(
+            PillSheetType.pillsheet_21,
+            lastTakenDate: mockToday.subtract(const Duration(days: 1)),
+            beginDate: mockToday.subtract(
+              const Duration(days: 25),
+            ),
+          );
+          final pillSheetGroup = PillSheetGroup(pillSheetIDs: ["1"], pillSheets: [pillSheet], createdAt: now());
+
+          SharedPreferences.setMockInitialValues({
+            IntKey.totalCountOfActionForTakenPill: totalCountOfActionForTakenPillForLongTimeUser,
+            BoolKey.recommendedSignupNotificationIsAlreadyShow: false,
+          });
+          final sharedPreferences = await SharedPreferences.getInstance();
+          await tester.pumpWidget(
+            ProviderScope(
+              overrides: [
+                latestPillSheetGroupProvider.overrideWith((ref) => Stream.value(pillSheetGroup)),
+                premiumAndTrialProvider.overrideWithValue(
+                  AsyncData(
+                    PremiumAndTrial(
+                      isPremium: false,
+                      isTrial: false,
+                      hasDiscountEntitlement: true,
+                      trialDeadlineDate: null,
+                      beginTrialDate: null,
+                      discountEntitlementDeadlineDate: null,
+                    ),
+                  ),
+                ),
+                isLinkedProvider.overrideWithValue(false),
+                isJaLocaleProvider.overrideWithValue(true),
+                isOverDiscountDeadlineProvider.overrideWithProvider((param) => Provider.autoDispose((_) => false)),
+                durationToDiscountPriceDeadline.overrideWithProvider((param) => Provider.autoDispose((_) => const Duration(seconds: 1000))),
+                packageVersionProvider.overrideWith((ref) => Version(major: 1, minor: 0, patch: 0)),
+                pilllAdsProvider.overrideWith(
+                  (ref) => Stream.value(
+                    PilllAds(
+                      description: 'これは広告用のテキスト',
+                      destinationURL: 'https://github.com/bannzai',
+                      endDateTime: DateTime(2022, 8, 23, 23, 59, 59),
+                      startDateTime: DateTime(2022, 8, 10, 0, 0, 0),
+                      hexColor: '#111111',
+                      imageURL: null,
+                    ),
+                  ),
+                ),
+                sharedPreferencesProvider.overrideWith((ref) => sharedPreferences),
+              ],
+              child: const MaterialApp(
+                home: Material(child: AnnouncementBar()),
+              ),
+            ),
+          );
+          await tester.pump();
+
+          expect(
+            find.byWidgetPredicate((widget) => widget is PilllAdsAnnouncementBar),
+            findsNothing,
+          );
+        });
+        testWidgets('version is greater than package version', (WidgetTester tester) async {
+          final mockTodayRepository = MockTodayService();
+          final mockToday = DateTime(2022, 08, 10);
+
+          when(mockTodayRepository.now()).thenReturn(mockToday);
+          todayRepository = mockTodayRepository;
+
+          var pillSheet = PillSheet.create(
+            PillSheetType.pillsheet_21,
+            lastTakenDate: mockToday.subtract(const Duration(days: 1)),
+            beginDate: mockToday.subtract(
+              const Duration(days: 25),
+            ),
+          );
+          final pillSheetGroup = PillSheetGroup(pillSheetIDs: ["1"], pillSheets: [pillSheet], createdAt: now());
+
+          SharedPreferences.setMockInitialValues({
+            IntKey.totalCountOfActionForTakenPill: totalCountOfActionForTakenPillForLongTimeUser,
+            BoolKey.recommendedSignupNotificationIsAlreadyShow: false,
+          });
+          final sharedPreferences = await SharedPreferences.getInstance();
+          await tester.pumpWidget(
+            ProviderScope(
+              overrides: [
+                latestPillSheetGroupProvider.overrideWith((ref) => Stream.value(pillSheetGroup)),
+                premiumAndTrialProvider.overrideWithValue(
+                  AsyncData(
+                    PremiumAndTrial(
+                      isPremium: false,
+                      isTrial: false,
+                      hasDiscountEntitlement: true,
+                      trialDeadlineDate: null,
+                      beginTrialDate: null,
+                      discountEntitlementDeadlineDate: null,
+                    ),
+                  ),
+                ),
+                isLinkedProvider.overrideWithValue(false),
+                isJaLocaleProvider.overrideWithValue(true),
+                isOverDiscountDeadlineProvider.overrideWithProvider((param) => Provider.autoDispose((_) => false)),
+                durationToDiscountPriceDeadline.overrideWithProvider((param) => Provider.autoDispose((_) => const Duration(seconds: 1000))),
+                packageVersionProvider.overrideWith((ref) => Version(major: 1, minor: 0, patch: 0)),
+                pilllAdsProvider.overrideWith(
+                  (ref) => Stream.value(
+                    PilllAds(
+                      description: 'これは広告用のテキスト',
+                      destinationURL: 'https://github.com/bannzai',
+                      endDateTime: DateTime(2022, 8, 23, 23, 59, 59),
+                      startDateTime: DateTime(2022, 8, 10, 0, 0, 0),
+                      hexColor: '#111111',
+                      imageURL: null,
+                      version: "9999.9999.9999",
+                    ),
+                  ),
+                ),
+                sharedPreferencesProvider.overrideWith((ref) => sharedPreferences),
+              ],
+              child: const MaterialApp(
+                home: Material(child: AnnouncementBar()),
+              ),
+            ),
+          );
+          await tester.pump();
+
+          expect(
+            find.byWidgetPredicate((widget) => widget is PilllAdsAnnouncementBar),
+            findsOneWidget,
+          );
+        });
+        testWidgets('version is less than package version', (WidgetTester tester) async {
+          final mockTodayRepository = MockTodayService();
+          final mockToday = DateTime(2022, 08, 10);
+
+          when(mockTodayRepository.now()).thenReturn(mockToday);
+          todayRepository = mockTodayRepository;
+
+          var pillSheet = PillSheet.create(
+            PillSheetType.pillsheet_21,
+            lastTakenDate: mockToday.subtract(const Duration(days: 1)),
+            beginDate: mockToday.subtract(
+              const Duration(days: 25),
+            ),
+          );
+          final pillSheetGroup = PillSheetGroup(pillSheetIDs: ["1"], pillSheets: [pillSheet], createdAt: now());
+
+          SharedPreferences.setMockInitialValues({
+            IntKey.totalCountOfActionForTakenPill: totalCountOfActionForTakenPillForLongTimeUser,
+            BoolKey.recommendedSignupNotificationIsAlreadyShow: false,
+          });
+          final sharedPreferences = await SharedPreferences.getInstance();
+          await tester.pumpWidget(
+            ProviderScope(
+              overrides: [
+                latestPillSheetGroupProvider.overrideWith((ref) => Stream.value(pillSheetGroup)),
+                premiumAndTrialProvider.overrideWithValue(
+                  AsyncData(
+                    PremiumAndTrial(
+                      isPremium: false,
+                      isTrial: false,
+                      hasDiscountEntitlement: true,
+                      trialDeadlineDate: null,
+                      beginTrialDate: null,
+                      discountEntitlementDeadlineDate: null,
+                    ),
+                  ),
+                ),
+                isLinkedProvider.overrideWithValue(false),
+                isJaLocaleProvider.overrideWithValue(true),
+                isOverDiscountDeadlineProvider.overrideWithProvider((param) => Provider.autoDispose((_) => false)),
+                durationToDiscountPriceDeadline.overrideWithProvider((param) => Provider.autoDispose((_) => const Duration(seconds: 1000))),
+                packageVersionProvider.overrideWith((ref) => Version(major: 1, minor: 0, patch: 0)),
+                pilllAdsProvider.overrideWith(
+                  (ref) => Stream.value(
+                    PilllAds(
+                      description: 'これは広告用のテキスト',
+                      destinationURL: 'https://github.com/bannzai',
+                      endDateTime: DateTime(2022, 8, 23, 23, 59, 59),
+                      startDateTime: DateTime(2022, 8, 10, 0, 0, 0),
+                      hexColor: '#111111',
+                      imageURL: null,
+                      version: "0.0.1",
+                    ),
+                  ),
+                ),
+                sharedPreferencesProvider.overrideWith((ref) => sharedPreferences),
+              ],
+              child: const MaterialApp(
+                home: Material(child: AnnouncementBar()),
+              ),
+            ),
+          );
+          await tester.pump();
+
+          expect(
+            find.byWidgetPredicate((widget) => widget is PilllAdsAnnouncementBar),
+            findsNothing,
+          );
+        });
+        testWidgets('version is equal to package version', (WidgetTester tester) async {
+          final mockTodayRepository = MockTodayService();
+          final mockToday = DateTime(2022, 08, 10);
+
+          when(mockTodayRepository.now()).thenReturn(mockToday);
+          todayRepository = mockTodayRepository;
+
+          var pillSheet = PillSheet.create(
+            PillSheetType.pillsheet_21,
+            lastTakenDate: mockToday.subtract(const Duration(days: 1)),
+            beginDate: mockToday.subtract(
+              const Duration(days: 25),
+            ),
+          );
+          final pillSheetGroup = PillSheetGroup(pillSheetIDs: ["1"], pillSheets: [pillSheet], createdAt: now());
+
+          SharedPreferences.setMockInitialValues({
+            IntKey.totalCountOfActionForTakenPill: totalCountOfActionForTakenPillForLongTimeUser,
+            BoolKey.recommendedSignupNotificationIsAlreadyShow: false,
+          });
+          final sharedPreferences = await SharedPreferences.getInstance();
+          await tester.pumpWidget(
+            ProviderScope(
+              overrides: [
+                latestPillSheetGroupProvider.overrideWith((ref) => Stream.value(pillSheetGroup)),
+                premiumAndTrialProvider.overrideWithValue(
+                  AsyncData(
+                    PremiumAndTrial(
+                      isPremium: false,
+                      isTrial: false,
+                      hasDiscountEntitlement: true,
+                      trialDeadlineDate: null,
+                      beginTrialDate: null,
+                      discountEntitlementDeadlineDate: null,
+                    ),
+                  ),
+                ),
+                isLinkedProvider.overrideWithValue(false),
+                isJaLocaleProvider.overrideWithValue(true),
+                isOverDiscountDeadlineProvider.overrideWithProvider((param) => Provider.autoDispose((_) => false)),
+                durationToDiscountPriceDeadline.overrideWithProvider((param) => Provider.autoDispose((_) => const Duration(seconds: 1000))),
+                packageVersionProvider.overrideWith((ref) => Version(major: 1, minor: 0, patch: 0)),
+                pilllAdsProvider.overrideWith(
+                  (ref) => Stream.value(
+                    PilllAds(
+                      description: 'これは広告用のテキスト',
+                      destinationURL: 'https://github.com/bannzai',
+                      endDateTime: DateTime(2022, 8, 23, 23, 59, 59),
+                      startDateTime: DateTime(2022, 8, 10, 0, 0, 0),
+                      hexColor: '#111111',
+                      imageURL: null,
+                      version: "1.0.0",
                     ),
                   ),
                 ),
@@ -509,6 +796,7 @@ void main() {
                 isJaLocaleProvider.overrideWithValue(true),
                 isOverDiscountDeadlineProvider.overrideWithProvider((param) => Provider.autoDispose((_) => false)),
                 durationToDiscountPriceDeadline.overrideWithProvider((param) => Provider.autoDispose((_) => const Duration(seconds: 1000))),
+                packageVersionProvider.overrideWith((ref) => Version(major: 1, minor: 0, patch: 0)),
                 pilllAdsProvider.overrideWith(
                   (ref) => Stream.value(
                     PilllAds(
@@ -518,6 +806,8 @@ void main() {
                       startDateTime: DateTime(2022, 8, 10, 0, 0, 0),
                       hexColor: '#111111',
                       imageURL: null,
+                      // 広告を表示する場合はパッケージバージョンよりもAffiliateのバージョンが高い場合は表示される
+                      version: "9999.9999.9999",
                     ),
                   ),
                 ),
@@ -576,6 +866,7 @@ void main() {
                 isJaLocaleProvider.overrideWithValue(true),
                 isOverDiscountDeadlineProvider.overrideWithProvider((param) => Provider.autoDispose((_) => false)),
                 durationToDiscountPriceDeadline.overrideWithProvider((param) => Provider.autoDispose((_) => const Duration(seconds: 1000))),
+                packageVersionProvider.overrideWith((ref) => Version(major: 1, minor: 0, patch: 0)),
                 pilllAdsProvider.overrideWith(
                   (ref) => Stream.value(
                     PilllAds(
@@ -585,6 +876,8 @@ void main() {
                       startDateTime: DateTime(2022, 8, 10, 0, 0, 0),
                       hexColor: '#111111',
                       imageURL: null,
+                      // 広告を表示する場合はパッケージバージョンよりもAffiliateのバージョンが高い場合は表示される
+                      version: "9999.9999.9999",
                     ),
                   ),
                 ),
@@ -643,6 +936,7 @@ void main() {
                 isJaLocaleProvider.overrideWithValue(true),
                 isOverDiscountDeadlineProvider.overrideWithProvider((param) => Provider.autoDispose((_) => false)),
                 durationToDiscountPriceDeadline.overrideWithProvider((param) => Provider.autoDispose((_) => const Duration(seconds: 1000))),
+                packageVersionProvider.overrideWith((ref) => Version(major: 1, minor: 0, patch: 0)),
                 pilllAdsProvider.overrideWith(
                   (ref) => Stream.value(
                     PilllAds(
@@ -652,6 +946,8 @@ void main() {
                       startDateTime: DateTime(2022, 8, 10, 0, 0, 0),
                       hexColor: '#111111',
                       imageURL: null,
+                      // 広告を表示する場合はパッケージバージョンよりもAffiliateのバージョンが高い場合は表示される
+                      version: "9999.9999.9999",
                     ),
                   ),
                 ),
@@ -668,6 +964,227 @@ void main() {
             find.byWidgetPredicate((widget) => widget is PilllAdsAnnouncementBar),
             findsNothing,
           );
+        });
+      });
+
+      group("#AffiliateAnnouncementBar", () {
+        testWidgets('affiliate version < package version', (WidgetTester tester) async {
+          var pillSheet = PillSheet.create(
+            PillSheetType.pillsheet_21,
+            lastTakenDate: today().subtract(const Duration(days: 1)),
+            beginDate: today().subtract(
+              const Duration(days: 25),
+            ),
+          );
+          final pillSheetGroup = PillSheetGroup(pillSheetIDs: ["1"], pillSheets: [pillSheet], createdAt: now());
+
+          SharedPreferences.setMockInitialValues({
+            IntKey.totalCountOfActionForTakenPill: totalCountOfActionForTakenPillForLongTimeUser,
+            BoolKey.recommendedSignupNotificationIsAlreadyShow: false,
+          });
+          final sharedPreferences = await SharedPreferences.getInstance();
+          await runWithNetworkImages(() async {
+            await tester.pumpWidget(
+              ProviderScope(
+                overrides: [
+                  latestPillSheetGroupProvider.overrideWith((ref) => Stream.value(pillSheetGroup)),
+                  premiumAndTrialProvider.overrideWithValue(
+                    AsyncData(
+                      PremiumAndTrial(
+                        isPremium: false,
+                        isTrial: false,
+                        hasDiscountEntitlement: true,
+                        trialDeadlineDate: null,
+                        beginTrialDate: null,
+                        discountEntitlementDeadlineDate: null,
+                      ),
+                    ),
+                  ),
+                  isLinkedProvider.overrideWithValue(false),
+                  isJaLocaleProvider.overrideWithValue(true),
+                  isOverDiscountDeadlineProvider.overrideWithProvider((param) => Provider.autoDispose((_) => false)),
+                  durationToDiscountPriceDeadline.overrideWithProvider((param) => Provider.autoDispose((_) => const Duration(seconds: 1000))),
+                  packageVersionProvider.overrideWith((ref) => Version(major: 1, minor: 0, patch: 0)),
+                  affiliateProvider.overrideWith(
+                    (ref) => Stream.value(
+                      const Affiliate(
+                        contents: [
+                          AffiliateContent(imageURL: 'https://github.com/bannzai', destinationURL: 'https://github.com/bannzai'),
+                        ],
+                        // 広告を表示する場合はパッケージバージョンよりもAffiliateのバージョンが小さい場合は表示されない
+                        version: "0.0.0",
+                      ),
+                    ),
+                  ),
+                  // PilllAdsの方が優先度は高いのでnullを流してテスト
+                  pilllAdsProvider.overrideWith(
+                    (ref) => Stream.value(null),
+                  ),
+                  sharedPreferencesProvider.overrideWith((ref) => sharedPreferences),
+                ],
+                child: const MaterialApp(
+                  home: Material(child: AnnouncementBar()),
+                ),
+              ),
+            );
+            await tester.pumpAndSettle(const Duration(milliseconds: 400));
+
+            expect(
+              find.byWidgetPredicate((widget) => widget is AffiliateAnnouncementBar),
+              findsNothing,
+            );
+          });
+        });
+        testWidgets('affiliate version > package version', (WidgetTester tester) async {
+          var pillSheet = PillSheet.create(
+            PillSheetType.pillsheet_21,
+            lastTakenDate: today().subtract(const Duration(days: 1)),
+            beginDate: today().subtract(
+              const Duration(days: 25),
+            ),
+          );
+          final pillSheetGroup = PillSheetGroup(pillSheetIDs: ["1"], pillSheets: [pillSheet], createdAt: now());
+
+          SharedPreferences.setMockInitialValues({
+            IntKey.totalCountOfActionForTakenPill: totalCountOfActionForTakenPillForLongTimeUser,
+            BoolKey.recommendedSignupNotificationIsAlreadyShow: false,
+          });
+          final sharedPreferences = await SharedPreferences.getInstance();
+          await runWithNetworkImages(() async {
+            await tester.pumpWidget(
+              ProviderScope(
+                overrides: [
+                  latestPillSheetGroupProvider.overrideWith((ref) => Stream.value(pillSheetGroup)),
+                  premiumAndTrialProvider.overrideWithValue(
+                    AsyncData(
+                      PremiumAndTrial(
+                        isPremium: false,
+                        isTrial: false,
+                        hasDiscountEntitlement: true,
+                        trialDeadlineDate: null,
+                        beginTrialDate: null,
+                        discountEntitlementDeadlineDate: null,
+                      ),
+                    ),
+                  ),
+                  isLinkedProvider.overrideWithValue(false),
+                  isJaLocaleProvider.overrideWithValue(true),
+                  isOverDiscountDeadlineProvider.overrideWithProvider((param) => Provider.autoDispose((_) => false)),
+                  durationToDiscountPriceDeadline.overrideWithProvider((param) => Provider.autoDispose((_) => const Duration(seconds: 1000))),
+                  packageVersionProvider.overrideWith((ref) => Version(major: 1, minor: 0, patch: 0)),
+                  affiliateProvider.overrideWith(
+                    (ref) => Stream.value(
+                      const Affiliate(
+                        contents: [
+                          AffiliateContent(imageURL: 'https://github.com/bannzai', destinationURL: 'https://github.com/bannzai'),
+                        ],
+                        // 広告を表示する場合はパッケージバージョンよりもAffiliateのバージョンが高い場合は表示される
+                        version: "9999.9999.9999",
+                      ),
+                    ),
+                  ),
+                  // PilllAdsの方が優先度は高いのでnullを流してテスト
+                  pilllAdsProvider.overrideWith(
+                    (ref) => Stream.value(null),
+                  ),
+                  sharedPreferencesProvider.overrideWith((ref) => sharedPreferences),
+                ],
+                child: const MaterialApp(
+                  home: Material(child: AnnouncementBar()),
+                ),
+              ),
+            );
+            await tester.pump();
+
+            expect(
+              find.byWidgetPredicate((widget) => widget is AffiliateAnnouncementBar),
+              findsOneWidget,
+            );
+          });
+        });
+        testWidgets('pilll ads is exists', (WidgetTester tester) async {
+          final mockTodayRepository = MockTodayService();
+          final mockToday = DateTime(2022, 08, 11);
+
+          when(mockTodayRepository.now()).thenReturn(mockToday);
+          todayRepository = mockTodayRepository;
+
+          var pillSheet = PillSheet.create(
+            PillSheetType.pillsheet_21,
+            lastTakenDate: mockToday.subtract(const Duration(days: 1)),
+            beginDate: mockToday.subtract(
+              const Duration(days: 25),
+            ),
+          );
+          final pillSheetGroup = PillSheetGroup(pillSheetIDs: ["1"], pillSheets: [pillSheet], createdAt: now());
+
+          SharedPreferences.setMockInitialValues({
+            IntKey.totalCountOfActionForTakenPill: totalCountOfActionForTakenPillForLongTimeUser,
+            BoolKey.recommendedSignupNotificationIsAlreadyShow: false,
+          });
+          final sharedPreferences = await SharedPreferences.getInstance();
+          await runWithNetworkImages(() async {
+            await tester.pumpWidget(
+              ProviderScope(
+                overrides: [
+                  latestPillSheetGroupProvider.overrideWith((ref) => Stream.value(pillSheetGroup)),
+                  premiumAndTrialProvider.overrideWithValue(
+                    AsyncData(
+                      PremiumAndTrial(
+                        isPremium: false,
+                        isTrial: false,
+                        hasDiscountEntitlement: true,
+                        trialDeadlineDate: null,
+                        beginTrialDate: null,
+                        discountEntitlementDeadlineDate: null,
+                      ),
+                    ),
+                  ),
+                  isLinkedProvider.overrideWithValue(false),
+                  isJaLocaleProvider.overrideWithValue(true),
+                  isOverDiscountDeadlineProvider.overrideWithProvider((param) => Provider.autoDispose((_) => false)),
+                  durationToDiscountPriceDeadline.overrideWithProvider((param) => Provider.autoDispose((_) => const Duration(seconds: 1000))),
+                  packageVersionProvider.overrideWith((ref) => Version(major: 1, minor: 0, patch: 0)),
+                  affiliateProvider.overrideWith(
+                    (ref) => Stream.value(
+                      const Affiliate(
+                        contents: [
+                          AffiliateContent(imageURL: 'https://github.com/bannzai', destinationURL: 'https://github.com/bannzai'),
+                        ],
+                        // 広告を表示する場合はパッケージバージョンよりもAffiliateのバージョンが高い場合は表示される
+                        version: "9999.9999.9999",
+                      ),
+                    ),
+                  ),
+                  // PilllAdsの方が優先度は高いのでAffiliateAnnouncementBarは表示されない
+                  pilllAdsProvider.overrideWith(
+                    (ref) => Stream.value(
+                      PilllAds(
+                        description: 'これは広告用のテキスト',
+                        destinationURL: 'https://github.com/bannzai',
+                        endDateTime: DateTime(2022, 8, 23, 23, 59, 59),
+                        startDateTime: DateTime(2022, 8, 10, 0, 0, 0),
+                        hexColor: '#111111',
+                        imageURL: null,
+                        // 広告を表示する場合はパッケージバージョンよりもAffiliateのバージョンが高い場合は表示される
+                        version: "9999.9999.9999",
+                      ),
+                    ),
+                  ),
+                  sharedPreferencesProvider.overrideWith((ref) => sharedPreferences),
+                ],
+                child: const MaterialApp(
+                  home: Material(child: AnnouncementBar()),
+                ),
+              ),
+            );
+            await tester.pump();
+
+            expect(
+              find.byWidgetPredicate((widget) => widget is AffiliateAnnouncementBar),
+              findsNothing,
+            );
+          });
         });
       });
     });
@@ -717,6 +1234,7 @@ void main() {
                 isJaLocaleProvider.overrideWithValue(true),
                 isOverDiscountDeadlineProvider.overrideWithProvider((param) => Provider.autoDispose((_) => false)),
                 durationToDiscountPriceDeadline.overrideWithProvider((param) => Provider.autoDispose((_) => const Duration(seconds: 1000))),
+                packageVersionProvider.overrideWith((ref) => Version(major: 1, minor: 0, patch: 0)),
                 pilllAdsProvider.overrideWith(
                   (ref) => Stream.value(
                     PilllAds(
@@ -726,6 +1244,8 @@ void main() {
                       startDateTime: DateTime(2022, 8, 10, 0, 0, 0),
                       hexColor: '#111111',
                       imageURL: null,
+                      // 広告を表示する場合はパッケージバージョンよりもAffiliateのバージョンが高い場合は表示される
+                      version: "9999.9999.9999",
                     ),
                   ),
                 ),
@@ -786,6 +1306,7 @@ void main() {
                 isJaLocaleProvider.overrideWithValue(true),
                 isOverDiscountDeadlineProvider.overrideWithProvider((param) => Provider.autoDispose((_) => false)),
                 durationToDiscountPriceDeadline.overrideWithProvider((param) => Provider.autoDispose((_) => const Duration(seconds: 1000))),
+                packageVersionProvider.overrideWith((ref) => Version(major: 1, minor: 0, patch: 0)),
                 pilllAdsProvider.overrideWith(
                   (ref) => Stream.value(
                     PilllAds(
@@ -795,6 +1316,8 @@ void main() {
                       startDateTime: DateTime(2022, 8, 10, 0, 0, 0),
                       hexColor: '#111111',
                       imageURL: null,
+                      // 広告を表示する場合はパッケージバージョンよりもAffiliateのバージョンが高い場合は表示される
+                      version: "9999.9999.9999",
                     ),
                   ),
                 ),
@@ -855,6 +1378,7 @@ void main() {
                 isJaLocaleProvider.overrideWithValue(true),
                 isOverDiscountDeadlineProvider.overrideWithProvider((param) => Provider.autoDispose((_) => false)),
                 durationToDiscountPriceDeadline.overrideWithProvider((param) => Provider.autoDispose((_) => const Duration(seconds: 1000))),
+                packageVersionProvider.overrideWith((ref) => Version(major: 1, minor: 0, patch: 0)),
                 pilllAdsProvider.overrideWith(
                   (ref) => Stream.value(
                     PilllAds(
@@ -864,6 +1388,8 @@ void main() {
                       startDateTime: DateTime(2022, 8, 10, 0, 0, 0),
                       hexColor: '#111111',
                       imageURL: null,
+                      // 広告を表示する場合はパッケージバージョンよりもAffiliateのバージョンが高い場合は表示される
+                      version: "9999.9999.9999",
                     ),
                   ),
                 ),
@@ -924,6 +1450,7 @@ void main() {
                 isJaLocaleProvider.overrideWithValue(true),
                 isOverDiscountDeadlineProvider.overrideWithProvider((param) => Provider.autoDispose((_) => false)),
                 durationToDiscountPriceDeadline.overrideWithProvider((param) => Provider.autoDispose((_) => const Duration(seconds: 1000))),
+                packageVersionProvider.overrideWith((ref) => Version(major: 1, minor: 0, patch: 0)),
                 pilllAdsProvider.overrideWith(
                   (ref) => Stream.value(
                     PilllAds(
@@ -933,6 +1460,8 @@ void main() {
                       startDateTime: DateTime(2022, 8, 10, 0, 0, 0),
                       hexColor: '#111111',
                       imageURL: null,
+                      // 広告を表示する場合はパッケージバージョンよりもAffiliateのバージョンが高い場合は表示される
+                      version: "9999.9999.9999",
                     ),
                   ),
                 ),
@@ -993,6 +1522,7 @@ void main() {
                 isJaLocaleProvider.overrideWithValue(true),
                 isOverDiscountDeadlineProvider.overrideWithProvider((param) => Provider.autoDispose((_) => false)),
                 durationToDiscountPriceDeadline.overrideWithProvider((param) => Provider.autoDispose((_) => const Duration(seconds: 1000))),
+                packageVersionProvider.overrideWith((ref) => Version(major: 1, minor: 0, patch: 0)),
                 pilllAdsProvider.overrideWith(
                   (ref) => Stream.value(
                     PilllAds(
@@ -1002,6 +1532,8 @@ void main() {
                       startDateTime: DateTime(2022, 8, 10, 0, 0, 0),
                       hexColor: '#111111',
                       imageURL: null,
+                      // 広告を表示する場合はパッケージバージョンよりもAffiliateのバージョンが高い場合は表示される
+                      version: "9999.9999.9999",
                     ),
                   ),
                 ),
@@ -1062,6 +1594,7 @@ void main() {
                 isJaLocaleProvider.overrideWithValue(true),
                 isOverDiscountDeadlineProvider.overrideWithProvider((param) => Provider.autoDispose((_) => false)),
                 durationToDiscountPriceDeadline.overrideWithProvider((param) => Provider.autoDispose((_) => const Duration(seconds: 1000))),
+                packageVersionProvider.overrideWith((ref) => Version(major: 1, minor: 0, patch: 0)),
                 pilllAdsProvider.overrideWith(
                   (ref) => Stream.value(
                     PilllAds(
@@ -1071,6 +1604,8 @@ void main() {
                       startDateTime: DateTime(2022, 8, 10, 0, 0, 0),
                       hexColor: '#111111',
                       imageURL: null,
+                      // 広告を表示する場合はパッケージバージョンよりもAffiliateのバージョンが高い場合は表示される
+                      version: "9999.9999.9999",
                     ),
                   ),
                 ),

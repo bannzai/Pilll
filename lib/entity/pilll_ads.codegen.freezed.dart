@@ -31,7 +31,10 @@ mixin _$PilllAds {
   String get description => throw _privateConstructorUsedError;
   String? get imageURL => throw _privateConstructorUsedError;
   String get destinationURL => throw _privateConstructorUsedError;
-  String get hexColor => throw _privateConstructorUsedError;
+  String get hexColor =>
+      throw _privateConstructorUsedError; // このフィールドの値よりパッケージバージョンが高い場合には、広告を表示する。
+// なので最も低いバージョンをデフォルト値としている
+  String get version => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
@@ -56,7 +59,8 @@ abstract class $PilllAdsCopyWith<$Res> {
       String description,
       String? imageURL,
       String destinationURL,
-      String hexColor});
+      String hexColor,
+      String version});
 }
 
 /// @nodoc
@@ -78,6 +82,7 @@ class _$PilllAdsCopyWithImpl<$Res, $Val extends PilllAds>
     Object? imageURL = freezed,
     Object? destinationURL = null,
     Object? hexColor = null,
+    Object? version = null,
   }) {
     return _then(_value.copyWith(
       startDateTime: null == startDateTime
@@ -104,6 +109,10 @@ class _$PilllAdsCopyWithImpl<$Res, $Val extends PilllAds>
           ? _value.hexColor
           : hexColor // ignore: cast_nullable_to_non_nullable
               as String,
+      version: null == version
+          ? _value.version
+          : version // ignore: cast_nullable_to_non_nullable
+              as String,
     ) as $Val);
   }
 }
@@ -127,7 +136,8 @@ abstract class _$$_PilllAdsCopyWith<$Res> implements $PilllAdsCopyWith<$Res> {
       String description,
       String? imageURL,
       String destinationURL,
-      String hexColor});
+      String hexColor,
+      String version});
 }
 
 /// @nodoc
@@ -147,6 +157,7 @@ class __$$_PilllAdsCopyWithImpl<$Res>
     Object? imageURL = freezed,
     Object? destinationURL = null,
     Object? hexColor = null,
+    Object? version = null,
   }) {
     return _then(_$_PilllAds(
       startDateTime: null == startDateTime
@@ -173,6 +184,10 @@ class __$$_PilllAdsCopyWithImpl<$Res>
           ? _value.hexColor
           : hexColor // ignore: cast_nullable_to_non_nullable
               as String,
+      version: null == version
+          ? _value.version
+          : version // ignore: cast_nullable_to_non_nullable
+              as String,
     ));
   }
 }
@@ -193,7 +208,8 @@ class _$_PilllAds extends _PilllAds {
       required this.description,
       required this.imageURL,
       required this.destinationURL,
-      required this.hexColor})
+      required this.hexColor,
+      this.version = "0.0.0"})
       : super._();
 
   factory _$_PilllAds.fromJson(Map<String, dynamic> json) =>
@@ -217,10 +233,15 @@ class _$_PilllAds extends _PilllAds {
   final String destinationURL;
   @override
   final String hexColor;
+// このフィールドの値よりパッケージバージョンが高い場合には、広告を表示する。
+// なので最も低いバージョンをデフォルト値としている
+  @override
+  @JsonKey()
+  final String version;
 
   @override
   String toString() {
-    return 'PilllAds(startDateTime: $startDateTime, endDateTime: $endDateTime, description: $description, imageURL: $imageURL, destinationURL: $destinationURL, hexColor: $hexColor)';
+    return 'PilllAds(startDateTime: $startDateTime, endDateTime: $endDateTime, description: $description, imageURL: $imageURL, destinationURL: $destinationURL, hexColor: $hexColor, version: $version)';
   }
 
   @override
@@ -239,13 +260,14 @@ class _$_PilllAds extends _PilllAds {
             (identical(other.destinationURL, destinationURL) ||
                 other.destinationURL == destinationURL) &&
             (identical(other.hexColor, hexColor) ||
-                other.hexColor == hexColor));
+                other.hexColor == hexColor) &&
+            (identical(other.version, version) || other.version == version));
   }
 
   @JsonKey(ignore: true)
   @override
   int get hashCode => Object.hash(runtimeType, startDateTime, endDateTime,
-      description, imageURL, destinationURL, hexColor);
+      description, imageURL, destinationURL, hexColor, version);
 
   @JsonKey(ignore: true)
   @override
@@ -274,7 +296,8 @@ abstract class _PilllAds extends PilllAds {
       required final String description,
       required final String? imageURL,
       required final String destinationURL,
-      required final String hexColor}) = _$_PilllAds;
+      required final String hexColor,
+      final String version}) = _$_PilllAds;
   _PilllAds._() : super._();
 
   factory _PilllAds.fromJson(Map<String, dynamic> json) = _$_PilllAds.fromJson;
@@ -297,6 +320,9 @@ abstract class _PilllAds extends PilllAds {
   String get destinationURL;
   @override
   String get hexColor;
+  @override // このフィールドの値よりパッケージバージョンが高い場合には、広告を表示する。
+// なので最も低いバージョンをデフォルト値としている
+  String get version;
   @override
   @JsonKey(ignore: true)
   _$$_PilllAdsCopyWith<_$_PilllAds> get copyWith =>

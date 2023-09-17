@@ -15,6 +15,7 @@ _$_PilllAds _$$_PilllAdsFromJson(Map<String, dynamic> json) => _$_PilllAds(
       imageURL: json['imageURL'] as String?,
       destinationURL: json['destinationURL'] as String,
       hexColor: json['hexColor'] as String,
+      version: json['version'] as String? ?? "0.0.0",
     );
 
 Map<String, dynamic> _$$_PilllAdsToJson(_$_PilllAds instance) =>
@@ -27,4 +28,5 @@ Map<String, dynamic> _$$_PilllAdsToJson(_$_PilllAds instance) =>
       'imageURL': instance.imageURL,
       'destinationURL': instance.destinationURL,
       'hexColor': instance.hexColor,
+      'version': instance.version,
     };
