@@ -25,10 +25,10 @@ apply plugin: 'com.android.application'
 apply plugin: 'kotlin-android'
 apply from: "$flutterRoot/packages/flutter_tools/gradle/flutter.gradle"
 
-def keystoreProperties = new Properties()
-def keystorePropertiesFile = rootProject.file('key.properties')
-if (keystorePropertiesFile.exists()) {
-  keystoreProperties.load(new FileInputStream(keystorePropertiesFile))
+def secretProperties = new Properties()
+def secretPropertiesFile = rootProject.file('secret.properties')
+if (secretPropertiesFile.exists()) {
+  secretProperties.load(new FileInputStream(secretPropertiesFile))
 }
 
 android {
@@ -63,10 +63,10 @@ android {
 
     signingConfigs {
         release {
-            keyAlias keystoreProperties['keyAlias']
-            keyPassword keystoreProperties['keyPassword']
-            storeFile keystoreProperties['storeFile'] ? file(keystoreProperties['storeFile']) : null
-            storePassword keystoreProperties['storePassword']
+            keyAlias secretProperties['keyAlias']
+            keyPassword secretProperties['keyPassword']
+            storeFile secretProperties['storeFile'] ? file(secretProperties['storeFile']) : null
+            storePassword secretProperties['storePassword']
         }
     }
     flavorDimensions "flavor-type"
