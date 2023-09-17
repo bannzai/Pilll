@@ -59,6 +59,8 @@ android {
         versionCode flutterVersionCode.toInteger()
         versionName flutterVersionName
         resValue "string", "app_name", APP_NAME
+        // Admob
+        buildConfigField("String", "ADMOB_APP_ID", "ca-app-pub-3940256099942544~3347511713")
     }
 
     signingConfigs {
@@ -67,6 +69,8 @@ android {
             keyPassword secretProperties['keyPassword']
             storeFile secretProperties['storeFile'] ? file(secretProperties['storeFile']) : null
             storePassword secretProperties['storePassword']
+            // Admob
+            buildConfigField("String", "ADMOB_APP_ID", secretProperties["admobAppIdentifier"])
         }
     }
     flavorDimensions "flavor-type"
