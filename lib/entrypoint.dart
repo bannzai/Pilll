@@ -5,6 +5,7 @@ import 'package:firebase_analytics/firebase_analytics.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/foundation.dart';
 import 'package:flutter/services.dart';
+import 'package:google_mobile_ads/google_mobile_ads.dart';
 import 'package:pilll/features/root/user_setup_page.dart';
 import 'package:pilll/provider/shared_preferences.dart';
 import 'package:pilll/utils/analytics.dart';
@@ -26,6 +27,7 @@ import 'package:shared_preferences/shared_preferences.dart';
 Future<void> entrypoint() async {
   runZonedGuarded(() async {
     WidgetsFlutterBinding.ensureInitialized();
+    MobileAds.instance.initialize();
     await Firebase.initializeApp();
     // QuickRecordの処理などFirebaseを使用するのでFirebase.initializeApp()の後に時刻する
     // また、同じくQuickRecordの処理開始までにMethodChannelが確立されていてほしいのでこの処理はなるべく早く実行する
