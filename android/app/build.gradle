@@ -60,7 +60,8 @@ android {
         versionName flutterVersionName
         resValue "string", "app_name", APP_NAME
         // Admob
-        buildConfigField("String", "ADMOB_APP_ID", "ca-app-pub-3940256099942544~3347511713")
+        // Test Identifier: https://developers.google.com/admob/android/test-ads
+        buildConfigField("String", "ADMOB_APP_ID", "ca-app-pub-3940256099942544/2247696110")
     }
 
     signingConfigs {
