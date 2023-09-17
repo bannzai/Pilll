@@ -1,5 +1,5 @@
 #!/bin/bash
-set -e
+set -eu
 set -o pipefail
 
 # Can not use separators [/, :, @]
