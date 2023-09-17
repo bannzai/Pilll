@@ -2,6 +2,7 @@ import 'dart:io';
 
 import 'package:flutter/material.dart';
 import 'package:google_mobile_ads/google_mobile_ads.dart';
+import 'package:pilll/secret/secret.dart';
 
 /// A simple app that loads a native ad.
 class NativeExample extends StatefulWidget {
@@ -18,7 +19,7 @@ class NativeExampleState extends State<NativeExample> {
   final double _adAspectRatioSmall = (91 / 355);
   // final double _adAspectRatioMedium = (370 / 355);
 
-  final String _adUnitId = Platform.isAndroid ? 'ca-app-pub-3940256099942544/2247696110' : 'ca-app-pub-3940256099942544/3986624511';
+  final String _adUnitId = Platform.isAndroid ? Secret.androidAdmobNativeAdvanceIdentifier : Secret.iOSAdmobNativeAdvanceIdentifier;
 
   @override
   void initState() {
