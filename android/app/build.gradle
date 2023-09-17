@@ -62,8 +62,6 @@ android {
 
         // Admob
         buildConfigField("String", "ADMOB_APP_ID", secretProperties["admobAppIdentifier"])
-        // Test Identifier: https://developers.google.com/admob/android/test-ads
-        buildConfigField("String", "ANDROID_ADMOB_NATIVE_ADVANCE_IDENTIFIER", "ca-app-pub-3940256099942544/2247696110")
     }
 
     signingConfigs {
@@ -75,7 +73,6 @@ android {
 
             // Admob
             buildConfigField("String", "ADMOB_APP_ID", secretProperties["admobAppIdentifier"])
-            buildConfigField("String", "ADMOB_NATIVE_ADVANCE_IDENTIFIER", secretProperties["admobNativeAdvanceIdentifier"])
         }
     }
     flavorDimensions "flavor-type"
