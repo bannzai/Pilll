@@ -4,15 +4,14 @@ import 'package:flutter/material.dart';
 import 'package:google_mobile_ads/google_mobile_ads.dart';
 import 'package:pilll/secret/secret.dart';
 
-/// A simple app that loads a native ad.
-class NativeExample extends StatefulWidget {
-  const NativeExample({super.key});
+class AdMob extends StatefulWidget {
+  const AdMob({super.key});
 
   @override
-  NativeExampleState createState() => NativeExampleState();
+  AdMobState createState() => AdMobState();
 }
 
-class NativeExampleState extends State<NativeExample> {
+class AdMobState extends State<AdMob> {
   NativeAd? _nativeAd;
   bool _nativeAdIsLoaded = false;
 
