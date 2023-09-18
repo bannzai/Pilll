@@ -5,6 +5,6 @@
 GeneratedPluginRegistrant.java
 google-services.json
 _google-services.json
-key.properties
-_key.properties
+secret.properties
+_secret.properties
 app/src/main/res/mipmap*/
