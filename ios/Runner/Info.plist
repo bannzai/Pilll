@@ -76,5 +76,7 @@
 	<true/>
 	<key>GADApplicationIdentifier</key>
 	<string>$(ADMOB_APP_ID)</string>
+	<key>GADNativeAdValidatorEnabled</key>
+	<false/>
 </dict>
 </plist>
