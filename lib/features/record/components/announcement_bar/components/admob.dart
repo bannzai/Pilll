@@ -28,13 +28,13 @@ class AdMobNativeAdvanceState extends State<AdMobNativeAdvance> {
   Widget build(BuildContext context) {
     // NOTE: 32px is a minimum require height:https://support.google.com/admanager/answer/7031536?hl=en
     // NOTE: 90 is a minimum recommended height: https://developers.google.com/admob/flutter/native/templates
-    final double adAspectRatioSmall = (50 / MediaQuery.of(context).size.width);
+    final double adAspectRatioSmall = (90 / MediaQuery.of(context).size.width);
     final width = MediaQuery.of(context).size.width;
     final height = width * adAspectRatioSmall;
     if (_nativeAdIsLoaded && _nativeAd != null) {
       return SizedBox(height: height, width: width, child: AdWidget(ad: _nativeAd!));
     } else {
-      return SizedBox(height: height, width: width);
+      return Container();
     }
   }
 
