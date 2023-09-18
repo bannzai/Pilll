@@ -4,14 +4,14 @@ import 'package:flutter/material.dart';
 import 'package:google_mobile_ads/google_mobile_ads.dart';
 import 'package:pilll/secret/secret.dart';
 
-class AdMob extends StatefulWidget {
-  const AdMob({super.key});
+class AdMobNativeAdvance extends StatefulWidget {
+  const AdMobNativeAdvance({super.key});
 
   @override
-  AdMobState createState() => AdMobState();
+  AdMobNativeAdvanceState createState() => AdMobNativeAdvanceState();
 }
 
-class AdMobState extends State<AdMob> {
+class AdMobNativeAdvanceState extends State<AdMobNativeAdvance> {
   NativeAd? _nativeAd;
   bool _nativeAdIsLoaded = false;
 
