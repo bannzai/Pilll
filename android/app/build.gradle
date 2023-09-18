@@ -73,10 +73,6 @@ android {
     }
     flavorDimensions "flavor-type"
 
-    buildFeatures {
-        buildConfig = true
-    }
-
     buildTypes {
         debug {
             resValue "string", "PREFERENCE_KEY", "preference_key.com.mizuki.Ohashi.Pilll.development"
