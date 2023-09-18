@@ -29,7 +29,7 @@
             
             <meta-data
                 android:name="com.google.android.gms.ads.APPLICATION_ID"
-                android:value="${ADMOB_APP_ID}"/>
+                android:value="${ADMOB_APP_ID}" />
         </receiver>
 
         <activity

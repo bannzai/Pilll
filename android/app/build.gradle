@@ -60,7 +60,7 @@ android {
         versionName flutterVersionName
         resValue "string", "app_name", APP_NAME
 
-        buildConfigField 'String', 'ADMOB_APP_ID', "\"${secretProperties['admobAppIdentifier']}\""
+        manifestPlaceholders = [ADMOB_APP_ID: "${secretProperties['admobAppIdentifier']}", applicationName: "android.app.Application"]
     }
 
     signingConfigs {
