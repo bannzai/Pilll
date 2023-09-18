@@ -1,5 +1,6 @@
 import 'dart:async';
 
+import 'package:pilll/features/record/components/announcement_bar/components/admob.dart';
 import 'package:pilll/provider/shared_preferences.dart';
 import 'package:pilll/utils/analytics.dart';
 import 'package:pilll/provider/pill_sheet_group.dart';
@@ -335,6 +336,158 @@ void main() {
         );
       });
 
+      group("#AdMobNativeAdvance", () {
+        testWidgets('!isPremium and !isTrial', (WidgetTester tester) async {
+          var pillSheet = PillSheet.create(
+            PillSheetType.pillsheet_21,
+            lastTakenDate: today().subtract(const Duration(days: 1)),
+            beginDate: today().subtract(
+              const Duration(days: 25),
+            ),
+          );
+          final pillSheetGroup = PillSheetGroup(pillSheetIDs: ["1"], pillSheets: [pillSheet], createdAt: now());
+
+          SharedPreferences.setMockInitialValues({
+            IntKey.totalCountOfActionForTakenPill: totalCountOfActionForTakenPillForLongTimeUser,
+            BoolKey.recommendedSignupNotificationIsAlreadyShow: false,
+          });
+          final sharedPreferences = await SharedPreferences.getInstance();
+          await tester.pumpWidget(
+            ProviderScope(
+              overrides: [
+                latestPillSheetGroupProvider.overrideWith((ref) => Stream.value(pillSheetGroup)),
+                premiumAndTrialProvider.overrideWithValue(
+                  AsyncData(
+                    PremiumAndTrial(
+                      isPremium: false,
+                      isTrial: false,
+                      hasDiscountEntitlement: true,
+                      trialDeadlineDate: null,
+                      beginTrialDate: null,
+                      discountEntitlementDeadlineDate: null,
+                    ),
+                  ),
+                ),
+                isLinkedProvider.overrideWithValue(false),
+                isJaLocaleProvider.overrideWithValue(true),
+                isOverDiscountDeadlineProvider.overrideWithProvider((param) => Provider.autoDispose((_) => false)),
+                durationToDiscountPriceDeadline.overrideWithProvider((param) => Provider.autoDispose((_) => const Duration(seconds: 1000))),
+                pilllAdsProvider.overrideWith((ref) => Stream.value(null)),
+                sharedPreferencesProvider.overrideWith((ref) => sharedPreferences),
+              ],
+              child: const MaterialApp(
+                home: Material(child: AnnouncementBar()),
+              ),
+            ),
+          );
+          await tester.pumpAndSettle(const Duration(milliseconds: 400));
+
+          expect(
+            find.byWidgetPredicate((widget) => widget is AdMobNativeAdvance),
+            findsOneWidget,
+          );
+        });
+        testWidgets('use is premium', (WidgetTester tester) async {
+          var pillSheet = PillSheet.create(
+            PillSheetType.pillsheet_21,
+            lastTakenDate: today().subtract(const Duration(days: 1)),
+            beginDate: today().subtract(
+              const Duration(days: 25),
+            ),
+          );
+          final pillSheetGroup = PillSheetGroup(pillSheetIDs: ["1"], pillSheets: [pillSheet], createdAt: now());
+
+          SharedPreferences.setMockInitialValues({
+            IntKey.totalCountOfActionForTakenPill: totalCountOfActionForTakenPillForLongTimeUser,
+            BoolKey.recommendedSignupNotificationIsAlreadyShow: false,
+          });
+          final sharedPreferences = await SharedPreferences.getInstance();
+          await tester.pumpWidget(
+            ProviderScope(
+              overrides: [
+                latestPillSheetGroupProvider.overrideWith((ref) => Stream.value(pillSheetGroup)),
+                premiumAndTrialProvider.overrideWithValue(
+                  AsyncData(
+                    PremiumAndTrial(
+                      isPremium: true,
+                      isTrial: false,
+                      hasDiscountEntitlement: true,
+                      trialDeadlineDate: null,
+                      beginTrialDate: null,
+                      discountEntitlementDeadlineDate: null,
+                    ),
+                  ),
+                ),
+                isLinkedProvider.overrideWithValue(false),
+                isJaLocaleProvider.overrideWithValue(true),
+                isOverDiscountDeadlineProvider.overrideWithProvider((param) => Provider.autoDispose((_) => false)),
+                durationToDiscountPriceDeadline.overrideWithProvider((param) => Provider.autoDispose((_) => const Duration(seconds: 1000))),
+                pilllAdsProvider.overrideWith((ref) => Stream.value(null)),
+                sharedPreferencesProvider.overrideWith((ref) => sharedPreferences),
+              ],
+              child: const MaterialApp(
+                home: Material(child: AnnouncementBar()),
+              ),
+            ),
+          );
+          await tester.pumpAndSettle(const Duration(milliseconds: 400));
+
+          expect(
+            find.byWidgetPredicate((widget) => widget is AdMobNativeAdvance),
+            findsNothing,
+          );
+        });
+        testWidgets('user is trial', (WidgetTester tester) async {
+          var pillSheet = PillSheet.create(
+            PillSheetType.pillsheet_21,
+            lastTakenDate: today().subtract(const Duration(days: 1)),
+            beginDate: today().subtract(
+              const Duration(days: 25),
+            ),
+          );
+          final pillSheetGroup = PillSheetGroup(pillSheetIDs: ["1"], pillSheets: [pillSheet], createdAt: now());
+
+          SharedPreferences.setMockInitialValues({
+            IntKey.totalCountOfActionForTakenPill: totalCountOfActionForTakenPillForLongTimeUser,
+            BoolKey.recommendedSignupNotificationIsAlreadyShow: false,
+          });
+          final sharedPreferences = await SharedPreferences.getInstance();
+          await tester.pumpWidget(
+            ProviderScope(
+              overrides: [
+                latestPillSheetGroupProvider.overrideWith((ref) => Stream.value(pillSheetGroup)),
+                premiumAndTrialProvider.overrideWithValue(
+                  AsyncData(
+                    PremiumAndTrial(
+                      isPremium: false,
+                      isTrial: true,
+                      hasDiscountEntitlement: true,
+                      trialDeadlineDate: null,
+                      beginTrialDate: null,
+                      discountEntitlementDeadlineDate: null,
+                    ),
+                  ),
+                ),
+                isLinkedProvider.overrideWithValue(false),
+                isJaLocaleProvider.overrideWithValue(true),
+                isOverDiscountDeadlineProvider.overrideWithProvider((param) => Provider.autoDispose((_) => false)),
+                durationToDiscountPriceDeadline.overrideWithProvider((param) => Provider.autoDispose((_) => const Duration(seconds: 1000))),
+                pilllAdsProvider.overrideWith((ref) => Stream.value(null)),
+                sharedPreferencesProvider.overrideWith((ref) => sharedPreferences),
+              ],
+              child: const MaterialApp(
+                home: Material(child: AnnouncementBar()),
+              ),
+            ),
+          );
+          await tester.pumpAndSettle(const Duration(milliseconds: 400));
+
+          expect(
+            find.byWidgetPredicate((widget) => widget is AdMobNativeAdvance),
+            findsNothing,
+          );
+        });
+      });
       group("#PilllAdsAnnouncementBar", () {
         testWidgets('today is before 2022-08-10', (WidgetTester tester) async {
           final mockTodayRepository = MockTodayService();
