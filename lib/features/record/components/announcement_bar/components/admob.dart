@@ -15,9 +15,6 @@ class NativeExample extends StatefulWidget {
 class NativeExampleState extends State<NativeExample> {
   NativeAd? _nativeAd;
   bool _nativeAdIsLoaded = false;
-  String? _versionString;
-  final double _adAspectRatioSmall = (91 / 355);
-  // final double _adAspectRatioMedium = (370 / 355);
 
   final String _adUnitId = Platform.isAndroid ? Secret.androidAdmobNativeAdvanceIdentifier : Secret.iOSAdmobNativeAdvanceIdentifier;
 
@@ -26,31 +23,19 @@ class NativeExampleState extends State<NativeExample> {
     super.initState();
 
     _loadAd();
-    _loadVersionString();
   }
 
   @override
   Widget build(BuildContext context) {
-    return SizedBox(
-      height: MediaQuery.of(context).size.height,
-      width: MediaQuery.of(context).size.width,
-      child: Column(
-        children: [
-          Stack(
-            children: [
-              SizedBox(height: MediaQuery.of(context).size.width * _adAspectRatioSmall, width: MediaQuery.of(context).size.width),
-              if (_nativeAdIsLoaded && _nativeAd != null)
-                SizedBox(
-                    height: MediaQuery.of(context).size.width * _adAspectRatioSmall,
-                    width: MediaQuery.of(context).size.width,
-                    child: AdWidget(ad: _nativeAd!)),
-            ],
-          ),
-          TextButton(onPressed: _loadAd, child: const Text("Refresh Ad")),
-          if (_versionString != null) Text(_versionString!)
-        ],
-      ),
-    );
+    // 90 is a recommended minimum height: https://developers.google.com/admob/flutter/native/templates
+    final double adAspectRatioSmall = (90 / MediaQuery.of(context).size.width);
+    final width = MediaQuery.of(context).size.width;
+    final height = width * adAspectRatioSmall;
+    if (_nativeAdIsLoaded && _nativeAd != null) {
+      return SizedBox(height: height, width: width, child: AdWidget(ad: _nativeAd!));
+    } else {
+      return SizedBox(height: height, width: width);
+    }
   }
 
   /// Loads a native ad.
@@ -90,14 +75,6 @@ class NativeExampleState extends State<NativeExample> {
             secondaryTextStyle: NativeTemplateTextStyle(textColor: Colors.black, style: NativeTemplateFontStyle.italic, size: 16.0),
             tertiaryTextStyle: NativeTemplateTextStyle(textColor: Colors.black, style: NativeTemplateFontStyle.normal, size: 16.0)))
       ..load();
-  }
-
-  void _loadVersionString() {
-    MobileAds.instance.getVersionString().then((value) {
-      setState(() {
-        _versionString = value;
-      });
-    });
   }
 
   @override
