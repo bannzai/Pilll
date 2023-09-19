@@ -1,5 +1,6 @@
 import 'dart:async';
 
+import 'package:pilll/features/record/components/announcement_bar/components/admob.dart';
 import 'package:pilll/features/record/components/announcement_bar/components/admob_native_advanced.dart';
 import 'package:pilll/provider/shared_preferences.dart';
 import 'package:pilll/utils/analytics.dart';
@@ -336,7 +337,7 @@ void main() {
         );
       });
 
-      group("#AdMobNativeAdvance", () {
+      group("#AdMob", () {
         testWidgets('!isPremium and !isTrial', (WidgetTester tester) async {
           var pillSheet = PillSheet.create(
             PillSheetType.pillsheet_21,
@@ -383,7 +384,7 @@ void main() {
           await tester.pumpAndSettle(const Duration(milliseconds: 400));
 
           expect(
-            find.byWidgetPredicate((widget) => widget is AdMobNativeAdvance),
+            find.byWidgetPredicate((widget) => widget is AdMob),
             findsOneWidget,
           );
         });
@@ -433,7 +434,7 @@ void main() {
           await tester.pumpAndSettle(const Duration(milliseconds: 400));
 
           expect(
-            find.byWidgetPredicate((widget) => widget is AdMobNativeAdvance),
+            find.byWidgetPredicate((widget) => widget is AdMob),
             findsNothing,
           );
         });
@@ -483,7 +484,7 @@ void main() {
           await tester.pumpAndSettle(const Duration(milliseconds: 400));
 
           expect(
-            find.byWidgetPredicate((widget) => widget is AdMobNativeAdvance),
+            find.byWidgetPredicate((widget) => widget is AdMob),
             findsNothing,
           );
         });
