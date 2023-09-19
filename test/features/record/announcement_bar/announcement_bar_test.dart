@@ -1,7 +1,6 @@
 import 'dart:async';
 
 import 'package:pilll/features/record/components/announcement_bar/components/admob.dart';
-import 'package:pilll/features/record/components/announcement_bar/components/admob_native_advanced.dart';
 import 'package:pilll/provider/shared_preferences.dart';
 import 'package:pilll/utils/analytics.dart';
 import 'package:pilll/provider/pill_sheet_group.dart';
