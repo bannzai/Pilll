@@ -336,7 +336,7 @@ void main() {
         );
       });
 
-      group("#AdMobNativeAdvance", () {
+      group("#AdMob", () {
         testWidgets('!isPremium and !isTrial', (WidgetTester tester) async {
           var pillSheet = PillSheet.create(
             PillSheetType.pillsheet_21,
@@ -383,7 +383,7 @@ void main() {
           await tester.pumpAndSettle(const Duration(milliseconds: 400));
 
           expect(
-            find.byWidgetPredicate((widget) => widget is AdMobNativeAdvance),
+            find.byWidgetPredicate((widget) => widget is AdMob),
             findsOneWidget,
           );
         });
@@ -433,7 +433,7 @@ void main() {
           await tester.pumpAndSettle(const Duration(milliseconds: 400));
 
           expect(
-            find.byWidgetPredicate((widget) => widget is AdMobNativeAdvance),
+            find.byWidgetPredicate((widget) => widget is AdMob),
             findsNothing,
           );
         });
@@ -483,7 +483,7 @@ void main() {
           await tester.pumpAndSettle(const Duration(milliseconds: 400));
 
           expect(
-            find.byWidgetPredicate((widget) => widget is AdMobNativeAdvance),
+            find.byWidgetPredicate((widget) => widget is AdMob),
             findsNothing,
           );
         });

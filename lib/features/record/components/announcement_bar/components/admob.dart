@@ -1,86 +1,18 @@
-import 'dart:io';
-
 import 'package:flutter/material.dart';
-import 'package:google_mobile_ads/google_mobile_ads.dart';
-import 'package:pilll/secret/secret.dart';
+import 'package:pilll/features/record/components/announcement_bar/components/admob_banner.dart';
+import 'package:pilll/features/record/components/announcement_bar/components/admob_native_advanced.dart';
 
-class AdMobNativeAdvance extends StatefulWidget {
-  const AdMobNativeAdvance({super.key});
-
-  @override
-  AdMobNativeAdvanceState createState() => AdMobNativeAdvanceState();
-}
-
-class AdMobNativeAdvanceState extends State<AdMobNativeAdvance> {
-  NativeAd? _nativeAd;
-  bool _nativeAdIsLoaded = false;
-
-  final String _adUnitId = Platform.isAndroid ? Secret.androidAdmobNativeAdvanceIdentifier : Secret.iOSAdmobNativeAdvanceIdentifier;
-
-  @override
-  void initState() {
-    super.initState();
-
-    _loadAd();
-  }
-
+class AdMob extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    // NOTE: 32px is a minimum require height:https://support.google.com/admanager/answer/7031536?hl=en
-    // NOTE: 90 is a minimum recommended height: https://developers.google.com/admob/flutter/native/templates
-    // Ref: https://github.com/googleads/googleads-mobile-flutter/blob/4218712f5d06b972a9e2b65a44fd2889ae1d1390/samples/admob/native_template_example/lib/main.dart#L26
-    const double adAspectRatioSmall = (91 / 355);
-    final width = MediaQuery.of(context).size.width;
-    final height = width * adAspectRatioSmall;
-    if (_nativeAdIsLoaded && _nativeAd != null) {
-      return SizedBox(height: height, width: width, child: AdWidget(ad: _nativeAd!));
+    // iPhone mini, iPhone SEサイズだとNativeAdvanceの広告の高さだと画面占領が目立つので高さで広告を分岐する
+    // SE(2nd)もminiも将来的にサポート対象外(どちらも生産終了)しているので、この分岐は将来的には不要になる
+    // miniは確認した限りでは90pxの高さでもさほど問題はなかったが、ついでなのでminiも含めて分岐してしまう。Androidの小さい端末もこのコードでカバーできるだろうと目論んでいる
+    // mini: 812, SE(2nd): 667
+    if (MediaQuery.of(context).size.height <= 812) {
+      return const AdMobBanner();
     } else {
-      return Container();
+      return const AdMobNativeAdvance();
     }
-  }
-
-  /// Loads a native ad.
-  void _loadAd() {
-    setState(() {
-      _nativeAdIsLoaded = false;
-    });
-
-    _nativeAd = NativeAd(
-        adUnitId: _adUnitId,
-        listener: NativeAdListener(
-          onAdLoaded: (ad) {
-            // ignore: avoid_print
-            print('$NativeAd loaded.');
-            setState(() {
-              _nativeAdIsLoaded = true;
-            });
-          },
-          onAdFailedToLoad: (ad, error) {
-            // ignore: avoid_print
-            print('$NativeAd failedToLoad: $error');
-            ad.dispose();
-          },
-          onAdClicked: (ad) {},
-          onAdImpression: (ad) {},
-          onAdClosed: (ad) {},
-          onAdOpened: (ad) {},
-          onAdWillDismissScreen: (ad) {},
-          onPaidEvent: (ad, valueMicros, precision, currencyCode) {},
-        ),
-        request: const AdRequest(),
-        nativeTemplateStyle: NativeTemplateStyle(
-            templateType: TemplateType.small,
-            mainBackgroundColor: const Color(0xfffffbed),
-            callToActionTextStyle: NativeTemplateTextStyle(textColor: Colors.white, style: NativeTemplateFontStyle.monospace, size: 16.0),
-            primaryTextStyle: NativeTemplateTextStyle(textColor: Colors.black, style: NativeTemplateFontStyle.bold, size: 16.0),
-            secondaryTextStyle: NativeTemplateTextStyle(textColor: Colors.black, style: NativeTemplateFontStyle.italic, size: 16.0),
-            tertiaryTextStyle: NativeTemplateTextStyle(textColor: Colors.black, style: NativeTemplateFontStyle.normal, size: 16.0)))
-      ..load();
-  }
-
-  @override
-  void dispose() {
-    _nativeAd?.dispose();
-    super.dispose();
   }
 }
