@@ -1,6 +1,7 @@
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
+import 'package:pilll/features/record/components/announcement_bar/components/admob_banner.dart';
 import 'package:pilll/features/record/components/announcement_bar/components/admob_native_advanced.dart';
 import 'package:pilll/utils/analytics.dart';
 import 'package:pilll/provider/pill_sheet_group.dart';
@@ -128,7 +129,7 @@ class AnnouncementBar extends HookConsumerWidget {
       // ただ、一時的にサポートするコードを書いてしまっているので、iOSのバージョンを上げるのは必須じゃない。2024-01以降で他に困ることがあればiOSのバージョンを上げる
       // mini: 780, SE: 667
       if (MediaQuery.of(context).size.height <= 780) {
-        return const AdMobNativeAdvance();
+        return const AdMobBanner();
       } else {
         return const AdMobNativeAdvance();
       }
