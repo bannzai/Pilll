@@ -25,13 +25,18 @@ class AdMobBannerState extends State<AdMobBanner> {
 
   @override
   Widget build(BuildContext context) {
-    return SafeArea(
-      child: SizedBox(
-        width: _bannerAd!.size.width.toDouble(),
-        height: _bannerAd!.size.height.toDouble(),
-        child: AdWidget(ad: _bannerAd!),
-      ),
-    );
+    final bannerAd = _bannerAd;
+    if (bannerAd != null) {
+      return SafeArea(
+        child: SizedBox(
+          width: bannerAd.size.width.toDouble(),
+          height: bannerAd.size.height.toDouble(),
+          child: AdWidget(ad: _bannerAd!),
+        ),
+      );
+    } else {
+      return Container();
+    }
   }
 
   /// Loads and shows a banner ad.
