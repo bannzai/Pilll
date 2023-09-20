@@ -34,7 +34,11 @@ mixin _$PillSheetModifiedHistory {
   @JsonKey(
       fromJson: NonNullTimestampConverter.timestampToDateTime,
       toJson: NonNullTimestampConverter.dateTimeToTimestamp)
-  DateTime get createdAt =>
+  DateTime get createdAt => throw _privateConstructorUsedError;
+  @JsonKey(
+      fromJson: TimestampConverter.timestampToDateTime,
+      toJson: TimestampConverter.dateTimeToTimestamp)
+  DateTime? get archivedDateTime =>
       throw _privateConstructorUsedError; // ============ END: Added since v1 ============
 // ============ BEGIN: Added since v2 ============
 // beforePillSheetGroup and afterPillSheetGroup is nullable
@@ -90,6 +94,10 @@ abstract class $PillSheetModifiedHistoryCopyWith<$Res> {
           fromJson: NonNullTimestampConverter.timestampToDateTime,
           toJson: NonNullTimestampConverter.dateTimeToTimestamp)
       DateTime createdAt,
+      @JsonKey(
+          fromJson: TimestampConverter.timestampToDateTime,
+          toJson: TimestampConverter.dateTimeToTimestamp)
+      DateTime? archivedDateTime,
       PillSheetGroup? beforePillSheetGroup,
       PillSheetGroup? afterPillSheetGroup,
       @JsonKey(
@@ -130,6 +138,7 @@ class _$PillSheetModifiedHistoryCopyWithImpl<$Res,
     Object? actionType = null,
     Object? estimatedEventCausingDate = null,
     Object? createdAt = null,
+    Object? archivedDateTime = freezed,
     Object? beforePillSheetGroup = freezed,
     Object? afterPillSheetGroup = freezed,
     Object? ttlExpiresDateTime = freezed,
@@ -162,6 +171,10 @@ class _$PillSheetModifiedHistoryCopyWithImpl<$Res,
           ? _value.createdAt
           : createdAt // ignore: cast_nullable_to_non_nullable
               as DateTime,
+      archivedDateTime: freezed == archivedDateTime
+          ? _value.archivedDateTime
+          : archivedDateTime // ignore: cast_nullable_to_non_nullable
+              as DateTime?,
       beforePillSheetGroup: freezed == beforePillSheetGroup
           ? _value.beforePillSheetGroup
           : beforePillSheetGroup // ignore: cast_nullable_to_non_nullable
@@ -283,6 +296,10 @@ abstract class _$$_PillSheetModifiedHistoryCopyWith<$Res>
           fromJson: NonNullTimestampConverter.timestampToDateTime,
           toJson: NonNullTimestampConverter.dateTimeToTimestamp)
       DateTime createdAt,
+      @JsonKey(
+          fromJson: TimestampConverter.timestampToDateTime,
+          toJson: TimestampConverter.dateTimeToTimestamp)
+      DateTime? archivedDateTime,
       PillSheetGroup? beforePillSheetGroup,
       PillSheetGroup? afterPillSheetGroup,
       @JsonKey(
@@ -326,6 +343,7 @@ class __$$_PillSheetModifiedHistoryCopyWithImpl<$Res>
     Object? actionType = null,
     Object? estimatedEventCausingDate = null,
     Object? createdAt = null,
+    Object? archivedDateTime = freezed,
     Object? beforePillSheetGroup = freezed,
     Object? afterPillSheetGroup = freezed,
     Object? ttlExpiresDateTime = freezed,
@@ -355,6 +373,10 @@ class __$$_PillSheetModifiedHistoryCopyWithImpl<$Res>
           ? _value.createdAt
           : createdAt // ignore: cast_nullable_to_non_nullable
               as DateTime,
+      archivedDateTime: freezed == archivedDateTime
+          ? _value.archivedDateTime
+          : archivedDateTime // ignore: cast_nullable_to_non_nullable
+              as DateTime?,
       beforePillSheetGroup: freezed == beforePillSheetGroup
           ? _value.beforePillSheetGroup
           : beforePillSheetGroup // ignore: cast_nullable_to_non_nullable
@@ -415,6 +437,10 @@ class _$_PillSheetModifiedHistory extends _PillSheetModifiedHistory {
           fromJson: NonNullTimestampConverter.timestampToDateTime,
           toJson: NonNullTimestampConverter.dateTimeToTimestamp)
       required this.createdAt,
+      @JsonKey(
+          fromJson: TimestampConverter.timestampToDateTime,
+          toJson: TimestampConverter.dateTimeToTimestamp)
+      this.archivedDateTime,
       required this.beforePillSheetGroup,
       required this.afterPillSheetGroup,
       @JsonKey(
@@ -453,6 +479,11 @@ class _$_PillSheetModifiedHistory extends _PillSheetModifiedHistory {
       fromJson: NonNullTimestampConverter.timestampToDateTime,
       toJson: NonNullTimestampConverter.dateTimeToTimestamp)
   final DateTime createdAt;
+  @override
+  @JsonKey(
+      fromJson: TimestampConverter.timestampToDateTime,
+      toJson: TimestampConverter.dateTimeToTimestamp)
+  final DateTime? archivedDateTime;
 // ============ END: Added since v1 ============
 // ============ BEGIN: Added since v2 ============
 // beforePillSheetGroup and afterPillSheetGroup is nullable
@@ -495,7 +526,7 @@ class _$_PillSheetModifiedHistory extends _PillSheetModifiedHistory {
 
   @override
   String toString() {
-    return 'PillSheetModifiedHistory(version: $version, id: $id, actionType: $actionType, estimatedEventCausingDate: $estimatedEventCausingDate, createdAt: $createdAt, beforePillSheetGroup: $beforePillSheetGroup, afterPillSheetGroup: $afterPillSheetGroup, ttlExpiresDateTime: $ttlExpiresDateTime, value: $value, pillSheetID: $pillSheetID, pillSheetGroupID: $pillSheetGroupID, beforePillSheetID: $beforePillSheetID, afterPillSheetID: $afterPillSheetID, before: $before, after: $after)';
+    return 'PillSheetModifiedHistory(version: $version, id: $id, actionType: $actionType, estimatedEventCausingDate: $estimatedEventCausingDate, createdAt: $createdAt, archivedDateTime: $archivedDateTime, beforePillSheetGroup: $beforePillSheetGroup, afterPillSheetGroup: $afterPillSheetGroup, ttlExpiresDateTime: $ttlExpiresDateTime, value: $value, pillSheetID: $pillSheetID, pillSheetGroupID: $pillSheetGroupID, beforePillSheetID: $beforePillSheetID, afterPillSheetID: $afterPillSheetID, before: $before, after: $after)';
   }
 
   @override
@@ -512,6 +543,8 @@ class _$_PillSheetModifiedHistory extends _PillSheetModifiedHistory {
                 other.estimatedEventCausingDate == estimatedEventCausingDate) &&
             (identical(other.createdAt, createdAt) ||
                 other.createdAt == createdAt) &&
+            (identical(other.archivedDateTime, archivedDateTime) ||
+                other.archivedDateTime == archivedDateTime) &&
             (identical(other.beforePillSheetGroup, beforePillSheetGroup) ||
                 other.beforePillSheetGroup == beforePillSheetGroup) &&
             (identical(other.afterPillSheetGroup, afterPillSheetGroup) ||
@@ -540,6 +573,7 @@ class _$_PillSheetModifiedHistory extends _PillSheetModifiedHistory {
       actionType,
       estimatedEventCausingDate,
       createdAt,
+      archivedDateTime,
       beforePillSheetGroup,
       afterPillSheetGroup,
       ttlExpiresDateTime,
@@ -579,6 +613,10 @@ abstract class _PillSheetModifiedHistory extends PillSheetModifiedHistory {
           fromJson: NonNullTimestampConverter.timestampToDateTime,
           toJson: NonNullTimestampConverter.dateTimeToTimestamp)
       required final DateTime createdAt,
+      @JsonKey(
+          fromJson: TimestampConverter.timestampToDateTime,
+          toJson: TimestampConverter.dateTimeToTimestamp)
+      final DateTime? archivedDateTime,
       required final PillSheetGroup? beforePillSheetGroup,
       required final PillSheetGroup? afterPillSheetGroup,
       @JsonKey(
@@ -614,6 +652,11 @@ abstract class _PillSheetModifiedHistory extends PillSheetModifiedHistory {
       fromJson: NonNullTimestampConverter.timestampToDateTime,
       toJson: NonNullTimestampConverter.dateTimeToTimestamp)
   DateTime get createdAt;
+  @override
+  @JsonKey(
+      fromJson: TimestampConverter.timestampToDateTime,
+      toJson: TimestampConverter.dateTimeToTimestamp)
+  DateTime? get archivedDateTime;
   @override // ============ END: Added since v1 ============
 // ============ BEGIN: Added since v2 ============
 // beforePillSheetGroup and afterPillSheetGroup is nullable
