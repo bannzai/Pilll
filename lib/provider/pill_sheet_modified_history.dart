@@ -19,7 +19,7 @@ final pillSheetModifiedHistoriesProvider = StreamProvider.family.autoDispose((re
         .limit(20)
         .snapshots()
         .map((reference) => reference.docs)
-        .map((docs) => docs.map((doc) => doc.data()).toList());
+        .map((docs) => docs.map((doc) => doc.data()).where((e) => e.archivedDateTime == null).toList());
   } else {
     return ref
         .watch(databaseProvider)
@@ -33,7 +33,7 @@ final pillSheetModifiedHistoriesProvider = StreamProvider.family.autoDispose((re
         .limit(20)
         .snapshots()
         .map((reference) => reference.docs)
-        .map((docs) => docs.map((doc) => doc.data()).toList());
+        .map((docs) => docs.map((doc) => doc.data()).where((e) => e.archivedDateTime == null).toList());
   }
 });
 final pillSheetModifiedHistoriesWithLimitProvider = StreamProvider.family((ref, int limit) {
@@ -49,7 +49,7 @@ final pillSheetModifiedHistoriesWithLimitProvider = StreamProvider.family((ref, 
       .limit(limit)
       .snapshots()
       .map((reference) => reference.docs)
-      .map((docs) => docs.map((doc) => doc.data()).toList());
+      .map((docs) => docs.map((doc) => doc.data()).where((e) => e.archivedDateTime == null).toList());
 });
 
 final batchSetPillSheetModifiedHistoryProvider = Provider((ref) => BatchSetPillSheetModifiedHistory(ref.watch(databaseProvider)));
