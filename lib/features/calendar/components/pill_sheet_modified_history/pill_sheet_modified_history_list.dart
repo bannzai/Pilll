@@ -14,6 +14,7 @@ import 'package:pilll/features/calendar/components/pill_sheet_modified_history/c
 import 'package:pilll/features/calendar/components/pill_sheet_modified_history/components/rows/pill_sheet_modified_history_taken_pill_action.dart';
 import 'package:pilll/entity/pill_sheet_modified_history.codegen.dart';
 import 'package:pilll/provider/premium_and_trial.codegen.dart';
+import 'package:pilll/utils/analytics.dart';
 import 'package:pilll/utils/datetime/date_compare.dart';
 import 'package:pilll/utils/datetime/day.dart';
 
@@ -183,6 +184,29 @@ class PillSheetModifiedHistoryList extends StatelessWidget {
               };
             }
 
+            final Widget withDismissible = switch (history.enumActionType) {
+              PillSheetModifiedActionType.deletedPillSheet => body,
+              PillSheetModifiedActionType.createdPillSheet ||
+              PillSheetModifiedActionType.automaticallyRecordedLastTakenDate ||
+              PillSheetModifiedActionType.takenPill ||
+              PillSheetModifiedActionType.revertTakenPill ||
+              PillSheetModifiedActionType.changedPillNumber ||
+              PillSheetModifiedActionType.endedPillSheet ||
+              PillSheetModifiedActionType.beganRestDuration ||
+              PillSheetModifiedActionType.endedRestDuration ||
+              PillSheetModifiedActionType.changedBeginDisplayNumber ||
+              PillSheetModifiedActionType.changedEndDisplayNumber =>
+                Dismissible(
+                  key: Key(history.id ?? ""),
+                  direction: DismissDirection.endToStart,
+                  onDismissed: (direction) {
+                    analytics.logEvent(name: "archive_history", parameters: {"historyID": history.id ?? "", "actionType": history.actionType});
+                  },
+                  child: body,
+                ),
+              // whereでフィルタリングしているのでありえないパターン
+              null => Container(),
+            };
             if (isNecessaryDots) {
               return Column(children: [
                 Row(
@@ -195,10 +219,10 @@ class PillSheetModifiedHistoryList extends StatelessWidget {
                   ],
                 ),
                 const SizedBox(height: 16),
-                body,
+                withDismissible,
               ]);
             } else {
-              return body;
+              return withDismissible;
             }
           })
           .map((e) => Column(children: [e, const SizedBox(height: 16)]))
