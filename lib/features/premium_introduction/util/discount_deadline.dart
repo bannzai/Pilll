@@ -2,8 +2,7 @@ import 'package:hooks_riverpod/hooks_riverpod.dart';
 import 'package:pilll/utils/datetime/timer.dart';
 import 'package:pilll/utils/formatter/date_time_formatter.dart';
 
-final isOverDiscountDeadlineProvider = Provider.family
-    .autoDispose((ref, DateTime? discountEntitlementDeadlineDate) {
+final isOverDiscountDeadlineProvider = Provider.family.autoDispose((ref, DateTime? discountEntitlementDeadlineDate) {
   if (discountEntitlementDeadlineDate == null) {
     // NOTE: discountEntitlementDeadlineDate が存在しない時はbackendの方でまだ期限を決めていないのでfalse状態で扱う
     return false;
@@ -12,8 +11,16 @@ final isOverDiscountDeadlineProvider = Provider.family
   return timer.isAfter(discountEntitlementDeadlineDate);
 });
 
-final durationToDiscountPriceDeadline = Provider.family
-    .autoDispose((ref, DateTime discountEntitlementDeadlineDate) {
+final showsCountdownDiscountDeadline = Provider.family.autoDispose((ref, DateTime? discountEntitlementDeadlineDate) {
+  if (discountEntitlementDeadlineDate == null) {
+    // NOTE: discountEntitlementDeadlineDate が存在しない時はbackendの方でまだ期限を決めていないのでfalse状態で扱う
+    return false;
+  }
+  final timer = ref.watch(timerStateProvider);
+  return timer.isBefore(discountEntitlementDeadlineDate) && discountEntitlementDeadlineDate.difference(timer).inHours <= 48;
+});
+
+final durationToDiscountPriceDeadline = Provider.family.autoDispose((ref, DateTime discountEntitlementDeadlineDate) {
   final timerDate = ref.watch(timerStateProvider);
   return discountEntitlementDeadlineDate.difference(timerDate);
 });
