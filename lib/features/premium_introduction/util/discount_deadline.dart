@@ -17,7 +17,7 @@ final hiddenCountdownDiscountDeadlineProvider = Provider.family.autoDispose((ref
     return false;
   }
   final timer = ref.watch(timerStateProvider);
-  return !(timer.isBefore(discountEntitlementDeadlineDate) && discountEntitlementDeadlineDate.difference(timer).inHours <= 48);
+  return !(timer.isBefore(discountEntitlementDeadlineDate) && discountEntitlementDeadlineDate.difference(timer).inMinutes <= 48 * 60);
 });
 
 final durationToDiscountPriceDeadline = Provider.family.autoDispose((ref, DateTime discountEntitlementDeadlineDate) {
