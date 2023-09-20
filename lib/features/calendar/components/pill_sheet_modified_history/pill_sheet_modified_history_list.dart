@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
+import 'package:hooks_riverpod/hooks_riverpod.dart';
 import 'package:pilll/features/calendar/components/pill_sheet_modified_history/components/rows/pill_sheet_modified_history_automatically_recorded_last_taken_date_action.dart';
 import 'package:pilll/features/calendar/components/pill_sheet_modified_history/components/rows/pill_sheet_modified_history_began_rest_duration.dart';
 import 'package:pilll/features/calendar/components/pill_sheet_modified_history/components/rows/pill_sheet_modified_history_begin_display_number_action.dart';
@@ -13,6 +14,7 @@ import 'package:pilll/features/calendar/components/pill_sheet_modified_history/c
 import 'package:pilll/features/calendar/components/pill_sheet_modified_history/components/rows/pill_sheet_modified_history_revert_taken_pill_action.dart';
 import 'package:pilll/features/calendar/components/pill_sheet_modified_history/components/rows/pill_sheet_modified_history_taken_pill_action.dart';
 import 'package:pilll/entity/pill_sheet_modified_history.codegen.dart';
+import 'package:pilll/provider/pill_sheet_modified_history.dart';
 import 'package:pilll/provider/premium_and_trial.codegen.dart';
 import 'package:pilll/utils/analytics.dart';
 import 'package:pilll/utils/datetime/date_compare.dart';
@@ -27,7 +29,7 @@ class PillSheetModifiedHistoryListModel {
   });
 }
 
-class PillSheetModifiedHistoryList extends StatelessWidget {
+class PillSheetModifiedHistoryList extends HookConsumerWidget {
   final EdgeInsets? padding;
   final ScrollPhysics scrollPhysics;
   final List<PillSheetModifiedHistory> pillSheetModifiedHistories;
@@ -42,17 +44,17 @@ class PillSheetModifiedHistoryList extends StatelessWidget {
   }) : super(key: key);
 
   @override
-  Widget build(BuildContext context) {
+  Widget build(BuildContext context, WidgetRef ref) {
     return ListView(
       padding: padding,
       shrinkWrap: true,
       physics: scrollPhysics,
       scrollDirection: Axis.vertical,
-      children: _summarizedForEachMonth.map((model) => _monthlyHeaderAndRelativedHistories(model)).expand((element) => element).toList(),
+      children: _summarizedForEachMonth.map((model) => _monthlyHeaderAndRelativedHistories(ref, model)).expand((element) => element).toList(),
     );
   }
 
-  List<Widget> _monthlyHeaderAndRelativedHistories(PillSheetModifiedHistoryListModel model) {
+  List<Widget> _monthlyHeaderAndRelativedHistories(WidgetRef ref, PillSheetModifiedHistoryListModel model) {
     var dirtyIndex = 0;
 
     return [
@@ -201,6 +203,7 @@ class PillSheetModifiedHistoryList extends StatelessWidget {
                   direction: DismissDirection.endToStart,
                   onDismissed: (direction) {
                     analytics.logEvent(name: "archive_history", parameters: {"historyID": history.id ?? "", "actionType": history.actionType});
+                    ref.read(setPillSheetModifiedHistoryProvider).call(history.copyWith(archivedDateTime: now()));
                   },
                   child: body,
                 ),
