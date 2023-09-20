@@ -199,7 +199,7 @@ class PillSheetModifiedHistoryList extends HookConsumerWidget {
               PillSheetModifiedActionType.changedBeginDisplayNumber ||
               PillSheetModifiedActionType.changedEndDisplayNumber =>
                 Dismissible(
-                  key: Key(history.id ?? ""),
+                  key: ObjectKey(history.id ?? ""),
                   direction: DismissDirection.endToStart,
                   onDismissed: (direction) {
                     analytics.logEvent(name: "archive_history", parameters: {"historyID": history.id ?? "", "actionType": history.actionType});
