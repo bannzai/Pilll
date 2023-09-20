@@ -45,7 +45,7 @@ class AnnouncementBar extends HookConsumerWidget {
     final recommendedSignupNotificationIsAlreadyShowNotifier =
         ref.watch(boolSharedPreferencesProvider(BoolKey.recommendedSignupNotificationIsAlreadyShow).notifier);
     final discountEntitlementDeadlineDate = premiumAndTrial.discountEntitlementDeadlineDate;
-    final showsCountdownDiscountDeadline = ref.watch(showsCountdownDiscountDeadlineProvider(discountEntitlementDeadlineDate));
+    final hiddenCountdownDiscountDeadline = ref.watch(hiddenCountdownDiscountDeadlineProvider(discountEntitlementDeadlineDate));
     final isJaLocale = ref.watch(isJaLocaleProvider);
     final pilllAds = ref.watch(pilllAdsProvider).asData?.value;
     final isAdsDisabled = () {
@@ -64,7 +64,7 @@ class AnnouncementBar extends HookConsumerWidget {
       if (premiumAndTrial.hasDiscountEntitlement) {
         if (!premiumAndTrial.isTrial) {
           if (discountEntitlementDeadlineDate != null) {
-            if (showsCountdownDiscountDeadline) {
+            if (!hiddenCountdownDiscountDeadline) {
               return DiscountPriceDeadline(
                   discountEntitlementDeadlineDate: discountEntitlementDeadlineDate,
                   onTap: () {

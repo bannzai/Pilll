@@ -11,13 +11,13 @@ final isOverDiscountDeadlineProvider = Provider.family.autoDispose((ref, DateTim
   return timer.isAfter(discountEntitlementDeadlineDate);
 });
 
-final showsCountdownDiscountDeadlineProvider = Provider.family.autoDispose((ref, DateTime? discountEntitlementDeadlineDate) {
+final hiddenCountdownDiscountDeadlineProvider = Provider.family.autoDispose((ref, DateTime? discountEntitlementDeadlineDate) {
   if (discountEntitlementDeadlineDate == null) {
     // NOTE: discountEntitlementDeadlineDate が存在しない時はbackendの方でまだ期限を決めていないのでfalse状態で扱う
     return false;
   }
   final timer = ref.watch(timerStateProvider);
-  return timer.isBefore(discountEntitlementDeadlineDate) && discountEntitlementDeadlineDate.difference(timer).inHours <= 48;
+  return !(timer.isBefore(discountEntitlementDeadlineDate) && discountEntitlementDeadlineDate.difference(timer).inHours <= 48);
 });
 
 final durationToDiscountPriceDeadline = Provider.family.autoDispose((ref, DateTime discountEntitlementDeadlineDate) {
