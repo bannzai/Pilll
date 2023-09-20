@@ -115,13 +115,14 @@ class AnnouncementBar extends HookConsumerWidget {
             }
           }
         }
-      }
+      } else {
+        // !isPremium && !isTrial
+        if (!isAdsDisabled && pilllAds != null) {
+          return PilllAdsAnnouncementBar(pilllAds: pilllAds, onClose: () => showPremiumIntroductionSheet(context));
+        }
 
-      // !isPremium && !isTrial
-      if (!isAdsDisabled && pilllAds != null) {
-        return PilllAdsAnnouncementBar(pilllAds: pilllAds, onClose: () => showPremiumIntroductionSheet(context));
+        return const AdMob();
       }
-      return AdMob();
     } else {
       final shownRecommendSignupNotificationForPremium = () {
         if (isLinkedLoginProvider) {
