@@ -88,7 +88,7 @@ void main() {
               ),
               isLinkedProvider.overrideWithValue(false),
               isJaLocaleProvider.overrideWithValue(true),
-              isOverDiscountDeadlineProvider.overrideWithProvider((param) => Provider.autoDispose((_) => false)),
+              hiddenCountdownDiscountDeadlineProvider.overrideWithProvider((param) => Provider.autoDispose((_) => false)),
               durationToDiscountPriceDeadline.overrideWithProvider((param) => Provider.autoDispose((_) => const Duration(seconds: 1000))),
               sharedPreferencesProvider.overrideWith((ref) => sharedPreferences),
             ],
@@ -145,7 +145,7 @@ void main() {
               ),
               isLinkedProvider.overrideWithValue(false),
               isJaLocaleProvider.overrideWithValue(true),
-              isOverDiscountDeadlineProvider.overrideWithProvider((param) => Provider.autoDispose((_) => false)),
+              hiddenCountdownDiscountDeadlineProvider.overrideWithProvider((param) => Provider.autoDispose((_) => false)),
               durationToDiscountPriceDeadline.overrideWithProvider((param) => Provider.autoDispose((_) => const Duration(seconds: 1000))),
               sharedPreferencesProvider.overrideWith((ref) => sharedPreferences),
             ],
@@ -203,7 +203,7 @@ void main() {
               ),
               isLinkedProvider.overrideWithValue(false),
               isJaLocaleProvider.overrideWithValue(true),
-              isOverDiscountDeadlineProvider.overrideWithProvider((param) => Provider.autoDispose((_) => false)),
+              hiddenCountdownDiscountDeadlineProvider.overrideWithProvider((param) => Provider.autoDispose((_) => false)),
               durationToDiscountPriceDeadline.overrideWithProvider((param) => Provider.autoDispose((_) => const Duration(seconds: 1000))),
               sharedPreferencesProvider.overrideWith((ref) => sharedPreferences),
             ],
@@ -261,7 +261,7 @@ void main() {
               ),
               isLinkedProvider.overrideWithValue(false),
               isJaLocaleProvider.overrideWithValue(true),
-              isOverDiscountDeadlineProvider.overrideWithProvider((param) => Provider.autoDispose((_) => false)),
+              hiddenCountdownDiscountDeadlineProvider.overrideWithProvider((param) => Provider.autoDispose((_) => false)),
               durationToDiscountPriceDeadline.overrideWithProvider((param) => Provider.autoDispose((_) => const Duration(seconds: 1000))),
               sharedPreferencesProvider.overrideWith((ref) => sharedPreferences),
             ],
@@ -319,7 +319,7 @@ void main() {
               ),
               isLinkedProvider.overrideWithValue(true),
               isJaLocaleProvider.overrideWithValue(true),
-              isOverDiscountDeadlineProvider.overrideWithProvider((param) => Provider.autoDispose((_) => false)),
+              hiddenCountdownDiscountDeadlineProvider.overrideWithProvider((param) => Provider.autoDispose((_) => false)),
               durationToDiscountPriceDeadline.overrideWithProvider((param) => Provider.autoDispose((_) => const Duration(seconds: 1000))),
               sharedPreferencesProvider.overrideWith((ref) => sharedPreferences),
             ],
@@ -370,7 +370,7 @@ void main() {
                 ),
                 isLinkedProvider.overrideWithValue(false),
                 isJaLocaleProvider.overrideWithValue(true),
-                isOverDiscountDeadlineProvider.overrideWithProvider((param) => Provider.autoDispose((_) => false)),
+                hiddenCountdownDiscountDeadlineProvider.overrideWithProvider((param) => Provider.autoDispose((_) => false)),
                 durationToDiscountPriceDeadline.overrideWithProvider((param) => Provider.autoDispose((_) => const Duration(seconds: 1000))),
                 pilllAdsProvider.overrideWith((ref) => Stream.value(null)),
                 sharedPreferencesProvider.overrideWith((ref) => sharedPreferences),
@@ -420,7 +420,7 @@ void main() {
                 ),
                 isLinkedProvider.overrideWithValue(false),
                 isJaLocaleProvider.overrideWithValue(true),
-                isOverDiscountDeadlineProvider.overrideWithProvider((param) => Provider.autoDispose((_) => false)),
+                hiddenCountdownDiscountDeadlineProvider.overrideWithProvider((param) => Provider.autoDispose((_) => false)),
                 durationToDiscountPriceDeadline.overrideWithProvider((param) => Provider.autoDispose((_) => const Duration(seconds: 1000))),
                 pilllAdsProvider.overrideWith((ref) => Stream.value(null)),
                 sharedPreferencesProvider.overrideWith((ref) => sharedPreferences),
@@ -470,7 +470,7 @@ void main() {
                 ),
                 isLinkedProvider.overrideWithValue(false),
                 isJaLocaleProvider.overrideWithValue(true),
-                isOverDiscountDeadlineProvider.overrideWithProvider((param) => Provider.autoDispose((_) => false)),
+                hiddenCountdownDiscountDeadlineProvider.overrideWithProvider((param) => Provider.autoDispose((_) => false)),
                 durationToDiscountPriceDeadline.overrideWithProvider((param) => Provider.autoDispose((_) => const Duration(seconds: 1000))),
                 pilllAdsProvider.overrideWith((ref) => Stream.value(null)),
                 sharedPreferencesProvider.overrideWith((ref) => sharedPreferences),
@@ -528,7 +528,7 @@ void main() {
                 ),
                 isLinkedProvider.overrideWithValue(false),
                 isJaLocaleProvider.overrideWithValue(true),
-                isOverDiscountDeadlineProvider.overrideWithProvider((param) => Provider.autoDispose((_) => false)),
+                hiddenCountdownDiscountDeadlineProvider.overrideWithProvider((param) => Provider.autoDispose((_) => false)),
                 durationToDiscountPriceDeadline.overrideWithProvider((param) => Provider.autoDispose((_) => const Duration(seconds: 1000))),
                 pilllAdsProvider.overrideWith(
                   (ref) => Stream.value(PilllAds(
@@ -593,7 +593,7 @@ void main() {
                 ),
                 isLinkedProvider.overrideWithValue(false),
                 isJaLocaleProvider.overrideWithValue(true),
-                isOverDiscountDeadlineProvider.overrideWithProvider((param) => Provider.autoDispose((_) => false)),
+                hiddenCountdownDiscountDeadlineProvider.overrideWithProvider((param) => Provider.autoDispose((_) => false)),
                 durationToDiscountPriceDeadline.overrideWithProvider((param) => Provider.autoDispose((_) => const Duration(seconds: 1000))),
                 pilllAdsProvider.overrideWith(
                   (ref) => Stream.value(
@@ -660,7 +660,7 @@ void main() {
                 ),
                 isLinkedProvider.overrideWithValue(false),
                 isJaLocaleProvider.overrideWithValue(true),
-                isOverDiscountDeadlineProvider.overrideWithProvider((param) => Provider.autoDispose((_) => false)),
+                hiddenCountdownDiscountDeadlineProvider.overrideWithProvider((param) => Provider.autoDispose((_) => false)),
                 durationToDiscountPriceDeadline.overrideWithProvider((param) => Provider.autoDispose((_) => const Duration(seconds: 1000))),
                 pilllAdsProvider.overrideWith(
                   (ref) => Stream.value(
@@ -727,7 +727,7 @@ void main() {
                 ),
                 isLinkedProvider.overrideWithValue(false),
                 isJaLocaleProvider.overrideWithValue(true),
-                isOverDiscountDeadlineProvider.overrideWithProvider((param) => Provider.autoDispose((_) => false)),
+                hiddenCountdownDiscountDeadlineProvider.overrideWithProvider((param) => Provider.autoDispose((_) => false)),
                 durationToDiscountPriceDeadline.overrideWithProvider((param) => Provider.autoDispose((_) => const Duration(seconds: 1000))),
                 pilllAdsProvider.overrideWith(
                   (ref) => Stream.value(
@@ -794,7 +794,7 @@ void main() {
                 ),
                 isLinkedProvider.overrideWithValue(false),
                 isJaLocaleProvider.overrideWithValue(true),
-                isOverDiscountDeadlineProvider.overrideWithProvider((param) => Provider.autoDispose((_) => false)),
+                hiddenCountdownDiscountDeadlineProvider.overrideWithProvider((param) => Provider.autoDispose((_) => false)),
                 durationToDiscountPriceDeadline.overrideWithProvider((param) => Provider.autoDispose((_) => const Duration(seconds: 1000))),
                 pilllAdsProvider.overrideWith(
                   (ref) => Stream.value(
@@ -868,7 +868,7 @@ void main() {
                 ),
                 isLinkedProvider.overrideWithValue(false),
                 isJaLocaleProvider.overrideWithValue(true),
-                isOverDiscountDeadlineProvider.overrideWithProvider((param) => Provider.autoDispose((_) => false)),
+                hiddenCountdownDiscountDeadlineProvider.overrideWithProvider((param) => Provider.autoDispose((_) => false)),
                 durationToDiscountPriceDeadline.overrideWithProvider((param) => Provider.autoDispose((_) => const Duration(seconds: 1000))),
                 pilllAdsProvider.overrideWith(
                   (ref) => Stream.value(
@@ -937,7 +937,7 @@ void main() {
                 ),
                 isLinkedProvider.overrideWithValue(false),
                 isJaLocaleProvider.overrideWithValue(true),
-                isOverDiscountDeadlineProvider.overrideWithProvider((param) => Provider.autoDispose((_) => false)),
+                hiddenCountdownDiscountDeadlineProvider.overrideWithProvider((param) => Provider.autoDispose((_) => false)),
                 durationToDiscountPriceDeadline.overrideWithProvider((param) => Provider.autoDispose((_) => const Duration(seconds: 1000))),
                 pilllAdsProvider.overrideWith(
                   (ref) => Stream.value(
@@ -1006,7 +1006,7 @@ void main() {
                 ),
                 isLinkedProvider.overrideWithValue(false),
                 isJaLocaleProvider.overrideWithValue(true),
-                isOverDiscountDeadlineProvider.overrideWithProvider((param) => Provider.autoDispose((_) => false)),
+                hiddenCountdownDiscountDeadlineProvider.overrideWithProvider((param) => Provider.autoDispose((_) => false)),
                 durationToDiscountPriceDeadline.overrideWithProvider((param) => Provider.autoDispose((_) => const Duration(seconds: 1000))),
                 pilllAdsProvider.overrideWith(
                   (ref) => Stream.value(
@@ -1075,7 +1075,7 @@ void main() {
                 ),
                 isLinkedProvider.overrideWithValue(false),
                 isJaLocaleProvider.overrideWithValue(true),
-                isOverDiscountDeadlineProvider.overrideWithProvider((param) => Provider.autoDispose((_) => false)),
+                hiddenCountdownDiscountDeadlineProvider.overrideWithProvider((param) => Provider.autoDispose((_) => false)),
                 durationToDiscountPriceDeadline.overrideWithProvider((param) => Provider.autoDispose((_) => const Duration(seconds: 1000))),
                 pilllAdsProvider.overrideWith(
                   (ref) => Stream.value(
@@ -1144,7 +1144,7 @@ void main() {
                 ),
                 isLinkedProvider.overrideWithValue(false),
                 isJaLocaleProvider.overrideWithValue(true),
-                isOverDiscountDeadlineProvider.overrideWithProvider((param) => Provider.autoDispose((_) => false)),
+                hiddenCountdownDiscountDeadlineProvider.overrideWithProvider((param) => Provider.autoDispose((_) => false)),
                 durationToDiscountPriceDeadline.overrideWithProvider((param) => Provider.autoDispose((_) => const Duration(seconds: 1000))),
                 pilllAdsProvider.overrideWith(
                   (ref) => Stream.value(
@@ -1213,7 +1213,7 @@ void main() {
                 ),
                 isLinkedProvider.overrideWithValue(false),
                 isJaLocaleProvider.overrideWithValue(true),
-                isOverDiscountDeadlineProvider.overrideWithProvider((param) => Provider.autoDispose((_) => false)),
+                hiddenCountdownDiscountDeadlineProvider.overrideWithProvider((param) => Provider.autoDispose((_) => false)),
                 durationToDiscountPriceDeadline.overrideWithProvider((param) => Provider.autoDispose((_) => const Duration(seconds: 1000))),
                 pilllAdsProvider.overrideWith(
                   (ref) => Stream.value(
@@ -1283,7 +1283,7 @@ void main() {
               ),
               isLinkedProvider.overrideWithValue(false),
               isJaLocaleProvider.overrideWithValue(true),
-              isOverDiscountDeadlineProvider.overrideWithProvider((param) => Provider.autoDispose((_) => false)),
+              hiddenCountdownDiscountDeadlineProvider.overrideWithProvider((param) => Provider.autoDispose((_) => false)),
               durationToDiscountPriceDeadline.overrideWithProvider((param) => Provider.autoDispose((_) => const Duration(seconds: 1000))),
               sharedPreferencesProvider.overrideWith((ref) => sharedPreferences),
             ],
@@ -1341,7 +1341,7 @@ void main() {
               ),
               isLinkedProvider.overrideWithValue(true),
               isJaLocaleProvider.overrideWithValue(true),
-              isOverDiscountDeadlineProvider.overrideWithProvider((param) => Provider.autoDispose((_) => false)),
+              hiddenCountdownDiscountDeadlineProvider.overrideWithProvider((param) => Provider.autoDispose((_) => false)),
               durationToDiscountPriceDeadline.overrideWithProvider((param) => Provider.autoDispose((_) => const Duration(seconds: 1000))),
               sharedPreferencesProvider.overrideWith((ref) => sharedPreferences),
             ],
@@ -1399,7 +1399,7 @@ void main() {
               ),
               isLinkedProvider.overrideWithValue(true),
               isJaLocaleProvider.overrideWithValue(true),
-              isOverDiscountDeadlineProvider.overrideWithProvider((param) => Provider.autoDispose((_) => false)),
+              hiddenCountdownDiscountDeadlineProvider.overrideWithProvider((param) => Provider.autoDispose((_) => false)),
               durationToDiscountPriceDeadline.overrideWithProvider((param) => Provider.autoDispose((_) => const Duration(seconds: 1000))),
               sharedPreferencesProvider.overrideWith((ref) => sharedPreferences),
             ],
