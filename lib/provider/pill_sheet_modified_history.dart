@@ -14,12 +14,13 @@ final pillSheetModifiedHistoriesProvider = StreamProvider.family.autoDispose((re
           isLessThanOrEqualTo: today().add(const Duration(days: 1)),
           isGreaterThanOrEqualTo: today().subtract(const Duration(days: PillSheetModifiedHistoryServiceActionFactory.limitDays)),
         )
+        .where(PillSheetModifiedHistoryFirestoreKeys.archivedDateTime, isEqualTo: null)
         .orderBy(PillSheetModifiedHistoryFirestoreKeys.estimatedEventCausingDate, descending: true)
         .startAfter([afterCursor])
         .limit(20)
         .snapshots()
         .map((reference) => reference.docs)
-        .map((docs) => docs.map((doc) => doc.data()).where((e) => e.archivedDateTime == null).toList());
+        .map((docs) => docs.map((doc) => doc.data()).toList());
   } else {
     return ref
         .watch(databaseProvider)
@@ -29,11 +30,12 @@ final pillSheetModifiedHistoriesProvider = StreamProvider.family.autoDispose((re
           isLessThanOrEqualTo: today().add(const Duration(days: 1)),
           isGreaterThanOrEqualTo: today().subtract(const Duration(days: PillSheetModifiedHistoryServiceActionFactory.limitDays)),
         )
+        .where(PillSheetModifiedHistoryFirestoreKeys.archivedDateTime, isEqualTo: null)
         .orderBy(PillSheetModifiedHistoryFirestoreKeys.estimatedEventCausingDate, descending: true)
         .limit(20)
         .snapshots()
         .map((reference) => reference.docs)
-        .map((docs) => docs.map((doc) => doc.data()).where((e) => e.archivedDateTime == null).toList());
+        .map((docs) => docs.map((doc) => doc.data()).toList());
   }
 });
 final pillSheetModifiedHistoriesWithLimitProvider = StreamProvider.family((ref, int limit) {
@@ -45,11 +47,12 @@ final pillSheetModifiedHistoriesWithLimitProvider = StreamProvider.family((ref, 
         isLessThanOrEqualTo: today().add(const Duration(days: 1)),
         isGreaterThanOrEqualTo: today().subtract(const Duration(days: PillSheetModifiedHistoryServiceActionFactory.limitDays)),
       )
+      .where(PillSheetModifiedHistoryFirestoreKeys.archivedDateTime, isEqualTo: null)
       .orderBy(PillSheetModifiedHistoryFirestoreKeys.estimatedEventCausingDate, descending: true)
       .limit(limit)
       .snapshots()
       .map((reference) => reference.docs)
-      .map((docs) => docs.map((doc) => doc.data()).where((e) => e.archivedDateTime == null).toList());
+      .map((docs) => docs.map((doc) => doc.data()).toList());
 });
 
 final batchSetPillSheetModifiedHistoryProvider = Provider((ref) => BatchSetPillSheetModifiedHistory(ref.watch(databaseProvider)));
