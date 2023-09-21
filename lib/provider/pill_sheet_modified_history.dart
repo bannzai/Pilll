@@ -37,7 +37,7 @@ final pillSheetModifiedHistoriesProvider = StreamProvider.family.autoDispose((re
         .map((docs) => docs.map((doc) => doc.data()).toList());
   }
 });
-final pillSheetModifiedHistoriesWithLimitProvider = StreamProvider.family((ref, int limit) {
+final pillSheetModifiedHistoriesWithLimitProvider = StreamProvider.family.autoDispose((ref, int limit) {
   return ref
       .watch(pillSheetModifiedHistoriesReferenceProvider)
       .where(
