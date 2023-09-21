@@ -17,8 +17,6 @@ class PillSheetModifiedHistoriesPage extends HookConsumerWidget {
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {
-    useAutomaticKeepAlive(wantKeepAlive: true);
-
     final loadingNext = useState(false);
     final afterCursor = useState<DateTime?>(null);
     final histories = useState<List<PillSheetModifiedHistory>>([]);
