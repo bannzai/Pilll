@@ -207,6 +207,7 @@ class PillSheetModifiedHistoryList extends HookConsumerWidget {
               onDismissed: (direction) {
                 analytics.logEvent(name: "archive_history", parameters: {"historyID": history.id ?? "", "actionType": history.actionType});
                 ref.read(setPillSheetModifiedHistoryProvider).call(history.copyWith(archivedDateTime: now()));
+                ref.refresh(pillSheetModifiedHistoriesReferenceProvider);
               },
               background: Container(
                 color: Colors.red,

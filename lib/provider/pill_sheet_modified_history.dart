@@ -4,11 +4,11 @@ import 'package:pilll/provider/database.dart';
 import 'package:pilll/entity/pill_sheet_modified_history.codegen.dart';
 import 'package:pilll/utils/datetime/day.dart';
 
+final pillSheetModifiedHistoriesReferenceProvider = Provider((ref) => ref.watch(databaseProvider).pillSheetModifiedHistoriesReference());
 final pillSheetModifiedHistoriesProvider = StreamProvider.family.autoDispose((ref, DateTime? afterCursor) {
   if (afterCursor != null) {
     return ref
-        .watch(databaseProvider)
-        .pillSheetModifiedHistoriesReference()
+        .watch(pillSheetModifiedHistoriesReferenceProvider)
         .where(
           PillSheetModifiedHistoryFirestoreKeys.estimatedEventCausingDate,
           isLessThanOrEqualTo: today().add(const Duration(days: 1)),
@@ -23,8 +23,7 @@ final pillSheetModifiedHistoriesProvider = StreamProvider.family.autoDispose((re
         .map((docs) => docs.map((doc) => doc.data()).toList());
   } else {
     return ref
-        .watch(databaseProvider)
-        .pillSheetModifiedHistoriesReference()
+        .watch(pillSheetModifiedHistoriesReferenceProvider)
         .where(
           PillSheetModifiedHistoryFirestoreKeys.estimatedEventCausingDate,
           isLessThanOrEqualTo: today().add(const Duration(days: 1)),
@@ -40,8 +39,7 @@ final pillSheetModifiedHistoriesProvider = StreamProvider.family.autoDispose((re
 });
 final pillSheetModifiedHistoriesWithLimitProvider = StreamProvider.family((ref, int limit) {
   return ref
-      .watch(databaseProvider)
-      .pillSheetModifiedHistoriesReference()
+      .watch(pillSheetModifiedHistoriesReferenceProvider)
       .where(
         PillSheetModifiedHistoryFirestoreKeys.estimatedEventCausingDate,
         isLessThanOrEqualTo: today().add(const Duration(days: 1)),
