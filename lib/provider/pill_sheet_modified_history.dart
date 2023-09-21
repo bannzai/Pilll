@@ -14,7 +14,7 @@ final pillSheetModifiedHistoriesProvider = StreamProvider.family.autoDispose((re
           isLessThanOrEqualTo: today().add(const Duration(days: 1)),
           isGreaterThanOrEqualTo: today().subtract(const Duration(days: PillSheetModifiedHistoryServiceActionFactory.limitDays)),
         )
-        .where(PillSheetModifiedHistoryFirestoreKeys.archivedDateTime, isEqualTo: null)
+        .where(PillSheetModifiedHistoryFirestoreKeys.archivedDateTime, isNull: true)
         .orderBy(PillSheetModifiedHistoryFirestoreKeys.estimatedEventCausingDate, descending: true)
         .startAfter([afterCursor])
         .limit(20)
@@ -30,7 +30,7 @@ final pillSheetModifiedHistoriesProvider = StreamProvider.family.autoDispose((re
           isLessThanOrEqualTo: today().add(const Duration(days: 1)),
           isGreaterThanOrEqualTo: today().subtract(const Duration(days: PillSheetModifiedHistoryServiceActionFactory.limitDays)),
         )
-        .where(PillSheetModifiedHistoryFirestoreKeys.archivedDateTime, isEqualTo: null)
+        .where(PillSheetModifiedHistoryFirestoreKeys.archivedDateTime, isNull: true)
         .orderBy(PillSheetModifiedHistoryFirestoreKeys.estimatedEventCausingDate, descending: true)
         .limit(20)
         .snapshots()
@@ -47,7 +47,7 @@ final pillSheetModifiedHistoriesWithLimitProvider = StreamProvider.family((ref, 
         isLessThanOrEqualTo: today().add(const Duration(days: 1)),
         isGreaterThanOrEqualTo: today().subtract(const Duration(days: PillSheetModifiedHistoryServiceActionFactory.limitDays)),
       )
-      .where(PillSheetModifiedHistoryFirestoreKeys.archivedDateTime, isEqualTo: null)
+      .where(PillSheetModifiedHistoryFirestoreKeys.archivedDateTime, isNull: true)
       .orderBy(PillSheetModifiedHistoryFirestoreKeys.estimatedEventCausingDate, descending: true)
       .limit(limit)
       .snapshots()
