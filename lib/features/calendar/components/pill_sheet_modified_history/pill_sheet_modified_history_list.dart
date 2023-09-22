@@ -207,7 +207,7 @@ class PillSheetModifiedHistoryList extends HookConsumerWidget {
                 ref.read(setPillSheetModifiedHistoryProvider).call(history.copyWith(archivedDateTime: now()));
               },
               background: Container(
-                color: Colors.red,
+                color: Colors.blueAccent,
                 child: const SizedBox(
                   width: 40,
                   child: Padding(
