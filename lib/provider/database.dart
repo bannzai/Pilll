@@ -13,14 +13,18 @@ import 'package:pilll/entity/pilll_ads.codegen.dart';
 import 'package:pilll/entity/schedule.codegen.dart';
 import 'package:pilll/entity/user.codegen.dart';
 import 'package:pilll/provider/auth.dart';
+import 'package:riverpod_annotation/riverpod_annotation.dart';
 
-final databaseProvider = Provider<DatabaseConnection>((ref) {
+part 'database.g.dart';
+
+@Riverpod(keepAlive: true, dependencies: [firebaseUserState])
+DatabaseConnection databaseProvider(DatabaseConnectionRef ref) {
   final stream = ref.watch(firebaseUserStateProvider);
   // 初回起動の時には.userChanges()のstreamは流れてこないので、currentUserのidを使う
   final uid = stream.asData?.value?.uid ?? firebase.FirebaseAuth.instance.currentUser?.uid;
   debugPrint("[DEBUG] database uid is $uid");
   return DatabaseConnection(uid);
-});
+}
 
 abstract class _CollectionPath {
   static const String users = "users";
