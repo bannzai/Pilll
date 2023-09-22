@@ -211,7 +211,7 @@ class PillSheetModifiedHistoryList extends HookConsumerWidget {
                 child: const SizedBox(
                   width: 40,
                   child: Padding(
-                    padding: EdgeInsets.all(20.0),
+                    padding: EdgeInsets.only(right: 10.0),
                     child: Align(alignment: Alignment.centerRight, child: Icon(Icons.archive_outlined)),
                   ),
                 ),
