@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_hooks/flutter_hooks.dart';
-import 'package:flutter_svg/flutter_svg.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
 import 'package:pilll/components/atoms/color.dart';
 import 'package:pilll/components/atoms/text_color.dart';
@@ -21,7 +20,7 @@ class PillSheetModifiedHistoriesPage extends HookConsumerWidget {
     final loadingNext = useState(false);
     final afterCursor = useState<DateTime?>(null);
     final histories = useState<List<PillSheetModifiedHistory>>([]);
-    final pillSheetModifiedHistoryAsyncValue = ref.watch(pillSheetModifiedHistoriesProvider(afterCursor.value));
+    final pillSheetModifiedHistoryAsyncValue = ref.watch(pillSheetModifiedHistoriesProvider(afterCursor: afterCursor.value));
     useEffect(() {
       loadingNext.value = false;
 

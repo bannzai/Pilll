@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_hooks/flutter_hooks.dart';
-import 'package:flutter_svg/flutter_svg.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
 import 'package:pilll/components/atoms/color.dart';
 import 'package:pilll/components/atoms/text_color.dart';
@@ -13,15 +12,15 @@ import 'package:pilll/features/error/universal_error_page.dart';
 import 'package:pilll/provider/pill_sheet_modified_history.dart';
 import 'package:pilll/provider/premium_and_trial.codegen.dart';
 
-class PillSheetModifiedHistoriesPage extends HookConsumerWidget {
-  const PillSheetModifiedHistoriesPage({Key? key}) : super(key: key);
+class ArchivedPillSheetModifiedHistoriesPage extends HookConsumerWidget {
+  const ArchivedPillSheetModifiedHistoriesPage({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {
     final loadingNext = useState(false);
     final afterCursor = useState<DateTime?>(null);
     final histories = useState<List<PillSheetModifiedHistory>>([]);
-    final pillSheetModifiedHistoryAsyncValue = ref.watch(pillSheetModifiedHistoriesProvider(afterCursor.value));
+    final pillSheetModifiedHistoryAsyncValue = ref.watch(archivedPillSheetModifiedHistoriesProvider(afterCursor: afterCursor.value));
     useEffect(() {
       loadingNext.value = false;
 
@@ -97,11 +96,11 @@ class PillSheetModifiedHistoriesPage extends HookConsumerWidget {
   }
 }
 
-extension PillSheetModifiedHistoriesPageRoute on PillSheetModifiedHistoriesPage {
+extension ArhchivedPillSheetModifiedHistoriesPageRoute on ArchivedPillSheetModifiedHistoriesPage {
   static Route<dynamic> route() {
     return MaterialPageRoute(
-      settings: const RouteSettings(name: "PillSheetModifiedHistoriesPage"),
-      builder: (_) => const PillSheetModifiedHistoriesPage(),
+      settings: const RouteSettings(name: "ArchivedPillSheetModifiedHistoriesPage"),
+      builder: (_) => const ArchivedPillSheetModifiedHistoriesPage(),
     );
   }
 }
