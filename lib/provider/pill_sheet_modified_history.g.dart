@@ -7,7 +7,7 @@ part of 'pill_sheet_modified_history.dart';
 // **************************************************************************
 
 String _$pillSheetModifiedHistoriesHash() =>
-    r'ceefe2c96a4814bda43249e43e4c52e1cbcbdf1d';
+    r'fa107d5dacaa23d4188638765fc6358c46ff861e';
 
 /// Copied from Dart SDK
 class _SystemHash {
@@ -42,7 +42,7 @@ class PillSheetModifiedHistoriesFamily
 
   /// See also [pillSheetModifiedHistories].
   PillSheetModifiedHistoriesProvider call({
-    String? afterCursor,
+    DateTime? afterCursor,
   }) {
     return PillSheetModifiedHistoriesProvider(
       afterCursor: afterCursor,
@@ -58,18 +58,12 @@ class PillSheetModifiedHistoriesFamily
     );
   }
 
-  static final Iterable<ProviderOrFamily> _dependencies = <ProviderOrFamily>[
-    databaseProvider
-  ];
+  static const Iterable<ProviderOrFamily>? _dependencies = null;
 
   @override
   Iterable<ProviderOrFamily>? get dependencies => _dependencies;
 
-  static final Iterable<ProviderOrFamily> _allTransitiveDependencies =
-      <ProviderOrFamily>{
-    databaseProvider,
-    ...?databaseProvider.allTransitiveDependencies
-  };
+  static const Iterable<ProviderOrFamily>? _allTransitiveDependencies = null;
 
   @override
   Iterable<ProviderOrFamily>? get allTransitiveDependencies =>
@@ -84,7 +78,7 @@ class PillSheetModifiedHistoriesProvider
     extends AutoDisposeStreamProvider<List<PillSheetModifiedHistory>> {
   /// See also [pillSheetModifiedHistories].
   PillSheetModifiedHistoriesProvider({
-    String? afterCursor,
+    DateTime? afterCursor,
   }) : this._internal(
           (ref) => pillSheetModifiedHistories(
             ref as PillSheetModifiedHistoriesRef,
@@ -112,7 +106,7 @@ class PillSheetModifiedHistoriesProvider
     required this.afterCursor,
   }) : super.internal();
 
-  final String? afterCursor;
+  final DateTime? afterCursor;
 
   @override
   Override overrideWith(
@@ -158,7 +152,7 @@ class PillSheetModifiedHistoriesProvider
 mixin PillSheetModifiedHistoriesRef
     on AutoDisposeStreamProviderRef<List<PillSheetModifiedHistory>> {
   /// The parameter `afterCursor` of this provider.
-  String? get afterCursor;
+  DateTime? get afterCursor;
 }
 
 class _PillSheetModifiedHistoriesProviderElement
@@ -167,12 +161,12 @@ class _PillSheetModifiedHistoriesProviderElement
   _PillSheetModifiedHistoriesProviderElement(super.provider);
 
   @override
-  String? get afterCursor =>
+  DateTime? get afterCursor =>
       (origin as PillSheetModifiedHistoriesProvider).afterCursor;
 }
 
 String _$archivedPillSheetModifiedHistoriesHash() =>
-    r'675c8ba98a48b6b7f8fa918a1c544ddea62eb2f3';
+    r'38955bf595533b68fc11ca6a36525a09d72df2d6';
 
 /// See also [archivedPillSheetModifiedHistories].
 @ProviderFor(archivedPillSheetModifiedHistories)
@@ -187,7 +181,7 @@ class ArchivedPillSheetModifiedHistoriesFamily
 
   /// See also [archivedPillSheetModifiedHistories].
   ArchivedPillSheetModifiedHistoriesProvider call({
-    String? afterCursor,
+    DateTime? afterCursor,
   }) {
     return ArchivedPillSheetModifiedHistoriesProvider(
       afterCursor: afterCursor,
@@ -203,18 +197,12 @@ class ArchivedPillSheetModifiedHistoriesFamily
     );
   }
 
-  static final Iterable<ProviderOrFamily> _dependencies = <ProviderOrFamily>[
-    databaseProvider
-  ];
+  static const Iterable<ProviderOrFamily>? _dependencies = null;
 
   @override
   Iterable<ProviderOrFamily>? get dependencies => _dependencies;
 
-  static final Iterable<ProviderOrFamily> _allTransitiveDependencies =
-      <ProviderOrFamily>{
-    databaseProvider,
-    ...?databaseProvider.allTransitiveDependencies
-  };
+  static const Iterable<ProviderOrFamily>? _allTransitiveDependencies = null;
 
   @override
   Iterable<ProviderOrFamily>? get allTransitiveDependencies =>
@@ -229,7 +217,7 @@ class ArchivedPillSheetModifiedHistoriesProvider
     extends AutoDisposeStreamProvider<List<PillSheetModifiedHistory>> {
   /// See also [archivedPillSheetModifiedHistories].
   ArchivedPillSheetModifiedHistoriesProvider({
-    String? afterCursor,
+    DateTime? afterCursor,
   }) : this._internal(
           (ref) => archivedPillSheetModifiedHistories(
             ref as ArchivedPillSheetModifiedHistoriesRef,
@@ -257,7 +245,7 @@ class ArchivedPillSheetModifiedHistoriesProvider
     required this.afterCursor,
   }) : super.internal();
 
-  final String? afterCursor;
+  final DateTime? afterCursor;
 
   @override
   Override overrideWith(
@@ -303,7 +291,7 @@ class ArchivedPillSheetModifiedHistoriesProvider
 mixin ArchivedPillSheetModifiedHistoriesRef
     on AutoDisposeStreamProviderRef<List<PillSheetModifiedHistory>> {
   /// The parameter `afterCursor` of this provider.
-  String? get afterCursor;
+  DateTime? get afterCursor;
 }
 
 class _ArchivedPillSheetModifiedHistoriesProviderElement
@@ -312,12 +300,12 @@ class _ArchivedPillSheetModifiedHistoriesProviderElement
   _ArchivedPillSheetModifiedHistoriesProviderElement(super.provider);
 
   @override
-  String? get afterCursor =>
+  DateTime? get afterCursor =>
       (origin as ArchivedPillSheetModifiedHistoriesProvider).afterCursor;
 }
 
 String _$pillSheetModifiedHistoriesWithLimitProviderHash() =>
-    r'a8e96e198e760887d8e331058ee22bf45cda0c9e';
+    r'c385a142d60fce13e405bdf687a25dd83d1f12a2';
 
 /// See also [pillSheetModifiedHistoriesWithLimitProvider].
 @ProviderFor(pillSheetModifiedHistoriesWithLimitProvider)
@@ -348,18 +336,12 @@ class PillSheetModifiedHistoriesWithLimitProviderFamily
     );
   }
 
-  static final Iterable<ProviderOrFamily> _dependencies = <ProviderOrFamily>[
-    databaseProvider
-  ];
+  static const Iterable<ProviderOrFamily>? _dependencies = null;
 
   @override
   Iterable<ProviderOrFamily>? get dependencies => _dependencies;
 
-  static final Iterable<ProviderOrFamily> _allTransitiveDependencies =
-      <ProviderOrFamily>{
-    databaseProvider,
-    ...?databaseProvider.allTransitiveDependencies
-  };
+  static const Iterable<ProviderOrFamily>? _allTransitiveDependencies = null;
 
   @override
   Iterable<ProviderOrFamily>? get allTransitiveDependencies =>

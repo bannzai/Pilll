@@ -7,8 +7,8 @@ import 'package:riverpod_annotation/riverpod_annotation.dart';
 
 part 'pill_sheet_modified_history.g.dart';
 
-@Riverpod(dependencies: [database])
-Stream<List<PillSheetModifiedHistory>> pillSheetModifiedHistories(PillSheetModifiedHistoriesRef ref, {String? afterCursor}) {
+@riverpod
+Stream<List<PillSheetModifiedHistory>> pillSheetModifiedHistories(PillSheetModifiedHistoriesRef ref, {DateTime? afterCursor}) {
   if (afterCursor != null) {
     return ref
         .watch(databaseProvider)
@@ -43,8 +43,8 @@ Stream<List<PillSheetModifiedHistory>> pillSheetModifiedHistories(PillSheetModif
   }
 }
 
-@Riverpod(dependencies: [database])
-Stream<List<PillSheetModifiedHistory>> archivedPillSheetModifiedHistories(ArchivedPillSheetModifiedHistoriesRef ref, {String? afterCursor}) {
+@Riverpod()
+Stream<List<PillSheetModifiedHistory>> archivedPillSheetModifiedHistories(ArchivedPillSheetModifiedHistoriesRef ref, {DateTime? afterCursor}) {
   if (afterCursor != null) {
     return ref
         .watch(databaseProvider)
@@ -79,7 +79,7 @@ Stream<List<PillSheetModifiedHistory>> archivedPillSheetModifiedHistories(Archiv
   }
 }
 
-@Riverpod(dependencies: [database])
+@Riverpod()
 Stream<List<PillSheetModifiedHistory>> pillSheetModifiedHistoriesWithLimitProvider(PillSheetModifiedHistoriesWithLimitProviderRef ref,
     {required int limit}) {
   return ref
