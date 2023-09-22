@@ -80,8 +80,7 @@ Stream<List<PillSheetModifiedHistory>> archivedPillSheetModifiedHistories(Archiv
 }
 
 @Riverpod()
-Stream<List<PillSheetModifiedHistory>> pillSheetModifiedHistoriesWithLimitProvider(PillSheetModifiedHistoriesWithLimitProviderRef ref,
-    {required int limit}) {
+Stream<List<PillSheetModifiedHistory>> pillSheetModifiedHistoriesWithLimit(PillSheetModifiedHistoriesWithLimitRef ref, {required int limit}) {
   return ref
       .watch(databaseProvider)
       .pillSheetModifiedHistoriesReference()

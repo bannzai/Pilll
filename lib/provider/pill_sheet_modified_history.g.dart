@@ -304,32 +304,32 @@ class _ArchivedPillSheetModifiedHistoriesProviderElement
       (origin as ArchivedPillSheetModifiedHistoriesProvider).afterCursor;
 }
 
-String _$pillSheetModifiedHistoriesWithLimitProviderHash() =>
-    r'c385a142d60fce13e405bdf687a25dd83d1f12a2';
+String _$pillSheetModifiedHistoriesWithLimitHash() =>
+    r'ef2177bae47599b8f67aefb3828f347c44ae084a';
 
-/// See also [pillSheetModifiedHistoriesWithLimitProvider].
-@ProviderFor(pillSheetModifiedHistoriesWithLimitProvider)
-const pillSheetModifiedHistoriesWithLimitProviderProvider =
-    PillSheetModifiedHistoriesWithLimitProviderFamily();
+/// See also [pillSheetModifiedHistoriesWithLimit].
+@ProviderFor(pillSheetModifiedHistoriesWithLimit)
+const pillSheetModifiedHistoriesWithLimitProvider =
+    PillSheetModifiedHistoriesWithLimitFamily();
 
-/// See also [pillSheetModifiedHistoriesWithLimitProvider].
-class PillSheetModifiedHistoriesWithLimitProviderFamily
+/// See also [pillSheetModifiedHistoriesWithLimit].
+class PillSheetModifiedHistoriesWithLimitFamily
     extends Family<AsyncValue<List<PillSheetModifiedHistory>>> {
-  /// See also [pillSheetModifiedHistoriesWithLimitProvider].
-  const PillSheetModifiedHistoriesWithLimitProviderFamily();
+  /// See also [pillSheetModifiedHistoriesWithLimit].
+  const PillSheetModifiedHistoriesWithLimitFamily();
 
-  /// See also [pillSheetModifiedHistoriesWithLimitProvider].
-  PillSheetModifiedHistoriesWithLimitProviderProvider call({
+  /// See also [pillSheetModifiedHistoriesWithLimit].
+  PillSheetModifiedHistoriesWithLimitProvider call({
     required int limit,
   }) {
-    return PillSheetModifiedHistoriesWithLimitProviderProvider(
+    return PillSheetModifiedHistoriesWithLimitProvider(
       limit: limit,
     );
   }
 
   @override
-  PillSheetModifiedHistoriesWithLimitProviderProvider getProviderOverride(
-    covariant PillSheetModifiedHistoriesWithLimitProviderProvider provider,
+  PillSheetModifiedHistoriesWithLimitProvider getProviderOverride(
+    covariant PillSheetModifiedHistoriesWithLimitProvider provider,
   ) {
     return call(
       limit: provider.limit,
@@ -348,35 +348,33 @@ class PillSheetModifiedHistoriesWithLimitProviderFamily
       _allTransitiveDependencies;
 
   @override
-  String? get name => r'pillSheetModifiedHistoriesWithLimitProviderProvider';
+  String? get name => r'pillSheetModifiedHistoriesWithLimitProvider';
 }
 
-/// See also [pillSheetModifiedHistoriesWithLimitProvider].
-class PillSheetModifiedHistoriesWithLimitProviderProvider
+/// See also [pillSheetModifiedHistoriesWithLimit].
+class PillSheetModifiedHistoriesWithLimitProvider
     extends AutoDisposeStreamProvider<List<PillSheetModifiedHistory>> {
-  /// See also [pillSheetModifiedHistoriesWithLimitProvider].
-  PillSheetModifiedHistoriesWithLimitProviderProvider({
+  /// See also [pillSheetModifiedHistoriesWithLimit].
+  PillSheetModifiedHistoriesWithLimitProvider({
     required int limit,
   }) : this._internal(
-          (ref) => pillSheetModifiedHistoriesWithLimitProvider(
-            ref as PillSheetModifiedHistoriesWithLimitProviderRef,
+          (ref) => pillSheetModifiedHistoriesWithLimit(
+            ref as PillSheetModifiedHistoriesWithLimitRef,
             limit: limit,
           ),
-          from: pillSheetModifiedHistoriesWithLimitProviderProvider,
-          name: r'pillSheetModifiedHistoriesWithLimitProviderProvider',
+          from: pillSheetModifiedHistoriesWithLimitProvider,
+          name: r'pillSheetModifiedHistoriesWithLimitProvider',
           debugGetCreateSourceHash:
               const bool.fromEnvironment('dart.vm.product')
                   ? null
-                  : _$pillSheetModifiedHistoriesWithLimitProviderHash,
-          dependencies:
-              PillSheetModifiedHistoriesWithLimitProviderFamily._dependencies,
-          allTransitiveDependencies:
-              PillSheetModifiedHistoriesWithLimitProviderFamily
-                  ._allTransitiveDependencies,
+                  : _$pillSheetModifiedHistoriesWithLimitHash,
+          dependencies: PillSheetModifiedHistoriesWithLimitFamily._dependencies,
+          allTransitiveDependencies: PillSheetModifiedHistoriesWithLimitFamily
+              ._allTransitiveDependencies,
           limit: limit,
         );
 
-  PillSheetModifiedHistoriesWithLimitProviderProvider._internal(
+  PillSheetModifiedHistoriesWithLimitProvider._internal(
     super._createNotifier, {
     required super.name,
     required super.dependencies,
@@ -391,13 +389,13 @@ class PillSheetModifiedHistoriesWithLimitProviderProvider
   @override
   Override overrideWith(
     Stream<List<PillSheetModifiedHistory>> Function(
-            PillSheetModifiedHistoriesWithLimitProviderRef provider)
+            PillSheetModifiedHistoriesWithLimitRef provider)
         create,
   ) {
     return ProviderOverride(
       origin: this,
-      override: PillSheetModifiedHistoriesWithLimitProviderProvider._internal(
-        (ref) => create(ref as PillSheetModifiedHistoriesWithLimitProviderRef),
+      override: PillSheetModifiedHistoriesWithLimitProvider._internal(
+        (ref) => create(ref as PillSheetModifiedHistoriesWithLimitRef),
         from: from,
         name: null,
         dependencies: null,
@@ -411,12 +409,12 @@ class PillSheetModifiedHistoriesWithLimitProviderProvider
   @override
   AutoDisposeStreamProviderElement<List<PillSheetModifiedHistory>>
       createElement() {
-    return _PillSheetModifiedHistoriesWithLimitProviderProviderElement(this);
+    return _PillSheetModifiedHistoriesWithLimitProviderElement(this);
   }
 
   @override
   bool operator ==(Object other) {
-    return other is PillSheetModifiedHistoriesWithLimitProviderProvider &&
+    return other is PillSheetModifiedHistoriesWithLimitProvider &&
         other.limit == limit;
   }
 
@@ -429,20 +427,20 @@ class PillSheetModifiedHistoriesWithLimitProviderProvider
   }
 }
 
-mixin PillSheetModifiedHistoriesWithLimitProviderRef
+mixin PillSheetModifiedHistoriesWithLimitRef
     on AutoDisposeStreamProviderRef<List<PillSheetModifiedHistory>> {
   /// The parameter `limit` of this provider.
   int get limit;
 }
 
-class _PillSheetModifiedHistoriesWithLimitProviderProviderElement
+class _PillSheetModifiedHistoriesWithLimitProviderElement
     extends AutoDisposeStreamProviderElement<List<PillSheetModifiedHistory>>
-    with PillSheetModifiedHistoriesWithLimitProviderRef {
-  _PillSheetModifiedHistoriesWithLimitProviderProviderElement(super.provider);
+    with PillSheetModifiedHistoriesWithLimitRef {
+  _PillSheetModifiedHistoriesWithLimitProviderElement(super.provider);
 
   @override
   int get limit =>
-      (origin as PillSheetModifiedHistoriesWithLimitProviderProvider).limit;
+      (origin as PillSheetModifiedHistoriesWithLimitProvider).limit;
 }
 // ignore_for_file: type=lint
 // ignore_for_file: subtype_of_sealed_class, invalid_use_of_internal_member

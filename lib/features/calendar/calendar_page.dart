@@ -43,7 +43,8 @@ class CalendarPage extends HookConsumerWidget {
 
     final displayedMonth = _calendarDataSource[page.value];
     return AsyncValueGroup.group6(
-      ref.watch(pillSheetModifiedHistoriesWithLimitProvider(CalendarPillSheetModifiedHistoryCardState.pillSheetModifiedHistoriesThreshold + 1)),
+      ref.watch(
+          pillSheetModifiedHistoriesWithLimitProvider(limit: CalendarPillSheetModifiedHistoryCardState.pillSheetModifiedHistoriesThreshold + 1)),
       ref.watch(premiumAndTrialProvider),
       ref.watch(calendarMenstruationBandListProvider),
       ref.watch(calendarScheduledMenstruationBandListProvider),
