@@ -47,17 +47,9 @@ class ArchivedPillSheetModifiedHistoriesPage extends HookConsumerWidget {
                   onPressed: () => Navigator.of(context).pop(),
                 ),
                 title: const Text(
-                  "服用履歴",
+                  "アーカイブ済み服用履歴",
                   style: TextStyle(color: TextColor.main),
                 ),
-                actions: [
-                  IconButton(
-                    icon: const Icon(Icons.archive_outlined, color: Colors.black),
-                    onPressed: () {
-                      // Navigator.of(context).push(route)
-                    },
-                  ),
-                ],
                 centerTitle: false,
                 backgroundColor: PilllColors.white,
               ),
