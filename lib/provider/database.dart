@@ -18,7 +18,7 @@ import 'package:riverpod_annotation/riverpod_annotation.dart';
 part 'database.g.dart';
 
 @Riverpod(keepAlive: true, dependencies: [firebaseUserState])
-DatabaseConnection databaseProvider(DatabaseConnectionRef ref) {
+DatabaseConnection database(DatabaseRef ref) {
   final stream = ref.watch(firebaseUserStateProvider);
   // 初回起動の時には.userChanges()のstreamは流れてこないので、currentUserのidを使う
   final uid = stream.asData?.value?.uid ?? firebase.FirebaseAuth.instance.currentUser?.uid;

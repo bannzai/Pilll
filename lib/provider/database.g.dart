@@ -6,16 +6,15 @@ part of 'database.dart';
 // RiverpodGenerator
 // **************************************************************************
 
-String _$databaseProviderHash() => r'ff1cb73a25e2c15782be690516175d9e39daa82c';
+String _$databaseHash() => r'53bd867abd95fdb4edf15dcc60ae4af5424e11e2';
 
-/// See also [databaseProvider].
-@ProviderFor(databaseProvider)
-final databaseProviderProvider = Provider<DatabaseConnection>.internal(
-  databaseProvider,
-  name: r'databaseProviderProvider',
-  debugGetCreateSourceHash: const bool.fromEnvironment('dart.vm.product')
-      ? null
-      : _$databaseProviderHash,
+/// See also [database].
+@ProviderFor(database)
+final databaseProvider = Provider<DatabaseConnection>.internal(
+  database,
+  name: r'databaseProvider',
+  debugGetCreateSourceHash:
+      const bool.fromEnvironment('dart.vm.product') ? null : _$databaseHash,
   dependencies: <ProviderOrFamily>[firebaseUserStateProvider],
   allTransitiveDependencies: <ProviderOrFamily>{
     firebaseUserStateProvider,
@@ -23,6 +22,6 @@ final databaseProviderProvider = Provider<DatabaseConnection>.internal(
   },
 );
 
-typedef DatabaseProviderRef = ProviderRef<DatabaseConnection>;
+typedef DatabaseRef = ProviderRef<DatabaseConnection>;
 // ignore_for_file: type=lint
 // ignore_for_file: subtype_of_sealed_class, invalid_use_of_internal_member
