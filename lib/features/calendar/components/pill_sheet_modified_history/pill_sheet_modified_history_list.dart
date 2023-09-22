@@ -1,8 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
-import 'package:pilll/components/atoms/font.dart';
-import 'package:pilll/components/atoms/text_color.dart';
 import 'package:pilll/features/calendar/components/pill_sheet_modified_history/components/rows/pill_sheet_modified_history_automatically_recorded_last_taken_date_action.dart';
 import 'package:pilll/features/calendar/components/pill_sheet_modified_history/components/rows/pill_sheet_modified_history_began_rest_duration.dart';
 import 'package:pilll/features/calendar/components/pill_sheet_modified_history/components/rows/pill_sheet_modified_history_begin_display_number_action.dart';
@@ -214,19 +212,7 @@ class PillSheetModifiedHistoryList extends HookConsumerWidget {
                   width: 40,
                   child: Padding(
                     padding: EdgeInsets.all(20.0),
-                    child: Align(
-                      alignment: Alignment.centerRight,
-                      child: Text(
-                        "削除",
-                        style: TextStyle(
-                          fontFamily: FontFamily.japanese,
-                          fontWeight: FontWeight.w600,
-                          fontSize: 14,
-                          color: TextColor.white,
-                        ),
-                        textAlign: TextAlign.right,
-                      ),
-                    ),
+                    child: Align(alignment: Alignment.centerRight, child: Icon(Icons.archive_outlined)),
                   ),
                 ),
               ),
