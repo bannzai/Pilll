@@ -82,27 +82,21 @@ Stream<List<PillSheetModifiedHistory>> archivedPillSheetModifiedHistories(Archiv
 
 @Riverpod()
 Stream<List<PillSheetModifiedHistory>> pillSheetModifiedHistoriesWithLimit(PillSheetModifiedHistoriesWithLimitRef ref, {required int limit}) {
-  try {
-    final value = ref
-        .watch(databaseProvider)
-        .pillSheetModifiedHistoriesReference()
-        .where(
+  return ref
+      .watch(databaseProvider)
+      .pillSheetModifiedHistoriesReference()
+      .where(
+        Filter.or(
+          Filter(PillSheetModifiedHistoryFirestoreKeys.isArchived, isEqualTo: false),
           // TODO: [PillSheetModifiedHistory-IsArchived] 2024-04 移行に削除。TTLで半年以上前のデータは消えるので、それ以降はisArchivedはすべての入っているのでこのisNullの条件は不要になる
           Filter(PillSheetModifiedHistoryFirestoreKeys.isArchived, isNull: true),
-        )
-        // .orderBy(PillSheetModifiedHistoryFirestoreKeys.estimatedEventCausingDate, descending: true)
-        .limit(limit)
-        .snapshots()
-        .map((reference) => reference.docs)
-        .map((docs) => docs.map((doc) => doc.data()).toList());
-
-    value.forEach((element) {
-      debugPrint("[DEBUG] limit element: ${element}");
-    });
-    return value;
-  } catch (e) {
-    rethrow;
-  }
+        ),
+      )
+      .orderBy(PillSheetModifiedHistoryFirestoreKeys.estimatedEventCausingDate, descending: true)
+      .limit(limit)
+      .snapshots()
+      .map((reference) => reference.docs)
+      .map((docs) => docs.map((doc) => doc.data()).toList());
 }
 
 final batchSetPillSheetModifiedHistoryProvider = Provider((ref) => BatchSetPillSheetModifiedHistory(ref.watch(databaseProvider)));

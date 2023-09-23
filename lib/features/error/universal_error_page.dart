@@ -67,8 +67,6 @@ class UniversalErrorPageState extends State<UniversalErrorPage> {
     } else {
       message = error.toString();
     }
-
-    debugPrint("[ERRRO] $message");
     return Scaffold(
       backgroundColor: PilllColors.background,
       body: Center(
