@@ -81,6 +81,8 @@ class PillSheetModifiedHistory with _$PillSheetModifiedHistory {
     DateTime? ttlExpiresDateTime,
     // TODO: [ArchivedPillSheetModifiedHistory] 2024-04以降に削除して、pill_sheet_modified_historiesに統合する。
     // 古いPillSheetModifiedHistoryのisArchivedにインデックスが貼られないため、TTLの期間内のデータが残っている間はarchived_pill_sheet_modified_historiesを使う
+    // null含めて値を入れないとクエリの条件に合致しないので、2024-04まではarchivedDateTime,isArchivedのデータが必ず存在するPillSheetModifiedHistoryの準備機関とする
+    // バッチを書いても良いが件数が多いのでこの方法をとっている
     @JsonKey(
       fromJson: TimestampConverter.timestampToDateTime,
       toJson: TimestampConverter.dateTimeToTimestamp,
