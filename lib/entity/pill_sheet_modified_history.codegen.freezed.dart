@@ -46,8 +46,7 @@ mixin _$PillSheetModifiedHistory {
       fromJson: TimestampConverter.timestampToDateTime,
       toJson: TimestampConverter.dateTimeToTimestamp)
   DateTime? get ttlExpiresDateTime =>
-      throw _privateConstructorUsedError; // TODO: [ArchivedPillSheetModifiedHistory] 2024-04以降に削除して、pill_sheet_modified_historiesに統合する。
-// 古いPillSheetModifiedHistoryのisArchivedにインデックスが貼られないため、TTLの期間内のデータが残っている間はarchived_pill_sheet_modified_historiesを使う
+      throw _privateConstructorUsedError; // 古いPillSheetModifiedHistoryのisArchivedにインデックスが貼られないため、TTLの期間内のデータが残っている間はこのフィールドが使えない
 // null含めて値を入れないとクエリの条件に合致しないので、2024-04まではarchivedDateTime,isArchivedのデータが必ず存在するPillSheetModifiedHistoryの準備機関とする
 // バッチを書いても良いが件数が多いのでこの方法をとっている
   @JsonKey(
@@ -512,8 +511,7 @@ class _$_PillSheetModifiedHistory extends _PillSheetModifiedHistory {
       fromJson: TimestampConverter.timestampToDateTime,
       toJson: TimestampConverter.dateTimeToTimestamp)
   final DateTime? ttlExpiresDateTime;
-// TODO: [ArchivedPillSheetModifiedHistory] 2024-04以降に削除して、pill_sheet_modified_historiesに統合する。
-// 古いPillSheetModifiedHistoryのisArchivedにインデックスが貼られないため、TTLの期間内のデータが残っている間はarchived_pill_sheet_modified_historiesを使う
+// 古いPillSheetModifiedHistoryのisArchivedにインデックスが貼られないため、TTLの期間内のデータが残っている間はこのフィールドが使えない
 // null含めて値を入れないとクエリの条件に合致しないので、2024-04まではarchivedDateTime,isArchivedのデータが必ず存在するPillSheetModifiedHistoryの準備機関とする
 // バッチを書いても良いが件数が多いのでこの方法をとっている
   @override
@@ -697,8 +695,7 @@ abstract class _PillSheetModifiedHistory extends PillSheetModifiedHistory {
       fromJson: TimestampConverter.timestampToDateTime,
       toJson: TimestampConverter.dateTimeToTimestamp)
   DateTime? get ttlExpiresDateTime;
-  @override // TODO: [ArchivedPillSheetModifiedHistory] 2024-04以降に削除して、pill_sheet_modified_historiesに統合する。
-// 古いPillSheetModifiedHistoryのisArchivedにインデックスが貼られないため、TTLの期間内のデータが残っている間はarchived_pill_sheet_modified_historiesを使う
+  @override // 古いPillSheetModifiedHistoryのisArchivedにインデックスが貼られないため、TTLの期間内のデータが残っている間はこのフィールドが使えない
 // null含めて値を入れないとクエリの条件に合致しないので、2024-04まではarchivedDateTime,isArchivedのデータが必ず存在するPillSheetModifiedHistoryの準備機関とする
 // バッチを書いても良いが件数が多いのでこの方法をとっている
   @JsonKey(

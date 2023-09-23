@@ -955,42 +955,6 @@ class MockDatabaseConnection extends _i1.Mock
             ),
           ) as _i3.DocumentReference<_i18.PillSheetModifiedHistory>);
   @override
-  _i3.CollectionReference<_i18.PillSheetModifiedHistory>
-      archivedPillSheetModifiedHistoriesReference() => (super.noSuchMethod(
-            Invocation.method(
-              #archivedPillSheetModifiedHistoriesReference,
-              [],
-            ),
-            returnValue:
-                _FakeCollectionReference_9<_i18.PillSheetModifiedHistory>(
-              this,
-              Invocation.method(
-                #archivedPillSheetModifiedHistoriesReference,
-                [],
-              ),
-            ),
-          ) as _i3.CollectionReference<_i18.PillSheetModifiedHistory>);
-  @override
-  _i3.DocumentReference<_i18.PillSheetModifiedHistory>
-      archivedPillSheetModifiedHistoryReference(
-              {required String? pillSheetModifiedHistoryID}) =>
-          (super.noSuchMethod(
-            Invocation.method(
-              #archivedPillSheetModifiedHistoryReference,
-              [],
-              {#pillSheetModifiedHistoryID: pillSheetModifiedHistoryID},
-            ),
-            returnValue:
-                _FakeDocumentReference_8<_i18.PillSheetModifiedHistory>(
-              this,
-              Invocation.method(
-                #archivedPillSheetModifiedHistoryReference,
-                [],
-                {#pillSheetModifiedHistoryID: pillSheetModifiedHistoryID},
-              ),
-            ),
-          ) as _i3.DocumentReference<_i18.PillSheetModifiedHistory>);
-  @override
   _i3.CollectionReference<_i7.PillSheetGroup> pillSheetGroupsReference() =>
       (super.noSuchMethod(
         Invocation.method(
