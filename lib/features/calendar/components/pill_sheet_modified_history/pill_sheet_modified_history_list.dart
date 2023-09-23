@@ -184,51 +184,6 @@ class PillSheetModifiedHistoryList extends HookConsumerWidget {
           };
         }
 
-        final historyIsArchived = history.archivedDateTime != null;
-        final withSpace = Column(
-          children: [content, const SizedBox(height: 16)],
-        );
-        final Widget withDismissible = switch (history.enumActionType) {
-          PillSheetModifiedActionType.deletedPillSheet => content,
-          PillSheetModifiedActionType.createdPillSheet ||
-          PillSheetModifiedActionType.automaticallyRecordedLastTakenDate ||
-          PillSheetModifiedActionType.takenPill ||
-          PillSheetModifiedActionType.revertTakenPill ||
-          PillSheetModifiedActionType.changedPillNumber ||
-          PillSheetModifiedActionType.endedPillSheet ||
-          PillSheetModifiedActionType.beganRestDuration ||
-          PillSheetModifiedActionType.endedRestDuration ||
-          PillSheetModifiedActionType.changedBeginDisplayNumber ||
-          PillSheetModifiedActionType.changedEndDisplayNumber =>
-            Dismissible(
-              key: ObjectKey(history.id ?? ""),
-              direction: DismissDirection.endToStart,
-              onDismissed: (direction) {
-                if (historyIsArchived) {
-                  analytics.logEvent(name: "unarchive_history", parameters: {"historyID": history.id ?? "", "actionType": history.actionType});
-                  ref.read(setPillSheetModifiedHistoryProvider).call(history.copyWith(archivedDateTime: null, isArchived: false));
-                } else {
-                  analytics.logEvent(name: "archive_history", parameters: {"historyID": history.id ?? "", "actionType": history.actionType});
-                  ref.read(setPillSheetModifiedHistoryProvider).call(history.copyWith(archivedDateTime: now(), isArchived: true));
-                }
-              },
-              background: Container(
-                color: Colors.blueAccent,
-                child: SizedBox(
-                  width: 40,
-                  child: Padding(
-                    padding: const EdgeInsets.only(right: 10.0),
-                    child:
-                        Align(alignment: Alignment.centerRight, child: Icon(historyIsArchived ? Icons.unarchive_outlined : Icons.archive_outlined)),
-                  ),
-                ),
-              ),
-              child: withSpace,
-            ),
-          // whereでフィルタリングしているのでありえないパターン
-          null => Container(),
-        };
-
         if (isNecessaryDots) {
           return Column(
             children: [
@@ -242,11 +197,11 @@ class PillSheetModifiedHistoryList extends HookConsumerWidget {
                 ],
               ),
               const SizedBox(height: 16),
-              withDismissible,
+              content,
             ],
           );
         } else {
-          return withDismissible;
+          return content;
         }
       }).toList(),
     ];
