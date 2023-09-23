@@ -13,6 +13,7 @@ part 'pill_sheet_modified_history.codegen.freezed.dart';
 
 class PillSheetModifiedHistoryFirestoreKeys {
   static const estimatedEventCausingDate = "estimatedEventCausingDate";
+  static const archivedDateTime = "archivedDateTime";
 }
 
 enum PillSheetModifiedActionType {
@@ -78,6 +79,17 @@ class PillSheetModifiedHistory with _$PillSheetModifiedHistory {
       toJson: TimestampConverter.dateTimeToTimestamp,
     )
     DateTime? ttlExpiresDateTime,
+    // 古いPillSheetModifiedHistoryのisArchivedにインデックスが貼られないため、TTLの期間内のデータが残っている間はこのフィールドが使えない
+    // null含めて値を入れないとクエリの条件に合致しないので、2024-04まではarchivedDateTime,isArchivedのデータが必ず存在するPillSheetModifiedHistoryの準備機関とする
+    // バッチを書いても良いが件数が多いのでこの方法をとっている
+    @JsonKey(
+      fromJson: TimestampConverter.timestampToDateTime,
+      toJson: TimestampConverter.dateTimeToTimestamp,
+    )
+    DateTime? archivedDateTime,
+    // archivedDateTime isNull: false の条件だと、下記のエラーの条件に引っ掛かるため、archivedDateTime以外にもisArchivedを用意している。isArchived == true | isArchived == false の用途で使う
+    // You can combine constraints with a logical AND by chaining multiple equality operators (== or array-contains). However, you must create a composite index to combine equality operators with the inequality operators, <, <=, >, and !=.
+    @Default(false) bool isArchived,
     // ============ END: Added since v2 ============
 
     // The below properties are deprecated and added since v1.

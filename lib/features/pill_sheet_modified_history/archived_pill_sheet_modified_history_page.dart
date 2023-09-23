@@ -5,24 +5,22 @@ import 'package:pilll/components/atoms/color.dart';
 import 'package:pilll/components/atoms/text_color.dart';
 import 'package:pilll/components/molecules/indicator.dart';
 import 'package:pilll/entity/pill_sheet_modified_history.codegen.dart';
-import 'package:pilll/features/pill_sheet_modified_history/archived_pill_sheet_modified_history_page.dart';
 import 'package:pilll/provider/database.dart';
 import 'package:pilll/features/calendar/components/pill_sheet_modified_history/pill_sheet_modified_history_list.dart';
 import 'package:pilll/features/calendar/components/pill_sheet_modified_history/pill_sheet_modified_history_list_header.dart';
 import 'package:pilll/features/error/universal_error_page.dart';
 import 'package:pilll/provider/pill_sheet_modified_history.dart';
 import 'package:pilll/provider/premium_and_trial.codegen.dart';
-import 'package:pilll/utils/analytics.dart';
 
-class PillSheetModifiedHistoriesPage extends HookConsumerWidget {
-  const PillSheetModifiedHistoriesPage({Key? key}) : super(key: key);
+class ArchivedPillSheetModifiedHistoriesPage extends HookConsumerWidget {
+  const ArchivedPillSheetModifiedHistoriesPage({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {
     final loadingNext = useState(false);
     final afterCursor = useState<DateTime?>(null);
     final histories = useState<List<PillSheetModifiedHistory>>([]);
-    final pillSheetModifiedHistoryAsyncValue = ref.watch(pillSheetModifiedHistoriesProvider(afterCursor: afterCursor.value));
+    final pillSheetModifiedHistoryAsyncValue = ref.watch(archivedPillSheetModifiedHistoriesProvider(afterCursor: afterCursor.value));
     useEffect(() {
       loadingNext.value = false;
 
@@ -49,18 +47,9 @@ class PillSheetModifiedHistoriesPage extends HookConsumerWidget {
                   onPressed: () => Navigator.of(context).pop(),
                 ),
                 title: const Text(
-                  "服用履歴",
+                  "アーカイブ済み服用履歴",
                   style: TextStyle(color: TextColor.main),
                 ),
-                actions: [
-                  IconButton(
-                    icon: const Icon(Icons.archive_outlined, color: Colors.black),
-                    onPressed: () {
-                      analytics.logEvent(name: "archived_histories_opened");
-                      Navigator.of(context).push(ArhchivedPillSheetModifiedHistoriesPageRoute.route());
-                    },
-                  ),
-                ],
                 centerTitle: false,
                 backgroundColor: PilllColors.white,
               ),
@@ -99,11 +88,11 @@ class PillSheetModifiedHistoriesPage extends HookConsumerWidget {
   }
 }
 
-extension PillSheetModifiedHistoriesPageRoute on PillSheetModifiedHistoriesPage {
+extension ArhchivedPillSheetModifiedHistoriesPageRoute on ArchivedPillSheetModifiedHistoriesPage {
   static Route<dynamic> route() {
     return MaterialPageRoute(
-      settings: const RouteSettings(name: "PillSheetModifiedHistoriesPage"),
-      builder: (_) => const PillSheetModifiedHistoriesPage(),
+      settings: const RouteSettings(name: "ArchivedPillSheetModifiedHistoriesPage"),
+      builder: (_) => const ArchivedPillSheetModifiedHistoriesPage(),
     );
   }
 }

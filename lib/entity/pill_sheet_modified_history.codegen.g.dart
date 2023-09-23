@@ -26,6 +26,9 @@ _$_PillSheetModifiedHistory _$$_PillSheetModifiedHistoryFromJson(
               json['afterPillSheetGroup'] as Map<String, dynamic>),
       ttlExpiresDateTime: TimestampConverter.timestampToDateTime(
           json['ttlExpiresDateTime'] as Timestamp?),
+      archivedDateTime: TimestampConverter.timestampToDateTime(
+          json['archivedDateTime'] as Timestamp?),
+      isArchived: json['isArchived'] as bool? ?? false,
       value: PillSheetModifiedHistoryValue.fromJson(
           json['value'] as Map<String, dynamic>),
       pillSheetID: json['pillSheetID'] as String?,
@@ -63,6 +66,9 @@ Map<String, dynamic> _$$_PillSheetModifiedHistoryToJson(
   val['afterPillSheetGroup'] = instance.afterPillSheetGroup?.toJson();
   val['ttlExpiresDateTime'] =
       TimestampConverter.dateTimeToTimestamp(instance.ttlExpiresDateTime);
+  val['archivedDateTime'] =
+      TimestampConverter.dateTimeToTimestamp(instance.archivedDateTime);
+  val['isArchived'] = instance.isArchived;
   val['value'] = instance.value.toJson();
   val['pillSheetID'] = instance.pillSheetID;
   val['pillSheetGroupID'] = instance.pillSheetGroupID;
