@@ -17,7 +17,7 @@ Stream<List<PillSheetModifiedHistory>> pillSheetModifiedHistories(PillSheetModif
           isLessThanOrEqualTo: today().add(const Duration(days: 1)),
           isGreaterThanOrEqualTo: today().subtract(const Duration(days: PillSheetModifiedHistoryServiceActionFactory.limitDays)),
         )
-        .where(PillSheetModifiedHistoryFirestoreKeys.archivedDateTime, isNull: true)
+        .where(PillSheetModifiedHistoryFirestoreKeys.isArchived, isEqualTo: false)
         .orderBy(PillSheetModifiedHistoryFirestoreKeys.estimatedEventCausingDate, descending: true)
         .startAfter([afterCursor])
         .limit(20)
@@ -33,7 +33,7 @@ Stream<List<PillSheetModifiedHistory>> pillSheetModifiedHistories(PillSheetModif
           isLessThanOrEqualTo: today().add(const Duration(days: 1)),
           isGreaterThanOrEqualTo: today().subtract(const Duration(days: PillSheetModifiedHistoryServiceActionFactory.limitDays)),
         )
-        .where(PillSheetModifiedHistoryFirestoreKeys.archivedDateTime, isNull: true)
+        .where(PillSheetModifiedHistoryFirestoreKeys.isArchived, isEqualTo: false)
         .orderBy(PillSheetModifiedHistoryFirestoreKeys.estimatedEventCausingDate, descending: true)
         .limit(20)
         .snapshots()
@@ -53,7 +53,7 @@ Stream<List<PillSheetModifiedHistory>> archivedPillSheetModifiedHistories(Archiv
           isLessThanOrEqualTo: today().add(const Duration(days: 1)),
           isGreaterThanOrEqualTo: today().subtract(const Duration(days: PillSheetModifiedHistoryServiceActionFactory.limitDays)),
         )
-        .where(PillSheetModifiedHistoryFirestoreKeys.archivedDateTime, isNull: false)
+        .where(PillSheetModifiedHistoryFirestoreKeys.isArchived, isEqualTo: true)
         .orderBy(PillSheetModifiedHistoryFirestoreKeys.estimatedEventCausingDate, descending: true)
         .startAfter([afterCursor])
         .limit(20)
@@ -61,20 +61,24 @@ Stream<List<PillSheetModifiedHistory>> archivedPillSheetModifiedHistories(Archiv
         .map((reference) => reference.docs)
         .map((docs) => docs.map((doc) => doc.data()).toList());
   } else {
-    return ref
-        .watch(databaseProvider)
-        .pillSheetModifiedHistoriesReference()
-        .where(
-          PillSheetModifiedHistoryFirestoreKeys.estimatedEventCausingDate,
-          isLessThanOrEqualTo: today().add(const Duration(days: 1)),
-          isGreaterThanOrEqualTo: today().subtract(const Duration(days: PillSheetModifiedHistoryServiceActionFactory.limitDays)),
-        )
-        .where(PillSheetModifiedHistoryFirestoreKeys.archivedDateTime, isNull: false)
-        .orderBy(PillSheetModifiedHistoryFirestoreKeys.estimatedEventCausingDate, descending: true)
-        .limit(20)
-        .snapshots()
-        .map((reference) => reference.docs)
-        .map((docs) => docs.map((doc) => doc.data()).toList());
+    try {
+      return ref
+          .watch(databaseProvider)
+          .pillSheetModifiedHistoriesReference()
+          .where(
+            PillSheetModifiedHistoryFirestoreKeys.estimatedEventCausingDate,
+            isLessThanOrEqualTo: today().add(const Duration(days: 1)),
+            isGreaterThanOrEqualTo: today().subtract(const Duration(days: PillSheetModifiedHistoryServiceActionFactory.limitDays)),
+          )
+          .where(PillSheetModifiedHistoryFirestoreKeys.isArchived, isEqualTo: true)
+          .orderBy(PillSheetModifiedHistoryFirestoreKeys.estimatedEventCausingDate, descending: true)
+          .limit(20)
+          .snapshots()
+          .map((reference) => reference.docs)
+          .map((docs) => docs.map((doc) => doc.data()).toList());
+    } catch (e) {
+      rethrow;
+    }
   }
 }
 
@@ -88,7 +92,7 @@ Stream<List<PillSheetModifiedHistory>> pillSheetModifiedHistoriesWithLimit(PillS
         isLessThanOrEqualTo: today().add(const Duration(days: 1)),
         isGreaterThanOrEqualTo: today().subtract(const Duration(days: PillSheetModifiedHistoryServiceActionFactory.limitDays)),
       )
-      .where(PillSheetModifiedHistoryFirestoreKeys.archivedDateTime, isNull: true)
+      .where(PillSheetModifiedHistoryFirestoreKeys.isArchived, isEqualTo: false)
       .orderBy(PillSheetModifiedHistoryFirestoreKeys.estimatedEventCausingDate, descending: true)
       .limit(limit)
       .snapshots()
