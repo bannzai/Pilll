@@ -14,6 +14,7 @@ part 'pill_sheet_modified_history.codegen.freezed.dart';
 class PillSheetModifiedHistoryFirestoreKeys {
   static const estimatedEventCausingDate = "estimatedEventCausingDate";
   static const archivedDateTime = "archivedDateTime";
+  static const isArchived = "isArchived";
 }
 
 enum PillSheetModifiedActionType {
