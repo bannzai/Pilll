@@ -206,10 +206,10 @@ class PillSheetModifiedHistoryList extends HookConsumerWidget {
               onDismissed: (direction) {
                 if (historyIsArchived) {
                   analytics.logEvent(name: "unarchive_history", parameters: {"historyID": history.id ?? "", "actionType": history.actionType});
-                  ref.read(setPillSheetModifiedHistoryProvider).call(history.copyWith(archivedDateTime: null));
+                  ref.read(setPillSheetModifiedHistoryProvider).call(history.copyWith(archivedDateTime: null, isArchived: false));
                 } else {
                   analytics.logEvent(name: "archive_history", parameters: {"historyID": history.id ?? "", "actionType": history.actionType});
-                  ref.read(setPillSheetModifiedHistoryProvider).call(history.copyWith(archivedDateTime: now()));
+                  ref.read(setPillSheetModifiedHistoryProvider).call(history.copyWith(archivedDateTime: now(), isArchived: true));
                 }
               },
               background: Container(
