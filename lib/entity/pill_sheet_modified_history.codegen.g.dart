@@ -16,6 +16,8 @@ _$_PillSheetModifiedHistory _$$_PillSheetModifiedHistoryFromJson(
           json['estimatedEventCausingDate'] as Timestamp),
       createdAt: NonNullTimestampConverter.timestampToDateTime(
           json['createdAt'] as Timestamp),
+      archivedDateTime: TimestampConverter.timestampToDateTime(
+          json['archivedDateTime'] as Timestamp?),
       beforePillSheetGroup: json['beforePillSheetGroup'] == null
           ? null
           : PillSheetGroup.fromJson(
@@ -26,9 +28,6 @@ _$_PillSheetModifiedHistory _$$_PillSheetModifiedHistoryFromJson(
               json['afterPillSheetGroup'] as Map<String, dynamic>),
       ttlExpiresDateTime: TimestampConverter.timestampToDateTime(
           json['ttlExpiresDateTime'] as Timestamp?),
-      archivedDateTime: TimestampConverter.timestampToDateTime(
-          json['archivedDateTime'] as Timestamp?),
-      isArchived: json['isArchived'] as bool? ?? false,
       value: PillSheetModifiedHistoryValue.fromJson(
           json['value'] as Map<String, dynamic>),
       pillSheetID: json['pillSheetID'] as String?,
@@ -62,13 +61,12 @@ Map<String, dynamic> _$$_PillSheetModifiedHistoryToJson(
           instance.estimatedEventCausingDate);
   val['createdAt'] =
       NonNullTimestampConverter.dateTimeToTimestamp(instance.createdAt);
+  val['archivedDateTime'] =
+      TimestampConverter.dateTimeToTimestamp(instance.archivedDateTime);
   val['beforePillSheetGroup'] = instance.beforePillSheetGroup?.toJson();
   val['afterPillSheetGroup'] = instance.afterPillSheetGroup?.toJson();
   val['ttlExpiresDateTime'] =
       TimestampConverter.dateTimeToTimestamp(instance.ttlExpiresDateTime);
-  val['archivedDateTime'] =
-      TimestampConverter.dateTimeToTimestamp(instance.archivedDateTime);
-  val['isArchived'] = instance.isArchived;
   val['value'] = instance.value.toJson();
   val['pillSheetID'] = instance.pillSheetID;
   val['pillSheetGroupID'] = instance.pillSheetGroupID;
