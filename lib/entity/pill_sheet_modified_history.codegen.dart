@@ -13,6 +13,7 @@ part 'pill_sheet_modified_history.codegen.freezed.dart';
 
 class PillSheetModifiedHistoryFirestoreKeys {
   static const estimatedEventCausingDate = "estimatedEventCausingDate";
+  static const isArchived = "isArchived";
   static const archivedDateTime = "archivedDateTime";
 }
 
@@ -67,11 +68,6 @@ class PillSheetModifiedHistory with _$PillSheetModifiedHistory {
       toJson: NonNullTimestampConverter.dateTimeToTimestamp,
     )
     required DateTime createdAt,
-    @JsonKey(
-      fromJson: TimestampConverter.timestampToDateTime,
-      toJson: TimestampConverter.dateTimeToTimestamp,
-    )
-    DateTime? archivedDateTime,
     // ============ END: Added since v1 ============
 
     // ============ BEGIN: Added since v2 ============
@@ -84,6 +80,12 @@ class PillSheetModifiedHistory with _$PillSheetModifiedHistory {
       toJson: TimestampConverter.dateTimeToTimestamp,
     )
     DateTime? ttlExpiresDateTime,
+    @JsonKey(
+      fromJson: TimestampConverter.timestampToDateTime,
+      toJson: TimestampConverter.dateTimeToTimestamp,
+    )
+    DateTime? archivedDateTime,
+    @Default(false) bool isArchived,
     // ============ END: Added since v2 ============
 
     // The below properties are deprecated and added since v1.
