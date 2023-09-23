@@ -9,6 +9,7 @@ import 'package:pilll/features/record/components/supports/components/rest_durati
 import 'package:pilll/entity/pill_sheet.codegen.dart';
 import 'package:pilll/entity/pill_sheet_group.codegen.dart';
 import 'package:pilll/entity/setting.codegen.dart';
+import 'package:pilll/utils/local_notification.dart';
 
 class BeginManualRestDurationButton extends HookConsumerWidget {
   final PillSheetAppearanceMode appearanceMode;
@@ -27,6 +28,7 @@ class BeginManualRestDurationButton extends HookConsumerWidget {
   @override
   Widget build(BuildContext context, WidgetRef ref) {
     final beginRestDuration = ref.watch(beginRestDurationProvider);
+    final cancelReminderLocalNotification = ref.watch(cancelReminderLocalNotificationProvider);
 
     return SmallAppOutlinedButton(
       text: "服用お休み",
@@ -49,6 +51,7 @@ class BeginManualRestDurationButton extends HookConsumerWidget {
                 activePillSheet: activePillSheet,
                 pillSheetGroup: pillSheetGroup,
               );
+              await cancelReminderLocalNotification();
               didBeginRestDuration();
             },
           );
