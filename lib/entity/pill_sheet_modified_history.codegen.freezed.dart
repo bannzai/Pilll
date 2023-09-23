@@ -34,11 +34,7 @@ mixin _$PillSheetModifiedHistory {
   @JsonKey(
       fromJson: NonNullTimestampConverter.timestampToDateTime,
       toJson: NonNullTimestampConverter.dateTimeToTimestamp)
-  DateTime get createdAt => throw _privateConstructorUsedError;
-  @JsonKey(
-      fromJson: TimestampConverter.timestampToDateTime,
-      toJson: TimestampConverter.dateTimeToTimestamp)
-  DateTime? get archivedDateTime =>
+  DateTime get createdAt =>
       throw _privateConstructorUsedError; // ============ END: Added since v1 ============
 // ============ BEGIN: Added since v2 ============
 // beforePillSheetGroup and afterPillSheetGroup is nullable
@@ -50,6 +46,17 @@ mixin _$PillSheetModifiedHistory {
       fromJson: TimestampConverter.timestampToDateTime,
       toJson: TimestampConverter.dateTimeToTimestamp)
   DateTime? get ttlExpiresDateTime =>
+      throw _privateConstructorUsedError; // TODO: [ArchivedPillSheetModifiedHistory] 2024-04以降に削除して、pill_sheet_modified_historiesに統合する。
+// 古いPillSheetModifiedHistoryのisArchivedにインデックスが貼られないため、TTLの期間内のデータが残っている間はarchived_pill_sheet_modified_historiesを使う
+// null含めて値を入れないとクエリの条件に合致しないので、2024-04まではarchivedDateTime,isArchivedのデータが必ず存在するPillSheetModifiedHistoryの準備機関とする
+// バッチを書いても良いが件数が多いのでこの方法をとっている
+  @JsonKey(
+      fromJson: TimestampConverter.timestampToDateTime,
+      toJson: TimestampConverter.dateTimeToTimestamp)
+  DateTime? get archivedDateTime =>
+      throw _privateConstructorUsedError; // archivedDateTime isNull: false の条件だと、下記のエラーの条件に引っ掛かるため、archivedDateTime以外にもisArchivedを用意している。isArchived == true | isArchived == false の用途で使う
+// You can combine constraints with a logical AND by chaining multiple equality operators (== or array-contains). However, you must create a composite index to combine equality operators with the inequality operators, <, <=, >, and !=.
+  bool get isArchived =>
       throw _privateConstructorUsedError; // ============ END: Added since v2 ============
 // The below properties are deprecated and added since v1.
 // This is deprecated property. TODO: [PillSheetModifiedHistory-V2] delete after 2024-04-01
@@ -94,16 +101,17 @@ abstract class $PillSheetModifiedHistoryCopyWith<$Res> {
           fromJson: NonNullTimestampConverter.timestampToDateTime,
           toJson: NonNullTimestampConverter.dateTimeToTimestamp)
       DateTime createdAt,
-      @JsonKey(
-          fromJson: TimestampConverter.timestampToDateTime,
-          toJson: TimestampConverter.dateTimeToTimestamp)
-      DateTime? archivedDateTime,
       PillSheetGroup? beforePillSheetGroup,
       PillSheetGroup? afterPillSheetGroup,
       @JsonKey(
           fromJson: TimestampConverter.timestampToDateTime,
           toJson: TimestampConverter.dateTimeToTimestamp)
       DateTime? ttlExpiresDateTime,
+      @JsonKey(
+          fromJson: TimestampConverter.timestampToDateTime,
+          toJson: TimestampConverter.dateTimeToTimestamp)
+      DateTime? archivedDateTime,
+      bool isArchived,
       PillSheetModifiedHistoryValue value,
       String? pillSheetID,
       String? pillSheetGroupID,
@@ -138,10 +146,11 @@ class _$PillSheetModifiedHistoryCopyWithImpl<$Res,
     Object? actionType = null,
     Object? estimatedEventCausingDate = null,
     Object? createdAt = null,
-    Object? archivedDateTime = freezed,
     Object? beforePillSheetGroup = freezed,
     Object? afterPillSheetGroup = freezed,
     Object? ttlExpiresDateTime = freezed,
+    Object? archivedDateTime = freezed,
+    Object? isArchived = null,
     Object? value = null,
     Object? pillSheetID = freezed,
     Object? pillSheetGroupID = freezed,
@@ -171,10 +180,6 @@ class _$PillSheetModifiedHistoryCopyWithImpl<$Res,
           ? _value.createdAt
           : createdAt // ignore: cast_nullable_to_non_nullable
               as DateTime,
-      archivedDateTime: freezed == archivedDateTime
-          ? _value.archivedDateTime
-          : archivedDateTime // ignore: cast_nullable_to_non_nullable
-              as DateTime?,
       beforePillSheetGroup: freezed == beforePillSheetGroup
           ? _value.beforePillSheetGroup
           : beforePillSheetGroup // ignore: cast_nullable_to_non_nullable
@@ -187,6 +192,14 @@ class _$PillSheetModifiedHistoryCopyWithImpl<$Res,
           ? _value.ttlExpiresDateTime
           : ttlExpiresDateTime // ignore: cast_nullable_to_non_nullable
               as DateTime?,
+      archivedDateTime: freezed == archivedDateTime
+          ? _value.archivedDateTime
+          : archivedDateTime // ignore: cast_nullable_to_non_nullable
+              as DateTime?,
+      isArchived: null == isArchived
+          ? _value.isArchived
+          : isArchived // ignore: cast_nullable_to_non_nullable
+              as bool,
       value: null == value
           ? _value.value
           : value // ignore: cast_nullable_to_non_nullable
@@ -296,16 +309,17 @@ abstract class _$$_PillSheetModifiedHistoryCopyWith<$Res>
           fromJson: NonNullTimestampConverter.timestampToDateTime,
           toJson: NonNullTimestampConverter.dateTimeToTimestamp)
       DateTime createdAt,
-      @JsonKey(
-          fromJson: TimestampConverter.timestampToDateTime,
-          toJson: TimestampConverter.dateTimeToTimestamp)
-      DateTime? archivedDateTime,
       PillSheetGroup? beforePillSheetGroup,
       PillSheetGroup? afterPillSheetGroup,
       @JsonKey(
           fromJson: TimestampConverter.timestampToDateTime,
           toJson: TimestampConverter.dateTimeToTimestamp)
       DateTime? ttlExpiresDateTime,
+      @JsonKey(
+          fromJson: TimestampConverter.timestampToDateTime,
+          toJson: TimestampConverter.dateTimeToTimestamp)
+      DateTime? archivedDateTime,
+      bool isArchived,
       PillSheetModifiedHistoryValue value,
       String? pillSheetID,
       String? pillSheetGroupID,
@@ -343,10 +357,11 @@ class __$$_PillSheetModifiedHistoryCopyWithImpl<$Res>
     Object? actionType = null,
     Object? estimatedEventCausingDate = null,
     Object? createdAt = null,
-    Object? archivedDateTime = freezed,
     Object? beforePillSheetGroup = freezed,
     Object? afterPillSheetGroup = freezed,
     Object? ttlExpiresDateTime = freezed,
+    Object? archivedDateTime = freezed,
+    Object? isArchived = null,
     Object? value = null,
     Object? pillSheetID = freezed,
     Object? pillSheetGroupID = freezed,
@@ -373,10 +388,6 @@ class __$$_PillSheetModifiedHistoryCopyWithImpl<$Res>
           ? _value.createdAt
           : createdAt // ignore: cast_nullable_to_non_nullable
               as DateTime,
-      archivedDateTime: freezed == archivedDateTime
-          ? _value.archivedDateTime
-          : archivedDateTime // ignore: cast_nullable_to_non_nullable
-              as DateTime?,
       beforePillSheetGroup: freezed == beforePillSheetGroup
           ? _value.beforePillSheetGroup
           : beforePillSheetGroup // ignore: cast_nullable_to_non_nullable
@@ -389,6 +400,14 @@ class __$$_PillSheetModifiedHistoryCopyWithImpl<$Res>
           ? _value.ttlExpiresDateTime
           : ttlExpiresDateTime // ignore: cast_nullable_to_non_nullable
               as DateTime?,
+      archivedDateTime: freezed == archivedDateTime
+          ? _value.archivedDateTime
+          : archivedDateTime // ignore: cast_nullable_to_non_nullable
+              as DateTime?,
+      isArchived: null == isArchived
+          ? _value.isArchived
+          : isArchived // ignore: cast_nullable_to_non_nullable
+              as bool,
       value: null == value
           ? _value.value
           : value // ignore: cast_nullable_to_non_nullable
@@ -437,16 +456,17 @@ class _$_PillSheetModifiedHistory extends _PillSheetModifiedHistory {
           fromJson: NonNullTimestampConverter.timestampToDateTime,
           toJson: NonNullTimestampConverter.dateTimeToTimestamp)
       required this.createdAt,
-      @JsonKey(
-          fromJson: TimestampConverter.timestampToDateTime,
-          toJson: TimestampConverter.dateTimeToTimestamp)
-      this.archivedDateTime,
       required this.beforePillSheetGroup,
       required this.afterPillSheetGroup,
       @JsonKey(
           fromJson: TimestampConverter.timestampToDateTime,
           toJson: TimestampConverter.dateTimeToTimestamp)
       this.ttlExpiresDateTime,
+      @JsonKey(
+          fromJson: TimestampConverter.timestampToDateTime,
+          toJson: TimestampConverter.dateTimeToTimestamp)
+      this.archivedDateTime,
+      this.isArchived = false,
       required this.value,
       required this.pillSheetID,
       required this.pillSheetGroupID,
@@ -479,11 +499,6 @@ class _$_PillSheetModifiedHistory extends _PillSheetModifiedHistory {
       fromJson: NonNullTimestampConverter.timestampToDateTime,
       toJson: NonNullTimestampConverter.dateTimeToTimestamp)
   final DateTime createdAt;
-  @override
-  @JsonKey(
-      fromJson: TimestampConverter.timestampToDateTime,
-      toJson: TimestampConverter.dateTimeToTimestamp)
-  final DateTime? archivedDateTime;
 // ============ END: Added since v1 ============
 // ============ BEGIN: Added since v2 ============
 // beforePillSheetGroup and afterPillSheetGroup is nullable
@@ -497,6 +512,20 @@ class _$_PillSheetModifiedHistory extends _PillSheetModifiedHistory {
       fromJson: TimestampConverter.timestampToDateTime,
       toJson: TimestampConverter.dateTimeToTimestamp)
   final DateTime? ttlExpiresDateTime;
+// TODO: [ArchivedPillSheetModifiedHistory] 2024-04以降に削除して、pill_sheet_modified_historiesに統合する。
+// 古いPillSheetModifiedHistoryのisArchivedにインデックスが貼られないため、TTLの期間内のデータが残っている間はarchived_pill_sheet_modified_historiesを使う
+// null含めて値を入れないとクエリの条件に合致しないので、2024-04まではarchivedDateTime,isArchivedのデータが必ず存在するPillSheetModifiedHistoryの準備機関とする
+// バッチを書いても良いが件数が多いのでこの方法をとっている
+  @override
+  @JsonKey(
+      fromJson: TimestampConverter.timestampToDateTime,
+      toJson: TimestampConverter.dateTimeToTimestamp)
+  final DateTime? archivedDateTime;
+// archivedDateTime isNull: false の条件だと、下記のエラーの条件に引っ掛かるため、archivedDateTime以外にもisArchivedを用意している。isArchived == true | isArchived == false の用途で使う
+// You can combine constraints with a logical AND by chaining multiple equality operators (== or array-contains). However, you must create a composite index to combine equality operators with the inequality operators, <, <=, >, and !=.
+  @override
+  @JsonKey()
+  final bool isArchived;
 // ============ END: Added since v2 ============
 // The below properties are deprecated and added since v1.
 // This is deprecated property. TODO: [PillSheetModifiedHistory-V2] delete after 2024-04-01
@@ -526,7 +555,7 @@ class _$_PillSheetModifiedHistory extends _PillSheetModifiedHistory {
 
   @override
   String toString() {
-    return 'PillSheetModifiedHistory(version: $version, id: $id, actionType: $actionType, estimatedEventCausingDate: $estimatedEventCausingDate, createdAt: $createdAt, archivedDateTime: $archivedDateTime, beforePillSheetGroup: $beforePillSheetGroup, afterPillSheetGroup: $afterPillSheetGroup, ttlExpiresDateTime: $ttlExpiresDateTime, value: $value, pillSheetID: $pillSheetID, pillSheetGroupID: $pillSheetGroupID, beforePillSheetID: $beforePillSheetID, afterPillSheetID: $afterPillSheetID, before: $before, after: $after)';
+    return 'PillSheetModifiedHistory(version: $version, id: $id, actionType: $actionType, estimatedEventCausingDate: $estimatedEventCausingDate, createdAt: $createdAt, beforePillSheetGroup: $beforePillSheetGroup, afterPillSheetGroup: $afterPillSheetGroup, ttlExpiresDateTime: $ttlExpiresDateTime, archivedDateTime: $archivedDateTime, isArchived: $isArchived, value: $value, pillSheetID: $pillSheetID, pillSheetGroupID: $pillSheetGroupID, beforePillSheetID: $beforePillSheetID, afterPillSheetID: $afterPillSheetID, before: $before, after: $after)';
   }
 
   @override
@@ -543,14 +572,16 @@ class _$_PillSheetModifiedHistory extends _PillSheetModifiedHistory {
                 other.estimatedEventCausingDate == estimatedEventCausingDate) &&
             (identical(other.createdAt, createdAt) ||
                 other.createdAt == createdAt) &&
-            (identical(other.archivedDateTime, archivedDateTime) ||
-                other.archivedDateTime == archivedDateTime) &&
             (identical(other.beforePillSheetGroup, beforePillSheetGroup) ||
                 other.beforePillSheetGroup == beforePillSheetGroup) &&
             (identical(other.afterPillSheetGroup, afterPillSheetGroup) ||
                 other.afterPillSheetGroup == afterPillSheetGroup) &&
             (identical(other.ttlExpiresDateTime, ttlExpiresDateTime) ||
                 other.ttlExpiresDateTime == ttlExpiresDateTime) &&
+            (identical(other.archivedDateTime, archivedDateTime) ||
+                other.archivedDateTime == archivedDateTime) &&
+            (identical(other.isArchived, isArchived) ||
+                other.isArchived == isArchived) &&
             (identical(other.value, value) || other.value == value) &&
             (identical(other.pillSheetID, pillSheetID) ||
                 other.pillSheetID == pillSheetID) &&
@@ -573,10 +604,11 @@ class _$_PillSheetModifiedHistory extends _PillSheetModifiedHistory {
       actionType,
       estimatedEventCausingDate,
       createdAt,
-      archivedDateTime,
       beforePillSheetGroup,
       afterPillSheetGroup,
       ttlExpiresDateTime,
+      archivedDateTime,
+      isArchived,
       value,
       pillSheetID,
       pillSheetGroupID,
@@ -613,16 +645,17 @@ abstract class _PillSheetModifiedHistory extends PillSheetModifiedHistory {
           fromJson: NonNullTimestampConverter.timestampToDateTime,
           toJson: NonNullTimestampConverter.dateTimeToTimestamp)
       required final DateTime createdAt,
-      @JsonKey(
-          fromJson: TimestampConverter.timestampToDateTime,
-          toJson: TimestampConverter.dateTimeToTimestamp)
-      final DateTime? archivedDateTime,
       required final PillSheetGroup? beforePillSheetGroup,
       required final PillSheetGroup? afterPillSheetGroup,
       @JsonKey(
           fromJson: TimestampConverter.timestampToDateTime,
           toJson: TimestampConverter.dateTimeToTimestamp)
       final DateTime? ttlExpiresDateTime,
+      @JsonKey(
+          fromJson: TimestampConverter.timestampToDateTime,
+          toJson: TimestampConverter.dateTimeToTimestamp)
+      final DateTime? archivedDateTime,
+      final bool isArchived,
       required final PillSheetModifiedHistoryValue value,
       required final String? pillSheetID,
       required final String? pillSheetGroupID,
@@ -652,11 +685,6 @@ abstract class _PillSheetModifiedHistory extends PillSheetModifiedHistory {
       fromJson: NonNullTimestampConverter.timestampToDateTime,
       toJson: NonNullTimestampConverter.dateTimeToTimestamp)
   DateTime get createdAt;
-  @override
-  @JsonKey(
-      fromJson: TimestampConverter.timestampToDateTime,
-      toJson: TimestampConverter.dateTimeToTimestamp)
-  DateTime? get archivedDateTime;
   @override // ============ END: Added since v1 ============
 // ============ BEGIN: Added since v2 ============
 // beforePillSheetGroup and afterPillSheetGroup is nullable
@@ -669,6 +697,17 @@ abstract class _PillSheetModifiedHistory extends PillSheetModifiedHistory {
       fromJson: TimestampConverter.timestampToDateTime,
       toJson: TimestampConverter.dateTimeToTimestamp)
   DateTime? get ttlExpiresDateTime;
+  @override // TODO: [ArchivedPillSheetModifiedHistory] 2024-04以降に削除して、pill_sheet_modified_historiesに統合する。
+// 古いPillSheetModifiedHistoryのisArchivedにインデックスが貼られないため、TTLの期間内のデータが残っている間はarchived_pill_sheet_modified_historiesを使う
+// null含めて値を入れないとクエリの条件に合致しないので、2024-04まではarchivedDateTime,isArchivedのデータが必ず存在するPillSheetModifiedHistoryの準備機関とする
+// バッチを書いても良いが件数が多いのでこの方法をとっている
+  @JsonKey(
+      fromJson: TimestampConverter.timestampToDateTime,
+      toJson: TimestampConverter.dateTimeToTimestamp)
+  DateTime? get archivedDateTime;
+  @override // archivedDateTime isNull: false の条件だと、下記のエラーの条件に引っ掛かるため、archivedDateTime以外にもisArchivedを用意している。isArchived == true | isArchived == false の用途で使う
+// You can combine constraints with a logical AND by chaining multiple equality operators (== or array-contains). However, you must create a composite index to combine equality operators with the inequality operators, <, <=, >, and !=.
+  bool get isArchived;
   @override // ============ END: Added since v2 ============
 // The below properties are deprecated and added since v1.
 // This is deprecated property. TODO: [PillSheetModifiedHistory-V2] delete after 2024-04-01
