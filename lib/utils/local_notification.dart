@@ -151,7 +151,6 @@ class RegisterReminderLocalNotification {
   // - ピルをタップして服用キャンセル
   // - クイックレコード
   // - 通知の文言を変えた時
-  // - 服用お休み
   // - 服用お休み終了
   // - 休薬期間の通知のON/OFF
   // - 休薬終了後
@@ -424,6 +423,7 @@ final cancelReminderLocalNotificationProvider = Provider((ref) => CancelReminder
 
 class CancelReminderLocalNotification {
   // Usecase
+  // - 服用お休み開始
   // - ピルシートグループを削除された時
   // - 通知をOFFにした時
   // - 退会
