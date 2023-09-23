@@ -4,7 +4,6 @@ import 'package:firebase_auth/firebase_auth.dart' as firebase;
 import 'package:flutter/foundation.dart';
 import 'package:pilll/entity/diary.codegen.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
-import 'package:hooks_riverpod/hooks_riverpod.dart';
 import 'package:pilll/entity/diary_setting.codegen.dart';
 import 'package:pilll/entity/menstruation.codegen.dart';
 import 'package:pilll/entity/pill_sheet_group.codegen.dart';
