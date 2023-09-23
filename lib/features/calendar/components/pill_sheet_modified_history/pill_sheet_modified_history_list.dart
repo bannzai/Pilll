@@ -184,6 +184,7 @@ class PillSheetModifiedHistoryList extends HookConsumerWidget {
           };
         }
 
+        final historyIsArchived = history.archivedDateTime != null;
         final withSpace = Column(
           children: [content, const SizedBox(height: 16)],
         );
@@ -203,12 +204,12 @@ class PillSheetModifiedHistoryList extends HookConsumerWidget {
               key: ObjectKey(history.id ?? ""),
               direction: DismissDirection.endToStart,
               onDismissed: (direction) {
-                if (history.isArchived) {
+                if (historyIsArchived) {
                   analytics.logEvent(name: "unarchive_history", parameters: {"historyID": history.id ?? "", "actionType": history.actionType});
-                  ref.read(setPillSheetModifiedHistoryProvider).call(history.copyWith(archivedDateTime: null, isArchived: false));
+                  ref.read(setPillSheetModifiedHistoryProvider).call(history.copyWith(archivedDateTime: null));
                 } else {
                   analytics.logEvent(name: "archive_history", parameters: {"historyID": history.id ?? "", "actionType": history.actionType});
-                  ref.read(setPillSheetModifiedHistoryProvider).call(history.copyWith(archivedDateTime: now(), isArchived: true));
+                  ref.read(setPillSheetModifiedHistoryProvider).call(history.copyWith(archivedDateTime: now()));
                 }
               },
               background: Container(
@@ -218,7 +219,7 @@ class PillSheetModifiedHistoryList extends HookConsumerWidget {
                   child: Padding(
                     padding: const EdgeInsets.only(right: 10.0),
                     child:
-                        Align(alignment: Alignment.centerRight, child: Icon(history.isArchived ? Icons.unarchive_outlined : Icons.archive_outlined)),
+                        Align(alignment: Alignment.centerRight, child: Icon(historyIsArchived ? Icons.unarchive_outlined : Icons.archive_outlined)),
                   ),
                 ),
               ),
