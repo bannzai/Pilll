@@ -14,9 +14,13 @@ Stream<List<PillSheetModifiedHistory>> pillSheetModifiedHistories(PillSheetModif
         .watch(databaseProvider)
         .pillSheetModifiedHistoriesReference()
         .where(
+          PillSheetModifiedHistoryFirestoreKeys.estimatedEventCausingDate,
+          isLessThanOrEqualTo: today().add(const Duration(days: 1)),
+          isGreaterThanOrEqualTo: today().subtract(const Duration(days: PillSheetModifiedHistoryServiceActionFactory.limitDays)),
+        )
+        .where(
           Filter.or(
             Filter(PillSheetModifiedHistoryFirestoreKeys.isArchived, isEqualTo: false),
-            // TODO: [PillSheetModifiedHistory-IsArchived] 2024-04 移行に削除。TTLで半年以上前のデータは消えるので、それ以降はisArchivedはすべての入っているのでこのisNullの条件は不要になる
             Filter(PillSheetModifiedHistoryFirestoreKeys.isArchived, isNull: true),
           ),
         )
@@ -31,9 +35,13 @@ Stream<List<PillSheetModifiedHistory>> pillSheetModifiedHistories(PillSheetModif
         .watch(databaseProvider)
         .pillSheetModifiedHistoriesReference()
         .where(
+          PillSheetModifiedHistoryFirestoreKeys.estimatedEventCausingDate,
+          isLessThanOrEqualTo: today().add(const Duration(days: 1)),
+          isGreaterThanOrEqualTo: today().subtract(const Duration(days: PillSheetModifiedHistoryServiceActionFactory.limitDays)),
+        )
+        .where(
           Filter.or(
             Filter(PillSheetModifiedHistoryFirestoreKeys.isArchived, isEqualTo: false),
-            // TODO: [PillSheetModifiedHistory-IsArchived] 2024-04 移行に削除。TTLで半年以上前のデータは消えるので、それ以降はisArchivedはすべての入っているのでこのisNullの条件は不要になる
             Filter(PillSheetModifiedHistoryFirestoreKeys.isArchived, isNull: true),
           ),
         )
@@ -51,6 +59,11 @@ Stream<List<PillSheetModifiedHistory>> archivedPillSheetModifiedHistories(Archiv
     return ref
         .watch(databaseProvider)
         .pillSheetModifiedHistoriesReference()
+        .where(
+          PillSheetModifiedHistoryFirestoreKeys.estimatedEventCausingDate,
+          isLessThanOrEqualTo: today().add(const Duration(days: 1)),
+          isGreaterThanOrEqualTo: today().subtract(const Duration(days: PillSheetModifiedHistoryServiceActionFactory.limitDays)),
+        )
         .where(PillSheetModifiedHistoryFirestoreKeys.isArchived, isEqualTo: true)
         .orderBy(PillSheetModifiedHistoryFirestoreKeys.estimatedEventCausingDate, descending: true)
         .startAfter([afterCursor])
@@ -63,6 +76,11 @@ Stream<List<PillSheetModifiedHistory>> archivedPillSheetModifiedHistories(Archiv
       final value = ref
           .watch(databaseProvider)
           .pillSheetModifiedHistoriesReference()
+          .where(
+            PillSheetModifiedHistoryFirestoreKeys.estimatedEventCausingDate,
+            isLessThanOrEqualTo: today().add(const Duration(days: 1)),
+            isGreaterThanOrEqualTo: today().subtract(const Duration(days: PillSheetModifiedHistoryServiceActionFactory.limitDays)),
+          )
           .where(PillSheetModifiedHistoryFirestoreKeys.isArchived, isEqualTo: true)
           .orderBy(PillSheetModifiedHistoryFirestoreKeys.estimatedEventCausingDate, descending: true)
           .limit(20)
@@ -86,9 +104,13 @@ Stream<List<PillSheetModifiedHistory>> pillSheetModifiedHistoriesWithLimit(PillS
       .watch(databaseProvider)
       .pillSheetModifiedHistoriesReference()
       .where(
+        PillSheetModifiedHistoryFirestoreKeys.estimatedEventCausingDate,
+        isLessThanOrEqualTo: today().add(const Duration(days: 1)),
+        isGreaterThanOrEqualTo: today().subtract(const Duration(days: PillSheetModifiedHistoryServiceActionFactory.limitDays)),
+      )
+      .where(
         Filter.or(
           Filter(PillSheetModifiedHistoryFirestoreKeys.isArchived, isEqualTo: false),
-          // TODO: [PillSheetModifiedHistory-IsArchived] 2024-04 移行に削除。TTLで半年以上前のデータは消えるので、それ以降はisArchivedはすべての入っているのでこのisNullの条件は不要になる
           Filter(PillSheetModifiedHistoryFirestoreKeys.isArchived, isNull: true),
         ),
       )
