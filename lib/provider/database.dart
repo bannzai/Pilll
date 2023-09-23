@@ -33,6 +33,9 @@ abstract class _CollectionPath {
   static String userPrivates(String userID) => "$users/$userID/privates";
   static String menstruations(String userID) => "$users/$userID/menstruations";
   static String pillSheetModifiedHistories(String userID) => "$users/$userID/pill_sheet_modified_histories";
+  // TODO: [ArchivedPillSheetModifiedHistory] 2024-04以降に削除して、pill_sheet_modified_historiesに統合する。
+  // 古いPillSheetModifiedHistoryのisArchivedにインデックスが貼られないため、TTLの期間内のデータが残っている間はarchived_pill_sheet_modified_historiesを使う
+  static String archivedPillSheetModifiedHistories(String userID) => "$users/$userID/archived_pill_sheet_modified_histories";
   static String schedule({required String userID, required String scheduleID}) => "$users/$userID/schedules/$scheduleID";
   static String schedules({required String userID}) => "$users/$userID/schedules";
   static String pilllAds() => "globals/pilll_ads";
@@ -97,6 +100,19 @@ class DatabaseConnection {
           );
   DocumentReference<PillSheetModifiedHistory> pillSheetModifiedHistoryReference({required String? pillSheetModifiedHistoryID}) =>
       FirebaseFirestore.instance.collection(_CollectionPath.pillSheetModifiedHistories(userID)).doc(pillSheetModifiedHistoryID).withConverter(
+            fromFirestore: _pillSheetModifiedHistoryFromFirestore,
+            toFirestore: _pillSheetModifiedHistoryToFirestore,
+          );
+
+  // TODO: [ArchivedPillSheetModifiedHistory] 2024-04以降に削除して、pill_sheet_modified_historiesに統合する。
+  // 古いPillSheetModifiedHistoryのisArchivedにインデックスが貼られないため、TTLの期間内のデータが残っている間はarchived_pill_sheet_modified_historiesを使う
+  CollectionReference<PillSheetModifiedHistory> archivedPillSheetModifiedHistoriesReference() =>
+      FirebaseFirestore.instance.collection(_CollectionPath.archivedPillSheetModifiedHistories(userID)).withConverter(
+            fromFirestore: _pillSheetModifiedHistoryFromFirestore,
+            toFirestore: _pillSheetModifiedHistoryToFirestore,
+          );
+  DocumentReference<PillSheetModifiedHistory> archivedPillSheetModifiedHistoryReference({required String? pillSheetModifiedHistoryID}) =>
+      FirebaseFirestore.instance.collection(_CollectionPath.archivedPillSheetModifiedHistories(userID)).doc(pillSheetModifiedHistoryID).withConverter(
             fromFirestore: _pillSheetModifiedHistoryFromFirestore,
             toFirestore: _pillSheetModifiedHistoryToFirestore,
           );
