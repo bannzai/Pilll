@@ -52,15 +52,6 @@ class PillSheetModifiedHistoriesPage extends HookConsumerWidget {
                   "服用履歴",
                   style: TextStyle(color: TextColor.main),
                 ),
-                actions: [
-                  IconButton(
-                    icon: const Icon(Icons.archive_outlined, color: Colors.black),
-                    onPressed: () {
-                      analytics.logEvent(name: "archived_histories_opened");
-                      Navigator.of(context).push(ArhchivedPillSheetModifiedHistoriesPageRoute.route());
-                    },
-                  ),
-                ],
                 centerTitle: false,
                 backgroundColor: PilllColors.white,
               ),
