@@ -67,11 +67,6 @@ class PillSheetModifiedHistory with _$PillSheetModifiedHistory {
       toJson: NonNullTimestampConverter.dateTimeToTimestamp,
     )
     required DateTime createdAt,
-    @JsonKey(
-      fromJson: TimestampConverter.timestampToDateTime,
-      toJson: TimestampConverter.dateTimeToTimestamp,
-    )
-    DateTime? archivedDateTime,
     // ============ END: Added since v1 ============
 
     // ============ BEGIN: Added since v2 ============
@@ -84,6 +79,16 @@ class PillSheetModifiedHistory with _$PillSheetModifiedHistory {
       toJson: TimestampConverter.dateTimeToTimestamp,
     )
     DateTime? ttlExpiresDateTime,
+    // TODO: [ArchivedPillSheetModifiedHistory] 2024-04以降に削除して、pill_sheet_modified_historiesに統合する。
+    // 古いPillSheetModifiedHistoryのisArchivedにインデックスが貼られないため、TTLの期間内のデータが残っている間はarchived_pill_sheet_modified_historiesを使う
+    @JsonKey(
+      fromJson: TimestampConverter.timestampToDateTime,
+      toJson: TimestampConverter.dateTimeToTimestamp,
+    )
+    DateTime? archivedDateTime,
+    // archivedDateTime isNull: false の条件だと、下記のエラーの条件に引っ掛かるため、archivedDateTime以外にもisArchivedを用意している。isArchived == true | isArchived == false の用途で使う
+    // You can combine constraints with a logical AND by chaining multiple equality operators (== or array-contains). However, you must create a composite index to combine equality operators with the inequality operators, <, <=, >, and !=.
+    @Default(false) bool isArchived,
     // ============ END: Added since v2 ============
 
     // The below properties are deprecated and added since v1.
