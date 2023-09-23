@@ -7,7 +7,7 @@ part of 'pill_sheet_modified_history.dart';
 // **************************************************************************
 
 String _$pillSheetModifiedHistoriesHash() =>
-    r'2810dc84b4375c6db494fdbe82c92ed8f44050e1';
+    r'8b7431d9ab266349e801ce31ae047d259312d8a3';
 
 /// Copied from Dart SDK
 class _SystemHash {
@@ -165,147 +165,8 @@ class _PillSheetModifiedHistoriesProviderElement
       (origin as PillSheetModifiedHistoriesProvider).afterCursor;
 }
 
-String _$archivedPillSheetModifiedHistoriesHash() =>
-    r'bab37a0f9d1ed5269f8b5d6d70702292e083c5df';
-
-/// See also [archivedPillSheetModifiedHistories].
-@ProviderFor(archivedPillSheetModifiedHistories)
-const archivedPillSheetModifiedHistoriesProvider =
-    ArchivedPillSheetModifiedHistoriesFamily();
-
-/// See also [archivedPillSheetModifiedHistories].
-class ArchivedPillSheetModifiedHistoriesFamily
-    extends Family<AsyncValue<List<PillSheetModifiedHistory>>> {
-  /// See also [archivedPillSheetModifiedHistories].
-  const ArchivedPillSheetModifiedHistoriesFamily();
-
-  /// See also [archivedPillSheetModifiedHistories].
-  ArchivedPillSheetModifiedHistoriesProvider call({
-    DateTime? afterCursor,
-  }) {
-    return ArchivedPillSheetModifiedHistoriesProvider(
-      afterCursor: afterCursor,
-    );
-  }
-
-  @override
-  ArchivedPillSheetModifiedHistoriesProvider getProviderOverride(
-    covariant ArchivedPillSheetModifiedHistoriesProvider provider,
-  ) {
-    return call(
-      afterCursor: provider.afterCursor,
-    );
-  }
-
-  static const Iterable<ProviderOrFamily>? _dependencies = null;
-
-  @override
-  Iterable<ProviderOrFamily>? get dependencies => _dependencies;
-
-  static const Iterable<ProviderOrFamily>? _allTransitiveDependencies = null;
-
-  @override
-  Iterable<ProviderOrFamily>? get allTransitiveDependencies =>
-      _allTransitiveDependencies;
-
-  @override
-  String? get name => r'archivedPillSheetModifiedHistoriesProvider';
-}
-
-/// See also [archivedPillSheetModifiedHistories].
-class ArchivedPillSheetModifiedHistoriesProvider
-    extends AutoDisposeStreamProvider<List<PillSheetModifiedHistory>> {
-  /// See also [archivedPillSheetModifiedHistories].
-  ArchivedPillSheetModifiedHistoriesProvider({
-    DateTime? afterCursor,
-  }) : this._internal(
-          (ref) => archivedPillSheetModifiedHistories(
-            ref as ArchivedPillSheetModifiedHistoriesRef,
-            afterCursor: afterCursor,
-          ),
-          from: archivedPillSheetModifiedHistoriesProvider,
-          name: r'archivedPillSheetModifiedHistoriesProvider',
-          debugGetCreateSourceHash:
-              const bool.fromEnvironment('dart.vm.product')
-                  ? null
-                  : _$archivedPillSheetModifiedHistoriesHash,
-          dependencies: ArchivedPillSheetModifiedHistoriesFamily._dependencies,
-          allTransitiveDependencies: ArchivedPillSheetModifiedHistoriesFamily
-              ._allTransitiveDependencies,
-          afterCursor: afterCursor,
-        );
-
-  ArchivedPillSheetModifiedHistoriesProvider._internal(
-    super._createNotifier, {
-    required super.name,
-    required super.dependencies,
-    required super.allTransitiveDependencies,
-    required super.debugGetCreateSourceHash,
-    required super.from,
-    required this.afterCursor,
-  }) : super.internal();
-
-  final DateTime? afterCursor;
-
-  @override
-  Override overrideWith(
-    Stream<List<PillSheetModifiedHistory>> Function(
-            ArchivedPillSheetModifiedHistoriesRef provider)
-        create,
-  ) {
-    return ProviderOverride(
-      origin: this,
-      override: ArchivedPillSheetModifiedHistoriesProvider._internal(
-        (ref) => create(ref as ArchivedPillSheetModifiedHistoriesRef),
-        from: from,
-        name: null,
-        dependencies: null,
-        allTransitiveDependencies: null,
-        debugGetCreateSourceHash: null,
-        afterCursor: afterCursor,
-      ),
-    );
-  }
-
-  @override
-  AutoDisposeStreamProviderElement<List<PillSheetModifiedHistory>>
-      createElement() {
-    return _ArchivedPillSheetModifiedHistoriesProviderElement(this);
-  }
-
-  @override
-  bool operator ==(Object other) {
-    return other is ArchivedPillSheetModifiedHistoriesProvider &&
-        other.afterCursor == afterCursor;
-  }
-
-  @override
-  int get hashCode {
-    var hash = _SystemHash.combine(0, runtimeType.hashCode);
-    hash = _SystemHash.combine(hash, afterCursor.hashCode);
-
-    return _SystemHash.finish(hash);
-  }
-}
-
-mixin ArchivedPillSheetModifiedHistoriesRef
-    on AutoDisposeStreamProviderRef<List<PillSheetModifiedHistory>> {
-  /// The parameter `afterCursor` of this provider.
-  DateTime? get afterCursor;
-}
-
-class _ArchivedPillSheetModifiedHistoriesProviderElement
-    extends AutoDisposeStreamProviderElement<List<PillSheetModifiedHistory>>
-    with ArchivedPillSheetModifiedHistoriesRef {
-  _ArchivedPillSheetModifiedHistoriesProviderElement(super.provider);
-
-  @override
-  DateTime? get afterCursor =>
-      (origin as ArchivedPillSheetModifiedHistoriesProvider).afterCursor;
-}
-
 String _$pillSheetModifiedHistoriesWithLimitHash() =>
-    r'ddab0702e1692631cc928a75690f0cd21c93950d';
+    r'db39b6f0ce1332d5c2316506360341f5b3722da7';
 
 /// See also [pillSheetModifiedHistoriesWithLimit].
 @ProviderFor(pillSheetModifiedHistoriesWithLimit)

@@ -46,7 +46,8 @@ mixin _$PillSheetModifiedHistory {
       fromJson: TimestampConverter.timestampToDateTime,
       toJson: TimestampConverter.dateTimeToTimestamp)
   DateTime? get ttlExpiresDateTime =>
-      throw _privateConstructorUsedError; // 古いPillSheetModifiedHistoryのisArchivedにインデックスが貼られないため、TTLの期間内のデータが残っている間はこのフィールドが使えない
+      throw _privateConstructorUsedError; // TODO: [Archive-PillSheetModifiedHistory]: 2024-04以降に対応
+// 古いPillSheetModifiedHistoryのisArchivedにインデックスが貼られないため、TTLの期間内のデータが残っている間はこのフィールドが使えない
 // null含めて値を入れないとクエリの条件に合致しないので、2024-04まではarchivedDateTime,isArchivedのデータが必ず存在するPillSheetModifiedHistoryの準備機関とする
 // バッチを書いても良いが件数が多いのでこの方法をとっている
   @JsonKey(
@@ -511,6 +512,7 @@ class _$_PillSheetModifiedHistory extends _PillSheetModifiedHistory {
       fromJson: TimestampConverter.timestampToDateTime,
       toJson: TimestampConverter.dateTimeToTimestamp)
   final DateTime? ttlExpiresDateTime;
+// TODO: [Archive-PillSheetModifiedHistory]: 2024-04以降に対応
 // 古いPillSheetModifiedHistoryのisArchivedにインデックスが貼られないため、TTLの期間内のデータが残っている間はこのフィールドが使えない
 // null含めて値を入れないとクエリの条件に合致しないので、2024-04まではarchivedDateTime,isArchivedのデータが必ず存在するPillSheetModifiedHistoryの準備機関とする
 // バッチを書いても良いが件数が多いのでこの方法をとっている
@@ -695,7 +697,8 @@ abstract class _PillSheetModifiedHistory extends PillSheetModifiedHistory {
       fromJson: TimestampConverter.timestampToDateTime,
       toJson: TimestampConverter.dateTimeToTimestamp)
   DateTime? get ttlExpiresDateTime;
-  @override // 古いPillSheetModifiedHistoryのisArchivedにインデックスが貼られないため、TTLの期間内のデータが残っている間はこのフィールドが使えない
+  @override // TODO: [Archive-PillSheetModifiedHistory]: 2024-04以降に対応
+// 古いPillSheetModifiedHistoryのisArchivedにインデックスが貼られないため、TTLの期間内のデータが残っている間はこのフィールドが使えない
 // null含めて値を入れないとクエリの条件に合致しないので、2024-04まではarchivedDateTime,isArchivedのデータが必ず存在するPillSheetModifiedHistoryの準備機関とする
 // バッチを書いても良いが件数が多いのでこの方法をとっている
   @JsonKey(
