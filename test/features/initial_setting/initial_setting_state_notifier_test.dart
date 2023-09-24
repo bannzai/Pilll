@@ -1,4 +1,5 @@
 import 'package:flutter/services.dart';
+import 'package:intl/date_symbol_data_local.dart';
 import 'package:pilll/entity/firestore_id_generator.dart';
 import 'package:pilll/entity/pill_sheet_modified_history.codegen.dart';
 import 'package:pilll/provider/batch.dart';
@@ -14,22 +15,31 @@ import 'package:pilll/provider/pill_sheet_group.dart';
 import 'package:pilll/provider/pill_sheet_modified_history.dart';
 import 'package:pilll/provider/setting.dart';
 import 'package:pilll/provider/user.dart';
+import 'package:pilll/utils/analytics.dart';
 import 'package:pilll/utils/datetime/day.dart';
+import 'package:pilll/utils/local_notification.dart';
 import 'package:riverpod/riverpod.dart';
 import 'package:shared_preferences/shared_preferences.dart';
+import 'package:timezone/timezone.dart';
 
 import '../../helper/mock.mocks.dart';
 
 void main() {
   const MethodChannel timezoneChannel = MethodChannel('flutter_native_timezone');
 
-  setUp(() {
+  setUp(() async {
     TestWidgetsFlutterBinding.ensureInitialized();
     SharedPreferences.setMockInitialValues({});
 
     TestDefaultBinaryMessengerBinding.instance.defaultBinaryMessenger.setMockMethodCallHandler(timezoneChannel, (MethodCall methodCall) async {
       return 'Asia/Tokyo';
     });
+    analytics = MockAnalytics();
+
+    initializeDateFormatting('ja_JP');
+    await LocalNotificationService.setupTimeZone();
+    final mockLocalNotificationService = MockLocalNotificationService();
+    localNotificationService = mockLocalNotificationService;
   });
 
   tearDown(() {

@@ -1,5 +1,6 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:pilll/entity/firestore_id_generator.dart';
+import 'package:pilll/entity/schedule.codegen.dart';
 import 'package:pilll/provider/force_update.dart';
 import 'package:pilll/provider/revert_take_pill.dart';
 import 'package:pilll/provider/set_user_id.dart';
@@ -19,6 +20,7 @@ import 'package:pilll/utils/datetime/day.dart';
 import 'package:mockito/annotations.dart';
 import 'package:pilll/provider/purchase.dart';
 import 'package:pilll/utils/error_log.dart';
+import 'package:pilll/utils/local_notification.dart';
 
 @GenerateMocks([
   TodayService,
@@ -46,5 +48,6 @@ import 'package:pilll/utils/error_log.dart';
   SaveUserLaunchInfo,
   ErrorLogger,
   FirestoreIDGenerator,
+  LocalNotificationService,
 ])
 abstract class KeepGeneratedMocks {}
