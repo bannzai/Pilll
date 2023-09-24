@@ -198,6 +198,10 @@ class RegisterReminderLocalNotification {
     required bool premiumOrTrial,
     required Setting setting,
   }) async {
+    if (!setting.isOnReminder) {
+      return;
+    }
+
     analytics.logEvent(name: "run_register_reminder_notification", parameters: {
       "todayPillNumber": activePillSheet.todayPillNumber,
       "todayPillIsAlreadyTaken": activePillSheet.todayPillIsAlreadyTaken,
