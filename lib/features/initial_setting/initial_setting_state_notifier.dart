@@ -12,6 +12,7 @@ import 'package:pilll/provider/pill_sheet_modified_history.dart';
 import 'package:pilll/provider/setting.dart';
 import 'package:pilll/provider/user.dart';
 import 'package:pilll/utils/datetime/day.dart';
+import 'package:pilll/utils/local_notification.dart';
 import 'package:riverpod/riverpod.dart';
 
 final initialSettingStateNotifierProvider = StateNotifierProvider.autoDispose<InitialSettingStateNotifier, InitialSettingState>(
@@ -109,6 +110,7 @@ class InitialSettingStateNotifier extends StateNotifier<InitialSettingState> {
     final batch = batchFactory.batch();
 
     final todayPillNumber = state.todayPillNumber;
+    PillSheetGroup? createdPillSheetGroup;
     if (todayPillNumber != null) {
       final createdPillSheets = state.pillSheetTypes.asMap().keys.map((pageIndex) {
         return InitialSettingState.buildPillSheet(
@@ -119,7 +121,7 @@ class InitialSettingStateNotifier extends StateNotifier<InitialSettingState> {
       }).toList();
 
       final pillSheetIDs = createdPillSheets.map((e) => e.id!).toList();
-      final createdPillSheetGroup = batchSetPillSheetGroup(
+      createdPillSheetGroup = batchSetPillSheetGroup(
         batch,
         PillSheetGroup(
           pillSheetIDs: pillSheetIDs,
@@ -141,6 +143,17 @@ class InitialSettingStateNotifier extends StateNotifier<InitialSettingState> {
     batchSetSetting(batch, setting);
 
     await batch.commit();
+
+    final activePillSheet = createdPillSheetGroup?.activePillSheet;
+    if (createdPillSheetGroup != null && activePillSheet != null) {
+      await RegisterReminderLocalNotification.run(
+        pillSheetGroup: createdPillSheetGroup,
+        activePillSheet: activePillSheet,
+        premiumOrTrial: true,
+        setting: setting,
+      );
+    }
+
     await endInitialSetting(setting);
   }
 
