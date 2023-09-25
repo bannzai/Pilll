@@ -218,12 +218,12 @@ PODS:
   - PromisesObjC (2.3.1)
   - PromisesSwift (2.3.1):
     - PromisesObjC (= 2.3.1)
-  - purchases_flutter (5.6.5):
+  - purchases_flutter (5.7.0):
     - Flutter
-    - PurchasesHybridCommon (= 6.1.2)
-  - PurchasesHybridCommon (6.1.2):
-    - RevenueCat (= 4.25.9)
-  - RevenueCat (4.25.9)
+    - PurchasesHybridCommon (= 6.2.0)
+  - PurchasesHybridCommon (6.2.0):
+    - RevenueCat (= 4.26.0)
+  - RevenueCat (4.26.0)
   - shared_preferences_foundation (0.0.1):
     - Flutter
     - FlutterMacOS
@@ -372,9 +372,9 @@ SPEC CHECKSUMS:
   package_info: 873975fc26034f0b863a300ad47e7f1ac6c7ec62
   PromisesObjC: c50d2056b5253dadbd6c2bea79b0674bd5a52fa4
   PromisesSwift: 28dca69a9c40779916ac2d6985a0192a5cb4a265
-  purchases_flutter: 440e09b1d692a20438574da78a45fda193bb80c5
-  PurchasesHybridCommon: b7c4205b6d2479cdd8914084a2b536e5e5b1445f
-  RevenueCat: 4160d04575059fc1edbb973981f541b705ddebef
+  purchases_flutter: 9b875ca9540663d7cdaad9e574a65bd98a1e014c
+  PurchasesHybridCommon: 8ac2a833eb1a27c4d0d8a352418f1eaa5f4fe68d
+  RevenueCat: 1f3a5a1c3899cb27ef9279d77a01a807d489a240
   shared_preferences_foundation: 5b919d13b803cadd15ed2dc053125c68730e5126
   url_launcher_ios: 08a3dfac5fb39e8759aeb0abbd5d9480f30fc8b4
   webview_flutter_wkwebview: 2e2d318f21a5e036e2c3f26171342e95908bd60a
