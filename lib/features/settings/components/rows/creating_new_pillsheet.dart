@@ -40,7 +40,7 @@ class CreatingNewPillSheetRow extends HookConsumerWidget {
           ]
         ],
       ),
-      subtitle: const Text("ピルをすべて服用済みの場合、新しいシートを自動で追加します",
+      subtitle: const Text("今のピルシートグループが終了したら、新しいシートを自動で追加します",
           style: TextStyle(
             fontFamily: FontFamily.japanese,
             fontWeight: FontWeight.w300,
