@@ -213,29 +213,31 @@ class RegisterReminderLocalNotification {
 
     debugPrint("tzNow:$tzNow, tz.local:${tz.local}");
 
+    final badgeNumber = activePillSheet.todayPillNumber - activePillSheet.lastTakenPillNumber;
+
     for (final reminderTime in setting.reminderTimes) {
       // 新規ピルシートグループの作成後に通知のスケジュールができないため、多めに通知をスケジュールする
       // ユーザーの何かしらのアクションでどこかでスケジュールされるだろう
-      for (final offset in List.generate(registerDays, (index) => index)) {
+      for (final dayOffset in List.generate(registerDays, (index) => index)) {
         // 本日服用済みの場合はスキップする
-        if (offset == 0 && activePillSheet.todayPillIsAlreadyTaken) {
+        if (dayOffset == 0 && activePillSheet.todayPillIsAlreadyTaken) {
           continue;
         }
 
         final reminderDateTime =
-            tzNow.date().add(Duration(days: offset)).add(Duration(hours: reminderTime.hour)).add(Duration(minutes: reminderTime.minute));
+            tzNow.date().add(Duration(days: dayOffset)).add(Duration(hours: reminderTime.hour)).add(Duration(minutes: reminderTime.minute));
         if (reminderDateTime.isBefore(tzNow)) {
           continue;
         }
         debugPrint("==== reminderDate:$reminderDateTime ===");
 
         // 跨いでも1ピルシート分だけなので、今日の日付起点で考えて今処理しているループがactivePillSheetの次かどうかを判別し、処理中の「ピルシート中のピル番号」を計算して使用する
-        final isOverActivePillSheet = activePillSheet.todayPillNumber + offset > activePillSheet.typeInfo.totalCount;
+        final isOverActivePillSheet = activePillSheet.todayPillNumber + dayOffset > activePillSheet.typeInfo.totalCount;
         final pillNumberInPillSheet = isOverActivePillSheet
-            ? activePillSheet.todayPillNumber + offset - activePillSheet.typeInfo.totalCount
-            : activePillSheet.todayPillNumber + offset;
+            ? activePillSheet.todayPillNumber + dayOffset - activePillSheet.typeInfo.totalCount
+            : activePillSheet.todayPillNumber + dayOffset;
         debugPrint(
-            "activePillSheet.todayPillNumber: ${activePillSheet.todayPillNumber}, offset: $offset, activePillSheet.typeInfo.totalCount: ${activePillSheet.typeInfo.totalCount}, isOverActivePillSheet:$isOverActivePillSheet, pillNumberInPillSheet:$pillNumberInPillSheet");
+            "activePillSheet.todayPillNumber: ${activePillSheet.todayPillNumber}, offset: $dayOffset, activePillSheet.typeInfo.totalCount: ${activePillSheet.typeInfo.totalCount}, isOverActivePillSheet:$isOverActivePillSheet, pillNumberInPillSheet:$pillNumberInPillSheet");
 
         var pillSheetGroupIndex = activePillSheet.groupIndex;
         var pillSheeType = activePillSheet.pillSheetType;
@@ -327,8 +329,8 @@ class RegisterReminderLocalNotification {
                   title,
                   '',
                   reminderDateTime,
-                  const NotificationDetails(
-                    android: AndroidNotificationDetails(
+                  NotificationDetails(
+                    android: const AndroidNotificationDetails(
                       androidReminderNotificationChannelID,
                       "服用通知",
                       channelShowBadge: true,
@@ -347,6 +349,7 @@ class RegisterReminderLocalNotification {
                       presentBadge: true,
                       sound: "becho.caf",
                       presentSound: true,
+                      badgeNumber: badgeNumber + dayOffset,
                     ),
                   ),
                   androidScheduleMode: AndroidScheduleMode.exactAllowWhileIdle,
@@ -371,8 +374,8 @@ class RegisterReminderLocalNotification {
                   title,
                   '',
                   reminderDateTime,
-                  const NotificationDetails(
-                    android: AndroidNotificationDetails(
+                  NotificationDetails(
+                    android: const AndroidNotificationDetails(
                       androidReminderNotificationChannelID,
                       "服用通知",
                       channelShowBadge: true,
@@ -385,6 +388,7 @@ class RegisterReminderLocalNotification {
                       presentBadge: true,
                       sound: "becho.caf",
                       presentSound: true,
+                      badgeNumber: badgeNumber + dayOffset,
                     ),
                   ),
                   uiLocalNotificationDateInterpretation: UILocalNotificationDateInterpretation.absoluteTime,

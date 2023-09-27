@@ -20,7 +20,6 @@ import 'package:pilll/utils/datetime/day.dart';
 import 'package:pilll/utils/local_notification.dart';
 import 'package:riverpod/riverpod.dart';
 import 'package:shared_preferences/shared_preferences.dart';
-import 'package:timezone/timezone.dart';
 
 import '../../helper/mock.mocks.dart';
 
