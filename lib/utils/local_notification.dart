@@ -213,6 +213,8 @@ class RegisterReminderLocalNotification {
 
     debugPrint("tzNow:$tzNow, tz.local:${tz.local}");
 
+    final badgeNumber = activePillSheet.todayPillNumber - activePillSheet.lastTakenPillNumber + 1;
+
     for (final reminderTime in setting.reminderTimes) {
       // 新規ピルシートグループの作成後に通知のスケジュールができないため、多めに通知をスケジュールする
       // ユーザーの何かしらのアクションでどこかでスケジュールされるだろう
@@ -347,7 +349,7 @@ class RegisterReminderLocalNotification {
                       presentBadge: true,
                       sound: "becho.caf",
                       presentSound: true,
-                      badgeNumber: dayOffset + 1,
+                      badgeNumber: badgeNumber + dayOffset,
                     ),
                   ),
                   androidScheduleMode: AndroidScheduleMode.exactAllowWhileIdle,
@@ -386,7 +388,7 @@ class RegisterReminderLocalNotification {
                       presentBadge: true,
                       sound: "becho.caf",
                       presentSound: true,
-                      badgeNumber: dayOffset + 1,
+                      badgeNumber: badgeNumber + dayOffset,
                     ),
                   ),
                   uiLocalNotificationDateInterpretation: UILocalNotificationDateInterpretation.absoluteTime,
