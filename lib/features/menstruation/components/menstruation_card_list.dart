@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:pilll/components/atoms/color.dart';
 import 'package:pilll/components/organisms/calendar/band/calendar_band_model.dart';
+import 'package:pilll/utils/datetime/date_range.dart';
 import 'package:pilll/features/menstruation/history/menstruation_history_card.dart';
 import 'package:pilll/features/menstruation/history/menstruation_history_card_state.dart';
 import 'package:pilll/features/menstruation/menstruation_card.dart';
@@ -31,13 +32,7 @@ class MenstruationCardList extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final card = cardState(
-      latestPillSheetGroup,
-      latestMenstruation,
-      setting,
-      allMenstruation,
-      calendarScheduledMenstruationBandModels,
-    );
+    final card = cardState(latestPillSheetGroup, latestMenstruation, setting, calendarScheduledMenstruationBandModels);
     final historyCard = historyCardState(latestMenstruation, allMenstruation, premiumAndTrial);
     return Expanded(
       child: Container(
@@ -62,7 +57,6 @@ MenstruationCardState? cardState(
   PillSheetGroup? pillSheetGroup,
   Menstruation? menstration,
   Setting setting,
-  List<Menstruation> allMenstruation,
   List<CalendarScheduledMenstruationBandModel> calendarScheduledMenstruationBandModels,
 ) {
   if (menstration != null && menstration.dateRange.inRange(today())) {
@@ -76,13 +70,14 @@ MenstruationCardState? cardState(
     return null;
   }
 
-  final inTheMiddleDateRanges = allMenstruation.map((e) => e.dateRange).where((element) => element.inRange(today()));
+  final menstruationDateRanges = calendarScheduledMenstruationBandModels;
+  final inTheMiddleDateRanges = menstruationDateRanges.map((e) => DateRange(e.begin, e.end)).where((element) => element.inRange(today()));
 
   if (inTheMiddleDateRanges.isNotEmpty) {
     return MenstruationCardState.inTheMiddle(scheduledDate: inTheMiddleDateRanges.first.begin);
   }
 
-  final futureDateRanges = calendarScheduledMenstruationBandModels.where((element) => element.begin.isAfter(today()));
+  final futureDateRanges = menstruationDateRanges.where((element) => element.begin.isAfter(today()));
   if (futureDateRanges.isNotEmpty) {
     return MenstruationCardState.future(nextSchedule: futureDateRanges.first.begin);
   }

@@ -59,7 +59,7 @@ void main() {
             .map((e) => CalendarScheduledMenstruationBandModel(e.begin, e.end))
             .toList();
 
-        final actual = cardState(pillSheetGroup, menstruations.first, setting, menstruations, calendarScheduledMenstruationBandModels);
+        final actual = cardState(pillSheetGroup, menstruations.first, setting, calendarScheduledMenstruationBandModels);
 
         expect(actual, MenstruationCardState(title: "生理開始日", scheduleDate: DateTime(2021, 04, 28), countdownString: "2日目"));
       },
@@ -97,7 +97,7 @@ void main() {
             .map((e) => CalendarScheduledMenstruationBandModel(e.begin, e.end))
             .toList();
 
-        final actual = cardState(pillSheetGroup, menstruations.first, setting, menstruations, calendarScheduledMenstruationBandModels);
+        final actual = cardState(pillSheetGroup, menstruations.first, setting, calendarScheduledMenstruationBandModels);
         expect(actual, null);
       },
     );
@@ -140,12 +140,12 @@ void main() {
             .map((e) => CalendarScheduledMenstruationBandModel(e.begin, e.end))
             .toList();
 
-        final actual = cardState(pillSheetGroup, null, setting, [], calendarScheduledMenstruationBandModels);
+        final actual = cardState(pillSheetGroup, null, setting, calendarScheduledMenstruationBandModels);
         expect(actual, MenstruationCardState(title: "生理予定日", scheduleDate: DateTime(2021, 05, 13), countdownString: "あと14日"));
       },
     );
     test(
-      "if todayPillNumber > setting.pillNumberForFromMenstruation, when return card state in schedueld menstruation",
+      "if todayPillNumber > setting.pillNumberForFromMenstruation, when return card state of into duration for schedueld menstruation",
       () async {
         final originalTodayRepository = todayRepository;
         final mockTodayRepository = MockTodayService();
@@ -188,7 +188,7 @@ void main() {
         final calendarScheduledMenstruationBandModels = scheduledMenstruationDateRanges(pillSheetGroup, setting, menstruations, 12)
             .map((e) => CalendarScheduledMenstruationBandModel(e.begin, e.end))
             .toList();
-        final actual = cardState(pillSheetGroup, menstruations.first, setting, menstruations, calendarScheduledMenstruationBandModels);
+        final actual = cardState(pillSheetGroup, menstruations.first, setting, calendarScheduledMenstruationBandModels);
         expect(
           actual,
           MenstruationCardState(title: "生理予定日", scheduleDate: DateTime(2021, 04, 28), countdownString: "生理予定：2日目"),
