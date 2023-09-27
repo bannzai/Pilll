@@ -28,7 +28,7 @@ final calendarScheduledMenstruationBandListProvider = Provider<AsyncValue<List<C
     ref.watch(settingProvider),
     ref.watch(allMenstruationProvider),
   ).whenData(
-    (t) => scheduledOrInTheMiddleMenstruationDateRanges(
+    (t) => scheduledMenstruationDateRanges(
       t.t1,
       t.t2,
       t.t3,

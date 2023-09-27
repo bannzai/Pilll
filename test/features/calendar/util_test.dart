@@ -61,7 +61,7 @@ void main() {
             timezoneDatabaseName: null,
           );
           expect(
-            scheduledOrInTheMiddleMenstruationDateRanges(pillSheetGroup, setting, [], 2),
+            scheduledMenstruationDateRanges(pillSheetGroup, setting, [], 2),
             [
               DateRange(
                 DateTime.parse("2020-09-23"),
@@ -116,7 +116,7 @@ void main() {
             timezoneDatabaseName: null,
           );
           expect(
-            scheduledOrInTheMiddleMenstruationDateRanges(pillSheetGroup, setting, [], 2),
+            scheduledMenstruationDateRanges(pillSheetGroup, setting, [], 2),
             [
               DateRange(
                 DateTime.parse("2020-09-23"),
@@ -171,7 +171,7 @@ void main() {
             timezoneDatabaseName: null,
           );
           expect(
-            scheduledOrInTheMiddleMenstruationDateRanges(pillSheetGroup, setting, [], 4),
+            scheduledMenstruationDateRanges(pillSheetGroup, setting, [], 4),
             [
               DateRange(
                 DateTime.parse("2020-09-23"),
@@ -246,7 +246,7 @@ void main() {
           assert(pillSheetType.dosingPeriod == 21,
               "scheduledMenstruationDateRange adding value with dosingPeriod when it will create DateRange. pillsheet_28_7 type has 24 dosingPeriod");
           expect(
-            scheduledOrInTheMiddleMenstruationDateRanges(pillSheetGroup, setting, [], 1),
+            scheduledMenstruationDateRanges(pillSheetGroup, setting, [], 1),
             [
               DateRange(
                 DateTime.parse("2020-09-23"),
@@ -292,7 +292,7 @@ void main() {
           assert(pillSheetType.dosingPeriod == 21,
               "scheduledMenstruationDateRange adding value with dosingPeriod when it will create DateRange. pillsheet_28_7 type has 24 dosingPeriod");
           expect(
-            scheduledOrInTheMiddleMenstruationDateRanges(pillSheetGroup, setting, [], 2),
+            scheduledMenstruationDateRanges(pillSheetGroup, setting, [], 2),
             [
               DateRange(
                 DateTime.parse("2020-09-23"),
@@ -341,7 +341,7 @@ void main() {
           assert(pillSheetType.dosingPeriod == 21,
               "scheduledMenstruationDateRange adding value with dosingPeriod when it will create DateRange. pillsheet_28_7 type has 24 dosingPeriod");
           expect(
-            scheduledOrInTheMiddleMenstruationDateRanges(pillSheetGroup, setting, [], 3),
+            scheduledMenstruationDateRanges(pillSheetGroup, setting, [], 3),
             [
               DateRange(
                 DateTime.parse("2020-09-23"),
@@ -394,7 +394,7 @@ void main() {
           assert(pillSheetType.dosingPeriod == 28,
               "scheduledMenstruationDateRange adding value with dosingPeriod when it will create DateRange. pillsheet_28_7 type has 24 dosingPeriod");
           expect(
-            scheduledOrInTheMiddleMenstruationDateRanges(pillSheetGroup, setting, [], 1),
+            scheduledMenstruationDateRanges(pillSheetGroup, setting, [], 1),
             [
               DateRange(
                 DateTime.parse("2021-02-09"),
@@ -435,7 +435,7 @@ void main() {
             timezoneDatabaseName: null,
           );
           expect(
-            scheduledOrInTheMiddleMenstruationDateRanges(pillSheetGroup, setting, [], 3),
+            scheduledMenstruationDateRanges(pillSheetGroup, setting, [], 3),
             [
               DateRange(
                 DateTime.parse("2021-01-23"),
@@ -487,7 +487,7 @@ void main() {
           assert(pillSheetType.dosingPeriod == 28,
               "scheduledMenstruationDateRange adding value with dosingPeriod when it will create DateRange. pillsheet_28_7 type has 24 dosingPeriod");
           expect(
-            scheduledOrInTheMiddleMenstruationDateRanges(pillSheetGroup, setting, [], 1),
+            scheduledMenstruationDateRanges(pillSheetGroup, setting, [], 1),
             [],
           );
         },

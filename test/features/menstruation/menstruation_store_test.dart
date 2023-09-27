@@ -55,7 +55,7 @@ void main() {
             createdAt: DateTime(2021, 03, 28),
           ),
         ];
-        final calendarScheduledMenstruationBandModels = scheduledOrInTheMiddleMenstruationDateRanges(pillSheetGroup, setting, menstruations, 12)
+        final calendarScheduledMenstruationBandModels = scheduledMenstruationDateRanges(pillSheetGroup, setting, menstruations, 12)
             .map((e) => CalendarScheduledMenstruationBandModel(e.begin, e.end))
             .toList();
 
@@ -93,7 +93,7 @@ void main() {
             createdAt: DateTime(2021, 03, 28),
           ),
         ];
-        final calendarScheduledMenstruationBandModels = scheduledOrInTheMiddleMenstruationDateRanges(pillSheetGroup, setting, menstruations, 12)
+        final calendarScheduledMenstruationBandModels = scheduledMenstruationDateRanges(pillSheetGroup, setting, menstruations, 12)
             .map((e) => CalendarScheduledMenstruationBandModel(e.begin, e.end))
             .toList();
 
@@ -136,7 +136,7 @@ void main() {
           timezoneDatabaseName: null,
           isOnReminder: true,
         );
-        final calendarScheduledMenstruationBandModels = scheduledOrInTheMiddleMenstruationDateRanges(pillSheetGroup, setting, [], 12)
+        final calendarScheduledMenstruationBandModels = scheduledMenstruationDateRanges(pillSheetGroup, setting, [], 12)
             .map((e) => CalendarScheduledMenstruationBandModel(e.begin, e.end))
             .toList();
 
@@ -185,7 +185,7 @@ void main() {
             createdAt: DateTime(2021, 03, 28),
           ),
         ];
-        final calendarScheduledMenstruationBandModels = scheduledOrInTheMiddleMenstruationDateRanges(pillSheetGroup, setting, menstruations, 12)
+        final calendarScheduledMenstruationBandModels = scheduledMenstruationDateRanges(pillSheetGroup, setting, menstruations, 12)
             .map((e) => CalendarScheduledMenstruationBandModel(e.begin, e.end))
             .toList();
         final actual = cardState(pillSheetGroup, menstruations.first, setting, calendarScheduledMenstruationBandModels);

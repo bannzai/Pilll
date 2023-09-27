@@ -7,10 +7,10 @@ import 'package:pilll/entity/setting.codegen.dart';
 import 'package:pilll/entity/weekday.dart';
 import 'package:pilll/utils/datetime/day.dart';
 
-// 予定されている生理日 or 記録されている生理日の日付の配列を返す
+// 予定されている生理日
 // maxDateRangeCountは主にユニットテストの時に嬉しい引数になっているがプロダクションコードでもそのまま使用している
 // ユースケースとして大体の未来のものを返せれば良いので厳密な計算結果が欲しいわけではないので動作確認とユニットテストをしやすい方式をとっている
-List<DateRange> scheduledOrInTheMiddleMenstruationDateRanges(PillSheetGroup? pillSheetGroup, Setting? setting, List<Menstruation> menstruations,
+List<DateRange> scheduledMenstruationDateRanges(PillSheetGroup? pillSheetGroup, Setting? setting, List<Menstruation> menstruations,
     [int maxDateRangeCount = 15]) {
   if (pillSheetGroup == null || setting == null) {
     return [];
@@ -31,14 +31,13 @@ List<DateRange> scheduledOrInTheMiddleMenstruationDateRanges(PillSheetGroup? pil
             menstruationDateRange.inRange(scheduledMenstruationRange.begin) || menstruationDateRange.inRange(scheduledMenstruationRange.end))
         .isEmpty;
   }).toList();
-  final baseDateRanges = scheduledMenstruationDateRanges..addAll(menstruationDateRanges);
 
-  List<DateRange> dateRanges = baseDateRanges;
+  List<DateRange> dateRanges = scheduledMenstruationDateRanges;
   final pillSheetGroupTotalPillCount = pillSheetGroup.pillSheetTypes.fold(0, (p, e) => p + e.typeInfo.totalCount);
   for (var i = 1; i <= maxDateRangeCount; i++) {
     final offset = pillSheetGroupTotalPillCount * i;
     final dateRangesWithOffset =
-        baseDateRanges.map((e) => DateRange(e.begin.add(Duration(days: offset)), e.end.add(Duration(days: offset)))).toList();
+        scheduledMenstruationDateRanges.map((e) => DateRange(e.begin.add(Duration(days: offset)), e.end.add(Duration(days: offset)))).toList();
     dateRanges = dateRanges..addAll(dateRangesWithOffset);
   }
 
