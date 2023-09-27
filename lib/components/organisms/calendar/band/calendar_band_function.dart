@@ -38,7 +38,7 @@ List<DateRange> scheduledMenstruationDateRanges(PillSheetGroup? pillSheetGroup, 
     final offset = pillSheetGroupTotalPillCount * i;
     final dateRangesWithOffset =
         scheduledMenstruationDateRanges.map((e) => DateRange(e.begin.add(Duration(days: offset)), e.end.add(Duration(days: offset)))).toList();
-    dateRanges = dateRanges..addAll(dateRangesWithOffset);
+    dateRanges = [...dateRanges, ...dateRangesWithOffset];
   }
 
   if (dateRanges.length > maxDateRangeCount) {
