@@ -24,7 +24,10 @@ List<DateRange> scheduledMenstruationDateRanges(PillSheetGroup? pillSheetGroup, 
   assert(maxDateRangeCount > 0);
 
   final menstruationDateRanges = menstruations.map((e) => e.dateRange);
-  final scheduledMenstruationDateRanges = pillSheetGroup.menstruationDateRanges(setting: setting).where((scheduledMenstruationRange) {
+  final scheduledMenstruationDateRanges = pillSheetGroup
+      .menstruationDateRanges(setting: setting)
+      .where((scheduledMenstruationRange) => scheduledMenstruationRange.begin.isAfter(today()) && scheduledMenstruationRange.end.isAfter(today()))
+      .where((scheduledMenstruationRange) {
     // すでに記録されている生理については除外したものを予定されている生理とする
     return menstruationDateRanges
         .where((menstruationDateRange) =>
