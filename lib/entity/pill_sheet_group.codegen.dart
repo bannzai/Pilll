@@ -249,13 +249,13 @@ class PillSheetGroup with _$PillSheetGroup {
       return [];
     }
 
-    // 28番ごとなら28,56,84番目開始の番号とマッチさせるために各始まりの番号を配列にする
     final summarizedPillCount = pillSheets.fold<int>(
       0,
       (previousValue, element) => previousValue + element.typeInfo.totalCount,
     );
     // ピルシートグループの中に何度pillNumberForFromMenstruation が出てくるか算出
     final numberOfMenstruationSettingInPillSheetGroup = summarizedPillCount / setting.pillNumberForFromMenstruation;
+    // 28番ごとなら28,56,84番目開始の番号とマッチさせるために各始まりの番号を配列にする
     List<int> fromMenstruations = [];
     for (var i = 0; i < numberOfMenstruationSettingInPillSheetGroup; i++) {
       fromMenstruations.add(setting.pillNumberForFromMenstruation + (setting.pillNumberForFromMenstruation * i));
