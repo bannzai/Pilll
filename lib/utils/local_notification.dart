@@ -213,7 +213,7 @@ class RegisterReminderLocalNotification {
 
     debugPrint("tzNow:$tzNow, tz.local:${tz.local}");
 
-    final badgeNumber = activePillSheet.todayPillNumber - activePillSheet.lastTakenPillNumber + 1;
+    final badgeNumber = activePillSheet.todayPillNumber - activePillSheet.lastTakenPillNumber;
 
     for (final reminderTime in setting.reminderTimes) {
       // 新規ピルシートグループの作成後に通知のスケジュールができないため、多めに通知をスケジュールする
