@@ -56,9 +56,11 @@ dependencies:
   # The following adds the Cupertino Icons font to your application.
   # Use with the CupertinoIcons class for iOS style icons.
   cupertino_icons: ^1.0.6
-    # flutter_inappwebview: ^5.4.3
-    # Use https://github.com/pichillilorenzo/flutter_inappwebview/pull/1238
-  flutter_inappwebview: ^5.7.2+3
+  # ref: https://github.com/pichillilorenzo/flutter_inappwebview/issues/1735#issuecomment-1725248033
+  flutter_inappwebview: 
+  git:
+    url: https://github.com/Estrelio/flutter_inappwebview.git
+    ref: fix-xcode-17
   flutter_app_badger: ^1.2.0
   purchases_flutter: ^5.7.0
   firebase_performance: ^0.9.0+11
