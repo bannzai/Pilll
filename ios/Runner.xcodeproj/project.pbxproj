@@ -15,7 +15,6 @@
 		207DA16728B1148700CD6C34 /* SwiftUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2006A7C628B0BB670066E4DD /* SwiftUI.framework */; };
 		207DA16A28B1148700CD6C34 /* Widget.swift in Sources */ = {isa = PBXBuildFile; fileRef = 207DA16928B1148700CD6C34 /* Widget.swift */; };
 		207DA16C28B1148800CD6C34 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 207DA16B28B1148800CD6C34 /* Assets.xcassets */; };
-		207DA17028B1148800CD6C34 /* WidgetExtension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 207DA16528B1148700CD6C34 /* WidgetExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		20BF93A428B122F8007A36C9 /* WidgetKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2006A7C428B0BB670066E4DD /* WidgetKit.framework */; };
 		20BF942028B22626007A36C9 /* Const.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2006A7E028B0CDC00066E4DD /* Const.swift */; };
 		20C768EC27D2B4E700BA525C /* Profile.xcconfig in Resources */ = {isa = PBXBuildFile; fileRef = 20C768EA27D2B4E700BA525C /* Profile.xcconfig */; };
@@ -45,7 +44,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		207DA16E28B1148800CD6C34 /* PBXContainerItemProxy */ = {
+		209142D62AC5C53B0079BCB5 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 97C146E61CF9000F007C117D /* Project object */;
 			proxyType = 1;
@@ -61,7 +60,6 @@
 			dstPath = "";
 			dstSubfolderSpec = 13;
 			files = (
-				207DA17028B1148800CD6C34 /* WidgetExtension.appex in Embed App Extensions */,
 			);
 			name = "Embed App Extensions";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -339,7 +337,7 @@
 			buildRules = (
 			);
 			dependencies = (
-				207DA16F28B1148800CD6C34 /* PBXTargetDependency */,
+				209142D72AC5C53B0079BCB5 /* PBXTargetDependency */,
 			);
 			name = Runner;
 			productName = Runner;
@@ -573,10 +571,10 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		207DA16F28B1148800CD6C34 /* PBXTargetDependency */ = {
+		209142D72AC5C53B0079BCB5 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = 207DA16428B1148700CD6C34 /* WidgetExtension */;
-			targetProxy = 207DA16E28B1148800CD6C34 /* PBXContainerItemProxy */;
+			targetProxy = 209142D62AC5C53B0079BCB5 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
