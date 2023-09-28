@@ -326,6 +326,7 @@
 			buildPhases = (
 				D0248FA5F76CFF05569BD228 /* [CP] Check Pods Manifest.lock */,
 				BA158DA124E4413900164799 /* Replace GoogleService-Info.plist */,
+				2006A7D428B0BB680066E4DD /* Embed App Extensions */,
 				9740EEB61CF901F6004384FC /* Run Script */,
 				97C146EA1CF9000F007C117D /* Sources */,
 				97C146EB1CF9000F007C117D /* Frameworks */,
@@ -334,7 +335,6 @@
 				3B06AD1E1E4923F5004D2608 /* Thin Binary */,
 				27A4C8F613EDD0A9CCECDDC7 /* [CP] Embed Pods Frameworks */,
 				B3CAD8EA6F3D8D8D194CEF5F /* [CP] Copy Pods Resources */,
-				2006A7D428B0BB680066E4DD /* Embed App Extensions */,
 			);
 			buildRules = (
 			);
@@ -464,7 +464,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "/bin/sh \"$FLUTTER_ROOT/packages/flutter_tools/bin/xcode_backend.sh\" embed_and_thin";
+			shellScript = "/bin/sh \"$FLUTTER_ROOT/packages/flutter_tools/bin/xcode_backend.sh\" embed_and_thin\n";
 		};
 		9740EEB61CF901F6004384FC /* Run Script */ = {
 			isa = PBXShellScriptBuildPhase;
@@ -679,7 +679,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "$(IOS_PRODUCT_BUNDLE_IDENTIFIER).Widget";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
-				"PROVISIONING_PROFILE_SPECIFIER[sdk=iphoneos*]" = Pilll.Production.Widget.AppStore;
+				"PROVISIONING_PROFILE_SPECIFIER[sdk=iphoneos*]" = Pilll.Development.Widget.AppStore;
 				SKIP_INSTALL = YES;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -1132,7 +1132,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "$(IOS_PRODUCT_BUNDLE_IDENTIFIER)";
 				PRODUCT_NAME = Runner;
 				PROVISIONING_PROFILE_SPECIFIER = "";
-				"PROVISIONING_PROFILE_SPECIFIER[sdk=iphoneos*]" = Pilll.Production.AppStore;
+				"PROVISIONING_PROFILE_SPECIFIER[sdk=iphoneos*]" = Pilll.Development.AppStore;
 				SWIFT_OBJC_BRIDGING_HEADER = "Runner/Runner-Bridging-Header.h";
 				SWIFT_VERSION = 5.0;
 				VERSIONING_SYSTEM = "apple-generic";
