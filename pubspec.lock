@@ -478,23 +478,6 @@ packages:
       url: "https://pub.dev"
     source: hosted
     version: "0.20.1"
-  flutter_inappwebview:
-    dependency: "direct main"
-    description:
-      path: "."
-      ref: fix-xcode-17
-      resolved-ref: c7b1eb785c9b19ca6154c288e44e2d7b70c998fe
-      url: "https://github.com/Estrelio/flutter_inappwebview.git"
-    source: git
-    version: "6.0.0-beta.25"
-  flutter_inappwebview_internal_annotations:
-    dependency: transitive
-    description:
-      name: flutter_inappwebview_internal_annotations
-      sha256: "064a8ccbc76217dcd3b0fd6c6ea6f549e69b2849a0233b5bb46af9632c3ce2ff"
-      url: "https://pub.dev"
-    source: hosted
-    version: "1.1.0"
   flutter_lints:
     dependency: "direct dev"
     description:
