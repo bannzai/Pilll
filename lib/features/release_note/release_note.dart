@@ -1,4 +1,3 @@
-import 'package:flutter_inappwebview/flutter_inappwebview.dart';
 import 'package:pilll/utils/analytics.dart';
 import 'package:pilll/components/atoms/button.dart';
 import 'package:pilll/components/atoms/color.dart';
@@ -7,6 +6,8 @@ import 'package:pilll/components/atoms/text_color.dart';
 import 'package:flutter/material.dart';
 import 'package:pilll/utils/shared_preference/keys.dart';
 import 'package:shared_preferences/shared_preferences.dart';
+import 'package:url_launcher/url_launcher.dart';
+import 'package:url_launcher/url_launcher_string.dart';
 
 class ReleaseNote extends StatelessWidget {
   const ReleaseNote({Key? key}) : super(key: key);
@@ -112,10 +113,5 @@ void showReleaseNotePreDialog(BuildContext context) async {
 }
 
 void openReleaseNote() async {
-  final ChromeSafariBrowser browser = ChromeSafariBrowser();
-  await browser.open(
-      url: Uri.parse("https://pilll.wraptas.site/5882a8acbe874a0b90fa2421a2f9f3d8"),
-      options: ChromeSafariBrowserClassOptions(
-          android: AndroidChromeCustomTabsOptions(shareState: CustomTabsShareState.SHARE_STATE_OFF),
-          ios: IOSSafariOptions(barCollapsingEnabled: true, presentationStyle: IOSUIModalPresentationStyle.PAGE_SHEET)));
+  launchUrl(Uri.parse("https://pilll.wraptas.site/5882a8acbe874a0b90fa2421a2f9f3d8"), mode: LaunchMode.inAppWebView);
 }

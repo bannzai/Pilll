@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_inappwebview/flutter_inappwebview.dart';
 import 'package:webview_flutter/webview_flutter.dart';
 
 class WebViewPage extends StatefulWidget {
@@ -48,7 +47,7 @@ class _WebViewPageState extends State<WebViewPage> {
   }
 }
 
-extension WebViewPageRoute on WebView {
+extension WebViewPageRoute on WebViewPage {
   static Route<dynamic> route({
     required String title,
     required String url,
