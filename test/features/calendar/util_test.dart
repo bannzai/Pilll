@@ -360,6 +360,75 @@ void main() {
         },
       );
       test(
+        "3枚ピルシートがある。２枚目のピルシートの進行中で6個分=1シートグループ分先の未来のデータを出す",
+        () {
+          final originalTodayRepository = todayRepository;
+          final mockTodayRepository = MockTodayService();
+          todayRepository = mockTodayRepository;
+          when(mockTodayRepository.now()).thenReturn(DateTime.parse("2020-10-01"));
+          addTearDown(() {
+            todayRepository = originalTodayRepository;
+          });
+
+          var pillSheetType = PillSheetType.pillsheet_28_7;
+          var beginingDate = DateTime.parse("2020-09-01");
+          var fromMenstruation = 23;
+          var durationMenstruation = 3;
+          var pillSheet = PillSheet(
+            id: firestoreIDGenerator(),
+            typeInfo: pillSheetType.typeInfo,
+            beginingDate: beginingDate,
+            lastTakenDate: null,
+            createdAt: now(),
+          );
+          final pillSheetGroup = PillSheetGroup(pillSheetIDs: ["1"], pillSheets: [pillSheet], createdAt: now());
+          var setting = Setting(
+            pillSheetTypes: [pillSheetType],
+            pillNumberForFromMenstruation: fromMenstruation,
+            durationMenstruation: durationMenstruation,
+            isOnReminder: false,
+            reminderTimes: [const ReminderTime(hour: 1, minute: 1)],
+            timezoneDatabaseName: null,
+          );
+          assert(pillSheetType.dosingPeriod == 21,
+              "scheduledMenstruationDateRange adding value with dosingPeriod when it will create DateRange. pillsheet_28_7 type has 24 dosingPeriod");
+          expect(
+            scheduledMenstruationDateRanges(pillSheetGroup, setting, [], 6),
+            [
+              // 1枚目の予定日だったものは除外
+              //   DateRange(
+              //     DateTime.parse("2020-09-23"),
+              //     DateTime.parse("2020-09-25"),
+              //   ),
+              DateRange(
+                DateTime.parse("2020-10-21"),
+                DateTime.parse("2020-10-23"),
+              ),
+              DateRange(
+                DateTime.parse("2020-11-18"),
+                DateTime.parse("2020-11-20"),
+              ),
+              DateRange(
+                DateTime.parse("2020-12-16"),
+                DateTime.parse("2020-12-18"),
+              ),
+              DateRange(
+                DateTime.parse("2021-01-13"),
+                DateTime.parse("2021-01-15"),
+              ),
+              DateRange(
+                DateTime.parse("2021-02-10"),
+                DateTime.parse("2021-02-12"),
+              ),
+              DateRange(
+                DateTime.parse("2021-03-10"),
+                DateTime.parse("2021-03-12"),
+              )
+            ],
+          );
+        },
+      );
+      test(
         "First page with pillSheetType: pillsheet_28_0, beginingDate: 2021-01-18, fromMenstruation: 23, durationMenstruation: 3",
         () {
           final originalTodayRepository = todayRepository;
