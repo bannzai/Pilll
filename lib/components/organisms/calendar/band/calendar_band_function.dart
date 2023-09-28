@@ -23,7 +23,18 @@ List<DateRange> scheduledMenstruationDateRanges(PillSheetGroup? pillSheetGroup, 
   }
   assert(maxDateRangeCount > 0);
 
-  final scheduledMenstruationDateRanges = pillSheetGroup.menstruationDateRanges(setting: setting);
+  final menstruationDateRanges = menstruations.map((e) => e.dateRange);
+  final scheduledMenstruationDateRanges = pillSheetGroup
+      .menstruationDateRanges(setting: setting)
+      .where((scheduledMenstruationRange) => !scheduledMenstruationRange.end.isBefore(today()))
+      .where((scheduledMenstruationRange) {
+    // すでに記録されている生理については除外したものを予定されている生理とする
+    return menstruationDateRanges
+        .where((menstruationDateRange) =>
+            menstruationDateRange.inRange(scheduledMenstruationRange.begin) || menstruationDateRange.inRange(scheduledMenstruationRange.end))
+        .isEmpty;
+  }).toList();
+
   List<DateRange> dateRanges = scheduledMenstruationDateRanges;
   final pillSheetGroupTotalPillCount = pillSheetGroup.pillSheetTypes.fold(0, (p, e) => p + e.typeInfo.totalCount);
   for (var i = 1; i <= maxDateRangeCount; i++) {
@@ -32,18 +43,6 @@ List<DateRange> scheduledMenstruationDateRanges(PillSheetGroup? pillSheetGroup, 
         scheduledMenstruationDateRanges.map((e) => DateRange(e.begin.add(Duration(days: offset)), e.end.add(Duration(days: offset)))).toList();
     dateRanges = [...dateRanges, ...dateRangesWithOffset];
   }
-
-  final menstruationDateRanges = menstruations.map((e) => e.dateRange);
-  // `今日より前の生理予定日` と `すでに記録済みの生理予定日` はこのタイミングで除外する。scheduledMenstruationDateRangesを作成するタイミングだと後続のoffsetを含めた処理に影響が出る。
-  // 例えば現在2シートめでこのwhere句でフィルタリングしてしまうと、1シート目とoffsetを考慮した生理予定日が表示されないようになる
-  dateRanges =
-      dateRanges.where((scheduledMenstruationRange) => !scheduledMenstruationRange.end.isBefore(today())).where((scheduledMenstruationRange) {
-    // すでに記録されている生理については除外したものを予定されている生理とする
-    return menstruationDateRanges
-        .where((menstruationDateRange) =>
-            menstruationDateRange.inRange(scheduledMenstruationRange.begin) || menstruationDateRange.inRange(scheduledMenstruationRange.end))
-        .isEmpty;
-  }).toList();
 
   if (dateRanges.length > maxDateRangeCount) {
     // maxDateRangeCount分だけ返す。主にテストの時に結果を予想しやすいのでこの形をとっている
