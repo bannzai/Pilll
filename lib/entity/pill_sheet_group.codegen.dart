@@ -254,7 +254,7 @@ class PillSheetGroup with _$PillSheetGroup {
       (previousValue, element) => previousValue + element.typeInfo.totalCount,
     );
     // ピルシートグループの中に何度pillNumberForFromMenstruation が出てくるか算出
-    final numberOfMenstruationSettingInPillSheetGroup = summarizedPillCount / setting.pillNumberForFromMenstruation;
+    final numberOfMenstruationSettingInPillSheetGroup = summarizedPillCount ~/ setting.pillNumberForFromMenstruation;
     // 28番ごとなら28,56,84番目開始の番号とマッチさせるために各始まりの番号を配列にする
     List<int> fromMenstruations = [];
     for (var i = 0; i < numberOfMenstruationSettingInPillSheetGroup; i++) {
