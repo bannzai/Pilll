@@ -27,26 +27,6 @@ class TodayTakenPillNumber extends StatelessWidget {
       child: Column(
         mainAxisAlignment: MainAxisAlignment.center,
         children: <Widget>[
-          if (_appearanceMode == PillSheetAppearanceMode.sequential)
-            const Text(
-              "💊 今日は服用",
-              style: TextStyle(
-                fontFamily: FontFamily.japanese,
-                fontWeight: FontWeight.w300,
-                fontSize: 14,
-                color: TextColor.noshime,
-              ),
-            ),
-          if (_appearanceMode != PillSheetAppearanceMode.sequential)
-            const Text(
-              "💊 今日飲むピル",
-              style: TextStyle(
-                fontFamily: FontFamily.japanese,
-                fontWeight: FontWeight.w300,
-                fontSize: 14,
-                color: TextColor.noshime,
-              ),
-            ),
           _content(),
         ],
       ),
@@ -95,14 +75,14 @@ class TodayTakenPillNumber extends StatelessWidget {
               style: const TextStyle(
                 fontFamily: FontFamily.number,
                 fontWeight: FontWeight.w500,
-                fontSize: 40,
+                fontSize: 20,
                 color: TextColor.main,
               )),
           const Text("番",
               style: TextStyle(
                 fontFamily: FontFamily.japanese,
                 fontWeight: FontWeight.w600,
-                fontSize: 14,
+                fontSize: 20,
                 color: TextColor.noshime,
               )),
         ],
@@ -111,14 +91,14 @@ class TodayTakenPillNumber extends StatelessWidget {
               style: const TextStyle(
                 fontFamily: FontFamily.number,
                 fontWeight: FontWeight.w500,
-                fontSize: 40,
+                fontSize: 20,
                 color: TextColor.main,
               )),
           const Text("番",
               style: TextStyle(
                 fontFamily: FontFamily.japanese,
                 fontWeight: FontWeight.w600,
-                fontSize: 14,
+                fontSize: 20,
                 color: TextColor.noshime,
               )),
         ],
@@ -127,14 +107,14 @@ class TodayTakenPillNumber extends StatelessWidget {
               style: const TextStyle(
                 fontFamily: FontFamily.number,
                 fontWeight: FontWeight.w500,
-                fontSize: 40,
+                fontSize: 20,
                 color: TextColor.main,
               )),
           const Text("番",
               style: TextStyle(
                 fontFamily: FontFamily.japanese,
                 fontWeight: FontWeight.w600,
-                fontSize: 14,
+                fontSize: 20,
                 color: TextColor.noshime,
               )),
         ],

@@ -29,13 +29,15 @@ class RecordPagePillSheetList extends HookConsumerWidget {
   Widget build(BuildContext context, WidgetRef ref) {
     final pageController = usePageController(
         initialPage: activePillSheet.groupIndex, viewportFraction: (PillSheetViewLayout.width + 20) / MediaQuery.of(context).size.width);
+    final height = PillSheetViewLayout.calcHeight(
+      PillSheetViewLayout.mostLargePillSheetType(pillSheetGroup.pillSheets.map((e) => e.pillSheetType).toList()).numberOfLineInPillSheet,
+      false,
+    );
+
     return Column(
       children: [
         SizedBox(
-          height: PillSheetViewLayout.calcHeight(
-            PillSheetViewLayout.mostLargePillSheetType(pillSheetGroup.pillSheets.map((e) => e.pillSheetType).toList()).numberOfLineInPillSheet,
-            false,
-          ),
+          height: height,
           child: PageView(
             clipBehavior: Clip.none,
             controller: pageController,

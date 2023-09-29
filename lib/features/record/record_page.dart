@@ -131,25 +131,33 @@ class RecordPageBody extends HookConsumerWidget {
       appBar: AppBar(
         titleSpacing: 0,
         backgroundColor: PilllColors.white,
-        toolbarHeight: RecordPageInformationHeaderConst.height,
         title: RecordPageInformationHeader(
           today: DateTime.now(),
           pillSheetGroup: pillSheetGroup,
           setting: setting,
         ),
+        actions: [
+          IconButton(
+            onPressed: () => print(""),
+            icon: Icon(Icons.door_back_door),
+            color: Colors.black,
+          ),
+        ],
       ),
       body: Column(
+        mainAxisAlignment: MainAxisAlignment.end,
         children: [
+          const AnnouncementBar(),
+          const Spacer(),
           Expanded(
             child: ListView(
               children: [
-                const AnnouncementBar(),
-                const SizedBox(height: 37),
                 _content(context),
                 const SizedBox(height: 20),
               ],
             ),
           ),
+          const Spacer(),
           if (activePillSheet != null && pillSheetGroup != null && !pillSheetGroup.isDeactived) ...[
             RecordPageButton(
               pillSheetGroup: pillSheetGroup,
