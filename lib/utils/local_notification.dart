@@ -362,10 +362,7 @@ class RegisterReminderLocalNotification {
             }),
           );
         } else {
-          var title = "💊の時間です";
-          if (Environment.isDevelopment) {
-            title += " (Local)";
-          }
+          const title = "💊の時間です";
           futures.add(
             Future(() async {
               try {
