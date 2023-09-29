@@ -153,15 +153,15 @@ class RecordPageBody extends HookConsumerWidget {
         mainAxisAlignment: MainAxisAlignment.end,
         children: [
           const AnnouncementBar(),
+          const Spacer(),
           Expanded(
             child: ListView(
               children: [
-                const SizedBox(height: 40),
-                _content(context),
-                const SizedBox(height: 20),
+                IntrinsicHeight(child: _content(context)),
               ],
             ),
           ),
+          const SizedBox(height: 20),
           if (activePillSheet != null && pillSheetGroup != null && !pillSheetGroup.isDeactived) ...[
             RecordPageButton(
               pillSheetGroup: pillSheetGroup,
@@ -188,13 +188,6 @@ class RecordPageBody extends HookConsumerWidget {
       return Column(
         mainAxisAlignment: MainAxisAlignment.start,
         children: [
-          RecordPagePillSheetSupportActions(
-            pillSheetGroup: pillSheetGroup,
-            activePillSheet: activePillSheet,
-            setting: setting,
-            premiumAndTrial: premiumAndTrial,
-          ),
-          const SizedBox(height: 16),
           RecordPagePillSheetList(
             pillSheetGroup: pillSheetGroup,
             activePillSheet: activePillSheet,
