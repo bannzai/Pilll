@@ -86,5 +86,24 @@ final batchSetPillSheetGroupProvider =
 
 typedef BatchSetPillSheetGroupRef
     = AutoDisposeProviderRef<BatchSetPillSheetGroup>;
+String _$setPillSheetGroupHash() => r'c8f16da419ae0bd4ad77f2d95070189c3a748f4c';
+
+/// See also [setPillSheetGroup].
+@ProviderFor(setPillSheetGroup)
+final setPillSheetGroupProvider =
+    AutoDisposeProvider<SetPillSheetGroup>.internal(
+  setPillSheetGroup,
+  name: r'setPillSheetGroupProvider',
+  debugGetCreateSourceHash: const bool.fromEnvironment('dart.vm.product')
+      ? null
+      : _$setPillSheetGroupHash,
+  dependencies: <ProviderOrFamily>[databaseProvider],
+  allTransitiveDependencies: <ProviderOrFamily>{
+    databaseProvider,
+    ...?databaseProvider.allTransitiveDependencies
+  },
+);
+
+typedef SetPillSheetGroupRef = AutoDisposeProviderRef<SetPillSheetGroup>;
 // ignore_for_file: type=lint
 // ignore_for_file: subtype_of_sealed_class, invalid_use_of_internal_member, invalid_use_of_visible_for_testing_member

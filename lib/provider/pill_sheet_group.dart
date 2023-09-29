@@ -84,7 +84,10 @@ class BatchSetPillSheetGroup {
   }
 }
 
-final setPillSheetGroupProvider = Provider((ref) => SetPillSheetGroup(ref.watch(databaseProvider)));
+@Riverpod(dependencies: [database])
+SetPillSheetGroup setPillSheetGroup(SetPillSheetGroupRef ref) {
+  return SetPillSheetGroup(ref.watch(databaseProvider));
+}
 
 class SetPillSheetGroup {
   final DatabaseConnection databaseConnection;
