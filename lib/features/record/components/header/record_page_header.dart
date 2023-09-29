@@ -33,26 +33,42 @@ class RecordPageInformationHeader extends StatelessWidget {
     final activePillSheet = pillSheetGroup?.activePillSheet;
     final setting = this.setting;
 
-    return Row(
-      mainAxisAlignment: MainAxisAlignment.center,
-      children: <Widget>[
-        _todayWidget(),
-        const SizedBox(width: 8),
-        TodayTakenPillNumber(
-            pillSheetGroup: pillSheetGroup,
-            setting: setting,
-            onPressed: () {
-              analytics.logEvent(name: "tapped_record_information_header");
-              if (activePillSheet != null && pillSheetGroup != null && !pillSheetGroup.isDeactived) {
-                Navigator.of(context).push(
-                  SettingTodayPillNumberPageRoute.route(
-                    pillSheetGroup: pillSheetGroup,
-                    activePillSheet: activePillSheet,
-                  ),
-                );
-              }
-            }),
-      ],
+    return SizedBox(
+      height: RecordPageInformationHeaderConst.height,
+      child: Column(
+        children: <Widget>[
+          const SizedBox(height: 34),
+          Row(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: <Widget>[
+              _todayWidget(),
+              const SizedBox(width: 28),
+              const SizedBox(
+                height: 64,
+                child: VerticalDivider(
+                  width: 10,
+                  color: PilllColors.divider,
+                ),
+              ),
+              const SizedBox(width: 28),
+              TodayTakenPillNumber(
+                  pillSheetGroup: pillSheetGroup,
+                  setting: setting,
+                  onPressed: () {
+                    analytics.logEvent(name: "tapped_record_information_header");
+                    if (activePillSheet != null && pillSheetGroup != null && !pillSheetGroup.isDeactived) {
+                      Navigator.of(context).push(
+                        SettingTodayPillNumberPageRoute.route(
+                          pillSheetGroup: pillSheetGroup,
+                          activePillSheet: activePillSheet,
+                        ),
+                      );
+                    }
+                  }),
+            ],
+          ),
+        ],
+      ),
     );
   }
 
@@ -63,7 +79,7 @@ class RecordPageInformationHeader extends StatelessWidget {
         style: const TextStyle(
           fontFamily: FontFamily.number,
           fontWeight: FontWeight.w600,
-          fontSize: 20,
+          fontSize: 24,
           color: TextColor.gray,
         ),
       ),
