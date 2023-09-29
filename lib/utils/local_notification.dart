@@ -201,6 +201,9 @@ class RegisterReminderLocalNotification {
     if (!setting.isOnReminder) {
       return;
     }
+    if (activePillSheet.activeRestDuration != null) {
+      return;
+    }
 
     analytics.logEvent(name: "run_register_reminder_notification", parameters: {
       "todayPillNumber": activePillSheet.todayPillNumber,
