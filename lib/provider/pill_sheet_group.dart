@@ -58,14 +58,15 @@ Stream<PillSheetGroup?> latestPillSheetGroup(LatestPillSheetGroupRef ref) {
   }).map(((event) => _filter(event)));
 }
 
-final beforePillSheetGroupProvider = FutureProvider<PillSheetGroup?>((ref) async {
+@Riverpod()
+Future<PillSheetGroup?> beforePillSheetGroup(BeforePillSheetGroupRef ref) async {
   final database = ref.watch(databaseProvider);
   final snapshot = await database.pillSheetGroupsReference().orderBy(PillSheetGroupFirestoreKeys.createdAt).limitToLast(2).get();
   if (snapshot.docs.length <= 1) {
     return null;
   }
   return snapshot.docs[0].data();
-});
+}
 
 final batchSetPillSheetGroupProvider = Provider((ref) => BatchSetPillSheetGroup(ref.watch(databaseProvider)));
 
