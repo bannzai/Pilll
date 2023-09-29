@@ -58,7 +58,7 @@ Stream<PillSheetGroup?> latestPillSheetGroup(LatestPillSheetGroupRef ref) {
   }).map(((event) => _filter(event)));
 }
 
-@Riverpod(dependencies: [database])
+@Riverpod()
 Future<PillSheetGroup?> beforePillSheetGroup(BeforePillSheetGroupRef ref) async {
   final database = ref.watch(databaseProvider);
   final snapshot = await database.pillSheetGroupsReference().orderBy(PillSheetGroupFirestoreKeys.createdAt).limitToLast(2).get();
@@ -68,7 +68,7 @@ Future<PillSheetGroup?> beforePillSheetGroup(BeforePillSheetGroupRef ref) async 
   return snapshot.docs[0].data();
 }
 
-@Riverpod(dependencies: [database])
+@Riverpod()
 BatchSetPillSheetGroup batchSetPillSheetGroup(BatchSetPillSheetGroupRef ref) {
   return BatchSetPillSheetGroup(ref.watch(databaseProvider));
 }
@@ -84,7 +84,7 @@ class BatchSetPillSheetGroup {
   }
 }
 
-@Riverpod(dependencies: [database])
+@Riverpod()
 SetPillSheetGroup setPillSheetGroup(SetPillSheetGroupRef ref) {
   return SetPillSheetGroup(ref.watch(databaseProvider));
 }
