@@ -6,25 +6,21 @@ part of 'pill_sheet_group.dart';
 // RiverpodGenerator
 // **************************************************************************
 
-String _$activePillSheetHash() => r'd97b98bec663ae25286aba1eed3305df7766dd7c';
+String _$activePillSheetHash() => r'f482edce7cc31f128447f2bff4f98ca529acaaf4';
 
 /// See also [activePillSheet].
 @ProviderFor(activePillSheet)
-final activePillSheetProvider =
-    AutoDisposeProvider<AsyncValue<PillSheet?>>.internal(
+final activePillSheetProvider = Provider<AsyncValue<PillSheet?>>.internal(
   activePillSheet,
   name: r'activePillSheetProvider',
   debugGetCreateSourceHash: const bool.fromEnvironment('dart.vm.product')
       ? null
       : _$activePillSheetHash,
-  dependencies: <ProviderOrFamily>[latestPillSheetGroupProvider],
-  allTransitiveDependencies: <ProviderOrFamily>{
-    latestPillSheetGroupProvider,
-    ...?latestPillSheetGroupProvider.allTransitiveDependencies
-  },
+  dependencies: null,
+  allTransitiveDependencies: null,
 );
 
-typedef ActivePillSheetRef = AutoDisposeProviderRef<AsyncValue<PillSheet?>>;
+typedef ActivePillSheetRef = ProviderRef<AsyncValue<PillSheet?>>;
 String _$latestPillSheetGroupHash() =>
     r'f9bbe258a9205c61146a70e56446f92893648de8';
 
