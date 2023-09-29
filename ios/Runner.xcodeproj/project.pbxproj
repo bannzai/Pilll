@@ -679,7 +679,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "$(IOS_PRODUCT_BUNDLE_IDENTIFIER).Widget";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
-				"PROVISIONING_PROFILE_SPECIFIER[sdk=iphoneos*]" = Pilll.Development.Widget.AppStore;
+				"PROVISIONING_PROFILE_SPECIFIER[sdk=iphoneos*]" = Pilll.Production.Widget.AppStore;
 				SKIP_INSTALL = YES;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -1132,7 +1132,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "$(IOS_PRODUCT_BUNDLE_IDENTIFIER)";
 				PRODUCT_NAME = Runner;
 				PROVISIONING_PROFILE_SPECIFIER = "";
-				"PROVISIONING_PROFILE_SPECIFIER[sdk=iphoneos*]" = Pilll.Development.AppStore;
+				"PROVISIONING_PROFILE_SPECIFIER[sdk=iphoneos*]" = Pilll.Production.AppStore;
 				SWIFT_OBJC_BRIDGING_HEADER = "Runner/Runner-Bridging-Header.h";
 				SWIFT_VERSION = 5.0;
 				VERSIONING_SYSTEM = "apple-generic";
