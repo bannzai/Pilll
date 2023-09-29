@@ -132,14 +132,10 @@ class RecordPageBody extends HookConsumerWidget {
         titleSpacing: 0,
         backgroundColor: PilllColors.white,
         toolbarHeight: RecordPageInformationHeaderConst.height,
-        title: Stack(
-          children: [
-            RecordPageInformationHeader(
-              today: DateTime.now(),
-              pillSheetGroup: pillSheetGroup,
-              setting: setting,
-            ),
-          ],
+        title: RecordPageInformationHeader(
+          today: DateTime.now(),
+          pillSheetGroup: pillSheetGroup,
+          setting: setting,
         ),
       ),
       body: Column(
