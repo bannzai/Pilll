@@ -139,7 +139,12 @@ class RecordPageBody extends HookConsumerWidget {
         actions: [
           IconButton(
             onPressed: () => print(""),
-            icon: Icon(Icons.door_back_door),
+            icon: Icon(Icons.door_back_door_outlined),
+            color: Colors.black,
+          ),
+          IconButton(
+            onPressed: () => print(""),
+            icon: Icon(Icons.settings_outlined),
             color: Colors.black,
           ),
         ],
@@ -148,16 +153,15 @@ class RecordPageBody extends HookConsumerWidget {
         mainAxisAlignment: MainAxisAlignment.end,
         children: [
           const AnnouncementBar(),
-          const Spacer(),
           Expanded(
             child: ListView(
               children: [
+                const SizedBox(height: 40),
                 _content(context),
                 const SizedBox(height: 20),
               ],
             ),
           ),
-          const Spacer(),
           if (activePillSheet != null && pillSheetGroup != null && !pillSheetGroup.isDeactived) ...[
             RecordPageButton(
               pillSheetGroup: pillSheetGroup,
