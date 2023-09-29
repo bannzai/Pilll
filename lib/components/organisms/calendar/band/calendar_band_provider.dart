@@ -22,7 +22,7 @@ final calendarMenstruationBandListProvider = Provider<AsyncValue<List<CalendarMe
   }
 });
 
-final calendarScheduledMenstruationBandListProvider = Provider<AsyncValue<List<CalendarScheduledMenstruationBandModel>>>((ref) {
+final calendarScheduledMenstruationBandListProvider = Provider.autoDispose<AsyncValue<List<CalendarScheduledMenstruationBandModel>>>((ref) {
   return AsyncValueGroup.group3(
     ref.watch(latestPillSheetGroupProvider),
     ref.watch(settingProvider),
@@ -36,7 +36,7 @@ final calendarScheduledMenstruationBandListProvider = Provider<AsyncValue<List<C
   );
 });
 
-final calendarNextPillSheetBandListProvider = Provider<AsyncValue<List<CalendarNextPillSheetBandModel>>>((ref) {
+final calendarNextPillSheetBandListProvider = Provider.autoDispose<AsyncValue<List<CalendarNextPillSheetBandModel>>>((ref) {
   final pillSheetGroup = ref.watch(latestPillSheetGroupProvider);
 
   if (pillSheetGroup is AsyncLoading) {
