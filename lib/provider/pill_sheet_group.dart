@@ -20,7 +20,7 @@ PillSheetGroup? _filter(QuerySnapshot<PillSheetGroup> snapshot) {
 }
 
 // 最新のピルシートグループを取得する。ピルシートグループが初期設定で作られないパターンもあるのでNullable
-Future<PillSheetGroup?> latestPillSheetGroup(DatabaseConnection databaseConnection) async {
+Future<PillSheetGroup?> fetchLatestPillSheetGroup(DatabaseConnection databaseConnection) async {
   return (await databaseConnection.pillSheetGroupsReference().orderBy(PillSheetGroupFirestoreKeys.createdAt).limitToLast(1).get())
       .docs
       .lastOrNull

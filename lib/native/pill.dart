@@ -10,7 +10,7 @@ import 'package:pilll/entity/pill_sheet_group.codegen.dart';
 import 'package:pilll/utils/datetime/day.dart';
 
 Future<PillSheetGroup?> quickRecordTakePill(DatabaseConnection database) async {
-  final pillSheetGroup = await latestPillSheetGroup(database);
+  final pillSheetGroup = await fetchLatestPillSheetGroup(database);
   if (pillSheetGroup == null) {
     return null;
   }
