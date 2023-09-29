@@ -46,7 +46,7 @@ final latestPillSheetGroupProvider =
 
 typedef LatestPillSheetGroupRef = AutoDisposeStreamProviderRef<PillSheetGroup?>;
 String _$beforePillSheetGroupHash() =>
-    r'c6405707fd2657418ed1345eba0c80cec48750b0';
+    r'6d98827a5802190c8f4c4087172b66d3ce945a68';
 
 /// See also [beforePillSheetGroup].
 @ProviderFor(beforePillSheetGroup)
@@ -57,10 +57,34 @@ final beforePillSheetGroupProvider =
   debugGetCreateSourceHash: const bool.fromEnvironment('dart.vm.product')
       ? null
       : _$beforePillSheetGroupHash,
-  dependencies: null,
-  allTransitiveDependencies: null,
+  dependencies: <ProviderOrFamily>[databaseProvider],
+  allTransitiveDependencies: <ProviderOrFamily>{
+    databaseProvider,
+    ...?databaseProvider.allTransitiveDependencies
+  },
 );
 
 typedef BeforePillSheetGroupRef = AutoDisposeFutureProviderRef<PillSheetGroup?>;
+String _$batchSetPillSheetGroupHash() =>
+    r'69769ffb3eb87ea3fe0d7b0eada4f447fa9fd0d4';
+
+/// See also [batchSetPillSheetGroup].
+@ProviderFor(batchSetPillSheetGroup)
+final batchSetPillSheetGroupProvider =
+    AutoDisposeProvider<BatchSetPillSheetGroup>.internal(
+  batchSetPillSheetGroup,
+  name: r'batchSetPillSheetGroupProvider',
+  debugGetCreateSourceHash: const bool.fromEnvironment('dart.vm.product')
+      ? null
+      : _$batchSetPillSheetGroupHash,
+  dependencies: <ProviderOrFamily>[databaseProvider],
+  allTransitiveDependencies: <ProviderOrFamily>{
+    databaseProvider,
+    ...?databaseProvider.allTransitiveDependencies
+  },
+);
+
+typedef BatchSetPillSheetGroupRef
+    = AutoDisposeProviderRef<BatchSetPillSheetGroup>;
 // ignore_for_file: type=lint
 // ignore_for_file: subtype_of_sealed_class, invalid_use_of_internal_member, invalid_use_of_visible_for_testing_member
