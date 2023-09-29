@@ -1,6 +1,7 @@
 import 'package:collection/collection.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/foundation.dart';
+import 'package:pilll/entity/pill_sheet.codegen.dart';
 import 'package:pilll/provider/database.dart';
 import 'package:pilll/entity/pill_sheet_group.codegen.dart';
 import 'package:riverpod/riverpod.dart';
@@ -28,12 +29,13 @@ Future<PillSheetGroup?> fetchLatestPillSheetGroup(DatabaseConnection databaseCon
 }
 
 // 最新のピルシートグループの.activePillSheetを取得する。
-final activePillSheetProvider = Provider((ref) {
+@Riverpod(dependencies: [latestPillSheetGroup])
+AsyncValue<PillSheet?> activePillSheet(ActivePillSheetRef ref) {
   return ref.watch(latestPillSheetGroupProvider).whenData((value) => value?.activePillSheet);
-});
+}
 
 @Riverpod(keepAlive: true)
-Stream<PillSheetGroup> latestPillSheetGroup(LatestPillSheetGroupRef ref) {
+Stream<PillSheetGroup?> latestPillSheetGroup(LatestPillSheetGroupRef ref) {
 // 最新のピルシートグループを取得する。ピルシートグループが初期設定で作られないパターンもあるのでNullable
   return ref
       .watch(databaseProvider)
