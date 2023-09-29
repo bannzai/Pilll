@@ -75,7 +75,7 @@ class RecordPageInformationHeader extends StatelessWidget {
         Align(
           alignment: Alignment.topRight,
           child: IconButton(
-            icon: Icon(Icons.door_back_door_outlined),
+            icon: Icon(Icons.history),
             onPressed: () => print(""),
             color: Colors.black,
           ),
