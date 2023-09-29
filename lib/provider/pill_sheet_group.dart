@@ -16,6 +16,7 @@ PillSheetGroup? _filter(QuerySnapshot<PillSheetGroup> snapshot) {
   return snapshot.docs.last.data();
 }
 
+// 最新のピルシートグループを取得する。ピルシートグループが初期設定で作られないパターンもあるのでNullable
 Future<PillSheetGroup?> latestPillSheetGroup(DatabaseConnection databaseConnection) async {
   return (await databaseConnection.pillSheetGroupsReference().orderBy(PillSheetGroupFirestoreKeys.createdAt).limitToLast(1).get())
       .docs
@@ -23,10 +24,12 @@ Future<PillSheetGroup?> latestPillSheetGroup(DatabaseConnection databaseConnecti
       ?.data();
 }
 
+// 最新のピルシートグループの.activePillSheetを取得する。
 final activePillSheetProvider = Provider((ref) {
   return ref.watch(latestPillSheetGroupProvider).whenData((value) => value?.activePillSheet);
 });
 
+// 最新のピルシートグループを取得する。ピルシートグループが初期設定で作られないパターンもあるのでNullable
 final latestPillSheetGroupProvider = StreamProvider((ref) => ref
         .watch(databaseProvider)
         .pillSheetGroupsReference()
