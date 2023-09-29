@@ -29,12 +29,12 @@ Future<PillSheetGroup?> fetchLatestPillSheetGroup(DatabaseConnection databaseCon
 }
 
 // 最新のピルシートグループの.activePillSheetを取得する。
-@Riverpod(keepAlive: true)
+@Riverpod(dependencies: [latestPillSheetGroup])
 AsyncValue<PillSheet?> activePillSheet(ActivePillSheetRef ref) {
   return ref.watch(latestPillSheetGroupProvider).whenData((value) => value?.activePillSheet);
 }
 
-@Riverpod(keepAlive: true)
+@Riverpod(dependencies: [database])
 Stream<PillSheetGroup?> latestPillSheetGroup(LatestPillSheetGroupRef ref) {
 // 最新のピルシートグループを取得する。ピルシートグループが初期設定で作られないパターンもあるのでNullable
   return ref
