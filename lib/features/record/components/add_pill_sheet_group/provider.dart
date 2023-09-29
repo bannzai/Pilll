@@ -12,7 +12,7 @@ import 'package:pilll/provider/setting.dart';
 import 'package:pilll/utils/datetime/day.dart';
 import 'package:riverpod/riverpod.dart';
 
-final addPillSheetGroupProvider = Provider(
+final addPillSheetGroupProvider = Provider.autoDispose(
   (ref) => AddPillSheetGroup(
     batchFactory: ref.watch(batchFactoryProvider),
     batchSetPillSheetGroup: ref.watch(batchSetPillSheetGroupProvider),

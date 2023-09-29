@@ -8,7 +8,7 @@ import 'package:pilll/provider/pill_sheet_group.dart';
 import 'package:pilll/provider/pill_sheet_modified_history.dart';
 import 'package:pilll/utils/datetime/day.dart';
 
-final beginRestDurationProvider = Provider(
+final beginRestDurationProvider = Provider.autoDispose(
   (ref) => BeginRestDuration(
     batchFactory: ref.watch(batchFactoryProvider),
     batchSetPillSheetGroup: ref.watch(batchSetPillSheetGroupProvider),
@@ -60,7 +60,7 @@ class BeginRestDuration {
   }
 }
 
-final endRestDurationProvider = Provider(
+final endRestDurationProvider = Provider.autoDispose(
   (ref) => EndRestDuration(
     batchFactory: ref.watch(batchFactoryProvider),
     batchSetPillSheetGroup: ref.watch(batchSetPillSheetGroupProvider),

@@ -7,7 +7,7 @@ import 'package:pilll/provider/pill_sheet_group.dart';
 import 'package:pilll/provider/pill_sheet_modified_history.dart';
 import 'package:riverpod/riverpod.dart';
 
-final deletePillSheetGroupProvider = Provider(
+final deletePillSheetGroupProvider = Provider.autoDispose(
   (ref) => DeletePillSheetGroup(
     ref.watch(batchFactoryProvider),
     ref.watch(batchSetPillSheetModifiedHistoryProvider),

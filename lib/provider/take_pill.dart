@@ -1,4 +1,3 @@
-
 import 'package:firebase_core/firebase_core.dart';
 import 'package:pilll/entity/pill_sheet_modified_history.codegen.dart';
 import 'package:pilll/provider/batch.dart';
@@ -11,7 +10,7 @@ import 'package:pilll/provider/pill_sheet_modified_history.dart';
 import 'package:pilll/utils/datetime/day.dart';
 import 'package:riverpod/riverpod.dart';
 
-final takePillProvider = Provider(
+final takePillProvider = Provider.autoDispose(
   (ref) => TakePill(
     batchFactory: ref.watch(batchFactoryProvider),
     batchSetPillSheetModifiedHistory: ref.watch(batchSetPillSheetModifiedHistoryProvider),
