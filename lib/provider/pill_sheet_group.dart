@@ -4,6 +4,9 @@ import 'package:flutter/foundation.dart';
 import 'package:pilll/provider/database.dart';
 import 'package:pilll/entity/pill_sheet_group.codegen.dart';
 import 'package:riverpod/riverpod.dart';
+import 'package:riverpod_annotation/riverpod_annotation.dart';
+
+part 'pill_sheet_group.g.dart';
 
 // この変数にtrueを入れることでMetadata.hasPendingWritesがfalseの場合=リモートDBに書き込まれた場合にStreamの値を流すように制御できる。
 // Pilllではアプリを開いている時に複数箇所からのDB書き込みが無いので(ごくまれにBackendで書き込みと被る可能性はある)単純なフラグ制御を採用している
@@ -29,26 +32,29 @@ final activePillSheetProvider = Provider((ref) {
   return ref.watch(latestPillSheetGroupProvider).whenData((value) => value?.activePillSheet);
 });
 
+@Riverpod(keepAlive: true)
+Stream<PillSheetGroup> latestPillSheetGroup(LatestPillSheetGroupRef ref) {
 // 最新のピルシートグループを取得する。ピルシートグループが初期設定で作られないパターンもあるのでNullable
-final latestPillSheetGroupProvider = StreamProvider((ref) => ref
-        .watch(databaseProvider)
-        .pillSheetGroupsReference()
-        .orderBy(PillSheetGroupFirestoreKeys.createdAt)
-        .limitToLast(1)
-        .snapshots(includeMetadataChanges: true)
-        .skipWhile((snapshot) {
-      if (awaitsPillSheetGroupRemoteDBDataChanged) {
-        if (snapshot.metadata.hasPendingWrites) {
-          debugPrint("[DEBUG] hasPendingWrites: true");
-          return true;
-        } else {
-          debugPrint("[DEBUG] hasPendingWrites: false");
-          // Clear flag and continue to last statement
-          awaitsPillSheetGroupRemoteDBDataChanged = false;
-        }
+  return ref
+      .watch(databaseProvider)
+      .pillSheetGroupsReference()
+      .orderBy(PillSheetGroupFirestoreKeys.createdAt)
+      .limitToLast(1)
+      .snapshots(includeMetadataChanges: true)
+      .skipWhile((snapshot) {
+    if (awaitsPillSheetGroupRemoteDBDataChanged) {
+      if (snapshot.metadata.hasPendingWrites) {
+        debugPrint("[DEBUG] hasPendingWrites: true");
+        return true;
+      } else {
+        debugPrint("[DEBUG] hasPendingWrites: false");
+        // Clear flag and continue to last statement
+        awaitsPillSheetGroupRemoteDBDataChanged = false;
       }
-      return false;
-    }).map(((event) => _filter(event))));
+    }
+    return false;
+  }).map(((event) => _filter(event)));
+}
 
 final beforePillSheetGroupProvider = FutureProvider<PillSheetGroup?>((ref) async {
   final database = ref.watch(databaseProvider);
