@@ -57,6 +57,26 @@ Stream<List<PillSheetModifiedHistory>> pillSheetModifiedHistoriesWithLimit(PillS
       .map((docs) => docs.map((doc) => doc.data()).toList());
 }
 
+@Riverpod()
+Stream<List<PillSheetModifiedHistory>> pillSheetModifiedHistoriesWithRange(
+  PillSheetModifiedHistoriesWithRangeRef ref, {
+  required DateTime begin,
+  required DateTime after,
+}) {
+  return ref
+      .watch(databaseProvider)
+      .pillSheetModifiedHistoriesReference()
+      .where(
+        PillSheetModifiedHistoryFirestoreKeys.estimatedEventCausingDate,
+        isLessThanOrEqualTo: after.endOfDay(),
+        isGreaterThanOrEqualTo: begin.date(),
+      )
+      .orderBy(PillSheetModifiedHistoryFirestoreKeys.estimatedEventCausingDate, descending: true)
+      .snapshots()
+      .map((reference) => reference.docs)
+      .map((docs) => docs.map((doc) => doc.data()).toList());
+}
+
 final batchSetPillSheetModifiedHistoryProvider = Provider((ref) => BatchSetPillSheetModifiedHistory(ref.watch(databaseProvider)));
 
 class BatchSetPillSheetModifiedHistory {
