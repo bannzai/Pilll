@@ -102,21 +102,17 @@ class _Page extends HookConsumerWidget {
               clipBehavior: Clip.none,
               controller: pageController,
               scrollDirection: Axis.horizontal,
-              children: pillSheetGroup.pillSheets
-                  .map((pillSheet) {
-                    return [
-                      Container(
-                        padding: const EdgeInsets.symmetric(horizontal: 10),
-                        child: HistoricalPillsheetGroupPagePillSheet(
-                          pillSheetGroup: pillSheetGroup,
-                          pillSheet: pillSheet,
-                          setting: setting,
-                        ),
-                      ),
-                    ];
-                  })
-                  .expand((element) => element)
-                  .toList(),
+              children: [
+                for (final pillSheet in pillSheetGroup.pillSheets)
+                  Container(
+                    padding: const EdgeInsets.symmetric(horizontal: 10),
+                    child: HistoricalPillsheetGroupPagePillSheet(
+                      pillSheetGroup: pillSheetGroup,
+                      pillSheet: pillSheet,
+                      setting: setting,
+                    ),
+                  ),
+              ],
             ),
           ),
           if (pillSheetGroup.pillSheets.length > 1) ...[

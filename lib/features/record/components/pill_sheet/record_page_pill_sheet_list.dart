@@ -40,22 +40,18 @@ class RecordPagePillSheetList extends HookConsumerWidget {
             clipBehavior: Clip.none,
             controller: pageController,
             scrollDirection: Axis.horizontal,
-            children: pillSheetGroup.pillSheets
-                .map((pillSheet) {
-                  return [
-                    Container(
-                      padding: const EdgeInsets.symmetric(horizontal: 10),
-                      child: RecordPagePillSheet(
-                        pillSheetGroup: pillSheetGroup,
-                        pillSheet: pillSheet,
-                        setting: setting,
-                        premiumAndTrial: premiumAndTrial,
-                      ),
-                    ),
-                  ];
-                })
-                .expand((element) => element)
-                .toList(),
+            children: [
+              for (final pillSheet in pillSheetGroup.pillSheets)
+                Container(
+                  padding: const EdgeInsets.symmetric(horizontal: 10),
+                  child: RecordPagePillSheet(
+                    pillSheetGroup: pillSheetGroup,
+                    pillSheet: pillSheet,
+                    setting: setting,
+                    premiumAndTrial: premiumAndTrial,
+                  ),
+                ),
+            ],
           ),
         ),
         if (pillSheetGroup.pillSheets.length > 1) ...[
