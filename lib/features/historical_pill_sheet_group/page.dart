@@ -2,6 +2,7 @@ import 'package:async_value_group/async_value_group.dart';
 import 'package:flutter_hooks/flutter_hooks.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
 import 'package:pilll/components/atoms/color.dart';
+import 'package:pilll/components/atoms/text_color.dart';
 import 'package:pilll/components/molecules/dots_page_indicator.dart';
 import 'package:pilll/components/molecules/indicator.dart';
 import 'package:pilll/components/organisms/pill_sheet/pill_sheet_view_layout.dart';
@@ -59,8 +60,20 @@ class _Page extends HookConsumerWidget {
     final pillSheetGroup = this.pillSheetGroup;
     final activePillSheet = this.activePillSheet;
     if (pillSheetGroup == null || activePillSheet == null) {
-      // TODO: empty frame
-      return Container();
+      return Scaffold(
+        backgroundColor: PilllColors.background,
+        appBar: AppBar(
+          titleSpacing: 0,
+          leading: IconButton(
+            icon: const Icon(Icons.arrow_back, color: Colors.black),
+            onPressed: () => Navigator.of(context).pop(),
+          ),
+          backgroundColor: PilllColors.white,
+          title: const Text("以前のピルシートグループ"),
+          foregroundColor: TextColor.main,
+        ),
+        body: const Center(child: Text("以前のピルシートグループがまだ存在しません")),
+      );
     }
 
     final pageController = usePageController(
@@ -68,7 +81,15 @@ class _Page extends HookConsumerWidget {
 
     return Scaffold(
       backgroundColor: PilllColors.background,
-      appBar: AppBar(titleSpacing: 0, backgroundColor: PilllColors.white, title: const Text("以前のピルシートグループ")),
+      appBar: AppBar(
+        titleSpacing: 0,
+        leading: IconButton(
+          icon: const Icon(Icons.arrow_back, color: Colors.black),
+          onPressed: () => Navigator.of(context).pop(),
+        ),
+        backgroundColor: PilllColors.white,
+        title: const Text("以前のピルシートグループ"),
+      ),
       body: Column(
         children: [
           SizedBox(
