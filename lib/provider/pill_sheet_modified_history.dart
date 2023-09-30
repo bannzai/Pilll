@@ -57,7 +57,8 @@ Stream<List<PillSheetModifiedHistory>> pillSheetModifiedHistoriesWithLimit(PillS
       .map((docs) => docs.map((doc) => doc.data()).toList());
 }
 
-@Riverpod()
+// 頻繁に切り替わることも予想されるので、keepAliveをtrueにしている
+@Riverpod(keepAlive: true)
 Stream<List<PillSheetModifiedHistory>> pillSheetModifiedHistoriesWithRange(
   PillSheetModifiedHistoriesWithRangeRef ref, {
   required DateTime begin,

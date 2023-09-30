@@ -305,7 +305,7 @@ class _PillSheetModifiedHistoriesWithLimitProviderElement
 }
 
 String _$pillSheetModifiedHistoriesWithRangeHash() =>
-    r'c64fb289343c0437b86ad5ba2f12fd4513b2ef61';
+    r'7bf199eb59f68de6de18a1b760b289ac7163182e';
 
 /// See also [pillSheetModifiedHistoriesWithRange].
 @ProviderFor(pillSheetModifiedHistoriesWithRange)
@@ -356,7 +356,7 @@ class PillSheetModifiedHistoriesWithRangeFamily
 
 /// See also [pillSheetModifiedHistoriesWithRange].
 class PillSheetModifiedHistoriesWithRangeProvider
-    extends AutoDisposeStreamProvider<List<PillSheetModifiedHistory>> {
+    extends StreamProvider<List<PillSheetModifiedHistory>> {
   /// See also [pillSheetModifiedHistoriesWithRange].
   PillSheetModifiedHistoriesWithRangeProvider({
     required DateTime begin,
@@ -416,8 +416,7 @@ class PillSheetModifiedHistoriesWithRangeProvider
   }
 
   @override
-  AutoDisposeStreamProviderElement<List<PillSheetModifiedHistory>>
-      createElement() {
+  StreamProviderElement<List<PillSheetModifiedHistory>> createElement() {
     return _PillSheetModifiedHistoriesWithRangeProviderElement(this);
   }
 
@@ -439,7 +438,7 @@ class PillSheetModifiedHistoriesWithRangeProvider
 }
 
 mixin PillSheetModifiedHistoriesWithRangeRef
-    on AutoDisposeStreamProviderRef<List<PillSheetModifiedHistory>> {
+    on StreamProviderRef<List<PillSheetModifiedHistory>> {
   /// The parameter `begin` of this provider.
   DateTime get begin;
 
@@ -448,7 +447,7 @@ mixin PillSheetModifiedHistoriesWithRangeRef
 }
 
 class _PillSheetModifiedHistoriesWithRangeProviderElement
-    extends AutoDisposeStreamProviderElement<List<PillSheetModifiedHistory>>
+    extends StreamProviderElement<List<PillSheetModifiedHistory>>
     with PillSheetModifiedHistoriesWithRangeRef {
   _PillSheetModifiedHistoriesWithRangeProviderElement(super.provider);
 
