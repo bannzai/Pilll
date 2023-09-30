@@ -20,7 +20,7 @@ class HistoricalPillSheetGroupPagePillSheetModifiedHistoryList extends HookConsu
     return ref.watch(pillSheetModifiedHistoriesWithRangeProvider(begin: begin, end: end)).when(
           data: (pillSheetModifiedHistories) {
             return PillSheetModifiedHistoryList(
-              scrollPhysics: const AlwaysScrollableScrollPhysics(),
+              scrollPhysics: const NeverScrollableScrollPhysics(),
               pillSheetModifiedHistories: pillSheetModifiedHistories,
               padding: null,
               premiumOrTrial: true,
