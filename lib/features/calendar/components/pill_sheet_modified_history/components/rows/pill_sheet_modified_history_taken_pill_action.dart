@@ -11,12 +11,11 @@ import 'package:pilll/entity/pill_sheet_modified_history.codegen.dart';
 import 'package:pilll/entity/pill_sheet_modified_history_value.codegen.dart';
 import 'package:pilll/features/error/error_alert.dart';
 import 'package:pilll/provider/pill_sheet_modified_history.dart';
-import 'package:pilll/provider/premium_and_trial.codegen.dart';
 import 'package:pilll/utils/formatter/date_time_formatter.dart';
 import 'package:pilll/utils/toolbar/date_and_time_picker.dart';
 
 class PillSheetModifiedHistoryTakenPillAction extends HookConsumerWidget {
-  final PremiumAndTrial premiumAndTrial;
+  final bool premiumOrTrial;
   final DateTime estimatedEventCausingDate;
   final PillSheetModifiedHistory history;
   final TakenPillValue? value;
@@ -25,7 +24,7 @@ class PillSheetModifiedHistoryTakenPillAction extends HookConsumerWidget {
 
   const PillSheetModifiedHistoryTakenPillAction({
     Key? key,
-    required this.premiumAndTrial,
+    required this.premiumOrTrial,
     required this.estimatedEventCausingDate,
     required this.history,
     required this.value,
@@ -48,7 +47,7 @@ class PillSheetModifiedHistoryTakenPillAction extends HookConsumerWidget {
       onTap: () {
         analytics.logEvent(name: "tapped_history_taken_action");
 
-        if (premiumAndTrial.isPremium || premiumAndTrial.isTrial) {
+        if (premiumOrTrial) {
           showModalBottomSheet(
             context: context,
             builder: (BuildContext context) {

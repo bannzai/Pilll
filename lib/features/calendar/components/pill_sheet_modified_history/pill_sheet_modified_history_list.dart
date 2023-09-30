@@ -14,7 +14,6 @@ import 'package:pilll/features/calendar/components/pill_sheet_modified_history/c
 import 'package:pilll/features/calendar/components/pill_sheet_modified_history/components/rows/pill_sheet_modified_history_revert_taken_pill_action.dart';
 import 'package:pilll/features/calendar/components/pill_sheet_modified_history/components/rows/pill_sheet_modified_history_taken_pill_action.dart';
 import 'package:pilll/entity/pill_sheet_modified_history.codegen.dart';
-import 'package:pilll/provider/premium_and_trial.codegen.dart';
 import 'package:pilll/utils/datetime/date_compare.dart';
 import 'package:pilll/utils/datetime/day.dart';
 
@@ -31,14 +30,14 @@ class PillSheetModifiedHistoryList extends HookConsumerWidget {
   final EdgeInsets? padding;
   final ScrollPhysics scrollPhysics;
   final List<PillSheetModifiedHistory> pillSheetModifiedHistories;
-  final PremiumAndTrial premiumAndTrial;
+  final bool premiumOrTrial;
 
   const PillSheetModifiedHistoryList({
     Key? key,
     required this.padding,
     required this.scrollPhysics,
     required this.pillSheetModifiedHistories,
-    required this.premiumAndTrial,
+    required this.premiumOrTrial,
   }) : super(key: key);
 
   @override
@@ -86,7 +85,7 @@ class PillSheetModifiedHistoryList extends HookConsumerWidget {
             PillSheetModifiedActionType.deletedPillSheet => PillSheetModifiedHistoryDeletedPillSheetAction(
                 estimatedEventCausingDate: history.estimatedEventCausingDate, pillSheetIDs: history.afterPillSheetGroup?.pillSheetIDs),
             PillSheetModifiedActionType.takenPill => PillSheetModifiedHistoryTakenPillAction(
-                premiumAndTrial: premiumAndTrial,
+                premiumOrTrial: premiumOrTrial,
                 estimatedEventCausingDate: history.estimatedEventCausingDate,
                 history: history,
                 value: history.value.takenPill,
@@ -141,7 +140,7 @@ class PillSheetModifiedHistoryList extends HookConsumerWidget {
                 pillSheetIDs: history.value.deletedPillSheet?.pillSheetIDs,
               ),
             PillSheetModifiedActionType.takenPill => PillSheetModifiedHistoryTakenPillAction(
-                premiumAndTrial: premiumAndTrial,
+                premiumOrTrial: premiumOrTrial,
                 estimatedEventCausingDate: history.estimatedEventCausingDate,
                 history: history,
                 value: history.value.takenPill,

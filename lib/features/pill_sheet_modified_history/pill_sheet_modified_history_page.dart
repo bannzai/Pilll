@@ -74,7 +74,7 @@ class PillSheetModifiedHistoriesPage extends HookConsumerWidget {
                             padding: const EdgeInsets.only(bottom: 20),
                             scrollPhysics: const AlwaysScrollableScrollPhysics(),
                             pillSheetModifiedHistories: histories.value,
-                            premiumAndTrial: premiumAndTrial,
+                            premiumOrTrial: premiumAndTrial.premiumOrTrial,
                           ),
                         ),
                       ],

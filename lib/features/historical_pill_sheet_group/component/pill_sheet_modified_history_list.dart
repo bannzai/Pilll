@@ -20,7 +20,7 @@ class HistoricalPillSheetGroupPagePillSheetModifiedHistoryList extends HookConsu
         scrollPhysics: NeverScrollableScrollPhysics(),
         pillSheetModifiedHistories: pillSheetModifiedHistories,
         padding: EdgeInsets.zero,
-        premiumAndTrial: true,
+        premiumOrTrial: true,
       );
     });
   }
