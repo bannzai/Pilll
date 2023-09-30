@@ -1,7 +1,9 @@
 import 'package:async_value_group/async_value_group.dart';
 import 'package:flutter_hooks/flutter_hooks.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
+import 'package:intl/intl.dart';
 import 'package:pilll/components/atoms/color.dart';
+import 'package:pilll/components/atoms/font.dart';
 import 'package:pilll/components/atoms/text_color.dart';
 import 'package:pilll/components/molecules/dots_page_indicator.dart';
 import 'package:pilll/components/molecules/indicator.dart';
@@ -16,6 +18,7 @@ import 'package:flutter/material.dart';
 import 'package:pilll/provider/pill_sheet_group.dart';
 import 'package:pilll/provider/root.dart';
 import 'package:pilll/provider/setting.dart';
+import 'package:pilll/utils/formatter/date_time_formatter.dart';
 
 class HistoricalPillSheetGroupPage extends HookConsumerWidget {
   const HistoricalPillSheetGroupPage({super.key});
@@ -76,8 +79,19 @@ class _Page extends HookConsumerWidget {
       );
     }
 
+    final currentPillSheet = useState(activePillSheet);
     final pageController = usePageController(
         initialPage: activePillSheet.groupIndex, viewportFraction: (PillSheetViewLayout.width + 20) / MediaQuery.of(context).size.width);
+    pageController.addListener(() {
+      final page = pageController.page?.toInt();
+      if (page == null) {
+        return;
+      }
+      final pillSheet = pillSheetGroup.pillSheets[page];
+      currentPillSheet.value = pillSheet;
+    });
+    final begin = DateTimeFormatter.slashYearAndMonthAndDay(currentPillSheet.value.beginingDate);
+    final end = DateTimeFormatter.slashYearAndMonthAndDay(currentPillSheet.value.estimatedEndTakenDate);
 
     return Scaffold(
       backgroundColor: PilllColors.background,
@@ -92,7 +106,15 @@ class _Page extends HookConsumerWidget {
         foregroundColor: TextColor.main,
       ),
       body: Column(
+        mainAxisSize: MainAxisSize.max,
         children: [
+          const SizedBox(height: 40),
+          Text(
+            "$begin ~ $end",
+            textAlign: TextAlign.center,
+            style: const TextStyle(fontFamily: FontFamily.japanese, fontSize: 17, fontWeight: FontWeight.w600, color: TextColor.main),
+          ),
+          const SizedBox(height: 20),
           SizedBox(
             height: PillSheetViewLayout.calcHeight(
               PillSheetViewLayout.mostLargePillSheetType(pillSheetGroup.pillSheets.map((e) => e.pillSheetType).toList()).numberOfLineInPillSheet,
@@ -127,8 +149,8 @@ class _Page extends HookConsumerWidget {
                   curve: Curves.easeInOut,
                 );
               },
-            )
-          ]
+            ),
+          ],
         ],
       ),
     );
