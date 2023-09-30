@@ -60,7 +60,12 @@ Stream<PillSheetGroup?> latestPillSheetGroup(LatestPillSheetGroupRef ref) {
 @Riverpod()
 Future<PillSheetGroup?> beforePillSheetGroup(BeforePillSheetGroupRef ref) async {
   final database = ref.watch(databaseProvider);
-  final snapshot = await database.pillSheetGroupsReference().orderBy(PillSheetGroupFirestoreKeys.createdAt).limitToLast(2).get();
+  final snapshot = await database
+      .pillSheetGroupsReference()
+      .where(PillSheetGroupFirestoreKeys.deletedAt, isNull: true)
+      .orderBy(PillSheetGroupFirestoreKeys.createdAt)
+      .limitToLast(2)
+      .get();
   if (snapshot.docs.length <= 1) {
     return null;
   }

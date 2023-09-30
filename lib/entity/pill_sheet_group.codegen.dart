@@ -14,6 +14,7 @@ part 'pill_sheet_group.codegen.freezed.dart';
 
 class PillSheetGroupFirestoreKeys {
   static const createdAt = "createdAt";
+  static const deletedAt = "deletedAt";
 }
 
 @freezed
