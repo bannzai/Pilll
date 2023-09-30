@@ -81,9 +81,9 @@ class RecordPage extends HookConsumerWidget {
 
     final isLinked = ref.watch(isLinkedProvider);
     return AsyncValueGroup.group4(
-      ref.watch(latestPillSheetGroupProvider),
-      ref.watch(premiumAndTrialProvider),
-      ref.watch(settingProvider),
+      latestPillSheetGroup,
+      premiumAndTrial,
+      setting,
       ref.watch(userProvider),
     ).when(
       data: (data) {
