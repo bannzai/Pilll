@@ -57,16 +57,11 @@ Stream<PillSheetGroup?> latestPillSheetGroup(LatestPillSheetGroupRef ref) {
   }).map(((event) => _filter(event)));
 }
 
-// 一つ前のピルシートグループを取得する。破棄されたピルシートグループは含まれない
+// 一つ前のピルシートグループを取得する。破棄されたピルシートグループは現在含んでいるが含めないようにしても良い。インデックスを作成する必要があるので避けている
 @Riverpod(dependencies: [database])
 Future<PillSheetGroup?> beforePillSheetGroup(BeforePillSheetGroupRef ref) async {
   final database = ref.watch(databaseProvider);
-  final snapshot = await database
-      .pillSheetGroupsReference()
-      .where(PillSheetGroupFirestoreKeys.deletedAt, isNull: true)
-      .orderBy(PillSheetGroupFirestoreKeys.createdAt)
-      .limitToLast(2)
-      .get();
+  final snapshot = await database.pillSheetGroupsReference().orderBy(PillSheetGroupFirestoreKeys.createdAt).limitToLast(2).get();
   if (snapshot.docs.length <= 1) {
     return null;
   }
