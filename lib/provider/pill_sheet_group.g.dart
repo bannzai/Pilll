@@ -46,7 +46,7 @@ final latestPillSheetGroupProvider =
 
 typedef LatestPillSheetGroupRef = AutoDisposeStreamProviderRef<PillSheetGroup?>;
 String _$beforePillSheetGroupHash() =>
-    r'c6405707fd2657418ed1345eba0c80cec48750b0';
+    r'92e86347882a13b63bb8d2a7dc8380fe0ffbf1fd';
 
 /// See also [beforePillSheetGroup].
 @ProviderFor(beforePillSheetGroup)
@@ -57,13 +57,16 @@ final beforePillSheetGroupProvider =
   debugGetCreateSourceHash: const bool.fromEnvironment('dart.vm.product')
       ? null
       : _$beforePillSheetGroupHash,
-  dependencies: null,
-  allTransitiveDependencies: null,
+  dependencies: <ProviderOrFamily>[databaseProvider],
+  allTransitiveDependencies: <ProviderOrFamily>{
+    databaseProvider,
+    ...?databaseProvider.allTransitiveDependencies
+  },
 );
 
 typedef BeforePillSheetGroupRef = AutoDisposeFutureProviderRef<PillSheetGroup?>;
 String _$batchSetPillSheetGroupHash() =>
-    r'bf6a24bea30da5766c5031965cb8f7863ca8f850';
+    r'69769ffb3eb87ea3fe0d7b0eada4f447fa9fd0d4';
 
 /// See also [batchSetPillSheetGroup].
 @ProviderFor(batchSetPillSheetGroup)
@@ -74,13 +77,16 @@ final batchSetPillSheetGroupProvider =
   debugGetCreateSourceHash: const bool.fromEnvironment('dart.vm.product')
       ? null
       : _$batchSetPillSheetGroupHash,
-  dependencies: null,
-  allTransitiveDependencies: null,
+  dependencies: <ProviderOrFamily>[databaseProvider],
+  allTransitiveDependencies: <ProviderOrFamily>{
+    databaseProvider,
+    ...?databaseProvider.allTransitiveDependencies
+  },
 );
 
 typedef BatchSetPillSheetGroupRef
     = AutoDisposeProviderRef<BatchSetPillSheetGroup>;
-String _$setPillSheetGroupHash() => r'c69ede2cfcb1719f623bd63d8b308eb297a13aa7';
+String _$setPillSheetGroupHash() => r'c8f16da419ae0bd4ad77f2d95070189c3a748f4c';
 
 /// See also [setPillSheetGroup].
 @ProviderFor(setPillSheetGroup)
@@ -91,8 +97,11 @@ final setPillSheetGroupProvider =
   debugGetCreateSourceHash: const bool.fromEnvironment('dart.vm.product')
       ? null
       : _$setPillSheetGroupHash,
-  dependencies: null,
-  allTransitiveDependencies: null,
+  dependencies: <ProviderOrFamily>[databaseProvider],
+  allTransitiveDependencies: <ProviderOrFamily>{
+    databaseProvider,
+    ...?databaseProvider.allTransitiveDependencies
+  },
 );
 
 typedef SetPillSheetGroupRef = AutoDisposeProviderRef<SetPillSheetGroup>;
