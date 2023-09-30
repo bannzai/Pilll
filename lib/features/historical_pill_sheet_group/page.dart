@@ -2,6 +2,7 @@ import 'package:flutter_hooks/flutter_hooks.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
 import 'package:pilll/components/molecules/dots_page_indicator.dart';
 import 'package:pilll/components/organisms/pill_sheet/pill_sheet_view_layout.dart';
+import 'package:pilll/features/historical_pill_sheet_group/component/pill_sheet.dart';
 import 'package:pilll/features/record/components/pill_sheet/record_page_pill_sheet.dart';
 import 'package:pilll/entity/pill_sheet.codegen.dart';
 import 'package:pilll/entity/pill_sheet_group.codegen.dart';
@@ -54,7 +55,7 @@ class _Body extends HookConsumerWidget {
                   return [
                     Container(
                       padding: const EdgeInsets.symmetric(horizontal: 10),
-                      child: RecordPagePillSheet(
+                      child: HistoricalPillsheetGroupPagePillSheet(
                         pillSheetGroup: pillSheetGroup,
                         pillSheet: pillSheet,
                         setting: setting,
