@@ -1,3 +1,4 @@
+import 'package:pilll/features/historical_pill_sheet_group/page.dart';
 import 'package:pilll/utils/analytics.dart';
 import 'package:pilll/components/atoms/color.dart';
 import 'package:pilll/components/atoms/font.dart';
@@ -75,8 +76,13 @@ class RecordPageInformationHeader extends StatelessWidget {
         Align(
           alignment: Alignment.topRight,
           child: IconButton(
-            icon: Icon(Icons.history),
-            onPressed: () => print(""),
+            icon: const Icon(Icons.history),
+            onPressed: () {
+              analytics.logEvent(name: "tapped_record_information_header_history");
+              Navigator.of(context).push(
+                HistoricalPillSheetGroupPageRoute.route(),
+              );
+            },
             color: Colors.black,
           ),
         ),

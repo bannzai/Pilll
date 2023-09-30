@@ -1,6 +1,7 @@
 import 'package:async_value_group/async_value_group.dart';
 import 'package:flutter_hooks/flutter_hooks.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
+import 'package:pilll/components/atoms/color.dart';
 import 'package:pilll/components/molecules/dots_page_indicator.dart';
 import 'package:pilll/components/molecules/indicator.dart';
 import 'package:pilll/components/organisms/pill_sheet/pill_sheet_view_layout.dart';
@@ -10,7 +11,6 @@ import 'package:pilll/entity/pill_sheet.codegen.dart';
 import 'package:pilll/entity/pill_sheet_group.codegen.dart';
 import 'package:pilll/entity/pill_sheet_type.dart';
 import 'package:pilll/entity/setting.codegen.dart';
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:pilll/provider/pill_sheet_group.dart';
 import 'package:pilll/provider/root.dart';
@@ -26,7 +26,7 @@ class HistoricalPillSheetGroupPage extends HookConsumerWidget {
       ref.watch(settingProvider),
     ).when(
       data: (data) {
-        return _Body(
+        return _Page(
           pillSheetGroup: data.t1,
           activePillSheet: data.t1?.activePillSheet,
           setting: data.t2,
@@ -42,12 +42,12 @@ class HistoricalPillSheetGroupPage extends HookConsumerWidget {
   }
 }
 
-class _Body extends HookConsumerWidget {
+class _Page extends HookConsumerWidget {
   final PillSheetGroup? pillSheetGroup;
   final PillSheet? activePillSheet;
   final Setting setting;
 
-  const _Body({
+  const _Page({
     Key? key,
     required this.pillSheetGroup,
     required this.activePillSheet,
@@ -66,49 +66,62 @@ class _Body extends HookConsumerWidget {
     final pageController = usePageController(
         initialPage: activePillSheet.groupIndex, viewportFraction: (PillSheetViewLayout.width + 20) / MediaQuery.of(context).size.width);
 
-    return Column(
-      children: [
-        SizedBox(
-          height: PillSheetViewLayout.calcHeight(
-            PillSheetViewLayout.mostLargePillSheetType(pillSheetGroup.pillSheets.map((e) => e.pillSheetType).toList()).numberOfLineInPillSheet,
-            false,
-          ),
-          child: PageView(
-            clipBehavior: Clip.none,
-            controller: pageController,
-            scrollDirection: Axis.horizontal,
-            children: pillSheetGroup.pillSheets
-                .map((pillSheet) {
-                  return [
-                    Container(
-                      padding: const EdgeInsets.symmetric(horizontal: 10),
-                      child: HistoricalPillsheetGroupPagePillSheet(
-                        pillSheetGroup: pillSheetGroup,
-                        pillSheet: pillSheet,
-                        setting: setting,
+    return Scaffold(
+      backgroundColor: PilllColors.background,
+      appBar: AppBar(titleSpacing: 0, backgroundColor: PilllColors.white, title: const Text("以前のピルシートグループ")),
+      body: Column(
+        children: [
+          SizedBox(
+            height: PillSheetViewLayout.calcHeight(
+              PillSheetViewLayout.mostLargePillSheetType(pillSheetGroup.pillSheets.map((e) => e.pillSheetType).toList()).numberOfLineInPillSheet,
+              false,
+            ),
+            child: PageView(
+              clipBehavior: Clip.none,
+              controller: pageController,
+              scrollDirection: Axis.horizontal,
+              children: pillSheetGroup.pillSheets
+                  .map((pillSheet) {
+                    return [
+                      Container(
+                        padding: const EdgeInsets.symmetric(horizontal: 10),
+                        child: HistoricalPillsheetGroupPagePillSheet(
+                          pillSheetGroup: pillSheetGroup,
+                          pillSheet: pillSheet,
+                          setting: setting,
+                        ),
                       ),
-                    ),
-                  ];
-                })
-                .expand((element) => element)
-                .toList(),
+                    ];
+                  })
+                  .expand((element) => element)
+                  .toList(),
+            ),
           ),
-        ),
-        if (pillSheetGroup.pillSheets.length > 1) ...[
-          const SizedBox(height: 16),
-          DotsIndicator(
-            controller: pageController,
-            itemCount: pillSheetGroup.pillSheets.length,
-            onDotTapped: (page) {
-              pageController.animateToPage(
-                page,
-                duration: const Duration(milliseconds: 300),
-                curve: Curves.easeInOut,
-              );
-            },
-          )
-        ]
-      ],
+          if (pillSheetGroup.pillSheets.length > 1) ...[
+            const SizedBox(height: 16),
+            DotsIndicator(
+              controller: pageController,
+              itemCount: pillSheetGroup.pillSheets.length,
+              onDotTapped: (page) {
+                pageController.animateToPage(
+                  page,
+                  duration: const Duration(milliseconds: 300),
+                  curve: Curves.easeInOut,
+                );
+              },
+            )
+          ]
+        ],
+      ),
+    );
+  }
+}
+
+extension HistoricalPillSheetGroupPageRoute on HistoricalPillSheetGroupPage {
+  static Route<dynamic> route() {
+    return MaterialPageRoute(
+      settings: const RouteSettings(name: "HistoricalPillSheetGroupPage"),
+      builder: (_) => const HistoricalPillSheetGroupPage(),
     );
   }
 }
