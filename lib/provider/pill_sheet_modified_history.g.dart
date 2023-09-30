@@ -305,7 +305,7 @@ class _PillSheetModifiedHistoriesWithLimitProviderElement
 }
 
 String _$pillSheetModifiedHistoriesWithRangeHash() =>
-    r'7bf199eb59f68de6de18a1b760b289ac7163182e';
+    r'0a6e20f56742b566fbe77714a7a04f434662ecd5';
 
 /// See also [pillSheetModifiedHistoriesWithRange].
 @ProviderFor(pillSheetModifiedHistoriesWithRange)
@@ -321,11 +321,11 @@ class PillSheetModifiedHistoriesWithRangeFamily
   /// See also [pillSheetModifiedHistoriesWithRange].
   PillSheetModifiedHistoriesWithRangeProvider call({
     required DateTime begin,
-    required DateTime after,
+    required DateTime end,
   }) {
     return PillSheetModifiedHistoriesWithRangeProvider(
       begin: begin,
-      after: after,
+      end: end,
     );
   }
 
@@ -335,7 +335,7 @@ class PillSheetModifiedHistoriesWithRangeFamily
   ) {
     return call(
       begin: provider.begin,
-      after: provider.after,
+      end: provider.end,
     );
   }
 
@@ -360,12 +360,12 @@ class PillSheetModifiedHistoriesWithRangeProvider
   /// See also [pillSheetModifiedHistoriesWithRange].
   PillSheetModifiedHistoriesWithRangeProvider({
     required DateTime begin,
-    required DateTime after,
+    required DateTime end,
   }) : this._internal(
           (ref) => pillSheetModifiedHistoriesWithRange(
             ref as PillSheetModifiedHistoriesWithRangeRef,
             begin: begin,
-            after: after,
+            end: end,
           ),
           from: pillSheetModifiedHistoriesWithRangeProvider,
           name: r'pillSheetModifiedHistoriesWithRangeProvider',
@@ -377,7 +377,7 @@ class PillSheetModifiedHistoriesWithRangeProvider
           allTransitiveDependencies: PillSheetModifiedHistoriesWithRangeFamily
               ._allTransitiveDependencies,
           begin: begin,
-          after: after,
+          end: end,
         );
 
   PillSheetModifiedHistoriesWithRangeProvider._internal(
@@ -388,11 +388,11 @@ class PillSheetModifiedHistoriesWithRangeProvider
     required super.debugGetCreateSourceHash,
     required super.from,
     required this.begin,
-    required this.after,
+    required this.end,
   }) : super.internal();
 
   final DateTime begin;
-  final DateTime after;
+  final DateTime end;
 
   @override
   Override overrideWith(
@@ -410,7 +410,7 @@ class PillSheetModifiedHistoriesWithRangeProvider
         allTransitiveDependencies: null,
         debugGetCreateSourceHash: null,
         begin: begin,
-        after: after,
+        end: end,
       ),
     );
   }
@@ -424,14 +424,14 @@ class PillSheetModifiedHistoriesWithRangeProvider
   bool operator ==(Object other) {
     return other is PillSheetModifiedHistoriesWithRangeProvider &&
         other.begin == begin &&
-        other.after == after;
+        other.end == end;
   }
 
   @override
   int get hashCode {
     var hash = _SystemHash.combine(0, runtimeType.hashCode);
     hash = _SystemHash.combine(hash, begin.hashCode);
-    hash = _SystemHash.combine(hash, after.hashCode);
+    hash = _SystemHash.combine(hash, end.hashCode);
 
     return _SystemHash.finish(hash);
   }
@@ -442,8 +442,8 @@ mixin PillSheetModifiedHistoriesWithRangeRef
   /// The parameter `begin` of this provider.
   DateTime get begin;
 
-  /// The parameter `after` of this provider.
-  DateTime get after;
+  /// The parameter `end` of this provider.
+  DateTime get end;
 }
 
 class _PillSheetModifiedHistoriesWithRangeProviderElement
@@ -455,8 +455,8 @@ class _PillSheetModifiedHistoriesWithRangeProviderElement
   DateTime get begin =>
       (origin as PillSheetModifiedHistoriesWithRangeProvider).begin;
   @override
-  DateTime get after =>
-      (origin as PillSheetModifiedHistoriesWithRangeProvider).after;
+  DateTime get end =>
+      (origin as PillSheetModifiedHistoriesWithRangeProvider).end;
 }
 // ignore_for_file: type=lint
 // ignore_for_file: subtype_of_sealed_class, invalid_use_of_internal_member, invalid_use_of_visible_for_testing_member

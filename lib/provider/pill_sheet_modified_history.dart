@@ -62,14 +62,14 @@ Stream<List<PillSheetModifiedHistory>> pillSheetModifiedHistoriesWithLimit(PillS
 Stream<List<PillSheetModifiedHistory>> pillSheetModifiedHistoriesWithRange(
   PillSheetModifiedHistoriesWithRangeRef ref, {
   required DateTime begin,
-  required DateTime after,
+  required DateTime end,
 }) {
   return ref
       .watch(databaseProvider)
       .pillSheetModifiedHistoriesReference()
       .where(
         PillSheetModifiedHistoryFirestoreKeys.estimatedEventCausingDate,
-        isLessThanOrEqualTo: after.endOfDay(),
+        isLessThanOrEqualTo: end.endOfDay(),
         isGreaterThanOrEqualTo: begin.date(),
       )
       .orderBy(PillSheetModifiedHistoryFirestoreKeys.estimatedEventCausingDate, descending: true)
