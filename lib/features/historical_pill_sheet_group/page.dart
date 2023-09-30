@@ -89,6 +89,7 @@ class _Page extends HookConsumerWidget {
         ),
         backgroundColor: PilllColors.white,
         title: const Text("以前のピルシートグループ"),
+        foregroundColor: TextColor.main,
       ),
       body: Column(
         children: [
