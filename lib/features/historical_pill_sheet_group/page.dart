@@ -1,41 +1,68 @@
+import 'package:async_value_group/async_value_group.dart';
 import 'package:flutter_hooks/flutter_hooks.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
 import 'package:pilll/components/molecules/dots_page_indicator.dart';
+import 'package:pilll/components/molecules/indicator.dart';
 import 'package:pilll/components/organisms/pill_sheet/pill_sheet_view_layout.dart';
+import 'package:pilll/features/error/universal_error_page.dart';
 import 'package:pilll/features/historical_pill_sheet_group/component/pill_sheet.dart';
-import 'package:pilll/features/record/components/pill_sheet/record_page_pill_sheet.dart';
 import 'package:pilll/entity/pill_sheet.codegen.dart';
 import 'package:pilll/entity/pill_sheet_group.codegen.dart';
 import 'package:pilll/entity/pill_sheet_type.dart';
 import 'package:pilll/entity/setting.codegen.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:pilll/provider/premium_and_trial.codegen.dart';
+import 'package:pilll/provider/pill_sheet_group.dart';
+import 'package:pilll/provider/root.dart';
+import 'package:pilll/provider/setting.dart';
 
 class HistoricalPillSheetGroupPage extends HookConsumerWidget {
+  const HistoricalPillSheetGroupPage({super.key});
+
   @override
   Widget build(BuildContext context, WidgetRef ref) {
-    // TODO: implement build
-    throw UnimplementedError();
+    return AsyncValueGroup.group2(
+      ref.watch(beforePillSheetGroupProvider),
+      ref.watch(settingProvider),
+    ).when(
+      data: (data) {
+        return _Body(
+          pillSheetGroup: data.t1,
+          activePillSheet: data.t1?.activePillSheet,
+          setting: data.t2,
+        );
+      },
+      error: (error, stackTrace) => UniversalErrorPage(
+        error: error,
+        reload: () => ref.refresh(refreshAppProvider),
+        child: null,
+      ),
+      loading: () => const Indicator(),
+    );
   }
 }
 
 class _Body extends HookConsumerWidget {
-  final PillSheetGroup pillSheetGroup;
-  final PillSheet activePillSheet;
+  final PillSheetGroup? pillSheetGroup;
+  final PillSheet? activePillSheet;
   final Setting setting;
-  final PremiumAndTrial premiumAndTrial;
 
   const _Body({
     Key? key,
     required this.pillSheetGroup,
     required this.activePillSheet,
     required this.setting,
-    required this.premiumAndTrial,
   }) : super(key: key);
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {
+    final pillSheetGroup = this.pillSheetGroup;
+    final activePillSheet = this.activePillSheet;
+    if (pillSheetGroup == null || activePillSheet == null) {
+      // TODO: empty frame
+      return Container();
+    }
+
     final pageController = usePageController(
         initialPage: activePillSheet.groupIndex, viewportFraction: (PillSheetViewLayout.width + 20) / MediaQuery.of(context).size.width);
 
@@ -59,7 +86,6 @@ class _Body extends HookConsumerWidget {
                         pillSheetGroup: pillSheetGroup,
                         pillSheet: pillSheet,
                         setting: setting,
-                        premiumAndTrial: premiumAndTrial,
                       ),
                     ),
                   ];

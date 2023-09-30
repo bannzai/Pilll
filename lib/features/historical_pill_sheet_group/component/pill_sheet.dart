@@ -23,7 +23,6 @@ class HistoricalPillsheetGroupPagePillSheet extends HookConsumerWidget {
   final PillSheetGroup pillSheetGroup;
   final PillSheet pillSheet;
   final Setting setting;
-  final PremiumAndTrial premiumAndTrial;
 
   List<PillSheetType> get pillSheetTypes => pillSheetGroup.pillSheets.map((e) => e.pillSheetType).toList();
 
@@ -32,7 +31,6 @@ class HistoricalPillsheetGroupPagePillSheet extends HookConsumerWidget {
     required this.pillSheetGroup,
     required this.pillSheet,
     required this.setting,
-    required this.premiumAndTrial,
   }) : super(key: key);
 
   @override
@@ -94,7 +92,6 @@ class HistoricalPillsheetGroupPagePillSheet extends HookConsumerWidget {
             pillSheet: pillSheet,
             setting: setting,
             pillNumberInPillSheet: pillNumberInPillSheet,
-            premiumAndTrial: premiumAndTrial,
             pageIndex: pageIndex,
           ),
           pillMark: PillMark(
@@ -189,7 +186,6 @@ class PillNumber extends StatelessWidget {
   final PillSheetGroup pillSheetGroup;
   final PillSheet pillSheet;
   final Setting setting;
-  final PremiumAndTrial premiumAndTrial;
   final int pageIndex;
   final int pillNumberInPillSheet;
 
@@ -198,7 +194,6 @@ class PillNumber extends StatelessWidget {
       required this.pillSheetGroup,
       required this.pillSheet,
       required this.setting,
-      required this.premiumAndTrial,
       required this.pageIndex,
       required this.pillNumberInPillSheet});
 
@@ -210,13 +205,13 @@ class PillNumber extends StatelessWidget {
         menstruationDateRanges.where((e) => e.inRange(pillSheet.displayPillTakeDate(pillNumberInPillSheet))).isNotEmpty;
 
     final text = pillSheetGroup.displayPillNumber(
-      premiumOrTrial: premiumAndTrial.premiumOrTrial,
+      premiumOrTrial: true,
       pillSheetAppearanceMode: setting.pillSheetAppearanceMode,
       pageIndex: pageIndex,
       pillNumberInPillSheet: pillNumberInPillSheet,
     );
 
-    if (premiumAndTrial.premiumOrTrial && containedMenstruationDuration) {
+    if (containedMenstruationDuration) {
       return MenstruationPillNumber(text: text);
     } else {
       return PlainPillNumber(text: text);
