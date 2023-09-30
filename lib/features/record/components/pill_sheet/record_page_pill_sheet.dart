@@ -26,6 +26,7 @@ import 'package:pilll/provider/premium_and_trial.codegen.dart';
 import 'package:pilll/utils/datetime/day.dart';
 import 'package:pilll/utils/local_notification.dart';
 
+// ここを編集する時は historical_pill_sheet_group/component/pill_sheet.dart も編集する
 class RecordPagePillSheet extends HookConsumerWidget {
   final PillSheetGroup pillSheetGroup;
   final PillSheet pillSheet;
