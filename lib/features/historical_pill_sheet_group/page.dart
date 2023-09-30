@@ -14,6 +14,7 @@ import 'package:pilll/entity/pill_sheet_group.codegen.dart';
 import 'package:pilll/entity/pill_sheet_type.dart';
 import 'package:pilll/entity/setting.codegen.dart';
 import 'package:flutter/material.dart';
+import 'package:pilll/features/historical_pill_sheet_group/component/pill_sheet_modified_history_list.dart';
 import 'package:pilll/provider/pill_sheet_group.dart';
 import 'package:pilll/provider/root.dart';
 import 'package:pilll/provider/setting.dart';
@@ -150,6 +151,12 @@ class _Page extends HookConsumerWidget {
               },
             ),
           ],
+          Padding(
+            padding: const EdgeInsets.only(left: 24, right: 24),
+            child: HistoricalPillSheetGroupPagePillSheetModifiedHistoryList(
+              pillSheet: currentPillSheet.value,
+            ),
+          ),
         ],
       ),
     );
