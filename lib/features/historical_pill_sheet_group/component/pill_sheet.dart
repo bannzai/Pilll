@@ -94,11 +94,7 @@ class HistoricalPillsheetGroupPagePillSheet extends HookConsumerWidget {
             pageIndex: pageIndex,
           ),
           pillMark: PillMark(
-            showsRippleAnimation: shouldPillMarkAnimation(
-              pillNumberInPillSheet: pillNumberInPillSheet,
-              pillSheet: pillSheet,
-              pillSheetGroup: pillSheetGroup,
-            ),
+            showsRippleAnimation: false,
             showsCheckmark: _isDone(
               pillNumberInPillSheet: pillNumberInPillSheet,
             ),
