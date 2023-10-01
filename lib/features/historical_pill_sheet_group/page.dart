@@ -105,8 +105,7 @@ class _Page extends HookConsumerWidget {
         title: const Text("以前のピルシートグループ"),
         foregroundColor: TextColor.main,
       ),
-      body: Column(
-        mainAxisSize: MainAxisSize.max,
+      body: ListView(
         children: [
           const SizedBox(height: 40),
           Text(

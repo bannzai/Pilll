@@ -42,11 +42,7 @@ class PillSheetModifiedHistoryList extends HookConsumerWidget {
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {
-    return ListView(
-      padding: padding,
-      shrinkWrap: true,
-      physics: scrollPhysics,
-      scrollDirection: Axis.vertical,
+    return Column(
       children: _summarizedForEachMonth.map((model) => _monthlyHeaderAndRelativedHistories(ref, model)).expand((element) => element).toList(),
     );
   }
