@@ -201,6 +201,9 @@ class RegisterReminderLocalNotification {
     if (!setting.isOnReminder) {
       return;
     }
+    if (activePillSheet.activeRestDuration != null) {
+      return;
+    }
 
     analytics.logEvent(name: "run_register_reminder_notification", parameters: {
       "todayPillNumber": activePillSheet.todayPillNumber,
@@ -362,10 +365,7 @@ class RegisterReminderLocalNotification {
             }),
           );
         } else {
-          var title = "💊の時間です";
-          if (Environment.isDevelopment) {
-            title += " (Local)";
-          }
+          const title = "💊の時間です";
           futures.add(
             Future(() async {
               try {
