@@ -43,12 +43,12 @@ dependencies:
   json_annotation: ^4.0.0
   mockito: ^5.3.2
   freezed_annotation: ^2.2.0
-  riverpod: ^2.4.0
+  riverpod: ^2.4.1
   hooks_riverpod: ^2.4.1
-  riverpod_annotation: 2.1.5
+  riverpod_annotation: 2.1.6
   flutter_hooks: ^0.20.1
   firebase_crashlytics: ^3.0.12
-  dotted_border: ^2.0.0-nullsafety.0
+  dotted_border: ^2.1.0
   in_app_review: ^2.0.1
   uuid: ^3.0.7
   async_value_group: ^1.0.0
@@ -81,7 +81,7 @@ dev_dependencies:
   json_serializable:
   freezed: ^2.2.0
   custom_lint: 0.5.3
-  riverpod_lint: 2.1.0
+  riverpod_lint: 2.1.1
   riverpod_generator: 2.3.2
 
 # For information on the generic Dart part of this file, see the
