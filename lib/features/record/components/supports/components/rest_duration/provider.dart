@@ -80,7 +80,7 @@ class EndRestDuration {
     required this.batchSetPillSheetModifiedHistory,
   });
 
-  Future<void> call({
+  Future<PillSheetGroup> call({
     required RestDuration restDuration,
     required PillSheet activePillSheet,
     required PillSheetGroup pillSheetGroup,
@@ -123,5 +123,7 @@ class EndRestDuration {
       ),
     );
     await batch.commit();
+
+    return updatedPillSheetGroup;
   }
 }
