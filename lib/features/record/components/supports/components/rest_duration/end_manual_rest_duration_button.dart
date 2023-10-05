@@ -16,7 +16,7 @@ class EndManualRestDurationButton extends HookConsumerWidget {
   final RestDuration restDuration;
   final PillSheet activePillSheet;
   final PillSheetGroup pillSheetGroup;
-  final VoidCallback didEndRestDuration;
+  final Function(PillSheetGroup) didEndRestDuration;
 
   const EndManualRestDurationButton({
     Key? key,
@@ -37,30 +37,33 @@ class EndManualRestDurationButton extends HookConsumerWidget {
           name: "end_manual_rest_duration_pressed",
         );
 
-        await endRestDuration(
-          restDuration: restDuration,
-          activePillSheet: activePillSheet,
-          pillSheetGroup: pillSheetGroup,
-        );
-        await registerReminderLocalNotification.call();
-
-        didEndRestDuration();
+        try {
+          final endedRestDurationPillSheetGroup = await endRestDuration(
+            restDuration: restDuration,
+            activePillSheet: activePillSheet,
+            pillSheetGroup: pillSheetGroup,
+          );
+          await registerReminderLocalNotification.call();
+          didEndRestDuration(endedRestDurationPillSheetGroup);
+        } catch (e) {
+          debugPrint("endRestDuration error: $e");
+        }
       },
     );
   }
 }
 
 class EndRestDurationModal extends HookConsumerWidget {
-  final PillSheetGroup pillSheetGroup;
+  final PillSheetGroup endedRestDurationPillSheetGroup;
 
   const EndRestDurationModal({
     Key? key,
-    required this.pillSheetGroup,
+    required this.endedRestDurationPillSheetGroup,
   }) : super(key: key);
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {
-    final lastTakenPillNumber = pillSheetGroup.sequentialLastTakenPillNumber;
+    final lastTakenPillNumber = endedRestDurationPillSheetGroup.sequentialLastTakenPillNumber;
     final setPillSheetGroup = ref.watch(setPillSheetGroupProvider);
     return Center(
       child: Container(
@@ -143,7 +146,8 @@ class EndRestDurationModal extends HookConsumerWidget {
                     onPressed: () async {
                       analytics.logEvent(name: "display_number_setting_modal_yes");
                       final navigator = Navigator.of(context);
-                      await _setDisplayNumberSettingEndNumber(setPillSheetGroup, end: lastTakenPillNumber, pillSheetGroup: pillSheetGroup);
+                      await _setDisplayNumberSettingEndNumber(setPillSheetGroup,
+                          end: lastTakenPillNumber, pillSheetGroup: endedRestDurationPillSheetGroup);
                       navigator.pop();
                     },
                     text: "はい",
@@ -177,12 +181,12 @@ class EndRestDurationModal extends HookConsumerWidget {
 
 void showEndRestDurationModal(
   BuildContext context, {
-  required PillSheetGroup pillSheetGroup,
+  required PillSheetGroup endedRestDurationPillSheetGroup,
 }) {
   showDialog(
     context: context,
     builder: (context) => EndRestDurationModal(
-      pillSheetGroup: pillSheetGroup,
+      endedRestDurationPillSheetGroup: endedRestDurationPillSheetGroup,
     ),
   );
 }

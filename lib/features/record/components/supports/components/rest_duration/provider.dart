@@ -80,7 +80,7 @@ class EndRestDuration {
     required this.batchSetPillSheetModifiedHistory,
   });
 
-  Future<void> call({
+  Future<PillSheetGroup> call({
     required RestDuration restDuration,
     required PillSheet activePillSheet,
     required PillSheetGroup pillSheetGroup,
@@ -99,7 +99,7 @@ class EndRestDuration {
       if (pillSheet.id == activePillSheet.id) {
         updatedPillSheets.add(updatedPillSheet);
       } else if (pillSheet.groupIndex > activePillSheet.groupIndex) {
-        // 前回のピルシートのbeginDateが更新され、estimatedEndTakenDateが変わっている場合も考慮する必要があるのでupdatedPillSheetsでアクセスする
+        // activePillSheetよりも後のピルシートで、前のピルシートのbeginDateが更新され、estimatedEndTakenDateが変わっている場合も考慮する必要があるのでupdatedPillSheetsから1つ前のピルシートにアクセスする
         final beforeUpdatedPillSheet = updatedPillSheets[pillSheet.groupIndex - 1];
         updatedPillSheets.add(pillSheet.copyWith(
           beginingDate: beforeUpdatedPillSheet.estimatedEndTakenDate.add(const Duration(days: 1)),
@@ -123,5 +123,7 @@ class EndRestDuration {
       ),
     );
     await batch.commit();
+
+    return updatedPillSheetGroup;
   }
 }
