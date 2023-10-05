@@ -73,7 +73,6 @@ class LocalNotificationService {
           defaultPresentSound: true,
         ),
       ),
-      onDidReceiveNotificationResponse: handleNotificationAction,
       onDidReceiveBackgroundNotificationResponse: handleNotificationAction,
     );
   }
