@@ -1,18 +1,21 @@
-import 'package:firebase_auth/firebase_auth.dart';
-import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/services.dart';
-import 'package:pilll/provider/database.dart';
 import 'package:pilll/utils/analytics.dart';
 import 'package:pilll/native/legacy.dart';
+import 'package:pilll/utils/environment.dart';
 import 'package:pilll/native/pill.dart';
 import 'package:pilll/native/widget.dart';
 import 'package:pilll/utils/local_notification.dart';
+import 'package:firebase_auth/firebase_auth.dart';
+import 'package:firebase_core/firebase_core.dart';
+import 'package:pilll/provider/database.dart';
 
 const methodChannel = MethodChannel("method.channel.MizukiOhashi.Pilll");
 void definedChannel() {
   methodChannel.setMethodCallHandler((MethodCall call) async {
     switch (call.method) {
       case 'recordPill':
+        // TODO: [UseLocalNotification-Beta] 2023-11 不要になったら処理を削除
+        // ネイティブ側のFirebaseの処理も削除
         // 通知からの起動の時に、FirebaseAuth.instanceを参照すると、まだinitializeされてないよ．的なエラーが出る
         if (Firebase.apps.isEmpty) {
           await Firebase.initializeApp();
