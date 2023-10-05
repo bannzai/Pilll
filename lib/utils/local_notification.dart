@@ -481,6 +481,8 @@ extension ScheduleLocalNotificationService on LocalNotificationService {
 
 var localNotificationService = LocalNotificationService()..initialize();
 
+// TODO: [UseLocalNotification-Beta] 2023-11 このコメントを削除
+// iOSはmethodChannel経由の方が呼ばれる。iOSはネイティブの方のコードで上書きされる模様。現在はAndroidのために定義
 @pragma('vm:entry-point')
 Future<void> handleNotificationAction(NotificationResponse notificationResponse) async {
   if (notificationResponse.actionId == actionIdentifier) {
