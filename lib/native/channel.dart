@@ -7,7 +7,6 @@ import 'package:pilll/native/widget.dart';
 import 'package:pilll/utils/local_notification.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:firebase_core/firebase_core.dart';
-import 'package:flutter_local_notifications/flutter_local_notifications.dart';
 import 'package:pilll/provider/database.dart';
 
 const methodChannel = MethodChannel("method.channel.MizukiOhashi.Pilll");
