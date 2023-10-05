@@ -2,6 +2,8 @@ import 'dart:async';
 
 import 'dart:math';
 
+import 'package:firebase_auth/firebase_auth.dart';
+import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_local_notifications/flutter_local_notifications.dart';
@@ -12,6 +14,9 @@ import 'package:pilll/entity/schedule.codegen.dart';
 import 'package:pilll/entity/setting.codegen.dart';
 import 'package:pilll/entity/weekday.dart';
 import 'package:pilll/features/record/components/add_pill_sheet_group/provider.dart';
+import 'package:pilll/native/pill.dart';
+import 'package:pilll/native/widget.dart';
+import 'package:pilll/provider/database.dart';
 import 'package:pilll/provider/pill_sheet_group.dart';
 import 'package:pilll/provider/premium_and_trial.codegen.dart';
 import 'package:pilll/provider/setting.dart';
@@ -25,11 +30,10 @@ import 'package:timezone/timezone.dart' as tz;
 import 'package:flutter_native_timezone/flutter_native_timezone.dart';
 
 // Reminder Notification
-const iOSRecordPillActionIdentifier = "RECORD_PILL";
+const actionIdentifier = "RECORD_PILL";
 const iOSQuickRecordPillCategoryIdentifier = "PILL_REMINDER";
 const androidReminderNotificationChannelID = "androidReminderNotificationChannelID";
 const androidCalendarScheduleNotificationChannelID = "androidCalendarScheduleNotificationChannelID";
-const androidReminderNotificationActionIdentifier = "androidReminderNotificationActionIdentifier";
 const androidReminderNotificationGroupKey = "androidReminderNotificationGroupKey";
 
 // General Android Notification Setting
@@ -60,7 +64,7 @@ class LocalNotificationService {
             DarwinNotificationCategory(
               iOSQuickRecordPillCategoryIdentifier,
               actions: [
-                DarwinNotificationAction.plain(iOSRecordPillActionIdentifier, "飲んだ"),
+                DarwinNotificationAction.plain(actionIdentifier, "飲んだ"),
               ],
             ),
           ],
@@ -69,6 +73,7 @@ class LocalNotificationService {
           defaultPresentSound: true,
         ),
       ),
+      onDidReceiveBackgroundNotificationResponse: handleNotificationAction,
     );
   }
 
@@ -342,7 +347,7 @@ class RegisterReminderLocalNotification {
                       category: AndroidNotificationCategory.alarm,
                       actions: [
                         AndroidNotificationAction(
-                          androidReminderNotificationActionIdentifier,
+                          actionIdentifier,
                           "飲んだ",
                         )
                       ],
@@ -475,3 +480,41 @@ extension ScheduleLocalNotificationService on LocalNotificationService {
 }
 
 var localNotificationService = LocalNotificationService()..initialize();
+
+@pragma('vm:entry-point')
+Future<void> handleNotificationAction(NotificationResponse notificationResponse) async {
+  if (notificationResponse.actionId == actionIdentifier) {
+    // 通知からの起動の時に、FirebaseAuth.instanceを参照すると、まだinitializeされてないよ．的なエラーが出る
+    if (Firebase.apps.isEmpty) {
+      await Firebase.initializeApp();
+    }
+    final firebaseUser = FirebaseAuth.instance.currentUser;
+    if (firebaseUser == null) {
+      return;
+    }
+
+    final database = DatabaseConnection(firebaseUser.uid);
+
+    final pillSheetGroup = await quickRecordTakePill(database);
+    syncActivePillSheetValue(pillSheetGroup: pillSheetGroup);
+
+    final cancelReminderLocalNotification = CancelReminderLocalNotification();
+    // エンティティの変更があった場合にdatabaseの読み込みで最新の状態を取得するために、Future.microtaskで更新を待ってから処理を始める
+    // hour,minute,番号を基準にIDを決定しているので、時間変更や番号変更時にそれまで登録されていたIDを特定するのが不可能なので全てキャンセルする
+    await (Future.microtask(() => null), cancelReminderLocalNotification()).wait;
+
+    final activePillSheet = pillSheetGroup?.activePillSheet;
+    final user = (await database.userReference().get()).data();
+    final setting = user?.setting;
+    if (pillSheetGroup != null && activePillSheet != null && user != null && setting != null) {
+      if (user.useLocalNotificationForReminder) {
+        await RegisterReminderLocalNotification.run(
+          pillSheetGroup: pillSheetGroup,
+          activePillSheet: activePillSheet,
+          premiumOrTrial: user.isPremium || user.isTrial,
+          setting: setting,
+        );
+      }
+    }
+  }
+}
