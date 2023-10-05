@@ -30,8 +30,8 @@ import 'package:timezone/timezone.dart' as tz;
 import 'package:flutter_native_timezone/flutter_native_timezone.dart';
 
 // Reminder Notification
-const actionIdentifier = "RECORD_PILL_LOCAL_ACTION_IDENTIFIER";
-const iOSQuickRecordPillCategoryIdentifier = "PILL_REMINDER";
+const actionIdentifier = "RECORD_PILL_LOCAL_NOTIFICATION_ACTION_IDENTIFIER";
+const iOSQuickRecordPillCategoryIdentifier = "PILL_REMINDER_LOCAL_NOTIFICATION_CATEGORY";
 const androidReminderNotificationChannelID = "androidReminderNotificationChannelID";
 const androidCalendarScheduleNotificationChannelID = "androidCalendarScheduleNotificationChannelID";
 const androidReminderNotificationGroupKey = "androidReminderNotificationGroupKey";
