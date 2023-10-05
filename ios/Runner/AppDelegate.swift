@@ -192,7 +192,7 @@ import flutter_local_notifications
                 }
             }
         }
-//        configureNotificationActionableButtons()
+        configureNotificationActionableButtons()
         UNUserNotificationCenter.current().swizzle()
         UNUserNotificationCenter.current().removeDeliveredNotifications(withIdentifiers: ["repeat_notification_for_taken_pill", "remind_notification_for_taken_pill"])
         UNUserNotificationCenter.current().removePendingNotificationRequests(withIdentifiers: ["repeat_notification_for_taken_pill", "remind_notification_for_taken_pill"])
@@ -241,57 +241,57 @@ extension AppDelegate {
         }
     }
 
-//    func configureNotificationActionableButtons() {
-//        let recordAction = UNNotificationAction(identifier: "RECORD_PILL",
-//                                                title: "飲んだ")
-//        let category =
-//            UNNotificationCategory(identifier: Category.pillReminder.rawValue,
-//                                   actions: [recordAction],
-//                                   intentIdentifiers: [],
-//                                   hiddenPreviewsBodyPlaceholder: "",
-//                                   options: .customDismissAction)
-//        UNUserNotificationCenter.current().setNotificationCategories([category])
-//    }
+    func configureNotificationActionableButtons() {
+        let recordAction = UNNotificationAction(identifier: "RECORD_PILL",
+                                                title: "飲んだ")
+        let category =
+            UNNotificationCategory(identifier: Category.pillReminder.rawValue,
+                                   actions: [recordAction],
+                                   intentIdentifiers: [],
+                                   hiddenPreviewsBodyPlaceholder: "",
+                                   options: .customDismissAction)
+        UNUserNotificationCenter.current().setNotificationCategories([category])
+    }
 
-//    override func userNotificationCenter(_ center: UNUserNotificationCenter, didReceive response: UNNotificationResponse, withCompletionHandler completionHandler: @escaping () -> Void) {
-//        func end() {
-//            var isCompleted: Bool = false
-//            let completionHandlerWrapper = {
-//                isCompleted = true
-//                completionHandler()
-//            }
-//
-//            super.userNotificationCenter(center, didReceive: response, withCompletionHandler: completionHandlerWrapper)
-//
-//            if !isCompleted {
-//                completionHandlerWrapper()
-//            }
-//        }
-//
-//        switch extractCategory(userInfo: response.notification.request.content.userInfo) ?? Category(rawValue: response.notification.request.content.categoryIdentifier) {
-//        case .pillReminder:
-//            switch response.actionIdentifier {
-//            case "RECORD_PILL":
-//                // 先にバッジをクリアしてしまう。後述の理由でQuickRecordが多少遅延するため操作に違和感が出る。この部分は楽観的UIとして更新してしまう
-//                UIApplication.shared.applicationIconBadgeNumber = 0
-//
-//                // application(_:didFinishLaunchingWithOptions:)が終了してからFlutterのmainの開始は非同期的でFlutterのmainの完了までラグがある
-//                // 特にアプリのプロセスがKillされている状態では、先にuserNotificationCenter(_:didReceive:withCompletionHandler:)の処理が走り
-//                // Flutter側でのMethodChannelが確立される前にQuickRecordの呼び出しをおこなってしまう。この場合次にChanelが確立するまでFlutter側の処理の実行は遅延される。これは次のアプリの起動時まで遅延されるとほぼ同義になる
-//                // よって対処療法的ではあるが、5秒待つことでほぼ間違いなくmain(の中でもMethodChanelの確立までは)の処理はすべて終えているとしてここではdelayを設けている。
-//                // ちなみに通常は1秒前後あれば十分であるが念のためくらいの間を持たせている
-//                DispatchQueue.main.asyncAfter(deadline: .now() + 5) { [self] in
-//                    channel?.invokeMethod("recordPill", arguments: nil, result: { result in
-//                        end()
-//                    })
-//                }
-//            default:
-//                end()
-//            }
-//        case nil:
-//            return
-//        }
-//    }
+    override func userNotificationCenter(_ center: UNUserNotificationCenter, didReceive response: UNNotificationResponse, withCompletionHandler completionHandler: @escaping () -> Void) {
+        func end() {
+            var isCompleted: Bool = false
+            let completionHandlerWrapper = {
+                isCompleted = true
+                completionHandler()
+            }
+
+            super.userNotificationCenter(center, didReceive: response, withCompletionHandler: completionHandlerWrapper)
+
+            if !isCompleted {
+                completionHandlerWrapper()
+            }
+        }
+
+        switch extractCategory(userInfo: response.notification.request.content.userInfo) ?? Category(rawValue: response.notification.request.content.categoryIdentifier) {
+        case .pillReminder:
+            switch response.actionIdentifier {
+            case "RECORD_PILL":
+                // 先にバッジをクリアしてしまう。後述の理由でQuickRecordが多少遅延するため操作に違和感が出る。この部分は楽観的UIとして更新してしまう
+                UIApplication.shared.applicationIconBadgeNumber = 0
+
+                // application(_:didFinishLaunchingWithOptions:)が終了してからFlutterのmainの開始は非同期的でFlutterのmainの完了までラグがある
+                // 特にアプリのプロセスがKillされている状態では、先にuserNotificationCenter(_:didReceive:withCompletionHandler:)の処理が走り
+                // Flutter側でのMethodChannelが確立される前にQuickRecordの呼び出しをおこなってしまう。この場合次にChanelが確立するまでFlutter側の処理の実行は遅延される。これは次のアプリの起動時まで遅延されるとほぼ同義になる
+                // よって対処療法的ではあるが、5秒待つことでほぼ間違いなくmain(の中でもMethodChanelの確立までは)の処理はすべて終えているとしてここではdelayを設けている。
+                // ちなみに通常は1秒前後あれば十分であるが念のためくらいの間を持たせている
+                DispatchQueue.main.asyncAfter(deadline: .now() + 5) { [self] in
+                    channel?.invokeMethod("recordPill", arguments: nil, result: { result in
+                        end()
+                    })
+                }
+            default:
+                end()
+            }
+        case nil:
+            return
+        }
+    }
 
     enum Category: String {
         case pillReminder = "PILL_REMINDER"
