@@ -46,7 +46,7 @@ dependencies:
   riverpod: ^2.4.1
   hooks_riverpod: ^2.4.0
   riverpod_annotation: 2.2.0
-  flutter_hooks: ^0.20.1
+  flutter_hooks: ^0.20.2
   firebase_crashlytics: ^3.0.12
   dotted_border: ^2.1.0
   in_app_review: ^2.0.1
@@ -61,7 +61,7 @@ dependencies:
   firebase_performance: ^0.9.0+11
   flutter_native_timezone: ^2.0.0
   flutter_local_notifications: ^15.1.2
-  webview_flutter: ^4.2.4
+  webview_flutter: ^4.4.1
   collection: 1.17.2
   crypto:
   timezone:
@@ -82,7 +82,7 @@ dev_dependencies:
   freezed: ^2.2.0
   custom_lint: 0.5.3
   riverpod_lint: 2.1.1
-  riverpod_generator: 2.3.2
+  riverpod_generator: 2.3.3
 
 # For information on the generic Dart part of this file, see the
 # following page: https://dart.dev/tools/pub/pubspec
