@@ -1,7 +1,6 @@
 import 'package:flutter/services.dart';
 import 'package:pilll/utils/analytics.dart';
 import 'package:pilll/native/legacy.dart';
-import 'package:pilll/utils/environment.dart';
 import 'package:pilll/native/pill.dart';
 import 'package:pilll/native/widget.dart';
 import 'package:pilll/utils/local_notification.dart';
