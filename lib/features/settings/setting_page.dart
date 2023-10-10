@@ -3,6 +3,7 @@ import 'dart:io';
 import 'package:async_value_group/async_value_group.dart';
 import 'package:flutter_hooks/flutter_hooks.dart';
 import 'package:pilll/entity/user.codegen.dart';
+import 'package:pilll/features/settings/components/rows/debug_row.dart';
 import 'package:pilll/provider/user.dart';
 import 'package:pilll/utils/analytics.dart';
 import 'package:pilll/components/atoms/button.dart';
@@ -320,7 +321,7 @@ Android: https://onl.sc/c9xnQUk''';
                             inquiry();
                           }),
                       _separator(),
-                      if (Environment.isDevelopment) _debug(context),
+                      if (Environment.isDevelopment) DebugRow(),
                     ],
                   );
               }
@@ -329,74 +330,6 @@ Android: https://onl.sc/c9xnQUk''';
         },
         itemCount: SettingSection.values.length,
         addRepaintBoundaries: false,
-      ),
-    );
-  }
-
-  Widget _debug(BuildContext context) {
-    if (Environment.isProduction) {
-      return Container();
-    }
-    return Padding(
-      padding: const EdgeInsets.only(left: 10, right: 10, bottom: 20, top: 20),
-      child: GestureDetector(
-        child: const Center(child: Text("COPY DEBUG INFO", style: TextStyle(color: TextColor.primary))),
-        onTap: () async {
-          Clipboard.setData(ClipboardData(text: await debugInfo("\n")));
-        },
-        onDoubleTap: () {
-          final signOut = Environment.signOutUser;
-          if (signOut == null) {
-            return;
-          }
-          showDiscardDialog(context, title: "サインアウトします", message: '''
-これは開発用のオプションです。サインアウトあとはアプリを再起動してお試しください。初期設定から始まります
-''', actions: [
-            AlertButton(
-              text: "キャンセル",
-              onPressed: () async {
-                Navigator.of(context).pop();
-              },
-            ),
-            AlertButton(
-              text: "サインアウト",
-              onPressed: () async {
-                final navigator = Navigator.of(context);
-                await signOut();
-                navigator.pop();
-              },
-            ),
-          ]);
-        },
-        onLongPress: () {
-          final deleteUser = Environment.deleteUser;
-          if (deleteUser == null) {
-            return;
-          }
-          showDiscardDialog(
-            context,
-            title: "ユーザーを削除します",
-            message: '''
-これは開発用のオプションです。ユーザーを削除したあとはアプリを再起動してからやり直してください。初期設定から始まります
-''',
-            actions: [
-              AlertButton(
-                text: "キャンセル",
-                onPressed: () async {
-                  Navigator.of(context).pop();
-                },
-              ),
-              AlertButton(
-                text: "削除",
-                onPressed: () async {
-                  final navigator = Navigator.of(context);
-                  await deleteUser();
-                  navigator.pop();
-                },
-              ),
-            ],
-          );
-        },
       ),
     );
   }
