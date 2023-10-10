@@ -321,8 +321,10 @@ class SettingPageBody extends StatelessWidget {
                               analytics.logEvent(name: "did_select_inquiry", parameters: {});
                               inquiry();
                             }),
-                        _separator(),
-                        if (Environment.isDevelopment) DebugRow(),
+                        if (Environment.isDevelopment) ...[
+                          _separator(),
+                          DebugRow(),
+                        ],
                       ],
                     );
                 }
