@@ -7,7 +7,7 @@ part of 'pill_sheet_modified_history.dart';
 // **************************************************************************
 
 String _$pillSheetModifiedHistoriesHash() =>
-    r'3ec8eb3508e9f47dc99cc50a5e64ee699a4abc77';
+    r'03abe240f8193fea0b5328ed7670d7d16794b20b';
 
 /// Copied from Dart SDK
 class _SystemHash {
@@ -58,12 +58,18 @@ class PillSheetModifiedHistoriesFamily
     );
   }
 
-  static const Iterable<ProviderOrFamily>? _dependencies = null;
+  static final Iterable<ProviderOrFamily> _dependencies = <ProviderOrFamily>[
+    databaseProvider
+  ];
 
   @override
   Iterable<ProviderOrFamily>? get dependencies => _dependencies;
 
-  static const Iterable<ProviderOrFamily>? _allTransitiveDependencies = null;
+  static final Iterable<ProviderOrFamily> _allTransitiveDependencies =
+      <ProviderOrFamily>{
+    databaseProvider,
+    ...?databaseProvider.allTransitiveDependencies
+  };
 
   @override
   Iterable<ProviderOrFamily>? get allTransitiveDependencies =>
@@ -166,7 +172,7 @@ class _PillSheetModifiedHistoriesProviderElement
 }
 
 String _$pillSheetModifiedHistoriesWithLimitHash() =>
-    r'db39b6f0ce1332d5c2316506360341f5b3722da7';
+    r'6ce11b768ad4c04c8dd52a6e5dd007d84f8ebca9';
 
 /// See also [pillSheetModifiedHistoriesWithLimit].
 @ProviderFor(pillSheetModifiedHistoriesWithLimit)
@@ -197,12 +203,18 @@ class PillSheetModifiedHistoriesWithLimitFamily
     );
   }
 
-  static const Iterable<ProviderOrFamily>? _dependencies = null;
+  static final Iterable<ProviderOrFamily> _dependencies = <ProviderOrFamily>[
+    databaseProvider
+  ];
 
   @override
   Iterable<ProviderOrFamily>? get dependencies => _dependencies;
 
-  static const Iterable<ProviderOrFamily>? _allTransitiveDependencies = null;
+  static final Iterable<ProviderOrFamily> _allTransitiveDependencies =
+      <ProviderOrFamily>{
+    databaseProvider,
+    ...?databaseProvider.allTransitiveDependencies
+  };
 
   @override
   Iterable<ProviderOrFamily>? get allTransitiveDependencies =>
@@ -305,7 +317,7 @@ class _PillSheetModifiedHistoriesWithLimitProviderElement
 }
 
 String _$pillSheetModifiedHistoriesWithRangeHash() =>
-    r'0a6e20f56742b566fbe77714a7a04f434662ecd5';
+    r'ea775de86dd0b2b2bb7879a0fb01e3978df3836d';
 
 /// See also [pillSheetModifiedHistoriesWithRange].
 @ProviderFor(pillSheetModifiedHistoriesWithRange)
@@ -339,12 +351,18 @@ class PillSheetModifiedHistoriesWithRangeFamily
     );
   }
 
-  static const Iterable<ProviderOrFamily>? _dependencies = null;
+  static final Iterable<ProviderOrFamily> _dependencies = <ProviderOrFamily>[
+    databaseProvider
+  ];
 
   @override
   Iterable<ProviderOrFamily>? get dependencies => _dependencies;
 
-  static const Iterable<ProviderOrFamily>? _allTransitiveDependencies = null;
+  static final Iterable<ProviderOrFamily> _allTransitiveDependencies =
+      <ProviderOrFamily>{
+    databaseProvider,
+    ...?databaseProvider.allTransitiveDependencies
+  };
 
   @override
   Iterable<ProviderOrFamily>? get allTransitiveDependencies =>
