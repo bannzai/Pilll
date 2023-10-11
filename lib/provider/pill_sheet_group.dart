@@ -79,7 +79,7 @@ Future<PillSheetGroup?> beforePillSheetGroup(BeforePillSheetGroupRef ref) async 
     return snapshot.docs.first.data();
   }
 
-  return snapshot.docs.map((e) => e.data()).where((element) => element.deletedAt == null).lastOrNull;
+  return snapshot.docs.map((e) => e.data()).where((element) => element.deletedAt == null).last;
 }
 
 @Riverpod(dependencies: [database])
