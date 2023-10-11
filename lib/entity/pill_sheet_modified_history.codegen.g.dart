@@ -55,7 +55,7 @@ Map<String, dynamic> _$$_PillSheetModifiedHistoryToJson(
     }
   }
 
-  writeNotNull('id', toNull(instance.id));
+  writeNotNull('id', instance.id);
   val['actionType'] = instance.actionType;
   val['estimatedEventCausingDate'] =
       NonNullTimestampConverter.dateTimeToTimestamp(

@@ -24,7 +24,7 @@ mixin _$PillSheetModifiedHistory {
 // Added since 2023-08-01
   dynamic get version =>
       throw _privateConstructorUsedError; // ============ BEGIN: Added since v1 ============
-  @JsonKey(includeIfNull: false, toJson: toNull)
+  @JsonKey(includeIfNull: false)
   String? get id => throw _privateConstructorUsedError;
   String get actionType => throw _privateConstructorUsedError;
   @JsonKey(
@@ -91,7 +91,7 @@ abstract class $PillSheetModifiedHistoryCopyWith<$Res> {
   @useResult
   $Res call(
       {dynamic version,
-      @JsonKey(includeIfNull: false, toJson: toNull) String? id,
+      @JsonKey(includeIfNull: false) String? id,
       String actionType,
       @JsonKey(
           fromJson: NonNullTimestampConverter.timestampToDateTime,
@@ -299,7 +299,7 @@ abstract class _$$_PillSheetModifiedHistoryCopyWith<$Res>
   @useResult
   $Res call(
       {dynamic version,
-      @JsonKey(includeIfNull: false, toJson: toNull) String? id,
+      @JsonKey(includeIfNull: false) String? id,
       String actionType,
       @JsonKey(
           fromJson: NonNullTimestampConverter.timestampToDateTime,
@@ -446,7 +446,7 @@ class __$$_PillSheetModifiedHistoryCopyWithImpl<$Res>
 class _$_PillSheetModifiedHistory extends _PillSheetModifiedHistory {
   const _$_PillSheetModifiedHistory(
       {this.version = "v1",
-      @JsonKey(includeIfNull: false, toJson: toNull) required this.id,
+      @JsonKey(includeIfNull: false) required this.id,
       required this.actionType,
       @JsonKey(
           fromJson: NonNullTimestampConverter.timestampToDateTime,
@@ -485,7 +485,7 @@ class _$_PillSheetModifiedHistory extends _PillSheetModifiedHistory {
   final dynamic version;
 // ============ BEGIN: Added since v1 ============
   @override
-  @JsonKey(includeIfNull: false, toJson: toNull)
+  @JsonKey(includeIfNull: false)
   final String? id;
   @override
   final String actionType;
@@ -635,7 +635,7 @@ class _$_PillSheetModifiedHistory extends _PillSheetModifiedHistory {
 abstract class _PillSheetModifiedHistory extends PillSheetModifiedHistory {
   const factory _PillSheetModifiedHistory(
       {final dynamic version,
-      @JsonKey(includeIfNull: false, toJson: toNull) required final String? id,
+      @JsonKey(includeIfNull: false) required final String? id,
       required final String actionType,
       @JsonKey(
           fromJson: NonNullTimestampConverter.timestampToDateTime,
@@ -671,7 +671,7 @@ abstract class _PillSheetModifiedHistory extends PillSheetModifiedHistory {
   @override // Added since 2023-08-01
   dynamic get version;
   @override // ============ BEGIN: Added since v1 ============
-  @JsonKey(includeIfNull: false, toJson: toNull)
+  @JsonKey(includeIfNull: false)
   String? get id;
   @override
   String get actionType;
