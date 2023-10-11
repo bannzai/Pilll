@@ -77,24 +77,26 @@ class RecordPageInformationHeader extends StatelessWidget {
             ],
           ),
         ),
-        Align(
-          alignment: Alignment.topRight,
-          child: IconButton(
-            icon: const Icon(Icons.history, color: PilllColors.primary),
-            onPressed: () {
-              analytics.logEvent(name: "tapped_record_information_header_history");
+        // TODO: [PillSheetModifiedHistory-V2] 2024-05-01
+        // ピルシートグループIDを用いてフィルタリングできるようになるので、一つ前のピルシートグループの履歴を表示する機能を解放する
+        // Align(
+        //   alignment: Alignment.topRight,
+        //   child: IconButton(
+        //     icon: const Icon(Icons.history, color: PilllColors.primary),
+        //     onPressed: () {
+        //       analytics.logEvent(name: "tapped_record_information_header_history");
 
-              if (premiumAndTrial.isPremium || premiumAndTrial.isTrial) {
-                Navigator.of(context).push(
-                  BeforePillSheetGroupHistoryPageRoute.route(),
-                );
-              } else {
-                showPremiumIntroductionSheet(context);
-              }
-            },
-            color: Colors.black,
-          ),
-        ),
+        //       if (premiumAndTrial.isPremium || premiumAndTrial.isTrial) {
+        //         Navigator.of(context).push(
+        //           BeforePillSheetGroupHistoryPageRoute.route(),
+        //         );
+        //       } else {
+        //         showPremiumIntroductionSheet(context);
+        //       }
+        //     },
+        //     color: Colors.black,
+        //   ),
+        // ),
       ],
     );
   }
