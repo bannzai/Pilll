@@ -64,6 +64,8 @@ Stream<List<PillSheetModifiedHistory>> pillSheetModifiedHistoriesWithRange(
   required DateTime begin,
   required DateTime end,
 }) {
+  // PillSheetGroupのidをDBに保存していなかったので、PillSheetModifiedHistory.afterPillSheetGroup.id指定でのDBからの取得ができなかった(入れ子になっている構造体のIDで取得できる可動かは要確認が必要。未確認)
+  // TODO: [PillSheetModifiedHistory-V2] 2024-05-01 ここでの取得をPillSheetModifiedHistory.afterPillSheetGroup.id指定でのDBからの取得に変更する
   return ref
       .watch(databaseProvider)
       .pillSheetModifiedHistoriesReference()
