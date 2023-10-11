@@ -7,7 +7,7 @@ part of 'pill_sheet_modified_history.dart';
 // **************************************************************************
 
 String _$pillSheetModifiedHistoriesHash() =>
-    r'8b7431d9ab266349e801ce31ae047d259312d8a3';
+    r'03abe240f8193fea0b5328ed7670d7d16794b20b';
 
 /// Copied from Dart SDK
 class _SystemHash {
@@ -58,12 +58,18 @@ class PillSheetModifiedHistoriesFamily
     );
   }
 
-  static const Iterable<ProviderOrFamily>? _dependencies = null;
+  static final Iterable<ProviderOrFamily> _dependencies = <ProviderOrFamily>[
+    databaseProvider
+  ];
 
   @override
   Iterable<ProviderOrFamily>? get dependencies => _dependencies;
 
-  static const Iterable<ProviderOrFamily>? _allTransitiveDependencies = null;
+  static final Iterable<ProviderOrFamily> _allTransitiveDependencies =
+      <ProviderOrFamily>{
+    databaseProvider,
+    ...?databaseProvider.allTransitiveDependencies
+  };
 
   @override
   Iterable<ProviderOrFamily>? get allTransitiveDependencies =>
@@ -166,7 +172,7 @@ class _PillSheetModifiedHistoriesProviderElement
 }
 
 String _$pillSheetModifiedHistoriesWithLimitHash() =>
-    r'db39b6f0ce1332d5c2316506360341f5b3722da7';
+    r'6ce11b768ad4c04c8dd52a6e5dd007d84f8ebca9';
 
 /// See also [pillSheetModifiedHistoriesWithLimit].
 @ProviderFor(pillSheetModifiedHistoriesWithLimit)
@@ -197,12 +203,18 @@ class PillSheetModifiedHistoriesWithLimitFamily
     );
   }
 
-  static const Iterable<ProviderOrFamily>? _dependencies = null;
+  static final Iterable<ProviderOrFamily> _dependencies = <ProviderOrFamily>[
+    databaseProvider
+  ];
 
   @override
   Iterable<ProviderOrFamily>? get dependencies => _dependencies;
 
-  static const Iterable<ProviderOrFamily>? _allTransitiveDependencies = null;
+  static final Iterable<ProviderOrFamily> _allTransitiveDependencies =
+      <ProviderOrFamily>{
+    databaseProvider,
+    ...?databaseProvider.allTransitiveDependencies
+  };
 
   @override
   Iterable<ProviderOrFamily>? get allTransitiveDependencies =>
@@ -302,6 +314,167 @@ class _PillSheetModifiedHistoriesWithLimitProviderElement
   @override
   int get limit =>
       (origin as PillSheetModifiedHistoriesWithLimitProvider).limit;
+}
+
+String _$pillSheetModifiedHistoriesWithRangeHash() =>
+    r'ea775de86dd0b2b2bb7879a0fb01e3978df3836d';
+
+/// See also [pillSheetModifiedHistoriesWithRange].
+@ProviderFor(pillSheetModifiedHistoriesWithRange)
+const pillSheetModifiedHistoriesWithRangeProvider =
+    PillSheetModifiedHistoriesWithRangeFamily();
+
+/// See also [pillSheetModifiedHistoriesWithRange].
+class PillSheetModifiedHistoriesWithRangeFamily
+    extends Family<AsyncValue<List<PillSheetModifiedHistory>>> {
+  /// See also [pillSheetModifiedHistoriesWithRange].
+  const PillSheetModifiedHistoriesWithRangeFamily();
+
+  /// See also [pillSheetModifiedHistoriesWithRange].
+  PillSheetModifiedHistoriesWithRangeProvider call({
+    required DateTime begin,
+    required DateTime end,
+  }) {
+    return PillSheetModifiedHistoriesWithRangeProvider(
+      begin: begin,
+      end: end,
+    );
+  }
+
+  @override
+  PillSheetModifiedHistoriesWithRangeProvider getProviderOverride(
+    covariant PillSheetModifiedHistoriesWithRangeProvider provider,
+  ) {
+    return call(
+      begin: provider.begin,
+      end: provider.end,
+    );
+  }
+
+  static final Iterable<ProviderOrFamily> _dependencies = <ProviderOrFamily>[
+    databaseProvider
+  ];
+
+  @override
+  Iterable<ProviderOrFamily>? get dependencies => _dependencies;
+
+  static final Iterable<ProviderOrFamily> _allTransitiveDependencies =
+      <ProviderOrFamily>{
+    databaseProvider,
+    ...?databaseProvider.allTransitiveDependencies
+  };
+
+  @override
+  Iterable<ProviderOrFamily>? get allTransitiveDependencies =>
+      _allTransitiveDependencies;
+
+  @override
+  String? get name => r'pillSheetModifiedHistoriesWithRangeProvider';
+}
+
+/// See also [pillSheetModifiedHistoriesWithRange].
+class PillSheetModifiedHistoriesWithRangeProvider
+    extends StreamProvider<List<PillSheetModifiedHistory>> {
+  /// See also [pillSheetModifiedHistoriesWithRange].
+  PillSheetModifiedHistoriesWithRangeProvider({
+    required DateTime begin,
+    required DateTime end,
+  }) : this._internal(
+          (ref) => pillSheetModifiedHistoriesWithRange(
+            ref as PillSheetModifiedHistoriesWithRangeRef,
+            begin: begin,
+            end: end,
+          ),
+          from: pillSheetModifiedHistoriesWithRangeProvider,
+          name: r'pillSheetModifiedHistoriesWithRangeProvider',
+          debugGetCreateSourceHash:
+              const bool.fromEnvironment('dart.vm.product')
+                  ? null
+                  : _$pillSheetModifiedHistoriesWithRangeHash,
+          dependencies: PillSheetModifiedHistoriesWithRangeFamily._dependencies,
+          allTransitiveDependencies: PillSheetModifiedHistoriesWithRangeFamily
+              ._allTransitiveDependencies,
+          begin: begin,
+          end: end,
+        );
+
+  PillSheetModifiedHistoriesWithRangeProvider._internal(
+    super._createNotifier, {
+    required super.name,
+    required super.dependencies,
+    required super.allTransitiveDependencies,
+    required super.debugGetCreateSourceHash,
+    required super.from,
+    required this.begin,
+    required this.end,
+  }) : super.internal();
+
+  final DateTime begin;
+  final DateTime end;
+
+  @override
+  Override overrideWith(
+    Stream<List<PillSheetModifiedHistory>> Function(
+            PillSheetModifiedHistoriesWithRangeRef provider)
+        create,
+  ) {
+    return ProviderOverride(
+      origin: this,
+      override: PillSheetModifiedHistoriesWithRangeProvider._internal(
+        (ref) => create(ref as PillSheetModifiedHistoriesWithRangeRef),
+        from: from,
+        name: null,
+        dependencies: null,
+        allTransitiveDependencies: null,
+        debugGetCreateSourceHash: null,
+        begin: begin,
+        end: end,
+      ),
+    );
+  }
+
+  @override
+  StreamProviderElement<List<PillSheetModifiedHistory>> createElement() {
+    return _PillSheetModifiedHistoriesWithRangeProviderElement(this);
+  }
+
+  @override
+  bool operator ==(Object other) {
+    return other is PillSheetModifiedHistoriesWithRangeProvider &&
+        other.begin == begin &&
+        other.end == end;
+  }
+
+  @override
+  int get hashCode {
+    var hash = _SystemHash.combine(0, runtimeType.hashCode);
+    hash = _SystemHash.combine(hash, begin.hashCode);
+    hash = _SystemHash.combine(hash, end.hashCode);
+
+    return _SystemHash.finish(hash);
+  }
+}
+
+mixin PillSheetModifiedHistoriesWithRangeRef
+    on StreamProviderRef<List<PillSheetModifiedHistory>> {
+  /// The parameter `begin` of this provider.
+  DateTime get begin;
+
+  /// The parameter `end` of this provider.
+  DateTime get end;
+}
+
+class _PillSheetModifiedHistoriesWithRangeProviderElement
+    extends StreamProviderElement<List<PillSheetModifiedHistory>>
+    with PillSheetModifiedHistoriesWithRangeRef {
+  _PillSheetModifiedHistoriesWithRangeProviderElement(super.provider);
+
+  @override
+  DateTime get begin =>
+      (origin as PillSheetModifiedHistoriesWithRangeProvider).begin;
+  @override
+  DateTime get end =>
+      (origin as PillSheetModifiedHistoriesWithRangeProvider).end;
 }
 // ignore_for_file: type=lint
 // ignore_for_file: subtype_of_sealed_class, invalid_use_of_internal_member, invalid_use_of_visible_for_testing_member

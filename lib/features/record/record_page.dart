@@ -81,9 +81,9 @@ class RecordPage extends HookConsumerWidget {
 
     final isLinked = ref.watch(isLinkedProvider);
     return AsyncValueGroup.group4(
-      ref.watch(latestPillSheetGroupProvider),
-      ref.watch(premiumAndTrialProvider),
-      ref.watch(settingProvider),
+      latestPillSheetGroup,
+      premiumAndTrial,
+      setting,
       ref.watch(userProvider),
     ).when(
       data: (data) {
@@ -132,14 +132,11 @@ class RecordPageBody extends HookConsumerWidget {
         titleSpacing: 0,
         backgroundColor: PilllColors.white,
         toolbarHeight: RecordPageInformationHeaderConst.height,
-        title: Stack(
-          children: [
-            RecordPageInformationHeader(
-              today: DateTime.now(),
-              pillSheetGroup: pillSheetGroup,
-              setting: setting,
-            ),
-          ],
+        title: RecordPageInformationHeader(
+          today: DateTime.now(),
+          pillSheetGroup: pillSheetGroup,
+          setting: setting,
+          premiumAndTrial: premiumAndTrial,
         ),
       ),
       body: Column(

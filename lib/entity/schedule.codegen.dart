@@ -1,4 +1,3 @@
-import 'package:pilll/entity/firestore_document_id_escaping_to_json.dart';
 import 'package:pilll/entity/firestore_timestamp_converter.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
@@ -14,20 +13,19 @@ class ScheduleFirestoreKey {
 class Schedule with _$Schedule {
   @JsonSerializable(explicitToJson: true)
   const factory Schedule({
-    @JsonKey(includeIfNull: false, toJson: toNull)
-        String? id,
+    @JsonKey(includeIfNull: false) String? id,
     required String title,
     @JsonKey(
       fromJson: NonNullTimestampConverter.timestampToDateTime,
       toJson: NonNullTimestampConverter.dateTimeToTimestamp,
     )
-        required DateTime date,
+    required DateTime date,
     LocalNotification? localNotification,
     @JsonKey(
       fromJson: NonNullTimestampConverter.timestampToDateTime,
       toJson: NonNullTimestampConverter.dateTimeToTimestamp,
     )
-        required DateTime createdDateTime,
+    required DateTime createdDateTime,
   }) = _Schedule;
   const Schedule._();
 
@@ -43,7 +41,7 @@ class LocalNotification with _$LocalNotification {
       fromJson: NonNullTimestampConverter.timestampToDateTime,
       toJson: NonNullTimestampConverter.dateTimeToTimestamp,
     )
-        required DateTime remindDateTime,
+    required DateTime remindDateTime,
   }) = _LocalNotification;
   const LocalNotification._();
 

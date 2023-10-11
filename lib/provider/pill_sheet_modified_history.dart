@@ -6,7 +6,7 @@ import 'package:riverpod_annotation/riverpod_annotation.dart';
 
 part 'pill_sheet_modified_history.g.dart';
 
-@riverpod
+@Riverpod(dependencies: [database, database])
 Stream<List<PillSheetModifiedHistory>> pillSheetModifiedHistories(PillSheetModifiedHistoriesRef ref, {DateTime? afterCursor}) {
   if (afterCursor != null) {
     return ref
@@ -40,7 +40,7 @@ Stream<List<PillSheetModifiedHistory>> pillSheetModifiedHistories(PillSheetModif
   }
 }
 
-@Riverpod()
+@Riverpod(dependencies: [database])
 Stream<List<PillSheetModifiedHistory>> pillSheetModifiedHistoriesWithLimit(PillSheetModifiedHistoriesWithLimitRef ref, {required int limit}) {
   return ref
       .watch(databaseProvider)
@@ -52,6 +52,31 @@ Stream<List<PillSheetModifiedHistory>> pillSheetModifiedHistoriesWithLimit(PillS
       )
       .orderBy(PillSheetModifiedHistoryFirestoreKeys.estimatedEventCausingDate, descending: true)
       .limit(limit)
+      .snapshots()
+      .map((reference) => reference.docs)
+      .map((docs) => docs.map((doc) => doc.data()).toList());
+}
+
+// 頻繁に切り替わることも予想されるので、keepAliveをtrueにしている
+@Riverpod(keepAlive: true, dependencies: [database])
+Stream<List<PillSheetModifiedHistory>> pillSheetModifiedHistoriesWithRange(
+  PillSheetModifiedHistoriesWithRangeRef ref, {
+  required DateTime begin,
+  required DateTime end,
+}) {
+  // TODO:  [PillSheetModifiedHistory-V2-BeforePillSheetGroupHistory] 2024-05-01
+  // ピルシートグループIDを用いてフィルタリングできるようになるので、一つ前のピルシートグループの履歴を表示する機能を解放する
+  // PillSheetModifiedHistoryFirestoreKeys.afterPillSheetGroupID を使用してDBから取得する
+  // PillSheetModifiedHistoryFirestoreKeys.estimatedEventCausingDate での並び替えはインデックスを貼るのは面倒なのでインメモリでsortすれば良いと考えている
+  return ref
+      .watch(databaseProvider)
+      .pillSheetModifiedHistoriesReference()
+      .where(
+        PillSheetModifiedHistoryFirestoreKeys.estimatedEventCausingDate,
+        isLessThanOrEqualTo: end.endOfDay(),
+        isGreaterThanOrEqualTo: begin.date(),
+      )
+      .orderBy(PillSheetModifiedHistoryFirestoreKeys.estimatedEventCausingDate, descending: true)
       .snapshots()
       .map((reference) => reference.docs)
       .map((docs) => docs.map((doc) => doc.data()).toList());

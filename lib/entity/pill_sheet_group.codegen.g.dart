@@ -34,7 +34,7 @@ Map<String, dynamic> _$$_PillSheetGroupToJson(_$_PillSheetGroup instance) {
     }
   }
 
-  writeNotNull('id', toNull(instance.id));
+  writeNotNull('id', instance.id);
   val['pillSheetIDs'] = instance.pillSheetIDs;
   val['pillSheets'] = instance.pillSheets.map((e) => e.toJson()).toList();
   val['createdAt'] =

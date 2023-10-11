@@ -1,9 +1,12 @@
 import 'package:collection/collection.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/foundation.dart';
+import 'package:pilll/entity/pill_sheet.codegen.dart';
 import 'package:pilll/provider/database.dart';
 import 'package:pilll/entity/pill_sheet_group.codegen.dart';
-import 'package:riverpod/riverpod.dart';
+import 'package:riverpod_annotation/riverpod_annotation.dart';
+
+part 'pill_sheet_group.g.dart';
 
 // この変数にtrueを入れることでMetadata.hasPendingWritesがfalseの場合=リモートDBに書き込まれた場合にStreamの値を流すように制御できる。
 // Pilllではアプリを開いている時に複数箇所からのDB書き込みが無いので(ごくまれにBackendで書き込みと被る可能性はある)単純なフラグ制御を採用している
@@ -16,47 +19,67 @@ PillSheetGroup? _filter(QuerySnapshot<PillSheetGroup> snapshot) {
   return snapshot.docs.last.data();
 }
 
-Future<PillSheetGroup?> latestPillSheetGroup(DatabaseConnection databaseConnection) async {
+// 最新のピルシートグループを取得する。ピルシートグループが初期設定で作られないパターンもあるのでNullable
+Future<PillSheetGroup?> fetchLatestPillSheetGroup(DatabaseConnection databaseConnection) async {
   return (await databaseConnection.pillSheetGroupsReference().orderBy(PillSheetGroupFirestoreKeys.createdAt).limitToLast(1).get())
       .docs
       .lastOrNull
       ?.data();
 }
 
-final activePillSheetProvider = Provider((ref) {
+// 最新のピルシートグループの.activePillSheetを取得する。
+@Riverpod(dependencies: [latestPillSheetGroup])
+AsyncValue<PillSheet?> activePillSheet(ActivePillSheetRef ref) {
   return ref.watch(latestPillSheetGroupProvider).whenData((value) => value?.activePillSheet);
-});
+}
 
-final latestPillSheetGroupProvider = StreamProvider((ref) => ref
-        .watch(databaseProvider)
-        .pillSheetGroupsReference()
-        .orderBy(PillSheetGroupFirestoreKeys.createdAt)
-        .limitToLast(1)
-        .snapshots(includeMetadataChanges: true)
-        .skipWhile((snapshot) {
-      if (awaitsPillSheetGroupRemoteDBDataChanged) {
-        if (snapshot.metadata.hasPendingWrites) {
-          debugPrint("[DEBUG] hasPendingWrites: true");
-          return true;
-        } else {
-          debugPrint("[DEBUG] hasPendingWrites: false");
-          // Clear flag and continue to last statement
-          awaitsPillSheetGroupRemoteDBDataChanged = false;
-        }
+@Riverpod(dependencies: [database])
+Stream<PillSheetGroup?> latestPillSheetGroup(LatestPillSheetGroupRef ref) {
+// 最新のピルシートグループを取得する。ピルシートグループが初期設定で作られないパターンもあるのでNullable
+  return ref
+      .watch(databaseProvider)
+      .pillSheetGroupsReference()
+      .orderBy(PillSheetGroupFirestoreKeys.createdAt)
+      .limitToLast(1)
+      .snapshots(includeMetadataChanges: true)
+      .skipWhile((snapshot) {
+    if (awaitsPillSheetGroupRemoteDBDataChanged) {
+      if (snapshot.metadata.hasPendingWrites) {
+        debugPrint("[DEBUG] hasPendingWrites: true");
+        return true;
+      } else {
+        debugPrint("[DEBUG] hasPendingWrites: false");
+        // Clear flag and continue to last statement
+        awaitsPillSheetGroupRemoteDBDataChanged = false;
       }
-      return false;
-    }).map(((event) => _filter(event))));
+    }
+    return false;
+  }).map(((event) => _filter(event)));
+}
 
-final beforePillSheetGroupProvider = FutureProvider<PillSheetGroup?>((ref) async {
+// 一つ前のピルシートグループを取得する。破棄されたピルシートグループは現在含んでいるが含めないようにしても良い。インデックスを作成する必要があるので避けている
+@Riverpod(dependencies: [database])
+Future<PillSheetGroup?> beforePillSheetGroup(BeforePillSheetGroupRef ref) async {
   final database = ref.watch(databaseProvider);
   final snapshot = await database.pillSheetGroupsReference().orderBy(PillSheetGroupFirestoreKeys.createdAt).limitToLast(2).get();
-  if (snapshot.docs.length <= 1) {
+
+  if (snapshot.docs.isEmpty) {
     return null;
   }
-  return snapshot.docs[0].data();
-});
 
-final batchSetPillSheetGroupProvider = Provider((ref) => BatchSetPillSheetGroup(ref.watch(databaseProvider)));
+  // 前回のピルシートグループが存在する場合で、まだ今回のピルシートグループを作っていない状態が発生する
+  // なので、今回のピルシートグループが存在しないかどうかをチェックして、存在しない場合は前回のピルシートグループを返す
+  if (snapshot.docs.length == 1) {
+    return snapshot.docs.first.data();
+  }
+
+  return snapshot.docs.last.data();
+}
+
+@Riverpod(dependencies: [database])
+BatchSetPillSheetGroup batchSetPillSheetGroup(BatchSetPillSheetGroupRef ref) {
+  return BatchSetPillSheetGroup(ref.watch(databaseProvider));
+}
 
 class BatchSetPillSheetGroup {
   final DatabaseConnection databaseConnection;
@@ -69,7 +92,10 @@ class BatchSetPillSheetGroup {
   }
 }
 
-final setPillSheetGroupProvider = Provider((ref) => SetPillSheetGroup(ref.watch(databaseProvider)));
+@Riverpod(dependencies: [database])
+SetPillSheetGroup setPillSheetGroup(SetPillSheetGroupRef ref) {
+  return SetPillSheetGroup(ref.watch(databaseProvider));
+}
 
 class SetPillSheetGroup {
   final DatabaseConnection databaseConnection;

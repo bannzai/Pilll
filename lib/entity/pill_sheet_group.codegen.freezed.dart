@@ -20,7 +20,7 @@ PillSheetGroup _$PillSheetGroupFromJson(Map<String, dynamic> json) {
 
 /// @nodoc
 mixin _$PillSheetGroup {
-  @JsonKey(includeIfNull: false, toJson: toNull)
+  @JsonKey(includeIfNull: false)
   String? get id => throw _privateConstructorUsedError;
   List<String> get pillSheetIDs => throw _privateConstructorUsedError;
   List<PillSheet> get pillSheets => throw _privateConstructorUsedError;
@@ -48,7 +48,7 @@ abstract class $PillSheetGroupCopyWith<$Res> {
       _$PillSheetGroupCopyWithImpl<$Res, PillSheetGroup>;
   @useResult
   $Res call(
-      {@JsonKey(includeIfNull: false, toJson: toNull) String? id,
+      {@JsonKey(includeIfNull: false) String? id,
       List<String> pillSheetIDs,
       List<PillSheet> pillSheets,
       @JsonKey(
@@ -135,7 +135,7 @@ abstract class _$$_PillSheetGroupCopyWith<$Res>
   @override
   @useResult
   $Res call(
-      {@JsonKey(includeIfNull: false, toJson: toNull) String? id,
+      {@JsonKey(includeIfNull: false) String? id,
       List<String> pillSheetIDs,
       List<PillSheet> pillSheets,
       @JsonKey(
@@ -204,7 +204,7 @@ class __$$_PillSheetGroupCopyWithImpl<$Res>
 @JsonSerializable(explicitToJson: true)
 class _$_PillSheetGroup extends _PillSheetGroup {
   const _$_PillSheetGroup(
-      {@JsonKey(includeIfNull: false, toJson: toNull) this.id,
+      {@JsonKey(includeIfNull: false) this.id,
       required final List<String> pillSheetIDs,
       required final List<PillSheet> pillSheets,
       @JsonKey(
@@ -224,7 +224,7 @@ class _$_PillSheetGroup extends _PillSheetGroup {
       _$$_PillSheetGroupFromJson(json);
 
   @override
-  @JsonKey(includeIfNull: false, toJson: toNull)
+  @JsonKey(includeIfNull: false)
   final String? id;
   final List<String> _pillSheetIDs;
   @override
@@ -305,7 +305,7 @@ class _$_PillSheetGroup extends _PillSheetGroup {
 
 abstract class _PillSheetGroup extends PillSheetGroup {
   const factory _PillSheetGroup(
-          {@JsonKey(includeIfNull: false, toJson: toNull) final String? id,
+          {@JsonKey(includeIfNull: false) final String? id,
           required final List<String> pillSheetIDs,
           required final List<PillSheet> pillSheets,
           @JsonKey(
@@ -324,7 +324,7 @@ abstract class _PillSheetGroup extends PillSheetGroup {
       _$_PillSheetGroup.fromJson;
 
   @override
-  @JsonKey(includeIfNull: false, toJson: toNull)
+  @JsonKey(includeIfNull: false)
   String? get id;
   @override
   List<String> get pillSheetIDs;

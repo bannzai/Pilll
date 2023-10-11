@@ -1,3 +1,4 @@
+import 'package:pilll/provider/premium_and_trial.codegen.dart';
 import 'package:pilll/utils/analytics.dart';
 import 'package:pilll/components/atoms/color.dart';
 import 'package:pilll/components/atoms/font.dart';
@@ -17,11 +18,13 @@ class RecordPageInformationHeader extends StatelessWidget {
   final DateTime today;
   final PillSheetGroup? pillSheetGroup;
   final Setting setting;
+  final PremiumAndTrial premiumAndTrial;
   const RecordPageInformationHeader({
     Key? key,
     required this.today,
     required this.pillSheetGroup,
     required this.setting,
+    required this.premiumAndTrial,
   }) : super(key: key);
 
   String _formattedToday() => DateTimeFormatter.monthAndDay(today);
@@ -33,42 +36,66 @@ class RecordPageInformationHeader extends StatelessWidget {
     final activePillSheet = pillSheetGroup?.activePillSheet;
     final setting = this.setting;
 
-    return SizedBox(
-      height: RecordPageInformationHeaderConst.height,
-      child: Column(
-        children: <Widget>[
-          const SizedBox(height: 34),
-          Row(
-            mainAxisAlignment: MainAxisAlignment.center,
+    return Stack(
+      children: [
+        SizedBox(
+          height: RecordPageInformationHeaderConst.height,
+          child: Column(
             children: <Widget>[
-              _todayWidget(),
-              const SizedBox(width: 28),
-              const SizedBox(
-                height: 64,
-                child: VerticalDivider(
-                  width: 10,
-                  color: PilllColors.divider,
-                ),
+              const SizedBox(height: 34),
+              Row(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: <Widget>[
+                  _todayWidget(),
+                  const SizedBox(width: 28),
+                  const SizedBox(
+                    height: 64,
+                    child: VerticalDivider(
+                      width: 10,
+                      color: PilllColors.divider,
+                    ),
+                  ),
+                  const SizedBox(width: 28),
+                  TodayTakenPillNumber(
+                      pillSheetGroup: pillSheetGroup,
+                      setting: setting,
+                      onPressed: () {
+                        analytics.logEvent(name: "tapped_record_information_header");
+                        if (activePillSheet != null && pillSheetGroup != null && !pillSheetGroup.isDeactived) {
+                          Navigator.of(context).push(
+                            SettingTodayPillNumberPageRoute.route(
+                              pillSheetGroup: pillSheetGroup,
+                              activePillSheet: activePillSheet,
+                            ),
+                          );
+                        }
+                      }),
+                ],
               ),
-              const SizedBox(width: 28),
-              TodayTakenPillNumber(
-                  pillSheetGroup: pillSheetGroup,
-                  setting: setting,
-                  onPressed: () {
-                    analytics.logEvent(name: "tapped_record_information_header");
-                    if (activePillSheet != null && pillSheetGroup != null && !pillSheetGroup.isDeactived) {
-                      Navigator.of(context).push(
-                        SettingTodayPillNumberPageRoute.route(
-                          pillSheetGroup: pillSheetGroup,
-                          activePillSheet: activePillSheet,
-                        ),
-                      );
-                    }
-                  }),
             ],
           ),
-        ],
-      ),
+        ),
+        // TODO:  [PillSheetModifiedHistory-V2-BeforePillSheetGroupHistory] 2024-05-01
+        // ピルシートグループIDを用いてフィルタリングできるようになるので、一つ前のピルシートグループの履歴を表示する機能を解放する
+        // Align(
+        //   alignment: Alignment.topRight,
+        //   child: IconButton(
+        //     icon: const Icon(Icons.history, color: PilllColors.primary),
+        //     onPressed: () {
+        //       analytics.logEvent(name: "tapped_record_information_header_history");
+
+        //       if (premiumAndTrial.isPremium || premiumAndTrial.isTrial) {
+        //         Navigator.of(context).push(
+        //           BeforePillSheetGroupHistoryPageRoute.route(),
+        //         );
+        //       } else {
+        //         showPremiumIntroductionSheet(context);
+        //       }
+        //     },
+        //     color: Colors.black,
+        //   ),
+        // ),
+      ],
     );
   }
 

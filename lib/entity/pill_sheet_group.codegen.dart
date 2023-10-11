@@ -1,4 +1,3 @@
-import 'package:pilll/entity/firestore_document_id_escaping_to_json.dart';
 import 'package:pilll/entity/firestore_timestamp_converter.dart';
 import 'package:pilll/entity/pill_sheet.codegen.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
@@ -14,6 +13,7 @@ part 'pill_sheet_group.codegen.freezed.dart';
 
 class PillSheetGroupFirestoreKeys {
   static const createdAt = "createdAt";
+  static const deletedAt = "deletedAt";
 }
 
 @freezed
@@ -21,7 +21,7 @@ class PillSheetGroup with _$PillSheetGroup {
   const PillSheetGroup._();
   @JsonSerializable(explicitToJson: true)
   const factory PillSheetGroup({
-    @JsonKey(includeIfNull: false, toJson: toNull) String? id,
+    @JsonKey(includeIfNull: false) String? id,
     required List<String> pillSheetIDs,
     required List<PillSheet> pillSheets,
     @JsonKey(

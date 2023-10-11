@@ -20,7 +20,7 @@ Menstruation _$MenstruationFromJson(Map<String, dynamic> json) {
 
 /// @nodoc
 mixin _$Menstruation {
-  @JsonKey(includeIfNull: false, toJson: toNull)
+  @JsonKey(includeIfNull: false)
   String? get id => throw _privateConstructorUsedError;
   @JsonKey(
       fromJson: NonNullTimestampConverter.timestampToDateTime,
@@ -53,7 +53,7 @@ abstract class $MenstruationCopyWith<$Res> {
       _$MenstruationCopyWithImpl<$Res, Menstruation>;
   @useResult
   $Res call(
-      {@JsonKey(includeIfNull: false, toJson: toNull) String? id,
+      {@JsonKey(includeIfNull: false) String? id,
       @JsonKey(
           fromJson: NonNullTimestampConverter.timestampToDateTime,
           toJson: NonNullTimestampConverter.dateTimeToTimestamp)
@@ -131,7 +131,7 @@ abstract class _$$_MenstruationCopyWith<$Res>
   @override
   @useResult
   $Res call(
-      {@JsonKey(includeIfNull: false, toJson: toNull) String? id,
+      {@JsonKey(includeIfNull: false) String? id,
       @JsonKey(
           fromJson: NonNullTimestampConverter.timestampToDateTime,
           toJson: NonNullTimestampConverter.dateTimeToTimestamp)
@@ -203,7 +203,7 @@ class __$$_MenstruationCopyWithImpl<$Res>
 @JsonSerializable(explicitToJson: true)
 class _$_Menstruation extends _Menstruation {
   const _$_Menstruation(
-      {@JsonKey(includeIfNull: false, toJson: toNull) this.id,
+      {@JsonKey(includeIfNull: false) this.id,
       @JsonKey(
           fromJson: NonNullTimestampConverter.timestampToDateTime,
           toJson: NonNullTimestampConverter.dateTimeToTimestamp)
@@ -227,7 +227,7 @@ class _$_Menstruation extends _Menstruation {
       _$$_MenstruationFromJson(json);
 
   @override
-  @JsonKey(includeIfNull: false, toJson: toNull)
+  @JsonKey(includeIfNull: false)
   final String? id;
   @override
   @JsonKey(
@@ -296,7 +296,7 @@ class _$_Menstruation extends _Menstruation {
 
 abstract class _Menstruation extends Menstruation {
   const factory _Menstruation(
-      {@JsonKey(includeIfNull: false, toJson: toNull) final String? id,
+      {@JsonKey(includeIfNull: false) final String? id,
       @JsonKey(
           fromJson: NonNullTimestampConverter.timestampToDateTime,
           toJson: NonNullTimestampConverter.dateTimeToTimestamp)
@@ -320,7 +320,7 @@ abstract class _Menstruation extends Menstruation {
       _$_Menstruation.fromJson;
 
   @override
-  @JsonKey(includeIfNull: false, toJson: toNull)
+  @JsonKey(includeIfNull: false)
   String? get id;
   @override
   @JsonKey(

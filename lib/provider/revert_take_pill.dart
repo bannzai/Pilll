@@ -8,7 +8,7 @@ import 'package:pilll/provider/pill_sheet_modified_history.dart';
 import 'package:pilll/utils/datetime/day.dart';
 import 'package:riverpod/riverpod.dart';
 
-final revertTakePillProvider = Provider(
+final revertTakePillProvider = Provider.autoDispose(
   (ref) => RevertTakePill(
     batchFactory: ref.watch(batchFactoryProvider),
     batchSetPillSheetModifiedHistory: ref.watch(batchSetPillSheetModifiedHistoryProvider),

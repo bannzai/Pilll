@@ -9,7 +9,7 @@ import 'package:pilll/provider/pill_sheet_group.dart';
 import 'package:pilll/provider/pill_sheet_modified_history.dart';
 import 'package:pilll/utils/datetime/day.dart';
 
-final changePillNumberProvider = Provider(
+final changePillNumberProvider = Provider.autoDispose(
   (ref) => ChangePillNumber(
     batchFactory: ref.watch(batchFactoryProvider),
     batchSetPillSheetModifiedHistory: ref.watch(batchSetPillSheetModifiedHistoryProvider),

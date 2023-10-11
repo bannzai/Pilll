@@ -70,11 +70,13 @@ class PillSheetModifiedHistoriesPage extends HookConsumerWidget {
                         const PillSheetModifiedHisotiryListHeader(),
                         const SizedBox(height: 4),
                         Expanded(
-                          child: PillSheetModifiedHistoryList(
+                          child: SingleChildScrollView(
                             padding: const EdgeInsets.only(bottom: 20),
-                            scrollPhysics: const AlwaysScrollableScrollPhysics(),
-                            pillSheetModifiedHistories: histories.value,
-                            premiumAndTrial: premiumAndTrial,
+                            physics: const AlwaysScrollableScrollPhysics(),
+                            child: PillSheetModifiedHistoryList(
+                              pillSheetModifiedHistories: histories.value,
+                              premiumOrTrial: premiumAndTrial.premiumOrTrial,
+                            ),
                           ),
                         ),
                       ],

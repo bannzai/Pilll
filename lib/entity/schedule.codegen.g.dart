@@ -28,7 +28,7 @@ Map<String, dynamic> _$$_ScheduleToJson(_$_Schedule instance) {
     }
   }
 
-  writeNotNull('id', toNull(instance.id));
+  writeNotNull('id', instance.id);
   val['title'] = instance.title;
   val['date'] = NonNullTimestampConverter.dateTimeToTimestamp(instance.date);
   val['localNotification'] = instance.localNotification?.toJson();
