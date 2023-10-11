@@ -55,7 +55,7 @@ class PillSheetModifiedHistory with _$PillSheetModifiedHistory {
     @Default("v1") version,
 
     // ============ BEGIN: Added since v1 ============
-    @JsonKey(includeIfNull: false, toJson: toNull) required String? id,
+    @JsonKey(includeIfNull: false) required String? id,
     required String actionType,
     @JsonKey(
       fromJson: NonNullTimestampConverter.timestampToDateTime,
