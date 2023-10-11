@@ -77,7 +77,7 @@ class RecordPageInformationHeader extends StatelessWidget {
             ],
           ),
         ),
-        // TODO: [PillSheetModifiedHistory-V2] 2024-05-01
+        // TODO:  [PillSheetModifiedHistory-V2-BeforePillSheetGroupHistory] 2024-05-01
         // ピルシートグループIDを用いてフィルタリングできるようになるので、一つ前のピルシートグループの履歴を表示する機能を解放する
         // Align(
         //   alignment: Alignment.topRight,
