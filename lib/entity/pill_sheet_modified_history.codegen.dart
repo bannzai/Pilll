@@ -13,7 +13,6 @@ part 'pill_sheet_modified_history.codegen.freezed.dart';
 
 class PillSheetModifiedHistoryFirestoreKeys {
   static const estimatedEventCausingDate = "estimatedEventCausingDate";
-  static const afterPillSheetGroupID = "afterPillSheetGroup.id";
   static const archivedDateTime = "archivedDateTime";
 }
 
