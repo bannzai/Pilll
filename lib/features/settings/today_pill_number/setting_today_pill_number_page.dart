@@ -4,24 +4,22 @@ import 'package:pilll/components/atoms/button.dart';
 import 'package:pilll/components/atoms/color.dart';
 import 'package:pilll/components/atoms/font.dart';
 import 'package:pilll/components/atoms/text_color.dart';
-import 'package:pilll/entity/setting.codegen.dart';
 import 'package:pilll/features/settings/today_pill_number/setting_today_pill_number_pill_sheet_list.dart';
 import 'package:pilll/entity/pill_sheet.codegen.dart';
 import 'package:pilll/entity/pill_sheet_group.codegen.dart';
 import 'package:pilll/entity/pill_sheet_type.dart';
+import 'package:pilll/entity/setting.codegen.dart';
 import 'package:pilll/provider/change_pill_number.dart';
 import 'package:pilll/utils/formatter/date_time_formatter.dart';
 import 'package:flutter/material.dart';
 import 'package:pilll/utils/local_notification.dart';
 
 class SettingTodayPillNumberPage extends HookConsumerWidget {
-  final Setting setting;
   final PillSheetGroup pillSheetGroup;
   final PillSheet activePillSheet;
 
   const SettingTodayPillNumberPage({
     Key? key,
-    required this.setting,
     required this.pillSheetGroup,
     required this.activePillSheet,
   }) : super(key: key);
@@ -68,7 +66,7 @@ class SettingTodayPillNumberPage extends HookConsumerWidget {
                   Center(
                     child: SettingTodayPillNumberPillSheetList(
                         pillSheetTypes: pillSheetGroup.pillSheets.map((e) => e.pillSheetType).toList(),
-                        appearanceMode: setting.pillSheetAppearanceMode,
+                        appearanceMode: PillSheetAppearanceMode.number,
                         selectedTodayPillNumberIntoPillSheet: (pageIndex) {
                           if (pillSheetPageIndexState.value != pageIndex) {
                             return null;
@@ -134,14 +132,12 @@ class SettingTodayPillNumberPage extends HookConsumerWidget {
 
 extension SettingTodayPillNumberPageRoute on SettingTodayPillNumberPage {
   static Route<dynamic> route({
-    required Setting setting,
     required PillSheetGroup pillSheetGroup,
     required PillSheet activePillSheet,
   }) {
     return MaterialPageRoute(
       settings: const RouteSettings(name: "SettingTodayPillNumberPage"),
       builder: (_) => SettingTodayPillNumberPage(
-        setting: setting,
         pillSheetGroup: pillSheetGroup,
         activePillSheet: activePillSheet,
       ),
