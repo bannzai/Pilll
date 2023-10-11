@@ -86,7 +86,7 @@ class RecordPageInformationHeader extends StatelessWidget {
 
               if (premiumAndTrial.isPremium || premiumAndTrial.isTrial) {
                 Navigator.of(context).push(
-                  HistoricalPillSheetGroupPageRoute.route(),
+                  BeforePillSheetGroupHistoryPageRoute.route(),
                 );
               } else {
                 showPremiumIntroductionSheet(context);

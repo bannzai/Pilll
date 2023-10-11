@@ -20,8 +20,8 @@ import 'package:pilll/provider/root.dart';
 import 'package:pilll/provider/setting.dart';
 import 'package:pilll/utils/formatter/date_time_formatter.dart';
 
-class HistoricalPillSheetGroupPage extends HookConsumerWidget {
-  const HistoricalPillSheetGroupPage({super.key});
+class BeforePillSheetGroupHistoryPage extends HookConsumerWidget {
+  const BeforePillSheetGroupHistoryPage({super.key});
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {
@@ -163,11 +163,11 @@ class _Page extends HookConsumerWidget {
   }
 }
 
-extension HistoricalPillSheetGroupPageRoute on HistoricalPillSheetGroupPage {
+extension BeforePillSheetGroupHistoryPageRoute on BeforePillSheetGroupHistoryPage {
   static Route<dynamic> route() {
     return MaterialPageRoute(
-      settings: const RouteSettings(name: "HistoricalPillSheetGroupPage"),
-      builder: (_) => const HistoricalPillSheetGroupPage(),
+      settings: const RouteSettings(name: "BeforePillSheetGroupHistoryPage"),
+      builder: (_) => const BeforePillSheetGroupHistoryPage(),
     );
   }
 }
