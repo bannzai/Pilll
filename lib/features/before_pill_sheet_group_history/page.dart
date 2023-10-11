@@ -99,59 +99,61 @@ class _Page extends HookConsumerWidget {
         title: const Text("前回のピルシートグループ"),
         foregroundColor: TextColor.main,
       ),
-      body: Column(
-        mainAxisSize: MainAxisSize.max,
-        children: [
-          const SizedBox(height: 40),
-          Text(
-            "$begin ~ $end",
-            textAlign: TextAlign.center,
-            style: const TextStyle(fontFamily: FontFamily.japanese, fontSize: 17, fontWeight: FontWeight.w600, color: TextColor.main),
-          ),
-          const SizedBox(height: 20),
-          SizedBox(
-            height: PillSheetViewLayout.calcHeight(
-              PillSheetViewLayout.mostLargePillSheetType(pillSheetGroup.pillSheets.map((e) => e.pillSheetType).toList()).numberOfLineInPillSheet,
-              false,
+      body: SingleChildScrollView(
+        child: Column(
+          mainAxisSize: MainAxisSize.max,
+          children: [
+            const SizedBox(height: 40),
+            Text(
+              "$begin ~ $end",
+              textAlign: TextAlign.center,
+              style: const TextStyle(fontFamily: FontFamily.japanese, fontSize: 17, fontWeight: FontWeight.w600, color: TextColor.main),
             ),
-            child: PageView(
-              clipBehavior: Clip.none,
-              controller: pageController,
-              scrollDirection: Axis.horizontal,
-              children: [
-                for (final pillSheet in pillSheetGroup.pillSheets)
-                  Container(
-                    padding: const EdgeInsets.symmetric(horizontal: 10),
-                    child: HistoricalPillsheetGroupPagePillSheet(
-                      pillSheetGroup: pillSheetGroup,
-                      pillSheet: pillSheet,
-                      setting: setting,
+            const SizedBox(height: 20),
+            SizedBox(
+              height: PillSheetViewLayout.calcHeight(
+                PillSheetViewLayout.mostLargePillSheetType(pillSheetGroup.pillSheets.map((e) => e.pillSheetType).toList()).numberOfLineInPillSheet,
+                false,
+              ),
+              child: PageView(
+                clipBehavior: Clip.none,
+                controller: pageController,
+                scrollDirection: Axis.horizontal,
+                children: [
+                  for (final pillSheet in pillSheetGroup.pillSheets)
+                    Container(
+                      padding: const EdgeInsets.symmetric(horizontal: 10),
+                      child: HistoricalPillsheetGroupPagePillSheet(
+                        pillSheetGroup: pillSheetGroup,
+                        pillSheet: pillSheet,
+                        setting: setting,
+                      ),
                     ),
-                  ),
-              ],
+                ],
+              ),
             ),
-          ),
-          if (pillSheetGroup.pillSheets.length > 1) ...[
-            const SizedBox(height: 16),
-            DotsIndicator(
-              controller: pageController,
-              itemCount: pillSheetGroup.pillSheets.length,
-              onDotTapped: (page) {
-                pageController.animateToPage(
-                  page,
-                  duration: const Duration(milliseconds: 300),
-                  curve: Curves.easeInOut,
-                );
-              },
+            if (pillSheetGroup.pillSheets.length > 1) ...[
+              const SizedBox(height: 16),
+              DotsIndicator(
+                controller: pageController,
+                itemCount: pillSheetGroup.pillSheets.length,
+                onDotTapped: (page) {
+                  pageController.animateToPage(
+                    page,
+                    duration: const Duration(milliseconds: 300),
+                    curve: Curves.easeInOut,
+                  );
+                },
+              ),
+            ],
+            Padding(
+              padding: const EdgeInsets.only(left: 24, right: 24),
+              child: BeforePillSheetGroupHistoryPagePillSheetModifiedHistoryList(
+                pillSheet: currentPillSheet.value,
+              ),
             ),
           ],
-          Padding(
-            padding: const EdgeInsets.only(left: 24, right: 24),
-            child: BeforePillSheetGroupHistoryPagePillSheetModifiedHistoryList(
-              pillSheet: currentPillSheet.value,
-            ),
-          ),
-        ],
+        ),
       ),
     );
   }
