@@ -1,4 +1,6 @@
 import 'package:pilll/features/historical_pill_sheet_group/page.dart';
+import 'package:pilll/features/premium_introduction/premium_introduction_sheet.dart';
+import 'package:pilll/provider/premium_and_trial.codegen.dart';
 import 'package:pilll/utils/analytics.dart';
 import 'package:pilll/components/atoms/color.dart';
 import 'package:pilll/components/atoms/font.dart';
@@ -18,11 +20,13 @@ class RecordPageInformationHeader extends StatelessWidget {
   final DateTime today;
   final PillSheetGroup? pillSheetGroup;
   final Setting setting;
+  final PremiumAndTrial premiumAndTrial;
   const RecordPageInformationHeader({
     Key? key,
     required this.today,
     required this.pillSheetGroup,
     required this.setting,
+    required this.premiumAndTrial,
   }) : super(key: key);
 
   String _formattedToday() => DateTimeFormatter.monthAndDay(today);
@@ -79,9 +83,14 @@ class RecordPageInformationHeader extends StatelessWidget {
             icon: const Icon(Icons.history, color: PilllColors.primary),
             onPressed: () {
               analytics.logEvent(name: "tapped_record_information_header_history");
-              Navigator.of(context).push(
-                HistoricalPillSheetGroupPageRoute.route(),
-              );
+
+              if (premiumAndTrial.isPremium || premiumAndTrial.isTrial) {
+                Navigator.of(context).push(
+                  HistoricalPillSheetGroupPageRoute.route(),
+                );
+              } else {
+                showPremiumIntroductionSheet(context);
+              }
             },
             color: Colors.black,
           ),

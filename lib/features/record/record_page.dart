@@ -136,6 +136,7 @@ class RecordPageBody extends HookConsumerWidget {
           today: DateTime.now(),
           pillSheetGroup: pillSheetGroup,
           setting: setting,
+          premiumAndTrial: premiumAndTrial,
         ),
       ),
       body: Column(
