@@ -9,8 +9,6 @@ import 'package:pilll/components/molecules/indicator.dart';
 import 'package:pilll/components/organisms/pill_sheet/pill_sheet_view_layout.dart';
 import 'package:pilll/features/error/universal_error_page.dart';
 import 'package:pilll/features/before_pill_sheet_group_history/component/pill_sheet.dart';
-import 'package:pilll/entity/pill_sheet.codegen.dart';
-import 'package:pilll/entity/pill_sheet_group.codegen.dart';
 import 'package:pilll/entity/pill_sheet_type.dart';
 import 'package:pilll/entity/setting.codegen.dart';
 import 'package:flutter/material.dart';
@@ -32,7 +30,6 @@ class BeforePillSheetGroupHistoryPage extends HookConsumerWidget {
       data: (data) {
         return _Page(
           pillSheetGroup: data.t1,
-          activePillSheet: data.t1?.activePillSheet,
           setting: data.t2,
         );
       },
@@ -48,21 +45,18 @@ class BeforePillSheetGroupHistoryPage extends HookConsumerWidget {
 
 class _Page extends HookConsumerWidget {
   final PillSheetGroup? pillSheetGroup;
-  final PillSheet? activePillSheet;
   final Setting setting;
 
   const _Page({
     Key? key,
     required this.pillSheetGroup,
-    required this.activePillSheet,
     required this.setting,
   }) : super(key: key);
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {
     final pillSheetGroup = this.pillSheetGroup;
-    final activePillSheet = this.activePillSheet;
-    if (pillSheetGroup == null || activePillSheet == null) {
+    if (pillSheetGroup == null) {
       return Scaffold(
         backgroundColor: PilllColors.background,
         appBar: AppBar(
@@ -79,9 +73,8 @@ class _Page extends HookConsumerWidget {
       );
     }
 
-    final currentPillSheet = useState(activePillSheet);
-    final pageController = usePageController(
-        initialPage: activePillSheet.groupIndex, viewportFraction: (PillSheetViewLayout.width + 20) / MediaQuery.of(context).size.width);
+    final currentPillSheet = useState(pillSheetGroup.pillSheets[0]);
+    final pageController = usePageController(initialPage: 0, viewportFraction: (PillSheetViewLayout.width + 20) / MediaQuery.of(context).size.width);
     pageController.addListener(() {
       final page = pageController.page?.toInt();
       if (page == null) {
