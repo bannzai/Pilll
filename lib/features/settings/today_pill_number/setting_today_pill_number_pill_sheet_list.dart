@@ -10,14 +10,12 @@ import 'package:pilll/entity/setting.codegen.dart';
 
 class SettingTodayPillNumberPillSheetList extends HookConsumerWidget {
   final List<PillSheetType> pillSheetTypes;
-  final PillSheetAppearanceMode appearanceMode;
   final int? Function(int pageIndex) selectedTodayPillNumberIntoPillSheet;
   final Function(int pageIndex, int pillNumberInPillSheet) markSelected;
 
   const SettingTodayPillNumberPillSheetList({
     Key? key,
     required this.pillSheetTypes,
-    required this.appearanceMode,
     required this.selectedTodayPillNumberIntoPillSheet,
     required this.markSelected,
   }) : super(key: key);
@@ -44,7 +42,11 @@ class SettingTodayPillNumberPillSheetList extends HookConsumerWidget {
                     padding: const EdgeInsets.symmetric(horizontal: 10),
                     child: SettingPillSheetView(
                       pageIndex: pageIndex,
-                      appearanceMode: appearanceMode,
+                      // SettingPillSheetView では displayNumberSetting を考慮してない
+                      // 理由はPillSheetを引数とする新しい設定用のPillSheetView を作る必要があるから
+                      // これはコストに見合うかわからないため、.numberで固定している
+                      // 設定で TodayPillNumber だけPillSheetに依存しており、そのためにコードを書くのはコスト高だと思いやめた
+                      appearanceMode: PillSheetAppearanceMode.number,
                       pillSheetTypes: pillSheetTypes,
                       selectedPillNumberIntoPillSheet: selectedTodayPillNumberIntoPillSheet(pageIndex),
                       markSelected: (pageIndex, number) {
