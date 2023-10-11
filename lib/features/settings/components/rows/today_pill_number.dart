@@ -38,6 +38,7 @@ class TodayPllNumberRow extends HookConsumerWidget {
     );
     Navigator.of(context).push(
       SettingTodayPillNumberPageRoute.route(
+        setting: setting,
         pillSheetGroup: pillSheetGroup,
         activePillSheet: activePillSheet,
       ),
