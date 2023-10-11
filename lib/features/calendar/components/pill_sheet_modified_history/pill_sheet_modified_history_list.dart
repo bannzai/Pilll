@@ -27,26 +27,18 @@ class PillSheetModifiedHistoryListModel {
 }
 
 class PillSheetModifiedHistoryList extends HookConsumerWidget {
-  final EdgeInsets? padding;
-  final ScrollPhysics scrollPhysics;
   final List<PillSheetModifiedHistory> pillSheetModifiedHistories;
   final bool premiumOrTrial;
 
   const PillSheetModifiedHistoryList({
     Key? key,
-    required this.padding,
-    required this.scrollPhysics,
     required this.pillSheetModifiedHistories,
     required this.premiumOrTrial,
   }) : super(key: key);
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {
-    return ListView(
-      padding: padding,
-      shrinkWrap: true,
-      physics: scrollPhysics,
-      scrollDirection: Axis.vertical,
+    return Column(
       children: _summarizedForEachMonth.map((model) => _monthlyHeaderAndRelativedHistories(ref, model)).expand((element) => element).toList(),
     );
   }

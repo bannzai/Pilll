@@ -19,11 +19,12 @@ class BeforePillSheetGroupHistoryPagePillSheetModifiedHistoryList extends HookCo
 
     return ref.watch(pillSheetModifiedHistoriesWithRangeProvider(begin: begin, end: end)).when(
           data: (pillSheetModifiedHistories) {
-            return PillSheetModifiedHistoryList(
-              scrollPhysics: const NeverScrollableScrollPhysics(),
-              pillSheetModifiedHistories: pillSheetModifiedHistories,
-              padding: null,
-              premiumOrTrial: true,
+            return SingleChildScrollView(
+              physics: const NeverScrollableScrollPhysics(),
+              child: PillSheetModifiedHistoryList(
+                pillSheetModifiedHistories: pillSheetModifiedHistories,
+                premiumOrTrial: true,
+              ),
             );
           },
           loading: () => const Indicator(),

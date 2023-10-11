@@ -85,11 +85,12 @@ class CalendarPillSheetModifiedHistoryCard extends StatelessWidget {
             ...() {
               if (premiumAndTrial.isPremium || premiumAndTrial.isTrial) {
                 return [
-                  PillSheetModifiedHistoryList(
-                    padding: null,
-                    scrollPhysics: const NeverScrollableScrollPhysics(),
-                    pillSheetModifiedHistories: histories,
-                    premiumOrTrial: premiumAndTrial.premiumOrTrial,
+                  SingleChildScrollView(
+                    physics: const NeverScrollableScrollPhysics(),
+                    child: PillSheetModifiedHistoryList(
+                      pillSheetModifiedHistories: histories,
+                      premiumOrTrial: premiumAndTrial.premiumOrTrial,
+                    ),
                   ),
                   if (histories.length > CalendarPillSheetModifiedHistoryCardState.pillSheetModifiedHistoriesThreshold)
                     PillSheetModifiedHistoryMoreButton(premiumAndTrial: premiumAndTrial),
@@ -98,11 +99,12 @@ class CalendarPillSheetModifiedHistoryCard extends StatelessWidget {
                 return [
                   Stack(
                     children: [
-                      PillSheetModifiedHistoryList(
-                        padding: null,
-                        scrollPhysics: const NeverScrollableScrollPhysics(),
-                        pillSheetModifiedHistories: histories,
-                        premiumOrTrial: premiumAndTrial.premiumOrTrial,
+                      SingleChildScrollView(
+                        physics: const NeverScrollableScrollPhysics(),
+                        child: PillSheetModifiedHistoryList(
+                          pillSheetModifiedHistories: histories,
+                          premiumOrTrial: premiumAndTrial.premiumOrTrial,
+                        ),
                       ),
                       Positioned.fill(
                         child: ClipRect(
