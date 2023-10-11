@@ -39,6 +39,7 @@ class PillSheetModifiedHistoryList extends HookConsumerWidget {
   @override
   Widget build(BuildContext context, WidgetRef ref) {
     return Column(
+      crossAxisAlignment: CrossAxisAlignment.start,
       children: _summarizedForEachMonth.map((model) => _monthlyHeaderAndRelativedHistories(ref, model)).expand((element) => element).toList(),
     );
   }
