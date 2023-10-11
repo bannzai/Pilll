@@ -23,28 +23,27 @@ class Menstruation with _$Menstruation {
 
   @JsonSerializable(explicitToJson: true)
   const factory Menstruation({
-    @JsonKey(includeIfNull: false, toJson: toNull)
-        String? id,
+    @JsonKey(includeIfNull: false) String? id,
     @JsonKey(
       fromJson: NonNullTimestampConverter.timestampToDateTime,
       toJson: NonNullTimestampConverter.dateTimeToTimestamp,
     )
-        required DateTime beginDate,
+    required DateTime beginDate,
     @JsonKey(
       fromJson: NonNullTimestampConverter.timestampToDateTime,
       toJson: NonNullTimestampConverter.dateTimeToTimestamp,
     )
-        required DateTime endDate,
+    required DateTime endDate,
     @JsonKey(
       fromJson: TimestampConverter.timestampToDateTime,
       toJson: TimestampConverter.dateTimeToTimestamp,
     )
-        DateTime? deletedAt,
+    DateTime? deletedAt,
     @JsonKey(
       fromJson: NonNullTimestampConverter.timestampToDateTime,
       toJson: NonNullTimestampConverter.dateTimeToTimestamp,
     )
-        required DateTime createdAt,
+    required DateTime createdAt,
     String? healthKitSampleDataUUID,
   }) = _Menstruation;
 

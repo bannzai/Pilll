@@ -29,7 +29,7 @@ Map<String, dynamic> _$$_MenstruationToJson(_$_Menstruation instance) {
     }
   }
 
-  writeNotNull('id', toNull(instance.id));
+  writeNotNull('id', instance.id);
   val['beginDate'] =
       NonNullTimestampConverter.dateTimeToTimestamp(instance.beginDate);
   val['endDate'] =

@@ -20,7 +20,7 @@ Schedule _$ScheduleFromJson(Map<String, dynamic> json) {
 
 /// @nodoc
 mixin _$Schedule {
-  @JsonKey(includeIfNull: false, toJson: toNull)
+  @JsonKey(includeIfNull: false)
   String? get id => throw _privateConstructorUsedError;
   String get title => throw _privateConstructorUsedError;
   @JsonKey(
@@ -46,7 +46,7 @@ abstract class $ScheduleCopyWith<$Res> {
       _$ScheduleCopyWithImpl<$Res, Schedule>;
   @useResult
   $Res call(
-      {@JsonKey(includeIfNull: false, toJson: toNull) String? id,
+      {@JsonKey(includeIfNull: false) String? id,
       String title,
       @JsonKey(
           fromJson: NonNullTimestampConverter.timestampToDateTime,
@@ -125,7 +125,7 @@ abstract class _$$_ScheduleCopyWith<$Res> implements $ScheduleCopyWith<$Res> {
   @override
   @useResult
   $Res call(
-      {@JsonKey(includeIfNull: false, toJson: toNull) String? id,
+      {@JsonKey(includeIfNull: false) String? id,
       String title,
       @JsonKey(
           fromJson: NonNullTimestampConverter.timestampToDateTime,
@@ -188,7 +188,7 @@ class __$$_ScheduleCopyWithImpl<$Res>
 @JsonSerializable(explicitToJson: true)
 class _$_Schedule extends _Schedule {
   const _$_Schedule(
-      {@JsonKey(includeIfNull: false, toJson: toNull) this.id,
+      {@JsonKey(includeIfNull: false) this.id,
       required this.title,
       @JsonKey(
           fromJson: NonNullTimestampConverter.timestampToDateTime,
@@ -205,7 +205,7 @@ class _$_Schedule extends _Schedule {
       _$$_ScheduleFromJson(json);
 
   @override
-  @JsonKey(includeIfNull: false, toJson: toNull)
+  @JsonKey(includeIfNull: false)
   final String? id;
   @override
   final String title;
@@ -262,7 +262,7 @@ class _$_Schedule extends _Schedule {
 
 abstract class _Schedule extends Schedule {
   const factory _Schedule(
-      {@JsonKey(includeIfNull: false, toJson: toNull) final String? id,
+      {@JsonKey(includeIfNull: false) final String? id,
       required final String title,
       @JsonKey(
           fromJson: NonNullTimestampConverter.timestampToDateTime,
@@ -278,7 +278,7 @@ abstract class _Schedule extends Schedule {
   factory _Schedule.fromJson(Map<String, dynamic> json) = _$_Schedule.fromJson;
 
   @override
-  @JsonKey(includeIfNull: false, toJson: toNull)
+  @JsonKey(includeIfNull: false)
   String? get id;
   @override
   String get title;
