@@ -58,13 +58,16 @@ Stream<List<PillSheetModifiedHistory>> pillSheetModifiedHistoriesWithLimit(PillS
 }
 
 // 頻繁に切り替わることも予想されるので、keepAliveをtrueにしている
-// 
 @Riverpod(keepAlive: true, dependencies: [database])
 Stream<List<PillSheetModifiedHistory>> pillSheetModifiedHistoriesWithRange(
   PillSheetModifiedHistoriesWithRangeRef ref, {
   required DateTime begin,
   required DateTime end,
 }) {
+  // TODO: [PillSheetModifiedHistory-V2] 2024-05-01
+  // ピルシートグループIDを用いてフィルタリングできるようになるので、一つ前のピルシートグループの履歴を表示する機能を解放する
+  // PillSheetModifiedHistoryFirestoreKeys.afterPillSheetGroupID を使用してDBから取得する
+  // PillSheetModifiedHistoryFirestoreKeys.estimatedEventCausingDate での並び替えはインデックスを貼るのは面倒なのでインメモリでsortすれば良いと考えている
   return ref
       .watch(databaseProvider)
       .pillSheetModifiedHistoriesReference()

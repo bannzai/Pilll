@@ -13,7 +13,9 @@ part 'pill_sheet_modified_history.codegen.freezed.dart';
 
 class PillSheetModifiedHistoryFirestoreKeys {
   static const estimatedEventCausingDate = "estimatedEventCausingDate";
-  static const afterPillSheetGroupID = "afterPillSheetGroup.id";
+  // TODO: [PillSheetModifiedHistory-V2] 2024-05-01
+  // afterPillSheetGroup.idを用いて(null以外がセットされているので)フィルタリングできるようになるので、一つ前のピルシートグループの履歴を表示する機能を解放する
+  // static const afterPillSheetGroupID = "afterPillSheetGroup.id";
   static const archivedDateTime = "archivedDateTime";
 }
 
