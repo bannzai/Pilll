@@ -3,12 +3,11 @@ import 'dart:io';
 import 'package:async_value_group/async_value_group.dart';
 import 'package:flutter_hooks/flutter_hooks.dart';
 import 'package:pilll/entity/user.codegen.dart';
+import 'package:pilll/features/settings/components/rows/debug_row.dart';
 import 'package:pilll/provider/user.dart';
 import 'package:pilll/utils/analytics.dart';
-import 'package:pilll/components/atoms/button.dart';
 import 'package:pilll/components/atoms/font.dart';
 import 'package:pilll/components/molecules/indicator.dart';
-import 'package:pilll/components/page/discard_dialog.dart';
 import 'package:pilll/features/settings/components/rows/creating_new_pillsheet.dart';
 import 'package:pilll/features/settings/components/rows/health_care.dart';
 import 'package:pilll/features/settings/components/rows/menstruation.dart';
@@ -114,289 +113,227 @@ class SettingPageBody extends StatelessWidget {
         title: const Text('設定', style: TextStyle(color: TextColor.main)),
         backgroundColor: PilllColors.white,
       ),
-      body: ListView.builder(
-        itemBuilder: (BuildContext context, int index) {
-          return HookBuilder(
-            builder: (BuildContext context) {
-              final section = SettingSection.values[index];
-              switch (section) {
-                case SettingSection.account:
-                  return SettingSectionTitle(
-                    text: "アカウント",
-                    children: [
-                      const ListExplainRow(text: "機種変更やスマホ紛失時など、データの引き継ぎ・復元には、アカウント登録が必要です。"),
-                      const AccountLinkRow(),
-                      _separator(),
-                    ],
-                  );
-                case SettingSection.premium:
-                  return SettingSectionTitle(
-                    text: "Pilllプレミアム",
-                    children: [
-                      if (premiumAndTrial.isTrial) ...[
-                        ListTile(
-                          title: const Text("機能無制限の期間について",
-                              style: TextStyle(
-                                fontFamily: FontFamily.roboto,
-                                fontWeight: FontWeight.w300,
-                                fontSize: 16,
-                              )),
-                          onTap: () {
-                            analytics.logEvent(name: "did_select_about_trial", parameters: {});
-                            launchUrl(Uri.parse("https://pilll.wraptas.site/3abd690f501549c48f813fd310b5f242"), mode: LaunchMode.inAppWebView);
-                          },
+      body: Padding(
+        padding: const EdgeInsets.only(bottom: 20),
+        child: ListView.builder(
+          itemBuilder: (BuildContext context, int index) {
+            return HookBuilder(
+              builder: (BuildContext context) {
+                final section = SettingSection.values[index];
+                switch (section) {
+                  case SettingSection.account:
+                    return SettingSectionTitle(
+                      text: "アカウント",
+                      children: [
+                        const ListExplainRow(text: "機種変更やスマホ紛失時など、データの引き継ぎ・復元には、アカウント登録が必要です。"),
+                        const AccountLinkRow(),
+                        _separator(),
+                      ],
+                    );
+                  case SettingSection.premium:
+                    return SettingSectionTitle(
+                      text: "Pilllプレミアム",
+                      children: [
+                        if (premiumAndTrial.isTrial) ...[
+                          ListTile(
+                            title: const Text("機能無制限の期間について",
+                                style: TextStyle(
+                                  fontFamily: FontFamily.roboto,
+                                  fontWeight: FontWeight.w300,
+                                  fontSize: 16,
+                                )),
+                            onTap: () {
+                              analytics.logEvent(name: "did_select_about_trial", parameters: {});
+                              launchUrl(Uri.parse("https://pilll.wraptas.site/3abd690f501549c48f813fd310b5f242"), mode: LaunchMode.inAppWebView);
+                            },
+                          ),
+                          _separator(),
+                        ],
+                        PremiumIntroductionRow(
+                          isPremium: premiumAndTrial.isPremium,
+                          trialDeadlineDate: premiumAndTrial.trialDeadlineDate,
                         ),
                         _separator(),
+                        if (premiumAndTrial.isPremium) ...[
+                          const AboutChurn(),
+                          _separator(),
+                        ],
                       ],
-                      PremiumIntroductionRow(
-                        isPremium: premiumAndTrial.isPremium,
-                        trialDeadlineDate: premiumAndTrial.trialDeadlineDate,
-                      ),
-                      _separator(),
-                      if (premiumAndTrial.isPremium) ...[
-                        const AboutChurn(),
-                        _separator(),
-                      ],
-                    ],
-                  );
-                case SettingSection.pill:
-                  return SettingSectionTitle(
-                    text: "ピルシート",
-                    children: [
-                      if (activePillSheet != null && pillSheetGroup != null && !pillSheetGroup.isDeactived) ...[
-                        TodayPllNumberRow(
+                    );
+                  case SettingSection.pill:
+                    return SettingSectionTitle(
+                      text: "ピルシート",
+                      children: [
+                        if (activePillSheet != null && pillSheetGroup != null && !pillSheetGroup.isDeactived) ...[
+                          TodayPllNumberRow(
+                            setting: setting,
+                            pillSheetGroup: pillSheetGroup,
+                            activePillSheet: activePillSheet,
+                          ),
+                          _separator(),
+                          PillSheetRemoveRow(
+                            latestPillSheetGroup: pillSheetGroup,
+                            activePillSheet: activePillSheet,
+                          ),
+                          _separator(),
+                        ],
+                        CreatingNewPillSheetRow(
                           setting: setting,
-                          pillSheetGroup: pillSheetGroup,
-                          activePillSheet: activePillSheet,
-                        ),
-                        _separator(),
-                        PillSheetRemoveRow(
-                          latestPillSheetGroup: pillSheetGroup,
-                          activePillSheet: activePillSheet,
-                        ),
-                        _separator(),
-                      ],
-                      CreatingNewPillSheetRow(
-                        setting: setting,
-                        isPremium: premiumAndTrial.isPremium,
-                        isTrial: premiumAndTrial.isTrial,
-                        trialDeadlineDate: premiumAndTrial.trialDeadlineDate,
-                      ),
-                      _separator(),
-                    ],
-                  );
-                case SettingSection.notification:
-                  return SettingSectionTitle(
-                    text: "通知",
-                    children: [
-                      ToggleLocalNotification(user: user),
-                      _separator(),
-                      ToggleReminderNotification(setting: setting),
-                      _separator(),
-                      NotificationTimeRow(setting: setting),
-                      _separator(),
-                      if (activePillSheet != null && activePillSheet.pillSheetHasRestOrFakeDuration) ...[
-                        NotificationInRestDuration(setting: setting, pillSheet: activePillSheet),
-                        _separator(),
-                      ],
-                      if (!premiumAndTrial.isPremium) ...[
-                        QuickRecordRow(
+                          isPremium: premiumAndTrial.isPremium,
                           isTrial: premiumAndTrial.isTrial,
                           trialDeadlineDate: premiumAndTrial.trialDeadlineDate,
                         ),
                         _separator(),
                       ],
-                      ReminderNotificationCustomizeWord(
-                        setting: setting,
-                        isTrial: premiumAndTrial.isTrial,
-                        isPremium: premiumAndTrial.isPremium,
-                        trialDeadlineDate: premiumAndTrial.trialDeadlineDate,
-                      ),
-                      _separator(),
-                    ],
-                  );
-                case SettingSection.menstruation:
-                  return SettingSectionTitle(
-                    text: "生理",
-                    children: [
-                      MenstruationRow(setting),
-                      _separator(),
-                      if (Platform.isIOS && isHealthDataAvailable) ...[
-                        HealthCareRow(
+                    );
+                  case SettingSection.notification:
+                    return SettingSectionTitle(
+                      text: "通知",
+                      children: [
+                        ToggleLocalNotification(user: user),
+                        _separator(),
+                        ToggleReminderNotification(setting: setting),
+                        _separator(),
+                        NotificationTimeRow(setting: setting),
+                        _separator(),
+                        if (activePillSheet != null && activePillSheet.pillSheetHasRestOrFakeDuration) ...[
+                          NotificationInRestDuration(setting: setting, pillSheet: activePillSheet),
+                          _separator(),
+                        ],
+                        if (!premiumAndTrial.isPremium) ...[
+                          QuickRecordRow(
+                            isTrial: premiumAndTrial.isTrial,
+                            trialDeadlineDate: premiumAndTrial.trialDeadlineDate,
+                          ),
+                          _separator(),
+                        ],
+                        ReminderNotificationCustomizeWord(
+                          setting: setting,
+                          isTrial: premiumAndTrial.isTrial,
+                          isPremium: premiumAndTrial.isPremium,
                           trialDeadlineDate: premiumAndTrial.trialDeadlineDate,
                         ),
                         _separator(),
-                      ]
-                    ],
-                  );
-                case SettingSection.other:
-                  return SettingSectionTitle(
-                    text: "その他",
-                    children: [
-                      if (userIsUpdatedFrom132) ...[
-                        const UpdateFrom132Row(),
-                        _separator(),
                       ],
-                      ListTile(
-                          title: const Text("友達に教える",
-                              style: TextStyle(
-                                fontFamily: FontFamily.roboto,
-                                fontWeight: FontWeight.w300,
-                                fontSize: 16,
-                              )),
-                          onTap: () async {
-                            analytics.logEvent(name: "tap_share_to_friend", parameters: {});
-                            const text = '''
-Pilll ピル服用に特化したピルリマインダーアプリ
+                    );
+                  case SettingSection.menstruation:
+                    return SettingSectionTitle(
+                      text: "生理",
+                      children: [
+                        MenstruationRow(setting),
+                        _separator(),
+                        if (Platform.isIOS && isHealthDataAvailable) ...[
+                          HealthCareRow(
+                            trialDeadlineDate: premiumAndTrial.trialDeadlineDate,
+                          ),
+                          _separator(),
+                        ]
+                      ],
+                    );
 
-iOS: https://onl.sc/piiY1A6
-Android: https://onl.sc/c9xnQUk''';
-                            Clipboard.setData(const ClipboardData(text: text));
-                            ScaffoldMessenger.of(context).showSnackBar(
-                              const SnackBar(
-                                duration: Duration(seconds: 2),
-                                content: Text("クリップボードにリンクをコピーしました"),
-                              ),
-                            );
-                          }),
-                      _separator(),
-                      ListTile(
-                          title: const Text("利用規約",
-                              style: TextStyle(
-                                fontFamily: FontFamily.roboto,
-                                fontWeight: FontWeight.w300,
-                                fontSize: 16,
-                              )),
-                          onTap: () {
-                            analytics.logEvent(name: "did_select_terms", parameters: {});
-                            launchUrl(Uri.parse("https://bannzai.github.io/Pilll/Terms"), mode: LaunchMode.inAppWebView);
-                          }),
-                      _separator(),
-                      ListTile(
-                          title: const Text("プライバシーポリシー",
-                              style: TextStyle(
-                                fontFamily: FontFamily.roboto,
-                                fontWeight: FontWeight.w300,
-                                fontSize: 16,
-                              )),
-                          onTap: () {
-                            analytics.logEvent(name: "did_select_privacy_policy", parameters: {});
-                            launchUrl(Uri.parse("https://bannzai.github.io/Pilll/PrivacyPolicy"), mode: LaunchMode.inAppWebView);
-                          }),
-                      _separator(),
-                      ListTile(
-                          title: const Text("FAQ",
-                              style: TextStyle(
-                                fontFamily: FontFamily.roboto,
-                                fontWeight: FontWeight.w300,
-                                fontSize: 16,
-                              )),
-                          onTap: () {
-                            analytics.logEvent(name: "did_select_faq", parameters: {});
-                            launchUrl(Uri.parse("https://pilll.wraptas.site/bb1f49eeded64b57929b7a13e9224d69"), mode: LaunchMode.inAppWebView);
-                          }),
-                      _separator(),
-                      ListTile(
-                          title: const Text("新機能紹介",
-                              style: TextStyle(
-                                fontFamily: FontFamily.roboto,
-                                fontWeight: FontWeight.w300,
-                                fontSize: 16,
-                              )),
-                          onTap: () {
-                            analytics.logEvent(name: "setting_did_select_release_note", parameters: {});
-                            launchUrl(Uri.parse("https://pilll.wraptas.site/172cae6bced04bbabeab1d8acad91a61"));
-                          }),
-                      _separator(),
-                      ListTile(
-                          title: const Text("お問い合わせ",
-                              style: TextStyle(
-                                fontFamily: FontFamily.roboto,
-                                fontWeight: FontWeight.w300,
-                                fontSize: 16,
-                              )),
-                          onTap: () {
-                            analytics.logEvent(name: "did_select_inquiry", parameters: {});
-                            inquiry();
-                          }),
-                      _separator(),
-                      if (Environment.isDevelopment) _debug(context),
-                    ],
-                  );
-              }
-            },
-          );
-        },
-        itemCount: SettingSection.values.length,
-        addRepaintBoundaries: false,
-      ),
-    );
-  }
-
-  Widget _debug(BuildContext context) {
-    if (Environment.isProduction) {
-      return Container();
-    }
-    return Padding(
-      padding: const EdgeInsets.only(left: 10, right: 10, bottom: 20, top: 20),
-      child: GestureDetector(
-        child: const Center(child: Text("COPY DEBUG INFO", style: TextStyle(color: TextColor.primary))),
-        onTap: () async {
-          Clipboard.setData(ClipboardData(text: await debugInfo("\n")));
-        },
-        onDoubleTap: () {
-          final signOut = Environment.signOutUser;
-          if (signOut == null) {
-            return;
-          }
-          showDiscardDialog(context, title: "サインアウトします", message: '''
-これは開発用のオプションです。サインアウトあとはアプリを再起動してお試しください。初期設定から始まります
-''', actions: [
-            AlertButton(
-              text: "キャンセル",
-              onPressed: () async {
-                Navigator.of(context).pop();
+                  case SettingSection.other:
+                    return SettingSectionTitle(
+                      text: "その他",
+                      children: [
+                        if (userIsUpdatedFrom132) ...[
+                          const UpdateFrom132Row(),
+                          _separator(),
+                        ],
+                        ListTile(
+                            title: const Text("友達に教える",
+                                style: TextStyle(
+                                  fontFamily: FontFamily.roboto,
+                                  fontWeight: FontWeight.w300,
+                                  fontSize: 16,
+                                )),
+                            onTap: () async {
+                              analytics.logEvent(name: "tap_share_to_friend", parameters: {});
+                              const text = '''
+      Pilll ピル服用に特化したピルリマインダーアプリ
+      
+      iOS: https://onl.sc/piiY1A6
+      Android: https://onl.sc/c9xnQUk''';
+                              Clipboard.setData(const ClipboardData(text: text));
+                              ScaffoldMessenger.of(context).showSnackBar(
+                                const SnackBar(
+                                  duration: Duration(seconds: 2),
+                                  content: Text("クリップボードにリンクをコピーしました"),
+                                ),
+                              );
+                            }),
+                        _separator(),
+                        ListTile(
+                            title: const Text("利用規約",
+                                style: TextStyle(
+                                  fontFamily: FontFamily.roboto,
+                                  fontWeight: FontWeight.w300,
+                                  fontSize: 16,
+                                )),
+                            onTap: () {
+                              analytics.logEvent(name: "did_select_terms", parameters: {});
+                              launchUrl(Uri.parse("https://bannzai.github.io/Pilll/Terms"), mode: LaunchMode.inAppWebView);
+                            }),
+                        _separator(),
+                        ListTile(
+                            title: const Text("プライバシーポリシー",
+                                style: TextStyle(
+                                  fontFamily: FontFamily.roboto,
+                                  fontWeight: FontWeight.w300,
+                                  fontSize: 16,
+                                )),
+                            onTap: () {
+                              analytics.logEvent(name: "did_select_privacy_policy", parameters: {});
+                              launchUrl(Uri.parse("https://bannzai.github.io/Pilll/PrivacyPolicy"), mode: LaunchMode.inAppWebView);
+                            }),
+                        _separator(),
+                        ListTile(
+                            title: const Text("FAQ",
+                                style: TextStyle(
+                                  fontFamily: FontFamily.roboto,
+                                  fontWeight: FontWeight.w300,
+                                  fontSize: 16,
+                                )),
+                            onTap: () {
+                              analytics.logEvent(name: "did_select_faq", parameters: {});
+                              launchUrl(Uri.parse("https://pilll.wraptas.site/bb1f49eeded64b57929b7a13e9224d69"), mode: LaunchMode.inAppWebView);
+                            }),
+                        _separator(),
+                        ListTile(
+                            title: const Text("新機能紹介",
+                                style: TextStyle(
+                                  fontFamily: FontFamily.roboto,
+                                  fontWeight: FontWeight.w300,
+                                  fontSize: 16,
+                                )),
+                            onTap: () {
+                              analytics.logEvent(name: "setting_did_select_release_note", parameters: {});
+                              launchUrl(Uri.parse("https://pilll.wraptas.site/172cae6bced04bbabeab1d8acad91a61"));
+                            }),
+                        _separator(),
+                        ListTile(
+                            title: const Text("お問い合わせ",
+                                style: TextStyle(
+                                  fontFamily: FontFamily.roboto,
+                                  fontWeight: FontWeight.w300,
+                                  fontSize: 16,
+                                )),
+                            onTap: () {
+                              analytics.logEvent(name: "did_select_inquiry", parameters: {});
+                              inquiry();
+                            }),
+                        if (Environment.isDevelopment) ...[
+                          _separator(),
+                          DebugRow(),
+                        ],
+                      ],
+                    );
+                }
               },
-            ),
-            AlertButton(
-              text: "サインアウト",
-              onPressed: () async {
-                final navigator = Navigator.of(context);
-                await signOut();
-                navigator.pop();
-              },
-            ),
-          ]);
-        },
-        onLongPress: () {
-          final deleteUser = Environment.deleteUser;
-          if (deleteUser == null) {
-            return;
-          }
-          showDiscardDialog(
-            context,
-            title: "ユーザーを削除します",
-            message: '''
-これは開発用のオプションです。ユーザーを削除したあとはアプリを再起動してからやり直してください。初期設定から始まります
-''',
-            actions: [
-              AlertButton(
-                text: "キャンセル",
-                onPressed: () async {
-                  Navigator.of(context).pop();
-                },
-              ),
-              AlertButton(
-                text: "削除",
-                onPressed: () async {
-                  final navigator = Navigator.of(context);
-                  await deleteUser();
-                  navigator.pop();
-                },
-              ),
-            ],
-          );
-        },
+            );
+          },
+          itemCount: SettingSection.values.length,
+          addRepaintBoundaries: false,
+        ),
       ),
     );
   }
