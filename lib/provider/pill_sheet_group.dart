@@ -62,10 +62,19 @@ Stream<PillSheetGroup?> latestPillSheetGroup(LatestPillSheetGroupRef ref) {
 Future<PillSheetGroup?> beforePillSheetGroup(BeforePillSheetGroupRef ref) async {
   final database = ref.watch(databaseProvider);
   final snapshot = await database.pillSheetGroupsReference().orderBy(PillSheetGroupFirestoreKeys.createdAt).limitToLast(2).get();
-  if (snapshot.docs.length <= 1) {
+
+  if (snapshot.docs.isEmpty) {
     return null;
   }
-  return snapshot.docs[0].data();
+
+  // 前回のピルシートグループが存在する場合で、まだ今回のピルシートグループを作っていない状態が発生する
+  // なので、今回のピルシートグループが存在しないかどうかをチェックして、存在しない場合は前回のピルシートグループを返す
+  if (snapshot.docs.length == 1) {
+    return snapshot.docs.first.data();
+  }
+
+  // 前回のピルシートグループは今回のピルシートグループよりも前のindexにある
+  return snapshot.docs.first.data();
 }
 
 @Riverpod(dependencies: [database])
