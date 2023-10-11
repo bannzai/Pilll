@@ -76,7 +76,7 @@ class RecordPageInformationHeader extends StatelessWidget {
         Align(
           alignment: Alignment.topRight,
           child: IconButton(
-            icon: const Icon(Icons.history),
+            icon: const Icon(Icons.history, color: PilllColors.primary),
             onPressed: () {
               analytics.logEvent(name: "tapped_record_information_header_history");
               Navigator.of(context).push(
