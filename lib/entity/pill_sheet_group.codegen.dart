@@ -22,7 +22,7 @@ class PillSheetGroup with _$PillSheetGroup {
   const PillSheetGroup._();
   @JsonSerializable(explicitToJson: true)
   const factory PillSheetGroup({
-    @JsonKey(includeIfNull: false, toJson: toNull) String? id,
+    @JsonKey(includeIfNull: false) String? id,
     required List<String> pillSheetIDs,
     required List<PillSheet> pillSheets,
     @JsonKey(
