@@ -5,10 +5,10 @@ import 'package:pilll/entity/pill_sheet.codegen.dart';
 import 'package:pilll/features/calendar/components/pill_sheet_modified_history/pill_sheet_modified_history_list.dart';
 import 'package:pilll/provider/pill_sheet_modified_history.dart';
 
-class HistoricalPillSheetGroupPagePillSheetModifiedHistoryList extends HookConsumerWidget {
+class BeforePillSheetGroupHistoryPagePillSheetModifiedHistoryList extends HookConsumerWidget {
   final PillSheet pillSheet;
 
-  const HistoricalPillSheetGroupPagePillSheetModifiedHistoryList({
+  const BeforePillSheetGroupHistoryPagePillSheetModifiedHistoryList({
     super.key,
     required this.pillSheet,
   });

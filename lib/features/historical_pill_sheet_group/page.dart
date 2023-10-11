@@ -153,7 +153,7 @@ class _Page extends HookConsumerWidget {
           ],
           Padding(
             padding: const EdgeInsets.only(left: 24, right: 24),
-            child: HistoricalPillSheetGroupPagePillSheetModifiedHistoryList(
+            child: BeforePillSheetGroupHistoryPagePillSheetModifiedHistoryList(
               pillSheet: currentPillSheet.value,
             ),
           ),
