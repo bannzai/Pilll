@@ -73,8 +73,7 @@ Future<PillSheetGroup?> beforePillSheetGroup(BeforePillSheetGroupRef ref) async 
     return snapshot.docs.first.data();
   }
 
-  // 前回のピルシートグループは今回のピルシートグループよりも前のindexにある
-  return snapshot.docs.first.data();
+  return snapshot.docs.last.data();
 }
 
 @Riverpod(dependencies: [database])
