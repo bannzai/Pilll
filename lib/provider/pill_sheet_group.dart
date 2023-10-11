@@ -57,16 +57,13 @@ Stream<PillSheetGroup?> latestPillSheetGroup(LatestPillSheetGroupRef ref) {
   }).map(((event) => _filter(event)));
 }
 
-// 一つ前のピルシートグループを取得する。破棄されたピルシートグループは現在めないようにしているが含めるようにしても良い。インデックスを作成する必要があるので避けている
+// 一つ前のピルシートグループを取得する。破棄されたピルシートグループは現在含んでいるが含めないようにしても良い。インデックスを作成する必要があるので避けている
 @Riverpod(dependencies: [database])
 Future<PillSheetGroup?> beforePillSheetGroup(BeforePillSheetGroupRef ref) async {
   final database = ref.watch(databaseProvider);
   // 後述するwhereでdeletedAt is nullの場合の物を抽出する。とりあえず5件くらい取得すればどれかはdeletedAtはnullだろうと予想している
   // PillSheetGroupのidをDBに保存していなかったので、PillSheetModifiedHistory.afterPillSheetGroup.id指定でのDBからの取得ができなかった(入れ子になっている構造体のIDで取得できる可動かは要確認が必要。未確認)
-  // この時の問題点が続けてdeleteしたPillSheetGroupがあると日付がPillSheetModifiedHistoryを取得する際の日付指定が被ってしまい関係のないピルシートグループの履歴まで取得できてしまう点にある
-  // なので、致し方なくdeletedAt is nullの条件を追加して連続で削除しても履歴取得の際には日付が被らないようにしている。
   // TODO: [PillSheetModifiedHistory-V2] 2024-05-01 ここでの取得をPillSheetModifiedHistory.afterPillSheetGroup.id指定でのDBからの取得に変更する
-  // PillSheetGroupのidをDBに保存していなかったので、PillSheetModifiedHistory.afterPillSheetGroup.id指定でのDBからの取得ができなかった(入れ子になっている構造体のIDで取得できる可動かは要確認が必要。未確認)
   final snapshot = await database.pillSheetGroupsReference().orderBy(PillSheetGroupFirestoreKeys.createdAt).limitToLast(5).get();
 
   if (snapshot.docs.isEmpty) {

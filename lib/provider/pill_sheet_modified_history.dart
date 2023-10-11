@@ -65,10 +65,7 @@ Stream<List<PillSheetModifiedHistory>> pillSheetModifiedHistoriesWithRange(
   required DateTime end,
 }) {
   // PillSheetGroupのidをDBに保存していなかったので、PillSheetModifiedHistory.afterPillSheetGroup.id指定でのDBからの取得ができなかった(入れ子になっている構造体のIDで取得できる可動かは要確認が必要。未確認)
-  // この時の問題点が続けてdeleteしたPillSheetGroupがあると日付がPillSheetModifiedHistoryを取得する際の日付指定が被ってしまい関係のないピルシートグループの履歴まで取得できてしまう点にある
-  // なので、致し方なくdeletedAt is nullの条件を追加して連続で削除しても履歴取得の際には日付が被らないようにしている。
   // TODO: [PillSheetModifiedHistory-V2] 2024-05-01 ここでの取得をPillSheetModifiedHistory.afterPillSheetGroup.id指定でのDBからの取得に変更する
-  // PillSheetGroupのidをDBに保存していなかったので、PillSheetModifiedHistory.afterPillSheetGroup.id指定でのDBからの取得ができなかった(入れ子になっている構造体のIDで取得できる可動かは要確認が必要。未確認)
   return ref
       .watch(databaseProvider)
       .pillSheetModifiedHistoriesReference()
