@@ -7,6 +7,7 @@ import 'package:pilll/components/atoms/text_color.dart';
 import 'package:pilll/components/molecules/dots_page_indicator.dart';
 import 'package:pilll/components/molecules/indicator.dart';
 import 'package:pilll/components/organisms/pill_sheet/pill_sheet_view_layout.dart';
+import 'package:pilll/entity/pill_sheet_group.codegen.dart';
 import 'package:pilll/features/error/universal_error_page.dart';
 import 'package:pilll/features/before_pill_sheet_group_history/component/pill_sheet.dart';
 import 'package:pilll/entity/pill_sheet_type.dart';
