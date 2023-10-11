@@ -61,10 +61,10 @@ Stream<PillSheetGroup?> latestPillSheetGroup(LatestPillSheetGroupRef ref) {
 @Riverpod(dependencies: [database])
 Future<PillSheetGroup?> beforePillSheetGroup(BeforePillSheetGroupRef ref) async {
   final database = ref.watch(databaseProvider);
-  // 後述するwhereでdeletedAt is nullの場合の物を抽出する。とりあえず10件くらい取得すればどれかはdeletedAtはnullだろうと予想している
+  // 後述するwhereでdeletedAt is nullの場合の物を抽出する。とりあえず5件くらい取得すればどれかはdeletedAtはnullだろうと予想している
   // PillSheetGroupのidをDBに保存していなかったので、PillSheetModifiedHistory.afterPillSheetGroup.id指定でのDBからの取得ができなかった(入れ子になっている構造体のIDで取得できる可動かは要確認が必要。未確認)
   // TODO: [PillSheetModifiedHistory-V2] 2024-05-01 ここでの取得をPillSheetModifiedHistory.afterPillSheetGroup.id指定でのDBからの取得に変更する
-  final snapshot = await database.pillSheetGroupsReference().orderBy(PillSheetGroupFirestoreKeys.createdAt).limitToLast(10).get();
+  final snapshot = await database.pillSheetGroupsReference().orderBy(PillSheetGroupFirestoreKeys.createdAt).limitToLast(5).get();
 
   if (snapshot.docs.isEmpty) {
     return null;
