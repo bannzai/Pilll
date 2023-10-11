@@ -72,10 +72,10 @@ class _Page extends HookConsumerWidget {
             onPressed: () => Navigator.of(context).pop(),
           ),
           backgroundColor: PilllColors.white,
-          title: const Text("以前のピルシートグループ"),
+          title: const Text("前回のピルシートグループ"),
           foregroundColor: TextColor.main,
         ),
-        body: const Center(child: Text("以前のピルシートグループがまだ存在しません")),
+        body: const Center(child: Text("前回のピルシートグループがまだ存在しません")),
       );
     }
 
@@ -102,7 +102,7 @@ class _Page extends HookConsumerWidget {
           onPressed: () => Navigator.of(context).pop(),
         ),
         backgroundColor: PilllColors.white,
-        title: const Text("以前のピルシートグループ"),
+        title: const Text("前回のピルシートグループ"),
         foregroundColor: TextColor.main,
       ),
       body: Column(
