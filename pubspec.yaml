@@ -65,7 +65,7 @@ dependencies:
   collection: 1.17.2
   crypto:
   timezone:
-  google_mobile_ads: ^3.0.0
+  google_mobile_ads: ^3.1.0
 
 dev_dependencies:
   # The "flutter_lints" package below contains a set of recommended lints to
