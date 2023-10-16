@@ -62,22 +62,22 @@ class _$UserPrivateCopyWithImpl<$Res, $Val extends UserPrivate>
 }
 
 /// @nodoc
-abstract class _$$_UserPrivateCopyWith<$Res>
+abstract class _$$UserPrivateImplCopyWith<$Res>
     implements $UserPrivateCopyWith<$Res> {
-  factory _$$_UserPrivateCopyWith(
-          _$_UserPrivate value, $Res Function(_$_UserPrivate) then) =
-      __$$_UserPrivateCopyWithImpl<$Res>;
+  factory _$$UserPrivateImplCopyWith(
+          _$UserPrivateImpl value, $Res Function(_$UserPrivateImpl) then) =
+      __$$UserPrivateImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call({String? fcmToken});
 }
 
 /// @nodoc
-class __$$_UserPrivateCopyWithImpl<$Res>
-    extends _$UserPrivateCopyWithImpl<$Res, _$_UserPrivate>
-    implements _$$_UserPrivateCopyWith<$Res> {
-  __$$_UserPrivateCopyWithImpl(
-      _$_UserPrivate _value, $Res Function(_$_UserPrivate) _then)
+class __$$UserPrivateImplCopyWithImpl<$Res>
+    extends _$UserPrivateCopyWithImpl<$Res, _$UserPrivateImpl>
+    implements _$$UserPrivateImplCopyWith<$Res> {
+  __$$UserPrivateImplCopyWithImpl(
+      _$UserPrivateImpl _value, $Res Function(_$UserPrivateImpl) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -85,7 +85,7 @@ class __$$_UserPrivateCopyWithImpl<$Res>
   $Res call({
     Object? fcmToken = freezed,
   }) {
-    return _then(_$_UserPrivate(
+    return _then(_$UserPrivateImpl(
       fcmToken: freezed == fcmToken
           ? _value.fcmToken
           : fcmToken // ignore: cast_nullable_to_non_nullable
@@ -96,11 +96,11 @@ class __$$_UserPrivateCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
-class _$_UserPrivate extends _UserPrivate {
-  const _$_UserPrivate({this.fcmToken}) : super._();
+class _$UserPrivateImpl extends _UserPrivate {
+  const _$UserPrivateImpl({this.fcmToken}) : super._();
 
-  factory _$_UserPrivate.fromJson(Map<String, dynamic> json) =>
-      _$$_UserPrivateFromJson(json);
+  factory _$UserPrivateImpl.fromJson(Map<String, dynamic> json) =>
+      _$$UserPrivateImplFromJson(json);
 
   @override
   final String? fcmToken;
@@ -114,7 +114,7 @@ class _$_UserPrivate extends _UserPrivate {
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_UserPrivate &&
+            other is _$UserPrivateImpl &&
             (identical(other.fcmToken, fcmToken) ||
                 other.fcmToken == fcmToken));
   }
@@ -126,29 +126,29 @@ class _$_UserPrivate extends _UserPrivate {
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$_UserPrivateCopyWith<_$_UserPrivate> get copyWith =>
-      __$$_UserPrivateCopyWithImpl<_$_UserPrivate>(this, _$identity);
+  _$$UserPrivateImplCopyWith<_$UserPrivateImpl> get copyWith =>
+      __$$UserPrivateImplCopyWithImpl<_$UserPrivateImpl>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_UserPrivateToJson(
+    return _$$UserPrivateImplToJson(
       this,
     );
   }
 }
 
 abstract class _UserPrivate extends UserPrivate {
-  const factory _UserPrivate({final String? fcmToken}) = _$_UserPrivate;
+  const factory _UserPrivate({final String? fcmToken}) = _$UserPrivateImpl;
   const _UserPrivate._() : super._();
 
   factory _UserPrivate.fromJson(Map<String, dynamic> json) =
-      _$_UserPrivate.fromJson;
+      _$UserPrivateImpl.fromJson;
 
   @override
   String? get fcmToken;
   @override
   @JsonKey(ignore: true)
-  _$$_UserPrivateCopyWith<_$_UserPrivate> get copyWith =>
+  _$$UserPrivateImplCopyWith<_$UserPrivateImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
@@ -334,9 +334,10 @@ class _$UserCopyWithImpl<$Res, $Val extends User>
 }
 
 /// @nodoc
-abstract class _$$_UserCopyWith<$Res> implements $UserCopyWith<$Res> {
-  factory _$$_UserCopyWith(_$_User value, $Res Function(_$_User) then) =
-      __$$_UserCopyWithImpl<$Res>;
+abstract class _$$UserImplCopyWith<$Res> implements $UserCopyWith<$Res> {
+  factory _$$UserImplCopyWith(
+          _$UserImpl value, $Res Function(_$UserImpl) then) =
+      __$$UserImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call(
@@ -370,9 +371,10 @@ abstract class _$$_UserCopyWith<$Res> implements $UserCopyWith<$Res> {
 }
 
 /// @nodoc
-class __$$_UserCopyWithImpl<$Res> extends _$UserCopyWithImpl<$Res, _$_User>
-    implements _$$_UserCopyWith<$Res> {
-  __$$_UserCopyWithImpl(_$_User _value, $Res Function(_$_User) _then)
+class __$$UserImplCopyWithImpl<$Res>
+    extends _$UserCopyWithImpl<$Res, _$UserImpl>
+    implements _$$UserImplCopyWith<$Res> {
+  __$$UserImplCopyWithImpl(_$UserImpl _value, $Res Function(_$UserImpl) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -394,7 +396,7 @@ class __$$_UserCopyWithImpl<$Res> extends _$UserCopyWithImpl<$Res, _$_User>
     Object? trialDeadlineDate = freezed,
     Object? discountEntitlementDeadlineDate = freezed,
   }) {
-    return _then(_$_User(
+    return _then(_$UserImpl(
       id: freezed == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
@@ -463,8 +465,8 @@ class __$$_UserCopyWithImpl<$Res> extends _$UserCopyWithImpl<$Res, _$_User>
 /// @nodoc
 
 @JsonSerializable(explicitToJson: true)
-class _$_User extends _User {
-  const _$_User(
+class _$UserImpl extends _User {
+  const _$UserImpl(
       {this.id,
       @JsonKey(name: "settings") this.setting,
       this.userIDWhenCreateUser,
@@ -494,7 +496,8 @@ class _$_User extends _User {
         _firebaseCurrentUserIDSets = firebaseCurrentUserIDSets,
         super._();
 
-  factory _$_User.fromJson(Map<String, dynamic> json) => _$$_UserFromJson(json);
+  factory _$UserImpl.fromJson(Map<String, dynamic> json) =>
+      _$$UserImplFromJson(json);
 
   @override
   final String? id;
@@ -575,7 +578,7 @@ class _$_User extends _User {
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_User &&
+            other is _$UserImpl &&
             (identical(other.id, id) || other.id == id) &&
             (identical(other.setting, setting) || other.setting == setting) &&
             (identical(other.userIDWhenCreateUser, userIDWhenCreateUser) ||
@@ -632,12 +635,12 @@ class _$_User extends _User {
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$_UserCopyWith<_$_User> get copyWith =>
-      __$$_UserCopyWithImpl<_$_User>(this, _$identity);
+  _$$UserImplCopyWith<_$UserImpl> get copyWith =>
+      __$$UserImplCopyWithImpl<_$UserImpl>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_UserToJson(
+    return _$$UserImplToJson(
       this,
     );
   }
@@ -668,10 +671,10 @@ abstract class _User extends User {
       @JsonKey(
           fromJson: TimestampConverter.timestampToDateTime,
           toJson: TimestampConverter.dateTimeToTimestamp)
-      final DateTime? discountEntitlementDeadlineDate}) = _$_User;
+      final DateTime? discountEntitlementDeadlineDate}) = _$UserImpl;
   const _User._() : super._();
 
-  factory _User.fromJson(Map<String, dynamic> json) = _$_User.fromJson;
+  factory _User.fromJson(Map<String, dynamic> json) = _$UserImpl.fromJson;
 
   @override
   String? get id;
@@ -715,5 +718,6 @@ abstract class _User extends User {
   DateTime? get discountEntitlementDeadlineDate;
   @override
   @JsonKey(ignore: true)
-  _$$_UserCopyWith<_$_User> get copyWith => throw _privateConstructorUsedError;
+  _$$UserImplCopyWith<_$UserImpl> get copyWith =>
+      throw _privateConstructorUsedError;
 }

@@ -6,14 +6,15 @@ part of 'package.codegen.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-_$_Package _$$_PackageFromJson(Map<String, dynamic> json) => _$_Package(
+_$PackageImpl _$$PackageImplFromJson(Map<String, dynamic> json) =>
+    _$PackageImpl(
       latestOS: json['latestOS'] as String,
       appName: json['appName'] as String,
       appVersion: json['appVersion'] as String,
       buildNumber: json['buildNumber'] as String,
     );
 
-Map<String, dynamic> _$$_PackageToJson(_$_Package instance) =>
+Map<String, dynamic> _$$PackageImplToJson(_$PackageImpl instance) =>
     <String, dynamic>{
       'latestOS': instance.latestOS,
       'appName': instance.appName,

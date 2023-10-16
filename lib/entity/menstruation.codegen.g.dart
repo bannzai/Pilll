@@ -6,8 +6,8 @@ part of 'menstruation.codegen.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-_$_Menstruation _$$_MenstruationFromJson(Map<String, dynamic> json) =>
-    _$_Menstruation(
+_$MenstruationImpl _$$MenstruationImplFromJson(Map<String, dynamic> json) =>
+    _$MenstruationImpl(
       id: json['id'] as String?,
       beginDate: NonNullTimestampConverter.timestampToDateTime(
           json['beginDate'] as Timestamp),
@@ -20,7 +20,7 @@ _$_Menstruation _$$_MenstruationFromJson(Map<String, dynamic> json) =>
       healthKitSampleDataUUID: json['healthKitSampleDataUUID'] as String?,
     );
 
-Map<String, dynamic> _$$_MenstruationToJson(_$_Menstruation instance) {
+Map<String, dynamic> _$$MenstruationImplToJson(_$MenstruationImpl instance) {
   final val = <String, dynamic>{};
 
   void writeNotNull(String key, dynamic value) {

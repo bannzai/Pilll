@@ -118,10 +118,11 @@ class _$ScheduleCopyWithImpl<$Res, $Val extends Schedule>
 }
 
 /// @nodoc
-abstract class _$$_ScheduleCopyWith<$Res> implements $ScheduleCopyWith<$Res> {
-  factory _$$_ScheduleCopyWith(
-          _$_Schedule value, $Res Function(_$_Schedule) then) =
-      __$$_ScheduleCopyWithImpl<$Res>;
+abstract class _$$ScheduleImplCopyWith<$Res>
+    implements $ScheduleCopyWith<$Res> {
+  factory _$$ScheduleImplCopyWith(
+          _$ScheduleImpl value, $Res Function(_$ScheduleImpl) then) =
+      __$$ScheduleImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call(
@@ -142,11 +143,11 @@ abstract class _$$_ScheduleCopyWith<$Res> implements $ScheduleCopyWith<$Res> {
 }
 
 /// @nodoc
-class __$$_ScheduleCopyWithImpl<$Res>
-    extends _$ScheduleCopyWithImpl<$Res, _$_Schedule>
-    implements _$$_ScheduleCopyWith<$Res> {
-  __$$_ScheduleCopyWithImpl(
-      _$_Schedule _value, $Res Function(_$_Schedule) _then)
+class __$$ScheduleImplCopyWithImpl<$Res>
+    extends _$ScheduleCopyWithImpl<$Res, _$ScheduleImpl>
+    implements _$$ScheduleImplCopyWith<$Res> {
+  __$$ScheduleImplCopyWithImpl(
+      _$ScheduleImpl _value, $Res Function(_$ScheduleImpl) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -158,7 +159,7 @@ class __$$_ScheduleCopyWithImpl<$Res>
     Object? localNotification = freezed,
     Object? createdDateTime = null,
   }) {
-    return _then(_$_Schedule(
+    return _then(_$ScheduleImpl(
       id: freezed == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
@@ -186,8 +187,8 @@ class __$$_ScheduleCopyWithImpl<$Res>
 /// @nodoc
 
 @JsonSerializable(explicitToJson: true)
-class _$_Schedule extends _Schedule {
-  const _$_Schedule(
+class _$ScheduleImpl extends _Schedule {
+  const _$ScheduleImpl(
       {@JsonKey(includeIfNull: false) this.id,
       required this.title,
       @JsonKey(
@@ -201,8 +202,8 @@ class _$_Schedule extends _Schedule {
       required this.createdDateTime})
       : super._();
 
-  factory _$_Schedule.fromJson(Map<String, dynamic> json) =>
-      _$$_ScheduleFromJson(json);
+  factory _$ScheduleImpl.fromJson(Map<String, dynamic> json) =>
+      _$$ScheduleImplFromJson(json);
 
   @override
   @JsonKey(includeIfNull: false)
@@ -231,7 +232,7 @@ class _$_Schedule extends _Schedule {
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_Schedule &&
+            other is _$ScheduleImpl &&
             (identical(other.id, id) || other.id == id) &&
             (identical(other.title, title) || other.title == title) &&
             (identical(other.date, date) || other.date == date) &&
@@ -249,12 +250,12 @@ class _$_Schedule extends _Schedule {
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$_ScheduleCopyWith<_$_Schedule> get copyWith =>
-      __$$_ScheduleCopyWithImpl<_$_Schedule>(this, _$identity);
+  _$$ScheduleImplCopyWith<_$ScheduleImpl> get copyWith =>
+      __$$ScheduleImplCopyWithImpl<_$ScheduleImpl>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_ScheduleToJson(
+    return _$$ScheduleImplToJson(
       this,
     );
   }
@@ -272,10 +273,11 @@ abstract class _Schedule extends Schedule {
       @JsonKey(
           fromJson: NonNullTimestampConverter.timestampToDateTime,
           toJson: NonNullTimestampConverter.dateTimeToTimestamp)
-      required final DateTime createdDateTime}) = _$_Schedule;
+      required final DateTime createdDateTime}) = _$ScheduleImpl;
   const _Schedule._() : super._();
 
-  factory _Schedule.fromJson(Map<String, dynamic> json) = _$_Schedule.fromJson;
+  factory _Schedule.fromJson(Map<String, dynamic> json) =
+      _$ScheduleImpl.fromJson;
 
   @override
   @JsonKey(includeIfNull: false)
@@ -296,7 +298,7 @@ abstract class _Schedule extends Schedule {
   DateTime get createdDateTime;
   @override
   @JsonKey(ignore: true)
-  _$$_ScheduleCopyWith<_$_Schedule> get copyWith =>
+  _$$ScheduleImplCopyWith<_$ScheduleImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
@@ -362,11 +364,11 @@ class _$LocalNotificationCopyWithImpl<$Res, $Val extends LocalNotification>
 }
 
 /// @nodoc
-abstract class _$$_LocalNotificationCopyWith<$Res>
+abstract class _$$LocalNotificationImplCopyWith<$Res>
     implements $LocalNotificationCopyWith<$Res> {
-  factory _$$_LocalNotificationCopyWith(_$_LocalNotification value,
-          $Res Function(_$_LocalNotification) then) =
-      __$$_LocalNotificationCopyWithImpl<$Res>;
+  factory _$$LocalNotificationImplCopyWith(_$LocalNotificationImpl value,
+          $Res Function(_$LocalNotificationImpl) then) =
+      __$$LocalNotificationImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call(
@@ -378,11 +380,11 @@ abstract class _$$_LocalNotificationCopyWith<$Res>
 }
 
 /// @nodoc
-class __$$_LocalNotificationCopyWithImpl<$Res>
-    extends _$LocalNotificationCopyWithImpl<$Res, _$_LocalNotification>
-    implements _$$_LocalNotificationCopyWith<$Res> {
-  __$$_LocalNotificationCopyWithImpl(
-      _$_LocalNotification _value, $Res Function(_$_LocalNotification) _then)
+class __$$LocalNotificationImplCopyWithImpl<$Res>
+    extends _$LocalNotificationCopyWithImpl<$Res, _$LocalNotificationImpl>
+    implements _$$LocalNotificationImplCopyWith<$Res> {
+  __$$LocalNotificationImplCopyWithImpl(_$LocalNotificationImpl _value,
+      $Res Function(_$LocalNotificationImpl) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -391,7 +393,7 @@ class __$$_LocalNotificationCopyWithImpl<$Res>
     Object? localNotificationID = null,
     Object? remindDateTime = null,
   }) {
-    return _then(_$_LocalNotification(
+    return _then(_$LocalNotificationImpl(
       localNotificationID: null == localNotificationID
           ? _value.localNotificationID
           : localNotificationID // ignore: cast_nullable_to_non_nullable
@@ -407,8 +409,8 @@ class __$$_LocalNotificationCopyWithImpl<$Res>
 /// @nodoc
 
 @JsonSerializable(explicitToJson: true)
-class _$_LocalNotification extends _LocalNotification {
-  const _$_LocalNotification(
+class _$LocalNotificationImpl extends _LocalNotification {
+  const _$LocalNotificationImpl(
       {required this.localNotificationID,
       @JsonKey(
           fromJson: NonNullTimestampConverter.timestampToDateTime,
@@ -416,8 +418,8 @@ class _$_LocalNotification extends _LocalNotification {
       required this.remindDateTime})
       : super._();
 
-  factory _$_LocalNotification.fromJson(Map<String, dynamic> json) =>
-      _$$_LocalNotificationFromJson(json);
+  factory _$LocalNotificationImpl.fromJson(Map<String, dynamic> json) =>
+      _$$LocalNotificationImplFromJson(json);
 
   @override
   final int localNotificationID;
@@ -436,7 +438,7 @@ class _$_LocalNotification extends _LocalNotification {
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_LocalNotification &&
+            other is _$LocalNotificationImpl &&
             (identical(other.localNotificationID, localNotificationID) ||
                 other.localNotificationID == localNotificationID) &&
             (identical(other.remindDateTime, remindDateTime) ||
@@ -451,13 +453,13 @@ class _$_LocalNotification extends _LocalNotification {
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$_LocalNotificationCopyWith<_$_LocalNotification> get copyWith =>
-      __$$_LocalNotificationCopyWithImpl<_$_LocalNotification>(
+  _$$LocalNotificationImplCopyWith<_$LocalNotificationImpl> get copyWith =>
+      __$$LocalNotificationImplCopyWithImpl<_$LocalNotificationImpl>(
           this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_LocalNotificationToJson(
+    return _$$LocalNotificationImplToJson(
       this,
     );
   }
@@ -469,11 +471,11 @@ abstract class _LocalNotification extends LocalNotification {
       @JsonKey(
           fromJson: NonNullTimestampConverter.timestampToDateTime,
           toJson: NonNullTimestampConverter.dateTimeToTimestamp)
-      required final DateTime remindDateTime}) = _$_LocalNotification;
+      required final DateTime remindDateTime}) = _$LocalNotificationImpl;
   const _LocalNotification._() : super._();
 
   factory _LocalNotification.fromJson(Map<String, dynamic> json) =
-      _$_LocalNotification.fromJson;
+      _$LocalNotificationImpl.fromJson;
 
   @override
   int get localNotificationID;
@@ -484,6 +486,6 @@ abstract class _LocalNotification extends LocalNotification {
   DateTime get remindDateTime;
   @override
   @JsonKey(ignore: true)
-  _$$_LocalNotificationCopyWith<_$_LocalNotification> get copyWith =>
+  _$$LocalNotificationImplCopyWith<_$LocalNotificationImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }

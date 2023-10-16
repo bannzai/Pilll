@@ -127,11 +127,11 @@ class _$PillSheetGroupCopyWithImpl<$Res, $Val extends PillSheetGroup>
 }
 
 /// @nodoc
-abstract class _$$_PillSheetGroupCopyWith<$Res>
+abstract class _$$PillSheetGroupImplCopyWith<$Res>
     implements $PillSheetGroupCopyWith<$Res> {
-  factory _$$_PillSheetGroupCopyWith(
-          _$_PillSheetGroup value, $Res Function(_$_PillSheetGroup) then) =
-      __$$_PillSheetGroupCopyWithImpl<$Res>;
+  factory _$$PillSheetGroupImplCopyWith(_$PillSheetGroupImpl value,
+          $Res Function(_$PillSheetGroupImpl) then) =
+      __$$PillSheetGroupImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call(
@@ -153,11 +153,11 @@ abstract class _$$_PillSheetGroupCopyWith<$Res>
 }
 
 /// @nodoc
-class __$$_PillSheetGroupCopyWithImpl<$Res>
-    extends _$PillSheetGroupCopyWithImpl<$Res, _$_PillSheetGroup>
-    implements _$$_PillSheetGroupCopyWith<$Res> {
-  __$$_PillSheetGroupCopyWithImpl(
-      _$_PillSheetGroup _value, $Res Function(_$_PillSheetGroup) _then)
+class __$$PillSheetGroupImplCopyWithImpl<$Res>
+    extends _$PillSheetGroupCopyWithImpl<$Res, _$PillSheetGroupImpl>
+    implements _$$PillSheetGroupImplCopyWith<$Res> {
+  __$$PillSheetGroupImplCopyWithImpl(
+      _$PillSheetGroupImpl _value, $Res Function(_$PillSheetGroupImpl) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -170,7 +170,7 @@ class __$$_PillSheetGroupCopyWithImpl<$Res>
     Object? deletedAt = freezed,
     Object? displayNumberSetting = freezed,
   }) {
-    return _then(_$_PillSheetGroup(
+    return _then(_$PillSheetGroupImpl(
       id: freezed == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
@@ -202,8 +202,8 @@ class __$$_PillSheetGroupCopyWithImpl<$Res>
 /// @nodoc
 
 @JsonSerializable(explicitToJson: true)
-class _$_PillSheetGroup extends _PillSheetGroup {
-  const _$_PillSheetGroup(
+class _$PillSheetGroupImpl extends _PillSheetGroup {
+  const _$PillSheetGroupImpl(
       {@JsonKey(includeIfNull: false) this.id,
       required final List<String> pillSheetIDs,
       required final List<PillSheet> pillSheets,
@@ -220,8 +220,8 @@ class _$_PillSheetGroup extends _PillSheetGroup {
         _pillSheets = pillSheets,
         super._();
 
-  factory _$_PillSheetGroup.fromJson(Map<String, dynamic> json) =>
-      _$$_PillSheetGroupFromJson(json);
+  factory _$PillSheetGroupImpl.fromJson(Map<String, dynamic> json) =>
+      _$$PillSheetGroupImplFromJson(json);
 
   @override
   @JsonKey(includeIfNull: false)
@@ -264,7 +264,7 @@ class _$_PillSheetGroup extends _PillSheetGroup {
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_PillSheetGroup &&
+            other is _$PillSheetGroupImpl &&
             (identical(other.id, id) || other.id == id) &&
             const DeepCollectionEquality()
                 .equals(other._pillSheetIDs, _pillSheetIDs) &&
@@ -292,12 +292,13 @@ class _$_PillSheetGroup extends _PillSheetGroup {
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$_PillSheetGroupCopyWith<_$_PillSheetGroup> get copyWith =>
-      __$$_PillSheetGroupCopyWithImpl<_$_PillSheetGroup>(this, _$identity);
+  _$$PillSheetGroupImplCopyWith<_$PillSheetGroupImpl> get copyWith =>
+      __$$PillSheetGroupImplCopyWithImpl<_$PillSheetGroupImpl>(
+          this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_PillSheetGroupToJson(
+    return _$$PillSheetGroupImplToJson(
       this,
     );
   }
@@ -317,11 +318,11 @@ abstract class _PillSheetGroup extends PillSheetGroup {
               toJson: TimestampConverter.dateTimeToTimestamp)
           final DateTime? deletedAt,
           final PillSheetGroupDisplayNumberSetting? displayNumberSetting}) =
-      _$_PillSheetGroup;
+      _$PillSheetGroupImpl;
   const _PillSheetGroup._() : super._();
 
   factory _PillSheetGroup.fromJson(Map<String, dynamic> json) =
-      _$_PillSheetGroup.fromJson;
+      _$PillSheetGroupImpl.fromJson;
 
   @override
   @JsonKey(includeIfNull: false)
@@ -344,7 +345,7 @@ abstract class _PillSheetGroup extends PillSheetGroup {
   PillSheetGroupDisplayNumberSetting? get displayNumberSetting;
   @override
   @JsonKey(ignore: true)
-  _$$_PillSheetGroupCopyWith<_$_PillSheetGroup> get copyWith =>
+  _$$PillSheetGroupImplCopyWith<_$PillSheetGroupImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
@@ -407,25 +408,25 @@ class _$PillSheetGroupDisplayNumberSettingCopyWithImpl<$Res,
 }
 
 /// @nodoc
-abstract class _$$_PillSheetGroupDisplayNumberSettingCopyWith<$Res>
+abstract class _$$PillSheetGroupDisplayNumberSettingImplCopyWith<$Res>
     implements $PillSheetGroupDisplayNumberSettingCopyWith<$Res> {
-  factory _$$_PillSheetGroupDisplayNumberSettingCopyWith(
-          _$_PillSheetGroupDisplayNumberSetting value,
-          $Res Function(_$_PillSheetGroupDisplayNumberSetting) then) =
-      __$$_PillSheetGroupDisplayNumberSettingCopyWithImpl<$Res>;
+  factory _$$PillSheetGroupDisplayNumberSettingImplCopyWith(
+          _$PillSheetGroupDisplayNumberSettingImpl value,
+          $Res Function(_$PillSheetGroupDisplayNumberSettingImpl) then) =
+      __$$PillSheetGroupDisplayNumberSettingImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call({int? beginPillNumber, int? endPillNumber});
 }
 
 /// @nodoc
-class __$$_PillSheetGroupDisplayNumberSettingCopyWithImpl<$Res>
+class __$$PillSheetGroupDisplayNumberSettingImplCopyWithImpl<$Res>
     extends _$PillSheetGroupDisplayNumberSettingCopyWithImpl<$Res,
-        _$_PillSheetGroupDisplayNumberSetting>
-    implements _$$_PillSheetGroupDisplayNumberSettingCopyWith<$Res> {
-  __$$_PillSheetGroupDisplayNumberSettingCopyWithImpl(
-      _$_PillSheetGroupDisplayNumberSetting _value,
-      $Res Function(_$_PillSheetGroupDisplayNumberSetting) _then)
+        _$PillSheetGroupDisplayNumberSettingImpl>
+    implements _$$PillSheetGroupDisplayNumberSettingImplCopyWith<$Res> {
+  __$$PillSheetGroupDisplayNumberSettingImplCopyWithImpl(
+      _$PillSheetGroupDisplayNumberSettingImpl _value,
+      $Res Function(_$PillSheetGroupDisplayNumberSettingImpl) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -434,7 +435,7 @@ class __$$_PillSheetGroupDisplayNumberSettingCopyWithImpl<$Res>
     Object? beginPillNumber = freezed,
     Object? endPillNumber = freezed,
   }) {
-    return _then(_$_PillSheetGroupDisplayNumberSetting(
+    return _then(_$PillSheetGroupDisplayNumberSettingImpl(
       beginPillNumber: freezed == beginPillNumber
           ? _value.beginPillNumber
           : beginPillNumber // ignore: cast_nullable_to_non_nullable
@@ -450,14 +451,14 @@ class __$$_PillSheetGroupDisplayNumberSettingCopyWithImpl<$Res>
 /// @nodoc
 
 @JsonSerializable(explicitToJson: true)
-class _$_PillSheetGroupDisplayNumberSetting
+class _$PillSheetGroupDisplayNumberSettingImpl
     implements _PillSheetGroupDisplayNumberSetting {
-  const _$_PillSheetGroupDisplayNumberSetting(
+  const _$PillSheetGroupDisplayNumberSettingImpl(
       {this.beginPillNumber, this.endPillNumber});
 
-  factory _$_PillSheetGroupDisplayNumberSetting.fromJson(
+  factory _$PillSheetGroupDisplayNumberSettingImpl.fromJson(
           Map<String, dynamic> json) =>
-      _$$_PillSheetGroupDisplayNumberSettingFromJson(json);
+      _$$PillSheetGroupDisplayNumberSettingImplFromJson(json);
 
   @override
   final int? beginPillNumber;
@@ -473,7 +474,7 @@ class _$_PillSheetGroupDisplayNumberSetting
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_PillSheetGroupDisplayNumberSetting &&
+            other is _$PillSheetGroupDisplayNumberSettingImpl &&
             (identical(other.beginPillNumber, beginPillNumber) ||
                 other.beginPillNumber == beginPillNumber) &&
             (identical(other.endPillNumber, endPillNumber) ||
@@ -487,14 +488,14 @@ class _$_PillSheetGroupDisplayNumberSetting
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$_PillSheetGroupDisplayNumberSettingCopyWith<
-          _$_PillSheetGroupDisplayNumberSetting>
-      get copyWith => __$$_PillSheetGroupDisplayNumberSettingCopyWithImpl<
-          _$_PillSheetGroupDisplayNumberSetting>(this, _$identity);
+  _$$PillSheetGroupDisplayNumberSettingImplCopyWith<
+          _$PillSheetGroupDisplayNumberSettingImpl>
+      get copyWith => __$$PillSheetGroupDisplayNumberSettingImplCopyWithImpl<
+          _$PillSheetGroupDisplayNumberSettingImpl>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_PillSheetGroupDisplayNumberSettingToJson(
+    return _$$PillSheetGroupDisplayNumberSettingImplToJson(
       this,
     );
   }
@@ -504,11 +505,11 @@ abstract class _PillSheetGroupDisplayNumberSetting
     implements PillSheetGroupDisplayNumberSetting {
   const factory _PillSheetGroupDisplayNumberSetting(
       {final int? beginPillNumber,
-      final int? endPillNumber}) = _$_PillSheetGroupDisplayNumberSetting;
+      final int? endPillNumber}) = _$PillSheetGroupDisplayNumberSettingImpl;
 
   factory _PillSheetGroupDisplayNumberSetting.fromJson(
           Map<String, dynamic> json) =
-      _$_PillSheetGroupDisplayNumberSetting.fromJson;
+      _$PillSheetGroupDisplayNumberSettingImpl.fromJson;
 
   @override
   int? get beginPillNumber;
@@ -516,7 +517,7 @@ abstract class _PillSheetGroupDisplayNumberSetting
   int? get endPillNumber;
   @override
   @JsonKey(ignore: true)
-  _$$_PillSheetGroupDisplayNumberSettingCopyWith<
-          _$_PillSheetGroupDisplayNumberSetting>
+  _$$PillSheetGroupDisplayNumberSettingImplCopyWith<
+          _$PillSheetGroupDisplayNumberSettingImpl>
       get copyWith => throw _privateConstructorUsedError;
 }

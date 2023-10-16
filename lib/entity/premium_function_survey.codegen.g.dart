@@ -6,17 +6,17 @@ part of 'premium_function_survey.codegen.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-_$_PremiumFunctionSurvey _$$_PremiumFunctionSurveyFromJson(
+_$PremiumFunctionSurveyImpl _$$PremiumFunctionSurveyImplFromJson(
         Map<String, dynamic> json) =>
-    _$_PremiumFunctionSurvey(
+    _$PremiumFunctionSurveyImpl(
       elements: (json['elements'] as List<dynamic>)
           .map((e) => $enumDecode(_$PremiumFunctionSurveyElementTypeEnumMap, e))
           .toList(),
       message: json['message'] as String,
     );
 
-Map<String, dynamic> _$$_PremiumFunctionSurveyToJson(
-        _$_PremiumFunctionSurvey instance) =>
+Map<String, dynamic> _$$PremiumFunctionSurveyImplToJson(
+        _$PremiumFunctionSurveyImpl instance) =>
     <String, dynamic>{
       'elements': instance.elements
           .map((e) => _$PremiumFunctionSurveyElementTypeEnumMap[e]!)

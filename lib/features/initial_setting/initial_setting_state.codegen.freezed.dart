@@ -66,25 +66,25 @@ class _$InitialSettingTodayPillNumberCopyWithImpl<$Res,
 }
 
 /// @nodoc
-abstract class _$$_InitialSettingTodayPillNumberCopyWith<$Res>
+abstract class _$$InitialSettingTodayPillNumberImplCopyWith<$Res>
     implements $InitialSettingTodayPillNumberCopyWith<$Res> {
-  factory _$$_InitialSettingTodayPillNumberCopyWith(
-          _$_InitialSettingTodayPillNumber value,
-          $Res Function(_$_InitialSettingTodayPillNumber) then) =
-      __$$_InitialSettingTodayPillNumberCopyWithImpl<$Res>;
+  factory _$$InitialSettingTodayPillNumberImplCopyWith(
+          _$InitialSettingTodayPillNumberImpl value,
+          $Res Function(_$InitialSettingTodayPillNumberImpl) then) =
+      __$$InitialSettingTodayPillNumberImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call({int pageIndex, int pillNumberInPillSheet});
 }
 
 /// @nodoc
-class __$$_InitialSettingTodayPillNumberCopyWithImpl<$Res>
+class __$$InitialSettingTodayPillNumberImplCopyWithImpl<$Res>
     extends _$InitialSettingTodayPillNumberCopyWithImpl<$Res,
-        _$_InitialSettingTodayPillNumber>
-    implements _$$_InitialSettingTodayPillNumberCopyWith<$Res> {
-  __$$_InitialSettingTodayPillNumberCopyWithImpl(
-      _$_InitialSettingTodayPillNumber _value,
-      $Res Function(_$_InitialSettingTodayPillNumber) _then)
+        _$InitialSettingTodayPillNumberImpl>
+    implements _$$InitialSettingTodayPillNumberImplCopyWith<$Res> {
+  __$$InitialSettingTodayPillNumberImplCopyWithImpl(
+      _$InitialSettingTodayPillNumberImpl _value,
+      $Res Function(_$InitialSettingTodayPillNumberImpl) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -93,7 +93,7 @@ class __$$_InitialSettingTodayPillNumberCopyWithImpl<$Res>
     Object? pageIndex = null,
     Object? pillNumberInPillSheet = null,
   }) {
-    return _then(_$_InitialSettingTodayPillNumber(
+    return _then(_$InitialSettingTodayPillNumberImpl(
       pageIndex: null == pageIndex
           ? _value.pageIndex
           : pageIndex // ignore: cast_nullable_to_non_nullable
@@ -108,9 +108,9 @@ class __$$_InitialSettingTodayPillNumberCopyWithImpl<$Res>
 
 /// @nodoc
 
-class _$_InitialSettingTodayPillNumber
+class _$InitialSettingTodayPillNumberImpl
     implements _InitialSettingTodayPillNumber {
-  const _$_InitialSettingTodayPillNumber(
+  const _$InitialSettingTodayPillNumberImpl(
       {this.pageIndex = 0, this.pillNumberInPillSheet = 0});
 
   @override
@@ -129,7 +129,7 @@ class _$_InitialSettingTodayPillNumber
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_InitialSettingTodayPillNumber &&
+            other is _$InitialSettingTodayPillNumberImpl &&
             (identical(other.pageIndex, pageIndex) ||
                 other.pageIndex == pageIndex) &&
             (identical(other.pillNumberInPillSheet, pillNumberInPillSheet) ||
@@ -143,16 +143,17 @@ class _$_InitialSettingTodayPillNumber
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$_InitialSettingTodayPillNumberCopyWith<_$_InitialSettingTodayPillNumber>
-      get copyWith => __$$_InitialSettingTodayPillNumberCopyWithImpl<
-          _$_InitialSettingTodayPillNumber>(this, _$identity);
+  _$$InitialSettingTodayPillNumberImplCopyWith<
+          _$InitialSettingTodayPillNumberImpl>
+      get copyWith => __$$InitialSettingTodayPillNumberImplCopyWithImpl<
+          _$InitialSettingTodayPillNumberImpl>(this, _$identity);
 }
 
 abstract class _InitialSettingTodayPillNumber
     implements InitialSettingTodayPillNumber {
   const factory _InitialSettingTodayPillNumber(
       {final int pageIndex,
-      final int pillNumberInPillSheet}) = _$_InitialSettingTodayPillNumber;
+      final int pillNumberInPillSheet}) = _$InitialSettingTodayPillNumberImpl;
 
   @override
   int get pageIndex;
@@ -160,7 +161,8 @@ abstract class _InitialSettingTodayPillNumber
   int get pillNumberInPillSheet;
   @override
   @JsonKey(ignore: true)
-  _$$_InitialSettingTodayPillNumberCopyWith<_$_InitialSettingTodayPillNumber>
+  _$$InitialSettingTodayPillNumberImplCopyWith<
+          _$InitialSettingTodayPillNumberImpl>
       get copyWith => throw _privateConstructorUsedError;
 }
 
@@ -273,11 +275,11 @@ class _$InitialSettingStateCopyWithImpl<$Res, $Val extends InitialSettingState>
 }
 
 /// @nodoc
-abstract class _$$_InitialSettingStateCopyWith<$Res>
+abstract class _$$InitialSettingStateImplCopyWith<$Res>
     implements $InitialSettingStateCopyWith<$Res> {
-  factory _$$_InitialSettingStateCopyWith(_$_InitialSettingState value,
-          $Res Function(_$_InitialSettingState) then) =
-      __$$_InitialSettingStateCopyWithImpl<$Res>;
+  factory _$$InitialSettingStateImplCopyWith(_$InitialSettingStateImpl value,
+          $Res Function(_$InitialSettingStateImpl) then) =
+      __$$InitialSettingStateImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call(
@@ -295,11 +297,11 @@ abstract class _$$_InitialSettingStateCopyWith<$Res>
 }
 
 /// @nodoc
-class __$$_InitialSettingStateCopyWithImpl<$Res>
-    extends _$InitialSettingStateCopyWithImpl<$Res, _$_InitialSettingState>
-    implements _$$_InitialSettingStateCopyWith<$Res> {
-  __$$_InitialSettingStateCopyWithImpl(_$_InitialSettingState _value,
-      $Res Function(_$_InitialSettingState) _then)
+class __$$InitialSettingStateImplCopyWithImpl<$Res>
+    extends _$InitialSettingStateCopyWithImpl<$Res, _$InitialSettingStateImpl>
+    implements _$$InitialSettingStateImplCopyWith<$Res> {
+  __$$InitialSettingStateImplCopyWithImpl(_$InitialSettingStateImpl _value,
+      $Res Function(_$InitialSettingStateImpl) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -314,7 +316,7 @@ class __$$_InitialSettingStateCopyWithImpl<$Res>
     Object? settingIsExist = null,
     Object? accountType = freezed,
   }) {
-    return _then(_$_InitialSettingState(
+    return _then(_$InitialSettingStateImpl(
       pillSheetTypes: null == pillSheetTypes
           ? _value._pillSheetTypes
           : pillSheetTypes // ignore: cast_nullable_to_non_nullable
@@ -353,8 +355,8 @@ class __$$_InitialSettingStateCopyWithImpl<$Res>
 
 /// @nodoc
 
-class _$_InitialSettingState extends _InitialSettingState {
-  const _$_InitialSettingState(
+class _$InitialSettingStateImpl extends _InitialSettingState {
+  const _$InitialSettingStateImpl(
       {final List<PillSheetType> pillSheetTypes = const [],
       this.todayPillNumber,
       required final List<ReminderTime> reminderTimes,
@@ -410,7 +412,7 @@ class _$_InitialSettingState extends _InitialSettingState {
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_InitialSettingState &&
+            other is _$InitialSettingStateImpl &&
             const DeepCollectionEquality()
                 .equals(other._pillSheetTypes, _pillSheetTypes) &&
             (identical(other.todayPillNumber, todayPillNumber) ||
@@ -444,8 +446,8 @@ class _$_InitialSettingState extends _InitialSettingState {
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$_InitialSettingStateCopyWith<_$_InitialSettingState> get copyWith =>
-      __$$_InitialSettingStateCopyWithImpl<_$_InitialSettingState>(
+  _$$InitialSettingStateImplCopyWith<_$InitialSettingStateImpl> get copyWith =>
+      __$$InitialSettingStateImplCopyWithImpl<_$InitialSettingStateImpl>(
           this, _$identity);
 }
 
@@ -458,7 +460,7 @@ abstract class _InitialSettingState extends InitialSettingState {
       final bool isLoading,
       final bool userIsNotAnonymous,
       final bool settingIsExist,
-      final LinkAccountType? accountType}) = _$_InitialSettingState;
+      final LinkAccountType? accountType}) = _$InitialSettingStateImpl;
   const _InitialSettingState._() : super._();
 
   @override
@@ -479,6 +481,6 @@ abstract class _InitialSettingState extends InitialSettingState {
   LinkAccountType? get accountType;
   @override
   @JsonKey(ignore: true)
-  _$$_InitialSettingStateCopyWith<_$_InitialSettingState> get copyWith =>
+  _$$InitialSettingStateImplCopyWith<_$InitialSettingStateImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }

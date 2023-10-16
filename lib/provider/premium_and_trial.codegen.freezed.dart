@@ -95,11 +95,11 @@ class _$PremiumAndTrialCopyWithImpl<$Res, $Val extends PremiumAndTrial>
 }
 
 /// @nodoc
-abstract class _$$_PremiumAndTrialCopyWith<$Res>
+abstract class _$$PremiumAndTrialImplCopyWith<$Res>
     implements $PremiumAndTrialCopyWith<$Res> {
-  factory _$$_PremiumAndTrialCopyWith(
-          _$_PremiumAndTrial value, $Res Function(_$_PremiumAndTrial) then) =
-      __$$_PremiumAndTrialCopyWithImpl<$Res>;
+  factory _$$PremiumAndTrialImplCopyWith(_$PremiumAndTrialImpl value,
+          $Res Function(_$PremiumAndTrialImpl) then) =
+      __$$PremiumAndTrialImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call(
@@ -112,11 +112,11 @@ abstract class _$$_PremiumAndTrialCopyWith<$Res>
 }
 
 /// @nodoc
-class __$$_PremiumAndTrialCopyWithImpl<$Res>
-    extends _$PremiumAndTrialCopyWithImpl<$Res, _$_PremiumAndTrial>
-    implements _$$_PremiumAndTrialCopyWith<$Res> {
-  __$$_PremiumAndTrialCopyWithImpl(
-      _$_PremiumAndTrial _value, $Res Function(_$_PremiumAndTrial) _then)
+class __$$PremiumAndTrialImplCopyWithImpl<$Res>
+    extends _$PremiumAndTrialCopyWithImpl<$Res, _$PremiumAndTrialImpl>
+    implements _$$PremiumAndTrialImplCopyWith<$Res> {
+  __$$PremiumAndTrialImplCopyWithImpl(
+      _$PremiumAndTrialImpl _value, $Res Function(_$PremiumAndTrialImpl) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -129,7 +129,7 @@ class __$$_PremiumAndTrialCopyWithImpl<$Res>
     Object? trialDeadlineDate = freezed,
     Object? discountEntitlementDeadlineDate = freezed,
   }) {
-    return _then(_$_PremiumAndTrial(
+    return _then(_$PremiumAndTrialImpl(
       isTrial: null == isTrial
           ? _value.isTrial
           : isTrial // ignore: cast_nullable_to_non_nullable
@@ -161,8 +161,8 @@ class __$$_PremiumAndTrialCopyWithImpl<$Res>
 
 /// @nodoc
 
-class _$_PremiumAndTrial extends _PremiumAndTrial {
-  _$_PremiumAndTrial(
+class _$PremiumAndTrialImpl extends _PremiumAndTrial {
+  _$PremiumAndTrialImpl(
       {required this.isTrial,
       required this.isPremium,
       required this.hasDiscountEntitlement,
@@ -193,7 +193,7 @@ class _$_PremiumAndTrial extends _PremiumAndTrial {
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_PremiumAndTrial &&
+            other is _$PremiumAndTrialImpl &&
             (identical(other.isTrial, isTrial) || other.isTrial == isTrial) &&
             (identical(other.isPremium, isPremium) ||
                 other.isPremium == isPremium) &&
@@ -222,8 +222,9 @@ class _$_PremiumAndTrial extends _PremiumAndTrial {
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$_PremiumAndTrialCopyWith<_$_PremiumAndTrial> get copyWith =>
-      __$$_PremiumAndTrialCopyWithImpl<_$_PremiumAndTrial>(this, _$identity);
+  _$$PremiumAndTrialImplCopyWith<_$PremiumAndTrialImpl> get copyWith =>
+      __$$PremiumAndTrialImplCopyWithImpl<_$PremiumAndTrialImpl>(
+          this, _$identity);
 }
 
 abstract class _PremiumAndTrial extends PremiumAndTrial {
@@ -234,7 +235,7 @@ abstract class _PremiumAndTrial extends PremiumAndTrial {
           required final DateTime? beginTrialDate,
           required final DateTime? trialDeadlineDate,
           required final DateTime? discountEntitlementDeadlineDate}) =
-      _$_PremiumAndTrial;
+      _$PremiumAndTrialImpl;
   _PremiumAndTrial._() : super._();
 
   @override
@@ -251,6 +252,6 @@ abstract class _PremiumAndTrial extends PremiumAndTrial {
   DateTime? get discountEntitlementDeadlineDate;
   @override
   @JsonKey(ignore: true)
-  _$$_PremiumAndTrialCopyWith<_$_PremiumAndTrial> get copyWith =>
+  _$$PremiumAndTrialImplCopyWith<_$PremiumAndTrialImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }

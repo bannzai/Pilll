@@ -76,11 +76,11 @@ class _$DiarySettingCopyWithImpl<$Res, $Val extends DiarySetting>
 }
 
 /// @nodoc
-abstract class _$$_DiarySettingCopyWith<$Res>
+abstract class _$$DiarySettingImplCopyWith<$Res>
     implements $DiarySettingCopyWith<$Res> {
-  factory _$$_DiarySettingCopyWith(
-          _$_DiarySetting value, $Res Function(_$_DiarySetting) then) =
-      __$$_DiarySettingCopyWithImpl<$Res>;
+  factory _$$DiarySettingImplCopyWith(
+          _$DiarySettingImpl value, $Res Function(_$DiarySettingImpl) then) =
+      __$$DiarySettingImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call(
@@ -92,11 +92,11 @@ abstract class _$$_DiarySettingCopyWith<$Res>
 }
 
 /// @nodoc
-class __$$_DiarySettingCopyWithImpl<$Res>
-    extends _$DiarySettingCopyWithImpl<$Res, _$_DiarySetting>
-    implements _$$_DiarySettingCopyWith<$Res> {
-  __$$_DiarySettingCopyWithImpl(
-      _$_DiarySetting _value, $Res Function(_$_DiarySetting) _then)
+class __$$DiarySettingImplCopyWithImpl<$Res>
+    extends _$DiarySettingCopyWithImpl<$Res, _$DiarySettingImpl>
+    implements _$$DiarySettingImplCopyWith<$Res> {
+  __$$DiarySettingImplCopyWithImpl(
+      _$DiarySettingImpl _value, $Res Function(_$DiarySettingImpl) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -105,7 +105,7 @@ class __$$_DiarySettingCopyWithImpl<$Res>
     Object? physicalConditions = null,
     Object? createdAt = null,
   }) {
-    return _then(_$_DiarySetting(
+    return _then(_$DiarySettingImpl(
       physicalConditions: null == physicalConditions
           ? _value._physicalConditions
           : physicalConditions // ignore: cast_nullable_to_non_nullable
@@ -121,8 +121,8 @@ class __$$_DiarySettingCopyWithImpl<$Res>
 /// @nodoc
 
 @JsonSerializable(explicitToJson: true)
-class _$_DiarySetting extends _DiarySetting with DiagnosticableTreeMixin {
-  const _$_DiarySetting(
+class _$DiarySettingImpl extends _DiarySetting with DiagnosticableTreeMixin {
+  const _$DiarySettingImpl(
       {final List<String> physicalConditions = defaultPhysicalConditions,
       @JsonKey(
           fromJson: NonNullTimestampConverter.timestampToDateTime,
@@ -131,8 +131,8 @@ class _$_DiarySetting extends _DiarySetting with DiagnosticableTreeMixin {
       : _physicalConditions = physicalConditions,
         super._();
 
-  factory _$_DiarySetting.fromJson(Map<String, dynamic> json) =>
-      _$$_DiarySettingFromJson(json);
+  factory _$DiarySettingImpl.fromJson(Map<String, dynamic> json) =>
+      _$$DiarySettingImplFromJson(json);
 
   final List<String> _physicalConditions;
   @override
@@ -168,7 +168,7 @@ class _$_DiarySetting extends _DiarySetting with DiagnosticableTreeMixin {
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_DiarySetting &&
+            other is _$DiarySettingImpl &&
             const DeepCollectionEquality()
                 .equals(other._physicalConditions, _physicalConditions) &&
             (identical(other.createdAt, createdAt) ||
@@ -183,12 +183,12 @@ class _$_DiarySetting extends _DiarySetting with DiagnosticableTreeMixin {
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$_DiarySettingCopyWith<_$_DiarySetting> get copyWith =>
-      __$$_DiarySettingCopyWithImpl<_$_DiarySetting>(this, _$identity);
+  _$$DiarySettingImplCopyWith<_$DiarySettingImpl> get copyWith =>
+      __$$DiarySettingImplCopyWithImpl<_$DiarySettingImpl>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_DiarySettingToJson(
+    return _$$DiarySettingImplToJson(
       this,
     );
   }
@@ -200,11 +200,11 @@ abstract class _DiarySetting extends DiarySetting {
       @JsonKey(
           fromJson: NonNullTimestampConverter.timestampToDateTime,
           toJson: NonNullTimestampConverter.dateTimeToTimestamp)
-      required final DateTime createdAt}) = _$_DiarySetting;
+      required final DateTime createdAt}) = _$DiarySettingImpl;
   const _DiarySetting._() : super._();
 
   factory _DiarySetting.fromJson(Map<String, dynamic> json) =
-      _$_DiarySetting.fromJson;
+      _$DiarySettingImpl.fromJson;
 
   @override
   List<String> get physicalConditions;
@@ -215,6 +215,6 @@ abstract class _DiarySetting extends DiarySetting {
   DateTime get createdAt;
   @override
   @JsonKey(ignore: true)
-  _$$_DiarySettingCopyWith<_$_DiarySetting> get copyWith =>
+  _$$DiarySettingImplCopyWith<_$DiarySettingImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }

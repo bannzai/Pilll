@@ -6,7 +6,8 @@ part of 'schedule.codegen.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-_$_Schedule _$$_ScheduleFromJson(Map<String, dynamic> json) => _$_Schedule(
+_$ScheduleImpl _$$ScheduleImplFromJson(Map<String, dynamic> json) =>
+    _$ScheduleImpl(
       id: json['id'] as String?,
       title: json['title'] as String,
       date: NonNullTimestampConverter.timestampToDateTime(
@@ -19,7 +20,7 @@ _$_Schedule _$$_ScheduleFromJson(Map<String, dynamic> json) => _$_Schedule(
           json['createdDateTime'] as Timestamp),
     );
 
-Map<String, dynamic> _$$_ScheduleToJson(_$_Schedule instance) {
+Map<String, dynamic> _$$ScheduleImplToJson(_$ScheduleImpl instance) {
   final val = <String, dynamic>{};
 
   void writeNotNull(String key, dynamic value) {
@@ -37,15 +38,16 @@ Map<String, dynamic> _$$_ScheduleToJson(_$_Schedule instance) {
   return val;
 }
 
-_$_LocalNotification _$$_LocalNotificationFromJson(Map<String, dynamic> json) =>
-    _$_LocalNotification(
+_$LocalNotificationImpl _$$LocalNotificationImplFromJson(
+        Map<String, dynamic> json) =>
+    _$LocalNotificationImpl(
       localNotificationID: json['localNotificationID'] as int,
       remindDateTime: NonNullTimestampConverter.timestampToDateTime(
           json['remindDateTime'] as Timestamp),
     );
 
-Map<String, dynamic> _$$_LocalNotificationToJson(
-        _$_LocalNotification instance) =>
+Map<String, dynamic> _$$LocalNotificationImplToJson(
+        _$LocalNotificationImpl instance) =>
     <String, dynamic>{
       'localNotificationID': instance.localNotificationID,
       'remindDateTime': NonNullTimestampConverter.dateTimeToTimestamp(

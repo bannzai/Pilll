@@ -6,7 +6,8 @@ part of 'pilll_ads.codegen.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-_$_PilllAds _$$_PilllAdsFromJson(Map<String, dynamic> json) => _$_PilllAds(
+_$PilllAdsImpl _$$PilllAdsImplFromJson(Map<String, dynamic> json) =>
+    _$PilllAdsImpl(
       startDateTime: NonNullTimestampConverter.timestampToDateTime(
           json['startDateTime'] as Timestamp),
       endDateTime: NonNullTimestampConverter.timestampToDateTime(
@@ -17,7 +18,7 @@ _$_PilllAds _$$_PilllAdsFromJson(Map<String, dynamic> json) => _$_PilllAds(
       hexColor: json['hexColor'] as String,
     );
 
-Map<String, dynamic> _$$_PilllAdsToJson(_$_PilllAds instance) =>
+Map<String, dynamic> _$$PilllAdsImplToJson(_$PilllAdsImpl instance) =>
     <String, dynamic>{
       'startDateTime':
           NonNullTimestampConverter.dateTimeToTimestamp(instance.startDateTime),
