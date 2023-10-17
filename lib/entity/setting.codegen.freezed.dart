@@ -68,22 +68,22 @@ class _$ReminderTimeCopyWithImpl<$Res, $Val extends ReminderTime>
 }
 
 /// @nodoc
-abstract class _$$_ReminderTimeCopyWith<$Res>
+abstract class _$$ReminderTimeImplCopyWith<$Res>
     implements $ReminderTimeCopyWith<$Res> {
-  factory _$$_ReminderTimeCopyWith(
-          _$_ReminderTime value, $Res Function(_$_ReminderTime) then) =
-      __$$_ReminderTimeCopyWithImpl<$Res>;
+  factory _$$ReminderTimeImplCopyWith(
+          _$ReminderTimeImpl value, $Res Function(_$ReminderTimeImpl) then) =
+      __$$ReminderTimeImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call({int hour, int minute});
 }
 
 /// @nodoc
-class __$$_ReminderTimeCopyWithImpl<$Res>
-    extends _$ReminderTimeCopyWithImpl<$Res, _$_ReminderTime>
-    implements _$$_ReminderTimeCopyWith<$Res> {
-  __$$_ReminderTimeCopyWithImpl(
-      _$_ReminderTime _value, $Res Function(_$_ReminderTime) _then)
+class __$$ReminderTimeImplCopyWithImpl<$Res>
+    extends _$ReminderTimeCopyWithImpl<$Res, _$ReminderTimeImpl>
+    implements _$$ReminderTimeImplCopyWith<$Res> {
+  __$$ReminderTimeImplCopyWithImpl(
+      _$ReminderTimeImpl _value, $Res Function(_$ReminderTimeImpl) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -92,7 +92,7 @@ class __$$_ReminderTimeCopyWithImpl<$Res>
     Object? hour = null,
     Object? minute = null,
   }) {
-    return _then(_$_ReminderTime(
+    return _then(_$ReminderTimeImpl(
       hour: null == hour
           ? _value.hour
           : hour // ignore: cast_nullable_to_non_nullable
@@ -108,11 +108,12 @@ class __$$_ReminderTimeCopyWithImpl<$Res>
 /// @nodoc
 
 @JsonSerializable(explicitToJson: true)
-class _$_ReminderTime extends _ReminderTime with DiagnosticableTreeMixin {
-  const _$_ReminderTime({required this.hour, required this.minute}) : super._();
+class _$ReminderTimeImpl extends _ReminderTime with DiagnosticableTreeMixin {
+  const _$ReminderTimeImpl({required this.hour, required this.minute})
+      : super._();
 
-  factory _$_ReminderTime.fromJson(Map<String, dynamic> json) =>
-      _$$_ReminderTimeFromJson(json);
+  factory _$ReminderTimeImpl.fromJson(Map<String, dynamic> json) =>
+      _$$ReminderTimeImplFromJson(json);
 
   @override
   final int hour;
@@ -137,7 +138,7 @@ class _$_ReminderTime extends _ReminderTime with DiagnosticableTreeMixin {
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_ReminderTime &&
+            other is _$ReminderTimeImpl &&
             (identical(other.hour, hour) || other.hour == hour) &&
             (identical(other.minute, minute) || other.minute == minute));
   }
@@ -149,12 +150,12 @@ class _$_ReminderTime extends _ReminderTime with DiagnosticableTreeMixin {
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$_ReminderTimeCopyWith<_$_ReminderTime> get copyWith =>
-      __$$_ReminderTimeCopyWithImpl<_$_ReminderTime>(this, _$identity);
+  _$$ReminderTimeImplCopyWith<_$ReminderTimeImpl> get copyWith =>
+      __$$ReminderTimeImplCopyWithImpl<_$ReminderTimeImpl>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_ReminderTimeToJson(
+    return _$$ReminderTimeImplToJson(
       this,
     );
   }
@@ -162,11 +163,12 @@ class _$_ReminderTime extends _ReminderTime with DiagnosticableTreeMixin {
 
 abstract class _ReminderTime extends ReminderTime {
   const factory _ReminderTime(
-      {required final int hour, required final int minute}) = _$_ReminderTime;
+      {required final int hour,
+      required final int minute}) = _$ReminderTimeImpl;
   const _ReminderTime._() : super._();
 
   factory _ReminderTime.fromJson(Map<String, dynamic> json) =
-      _$_ReminderTime.fromJson;
+      _$ReminderTimeImpl.fromJson;
 
   @override
   int get hour;
@@ -174,7 +176,7 @@ abstract class _ReminderTime extends ReminderTime {
   int get minute;
   @override
   @JsonKey(ignore: true)
-  _$$_ReminderTimeCopyWith<_$_ReminderTime> get copyWith =>
+  _$$ReminderTimeImplCopyWith<_$ReminderTimeImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
@@ -305,10 +307,10 @@ class _$SettingCopyWithImpl<$Res, $Val extends Setting>
 }
 
 /// @nodoc
-abstract class _$$_SettingCopyWith<$Res> implements $SettingCopyWith<$Res> {
-  factory _$$_SettingCopyWith(
-          _$_Setting value, $Res Function(_$_Setting) then) =
-      __$$_SettingCopyWithImpl<$Res>;
+abstract class _$$SettingImplCopyWith<$Res> implements $SettingCopyWith<$Res> {
+  factory _$$SettingImplCopyWith(
+          _$SettingImpl value, $Res Function(_$SettingImpl) then) =
+      __$$SettingImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call(
@@ -329,10 +331,11 @@ abstract class _$$_SettingCopyWith<$Res> implements $SettingCopyWith<$Res> {
 }
 
 /// @nodoc
-class __$$_SettingCopyWithImpl<$Res>
-    extends _$SettingCopyWithImpl<$Res, _$_Setting>
-    implements _$$_SettingCopyWith<$Res> {
-  __$$_SettingCopyWithImpl(_$_Setting _value, $Res Function(_$_Setting) _then)
+class __$$SettingImplCopyWithImpl<$Res>
+    extends _$SettingCopyWithImpl<$Res, _$SettingImpl>
+    implements _$$SettingImplCopyWith<$Res> {
+  __$$SettingImplCopyWithImpl(
+      _$SettingImpl _value, $Res Function(_$SettingImpl) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -349,7 +352,7 @@ class __$$_SettingCopyWithImpl<$Res>
     Object? reminderNotificationCustomization = null,
     Object? timezoneDatabaseName = freezed,
   }) {
-    return _then(_$_Setting(
+    return _then(_$SettingImpl(
       pillSheetTypes: null == pillSheetTypes
           ? _value._pillSheetTypes
           : pillSheetTypes // ignore: cast_nullable_to_non_nullable
@@ -398,8 +401,8 @@ class __$$_SettingCopyWithImpl<$Res>
 /// @nodoc
 
 @JsonSerializable(explicitToJson: true)
-class _$_Setting extends _Setting with DiagnosticableTreeMixin {
-  const _$_Setting(
+class _$SettingImpl extends _Setting with DiagnosticableTreeMixin {
+  const _$SettingImpl(
       {final List<PillSheetType?> pillSheetTypes = const [],
       required this.pillNumberForFromMenstruation,
       required this.durationMenstruation,
@@ -415,8 +418,8 @@ class _$_Setting extends _Setting with DiagnosticableTreeMixin {
         _reminderTimes = reminderTimes,
         super._();
 
-  factory _$_Setting.fromJson(Map<String, dynamic> json) =>
-      _$$_SettingFromJson(json);
+  factory _$SettingImpl.fromJson(Map<String, dynamic> json) =>
+      _$$SettingImplFromJson(json);
 
   final List<PillSheetType?> _pillSheetTypes;
   @override
@@ -488,7 +491,7 @@ class _$_Setting extends _Setting with DiagnosticableTreeMixin {
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_Setting &&
+            other is _$SettingImpl &&
             const DeepCollectionEquality()
                 .equals(other._pillSheetTypes, _pillSheetTypes) &&
             (identical(other.pillNumberForFromMenstruation,
@@ -538,12 +541,12 @@ class _$_Setting extends _Setting with DiagnosticableTreeMixin {
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$_SettingCopyWith<_$_Setting> get copyWith =>
-      __$$_SettingCopyWithImpl<_$_Setting>(this, _$identity);
+  _$$SettingImplCopyWith<_$SettingImpl> get copyWith =>
+      __$$SettingImplCopyWithImpl<_$SettingImpl>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_SettingToJson(
+    return _$$SettingImplToJson(
       this,
     );
   }
@@ -560,10 +563,10 @@ abstract class _Setting extends Setting {
       final PillSheetAppearanceMode pillSheetAppearanceMode,
       final bool isAutomaticallyCreatePillSheet,
       final ReminderNotificationCustomization reminderNotificationCustomization,
-      required final String? timezoneDatabaseName}) = _$_Setting;
+      required final String? timezoneDatabaseName}) = _$SettingImpl;
   const _Setting._() : super._();
 
-  factory _Setting.fromJson(Map<String, dynamic> json) = _$_Setting.fromJson;
+  factory _Setting.fromJson(Map<String, dynamic> json) = _$SettingImpl.fromJson;
 
   @override
   List<PillSheetType?> get pillSheetTypes;
@@ -587,6 +590,6 @@ abstract class _Setting extends Setting {
   String? get timezoneDatabaseName;
   @override
   @JsonKey(ignore: true)
-  _$$_SettingCopyWith<_$_Setting> get copyWith =>
+  _$$SettingImplCopyWith<_$SettingImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }

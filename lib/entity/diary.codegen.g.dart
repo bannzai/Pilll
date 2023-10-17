@@ -6,7 +6,7 @@ part of 'diary.codegen.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-_$_Diary _$$_DiaryFromJson(Map<String, dynamic> json) => _$_Diary(
+_$DiaryImpl _$$DiaryImplFromJson(Map<String, dynamic> json) => _$DiaryImpl(
       date: NonNullTimestampConverter.timestampToDateTime(
           json['date'] as Timestamp),
       createdAt: TimestampConverter.timestampToDateTime(
@@ -20,7 +20,8 @@ _$_Diary _$$_DiaryFromJson(Map<String, dynamic> json) => _$_Diary(
       memo: json['memo'] as String,
     );
 
-Map<String, dynamic> _$$_DiaryToJson(_$_Diary instance) => <String, dynamic>{
+Map<String, dynamic> _$$DiaryImplToJson(_$DiaryImpl instance) =>
+    <String, dynamic>{
       'date': NonNullTimestampConverter.dateTimeToTimestamp(instance.date),
       'createdAt': TimestampConverter.dateTimeToTimestamp(instance.createdAt),
       'physicalConditionStatus':

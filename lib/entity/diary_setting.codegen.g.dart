@@ -6,8 +6,8 @@ part of 'diary_setting.codegen.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-_$_DiarySetting _$$_DiarySettingFromJson(Map<String, dynamic> json) =>
-    _$_DiarySetting(
+_$DiarySettingImpl _$$DiarySettingImplFromJson(Map<String, dynamic> json) =>
+    _$DiarySettingImpl(
       physicalConditions: (json['physicalConditions'] as List<dynamic>?)
               ?.map((e) => e as String)
               .toList() ??
@@ -16,7 +16,7 @@ _$_DiarySetting _$$_DiarySettingFromJson(Map<String, dynamic> json) =>
           json['createdAt'] as Timestamp),
     );
 
-Map<String, dynamic> _$$_DiarySettingToJson(_$_DiarySetting instance) =>
+Map<String, dynamic> _$$DiarySettingImplToJson(_$DiarySettingImpl instance) =>
     <String, dynamic>{
       'physicalConditions': instance.physicalConditions,
       'createdAt':

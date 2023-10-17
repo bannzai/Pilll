@@ -109,10 +109,11 @@ class _$PilllAdsCopyWithImpl<$Res, $Val extends PilllAds>
 }
 
 /// @nodoc
-abstract class _$$_PilllAdsCopyWith<$Res> implements $PilllAdsCopyWith<$Res> {
-  factory _$$_PilllAdsCopyWith(
-          _$_PilllAds value, $Res Function(_$_PilllAds) then) =
-      __$$_PilllAdsCopyWithImpl<$Res>;
+abstract class _$$PilllAdsImplCopyWith<$Res>
+    implements $PilllAdsCopyWith<$Res> {
+  factory _$$PilllAdsImplCopyWith(
+          _$PilllAdsImpl value, $Res Function(_$PilllAdsImpl) then) =
+      __$$PilllAdsImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call(
@@ -131,11 +132,11 @@ abstract class _$$_PilllAdsCopyWith<$Res> implements $PilllAdsCopyWith<$Res> {
 }
 
 /// @nodoc
-class __$$_PilllAdsCopyWithImpl<$Res>
-    extends _$PilllAdsCopyWithImpl<$Res, _$_PilllAds>
-    implements _$$_PilllAdsCopyWith<$Res> {
-  __$$_PilllAdsCopyWithImpl(
-      _$_PilllAds _value, $Res Function(_$_PilllAds) _then)
+class __$$PilllAdsImplCopyWithImpl<$Res>
+    extends _$PilllAdsCopyWithImpl<$Res, _$PilllAdsImpl>
+    implements _$$PilllAdsImplCopyWith<$Res> {
+  __$$PilllAdsImplCopyWithImpl(
+      _$PilllAdsImpl _value, $Res Function(_$PilllAdsImpl) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -148,7 +149,7 @@ class __$$_PilllAdsCopyWithImpl<$Res>
     Object? destinationURL = null,
     Object? hexColor = null,
   }) {
-    return _then(_$_PilllAds(
+    return _then(_$PilllAdsImpl(
       startDateTime: null == startDateTime
           ? _value.startDateTime
           : startDateTime // ignore: cast_nullable_to_non_nullable
@@ -180,8 +181,8 @@ class __$$_PilllAdsCopyWithImpl<$Res>
 /// @nodoc
 
 @JsonSerializable(explicitToJson: true)
-class _$_PilllAds extends _PilllAds {
-  _$_PilllAds(
+class _$PilllAdsImpl extends _PilllAds {
+  _$PilllAdsImpl(
       {@JsonKey(
           fromJson: NonNullTimestampConverter.timestampToDateTime,
           toJson: NonNullTimestampConverter.dateTimeToTimestamp)
@@ -196,8 +197,8 @@ class _$_PilllAds extends _PilllAds {
       required this.hexColor})
       : super._();
 
-  factory _$_PilllAds.fromJson(Map<String, dynamic> json) =>
-      _$$_PilllAdsFromJson(json);
+  factory _$PilllAdsImpl.fromJson(Map<String, dynamic> json) =>
+      _$$PilllAdsImplFromJson(json);
 
   @override
   @JsonKey(
@@ -227,7 +228,7 @@ class _$_PilllAds extends _PilllAds {
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_PilllAds &&
+            other is _$PilllAdsImpl &&
             (identical(other.startDateTime, startDateTime) ||
                 other.startDateTime == startDateTime) &&
             (identical(other.endDateTime, endDateTime) ||
@@ -250,12 +251,12 @@ class _$_PilllAds extends _PilllAds {
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$_PilllAdsCopyWith<_$_PilllAds> get copyWith =>
-      __$$_PilllAdsCopyWithImpl<_$_PilllAds>(this, _$identity);
+  _$$PilllAdsImplCopyWith<_$PilllAdsImpl> get copyWith =>
+      __$$PilllAdsImplCopyWithImpl<_$PilllAdsImpl>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_PilllAdsToJson(
+    return _$$PilllAdsImplToJson(
       this,
     );
   }
@@ -274,10 +275,11 @@ abstract class _PilllAds extends PilllAds {
       required final String description,
       required final String? imageURL,
       required final String destinationURL,
-      required final String hexColor}) = _$_PilllAds;
+      required final String hexColor}) = _$PilllAdsImpl;
   _PilllAds._() : super._();
 
-  factory _PilllAds.fromJson(Map<String, dynamic> json) = _$_PilllAds.fromJson;
+  factory _PilllAds.fromJson(Map<String, dynamic> json) =
+      _$PilllAdsImpl.fromJson;
 
   @override
   @JsonKey(
@@ -299,6 +301,6 @@ abstract class _PilllAds extends PilllAds {
   String get hexColor;
   @override
   @JsonKey(ignore: true)
-  _$$_PilllAdsCopyWith<_$_PilllAds> get copyWith =>
+  _$$PilllAdsImplCopyWith<_$PilllAdsImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }

@@ -6,19 +6,20 @@ part of 'setting.codegen.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-_$_ReminderTime _$$_ReminderTimeFromJson(Map<String, dynamic> json) =>
-    _$_ReminderTime(
+_$ReminderTimeImpl _$$ReminderTimeImplFromJson(Map<String, dynamic> json) =>
+    _$ReminderTimeImpl(
       hour: json['hour'] as int,
       minute: json['minute'] as int,
     );
 
-Map<String, dynamic> _$$_ReminderTimeToJson(_$_ReminderTime instance) =>
+Map<String, dynamic> _$$ReminderTimeImplToJson(_$ReminderTimeImpl instance) =>
     <String, dynamic>{
       'hour': instance.hour,
       'minute': instance.minute,
     };
 
-_$_Setting _$$_SettingFromJson(Map<String, dynamic> json) => _$_Setting(
+_$SettingImpl _$$SettingImplFromJson(Map<String, dynamic> json) =>
+    _$SettingImpl(
       pillSheetTypes: (json['pillSheetTypes'] as List<dynamic>?)
               ?.map((e) => $enumDecodeNullable(_$PillSheetTypeEnumMap, e))
               .toList() ??
@@ -48,7 +49,7 @@ _$_Setting _$$_SettingFromJson(Map<String, dynamic> json) => _$_Setting(
       timezoneDatabaseName: json['timezoneDatabaseName'] as String?,
     );
 
-Map<String, dynamic> _$$_SettingToJson(_$_Setting instance) =>
+Map<String, dynamic> _$$SettingImplToJson(_$SettingImpl instance) =>
     <String, dynamic>{
       'pillSheetTypes': instance.pillSheetTypes
           .map((e) => _$PillSheetTypeEnumMap[e])

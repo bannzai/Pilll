@@ -84,11 +84,11 @@ class _$PillSheetTypeInfoCopyWithImpl<$Res, $Val extends PillSheetTypeInfo>
 }
 
 /// @nodoc
-abstract class _$$_PillSheetTypeInfoCopyWith<$Res>
+abstract class _$$PillSheetTypeInfoImplCopyWith<$Res>
     implements $PillSheetTypeInfoCopyWith<$Res> {
-  factory _$$_PillSheetTypeInfoCopyWith(_$_PillSheetTypeInfo value,
-          $Res Function(_$_PillSheetTypeInfo) then) =
-      __$$_PillSheetTypeInfoCopyWithImpl<$Res>;
+  factory _$$PillSheetTypeInfoImplCopyWith(_$PillSheetTypeInfoImpl value,
+          $Res Function(_$PillSheetTypeInfoImpl) then) =
+      __$$PillSheetTypeInfoImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call(
@@ -99,11 +99,11 @@ abstract class _$$_PillSheetTypeInfoCopyWith<$Res>
 }
 
 /// @nodoc
-class __$$_PillSheetTypeInfoCopyWithImpl<$Res>
-    extends _$PillSheetTypeInfoCopyWithImpl<$Res, _$_PillSheetTypeInfo>
-    implements _$$_PillSheetTypeInfoCopyWith<$Res> {
-  __$$_PillSheetTypeInfoCopyWithImpl(
-      _$_PillSheetTypeInfo _value, $Res Function(_$_PillSheetTypeInfo) _then)
+class __$$PillSheetTypeInfoImplCopyWithImpl<$Res>
+    extends _$PillSheetTypeInfoCopyWithImpl<$Res, _$PillSheetTypeInfoImpl>
+    implements _$$PillSheetTypeInfoImplCopyWith<$Res> {
+  __$$PillSheetTypeInfoImplCopyWithImpl(_$PillSheetTypeInfoImpl _value,
+      $Res Function(_$PillSheetTypeInfoImpl) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -114,7 +114,7 @@ class __$$_PillSheetTypeInfoCopyWithImpl<$Res>
     Object? totalCount = null,
     Object? dosingPeriod = null,
   }) {
-    return _then(_$_PillSheetTypeInfo(
+    return _then(_$PillSheetTypeInfoImpl(
       pillSheetTypeReferencePath: null == pillSheetTypeReferencePath
           ? _value.pillSheetTypeReferencePath
           : pillSheetTypeReferencePath // ignore: cast_nullable_to_non_nullable
@@ -138,15 +138,15 @@ class __$$_PillSheetTypeInfoCopyWithImpl<$Res>
 /// @nodoc
 
 @JsonSerializable(explicitToJson: true)
-class _$_PillSheetTypeInfo implements _PillSheetTypeInfo {
-  const _$_PillSheetTypeInfo(
+class _$PillSheetTypeInfoImpl implements _PillSheetTypeInfo {
+  const _$PillSheetTypeInfoImpl(
       {required this.pillSheetTypeReferencePath,
       required this.name,
       required this.totalCount,
       required this.dosingPeriod});
 
-  factory _$_PillSheetTypeInfo.fromJson(Map<String, dynamic> json) =>
-      _$$_PillSheetTypeInfoFromJson(json);
+  factory _$PillSheetTypeInfoImpl.fromJson(Map<String, dynamic> json) =>
+      _$$PillSheetTypeInfoImplFromJson(json);
 
   @override
   final String pillSheetTypeReferencePath;
@@ -166,7 +166,7 @@ class _$_PillSheetTypeInfo implements _PillSheetTypeInfo {
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_PillSheetTypeInfo &&
+            other is _$PillSheetTypeInfoImpl &&
             (identical(other.pillSheetTypeReferencePath,
                     pillSheetTypeReferencePath) ||
                 other.pillSheetTypeReferencePath ==
@@ -186,13 +186,13 @@ class _$_PillSheetTypeInfo implements _PillSheetTypeInfo {
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$_PillSheetTypeInfoCopyWith<_$_PillSheetTypeInfo> get copyWith =>
-      __$$_PillSheetTypeInfoCopyWithImpl<_$_PillSheetTypeInfo>(
+  _$$PillSheetTypeInfoImplCopyWith<_$PillSheetTypeInfoImpl> get copyWith =>
+      __$$PillSheetTypeInfoImplCopyWithImpl<_$PillSheetTypeInfoImpl>(
           this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_PillSheetTypeInfoToJson(
+    return _$$PillSheetTypeInfoImplToJson(
       this,
     );
   }
@@ -203,10 +203,10 @@ abstract class _PillSheetTypeInfo implements PillSheetTypeInfo {
       {required final String pillSheetTypeReferencePath,
       required final String name,
       required final int totalCount,
-      required final int dosingPeriod}) = _$_PillSheetTypeInfo;
+      required final int dosingPeriod}) = _$PillSheetTypeInfoImpl;
 
   factory _PillSheetTypeInfo.fromJson(Map<String, dynamic> json) =
-      _$_PillSheetTypeInfo.fromJson;
+      _$PillSheetTypeInfoImpl.fromJson;
 
   @override
   String get pillSheetTypeReferencePath;
@@ -218,7 +218,7 @@ abstract class _PillSheetTypeInfo implements PillSheetTypeInfo {
   int get dosingPeriod;
   @override
   @JsonKey(ignore: true)
-  _$$_PillSheetTypeInfoCopyWith<_$_PillSheetTypeInfo> get copyWith =>
+  _$$PillSheetTypeInfoImplCopyWith<_$PillSheetTypeInfoImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
@@ -303,11 +303,11 @@ class _$RestDurationCopyWithImpl<$Res, $Val extends RestDuration>
 }
 
 /// @nodoc
-abstract class _$$_RestDurationCopyWith<$Res>
+abstract class _$$RestDurationImplCopyWith<$Res>
     implements $RestDurationCopyWith<$Res> {
-  factory _$$_RestDurationCopyWith(
-          _$_RestDuration value, $Res Function(_$_RestDuration) then) =
-      __$$_RestDurationCopyWithImpl<$Res>;
+  factory _$$RestDurationImplCopyWith(
+          _$RestDurationImpl value, $Res Function(_$RestDurationImpl) then) =
+      __$$RestDurationImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call(
@@ -326,11 +326,11 @@ abstract class _$$_RestDurationCopyWith<$Res>
 }
 
 /// @nodoc
-class __$$_RestDurationCopyWithImpl<$Res>
-    extends _$RestDurationCopyWithImpl<$Res, _$_RestDuration>
-    implements _$$_RestDurationCopyWith<$Res> {
-  __$$_RestDurationCopyWithImpl(
-      _$_RestDuration _value, $Res Function(_$_RestDuration) _then)
+class __$$RestDurationImplCopyWithImpl<$Res>
+    extends _$RestDurationCopyWithImpl<$Res, _$RestDurationImpl>
+    implements _$$RestDurationImplCopyWith<$Res> {
+  __$$RestDurationImplCopyWithImpl(
+      _$RestDurationImpl _value, $Res Function(_$RestDurationImpl) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -340,7 +340,7 @@ class __$$_RestDurationCopyWithImpl<$Res>
     Object? endDate = freezed,
     Object? createdDate = null,
   }) {
-    return _then(_$_RestDuration(
+    return _then(_$RestDurationImpl(
       beginDate: null == beginDate
           ? _value.beginDate
           : beginDate // ignore: cast_nullable_to_non_nullable
@@ -360,8 +360,8 @@ class __$$_RestDurationCopyWithImpl<$Res>
 /// @nodoc
 
 @JsonSerializable(explicitToJson: true)
-class _$_RestDuration implements _RestDuration {
-  const _$_RestDuration(
+class _$RestDurationImpl implements _RestDuration {
+  const _$RestDurationImpl(
       {@JsonKey(
           fromJson: NonNullTimestampConverter.timestampToDateTime,
           toJson: NonNullTimestampConverter.dateTimeToTimestamp)
@@ -375,8 +375,8 @@ class _$_RestDuration implements _RestDuration {
           toJson: NonNullTimestampConverter.dateTimeToTimestamp)
       required this.createdDate});
 
-  factory _$_RestDuration.fromJson(Map<String, dynamic> json) =>
-      _$$_RestDurationFromJson(json);
+  factory _$RestDurationImpl.fromJson(Map<String, dynamic> json) =>
+      _$$RestDurationImplFromJson(json);
 
   @override
   @JsonKey(
@@ -403,7 +403,7 @@ class _$_RestDuration implements _RestDuration {
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_RestDuration &&
+            other is _$RestDurationImpl &&
             (identical(other.beginDate, beginDate) ||
                 other.beginDate == beginDate) &&
             (identical(other.endDate, endDate) || other.endDate == endDate) &&
@@ -418,12 +418,12 @@ class _$_RestDuration implements _RestDuration {
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$_RestDurationCopyWith<_$_RestDuration> get copyWith =>
-      __$$_RestDurationCopyWithImpl<_$_RestDuration>(this, _$identity);
+  _$$RestDurationImplCopyWith<_$RestDurationImpl> get copyWith =>
+      __$$RestDurationImplCopyWithImpl<_$RestDurationImpl>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_RestDurationToJson(
+    return _$$RestDurationImplToJson(
       this,
     );
   }
@@ -442,10 +442,10 @@ abstract class _RestDuration implements RestDuration {
       @JsonKey(
           fromJson: NonNullTimestampConverter.timestampToDateTime,
           toJson: NonNullTimestampConverter.dateTimeToTimestamp)
-      required final DateTime createdDate}) = _$_RestDuration;
+      required final DateTime createdDate}) = _$RestDurationImpl;
 
   factory _RestDuration.fromJson(Map<String, dynamic> json) =
-      _$_RestDuration.fromJson;
+      _$RestDurationImpl.fromJson;
 
   @override
   @JsonKey(
@@ -464,7 +464,7 @@ abstract class _RestDuration implements RestDuration {
   DateTime get createdDate;
   @override
   @JsonKey(ignore: true)
-  _$$_RestDurationCopyWith<_$_RestDuration> get copyWith =>
+  _$$RestDurationImplCopyWith<_$RestDurationImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
@@ -601,10 +601,11 @@ class _$PillSheetCopyWithImpl<$Res, $Val extends PillSheet>
 }
 
 /// @nodoc
-abstract class _$$_PillSheetCopyWith<$Res> implements $PillSheetCopyWith<$Res> {
-  factory _$$_PillSheetCopyWith(
-          _$_PillSheet value, $Res Function(_$_PillSheet) then) =
-      __$$_PillSheetCopyWithImpl<$Res>;
+abstract class _$$PillSheetImplCopyWith<$Res>
+    implements $PillSheetCopyWith<$Res> {
+  factory _$$PillSheetImplCopyWith(
+          _$PillSheetImpl value, $Res Function(_$PillSheetImpl) then) =
+      __$$PillSheetImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call(
@@ -634,11 +635,11 @@ abstract class _$$_PillSheetCopyWith<$Res> implements $PillSheetCopyWith<$Res> {
 }
 
 /// @nodoc
-class __$$_PillSheetCopyWithImpl<$Res>
-    extends _$PillSheetCopyWithImpl<$Res, _$_PillSheet>
-    implements _$$_PillSheetCopyWith<$Res> {
-  __$$_PillSheetCopyWithImpl(
-      _$_PillSheet _value, $Res Function(_$_PillSheet) _then)
+class __$$PillSheetImplCopyWithImpl<$Res>
+    extends _$PillSheetCopyWithImpl<$Res, _$PillSheetImpl>
+    implements _$$PillSheetImplCopyWith<$Res> {
+  __$$PillSheetImplCopyWithImpl(
+      _$PillSheetImpl _value, $Res Function(_$PillSheetImpl) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -653,7 +654,7 @@ class __$$_PillSheetCopyWithImpl<$Res>
     Object? groupIndex = null,
     Object? restDurations = null,
   }) {
-    return _then(_$_PillSheet(
+    return _then(_$PillSheetImpl(
       id: freezed == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
@@ -693,8 +694,8 @@ class __$$_PillSheetCopyWithImpl<$Res>
 /// @nodoc
 
 @JsonSerializable(explicitToJson: true)
-class _$_PillSheet extends _PillSheet {
-  const _$_PillSheet(
+class _$PillSheetImpl extends _PillSheet {
+  const _$PillSheetImpl(
       {@JsonKey(includeIfNull: false) required this.id,
       @JsonKey() required this.typeInfo,
       @JsonKey(
@@ -718,8 +719,8 @@ class _$_PillSheet extends _PillSheet {
       : _restDurations = restDurations,
         super._();
 
-  factory _$_PillSheet.fromJson(Map<String, dynamic> json) =>
-      _$$_PillSheetFromJson(json);
+  factory _$PillSheetImpl.fromJson(Map<String, dynamic> json) =>
+      _$$PillSheetImplFromJson(json);
 
   @override
   @JsonKey(includeIfNull: false)
@@ -768,7 +769,7 @@ class _$_PillSheet extends _PillSheet {
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_PillSheet &&
+            other is _$PillSheetImpl &&
             (identical(other.id, id) || other.id == id) &&
             (identical(other.typeInfo, typeInfo) ||
                 other.typeInfo == typeInfo) &&
@@ -802,12 +803,12 @@ class _$_PillSheet extends _PillSheet {
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$_PillSheetCopyWith<_$_PillSheet> get copyWith =>
-      __$$_PillSheetCopyWithImpl<_$_PillSheet>(this, _$identity);
+  _$$PillSheetImplCopyWith<_$PillSheetImpl> get copyWith =>
+      __$$PillSheetImplCopyWithImpl<_$PillSheetImpl>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_PillSheetToJson(
+    return _$$PillSheetImplToJson(
       this,
     );
   }
@@ -834,11 +835,11 @@ abstract class _PillSheet extends PillSheet {
           toJson: TimestampConverter.dateTimeToTimestamp)
       final DateTime? deletedAt,
       final int groupIndex,
-      final List<RestDuration> restDurations}) = _$_PillSheet;
+      final List<RestDuration> restDurations}) = _$PillSheetImpl;
   const _PillSheet._() : super._();
 
   factory _PillSheet.fromJson(Map<String, dynamic> json) =
-      _$_PillSheet.fromJson;
+      _$PillSheetImpl.fromJson;
 
   @override
   @JsonKey(includeIfNull: false)
@@ -872,6 +873,6 @@ abstract class _PillSheet extends PillSheet {
   List<RestDuration> get restDurations;
   @override
   @JsonKey(ignore: true)
-  _$$_PillSheetCopyWith<_$_PillSheet> get copyWith =>
+  _$$PillSheetImplCopyWith<_$PillSheetImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }

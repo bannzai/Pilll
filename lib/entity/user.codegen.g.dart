@@ -6,17 +6,17 @@ part of 'user.codegen.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-_$_UserPrivate _$$_UserPrivateFromJson(Map<String, dynamic> json) =>
-    _$_UserPrivate(
+_$UserPrivateImpl _$$UserPrivateImplFromJson(Map<String, dynamic> json) =>
+    _$UserPrivateImpl(
       fcmToken: json['fcmToken'] as String?,
     );
 
-Map<String, dynamic> _$$_UserPrivateToJson(_$_UserPrivate instance) =>
+Map<String, dynamic> _$$UserPrivateImplToJson(_$UserPrivateImpl instance) =>
     <String, dynamic>{
       'fcmToken': instance.fcmToken,
     };
 
-_$_User _$$_UserFromJson(Map<String, dynamic> json) => _$_User(
+_$UserImpl _$$UserImplFromJson(Map<String, dynamic> json) => _$UserImpl(
       id: json['id'] as String?,
       setting: json['settings'] == null
           ? null
@@ -50,7 +50,8 @@ _$_User _$$_UserFromJson(Map<String, dynamic> json) => _$_User(
           json['discountEntitlementDeadlineDate'] as Timestamp?),
     );
 
-Map<String, dynamic> _$$_UserToJson(_$_User instance) => <String, dynamic>{
+Map<String, dynamic> _$$UserImplToJson(_$UserImpl instance) =>
+    <String, dynamic>{
       'id': instance.id,
       'settings': instance.setting?.toJson(),
       'userIDWhenCreateUser': instance.userIDWhenCreateUser,

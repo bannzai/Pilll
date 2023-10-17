@@ -6,9 +6,9 @@ part of 'pill_sheet_modified_history.codegen.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-_$_PillSheetModifiedHistory _$$_PillSheetModifiedHistoryFromJson(
+_$PillSheetModifiedHistoryImpl _$$PillSheetModifiedHistoryImplFromJson(
         Map<String, dynamic> json) =>
-    _$_PillSheetModifiedHistory(
+    _$PillSheetModifiedHistoryImpl(
       version: json['version'] ?? "v1",
       id: json['id'] as String?,
       actionType: json['actionType'] as String,
@@ -43,8 +43,8 @@ _$_PillSheetModifiedHistory _$$_PillSheetModifiedHistoryFromJson(
           : PillSheet.fromJson(json['after'] as Map<String, dynamic>),
     );
 
-Map<String, dynamic> _$$_PillSheetModifiedHistoryToJson(
-    _$_PillSheetModifiedHistory instance) {
+Map<String, dynamic> _$$PillSheetModifiedHistoryImplToJson(
+    _$PillSheetModifiedHistoryImpl instance) {
   final val = <String, dynamic>{
     'version': instance.version,
   };

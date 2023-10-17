@@ -6,16 +6,17 @@ part of 'pill_sheet.codegen.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-_$_PillSheetTypeInfo _$$_PillSheetTypeInfoFromJson(Map<String, dynamic> json) =>
-    _$_PillSheetTypeInfo(
+_$PillSheetTypeInfoImpl _$$PillSheetTypeInfoImplFromJson(
+        Map<String, dynamic> json) =>
+    _$PillSheetTypeInfoImpl(
       pillSheetTypeReferencePath: json['pillSheetTypeReferencePath'] as String,
       name: json['name'] as String,
       totalCount: json['totalCount'] as int,
       dosingPeriod: json['dosingPeriod'] as int,
     );
 
-Map<String, dynamic> _$$_PillSheetTypeInfoToJson(
-        _$_PillSheetTypeInfo instance) =>
+Map<String, dynamic> _$$PillSheetTypeInfoImplToJson(
+        _$PillSheetTypeInfoImpl instance) =>
     <String, dynamic>{
       'pillSheetTypeReferencePath': instance.pillSheetTypeReferencePath,
       'name': instance.name,
@@ -23,8 +24,8 @@ Map<String, dynamic> _$$_PillSheetTypeInfoToJson(
       'dosingPeriod': instance.dosingPeriod,
     };
 
-_$_RestDuration _$$_RestDurationFromJson(Map<String, dynamic> json) =>
-    _$_RestDuration(
+_$RestDurationImpl _$$RestDurationImplFromJson(Map<String, dynamic> json) =>
+    _$RestDurationImpl(
       beginDate: NonNullTimestampConverter.timestampToDateTime(
           json['beginDate'] as Timestamp),
       endDate:
@@ -33,7 +34,7 @@ _$_RestDuration _$$_RestDurationFromJson(Map<String, dynamic> json) =>
           json['createdDate'] as Timestamp),
     );
 
-Map<String, dynamic> _$$_RestDurationToJson(_$_RestDuration instance) =>
+Map<String, dynamic> _$$RestDurationImplToJson(_$RestDurationImpl instance) =>
     <String, dynamic>{
       'beginDate':
           NonNullTimestampConverter.dateTimeToTimestamp(instance.beginDate),
@@ -42,7 +43,8 @@ Map<String, dynamic> _$$_RestDurationToJson(_$_RestDuration instance) =>
           NonNullTimestampConverter.dateTimeToTimestamp(instance.createdDate),
     };
 
-_$_PillSheet _$$_PillSheetFromJson(Map<String, dynamic> json) => _$_PillSheet(
+_$PillSheetImpl _$$PillSheetImplFromJson(Map<String, dynamic> json) =>
+    _$PillSheetImpl(
       id: json['id'] as String?,
       typeInfo:
           PillSheetTypeInfo.fromJson(json['typeInfo'] as Map<String, dynamic>),
@@ -61,7 +63,7 @@ _$_PillSheet _$$_PillSheetFromJson(Map<String, dynamic> json) => _$_PillSheet(
           const [],
     );
 
-Map<String, dynamic> _$$_PillSheetToJson(_$_PillSheet instance) {
+Map<String, dynamic> _$$PillSheetImplToJson(_$PillSheetImpl instance) {
   final val = <String, dynamic>{};
 
   void writeNotNull(String key, dynamic value) {

@@ -123,11 +123,11 @@ class _$MenstruationCopyWithImpl<$Res, $Val extends Menstruation>
 }
 
 /// @nodoc
-abstract class _$$_MenstruationCopyWith<$Res>
+abstract class _$$MenstruationImplCopyWith<$Res>
     implements $MenstruationCopyWith<$Res> {
-  factory _$$_MenstruationCopyWith(
-          _$_Menstruation value, $Res Function(_$_Menstruation) then) =
-      __$$_MenstruationCopyWithImpl<$Res>;
+  factory _$$MenstruationImplCopyWith(
+          _$MenstruationImpl value, $Res Function(_$MenstruationImpl) then) =
+      __$$MenstruationImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call(
@@ -152,11 +152,11 @@ abstract class _$$_MenstruationCopyWith<$Res>
 }
 
 /// @nodoc
-class __$$_MenstruationCopyWithImpl<$Res>
-    extends _$MenstruationCopyWithImpl<$Res, _$_Menstruation>
-    implements _$$_MenstruationCopyWith<$Res> {
-  __$$_MenstruationCopyWithImpl(
-      _$_Menstruation _value, $Res Function(_$_Menstruation) _then)
+class __$$MenstruationImplCopyWithImpl<$Res>
+    extends _$MenstruationCopyWithImpl<$Res, _$MenstruationImpl>
+    implements _$$MenstruationImplCopyWith<$Res> {
+  __$$MenstruationImplCopyWithImpl(
+      _$MenstruationImpl _value, $Res Function(_$MenstruationImpl) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -169,7 +169,7 @@ class __$$_MenstruationCopyWithImpl<$Res>
     Object? createdAt = null,
     Object? healthKitSampleDataUUID = freezed,
   }) {
-    return _then(_$_Menstruation(
+    return _then(_$MenstruationImpl(
       id: freezed == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
@@ -201,8 +201,8 @@ class __$$_MenstruationCopyWithImpl<$Res>
 /// @nodoc
 
 @JsonSerializable(explicitToJson: true)
-class _$_Menstruation extends _Menstruation {
-  const _$_Menstruation(
+class _$MenstruationImpl extends _Menstruation {
+  const _$MenstruationImpl(
       {@JsonKey(includeIfNull: false) this.id,
       @JsonKey(
           fromJson: NonNullTimestampConverter.timestampToDateTime,
@@ -223,8 +223,8 @@ class _$_Menstruation extends _Menstruation {
       this.healthKitSampleDataUUID})
       : super._();
 
-  factory _$_Menstruation.fromJson(Map<String, dynamic> json) =>
-      _$$_MenstruationFromJson(json);
+  factory _$MenstruationImpl.fromJson(Map<String, dynamic> json) =>
+      _$$MenstruationImplFromJson(json);
 
   @override
   @JsonKey(includeIfNull: false)
@@ -261,7 +261,7 @@ class _$_Menstruation extends _Menstruation {
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_Menstruation &&
+            other is _$MenstruationImpl &&
             (identical(other.id, id) || other.id == id) &&
             (identical(other.beginDate, beginDate) ||
                 other.beginDate == beginDate) &&
@@ -283,12 +283,12 @@ class _$_Menstruation extends _Menstruation {
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$_MenstruationCopyWith<_$_Menstruation> get copyWith =>
-      __$$_MenstruationCopyWithImpl<_$_Menstruation>(this, _$identity);
+  _$$MenstruationImplCopyWith<_$MenstruationImpl> get copyWith =>
+      __$$MenstruationImplCopyWithImpl<_$MenstruationImpl>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_MenstruationToJson(
+    return _$$MenstruationImplToJson(
       this,
     );
   }
@@ -313,11 +313,11 @@ abstract class _Menstruation extends Menstruation {
           fromJson: NonNullTimestampConverter.timestampToDateTime,
           toJson: NonNullTimestampConverter.dateTimeToTimestamp)
       required final DateTime createdAt,
-      final String? healthKitSampleDataUUID}) = _$_Menstruation;
+      final String? healthKitSampleDataUUID}) = _$MenstruationImpl;
   const _Menstruation._() : super._();
 
   factory _Menstruation.fromJson(Map<String, dynamic> json) =
-      _$_Menstruation.fromJson;
+      _$MenstruationImpl.fromJson;
 
   @override
   @JsonKey(includeIfNull: false)
@@ -346,6 +346,6 @@ abstract class _Menstruation extends Menstruation {
   String? get healthKitSampleDataUUID;
   @override
   @JsonKey(ignore: true)
-  _$$_MenstruationCopyWith<_$_Menstruation> get copyWith =>
+  _$$MenstruationImplCopyWith<_$MenstruationImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }

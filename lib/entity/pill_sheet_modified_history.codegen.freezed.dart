@@ -289,12 +289,12 @@ class _$PillSheetModifiedHistoryCopyWithImpl<$Res,
 }
 
 /// @nodoc
-abstract class _$$_PillSheetModifiedHistoryCopyWith<$Res>
+abstract class _$$PillSheetModifiedHistoryImplCopyWith<$Res>
     implements $PillSheetModifiedHistoryCopyWith<$Res> {
-  factory _$$_PillSheetModifiedHistoryCopyWith(
-          _$_PillSheetModifiedHistory value,
-          $Res Function(_$_PillSheetModifiedHistory) then) =
-      __$$_PillSheetModifiedHistoryCopyWithImpl<$Res>;
+  factory _$$PillSheetModifiedHistoryImplCopyWith(
+          _$PillSheetModifiedHistoryImpl value,
+          $Res Function(_$PillSheetModifiedHistoryImpl) then) =
+      __$$PillSheetModifiedHistoryImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call(
@@ -341,12 +341,13 @@ abstract class _$$_PillSheetModifiedHistoryCopyWith<$Res>
 }
 
 /// @nodoc
-class __$$_PillSheetModifiedHistoryCopyWithImpl<$Res>
+class __$$PillSheetModifiedHistoryImplCopyWithImpl<$Res>
     extends _$PillSheetModifiedHistoryCopyWithImpl<$Res,
-        _$_PillSheetModifiedHistory>
-    implements _$$_PillSheetModifiedHistoryCopyWith<$Res> {
-  __$$_PillSheetModifiedHistoryCopyWithImpl(_$_PillSheetModifiedHistory _value,
-      $Res Function(_$_PillSheetModifiedHistory) _then)
+        _$PillSheetModifiedHistoryImpl>
+    implements _$$PillSheetModifiedHistoryImplCopyWith<$Res> {
+  __$$PillSheetModifiedHistoryImplCopyWithImpl(
+      _$PillSheetModifiedHistoryImpl _value,
+      $Res Function(_$PillSheetModifiedHistoryImpl) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -370,7 +371,7 @@ class __$$_PillSheetModifiedHistoryCopyWithImpl<$Res>
     Object? before = freezed,
     Object? after = freezed,
   }) {
-    return _then(_$_PillSheetModifiedHistory(
+    return _then(_$PillSheetModifiedHistoryImpl(
       version: freezed == version ? _value.version! : version,
       id: freezed == id
           ? _value.id
@@ -443,8 +444,8 @@ class __$$_PillSheetModifiedHistoryCopyWithImpl<$Res>
 /// @nodoc
 
 @JsonSerializable(explicitToJson: true)
-class _$_PillSheetModifiedHistory extends _PillSheetModifiedHistory {
-  const _$_PillSheetModifiedHistory(
+class _$PillSheetModifiedHistoryImpl extends _PillSheetModifiedHistory {
+  const _$PillSheetModifiedHistoryImpl(
       {this.version = "v1",
       @JsonKey(includeIfNull: false) required this.id,
       required this.actionType,
@@ -476,8 +477,8 @@ class _$_PillSheetModifiedHistory extends _PillSheetModifiedHistory {
       required this.after})
       : super._();
 
-  factory _$_PillSheetModifiedHistory.fromJson(Map<String, dynamic> json) =>
-      _$$_PillSheetModifiedHistoryFromJson(json);
+  factory _$PillSheetModifiedHistoryImpl.fromJson(Map<String, dynamic> json) =>
+      _$$PillSheetModifiedHistoryImplFromJson(json);
 
 // Added since 2023-08-01
   @override
@@ -562,7 +563,7 @@ class _$_PillSheetModifiedHistory extends _PillSheetModifiedHistory {
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_PillSheetModifiedHistory &&
+            other is _$PillSheetModifiedHistoryImpl &&
             const DeepCollectionEquality().equals(other.version, version) &&
             (identical(other.id, id) || other.id == id) &&
             (identical(other.actionType, actionType) ||
@@ -620,13 +621,13 @@ class _$_PillSheetModifiedHistory extends _PillSheetModifiedHistory {
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$_PillSheetModifiedHistoryCopyWith<_$_PillSheetModifiedHistory>
-      get copyWith => __$$_PillSheetModifiedHistoryCopyWithImpl<
-          _$_PillSheetModifiedHistory>(this, _$identity);
+  _$$PillSheetModifiedHistoryImplCopyWith<_$PillSheetModifiedHistoryImpl>
+      get copyWith => __$$PillSheetModifiedHistoryImplCopyWithImpl<
+          _$PillSheetModifiedHistoryImpl>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_PillSheetModifiedHistoryToJson(
+    return _$$PillSheetModifiedHistoryImplToJson(
       this,
     );
   }
@@ -662,11 +663,11 @@ abstract class _PillSheetModifiedHistory extends PillSheetModifiedHistory {
       required final String? beforePillSheetID,
       required final String? afterPillSheetID,
       required final PillSheet? before,
-      required final PillSheet? after}) = _$_PillSheetModifiedHistory;
+      required final PillSheet? after}) = _$PillSheetModifiedHistoryImpl;
   const _PillSheetModifiedHistory._() : super._();
 
   factory _PillSheetModifiedHistory.fromJson(Map<String, dynamic> json) =
-      _$_PillSheetModifiedHistory.fromJson;
+      _$PillSheetModifiedHistoryImpl.fromJson;
 
   @override // Added since 2023-08-01
   dynamic get version;
@@ -732,6 +733,6 @@ abstract class _PillSheetModifiedHistory extends PillSheetModifiedHistory {
   PillSheet? get after;
   @override
   @JsonKey(ignore: true)
-  _$$_PillSheetModifiedHistoryCopyWith<_$_PillSheetModifiedHistory>
+  _$$PillSheetModifiedHistoryImplCopyWith<_$PillSheetModifiedHistoryImpl>
       get copyWith => throw _privateConstructorUsedError;
 }

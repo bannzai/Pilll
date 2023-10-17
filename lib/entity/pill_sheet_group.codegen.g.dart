@@ -6,8 +6,8 @@ part of 'pill_sheet_group.codegen.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-_$_PillSheetGroup _$$_PillSheetGroupFromJson(Map<String, dynamic> json) =>
-    _$_PillSheetGroup(
+_$PillSheetGroupImpl _$$PillSheetGroupImplFromJson(Map<String, dynamic> json) =>
+    _$PillSheetGroupImpl(
       id: json['id'] as String?,
       pillSheetIDs: (json['pillSheetIDs'] as List<dynamic>)
           .map((e) => e as String)
@@ -25,7 +25,8 @@ _$_PillSheetGroup _$$_PillSheetGroupFromJson(Map<String, dynamic> json) =>
               json['displayNumberSetting'] as Map<String, dynamic>),
     );
 
-Map<String, dynamic> _$$_PillSheetGroupToJson(_$_PillSheetGroup instance) {
+Map<String, dynamic> _$$PillSheetGroupImplToJson(
+    _$PillSheetGroupImpl instance) {
   final val = <String, dynamic>{};
 
   void writeNotNull(String key, dynamic value) {
@@ -44,15 +45,16 @@ Map<String, dynamic> _$$_PillSheetGroupToJson(_$_PillSheetGroup instance) {
   return val;
 }
 
-_$_PillSheetGroupDisplayNumberSetting
-    _$$_PillSheetGroupDisplayNumberSettingFromJson(Map<String, dynamic> json) =>
-        _$_PillSheetGroupDisplayNumberSetting(
+_$PillSheetGroupDisplayNumberSettingImpl
+    _$$PillSheetGroupDisplayNumberSettingImplFromJson(
+            Map<String, dynamic> json) =>
+        _$PillSheetGroupDisplayNumberSettingImpl(
           beginPillNumber: json['beginPillNumber'] as int?,
           endPillNumber: json['endPillNumber'] as int?,
         );
 
-Map<String, dynamic> _$$_PillSheetGroupDisplayNumberSettingToJson(
-        _$_PillSheetGroupDisplayNumberSetting instance) =>
+Map<String, dynamic> _$$PillSheetGroupDisplayNumberSettingImplToJson(
+        _$PillSheetGroupDisplayNumberSettingImpl instance) =>
     <String, dynamic>{
       'beginPillNumber': instance.beginPillNumber,
       'endPillNumber': instance.endPillNumber,

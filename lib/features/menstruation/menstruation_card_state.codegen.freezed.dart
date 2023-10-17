@@ -70,22 +70,24 @@ class _$MenstruationCardStateCopyWithImpl<$Res,
 }
 
 /// @nodoc
-abstract class _$$_MenstruationCardStateCopyWith<$Res>
+abstract class _$$MenstruationCardStateImplCopyWith<$Res>
     implements $MenstruationCardStateCopyWith<$Res> {
-  factory _$$_MenstruationCardStateCopyWith(_$_MenstruationCardState value,
-          $Res Function(_$_MenstruationCardState) then) =
-      __$$_MenstruationCardStateCopyWithImpl<$Res>;
+  factory _$$MenstruationCardStateImplCopyWith(
+          _$MenstruationCardStateImpl value,
+          $Res Function(_$MenstruationCardStateImpl) then) =
+      __$$MenstruationCardStateImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call({String title, DateTime scheduleDate, String countdownString});
 }
 
 /// @nodoc
-class __$$_MenstruationCardStateCopyWithImpl<$Res>
-    extends _$MenstruationCardStateCopyWithImpl<$Res, _$_MenstruationCardState>
-    implements _$$_MenstruationCardStateCopyWith<$Res> {
-  __$$_MenstruationCardStateCopyWithImpl(_$_MenstruationCardState _value,
-      $Res Function(_$_MenstruationCardState) _then)
+class __$$MenstruationCardStateImplCopyWithImpl<$Res>
+    extends _$MenstruationCardStateCopyWithImpl<$Res,
+        _$MenstruationCardStateImpl>
+    implements _$$MenstruationCardStateImplCopyWith<$Res> {
+  __$$MenstruationCardStateImplCopyWithImpl(_$MenstruationCardStateImpl _value,
+      $Res Function(_$MenstruationCardStateImpl) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -95,7 +97,7 @@ class __$$_MenstruationCardStateCopyWithImpl<$Res>
     Object? scheduleDate = null,
     Object? countdownString = null,
   }) {
-    return _then(_$_MenstruationCardState(
+    return _then(_$MenstruationCardStateImpl(
       title: null == title
           ? _value.title
           : title // ignore: cast_nullable_to_non_nullable
@@ -114,8 +116,8 @@ class __$$_MenstruationCardStateCopyWithImpl<$Res>
 
 /// @nodoc
 
-class _$_MenstruationCardState extends _MenstruationCardState {
-  const _$_MenstruationCardState(
+class _$MenstruationCardStateImpl extends _MenstruationCardState {
+  const _$MenstruationCardStateImpl(
       {required this.title,
       required this.scheduleDate,
       required this.countdownString})
@@ -137,7 +139,7 @@ class _$_MenstruationCardState extends _MenstruationCardState {
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_MenstruationCardState &&
+            other is _$MenstruationCardStateImpl &&
             (identical(other.title, title) || other.title == title) &&
             (identical(other.scheduleDate, scheduleDate) ||
                 other.scheduleDate == scheduleDate) &&
@@ -152,16 +154,16 @@ class _$_MenstruationCardState extends _MenstruationCardState {
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$_MenstruationCardStateCopyWith<_$_MenstruationCardState> get copyWith =>
-      __$$_MenstruationCardStateCopyWithImpl<_$_MenstruationCardState>(
-          this, _$identity);
+  _$$MenstruationCardStateImplCopyWith<_$MenstruationCardStateImpl>
+      get copyWith => __$$MenstruationCardStateImplCopyWithImpl<
+          _$MenstruationCardStateImpl>(this, _$identity);
 }
 
 abstract class _MenstruationCardState extends MenstruationCardState {
   const factory _MenstruationCardState(
       {required final String title,
       required final DateTime scheduleDate,
-      required final String countdownString}) = _$_MenstruationCardState;
+      required final String countdownString}) = _$MenstruationCardStateImpl;
   const _MenstruationCardState._() : super._();
 
   @override
@@ -172,6 +174,6 @@ abstract class _MenstruationCardState extends MenstruationCardState {
   String get countdownString;
   @override
   @JsonKey(ignore: true)
-  _$$_MenstruationCardStateCopyWith<_$_MenstruationCardState> get copyWith =>
-      throw _privateConstructorUsedError;
+  _$$MenstruationCardStateImplCopyWith<_$MenstruationCardStateImpl>
+      get copyWith => throw _privateConstructorUsedError;
 }
