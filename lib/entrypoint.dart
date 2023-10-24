@@ -54,9 +54,6 @@ Future<void> entrypoint() async {
         await remoteConfig.fetchAndActivate();
       }),
     ).wait;
-    remoteConfig.onConfigUpdated.listen((event) async {
-      await remoteConfig.activate();
-    });
 
     // MEMO: FirebaseCrashlytics#recordFlutterError called dumpErrorToConsole in function.
     FlutterError.onError = FirebaseCrashlytics.instance.recordFlutterError;
