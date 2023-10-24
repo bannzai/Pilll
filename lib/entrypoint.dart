@@ -163,8 +163,8 @@ class App extends StatelessWidget {
                   switch (screenType) {
                     case InitialSettingOrAppPageScreenType.initialSetting:
                       return ShowPaywallOnAppLaunch(
-                        builder: (_) => SkipInitialSetting(builder: (context, skipOnBoarding) {
-                          if (!skipOnBoarding) {
+                        builder: (_) => SkipInitialSetting(builder: (context, skipInitialSetting) {
+                          if (!skipInitialSetting) {
                             return InitialSettingPillSheetGroupPageRoute.screen();
                           } else {
                             return const HomePage();

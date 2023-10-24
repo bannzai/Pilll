@@ -25,7 +25,7 @@ class SkipInitialSetting extends HookConsumerWidget {
 
     useEffect(() {
       final f = (() async {
-        if (remoteConfigParameter.skipOnBoarding) {
+        if (remoteConfigParameter.skipInitialSetting) {
           await initialSettingStateNotifier.register();
           await registerReminderLocalNotification.call();
           await AppRouter.endInitialSetting(navigator, didEndInitialSettingNotifier);
@@ -36,6 +36,6 @@ class SkipInitialSetting extends HookConsumerWidget {
       return null;
     }, []);
 
-    return builder(context, remoteConfigParameter.skipOnBoarding);
+    return builder(context, remoteConfigParameter.skipInitialSetting);
   }
 }

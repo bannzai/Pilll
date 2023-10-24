@@ -12,7 +12,7 @@ Future<void> setupRemoteConfig() async {
     )),
     remoteConfig.setDefaults({
       RemoteConfigKeys.isPaywallFirst: RemoteConfigParameterDefaultValues.isPaywallFirst,
-      RemoteConfigKeys.skipOnBoarding: RemoteConfigParameterDefaultValues.skipOnBoarding,
+      RemoteConfigKeys.skipInitialSetting: RemoteConfigParameterDefaultValues.skipInitialSetting,
       RemoteConfigKeys.trialDeadlineDateOffsetDay: RemoteConfigParameterDefaultValues.trialDeadlineDateOffsetDay,
       RemoteConfigKeys.discountEntitlementOffsetDay: RemoteConfigParameterDefaultValues.discountEntitlementOffsetDay,
       RemoteConfigKeys.discountCountdownBoundaryHour: RemoteConfigParameterDefaultValues.discountCountdownBoundaryHour,
