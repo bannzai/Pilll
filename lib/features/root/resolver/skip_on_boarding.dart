@@ -3,7 +3,7 @@ import 'package:flutter_hooks/flutter_hooks.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
 import 'package:pilll/features/home/home_page.dart';
 import 'package:pilll/features/initial_setting/initial_setting_state_notifier.dart';
-import 'package:pilll/features/root/initial_setting_or_app_page.dart';
+import 'package:pilll/features/root/resolver/initial_setting_or_app_page.dart';
 import 'package:pilll/provider/remote_config_parameter.dart';
 import 'package:pilll/provider/typed_shared_preferences.dart';
 import 'package:pilll/utils/local_notification.dart';

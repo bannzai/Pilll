@@ -2,7 +2,7 @@ import 'package:firebase_auth/firebase_auth.dart' as firebase_auth;
 import 'package:pilll/components/molecules/indicator.dart';
 import 'package:pilll/entity/setting.codegen.dart';
 import 'package:pilll/entity/user.codegen.dart';
-import 'package:pilll/features/root/initial_setting_or_app_page.dart';
+import 'package:pilll/features/root/resolver/initial_setting_or_app_page.dart';
 import 'package:pilll/features/root/root_page.dart';
 import 'package:pilll/provider/auth.dart';
 import 'package:pilll/provider/database.dart';
