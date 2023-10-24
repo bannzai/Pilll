@@ -46,7 +46,7 @@ class InitialSettingState with _$InitialSettingState {
 
   Future<Setting> buildSetting() async {
     const menstruationDuration = 4;
-    final maxPillCount = pillSheetTypes.map((e) => e.totalCount).reduce((value, element) => value + element);
+    final maxPillCount = pillSheetTypes.map((e) => e.totalCount).fold(0, (previousValue, element) => previousValue + element);
     final pillNumberForFromMenstruation = maxPillCount - menstruationDuration;
 
     final setting = Setting(
