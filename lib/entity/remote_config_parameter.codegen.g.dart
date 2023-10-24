@@ -9,11 +9,18 @@ part of 'remote_config_parameter.codegen.dart';
 _$RemoteConfigParameterImpl _$$RemoteConfigParameterImplFromJson(
         Map<String, dynamic> json) =>
     _$RemoteConfigParameterImpl(
-      isPaywallFirst: json['isPaywallFirst'] as bool? ?? false,
-      isUnnecessaryOnBoarding:
-          json['isUnnecessaryOnBoarding'] as bool? ?? false,
-      trialDay: json['trialDay'] as bool? ?? false,
-      discountDay: json['discountDay'] as bool? ?? false,
+      isPaywallFirst: json['isPaywallFirst'] as bool? ??
+          RemoteConfigParameterDefaultValues.isPaywallFirst,
+      isUnnecessaryOnBoarding: json['isUnnecessaryOnBoarding'] as bool? ??
+          RemoteConfigParameterDefaultValues.isUnnecessaryOnBoarding,
+      trialDeadlineDateOffsetDay: json['trialDeadlineDateOffsetDay'] as int? ??
+          RemoteConfigParameterDefaultValues.trialDeadlineDateOffsetDay,
+      discountEntitlementOffsetDay:
+          json['discountEntitlementOffsetDay'] as int? ??
+              RemoteConfigParameterDefaultValues.discountEntitlementOffsetDay,
+      discountCountdownBoundaryHour:
+          json['discountCountdownBoundaryHour'] as int? ??
+              RemoteConfigParameterDefaultValues.discountCountdownBoundaryHour,
     );
 
 Map<String, dynamic> _$$RemoteConfigParameterImplToJson(
@@ -21,6 +28,7 @@ Map<String, dynamic> _$$RemoteConfigParameterImplToJson(
     <String, dynamic>{
       'isPaywallFirst': instance.isPaywallFirst,
       'isUnnecessaryOnBoarding': instance.isUnnecessaryOnBoarding,
-      'trialDay': instance.trialDay,
-      'discountDay': instance.discountDay,
+      'trialDeadlineDateOffsetDay': instance.trialDeadlineDateOffsetDay,
+      'discountEntitlementOffsetDay': instance.discountEntitlementOffsetDay,
+      'discountCountdownBoundaryHour': instance.discountCountdownBoundaryHour,
     };

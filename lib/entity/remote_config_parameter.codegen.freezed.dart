@@ -23,8 +23,9 @@ RemoteConfigParameter _$RemoteConfigParameterFromJson(
 mixin _$RemoteConfigParameter {
   bool get isPaywallFirst => throw _privateConstructorUsedError;
   bool get isUnnecessaryOnBoarding => throw _privateConstructorUsedError;
-  bool get trialDay => throw _privateConstructorUsedError;
-  bool get discountDay => throw _privateConstructorUsedError;
+  int get trialDeadlineDateOffsetDay => throw _privateConstructorUsedError;
+  int get discountEntitlementOffsetDay => throw _privateConstructorUsedError;
+  int get discountCountdownBoundaryHour => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
@@ -41,8 +42,9 @@ abstract class $RemoteConfigParameterCopyWith<$Res> {
   $Res call(
       {bool isPaywallFirst,
       bool isUnnecessaryOnBoarding,
-      bool trialDay,
-      bool discountDay});
+      int trialDeadlineDateOffsetDay,
+      int discountEntitlementOffsetDay,
+      int discountCountdownBoundaryHour});
 }
 
 /// @nodoc
@@ -61,8 +63,9 @@ class _$RemoteConfigParameterCopyWithImpl<$Res,
   $Res call({
     Object? isPaywallFirst = null,
     Object? isUnnecessaryOnBoarding = null,
-    Object? trialDay = null,
-    Object? discountDay = null,
+    Object? trialDeadlineDateOffsetDay = null,
+    Object? discountEntitlementOffsetDay = null,
+    Object? discountCountdownBoundaryHour = null,
   }) {
     return _then(_value.copyWith(
       isPaywallFirst: null == isPaywallFirst
@@ -73,14 +76,18 @@ class _$RemoteConfigParameterCopyWithImpl<$Res,
           ? _value.isUnnecessaryOnBoarding
           : isUnnecessaryOnBoarding // ignore: cast_nullable_to_non_nullable
               as bool,
-      trialDay: null == trialDay
-          ? _value.trialDay
-          : trialDay // ignore: cast_nullable_to_non_nullable
-              as bool,
-      discountDay: null == discountDay
-          ? _value.discountDay
-          : discountDay // ignore: cast_nullable_to_non_nullable
-              as bool,
+      trialDeadlineDateOffsetDay: null == trialDeadlineDateOffsetDay
+          ? _value.trialDeadlineDateOffsetDay
+          : trialDeadlineDateOffsetDay // ignore: cast_nullable_to_non_nullable
+              as int,
+      discountEntitlementOffsetDay: null == discountEntitlementOffsetDay
+          ? _value.discountEntitlementOffsetDay
+          : discountEntitlementOffsetDay // ignore: cast_nullable_to_non_nullable
+              as int,
+      discountCountdownBoundaryHour: null == discountCountdownBoundaryHour
+          ? _value.discountCountdownBoundaryHour
+          : discountCountdownBoundaryHour // ignore: cast_nullable_to_non_nullable
+              as int,
     ) as $Val);
   }
 }
@@ -97,8 +104,9 @@ abstract class _$$RemoteConfigParameterImplCopyWith<$Res>
   $Res call(
       {bool isPaywallFirst,
       bool isUnnecessaryOnBoarding,
-      bool trialDay,
-      bool discountDay});
+      int trialDeadlineDateOffsetDay,
+      int discountEntitlementOffsetDay,
+      int discountCountdownBoundaryHour});
 }
 
 /// @nodoc
@@ -115,8 +123,9 @@ class __$$RemoteConfigParameterImplCopyWithImpl<$Res>
   $Res call({
     Object? isPaywallFirst = null,
     Object? isUnnecessaryOnBoarding = null,
-    Object? trialDay = null,
-    Object? discountDay = null,
+    Object? trialDeadlineDateOffsetDay = null,
+    Object? discountEntitlementOffsetDay = null,
+    Object? discountCountdownBoundaryHour = null,
   }) {
     return _then(_$RemoteConfigParameterImpl(
       isPaywallFirst: null == isPaywallFirst
@@ -127,14 +136,18 @@ class __$$RemoteConfigParameterImplCopyWithImpl<$Res>
           ? _value.isUnnecessaryOnBoarding
           : isUnnecessaryOnBoarding // ignore: cast_nullable_to_non_nullable
               as bool,
-      trialDay: null == trialDay
-          ? _value.trialDay
-          : trialDay // ignore: cast_nullable_to_non_nullable
-              as bool,
-      discountDay: null == discountDay
-          ? _value.discountDay
-          : discountDay // ignore: cast_nullable_to_non_nullable
-              as bool,
+      trialDeadlineDateOffsetDay: null == trialDeadlineDateOffsetDay
+          ? _value.trialDeadlineDateOffsetDay
+          : trialDeadlineDateOffsetDay // ignore: cast_nullable_to_non_nullable
+              as int,
+      discountEntitlementOffsetDay: null == discountEntitlementOffsetDay
+          ? _value.discountEntitlementOffsetDay
+          : discountEntitlementOffsetDay // ignore: cast_nullable_to_non_nullable
+              as int,
+      discountCountdownBoundaryHour: null == discountCountdownBoundaryHour
+          ? _value.discountCountdownBoundaryHour
+          : discountCountdownBoundaryHour // ignore: cast_nullable_to_non_nullable
+              as int,
     ));
   }
 }
@@ -143,10 +156,15 @@ class __$$RemoteConfigParameterImplCopyWithImpl<$Res>
 @JsonSerializable()
 class _$RemoteConfigParameterImpl extends _RemoteConfigParameter {
   _$RemoteConfigParameterImpl(
-      {this.isPaywallFirst = false,
-      this.isUnnecessaryOnBoarding = false,
-      this.trialDay = false,
-      this.discountDay = false})
+      {this.isPaywallFirst = RemoteConfigParameterDefaultValues.isPaywallFirst,
+      this.isUnnecessaryOnBoarding =
+          RemoteConfigParameterDefaultValues.isUnnecessaryOnBoarding,
+      this.trialDeadlineDateOffsetDay =
+          RemoteConfigParameterDefaultValues.trialDeadlineDateOffsetDay,
+      this.discountEntitlementOffsetDay =
+          RemoteConfigParameterDefaultValues.discountEntitlementOffsetDay,
+      this.discountCountdownBoundaryHour =
+          RemoteConfigParameterDefaultValues.discountCountdownBoundaryHour})
       : super._();
 
   factory _$RemoteConfigParameterImpl.fromJson(Map<String, dynamic> json) =>
@@ -160,14 +178,17 @@ class _$RemoteConfigParameterImpl extends _RemoteConfigParameter {
   final bool isUnnecessaryOnBoarding;
   @override
   @JsonKey()
-  final bool trialDay;
+  final int trialDeadlineDateOffsetDay;
   @override
   @JsonKey()
-  final bool discountDay;
+  final int discountEntitlementOffsetDay;
+  @override
+  @JsonKey()
+  final int discountCountdownBoundaryHour;
 
   @override
   String toString() {
-    return 'RemoteConfigParameter(isPaywallFirst: $isPaywallFirst, isUnnecessaryOnBoarding: $isUnnecessaryOnBoarding, trialDay: $trialDay, discountDay: $discountDay)';
+    return 'RemoteConfigParameter(isPaywallFirst: $isPaywallFirst, isUnnecessaryOnBoarding: $isUnnecessaryOnBoarding, trialDeadlineDateOffsetDay: $trialDeadlineDateOffsetDay, discountEntitlementOffsetDay: $discountEntitlementOffsetDay, discountCountdownBoundaryHour: $discountCountdownBoundaryHour)';
   }
 
   @override
@@ -180,16 +201,29 @@ class _$RemoteConfigParameterImpl extends _RemoteConfigParameter {
             (identical(
                     other.isUnnecessaryOnBoarding, isUnnecessaryOnBoarding) ||
                 other.isUnnecessaryOnBoarding == isUnnecessaryOnBoarding) &&
-            (identical(other.trialDay, trialDay) ||
-                other.trialDay == trialDay) &&
-            (identical(other.discountDay, discountDay) ||
-                other.discountDay == discountDay));
+            (identical(other.trialDeadlineDateOffsetDay,
+                    trialDeadlineDateOffsetDay) ||
+                other.trialDeadlineDateOffsetDay ==
+                    trialDeadlineDateOffsetDay) &&
+            (identical(other.discountEntitlementOffsetDay,
+                    discountEntitlementOffsetDay) ||
+                other.discountEntitlementOffsetDay ==
+                    discountEntitlementOffsetDay) &&
+            (identical(other.discountCountdownBoundaryHour,
+                    discountCountdownBoundaryHour) ||
+                other.discountCountdownBoundaryHour ==
+                    discountCountdownBoundaryHour));
   }
 
   @JsonKey(ignore: true)
   @override
-  int get hashCode => Object.hash(runtimeType, isPaywallFirst,
-      isUnnecessaryOnBoarding, trialDay, discountDay);
+  int get hashCode => Object.hash(
+      runtimeType,
+      isPaywallFirst,
+      isUnnecessaryOnBoarding,
+      trialDeadlineDateOffsetDay,
+      discountEntitlementOffsetDay,
+      discountCountdownBoundaryHour);
 
   @JsonKey(ignore: true)
   @override
@@ -210,8 +244,9 @@ abstract class _RemoteConfigParameter extends RemoteConfigParameter {
   factory _RemoteConfigParameter(
       {final bool isPaywallFirst,
       final bool isUnnecessaryOnBoarding,
-      final bool trialDay,
-      final bool discountDay}) = _$RemoteConfigParameterImpl;
+      final int trialDeadlineDateOffsetDay,
+      final int discountEntitlementOffsetDay,
+      final int discountCountdownBoundaryHour}) = _$RemoteConfigParameterImpl;
   _RemoteConfigParameter._() : super._();
 
   factory _RemoteConfigParameter.fromJson(Map<String, dynamic> json) =
@@ -222,9 +257,11 @@ abstract class _RemoteConfigParameter extends RemoteConfigParameter {
   @override
   bool get isUnnecessaryOnBoarding;
   @override
-  bool get trialDay;
+  int get trialDeadlineDateOffsetDay;
   @override
-  bool get discountDay;
+  int get discountEntitlementOffsetDay;
+  @override
+  int get discountCountdownBoundaryHour;
   @override
   @JsonKey(ignore: true)
   _$$RemoteConfigParameterImplCopyWith<_$RemoteConfigParameterImpl>
