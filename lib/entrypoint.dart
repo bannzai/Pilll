@@ -6,7 +6,10 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/foundation.dart';
 import 'package:flutter/services.dart';
 import 'package:google_mobile_ads/google_mobile_ads.dart';
+import 'package:pilll/features/home/home_page.dart';
 import 'package:pilll/features/root/resolver/force_update.dart';
+import 'package:pilll/features/root/resolver/initial_setting_or_app_page.dart';
+import 'package:pilll/features/root/resolver/skip_on_boarding.dart';
 import 'package:pilll/features/root/resolver/user_setup.dart';
 import 'package:pilll/features/root/resolver/user_sign_in.dart';
 import 'package:pilll/provider/shared_preferences.dart';
@@ -153,6 +156,15 @@ class App extends StatelessWidget {
             builder: (_) => UserSignIn(
               builder: (_, userID) => UserSetup(
                 userID: userID,
+                builder: (_) => SkipOnBoarding(
+                  builder: (context, skipOnBoarding) {
+                    if (!skipOnBoarding) {
+                      return const InitialSettingOrAppPage();
+                    } else {
+                      return const HomePage();
+                    }
+                  },
+                ),
               ),
             ),
           ),

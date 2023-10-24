@@ -1,9 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter_hooks/flutter_hooks.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
-import 'package:pilll/features/home/home_page.dart';
 import 'package:pilll/features/initial_setting/initial_setting_state_notifier.dart';
-import 'package:pilll/features/root/resolver/initial_setting_or_app_page.dart';
 import 'package:pilll/provider/remote_config_parameter.dart';
 import 'package:pilll/provider/typed_shared_preferences.dart';
 import 'package:pilll/utils/local_notification.dart';
@@ -11,7 +9,11 @@ import 'package:pilll/utils/router.dart';
 import 'package:pilll/utils/shared_preference/keys.dart';
 
 class SkipOnBoarding extends HookConsumerWidget {
-  const SkipOnBoarding({super.key});
+  final Widget Function(BuildContext, bool) builder;
+  const SkipOnBoarding({
+    super.key,
+    required this.builder,
+  });
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {
@@ -34,10 +36,6 @@ class SkipOnBoarding extends HookConsumerWidget {
       return null;
     }, []);
 
-    if (!remoteConfigParameter.skipOnBoarding) {
-      return const InitialSettingOrAppPage();
-    } else {
-      return const HomePage();
-    }
+    return builder(context, remoteConfigParameter.skipOnBoarding);
   }
 }
