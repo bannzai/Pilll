@@ -15,8 +15,6 @@ import 'package:flutter/material.dart';
 
 // FIXME: test 時にboolSharedPreferencesProviderをそのまま使うとフリーズする。 => riverpod_generatorで書き換えたりしたのでもうしない可能性はある
 final didEndInitialSettingProvider = Provider.autoDispose((ref) => ref.watch(boolSharedPreferencesProvider(BoolKey.didEndInitialSetting)));
-final shownPaywallWhenAppFirstLaunchProvider =
-    Provider.autoDispose((ref) => ref.watch(boolSharedPreferencesProvider(BoolKey.shownPaywallWhenAppFirstLaunch)));
 
 enum InitialSettingOrAppPageScreenType { loading, initialSetting, app }
 
