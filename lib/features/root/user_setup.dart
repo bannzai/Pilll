@@ -3,7 +3,6 @@ import 'package:hooks_riverpod/hooks_riverpod.dart';
 import 'package:pilll/features/root/initial_setting_or_app_page.dart';
 import 'package:pilll/features/root/launch_exception.dart';
 import 'package:pilll/provider/set_user_id.dart';
-import 'package:pilll/utils/analytics.dart';
 import 'package:pilll/entity/user.codegen.dart';
 import 'package:pilll/provider/root.dart';
 import 'package:pilll/components/molecules/indicator.dart';
