@@ -29,14 +29,11 @@ class InitialSettingOrAppPage extends HookConsumerWidget {
   @override
   Widget build(BuildContext context, WidgetRef ref) {
     final didEndInitialSetting = ref.watch(didEndInitialSettingProvider);
-    final shownPaywallWhenAppFirstLaunch = ref.watch(shownPaywallWhenAppFirstLaunchProvider);
-    final remoteConfigParameter = ref.watch(remoteConfigParameterProvider);
 
     // UserSetupPageでUserはできているのでfetchが終わり次第値は必ず入る。ここでwatchしないとInitialSetting -> Appへの遷移が成立しない
     final user = ref.watch(userProvider).valueOrNull;
     final error = useState<LaunchException?>(null);
-    final screenType =
-        retrieveScreenType(user: user, didEndInitialSetting: didEndInitialSetting.value, skipOnBoarding: remoteConfigParameter.skipOnBoarding);
+    final screenType = retrieveScreenType(user: user, didEndInitialSetting: didEndInitialSetting.value);
 
     useEffect(() {
       if (user != null) {
@@ -68,7 +65,6 @@ class InitialSettingOrAppPage extends HookConsumerWidget {
 InitialSettingOrAppPageScreenType retrieveScreenType({
   required User? user,
   required bool? didEndInitialSetting,
-  required bool skipOnBoarding,
 }) {
   if (user == null) {
     return InitialSettingOrAppPageScreenType.loading;
@@ -77,15 +73,13 @@ InitialSettingOrAppPageScreenType retrieveScreenType({
     return InitialSettingOrAppPageScreenType.initialSetting;
   }
 
-  if (!skipOnBoarding) {
-    if (didEndInitialSetting == null) {
-      analytics.logEvent(name: "did_end_i_s_is_null");
-      return InitialSettingOrAppPageScreenType.initialSetting;
-    }
-    if (!didEndInitialSetting) {
-      analytics.logEvent(name: "did_end_i_s_is_false");
-      return InitialSettingOrAppPageScreenType.initialSetting;
-    }
+  if (didEndInitialSetting == null) {
+    analytics.logEvent(name: "did_end_i_s_is_null");
+    return InitialSettingOrAppPageScreenType.initialSetting;
+  }
+  if (!didEndInitialSetting) {
+    analytics.logEvent(name: "did_end_i_s_is_false");
+    return InitialSettingOrAppPageScreenType.initialSetting;
   }
 
   analytics.logEvent(name: "screen_type_is_home");

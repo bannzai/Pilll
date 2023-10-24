@@ -2,6 +2,7 @@ import 'package:flutter_hooks/flutter_hooks.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
 import 'package:pilll/features/root/initial_setting_or_app_page.dart';
 import 'package:pilll/features/root/launch_exception.dart';
+import 'package:pilll/features/root/skip_on_boarding.dart';
 import 'package:pilll/provider/set_user_id.dart';
 import 'package:pilll/entity/user.codegen.dart';
 import 'package:pilll/provider/root.dart';
@@ -68,7 +69,7 @@ class UserSetup extends HookConsumerWidget {
         if (appUserValue == null) {
           return const ScaffoldIndicator();
         } else {
-          return const InitialSettingOrAppPage();
+          return const SkipOnBoarding();
         }
       }(),
     );
