@@ -7,6 +7,7 @@ import 'package:flutter/foundation.dart';
 import 'package:flutter/services.dart';
 import 'package:google_mobile_ads/google_mobile_ads.dart';
 import 'package:pilll/features/home/home_page.dart';
+import 'package:pilll/features/initial_setting/pill_sheet_group/initial_setting_pill_sheet_group_page.dart';
 import 'package:pilll/features/root/resolver/force_update.dart';
 import 'package:pilll/features/root/resolver/initial_setting_or_app_page.dart';
 import 'package:pilll/features/root/resolver/show_paywall_on_app_launch.dart';
@@ -161,7 +162,14 @@ class App extends StatelessWidget {
                   builder: (_) => SkipOnBoarding(
                     builder: (context, skipOnBoarding) {
                       if (!skipOnBoarding) {
-                        return const InitialSettingOrAppPage();
+                        return InitialSettingOrAppPage(builder: (_, screenType) {
+                          switch (screenType) {
+                            case InitialSettingOrAppPageScreenType.initialSetting:
+                              return InitialSettingPillSheetGroupPageRoute.screen();
+                            case InitialSettingOrAppPageScreenType.app:
+                              return const HomePage();
+                          }
+                        });
                       } else {
                         return const HomePage();
                       }

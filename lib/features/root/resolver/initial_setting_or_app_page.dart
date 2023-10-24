@@ -15,15 +15,17 @@ import 'package:flutter/material.dart';
 
 // FIXME: test 時にboolSharedPreferencesProviderをそのまま使うとフリーズする。 => riverpod_generatorで書き換えたりしたのでもうしない可能性はある
 final didEndInitialSettingProvider = Provider.autoDispose((ref) => ref.watch(boolSharedPreferencesProvider(BoolKey.didEndInitialSetting)));
-final shownPaywallWhenAppFirstLaunchProvider =
-    Provider.autoDispose((ref) => ref.watch(boolSharedPreferencesProvider(BoolKey.shownPaywallWhenAppFirstLaunch)));
 
-enum InitialSettingOrAppPageScreenType { loading, initialSetting, app }
+enum InitialSettingOrAppPageScreenType { initialSetting, app }
 
 // InitialSettingかAppのメインストリームのWidgetに分岐する
 // 主にdidEndInitialSettingの値によって分岐するが、下位互換や何らかの理由でuser.settingがnullになってしまったユーザーのためにuserの値を見てinitialSettingに分岐するかも決定する
 class InitialSettingOrAppPage extends HookConsumerWidget {
-  const InitialSettingOrAppPage({Key? key}) : super(key: key);
+  final Widget Function(BuildContext, InitialSettingOrAppPageScreenType) builder;
+  const InitialSettingOrAppPage({
+    Key? key,
+    required this.builder,
+  }) : super(key: key);
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {
@@ -48,25 +50,21 @@ class InitialSettingOrAppPage extends HookConsumerWidget {
       error: error.value,
       reload: () => ref.refresh(refreshAppProvider),
       child: () {
-        switch (screenType) {
-          case InitialSettingOrAppPageScreenType.loading:
-            return const ScaffoldIndicator();
-          case InitialSettingOrAppPageScreenType.initialSetting:
-            return InitialSettingPillSheetGroupPageRoute.screen();
-          case InitialSettingOrAppPageScreenType.app:
-            return const HomePage();
+        if (screenType == null) {
+          return const ScaffoldIndicator();
         }
+        return builder(context, screenType);
       }(),
     );
   }
 }
 
-InitialSettingOrAppPageScreenType retrieveScreenType({
+InitialSettingOrAppPageScreenType? retrieveScreenType({
   required User? user,
   required bool? didEndInitialSetting,
 }) {
   if (user == null) {
-    return InitialSettingOrAppPageScreenType.loading;
+    return null;
   }
   if (user.setting == null) {
     return InitialSettingOrAppPageScreenType.initialSetting;
