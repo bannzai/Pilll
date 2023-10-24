@@ -103,10 +103,6 @@ class InitialSettingStateNotifier extends StateNotifier<InitialSettingState> {
   }
 
   Future<void> register() async {
-    if (state.pillSheetTypes.isEmpty) {
-      throw AssertionError("Must not be null for pillSheet when register initial settings");
-    }
-
     final batch = batchFactory.batch();
 
     final todayPillNumber = state.todayPillNumber;
