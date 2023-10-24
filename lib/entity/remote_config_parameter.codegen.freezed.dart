@@ -22,7 +22,7 @@ RemoteConfigParameter _$RemoteConfigParameterFromJson(
 /// @nodoc
 mixin _$RemoteConfigParameter {
   bool get isPaywallFirst => throw _privateConstructorUsedError;
-  bool get isUnnecessaryOnBoarding => throw _privateConstructorUsedError;
+  bool get skipOnBoarding => throw _privateConstructorUsedError;
   int get trialDeadlineDateOffsetDay => throw _privateConstructorUsedError;
   int get discountEntitlementOffsetDay => throw _privateConstructorUsedError;
   int get discountCountdownBoundaryHour => throw _privateConstructorUsedError;
@@ -41,7 +41,7 @@ abstract class $RemoteConfigParameterCopyWith<$Res> {
   @useResult
   $Res call(
       {bool isPaywallFirst,
-      bool isUnnecessaryOnBoarding,
+      bool skipOnBoarding,
       int trialDeadlineDateOffsetDay,
       int discountEntitlementOffsetDay,
       int discountCountdownBoundaryHour});
@@ -62,7 +62,7 @@ class _$RemoteConfigParameterCopyWithImpl<$Res,
   @override
   $Res call({
     Object? isPaywallFirst = null,
-    Object? isUnnecessaryOnBoarding = null,
+    Object? skipOnBoarding = null,
     Object? trialDeadlineDateOffsetDay = null,
     Object? discountEntitlementOffsetDay = null,
     Object? discountCountdownBoundaryHour = null,
@@ -72,9 +72,9 @@ class _$RemoteConfigParameterCopyWithImpl<$Res,
           ? _value.isPaywallFirst
           : isPaywallFirst // ignore: cast_nullable_to_non_nullable
               as bool,
-      isUnnecessaryOnBoarding: null == isUnnecessaryOnBoarding
-          ? _value.isUnnecessaryOnBoarding
-          : isUnnecessaryOnBoarding // ignore: cast_nullable_to_non_nullable
+      skipOnBoarding: null == skipOnBoarding
+          ? _value.skipOnBoarding
+          : skipOnBoarding // ignore: cast_nullable_to_non_nullable
               as bool,
       trialDeadlineDateOffsetDay: null == trialDeadlineDateOffsetDay
           ? _value.trialDeadlineDateOffsetDay
@@ -103,7 +103,7 @@ abstract class _$$RemoteConfigParameterImplCopyWith<$Res>
   @useResult
   $Res call(
       {bool isPaywallFirst,
-      bool isUnnecessaryOnBoarding,
+      bool skipOnBoarding,
       int trialDeadlineDateOffsetDay,
       int discountEntitlementOffsetDay,
       int discountCountdownBoundaryHour});
@@ -122,7 +122,7 @@ class __$$RemoteConfigParameterImplCopyWithImpl<$Res>
   @override
   $Res call({
     Object? isPaywallFirst = null,
-    Object? isUnnecessaryOnBoarding = null,
+    Object? skipOnBoarding = null,
     Object? trialDeadlineDateOffsetDay = null,
     Object? discountEntitlementOffsetDay = null,
     Object? discountCountdownBoundaryHour = null,
@@ -132,9 +132,9 @@ class __$$RemoteConfigParameterImplCopyWithImpl<$Res>
           ? _value.isPaywallFirst
           : isPaywallFirst // ignore: cast_nullable_to_non_nullable
               as bool,
-      isUnnecessaryOnBoarding: null == isUnnecessaryOnBoarding
-          ? _value.isUnnecessaryOnBoarding
-          : isUnnecessaryOnBoarding // ignore: cast_nullable_to_non_nullable
+      skipOnBoarding: null == skipOnBoarding
+          ? _value.skipOnBoarding
+          : skipOnBoarding // ignore: cast_nullable_to_non_nullable
               as bool,
       trialDeadlineDateOffsetDay: null == trialDeadlineDateOffsetDay
           ? _value.trialDeadlineDateOffsetDay
@@ -157,8 +157,7 @@ class __$$RemoteConfigParameterImplCopyWithImpl<$Res>
 class _$RemoteConfigParameterImpl extends _RemoteConfigParameter {
   _$RemoteConfigParameterImpl(
       {this.isPaywallFirst = RemoteConfigParameterDefaultValues.isPaywallFirst,
-      this.isUnnecessaryOnBoarding =
-          RemoteConfigParameterDefaultValues.isUnnecessaryOnBoarding,
+      this.skipOnBoarding = RemoteConfigParameterDefaultValues.skipOnBoarding,
       this.trialDeadlineDateOffsetDay =
           RemoteConfigParameterDefaultValues.trialDeadlineDateOffsetDay,
       this.discountEntitlementOffsetDay =
@@ -175,7 +174,7 @@ class _$RemoteConfigParameterImpl extends _RemoteConfigParameter {
   final bool isPaywallFirst;
   @override
   @JsonKey()
-  final bool isUnnecessaryOnBoarding;
+  final bool skipOnBoarding;
   @override
   @JsonKey()
   final int trialDeadlineDateOffsetDay;
@@ -188,7 +187,7 @@ class _$RemoteConfigParameterImpl extends _RemoteConfigParameter {
 
   @override
   String toString() {
-    return 'RemoteConfigParameter(isPaywallFirst: $isPaywallFirst, isUnnecessaryOnBoarding: $isUnnecessaryOnBoarding, trialDeadlineDateOffsetDay: $trialDeadlineDateOffsetDay, discountEntitlementOffsetDay: $discountEntitlementOffsetDay, discountCountdownBoundaryHour: $discountCountdownBoundaryHour)';
+    return 'RemoteConfigParameter(isPaywallFirst: $isPaywallFirst, skipOnBoarding: $skipOnBoarding, trialDeadlineDateOffsetDay: $trialDeadlineDateOffsetDay, discountEntitlementOffsetDay: $discountEntitlementOffsetDay, discountCountdownBoundaryHour: $discountCountdownBoundaryHour)';
   }
 
   @override
@@ -198,9 +197,8 @@ class _$RemoteConfigParameterImpl extends _RemoteConfigParameter {
             other is _$RemoteConfigParameterImpl &&
             (identical(other.isPaywallFirst, isPaywallFirst) ||
                 other.isPaywallFirst == isPaywallFirst) &&
-            (identical(
-                    other.isUnnecessaryOnBoarding, isUnnecessaryOnBoarding) ||
-                other.isUnnecessaryOnBoarding == isUnnecessaryOnBoarding) &&
+            (identical(other.skipOnBoarding, skipOnBoarding) ||
+                other.skipOnBoarding == skipOnBoarding) &&
             (identical(other.trialDeadlineDateOffsetDay,
                     trialDeadlineDateOffsetDay) ||
                 other.trialDeadlineDateOffsetDay ==
@@ -220,7 +218,7 @@ class _$RemoteConfigParameterImpl extends _RemoteConfigParameter {
   int get hashCode => Object.hash(
       runtimeType,
       isPaywallFirst,
-      isUnnecessaryOnBoarding,
+      skipOnBoarding,
       trialDeadlineDateOffsetDay,
       discountEntitlementOffsetDay,
       discountCountdownBoundaryHour);
@@ -243,7 +241,7 @@ class _$RemoteConfigParameterImpl extends _RemoteConfigParameter {
 abstract class _RemoteConfigParameter extends RemoteConfigParameter {
   factory _RemoteConfigParameter(
       {final bool isPaywallFirst,
-      final bool isUnnecessaryOnBoarding,
+      final bool skipOnBoarding,
       final int trialDeadlineDateOffsetDay,
       final int discountEntitlementOffsetDay,
       final int discountCountdownBoundaryHour}) = _$RemoteConfigParameterImpl;
@@ -255,7 +253,7 @@ abstract class _RemoteConfigParameter extends RemoteConfigParameter {
   @override
   bool get isPaywallFirst;
   @override
-  bool get isUnnecessaryOnBoarding;
+  bool get skipOnBoarding;
   @override
   int get trialDeadlineDateOffsetDay;
   @override

@@ -11,8 +11,8 @@ _$RemoteConfigParameterImpl _$$RemoteConfigParameterImplFromJson(
     _$RemoteConfigParameterImpl(
       isPaywallFirst: json['isPaywallFirst'] as bool? ??
           RemoteConfigParameterDefaultValues.isPaywallFirst,
-      isUnnecessaryOnBoarding: json['isUnnecessaryOnBoarding'] as bool? ??
-          RemoteConfigParameterDefaultValues.isUnnecessaryOnBoarding,
+      skipOnBoarding: json['skipOnBoarding'] as bool? ??
+          RemoteConfigParameterDefaultValues.skipOnBoarding,
       trialDeadlineDateOffsetDay: json['trialDeadlineDateOffsetDay'] as int? ??
           RemoteConfigParameterDefaultValues.trialDeadlineDateOffsetDay,
       discountEntitlementOffsetDay:
@@ -27,7 +27,7 @@ Map<String, dynamic> _$$RemoteConfigParameterImplToJson(
         _$RemoteConfigParameterImpl instance) =>
     <String, dynamic>{
       'isPaywallFirst': instance.isPaywallFirst,
-      'isUnnecessaryOnBoarding': instance.isUnnecessaryOnBoarding,
+      'skipOnBoarding': instance.skipOnBoarding,
       'trialDeadlineDateOffsetDay': instance.trialDeadlineDateOffsetDay,
       'discountEntitlementOffsetDay': instance.discountEntitlementOffsetDay,
       'discountCountdownBoundaryHour': instance.discountCountdownBoundaryHour,
