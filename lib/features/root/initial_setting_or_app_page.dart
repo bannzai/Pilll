@@ -11,6 +11,7 @@ import 'package:pilll/features/home/home_page.dart';
 import 'package:pilll/components/molecules/indicator.dart';
 import 'package:pilll/features/error/universal_error_page.dart';
 import 'package:pilll/provider/user.dart';
+import 'package:pilll/utils/remote_config.dart';
 import 'package:pilll/utils/shared_preference/keys.dart';
 import 'package:flutter/material.dart';
 
@@ -18,7 +19,6 @@ import 'package:flutter/material.dart';
 final didEndInitialSettingProvider = Provider.autoDispose((ref) => ref.watch(boolSharedPreferencesProvider(BoolKey.didEndInitialSetting)));
 final shownPaywallWhenAppFirstLaunchProvider =
     Provider.autoDispose((ref) => ref.watch(boolSharedPreferencesProvider(BoolKey.shownPaywallWhenAppFirstLaunch)));
-final skipOnBoardingProvider = Provider.autoDispose((ref) => ref.watch(boolSharedPreferencesProvider(BoolKey.skipOnBoarding)));
 
 enum InitialSettingOrAppPageScreenType { loading, initialSetting, app }
 
@@ -37,7 +37,8 @@ class InitialSettingOrAppPage extends HookConsumerWidget {
     // UserSetupPageでUserはできているのでfetchが終わり次第値は必ず入る。ここでwatchしないとInitialSetting -> Appへの遷移が成立しない
     final user = ref.watch(userProvider).valueOrNull;
     final error = useState<LaunchException?>(null);
-    final screenType = retrieveScreenType(user: user, didEndInitialSetting: didEndInitialSetting.value);
+    final screenType =
+        retrieveScreenType(user: user, didEndInitialSetting: didEndInitialSetting.value, skipOnBoarding: remoteConfigParameter.skipOnBoarding);
 
     useEffect(() {
       if (user != null) {
@@ -69,8 +70,7 @@ class InitialSettingOrAppPage extends HookConsumerWidget {
 InitialSettingOrAppPageScreenType retrieveScreenType({
   required User? user,
   required bool? didEndInitialSetting,
-  required bool? shownPaywallWhenAppFirstLaunch,
-  required bool skipOnBoarding,
+  required bool? skipOnBoarding,
 }) {
   if (user == null) {
     return InitialSettingOrAppPageScreenType.loading;
