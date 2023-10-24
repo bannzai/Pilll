@@ -26,7 +26,6 @@ class InitialSettingState with _$InitialSettingState {
     required List<ReminderTime> reminderTimes,
     @Default(true) bool isOnReminder,
     @Default(false) bool isLoading,
-    @Default(false) bool userIsNotAnonymous,
     @Default(false) bool settingIsExist,
     LinkAccountType? accountType,
   }) = _InitialSettingState;
