@@ -1,6 +1,7 @@
 import 'package:flutter_hooks/flutter_hooks.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
 import 'package:pilll/features/root/launch_exception.dart';
+import 'package:pilll/provider/remote_config_parameter.dart';
 import 'package:pilll/provider/typed_shared_preferences.dart';
 import 'package:pilll/utils/analytics.dart';
 import 'package:pilll/features/initial_setting/pill_sheet_group/initial_setting_pill_sheet_group_page.dart';
@@ -15,6 +16,9 @@ import 'package:flutter/material.dart';
 
 // FIXME: test 時にboolSharedPreferencesProviderをそのまま使うとフリーズする。 => riverpod_generatorで書き換えたりしたのでもうしない可能性はある
 final didEndInitialSettingProvider = Provider.autoDispose((ref) => ref.watch(boolSharedPreferencesProvider(BoolKey.didEndInitialSetting)));
+final shownPaywallWhenAppFirstLaunchProvider =
+    Provider.autoDispose((ref) => ref.watch(boolSharedPreferencesProvider(BoolKey.shownPaywallWhenAppFirstLaunch)));
+final skipOnBoardingProvider = Provider.autoDispose((ref) => ref.watch(boolSharedPreferencesProvider(BoolKey.skipOnBoarding)));
 
 enum InitialSettingOrAppPageScreenType { loading, initialSetting, app }
 
@@ -26,9 +30,12 @@ class InitialSettingOrAppPage extends HookConsumerWidget {
   @override
   Widget build(BuildContext context, WidgetRef ref) {
     final didEndInitialSetting = ref.watch(didEndInitialSettingProvider);
+    final shownPaywallWhenAppFirstLaunch = ref.watch(shownPaywallWhenAppFirstLaunchProvider);
+    final skipOnBoarding = ref.watch(skipOnBoardingProvider);
+    final remoteConfigParameter = ref.watch(remoteConfigParameterProvider);
+
     // UserSetupPageでUserはできているのでfetchが終わり次第値は必ず入る。ここでwatchしないとInitialSetting -> Appへの遷移が成立しない
     final user = ref.watch(userProvider).valueOrNull;
-
     final error = useState<LaunchException?>(null);
     final screenType = retrieveScreenType(user: user, didEndInitialSetting: didEndInitialSetting.value);
 
@@ -62,6 +69,8 @@ class InitialSettingOrAppPage extends HookConsumerWidget {
 InitialSettingOrAppPageScreenType retrieveScreenType({
   required User? user,
   required bool? didEndInitialSetting,
+  required bool? shownPaywallWhenAppFirstLaunch,
+  required bool isUnnecessaryOnBoarding,
 }) {
   if (user == null) {
     return InitialSettingOrAppPageScreenType.loading;
