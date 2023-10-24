@@ -2,6 +2,7 @@ import 'package:firebase_auth/firebase_auth.dart' as firebase_auth;
 import 'package:pilll/components/molecules/indicator.dart';
 import 'package:pilll/entity/setting.codegen.dart';
 import 'package:pilll/entity/user.codegen.dart';
+import 'package:pilll/features/root/resolver/force_update.dart';
 import 'package:pilll/features/root/resolver/initial_setting_or_app_page.dart';
 import 'package:pilll/features/root/root_page.dart';
 import 'package:pilll/provider/auth.dart';
@@ -93,7 +94,7 @@ void main() {
           ],
           child: MaterialApp(
             home: Material(
-              child: RootPage(builder: (_, __) => _FakeWidget()),
+              child: RootPage(builder: (_) => _FakeWidget()),
             ),
           ),
         ),
@@ -136,7 +137,7 @@ void main() {
           ],
           child: MaterialApp(
             home: Material(
-              child: RootPage(builder: (_, __) => _FakeWidget()),
+              child: ForceUpdate(builder: (_) => _FakeWidget()),
             ),
           ),
         ),
@@ -162,22 +163,22 @@ void main() {
   group('#retrieveScreenType', () {
     testWidgets('didEndInitialSetting is not exist', (WidgetTester tester) async {
       final fakeUser = _FakeUser(_FakeSetting());
-      final screenType = retrieveScreenType(user: fakeUser, didEndInitialSetting: null, skipOnBoarding: false);
+      final screenType = retrieveScreenType(user: fakeUser, didEndInitialSetting: null);
       expect(screenType, InitialSettingOrAppPageScreenType.initialSetting);
     });
     testWidgets('tidEndInitialSetting is false', (WidgetTester tester) async {
       final fakeUser = _FakeUser(_FakeSetting());
-      final screenType = retrieveScreenType(user: fakeUser, didEndInitialSetting: false, skipOnBoarding: false);
+      final screenType = retrieveScreenType(user: fakeUser, didEndInitialSetting: false);
       expect(screenType, InitialSettingOrAppPageScreenType.initialSetting);
     });
     testWidgets('didEndInitialSetting is true', (WidgetTester tester) async {
       final fakeUser = _FakeUser(_FakeSetting());
-      final screenType = retrieveScreenType(user: fakeUser, didEndInitialSetting: true, skipOnBoarding: false);
+      final screenType = retrieveScreenType(user: fakeUser, didEndInitialSetting: true);
       expect(screenType, InitialSettingOrAppPageScreenType.app);
     });
     testWidgets('didEndInitialSetting is true and user.migratedFlutter is true but setting is null', (WidgetTester tester) async {
       final fakeUser = _FakeUser(null);
-      final screenType = retrieveScreenType(user: fakeUser, didEndInitialSetting: true, skipOnBoarding: false);
+      final screenType = retrieveScreenType(user: fakeUser, didEndInitialSetting: true);
       expect(screenType, InitialSettingOrAppPageScreenType.initialSetting);
     });
   });
