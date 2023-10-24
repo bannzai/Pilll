@@ -35,10 +35,11 @@ class InitialSettingPillSheetGroupPage extends HookConsumerWidget {
     final isAppleLinked = ref.watch(isAppleLinkedProvider);
     final isGoogleLinked = ref.watch(isGoogleLinkedProvider);
     final didEndInitialSettingNotifier = ref.watch(boolSharedPreferencesProvider(BoolKey.didEndInitialSetting).notifier);
+    final userIsAnonymous = FirebaseAuth.instance.currentUser?.isAnonymous == true;
 
     // For linked user
     useEffect(() {
-      if (FirebaseAuth.instance.currentUser?.isAnonymous == false) {
+      if (userIsAnonymous) {
         analytics.logEvent(name: "initial_setting_signin_account", parameters: {"uid": FirebaseAuth.instance.currentUser?.uid});
 
         final LinkAccountType? accountType = () {
@@ -132,20 +133,22 @@ class InitialSettingPillSheetGroupPage extends HookConsumerWidget {
                               },
                             ),
                           ),
-                        const SizedBox(height: 20),
-                        AlertButton(
-                          text: "すでにアカウントをお持ちの方はこちら",
-                          onPressed: () async {
-                            analytics.logEvent(name: "pressed_initial_setting_signin");
-                            showSignInSheet(
-                              context,
-                              SignInSheetStateContext.initialSetting,
-                              (accountType) async {
-                                store.showHUD();
-                              },
-                            );
-                          },
-                        ),
+                        if (userIsAnonymous) ...[
+                          const SizedBox(height: 20),
+                          AlertButton(
+                            text: "すでにアカウントをお持ちの方はこちら",
+                            onPressed: () async {
+                              analytics.logEvent(name: "pressed_initial_setting_signin");
+                              showSignInSheet(
+                                context,
+                                SignInSheetStateContext.initialSetting,
+                                (accountType) async {
+                                  store.showHUD();
+                                },
+                              );
+                            },
+                          ),
+                        ],
                         const SizedBox(height: 35),
                       ],
                     ),
