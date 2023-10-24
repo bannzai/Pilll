@@ -6,7 +6,7 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/foundation.dart';
 import 'package:flutter/services.dart';
 import 'package:google_mobile_ads/google_mobile_ads.dart';
-import 'package:pilll/features/root/user_setup_page.dart';
+import 'package:pilll/features/root/user_setup.dart';
 import 'package:pilll/provider/shared_preferences.dart';
 import 'package:pilll/utils/analytics.dart';
 import 'package:pilll/components/atoms/color.dart';
@@ -146,7 +146,7 @@ class App extends StatelessWidget {
         ),
       ),
       home: ProviderScope(
-        child: RootPage(builder: (_, userID) => UserSetupPage(userID: userID)),
+        child: RootPage(builder: (_, userID) => UserSetup(userID: userID)),
       ),
       localizationsDelegates: AppLocalizations.localizationsDelegates,
       supportedLocales: AppLocalizations.supportedLocales,

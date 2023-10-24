@@ -14,9 +14,9 @@ import 'package:pilll/provider/user.dart';
 import 'package:flutter/material.dart';
 
 // Userの作成・もしくは取得を行い次のWidgetに渡す
-class UserSetupPage extends HookConsumerWidget {
+class UserSetup extends HookConsumerWidget {
   final String userID;
-  const UserSetupPage({Key? key, required this.userID}) : super(key: key);
+  const UserSetup({Key? key, required this.userID}) : super(key: key);
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {
