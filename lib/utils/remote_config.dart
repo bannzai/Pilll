@@ -20,9 +20,15 @@ Future<void> setupRemoteConfig() async {
     remoteConfig.fetchAndActivate()
   ).wait;
 
-  debugPrint("RemtoteConfig: ${remoteConfig.getAll()}");
+  debugPrintRemoteConfig();
 
   remoteConfig.onConfigUpdated.listen((event) {
     remoteConfig.activate();
   });
+}
+
+void debugPrintRemoteConfig() {
+  for (final entry in remoteConfig.getAll().entries) {
+    debugPrint("RemoteConfig: ${entry.key} ${entry.value.asString()}");
+  }
 }
