@@ -137,6 +137,7 @@ class App extends StatelessWidget {
             if (states.contains(MaterialState.selected)) {
               return PilllColors.secondary;
             }
+
             return null;
           }),
         ),

@@ -20,13 +20,12 @@ class ShowPaywallOnAppLaunch extends HookConsumerWidget {
     }
 
     useEffect(() {
-      final f = (() async {
-        if (shownPaywallWhenAppFirstLaunch.value != true) {
+      if (shownPaywallWhenAppFirstLaunch.value != true) {
+        WidgetsBinding.instance.addPostFrameCallback((_) async {
           await showPremiumIntroductionSheet(context);
           shownPaywallWhenAppFirstLaunchNotifier.set(true);
-        }
-      });
-      f();
+        });
+      }
       return null;
     }, []);
     return builder(context);
