@@ -23,6 +23,7 @@ import 'package:firebase_crashlytics/firebase_crashlytics.dart';
 import 'package:flutter/material.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
 import 'package:flutter_gen/gen_l10n/app_localizations.dart';
+import 'package:pilll/utils/remote_config.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
 Future<void> entrypoint() async {
@@ -41,18 +42,11 @@ Future<void> entrypoint() async {
       connectToEmulator();
     }
 
-    final remoteConfig = FirebaseRemoteConfig.instance;
     // ignore: prefer_typing_uninitialized_variables
     final (_, sharedPreferences, _) = await (
       LocalNotificationService.setupTimeZone(),
       SharedPreferences.getInstance(),
-      Future(() async {
-        await remoteConfig.setConfigSettings(RemoteConfigSettings(
-          fetchTimeout: const Duration(minutes: 1),
-          minimumFetchInterval: const Duration(hours: 1),
-        ));
-        await remoteConfig.fetchAndActivate();
-      }),
+      setupRemoteConfig(),
     ).wait;
 
     // MEMO: FirebaseCrashlytics#recordFlutterError called dumpErrorToConsole in function.
