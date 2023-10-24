@@ -2,6 +2,7 @@ import 'dart:async';
 import 'dart:io';
 
 import 'package:firebase_analytics/firebase_analytics.dart';
+import 'package:firebase_remote_config/firebase_remote_config.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/foundation.dart';
 import 'package:flutter/services.dart';
@@ -40,8 +41,22 @@ Future<void> entrypoint() async {
       connectToEmulator();
     }
 
+    final remoteConfig = FirebaseRemoteConfig.instance;
     // ignore: prefer_typing_uninitialized_variables
-    final (_, sharedPreferences) = await (LocalNotificationService.setupTimeZone(), SharedPreferences.getInstance()).wait;
+    final (_, sharedPreferences, _) = await (
+      LocalNotificationService.setupTimeZone(),
+      SharedPreferences.getInstance(),
+      Future(() async {
+        await remoteConfig.setConfigSettings(RemoteConfigSettings(
+          fetchTimeout: const Duration(minutes: 1),
+          minimumFetchInterval: const Duration(hours: 1),
+        ));
+        await remoteConfig.fetchAndActivate();
+      }),
+    ).wait;
+    remoteConfig.onConfigUpdated.listen((event) async {
+      await remoteConfig.activate();
+    });
 
     // MEMO: FirebaseCrashlytics#recordFlutterError called dumpErrorToConsole in function.
     FlutterError.onError = FirebaseCrashlytics.instance.recordFlutterError;
