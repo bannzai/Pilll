@@ -1,6 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter_hooks/flutter_hooks.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
+import 'package:pilll/features/error/error_alert.dart';
 import 'package:pilll/features/initial_setting/initial_setting_state_notifier.dart';
 import 'package:pilll/provider/remote_config_parameter.dart';
 import 'package:pilll/provider/typed_shared_preferences.dart';
@@ -26,9 +27,13 @@ class SkipInitialSetting extends HookConsumerWidget {
     useEffect(() {
       final f = (() async {
         if (remoteConfigParameter.skipInitialSetting) {
-          await initialSettingStateNotifier.register();
-          await registerReminderLocalNotification.call();
-          await AppRouter.endInitialSetting(navigator, didEndInitialSettingNotifier);
+          try {
+            await initialSettingStateNotifier.register();
+            await registerReminderLocalNotification.call();
+            await AppRouter.endInitialSetting(navigator, didEndInitialSettingNotifier);
+          } catch (error) {
+            if (context.mounted) showErrorAlert(context, error.toString());
+          }
         }
       });
 
