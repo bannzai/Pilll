@@ -70,7 +70,7 @@ InitialSettingOrAppPageScreenType retrieveScreenType({
   required User? user,
   required bool? didEndInitialSetting,
   required bool? shownPaywallWhenAppFirstLaunch,
-  required bool isUnnecessaryOnBoarding,
+  required bool skipOnBoarding,
 }) {
   if (user == null) {
     return InitialSettingOrAppPageScreenType.loading;

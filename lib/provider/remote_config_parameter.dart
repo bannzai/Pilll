@@ -9,7 +9,7 @@ RemoteConfigParameter remoteConfigParameter(RemoteConfigParameterRef ref) {
   // fetchAndActiveをentrypointで完了しているので値が取れる想定
   return RemoteConfigParameter(
     isPaywallFirst: remoteConfig.getBool(RemoteConfigKeys.isPaywallFirst),
-    isUnnecessaryOnBoarding: remoteConfig.getBool(RemoteConfigKeys.isUnnecessaryOnBoarding),
+    skipOnBoarding: remoteConfig.getBool(RemoteConfigKeys.skipOnBoarding),
     trialDeadlineDateOffsetDay: remoteConfig.getInt(RemoteConfigKeys.trialDeadlineDateOffsetDay),
     discountEntitlementOffsetDay: remoteConfig.getInt(RemoteConfigKeys.discountEntitlementOffsetDay),
     discountCountdownBoundaryHour: remoteConfig.getInt(RemoteConfigKeys.discountCountdownBoundaryHour),
