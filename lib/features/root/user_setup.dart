@@ -75,32 +75,3 @@ class UserSetup extends HookConsumerWidget {
     );
   }
 }
-
-InitialSettingOrAppPageScreenType retrieveScreenType({
-  required User? user,
-  required AsyncValue<bool> userDocumentIsExist,
-  required AsyncValue<bool?> didEndInitialSettingAsyncValue,
-}) {
-  if (userDocumentIsExist is! AsyncData || userDocumentIsExist.requireValue == false) {
-    return InitialSettingOrAppPageScreenType.loading;
-  }
-  if (user == null || didEndInitialSettingAsyncValue is! AsyncData) {
-    return InitialSettingOrAppPageScreenType.loading;
-  }
-  if (user.setting == null) {
-    return InitialSettingOrAppPageScreenType.initialSetting;
-  }
-
-  final didEndInitialSetting = didEndInitialSettingAsyncValue.value;
-  if (didEndInitialSetting == null) {
-    analytics.logEvent(name: "did_end_i_s_is_null");
-    return InitialSettingOrAppPageScreenType.initialSetting;
-  }
-  if (!didEndInitialSetting) {
-    analytics.logEvent(name: "did_end_i_s_is_false");
-    return InitialSettingOrAppPageScreenType.initialSetting;
-  }
-
-  analytics.logEvent(name: "screen_type_is_home");
-  return InitialSettingOrAppPageScreenType.app;
-}
