@@ -7,7 +7,7 @@ part of 'pill_sheet_modified_history.dart';
 // **************************************************************************
 
 String _$pillSheetModifiedHistoriesHash() =>
-    r'03abe240f8193fea0b5328ed7670d7d16794b20b';
+    r'0e48b0df61de21169e920b117e23990951d28b9b';
 
 /// Copied from Dart SDK
 class _SystemHash {
