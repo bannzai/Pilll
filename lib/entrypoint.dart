@@ -158,24 +158,22 @@ class App extends StatelessWidget {
             builder: (_) => UserSignIn(
               builder: (_, userID) => UserSetup(
                 userID: userID,
-                builder: (_) => ShowPaywallOnAppLaunch(
-                  builder: (_) => SkipInitialSetting(
-                    builder: (context, skipOnBoarding) {
-                      if (!skipOnBoarding) {
-                        return InitialSettingOrAppPage(builder: (_, screenType) {
-                          switch (screenType) {
-                            case InitialSettingOrAppPageScreenType.initialSetting:
-                              return InitialSettingPillSheetGroupPageRoute.screen();
-                            case InitialSettingOrAppPageScreenType.app:
-                              return const HomePage();
+                builder: (_) => InitialSettingOrAppPage(builder: (_, screenType) {
+                  switch (screenType) {
+                    case InitialSettingOrAppPageScreenType.initialSetting:
+                      return ShowPaywallOnAppLaunch(
+                        builder: (_) => SkipInitialSetting(builder: (context, skipOnBoarding) {
+                          if (!skipOnBoarding) {
+                            return InitialSettingPillSheetGroupPageRoute.screen();
+                          } else {
+                            return const HomePage();
                           }
-                        });
-                      } else {
-                        return const HomePage();
-                      }
-                    },
-                  ),
-                ),
+                        }),
+                      );
+                    case InitialSettingOrAppPageScreenType.app:
+                      return const HomePage();
+                  }
+                }),
               ),
             ),
           ),
