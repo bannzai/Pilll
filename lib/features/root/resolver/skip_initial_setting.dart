@@ -8,9 +8,9 @@ import 'package:pilll/utils/local_notification.dart';
 import 'package:pilll/utils/router.dart';
 import 'package:pilll/utils/shared_preference/keys.dart';
 
-class SkipOnBoarding extends HookConsumerWidget {
+class SkipInitialSetting extends HookConsumerWidget {
   final Widget Function(BuildContext, bool) builder;
-  const SkipOnBoarding({
+  const SkipInitialSetting({
     super.key,
     required this.builder,
   });
