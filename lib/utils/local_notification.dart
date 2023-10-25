@@ -22,6 +22,7 @@ import 'package:pilll/provider/premium_and_trial.codegen.dart';
 import 'package:pilll/provider/setting.dart';
 import 'package:pilll/provider/user.dart';
 import 'package:pilll/utils/analytics.dart';
+import 'package:pilll/utils/datetime/date_add.dart';
 import 'package:pilll/utils/datetime/day.dart';
 import 'package:pilll/utils/environment.dart';
 import 'package:riverpod/riverpod.dart';
@@ -232,8 +233,7 @@ class RegisterReminderLocalNotification {
           continue;
         }
 
-        final reminderDateTime =
-            tzNow.date().addDays(dayOffset)).add(Duration(hours: reminderTime.hour)).add(Duration(minutes: reminderTime.minute);
+        final reminderDateTime = tzNow.date().addDays(dayOffset).add(Duration(hours: reminderTime.hour)).add(Duration(minutes: reminderTime.minute));
         if (reminderDateTime.isBefore(tzNow)) {
           continue;
         }
