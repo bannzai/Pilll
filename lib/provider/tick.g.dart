@@ -1,12 +1,12 @@
 // GENERATED CODE - DO NOT MODIFY BY HAND
 
-part of 'timer.dart';
+part of 'tick.dart';
 
 // **************************************************************************
 // RiverpodGenerator
 // **************************************************************************
 
-String _$tickHash() => r'a5472bd1180c5587a56b694092a41192d8ade840';
+String _$tickHash() => r'487e8978a3b54a368520274029ca1659c005e46f';
 
 /// See also [Tick].
 @ProviderFor(Tick)

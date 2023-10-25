@@ -5,7 +5,7 @@ import 'package:pilll/utils/datetime/day.dart';
 import 'package:riverpod/riverpod.dart';
 import 'package:riverpod_annotation/riverpod_annotation.dart';
 
-part 'timer.g.dart';
+part 'tick.g.dart';
 
 @Riverpod()
 class Tick extends _$Tick {
