@@ -252,7 +252,7 @@ class SaveUserLaunchInfo {
     if (discountEntitlementDeadlineDate == null) {
       hasDiscountEntitlement = true;
     } else {
-      hasDiscountEntitlement = !now().isAfter(discountEntitlementDeadlineDate);
+      hasDiscountEntitlement = now().isBefore(discountEntitlementDeadlineDate);
     }
     return databaseConnection.userRawReference().set({
       UserFirestoreFieldKeys.hasDiscountEntitlement: hasDiscountEntitlement,
