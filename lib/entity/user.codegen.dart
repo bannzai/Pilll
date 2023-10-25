@@ -113,4 +113,8 @@ class User with _$User {
       return now().isBefore(trialDeadlineDate);
     }
   }
+
+  bool get trialIsAlreadyBegin => beginTrialDate != null;
+  bool get premiumOrTrial => isPremium || isTrial;
+  bool get isNotYetStartTrial => trialDeadlineDate == null;
 }
