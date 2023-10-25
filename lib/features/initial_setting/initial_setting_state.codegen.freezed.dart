@@ -174,7 +174,6 @@ mixin _$InitialSettingState {
   List<ReminderTime> get reminderTimes => throw _privateConstructorUsedError;
   bool get isOnReminder => throw _privateConstructorUsedError;
   bool get isLoading => throw _privateConstructorUsedError;
-  bool get userIsNotAnonymous => throw _privateConstructorUsedError;
   bool get settingIsExist => throw _privateConstructorUsedError;
   LinkAccountType? get accountType => throw _privateConstructorUsedError;
 
@@ -195,7 +194,6 @@ abstract class $InitialSettingStateCopyWith<$Res> {
       List<ReminderTime> reminderTimes,
       bool isOnReminder,
       bool isLoading,
-      bool userIsNotAnonymous,
       bool settingIsExist,
       LinkAccountType? accountType});
 
@@ -220,7 +218,6 @@ class _$InitialSettingStateCopyWithImpl<$Res, $Val extends InitialSettingState>
     Object? reminderTimes = null,
     Object? isOnReminder = null,
     Object? isLoading = null,
-    Object? userIsNotAnonymous = null,
     Object? settingIsExist = null,
     Object? accountType = freezed,
   }) {
@@ -244,10 +241,6 @@ class _$InitialSettingStateCopyWithImpl<$Res, $Val extends InitialSettingState>
       isLoading: null == isLoading
           ? _value.isLoading
           : isLoading // ignore: cast_nullable_to_non_nullable
-              as bool,
-      userIsNotAnonymous: null == userIsNotAnonymous
-          ? _value.userIsNotAnonymous
-          : userIsNotAnonymous // ignore: cast_nullable_to_non_nullable
               as bool,
       settingIsExist: null == settingIsExist
           ? _value.settingIsExist
@@ -288,7 +281,6 @@ abstract class _$$InitialSettingStateImplCopyWith<$Res>
       List<ReminderTime> reminderTimes,
       bool isOnReminder,
       bool isLoading,
-      bool userIsNotAnonymous,
       bool settingIsExist,
       LinkAccountType? accountType});
 
@@ -312,7 +304,6 @@ class __$$InitialSettingStateImplCopyWithImpl<$Res>
     Object? reminderTimes = null,
     Object? isOnReminder = null,
     Object? isLoading = null,
-    Object? userIsNotAnonymous = null,
     Object? settingIsExist = null,
     Object? accountType = freezed,
   }) {
@@ -337,10 +328,6 @@ class __$$InitialSettingStateImplCopyWithImpl<$Res>
           ? _value.isLoading
           : isLoading // ignore: cast_nullable_to_non_nullable
               as bool,
-      userIsNotAnonymous: null == userIsNotAnonymous
-          ? _value.userIsNotAnonymous
-          : userIsNotAnonymous // ignore: cast_nullable_to_non_nullable
-              as bool,
       settingIsExist: null == settingIsExist
           ? _value.settingIsExist
           : settingIsExist // ignore: cast_nullable_to_non_nullable
@@ -362,7 +349,6 @@ class _$InitialSettingStateImpl extends _InitialSettingState {
       required final List<ReminderTime> reminderTimes,
       this.isOnReminder = true,
       this.isLoading = false,
-      this.userIsNotAnonymous = false,
       this.settingIsExist = false,
       this.accountType})
       : _pillSheetTypes = pillSheetTypes,
@@ -396,16 +382,13 @@ class _$InitialSettingStateImpl extends _InitialSettingState {
   final bool isLoading;
   @override
   @JsonKey()
-  final bool userIsNotAnonymous;
-  @override
-  @JsonKey()
   final bool settingIsExist;
   @override
   final LinkAccountType? accountType;
 
   @override
   String toString() {
-    return 'InitialSettingState(pillSheetTypes: $pillSheetTypes, todayPillNumber: $todayPillNumber, reminderTimes: $reminderTimes, isOnReminder: $isOnReminder, isLoading: $isLoading, userIsNotAnonymous: $userIsNotAnonymous, settingIsExist: $settingIsExist, accountType: $accountType)';
+    return 'InitialSettingState(pillSheetTypes: $pillSheetTypes, todayPillNumber: $todayPillNumber, reminderTimes: $reminderTimes, isOnReminder: $isOnReminder, isLoading: $isLoading, settingIsExist: $settingIsExist, accountType: $accountType)';
   }
 
   @override
@@ -423,8 +406,6 @@ class _$InitialSettingStateImpl extends _InitialSettingState {
                 other.isOnReminder == isOnReminder) &&
             (identical(other.isLoading, isLoading) ||
                 other.isLoading == isLoading) &&
-            (identical(other.userIsNotAnonymous, userIsNotAnonymous) ||
-                other.userIsNotAnonymous == userIsNotAnonymous) &&
             (identical(other.settingIsExist, settingIsExist) ||
                 other.settingIsExist == settingIsExist) &&
             (identical(other.accountType, accountType) ||
@@ -439,7 +420,6 @@ class _$InitialSettingStateImpl extends _InitialSettingState {
       const DeepCollectionEquality().hash(_reminderTimes),
       isOnReminder,
       isLoading,
-      userIsNotAnonymous,
       settingIsExist,
       accountType);
 
@@ -458,7 +438,6 @@ abstract class _InitialSettingState extends InitialSettingState {
       required final List<ReminderTime> reminderTimes,
       final bool isOnReminder,
       final bool isLoading,
-      final bool userIsNotAnonymous,
       final bool settingIsExist,
       final LinkAccountType? accountType}) = _$InitialSettingStateImpl;
   const _InitialSettingState._() : super._();
@@ -473,8 +452,6 @@ abstract class _InitialSettingState extends InitialSettingState {
   bool get isOnReminder;
   @override
   bool get isLoading;
-  @override
-  bool get userIsNotAnonymous;
   @override
   bool get settingIsExist;
   @override
