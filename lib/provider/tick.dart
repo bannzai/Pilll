@@ -1,8 +1,6 @@
 import 'dart:async';
 
-import 'package:hooks_riverpod/hooks_riverpod.dart';
 import 'package:pilll/utils/datetime/day.dart';
-import 'package:riverpod/riverpod.dart';
 import 'package:riverpod_annotation/riverpod_annotation.dart';
 
 part 'tick.g.dart';
