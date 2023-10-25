@@ -1101,10 +1101,10 @@ class MockEndInitialSetting extends _i1.Mock implements _i27.EndInitialSetting {
         ),
       ) as _i2.DatabaseConnection);
   @override
-  _i9.Future<void> call(_i6.Setting? setting) => (super.noSuchMethod(
+  _i9.Future<void> call() => (super.noSuchMethod(
         Invocation.method(
           #call,
-          [setting],
+          [],
         ),
         returnValue: _i9.Future<void>.value(),
         returnValueForMissingStub: _i9.Future<void>.value(),
