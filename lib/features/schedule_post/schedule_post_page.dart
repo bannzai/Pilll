@@ -31,7 +31,7 @@ class SchedulePostPage extends HookConsumerWidget {
   const SchedulePostPage({Key? key, required this.date}) : super(key: key);
   @override
   Widget build(BuildContext context, WidgetRef ref) {
-    return AsyncValueGroup.group2(ref.watch(premiumAndTrialProvider), ref.watch(schedulesForDateProvider(date))).when(
+    return AsyncValueGroup.group2(ref.watch(userProvider), ref.watch(schedulesForDateProvider(date))).when(
       data: (data) => _SchedulePostPage(
         date: date,
         premiumAndTrial: data.t1,

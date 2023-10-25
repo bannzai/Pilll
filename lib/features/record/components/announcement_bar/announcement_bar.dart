@@ -38,7 +38,7 @@ class AnnouncementBar extends HookConsumerWidget {
   Widget? _body(BuildContext context, WidgetRef ref) {
     final latestPillSheetGroup = ref.watch(latestPillSheetGroupProvider).valueOrNull;
     final totalCountOfActionForTakenPill = ref.watch(intSharedPreferencesProvider(IntKey.totalCountOfActionForTakenPill)).value ?? 0;
-    final premiumAndTrial = ref.watch(premiumAndTrialProvider).requireValue;
+    final premiumAndTrial = ref.watch(userProvider).requireValue;
     final isLinkedLoginProvider = ref.watch(isLinkedProvider);
     final recommendedSignupNotificationIsAlreadyShow =
         ref.watch(boolSharedPreferencesProvider(BoolKey.recommendedSignupNotificationIsAlreadyShow)).value ?? false;

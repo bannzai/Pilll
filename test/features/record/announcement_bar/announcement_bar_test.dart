@@ -74,7 +74,7 @@ void main() {
           ProviderScope(
             overrides: [
               latestPillSheetGroupProvider.overrideWith((ref) => Stream.value(pillSheetGroup)),
-              premiumAndTrialProvider.overrideWithValue(
+              userProvider.overrideWithValue(
                 AsyncData(
                   PremiumAndTrial(
                     isPremium: false,
@@ -133,7 +133,7 @@ void main() {
           ProviderScope(
             overrides: [
               latestPillSheetGroupProvider.overrideWith((ref) => Stream.value(pillSheetGroup)),
-              premiumAndTrialProvider.overrideWithValue(
+              userProvider.overrideWithValue(
                 AsyncData(
                   PremiumAndTrial(
                     isPremium: false,
@@ -189,7 +189,7 @@ void main() {
           ProviderScope(
             overrides: [
               latestPillSheetGroupProvider.overrideWith((ref) => Stream.value(pillSheetGroup)),
-              premiumAndTrialProvider.overrideWithValue(
+              userProvider.overrideWithValue(
                 AsyncData(
                   PremiumAndTrial(
                     isPremium: false,
@@ -245,7 +245,7 @@ void main() {
           ProviderScope(
             overrides: [
               latestPillSheetGroupProvider.overrideWith((ref) => Stream.value(pillSheetGroup)),
-              premiumAndTrialProvider.overrideWithValue(
+              userProvider.overrideWithValue(
                 AsyncData(
                   PremiumAndTrial(
                     isPremium: false,
@@ -301,7 +301,7 @@ void main() {
           ProviderScope(
             overrides: [
               latestPillSheetGroupProvider.overrideWith((ref) => Stream.value(pillSheetGroup)),
-              premiumAndTrialProvider.overrideWithValue(
+              userProvider.overrideWithValue(
                 AsyncData(
                   PremiumAndTrial(
                     isPremium: false,
@@ -350,7 +350,7 @@ void main() {
             ProviderScope(
               overrides: [
                 latestPillSheetGroupProvider.overrideWith((ref) => Stream.value(pillSheetGroup)),
-                premiumAndTrialProvider.overrideWithValue(
+                userProvider.overrideWithValue(
                   AsyncData(
                     PremiumAndTrial(
                       isPremium: false,
@@ -398,7 +398,7 @@ void main() {
             ProviderScope(
               overrides: [
                 latestPillSheetGroupProvider.overrideWith((ref) => Stream.value(pillSheetGroup)),
-                premiumAndTrialProvider.overrideWithValue(
+                userProvider.overrideWithValue(
                   AsyncData(
                     PremiumAndTrial(
                       isPremium: true,
@@ -446,7 +446,7 @@ void main() {
             ProviderScope(
               overrides: [
                 latestPillSheetGroupProvider.overrideWith((ref) => Stream.value(pillSheetGroup)),
-                premiumAndTrialProvider.overrideWithValue(
+                userProvider.overrideWithValue(
                   AsyncData(
                     PremiumAndTrial(
                       isPremium: false,
@@ -502,7 +502,7 @@ void main() {
             ProviderScope(
               overrides: [
                 latestPillSheetGroupProvider.overrideWith((ref) => Stream.value(pillSheetGroup)),
-                premiumAndTrialProvider.overrideWithValue(
+                userProvider.overrideWithValue(
                   AsyncData(
                     PremiumAndTrial(
                       isPremium: false,
@@ -565,7 +565,7 @@ void main() {
             ProviderScope(
               overrides: [
                 latestPillSheetGroupProvider.overrideWith((ref) => Stream.value(pillSheetGroup)),
-                premiumAndTrialProvider.overrideWithValue(
+                userProvider.overrideWithValue(
                   AsyncData(
                     PremiumAndTrial(
                       isPremium: false,
@@ -630,7 +630,7 @@ void main() {
             ProviderScope(
               overrides: [
                 latestPillSheetGroupProvider.overrideWith((ref) => Stream.value(pillSheetGroup)),
-                premiumAndTrialProvider.overrideWithValue(
+                userProvider.overrideWithValue(
                   AsyncData(
                     PremiumAndTrial(
                       isPremium: false,
@@ -695,7 +695,7 @@ void main() {
             ProviderScope(
               overrides: [
                 latestPillSheetGroupProvider.overrideWith((ref) => Stream.value(pillSheetGroup)),
-                premiumAndTrialProvider.overrideWithValue(
+                userProvider.overrideWithValue(
                   AsyncData(
                     PremiumAndTrial(
                       isPremium: false,
@@ -760,7 +760,7 @@ void main() {
             ProviderScope(
               overrides: [
                 latestPillSheetGroupProvider.overrideWith((ref) => Stream.value(pillSheetGroup)),
-                premiumAndTrialProvider.overrideWithValue(
+                userProvider.overrideWithValue(
                   AsyncData(
                     PremiumAndTrial(
                       isPremium: false,
@@ -832,7 +832,7 @@ void main() {
             ProviderScope(
               overrides: [
                 latestPillSheetGroupProvider.overrideWith((ref) => Stream.value(pillSheetGroup)),
-                premiumAndTrialProvider.overrideWithValue(
+                userProvider.overrideWithValue(
                   AsyncData(
                     PremiumAndTrial(
                       isPremium: true,
@@ -899,7 +899,7 @@ void main() {
             ProviderScope(
               overrides: [
                 latestPillSheetGroupProvider.overrideWith((ref) => Stream.value(pillSheetGroup)),
-                premiumAndTrialProvider.overrideWithValue(
+                userProvider.overrideWithValue(
                   AsyncData(
                     PremiumAndTrial(
                       isPremium: true,
@@ -966,7 +966,7 @@ void main() {
             ProviderScope(
               overrides: [
                 latestPillSheetGroupProvider.overrideWith((ref) => Stream.value(pillSheetGroup)),
-                premiumAndTrialProvider.overrideWithValue(
+                userProvider.overrideWithValue(
                   AsyncData(
                     PremiumAndTrial(
                       isPremium: true,
@@ -1033,7 +1033,7 @@ void main() {
             ProviderScope(
               overrides: [
                 latestPillSheetGroupProvider.overrideWith((ref) => Stream.value(pillSheetGroup)),
-                premiumAndTrialProvider.overrideWithValue(
+                userProvider.overrideWithValue(
                   AsyncData(
                     PremiumAndTrial(
                       isPremium: true,
@@ -1100,7 +1100,7 @@ void main() {
             ProviderScope(
               overrides: [
                 latestPillSheetGroupProvider.overrideWith((ref) => Stream.value(pillSheetGroup)),
-                premiumAndTrialProvider.overrideWithValue(
+                userProvider.overrideWithValue(
                   AsyncData(
                     PremiumAndTrial(
                       isPremium: true,
@@ -1167,7 +1167,7 @@ void main() {
             ProviderScope(
               overrides: [
                 latestPillSheetGroupProvider.overrideWith((ref) => Stream.value(pillSheetGroup)),
-                premiumAndTrialProvider.overrideWithValue(
+                userProvider.overrideWithValue(
                   AsyncData(
                     PremiumAndTrial(
                       isPremium: true,
@@ -1235,7 +1235,7 @@ void main() {
           ProviderScope(
             overrides: [
               latestPillSheetGroupProvider.overrideWith((ref) => Stream.value(pillSheetGroup)),
-              premiumAndTrialProvider.overrideWithValue(
+              userProvider.overrideWithValue(
                 AsyncData(
                   PremiumAndTrial(
                     isPremium: true,
@@ -1291,7 +1291,7 @@ void main() {
           ProviderScope(
             overrides: [
               latestPillSheetGroupProvider.overrideWith((ref) => Stream.value(pillSheetGroup)),
-              premiumAndTrialProvider.overrideWithValue(
+              userProvider.overrideWithValue(
                 AsyncData(
                   PremiumAndTrial(
                     isPremium: true,
@@ -1347,7 +1347,7 @@ void main() {
           ProviderScope(
             overrides: [
               latestPillSheetGroupProvider.overrideWith((ref) => Stream.value(pillSheetGroup)),
-              premiumAndTrialProvider.overrideWithValue(
+              userProvider.overrideWithValue(
                 AsyncData(
                   PremiumAndTrial(
                     isPremium: true,

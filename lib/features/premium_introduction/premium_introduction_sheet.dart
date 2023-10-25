@@ -28,7 +28,7 @@ class PremiumIntroductionSheet extends HookConsumerWidget {
   Widget build(BuildContext context, WidgetRef ref) {
     return AsyncValueGroup.group2(
       ref.watch(purchaseOfferingsProvider),
-      ref.watch(premiumAndTrialProvider),
+      ref.watch(userProvider),
     ).when(
       data: (data) => PremiumIntroductionSheetBody(
         offerings: data.t1,

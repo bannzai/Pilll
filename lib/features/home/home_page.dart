@@ -50,7 +50,7 @@ class HomePage extends HookConsumerWidget {
     final sharedPreferences = ref.watch(sharedPreferencesProvider);
     return AsyncValueGroup.group3(
       user,
-      ref.watch(premiumAndTrialProvider),
+      ref.watch(userProvider),
       ref.watch(shouldShowMigrationInformationProvider),
     ).when(
       data: (data) {

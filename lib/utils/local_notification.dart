@@ -180,7 +180,7 @@ class RegisterReminderLocalNotification {
 
     final pillSheetGroup = ref.read(latestPillSheetGroupProvider).asData?.valueOrNull;
     final activePillSheet = ref.read(activePillSheetProvider).asData?.valueOrNull;
-    final premiumOrTrial = ref.read(premiumAndTrialProvider).asData?.valueOrNull?.premiumOrTrial;
+    final premiumOrTrial = ref.read(userProvider).asData?.valueOrNull?.premiumOrTrial;
     final setting = ref.read(settingProvider).asData?.valueOrNull;
     final user = ref.read(userProvider).asData?.valueOrNull;
     if (pillSheetGroup == null || activePillSheet == null || premiumOrTrial == null || setting == null || user == null) {

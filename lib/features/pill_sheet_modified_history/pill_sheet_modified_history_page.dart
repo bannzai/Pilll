@@ -31,7 +31,7 @@ class PillSheetModifiedHistoriesPage extends HookConsumerWidget {
       return null;
     }, [pillSheetModifiedHistoryAsyncValue.asData?.value]);
 
-    return ref.watch(premiumAndTrialProvider).when(
+    return ref.watch(userProvider).when(
           error: (error, _) => UniversalErrorPage(
             error: error,
             child: null,

@@ -32,7 +32,7 @@ class DiaryPostPage extends HookConsumerWidget {
   Widget build(BuildContext context, WidgetRef ref) {
     final diary = this.diary ?? Diary.fromDate(date);
 
-    return AsyncValueGroup.group2(ref.watch(premiumAndTrialProvider), ref.watch(diarySettingProvider)).when(
+    return AsyncValueGroup.group2(ref.watch(userProvider), ref.watch(diarySettingProvider)).when(
       data: (data) => DiaryPostPageBody(
         date: date,
         diary: diary,

@@ -46,7 +46,7 @@ class MenstruationPage extends HookConsumerWidget {
 
     return AsyncValueGroup.group10(
       ref.watch(latestPillSheetGroupProvider),
-      ref.watch(premiumAndTrialProvider),
+      ref.watch(userProvider),
       ref.watch(allMenstruationProvider),
       ref.watch(latestMenstruationProvider),
       ref.watch(settingProvider),

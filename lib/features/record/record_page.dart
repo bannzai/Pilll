@@ -26,7 +26,7 @@ class RecordPage extends HookConsumerWidget {
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {
-    final premiumAndTrial = ref.watch(premiumAndTrialProvider);
+    final premiumAndTrial = ref.watch(userProvider);
     final setting = ref.watch(settingProvider);
     final latestPillSheetGroup = ref.watch(latestPillSheetGroupProvider);
     useAutomaticKeepAlive(wantKeepAlive: true);
