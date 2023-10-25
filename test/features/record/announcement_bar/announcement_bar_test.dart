@@ -1,5 +1,6 @@
 import 'dart:async';
 
+import 'package:pilll/entity/user.codegen.dart';
 import 'package:pilll/features/record/components/announcement_bar/components/admob.dart';
 import 'package:pilll/provider/shared_preferences.dart';
 import 'package:pilll/utils/analytics.dart';
@@ -74,12 +75,10 @@ void main() {
           ProviderScope(
             overrides: [
               latestPillSheetGroupProvider.overrideWith((ref) => Stream.value(pillSheetGroup)),
-              userProvider.overrideWithValue(
-                AsyncData(
+              userProvider.overrideWith(
+                (ref) => Stream.value(
                   User(
                     isPremium: false,
-                    isTrial: false,
-                    hasDiscountEntitlement: true,
                     trialDeadlineDate: null,
                     beginTrialDate: null,
                     discountEntitlementDeadlineDate: mockToday.subtract(const Duration(days: 1)),

@@ -1,5 +1,6 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:pilll/entity/firestore_id_generator.dart';
+import 'package:pilll/entity/user.codegen.dart';
 import 'package:pilll/provider/force_update.dart';
 import 'package:pilll/provider/revert_take_pill.dart';
 import 'package:pilll/provider/set_user_id.dart';
@@ -14,7 +15,6 @@ import 'package:pilll/provider/pill_sheet_group.dart';
 import 'package:pilll/provider/pill_sheet_modified_history.dart';
 import 'package:pilll/provider/user.dart';
 import 'package:pilll/provider/setting.dart';
-import 'package:pilll/provider/user.dart';
 import 'package:pilll/utils/datetime/day.dart';
 import 'package:mockito/annotations.dart';
 import 'package:pilll/provider/purchase.dart';
