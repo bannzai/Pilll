@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:pilll/entity/pill_sheet_group.codegen.dart';
 import 'package:pilll/entity/setting.codegen.dart';
+import 'package:pilll/entity/user.codegen.dart';
 import 'package:pilll/native/channel.dart';
-import 'package:pilll/provider/user.dart';
 
 Future<void> syncActivePillSheetValue({
   required PillSheetGroup? pillSheetGroup,

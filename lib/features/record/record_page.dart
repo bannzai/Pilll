@@ -1,6 +1,7 @@
 import 'package:async_value_group/async_value_group.dart';
 import 'package:flutter_hooks/flutter_hooks.dart';
 import 'package:pilll/components/molecules/indicator.dart';
+import 'package:pilll/entity/user.codegen.dart';
 import 'package:pilll/features/record/components/add_pill_sheet_group/add_pill_sheet_group_empty_frame.dart';
 import 'package:pilll/features/record/components/button/record_page_button.dart';
 import 'package:pilll/features/record/components/announcement_bar/announcement_bar.dart';
@@ -19,7 +20,6 @@ import 'package:pilll/provider/user.dart';
 import 'package:pilll/provider/root.dart';
 import 'package:pilll/provider/setting.dart';
 import 'package:pilll/provider/auth.dart';
-import 'package:pilll/provider/user.dart';
 
 class RecordPage extends HookConsumerWidget {
   const RecordPage({Key? key}) : super(key: key);

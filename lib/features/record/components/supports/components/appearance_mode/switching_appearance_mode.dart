@@ -1,11 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
+import 'package:pilll/entity/user.codegen.dart';
 import 'package:pilll/utils/analytics.dart';
 import 'package:pilll/components/atoms/font.dart';
 import 'package:pilll/components/atoms/text_color.dart';
 import 'package:pilll/features/record/components/supports/components/appearance_mode/select_appearance_mode_modal.dart';
 import 'package:pilll/entity/setting.codegen.dart';
-import 'package:pilll/provider/user.dart';
 
 class SwitchingAppearanceMode extends StatelessWidget {
   final Setting setting;

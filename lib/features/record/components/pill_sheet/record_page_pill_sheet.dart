@@ -24,7 +24,6 @@ import 'package:pilll/entity/weekday.dart';
 import 'package:pilll/features/error/error_alert.dart';
 import 'package:pilll/utils/datetime/date_add.dart';
 import 'package:pilll/utils/error_log.dart';
-import 'package:pilll/provider/user.dart';
 import 'package:pilll/utils/datetime/day.dart';
 import 'package:pilll/utils/local_notification.dart';
 

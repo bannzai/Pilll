@@ -14,7 +14,6 @@ import 'package:purchases_flutter/purchases_flutter.dart';
 import 'package:firebase_auth/firebase_auth.dart' as firebase_auth;
 import 'package:pilll/utils/analytics.dart';
 import 'package:pilll/provider/database.dart';
-import 'package:pilll/provider/user.dart';
 
 enum OfferingType { limited, premium }
 
@@ -123,7 +122,7 @@ const premiumEntitlements = "Premium";
 
 Future<void> callUpdatePurchaseInfo(CustomerInfo info) async {
   analytics.logEvent(name: "start_update_purchase_info");
-  final uid = FirebaseAuth.instance.currentUser?.uid;
+  final uid = firebase_auth.FirebaseAuth.instance.currentUser?.uid;
   if (uid == null) {
     errorLogger.recordError("unexpected uid is not found when purchase info is update", StackTrace.current);
     return;
@@ -149,7 +148,7 @@ Future<void> callUpdatePurchaseInfo(CustomerInfo info) async {
 
 Future<void> syncPurchaseInfo() async {
   analytics.logEvent(name: "start_sync_purchase_info");
-  final uid = FirebaseAuth.instance.currentUser?.uid;
+  final uid = firebase_auth.FirebaseAuth.instance.currentUser?.uid;
   if (uid == null) {
     errorLogger.recordError("unexpected uid is not found when purchase info to sync", StackTrace.current);
     return;

@@ -252,7 +252,6 @@ class EndInitialSetting {
 
   Future<void> call(RemoteConfigParameter remoteConfigParameter) {
     return databaseConnection.userRawReference().set({
-      UserFirestoreFieldKeys.isTrial: true,
       UserFirestoreFieldKeys.beginTrialDate: now(),
       UserFirestoreFieldKeys.trialDeadlineDate: now().addDays(remoteConfigParameter.trialDeadlineDateOffsetDay),
       UserFirestoreFieldKeys.discountEntitlementDeadlineDate:

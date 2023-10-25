@@ -31,7 +31,6 @@ import 'package:pilll/features/settings/components/inquiry/inquiry.dart';
 import 'package:pilll/components/atoms/color.dart';
 import 'package:pilll/components/atoms/text_color.dart';
 import 'package:pilll/provider/pill_sheet_group.dart';
-import 'package:pilll/provider/user.dart';
 import 'package:pilll/provider/root.dart';
 import 'package:pilll/provider/setting.dart';
 import 'package:pilll/provider/shared_preferences.dart';
@@ -55,11 +54,10 @@ class SettingPage extends HookConsumerWidget {
     useAutomaticKeepAlive(wantKeepAlive: true);
 
     final sharedPreferences = ref.watch(sharedPreferencesProvider);
-    return AsyncValueGroup.group5(
+    return AsyncValueGroup.group4(
       ref.watch(userProvider),
       ref.watch(settingProvider),
       ref.watch(latestPillSheetGroupProvider),
-      ref.watch(userProvider),
       ref.watch(isHealthDataAvailableProvider),
     ).when(
       data: (data) {
@@ -69,8 +67,7 @@ class SettingPage extends HookConsumerWidget {
           user: data.t1,
           setting: data.t2,
           latestPillSheetGroup: data.t3,
-          user: data.t4,
-          isHealthDataAvailable: data.t5,
+          isHealthDataAvailable: data.t4,
           userIsUpdatedFrom132: userIsMigratedFrom132,
         );
       },
@@ -89,7 +86,6 @@ class SettingPageBody extends StatelessWidget {
   final User user;
   final Setting setting;
   final PillSheetGroup? latestPillSheetGroup;
-  final User user;
   final bool isHealthDataAvailable;
   final bool userIsUpdatedFrom132;
 
@@ -98,7 +94,6 @@ class SettingPageBody extends StatelessWidget {
     required this.user,
     required this.setting,
     required this.latestPillSheetGroup,
-    required this.user,
     required this.isHealthDataAvailable,
     required this.userIsUpdatedFrom132,
   }) : super(key: key);
