@@ -15,14 +15,16 @@ class _FakeOfferings extends Fake implements Offerings {}
 class _FakePremiumAndTrial extends Fake implements PremiumAndTrial {
   _FakePremiumAndTrial({
     required this.fakeHasDiscountEntitlement,
+    required this.fakeDiscountEntitlementDeadlineDate,
   });
   final bool fakeHasDiscountEntitlement;
+  final DateTime? fakeDiscountEntitlementDeadlineDate;
 
   @override
   bool get hasDiscountEntitlement => fakeHasDiscountEntitlement;
 
   @override
-  DateTime? get discountEntitlementDeadlineDate => null; // any value
+  DateTime? get discountEntitlementDeadlineDate => fakeDiscountEntitlementDeadlineDate;
 }
 
 void main() {
@@ -33,12 +35,14 @@ void main() {
   });
   group("#offeringType", () {
     test("when hasDiscountEntitlement = false should return premium", () async {
+      final n = now();
       final premiumAndTrial = _FakePremiumAndTrial(
         fakeHasDiscountEntitlement: false,
+        fakeDiscountEntitlementDeadlineDate: n,
       );
       final container = ProviderContainer(
         overrides: [
-          isOverDiscountDeadlineProvider(discountEntitlementDeadlineDate: now()).overrideWithValue(false),
+          isOverDiscountDeadlineProvider(discountEntitlementDeadlineDate: n).overrideWithValue(false),
           purchaseOfferingsProvider.overrideWith((ref) => _FakeOfferings()),
         ],
       );
@@ -46,12 +50,14 @@ void main() {
       expect(currentOfferingType, equals(OfferingType.premium));
     });
     test("when isOverDiscountDeadline = true should return premium", () async {
+      final n = now();
       final premiumAndTrial = _FakePremiumAndTrial(
         fakeHasDiscountEntitlement: false,
+        fakeDiscountEntitlementDeadlineDate: n,
       );
       final container = ProviderContainer(
         overrides: [
-          isOverDiscountDeadlineProvider(discountEntitlementDeadlineDate: now()).overrideWithValue(true),
+          isOverDiscountDeadlineProvider(discountEntitlementDeadlineDate: n).overrideWithValue(true),
           purchaseOfferingsProvider.overrideWith((ref) => _FakeOfferings()),
         ],
       );
@@ -59,12 +65,14 @@ void main() {
       expect(currentOfferingType, equals(OfferingType.premium));
     });
     test("should return limited", () async {
+      final n = now();
       final premiumAndTrial = _FakePremiumAndTrial(
         fakeHasDiscountEntitlement: true,
+        fakeDiscountEntitlementDeadlineDate: n,
       );
       final container = ProviderContainer(
         overrides: [
-          isOverDiscountDeadlineProvider(discountEntitlementDeadlineDate: now()).overrideWithValue(false),
+          isOverDiscountDeadlineProvider(discountEntitlementDeadlineDate: n).overrideWithValue(false),
           purchaseOfferingsProvider.overrideWith((ref) => _FakeOfferings()),
         ],
       );
