@@ -240,6 +240,8 @@ class SaveUserLaunchInfo {
       UserFirestoreFieldKeys.userDocumentIDSets: userDocumentIDSets,
       UserFirestoreFieldKeys.firebaseCurrentUserIDSets: firebaseCurrentUserIDSets,
       UserFirestoreFieldKeys.anonymousUserIDSets: anonymousUserIDSets,
+
+      UserFirestoreFieldKeys.isTrial: user.isTrial,
     }, SetOptions(merge: true));
   }
 }
@@ -252,6 +254,7 @@ class EndInitialSetting {
 
   Future<void> call(RemoteConfigParameter remoteConfigParameter) {
     return databaseConnection.userRawReference().set({
+      UserFirestoreFieldKeys.isTrial: true,
       UserFirestoreFieldKeys.beginTrialDate: now(),
       UserFirestoreFieldKeys.trialDeadlineDate: now().addDays(remoteConfigParameter.trialDeadlineDateOffsetDay).endOfDay(),
       UserFirestoreFieldKeys.discountEntitlementDeadlineDate:

@@ -59,6 +59,10 @@ extension UserFirestoreFieldKeys on String {
   static const discountEntitlementDeadlineDate = "discountEntitlementDeadlineDate";
   static const shouldAskCancelReason = "shouldAskCancelReason";
   static const useLocalNotificationForReminder = "useLocalNotificationForReminder";
+
+  // バックエンドと状態を同期するためにisTrialをDBにも保存する。trialDeadlineDateから計算する仕様の統一さよりも、ロジックの単純さを優先する。
+  // アプリを開かないとトライアルが終了しなくなることについては許容する
+  static const isTrial = "isTrial";
 }
 
 @freezed
