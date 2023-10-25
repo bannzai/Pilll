@@ -150,7 +150,7 @@ class InitialSettingStateNotifier extends StateNotifier<InitialSettingState> {
       );
     }
 
-    await endInitialSetting(setting);
+    await endInitialSetting();
   }
 
   void showHUD() {

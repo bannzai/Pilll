@@ -50,13 +50,17 @@ class InitialSettingState with _$InitialSettingState {
     final pillNumberForFromMenstruation = maxPillCount - menstruationDuration;
 
     final setting = Setting(
-        pillNumberForFromMenstruation: pillNumberForFromMenstruation,
-        durationMenstruation: menstruationDuration,
-        pillSheetTypes: pillSheetTypes,
-        reminderTimes: reminderTimes,
-        isOnReminder: isOnReminder,
-        pillSheetAppearanceMode: PillSheetAppearanceMode.number,
-        timezoneDatabaseName: await FlutterNativeTimezone.getLocalTimezone());
+      pillNumberForFromMenstruation: pillNumberForFromMenstruation,
+      durationMenstruation: menstruationDuration,
+      pillSheetTypes: pillSheetTypes,
+      reminderTimes: reminderTimes,
+      isOnReminder: isOnReminder,
+      timezoneDatabaseName: await FlutterNativeTimezone.getLocalTimezone(),
+      // BEGIN: Release function for trial user
+      pillSheetAppearanceMode: PillSheetAppearanceMode.date,
+      isAutomaticallyCreatePillSheet: true,
+      // END: Release function for trial user
+    );
     return setting;
   }
 

@@ -265,18 +265,12 @@ class EndInitialSetting {
   final DatabaseConnection databaseConnection;
   EndInitialSetting(this.databaseConnection);
 
-  Future<void> call(Setting setting) {
-    final settingForTrial = setting.copyWith(
-      pillSheetAppearanceMode: PillSheetAppearanceMode.date,
-      isAutomaticallyCreatePillSheet: true,
-    );
-
+  Future<void> call() {
     return databaseConnection.userRawReference().set({
       UserFirestoreFieldKeys.isTrial: true,
       UserFirestoreFieldKeys.beginTrialDate: now(),
       UserFirestoreFieldKeys.trialDeadlineDate: now().add(const Duration(days: 30)),
       UserFirestoreFieldKeys.discountEntitlementDeadlineDate: now().add(const Duration(days: 32)),
-      UserFirestoreFieldKeys.settings: settingForTrial.toJson(),
       UserFirestoreFieldKeys.hasDiscountEntitlement: true,
       UserFirestoreFieldKeys.useLocalNotificationForReminder: true,
     }, SetOptions(merge: true));
