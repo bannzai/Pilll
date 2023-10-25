@@ -93,6 +93,7 @@ class User with _$User {
       fromJson: TimestampConverter.timestampToDateTime,
       toJson: TimestampConverter.dateTimeToTimestamp,
     )
+    // 初期設定が完了していない or 古いバージョンのアプリではトライアル終了後にバックエンドの定期実行でdiscountEntitlementDeadlineDateの値が入るがそれより前のデータ(=トライアル中) の場合はdiscountEntitlementDeadlineDateがnullになる
     DateTime? discountEntitlementDeadlineDate,
   }) = _User;
 

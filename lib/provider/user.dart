@@ -244,8 +244,7 @@ class SaveUserLaunchInfo {
     }, SetOptions(merge: true));
   }
 
-  // NOTE: 下位互換のために一時的にhasDiscountEntitlementをtrueにしていくスクリプト。
-  // サーバー側での制御が無駄になるけど、理屈ではこれで生合成が取れる
+  // NOTE: discountEntitlementDeadlineDateからhasDiscountEntitlementをtrueにしていく処理
   Future<void> _temporarySyncronizeDiscountEntitlement(User user) async {
     final discountEntitlementDeadlineDate = user.discountEntitlementDeadlineDate;
     final bool hasDiscountEntitlement;
