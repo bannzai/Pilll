@@ -17,7 +17,7 @@ class DiscountPriceDeadline extends HookConsumerWidget {
   }) : super(key: key);
   @override
   Widget build(BuildContext context, WidgetRef ref) {
-    final difference = ref.watch(durationToDiscountPriceDeadline(discountEntitlementDeadlineDate));
+    final difference = ref.watch(durationToDiscountPriceDeadlineProvider(discountEntitlementDeadlineDate: discountEntitlementDeadlineDate));
     if (difference.inSeconds <= 0) {
       return Container();
     }
