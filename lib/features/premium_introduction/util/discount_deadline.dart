@@ -1,29 +1,37 @@
-import 'package:hooks_riverpod/hooks_riverpod.dart';
-import 'package:pilll/utils/datetime/timer.dart';
+import 'package:pilll/provider/remote_config_parameter.dart';
+import 'package:pilll/provider/tick.dart';
 import 'package:pilll/utils/formatter/date_time_formatter.dart';
+import 'package:riverpod_annotation/riverpod_annotation.dart';
 
-final isOverDiscountDeadlineProvider = Provider.family.autoDispose((ref, DateTime? discountEntitlementDeadlineDate) {
+part 'discount_deadline.g.dart';
+
+@Riverpod()
+bool isOverDiscountDeadline(IsOverDiscountDeadlineRef ref, {required DateTime? discountEntitlementDeadlineDate}) {
   if (discountEntitlementDeadlineDate == null) {
     // NOTE: discountEntitlementDeadlineDate が存在しない時はbackendの方でまだ期限を決めていないのでfalse状態で扱う
     return false;
   }
-  final timer = ref.watch(timerStateProvider);
+  final timer = ref.watch(tickProvider);
   return timer.isAfter(discountEntitlementDeadlineDate);
-});
+}
 
-final hiddenCountdownDiscountDeadlineProvider = Provider.family.autoDispose((ref, DateTime? discountEntitlementDeadlineDate) {
+@Riverpod(dependencies: [remoteConfigParameter])
+bool hiddenCountdownDiscountDeadline(HiddenCountdownDiscountDeadlineRef ref, {required DateTime? discountEntitlementDeadlineDate}) {
   if (discountEntitlementDeadlineDate == null) {
     // NOTE: discountEntitlementDeadlineDate が存在しない時はbackendの方でまだ期限を決めていないのでfalse状態で扱う
     return false;
   }
-  final timer = ref.watch(timerStateProvider);
-  return !(timer.isBefore(discountEntitlementDeadlineDate) && discountEntitlementDeadlineDate.difference(timer).inMinutes <= 48 * 60);
-});
+  final remoteConfigParameter = ref.watch(remoteConfigParameterProvider);
+  final timer = ref.watch(tickProvider);
+  return !(timer.isBefore(discountEntitlementDeadlineDate) &&
+      discountEntitlementDeadlineDate.difference(timer).inMinutes <= remoteConfigParameter.discountCountdownBoundaryHour * 60);
+}
 
-final durationToDiscountPriceDeadline = Provider.family.autoDispose((ref, DateTime discountEntitlementDeadlineDate) {
-  final timerDate = ref.watch(timerStateProvider);
+@Riverpod()
+Duration durationToDiscountPriceDeadline(DurationToDiscountPriceDeadlineRef ref, {required DateTime discountEntitlementDeadlineDate}) {
+  final timerDate = ref.watch(tickProvider);
   return discountEntitlementDeadlineDate.difference(timerDate);
-});
+}
 
 String discountPriceDeadlineCountdownString(Duration diff) {
   final hour = diff.inHours;

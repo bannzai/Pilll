@@ -141,10 +141,10 @@ class PremiumIntroductionSheetBody extends HookConsumerWidget {
   }
 }
 
-void showPremiumIntroductionSheet(BuildContext context) {
+Future<void> showPremiumIntroductionSheet(BuildContext context) async {
   analytics.setCurrentScreen(screenName: "PremiumIntroductionSheet");
 
-  showModalBottomSheet(
+  await showModalBottomSheet(
     context: context,
     builder: (_) => const PremiumIntroductionSheet(),
     backgroundColor: Colors.transparent,

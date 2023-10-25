@@ -2,6 +2,7 @@ import 'package:flutter/services.dart';
 import 'package:intl/date_symbol_data_local.dart';
 import 'package:pilll/entity/firestore_id_generator.dart';
 import 'package:pilll/entity/pill_sheet_modified_history.codegen.dart';
+import 'package:pilll/entity/remote_config_parameter.codegen.dart';
 import 'package:pilll/provider/batch.dart';
 import 'package:pilll/features/initial_setting/initial_setting_state_notifier.dart';
 import 'package:pilll/entity/pill_sheet.codegen.dart';
@@ -13,6 +14,7 @@ import 'package:pilll/entity/setting.codegen.dart';
 
 import 'package:pilll/provider/pill_sheet_group.dart';
 import 'package:pilll/provider/pill_sheet_modified_history.dart';
+import 'package:pilll/provider/remote_config_parameter.dart';
 import 'package:pilll/provider/setting.dart';
 import 'package:pilll/provider/user.dart';
 import 'package:pilll/utils/analytics.dart';
@@ -60,6 +62,7 @@ void main() {
           batchSetSettingProvider.overrideWith((ref) => batchSetSetting),
           batchSetPillSheetModifiedHistoryProvider.overrideWith((ref) => batchSetPillSheetModifiedHistory),
           batchSetPillSheetGroupProvider.overrideWith((ref) => batchSetPillSheetGroup),
+          remoteConfigParameterProvider.overrideWithValue(RemoteConfigParameter()),
         ],
       );
       final store = container.read(initialSettingStateNotifierProvider.notifier);
@@ -87,6 +90,7 @@ void main() {
           batchSetPillSheetModifiedHistoryProvider.overrideWith((ref) => batchSetPillSheetModifiedHistory),
           batchSetPillSheetModifiedHistoryProvider.overrideWith((ref) => batchSetPillSheetModifiedHistory),
           batchSetPillSheetGroupProvider.overrideWith((ref) => batchSetPillSheetGroup),
+          remoteConfigParameterProvider.overrideWithValue(RemoteConfigParameter()),
         ],
       );
       final store = container.read(initialSettingStateNotifierProvider.notifier);
@@ -122,6 +126,7 @@ void main() {
           batchSetSettingProvider.overrideWith((ref) => batchSetSetting),
           batchSetPillSheetModifiedHistoryProvider.overrideWith((ref) => batchSetPillSheetModifiedHistory),
           batchSetPillSheetGroupProvider.overrideWith((ref) => batchSetPillSheetGroup),
+          remoteConfigParameterProvider.overrideWithValue(RemoteConfigParameter()),
         ],
       );
       final store = container.read(initialSettingStateNotifierProvider.notifier);
@@ -152,6 +157,7 @@ void main() {
           batchSetSettingProvider.overrideWith((ref) => batchSetSetting),
           batchSetPillSheetModifiedHistoryProvider.overrideWith((ref) => batchSetPillSheetModifiedHistory),
           batchSetPillSheetGroupProvider.overrideWith((ref) => batchSetPillSheetGroup),
+          remoteConfigParameterProvider.overrideWithValue(RemoteConfigParameter()),
         ],
       );
       final store = container.read(initialSettingStateNotifierProvider.notifier);
@@ -183,6 +189,7 @@ void main() {
           batchSetSettingProvider.overrideWith((ref) => batchSetSetting),
           batchSetPillSheetModifiedHistoryProvider.overrideWith((ref) => batchSetPillSheetModifiedHistory),
           batchSetPillSheetGroupProvider.overrideWith((ref) => batchSetPillSheetGroup),
+          remoteConfigParameterProvider.overrideWithValue(RemoteConfigParameter()),
         ],
       );
       final store = container.read(initialSettingStateNotifierProvider.notifier);
@@ -218,6 +225,7 @@ void main() {
           batchSetSettingProvider.overrideWith((ref) => batchSetSetting),
           batchSetPillSheetModifiedHistoryProvider.overrideWith((ref) => batchSetPillSheetModifiedHistory),
           batchSetPillSheetGroupProvider.overrideWith((ref) => batchSetPillSheetGroup),
+          remoteConfigParameterProvider.overrideWithValue(RemoteConfigParameter()),
         ],
       );
       final store = container.read(initialSettingStateNotifierProvider.notifier);
@@ -245,6 +253,7 @@ void main() {
           batchSetSettingProvider.overrideWith((ref) => batchSetSetting),
           batchSetPillSheetModifiedHistoryProvider.overrideWith((ref) => batchSetPillSheetModifiedHistory),
           batchSetPillSheetGroupProvider.overrideWith((ref) => batchSetPillSheetGroup),
+          remoteConfigParameterProvider.overrideWithValue(RemoteConfigParameter()),
         ],
       );
       final store = container.read(initialSettingStateNotifierProvider.notifier);
@@ -310,6 +319,7 @@ void main() {
           batchSetSettingProvider.overrideWith((ref) => batchSetSetting),
           batchSetPillSheetModifiedHistoryProvider.overrideWith((ref) => batchSetPillSheetModifiedHistory),
           batchSetPillSheetGroupProvider.overrideWith((ref) => batchSetPillSheetGroup),
+          remoteConfigParameterProvider.overrideWithValue(RemoteConfigParameter()),
         ],
       );
       final store = container.read(initialSettingStateNotifierProvider.notifier);
@@ -397,6 +407,7 @@ void main() {
           batchSetSettingProvider.overrideWith((ref) => batchSetSetting),
           batchSetPillSheetModifiedHistoryProvider.overrideWith((ref) => batchSetPillSheetModifiedHistory),
           batchSetPillSheetGroupProvider.overrideWith((ref) => batchSetPillSheetGroup),
+          remoteConfigParameterProvider.overrideWithValue(RemoteConfigParameter()),
         ],
       );
       final store = container.read(initialSettingStateNotifierProvider.notifier);
@@ -422,8 +433,9 @@ void main() {
         timezoneDatabaseName: null,
       );
 
+      final remoteConfigParameter = RemoteConfigParameter();
       final endInitialSetting = MockEndInitialSetting();
-      when(endInitialSetting(setting)).thenAnswer((_) => Future.value());
+      when(endInitialSetting(remoteConfigParameter)).thenAnswer((_) => Future.value());
 
       var mockTodayRepository = MockTodayService();
       final mockToday = DateTime.parse("2020-09-19");
@@ -470,6 +482,7 @@ void main() {
           batchSetSettingProvider.overrideWith((ref) => batchSetSetting),
           batchSetPillSheetModifiedHistoryProvider.overrideWith((ref) => batchSetPillSheetModifiedHistory),
           batchSetPillSheetGroupProvider.overrideWith((ref) => batchSetPillSheetGroup),
+          remoteConfigParameterProvider.overrideWithValue(RemoteConfigParameter()),
         ],
       );
       final store = container.read(initialSettingStateNotifierProvider.notifier);

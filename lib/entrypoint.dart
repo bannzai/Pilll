@@ -6,7 +6,14 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/foundation.dart';
 import 'package:flutter/services.dart';
 import 'package:google_mobile_ads/google_mobile_ads.dart';
-import 'package:pilll/features/root/user_setup_page.dart';
+import 'package:pilll/features/home/home_page.dart';
+import 'package:pilll/features/initial_setting/pill_sheet_group/initial_setting_pill_sheet_group_page.dart';
+import 'package:pilll/features/root/resolver/force_update.dart';
+import 'package:pilll/features/root/resolver/initial_setting_or_app_page.dart';
+import 'package:pilll/features/root/resolver/show_paywall_on_app_launch.dart';
+import 'package:pilll/features/root/resolver/skip_initial_setting.dart';
+import 'package:pilll/features/root/resolver/user_setup.dart';
+import 'package:pilll/features/root/resolver/user_sign_in.dart';
 import 'package:pilll/provider/shared_preferences.dart';
 import 'package:pilll/utils/analytics.dart';
 import 'package:pilll/components/atoms/color.dart';
@@ -22,6 +29,7 @@ import 'package:firebase_crashlytics/firebase_crashlytics.dart';
 import 'package:flutter/material.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
 import 'package:flutter_gen/gen_l10n/app_localizations.dart';
+import 'package:pilll/utils/remote_config.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
 Future<void> entrypoint() async {
@@ -41,7 +49,11 @@ Future<void> entrypoint() async {
     }
 
     // ignore: prefer_typing_uninitialized_variables
-    final (_, sharedPreferences) = await (LocalNotificationService.setupTimeZone(), SharedPreferences.getInstance()).wait;
+    final (_, sharedPreferences, _) = await (
+      LocalNotificationService.setupTimeZone(),
+      SharedPreferences.getInstance(),
+      setupRemoteConfig(),
+    ).wait;
 
     // MEMO: FirebaseCrashlytics#recordFlutterError called dumpErrorToConsole in function.
     FlutterError.onError = FirebaseCrashlytics.instance.recordFlutterError;
@@ -125,6 +137,7 @@ class App extends StatelessWidget {
             if (states.contains(MaterialState.selected)) {
               return PilllColors.secondary;
             }
+
             return null;
           }),
         ),
@@ -141,7 +154,31 @@ class App extends StatelessWidget {
         ),
       ),
       home: ProviderScope(
-        child: RootPage(builder: (_, userID) => UserSetupPage(userID: userID)),
+        child: RootPage(
+          builder: (_) => ForceUpdate(
+            builder: (_) => UserSignIn(
+              builder: (_, userID) => UserSetup(
+                userID: userID,
+                builder: (_) => InitialSettingOrAppPage(builder: (_, screenType) {
+                  switch (screenType) {
+                    case InitialSettingOrAppPageScreenType.initialSetting:
+                      return ShowPaywallOnAppLaunch(
+                        builder: (_) => SkipInitialSetting(builder: (context, skipInitialSetting) {
+                          if (!skipInitialSetting) {
+                            return InitialSettingPillSheetGroupPageRoute.screen();
+                          } else {
+                            return const HomePage();
+                          }
+                        }),
+                      );
+                    case InitialSettingOrAppPageScreenType.app:
+                      return const HomePage();
+                  }
+                }),
+              ),
+            ),
+          ),
+        ),
       ),
       localizationsDelegates: AppLocalizations.localizationsDelegates,
       supportedLocales: AppLocalizations.supportedLocales,

@@ -1,5 +1,5 @@
 PODS:
-  - cloud_firestore (4.8.4):
+  - cloud_firestore (4.11.0):
     - Firebase/Firestore (= 10.13.0)
     - firebase_core
     - Flutter
@@ -26,27 +26,34 @@ PODS:
   - Firebase/Performance (10.13.0):
     - Firebase/CoreOnly
     - FirebasePerformance (~> 10.13.0)
-  - firebase_analytics (10.4.4):
+  - Firebase/RemoteConfig (10.13.0):
+    - Firebase/CoreOnly
+    - FirebaseRemoteConfig (~> 10.13.0)
+  - firebase_analytics (10.6.1):
     - Firebase/Analytics (= 10.13.0)
     - firebase_core
     - Flutter
-  - firebase_auth (4.7.2):
+  - firebase_auth (4.11.1):
     - Firebase/Auth (= 10.13.0)
     - firebase_core
     - Flutter
-  - firebase_core (2.15.0):
+  - firebase_core (2.19.0):
     - Firebase/CoreOnly (= 10.13.0)
     - Flutter
-  - firebase_crashlytics (3.3.4):
+  - firebase_crashlytics (3.4.1):
     - Firebase/Crashlytics (= 10.13.0)
     - firebase_core
     - Flutter
-  - firebase_messaging (14.6.5):
+  - firebase_messaging (14.7.1):
     - Firebase/Messaging (= 10.13.0)
     - firebase_core
     - Flutter
-  - firebase_performance (0.9.2-4):
+  - firebase_performance (0.9.3-1):
     - Firebase/Performance (= 10.13.0)
+    - firebase_core
+    - Flutter
+  - firebase_remote_config (4.3.1):
+    - Firebase/RemoteConfig (= 10.13.0)
     - firebase_core
     - Flutter
   - FirebaseABTesting (10.16.0):
@@ -124,7 +131,7 @@ PODS:
     - GoogleUtilities/ISASwizzler (~> 7.8)
     - GoogleUtilities/MethodSwizzler (~> 7.8)
     - nanopb (< 2.30910.0, >= 2.30908.0)
-  - FirebaseRemoteConfig (10.16.0):
+  - FirebaseRemoteConfig (10.13.0):
     - FirebaseABTesting (~> 10.0)
     - FirebaseCore (~> 10.0)
     - FirebaseInstallations (~> 10.0)
@@ -232,6 +239,7 @@ DEPENDENCIES:
   - firebase_crashlytics (from `.symlinks/plugins/firebase_crashlytics/ios`)
   - firebase_messaging (from `.symlinks/plugins/firebase_messaging/ios`)
   - firebase_performance (from `.symlinks/plugins/firebase_performance/ios`)
+  - firebase_remote_config (from `.symlinks/plugins/firebase_remote_config/ios`)
   - FirebaseFirestore (from `https://github.com/invertase/firestore-ios-sdk-frameworks.git`, tag `10.13.0`)
   - Flutter (from `Flutter`)
   - flutter_app_badger (from `.symlinks/plugins/flutter_app_badger/ios`)
@@ -288,6 +296,8 @@ EXTERNAL SOURCES:
     :path: ".symlinks/plugins/firebase_messaging/ios"
   firebase_performance:
     :path: ".symlinks/plugins/firebase_performance/ios"
+  firebase_remote_config:
+    :path: ".symlinks/plugins/firebase_remote_config/ios"
   FirebaseFirestore:
     :git: https://github.com/invertase/firestore-ios-sdk-frameworks.git
     :tag: 10.13.0
@@ -320,14 +330,15 @@ CHECKOUT OPTIONS:
     :tag: 10.13.0
 
 SPEC CHECKSUMS:
-  cloud_firestore: 83f340ec0776642a2ea8b9616d19f9f2ebdefacf
+  cloud_firestore: 16cd4c71ef8d92ce757d13b35766c0a49be2ae5a
   Firebase: 343d7539befb614d22b2eae24759f6307b1175e9
-  firebase_analytics: 4dacf3ef66e0cd339f5cdead0b429f31c4adbf2c
-  firebase_auth: e855a7393beb9aa231e7b4d6c19a98f55b6ee944
-  firebase_core: d1513032966ea24fa88074832609df2ea3f17c9f
-  firebase_crashlytics: 595a32f90302a571e4eb4ce6a13b96d720f86262
-  firebase_messaging: 45b23d6d10f8a773e6aee6f024b289a9b8742c7f
-  firebase_performance: f95bb48e2f00712bfdaec39528a1e12528dd56fd
+  firebase_analytics: fe4adbf86ad39ab792a23ac214688f0aa8f891aa
+  firebase_auth: c8000bcabf1fe43e08fb70c4d33084f3aa307783
+  firebase_core: 468bc2b928a7b6e8e550bd3ec38b887750758a68
+  firebase_crashlytics: 7ea146406d3e06fefc04e156d97f641a0bf1e536
+  firebase_messaging: 9f9c22ce29633c9a26126b274836d454b6efabf8
+  firebase_performance: 3c0e0e646dafde88e56e3383659bf964c44c7be5
+  firebase_remote_config: 0f68f0cc6fe4dba28b4a9f02ca692244feeda7aa
   FirebaseABTesting: 03f0a8b88cf618350527f2c6a2234e29b9c65064
   FirebaseAnalytics: 9a12e090ead49f8877ed8132ae920e3cbbd2fcd0
   FirebaseAppCheckInterop: 82358cff9f33452dd44259e88eea5e562500b1cb
@@ -340,7 +351,7 @@ SPEC CHECKSUMS:
   FirebaseInstallations: b822f91a61f7d1ba763e5ccc9d4f2e6f2ed3b3ee
   FirebaseMessaging: c2b782a6af3058b6e53ac2a6eaab84c5786200c8
   FirebasePerformance: 026649159518446ab398e1262fadea7885e3adda
-  FirebaseRemoteConfig: 17ec974c6cac5cdc6cf8297062c2219851857f06
+  FirebaseRemoteConfig: 33e0dcf43899fbb4f8ef2d84200bf5f5e32eaf05
   FirebaseSessions: 96e7781e545929cde06dd91088ddbb0841391b43
   Flutter: f04841e97a9d0b0a8025694d0796dd46242b2854
   flutter_app_badger: b87fc231847b03b92ce1412aa351842e7e97932f

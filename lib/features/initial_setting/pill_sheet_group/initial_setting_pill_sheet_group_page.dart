@@ -24,11 +24,6 @@ import 'package:pilll/features/sign_in/sign_in_sheet.dart';
 import 'package:pilll/utils/router.dart';
 import 'package:pilll/utils/shared_preference/keys.dart';
 
-// FirebaseAuth.instance.currentUser をそのまま使うとテストで FirebaseApp.configureされてないと怒られるのでとりあえずこれで回避
-final userIsNotAnonymousProvider = Provider((ref) {
-  return FirebaseAuth.instance.currentUser?.isAnonymous == false;
-});
-
 class InitialSettingPillSheetGroupPage extends HookConsumerWidget {
   const InitialSettingPillSheetGroupPage({Key? key}) : super(key: key);
 
@@ -40,11 +35,11 @@ class InitialSettingPillSheetGroupPage extends HookConsumerWidget {
     final isAppleLinked = ref.watch(isAppleLinkedProvider);
     final isGoogleLinked = ref.watch(isGoogleLinkedProvider);
     final didEndInitialSettingNotifier = ref.watch(boolSharedPreferencesProvider(BoolKey.didEndInitialSetting).notifier);
-    final userIsNotAnonymous = ref.watch(userIsNotAnonymousProvider);
+    final userIsAnonymous = FirebaseAuth.instance.currentUser?.isAnonymous == true;
 
     // For linked user
     useEffect(() {
-      if (userIsNotAnonymous) {
+      if (userIsAnonymous) {
         analytics.logEvent(name: "initial_setting_signin_account", parameters: {"uid": FirebaseAuth.instance.currentUser?.uid});
 
         final LinkAccountType? accountType = () {
@@ -138,7 +133,7 @@ class InitialSettingPillSheetGroupPage extends HookConsumerWidget {
                               },
                             ),
                           ),
-                        if (!state.userIsNotAnonymous) ...[
+                        if (userIsAnonymous) ...[
                           const SizedBox(height: 20),
                           AlertButton(
                             text: "すでにアカウントをお持ちの方はこちら",

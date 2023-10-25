@@ -1,3 +1,5 @@
+import 'dart:math';
+
 import 'package:flutter_native_timezone/flutter_native_timezone.dart';
 import 'package:pilll/entity/firestore_id_generator.dart';
 import 'package:pilll/entity/link_account_type.dart';
@@ -26,7 +28,6 @@ class InitialSettingState with _$InitialSettingState {
     required List<ReminderTime> reminderTimes,
     @Default(true) bool isOnReminder,
     @Default(false) bool isLoading,
-    @Default(false) bool userIsNotAnonymous,
     @Default(false) bool settingIsExist,
     LinkAccountType? accountType,
   }) = _InitialSettingState;
@@ -47,17 +48,21 @@ class InitialSettingState with _$InitialSettingState {
 
   Future<Setting> buildSetting() async {
     const menstruationDuration = 4;
-    final maxPillCount = pillSheetTypes.map((e) => e.totalCount).reduce((value, element) => value + element);
-    final pillNumberForFromMenstruation = maxPillCount - menstruationDuration;
+    final maxPillCount = pillSheetTypes.map((e) => e.totalCount).fold(0, (previousValue, element) => previousValue + element);
+    final pillNumberForFromMenstruation = max(0, maxPillCount - menstruationDuration);
 
     final setting = Setting(
-        pillNumberForFromMenstruation: pillNumberForFromMenstruation,
-        durationMenstruation: menstruationDuration,
-        pillSheetTypes: pillSheetTypes,
-        reminderTimes: reminderTimes,
-        isOnReminder: isOnReminder,
-        pillSheetAppearanceMode: PillSheetAppearanceMode.number,
-        timezoneDatabaseName: await FlutterNativeTimezone.getLocalTimezone());
+      pillNumberForFromMenstruation: pillNumberForFromMenstruation,
+      durationMenstruation: menstruationDuration,
+      pillSheetTypes: pillSheetTypes,
+      reminderTimes: reminderTimes,
+      isOnReminder: isOnReminder,
+      timezoneDatabaseName: await FlutterNativeTimezone.getLocalTimezone(),
+      // BEGIN: Release function for trial user
+      pillSheetAppearanceMode: PillSheetAppearanceMode.date,
+      isAutomaticallyCreatePillSheet: true,
+      // END: Release function for trial user
+    );
     return setting;
   }
 
