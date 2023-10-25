@@ -16,7 +16,7 @@ bool isOverDiscountDeadline(IsOverDiscountDeadlineRef ref, {required DateTime? d
   return timer.isAfter(discountEntitlementDeadlineDate);
 }
 
-@Riverpod()
+@Riverpod(dependencies: [remoteConfigParameter])
 bool hiddenCountdownDiscountDeadline(HiddenCountdownDiscountDeadlineRef ref, {required DateTime? discountEntitlementDeadlineDate}) {
   if (discountEntitlementDeadlineDate == null) {
     // NOTE: discountEntitlementDeadlineDate が存在しない時はbackendの方でまだ期限を決めていないのでfalse状態で扱う
