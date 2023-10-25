@@ -18,7 +18,7 @@ class RecordPageInformationHeader extends StatelessWidget {
   final DateTime today;
   final PillSheetGroup? pillSheetGroup;
   final Setting setting;
-  final PremiumAndTrial premiumAndTrial;
+  final User premiumAndTrial;
   const RecordPageInformationHeader({
     Key? key,
     required this.today,

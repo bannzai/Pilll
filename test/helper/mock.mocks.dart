@@ -83,8 +83,8 @@ class _FakeWriteBatch_2 extends _i1.SmartFake implements _i3.WriteBatch {
         );
 }
 
-class _Fake$PremiumAndTrialCopyWith_3<$Res> extends _i1.SmartFake implements _i4.$PremiumAndTrialCopyWith<$Res> {
-  _Fake$PremiumAndTrialCopyWith_3(
+class _Fake$UserCopyWith_3<$Res> extends _i1.SmartFake implements _i4.$UserCopyWith<$Res> {
+  _Fake$UserCopyWith_3(
     Object parent,
     Invocation parentInvocation,
   ) : super(
@@ -395,11 +395,11 @@ class MockWriteBatch extends _i1.Mock implements _i3.WriteBatch {
       );
 }
 
-/// A class which mocks [PremiumAndTrial].
+/// A class which mocks [User].
 ///
 /// See the documentation for Mockito's code generation for more information.
-class MockPremiumAndTrial extends _i1.Mock implements _i4.PremiumAndTrial {
-  MockPremiumAndTrial() {
+class MockUser extends _i1.Mock implements _i4.User {
+  MockUser() {
     _i1.throwOnMissingStub(this);
   }
 
@@ -434,13 +434,13 @@ class MockPremiumAndTrial extends _i1.Mock implements _i4.PremiumAndTrial {
         returnValue: false,
       ) as bool);
   @override
-  _i4.$PremiumAndTrialCopyWith<_i4.PremiumAndTrial> get copyWith => (super.noSuchMethod(
+  _i4.$UserCopyWith<_i4.User> get copyWith => (super.noSuchMethod(
         Invocation.getter(#copyWith),
-        returnValue: _Fake$PremiumAndTrialCopyWith_3<_i4.PremiumAndTrial>(
+        returnValue: _Fake$UserCopyWith_3<_i4.User>(
           this,
           Invocation.getter(#copyWith),
         ),
-      ) as _i4.$PremiumAndTrialCopyWith<_i4.PremiumAndTrial>);
+      ) as _i4.$UserCopyWith<_i4.User>);
 }
 
 /// A class which mocks [Setting].

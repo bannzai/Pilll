@@ -35,7 +35,7 @@ Future<void> syncSetting({
 }
 
 Future<void> syncUserStatus({
-  required PremiumAndTrial? premiumAndTrial,
+  required User? premiumAndTrial,
 }) async {
   final map = {
     "userIsPremiumOrTrial": premiumAndTrial?.premiumOrTrial,

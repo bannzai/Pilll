@@ -26,7 +26,7 @@ import 'package:pilll/utils/local_notification.dart';
   Analytics,
   BatchFactory,
   WriteBatch,
-  PremiumAndTrial,
+  User,
   Setting,
   BatchSetPillSheetGroup,
   BatchSetPillSheetModifiedHistory,

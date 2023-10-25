@@ -15,7 +15,7 @@ class RecordPagePillSheetList extends HookConsumerWidget {
   final PillSheetGroup pillSheetGroup;
   final PillSheet activePillSheet;
   final Setting setting;
-  final PremiumAndTrial premiumAndTrial;
+  final User premiumAndTrial;
 
   const RecordPagePillSheetList({
     Key? key,

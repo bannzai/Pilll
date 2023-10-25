@@ -9,7 +9,7 @@ import 'package:pilll/provider/user.dart';
 
 class SwitchingAppearanceMode extends StatelessWidget {
   final Setting setting;
-  final PremiumAndTrial premiumAndTrial;
+  final User premiumAndTrial;
 
   const SwitchingAppearanceMode({
     Key? key,

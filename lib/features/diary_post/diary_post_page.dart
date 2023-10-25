@@ -62,7 +62,7 @@ extension DiaryPostPageRoute on DiaryPostPage {
 class DiaryPostPageBody extends HookConsumerWidget {
   final DateTime date;
   final Diary diary;
-  final PremiumAndTrial premiumAndTrial;
+  final User premiumAndTrial;
   final DiarySetting? diarySetting;
 
   const DiaryPostPageBody({

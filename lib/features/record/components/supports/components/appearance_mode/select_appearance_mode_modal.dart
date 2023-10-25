@@ -12,7 +12,7 @@ import 'package:pilll/provider/setting.dart';
 import 'package:pilll/utils/local_notification.dart';
 
 class SelectAppearanceModeModal extends HookConsumerWidget {
-  final PremiumAndTrial premiumAndTrial;
+  final User premiumAndTrial;
 
   const SelectAppearanceModeModal({Key? key, required this.premiumAndTrial}) : super(key: key);
 
@@ -85,7 +85,7 @@ class SelectAppearanceModeModal extends HookConsumerWidget {
     required SetSetting setSetting,
     required RegisterReminderLocalNotification registerReminderLocalNotification,
     required Setting setting,
-    required PremiumAndTrial premiumAndTrial,
+    required User premiumAndTrial,
     required PillSheetAppearanceMode mode,
     required String text,
     required bool isPremiumFunction,
@@ -135,7 +135,7 @@ class SelectAppearanceModeModal extends HookConsumerWidget {
 
 void showSelectAppearanceModeModal(
   BuildContext context, {
-  required PremiumAndTrial premiumAndTrial,
+  required User premiumAndTrial,
 }) {
   analytics.setCurrentScreen(screenName: "SelectAppearanceModeModal");
   showModalBottomSheet(

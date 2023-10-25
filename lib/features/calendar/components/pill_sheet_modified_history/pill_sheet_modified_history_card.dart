@@ -46,7 +46,7 @@ class CalendarPillSheetModifiedHistoryCardState {
 
 class CalendarPillSheetModifiedHistoryCard extends StatelessWidget {
   final List<PillSheetModifiedHistory> histories;
-  final PremiumAndTrial premiumAndTrial;
+  final User premiumAndTrial;
 
   const CalendarPillSheetModifiedHistoryCard({
     Key? key,

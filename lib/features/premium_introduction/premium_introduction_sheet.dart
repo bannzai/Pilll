@@ -49,7 +49,7 @@ class PremiumIntroductionSheet extends HookConsumerWidget {
 
 class PremiumIntroductionSheetBody extends HookConsumerWidget {
   final Offerings offerings;
-  final PremiumAndTrial premiumAndTrial;
+  final User premiumAndTrial;
 
   const PremiumIntroductionSheetBody({
     Key? key,

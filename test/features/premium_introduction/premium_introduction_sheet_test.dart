@@ -48,8 +48,8 @@ class _AnnualFakePackage extends Fake implements Package {
   PackageType get packageType => PackageType.annual;
 }
 
-class _FakePremiumAndTrial extends Fake implements PremiumAndTrial {
-  _FakePremiumAndTrial({
+class _FakeUser extends Fake implements User {
+  _FakeUser({
     required this.fakeIsPremium,
     required this.fakeHasDiscountEntitlement,
     required this.fakeDiscountEntitlementDeadlineDate,
@@ -88,7 +88,7 @@ void main() {
 
     group('user is premium', () {
       testWidgets('#PremiumIntroductionDiscountRow is not found and #PremiumUserThanksRow is found', (WidgetTester tester) async {
-        final premiumAndTrial = _FakePremiumAndTrial(
+        final premiumAndTrial = _FakeUser(
           fakeIsPremium: true,
           fakeHasDiscountEntitlement: true, // NOTE: Nasty data
           fakeDiscountEntitlementDeadlineDate: null,
@@ -129,7 +129,7 @@ void main() {
       const hasDiscountEntitlement = true;
       const isOverDiscountDeadline = false;
       testWidgets('#PremiumIntroductionDiscountRow is found', (WidgetTester tester) async {
-        var premiumAndTrial = _FakePremiumAndTrial(
+        var premiumAndTrial = _FakeUser(
           fakeIsPremium: false,
           fakeHasDiscountEntitlement: hasDiscountEntitlement,
           fakeDiscountEntitlementDeadlineDate: discountEntitlementDeadlineDate,
@@ -172,7 +172,7 @@ void main() {
         when(mockTodayRepository.now()).thenReturn(mockToday);
         todayRepository = mockTodayRepository;
 
-        final premiumAndTrial = _FakePremiumAndTrial(
+        final premiumAndTrial = _FakeUser(
           fakeIsPremium: false,
           fakeHasDiscountEntitlement: hasDiscountEntitlement,
           fakeDiscountEntitlementDeadlineDate: mockToday.subtract(const Duration(days: 1)),
@@ -214,7 +214,7 @@ void main() {
         when(mockTodayRepository.now()).thenReturn(mockToday);
         todayRepository = mockTodayRepository;
 
-        final premiumAndTrial = _FakePremiumAndTrial(
+        final premiumAndTrial = _FakeUser(
           fakeIsPremium: false,
           fakeHasDiscountEntitlement: true,
           fakeDiscountEntitlementDeadlineDate: mockToday.subtract(const Duration(days: 1)),
@@ -256,7 +256,7 @@ void main() {
         when(mockTodayRepository.now()).thenReturn(mockToday);
         todayRepository = mockTodayRepository;
 
-        var premiumAndTrial = _FakePremiumAndTrial(
+        var premiumAndTrial = _FakeUser(
           fakeIsPremium: false,
           fakeHasDiscountEntitlement: true,
           fakeDiscountEntitlementDeadlineDate: null,

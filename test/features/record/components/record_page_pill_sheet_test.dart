@@ -65,7 +65,7 @@ void main() {
             pillNumberInPillSheet: pillNumberInPillSheet,
             pageIndex: 0,
             setting: setting,
-            premiumAndTrial: FakePremiumAndTrial(fakeIsPremium: true, fakeIsTrial: true),
+            premiumAndTrial: FakeUser(fakeIsPremium: true, fakeIsTrial: true),
           );
           await tester.pumpWidget(MaterialApp(home: widget));
 
@@ -116,7 +116,7 @@ void main() {
         for (int i = 0; i < 28; i++) {
           final pillNumberInPillSheet = i + 1;
           final widget = PillNumber(
-              premiumAndTrial: FakePremiumAndTrial(fakeIsPremium: false, fakeIsTrial: false),
+              premiumAndTrial: FakeUser(fakeIsPremium: false, fakeIsTrial: false),
               pillSheetGroup: pillSheetGroup,
               pillSheet: pillSheet,
               pillNumberInPillSheet: pillNumberInPillSheet,
@@ -170,7 +170,7 @@ void main() {
         for (int i = 0; i < 28; i++) {
           final pillNumberInPillSheet = i + 1;
           final widget = PillNumber(
-              premiumAndTrial: FakePremiumAndTrial(fakeIsPremium: true, fakeIsTrial: true),
+              premiumAndTrial: FakeUser(fakeIsPremium: true, fakeIsTrial: true),
               pillSheetGroup: pillSheetGroup,
               pillSheet: pillSheet,
               pillNumberInPillSheet: pillNumberInPillSheet,
@@ -227,7 +227,7 @@ void main() {
         for (int i = 0; i < 28; i++) {
           final pillNumberInPillSheet = i + 1;
           final widget = PillNumber(
-              premiumAndTrial: FakePremiumAndTrial(fakeIsPremium: true, fakeIsTrial: true),
+              premiumAndTrial: FakeUser(fakeIsPremium: true, fakeIsTrial: true),
               pillSheetGroup: pillSheetGroup,
               pillSheet: pillSheet,
               pillNumberInPillSheet: pillNumberInPillSheet,
@@ -281,7 +281,7 @@ void main() {
         for (int i = 0; i < 28; i++) {
           final pillNumberInPillSheet = i + 1;
           final widget = PillNumber(
-              premiumAndTrial: FakePremiumAndTrial(fakeIsPremium: false, fakeIsTrial: false),
+              premiumAndTrial: FakeUser(fakeIsPremium: false, fakeIsTrial: false),
               pillSheetGroup: pillSheetGroup,
               pillSheet: pillSheet,
               pillNumberInPillSheet: pillNumberInPillSheet,
@@ -336,7 +336,7 @@ void main() {
         for (int i = 0; i < 28; i++) {
           final pillNumberInPillSheet = i + 1;
           final widget = PillNumber(
-              premiumAndTrial: FakePremiumAndTrial(fakeIsPremium: true, fakeIsTrial: true),
+              premiumAndTrial: FakeUser(fakeIsPremium: true, fakeIsTrial: true),
               pillSheetGroup: pillSheetGroup,
               pillSheet: pillSheet,
               pillNumberInPillSheet: pillNumberInPillSheet,
@@ -392,7 +392,7 @@ void main() {
         for (int i = 0; i < 28; i++) {
           final pillNumberInPillSheet = i + 1;
           final widget = PillNumber(
-              premiumAndTrial: FakePremiumAndTrial(fakeIsPremium: true, fakeIsTrial: true),
+              premiumAndTrial: FakeUser(fakeIsPremium: true, fakeIsTrial: true),
               pillSheetGroup: pillSheetGroup,
               pillSheet: pillSheet,
               pillNumberInPillSheet: pillNumberInPillSheet,
@@ -446,7 +446,7 @@ void main() {
         for (int i = 0; i < 28; i++) {
           final pillNumberInPillSheet = i + 1;
           final widget = PillNumber(
-              premiumAndTrial: FakePremiumAndTrial(fakeIsPremium: false, fakeIsTrial: false),
+              premiumAndTrial: FakeUser(fakeIsPremium: false, fakeIsTrial: false),
               pillSheetGroup: pillSheetGroup,
               pillSheet: pillSheet,
               pillNumberInPillSheet: pillNumberInPillSheet,
@@ -500,7 +500,7 @@ void main() {
         for (int i = 0; i < 28; i++) {
           final pillNumberInPillSheet = i + 1;
           final widget = PillNumber(
-              premiumAndTrial: FakePremiumAndTrial(fakeIsPremium: true, fakeIsTrial: true),
+              premiumAndTrial: FakeUser(fakeIsPremium: true, fakeIsTrial: true),
               pillSheetGroup: pillSheetGroup,
               pillSheet: pillSheet,
               pillNumberInPillSheet: pillNumberInPillSheet,

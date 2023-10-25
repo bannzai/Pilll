@@ -18,7 +18,7 @@ class DiaryPostPhysicalConditionDetails extends StatelessWidget {
     required this.physicalConditionDetails,
   }) : super(key: key);
 
-  final PremiumAndTrial premiumAndTrial;
+  final User premiumAndTrial;
   final DiarySetting? diarySetting;
   final BuildContext context;
   final ValueNotifier<List<String>> physicalConditionDetails;

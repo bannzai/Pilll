@@ -76,7 +76,7 @@ void main() {
               latestPillSheetGroupProvider.overrideWith((ref) => Stream.value(pillSheetGroup)),
               userProvider.overrideWithValue(
                 AsyncData(
-                  PremiumAndTrial(
+                  User(
                     isPremium: false,
                     isTrial: false,
                     hasDiscountEntitlement: true,
@@ -135,7 +135,7 @@ void main() {
               latestPillSheetGroupProvider.overrideWith((ref) => Stream.value(pillSheetGroup)),
               userProvider.overrideWithValue(
                 AsyncData(
-                  PremiumAndTrial(
+                  User(
                     isPremium: false,
                     isTrial: true,
                     hasDiscountEntitlement: false,
@@ -191,7 +191,7 @@ void main() {
               latestPillSheetGroupProvider.overrideWith((ref) => Stream.value(pillSheetGroup)),
               userProvider.overrideWithValue(
                 AsyncData(
-                  PremiumAndTrial(
+                  User(
                     isPremium: false,
                     isTrial: true,
                     hasDiscountEntitlement: false,
@@ -247,7 +247,7 @@ void main() {
               latestPillSheetGroupProvider.overrideWith((ref) => Stream.value(pillSheetGroup)),
               userProvider.overrideWithValue(
                 AsyncData(
-                  PremiumAndTrial(
+                  User(
                     isPremium: false,
                     isTrial: true,
                     hasDiscountEntitlement: false,
@@ -303,7 +303,7 @@ void main() {
               latestPillSheetGroupProvider.overrideWith((ref) => Stream.value(pillSheetGroup)),
               userProvider.overrideWithValue(
                 AsyncData(
-                  PremiumAndTrial(
+                  User(
                     isPremium: false,
                     isTrial: true,
                     hasDiscountEntitlement: false,
@@ -352,7 +352,7 @@ void main() {
                 latestPillSheetGroupProvider.overrideWith((ref) => Stream.value(pillSheetGroup)),
                 userProvider.overrideWithValue(
                   AsyncData(
-                    PremiumAndTrial(
+                    User(
                       isPremium: false,
                       isTrial: false,
                       hasDiscountEntitlement: true,
@@ -400,7 +400,7 @@ void main() {
                 latestPillSheetGroupProvider.overrideWith((ref) => Stream.value(pillSheetGroup)),
                 userProvider.overrideWithValue(
                   AsyncData(
-                    PremiumAndTrial(
+                    User(
                       isPremium: true,
                       isTrial: false,
                       hasDiscountEntitlement: true,
@@ -448,7 +448,7 @@ void main() {
                 latestPillSheetGroupProvider.overrideWith((ref) => Stream.value(pillSheetGroup)),
                 userProvider.overrideWithValue(
                   AsyncData(
-                    PremiumAndTrial(
+                    User(
                       isPremium: false,
                       isTrial: true,
                       hasDiscountEntitlement: true,
@@ -504,7 +504,7 @@ void main() {
                 latestPillSheetGroupProvider.overrideWith((ref) => Stream.value(pillSheetGroup)),
                 userProvider.overrideWithValue(
                   AsyncData(
-                    PremiumAndTrial(
+                    User(
                       isPremium: false,
                       isTrial: false,
                       hasDiscountEntitlement: true,
@@ -567,7 +567,7 @@ void main() {
                 latestPillSheetGroupProvider.overrideWith((ref) => Stream.value(pillSheetGroup)),
                 userProvider.overrideWithValue(
                   AsyncData(
-                    PremiumAndTrial(
+                    User(
                       isPremium: false,
                       isTrial: false,
                       hasDiscountEntitlement: true,
@@ -632,7 +632,7 @@ void main() {
                 latestPillSheetGroupProvider.overrideWith((ref) => Stream.value(pillSheetGroup)),
                 userProvider.overrideWithValue(
                   AsyncData(
-                    PremiumAndTrial(
+                    User(
                       isPremium: false,
                       isTrial: false,
                       hasDiscountEntitlement: true,
@@ -697,7 +697,7 @@ void main() {
                 latestPillSheetGroupProvider.overrideWith((ref) => Stream.value(pillSheetGroup)),
                 userProvider.overrideWithValue(
                   AsyncData(
-                    PremiumAndTrial(
+                    User(
                       isPremium: false,
                       isTrial: false,
                       hasDiscountEntitlement: true,
@@ -762,7 +762,7 @@ void main() {
                 latestPillSheetGroupProvider.overrideWith((ref) => Stream.value(pillSheetGroup)),
                 userProvider.overrideWithValue(
                   AsyncData(
-                    PremiumAndTrial(
+                    User(
                       isPremium: false,
                       isTrial: false,
                       hasDiscountEntitlement: true,
@@ -834,7 +834,7 @@ void main() {
                 latestPillSheetGroupProvider.overrideWith((ref) => Stream.value(pillSheetGroup)),
                 userProvider.overrideWithValue(
                   AsyncData(
-                    PremiumAndTrial(
+                    User(
                       isPremium: true,
                       isTrial: true,
                       hasDiscountEntitlement: true,
@@ -901,7 +901,7 @@ void main() {
                 latestPillSheetGroupProvider.overrideWith((ref) => Stream.value(pillSheetGroup)),
                 userProvider.overrideWithValue(
                   AsyncData(
-                    PremiumAndTrial(
+                    User(
                       isPremium: true,
                       isTrial: true,
                       hasDiscountEntitlement: true,
@@ -968,7 +968,7 @@ void main() {
                 latestPillSheetGroupProvider.overrideWith((ref) => Stream.value(pillSheetGroup)),
                 userProvider.overrideWithValue(
                   AsyncData(
-                    PremiumAndTrial(
+                    User(
                       isPremium: true,
                       isTrial: true,
                       hasDiscountEntitlement: true,
@@ -1035,7 +1035,7 @@ void main() {
                 latestPillSheetGroupProvider.overrideWith((ref) => Stream.value(pillSheetGroup)),
                 userProvider.overrideWithValue(
                   AsyncData(
-                    PremiumAndTrial(
+                    User(
                       isPremium: true,
                       isTrial: true,
                       hasDiscountEntitlement: true,
@@ -1102,7 +1102,7 @@ void main() {
                 latestPillSheetGroupProvider.overrideWith((ref) => Stream.value(pillSheetGroup)),
                 userProvider.overrideWithValue(
                   AsyncData(
-                    PremiumAndTrial(
+                    User(
                       isPremium: true,
                       isTrial: true,
                       hasDiscountEntitlement: true,
@@ -1169,7 +1169,7 @@ void main() {
                 latestPillSheetGroupProvider.overrideWith((ref) => Stream.value(pillSheetGroup)),
                 userProvider.overrideWithValue(
                   AsyncData(
-                    PremiumAndTrial(
+                    User(
                       isPremium: true,
                       isTrial: true,
                       hasDiscountEntitlement: true,
@@ -1237,7 +1237,7 @@ void main() {
               latestPillSheetGroupProvider.overrideWith((ref) => Stream.value(pillSheetGroup)),
               userProvider.overrideWithValue(
                 AsyncData(
-                  PremiumAndTrial(
+                  User(
                     isPremium: true,
                     isTrial: true,
                     hasDiscountEntitlement: true,
@@ -1293,7 +1293,7 @@ void main() {
               latestPillSheetGroupProvider.overrideWith((ref) => Stream.value(pillSheetGroup)),
               userProvider.overrideWithValue(
                 AsyncData(
-                  PremiumAndTrial(
+                  User(
                     isPremium: true,
                     isTrial: false,
                     hasDiscountEntitlement: true,
@@ -1349,7 +1349,7 @@ void main() {
               latestPillSheetGroupProvider.overrideWith((ref) => Stream.value(pillSheetGroup)),
               userProvider.overrideWithValue(
                 AsyncData(
-                  PremiumAndTrial(
+                  User(
                     isPremium: true,
                     isTrial: true,
                     hasDiscountEntitlement: true,

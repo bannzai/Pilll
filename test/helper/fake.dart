@@ -3,8 +3,8 @@ import 'package:pilll/provider/user.dart';
 import 'package:pilll/utils/analytics.dart';
 import 'package:pilll/utils/error_log.dart';
 
-class FakePremiumAndTrial extends Mock implements PremiumAndTrial {
-  FakePremiumAndTrial({
+class FakeUser extends Mock implements User {
+  FakeUser({
 // ignore: unused_element
     this.fakeIsPremium = false,
 // ignore: unused_element

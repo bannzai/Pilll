@@ -12,8 +12,8 @@ import '../../helper/mock.mocks.dart';
 
 class _FakeOfferings extends Fake implements Offerings {}
 
-class _FakePremiumAndTrial extends Fake implements PremiumAndTrial {
-  _FakePremiumAndTrial({
+class _FakeUser extends Fake implements User {
+  _FakeUser({
     required this.fakeHasDiscountEntitlement,
     required this.fakeDiscountEntitlementDeadlineDate,
   });
@@ -36,7 +36,7 @@ void main() {
   group("#offeringType", () {
     test("when hasDiscountEntitlement = false should return premium", () async {
       final n = now();
-      final premiumAndTrial = _FakePremiumAndTrial(
+      final premiumAndTrial = _FakeUser(
         fakeHasDiscountEntitlement: false,
         fakeDiscountEntitlementDeadlineDate: n,
       );
@@ -51,7 +51,7 @@ void main() {
     });
     test("when isOverDiscountDeadline = true should return premium", () async {
       final n = now();
-      final premiumAndTrial = _FakePremiumAndTrial(
+      final premiumAndTrial = _FakeUser(
         fakeHasDiscountEntitlement: false,
         fakeDiscountEntitlementDeadlineDate: n,
       );
@@ -66,7 +66,7 @@ void main() {
     });
     test("should return limited", () async {
       final n = now();
-      final premiumAndTrial = _FakePremiumAndTrial(
+      final premiumAndTrial = _FakeUser(
         fakeHasDiscountEntitlement: true,
         fakeDiscountEntitlementDeadlineDate: n,
       );

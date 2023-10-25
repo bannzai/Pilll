@@ -13,7 +13,7 @@ class RecordPagePillSheetSupportActions extends StatelessWidget {
   final PillSheetGroup pillSheetGroup;
   final PillSheet activePillSheet;
   final Setting setting;
-  final PremiumAndTrial premiumAndTrial;
+  final User premiumAndTrial;
 
   const RecordPagePillSheetSupportActions({
     Key? key,

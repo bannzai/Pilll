@@ -6,7 +6,7 @@ import 'package:flutter/material.dart';
 import 'package:pilll/provider/user.dart';
 
 class PillSheetModifiedHistoryMoreButton extends StatelessWidget {
-  final PremiumAndTrial premiumAndTrial;
+  final User premiumAndTrial;
   const PillSheetModifiedHistoryMoreButton({
     Key? key,
     required this.premiumAndTrial,

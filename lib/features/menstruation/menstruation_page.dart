@@ -82,7 +82,7 @@ class MenstruationPage extends HookConsumerWidget {
 
 class MenstruationPageBody extends HookConsumerWidget {
   final PillSheetGroup? latestPillSheetGroup;
-  final PremiumAndTrial premiumAndTrial;
+  final User premiumAndTrial;
   final List<Menstruation> allMenstruation;
   final Menstruation? latestMenstruation;
   final Setting setting;

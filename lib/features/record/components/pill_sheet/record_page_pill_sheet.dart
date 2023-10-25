@@ -32,7 +32,7 @@ class RecordPagePillSheet extends HookConsumerWidget {
   final PillSheetGroup pillSheetGroup;
   final PillSheet pillSheet;
   final Setting setting;
-  final PremiumAndTrial premiumAndTrial;
+  final User premiumAndTrial;
 
   List<PillSheetType> get pillSheetTypes => pillSheetGroup.pillSheets.map((e) => e.pillSheetType).toList();
 
@@ -273,7 +273,7 @@ class PillNumber extends StatelessWidget {
   final PillSheetGroup pillSheetGroup;
   final PillSheet pillSheet;
   final Setting setting;
-  final PremiumAndTrial premiumAndTrial;
+  final User premiumAndTrial;
   final int pageIndex;
   final int pillNumberInPillSheet;
 

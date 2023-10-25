@@ -89,7 +89,7 @@ class SettingPageBody extends StatelessWidget {
   final User user;
   final Setting setting;
   final PillSheetGroup? latestPillSheetGroup;
-  final PremiumAndTrial premiumAndTrial;
+  final User premiumAndTrial;
   final bool isHealthDataAvailable;
   final bool userIsUpdatedFrom132;
 

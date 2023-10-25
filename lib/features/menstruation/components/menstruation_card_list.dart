@@ -14,7 +14,7 @@ import 'package:pilll/utils/datetime/day.dart';
 
 class MenstruationCardList extends StatelessWidget {
   final List<CalendarScheduledMenstruationBandModel> calendarScheduledMenstruationBandModels;
-  final PremiumAndTrial premiumAndTrial;
+  final User premiumAndTrial;
   final Setting setting;
   final PillSheetGroup? latestPillSheetGroup;
   final Menstruation? latestMenstruation;
@@ -90,7 +90,7 @@ MenstruationCardState? cardState(
 MenstruationHistoryCardState? historyCardState(
   Menstruation? menstruation,
   List<Menstruation> allMenstruation,
-  PremiumAndTrial premiumAndTrial,
+  User premiumAndTrial,
 ) {
   if (menstruation == null) {
     return null;

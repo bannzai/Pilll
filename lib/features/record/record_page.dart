@@ -110,7 +110,7 @@ class RecordPage extends HookConsumerWidget {
 class RecordPageBody extends HookConsumerWidget {
   final PillSheetGroup? pillSheetGroup;
   final Setting setting;
-  final PremiumAndTrial premiumAndTrial;
+  final User premiumAndTrial;
   final bool isLinkedLoginProvider;
 
   const RecordPageBody({

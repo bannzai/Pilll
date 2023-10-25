@@ -74,7 +74,7 @@ class HomePage extends HookConsumerWidget {
 
 class HomePageBody extends HookConsumerWidget {
   final User user;
-  final PremiumAndTrial premiumAndTrial;
+  final User premiumAndTrial;
   final bool shouldShowMigrateInfo;
   final SharedPreferences sharedPreferences;
   final RegisterReminderLocalNotification registerReminderLocalNotification;

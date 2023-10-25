@@ -50,7 +50,7 @@ class SchedulePostPage extends HookConsumerWidget {
 class _SchedulePostPage extends HookConsumerWidget {
   final DateTime date;
   final Schedule schedule;
-  final PremiumAndTrial premiumAndTrial;
+  final User premiumAndTrial;
 
   const _SchedulePostPage({
     Key? key,
