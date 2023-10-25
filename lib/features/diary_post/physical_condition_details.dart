@@ -1,3 +1,4 @@
+import 'package:pilll/entity/user.codegen.dart';
 import 'package:pilll/features/diary_post/util.dart';
 import 'package:pilll/utils/analytics.dart';
 import 'package:pilll/features/diary_setting_physical_condtion_detail/page.dart';
@@ -6,7 +7,6 @@ import 'package:pilll/components/atoms/color.dart';
 import 'package:pilll/components/atoms/font.dart';
 import 'package:pilll/components/atoms/text_color.dart';
 import 'package:pilll/entity/diary_setting.codegen.dart';
-import 'package:pilll/provider/user.dart';
 import 'package:flutter/material.dart';
 
 class DiaryPostPhysicalConditionDetails extends StatelessWidget {

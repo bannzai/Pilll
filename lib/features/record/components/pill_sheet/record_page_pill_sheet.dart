@@ -3,6 +3,7 @@ import 'dart:math';
 import 'package:flutter/material.dart';
 import 'package:flutter_app_badger/flutter_app_badger.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
+import 'package:pilll/entity/user.codegen.dart';
 import 'package:pilll/utils/analytics.dart';
 import 'package:pilll/components/organisms/pill_mark/pill_mark.dart';
 import 'package:pilll/components/organisms/pill_mark/pill_mark_line.dart';

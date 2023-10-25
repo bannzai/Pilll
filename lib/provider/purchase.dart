@@ -2,6 +2,7 @@ import 'package:flutter/cupertino.dart';
 
 import 'package:flutter/services.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
+import 'package:pilll/entity/user.codegen.dart';
 import 'package:pilll/secret/secret.dart';
 import 'package:pilll/features/premium_introduction/util/discount_deadline.dart';
 import 'package:pilll/features/premium_introduction/util/map_to_error.dart';
@@ -10,7 +11,7 @@ import 'package:pilll/utils/error_log.dart';
 import 'package:pilll/provider/user.dart';
 import 'package:pilll/utils/environment.dart';
 import 'package:purchases_flutter/purchases_flutter.dart';
-import 'package:firebase_auth/firebase_auth.dart';
+import 'package:firebase_auth/firebase_auth.dart' as firebase_auth;
 import 'package:pilll/utils/analytics.dart';
 import 'package:pilll/provider/database.dart';
 import 'package:pilll/provider/user.dart';

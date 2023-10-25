@@ -1,3 +1,4 @@
+import 'package:pilll/entity/user.codegen.dart';
 import 'package:pilll/utils/analytics.dart';
 import 'package:pilll/features/premium_introduction/components/premium_introduction_discount.dart';
 import 'package:pilll/features/premium_introduction/components/premium_user_thanks.dart';
@@ -102,7 +103,7 @@ void main() {
                 purchaseOfferingsProvider.overrideWith((ref) => _FakeOfferings()),
                 currentOfferingPackagesProvider.overrideWith((ref, arg) => [_MonthlyFakePackage(), _AnnualFakePackage()]),
                 monthlyPremiumPackageProvider.overrideWith((ref, arg) => _MonthlyFakePackage()),
-                userProvider.overrideWith((ref) => AsyncValue.data(user)),
+                userProvider.overrideWith((ref) => Stream.value(user)),
                 isOverDiscountDeadlineProvider(discountEntitlementDeadlineDate: discountEntitlementDeadlineDate).overrideWithValue(true),
                 durationToDiscountPriceDeadlineProvider(discountEntitlementDeadlineDate: discountEntitlementDeadlineDate)
                     .overrideWithValue(const Duration(seconds: 1000)),

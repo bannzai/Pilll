@@ -1,4 +1,4 @@
-import 'package:pilll/provider/user.dart';
+import 'package:pilll/entity/user.codegen.dart';
 import 'package:pilll/utils/analytics.dart';
 import 'package:pilll/components/atoms/color.dart';
 import 'package:pilll/components/atoms/font.dart';

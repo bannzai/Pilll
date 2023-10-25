@@ -1,6 +1,7 @@
 import 'package:async_value_group/async_value_group.dart';
 import 'package:flutter_hooks/flutter_hooks.dart';
 import 'package:pilll/components/molecules/keyboard_toolbar.dart';
+import 'package:pilll/entity/user.codegen.dart';
 import 'package:pilll/features/diary_post/memo.dart';
 import 'package:pilll/features/diary_post/physical_condition.dart';
 import 'package:pilll/features/diary_post/physical_condition_details.dart';

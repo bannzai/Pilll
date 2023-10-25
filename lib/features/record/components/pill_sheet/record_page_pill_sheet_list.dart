@@ -2,6 +2,7 @@ import 'package:flutter_hooks/flutter_hooks.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
 import 'package:pilll/components/molecules/dots_page_indicator.dart';
 import 'package:pilll/components/organisms/pill_sheet/pill_sheet_view_layout.dart';
+import 'package:pilll/entity/user.codegen.dart';
 import 'package:pilll/features/record/components/pill_sheet/record_page_pill_sheet.dart';
 import 'package:pilll/entity/pill_sheet.codegen.dart';
 import 'package:pilll/entity/pill_sheet_group.codegen.dart';
@@ -9,7 +10,6 @@ import 'package:pilll/entity/pill_sheet_type.dart';
 import 'package:pilll/entity/setting.codegen.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:pilll/provider/user.dart';
 
 class RecordPagePillSheetList extends HookConsumerWidget {
   final PillSheetGroup pillSheetGroup;

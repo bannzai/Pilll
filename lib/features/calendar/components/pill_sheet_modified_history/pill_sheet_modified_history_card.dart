@@ -1,6 +1,7 @@
 import 'dart:ui';
 
 import 'package:flutter/material.dart';
+import 'package:pilll/entity/user.codegen.dart';
 import 'package:pilll/utils/analytics.dart';
 import 'package:pilll/components/atoms/button.dart';
 import 'package:pilll/components/atoms/font.dart';
@@ -13,7 +14,6 @@ import 'package:pilll/features/calendar/components/pill_sheet_modified_history/p
 import 'package:pilll/features/premium_introduction/premium_introduction_sheet.dart';
 import 'package:pilll/utils/emoji/emoji.dart';
 import 'package:pilll/entity/pill_sheet_modified_history.codegen.dart';
-import 'package:pilll/provider/user.dart';
 
 class CalendarPillSheetModifiedHistoryCardState {
   static const pillSheetModifiedHistoriesThreshold = 6;

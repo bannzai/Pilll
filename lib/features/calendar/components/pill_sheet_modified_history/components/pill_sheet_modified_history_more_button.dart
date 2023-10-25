@@ -1,9 +1,9 @@
+import 'package:pilll/entity/user.codegen.dart';
 import 'package:pilll/utils/analytics.dart';
 import 'package:pilll/components/atoms/button.dart';
 import 'package:pilll/features/pill_sheet_modified_history/pill_sheet_modified_history_page.dart';
 import 'package:pilll/features/premium_introduction/premium_introduction_sheet.dart';
 import 'package:flutter/material.dart';
-import 'package:pilll/provider/user.dart';
 
 class PillSheetModifiedHistoryMoreButton extends StatelessWidget {
   final User user;
