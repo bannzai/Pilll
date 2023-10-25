@@ -54,14 +54,14 @@ class ChangePillNumber {
         beginDate = firstPilSheetBeginDate;
       } else {
         final passedTotalCount = summarizedPillCountWithPillSheetTypesToIndex(pillSheetTypes: pillSheetTypes, toIndex: index);
-        beginDate = firstPilSheetBeginDate.add(Duration(days: passedTotalCount));
+        beginDate = firstPilSheetBeginDate.addDays(passedTotalCount);
       }
 
       final DateTime? lastTakenDate;
       if (pillSheetPageIndex == index) {
-        lastTakenDate = beginDate.add(Duration(days: pillNumberInPillSheet - 2));
+        lastTakenDate = beginDate.addDays(pillNumberInPillSheet - 2);
       } else if (pillSheetPageIndex > index) {
-        lastTakenDate = beginDate.add(Duration(days: pillSheet.pillSheetType.totalCount - 1));
+        lastTakenDate = beginDate.addDays(pillSheet.pillSheetType.totalCount - 1);
       } else {
         // state.selectedPillMarkNumberIntoPillSheet < index
         lastTakenDate = null;

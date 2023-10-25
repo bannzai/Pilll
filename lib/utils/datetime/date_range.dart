@@ -17,7 +17,7 @@ class DateRange {
     return DateRange(l, r);
   }
 
-  List<DateTime> list() => List.generate(days + 1, (index) => _begin.add(Duration(days: index)));
+  List<DateTime> list() => List.generate(days + 1, (index) => _begin.addDays(index));
 
   T map<T extends dynamic>(T Function(DateRange) converter) {
     return converter(this);

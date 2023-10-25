@@ -14,13 +14,13 @@ final List<List<DateTime>> menstruationWeekCalendarDataSource = () {
 
   var end = base.add(const Duration(days: 90));
   final endWeekdayOffset = Weekday.values.last.index - WeekdayFunctions.weekdayFromDate(end).index;
-  end = end.add(Duration(days: endWeekdayOffset));
+  end = end.addDays(endWeekdayOffset);
 
   var diffDay = daysBetween(begin, end);
   diffDay += Weekday.values.length - diffDay % Weekday.values.length;
   List<DateTime> days = [];
   for (int i = 0; i < diffDay; i++) {
-    days.add(begin.add(Duration(days: i)));
+    days.add(begin.addDays(i));
   }
   return List.generate(
       ((diffDay) / Weekday.values.length).round(), (i) => days.sublist(i * Weekday.values.length, i * Weekday.values.length + Weekday.values.length));

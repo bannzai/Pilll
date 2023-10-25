@@ -132,7 +132,7 @@ class MenstruationEditPage extends HookConsumerWidget {
     final dateRangeValue = dateRange.value;
     if (dateRangeValue == null) {
       final begin = date;
-      final end = date.add(Duration(days: max(setting.durationMenstruation - 1, 0)));
+      final end = date.addDays(max(setting.durationMenstruation - 1, 0));
       dateRange.value = DateRange(begin, end);
     } else {
       if (isSameDay(dateRangeValue.begin, date) && isSameDay(dateRangeValue.end, date)) {

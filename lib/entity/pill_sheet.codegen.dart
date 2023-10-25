@@ -145,13 +145,13 @@ class PillSheet with _$PillSheet {
   bool isActiveFor(DateTime date) {
     final begin = beginingDate.date();
     final totalCount = typeInfo.totalCount;
-    final end = begin.add(Duration(days: totalCount + summarizedRestDuration(restDurations: restDurations, upperDate: today()) - 1));
+    final end = begin.addDays(totalCount + summarizedRestDuration(restDurations: restDurations, upperDate: today()) - 1);
     return DateRange(begin, end).inRange(date);
   }
 
   DateTime get estimatedEndTakenDate => beginingDate
-      .add(Duration(days: pillSheetType.totalCount - 1))
-      .add(Duration(days: summarizedRestDuration(restDurations: restDurations, upperDate: today())))
+      .addDays(pillSheetType.totalCount - 1)
+      .addDays(summarizedRestDuration(restDurations: restDurations, upperDate: today()))
       .date()
       .add(const Duration(days: 1))
       .subtract(const Duration(seconds: 1));
@@ -171,7 +171,7 @@ class PillSheet with _$PillSheet {
   // PillSheetのbeginDateは服用お休み中にbackendで毎日1日ずれるようになっているので、
   // ここで計算に考慮するのはこのPillSheetのrestDurationのみで良い
   DateTime displayPillTakeDate(int pillNumberInPillSheet) {
-    final originDate = beginingDate.add(Duration(days: pillNumberInPillSheet - 1)).date();
+    final originDate = beginingDate.addDays(pillNumberInPillSheet - 1).date();
     if (restDurations.isEmpty) {
       return originDate;
     }
@@ -189,9 +189,9 @@ class PillSheet with _$PillSheet {
       }
 
       if (restDurationEndDate != null) {
-        pillTakenDate = pillTakenDate.add(Duration(days: daysBetween(restDurationBeginDate, restDurationEndDate)));
+        pillTakenDate = pillTakenDate.addDays(daysBetween(restDurationBeginDate, restDurationEndDate));
       } else {
-        pillTakenDate = pillTakenDate.add(Duration(days: daysBetween(restDurationBeginDate, today())));
+        pillTakenDate = pillTakenDate.addDays(daysBetween(restDurationBeginDate, today()));
       }
     }
 

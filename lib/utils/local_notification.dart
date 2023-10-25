@@ -233,7 +233,7 @@ class RegisterReminderLocalNotification {
         }
 
         final reminderDateTime =
-            tzNow.date().add(Duration(days: dayOffset)).add(Duration(hours: reminderTime.hour)).add(Duration(minutes: reminderTime.minute));
+            tzNow.date().addDays(dayOffset)).add(Duration(hours: reminderTime.hour)).add(Duration(minutes: reminderTime.minute);
         if (reminderDateTime.isBefore(tzNow)) {
           continue;
         }

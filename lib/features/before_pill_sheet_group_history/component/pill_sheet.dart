@@ -34,8 +34,7 @@ class HistoricalPillsheetGroupPagePillSheet extends HookConsumerWidget {
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {
-    final weekdayDate =
-        pillSheet.beginingDate.add(Duration(days: summarizedRestDuration(restDurations: pillSheet.restDurations, upperDate: today())));
+    final weekdayDate = pillSheet.beginingDate.addDays(summarizedRestDuration(restDurations: pillSheet.restDurations, upperDate: today()));
     final takePill = ref.watch(takePillProvider);
     final revertTakePill = ref.watch(revertTakePillProvider);
     final registerReminderLocalNotification = ref.watch(registerReminderLocalNotificationProvider);

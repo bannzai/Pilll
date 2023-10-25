@@ -175,7 +175,7 @@ class MenstruationPageBody extends HookConsumerWidget {
   String _displayMonth(int page) => DateTimeFormatter.jaMonth(_targetEndDayOfWeekday(page));
   DateTime _targetEndDayOfWeekday(int page) {
     final diff = page - todayCalendarPageIndex;
-    final base = today().add(Duration(days: diff * Weekday.values.length));
+    final base = today().addDays(diff * Weekday.values.length);
     return endDayOfWeekday(base);
   }
 }

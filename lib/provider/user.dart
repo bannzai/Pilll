@@ -269,9 +269,9 @@ class EndInitialSetting {
     return databaseConnection.userRawReference().set({
       UserFirestoreFieldKeys.isTrial: true,
       UserFirestoreFieldKeys.beginTrialDate: now(),
-      UserFirestoreFieldKeys.trialDeadlineDate: now().add(Duration(days: remoteConfigParameter.trialDeadlineDateOffsetDay)),
+      UserFirestoreFieldKeys.trialDeadlineDate: now().addDays(remoteConfigParameter.trialDeadlineDateOffsetDay),
       UserFirestoreFieldKeys.discountEntitlementDeadlineDate:
-          now().add(Duration(days: remoteConfigParameter.trialDeadlineDateOffsetDay + remoteConfigParameter.discountEntitlementOffsetDay)),
+          now().addDays(remoteConfigParameter.trialDeadlineDateOffsetDay + remoteConfigParameter.discountEntitlementOffsetDay),
       UserFirestoreFieldKeys.hasDiscountEntitlement: true,
       UserFirestoreFieldKeys.useLocalNotificationForReminder: true,
     }, SetOptions(merge: true));

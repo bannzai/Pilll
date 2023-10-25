@@ -265,7 +265,7 @@ class PillSheetGroup with _$PillSheetGroup {
     for (final pillSheet in pillSheets) {
       if (setting.pillNumberForFromMenstruation < pillSheet.typeInfo.totalCount) {
         final left = pillSheet.displayPillTakeDate(setting.pillNumberForFromMenstruation);
-        final right = left.add(Duration(days: setting.durationMenstruation - 1));
+        final right = left.addDays(setting.durationMenstruation - 1);
         menstruationDateRanges.add(DateRange(left, right));
       } else {
         final offset = summarizedPillCountWithPillSheetTypesToIndex(pillSheetTypes: pillSheetTypes, toIndex: pillSheet.groupIndex);
@@ -275,7 +275,7 @@ class PillSheetGroup with _$PillSheetGroup {
         for (final fromMenstruation in fromMenstruations) {
           if (begin <= fromMenstruation && fromMenstruation <= end) {
             final left = pillSheet.displayPillTakeDate(fromMenstruation - offset);
-            final right = left.add(Duration(days: setting.durationMenstruation - 1));
+            final right = left.addDays(setting.durationMenstruation - 1);
             menstruationDateRanges.add(DateRange(left, right));
           }
         }

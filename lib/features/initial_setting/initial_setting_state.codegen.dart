@@ -118,7 +118,7 @@ class InitialSettingState with _$InitialSettingState {
         pillSheetTypes: pillSheetTypes,
       );
       final beforePillSheetType = pillSheetTypes[pageIndex - 1];
-      return beforePillSheetBeginingDate.add(Duration(days: beforePillSheetType.totalCount));
+      return beforePillSheetBeginingDate.addDays(beforePillSheetType.totalCount);
     }
   }
 
@@ -140,14 +140,14 @@ class InitialSettingState with _$InitialSettingState {
         pageIndex: pageIndex,
         todayPillNumber: todayPillNumber,
         pillSheetTypes: pillSheetTypes,
-      ).add(Duration(days: pillSheetType.totalCount - 1));
+      ).addDays(pillSheetType.totalCount - 1);
     } else {
       // Current PillSheet
       return _beginingDate(
         pageIndex: pageIndex,
         todayPillNumber: todayPillNumber,
         pillSheetTypes: pillSheetTypes,
-      ).add(Duration(days: todayPillNumber.pillNumberInPillSheet - 2));
+      ).addDays(todayPillNumber.pillNumberInPillSheet - 2);
     }
   }
 
