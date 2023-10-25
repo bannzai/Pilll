@@ -4,11 +4,11 @@ import 'dart:io';
 import 'package:firebase_auth/firebase_auth.dart' as firebase_auth;
 import 'package:flutter/foundation.dart';
 import 'package:flutter_native_timezone/flutter_native_timezone.dart';
+import 'package:pilll/entity/remote_config_parameter.codegen.dart';
 import 'package:pilll/provider/database.dart';
 import 'package:pilll/features/premium_function_survey/premium_function_survey_element_type.dart';
 import 'package:pilll/entity/package.codegen.dart';
 import 'package:pilll/entity/premium_function_survey.codegen.dart';
-import 'package:pilll/entity/setting.codegen.dart';
 import 'package:pilll/entity/user.codegen.dart';
 import 'package:pilll/utils/datetime/day.dart';
 import 'package:pilll/utils/shared_preference/keys.dart';
@@ -265,12 +265,13 @@ class EndInitialSetting {
   final DatabaseConnection databaseConnection;
   EndInitialSetting(this.databaseConnection);
 
-  Future<void> call() {
+  Future<void> call(RemoteConfigParameter remoteConfigParameter) {
     return databaseConnection.userRawReference().set({
       UserFirestoreFieldKeys.isTrial: true,
       UserFirestoreFieldKeys.beginTrialDate: now(),
-      UserFirestoreFieldKeys.trialDeadlineDate: now().add(const Duration(days: 30)),
-      UserFirestoreFieldKeys.discountEntitlementDeadlineDate: now().add(const Duration(days: 32)),
+      UserFirestoreFieldKeys.trialDeadlineDate: now().add(Duration(days: remoteConfigParameter.trialDeadlineDateOffsetDay)),
+      UserFirestoreFieldKeys.discountEntitlementDeadlineDate:
+          now().add(Duration(days: remoteConfigParameter.trialDeadlineDateOffsetDay + remoteConfigParameter.discountEntitlementOffsetDay)),
       UserFirestoreFieldKeys.hasDiscountEntitlement: true,
       UserFirestoreFieldKeys.useLocalNotificationForReminder: true,
     }, SetOptions(merge: true));
