@@ -31,8 +31,7 @@ extension OfferingTypeFunction on OfferingType {
 final _purchaseServiceProvider = Provider((ref) => PurchaseService());
 final purchaseOfferingsProvider = FutureProvider((ref) => ref.watch(_purchaseServiceProvider).fetchOfferings());
 final currentOfferingTypeProvider = Provider.family.autoDispose((ref, PremiumAndTrial premiumAndTrial) {
-  final isOverDiscountDeadline =
-      ref.watch(isOverDiscountDeadlineProvider(discountEntitlementDeadlineDate: premiumAndTrial.discountEntitlementDeadlineDate));
+  final isOverDiscountDeadline = ref.watch(isOverDiscountDeadlineProvider(premiumAndTrial.discountEntitlementDeadlineDate));
   if (!premiumAndTrial.hasDiscountEntitlement) {
     return OfferingType.premium;
   }

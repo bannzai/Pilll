@@ -103,7 +103,7 @@ void main() {
                 currentOfferingPackagesProvider.overrideWith((ref, arg) => [_MonthlyFakePackage(), _AnnualFakePackage()]),
                 monthlyPremiumPackageProvider.overrideWith((ref, arg) => _MonthlyFakePackage()),
                 premiumAndTrialProvider.overrideWith((ref) => AsyncValue.data(premiumAndTrial)),
-                isOverDiscountDeadlineProvider.getProviderOverride((param) => Provider.autoDispose((_) => true)),
+                isOverDiscountDeadlineProvider.overrideWithProvider((param) => Provider.autoDispose((_) => true)),
                 durationToDiscountPriceDeadline.overrideWithProvider((param) => Provider.autoDispose((_) => const Duration(seconds: 1000))),
               ],
               child: const MaterialApp(
