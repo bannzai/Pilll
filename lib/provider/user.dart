@@ -275,6 +275,7 @@ class EndInitialSetting {
       UserFirestoreFieldKeys.isTrial: true,
       UserFirestoreFieldKeys.beginTrialDate: now(),
       UserFirestoreFieldKeys.trialDeadlineDate: now().add(const Duration(days: 30)),
+      UserFirestoreFieldKeys.discountEntitlementDeadlineDate: now().add(const Duration(days: 32)),
       UserFirestoreFieldKeys.settings: settingForTrial.toJson(),
       UserFirestoreFieldKeys.hasDiscountEntitlement: true,
       UserFirestoreFieldKeys.useLocalNotificationForReminder: true,
