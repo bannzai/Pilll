@@ -37,7 +37,6 @@ _$UserImpl _$$UserImplFromJson(Map<String, dynamic> json) => _$UserImpl(
                   .toList() ??
               const [],
       isPremium: json['isPremium'] as bool? ?? false,
-      isTrial: json['isTrial'] as bool? ?? false,
       shouldAskCancelReason: json['shouldAskCancelReason'] as bool? ?? false,
       useLocalNotificationForReminder:
           json['useLocalNotificationForReminder'] as bool? ?? false,
@@ -59,7 +58,6 @@ Map<String, dynamic> _$$UserImplToJson(_$UserImpl instance) =>
       'anonymousUserIDSets': instance.anonymousUserIDSets,
       'firebaseCurrentUserIDSets': instance.firebaseCurrentUserIDSets,
       'isPremium': instance.isPremium,
-      'isTrial': instance.isTrial,
       'shouldAskCancelReason': instance.shouldAskCancelReason,
       'useLocalNotificationForReminder':
           instance.useLocalNotificationForReminder,
