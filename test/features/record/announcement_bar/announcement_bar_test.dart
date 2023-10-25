@@ -88,7 +88,6 @@ void main() {
               ),
               isLinkedProvider.overrideWithValue(false),
               isJaLocaleProvider.overrideWithValue(true),
-// ignore: scoped_providers_should_specify_dependencies
               hiddenCountdownDiscountDeadlineProvider(discountEntitlementDeadlineDate: null).overrideWithValue(false),
               durationToDiscountPriceDeadlineProvider(discountEntitlementDeadlineDate: now()).overrideWithValue(const Duration(seconds: 1000)),
               sharedPreferencesProvider.overrideWith((ref) => sharedPreferences),
