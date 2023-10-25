@@ -1,7 +1,6 @@
 import 'package:pilll/provider/remote_config_parameter.dart';
 import 'package:pilll/provider/tick.dart';
 import 'package:pilll/utils/formatter/date_time_formatter.dart';
-import 'package:pilll/utils/remote_config.dart';
 import 'package:riverpod_annotation/riverpod_annotation.dart';
 
 part 'discount_deadline.g.dart';
