@@ -7,6 +7,7 @@ import 'package:pilll/utils/analytics.dart';
 import 'package:pilll/components/atoms/color.dart';
 import 'package:pilll/components/atoms/font.dart';
 import 'package:pilll/components/atoms/text_color.dart';
+import 'package:pilll/utils/datetime/date_add.dart';
 import 'package:pilll/utils/datetime/date_range.dart';
 import 'package:pilll/features/menstruation_edit/components/calendar/calendar_date_header.dart';
 import 'package:pilll/features/menstruation_edit/components/calendar/month_calendar.dart';
@@ -132,7 +133,7 @@ class MenstruationEditPage extends HookConsumerWidget {
     final dateRangeValue = dateRange.value;
     if (dateRangeValue == null) {
       final begin = date;
-      final end = date.add(Duration(days: max(setting.durationMenstruation - 1, 0)));
+      final end = date.addDays(max(setting.durationMenstruation - 1, 0));
       dateRange.value = DateRange(begin, end);
     } else {
       if (isSameDay(dateRangeValue.begin, date) && isSameDay(dateRangeValue.end, date)) {

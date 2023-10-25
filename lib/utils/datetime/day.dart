@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:pilll/entity/weekday.dart';
+import 'package:pilll/utils/datetime/date_add.dart';
 import 'package:timezone/timezone.dart';
 
 class TodayService {
@@ -29,7 +30,7 @@ DateTime firstDayOfWeekday(DateTime day) {
 }
 
 DateTime endDayOfWeekday(DateTime day) {
-  return day.subtract(Duration(days: day.weekday == 7 ? 0 : day.weekday)).add(Duration(days: Weekday.values.length - 1));
+  return day.subtract(Duration(days: day.weekday == 7 ? 0 : day.weekday)).addDays(Weekday.values.length - 1);
 }
 
 extension Date on DateTime {

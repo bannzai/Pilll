@@ -10,6 +10,7 @@ import 'package:pilll/features/premium_function_survey/premium_function_survey_e
 import 'package:pilll/entity/package.codegen.dart';
 import 'package:pilll/entity/premium_function_survey.codegen.dart';
 import 'package:pilll/entity/user.codegen.dart';
+import 'package:pilll/utils/datetime/date_add.dart';
 import 'package:pilll/utils/datetime/day.dart';
 import 'package:pilll/utils/shared_preference/keys.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
@@ -269,9 +270,9 @@ class EndInitialSetting {
     return databaseConnection.userRawReference().set({
       UserFirestoreFieldKeys.isTrial: true,
       UserFirestoreFieldKeys.beginTrialDate: now(),
-      UserFirestoreFieldKeys.trialDeadlineDate: now().add(Duration(days: remoteConfigParameter.trialDeadlineDateOffsetDay)),
+      UserFirestoreFieldKeys.trialDeadlineDate: now().addDays(remoteConfigParameter.trialDeadlineDateOffsetDay),
       UserFirestoreFieldKeys.discountEntitlementDeadlineDate:
-          now().add(Duration(days: remoteConfigParameter.trialDeadlineDateOffsetDay + remoteConfigParameter.discountEntitlementOffsetDay)),
+          now().addDays(remoteConfigParameter.trialDeadlineDateOffsetDay + remoteConfigParameter.discountEntitlementOffsetDay),
       UserFirestoreFieldKeys.hasDiscountEntitlement: true,
       UserFirestoreFieldKeys.useLocalNotificationForReminder: true,
     }, SetOptions(merge: true));

@@ -1,4 +1,5 @@
 import 'package:pilll/components/organisms/calendar/band/calendar_band_model.dart';
+import 'package:pilll/utils/datetime/date_add.dart';
 import 'package:pilll/utils/datetime/date_range.dart';
 import 'package:pilll/entity/menstruation.codegen.dart';
 import 'package:pilll/entity/pill_sheet_group.codegen.dart';
@@ -28,8 +29,7 @@ List<DateRange> scheduledMenstruationDateRanges(PillSheetGroup? pillSheetGroup, 
   final pillSheetGroupTotalPillCount = pillSheetGroup.pillSheetTypes.fold(0, (p, e) => p + e.typeInfo.totalCount);
   for (var i = 1; i <= maxDateRangeCount; i++) {
     final offset = pillSheetGroupTotalPillCount * i;
-    final dateRangesWithOffset =
-        scheduledMenstruationDateRanges.map((e) => DateRange(e.begin.add(Duration(days: offset)), e.end.add(Duration(days: offset)))).toList();
+    final dateRangesWithOffset = scheduledMenstruationDateRanges.map((e) => DateRange(e.begin.addDays(offset), e.end.addDays(offset))).toList();
     dateRanges = [...dateRanges, ...dateRangesWithOffset];
   }
 
@@ -64,8 +64,8 @@ List<DateRange> nextPillSheetDateRanges(PillSheetGroup pillSheetGroup, [int maxD
   for (int i = 0; i < maxDateRangeCount; i++) {
     final offset = totalPillCount * i;
     for (var pillSheet in pillSheetGroup.pillSheets) {
-      final begin = pillSheet.estimatedEndTakenDate.add(Duration(days: 1 + offset));
-      final end = begin.add(Duration(days: Weekday.values.length - 1));
+      final begin = pillSheet.estimatedEndTakenDate.addDays(1 + offset);
+      final end = begin.addDays(Weekday.values.length - 1);
       dateRanges.add(DateRange(begin, end));
     }
   }

@@ -14,6 +14,7 @@ import 'package:pilll/entity/pill_sheet_group.codegen.dart';
 import 'package:pilll/entity/pill_sheet_type.dart';
 import 'package:pilll/entity/setting.codegen.dart';
 import 'package:pilll/entity/weekday.dart';
+import 'package:pilll/utils/datetime/date_add.dart';
 import 'package:pilll/utils/datetime/day.dart';
 import 'package:pilll/utils/local_notification.dart';
 
@@ -34,8 +35,7 @@ class HistoricalPillsheetGroupPagePillSheet extends HookConsumerWidget {
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {
-    final weekdayDate =
-        pillSheet.beginingDate.add(Duration(days: summarizedRestDuration(restDurations: pillSheet.restDurations, upperDate: today())));
+    final weekdayDate = pillSheet.beginingDate.addDays(summarizedRestDuration(restDurations: pillSheet.restDurations, upperDate: today()));
     final takePill = ref.watch(takePillProvider);
     final revertTakePill = ref.watch(revertTakePillProvider);
     final registerReminderLocalNotification = ref.watch(registerReminderLocalNotificationProvider);

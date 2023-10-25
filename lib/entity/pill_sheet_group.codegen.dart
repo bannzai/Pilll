@@ -4,6 +4,7 @@ import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';
 import 'package:pilll/entity/pill_sheet_type.dart';
 import 'package:pilll/entity/setting.codegen.dart';
+import 'package:pilll/utils/datetime/date_add.dart';
 import 'package:pilll/utils/datetime/day.dart';
 import 'package:pilll/utils/datetime/date_range.dart';
 import 'package:pilll/utils/formatter/date_time_formatter.dart';
@@ -265,7 +266,7 @@ class PillSheetGroup with _$PillSheetGroup {
     for (final pillSheet in pillSheets) {
       if (setting.pillNumberForFromMenstruation < pillSheet.typeInfo.totalCount) {
         final left = pillSheet.displayPillTakeDate(setting.pillNumberForFromMenstruation);
-        final right = left.add(Duration(days: setting.durationMenstruation - 1));
+        final right = left.addDays(setting.durationMenstruation - 1);
         menstruationDateRanges.add(DateRange(left, right));
       } else {
         final offset = summarizedPillCountWithPillSheetTypesToIndex(pillSheetTypes: pillSheetTypes, toIndex: pillSheet.groupIndex);
@@ -275,7 +276,7 @@ class PillSheetGroup with _$PillSheetGroup {
         for (final fromMenstruation in fromMenstruations) {
           if (begin <= fromMenstruation && fromMenstruation <= end) {
             final left = pillSheet.displayPillTakeDate(fromMenstruation - offset);
-            final right = left.add(Duration(days: setting.durationMenstruation - 1));
+            final right = left.addDays(setting.durationMenstruation - 1);
             menstruationDateRanges.add(DateRange(left, right));
           }
         }

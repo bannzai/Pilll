@@ -27,6 +27,7 @@ import 'package:pilll/provider/premium_and_trial.codegen.dart';
 import 'package:pilll/provider/root.dart';
 import 'package:pilll/provider/schedule.dart';
 import 'package:pilll/provider/setting.dart';
+import 'package:pilll/utils/datetime/date_add.dart';
 import 'package:pilll/utils/datetime/day.dart';
 import 'package:pilll/utils/formatter/date_time_formatter.dart';
 
@@ -175,7 +176,7 @@ class MenstruationPageBody extends HookConsumerWidget {
   String _displayMonth(int page) => DateTimeFormatter.jaMonth(_targetEndDayOfWeekday(page));
   DateTime _targetEndDayOfWeekday(int page) {
     final diff = page - todayCalendarPageIndex;
-    final base = today().add(Duration(days: diff * Weekday.values.length));
+    final base = today().addDays(diff * Weekday.values.length);
     return endDayOfWeekday(base);
   }
 }

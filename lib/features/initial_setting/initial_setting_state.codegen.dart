@@ -3,6 +3,7 @@ import 'dart:math';
 import 'package:flutter_native_timezone/flutter_native_timezone.dart';
 import 'package:pilll/entity/firestore_id_generator.dart';
 import 'package:pilll/entity/link_account_type.dart';
+import 'package:pilll/utils/datetime/date_add.dart';
 import 'package:pilll/utils/datetime/day.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';
 import 'package:pilll/entity/pill_sheet.codegen.dart';
@@ -118,7 +119,7 @@ class InitialSettingState with _$InitialSettingState {
         pillSheetTypes: pillSheetTypes,
       );
       final beforePillSheetType = pillSheetTypes[pageIndex - 1];
-      return beforePillSheetBeginingDate.add(Duration(days: beforePillSheetType.totalCount));
+      return beforePillSheetBeginingDate.addDays(beforePillSheetType.totalCount);
     }
   }
 
@@ -140,14 +141,14 @@ class InitialSettingState with _$InitialSettingState {
         pageIndex: pageIndex,
         todayPillNumber: todayPillNumber,
         pillSheetTypes: pillSheetTypes,
-      ).add(Duration(days: pillSheetType.totalCount - 1));
+      ).addDays(pillSheetType.totalCount - 1);
     } else {
       // Current PillSheet
       return _beginingDate(
         pageIndex: pageIndex,
         todayPillNumber: todayPillNumber,
         pillSheetTypes: pillSheetTypes,
-      ).add(Duration(days: todayPillNumber.pillNumberInPillSheet - 2));
+      ).addDays(todayPillNumber.pillNumberInPillSheet - 2);
     }
   }
 
