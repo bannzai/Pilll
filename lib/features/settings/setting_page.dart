@@ -31,7 +31,7 @@ import 'package:pilll/features/settings/components/inquiry/inquiry.dart';
 import 'package:pilll/components/atoms/color.dart';
 import 'package:pilll/components/atoms/text_color.dart';
 import 'package:pilll/provider/pill_sheet_group.dart';
-import 'package:pilll/provider/premium_and_trial.codegen.dart';
+import 'package:pilll/provider/user.dart';
 import 'package:pilll/provider/root.dart';
 import 'package:pilll/provider/setting.dart';
 import 'package:pilll/provider/shared_preferences.dart';

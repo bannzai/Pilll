@@ -9,7 +9,7 @@ import 'package:pilll/features/initial_setting/migrate_info.dart';
 import 'package:pilll/features/premium_function_survey/premium_function_survey_page.dart';
 import 'package:pilll/features/settings/components/churn/churn_survey_complete_dialog.dart';
 import 'package:pilll/features/store_review/pre_store_review_modal.dart';
-import 'package:pilll/provider/premium_and_trial.codegen.dart';
+import 'package:pilll/provider/user.dart';
 import 'package:pilll/provider/shared_preferences.dart';
 import 'package:pilll/utils/analytics.dart';
 import 'package:pilll/provider/user.dart';

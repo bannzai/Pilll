@@ -15,7 +15,7 @@ import 'package:flutter/material.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
 import 'package:pilll/native/widget.dart';
 import 'package:pilll/provider/pill_sheet_group.dart';
-import 'package:pilll/provider/premium_and_trial.codegen.dart';
+import 'package:pilll/provider/user.dart';
 import 'package:pilll/provider/root.dart';
 import 'package:pilll/provider/setting.dart';
 import 'package:pilll/provider/auth.dart';

@@ -1,5 +1,5 @@
 import 'package:mockito/mockito.dart';
-import 'package:pilll/provider/premium_and_trial.codegen.dart';
+import 'package:pilll/provider/user.dart';
 import 'package:pilll/utils/analytics.dart';
 import 'package:pilll/utils/error_log.dart';
 

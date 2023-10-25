@@ -9,7 +9,7 @@ import 'package:pilll/entity/pill_sheet_type.dart';
 import 'package:pilll/entity/setting.codegen.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:pilll/provider/premium_and_trial.codegen.dart';
+import 'package:pilll/provider/user.dart';
 
 class RecordPagePillSheetList extends HookConsumerWidget {
   final PillSheetGroup pillSheetGroup;

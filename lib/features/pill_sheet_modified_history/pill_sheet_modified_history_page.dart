@@ -10,7 +10,7 @@ import 'package:pilll/features/calendar/components/pill_sheet_modified_history/p
 import 'package:pilll/features/calendar/components/pill_sheet_modified_history/pill_sheet_modified_history_list_header.dart';
 import 'package:pilll/features/error/universal_error_page.dart';
 import 'package:pilll/provider/pill_sheet_modified_history.dart';
-import 'package:pilll/provider/premium_and_trial.codegen.dart';
+import 'package:pilll/provider/user.dart';
 
 class PillSheetModifiedHistoriesPage extends HookConsumerWidget {
   const PillSheetModifiedHistoriesPage({Key? key}) : super(key: key);

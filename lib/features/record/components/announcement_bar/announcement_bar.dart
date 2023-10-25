@@ -16,7 +16,7 @@ import 'package:pilll/features/record/components/announcement_bar/components/rec
 import 'package:pilll/features/record/components/announcement_bar/components/rest_duration.dart';
 import 'package:pilll/features/sign_in/sign_in_sheet.dart';
 import 'package:pilll/provider/locale.dart';
-import 'package:pilll/provider/premium_and_trial.codegen.dart';
+import 'package:pilll/provider/user.dart';
 import 'package:pilll/provider/typed_shared_preferences.dart';
 import 'package:pilll/provider/auth.dart';
 import 'package:pilll/utils/datetime/day.dart';

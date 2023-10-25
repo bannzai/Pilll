@@ -18,7 +18,7 @@ import 'package:pilll/provider/database.dart';
 import 'package:pilll/entity/schedule.codegen.dart';
 import 'package:pilll/features/error/error_alert.dart';
 import 'package:pilll/features/error/universal_error_page.dart';
-import 'package:pilll/provider/premium_and_trial.codegen.dart';
+import 'package:pilll/provider/user.dart';
 import 'package:pilll/provider/root.dart';
 import 'package:pilll/provider/schedule.dart';
 import 'package:pilll/utils/local_notification.dart';

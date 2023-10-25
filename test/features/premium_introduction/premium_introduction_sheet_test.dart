@@ -3,7 +3,7 @@ import 'package:pilll/features/premium_introduction/components/premium_introduct
 import 'package:pilll/features/premium_introduction/components/premium_user_thanks.dart';
 import 'package:pilll/features/premium_introduction/premium_introduction_sheet.dart';
 import 'package:pilll/features/premium_introduction/util/discount_deadline.dart';
-import 'package:pilll/provider/premium_and_trial.codegen.dart';
+import 'package:pilll/provider/user.dart';
 import 'package:pilll/utils/datetime/day.dart';
 import 'package:pilll/provider/purchase.dart';
 import 'package:pilll/utils/environment.dart';

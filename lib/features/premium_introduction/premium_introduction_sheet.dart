@@ -14,7 +14,7 @@ import 'package:pilll/features/premium_introduction/components/premium_introduct
 import 'package:pilll/features/premium_introduction/components/premium_user_thanks.dart';
 import 'package:pilll/features/premium_introduction/components/purchase_buttons.dart';
 import 'package:pilll/features/error/universal_error_page.dart';
-import 'package:pilll/provider/premium_and_trial.codegen.dart';
+import 'package:pilll/provider/user.dart';
 import 'package:pilll/provider/root.dart';
 import 'package:pilll/provider/purchase.dart';
 import 'package:pilll/utils/links.dart';

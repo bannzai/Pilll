@@ -12,7 +12,7 @@ import 'package:pilll/provider/menstruation.dart';
 
 import 'package:pilll/provider/pill_sheet_group.dart';
 import 'package:pilll/provider/pill_sheet_modified_history.dart';
-import 'package:pilll/provider/premium_and_trial.codegen.dart';
+import 'package:pilll/provider/user.dart';
 import 'package:pilll/provider/setting.dart';
 import 'package:pilll/provider/user.dart';
 import 'package:pilll/utils/datetime/day.dart';

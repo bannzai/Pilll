@@ -16,7 +16,7 @@ import 'package:pilll/components/atoms/text_color.dart';
 import 'package:pilll/entity/diary_setting.codegen.dart';
 import 'package:pilll/features/error/universal_error_page.dart';
 import 'package:pilll/provider/diary.dart';
-import 'package:pilll/provider/premium_and_trial.codegen.dart';
+import 'package:pilll/provider/user.dart';
 import 'package:pilll/provider/root.dart';
 import 'package:pilll/utils/formatter/date_time_formatter.dart';
 import 'package:flutter/material.dart';
