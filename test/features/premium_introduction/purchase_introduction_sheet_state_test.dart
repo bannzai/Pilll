@@ -4,6 +4,7 @@ import 'package:flutter_test/flutter_test.dart';
 import 'package:pilll/features/premium_introduction/util/discount_deadline.dart';
 import 'package:pilll/provider/premium_and_trial.codegen.dart';
 import 'package:pilll/provider/purchase.dart';
+import 'package:pilll/utils/datetime/day.dart';
 import 'package:purchases_flutter/purchases_flutter.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
@@ -37,7 +38,7 @@ void main() {
       );
       final container = ProviderContainer(
         overrides: [
-          isOverDiscountDeadlineProvider.overrideWith((ref, arg) => false),
+          isOverDiscountDeadlineProvider(discountEntitlementDeadlineDate: now()).overrideWithValue(false),
           purchaseOfferingsProvider.overrideWith((ref) => _FakeOfferings()),
         ],
       );
@@ -50,7 +51,7 @@ void main() {
       );
       final container = ProviderContainer(
         overrides: [
-          isOverDiscountDeadlineProvider.overrideWith((ref, arg) => true),
+          isOverDiscountDeadlineProvider(discountEntitlementDeadlineDate: now()).overrideWithValue(true),
           purchaseOfferingsProvider.overrideWith((ref) => _FakeOfferings()),
         ],
       );
@@ -63,7 +64,7 @@ void main() {
       );
       final container = ProviderContainer(
         overrides: [
-          isOverDiscountDeadlineProvider.overrideWith((ref, arg) => false),
+          isOverDiscountDeadlineProvider(discountEntitlementDeadlineDate: now()).overrideWithValue(false),
           purchaseOfferingsProvider.overrideWith((ref) => _FakeOfferings()),
         ],
       );
