@@ -2,6 +2,7 @@ import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:pilll/entity/firestore_timestamp_converter.dart';
 import 'package:pilll/entity/setting.codegen.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';
+import 'package:pilll/utils/datetime/day.dart';
 
 part 'user.codegen.g.dart';
 part 'user.codegen.freezed.dart';
@@ -56,7 +57,6 @@ extension UserFirestoreFieldKeys on String {
   static const isTrial = "isTrial";
   static const beginTrialDate = "beginTrialDate";
   static const trialDeadlineDate = "trialDeadlineDate";
-  static const hasDiscountEntitlement = "hasDiscountEntitlement";
   static const discountEntitlementDeadlineDate = "discountEntitlementDeadlineDate";
   static const shouldAskCancelReason = "shouldAskCancelReason";
   static const useLocalNotificationForReminder = "useLocalNotificationForReminder";
@@ -76,7 +76,6 @@ class User with _$User {
     @Default([]) List<String> firebaseCurrentUserIDSets,
     @Default(false) bool isPremium,
     @Default(false) bool isTrial,
-    @Default(false) bool hasDiscountEntitlement,
     @Default(false) bool shouldAskCancelReason,
     @Default(false) bool useLocalNotificationForReminder,
     @JsonKey(
@@ -98,4 +97,13 @@ class User with _$User {
   }) = _User;
 
   factory User.fromJson(Map<String, dynamic> json) => _$UserFromJson(json);
+
+  bool get hasDiscountEntitlement {
+    final discountEntitlementDeadlineDate = this.discountEntitlementDeadlineDate;
+    if (discountEntitlementDeadlineDate == null) {
+      return true;
+    } else {
+      return now().isBefore(discountEntitlementDeadlineDate);
+    }
+  }
 }

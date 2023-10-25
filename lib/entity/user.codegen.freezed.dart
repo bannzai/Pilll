@@ -169,7 +169,6 @@ mixin _$User {
       throw _privateConstructorUsedError;
   bool get isPremium => throw _privateConstructorUsedError;
   bool get isTrial => throw _privateConstructorUsedError;
-  bool get hasDiscountEntitlement => throw _privateConstructorUsedError;
   bool get shouldAskCancelReason => throw _privateConstructorUsedError;
   bool get useLocalNotificationForReminder =>
       throw _privateConstructorUsedError;
@@ -207,7 +206,6 @@ abstract class $UserCopyWith<$Res> {
       List<String> firebaseCurrentUserIDSets,
       bool isPremium,
       bool isTrial,
-      bool hasDiscountEntitlement,
       bool shouldAskCancelReason,
       bool useLocalNotificationForReminder,
       @JsonKey(
@@ -248,7 +246,6 @@ class _$UserCopyWithImpl<$Res, $Val extends User>
     Object? firebaseCurrentUserIDSets = null,
     Object? isPremium = null,
     Object? isTrial = null,
-    Object? hasDiscountEntitlement = null,
     Object? shouldAskCancelReason = null,
     Object? useLocalNotificationForReminder = null,
     Object? beginTrialDate = freezed,
@@ -291,10 +288,6 @@ class _$UserCopyWithImpl<$Res, $Val extends User>
       isTrial: null == isTrial
           ? _value.isTrial
           : isTrial // ignore: cast_nullable_to_non_nullable
-              as bool,
-      hasDiscountEntitlement: null == hasDiscountEntitlement
-          ? _value.hasDiscountEntitlement
-          : hasDiscountEntitlement // ignore: cast_nullable_to_non_nullable
               as bool,
       shouldAskCancelReason: null == shouldAskCancelReason
           ? _value.shouldAskCancelReason
@@ -350,7 +343,6 @@ abstract class _$$UserImplCopyWith<$Res> implements $UserCopyWith<$Res> {
       List<String> firebaseCurrentUserIDSets,
       bool isPremium,
       bool isTrial,
-      bool hasDiscountEntitlement,
       bool shouldAskCancelReason,
       bool useLocalNotificationForReminder,
       @JsonKey(
@@ -389,7 +381,6 @@ class __$$UserImplCopyWithImpl<$Res>
     Object? firebaseCurrentUserIDSets = null,
     Object? isPremium = null,
     Object? isTrial = null,
-    Object? hasDiscountEntitlement = null,
     Object? shouldAskCancelReason = null,
     Object? useLocalNotificationForReminder = null,
     Object? beginTrialDate = freezed,
@@ -433,10 +424,6 @@ class __$$UserImplCopyWithImpl<$Res>
           ? _value.isTrial
           : isTrial // ignore: cast_nullable_to_non_nullable
               as bool,
-      hasDiscountEntitlement: null == hasDiscountEntitlement
-          ? _value.hasDiscountEntitlement
-          : hasDiscountEntitlement // ignore: cast_nullable_to_non_nullable
-              as bool,
       shouldAskCancelReason: null == shouldAskCancelReason
           ? _value.shouldAskCancelReason
           : shouldAskCancelReason // ignore: cast_nullable_to_non_nullable
@@ -476,7 +463,6 @@ class _$UserImpl extends _User {
       final List<String> firebaseCurrentUserIDSets = const [],
       this.isPremium = false,
       this.isTrial = false,
-      this.hasDiscountEntitlement = false,
       this.shouldAskCancelReason = false,
       this.useLocalNotificationForReminder = false,
       @JsonKey(
@@ -546,9 +532,6 @@ class _$UserImpl extends _User {
   final bool isTrial;
   @override
   @JsonKey()
-  final bool hasDiscountEntitlement;
-  @override
-  @JsonKey()
   final bool shouldAskCancelReason;
   @override
   @JsonKey()
@@ -571,7 +554,7 @@ class _$UserImpl extends _User {
 
   @override
   String toString() {
-    return 'User(id: $id, setting: $setting, userIDWhenCreateUser: $userIDWhenCreateUser, anonymousUserID: $anonymousUserID, userDocumentIDSets: $userDocumentIDSets, anonymousUserIDSets: $anonymousUserIDSets, firebaseCurrentUserIDSets: $firebaseCurrentUserIDSets, isPremium: $isPremium, isTrial: $isTrial, hasDiscountEntitlement: $hasDiscountEntitlement, shouldAskCancelReason: $shouldAskCancelReason, useLocalNotificationForReminder: $useLocalNotificationForReminder, beginTrialDate: $beginTrialDate, trialDeadlineDate: $trialDeadlineDate, discountEntitlementDeadlineDate: $discountEntitlementDeadlineDate)';
+    return 'User(id: $id, setting: $setting, userIDWhenCreateUser: $userIDWhenCreateUser, anonymousUserID: $anonymousUserID, userDocumentIDSets: $userDocumentIDSets, anonymousUserIDSets: $anonymousUserIDSets, firebaseCurrentUserIDSets: $firebaseCurrentUserIDSets, isPremium: $isPremium, isTrial: $isTrial, shouldAskCancelReason: $shouldAskCancelReason, useLocalNotificationForReminder: $useLocalNotificationForReminder, beginTrialDate: $beginTrialDate, trialDeadlineDate: $trialDeadlineDate, discountEntitlementDeadlineDate: $discountEntitlementDeadlineDate)';
   }
 
   @override
@@ -594,8 +577,6 @@ class _$UserImpl extends _User {
             (identical(other.isPremium, isPremium) ||
                 other.isPremium == isPremium) &&
             (identical(other.isTrial, isTrial) || other.isTrial == isTrial) &&
-            (identical(other.hasDiscountEntitlement, hasDiscountEntitlement) ||
-                other.hasDiscountEntitlement == hasDiscountEntitlement) &&
             (identical(other.shouldAskCancelReason, shouldAskCancelReason) ||
                 other.shouldAskCancelReason == shouldAskCancelReason) &&
             (identical(other.useLocalNotificationForReminder,
@@ -625,7 +606,6 @@ class _$UserImpl extends _User {
       const DeepCollectionEquality().hash(_firebaseCurrentUserIDSets),
       isPremium,
       isTrial,
-      hasDiscountEntitlement,
       shouldAskCancelReason,
       useLocalNotificationForReminder,
       beginTrialDate,
@@ -657,7 +637,6 @@ abstract class _User extends User {
       final List<String> firebaseCurrentUserIDSets,
       final bool isPremium,
       final bool isTrial,
-      final bool hasDiscountEntitlement,
       final bool shouldAskCancelReason,
       final bool useLocalNotificationForReminder,
       @JsonKey(
@@ -695,8 +674,6 @@ abstract class _User extends User {
   bool get isPremium;
   @override
   bool get isTrial;
-  @override
-  bool get hasDiscountEntitlement;
   @override
   bool get shouldAskCancelReason;
   @override
