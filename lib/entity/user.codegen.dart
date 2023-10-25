@@ -54,7 +54,6 @@ extension UserFirestoreFieldKeys on String {
   static const isAnonymous = "isAnonymous";
   static const isPremium = "isPremium";
   static const purchaseAppID = "purchaseAppID";
-  static const isTrial = "isTrial";
   static const beginTrialDate = "beginTrialDate";
   static const trialDeadlineDate = "trialDeadlineDate";
   static const discountEntitlementDeadlineDate = "discountEntitlementDeadlineDate";
@@ -75,7 +74,6 @@ class User with _$User {
     @Default([]) List<String> anonymousUserIDSets,
     @Default([]) List<String> firebaseCurrentUserIDSets,
     @Default(false) bool isPremium,
-    @Default(false) bool isTrial,
     @Default(false) bool shouldAskCancelReason,
     @Default(false) bool useLocalNotificationForReminder,
     @JsonKey(
@@ -104,6 +102,15 @@ class User with _$User {
       return true;
     } else {
       return now().isBefore(discountEntitlementDeadlineDate);
+    }
+  }
+
+  bool get isTrial {
+    final trialDeadlineDate = this.trialDeadlineDate;
+    if (trialDeadlineDate == null) {
+      return false;
+    } else {
+      return now().isBefore(trialDeadlineDate);
     }
   }
 }
