@@ -14,10 +14,9 @@ class Tick extends _$Tick {
     ref.onDispose(() {
       _timer?.cancel();
     });
-    final n = now();
     _timer = Timer.periodic(const Duration(seconds: 1), (timer) {
-      state = n;
+      state = now();
     });
-    return n;
+    return now();
   }
 }
