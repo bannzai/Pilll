@@ -88,8 +88,10 @@ void main() {
               ),
               isLinkedProvider.overrideWithValue(false),
               isJaLocaleProvider.overrideWithValue(true),
-              hiddenCountdownDiscountDeadlineProvider(discountEntitlementDeadlineDate: null).overrideWithValue(false),
-              durationToDiscountPriceDeadlineProvider(discountEntitlementDeadlineDate: now()).overrideWithValue(const Duration(seconds: 1000)),
+              hiddenCountdownDiscountDeadlineProvider(discountEntitlementDeadlineDate: mockToday.subtract(const Duration(days: 1)))
+                  .overrideWith((provider) => false),
+              durationToDiscountPriceDeadlineProvider(discountEntitlementDeadlineDate: mockToday.subtract(const Duration(days: 1)))
+                  .overrideWithValue(const Duration(seconds: 1000)),
               sharedPreferencesProvider.overrideWith((ref) => sharedPreferences),
             ],
             child: const MaterialApp(
@@ -145,8 +147,6 @@ void main() {
               ),
               isLinkedProvider.overrideWithValue(false),
               isJaLocaleProvider.overrideWithValue(true),
-              hiddenCountdownDiscountDeadlineProvider(discountEntitlementDeadlineDate: null).overrideWithValue(false),
-              durationToDiscountPriceDeadlineProvider(discountEntitlementDeadlineDate: now()).overrideWithValue(const Duration(seconds: 1000)),
               sharedPreferencesProvider.overrideWith((ref) => sharedPreferences),
             ],
             child: const MaterialApp(
@@ -203,8 +203,6 @@ void main() {
               ),
               isLinkedProvider.overrideWithValue(false),
               isJaLocaleProvider.overrideWithValue(true),
-              hiddenCountdownDiscountDeadlineProvider(discountEntitlementDeadlineDate: null).overrideWithValue(false),
-              durationToDiscountPriceDeadlineProvider(discountEntitlementDeadlineDate: now()).overrideWithValue(const Duration(seconds: 1000)),
               sharedPreferencesProvider.overrideWith((ref) => sharedPreferences),
             ],
             child: const MaterialApp(
@@ -261,8 +259,6 @@ void main() {
               ),
               isLinkedProvider.overrideWithValue(false),
               isJaLocaleProvider.overrideWithValue(true),
-              hiddenCountdownDiscountDeadlineProvider(discountEntitlementDeadlineDate: null).overrideWithValue(false),
-              durationToDiscountPriceDeadlineProvider(discountEntitlementDeadlineDate: now()).overrideWithValue(const Duration(seconds: 1000)),
               sharedPreferencesProvider.overrideWith((ref) => sharedPreferences),
             ],
             child: const MaterialApp(
@@ -319,8 +315,6 @@ void main() {
               ),
               isLinkedProvider.overrideWithValue(true),
               isJaLocaleProvider.overrideWithValue(true),
-              hiddenCountdownDiscountDeadlineProvider(discountEntitlementDeadlineDate: null).overrideWithValue(false),
-              durationToDiscountPriceDeadlineProvider(discountEntitlementDeadlineDate: now()).overrideWithValue(const Duration(seconds: 1000)),
               sharedPreferencesProvider.overrideWith((ref) => sharedPreferences),
             ],
             child: const MaterialApp(
@@ -370,8 +364,6 @@ void main() {
                 ),
                 isLinkedProvider.overrideWithValue(false),
                 isJaLocaleProvider.overrideWithValue(true),
-                hiddenCountdownDiscountDeadlineProvider(discountEntitlementDeadlineDate: null).overrideWithValue(false),
-                durationToDiscountPriceDeadlineProvider(discountEntitlementDeadlineDate: now()).overrideWithValue(const Duration(seconds: 1000)),
                 pilllAdsProvider.overrideWith((ref) => Stream.value(null)),
                 sharedPreferencesProvider.overrideWith((ref) => sharedPreferences),
               ],
@@ -420,8 +412,6 @@ void main() {
                 ),
                 isLinkedProvider.overrideWithValue(false),
                 isJaLocaleProvider.overrideWithValue(true),
-                hiddenCountdownDiscountDeadlineProvider(discountEntitlementDeadlineDate: null).overrideWithValue(false),
-                durationToDiscountPriceDeadlineProvider(discountEntitlementDeadlineDate: now()).overrideWithValue(const Duration(seconds: 1000)),
                 pilllAdsProvider.overrideWith((ref) => Stream.value(null)),
                 sharedPreferencesProvider.overrideWith((ref) => sharedPreferences),
               ],
@@ -470,8 +460,6 @@ void main() {
                 ),
                 isLinkedProvider.overrideWithValue(false),
                 isJaLocaleProvider.overrideWithValue(true),
-                hiddenCountdownDiscountDeadlineProvider(discountEntitlementDeadlineDate: null).overrideWithValue(false),
-                durationToDiscountPriceDeadlineProvider(discountEntitlementDeadlineDate: now()).overrideWithValue(const Duration(seconds: 1000)),
                 pilllAdsProvider.overrideWith((ref) => Stream.value(null)),
                 sharedPreferencesProvider.overrideWith((ref) => sharedPreferences),
               ],
@@ -528,8 +516,6 @@ void main() {
                 ),
                 isLinkedProvider.overrideWithValue(false),
                 isJaLocaleProvider.overrideWithValue(true),
-                hiddenCountdownDiscountDeadlineProvider(discountEntitlementDeadlineDate: null).overrideWithValue(false),
-                durationToDiscountPriceDeadlineProvider(discountEntitlementDeadlineDate: now()).overrideWithValue(const Duration(seconds: 1000)),
                 pilllAdsProvider.overrideWith(
                   (ref) => Stream.value(PilllAds(
                     description: 'これは広告用のテキスト',
@@ -593,8 +579,6 @@ void main() {
                 ),
                 isLinkedProvider.overrideWithValue(false),
                 isJaLocaleProvider.overrideWithValue(true),
-                hiddenCountdownDiscountDeadlineProvider(discountEntitlementDeadlineDate: null).overrideWithValue(false),
-                durationToDiscountPriceDeadlineProvider(discountEntitlementDeadlineDate: now()).overrideWithValue(const Duration(seconds: 1000)),
                 pilllAdsProvider.overrideWith(
                   (ref) => Stream.value(
                     PilllAds(
@@ -660,8 +644,6 @@ void main() {
                 ),
                 isLinkedProvider.overrideWithValue(false),
                 isJaLocaleProvider.overrideWithValue(true),
-                hiddenCountdownDiscountDeadlineProvider(discountEntitlementDeadlineDate: null).overrideWithValue(false),
-                durationToDiscountPriceDeadlineProvider(discountEntitlementDeadlineDate: now()).overrideWithValue(const Duration(seconds: 1000)),
                 pilllAdsProvider.overrideWith(
                   (ref) => Stream.value(
                     PilllAds(
@@ -727,8 +709,6 @@ void main() {
                 ),
                 isLinkedProvider.overrideWithValue(false),
                 isJaLocaleProvider.overrideWithValue(true),
-                hiddenCountdownDiscountDeadlineProvider(discountEntitlementDeadlineDate: null).overrideWithValue(false),
-                durationToDiscountPriceDeadlineProvider(discountEntitlementDeadlineDate: now()).overrideWithValue(const Duration(seconds: 1000)),
                 pilllAdsProvider.overrideWith(
                   (ref) => Stream.value(
                     PilllAds(
@@ -794,8 +774,6 @@ void main() {
                 ),
                 isLinkedProvider.overrideWithValue(false),
                 isJaLocaleProvider.overrideWithValue(true),
-                hiddenCountdownDiscountDeadlineProvider(discountEntitlementDeadlineDate: null).overrideWithValue(false),
-                durationToDiscountPriceDeadlineProvider(discountEntitlementDeadlineDate: now()).overrideWithValue(const Duration(seconds: 1000)),
                 pilllAdsProvider.overrideWith(
                   (ref) => Stream.value(
                     PilllAds(
@@ -868,8 +846,6 @@ void main() {
                 ),
                 isLinkedProvider.overrideWithValue(false),
                 isJaLocaleProvider.overrideWithValue(true),
-                hiddenCountdownDiscountDeadlineProvider(discountEntitlementDeadlineDate: null).overrideWithValue(false),
-                durationToDiscountPriceDeadlineProvider(discountEntitlementDeadlineDate: now()).overrideWithValue(const Duration(seconds: 1000)),
                 pilllAdsProvider.overrideWith(
                   (ref) => Stream.value(
                     PilllAds(
@@ -937,8 +913,6 @@ void main() {
                 ),
                 isLinkedProvider.overrideWithValue(false),
                 isJaLocaleProvider.overrideWithValue(true),
-                hiddenCountdownDiscountDeadlineProvider(discountEntitlementDeadlineDate: null).overrideWithValue(false),
-                durationToDiscountPriceDeadlineProvider(discountEntitlementDeadlineDate: now()).overrideWithValue(const Duration(seconds: 1000)),
                 pilllAdsProvider.overrideWith(
                   (ref) => Stream.value(
                     PilllAds(
@@ -1006,8 +980,6 @@ void main() {
                 ),
                 isLinkedProvider.overrideWithValue(false),
                 isJaLocaleProvider.overrideWithValue(true),
-                hiddenCountdownDiscountDeadlineProvider(discountEntitlementDeadlineDate: null).overrideWithValue(false),
-                durationToDiscountPriceDeadlineProvider(discountEntitlementDeadlineDate: now()).overrideWithValue(const Duration(seconds: 1000)),
                 pilllAdsProvider.overrideWith(
                   (ref) => Stream.value(
                     PilllAds(
@@ -1075,8 +1047,6 @@ void main() {
                 ),
                 isLinkedProvider.overrideWithValue(false),
                 isJaLocaleProvider.overrideWithValue(true),
-                hiddenCountdownDiscountDeadlineProvider(discountEntitlementDeadlineDate: null).overrideWithValue(false),
-                durationToDiscountPriceDeadlineProvider(discountEntitlementDeadlineDate: now()).overrideWithValue(const Duration(seconds: 1000)),
                 pilllAdsProvider.overrideWith(
                   (ref) => Stream.value(
                     PilllAds(
@@ -1144,8 +1114,6 @@ void main() {
                 ),
                 isLinkedProvider.overrideWithValue(false),
                 isJaLocaleProvider.overrideWithValue(true),
-                hiddenCountdownDiscountDeadlineProvider(discountEntitlementDeadlineDate: null).overrideWithValue(false),
-                durationToDiscountPriceDeadlineProvider(discountEntitlementDeadlineDate: now()).overrideWithValue(const Duration(seconds: 1000)),
                 pilllAdsProvider.overrideWith(
                   (ref) => Stream.value(
                     PilllAds(
@@ -1213,8 +1181,6 @@ void main() {
                 ),
                 isLinkedProvider.overrideWithValue(false),
                 isJaLocaleProvider.overrideWithValue(true),
-                hiddenCountdownDiscountDeadlineProvider(discountEntitlementDeadlineDate: null).overrideWithValue(false),
-                durationToDiscountPriceDeadlineProvider(discountEntitlementDeadlineDate: now()).overrideWithValue(const Duration(seconds: 1000)),
                 pilllAdsProvider.overrideWith(
                   (ref) => Stream.value(
                     PilllAds(
@@ -1283,8 +1249,6 @@ void main() {
               ),
               isLinkedProvider.overrideWithValue(false),
               isJaLocaleProvider.overrideWithValue(true),
-              hiddenCountdownDiscountDeadlineProvider(discountEntitlementDeadlineDate: null).overrideWithValue(false),
-              durationToDiscountPriceDeadlineProvider(discountEntitlementDeadlineDate: now()).overrideWithValue(const Duration(seconds: 1000)),
               sharedPreferencesProvider.overrideWith((ref) => sharedPreferences),
             ],
             child: const MaterialApp(
@@ -1341,8 +1305,6 @@ void main() {
               ),
               isLinkedProvider.overrideWithValue(true),
               isJaLocaleProvider.overrideWithValue(true),
-              hiddenCountdownDiscountDeadlineProvider(discountEntitlementDeadlineDate: null).overrideWithValue(false),
-              durationToDiscountPriceDeadlineProvider(discountEntitlementDeadlineDate: now()).overrideWithValue(const Duration(seconds: 1000)),
               sharedPreferencesProvider.overrideWith((ref) => sharedPreferences),
             ],
             child: const MaterialApp(
@@ -1399,8 +1361,6 @@ void main() {
               ),
               isLinkedProvider.overrideWithValue(true),
               isJaLocaleProvider.overrideWithValue(true),
-              hiddenCountdownDiscountDeadlineProvider(discountEntitlementDeadlineDate: null).overrideWithValue(false),
-              durationToDiscountPriceDeadlineProvider(discountEntitlementDeadlineDate: now()).overrideWithValue(const Duration(seconds: 1000)),
               sharedPreferencesProvider.overrideWith((ref) => sharedPreferences),
             ],
             child: const MaterialApp(
