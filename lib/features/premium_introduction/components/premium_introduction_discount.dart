@@ -27,7 +27,7 @@ class PremiumIntroductionDiscountRow extends HookConsumerWidget {
     final Duration? diff;
     final String? countdown;
     if (discountEntitlementDeadlineDate != null) {
-      final tmpDiff = ref.watch(durationToDiscountPriceDeadline(discountEntitlementDeadlineDate));
+      final tmpDiff = ref.watch(durationToDiscountPriceDeadlineProvider(discountEntitlementDeadlineDate: discountEntitlementDeadlineDate));
       countdown = discountPriceDeadlineCountdownString(tmpDiff);
       diff = tmpDiff;
     } else {
