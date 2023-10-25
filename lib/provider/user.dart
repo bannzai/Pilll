@@ -176,7 +176,6 @@ class SaveUserLaunchInfo {
 
   void call(User user) {
     unawaited(_saveStats(user));
-    unawaited(_temporarySyncronizeDiscountEntitlement(user));
   }
 
   Future<void> _saveStats(User user) async {
@@ -243,21 +242,6 @@ class SaveUserLaunchInfo {
       UserFirestoreFieldKeys.anonymousUserIDSets: anonymousUserIDSets,
     }, SetOptions(merge: true));
   }
-
-  // NOTE: 下位互換のために一時的にhasDiscountEntitlementをtrueにしていくスクリプト。
-  // サーバー側での制御が無駄になるけど、理屈ではこれで生合成が取れる
-  Future<void> _temporarySyncronizeDiscountEntitlement(User user) async {
-    final discountEntitlementDeadlineDate = user.discountEntitlementDeadlineDate;
-    final bool hasDiscountEntitlement;
-    if (discountEntitlementDeadlineDate == null) {
-      hasDiscountEntitlement = true;
-    } else {
-      hasDiscountEntitlement = !now().isAfter(discountEntitlementDeadlineDate);
-    }
-    return databaseConnection.userRawReference().set({
-      UserFirestoreFieldKeys.hasDiscountEntitlement: hasDiscountEntitlement,
-    }, SetOptions(merge: true));
-  }
 }
 
 final endInitialSettingProvider = Provider((ref) => EndInitialSetting(ref.watch(databaseProvider)));
@@ -273,7 +257,6 @@ class EndInitialSetting {
       UserFirestoreFieldKeys.trialDeadlineDate: now().addDays(remoteConfigParameter.trialDeadlineDateOffsetDay),
       UserFirestoreFieldKeys.discountEntitlementDeadlineDate:
           now().addDays(remoteConfigParameter.trialDeadlineDateOffsetDay + remoteConfigParameter.discountEntitlementOffsetDay),
-      UserFirestoreFieldKeys.hasDiscountEntitlement: true,
       UserFirestoreFieldKeys.useLocalNotificationForReminder: true,
     }, SetOptions(merge: true));
   }
