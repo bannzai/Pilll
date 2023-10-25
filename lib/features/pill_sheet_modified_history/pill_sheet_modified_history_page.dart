@@ -38,7 +38,7 @@ class PillSheetModifiedHistoriesPage extends HookConsumerWidget {
             reload: () => ref.refresh(databaseProvider),
           ),
           loading: () => const ScaffoldIndicator(),
-          data: (premiumAndTrial) {
+          data: (user) {
             return Scaffold(
               backgroundColor: PilllColors.white,
               appBar: AppBar(
@@ -75,7 +75,7 @@ class PillSheetModifiedHistoriesPage extends HookConsumerWidget {
                             physics: const AlwaysScrollableScrollPhysics(),
                             child: PillSheetModifiedHistoryList(
                               pillSheetModifiedHistories: histories.value,
-                              premiumOrTrial: premiumAndTrial.premiumOrTrial,
+                              premiumOrTrial: user.premiumOrTrial,
                             ),
                           ),
                         ),

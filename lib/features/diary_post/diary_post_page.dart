@@ -36,7 +36,7 @@ class DiaryPostPage extends HookConsumerWidget {
       data: (data) => DiaryPostPageBody(
         date: date,
         diary: diary,
-        premiumAndTrial: data.t1,
+        user: data.t1,
         diarySetting: data.t2,
       ),
       error: (error, stackTrace) => UniversalErrorPage(
@@ -62,14 +62,14 @@ extension DiaryPostPageRoute on DiaryPostPage {
 class DiaryPostPageBody extends HookConsumerWidget {
   final DateTime date;
   final Diary diary;
-  final User premiumAndTrial;
+  final User user;
   final DiarySetting? diarySetting;
 
   const DiaryPostPageBody({
     Key? key,
     required this.date,
     required this.diary,
-    required this.premiumAndTrial,
+    required this.user,
     required this.diarySetting,
   }) : super(key: key);
   @override
@@ -140,10 +140,7 @@ class DiaryPostPageBody extends HookConsumerWidget {
                   DiaryPostPhysicalCondition(physicalCondition: physicalCondition),
                   const SizedBox(height: 20),
                   DiaryPostPhysicalConditionDetails(
-                      premiumAndTrial: premiumAndTrial,
-                      diarySetting: diarySetting,
-                      context: context,
-                      physicalConditionDetails: physicalConditionDetails),
+                      user: user, diarySetting: diarySetting, context: context, physicalConditionDetails: physicalConditionDetails),
                   const SizedBox(height: 20),
                   DiaryPostSex(sex: sex),
                   const SizedBox(height: 20),

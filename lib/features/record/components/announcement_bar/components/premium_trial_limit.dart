@@ -55,14 +55,14 @@ class PremiumTrialLimitAnnouncementBar extends StatelessWidget {
     );
   }
 
-  static String? retrievePremiumTrialLimit(User premiumAndTrial) {
-    if (premiumAndTrial.isPremium) {
+  static String? retrievePremiumTrialLimit(User user) {
+    if (user.isPremium) {
       return null;
     }
-    if (!premiumAndTrial.isTrial) {
+    if (!user.isTrial) {
       return null;
     }
-    final trialDeadlineDate = premiumAndTrial.trialDeadlineDate;
+    final trialDeadlineDate = user.trialDeadlineDate;
     if (trialDeadlineDate == null) {
       return null;
     }

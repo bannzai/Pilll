@@ -13,14 +13,14 @@ class RecordPagePillSheetSupportActions extends StatelessWidget {
   final PillSheetGroup pillSheetGroup;
   final PillSheet activePillSheet;
   final Setting setting;
-  final User premiumAndTrial;
+  final User user;
 
   const RecordPagePillSheetSupportActions({
     Key? key,
     required this.pillSheetGroup,
     required this.activePillSheet,
     required this.setting,
-    required this.premiumAndTrial,
+    required this.user,
   }) : super(key: key);
 
   @override
@@ -33,7 +33,7 @@ class RecordPagePillSheetSupportActions extends StatelessWidget {
         children: [
           SwitchingAppearanceMode(
             setting: setting,
-            premiumAndTrial: premiumAndTrial,
+            user: user,
           ),
           const Spacer(),
           if (setting.pillSheetAppearanceMode == PillSheetAppearanceMode.sequential) ...[

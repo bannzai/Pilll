@@ -14,7 +14,7 @@ import 'package:pilll/utils/datetime/day.dart';
 
 class MenstruationCardList extends StatelessWidget {
   final List<CalendarScheduledMenstruationBandModel> calendarScheduledMenstruationBandModels;
-  final User premiumAndTrial;
+  final User user;
   final Setting setting;
   final PillSheetGroup? latestPillSheetGroup;
   final Menstruation? latestMenstruation;
@@ -23,7 +23,7 @@ class MenstruationCardList extends StatelessWidget {
   const MenstruationCardList({
     Key? key,
     required this.calendarScheduledMenstruationBandModels,
-    required this.premiumAndTrial,
+    required this.user,
     required this.setting,
     required this.latestPillSheetGroup,
     required this.latestMenstruation,
@@ -33,7 +33,7 @@ class MenstruationCardList extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final card = cardState(latestPillSheetGroup, latestMenstruation, setting, calendarScheduledMenstruationBandModels);
-    final historyCard = historyCardState(latestMenstruation, allMenstruation, premiumAndTrial);
+    final historyCard = historyCardState(latestMenstruation, allMenstruation, user);
     return Expanded(
       child: Container(
         color: PilllColors.background,
@@ -90,7 +90,7 @@ MenstruationCardState? cardState(
 MenstruationHistoryCardState? historyCardState(
   Menstruation? menstruation,
   List<Menstruation> allMenstruation,
-  User premiumAndTrial,
+  User user,
 ) {
   if (menstruation == null) {
     return null;
@@ -101,8 +101,8 @@ MenstruationHistoryCardState? historyCardState(
   return MenstruationHistoryCardState(
     allMenstruations: allMenstruation,
     latestMenstruation: menstruation,
-    isPremium: premiumAndTrial.isPremium,
-    isTrial: premiumAndTrial.isTrial,
-    trialDeadlineDate: premiumAndTrial.trialDeadlineDate,
+    isPremium: user.isPremium,
+    isTrial: user.isTrial,
+    trialDeadlineDate: user.trialDeadlineDate,
   );
 }

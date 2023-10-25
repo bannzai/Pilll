@@ -32,7 +32,7 @@ class RecordPagePillSheet extends HookConsumerWidget {
   final PillSheetGroup pillSheetGroup;
   final PillSheet pillSheet;
   final Setting setting;
-  final User premiumAndTrial;
+  final User user;
 
   List<PillSheetType> get pillSheetTypes => pillSheetGroup.pillSheets.map((e) => e.pillSheetType).toList();
 
@@ -41,7 +41,7 @@ class RecordPagePillSheet extends HookConsumerWidget {
     required this.pillSheetGroup,
     required this.pillSheet,
     required this.setting,
-    required this.premiumAndTrial,
+    required this.user,
   }) : super(key: key);
 
   @override
@@ -102,7 +102,7 @@ class RecordPagePillSheet extends HookConsumerWidget {
             pillSheet: pillSheet,
             setting: setting,
             pillNumberInPillSheet: pillNumberInPillSheet,
-            premiumAndTrial: premiumAndTrial,
+            user: user,
             pageIndex: pageIndex,
           ),
           pillMark: PillMark(
@@ -273,7 +273,7 @@ class PillNumber extends StatelessWidget {
   final PillSheetGroup pillSheetGroup;
   final PillSheet pillSheet;
   final Setting setting;
-  final User premiumAndTrial;
+  final User user;
   final int pageIndex;
   final int pillNumberInPillSheet;
 
@@ -282,7 +282,7 @@ class PillNumber extends StatelessWidget {
       required this.pillSheetGroup,
       required this.pillSheet,
       required this.setting,
-      required this.premiumAndTrial,
+      required this.user,
       required this.pageIndex,
       required this.pillNumberInPillSheet});
 
@@ -294,13 +294,13 @@ class PillNumber extends StatelessWidget {
         menstruationDateRanges.where((e) => e.inRange(pillSheet.displayPillTakeDate(pillNumberInPillSheet))).isNotEmpty;
 
     final text = pillSheetGroup.displayPillNumber(
-      premiumOrTrial: premiumAndTrial.premiumOrTrial,
+      premiumOrTrial: user.premiumOrTrial,
       pillSheetAppearanceMode: setting.pillSheetAppearanceMode,
       pageIndex: pageIndex,
       pillNumberInPillSheet: pillNumberInPillSheet,
     );
 
-    if (premiumAndTrial.premiumOrTrial && containedMenstruationDuration) {
+    if (user.premiumOrTrial && containedMenstruationDuration) {
       return MenstruationPillNumber(text: text);
     } else {
       return PlainPillNumber(text: text);

@@ -59,7 +59,7 @@ class MenstruationPage extends HookConsumerWidget {
       data: (data) {
         return MenstruationPageBody(
           latestPillSheetGroup: data.t1,
-          premiumAndTrial: data.t2,
+          user: data.t2,
           allMenstruation: data.t3,
           latestMenstruation: data.t4,
           setting: data.t5,
@@ -82,7 +82,7 @@ class MenstruationPage extends HookConsumerWidget {
 
 class MenstruationPageBody extends HookConsumerWidget {
   final PillSheetGroup? latestPillSheetGroup;
-  final User premiumAndTrial;
+  final User user;
   final List<Menstruation> allMenstruation;
   final Menstruation? latestMenstruation;
   final Setting setting;
@@ -95,7 +95,7 @@ class MenstruationPageBody extends HookConsumerWidget {
   const MenstruationPageBody({
     Key? key,
     required this.latestPillSheetGroup,
-    required this.premiumAndTrial,
+    required this.user,
     required this.allMenstruation,
     required this.latestMenstruation,
     required this.setting,
@@ -141,7 +141,7 @@ class MenstruationPageBody extends HookConsumerWidget {
                 ),
                 MenstruationCardList(
                   calendarScheduledMenstruationBandModels: calendarScheduledMenstruationBandModels,
-                  premiumAndTrial: premiumAndTrial,
+                  user: user,
                   setting: setting,
                   latestPillSheetGroup: latestPillSheetGroup,
                   latestMenstruation: latestMenstruation,

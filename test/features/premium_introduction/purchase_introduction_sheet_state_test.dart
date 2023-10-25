@@ -36,7 +36,7 @@ void main() {
   group("#offeringType", () {
     test("when hasDiscountEntitlement = false should return premium", () async {
       final n = now();
-      final premiumAndTrial = _FakeUser(
+      final user = _FakeUser(
         fakeHasDiscountEntitlement: false,
         fakeDiscountEntitlementDeadlineDate: n,
       );
@@ -46,12 +46,12 @@ void main() {
           purchaseOfferingsProvider.overrideWith((ref) => _FakeOfferings()),
         ],
       );
-      final currentOfferingType = container.read(currentOfferingTypeProvider(premiumAndTrial));
+      final currentOfferingType = container.read(currentOfferingTypeProvider(user));
       expect(currentOfferingType, equals(OfferingType.premium));
     });
     test("when isOverDiscountDeadline = true should return premium", () async {
       final n = now();
-      final premiumAndTrial = _FakeUser(
+      final user = _FakeUser(
         fakeHasDiscountEntitlement: false,
         fakeDiscountEntitlementDeadlineDate: n,
       );
@@ -61,12 +61,12 @@ void main() {
           purchaseOfferingsProvider.overrideWith((ref) => _FakeOfferings()),
         ],
       );
-      final currentOfferingType = container.read(currentOfferingTypeProvider(premiumAndTrial));
+      final currentOfferingType = container.read(currentOfferingTypeProvider(user));
       expect(currentOfferingType, equals(OfferingType.premium));
     });
     test("should return limited", () async {
       final n = now();
-      final premiumAndTrial = _FakeUser(
+      final user = _FakeUser(
         fakeHasDiscountEntitlement: true,
         fakeDiscountEntitlementDeadlineDate: n,
       );
@@ -76,7 +76,7 @@ void main() {
           purchaseOfferingsProvider.overrideWith((ref) => _FakeOfferings()),
         ],
       );
-      final currentOfferingType = container.read(currentOfferingTypeProvider(premiumAndTrial));
+      final currentOfferingType = container.read(currentOfferingTypeProvider(user));
       expect(currentOfferingType, equals(OfferingType.limited));
     });
   });

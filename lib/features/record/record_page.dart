@@ -26,18 +26,18 @@ class RecordPage extends HookConsumerWidget {
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {
-    final premiumAndTrial = ref.watch(userProvider);
+    final user = ref.watch(userProvider);
     final setting = ref.watch(settingProvider);
     final latestPillSheetGroup = ref.watch(latestPillSheetGroupProvider);
     useAutomaticKeepAlive(wantKeepAlive: true);
 
     useEffect(() {
       final f = (() async {
-        if (premiumAndTrial.isLoading) {
+        if (user.isLoading) {
           return;
         }
         try {
-          syncUserStatus(premiumAndTrial: premiumAndTrial.asData?.value);
+          syncUserStatus(user: user.asData?.value);
         } catch (error) {
           debugPrint(error.toString());
         }
@@ -45,7 +45,7 @@ class RecordPage extends HookConsumerWidget {
 
       f();
       return null;
-    }, [premiumAndTrial.asData?.value]);
+    }, [user.asData?.value]);
 
     useEffect(() {
       final f = (() async {
@@ -82,18 +82,18 @@ class RecordPage extends HookConsumerWidget {
     final isLinked = ref.watch(isLinkedProvider);
     return AsyncValueGroup.group4(
       latestPillSheetGroup,
-      premiumAndTrial,
+      user,
       setting,
       ref.watch(userProvider),
     ).when(
       data: (data) {
         final latestPillSheetGroup = data.t1;
-        final premiumAndTrial = data.t2;
+        final user = data.t2;
         final setting = data.t3;
         return RecordPageBody(
           pillSheetGroup: latestPillSheetGroup,
           setting: setting,
-          premiumAndTrial: premiumAndTrial,
+          user: user,
           isLinkedLoginProvider: isLinked,
         );
       },
@@ -110,14 +110,14 @@ class RecordPage extends HookConsumerWidget {
 class RecordPageBody extends HookConsumerWidget {
   final PillSheetGroup? pillSheetGroup;
   final Setting setting;
-  final User premiumAndTrial;
+  final User user;
   final bool isLinkedLoginProvider;
 
   const RecordPageBody({
     Key? key,
     required this.pillSheetGroup,
     required this.setting,
-    required this.premiumAndTrial,
+    required this.user,
     required this.isLinkedLoginProvider,
   }) : super(key: key);
 
@@ -136,7 +136,7 @@ class RecordPageBody extends HookConsumerWidget {
           today: DateTime.now(),
           pillSheetGroup: pillSheetGroup,
           setting: setting,
-          premiumAndTrial: premiumAndTrial,
+          user: user,
         ),
       ),
       body: Column(
@@ -155,7 +155,7 @@ class RecordPageBody extends HookConsumerWidget {
             RecordPageButton(
               pillSheetGroup: pillSheetGroup,
               currentPillSheet: activePillSheet,
-              userIsPremiumOtTrial: premiumAndTrial.premiumOrTrial,
+              userIsPremiumOtTrial: user.premiumOrTrial,
             ),
             const SizedBox(height: 40),
           ],
@@ -181,14 +181,14 @@ class RecordPageBody extends HookConsumerWidget {
             pillSheetGroup: pillSheetGroup,
             activePillSheet: activePillSheet,
             setting: setting,
-            premiumAndTrial: premiumAndTrial,
+            user: user,
           ),
           const SizedBox(height: 16),
           RecordPagePillSheetList(
             pillSheetGroup: pillSheetGroup,
             activePillSheet: activePillSheet,
             setting: setting,
-            premiumAndTrial: premiumAndTrial,
+            user: user,
           ),
         ],
       );

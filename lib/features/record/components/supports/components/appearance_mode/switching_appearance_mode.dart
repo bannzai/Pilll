@@ -9,12 +9,12 @@ import 'package:pilll/provider/user.dart';
 
 class SwitchingAppearanceMode extends StatelessWidget {
   final Setting setting;
-  final User premiumAndTrial;
+  final User user;
 
   const SwitchingAppearanceMode({
     Key? key,
     required this.setting,
-    required this.premiumAndTrial,
+    required this.user,
   }) : super(key: key);
 
   @override
@@ -35,7 +35,7 @@ class SwitchingAppearanceMode extends StatelessWidget {
       ]),
       onTap: () {
         analytics.logEvent(name: "did_tapped_record_page_appearance_mode");
-        showSelectAppearanceModeModal(context, premiumAndTrial: premiumAndTrial);
+        showSelectAppearanceModeModal(context, user: user);
       },
     );
   }

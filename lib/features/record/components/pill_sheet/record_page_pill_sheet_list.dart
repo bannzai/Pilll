@@ -15,14 +15,14 @@ class RecordPagePillSheetList extends HookConsumerWidget {
   final PillSheetGroup pillSheetGroup;
   final PillSheet activePillSheet;
   final Setting setting;
-  final User premiumAndTrial;
+  final User user;
 
   const RecordPagePillSheetList({
     Key? key,
     required this.pillSheetGroup,
     required this.activePillSheet,
     required this.setting,
-    required this.premiumAndTrial,
+    required this.user,
   }) : super(key: key);
 
   @override
@@ -48,7 +48,7 @@ class RecordPagePillSheetList extends HookConsumerWidget {
                     pillSheetGroup: pillSheetGroup,
                     pillSheet: pillSheet,
                     setting: setting,
-                    premiumAndTrial: premiumAndTrial,
+                    user: user,
                   ),
                 ),
             ],

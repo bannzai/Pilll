@@ -88,7 +88,7 @@ void main() {
 
     group('user is premium', () {
       testWidgets('#PremiumIntroductionDiscountRow is not found and #PremiumUserThanksRow is found', (WidgetTester tester) async {
-        final premiumAndTrial = _FakeUser(
+        final user = _FakeUser(
           fakeIsPremium: true,
           fakeHasDiscountEntitlement: true, // NOTE: Nasty data
           fakeDiscountEntitlementDeadlineDate: null,
@@ -102,7 +102,7 @@ void main() {
                 purchaseOfferingsProvider.overrideWith((ref) => _FakeOfferings()),
                 currentOfferingPackagesProvider.overrideWith((ref, arg) => [_MonthlyFakePackage(), _AnnualFakePackage()]),
                 monthlyPremiumPackageProvider.overrideWith((ref, arg) => _MonthlyFakePackage()),
-                userProvider.overrideWith((ref) => AsyncValue.data(premiumAndTrial)),
+                userProvider.overrideWith((ref) => AsyncValue.data(user)),
                 isOverDiscountDeadlineProvider(discountEntitlementDeadlineDate: discountEntitlementDeadlineDate).overrideWithValue(true),
                 durationToDiscountPriceDeadlineProvider(discountEntitlementDeadlineDate: discountEntitlementDeadlineDate)
                     .overrideWithValue(const Duration(seconds: 1000)),
@@ -129,7 +129,7 @@ void main() {
       const hasDiscountEntitlement = true;
       const isOverDiscountDeadline = false;
       testWidgets('#PremiumIntroductionDiscountRow is found', (WidgetTester tester) async {
-        var premiumAndTrial = _FakeUser(
+        var user = _FakeUser(
           fakeIsPremium: false,
           fakeHasDiscountEntitlement: hasDiscountEntitlement,
           fakeDiscountEntitlementDeadlineDate: discountEntitlementDeadlineDate,
@@ -143,7 +143,7 @@ void main() {
                 purchaseOfferingsProvider.overrideWith((ref) => _FakeOfferings()),
                 currentOfferingPackagesProvider.overrideWith((ref, arg) => [_MonthlyFakePackage(), _AnnualFakePackage()]),
                 monthlyPremiumPackageProvider.overrideWith((ref, arg) => _MonthlyFakePackage()),
-                userProvider.overrideWith((ref) => AsyncValue.data(premiumAndTrial)),
+                userProvider.overrideWith((ref) => AsyncValue.data(user)),
                 isOverDiscountDeadlineProvider(discountEntitlementDeadlineDate: discountEntitlementDeadlineDate)
                     .overrideWithValue(isOverDiscountDeadline),
                 durationToDiscountPriceDeadlineProvider(discountEntitlementDeadlineDate: discountEntitlementDeadlineDate)
@@ -172,7 +172,7 @@ void main() {
         when(mockTodayRepository.now()).thenReturn(mockToday);
         todayRepository = mockTodayRepository;
 
-        final premiumAndTrial = _FakeUser(
+        final user = _FakeUser(
           fakeIsPremium: false,
           fakeHasDiscountEntitlement: hasDiscountEntitlement,
           fakeDiscountEntitlementDeadlineDate: mockToday.subtract(const Duration(days: 1)),
@@ -186,7 +186,7 @@ void main() {
                 purchaseOfferingsProvider.overrideWith((ref) => _FakeOfferings()),
                 currentOfferingPackagesProvider.overrideWith((ref, arg) => [_MonthlyFakePackage(), _AnnualFakePackage()]),
                 monthlyPremiumPackageProvider.overrideWith((ref, arg) => _MonthlyFakePackage()),
-                userProvider.overrideWith((ref) => AsyncValue.data(premiumAndTrial)),
+                userProvider.overrideWith((ref) => AsyncValue.data(user)),
                 isOverDiscountDeadlineProvider(discountEntitlementDeadlineDate: discountEntitlementDeadlineDate).overrideWithValue(false),
                 durationToDiscountPriceDeadlineProvider(discountEntitlementDeadlineDate: discountEntitlementDeadlineDate)
                     .overrideWithValue(const Duration(seconds: 1000)),
@@ -214,7 +214,7 @@ void main() {
         when(mockTodayRepository.now()).thenReturn(mockToday);
         todayRepository = mockTodayRepository;
 
-        final premiumAndTrial = _FakeUser(
+        final user = _FakeUser(
           fakeIsPremium: false,
           fakeHasDiscountEntitlement: true,
           fakeDiscountEntitlementDeadlineDate: mockToday.subtract(const Duration(days: 1)),
@@ -228,7 +228,7 @@ void main() {
                 purchaseOfferingsProvider.overrideWith((ref) => _FakeOfferings()),
                 currentOfferingPackagesProvider.overrideWith((ref, arg) => [_MonthlyFakePackage(), _AnnualFakePackage()]),
                 monthlyPremiumPackageProvider.overrideWith((ref, arg) => _MonthlyFakePackage()),
-                userProvider.overrideWith((ref) => AsyncValue.data(premiumAndTrial)),
+                userProvider.overrideWith((ref) => AsyncValue.data(user)),
                 isOverDiscountDeadlineProvider(discountEntitlementDeadlineDate: discountEntitlementDeadlineDate)
                     .overrideWithValue(isOverDiscountDeadline),
                 durationToDiscountPriceDeadlineProvider(discountEntitlementDeadlineDate: discountEntitlementDeadlineDate)
@@ -256,7 +256,7 @@ void main() {
         when(mockTodayRepository.now()).thenReturn(mockToday);
         todayRepository = mockTodayRepository;
 
-        var premiumAndTrial = _FakeUser(
+        var user = _FakeUser(
           fakeIsPremium: false,
           fakeHasDiscountEntitlement: true,
           fakeDiscountEntitlementDeadlineDate: null,
@@ -270,7 +270,7 @@ void main() {
                 purchaseOfferingsProvider.overrideWith((ref) => _FakeOfferings()),
                 currentOfferingPackagesProvider.overrideWith((ref, arg) => [_MonthlyFakePackage(), _AnnualFakePackage()]),
                 monthlyPremiumPackageProvider.overrideWith((ref, arg) => _MonthlyFakePackage()),
-                userProvider.overrideWith((ref) => AsyncValue.data(premiumAndTrial)),
+                userProvider.overrideWith((ref) => AsyncValue.data(user)),
                 isOverDiscountDeadlineProvider(discountEntitlementDeadlineDate: discountEntitlementDeadlineDate).overrideWithValue(false),
                 durationToDiscountPriceDeadlineProvider(discountEntitlementDeadlineDate: discountEntitlementDeadlineDate)
                     .overrideWithValue(const Duration(seconds: 1000)),

@@ -54,7 +54,7 @@ class CalendarPage extends HookConsumerWidget {
     ).when(
       data: (data) => _CalendarPageBody(
         histories: data.t1,
-        premiumAndTrial: data.t2,
+        user: data.t2,
         calendarMenstruationBandModels: data.t3,
         calendarScheduledMenstruationBandModels: data.t4,
         calendarNextPillSheetBandModels: data.t5,
@@ -87,7 +87,7 @@ class _CalendarPageBody extends StatelessWidget {
   const _CalendarPageBody({
     Key? key,
     required this.histories,
-    required this.premiumAndTrial,
+    required this.user,
     required this.calendarMenstruationBandModels,
     required this.calendarScheduledMenstruationBandModels,
     required this.calendarNextPillSheetBandModels,
@@ -188,7 +188,7 @@ class _CalendarPageBody extends StatelessWidget {
               padding: const EdgeInsets.only(left: 16, right: 16),
               child: CalendarPillSheetModifiedHistoryCard(
                 histories: histories,
-                premiumAndTrial: premiumAndTrial,
+                user: user,
               ),
             ),
             const SizedBox(height: 120),

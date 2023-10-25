@@ -30,10 +30,9 @@ extension OfferingTypeFunction on OfferingType {
 
 final _purchaseServiceProvider = Provider((ref) => PurchaseService());
 final purchaseOfferingsProvider = FutureProvider((ref) => ref.watch(_purchaseServiceProvider).fetchOfferings());
-final currentOfferingTypeProvider = Provider.family.autoDispose((ref, User premiumAndTrial) {
-  final isOverDiscountDeadline =
-      ref.watch(isOverDiscountDeadlineProvider(discountEntitlementDeadlineDate: premiumAndTrial.discountEntitlementDeadlineDate));
-  if (!premiumAndTrial.hasDiscountEntitlement) {
+final currentOfferingTypeProvider = Provider.family.autoDispose((ref, User user) {
+  final isOverDiscountDeadline = ref.watch(isOverDiscountDeadlineProvider(discountEntitlementDeadlineDate: user.discountEntitlementDeadlineDate));
+  if (!user.hasDiscountEntitlement) {
     return OfferingType.premium;
   }
   if (isOverDiscountDeadline) {
@@ -42,23 +41,23 @@ final currentOfferingTypeProvider = Provider.family.autoDispose((ref, User premi
     return OfferingType.limited;
   }
 });
-final currentOfferingPackagesProvider = Provider.family.autoDispose<List<Package>, User>((ref, User premiumAndTrial) {
-  final currentOfferingType = ref.watch(currentOfferingTypeProvider(premiumAndTrial));
+final currentOfferingPackagesProvider = Provider.family.autoDispose<List<Package>, User>((ref, User user) {
+  final currentOfferingType = ref.watch(currentOfferingTypeProvider(user));
   final offering = ref.watch(purchaseOfferingsProvider).valueOrNull?.all[currentOfferingType.identifier];
   if (offering != null) {
     return offering.availablePackages;
   }
   return [];
 });
-final annualPackageProvider = Provider.family.autoDispose((ref, User premiumAndTrial) {
-  final currentOfferingPackages = ref.watch(currentOfferingPackagesProvider(premiumAndTrial));
+final annualPackageProvider = Provider.family.autoDispose((ref, User user) {
+  final currentOfferingPackages = ref.watch(currentOfferingPackagesProvider(user));
   return currentOfferingPackages.firstWhere((element) => element.packageType == PackageType.annual);
 });
-final monthlyPackageProvider = Provider.family.autoDispose((ref, User premiumAndTrial) {
-  final currentOfferingPackages = ref.watch(currentOfferingPackagesProvider(premiumAndTrial));
+final monthlyPackageProvider = Provider.family.autoDispose((ref, User user) {
+  final currentOfferingPackages = ref.watch(currentOfferingPackagesProvider(user));
   return currentOfferingPackages.firstWhere((element) => element.packageType == PackageType.monthly);
 });
-final monthlyPremiumPackageProvider = Provider.family.autoDispose((ref, User premiumAndTrial) {
+final monthlyPremiumPackageProvider = Provider.family.autoDispose((ref, User user) {
   const premiumPackageOfferingType = OfferingType.premium;
   final offering = ref.watch(purchaseOfferingsProvider).valueOrNull?.all[premiumPackageOfferingType.identifier];
   if (offering == null) {

@@ -38,13 +38,13 @@ class AnnouncementBar extends HookConsumerWidget {
   Widget? _body(BuildContext context, WidgetRef ref) {
     final latestPillSheetGroup = ref.watch(latestPillSheetGroupProvider).valueOrNull;
     final totalCountOfActionForTakenPill = ref.watch(intSharedPreferencesProvider(IntKey.totalCountOfActionForTakenPill)).value ?? 0;
-    final premiumAndTrial = ref.watch(userProvider).requireValue;
+    final user = ref.watch(userProvider).requireValue;
     final isLinkedLoginProvider = ref.watch(isLinkedProvider);
     final recommendedSignupNotificationIsAlreadyShow =
         ref.watch(boolSharedPreferencesProvider(BoolKey.recommendedSignupNotificationIsAlreadyShow)).value ?? false;
     final recommendedSignupNotificationIsAlreadyShowNotifier =
         ref.watch(boolSharedPreferencesProvider(BoolKey.recommendedSignupNotificationIsAlreadyShow).notifier);
-    final discountEntitlementDeadlineDate = premiumAndTrial.discountEntitlementDeadlineDate;
+    final discountEntitlementDeadlineDate = user.discountEntitlementDeadlineDate;
     final hiddenCountdownDiscountDeadline =
         ref.watch(hiddenCountdownDiscountDeadlineProvider(discountEntitlementDeadlineDate: discountEntitlementDeadlineDate));
     final isJaLocale = ref.watch(isJaLocaleProvider);
@@ -61,9 +61,9 @@ class AnnouncementBar extends HookConsumerWidget {
       return now().isBefore(pilllAds.startDateTime) || now().isAfter(pilllAds.endDateTime);
     }();
 
-    if (!premiumAndTrial.isPremium) {
-      if (premiumAndTrial.hasDiscountEntitlement) {
-        if (!premiumAndTrial.isTrial) {
+    if (!user.isPremium) {
+      if (user.hasDiscountEntitlement) {
+        if (!user.isTrial) {
           if (discountEntitlementDeadlineDate != null) {
             if (!hiddenCountdownDiscountDeadline) {
               return DiscountPriceDeadline(
@@ -80,13 +80,13 @@ class AnnouncementBar extends HookConsumerWidget {
       if (latestPillSheetGroup != null && latestPillSheetGroup.activePillSheet == null) {
         // ピルシートグループが存在していてactivedPillSheetが無い場合はピルシート終了が何かしらの理由がなくなったと見なし終了表示にする
         return EndedPillSheet(
-          isPremium: premiumAndTrial.isPremium,
-          isTrial: premiumAndTrial.isTrial,
+          isPremium: user.isPremium,
+          isTrial: user.isTrial,
         );
       }
 
-      if (premiumAndTrial.isTrial) {
-        final premiumTrialLimit = PremiumTrialLimitAnnouncementBar.retrievePremiumTrialLimit(premiumAndTrial);
+      if (user.isTrial) {
+        final premiumTrialLimit = PremiumTrialLimitAnnouncementBar.retrievePremiumTrialLimit(user);
         if (premiumTrialLimit != null) {
           return PremiumTrialLimitAnnouncementBar(premiumTrialLimit: premiumTrialLimit);
         }
@@ -129,7 +129,7 @@ class AnnouncementBar extends HookConsumerWidget {
         if (isLinkedLoginProvider) {
           return false;
         }
-        if (!premiumAndTrial.isPremium) {
+        if (!user.isPremium) {
           return false;
         }
         return true;
@@ -147,8 +147,8 @@ class AnnouncementBar extends HookConsumerWidget {
       if (latestPillSheetGroup != null && latestPillSheetGroup.activePillSheet == null) {
         // ピルシートグループが存在していてactivedPillSheetが無い場合はピルシート終了が何かしらの理由がなくなったと見なし終了表示にする
         return EndedPillSheet(
-          isPremium: premiumAndTrial.isPremium,
-          isTrial: premiumAndTrial.isTrial,
+          isPremium: user.isPremium,
+          isTrial: user.isTrial,
         );
       }
     }

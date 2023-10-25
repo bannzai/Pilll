@@ -18,13 +18,13 @@ class RecordPageInformationHeader extends StatelessWidget {
   final DateTime today;
   final PillSheetGroup? pillSheetGroup;
   final Setting setting;
-  final User premiumAndTrial;
+  final User user;
   const RecordPageInformationHeader({
     Key? key,
     required this.today,
     required this.pillSheetGroup,
     required this.setting,
-    required this.premiumAndTrial,
+    required this.user,
   }) : super(key: key);
 
   String _formattedToday() => DateTimeFormatter.monthAndDay(today);
@@ -84,7 +84,7 @@ class RecordPageInformationHeader extends StatelessWidget {
         //     onPressed: () {
         //       analytics.logEvent(name: "tapped_record_information_header_history");
 
-        //       if (premiumAndTrial.isPremium || premiumAndTrial.isTrial) {
+        //       if (user.isPremium || user.isTrial) {
         //         Navigator.of(context).push(
         //           BeforePillSheetGroupHistoryPageRoute.route(),
         //         );

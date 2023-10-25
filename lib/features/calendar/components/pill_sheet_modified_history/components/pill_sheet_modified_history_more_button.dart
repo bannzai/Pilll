@@ -6,10 +6,10 @@ import 'package:flutter/material.dart';
 import 'package:pilll/provider/user.dart';
 
 class PillSheetModifiedHistoryMoreButton extends StatelessWidget {
-  final User premiumAndTrial;
+  final User user;
   const PillSheetModifiedHistoryMoreButton({
     Key? key,
-    required this.premiumAndTrial,
+    required this.user,
   }) : super(key: key);
 
   @override
@@ -21,7 +21,7 @@ class PillSheetModifiedHistoryMoreButton extends StatelessWidget {
             text: "もっと見る",
             onPressed: () async {
               analytics.logEvent(name: "pill_sheet_modified_history_more");
-              if (premiumAndTrial.isPremium || premiumAndTrial.isTrial) {
+              if (user.isPremium || user.isTrial) {
                 Navigator.of(context).push(PillSheetModifiedHistoriesPageRoute.route());
               } else {
                 showPremiumIntroductionSheet(context);

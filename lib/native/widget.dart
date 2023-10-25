@@ -35,10 +35,10 @@ Future<void> syncSetting({
 }
 
 Future<void> syncUserStatus({
-  required User? premiumAndTrial,
+  required User? user,
 }) async {
   final map = {
-    "userIsPremiumOrTrial": premiumAndTrial?.premiumOrTrial,
+    "userIsPremiumOrTrial": user?.premiumOrTrial,
   };
   await methodChannel.invokeMethod("syncUserStatus", map);
 }

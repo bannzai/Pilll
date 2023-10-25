@@ -69,7 +69,7 @@ class SettingPage extends HookConsumerWidget {
           user: data.t1,
           setting: data.t2,
           latestPillSheetGroup: data.t3,
-          premiumAndTrial: data.t4,
+          user: data.t4,
           isHealthDataAvailable: data.t5,
           userIsUpdatedFrom132: userIsMigratedFrom132,
         );
@@ -89,7 +89,7 @@ class SettingPageBody extends StatelessWidget {
   final User user;
   final Setting setting;
   final PillSheetGroup? latestPillSheetGroup;
-  final User premiumAndTrial;
+  final User user;
   final bool isHealthDataAvailable;
   final bool userIsUpdatedFrom132;
 
@@ -98,7 +98,7 @@ class SettingPageBody extends StatelessWidget {
     required this.user,
     required this.setting,
     required this.latestPillSheetGroup,
-    required this.premiumAndTrial,
+    required this.user,
     required this.isHealthDataAvailable,
     required this.userIsUpdatedFrom132,
   }) : super(key: key);
@@ -134,7 +134,7 @@ class SettingPageBody extends StatelessWidget {
                     return SettingSectionTitle(
                       text: "Pilllプレミアム",
                       children: [
-                        if (premiumAndTrial.isTrial) ...[
+                        if (user.isTrial) ...[
                           ListTile(
                             title: const Text("機能無制限の期間について",
                                 style: TextStyle(
@@ -150,11 +150,11 @@ class SettingPageBody extends StatelessWidget {
                           _separator(),
                         ],
                         PremiumIntroductionRow(
-                          isPremium: premiumAndTrial.isPremium,
-                          trialDeadlineDate: premiumAndTrial.trialDeadlineDate,
+                          isPremium: user.isPremium,
+                          trialDeadlineDate: user.trialDeadlineDate,
                         ),
                         _separator(),
-                        if (premiumAndTrial.isPremium) ...[
+                        if (user.isPremium) ...[
                           const AboutChurn(),
                           _separator(),
                         ],
@@ -179,9 +179,9 @@ class SettingPageBody extends StatelessWidget {
                         ],
                         CreatingNewPillSheetRow(
                           setting: setting,
-                          isPremium: premiumAndTrial.isPremium,
-                          isTrial: premiumAndTrial.isTrial,
-                          trialDeadlineDate: premiumAndTrial.trialDeadlineDate,
+                          isPremium: user.isPremium,
+                          isTrial: user.isTrial,
+                          trialDeadlineDate: user.trialDeadlineDate,
                         ),
                         _separator(),
                       ],
@@ -200,18 +200,18 @@ class SettingPageBody extends StatelessWidget {
                           NotificationInRestDuration(setting: setting, pillSheet: activePillSheet),
                           _separator(),
                         ],
-                        if (!premiumAndTrial.isPremium) ...[
+                        if (!user.isPremium) ...[
                           QuickRecordRow(
-                            isTrial: premiumAndTrial.isTrial,
-                            trialDeadlineDate: premiumAndTrial.trialDeadlineDate,
+                            isTrial: user.isTrial,
+                            trialDeadlineDate: user.trialDeadlineDate,
                           ),
                           _separator(),
                         ],
                         ReminderNotificationCustomizeWord(
                           setting: setting,
-                          isTrial: premiumAndTrial.isTrial,
-                          isPremium: premiumAndTrial.isPremium,
-                          trialDeadlineDate: premiumAndTrial.trialDeadlineDate,
+                          isTrial: user.isTrial,
+                          isPremium: user.isPremium,
+                          trialDeadlineDate: user.trialDeadlineDate,
                         ),
                         _separator(),
                       ],
@@ -224,7 +224,7 @@ class SettingPageBody extends StatelessWidget {
                         _separator(),
                         if (Platform.isIOS && isHealthDataAvailable) ...[
                           HealthCareRow(
-                            trialDeadlineDate: premiumAndTrial.trialDeadlineDate,
+                            trialDeadlineDate: user.trialDeadlineDate,
                           ),
                           _separator(),
                         ]

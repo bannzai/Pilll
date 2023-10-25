@@ -56,7 +56,7 @@ class HomePage extends HookConsumerWidget {
       data: (data) {
         return HomePageBody(
           user: data.t1,
-          premiumAndTrial: data.t2,
+          user: data.t2,
           shouldShowMigrateInfo: data.t3,
           sharedPreferences: sharedPreferences,
           registerReminderLocalNotification: registerReminderLocalNotification,
@@ -74,7 +74,7 @@ class HomePage extends HookConsumerWidget {
 
 class HomePageBody extends HookConsumerWidget {
   final User user;
-  final User premiumAndTrial;
+  final User user;
   final bool shouldShowMigrateInfo;
   final SharedPreferences sharedPreferences;
   final RegisterReminderLocalNotification registerReminderLocalNotification;
@@ -83,7 +83,7 @@ class HomePageBody extends HookConsumerWidget {
     Key? key,
     required this.user,
     required this.shouldShowMigrateInfo,
-    required this.premiumAndTrial,
+    required this.user,
     required this.sharedPreferences,
     required this.registerReminderLocalNotification,
   }) : super(key: key);
@@ -104,13 +104,13 @@ class HomePageBody extends HookConsumerWidget {
     final disableShouldAskCancelReason = ref.watch(disableShouldAskCancelReasonProvider);
     final shouldAskCancelReason = user.shouldAskCancelReason;
     final shouldShowPremiumFunctionSurvey = () {
-      if (premiumAndTrial.trialIsAlreadyBegin) {
+      if (user.trialIsAlreadyBegin) {
         return false;
       }
-      if (premiumAndTrial.premiumOrTrial) {
+      if (user.premiumOrTrial) {
         return false;
       }
-      if (premiumAndTrial.isNotYetStartTrial) {
+      if (user.isNotYetStartTrial) {
         return false;
       }
       return !isAlreadyShowPremiumSurvey;

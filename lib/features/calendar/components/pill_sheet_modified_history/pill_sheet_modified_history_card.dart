@@ -46,12 +46,12 @@ class CalendarPillSheetModifiedHistoryCardState {
 
 class CalendarPillSheetModifiedHistoryCard extends StatelessWidget {
   final List<PillSheetModifiedHistory> histories;
-  final User premiumAndTrial;
+  final User user;
 
   const CalendarPillSheetModifiedHistoryCard({
     Key? key,
     required this.histories,
-    required this.premiumAndTrial,
+    required this.user,
   }) : super(key: key);
 
   @override
@@ -73,7 +73,7 @@ class CalendarPillSheetModifiedHistoryCard extends StatelessWidget {
                     color: TextColor.main,
                   ),
                 ),
-                if (!premiumAndTrial.isPremium) ...[
+                if (!user.isPremium) ...[
                   const SizedBox(width: 8),
                   const PremiumBadge(),
                 ],
@@ -83,17 +83,17 @@ class CalendarPillSheetModifiedHistoryCard extends StatelessWidget {
             const PillSheetModifiedHisotiryListHeader(),
             const SizedBox(height: 4),
             ...() {
-              if (premiumAndTrial.isPremium || premiumAndTrial.isTrial) {
+              if (user.isPremium || user.isTrial) {
                 return [
                   SingleChildScrollView(
                     physics: const NeverScrollableScrollPhysics(),
                     child: PillSheetModifiedHistoryList(
                       pillSheetModifiedHistories: histories,
-                      premiumOrTrial: premiumAndTrial.premiumOrTrial,
+                      premiumOrTrial: user.premiumOrTrial,
                     ),
                   ),
                   if (histories.length > CalendarPillSheetModifiedHistoryCardState.pillSheetModifiedHistoriesThreshold)
-                    PillSheetModifiedHistoryMoreButton(premiumAndTrial: premiumAndTrial),
+                    PillSheetModifiedHistoryMoreButton(user: user),
                 ];
               } else {
                 return [
@@ -103,7 +103,7 @@ class CalendarPillSheetModifiedHistoryCard extends StatelessWidget {
                         physics: const NeverScrollableScrollPhysics(),
                         child: PillSheetModifiedHistoryList(
                           pillSheetModifiedHistories: histories,
-                          premiumOrTrial: premiumAndTrial.premiumOrTrial,
+                          premiumOrTrial: user.premiumOrTrial,
                         ),
                       ),
                       Positioned.fill(

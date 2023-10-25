@@ -32,7 +32,7 @@ class PremiumIntroductionSheet extends HookConsumerWidget {
     ).when(
       data: (data) => PremiumIntroductionSheetBody(
         offerings: data.t1,
-        premiumAndTrial: data.t2,
+        user: data.t2,
       ),
       error: (error, stackTrace) => UniversalErrorPage(
         error: error,
@@ -49,20 +49,20 @@ class PremiumIntroductionSheet extends HookConsumerWidget {
 
 class PremiumIntroductionSheetBody extends HookConsumerWidget {
   final Offerings offerings;
-  final User premiumAndTrial;
+  final User user;
 
   const PremiumIntroductionSheetBody({
     Key? key,
     required this.offerings,
-    required this.premiumAndTrial,
+    required this.user,
   }) : super(key: key);
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {
-    final offeringType = ref.watch(currentOfferingTypeProvider(premiumAndTrial));
-    final monthlyPackage = ref.watch(monthlyPackageProvider(premiumAndTrial));
-    final annualPackage = ref.watch(annualPackageProvider(premiumAndTrial));
-    final monthlyPremiumPackage = ref.watch(monthlyPremiumPackageProvider(premiumAndTrial));
+    final offeringType = ref.watch(currentOfferingTypeProvider(user));
+    final monthlyPackage = ref.watch(monthlyPackageProvider(user));
+    final annualPackage = ref.watch(annualPackageProvider(user));
+    final monthlyPremiumPackage = ref.watch(monthlyPremiumPackageProvider(user));
 
     final isLoading = useState(false);
 
@@ -92,16 +92,16 @@ class PremiumIntroductionSheetBody extends HookConsumerWidget {
                   mainAxisSize: MainAxisSize.min,
                   children: [
                     const PremiumIntroductionHeader(),
-                    if (premiumAndTrial.isPremium) ...[
+                    if (user.isPremium) ...[
                       const SizedBox(height: 32),
                       const PremiumUserThanksRow(),
                     ],
-                    if (!premiumAndTrial.isPremium) ...[
-                      if (premiumAndTrial.hasDiscountEntitlement)
+                    if (!user.isPremium) ...[
+                      if (user.hasDiscountEntitlement)
                         if (monthlyPremiumPackage != null)
                           PremiumIntroductionDiscountRow(
                             monthlyPremiumPackage: monthlyPremiumPackage,
-                            discountEntitlementDeadlineDate: premiumAndTrial.discountEntitlementDeadlineDate,
+                            discountEntitlementDeadlineDate: user.discountEntitlementDeadlineDate,
                           ),
                       const SizedBox(height: 12),
                       PurchaseButtons(
