@@ -1,3 +1,5 @@
+import 'dart:math';
+
 import 'package:flutter_native_timezone/flutter_native_timezone.dart';
 import 'package:pilll/entity/firestore_id_generator.dart';
 import 'package:pilll/entity/link_account_type.dart';
@@ -47,7 +49,7 @@ class InitialSettingState with _$InitialSettingState {
   Future<Setting> buildSetting() async {
     const menstruationDuration = 4;
     final maxPillCount = pillSheetTypes.map((e) => e.totalCount).fold(0, (previousValue, element) => previousValue + element);
-    final pillNumberForFromMenstruation = maxPillCount - menstruationDuration;
+    final pillNumberForFromMenstruation = max(0, maxPillCount - menstruationDuration);
 
     final setting = Setting(
       pillNumberForFromMenstruation: pillNumberForFromMenstruation,
