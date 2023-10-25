@@ -132,12 +132,10 @@ void main() {
           ProviderScope(
             overrides: [
               latestPillSheetGroupProvider.overrideWith((ref) => Stream.value(pillSheetGroup)),
-              userProvider.overrideWithValue(
-                AsyncData(
-                  User(
+              userProvider.overrideWith(
+                (ref) => Stream.value(
+                  const User(
                     isPremium: false,
-                    isTrial: true,
-                    hasDiscountEntitlement: false,
                     trialDeadlineDate: null,
                     beginTrialDate: null,
                     discountEntitlementDeadlineDate: null,
@@ -188,12 +186,10 @@ void main() {
           ProviderScope(
             overrides: [
               latestPillSheetGroupProvider.overrideWith((ref) => Stream.value(pillSheetGroup)),
-              userProvider.overrideWithValue(
-                AsyncData(
-                  User(
+              userProvider.overrideWith(
+                (ref) => Stream.value(
+                  const User(
                     isPremium: false,
-                    isTrial: true,
-                    hasDiscountEntitlement: false,
                     trialDeadlineDate: null,
                     beginTrialDate: null,
                     discountEntitlementDeadlineDate: null,
@@ -244,12 +240,10 @@ void main() {
           ProviderScope(
             overrides: [
               latestPillSheetGroupProvider.overrideWith((ref) => Stream.value(pillSheetGroup)),
-              userProvider.overrideWithValue(
-                AsyncData(
+              userProvider.overrideWith(
+                (ref) => Stream.value(
                   User(
                     isPremium: false,
-                    isTrial: true,
-                    hasDiscountEntitlement: false,
                     trialDeadlineDate: mockToday.add(const Duration(days: 1)),
                     beginTrialDate: null,
                     discountEntitlementDeadlineDate: null,
@@ -300,12 +294,10 @@ void main() {
           ProviderScope(
             overrides: [
               latestPillSheetGroupProvider.overrideWith((ref) => Stream.value(pillSheetGroup)),
-              userProvider.overrideWithValue(
-                AsyncData(
-                  User(
+              userProvider.overrideWith(
+                (ref) => Stream.value(
+                  const User(
                     isPremium: false,
-                    isTrial: true,
-                    hasDiscountEntitlement: false,
                     trialDeadlineDate: null,
                     beginTrialDate: null,
                     discountEntitlementDeadlineDate: null,
@@ -349,12 +341,10 @@ void main() {
             ProviderScope(
               overrides: [
                 latestPillSheetGroupProvider.overrideWith((ref) => Stream.value(pillSheetGroup)),
-                userProvider.overrideWithValue(
-                  AsyncData(
-                    User(
+                userProvider.overrideWith(
+                  (ref) => Stream.value(
+                    const User(
                       isPremium: false,
-                      isTrial: false,
-                      hasDiscountEntitlement: true,
                       trialDeadlineDate: null,
                       beginTrialDate: null,
                       discountEntitlementDeadlineDate: null,
@@ -397,12 +387,10 @@ void main() {
             ProviderScope(
               overrides: [
                 latestPillSheetGroupProvider.overrideWith((ref) => Stream.value(pillSheetGroup)),
-                userProvider.overrideWithValue(
-                  AsyncData(
-                    User(
+                userProvider.overrideWith(
+                  (ref) => Stream.value(
+                    const User(
                       isPremium: true,
-                      isTrial: false,
-                      hasDiscountEntitlement: true,
                       trialDeadlineDate: null,
                       beginTrialDate: null,
                       discountEntitlementDeadlineDate: null,
@@ -445,12 +433,10 @@ void main() {
             ProviderScope(
               overrides: [
                 latestPillSheetGroupProvider.overrideWith((ref) => Stream.value(pillSheetGroup)),
-                userProvider.overrideWithValue(
-                  AsyncData(
-                    User(
+                userProvider.overrideWith(
+                  (ref) => Stream.value(
+                    const User(
                       isPremium: false,
-                      isTrial: true,
-                      hasDiscountEntitlement: true,
                       trialDeadlineDate: null,
                       beginTrialDate: null,
                       discountEntitlementDeadlineDate: null,
@@ -501,12 +487,10 @@ void main() {
             ProviderScope(
               overrides: [
                 latestPillSheetGroupProvider.overrideWith((ref) => Stream.value(pillSheetGroup)),
-                userProvider.overrideWithValue(
-                  AsyncData(
-                    User(
+                userProvider.overrideWith(
+                  (ref) => Stream.value(
+                    const User(
                       isPremium: false,
-                      isTrial: false,
-                      hasDiscountEntitlement: true,
                       trialDeadlineDate: null,
                       beginTrialDate: null,
                       discountEntitlementDeadlineDate: null,
@@ -564,12 +548,10 @@ void main() {
             ProviderScope(
               overrides: [
                 latestPillSheetGroupProvider.overrideWith((ref) => Stream.value(pillSheetGroup)),
-                userProvider.overrideWithValue(
-                  AsyncData(
-                    User(
+                userProvider.overrideWith(
+                  (ref) => Stream.value(
+                    const User(
                       isPremium: false,
-                      isTrial: false,
-                      hasDiscountEntitlement: true,
                       trialDeadlineDate: null,
                       beginTrialDate: null,
                       discountEntitlementDeadlineDate: null,
@@ -629,12 +611,10 @@ void main() {
             ProviderScope(
               overrides: [
                 latestPillSheetGroupProvider.overrideWith((ref) => Stream.value(pillSheetGroup)),
-                userProvider.overrideWithValue(
-                  AsyncData(
-                    User(
+                userProvider.overrideWith(
+                  (ref) => Stream.value(
+                    const User(
                       isPremium: false,
-                      isTrial: false,
-                      hasDiscountEntitlement: true,
                       trialDeadlineDate: null,
                       beginTrialDate: null,
                       discountEntitlementDeadlineDate: null,
@@ -694,12 +674,10 @@ void main() {
             ProviderScope(
               overrides: [
                 latestPillSheetGroupProvider.overrideWith((ref) => Stream.value(pillSheetGroup)),
-                userProvider.overrideWithValue(
-                  AsyncData(
-                    User(
+                userProvider.overrideWith(
+                  (ref) => Stream.value(
+                    const User(
                       isPremium: false,
-                      isTrial: false,
-                      hasDiscountEntitlement: true,
                       trialDeadlineDate: null,
                       beginTrialDate: null,
                       discountEntitlementDeadlineDate: null,
@@ -759,12 +737,10 @@ void main() {
             ProviderScope(
               overrides: [
                 latestPillSheetGroupProvider.overrideWith((ref) => Stream.value(pillSheetGroup)),
-                userProvider.overrideWithValue(
-                  AsyncData(
-                    User(
+                userProvider.overrideWith(
+                  (ref) => Stream.value(
+                    const User(
                       isPremium: false,
-                      isTrial: false,
-                      hasDiscountEntitlement: true,
                       trialDeadlineDate: null,
                       beginTrialDate: null,
                       discountEntitlementDeadlineDate: null,
@@ -831,12 +807,10 @@ void main() {
             ProviderScope(
               overrides: [
                 latestPillSheetGroupProvider.overrideWith((ref) => Stream.value(pillSheetGroup)),
-                userProvider.overrideWithValue(
-                  AsyncData(
-                    User(
+                userProvider.overrideWith(
+                  (ref) => Stream.value(
+                    const User(
                       isPremium: true,
-                      isTrial: true,
-                      hasDiscountEntitlement: true,
                       trialDeadlineDate: null,
                       beginTrialDate: null,
                       discountEntitlementDeadlineDate: null,
@@ -898,12 +872,10 @@ void main() {
             ProviderScope(
               overrides: [
                 latestPillSheetGroupProvider.overrideWith((ref) => Stream.value(pillSheetGroup)),
-                userProvider.overrideWithValue(
-                  AsyncData(
-                    User(
+                userProvider.overrideWith(
+                  (ref) => Stream.value(
+                    const User(
                       isPremium: true,
-                      isTrial: true,
-                      hasDiscountEntitlement: true,
                       trialDeadlineDate: null,
                       beginTrialDate: null,
                       discountEntitlementDeadlineDate: null,
@@ -965,12 +937,10 @@ void main() {
             ProviderScope(
               overrides: [
                 latestPillSheetGroupProvider.overrideWith((ref) => Stream.value(pillSheetGroup)),
-                userProvider.overrideWithValue(
-                  AsyncData(
-                    User(
+                userProvider.overrideWith(
+                  (ref) => Stream.value(
+                    const User(
                       isPremium: true,
-                      isTrial: true,
-                      hasDiscountEntitlement: true,
                       trialDeadlineDate: null,
                       beginTrialDate: null,
                       discountEntitlementDeadlineDate: null,
@@ -1032,12 +1002,10 @@ void main() {
             ProviderScope(
               overrides: [
                 latestPillSheetGroupProvider.overrideWith((ref) => Stream.value(pillSheetGroup)),
-                userProvider.overrideWithValue(
-                  AsyncData(
-                    User(
+                userProvider.overrideWith(
+                  (ref) => Stream.value(
+                    const User(
                       isPremium: true,
-                      isTrial: true,
-                      hasDiscountEntitlement: true,
                       trialDeadlineDate: null,
                       beginTrialDate: null,
                       discountEntitlementDeadlineDate: null,
@@ -1099,12 +1067,10 @@ void main() {
             ProviderScope(
               overrides: [
                 latestPillSheetGroupProvider.overrideWith((ref) => Stream.value(pillSheetGroup)),
-                userProvider.overrideWithValue(
-                  AsyncData(
-                    User(
+                userProvider.overrideWith(
+                  (ref) => Stream.value(
+                    const User(
                       isPremium: true,
-                      isTrial: true,
-                      hasDiscountEntitlement: true,
                       trialDeadlineDate: null,
                       beginTrialDate: null,
                       discountEntitlementDeadlineDate: null,
@@ -1166,12 +1132,10 @@ void main() {
             ProviderScope(
               overrides: [
                 latestPillSheetGroupProvider.overrideWith((ref) => Stream.value(pillSheetGroup)),
-                userProvider.overrideWithValue(
-                  AsyncData(
-                    User(
+                userProvider.overrideWith(
+                  (ref) => Stream.value(
+                    const User(
                       isPremium: true,
-                      isTrial: true,
-                      hasDiscountEntitlement: true,
                       trialDeadlineDate: null,
                       beginTrialDate: null,
                       discountEntitlementDeadlineDate: null,
@@ -1234,12 +1198,10 @@ void main() {
           ProviderScope(
             overrides: [
               latestPillSheetGroupProvider.overrideWith((ref) => Stream.value(pillSheetGroup)),
-              userProvider.overrideWithValue(
-                AsyncData(
-                  User(
+              userProvider.overrideWith(
+                (ref) => Stream.value(
+                  const User(
                     isPremium: true,
-                    isTrial: true,
-                    hasDiscountEntitlement: true,
                     trialDeadlineDate: null,
                     beginTrialDate: null,
                     discountEntitlementDeadlineDate: null,
@@ -1290,12 +1252,10 @@ void main() {
           ProviderScope(
             overrides: [
               latestPillSheetGroupProvider.overrideWith((ref) => Stream.value(pillSheetGroup)),
-              userProvider.overrideWithValue(
-                AsyncData(
-                  User(
+              userProvider.overrideWith(
+                (ref) => Stream.value(
+                  const User(
                     isPremium: true,
-                    isTrial: false,
-                    hasDiscountEntitlement: true,
                     trialDeadlineDate: null,
                     beginTrialDate: null,
                     discountEntitlementDeadlineDate: null,
@@ -1346,12 +1306,10 @@ void main() {
           ProviderScope(
             overrides: [
               latestPillSheetGroupProvider.overrideWith((ref) => Stream.value(pillSheetGroup)),
-              userProvider.overrideWithValue(
-                AsyncData(
-                  User(
+              userProvider.overrideWith(
+                (ref) => Stream.value(
+                  const User(
                     isPremium: true,
-                    isTrial: true,
-                    hasDiscountEntitlement: true,
                     trialDeadlineDate: null,
                     beginTrialDate: null,
                     discountEntitlementDeadlineDate: null,
