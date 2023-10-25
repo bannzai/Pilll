@@ -104,7 +104,8 @@ void main() {
                 monthlyPremiumPackageProvider.overrideWith((ref, arg) => _MonthlyFakePackage()),
                 premiumAndTrialProvider.overrideWith((ref) => AsyncValue.data(premiumAndTrial)),
                 isOverDiscountDeadlineProvider(discountEntitlementDeadlineDate: discountEntitlementDeadlineDate).overrideWithValue(true),
-                durationToDiscountPriceDeadlineProvider(discountEntitlementDeadlineDate: now()).overrideWithValue(const Duration(seconds: 1000)),
+                durationToDiscountPriceDeadlineProvider(discountEntitlementDeadlineDate: discountEntitlementDeadlineDate)
+                    .overrideWithValue(const Duration(seconds: 1000)),
               ],
               child: const MaterialApp(
                 home: sheet,
@@ -145,7 +146,8 @@ void main() {
                 premiumAndTrialProvider.overrideWith((ref) => AsyncValue.data(premiumAndTrial)),
                 isOverDiscountDeadlineProvider(discountEntitlementDeadlineDate: discountEntitlementDeadlineDate)
                     .overrideWithValue(isOverDiscountDeadline),
-                durationToDiscountPriceDeadlineProvider(discountEntitlementDeadlineDate: now()).overrideWithValue(const Duration(seconds: 1000)),
+                durationToDiscountPriceDeadlineProvider(discountEntitlementDeadlineDate: discountEntitlementDeadlineDate)
+                    .overrideWithValue(const Duration(seconds: 1000)),
               ],
               child: const MaterialApp(
                 home: sheet,
@@ -186,7 +188,8 @@ void main() {
                 monthlyPremiumPackageProvider.overrideWith((ref, arg) => _MonthlyFakePackage()),
                 premiumAndTrialProvider.overrideWith((ref) => AsyncValue.data(premiumAndTrial)),
                 isOverDiscountDeadlineProvider(discountEntitlementDeadlineDate: discountEntitlementDeadlineDate).overrideWithValue(false),
-                durationToDiscountPriceDeadlineProvider(discountEntitlementDeadlineDate: now()).overrideWithValue(const Duration(seconds: 1000)),
+                durationToDiscountPriceDeadlineProvider(discountEntitlementDeadlineDate: discountEntitlementDeadlineDate)
+                    .overrideWithValue(const Duration(seconds: 1000)),
               ],
               child: const MaterialApp(
                 home: sheet,
@@ -228,7 +231,8 @@ void main() {
                 premiumAndTrialProvider.overrideWith((ref) => AsyncValue.data(premiumAndTrial)),
                 isOverDiscountDeadlineProvider(discountEntitlementDeadlineDate: discountEntitlementDeadlineDate)
                     .overrideWithValue(isOverDiscountDeadline),
-                durationToDiscountPriceDeadlineProvider(discountEntitlementDeadlineDate: now()).overrideWithValue(const Duration(seconds: 1000)),
+                durationToDiscountPriceDeadlineProvider(discountEntitlementDeadlineDate: discountEntitlementDeadlineDate)
+                    .overrideWithValue(const Duration(seconds: 1000)),
               ],
               child: const MaterialApp(
                 home: sheet,
@@ -268,7 +272,8 @@ void main() {
                 monthlyPremiumPackageProvider.overrideWith((ref, arg) => _MonthlyFakePackage()),
                 premiumAndTrialProvider.overrideWith((ref) => AsyncValue.data(premiumAndTrial)),
                 isOverDiscountDeadlineProvider(discountEntitlementDeadlineDate: discountEntitlementDeadlineDate).overrideWithValue(false),
-                durationToDiscountPriceDeadlineProvider(discountEntitlementDeadlineDate: now()).overrideWithValue(const Duration(seconds: 1000)),
+                durationToDiscountPriceDeadlineProvider(discountEntitlementDeadlineDate: discountEntitlementDeadlineDate)
+                    .overrideWithValue(const Duration(seconds: 1000)),
               ],
               child: const MaterialApp(
                 home: sheet,
