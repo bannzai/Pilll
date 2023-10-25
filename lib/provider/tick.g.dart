@@ -6,7 +6,7 @@ part of 'tick.dart';
 // RiverpodGenerator
 // **************************************************************************
 
-String _$tickHash() => r'487e8978a3b54a368520274029ca1659c005e46f';
+String _$tickHash() => r'686abe45d9c3fcc30740691654bd6533752d671e';
 
 /// See also [Tick].
 @ProviderFor(Tick)
