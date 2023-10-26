@@ -1,7 +1,9 @@
 import 'dart:async';
 
+import 'package:pilll/entity/remote_config_parameter.codegen.dart';
 import 'package:pilll/entity/user.codegen.dart';
 import 'package:pilll/features/record/components/announcement_bar/components/admob.dart';
+import 'package:pilll/provider/remote_config_parameter.dart';
 import 'package:pilll/provider/shared_preferences.dart';
 import 'package:pilll/utils/analytics.dart';
 import 'package:pilll/provider/pill_sheet_group.dart';
@@ -54,7 +56,6 @@ void main() {
         final mockToday = DateTime(2021, 04, 29);
 
         when(mockTodayRepository.now()).thenReturn(mockToday);
-        when(mockTodayRepository.now()).thenReturn(mockToday);
         todayRepository = mockTodayRepository;
 
         var pillSheet = PillSheet.create(
@@ -75,16 +76,16 @@ void main() {
           ProviderScope(
             overrides: [
               latestPillSheetGroupProvider.overrideWith((ref) => Stream.value(pillSheetGroup)),
-              userProvider.overrideWith(
-                (ref) => Stream.value(
+              userProvider.overrideWith((ref) {
+                return Stream.value(
                   User(
                     isPremium: false,
-                    trialDeadlineDate: null,
-                    beginTrialDate: null,
-                    discountEntitlementDeadlineDate: mockToday.subtract(const Duration(days: 1)),
+                    trialDeadlineDate: mockToday.subtract(const Duration(days: 1)),
+                    beginTrialDate: mockToday.subtract(const Duration(days: 2)),
+                    discountEntitlementDeadlineDate: mockToday.add(const Duration(days: 2)),
                   ),
-                ),
-              ),
+                );
+              }),
               isLinkedProvider.overrideWithValue(false),
               isJaLocaleProvider.overrideWithValue(true),
               hiddenCountdownDiscountDeadlineProvider(discountEntitlementDeadlineDate: mockToday.subtract(const Duration(days: 1)))
@@ -92,6 +93,7 @@ void main() {
               durationToDiscountPriceDeadlineProvider(discountEntitlementDeadlineDate: mockToday.subtract(const Duration(days: 1)))
                   .overrideWithValue(const Duration(seconds: 1000)),
               sharedPreferencesProvider.overrideWith((ref) => sharedPreferences),
+              remoteConfigParameterProvider.overrideWithValue(RemoteConfigParameter()),
             ],
             child: const MaterialApp(
               home: Material(child: AnnouncementBar()),
@@ -134,17 +136,18 @@ void main() {
               latestPillSheetGroupProvider.overrideWith((ref) => Stream.value(pillSheetGroup)),
               userProvider.overrideWith(
                 (ref) => Stream.value(
-                  const User(
+                  User(
                     isPremium: false,
-                    trialDeadlineDate: null,
-                    beginTrialDate: null,
-                    discountEntitlementDeadlineDate: null,
+                    trialDeadlineDate: mockToday.add(const Duration(days: 1)),
+                    beginTrialDate: mockToday.subtract(const Duration(days: 2)),
+                    discountEntitlementDeadlineDate: mockToday.add(const Duration(days: 2)),
                   ),
                 ),
               ),
               isLinkedProvider.overrideWithValue(false),
               isJaLocaleProvider.overrideWithValue(true),
               sharedPreferencesProvider.overrideWith((ref) => sharedPreferences),
+              remoteConfigParameterProvider.overrideWithValue(RemoteConfigParameter()),
             ],
             child: const MaterialApp(
               home: Material(child: AnnouncementBar()),
@@ -188,17 +191,18 @@ void main() {
               latestPillSheetGroupProvider.overrideWith((ref) => Stream.value(pillSheetGroup)),
               userProvider.overrideWith(
                 (ref) => Stream.value(
-                  const User(
+                  User(
                     isPremium: false,
-                    trialDeadlineDate: null,
-                    beginTrialDate: null,
-                    discountEntitlementDeadlineDate: null,
+                    trialDeadlineDate: mockToday.add(const Duration(days: 1)),
+                    beginTrialDate: mockToday.subtract(const Duration(days: 3)),
+                    discountEntitlementDeadlineDate: mockToday.subtract(const Duration(days: 1)),
                   ),
                 ),
               ),
               isLinkedProvider.overrideWithValue(false),
               isJaLocaleProvider.overrideWithValue(true),
               sharedPreferencesProvider.overrideWith((ref) => sharedPreferences),
+              remoteConfigParameterProvider.overrideWithValue(RemoteConfigParameter()),
             ],
             child: const MaterialApp(
               home: Material(child: AnnouncementBar()),
@@ -253,6 +257,7 @@ void main() {
               isLinkedProvider.overrideWithValue(false),
               isJaLocaleProvider.overrideWithValue(true),
               sharedPreferencesProvider.overrideWith((ref) => sharedPreferences),
+              remoteConfigParameterProvider.overrideWithValue(RemoteConfigParameter()),
             ],
             child: const MaterialApp(
               home: Material(child: AnnouncementBar()),
@@ -307,6 +312,7 @@ void main() {
               isLinkedProvider.overrideWithValue(true),
               isJaLocaleProvider.overrideWithValue(true),
               sharedPreferencesProvider.overrideWith((ref) => sharedPreferences),
+              remoteConfigParameterProvider.overrideWithValue(RemoteConfigParameter()),
             ],
             child: const MaterialApp(
               home: Material(child: AnnouncementBar()),
@@ -355,6 +361,7 @@ void main() {
                 isJaLocaleProvider.overrideWithValue(true),
                 pilllAdsProvider.overrideWith((ref) => Stream.value(null)),
                 sharedPreferencesProvider.overrideWith((ref) => sharedPreferences),
+                remoteConfigParameterProvider.overrideWithValue(RemoteConfigParameter()),
               ],
               child: const MaterialApp(
                 home: Material(child: AnnouncementBar()),
@@ -401,6 +408,7 @@ void main() {
                 isJaLocaleProvider.overrideWithValue(true),
                 pilllAdsProvider.overrideWith((ref) => Stream.value(null)),
                 sharedPreferencesProvider.overrideWith((ref) => sharedPreferences),
+                remoteConfigParameterProvider.overrideWithValue(RemoteConfigParameter()),
               ],
               child: const MaterialApp(
                 home: Material(child: AnnouncementBar()),
@@ -415,10 +423,16 @@ void main() {
           );
         });
         testWidgets('user is trial', (WidgetTester tester) async {
+          final mockTodayRepository = MockTodayService();
+          final mockToday = DateTime(2021, 04, 29);
+
+          when(mockTodayRepository.now()).thenReturn(mockToday);
+          todayRepository = mockTodayRepository;
+
           var pillSheet = PillSheet.create(
             PillSheetType.pillsheet_21,
-            lastTakenDate: today().subtract(const Duration(days: 1)),
-            beginDate: today().subtract(
+            lastTakenDate: mockToday.subtract(const Duration(days: 1)),
+            beginDate: mockToday.subtract(
               const Duration(days: 25),
             ),
           );
@@ -435,11 +449,11 @@ void main() {
                 latestPillSheetGroupProvider.overrideWith((ref) => Stream.value(pillSheetGroup)),
                 userProvider.overrideWith(
                   (ref) => Stream.value(
-                    const User(
+                    User(
                       isPremium: false,
-                      trialDeadlineDate: null,
-                      beginTrialDate: null,
-                      discountEntitlementDeadlineDate: null,
+                      trialDeadlineDate: mockToday.add(const Duration(days: 1)),
+                      beginTrialDate: mockToday.subtract(const Duration(days: 2)),
+                      discountEntitlementDeadlineDate: mockToday.add(const Duration(days: 2)),
                     ),
                   ),
                 ),
@@ -447,6 +461,7 @@ void main() {
                 isJaLocaleProvider.overrideWithValue(true),
                 pilllAdsProvider.overrideWith((ref) => Stream.value(null)),
                 sharedPreferencesProvider.overrideWith((ref) => sharedPreferences),
+                remoteConfigParameterProvider.overrideWithValue(RemoteConfigParameter()),
               ],
               child: const MaterialApp(
                 home: Material(child: AnnouncementBar()),
@@ -510,6 +525,7 @@ void main() {
                   )),
                 ),
                 sharedPreferencesProvider.overrideWith((ref) => sharedPreferences),
+                remoteConfigParameterProvider.overrideWithValue(RemoteConfigParameter()),
               ],
               child: const MaterialApp(
                 home: Material(child: AnnouncementBar()),
@@ -573,6 +589,7 @@ void main() {
                   ),
                 ),
                 sharedPreferencesProvider.overrideWith((ref) => sharedPreferences),
+                remoteConfigParameterProvider.overrideWithValue(RemoteConfigParameter()),
               ],
               child: const MaterialApp(
                 home: Material(child: AnnouncementBar()),
@@ -636,6 +653,7 @@ void main() {
                   ),
                 ),
                 sharedPreferencesProvider.overrideWith((ref) => sharedPreferences),
+                remoteConfigParameterProvider.overrideWithValue(RemoteConfigParameter()),
               ],
               child: const MaterialApp(
                 home: Material(child: AnnouncementBar()),
@@ -699,6 +717,7 @@ void main() {
                   ),
                 ),
                 sharedPreferencesProvider.overrideWith((ref) => sharedPreferences),
+                remoteConfigParameterProvider.overrideWithValue(RemoteConfigParameter()),
               ],
               child: const MaterialApp(
                 home: Material(child: AnnouncementBar()),
@@ -762,6 +781,7 @@ void main() {
                   ),
                 ),
                 sharedPreferencesProvider.overrideWith((ref) => sharedPreferences),
+                remoteConfigParameterProvider.overrideWithValue(RemoteConfigParameter()),
               ],
               child: const MaterialApp(
                 home: Material(child: AnnouncementBar()),
@@ -832,6 +852,7 @@ void main() {
                   ),
                 ),
                 sharedPreferencesProvider.overrideWith((ref) => sharedPreferences),
+                remoteConfigParameterProvider.overrideWithValue(RemoteConfigParameter()),
               ],
               child: const MaterialApp(
                 home: Material(child: AnnouncementBar()),
@@ -897,6 +918,7 @@ void main() {
                   ),
                 ),
                 sharedPreferencesProvider.overrideWith((ref) => sharedPreferences),
+                remoteConfigParameterProvider.overrideWithValue(RemoteConfigParameter()),
               ],
               child: const MaterialApp(
                 home: Material(child: AnnouncementBar()),
@@ -962,6 +984,7 @@ void main() {
                   ),
                 ),
                 sharedPreferencesProvider.overrideWith((ref) => sharedPreferences),
+                remoteConfigParameterProvider.overrideWithValue(RemoteConfigParameter()),
               ],
               child: const MaterialApp(
                 home: Material(child: AnnouncementBar()),
@@ -1027,6 +1050,7 @@ void main() {
                   ),
                 ),
                 sharedPreferencesProvider.overrideWith((ref) => sharedPreferences),
+                remoteConfigParameterProvider.overrideWithValue(RemoteConfigParameter()),
               ],
               child: const MaterialApp(
                 home: Material(child: AnnouncementBar()),
@@ -1092,6 +1116,7 @@ void main() {
                   ),
                 ),
                 sharedPreferencesProvider.overrideWith((ref) => sharedPreferences),
+                remoteConfigParameterProvider.overrideWithValue(RemoteConfigParameter()),
               ],
               child: const MaterialApp(
                 home: Material(child: AnnouncementBar()),
@@ -1157,6 +1182,7 @@ void main() {
                   ),
                 ),
                 sharedPreferencesProvider.overrideWith((ref) => sharedPreferences),
+                remoteConfigParameterProvider.overrideWithValue(RemoteConfigParameter()),
               ],
               child: const MaterialApp(
                 home: Material(child: AnnouncementBar()),
@@ -1211,6 +1237,7 @@ void main() {
               isLinkedProvider.overrideWithValue(false),
               isJaLocaleProvider.overrideWithValue(true),
               sharedPreferencesProvider.overrideWith((ref) => sharedPreferences),
+              remoteConfigParameterProvider.overrideWithValue(RemoteConfigParameter()),
             ],
             child: const MaterialApp(
               home: Material(child: AnnouncementBar()),
@@ -1265,6 +1292,7 @@ void main() {
               isLinkedProvider.overrideWithValue(true),
               isJaLocaleProvider.overrideWithValue(true),
               sharedPreferencesProvider.overrideWith((ref) => sharedPreferences),
+              remoteConfigParameterProvider.overrideWithValue(RemoteConfigParameter()),
             ],
             child: const MaterialApp(
               home: Material(child: AnnouncementBar()),
@@ -1319,6 +1347,7 @@ void main() {
               isLinkedProvider.overrideWithValue(true),
               isJaLocaleProvider.overrideWithValue(true),
               sharedPreferencesProvider.overrideWith((ref) => sharedPreferences),
+              remoteConfigParameterProvider.overrideWithValue(RemoteConfigParameter()),
             ],
             child: const MaterialApp(
               home: Material(child: AnnouncementBar()),
