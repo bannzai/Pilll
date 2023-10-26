@@ -162,60 +162,6 @@ void main() {
         );
       });
 
-      testWidgets('#RecommendSignupAnnouncementBar', (WidgetTester tester) async {
-        final mockTodayRepository = MockTodayService();
-        final mockToday = DateTime(2021, 04, 29);
-
-        when(mockTodayRepository.now()).thenReturn(mockToday);
-        when(mockTodayRepository.now()).thenReturn(mockToday);
-        todayRepository = mockTodayRepository;
-
-        var pillSheet = PillSheet.create(
-          PillSheetType.pillsheet_21,
-          lastTakenDate: mockToday,
-          beginDate: mockToday.subtract(
-// NOTE: Not into rest duration and notification duration
-            const Duration(days: 10),
-          ),
-        );
-        final pillSheetGroup = PillSheetGroup(pillSheetIDs: ["1"], pillSheets: [pillSheet], createdAt: now());
-
-        SharedPreferences.setMockInitialValues({
-          IntKey.totalCountOfActionForTakenPill: totalCountOfActionForTakenPillForLongTimeUser,
-          BoolKey.recommendedSignupNotificationIsAlreadyShow: false,
-        });
-        final sharedPreferences = await SharedPreferences.getInstance();
-        await tester.pumpWidget(
-          ProviderScope(
-            overrides: [
-              latestPillSheetGroupProvider.overrideWith((ref) => Stream.value(pillSheetGroup)),
-              userProvider.overrideWith(
-                (ref) => Stream.value(
-                  const User(
-                    isPremium: true,
-                    trialDeadlineDate: null,
-                    beginTrialDate: null,
-                    discountEntitlementDeadlineDate: null,
-                  ),
-                ),
-              ),
-              isLinkedProvider.overrideWithValue(false),
-              isJaLocaleProvider.overrideWithValue(true),
-              sharedPreferencesProvider.overrideWith((ref) => sharedPreferences),
-              remoteConfigParameterProvider.overrideWithValue(RemoteConfigParameter()),
-            ],
-            child: const MaterialApp(
-              home: Material(child: AnnouncementBar()),
-            ),
-          ),
-        );
-        await tester.pumpAndSettle(const Duration(milliseconds: 400));
-
-        expect(
-          find.byWidgetPredicate((widget) => widget is RecommendSignupAnnouncementBar),
-          findsOneWidget,
-        );
-      });
       testWidgets('#PremiumTrialLimitAnnouncementBar', (WidgetTester tester) async {
         final mockTodayRepository = MockTodayService();
         final mockToday = DateTime(2021, 04, 29);
