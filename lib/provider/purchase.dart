@@ -2,18 +2,18 @@ import 'package:flutter/cupertino.dart';
 
 import 'package:flutter/services.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
+import 'package:pilll/entity/user.codegen.dart';
 import 'package:pilll/secret/secret.dart';
 import 'package:pilll/features/premium_introduction/util/discount_deadline.dart';
 import 'package:pilll/features/premium_introduction/util/map_to_error.dart';
 import 'package:pilll/features/error/alert_error.dart';
 import 'package:pilll/utils/error_log.dart';
-import 'package:pilll/provider/premium_and_trial.codegen.dart';
+import 'package:pilll/provider/user.dart';
 import 'package:pilll/utils/environment.dart';
 import 'package:purchases_flutter/purchases_flutter.dart';
-import 'package:firebase_auth/firebase_auth.dart';
+import 'package:firebase_auth/firebase_auth.dart' as firebase_auth;
 import 'package:pilll/utils/analytics.dart';
 import 'package:pilll/provider/database.dart';
-import 'package:pilll/provider/user.dart';
 
 enum OfferingType { limited, premium }
 
@@ -30,10 +30,9 @@ extension OfferingTypeFunction on OfferingType {
 
 final _purchaseServiceProvider = Provider((ref) => PurchaseService());
 final purchaseOfferingsProvider = FutureProvider((ref) => ref.watch(_purchaseServiceProvider).fetchOfferings());
-final currentOfferingTypeProvider = Provider.family.autoDispose((ref, PremiumAndTrial premiumAndTrial) {
-  final isOverDiscountDeadline =
-      ref.watch(isOverDiscountDeadlineProvider(discountEntitlementDeadlineDate: premiumAndTrial.discountEntitlementDeadlineDate));
-  if (!premiumAndTrial.hasDiscountEntitlement) {
+final currentOfferingTypeProvider = Provider.family.autoDispose((ref, User user) {
+  final isOverDiscountDeadline = ref.watch(isOverDiscountDeadlineProvider(discountEntitlementDeadlineDate: user.discountEntitlementDeadlineDate));
+  if (!user.hasDiscountEntitlement) {
     return OfferingType.premium;
   }
   if (isOverDiscountDeadline) {
@@ -42,23 +41,23 @@ final currentOfferingTypeProvider = Provider.family.autoDispose((ref, PremiumAnd
     return OfferingType.limited;
   }
 });
-final currentOfferingPackagesProvider = Provider.family.autoDispose<List<Package>, PremiumAndTrial>((ref, PremiumAndTrial premiumAndTrial) {
-  final currentOfferingType = ref.watch(currentOfferingTypeProvider(premiumAndTrial));
+final currentOfferingPackagesProvider = Provider.family.autoDispose<List<Package>, User>((ref, User user) {
+  final currentOfferingType = ref.watch(currentOfferingTypeProvider(user));
   final offering = ref.watch(purchaseOfferingsProvider).valueOrNull?.all[currentOfferingType.identifier];
   if (offering != null) {
     return offering.availablePackages;
   }
   return [];
 });
-final annualPackageProvider = Provider.family.autoDispose((ref, PremiumAndTrial premiumAndTrial) {
-  final currentOfferingPackages = ref.watch(currentOfferingPackagesProvider(premiumAndTrial));
+final annualPackageProvider = Provider.family.autoDispose((ref, User user) {
+  final currentOfferingPackages = ref.watch(currentOfferingPackagesProvider(user));
   return currentOfferingPackages.firstWhere((element) => element.packageType == PackageType.annual);
 });
-final monthlyPackageProvider = Provider.family.autoDispose((ref, PremiumAndTrial premiumAndTrial) {
-  final currentOfferingPackages = ref.watch(currentOfferingPackagesProvider(premiumAndTrial));
+final monthlyPackageProvider = Provider.family.autoDispose((ref, User user) {
+  final currentOfferingPackages = ref.watch(currentOfferingPackagesProvider(user));
   return currentOfferingPackages.firstWhere((element) => element.packageType == PackageType.monthly);
 });
-final monthlyPremiumPackageProvider = Provider.family.autoDispose((ref, PremiumAndTrial premiumAndTrial) {
+final monthlyPremiumPackageProvider = Provider.family.autoDispose((ref, User user) {
   const premiumPackageOfferingType = OfferingType.premium;
   final offering = ref.watch(purchaseOfferingsProvider).valueOrNull?.all[premiumPackageOfferingType.identifier];
   if (offering == null) {
@@ -123,7 +122,7 @@ const premiumEntitlements = "Premium";
 
 Future<void> callUpdatePurchaseInfo(CustomerInfo info) async {
   analytics.logEvent(name: "start_update_purchase_info");
-  final uid = FirebaseAuth.instance.currentUser?.uid;
+  final uid = firebase_auth.FirebaseAuth.instance.currentUser?.uid;
   if (uid == null) {
     errorLogger.recordError("unexpected uid is not found when purchase info is update", StackTrace.current);
     return;
@@ -149,7 +148,7 @@ Future<void> callUpdatePurchaseInfo(CustomerInfo info) async {
 
 Future<void> syncPurchaseInfo() async {
   analytics.logEvent(name: "start_sync_purchase_info");
-  final uid = FirebaseAuth.instance.currentUser?.uid;
+  final uid = firebase_auth.FirebaseAuth.instance.currentUser?.uid;
   if (uid == null) {
     errorLogger.recordError("unexpected uid is not found when purchase info to sync", StackTrace.current);
     return;

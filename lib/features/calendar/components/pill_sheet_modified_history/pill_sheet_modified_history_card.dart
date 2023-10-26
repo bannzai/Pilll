@@ -1,6 +1,7 @@
 import 'dart:ui';
 
 import 'package:flutter/material.dart';
+import 'package:pilll/entity/user.codegen.dart';
 import 'package:pilll/utils/analytics.dart';
 import 'package:pilll/components/atoms/button.dart';
 import 'package:pilll/components/atoms/font.dart';
@@ -13,7 +14,6 @@ import 'package:pilll/features/calendar/components/pill_sheet_modified_history/p
 import 'package:pilll/features/premium_introduction/premium_introduction_sheet.dart';
 import 'package:pilll/utils/emoji/emoji.dart';
 import 'package:pilll/entity/pill_sheet_modified_history.codegen.dart';
-import 'package:pilll/provider/premium_and_trial.codegen.dart';
 
 class CalendarPillSheetModifiedHistoryCardState {
   static const pillSheetModifiedHistoriesThreshold = 6;
@@ -46,12 +46,12 @@ class CalendarPillSheetModifiedHistoryCardState {
 
 class CalendarPillSheetModifiedHistoryCard extends StatelessWidget {
   final List<PillSheetModifiedHistory> histories;
-  final PremiumAndTrial premiumAndTrial;
+  final User user;
 
   const CalendarPillSheetModifiedHistoryCard({
     Key? key,
     required this.histories,
-    required this.premiumAndTrial,
+    required this.user,
   }) : super(key: key);
 
   @override
@@ -73,7 +73,7 @@ class CalendarPillSheetModifiedHistoryCard extends StatelessWidget {
                     color: TextColor.main,
                   ),
                 ),
-                if (!premiumAndTrial.isPremium) ...[
+                if (!user.isPremium) ...[
                   const SizedBox(width: 8),
                   const PremiumBadge(),
                 ],
@@ -83,17 +83,17 @@ class CalendarPillSheetModifiedHistoryCard extends StatelessWidget {
             const PillSheetModifiedHisotiryListHeader(),
             const SizedBox(height: 4),
             ...() {
-              if (premiumAndTrial.isPremium || premiumAndTrial.isTrial) {
+              if (user.isPremium || user.isTrial) {
                 return [
                   SingleChildScrollView(
                     physics: const NeverScrollableScrollPhysics(),
                     child: PillSheetModifiedHistoryList(
                       pillSheetModifiedHistories: histories,
-                      premiumOrTrial: premiumAndTrial.premiumOrTrial,
+                      premiumOrTrial: user.premiumOrTrial,
                     ),
                   ),
                   if (histories.length > CalendarPillSheetModifiedHistoryCardState.pillSheetModifiedHistoriesThreshold)
-                    PillSheetModifiedHistoryMoreButton(premiumAndTrial: premiumAndTrial),
+                    PillSheetModifiedHistoryMoreButton(user: user),
                 ];
               } else {
                 return [
@@ -103,7 +103,7 @@ class CalendarPillSheetModifiedHistoryCard extends StatelessWidget {
                         physics: const NeverScrollableScrollPhysics(),
                         child: PillSheetModifiedHistoryList(
                           pillSheetModifiedHistories: histories,
-                          premiumOrTrial: premiumAndTrial.premiumOrTrial,
+                          premiumOrTrial: user.premiumOrTrial,
                         ),
                       ),
                       Positioned.fill(

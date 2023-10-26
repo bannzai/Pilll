@@ -9,10 +9,9 @@ import 'package:pilll/features/initial_setting/migrate_info.dart';
 import 'package:pilll/features/premium_function_survey/premium_function_survey_page.dart';
 import 'package:pilll/features/settings/components/churn/churn_survey_complete_dialog.dart';
 import 'package:pilll/features/store_review/pre_store_review_modal.dart';
-import 'package:pilll/provider/premium_and_trial.codegen.dart';
+import 'package:pilll/provider/user.dart';
 import 'package:pilll/provider/shared_preferences.dart';
 import 'package:pilll/utils/analytics.dart';
-import 'package:pilll/provider/user.dart';
 import 'package:pilll/features/calendar/calendar_page.dart';
 import 'package:pilll/features/menstruation/menstruation_page.dart';
 import 'package:pilll/features/record/record_page.dart';
@@ -48,16 +47,14 @@ class HomePage extends HookConsumerWidget {
 
     final registerReminderLocalNotification = ref.watch(registerReminderLocalNotificationProvider);
     final sharedPreferences = ref.watch(sharedPreferencesProvider);
-    return AsyncValueGroup.group3(
+    return AsyncValueGroup.group2(
       user,
-      ref.watch(premiumAndTrialProvider),
       ref.watch(shouldShowMigrationInformationProvider),
     ).when(
       data: (data) {
         return HomePageBody(
           user: data.t1,
-          premiumAndTrial: data.t2,
-          shouldShowMigrateInfo: data.t3,
+          shouldShowMigrateInfo: data.t2,
           sharedPreferences: sharedPreferences,
           registerReminderLocalNotification: registerReminderLocalNotification,
         );
@@ -74,7 +71,6 @@ class HomePage extends HookConsumerWidget {
 
 class HomePageBody extends HookConsumerWidget {
   final User user;
-  final PremiumAndTrial premiumAndTrial;
   final bool shouldShowMigrateInfo;
   final SharedPreferences sharedPreferences;
   final RegisterReminderLocalNotification registerReminderLocalNotification;
@@ -83,7 +79,6 @@ class HomePageBody extends HookConsumerWidget {
     Key? key,
     required this.user,
     required this.shouldShowMigrateInfo,
-    required this.premiumAndTrial,
     required this.sharedPreferences,
     required this.registerReminderLocalNotification,
   }) : super(key: key);
@@ -104,13 +99,13 @@ class HomePageBody extends HookConsumerWidget {
     final disableShouldAskCancelReason = ref.watch(disableShouldAskCancelReasonProvider);
     final shouldAskCancelReason = user.shouldAskCancelReason;
     final shouldShowPremiumFunctionSurvey = () {
-      if (premiumAndTrial.trialIsAlreadyBegin) {
+      if (user.trialIsAlreadyBegin) {
         return false;
       }
-      if (premiumAndTrial.premiumOrTrial) {
+      if (user.premiumOrTrial) {
         return false;
       }
-      if (premiumAndTrial.isNotYetStartTrial) {
+      if (user.isNotYetStartTrial) {
         return false;
       }
       return !isAlreadyShowPremiumSurvey;

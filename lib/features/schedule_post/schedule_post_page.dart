@@ -7,6 +7,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_hooks/flutter_hooks.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
 import 'package:pilll/components/molecules/keyboard_toolbar.dart';
+import 'package:pilll/entity/user.codegen.dart';
 import 'package:pilll/utils/analytics.dart';
 import 'package:pilll/components/atoms/button.dart';
 import 'package:pilll/components/atoms/color.dart';
@@ -18,7 +19,7 @@ import 'package:pilll/provider/database.dart';
 import 'package:pilll/entity/schedule.codegen.dart';
 import 'package:pilll/features/error/error_alert.dart';
 import 'package:pilll/features/error/universal_error_page.dart';
-import 'package:pilll/provider/premium_and_trial.codegen.dart';
+import 'package:pilll/provider/user.dart';
 import 'package:pilll/provider/root.dart';
 import 'package:pilll/provider/schedule.dart';
 import 'package:pilll/utils/local_notification.dart';
@@ -31,10 +32,10 @@ class SchedulePostPage extends HookConsumerWidget {
   const SchedulePostPage({Key? key, required this.date}) : super(key: key);
   @override
   Widget build(BuildContext context, WidgetRef ref) {
-    return AsyncValueGroup.group2(ref.watch(premiumAndTrialProvider), ref.watch(schedulesForDateProvider(date))).when(
+    return AsyncValueGroup.group2(ref.watch(userProvider), ref.watch(schedulesForDateProvider(date))).when(
       data: (data) => _SchedulePostPage(
         date: date,
-        premiumAndTrial: data.t1,
+        user: data.t1,
         schedule: data.t2.firstOrNull ?? Schedule(title: "", localNotification: null, date: date, createdDateTime: DateTime.now()),
       ),
       error: (error, _) => UniversalErrorPage(
@@ -50,13 +51,13 @@ class SchedulePostPage extends HookConsumerWidget {
 class _SchedulePostPage extends HookConsumerWidget {
   final DateTime date;
   final Schedule schedule;
-  final PremiumAndTrial premiumAndTrial;
+  final User user;
 
   const _SchedulePostPage({
     Key? key,
     required this.date,
     required this.schedule,
-    required this.premiumAndTrial,
+    required this.user,
   }) : super(key: key);
 
   @override

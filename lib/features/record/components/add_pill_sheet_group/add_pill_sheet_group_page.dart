@@ -84,18 +84,20 @@ class AddPillSheetGroupPage extends HookConsumerWidget {
                           width: 180,
                           child: PrimaryButton(
                             text: "追加",
-                            onPressed: () async {
-                              analytics.logEvent(name: "pressed_add_pill_sheet_group");
-                              final navigator = Navigator.of(context);
-                              await addPillSheetGroup.call(
-                                setting: setting,
-                                pillSheetGroup: pillSheetGroup,
-                                pillSheetTypes: pillSheetTypes.value,
-                                displayNumberSetting: displayNumberSetting.value,
-                              );
-                              await registerReminderLocalNotification();
-                              navigator.pop();
-                            },
+                            onPressed: pillSheetTypes.value.isEmpty
+                                ? null
+                                : () async {
+                                    analytics.logEvent(name: "pressed_add_pill_sheet_group");
+                                    final navigator = Navigator.of(context);
+                                    await addPillSheetGroup.call(
+                                      setting: setting,
+                                      pillSheetGroup: pillSheetGroup,
+                                      pillSheetTypes: pillSheetTypes.value,
+                                      displayNumberSetting: displayNumberSetting.value,
+                                    );
+                                    await registerReminderLocalNotification();
+                                    navigator.pop();
+                                  },
                           ),
                         ),
                       ],

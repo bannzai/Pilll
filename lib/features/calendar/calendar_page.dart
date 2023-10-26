@@ -2,7 +2,9 @@ import 'package:async_value_group/async_value_group.dart';
 import 'package:flutter_hooks/flutter_hooks.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
 import 'package:pilll/entity/diary.codegen.dart';
+import 'package:pilll/entity/user.codegen.dart';
 import 'package:pilll/provider/diary.dart';
+import 'package:pilll/provider/user.dart';
 import 'package:pilll/utils/analytics.dart';
 import 'package:pilll/components/molecules/indicator.dart';
 import 'package:pilll/components/organisms/calendar/band/calendar_band_model.dart';
@@ -20,7 +22,6 @@ import 'package:pilll/features/diary_post/diary_post_page.dart';
 import 'package:pilll/entity/pill_sheet_modified_history.codegen.dart';
 import 'package:pilll/features/error/universal_error_page.dart';
 import 'package:pilll/provider/pill_sheet_modified_history.dart';
-import 'package:pilll/provider/premium_and_trial.codegen.dart';
 import 'package:pilll/utils/datetime/date_compare.dart';
 import 'package:pilll/utils/datetime/day.dart';
 
@@ -45,7 +46,7 @@ class CalendarPage extends HookConsumerWidget {
     return AsyncValueGroup.group6(
       ref.watch(
           pillSheetModifiedHistoriesWithLimitProvider(limit: CalendarPillSheetModifiedHistoryCardState.pillSheetModifiedHistoriesThreshold + 1)),
-      ref.watch(premiumAndTrialProvider),
+      ref.watch(userProvider),
       ref.watch(calendarMenstruationBandListProvider),
       ref.watch(calendarScheduledMenstruationBandListProvider),
       ref.watch(calendarNextPillSheetBandListProvider),
@@ -53,7 +54,7 @@ class CalendarPage extends HookConsumerWidget {
     ).when(
       data: (data) => _CalendarPageBody(
         histories: data.t1,
-        premiumAndTrial: data.t2,
+        user: data.t2,
         calendarMenstruationBandModels: data.t3,
         calendarScheduledMenstruationBandModels: data.t4,
         calendarNextPillSheetBandModels: data.t5,
@@ -74,7 +75,7 @@ class CalendarPage extends HookConsumerWidget {
 
 class _CalendarPageBody extends StatelessWidget {
   final List<PillSheetModifiedHistory> histories;
-  final PremiumAndTrial premiumAndTrial;
+  final User user;
   final List<CalendarMenstruationBandModel> calendarMenstruationBandModels;
   final List<CalendarScheduledMenstruationBandModel> calendarScheduledMenstruationBandModels;
   final List<CalendarNextPillSheetBandModel> calendarNextPillSheetBandModels;
@@ -86,7 +87,7 @@ class _CalendarPageBody extends StatelessWidget {
   const _CalendarPageBody({
     Key? key,
     required this.histories,
-    required this.premiumAndTrial,
+    required this.user,
     required this.calendarMenstruationBandModels,
     required this.calendarScheduledMenstruationBandModels,
     required this.calendarNextPillSheetBandModels,
@@ -187,7 +188,7 @@ class _CalendarPageBody extends StatelessWidget {
               padding: const EdgeInsets.only(left: 16, right: 16),
               child: CalendarPillSheetModifiedHistoryCard(
                 histories: histories,
-                premiumAndTrial: premiumAndTrial,
+                user: user,
               ),
             ),
             const SizedBox(height: 120),

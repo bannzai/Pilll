@@ -7,6 +7,7 @@ import 'package:pilll/components/atoms/text_color.dart';
 import 'package:pilll/components/molecules/indicator.dart';
 import 'package:pilll/components/organisms/calendar/band/calendar_band_model.dart';
 import 'package:pilll/components/organisms/calendar/band/calendar_band_provider.dart';
+import 'package:pilll/entity/user.codegen.dart';
 import 'package:pilll/features/calendar/components/month_calendar/month_calendar.dart';
 import 'package:pilll/features/menstruation/components/calendar/menstruation_calendar_header.dart';
 import 'package:pilll/features/menstruation/components/menstruation_card_list.dart';
@@ -23,7 +24,7 @@ import 'package:pilll/features/error/universal_error_page.dart';
 import 'package:pilll/provider/diary.dart';
 import 'package:pilll/provider/menstruation.dart';
 import 'package:pilll/provider/pill_sheet_group.dart';
-import 'package:pilll/provider/premium_and_trial.codegen.dart';
+import 'package:pilll/provider/user.dart';
 import 'package:pilll/provider/root.dart';
 import 'package:pilll/provider/schedule.dart';
 import 'package:pilll/provider/setting.dart';
@@ -46,7 +47,7 @@ class MenstruationPage extends HookConsumerWidget {
 
     return AsyncValueGroup.group10(
       ref.watch(latestPillSheetGroupProvider),
-      ref.watch(premiumAndTrialProvider),
+      ref.watch(userProvider),
       ref.watch(allMenstruationProvider),
       ref.watch(latestMenstruationProvider),
       ref.watch(settingProvider),
@@ -59,7 +60,7 @@ class MenstruationPage extends HookConsumerWidget {
       data: (data) {
         return MenstruationPageBody(
           latestPillSheetGroup: data.t1,
-          premiumAndTrial: data.t2,
+          user: data.t2,
           allMenstruation: data.t3,
           latestMenstruation: data.t4,
           setting: data.t5,
@@ -82,7 +83,7 @@ class MenstruationPage extends HookConsumerWidget {
 
 class MenstruationPageBody extends HookConsumerWidget {
   final PillSheetGroup? latestPillSheetGroup;
-  final PremiumAndTrial premiumAndTrial;
+  final User user;
   final List<Menstruation> allMenstruation;
   final Menstruation? latestMenstruation;
   final Setting setting;
@@ -95,7 +96,7 @@ class MenstruationPageBody extends HookConsumerWidget {
   const MenstruationPageBody({
     Key? key,
     required this.latestPillSheetGroup,
-    required this.premiumAndTrial,
+    required this.user,
     required this.allMenstruation,
     required this.latestMenstruation,
     required this.setting,
@@ -141,7 +142,7 @@ class MenstruationPageBody extends HookConsumerWidget {
                 ),
                 MenstruationCardList(
                   calendarScheduledMenstruationBandModels: calendarScheduledMenstruationBandModels,
-                  premiumAndTrial: premiumAndTrial,
+                  user: user,
                   setting: setting,
                   latestPillSheetGroup: latestPillSheetGroup,
                   latestMenstruation: latestMenstruation,

@@ -1,6 +1,7 @@
 import 'package:async_value_group/async_value_group.dart';
 import 'package:flutter_hooks/flutter_hooks.dart';
 import 'package:pilll/components/molecules/keyboard_toolbar.dart';
+import 'package:pilll/entity/user.codegen.dart';
 import 'package:pilll/features/diary_post/memo.dart';
 import 'package:pilll/features/diary_post/physical_condition.dart';
 import 'package:pilll/features/diary_post/physical_condition_details.dart';
@@ -16,7 +17,7 @@ import 'package:pilll/components/atoms/text_color.dart';
 import 'package:pilll/entity/diary_setting.codegen.dart';
 import 'package:pilll/features/error/universal_error_page.dart';
 import 'package:pilll/provider/diary.dart';
-import 'package:pilll/provider/premium_and_trial.codegen.dart';
+import 'package:pilll/provider/user.dart';
 import 'package:pilll/provider/root.dart';
 import 'package:pilll/utils/formatter/date_time_formatter.dart';
 import 'package:flutter/material.dart';
@@ -32,11 +33,11 @@ class DiaryPostPage extends HookConsumerWidget {
   Widget build(BuildContext context, WidgetRef ref) {
     final diary = this.diary ?? Diary.fromDate(date);
 
-    return AsyncValueGroup.group2(ref.watch(premiumAndTrialProvider), ref.watch(diarySettingProvider)).when(
+    return AsyncValueGroup.group2(ref.watch(userProvider), ref.watch(diarySettingProvider)).when(
       data: (data) => DiaryPostPageBody(
         date: date,
         diary: diary,
-        premiumAndTrial: data.t1,
+        user: data.t1,
         diarySetting: data.t2,
       ),
       error: (error, stackTrace) => UniversalErrorPage(
@@ -62,14 +63,14 @@ extension DiaryPostPageRoute on DiaryPostPage {
 class DiaryPostPageBody extends HookConsumerWidget {
   final DateTime date;
   final Diary diary;
-  final PremiumAndTrial premiumAndTrial;
+  final User user;
   final DiarySetting? diarySetting;
 
   const DiaryPostPageBody({
     Key? key,
     required this.date,
     required this.diary,
-    required this.premiumAndTrial,
+    required this.user,
     required this.diarySetting,
   }) : super(key: key);
   @override
@@ -140,10 +141,7 @@ class DiaryPostPageBody extends HookConsumerWidget {
                   DiaryPostPhysicalCondition(physicalCondition: physicalCondition),
                   const SizedBox(height: 20),
                   DiaryPostPhysicalConditionDetails(
-                      premiumAndTrial: premiumAndTrial,
-                      diarySetting: diarySetting,
-                      context: context,
-                      physicalConditionDetails: physicalConditionDetails),
+                      user: user, diarySetting: diarySetting, context: context, physicalConditionDetails: physicalConditionDetails),
                   const SizedBox(height: 20),
                   DiaryPostSex(sex: sex),
                   const SizedBox(height: 20),

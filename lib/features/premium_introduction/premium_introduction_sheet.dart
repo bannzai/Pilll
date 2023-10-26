@@ -3,6 +3,7 @@ import 'package:flutter_hooks/flutter_hooks.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
 
 import 'package:flutter/material.dart';
+import 'package:pilll/entity/user.codegen.dart';
 import 'package:pilll/utils/analytics.dart';
 import 'package:pilll/components/atoms/button.dart';
 import 'package:pilll/components/atoms/color.dart';
@@ -14,7 +15,7 @@ import 'package:pilll/features/premium_introduction/components/premium_introduct
 import 'package:pilll/features/premium_introduction/components/premium_user_thanks.dart';
 import 'package:pilll/features/premium_introduction/components/purchase_buttons.dart';
 import 'package:pilll/features/error/universal_error_page.dart';
-import 'package:pilll/provider/premium_and_trial.codegen.dart';
+import 'package:pilll/provider/user.dart';
 import 'package:pilll/provider/root.dart';
 import 'package:pilll/provider/purchase.dart';
 import 'package:pilll/utils/links.dart';
@@ -28,11 +29,11 @@ class PremiumIntroductionSheet extends HookConsumerWidget {
   Widget build(BuildContext context, WidgetRef ref) {
     return AsyncValueGroup.group2(
       ref.watch(purchaseOfferingsProvider),
-      ref.watch(premiumAndTrialProvider),
+      ref.watch(userProvider),
     ).when(
       data: (data) => PremiumIntroductionSheetBody(
         offerings: data.t1,
-        premiumAndTrial: data.t2,
+        user: data.t2,
       ),
       error: (error, stackTrace) => UniversalErrorPage(
         error: error,
@@ -49,20 +50,20 @@ class PremiumIntroductionSheet extends HookConsumerWidget {
 
 class PremiumIntroductionSheetBody extends HookConsumerWidget {
   final Offerings offerings;
-  final PremiumAndTrial premiumAndTrial;
+  final User user;
 
   const PremiumIntroductionSheetBody({
     Key? key,
     required this.offerings,
-    required this.premiumAndTrial,
+    required this.user,
   }) : super(key: key);
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {
-    final offeringType = ref.watch(currentOfferingTypeProvider(premiumAndTrial));
-    final monthlyPackage = ref.watch(monthlyPackageProvider(premiumAndTrial));
-    final annualPackage = ref.watch(annualPackageProvider(premiumAndTrial));
-    final monthlyPremiumPackage = ref.watch(monthlyPremiumPackageProvider(premiumAndTrial));
+    final offeringType = ref.watch(currentOfferingTypeProvider(user));
+    final monthlyPackage = ref.watch(monthlyPackageProvider(user));
+    final annualPackage = ref.watch(annualPackageProvider(user));
+    final monthlyPremiumPackage = ref.watch(monthlyPremiumPackageProvider(user));
 
     final isLoading = useState(false);
 
@@ -92,16 +93,16 @@ class PremiumIntroductionSheetBody extends HookConsumerWidget {
                   mainAxisSize: MainAxisSize.min,
                   children: [
                     const PremiumIntroductionHeader(),
-                    if (premiumAndTrial.isPremium) ...[
+                    if (user.isPremium) ...[
                       const SizedBox(height: 32),
                       const PremiumUserThanksRow(),
                     ],
-                    if (!premiumAndTrial.isPremium) ...[
-                      if (premiumAndTrial.hasDiscountEntitlement)
+                    if (!user.isPremium) ...[
+                      if (user.hasDiscountEntitlement)
                         if (monthlyPremiumPackage != null)
                           PremiumIntroductionDiscountRow(
                             monthlyPremiumPackage: monthlyPremiumPackage,
-                            discountEntitlementDeadlineDate: premiumAndTrial.discountEntitlementDeadlineDate,
+                            discountEntitlementDeadlineDate: user.discountEntitlementDeadlineDate,
                           ),
                       const SizedBox(height: 12),
                       PurchaseButtons(

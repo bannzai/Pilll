@@ -1,8 +1,8 @@
 import 'package:hooks_riverpod/hooks_riverpod.dart';
+import 'package:pilll/entity/user.codegen.dart';
 import 'package:pilll/utils/analytics.dart';
 import 'package:flutter_test/flutter_test.dart';
 import 'package:pilll/features/premium_introduction/util/discount_deadline.dart';
-import 'package:pilll/provider/premium_and_trial.codegen.dart';
 import 'package:pilll/provider/purchase.dart';
 import 'package:pilll/utils/datetime/day.dart';
 import 'package:purchases_flutter/purchases_flutter.dart';
@@ -12,8 +12,8 @@ import '../../helper/mock.mocks.dart';
 
 class _FakeOfferings extends Fake implements Offerings {}
 
-class _FakePremiumAndTrial extends Fake implements PremiumAndTrial {
-  _FakePremiumAndTrial({
+class _FakeUser extends Fake implements User {
+  _FakeUser({
     required this.fakeHasDiscountEntitlement,
     required this.fakeDiscountEntitlementDeadlineDate,
   });
@@ -36,7 +36,7 @@ void main() {
   group("#offeringType", () {
     test("when hasDiscountEntitlement = false should return premium", () async {
       final n = now();
-      final premiumAndTrial = _FakePremiumAndTrial(
+      final user = _FakeUser(
         fakeHasDiscountEntitlement: false,
         fakeDiscountEntitlementDeadlineDate: n,
       );
@@ -46,12 +46,12 @@ void main() {
           purchaseOfferingsProvider.overrideWith((ref) => _FakeOfferings()),
         ],
       );
-      final currentOfferingType = container.read(currentOfferingTypeProvider(premiumAndTrial));
+      final currentOfferingType = container.read(currentOfferingTypeProvider(user));
       expect(currentOfferingType, equals(OfferingType.premium));
     });
     test("when isOverDiscountDeadline = true should return premium", () async {
       final n = now();
-      final premiumAndTrial = _FakePremiumAndTrial(
+      final user = _FakeUser(
         fakeHasDiscountEntitlement: false,
         fakeDiscountEntitlementDeadlineDate: n,
       );
@@ -61,12 +61,12 @@ void main() {
           purchaseOfferingsProvider.overrideWith((ref) => _FakeOfferings()),
         ],
       );
-      final currentOfferingType = container.read(currentOfferingTypeProvider(premiumAndTrial));
+      final currentOfferingType = container.read(currentOfferingTypeProvider(user));
       expect(currentOfferingType, equals(OfferingType.premium));
     });
     test("should return limited", () async {
       final n = now();
-      final premiumAndTrial = _FakePremiumAndTrial(
+      final user = _FakeUser(
         fakeHasDiscountEntitlement: true,
         fakeDiscountEntitlementDeadlineDate: n,
       );
@@ -76,7 +76,7 @@ void main() {
           purchaseOfferingsProvider.overrideWith((ref) => _FakeOfferings()),
         ],
       );
-      final currentOfferingType = container.read(currentOfferingTypeProvider(premiumAndTrial));
+      final currentOfferingType = container.read(currentOfferingTypeProvider(user));
       expect(currentOfferingType, equals(OfferingType.limited));
     });
   });

@@ -1,3 +1,4 @@
+import 'package:pilll/entity/user.codegen.dart';
 import 'package:pilll/features/diary_post/util.dart';
 import 'package:pilll/utils/analytics.dart';
 import 'package:pilll/features/diary_setting_physical_condtion_detail/page.dart';
@@ -6,19 +7,18 @@ import 'package:pilll/components/atoms/color.dart';
 import 'package:pilll/components/atoms/font.dart';
 import 'package:pilll/components/atoms/text_color.dart';
 import 'package:pilll/entity/diary_setting.codegen.dart';
-import 'package:pilll/provider/premium_and_trial.codegen.dart';
 import 'package:flutter/material.dart';
 
 class DiaryPostPhysicalConditionDetails extends StatelessWidget {
   const DiaryPostPhysicalConditionDetails({
     Key? key,
-    required this.premiumAndTrial,
+    required this.user,
     required this.diarySetting,
     required this.context,
     required this.physicalConditionDetails,
   }) : super(key: key);
 
-  final PremiumAndTrial premiumAndTrial;
+  final User user;
   final DiarySetting? diarySetting;
   final BuildContext context;
   final ValueNotifier<List<String>> physicalConditionDetails;
@@ -26,7 +26,7 @@ class DiaryPostPhysicalConditionDetails extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     late List<String> availablePhysicalConditionDetails;
-    if (premiumAndTrial.premiumOrTrial) {
+    if (user.premiumOrTrial) {
       availablePhysicalConditionDetails = diarySetting?.physicalConditions ?? defaultPhysicalConditions;
     } else {
       availablePhysicalConditionDetails = defaultPhysicalConditions;
@@ -41,7 +41,7 @@ class DiaryPostPhysicalConditionDetails extends StatelessWidget {
             IconButton(
               onPressed: () {
                 analytics.logEvent(name: "edit_physical_condition_detail");
-                if (premiumAndTrial.isPremium || premiumAndTrial.isTrial) {
+                if (user.isPremium || user.isTrial) {
                   showModalBottomSheet(
                       context: context,
                       isDismissible: true,

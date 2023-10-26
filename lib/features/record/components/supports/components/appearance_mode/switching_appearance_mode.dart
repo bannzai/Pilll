@@ -1,20 +1,20 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
+import 'package:pilll/entity/user.codegen.dart';
 import 'package:pilll/utils/analytics.dart';
 import 'package:pilll/components/atoms/font.dart';
 import 'package:pilll/components/atoms/text_color.dart';
 import 'package:pilll/features/record/components/supports/components/appearance_mode/select_appearance_mode_modal.dart';
 import 'package:pilll/entity/setting.codegen.dart';
-import 'package:pilll/provider/premium_and_trial.codegen.dart';
 
 class SwitchingAppearanceMode extends StatelessWidget {
   final Setting setting;
-  final PremiumAndTrial premiumAndTrial;
+  final User user;
 
   const SwitchingAppearanceMode({
     Key? key,
     required this.setting,
-    required this.premiumAndTrial,
+    required this.user,
   }) : super(key: key);
 
   @override
@@ -35,7 +35,7 @@ class SwitchingAppearanceMode extends StatelessWidget {
       ]),
       onTap: () {
         analytics.logEvent(name: "did_tapped_record_page_appearance_mode");
-        showSelectAppearanceModeModal(context, premiumAndTrial: premiumAndTrial);
+        showSelectAppearanceModeModal(context, user: user);
       },
     );
   }

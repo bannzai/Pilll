@@ -2,6 +2,7 @@ import 'package:flutter_hooks/flutter_hooks.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
 import 'package:pilll/components/molecules/dots_page_indicator.dart';
 import 'package:pilll/components/organisms/pill_sheet/pill_sheet_view_layout.dart';
+import 'package:pilll/entity/user.codegen.dart';
 import 'package:pilll/features/record/components/pill_sheet/record_page_pill_sheet.dart';
 import 'package:pilll/entity/pill_sheet.codegen.dart';
 import 'package:pilll/entity/pill_sheet_group.codegen.dart';
@@ -9,20 +10,19 @@ import 'package:pilll/entity/pill_sheet_type.dart';
 import 'package:pilll/entity/setting.codegen.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:pilll/provider/premium_and_trial.codegen.dart';
 
 class RecordPagePillSheetList extends HookConsumerWidget {
   final PillSheetGroup pillSheetGroup;
   final PillSheet activePillSheet;
   final Setting setting;
-  final PremiumAndTrial premiumAndTrial;
+  final User user;
 
   const RecordPagePillSheetList({
     Key? key,
     required this.pillSheetGroup,
     required this.activePillSheet,
     required this.setting,
-    required this.premiumAndTrial,
+    required this.user,
   }) : super(key: key);
 
   @override
@@ -48,7 +48,7 @@ class RecordPagePillSheetList extends HookConsumerWidget {
                     pillSheetGroup: pillSheetGroup,
                     pillSheet: pillSheet,
                     setting: setting,
-                    premiumAndTrial: premiumAndTrial,
+                    user: user,
                   ),
                 ),
             ],

@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
+import 'package:pilll/entity/user.codegen.dart';
 import 'package:pilll/utils/analytics.dart';
 import 'package:pilll/components/atoms/font.dart';
 import 'package:pilll/components/atoms/text_color.dart';
@@ -7,14 +8,13 @@ import 'package:pilll/components/molecules/premium_badge.dart';
 import 'package:pilll/components/molecules/select_circle.dart';
 import 'package:pilll/features/premium_introduction/premium_introduction_sheet.dart';
 import 'package:pilll/entity/setting.codegen.dart';
-import 'package:pilll/provider/premium_and_trial.codegen.dart';
 import 'package:pilll/provider/setting.dart';
 import 'package:pilll/utils/local_notification.dart';
 
 class SelectAppearanceModeModal extends HookConsumerWidget {
-  final PremiumAndTrial premiumAndTrial;
+  final User user;
 
-  const SelectAppearanceModeModal({Key? key, required this.premiumAndTrial}) : super(key: key);
+  const SelectAppearanceModeModal({Key? key, required this.user}) : super(key: key);
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {
@@ -47,7 +47,7 @@ class SelectAppearanceModeModal extends HookConsumerWidget {
                   setting: setting,
                   setSetting: setSetting,
                   registerReminderLocalNotification: registerReminderLocalNotification,
-                  premiumAndTrial: premiumAndTrial,
+                  user: user,
                   mode: PillSheetAppearanceMode.date,
                   text: "日付表示",
                   isPremiumFunction: true,
@@ -57,7 +57,7 @@ class SelectAppearanceModeModal extends HookConsumerWidget {
                   setting: setting,
                   setSetting: setSetting,
                   registerReminderLocalNotification: registerReminderLocalNotification,
-                  premiumAndTrial: premiumAndTrial,
+                  user: user,
                   mode: PillSheetAppearanceMode.number,
                   text: "ピル番号",
                   isPremiumFunction: false,
@@ -67,7 +67,7 @@ class SelectAppearanceModeModal extends HookConsumerWidget {
                   setting: setting,
                   setSetting: setSetting,
                   registerReminderLocalNotification: registerReminderLocalNotification,
-                  premiumAndTrial: premiumAndTrial,
+                  user: user,
                   mode: PillSheetAppearanceMode.sequential,
                   text: "服用日数",
                   isPremiumFunction: false,
@@ -85,7 +85,7 @@ class SelectAppearanceModeModal extends HookConsumerWidget {
     required SetSetting setSetting,
     required RegisterReminderLocalNotification registerReminderLocalNotification,
     required Setting setting,
-    required PremiumAndTrial premiumAndTrial,
+    required User user,
     required PillSheetAppearanceMode mode,
     required String text,
     required bool isPremiumFunction,
@@ -97,7 +97,7 @@ class SelectAppearanceModeModal extends HookConsumerWidget {
           parameters: {"mode": mode.toString(), "isPremiumFunction": isPremiumFunction},
         );
 
-        if (premiumAndTrial.isPremium || premiumAndTrial.isTrial) {
+        if (user.isPremium || user.isTrial) {
           await setSetting(setting.copyWith(pillSheetAppearanceMode: mode));
           await registerReminderLocalNotification();
         } else if (isPremiumFunction) {
@@ -135,13 +135,13 @@ class SelectAppearanceModeModal extends HookConsumerWidget {
 
 void showSelectAppearanceModeModal(
   BuildContext context, {
-  required PremiumAndTrial premiumAndTrial,
+  required User user,
 }) {
   analytics.setCurrentScreen(screenName: "SelectAppearanceModeModal");
   showModalBottomSheet(
     context: context,
     builder: (context) => SelectAppearanceModeModal(
-      premiumAndTrial: premiumAndTrial,
+      user: user,
     ),
     backgroundColor: Colors.transparent,
   );

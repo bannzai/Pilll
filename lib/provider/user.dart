@@ -240,6 +240,8 @@ class SaveUserLaunchInfo {
       UserFirestoreFieldKeys.userDocumentIDSets: userDocumentIDSets,
       UserFirestoreFieldKeys.firebaseCurrentUserIDSets: firebaseCurrentUserIDSets,
       UserFirestoreFieldKeys.anonymousUserIDSets: anonymousUserIDSets,
+
+      UserFirestoreFieldKeys.isTrial: user.isTrial,
     }, SetOptions(merge: true));
   }
 }
@@ -254,9 +256,9 @@ class EndInitialSetting {
     return databaseConnection.userRawReference().set({
       UserFirestoreFieldKeys.isTrial: true,
       UserFirestoreFieldKeys.beginTrialDate: now(),
-      UserFirestoreFieldKeys.trialDeadlineDate: now().addDays(remoteConfigParameter.trialDeadlineDateOffsetDay),
+      UserFirestoreFieldKeys.trialDeadlineDate: now().addDays(remoteConfigParameter.trialDeadlineDateOffsetDay).endOfDay(),
       UserFirestoreFieldKeys.discountEntitlementDeadlineDate:
-          now().addDays(remoteConfigParameter.trialDeadlineDateOffsetDay + remoteConfigParameter.discountEntitlementOffsetDay),
+          now().addDays(remoteConfigParameter.trialDeadlineDateOffsetDay + remoteConfigParameter.discountEntitlementOffsetDay).endOfDay(),
       UserFirestoreFieldKeys.useLocalNotificationForReminder: true,
     }, SetOptions(merge: true));
   }

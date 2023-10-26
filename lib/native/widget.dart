@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:pilll/entity/pill_sheet_group.codegen.dart';
 import 'package:pilll/entity/setting.codegen.dart';
+import 'package:pilll/entity/user.codegen.dart';
 import 'package:pilll/native/channel.dart';
-import 'package:pilll/provider/premium_and_trial.codegen.dart';
 
 Future<void> syncActivePillSheetValue({
   required PillSheetGroup? pillSheetGroup,
@@ -35,10 +35,10 @@ Future<void> syncSetting({
 }
 
 Future<void> syncUserStatus({
-  required PremiumAndTrial? premiumAndTrial,
+  required User? user,
 }) async {
   final map = {
-    "userIsPremiumOrTrial": premiumAndTrial?.premiumOrTrial,
+    "userIsPremiumOrTrial": user?.premiumOrTrial,
   };
   await methodChannel.invokeMethod("syncUserStatus", map);
 }

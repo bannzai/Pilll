@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
+import 'package:pilll/entity/user.codegen.dart';
 import 'package:pilll/utils/analytics.dart';
 import 'package:pilll/components/atoms/color.dart';
 import 'package:pilll/components/atoms/font.dart';
 import 'package:pilll/components/atoms/text_color.dart';
-import 'package:pilll/provider/premium_and_trial.codegen.dart';
 import 'package:pilll/utils/datetime/day.dart';
 import 'package:url_launcher/url_launcher.dart';
 
@@ -55,14 +55,14 @@ class PremiumTrialLimitAnnouncementBar extends StatelessWidget {
     );
   }
 
-  static String? retrievePremiumTrialLimit(PremiumAndTrial premiumAndTrial) {
-    if (premiumAndTrial.isPremium) {
+  static String? retrievePremiumTrialLimit(User user) {
+    if (user.isPremium) {
       return null;
     }
-    if (!premiumAndTrial.isTrial) {
+    if (!user.isTrial) {
       return null;
     }
-    final trialDeadlineDate = premiumAndTrial.trialDeadlineDate;
+    final trialDeadlineDate = user.trialDeadlineDate;
     if (trialDeadlineDate == null) {
       return null;
     }

@@ -31,7 +31,6 @@ import 'package:pilll/features/settings/components/inquiry/inquiry.dart';
 import 'package:pilll/components/atoms/color.dart';
 import 'package:pilll/components/atoms/text_color.dart';
 import 'package:pilll/provider/pill_sheet_group.dart';
-import 'package:pilll/provider/premium_and_trial.codegen.dart';
 import 'package:pilll/provider/root.dart';
 import 'package:pilll/provider/setting.dart';
 import 'package:pilll/provider/shared_preferences.dart';
@@ -55,11 +54,10 @@ class SettingPage extends HookConsumerWidget {
     useAutomaticKeepAlive(wantKeepAlive: true);
 
     final sharedPreferences = ref.watch(sharedPreferencesProvider);
-    return AsyncValueGroup.group5(
+    return AsyncValueGroup.group4(
       ref.watch(userProvider),
       ref.watch(settingProvider),
       ref.watch(latestPillSheetGroupProvider),
-      ref.watch(premiumAndTrialProvider),
       ref.watch(isHealthDataAvailableProvider),
     ).when(
       data: (data) {
@@ -69,8 +67,7 @@ class SettingPage extends HookConsumerWidget {
           user: data.t1,
           setting: data.t2,
           latestPillSheetGroup: data.t3,
-          premiumAndTrial: data.t4,
-          isHealthDataAvailable: data.t5,
+          isHealthDataAvailable: data.t4,
           userIsUpdatedFrom132: userIsMigratedFrom132,
         );
       },
@@ -89,7 +86,6 @@ class SettingPageBody extends StatelessWidget {
   final User user;
   final Setting setting;
   final PillSheetGroup? latestPillSheetGroup;
-  final PremiumAndTrial premiumAndTrial;
   final bool isHealthDataAvailable;
   final bool userIsUpdatedFrom132;
 
@@ -98,7 +94,6 @@ class SettingPageBody extends StatelessWidget {
     required this.user,
     required this.setting,
     required this.latestPillSheetGroup,
-    required this.premiumAndTrial,
     required this.isHealthDataAvailable,
     required this.userIsUpdatedFrom132,
   }) : super(key: key);
@@ -134,7 +129,7 @@ class SettingPageBody extends StatelessWidget {
                     return SettingSectionTitle(
                       text: "Pilllプレミアム",
                       children: [
-                        if (premiumAndTrial.isTrial) ...[
+                        if (user.isTrial) ...[
                           ListTile(
                             title: const Text("機能無制限の期間について",
                                 style: TextStyle(
@@ -150,11 +145,11 @@ class SettingPageBody extends StatelessWidget {
                           _separator(),
                         ],
                         PremiumIntroductionRow(
-                          isPremium: premiumAndTrial.isPremium,
-                          trialDeadlineDate: premiumAndTrial.trialDeadlineDate,
+                          isPremium: user.isPremium,
+                          trialDeadlineDate: user.trialDeadlineDate,
                         ),
                         _separator(),
-                        if (premiumAndTrial.isPremium) ...[
+                        if (user.isPremium) ...[
                           const AboutChurn(),
                           _separator(),
                         ],
@@ -179,9 +174,9 @@ class SettingPageBody extends StatelessWidget {
                         ],
                         CreatingNewPillSheetRow(
                           setting: setting,
-                          isPremium: premiumAndTrial.isPremium,
-                          isTrial: premiumAndTrial.isTrial,
-                          trialDeadlineDate: premiumAndTrial.trialDeadlineDate,
+                          isPremium: user.isPremium,
+                          isTrial: user.isTrial,
+                          trialDeadlineDate: user.trialDeadlineDate,
                         ),
                         _separator(),
                       ],
@@ -200,18 +195,18 @@ class SettingPageBody extends StatelessWidget {
                           NotificationInRestDuration(setting: setting, pillSheet: activePillSheet),
                           _separator(),
                         ],
-                        if (!premiumAndTrial.isPremium) ...[
+                        if (!user.isPremium) ...[
                           QuickRecordRow(
-                            isTrial: premiumAndTrial.isTrial,
-                            trialDeadlineDate: premiumAndTrial.trialDeadlineDate,
+                            isTrial: user.isTrial,
+                            trialDeadlineDate: user.trialDeadlineDate,
                           ),
                           _separator(),
                         ],
                         ReminderNotificationCustomizeWord(
                           setting: setting,
-                          isTrial: premiumAndTrial.isTrial,
-                          isPremium: premiumAndTrial.isPremium,
-                          trialDeadlineDate: premiumAndTrial.trialDeadlineDate,
+                          isTrial: user.isTrial,
+                          isPremium: user.isPremium,
+                          trialDeadlineDate: user.trialDeadlineDate,
                         ),
                         _separator(),
                       ],
@@ -224,7 +219,7 @@ class SettingPageBody extends StatelessWidget {
                         _separator(),
                         if (Platform.isIOS && isHealthDataAvailable) ...[
                           HealthCareRow(
-                            trialDeadlineDate: premiumAndTrial.trialDeadlineDate,
+                            trialDeadlineDate: user.trialDeadlineDate,
                           ),
                           _separator(),
                         ]

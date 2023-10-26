@@ -18,9 +18,8 @@ import 'package:pilll/native/pill.dart';
 import 'package:pilll/native/widget.dart';
 import 'package:pilll/provider/database.dart';
 import 'package:pilll/provider/pill_sheet_group.dart';
-import 'package:pilll/provider/premium_and_trial.codegen.dart';
-import 'package:pilll/provider/setting.dart';
 import 'package:pilll/provider/user.dart';
+import 'package:pilll/provider/setting.dart';
 import 'package:pilll/utils/analytics.dart';
 import 'package:pilll/utils/datetime/date_add.dart';
 import 'package:pilll/utils/datetime/day.dart';
@@ -180,7 +179,7 @@ class RegisterReminderLocalNotification {
 
     final pillSheetGroup = ref.read(latestPillSheetGroupProvider).asData?.valueOrNull;
     final activePillSheet = ref.read(activePillSheetProvider).asData?.valueOrNull;
-    final premiumOrTrial = ref.read(premiumAndTrialProvider).asData?.valueOrNull?.premiumOrTrial;
+    final premiumOrTrial = ref.read(userProvider).asData?.valueOrNull?.premiumOrTrial;
     final setting = ref.read(settingProvider).asData?.valueOrNull;
     final user = ref.read(userProvider).asData?.valueOrNull;
     if (pillSheetGroup == null || activePillSheet == null || premiumOrTrial == null || setting == null || user == null) {
