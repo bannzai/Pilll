@@ -11,16 +11,12 @@ import 'package:pilll/features/record/components/announcement_bar/components/dis
 import 'package:pilll/features/record/components/announcement_bar/components/ended_pill_sheet.dart';
 import 'package:pilll/features/record/components/announcement_bar/components/pilll_ads.dart';
 import 'package:pilll/features/record/components/announcement_bar/components/premium_trial_limit.dart';
-import 'package:pilll/features/record/components/announcement_bar/components/recommend_signup.dart';
 import 'package:pilll/features/record/components/announcement_bar/components/recommend_signup_premium.dart';
 import 'package:pilll/features/record/components/announcement_bar/components/rest_duration.dart';
-import 'package:pilll/features/sign_in/sign_in_sheet.dart';
 import 'package:pilll/provider/locale.dart';
 import 'package:pilll/provider/user.dart';
-import 'package:pilll/provider/typed_shared_preferences.dart';
 import 'package:pilll/provider/auth.dart';
 import 'package:pilll/utils/datetime/day.dart';
-import 'package:pilll/utils/shared_preference/keys.dart';
 
 class AnnouncementBar extends HookConsumerWidget {
   const AnnouncementBar({Key? key}) : super(key: key);
@@ -37,13 +33,8 @@ class AnnouncementBar extends HookConsumerWidget {
 
   Widget? _body(BuildContext context, WidgetRef ref) {
     final latestPillSheetGroup = ref.watch(latestPillSheetGroupProvider).valueOrNull;
-    final totalCountOfActionForTakenPill = ref.watch(intSharedPreferencesProvider(IntKey.totalCountOfActionForTakenPill)).value ?? 0;
     final user = ref.watch(userProvider).valueOrNull;
     final isLinkedLoginProvider = ref.watch(isLinkedProvider);
-    final recommendedSignupNotificationIsAlreadyShow =
-        ref.watch(boolSharedPreferencesProvider(BoolKey.recommendedSignupNotificationIsAlreadyShow)).value ?? false;
-    final recommendedSignupNotificationIsAlreadyShowNotifier =
-        ref.watch(boolSharedPreferencesProvider(BoolKey.recommendedSignupNotificationIsAlreadyShow).notifier);
     final discountEntitlementDeadlineDate = user?.discountEntitlementDeadlineDate;
     final hiddenCountdownDiscountDeadline =
         ref.watch(hiddenCountdownDiscountDeadlineProvider(discountEntitlementDeadlineDate: discountEntitlementDeadlineDate));

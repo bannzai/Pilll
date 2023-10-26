@@ -14,7 +14,6 @@ import 'package:pilll/features/record/components/announcement_bar/components/end
 import 'package:pilll/features/record/components/announcement_bar/components/pilll_ads.dart';
 import 'package:pilll/features/record/components/announcement_bar/announcement_bar.dart';
 import 'package:pilll/features/record/components/announcement_bar/components/premium_trial_limit.dart';
-import 'package:pilll/features/record/components/announcement_bar/components/recommend_signup.dart';
 import 'package:pilll/features/record/components/announcement_bar/components/recommend_signup_premium.dart';
 import 'package:pilll/features/record/components/announcement_bar/components/rest_duration.dart';
 import 'package:pilll/entity/pill_sheet.codegen.dart';
@@ -68,7 +67,6 @@ void main() {
         );
         final pillSheetGroup = PillSheetGroup(pillSheetIDs: ["1"], pillSheets: [pillSheet], createdAt: now());
         SharedPreferences.setMockInitialValues({
-          BoolKey.recommendedSignupNotificationIsAlreadyShow: false,
           IntKey.totalCountOfActionForTakenPill: totalCountOfActionForTakenPillForLongTimeUser,
         });
         final sharedPreferences = await SharedPreferences.getInstance();
@@ -129,7 +127,6 @@ void main() {
 
         SharedPreferences.setMockInitialValues({
           IntKey.totalCountOfActionForTakenPill: totalCountOfActionForTakenPillForLongTimeUser,
-          BoolKey.recommendedSignupNotificationIsAlreadyShow: false,
         });
         final sharedPreferences = await SharedPreferences.getInstance();
         await tester.pumpWidget(
@@ -184,7 +181,6 @@ void main() {
 
         SharedPreferences.setMockInitialValues({
           IntKey.totalCountOfActionForTakenPill: totalCountOfActionForTakenPillForLongTimeUser,
-          BoolKey.recommendedSignupNotificationIsAlreadyShow: false,
         });
         final sharedPreferences = await SharedPreferences.getInstance();
         await tester.pumpWidget(
@@ -232,7 +228,6 @@ void main() {
 
           SharedPreferences.setMockInitialValues({
             IntKey.totalCountOfActionForTakenPill: totalCountOfActionForTakenPillForLongTimeUser,
-            BoolKey.recommendedSignupNotificationIsAlreadyShow: false,
           });
           final sharedPreferences = await SharedPreferences.getInstance();
           await tester.pumpWidget(
@@ -279,7 +274,6 @@ void main() {
 
           SharedPreferences.setMockInitialValues({
             IntKey.totalCountOfActionForTakenPill: totalCountOfActionForTakenPillForLongTimeUser,
-            BoolKey.recommendedSignupNotificationIsAlreadyShow: false,
           });
           final sharedPreferences = await SharedPreferences.getInstance();
           await tester.pumpWidget(
@@ -332,7 +326,6 @@ void main() {
 
           SharedPreferences.setMockInitialValues({
             IntKey.totalCountOfActionForTakenPill: totalCountOfActionForTakenPillForLongTimeUser,
-            BoolKey.recommendedSignupNotificationIsAlreadyShow: false,
           });
           final sharedPreferences = await SharedPreferences.getInstance();
           await tester.pumpWidget(
@@ -387,7 +380,6 @@ void main() {
 
           SharedPreferences.setMockInitialValues({
             IntKey.totalCountOfActionForTakenPill: totalCountOfActionForTakenPillForLongTimeUser,
-            BoolKey.recommendedSignupNotificationIsAlreadyShow: false,
           });
           final sharedPreferences = await SharedPreferences.getInstance();
           await tester.pumpWidget(
@@ -449,7 +441,6 @@ void main() {
 
           SharedPreferences.setMockInitialValues({
             IntKey.totalCountOfActionForTakenPill: totalCountOfActionForTakenPillForLongTimeUser,
-            BoolKey.recommendedSignupNotificationIsAlreadyShow: false,
           });
           final sharedPreferences = await SharedPreferences.getInstance();
           await tester.pumpWidget(
@@ -513,7 +504,6 @@ void main() {
 
           SharedPreferences.setMockInitialValues({
             IntKey.totalCountOfActionForTakenPill: totalCountOfActionForTakenPillForLongTimeUser,
-            BoolKey.recommendedSignupNotificationIsAlreadyShow: false,
           });
           final sharedPreferences = await SharedPreferences.getInstance();
           await tester.pumpWidget(
@@ -577,7 +567,6 @@ void main() {
 
           SharedPreferences.setMockInitialValues({
             IntKey.totalCountOfActionForTakenPill: totalCountOfActionForTakenPillForLongTimeUser,
-            BoolKey.recommendedSignupNotificationIsAlreadyShow: false,
           });
           final sharedPreferences = await SharedPreferences.getInstance();
           await tester.pumpWidget(
@@ -641,7 +630,6 @@ void main() {
 
           SharedPreferences.setMockInitialValues({
             IntKey.totalCountOfActionForTakenPill: totalCountOfActionForTakenPillForLongTimeUser,
-            BoolKey.recommendedSignupNotificationIsAlreadyShow: false,
           });
           final sharedPreferences = await SharedPreferences.getInstance();
           await tester.pumpWidget(
@@ -712,7 +700,6 @@ void main() {
 
           SharedPreferences.setMockInitialValues({
             IntKey.totalCountOfActionForTakenPill: totalCountOfActionForTakenPillForLongTimeUser,
-            BoolKey.recommendedSignupNotificationIsAlreadyShow: false,
           });
           final sharedPreferences = await SharedPreferences.getInstance();
           await tester.pumpWidget(
@@ -778,7 +765,6 @@ void main() {
 
           SharedPreferences.setMockInitialValues({
             IntKey.totalCountOfActionForTakenPill: totalCountOfActionForTakenPillForLongTimeUser,
-            BoolKey.recommendedSignupNotificationIsAlreadyShow: false,
           });
           final sharedPreferences = await SharedPreferences.getInstance();
           await tester.pumpWidget(
@@ -844,7 +830,6 @@ void main() {
 
           SharedPreferences.setMockInitialValues({
             IntKey.totalCountOfActionForTakenPill: totalCountOfActionForTakenPillForLongTimeUser,
-            BoolKey.recommendedSignupNotificationIsAlreadyShow: false,
           });
           final sharedPreferences = await SharedPreferences.getInstance();
           await tester.pumpWidget(
@@ -910,7 +895,6 @@ void main() {
 
           SharedPreferences.setMockInitialValues({
             IntKey.totalCountOfActionForTakenPill: totalCountOfActionForTakenPillForLongTimeUser,
-            BoolKey.recommendedSignupNotificationIsAlreadyShow: false,
           });
           final sharedPreferences = await SharedPreferences.getInstance();
           await tester.pumpWidget(
@@ -976,7 +960,6 @@ void main() {
 
           SharedPreferences.setMockInitialValues({
             IntKey.totalCountOfActionForTakenPill: totalCountOfActionForTakenPillForLongTimeUser,
-            BoolKey.recommendedSignupNotificationIsAlreadyShow: false,
           });
           final sharedPreferences = await SharedPreferences.getInstance();
           await tester.pumpWidget(
@@ -1042,7 +1025,6 @@ void main() {
 
           SharedPreferences.setMockInitialValues({
             IntKey.totalCountOfActionForTakenPill: totalCountOfActionForTakenPillForLongTimeUser,
-            BoolKey.recommendedSignupNotificationIsAlreadyShow: false,
           });
           final sharedPreferences = await SharedPreferences.getInstance();
           await tester.pumpWidget(
@@ -1109,7 +1091,6 @@ void main() {
 
         SharedPreferences.setMockInitialValues({
           IntKey.totalCountOfActionForTakenPill: totalCountOfActionForTakenPillForLongTimeUser,
-          BoolKey.recommendedSignupNotificationIsAlreadyShow: false,
         });
         final sharedPreferences = await SharedPreferences.getInstance();
         await tester.pumpWidget(
@@ -1164,7 +1145,6 @@ void main() {
 
         SharedPreferences.setMockInitialValues({
           IntKey.totalCountOfActionForTakenPill: totalCountOfActionForTakenPillForLongTimeUser,
-          BoolKey.recommendedSignupNotificationIsAlreadyShow: false,
         });
         final sharedPreferences = await SharedPreferences.getInstance();
         await tester.pumpWidget(
@@ -1219,7 +1199,6 @@ void main() {
 
         SharedPreferences.setMockInitialValues({
           IntKey.totalCountOfActionForTakenPill: totalCountOfActionForTakenPillForLongTimeUser,
-          BoolKey.recommendedSignupNotificationIsAlreadyShow: false,
         });
         final sharedPreferences = await SharedPreferences.getInstance();
         await tester.pumpWidget(
