@@ -38,13 +38,13 @@ class AnnouncementBar extends HookConsumerWidget {
   Widget? _body(BuildContext context, WidgetRef ref) {
     final latestPillSheetGroup = ref.watch(latestPillSheetGroupProvider).valueOrNull;
     final totalCountOfActionForTakenPill = ref.watch(intSharedPreferencesProvider(IntKey.totalCountOfActionForTakenPill)).value ?? 0;
-    final user = ref.watch(userProvider).requireValue;
+    final user = ref.watch(userProvider).valueOrNull;
     final isLinkedLoginProvider = ref.watch(isLinkedProvider);
     final recommendedSignupNotificationIsAlreadyShow =
         ref.watch(boolSharedPreferencesProvider(BoolKey.recommendedSignupNotificationIsAlreadyShow)).value ?? false;
     final recommendedSignupNotificationIsAlreadyShowNotifier =
         ref.watch(boolSharedPreferencesProvider(BoolKey.recommendedSignupNotificationIsAlreadyShow).notifier);
-    final discountEntitlementDeadlineDate = user.discountEntitlementDeadlineDate;
+    final discountEntitlementDeadlineDate = user?.discountEntitlementDeadlineDate;
     final hiddenCountdownDiscountDeadline =
         ref.watch(hiddenCountdownDiscountDeadlineProvider(discountEntitlementDeadlineDate: discountEntitlementDeadlineDate));
     final isJaLocale = ref.watch(isJaLocaleProvider);
@@ -60,6 +60,10 @@ class AnnouncementBar extends HookConsumerWidget {
       }
       return now().isBefore(pilllAds.startDateTime) || now().isAfter(pilllAds.endDateTime);
     }();
+
+    if (user == null) {
+      return Container();
+    }
 
     if (!user.isPremium) {
       if (user.hasDiscountEntitlement) {
