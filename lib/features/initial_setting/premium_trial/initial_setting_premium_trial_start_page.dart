@@ -3,6 +3,7 @@ import 'dart:io';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
+import 'package:pilll/provider/remote_config_parameter.dart';
 import 'package:pilll/provider/typed_shared_preferences.dart';
 import 'package:pilll/utils/analytics.dart';
 import 'package:pilll/components/atoms/button.dart';
@@ -23,6 +24,7 @@ class IntiialSettingPremiumTrialStartPage extends HookConsumerWidget {
     final store = ref.watch(initialSettingStateNotifierProvider.notifier);
     final registerReminderLocalNotification = ref.watch(registerReminderLocalNotificationProvider);
     final didEndInitialSettingNotifier = ref.watch(boolSharedPreferencesProvider(BoolKey.didEndInitialSetting).notifier);
+    final remoteConfigParameter = ref.watch(remoteConfigParameterProvider);
 
     return Scaffold(
       backgroundColor: PilllColors.background,
@@ -110,11 +112,11 @@ class IntiialSettingPremiumTrialStartPage extends HookConsumerWidget {
                   ),
                 ),
                 const SizedBox(height: 16),
-                const Text(
+                Text(
                   '''
-30日間すべての機能が使えます！
+${remoteConfigParameter.trialDeadlineDateOffsetDay}日間すべての機能が使えます！
 ''',
-                  style: TextStyle(
+                  style: const TextStyle(
                     color: TextColor.main,
                     fontWeight: FontWeight.w700,
                     fontFamily: FontFamily.japanese,
