@@ -15,6 +15,7 @@ import 'package:pilll/features/error/error_alert.dart';
 import 'package:pilll/utils/error_log.dart';
 import 'package:pilll/utils/local_notification.dart';
 import 'package:pilll/utils/shared_preference/keys.dart';
+import 'package:shared_preferences/shared_preferences.dart';
 
 class DeleteUserButton extends HookConsumerWidget {
   const DeleteUserButton({Key? key}) : super(key: key);
@@ -23,7 +24,6 @@ class DeleteUserButton extends HookConsumerWidget {
   Widget build(BuildContext context, WidgetRef ref) {
     final isAppleLinked = ref.watch(isAppleLinkedProvider);
     final isGoogleLinked = ref.watch(isGoogleLinkedProvider);
-    final didEndInitialSettingNotifier = ref.watch(boolSharedPreferencesProvider(BoolKey.didEndInitialSetting).notifier);
     final cancelReminderLocalNotification = ref.watch(cancelReminderLocalNotificationProvider);
     return Container(
       padding: const EdgeInsets.only(top: 54),
@@ -50,7 +50,6 @@ class DeleteUserButton extends HookConsumerWidget {
                       context,
                       isAppleLinked: isAppleLinked,
                       isGoogleLinked: isGoogleLinked,
-                      didEndInitialSettingNotifier: didEndInitialSettingNotifier,
                     ),
                     cancelReminderLocalNotification()
                   ).wait;
@@ -68,11 +67,11 @@ class DeleteUserButton extends HookConsumerWidget {
     BuildContext context, {
     required bool isAppleLinked,
     required bool isGoogleLinked,
-    required BoolSharedPreferences didEndInitialSettingNotifier,
   }) async {
     try {
       await FirebaseAuth.instance.currentUser?.delete();
-      await didEndInitialSettingNotifier.set(false);
+      final sharedPreferences = await SharedPreferences.getInstance();
+      sharedPreferences.setBool(BoolKey.didEndInitialSetting, false);
       // ignore: use_build_context_synchronously
       showDialog(
         context: context,
@@ -106,8 +105,7 @@ class DeleteUserButton extends HookConsumerWidget {
                 }
                 navigator.pop();
                 // ignore: use_build_context_synchronously
-                await _delete(context,
-                    isAppleLinked: isAppleLinked, isGoogleLinked: isGoogleLinked, didEndInitialSettingNotifier: didEndInitialSettingNotifier);
+                await _delete(context, isAppleLinked: isAppleLinked, isGoogleLinked: isGoogleLinked);
               },
             ),
           ],
