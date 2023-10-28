@@ -58,7 +58,6 @@ dependencies:
   cupertino_icons: ^1.0.6
   flutter_app_badger: ^1.2.0
   purchases_flutter: ^5.7.0
-  firebase_performance: ^0.9.0+11
   flutter_native_timezone: ^2.0.0
   flutter_local_notifications: ^15.1.2
   webview_flutter: ^4.4.1
