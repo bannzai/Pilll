@@ -69,9 +69,9 @@ class DeleteUserButton extends HookConsumerWidget {
     required bool isGoogleLinked,
   }) async {
     try {
-      await FirebaseAuth.instance.currentUser?.delete();
       final sharedPreferences = await SharedPreferences.getInstance();
       sharedPreferences.setBool(BoolKey.didEndInitialSetting, false);
+      await FirebaseAuth.instance.currentUser?.delete();
       // ignore: use_build_context_synchronously
       showDialog(
         context: context,
