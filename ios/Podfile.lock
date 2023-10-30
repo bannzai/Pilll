@@ -23,9 +23,6 @@ PODS:
   - Firebase/Messaging (10.13.0):
     - Firebase/CoreOnly
     - FirebaseMessaging (~> 10.13.0)
-  - Firebase/Performance (10.13.0):
-    - Firebase/CoreOnly
-    - FirebasePerformance (~> 10.13.0)
   - Firebase/RemoteConfig (10.13.0):
     - Firebase/CoreOnly
     - FirebaseRemoteConfig (~> 10.13.0)
@@ -46,10 +43,6 @@ PODS:
     - Flutter
   - firebase_messaging (14.7.1):
     - Firebase/Messaging (= 10.13.0)
-    - firebase_core
-    - Flutter
-  - firebase_performance (0.9.3-1):
-    - Firebase/Performance (= 10.13.0)
     - firebase_core
     - Flutter
   - firebase_remote_config (4.3.1):
@@ -121,16 +114,6 @@ PODS:
     - GoogleUtilities/Reachability (~> 7.8)
     - GoogleUtilities/UserDefaults (~> 7.8)
     - nanopb (< 2.30910.0, >= 2.30908.0)
-  - FirebasePerformance (10.13.0):
-    - FirebaseCore (~> 10.5)
-    - FirebaseInstallations (~> 10.0)
-    - FirebaseRemoteConfig (~> 10.0)
-    - FirebaseSessions (~> 10.5)
-    - GoogleDataTransport (~> 9.2)
-    - GoogleUtilities/Environment (~> 7.8)
-    - GoogleUtilities/ISASwizzler (~> 7.8)
-    - GoogleUtilities/MethodSwizzler (~> 7.8)
-    - nanopb (< 2.30910.0, >= 2.30908.0)
   - FirebaseRemoteConfig (10.13.0):
     - FirebaseABTesting (~> 10.0)
     - FirebaseCore (~> 10.0)
@@ -182,7 +165,6 @@ PODS:
     - GoogleUtilities/Network
   - GoogleUtilities/Environment (7.11.5):
     - PromisesObjC (< 3.0, >= 1.2)
-  - GoogleUtilities/ISASwizzler (7.11.5)
   - GoogleUtilities/Logger (7.11.5):
     - GoogleUtilities/Environment
   - GoogleUtilities/MethodSwizzler (7.11.5):
@@ -230,7 +212,6 @@ DEPENDENCIES:
   - firebase_core (from `.symlinks/plugins/firebase_core/ios`)
   - firebase_crashlytics (from `.symlinks/plugins/firebase_crashlytics/ios`)
   - firebase_messaging (from `.symlinks/plugins/firebase_messaging/ios`)
-  - firebase_performance (from `.symlinks/plugins/firebase_performance/ios`)
   - firebase_remote_config (from `.symlinks/plugins/firebase_remote_config/ios`)
   - FirebaseFirestore (from `https://github.com/invertase/firestore-ios-sdk-frameworks.git`, tag `10.13.0`)
   - Flutter (from `Flutter`)
@@ -257,7 +238,6 @@ SPEC REPOS:
     - FirebaseCrashlytics
     - FirebaseInstallations
     - FirebaseMessaging
-    - FirebasePerformance
     - FirebaseRemoteConfig
     - FirebaseSessions
     - GoogleAppMeasurement
@@ -283,8 +263,6 @@ EXTERNAL SOURCES:
     :path: ".symlinks/plugins/firebase_crashlytics/ios"
   firebase_messaging:
     :path: ".symlinks/plugins/firebase_messaging/ios"
-  firebase_performance:
-    :path: ".symlinks/plugins/firebase_performance/ios"
   firebase_remote_config:
     :path: ".symlinks/plugins/firebase_remote_config/ios"
   FirebaseFirestore:
@@ -324,7 +302,6 @@ SPEC CHECKSUMS:
   firebase_core: 468bc2b928a7b6e8e550bd3ec38b887750758a68
   firebase_crashlytics: 7ea146406d3e06fefc04e156d97f641a0bf1e536
   firebase_messaging: 9f9c22ce29633c9a26126b274836d454b6efabf8
-  firebase_performance: 3c0e0e646dafde88e56e3383659bf964c44c7be5
   firebase_remote_config: 0f68f0cc6fe4dba28b4a9f02ca692244feeda7aa
   FirebaseABTesting: 03f0a8b88cf618350527f2c6a2234e29b9c65064
   FirebaseAnalytics: 9a12e090ead49f8877ed8132ae920e3cbbd2fcd0
@@ -337,7 +314,6 @@ SPEC CHECKSUMS:
   FirebaseFirestore: e61e97986090dde3310d76d5268bfd43b8054459
   FirebaseInstallations: b822f91a61f7d1ba763e5ccc9d4f2e6f2ed3b3ee
   FirebaseMessaging: c2b782a6af3058b6e53ac2a6eaab84c5786200c8
-  FirebasePerformance: 026649159518446ab398e1262fadea7885e3adda
   FirebaseRemoteConfig: 33e0dcf43899fbb4f8ef2d84200bf5f5e32eaf05
   FirebaseSessions: 96e7781e545929cde06dd91088ddbb0841391b43
   Flutter: f04841e97a9d0b0a8025694d0796dd46242b2854
@@ -357,7 +333,7 @@ SPEC CHECKSUMS:
   PurchasesHybridCommon: 8ac2a833eb1a27c4d0d8a352418f1eaa5f4fe68d
   RevenueCat: 1f3a5a1c3899cb27ef9279d77a01a807d489a240
   shared_preferences_foundation: 5b919d13b803cadd15ed2dc053125c68730e5126
-  url_launcher_ios: 08a3dfac5fb39e8759aeb0abbd5d9480f30fc8b4
+  url_launcher_ios: 68d46cc9766d0c41dbdc884310529557e3cd7a86
   webview_flutter_wkwebview: 2e2d318f21a5e036e2c3f26171342e95908bd60a
 
 PODFILE CHECKSUM: 3c0a4f26f0f032e0ca8e860e22d0345a1dcaf54b
