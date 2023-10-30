@@ -37,7 +37,7 @@ dependencies:
   firebase_auth: ^4.2.6
   firebase_messaging: ^14.2.2
   cloud_firestore: ^4.3.2
-  url_launcher: ^6.1.14
+  url_launcher: ^6.2.1
   package_info: ^2.0.0
   equatable: ^2.0.0
   json_annotation: ^4.0.0
