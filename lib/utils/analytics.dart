@@ -27,7 +27,11 @@ class Analytics {
         }
       }
     }
-    return firebaseAnalytics.logEvent(name: name, parameters: parameters);
+    try {
+      await firebaseAnalytics.logEvent(name: name, parameters: parameters);
+    } catch (e) {
+      debugPrint("analytics error: $e");
+    }
   }
 
   void setCurrentScreen({required String screenName, String screenClassOverride = 'Flutter'}) async {
