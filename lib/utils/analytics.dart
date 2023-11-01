@@ -2,6 +2,7 @@ import 'dart:async';
 
 import 'package:firebase_analytics/firebase_analytics.dart';
 import 'package:flutter/foundation.dart';
+import 'package:timezone/timezone.dart';
 
 final firebaseAnalytics = FirebaseAnalytics.instance;
 
@@ -18,12 +19,19 @@ class Analytics {
         if (param is DateTime) {
           parameters[key] = param.toIso8601String();
         }
+        if (param is TZDateTime) {
+          parameters[key] = param.toIso8601String();
+        }
         if (param is bool) {
           parameters[key] = param ? "true" : "false";
         }
       }
     }
-    return firebaseAnalytics.logEvent(name: name, parameters: parameters);
+    try {
+      await firebaseAnalytics.logEvent(name: name, parameters: parameters);
+    } catch (e) {
+      debugPrint("analytics error: $e");
+    }
   }
 
   void setCurrentScreen({required String screenName, String screenClassOverride = 'Flutter'}) async {

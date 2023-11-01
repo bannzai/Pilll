@@ -19,6 +19,7 @@ import 'package:pilll/provider/setting.dart';
 import 'package:pilll/provider/user.dart';
 import 'package:pilll/utils/analytics.dart';
 import 'package:pilll/utils/datetime/day.dart';
+import 'package:pilll/utils/error_log.dart';
 import 'package:pilll/utils/local_notification.dart';
 import 'package:riverpod/riverpod.dart';
 import 'package:shared_preferences/shared_preferences.dart';
@@ -36,6 +37,7 @@ void main() {
       return 'Asia/Tokyo';
     });
     analytics = MockAnalytics();
+    errorLogger = MockErrorLogger();
 
     initializeDateFormatting('ja_JP');
     await LocalNotificationService.setupTimeZone();
