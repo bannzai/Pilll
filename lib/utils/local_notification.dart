@@ -24,6 +24,7 @@ import 'package:pilll/utils/analytics.dart';
 import 'package:pilll/utils/datetime/date_add.dart';
 import 'package:pilll/utils/datetime/day.dart';
 import 'package:pilll/utils/environment.dart';
+import 'package:pilll/utils/error_log.dart';
 import 'package:riverpod/riverpod.dart';
 import 'package:timezone/data/latest_all.dart' as tz;
 import 'package:timezone/timezone.dart' as tz;
@@ -229,11 +230,24 @@ class RegisterReminderLocalNotification {
       for (final dayOffset in List.generate(registerDays, (index) => index)) {
         // 本日服用済みの場合はスキップする
         if (dayOffset == 0 && activePillSheet.todayPillIsAlreadyTaken) {
+          analytics.logEvent(name: "rrrn_skip_already_taken", parameters: {
+            "dayOffset": dayOffset,
+            "todayPillIsAlreadyTaken": activePillSheet.todayPillIsAlreadyTaken,
+            "reminderTimeHour": reminderTime.hour,
+            "reminderTimeMinute": reminderTime.minute,
+          });
           continue;
         }
 
         final reminderDateTime = tzNow.date().addDays(dayOffset).add(Duration(hours: reminderTime.hour)).add(Duration(minutes: reminderTime.minute));
         if (reminderDateTime.isBefore(tzNow)) {
+          analytics.logEvent(name: "rrn_is_before_now", parameters: {
+            "dayOffset": dayOffset,
+            "tzNow": tzNow,
+            "reminderDateTime": reminderDateTime,
+            "reminderTimeHour": reminderTime.hour,
+            "reminderTimeMinute": reminderTime.minute,
+          });
           continue;
         }
         debugPrint("==== reminderDate:$reminderDateTime ===");
@@ -288,6 +302,14 @@ class RegisterReminderLocalNotification {
 
             case (_, _, _):
               // 次のピルシートグループもピルシートも使用しない場合はループをスキップ
+              analytics.logEvent(name: "rrn_is_over_active_ps_none", parameters: {
+                "dayOffset": dayOffset,
+                "isLastPillSheet": isLastPillSheet,
+                "premiumOrTrial": premiumOrTrial,
+                "isAutomaticallyCreatePillSheet": setting.isAutomaticallyCreatePillSheet,
+                "reminderTimeHour": reminderTime.hour,
+                "reminderTimeMinute": reminderTime.minute,
+              });
               continue;
           }
         }
@@ -295,6 +317,13 @@ class RegisterReminderLocalNotification {
         // 偽薬/休薬期間中の通知がOFFの場合はスキップする
         if (!setting.isOnNotifyInNotTakenDuration) {
           if (pillSheeType.dosingPeriod < pillNumberInPillSheet) {
+            analytics.logEvent(name: "rrn_is_skip_in_dosing", parameters: {
+              "dayOffset": dayOffset,
+              "dosingPeriod": pillSheeType.dosingPeriod,
+              "isOnNotifyInNotTakenDuration": setting.isOnNotifyInNotTakenDuration,
+              "reminderTimeHour": reminderTime.hour,
+              "reminderTimeMinute": reminderTime.minute,
+            });
             continue;
           }
         }
@@ -365,6 +394,15 @@ class RegisterReminderLocalNotification {
               } catch (e, st) {
                 // NOTE: エラーが発生しても他の通知のスケジュールを続ける
                 debugPrint("[bannzai] notificationID:$notificationID error:$e, stackTrace:$st");
+
+                analytics.logEvent(name: "rrn_e_premium", parameters: {
+                  "dayOffset": dayOffset,
+                  "notificationID": notificationID,
+                  "reminderTimeHour": reminderTime.hour,
+                  "reminderTimeMinute": reminderTime.minute,
+                });
+
+                errorLogger.recordError(e, st);
               }
             }),
           );
@@ -400,6 +438,15 @@ class RegisterReminderLocalNotification {
               } catch (e, st) {
                 // NOTE: エラーが発生しても他の通知のスケジュールを続ける
                 debugPrint("[bannzai] notificationID:$notificationID error:$e, stackTrace:$st");
+
+                analytics.logEvent(name: "rrn_e_non_premium", parameters: {
+                  "dayOffset": dayOffset,
+                  "notificationID": notificationID,
+                  "reminderTimeHour": reminderTime.hour,
+                  "reminderTimeMinute": reminderTime.minute,
+                });
+
+                errorLogger.recordError(e, st);
               }
             }),
           );
@@ -407,8 +454,13 @@ class RegisterReminderLocalNotification {
       }
     }
 
+    analytics.logEvent(name: "rrn_e_before_run", parameters: {
+      "notificationCount": futures.length,
+    });
     await Future.wait(futures);
-
+    analytics.logEvent(name: "rrn_e_end_run", parameters: {
+      "notificationCount": futures.length,
+    });
     debugPrint("end scheduleRemiderNotification: ${setting.reminderTimes}, futures.length:${futures.length}");
   }
 

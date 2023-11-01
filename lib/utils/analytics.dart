@@ -2,6 +2,7 @@ import 'dart:async';
 
 import 'package:firebase_analytics/firebase_analytics.dart';
 import 'package:flutter/foundation.dart';
+import 'package:timezone/timezone.dart';
 
 final firebaseAnalytics = FirebaseAnalytics.instance;
 
@@ -16,6 +17,9 @@ class Analytics {
       for (final key in parameters.keys) {
         final param = parameters[key];
         if (param is DateTime) {
+          parameters[key] = param.toIso8601String();
+        }
+        if (param is TZDateTime) {
           parameters[key] = param.toIso8601String();
         }
         if (param is bool) {
