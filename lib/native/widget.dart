@@ -42,3 +42,6 @@ Future<void> syncUserStatus({
   };
   await methodChannel.invokeMethod("syncUserStatus", map);
 }
+
+@pragma('vm:entry-point')
+Future<void> handleInteractiveWidgetTakenPill() async {}
