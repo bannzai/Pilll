@@ -7,7 +7,6 @@ import 'package:flutter_native_timezone/flutter_native_timezone.dart';
 import 'package:pilll/entity/remote_config_parameter.codegen.dart';
 import 'package:pilll/provider/database.dart';
 import 'package:pilll/entity/package.codegen.dart';
-import 'package:pilll/entity/premium_function_survey.codegen.dart';
 import 'package:pilll/entity/user.codegen.dart';
 import 'package:pilll/utils/datetime/date_add.dart';
 import 'package:pilll/utils/datetime/day.dart';
