@@ -1,4 +1,9 @@
+import 'dart:async';
+import 'dart:ui';
+
+import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 import 'package:pilll/entity/pill_sheet_group.codegen.dart';
 import 'package:pilll/entity/setting.codegen.dart';
 import 'package:pilll/entity/user.codegen.dart';
@@ -43,5 +48,23 @@ Future<void> syncUserStatus({
   await methodChannel.invokeMethod("syncUserStatus", map);
 }
 
-@pragma('vm:entry-point')
+const pilllHomeWidgetMethodChannelKey = 'pilll/home_widget/background';
+
+/// Dispatcher used for calling dart code from Native Code while in the background
+@pragma("vm:entry-point")
+Future<void> callbackDispatcher() async {
+  WidgetsFlutterBinding.ensureInitialized();
+  if (Firebase.apps.isEmpty) {
+    await Firebase.initializeApp();
+  }
+
+  const backgroundChannel = MethodChannel(pilllHomeWidgetMethodChannelKey);
+  backgroundChannel.setMethodCallHandler((call) async {
+    await handleInteractiveWidgetTakenPill();
+  });
+
+  await backgroundChannel.invokeMethod('HomeWidget.backgroundInitialized');
+}
+
+@pragma("vm:entry-point")
 Future<void> handleInteractiveWidgetTakenPill() async {}
