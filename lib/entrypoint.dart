@@ -13,6 +13,7 @@ import 'package:pilll/features/root/resolver/show_paywall_on_app_launch.dart';
 import 'package:pilll/features/root/resolver/skip_initial_setting.dart';
 import 'package:pilll/features/root/resolver/user_setup.dart';
 import 'package:pilll/features/root/resolver/user_sign_in.dart';
+import 'package:pilll/native/widget.dart';
 import 'package:pilll/provider/shared_preferences.dart';
 import 'package:pilll/utils/analytics.dart';
 import 'package:pilll/components/atoms/color.dart';
@@ -47,10 +48,11 @@ Future<void> entrypoint() async {
     }
 
     // ignore: prefer_typing_uninitialized_variables
-    final (_, sharedPreferences, _) = await (
+    final (_, sharedPreferences, _, _) = await (
       LocalNotificationService.setupTimeZone(),
       SharedPreferences.getInstance(),
       setupRemoteConfig(),
+      setInteractiveWidgetCallbackHandlers(),
     ).wait;
 
     // MEMO: FirebaseCrashlytics#recordFlutterError called dumpErrorToConsole in function.
