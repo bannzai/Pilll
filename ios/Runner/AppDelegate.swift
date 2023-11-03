@@ -169,7 +169,7 @@ import flutter_local_notifications
                     let dispatcher = callbackHandels[0]
                     let callback = callbackHandels[1]
 
-                    let preferences = UserDefaults.init(suiteName: Plist.appGroupKey)
+                    let preferences = UserDefaults(suiteName: Plist.appGroupKey)
                     preferences?.setValue(dispatcher, forKey: HomeWidgetBackgroundWorker.dispatcherKey)
                     preferences?.setValue(callback, forKey: HomeWidgetBackgroundWorker.callbackKey)
                     HomeWidgetBackgroundWorker.setupEngine(dispatcher: dispatcher)
