@@ -2,9 +2,10 @@ import Flutter
 import Foundation
 import Swift
 
+@available(iOS 17, *)
 public struct HomeWidgetBackgroundWorker {
-  static let dispatcherKey: String = "home_widget.internal.background.dispatcher"
-  static let callbackKey: String = "home_widget.internal.background.callback"
+  static let dispatcherKey: String = "home_widget.interactive.dispatcher"
+  static let callbackKey: String = "home_widget.interactive.callback"
 
   static var isSetupCompleted: Bool = false
   static var engine: FlutterEngine?
