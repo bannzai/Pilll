@@ -22,14 +22,11 @@ public struct HomeWidgetBackgroundWorker {
   /// The url you provide will be used as arguments in the callback function in dart
   /// The AppGroup is necessary to retrieve the dart callbacks
   static public func run(url: URL?, appGroup: String?) async {
-    guard let appGroup else {
-      return
-    }
     if isSetupCompleted {
-      let preferences = UserDefaults.init(suiteName: appGroup)
-      queue.append((url, appGroup))
+      let preferences = UserDefaults.init(suiteName: Plist.appGroupKey)
+      queue.append((url, Plist.appGroupKey))
     } else {
-      await sendEvent(url: url, appGroup: appGroup)
+      await sendEvent(url: url, appGroup: Plist.appGroupKey)
     }
   }
 
