@@ -21,7 +21,10 @@ public struct HomeWidgetBackgroundWorker {
   /// Call this method to invoke the callback registered in your Flutter App.
   /// The url you provide will be used as arguments in the callback function in dart
   /// The AppGroup is necessary to retrieve the dart callbacks
-  static public func run(url: URL?, appGroup: String) async {
+  static public func run(url: URL?, appGroup: String?) async {
+    guard let appGroup else {
+      return
+    }
     if isSetupCompleted {
       let preferences = UserDefaults.init(suiteName: appGroup)
       queue.append((url, appGroup))
