@@ -1,5 +1,6 @@
 import 'dart:async';
 import 'dart:io';
+import 'dart:isolate';
 
 import 'package:firebase_analytics/firebase_analytics.dart';
 import 'package:flutter/cupertino.dart';
@@ -47,7 +48,10 @@ Future<void> entrypoint() async {
       connectToEmulator();
     }
 
-    setInteractiveWidgetCallbackHandlers();
+    // [VERBOSE-2:shell.cc(1004)] The 'method.channel.MizukiOhashi.Pilll' channel sent a message from native to Flutter on a non-platform thread. Platform channel messages must be sent on the platform thread. Failure to do so may result in data loss or crashes, and must be fixed in the plugin or application code creating that channel.
+    // というエラーがでる。後述のFuture().waitでは個別のFutureは並列でメインスレッド以外で実行される可能性があるので、この処理はメインスレッドで個別でawaitする
+    await setInteractiveWidgetCallbackHandlers();
+
     final (_, sharedPreferences, _) = await (
       LocalNotificationService.setupTimeZone(),
       SharedPreferences.getInstance(),
