@@ -161,6 +161,22 @@ import flutter_local_notifications
                 }
 
                 completionHandler(["result": "success"])
+            case "setInteractiveWidgetCallbackHandlers":
+                if #available(iOS 17, *) {
+                    guard let callbackHandels = call.arguments as? [Int64] else {
+                        fatalError()
+                    }
+                    let dispatcher = callbackHandels[0]
+                    let callback = callbackHandels[1]
+
+                    let preferences = UserDefaults.init(suiteName: Plist.appGroupKey)
+                    preferences?.setValue(dispatcher, forKey: HomeWidgetBackgroundWorker.dispatcherKey)
+                    preferences?.setValue(callback, forKey: HomeWidgetBackgroundWorker.callbackKey)
+                    HomeWidgetBackgroundWorker.setupEngine(dispatcher: dispatcher)
+                } else {
+                    // Fallback on earlier versions
+                }
+                completionHandler(["result": "success"])
             case _:
                 return
             }
@@ -201,8 +217,10 @@ import flutter_local_notifications
         FlutterLocalNotificationsPlugin.setPluginRegistrantCallback { (registry) in
             GeneratedPluginRegistrant.register(with: registry)
         }
-        HomeWidgetBackgroundWorker.setPluginRegistrantCallback { registry in
-            GeneratedPluginRegistrant.register(with: registry)
+        if #available(iOS 17, *) {
+            HomeWidgetBackgroundWorker.setPluginRegistrantCallback { registry in
+                GeneratedPluginRegistrant.register(with: registry)
+            }
         }
         GeneratedPluginRegistrant.register(with: self)
 
