@@ -1,4 +1,5 @@
 import 'dart:async';
+import 'dart:ui';
 
 import 'package:firebase_auth/firebase_auth.dart' as firebase_auth;
 import 'package:firebase_core/firebase_core.dart';
@@ -54,6 +55,13 @@ Future<void> syncUserStatus({
     "userIsPremiumOrTrial": user?.premiumOrTrial,
   };
   await methodChannel.invokeMethod("syncUserStatus", map);
+}
+
+Future<void> setInteractiveWidgetCallbackHandlers() async {
+  await methodChannel.invokeMethod("setInteractiveWidgetCallbackHandlers", {
+    PluginUtilities.getCallbackHandle(callbackDispatcher)?.toRawHandle(),
+    PluginUtilities.getCallbackHandle(handleInteractiveWidgetTakenPill)?.toRawHandle(),
+  });
 }
 
 const pilllHomeWidgetMethodChannelKey = 'pilll/home_widget/background';
