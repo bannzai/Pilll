@@ -23,7 +23,7 @@ public struct HomeWidgetBackgroundWorker {
   /// The AppGroup is necessary to retrieve the dart callbacks
   static public func run(url: URL?, appGroup: String?) async {
     if isSetupCompleted {
-      let preferences = UserDefaults.init(suiteName: Plist.appGroupKey)
+      let preferences = UserDefaults(suiteName: Plist.appGroupKey)
       queue.append((url, Plist.appGroupKey))
     } else {
       await sendEvent(url: url, appGroup: Plist.appGroupKey)
@@ -71,7 +71,7 @@ public struct HomeWidgetBackgroundWorker {
   }
 
   static func sendEvent(url: URL?, appGroup: String) async {
-    let preferences = UserDefaults.init(suiteName: appGroup)
+    let preferences = UserDefaults(suiteName: appGroup)
     let callback = preferences?.object(forKey: callbackKey) as! Int64
 
     channel?.invokeMethod(
