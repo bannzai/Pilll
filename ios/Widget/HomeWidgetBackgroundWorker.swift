@@ -34,7 +34,7 @@ public struct HomeWidgetBackgroundWorker {
       name: "home_widget_background", project: nil, allowHeadlessExecution: true)
 
     channel = FlutterMethodChannel(
-      name: "home_widget/background", binaryMessenger: engine!.binaryMessenger,
+      name: "pilll/home_widget/background", binaryMessenger: engine!.binaryMessenger,
       codec: FlutterStandardMethodCodec.sharedInstance()
     )
     let flutterCallbackInfo = FlutterCallbackCache.lookupCallbackInformation(dispatcher)
