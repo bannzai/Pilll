@@ -47,7 +47,7 @@ public struct HomeWidgetBackgroundWorker {
     if registerPlugins != nil {
       registerPlugins?(engine!)
     } else {
-      HomeWidgetPlugin.register(with: engine!.registrar(forPlugin: "home_widget")!)
+//      HomeWidgetPlugin.register(with: engine!.registrar(forPlugin: "home_widget")!)
     }
 
     channel?.setMethodCallHandler(handle)
