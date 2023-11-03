@@ -22,8 +22,11 @@ public struct HomeWidgetBackgroundWorker {
   /// The url you provide will be used as arguments in the callback function in dart
   /// The AppGroup is necessary to retrieve the dart callbacks
   static public func run(url: URL?, appGroup: String?) async {
+//    let userDefaults = UserDefaults(suiteName: Plist.appGroupKey)
+//    let dispatcher = userDefaults?.object(forKey: dispatcherKey) as! Int64
+//    setupEngine(dispatcher: dispatcher)
+
     if isSetupCompleted {
-      let preferences = UserDefaults(suiteName: Plist.appGroupKey)
       queue.append((url, Plist.appGroupKey))
     } else {
       await sendEvent(url: url, appGroup: Plist.appGroupKey)
@@ -39,9 +42,6 @@ public struct HomeWidgetBackgroundWorker {
       codec: FlutterStandardMethodCodec.sharedInstance()
     )
     let flutterCallbackInfo = FlutterCallbackCache.lookupCallbackInformation(dispatcher)
-    let callbackName = flutterCallbackInfo?.callbackName
-    let callbackLibrary = flutterCallbackInfo?.callbackLibraryPath
-
     let started = engine?.run(
       withEntrypoint: flutterCallbackInfo?.callbackName,
       libraryURI: flutterCallbackInfo?.callbackLibraryPath)
@@ -78,7 +78,6 @@ public struct HomeWidgetBackgroundWorker {
       "",
       arguments: [
         callback,
-        url?.absoluteString,
       ])
   }
 }
