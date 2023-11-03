@@ -53,8 +53,20 @@ struct SmallWidget: WidgetView {
 
             Spacer()
 
-            if alreadyTaken {
-              Image("check-icon-on")
+            if #available(iOS 17, *) {
+              Button(intent: TakenIntent()) {
+                Group {
+                  if alreadyTaken {
+                    Image(systemName: "checkmark.circle")
+                  } else {
+                    Image(systemName: "circle")
+                  }
+                }
+                .frame(width: 32, height: 32)
+                .shadow(color: Color(red: 78 / 255, green: 98 / 255, blue: 135 / 255, opacity: 0.4), radius: 5, x: 0, y: 2)
+              }
+            } else {
+              Image(systemName: "checkmark.circle")
                 .frame(width: 32, height: 32)
                 .shadow(color: Color(red: 78 / 255, green: 98 / 255, blue: 135 / 255, opacity: 0.4), radius: 5, x: 0, y: 2)
             }
