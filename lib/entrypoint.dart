@@ -47,12 +47,11 @@ Future<void> entrypoint() async {
       connectToEmulator();
     }
 
-    // ignore: prefer_typing_uninitialized_variables
-    final (_, sharedPreferences, _, _) = await (
+    setInteractiveWidgetCallbackHandlers();
+    final (_, sharedPreferences, _) = await (
       LocalNotificationService.setupTimeZone(),
       SharedPreferences.getInstance(),
       setupRemoteConfig(),
-      setInteractiveWidgetCallbackHandlers(),
     ).wait;
 
     // MEMO: FirebaseCrashlytics#recordFlutterError called dumpErrorToConsole in function.

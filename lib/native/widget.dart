@@ -57,11 +57,12 @@ Future<void> syncUserStatus({
   await methodChannel.invokeMethod("syncUserStatus", map);
 }
 
-Future<void> setInteractiveWidgetCallbackHandlers() async {
-  await methodChannel.invokeMethod("setInteractiveWidgetCallbackHandlers", {
+Future<void> setInteractiveWidgetCallbackHandlers() {
+  final args = <dynamic>[
     PluginUtilities.getCallbackHandle(callbackDispatcher)?.toRawHandle(),
     PluginUtilities.getCallbackHandle(handleInteractiveWidgetTakenPill)?.toRawHandle(),
-  });
+  ];
+  return methodChannel.invokeMethod("setInteractiveWidgetCallbackHandlers", args);
 }
 
 const pilllHomeWidgetMethodChannelKey = 'pilll/home_widget/background';
