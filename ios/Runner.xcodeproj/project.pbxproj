@@ -29,6 +29,8 @@
 		20E4648128C3339500329A5E /* AccessoryCircularWidget.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20E4647F28C3338600329A5E /* AccessoryCircularWidget.swift */; };
 		20E4648428C33DC400329A5E /* Status.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20E4648228C33D6600329A5E /* Status.swift */; };
 		20E4648728C340F000329A5E /* WidgetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20E4648528C340E900329A5E /* WidgetView.swift */; };
+		20F99B512AF47CDB00717DE3 /* TakenIntent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20F99B4F2AF47CD900717DE3 /* TakenIntent.swift */; };
+		20F99B532AF483C600717DE3 /* HomeWidgetBackgroundWorker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20F99B522AF483C600717DE3 /* HomeWidgetBackgroundWorker.swift */; };
 		3B3967161E833CAA004F5970 /* AppFrameworkInfo.plist in Resources */ = {isa = PBXBuildFile; fileRef = 3B3967151E833CAA004F5970 /* AppFrameworkInfo.plist */; };
 		74858FAF1ED2DC5600515810 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74858FAE1ED2DC5600515810 /* AppDelegate.swift */; };
 		97C146FC1CF9000F007C117D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 97C146FA1CF9000F007C117D /* Main.storyboard */; };
@@ -106,6 +108,8 @@
 		20E4647F28C3338600329A5E /* AccessoryCircularWidget.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccessoryCircularWidget.swift; sourceTree = "<group>"; };
 		20E4648228C33D6600329A5E /* Status.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Status.swift; sourceTree = "<group>"; };
 		20E4648528C340E900329A5E /* WidgetView.swift */ = {isa = PBXFileReference; indentWidth = 2; lastKnownFileType = sourcecode.swift; path = WidgetView.swift; sourceTree = "<group>"; tabWidth = 2; };
+		20F99B4F2AF47CD900717DE3 /* TakenIntent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TakenIntent.swift; sourceTree = "<group>"; };
+		20F99B522AF483C600717DE3 /* HomeWidgetBackgroundWorker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeWidgetBackgroundWorker.swift; sourceTree = "<group>"; };
 		3714A68A9BC93CCD4C438866 /* Pods-Runner.profile-development.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Runner.profile-development.xcconfig"; path = "Target Support Files/Pods-Runner/Pods-Runner.profile-development.xcconfig"; sourceTree = "<group>"; };
 		3B3967151E833CAA004F5970 /* AppFrameworkInfo.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = AppFrameworkInfo.plist; path = Flutter/AppFrameworkInfo.plist; sourceTree = "<group>"; };
 		557CCBC997ACF84547026B6A /* Pods-WidgetExtension.debug-production.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WidgetExtension.debug-production.xcconfig"; path = "Target Support Files/Pods-WidgetExtension/Pods-WidgetExtension.debug-production.xcconfig"; sourceTree = "<group>"; };
@@ -174,6 +178,8 @@
 			isa = PBXGroup;
 			children = (
 				207DA16928B1148700CD6C34 /* Widget.swift */,
+				20F99B4F2AF47CD900717DE3 /* TakenIntent.swift */,
+				20F99B522AF483C600717DE3 /* HomeWidgetBackgroundWorker.swift */,
 				20E4647F28C3338600329A5E /* AccessoryCircularWidget.swift */,
 				20E4648528C340E900329A5E /* WidgetView.swift */,
 				20E4648228C33D6600329A5E /* Status.swift */,
@@ -556,6 +562,7 @@
 				20BF942028B22626007A36C9 /* Const.swift in Sources */,
 				20E4647328C3319600329A5E /* Global.swift in Sources */,
 				20E4648128C3339500329A5E /* AccessoryCircularWidget.swift in Sources */,
+				20F99B512AF47CDB00717DE3 /* TakenIntent.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -563,6 +570,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				20F99B532AF483C600717DE3 /* HomeWidgetBackgroundWorker.swift in Sources */,
 				20DBB04627A88D1D0069A9A2 /* HealthKit.swift in Sources */,
 				74858FAF1ED2DC5600515810 /* AppDelegate.swift in Sources */,
 				1498D2341E8E89220040F4C2 /* GeneratedPluginRegistrant.m in Sources */,
