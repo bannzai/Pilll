@@ -77,10 +77,12 @@ Future<void> callbackDispatcher() async {
 
   const backgroundChannel = MethodChannel(pilllHomeWidgetMethodChannelKey);
   backgroundChannel.setMethodCallHandler((call) async {
+    debugPrint("backgroundChannel: ${call.method}");
     await handleInteractiveWidgetTakenPill();
   });
 
-  await backgroundChannel.invokeMethod('HomeWidget.backgroundInitialized');
+  final backgroundInitialized = await backgroundChannel.invokeMethod('HomeWidget.backgroundInitialized');
+  debugPrint("backgroundInitialized: $backgroundInitialized");
 }
 
 @pragma("vm:entry-point")
