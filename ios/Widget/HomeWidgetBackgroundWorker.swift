@@ -21,7 +21,7 @@ public struct HomeWidgetBackgroundWorker {
   /// Call this method to invoke the callback registered in your Flutter App.
   /// The url you provide will be used as arguments in the callback function in dart
   /// The AppGroup is necessary to retrieve the dart callbacks
-  static public func run(url: URL?, appGroup: String?) async {
+  static public func run(url: URL?, appGroup: String?) {
 //    let userDefaults = UserDefaults(suiteName: Plist.appGroupKey)
 //    let dispatcher = userDefaults?.object(forKey: dispatcherKey) as! Int64
 //    setupEngine(dispatcher: dispatcher)
@@ -29,7 +29,7 @@ public struct HomeWidgetBackgroundWorker {
     if isSetupCompleted {
       queue.append((url, Plist.appGroupKey))
     } else {
-      await sendEvent(url: url, appGroup: Plist.appGroupKey)
+      sendEvent(url: url, appGroup: Plist.appGroupKey)
     }
   }
 
@@ -64,9 +64,7 @@ public struct HomeWidgetBackgroundWorker {
       while !queue.isEmpty {
         isSetupCompleted = true
         let entry = queue.removeFirst()
-        Task {
-          await sendEvent(url: entry.0, appGroup: entry.1)
-        }
+        sendEvent(url: entry.0, appGroup: entry.1)
       }
       completionHandler(["result": "success"])
     case "syncActivePillSheetValue":
@@ -76,7 +74,7 @@ public struct HomeWidgetBackgroundWorker {
     }
   }
 
-  static func sendEvent(url: URL?, appGroup: String) async {
+  static func sendEvent(url: URL?, appGroup: String) {
     let preferences = UserDefaults(suiteName: appGroup)
     let callback = preferences?.object(forKey: callbackKey) as! Int64
 

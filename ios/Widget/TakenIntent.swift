@@ -19,7 +19,7 @@ public struct TakenIntent: AppIntent {
   }
 
   public func perform() async throws -> some IntentResult {
-    await HomeWidgetBackgroundWorker.run(url: url, appGroup: appGroup)
+    HomeWidgetBackgroundWorker.run(url: url, appGroup: appGroup)
 
     return .result()
   }
