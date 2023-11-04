@@ -49,8 +49,8 @@ Future<void> entrypoint() async {
     }
 
     // [VERBOSE-2:shell.cc(1004)] The 'method.channel.MizukiOhashi.Pilll' channel sent a message from native to Flutter on a non-platform thread. Platform channel messages must be sent on the platform thread. Failure to do so may result in data loss or crashes, and must be fixed in the plugin or application code creating that channel.
-    // というエラーがでる。後述のFuture().waitでは個別のFutureは並列でメインスレッド以外で実行される可能性があるので、この処理はメインスレッドで個別でawaitする
-    await setInteractiveWidgetCallbackHandlers();
+    // というエラーがでる。後述のFuture().waitでは個別のFutureは並列でメインスレッド以外で実行される可能性があるので、この処理はメインスレッドで個別で実行する
+    setInteractiveWidgetCallbackHandlers();
 
     final (_, sharedPreferences, _) = await (
       LocalNotificationService.setupTimeZone(),
