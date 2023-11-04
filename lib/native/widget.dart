@@ -29,12 +29,12 @@ Future<void> syncActivePillSheetValue({
     "pillSheetValueLastUpdateDateTime": DateTime.now().millisecondsSinceEpoch,
   };
   try {
-    await methodChannel.invokeMethod("syncActivePillSheetValue", map);
+    await backgroundChannel.invokeMethod("syncActivePillSheetValue", map);
   } catch (error) {
     debugPrint(error.toString());
   }
   try {
-    await backgroundChannel.invokeMethod("syncActivePillSheetValue", map);
+    await methodChannel.invokeMethod("syncActivePillSheetValue", map);
   } catch (error) {
     debugPrint(error.toString());
   }
