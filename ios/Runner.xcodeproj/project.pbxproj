@@ -11,6 +11,9 @@
 		2006A7E328B0CE210066E4DD /* Const.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2006A7E028B0CDC00066E4DD /* Const.swift */; };
 		202E35912AB7AD9A00473C5D /* Production-Secret.xcconfig in Resources */ = {isa = PBXBuildFile; fileRef = 202E358F2AB7AD9A00473C5D /* Production-Secret.xcconfig */; };
 		202E35922AB7AD9A00473C5D /* Development-Secret.xcconfig in Resources */ = {isa = PBXBuildFile; fileRef = 202E35902AB7AD9A00473C5D /* Development-Secret.xcconfig */; };
+		206E27E12AF5CA51001CA29F /* TakenIntent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20F99B4F2AF47CD900717DE3 /* TakenIntent.swift */; };
+		206E27E32AF5CF06001CA29F /* SyncActivePillSheetValue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 206E27E22AF5CF06001CA29F /* SyncActivePillSheetValue.swift */; };
+		206E27E42AF5CF06001CA29F /* SyncActivePillSheetValue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 206E27E22AF5CF06001CA29F /* SyncActivePillSheetValue.swift */; };
 		207DA16628B1148700CD6C34 /* WidgetKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2006A7C428B0BB670066E4DD /* WidgetKit.framework */; };
 		207DA16728B1148700CD6C34 /* SwiftUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2006A7C628B0BB670066E4DD /* SwiftUI.framework */; };
 		207DA16A28B1148700CD6C34 /* Widget.swift in Sources */ = {isa = PBXBuildFile; fileRef = 207DA16928B1148700CD6C34 /* Widget.swift */; };
@@ -95,6 +98,7 @@
 		2006A7E028B0CDC00066E4DD /* Const.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Const.swift; sourceTree = "<group>"; };
 		202E358F2AB7AD9A00473C5D /* Production-Secret.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; name = "Production-Secret.xcconfig"; path = "Flutter/Production-Secret.xcconfig"; sourceTree = "<group>"; };
 		202E35902AB7AD9A00473C5D /* Development-Secret.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; name = "Development-Secret.xcconfig"; path = "Flutter/Development-Secret.xcconfig"; sourceTree = "<group>"; };
+		206E27E22AF5CF06001CA29F /* SyncActivePillSheetValue.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SyncActivePillSheetValue.swift; sourceTree = "<group>"; };
 		207DA16528B1148700CD6C34 /* WidgetExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = WidgetExtension.appex; sourceTree = BUILT_PRODUCTS_DIR; };
 		207DA16928B1148700CD6C34 /* Widget.swift */ = {isa = PBXFileReference; indentWidth = 2; lastKnownFileType = sourcecode.swift; path = Widget.swift; sourceTree = "<group>"; tabWidth = 2; };
 		207DA16B28B1148800CD6C34 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -175,6 +179,7 @@
 			isa = PBXGroup;
 			children = (
 				2006A7E028B0CDC00066E4DD /* Const.swift */,
+				206E27E22AF5CF06001CA29F /* SyncActivePillSheetValue.swift */,
 			);
 			path = Shared;
 			sourceTree = "<group>";
@@ -588,6 +593,7 @@
 				20E4647828C3320C00329A5E /* Style.swift in Sources */,
 				20F99B542AF4850300717DE3 /* HomeWidgetBackgroundWorker.swift in Sources */,
 				20E4648728C340F000329A5E /* WidgetView.swift in Sources */,
+				206E27E42AF5CF06001CA29F /* SyncActivePillSheetValue.swift in Sources */,
 				20E4647428C3319600329A5E /* Provider.swift in Sources */,
 				207DA16A28B1148700CD6C34 /* Widget.swift in Sources */,
 				20BF942028B22626007A36C9 /* Const.swift in Sources */,
@@ -604,8 +610,10 @@
 				20F99B552AF485DA00717DE3 /* HomeWidgetBackgroundWorker.swift in Sources */,
 				20DBB04627A88D1D0069A9A2 /* HealthKit.swift in Sources */,
 				74858FAF1ED2DC5600515810 /* AppDelegate.swift in Sources */,
+				206E27E32AF5CF06001CA29F /* SyncActivePillSheetValue.swift in Sources */,
 				1498D2341E8E89220040F4C2 /* GeneratedPluginRegistrant.m in Sources */,
 				2006A7E328B0CE210066E4DD /* Const.swift in Sources */,
+				206E27E12AF5CA51001CA29F /* TakenIntent.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

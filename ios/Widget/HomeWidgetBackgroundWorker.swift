@@ -55,6 +55,10 @@ public struct HomeWidgetBackgroundWorker {
   }
 
   public static func handle(_ call: FlutterMethodCall, result: @escaping FlutterResult) {
+    let completionHandler: (Dictionary<String, Any>) -> Void = {
+      result($0)
+    }
+
     switch call.method {
     case "HomeWidget.backgroundInitialized":
       while !queue.isEmpty {
@@ -64,7 +68,9 @@ public struct HomeWidgetBackgroundWorker {
           await sendEvent(url: entry.0, appGroup: entry.1)
         }
       }
-      result(true)
+      completionHandler(["result": "success"])
+    case "syncActivePillSheetValue":
+      syncActivePillSheetValue(call: call, completionHandler: completionHandler)
     default:
       result(FlutterMethodNotImplemented)
     }

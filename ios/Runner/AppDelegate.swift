@@ -135,32 +135,7 @@ import flutter_local_notifications
 
                 completionHandler(["result": "success"])
             case "syncActivePillSheetValue":
-                guard let arguments = call.arguments as? Dictionary<String, Any> else {
-                    fatalError()
-                }
-
-                let pillSheetValueLastUpdateDateTime = arguments[Const.pillSheetValueLastUpdateDateTime] as? Int
-                UserDefaults(suiteName: Plist.appGroupKey)?.set(pillSheetValueLastUpdateDateTime, forKey: Const.pillSheetValueLastUpdateDateTime)
-
-                let pillSheetLastTakenDate = arguments[Const.pillSheetLastTakenDate] as? Int
-                UserDefaults(suiteName: Plist.appGroupKey)?.set(pillSheetLastTakenDate, forKey: Const.pillSheetLastTakenDate)
-
-                let pillSheetGroupTodayPillNumber = arguments[Const.pillSheetGroupTodayPillNumber] as? Int
-                UserDefaults(suiteName: Plist.appGroupKey)?.set(pillSheetGroupTodayPillNumber, forKey: Const.pillSheetGroupTodayPillNumber)
-
-                let pillSheetTodayPillNumber = arguments[Const.pillSheetTodayPillNumber] as? Int
-                UserDefaults(suiteName: Plist.appGroupKey)?.set(pillSheetTodayPillNumber, forKey: Const.pillSheetTodayPillNumber)
-
-                let pillSheetEndDisplayPillNumber = arguments[Const.pillSheetEndDisplayPillNumber] as? Int
-                UserDefaults(suiteName: Plist.appGroupKey)?.set(pillSheetEndDisplayPillNumber, forKey: Const.pillSheetEndDisplayPillNumber)
-
-                if #available(iOS 14.0, *) {
-                    WidgetCenter.shared.reloadTimelines(ofKind: Const.widgetKind)
-                } else {
-                    // Fallback on earlier versions
-                }
-
-                completionHandler(["result": "success"])
+                syncActivePillSheetValue(call: call, completionHandler: completionHandler)
             case "setInteractiveWidgetCallbackHandlers":
                 if #available(iOS 17, *) {
                     guard let callbackHandels = call.arguments as? [Int64] else {
