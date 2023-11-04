@@ -8,14 +8,17 @@ struct WidgetEntryView : View {
   var entry: Provider.Entry
 
   var body: some View {
-    switch widgetFamily {
-    case .systemSmall:
-      SmallWidget(entry: entry)
-    case .accessoryCircular:
-      AccessoryCircularWidget(entry: entry)
-    case _:
-      fatalError()
+    Group {
+      switch widgetFamily {
+      case .systemSmall:
+        SmallWidget(entry: entry)
+      case .accessoryCircular:
+        AccessoryCircularWidget(entry: entry)
+      case _:
+        fatalError()
+      }
     }
+    .widgetBackground(Color.white)
   }
 }
 
@@ -36,17 +39,6 @@ struct Entrypoint: Widget {
       return [.systemSmall, .accessoryCircular]
     } else {
       return [.systemSmall]
-    }
-  }
-}
-
-extension WidgetConfiguration {
-  @_disfavoredOverload
-  func contentMarginsDisabled() -> some WidgetConfiguration {
-    if #available(iOSApplicationExtension 17.0, *) {
-      return self.contentMarginsDisabled()
-    } else {
-      return self
     }
   }
 }
