@@ -33,6 +33,11 @@ Future<void> syncActivePillSheetValue({
   } catch (error) {
     debugPrint(error.toString());
   }
+//  try {
+//    await backgroundChannel.invokeMethod("syncActivePillSheetValue", map);
+//  } catch (error) {
+//    debugPrint(error.toString());
+//  }
 }
 
 Future<void> syncSetting({
@@ -66,6 +71,7 @@ Future<void> setInteractiveWidgetCallbackHandlers() {
 }
 
 const pilllHomeWidgetMethodChannelKey = 'pilll/home_widget/background';
+const backgroundChannel = MethodChannel(pilllHomeWidgetMethodChannelKey);
 
 /// Dispatcher used for calling dart code from Native Code while in the background
 @pragma("vm:entry-point")
@@ -75,10 +81,10 @@ Future<void> callbackDispatcher() async {
     await Firebase.initializeApp();
   }
 
-  const backgroundChannel = MethodChannel(pilllHomeWidgetMethodChannelKey);
   backgroundChannel.setMethodCallHandler((call) async {
     debugPrint("backgroundChannel: ${call.method}");
-    await handleInteractiveWidgetTakenPill();
+    final updatedPillSheetGroup = await handleInteractiveWidgetTakenPill();
+    syncActivePillSheetValue(pillSheetGroup: updatedPillSheetGroup);
   });
 
   final backgroundInitialized = await backgroundChannel.invokeMethod('HomeWidget.backgroundInitialized');
@@ -120,7 +126,7 @@ Future<PillSheetGroup?> handleInteractiveWidgetTakenPill() async {
     takenDate: takenDate,
     pillSheetGroup: pillSheetGroup,
     activePillSheet: activePillSheet,
-    isQuickRecord: true,
+    isQuickRecord: false,
   );
 
   // NOTE: iOSではAppDelegate.swiftの方で先にバッジのカウントはクリアしている
