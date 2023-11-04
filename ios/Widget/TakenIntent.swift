@@ -20,7 +20,7 @@ public struct TakenIntent: AppIntent {
 
   public func perform() async throws -> some IntentResult {
     HomeWidgetBackgroundWorker.run(url: url, appGroup: appGroup)
-    try? await Task.sleep(nanoseconds: 1 * 1_000_000_000)
+    try? await Task.sleep(nanoseconds: 5 * 100_000_000)
 
     return .result()
   }
