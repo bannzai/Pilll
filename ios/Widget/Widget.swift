@@ -28,6 +28,7 @@ struct Entrypoint: Widget {
     .supportedFamilies(supportedFamilies)
     .configurationDisplayName("今日飲むピルが一目でわかる")
     .description("This is a Pilll widget")
+    .contentMarginsDisabled()
   }
 
   private var supportedFamilies: [WidgetFamily] {
@@ -35,6 +36,17 @@ struct Entrypoint: Widget {
       return [.systemSmall, .accessoryCircular]
     } else {
       return [.systemSmall]
+    }
+  }
+}
+
+extension WidgetConfiguration {
+  @_disfavoredOverload
+  func contentMarginsDisabled() -> some WidgetConfiguration {
+    if #available(iOSApplicationExtension 17.0, *) {
+      return self.contentMarginsDisabled()
+    } else {
+      return self
     }
   }
 }
