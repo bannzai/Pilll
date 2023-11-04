@@ -33,11 +33,11 @@ Future<void> syncActivePillSheetValue({
   } catch (error) {
     debugPrint(error.toString());
   }
-//  try {
-//    await backgroundChannel.invokeMethod("syncActivePillSheetValue", map);
-//  } catch (error) {
-//    debugPrint(error.toString());
-//  }
+  try {
+    await backgroundChannel.invokeMethod("syncActivePillSheetValue", map);
+  } catch (error) {
+    debugPrint(error.toString());
+  }
 }
 
 Future<void> syncSetting({
