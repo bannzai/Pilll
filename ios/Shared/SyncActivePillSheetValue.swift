@@ -22,11 +22,7 @@ func syncActivePillSheetValue(call: FlutterMethodCall, completionHandler: (Dicti
     let pillSheetEndDisplayPillNumber = arguments[Const.pillSheetEndDisplayPillNumber] as? Int
     UserDefaults(suiteName: Plist.appGroupKey)?.set(pillSheetEndDisplayPillNumber, forKey: Const.pillSheetEndDisplayPillNumber)
 
-    if #available(iOS 14.0, *) {
-        WidgetCenter.shared.reloadTimelines(ofKind: Const.widgetKind)
-    } else {
-        // Fallback on earlier versions
-    }
+    WidgetCenter.shared.reloadTimelines(ofKind: Const.widgetKind)
 
     completionHandler(["result": "success"])
 }
