@@ -26,7 +26,9 @@ func syncActivePillSheetValue(call: FlutterMethodCall, completionHandler: (Dicti
         WidgetCenter.shared.reloadTimelines(ofKind: Const.widgetKind)
     }
     if #available(iOSApplicationExtension 14.0, *) {
-        WidgetCenter.shared.reloadTimelines(ofKind: Const.widgetKind)
+        if #available(iOS 14.0, *) {
+            WidgetCenter.shared.reloadTimelines(ofKind: Const.widgetKind)
+        }
     }
 
     completionHandler(["result": "success"])
