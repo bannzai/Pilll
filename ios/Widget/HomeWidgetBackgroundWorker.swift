@@ -7,6 +7,7 @@ struct HomeWidgetBackgroundWorker {
   static let dispatcherKey: String = "home_widget.interactive.dispatcher"
   static let callbackKey: String = "home_widget.interactive.callback"
 
+  static var isSetupCompleted: Bool = false
   static var engine: FlutterEngine?
   static var channel: FlutterMethodChannel?
   static var queue: [()] = []
@@ -23,7 +24,11 @@ struct HomeWidgetBackgroundWorker {
 //    let dispatcher = userDefaults?.object(forKey: dispatcherKey) as! Int64
 //    setupEngine(dispatcher: dispatcher)
 
-    sendEvent()
+    if isSetupCompleted {
+      queue.append(())
+    } else {
+      sendEvent()
+    }
   }
 
   static func setupEngine(dispatcher: Int64) {
@@ -53,6 +58,11 @@ struct HomeWidgetBackgroundWorker {
 
     switch call.method {
     case "HomeWidget.backgroundInitialized":
+      while !queue.isEmpty {
+        isSetupCompleted = true
+        queue.removeFirst()
+        sendEvent()
+      }
       completionHandler(["result": "success"])
     case "syncActivePillSheetValue":
       syncActivePillSheetValue(call: call, completionHandler: completionHandler)
