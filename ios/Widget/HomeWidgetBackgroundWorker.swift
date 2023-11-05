@@ -34,21 +34,24 @@ struct HomeWidgetBackgroundWorker {
   }
 
   static func setupEngine(dispatcher: Int64) {
-    engine = FlutterEngine(
-      name: "home_widget_background", project: nil, allowHeadlessExecution: true)
+    guard let engine = FlutterEngine(name: "home_widget_background", project: nil, allowHeadlessExecution: true) else {
+      fatalError()
+    }
+    // Keep reference
+    self.engine = engine
 
     channel = FlutterMethodChannel(
       name: "pilll/home_widget/background", binaryMessenger: engine!.binaryMessenger,
       codec: FlutterStandardMethodCodec.sharedInstance()
     )
     let flutterCallbackInfo = FlutterCallbackCache.lookupCallbackInformation(dispatcher)
-    let started = engine?.run(
+    let started = engine.run(
       withEntrypoint: flutterCallbackInfo?.callbackName,
-      libraryURI: flutterCallbackInfo?.callbackLibraryPath)
-    if registerPlugins != nil {
-      registerPlugins?(engine!)
-    } else {
-//      HomeWidgetPlugin.register(with: engine!.registrar(forPlugin: "home_widget")!)
+      libraryURI: flutterCallbackInfo?.callbackLibraryPath
+    )
+    print("Flutter background worker engine started: \(started)")
+    if let registerPlugins {
+      registerPlugins(engine)
     }
 
     channel?.setMethodCallHandler(handle)
