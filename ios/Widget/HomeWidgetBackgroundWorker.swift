@@ -3,7 +3,7 @@ import Foundation
 import Swift
 
 @available(iOS 17, *)
-public struct HomeWidgetBackgroundWorker {
+struct HomeWidgetBackgroundWorker {
   static let dispatcherKey: String = "home_widget.interactive.dispatcher"
   static let callbackKey: String = "home_widget.interactive.callback"
 
@@ -14,14 +14,14 @@ public struct HomeWidgetBackgroundWorker {
 
   private static var registerPlugins: FlutterPluginRegistrantCallback?
 
-  public static func setPluginRegistrantCallback(registerPlugins: FlutterPluginRegistrantCallback) {
+  static func setPluginRegistrantCallback(registerPlugins: FlutterPluginRegistrantCallback) {
     self.registerPlugins = registerPlugins
   }
 
   /// Call this method to invoke the callback registered in your Flutter App.
   /// The url you provide will be used as arguments in the callback function in dart
   /// The AppGroup is necessary to retrieve the dart callbacks
-  static public func run(url: URL?, appGroup: String?) {
+  static func run(url: URL?, appGroup: String?) {
 //    let userDefaults = UserDefaults(suiteName: Plist.appGroupKey)
 //    let dispatcher = userDefaults?.object(forKey: dispatcherKey) as! Int64
 //    setupEngine(dispatcher: dispatcher)
@@ -54,7 +54,7 @@ public struct HomeWidgetBackgroundWorker {
     channel?.setMethodCallHandler(handle)
   }
 
-  public static func handle(_ call: FlutterMethodCall, result: @escaping FlutterResult) {
+  static func handle(_ call: FlutterMethodCall, result: @escaping FlutterResult) {
     let completionHandler: (Dictionary<String, Any>) -> Void = {
       result($0)
     }
