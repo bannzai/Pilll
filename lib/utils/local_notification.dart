@@ -394,15 +394,13 @@ class RegisterReminderLocalNotification {
               } catch (e, st) {
                 // NOTE: エラーが発生しても他の通知のスケジュールを続ける
                 debugPrint("[bannzai] notificationID:$notificationID error:$e, stackTrace:$st");
-
+                errorLogger.recordError(e, st);
                 analytics.logEvent(name: "rrrn_e_premium", parameters: {
                   "dayOffset": dayOffset,
                   "notificationID": notificationID,
                   "reminderTimeHour": reminderTime.hour,
                   "reminderTimeMinute": reminderTime.minute,
                 });
-
-                errorLogger.recordError(e, st);
               }
             }),
           );
@@ -438,6 +436,7 @@ class RegisterReminderLocalNotification {
               } catch (e, st) {
                 // NOTE: エラーが発生しても他の通知のスケジュールを続ける
                 debugPrint("[bannzai] notificationID:$notificationID error:$e, stackTrace:$st");
+                errorLogger.recordError(e, st);
 
                 analytics.logEvent(name: "rrrn_e_non_premium", parameters: {
                   "dayOffset": dayOffset,
@@ -445,8 +444,6 @@ class RegisterReminderLocalNotification {
                   "reminderTimeHour": reminderTime.hour,
                   "reminderTimeMinute": reminderTime.minute,
                 });
-
-                errorLogger.recordError(e, st);
               }
             }),
           );
