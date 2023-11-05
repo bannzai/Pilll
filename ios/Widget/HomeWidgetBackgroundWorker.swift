@@ -10,7 +10,7 @@ struct HomeWidgetBackgroundWorker {
   static var isSetupCompleted: Bool = false
   static var engine: FlutterEngine?
   static var channel: FlutterMethodChannel?
-  static var queue: [(URL?, String)] = []
+  static var queue: [()] = []
 
   private static var registerPlugins: FlutterPluginRegistrantCallback?
 
@@ -27,9 +27,9 @@ struct HomeWidgetBackgroundWorker {
 //    setupEngine(dispatcher: dispatcher)
 
     if isSetupCompleted {
-      queue.append((url, Plist.appGroupKey))
+      queue.append(())
     } else {
-      sendEvent(url: url, appGroup: Plist.appGroupKey)
+      sendEvent()
     }
   }
 
@@ -62,8 +62,8 @@ struct HomeWidgetBackgroundWorker {
     case "HomeWidget.backgroundInitialized":
       while !queue.isEmpty {
         isSetupCompleted = true
-        let entry = queue.removeFirst()
-        sendEvent(url: entry.0, appGroup: entry.1)
+        queue.removeFirst()
+        sendEvent()
       }
       completionHandler(["result": "success"])
     case "syncActivePillSheetValue":
@@ -73,8 +73,8 @@ struct HomeWidgetBackgroundWorker {
     }
   }
 
-  static func sendEvent(url: URL?, appGroup: String) {
-    let preferences = UserDefaults(suiteName: appGroup)
+  static func sendEvent() {
+    let preferences = UserDefaults(suiteName: Plist.appGroupKey)
     let callback = preferences?.object(forKey: callbackKey) as! Int64
 
     channel?.invokeMethod(
