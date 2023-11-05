@@ -37,6 +37,8 @@ struct HomeWidgetBackgroundWorker {
       try await sendEvent()
     } else {
       debug += "2:"
+      // おそらくアプリのプロセスが完全にキルされている場合でAppIntent.performを実行すると先にこっちがくる。つまりEngineのセットアップが終わっていないのでそれまで待つフラグ
+      // 詳しく調査できてない
       isRunBeforeSetupEngine = true
     }
   }
