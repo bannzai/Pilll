@@ -32,11 +32,11 @@ dependencies:
   flutter_svg: ^2.0.8
   shared_preferences: ^2.2.2
   intl: ^0.18.1
-  firebase_core: ^2.5.0
-  firebase_analytics: ^10.1.1
-  firebase_auth: ^4.2.6
-  firebase_messaging: ^14.2.2
-  cloud_firestore: ^4.3.2
+  firebase_core: ^2.21.0
+  firebase_analytics: ^10.6.3
+  firebase_auth: ^4.12.1
+  firebase_messaging: ^14.7.3
+  cloud_firestore: ^4.12.2
   url_launcher: ^6.2.1
   package_info: ^2.0.0
   equatable: ^2.0.0
@@ -64,7 +64,7 @@ dependencies:
   collection: 1.17.2
   crypto:
   timezone:
-  firebase_remote_config: ^4.3.1
+  firebase_remote_config: ^4.3.3
 
 dev_dependencies:
   # The "flutter_lints" package below contains a set of recommended lints to
