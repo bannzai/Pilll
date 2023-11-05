@@ -19,9 +19,7 @@ struct HomeWidgetBackgroundWorker {
   }
 
   /// Call this method to invoke the callback registered in your Flutter App.
-  /// The url you provide will be used as arguments in the callback function in dart
-  /// The AppGroup is necessary to retrieve the dart callbacks
-  static func run(url: URL?, appGroup: String?) {
+  static func run() {
 //    let userDefaults = UserDefaults(suiteName: Plist.appGroupKey)
 //    let dispatcher = userDefaults?.object(forKey: dispatcherKey) as! Int64
 //    setupEngine(dispatcher: dispatcher)
