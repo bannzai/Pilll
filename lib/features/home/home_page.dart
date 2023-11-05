@@ -6,7 +6,6 @@ import 'package:pilll/components/page/web_view.dart';
 import 'package:pilll/entity/user.codegen.dart';
 import 'package:pilll/features/error/universal_error_page.dart';
 import 'package:pilll/features/initial_setting/migrate_info.dart';
-import 'package:pilll/features/premium_function_survey/premium_function_survey_page.dart';
 import 'package:pilll/features/settings/components/churn/churn_survey_complete_dialog.dart';
 import 'package:pilll/features/store_review/pre_store_review_modal.dart';
 import 'package:pilll/provider/user.dart';
@@ -93,30 +92,10 @@ class HomePageBody extends HookConsumerWidget {
       _screenTracking(tabController.index);
     });
 
-    final isAlreadyShowPremiumSurvey = sharedPreferences.getBool(BoolKey.isAlreadyShowPremiumSurvey) ?? false;
     final isAlreadyAnsweredPreStoreReviewModal = sharedPreferences.getBool(BoolKey.isAlreadyAnsweredPreStoreReviewModal) ?? false;
     final totalCountOfActionForTakenPill = sharedPreferences.getInt(IntKey.totalCountOfActionForTakenPill) ?? 0;
     final disableShouldAskCancelReason = ref.watch(disableShouldAskCancelReasonProvider);
     final shouldAskCancelReason = user.shouldAskCancelReason;
-    final shouldShowPremiumFunctionSurvey = () {
-      if (user.trialIsAlreadyBegin) {
-        return false;
-      }
-      if (user.premiumOrTrial) {
-        return false;
-      }
-      if (user.isNotYetStartTrial) {
-        return false;
-      }
-      return !isAlreadyShowPremiumSurvey;
-    }();
-
-    Future.microtask(() async {
-      final pendingReminderNotifications = await localNotificationService.pendingReminderNotifications();
-      if (pendingReminderNotifications.isEmpty) {
-        await registerReminderLocalNotification.call();
-      }
-    });
 
     Future.microtask(() async {
       if (shouldShowMigrateInfo) {
@@ -126,9 +105,6 @@ class HomePageBody extends HookConsumerWidget {
             builder: (context) {
               return const MigrateInfo();
             });
-      } else if (shouldShowPremiumFunctionSurvey) {
-        sharedPreferences.setBool(BoolKey.isAlreadyShowPremiumSurvey, true);
-        Navigator.of(context).push(PremiumFunctionSurveyPageRoutes.route());
       } else if (shouldAskCancelReason) {
         await Navigator.of(context).push(
           WebViewPageRoute.route(

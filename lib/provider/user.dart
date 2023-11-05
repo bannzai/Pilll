@@ -6,9 +6,7 @@ import 'package:flutter/foundation.dart';
 import 'package:flutter_native_timezone/flutter_native_timezone.dart';
 import 'package:pilll/entity/remote_config_parameter.codegen.dart';
 import 'package:pilll/provider/database.dart';
-import 'package:pilll/features/premium_function_survey/premium_function_survey_element_type.dart';
 import 'package:pilll/entity/package.codegen.dart';
-import 'package:pilll/entity/premium_function_survey.codegen.dart';
 import 'package:pilll/entity/user.codegen.dart';
 import 'package:pilll/utils/datetime/date_add.dart';
 import 'package:pilll/utils/datetime/day.dart';
@@ -99,23 +97,6 @@ class FetchOrCreateUser {
       },
       SetOptions(merge: true),
     );
-  }
-}
-
-final sendPremiumFunctionSurveyProvider = Provider((ref) => SendPremiumFunctionSurvey(ref.watch(databaseProvider)));
-
-class SendPremiumFunctionSurvey {
-  final DatabaseConnection databaseConnection;
-  SendPremiumFunctionSurvey(this.databaseConnection);
-
-  Future<void> call(List<PremiumFunctionSurveyElementType> elements, String message) async {
-    final PremiumFunctionSurvey premiumFunctionSurvey = PremiumFunctionSurvey(
-      elements: elements,
-      message: message,
-    );
-    return databaseConnection
-        .userPrivateRawReference()
-        .set({UserPrivateFirestoreFieldKeys.premiumFunctionSurvey: premiumFunctionSurvey.toJson()}, SetOptions(merge: true));
   }
 }
 
