@@ -72,14 +72,8 @@ struct HomeWidgetBackgroundWorker {
   }
 
   static func sendEvent() {
-    let preferences = UserDefaults(suiteName: Plist.appGroupKey)
-    let callback = preferences?.object(forKey: callbackKey) as! Int64
-
-    channel?.invokeMethod(
-      "",
-      arguments: [
-        callback,
-      ])
+    let callback = UserDefaults(suiteName: Plist.appGroupKey)?.object(forKey: callbackKey) as! Int64
+    channel?.invokeMethod("", arguments: [callback])
   }
 }
 
