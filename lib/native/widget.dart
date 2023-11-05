@@ -85,6 +85,7 @@ Future<void> callbackDispatcher() async {
     debugPrint("backgroundChannel: ${call.method}");
     final updatedPillSheetGroup = await handleInteractiveWidgetTakenPill();
     await syncActivePillSheetValue(pillSheetGroup: updatedPillSheetGroup);
+    return true;
   });
 
   final backgroundInitialized = await backgroundChannel.invokeMethod('HomeWidget.backgroundInitialized');

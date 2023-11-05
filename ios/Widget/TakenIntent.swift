@@ -17,7 +17,7 @@ struct TakenIntent: AppIntent {
     if alreadyTaken {
       HomeWidgetBackgroundWorker.debug = ""
     } else {
-      HomeWidgetBackgroundWorker.run()
+      try await HomeWidgetBackgroundWorker.run()
       try? await Task.sleep(nanoseconds: 5 * 100_000_000)
     }
 

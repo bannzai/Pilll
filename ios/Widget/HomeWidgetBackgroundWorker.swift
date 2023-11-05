@@ -6,10 +6,10 @@ struct HomeWidgetBackgroundWorker {
   static let dispatcherKey: String = "home_widget.interactive.dispatcher"
   static let callbackKey: String = "home_widget.interactive.callback"
 
-  static var isSetupCompleted: Bool = false
+  static var isSetupCompleted = false
+  static var isRunBeforeSetupEngine = false
   static var engine: FlutterEngine?
   static var channel: FlutterMethodChannel?
-  static var queue: [()] = []
 
   static var debug: String {
     get {
@@ -27,17 +27,17 @@ struct HomeWidgetBackgroundWorker {
   }
 
   /// Call this method to invoke the callback registered in your Flutter App.
-  static func run() {
+  static func run() async throws {
     //    let userDefaults = UserDefaults(suiteName: Plist.appGroupKey)
     //    let dispatcher = userDefaults?.object(forKey: dispatcherKey) as! Int64
     //    setupEngine(dispatcher: dispatcher)
 
     if isSetupCompleted {
       debug += "1:"
-      queue.append(())
+      try await sendEvent()
     } else {
       debug += "2:"
-      sendEvent()
+      isRunBeforeSetupEngine = true
     }
   }
 
@@ -70,11 +70,12 @@ struct HomeWidgetBackgroundWorker {
     switch call.method {
     case "HomeWidget.backgroundInitialized":
       debug += "4:"
-      while !queue.isEmpty {
-        debug += "5:"
+      if isRunBeforeSetupEngine {
+        isRunBeforeSetupEngine = false
         isSetupCompleted = true
-        queue.removeFirst()
-        sendEvent()
+        Task { @MainActor in
+          try? await sendEvent()
+        }
       }
       completionHandler(["result": "success"])
     case "syncActivePillSheetValue":
@@ -84,9 +85,23 @@ struct HomeWidgetBackgroundWorker {
     }
   }
 
-  static func sendEvent() {
+  static func sendEvent() async throws {
     debug += "6:"
-    channel?.invokeMethod("", arguments: [])
+    
+    return try await withCheckedThrowingContinuation { continuation in
+      channel?.invokeMethod("", arguments: [], result: { result in
+        guard let result = result as? Bool else {
+          continuation.resume(throwing: NSError(domain: "com.bannzai.Pilll", code: 1000))
+          return
+        }
+
+        if result {
+          continuation.resume()
+        } else {
+          continuation.resume(throwing: NSError(domain: "com.bannzai.Pilll", code: 1001))
+        }
+      })
+    }
   }
 }
 
