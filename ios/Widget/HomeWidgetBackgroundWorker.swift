@@ -42,7 +42,7 @@ struct HomeWidgetBackgroundWorker {
       withEntrypoint: flutterCallbackInfo?.callbackName,
       libraryURI: flutterCallbackInfo?.callbackLibraryPath
     )
-    print("Flutter background worker engine started: \(started)")
+    print("Flutter background worker engine started: \(String(describing: started))")
     if let registerPlugins {
       // engine initialized begin this function
       registerPlugins(engine!)
