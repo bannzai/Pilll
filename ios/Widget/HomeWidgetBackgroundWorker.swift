@@ -2,7 +2,6 @@ import Flutter
 import Foundation
 import Swift
 
-@available(iOS 17, *)
 struct HomeWidgetBackgroundWorker {
   static let dispatcherKey: String = "home_widget.interactive.dispatcher"
   static let callbackKey: String = "home_widget.interactive.callback"
@@ -12,6 +11,15 @@ struct HomeWidgetBackgroundWorker {
   static var channel: FlutterMethodChannel?
   static var queue: [()] = []
 
+  static var debug: String {
+    get {
+      UserDefaults(suiteName: Plist.appGroupKey)?.string(forKey: "debug") ?? ""
+    }
+    set {
+      UserDefaults(suiteName: Plist.appGroupKey)?.set(newValue, forKey: "debug")
+    }
+  }
+
   private static var registerPlugins: FlutterPluginRegistrantCallback?
 
   static func setPluginRegistrantCallback(registerPlugins: FlutterPluginRegistrantCallback) {
@@ -20,13 +28,15 @@ struct HomeWidgetBackgroundWorker {
 
   /// Call this method to invoke the callback registered in your Flutter App.
   static func run() {
-//    let userDefaults = UserDefaults(suiteName: Plist.appGroupKey)
-//    let dispatcher = userDefaults?.object(forKey: dispatcherKey) as! Int64
-//    setupEngine(dispatcher: dispatcher)
+    //    let userDefaults = UserDefaults(suiteName: Plist.appGroupKey)
+    //    let dispatcher = userDefaults?.object(forKey: dispatcherKey) as! Int64
+    //    setupEngine(dispatcher: dispatcher)
 
     if isSetupCompleted {
+      debug += "1:"
       queue.append(())
     } else {
+      debug += "2:"
       sendEvent()
     }
   }
@@ -48,6 +58,7 @@ struct HomeWidgetBackgroundWorker {
       registerPlugins(engine!)
     }
 
+    debug += "3:"
     channel?.setMethodCallHandler(handle)
   }
 
@@ -58,7 +69,9 @@ struct HomeWidgetBackgroundWorker {
 
     switch call.method {
     case "HomeWidget.backgroundInitialized":
+      debug += "4:"
       while !queue.isEmpty {
+        debug += "5:"
         isSetupCompleted = true
         queue.removeFirst()
         sendEvent()
@@ -72,8 +85,8 @@ struct HomeWidgetBackgroundWorker {
   }
 
   static func sendEvent() {
-    let callback = UserDefaults(suiteName: Plist.appGroupKey)?.object(forKey: callbackKey) as! Int64
-    channel?.invokeMethod("", arguments: [callback])
+    debug += "6:"
+    channel?.invokeMethod("", arguments: [])
   }
 }
 

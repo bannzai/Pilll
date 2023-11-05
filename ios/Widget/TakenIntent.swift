@@ -5,13 +5,21 @@ import AppIntents
 struct TakenIntent: AppIntent {
   static public var title: LocalizedStringResource = "服用済みにする"
 
+  let alreadyTaken: Bool
   init() {
-
+    self.alreadyTaken = false
+  }
+  init(alreadyTaken: Bool) {
+    self.alreadyTaken = alreadyTaken
   }
 
   public func perform() async throws -> some IntentResult {
-    HomeWidgetBackgroundWorker.run()
-    try? await Task.sleep(nanoseconds: 5 * 100_000_000)
+    if alreadyTaken {
+      HomeWidgetBackgroundWorker.debug = ""
+    } else {
+      HomeWidgetBackgroundWorker.run()
+      try? await Task.sleep(nanoseconds: 5 * 100_000_000)
+    }
 
     return .result()
   }

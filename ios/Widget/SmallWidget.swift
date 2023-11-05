@@ -22,8 +22,12 @@ struct SmallWidget: WidgetView {
 
           Spacer()
 
-          Image("pilll-widget-icon")
-            .frame(width: 14, height: 16)
+//          Image("pilll-widget-icon")
+          //            .frame(width: 14, height: 16)
+          if let debug = UserDefaults(suiteName: Plist.appGroupKey)?.string(forKey: "debug") {
+            Text(debug)
+              .foregroundColor(.mainText)
+          }
         }
 
         Spacer()
@@ -54,7 +58,7 @@ struct SmallWidget: WidgetView {
             Spacer()
 
             if #available(iOS 17, *) {
-              Button(intent: TakenIntent()) {
+              Button(intent: TakenIntent(alreadyTaken: alreadyTaken)) {
                 Group {
                   if alreadyTaken {
                     Image(systemName: "checkmark.circle")
