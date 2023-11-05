@@ -29,6 +29,7 @@ Future<void> setupRemoteConfig() async {
     });
   } catch (error, st) {
     // ignore error
+    // ParallelWaitErrorとentrypointでRemoteConfigを導入してからエラーが出るようになった。RemoteConfigの設定は失敗しても最悪どうにかなるだろう。ということでエラーは無視する
     debugPrint(error.toString());
     errorLogger.recordError(error, st);
   }
