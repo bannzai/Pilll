@@ -44,6 +44,16 @@
 				<string>com.mizuki.Ohashi.Pilll</string>
 			</array>
 		</dict>
+		<dict>
+			<key>CFBundleTypeRole</key>
+			<string>Editor</string>
+			<key>CFBundleURLName</key>
+			<string>pilll-dev</string>
+			<key>CFBundleURLSchemes</key>
+			<array>
+				<string>pilll-dev</string>
+			</array>
+		</dict>
 	</array>
 	<key>CFBundleVersion</key>
 	<string>$(FLUTTER_BUILD_NUMBER)</string>
