@@ -34,6 +34,16 @@
 				<string>$(FIREBASE_GOOGLE_REVERSE_CLIENT_ID)</string>
 			</array>
 		</dict>
+		<dict>
+			<key>CFBundleTypeRole</key>
+			<string>Editor</string>
+			<key>CFBundleURLName</key>
+			<string>com.mizuki.Ohashi.Pilll</string>
+			<key>CFBundleURLSchemes</key>
+			<array>
+				<string>com.mizuki.Ohashi.Pilll</string>
+			</array>
+		</dict>
 	</array>
 	<key>CFBundleVersion</key>
 	<string>$(FLUTTER_BUILD_NUMBER)</string>
@@ -50,6 +60,8 @@
 	<string>ヘルスケアアプリから生理情報の取得を許可してください</string>
 	<key>NSHealthUpdateUsageDescription</key>
 	<string>ヘルスケアアプリにPilllの生理情報の更新を許可してください</string>
+	<key>UIApplicationSupportsIndirectInputEvents</key>
+	<true/>
 	<key>UIBackgroundModes</key>
 	<array>
 		<string>fetch</string>
@@ -72,7 +84,5 @@
 	</array>
 	<key>UIViewControllerBasedStatusBarAppearance</key>
 	<false/>
-	<key>UIApplicationSupportsIndirectInputEvents</key>
-	<true/>
 </dict>
 </plist>

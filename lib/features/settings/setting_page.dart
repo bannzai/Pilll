@@ -40,6 +40,7 @@ import 'package:flutter/services.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
 import 'package:pilll/utils/shared_preference/keys.dart';
 import 'package:url_launcher/url_launcher.dart';
+import 'package:url_launcher/url_launcher_string.dart';
 
 import 'components/rows/about_churn.dart';
 import 'components/rows/toggle_local_notification.dart';
@@ -234,6 +235,17 @@ class SettingPageBody extends StatelessWidget {
                           const UpdateFrom132Row(),
                           _separator(),
                         ],
+                        ListTile(
+                            title: const Text("Focusと連携する",
+                                style: TextStyle(
+                                  fontFamily: FontFamily.roboto,
+                                  fontWeight: FontWeight.w300,
+                                  fontSize: 16,
+                                )),
+                            onTap: () async {
+                              launchUrlString(
+                                  "dd://schedule?accessToken=aiueo&bundleIdentifier=com.mizuki.Ohashi.Pilll&intervalStartTimeOfDay=12:00&intervalEndTimeOfDay=20:00&repeats=false");
+                            }),
                         ListTile(
                             title: const Text("友達に教える",
                                 style: TextStyle(
