@@ -8,17 +8,14 @@ struct WidgetEntryView : View {
   var entry: Provider.Entry
 
   var body: some View {
-    Group {
-      switch widgetFamily {
-      case .systemSmall:
-        SmallWidget(entry: entry)
-      case .accessoryCircular:
-        AccessoryCircularWidget(entry: entry)
-      case _:
-        fatalError()
-      }
+    switch widgetFamily {
+    case .systemSmall:
+      SmallWidget(entry: entry)
+    case .accessoryCircular:
+      AccessoryCircularWidget(entry: entry)
+    case _:
+      fatalError()
     }
-    .widgetBackground(Color.white)
   }
 }
 
@@ -31,7 +28,6 @@ struct Entrypoint: Widget {
     .supportedFamilies(supportedFamilies)
     .configurationDisplayName("今日飲むピルが一目でわかる")
     .description("This is a Pilll widget")
-    .contentMarginsDisabled()
   }
 
   private var supportedFamilies: [WidgetFamily] {
