@@ -135,31 +135,22 @@ import flutter_local_notifications
 
                 completionHandler(["result": "success"])
             case "syncActivePillSheetValue":
-                guard let arguments = call.arguments as? Dictionary<String, Any> else {
-                    fatalError()
-                }
+                syncActivePillSheetValue(call: call, completionHandler: completionHandler)
+            case "setInteractiveWidgetCallbackHandlers":
+                if #available(iOS 17, *) {
+                    guard let callbackHandels = call.arguments as? [Int64] else {
+                        fatalError()
+                    }
+                    let dispatcher = callbackHandels[0]
+                    let callback = callbackHandels[1]
 
-                let pillSheetValueLastUpdateDateTime = arguments[Const.pillSheetValueLastUpdateDateTime] as? Int
-                UserDefaults(suiteName: Plist.appGroupKey)?.set(pillSheetValueLastUpdateDateTime, forKey: Const.pillSheetValueLastUpdateDateTime)
-
-                let pillSheetLastTakenDate = arguments[Const.pillSheetLastTakenDate] as? Int
-                UserDefaults(suiteName: Plist.appGroupKey)?.set(pillSheetLastTakenDate, forKey: Const.pillSheetLastTakenDate)
-
-                let pillSheetGroupTodayPillNumber = arguments[Const.pillSheetGroupTodayPillNumber] as? Int
-                UserDefaults(suiteName: Plist.appGroupKey)?.set(pillSheetGroupTodayPillNumber, forKey: Const.pillSheetGroupTodayPillNumber)
-
-                let pillSheetTodayPillNumber = arguments[Const.pillSheetTodayPillNumber] as? Int
-                UserDefaults(suiteName: Plist.appGroupKey)?.set(pillSheetTodayPillNumber, forKey: Const.pillSheetTodayPillNumber)
-
-                let pillSheetEndDisplayPillNumber = arguments[Const.pillSheetEndDisplayPillNumber] as? Int
-                UserDefaults(suiteName: Plist.appGroupKey)?.set(pillSheetEndDisplayPillNumber, forKey: Const.pillSheetEndDisplayPillNumber)
-
-                if #available(iOS 14.0, *) {
-                    WidgetCenter.shared.reloadTimelines(ofKind: Const.widgetKind)
+                    let userDefaults = UserDefaults(suiteName: Plist.appGroupKey)
+                    userDefaults?.setValue(dispatcher, forKey: HomeWidgetBackgroundWorker.dispatcherKey)
+                    userDefaults?.setValue(callback, forKey: HomeWidgetBackgroundWorker.callbackKey)
+                    HomeWidgetBackgroundWorker.setupEngine(dispatcher: dispatcher)
                 } else {
                     // Fallback on earlier versions
                 }
-
                 completionHandler(["result": "success"])
             case _:
                 return
@@ -197,10 +188,17 @@ import flutter_local_notifications
         UNUserNotificationCenter.current().removeDeliveredNotifications(withIdentifiers: ["repeat_notification_for_taken_pill", "remind_notification_for_taken_pill"])
         UNUserNotificationCenter.current().removePendingNotificationRequests(withIdentifiers: ["repeat_notification_for_taken_pill", "remind_notification_for_taken_pill"])
         UNUserNotificationCenter.current().delegate = self as UNUserNotificationCenterDelegate
+        
         FlutterLocalNotificationsPlugin.setPluginRegistrantCallback { (registry) in
             GeneratedPluginRegistrant.register(with: registry)
         }
+        if #available(iOS 17, *) {
+            HomeWidgetBackgroundWorker.setPluginRegistrantCallback { registry in
+                GeneratedPluginRegistrant.register(with: registry)
+            }
+        }
         GeneratedPluginRegistrant.register(with: self)
+
         return super.application(application, didFinishLaunchingWithOptions: launchOptions)
     }
 

@@ -13,6 +13,7 @@ import 'package:pilll/features/root/resolver/show_paywall_on_app_launch.dart';
 import 'package:pilll/features/root/resolver/skip_initial_setting.dart';
 import 'package:pilll/features/root/resolver/user_setup.dart';
 import 'package:pilll/features/root/resolver/user_sign_in.dart';
+import 'package:pilll/native/widget.dart';
 import 'package:pilll/provider/shared_preferences.dart';
 import 'package:pilll/utils/analytics.dart';
 import 'package:pilll/components/atoms/color.dart';
@@ -35,6 +36,11 @@ Future<void> entrypoint() async {
   runZonedGuarded(() async {
     WidgetsFlutterBinding.ensureInitialized();
     await Firebase.initializeApp();
+
+    if (Environment.isDevelopment) {
+      FirebaseFirestore.instance.settings = const Settings(persistenceEnabled: false);
+    }
+
     // QuickRecordの処理などFirebaseを使用するのでFirebase.initializeApp()の後に時刻する
     // また、同じくQuickRecordの処理開始までにMethodChannelが確立されていてほしいのでこの処理はなるべく早く実行する
     definedChannel();
@@ -46,7 +52,10 @@ Future<void> entrypoint() async {
       connectToEmulator();
     }
 
-    // ignore: prefer_typing_uninitialized_variables
+    // [VERBOSE-2:shell.cc(1004)] The 'method.channel.MizukiOhashi.Pilll' channel sent a message from native to Flutter on a non-platform thread. Platform channel messages must be sent on the platform thread. Failure to do so may result in data loss or crashes, and must be fixed in the plugin or application code creating that channel.
+    // というエラーがでる。後述のFuture().waitでは個別のFutureは並列でメインスレッド以外で実行される可能性があるので、この処理はメインスレッドで個別で実行する
+    setInteractiveWidgetCallbackHandlers();
+
     final (_, sharedPreferences, _) = await (
       LocalNotificationService.setupTimeZone(),
       SharedPreferences.getInstance(),
