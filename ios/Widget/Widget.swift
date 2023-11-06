@@ -31,6 +31,7 @@ struct Entrypoint: Widget {
     .supportedFamilies(supportedFamilies)
     .configurationDisplayName("今日飲むピルが一目でわかる")
     .description("This is a Pilll widget")
+    .contentMarginsDisabled()
   }
 
   private var supportedFamilies: [WidgetFamily] {
