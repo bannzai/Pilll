@@ -41,9 +41,6 @@ target 'Runner' do
   pod 'FirebaseFirestore', :git => 'https://github.com/invertase/firestore-ios-sdk-frameworks.git', :tag => $FirebaseSDKVersion
 
   flutter_install_all_ios_pods File.dirname(File.realpath(__FILE__))
-  target 'WidgetExtension' do
-    inherit! :search_paths
-  end
 end
 
 post_install do |installer|
