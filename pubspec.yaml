@@ -60,7 +60,7 @@ dependencies:
   purchases_flutter: ^5.7.0
   flutter_native_timezone: ^2.0.0
   flutter_local_notifications: ^15.1.2
-  webview_flutter: ^4.4.1
+  webview_flutter: ^4.4.2
   collection: 1.17.2
   crypto:
   timezone:
