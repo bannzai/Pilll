@@ -150,7 +150,6 @@ class RecordPagePillSheet extends HookConsumerWidget {
                   pillNumberInPillSheet: pillNumberInPillSheet,
                   pillSheet: pillSheet,
                 );
-                await registerReminderLocalNotification();
               }
             } catch (exception, stack) {
               errorLogger.recordError(exception, stack);
