@@ -78,6 +78,8 @@ class LocalNotificationService {
     );
   }
 
+  // iOSでは 以下の二つを実行しているだけなので今のところエラーは発生しない
+  // center.removePendingNotificationRequests(withIdentifiers: ids), center.removeDeliveredNotifications(withIdentifiers: ids)
   Future<void> cancelNotification({required int localNotificationID}) async {
     await plugin.cancel(localNotificationID);
   }
