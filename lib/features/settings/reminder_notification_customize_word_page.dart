@@ -213,7 +213,7 @@ class ReminderNotificationCustomizeWordPage extends HookConsumerWidget {
     reminderNotificationCustomization = reminderNotificationCustomization.copyWith(word: word);
 
     setSetting(setting.copyWith(reminderNotificationCustomization: reminderNotificationCustomization));
-    registerReminderLocalNotification.call();
+    registerReminderLocalNotification();
   }
 
   Future<void> _setIsInVisibleReminderDate({
@@ -226,7 +226,7 @@ class ReminderNotificationCustomizeWordPage extends HookConsumerWidget {
     reminderNotificationCustomization = reminderNotificationCustomization.copyWith(isInVisibleReminderDate: isInVisibleReminderDate);
 
     setSetting(setting.copyWith(reminderNotificationCustomization: reminderNotificationCustomization));
-    registerReminderLocalNotification.call();
+    registerReminderLocalNotification();
   }
 
   Future<void> _setIsInVisiblePillNumber({
@@ -239,7 +239,7 @@ class ReminderNotificationCustomizeWordPage extends HookConsumerWidget {
     reminderNotificationCustomization = reminderNotificationCustomization.copyWith(isInVisiblePillNumber: isInVisiblePillNumber);
 
     setSetting(setting.copyWith(reminderNotificationCustomization: reminderNotificationCustomization));
-    registerReminderLocalNotification.call();
+    registerReminderLocalNotification();
   }
 
   Future<void> _setIsInVisibleDescription({
@@ -252,7 +252,7 @@ class ReminderNotificationCustomizeWordPage extends HookConsumerWidget {
     reminderNotificationCustomization = reminderNotificationCustomization.copyWith(isInVisibleDescription: isInVisibleDescription);
 
     await setSetting(setting.copyWith(reminderNotificationCustomization: reminderNotificationCustomization));
-    await registerReminderLocalNotification.call();
+    await registerReminderLocalNotification();
   }
 }
 
