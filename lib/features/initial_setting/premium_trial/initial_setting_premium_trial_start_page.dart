@@ -138,7 +138,7 @@ ${remoteConfigParameter.trialDeadlineDateOffsetDay}日間すべての機能が�
                   try {
                     final navigator = Navigator.of(context);
                     await store.register();
-                    await registerReminderLocalNotification()();
+                    await registerReminderLocalNotification.call();
                     await AppRouter.endInitialSetting(navigator, didEndInitialSettingNotifier);
                   } catch (error) {
                     if (context.mounted) showErrorAlert(context, error.toString());
