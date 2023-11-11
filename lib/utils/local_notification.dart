@@ -110,6 +110,7 @@ class LocalNotificationService {
     );
   }
 
+  // iOSではgetPendingNotificationRequestsWithCompletionHandlerを実行しているだけなのでおそらくエラーは発生しない
   Future<List<PendingNotificationRequest>> pendingReminderNotifications() async {
     final pendingNotifications = await plugin.pendingNotificationRequests();
     return pendingNotifications.where((element) => element.id - reminderNotificationIdentifierOffset > 0).toList();
