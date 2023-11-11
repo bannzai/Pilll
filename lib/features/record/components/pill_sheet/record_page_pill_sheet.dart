@@ -132,7 +132,10 @@ class RecordPagePillSheet extends HookConsumerWidget {
 
               if (pillSheet.lastTakenPillNumber >= pillNumberInPillSheet) {
                 await revertTakePill(
-                    pillSheetGroup: pillSheetGroup, pageIndex: pageIndex, targetRevertPillNumberIntoPillSheet: pillNumberInPillSheet);
+                  pillSheetGroup: pillSheetGroup,
+                  pageIndex: pageIndex,
+                  targetRevertPillNumberIntoPillSheet: pillNumberInPillSheet,
+                );
                 await registerReminderLocalNotification();
               } else {
                 // NOTE: batch.commit でリモートのDBに書き込む時間がかかるので事前にバッジを0にする
@@ -147,6 +150,7 @@ class RecordPagePillSheet extends HookConsumerWidget {
                   pillNumberInPillSheet: pillNumberInPillSheet,
                   pillSheet: pillSheet,
                 );
+                await registerReminderLocalNotification();
               }
             } catch (exception, stack) {
               errorLogger.recordError(exception, stack);
