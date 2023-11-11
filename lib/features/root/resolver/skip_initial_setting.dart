@@ -29,7 +29,7 @@ class SkipInitialSetting extends HookConsumerWidget {
         if (remoteConfigParameter.skipInitialSetting) {
           try {
             await initialSettingStateNotifier.register();
-            await registerReminderLocalNotification.call();
+            await registerReminderLocalNotification()();
             await AppRouter.endInitialSetting(navigator, didEndInitialSettingNotifier);
           } catch (error) {
             if (context.mounted) showErrorAlert(context, error.toString());
