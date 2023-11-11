@@ -169,6 +169,9 @@ class RegisterReminderLocalNotification {
   // - トライアル終了後/プレミアム加入後 → これは服用は続けられているので何もしない。有料機能をしばらく使えてもヨシとする
   // NOTE: 本日分の服用記録がある場合は、本日分の通知はスケジュールしないようになっている
   // 10日間分の通知をスケジュールする
+  // ちなみに64個までのリミットがある
+  //   * `There is a limit imposed by iOS where it will only keep 64 notifications that will fire the soonest.`
+  //   * ref: https://pub.dev/packages/flutter_local_notifications#-caveats-and-limitations
   Future<void> call() async {
     analytics.logEvent(name: "call_register_reminder_notification");
     final cancelReminderLocalNotification = CancelReminderLocalNotification();
