@@ -23,6 +23,7 @@ void definedChannel() {
         if (firebaseUser == null) {
           return;
         }
+        analytics.logEvent(name: "handle_recordPill_method_channel");
 
         final database = DatabaseConnection(firebaseUser.uid);
 
