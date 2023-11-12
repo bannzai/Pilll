@@ -442,7 +442,6 @@ class RegisterReminderLocalNotification {
                       category: AndroidNotificationCategory.alarm,
                     ),
                     iOS: DarwinNotificationDetails(
-                      categoryIdentifier: iOSQuickRecordPillCategoryIdentifier,
                       presentBadge: true,
                       sound: "becho.caf",
                       presentSound: true,
