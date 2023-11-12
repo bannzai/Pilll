@@ -143,7 +143,10 @@ class PillSheet with _$PillSheet {
   bool get isActive => isActiveFor(now());
 
   bool isActiveFor(DateTime date) {
-    return DateRange(beginingDate.date(), estimatedEndTakenDate).inRange(date);
+    final begin = beginingDate.date();
+    final totalCount = typeInfo.totalCount;
+    final end = begin.addDays(totalCount + summarizedRestDuration(restDurations: restDurations, upperDate: today()) - 1);
+    return DateRange(begin, end).inRange(date);
   }
 
   DateTime get estimatedEndTakenDate => beginingDate
