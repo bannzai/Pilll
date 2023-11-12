@@ -3,6 +3,7 @@ import 'package:pilll/utils/analytics.dart';
 import 'package:pilll/native/legacy.dart';
 import 'package:pilll/native/pill.dart';
 import 'package:pilll/native/widget.dart';
+import 'package:pilll/utils/error_log.dart';
 import 'package:pilll/utils/local_notification.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:firebase_core/firebase_core.dart';
@@ -24,28 +25,34 @@ void definedChannel() {
           return;
         }
 
-        final database = DatabaseConnection(firebaseUser.uid);
+        try {
+          analytics.logEvent(name: "handle_recordPill_method_channel");
 
-        final pillSheetGroup = await quickRecordTakePill(database);
-        syncActivePillSheetValue(pillSheetGroup: pillSheetGroup);
+          final database = DatabaseConnection(firebaseUser.uid);
 
-        final cancelReminderLocalNotification = CancelReminderLocalNotification();
-        // エンティティの変更があった場合にdatabaseの読み込みで最新の状態を取得するために、Future.microtaskで更新を待ってから処理を始める
-        // hour,minute,番号を基準にIDを決定しているので、時間変更や番号変更時にそれまで登録されていたIDを特定するのが不可能なので全てキャンセルする
-        await (Future.microtask(() => null), cancelReminderLocalNotification()).wait;
+          final pillSheetGroup = await quickRecordTakePill(database);
+          syncActivePillSheetValue(pillSheetGroup: pillSheetGroup);
 
-        final activePillSheet = pillSheetGroup?.activePillSheet;
-        final user = (await database.userReference().get()).data();
-        final setting = user?.setting;
-        if (pillSheetGroup != null && activePillSheet != null && user != null && setting != null) {
-          if (user.useLocalNotificationForReminder) {
-            await RegisterReminderLocalNotification.run(
-              pillSheetGroup: pillSheetGroup,
-              activePillSheet: activePillSheet,
-              premiumOrTrial: user.isPremium || user.isTrial,
-              setting: setting,
-            );
+          final cancelReminderLocalNotification = CancelReminderLocalNotification();
+          // エンティティの変更があった場合にdatabaseの読み込みで最新の状態を取得するために、Future.microtaskで更新を待ってから処理を始める
+          // hour,minute,番号を基準にIDを決定しているので、時間変更や番号変更時にそれまで登録されていたIDを特定するのが不可能なので全てキャンセルする
+          await (Future.microtask(() => null), cancelReminderLocalNotification()).wait;
+
+          final activePillSheet = pillSheetGroup?.activePillSheet;
+          final user = (await database.userReference().get()).data();
+          final setting = user?.setting;
+          if (pillSheetGroup != null && activePillSheet != null && user != null && setting != null) {
+            if (user.useLocalNotificationForReminder) {
+              await RegisterReminderLocalNotification.run(
+                pillSheetGroup: pillSheetGroup,
+                activePillSheet: activePillSheet,
+                premiumOrTrial: user.isPremium || user.isTrial,
+                setting: setting,
+              );
+            }
           }
+        } catch (e, st) {
+          errorLogger.recordError(e, st);
         }
         return;
       case "salvagedOldStartTakenDate":

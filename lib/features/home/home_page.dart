@@ -17,7 +17,6 @@ import 'package:pilll/features/record/record_page.dart';
 import 'package:pilll/features/settings/setting_page.dart';
 import 'package:pilll/components/atoms/color.dart';
 import 'package:pilll/components/atoms/text_color.dart';
-import 'package:pilll/utils/local_notification.dart';
 import 'package:pilll/utils/push_notification.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
@@ -44,7 +43,6 @@ class HomePage extends HookConsumerWidget {
       return null;
     }, [user.valueOrNull]);
 
-    final registerReminderLocalNotification = ref.watch(registerReminderLocalNotificationProvider);
     final sharedPreferences = ref.watch(sharedPreferencesProvider);
     return AsyncValueGroup.group2(
       user,
@@ -55,7 +53,6 @@ class HomePage extends HookConsumerWidget {
           user: data.t1,
           shouldShowMigrateInfo: data.t2,
           sharedPreferences: sharedPreferences,
-          registerReminderLocalNotification: registerReminderLocalNotification,
         );
       },
       error: (error, stackTrace) => UniversalErrorPage(
@@ -72,14 +69,12 @@ class HomePageBody extends HookConsumerWidget {
   final User user;
   final bool shouldShowMigrateInfo;
   final SharedPreferences sharedPreferences;
-  final RegisterReminderLocalNotification registerReminderLocalNotification;
 
   const HomePageBody({
     Key? key,
     required this.user,
     required this.shouldShowMigrateInfo,
     required this.sharedPreferences,
-    required this.registerReminderLocalNotification,
   }) : super(key: key);
 
   @override

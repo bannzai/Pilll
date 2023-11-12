@@ -1,4 +1,5 @@
 import 'dart:async';
+import 'dart:io';
 
 import 'dart:math';
 
@@ -74,10 +75,16 @@ class LocalNotificationService {
           defaultPresentSound: true,
         ),
       ),
-      onDidReceiveBackgroundNotificationResponse: handleNotificationAction,
+      onDidReceiveBackgroundNotificationResponse: Platform.isAndroid
+          ? (NotificationResponse notificationResponse) {
+              handleNotificationAction(notificationResponse);
+            }
+          : null,
     );
   }
 
+  // iOSでは 以下の二つを実行しているだけなので今のところエラーは発生しない
+  // center.removePendingNotificationRequests(withIdentifiers: ids), center.removeDeliveredNotifications(withIdentifiers: ids)
   Future<void> cancelNotification({required int localNotificationID}) async {
     await plugin.cancel(localNotificationID);
   }
@@ -108,6 +115,7 @@ class LocalNotificationService {
     );
   }
 
+  // iOSではgetPendingNotificationRequestsWithCompletionHandlerを実行しているだけなのでおそらくエラーは発生しない
   Future<List<PendingNotificationRequest>> pendingReminderNotifications() async {
     final pendingNotifications = await plugin.pendingNotificationRequests();
     return pendingNotifications.where((element) => element.id - reminderNotificationIdentifierOffset > 0).toList();
@@ -137,11 +145,10 @@ final registerReminderLocalNotificationProvider = Provider(
 // * その時点の状態を元に通知のコンテンツを決定する。という方式を取るため、テストケースがシンプルになる
 // 難しい点:
 // * Swift/Kotlinのコードが増える。なのでライブリロードも効きづらい
-// * iOSのApp Extension側でFlutterのコードを呼ぶ術はない(たぶん)。現状問題ではないがこういう制限がある
-//   * これに関連して、SSoTが崩れる心配がある。Keychainを共有してないのもあり、UserDefaultsで書き込み通知の表示に必要なコンテンツを保存する必要がある
 // * iOSのApp Extensionでは別途申請が必要になる。これ自体も手間だが、dev版アプリの審査も通す必要があるのが(手間が2回発生するのを避けてる。やればいいだけ)
 //   * Thank you for your interest in the Notification Service Extension Filtering entitlement. This entitlement is intended for certain types of apps — such as messaging apps or location sharing apps — that use notification service extensions to receive push notifications without delivering notifications to the user. If your app needs this entitlement in order to properly function on iOS 13.3 or later, provide the following information.
 //   * やれば良いだけだと思ったが、App Store URL等を入力しないとダメだからdev版のアプリ通らない可能性が高い
+//   * 追記: そもそもリモートの通知で絵しかこれは使えないかも: This entitlement allows a notification service extension to receive remote notifications without displaying the notification to the user. To apply for this entitlement, see Request Notification Service Entitlement.
 class RegisterReminderLocalNotification {
   final Ref ref;
 
@@ -170,6 +177,9 @@ class RegisterReminderLocalNotification {
   // - トライアル終了後/プレミアム加入後 → これは服用は続けられているので何もしない。有料機能をしばらく使えてもヨシとする
   // NOTE: 本日分の服用記録がある場合は、本日分の通知はスケジュールしないようになっている
   // 10日間分の通知をスケジュールする
+  // ちなみに64個までのリミットがある
+  //   * `There is a limit imposed by iOS where it will only keep 64 notifications that will fire the soonest.`
+  //   * ref: https://pub.dev/packages/flutter_local_notifications#-caveats-and-limitations
   Future<void> call() async {
     analytics.logEvent(name: "call_register_reminder_notification");
     final cancelReminderLocalNotification = CancelReminderLocalNotification();
@@ -320,6 +330,7 @@ class RegisterReminderLocalNotification {
             analytics.logEvent(name: "rrrn_is_skip_in_dosing", parameters: {
               "dayOffset": dayOffset,
               "dosingPeriod": pillSheeType.dosingPeriod,
+              "pillNumberInPillSheet": pillNumberInPillSheet,
               "isOnNotifyInNotTakenDuration": setting.isOnNotifyInNotTakenDuration,
               "reminderTimeHour": reminderTime.hour,
               "reminderTimeMinute": reminderTime.minute,
@@ -391,6 +402,13 @@ class RegisterReminderLocalNotification {
                   androidScheduleMode: AndroidScheduleMode.exactAllowWhileIdle,
                   uiLocalNotificationDateInterpretation: UILocalNotificationDateInterpretation.absoluteTime,
                 );
+
+                analytics.logEvent(name: "rrrn_premium", parameters: {
+                  "dayOffset": dayOffset,
+                  "notificationID": notificationID,
+                  "reminderTimeHour": reminderTime.hour,
+                  "reminderTimeMinute": reminderTime.minute,
+                });
               } catch (e, st) {
                 // NOTE: エラーが発生しても他の通知のスケジュールを続ける
                 debugPrint("[bannzai] notificationID:$notificationID error:$e, stackTrace:$st");
@@ -433,6 +451,13 @@ class RegisterReminderLocalNotification {
                   ),
                   uiLocalNotificationDateInterpretation: UILocalNotificationDateInterpretation.absoluteTime,
                 );
+
+                analytics.logEvent(name: "rrrn_non_premium", parameters: {
+                  "dayOffset": dayOffset,
+                  "notificationID": notificationID,
+                  "reminderTimeHour": reminderTime.hour,
+                  "reminderTimeMinute": reminderTime.minute,
+                });
               } catch (e, st) {
                 // NOTE: エラーが発生しても他の通知のスケジュールを続ける
                 debugPrint("[bannzai] notificationID:$notificationID error:$e, stackTrace:$st");
@@ -543,28 +568,34 @@ Future<void> handleNotificationAction(NotificationResponse notificationResponse)
       return;
     }
 
-    final database = DatabaseConnection(firebaseUser.uid);
+    try {
+      analytics.logEvent(name: "handle_notification_action");
 
-    final pillSheetGroup = await quickRecordTakePill(database);
-    syncActivePillSheetValue(pillSheetGroup: pillSheetGroup);
+      final database = DatabaseConnection(firebaseUser.uid);
 
-    final cancelReminderLocalNotification = CancelReminderLocalNotification();
-    // エンティティの変更があった場合にdatabaseの読み込みで最新の状態を取得するために、Future.microtaskで更新を待ってから処理を始める
-    // hour,minute,番号を基準にIDを決定しているので、時間変更や番号変更時にそれまで登録されていたIDを特定するのが不可能なので全てキャンセルする
-    await (Future.microtask(() => null), cancelReminderLocalNotification()).wait;
+      final pillSheetGroup = await quickRecordTakePill(database);
+      syncActivePillSheetValue(pillSheetGroup: pillSheetGroup);
 
-    final activePillSheet = pillSheetGroup?.activePillSheet;
-    final user = (await database.userReference().get()).data();
-    final setting = user?.setting;
-    if (pillSheetGroup != null && activePillSheet != null && user != null && setting != null) {
-      if (user.useLocalNotificationForReminder) {
-        await RegisterReminderLocalNotification.run(
-          pillSheetGroup: pillSheetGroup,
-          activePillSheet: activePillSheet,
-          premiumOrTrial: user.isPremium || user.isTrial,
-          setting: setting,
-        );
+      final cancelReminderLocalNotification = CancelReminderLocalNotification();
+      // エンティティの変更があった場合にdatabaseの読み込みで最新の状態を取得するために、Future.microtaskで更新を待ってから処理を始める
+      // hour,minute,番号を基準にIDを決定しているので、時間変更や番号変更時にそれまで登録されていたIDを特定するのが不可能なので全てキャンセルする
+      await (Future.microtask(() => null), cancelReminderLocalNotification()).wait;
+
+      final activePillSheet = pillSheetGroup?.activePillSheet;
+      final user = (await database.userReference().get()).data();
+      final setting = user?.setting;
+      if (pillSheetGroup != null && activePillSheet != null && user != null && setting != null) {
+        if (user.useLocalNotificationForReminder) {
+          await RegisterReminderLocalNotification.run(
+            pillSheetGroup: pillSheetGroup,
+            activePillSheet: activePillSheet,
+            premiumOrTrial: user.isPremium || user.isTrial,
+            setting: setting,
+          );
+        }
       }
+    } catch (e, st) {
+      errorLogger.recordError(e, st);
     }
   }
 }
