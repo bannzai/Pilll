@@ -558,16 +558,17 @@ var localNotificationService = LocalNotificationService()..initialize();
 // iOSはmethodChannel経由の方が呼ばれる。iOSはネイティブの方のコードで上書きされる模様。現在はAndroidのために定義
 @pragma('vm:entry-point')
 Future<void> handleNotificationAction(NotificationResponse notificationResponse) async {
-  try {
-    if (notificationResponse.actionId == actionIdentifier) {
-      // 通知からの起動の時に、FirebaseAuth.instanceを参照すると、まだinitializeされてないよ．的なエラーが出る
-      if (Firebase.apps.isEmpty) {
-        await Firebase.initializeApp();
-      }
-      final firebaseUser = FirebaseAuth.instance.currentUser;
-      if (firebaseUser == null) {
-        return;
-      }
+  if (notificationResponse.actionId == actionIdentifier) {
+    // 通知からの起動の時に、FirebaseAuth.instanceを参照すると、まだinitializeされてないよ．的なエラーが出る
+    if (Firebase.apps.isEmpty) {
+      await Firebase.initializeApp();
+    }
+    final firebaseUser = FirebaseAuth.instance.currentUser;
+    if (firebaseUser == null) {
+      return;
+    }
+
+    try {
       analytics.logEvent(name: "handle_notification_action");
 
       final database = DatabaseConnection(firebaseUser.uid);
@@ -593,8 +594,8 @@ Future<void> handleNotificationAction(NotificationResponse notificationResponse)
           );
         }
       }
+    } catch (e, st) {
+      errorLogger.recordError(e, st);
     }
-  } catch (e, st) {
-    errorLogger.recordError(e, st);
   }
 }
