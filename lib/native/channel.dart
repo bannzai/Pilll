@@ -14,6 +14,8 @@ void definedChannel() {
   methodChannel.setMethodCallHandler((MethodCall call) async {
     switch (call.method) {
       case 'recordPill':
+        await LocalNotificationService.setupTimeZone();
+
         // TODO: [UseLocalNotification-Beta] 2023-11 不要になったら処理を削除
         // ネイティブ側のFirebaseの処理も削除
         // 通知からの起動の時に、FirebaseAuth.instanceを参照すると、まだinitializeされてないよ．的なエラーが出る
