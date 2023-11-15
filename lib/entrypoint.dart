@@ -61,6 +61,7 @@ Future<void> entrypoint() async {
 @pragma('vm:entry-point')
 Future<void> handleNotificationAction(NotificationResponse notificationResponse) async {
   if (notificationResponse.actionId == actionIdentifier) {
+    await LocalNotificationService.setupTimeZone();
     // 通知からの起動の時に、FirebaseAuth.instanceを参照すると、まだinitializeされてないよ．的なエラーが出る
     if (Firebase.apps.isEmpty) {
       await Firebase.initializeApp();
