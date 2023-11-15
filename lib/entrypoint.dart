@@ -2,6 +2,7 @@ import 'dart:async';
 
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/foundation.dart';
+import 'package:pilll/app.dart';
 import 'package:pilll/provider/shared_preferences.dart';
 import 'package:pilll/native/channel.dart';
 import 'package:pilll/utils/emulator/emulator.dart';
@@ -47,5 +48,3 @@ Future<void> entrypoint() async {
     ));
   }, (error, stack) => FirebaseCrashlytics.instance.recordError(error, stack));
 }
-
-final navigatorKey = GlobalKey<NavigatorState>();
