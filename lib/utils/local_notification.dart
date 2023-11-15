@@ -3,8 +3,6 @@ import 'dart:io';
 
 import 'dart:math';
 
-import 'package:firebase_auth/firebase_auth.dart';
-import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_local_notifications/flutter_local_notifications.dart';
@@ -14,10 +12,8 @@ import 'package:pilll/entity/pill_sheet_type.dart';
 import 'package:pilll/entity/schedule.codegen.dart';
 import 'package:pilll/entity/setting.codegen.dart';
 import 'package:pilll/entity/weekday.dart';
+import 'package:pilll/entrypoint.dart';
 import 'package:pilll/features/record/components/add_pill_sheet_group/provider.dart';
-import 'package:pilll/native/pill.dart';
-import 'package:pilll/native/widget.dart';
-import 'package:pilll/provider/database.dart';
 import 'package:pilll/provider/pill_sheet_group.dart';
 import 'package:pilll/provider/user.dart';
 import 'package:pilll/provider/setting.dart';
@@ -43,6 +39,7 @@ const androidReminderNotificationGroupKey = "androidReminderNotificationGroupKey
 const androidNotificationCategoryCalendarSchedule = "androidNotificationCategoryCalendarSchedule";
 
 // Notification ID offset
+const fallbackNotificationIdentifier = 1;
 const scheduleNotificationIdentifierOffset = 100000;
 const reminderNotificationIdentifierOffset = 1000000000;
 
@@ -552,49 +549,3 @@ extension ScheduleLocalNotificationService on LocalNotificationService {
 }
 
 var localNotificationService = LocalNotificationService()..initialize();
-
-// TODO: [UseLocalNotification-Beta] 2023-11 このコメントを削除
-// iOSはmethodChannel経由の方が呼ばれる。iOSはネイティブの方のコードで上書きされる模様。現在はAndroidのために定義
-@pragma('vm:entry-point')
-Future<void> handleNotificationAction(NotificationResponse notificationResponse) async {
-  if (notificationResponse.actionId == actionIdentifier) {
-    // 通知からの起動の時に、FirebaseAuth.instanceを参照すると、まだinitializeされてないよ．的なエラーが出る
-    if (Firebase.apps.isEmpty) {
-      await Firebase.initializeApp();
-    }
-    final firebaseUser = FirebaseAuth.instance.currentUser;
-    if (firebaseUser == null) {
-      return;
-    }
-
-    try {
-      analytics.logEvent(name: "handle_notification_action");
-
-      final database = DatabaseConnection(firebaseUser.uid);
-
-      final pillSheetGroup = await quickRecordTakePill(database);
-      syncActivePillSheetValue(pillSheetGroup: pillSheetGroup);
-
-      final cancelReminderLocalNotification = CancelReminderLocalNotification();
-      // エンティティの変更があった場合にdatabaseの読み込みで最新の状態を取得するために、Future.microtaskで更新を待ってから処理を始める
-      // hour,minute,番号を基準にIDを決定しているので、時間変更や番号変更時にそれまで登録されていたIDを特定するのが不可能なので全てキャンセルする
-      await (Future.microtask(() => null), cancelReminderLocalNotification()).wait;
-
-      final activePillSheet = pillSheetGroup?.activePillSheet;
-      final user = (await database.userReference().get()).data();
-      final setting = user?.setting;
-      if (pillSheetGroup != null && activePillSheet != null && user != null && setting != null) {
-        if (user.useLocalNotificationForReminder) {
-          await RegisterReminderLocalNotification.run(
-            pillSheetGroup: pillSheetGroup,
-            activePillSheet: activePillSheet,
-            premiumOrTrial: user.isPremium || user.isTrial,
-            setting: setting,
-          );
-        }
-      }
-    } catch (e, st) {
-      errorLogger.recordError(e, st);
-    }
-  }
-}

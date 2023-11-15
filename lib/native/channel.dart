@@ -14,6 +14,8 @@ void definedChannel() {
   methodChannel.setMethodCallHandler((MethodCall call) async {
     switch (call.method) {
       case 'recordPill':
+        await LocalNotificationService.setupTimeZone();
+
         // TODO: [UseLocalNotification-Beta] 2023-11 不要になったら処理を削除
         // ネイティブ側のFirebaseの処理も削除
         // 通知からの起動の時に、FirebaseAuth.instanceを参照すると、まだinitializeされてないよ．的なエラーが出る
@@ -53,6 +55,14 @@ void definedChannel() {
           }
         } catch (e, st) {
           errorLogger.recordError(e, st);
+
+          // errorLoggerに記録した後に実行する。これも失敗する可能性がある
+          await localNotificationService.plugin.show(
+            fallbackNotificationIdentifier,
+            "服用記録が失敗した可能性があります",
+            "アプリを開いてご確認ください",
+            null,
+          );
         }
         return;
       case "salvagedOldStartTakenDate":
