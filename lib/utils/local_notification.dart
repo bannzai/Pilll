@@ -39,6 +39,7 @@ const androidReminderNotificationGroupKey = "androidReminderNotificationGroupKey
 const androidNotificationCategoryCalendarSchedule = "androidNotificationCategoryCalendarSchedule";
 
 // Notification ID offset
+const fallbackNotificationIdentifier = 1;
 const scheduleNotificationIdentifierOffset = 100000;
 const reminderNotificationIdentifierOffset = 1000000000;
 

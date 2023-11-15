@@ -55,6 +55,14 @@ void definedChannel() {
           }
         } catch (e, st) {
           errorLogger.recordError(e, st);
+
+          // errorLoggerに記録した後に実行する。これも失敗する可能性がある
+          await localNotificationService.plugin.show(
+            fallbackNotificationIdentifier,
+            "服用記録が失敗した可能性があります",
+            "アプリを開いてご確認ください",
+            null,
+          );
         }
         return;
       case "salvagedOldStartTakenDate":
