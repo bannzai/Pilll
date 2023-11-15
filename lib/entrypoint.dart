@@ -19,6 +19,7 @@ import 'package:pilll/components/atoms/color.dart';
 import 'package:pilll/components/atoms/font.dart';
 import 'package:pilll/features/root/root_page.dart';
 import 'package:pilll/native/channel.dart';
+import 'package:pilll/utils/emulator/emulator.dart';
 import 'package:pilll/utils/local_notification.dart';
 import 'package:pilll/utils/datetime/debug_print.dart';
 import 'package:pilll/utils/environment.dart';
@@ -62,11 +63,6 @@ Future<void> entrypoint() async {
       child: const App(),
     ));
   }, (error, stack) => FirebaseCrashlytics.instance.recordError(error, stack));
-}
-
-void connectToEmulator() {
-  final domain = Platform.isAndroid ? '10.0.2.2' : 'localhost';
-  FirebaseFirestore.instance.settings = Settings(persistenceEnabled: false, host: '$domain:8080', sslEnabled: false);
 }
 
 final navigatorKey = GlobalKey<NavigatorState>();
