@@ -122,6 +122,28 @@ class PillSheetModifiedHistory with _$PillSheetModifiedHistory {
 
   PillSheet? get beforeActivePillSheet => beforePillSheetGroup?.activePillSheetWhen(estimatedEventCausingDate);
   PillSheet? get afterActivePillSheet => afterPillSheetGroup?.activePillSheetWhen(estimatedEventCausingDate);
+
+  // takenActionとrevertTakenActionではシートを跨いだ操作が可能なので、beforePillSheetを見つけ出すコードを個別に用意する
+  // before != after は絶対存在するはずなので、該当するものがない場合はassertを書いてある。クラッシュまでさせる必要は無いので
+  // return beforeActivePillSheet してある
+  PillSheet? lookupBeforePillSheet() {
+    final beforePillSheetGroup = this.beforePillSheetGroup;
+    final afterPillSheetGroup = this.afterPillSheetGroup;
+    if (beforePillSheetGroup == null || afterPillSheetGroup == null) {
+      assert(false);
+      return beforeActivePillSheet;
+    }
+
+    for (final beforePillSheet in beforePillSheetGroup.pillSheets.indexed) {
+      final afterPillSheet = afterPillSheetGroup.pillSheets[beforePillSheet.$1];
+      if (afterPillSheet != beforePillSheet.$2) {
+        return beforePillSheet.$2;
+      }
+    }
+
+    assert(false);
+    return beforeActivePillSheet;
+  }
 }
 
 // Factories
