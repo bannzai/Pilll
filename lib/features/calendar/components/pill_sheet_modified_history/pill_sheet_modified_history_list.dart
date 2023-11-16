@@ -82,7 +82,24 @@ class PillSheetModifiedHistoryList extends HookConsumerWidget {
                 estimatedEventCausingDate: history.estimatedEventCausingDate,
                 history: history,
                 value: history.value.takenPill,
-                beforePillSheet: history.beforeActivePillSheet,
+                beforePillSheet: () {
+                  final beforePillSheetGroup = history.beforePillSheetGroup;
+                  final afterPillSheetGroup = history.afterPillSheetGroup;
+                  if (beforePillSheetGroup == null || afterPillSheetGroup == null) {
+                    assert(false);
+                    return history.beforeActivePillSheet;
+                  }
+
+                  for (final beforePillSheet in beforePillSheetGroup.pillSheets.indexed) {
+                    final afterPillSheet = afterPillSheetGroup.pillSheets[beforePillSheet.$1];
+                    if (afterPillSheet != beforePillSheet.$2) {
+                      return beforePillSheet.$2;
+                    }
+                  }
+
+                  assert(false);
+                  return history.beforeActivePillSheet;
+                }(),
                 afterPillSheet: history.afterActivePillSheet,
               ),
             PillSheetModifiedActionType.revertTakenPill => PillSheetModifiedHistoryRevertTakenPillAction(
