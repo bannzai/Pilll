@@ -119,27 +119,6 @@ class PillSheetModifiedHistory with _$PillSheetModifiedHistory {
   factory PillSheetModifiedHistory.fromJson(Map<String, dynamic> json) => _$PillSheetModifiedHistoryFromJson(json);
 
   PillSheetModifiedActionType? get enumActionType => PillSheetModifiedActionType.values.firstWhereOrNull((element) => element.name == actionType);
-
-  PillSheet? get _beforeActivePillSheet => beforePillSheetGroup?.activePillSheetWhen(estimatedEventCausingDate);
-  PillSheet? get _afterActivePillSheet => afterPillSheetGroup?.activePillSheetWhen(estimatedEventCausingDate);
-
-  (PillSheet?, PillSheet?) pillSheetChange() {
-    final beforePillSheetGroup = this.beforePillSheetGroup;
-    final afterPillSheetGroup = this.afterPillSheetGroup;
-    if (beforePillSheetGroup == null || afterPillSheetGroup == null) {
-      return (_beforeActivePillSheet, _afterActivePillSheet);
-    }
-
-    for (final beforePillSheet in beforePillSheetGroup.pillSheets.indexed) {
-      final afterPillSheet = afterPillSheetGroup.pillSheets[beforePillSheet.$1];
-      if (afterPillSheet != beforePillSheet.$2) {
-        // NOTE: 変化後のPillSheetは_afterActivePillSheetで良い
-        return (beforePillSheet.$2, _afterActivePillSheet);
-      }
-    }
-
-    return (_beforeActivePillSheet, _afterActivePillSheet);
-  }
 }
 
 // Factories
