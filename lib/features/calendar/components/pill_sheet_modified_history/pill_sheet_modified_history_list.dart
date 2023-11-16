@@ -110,8 +110,8 @@ class PillSheetModifiedHistoryList extends HookConsumerWidget {
               ),
             PillSheetModifiedActionType.changedPillNumber => PillSheetModifiedHistoryChangedPillNumberAction(
                 estimatedEventCausingDate: history.estimatedEventCausingDate,
-                beforeTodayPillNumber: history.pillSheetChange().$1?.pillNumberFor(targetDate: history.estimatedEventCausingDate),
-                afterTodayPillNumber: history.pillSheetChange().$2?.pillNumberFor(targetDate: history.estimatedEventCausingDate),
+                beforeTodayPillNumber: history.beforeActivePillSheet?.pillNumberFor(targetDate: history.estimatedEventCausingDate),
+                afterTodayPillNumber: history.afterActivePillSheet?.pillNumberFor(targetDate: history.estimatedEventCausingDate),
               ),
             PillSheetModifiedActionType.endedPillSheet => PillSheetModifiedHistoryEndedPillSheetAction(
                 value: history.value.endedPillSheet,
