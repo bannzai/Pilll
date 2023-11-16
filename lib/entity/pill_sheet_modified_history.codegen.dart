@@ -120,29 +120,25 @@ class PillSheetModifiedHistory with _$PillSheetModifiedHistory {
 
   PillSheetModifiedActionType? get enumActionType => PillSheetModifiedActionType.values.firstWhereOrNull((element) => element.name == actionType);
 
-  PillSheet? get beforeActivePillSheet => beforePillSheetGroup?.activePillSheetWhen(estimatedEventCausingDate);
-  PillSheet? get afterActivePillSheet => afterPillSheetGroup?.activePillSheetWhen(estimatedEventCausingDate);
+  PillSheet? get _beforeActivePillSheet => beforePillSheetGroup?.activePillSheetWhen(estimatedEventCausingDate);
+  PillSheet? get _afterActivePillSheet => afterPillSheetGroup?.activePillSheetWhen(estimatedEventCausingDate);
 
-  // takenActionとrevertTakenActionではシートを跨いだ操作が可能なので、beforePillSheetを見つけ出すコードを個別に用意する
-  // before != after は絶対存在するはずなので、該当するものがない場合はassertを書いてある。クラッシュまでさせる必要は無いので
-  // return beforeActivePillSheet してある
-  PillSheet? lookupBeforePillSheet() {
+  (PillSheet?, PillSheet?) pillSheetChange() {
     final beforePillSheetGroup = this.beforePillSheetGroup;
     final afterPillSheetGroup = this.afterPillSheetGroup;
     if (beforePillSheetGroup == null || afterPillSheetGroup == null) {
-      assert(false);
-      return beforeActivePillSheet;
+      return (_beforeActivePillSheet, _afterActivePillSheet);
     }
 
     for (final beforePillSheet in beforePillSheetGroup.pillSheets.indexed) {
       final afterPillSheet = afterPillSheetGroup.pillSheets[beforePillSheet.$1];
       if (afterPillSheet != beforePillSheet.$2) {
-        return beforePillSheet.$2;
+        // NOTE: 変化後のPillSheetは_afterActivePillSheetで良い
+        return (beforePillSheet.$2, _afterActivePillSheet);
       }
     }
 
-    assert(false);
-    return beforeActivePillSheet;
+    return (_beforeActivePillSheet, _afterActivePillSheet);
   }
 }
 
