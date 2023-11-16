@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
+import 'package:pilll/entity/pill_sheet.codegen.dart';
 import 'package:pilll/features/calendar/components/pill_sheet_modified_history/components/rows/pill_sheet_modified_history_automatically_recorded_last_taken_date_action.dart';
 import 'package:pilll/features/calendar/components/pill_sheet_modified_history/components/rows/pill_sheet_modified_history_began_rest_duration.dart';
 import 'package:pilll/features/calendar/components/pill_sheet_modified_history/components/rows/pill_sheet_modified_history_begin_display_number_action.dart';
@@ -72,9 +73,16 @@ class PillSheetModifiedHistoryList extends HookConsumerWidget {
               ),
             PillSheetModifiedActionType.automaticallyRecordedLastTakenDate => PillSheetModifiedHistoryAutomaticallyRecordedLastTakenDateAction(
                 estimatedEventCausingDate: history.estimatedEventCausingDate,
-                beforeLastTakenPillNumber: history.beforePillSheet?.lastTakenPillNumber,
-                afterLastTakenPillNumber: history.afterPillSheet?.lastTakenPillNumber,
-              ),
+                beforeLastTakenPillNumber: history.beforePillSheetGroup?.pillSheets
+                    .findFirstDifferencePillSheet(
+                      history.afterPillSheetGroup?.pillSheets,
+                    )
+                    ?.lastTakenPillNumber,
+                afterLastTakenPillNumber: history.afterPillSheetGroup?.pillSheets.reversed
+                    .findFirstDifferencePillSheet(
+                      history.beforePillSheetGroup?.pillSheets.reversed,
+                    )
+                    ?.lastTakenPillNumber),
             PillSheetModifiedActionType.deletedPillSheet => PillSheetModifiedHistoryDeletedPillSheetAction(
                 estimatedEventCausingDate: history.estimatedEventCausingDate, pillSheetIDs: history.afterPillSheetGroup?.pillSheetIDs),
             PillSheetModifiedActionType.takenPill => PillSheetModifiedHistoryTakenPillAction(
@@ -82,18 +90,29 @@ class PillSheetModifiedHistoryList extends HookConsumerWidget {
                 estimatedEventCausingDate: history.estimatedEventCausingDate,
                 history: history,
                 value: history.value.takenPill,
-                beforePillSheet: history.beforePillSheet,
-                afterPillSheet: history.afterPillSheet,
+                beforePillSheet: history.beforePillSheetGroup?.pillSheets.findFirstDifferencePillSheet(
+                  history.afterPillSheetGroup?.pillSheets,
+                ),
+                afterPillSheet: history.afterPillSheetGroup?.pillSheets.reversed.findFirstDifferencePillSheet(
+                  history.beforePillSheetGroup?.pillSheets.reversed,
+                ),
               ),
+            // NOTE: revertTakenPill は findFirstDifferencePillSheetの向きはtakenPill等とは逆になる。なぜならbeforeの方がafterよりも後ろのピルシートの服用記録になるから、beforeの場合は後ろから(reversed)探索する
             PillSheetModifiedActionType.revertTakenPill => PillSheetModifiedHistoryRevertTakenPillAction(
                 estimatedEventCausingDate: history.estimatedEventCausingDate,
-                beforeLastTakenPillNumber: history.beforePillSheet?.lastTakenPillNumber,
-                afterLastTakenPillNumber: history.afterPillSheet?.lastTakenPillNumber,
+                beforeLastTakenPillNumber: history.beforePillSheetGroup?.pillSheets.reversed
+                    .findFirstDifferencePillSheet(history.afterPillSheetGroup?.pillSheets.reversed)
+                    ?.lastTakenPillNumber,
+                afterLastTakenPillNumber: history.afterPillSheetGroup?.pillSheets
+                    .findFirstDifferencePillSheet(
+                      history.beforePillSheetGroup?.pillSheets,
+                    )
+                    ?.lastTakenPillNumber,
               ),
             PillSheetModifiedActionType.changedPillNumber => PillSheetModifiedHistoryChangedPillNumberAction(
                 estimatedEventCausingDate: history.estimatedEventCausingDate,
-                beforeTodayPillNumber: history.beforePillSheet?.pillNumberFor(targetDate: history.estimatedEventCausingDate),
-                afterTodayPillNumber: history.afterPillSheet?.pillNumberFor(targetDate: history.estimatedEventCausingDate),
+                beforeTodayPillNumber: history.beforeActivePillSheet?.pillNumberFor(targetDate: history.estimatedEventCausingDate),
+                afterTodayPillNumber: history.afterActivePillSheet?.pillNumberFor(targetDate: history.estimatedEventCausingDate),
               ),
             PillSheetModifiedActionType.endedPillSheet => PillSheetModifiedHistoryEndedPillSheetAction(
                 value: history.value.endedPillSheet,
@@ -226,5 +245,27 @@ class PillSheetModifiedHistoryList extends HookConsumerWidget {
       }
     }
     return models;
+  }
+}
+
+extension on Iterable<PillSheet> {
+  // NOTE: メソッドのレシーバーと引数のreversedの状態は基本揃える
+  PillSheet? findFirstDifferencePillSheet(Iterable<PillSheet>? otherPillSheets) {
+    if (otherPillSheets == null) {
+      return null;
+    }
+
+    for (final (index, pillSheet) in indexed) {
+      if (otherPillSheets.length <= index) {
+        continue;
+      }
+
+      final otherPillSheet = otherPillSheets.toList()[index];
+      if (pillSheet != otherPillSheet) {
+        // NOTE: 変化後のPillSheetは_afterActivePillSheetで良い
+        return pillSheet;
+      }
+    }
+    return null;
   }
 }
