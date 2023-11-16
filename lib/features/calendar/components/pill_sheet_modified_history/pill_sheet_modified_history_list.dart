@@ -97,6 +97,7 @@ class PillSheetModifiedHistoryList extends HookConsumerWidget {
                   history.beforePillSheetGroup?.pillSheets.reversed,
                 ),
               ),
+            // NOTE: revertTakenPill は findFirstDifferencePillSheetの向きはtakenPill等とは逆になる。なぜならbeforeの方がafterよりも後ろのピルシートの服用記録になるから、beforeの場合は後ろから(reversed)探索する
             PillSheetModifiedActionType.revertTakenPill => PillSheetModifiedHistoryRevertTakenPillAction(
                 estimatedEventCausingDate: history.estimatedEventCausingDate,
                 beforeLastTakenPillNumber: history.beforePillSheetGroup?.pillSheets.reversed
