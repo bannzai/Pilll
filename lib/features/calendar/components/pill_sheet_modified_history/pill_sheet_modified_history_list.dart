@@ -248,6 +248,7 @@ class PillSheetModifiedHistoryList extends HookConsumerWidget {
 }
 
 extension on Iterable<PillSheet> {
+  // NOTE: メソッドのレシーバーと引数のreversedの状態は基本揃える
   PillSheet? findFirstDifferencePillSheet(Iterable<PillSheet>? otherPillSheets) {
     if (otherPillSheets == null) {
       return null;
