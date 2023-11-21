@@ -485,10 +485,10 @@ class RegisterReminderLocalNotification {
   // reminder time id is 10{groupIndex:2}{hour:2}{minute:2}{pillNumberInPillSheet:2}
   // for example return value 1002223014 means,  `10` is prefix, gropuIndex: `02` is third pillSheet,`22` is hour, `30` is minute, `14` is pill number into pill sheet
   // 1000000000 = reminderNotificationIdentifierOffset
-  // 10000000 = pillSheetGroupIndex
-  // 100000 = reminderTime.hour
-  // 1000 = reminderTime.minute
-  // 10 = pillNumberInPillSheet
+  //   10000000 = pillSheetGroupIndex
+  //     100000 = reminderTime.hour
+  //       1000 = reminderTime.minute
+  //         10 = pillNumberInPillSheet
   static int _calcLocalNotificationID({
     required int pillSheetGroupIndex,
     required ReminderTime reminderTime,
