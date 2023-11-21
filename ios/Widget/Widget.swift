@@ -8,17 +8,15 @@ struct WidgetEntryView : View {
   var entry: Provider.Entry
 
   var body: some View {
-    Group {
-      switch widgetFamily {
-      case .systemSmall:
-        SmallWidget(entry: entry)
-      case .accessoryCircular:
-        AccessoryCircularWidget(entry: entry)
-      case _:
-        fatalError()
-      }
+    switch widgetFamily {
+    case .systemSmall:
+      SmallWidget(entry: entry)
+        .widgetBackground(Color.white)
+    case .accessoryCircular:
+      AccessoryCircularWidget(entry: entry)
+    case _:
+      fatalError()
     }
-    .widgetBackground(Color.white)
   }
 }
 
