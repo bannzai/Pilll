@@ -514,6 +514,7 @@ class CancelReminderLocalNotification {
     final pendingNotifications = await localNotificationService.pendingReminderNotifications();
     analytics.logEvent(name: "cancel_reminder_local_notification", parameters: {
       "length": pendingNotifications.length,
+      "ids": pendingNotifications.map((e) => e.id).toList().toString(),
     });
     await Future.wait(pendingNotifications.map((p) => localNotificationService.cancelNotification(localNotificationID: p.id)));
   }
