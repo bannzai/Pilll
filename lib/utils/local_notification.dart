@@ -485,10 +485,10 @@ class RegisterReminderLocalNotification {
   // reminder time id is 10{groupIndex:2}{hour:2}{minute:2}{pillNumberInPillSheet:2}
   // for example return value 1002223014 means,  `10` is prefix, gropuIndex: `02` is third pillSheet,`22` is hour, `30` is minute, `14` is pill number into pill sheet
   // 1000000000 = reminderNotificationIdentifierOffset
-  // 10000000 = pillSheetGroupIndex
-  // 100000 = reminderTime.hour
-  // 1000 = reminderTime.minute
-  // 10 = pillNumberInPillSheet
+  //   10000000 = pillSheetGroupIndex
+  //     100000 = reminderTime.hour
+  //       1000 = reminderTime.minute
+  //         10 = pillNumberInPillSheet
   static int _calcLocalNotificationID({
     required int pillSheetGroupIndex,
     required ReminderTime reminderTime,
@@ -512,6 +512,10 @@ class CancelReminderLocalNotification {
   // これら以外はRegisterReminderLocalNotificationで登録し直す。なおRegisterReminderLocalNotification の内部でこの関数を読んでいる
   Future<void> call() async {
     final pendingNotifications = await localNotificationService.pendingReminderNotifications();
+    analytics.logEvent(name: "cancel_reminder_local_notification", parameters: {
+      "length": pendingNotifications.length,
+      "ids": pendingNotifications.map((e) => e.id).toList().toString(),
+    });
     await Future.wait(pendingNotifications.map((p) => localNotificationService.cancelNotification(localNotificationID: p.id)));
   }
 }
