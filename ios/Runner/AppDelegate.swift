@@ -200,6 +200,11 @@ import flutter_local_notifications
         FlutterLocalNotificationsPlugin.setPluginRegistrantCallback { (registry) in
             GeneratedPluginRegistrant.register(with: registry)
         }
+
+        if let dic = UserDefaults.standard.object(forKey: "flutter_local_notifications_presentation_options") as [String: Any] {
+            analytics(name: "fln_debug", parameters: dic)
+        }
+
         GeneratedPluginRegistrant.register(with: self)
         return super.application(application, didFinishLaunchingWithOptions: launchOptions)
     }

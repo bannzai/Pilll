@@ -560,4 +560,4 @@ extension ScheduleLocalNotificationService on LocalNotificationService {
   }
 }
 
-var localNotificationService = LocalNotificationService()..initialize();
+var localNotificationService = LocalNotificationService();
