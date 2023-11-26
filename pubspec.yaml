@@ -65,6 +65,8 @@ dependencies:
   crypto:
   timezone:
   firebase_remote_config: ^4.3.3
+  firebase_remote_config: ^4.3.1
+  google_mobile_ads: ^3.0.0
 
 dev_dependencies:
   # The "flutter_lints" package below contains a set of recommended lints to
