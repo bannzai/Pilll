@@ -27,8 +27,7 @@ import 'package:shared_preferences/shared_preferences.dart';
 Future<void> entrypoint() async {
   runZonedGuarded(() async {
     WidgetsFlutterBinding.ensureInitialized();
-    MobileAds.instance.initialize();
-    await Firebase.initializeApp();
+    await (MobileAds.instance.initialize(), Firebase.initializeApp()).wait;
     // QuickRecordの処理などFirebaseを使用するのでFirebase.initializeApp()の後に時刻する
     // また、同じくQuickRecordの処理開始までにMethodChannelが確立されていてほしいのでこの処理はなるべく早く実行する
     definedChannel();
