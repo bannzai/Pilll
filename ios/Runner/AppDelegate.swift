@@ -256,7 +256,7 @@ extension FlutterLocalNotificationsPlugin {
    }
 
     @objc func userNotificationCenter_fln(_ center: UNUserNotificationCenter, willPresent notification: UNNotification, withCompletionHandler completionHandler: @escaping (UNNotificationPresentationOptions) -> Void) {
-        analytics(name: "will_present_fln", parameters: ["notification_id" : notification.request.identifier])
+        analytics(name: "will_present_fln", parameters: ["notification_id" : notification.request.identifier, "content": notification.request.content.description])
         userNotificationCenter_fln(center, willPresent: notification, withCompletionHandler: completionHandler)
     }
 }
@@ -274,7 +274,7 @@ extension FLTFirebaseMessagingPlugin {
    }
 
     @objc func userNotificationCenter_fcm(_ center: UNUserNotificationCenter, willPresent notification: UNNotification, withCompletionHandler completionHandler: @escaping (UNNotificationPresentationOptions) -> Void) {
-        analytics(name: "will_present_fcm", parameters: ["notification_id" : notification.request.identifier])
+        analytics(name: "will_present_fcm", parameters: ["notification_id" : notification.request.identifier, "content": notification.request.content.description])
         userNotificationCenter_fcm(center, willPresent: notification, withCompletionHandler: completionHandler)
     }
 }
@@ -300,7 +300,7 @@ extension AppDelegate {
     }
 
     override func userNotificationCenter(_ center: UNUserNotificationCenter, willPresent notification: UNNotification, withCompletionHandler completionHandler: @escaping (UNNotificationPresentationOptions) -> Void) {
-        analytics(name: "will_present", parameters: ["notification_id" : notification.request.identifier])
+        analytics(name: "will_present", parameters: ["notification_id" : notification.request.identifier, "content": notification.request.content.description])
         if #available(iOS 14.0, *) {
             completionHandler([.banner, .list, .sound, .badge])
         } else {
