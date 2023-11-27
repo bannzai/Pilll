@@ -148,7 +148,7 @@ class __$$ReminderNotificationCustomizationImplCopyWithImpl<$Res>
 class _$ReminderNotificationCustomizationImpl
     extends _ReminderNotificationCustomization {
   const _$ReminderNotificationCustomizationImpl(
-      {this.word = pill,
+      {this.word = pillEmoji,
       this.isInVisibleReminderDate = false,
       this.isInVisiblePillNumber = false,
       this.isInVisibleDescription = false})
