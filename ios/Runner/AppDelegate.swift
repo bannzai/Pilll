@@ -202,10 +202,13 @@ private var channel: FlutterMethodChannel?
         FlutterLocalNotificationsPlugin.setPluginRegistrantCallback { (registry) in
             GeneratedPluginRegistrant.register(with: registry)
         }
+        // NOTE: [LOCAL_NOTIFICATION] Flutter Local NotificationのExamplesではFlutterLocalNotificationsPlugin.setPluginRegistrantCallbackのあとにDelegateをセットしている
+        // 通知が来ない問題があり再現しないため原因は不明だがこの順番を守る
         UNUserNotificationCenter.current().delegate = self
 
         GeneratedPluginRegistrant.register(with: self)
         DispatchQueue.main.asyncAfter(deadline: .now() + 0.1) { [self] in
+            // NOTE: [LOCAL_NOTIFICATION] Flutter local notificationの構造体をロギングしている
             if let dic = UserDefaults.standard.object(forKey: "flutter_local_notifications_presentation_options") as? [String: Any] {
                 analytics(name: "fln_debug", parameters: dic)
             }
@@ -243,50 +246,6 @@ extension UNUserNotificationCenter {
     }
 }
 
-extension FlutterLocalNotificationsPlugin {
-    static func swizzle() {
-        guard let fromMethod = class_getInstanceMethod(Self.self, #selector(FlutterLocalNotificationsPlugin.userNotificationCenter(_:willPresent:withCompletionHandler:))) else {
-            fatalError()
-        }
-        guard let toMethod = class_getInstanceMethod(Self.self, #selector(FlutterLocalNotificationsPlugin.userNotificationCenter_fln(_:willPresent:withCompletionHandler:))) else {
-            fatalError()
-        }
-
-        method_exchangeImplementations(fromMethod, toMethod)
-   }
-
-    @objc func userNotificationCenter_fln(_ center: UNUserNotificationCenter, willPresent notification: UNNotification, withCompletionHandler completionHandler: @escaping (UNNotificationPresentationOptions) -> Void) {
-        if #available(iOS 15.0, *) {
-            analytics(name: "will_present_fln", parameters: ["notification_id" : notification.request.identifier, "content_title": notification.request.content.title, "content_body": notification.request.content.body, "content_interruptionLevel": notification.request.content.interruptionLevel.rawValue])
-        } else {
-            // Fallback on earlier versions
-        }
-        userNotificationCenter_fln(center, willPresent: notification, withCompletionHandler: completionHandler)
-    }
-}
-
-extension FLTFirebaseMessagingPlugin {
-    static func swizzle() {
-        guard let fromMethod = class_getInstanceMethod(Self.self, #selector(FLTFirebaseMessagingPlugin.userNotificationCenter(_:willPresent:withCompletionHandler:))) else {
-            fatalError()
-        }
-        guard let toMethod = class_getInstanceMethod(Self.self, #selector(FLTFirebaseMessagingPlugin.userNotificationCenter_fcm(_:willPresent:withCompletionHandler:))) else {
-            fatalError()
-        }
-
-        method_exchangeImplementations(fromMethod, toMethod)
-   }
-
-    @objc func userNotificationCenter_fcm(_ center: UNUserNotificationCenter, willPresent notification: UNNotification, withCompletionHandler completionHandler: @escaping (UNNotificationPresentationOptions) -> Void) {
-        if #available(iOS 15.0, *) {
-            analytics(name: "will_present_fcm", parameters: ["notification_id" : notification.request.identifier, "content_title": notification.request.content.title, "content_body": notification.request.content.body, "content_interruptionLevel": notification.request.content.interruptionLevel.rawValue])
-        } else {
-            // Fallback on earlier versions
-        }
-        userNotificationCenter_fcm(center, willPresent: notification, withCompletionHandler: completionHandler)
-    }
-}
-
 // MARK: - Notification
 extension AppDelegate {
     func migrateFrom_1_3_2() {
@@ -307,23 +266,27 @@ extension AppDelegate {
         UNUserNotificationCenter.current().setNotificationCategories([category])
     }
 
-//    override func userNotificationCenter(_ center: UNUserNotificationCenter, willPresent notification: UNNotification, withCompletionHandler completionHandler: @escaping (UNNotificationPresentationOptions) -> Void) {
-//        if #available(iOS 15.0, *) {
-//            analytics(name: "will_present", parameters: ["notification_id" : notification.request.identifier, "content_title": notification.request.content.title, "content_body": notification.request.content.body, "content_interruptionLevel": notification.request.content.interruptionLevel.rawValue])
-//        } else {
-//            // Fallback on earlier versions
-//        }
-//        UNUserNotificationCenter.current().getPendingNotificationRequests(completionHandler: { requests in
-//            analytics(name: "pending_notifications", parameters: ["length": requests.count])
-//            
-//            if #available(iOS 14.0, *) {
-//                completionHandler([.banner, .list, .sound, .badge])
-//            } else {
-//                completionHandler([.alert, .sound, .badge])
-//            }
-//        })
-//
-//    }
+    // NOTE: [LOCAL_NOTIFICATION] async/await版のメソッドは使わない。
+    // FlutterPluginAppLifeCycleDelegateから呼び出しているのがwithCompletionHandler付きのものなので合わせる
+    // https://chromium.googlesource.com/external/github.com/flutter/engine/+/refs/heads/flutter-2.5-candidate.8/shell/platform/darwin/ios/framework/Source/FlutterPluginAppLifeCycleDelegate.mm#283
+    
+    // NOTE: このメソッドをoverrideすることでplugin側の処理は呼ばれないことに注意する。
+    // 常に一緒な結果をcompletionHandlerで実行すれば良いのでoverrideしても問題はない
+    override func userNotificationCenter(_ center: UNUserNotificationCenter, willPresent notification: UNNotification, withCompletionHandler completionHandler: @escaping (UNNotificationPresentationOptions) -> Void) {
+        if #available(iOS 15.0, *) {
+            analytics(name: "will_present", parameters: ["notification_id" : notification.request.identifier, "content_title": notification.request.content.title, "content_body": notification.request.content.body, "content_interruptionLevel": notification.request.content.interruptionLevel.rawValue])
+        } else {
+            // Fallback on earlier versions
+        }
+        UNUserNotificationCenter.current().getPendingNotificationRequests(completionHandler: { requests in
+            analytics(name: "pending_notifications", parameters: ["length": requests.count])
+        })
+        if #available(iOS 14.0, *) {
+            completionHandler([.banner, .list, .sound, .badge])
+        } else {
+            completionHandler([.alert, .sound, .badge])
+        }
+    }
 
     override func userNotificationCenter(_ center: UNUserNotificationCenter, didReceive response: UNNotificationResponse, withCompletionHandler completionHandler: @escaping () -> Void) {
         func end() {
