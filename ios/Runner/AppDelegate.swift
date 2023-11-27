@@ -4,10 +4,11 @@ import Flutter
 import HealthKit
 import WidgetKit
 import flutter_local_notifications
+import firebase_messaging
 
+private var channel: FlutterMethodChannel?
 @UIApplicationMain
 @objc class AppDelegate: FlutterAppDelegate {
-    private var channel: FlutterMethodChannel?
 
     override func application(
         _ application: UIApplication,
@@ -176,12 +177,12 @@ import flutter_local_notifications
                         let userConfiguredFamilies = try result.get().map(\.family)
                         if !userConfiguredFamilies.isEmpty {
                             if #available(iOS 16.0, *) {
-                                self.analytics(name: "user_configured_ios_widget", parameters: [
+                                analytics(name: "user_configured_ios_widget", parameters: [
                                     "systemSmall": userConfiguredFamilies.contains(.systemSmall),
                                     "accessoryCircular": userConfiguredFamilies.contains(.accessoryCircular)
                                 ])
                             } else {
-                                self.analytics(name: "user_configured_ios_widget", parameters: [
+                                analytics(name: "user_configured_ios_widget", parameters: [
                                     "systemSmall": userConfiguredFamilies.contains(.systemSmall),
                                 ])
                             }
@@ -194,12 +195,14 @@ import flutter_local_notifications
         }
         configureNotificationActionableButtons()
         UNUserNotificationCenter.current().swizzle()
+        FLTFirebaseMessagingPlugin.swizzle()
+        FlutterLocalNotificationsPlugin.swizzle()
         UNUserNotificationCenter.current().removeDeliveredNotifications(withIdentifiers: ["repeat_notification_for_taken_pill", "remind_notification_for_taken_pill"])
         UNUserNotificationCenter.current().removePendingNotificationRequests(withIdentifiers: ["repeat_notification_for_taken_pill", "remind_notification_for_taken_pill"])
         FlutterLocalNotificationsPlugin.setPluginRegistrantCallback { (registry) in
             GeneratedPluginRegistrant.register(with: registry)
         }
-        UNUserNotificationCenter.current().delegate = self as UNUserNotificationCenterDelegate
+        UNUserNotificationCenter.current().delegate = self
 
         GeneratedPluginRegistrant.register(with: self)
         DispatchQueue.main.asyncAfter(deadline: .now() + 0.1) { [self] in
@@ -211,10 +214,11 @@ import flutter_local_notifications
         return super.application(application, didFinishLaunchingWithOptions: launchOptions)
     }
 
-    private func analytics(name: String, parameters: [String: Any]? = nil, function: StaticString = #function) {
-        print(function, name, parameters ?? [:])
-        channel?.invokeMethod("analytics", arguments: ["name": name, "parameters": parameters ?? [:]])
-    }
+}
+
+private func analytics(name: String, parameters: [String: Any]? = nil, function: StaticString = #function) {
+    print(function, name, parameters ?? [:])
+    channel?.invokeMethod("analytics", arguments: ["name": name, "parameters": parameters ?? [:]])
 }
 
 // MARK: - Avoid bug for flutter app badger
@@ -237,7 +241,42 @@ extension UNUserNotificationCenter {
         }
         setNotificationCategories_methodSwizzle(categories)
     }
+}
 
+extension FlutterLocalNotificationsPlugin {
+    static func swizzle() {
+        guard let fromMethod = class_getInstanceMethod(Self.self, #selector(FlutterLocalNotificationsPlugin.userNotificationCenter(_:willPresent:withCompletionHandler:))) else {
+            fatalError()
+        }
+        guard let toMethod = class_getInstanceMethod(Self.self, #selector(FlutterLocalNotificationsPlugin.userNotificationCenter_fln(_:willPresent:withCompletionHandler:))) else {
+            fatalError()
+        }
+
+        method_exchangeImplementations(fromMethod, toMethod)
+   }
+
+    @objc func userNotificationCenter_fln(_ center: UNUserNotificationCenter, willPresent notification: UNNotification, withCompletionHandler completionHandler: @escaping (UNNotificationPresentationOptions) -> Void) {
+        analytics(name: "will_present_fln", parameters: ["notification_id" : notification.request.identifier])
+        userNotificationCenter_fln(center, willPresent: notification, withCompletionHandler: completionHandler)
+    }
+}
+
+extension FLTFirebaseMessagingPlugin {
+    static func swizzle() {
+        guard let fromMethod = class_getInstanceMethod(Self.self, #selector(FLTFirebaseMessagingPlugin.userNotificationCenter(_:willPresent:withCompletionHandler:))) else {
+            fatalError()
+        }
+        guard let toMethod = class_getInstanceMethod(Self.self, #selector(FLTFirebaseMessagingPlugin.userNotificationCenter_fcm(_:willPresent:withCompletionHandler:))) else {
+            fatalError()
+        }
+
+        method_exchangeImplementations(fromMethod, toMethod)
+   }
+
+    @objc func userNotificationCenter_fcm(_ center: UNUserNotificationCenter, willPresent notification: UNNotification, withCompletionHandler completionHandler: @escaping (UNNotificationPresentationOptions) -> Void) {
+        analytics(name: "will_present_fcm", parameters: ["notification_id" : notification.request.identifier])
+        userNotificationCenter_fcm(center, willPresent: notification, withCompletionHandler: completionHandler)
+    }
 }
 
 // MARK: - Notification
