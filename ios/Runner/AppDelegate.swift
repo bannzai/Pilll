@@ -260,11 +260,11 @@ extension AppDelegate {
         UNUserNotificationCenter.current().setNotificationCategories([category])
     }
 
-    override func userNotificationCenter(_ center: UNUserNotificationCenter, willPresent notification: UNNotification) async -> UNNotificationPresentationOptions {
+    override func userNotificationCenter(_ center: UNUserNotificationCenter, willPresent notification: UNNotification, withCompletionHandler completionHandler: @escaping (UNNotificationPresentationOptions) -> Void) {
         if #available(iOS 14.0, *) {
-            return [.banner, .list, .sound, .badge]
+            completionHandler([.banner, .list, .sound, .badge])
         } else {
-            return [.alert, .sound, .badge]
+            completionHandler([.alert, .sound, .badge])
         }
     }
 
