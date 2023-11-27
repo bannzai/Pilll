@@ -1,3 +1,4 @@
+import 'package:pilll/utils/environment.dart';
 import 'package:pilll/utils/toolbar/picker_toolbar.dart';
 import 'package:flutter/cupertino.dart';
 
@@ -16,7 +17,9 @@ class TimePicker extends StatelessWidget {
     var selectedDateTime = initialDateTime;
     // TODO: ローカル通知の検証が終わったら10分刻みにする
     var minimumInterval = 10;
-    minimumInterval = 1;
+    if (Environment.isDevelopment) {
+      minimumInterval = 1;
+    }
     return Column(
       mainAxisAlignment: MainAxisAlignment.end,
       mainAxisSize: MainAxisSize.min,
