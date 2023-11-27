@@ -261,6 +261,7 @@ extension AppDelegate {
     }
 
     override func userNotificationCenter(_ center: UNUserNotificationCenter, willPresent notification: UNNotification, withCompletionHandler completionHandler: @escaping (UNNotificationPresentationOptions) -> Void) {
+        analytics(name: "will_present", parameters: ["notification_id" : notification.request.identifier])
         if #available(iOS 14.0, *) {
             completionHandler([.banner, .list, .sound, .badge])
         } else {
