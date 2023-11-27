@@ -4,7 +4,6 @@ import Flutter
 import HealthKit
 import WidgetKit
 import flutter_local_notifications
-import firebase_messaging
 
 private var channel: FlutterMethodChannel?
 @UIApplicationMain
@@ -195,8 +194,6 @@ private var channel: FlutterMethodChannel?
         }
         configureNotificationActionableButtons()
         UNUserNotificationCenter.current().swizzle()
-        FLTFirebaseMessagingPlugin.swizzle()
-        FlutterLocalNotificationsPlugin.swizzle()
         UNUserNotificationCenter.current().removeDeliveredNotifications(withIdentifiers: ["repeat_notification_for_taken_pill", "remind_notification_for_taken_pill"])
         UNUserNotificationCenter.current().removePendingNotificationRequests(withIdentifiers: ["repeat_notification_for_taken_pill", "remind_notification_for_taken_pill"])
         FlutterLocalNotificationsPlugin.setPluginRegistrantCallback { (registry) in
