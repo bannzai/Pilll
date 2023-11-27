@@ -196,10 +196,10 @@ import flutter_local_notifications
         UNUserNotificationCenter.current().swizzle()
         UNUserNotificationCenter.current().removeDeliveredNotifications(withIdentifiers: ["repeat_notification_for_taken_pill", "remind_notification_for_taken_pill"])
         UNUserNotificationCenter.current().removePendingNotificationRequests(withIdentifiers: ["repeat_notification_for_taken_pill", "remind_notification_for_taken_pill"])
-        UNUserNotificationCenter.current().delegate = self as UNUserNotificationCenterDelegate
         FlutterLocalNotificationsPlugin.setPluginRegistrantCallback { (registry) in
             GeneratedPluginRegistrant.register(with: registry)
         }
+        UNUserNotificationCenter.current().delegate = self as UNUserNotificationCenterDelegate
 
         GeneratedPluginRegistrant.register(with: self)
         DispatchQueue.main.asyncAfter(deadline: .now() + 0.1) { [self] in
