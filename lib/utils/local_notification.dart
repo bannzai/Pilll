@@ -363,6 +363,7 @@ class RegisterReminderLocalNotification {
             if (Environment.isDevelopment) {
               result += " Local";
             }
+            // NOTE: 0文字以上じゃないと通知が表示されない。フロントでバリデーションをかけていてもここだけは残す
             if (result.isEmpty) {
               return "通知です";
             }
