@@ -17,9 +17,7 @@ class TimePicker extends StatelessWidget {
     var selectedDateTime = initialDateTime;
     // TODO: ローカル通知の検証が終わったら10分刻みにする
     var minimumInterval = 10;
-    if (Environment.isDevelopment) {
-      minimumInterval = 1;
-    }
+    minimumInterval = 1;
     return Column(
       mainAxisAlignment: MainAxisAlignment.end,
       mainAxisSize: MainAxisSize.min,
