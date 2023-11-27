@@ -67,6 +67,8 @@ class LocalNotificationService {
               ],
             ),
           ],
+          // Alertはdeprecatedなので、banner,listをtrueにしておけばよい。
+          // https://developer.apple.com/documentation/usernotifications/unnotificationpresentationoptions/unnotificationpresentationoptionalert
           defaultPresentAlert: false,
           defaultPresentBadge: true,
           defaultPresentSound: true,
@@ -399,6 +401,8 @@ class RegisterReminderLocalNotification {
                       sound: "becho.caf",
                       presentBadge: true,
                       presentSound: true,
+                      // Alertはdeprecatedなので、banner,listをtrueにしておけばよい。
+                      // https://developer.apple.com/documentation/usernotifications/unnotificationpresentationoptions/unnotificationpresentationoptionalert
                       presentAlert: false,
                       presentBanner: true,
                       presentList: true,
@@ -451,6 +455,8 @@ class RegisterReminderLocalNotification {
                       sound: "becho.caf",
                       presentBadge: true,
                       presentSound: true,
+                      // Alertはdeprecatedなので、banner,listをtrueにしておけばよい。
+                      // https://developer.apple.com/documentation/usernotifications/unnotificationpresentationoptions/unnotificationpresentationoptionalert
                       presentAlert: false,
                       presentBanner: true,
                       presentList: true,
