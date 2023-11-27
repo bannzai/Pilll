@@ -313,12 +313,16 @@ extension AppDelegate {
         } else {
             // Fallback on earlier versions
         }
+        UNUserNotificationCenter.current().getPendingNotificationRequests(completionHandler: { requests in
+            analytics(name: "pending_notifications", parameters: ["length": requests.count])
+            
+            if #available(iOS 14.0, *) {
+                completionHandler([.banner, .list, .sound, .badge])
+            } else {
+                completionHandler([.alert, .sound, .badge])
+            }
+        })
 
-        if #available(iOS 14.0, *) {
-            completionHandler([.banner, .list, .sound, .badge])
-        } else {
-            completionHandler([.alert, .sound, .badge])
-        }
     }
 
     override func userNotificationCenter(_ center: UNUserNotificationCenter, didReceive response: UNNotificationResponse, withCompletionHandler completionHandler: @escaping () -> Void) {
