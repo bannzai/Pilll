@@ -307,23 +307,23 @@ extension AppDelegate {
         UNUserNotificationCenter.current().setNotificationCategories([category])
     }
 
-    override func userNotificationCenter(_ center: UNUserNotificationCenter, willPresent notification: UNNotification, withCompletionHandler completionHandler: @escaping (UNNotificationPresentationOptions) -> Void) {
-        if #available(iOS 15.0, *) {
-            analytics(name: "will_present", parameters: ["notification_id" : notification.request.identifier, "content_title": notification.request.content.title, "content_body": notification.request.content.body, "content_interruptionLevel": notification.request.content.interruptionLevel.rawValue])
-        } else {
-            // Fallback on earlier versions
-        }
-        UNUserNotificationCenter.current().getPendingNotificationRequests(completionHandler: { requests in
-            analytics(name: "pending_notifications", parameters: ["length": requests.count])
-            
-            if #available(iOS 14.0, *) {
-                completionHandler([.banner, .list, .sound, .badge])
-            } else {
-                completionHandler([.alert, .sound, .badge])
-            }
-        })
-
-    }
+//    override func userNotificationCenter(_ center: UNUserNotificationCenter, willPresent notification: UNNotification, withCompletionHandler completionHandler: @escaping (UNNotificationPresentationOptions) -> Void) {
+//        if #available(iOS 15.0, *) {
+//            analytics(name: "will_present", parameters: ["notification_id" : notification.request.identifier, "content_title": notification.request.content.title, "content_body": notification.request.content.body, "content_interruptionLevel": notification.request.content.interruptionLevel.rawValue])
+//        } else {
+//            // Fallback on earlier versions
+//        }
+//        UNUserNotificationCenter.current().getPendingNotificationRequests(completionHandler: { requests in
+//            analytics(name: "pending_notifications", parameters: ["length": requests.count])
+//            
+//            if #available(iOS 14.0, *) {
+//                completionHandler([.banner, .list, .sound, .badge])
+//            } else {
+//                completionHandler([.alert, .sound, .badge])
+//            }
+//        })
+//
+//    }
 
     override func userNotificationCenter(_ center: UNUserNotificationCenter, didReceive response: UNNotificationResponse, withCompletionHandler completionHandler: @escaping () -> Void) {
         func end() {
