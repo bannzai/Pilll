@@ -1,2 +1,2 @@
 const lockEmoji = "🔒";
-const pill = "💊";
+const pillEmoji = "💊";

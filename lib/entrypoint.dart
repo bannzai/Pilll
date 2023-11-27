@@ -23,7 +23,6 @@ import 'package:flutter/material.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
 import 'package:pilll/utils/remote_config.dart';
 import 'package:shared_preferences/shared_preferences.dart';
-import 'package:timezone/timezone.dart';
 
 Future<void> entrypoint() async {
   runZonedGuarded(() async {

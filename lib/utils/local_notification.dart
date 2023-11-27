@@ -363,6 +363,9 @@ class RegisterReminderLocalNotification {
             if (Environment.isDevelopment) {
               result += " Local";
             }
+            if (result.isEmpty) {
+              return "通知です";
+            }
             return result;
           }();
           debugPrint("title:$title");
