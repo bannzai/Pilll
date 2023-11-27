@@ -201,11 +201,13 @@ import flutter_local_notifications
             GeneratedPluginRegistrant.register(with: registry)
         }
 
-        if let dic = UserDefaults.standard.object(forKey: "flutter_local_notifications_presentation_options") as? [String: Any] {
-            analytics(name: "fln_debug", parameters: dic)
+        GeneratedPluginRegistrant.register(with: self)
+        DispatchQueue.main.asyncAfter(deadline: .now() + 0.1) { [self] in
+            if let dic = UserDefaults.standard.object(forKey: "flutter_local_notifications_presentation_options") as? [String: Any] {
+                analytics(name: "fln_debug", parameters: dic)
+            }
         }
 
-        GeneratedPluginRegistrant.register(with: self)
         return super.application(application, didFinishLaunchingWithOptions: launchOptions)
     }
 
