@@ -256,7 +256,11 @@ extension FlutterLocalNotificationsPlugin {
    }
 
     @objc func userNotificationCenter_fln(_ center: UNUserNotificationCenter, willPresent notification: UNNotification, withCompletionHandler completionHandler: @escaping (UNNotificationPresentationOptions) -> Void) {
-        analytics(name: "will_present_fln", parameters: ["notification_id" : notification.request.identifier, "content": notification.request.content.description])
+        if #available(iOS 15.0, *) {
+            analytics(name: "will_present_fln", parameters: ["notification_id" : notification.request.identifier, "content_title": notification.request.content.title, "content_body": notification.request.content.body, "content_interruptionLevel": notification.request.content.interruptionLevel.rawValue])
+        } else {
+            // Fallback on earlier versions
+        }
         userNotificationCenter_fln(center, willPresent: notification, withCompletionHandler: completionHandler)
     }
 }
@@ -274,7 +278,11 @@ extension FLTFirebaseMessagingPlugin {
    }
 
     @objc func userNotificationCenter_fcm(_ center: UNUserNotificationCenter, willPresent notification: UNNotification, withCompletionHandler completionHandler: @escaping (UNNotificationPresentationOptions) -> Void) {
-        analytics(name: "will_present_fcm", parameters: ["notification_id" : notification.request.identifier, "content": notification.request.content.description])
+        if #available(iOS 15.0, *) {
+            analytics(name: "will_present_fcm", parameters: ["notification_id" : notification.request.identifier, "content_title": notification.request.content.title, "content_body": notification.request.content.body, "content_interruptionLevel": notification.request.content.interruptionLevel.rawValue])
+        } else {
+            // Fallback on earlier versions
+        }
         userNotificationCenter_fcm(center, willPresent: notification, withCompletionHandler: completionHandler)
     }
 }
@@ -300,7 +308,12 @@ extension AppDelegate {
     }
 
     override func userNotificationCenter(_ center: UNUserNotificationCenter, willPresent notification: UNNotification, withCompletionHandler completionHandler: @escaping (UNNotificationPresentationOptions) -> Void) {
-        analytics(name: "will_present", parameters: ["notification_id" : notification.request.identifier, "content": notification.request.content.description])
+        if #available(iOS 15.0, *) {
+            analytics(name: "will_present", parameters: ["notification_id" : notification.request.identifier, "content_title": notification.request.content.title, "content_body": notification.request.content.body, "content_interruptionLevel": notification.request.content.interruptionLevel.rawValue])
+        } else {
+            // Fallback on earlier versions
+        }
+
         if #available(iOS 14.0, *) {
             completionHandler([.banner, .list, .sound, .badge])
         } else {
