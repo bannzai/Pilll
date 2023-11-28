@@ -67,9 +67,13 @@ class LocalNotificationService {
               ],
             ),
           ],
-          defaultPresentAlert: true,
+          // Alertはdeprecatedなので、banner,listをtrueにしておけばよい。
+          // https://developer.apple.com/documentation/usernotifications/unnotificationpresentationoptions/unnotificationpresentationoptionalert
+          defaultPresentAlert: false,
           defaultPresentBadge: true,
           defaultPresentSound: true,
+          defaultPresentBanner: true,
+          defaultPresentList: true,
         ),
       ),
       onDidReceiveBackgroundNotificationResponse: Platform.isAndroid
@@ -103,8 +107,8 @@ class LocalNotificationService {
         ),
         iOS: DarwinNotificationDetails(
           categoryIdentifier: iOSQuickRecordPillCategoryIdentifier,
-          presentBadge: true,
           sound: "becho.caf",
+          presentBadge: true,
           presentSound: true,
         ),
       ),
@@ -361,6 +365,10 @@ class RegisterReminderLocalNotification {
             if (Environment.isDevelopment) {
               result += " Local";
             }
+            // NOTE: 0文字以上じゃないと通知が表示されない。フロントでバリデーションをかけていてもここだけは残す
+            if (result.isEmpty) {
+              return "通知です";
+            }
             return result;
           }();
           debugPrint("title:$title");
@@ -390,9 +398,14 @@ class RegisterReminderLocalNotification {
                     ),
                     iOS: DarwinNotificationDetails(
                       categoryIdentifier: iOSQuickRecordPillCategoryIdentifier,
-                      presentBadge: true,
                       sound: "becho.caf",
+                      presentBadge: true,
                       presentSound: true,
+                      // Alertはdeprecatedなので、banner,listをtrueにしておけばよい。
+                      // https://developer.apple.com/documentation/usernotifications/unnotificationpresentationoptions/unnotificationpresentationoptionalert
+                      presentAlert: false,
+                      presentBanner: true,
+                      presentList: true,
                       badgeNumber: badgeNumber + dayOffset,
                     ),
                   ),
@@ -439,9 +452,14 @@ class RegisterReminderLocalNotification {
                       category: AndroidNotificationCategory.alarm,
                     ),
                     iOS: DarwinNotificationDetails(
-                      presentBadge: true,
                       sound: "becho.caf",
+                      presentBadge: true,
                       presentSound: true,
+                      // Alertはdeprecatedなので、banner,listをtrueにしておけばよい。
+                      // https://developer.apple.com/documentation/usernotifications/unnotificationpresentationoptions/unnotificationpresentationoptionalert
+                      presentAlert: false,
+                      presentBanner: true,
+                      presentList: true,
                       badgeNumber: badgeNumber + dayOffset,
                     ),
                   ),
@@ -552,4 +570,4 @@ extension ScheduleLocalNotificationService on LocalNotificationService {
   }
 }
 
-var localNotificationService = LocalNotificationService()..initialize();
+var localNotificationService = LocalNotificationService();

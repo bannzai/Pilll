@@ -46,6 +46,8 @@ Future<void> entrypoint() async {
       setupRemoteConfig(),
     ).wait;
 
+    await localNotificationService.initialize();
+
     // MEMO: FirebaseCrashlytics#recordFlutterError called dumpErrorToConsole in function.
     FlutterError.onError = FirebaseCrashlytics.instance.recordFlutterError;
     runApp(ProviderScope(

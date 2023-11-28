@@ -10,7 +10,7 @@ _$ReminderNotificationCustomizationImpl
     _$$ReminderNotificationCustomizationImplFromJson(
             Map<String, dynamic> json) =>
         _$ReminderNotificationCustomizationImpl(
-          word: json['word'] as String? ?? pill,
+          word: json['word'] as String? ?? pillEmoji,
           isInVisibleReminderDate:
               json['isInVisibleReminderDate'] as bool? ?? false,
           isInVisiblePillNumber:

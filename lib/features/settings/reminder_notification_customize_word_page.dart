@@ -68,11 +68,17 @@ class ReminderNotificationCustomizeWordPage extends HookConsumerWidget {
                           style: TextStyle(fontFamily: FontFamily.japanese, fontSize: 12, fontWeight: FontWeight.w400, color: TextColor.darkGray),
                         ),
                         const Spacer(),
-                        Text(
-                          "${wordState.value.characters.length}/8",
-                          style:
-                              const TextStyle(fontFamily: FontFamily.japanese, fontSize: 12, fontWeight: FontWeight.w400, color: TextColor.darkGray),
-                        ),
+                        if (wordState.value.characters.isNotEmpty)
+                          Text(
+                            "${wordState.value.characters.length}/8",
+                            style: const TextStyle(
+                                fontFamily: FontFamily.japanese, fontSize: 12, fontWeight: FontWeight.w400, color: TextColor.darkGray),
+                          ),
+                        if (wordState.value.characters.isEmpty)
+                          const Text(
+                            "0文字以上入力してください",
+                            style: TextStyle(fontFamily: FontFamily.japanese, fontSize: 12, fontWeight: FontWeight.w400, color: TextColor.danger),
+                          ),
                       ]),
                     ),
                     autofocus: true,
