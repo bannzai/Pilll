@@ -15,7 +15,7 @@ publish_to: "none" # Remove this line if you wish to publish to pub.dev
 # In iOS, build-name is used as CFBundleShortVersionString while build-number used as CFBundleVersion.
 # Read more about iOS versioning at
 # https://developer.apple.com/library/archive/documentation/General/Reference/InfoPlistKeyReference/Articles/CoreFoundationKeys.html
-version: 3.18.14+1671
+version: 202311.26.182912+1671
 
 environment:
   sdk: ">=3.0.0 <4.0.0"
@@ -29,14 +29,14 @@ dependencies:
     sdk: flutter
   flutter_localizations:
     sdk: flutter
-  flutter_svg: ^2.0.8
+  flutter_svg: ^2.0.9
   shared_preferences: ^2.2.2
   intl: ^0.18.1
-  firebase_core: ^2.5.0
-  firebase_analytics: ^10.1.1
-  firebase_auth: ^4.2.6
-  firebase_messaging: ^14.2.2
-  cloud_firestore: ^4.3.2
+  firebase_core: ^2.21.0
+  firebase_analytics: ^10.6.3
+  firebase_auth: ^4.12.1
+  firebase_messaging: ^14.7.3
+  cloud_firestore: ^4.12.2
   url_launcher: ^6.2.1
   package_info: ^2.0.0
   equatable: ^2.0.0
@@ -60,11 +60,12 @@ dependencies:
   purchases_flutter: ^5.7.0
   flutter_native_timezone: ^2.0.0
   flutter_local_notifications: ^15.1.2
-  webview_flutter: ^4.4.1
+  webview_flutter: ^4.4.2
   collection: 1.17.2
   crypto:
   timezone:
-  firebase_remote_config: ^4.3.1
+  firebase_remote_config: ^4.3.3
+  google_mobile_ads: ^3.0.0
 
 dev_dependencies:
   # The "flutter_lints" package below contains a set of recommended lints to
@@ -79,7 +80,7 @@ dev_dependencies:
   build_runner: 2.4.6
   json_serializable:
   freezed: ^2.4.5
-  custom_lint: 0.5.5
+  custom_lint: 0.5.6
   riverpod_lint: 2.1.1
   riverpod_generator: 2.3.3
 

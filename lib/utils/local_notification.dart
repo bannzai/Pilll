@@ -1,9 +1,8 @@
 import 'dart:async';
+import 'dart:io';
 
 import 'dart:math';
 
-import 'package:firebase_auth/firebase_auth.dart';
-import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_local_notifications/flutter_local_notifications.dart';
@@ -13,10 +12,8 @@ import 'package:pilll/entity/pill_sheet_type.dart';
 import 'package:pilll/entity/schedule.codegen.dart';
 import 'package:pilll/entity/setting.codegen.dart';
 import 'package:pilll/entity/weekday.dart';
+import 'package:pilll/entrypoint.dart';
 import 'package:pilll/features/record/components/add_pill_sheet_group/provider.dart';
-import 'package:pilll/native/pill.dart';
-import 'package:pilll/native/widget.dart';
-import 'package:pilll/provider/database.dart';
 import 'package:pilll/provider/pill_sheet_group.dart';
 import 'package:pilll/provider/user.dart';
 import 'package:pilll/provider/setting.dart';
@@ -42,6 +39,7 @@ const androidReminderNotificationGroupKey = "androidReminderNotificationGroupKey
 const androidNotificationCategoryCalendarSchedule = "androidNotificationCategoryCalendarSchedule";
 
 // Notification ID offset
+const fallbackNotificationIdentifier = 1;
 const scheduleNotificationIdentifierOffset = 100000;
 const reminderNotificationIdentifierOffset = 1000000000;
 
@@ -69,15 +67,25 @@ class LocalNotificationService {
               ],
             ),
           ],
-          defaultPresentAlert: true,
+          // Alertはdeprecatedなので、banner,listをtrueにしておけばよい。
+          // https://developer.apple.com/documentation/usernotifications/unnotificationpresentationoptions/unnotificationpresentationoptionalert
+          defaultPresentAlert: false,
           defaultPresentBadge: true,
           defaultPresentSound: true,
+          defaultPresentBanner: true,
+          defaultPresentList: true,
         ),
       ),
-      onDidReceiveBackgroundNotificationResponse: handleNotificationAction,
+      onDidReceiveBackgroundNotificationResponse: Platform.isAndroid
+          ? (NotificationResponse notificationResponse) {
+              handleNotificationAction(notificationResponse);
+            }
+          : null,
     );
   }
 
+  // iOSでは 以下の二つを実行しているだけなので今のところエラーは発生しない
+  // center.removePendingNotificationRequests(withIdentifiers: ids), center.removeDeliveredNotifications(withIdentifiers: ids)
   Future<void> cancelNotification({required int localNotificationID}) async {
     await plugin.cancel(localNotificationID);
   }
@@ -99,8 +107,8 @@ class LocalNotificationService {
         ),
         iOS: DarwinNotificationDetails(
           categoryIdentifier: iOSQuickRecordPillCategoryIdentifier,
-          presentBadge: true,
           sound: "becho.caf",
+          presentBadge: true,
           presentSound: true,
         ),
       ),
@@ -108,6 +116,7 @@ class LocalNotificationService {
     );
   }
 
+  // iOSではgetPendingNotificationRequestsWithCompletionHandlerを実行しているだけなのでおそらくエラーは発生しない
   Future<List<PendingNotificationRequest>> pendingReminderNotifications() async {
     final pendingNotifications = await plugin.pendingNotificationRequests();
     return pendingNotifications.where((element) => element.id - reminderNotificationIdentifierOffset > 0).toList();
@@ -137,11 +146,10 @@ final registerReminderLocalNotificationProvider = Provider(
 // * その時点の状態を元に通知のコンテンツを決定する。という方式を取るため、テストケースがシンプルになる
 // 難しい点:
 // * Swift/Kotlinのコードが増える。なのでライブリロードも効きづらい
-// * iOSのApp Extension側でFlutterのコードを呼ぶ術はない(たぶん)。現状問題ではないがこういう制限がある
-//   * これに関連して、SSoTが崩れる心配がある。Keychainを共有してないのもあり、UserDefaultsで書き込み通知の表示に必要なコンテンツを保存する必要がある
 // * iOSのApp Extensionでは別途申請が必要になる。これ自体も手間だが、dev版アプリの審査も通す必要があるのが(手間が2回発生するのを避けてる。やればいいだけ)
 //   * Thank you for your interest in the Notification Service Extension Filtering entitlement. This entitlement is intended for certain types of apps — such as messaging apps or location sharing apps — that use notification service extensions to receive push notifications without delivering notifications to the user. If your app needs this entitlement in order to properly function on iOS 13.3 or later, provide the following information.
 //   * やれば良いだけだと思ったが、App Store URL等を入力しないとダメだからdev版のアプリ通らない可能性が高い
+//   * 追記: そもそもリモートの通知で絵しかこれは使えないかも: This entitlement allows a notification service extension to receive remote notifications without displaying the notification to the user. To apply for this entitlement, see Request Notification Service Entitlement.
 class RegisterReminderLocalNotification {
   final Ref ref;
 
@@ -170,6 +178,9 @@ class RegisterReminderLocalNotification {
   // - トライアル終了後/プレミアム加入後 → これは服用は続けられているので何もしない。有料機能をしばらく使えてもヨシとする
   // NOTE: 本日分の服用記録がある場合は、本日分の通知はスケジュールしないようになっている
   // 10日間分の通知をスケジュールする
+  // ちなみに64個までのリミットがある
+  //   * `There is a limit imposed by iOS where it will only keep 64 notifications that will fire the soonest.`
+  //   * ref: https://pub.dev/packages/flutter_local_notifications#-caveats-and-limitations
   Future<void> call() async {
     analytics.logEvent(name: "call_register_reminder_notification");
     final cancelReminderLocalNotification = CancelReminderLocalNotification();
@@ -320,6 +331,7 @@ class RegisterReminderLocalNotification {
             analytics.logEvent(name: "rrrn_is_skip_in_dosing", parameters: {
               "dayOffset": dayOffset,
               "dosingPeriod": pillSheeType.dosingPeriod,
+              "pillNumberInPillSheet": pillNumberInPillSheet,
               "isOnNotifyInNotTakenDuration": setting.isOnNotifyInNotTakenDuration,
               "reminderTimeHour": reminderTime.hour,
               "reminderTimeMinute": reminderTime.minute,
@@ -353,6 +365,10 @@ class RegisterReminderLocalNotification {
             if (Environment.isDevelopment) {
               result += " Local";
             }
+            // NOTE: 0文字以上じゃないと通知が表示されない。フロントでバリデーションをかけていてもここだけは残す
+            if (result.isEmpty) {
+              return "通知です";
+            }
             return result;
           }();
           debugPrint("title:$title");
@@ -382,15 +398,27 @@ class RegisterReminderLocalNotification {
                     ),
                     iOS: DarwinNotificationDetails(
                       categoryIdentifier: iOSQuickRecordPillCategoryIdentifier,
-                      presentBadge: true,
                       sound: "becho.caf",
+                      presentBadge: true,
                       presentSound: true,
+                      // Alertはdeprecatedなので、banner,listをtrueにしておけばよい。
+                      // https://developer.apple.com/documentation/usernotifications/unnotificationpresentationoptions/unnotificationpresentationoptionalert
+                      presentAlert: false,
+                      presentBanner: true,
+                      presentList: true,
                       badgeNumber: badgeNumber + dayOffset,
                     ),
                   ),
                   androidScheduleMode: AndroidScheduleMode.exactAllowWhileIdle,
                   uiLocalNotificationDateInterpretation: UILocalNotificationDateInterpretation.absoluteTime,
                 );
+
+                analytics.logEvent(name: "rrrn_premium", parameters: {
+                  "dayOffset": dayOffset,
+                  "notificationID": notificationID,
+                  "reminderTimeHour": reminderTime.hour,
+                  "reminderTimeMinute": reminderTime.minute,
+                });
               } catch (e, st) {
                 // NOTE: エラーが発生しても他の通知のスケジュールを続ける
                 debugPrint("[bannzai] notificationID:$notificationID error:$e, stackTrace:$st");
@@ -424,15 +452,26 @@ class RegisterReminderLocalNotification {
                       category: AndroidNotificationCategory.alarm,
                     ),
                     iOS: DarwinNotificationDetails(
-                      categoryIdentifier: iOSQuickRecordPillCategoryIdentifier,
-                      presentBadge: true,
                       sound: "becho.caf",
+                      presentBadge: true,
                       presentSound: true,
+                      // Alertはdeprecatedなので、banner,listをtrueにしておけばよい。
+                      // https://developer.apple.com/documentation/usernotifications/unnotificationpresentationoptions/unnotificationpresentationoptionalert
+                      presentAlert: false,
+                      presentBanner: true,
+                      presentList: true,
                       badgeNumber: badgeNumber + dayOffset,
                     ),
                   ),
                   uiLocalNotificationDateInterpretation: UILocalNotificationDateInterpretation.absoluteTime,
                 );
+
+                analytics.logEvent(name: "rrrn_non_premium", parameters: {
+                  "dayOffset": dayOffset,
+                  "notificationID": notificationID,
+                  "reminderTimeHour": reminderTime.hour,
+                  "reminderTimeMinute": reminderTime.minute,
+                });
               } catch (e, st) {
                 // NOTE: エラーが発生しても他の通知のスケジュールを続ける
                 debugPrint("[bannzai] notificationID:$notificationID error:$e, stackTrace:$st");
@@ -464,10 +503,10 @@ class RegisterReminderLocalNotification {
   // reminder time id is 10{groupIndex:2}{hour:2}{minute:2}{pillNumberInPillSheet:2}
   // for example return value 1002223014 means,  `10` is prefix, gropuIndex: `02` is third pillSheet,`22` is hour, `30` is minute, `14` is pill number into pill sheet
   // 1000000000 = reminderNotificationIdentifierOffset
-  // 10000000 = pillSheetGroupIndex
-  // 100000 = reminderTime.hour
-  // 1000 = reminderTime.minute
-  // 10 = pillNumberInPillSheet
+  //   10000000 = pillSheetGroupIndex
+  //     100000 = reminderTime.hour
+  //       1000 = reminderTime.minute
+  //         10 = pillNumberInPillSheet
   static int _calcLocalNotificationID({
     required int pillSheetGroupIndex,
     required ReminderTime reminderTime,
@@ -491,6 +530,10 @@ class CancelReminderLocalNotification {
   // これら以外はRegisterReminderLocalNotificationで登録し直す。なおRegisterReminderLocalNotification の内部でこの関数を読んでいる
   Future<void> call() async {
     final pendingNotifications = await localNotificationService.pendingReminderNotifications();
+    analytics.logEvent(name: "cancel_reminder_local_notification", parameters: {
+      "length": pendingNotifications.length,
+      "ids": pendingNotifications.map((e) => e.id).toList().toString(),
+    });
     await Future.wait(pendingNotifications.map((p) => localNotificationService.cancelNotification(localNotificationID: p.id)));
   }
 }
@@ -527,44 +570,4 @@ extension ScheduleLocalNotificationService on LocalNotificationService {
   }
 }
 
-var localNotificationService = LocalNotificationService()..initialize();
-
-// TODO: [UseLocalNotification-Beta] 2023-11 このコメントを削除
-// iOSはmethodChannel経由の方が呼ばれる。iOSはネイティブの方のコードで上書きされる模様。現在はAndroidのために定義
-@pragma('vm:entry-point')
-Future<void> handleNotificationAction(NotificationResponse notificationResponse) async {
-  if (notificationResponse.actionId == actionIdentifier) {
-    // 通知からの起動の時に、FirebaseAuth.instanceを参照すると、まだinitializeされてないよ．的なエラーが出る
-    if (Firebase.apps.isEmpty) {
-      await Firebase.initializeApp();
-    }
-    final firebaseUser = FirebaseAuth.instance.currentUser;
-    if (firebaseUser == null) {
-      return;
-    }
-
-    final database = DatabaseConnection(firebaseUser.uid);
-
-    final pillSheetGroup = await quickRecordTakePill(database);
-    syncActivePillSheetValue(pillSheetGroup: pillSheetGroup);
-
-    final cancelReminderLocalNotification = CancelReminderLocalNotification();
-    // エンティティの変更があった場合にdatabaseの読み込みで最新の状態を取得するために、Future.microtaskで更新を待ってから処理を始める
-    // hour,minute,番号を基準にIDを決定しているので、時間変更や番号変更時にそれまで登録されていたIDを特定するのが不可能なので全てキャンセルする
-    await (Future.microtask(() => null), cancelReminderLocalNotification()).wait;
-
-    final activePillSheet = pillSheetGroup?.activePillSheet;
-    final user = (await database.userReference().get()).data();
-    final setting = user?.setting;
-    if (pillSheetGroup != null && activePillSheet != null && user != null && setting != null) {
-      if (user.useLocalNotificationForReminder) {
-        await RegisterReminderLocalNotification.run(
-          pillSheetGroup: pillSheetGroup,
-          activePillSheet: activePillSheet,
-          premiumOrTrial: user.isPremium || user.isTrial,
-          setting: setting,
-        );
-      }
-    }
-  }
-}
+var localNotificationService = LocalNotificationService();

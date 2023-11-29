@@ -5,9 +5,9 @@ import HealthKit
 import WidgetKit
 import flutter_local_notifications
 
+private var channel: FlutterMethodChannel?
 @UIApplicationMain
 @objc class AppDelegate: FlutterAppDelegate {
-    private var channel: FlutterMethodChannel?
 
     override func application(
         _ application: UIApplication,
@@ -176,12 +176,12 @@ import flutter_local_notifications
                         let userConfiguredFamilies = try result.get().map(\.family)
                         if !userConfiguredFamilies.isEmpty {
                             if #available(iOS 16.0, *) {
-                                self.analytics(name: "user_configured_ios_widget", parameters: [
+                                analytics(name: "user_configured_ios_widget", parameters: [
                                     "systemSmall": userConfiguredFamilies.contains(.systemSmall),
                                     "accessoryCircular": userConfiguredFamilies.contains(.accessoryCircular)
                                 ])
                             } else {
-                                self.analytics(name: "user_configured_ios_widget", parameters: [
+                                analytics(name: "user_configured_ios_widget", parameters: [
                                     "systemSmall": userConfiguredFamilies.contains(.systemSmall),
                                 ])
                             }
@@ -196,18 +196,29 @@ import flutter_local_notifications
         UNUserNotificationCenter.current().swizzle()
         UNUserNotificationCenter.current().removeDeliveredNotifications(withIdentifiers: ["repeat_notification_for_taken_pill", "remind_notification_for_taken_pill"])
         UNUserNotificationCenter.current().removePendingNotificationRequests(withIdentifiers: ["repeat_notification_for_taken_pill", "remind_notification_for_taken_pill"])
-        UNUserNotificationCenter.current().delegate = self as UNUserNotificationCenterDelegate
         FlutterLocalNotificationsPlugin.setPluginRegistrantCallback { (registry) in
             GeneratedPluginRegistrant.register(with: registry)
         }
+        // NOTE: [LOCAL_NOTIFICATION] Flutter Local NotificationのExamplesではFlutterLocalNotificationsPlugin.setPluginRegistrantCallbackのあとにDelegateをセットしている
+        // 通知が来ない問題があり再現しないため原因は不明だがこの順番を守る
+        UNUserNotificationCenter.current().delegate = self
+
         GeneratedPluginRegistrant.register(with: self)
+        DispatchQueue.main.asyncAfter(deadline: .now() + 0.1) { [self] in
+            // NOTE: [LOCAL_NOTIFICATION] Flutter local notificationの構造体をロギングしている
+            if let dic = UserDefaults.standard.object(forKey: "flutter_local_notifications_presentation_options") as? [String: Any] {
+                analytics(name: "fln_debug", parameters: dic)
+            }
+        }
+
         return super.application(application, didFinishLaunchingWithOptions: launchOptions)
     }
 
-    private func analytics(name: String, parameters: [String: Any]? = nil, function: StaticString = #function) {
-        print(function, name, parameters ?? [:])
-        channel?.invokeMethod("analytics", arguments: ["name": name, "parameters": parameters ?? [:]])
-    }
+}
+
+private func analytics(name: String, parameters: [String: Any]? = nil, function: StaticString = #function) {
+    print(function, name, parameters ?? [:])
+    channel?.invokeMethod("analytics", arguments: ["name": name, "parameters": parameters ?? [:]])
 }
 
 // MARK: - Avoid bug for flutter app badger
@@ -230,7 +241,6 @@ extension UNUserNotificationCenter {
         }
         setNotificationCategories_methodSwizzle(categories)
     }
-
 }
 
 // MARK: - Notification
@@ -251,6 +261,28 @@ extension AppDelegate {
                                    hiddenPreviewsBodyPlaceholder: "",
                                    options: .customDismissAction)
         UNUserNotificationCenter.current().setNotificationCategories([category])
+    }
+
+    // NOTE: [LOCAL_NOTIFICATION] async/await版のメソッドは使わない。
+    // FlutterPluginAppLifeCycleDelegateから呼び出しているのがwithCompletionHandler付きのものなので合わせる
+    // https://chromium.googlesource.com/external/github.com/flutter/engine/+/refs/heads/flutter-2.5-candidate.8/shell/platform/darwin/ios/framework/Source/FlutterPluginAppLifeCycleDelegate.mm#283
+    
+    // NOTE: このメソッドをoverrideすることでplugin側の処理は呼ばれないことに注意する。
+    // 常に一緒な結果をcompletionHandlerで実行すれば良いのでoverrideしても問題はない
+    override func userNotificationCenter(_ center: UNUserNotificationCenter, willPresent notification: UNNotification, withCompletionHandler completionHandler: @escaping (UNNotificationPresentationOptions) -> Void) {
+        if #available(iOS 15.0, *) {
+            analytics(name: "will_present", parameters: ["notification_id" : notification.request.identifier, "content_title": notification.request.content.title, "content_body": notification.request.content.body, "content_interruptionLevel": notification.request.content.interruptionLevel.rawValue])
+        } else {
+            // Fallback on earlier versions
+        }
+        UNUserNotificationCenter.current().getPendingNotificationRequests(completionHandler: { requests in
+            analytics(name: "pending_notifications", parameters: ["length": requests.count])
+        })
+        if #available(iOS 14.0, *) {
+            completionHandler([.banner, .list, .sound, .badge])
+        } else {
+            completionHandler([.alert, .sound, .badge])
+        }
     }
 
     override func userNotificationCenter(_ center: UNUserNotificationCenter, didReceive response: UNNotificationResponse, withCompletionHandler completionHandler: @escaping () -> Void) {

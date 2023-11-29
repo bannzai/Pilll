@@ -124,6 +124,7 @@ class RecordPagePillSheet extends HookConsumerWidget {
               analytics.logEvent(name: "pill_mark_tapped", parameters: {
                 "last_taken_pill_number": pillSheet.lastTakenPillNumber,
                 "today_pill_number": pillSheet.todayPillNumber,
+                "pillNumberInPillSheet": pillNumberInPillSheet,
               });
 
               if (pillSheet.todayPillNumber < pillNumberInPillSheet) {
@@ -132,7 +133,10 @@ class RecordPagePillSheet extends HookConsumerWidget {
 
               if (pillSheet.lastTakenPillNumber >= pillNumberInPillSheet) {
                 await revertTakePill(
-                    pillSheetGroup: pillSheetGroup, pageIndex: pageIndex, targetRevertPillNumberIntoPillSheet: pillNumberInPillSheet);
+                  pillSheetGroup: pillSheetGroup,
+                  pageIndex: pageIndex,
+                  targetRevertPillNumberIntoPillSheet: pillNumberInPillSheet,
+                );
                 await registerReminderLocalNotification();
               } else {
                 // NOTE: batch.commit でリモートのDBに書き込む時間がかかるので事前にバッジを0にする

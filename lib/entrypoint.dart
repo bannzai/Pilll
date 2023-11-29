@@ -1,40 +1,33 @@
 import 'dart:async';
-import 'dart:io';
 
-import 'package:firebase_analytics/firebase_analytics.dart';
+import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/foundation.dart';
-import 'package:flutter/services.dart';
-import 'package:pilll/features/home/home_page.dart';
-import 'package:pilll/features/initial_setting/pill_sheet_group/initial_setting_pill_sheet_group_page.dart';
-import 'package:pilll/features/root/resolver/force_update.dart';
-import 'package:pilll/features/root/resolver/initial_setting_or_app_page.dart';
-import 'package:pilll/features/root/resolver/show_paywall_on_app_launch.dart';
-import 'package:pilll/features/root/resolver/skip_initial_setting.dart';
-import 'package:pilll/features/root/resolver/user_setup.dart';
-import 'package:pilll/features/root/resolver/user_sign_in.dart';
+import 'package:flutter_local_notifications/flutter_local_notifications.dart';
+import 'package:pilll/app.dart';
+import 'package:google_mobile_ads/google_mobile_ads.dart';
+import 'package:pilll/native/pill.dart';
+import 'package:pilll/native/widget.dart';
+import 'package:pilll/provider/database.dart';
 import 'package:pilll/provider/shared_preferences.dart';
-import 'package:pilll/utils/analytics.dart';
-import 'package:pilll/components/atoms/color.dart';
-import 'package:pilll/components/atoms/font.dart';
-import 'package:pilll/features/root/root_page.dart';
 import 'package:pilll/native/channel.dart';
+import 'package:pilll/utils/analytics.dart';
+import 'package:pilll/utils/emulator/emulator.dart';
+import 'package:pilll/utils/error_log.dart';
 import 'package:pilll/utils/local_notification.dart';
 import 'package:pilll/utils/datetime/debug_print.dart';
 import 'package:pilll/utils/environment.dart';
-import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'package:firebase_crashlytics/firebase_crashlytics.dart';
 import 'package:flutter/material.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
-import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 import 'package:pilll/utils/remote_config.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
 Future<void> entrypoint() async {
   runZonedGuarded(() async {
     WidgetsFlutterBinding.ensureInitialized();
-    await Firebase.initializeApp();
+    await (MobileAds.instance.initialize(), Firebase.initializeApp()).wait;
     // QuickRecordの処理などFirebaseを使用するのでFirebase.initializeApp()の後に時刻する
     // また、同じくQuickRecordの処理開始までにMethodChannelが確立されていてほしいのでこの処理はなるべく早く実行する
     definedChannel();
@@ -53,6 +46,8 @@ Future<void> entrypoint() async {
       setupRemoteConfig(),
     ).wait;
 
+    await localNotificationService.initialize();
+
     // MEMO: FirebaseCrashlytics#recordFlutterError called dumpErrorToConsole in function.
     FlutterError.onError = FirebaseCrashlytics.instance.recordFlutterError;
     runApp(ProviderScope(
@@ -64,123 +59,58 @@ Future<void> entrypoint() async {
   }, (error, stack) => FirebaseCrashlytics.instance.recordError(error, stack));
 }
 
-void connectToEmulator() {
-  final domain = Platform.isAndroid ? '10.0.2.2' : 'localhost';
-  FirebaseFirestore.instance.settings = Settings(persistenceEnabled: false, host: '$domain:8080', sslEnabled: false);
-}
+// TODO: [UseLocalNotification-Beta] 2023-11 このコメントを削除
+// iOSはmethodChannel経由の方が呼ばれる。iOSはネイティブの方のコードで上書きされる模様。現在はAndroidのために定義
+@pragma('vm:entry-point')
+Future<void> handleNotificationAction(NotificationResponse notificationResponse) async {
+  if (notificationResponse.actionId == actionIdentifier) {
+    await LocalNotificationService.setupTimeZone();
 
-final navigatorKey = GlobalKey<NavigatorState>();
+    // 通知からの起動の時に、FirebaseAuth.instanceを参照すると、まだinitializeされてないよ．的なエラーが出る
+    if (Firebase.apps.isEmpty) {
+      await Firebase.initializeApp();
+    }
+    final firebaseUser = FirebaseAuth.instance.currentUser;
+    if (firebaseUser == null) {
+      return;
+    }
 
-class App extends StatelessWidget {
-  const App({Key? key}) : super(key: key);
+    try {
+      analytics.logEvent(name: "handle_notification_action");
 
-  @override
-  Widget build(BuildContext context) {
-    return MaterialApp(
-      navigatorKey: navigatorKey,
-      navigatorObservers: [FirebaseAnalyticsObserver(analytics: firebaseAnalytics)],
-      theme: ThemeData(
-        appBarTheme: const AppBarTheme(
-          systemOverlayStyle: SystemUiOverlayStyle.dark,
-          centerTitle: true,
-          color: PilllColors.white,
-          elevation: 3,
-        ),
-        textSelectionTheme: const TextSelectionThemeData(
-          cursorColor: PilllColors.secondary,
-        ),
-        primaryColor: PilllColors.secondary,
-        visualDensity: VisualDensity.adaptivePlatformDensity,
-        cupertinoOverrideTheme: const NoDefaultCupertinoThemeData(
-            textTheme: CupertinoTextThemeData(
-                textStyle: TextStyle(
-          fontFamily: FontFamily.number,
-          fontWeight: FontWeight.w500,
-          fontSize: 24,
-        ))),
-        buttonTheme: const ButtonThemeData(
-          buttonColor: PilllColors.primary,
-          disabledColor: PilllColors.disable,
-          textTheme: ButtonTextTheme.primary,
-          colorScheme: ColorScheme.light(
-            primary: PilllColors.secondary,
-            secondary: PilllColors.accent,
-          ),
-        ),
-        switchTheme: SwitchThemeData(
-          thumbColor: MaterialStateProperty.resolveWith<Color?>((Set<MaterialState> states) {
-            if (states.contains(MaterialState.disabled)) {
-              return null;
-            }
-            if (states.contains(MaterialState.selected)) {
-              return PilllColors.secondary;
-            }
-            return null;
-          }),
-          trackColor: MaterialStateProperty.resolveWith<Color?>((Set<MaterialState> states) {
-            if (states.contains(MaterialState.disabled)) {
-              return null;
-            }
-            if (states.contains(MaterialState.selected)) {
-              return PilllColors.secondary;
-            }
-            return null;
-          }),
-        ),
-        radioTheme: RadioThemeData(
-          fillColor: MaterialStateProperty.resolveWith<Color?>((Set<MaterialState> states) {
-            if (states.contains(MaterialState.disabled)) {
-              return null;
-            }
-            if (states.contains(MaterialState.selected)) {
-              return PilllColors.secondary;
-            }
+      final database = DatabaseConnection(firebaseUser.uid);
 
-            return null;
-          }),
-        ),
-        checkboxTheme: CheckboxThemeData(
-          fillColor: MaterialStateProperty.resolveWith<Color?>((Set<MaterialState> states) {
-            if (states.contains(MaterialState.disabled)) {
-              return null;
-            }
-            if (states.contains(MaterialState.selected)) {
-              return PilllColors.secondary;
-            }
-            return null;
-          }),
-        ),
-      ),
-      home: ProviderScope(
-        child: RootPage(
-          builder: (_) => ForceUpdate(
-            builder: (_) => UserSignIn(
-              builder: (_, userID) => UserSetup(
-                userID: userID,
-                builder: (_) => InitialSettingOrAppPage(builder: (_, screenType) {
-                  switch (screenType) {
-                    case InitialSettingOrAppPageScreenType.initialSetting:
-                      return ShowPaywallOnAppLaunch(
-                        builder: (_) => SkipInitialSetting(builder: (context, skipInitialSetting) {
-                          if (!skipInitialSetting) {
-                            return InitialSettingPillSheetGroupPageRoute.screen();
-                          } else {
-                            return const HomePage();
-                          }
-                        }),
-                      );
-                    case InitialSettingOrAppPageScreenType.app:
-                      return const HomePage();
-                  }
-                }),
-              ),
-            ),
-          ),
-        ),
-      ),
-      localizationsDelegates: AppLocalizations.localizationsDelegates,
-      supportedLocales: AppLocalizations.supportedLocales,
-      locale: const Locale('ja'),
-    );
+      final pillSheetGroup = await quickRecordTakePill(database);
+      syncActivePillSheetValue(pillSheetGroup: pillSheetGroup);
+
+      final cancelReminderLocalNotification = CancelReminderLocalNotification();
+      // エンティティの変更があった場合にdatabaseの読み込みで最新の状態を取得するために、Future.microtaskで更新を待ってから処理を始める
+      // hour,minute,番号を基準にIDを決定しているので、時間変更や番号変更時にそれまで登録されていたIDを特定するのが不可能なので全てキャンセルする
+      await (Future.microtask(() => null), cancelReminderLocalNotification()).wait;
+
+      final activePillSheet = pillSheetGroup?.activePillSheet;
+      final user = (await database.userReference().get()).data();
+      final setting = user?.setting;
+      if (pillSheetGroup != null && activePillSheet != null && user != null && setting != null) {
+        if (user.useLocalNotificationForReminder) {
+          await RegisterReminderLocalNotification.run(
+            pillSheetGroup: pillSheetGroup,
+            activePillSheet: activePillSheet,
+            premiumOrTrial: user.isPremium || user.isTrial,
+            setting: setting,
+          );
+        }
+      }
+    } catch (e, st) {
+      errorLogger.recordError(e, st);
+
+      // errorLoggerに記録した後に実行する。これも失敗する可能性がある
+      await localNotificationService.plugin.show(
+        fallbackNotificationIdentifier,
+        "服用記録が失敗した可能性があります",
+        "アプリを開いてご確認ください",
+        null,
+      );
+    }
   }
 }

@@ -43,7 +43,7 @@ class EndManualRestDurationButton extends HookConsumerWidget {
             activePillSheet: activePillSheet,
             pillSheetGroup: pillSheetGroup,
           );
-          await registerReminderLocalNotification.call();
+          await registerReminderLocalNotification();
           didEndRestDuration(endedRestDurationPillSheetGroup);
         } catch (e) {
           debugPrint("endRestDuration error: $e");

@@ -11,6 +11,7 @@
 		2006A7E328B0CE210066E4DD /* Const.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2006A7E028B0CDC00066E4DD /* Const.swift */; };
 		202E35912AB7AD9A00473C5D /* Production-Secret.xcconfig in Resources */ = {isa = PBXBuildFile; fileRef = 202E358F2AB7AD9A00473C5D /* Production-Secret.xcconfig */; };
 		202E35922AB7AD9A00473C5D /* Development-Secret.xcconfig in Resources */ = {isa = PBXBuildFile; fileRef = 202E35902AB7AD9A00473C5D /* Development-Secret.xcconfig */; };
+		205637412AF907B60082C189 /* Backport.swift in Sources */ = {isa = PBXBuildFile; fileRef = 205637402AF907B60082C189 /* Backport.swift */; };
 		207DA16628B1148700CD6C34 /* WidgetKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2006A7C428B0BB670066E4DD /* WidgetKit.framework */; };
 		207DA16728B1148700CD6C34 /* SwiftUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2006A7C628B0BB670066E4DD /* SwiftUI.framework */; };
 		207DA16A28B1148700CD6C34 /* Widget.swift in Sources */ = {isa = PBXBuildFile; fileRef = 207DA16928B1148700CD6C34 /* Widget.swift */; };
@@ -91,6 +92,7 @@
 		2006A7E028B0CDC00066E4DD /* Const.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Const.swift; sourceTree = "<group>"; };
 		202E358F2AB7AD9A00473C5D /* Production-Secret.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; name = "Production-Secret.xcconfig"; path = "Flutter/Production-Secret.xcconfig"; sourceTree = "<group>"; };
 		202E35902AB7AD9A00473C5D /* Development-Secret.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; name = "Development-Secret.xcconfig"; path = "Flutter/Development-Secret.xcconfig"; sourceTree = "<group>"; };
+		205637402AF907B60082C189 /* Backport.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Backport.swift; sourceTree = "<group>"; };
 		207DA16528B1148700CD6C34 /* WidgetExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = WidgetExtension.appex; sourceTree = BUILT_PRODUCTS_DIR; };
 		207DA16928B1148700CD6C34 /* Widget.swift */ = {isa = PBXFileReference; indentWidth = 2; lastKnownFileType = sourcecode.swift; path = Widget.swift; sourceTree = "<group>"; tabWidth = 2; };
 		207DA16B28B1148800CD6C34 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -176,6 +178,7 @@
 				207DA16928B1148700CD6C34 /* Widget.swift */,
 				20E4647F28C3338600329A5E /* AccessoryCircularWidget.swift */,
 				20E4648528C340E900329A5E /* WidgetView.swift */,
+				205637402AF907B60082C189 /* Backport.swift */,
 				20E4648228C33D6600329A5E /* Status.swift */,
 				20E4647C28C3332300329A5E /* SmallWidget.swift */,
 				20E4647028C3316800329A5E /* Provider.swift */,
@@ -555,6 +558,7 @@
 				207DA16A28B1148700CD6C34 /* Widget.swift in Sources */,
 				20BF942028B22626007A36C9 /* Const.swift in Sources */,
 				20E4647328C3319600329A5E /* Global.swift in Sources */,
+				205637412AF907B60082C189 /* Backport.swift in Sources */,
 				20E4648128C3339500329A5E /* AccessoryCircularWidget.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
