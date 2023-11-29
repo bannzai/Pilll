@@ -244,7 +244,7 @@ class SettingPageBody extends StatelessWidget {
                                 )),
                             onTap: () async {
                               launchUrlString(
-                                  "focus-connect://schedule?accessToken=d23c406b-97df-efb4-e93e-e7d2c3024e0f&intervalStartTimeOfDay=12:00&intervalEndTimeOfDay=20:00&repeats=false");
+                                  "focus-connect://schedule?accessToken=2695ba3a-6ddd-4d09-8a3f-0ae5a57fee4e&intervalStartTimeOfDay=12:00&intervalEndTimeOfDay=20:00&repeats=false");
                             }),
                         ListTile(
                             title: const Text("友達に教える",
