@@ -244,7 +244,7 @@ class SettingPageBody extends StatelessWidget {
                                 )),
                             onTap: () async {
                               launchUrlString(
-                                  "dd://schedule?accessToken=aiueo&bundleIdentifier=com.mizuki.Ohashi.Pilll&intervalStartTimeOfDay=12:00&intervalEndTimeOfDay=20:00&repeats=false");
+                                  "focus-connect://schedule?accessToken=d23c406b-97df-efb4-e93e-e7d2c3024e0f&intervalStartTimeOfDay=12:00&intervalEndTimeOfDay=20:00&repeats=false");
                             }),
                         ListTile(
                             title: const Text("友達に教える",
