@@ -236,22 +236,25 @@ class SettingPageBody extends StatelessWidget {
                           _separator(),
                         ],
                         ListTile(
-                            title: const Text("Focusと連携する",
-                                style: TextStyle(
-                                  fontFamily: FontFamily.roboto,
-                                  fontWeight: FontWeight.w300,
-                                  fontSize: 16,
-                                )),
-                            onTap: () async {
-                              final first = setting.reminderTimes.firstOrNull;
-                              if (first == null) {
-                                return;
-                              }
-                              final start = "${first.hour}:${first.minute}:30";
-                              final end = "${first.hour + 3}:${first.minute}:00";
-                              launchUrlString(
-                                  "focus-connect://schedule?accessToken=2695ba3a-6ddd-4d09-8a3f-0ae5a57fee4e&intervalStartTimeOfDay=$start&intervalEndTimeOfDay=$end&repeats=true");
-                            }),
+                          title: const Text(
+                            "Focusと連携する",
+                            style: TextStyle(
+                              fontFamily: FontFamily.roboto,
+                              fontWeight: FontWeight.w300,
+                              fontSize: 16,
+                            ),
+                          ),
+                          onTap: () async {
+                            final first = setting.reminderTimes.firstOrNull;
+                            if (first == null) {
+                              return;
+                            }
+                            final start = "${first.hour}:${first.minute}:30";
+                            final end = "${first.hour + 3}:${first.minute}:00";
+                            launchUrlString(
+                                "focus-connect://schedule?accessToken=2695ba3a-6ddd-4d09-8a3f-0ae5a57fee4e&intervalStartTimeOfDay=$start&intervalEndTimeOfDay=$end&repeats=true");
+                          },
+                        ),
                         ListTile(
                             title: const Text("友達に教える",
                                 style: TextStyle(
