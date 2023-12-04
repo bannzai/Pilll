@@ -243,8 +243,14 @@ class SettingPageBody extends StatelessWidget {
                                   fontSize: 16,
                                 )),
                             onTap: () async {
+                              final first = setting.reminderTimes.firstOrNull;
+                              if (first == null) {
+                                return;
+                              }
+                              final start = "${first.hour}:${first.minute}:30";
+                              final end = "${first.hour + 3}:${first.minute}:00";
                               launchUrlString(
-                                  "focus-connect://schedule?accessToken=2695ba3a-6ddd-4d09-8a3f-0ae5a57fee4e&intervalStartTimeOfDay=12:00:30&intervalEndTimeOfDay=20:00:00&repeats=false");
+                                  "focus-connect://schedule?accessToken=2695ba3a-6ddd-4d09-8a3f-0ae5a57fee4e&intervalStartTimeOfDay=$start&intervalEndTimeOfDay=$end&repeats=true");
                             }),
                         ListTile(
                             title: const Text("友達に教える",
