@@ -256,6 +256,19 @@ class SettingPageBody extends StatelessWidget {
                           },
                         ),
                         ListTile(
+                          title: const Text(
+                            "Focusと連携を解除する",
+                            style: TextStyle(
+                              fontFamily: FontFamily.roboto,
+                              fontWeight: FontWeight.w300,
+                              fontSize: 16,
+                            ),
+                          ),
+                          onTap: () async {
+                            launchUrlString("focus-connect://schedule/unlock");
+                          },
+                        ),
+                        ListTile(
                             title: const Text("友達に教える",
                                 style: TextStyle(
                                   fontFamily: FontFamily.roboto,
