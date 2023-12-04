@@ -265,7 +265,7 @@ class SettingPageBody extends StatelessWidget {
                             ),
                           ),
                           onTap: () async {
-                            launchUrlString("focus-connect://schedule/unlock");
+                            launchUrlString("focus-connect://schedule/unlock?accessToken=2695ba3a-6ddd-4d09-8a3f-0ae5a57fee4e");
                           },
                         ),
                         ListTile(
