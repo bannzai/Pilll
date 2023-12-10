@@ -129,18 +129,14 @@ class PillSheetGroup with _$PillSheetGroup {
     return sequentialLastTakenPillNumber;
   }
 
-  DateTime? get lastTakenDate {
-    if (pillSheets.isEmpty) {
-      return null;
-    }
-
+  PillSheet get lastTakenPillSheetOrFirstPillSheet {
     for (final pillSheet in pillSheets.reversed) {
       if (pillSheet.lastTakenDate != null) {
-        return pillSheet.lastTakenDate;
+        return pillSheet;
       }
     }
 
-    return null;
+    return pillSheets[0];
   }
 
   int get estimatedEndPillNumber {

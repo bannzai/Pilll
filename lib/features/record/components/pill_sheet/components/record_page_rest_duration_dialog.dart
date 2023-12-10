@@ -3,7 +3,6 @@ import 'package:flutter_svg/svg.dart';
 import 'package:pilll/components/atoms/button.dart';
 import 'package:pilll/components/atoms/font.dart';
 import 'package:pilll/components/atoms/text_color.dart';
-import 'package:pilll/entity/pill_sheet.codegen.dart';
 import 'package:pilll/entity/pill_sheet_group.codegen.dart';
 import 'package:pilll/entity/setting.codegen.dart';
 import 'package:pilll/utils/formatter/date_time_formatter.dart';
@@ -75,14 +74,13 @@ class RecordPageRestDurationDialog extends StatelessWidget {
 void showRecordPageRestDurationDialog(
   BuildContext context, {
   required PillSheetAppearanceMode appearanceMode,
-  required PillSheet activePillSheet,
   required PillSheetGroup pillSheetGroup,
   required VoidCallback onDone,
 }) {
   showDialog(
     context: context,
     builder: (context) => RecordPageRestDurationDialog(
-      title: RecordPageRestDurationDialogTitle(appearanceMode: appearanceMode, activePillSheet: activePillSheet, pillSheetGroup: pillSheetGroup),
+      title: RecordPageRestDurationDialogTitle(appearanceMode: appearanceMode, pillSheetGroup: pillSheetGroup),
       appearanceMode: appearanceMode,
       onDone: onDone,
     ),
@@ -91,13 +89,11 @@ void showRecordPageRestDurationDialog(
 
 class RecordPageRestDurationDialogTitle extends StatelessWidget {
   final PillSheetAppearanceMode appearanceMode;
-  final PillSheet activePillSheet;
   final PillSheetGroup pillSheetGroup;
 
   const RecordPageRestDurationDialogTitle({
     Key? key,
     required this.appearanceMode,
-    required this.activePillSheet,
     required this.pillSheetGroup,
   }) : super(key: key);
 
@@ -115,9 +111,10 @@ class RecordPageRestDurationDialogTitle extends StatelessWidget {
   String get _number {
     switch (appearanceMode) {
       case PillSheetAppearanceMode.number:
-        return "${activePillSheet.lastTakenPillNumber + 1}番";
+        return "${pillSheetGroup.lastTakenPillSheetOrFirstPillSheet.lastTakenPillNumber + 1}番";
       case PillSheetAppearanceMode.date:
-        final date = activePillSheet.displayPillTakeDate(activePillSheet.lastTakenPillNumber + 1);
+        final date = pillSheetGroup.lastTakenPillSheetOrFirstPillSheet
+            .displayPillTakeDate(pillSheetGroup.lastTakenPillSheetOrFirstPillSheet.lastTakenPillNumber + 1);
         final dateString = DateTimeFormatter.monthAndDay(date);
         return dateString;
       case PillSheetAppearanceMode.sequential:

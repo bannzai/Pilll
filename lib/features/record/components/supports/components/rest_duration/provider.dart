@@ -35,7 +35,7 @@ class BeginRestDuration {
     final batch = batchFactory.batch();
 
     final RestDuration restDuration;
-    final lastTakenDate = pillSheetGroup.lastTakenDate;
+    final lastTakenDate = pillSheetGroup.lastTakenPillSheetOrFirstPillSheet.lastTakenDate;
     if (lastTakenDate == null) {
       // 1番目から服用お休みする場合は、beginDateは今日になる
       restDuration = RestDuration(
