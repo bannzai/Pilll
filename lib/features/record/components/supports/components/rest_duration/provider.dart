@@ -48,8 +48,8 @@ class BeginRestDuration {
         createdDate: now(),
       );
     }
-    final updatedPillSheet = activePillSheet.copyWith(
-      restDurations: [...activePillSheet.restDurations, restDuration],
+    final updatedPillSheet = pillSheetGroup.lastTakenPillSheetOrFirstPillSheet.copyWith(
+      restDurations: [...pillSheetGroup.lastTakenPillSheetOrFirstPillSheet.restDurations, restDuration],
     );
     final updatedPillSheetGroup = pillSheetGroup.replaced(updatedPillSheet);
 
@@ -58,7 +58,7 @@ class BeginRestDuration {
       batch,
       PillSheetModifiedHistoryServiceActionFactory.createBeganRestDurationAction(
         pillSheetGroupID: pillSheetGroup.id,
-        before: activePillSheet,
+        before: pillSheetGroup.lastTakenPillSheetOrFirstPillSheet,
         after: updatedPillSheet,
         restDuration: restDuration,
         beforePillSheetGroup: pillSheetGroup,

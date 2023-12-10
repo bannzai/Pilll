@@ -63,7 +63,7 @@ void main() {
           batchFactory: batchFactory,
           batchSetPillSheetGroup: batchSetPillSheetGroup,
           batchSetPillSheetModifiedHistory: batchSetPillSheetModifiedHistory);
-      await beginRestDuration.call(activePillSheet: pillSheet, pillSheetGroup: pillSheetGroup);
+      await beginRestDuration.call(pillSheetGroup: pillSheetGroup);
 
       verify(batchFactory.batch()).called(1);
 
