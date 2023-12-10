@@ -35,7 +35,7 @@ class BeginRestDuration {
     final batch = batchFactory.batch();
 
     final restDuration = RestDuration(
-      beginDate: now(),
+      beginDate: activePillSheet.lastTakenDate ?? now(),
       createdDate: now(),
     );
     final updatedPillSheet = activePillSheet.copyWith(
