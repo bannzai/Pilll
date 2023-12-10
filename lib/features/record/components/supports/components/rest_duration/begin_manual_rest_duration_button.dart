@@ -48,6 +48,7 @@ class BeginManualRestDurationButton extends HookConsumerWidget {
               // NOTE: batch.commit でリモートのDBに書き込む時間がかかるので事前にバッジを0にする
               FlutterAppBadger.removeBadge();
               await beginRestDuration(
+                activePillSheet: activePillSheet,
                 pillSheetGroup: pillSheetGroup,
               );
               await cancelReminderLocalNotification();

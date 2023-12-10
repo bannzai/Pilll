@@ -30,6 +30,7 @@ class BeginRestDuration {
   });
 
   Future<void> call({
+    required PillSheet activePillSheet,
     required PillSheetGroup pillSheetGroup,
   }) async {
     final batch = batchFactory.batch();
