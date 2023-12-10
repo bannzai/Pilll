@@ -30,13 +30,12 @@ class BeginRestDuration {
   });
 
   Future<void> call({
-    required PillSheet activePillSheet,
     required PillSheetGroup pillSheetGroup,
   }) async {
     final batch = batchFactory.batch();
 
     final RestDuration restDuration;
-    final lastTakenDate = activePillSheet.lastTakenDate;
+    final lastTakenDate = pillSheetGroup.lastTakenDate;
     if (lastTakenDate == null) {
       // 1番目から服用お休みする場合は、beginDateは今日になる
       restDuration = RestDuration(
