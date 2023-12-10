@@ -129,6 +129,20 @@ class PillSheetGroup with _$PillSheetGroup {
     return sequentialLastTakenPillNumber;
   }
 
+  DateTime? get lastTakenDate {
+    if (pillSheets.isEmpty) {
+      return null;
+    }
+
+    for (final pillSheet in pillSheets.reversed) {
+      if (pillSheet.lastTakenDate != null) {
+        return pillSheet.lastTakenDate;
+      }
+    }
+
+    return null;
+  }
+
   int get estimatedEndPillNumber {
     var estimatedEndPillNumber =
         summarizedPillCountWithPillSheetTypesToIndex(pillSheetTypes: pillSheets.map((e) => e.pillSheetType).toList(), toIndex: pillSheets.length);
