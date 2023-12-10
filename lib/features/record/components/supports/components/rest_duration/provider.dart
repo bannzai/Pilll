@@ -6,6 +6,7 @@ import 'package:pilll/provider/batch.dart';
 
 import 'package:pilll/provider/pill_sheet_group.dart';
 import 'package:pilll/provider/pill_sheet_modified_history.dart';
+import 'package:pilll/utils/datetime/date_add.dart';
 import 'package:pilll/utils/datetime/day.dart';
 
 final beginRestDurationProvider = Provider.autoDispose(
@@ -34,10 +35,20 @@ class BeginRestDuration {
   }) async {
     final batch = batchFactory.batch();
 
-    final restDuration = RestDuration(
-      beginDate: activePillSheet.lastTakenDate ?? now(),
-      createdDate: now(),
-    );
+    final RestDuration restDuration;
+    final lastTakenDate = activePillSheet.lastTakenDate;
+    if (lastTakenDate == null) {
+      // 1番目から服用お休みする場合は、beginDateは今日になる
+      restDuration = RestDuration(
+        beginDate: now(),
+        createdDate: now(),
+      );
+    } else {
+      restDuration = RestDuration(
+        beginDate: lastTakenDate.addDays(1),
+        createdDate: now(),
+      );
+    }
     final updatedPillSheet = activePillSheet.copyWith(
       restDurations: [...activePillSheet.restDurations, restDuration],
     );
