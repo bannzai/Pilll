@@ -6,6 +6,7 @@ import 'package:pilll/provider/batch.dart';
 
 import 'package:pilll/provider/pill_sheet_group.dart';
 import 'package:pilll/provider/pill_sheet_modified_history.dart';
+import 'package:pilll/utils/datetime/date_add.dart';
 import 'package:pilll/utils/datetime/day.dart';
 
 final beginRestDurationProvider = Provider.autoDispose(
@@ -29,17 +30,26 @@ class BeginRestDuration {
   });
 
   Future<void> call({
-    required PillSheet activePillSheet,
     required PillSheetGroup pillSheetGroup,
   }) async {
     final batch = batchFactory.batch();
 
-    final restDuration = RestDuration(
-      beginDate: now(),
-      createdDate: now(),
-    );
-    final updatedPillSheet = activePillSheet.copyWith(
-      restDurations: [...activePillSheet.restDurations, restDuration],
+    final RestDuration restDuration;
+    final lastTakenDate = pillSheetGroup.lastTakenPillSheetOrFirstPillSheet.lastTakenDate;
+    if (lastTakenDate == null) {
+      // 1番目から服用お休みする場合は、beginDateは今日になる
+      restDuration = RestDuration(
+        beginDate: now(),
+        createdDate: now(),
+      );
+    } else {
+      restDuration = RestDuration(
+        beginDate: lastTakenDate.addDays(1),
+        createdDate: now(),
+      );
+    }
+    final updatedPillSheet = pillSheetGroup.lastTakenPillSheetOrFirstPillSheet.copyWith(
+      restDurations: [...pillSheetGroup.lastTakenPillSheetOrFirstPillSheet.restDurations, restDuration],
     );
     final updatedPillSheetGroup = pillSheetGroup.replaced(updatedPillSheet);
 
@@ -48,7 +58,7 @@ class BeginRestDuration {
       batch,
       PillSheetModifiedHistoryServiceActionFactory.createBeganRestDurationAction(
         pillSheetGroupID: pillSheetGroup.id,
-        before: activePillSheet,
+        before: pillSheetGroup.lastTakenPillSheetOrFirstPillSheet,
         after: updatedPillSheet,
         restDuration: restDuration,
         beforePillSheetGroup: pillSheetGroup,
