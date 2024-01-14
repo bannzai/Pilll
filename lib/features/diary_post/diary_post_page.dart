@@ -73,6 +73,7 @@ class DiaryPostPageBody extends HookConsumerWidget {
     required this.user,
     required this.diarySetting,
   }) : super(key: key);
+
   @override
   Widget build(BuildContext context, WidgetRef ref) {
     final textEditingController = useTextEditingController(text: diary.memo);
