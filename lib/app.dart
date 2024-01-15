@@ -28,6 +28,7 @@ class App extends StatelessWidget {
       navigatorKey: navigatorKey,
       navigatorObservers: [FirebaseAnalyticsObserver(analytics: firebaseAnalytics)],
       theme: ThemeData(
+        useMaterial3: false,
         appBarTheme: const AppBarTheme(
           systemOverlayStyle: SystemUiOverlayStyle.dark,
           centerTitle: true,
