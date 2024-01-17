@@ -50,6 +50,10 @@ List<Diary> _sortedDiaries(List<Diary> diaries) {
   return diaries;
 }
 
+final diaryProvider = Provider.family((ref, DateTime date) {
+  return ref.watch(diariesForMonthProvider(date)).asData?.value.firstWhereOrNull((element) => element.date == date);
+});
+
 final setDiaryProvider = Provider((ref) => SetDiary(ref.watch(databaseProvider)));
 
 class SetDiary {

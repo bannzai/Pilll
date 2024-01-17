@@ -172,7 +172,7 @@ void transitionWhenCalendarDayTapped(
 void _showConfirmDiarySheet(BuildContext context, Diary diary) {
   showModalBottomSheet(
     context: context,
-    builder: (context) => DiaryConfirmationSheet(diary: diary),
+    builder: (context) => DiaryConfirmationSheet(date: diary.date),
     backgroundColor: Colors.transparent,
   );
 }
