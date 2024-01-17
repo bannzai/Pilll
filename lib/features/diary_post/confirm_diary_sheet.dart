@@ -11,10 +11,10 @@ import 'package:flutter/material.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
 import 'package:flutter_svg/svg.dart';
 
-class ConfirmDiarySheet extends HookConsumerWidget {
+class DiaryConfirmationSheet extends HookConsumerWidget {
   final Diary diary;
 
-  const ConfirmDiarySheet({
+  const DiaryConfirmationSheet({
     Key? key,
     required this.diary,
   }) : super(key: key);
