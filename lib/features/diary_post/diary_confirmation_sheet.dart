@@ -1,4 +1,5 @@
 import 'package:pilll/components/atoms/button.dart';
+import 'package:pilll/components/molecules/indicator.dart';
 import 'package:pilll/components/page/discard_dialog.dart';
 import 'package:pilll/features/diary_post/diary_post_page.dart';
 import 'package:pilll/entity/diary.codegen.dart';
@@ -11,17 +12,22 @@ import 'package:flutter/material.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
 import 'package:flutter_svg/svg.dart';
 
-class ConfirmDiarySheet extends HookConsumerWidget {
-  final Diary diary;
+class DiaryConfirmationSheet extends HookConsumerWidget {
+  final DateTime date;
 
-  const ConfirmDiarySheet({
+  const DiaryConfirmationSheet({
     Key? key,
-    required this.diary,
+    required this.date,
   }) : super(key: key);
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {
+    final diary = ref.watch(diaryProvider(date));
     final deleteDiary = ref.watch(deleteDiaryProvider);
+    if (diary == null) {
+      return const Indicator();
+    }
+
     return Container(
       decoration: const BoxDecoration(
         borderRadius: BorderRadius.only(
@@ -32,12 +38,12 @@ class ConfirmDiarySheet extends HookConsumerWidget {
       ),
       padding: const EdgeInsets.fromLTRB(16, 20, 16, 20),
       child: Column(mainAxisSize: MainAxisSize.min, crossAxisAlignment: CrossAxisAlignment.start, children: [
-        _title(context, deleteDiary),
+        _title(context, deleteDiary, diary),
         ...[
-          if (diary.hasPhysicalConditionStatus) _physicalCondition(),
-          _physicalConditionDetails(),
-          if (diary.hasSex) _sex(),
-          _memo(),
+          if (diary.hasPhysicalConditionStatus) _physicalCondition(diary),
+          _physicalConditionDetails(diary),
+          if (diary.hasSex) _sex(diary),
+          _memo(diary),
         ].map((e) => _withContentSpacer(e)),
       ]),
     );
@@ -50,7 +56,7 @@ class ConfirmDiarySheet extends HookConsumerWidget {
     );
   }
 
-  Widget _title(BuildContext context, DeleteDiary deleteDiary) {
+  Widget _title(BuildContext context, DeleteDiary deleteDiary, Diary diary) {
     return Row(
       mainAxisSize: MainAxisSize.max,
       children: [
@@ -113,7 +119,7 @@ class ConfirmDiarySheet extends HookConsumerWidget {
     }
   }
 
-  Widget _physicalCondition() {
+  Widget _physicalCondition(Diary diary) {
     return Row(
       children: [
         const Text("体調",
@@ -129,7 +135,7 @@ class ConfirmDiarySheet extends HookConsumerWidget {
     );
   }
 
-  Widget _physicalConditionDetails() {
+  Widget _physicalConditionDetails(Diary diary) {
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
@@ -154,7 +160,7 @@ class ConfirmDiarySheet extends HookConsumerWidget {
     );
   }
 
-  Widget _sex() {
+  Widget _sex(Diary diary) {
     return Container(
       padding: const EdgeInsets.all(4),
       width: 32,
@@ -164,7 +170,7 @@ class ConfirmDiarySheet extends HookConsumerWidget {
     );
   }
 
-  Widget _memo() {
+  Widget _memo(Diary diary) {
     return Text(
       diary.memo,
       maxLines: 2,

@@ -73,16 +73,16 @@ class DiaryPostPageBody extends HookConsumerWidget {
     required this.user,
     required this.diarySetting,
   }) : super(key: key);
+
   @override
   Widget build(BuildContext context, WidgetRef ref) {
-    final textEditingController = useTextEditingController(text: diary.memo);
+    final memoTextEditingController = useTextEditingController(text: diary.memo);
     final focusNode = useFocusNode();
     final scrollController = useScrollController();
 
     final physicalCondition = useState<PhysicalConditionStatus?>(diary.physicalConditionStatus);
     final physicalConditionDetails = useState(diary.physicalConditions);
     final sex = useState(diary.hasSex);
-    final memo = useState(diary.memo);
 
     final setDiary = ref.watch(setDiaryProvider);
 
@@ -114,7 +114,7 @@ class DiaryPostPageBody extends HookConsumerWidget {
                   physicalConditionStatus: physicalCondition.value,
                   physicalConditions: physicalConditionDetails.value,
                   hasSex: sex.value,
-                  memo: memo.value,
+                  memo: memoTextEditingController.text,
                 ));
 
                 navigator.pop();
@@ -145,7 +145,7 @@ class DiaryPostPageBody extends HookConsumerWidget {
                   const SizedBox(height: 20),
                   DiaryPostSex(sex: sex),
                   const SizedBox(height: 20),
-                  DiaryPostMemo(textEditingController: textEditingController, focusNode: focusNode, memo: memo),
+                  DiaryPostMemo(textEditingController: memoTextEditingController, focusNode: focusNode),
                 ],
               ),
             ),

@@ -19,7 +19,7 @@ import 'package:pilll/features/schedule_post/schedule_post_page.dart';
 import 'package:pilll/entity/diary.codegen.dart';
 import 'package:pilll/entity/schedule.codegen.dart';
 import 'package:pilll/entity/weekday.dart';
-import 'package:pilll/features/diary_post/confirm_diary_sheet.dart';
+import 'package:pilll/features/diary_post/diary_confirmation_sheet.dart';
 import 'package:pilll/utils/datetime/date_compare.dart';
 import 'package:pilll/utils/datetime/day.dart';
 
@@ -172,7 +172,7 @@ void transitionWhenCalendarDayTapped(
 void _showConfirmDiarySheet(BuildContext context, Diary diary) {
   showModalBottomSheet(
     context: context,
-    builder: (context) => ConfirmDiarySheet(diary: diary),
+    builder: (context) => DiaryConfirmationSheet(date: diary.date),
     backgroundColor: Colors.transparent,
   );
 }
