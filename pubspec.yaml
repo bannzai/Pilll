@@ -39,7 +39,6 @@ dependencies:
   cloud_firestore: ^4.12.2
   url_launcher: ^6.2.1
   package_info: ^2.0.0
-  equatable: ^2.0.0
   json_annotation: ^4.0.0
   mockito: ^5.3.2
   freezed_annotation: ^2.2.0
