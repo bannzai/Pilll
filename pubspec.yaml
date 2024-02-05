@@ -43,7 +43,7 @@ dependencies:
   mockito: ^5.3.2
   freezed_annotation: ^2.2.0
   riverpod: ^2.4.4
-  hooks_riverpod: ^2.4.4
+  hooks_riverpod: ^2.4.10
   riverpod_annotation: 2.3.3
   flutter_hooks: ^0.20.4
   firebase_crashlytics: ^3.0.12
