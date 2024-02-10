@@ -12,7 +12,7 @@ part of 'pill_sheet_modified_history_value.codegen.dart';
 T _$identity<T>(T value) => value;
 
 final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
+    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models');
 
 PillSheetModifiedHistoryValue _$PillSheetModifiedHistoryValueFromJson(
     Map<String, dynamic> json) {
@@ -491,7 +491,7 @@ class _$PillSheetModifiedHistoryValueImpl
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$PillSheetModifiedHistoryValueImpl &&
@@ -754,7 +754,7 @@ class _$CreatedPillSheetValueImpl extends _CreatedPillSheetValue {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$CreatedPillSheetValueImpl &&
@@ -1006,7 +1006,7 @@ class _$AutomaticallyRecordedLastTakenDateValueImpl
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$AutomaticallyRecordedLastTakenDateValueImpl &&
@@ -1234,7 +1234,7 @@ class _$DeletedPillSheetValueImpl extends _DeletedPillSheetValue {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$DeletedPillSheetValueImpl &&
@@ -1529,7 +1529,7 @@ class _$TakenPillValueImpl extends _TakenPillValue {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$TakenPillValueImpl &&
@@ -1806,7 +1806,7 @@ class _$TakenPillEditedValueImpl extends _TakenPillEditedValue {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$TakenPillEditedValueImpl &&
@@ -2065,7 +2065,7 @@ class _$RevertTakenPillValueImpl extends _RevertTakenPillValue {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$RevertTakenPillValueImpl &&
@@ -2364,7 +2364,7 @@ class _$ChangedPillNumberValueImpl extends _ChangedPillNumberValue {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$ChangedPillNumberValueImpl &&
@@ -2604,7 +2604,7 @@ class _$EndedPillSheetValueImpl extends _EndedPillSheetValue {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$EndedPillSheetValueImpl &&
@@ -2784,7 +2784,7 @@ class _$BeganRestDurationValueImpl extends _BeganRestDurationValue {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$BeganRestDurationValueImpl &&
@@ -2949,7 +2949,7 @@ class _$EndedRestDurationValueImpl extends _EndedRestDurationValue {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$EndedRestDurationValueImpl &&
@@ -3165,7 +3165,7 @@ class _$ChangedBeginDisplayNumberValueImpl
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$ChangedBeginDisplayNumberValueImpl &&
@@ -3394,7 +3394,7 @@ class _$ChangedEndDisplayNumberValueImpl extends _ChangedEndDisplayNumberValue {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$ChangedEndDisplayNumberValueImpl &&
